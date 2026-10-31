@@ -1,156 +1,278 @@
-# Návod k EOPatch2
+# EOPatch2
 
-Patch vyžaduje použití inzulínu s rychlým účinkem, typu U-100, jako je NovoRapid nebo Humalog. Použijte inzulín s rychlým účinkem, který je pro vás vhodný podle předpisu lékaře, a používejte předepsané množství.
+Patch potřebuje rychle působící inzulín U-100, například NovoRapid nebo Humalog. Používejte rychle působící inzulín, který vám předepsal lékař.
 
-Nejmenší injekční dávka inzulínu při použití patche je 0,05 U. Profil BAS by měl být nastaven na minimální hodnotu 0,05 U/h nebo více a interval 0,05 U/h, jinak může dojít k chybě mezi odhadovaným celkovým množstvím inzulínu v profilu a skutečným množstvím inzulínu v náplasti. Stejně tak musí být bolus nastaven a dávkován s minimálním objemem 0,05 U.
+Nejmenší dávka, kterou patch umí vydat, je 0,05 U. Nastavte každou bazální dávku ve svém **profilu** alespoň na 0,05 U/h, v krocích po 0,05 U/h. Jinak **AAPS** zaokrouhlí každou dávku na nejbližších 0,05 U/h (nikdy dolů na 0) a použije dávky, které patch skutečně vydává, takže celkové množství inzulínu za den se mírně liší od vašeho **profilu**. Stejně tak musí mít bolusy alespoň 0,05 U.
+
+```{contents} Table of contents
+:depth: 1
+:local: true
+```
+
+## Možnosti pumpy s AAPS
+
+* Komunikuje s **AAPS** přes vestavěný Bluetooth vašeho telefonu, bez dalšího komunikačního zařízení.
+* Letní čas a změny časového pásma musíte řešit ručně.
 
 ## Nastavení pumpy
-1. Na úvodní obrazovce AAPS klikněte na hamburgerové menu v levém horním rohu a přejděte do Konfigurace.
-1. Vyberte 'EOPatch2' v sekci Pumpa.
-1. Stiskněte klávesu Zpět pro návrat na úvodní obrazovku.
 
+1. Otevřete **nabídku** (☰) v levém horním rohu hlavní obrazovky **AAPS** a vyberte **Konfigurace**.
+1. V sekci **Pumpa** vyberte **EOPatch2**.
+1. Stisknutím tlačítka Zpět se vraťte na hlavní obrazovku.
 
-![Obrázek1](../images/EOPatch/Bild1.png) ![Obrázek2](../images/EOPatch/Bild2.png)
+![Nabídka s položkou Konfigurace](../images/v4/Configuration/configuration_menu.png) ![Konfigurace > Pumpa s pluginem EOPatch2](../images/v4/Configuration/configuration_pump_list_3.png)
+
+Po výběru se na kartě **EOPatch2** zobrazí dvě tlačítka, **Nastavení** a **Otevřít plugin**:
+
+![Plugin EOPatch2 vybraný v Konfigurace > Pumpa](../images/v4/Pumps/eopatch2_enabled.png)
 
 ## Nastavení
-Vyberte EOPATCH2 v horní části úvodní obrazovky pro přechod na kartu EOPATCH2.
 
-Vyberte nabídku Preferencí EOPatch2 kliknutím na tři tečky v pravém horním rohu.
+Nastavení EOPatch2 otevřete jedním ze dvou způsobů:
 
-Nabídka Preferencí EOPatch2 nabízí nabídku pro nastavení 3 typů upozornění.
+* stiskněte **Nastavení** na kartě **EOPatch2** v **Konfiguraci**, nebo
+* otevřete obrazovku pumpy (**Spravovat** → **Pumpa**) a stiskněte ikonu ozubeného kola v pravém horním rohu.
+
+Jsou zde tři nastavení:
+
+![Nastavení EOPatch2](../images/v4/Pumps/eopatch_settings.png)
 
 ### Nízký stav zásobníku
-Objeví se varování, když množství inzulínu zbývajícího v rezervoáru dosáhne nastavené hodnoty nebo méně při použití patche. Může být nastaveno od 10 do 50U v krocích po 5U.
 
-### Připomínka na vypršení platnosti patche
-Toto je připomínka upozornit vás na čas zbývající do vypršení současné náplasti. Může být nastaveno od 1 do 24 hodin v 1 hodinových krocích. Počáteční nastavení je 4 hodiny.
+Varování se zobrazí, když množství inzulínu v patchi klesne na tuto hodnotu nebo níže. Můžete nastavit hodnotu od 10 do 50 U, v krocích po 5 U. Výchozí hodnota je 10 U.
 
-### Připomínka buzzera pro náplasti
-Toto je funkce připomínky pro injekce mimo bazální injekci. Pokud používáte (rozšířenou) bolusovou injekci nebo dočasnou bazální injekci, náplast vydá zvuk buzzeru, když injekce začíná a když je injekce dokončena. Počáteční nastavení je vypnuto.
+### Připomenutí expirace pumpy
 
-![Obrázek3](../images/EOPatch/Bild3.png)
+Připomene vám, kolik času zbývá do konce platnosti aktuálního patche. Můžete nastavit hodnotu od 1 do 24 hodin, v krocích po 1 hodině. Výchozí hodnota je 4 hodiny.
 
-## Připojení náplasti
+### Alarmy pumpy
 
-### Přejděte na obrazovku připojení náplasti
+Když je tato volba zapnutá, patch pípne při začátku a konci bolusu, prodlouženého bolusu nebo dočasného bazálu. Na váš běžný bazál nemá žádný vliv. Ve výchozím stavu je vypnutá.
 
-Vyberte EOPATCH2 na horní části domovské obrazovky a klikněte na tlačítko AKTIVOVAT NÁPLAST v dolním levém rohu.
+## Aktivace nového patche
 
-![Obrázek4](../images/EOPatch/Bild4.png)
+### Otevřete průvodce aktivací
 
-### Připojení náplasti
-Vložte jehlu stříkačky do inzulínového vstupu na náplasti a poté pomalu stlačujte píst, abyste injikovali inzulín. Když je inkompleno více než 80U, náplast vydá zvuk bootování (1 buzzer) a spustí se. Po potvrzení zvuku buzzeru klikněte na tlačítko ZAČÍT SPÁROVÁNÍ na obrazovce.
+Otevřete obrazovku pumpy pomocí **Spravovat** → **Pumpa** (nebo stiskněte **Otevřít plugin** na kartě **EOPatch2** v **Konfiguraci**). Když není aktivní žádný patch, obrazovka ukazuje **Neaktivováno** a dole tlačítko **Aktivovat pumpu**.
 
-[Varování]
+Stisknutím **Aktivovat pumpu** spustíte průvodce.
 
-- Neotáčejte páku pro zasunutí jehly, dokud nebudete požádáni. Může to způsobit vážné problémy během injekce nebo kontrol bezpečnosti jinak.
-- Množství inzulínu, které lze injikovat do náplasti, je 80 až 200U. Pokud injikujete méně než 80U do náplasti na začátku, náplast nebude fungovat.
-- Vyndejte inzulín určený k vložení do náplasti z lednice a nechte ho 15 až 30 minut předem na pokojové teplotě. Teplota inzulínu, který má být injikován, musí být alespoň 10 °C.
+![Obrazovka pumpy EOPatch2 s tlačítkem Aktivovat pumpu](../images/v4/Pumps/eopatch_pump_screen.png)
 
-![Obrázek5](../images/EOPatch/Bild5.png)
+Průvodce vás provede každým krokem. Řada teček nahoře ukazuje, jak daleko jste.
 
-### Párování náplasti
-Obrazovka párování náplasti se zobrazí a párování se pokusí automaticky. Pokud je komunikace úspěšná, zobrazí se oznámení o žádosti o párování Bluetooth. Klikněte na OK a když se oznámení o žádosti o párování Bluetooth objeví podruhé s autentifikačním kódem, zvolte znovu OK.
+```{note}
+Pokud jste v **AAPS** ještě nikdy neaktivovali žádný **profil**, průvodce nejdříve zobrazí stránku **Vyžadován profil**. Vyberte profil, který chcete použít, a stiskněte **Aktivovat profil**.
+```
 
-[Varování]
+### Plnění inzulínu
 
-- Pro párování musí být náplast a smartphone umístěny do 30 cm od sebe.
-- Po dokončení spuštění náplasti bude náplast pípat každé 3 minuty, dokud nebude párování dokončeno.
-- Po spuštění náplasti musí být aplikace náplasti dokončena prostřednictvím aplikace do 60 minut. Pokud nelze aplikaci dokončit do 60 minut, náplast by měla být zlikvidována.
+Zasuňte jehlu injekční stříkačky do plnicího otvoru na patchi. Pomalu tlačte píst a naplňte patch. Jakmile je v patchi více než 80 U, jednou pípne a spustí se (nabootuje).
 
-![Obrázek6](../images/EOPatch/Bild6.png) ![Obrázek7](../images/EOPatch/Bild7.png) ![Obrázek8](../images/EOPatch/Bild8.png)
+Když uslyšíte pípnutí, stiskněte **Začít párovat**.
 
+![Krok Plnění inzulínu s tlačítkem Začít párovat](../images/v4/Pumps/eopatch_activate_filling.png)
 
-### Příprava náplasti
-Po odstranění lepící pásky z náplasti zkontrolujte, zda je jehla vytažená ven. Pokud s náplastí nejsou žádné problémy, klikněte na DALŠÍ.
+```{warning}
+- Neotáčejte pákou jehly, dokud vám to průvodce neřekne. Příliš brzké otočení může způsobit vážné problémy při plnění nebo při kontrole bezpečnosti.
+- Do patche se vejde 80 až 200 U. Pokud do něj dáte méně než 80 U, patch nebude fungovat.
+- Vyndejte inzulín z lednice 15 až 30 minut před plněním, aby se ohřál na pokojovou teplotu. Inzulín musí mít alespoň 10 °C.
+```
 
-![Obrázek9](../images/EOPatch/Bild9.png)
+### Párování pumpy
 
-### Připevnění náplasti
-Inzulín by měl být injikován na místě s podkožním tukem, ale s minimálním počtem nervů nebo cév, proto se doporučuje použít břicho, rameno nebo stehna jako místo připevnění náplasti. Vyberte místo připevnění náplasti a aplikujte náplast po dezinfekci místa.
+**AAPS** se nyní pokusí s patchem automaticky spárovat. Během párování se zobrazí dvě žádosti Androidu o spárování přes Bluetooth. U první stiskněte **OK**. U druhé, která ukazuje přístupový klíč, stiskněte znovu **OK**.
 
-[Varování]
+```{warning}
+- Při párování mějte patch a telefon ve vzdálenosti do 30 cm od sebe.
+- Po nabootování patch pípá každé 3 minuty, dokud není párování dokončeno.
+- Aktivaci patche musíte dokončit do 60 minut od jeho nabootování. Pokud to nestihnete, patch zahoďte.
+```
 
-- Ujistěte se, že je strana pásky náplasti připevněná k tělu rovná, aby se náplast úplně přichytla na kůži.
-- Pokud se náplast nelepí úplně, může se do prostoru mezi náplastí a kůží dostat vzduch, což může oslabit lepicí sílu a vodotěsnost náplasti.
+![Krok Párování pumpy](../images/EOPatch/Bild6.png) ![První žádost o spárování přes Bluetooth](../images/EOPatch/Bild7.png) ![Druhá žádost o spárování přes Bluetooth s přístupovým klíčem](../images/EOPatch/Bild8.png)
 
-![Obrázek10](../images/EOPatch/Bild10.png)
+```{admonition} Older screenshot
+:class: note
+Oba snímky obrazovky párování přes Bluetooth jsou ze starší verze **AAPS**: obrazovka **AAPS** za žádostí Androidu o spárování vypadá v **AAPS** 4 jinak.
+```
+
+### Výběr inzulínu
+
+Vyberte inzulín, kterým jste patch naplnili, a stiskněte **Další**. **AAPS** po aktivaci provede přepnutí profilu s tímto inzulínem.
+
+### Připravte se na připojení pumpy
+
+Odstraňte z patche lepicí pásku a pak stiskněte **Další**.
+
+Pokud jehla vyčnívá nebo je patch mokrý, špinavý či má ohnutou lepicí pásku, stiskněte místo toho **Zahodit** a použijte nový patch.
+
+![Krok Připravte se na připojení pumpy](../images/EOPatch/Bild9.png)
+
+### Umístění
+
+Tento krok se zobrazí, jen pokud je v nastavení rotace míst aplikace zapnutá volba **Spravovat střídání míst pumpy**. Klepněte na místo na schématu těla, kam patch připevníte, a stiskněte **Další**, nebo stiskněte **Přeskočit**.
+
+### Připojení pumpy
+
+Inzulín by měl jít do místa s tukovou tkání pod kůží, kde je málo nervů a cév. Dobrou volbou je břicho, paže nebo stehno. Místo vyčistěte a vysušte, pak patch přilepte na kůži.
+
+Zkontrolujte infuzní místo a pak stiskněte **Spustit kontrolu bezpečnosti**.
+
+```{warning}
+- Okraje pásky patche rovnoměrně přitlačte, aby celý patch pevně držel na kůži.
+- Pokud patch nedrží úplně, může se mezi patch a kůži dostat vzduch. To oslabuje lepidlo a voděodolnost patche.
+```
+
+![Krok Připojení pumpy](../images/EOPatch/Bild10.png)
 
 ### Kontrola bezpečnosti
-Když je nalepení dokončeno, dotkněte se Zahájit kontrolu bezpečnosti. Když je kontrola bezpečnosti dokončena, náplast zazvoní jednou.
 
-[Varování]
+Kontrola bezpečnosti trvá asi 30 sekund. Po jejím dokončení patch jednou pípne. Pokud selže, stiskněte **Opakovat**.
 
-- Pro bezpečné použití nekrouťte páku jehly, dokud není kontrola bezpečnosti dokončena.
+```{warning}
+Pro bezpečné použití neotáčejte pákou jehly, dokud není kontrola bezpečnosti dokončena.
+```
 
-![Obrázek11](../images/EOPatch/Bild11.png) ![Obrázek12](../images/EOPatch/Bild12.png)
+![Krok Připojení pumpy s tlačítkem Spustit kontrolu bezpečnosti](../images/EOPatch/Bild11.png) ![Probíhá kontrola bezpečnosti](../images/EOPatch/Bild12.png)
 
+```{admonition} Older screenshot
+:class: note
+Snímky obrazovky od kroku **Připravte se na připojení pumpy** po **Kontrola bezpečnosti** jsou ze starší verze **AAPS** a v **AAPS** 4 mohou vypadat jinak.
+```
 
-### Vložení jehly
-Jehla se vloží tak, že držíte kolem náplasti a otočíte páku pro akci jehly o více než 100° směrem nahoru. Když je jehla vložena správně, ozve se zvukový signál. Dále otočte páku pro akci jehly po směru hodinových ručiček, abyste uvolnili páku. Klikněte na DALŠÍ.
+### Vkládání jehly
 
-[Upozornění]
+Patch pevně držte. Otočte pákou jehly nahoru o více než 100°, aby se jehla zavedla. Když je jehla zavedena správně, patch jednou pípne. Pak pákou otáčejte dál až do konce, abyste ji odstranili. Stiskněte **Další**.
 
-- Pokud přejdete na další krok bez znějícího signálu, zobrazí se varování o chybě vložení jehly.
+```{caution}
+Pokud přejdete na další krok bez pípnutí, zobrazí se **Chyba při vložení jehly**. Ověřte pípnutí a stiskněte **Opakovat**. Pokud chyba trvá, stiskněte **Zahodit** a patch deaktivujte.
+```
 
-## Zbavení se náplasti
-Náplasti musí být vyměněny v případě nízké hladiny inzulínu, vypršení platnosti používání a vad. Doporučená doba použití každé náplasti je 84 hodin od zapnutí náplasti.
+### Aktivace pumpy dokončena
 
-### Zbavení se náplasti
-Vyberte EOPATCH2 v horní části hlavní obrazovky a klikněte na tlačítko ZBAVIT SE/ZMĚNIT NÁPLAST na spodní straně. Na další obrazovce klikněte na tlačítko ZBAVIT SE NÁPLASTI. Zobrazí se dialogové okno pro potvrzení, a pokud vyberete tlačítko ZBAVIT SE NÁPLASTI, dojde k likvidaci.
+Poslední stránka potvrdí, že je patch aktivní a že vás upozorní, když se bude blížit konec jeho platnosti. Stisknutím **Dokončit** se vrátíte na obrazovku pumpy.
 
-![Obrázek13](../images/EOPatch/Bild13.png) ![Obrázek14](../images/EOPatch/Bild14.png) ![Obrázek15](../images/EOPatch/Bild15.png) ![Obrázek16](../images/EOPatch/Bild16.png)
+## Zahození patche
 
-## Pozastavení a obnovení dodávky inzulínu
-Pozastavení dodávky inzulínu také zruší jak rozšířenou bolusovou dávku, tak dočasnou bazální dávku. Při obnovení dodávky inzulínu se zrušená rozšířená bolusová dávka a dočasná bazální dávka neobnoví. A při pozastavení dodávky inzulínu bude náplast každých 15 minut vydávat zvuk.
+Patch vyměňte, když v něm dochází inzulín, když vyprší jeho platnost nebo když je vadný. Doporučujeme používat každý patch nejvýše 84 hodin od jeho nabootování.
+
+1. Otevřete obrazovku pumpy (**Spravovat** → **Pumpa**). Když je patch aktivní, stiskněte **Zahodit pumpu**.
+1. Stránka **Zahodit pumpu** ukazuje zbývající čas a zbývající inzulín v patchi. Stiskněte **Zahodit pumpu**.
+1. Dialog vás požádá o potvrzení. Stiskněte znovu **Zahodit pumpu**.
+1. Po deaktivaci patche průvodce zobrazí **Zahození pumpy je dokončeno.** Sundejte patch z těla a stiskněte **Potvrdit**.
+
+Potom průvodce pokračuje rovnou aktivací nového patche (viz výše). Pokud zde chcete skončit, stiskněte šipku zpět.
+
+Dokud není aktivní žádný patch, **AAPS** ukazuje pumpu jako pozastavenou a zaznamená dočasný bazál 0 U/h, takže se do IOB nezapočítává žádný bazální inzulín, dokud není aktivován další patch.
+
+![Obrazovka pumpy EOPatch2 s tlačítkem DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![Stránka Zahodit pumpu](../images/EOPatch/Bild14.png) ![Dialog pro potvrzení Zahodit pumpu](../images/EOPatch/Bild15.png) ![Zahození pumpy je dokončeno](../images/EOPatch/Bild16.png)
+
+```{admonition} Older screenshot
+:class: note
+Snímky obrazovky výše pocházejí ze starší verze **AAPS**. V **AAPS** 4 otevřete obrazovku pumpy přes **Spravovat** → **Pumpa** a tlačítko na ní má popis **Zahodit pumpu**.
+```
+
+```{admonition} If the patch does not respond
+:class: warning
+Pokud se **AAPS** nemůže s patchem spojit, může zobrazit stránku o ručním vypnutí alarmu patche: sundejte patch z těla, odlepte lepicí pásku a sponkou pevně zatlačte do otvoru vedle plnicího otvoru pro inzulín.
+
+Stránka **Zahodit pumpu** má také tlačítko **Vynutit reset**. To pouze odstraní patch z **AAPS**, aniž by patchi poslalo jakýkoli příkaz. Patch dál vydává inzulín, dokud se nevybije jeho baterie nebo dokud ho ručně nevypnete. Použijte ho, jen pokud selže běžné zahození, a sundejte patch z těla.
+```
+
+## Pozastavení a obnovení výdeje inzulínu
+
+Pozastavení výdeje inzulínu také zruší prodloužený bolus a dočasný bazál. Po obnovení se **nespustí** znovu. Během pozastavení výdeje inzulínu patch pípá každých 15 minut.
 
 ### Pozastavení dodávky inzulínu
-Vyberte EOPATCH2 v horní části hlavní obrazovky a klikněte na tlačítko POZASTAVIT v pravém dolním rohu. Když vyberete POTVRDIT v potvrzovacím políčku, zobrazí se výběr času. Pokud po výběru času vyberete tlačítko POTVRDIT, dodávka inzulínu bude pozastavena na nastavenou dobu.
 
-![Obrázek17](../images/EOPatch/Bild17.png) ![Obrázek18](../images/EOPatch/Bild18.png) ![Obrázek19](../images/EOPatch/Bild19.png)
+1. Otevřete obrazovku pumpy (**Spravovat** → **Pumpa**) a stiskněte **Pozastavit pumpu**.
+1. Dialog vysvětlí, co bude pozastaveno. Stiskněte **Potvrdit**.
+1. V dialogu **Čas pozastavení pumpy** zvolte, na jak dlouho pozastavit: 30 min, 1 h, 1 h 30 min nebo 2 h. Stiskněte **Potvrdit**.
 
+Výdej inzulínu je pozastaven na zvolenou dobu.
+
+![Obrazovka pumpy EOPatch2 s tlačítkem SUSPEND](../images/EOPatch/Bild17.png) ![Dialog pro potvrzení pozastavení](../images/EOPatch/Bild18.png) ![Dialog Čas pozastavení pumpy](../images/EOPatch/Bild19.png)
+
+```{admonition} Older screenshot
+:class: note
+Snímky obrazovky výše pocházejí ze starší verze **AAPS**. V **AAPS** 4 otevřete obrazovku pumpy přes **Spravovat** → **Pumpa** a tlačítko na ní má popis **Pozastavit pumpu**.
+```
 
 ### Obnovení dodávky inzulínu
-Vyberte EOPATCH2 v horní části hlavní obrazovky a klikněte na tlačítko OBNOVIT v pravém dolním rohu. Dodávka inzulínu se obnoví výběrem POTVRDIT v potvrzovacím dialogovém okně.
 
-![Obrázek20](../images/EOPatch/Bild20.png) ![Obrázek21](../images/EOPatch/Bild21.png)
+1. Otevřete obrazovku pumpy (**Spravovat** → **Pumpa**) a stiskněte **Obnovit pumpu**.
+1. V dialogu **Obnovit výdej inzulínu** stiskněte **Potvrdit**.
 
-## Alarmy/Varování
+![Obrazovka pumpy EOPatch2 s tlačítkem RESUME](../images/EOPatch/Bild20.png) ![Dialog Obnovit výdej inzulínu](../images/EOPatch/Bild21.png)
 
-### Alarm
+```{admonition} Older screenshot
+:class: note
+Snímky obrazovky výše pocházejí ze starší verze **AAPS**. V **AAPS** 4 otevřete obrazovku pumpy přes **Spravovat** → **Pumpa** a tlačítko na ní má popis **Obnovit pumpu**.
+```
 
-Alarmy jsou vydávány pro naléhavé situace nejvyšší priority a vyžadují okamžitou akci. Alarmový signál nezmizí ani nevyprší, dokud nebude potvrzen. Alarm se aktivuje, pokud je problém s používanou náplastí, takže mohou nastat případy, kdy je třeba používanou náplast zlikvidovat a nahradit novou náplastí. Varování se zobrazí jako dialogové okno a přechod na jinou obrazovku není možný, dokud není zpracování dokončeno.
+```{warning}
+Když čas pozastavení skončí, **AAPS** zobrazí varování **Konec pozastavení inzulínu**. Výdej inzulínu se **nespustí** znovu, dokud to nepotvrdíte. Pokud to neuděláte, může u vás dojít k hyperglykémii.
+```
 
-![Obrázek22](../images/EOPatch/Bild22.png) ![Obrázek23](../images/EOPatch/Bild23.png)
+(eopatch2-alarms-and-warnings)=
 
-Různé typy alarmů jsou uvedeny níže.
+## Alarmy a varování
 
-| Alarmy                                  | Vysvětlení                                                                                                                                                                                                      |
-| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Prázdná nádrž                           | Nastává, když se nádrž náplasti vyprázdní z inzulínu.                                                                                                                                                           |
-| Náplast vypršela                        | Nastává, když vypršela doba používání náplasti a není možné provést další injekce inzulínu.                                                                                                                     |
-| Ucpání                                  | Nastává, když se zdá, že je vstup inzulínu do náplasti ucpaný.                                                                                                                                                  |
-| Selhání automatického testu při zapnutí | Nastává, když patch najde neočekávanou chybu během procesu automatického testování po spuštění.                                                                                                                 |
-| Nevhodná teplota                        | Nastává, když je patch mimo normální rozsah provozní teploty během aplikace a používání patche. Abychom se vypořádali s tímto alarmem, přesuňte patch do vhodného provozního teplotního rozsahu (4,4 až 37 °C). |
-| Chyba při vložení jehly                 | Nastává, když vložení jehly není během procesu aplikace patche normální. Zkontrolujte, že hrana pro vložení jehly na patchi a tlačítko pro aktivaci jehly jsou v přímce.                                        |
-| Chyba baterie patche                    | Nastává těsně před vybitím vnitřní baterie patche, což způsobí její vypnutí.                                                                                                                                    |
-| Chyba aktivace patche                   | Nastává, když aplikace nedokáže dokončit proces patche během 60 minut po jejím spuštění.                                                                                                                        |
-| Chyba patche                            | Nastává, když patch narazí na neočekávanou chybu při aplikaci a používání patche.                                                                                                                               |
+### Alarmy
 
-### Upozornění
+Alarmy jsou pro naléhavé situace s nejvyšší prioritou a vyžadují váš okamžitý zásah. **AAPS** spustí alarm, který zní, dokud ho nepotvrdíte, a zobrazí zprávu jako oznámení na obrazovce **Přehled**. Alarm znamená, že je problém s používaným patchem. V mnoha případech je nutné patch zahodit a nahradit novým.
 
-Upozornění se objevuje ve středním nebo nízkém prioritním případě. Když dojde k upozornění, zobrazí se jako oznámení na přehledové obrazovce.
+Když v oznámení stisknete **Potvrdit**, **AAPS** alarm zpracuje. U většiny alarmů se tím patch deaktivuje. U alarmu **Nevhodná teplota** je tlačítko **Opakovat**.
 
-![Obrázek24](../images/EOPatch/Bild24.png)
+![Alarm EOPatch2](../images/EOPatch/Bild22.png) ![Alarm EOPatch2 po deaktivaci patche](../images/EOPatch/Bild23.png)
 
-Různé typy upozornění jsou vysvětleny níže.
+```{admonition} Older screenshot
+:class: note
+Snímky obrazovky alarmů jsou ze starší verze **AAPS** a v **AAPS** 4 mohou vypadat jinak.
+```
 
-| Upozornění                 | Vysvětlení                                                                                                        |
-| -------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Konec pozastavení inzulínu | Nastává, když uplynula doba nastavená uživatelem po dokončení pozastavení infuze inzulínu.                        |
-| Nízká nádrž                | Nastává, když zbývající množství inzulínu v patchi je pod nastaveným množstvím.                                   |
-| Platnost patche vypršela   | Nastává, když uplynula doba používání patche.                                                                     |
-| Záplata brzy vyprší        | Nastává 1 hodinu před tím, než musí být patch vyřazena.                                                           |
-| Neúplná aktivace patche    | Nastává, když uplynulo více než 3 minuty v důsledku přerušení během aplikace patche v fázi po dokončení párování. |
-| Nízká baterie patche       | Nastává, když je baterie patche slabá.                                                                            |
+Jednotlivé alarmy jsou vysvětleny níže.
 
+| Alarm                                   | Vysvětlení                                                                                                                           |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Prázdný zásobník                        | V patchi došel inzulín.                                                                                                              |
+| Patch vypršel                           | Doba používání patche skončila a patch už nemůže vydávat inzulín.                                                                    |
+| Okluze                                  | Cesta inzulínu v patchi je pravděpodobně ucpaná.                                                                                     |
+| Selhání automatického testu při zapnutí | Patch při autotestu po nabootování zjistil neočekávanou chybu.                                                                       |
+| Nevhodná teplota                        | Patch je mimo svou běžnou provozní teplotu během aktivace nebo používání. Přesuňte patch na místo s vhodnou teplotou (4,4 až 37 °C). |
+| Chyba při vložení jehly                 | Jehla nebyla při aktivaci správně zavedena. Zkontrolujte, zda okraj patche pro vpich jehly a páka jehly jsou v přímce.               |
+| Chyba baterie patche                    | Vnitřní baterie patche se brzy vybije a patch se vypne.                                                                              |
+| Chyba aktivace patche                   | Patch nebyl plně aktivován do 60 minut od nabootování.                                                                               |
+| Chyba patche                            | Patch zjistil neočekávanou chybu během aktivace nebo používání.                                                                      |
+
+### Varování
+
+Varování jsou pro situace se střední nebo nízkou prioritou. Varování se zobrazí jako oznámení na obrazovce **Přehled**.
+
+![Varování EOPatch2 zobrazené na obrazovce Přehled](../images/EOPatch/Bild24.png)
+
+```{admonition} Older screenshot
+:class: note
+Tento snímek obrazovky je ze starší verze **AAPS**: v **AAPS** 4 se varování zobrazí na hlavní obrazovce, která vypadá jinak.
+```
+
+Jednotlivá varování jsou vysvětlena níže.
+
+| Varování                    | Vysvětlení                                                                                                              |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Konec pozastavení inzulínu  | Zvolená doba pozastavení skončila. Stisknutím **Obnovit pumpu** v oznámení znovu spustíte výdej inzulínu.               |
+| Nízký stav zásobníku        | Množství inzulínu v patchi je nižší než hodnota nastavená v **Nízký stav zásobníku**.                                   |
+| Platnost patche vypršela    | Doba používání patche skončila.                                                                                         |
+| Platnost patche brzy vyprší | Patch musíte zahodit do 1 hodiny.                                                                                       |
+| Neúplná aktivace patche     | Aktivace patche byla po spárování přerušena na déle než 3 minuty. Otevřete obrazovku pumpy a dokončete aktivaci patche. |
+| Nízká baterie patche        | Baterie patche je slabá.                                                                                                |
+
+## Kde získat pomoc
+
+Vývoj ovladače EOPatch2 provádí komunita na **dobrovolnické** bázi. Než požádáte o pomoc:
+
+1. **Přečtěte si** příslušnou část této dokumentace a ověřte, jak má funkce fungovat.
+2. **Zeptejte se** na kanálu *#AAPS* na [Discordu](https://discord.gg/4fQUWHZ4Mw) nebo v jiném z [komunitních kanálů](../GettingHelp/WhereCanIGetHelp.md).
+3. **Nahlaste chybu**: prohledejte [existující hlášení (issues)](https://github.com/nightscout/AndroidAPS/issues); pokud tam vaše chyba není, založte [nové hlášení (issue)](https://github.com/nightscout/AndroidAPS/issues) a přiložte své [log soubory](../GettingHelp/AccessingLogFiles.md).
+
+Když žádáte o pomoc, uveďte značku a model telefonu, verzi Androidu, verzi **AAPS** a jednoduchý popis problému v angličtině (co se změnilo, kdy to naposledy fungovalo).

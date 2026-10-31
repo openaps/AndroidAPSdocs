@@ -34,7 +34,7 @@
 
 3. 這兩種選擇中的任何一個都將在你的庫中建立一個新分支，你的編輯將儲存在該分支中。對文件進行編輯。
 
-我們使用Markdown語法來編寫文件頁面。文件的後綴為“.md”。目前我們使用myst_parser來處理我們的Markdown文件。請確保使用正確的語法，如[以下所述](#code-syntax)。
+我們使用Markdown語法來編寫文件頁面。 The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. 請確保使用正確的語法，如[以下所述](#code-syntax)。
 
 ![編輯分支](../images/PR3.png)
 
@@ -147,10 +147,10 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 
 圖像類型應為PNG或JPEG。
 
-圖像名稱應遵循以下命名規則之一。在示例中，我使用png作為後綴。如果使用JPEG，請使用jpeg作為後綴。
+Image names should conform to one of the following naming rules. 在示例中，我使用png作為後綴。如果使用JPEG，請使用jpeg作為後綴。
 
 - `filename-image-xx.png` 其中xx是該文件中圖像的唯一雙位數字。
-- `filename-image-xx.png` 其中xx是文件作者的有意義名稱。
+- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
 
 圖像位於英文語系的圖像文件夾中，並透過Crowdin自動傳播到其他語系。你無需為此做任何事！
 
@@ -161,6 +161,7 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 - 來自網頁的截圖圖像寬度應達到**1050像素**。
 - 流程圖的寬度應達到**1050像素**。
 - 應用程序的截圖寬度應達到**500像素**。如果沒有必要，請不要將它們並排放置。
+- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
 
 ### 連結
 
@@ -198,7 +199,7 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 
 你可以在文件中添加註釋和警告框。
 
-此外，你還可以添加折疊註釋，為不感興趣於詳細訊息的用戶隱藏文本，以便閱讀體驗更輕鬆。請謹慎使用這些功能，因為文件應儘可能易於閱讀。
+Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. 請謹慎使用這些功能，因為文件應儘可能易於閱讀。
 
 #### 註釋
 
@@ -311,7 +312,7 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 
 - *“胰島素（主語）由幫浦（賓語）輸送（動詞）。”*
 
-*“輸送”*在這裡是被動動詞。與主動動詞句子相比，主語和賓語位置調換了。我們不得不引入“由”和“被”使句子變得更長。還要考慮以主動動詞開頭。
+*“delivered”* is a passive verb here. 與主動動詞句子相比，主語和賓語位置調換了。我們不得不引入“由”和“被”使句子變得更長。還要考慮以主動動詞開頭。
 
 例如：*“你可以透過AAPS幫浦選單將幫浦與手機連線，並且有多種幫浦可供連線。”*
 
@@ -526,7 +527,7 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
     
     *w 比 z 更好，因為…*
     
-    在適當的地方提供評價甚至意見。
+    Offer judgements and even opinions where appropriate.
     
     *系統 y 中的 x 類似於系統 z 中的 w。然而…*
     
@@ -552,7 +553,7 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 
 #### AAPS 常見要點
 
-- 對於血糖值，請在每次出現時同時標明 mg/dl 和 mmol/l（如果可能，也考慮將其應用於截圖）。
+- For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible).
 
 - 為了保持一致性，使用 “AAPS” 而不是 “Android APS”。
 

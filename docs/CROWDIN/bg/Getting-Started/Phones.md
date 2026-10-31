@@ -1,40 +1,49 @@
-# Phones
+# Телефони
 
-The current version of **AAPS** (3.4) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), **Android 16 is preferred**, Android 15 is not recommended.
+<!-- List of hidden pages to avoid overcrowding the menu -->
 
-Check [Facebook or Discord](../GettingHelp/WhereCanIGetHelp.md) for latest updates on this subject.
+```{toctree}
+:hidden:
 
-Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+../CompatiblePhones/Jelly.md
+../CompatiblePhones/Huawei.md
+```
 
-- [Jelly Pro Settings](../CompatiblePhones/Jelly.md)
-- [Huawei Settings](../CompatiblePhones/Huawei.md)
+Текущата версия на **AAPS** (4.0) изисква смартфон с Google **Android 12.0 или по-нов**. Ако обмисляте да купите нов телефон, (към януари 2026 г.) **за предпочитане е Android 16**, а Android 15 не се препоръчва.
+
+Следете [Facebook или Discord](../GettingHelp/WhereCanIGetHelp.md) за най-новата информация по тази тема.
+
+Настоятелно препоръчваме на потребителите да поддържат своята компилация на **AAPS** актуална от съображения за безопасност. Но за потребители, които не могат да използват устройство с Android 12.0 или по-нов, остават достъпни по-стари версии на **AAPS**, съвместими с по-старите версии на Android – вижте [Бележки към версията](#maintenance-android-version-aaps-version).
+
+- [Настройки за Jelly Pro](../CompatiblePhones/Jelly.md)
+- [Настройки за Huawei](../CompatiblePhones/Huawei.md)
 
 (Phones-list-of-tested-phones)=
 
-## List of tested Phones
+## Списък с тествани телефони
 
-We maintain a list of the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) that you can [explore with a friendly interface](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/). Contribute by filling out the [Google form](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) and adding your setup!
+Поддържаме списък с [тествани хардуерни конфигурации](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true), който можете да [разгледате в удобен интерфейс](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/). Помогнете, като попълните [формуляра в Google](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) и добавите своята конфигурация!
 
-This list provides user feedback on the usage of a phone along with **AAPS** and a given pump and CGM. It can help you check if your phone / pump / CGM has been used successfully by other users.
+Този списък съдържа отзиви от потребители за използването на даден телефон заедно с **AAPS** и определена помпа и CGM. Той може да ви помогне да проверите дали вашият телефон / помпа / CGM вече са използвани успешно от други потребители.
 
-The document is read-only. With CRTL-F, you can search in the text of the Google sheet.
+Документът е само за четене. С CTRL-F можете да търсите в текста на таблицата в Google.
 
-To record your test of a hardware setup, please fill in this [form](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). After you fill in the form data, the sheet is updated automatically every 5 minutes
+За да запишете своя тест на дадена хардуерна конфигурация, моля, попълнете този [формуляр](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). След като попълните данните във формуляра, таблицата се обновява автоматично на всеки 5 минути.
 
-Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the [Where can I get help? page](../GettingHelp/WhereCanIGetHelp.md).
+При проблеми с таблицата се свържете с човека, който я поддържа, *@theodoor5137*, в Discord или вижте страницата [Къде мога да получа помощ? ](../GettingHelp/WhereCanIGetHelp.md).
 
-## I didn't find my phone
+## Не намерих моя телефон
 
-If you have questions regarding a specific phone model, please search or ask in our [Facebook or Discord community](../GettingHelp/WhereCanIGetHelp.md).
+Ако имате въпроси за конкретен модел телефон, моля, потърсете или попитайте в нашата [общност във Facebook или Discord](../GettingHelp/WhereCanIGetHelp.md).
 
-To make a donation of smartphone or smartwatch models that still need testing, please email <donations@androidaps.org>.
+Ако искате да дарите модели смартфони или смарт часовници, които още трябва да се тестват, моля, пишете на <donations@androidaps.org>.
 
 (Phones-phone-wallpaper)=
 
-## Phone Wallpaper
+## Тапет за телефона
 
-If you want to decorate your phone with more **AAPS**, you can download your background image [here](../images/bg_phone.jpg)!
+Ако искате да украсите телефона си с още **AAPS**, можете да изтеглите своя фон [тук](../images/bg_phone.jpg)!
 
-![phone background](../images/bg_phone_thump.jpg)
+![фон за телефона](../images/bg_phone_thump.jpg)
 
-Design: Thiago :)
+Дизайн: Thiago :)

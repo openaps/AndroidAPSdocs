@@ -2,30 +2,33 @@
 
 # Detekcja wrażliwości (sensitivity)
 
-## Sensitivity algorithm
+## Algorytm wrażliwości
 
-Currently we have 3 sensitivity detection models:
+**AAPS** ma obecnie 3 modele wykrywania wrażliwości:
 
-* Sensitivity AAPS
-* Sensitivity WeightedAverage
-* Sensitivity Oref1
+* Wrażliwość AAPS
+* Wrażliwość ŚredniaWażona
+* Wrażliwość Oref1
 
-### Sensitivity AAPS
+### Wrażliwość AAPS
 
-Sensitivity is calculated the same way like Oref1 but you can specify time to the past. Minimal carbs absorption is calculated from max carbs absorption time from preferences
+Wrażliwość jest obliczana tak samo jak w Oref1, ale możesz ustawić, z jakiego okresu wstecz brane są dane. Minimalne wchłanianie węglowodanów jest obliczane z maksymalnego czasu wchłaniania węglowodanów ustawionego w ustawieniach.
 
-### Sensitivity WeightedAverage
+### Wrażliwość ŚredniaWażona
 
-Sensitivity is calculated as a weighted average from deviations. You can specify time to the past. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
+Wrażliwość jest obliczana jako średnia ważona odchyleń. Możesz ustawić, z jakiego okresu wstecz brane są dane. Nowsze odchylenia mają większą wagę. Minimalne wchłanianie węglowodanów jest obliczane z maksymalnego czasu wchłaniania węglowodanów ustawionego w ustawieniach. Ten algorytm najszybciej reaguje na zmiany wrażliwości.
 
 (SensitivityDetectionAndCob-sensitivity-oref1)=
 
-### Sensitivity Oref1
+### Wrażliwość Oref1
 
-Sensitivity is calculated from 8h data in the past or from last site change, if it is less than 8h ago. Carbs (if not absorbed) are cut after time specified in preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from sensitivity calculation. So if you are using SMB with UAM, you have to choose Oref1 algorithm to work properly. For more information read [OpenAPS Oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
+Wrażliwość jest obliczana z danych z ostatnich 8 godzin albo od ostatniej zmiany miejsca wkłucia, jeśli była mniej niż 8 godzin temu. Węglowodany (jeśli nie zostały wchłonięte) są usuwane po czasie ustawionym w ustawieniach. Tylko algorytm Oref1 obsługuje niezgłoszone posiłki (UAM, un-announced meals). Oznacza to, że okresy z wykrytym UAM są pomijane przy obliczaniu wrażliwości. Jeśli więc używasz SMB z UAM, musisz wybrać algorytm Oref1, aby to działało poprawnie. Więcej informacji o UAM znajdziesz w sekcji [Super Mikro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-Oref1 is the recommended option : it is the only one that can detect UAM and work with [OpenAps SMB](#Open-APS-features-super-micro-bolus-smb), the more recent algorithm.
+Oref1 jest zalecaną opcją: tylko on potrafi wykrywać UAM i działać z [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), nowszym algorytmem.
 
 ## Równoczesne węglowodany
 
-There is significant difference while using AAPS, WeightedAverage vs Oref1. Oref plugins expects only one meal decaying at time. It means 2nd meal starts decaying after 1st meal is completely decayed. AAPS+Weighted average starts decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to meal size and max absorption time. The minimum absorption accordingly will be higher in comparison to Oref plugins.
+Gdy kilka posiłków nakłada się na siebie, jest duża różnica między algorytmami Wrażliwość AAPS i Wrażliwość ŚredniaWażona z jednej strony a Oref1 z drugiej.
+
+* Oref1 zakłada, że w danym czasie wchłania się tylko jeden posiłek: drugi posiłek zaczyna się wchłaniać dopiero, gdy pierwszy całkowicie się wchłonie.
+* Wrażliwość AAPS i Wrażliwość ŚredniaWażona zaczynają wchłanianie od razu po wpisaniu węglowodanów. Jeśli w organizmie jest więcej niż jeden posiłek, minimalne wchłanianie węglowodanów dostosuje się do wielkości posiłku i maksymalnego czasu wchłaniania. Minimalne wchłanianie będzie więc większe niż w Oref1.

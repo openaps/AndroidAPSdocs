@@ -1,38 +1,44 @@
-# Smoothing blood glucose data
+# Vyhladzovanie údajov glykémie
 
-If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors in your CGM data it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
+Ak údaje **glykémie** skáču alebo sú zašumené, **AAPS** môže dávkovať inzulín nesprávne, čo vedie k vysokým alebo nízkym glykémiám. Ak pri CGM pozorujete chyby alebo skákajúce údaje, je dôležité vypnúť okruh, kým sa problém nevyrieši. V závislosti od vášho CGM môžu byť príčinou takýchto problémov nastavenia CGM v **AAPS** (ako je vysvetlené nižšie) alebo problém s miestom zavedenia senzora CGM (čo môže vyžadovať výmenu senzora CGM).
 
-## Smoothing data within AAPS
+## Vyhladzovanie dát v AAPS
 
-As of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. There are three options available in [Config Builder > Smoothing](../SettingUpAaps/ConfigBuilder.md).
+**AAPS** ponúka možnosť vyhladzovať údaje priamo v **AAPS**, a nie v aplikácii CGM. Otvorte **ponuku** (☰), vyberte [**Konfigurácia**](../SettingUpAaps/ConfigBuilder.md) a potom **Vyhladzovanie**. Sú štyri možnosti a naraz môže byť aktívna iba jedna: **Žiadne vyhladzovanie**, **Exponenciálne vyhladzovanie**, **Priemerovacie vyhladzovanie** a **Unscented Kalmanov filter**.
 
-![Vyhladzovanie](../images/ConfBuild_Smoothing.png)
+![Konfigurácia > Vyhladzovanie](../images/v4/Configuration/configuration_smoothing.png)
 
-### Exponential smoothing
+### Exponenciálne vyhladzovanie
 
-In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
+Vo všeobecnosti je to odporúčaná možnosť na začiatok, pretože najsilnejšie odstraňuje šum a prepisuje aj najnovšiu hodnotu. Ďalšie konkrétne odporúčania však nájdete v tabuľke nižšie.
 
-### Average smoothing
+### Priemerovacie vyhladzovanie
 
-This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data.
+Táto možnosť funguje podobne ako spätné vyhladzovanie (back smoothing), ktoré bolo predtým zavedené na niektorých platformách CGM. Rýchlejšie reaguje na nedávne zmeny hodnoty glykémie, a preto je náchylnejšie na nesprávnu reakciu na zašumené dáta z CGM.
 
-### No Smoothing
+### Žiadne vyhladzovanie
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
+Túto možnosť použite iba vtedy, ak vaša zberná aplikácia (collector) údaje z CGM správne vyhladzuje ešte pred ich odoslaním do **AAPS**.
+
+### Unscented Kalmanov filter (UKF)
+
+Táto možnosť používa štatistický model, ktorý z prichádzajúcich (možno zašumených) hodnôt priebežne odhaduje vašu skutočnú glykémiu a rýchlosť jej zmeny a automaticky sa prispôsobuje tomu, aký zašumený je váš senzor práve teraz. Zistí aj náhle odľahlé hodnoty a vyradí ich. Je to pokročilejšia alternatíva k exponenciálnemu a priemerovaciemu vyhladzovaniu. Hodí sa, ak chcete, aby sa vyhladzovanie samo prispôsobovalo meniacej sa úrovni šumu vášho senzora namiesto použitia pevnej metódy.
 
 (smoothing-xdrip-dexcom-g6)=
 
-## Suggestions to use smoothing
+## Odporúčania na použitie vyhladzovania
 
-|               | Exponential |  Average  |    None     |
-| ------------- |:-----------:|:---------:|:-----------:|
-| G5/G6/ONE     |  If noisy   |           | Recommended |
-| G7/ONE+/Stelo |  If noisy   | If stable |             |
+Metódu vyhladzovania môžete meniť aj automaticky, napríklad podľa veku senzora, pomocou [akcie automatizácie](#automations-automation-action) **Zmeniť vyhladzovanie**.
 
-Libre sensors are noisy and can require smoothing. When using xDrip+ direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+|               |     Exponenciálne     | Priemerovacie  | Žiadne vyhladzovanie |
+| ------------- |:---------------------:|:--------------:|:--------------------:|
+| G5/G6/ONE     | Pri zašumených dátach |                |      Odporúčané      |
+| G7/ONE+/Stelo | Pri zašumených dátach | Ak je stabilný |                      |
 
-| Sensor / Data source | Juggluco | xDrip+ direct | xDrip+ bridge | xDrip+ patched app |
-| -------------------- |:--------:|:-------------:|:-------------:|:------------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.      |    Average    |        N.A.        |
-| Libre 2/2+ (EU)      | Average  |     None      |    Average    |        None        |
-| Libre 2/2+/3/3+      | Average  |     N.A.      |     N.A.      |        None        |
+Senzory Libre sú zašumené a môžu vyžadovať vyhladzovanie. Pri priamom pripojení xDrip alebo pri zdroji dát z upravenej aplikácie (príjem z inej aplikácie, vrátane Juggluco) [vyhladzovanie už prebieha v aplikácii](#libre2-value-smoothing-raw-values).
+
+| Senzor / zdroj dát  |   Juggluco    | xDrip priame pripojenie | xDrip mostík  | xDrip upravená aplikácia |
+| ------------------- |:-------------:|:-----------------------:|:-------------:|:------------------------:|
+| Libre 1/14 days/Pro |      N/A      |           N/A           | Priemerovacie |           N/A            |
+| Libre 2/2+ (EÚ)     | Priemerovacie |         Žiadne          | Priemerovacie |          Žiadne          |
+| Libre 2/2+/3/3+     | Priemerovacie |           N/A           |      N/A      |          Žiadne          |

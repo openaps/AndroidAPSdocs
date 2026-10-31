@@ -1,180 +1,134 @@
-# Timezone Change and Daylight Saving
+# Αλλαγή ζώνης ώρας και θερινή ώρα
 
-## Ταξιδεύοντας σε διαφορετικές ζώνες ώρας με αντλίες
+Όταν αλλάζει η ζώνη ώρας του τηλεφώνου σας, το **AAPS** υπολογίζει ξανά από την αρχή το **IOB**, τον βασικό ρυθμό και την ευαισθησία για το παρελθόν, περίπου 10 δευτερόλεπτα μετά την αλλαγή. Όσο γίνεται αυτό, τα γραφήματα και οι τιμές στην κύρια οθόνη μπορεί να αργήσουν λίγο να ενημερωθούν.
 
-## Timezone change for Omnipod Dash
+(timezone-traveling-with-pumps)=
 
-* Refresh the Dash tab
-* Temporarily select a different **Profile** and then switch back to your original or desired **Profile**
+## Αλλαγή ζώνης ώρας για Omnipod Dash
 
-## Timezone change for DanaR, Korean DanaR
+* Ανανεώστε την κατάσταση της αντλίας στο **Διαχείριση → Αντλία**
+* Επιλέξτε προσωρινά ένα άλλο **Προφίλ** και μετά επιστρέψτε στο αρχικό ή στο επιθυμητό **Προφίλ**
+
+## Αλλαγή ζώνης ώρας για DanaR, Korean DanaR
 
 Δεν υπάρχει πρόβλημα με την αλλαγή ζώνης ώρας στο τηλέφωνο, επειδή η αντλία δεν χρησιμοποιεί ιστορικό
 
 (timezone-traveling-danarv2-danars)=
 
-## Timezone change for DanaRv2, DanaRS, Dana-i
+## Αλλαγή ζώνης ώρας για DanaRv2, DanaRS, Dana-i
 
-These pumps require special care because **AAPS** uses history from the pump but the records in pump do not have timezone stamp. **This means that if you change time zone in your phone, records will be read with different time zone and will be doubled.**
+Αυτές οι αντλίες χρειάζονται ιδιαίτερη προσοχή, επειδή το **AAPS** χρησιμοποιεί το ιστορικό της αντλίας, αλλά οι καταχωρήσεις στην αντλία δεν έχουν σήμανση ζώνης ώρας. **Αυτό σημαίνει ότι αν αλλάξετε τη ζώνη ώρας στο τηλέφωνό σας, οι καταχωρήσεις θα διαβαστούν με διαφορετική ζώνη ώρας και θα εμφανιστούν διπλές.**
 
-To avoid this there are two possibilities:
+Για να αποφευχθεί αυτό, υπάρχουν δύο δυνατότητες:
 
-### Επιλογή 1: Διατήρηση του προφίλ ώρας και χρονικής μετατόπισης
+### Επιλογή 1: Κρατήστε την ώρα του σπιτιού και μετατοπίστε χρονικά το προφίλ
 
-* Turn off 'Automatic date and time' in your phone's settings (manual time zone change).
+* Απενεργοποιήστε την «Αυτόματη ημερομηνία και ώρα» στις ρυθμίσεις του τηλεφώνου σας (χειροκίνητη αλλαγή ζώνης ώρας).
 
-* Your phone must keep your standard time as at home for the whole travel period.
+* Το τηλέφωνό σας πρέπει να κρατά την κανονική ώρα του σπιτιού σας για όλη τη διάρκεια του ταξιδιού.
 
-* Time-shift your **Profile** according to time difference between home time and destination time.
+* Μετατοπίστε χρονικά το **Προφίλ** σας ανάλογα με τη διαφορά ώρας ανάμεσα στο σπίτι και στον προορισμό.
    
-   * Long-press **Profile** name (middle of top section on homescreen)
-   * Select '**Profile Switch**'
-   * Ορίστε την επιλογή "Αλλαγή ώρας" ανάλογα με τον προορισμό σας.
+   * Πατήστε το όνομα του **Προφίλ** στην κύρια οθόνη για να ανοίξετε την [οθόνη Προφίλ](#ProfileSwitch-manage-v4)
+   * Επιλέξτε το **Προφίλ** σας και πατήστε **▶ Ενεργοποίηση**
+   * Ορίστε τη '**Χρονική μετατόπιση**' ανάλογα με τον προορισμό σας και πατήστε **Ενεργοποίηση**.
    
    ![Αλλαγή προφίλ με χρονική μετατόπιση](../images/ProfileSwitchTimeShift2.png)
    
-   * i.e. Vienna -> New York: **Profile Switch** +6 hours
-   * i.e. Vienna -> Sydney: **Profile Switch** -8 hours
+   * π.χ. Βιέννη -> Νέα Υόρκη: **Αλλαγή Προφίλ** +6 ώρες
+   * π.χ. Βιέννη -> Σίδνεϊ: **Αλλαγή Προφίλ** -8 ώρες
 
 ### Επιλογή 2: Διαγραφή ιστορικού αντλίας
 
-* Απενεργοποιήστε την "Αυτόματη ημερομηνία και ώρα" στις ρυθμίσεις του τηλεφώνου σας (αλλαγή σε χειροκίνητης ζώνη ώρας)
+* Απενεργοποιήστε την «Αυτόματη ημερομηνία και ώρα» στις ρυθμίσεις του τηλεφώνου σας (χειροκίνητη αλλαγή ζώνης ώρας)
 
-When get out of plane:
+Όταν κατεβείτε από το αεροπλάνο:
 
 * κλείστε την αντλία
-* αλλάξτε ώρα στο τηλέφωνο
-* κλείστε το τηλέφωνο, ενεργοποιείστε την αντλία
-* σβήστε τον ιστορικό στην αντλία
-* αλλάξτε ώρα στην αντλία
+* αλλάξτε τη ζώνη ώρας στο τηλέφωνο
+* κλείστε το τηλέφωνο, ανοίξτε την αντλία
+* σβήστε το ιστορικό στην αντλία
+* αλλάξτε την ώρα στην αντλία
 * ενεργοποιήστε το τηλέφωνο
-* αφήστε το τηλέφωνό σας να συνδεθεί στην αντλία και ρυθμίσετε το χρόνο
+* αφήστε το τηλέφωνο να συνδεθεί στην αντλία και να ρυθμίσει με ακρίβεια την ώρα
 
 (timezone-traveling-insight)=
 
-## Timezone Change for Insight
+## Αλλαγή ζώνης ώρας για Insight
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Ο οδηγός προσαρμόζει αυτόματα την ώρα της αντλίας στην ώρα του τηλεφώνου.
 
-The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in **AAPS** despite the time change.
+Το Insight καταγράφει επίσης στο ιστορικό τη στιγμή που άλλαξε η ώρα, καθώς και από ποια (παλιά) ώρα σε ποια (νέα) ώρα έγινε η αλλαγή. Έτσι το **AAPS** μπορεί να βρει τη σωστή ώρα παρά την αλλαγή της ώρας.
 
-It may cause inaccuracies in the **TDDs**. But it shouldn't be a problem.
+Μπορεί να προκαλέσει ανακρίβειες στις **TDD**. Αλλά αυτό δεν θα είναι πρόβλημα.
 
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+Έτσι, ο χρήστης Insight δεν χρειάζεται να ανησυχεί για τις αλλαγές ζώνης ώρας και τις αλλαγές ώρας. Υπάρχει μία εξαίρεση σε αυτόν τον κανόνα: Η αντλία Insight έχει μια μικρή εσωτερική μπαταρία που κρατά σε λειτουργία το ρολόι κ.λπ. ενώ αλλάζετε την «πραγματική» μπαταρία. Αν η αλλαγή της μπαταρίας κρατήσει πολύ, αυτή η εσωτερική μπαταρία αδειάζει, το ρολόι μηδενίζεται και μετά την τοποθέτηση νέας μπαταρίας θα σας ζητηθεί να βάλετε ώρα και ημερομηνία. Σε αυτή την περίπτωση, όλες οι καταχωρήσεις πριν από την αλλαγή της μπαταρίας παραλείπονται στους υπολογισμούς του AAPS, επειδή η σωστή ώρα δεν μπορεί να βρεθεί με ακρίβεια.
 
-## Timezone Change for Accu-Chek Combo
+## Αλλαγή ζώνης ώρας για Accu-Chek Combo
 
-The [new Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the new driver programs into the pump. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
+Ο [οδηγός του Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) προσαρμόζει αυτόματα την ώρα της αντλίας στην ώρα του τηλεφώνου. Το Combo δεν μπορεί να αποθηκεύσει ζώνες ώρας, μόνο την τοπική ώρα, και αυτή ακριβώς είναι η ώρα που ο οδηγός ορίζει στην αντλία. Επιπλέον, αποθηκεύει τη ζώνη ώρας στις τοπικές ρυθμίσεις του AAPS, ώστε να μπορεί να μετατρέπει την τοπική ώρα της αντλίας σε πλήρη χρονική σήμανση με διαφορά ζώνης ώρας. Ο χρήστης δεν χρειάζεται να κάνει τίποτα. Αν η ώρα στο Combo διαφέρει πολύ από την τρέχουσα ώρα του τηλεφώνου, η ώρα της αντλίας διορθώνεται αυτόματα.
 
-Note that this takes some time, however, since it can only be done in the remote-terminal mode, which is generally slow. This is a Combo limitation that cannot be overcome.
+Σημειώστε όμως ότι αυτό παίρνει λίγο χρόνο, επειδή μπορεί να γίνει μόνο στη λειτουργία remote-terminal, που γενικά είναι αργή. Αυτός είναι ένας περιορισμός του Combo που δεν μπορεί να ξεπεραστεί.
 
-The old, Ruffy-based driver does not adjust the time automatically. The user has to do that manually. See below for the steps necessary to do that safely in case the timezone / daylight savings is the reason for the change.
+## Αλλαγή ζώνης ώρας για Medtrum
 
-## Timezone Change for Medtrum
+Ο οδηγός προσαρμόζει αυτόματα την ώρα της αντλίας στην ώρα του τηλεφώνου.
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Οι αλλαγές ζώνης ώρας κρατούν το ιστορικό ανέπαφο. Μόνο η TDD μπορεί να επηρεαστεί. Η χειροκίνητη αλλαγή της ώρας στο τηλέφωνο μπορεί να προκαλέσει προβλήματα στο ιστορικό και στο **IOB**. Αν αλλάξετε την ώρα χειροκίνητα, ελέγξτε προσεκτικά το **IOB**.
 
-Time zone changes keep the history intact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and **IOB**. If you change time manually double check the **IOB**.
-
-When the time zone or time changes running **TBR's** are stopped.
+Όταν αλλάζει η ζώνη ώρας ή η ώρα, οι **TBR** που τρέχουν σταματούν.
 
 (time-adjustment-daylight-savings-time-dst)=
 
-## DAYLIGHT SAVING (DST)
+## ΘΕΡΙΝΗ ΩΡΑ (DST)
 
-Time adjustment for daylight savings time.
+Προσαρμογή της ώρας για τη θερινή ώρα.
 
-Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctly. For instance with the Combo pump & DST, the pump history is read twice leading to duplicate entries. For some pumps it is better to make time zone adjustments while awake before DST takes place and not during the night.
+Ανάλογα με την αντλία και το CGM σας, τα άλματα στην ώρα μπορεί να εμποδίσουν τη σωστή λειτουργία του **AAPS**. Για μερικές αντλίες είναι καλύτερο να αλλάξετε τη ζώνη ώρας όσο είστε ξύπνιοι, πριν από την αλλαγή σε θερινή ώρα (DST), και όχι μέσα στη νύχτα.
 
-### DST automatic adjustment for most pumps
+### Αυτόματη προσαρμογή για θερινή ώρα (DST) στις περισσότερες αντλίες
 
-* This adjustment feature is available for **AAPS** version 2.2 onwards.
-* Howeever, the **Loop** will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**.
+* Όμως το **Κύκλωμα** θα απενεργοποιηθεί για 3 ώρες ΜΕΤΑ την αλλαγή σε θερινή ώρα (DST) (συνήθως από τη 1 π.μ. και μετά) και το **AAPS** θα επιστρέψει στον βασικό ρυθμό του **Προφίλ** σας. Αυτό γίνεται για λόγους ασφάλειας - το **IOB** μπορεί να είναι πολύ υψηλό λόγω διπλού bolus πριν από την αλλαγή σε θερινή ώρα (DST).
+* Μετά την αλλαγή σε θερινή ώρα (DST), κάντε μια **Αλλαγή Προφίλ** στο επιθυμητό **Προφίλ** για να ενεργοποιήσετε το **Κύκλωμα**: πατήστε το όνομα του προφίλ στην κύρια οθόνη και μετά το στρογγυλό κουμπί **▶** (δείτε [Ενεργοποίηση προφίλ](#ProfileSwitch-manage-v4)).
+* Πριν από την αλλαγή σε θερινή ώρα (DST) θα δείτε επίσης μια ειδοποίηση στην κύρια οθόνη του **AAPS** ότι το **Κύκλωμα** απενεργοποιήθηκε προσωρινά. Αυτό το μήνυμα θα εμφανιστεί χωρίς ήχο, δόνηση ή κάτι παρόμοιο.
+
+Αν κάνετε bolus με τον υπολογιστή του **AAPS**, μη χρησιμοποιείτε τα δεδομένα **COB** και **IOB**, εκτός αν είστε σίγουροι ότι αυτά τα δεδομένα είναι απόλυτα σωστά. Προσέξτε και μη χρησιμοποιείτε αυτή τη λειτουργία για μερικές ώρες μετά την αλλαγή σε θερινή ώρα (DST).
+
+### Θερινή ώρα (DST) για Accu-Chek Insight
+
+* Η αλλαγή σε θερινή ώρα (DST) γίνεται αυτόματα. Δεν απαιτείται καμιά ενέργεια.
+
+### Θερινή ώρα (DST) για Accu-Chek Combo
+
+* Η αλλαγή σε θερινή ώρα (DST) γίνεται αυτόματα. Δεν απαιτείται καμιά ενέργεια.
+
+### Θερινή ώρα (DST) για Medtrum
+
+* Η αλλαγή σε θερινή ώρα (DST) γίνεται αυτόματα. Δεν απαιτείται καμιά ενέργεια.
+
+### Θερινή ώρα (DST) για Omnipod Dash
+
+* Είτε αφήστε το **AAPS** να επιστρέψει προσωρινά στον βασικό ρυθμό του προφίλ μετά την αλλαγή σε θερινή ώρα (DST), όπως εξηγήθηκε παραπάνω.
+* Αλλιώς, αν δεν θέλετε το **AAPS** να επιστρέψει προσωρινά στον βασικό ρυθμό του προφίλ μέσα στη νύχτα, μπορείτε να αλλάξετε τη ζώνη ώρας την προηγούμενη μέρα από την αλλαγή σε θερινή ώρα (DST), ώστε να μην υπάρξει διακοπή τη νύχτα. ΣΗΜΕΙΩΣΗ: ΑΥΤΗ Η ΕΠΙΛΟΓΗ ΜΠΟΡΕΙ ΝΑ ΚΑΝΕΙ ΤΟ POD ΣΑΣ ΝΑ ΛΗΞΕΙ ΝΩΡΙΤΕΡΑ. ΑΝ ΕΠΙΛΕΞΕΤΕ ΤΗ ΛΕΙΤΟΥΡΓΙΑ ΠΑΡΑΚΑΤΩ, ΕΧΕΤΕ ΜΑΖΙ ΣΑΣ ΑΝΤΑΛΛΑΚΤΙΚΑ.
+
+#### Ενέργειες πριν από την αλλαγή της ώρας
+
+1. Απενεργοποιήστε κάθε ρύθμιση του τηλεφώνου που ορίζει αυτόματα τη ζώνη ώρας, ώστε ο χρήστης να μπορεί να αλλάξει σε μια ζώνη ώρας που δεν χρησιμοποιεί θερινή ώρα (DST). Ο τρόπος ενεργοποίησης εξαρτάται από το τηλέφωνό σας και την έκδοση Android.
    
-   This is done for safety reasons - **IOB** may be too high due to duplicated bolus prior to DST change.
-
-* After DST has taken place, select **Profile Switch** to user's desired **Profile** to enable the **Loop**.
-
-* You will also receive a notification on **AAPS** main screen prior to DST change that the **Loop** has been disabled temporarily. This message will appear without beep, vibration or similar sound.**
-
-If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** data unless you are sure this data is absolutely correct. Take caution and do not use this feature for a couple of hours after DST switch has taken place.
-
-### DST for Accu-Chek Insight
-
-* Change to DST is done automatically. No action required.
-
-### DST for Medtrum
-
-* Change to DST is done automatically. No action required.
-
-### DST for Omnipod Dash
-
-* Either allow **AAPS** to temporarily default background basal after DST has taken place as explained above.
-* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day prior DST is due to take place to avoid overnight disruption. NOTE THIS OPTION MAY CAUSE YOUR POD TO PREMATURELY EXPIRE. PLEASE HAVE SUPPLIES WITH YOU IF OPTING FOR THE FEATURE BELOW.
-
-#### Actions to take before the clock change
-
-1. Switch OFF any Phone's settings that automatically sets the Phone's time zone, so the user can change to a desired time zone that does not use DST. How to enable this will depend on your smartphone and Android version.
-   
-   * Some phones have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the time zone (which you must turn OFF).
-   * Unfortunately, some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
+   * Μερικά τηλέφωνα έχουν δύο ρυθμίσεις: μία για την αυτόματη ρύθμιση της ώρας (που ιδανικά πρέπει να μείνει ενεργή) και μία για την αυτόματη ρύθμιση της ζώνης ώρας (που πρέπει να ΑΠΕΝΕΡΓΟΠΟΙΗΣΕΤΕ: **Set automatically** (Αυτόματη ρύθμιση) κάτω από **Time zone** (Ζώνη ώρας) στο στιγμιότυπο οθόνης παρακάτω).
+   * Δυστυχώς, σε μερικές εκδόσεις Android υπάρχει ένας μόνο διακόπτης για την αυτόματη ρύθμιση της ώρας και της ζώνης ώρας μαζί. Θα πρέπει να το απενεργοποιήσετε προς το παρόν.
 
 ![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
 
-2. Find a timezone that has the same time as your current location but doesn't use DST.
+2. Βρείτε μια ζώνη ώρας που έχει την ίδια ώρα με την τωρινή σας τοποθεσία, αλλά δεν χρησιμοποιεί θερινή ώρα (DST).
    
-   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo.
+   * Μια λίστα με αυτές τις χώρες θα βρείτε εδώ: [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
+   * Για την Ώρα Κεντρικής Ευρώπης (CET) αυτή θα μπορούσε να είναι η «Brazzaville» (Κονγκό). Αλλάξτε τη ζώνη ώρας του τηλεφώνου σας σε Κονγκό.
 
 ![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
 
-3. **AAPS** refresh your pump and switch to your desired **Profile**.
+3. Στο **AAPS** ανανεώστε την αντλία σας και αλλάξτε στο επιθυμητό **Προφίλ**.
 
-4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA and Max-Carb-Time - whatever is bigger.
+4. Ελέγξτε το **IOB** και το **COB** στο **AAPS**. Αν δεν είναι σωστά, απενεργοποιήστε το **Κύκλωμα** για τουλάχιστον μία DIA ή τον μέγιστο χρόνο απορρόφησης υδατανθράκων (Max-Carb-Time), όποιο από τα δύο είναι μεγαλύτερο.
 
-5. Actions to take after the clock change. A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Ideally your **COB** and **IOB** should both be close to zero.
-
-### DST for Accu-Chek Combo
-
-This section is only valid for the old, Ruffy-based driver. The new driver adjusts date and time and DST automatically.
-
-**AAPS** will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
-
-#### Actions to take before the clock change
-
-1. Switch OFF any setting that automatically sets the timezone, so you can force the time change when you want to. How this is done will depend on your smartphone and Android version.
-   
-   * Some have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the timezone (which you must turn OFF).
-   * Unfortunately some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
-   
-   Screenshot_20260329-110315 (1)
-
-2. Find a timezone that has the same time as your current location but doesn't use DST.
-   
-   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo.
-
-3. In **AAPS** refresh your pump.
-
-4. Check the Treatments tab... If you see any duplicate treatments:
-   
-   * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
-
-5. If the situation on how much IOB/COB is unclear - for safety please disable the **Loop** for at least one DIA and Max-Carb-Time - whatever is bigger.*
-
-#### Actions to take after the clock change / DST
-
-A good time to make this switch would be with low **IOB**. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your **COB** and **IOB** should both be close to zero.)
-
-1. Change the Android timezone back to your current location and re-enable automatic timezone.
-2. **AAPS** will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.
-3. On the **AAPS** “Combo” screen, press Refresh.
-4. GO Treatments screen, and look for any future events. There shouldn’t be many.
-   
-   * DON'T press "delete Treatments in the future"
-   * Hit "remove" on all future Treatments and duplicate ones. This should invalidate the Treatments rather than removing them so they will not be considered for **IOB**.
-
-5. If the situation on how much IOB/COB is unclear - for safety please disable the **Loop** for at least one **DIA** and Max-Carb-Time - whatever is bigger.*
-
-6. Continue as normal.
+5. Ενέργειες μετά την αλλαγή της ώρας. Μια καλή στιγμή για να επιστρέψετε στην τοπική ζώνη ώρας είναι όταν το **IOB** είναι χαμηλό. Π.χ. μία ώρα πριν από ένα γεύμα, όπως το πρωινό. Ιδανικά, το **COB** και το **IOB** πρέπει να είναι και τα δύο κοντά στο μηδέν.

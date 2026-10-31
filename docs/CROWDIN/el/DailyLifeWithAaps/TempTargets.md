@@ -1,191 +1,236 @@
-# Στόχοι ρυθμού
+# Προσωρινοί στόχοι
 
-## Τι είναι οι Στόχοι ρυθμού και πού μπορώ να τα ορίσω και να τα διαμορφώσω;
+## Τι είναι οι προσωρινοί στόχοι και πού μπορώ να τους ορίσω και να τους ρυθμίσω;
 
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](#profile-glucose-targets) for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage.
+Ο **προσωρινός στόχος** (ή σύντομα **TT**, από το Temp-Target) είναι μια λειτουργία του **AAPS** που επιτρέπει στον χρήστη να αλλάξει το [εύρος στόχου **BG**](#profile-glucose-targets) του για προγραμματισμένες δραστηριότητες. Το **AAPS** το πετυχαίνει αλλάζοντας την ινσουλίνη που χορηγείται στον χρήστη.
 
-A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
+Ένας στόχος γλυκόζης, ιδίως αν είναι μόνο για λίγο (διάρκεια μικρότερη από 4 ώρες), δεν χρειάζεται να είναι η *πραγματική τιμή* στην οποία περιμένετε ή θέλετε να φτάσει η γλυκόζη σας. Είναι μάλλον ένας καλός τρόπος να πείτε στο **AAPS** να είναι πιο ή λιγότερο επιθετικό, ενώ η γλυκόζη σας μένει εντός στόχου.
 
-Temporary targets can be defined within those boundaries :
+Οι προσωρινοί στόχοι μπορούν να οριστούν μέσα σε αυτά τα όρια:
 
-|         | Temporary target       |
-| ------- | ---------------------- |
-| Minimum | 4 mmol/l or 72 mg/dL   |
-| Maximum | 15 mmol/l or 225 mg/dL |
+|          | Προσωρινός στόχος     |
+| -------- | --------------------- |
+| Ελάχιστο | 4 mmol/l ή 72 mg/dl   |
+| Μέγιστο  | 10 mmol/l ή 180 mg/dl |
 
-**AAPS** provides for three **Temp-Target** options suitable for exercise (**Temp-Target- Activity**), meals (**Temp-Target- Eating soon**) and predicted hypoglycemia (**Temp-Target-Hypo**). **Temp-Targets** are located under the **Actions tab**.
+Το **AAPS** έχει τρεις ενσωματωμένες προεπιλογές **προσωρινού στόχου**: για άσκηση (**Άσκηση**), για γεύματα (**Γεύμα Σύντομα**) και για προβλεπόμενη υπογλυκαιμία (**Υπογλυκαιμία**). Βρίσκονται στην οθόνη **Προσωρινός Στόχος** (**Διαχείριση** → **Προσωρινός Στόχος**), που μπορείτε επίσης να ανοίξετε απλά πατώντας την **ένδειξη στόχου** στην κύρια οθόνη.
 
-Users should have realistic expectations on the results that can be achieved when selecting a **Temp-Target** in **AAPS**. The success of attaining a desired **BG** target will vary depending on a multiple factors ranging from: the reliability of the user’s **AAPS** settings, overall **BG** control, **IOB**, insulin sensitivity, insulin resistance, level of exertion undertaken during the exercise and so forth.
+Οι χρήστες πρέπει να έχουν ρεαλιστικές προσδοκίες για τα αποτελέσματα που μπορούν να πετύχουν όταν επιλέγουν έναν **προσωρινό στόχο** στο **AAPS**. Το αν θα πετύχετε τον επιθυμητό στόχο **BG** εξαρτάται από πολλούς παράγοντες, όπως: πόσο αξιόπιστες είναι οι ρυθμίσεις του **AAPS** σας, ο γενικός έλεγχος της **BG**, το **IOB**, η ευαισθησία στην ινσουλίνη, η αντίσταση στην ινσουλίνη, η ένταση της άσκησης κ.λπ.
 
-A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**.
+Ένας **προσωρινός στόχος** μπορεί να χρειαστεί περίπου 30 λεπτά ή περισσότερο για να φτάσει η **BG** στον επιθυμητό στόχο. Το **AAPS** δεν μπορεί να φτάσει σε έναν στόχο **BG** αμέσως. Οι χρήστες πρέπει να το έχουν αυτό υπόψη όταν επιλέγουν έναν **προσωρινό στόχο**.
 
-The table below summarizes the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**, and **Temp-Target-Hypo**.
+Οι παρακάτω ενότητες συνοψίζουν τις λειτουργίες των προεπιλογών **προσωρινός στόχος - Άσκηση**, **προσωρινός στόχος - Γεύμα Σύντομα** και **προσωρινός στόχος - Υπογλυκαιμία**. Οι τιμές που φαίνονται είναι οι εργοστασιακές προεπιλογές — μπορείτε να [προσαρμόσετε κάθε προεπιλογή](#TempTargets-change-preset-defaults) στις δικές σας ανάγκες.
 
-### TT - Activity
+### TT - Άσκηση
 
-![TT Activity](../images/TempTarget2.png)
+![TT Άσκηση](../images/TempTarget2.png)
 
-**BG Target (depending on users' settings)**
+**Στόχος BG (προεπιλογή, μπορεί να αλλάξει)**
 
-AAPS will aim to reach 8mmol/l or 144mg/dl for 40 minutes
+Το AAPS θα προσπαθήσει να φτάσει τα 140 mg/dl ή 7,8 mmol/l για 1 ώρ. 30 λεπ.
 
-**Other considerations users may wish to factor in when selecting**:
+**Άλλα πράγματα που οι χρήστες μπορεί να θέλουν να λάβουν υπόψη όταν επιλέγουν**:
 
-Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
+Ανάλογα με το επίπεδο της **BG**, το **AAPS** θα «μειώσει» τη χορήγηση ινσουλίνης για να φτάσει στον στόχο **BG**. Αν ο στόχος **BG** δεν είναι εντός εύρους (δηλαδή είναι πάνω από τον στόχο **BG** που έχει επιλεγεί στο **Προφίλ** του χρήστη), τότε το **AAPS** μπορεί να κρατήσει τον βασικό ρυθμό ενεργό.
 
-In closed loop mode, **SMB**:
+Σε λειτουργία κλειστού κυκλώματος, το **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *μπορεί να* απενεργοποιηθεί (περισσότερα παρακάτω)· και/ή
+- ο βασικός ρυθμός μπορεί να ενεργοποιηθεί αν το **AAPS** έχει αρνητικό **IOB** ή <0.
 
-Users may also wish to consider:
+Οι χρήστες μπορεί επίσης να θέλουν να σκεφτούν:
 
-- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary person to person); and
-- *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise as reduced **IOB** as some users experience a rapid rise in **BG **post exercise.
+- την *επιλογή* αυτού του **TT** 1–2 ώρες πριν την προγραμματισμένη άσκηση, ώστε να είναι μειωμένο το IOB (η σωστή χρονική στιγμή για αυτό το TT διαφέρει από άνθρωπο σε άνθρωπο)· και
+- την *επιλογή* ενός προσωρινού Προφίλ (μείωση) για τη διάρκεια της προγραμματισμένης δραστηριότητας, ώστε να είναι μειωμένο το **IOB**·
+- την *εξασφάλιση* ότι ο **TT** θα *απενεργοποιηθεί* λίγο πριν την άσκηση, επειδή το **IOB** είναι ήδη μειωμένο και κάποιοι χρήστες έχουν γρήγορη άνοδο της **BG** μετά την άσκηση.
 
-### TT - Eating soon
+### TT - Γεύμα Σύντομα
 
-![TT Activity](../images/TempTarget1.png)
+![TT Γεύμα Σύντομα](../images/TempTarget1.png)
 
-**BG Target (depending on users' settings)**
+**Στόχος BG (προεπιλογή, μπορεί να αλλάξει)**
 
-AAPS will aim to reach 5mmol/l or 90mg/dl for 30 minutes
+Το AAPS θα προσπαθήσει να φτάσει τα 90 mg/dl ή 5,0 mmol/l για 45 λεπτά
 
-**Other considerations users may wish to factor in when selecting**:
+**Άλλα πράγματα που οι χρήστες μπορεί να θέλουν να λάβουν υπόψη όταν επιλέγουν**:
 
-In closed loop mode, **SMB**:
+Σε λειτουργία κλειστού κυκλώματος, το **SMB**:
 
-- will remain activated; and/or
-- basal may be also activated depending on the user's **Profile's** settings.
+- θα μείνει ενεργό· και/ή
+- ο βασικός ρυθμός μπορεί επίσης να ενεργοποιηθεί, ανάλογα με τις ρυθμίσεις του **Προφίλ** του χρήστη.
 
-Depending on **BG** level, **AAPS** will "increase" insulin usage within the user's **AAPS** setting parameters in order to achieve the desired **BG** target.
+Ανάλογα με το επίπεδο της **BG**, το **AAPS** θα «αυξήσει» τη χορήγηση ινσουλίνης μέσα στα όρια των ρυθμίσεων του **AAPS** του χρήστη, για να πετύχει τον επιθυμητό στόχο **BG**.
 
-### TT - Hypo
+### TT - Υπογλυκαιμία
 
-![TT Activity](../images/TempTarget3.png)
+![TT Υπογλυκαιμία](../images/TempTarget3.png)
 
-**BG Target (depending on users' settings)**
+**Στόχος BG (προεπιλογή, μπορεί να αλλάξει)**
 
-AAPS will aim to reach 7mmol/l or 126mg/dl for 30 minutes
+Το AAPS θα προσπαθήσει να φτάσει τα 160 mg/dl ή 8,9 mmol/l για 1 ώρα
 
-**Other considerations users may wish to factor in when selecting**:
+**Άλλα πράγματα που οι χρήστες μπορεί να θέλουν να λάβουν υπόψη όταν επιλέγουν**:
 
-In closed loop mode, **SMB**:
+Σε λειτουργία κλειστού κυκλώματος, το **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *μπορεί να* απενεργοποιηθεί (περισσότερα παρακάτω)· και/ή
+- ο βασικός ρυθμός μπορεί να ενεργοποιηθεί αν το **AAPS** έχει αρνητικό **IOB** ή <0.
+
+(TempTargets-manage-v4)=
+
+## Ορισμός και διαχείριση προσωρινών στόχων (Διαχείριση → Προσωρινός Στόχος)
+
+Στο **AAPS** v4 διαχειρίζεστε τις **προεπιλογές** TT σας και ξεκινάτε έναν προσωρινό στόχο από την οθόνη **Διαχείριση** (κάτω γραμμή πλοήγησης) → **Προσωρινός Στόχος** (*«Διαχείριση και ορισμός προσωρινών στόχων»*).
+
+![Η οθόνη Προσωρινός Στόχος — κάρτες προεπιλογών, επεξεργαστής και γραμμή ενεργειών](../images/v4/TempTarget/tt_management.png)
+
+Η οθόνη έχει τρία μέρη:
+
+1. **Κάρτες προεπιλογών** (πάνω) — σαρώστε για να δείτε τις προεπιλογές TT σας. Κάθε κάρτα δείχνει το **όνομα**, τον **στόχο** και τη **διάρκεια** της προεπιλογής· ο TT που εκτελείται τώρα είναι επισημασμένος.
+2. **Επεξεργαστής** (μέση) — ο **Προσωρινός στόχος** και η **Διάρκεια** που θα εφαρμοστούν πραγματικά, και επίσης ημερομηνία/ώρα **Ενεργοποίησης**.
+3. **Γραμμή ενεργειών** (κάτω) — **➕ προσθήκη**, **‘️ διαγραφή** και το κουμπί **▶ ενεργοποίηση**.
+
+Όταν επιλέγετε μια κάρτα προεπιλογής, ο **στόχος** και η **διάρκειά** της φορτώνονται στον επεξεργαστή.
+
+```{admonition} Ενσωματωμένες και δικές σας προεπιλογές :class: note Οι ενσωματωμένες προεπιλογές — **Γεύμα Σύντομα**, **Άσκηση** και **Υπογλυκαιμία** — υπάρχουν πάντα και **δεν μπορούν να διαγραφούν** (μπορείτε όμως να αλλάξετε τις τιμές τους και να τις αποθηκεύσετε). Όλες οι προεπιλογές που δημιουργείτε εσείς είναι **δικές σας** και μπορείτε ελεύθερα να τις αλλάξετε ή να τις διαγράψετε.
+
+    <br />### Ενεργοποίηση προσωρινού στόχου
+    
+    Σαρώστε μέχρι την προεπιλογή που θέλετε (οι τιμές της φορτώνονται στον επεξεργαστή), αν θέλετε αλλάξτε τον **στόχο**/τη **διάρκεια** στον επεξεργαστή και πατήστε **▶ Ενεργοποίηση**. Μια επιβεβαίωση δείχνει τον ακριβή στόχο, τη διάρκεια και τον λόγο πριν ξεκινήσει οτιδήποτε:
+    
+    ![Επιβεβαίωση ενεργοποίησης](../images/TempTarget8.png)
+    
+    Αφού επιβεβαιώσετε, ο προσωρινός στόχος ξεκινά αμέσως (ή την ώρα **Ενεργοποίησης** που επιλέξατε) και ισχύει για τη **διάρκεια** που ορίσατε.
+    
+    ```{admonition} Η αλλαγή των αριθμών ισχύει μόνο μία φορά — δεν αλλάζει την προεπιλογή
+    :class: important
+    Ο **στόχος** και η **διάρκεια** στον επεξεργαστή είναι οι τιμές που θα χρησιμοποιήσει η **Ενεργοποίηση** *τώρα*. Αν τις αλλάξετε, η αλλαγή είναι **προσωρινή**: ισχύει μόνο για αυτή την ενεργοποίηση και **δεν αλλάζει την αποθηκευμένη προεπιλογή**. Έτσι μπορείτε να «αλλάξετε και να ενεργοποιήσετε» έναν TT μία φορά (για παράδειγμα να ενεργοποιήσετε σήμερα την *Άσκηση* με λίγο διαφορετικό στόχο), χωρίς να αλλάξετε μόνιμα την προεπιλογή.
+    
+
+### Αποθήκευση αλλαγών σε προεπιλογή
+
+Αν *θέλετε* να κρατήσετε μια τιμή που αλλάξατε, κάντε **Αποθήκευση**: όταν ο επεξεργαστής διαφέρει από την επιλεγμένη προεπιλογή, εμφανίζεται ένα εικονίδιο **Αποθήκευση** στην πάνω γραμμή εργαλείων. Αν το πατήσετε, ο τρέχων **στόχος** και η **διάρκεια** (και το όνομα, για δικές σας προεπιλογές) αποθηκεύονται στην επιλεγμένη προεπιλογή. Για τις ενσωματωμένες προεπιλογές εμφανίζεται επίσης ένα κουμπί **Επαναφορά προεπιλογών** (↺) στη γραμμή ενεργειών: φέρνει πίσω τις αρχικές τιμές της προεπιλογής.
+
+![Η οθόνη Προσωρινός Στόχος με το εικονίδιο Αποθήκευση και το κουμπί Επαναφορά προεπιλογών](../images/v4/TempTarget/tt_preset_save_revert.png)
+
+Ο απλός κανόνας λοιπόν είναι:
+
+- **Ενεργοποίηση** → χρησιμοποιεί τους αριθμούς **μία φορά** (η προεπιλογή δεν αλλάζει).
+- **Αποθήκευση** → κάνει τους αριθμούς τις **νέες τιμές** της προεπιλογής.
+
+Για να φέρετε μια ενσωματωμένη προεπιλογή πίσω στις εργοστασιακές τιμές, επιλέξτε την και πατήστε το κουμπί **↺ Επαναφορά**. Εμφανίζεται στη γραμμή ενεργειών μόνο για μια **ενσωματωμένη** προεπιλογή με τιμές που τώρα διαφέρουν από τις εργοστασιακές, και επαναφέρει τον αρχικό **στόχο** και τη **διάρκεια** αυτής της προεπιλογής.
+
+### Προσθήκη και αφαίρεση προεπιλογών
+
+- **➕ Προσθήκη** — δημιουργεί μια **νέα δική σας προεπιλογή** από τις τρέχουσες τιμές του επεξεργαστή. Η νέα κάρτα εμφανίζεται στις κάρτες.
+- **‘️ Διαγραφή** — αφαιρεί την επιλεγμένη **δική σας** προεπιλογή. Οι ενσωματωμένες προεπιλογές (*Γεύμα Σύντομα*, *Άσκηση*, *Υπογλυκαιμία*) δεν μπορούν να διαγραφούν.
+
+Όταν έχετε τουλάχιστον δύο **δικές σας** προεπιλογές, μπορείτε επίσης να αλλάξετε τη σειρά τους στις κάρτες: πατήστε το εικονίδιο **Αναδιάταξη** (⇅) στην πάνω γραμμή, μετακινήστε την κεντρική κάρτα με τα **κουμπιά μετακίνησης ◀ / ▶** και επιβεβαιώστε με **✓**. Οι ενσωματωμένες προεπιλογές κρατούν τη θέση τους — μόνο οι δικές σας προεπιλογές μπορούν να μετακινηθούν. (Τα κουμπιά είναι ίδια με την [αλλαγή σειράς των προφίλ](ProfileSwitch-ProfilePercentage.md).)
+
+Οι προεπιλογές σας είναι μέρος της συγχρονισμένης διαμόρφωσης, οπότε είναι κοινές στην κύρια συσκευή και στους συζευγμένους πελάτες σας.
+
+### Άλλοι τρόποι για να ορίσετε έναν προσωρινό στόχο
+
+Μπορείτε επίσης να ορίσετε έναν προσωρινό στόχο χωρίς να ανοίξετε αυτή την οθόνη:
+
+- με τους **διακόπτες TT στο παράθυρο Υδατάνθρακες** — δείτε [παρακάτω](#TempTargets-carbs-dialog),
+- με ένα **κουμπί προεπιλογής στη [γραμμή εργαλείων QuickLaunch](QuickLaunch.md)** — η κατηγορία *Προεπιλογές προσωρινού στόχου* στη *Ρύθμιση QuickLaunch* δίνει ένα κουμπί ενός πατήματος για κάθε προεπιλογή σας,
+- από ένα **ρολόι Wear OS** (το στοιχείο μενού / πλακίδιο **Προσωρινός Στόχος**),
+- από έναν συζευγμένο **πελάτη** — δείτε [Έλεγχος κύριας συσκευής ↔ πελάτη](../RemoteFeatures/ClientMasterControl.md),
+- ως μέρος ενός **[σεναρίου](Scenes.md)** (η ενέργεια *Προσωρινός στόχος*) ή
+- από έναν κανόνα **Αυτοματισμού** (*Έναρξη προσ. στόχου* / *Λήξη προσ. στόχου*).
+
+* * *
 
 (TempTargets-where-can-i-select-a-temp-target)=
 
-## Where can I select a Temp-Target?
+## Πού μπορώ να επιλέξω έναν προσωρινό στόχο;
 
-In the **Actions** tab in **AAPS**.
+Ο πιο γρήγορος τρόπος είναι να πατήσετε την **ένδειξη στόχου** στην κύρια οθόνη (δείχνει το τρέχον εύρος στόχου σας):
 
-1. select **Temporary Target** button; and then
-2. select desired **Temp-Target**
+![Η ένδειξη στόχου στην κύρια οθόνη](../images/TempTarget6.png)
 
-![Carbs TT](../images/TempTarget4a.png)
+Αυτό ανοίγει την οθόνη **Προσωρινός Στόχος** που περιγράφεται παραπάνω — σαρώστε μέχρι μια προεπιλογή και πατήστε **▶ Ενεργοποίηση**. Στην ίδια οθόνη φτάνετε επίσης μέσω **Διαχείριση** → **Προσωρινός Στόχος**.
 
-Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
+(TempTargets-carbs-dialog)= Όταν καταχωρίζετε υδατάνθρακες, δεν χρειάζεται καθόλου να ανοίξετε την οθόνη **Προσωρινός Στόχος**: το **παράθυρο Υδατάνθρακες** (**Θεραπείες** → **Υδατάνθρακες**) έχει στο πάνω μέρος τους διακόπτες **Εκκίνηση TT Υπογλυκαιμίας**, **Εκκίνηση TT Γεύμα Σύντομα** και **Εκκίνηση TT Άσκησης**. Ενεργοποιήστε έναν και η αντίστοιχη προεπιλογή ενεργοποιείται μαζί με την καταχώριση υδατανθράκων:
 
-![Carbs TT](../images/TempTarget6.png)
+![Διακόπτες TT στο παράθυρο Υδατάνθρακες](../images/TempTarget5.png)
 
-- Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
+    {admonition} Αυτόματος TT Υπογλυκαιμίας
+    :class: note
+    Αν ανοίξετε το **παράθυρο Υδατάνθρακες** όταν η γλυκόζη σας είναι κάτω από 72 mg/dl (4 mmol/l), το **AAPS** επιλέγει από πριν για εσάς τον διακόπτη **Εκκίνηση TT Υπογλυκαιμίας** (εκτός αν ήδη ισχύει ένας υψηλότερος προσωρινός στόχος με μεγαλύτερη υπόλοιπη διάρκεια).
 
-![Preferences > Use default temp targets](../images/Pref2020_OV_DefaultTT2.png)
+(TempTargets-change-preset-defaults)=
 
-## Where can I change the default Temp-Target and override with my own preferences?
+## Πού μπορώ να αλλάξω τον προεπιλεγμένο προσωρινό στόχο και να τον αντικαταστήσω με τις δικές μου ρυθμίσεις;
 
-To reconfigure the ‘BG target range’ and ‘duration’ allocated to the user’s default **Temp-Target** settings, go to the menu in **AAPS** on the top right hand corner and
+Ο **στόχος** και η **διάρκεια** κάθε προεπιλογής αλλάζουν απευθείας στην οθόνη **Προσωρινός Στόχος** — δεν υπάρχει πια ξεχωριστή ρύθμιση για αυτό:
 
-1. select **Preferences** 
-2. scroll down to 'Overview’ 
-3. select ‘Default Temp-Targets’
-4. step 4 indicates (below) where to change **TT- Eating soon** time period
-5. step 5 indicates (below) where to change **TT - Eating soon** **BG** target range (and the same steps can be repeated for **TT -Activity** and **TT - Hypo**.
+1. Ανοίξτε την οθόνη **Προσωρινός Στόχος** (πατήστε την ένδειξη στόχου ή **Διαχείριση** → **Προσωρινός Στόχος**).
+2. Σαρώστε μέχρι την προεπιλογή που θέλετε να αλλάξετε.
+3. Αλλάξτε τον **Προσωρινό στόχο** ή/και τη **Διάρκεια** στον επεξεργαστή.
+4. Πατήστε το εικονίδιο **Αποθήκευση** που εμφανίζεται στην πάνω γραμμή εργαλείων.
 
-![Custom TT](../images/TempTarget7.png)
+![Αλλαγή προεπιλογής — εικονίδιο Αποθήκευση στη γραμμή εργαλείων, Επαναφορά στη γραμμή ενεργειών](../images/TempTarget7.png)
 
-## How do I cancel a Temp-Target?
+Όσο ο επεξεργαστής διαφέρει από τις εργοστασιακές τιμές μιας ενσωματωμένης προεπιλογής, εμφανίζεται επίσης ένα κουμπί **↺ Επαναφορά** στη γραμμή ενεργειών — πατήστε το για να επαναφέρετε τον αρχικό στόχο και τη διάρκεια της προεπιλογής.
 
-To cancel a **Temp-Target** running:
+## Πώς ακυρώνω έναν προσωρινό στόχο;
 
-Select the “Cancel” button in **Temporary Target** under the **Actions** tab as shown below.
+Όσο ισχύει ένας προσωρινός στόχος, η ένδειξη στόχου στην κύρια οθόνη δείχνει τον στόχο και τον χρόνο που απομένει. Πατήστε την — στην οθόνη **Προσωρινός Στόχος** η προεπιλογή που ισχύει είναι επισημασμένη ως **ΕΝΕΡΓΟ** και ένα κόκκινο κουμπί **✗ Ακύρωση** εμφανίζεται στο τέλος της κάτω γραμμής εργαλείων, ακριβώς αριστερά από το κουμπί **▶ Ενεργοποίηση**. Πατήστε το και επιβεβαιώστε:
 
-![Custom TT](../images/TempTarget8.png)
+![Ακύρωση ενός προσωρινού στόχου που ισχύει](../images/TempTarget9.png)
 
-Or short-click on the ‘BG Target’ in the yellow/green box located in the top right corner of **AAPS**, and select ‘cancel’ as shown below:
-
-![Actions TT](../images/TempTarget9.png)
-
-## How do I select a “Default-Temp-Targets”
-
-In the **Actions** tab in **AAPS**.
-
-1. select **Temporary Target** button; and then
-2. select desired **Temp-Target**
-
-![Actions TT](../images/TempTarget4.png)
-
-Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
-
-![BG TT](../images/TempTarget6.png)
-
-Or in the **Carbs** button
-
-1. selecting the desired **Temp-Target** in the shortcuts
-
-![Carbs TT](../images/TempTarget5.png)
+Ένας προσωρινός στόχος που ισχύει μπορεί επίσης να σταματήσει από ένα **ρολόι Wear OS**, από έναν συζευγμένο **πελάτη** ή από έναν κανόνα **Αυτοματισμού** (*Λήξη προσ. στόχου*).
 
 (TempTargets-hypo-temp-target)=
 
-## Υπογλυκαιμικός Ρυθμός-Στόχος
+## Προσωρινός στόχος Υπογλυκαιμία
 
-**Temp-Target Hypo** enables **AAPS** to prevent the user from experiencing low blood sugar by reducing insulin intake. If the user predicts their **BG** will go low: usually, **AAPS** should handle it, but much will depend on the stability of the user’s **AAPS'** settings. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
+Ο **προσωρινός στόχος Υπογλυκαιμία** βοηθά το **AAPS** να προστατεύσει τον χρήστη από χαμηλό σάκχαρο, μειώνοντας τη χορήγηση ινσουλίνης. Αν ο χρήστης προβλέπει ότι η **BG** του θα πέσει: συνήθως το **AAPS** θα το χειριστεί, αλλά αυτό εξαρτάται πολύ από το πόσο σταθερές είναι οι ρυθμίσεις του **AAPS** του χρήστη. Ένας **προσωρινός στόχος Υπογλυκαιμία** επιτρέπει στον χρήστη να προλάβει την προβλεπόμενη πτώση και να πει στο **AAPS** να μειώσει την ινσουλίνη.
 
-Sometimes when hypo-treated carbs are eaten, the user's **BG** can rapidly rise, and **AAPS** will correct against the fast rising **BG** by enabling **SMBs**.
+Μερικές φορές, όταν τρώτε υδατάνθρακες για να διορθώσετε μια υπογλυκαιμία, η **BG** μπορεί να ανέβει γρήγορα και το **AAPS** θα διορθώσει τη γρήγορη άνοδο της **BG** δίνοντας **SMB**.
 
-Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. This is achieved by deactivating *'Enable SMB with high Temp-Target'* in **Preferences** (see further below):
+Μερικοί χρήστες θέλουν να μη δίνονται **SMB** όσο ισχύει ο **προσωρινός στόχος Υπογλυκαιμία**. Αυτό γίνεται αν απενεργοποιήσετε τη ρύθμιση *«Ενεργοποίηση SMB με υψηλό προσωρινό στόχο»* στις **Ρυθμίσεις** → **OpenAPS SMB** (δείτε παρακάτω):
 
-- In (Advanced, objective 9): the user can enable *“High Temp-Targets raises sensitivity”* for **Temp-Targets** of 100mg/dl or 5.5mmol/l or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- Στο Βήμα 9 (για προχωρημένους): ο χρήστης μπορεί να ενεργοποιήσει τη ρύθμιση *«Υψηλός προσωρινός στόχος αυξάνει την ευαισθησία»* για **προσωρινούς στόχους** 100 mg/dl (5,6 mmol/l) ή υψηλότερους στο OpenAPS SMB. Τότε το **AAPS** θα είναι πιο ευαίσθητο.
 
-- In (Advanced, objective 9): the user can deactivate *“SMB with high temp target”*, so that even if **AAPS** has COB > 0, “SMB with Temp-Target” or “SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- Στο Βήμα 9 (για προχωρημένους): ο χρήστης μπορεί να απενεργοποιήσει τη ρύθμιση *«Ενεργοποίηση SMB με υψηλό προσωρινό στόχο»*. Έτσι, ακόμα κι αν το **AAPS** έχει COB > 0, είναι ενεργές οι ρυθμίσεις «Ενεργοποίηση SMB με χαμηλό προσωρινό στόχο» ή «Ενεργοποίηση SMB πάντα» και το OpenAPS SMB είναι ενεργό, το **AAPS** δεν θα δίνει SMB όσο ισχύουν υψηλοί προσωρινοί στόχοι.
 
-Note: if the user enters carbs with the carb button and your blood glucose is less than 72mg/dl or 4mmol/l, **Temp-Target Hypo** is automatically enabled by **AAPS**.
+Σημείωση: αν ανοίξετε το **παράθυρο Υδατάνθρακες** όταν η γλυκόζη αίματος είναι κάτω από 72 mg/dl ή 4 mmol/l, το **AAPS** επιλέγει αυτόματα από πριν τον διακόπτη **Εκκίνηση TT Υπογλυκαιμίας**.
 
 (TempTargets-activity-temp-target)=
 
-## Δραστηριότητα Ρυθμού-Στόχου
+## Προσωρινός στόχος Άσκηση
 
-Before and during exercise, the user may require a higher target to prevent hypoglycemia during the activity.
+Πριν και κατά την άσκηση, ο χρήστης μπορεί να χρειάζεται υψηλότερο στόχο για να αποφύγει την υπογλυκαιμία κατά τη δραστηριότητα.
 
-To simplify **Temp-Target Activity**, the user can configure a default **Temp-Target - Activity** to raise **BG** levels by reducing insulin usage in order to slow down **BG** fall and avoid hypoglycemia.
+Για να απλοποιήσει τον **προσωρινό στόχο Άσκηση**, ο χρήστης μπορεί να ρυθμίσει έναν προεπιλεγμένο **προσωρινό στόχο - Άσκηση** που ανεβάζει τη **BG** μειώνοντας τη χορήγηση ινσουλίνης, ώστε να επιβραδύνει την πτώση της **BG** και να αποφύγει την υπογλυκαιμία.
 
-New users to **AAPS** may need to experiment and personalise their **Temp-Target Activity** default settings in order to optimise this feature to work best for them. Everyone is different when it comes to attaining stable BG control during exercise. See also the [sports section in FAQ](#FAQ-sports). in FAQ.
+Οι νέοι χρήστες του **AAPS** μπορεί να χρειαστεί να δοκιμάσουν και να προσαρμόσουν τις προεπιλεγμένες ρυθμίσεις του **προσωρινού στόχου Άσκηση**, ώστε η λειτουργία να δουλεύει όσο καλύτερα γίνεται για αυτούς. Κάθε άνθρωπος είναι διαφορετικός όσον αφορά τον σταθερό έλεγχο της BG κατά την άσκηση. Δείτε επίσης την [ενότητα για τον αθλητισμό στις Συχνές Ερωτήσεις](#FAQ-sports).
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduced insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on.
+Μερικοί χρήστες προτιμούν επίσης να ενεργοποιούν μια **Αλλαγή Προφίλ** (μείωση του Προφίλ < 100%, ώστε το **AAPS** να χορηγεί λιγότερη ινσουλίνη) πριν και όσο ισχύει ο **προσωρινός στόχος Άσκηση**. Μπορείτε να ξεκινήσετε και τα δύο σε ένα βήμα: πατήστε το όνομα του προφίλ στην κύρια οθόνη, πατήστε το στρογγυλό κουμπί **▶**, ορίστε ένα **Ποσοστό** κάτω από 100% και μια **Διάρκεια** και μετά ενεργοποιήστε το **Προσωρινός στόχος / Άσκηση**. Δείτε [Αλλαγή του ποσοστού προφίλ](#ProfileSwitch-change-percentage).
 
-Advanced, objective 9: users can enable *'High Temp-Targets raises sensitivity'* for **Temp-Targets** higher or equal 100mg/dl or 5.5mmol/L in OpenAPS **SMB**. Then **AAPS** is more sensitive.
+Βήμα 9 για προχωρημένους: οι χρήστες μπορούν να ενεργοποιήσουν τη ρύθμιση *«Υψηλός προσωρινός στόχος αυξάνει την ευαισθησία»* για **προσωρινούς στόχους** 100 mg/dl (5,6 mmol/l) ή υψηλότερους στο OpenAPS **SMB**. Ένας στόχος 99 mg/dl (5,5 mmol/l) είναι κανονικός στόχος, ούτε υψηλός ούτε χαμηλός. Τότε το **AAPS** είναι πιο ευαίσθητο.
 
-Additionally, if *'SMB with high Temp-Target'* is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, *'SMB with Temp-Target-* or *'SMB always'* enabled and OpenAPS **SMB** active.
+Επιπλέον, αν η ρύθμιση *«Ενεργοποίηση SMB με υψηλό προσωρινό στόχο»* είναι απενεργοποιημένη, το **AAPS** δεν θα δίνει **SMB**, ακόμα και με COB > 0, με ενεργές τις ρυθμίσεις *«Ενεργοποίηση SMB με χαμηλό προσωρινό στόχο»* ή *«Ενεργοποίηση SMB πάντα»* και με ενεργό το OpenAPS **SMB**.
 
 (TempTargets-eating-soon-temp-target)=
 
-## Τρώγοντας νωρίς Ρυθμός-Στόχος
+## Προσωρινός στόχος Γεύμα Σύντομα
 
-**Temp-Target -Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
+Ο **προσωρινός στόχος - Γεύμα Σύντομα** μπορεί να βοηθήσει να πέσει απαλά η **BG** και να υπάρχει αρκετό **IOB** πριν το φαγητό.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target -Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyjumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target -Eating soon** and this is particularly so, if eating a high carb diet.
+Αυτό μπορεί να είναι σημαντικό εργαλείο για χρήστες που δεν κάνουν bolus πριν το γεύμα (pre-bolus). Όμως η αποτελεσματικότητα του **προσωρινού στόχου - Γεύμα Σύντομα** εξαρτάται από πολλούς παράγοντες, όπως: οι ρυθμίσεις του χρήστη, αν τρώει λίγους υδατάνθρακες και αν χρησιμοποιεί ινσουλίνη ταχείας δράσης (όπως Fiasp ή Lyumjev), ώστε να μη χρειάζεται bolus πριν το γεύμα. Κανονικά, μέχρι να αποκτήσουν εμπειρία με το **AAPS**, οι χρήστες πρέπει να περιμένουν ότι θα κάνουν bolus πριν το γεύμα (pre-bolus) όταν χρησιμοποιούν τον **προσωρινό στόχο - Γεύμα Σύντομα**, ιδίως αν τρώνε πολλούς υδατάνθρακες.
 
-You can read more about the “Eating soon mode” in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
+Μπορείτε να διαβάσετε περισσότερα για τη λειτουργία “Eating soon” (Γεύμα σύντομα) στο άρθρο ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) ή [εδώ](https://diyps.org/tag/eating-soon-mode/) (στα αγγλικά).
 
-Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have *'Low temp target lowers sensitivity'*, **AAPS** works a little bit more aggressively. For this option there is a requirement for **Temp-Target** to be less than 100mg/dl or 5.5mmol/l.
+Για προχωρημένους, [Βήμα 9](#objectives-objective9): Αν χρησιμοποιείτε το OpenAPS SMB και έχετε ενεργή τη ρύθμιση *«Χαμηλός προσωρινός στόχος μειώνει την ευαισθησία»*, το **AAPS** δουλεύει λίγο πιο επιθετικά. Για αυτή την επιλογή ο **προσωρινός στόχος** πρέπει να είναι 98 mg/dl (5,4 mmol/l) ή χαμηλότερος.
 
-## How do I turn off SMB during Temp-Targets?
+## Πώς απενεργοποιώ το SMB κατά τους προσωρινούς στόχους;
 
-To action this select in **Preferences** > and deactivate *'Enable SMB with high Temp-Target'*.
+Για να το κάνετε, ανοίξτε **Ρυθμίσεις** → **OpenAPS SMB** και απενεργοποιήστε τη ρύθμιση *«Ενεργοποίηση SMB με υψηλό προσωρινό στόχο»*.
 
-![Carbs TT](../images/TempTargetSMB.png)
+![Η ρύθμιση Ενεργοποίηση SMB με υψηλό προσωρινό στόχο](../images/TempTargetSMB.png)
 
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'SMB with Temp-Target'* or *'SMB always'* enabled and OpenAPS SMB active.
+Έτσι το **AAPS** δεν θα δίνει **SMB**, ακόμα και με COB > 0, με ενεργές τις ρυθμίσεις *«Ενεργοποίηση SMB με χαμηλό προσωρινό στόχο»* ή *«Ενεργοποίηση SMB πάντα»* και με ενεργό το OpenAPS SMB.

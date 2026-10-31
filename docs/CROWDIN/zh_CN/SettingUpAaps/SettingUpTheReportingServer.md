@@ -12,7 +12,7 @@
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout设置
 
-Nightscout是一个网络应用程序，可以记录和显示您的CGM数据和**AAPS**数据，并生成报告。它是一个功能强大的平台，已经与**AAPS**集成多年。它使用户和护理人员能够近乎实时地跟踪患者的糖尿病数据（如果所有相关组件之间的互联网连接足够稳定，数据接收和数据提供之间可能只相隔几秒钟）。它还允许护理人员向**AAPS**发送远程命令。
+Nightscout是一个网络应用程序，可以记录和显示您的CGM数据和**AAPS**数据，并生成报告。它是一个功能强大的平台，已经与**AAPS**集成多年。它使用户和护理人员能够近乎实时地跟踪患者的糖尿病数据（如果所有相关组件之间的互联网连接足够稳定，数据接收和数据提供之间可能只相隔几秒钟）。 It also carries the remote commands that caregivers send to **AAPS** from **AAPSClient** (see [Master ↔ Client control](#client-master-control)).
 
 Nightscout是开源软件。任何人都可以使用免费或付费服务来创建和运营Nightscout服务器。
 
@@ -43,8 +43,8 @@ Nightscout是开源软件。任何人都可以使用免费或付费服务来创�
 Tidepool has been available in **AAPS** since version 3.2 which was released in late 2023.
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
-:class: 危险 
-当使用Tidepool时，**AAPS**数据接收和报告之间存在三个小时的延迟，因此Tidepool不适合与护理人员共享实时信息。  
+:class: danger  
+As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool is not suitable for sharing real-time information with caregivers.  
 另一方面，如果Nightscout不是一个被接受的解决方案，Tidepool可以是一个与患者内分泌科医生共享报告的好选择。  
 ```
 
@@ -52,11 +52,11 @@ Tidepool是一个[开源](https://github.com/tidepool-org)项目。它提供在T
 
 有关如何使用AAPS设置Tidepool的更多信息，请[见此](../SettingUpAaps/Tidepool.md)。
 
-```{admonition} **AAPS** has a the uploader for Tidepool integrated
+```{admonition} **AAPS** has the uploader for Tidepool integrated
 :class: 注意
 您**不需要**使用Tidepool的上传器应用程序：**AAPS**将为您上传血糖、治疗和基础率。您只需要一个Tidepool个人帐户。不要使用单独的Tidepool上传器工具上传您的数据，因为这会导致数值重复。  
 ```
 
 ## 下一步
 
-设置好报告服务器后，您现在可以为AAPS设置一个[专用的Google帐户](../UsefulLinks/DedicatedGoogleAccountForAaps.md)，或者直接转到[构建AAPS应用程序](../SettingUpAaps/BuildingAaps.md)。 
+Once you have set up your reporting server, you can configure **AAPS** on your phone with the [Setup Wizard](./SetupWizard.md), which will also link **AAPS** to your reporting server.

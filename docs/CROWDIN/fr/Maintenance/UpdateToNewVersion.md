@@ -1,43 +1,42 @@
 # Mise à jour vers une nouvelle version ou une branche
 
-## Construire vous-même au lieu de télécharger
+## Compiler vous-même au lieu de télécharger
 
-**AAPS** is not available to download, due to regulations concerning medical devices. Il est légal de construire l'application pour votre usage personnel, mais vous ne devez en aucun cas donner une copie à d'autres personnes ! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** n'est pas disponible au téléchargement, à cause des règles sur les dispositifs médicaux. Il est légal de compiler l'application pour votre usage personnel, mais vous ne devez en aucun cas en donner une copie à d'autres personnes ! Consultez la [Foire Aux Questions (FAQ)](../UsefulLinks/FAQ.md) pour plus de détails.
 
 ## Remarques importantes
 
-- Please update to the new version of **AAPS** as soon as possible after a new release is available.
-- When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
-- The new version will also be announced on Facebook at the time of release.
-- Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
-- Do not forget to export your **AAPS'** settings.
+- Mettez à jour vers la nouvelle version d'**AAPS** le plus tôt possible après sa publication.
+- Quand une nouvelle version est disponible, vous recevez dans l'application **AAPS** un bandeau d'information sur la nouvelle version.
+- La nouvelle version est aussi annoncée sur Facebook au moment de sa publication.
+- Après la publication, lisez attentivement les [notes de version](ReleaseNotes.md) et posez vos questions à la communauté sur Facebook ou Discord avant de faire la mise à jour.
+- N'oubliez pas d'exporter les paramètres d'**AAPS**.
 
-## Update AAPS with browser build
+## Mettre à jour AAPS avec la compilation dans le navigateur
 
-You already built your AAPS app with a browser? Follow the instructions for the method you used:
+Vous avez déjà compilé votre application AAPS avec un navigateur ? Suivez les instructions de la méthode que vous avez utilisée :
 
-- **AAPS Builder** (your private repository, usually named `my-aaps`): [Updating AAPS with AAPS Builder](#aaps-builder-updates). There is no fork to sync.
-- **Fork and preparation file** (your own copy of AndroidAPS): [Update with a browser (fork)](./UpdateBrowserBuild.md).
+- **AAPS Builder** (votre dépôt privé, en général nommé `my-aaps`) : [Mettre à jour AAPS avec AAPS Builder](#aaps-builder-updates). Il n'y a pas de fork à synchroniser.
+- **Fork et fichier de préparation** (votre propre copie d'AndroidAPS) : [Mise à jour avec un navigateur (fork)](./UpdateBrowserBuild.md).
 
-## Update AAPS with Android Studio
+## Mettre à jour AAPS avec Android Studio
 
-Follow [these instructions.](./UpdateComputerBuild.md).
+Suivez [ces instructions](./UpdateComputerBuild.md).
 
-## Update AAPS with the command-line
+## Mettre à jour AAPS en ligne de commande
 
-Use the [same instructions](../SettingUpAaps/CLIBuild.md) as when building AAPS previously, but pull new changes with git.
+Utilisez les [mêmes instructions](../SettingUpAaps/CLIBuild.md) que pour la compilation précédente d'AAPS, mais récupérez les nouvelles modifications avec git.
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
 ### Vérifier la version d'AAPS sur le téléphone
 
-Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
+Regardez dans les [notes de version](../Maintenance/ReleaseNotes.md) s'il y a des instructions particulières après la mise à jour.
 
-After you installed the new apk:
+Après avoir installé le nouvel apk :
 
-- you can check the **AAPS'** version on your phone by clicking the three dots menu on the top right and then 'About' (as per the screenshot below). The **AAPS'** current version can be viewed; 
-- ensure import settings have been actioned;
-- action a 'full synchroniation' under **NSClient** to ensure **AAPS** is working off accurate & complete data; and
-- please check your **AAPS'** settings under **Preferences** and ensure these remain accurate.
+- vous pouvez vérifier la version d'**AAPS** sur votre téléphone en ouvrant le **menu** (☰) en haut à gauche, puis **À propos** (voir la capture d'écran ci-dessous) ; vous pouvez voir la version actuelle d'**AAPS** ;
+- vérifiez que l'import des paramètres a bien été fait ; et
+- vérifiez les paramètres d'**AAPS** dans **Paramètres** et assurez-vous qu'ils sont toujours corrects.
 
-![Version installée d'AAPS](../images/Update_VersionCheck.png)
+![Fenêtre À propos avec la version d'AAPS installée](../images/about_dialog_version.png)

@@ -16,7 +16,7 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 | ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
 | [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                                  | up to Meerkat                                          | 8.2    | 17  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#incompatible-gradle-jvm) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
 
 The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
 
@@ -125,7 +125,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 * Wait while download is in progress, you will see this as info in the bottom bar. По окончании появится сообщение об успехе.
 
   ```{note}
-  The files that were updated may vary! This is not an indication
+  The files that were updated may vary! This is not an indication of a problem.
   ```
 
 
@@ -153,7 +153,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Open Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
 
-- In **Gradle JDK** field, check if the appropriate version: **jbr-17** is selected (1) If not, click on the field, and see if it is already available in the list.
+- In **Gradle JDK** field (1), check if the appropriate version: **jbr-17** is selected. If not, click on the field, and see if it is already available in the list. If it is not in the list (the screenshot below shows a computer where only **jbr-21** is available), select **Download JDK...** (2).
 
 ![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 

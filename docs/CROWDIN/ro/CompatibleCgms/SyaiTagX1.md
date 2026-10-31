@@ -7,7 +7,7 @@
 
 -   Porniți senzorul X1
 
-- Selectați Syai Tag în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
+- Select **Syai/Ottai** in [Configuration, BG Source](#Config-Builder-bg-source).
 
 Activați transmisiunea în aplicația Syai:
 

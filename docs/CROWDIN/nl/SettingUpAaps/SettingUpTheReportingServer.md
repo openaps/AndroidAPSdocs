@@ -1,62 +1,62 @@
-# Setting up the Reporting Server
+# De rapportageserver instellen
 
-There are currently two reporting servers available for use with **AAPS**:
+Er zijn op dit moment twee rapportageservers die je met **AAPS** kunt gebruiken:
 
 - [Nightscout](https://nightscout.github.io/)
 - [Tidepool](https://www.tidepool.org/)
 
-![Reporting Servers](../images/Building-the-App/ReportingServer.png)
+![Rapportageservers](../images/Building-the-App/ReportingServer.png)
 
-We recommend using Nightscout.
+We raden aan om Nightscout te gebruiken.
 
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout is a web application that can log and display your CGM data and **AAPS** data and creates reports. It is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). It also allows caregivers to send remote commands to **AAPS**.
+Nightscout is een webapplicatie die je CGM-gegevens en **AAPS**-gegevens kan opslaan en tonen, en die rapporten maakt. Het is een krachtig platform dat al vele jaren in **AAPS** is ingebouwd. Gebruikers en verzorgers kunnen hiermee de diabetesgegevens van de patiënt bijna in realtime volgen (tussen het ontvangen en het tonen van de gegevens zitten maar een paar seconden, als alle onderdelen een goede internetverbinding hebben). De server brengt ook de opdrachten op afstand over die verzorgers vanuit **AAPSClient** naar **AAPS** sturen (zie [Master ↔ Client besturing](#client-master-control)).
 
-Nightscout is provided as open-source software. Anyone can create and operate a Nightscout server, using either free or paid-for services.
+Nightscout is open-source software. Iedereen kan een Nightscout-server maken en beheren, met gratis of betaalde diensten.
 
-You can find more information on the [website of the Nightscout project](http://nightscout.github.io/).
+Meer informatie vind je op de [website van het Nightscout-project](http://nightscout.github.io/).
 
-### Option 1 - Set up your Nightscout server yourself
+### Optie 1 - Zelf je Nightscout-server opzetten
 
-Creating your Nightscout reporting server can require one or more web-based applications that will require maintenance. In order to have a completely free service, you may need to migrate your Nightscout site and data, if and when providers remove the free tier.
+Voor het maken van je Nightscout-rapportageserver heb je soms een of meer webapplicaties nodig die onderhoud vragen. Wil je een volledig gratis dienst, dan moet je je Nightscout-site en gegevens misschien verhuizen als aanbieders hun gratis versie stoppen.
 
-A description of how you can set up Nightscout with the advantages and disadvantages of the various operating options, including an estimate of the costs, can be found [here](https://nightscout.github.io/nightscout/new_user/#free-diy).
+[Hier](https://nightscout.github.io/nightscout/new_user/#free-diy) vind je een beschrijving van hoe je Nightscout kunt opzetten, met de voor- en nadelen van de verschillende manieren om het te draaien, en een schatting van de kosten.
 
-### Option 2 - Pay for a hosted Nightscout service
+### Optie 2 - Betalen voor een gehoste Nightscout-dienst
 
-There are also options from different service providers who host Nightscout for you, with a monthly fee. The costs are manageable, and the advantage of a hosted option is that you do not need to be IT-literate, or have any operating infrastructure.
+Er zijn ook aanbieders die Nightscout voor je hosten, tegen een maandelijks bedrag. De kosten zijn te overzien. Het voordeel van een gehoste optie is dat je geen IT-kennis of eigen infrastructuur nodig hebt.
 
 
-Existing Nightscout users can reconsider where and how their Nightscout server is hosted from time to time, and change to a different option if it becomes more suitable.
+Bestaande Nightscout-gebruikers kunnen af en toe opnieuw bekijken waar en hoe hun Nightscout-server wordt gehost, en overstappen naar een andere optie als die beter past.
 
-Some Nightscout hosted services are listed [here](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
+Een aantal diensten die Nightscout voor je hosten, staan [hier](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
 
-### Further configuration of Nightscout
+### Nightscout verder configureren
 
-Once you have your Nightscout instance up and running, see [Nightscout configuration page](../SettingUpAaps/Nightscout.md) for additional considerations.
+Als je Nightscout-site werkt, kijk dan op de [configuratiepagina van Nightscout](../SettingUpAaps/Nightscout.md) voor meer aandachtspunten.
 
 (SettingUpTheReportingServer-tidepool)=
 ## Tidepool
 
-Tidepool has been available in **AAPS** since version 3.2 which was released in late 2023.
+Tidepool is beschikbaar in **AAPS** sinds versie 3.2, die eind 2023 is uitgebracht.
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger  
-As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool it is not suitable for sharing real-time information with caregivers.  
-On the other hand, Tidepool can be a great solution for sharing reports with a patient's endocrinologist if Nightscout is not an accepted solution.  
+Bij gebruik van **AAPS** zit er een vertraging van drie uur tussen het binnenkomen van de gegevens en het rapporteren ervan. Daarom is Tidepool niet geschikt om actuele gegevens (real-time) met verzorgers te delen.  
+Tidepool kan daarentegen een goede oplossing zijn om rapporten te delen met de endocrinoloog van een patiënt, als Nightscout daar niet geaccepteerd wordt.  
 ```
 
-Tidepool is an [open source](https://github.com/tidepool-org) project. It offers to run an account free of charge on the Tidepool servers.
+Tidepool is een [open source](https://github.com/tidepool-org)-project. Je kunt er gratis een account gebruiken op de servers van Tidepool.
 
-More information about setting up Tidepool with AAPS [here](../SettingUpAaps/Tidepool.md).
+Meer informatie over het instellen van Tidepool met AAPS vind je [hier](../SettingUpAaps/Tidepool.md).
 
-```{admonition} **AAPS** has a the uploader for Tidepool integrated
+```{admonition} **AAPS** has the uploader for Tidepool integrated
 :class: note
-You do **not** need to use the uploader app to Tidepool: **AAPS** will upload blood glucose, treatments and basal for you. You only need a personal account with Tidepool. Do not upload your data with the separate Tidepool uploader tool as it will lead to duplicate values.  
+Je hoeft de uploader-app van Tidepool **niet** te gebruiken: **AAPS** uploadt bloedglucose, behandelingen en basaal voor je. Je hebt alleen een persoonlijk account bij Tidepool nodig. Upload je gegevens niet met de aparte Tidepool-uploader, want dan krijg je dubbele waarden.  
 ```
 
-## Next step
+## Volgende stap
 
-Once you have set up your reporting server, you can now either set up a [dedicated Google account for AAPS use](../UsefulLinks/DedicatedGoogleAccountForAaps.md), or go straight to [building the AAPS app](../SettingUpAaps/BuildingAaps.md). 
+Als je je rapportageserver hebt ingesteld, kun je **AAPS** op je telefoon configureren met de [Setup Wizard](./SetupWizard.md). Die koppelt **AAPS** ook aan je rapportageserver.

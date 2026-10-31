@@ -9,23 +9,7 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## 丢失密钥库
-如果更新 **AAPS** 时使用相同的密钥库，则无需卸载手机上的旧版本。因此建议将密钥库存储在安全位置。
-
-如果尝试安装使用不同密钥库签名的 apk 文件，将出现安装失败的提示！
-
-若无法找回旧密钥库或密码，请按以下步骤操作：
-
-1. 在手机上[导出设置](../Maintenance/ExportImportSettings.md)
-2. 将设置文件从手机复制或上传至外部存储（如电脑、云存储等）
-4. 按照[更新指南](../Maintenance/UpdateToNewVersion)生成新签名的 apk 文件并传输至手机
-5. 卸载手机上的旧版 **AAPS**
-6. 安装新版 **AAPS**
-7. 导入设置</a>以恢复目标完成进度和配置数据
-
-   若在手机中找不到设置文件，请从外部存储复制回手机
-
-8. 重新检查并禁用电池优化设置
-9. 保持闭环运行
+If you lost your keystore or its password, an apk signed with a new keystore cannot update your current **AAPS**: you have to uninstall and reinstall it. See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 
 ## Gradle 同步失败
 Gradle 同步可能因多种原因失败。当提示"Gradle sync failed"时，请点击 Android Studio 底部"Build"标签(1)查看具体错误信息(2)
@@ -53,7 +37,7 @@ Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
 ```
 
 #### 步骤 1 - 检查 Git 安装
-  * 打开 Android Studio 底部的终端标签(1)，输入以下命令：
+  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal (2).
     ```
     git --version
     ```
@@ -72,9 +56,9 @@ Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
 
   * [检查 Git 安装](#BuildingAaps-steps-for-installing-git)
 
-  * 若在 Windows 系统且刚安装 Git，需重启计算机使 Git 全局生效
+  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
 
-  * 若已安装 Git 并重启后仍无法识别：
+  * If Git is installed, you have restarted (if on windows), and Git still cannot be found:
 
   * 在计算机中搜索"git.exe"文件
 
@@ -90,11 +74,11 @@ Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
 #### 步骤 2：检查未提交的更改
 
   * 在 Android Studio 左侧打开"Commit"标签(1)![提交标签-未提交更改](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * 可能看到"Default changeset"(2)或"Unversioned files"(3)：
+  * You can see either "Changes" (called "Default changeset" in older Android Studio versions) (2) or "Unversioned Files" (3):
 
-    * 对于"Default changeset"，可能是误更新了 Gradle 或修改了文件内容
+    * For "Changes", you probably updated 'Gradle' or changed some of the file contents by mistake.
 
-    * 右键点击"Default Changeset"选择"Rollback"
+    * Right click on "Changes" and select "Rollback…" (1)
 
       ![回滚更改](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
@@ -162,12 +146,12 @@ git config --global user.email 您的邮箱@example.com
 
 ![打开 Gradle 设置](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  在“Gradle JDK”字段中，检查是否已选择正确的版本（1）。若未选择，点击该字段查看列表中是否已有目标版本。​ 下方示例显示JVM 21对应的选项标记为“jbr-21”。若列表中已有，直接选中即可完成配置。若未找到，点击字段选择"Download JDK"
+3.  在“Gradle JDK”字段中，检查是否已选择正确的版本（1）。若未选择，点击该字段查看列表中是否已有目标版本。​ 下方示例显示JVM 21对应的选项标记为“jbr-21”。若列表中已有，直接选中即可完成配置。 If not available, then select **Download JDK** (2).
 
 
 ![选择 JDK 17](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. 在版本(1)中选择 **AAPS** 要求的 JDK，供应商(2)任选，位置(3)保持默认。
+4. 在版本(1)中选择 **AAPS** 要求的 JDK，供应商(2)任选，位置(3)保持默认。 Click **Download** (4).
 
 ![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
@@ -212,7 +196,7 @@ git config --global user.email 您的邮箱@example.com
 (gradle-resync)=
 ### 重新同步 Gradle
 
-  若仍显示同步失败，点击"Try again"链接重新尝试![Gradle 同步失败提示](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  If you can still see the message that the gradle sync failed, now select the link **Try again** (1). ![Gradle 同步失败提示](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
   若无错误提示，可手动触发同步：
@@ -227,7 +211,7 @@ git config --global user.email 您的邮箱@example.com
 
 ## 成功生成签名 APK 但显示 0 个构建变体
 
-生成签名 APK 时可能出现"0 build variants"的误报：
+When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
 
 ![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
@@ -247,22 +231,23 @@ APK 已成功生成，可传输至手机安装。
 
 * 若使用修改版 Dexcom G6 应用：该版本已过时，请改用[BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
 
-* 若使用 xDrip+：按[xDrip+ 设置页面](#xdrip-identify-receiver)标识接收器
+* If you are using xDrip: identify receiver as described on [xDrip settings page](#xdrip-identify-receiver).
 
 
 ## APK 安装失败
 
-![phone app note installed](../images/Update_AppNotInstalled.png)
+![phone app not installed](../images/Update_AppNotInstalled.png)
 
 * 确认已将"app-full-release.apk"传输至手机
+* This error usually means the new apk is signed with a different keystore than your installed **AAPS**. If you still have your previous keystore, select it and build again. Otherwise, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 * 若手机显示"未安装应用"：
 
 1. [导出设置](../Maintenance/ExportImportSettings.md)（在已安装的 AAPS 中）
 2. 卸载手机上的 **AAPS**
-3. 启用飞行模式并关闭蓝牙
+3. Enable airplane mode & turn off Bluetooth.
 4. 安装新版 apk
 5. [导入配置](../Maintenance/ExportImportSettings.md)
-6. 重新启用蓝牙并关闭飞行模式
+6. Turn Bluetooth back on and disable airplane mode
 
 ## 安装成功但版本未更新
 

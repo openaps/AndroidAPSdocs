@@ -1,12 +1,18 @@
-# AAPS Omnipod胰岛素泵驱动文档
+# Omnipod Eros
 
-本指南适用于配置Omnipod Eros系列胰岛素泵（**不包含Omnipod Dash**）。自AAPS 2.8版本起已集成Omnipod驱动功能。
+These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**).
+
+```{admonition} Omnipod Eros is being phased out
+:class: note
+
+The [Omnipod System](https://www.omnipod.com/current-podders/resources/omnipod-system) (the original Omnipod, comprising both the Personal Diabetes Manager (PDM) and the Pod) is being discontinued, and the end date varies by country. For example, it will no longer be available in Canada after 30 June 2026. If you rely on the Eros pump, plan ahead for a transition to a supported pump.
+```
 
 **本软件属于人工胰腺系统的DIY解决方案，并非商业产品，需要用户自行研习并全面掌握系统操作原理。使用后果由您自行承担。**
 
-```{contents}
-:backlinks: entry
-:depth: 2
+```{contents} Table of contents
+:depth: 1
+:local: true
 ```
 
 ## 硬件和软件要求
@@ -25,7 +31,7 @@
 
 > 该组件负责运行AAPS并向储药器通信设备发送控制指令。
 > 
-> > - 支持运行AAPS 2.8版本及相关组件的[Omnipod驱动安卓手机](#Phones-list-of-tested-phones)。
+> > - Supported [Android phone](#Phones-list-of-tested-phones) with **AAPS** and related components set up.
 
 - ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **胰岛素输注设备**
 
@@ -33,15 +39,17 @@
 > 
 > > - 全新Omnipod储药器（Eros系列 - **非DASH型号**）
 
-本指南默认您正在启动新储药器会话；若非此情况，请保持耐心并在下次更换储药器时执行此流程。
+These instructions assume that you are starting a new pod session. If this is not the case, please be patient and start this process at your next pod change.
 
-## 开始前的准备工作
+In this page, **RileyLink** means any of the pod communication devices listed above.
+
+## 在您开始前
 
 **安全第一** - 请勿在无法处理突发故障的环境中操作（必须备有备用储药器、胰岛素、电量充足的RileyLink及手机设备）。
 
 **AAPS Omnipod驱动激活储药器后，您的Omnipod PDM将无法继续使用**。此前您通过Omnipod PDM向Eros储药器发送指令。 Eros储药器仅允许单一设备与其建立通信连接。成功激活储药器的设备将成为此后唯一获准与其通信的设备。这意味着当您通过AAPS Omnipod驱动使用RileyLink激活Eros储药器后，**PDM将无法再控制该储药器**。配备RileyLink的AAPS Omnipod驱动现已成为您的实际控制设备。*这并不意味着您应该丢弃PDM，建议将其保留作为备用设备，以防AAPS运行异常时应急使用。*
 
-**可配置多个RileyLink设备，但同一时间仅能选择一个RileyLink与储药器通信。** AAPS Omnipod驱动支持在RileyLink配置中添加多个设备，但每次仅能启用一个RileyLink进行收发通信。
+**Only one RileyLink at a time can communicate with a pod.** **AAPS** remembers one paired RileyLink. If you pair a different one, it replaces the previous one.
 
 **当RileyLink超出通信范围时，储药器不会停止工作。**若RileyLink超出有效距离或信号受阻无法与当前储药器通信，储药器仍将持续输注基础胰岛素。激活储药器时，AAPS中设定的基础率配置文件将被写入新储药器。若与储药器通信中断，设备将自动切换至此预设基础率方案运行。在RileyLink重新进入通信范围并恢复连接前，您将无法发送新指令。
 
@@ -53,113 +61,138 @@
 
 ### 选项一：通过设置向导启用
 
-安装新版AAPS后，**设置向导**将自动启动。原地升级时也会触发此向导。若您已从旧版本导出设置，可退出设置向导并导入原有配置。新安装用户请继续以下步骤。
+After installing a new version of AAPS, the **Setup Wizard** starts automatically. If you have already exported your settings from a previous installation, you can import them in the wizard. For new installations, continue below.
 
-通过右上角**三点菜单(1)**中的**AAPS设置向导(2)**进入，逐步操作直至进入**泵**设置界面。然后选择**Omnipod单选按钮(3)**。
+Go through the [Setup Wizard](../SettingUpAaps/SetupWizard.md) until you reach the **Pump** step, then select **Omnipod Eros** (the description reads "Pump integration for Omnipod Eros").
 
-> ![Enable_Omnipod_Driver_1](../images/omnipod/Enable_Omnipod_Driver_1.png)  ![Enable_Omnipod_Driver_2](../images/omnipod/Enable_Omnipod_Driver_2.png)
+![The Pump step of the setup wizard with Omnipod Eros](../images/setup-wizard/Wizard-Pump-Omnipod.png)
 
-在同一界面的泵选择区域下方，**Omnipod驱动设置**中显示**RileyLink配置**，点击**未设置**文字添加您的RileyLink设备。
-
-在**RileyLink选择**界面点击**扫描**按钮，通过搜索所有可用蓝牙设备并从列表中选择您的RileyLink进行配对。成功选择后，系统将返回泵驱动选择界面，此时Omnipod驱动设置中会显示已选RileyLink及其MAC地址。
-
-点击**下一步**按钮继续完成**设置向导**其余步骤。所选RileyLink初始化可能需要长达一分钟，之后**下一步**按钮才会激活。
-
-Detailed steps on how to setup your pod communication device are listed below in the [RileyLink Setup Section](#OmnipodEros-rileylink-setup).
+The Setup Wizard does not pair your RileyLink. After finishing the wizard, open the Omnipod pump screen and pair it as described in the [RileyLink Setup section](#OmnipodEros-rileylink-setup).
 
 **或**
 
-### Option 2: The Config Builder
+### Option 2: The Configuration screen
 
-通过左上角**汉堡菜单**进入**配置构建器(1)**➜**泵**➜**Omnipod**，选择标有**Omnipod**的**单选按钮(2)**。勾选**设置齿轮图标(3)**旁的**复选框(4)**后，Omnipod菜单将作为**POD**标签页显示在AAPS界面中。本文档中将其称为**Omnipod(POD)**标签页。
+Open the top-left **menu** (☰) > **Configuration** > **Pump** and select the **radio button** of **Omnipod Eros**.
 
-> **NOTE:** A faster way to access the **Omnipod settings** can be found below in the [Omnipod Settings section](#OmnipodEros-omnipod-settings) of this document.
-> 
-> ![Enable_Omnipod_Driver_3](../images/omnipod/Enable_Omnipod_Driver_3.png) ![Enable_Omnipod_Driver_4](../images/omnipod/Enable_Omnipod_Driver_4.png)
+Once it is selected, the **Omnipod Eros** card shows two buttons, **Settings** and **Open plugin**:
+
+![The Omnipod Eros plugin selected in Configuration > Pump](../images/v4/Pumps/omnipod_enabled.png)
+
+**Settings** opens the settings of the Omnipod driver (see [Omnipod Settings](#OmnipodEros-omnipod-settings)):
+
+![Omnipod driver settings](../images/v4/Pumps/omnipod_settings.png)
+
+**Open plugin** opens the Omnipod pump screen. You can also open it at any time from the main screen with **Manage** > **Pump**. This page calls it the **Omnipod pump screen**. Before a RileyLink is paired and a pod is activated, it looks like this:
+
+![Omnipod pump screen before pairing](../images/v4/Pumps/omnipod_pump_screen.png)
 
 ### Verification of Omnipod Driver Selection
 
-*注：若您未选择RileyLink便提前退出设置向导，虽已启用Omnipod驱动，但仍需完成RileyLink设备选择。您可能会看到Omnipod（POD）标签页如下所示*
-
-要确认您已在AAPS中启用Omnipod驱动，请从**概览**标签页**向左滑动**，此时您将看到**Omnipod**或**POD**标签页。
-
-![Enable_Omnipod_Driver_5](../images/omnipod/Enable_Omnipod_Driver_5.png)
+To verify that you have enabled the Omnipod driver, open **Manage** > **Pump** from the main screen. You should see the **Omnipod Eros** pump screen shown above. If you have not paired a RileyLink yet, **RileyLink Status** shows **Not Started** and **Pod Status** shows **No Active Pod**.
 
 ## Omnipod配置
 
-请**向左滑动**至**Omnipod(POD)**标签页，您可在此管理所有储药器及RileyLink功能（部分功能需在储药器使用期间才会激活显示）：
+All pod and RileyLink functions are buttons on the [Omnipod pump screen](#OmnipodEros-omnipod-pod-tab) (**Manage** > **Pump**). Some buttons only appear in certain situations, for example when a pod is active.
 
 > ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png) 刷新储药器连接状态
 > 
 > ![pod_management](../images/omnipod/ICONS/omnipod_overview_pod_management.png) 储药器管理（激活/停用设备、播放测试提示音、查看RileyLink统计及输注历史）
 
+```{admonition} Older screenshot
+:class: note
+The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 there is no **POD MGMT** button or Pod Management menu: **Refresh** and all pod management actions are buttons on the Omnipod pump screen.
+```
+
 (OmnipodEros-rileylink-setup)=
 
 ### RileyLink 设置
 
-If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the [Activating a Pod Section](#OmnipodEros-activating-a-pod) below.
+If you have already paired your RileyLink, continue to the [Activating a Pod section](#OmnipodEros-activating-a-pod) below.
 
-*注：RileyLink未连接时，主页标签页的胰岛素和计算器按钮会消失，这是明显的视觉提示。 AAPS启动后约30秒内也会出现此现象，此时系统正在主动连接RileyLink。*
+*Note: A good visual indicator that the RileyLink is not connected is that the treatment buttons (QuickLaunch toolbar) on the main screen will be missing. AAPS启动后约30秒内也会出现此现象，此时系统正在主动连接RileyLink。*
 
-1. 请确保您的RileyLink已充满电并处于开机状态。
+1. Make sure that your RileyLink is fully charged and powered on.
 
-2. 选择Omnipod驱动后，通过**配置构建器(1)**➜**泵**➜**Omnipod**➜**齿轮图标(设置)(2)**➜**RileyLink配置(3)**路径，点击**未设置**或**MAC地址(如有显示)**文字来识别并选择您的RileyLink设备。
+2. Place the RileyLink [close to your phone](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less).
 
-   > Ensure your RileyLink battery is charged and it is [positioned in close proximity](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. 选择完成后，即可开始激活首个储药器使用会话。使用手机返回键回到AAPS主界面。
-   > 
-   > ![RileyLink_Setup_1](../images/omnipod/RileyLink_Setup_1.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
+3. Open the Omnipod pump screen (**Manage** > **Pump**) and press **Pair RileyLink**.
 
-3. 在**RileyLink选择**界面，点击**扫描(4)**按钮启动蓝牙搜索。从可用蓝牙设备列表中**选择您的RileyLink(5)**。
+4. The **Pair RileyLink** screen starts scanning for Bluetooth devices right away. Tap your RileyLink in the list of found devices.
 
-   > ![RileyLink_Setup_3](../images/omnipod/RileyLink_Setup_3.png) ![RileyLink_Setup_4](../images/omnipod/RileyLink_Setup_4.png)
+   ![The Pair RileyLink screen scanning for devices](../images/omnipod/eros_pair_rileylink_scanning.png)
 
-4. 成功选择后，系统将返回Omnipod设置页面，其中会显示**当前所选RileyLink的MAC地址(6)**。
+5. When **RileyLink paired successfully** is shown with the name and address of your device, press **OK**.
 
-   > ![RileyLink_Setup_5](../images/omnipod/RileyLink_Setup_5.png)
+6. Back on the Omnipod pump screen, check that **RileyLink Status** changes to **Connected**. **Pod Status** should show **No Active Pod**. If the RileyLink does not connect, press **Reset RileyLink**, or restart **AAPS**.
 
-5. 请在**Omnipod(POD)**标签页确认**RileyLink状态(1)**显示为**已连接**，且**储药器状态(2)**栏应显示**无活跃储药器**。若未显示，请尝试重复上一步操作或退出AAPS以刷新连接。
+![RileyLink_Setup_1](../images/omnipod/RileyLink_Setup_1.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
-   > ![RileyLink_Setup_6](../images/omnipod/RileyLink_Setup_6.png)
+![RileyLink_Setup_3](../images/omnipod/RileyLink_Setup_3.png) ![RileyLink_Setup_4](../images/omnipod/RileyLink_Setup_4.png)
+
+![RileyLink_Setup_5](../images/omnipod/RileyLink_Setup_5.png)
+
+![RileyLink_Setup_6](../images/omnipod/RileyLink_Setup_6.png)
+
+```{admonition} Older screenshot
+:class: note
+The six screenshots above (after step 6) are from an earlier **AAPS** version. In **AAPS** 4 you pair the RileyLink with the **Pair RileyLink** button on the Omnipod pump screen instead of **RileyLink Configuration** in the Omnipod settings, and scanning starts automatically.
+```
+
+```{note}
+To switch to another RileyLink (for example a backup device), press **Pair RileyLink** again and select the new device. It replaces the one paired before. You do not need to remove the old device first.
+```
 
 (OmnipodEros-activating-a-pod)=
 
 ### 激活储药器
 
-激活储药器前，请确保您已在Omnipod设置中正确配置并连接RileyLink设备。
+Before you can activate a pod, make sure your RileyLink is paired and **RileyLink Status** shows **Connected**. The **Activate Pod** button stays disabled until the RileyLink is ready.
 
-*重要提示：出于安全防护机制，储药器激活配对时的通信距离存在严格限制。配对前储药器射频信号较弱，但成功配对后将恢复全功率信号传输。 During these procedures, make sure that your pod is* [within close proximity](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) but not on top of or right next to the RileyLink.\*
+*重要提示：出于安全防护机制，储药器激活配对时的通信距离存在严格限制。配对前储药器射频信号较弱，但成功配对后将恢复全功率信号传输。 During these procedures, make sure that your pod is* [within close proximity](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) *(~30 cm away or less) but not on top of or right next to the RileyLink.*
 
-01. 请进入**Omnipod(POD)**标签页，点击**储药器管理(1)**按钮，然后选择**激活储药器(2)**。
+01. Open the Omnipod pump screen (**Manage** > **Pump**) and press **Activate Pod**.
 
-    > ![Activate_Pod_1](../images/omnipod/Activate_Pod_1.png) ![Activate_Pod_2](../images/omnipod/Activate_Pod_2.png)
+    If you have never activated a profile, a **Profile required** step appears first. Select the profile to apply on activation.
 
-02. 此时将显示**填充储药器**界面。请在新储药器中装入至少80单位胰岛素，听到两声提示音后表明储药器已准备好进行初始化。计算3天所需胰岛素总量时，请注意储药器初始化将消耗12至15单位胰岛素。
+    > ![Activate_Pod_1](../images/omnipod/Activate_Pod_1.png) ![Activate_Pod_2](../images/omnipod/Activate_Pod_2.png) 
+    > 
+    > ```{admonition} Older screenshot
+    >     :class: note
+    >     The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Activate Pod** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
+    > ```
+
+02. 此时将显示**填充储药器**界面。 Fill a new pod with enough insulin for 3 days and listen for two beeps. They mean that the minimum amount of 80 units has been filled. Empty the fill syringe completely, even after hearing the two beeps. 计算3天所需胰岛素总量时，请注意储药器初始化将消耗12至15单位胰岛素。 Do not remove the pod's needle cap yet.
 
     > ![Activate_Pod_3](../images/omnipod/Activate_Pod_3.png)
     > 
-    > 请确保新储药器与RileyLink设备保持近距离（30厘米以内），然后点击**下一步**按钮。
+    > Ensure the new pod and RileyLink are within close proximity of each other (~30cm or less) and press **Next**.
 
-03. 在**初始化储药器**界面，储药器将开始自检（您会听到"咔嗒"一声，随后是一连串滴答声，表明储药器正在进行自检程序）。若RileyLink超出待激活储药器的有效范围，您将收到**储药器无响应**的错误提示。 If this occurs, [move the RileyLink closer](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry (1)** button.
+03. **Select Insulin** (only shown if you have more than one insulin configured): select the insulin you are filling the pod with and press **Next**. A profile switch with this insulin is applied after activation.
+
+04. 在**初始化储药器**界面，储药器将开始自检（您会听到"咔嗒"一声，随后是一连串滴答声，表明储药器正在进行自检程序）。若RileyLink超出待激活储药器的有效范围，您将收到**储药器无响应**的错误提示。 If this occurs, [move the RileyLink closer](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to but not on top of or right next to the Pod and press **Retry**.
 
     > ![Activate_Pod_4](../images/omnipod/Activate_Pod_4.png) ![Activate_Pod_5](../images/omnipod/Activate_Pod_5.png)
 
-04. 初始化成功后，系统将显示绿色勾选标记，并激活**下一步**按钮。点击**下一步**按钮完成储药器初始化，随后将显示**佩戴储药器**界面。
+05. When priming is successful, a green checkmark is shown and the **Next** button becomes enabled. Press **Next**.
 
     > ![Activate_Pod_6](../images/omnipod/Activate_Pod_6.png)
 
-05. 接下来，请准备好新储药器的输注部位。撕除储药器塑料针帽及粘合衬底的白纸后，将其敷贴至您惯常选择的注射部位。操作完成后，点击**下一步**按钮。
+06. **Site location** (only shown if **Manage pump site rotation** is enabled in [Site Rotation](#Aapsscreens-site-rotation)): select where you place the pod on your body and press **Next**.
+
+07. The **Attach Pod** screen is displayed. Prepare the infusion site of the new pod. Remove the pod's plastic needle cap and white paper backing from the adhesive and apply the pod to your chosen site on your body. If the cannula sticks out, press **Cancel** and discard the pod. When finished, press **Next**.
 
     > ![Activate_Pod_7](../images/omnipod/Activate_Pod_7.png)
 
-06. 此时将弹出**佩戴储药器**对话框。**仅在准备部署软管时点击确认按钮**。
+08. A confirmation dialog appears: "When you press OK, the cannula will be inserted". **ONLY press OK if you are ready to deploy the cannula**.
 
     > ![Activate_Pod_8](../images/omnipod/Activate_Pod_8.png)
 
-07. 点击**确认**后，Omnipod可能需要一些时间响应并插入软管（最长1-2分钟），请耐心等待。
+09. On the **Insert Cannula** screen, it may take some time before the Omnipod responds and inserts the cannula (1-2 minutes maximum), so be patient.
 
-    > 若RileyLink超出待激活储药器的有效范围，您将收到**储药器无响应**的错误提示。若出现此情况，请将RileyLink移近储药器（保持30厘米以内距离，但勿直接叠放或紧贴），然后点击**重试**按钮。
+    > 若RileyLink超出待激活储药器的有效范围，您将收到**储药器无响应**的错误提示。 If this occurs, move the RileyLink closer (~30 cm away or less) to but not on top of or right next to the Pod and press **Retry**.
     > 
-    > 若RileyLink超出蓝牙范围或未与手机保持有效连接，您将收到**RileyLink无响应**的错误提示。遇到此情况时，请将RileyLink移近手机后点击**重试**按钮。
+    > 若RileyLink超出蓝牙范围或未与手机保持有效连接，您将收到**RileyLink无响应**的错误提示。 If this occurs, move the RileyLink closer to the phone and press **Retry**.
     > 
     > *注意：在插入导管前，建议捏起导管插入点附近的皮肤。这能确保针头顺利插入，并降低导管堵塞的发生概率。*
     > 
@@ -167,21 +200,33 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
     > 
     > ![Activate_Pod_10](../images/omnipod/Activate_Pod_10.png) ![Activate_Pod_11](../images/omnipod/Activate_Pod_11.png)
 
-08. 导管成功插入后会出现绿色勾选标记，**下一步**按钮将变为可点击状态。点击**下一步**按钮。
+10. 导管成功插入后会出现绿色勾选标记，**下一步**按钮将变为可点击状态。 Press **Next**.
 
     > ![Activate_Pod_12](../images/omnipod/Activate_Pod_12.png)
 
-09. 此时将显示**储药器已激活**界面。点击绿色**完成**按钮。恭喜！您已成功开启新的储药器使用会话。
+11. The **Pod Activated** screen is displayed. Check that the cannula has been inserted correctly, and change your pod if you think it has not. Press **Finish**. 恭喜！您已成功开启新的储药器使用会话。
 
-    > ![Activate_Pod_13](../images/omnipod/Activate_Pod_13.png)
+    > ![Activate_Pod_13](../images/omnipod/Activate_Pod_13.png) 
+    > 
+    > ```{admonition} Older screenshot
+    >     :class: note
+    >     The screenshots in steps 2 to 11 are from an earlier **AAPS** version and may look different in **AAPS** 4. The **Select Insulin** and **Site location** steps are not pictured.
+    > ```
 
-10. 此时**储药器管理**界面应显示为：**激活储药器(1)**按钮*已禁用*，而**停用储药器(2)**按钮*已启用*。这是因为当前已有储药器处于激活状态，必须首先停用当前储药器才能激活新储药器。
+12. You are returned to the Omnipod pump screen. The **Activate Pod** button is replaced by **Deactivate Pod**, because you cannot activate another pod without deactivating the active one first.
 
-    点击手机返回键回到**Omnipod(POD)**标签页，此时界面将显示当前储药器会话信息，包括基础率、储药器余量、已输注胰岛素量、设备报错及提醒等数据。
-
-    For more details on the information displayed go to the [Omnipod (POD) Tab](#OmnipodEros-omnipod-pod-tab) section of this document.
+    The pump screen now shows information about your active pod, including the current basal rate, reservoir level, insulin delivered, pod errors and alerts. For more details, see the [Omnipod pump screen](#OmnipodEros-omnipod-pod-tab) section.
 
     ![Activate_Pod_14](../images/omnipod/Activate_Pod_14.png) ![Activate_Pod_15](../images/omnipod/Activate_Pod_15.png)
+
+    ```{admonition} Older screenshot
+    :class: note
+    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 there is no Pod Management menu: you return directly to the Omnipod pump screen, where **Deactivate Pod** replaces **Activate Pod**.
+    ```
+
+```{note}
+If activation was interrupted after priming (for example the app was closed), press **Activate Pod** again. The wizard continues from the cannula insertion steps.
+```
 
 ### 停用储药器
 
@@ -189,97 +234,140 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 要停用储药器（无论是因到期还是故障）：
 
-1. 请进入**Omnipod(POD)**标签页 → 点击**储药器管理(1)**按钮 → 在**储药器管理**界面选择**停用储药器(2)**功能。
+1. Open the Omnipod pump screen (**Manage** > **Pump**) and press **Deactivate Pod**.
 
-   > ![Deactivate_Pod_1](../images/omnipod/Deactivate_Pod_1.png) ![Deactivate_Pod_2](../images/omnipod/Deactivate_Pod_2.png)
+   > ![Deactivate_Pod_1](../images/omnipod/Deactivate_Pod_1.png) ![Deactivate_Pod_2](../images/omnipod/Deactivate_Pod_2.png) 
+   > 
+   > ```{admonition} Older screenshot
+   >    :class: note
+   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Deactivate Pod** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
+   > ```
 
-2. 在**停用储药器**界面，请首先确保RileyLink设备靠近储药器（保持适当间距，避免直接叠放或紧贴），随后点击**下一步**按钮启动停用流程。
+2. On the **Deactivate Pod** screen, first make sure the RileyLink is in close proximity to the pod but not on top of or right next to the pod. Then press **Next**. A dialog asks *A deactivated Pod can not be used again. Deactivate this Pod now?* Press **OK** to start deactivating the pod, or **Cancel** to keep it. Deactivation suspends all insulin delivery and cannot be undone.
 
    > ![Deactivate_Pod_3](../images/omnipod/Deactivate_Pod_3.png)
 
-3. **停用舱**界面将显示，并且您会听到舱体发出的确认提示音，表示停用成功。
+3. The **Deactivating Pod** screen appears, and you will receive a confirmation beep from the pod that deactivation was successful.
 
    > ![Deactivate_Pod_4](../images/omnipod/Deactivate_Pod_4.png)
    > 
-   > **如果停用失败**且未收到确认提示音，您可能会收到**未收到RileyLink响应**或**未收到Pod响应**的提示信息。请点击**重试(1)**按钮以再次尝试停用。如果停用持续失败，请点击**废弃Pod(2)**按钮以废弃Pod。当前使用周期已终止，您现在可以移除储药器。如果您的Pod发出警报声，您可能需要手动静音（使用别针或回形针），因为**废弃Pod(2)**按钮不会使其静音。
+   > **IF deactivation fails** and you do not receive a confirmation beep, you may receive a **No response from RileyLink** or **No response from Pod** message. Press **Retry** to attempt deactivation again. If deactivation keeps failing, press **Discard Pod** and confirm. **AAPS** then forgets the pod. Insulin delivery has **not** been suspended, so remove the pod from your body. If your pod has a screaming alarm, you may need to silence it manually (using a pin or a paperclip), because **Discard Pod** does not silence it.
    > 
    > > ![Deactivate_Pod_5](../images/omnipod/Deactivate_Pod_5.png)  ![Deactivate_Pod_6](../images/omnipod/Deactivate_Pod_6.png)
 
-4. 成功停用后将显示绿色勾选标记。点击**下一步**按钮显示储药器已停用界面。当前使用周期已终止，您现在可以移除储药器。
+4. A green checkmark appears when deactivation is successful. Press **Next** to display the **Pod Deactivated** screen. 当前使用周期已终止，您现在可以移除储药器。
 
    > ![Deactivate_Pod_7](../images/omnipod/Deactivate_Pod_7.png)
 
-5. 点击绿色按钮返回**Pod管理**界面。
+5. Press **Finish** to return to the Omnipod pump screen.
 
-   > ![Deactivate_Pod_8](../images/omnipod/Deactivate_Pod_8.png)
+   > ![Deactivate_Pod_8](../images/omnipod/Deactivate_Pod_8.png) 
+   > 
+   > ```{admonition} Older screenshot
+   >    :class: note
+   >    The screenshots in steps 2 to 5 are from an earlier **AAPS** version and may look different in **AAPS** 4.
+   > ```
 
-6. 您现已返回**Pod管理**菜单，请按手机返回键回到**Omnipod(POD)**标签页。请确认**RileyLink状态：**字段显示为**已连接**，且**Pod状态：**字段显示**无活动Pod**信息。
+6. On the Omnipod pump screen, check that **RileyLink Status** shows **Connected** and **Pod Status** shows **No Active Pod**.
 
-   > ![Deactivate_Pod_9](../images/omnipod/Deactivate_Pod_9.png)  ![Deactivate_Pod_10](../images/omnipod/Deactivate_Pod_10.png)
+   > ![Deactivate_Pod_9](../images/omnipod/Deactivate_Pod_9.png)  ![Deactivate_Pod_10](../images/omnipod/Deactivate_Pod_10.png) 
+   > 
+   > ```{admonition} Older screenshot
+   >    :class: note
+   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Finish** returns you directly to the Omnipod pump screen; there is no Pod Management menu or **Omnipod (POD)** tab.
+   > ```
 
 ### 暂停和恢复胰岛素输注
 
-以下流程将向您展示如何暂停和恢复胰岛素泵的输注。
+The process below shows you how to suspend and resume insulin delivery.
 
-*注意 - 如果您没有看到"暂停"按钮*，说明该功能尚未在Omnipod(POD)标签页中启用显示。 Enable the **Show Suspend Delivery button in Omnipod tab** setting in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+*NOTE - if you do not see a **Suspend** button*, it is hidden by default. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### 暂停胰岛素输注
 
 使用此命令将活动中的pod置于暂停状态。在此暂停状态下，pod将停止输送任何胰岛素。此命令模拟原装Omnipod PDM对活动pod发出的暂停功能。
 
-1. 请前往**Omnipod(POD)**标签页，点击**暂停(1)**按钮。暂停指令已从RileyLink发送至活动pod，**暂停(3)**按钮将变为灰色不可用状态。 **Pod状态(2)**将显示**暂停输注**。
+1. Open the Omnipod pump screen (**Manage** > **Pump**) and press **Suspend**. The suspend command is sent through the RileyLink to the active pod.
+
+2. When the pod has suspended all insulin delivery, **Pod Status** shows **Suspended** and the **Suspend** button is replaced by **Resume Delivery**.
 
    > ![Suspend_Insulin_Delivery_1](../images/omnipod/Suspend_Insulin_Delivery_1.png) ![Suspend_Insulin_Delivery_2](../images/omnipod/Suspend_Insulin_Delivery_2.png)
-
-2. 当RileyLink成功确认暂停指令后，将显示确认对话框，内容为**所有胰岛素输注已暂停**。点击**确定**进行确认并继续操作。
-
+   > 
    > ![Suspend_Insulin_Delivery_3](../images/omnipod/Suspend_Insulin_Delivery_3.png)
+   > 
+   > ![Suspend_Insulin_Delivery_4](../images/omnipod/Suspend_Insulin_Delivery_4.png) 
+   > 
+   > ```{admonition} Older screenshot
+   >    :class: note
+   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 these steps take place on the Omnipod pump screen instead of the **Omnipod (POD)** tab, and the result is shown in **Pod Status**.
+   > ```
 
-3. 您当前使用的pod现已暂停所有胰岛素输注。 **Omnipod(POD)**标签页将更新**Pod状态(1)**为**已暂停**。**暂停**按钮将变为新的**恢复输注(2)**按钮
-
-   > ![Suspend_Insulin_Delivery_4](../images/omnipod/Suspend_Insulin_Delivery_4.png)
+If the command fails, a **Warning** dialog shows "Failed to suspend delivery" with the reason. Check the RileyLink connection and try again.
 
 #### Resuming Insulin Delivery
 
 此指令用于命令当前暂停中的储药器恢复胰岛素输注。命令成功处理后，胰岛素将根据当前时间从活动基础配置文件中恢复使用当前基础率进行正常输注。 Pod将重新接受大剂量、临时基础率和超微大剂量的指令。
 
-1. 请前往**Omnipod(POD)**标签页，确认**Pod状态(1)**字段显示为**已暂停**，然后点击**恢复输注(2)**按钮启动流程，指示当前pod恢复正常胰岛素输注。 **Pod状态(3)**字段将显示**恢复输注**信息，表明RileyLink正在向暂停中的pod发送该指令。
+1. Open the Omnipod pump screen and check that **Pod Status** shows **Suspended**. Press **Resume Delivery**.
+
+2. When the command succeeds, **Pod Status** shows **Running** again and the **Resume Delivery** button disappears (the **Suspend** button is shown again if you have enabled it).
 
    > ![Resume_Insulin_Delivery_1](../images/omnipod/Resume_Insulin_Delivery_1.png) ![Resume_Insulin_Delivery_2](../images/omnipod/Resume_Insulin_Delivery_2.png)
-
-2. 当RileyLink成功确认恢复输注指令后，将显示确认对话框，内容为**胰岛素输注已恢复**。点击**确定**进行确认并继续操作。
-
+   > 
    > ![Resume_Insulin_Delivery_3](../images/omnipod/Resume_Insulin_Delivery_3.png)
-
-3. **Omnipod(POD)**标签页将更新**Pod状态(1)**字段显示为**运行中**，同时**恢复输注**按钮将变回显示**暂停(2)**按钮。
-
-   > ![Resume_Insulin_Delivery_4](../images/omnipod/Resume_Insulin_Delivery_4.png)
-
-### 确认Pod警报
-
-*注意 - 若未显示"确认警报"按钮，是因为该按钮仅在触发pod过期或储药器低量警报时，才会在Omnipod(POD)标签页中条件性显示。*
-
-以下流程将指导您如何确认并消除活动pod在72小时(3天)有效期临近时发出的警报提示音。此警告时限由Omnipod警报设置中的**关机前小时数**定义。 Pod最长使用寿命为80小时(3天8小时)，但Insulet建议不要超过72小时(3天)的限制。
-
-*注意 - 若您已在Omnipod警报设置中启用"自动确认Pod警报"功能，该警报将在首次触发后自动处理，您无需手动消除警报。*
-
-1. 当达到设定的**关机前小时数**警告时限时，pod将发出提示音，告知您其即将到期，需要尽快更换pod。您可在**Omnipod(POD)**标签页核实：**Pod到期时间：(1)**字段会显示pod失效的具体时间（激活后72小时），超时后文字将变为**红色**；同时在**活动Pod警报(2)**字段下会显示状态信息**Pod即将到期**。此时将显示**确认警报(3)**按钮。系统通知(4)也会提醒您pod即将到期
-
-   > ![Acknowledge_Alerts_1](../images/omnipod/Acknowledge_Alerts_1.png) ![Acknowledge_Alerts_2](../images/omnipod/Acknowledge_Alerts_2.png)
-
-2. 请前往**Omnipod(POD)**标签页，点击**确认警报(2)**按钮（确认警报）。 RileyLink向pod发送指令以停用pod到期警告提示音，并将**Pod状态(1)**字段更新为**已确认警报**。
-
-   > ![Acknowledge_Alerts_3](../images/omnipod/Acknowledge_Alerts_3.png)
-
-3. 当警报**成功停用**后，活动pod会发出**2声提示音**，并显示确认对话框，内容为**活动警报已确认**。点击**确定**按钮确认并关闭对话框。
-
-   > ![Acknowledge_Alerts_4](../images/omnipod/Acknowledge_Alerts_4.png)
    > 
-   > 当确认警报指令处理期间RileyLink超出pod通信范围时，系统将显示包含2个选项的警告信息。**静音(1)**将消除当前警告提示音。**确定(2)**将确认此警告，并允许用户再次尝试确认警报。
+   > ![Resume_Insulin_Delivery_4](../images/omnipod/Resume_Insulin_Delivery_4.png) 
    > 
-   > ![Acknowledge_Alerts_5](../images/omnipod/Acknowledge_Alerts_5.png)
+   > ```{admonition} Older screenshot
+   >    :class: note
+   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 these steps take place on the Omnipod pump screen instead of the **Omnipod (POD)** tab, and the result is shown in **Pod Status**.
+   > ```
 
-4. 警报显示无法验证 **SMB** 追加剂量命令是否成功，您需要验证 OMNIPOD 选项卡中的“上次追加剂量”字段，以查看 **SMB** 追加剂量是否成功，如果未成功，请从治疗中删除该条目。请前往<0>Omnipod(POD)</0>标签页，<0>活动Pod警报</0>字段下已不再显示警告信息，且活动pod将不再发出到期警告提示音。
+If the command fails, a **Warning** dialog shows "Failed to resume delivery" with the reason. Check the RileyLink connection and try again.
+
+### Silencing Pod Alerts
+
+*NOTE - The **Silence Alerts** button is only shown on the Omnipod pump screen while the pod has an active alert (for example the pod expiration or low reservoir alert), and only if **Automatically silence Pod alerts** is disabled.*
+
+The process below shows you how to silence pod beeps that start when the pod reaches the warning time before it expires. This warning time is set with **Alert at hours before shutdown (80 Hours)** in the Omnipod **Alerts** settings. Pod最长使用寿命为80小时(3天8小时)，但Insulet建议不要超过72小时(3天)的限制。
+
+*NOTE - If you have enabled **Automatically silence Pod alerts** in the Omnipod **Alerts** settings, **AAPS** silences the alert automatically at the next communication with the pod, and you do NOT need to do it manually.*
+
+1. When the warning time is reached, the pod beeps to tell you that it will soon expire and needs to be changed. On the Omnipod pump screen, **Pod Expires** shows the exact time the pod expires (72 hours after activation); it turns **yellow** 4 hours before. **Pod Hard End** shows when the pod stops delivering insulin. **Active Pod Alerts** shows **Pod will expire soon**, and the **Silence Alerts** button appears. **AAPS** also shows a notification about the upcoming pod expiration.
+
+   > ![Acknowledge_Alerts_1](../images/omnipod/Acknowledge_Alerts_1.png) ![Acknowledge_Alerts_2](../images/omnipod/Acknowledge_Alerts_2.png) 
+   > 
+   > ```{admonition} Older screenshot
+   >    :class: note
+   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 the **ACK ALERTS** button is called **Silence Alerts** and is on the Omnipod pump screen.
+   > ```
+
+2. Press **Silence Alerts**. The RileyLink sends the command to the pod to stop the expiration warning beeps.
+
+   > ![Acknowledge_Alerts_3](../images/omnipod/Acknowledge_Alerts_3.png) 
+   > 
+   > ```{admonition} Older screenshot
+   >    :class: note
+   >    The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the button is called **Silence Alerts**.
+   > ```
+
+3. When the alerts are silenced, the pod beeps twice. **Active Pod Alerts** no longer shows the warning, the **Silence Alerts** button disappears and the pod stops its expiration warning beeps.
+
+   > ![Acknowledge_Alerts_4](../images/omnipod/Acknowledge_Alerts_4.png) 
+   > 
+   > ```{admonition} Older screenshot
+   >    :class: note
+   >    The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the result is shown on the Omnipod pump screen: the warning disappears from **Active Pod Alerts**.
+   > ```
+
+If the command fails (for example the RileyLink is out of range of the pod), a **Warning** dialog shows "Failed to silence alerts" with the reason. Move the RileyLink closer to the pod and try again.
+
+![Acknowledge_Alerts_5](../images/omnipod/Acknowledge_Alerts_5.png)
+
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the **Warning** dialog shows "Failed to silence alerts" with the reason.
+```
 
 (OmnipodEros-view-pod-history)=
 
@@ -291,310 +379,380 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 *注意：* **不确定**指令会显示在pod历史记录中，但由于其特性，您无法确保其准确性。
 
-1. 请前往**Omnipod(POD)**标签页，点击**POD管理(1)**按钮进入**Pod管理**菜单，然后点击**Pod历史记录(2)**按钮访问pod历史记录界面。
+1. Open the Omnipod pump screen (**Manage** > **Pump**) and press **Pod History**.
 
-   > ![Pod_History_1](../images/omnipod/Pod_History_1.png) ![Pod_History_2](../images/omnipod/Pod_History_2.png)
+   > ![Pod_History_1](../images/omnipod/Pod_History_1.png) ![Pod_History_2](../images/omnipod/Pod_History_2.png) 
+   > 
+   > ```{admonition} Older screenshot
+   >    :class: note
+   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Pod History** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
+   > ```
 
-2. 在**Pod历史记录**界面中，默认显示**全部(1)**类别，按时间倒序列出所有pod**操作(3)**及其**结果(4)**的**日期和时间(2)**。按手机**返回键2次**可返回主AAPS界面的**Omnipod(POD)**标签页。
+2. The **Pod History** screen lists all pod actions and their results, newest first, grouped by day. By default **All** is selected. Tap one of the filter buttons at the top to show only one category. Use the back arrow at the top left to return to the Omnipod pump screen.
 
-   > ![Pod_History_3](../images/omnipod/Pod_History_3.png) ![Pod_History_4](../images/omnipod/Pod_History_4.png)
+   > ![Pod History screen with the filter buttons](../images/omnipod/Pod_History_3.png)
+
+   > ![Pod_History_4](../images/omnipod/Pod_History_4.png) 
+   > 
+   > ```{admonition} Older screenshot
+   >    :class: note
+   >    The second screenshot is from an earlier **AAPS** version and may look different in **AAPS** 4.
+   > ```
 
 ### 查看RileyLink设置与历史记录
 
-本部分将向您展示如何查看活动pod和RileyLink的设置参数，以及各自的通信历史记录。此功能包含两个部分：**设置**和**历史记录**。
+The **RileyLink Stats** screen shows the settings of your RileyLink and active pod, and the communication history of both. It has two tabs: **Settings** and **History**.
 
-该功能主要用于当您的pod通信设备超出手机蓝牙范围一段时间后，**RileyLink状态**显示**RileyLink无法连接**的情况。主界面**Omnipod(POD)**标签页上的**刷新**按钮会手动尝试与Omnipod设置中当前配置的RileyLink重新建立蓝牙连接。
-
-若主界面**Omnipod(POD)**标签页的**刷新**按钮未能恢复与pod通信设备的连接，请按照以下步骤进行手动重连。
+The **RileyLink Stats** button is hidden by default. To show it on the Omnipod pump screen, enable **Show RileyLink Stats button in Pod Management menu** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### 手动重建Pod通信设备蓝牙连接
 
-1. 当**Omnipod(POD)**标签页的**RileyLink状态：(1)**显示**RileyLink无法连接**时，请点击**POD管理(2)**按钮进入**Pod管理**菜单。在**Pod管理**菜单中，您将看到系统正在主动搜索RileyLink连接的通知，此时请点击**RileyLink统计(3)**按钮进入**RileyLink设置**界面。
+If your pod communication device was out of Bluetooth range of your phone for a while, **RileyLink Status** may report **RileyLink unreachable** on the Omnipod pump screen. **AAPS** normally reconnects by itself when the device is back in range. If it does not:
 
-   > ![RileyLink_Bluetooth_Reset_1](../images/omnipod/RileyLink_Bluetooth_Reset_1.png) ![RileyLink_Bluetooth_Reset_2](../images/omnipod/RileyLink_Bluetooth_Reset_2.png)
+1. Make sure the RileyLink is powered on, charged and close to your phone.
 
-2. 在**RileyLink设置(1)**界面的**RileyLink(2)**区域，您可通过**连接状态与错误：(3)**字段确认蓝牙连接状态及错误信息。此时应显示*蓝牙错误*和*RileyLink无法连接*状态。请点击右下角的**刷新(4)**按钮，开始手动重新建立蓝牙连接。
-
-   > ![RileyLink_Bluetooth_Reset_3](../images/omnipod/RileyLink_Bluetooth_Reset_3.png)
-   > 
-   > 当蓝牙刷新指令处理期间pod通信设备无响应或超出手机通信范围时，系统将显示包含2个选项的警告信息。
-
-   - **静音(1)**将消除当前警告提示音。
-   - **确定(2)**将确认此警告，并允许用户再次尝试重新建立蓝牙连接。
-
-   > ![RileyLink_Bluetooth_Reset_4](../images/omnipod/RileyLink_Bluetooth_Reset_4.png)
+2. On the Omnipod pump screen, press **Reset RileyLink**. A message confirms **RileyLink configuration reset**. See the [Reset RileyLink notes](#OmnipodEros-reset-rileylink-config-notes) below.
 
 3. 若**蓝牙连接**未能恢复，请尝试手动关闭手机蓝牙功能后再重新开启。
 
-4. RileyLink蓝牙成功重新连接后，**连接状态：(1)**字段应显示**RileyLink就绪**。恭喜！您已成功将配置的pod通信设备重新连接至AAPS系统！
+4. If it still does not reconnect, press **Pair RileyLink** and select your RileyLink again.
 
-   > ![RileyLink_Bluetooth_Reset_5](../images/omnipod/RileyLink_Bluetooth_Reset_5.png)
+5. After a successful reconnection, **RileyLink Status** shows **Connected**. You can also check **Connection Status** on the **Settings** tab of the **RileyLink Stats** screen. 恭喜！您已成功将配置的pod通信设备重新连接至AAPS系统！
+
+![RileyLink_Bluetooth_Reset_1](../images/omnipod/RileyLink_Bluetooth_Reset_1.png) ![RileyLink_Bluetooth_Reset_2](../images/omnipod/RileyLink_Bluetooth_Reset_2.png)
+
+![RileyLink_Bluetooth_Reset_3](../images/omnipod/RileyLink_Bluetooth_Reset_3.png)
+
+![RileyLink_Bluetooth_Reset_4](../images/omnipod/RileyLink_Bluetooth_Reset_4.png)
+
+![RileyLink_Bluetooth_Reset_5](../images/omnipod/RileyLink_Bluetooth_Reset_5.png)
+
+```{admonition} Older screenshot
+:class: note
+The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you reconnect with **Reset RileyLink** or **Pair RileyLink** on the Omnipod pump screen instead of the refresh button on the RileyLink Settings screen.
+```
 
 #### Pod通信设备与活动Pod设置
 
-本界面将显示当前配置的pod通信设备及活动中的Omnipod Eros pod相关信息、状态和设置配置。
+This screen shows information and status for both the currently paired pod communication device and the currently active Omnipod Eros pod. The information refreshes automatically.
 
-1. 请前往**Omnipod(POD)**标签页，点击**POD管理(1)**按钮进入**Pod管理**菜单，再点击**RileyLink统计(2)**按钮，即可查看当前配置的**RileyLink(3)**及活动pod**设备(4)**设置。
+1. Open the Omnipod pump screen (**Manage** > **Pump**) and press **RileyLink Stats**. The **Settings** tab shows your currently paired **RileyLink** and the active pod (**Device**).
 
-   > ![RileyLink_Statistics_Settings_1](../images/omnipod/RileyLink_Statistics_Settings_1.png) ![RileyLink_Statistics_Settings_2](../images/omnipod/RileyLink_Statistics_Settings_2.png)
+   > ![RileyLink_Statistics_Settings_1](../images/omnipod/RileyLink_Statistics_Settings_1.png) ![RileyLink_Statistics_Settings_2](../images/omnipod/RileyLink_Statistics_Settings_2.png) 
    > 
+   > ```{admonition} Older screenshot
+   >    :class: note
+   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **RileyLink Stats** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
+   > ```
+
    > ![RileyLink_Statistics_Settings_3](../images/omnipod/RileyLink_Statistics_Settings_3.png)
 
-##### RileyLink(3)字段
+##### RileyLink fields
 
-> - **地址：** Omnipod设置中定义的所选pod通信设备的MAC地址。
-> - **名称：** 手机蓝牙设置中定义的所选pod通信设备的蓝牙标识名称。
-> - **电池电量：** 显示已连接的pod通信设备的当前电量水平
-> - **已连接设备：** 当前与pod通信设备通信的Omnipod pod型号
+> - **Address:** MAC address of the paired pod communication device.
+> - **Name:** Bluetooth name of the paired pod communication device.
+> - **Battery Level:** The current battery level of the connected pod communication device. Only shown when **Show battery level reported by OrangeLink/EmaLink/DiaLink** is enabled.
 > - **连接状态**：pod通信设备与运行AAPS的手机之间的当前蓝牙连接状态。
-> - **连接错误：** 若pod通信设备蓝牙连接存在异常，相关错误详情将在此处显示。
+> - **Connection Error:** If there is an error with the pod communication device Bluetooth connection, details are displayed here.
 > - **固件版本：** 当前连接的pod通信设备上安装的固件版本。
 
-##### 设备(4)字段 - 使用活动Pod时
+##### Device fields - With an Active Pod
 
-> - **设备类型：** 与pod通信设备通信的设备类型（Omnipod pod泵）
-> - **设备型号：** 连接至pod通信设备的激活设备型号（当前Omnipod pod的型号名称，即Eros）
-> - **泵序列号：** 当前激活pod的序列号
-> - **泵频率：** pod通信设备为建立与pod间通信所调谐的无线电频率。
-> - **上次使用频率：** pod与pod通信设备进行通信时最后使用的无线电频率。
+> - **Device Type:** The type of device communicating with the pod communication device (Omnipod (Eros)).
+> - **Configured Device Model:** The model of the device configured to communicate with the pod communication device.
+> - **Connected Device Model:** The model of the device currently communicating with the pod communication device.
+> - **Pump Serial Number:** Serial number of the currently activated pod.
+> - **Pump Frequency:** Radio frequency used to communicate with the pod.
+> - **Last Used Frequency:** Last known radio frequency the pod used to communicate with the pod communication device.
 > - **最后设备联系时间：** pod与pod通信设备最后一次建立联系的具体日期和时间。
-> - **刷新按钮** 手动刷新本页面的设置信息。
 
 (omnipod-eros-rileylink-and-active-pod-history)=
 #### RileyLink与活动Pod历史记录
 
-本界面按时间倒序显示RileyLink或当前连接pod所处的状态或执行的操作信息。完整历史记录仅适用于当前活动pod，更换pod后该历史将被清空，系统仅记录并显示新激活pod的事件。
+This tab lists, newest first, each state or action of the RileyLink or the currently connected pod. The history is only available for the currently active pod. After a pod change, this history is erased and only events from the newly activated pod are recorded and shown.
 
-1. 请进入**Omnipod(POD)**标签页，点击**POD管理(1)**按钮进入**Pod管理**菜单，再点击**Pod历史(2)**按钮即可查看**设置**与**历史记录**界面。点击**历史记录(3)**文字可查看RileyLink及当前活动pod会话的完整历史。
+1. Open the Omnipod pump screen (**Manage** > **Pump**), press **RileyLink Stats** and then tap the **History** tab.
 
-   > ![RileyLink_Statistics_History_1](../images/omnipod/RileyLink_Statistics_History_1.png) ![RileyLink_Statistics_History_2](../images/omnipod/RileyLink_Statistics_History_2.png)
+   > ![RileyLink_Statistics_History_1](../images/omnipod/RileyLink_Statistics_History_1.png) ![RileyLink_Statistics_History_2](../images/omnipod/RileyLink_Statistics_History_2.png) 
    > 
+   > ```{admonition} Older screenshot
+   >    :class: note
+   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **RileyLink Stats** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
+   > ```
+
    > ![RileyLink_Statistics_History_3](../images/omnipod/RileyLink_Statistics_History_3.png)
 
 ##### Fields
 
-> - **日期和时间**：按时间倒序排列的每个事件的时间戳。
-> - **设备：** 当前操作或状态所指向的设备。
-> - **状态或操作：** 设备当前所处的状态或执行的操作。
+Each entry shows:
+
+> - **Device:** The device to which the action or state refers.
+> - **Time:** The time of the event.
+> - **State or Action:** The state of the device or the action it performed.
 
 (OmnipodEros-omnipod-pod-tab)=
 
-## Omnipod(POD)标签页
+## Omnipod pump screen
 
-以下是对主AAPS界面中**Omnipod(POD)**标签页图标及状态字段布局与含义的说明。
+Below is an explanation of the status fields and buttons on the **Omnipod pump screen** (**Manage** > **Pump**, or **Configuration** > **Pump** > **Open plugin**).
 
-*注意：如果在Omnipod（POD）选项卡状态字段报告中任何消息显示（不确定），则需要按下刷新按钮以清除该状态并刷新pod状态。*
+The gear icon at the top right opens the [Omnipod settings](#OmnipodEros-omnipod-settings).
 
-> ![Omnipod_Tab](../images/omnipod/Omnipod_Tab.png)
+*NOTE: If any status field shows (uncertain), press **Refresh** to refresh the pod status and clear it.*
+
+![Omnipod pump screen](../images/v4/Pumps/omnipod_pump_screen.png)
+
+![Omnipod_Tab](../images/omnipod/Omnipod_Tab.png)
+
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version, where this screen was the **Omnipod (POD)** tab. In **AAPS** 4 it is the Omnipod pump screen, and some field names and buttons differ.
+```
 
 ### Fields
 
-- **RileyLink状态：**显示RileyLink的当前连接状态
+- **RileyLink Status:** Displays the current connection status of the RileyLink. Errors are shown in red.
 
-- *RileyLink无法连接* - pod通信设备可能超出手机蓝牙范围、已关机或存在故障导致无法进行蓝牙通信。
-- *RileyLink 准备就绪* - pod 通信设备已开机，正在主动初始化蓝牙连接
+- *Not Started* - no RileyLink is paired yet, or the connection has not started.
+- *RileyLink unreachable* - pod communication device is either not within Bluetooth range of the phone, powered off or has a failure preventing Bluetooth communication.
+- *RileyLink ready* - pod communication device is powered on and actively initializing the Bluetooth connection.
 - *已连接* - pod通信设备已开机、连接并可通过蓝牙进行主动通信。
 
-- **Pod地址：**显示当前活动pod被引用的地址
+- **Unique ID:** Displays the address of the active pod.
 
-- **批号：**显示当前活动pod的批号
+- **LOT Number:** Displays the LOT number of the active pod.
 
-- **TID：**显示pod的序列号。
+- **Sequence Number:** Displays the serial number (TID) of the pod.
 
 - **固件版本：**显示当前活动pod的固件版本。
 
-- **Pod时间：**显示当前活动pod的时间。
+- **Pod时间：**显示当前活动pod的时间。 It is highlighted when it differs from the phone time by more than 5 minutes.
 
-- **Pod有效期：**显示当前活动pod的到期日期和时间。
+- **Pod Expires:** Displays the date and time when the active pod will expire. The text turns yellow in the last 4 hours before this time. It never turns red, because the pod keeps delivering insulin after it.
 
-- **Pod状态：**显示当前活动pod的状态。
+- **Pod Hard End:** Displays the end of the pod's grace period (8 hours after **Pod Expires**, for a maximum pod life of 80 hours). The text turns yellow when the grace period starts (at **Pod Expires**) and red in the last 4 hours before the hard end. During the grace period it also shows the time left, for example *(17m remaining)*. The pod stops delivering insulin at the hard end and must be changed.
 
-- **最后连接时间：**显示最近一次与活动pod成功建立通信的时间。
+- **Pod Status:** Displays the status of the active pod (for example **No Active Pod**, **Running** or **Suspended**).
+
+- **Last Connection:** Displays the last time communication with the active pod was achieved. The text turns red when the [pump unreachable threshold](#OmnipodEros-troubleshooting) is exceeded.
 
 - *刚刚* - 指20秒内的时间。
 - *不到一分钟前* - 超过20秒但不足60秒。
 - *1分钟前* - 超过60秒但不足120秒（2分钟）
 - *XX分钟前* - 超过2分钟，具体时间由XX值确定
 
-- **最后大剂量：**显示最近发送至活动pod的大剂量数值，括号内显示该剂量发出的时间间隔。
+- **Last Bolus:** Displays the dosage of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
 
-- **基础基础率：**显示当前时间根据基础率配置文件设定的基础输注速率。
+- **Base Basal Rate:** Displays the basal rate programmed for the current time from the basal rate profile.
 
-- **临时基础率：**以下列格式显示当前运行的临时基础率：
+- **Temp Basal Rate:** Only shown while a Temporary Basal Rate is running. Displays it in the following format:
 
 - 单位/小时 @ 临时基础率设定时间（已运行分钟数/临时基础率总运行分钟数）
 - *示例：* 0.00U/h @18:25 (90/120分钟)
 
-- **储药量：**当储药器剩余药量超过50单位时，显示"50+单位剩余"。低于此值时，将以黄色文字显示精确单位值。
+- **Reservoir:** Displays **Over 50 U left** when more than 50 units are left in the reservoir. Below this value the approximate number of units is displayed. The text turns red below the low reservoir threshold set in the [Alerts settings](#OmnipodEros-omnipod-settings).
 
-- **总输注量：**显示储药器已输送的胰岛素总量（单位）。*请注意这是近似值，因为pod的灌注和填充并非精确过程。*
+- **Total Delivered:** Displays the total number of units of insulin delivered from the reservoir. *请注意这是近似值，因为pod的灌注和填充并非精确过程。*
 
-- **错误信息：**显示最近发生的错误。 Review the [Pod history](#OmnipodEros-view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
+- **Active Pod Alerts:** Reserved for currently running alerts on the active pod. 通常用于当pod超过72小时有效期且设备原生蜂鸣警报正在运行时。
 
-- **活动储药器警报：** 保留用于当前活动储药器上正在运行的警报。通常用于当pod超过72小时有效期且设备原生蜂鸣警报正在运行时。
+- **Errors:** Displays the last error encountered (shown in red). Review the [Pod history](#OmnipodEros-view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
 
-### 图标
+### Buttons
 
-- **刷新：**
+The buttons at the bottom of the pump screen change depending on the situation. Buttons that cannot be used right now are greyed out, for example while the RileyLink is not connected.
 
-  > ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png)
+**Pod status buttons** (shown when a pod is active):
+
+- **Refresh:** Sends a refresh command to the active pod to update its status. Use it to refresh the pod status and clear status fields that contain the text (uncertain). See the [Troubleshooting section](#OmnipodEros-troubleshooting) below for additional information.
+
+  ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png)
+
+  ```{admonition} Older screenshot
+  :class: note
+  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this is a text button named **Refresh** on the Omnipod pump screen.
+  ```
+
+- **Silence Alerts:** Silences the pod expiration and low reservoir beeps and notifications. Only shown when the pod has an active alert and **Automatically silence Pod alerts** is disabled. After the alerts are silenced, the button disappears.
+
+  ![ack_alerts](../images/omnipod/ICONS/omnipod_overview_ack_alerts.png)
+
+  ```{admonition} Older screenshot
+  :class: note
+  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this button is called **Silence Alerts**.
+  ```
+
+- **Set time:** Updates the time on the pod with the current time on your phone. Only shown when the time on the pod differs from the phone time by more than 5 minutes.
+
+  ![set_time](../images/omnipod/ICONS/omnipod_overview_set_time.png)
+
+  ```{admonition} Older screenshot
+  :class: note
+  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this is a text button named **Set time** on the Omnipod pump screen.
+  ```
+
+- **Suspend:** Suspends insulin delivery on the active pod. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
+
+  ![暂停](../images/omnipod/ICONS/omnipod_overview_suspend.png)
+
+  ```{admonition} Older screenshot
+  :class: note
+  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this is a text button named **Suspend** on the Omnipod pump screen.
+  ```
+
+- **Resume Delivery:** Resumes insulin delivery on the currently suspended, active pod. Only shown while the pod is suspended.
+
+  ![恢复](../images/omnipod/ICONS/omnipod_overview_resume.png)
+
+  ```{admonition} Older screenshot
+  :class: note
+  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this is a text button named **Resume Delivery** on the Omnipod pump screen.
+  ```
+
+**Pod and RileyLink management buttons:**
+
+![Omnipod_Tab_Pod_Management](../images/omnipod/Omnipod_Tab_Pod_Management.png)
+
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 there is no Pod Management menu: these actions are buttons directly on the Omnipod pump screen.
+```
+
+- **Activate Pod:** Primes and activates a new pod. Shown when no pod is active. It is enabled only when the RileyLink is connected.
+
+  ![activate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
+
+  ```{admonition} Older screenshot
+  :class: note
+  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Activate Pod** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  ```
+
+- **Deactivate Pod:** Deactivates the currently active pod. Shown as soon as a pod is paired, also when an activation stopped part-way (for example because the pod failed during activation). It is enabled only when the RileyLink is connected. **AAPS** asks you to confirm before it deactivates the pod.
+
+- 使用此命令可停用发出警报声的pod（错误代码49）。
+- If deactivation fails, the deactivation wizard offers a **Discard Pod** option.
+
+  ![deactivate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
+
+  ```{admonition} Older screenshot
+  :class: note
+  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Deactivate Pod** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  ```
+
+- **Play Test Beep:** Plays a single test beep on the pod when pressed. Shown when a pod is paired.
+
+  ![play_test_beep](../images/omnipod/ICONS/omnipod_overview_pod_management_play_test_beep.png)
+
+  ```{admonition} Older screenshot
+  :class: note
+  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Play Test Beep** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  ```
+
+- **Pod History:** Displays the active pod activity history. See [View Pod History](#OmnipodEros-view-pod-history).
+
+  ![pod_history](../images/omnipod/ICONS/omnipod_overview_pod_management_pod_history.png)
+
+  ```{admonition} Older screenshot
+  :class: note
+  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Pod History** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  ```
+
+- **Pair RileyLink:** Scans for your pod communication device and pairs it. See [RileyLink Setup](#OmnipodEros-rileylink-setup).
+
+- **RileyLink Stats:** Opens the RileyLink Stats screen with two tabs. Only shown if enabled in the settings (**Show RileyLink Stats button in Pod Management menu**).
+
+- **设置** - 显示RileyLink和活动pod的设置信息
+- **历史记录** - 显示RileyLink与Pod的通信历史
+
+  ![rileylink_stats](../images/omnipod/ICONS/omnipod_overview_pod_management_rileylink_stats.png)
+
+  ```{admonition} Older screenshot
+  :class: note
+  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **RileyLink Stats** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  ```
+
+- **Reset RileyLink:** Resets the configuration of the currently connected pod communication device. When communication is started, specific data is sent to and set in the RileyLink:
+
+- Memory Registers are set
+- Communication Protocols are set
+- Tuned Radio Frequency is set
   > 
-  > 向当前活动pod发送刷新命令以更新通信
+  > See [additional notes](#OmnipodEros-reset-rileylink-config-notes) below.
+
+  ![reset_rileylink_config](../images/omnipod/ICONS/omnipod_overview_pod_management_reset_rileylink_config.png)
+
+  ```{admonition} Older screenshot
+  :class: note
+  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this button is called **Reset RileyLink** and is on the Omnipod pump screen.
+  ```
+
+- **Discard Pod:** Discards the pod state of an unresponsive pod, after a confirmation. Only shown when a pod has been started but not fully paired, as proper deactivation is no longer possible:
+
+- 一个**pod未完全配对**，因此会忽略停用命令。
+- A **pod is stuck** during the pairing process between steps.
+- 一个**pod完全无法配对。**
   > 
-  > 用于刷新储药器状态并清除显示（不确定）的状态字段。
-  > 
-  > See the [Troubleshooting section](#OmnipodEros-troubleshooting) below for additional information.
+  > After you discard a pod, **AAPS** can no longer communicate with it. Remove the pod from your body.
 
-- **POD管理：**
+  ![discard_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_discard_pod.png)
 
-  > ![pod_management](../images/omnipod/ICONS/omnipod_overview_pod_management.png)
-  > 
-  > 跳转至Pod管理菜单
-
-- **确认警报：**
-
-  > ![ack_alerts](../images/omnipod/ICONS/omnipod_overview_ack_alerts.png)
-  > 
-  > 按下此按钮将禁用pod过期蜂鸣声和通知。
-  > 
-  > 该按钮仅在pod时间超过过期警告时间时显示 成功解除后，此图标将不再出现。
-
-- **设置时间：**
-
-  > ![set_time](../images/omnipod/ICONS/omnipod_overview_set_time.png)
-  > 
-  > 按下此按钮将使用您手机的当前时间更新pod上的时间。
-
-- **暂停:**
-
-  > ![暂停](../images/omnipod/ICONS/omnipod_overview_suspend.png)
-  > 
-  > 暂停当前活动pod
-
-- **恢复输注：**
-
-  > ![恢复](../images/omnipod/ICONS/omnipod_overview_resume.png)
-  > 
-  > > 恢复当前暂停的活动pod
-
-### Pod Management Menu
-
-以下是关于从**Omnipod (POD)**选项卡进入的**Pod管理**菜单中图标布局和含义的说明。
-
-> ![Omnipod_Tab_Pod_Management](../images/omnipod/Omnipod_Tab_Pod_Management.png)
-
-- **Activate Pod**
-
-  > ![activate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
-  > 
-  > 对新pod进行灌注和激活
-
-- **Deactivate Pod**
-
-  > ![deactivate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
-  > 
-  > 停用当前活动的pod。
-  > 
-  > 部分配对的pod会忽略此命令。
-  > 
-  > 使用此命令可停用发出警报声的pod（错误代码49）。
-  > 
-  > 如果该按钮被禁用（显示为灰色），请使用"废弃Pod"按钮。
-
-- **播放测试蜂鸣音**
-
-  > ![play_test_beep](../images/omnipod/ICONS/omnipod_overview_pod_management_play_test_beep.png)
-  > 
-  > 按下时会在pod上播放一次测试蜂鸣音。
-
-- **废弃pod**
-
-  > ![discard_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_discard_pod.png)
-  > 
-  > 按下时将停用并清除无响应pod的状态。
-  > 
-  > 该按钮仅在满足特定条件时显示（当无法正常停用时）：
-  > 
-  > > - 一个**pod未完全配对**，因此会忽略停用命令。
-  > > - 一个**pod卡在**配对过程中的步骤之间
-  > > - 一个**pod完全无法配对。**
-
-- **Pod历史记录**
-
-  > ![pod_history](../images/omnipod/ICONS/omnipod_overview_pod_management_pod_history.png)
-  > 
-  > 显示活动pod的历史记录
-
-- **RileyLink状态：**
-
-  > ![rileylink_stats](../images/omnipod/ICONS/omnipod_overview_pod_management_rileylink_stats.png)
-  > 
-  > 跳转至RileyLink统计界面，显示当前设置和RileyLink连接历史记录
-  > 
-  > > - **设置** - 显示RileyLink和活动pod的设置信息
-  > > - **历史记录** - 显示RileyLink与Pod的通信历史
-
-- **重置RileyLink配置**
-
-  > ![reset_rileylink_config](../images/omnipod/ICONS/omnipod_overview_pod_management_reset_rileylink_config.png)
-  > 
-  > 按下此按钮将重置当前连接的pod通信设备配置。
-  > 
-  > > - 当通信启动时，特定数据将被发送并设置到RileyLink中 > - 设置内存寄存器 > - 设置通信协议 > - 设置调谐射频 
-  > > - 请参阅本表格末尾的[补充说明](#OmnipodEros-reset-rileylink-config-notes)
-
-- **读取脉冲日志：**
-
-  > ![pulse_log](../images/omnipod/ICONS/omnipod_overview_pod_management_pulse_log.png)
-  > 
-  > > 将活动pod的脉冲日志发送到剪贴板
+  ```{admonition} Older screenshot
+  :class: note
+  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Discard Pod** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  ```
 
 (OmnipodEros-reset-rileylink-config-notes)=
 
-#### *重置RileyLink配置说明*
+#### *Reset RileyLink Notes*
 
 - 此功能主要用于当前活动的pod通信设备无响应且通信处于卡死状态时。
-- 如果pod通信设备关闭后又重新开启，则需要按下**重置RileyLink配置**按钮，以便在pod通信设备配置中设置这些通信参数。
+- If the pod communication device is turned off and then back on, press **Reset RileyLink** so that these communication parameters are set again in the pod communication device.
 - 如未执行此操作，则在pod通信设备完成电源循环后必须重新启动AAPS。
-- 在不同pod通信设备之间切换时**无需**按下此按钮
+- This button **DOES NOT** need to be pressed when switching between different pod communication devices.
 
 (OmnipodEros-omnipod-settings)=
 
 ## Omnipod设置
 
-Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**➜**泵**➜**Omnipod**➜**设置齿轮图标(2)**进行配置，选择标有**Omnipod**的**单选按钮(1)**即可。勾选**设置齿轮图标(2)**旁边的**复选框(3)**，将使Omnipod菜单以**OMNIPOD**或**POD**标签页形式显示在AAPS界面中。本文档中将其称为**Omnipod(POD)**标签页。
+To open the Omnipod driver settings, either:
 
-![Omnipod_Settings_1](../images/omnipod/Omnipod_Settings_1.png)
-
-**注意：** 访问**Omnipod设置**的快捷方式是通过点击**Omnipod(POD)**标签页右上角的**三点菜单(1)**，然后从下拉菜单中选择**Omnipod首选项(2)**。
+- press the gear icon at the top right of the Omnipod pump screen (**Manage** > **Pump**), or
+- open the top-left **menu** (☰) > **Configuration** > **Pump** and press **Settings** on the **Omnipod Eros** card.
 
 ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png)
 
-以下是设置分组列表，您可通过切换开关启用或禁用下文所述的大多数选项：
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 you open the settings with **Settings** on the **Omnipod Eros** card or the gear icon on the Omnipod pump screen, instead of the settings gear in **Configuration** or the 3-dot menu.
+```
 
-![Omnipod_Settings_3](../images/omnipod/Omnipod_Settings_3.png)
+The settings are grouped as listed below. Tap a group to expand it. Most entries are switches you can enable or disable:
+
+![Omnipod driver settings](../images/v4/Pumps/omnipod_settings.png)
 
 *注意：星号(*)表示该设置的默认状态为启用。*
 
 ### RileyLink
 
-允许扫描pod通信设备。 Omnipod驱动一次只能选择一个pod通信设备。
+Settings for the pod communication device. You pair the device itself with the **Pair RileyLink** button on the pump screen (see [RileyLink Setup](#OmnipodEros-rileylink-setup)).
 
-- **显示OrangeLink/EmaLink/DiaLink报告的电池电量：** 报告OrangeLink/EmaLink/DiaLink的实际电池电量。**强烈建议**所有OrangeLink/EmaLink/DiaLink用户启用此设置。
+- **Use Scanning:** Scans before connecting to the OrangeLink. This can improve connections. It can also be used with other RileyLink clones if needed.
+
+- **Show battery level reported by OrangeLink/EmaLink/DiaLink:** Reports the actual battery level of the OrangeLink/EmaLink/DiaLink. **强烈建议**所有OrangeLink/EmaLink/DiaLink用户启用此设置。
 
 - 不适用于原始RileyLink。
 - 可能不适用于RileyLink替代设备。
 - 启用 - 报告支持的pod通信设备的当前电池电量。
 - 禁用 - 报告值为"不适用"。
 
-- **在操作菜单中启用电池更换记录：** 若您已启用此设置及上述电池报告设置，则操作菜单中的电池更换按钮将被激活。某些pod通信设备现在可以使用可更换的普通电池。此选项可让您记录更换时间并重置电池使用计时器。
+- **Enable battery change logging in Actions:** Only available when the battery reporting setting above is enabled. Some pod communication devices can use regular batteries that you can change. With this setting enabled, you can record a **Pump Battery Change** [careportal entry](#aaps-screens-careportal) to note the change and reset the battery age.
 
-### Confirmation beeps
+### Confirmation Beeps
 
 提供储药器对大剂量注射、基础率、超微大剂量(SMB)和临时基础率(TBR)输送及变更的确认提示音。
 
 - ***启用大剂量提示音：** 设置是否在大剂量给药时播放确认提示音。
-- ***基础率提示音启用：** 设置是否在以下情况播放确认提示音：新基础率设定时、活动基础率取消时或当前基础率变更时。
+- **Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
 - ***超微大剂量提示音启用：** 设置是否在超微大剂量给药时播放确认提示音。
 - **启用临时基础率提示音：** 控制设置或取消临时基础率(TBR)时是否发出确认提示音。
 
@@ -602,13 +760,13 @@ Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**�
 
 当pod到期、关机或根据设定的阈值单位检测到储药器药量不足时，提供AAPS警报和Nightscout通知。
 
-*请注意：自警报触发后与储药器首次通信时，AAPS将始终针对任何警报发出通知。除非启用"自动确认储药器警报"功能，否则仅消除通知并不会消除警报状态。要手动消除警报，必须访问Omnipod(POD)标签页并按下"确认警报"按钮。*
+*请注意：自警报触发后与储药器首次通信时，AAPS将始终针对任何警报发出通知。 Dismissing the notification will NOT silence the alert UNLESS **Automatically silence Pod alerts** is enabled. To silence the alert MANUALLY, open the Omnipod pump screen and press **Silence Alerts**.*
 
-- ***启用到期提醒：** 设置是否在达到关机前设定小时数时触发pod到期提醒。
-- **关机前小时数：** 设定活动储药器关机前触发过期提醒警报的小时数。
+- **\*Expiration reminder enabled:** When enabled, the pod beeps when the time set below is reached.
+- **Alert at hours before shutdown (80 Hours):** The number of hours before the pod shuts down (80 hours after activation) at which the expiration reminder is triggered (1 to 8 hours, default 8).
 - ***启用低药量警报：** 设置当pod剩余药量达到"单位数"字段中定义的低药量限制时是否触发警报。
-- **单位数值：** 触发储药器低药量警报的剩余药量单位数。
-- **自动确认Pod警报：** 启用后仍会发出通知，但在警报触发后首次与Pod建立通信连接时，系统将自动确认并消除该警报。
+- **Number of units:** The number of units at which to trigger the pod low reservoir alert (5 to 50, default 20).
+- **Automatically silence Pod alerts:** When enabled, a notification is still issued, but the alert is silenced automatically at the next communication with the pod after the alert started.
 
 ### Notifications
 
@@ -616,7 +774,7 @@ Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**�
 
 *注：这些仅为手机通知，不会触发储药器声音提示。*
 
-- **不确定TBR通知的声音已启用:** 启用或禁用此设置，当AAPs不确定是否成功设置TBR时，触发声音警报和视觉通知。
+- **\*Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a TBR was successfully set.
 - ***不确定超微大剂量通知的声音已启用:** 启用或禁用此设置，当AAPS不确定是否成功输注超微大剂量时，触发声音警报和视觉通知。
 - ***不确定大剂量通知的声音已启用:** 启用或禁用此设置，当AAPS不确定是否成功输注大剂量时，触发声音警报和视觉通知。
 
@@ -624,71 +782,64 @@ Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**�
 
 提供高级设置以协助调试。
 
-- **在Omnipod标签页显示暂停输注按钮:** 在**Omnipod (POD)**标签页隐藏或显示暂停输注按钮。
-- **在Pod管理菜单中显示脉冲日志按钮:** 在**Pod管理**菜单中隐藏或显示脉冲日志按钮。
-- **在Pod管理菜单中显示RileyLink统计按钮:** 在**Pod管理**菜单中隐藏或显示RileyLink统计按钮。
-- ***启用夏令时/时区检测:** 当手机在实行夏令时的地区使用时，可自动检测时区变化。
+- **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button on the Omnipod pump screen.
+- **Show Pulse Log button in Pod Management menu:** This setting is still listed, but the current version of the pump screen has no **Pulse Log** button.
+
+- **Show RileyLink Stats button in Pod Management menu:** Hide or display the **RileyLink Stats** button on the Omnipod pump screen.
+- **\*DST/Time zone detection enabled:** Allows time zone changes to be automatically detected if the phone is used in an area where DST is observed.
 
 ### 切换或移除正在使用的Pod通讯设备(RileyLink)
 
-随着原始RileyLink的多种替代型号(如OrangeLink或EmaLink)的出现，或需要拥有相同Pod通讯设备(RileyLink)的多个/备用版本，从Omnipod设置配置中切换或移除选定的Pod通讯设备(RileyLink)变得必要。
+With many alternative models to the original RileyLink available (such as OrangeLink or EmaLink), or the need to have multiple or backup versions of the same pod communication device, you may need to switch to another device.
 
-以下步骤将展示如何**移除**现有Pod通讯设备(RileyLink)以及**添加**新的Pod通讯设备。执行**移除**和**添加**两个步骤将切换您的设备。
+To switch, open the Omnipod pump screen (**Manage** > **Pump**), press **Pair RileyLink** and select the new device, as described in [RileyLink Setup](#OmnipodEros-rileylink-setup). The new device replaces the previously paired one.
 
-1. 进入**RileyLink选择**菜单：点击**Omnipod(POD)**标签页右上角的**三点菜单(1)**，然后从下拉菜单中选择**Omnipod偏好设置(2)**。在**Omnipod设置**菜单的**RileyLink配置(3)**下，点击**未设置**(若未选择设备)或**MAC地址**(若已选择设备)文字，打开**RileyLink选择**菜单。
+![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
-   > ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
+![RileyLink_Setup_Add_1](../images/omnipod/RileyLink_Setup_Add_1.png)
 
-### 移除当前选定的Pod通讯设备(RileyLink)
+![RileyLink_Setup_Add_2](../images/omnipod/RileyLink_Setup_Add_2.png)
 
-此流程将展示如何从Omnipod驱动设置中移除当前选定的Pod通讯设备(RileyLink)。
+![RileyLink_Setup_Add_3](../images/omnipod/RileyLink_Setup_Add_3.png) ![RileyLink_Setup_Add_4](../images/omnipod/RileyLink_Setup_Add_4.png)
 
-1. 在**RileyLink配置**下，点击**MAC地址(1)**文字打开**RileyLink选择**菜单。
+```{admonition} Older screenshot
+:class: note
+The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you add a device with **Pair RileyLink** on the Omnipod pump screen instead of **RileyLink Configuration** in the Omnipod settings, and scanning starts automatically.
+```
 
-   > ![RileyLink_Setup_Remove_1](../images/omnipod/RileyLink_Setup_Remove_1.png)
+There is no separate button to remove a paired device. If you stop using a RileyLink, simply pair the new one when you need it.
 
-2. 在**RileyLink选择**菜单中，点击**移除(2)**按钮以移除**当前选定的RileyLink(3)**
+![RileyLink_Setup_Remove_1](../images/omnipod/RileyLink_Setup_Remove_1.png)
 
-   > ![RileyLink_Setup_Remove_2](../images/omnipod/RileyLink_Setup_Remove_2.png)
+![RileyLink_Setup_Remove_2](../images/omnipod/RileyLink_Setup_Remove_2.png)
 
-3. 在确认提示中点击**是(4)**以确认移除您的设备。
+![RileyLink_Setup_Remove_3](../images/omnipod/RileyLink_Setup_Remove_3.png)
 
-   > ![RileyLink_Setup_Remove_3](../images/omnipod/RileyLink_Setup_Remove_3.png)
+![RileyLink_Setup_Remove_4](../images/omnipod/RileyLink_Setup_Remove_4.png)
 
-4. 您已返回**Omnipod设置**菜单，在**RileyLink配置**下现在会看到设备状态为**未设置(5)**。恭喜，您已成功移除选定的Pod通讯设备。
+```{admonition} Older screenshot
+:class: note
+The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 there is no **Remove** button: pairing a new RileyLink replaces the previous one.
+```
 
-   > ![RileyLink_Setup_Remove_4](../images/omnipod/RileyLink_Setup_Remove_4.png)
+## Status row and careportal
 
-### 添加当前选定的Pod通讯设备(RileyLink)
+There are a few items that are specific to how the Omnipod pod differs from tube based pumps, especially after applying a new pod.
 
-此流程将展示如何向Omnipod驱动设置中添加新的Pod通讯设备。
+The **insulin** and **cannula** ages in the [status row](#screens-sensor-level-battery) of the main screen are **reset** to 0 days and 0 hours **after each pod change**. 这是由于Omnipod胰岛素泵的构造和工作原理决定的。**泵电池**和**胰岛素储药器**均内置于每个储药器单元内部。由于储药器在敷贴时会直接将输注套管插入皮肤，Omnipod泵不使用传统导管。*因此更换储药器后，这些数值的使用时长会自动归零。* **泵电池使用时长**不显示报告，因为储药器内置电池的寿命始终超过储药器使用期限（最长80小时）。
 
-1. 在**RileyLink配置**下，点击**未设置(1)**文字打开**RileyLink选择**菜单。
+![Actions_Tab](../images/omnipod/Actions_Tab.png)
 
-   > ![RileyLink_Setup_Add_1](../images/omnipod/RileyLink_Setup_Add_1.png)
-
-2. 点击**扫描(2)**按钮开始扫描所有可用的蓝牙设备。
-
-   > ![RileyLink_Setup_Add_2](../images/omnipod/RileyLink_Setup_Add_2.png)
-
-3. 从可用设备列表中选择**您的RileyLink(3)**，您将返回**Omnipod设置**菜单，此时会显示新选择设备的**MAC地址(4)**。恭喜，您已成功选择Pod通讯设备。
-
-   > ![RileyLink_Setup_Add_3](../images/omnipod/RileyLink_Setup_Add_3.png) ![RileyLink_Setup_Add_4](../images/omnipod/RileyLink_Setup_Add_4.png)
-
-## 操作 (ACT) 标签页
-
-此标签页在主AAPS文档中有详细说明，但有几个项目专门说明Omnipod pod与管式泵的区别，特别是在完成新pod应用流程后的注意事项。
-
-1. 前往主AAPS界面中的**操作(ACT)**标签页。
-2. 在**Careportal(1)**部分，以下3个字段将在**每次更换pod后**将其**使用时长重置**为0天0小时：**胰岛素**和**套管**。这是由于Omnipod胰岛素泵的构造和工作原理决定的。**泵电池**和**胰岛素储药器**均内置于每个储药器单元内部。由于储药器在敷贴时会直接将输注套管插入皮肤，Omnipod泵不使用传统导管。*因此更换储药器后，这些数值的使用时长会自动归零。* **泵电池使用时长**不显示报告，因为储药器内置电池的寿命始终超过储药器使用期限（最长80小时）。
-
-> ![Actions_Tab](../images/omnipod/Actions_Tab.png)
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version, where these ages were shown in the **Careportal** section of the **Actions (ACT)** tab. In **AAPS** 4 they are shown in the status row of the main screen.
+```
 
 ### 余量水平
 
 **胰岛素储药量**
 
-Omnipod Eros Pod中的胰岛素量报告不精确。这是因为无法精确知道Pod中注入了多少胰岛素，只能通过填充Pod时触发的2声提示音来判断已注入超过85单位。单个Pod最多可容纳200单位胰岛素。初始化过程也可能引入误差，因为这不是一个精确的操作流程。基于这两个因素，Omnipod驱动程序的编写旨在提供储药器中剩余胰岛素的最佳估算值。
+Omnipod Eros Pod中的胰岛素量报告不精确。 This is because it is not known exactly how much insulin was put in the pod, only that when the 2 beeps are triggered while filling the pod at least 80 units have been filled. 单个Pod最多可容纳200单位胰岛素。 Priming can also introduce variance as it is not an exact process. 基于这两个因素，Omnipod驱动程序的编写旨在提供储药器中剩余胰岛素的最佳估算值。
 
 > - **超过50单位** - 当储药器中当前胰岛素量超过50单位时，显示为50+U。
 > - **低于50单位** - 显示储药器中剩余胰岛素的估算值。
@@ -716,16 +867,21 @@ Omnipod Eros Pod中的胰岛素量报告不精确。这是因为无法精确知�
 
 ### Preventing error 49 pod failures
 
-该故障与指令对应的储药器状态错误或胰岛素输注指令执行出错有关。我们建议用户在**配置构建器**➜**通用**➜**NS客户端**➜**齿轮图标**➜**高级设置**下切换为仅上传模式(禁用同步)，以防止可能出现的问题。
+该故障与指令对应的储药器状态错误或胰岛素输注指令执行出错有关。 We recommend that you set Nightscout synchronization to *upload only*: keep all the "Receive ... from NS" options disabled in the synchronization settings of the Nightscout client (see [Nightscout](../SettingUpAaps/Nightscout.md)) to prevent possible failures.
 
 ### Pump Unreachable Alerts
 
-建议通过右上角三点菜单进入**偏好设置**➜**本地警报**➜**泵不可达阈值[分钟]**，将该值设为**120**来配置泵不可达警报。
+We recommend setting pump unreachable alerts to **120 minutes**. Press the **Settings** (gear) icon at the top right of the main screen, select **Local alerts** > **Pump unreachable threshold** and set it to **120**.
 
 (OmnipodEros-import-settings-from-previous-aaps)=
 ### 从之前的AAPS导入设置
 
-请注意：导入设置可能会带入过期的Pod状态信息。这可能导致您丢失正在使用的Pod。因此强烈建议**在Pod使用期间不要导入设置**。
+```{admonition} Importing settings can end your active Pod
+:class: warning
+On the phone that is already running the Pod, leave **Also replace pump settings** unticked: the Pod session is kept and only the other settings are imported. Tick it only with a file exported during the Pod you are wearing now. See [Tubeless pumps](#ExportImportSettings-tubeless-pumps).
+```
+
+The safest way to reinstall **AAPS** is between two Pods:
 
 1. 停用您当前的Pod会话。确认您没有正在使用的Pod会话。
 2. 请导出您的设置文件并妥善保存副本。
@@ -735,7 +891,7 @@ Omnipod Eros Pod中的胰岛素量报告不精确。这是因为无法精确知�
 
 ### Omnipod driver alerts
 
-请注意：Omnipod驱动程序在**概览标签页**会显示多种独特警报，其中大部分为信息类警报可忽略，但部分警报会提示用户需采取相应操作来解决触发警报的原因。以下是您可能会遇到的主要警报摘要：
+Please note that the Omnipod driver presents a variety of unique alerts on the **main screen**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. 以下是您可能会遇到的主要警报摘要：
 
 #### 无活动Pod
 
@@ -745,13 +901,13 @@ Omnipod Eros Pod中的胰岛素量报告不精确。这是因为无法精确知�
 
 提示性警报：Pod已暂停。
 
-#### 基础率配置文件设置失败。输注可能已暂停！请从Omnipod标签页手动刷新储药器状态，必要时恢复输注。
+#### 基础率配置文件设置失败。输注可能已暂停！ Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed.
 
-提示性警报：Pod基础率配置文件设置失败，您需要在Omnipod标签页点击*刷新*。
+Informational alert that the Pod basal profile setting has failed. Open the Omnipod pump screen and press **Refresh**, then **Resume Delivery** if needed.
 
 #### 无法确认超微大剂量是否成功输注。若确认大剂量未成功输注，请手动从治疗记录中删除该条超微大剂量记录。
 
-警报：无法确认超微大剂量是否成功输注，您需要检查Omnipod标签页的*最后大剂量*字段确认输注状态，若失败需在治疗记录页删除该条目。
+Alert that the SMB bolus success could not be verified. Check the **Last Bolus** field on the Omnipod pump screen to see if the SMB succeeded. If it did not, remove the entry from the treatments.
 
 #### 无法确认"任务大剂量/临时基础率/超微大剂量"是否完成，请人工核验操作结果。
 
@@ -760,8 +916,8 @@ Omnipod Eros Pod中的胰岛素量报告不精确。这是因为无法精确知�
 以下是可能触发不确定通知的几种情况示例。
 
 - **大剂量** - 无法自动验证不确定的大剂量输注。该通知将持续到下次大剂量输注，但手动刷新Pod可清除该消息。*默认情况下，此类通知会启用警报提示音，因为需要用户手动进行确认。*
-- **临时基础率、Pod状态、配置文件切换、时间变更** - 手动刷新Pod可清除该消息。默认情况下，此类通知类型禁用警报提示音。
-- **Pod时间偏差 -** 当Pod时间与手机时间偏差过大时，AAPS循环系统将难以正常运行并做出准确的预测和剂量建议。若Pod与手机时间偏差超过5分钟，AAPS将在Pod状态中报告Pod处于暂停状态，并显示"处理时间变更"提示信息。 Omnipod（POD）标签页底部将额外显示**设置时间**图标。点击"设置时间"将使Pod时间与手机同步，之后可点击"恢复输注"按钮继续正常Pod操作。
+- **临时基础率、Pod状态、配置文件切换、时间变更** - 手动刷新Pod可清除该消息。
+- **Pod Time Deviation -** When the time on the pod and the time on your phone differ too much, it is difficult for the AAPS loop to function and make accurate predictions and dosage recommendations. If the time difference between the pod and the phone is more than 5 minutes, a **Set time** button appears on the Omnipod pump screen. Press **Set time** to synchronize the time on the pod with the time on the phone. If **Pod Status** shows **Suspended** afterwards, press **Resume Delivery** to continue normal pod operations.
 
 ## 最佳实践
 
@@ -783,7 +939,7 @@ RileyLink用于与Omnipod Pod通信的天线是433 MHz螺旋天线。由于其�
 
 ![Omnipod_pod_and_RileyLink_Position](../images/omnipod/Omnipod_pod_and_RileyLink_Position.png)
 
-## Omnipod驱动相关问题求助渠道
+## 获取帮助途径
 
 Omnipod驱动的所有开发工作均由社区志愿者完成；请您在寻求帮助时遵循以下准则并保持体谅：
 

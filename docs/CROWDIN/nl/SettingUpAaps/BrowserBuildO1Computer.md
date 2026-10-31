@@ -1,0 +1,53 @@
+(aaps-ci-option1-computer)=
+
+# Optie 1 · Computer – Een nieuwe keystore maken
+
+```{note}
+[Optie 1](BrowserBuildO1.md) (een nieuwe keystore maken) op een **computer** (Windows / Mac / Linux).
+```
+
+## 1. Het voorbereidingsbestand downloaden
+
+:::{include} BrowserBuildDownloadPrep.md
+:::
+
+## 2. Een lokale server starten en de keystore maken
+
+Een computer gebruiken (Windows/Mac/Linux)
+
+Open de webpagina [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
+
+Installeer Simple Web Server</br> Als je Windows of een Mac gebruikt, kun je het installeren vanuit de Microsoft Store of de Mac App Store.</br> Als je browser vraagt of de winkel-app geopend mag worden, sta dat toe.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)</br>
+
+Voorbeeld op een Mac:
+
+- downloaden → installeren → openen</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)</br></br>
+
+- Klik op Get Started</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)</br></br>
+
+- Klik op New Server</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)</br></br>
+
+- Kies bij Folder Path de map waarin aaps-ci-preparation.html staat en klik dan op Create Server.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)</br></br>
+
+- Als je dit scherm ziet, is de server gestart.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)</br></br>
+
+- Sluit Simple Web Server niet af. Ga naar je browser en open</br> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)</br></br>
+
+- Voor de volgende stappen, zie de video hieronder vanaf 1 minuut 37 seconden.
+
+  <!--crowdin: exclude-->
+  <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+    <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+      <iframe
+        src="https://geo.dailymotion.com/player/x9rdrpy.html?video=x9rdrpy&startTime=97&loop=true&mute=true"
+        loading="lazy"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+----
+
+**Volgende: [Stap 3 – Google Drive autoriseren](BrowserBuildGoogleDrive.md) →**

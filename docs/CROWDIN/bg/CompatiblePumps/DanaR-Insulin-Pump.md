@@ -1,26 +1,49 @@
-# DanaR Pump
+# DanaR
 
-*These instructions are for configuring the app and your pump if you have a DanaR. Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump.md) if you have the DanaRS launched in 2017 instead.*
+*Тези указания са за настройване на приложението и помпата, ако имате DanaR. Ако вместо това имате DanaRS, пусната на пазара през 2017 г., вижте [Инсулинова помпа DanaRS](./DanaRS-Insulin-Pump.md).*
 
-* In the pump go to Main Menu > Setting > User Option
-* Turn on "8. Удължен болус"
+## Възможности на помпата при употреба с AAPS
 
-![DanaR pump](../images/danar1.png)
+* Комуникира с **AAPS** чрез вградения Bluetooth на телефона, без допълнително комуникационно устройство.
+* Смяната на часовата зона и на лятното часово време (DST) не изисква специални действия, защото помпата не използва собствената си история.
 
-* Go to Main Menu > Setting > Discovery
-* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). If DanaR is not showing in scan then restart phone and take DanaR battery out, replace and start these two steps again.
+## Настройка
 
-* In AAPS go to Config Builder and select the type of DanaR you have (DanaR, DanaR Korean, DanaRv2)
+* На помпата отидете в Main Menu > Setting > User Option
+* Включете „8. Extended Bolus“
 
-* Select Menu by tapping the 3 dots in the top right. Select Preferences.
-* Select DanaR Bluetooth device, and click your DanaR serial number.
-* Select Pump password, and input your password. (Default password is 1234)
-* If you want AAPS to allow basal rate above 200%, enable Use extended boluses for >200%. Note this means you cannot loop with high TBRs whilst using extended boluses for food.
-* In Preferences under DanaR pump settings you can change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
-* Set basal step on pump to 0.01 U/h
-* Set bolus step on pump to 0.1 U/h
+![Помпа DanaR](../images/danar1.png)
+
+* Отидете в Main Menu > Setting > Discovery
+* В настройките на телефона отидете в Bluetooth, потърсете устройства наблизо, изберете серийния номер на вашата DanaR и въведете паролата (паролата за сдвояване е 0000). Ако DanaR не се показва при търсенето, рестартирайте телефона, извадете батерията на DanaR, поставете я отново и повторете тези две стъпки.
+
+* В **AAPS** отворете **менюто** (☰) в горния ляв ъгъл, отидете в **Конфигурация** > **Помпа** и изберете вашия тип DanaR (**DanaR**, **DanaR Корейска** или **DanaRv2**).
+  
+  ![Конфигурация > Помпа с плъгините за DanaR](../images/v4/Configuration/configuration_pump_list_1.png)
+
+* Отворете екрана на помпата: докоснете **Отвори плъгин** на картата на DanaR (или отидете в **Управление** > **Помпа**).
+
+* Докоснете **Сдвояване**. На екрана за сдвояване: 
+  * Въведете паролата на помпата в **Парола за помпата** (паролата по подразбиране е 1234).
+  * В **Изберете сдвоено устройство** докоснете серийния номер на вашата DanaR. Ако списъкът е празен, докоснете **Отваряне на Bluetooth настройки** и първо сдвоете помпата с телефона (вижте стъпката по-горе). Когато се върнете в **AAPS**, помпата се появява в списъка. Ако не се появи, докоснете иконата за обновяване.
+  * Докоснете **Сдвояване**. **AAPS** се свързва с помпата и проверява паролата.
+* За да промените настройките на драйвера, докоснете **Настройки** на картата на DanaR в **Конфигурация** > **Помпа**: 
+  * **Скорост на болус** (DanaR и DanaRv2): променя скоростта на болуса по подразбиране (12 сек/Е, 30 сек/Е или 60 сек/Е).
+  * **Използвай удължени болуси при >200%** (DanaR и DanaR Корейска): включете това, ако искате **AAPS** да позволява базална доза над 200 %. Имайте предвид, че това означава, че не можете да използвате кръга с високи временни базали (TBR), докато използвате удължени болуси за храна.
+* Задайте стъпката на базала на помпата на 0,01 U/h
+* Задайте стъпката на болуса на помпата на 0,1 U. **AAPS** прочита стъпката на болуса от помпата и я използва за всеки болус.
 * Разрешете удължените болуси в настройките на помпата
 
-## Timezone traveling with Dana R pump
+## Пътуване през часови зони с помпа Dana R
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
+За информация относно пътуване през часови зони вижте раздела [Пътуване през часови зони с помпи](#timezone-traveling-danarv2-danars).
+
+## Къде да получите помощ
+
+Разработката на драйвера за DanaR се извършва от общността на **доброволчески** начала. Преди да поискате помощ, моля:
+
+1. **Прочетете** съответния раздел от тази документация, за да проверите как трябва да работи функцията.
+2. **Попитайте** в канала *#AAPS* в [Discord](https://discord.gg/4fQUWHZ4Mw) или в някой от другите [канали на общността](../GettingHelp/WhereCanIGetHelp.md).
+3. **Съобщете за грешка**, като първо потърсите в [съществуващите проблеми (issues)](https://github.com/nightscout/AndroidAPS/issues); ако вашият го няма, отворете [нов проблем (issue)](https://github.com/nightscout/AndroidAPS/issues) и приложете своите [лог файлове](../GettingHelp/AccessingLogFiles.md).
+
+Когато искате помощ, посочете марката и модела на телефона си, версията на Android, версията на **AAPS** и описание на проблема на прост английски език (какво се е променило, кога е работило за последно).

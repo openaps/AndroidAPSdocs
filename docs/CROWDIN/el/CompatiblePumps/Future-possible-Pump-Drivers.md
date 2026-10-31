@@ -1,40 +1,62 @@
 # Μελλοντικοί (πιθανοί) οδηγοί αντλιών
 
-Αυτή είναι μια λίστα με ορισμένες Αντλίες που επιπλέουν γύρω από αυτό, και την κατάσταση υποστήριξης γι 'αυτούς σε οποιοδήποτε από τα συστήματα κυκλώματος και στη συνέχεια την κατάσταση στο AAPS. Στο τέλος υπάρχουν κάποιες πληροφορίες, τι απαιτείται για να είναι μια αντλία "ικανή για κύκλωμα".
+Αυτή είναι μια λίστα με κάποιες αντλίες που κυκλοφορούν, με την κατάσταση υποστήριξής τους σε οποιοδήποτε σύστημα κυκλώματος και μετά την κατάσταση στο AAPS. Στο τέλος υπάρχουν κάποιες πληροφορίες, τι απαιτείται για να είναι μια αντλία "ικανή για κύκλωμα".
+
+    {contents} Περιεχόμενα
+    :depth: 1
+    :local: true
+
+## Αντλίες σε φάση ενσωμάτωσης στο AAPS
+
+**Έρχεται σύντομα:** οι οδηγοί για αυτές τις αντλίες είναι υπό ανάπτυξη και λειτουργούν ήδη σε δοκιμαστικές εκδόσεις.
+
+Omnipod 5 ([Αρχική σελίδα](https://www.omnipod.com/))
+
+![Ο οδηγός Omnipod 5 είναι υπό ανάπτυξη](../images/future-pumps/omnipod5-driver.png)
+
+Tandem: t:Mobi ([Αρχική σελίδα](https://www.tandemdiabetes.com/))
+
+![Ο οδηγός Tandem t:Mobi είναι υπό ανάπτυξη](../images/future-pumps/tandem-mobi-driver.png)
 
 ## Αντλίες που είναι για κύκλωμα
 
-### Kaleido ([Homepage](https://www.hellokaleido.com/))
+### Kaleido ([Αρχική σελίδα](https://www.hellokaleido.com/))
 
-**Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
+**Κατάσταση κυκλώματος:** Η αντλία είναι υποψήφια για κύκλωμα, αλλά το πρωτόκολλο προς το παρόν είναι άγνωστο. Ο κατασκευαστής δεν ενδιαφέρεται για ανοιχτό λογισμικό (open source).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Απαιτήσεις υλικού για το AAPS:** Καμία. Φαίνεται ότι έχει Bluetooth.
 
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+### Tandem: t:slim X3 ([Αρχική σελίδα](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** Not yet loopable.
+**Κατάσταση κυκλώματος:** Πιθανή μελλοντική υποψήφια για κύκλωμα. Ελπίζουμε ότι η t:slim X3 θα επιτρέπει πλήρη έλεγχο από το τηλέφωνο, κάτι που θα έκανε δυνατή την υποστήριξη από το AAPS, αλλά το χρονοδιάγραμμα και οι λειτουργίες είναι ακόμα άγνωστα.
 
-While in the past company has decided not to allow their pumps to be controlled by external devices, it seems that last few years have been a game changer. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
+**Απαιτήσεις υλικού για το AAPS:** Καμία. Αναμένεται να έχει Bluetooth.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Σχόλια:** Δεν έχει κυκλοφορήσει ακόμα. Η t:slim X3 φαίνεται να μπαίνει ξανά και ξανά σε χαμηλότερη προτεραιότητα στο πλάνο της Tandem, υπέρ της t:Mobi (μαζί με μια έκδοση χωρίς σωληνάκι) και της Sigi (η αντλία patch τους).
 
-### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Twiist ([Αρχική σελίδα](https://www.twiist.com/))
 
-**Loop status:** All 3 pumps will be Loop candidates.
+**Κατάσταση κυκλώματος:** Υποψήφια για κύκλωμα.
 
-Awaiting release of t:mobi in Europe (other two are not yet released anywhere). Development of AAPS t:mobi support has already started and should be available by end of 2025 (see more info on Discord).
+**Απαιτήσεις υλικού για το AAPS:** Καμία. Έχει Bluetooth.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+### Αντλία ινσουλίνης Willcare ([Αρχική σελίδα](http://shinmyungmedi.com/en/))
 
-### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
+**Κατάσταση κυκλώματος:** Προς το παρόν δεν είναι υποψήφια για κύκλωμα, αλλά μας επικοινώνησε το προσωπικό της εταιρείας και ενδιαφέρονται να επεκτείνουν την αντλία τους ώστε να μπορεί να χρησιμοποιηθεί σε κύκλωμα (προς το παρόν νομίζω ότι λείπουν μόνο οι εντολές λήψης/ορισμού προφίλ).
 
-**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
+**Απαιτήσεις υλικού για το AAPS:** Καμία. Φαίνεται ότι έχει Bluetooth.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Σχόλια:** Επειδή η εταιρεία ενδιαφέρεται για ενσωμάτωση με το AAPS, μπορεί να κάνει την υλοποίηση μόνη της.
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+### Ypsopump ([Αρχική σελίδα](https://www.ypsomed.com/))
 
-## Pumps no longer sold (companies no longer operating)
+**Κατάσταση κυκλώματος:** Υποψήφια για κύκλωμα. Το πρωτόκολλο Bluetooth της αντλίας έχει αναλυθεί από την κοινότητα (reverse engineering), οπότε η επικοινωνία μαζί της είναι κατ' αρχήν δυνατή.
+
+**Απαιτήσεις υλικού για το AAPS:** Καμία. Έχει Bluetooth.
+
+**Σχόλια:** Η Ypsopump προστατεύει την επικοινωνία Bluetooth με ισχυρή κρυπτογράφηση τρίτου κατασκευαστή. Η εργασία με αυτήν είναι τεχνικά δύσκολη, και αυτό κάνει δύσκολη τη δημιουργία και τη συντήρηση ενός αξιόπιστου οδηγού. Δεν υπάρχει ακόμα οδηγός AAPS έτοιμος για κανονική χρήση.
+
+## Αντλίες που δεν πωλούνται πλέον (οι εταιρείες δεν λειτουργούν πλέον)
 
 ### Animas Vibe
 
@@ -44,53 +66,53 @@ Awaiting release of t:mobi in Europe (other two are not yet released anywhere). 
 
 ### Accu-Chek Insight
 
-**Comments:** End of support March 2025.
+**Σχόλια:** Τέλος υποστήριξης τον Μάρτιο του 2025.
 
 ## Αντλίες που δεν είναι για κύκλωμα
 
 ### Medtronic Bluetooth
 
-**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**Σχόλια:** Η Medtronic [αποσύρθηκε](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+
+### Tandem: t:slim X2 ([Αρχική σελίδα](https://www.tandemdiabetes.com/))
+
+**Σχόλια:** Το πρωτόκολλο Bluetooth της Tandem έχει αναλυθεί (reverse engineering), αλλά στην t:slim X2 μπορούν να χορηγηθούν μόνο bolus — ο βασικός ρυθμός δεν μπορεί να ελεγχθεί — οπότε δεν μπορεί να χρησιμοποιηθεί με ασφάλεια σε κύκλωμα. Αυτό μάλλον δεν θα αλλάξει, εκτός αν η Tandem επιτρέψει πλήρη έλεγχο της X2 από το τηλέφωνο, κάτι που πιο πιθανά θα έρθει με την t:slim X3.
 
 ### Accu-Chek Solo
 
-**Comments:** No community success in communicating with the Solo pump.
-
-### Ypsomed Pump
-
-**Comments:** Ypso added very heavy 3rd party encryption.
+**Σχόλια:** Η κοινότητα δεν έχει καταφέρει να επικοινωνήσει με την αντλία Solo.
 
 ## Απαιτήσεις αντλιών για να είναι συμβατές με κύκλωμα
 
-**Prerequisite**
+**Προαπαιτούμενο**
 
-- Η αντλία πρέπει να υποστηρίζει κάποιο είδος τηλεχειρισμού. (BT, Radio frequency, etc)
-- Το πρωτόκολλο παραβιάζεται / τεκμηριώνεται / κλπ.
+- Η αντλία πρέπει να υποστηρίζει κάποιο είδος τηλεχειρισμού. (BT, ραδιοσυχνότητες κ.λπ.)
+- Το πρωτόκολλο έχει αναλυθεί (hacked) / τεκμηριωθεί / κ.λπ.
 
-**Minimal requirement**
+**Ελάχιστες απαιτήσεις**
 
-- Ορισμός συχνότητας προσωρινού βασικού ρυθμού
-- Get Status
-- Ακύρωση συχνότητας προσωρινού βασικού ρυθμού
+- Ορισμός προσωρινού βασικού ρυθμού
+- Λήψη κατάστασης
+- Ακύρωση προσωρινού βασικού ρυθμού
 
-**For oref1(SMB) or Bolusing:**
+**Για oref1 (SMB) ή για bolus:**
 
-- Set Bolus
+- Ορισμός bolus
 
-**Good to have**
+**Καλό να υπάρχει**
 
 - Ακύρωση του Bolus
-- Αποκτήστε βασικό προφίλ (σχεδόν απαραίτητο)
-- Ορίστε βασικό προφίλ (ωραίο να έχετε)
+- Λήψη προφίλ βασικού ρυθμού (σχεδόν απαραίτητο)
+- Ορισμός προφίλ βασικού ρυθμού (καλό να υπάρχει)
 - Διαβάστε το Ιστορικό 
 
-**Other (not required but good to have)**
+**Άλλα (δεν απαιτούνται, αλλά καλό να υπάρχουν)**
 
 - Ορίστε εκτεταμένο bolus
-- Cancel Extended Bolus
+- Ακύρωση εκτεταμένου bolus
 - Διαβάστε το Ιστορικό
-- Read TDD
+- Ανάγνωση TDD
 
-### Other pumps support
+### Υποστήριξη άλλων αντλιών
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Αν θέλετε να δείτε την κατάσταση κάποιας άλλης αντλίας, επικοινωνήστε μαζί μας στο Discord.

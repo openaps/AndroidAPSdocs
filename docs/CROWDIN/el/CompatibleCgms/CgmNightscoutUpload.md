@@ -1,10 +1,10 @@
-# Για χρήστες άλλων CGM ανεβασμένα στο Nightscout
+# Άλλο CGM που ανεβάζει δεδομένα στο Nightscout
 
-If you have any other CGM set up that can send your BG data **only** to [Nightscout](https://nightscout.github.io/).
+Χρησιμοποιήστε αυτή την επιλογή αν έχετε ρυθμίσει οποιοδήποτε άλλο CGM που μπορεί να στέλνει τα δεδομένα BG σας **μόνο** στο [Nightscout](https://nightscout.github.io/).
 
 ```{important}
-This data source will not work when you are offline, when you experience network issues or when your Nightscout site is down. Use with caution.
+Αυτή η πηγή δεδομένων δεν θα λειτουργεί όταν είστε εκτός σύνδεσης, όταν έχετε προβλήματα δικτύου ή όταν ο ιστότοπος Nightscout σας δεν λειτουργεί. Χρησιμοποιήστε την με προσοχή.
 ```
 
--   Setup NSClient with your Nightscout site information.
--   Select NSClient BG in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Ρυθμίστε το **NSClientV3** (**Διαμόρφωση → Επικοινωνία**) με τα στοιχεία του ιστότοπου Nightscout σας.
+-   Επιλέξτε NSClient BG στη [**Διαμόρφωση → Πηγή BG**](#Config-Builder-bg-source).

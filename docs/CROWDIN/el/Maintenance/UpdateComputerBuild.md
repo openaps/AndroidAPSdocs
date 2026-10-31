@@ -1,103 +1,100 @@
-# Update with Android Studio
+# Ενημέρωση με το Android Studio
 
 ## Φτιάξτε το μόνοι σας, αντί να το κατεβάσετε
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Το **AAPS** δεν είναι διαθέσιμο για λήψη, λόγω των κανονισμών για τις ιατρικές συσκευές. Είναι νόμιμο να κάνετε build της εφαρμογής για δική σας χρήση, αλλά δεν πρέπει να δίνετε αντίγραφο σε άλλους! Δείτε τη σελίδα [Συχνές Ερωτήσεις](../UsefulLinks/FAQ.md) για λεπτομέρειες.
 
 ```{note}
-In case you want to build **AAPS** on a new computer : copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+Αν θέλετε να κάνετε build του **AAPS** σε νέο υπολογιστή: αντιγράψτε το αντίγραφο ασφαλείας του αρχείου keystore στον νέο υπολογιστή. Μετά ακολουθήστε τη [διαδικασία πρώτου build του **AAPS**](../SettingUpAaps/BuildingAaps.md) αντί για αυτόν τον οδηγό. Η μόνη διαφορά είναι ότι, αντί να δημιουργήσετε νέο keystore, μπορείτε να επιλέξετε αυτό που αντιγράψατε στον νέο υπολογιστή.
 ```
 
-## Overview for updating to a new version of AAPS with Android Studio
+## Επισκόπηση της ενημέρωσης σε νέα έκδοση του AAPS με το Android Studio
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
+Αν έχετε προβλήματα, δείτε την ξεχωριστή σελίδα [Αντιμετώπιση προβλημάτων του Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
-### Export your settings
+### Εξαγωγή των ρυθμίσεων
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Εξαγάγετε τις ρυθμίσεις από την υπάρχουσα έκδοση του **AAPS** στο τηλέφωνό σας. Ίσως να μην τις χρειαστείτε, αλλά είναι καλύτερα να είστε ασφαλείς.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Δείτε τη σελίδα [Δημιουργία και επαναφορά αντιγράφων ασφαλείας](ExportImportSettings.md), αν δεν θυμάστε πώς γίνεται.
 
-### Check your Android Studio version
+### Έλεγχος της έκδοσης του Android Studio
 
-The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
+Η ελάχιστη έκδοση που χρειάζεται περιγράφεται στις [οδηγίες build](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Αν η έκδοσή σας είναι παλαιότερη, [ενημερώστε πρώτα το Android Studio](#Building-APK-install-android-studio)!
 
 (Update-to-new-version-update-your-local-copy)=
-### Update your local copy
+### Ενημέρωση του τοπικού σας αντιγράφου
 
-```{admonition} WARNING
-:class: warning
-If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../SettingUpAaps/BuildingAaps.md), as this guide will not work for you!
-```
+* Ανοίξτε το υπάρχον έργο (project) του AAPS στο Android Studio. Ίσως χρειαστεί να επιλέξετε το έργο σας. Κάντε (διπλό) κλικ στο έργο του AAPS.
 
-* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
+  ![Android Studio - Επιλογή έργου](../images/update/01_ProjectSelection.png)
 
-  ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
+* Στη γραμμή μενού του Android Studio, επιλέξτε Git -> Fetch
 
-* In the menu bar of Android Studio, select Git -> Fetch
+   ![Μενού Android Studio - Git - Fetch](../images/update/02_GitFetch.png)
 
-   ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+* Κάτω δεξιά θα δείτε ένα μήνυμα ότι το Fetch έγινε με επιτυχία.
 
-* You will see a message in the lower right corner that Fetch was successful.
+   ![Μενού Android Studio - Git - Fetch επιτυχές](../images/update/03_GitFetchSuccessful.png)
 
-   ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
+* Τώρα στη γραμμή μενού επιλέξτε Git -> Pull
 
-* In the menu bar, now select Git -> Pull
+   ![Μενού Android Studio - Git - Pull](../images/update/04_GitPull.png)
 
-   ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+* Αφήστε όλες τις επιλογές όπως είναι (origin/master) και επιλέξτε Pull
 
-* Leave all options as they are (origin/master) and select Pull
+   ![Android Studio - Git - παράθυρο Pull](../images/update/05_GitPullOptions.png)
 
-   ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
-
-* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
+* Περιμένετε όσο γίνεται η λήψη. Θα το βλέπετε ως πληροφορία στην κάτω γραμμή. Όταν τελειώσει, θα δείτε ένα μήνυμα επιτυχίας.
 
   ```{note}
-  The files that were updated may vary! This is not an indication
+  Τα αρχεία που ενημερώθηκαν μπορεί να διαφέρουν! Αυτό δεν σημαίνει ότι υπάρχει πρόβλημα.
   ```
 
-   ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+   ![Android Studio - Pull επιτυχές](../images/update/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Wait until it is finished.
+* Θα τρέξει το Gradle Sync για να κατεβάσει κάποιες εξαρτήσεις (dependencies). Περιμένετε μέχρι να τελειώσει.
 
   ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-### Check JVM version
+### Έλεγχος της έκδοσης JVM
 
-This check is particularly indicated if you have already built a previous version of **AAPS** on the same computer.
+Αυτός ο έλεγχος συνιστάται ιδιαίτερα αν έχετε ήδη κάνει build μιας προηγούμενης έκδοσης του **AAPS** στον ίδιο υπολογιστή.
 
-Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required version for JVM, matching the **AAPS** version you are now building. Then follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
+Ελέγξτε στις [οδηγίες build](#Building-APK-recommended-specification-of-computer-for-building-apk-file) ποια έκδοση JVM χρειάζεται για την έκδοση του **AAPS** που κάνετε τώρα build. Μετά ακολουθήστε τα βήματα στο [Incompatible Gradle JVM](#incompatible-gradle-jvm) για να βεβαιωθείτε ότι χρησιμοποιείτε τη σωστή έκδοση.
 
 (Update-to-new-version-build-the-signed-apk)=
-### Build the Signed APK
+### Build του υπογεγραμμένου APK
 
-Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+Ο πηγαίος κώδικάς σας είναι τώρα η τρέχουσα έκδοση που έχει κυκλοφορήσει και όλες οι προϋποθέσεις έχουν ελεγχθεί. Ήρθε η ώρα να κάνετε build του υπογεγραμμένου apk, όπως περιγράφεται στην [ενότητα build υπογεγραμμένου apk](#Building-APK-generate-signed-apk).
 
 (Update-to-new-version-transfer-and-install)=
 
-### Transfer and install the apk
-You need to transfer the apk to your phone so you can install it.
+### Μεταφορά και εγκατάσταση του apk
+Πρέπει να μεταφέρετε το apk στο τηλέφωνό σας για να το εγκαταστήσετε.
 
 ```{note}
-If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
-For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
+Αν κάνατε το build με το ίδιο υπάρχον keystore στο Android Studio, δεν χρειάζεται να αφαιρέσετε την υπάρχουσα εφαρμογή από το τηλέφωνό σας. Όταν εγκαθιστάτε το apk, ακολουθήστε τις οδηγίες στην οθόνη για να εγκαταστήσετε την ενημέρωση.
+Σε άλλες περιπτώσεις, όπως όταν δημιουργείτε νέο keystore στο Android Studio για το υπογεγραμμένο apk, πρέπει να διαγράψετε την παλιά εφαρμογή πριν εγκαταστήσετε το apk. **Μην ξεχάσετε να εξαγάγετε τις ρυθμίσεις σας!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
+Δείτε τις οδηγίες για τη [μεταφορά και εγκατάσταση του AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Όπου εφαρμόζεται η [επαλήθευση προγραμματιστών Android](#android-developer-verification) της Google (από τον Σεπτέμβριο 2026, ανάλογα με τη χώρα σας), εγκαταστήστε με [ADB](#android-developer-verification-adb) αντί να πατήσετε το αρχείο APK.
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
+Συνεχίστε [εδώ](#Update-to-new-version-check-aaps-version-on-phone).
 
-## Troubleshooting
+(update-computer-build-troubleshooting)=
 
-If anything goes wrong, don't panic.
+## Αντιμετώπιση προβλημάτων
 
-Take a breath!
+Αν κάτι πάει στραβά, μην πανικοβάλλεστε.
 
-Then see the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) if your problem is already documented!
+Πάρτε μια ανάσα!
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Μετά δείτε την ξεχωριστή σελίδα [Αντιμετώπιση προβλημάτων του Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md), για να δείτε αν το πρόβλημά σας είναι ήδη καταγεγραμμένο!
+
+Αν χρειάζεστε περισσότερη βοήθεια, επικοινωνήστε με άλλους χρήστες του **AAPS** στο [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) ή στο [Discord](https://discord.gg/4fQUWHZ4Mw).

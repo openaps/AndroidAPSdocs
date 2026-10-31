@@ -4,34 +4,34 @@
 :depth: 2
 ```
 
-Most of the adjustments of temp targets, following **AAPS** etc. can be done on [**AAPSClient** app](../RemoteFeatures/RemoteMonitoring.md) on an Android phone with an internet connection. Boluses, however, can't be given through **AAPSClient**, but you can use SMS commands. If you use an iPhone as a follower and therefore cannot use **AAPSClient** app, there are additional SMS commands available.
+Οι περισσότερες απομακρυσμένες ρυθμίσεις (προσωρινοί στόχοι, υδατάνθρακες, αλλαγές προφίλ και, αφού ο πελάτης συζευχθεί, bolus) μπορούν να γίνουν με την [εφαρμογή **AAPSClient**](../RemoteFeatures/RemoteMonitoring.md) σε τηλέφωνο Android με σύνδεση στο διαδίκτυο, δείτε [Έλεγχος κύριας συσκευής ↔ πελάτη](#client-master-control) (μια έκδοση του **AAPSClient** για iPhone είναι υπό ανάπτυξη, δείτε [AAPSClient](AapsClient.md)). Οι εντολές SMS παραμένουν μια εναλλακτική που λειτουργεί χωρίς διαδίκτυο, και η μόνη απομακρυσμένη επιλογή αν χρησιμοποιείτε iPhone ως ακόλουθο και δεν έχετε ακόμη το **AAPSClient**.
 
-**SMS commands are really useful:**
-1. For routine remote control
+**Οι εντολές SMS είναι πολύ χρήσιμες:**
+1. Για τον καθημερινό απομακρυσμένο έλεγχο
 
-2. If you want to remotely bolus insulin
+2. Αν θέλετε να δίνετε απομακρυσμένα bolus ινσουλίνης χωρίς συζευγμένο **AAPSClient**
 
-3. In a region of poor internet reception, where text messages are able to get through, but data/internet phone reception is limited. This is very useful when going to remote areas (e.g. camping, skiing).
+3. Σε περιοχή με κακή σύνδεση στο διαδίκτυο, όπου τα μηνύματα κειμένου περνούν, αλλά η σύνδεση δεδομένων/διαδικτύου του τηλεφώνου είναι περιορισμένη. Αυτό είναι πολύ χρήσιμο όταν πηγαίνετε σε απομακρυσμένες περιοχές (π.χ. κάμπινγκ, σκι).
 
-4. If your other methods of remote control (Nightscout/AAPSClient) are temporarily not working
+4. Αν ο άλλος τρόπος απομακρυσμένου ελέγχου (**AAPSClient**) προσωρινά δεν λειτουργεί
 
 ## Πρώτα η ασφάλεια
 
-If you enable **SMS Communicator** in **AAPS**, consider that the phone which is set up to give remote commands could be stolen, and/or used by someone else. Always lock your phone handset with at least a PIN. A strong password and/ or biometric lock are highly recommended, and ensure this is different from your APK Master password (the password which is required to export **AAPS** settings).
+Αν ενεργοποιήσετε την **Επικοινωνία με SMS** στο **AAPS**, λάβετε υπόψη ότι το τηλέφωνο που είναι ρυθμισμένο να στέλνει απομακρυσμένες εντολές μπορεί να κλαπεί και/ή να το χρησιμοποιήσει κάποιος άλλος. Κλειδώνετε πάντα το τηλέφωνό σας τουλάχιστον με PIN. Συνιστάται έντονα ένας ισχυρός κωδικός πρόσβασης και/ή βιομετρικό κλείδωμα, και φροντίστε να είναι διαφορετικός από τον Κύριο κωδικό του APK (τον κωδικό που χρειάζεται για την εξαγωγή των ρυθμίσεων του **AAPS**).
 
-Additionally, it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. This way, you can use the second number to [disable](#SMSCommands-other) SMS communicator in case your main remote phone gets compromised.
+Επιπλέον, συνιστάται να επιτρέψετε και [δεύτερο αριθμό τηλεφώνου](#SMSCommands-authorized-phone-numbers) για τις εντολές SMS. Έτσι μπορείτε να χρησιμοποιήσετε τον δεύτερο αριθμό για να [απενεργοποιήσετε](#SMSCommands-other) την Επικοινωνία με SMS, αν το κύριο απομακρυσμένο τηλέφωνό σας παραβιαστεί.
 
-The default minimum time delay between bolus commands is 15 minutes. For safety reasons, you have to add at least two authorised phone numbers to change this to a shorter time delay. If you try to remotely bolus again within 15 minutes of the previous bolus, you will receive the response “Remote bolus not available. Try again later”
+Η προεπιλεγμένη ελάχιστη καθυστέρηση μεταξύ εντολών bolus είναι 15 λεπτά. Για λόγους ασφαλείας πρέπει να προσθέσετε τουλάχιστον δύο εξουσιοδοτημένους αριθμούς τηλεφώνου για να την αλλάξετε σε μικρότερη καθυστέρηση. Αν προσπαθήσετε να δώσετε ξανά απομακρυσμένα bolus μέσα σε 15 λεπτά από το προηγούμενο bolus, θα λάβετε την απάντηση “Απομακρυσμένο bolus μη διαθέσιμο. Δοκιμάστε ξανά αργότερα.”
 
-Το AndroidAPS θα σας ενημερώσει επίσης με μήνυμα κειμένου , εάν έχουν πραγματοποιηθεί οι απομακρυσμένες εντολές σας, όπως μια γευματική δόση ή μια αλλαγή προφίλ. Συνιστάται να το ρυθμίσετε έτσι ώστε τα κείμενα επιβεβαίωσης να αποστέλλονται σε τουλάχιστον δύο διαφορετικούς αριθμούς τηλεφώνου σε περίπτωση κλοπής ενός από τα τηλέφωνα λήψης.
+Το AAPS θα σας ενημερώνει επίσης με μήνυμα κειμένου αν οι απομακρυσμένες εντολές σας, όπως ένα bolus ή μια αλλαγή προφίλ, έχουν εκτελεστεί. Συνιστάται να το ρυθμίσετε έτσι ώστε τα κείμενα επιβεβαίωσης να αποστέλλονται σε τουλάχιστον δύο διαφορετικούς αριθμούς τηλεφώνου σε περίπτωση κλοπής ενός από τα τηλέφωνα λήψης.
 
-**If you bolus through SMS Commands, you must enter carbs separately (second SMS, AAPSClient, Nightscout...)!** If you fail to do so, the IOB would be correct with too low COB, potentially leading to not performed correction bolus as **AAPS** assumes that you have too much active insulin.
+**Αν δίνετε bolus με εντολές SMS, πρέπει να καταχωρίσετε τους υδατάνθρακες χωριστά (δεύτερο SMS, AAPSClient...)!** Αν δεν το κάνετε, το IOB θα είναι σωστό αλλά το COB πολύ χαμηλό, και μπορεί να μη γίνει ένα διορθωτικό bolus, επειδή το **AAPS** θεωρεί ότι έχετε πάρα πολλή ενεργή ινσουλίνη.
 
-For the sensitive commands, an authenticator app with a time-based one-time password must be used to increase safety.
+Για τις ευαίσθητες εντολές πρέπει να χρησιμοποιείται μια εφαρμογή ελέγχου ταυτότητας με κωδικό μίας χρήσης βάσει χρόνου, για μεγαλύτερη ασφάλεια.
 
-If you want to remove the ability of a caregiver phone to send SMS commands, use the emergency button “[Reset Authenticators](#sms-commands-authenticator-setup)” in **AAPS** or send the SMS command “[SMS stop](#SMSCommands-other)”. By resetting authenticators you make ALL the caregivers' phones invalid. You will need to set them up again.
+Αν θέλετε να αφαιρέσετε από ένα τηλέφωνο φροντιστή τη δυνατότητα να στέλνει εντολές SMS, χρησιμοποιήστε το κουμπί έκτακτης ανάγκης «[Επαναφορά Επαληθευτών](#sms-commands-authenticator-setup)» στο **AAPS** ή στείλτε την εντολή SMS «[SMS stop](#SMSCommands-other)». Με την επαναφορά των επαληθευτών κάνετε ΑΚΥΡΑ ΟΛΑ τα τηλέφωνα των φροντιστών. Θα χρειαστεί να τους ξαναρυθμίσετε.
 
-## Ρύθμιση εντολών μηνυμάτων (SMS commands)
+## Ρύθμιση εντολών SMS
 
 ```{contents} The overall process is as follows
 :depth: 1
@@ -43,123 +43,134 @@ If you want to remove the ability of a caregiver phone to send SMS commands, use
 
 Χρησιμοποιείται ο έλεγχος ταυτότητας δύο παραγόντων (2FA) προκειμένου να βελτιωθεί η ασφάλεια.
 
-On the caregiver phone, download (from the App store or Google play) and install an Authenticator app. Δημοφιλείς δωρεάν εφαρμογές είναι οι:
+Στο τηλέφωνο του φροντιστή, κατεβάστε (από το App Store ή το Google Play) και εγκαταστήστε μια εφαρμογή ελέγχου ταυτότητας (Authenticator). Δημοφιλείς δωρεάν εφαρμογές είναι οι:
   - [Authy](https://authy.com/download/)
   - Google Authenticator - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
   - [LastPass Authenticator](https://lastpass.com/auth/)
   - [FreeOTP Authenticator](https://freeotp.github.io/)
 
-These Authenticator apps produce a time-limited, one-time 6-digit password, similar to mobile banking or shopping. You can use an alternative Authenticator app, as long as it supports RFC 6238 TOTP tokens. The Microsoft Authenticator does not work.
+Αυτές οι εφαρμογές ελέγχου ταυτότητας δημιουργούν έναν 6ψήφιο κωδικό μίας χρήσης με περιορισμένο χρόνο ισχύος, όπως στο mobile banking ή στις αγορές. Μπορείτε να χρησιμοποιήσετε και άλλη εφαρμογή ελέγχου ταυτότητας, αρκεί να υποστηρίζει tokens RFC 6238 TOTP. Το Microsoft Authenticator δεν λειτουργεί.
 
-### Check phone settings
+### Ελέγξτε τις ρυθμίσεις του τηλεφώνου
 
-On your phone, go to **Apps > AAPS > Permissions**. Make sure **SMS** and **Phone** are allowed.
+Στο τηλέφωνό σας, πηγαίνετε στις **Εφαρμογές > AAPS > Άδειες**. Βεβαιωθείτε ότι επιτρέπονται τα **SMS** και το **Τηλέφωνο**.
 
 ![image](../images/remote-control-08.png)
 
-### Date and time syncing
+```{admonition} "App was denied access to SMS"
+:class: tip
+Το Android μπορεί να μπλοκάρει την άδεια **SMS** για εφαρμογές που δεν εγκαταστάθηκαν από κατάστημα εφαρμογών, όπως το **AAPS**. Αν δείτε αυτό το μήνυμα όταν δίνετε την άδεια **SMS**, ανοίξτε στο τηλέφωνο **Ρυθμίσεις > Εφαρμογές > AAPS**, πατήστε το μενού **⋮** (πάνω δεξιά) και επιλέξτε **Allow restricted settings** (Να επιτρέπονται οι περιορισμένες ρυθμίσεις). Μετά δώστε ξανά την άδεια **SMS**.
+```
+
+![Δεν δόθηκε στην εφαρμογή πρόσβαση στα SMS](../images/sms_permission_restricted.png)
+
+### Συγχρονισμός ημερομηνίας και ώρας
 
 Η ώρα και στα δύο τηλέφωνα πρέπει να είναι συγχρονισμένη. Η καλύτερη λύση είναι να ορίζεται αυτόματα από το διαδίκτυο. Οι διαφορές ώρας μπορεί να οδηγήσουν σε προβλήματα επαλήθευσης ταυτότητας.
 
-On both the **AAPS** phone and the caregiver phone, check the date and time are synched. Exactly how you do this depends on your specific device, you may need to try out different settings.
+Και στο τηλέφωνο του **AAPS** και στο τηλέφωνο του φροντιστή, ελέγξτε ότι η ημερομηνία και η ώρα είναι συγχρονισμένες. Ο ακριβής τρόπος εξαρτάται από τη συσκευή σας· ίσως χρειαστεί να δοκιμάσετε διάφορες ρυθμίσεις.
 
-Example (for Samsung S23): **Settings > General management > Date and time**: make sure that **Automatic date and time** is checked.
+Παράδειγμα (για Samsung S23): **Ρυθμίσεις > Γενική διαχείριση > Ημερομηνία και ώρα**: βεβαιωθείτε ότι είναι επιλεγμένο το **Αυτόματη ημερομηνία και ώρα**.
 
-Some options may be greyed out, due to needing admin via a family account if the phone has been set up as a child account. This date and time setting is called “set automatically” on a caregiver/parent iPhone. If you are not sure if you have synched the handsets, don’t worry, you can set up the SMS commands and troubleshoot afterward if it seems to be causing problems (ask for help if needed).
+Κάποιες επιλογές μπορεί να είναι γκρι (ανενεργές), επειδή χρειάζονται έγκριση διαχειριστή μέσω οικογενειακού λογαριασμού, αν το τηλέφωνο έχει ρυθμιστεί ως λογαριασμός παιδιού. Σε iPhone φροντιστή/γονέα αυτή η ρύθμιση ημερομηνίας και ώρας λέγεται «Αυτόματη ρύθμιση». Αν δεν είστε σίγουροι ότι έχετε συγχρονίσει τις συσκευές, μην ανησυχείτε: μπορείτε να ρυθμίσετε τις εντολές SMS και να λύσετε το πρόβλημα αργότερα, αν φαίνεται ότι προκαλεί προβλήματα (ζητήστε βοήθεια αν χρειάζεται).
 
-### AAPS settings
+### Ρυθμίσεις του AAPS
 
-Now that the phone settings have been checked, in the **AAPS** app itself, go to [Config Builder > General](../SettingUpAaps/ConfigBuilder.md) to enable the **SMS Communicator** module.
+Αφού ελέγξατε τις ρυθμίσεις του τηλεφώνου, στην ίδια την εφαρμογή **AAPS** πηγαίνετε στη [**Διαμόρφωση** → **Επικοινωνία**](../SettingUpAaps/ConfigBuilder.md) και ενεργοποιήστε το πρόσθετο **Επικοινωνία με SMS**.
 
-Go to the Preferences for SMS Communicator.
+Ανοίξτε τις ρυθμίσεις της **Επικοινωνίας με SMS**.
 
-Enable “allow remote commands via SMS”:
+Ενεργοποιήστε το **Να επιτρέπονται απομακρυσμένες εντολές μέσω SMS**. Οι επιλογές **Πρόσθετο υποχρεωτικό PIN στο τέλος του token** και **Ρύθμιση ελέγχου ταυτότητας** εμφανίζονται μόνο αφού το ενεργοποιήσετε:
 
-![image](../images/remote-control-11.png)
+![Ρυθμίσεις της Επικοινωνίας με SMS](../images/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
-#### Allowed phone numbers
+#### Επιτρεπόμενοι αριθμοί τηλεφώνου
 
-Enter the caregiver phone number(s). Include the country code and exclude the first “0” of the phone number, as shown in these examples:
-* UK phone number: +447976304596
-* US phone number: +11234567890
-* FR phone number:  +33612344567
-* _etc._
+Εισαγάγετε τον αριθμό (ή τους αριθμούς) τηλεφώνου του φροντιστή. Συμπεριλάβετε τον κωδικό χώρας και παραλείψτε το πρώτο «0» του αριθμού τηλεφώνου, όπως στα παρακάτω παραδείγματα:
+* Αριθμός τηλεφώνου ΗΒ: +447976304596
+* Αριθμός τηλεφώνου ΗΠΑ: +11234567890
+* Αριθμός τηλεφώνου Γαλλίας:  +33612344567
+* _κ.λπ._
 
-Note that the “+” in front of the number may or may not be required based on your location. To determine this, send a sample text which will show the received format in the SMS Communicator tab.
+Σημειώστε ότι το «+» μπροστά από τον αριθμό μπορεί να χρειάζεται ή όχι, ανάλογα με τη χώρα σας. Για να το βρείτε, στείλτε ένα δοκιμαστικό μήνυμα· η μορφή με την οποία λήφθηκε θα φανεί στην οθόνη του πρόσθετου **Επικοινωνία με SMS** (**Διαμόρφωση** → **Επικοινωνία** → **Επικοινωνία με SMS** → **Άνοιγμα πρόσθετου**).
 
-If you have more than one phone number to add, separate them by semicolons, with **NO space between numbers** (this is critical!). Select “OK”:
+Αν έχετε περισσότερους από έναν αριθμούς, χωρίστε τους με τον χαρακτήρα «;» (semicolon), **ΧΩΡΙΣ κενό μεταξύ των αριθμών** (αυτό είναι πολύ σημαντικό!). Επιλέξτε **OK**:
 
-![image](../images/remote-control-12.png)
+![Επιτρεπόμενοι αριθμοί τηλεφώνου](../images/sms_allowed_numbers.png)
 
-#### Λεπτά μεταξύ εντολών bolus
+#### Ελάχιστη απόσταση απομακρυσμένου bolus
 
-- Μπορείτε να προσδιορίσετε την ελάχιστη χρονική διαφορά ανάμεσα σε δύο δόσεις ινσουλίνης που χορηγούνται μέσω μηνυμάτων.
-- Για λόγους ασφαλείας πρέπει να προσθέσετε τουλάχιστον δύο εξουσιοδοτημένους τηλεφωνικούς αριθμούς για να επεξεργαστείτε αυτή την μεταβλητή.
+- Μπορείτε να ορίσετε την ελάχιστη καθυστέρηση (σε λεπτά) μεταξύ δύο bolus που δίνονται μέσω SMS.
+- Για λόγους ασφαλείας πρέπει να προσθέσετε τουλάχιστον δύο εξουσιοδοτημένους αριθμούς τηλεφώνου για να αλλάξετε αυτή την τιμή.
 
-#### Additional mandatory PIN at token end
+#### Πρόσθετο υποχρεωτικό PIN στο τέλος του token
 
-For safety reasons, the reply code must be followed by a PIN. Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent.
+Για λόγους ασφαλείας, ο κωδικός απάντησης πρέπει να ακολουθείται από ένα PIN. Επιλέξτε ένα PIN που εσείς (και οι άλλοι φροντιστές) θα χρησιμοποιείτε στο τέλος του κωδικού ελέγχου ταυτότητας, όταν στέλνετε την εντολή SMS.
 
-PIN requirements are:
+Οι απαιτήσεις για το PIN είναι:
 
-* 3 με 6 ψηφία
-* not the same digits (_i.e._ 1111 or 1224)
-* not sequential numbers (_i.e._ 1234)
+* τουλάχιστον 6 ψηφία
+* μόνο ψηφία
 
-![image](../images/remote-control-13.png)
+Για ασφαλέστερο PIN, μη χρησιμοποιείτε το ίδιο ψηφίο πολλές φορές (_π.χ._ 111111) ή μια σειρά (_π.χ._ 123456).
+
+![Πρόσθετο υποχρεωτικό PIN στο τέλος του token](../images/sms_pin.png)
 
 #### Ρύθμιση ελέγχου ταυτότητας
 
-* Follow the step-by-step instructions on the screen.
-* Open your installed authenticator app on the _caregiver’s phone_, set up a new connection and
-* Use the caregiver phone to scan the QR code provided by **AAPS**, when prompted.
-* Test the one-time passcode from the authenticator app on the caregiver phone followed by your PIN:
+* Πατήστε **Ρύθμιση ελέγχου ταυτότητας** και ακολουθήστε τις οδηγίες βήμα βήμα στην οθόνη.
+* Ανοίξτε την εγκατεστημένη εφαρμογή ελέγχου ταυτότητας στο _τηλέφωνο του φροντιστή_, δημιουργήστε μια νέα σύνδεση και
+* Με το τηλέφωνο του φροντιστή σαρώστε τον κωδικό QR που εμφανίζεται κάτω από το **Σαρώστε τον κωδικό για να ρυθμίσετε τους κωδικούς OTP του AAPS**.
+
+![Ρύθμιση ελέγχου ταυτότητας με κωδικό QR](../images/sms_authenticator_setup.png)
+
+* Κάτω από το **Δοκιμάστε τον Κωδικό μίας Χρήσης**, εισαγάγετε στο **Κωδικός για έλεγχο** τον κωδικό μίας χρήσης από την εφαρμογή ελέγχου ταυτότητας του τηλεφώνου του φροντιστή, και αμέσως μετά το PIN σας:
 
 Παράδειγμα:
-* The token from the authenticator app is 457051
-* Your mandatory PIN is 2401
-* Code to check: 4570512401
+* Το token από την εφαρμογή ελέγχου ταυτότητας είναι 457051
+* Το υποχρεωτικό σας PIN είναι 2401
+* Κωδικός για έλεγχο: 4570512401
 
-If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. **There is no button you can press!** The process is now complete, there is no “OK” button you need to press after entering the code:
+Αν η καταχώριση είναι σωστή, το κόκκινο κείμενο «ΛΑΘΟΣ PIN» θα αλλάξει αυτόματα σε πράσινο «OK». **Δεν υπάρχει κουμπί για να πατήσετε!** Η διαδικασία έχει πλέον ολοκληρωθεί· δεν υπάρχει κουμπί «OK» που πρέπει να πατήσετε μετά την εισαγωγή του κωδικού:
 
-![image](../images/remote-control-14.png)
+![Δοκιμή κωδικού μίας χρήσης και επαναφορά επαληθευτών](../images/sms_authenticator_test.png)
 
-You should now be set up with SMS commands.
+Οι εντολές SMS είναι πλέον ρυθμισμένες.
 
-Use button "Authenticator setup > Reset Authenticators" if you want to remove provisioned authenticators. (Με την επαναφορά του ελέγχου ταυτότητας ακυρώνετε ΟΛΟΥΣ τους προβλεπόμενους ελέγχους ταυτότητας. You will need to set them up again.)
+Χρησιμοποιήστε το κουμπί **Επαναφορά Επαληθευτών** στο κάτω μέρος της οθόνης **Ρύθμιση ελέγχου ταυτότητας** αν θέλετε να αφαιρέσετε τους επαληθευτές που έχουν ρυθμιστεί. (Με την επαναφορά των επαληθευτών κάνετε ΑΚΥΡΟΥΣ ΟΛΟΥΣ τους επαληθευτές που έχουν ήδη ρυθμιστεί. Θα χρειαστεί να τους ξαναρυθμίσετε.)
 
-## SMS commands usage
+## Χρήση των εντολών SMS
 
-### First steps using SMS commands
+### Πρώτα βήματα με τις εντολές SMS
 
-1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the **AAPS** phone. You should get a response similar to that shown here:
+1)  Για να ελέγξετε ότι τα έχετε ρυθμίσει όλα σωστά, δοκιμάστε τη σύνδεση στέλνοντας «bg» ως SMS από το τηλέφωνο του φροντιστή στο τηλέφωνο του **AAPS**. Θα πρέπει να λάβετε μια απάντηση παρόμοια με αυτή εδώ:
 
-![image](../images/remote-control-15.png)
+![image](../images/remote-control-06.png)
 
-If you don't receive any response, check the [Troubleshooting](#SMSCommands-troubleshooting) section below.
+Αν δεν λάβετε καμία απάντηση, δείτε την ενότητα [Αντιμετώπιση προβλημάτων](#SMSCommands-troubleshooting) παρακάτω.
 
-2)  Now try an SMS command that requires the authenticator, _e.g._ “target hypo”. The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by the additional secret **PIN** known only by caregivers/followers (a string of ten digits in total, assuming your PIN is only 4 digits).
+2)  Τώρα δοκιμάστε μια εντολή SMS που χρειάζεται έλεγχο ταυτότητας, _π.χ._ «target hypo». Το τηλέφωνο του φροντιστή θα λάβει απάντηση που σας ζητά να εισαγάγετε τον **εξαψήφιο κωδικό** από την εφαρμογή ελέγχου ταυτότητας, και αμέσως μετά το πρόσθετο μυστικό **PIN** που ξέρουν μόνο οι φροντιστές/ακόλουθοι (συνολικά δώδεκα ψηφία, αν το PIN σας έχει 6 ψηφία).
 
-When you try sending an SMS command for the first time, try it in the presence of the **AAPS** phone, to see how it works:
+Όταν στέλνετε μια εντολή SMS για πρώτη φορά, δοκιμάστε την κοντά στο τηλέφωνο του **AAPS**, για να δείτε πώς λειτουργεί:
 
 ![image](../images/remote-control-16.png)
 
-The caregiver’s phone will receive an SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully.
+Το τηλέφωνο του φροντιστή θα λάβει SMS απάντησης από το **AAPS** που επιβεβαιώνει αν η απομακρυσμένη εντολή SMS εκτελέστηκε με επιτυχία.
 
-If your command is successful, you will receive a reply to confirm this. If there is a problem you will receive an error message. See [Troubleshooting](#SMSCommands-troubleshooting) below for common errors.
+Αν η εντολή σας πετύχει, θα λάβετε απάντηση που το επιβεβαιώνει. Αν υπάρχει πρόβλημα, θα λάβετε μήνυμα σφάλματος. Δείτε την [Αντιμετώπιση προβλημάτων](#SMSCommands-troubleshooting) παρακάτω για τα συνηθισμένα σφάλματα.
 
 **Συμβουλή**: Μπορεί να είναι χρήσιμο να διαθέτετε απεριόριστα μηνύματα στο συμβόλαιο του τηλεφώνου σας (για κάθε τηλέφωνο που χρησιμοποιείτε) αν στέλνετε πολλά μηνύματα.
 
-### Delivering mealtime boluses through SMS commands
+### Bolus γευμάτων με εντολές SMS
 
-Remote bolusing of insulin can _only_ be done via **SMS Commands**, it cannot be actioned through NightScout or AAPSClient. Carbs however, can be announced through any of the three methods. It is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
+Απομακρυσμένο bolus ινσουλίνης μπορεί να γίνει με **εντολές SMS** ή μέσω ενός συζευγμένου **AAPSClient** (δείτε [Έλεγχος κύριας συσκευής ↔ πελάτη](#client-master-control))· δεν μπορεί να γίνει από τον ιστότοπο του Nightscout. Οι υδατάνθρακες μπορούν επίσης να καταχωριστούν με SMS ή με το **AAPSClient**. Με SMS δεν μπορείτε να στείλετε εντολές υδατανθράκων και ινσουλίνης μαζί σε ένα μόνο μήνυμα SMS. Αυτές οι εντολές πρέπει να σταλούν χωριστά ως εξής:
 
-1)  Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to using the “syringe” icon in **AAPS**. 2)  Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to using the “carbs” tab in **AAPS**.
+1)  Η αποστολή του bolus ινσουλίνης (_π.χ._ το «bolus 2» δίνει εντολή για bolus 2 μονάδων) με εντολές SMS αντιστοιχεί στο **Θεραπείες** → **Ινσουλίνη** στο **AAPS**. 2)  Στείλτε τους υδατάνθρακες (_π.χ._ το «carbs 20» καταχωρεί 20g υδατανθράκων). Αυτό αντιστοιχεί στο **Θεραπείες** → **Υδατάνθρακες** στο **AAPS**.
 
-To avoid hypos, it is a good idea to start conservatively, by bolusing **less insulin** than would be needed according to your carb ratio, because you are not taking into account the current glucose level or glucose trend.
+Για να αποφύγετε υπογλυκαιμίες, καλό είναι να ξεκινήσετε συντηρητικά, δίνοντας **λιγότερη ινσουλίνη** από όση θα χρειαζόταν με βάση τον λόγο υδατανθράκων σας, επειδή δεν λαμβάνετε υπόψη το τρέχον επίπεδο ή την τάση της γλυκόζης.
 
-**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can use a combination of Nightscout or **AAPSClient** with SMS commands. Carbs can be announced through Nightscout without any authentication (see instructions subsection below) , and are therefore quicker than SMS commands.
+**Η σειρά με την οποία στέλνετε αυτές τις εντολές είναι σημαντική**. Αν καταχωρίσετε μεγάλη ποσότητα υδατανθράκων με οποιονδήποτε τρόπο και έχετε ενεργοποιημένα τα SMB, το **AAPS** μπορεί να αντιδράσει αμέσως δίνοντας ένα μέρος του bolus ινσουλίνης. Έτσι, αν μετά προσπαθήσετε να στείλετε bolus ινσουλίνης _αφού_ έχετε καταχωρίσει τους υδατάνθρακες, μπορεί να έχετε μια ενοχλητική καθυστέρηση και ένα μήνυμα «bolus σε εξέλιξη», και μετά θα πρέπει να ελέγξετε τι δόθηκε ως SMB. Ή, αν δεν καταλάβετε ότι χορηγείται SMB και το δικό σας επόμενο bolus πετύχει επίσης, μπορεί να χορηγηθεί συνολικά πάρα πολλή ινσουλίνη για το γεύμα. Γι' αυτό, όταν δίνετε απομακρυσμένα bolus για γεύματα, στέλνετε πάντα το bolus ινσουλίνης _πριν_ από την καταχώριση των υδατανθράκων. Αν προτιμάτε, μπορείτε να συνδυάσετε το **AAPSClient** με τις εντολές SMS: οι υδατάνθρακες που καταχωρίζονται σε συζευγμένο **AAPSClient** δεν χρειάζονται κωδικό ελέγχου ταυτότητας και έτσι είναι πιο γρήγοροι από τις εντολές SMS. Οι υδατάνθρακες ή άλλες θεραπείες που καταχωρίζονται στον ιστότοπο του Nightscout **δεν** εφαρμόζονται όσο ο έλεγχος από πελάτη (client) είναι ενεργός· το **AAPS** είναι τότε σε [ενισχυμένη λειτουργία (hardened mode)](#client-master-control-hardened-mode).
 
 (SMSCommands-commands)=
 ## Εντολές
@@ -169,173 +180,174 @@ To avoid hypos, it is a good idea to start conservatively, by bolusing **less in
 :local: true
 ```
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app). The commands are not case-sensitive, you can use lower or upper case.
+Οι εντολές πρέπει να στέλνονται στα αγγλικά· η απάντηση θα είναι στη γλώσσα σας, αν το κείμενο της απάντησης έχει ήδη [μεταφραστεί](#translations-translate-strings-for-AAPS-app). Οι εντολές δεν κάνουν διάκριση πεζών-κεφαλαίων· μπορείτε να χρησιμοποιείτε πεζά ή κεφαλαία.
 
-![SMS Commands Example](../images/SMSCommands.png)
+![Παράδειγμα εντολών SMS](../images/SMSCommands.png)
 
-The **SMS Commands Tables** below show all the possible SMS commands. _Example values_ are given, to aid understanding. The commands have the same range of possible values (targets, percent profile etc.) which are allowable in the **AAPS** app itself.
+Οι **Πίνακες εντολών SMS** παρακάτω δείχνουν όλες τις δυνατές εντολές SMS. Δίνονται _παραδείγματα τιμών_ για να γίνουν πιο κατανοητές. Οι εντολές έχουν το ίδιο εύρος δυνατών τιμών (στόχοι, ποσοστό προφίλ κ.λπ.) που επιτρέπεται και στην ίδια την εφαρμογή **AAPS**.
 
 (authentication-or-not)=
-### Authentication or not?
+### Έλεγχος ταυτότητας ή όχι;
 
-Some SMS commands give an immediate response, and some SMS commands require strong **authentication** through the Authenticator app. A simple enquiry like “**BG**” (which requests an update on current glucose) is quick to type, doesn't need authenticating, and returns the **AAPS** status information shown below:
+Κάποιες εντολές SMS δίνουν άμεση απάντηση, και κάποιες εντολές SMS χρειάζονται ισχυρό **έλεγχο ταυτότητας** μέσω της εφαρμογής ελέγχου ταυτότητας. Ένα απλό ερώτημα όπως το «**BG**» (που ζητά ενημέρωση για την τρέχουσα γλυκόζη) γράφεται γρήγορα, δεν χρειάζεται έλεγχο ταυτότητας και επιστρέφει τις πληροφορίες κατάστασης του **AAPS** που φαίνονται παρακάτω:
 
 ![image](../images/remote-control-06.png)
 
-Commands which need more security require a code to be entered, for example:
+Οι εντολές που χρειάζονται περισσότερη ασφάλεια απαιτούν να εισαγάγετε έναν κωδικό, για παράδειγμα:
 
-![SMS authenticated for markdown-smaller](../images/remote-control-07.png)
+![SMS με έλεγχο ταυτότητας](../images/remote-control-07.png)
 
-The *Auth* column in the tables below, indicates whether such a strong authentication is required for each command.
+Η στήλη *Έλεγχος* στους παρακάτω πίνακες δείχνει αν χρειάζεται τέτοιος ισχυρός έλεγχος ταυτότητας για κάθε εντολή.
 
 ### Δεδομένα CGM
 
-| Command    | Auth | Function & *Response*                                                                                                                                                                       |
-| ---------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BG         | No   | Returns: last BG, delta, IOB (bolus and basal), COB<br/>*Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)*                                             |
-| CAL 5.6/90 | Yes  | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent* |
+| Εντολή     | Έλεγχος | Λειτουργία και *Απάντηση*                                                                                                                                                                                       |
+| ---------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BG         | Όχι     | Επιστρέφει: τελευταία BG, διαφορά, IOB (bolus και βασικός), COB<br/>*Τελευταία BG: 5,6 πριν από 4 λεπτά, Διαφορά: -0,2 mmol, IOB: 0,20U (Bolus: 0,10U Βασικός Ρυθμός: 0,10U)*                             |
+| CAL 5.6/90 | Ναι     | Βαθμονομεί το CGM με τιμή 5.6/90<br/>(χρησιμοποιήστε την τιμή που ταιριάζει στις μονάδες γλυκόζης σας)<br/>Λειτουργεί μόνο αν έχει ρυθμιστεί σωστά στο **AAPS**.<br/>*Η βαθμονόμηση στάλθηκε* |
 
-### Pump
+### Αντλία
 
-| Command              | Auth | Function & *Response*                                                                                 |
-| -------------------- | ---- | ----------------------------------------------------------------------------------------------------- |
-| ΑΝΤΛΙΑ               | No   | Last conn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
-| PUMP DISCONNECT *30* | Yes  | To disconnect pump for *30* minutes                                                                   |
-| PUMP CONNECT         | Yes  | Pump reconnected                                                                                      |
+| Εντολή               | Έλεγχος | Λειτουργία και *Απάντηση*                                                                                               |
+| -------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------- |
+| ΑΝΤΛΙΑ               | Όχι     | Τελευταία σύνδεση: πριν από 1 λεπ.<br/>Προσ.: 0,00U/h @11:38 5/30min<br/>IOB: 0,5U Δεξαμενή: 34U Μπατ.: 100 |
+| PUMP DISCONNECT *30* | Ναι     | Αποσυνδέει την αντλία για *30* λεπτά                                                                                    |
+| PUMP CONNECT         | Ναι     | Η αντλία επανασυνδέθηκε                                                                                                 |
 
 ### Βασικός Ρυθμός
 
-| Command           | Auth | Function & *Response*            |
-| ----------------- | ---- | -------------------------------- |
-| BASAL 0.3         | Yes  | To start basal 0.3U/h for 30 min |
-| BASAL 0.3 20      | Yes  | To start basal 0.3U/h for 20 min |
-| BASAL 30%         | Yes  | To start basal 30% for 30 min    |
-| BASAL 30% 50      | Yes  | To start basal 30% for 50 min    |
-| BASAL STOP/CANCEL | Yes  | To stop temp basal               |
+| Εντολή            | Έλεγχος | Λειτουργία και *Απάντηση*               |
+| ----------------- | ------- | --------------------------------------- |
+| BASAL 0.3         | Ναι     | Ξεκινά βασικό ρυθμό 0,3U/h για 30 λεπτά |
+| BASAL 0.3 20      | Ναι     | Ξεκινά βασικό ρυθμό 0,3U/h για 20 λεπτά |
+| BASAL 30%         | Ναι     | Ξεκινά βασικό ρυθμό 30% για 30 λεπτά    |
+| BASAL 30% 50      | Ναι     | Ξεκινά βασικό ρυθμό 30% για 50 λεπτά    |
+| BASAL STOP/CANCEL | Ναι     | Σταματά τον προσωρινό βασικό ρυθμό      |
+
+Κάποιες αντλίες δέχονται προσωρινό βασικό ρυθμό μόνο σε ποσοστό, άλλες μόνο σε U/h. Αν χρησιμοποιήσετε την άλλη μορφή, το **AAPS** απαντά *«Αυτή η αντλία δέχεται προσωρινό βασικό ρυθμό μόνο σε ποσοστό, όχι σε U/h.»* (ή το αντίστροφο) και δεν ορίζει τίποτα. Η διάρκεια πρέπει να είναι πολλαπλάσιο του βήματος διάρκειας προσωρινού βασικού ρυθμού της αντλίας σας.
 
 
 ### Κύκλωμα
 
-| Command           | Auth | Function & *Response*                                                                                                                                                                                                                     |
-| ----------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LOOP STATUS       | No   | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled or LGS<br/> - *Loop is enabled* if the loop is closed or open<br/> - *Suspended (10 min)* if the loop is disconnected or suspended |
-| LOOP STOP/DISABLE | Yes  | The pump will revert to the pre-programmed basal rate.<br/>*Loop has been disabled*                                                                                                                                                 |
-| LOOP START/ENABLE | Yes  | *Loop has been enabled*                                                                                                                                                                                                                   |
-| LOOP SUSPEND 20   | Yes  | *Loop suspended for 20 minutes*                                                                                                                                                                                                           |
-| LOOP RESUME       | Yes  | *Loop resumed*                                                                                                                                                                                                                            |
-| LOOP CLOSED       | Yes  | *Current loop mode: Closed Loop*                                                                                                                                                                                                          |
-| LOOP LGS          | Yes  | *Current loop mode: Low Glucose Suspend*                                                                                                                                                                                                  |
+| Εντολή            | Έλεγχος | Λειτουργία και *Απάντηση*                                                                                                                                                                                                                                                                                |
+| ----------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LOOP STATUS       | Όχι     | Η απάντηση εξαρτάται από την τρέχουσα κατάσταση:<br/> - *Κύκλωμα απενεργοποιημένο* αν το κύκλωμα είναι απενεργοποιημένο ή σε LGS<br/> - *Κύκλωμα ενεργοποιημένο* αν το κύκλωμα είναι κλειστό ή ανοιχτό<br/> - *Σε αναστολή (10 λεπ.)* αν το κύκλωμα είναι αποσυνδεδεμένο ή σε αναστολή |
+| LOOP STOP/DISABLE | Ναι     | Η αντλία θα επιστρέψει στον προγραμματισμένο βασικό ρυθμό.<br/>*Το κύκλωμα απενεργοποιήθηκε*                                                                                                                                                                                                       |
+| LOOP SUSPEND 20   | Ναι     | *Κύκλωμα σε αναστολή για 20 λεπτά*                                                                                                                                                                                                                                                                       |
+| LOOP RESUME       | Ναι     | *Το κύκλωμα συνεχίστηκε*                                                                                                                                                                                                                                                                                 |
+| LOOP CLOSED       | Ναι     | *Τρέχων τρόπος λειτουργίας: Κλειστό Κύκλωμα*                                                                                                                                                                                                                                                             |
+| LOOP LGS          | Ναι     | *Τρέχων τρόπος λειτουργίας: Αναστολή Χαμηλής Γλυκόζης*                                                                                                                                                                                                                                                   |
 
-### Δόση ινσουλίνης
+### Bolus
 
-Η απομακρυσμένη δόση ινσουλίνης δεν επιτρέπεται εντός 15 λεπτών (η τιμή αυτή είναι επεξεργάσιμη μόνο αν προστεθούν 2 τηλεφωνικοί αριθμοί) μετά την τελευταία εντολή για δόση ινσουλίνης ή τις απομακρυσμένες εντολές δόσης ινσουλίνης! In this case, the response would be *Remote bolus not available. Try again later.* This response is also sent when the pump is currently delivering a bolus.
+Το απομακρυσμένο bolus δεν επιτρέπεται για 15 λεπτά (αυτή η τιμή αλλάζει μόνο αν έχουν προστεθεί 2 αριθμοί τηλεφώνου) μετά την τελευταία εντολή bolus ή απομακρυσμένη εντολή! Σε αυτή την περίπτωση η απάντηση θα είναι *Απομακρυσμένο bolus μη διαθέσιμο. Δοκιμάστε ξανά αργότερα.* Αυτή η απάντηση στέλνεται επίσης όταν η αντλία χορηγεί εκείνη τη στιγμή ένα bolus.
 
-| Command              | Auth | Function & *Response*                                                                                                        |
-| -------------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------- |
-| BOLUS 1.2            | Yes  |                                                                                                                              |
-| BOLUS 0.60 MEAL      | Yes  | Delivers the specified 0.60U bolus<br/>**and** sets the [Eating Soon TempTarget](#TempTargets-eating-soon-temp-target) |
-| CARBS 5              | Yes  | To enter 5g, without a bolus                                                                                                 |
-| CARBS 5 17:35/5:35PM | Yes  | To enter 5g at 17:35.<br/>The acceptable time format depends<br/> on the time setting (12h/24h) on the phone.    |
-| EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#screens-action-tab).                          |
-| EXTENDED STOP/CANCEL | Yes  | To stop extended bolus                                                                                                       |
+| Εντολή               | Έλεγχος | Λειτουργία και *Απάντηση*                                                                                                                                           |
+| -------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BOLUS 1.2            | Ναι     |                                                                                                                                                                     |
+| BOLUS 0.60 MEAL      | Ναι     | Χορηγεί το ορισμένο bolus 0,60U<br/>**και** ορίζει τον [προσωρινό στόχο «Γεύμα Σύντομα»](#TempTargets-eating-soon-temp-target)                                |
+| CARBS 5              | Ναι     | Καταχωρεί 5g, χωρίς bolus                                                                                                                                           |
+| CARBS 5 17:35/5:35PM | Ναι     | Καταχωρεί 5g στις 17:35.<br/>Η αποδεκτή μορφή ώρας εξαρτάται<br/> από τη ρύθμιση ώρας (12ω/24ω) του τηλεφώνου.                                          |
+| EXTENDED 2 120       | Ναι     | Ξεκινά εκτεταμένο bolus 2U για 120 λεπτά.<br/>Μόνο για [συμβατές αντλίες](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only). |
+| EXTENDED STOP/CANCEL | Ναι     | Σταματά το εκτεταμένο bolus                                                                                                                                         |
 
-### Profile
+### Προφίλ
 
-| Command        | Auth | Function & *Response*                                                                                                                                        |
-| -------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| PROFILE STATUS | No   | Current profile and percentage                                                                                                                               |
-| PROFILE LIST   | No   | The current list of profiles in **AAPS**, e.g.:<br/>1. Profile1<br/> 2. Profile2                                                                 |
-| PROFILE 1      | Yes  | To switch profile to profile 1 in the list.<br/>Use the numbers as returned by the **PROFILE LIST**,<br/>not the profile names as you saved them |
-| PROFILE 2 30   | Yes  | To switch profile to Profile2 30%                                                                                                                            |
+| Εντολή         | Έλεγχος | Λειτουργία και *Απάντηση*                                                                                                                                                  |
+| -------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PROFILE STATUS | Όχι     | Τρέχον προφίλ και ποσοστό                                                                                                                                                  |
+| PROFILE LIST   | Όχι     | Η τρέχουσα λίστα προφίλ στο **AAPS**, π.χ.:<br/>1. Profile1<br/> 2. Profile2                                                                                   |
+| PROFILE 1      | Ναι     | Αλλάζει στο προφίλ 1 της λίστας.<br/>Χρησιμοποιήστε τους αριθμούς που επιστρέφει η εντολή **PROFILE LIST**,<br/>όχι τα ονόματα των προφίλ όπως τα αποθηκεύσατε |
+| PROFILE 2 30   | Ναι     | Αλλάζει στο Profile2 με 30%                                                                                                                                                |
 
-### Temporary Targets
+Το ποσοστό πρέπει να είναι μεταξύ 30 και 250%, όπως στην εφαρμογή. Μια τιμή εκτός αυτού του εύρους απορρίπτεται πριν σας ζητηθεί ο κωδικός ελέγχου ταυτότητας.
 
-| Command                   | Auth | Function & *Response*                     |
-| ------------------------- | ---- | ----------------------------------------- |
-| TARGET MEAL/ACTIVITY/HYPO | Yes  | To set the Temp Target MEAL/ACTIVITY/HYPO |
-| TARGET STOP/CANCEL        | Yes  | To cancel Temp Target                     |
+### Προσωρινοί Στόχοι
+
+| Εντολή                    | Έλεγχος | Λειτουργία και *Απάντηση*                     |
+| ------------------------- | ------- | --------------------------------------------- |
+| TARGET MEAL/ACTIVITY/HYPO | Ναι     | Ορίζει τον προσωρινό στόχο MEAL/ACTIVITY/HYPO |
+| TARGET STOP/CANCEL        | Ναι     | Ακυρώνει τον προσωρινό στόχο                  |
 
 
 (SMSCommands-other)=
 ### Άλλο
 
-| Command            | Auth | Function & *Response*                                                                                                                                                                                     |
-| ------------------ | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| TREATMENTS REFRESH | No   | Refresh treatments from NS                                                                                                                                                                                |
-| AAPSCLIENT RESTART | No   | Useful if you notice a communication problem<br/>with Nightscout or **AAPSClient**                                                                                                                  |
-| RESTART            | No   | Restarts AAPS. Useful if you got issues that normally is resolved with a restart.                                                                                                                         |
-| SMS DISABLE/STOP   | No   | To disable the SMS Remote Service reply with code Any.<br/>Keep in mind that you'll able to reactivate it directly<br/>from the **AAPS** master smartphone only.                              |
-| HELP               | No   | Returns all functions available for interrogation:<br/>BG, LOOP, TREATMENTS, ....<br/>Send further ***HELP ***FUNCTION****** command to list<br/>all options available in this section. |
-| HELP BOLUS         |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                      |
+| Εντολή           | Έλεγχος | Λειτουργία και *Απάντηση*                                                                                                                                                                                                                                                                |
+| ---------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RESTART          | Ναι     | Επανεκκινεί το AAPS. Χρήσιμο αν έχετε προβλήματα που συνήθως λύνονται με επανεκκίνηση.                                                                                                                                                                                                   |
+| SMS DISABLE/STOP | Ναι     | Για να απενεργοποιήσετε την απομακρυσμένη υπηρεσία SMS, απαντήστε με τον κωδικό.<br/>Έχετε υπόψη ότι θα μπορείτε να την ενεργοποιήσετε ξανά<br/>μόνο απευθείας από το κύριο (master) τηλέφωνο του **AAPS**.                                                                  |
+| HELP             | Όχι     | Επιστρέφει όλες τις λειτουργίες που μπορείτε να ζητήσετε:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>Στείλτε επιπλέον την εντολή ***HELP ***FUNCTION****** για να δείτε<br/>όλες τις επιλογές αυτής της ενότητας. |
+| HELP BOLUS       |         | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                                                                                                     |
 
 (SMSCommands-troubleshooting)=
-## Troubleshooting and FAQ
+## Αντιμετώπιση προβλημάτων και συχνές ερωτήσεις
 
 ```{contents} List of questions and issues
 :depth: 1
 :local: true
 ```
 
-### What _can’t_ we do with SMS commands?
+### Τι _δεν_ μπορούμε να κάνουμε με τις εντολές SMS;
 
-1)  **You cannot set a _temporary_ profile switch** (so for example, setting "profile exercise" for 60 minutes), although you can permanently switch to “profile exercise”. Temporary profiles switches can instead be set through Nightscout or AAPSClient.
+1)  **Δεν μπορείτε να ορίσετε _προσωρινή_ αλλαγή προφίλ** (για παράδειγμα, να ορίσετε το «profile exercise» για 60 λεπτά), αν και μπορείτε να αλλάξετε μόνιμα στο «profile exercise». Αντί γι' αυτό, οι προσωρινές αλλαγές προφίλ μπορούν να γίνουν μέσω του **AAPSClient**.
 
-2)  **You cannot cancel automations** or **set user-defined targets** but there are approximate solutions: As an example, imagine the normal profile target is 5.5. You have set an automation in AAPS, to always set a high target of 7.0 between 2.30pm and 3.30pm because of a sports class in school, and a condition of the automation is that “no temp target exists”. This week, you have been told at short notice that the sports class is cancelled, and is being replaced by a pizza-eating session, but your kid is already at school with the **AAPS** phone. If the high temporary target of 7.0 is started by the automation, and you cancel it (on the **AAPS** phone, or remotely) the conditions for the automation are still met and **AAPS** will simply set the high target again, a minute later.
+2)  **Δεν μπορείτε να ακυρώσετε αυτοματισμούς** ή να **ορίσετε στόχους της επιλογής σας**, αλλά υπάρχουν κατά προσέγγιση λύσεις: Για παράδειγμα, ας πούμε ότι ο κανονικός στόχος του προφίλ είναι 5,5. Έχετε ορίσει έναν αυτοματισμό στο AAPS που ορίζει πάντα υψηλό στόχο 7,0 από τις 14:30 έως τις 15:30, λόγω μαθήματος γυμναστικής στο σχολείο, και μια συνθήκη του αυτοματισμού είναι «δεν υπάρχει προσωρινός στόχος». Αυτή την εβδομάδα σας είπαν τελευταία στιγμή ότι το μάθημα γυμναστικής ακυρώνεται και αντί γι' αυτό θα φάνε πίτσα, αλλά το παιδί σας είναι ήδη στο σχολείο με το τηλέφωνο του **AAPS**. Αν ο υψηλός προσωρινός στόχος 7,0 ξεκινήσει από τον αυτοματισμό και τον ακυρώσετε (στο τηλέφωνο του **AAPS** ή απομακρυσμένα), οι συνθήκες του αυτοματισμού εξακολουθούν να ισχύουν και το **AAPS** απλώς θα ορίσει ξανά τον υψηλό στόχο ένα λεπτό αργότερα.
 
-**If you did have access to the AAPS phone**, you could uncheck/modify the automation, or, if you don’t want to do that, you could simply set a new temp target of 5.6 for 60 min under the Actions Tab or by pressing on the target tab. This would prevent the automation from setting the high target of 7.0.
+**Αν είχατε πρόσβαση στο τηλέφωνο του AAPS**, θα μπορούσατε να απενεργοποιήσετε/αλλάξετε τον αυτοματισμό ή, αν δεν θέλετε να το κάνετε αυτό, θα μπορούσατε απλώς να ορίσετε νέο προσωρινό στόχο 5,6 για 60 λεπτά πατώντας τον στόχο στην κύρια οθόνη, ή μέσω **Διαχείριση** → **Προσωρινός Στόχος**. Αυτό θα εμπόδιζε τον αυτοματισμό να ορίσει τον υψηλό στόχο 7,0.
 
-**If you don’t have access to the AAPS phone** SMS commands can be used for an approximate fix: for example, by using the command “target meal” to set a target of 5.0 for 45 mins (other default targets are 8.0 for activity or hypo, see Table). However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use **AAPSClient** or Nightscout to do this.
+**Αν δεν έχετε πρόσβαση στο τηλέφωνο του AAPS**, οι εντολές SMS μπορούν να χρησιμοποιηθούν για μια κατά προσέγγιση λύση: για παράδειγμα, με την εντολή «target meal» για να ορίσετε στόχο 5,0 για 45 λεπτά (οι άλλοι προεπιλεγμένοι στόχοι είναι 8,0 για δραστηριότητα ή υπογλυκαιμία, δείτε τον πίνακα). Όμως με τις εντολές SMS δεν μπορείτε να ορίσετε μια _συγκεκριμένη_ τιμή στόχου (για παράδειγμα 5,6 για 60 λεπτά)· για αυτό θα χρειαστείτε το **AAPSClient**.
 
-### What happens if I change my mind about a command I have just sent?
+### Τι γίνεται αν αλλάξω γνώμη για μια εντολή που μόλις έστειλα;
 
-**AAPS** will only deliver on the most recent command. So, if you type “bolus 1.5”, and then, without authenticating, you send a new command “bolus 1”, it will ignore the earlier 1.5 command. **AAPS** will always send the caregiver's phone a response to confirm what the SMS command is before you are prompted to enter the authentication code, as well as a response following the action.
+Το **AAPS** εκτελεί μόνο την πιο πρόσφατη εντολή. Έτσι, αν γράψετε «bolus 1.5» και μετά, χωρίς έλεγχο ταυτότητας, στείλετε νέα εντολή «bolus 1», θα αγνοήσει την προηγούμενη εντολή 1.5. Το **AAPS** στέλνει πάντα στο τηλέφωνο του φροντιστή μια απάντηση που επιβεβαιώνει ποια είναι η εντολή SMS, πριν σας ζητηθεί ο κωδικός ελέγχου ταυτότητας, καθώς και μια απάντηση μετά την ενέργεια.
 
-### Why didn't I get a response to an SMS command?
+### Γιατί δεν πήρα απάντηση σε μια εντολή SMS;
 
-It could be for one of these reasons:
+Μπορεί να οφείλεται σε έναν από αυτούς τους λόγους:
 
-1)  The message has not got through to the phone (network issues). 2)  **AAPS** is still in the process of processing the request (_e.g._ a bolus, which can take some time to deliver depending on your bolus rate). 3)  The **AAPS** phone does not have good bluetooth connection to the pump when the command is received, and the command has failed (this usually creates an alarm on the **AAPS** phone).
+1)  Το μήνυμα δεν έφτασε στο τηλέφωνο (προβλήματα δικτύου). 2)  Το **AAPS** επεξεργάζεται ακόμη το αίτημα (_π.χ._ ένα bolus, που μπορεί να χρειαστεί λίγο χρόνο για να χορηγηθεί, ανάλογα με την ταχύτητα bolus). 3)  Το τηλέφωνο του **AAPS** δεν έχει καλή σύνδεση Bluetooth με την αντλία όταν λαμβάνεται η εντολή, και η εντολή απέτυχε (αυτό συνήθως προκαλεί συναγερμό στο τηλέφωνο του **AAPS**).
 
-### No response whatsoever for SMS commands
+### Καμία απολύτως απάντηση στις εντολές SMS
 
-On the caregiver phone and/or **AAPS** phone, try disabling the following options :
-* **Send as chat message** ![Disable SMS as chat message](../images/SMSdisableChat.png)
-* If using Android Messages App or Google Messages App, disable RCS messaging:
-  - open the specific SMS conversation in Messages
-  - Select the options ellipsis in the top right corner
-  - select "Details"
-  - Activate "Only send SMS and MMS messages" ![Disable RCS as chat message](../images/SMSdisableRCS.png)
+Στο τηλέφωνο του φροντιστή και/ή στο τηλέφωνο του **AAPS**, δοκιμάστε να απενεργοποιήσετε τις παρακάτω επιλογές:
+* **Αποστολή ως μήνυμα συνομιλίας** ![Απενεργοποιήστε την αποστολή SMS ως μήνυμα συνομιλίας](../images/SMSdisableChat.png)
+* Αν χρησιμοποιείτε την εφαρμογή Android Messages ή Google Messages, απενεργοποιήστε τα μηνύματα RCS:
+  - ανοίξτε τη συγκεκριμένη συνομιλία SMS στα Μηνύματα
+  - Επιλέξτε το μενού επιλογών (τρεις τελείες) πάνω δεξιά
+  - επιλέξτε «Λεπτομέρειες»
+  - Ενεργοποιήστε το «Only send SMS and MMS messages» (μόνο αποστολή μηνυμάτων SMS και MMS) ![Απενεργοποιήστε το RCS ως μήνυμα συνομιλίας](../images/SMSdisableRCS.png)
 
-### Errors carrying out commands
+### Σφάλματα κατά την εκτέλεση εντολών
 
-There are several possible reasons the command may not be successful:
+Υπάρχουν διάφοροι πιθανοί λόγοι για τους οποίους η εντολή μπορεί να μην πετύχει:
 
-* SMS commands setup isn’t complete/correct
-* You sent a command which had an incorrect format (like “disconnect pump 45” instead of “pump disconnect 45”)
-* You used an incorrect, or expired authenticator code (it is usually good to wait a few seconds for a fresh code, if the current one is about to expire)
-* The code+PIN was OK, but there was a delay in the SMS leaving/arriving, which led **AAPS** to calculate that the authenticator code had expired
-* The **AAPS** phone is out of range/contact with the pump
-* The system is already busy delivering a bolus
+* Η ρύθμιση των εντολών SMS δεν είναι πλήρης/σωστή
+* Στείλατε μια εντολή σε λάθος μορφή (όπως «disconnect pump 45» αντί για «pump disconnect 45»)
+* Χρησιμοποιήσατε λάθος ή ληγμένο κωδικό ελέγχου ταυτότητας (συνήθως καλό είναι να περιμένετε λίγα δευτερόλεπτα για νέο κωδικό, αν ο τρέχων πρόκειται να λήξει)
+* Ο κωδικός+PIN ήταν σωστός, αλλά υπήρξε καθυστέρηση στην αποστολή/άφιξη του SMS, και έτσι το **AAPS** υπολόγισε ότι ο κωδικός ελέγχου ταυτότητας είχε λήξει
+* Το τηλέφωνο του **AAPS** είναι εκτός εμβέλειας/χωρίς επαφή με την αντλία
+* Το σύστημα ήδη χορηγεί ένα bolus
 
-Common errors are shown in the examples below:
+Τα συνηθισμένα σφάλματα φαίνονται στα παρακάτω παραδείγματα:
 
 ![image](../images/remote-control-17.png)
 
-### How can I stop a command once it has been authenticated?
+### Πώς μπορώ να σταματήσω μια εντολή αφού έχει περάσει τον έλεγχο ταυτότητας;
 
-You can't. However, you can cancel a bolus sent by SMS on the **AAPS** phone itself, by simply cancelling it on the bolusing popup, if you are quick. Many SMS commands (apart from bolusing and carb announcements) can be easily reversed, or actions taken to mitigate unintended effects if a mistake is made.
+Δεν μπορείτε. Μπορείτε όμως να ακυρώσετε ένα bolus που στάλθηκε με SMS στο ίδιο το τηλέφωνο του **AAPS**, απλώς ακυρώνοντάς το στο αναδυόμενο παράθυρο του bolus, αν είστε γρήγοροι. Πολλές εντολές SMS (εκτός από bolus και καταχώριση υδατανθράκων) αναιρούνται εύκολα, ή μπορείτε να κάνετε ενέργειες για να περιορίσετε τις ανεπιθύμητες συνέπειες ενός λάθους.
 
-For errors in bolusing and carb announcements, you can still take action. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
+Για λάθη σε bolus και σε καταχώριση υδατανθράκων, μπορείτε επίσης να κάνετε κάτι. Για παράδειγμα, αν καταχωρίσατε 20g υδατάνθρακες αλλά το παιδί σας τρώει μόνο 10g, και εσείς (ή ένας φροντιστής που είναι εκεί) δεν μπορείτε να διαγράψετε τη θεραπεία απευθείας στο τηλέφωνο του **AAPS**, μπορείτε να ορίσετε υψηλό προσωρινό στόχο ή μειωμένο προφίλ, ώστε το **AAPS** να γίνει λιγότερο επιθετικό.
 
 ### Πολλαπλά SMS
 
-If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. This could be xDrip+, for example. If so, please ensure that xDrip+ (or any other app) does not upload treatments to NightScout.
+Αν λαμβάνετε το ίδιο μήνυμα ξανά και ξανά (_π.χ._ μια αλλαγή προφίλ), μπορεί κατά λάθος να έχετε δημιουργήσει έναν ατέρμονο βρόχο με άλλες εφαρμογές. Αυτή θα μπορούσε να είναι, για παράδειγμα, το xDrip. Αν ναι, βεβαιωθείτε ότι το xDrip (ή οποιαδήποτε άλλη εφαρμογή) δεν ανεβάζει θεραπείες στο Nightscout.
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+Εάν η άλλη εφαρμογή είναι εγκατεστημένη σε πολλά τηλέφωνα, βεβαιωθείτε ότι απενεργοποιήσατε τη μεταφόρτωση σε όλα τα τηλέφωνα.
 
 (sms-commands-too-many-messages)=
-### I am getting far too many text messages from SMS Commands. Can I reduce the frequency, or make them stop?
+### Λαμβάνω πάρα πολλά μηνύματα κειμένου από τις εντολές SMS. Μπορώ να μειώσω τη συχνότητα ή να τα σταματήσω;
 
-Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include Whatsapp, Lime, Telegram, and Facebook Messenger.
+Η χρήση εντολών SMS μπορεί να δημιουργήσει πολλά αυτόματα μηνύματα από το τηλέφωνο του **AAPS** προς το τηλέφωνο του φροντιστή. Θα λαμβάνετε επίσης μηνύματα, για παράδειγμα «basal profile in pump updated» (το προφίλ βασικού ρυθμού στην αντλία ενημερώθηκε), αν έχετε ρυθμίσει αυτοματισμούς στο **AAPS**. Μπορεί να είναι χρήσιμο να έχετε απεριόριστα SMS στο πρόγραμμα του τηλεφώνου του **AAPS** (και για κάθε τηλέφωνο φροντιστή) αν στέλνονται πολλά SMS, και να απενεργοποιήσετε τις ειδοποιήσεις, τους ήχους ή τις δονήσεις για SMS σε όλα τα τηλέφωνα. Δεν μπορείτε να χρησιμοποιείτε εντολές SMS χωρίς να λαμβάνετε αυτές τις ενημερώσεις. Γι' αυτό, ίσως θέλετε έναν άλλο τρόπο για να επικοινωνείτε απευθείας με το παιδί σας (αν είναι αρκετά μεγάλο), αντί για SMS. Συνηθισμένες εναλλακτικές εφαρμογές επικοινωνίας που χρησιμοποιούν οι φροντιστές του **AAPS** είναι οι Whatsapp, Lime, Telegram και Facebook Messenger.
 
-It is possible do disabled the "Profile changed" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly**  `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+Μπορείτε να απενεργοποιήσετε το SMS «Profile changed» (Το προφίλ άλλαξε), όταν η αλλαγή προφίλ προήλθε από το Nightscout. Για να το κάνετε, δημιουργήστε ένα αρχείο με όνομα **ακριβώς**  `do_not_send_sms_on_profile_change` στον φάκελο `extra` του φακέλου AAPS σας.

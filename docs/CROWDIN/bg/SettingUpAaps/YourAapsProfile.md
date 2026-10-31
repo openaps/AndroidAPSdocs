@@ -1,365 +1,355 @@
-# Your AAPS profile
+# Вашият профил в AAPS
 
-Your **AAPS Profile** is a set of five key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. These are the main parameters **AAPS** is built upon. As you progress through the **Objectives**, you will unlock additional modifiable parameters (like SMB settings), but the performance of these features rely on your underlying **Profile** being correct. The **Profile** incorporates:
-* [duration of insulin action](#your-aaps-profile-duration-of-insulin-action) (DIA),
-* [glucose targets](#profile-glucose-targets),
-* [basal rates](#your-aaps-profile-basal-rates) (BR),
-* [insulin sensitivity factors](#your-aaps-profile-insulin-sensitivity-factor) (ISF) and
-* [insulin-to-carb ratios](#your-aaps-profile-insulin-to-carbs-ratio) (IC or ICR).
+Вашият **Профил в AAPS** е набор от четири основни параметъра, които определят как **AAPS** трябва да подава инсулин според стойностите на глюкозата от сензора. Това са основните параметри, на които се основава **AAPS**. Докато напредвате през **Целите**, ще отключвате допълнителни параметри, които могат да се променят (например настройките на SMB), но работата на тези функции зависи от това дали основният ви **Профил** е правилен. **Профилът** включва:
+* [целеви стойности на КЗ](#profile-glucose-targets),
+* [базални дози](#your-aaps-profile-basal-rates) (BR),
+* [фактори на инсулинова чувствителност](#your-aaps-profile-insulin-sensitivity-factor) (ISF) и
+* [коефициенти инсулин/въглехидрати](#your-aaps-profile-insulin-to-carbs-ratio) (IC или ICR).
 
-As part of **AAPS**’ management, users should continually assess and scrutinise the accuracy of their **Profile** settings. It is recommended to take the settings in the order they are presented here. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. Don't forget to activate the new profile after each change. Regularly [backup your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your Preferences.
+```{admonition} Where did DIA go?
+:class: note
+**Времето на действие на инсулина (DIA)** вече не е част от вашия **Профил**. Вместо това то се задава за всеки инсулин – вижте [Управление → Настройки на инсулина](#Config-Builder-insulin-dia).
+```
 
-Your **Profile** settings interact with one another - you can have 'wrong' settings that work well together in certain circumstances but do not in others. For instance, if a too-high basal happens to be at the same time as a too-high **CR**. This means that you need to consider the settings individually and check they work harmoniously together in a variety of circumstances.
+Като част от управлението с **AAPS** потребителите трябва постоянно да преценяват и проверяват точността на настройките на своя **Профил**. Препоръчително е да настройвате параметрите в реда, в който са представени тук. Стремете се да настроите правилно един параметър, преди да промените друг. Работете на малки стъпки, вместо да правите големи промени наведнъж. Не забравяйте да активирате новия профил след всяка промяна. Редовно [правете резервно копие на настройките на вашия **Профил**](#YourAapsProfile_Profile-backup), като експортирате настройките си.
 
-You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances.
+Настройките на вашия **Профил** си влияят взаимно – може да имате „грешни“ настройки, които работят добре заедно при определени обстоятелства, но не и при други. Например ако твърде висок базал съвпадне по време с твърде висок **CR**. Затова трябва да разгледате всяка настройка поотделно и да проверите дали работят добре заедно при различни обстоятелства.
+
+Можете да използвате [Autotune](https://autotuneweb.azurewebsites.net/) като помощ при обмислянето, но не го следвайте сляпо: може да не работи добре за вас или при всички обстоятелства.
 
 ```{admonition} Your diabetes may vary
-:class: information
-**Profiles** vary significantly from person-to-person.
+:class: note
+**Профилите** се различават значително при различните хора.
 
-For basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Brights Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+При базалните дози (BR), факторите на инсулинова чувствителност (ISF) и коефициентите инсулин/въглехидрати (IC или ICR) абсолютните стойности и тенденциите в нуждата от инсулин се различават значително при различните хора. Те зависят от вашата биология, пол, възраст, физическа форма и т.н., както и от краткосрочни фактори като болест и скорошно физическо натоварване. For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
 
 ```
 
-The four last parameters (glucose targets, basal rates, insulin sensitivity factors and insulin-to-carb ratios) can be set to different values, changing hourly if required, over a 24-hour period.
+Последните четири параметъра (целеви стойности на КЗ, базални дози, фактори на инсулинова чувствителност и коефициенти инсулин/въглехидрати) могат да имат различни стойности в рамките на 24 часа, като при нужда се променят всеки час.
 
-![Hourly change of basal](../images/MaxDailyBasal2.png)
+![Промяна на базала всеки час](../images/MaxDailyBasal2.png)
 
-Screenshots from **AAPS** of an _example_ profile are shown below. Please note, this sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
+По-долу са показани екранни снимки от **AAPS** на _примерен_ профил. Моля, имайте предвид, че примерният профил по-долу има голям брой времеви точки. Когато започвате с **AAPS**, вашият профил вероятно ще бъде много по-прост.
 
-(your-aaps-profile-duration-of-insulin-action)=
-## Duration of insulin action (DIA)
-
-### Description
-
-The length of time that insulin takes to decay to zero.
-
-The duration of insulin action is set to a single value in **AAPS**, because your pump will continually infuse the same type of insulin.
-
-![Sample insulin Profile](../images/Screenshot_insulin_profile.png)
-
-In combination with the [insulin type](#Config-Builder-insulin), this will result in the [insulin profile](#AapsScreens-insulin-profile), as shown in the image above. The important thing to note is that the decay has a **long tail**. If you have been used to manual pumping, you have probably been used to assuming that insulin decays over a much shorter period i.e. about 3.5 hours. However, when you are looping, the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the **AAPS** algorithm. Therefore, **AAPS** uses minimum 5h as **DIA**.
-
-Additional reading on the topic of duration of insulin action, and why it matters :
-* [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) on OpenAPS documentation.
-* [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) on Diabettech.
-* [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) on See My CGM (archive).
-* [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) and other articles on Bionic Wookie, recommending a DIA of 9h for Lyumjev, Fiasp, NovoRapid, Humalog.
-
-
-### Impact
-
-Too short **DIA** can lead to low BGs. And vice versa.
-
-If **DIA** is too short, **AAPS** will calculate too early that your previous bolus is all consumed, and if your **BG** is still high, it will over-deliver in insulin. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that **AAPS** is unaware of. This is especially noticeable at night, if you see negative IOB with no other explanation than the queue of the last bolus.
-
-Example of a too-short **DIA** is a **high BG** followed by **AAPS** over-correcting and giving a **low BG**.
-
-### How to set it
-
-The **figure below** shows an example of how the **DIA** is set in an **AAPS** profile.
-
-![DIA](../images/Profile_DIA.png)
-
-The **DIA** setting is often set too short by new users. A **DIA** of 6 or 7 is probably a good place to start. A growing number of people find that a **DIA** of 8 to 9 hours works good for them. See the additional reading mentioned above.
+![Пример за активен профил](../images/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
-## Glucose targets
+## Целеви стойности на КЗ
 
-### Description
+### Описание
 
-Your **BG target** is a core value and all of **AAPS** calculations are based on it. It is different from the target range which you usually aim to keep your blood glucose values in. The target is used in **AAPS** calculations: if **AAPS** predicts that your **BG** will land outside the target range, then it will take action to take you back in said range.
+Вашата **целева КЗ** е основна стойност и всички изчисления на **AAPS** се базират на нея. Тя е различна от целевия диапазон, в който обикновено се стремите да поддържате стойностите на КЗ. Целта се използва в изчисленията на **AAPS**: ако **AAPS** прогнозира, че вашата **КЗ** ще излезе извън целевия диапазон, той ще предприеме действия, за да ви върне в този диапазон.
 
-The targets can be defined within those boundaries :
+Целевите стойности могат да се задават в тези граници:
 
-|         | _Low_ target           | _High_ target          |
-| ------- | ---------------------- | ---------------------- |
-| Minimum | 4 mmol/l or 72 mg/dL   | 5 mmol/l or 90 mg/dL   |
-| Maximum | 10 mmol/l or 180 mg/dL | 15 mmol/l or 225 mg/dL |
+|          | _Ниска_ цел             | _Висока_ цел              |
+| -------- | ----------------------- | ------------------------- |
+| Минимум  | 4,4 mmol/l или 80 mg/dl | 5 mmol/l или 90 mg/dl     |
+| Максимум | 10 mmol/l или 180 mg/dl | 11,1 mmol/l или 200 mg/dl |
 
-### Impact
+### Въздействие
 
-If the target in your **Profile** is very wide (say, 3 or more mmol/l [50 mg/dl or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate are unlikely to be actioned by **AAPS**.
+Ако целта във вашия **Профил** е много широка (например 3 или повече mmol/l [50 mg/dl или повече]), често ще виждате малко действия от **AAPS**. Причината е, че нивото на **КЗ** се прогнозира някъде в този широк диапазон и затова е малко вероятно **AAPS** да задава временни базали.
 
-### How to set it
+### Как да го настроите
 
-The **figure below** shows an example of how the target can be set in an **AAPS** profile.
+**Фигурата по-долу** показва пример как може да се зададе целта в профил на **AAPS**.
 
-![Target](../images/Profile_Target.png)
+![Цел](../images/Profile_Target.png)
 
-**BG** targets are set according to your personal preferences and requirements. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117 mg/dL (6.5 mmol/L) from 9 pm - 7am. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
+Целевите стойности на **КЗ** се задават според вашите лични предпочитания и нужди. Например ако се притеснявате от хипогликемии през нощта, можете да зададете малко по-висока цел – 117 mg/dl (6,5 mmol/l) от 21:00 до 7:00 ч. Ако искате да сте сигурни, че сутрин имате достатъчно активен инсулин (IOB), преди да си поставите болус за закуската, можете да зададете по-ниска цел от 81 mg/dl (4,5 mmol/l) от 7 до 8 ч.
 
-When In [Open Loop](#KeyAapsFeatures-OpenLoop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/> When In [Closed Loop](#KeyAapsFeatures-ClosedLoop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
+Когато сте в режим [Отворен кръг](#KeyAapsFeatures-OpenLoop), особено докато преминавате през [първите цели](../SettingUpAaps/CompletingTheObjectives.md), широкият целеви диапазон може да е добър вариант, докато научавате как се държи **AAPS** и настройвате вашия **Профил**.<br/> Когато сте в режим [Затворен кръг](#KeyAapsFeatures-ClosedLoop) (от **[Цел 6](#objectives-objective6)** нататък), препоръчително е да стеснявате диапазона, докато имате една цел за всяко време от деня (_Ниска_ цел = _Висока_ цел), за да сте сигурни, че **AAPS** реагира бързо на колебанията на **КЗ**.
 
 (your-aaps-profile-basal-rates)=
 
-## Basal rates
+## Базални дози
 
-### Description
+### Описание
 
-Your basal rate of insulin (Units/hour) provides background insulin, keeping your glucose levels stable in the absence of food or exercise.
+Базалната доза инсулин (единици/час) осигурява фоновия инсулин и поддържа нивото на глюкозата стабилно, когато не се храните и не спортувате.
 
-The insulin pump delivers small amounts of rapid acting insulin every few minutes, to keep the liver from releasing too much glucose, and to move glucose into body cells. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. For more information, chapter 6 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner is very useful.
+Инсулиновата помпа подава малки количества бързодействащ инсулин на всеки няколко минути, за да не позволи на черния дроб да отделя твърде много глюкоза и да вкарва глюкозата в клетките на тялото. Базалният инсулин обикновено е между 40 и 50 % от общата дневна доза (TDD) в зависимост от храненето ви и обикновено следва денонощен ритъм, с един връх и един спад в нуждата от инсулин за 24 часа. За повече информация много полезна е глава 6 на [„Think like a Pancreas“](https://amzn.eu/d/iVU0RGe) от Gary Scheiner.
 
-Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimise your ISF and ICR.
+Повечето обучители по диабет тип 1 (и хората с диабет тип 1!) са съгласни, че първо трябва да настроите правилно базалните дози, преди да се опитвате да оптимизирате ISF и ICR.
 
-### Impact
+### Въздействие
 
-Accurate basal rates enable you to wake up in range, and to skip meals - or eat - earlier or later in the day, without going high or low.
+Точните базални дози ви позволяват да се събудите в целевия диапазон и да пропуснете хранене – или да се храните – по-рано или по-късно през деня, без КЗ да стане висока или ниска.
 
-Too high basal rate can lead to low BGs. And vice versa.
+Твърде високата базална доза може да доведе до ниска КЗ. И обратно.
 
-**AAPS** ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to **AAPS** giving more subsequent corrections than it should to bring IOB ultimately to zero.
+**AAPS** използва стандартната базална доза като отправна точка. Ако базалната доза е твърде висока, „нулевият временен базал“ ще се отчете като по-голям отрицателен IOB, отколкото би трябвало. Това ще накара **AAPS** да дава повече последващи корекции, отколкото трябва, за да доведе в крайна сметка IOB до нула.
 
-So, a basal rate too high will create low **BGs** both with the default rate, but also some hours hence as **AAPS** corrects to target.
+Така твърде високата базална доза ще причини ниска **КЗ** както при стандартната доза, така и няколко часа по-късно, когато **AAPS** коригира към целта.
 
-Conversely, a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+Обратно, твърде ниската базална доза може да доведе до висока КЗ и до невъзможност нивата да се свалят до целта.
 
-### How to set it
+### Как да го настроите
 
-The **figure below** shows an example of how the basal rates can be set in an **AAPS** profile.
+**Фигурата по-долу** показва пример как могат да се зададат базалните дози в профил на **AAPS**.
 
-![Basal rates](../images/Profile_BasalRates.png)
+![Базални дози](../images/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetic team.
+Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetes team.
 
-There are basal testing methods which usually entails observing your basal rates and insulin needs during an <u>intermittent</u> fasting over a 24-hour period. Although you need to test your basal rates for the whole day, it is not recommended to fast during 24h straight. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast 3 times for 8 hours.
+Има методи за тестване на базала, които обикновено включват наблюдение на базалните дози и нуждата от инсулин при <u>периодично</u> гладуване в рамките на 24 часа. Въпреки че трябва да тествате базалните дози за цялото денонощие, не се препоръчва да гладувате 24 часа без прекъсване. Причината е, че тялото задейства механизми, например хормони, за да компенсира. Препоръчителен начин е да гладувате в 3 различни дни по 8 часа.
 
-The recommended method is to suspend the loop (for safety you can set AAPS to [**LGS**](#KeyAapsFeatures-LGS) to avoid lows, as done for achieving [objective 6](#objectives-objective6)), which will revert to your default background basal rate. Observe how your **BG** changes: if it is dropping, basal rate is too high. And vice versa.<br/> An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If **IOB** is negative, your basal rate is too high. And vice versa. Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/> Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyze overnight BG lines in order to optimize your basal rates.
+Препоръчителният метод е да спрете кръга (за безопасност можете да превключите AAPS в режим [**LGS**](#KeyAapsFeatures-LGS), за да избегнете хипогликемии, както при изпълнението на [цел 6](#objectives-objective6)). Тогава се връща вашата стандартна базална доза. Наблюдавайте как се променя вашата **КЗ**: ако спада, базалната доза е твърде висока. И обратно.<br/> Друг метод (може да е по-труден) е да оставите кръга да работи и да наблюдавате как се променя **IOB**. Ако **IOB** е отрицателен, базалната ви доза е твърде висока. И обратно. Внимавайте: този метод разчита на **ISF** за коригиране на **КЗ** и затова успехът му зависи от това дали другите параметри са настроени достатъчно добре.<br/> Друг начин за настройване на базалните дози е да наблюдавате действията на кръга през нощта, когато целият COB вече е усвоен. Този метод е особено полезен при деца, когато гладуването е трудно или нуждите от инсулин се променят често. [Д-р Saleh Adi от Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) показва полезни начини за анализ на нощните криви на КЗ, за да оптимизирате базалните дози.
 
-See [here](../GettingHelp/ProfileTuning.md) how to tweak your basal profile, analyzing patterns in closed loop.
+Вижте [тук](../GettingHelp/ProfileTuning.md) как да настроите базалния си профил чрез анализ на моделите при затворен кръг.
 
-When taking action on the result of your basal testing, changes in the **Profile** should be done 1 to 2 hours (depends on your insulin type) before the rise/drop. Repeat the test as necessary until you are comfortable with your **basal rates** settings.
+Когато действате според резултата от базалния тест, промените в **Профила** трябва да се правят 1–2 часа (в зависимост от вида инсулин) преди покачването/спадането. Повтаряйте теста, докато не сте уверени в настройките на **базалните дози**.
+
+(your-aaps-profile-basal-not-compatible)=
+#### Съобщение: „Базалът не се поддържа от помпата“
+
+Всяка помпа има ограничения: най-ниска и най-висока базална доза, която може да подава, а при някои помпи (например Dana, Accu-Chek Combo, Medtronic и Diaconn G8) – базални дози, които могат да се променят само на кръгъл час. **AAPS** проверява вашия профил спрямо помпата, която използвате, **след** прилагане на избрания от вас процент.
+
+Ако базална доза е извън тези граници, екранът **Активиране** показва това съобщение и бутонът **Активиране** остава сив:
+
+![Екран „Активиране“ със съобщението "Базалът не се поддържа от помпата"](../images/v4/Profiles/profile_activate_pump_incompatible.png)
+
+Например при базална доза 0,10 U/ч през нощта и процент на профила 35 % **AAPS** би трябвало да подава 0,035 U/ч. Това е по-малко, отколкото може да подаде помпа Dana (0,04 U/ч).
+
+За да решите проблема, или:
+
+* изберете друг процент: **по-висок**, ако базална доза стане твърде ниска, или **по-нисък**, ако базална доза стане твърде висока, или
+* [редактирайте профила](#your-aaps-profile-create-and-edit-profiles) и променете базалната доза.
+
+Редакторът на профили позволява базалните дози да започват само на кръгъл час. Базална доза, която започва например в 06:30, може да дойде само от по-стар профил, например след като преминете към помпа, която не поддържа това.
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 
-## Insulin sensitivity factor (ISF)
+## Фактор на инсулинова чувствителност (ISF)
 
-### Description
+### Описание
 
-The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin.
+Факторът на инсулинова чувствителност (понякога наричан корекционен фактор) показва с колко ще се понижи кръвната захар от 1 единица инсулин.
 
-**In mg/dL units:** If you have an **ISF** of 40, each unit of insulin will reduce your blood glucose by approx. 40 mg/dL (for example, your blood glucose will fall from 140 mg/dL to 100 mg/dL).
+**В единици mg/dl:** Ако вашият **ISF** е 40, всяка единица инсулин ще понижи КЗ с около 40 mg/dl (например КЗ ще спадне от 140 mg/dl на 100 mg/dl).
 
-**In mmol/L units:** If you have an **ISF** of 1.5, each unit of insulin will reduce your blood glucose by approx. 1.5 mmol/L (for example from 8 mmol/L to 6.5 mmol/L).
+**В единици mmol/l:** Ако вашият **ISF** е 1,5, всяка единица инсулин ще понижи КЗ с около 1,5 mmol/l (например от 8 mmol/l на 6,5 mmol/l).
 
-From these examples you can see that the _smaller_ the **ISF** value, the less sensitive you are to insulin. So if you reduce your ISF from 40 to 35 (mg/dl) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dl) or 1.5 to 1.8 mmol/L) is weakening your **ISF**.
+От тези примери се вижда, че колкото _по-малка_ е стойността на **ISF**, толкова по-малко чувствителни сте към инсулина. Така, ако намалите ISF от 40 на 35 (mg/dl) или от 1,5 на 1,3 (mmol/l), това често се нарича засилване на **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
 
-### Impact
+### Въздействие
 
-A **lower / stronger ISF** (i.e. 40 instead of 50) means insulin drops your **BG** less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If your **ISF** is too strong (small value), this can lead to low **BG**.
+**По-нисък / по-силен ISF** (напр. 40 вместо 50) означава, че инсулинът понижава **КЗ** по-малко на единица. Това води до по-агресивна / по-силна корекция от кръга с **повече инсулин**. Ако вашият **ISF** е твърде силен (малка стойност), това може да доведе до ниска **КЗ**.
 
-A **higher / weaker ISF** (i.e. 45 instead of 35) means insulin drops your **BG** more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If your **ISF** is too weak (large value), this can lead to high **BG**.
+**По-висок / по-слаб ISF** (напр. 45 вместо 35) означава, че инсулинът понижава **КЗ** повече на единица. Това води до по-малко агресивна / по-слаба корекция от кръга с **по-малко инсулин**. Ако вашият **ISF** е твърде слаб (голяма стойност), това може да доведе до висока **КЗ**.
 
 **Example:**
-* **BG** is 190 mg/dL (10,5 mmol/L) and target is 100 mg/dL (5,6 mmol/L).
-* So, you want a correction of `190 - 110 = 90 mg/dL` or `10,5 - 5,6 = 4.9 mmol/L`
-* If `ISF = 30` -> `90 / 30 = 3` or `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 units of insulin
-* If `ISF = 45` -> `90 / 45 = 2` or `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 units of insulin
+* **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
+* So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
+* Ако `ISF = 30` -> `90 / 30 = 3` или `ISF = 1,63` -> `4,9 / 1,63 = 3`: 3 единици инсулин
+* Ако `ISF = 45` -> `90 / 45 = 2` или `ISF = 2,45` -> `4,9 / 2,45 = 2`: 2 единици инсулин
 
-An **ISF** that is too low (and therefore more aggressive, not uncommon) can result in ‘over corrections’, because **AAPS** calculates that the user needs more insulin to correct a high **BG** than actually required. This can lead to ‘roller coaster’ BG levels (esp. when fasting), as shown on the image below. In this circumstance, the **ISF** value should be increased in order to make **AAPS** less aggressive. This will ensure **AAPS** delivers smaller correction doses, and avoid over-correcting a high **BG** resulting in a low **BG**.
+Твърде нисък **ISF** (и следователно по-агресивен, което не е рядкост) може да доведе до „свръхкорекции“, защото **AAPS** изчислява, че за коригиране на висока **КЗ** потребителят има нужда от повече инсулин, отколкото е нужно в действителност. Това може да доведе до нива на КЗ като „влакче в увеселителен парк“ (особено при гладуване), както е показано на изображението по-долу. В този случай стойността на **ISF** трябва да се увеличи, за да стане **AAPS** по-малко агресивен. Така **AAPS** ще подава по-малки коригиращи дози и ще се избегне свръхкорекция на висока **КЗ**, която води до ниска **КЗ**.
 
-![ISF too low](../images/isf.jpg)
+![Твърде нисък ISF](../images/isf.jpg)
 
-Conversely, an **ISF** set too high can result in under-corrections, meaning your **BG** remains above target – particularly noticeable overnight.
+Обратно, твърде високо зададен **ISF** може да доведе до недостатъчни корекции и вашата **КЗ** остава над целта – особено забележимо през нощта.
 
-### How to set it
+### Как да го настроите
 
-See the **figure below** for an example of how ISF values could be set in an **AAPS** profile.
+Вижте **фигурата по-долу** за пример как могат да се зададат стойностите на ISF в профил на **AAPS**.
 
-![Profile ISF](../images/Profile_ISF.png)
+![ISF в профила](../images/Profile_ISF.png)
 
-A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
+Основна отправна точка за определяне на дневния ISF е да го изчислите от общата дневна доза (TDD) с правилото 1700 (94). Повече подробности има в глава 7 на [„Think like a Pancreas“](https://amzn.eu/d/iVU0RGe) от Gary Scheiner.
 
-| 1700 (if measuring in mg/dl) or 94 (mmol/L)/ TDD = approx ISF.<br/><br/>Example: TDD = 40 U<br/>Approx ISF (mg/dl) = 1700/40 = 43<br/>Approx ISF (mmol/L) = 94/40 = 2.4 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                                                                                                                                                                                                 |
+| 1700 (ако мерите в mg/dl) или 94 (mmol/l) / TDD = приблизителен ISF.<br/><br/>Пример: TDD = 40 U<br/>Приблизителен ISF (mg/dl) = 1700/40 = 43<br/>Приблизителен ISF (mmol/l) = 94/40 = 2,4 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|                                                                                                                                                                                                                    |
 
-Assuming your basal levels are correct, you can test this by suspending the loop, checking **IOB** is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
+Ако базалните ви дози са правилни, можете да проверите това, като спрете кръга, проверите дали **IOB** е нула и вземете няколко таблетки глюкоза, за да достигнете стабилно „високо“ ниво.
 
-Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
+След това поемете изчислено количество инсулин (според текущия 1/ISF), за да достигнете целевата КЗ.
 
-Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
+Внимавайте, защото тази стойност доста често е зададена твърде ниска. Твърде ниска означава, че 1 U ще понижи КЗ по-бързо от очакваното.
 
 (your-aaps-profile-insulin-to-carbs-ratio)=
 
-## Insulin to Carb ratio (ICR)
+## Коефициент инсулин/въглехидрати (ICR)
 
-### Description
+### Описание
 
-The **ICR** is a measure of how many grams of carbohydrate are covered by one unit of insulin.
+**ICR** показва колко грама въглехидрати се покриват от една единица инсулин.
 
-Some people also use **I:C** as an abbreviation instead of **ICR**, or talk about carb ratio : **CR**.
+Някои хора използват и съкращението **I:C** вместо **ICR** или говорят за коефициент за въглехидрати: **CR**.
 
-For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of insulin for every 10 grams of carbs eaten. A meal of 25g carbs would need 2.5U of insulin.
+Например коефициент инсулин/въглехидрати 1 към 10 (1:10) означава, че поставяте 1 U инсулин за всеки 10 грама изядени въглехидрати. Хранене с 25 г въглехидрати ще изисква 2,5 U инсулин.
 
-If your **ICR** is weaker (higher value), perhaps 1:20, you would only need 0.5U of insulin to cover 10 g of carbs. A meal of 25g of carbs would need 25/20 = 1.25U of insulin.
+Ако вашият **ICR** е по-слаб (по-висока стойност), например 1:20, ще ви трябват само 0,5 U инсулин, за да покриете 10 г въглехидрати. Хранене с 25 г въглехидрати ще изисква 25/20 = 1,25 U инсулин.
 
-It is common to have different **ICR** at different times of day due to hormone levels and physical activity. Many people find they have their lowest/strongest **ICR** around breakfast time because they tend to be more insulin resistant. So, for example, one adult user's **ICR** could be 1:8 for breakfast, 1:10 for lunch and 1:10 for dinner, but these patterns are not universal, and some people are more insulin resistant at dinner time, and require a stronger/smaller **ICR** then.
+Често се случва **ICR** да е различен в различните часове на деня поради нивата на хормоните и физическата активност. Много хора установяват, че имат най-нисък/най-силен **ICR** около закуска, защото тогава обикновено са по-инсулинорезистентни. Например **ICR** на един възрастен потребител може да е 1:8 за закуска, 1:10 за обяд и 1:10 за вечеря. Но тези модели не са универсални и някои хора са по-инсулинорезистентни по време на вечеря и тогава имат нужда от по-силен/по-малък **ICR**.
 
-> **NOTE:**
+> **ЗАБЕЛЕЖКА:**
 > 
-> In some European countries bread units were used for determination of how much insulin is needed for food. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
+> В някои европейски държави за определяне на нужния инсулин за храната се използваха хлебни единици. В началото 1 хлебна единица беше равна на 12 г въглехидрати, по-късно някои преминаха към 10 г въглехидрати.
 > 
-> In this model the amount of carbs was fixed and the amount of insulin was variable. ("How much insulin is needed to cover one bread unit?")
+> При този модел количеството въглехидрати беше фиксирано, а количеството инсулин беше променливо. („Колко инсулин е нужен, за да се покрие една хлебна единица?“)
 > 
-> When using **ICR** the amount of insulin is fixed and the amount of carbs is variable. ("How many g of carbs can be covered by one unit of insulin?")
+> При **ICR** количеството инсулин е фиксирано, а количеството въглехидрати е променливо. („Колко г въглехидрати могат да се покрият с една единица инсулин?“)
 > 
 > Example:
 > 
-> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
+> Фактор на хлебната единица (ХЕ = 12 г въглехидрати): 2,4 U/ХЕ -> Нужни са ви 2,4 единици инсулин, когато изядете една хлебна единица.
 > 
-> Corresponding **ICR**: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
+> Съответен **ICR**: 12 г / 2,4 U = 5,0 г/U -> 5,0 г въглехидрати могат да се покрият с една единица инсулин.
 > 
-> BU factor 2,4 U / 12g   ===>   IC = 12g / 2,4 U = 5,0 g/U
+> Фактор ХЕ 2,4 U / 12 г   ===>   IC = 12 г / 2,4 U = 5,0 г/U
 > 
-> Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Таблици за преобразуване има онлайн, напр. [тук](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
-### Impact
+### Въздействие
 
-A **lower / stronger ICR** means less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’. If your IC is too strong, you are getting too much insulin, this can lead to low **BGs**.
+**По-нисък / по-силен ICR** означава по-малко храна на единица, т.е. получавате повече инсулин за фиксирано количество въглехидрати. Може да се нарече и „по-агресивен“. Ако вашият IC е твърде силен, получавате твърде много инсулин и това може да доведе до ниска **КЗ**.
 
-A **higher / weaker ICR** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’. If your IC is too weak, you are getting less insulin than you need, this can lead to high **BGs**.
+**По-висок / по-слаб ICR** = повече храна на единица, т.е. получавате по-малко инсулин за фиксирано количество въглехидрати. Може да се нарече и „по-малко агресивен“. Ако вашият IC е твърде слаб, получавате по-малко инсулин, отколкото ви е нужен, и това може да доведе до висока **КЗ**.
 
-### How to set it
+### Как да го настроите
 
-The **figure below** shows an example of a user's **ICR** and how it can be set in an **AAPS Profile**. When entering these values, we just enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
+**Фигурата по-долу** показва пример за **ICR** на потребител и как може да се зададе в **профил на AAPS**. Когато въвеждаме тези стойности, въвеждаме последната част на съотношението, така че коефициент инсулин/въглехидрати 1:3,5 се въвежда просто като „3,5“.
 
-![Profile ICR](../images/Profile_ICR.png)
+![ICR в профила](../images/Profile_ICR.png)
 
-If after a meal has been digested and the **IOB** has returned to zero, your **BG** remains higher than before food, chances are your **ICR** is too weak (_i.e._ the number is too high and should be gradually lowered). Conversely, if your **BG** is lower than before food, **ICR** is too strong (_i.e._ the number is too small and should be gradually increased).
+Ако след като храната е усвоена и **IOB** се е върнал на нула, вашата **КЗ** остава по-висока, отколкото преди храненето, вероятно вашият **ICR** е твърде слаб (_т.е._ числото е твърде голямо и трябва постепенно да се намали). Обратно, ако **КЗ** е по-ниска, отколкото преди храненето, **ICR** е твърде силен (_т.е._ числото е твърде малко и трябва постепенно да се увеличи).
 
-Assuming your basal rates are correct, you can test by checking if **IOB** is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food you normally eat at that time of day and count its carbs precisely.
+Ако базалните ви дози са правилни, можете да проверите така: уверете се, че **IOB** е нула и сте в целевия диапазон, изяжте точно известно количество въглехидрати и поемете изчислено количество инсулин според текущия коефициент инсулин/въглехидрати. Най-добре е да ядете храна, която обикновено ядете по това време на деня, и да преброите точно въглехидратите в нея.
 
-## Common questions related to the Profile
+## Често задавани въпроси за профила
 
 ```{contents} Common questions related to the Profile
 :depth: 1
 :local: true
 ```
 
-### About the importance of getting your profile right
+### Защо е важно профилът ви да е правилен
 
-**Why should I try to get my profile settings right? Can’t the loop just take care of it?**
+**Защо трябва да се стремя към правилни настройки на профила? Не може ли кръгът просто да се погрижи за това?**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimise poor glycemic control that results from having incorrect **Profile** values. It can do this, for example, by withholding insulin delivery if you are going to hypo. However, you can achieve much better glycemic control if your **Profile** settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
+Хибридният затворен кръг _може_ да се опита да коригира подаването на инсулин, за да намали лошия гликемичен контрол, който се дължи на неправилни стойности в **Профила**. Може да го направи например, като спре подаването на инсулин, ако ви предстои хипогликемия. Но можете да постигнете много по-добър гликемичен контрол, ако настройките на вашия **Профил** вече са възможно най-близо до това, от което се нуждае тялото ви. Това е една от причините **AAPS** да използва цели на етапи, за да се премине от отворен кръг с помпа към хибриден затворен кръг. Освен това ще има моменти, когато трябва да отворите кръга (загряване на сензора, повреда на сензора _и т.н._), понякога посред нощ, и тогава ще искате настройките ви да са правилни за тези ситуации.
 
-If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (**BR**), insulin sensitivity factors (**ISF**) and insulin-to-carb ratios (**ICR**).
+Ако започвате с **AAPS** след друга система с помпа с отворен или затворен кръг, вече ще имате добра представа какви стойности да използвате за базалните дози (**BR**), факторите на инсулинова чувствителност (**ISF**) и коефициентите инсулин/въглехидрати (**ICR**).
 
-If you are moving from injections (MDI) to **AAPS**, then it is a good idea to read up on how to make the transfer from MDI to pump first, and plan and make the move carefully in consultation with your diabetes team. ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts and [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner are very useful.
+Ако преминавате от инжекции (MDI) към **AAPS**, добре е първо да прочетете как се преминава от MDI към помпа и да планирате и направите прехода внимателно, като се консултирате с вашия медицински екип. [„Pumping insulin“](https://amzn.eu/d/iaCsFa2) от John Walsh и Ruth Roberts и [„Think like a Pancreas“](https://amzn.eu/d/iVU0RGe) от Gary Scheiner са много полезни.
 
-### What causes high postprandial peaks in closed loop?
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your **BG** is falling to reach your target after carbs are fully absorbed, try to set an 'eating soon' temp target in **AAPS** some time before the meal or think about an appropriate pre-bolus time with your endocrinologist. <br/> If your **BG** is too high after the meal and still too high after carbs are fully absorbed, consider decreasing your **ICR** with your endocrinologist. If your **BG** is too high while **COB** and too low after carbs are fully absorbed, think about increasing your **ICR** and an appropriate pre-bolus time with your endocrinologist.
+### Какво причинява високи пикове след хранене при затворен кръг?
+Първо проверете базалната си доза и направете базален тест без въглехидрати. Ако е правилен и вашата **КЗ** спада до целта след пълното усвояване на въглехидратите, опитайте да зададете в **AAPS** временна цел „Преди хранене“ известно време преди храненето или обсъдете с вашия ендокринолог подходящо време за болус преди хранене. <br/> Ако **КЗ** е твърде висока след храненето и все още е твърде висока след пълното усвояване на въглехидратите, обсъдете с вашия ендокринолог намаляване на **ICR**. Ако **КЗ** е твърде висока, докато има **COB**, и твърде ниска след пълното усвояване на въглехидратите, обсъдете с вашия ендокринолог увеличаване на **ICR** и подходящо време за болус преди хранене.
 
-### I'm stuck high and the loop does not bring me down
-The possible reasons for **AAPS** not giving enough insulin are:
-* **ISF** is not strong enough
-* Basal might not be strong enough
-* A security setting might kick in, such as **maxIOB**. Or **SMB** is disabled at this time, depending on your settings.
-* Automation has been set up and has overridden **AAPS**.
+### КЗ ми остава висока и кръгът не я сваля
+Възможните причини **AAPS** да не дава достатъчно инсулин са:
+* **ISF** не е достатъчно силен
+* Базалната доза може да не е достатъчно силна
+* Може да се е задействала настройка за безопасност, например **maxIOB**. Или **SMB** е изключен в този момент, в зависимост от вашите настройки.
+* Настроена е автоматизация, която е заменила решенията на **AAPS**.
 
-### I have negative IOB, is this an issue ?
-Negative **IOB** means the amount of absolute insulin (basal + bolus) in your body is less than the basal. It will cause **AAPS** to send more insulin as soon as the **BG** starts to rise, because it considers that insulin is missing, which can result in low **BG** later.
+Вижте също [Настройване на профила в AAPS](../GettingHelp/ProfileTuning.md).
 
-Here are some reasons why you may have negative IOB, and what action to take:
-* a too strong basal: tweak your **Profile**
-* too much bolus at the previous meal: tweak your **Profile** or check if you are bolusing at the right time.
-* DIA too short, resulting in insulin stacking: tweak your **Profile**
-* physical activity: next time, consider using a lower [Profile percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) during activity to account for increased sensitivity.
+### Имам отрицателен IOB – проблем ли е това?
+Отрицателен **IOB** означава, че абсолютното количество инсулин (базал + болус) в тялото ви е по-малко от базала. Това ще накара **AAPS** да подаде повече инсулин веднага щом **КЗ** започне да се покачва, защото смята, че липсва инсулин. Това може да доведе до ниска **КЗ** по-късно.
 
-## Manage your Profiles
+Ето някои причини, поради които може да имате отрицателен IOB, и какво да направите:
+* твърде силен базал: коригирайте вашия **Профил**
+* твърде голям болус при предишното хранене: коригирайте вашия **Профил** или проверете дали правите болуса в правилния момент.
+* DIA е зададено твърде кратко за вашия вид инсулин, което води до натрупване на инсулин: коригирайте го в [Управление → Настройки на инсулина](#Config-Builder-insulin-dia)
+* физическа активност: следващия път обмислете по-нисък [процент на профила](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) по време на активността, за да компенсирате повишената чувствителност.
+
+## Управление на вашите профили
 
 ```{contents} Operations that you can perform on your **Profiles** in **AAPS**
 :depth: 1
 :local: true
 ```
 (your-aaps-profile-create-and-edit-profiles)=
-### Create and edit Profiles
+### Създаване и редактиране на профили
 
-The **Profile** tab can be found from the top menu or hamburger menu, depending on your [Config Builder settings](../SettingUpAaps/ConfigBuilder.md).
+В **AAPS** v4 профилите ви се намират на екрана **Управление** (долната навигация) → **Профил**. Те се показват като карти, които се плъзгат, с лента с действия (**➕ Добави**, **✏️ Редакция**, **⧉ Клонирай**, **🗑️ Изтрий**, **▶ Активиране**). За управление и активиране на профил вижте [Управление и активиране на профили](#ProfileSwitch-manage-v4). Идвате от **AAPS** v3, където профилите имаха собствен раздел? Вижте [Какво се промени в AAPS v4](#v4changes-manage).
 
-![Local Profile buttons](../images/LocalProfile_Settings.png)
+Докосването на **✏️ Редакция** отваря редактора. Задайте **име** и **единици** на профила, след което попълнете четирите графика в разделите:
 
-Buttons:
+- **И / Въгл** (IC) — коефициент инсулин/въглехидрати (г/U)
+- **Чувств** (ISF) — инсулинова чувствителност
+- **БАЗА** — базални дози
+- **ЦЕЛ** — целеви диапазон
 
-- green plus: add
-- red X: delete
-- blue arrow: duplicate
+![Редакторът на профили – раздели И / Въгл, Чувств, БАЗА и ЦЕЛ](../images/setup-wizard/Wizard-Profile-IC.png)
 
-If you make any changes to your **Profile**, make sure you are editing the correct **Profile**. The **Profile** tab may not always show the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen, it may differ from the profile actually shown in profile tab as there is no connection between these.
+Всеки график е списък с **времеви блокове**: добавете блок, задайте началния му час и стойност, след което натиснете **Запиши**.
+
+Ако правите промени във вашия **Профил**, уверете се, че редактирате правилния **Профил**: картата на използвания профил е отбелязана с **АКТИВЕН**, но избраната на екрана карта може да е друга.
 
 (your-aaps-profile-profile-from-scratch-for-a-kid)=
-### Build a Profile from scratch for a kid
+### Създаване на профил от нулата за дете
 
-The [Profile Helper](#aaps-screens-profile-helper) tab may help you to create a profile for a child (up to 18 years).
+[Профил съветник](#aaps-screens-profile-helper) (меню ☰ → **Профил съветник**) може да ви помогне да създадете профил за дете (до 18 години).
 
-**Important note:**
+**Важна забележка:**
 
-**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
+**„Профил съветник“ (Profile helper) е предназначен да ви помогне да намерите началния профил за вашето дете. Въпреки че се базира на данни от две различни болници, винаги обсъждайте новия профил с вашия медицински екип, преди да го използвате!**
 
-Profile helper offers data sets from two different hospitals for children to find initial profile for your kid up to 18 years.
+„Профил съветник“ предлага данни от две различни болници, за да намерите начален профил за дете до 18 години.
 
-![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
+![Профил съветник – деца 1](../images/ProfileHelperKids1.png)
 
-1. Make sure you are in **Profile 1**.
-2. In **Profile type**, make sure you have "Default profile" selected.
-3. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
-4. Change screen by clicking on **Profile 2** on the right.
-5. Press **Profile type** and select "DPV Default profile".
-6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
-7. Press the button **Compare profiles** at the bottom of the screen. Comparison of the two adjusted profiles will be displayed (see screenshot below).
-8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button either from **Profile 1** ou **Profile 2**.
+1. Уверете се, че сте в раздела **Профил 1**.
+2. В **Тип профил** се уверете, че е избран „Профил по подразбиране“.
+3. Настройте „Профил по подразбиране“ (базиран на данните на една болница), като въведете възрастта на детето и ТДД общо **или** теглото.
+4. Преминете към раздела **Профил 2**.
+5. Натиснете **Тип профил** и изберете „DPV профил по подразбиране“.
+6. Настройте „DPV профил по подразбиране“ (базиран на данните на друга болница), като въведете възрастта на детето, ТДД общо и процента на базала. Имайте предвид, че данните на DPV дават само **базални дози**, затова IC и ISF се показват като нула за този профил.
+7. Отворете раздела **Сравнение**. Ще се покаже сравнение на двата настроени профила (вижте екранната снимка по-долу).
+8. Ако искате да започнете настройката на профила си въз основа на едно от тези предложения, използвайте бутона **Клонирай** под сравнението.
 
-![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
+![Профил съветник – деца 2](../images/ProfileHelperKids2.png)
 
-### Switch Profile
+### Смяна на профил
 
-See [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Вижте [Смяна на профил и процент на профила](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
 (your-aaps-profile-clone-profile-switch)=
-### Clone a Profile switch to a new Profile
+### Клониране на смяна на профил в нов профил
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Смяна на профил](../images/TreatmentsView4.png)
 
-The [Treatments](#aaps-screens-treatments) tab shows all past **Profile Switches**. When going to the **Profile Switch** sub-tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
+[История на леченията](#aaps-screens-treatments) показва всички минали смени на профил (**Смяна на профили**). Когато отидете в раздела **Смяна на профил**, можете да използвате минала **смяна на профил** като основа за създаване на нов **Профил**. В този случай изместването във времето и процентът ще се приложат към новия локален профил. Използвайте бутона **Клонирай** на ред **2**.
 
-You can now go to the [Profile tab](#your-aaps-profile-create-and-edit-profiles) to edit the newly created Profile.
+Сега можете да отидете на [екрана „Профил“](#your-aaps-profile-create-and-edit-profiles) (**Управление → Профил**), за да редактирате новосъздадения профил.
 
 (YourAapsProfile_Profile-backup)=
-### Profile backup
+### Резервно копие на профила
 
-Being a core setting of your looping system, your **Profiles** are highly sensitive and something you really don't want to lose.
+Тъй като са основна настройка на вашата система със затворен кръг, вашите **Профили** са много важни и не бива да ги загубите.
 
-* Your **Profiles** are stored in the **AAPS** database.
-* If enabled, **Profiles** are also uploaded to Nightscout. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Upload data to NS](#Preferences-nsclient).
+* Вашите **Профили** се съхраняват в базата данни на **AAPS**.
+* Когато е настроен **NSClientV3** (вижте [Синхронизация](#SetupWizard-synchronization-with-the-reporting-server-and-more)), вашите **Профили** се качват автоматично и в Nightscout.
+* Те са и част от [експортираните настройки](../Maintenance/ExportImportSettings.md). Затова се погрижете да имате резервно копие на сигурно място.
 
-![Backup Profile Nightscout](../images/LocalProfile_UploadNS_AASP30.png)
+### Редактиране на профили от Nightscout
 
-* They are also part of [exported settings](../Maintenance/ExportImportSettings.md). So make sure to have a backup in a safe place.
+Ако е разрешено, промените в **Профила**, направени директно в Nightscout, могат да се получават в **AAPS**. Настройката се казва „**Получавай профили от NS**“ и е част от опциите **Приемане на данни от Nightscout** (приемането на данни от Nightscout е изключено по подразбиране, вижте [стъпката „Контрол от клиентско приложение“ в Съветника за настройване](../SettingUpAaps/SetupWizard.md)); можете бързо да я намерите с **лентата за търсене** на главния екран. Докато е включен контролът от клиентско приложение, настройката е скрита и **AAPS** не приема промени на профила от Nightscout ([режим на засилена защита](#client-master-control-hardened-mode)). Вместо това редактирайте профила в сдвоено клиентско приложение или го заредете еднократно с **Пълна синхронизация**.
 
-### Editing Profiles from Nightscout
+Това може да е полезно, когато предстоят големи промени в по-обширен **Профил**. Те могат да се въвеждат по-лесно през уеб интерфейса, _напр._ за ръчно копиране на данни от електронна таблица.
 
-If enabled, **Profile** changes made directly in Nightscout can  be received in **AAPS**. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Receive profile store](#Preferences-nsclient).
+За да направите това обаче, е важно да клонирате в редактора на Nightscout целия **запис в базата данни**, който съдържа няколко профила (синята стрелка на екранната снимка по-долу). Тогава новите записи в базата данни носят текущата дата. След записване промененият/новият **Профил** може да се активира в **AAPS** с обикновена [смяна на профил](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-This can be helpful when about to make major changes to a more extensive **Profile**. They can be entered more easily via the web interface, _e.g._ to manually copy data from a spreadsheet.
-
-To do this, however, it is important to clone the whole **database record** consisting of several profiles in the Nightscout editor (blue arrow on the screenshot below). The new database records then carries the current date. After saving, the changed/new **Profile** can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-
-![Clone database records](../images/Nightscout_Profile_Editor.PNG)
+![Клониране на записи в базата данни](../images/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
-### Compare two Profiles
+### Сравняване на два профила
 
-You can use the [Profile Helper](#aaps-screens-profile-helper) tab also to compare two different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
+Можете също да използвате [Профил съветник](#aaps-screens-profile-helper) (меню ☰ → **Профил съветник**), за да сравните два различни профила или смени на профил (процент от някой от вашите профили, използван преди в [смяна на профил](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)).
 
-![Profile Helper 1](../images/ProfileHelper1.png)
+![Профил съветник 1](../images/ProfileHelper1.png)
 
-1. Make sure you are in **Profile 1**.
-2. In **Profile type**, select "Available profile" to choose between all stored **Profiles**.
-3. Choose the **Profile** you want to compare from.
-4. Change screen by clicking on **Profile 2** on the right.
-5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profiles Switched**.
-6. Choose the **Profile Switch** you want to compare to.
-7. Press the button **Compare profiles** at the bottom of the screen. Comparison of the two adjusted profiles will be displayed (see screenshot below).
+1. Уверете се, че сте в раздела **Профил 1**.
+2. В **Тип профил** изберете „Наличен профил“, за да избирате между всички съхранени **Профили**.
+3. Изберете **Профила**, от който искате да сравнявате.
+4. Преминете към раздела **Профил 2**.
+5. В **Тип профил** изберете „Смяна на профил“, за да избирате от историята на всички ваши смени на профил (**Смяна на профили**).
+6. Изберете **Смяна на профил**, с която искате да сравните.
+7. Отворете раздела **Сравнение**. Ще се покаже сравнение на двата профила (вижте екранната снимка по-долу).
 
-![Profile Helper 2](../images/ProfileHelper2.png)
+![Профил съветник 2](../images/ProfileHelper2.png)

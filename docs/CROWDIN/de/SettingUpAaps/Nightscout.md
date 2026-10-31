@@ -4,9 +4,11 @@
 
 ## Sicherheitsüberlegungen
 
-Neben der Erstellung von Berichten, kann Nightscout auch genutzt werden, um AndroidAPS zu steuern. So kannst Du z.B. temporäre Ziele setzen oder Kohlenhydrate eingeben. Diese Informationen werden von AAPS übernommen, das dann entsprechend reagiert. Daher macht es Sinn, über die Absicherung Deiner Nightscout-Seite nachzudenken.
+Nightscout is the reporting and monitoring server of **AAPS**: **AAPS** uploads your data to it, and you or your caregivers look at it on the Nightscout website or in follower apps. It holds your medical data, profiles and treatments, so it is worth thinking about securing your Nightscout website.
 
-Handle mit größter Vorsicht, wenn Du mit Nightscout als Datenquelle für Dein AAPS verwendest.
+In **AAPS** 4, remote control does not go through the Nightscout website. While client control is on ([hardened mode](#client-master-control-hardened-mode)), treatments or targets typed directly into Nightscout are **not applied** by **AAPS**. Remote commands come from a paired **AAPSClient** instead — see [Master ↔ Client control](#client-master-control).
+
+Exercise maximum caution if using Nightscout as your AAPS BG data source.
 
 ### Nightscout Einstellungen
 
@@ -18,27 +20,25 @@ Das Nightscout `API_SECRET` ist das Hauptpasswort für Deinen Nightscout-Server,
 
 ### AAPS-Einstellungen
 
-Du kannst AAPS so einstellen, dass Nightscout-Befehle akzeptiert werden (Profiländerungen, Behandlungsparameter, ...) oder dies vollständig ausschalten.
+Accepting data from Nightscout (profile changes, treatments, ...) is optional and turned off by default. The switches described below are hidden while client control is on (hardened mode) and in [simple mode](#preferences-simple-mode).
 
-* Zugriff auf die Einstellungen (settings) des NSClient bzw. des NSClientV3-Plugins: 1) Startseite -> Config Builder -> Synchronization -> NSClient Zahnrad-Symbol 2) NSCLIENT Registerkarte -> Dreipunkte-Menü -> Plugin preferences
-* Aktiviere das Hochladen aller Daten in Nightscout (3), da dies jetzt die Standardmethode ist, es sei denn, Deine BZ-Datenquelle ist Nightscout.  
-  Wenn Nightscout Deine BZ-Datenquelle ist, dann stelle den Upload der BZ-Daten zu NS **nicht** ein (3).
-* Stelle nicht "Receive/backfill data" (4) ein, es sei denn, Nightscout ist Deine BZ-Datenquelle.
-
-![Nightscout nur Daten hochladen](../images/NSsafety.png)
+* Access the **Synchronization** settings of the NSClientV3 plugin with either 1) **Settings** (gear icon on the main screen) -> **NSClientV3** -> **Synchronization**, or 2) **Configuration** (☰ menu) -> **Communication** -> "**Settings**" under NSClientV3.
+* Enable "Upload data to NS".
+* "Upload BG data to NS" is in the settings of your BG source (**Configuration → BG Source → Settings**). Enable it, unless your AAPS BG data source is Nightscout: in that case **do not** enable it.
+* Do not enable "Receive CGM data from NS" unless Nightscout is your BG data source.
 
 #### Do not sync from Nightscout (Nicht von Nightscout synchronisieren)
 
-Durch das Deaktivieren dieser Optionen wird sichergestellt, dass AAPS keine Änderungen benutzt, die von Nightscout stammen.
+Keeping all the "Receive ... from NS" options disabled makes sure no Nightscout change will be used by AAPS:
 
-![Nightscout nur Daten hochladen](../images/NSsafety2.png)
+![Nightscout nur Daten hochladen](../images/preferences/settings_nsclient_sync.png)
 
 #### Accept changes from Nightscout (Änderungen von Nightscout übernehmen)
 
-Das Aktivieren dieser Option bewirkt, dass Du mit Hilfe von Nightscout remote AAPS-Einstellungen wie z. B. Profilwechsel und -anpassungen, temporäre Ziele setzen und die Eingabe von durch AAPS zu berücksichtigenden Kohelnhydraten vornehmen kannst.  
-Insulineingaben werden nur zu Kalkulationszwecken (wie auch bei "Bolus nur erfassen") berücksichtigt.
+Enabling these options allows you to change AAPS settings through Nightscout, like profiles modifications and switch, temporary targets and adding carbs that will be taken into account by AAPS. They are only shown when client control and simple mode are off.  
+Note that insulin treatments will only be used for calculations like "Do not bolus, record only".
 
-![Nightscout nur Daten hochladen](../images/NSsafety3.png)
+![Nightscout receive options enabled](../images/NSsafety3.png)
 
 ### Weitere Sicherheitseinstellungen
 
@@ -48,7 +48,7 @@ Halte Dein Smartphone, wie in den [Sicherheitshinweisen](#preparing-safety-first
 
 ## Manuelles Nightscout-Setup
 
-Wir gehen davon aus, dass du bereits eine Nightscout Seite hast. Falls nicht, gehe zum [Nightscout Wiki](http://nightscout.github.io/nightscout/new_user/). Dort findest du detaillierte Informationen zur Einrichtung. Die unten stehenden Hinweise beziehen sich auf die Einstellungen, die du zusätzlich in deiner Nightscout Seite vornehmen musst. AAPS Version 3.2 setzt Nightscout in der Version 15 voraus. Stelle daher sicher, dass Du die [neueste Version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) verwendest, da Du sonst in der AAPS App eine Fehlermeldung erhältst.
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on setup. The instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 15, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
 
 * [Deine Variablen bearbeiten](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 

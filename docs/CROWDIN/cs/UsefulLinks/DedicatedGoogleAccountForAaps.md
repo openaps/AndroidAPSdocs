@@ -1,18 +1,18 @@
-# Vyhrazený Google účet pro AAPS (volitelné)
+# Samostatný účet Google pro AAPS (volitelné)
 
-Some **AAPS** users prefer to use their main email account for **AAPS** as well. Alternatively, some **AAPS** users (or their caregivers) set-up a dedicated **AAPS** email account - this is optional, we give an example of how to do it below.
+Někteří uživatelé **AAPS** používají pro **AAPS** také svůj hlavní e-mailový účet. Jiní uživatelé **AAPS** (nebo jejich pečovatelé) si zakládají samostatný e-mailový účet pro **AAPS**. Je to volitelné, níže uvádíme příklad, jak to udělat.
 
-If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go straight to the next section, [building AAPS](../SettingUpAaps/BuildingAaps.md).
+Pokud nechcete zakládat samostatný účet Gmail pro **AAPS**, můžete přejít rovnou na další část, [Sestavení AAPS](../SettingUpAaps/BuildingAaps.md).
 
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Dedicated Google drive space means you will not risk filling up your personal Google drive limit with **Export Preferences**.
-- Each version of **AAPS** (and supporting apps like xDrip+, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
-- By harmonizing the setup, it will make online support simpler across users with similar folder structure.
-- Depending on the setup (see below), you will have a separate identity as an alias to communicate within the community which can protect your privacy. 
-- Children with T1D can preserve their own “everyday” email account as minors while using **AAPS** and associated features which require an adult account.
-- Gmail allows you to register up to 4 accounts under the same phone number.
+- Samostatné místo na Disku Google znamená, že nebudete riskovat zaplnění limitu svého osobního Disku Google soubory z funkce **Exportovat nastavení**.
+- Každá verze **AAPS** (a podpůrných aplikací jako xDrip, BYODA atd.) bude uložena na jednom místě, které nezávisí na hardwaru vašeho počítače. Pokud přijdete o váš počítač nebo telefon kvůli krádeži, ztrátě nebo poruše, budete mít k souborům stále přístup.
+- Když mají uživatelé podobné nastavení a podobnou strukturu složek, je online podpora jednodušší.
+- Podle nastavení (viz níže) budete mít pro komunikaci v komunitě samostatnou identitu (přezdívku), která může chránit vaše soukromí. 
+- Děti s diabetem 1. typu si tak mohou jako nezletilí ponechat svůj „každodenní“ e-mailový účet a zároveň používat **AAPS** a související funkce, které vyžadují účet dospělého.
+- Gmail vám umožňuje registrovat až 4 účty pod stejným telefonním číslem.
 ```
 
 ## Jak nastavit Google účet určený pouze pro AAPS
@@ -23,44 +23,44 @@ If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go
 
 Požadavky:
 
-* You have a Windows’ PC (Windows 10 or newer) and a Android phone (Android 9 or newer) which will host the **AAPS** app. Obě tato zařízení mají nainstalované všechny nejnovější bezpečnostní aktualizace, přístup k Internetu a administrátorská oprávnění, protože některé kroky vyžadují stažení a instalaci programů.
-* The Android phone is already set-up with your personal ”everyday” email address, such as a Gmail account.
+* Máte počítač s Windows (Windows 10 nebo novější) a telefon s Androidem (Android 12 nebo novější), na kterém poběží aplikace **AAPS**. Obě tato zařízení mají nainstalované všechny nejnovější bezpečnostní aktualizace, přístup k Internetu a administrátorská oprávnění, protože některé kroky vyžadují stažení a instalaci programů.
+* Telefon s Androidem už je nastavený s vaší osobní „každodenní“ e-mailovou adresou, například s účtem Gmail.
 
 ```{admonition} Things to consider when setting up your new account
 :class: dropdown
-- You could use a name different to your own, which has relevance to the account (like t1dsuperstar) for privacy reasons. You can then use it in **AAPS** public forums while keeping your own identity private. Since Google requires a recovery email and phone number, it is still traceable.
-- The new **AAPS** account will use the same phone number for verification as your “_everyday_” one. It will use the “everyday” email address for verification;
-- We will setup email forwarding such that any email sent to the new dedicated AAPS account will be forwarded to the primary one (so there is no need to check two different mailboxes);
-- Use separate passwords for your _everyday_ Gmail account and the AAPS-dedicated Gmail account
-- If you use google “2-step verification” (aka multifactor) authentication for one Gmail account, you might as well do it for both Gmail accounts.
-- If you plan to use Google “Passkeys”, make sure you register multiple devices. This is so you don’t lock yourself out. Only do it on devices that nobody else can access (_i.e._ not on a PC with a shared account that other people can unlock).
+- Z důvodu soukromí můžete použít jiné jméno, než je vaše vlastní, které souvisí s účtem (například t1dsuperstar). Toto jméno pak můžete používat na veřejných fórech **AAPS** a vaše skutečná identita zůstane skrytá. Protože Google vyžaduje obnovovací e-mail a telefonní číslo, je i tento účet stále dohledatelný.
+- Nový účet **AAPS** bude pro ověření používat stejné telefonní číslo jako váš „_každodenní_“ účet. Pro ověření bude používat „každodenní“ e-mailovou adresu;
+- Nastavíme přeposílání e-mailů tak, aby se každý e-mail poslaný na nový účet pro AAPS přeposlal na hlavní účet (nemusíte tedy kontrolovat dvě různé schránky);
+- Pro _každodenní_ účet Gmail a pro účet Gmail pro AAPS použijte různá hesla
+- Pokud pro jeden účet Gmail používáte „dvoufázové ověření“ Google (vícefázové ověření), můžete ho rovnou použít pro oba účty Gmail.
+- Pokud chcete používat Google „Passkeys“ (přístupové klíče), zaregistrujte více zařízení. Tak si nezablokujete přístup k účtu. Dělejte to jen na zařízeních, ke kterým nemá přístup nikdo jiný (_tj._ ne na PC se sdíleným účtem, který mohou odemknout i jiní lidé).
 ```
 
 
-```{admonition}  Video Walkthrough! 
-:class: Note
-Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
+```{admonition} Video Walkthrough!
+:class: note
+Klikněte [sem](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) a podívejte se na video s návodem, jak nastavit samostatný účet Google.
 ```
 
  Toto jsou kroky nastíněné ve videu:
 
-In this example: 
-- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
-- Your new “_AAPS_” Gmail account will be: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
+V tomto příkladu: 
+- Váš stávající „_každodenní_“ účet Google je <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
+- Váš nový účet Gmail „_AAPS_“ bude: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-### Go to <https://account.google.com> 
+### Přejděte na <https://account.google.com> 
 
- If you are already logged into Google, this will direct you to your “Everyday” **My Account** page. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png) (2) select “_add another account_”.
+ Pokud jste už přihlášeni ke Googlu, dostanete se na stránku **Můj účet** svého „každodenního“ účtu. (1) Klikněte vpravo nahoře na stránce na svůj profilový obrázek (v tomto případě jednoduché ![](../images/Building-the-App/building_0002.png) (2) vyberte „_Přidat další účet_“.
 
 ![](../images/Building-the-App/building_0005.png)
 
 
-### Enter your NEW dedicated account details: 
+### Zadejte údaje svého NOVÉHO samostatného účtu: 
 
-- Enter the new account: 
+- Vložte nový účet: 
 - Vytvořit účet
-- for my personal use. 
+- pro mé osobní účely. 
 
 
 ### Zadejte vaše osobní údaje:
@@ -68,50 +68,50 @@ In this example: 
  - Příjmení
  - datum narození (musí být zadán věk dospělého)
 
-### Choose your NEW email address & password
+### Zvolte NOVOU e-mailovou adresu a heslo
 
-This example appends “.AAPS” to Donald Muck’s existing one…\
-Set a password
+V tomto příkladu se ke stávající adrese Donalda Mucka přidá „.AAPS“…\
+Nastavte heslo
 
-### Enter a phone number which can receive the SMS verification
+### Zadejte telefonní číslo, na kterém můžete přijímat SMS ověření
 
 Gmail vám nyní odešle jedinečný kód pro ověření.
 
-### Enter the recovery email address
+### Zadejte obnovovací e-mailovou adresu
 
-In this case it will be your existing “_everyday_” email…
+V tomto případě to bude váš stávající „_každodenní_“ e-mail…
 
 ### Dokončete nastavení vašeho účtu
 
-Gmail zobrazí název účtu. It will ask you to accept Gmail’s terms and conditions & confirm your personalization settings.
+Gmail zobrazí název účtu. Budete požádáni o souhlas se smluvními podmínkami Gmailu a o potvrzení nastavení personalizace.
 
 ### Přizpůsobte zobrazení nového profilu
 
-At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. Profilový obrázek bude ve výchozím nastavení zobrazovat první písmeno vašeho jména. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png)
+Nyní byste měli být na stránce Můj účet v Gmailu s vaším novým e-mailovým účtem pro **AAPS**. Profilový obrázek bude ve výchozím nastavení zobrazovat první písmeno vašeho jména. Změňte ho na něco jedinečného, abyste účty nezaměnili… v tomto příkladu Donald.Muck.AAPS nahradil ![](../images/Building-the-App/building_0002.png) tímto obrázkem ![](../images/Building-the-App/building_0003.png)
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
 
 ### Pro nastavení nového účtu otevřete webovou stránku Gmail v obou oknech
 
-So that you don’t need to monitor a separate email account, forward all the emails from the new **AAPS**-dedicated account to your everyday account\
-This part can be a bit confusing, since you will have to switch back and forth between both accounts. Chcete-li si to usnadnit, otevřete si v prohlížeči dvě samostatná okna nad sebou:
+Abyste nemuseli sledovat další e-mailový účet, přeposílejte všechny e-maily z nového účtu pro **AAPS** na svůj každodenní účet\
+Tato část může být trochu matoucí, protože budete muset přepínat mezi oběma účty. Chcete-li si to usnadnit, otevřete si v prohlížeči dvě samostatná okna nad sebou:
 
-1. Move your existing browser to the top of your screen and resize it such that it only takes about half of the top of the screen…
-2. Right click on your Browser logo in your taskbar
-3. From the menu select “New Window”... and adjust it so it only takes the bottom half of the screen.
+1. Přesuňte okno prohlížeče do horní části obrazovky a změňte jeho velikost tak, aby zabíralo jen horní polovinu obrazovky…
+2. Klikněte pravým tlačítkem myši na ikonu prohlížeče na hlavním panelu
+3. V nabídce vyberte „Nové okno“... a upravte ho tak, aby zabíralo jen dolní polovinu obrazovky.
 
-Open <https://gmail.com> in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. Pokud je to potřeba, můžete vždy přepnout účty kliknutím na profilový obrázek a výběrem správného.
+Otevřete <https://gmail.com> v každém okně prohlížeče. Osobní účet dejte nahoru a nový účet pro **AAPS** dolů. Účet snadno poznáte podle profilového obrázku v pravém horním rohu. Pokud je to potřeba, můžete vždy přepnout účty kliknutím na profilový obrázek a výběrem správného.
 
 ![](../images/Building-the-App/building_0009.png)
 
-Your Gmail homepages screen should look like this:\
+Vaše domovské stránky Gmailu by měly vypadat takto:\
 ![](../images/Building-the-App/building_0010.png)
 
- ### In the new Gmail account (bottom window), open Gmail settings…
+ ### V novém účtu Gmail (dolní okno) otevřete nastavení Gmailu…
 
-- Click on the gear on the left of the profile picture
-- then select “**See all Settings**”
+- Klikněte na ozubené kolo vlevo od profilového obrázku
+- pak vyberte „**Zobrazit všechna nastavení**“
 
 ![](../images/Building-the-App/building_0011.png)
 
@@ -120,7 +120,7 @@ Your Gmail homepages screen should look like this:\
 - Klikněte na záložku "Nastavení přeposlání a POP/IMAP"
 - Klikněte na "Přidat adresu pro přeposílání"
 - Zadejte vaši "každodenní" e-mailovou adresu
-- Gmail will send a verification code to your “everyday” email address.
+- Gmail pošle ověřovací kód na vaši „každodenní“ e-mailovou adresu.
 - Přepněte se zpět na svůj každodenní profil a klikněte na odkaz, abyste potvrdili, že přijímáte přeposílání (nebo vezměte kód z ověřovacího e-mailu ve svém „každodenním“ Gmail okně a vložte ho do „nového vyhrazeného AAPS“ Gmail okna).
 
 Budete muset docela přepínat tam a zpět mezi okny, ale zajistíte tak, že kdykoli zkontrolujete e-maily na vašem "každodenním" účtu, uvidíte zároveň e-maily přeposlané z vašeho účtu vyhrazeného pro AAPS, jako například upozornění Gmailu.
@@ -129,7 +129,7 @@ Budete muset docela přepínat tam a zpět mezi okny, ale zajistíte tak, že kd
 
 ### Ověření přeposlané e-mailové adresy
 
-- In the “Everyday” gmail (top window), you will get the “Gmail forwarding Confirmation” email.
+- V „každodenním“ Gmailu (horní okno) dostanete e-mail s potvrzením přeposílání („Gmail forwarding Confirmation“).
 - Otevřete jej a „klikněte na odkaz pro potvrzení požadavku“
 
 ### Archivace přeposílaných e-mailů ve vyhrazeném Gmail účtu (dolní okno)
@@ -139,9 +139,9 @@ Budete muset docela přepínat tam a zpět mezi okny, ale zajistíte tak, že kd
 1. Obnovte dolní okno
 2. Zkontrolujte "přesměrování příchozích e-mailů"
 3. A archivovujte kopii Gmailu (aby vaše nová vyhrazená poštovní schránky byla čistá)
-4. Scroll all the way to the bottom to save your changes\
+4. Sjeďte úplně dolů a uložte změny\
    ![](../images/Building-the-App/building_0013.png)
 
 ![](../images/Building-the-App/building_0014.png)
 
-Congratulations! Nyní máte vytvořený dedikovaný AAPS Google účet. The next step is to [build the AAPS app](../SettingUpAaps/BuildingAaps.md).
+Gratulujeme! Nyní máte vytvořený dedikovaný AAPS Google účet. Dalším krokem je [sestavení aplikace AAPS](../SettingUpAaps/BuildingAaps.md).

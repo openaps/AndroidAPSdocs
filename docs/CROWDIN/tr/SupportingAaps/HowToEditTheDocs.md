@@ -34,7 +34,7 @@ Or click the pencil icon that appears in the top bar of the page contents to be 
 
 3. Adım 2'deki seçeneklerden biri veya diğeri, düzenlemelerinizin kaydedileceği deponuzda yeni bir dal oluşturacaktır. Bu dosyada düzenlemelerinizi yapabilirsiniz.
 
-We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#code-syntax).
+We are using markdown for the docs pages. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#code-syntax).
 
 ![Edit branch](../images/PR3.png)
 
@@ -147,10 +147,10 @@ Görüntüleri dahil etmek için bu işaretleme sözdizimini kullanırsınız.
 
 The type of image should be PNG or JPEG.
 
-Images names should confirm to one of following naming rules. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
+Image names should conform to one of the following naming rules. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
 
 - `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
-- `filename-image-xx.png` where xx is a meaning full name for the author of the md file.
+- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
 
 Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
 
@@ -161,6 +161,7 @@ We are not translating images at the moment: images should contain the **minimum
 - Screenshots from web pages images should be up to **1050 pixels wide**.
 - Diagrams of process flows should be up to **1050 pixels wide**.
 - Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
+- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
 
 ### Links
 
@@ -198,7 +199,7 @@ Then link this reference in the text you are writing with the following kind of 
 
 You can add notes and warning boxes to documentation.
 
-Furthermore you can add collapsing notes for detailed information which would users who are not interested in the details quench to read the text at all. Please use these carefully as the documentation should be as easy to read as possible.
+Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Please use these carefully as the documentation should be as easy to read as possible.
 
 #### Notes
 
@@ -311,7 +312,7 @@ Example of a **passive verb**:
 
 - *“The insulin (subject) is delivered (verb) by the pump (object)”*
 
-*“delivered”* a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
+*“delivered”* is a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
 
 Instead of: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
 
@@ -526,7 +527,7 @@ An explanation clarifies, deepens and broadens the reader’s understanding of a
     
     *W is better than z, because…*
     
-    Offer judgements and even opinions where appropriate..
+    Offer judgements and even opinions where appropriate.
     
     *An x in system y is analogous to a w in system z. However…*
     
@@ -552,7 +553,7 @@ The **editor (e.g. a fellow AAPS user, or the person who receives the pull reque
 
 #### General AAPS points
 
-- For glucose values, state both mg/dl and mmol/l in each occurrence (also consider this for screenshots, if possible).
+- For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible).
 
 - For consistency, use “AAPS” rather than “Android APS”.
 

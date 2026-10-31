@@ -1,133 +1,193 @@
-# Setup AAPS on your Wear OS watch
+# Ρύθμιση του AAPS στο ρολόι Wear OS σας
 
-The instructions below apply to the **AAPS Wear** apk that you need to build. If you haven’t built it yet, see the linked guide [here](../WearOS/BuildingAapsWearOS.md). When building, make sure to use the same keystore file that you used for the phone **AAPS** apk.
+Οι παρακάτω οδηγίες αφορούν το apk του **AAPS Wear** που πρέπει να δημιουργήσετε (build). Αν δεν το έχετε δημιουργήσει ακόμα, δείτε τον σχετικό οδηγό [εδώ](../WearOS/BuildingAapsWearOS.md). Κατά τη δημιουργία, χρησιμοποιήστε το ίδιο αρχείο keystore που χρησιμοποιήσατε για το apk του **AAPS** στο τηλέφωνο.
 
-You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk. Each **Wear** app will communicate with it's matching phone app. For example: the **AAPSClient Wear** app can be used to display **AAPSClient** data and not **AAPS** data.
+Μπορείτε επίσης να χρησιμοποιήσετε μερικές από τις πληροφορίες για τα **Wear** apk του **AAPSClient** και του **PumpControl**. Κάθε εφαρμογή **Wear** επικοινωνεί με την αντίστοιχη εφαρμογή τηλεφώνου. Για παράδειγμα: η εφαρμογή **AAPSClient Wear** μπορεί να χρησιμοποιηθεί για την εμφάνιση δεδομένων του **AAPSClient** και όχι δεδομένων του **AAPS**. Όταν είναι εγκατεστημένες μαζί πολλές εκδόσεις πελάτη (**AAPSClient**, **AAPSClient2**, **AAPSClient3**), τα πλακίδια της καθεμιάς έχουν μια μικρή κεφαλίδα στο χρώμα της έκδοσης, ώστε να τις ξεχωρίζετε όταν σύρετε την οθόνη.
 
-## Wear OS Versions and compatibility
+## Εκδόσεις Wear OS και συμβατότητα
+
+(wearos-watchface-changes)=
+
+### Αλλαγές στα watchface του Wear OS (επίπτωση στα watchface του AAPS)
+
+```{admonition} Why newer Wear OS watches break AAPS watchfaces
+:class: warning
+
+Τον Ιούνιο του 2025 η Google [ανακοίνωσε αλλαγές](https://android-developers.googleblog.com/2025/06/upcoming-changes-to-wear-os-watch-faces.html) που καταργούν σταδιακά την παλιά μηχανή watchface (τη μηχανή AndroidX / Wearable Support Library ή «WSL») και την αντικαθιστούν με τη νεότερη δηλωτική μορφή **Watch Face Format**. Τα προσαρμοσμένα watchface του **AAPS** βασίζονται στην παλιά μηχανή. Έτσι, όσο νεότερη είναι η έκδοση του Wear OS, τόσο πιο πιθανό είναι ένα watchface του AAPS να μη λειτουργεί σωστά ή να σταματήσει να λειτουργεί.
+
+Αυτό αφορά μόνο τα **watchface** — οι **επιπλοκές** του AAPS, τα πλακίδια και οι λειτουργίες απομακρυσμένου ελέγχου δεν επηρεάζονται. Γι' αυτό επίσης **μια ενημέρωση υλικολογισμικού/συστήματος σε ρολόι Wear OS μπορεί να χαλάσει τα watchface του AAPS**, και μετά δεν μπορείτε να επιστρέψετε το ρολόι σε παλαιότερη έκδοση Wear OS. Αν το watchface του AAPS λειτουργεί τώρα, **απενεργοποιήστε τις αυτόματες ενημερώσεις του ρολογιού**.
+```
+
+Ο παρακάτω πίνακας δείχνει πώς η αλλαγή της Google επηρεάζει τα watchface του AAPS (παλιάς μηχανής) ανά έκδοση Wear OS:
+
+| Έκδοση Wear OS          | Βασική έκδοση Android | Επίπεδο API | Επίπτωση στα (παλιά) watchface του AAPS                                                                                                                                                                             |
+| ----------------------- | --------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Wear OS 6               | Android 16            | 36          | **Τα παλιά watchface δεν είναι πλέον διαθέσιμα** — το AAPS εγκαθιστά αντί γι' αυτά ένα [watchface σε Watch Face Format](#wearos-aaps-v4-watchface): το προσαρμοσμένο σας watchface ή το watchface επιπλοκών AAPS V4 |
+| Wear OS 5               | Android 14            | 34          | **Σοβαρή** — η ενεργή (διαδραστική) λειτουργία συχνά αποτυγχάνει, οι επιπλοκές παγώνουν, τα κινούμενα σχέδια σταματούν                                                                                              |
+| Wear OS 4               | Android 13            | 33          | **Μέτρια** — περιορισμός ταχύτητας (throttling), χαμένες ενημερώσεις, μερικές αποτυχίες                                                                                                                             |
+| Wear OS 3.0 / 3.2 / 3.5 | Android 11            | 30          | **Χαμηλή** — η παλιά μηχανή υποστηρίζεται ακόμα                                                                                                                                                                     |
+
+Αν το ρολόι σας έχει μια έκδοση όπου τα watchface του AAPS δεν είναι αξιόπιστα, μπορείτε αντί γι' αυτό να εμφανίσετε τα δεδομένα του AAPS μέσω **επιπλοκών** σε ένα συμβατό watchface ή να χρησιμοποιήσετε το [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) με μια επιπλοκή, που παίρνει δεδομένα από το πρόσθετο [Εξωτερικές συνοδευτικές εφαρμογές](#external-companion-apps) του **AAPS**. Σε **Wear OS 6 και νεότερο**, το AAPS εγκαθιστά ένα watchface αντικατάστασης φτιαγμένο στη νέα μορφή — δείτε παρακάτω.
+
+(wearos-aaps-v4-watchface)=
+
+### Wear OS 6 και νεότερο — το watchface που εγκαθιστά το AAPS
+
+Τα ρολόγια με **Wear OS 6 ή νεότερο** δεν μπορούν να τρέξουν τα κλασικά watchface του AAPS ως watchface. Για αυτά τα ρολόγια η εφαρμογή ρολογιού του AAPS φέρνει δύο watchface φτιαγμένα στη νέα μορφή **Watch Face Format** της Google. Το Wear OS επιτρέπει σε μια εφαρμογή να εγκαταστήσει μόνο **ένα** watchface, οπότε επιλέγετε ποιο από τα δύο θα είναι στο ρολόι:
+
+- **Προσαρμοσμένο Watchface** (προεπιλογή): δείχνει το προσαρμοσμένο watchface που φορτώσατε από το τηλέφωνο με το **Φόρτωση Watchface** (δείτε [Αλλαγή σε watchface του AAPS](#WearOS_changing-to-AAPS-watchface)). Το ρολόι σχεδιάζει το σχέδιό σας ως εικόνα, οπότε κάθε υπάρχον προσαρμοσμένο watchface λειτουργεί. Οι θέσεις επιπλοκών που μπορεί να ορίζει ένα προσαρμοσμένο watchface **δεν είναι διαθέσιμες** σε αυτή την εικόνα, γιατί το Wear OS στέλνει δεδομένα επιπλοκών μόνο σε πραγματικό watchface. Πατήστε παρατεταμένα το watchface για να φτάσετε στη μοναδική του ρύθμιση: αν η οθόνη πάντα ενεργή (always-on) δείχνει ένα απλό ρολόι ή το δικό σας σχέδιο, με χαμηλή φωτεινότητα.
+- **Watchface με Complications** (το watchface **AAPS V4**): οι **επτά θέσεις επιπλοκών** του είναι **ήδη ρυθμισμένες με δεδομένα του AAPS**: τιμή γλυκόζης αίματος (BG), IOB, COB, η [επιπλοκή Γράφημα BG](#Watchfaces-complications), βασικός ρυθμός / προσωρινός στόχος, και το εικονίδιο **Τρόπος λειτουργίας** στην πάνω αριστερή θέση (πατήστε το για να αλλάξετε τον τρόπο λειτουργίας του κυκλώματος από το ρολόι). Πατήστε την ώρα στο πάνω μέρος για να ανοίξει η εφαρμογή ξυπνητηριού του ρολογιού. Μπορείτε να αλλάξετε τι δείχνει κάθε θέση στον επεξεργαστή watchface του ρολογιού.
+
+Η επιλογή γίνεται στο τηλέφωνο: ανοίξτε το πρόσθετο **Wear** και, στο **Watchface εγκατεστημένο στο ρολόι**, επιλέξτε ένα από τα δύο. Αυτή η κάρτα εμφανίζεται μόνο όταν είναι συνδεδεμένο ένα ρολόι με Wear OS 6 ή νεότερο. Το **AAPS** σας ζητά επιβεβαίωση, γιατί το ρολόι αλλάζει αμέσως watchface. Αν αλλάξετε από το **Watchface με Complications** σε άλλο, οι επιπλοκές που αλλάξατε στον επεξεργαστή watchface επανέρχονται επίσης στις προεπιλογές. Η επιβεβαίωση το αναφέρει. Όσο είναι επιλεγμένο το **Watchface με Complications**, τα κουμπιά του προσαρμοσμένου watchface κρύβονται και εμφανίζεται αντί γι' αυτά μια προεπισκόπηση του watchface. Αν φορτώσετε ένα προσαρμοσμένο watchface ενώ είναι επιλεγμένο το **Watchface με Complications**, το **AAPS** σας θυμίζει να αλλάξετε σε **Προσαρμοσμένο Watchface** για να το δείτε στο ρολόι.
+
+- Το επιλεγμένο watchface **εγκαθίσταται και ενεργοποιείται αυτόματα** την πρώτη φορά που η εφαρμογή ρολογιού του AAPS τρέχει σε τέτοιο ρολόι, και **ενημερώνεται αυτόματα** μαζί με την εφαρμογή ρολογιού.
+- Αν αφαιρέσατε το watchface, εμφανίζεται η επιλογή **Εγκατάσταση watchface** στο κάτω μέρος του **κύριου μενού** της εφαρμογής AAPS στο ρολόι — πατήστε την για να το εγκαταστήσετε ξανά.
+
+Όσο είναι συνδεδεμένο ένα ρολόι με Wear OS 5 ή παλαιότερο, η κάρτα **Watchface εγκατεστημένο στο ρολόι** δεν εμφανίζεται καθόλου (ο μηχανισμός της χρειάζεται Wear OS 6)· τα κλασικά watchface λειτουργούν εκεί όπως πριν.
+
+(wearos-complications-watchface-setup)=
+
+### Watchface με Complications — προτεινόμενη ρύθμιση
+
+Το **Watchface με Complications** έχει επτά θέσεις επιπλοκών. Πατήστε παρατεταμένα το watchface, πατήστε **Προσαρμογή** (Customize) και διαλέξτε μια πηγή δεδομένων για κάθε θέση. Οι θέσεις είναι αριθμημένες όπως στον επεξεργαστή watchface: **1** αριστερά, **2** στο κέντρο, **3** δεξιά, **4** το γράφημα, **5** κάτω, **6** πάνω αριστερά και **7** πάνω δεξιά.
+
+| Προεπιλεγμένη ρύθμιση                                                                                      | Εναλλακτική ρύθμιση                                                                                          |
+| ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| ![Watchface με Complications, προεπιλεγμένη ρύθμιση](../images/wearos/complications_watchface_default.png) | ![Watchface με Complications, εναλλακτική ρύθμιση](../images/wearos/complications_watchface_alternative.png) |
+
+| Θέση | Θέση          | Προεπιλογή                                                                              | Εναλλακτική                                               |
+| ---- | ------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| 1    | Αριστερά      | Εικονίδιο IoB                                                                           | CoB & IoB                                                 |
+| 2    | Κέντρο        | Γλυκόζη αίματος                                                                         | Γλυκόζη αίματος                                           |
+| 3    | Δεξιά         | Εικονίδιο CoB                                                                           | BR & Στόχος                                               |
+| 4    | Γράφημα       | Γράφημα BG                                                                              | Γράφημα BG                                                |
+| 5    | Κάτω          | BR & Στόχος                                                                             | Μπαταρία uploader/τηλεφώνου                               |
+| 6    | Πάνω αριστερά | Τρόπος λειτουργίας                                                                      | Τρόπος λειτουργίας                                        |
+| 7    | Πάνω δεξιά    | Μπαταρία uploader/τηλεφώνου ή συντόμευση εφαρμογής για την **Αναβολή Ειδοποίησης AAPS** | Συντόμευση εφαρμογής για την **Αναβολή Ειδοποίησης AAPS** |
+
+Η συντόμευση **Αναβολή Ειδοποίησης AAPS** επιλέγεται από τις επιπλοκές **Συντόμευση εφαρμογής** (App shortcut) του ίδιου του ρολογιού. Αν την πατήσετε, γίνεται αναβολή του συναγερμού που ηχεί στο τηλέφωνο.
+
+```{tip}
+Ενεργοποιήστε την **Οθόνη πάντα ενεργή** (Always-on display) στο ρολόι (**Ρυθμίσεις** > **Οθόνη**). Τότε το watchface συνεχίζει να δείχνει τη γλυκόζη σας όταν ο καρπός είναι κάτω, αντί για κενή οθόνη ή ένα απλό ρολόι.
+```
+
+```{admonition} No complication data while the watch is locked
+:class: note
+Αν έχει οριστεί **Τύπος κλειδώματος** (Lock type) στις **Ρυθμίσεις** > **Ασφάλεια και απόρρητο**, το ρολόι κρύβει τα δεδομένα των επιπλοκών όσο είναι κλειδωμένο, και το watchface δείχνει κενές θέσεις μέχρι να το ξεκλειδώσετε. Για να μένουν ορατά τα δεδομένα, απενεργοποιήστε την **Απόκρυψη πληροφοριών** (Hide information) στο ίδιο μενού.
+```
 
 ### Wear OS 3
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (described below) or ADB.  
-No limitation in **AAPS Wear** operations.
+Εγκαταστήστε το apk του **AAPS Wear** με το [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), το Easy Fire Tools (περιγράφεται παρακάτω) ή το ADB.  
+Κανένας περιορισμός στις λειτουργίες του **AAPS Wear**.
 
 (BuildingAapsWearOs-WearOS5)=
 
-### Wear OS 4 and Galaxy watch updated to Wear OS 5
+### Wear OS 4 και Wear OS 5
 
-Example: GW4, GW5, GW6
+Παράδειγμα: Galaxy Watch 4, 5, 6, 7 και Ultra ή Pixel Watch που **δεν** έχουν ενημερωθεί ακόμα σε Wear OS 6. Ελέγξτε την έκδοση στις **Ρυθμίσεις** > **Πληροφορίες ρολογιού** > **Λογισμικό**.
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV).  
-No limitation in **AAPS Wear** operations.
+Εγκαταστήστε το apk του **AAPS Wear** με το [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) (για Wear OS 5 ακολουθήστε [αυτό το βίντεο](https://www.youtube.com/watch?v=yef_qGvcCnk)). Όλες οι λειτουργίες του **AAPS Wear** δουλεύουν, αλλά τα κλασικά watchface του **AAPS** έχουν περιορισμούς, όπως περιγράφεται στον πίνακα παραπάνω: περιορισμένη ταχύτητα (throttling) στο Wear OS 4, συχνές αποτυχίες στο Wear OS 5.
 
-```{admonition} Android Wear OS 5
+```{admonition} Wear OS 5
 :class: warning
-**FIRMWARE UPDATES WILL MOST PROBABLY BREAK AAPS WATCHFACES: DISABLE WATCH UPDATES**.
+Στο Wear OS 5 το watchface του AAPS πρέπει να επιλεγεί με το Wear Installer 2 αμέσως μετά την εγκατάσταση της εφαρμογής Wear: στο τέλος της εγκατάστασης το πρόγραμμα εγκατάστασης προτείνει το watchface **AAPS(Προσαρμοσμένο)**. Αν κατά λάθος αλλάξετε σε άλλο watchface, επαναλάβετε την εγκατάσταση. Η αλλαγή των ρυθμίσεων του watchface (Σκούρο, Watchdivider κ.λπ.) μπορεί να μην είναι δυνατή.
+
+Αν το κλασικό watchface λειτουργεί τώρα για εσάς, **απενεργοποιήστε τις αυτόματες ενημερώσεις του ρολογιού**: η επόμενη ενημέρωση υλικολογισμικού πιθανότατα θα το χαλάσει. Αν παρόλα αυτά ενημερώσετε σε Wear OS 6, διαβάστε την παραπάνω ενότητα: τότε το **AAPS** εγκαθιστά το δικό του watchface στη νέα μορφή.
 ```
 
-### Galaxy watch with factory installed Wear OS 5
+Αν το watchface δεν είναι αρκετά αξιόπιστο, σκεφτείτε να χρησιμοποιήσετε αντί γι' αυτό το [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) με μια επιπλοκή. Χρειάζεται να είναι ενεργοποιημένο το πρόσθετο [Εξωτερικές συνοδευτικές εφαρμογές](#external-companion-apps) στο **AAPS**.
 
- Example: GW7, GW Ultra
+### Wear OS 6 και νεότερο
 
-```{admonition} Android Wear OS 5
-:class: warning
-Installing the AAPS Watch Face has to be done with [Wear Installer 2](https://www.youtube.com/watch?v=yef_qGvcCnk) after installing the Wear app.<br>
-Accidental change of the Watch Face to another one requires the procedure above to be repeated.<br>
-Changing the dedicated Watch Face parameters like: Dark, Watchdivider, etc. is not possible.<br><br>
-**FIRMWARE UPDATES WILL MOST PROBABLY BREAK AAPS WATCHFACES: DISABLE WATCH UPDATES**.
-```
+Παράδειγμα: Galaxy Watch 4 και νεότερα με One UI 8 Watch, Pixel Watch μετά την ενημέρωση του 2025. Τα περισσότερα ρολόγια Galaxy και Pixel έχουν λάβει αυτή την ενημέρωση.
 
-Consider alternatively [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication.
+Εγκαταστήστε το apk του **AAPS Wear** με το [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). Τα κλασικά watchface δεν είναι διαθέσιμα· το **AAPS** εγκαθιστά αυτόματα το watchface που επιλέχθηκε στο τηλέφωνο, δείτε [το watchface που εγκαθιστά το AAPS](#wearos-aaps-v4-watchface). Κανένας περιορισμός στις λειτουργίες του **AAPS Wear**.
 
-### Pixel watch with Wear OS 5
+## Πώς να ρυθμίσετε ένα έξυπνο ρολόι Samsung Galaxy Watch 4 με το **AAPS**
 
-Not compatible with the AAPS watchface.  
-Consider [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication.
+Αυτή η ενότητα υποθέτει ότι είστε εντελώς νέοι στα έξυπνα ρολόγια. Σας δίνει έναν βασικό προσανατολισμό σε ένα δημοφιλές ρολόι, το **Galaxy Watch 4**, και στη συνέχεια έναν οδηγό βήμα προς βήμα για να ρυθμίσετε το **AAPS** στο ρολόι.
 
-## How to set up a Samsung Galaxy 4 smartwatch with **AAPS**
+_Αυτός ο οδηγός γράφτηκε για Galaxy Watch με Wear OS 3._ Σε Wear OS 4 και νεότερα, το ρολόι ζητά **κωδικό σύζευξης** όταν ένα τηλέφωνο ή ένας υπολογιστής συνδέεται μέσω ADB. Το Wear Installer 2 και η διαδικασία με το τερματικό [παρακάτω](#BuildingAapsWearOs-WearOS5-TShoot) το υποστηρίζουν και τα δύο.
 
-This section assumes you are totally new to Smartwatches, and gives you basic orientation of a popular watch, the **Galaxy Watch 4**, followed by a step-by-step guide to setup **AAPS** on the watch.
+Εδώ υπάρχουν βασικοί οδηγοί ρύθμισης για το [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) και το [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
 
-_This guide assumes the Samsung Galaxy watch you are setting up is running Wear OS version 3 or lower._ If you are setting up a watch running Wear OS 4/OneUI 5 or later, you will need to use a new ADB pairing process, this is explained in the Samsung software on your phone and will be updated here in due course.
+## Βασική εξοικείωση με το έξυπνο ρολόι
 
-Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
+Μετά τη βασική ρύθμιση του ρολογιού σας σύμφωνα με το παραπάνω βίντεο, ανοίξτε το Play Store στο τηλέφωνο και κατεβάστε τις εξής εφαρμογές: «Galaxy Wearable», «Samsung» και είτε «Easy Fire tools» είτε «Wear Installer 2».
 
-## Basic smartwatch familiarity
-
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable" “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
-
-There are plenty of 3rd party YouTube videos which will help you with getting familiar with your new smartwatch, for example:
+Υπάρχουν πολλά βίντεο τρίτων στο YouTube που θα σας βοηθήσουν να εξοικειωθείτε με το νέο σας έξυπνο ρολόι, για παράδειγμα:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-The app “Galaxy Wearable” also has an instruction manual section in it. Open galaxy wearable on the phone, search for the watch, attempt to pair the watch with the phone. Depending on your version, this may prompt you to install a further 3rd app “galaxy watch 4 plugin” from the playstore (takes a while to download). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Go through a series of menus and tick various preferences.
+Η εφαρμογή «Galaxy Wearable» έχει επίσης μια ενότητα με εγχειρίδιο οδηγιών. Ανοίξτε το Galaxy Wearable στο τηλέφωνο, αναζητήστε το ρολόι και προσπαθήστε να κάνετε σύζευξη του ρολογιού με το τηλέφωνο. Ανάλογα με την έκδοσή σας, μπορεί να σας ζητηθεί να εγκαταστήσετε και μια τρίτη εφαρμογή, το «galaxy watch 4 plugin», από το Play Store (η λήψη διαρκεί λίγη ώρα). Εγκαταστήστε το στο τηλέφωνο και μετά προσπαθήστε ξανά να κάνετε σύζευξη ρολογιού και τηλεφώνου στην εφαρμογή Wearable. Περάστε από μια σειρά μενού και επιλέξτε διάφορες προτιμήσεις.
 
-## Setting up a Samsung account
+## Δημιουργία λογαριασμού Samsung
 
-You need to make sure that the email account you use to set up the Samsung account has a date-of-birth such that the user is age 13+, as otherwise the Samsung permissions are really difficult to approve. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 363 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account.
+Ο λογαριασμός email που χρησιμοποιείτε για τον λογαριασμό Samsung πρέπει να έχει ημερομηνία γέννησης που δίνει ηλικία 13 ετών και άνω. Αλλιώς οι άδειες της Samsung είναι πολύ δύσκολο να εγκριθούν. Αν έχετε δώσει στο παιδί σας, που είναι κάτω από 13 ετών, λογαριασμό Gmail και χρησιμοποιείτε αυτή τη διεύθυνση email, δεν μπορείτε απλώς να τον αλλάξετε σε λογαριασμό ενήλικα. Ένας τρόπος να το παρακάμψετε είναι να αλλάξετε την ημερομηνία γέννησης, ώστε η ηλικία να είναι 12 ετών και 364 ημερών. Την επόμενη ημέρα ο λογαριασμός θα μετατραπεί σε λογαριασμό ενήλικα και μπορείτε να συνεχίσετε με τη ρύθμιση του λογαριασμού Samsung.
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
-## Transferring the **AAPS** Wear app onto your **AAPS** phone
+## Μεταφορά της εφαρμογής **AAPS** Wear στο τηλέφωνο **AAPS** σας
 
-Loading the Wear.apk from Android Studio to your phone can be done either by:
+Η μεταφορά του Wear.apk από το Android Studio στο τηλέφωνό σας μπορεί να γίνει με έναν από τους εξής τρόπους:
 
-a)  using a USB cable to put the **AAPS** wear apk file onto the phone, and then “side-load” it to the watch. Transfer Wear.apk to the phone via USB into the downloads folder; or
+α)  με ένα καλώδιο USB μεταφέρετε το αρχείο apk του **AAPS** Wear στο τηλέφωνο και μετά το εγκαθιστάτε («side-load») στο ρολόι. Μεταφέρετε το Wear.apk στο τηλέφωνο μέσω USB, στον φάκελο λήψεων (Downloads), ή
 
-b)  cut and paste Wear.apk from Android Studio onto your Gdrive.
+β)  κάντε αποκοπή και επικόλληση του Wear.apk από το Android Studio στο Google Drive σας.
 
 
-To side-load AAPS onto the watch You can use either: 1) Wear Installer 2 2) Easy Fire tools 3) Android Debug Bridge (ADB) Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained. If Wear Installer 2 does not work for you try via
+Για να εγκαταστήσετε (side-load) το AAPS στο ρολόι, μπορείτε να χρησιμοποιήσετε ένα από τα εξής: 1) Wear Installer 2 2) Easy Fire tools 3) Android Debug Bridge (ADB) Εδώ προτείνουμε το Wear Installer 2, γιατί οι οδηγίες και η διαδικασία στο βίντεο είναι πολύ σαφείς και καλά εξηγημένες. Αν το Wear Installer 2 δεν λειτουργεί για εσάς, δοκιμάστε το Easy Fire Tools ή το ADB, που περιγράφονται και τα δύο παρακάτω.
 
-### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
+### Χρήση του Wear Installer 2 για εγκατάσταση (side-load) του **AAPS** Wear από το τηλέφωνο στο ρολόι
 
- ![image](../images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
+ ![Εικονίδιο της εφαρμογής Wear Installer 2](../images/wearos/wear_installer2_icon.png)
 
-Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
+Το Wear Installer 2, από τον [Malcolm Bryant](https://www.youtube.com/@Freepoc), μπορεί να ληφθεί από το Google Play στο τηλέφωνό σας. Με αυτό μπορείτε να εγκαταστήσετε (side-load) την εφαρμογή AAPS Wear στο ρολόι. Η εφαρμογή περιέχει ένα χρήσιμο [βίντεο](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) «how to sideload» (πώς να κάνετε sideload).
 
 ```{tip}
-For Wear OS 5 watches follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk).
-See troubleshooting tips [below](#BuildingAapsWearOs-WearOS5-TShoot).
+Για ρολόγια Wear OS 5 ακολουθήστε [αυτό το βίντεο](https://www.youtube.com/watch?v=yef_qGvcCnk).
+Δείτε τις συμβουλές αντιμετώπισης προβλημάτων [παρακάτω](#BuildingAapsWearOs-WearOS5-TShoot).
 ```
 
-This provides all the necessary detail (best to open the video on a separate device so you can watch it whilst setting up the phone).
+Εδώ υπάρχουν όλες οι απαραίτητες λεπτομέρειες (καλύτερα ανοίξτε το βίντεο σε άλλη συσκευή, ώστε να το βλέπετε ενώ ρυθμίζετε το τηλέφωνο).
 
-As mentioned in the video, once complete, switch ADB debugging off on the watch, to avoid draining the smartwatch battery.
+Όπως αναφέρεται στο βίντεο, όταν τελειώσετε, απενεργοποιήστε τον εντοπισμό σφαλμάτων ADB (ADB debugging) στο ρολόι, ώστε να μην αδειάζει η μπαταρία του.
 
-Alternatively, but not for Wear OS 5, you can:
+Εναλλακτικά, αλλά όχι για Wear OS 5, μπορείτε:
 
-### Use Easy Fire tools to side-load the **AAPS** wear on the watch
+### Χρήση του Easy Fire tools για εγκατάσταση (side-load) του **AAPS** Wear στο ρολόι
 
-1)   Download _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_ from the Play Store onto phone
+1)   Κατεβάστε το _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_ από το Play Store στο τηλέφωνο
 
 ![image](../images/wearos/easyfire01.png)
 
-2)  Make yourself a developer in the watch (once set up and connected to phone):
+2)  Κάντε τον εαυτό σας προγραμματιστή (developer) στο ρολόι (αφού ρυθμιστεί και συνδεθεί με το τηλέφωνο):
 
-Go to settings >about watch (bottom option) -> software info -> software version.
+Πηγαίνετε στις **Ρυθμίσεις** > **Σύστημα** > **Πληροφορίες** > **Εκδόσεις** (τα ονόματα των μενού διαφέρουν ανάλογα με τη μάρκα του ρολογιού — σε κάποια ρολόγια είναι **Πληροφορίες ρολογιού** > **Πληροφορίες λογισμικού** > **Έκδοση λογισμικού**).
 
 ![image](../images/wearos/easyfire02.png)
 
-Rapidly tap on “ software version” until a notification appears that the watch is now in "developer mode".
+Πατήστε γρήγορα αρκετές φορές τον **Αριθμό έκδοσης** (ή την **Έκδοση λογισμικού**), μέχρι ένα μήνυμα να σας πει ότι είστε πλέον προγραμματιστής.
 
 ![image](../images/wearos/easyfire03.png)
 
-Return to the top of settings menu, scroll to the bottom and see “developer options” below “about watch”.
+Επιστρέψτε στις **Ρυθμίσεις** > **Σύστημα**: εμφανίζεται τώρα ένα νέο μενού **Επιλογές προγραμματιστή**.
 
-In “developer options”, turn on “ADB debugging” and “wireless debugging”. The latter option then reveals the IP address of the watch, the final two digits of which changes each time the watch is paired with a new phone. It will be something like: **192.168.1.214**.5555 (ignore the last 4 digits). Note that the last two digits (here, “20”) of this address will change every time you change to a new phone handset for AAPS.
+Στις **Επιλογές προγραμματιστή**, ενεργοποιήστε τον **Εντοπισμό σφαλμάτων ADB** και τον **Ασύρματο εντοπισμό σφαλμάτων** και επιβεβαιώστε τα μηνύματα. Ο ασύρματος εντοπισμός σφαλμάτων δείχνει τότε τη **Διεύθυνση IP και θύρα** του ρολογιού, κάτι σαν: **192.168.1.214** : 5555. Χρειάζεστε μόνο τη διεύθυνση IP (εδώ **192.168.1.214**), όχι τον αριθμό θύρας μετά την άνω και κάτω τελεία. Η διεύθυνση IP μπορεί να αλλάξει, για παράδειγμα κάθε φορά που αλλάζετε σε νέο τηλέφωνο για το AAPS.
 
 ![image](../images/wearos/easyfire04.png)
 
-STEP 3)     Enter IP address _e.g._ **192.168.1.214** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address).
+ΒΗΜΑ 3)     Εισάγετε τη διεύθυνση IP, _π.χ._ **192.168.1.214**, στο Easy Fire tools στο τηλέφωνο (ανοίξτε το μενού αριστερά (☰), μετά τις ρυθμίσεις, και εισάγετε τη διεύθυνση IP).
 
 ![image](../images/wearos/easyfire05.png)
 
-Then click the plug socket icon on the top right. It will turn green when connected.
+Μετά πατήστε το εικονίδιο της πρίζας πάνω δεξιά. Θα γίνει πράσινο όταν συνδεθεί.
 
 ![image](../images/wearos/easyfire06.png)
 
 
-STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  aaps-wear.apk onto the smartwatch using Easy Fire tools
+ΒΗΜΑ 4) Ακολουθήστε τις οδηγίες [εδώ](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) για να εγκαταστήσετε (side-load, δηλαδή να μεταφέρετε) το aaps-wear.apk στο έξυπνο ρολόι με το Easy Fire tools
 
 
 ![image](../images/wearos/easyfire07.png)
@@ -135,133 +195,147 @@ STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/0
 
 (BuildingAapsWearOs-WearOS5-TShoot)=
 
-### Using the terminal
-Connect your smartwatch and computer to the same Wi-Fi network.
+### Χρήση του τερματικού
+Συνδέστε το έξυπνο ρολόι και τον υπολογιστή σας στο ίδιο δίκτυο Wi-Fi.
 
-- To install ADB download it from: https://developer.android.com/tools/releases/platform-tools
-- Open a terminal.
-- For Windows, create a new folder named `adb` under your disk `C:`. Open the `platform-tools-latest-windows.zip` file you downloaded above. Copy all files inside `platform-tools` to `C:\adb` and open this folder with a command prompt (right click and Open in Terminal). Type the command below to set the path to the folder where ADB is located: `setx PATH "%PATH%;C:\adb"`
-- For Mac instead of installing manually you can use homebrew: `brew install android-platform-tools`
+- Για να εγκαταστήσετε το ADB, κατεβάστε το από: https://developer.android.com/tools/releases/platform-tools
+- Ανοίξτε ένα τερματικό.
+- Σε Windows, δημιουργήστε έναν νέο φάκελο με όνομα `adb` στον δίσκο `C:`. Ανοίξτε το αρχείο `platform-tools-latest-windows.zip` που κατεβάσατε παραπάνω. Αντιγράψτε όλα τα αρχεία μέσα στο `platform-tools` στο `C:\adb` και ανοίξτε αυτόν τον φάκελο σε γραμμή εντολών (δεξί κλικ και Open in Terminal). Πληκτρολογήστε την παρακάτω εντολή για να ορίσετε τη διαδρομή (path) προς τον φάκελο όπου βρίσκεται το ADB: `setx PATH "%PATH%;C:\adb"`
+- Σε Mac, αντί για χειροκίνητη εγκατάσταση, μπορείτε να χρησιμοποιήσετε το homebrew: `brew install android-platform-tools`
 
-On the watch:
-- Go to Settings → About watch → **Software Information**
-- Tap Software version 7 times until you see Developer mode enabled.
-- Go to Settings → Developer options. Enable **ADB debugging**
-- Go to Settings → Developer options → Wireless debugging → **Pair new device**
+Στο ρολόι:
+- Πηγαίνετε στις Ρυθμίσεις → Πληροφορίες ρολογιού → **Πληροφορίες λογισμικού** (Settings → About watch → Software Information)
+- Πατήστε 7 φορές την Έκδοση λογισμικού (Software version), μέχρι να δείτε ότι η λειτουργία προγραμματιστή ενεργοποιήθηκε (Developer mode enabled).
+- Πηγαίνετε στις Ρυθμίσεις → Επιλογές προγραμματιστή (Developer options). Ενεργοποιήστε τον **Εντοπισμό σφαλμάτων ADB** (ADB debugging)
+- Πηγαίνετε στις Ρυθμίσεις → Επιλογές προγραμματιστή → Ασύρματος εντοπισμός σφαλμάτων (Wireless debugging) → **Σύζευξη νέας συσκευής** (Pair new device)
 
-You will see a Wi-Fi paring code and IP address and port appearing: ![image](../images/wearos/ADB03.png)
+Θα δείτε να εμφανίζονται ένας κωδικός σύζευξης Wi-Fi, η διεύθυνση IP και η θύρα:
 
-- In the terminal: `adb pair ipaddress:port` E.g. `adb pair 10.10.1.125:36299`
-- You will be asked for the pairing code. Enter it.
-- You will see a response:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
-- In the terminal type: <br>`adb devices`.<br> You should see something like:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
+![Οθόνη ρολογιού με τον κωδικό σύζευξης Wi-Fi, τη διεύθυνση IP και τη θύρα](../images/wearos/ADB03.png)
 
-- Now go to the folder on your computer where the Wear apk is and type<br> `adb install wear-full.apk` <br>with wear.apk replaced by the name of your apk file.
-- You will see:<br> `Performing Streamed Install`<br> `Success`
+- Στο τερματικό: `adb pair ipaddress:port` Π.χ. `adb pair 10.10.1.125:36299`
+- Θα σας ζητηθεί ο κωδικός σύζευξης. Πληκτρολογήστε τον.
+- Θα δείτε την απάντηση:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
+- Στο τερματικό πληκτρολογήστε: <br>`adb devices`.<br> Θα δείτε κάτι σαν:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 
-
-### General troubleshooting recommendations for Wear OS 5
-
-- Do not use Wi-Fi Tethering. That won't work.
-- You do not need to enable adb debugging on the phone (only on the watch). Disable adb debugging on the Phone.
-- Make sure you are connecting to your local network where phone and watch can see each other (do not use your Wi-Fi guest network to connect).
-- For GW7 you need to install using Wear Installer 2 as it gives you the option to select the AAPS (Custom) watchface on installation.
-- Make sure both watch and phone are on the same network and Wi-Fi device. Especially Wi-Fi repeaters or access points may create problems.
-- Make sure to be near your main router, then restart both phone and watch.
-
-**Pairing :**
-
-- Watch: Wireless Debugging: note the IP address.
-- Wear Installer: Enter the IP on the in Wear Installer app.
-- Select Pair new, note the pairing code and port number displayed.
-- Wear Installer: enter the paring code + space + port number.
-- Wear installer should report pairing was successful. If it does not, exit the Wear Installer, then try again.
-
-Once paired you should be able to install the AAPS wear apk:
-
-- Exit/close, then restart Wear Installer.
-- On wireless debug, note the IP and Port number and make sure you check/enter the IP and port number in Wear Installer.
-- Note: the port number is different from the one used for pairing!
-
-## Setting up the connection between the watch and the phone from **AAPS**
-
-The final step is to configure **AAPS** on the phone to interact with **Wear.apk** on the watch. To do this, enable the Wear plugin in Config Builder:
-
-* Go to the **AAPS** app on the phone
-
-* Select > Config Builder in the left-hand Hamburger tab
-
-* Tick for Wear selection under Synchronization
-
-![Wear OS](../images/WearOS.png)
-
-To change to a different **AAPS**  watchface, press on the home screen of the watch and it will come to “customise”. Then swipe right until you get to all the **AAPS**  faces.
-
-If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, it will look like this:
+- Τώρα πηγαίνετε στον φάκελο του υπολογιστή όπου βρίσκεται το Wear apk και πληκτρολογήστε<br> `adb install wear-full.apk` <br>αντικαθιστώντας το wear-full.apk με το όνομα του δικού σας αρχείου apk.
+- Θα δείτε:<br> `Performing Streamed Install`<br> `Success`
 
 
-![24-10-23, successful galaxy watch photo](../images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
+(wear-os-5-troubleshooting)=
+
+### Γενικές συμβουλές αντιμετώπισης προβλημάτων για Wear OS 5
+
+- Μη χρησιμοποιείτε Wi-Fi Tethering (σημείο πρόσβασης Wi-Fi από το τηλέφωνο). Αυτό δεν θα λειτουργήσει.
+- Δεν χρειάζεται να ενεργοποιήσετε τον εντοπισμό σφαλμάτων adb (adb debugging) στο τηλέφωνο (μόνο στο ρολόι). Απενεργοποιήστε τον εντοπισμό σφαλμάτων adb (adb debugging) στο τηλέφωνο.
+- Βεβαιωθείτε ότι συνδέεστε στο τοπικό σας δίκτυο, όπου το τηλέφωνο και το ρολόι «βλέπουν» το ένα το άλλο (μη χρησιμοποιείτε το δίκτυο Wi-Fi επισκεπτών).
+- Βεβαιωθείτε ότι το ρολόι και το τηλέφωνο είναι στο ίδιο δίκτυο και στην ίδια συσκευή Wi-Fi. Ιδιαίτερα οι επαναλήπτες Wi-Fi (repeaters) ή τα σημεία πρόσβασης (access points) μπορεί να δημιουργούν προβλήματα.
+- Να είστε κοντά στον κύριο δρομολογητή (router) σας και μετά κάντε επανεκκίνηση στο τηλέφωνο και στο ρολόι.
+
+**Σύζευξη :**
+
+- Ρολόι: Ασύρματος εντοπισμός σφαλμάτων (Wireless Debugging): σημειώστε τη διεύθυνση IP.
+- Wear Installer: εισάγετε την IP στην εφαρμογή Wear Installer.
+- Επιλέξτε Σύζευξη νέας συσκευής (Pair new) και σημειώστε τον κωδικό σύζευξης και τον αριθμό θύρας που εμφανίζονται.
+- Wear Installer: εισάγετε τον κωδικό σύζευξης + κενό + αριθμό θύρας.
+- Το Wear Installer πρέπει να αναφέρει ότι η σύζευξη έγινε επιτυχώς. Αν όχι, κλείστε το Wear Installer και δοκιμάστε ξανά.
+
+Μετά τη σύζευξη θα μπορείτε να εγκαταστήσετε το apk του AAPS Wear:
+
+- Βγείτε/κλείστε και μετά ανοίξτε ξανά το Wear Installer.
+- Στον ασύρματο εντοπισμό σφαλμάτων (wireless debug) σημειώστε την IP και τον αριθμό θύρας και βεβαιωθείτε ότι ελέγχετε/εισάγετε την IP και τον αριθμό θύρας στο Wear Installer.
+- Σημείωση: ο αριθμός θύρας είναι διαφορετικός από αυτόν που χρησιμοποιήθηκε για τη σύζευξη!
+
+## Ρύθμιση της σύνδεσης ρολογιού και τηλεφώνου από το **AAPS**
+
+Το τελευταίο βήμα είναι να ρυθμίσετε το **AAPS** στο τηλέφωνο ώστε να επικοινωνεί με το **Wear.apk** στο ρολόι. Για αυτό, ενεργοποιήστε το πρόσθετο Wear:
+
+* Ανοίξτε την εφαρμογή **AAPS** στο τηλέφωνο
+
+* Ανοίξτε το **μενού** (☰) πάνω αριστερά και πηγαίνετε στο **Διαμόρφωση** > **Επικοινωνία**
+
+* Επιλέξτε το κουτί **Wear**
+
+![Διαμόρφωση > Επικοινωνία με το Wear ενεργοποιημένη](../images/v4/Configuration/configuration_communication_wear.png)
+
+Για να κάνετε bolus ή άλλες ενέργειες από το ρολόι, ενεργοποιήστε επίσης το **Έλεγχος από ρολόι** στις [Ρυθμίσεις > Wear](#preferences-wear).
+
+Για να αλλάξετε σε άλλο watchface του **AAPS**, πατήστε στην αρχική οθόνη του ρολογιού και θα εμφανιστεί η επιλογή «customise» (προσαρμογή). Μετά σύρετε προς τα δεξιά μέχρι να φτάσετε σε όλα τα watchface του **AAPS**.
+
+Αν το **AAPS** Wear.apk έχει εγκατασταθεί σωστά στο έξυπνο ρολόι, θα μοιάζει έτσι:
 
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use **Wear.apk** & **AAPS** remotely via wifi.
+![Το πρόσθετο Wear με το συνδεδεμένο Galaxy Watch και η εφαρμογή AAPS στο ρολόι](../images/wearos/wear_apk_installed.png)
 
-![MURCIMG-20251007-WA0000](../images/500234283-5db08a08-f256-49a0-8843-46bdd01b33d6.png)
 
-### Troubleshooting the **AAPS** watch- **AAPS** phone communication
+Σε ορισμένα έξυπνα ρολόγια, όπως το Samsung Galaxy, η ρύθμιση «Remote Connection» (Απομακρυσμένη σύνδεση) στις Advanced Features (Προηγμένες λειτουργίες) του Samsung Galaxy πρέπει να είναι **ενεργοποιημένη** για να χρησιμοποιείτε το **Wear.apk** και το **AAPS** απομακρυσμένα μέσω Wi-Fi.
 
-1.  If EasyFire tools does not connect or if you are receiving ‘authorisation failed’ > check IP address has been correctly entered.
-2.  Check that the smartwatch is connected to the internet (and not just connected to the phone via Bluetooth).
-3.  Check that the **AAPS** Phone and smartwatch are paired or linked in Samsung app.
-4.  It may also help to do a hard restart of Phone and smartwatch (meaning turning phone on and off)
-5.  Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have side-loaded the correct **AAPS** apk version onto the watch. If your AAPS wear.apk version is listed as any of the following: a) “wear-AAPSClient-release’; b) ‘wear-full-release.aab’; or c) the word ‘debug’ appears in the title, you have not selected the correct Wear OS apk version during the build.
-6.  Check that your router is not isolating the devices from one another.
+![Galaxy Wearable, Προηγμένες λειτουργίες, Απομακρυσμένη σύνδεση ενεργοποιημένη](../images/wearos/galaxy_wearable_remote_connection.png)
 
-More troubleshooting tips can be found [here](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
+(wear-os-watch-phone-communication)=
+
+### Αντιμετώπιση προβλημάτων στην επικοινωνία ρολογιού **AAPS** - τηλεφώνου **AAPS**
+
+1.  Αν το EasyFire tools δεν συνδέεται ή αν λαμβάνετε «authorisation failed» > ελέγξτε ότι η διεύθυνση IP έχει εισαχθεί σωστά.
+2.  Ελέγξτε ότι το έξυπνο ρολόι είναι συνδεδεμένο στο διαδίκτυο (και όχι μόνο με το τηλέφωνο μέσω Bluetooth).
+3.  Ελέγξτε ότι το τηλέφωνο **AAPS** και το έξυπνο ρολόι είναι σε σύζευξη ή συνδεδεμένα στην εφαρμογή της Samsung.
+4.  Μπορεί επίσης να βοηθήσει μια πλήρης επανεκκίνηση του τηλεφώνου και του ρολογιού (δηλαδή απενεργοποίηση και ενεργοποίηση του τηλεφώνου)
+5.  Αν καταφέρατε να κατεβάσετε το Wear.apk στο τηλέφωνο αλλά δεν λαμβάνετε δεδομένα BG, _ελέγξτε_ ότι εγκαταστήσατε (side-load) το σωστό apk του **AAPS** Wear στο ρολόι: η εφαρμογή ρολογιού ενός build μέσω browser είναι το αρχείο `aaps-wear-….apk`, δείτε [Δημιουργία της εφαρμογής AAPS για Wear](../WearOS/BuildingAapsWearOS.md). Αν το αρχείο που εγκαταστήσατε είναι ένα από τα εξής: α) ένα apk Wear του **AAPSClient** (ενώ το τηλέφωνο τρέχει το **AAPS**)· β) ένα αρχείο `.aab`· ή γ) ένα αρχείο με τη λέξη «debug» στο όνομά του, τότε δεν επιλέξατε το σωστό apk Wear OS κατά το build.
+6.  Ελέγξτε ότι ο δρομολογητής (router) σας δεν απομονώνει τις συσκευές μεταξύ τους.
+
+Περισσότερες συμβουλές αντιμετώπισης προβλημάτων θα βρείτε [εδώ](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
 
 (WearOS_changing-to-AAPS-watchface)=
 
-## Changing to an AAPS Watchface on your WearOS watch
+## Αλλαγή σε watchface του AAPS στο ρολόι σας WearOS
 
-There are a number of watchfaces available in the standard build of the AAPS Wear OS APK build. Once you have installed the AAPS Wear APK on your watch, they will be available. Here are the steps for selecting one:
+Η τυπική έκδοση του AAPS Wear OS APK περιέχει αρκετά watchface. Αφού εγκαταστήσετε το AAPS Wear APK στο ρολόι σας, θα είναι διαθέσιμα. Τα βήματα για να επιλέξετε ένα:
 
-1. On your watch (assuming WearOS), long press on your current watchface to bring up the watchface selector screen and scroll all the way to the right until you see the "Add Watch Face" button and select it
+1. Στο ρολόι σας (αν είναι WearOS), πατήστε παρατεταμένα το τρέχον watchface για να ανοίξει η οθόνη επιλογής watchface. Κάντε κύλιση τέρμα δεξιά μέχρι να δείτε το κουμπί «Add Watch Face» (Προσθήκη watchface) και επιλέξτε το
 
-![Screenshot_20231123_124657_sysui](../images/efd4268f-0536-4a31-9ba1-f98108f32483.png)
+![Οθόνη επιλογής watchface με το κουμπί Add watch face (Προσθήκη watchface)](../images/wearos/watchface_add.png)
 
-2. Scroll to the bottom of the list until you see the "Downloaded" section and find "AAPS (Custom)" and click the middle of the image to add it to your shortlist of current watchfaces. Don't worry about the current appearance of the "AAPS (Custom)" watchface, we will select your preferred skin in the next step.
+2. Κάντε κύλιση στη λίστα μέχρι να βρείτε το «AAPS(Προσαρμοσμένο)» (ανάλογα με το ρολόι, τα watchface των εγκατεστημένων εφαρμογών εμφανίζονται στην ενότητα «Downloaded» (Ληφθέντα) ή ομαδοποιημένα ανά εφαρμογή) και πατήστε στη μέση της εικόνας για να το προσθέσετε στη σύντομη λίστα με τα τρέχοντα watchface σας. Μην ανησυχείτε για την τρέχουσα εμφάνιση του watchface «AAPS(Προσαρμοσμένο)». Θα επιλέξετε την εμφάνιση (skin) που προτιμάτε στο επόμενο βήμα.
 
-![Screenshot_20231123_124619_sysui](../images/036dc7c4-6672-46c8-b604-8810a16a2eb3.png)
+![Λίστα των watchface του AAPS, με το AAPS(Προσαρμοσμένο)](../images/wearos/watchface_list_aaps.png)
 
-3. Now open AAPS on your phone and go to the Wear plugin (enable it in Config Builder (under Synchronization) if you don't see it in your current plugins along the top).
+3. Τώρα ανοίξτε το AAPS στο τηλέφωνο και ανοίξτε το πρόσθετο Wear: **Διαμόρφωση** > **Επικοινωνία** > **Wear** > **Άνοιγμα πρόσθετου** (επιλέξτε πρώτα το **Wear** αν δεν είναι ενεργοποιημένο).
 
-![Screenshot_20231123_090941_AAPS](../images/5df23fa3-791b-4c9a-999a-251391a82835.png)
+![Το πρόσθετο Wear με την κάρτα Προσαρμοσμένο Watchface](../images/wearos/wear_plugin_custom_watchface.png)
 
-4. Click on the "Load Watchface" button and select the watchface that you like
+4. Πατήστε το κουμπί «Φόρτωση Watchface» και επιλέξτε το watchface που σας αρέσει
 
-![Screenshot_20231123_130410_AAPS](../images/adde2eca-1df7-4382-b9ab-346819c35d9d.png)
+![Η λίστα «Επιλογή προσαρμοσμένου Watchface»](../images/wearos/select_custom_watchface.png)
 
-5. Check your watch, the "AAPS (Custom)" watchface should now be displaying the skin that you have selected. Give it a few seconds to refresh. You may now customize the complications, etc. by long pressing the watchface and then pressing the "Customize" button on the watchface image.
+5. Ελέγξτε το ρολόι σας: το watchface «AAPS(Προσαρμοσμένο)» πρέπει τώρα να δείχνει την εμφάνιση που επιλέξατε. Περιμένετε λίγα δευτερόλεπτα να γίνει ανανέωση. Η οθόνη **Wear** στο τηλέφωνο δείχνει τώρα το όνομα του watchface που φορτώθηκε και μια προεπισκόπησή του. Το **Πληροφορίες Watchface** δείχνει τις λεπτομέρειές του και τα πεδία που περιέχει, και το **Περισσότερα Watchface** ανοίγει τον [ιστότοπο ανταλλαγής](../ExchangeSiteCustomWatchfaces/index.md), όπου μπορείτε να κατεβάσετε άλλα προσαρμοσμένα watchface. Τώρα μπορείτε να προσαρμόσετε τις επιπλοκές κ.λπ.: πατήστε παρατεταμένα το watchface και μετά πατήστε το κουμπί «Προσαρμογή» (Customize) στην εικόνα του watchface.
 
-## AAPSv2 watchface - Legend
+```{admonition} Complications on a custom watchface
+:class: note
+Τα προσαρμοσμένα watchface που φτιάχτηκαν με την έκδοση 3.0 ή νεότερη της μορφής custom watchface μπορούν να έχουν έως πέντε θέσεις επιπλοκών, με θέση και μέγεθος που ορίζει το ίδιο το watchface (**Διάταξη επιπλοκών**). Στο ρολόι, πατήστε παρατεταμένα το watchface, πατήστε **Προσαρμογή** (Customize) και πατήστε **Επιπλοκή 1** έως **Επιπλοκή 5** για να επιλέξετε την πηγή δεδομένων που εμφανίζεται σε κάθε θέση. Οι ίδιες γραμμές εμφανίζονται στην εφαρμογή AAPS του ρολογιού, στις **Ρυθμίσεις** > **AAPS(Προσαρμοσμένο)**· αν πατήσετε μία από αυτές εκεί, ανοίγει η ίδια λίστα επιλογής. Η **Προτεραιότητα τύπου επιπλοκής** ορίζει αν μια θέση προτιμά τιμή ή μετρητή (gauge), κείμενο ή εικονίδιο, όταν η πηγή δεδομένων προσφέρει πολλά από αυτά. Μια αλλαγμένη προτεραιότητα ισχύει μόνο την επόμενη φορά που θα επιλέξετε πηγή δεδομένων για αυτή τη θέση.
 
-![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
+Αυτές οι θέσεις λειτουργούν μόνο σε ρολόγια με **Wear OS 5 ή παλαιότερο**, όπου το προσαρμοσμένο watchface τρέχει ως πραγματικό watchface. Σε **Wear OS 6 και νεότερο**, το προσαρμοσμένο watchface εμφανίζεται ως εικόνα χωρίς τις θέσεις επιπλοκών του, και τα βήματα 1 και 2 παραπάνω δεν χρειάζονται: βεβαιωθείτε ότι το **Προσαρμοσμένο Watchface** είναι επιλεγμένο στο **Watchface εγκατεστημένο στο ρολόι** στο πρόσθετο **Wear** του τηλεφώνου (δείτε [το watchface που εγκαθιστά το AAPS](#wearos-aaps-v4-watchface)).
+```
 
-A - time since last loop run
+## Watchface AAPSv2 - Υπόμνημα
 
-B - CGM reading
+![Υπόμνημα του watchface AAPSv2](../images/Watchface_Legend.png)
 
-C - minutes since last CGM reading
+A - χρόνος από την τελευταία εκτέλεση του κυκλώματος
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+B - μέτρηση του CGM
 
-E - average change CGM reading last 15 minutes
+C - λεπτά από την τελευταία μέτρηση του CGM
 
-F - phone battery
+D - μεταβολή σε σχέση με την τελευταία μέτρηση του CGM (σε mmol ή mg/dl)
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+E - μέση μεταβολή της μέτρησης του CGM τα τελευταία 15 λεπτά
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+F - μπαταρία τηλεφώνου
 
-I - carbs (carbs on board | e-carbs in the future)
+G - βασικός ρυθμός (εμφανίζεται σε U/h με τον κανονικό ρυθμό και σε % κατά τη διάρκεια του TBR)
 
-J - insulin on board (from bolus | from basal)
+H - BGI (blood glucose interaction, επίδραση στη γλυκόζη αίματος) -> πόσο «θα έπρεπε» να ανεβαίνει ή να πέφτει η γλυκόζη αίματος (BG) μόνο με βάση τη δράση της ινσουλίνης.
+
+I - υδατάνθρακες (ενεργοί υδατάνθρακες | e-carbs στο μέλλον)
+
+J - ενεργή ινσουλίνη (από bolus | από βασικό ρυθμό)

@@ -1,62 +1,62 @@
-# Setting up the Reporting Server
+# Nastavenie reportovacieho servera
 
-There are currently two reporting servers available for use with **AAPS**:
+S **AAPS** môžete v súčasnosti používať dva reportovacie servery:
 
 - [Nightscout](https://nightscout.github.io/)
 - [Tidepool](https://www.tidepool.org/)
 
-![Reporting Servers](../images/Building-the-App/ReportingServer.png)
+![Reportovacie servery](../images/Building-the-App/ReportingServer.png)
 
-We recommend using Nightscout.
+Odporúčame používať Nightscout.
 
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout is a web application that can log and display your CGM data and **AAPS** data and creates reports. It is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). It also allows caregivers to send remote commands to **AAPS**.
+Nightscout je webová aplikácia, ktorá dokáže zaznamenávať a zobrazovať vaše údaje CGM a údaje **AAPS** a vytvárať prehľady. Je to výkonná platforma, ktorá je už mnoho rokov integrovaná do **AAPS**. Umožňuje používateľom a opatrovateľom sledovať údaje o diabete pacienta takmer v reálnom čase (ak je medzi všetkými zapojenými komponentmi dostatočné internetové pripojenie, medzi prijatím a sprístupnením dát môže uplynúť len niekoľko sekúnd). It also carries the remote commands that caregivers send to **AAPS** from **AAPSClient** (see [Master ↔ Client control](#client-master-control)).
 
-Nightscout is provided as open-source software. Anyone can create and operate a Nightscout server, using either free or paid-for services.
+Nightscout je softvér s otvoreným zdrojovým kódom. Server Nightscout si môže vytvoriť a prevádzkovať ktokoľvek, pomocou bezplatných alebo platených služieb.
 
-You can find more information on the [website of the Nightscout project](http://nightscout.github.io/).
+Viac informácií nájdete na [webovej stránke projektu Nightscout](http://nightscout.github.io/).
 
-### Option 1 - Set up your Nightscout server yourself
+### Možnosť 1 – nastaviť si server Nightscout sami
 
-Creating your Nightscout reporting server can require one or more web-based applications that will require maintenance. In order to have a completely free service, you may need to migrate your Nightscout site and data, if and when providers remove the free tier.
+Vytvorenie vlastného reportovacieho servera Nightscout môže vyžadovať jednu alebo viac webových aplikácií, ktoré bude potrebné udržiavať. Ak chcete mať službu úplne zadarmo, možno budete musieť svoju stránku Nightscout aj s dátami presunúť, ak a keď poskytovatelia zrušia bezplatnú verziu (free tier).
 
-A description of how you can set up Nightscout with the advantages and disadvantages of the various operating options, including an estimate of the costs, can be found [here](https://nightscout.github.io/nightscout/new_user/#free-diy).
+Informácie k nastaveniu Nightscoutu s výhodami a nevýhodami rôznych možností prevádzky vrátane odhadu nákladov nájdete [tu](https://nightscout.github.io/nightscout/new_user/#free-diy).
 
-### Option 2 - Pay for a hosted Nightscout service
+### Možnosť 2 – zaplatiť si hostovanú službu Nightscout
 
-There are also options from different service providers who host Nightscout for you, with a monthly fee. The costs are manageable, and the advantage of a hosted option is that you do not need to be IT-literate, or have any operating infrastructure.
+Existujú aj ponuky rôznych poskytovateľov služieb, ktorí za mesačný poplatok hostujú Nightscout za vás. Náklady sú zvládnuteľné a výhodou hostovanej možnosti je, že nemusíte rozumieť IT ani mať vlastnú prevádzkovú infraštruktúru.
 
 
-Existing Nightscout users can reconsider where and how their Nightscout server is hosted from time to time, and change to a different option if it becomes more suitable.
+Súčasní používatelia Nightscoutu môžu z času na čas prehodnotiť, kde a ako je ich server Nightscout hostovaný, a prejsť na inú možnosť, ak im bude viac vyhovovať.
 
-Some Nightscout hosted services are listed [here](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
+Niektoré služby, ktoré hostujú Nightscout, nájdete [tu](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
 
-### Further configuration of Nightscout
+### Ďalšia konfigurácia Nightscoutu
 
-Once you have your Nightscout instance up and running, see [Nightscout configuration page](../SettingUpAaps/Nightscout.md) for additional considerations.
+Keď máte Nightscout pripravený a spustený, ďalšie informácie nájdete na [konfiguračnej stránke Nightscout](../SettingUpAaps/Nightscout.md).
 
 (SettingUpTheReportingServer-tidepool)=
 ## Tidepool
 
-Tidepool has been available in **AAPS** since version 3.2 which was released in late 2023.
+Tidepool je v **AAPS** dostupný od verzie 3.2, ktorá vyšla koncom roka 2023.
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger  
-As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool it is not suitable for sharing real-time information with caregivers.  
-On the other hand, Tidepool can be a great solution for sharing reports with a patient's endocrinologist if Nightscout is not an accepted solution.  
+Pri používaní **AAPS** je medzi príjmom údajov a ich zobrazením v reporte oneskorenie tri hodiny, preto Tidepool nie je vhodný na zdieľanie informácií v reálnom čase s opatrovateľmi.  
+Na druhej strane, Tidepool môže byť skvelé riešenie na zdieľanie reportov s diabetológom pacienta, ak Nightscout nie je prijateľné riešenie.  
 ```
 
-Tidepool is an [open source](https://github.com/tidepool-org) project. It offers to run an account free of charge on the Tidepool servers.
+Tidepool je [open source](https://github.com/tidepool-org) projekt. Ponúka bezplatný účet na serveroch Tidepool.
 
-More information about setting up Tidepool with AAPS [here](../SettingUpAaps/Tidepool.md).
+Viac informácií o nastavení Tidepoolu s AAPS nájdete [tu](../SettingUpAaps/Tidepool.md).
 
-```{admonition} **AAPS** has a the uploader for Tidepool integrated
+```{admonition} **AAPS** has the uploader for Tidepool integrated
 :class: note
-You do **not** need to use the uploader app to Tidepool: **AAPS** will upload blood glucose, treatments and basal for you. You only need a personal account with Tidepool. Do not upload your data with the separate Tidepool uploader tool as it will lead to duplicate values.  
+Aplikáciu na nahrávanie do Tidepoolu (uploader) **nemusíte** používať: **AAPS** za vás nahrá glykémie, ošetrenia a bazál. Potrebujete iba osobný účet v Tidepoole. Nenahrávajte svoje údaje samostatným nástrojom Tidepool uploader, pretože by vznikli duplicitné hodnoty.  
 ```
 
-## Next step
+## Ďalší krok
 
-Once you have set up your reporting server, you can now either set up a [dedicated Google account for AAPS use](../UsefulLinks/DedicatedGoogleAccountForAaps.md), or go straight to [building the AAPS app](../SettingUpAaps/BuildingAaps.md). 
+Keď máte reportovací server nastavený, môžete **AAPS** v telefóne nakonfigurovať pomocou [Sprievodcu nastavením](./SetupWizard.md), ktorý **AAPS** prepojí aj s vaším reportovacím serverom.

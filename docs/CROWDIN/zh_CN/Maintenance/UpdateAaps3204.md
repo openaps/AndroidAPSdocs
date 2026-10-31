@@ -16,7 +16,7 @@
 | ----------------------- | ---------------------------------------- | ---------------------------------------- | ------ |:--- |
 | [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                      | 最高支持至Meerkat版本                           | 8.2    | 17  |
 
-推荐版本是已内置适配的JVM版本。推荐版本同时也是构建**AAPS**的最低可用版本。若使用低于"推荐"的版本将**无法**完成构建。若选用其他版本，可能遭遇与JVM版本相关的兼容性问题。请参考[Android Studio问题排查指南](#troubleshooting_androidstudio-uncommitted-changes)解决。若您当前的Android Studio版本未在下表中列出，则需先升级至支持版本。
+推荐版本是已内置适配的JVM版本。推荐版本同时也是构建**AAPS**的最低可用版本。若使用低于"推荐"的版本将**无法**完成构建。若选用其他版本，可能遭遇与JVM版本相关的兼容性问题。 See the [Troubleshooting Android Studio](#incompatible-gradle-jvm) page to help solve these issues. 若您当前的Android Studio版本未在下表中列出，则需先升级至支持版本。
 
 Gradle版本由源代码仓库锁定，在拉取/更新代码时将自动获取正确版本。此处列出仅作参考，无需手动干预。
 
@@ -125,7 +125,7 @@ Gradle版本由源代码仓库锁定，在拉取/更新代码时将自动获取�
 * 等待下载完成，底部状态栏会显示进度。完成后，会显示成功消息。
 
   ```{note}
-  更新的文件可能不同！这并不意味着有问题。
+  更新的文件可能不同！ This is not an indication of a problem.
   ```
 
 
@@ -153,7 +153,7 @@ Gradle版本由源代码仓库锁定，在拉取/更新代码时将自动获取�
 
 ![打开 Gradle 设置](../images/studioTroubleshooting/09_GradleSettings.png)
 
-- 在**Gradle JDK**字段检查是否已选择**jbr-17**（1）。 若未选择，点击字段查看是否已存在列表中。
+- In **Gradle JDK** field (1), check if the appropriate version: **jbr-17** is selected. If not, click on the field, and see if it is already available in the list. If it is not in the list (the screenshot below shows a computer where only **jbr-21** is available), select **Download JDK...** (2).
 
 ![选择 JDK 17](../images/studioTroubleshooting/162_DownloadJDK.png)
 

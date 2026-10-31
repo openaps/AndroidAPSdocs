@@ -1,38 +1,44 @@
 # Εξομάλυνση των δεδομένων γλυκόζης στο αίμα
 
-If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors in your CGM data it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
+Αν τα δεδομένα **BG** πηδούν απότομα ή έχουν θόρυβο, το **AAPS** μπορεί να δώσει λάθος δόση ινσουλίνης. Αυτό μπορεί να προκαλέσει υψηλές ή χαμηλές τιμές. Αν δείτε σφάλματα ή τα δεδομένα του CGM σας πηδούν απότομα, είναι σημαντικό να απενεργοποιήσετε το κύκλωμα μέχρι να λυθεί το πρόβλημα. Ανάλογα με το CGM σας, τέτοια προβλήματα μπορεί να οφείλονται στη ρύθμιση του CGM στο **AAPS** (όπως εξηγείται παρακάτω) ή σε πρόβλημα στο σημείο του αισθητήρα CGM (που μπορεί να χρειάζεται αλλαγή του αισθητήρα CGM).
 
-## Smoothing data within AAPS
+## Εξομάλυνση δεδομένων στο AAPS
 
-As of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. There are three options available in [Config Builder > Smoothing](../SettingUpAaps/ConfigBuilder.md).
+Το **AAPS** σας δίνει την επιλογή να εξομαλύνετε τα δεδομένα μέσα στο **AAPS** και όχι μέσα στην εφαρμογή του CGM. Ανοίξτε το **μενού** (☰), επιλέξτε [**Διαμόρφωση**](../SettingUpAaps/ConfigBuilder.md) και μετά **Εξομάλυνση**. Υπάρχουν τέσσερις επιλογές και μόνο μία μπορεί να είναι ενεργή κάθε φορά: **Χωρίς εξομάλυνση**, **Εκθετική εξομάλυνση**, **Μέση εξομάλυνση** και **Unscented Kalman Filter**.
 
-![Smoothing](../images/ConfBuild_Smoothing.png)
+![Διαμόρφωση > Εξομάλυνση](../images/v4/Configuration/configuration_smoothing.png)
 
-### Exponential smoothing
+### Εκθετική εξομάλυνση
 
-In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
+Γενικά, αυτή είναι η προτεινόμενη επιλογή για αρχή, γιατί είναι η πιο δυνατή στην αφαίρεση του θορύβου και ξαναγράφει την πιο πρόσφατη τιμή. Δείτε όμως τον πίνακα παρακάτω για άλλες ειδικές συστάσεις.
 
-### Average smoothing
+### Μέση εξομάλυνση
 
-This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data.
+Αυτή η επιλογή λειτουργεί παρόμοια με την εξομάλυνση προς τα πίσω (back smoothing), που υπήρχε παλαιότερα σε ορισμένες πλατφόρμες CGM. Αντιδρά πιο γρήγορα στις πρόσφατες αλλαγές της τιμής BG και γι' αυτό είναι πιο πιθανό να αντιδράσει λάθος σε δεδομένα CGM με θόρυβο.
 
-### No Smoothing
+### Χωρίς εξομάλυνση
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
+Χρησιμοποιήστε αυτή την επιλογή μόνο αν τα δεδομένα του CGM σας εξομαλύνονται σωστά από την εφαρμογή συλλογής δεδομένων πριν σταλούν στο **AAPS**.
+
+### Unscented Kalman Filter (UKF)
+
+Αυτή η επιλογή χρησιμοποιεί ένα στατιστικό μοντέλο. Εκτιμά συνεχώς την πραγματική τιμή γλυκόζης σας και πόσο γρήγορα αλλάζει, από τις μετρήσεις που έρχονται (και που μπορεί να έχουν θόρυβο). Προσαρμόζεται αυτόματα στο πόσο θόρυβο έχει ο αισθητήρας σας τώρα. Επίσης εντοπίζει και απορρίπτει ξαφνικές μετρήσεις που είναι πολύ εκτός (outliers). Είναι μια πιο προηγμένη εναλλακτική από την Εκθετική και τη Μέση εξομάλυνση. Είναι χρήσιμη αν θέλετε η εξομάλυνση να προσαρμόζεται μόνη της στον θόρυβο του αισθητήρα σας που αλλάζει, αντί να χρησιμοποιεί μια σταθερή μέθοδο.
 
 (smoothing-xdrip-dexcom-g6)=
 
-## Suggestions to use smoothing
+## Προτάσεις για τη χρήση εξομάλυνσης
 
-|               | Exponential |  Average  |    None     |
-| ------------- |:-----------:|:---------:|:-----------:|
-| G5/G6/ONE     |  If noisy   |           | Recommended |
-| G7/ONE+/Stelo |  If noisy   | If stable |             |
+Μπορείτε επίσης να αλλάζετε τη μέθοδο εξομάλυνσης αυτόματα, για παράδειγμα ανάλογα με την ηλικία του αισθητήρα, με την [ενέργεια Αυτοματισμού](#automations-automation-action) **Αλλαγή εξομάλυνσης**.
 
-Libre sensors are noisy and can require smoothing. When using xDrip+ direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+|               |      Εκθετική      |       Μέση       | Χωρίς εξομάλυνση |
+| ------------- |:------------------:|:----------------:|:----------------:|
+| G5/G6/ONE     | Αν υπάρχει θόρυβος |                  |    Συνιστάται    |
+| G7/ONE+/Stelo | Αν υπάρχει θόρυβος | Αν είναι σταθερό |                  |
 
-| Sensor / Data source | Juggluco | xDrip+ direct | xDrip+ bridge | xDrip+ patched app |
-| -------------------- |:--------:|:-------------:|:-------------:|:------------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.      |    Average    |        N.A.        |
-| Libre 2/2+ (EU)      | Average  |     None      |    Average    |        None        |
-| Libre 2/2+/3/3+      | Average  |     N.A.      |     N.A.      |        None        |
+Οι αισθητήρες Libre έχουν θόρυβο και μπορεί να χρειάζονται εξομάλυνση. Όταν χρησιμοποιείτε την άμεση σύνδεση του xDrip ή την πηγή δεδομένων τροποποιημένης εφαρμογής (λήψη από άλλη εφαρμογή, μαζί και το Juggluco), [η εξομάλυνση γίνεται ήδη μέσα στην εφαρμογή](#libre2-value-smoothing-raw-values).
+
+| Αισθητήρας / Πηγή δεδομένων | Juggluco | xDrip άμεση σύνδεση | xDrip γέφυρα | xDrip τροποποιημένη εφαρμογή |
+| --------------------------- |:--------:|:-------------------:|:------------:|:----------------------------:|
+| Libre 1/14 days/Pro         |   Δ/Υ    |         Δ/Υ         |     Μέση     |             Δ/Υ              |
+| Libre 2/2+ (EU)             |   Μέση   |       Κανένα        |     Μέση     |            Κανένα            |
+| Libre 2/2+/3/3+             |   Μέση   |         Δ/Υ         |     Δ/Υ      |            Κανένα            |

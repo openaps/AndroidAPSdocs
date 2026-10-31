@@ -1,10 +1,10 @@
-# Pre používateľov iných CGM systémov, ktoré odosielajú údaje do Nightscout
+# Iný CGM nahrávajúci do Nightscoutu
 
-If you have any other CGM set up that can send your BG data **only** to [Nightscout](https://nightscout.github.io/).
+Use this option if you have any other CGM set up that can send your BG data **only** to [Nightscout](https://nightscout.github.io/).
 
 ```{important}
-This data source will not work when you are offline, when you experience network issues or when your Nightscout site is down. Use with caution.
+Tento zdroj dát nebude fungovať, keď budete offline, keď budete mať problémy so sieťou alebo keď vaša stránka Nightscout nebude dostupná. Používajte ho opatrne.
 ```
 
--   Setup NSClient with your Nightscout site information.
--   Select NSClient BG in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Nastavte **NSClientV3** (**Konfigurácia → Komunikácia**) s údajmi o vašej stránke Nightscout.
+-   Vyberte Glykémia z NS v [**Konfigurácia → Zdroj glykémie**](#Config-Builder-bg-source).

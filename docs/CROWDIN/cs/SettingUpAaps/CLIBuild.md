@@ -1,24 +1,24 @@
-# Build instructions for the command-line
+# Návod na sestavení z příkazové řádky
 
 ```{admonition} For users familiar with the command-line and git
-:class: information
+:class: note
 
-The simplest option to build AAPS is the [Browser build](./BrowserBuild.md) alternative.
+Nejjednodušší způsob, jak sestavit AAPS, je alternativa [Sestavení v prohlížeči](./BrowserBuild.md).
 ```
 
-Tested with Fedora and Debian Linux, other systems should work with minimal adjustments.
+Vyzkoušeno na Linuxu Fedora a Debian, jiné systémy by měly fungovat s malými úpravami.
 
 ## Požadavky
 
-Consult the minimum required Java version from [this table](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Install the appropriate OpenJDK package using the system package manager. For example in Debian, the packages are named like `openjdk-21-jdk`. It should include `javac` and `keytool` binaries.
+Minimální potřebnou verzi Javy najdete v [této tabulce](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Nainstalujte odpovídající balíček OpenJDK pomocí správce balíčků vašeho systému. Například v Debianu mají balíčky názvy jako `openjdk-21-jdk`. Měl by obsahovat programy `javac` a `keytool`.
 
-Download the *Android Command line tools* package from the [Android Studio page](https://developer.android.com/studio#command-line-tools-only). Android Studio itself is not required. More information about installing this package is found in [sdkmanager docs](https://developer.android.com/tools/sdkmanager). After the package is installed, you should manually set two [environment variables](https://developer.android.com/tools/variables): `ANDROID_HOME` and `PATH`. Finally, run `sdkmanager --licenses` to finish the installation.
+Stáhněte balíček *Android Command line tools* ze [stránky Android Studia](https://developer.android.com/studio#command-line-tools-only). Samotné Android Studio není potřeba. Více informací o instalaci tohoto balíčku najdete v [dokumentaci sdkmanager](https://developer.android.com/tools/sdkmanager). Po instalaci balíčku musíte ručně nastavit dvě [proměnné prostředí](https://developer.android.com/tools/variables): `ANDROID_HOME` a `PATH`. Nakonec instalaci dokončete příkazem `sdkmanager --licenses`.
 
-## Building AAPS with Gradle wrapper
+## Sestavení AAPS pomocí Gradle wrapperu
 
-### 1. Generate a Java keystore file for signing AAPS
+### 1. Vytvořte soubor úložiště klíčů Java pro podepisování AAPS
 
-If you already have a keystore file for signing AAPS, reuse that.
+Pokud už soubor úložiště klíčů pro podepisování AAPS máte, použijte ho znovu.
 
 ```sh
 keytool -genkeypair -v \
@@ -29,19 +29,19 @@ keytool -genkeypair -v \
   -validity 20000
 ```
 
-You will need the keystore file and passphrase every time you update AAPS.
+Soubor úložiště klíčů a heslo budete potřebovat při každé aktualizaci AAPS.
 
-### 2. Compile the AAPS APK file
+### 2. Zkompilujte soubor APK aplikace AAPS
 
-Clone the [git repo](https://github.com/nightscout/AndroidAPS) if not already cloned. AAPS uses master branch for the latest stable version, ensure you are on the branch/tag you want to build.
+Pokud jste to ještě neudělali, naklonujte [git repozitář](https://github.com/nightscout/AndroidAPS). AAPS používá větev master pro nejnovější stabilní verzi; ujistěte se, že jste na větvi nebo tagu, které chcete sestavit.
 
-Run `./gradlew :app:assembleFullRelease` in the repo. It automatically downloads Gradle, dependencies, and then compiles the code. When the build succeeds, you should have an unsigned APK at `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`. It should have also installed an `apksigner` binary to `$ANDROID_HOME`. Update your `PATH` again.
+V repozitáři spusťte `./gradlew :app:assembleFullRelease`. Příkaz automaticky stáhne Gradle a závislosti a potom zkompiluje kód. Když sestavení proběhne úspěšně, měli byste mít nepodepsaný APK v `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`. Měl by se také nainstalovat program `apksigner` do `$ANDROID_HOME`. Znovu aktualizujte proměnnou `PATH`.
 
-### 3. Create a signed APK file from the unsigned one
+### 3. Vytvořte z nepodepsaného souboru APK podepsaný
 
 <!-- Suggest building outside the git repo, to minimize risk of accidental APK commits -->
 
-Change to your home directory and create a signed APK file:
+Přejděte do svého domovského adresáře a vytvořte podepsaný soubor APK:
 
 ```sh
 apksigner sign \
@@ -51,4 +51,4 @@ apksigner sign \
   ./AndroidAPS/app/build/outputs/apk/full/release/app-full-release-unsigned.apk
 ```
 
-Now you have `app-full-release-signed.apk` ready for installation or upgrade.
+Nyní máte `app-full-release-signed.apk` připravený k instalaci nebo aktualizaci.

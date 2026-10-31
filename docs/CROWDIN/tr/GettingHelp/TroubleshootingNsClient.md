@@ -8,13 +8,11 @@ Nightscout'ta kimse sizi takip etmiyorsa, pil ömründen tasarruf etmek için NS
 
 * Kararsız bir bağlantı nasıl tespit edilir?
 
-AAPS'de NSClient sekmesine gidin ve günlüğü izleyin. Beklenen davranış, her ~30 saniyede bir PING almak ve neredeyse hiç yeniden bağlantı mesajı almamaktır. Çok sayıda yeniden bağlantı bildirimi görüyorsanız, bir sorun var demektir.
-
-AAPS sürüm 2.0'dan bu yana, böyle bir davranış algılandığında, NSClient 15 dakika duraklatılır ve GİRİŞ ekranında "NSClient arızası" mesajı görüntülenir.
+Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. Çok sayıda yeniden bağlantı bildirimi görüyorsanız, bir sorun var demektir.
 
 * Yeniden başlat
 
-İlk adım olarak denemeniz gereken şey, sorunun kalıcı olup olmadığını görmek için Nightscout ve ardından telefon olmak üzere her ikisini de yeniden başlatmaktır.
+As a first step, restart Nightscout and then your phone to see if the issue is permanent.
 
 Nightscout'unuz Heroku'da barındırılıyorsa, Nightscout'u şu şekilde yeniden başlatabilirsiniz: Heroku'da oturum açarak, nightcout uygulamanızın adına tıklayın, 'More' menüsüne ve ardından 'Restart all dynos'a tıklayın.
 
@@ -36,7 +34,7 @@ Azure'daki bağlantı sorunlarına geçici bir çözüm, Uygulama ayarları HTTP
 
 * Nightscout'tan KŞ okunamıyor
 
-AAPS, Nightscout'a doğru şekilde bağlanırsa, ancak BG N/A olarak görüntüleniyorsa, NSCLIENT sekmesine gidin, sağ üstteki 3 noktalı menüye basın, NSClient Tercihleri -> Senkronizasyon'a tıklayın ve "CGM verilerini al/doldur" seçeneğini açın.
+If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSClientV3 settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**. This option is hidden while client control is on ([hardened mode](#client-master-control-hardened-mode)); in that case check that **NSClient BG** is selected in **Configuration** → **BG Source**.
 
 * Hala hata alıyorsanız...
 

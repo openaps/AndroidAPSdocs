@@ -1,89 +1,103 @@
-# Dexcom G7 and ONE+
+# Dexcom G7, ONE+ i Stelo
 
 
-## Fundamental in advance
+## Najważniejsze na początek
 
-Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
+Warto wiedzieć, że systemy G7, ONE+ i Stelo, w odróżnieniu od G6, nie wygładzają wartości ani w aplikacji, ani w czytniku. Więcej informacji na ten temat znajdziesz [tutaj](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ```{admonition} Smoothing method 
-Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggestions to use for Dexcom G7/ONE+/Stelo
+Przeczytaj zalecenia dotyczące [metody wygładzania](../CompatibleCgms/SmoothingBloodGlucoseData.md) dla Dexcom G7/ONE+/Stelo
 ```
 
-## 1. xDrip+ (direct connection to G7 or ONE+)
+## 1. xDrip (bezpośrednie połączenie z G7, ONE+ lub Stelo)
 
-- Follow the instructions here: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- Select  xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- xDrip sam łączy się z sensorem: odinstaluj aplikację Dexcom, bo z sensorem może się łączyć tylko jedna aplikacja. Jeśli chcesz zachować aplikację Dexcom, użyj zamiast tego [xDrip w trybie Companion App](#DexcomG7-xdrip-companion-app).
+- Postępuj według instrukcji tutaj: [xDrip G7, ONE+ i Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). Potrzebna jest nowa wersja xDrip – minimalną wersję znajdziesz na podanej stronie.
+- Wybierz xDrip w [**Konfiguracja → Źródło BG**](#Config-Builder-bg-source).
 
-- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
+- Dostosuj ustawienia xDrip według opisu na stronie [Ustawienia xDrip](../CompatibleCgms/xDrip.md)
 
-## 2. Build Your Own Dexcom App (G7)
+## 2. Build Your Own Dexcom App (tylko G7)
 
 ```{admonition} Old app version
 :class: warning
-Dexcom BYODA is now a very old version of the app and cannot be updated.
+Dexcom BYODA to teraz bardzo stara wersja aplikacji i nie można jej zaktualizować. Niedostępne dla ONE+ ani Stelo.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) obsługuje lokalne przesyłanie danych (local broadcast) do AAPS
 
-![BYODA broadcast options](../images/BYODA.png)
+-   Ta aplikacja pozwala używać Dexcom G7 z dowolnym smartfonem z Androidem.
+-   Odinstaluj oryginalną aplikację Dexcom
+-   Zainstaluj pobrany plik apk
+-   Wpisz kod sensora w zmodyfikowanej aplikacji
+-   Po krótkim czasie BYODA powinna odebrać sygnał z nadajnika
 
--   This app lets you use your Dexcom G7 with any Android smartphone.
--   Uninstall the original Dexcom app
--   Install the downloaded apk
--   Enter sensor code in patched app
--   After short time BYODA should pick-up transmitter signal
+(DexcomG7-xdrip-companion-app)=
 
-## 3. Patched Dexcom G7 App (DiaKEM)
+## 3. xDrip w trybie Companion App (G7, ONE+ i Stelo)
 
-```{admonition} No new users
-:class: warning
-Latest Dexcom servers update broke DiaKEM for new installs: the G7 app no longer can get through the login and onboarding process that happens on a fresh install of the app. 
-Existing users do not experience issues for now: do not logout, wipe data, or reinstall the G7 app as that will prevent you from getting the app up and running again. If it is already running, you should be unaffected.
+Oficjalna aplikacja Dexcom pozostaje połączona z sensorem. xDrip odczytuje wartości glukozy z powiadomień aplikacji Dexcom i wysyła je do **AAPS**.
+
+```{admonition} Not a trusted data source
+:class: note
+**AAPS** nie uznaje xDrip w trybie Companion App za [zaufane źródło danych BG](#GettingStarted-TrustedBGSource): SMB nie są dozwolone przez cały czas.
 ```
 
-**Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
+### Odczyt powiadomień aplikacji Dexcom
 
-### Install a new patched (!) G7 app and start the sensor
+- Pozostaw aplikację Dexcom zainstalowaną i połączoną z sensorem. Jej powiadomienia muszą być widoczne: nie wyciszaj ich i nie ukrywaj.
+- Pobierz i zainstaluj [xDrip](https://github.com/NightscoutFoundation/xDrip). Używaj w xDrip tych samych jednostek glukozy co w aplikacji Dexcom.
+- W xDrip przejdź do **Settings** > **Hardware Data Source** i wybierz **Companion App**.
 
+  ![xDrip Hardware Data Source: Companion App](../images/xDrip_Companion_DataSource.png)
 
-A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
+- xDrip poprosi o pozwolenie na odczyt powiadomień. Stuknij **OK**, potem wybierz **xDrip** na liście i włącz **Zezwalaj na dostęp do powiadomień** (Allow notification access).
 
-- Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
+  ![Lista dostępu do powiadomień](../images/xDrip_Companion_NotificationAccess1.png)
 
-- Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
+- Jeśli opcja **Zezwalaj na dostęp do powiadomień** jest wyszarzona (*Controlled by Restricted Setting* – kontrolowane przez ustawienie z ograniczeniami), Android ją blokuje, bo xDrip nie został zainstalowany ze Sklepu Play:
 
-- Enter sensor code in the patched app.
+  ![Dostęp do powiadomień kontrolowany przez ustawienie z ograniczeniami](../images/xDrip_Companion_Restricted.png)
 
-- Follow the general recommendations for CGM hygiene and sensor placement found [here](../CompatibleCgms/GeneralCGMRecommendation.md).
+  Otwórz informacje o aplikacji xDrip (przytrzymaj ikonę xDrip > **Informacje o aplikacji**), stuknij menu z trzema kropkami w prawym górnym rogu i wybierz **Zezwól na ustawienia z ograniczeniami** (Allow restricted settings). Potem wróć do ekranu dostępu do powiadomień i zezwól na dostęp.
 
-- After the warm-up phase, the values are displayed as usual in the G7 app.
+  ![Informacje o aplikacji: Zezwól na ustawienia z ograniczeniami](../images/xDrip_Companion_AllowRestricted.png)
 
-### Configuration in AAPS
+  ![Dostęp do powiadomień dozwolony dla xDrip](../images/xDrip_Companion_NotificationAccess2.png)
 
-- Select 'BYODA' in in [ConfigBuilder, BG Source](#Config-Builder-bg-source) - even if it is not the BYODA app!
+- Odczyty pojawiają się w xDrip, gdy aplikacja Dexcom pokaże nową wartość. Jeśli nic się nie pojawia, może być potrzebne uruchomienie sensora w xDrip: nie ma to wpływu na prawdziwy sensor. W tym trybie Stelo podaje odczyt co 15 minut.
 
-- If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
+### Companion Bluetooth (G7)
 
-## 4. xDrip+ (companion mode)
+Gdy aplikacja Dexcom jest połączona z sensorem G7, xDrip może też odbierać przez Bluetooth odczyty, które sensor wysyła do aplikacji Dexcom. xDrip nie paruje się z sensorem i nie musisz wpisywać kodu sensora: aplikacja Dexcom zachowuje kontrolę.
 
--   Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip+ "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
--   Select  xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+Z opcją **Companion Bluetooth** xDrip dostaje z sensora dokładny czas i trend każdego odczytu, a nie czas pojawienia się powiadomienia, i uzupełnia przerwy, gdy telefon był poza zasięgiem (backfill).
 
--   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
+- W xDrip przejdź do **Settings** > **Less common settings** > **Bluetooth Settings** i włącz **Companion Bluetooth**.
 
-## 5. Juggluco
+  ![xDrip Bluetooth Settings: Companion Bluetooth](../images/xDrip_Companion_Bluetooth.png)
 
-Version 9.0+ required
+- Nie działa to na wszystkich telefonach i wersjach Androida. Jeśli widzisz problemy, wyłącz tę opcję.
+- Jeśli stary sensor Dexcom nadal jest na liście Bluetooth telefonu, xDrip może odbierać dane z niewłaściwego sensora: w Androidzie w **Ustawienia** > **Połączone urządzenia** usuń („Zapomnij”) sensory, których już nie używasz.
+- Companion Bluetooth jest przeznaczony dla G7. Przy ONE+ i Stelo polegaj na powiadomieniach.
 
-- Disable the app previously connected to the sensor: Uninstall the app or use "Force Stop." Disable "Nearby Devices" permission in app settings. Restrict the app's battery usage.
+### Konfiguracja w AAPS
 
-- Forget the sensor in Bluetooth settings: In Android settings, find the sensor in bonded devices and select "Forget." Dexcom G7 sensor names start with DXCM.
+- Wybierz xDrip w [**Konfiguracja → Źródło BG**](#Config-Builder-bg-source).
+- Dostosuj ustawienia xDrip według opisu na stronie [Ustawienia xDrip](../CompatibleCgms/xDrip.md).
 
-- Avoid interference from other sensors: Keep old Dexcom sensors out of Bluetooth range.
+## 4. Juggluco (G7 i ONE+)
 
-- Connect the G7 sensor to Juggluco: Open Juggluco → Left menu → Photo. Scan the data matrix on the G7 sensor's applicator. Wait up to 5 minutes for Juggluco to find the sensor.
+Wymagana wersja 9.0 lub nowsza
 
-- Pairing requirements: Agree to pair the sensor with Juggluco. Ensure the screen isn’t locked during pairing. If pairing fails, wait 5 minutes before trying again.
+- Wyłącz aplikację, która była wcześniej połączona z sensorem: odinstaluj ją albo użyj opcji „Wymuś zatrzymanie”. Wyłącz uprawnienie „Urządzenia w pobliżu” w ustawieniach tej aplikacji. Ogranicz użycie baterii przez tę aplikację.
 
-- Exception: Wear OS watches can bond without pressing an agree button.
+- Usuń sensor z ustawień Bluetooth: w ustawieniach Androida znajdź sensor na liście sparowanych urządzeń i wybierz „Zapomnij”. Nazwy sensorów Dexcom G7 zaczynają się od DXCM.
+
+- Unikaj zakłóceń od innych sensorów: trzymaj stare sensory Dexcom poza zasięgiem Bluetooth.
+
+- Połącz sensor G7 z Juggluco: otwórz Juggluco → menu po lewej → Photo. Zeskanuj kod Data Matrix na aplikatorze sensora G7. Poczekaj do 5 minut, aż Juggluco znajdzie sensor.
+
+- Warunki parowania: zgódź się na sparowanie sensora z Juggluco. Upewnij się, że ekran nie jest zablokowany podczas parowania. Jeśli parowanie się nie uda, poczekaj 5 minut i spróbuj ponownie.
+
+- Wyjątek: zegarki z Wear OS mogą się sparować bez naciskania przycisku zgody.

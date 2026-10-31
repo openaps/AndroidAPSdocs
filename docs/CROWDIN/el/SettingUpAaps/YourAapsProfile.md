@@ -1,365 +1,355 @@
-# Your AAPS profile
+# Το προφίλ σας στο AAPS
 
-Your **AAPS Profile** is a set of five key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. These are the main parameters **AAPS** is built upon. As you progress through the **Objectives**, you will unlock additional modifiable parameters (like SMB settings), but the performance of these features rely on your underlying **Profile** being correct. The **Profile** incorporates:
-* [duration of insulin action](#your-aaps-profile-duration-of-insulin-action) (DIA),
-* [glucose targets](#profile-glucose-targets),
-* [basal rates](#your-aaps-profile-basal-rates) (BR),
-* [insulin sensitivity factors](#your-aaps-profile-insulin-sensitivity-factor) (ISF) and
-* [insulin-to-carb ratios](#your-aaps-profile-insulin-to-carbs-ratio) (IC or ICR).
+Το **Προφίλ του AAPS** σας είναι ένα σύνολο τεσσάρων βασικών παραμέτρων, που ορίζουν πώς το **AAPS** δίνει ινσουλίνη ανάλογα με τις τιμές γλυκόζης του αισθητήρα σας. Αυτές είναι οι κύριες παράμετροι πάνω στις οποίες βασίζεται το **AAPS**. Καθώς προχωράτε στα **Βήματα**, θα ξεκλειδώνετε επιπλέον παραμέτρους που μπορείτε να αλλάξετε (π.χ. ρυθμίσεις SMB). Όμως αυτές οι λειτουργίες δουλεύουν καλά μόνο αν το βασικό σας **Προφίλ** είναι σωστό. Το **Προφίλ** περιλαμβάνει:
+* [στόχους γλυκόζης](#profile-glucose-targets),
+* [βασικούς ρυθμούς](#your-aaps-profile-basal-rates) (BR),
+* [συντελεστές ευαισθησίας στην ινσουλίνη](#your-aaps-profile-insulin-sensitivity-factor) (ISF) και
+* [αναλογίες ινσουλίνης προς υδατάνθρακες](#your-aaps-profile-insulin-to-carbs-ratio) (IC ή ICR).
 
-As part of **AAPS**’ management, users should continually assess and scrutinise the accuracy of their **Profile** settings. It is recommended to take the settings in the order they are presented here. Προσπαθήστε να θέσετε σωστά την κάθε ρύθμιση προτού προχωρήσετε στην επόμενη. Δοκιμάστε να κάνετε μικρά βήματα αντί να κάνετε πολλές και μεγάλες αλλαγές μαζικά. Don't forget to activate the new profile after each change. Regularly [backup your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your Preferences.
+```{admonition} Where did DIA go?
+:class: note
+Η **διάρκεια δράσης της ινσουλίνης (DIA)** δεν είναι πια μέρος του **Προφίλ** σας. Ορίζεται πλέον για κάθε ινσουλίνη χωριστά — δείτε [Διαχείριση → Ρυθμίσεις ινσουλίνης](#Config-Builder-insulin-dia).
+```
 
-Your **Profile** settings interact with one another - you can have 'wrong' settings that work well together in certain circumstances but do not in others. For instance, if a too-high basal happens to be at the same time as a too-high **CR**. This means that you need to consider the settings individually and check they work harmoniously together in a variety of circumstances.
+Ως μέρος της διαχείρισης του **AAPS**, οι χρήστες πρέπει να ελέγχουν συνεχώς και προσεκτικά αν οι ρυθμίσεις του **Προφίλ** τους είναι σωστές. Συνιστάται να ρυθμίσετε τις τιμές με τη σειρά που παρουσιάζονται εδώ. Προσπαθήστε να θέσετε σωστά την κάθε ρύθμιση προτού προχωρήσετε στην επόμενη. Δοκιμάστε να κάνετε μικρά βήματα αντί να κάνετε πολλές και μεγάλες αλλαγές μαζικά. Μην ξεχάσετε να ενεργοποιείτε το νέο προφίλ μετά από κάθε αλλαγή. Κάνετε τακτικά [αντίγραφο ασφαλείας των ρυθμίσεων του **Προφίλ** σας](#YourAapsProfile_Profile-backup) με εξαγωγή των ρυθμίσεων.
 
-Μπορείτε να το χρησιμοποιήσετε το [Autotune](https://autotuneweb.azurewebsites.net/) για να σας καθοδηγήσει, ωστόσο είναι σημαντικό να μην τον ακολουθήσετε στα τυφλά. Μπορεί να μη λειτουργεί σωστά στη δική σας ή και σε ορισμένες άλλες περιπτώσεις.
+Οι ρυθμίσεις του **Προφίλ** σας επηρεάζουν η μία την άλλη. Μπορεί να έχετε «λάθος» ρυθμίσεις που δουλεύουν καλά μαζί σε ορισμένες περιπτώσεις, αλλά όχι σε άλλες. Για παράδειγμα, όταν ένας πολύ υψηλός βασικός ρυθμός συμπίπτει με ένα πολύ υψηλό **CR**. Αυτό σημαίνει ότι πρέπει να εξετάσετε κάθε ρύθμιση χωριστά και να ελέγξετε ότι λειτουργούν σωστά μαζί σε διάφορες καταστάσεις.
+
+Μπορείτε να χρησιμοποιήσετε το [Autotune](https://autotuneweb.azurewebsites.net/) για να σας καθοδηγήσει, αλλά μην το ακολουθείτε στα τυφλά: μπορεί να μη λειτουργεί καλά για εσάς ή σε όλες τις περιπτώσεις.
 
 ```{admonition} Your diabetes may vary
-:class: information
-**Profiles** vary significantly from person-to-person.
+:class: note
+Τα **προφίλ** διαφέρουν πολύ από άτομο σε άτομο.
 
-For basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Brights Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+Για τους βασικούς ρυθμούς (BR), τους συντελεστές ευαισθησίας στην ινσουλίνη (ISF) και τις αναλογίες ινσουλίνης προς υδατάνθρακες (IC ή ICR), οι απόλυτες τιμές και οι τάσεις στις ανάγκες ινσουλίνης διαφέρουν πολύ από άτομο σε άτομο. Εξαρτώνται από τη βιολογία σας, το φύλο, την ηλικία, τη φυσική κατάσταση κ.λπ., αλλά και από βραχυπρόθεσμους παράγοντες, όπως μια ασθένεια ή πρόσφατη άσκηση. Για περισσότερη καθοδήγηση, το βιβλίο [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) του Adam Brown είναι εξαιρετικό.
 
 ```
 
-The four last parameters (glucose targets, basal rates, insulin sensitivity factors and insulin-to-carb ratios) can be set to different values, changing hourly if required, over a 24-hour period.
+Οι τέσσερις τελευταίες παράμετροι (στόχοι γλυκόζης, βασικοί ρυθμοί, συντελεστές ευαισθησίας στην ινσουλίνη και αναλογίες ινσουλίνης προς υδατάνθρακες) μπορούν να έχουν διαφορετικές τιμές μέσα στο 24ωρο, που αλλάζουν ακόμη και κάθε ώρα αν χρειάζεται.
 
-![Hourly change of basal](../images/MaxDailyBasal2.png)
+![Ωριαία αλλαγή του βασικού ρυθμού](../images/MaxDailyBasal2.png)
 
-Screenshots from **AAPS** of an _example_ profile are shown below. Please note, this sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
+Παρακάτω φαίνονται εικόνες από το **AAPS** με ένα _παράδειγμα_ προφίλ. Σημειώστε ότι το παρακάτω παράδειγμα προφίλ έχει πολλά χρονικά σημεία. Όταν ξεκινάτε με το **AAPS**, το προφίλ σας θα είναι πιθανώς πολύ πιο απλό.
 
-(your-aaps-profile-duration-of-insulin-action)=
-## Duration of insulin action (DIA)
-
-### Description
-
-The length of time that insulin takes to decay to zero.
-
-The duration of insulin action is set to a single value in **AAPS**, because your pump will continually infuse the same type of insulin.
-
-![Sample insulin Profile](../images/Screenshot_insulin_profile.png)
-
-In combination with the [insulin type](#Config-Builder-insulin), this will result in the [insulin profile](#AapsScreens-insulin-profile), as shown in the image above. The important thing to note is that the decay has a **long tail**. If you have been used to manual pumping, you have probably been used to assuming that insulin decays over a much shorter period i.e. about 3.5 hours. However, when you are looping, the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the **AAPS** algorithm. Therefore, **AAPS** uses minimum 5h as **DIA**.
-
-Additional reading on the topic of duration of insulin action, and why it matters :
-* [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) on OpenAPS documentation.
-* [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) on Diabettech.
-* [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) on See My CGM (archive).
-* [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) and other articles on Bionic Wookie, recommending a DIA of 9h for Lyumjev, Fiasp, NovoRapid, Humalog.
-
-
-### Impact
-
-Too short **DIA** can lead to low BGs. And vice versa.
-
-If **DIA** is too short, **AAPS** will calculate too early that your previous bolus is all consumed, and if your **BG** is still high, it will over-deliver in insulin. (Στην πραγματικότητα το AndroidAPS δεν περιμένει μέχρι να ανέβει πολύ το σάκχαρο σας, αλλά προβλέπει τι πρόκειται να γίνει και με βάση την πρόβλεψη του προσθέτει συνεχόμενα ινσουλίνη). This essentially creates ‘insulin stacking’ that **AAPS** is unaware of. This is especially noticeable at night, if you see negative IOB with no other explanation than the queue of the last bolus.
-
-Example of a too-short **DIA** is a **high BG** followed by **AAPS** over-correcting and giving a **low BG**.
-
-### How to set it
-
-The **figure below** shows an example of how the **DIA** is set in an **AAPS** profile.
-
-![DIA](../images/Profile_DIA.png)
-
-The **DIA** setting is often set too short by new users. A **DIA** of 6 or 7 is probably a good place to start. A growing number of people find that a **DIA** of 8 to 9 hours works good for them. See the additional reading mentioned above.
+![Παράδειγμα ενεργού προφίλ](../images/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
-## Glucose targets
+## Στόχοι γλυκόζης
 
-### Description
+### Περιγραφή
 
-Your **BG target** is a core value and all of **AAPS** calculations are based on it. It is different from the target range which you usually aim to keep your blood glucose values in. The target is used in **AAPS** calculations: if **AAPS** predicts that your **BG** will land outside the target range, then it will take action to take you back in said range.
+Ο **στόχος γλυκόζης (BG)** είναι μια βασική τιμή και όλοι οι υπολογισμοί του **AAPS** βασίζονται σε αυτόν. Είναι διαφορετικός από το εύρος στόχου, μέσα στο οποίο συνήθως προσπαθείτε να κρατάτε τις τιμές γλυκόζης σας. Ο στόχος χρησιμοποιείται στους υπολογισμούς του **AAPS**: αν το **AAPS** προβλέπει ότι η **BG** σας θα βγει έξω από το εύρος στόχου, θα κάνει ενέργειες για να σας φέρει πίσω σε αυτό το εύρος.
 
-The targets can be defined within those boundaries :
+Οι στόχοι μπορούν να οριστούν μέσα σε αυτά τα όρια:
 
-|         | _Low_ target           | _High_ target          |
-| ------- | ---------------------- | ---------------------- |
-| Minimum | 4 mmol/l or 72 mg/dL   | 5 mmol/l or 90 mg/dL   |
-| Maximum | 10 mmol/l or 180 mg/dL | 15 mmol/l or 225 mg/dL |
+|          | _Κάτω_ στόχος         | _Άνω_ στόχος            |
+| -------- | --------------------- | ----------------------- |
+| Ελάχιστο | 4,4 mmol/l ή 80 mg/dl | 5 mmol/l ή 90 mg/dl     |
+| Μέγιστο  | 10 mmol/l ή 180 mg/dl | 11,1 mmol/l ή 200 mg/dl |
 
-### Impact
+### Επίδραση
 
-If the target in your **Profile** is very wide (say, 3 or more mmol/l [50 mg/dl or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate are unlikely to be actioned by **AAPS**.
+Αν ο στόχος στο **Προφίλ** σας είναι πολύ πλατύς (π.χ. 3 mmol/l ή περισσότερο [50 mg/dl ή περισσότερο]), συχνά θα δείτε ότι το **AAPS** κάνει λίγες ενέργειες. Ο λόγος είναι ότι το επίπεδο της **BG** προβλέπεται να είναι κάπου μέσα σε αυτό το μεγάλο εύρος, και έτσι το **AAPS** σπάνια θα ορίσει προσωρινό βασικό ρυθμό.
 
-### How to set it
+### Πώς να το ρυθμίσετε
 
-The **figure below** shows an example of how the target can be set in an **AAPS** profile.
+Η **παρακάτω εικόνα** δείχνει ένα παράδειγμα για το πώς μπορεί να οριστεί ο στόχος σε ένα προφίλ του **AAPS**.
 
-![Target](../images/Profile_Target.png)
+![Στόχος](../images/Profile_Target.png)
 
-**BG** targets are set according to your personal preferences and requirements. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117 mg/dL (6.5 mmol/L) from 9 pm - 7am. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
+Οι στόχοι **BG** ορίζονται ανάλογα με τις προσωπικές σας προτιμήσεις και ανάγκες. Για παράδειγμα, αν ανησυχείτε για υπογλυκαιμίες τη νύχτα, μπορείτε να ορίσετε τον στόχο λίγο πιο ψηλά, στα 117 mg/dl (6,5 mmol/l), από τις 21:00 έως τις 07:00. Αν θέλετε να έχετε αρκετή ενεργή ινσουλίνη (IOB) το πρωί πριν κάνετε bolus για το πρωινό, μπορείτε να ορίσετε χαμηλότερο στόχο 81 mg/dl (4,5 mmol/l) από τις 7 έως τις 8 το πρωί.
 
-When In [Open Loop](#KeyAapsFeatures-OpenLoop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/> When In [Closed Loop](#KeyAapsFeatures-ClosedLoop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
+Σε [Ανοιχτό Κύκλωμα](#KeyAapsFeatures-OpenLoop), ειδικά όταν προχωράτε στα [πρώτα βήματα](../SettingUpAaps/CompletingTheObjectives.md), ένας στόχος με μεγάλο εύρος μπορεί να είναι καλή επιλογή, όσο μαθαίνετε πώς συμπεριφέρεται το **AAPS** και προσαρμόζετε το **Προφίλ** σας.<br/> Σε [Κλειστό Κύκλωμα](#KeyAapsFeatures-ClosedLoop) (από το **[Βήμα 6](#objectives-objective6)** και μετά), συνιστάται να μικρύνετε το εύρος μέχρι να έχετε έναν μόνο στόχο για κάθε ώρα της ημέρας (_Κάτω_ στόχος = _Άνω_ στόχος), ώστε το **AAPS** να αντιδρά γρήγορα στις αλλαγές της **BG**.
 
 (your-aaps-profile-basal-rates)=
 
-## Basal rates
+## Βασικοί ρυθμοί
 
-### Description
+### Περιγραφή
 
-Your basal rate of insulin (Units/hour) provides background insulin, keeping your glucose levels stable in the absence of food or exercise.
+Ο βασικός ρυθμός ινσουλίνης (μονάδες/ώρα) δίνει την ινσουλίνη υποβάθρου, που κρατά τη γλυκόζη σας σταθερή όταν δεν τρώτε και δεν γυμνάζεστε.
 
-The insulin pump delivers small amounts of rapid acting insulin every few minutes, to keep the liver from releasing too much glucose, and to move glucose into body cells. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. For more information, chapter 6 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner is very useful.
+Η αντλία ινσουλίνης δίνει μικρές ποσότητες ινσουλίνης ταχείας δράσης κάθε λίγα λεπτά, ώστε το ήπαρ να μην απελευθερώνει πολλή γλυκόζη και η γλυκόζη να περνά στα κύτταρα του σώματος. Η βασική ινσουλίνη είναι συνήθως 40–50% της συνολικής ημερήσιας δόσης (TDD), ανάλογα με τη διατροφή σας, και συνήθως ακολουθεί έναν κιρκάδιο ρυθμό, με μία κορυφή και ένα χαμηλό σημείο στις ανάγκες ινσουλίνης μέσα στο 24ωρο. Για περισσότερες πληροφορίες, το κεφάλαιο 6 του βιβλίου [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) του Gary Scheiner είναι πολύ χρήσιμο.
 
-Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimise your ISF and ICR.
+Οι περισσότεροι εκπαιδευτές για τον διαβήτη τύπου 1 (και οι άνθρωποι με διαβήτη τύπου 1!) συμφωνούν ότι πρέπει πρώτα να διορθώσετε τους βασικούς σας ρυθμούς και μετά να προσπαθήσετε να βελτιώσετε το ISF και το ICR.
 
-### Impact
+### Επίδραση
 
-Accurate basal rates enable you to wake up in range, and to skip meals - or eat - earlier or later in the day, without going high or low.
+Με σωστούς βασικούς ρυθμούς ξυπνάτε μέσα στο εύρος στόχου και μπορείτε να παραλείψετε γεύματα - ή να φάτε - νωρίτερα ή αργότερα μέσα στην ημέρα, χωρίς να ανεβείτε πολύ ή να πέσετε χαμηλά.
 
-Πολύ υψηλός βασικός ρυθμός μπορεί να οδηγήσει σε χαμηλά επίπεδα σακχάρου. And vice versa.
+Πολύ υψηλός βασικός ρυθμός μπορεί να οδηγήσει σε χαμηλές τιμές γλυκόζης (BG). Και αντίστροφα.
 
-**AAPS** ‘baselines’ against the default basal rate. Εάν ο βασικός ρυθμός είναι πολύ υψηλός, ενας 'μηδενικός ρυθμός' θα μετράται ως μεγαλύτερο αρνητικό IOB από ό, τι θα έπρεπε. This will lead to **AAPS** giving more subsequent corrections than it should to bring IOB ultimately to zero.
+Το **AAPS** παίρνει ως βάση αναφοράς τον προεπιλεγμένο βασικό ρυθμό. Αν ο βασικός ρυθμός είναι πολύ υψηλός, ένας «μηδενικός προσωρινός ρυθμός» θα μετρηθεί ως μεγαλύτερο αρνητικό IOB από ό,τι θα έπρεπε. Αυτό θα κάνει το **AAPS** να δώσει στη συνέχεια περισσότερες διορθώσεις από όσες πρέπει, για να φέρει τελικά το IOB στο μηδέν.
 
-So, a basal rate too high will create low **BGs** both with the default rate, but also some hours hence as **AAPS** corrects to target.
+Έτσι, ένας πολύ υψηλός βασικός ρυθμός θα προκαλέσει χαμηλές τιμές **BG** τόσο με τον προεπιλεγμένο ρυθμό, όσο και μερικές ώρες αργότερα, όταν το **AAPS** διορθώνει προς τον στόχο.
 
-Conversely, a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+Αντίθετα, ένας πολύ χαμηλός βασικός ρυθμός μπορεί να οδηγήσει σε υψηλές τιμές BG και σε αποτυχία να κατέβουν οι τιμές στον στόχο.
 
-### How to set it
+### Πώς να το ρυθμίσετε
 
-The **figure below** shows an example of how the basal rates can be set in an **AAPS** profile.
+Η **παρακάτω εικόνα** δείχνει ένα παράδειγμα για το πώς μπορούν να οριστούν οι βασικοί ρυθμοί σε ένα προφίλ του **AAPS**.
 
-![Basal rates](../images/Profile_BasalRates.png)
+![Βασικοί ρυθμοί](../images/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetic team.
+Οι σωστοί βασικοί ρυθμοί βρίσκονται με δοκιμή και λάθος, και πρέπει να ορίζονται μαζί με την ομάδα του διαβήτη σας.
 
-There are basal testing methods which usually entails observing your basal rates and insulin needs during an <u>intermittent</u> fasting over a 24-hour period. Although you need to test your basal rates for the whole day, it is not recommended to fast during 24h straight. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast 3 times for 8 hours.
+Υπάρχουν μέθοδοι ελέγχου του βασικού ρυθμού, όπου συνήθως παρακολουθείτε τους βασικούς ρυθμούς και τις ανάγκες σε ινσουλίνη κατά τη διάρκεια μιας <u>διαλειμματικής</u> νηστείας μέσα σε 24 ώρες. Παρόλο που πρέπει να ελέγξετε τους βασικούς ρυθμούς για όλη την ημέρα, δεν συνιστάται να νηστεύετε 24 ώρες συνεχόμενα. Ο λόγος είναι ότι το σώμα ενεργοποιεί μηχανισμούς, όπως ορμόνες, για να αντισταθμίσει. Ένας συνιστώμενος τρόπος είναι να νηστέψετε 3 διαφορετικές ημέρες για 8 ώρες.
 
-The recommended method is to suspend the loop (for safety you can set AAPS to [**LGS**](#KeyAapsFeatures-LGS) to avoid lows, as done for achieving [objective 6](#objectives-objective6)), which will revert to your default background basal rate. Observe how your **BG** changes: if it is dropping, basal rate is too high. And vice versa.<br/> An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If **IOB** is negative, your basal rate is too high. And vice versa. Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/> Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyze overnight BG lines in order to optimize your basal rates.
+Η συνιστώμενη μέθοδος είναι να κάνετε αναστολή του κυκλώματος (για ασφάλεια μπορείτε να βάλετε το AAPS σε [**LGS**](#KeyAapsFeatures-LGS) για να αποφύγετε τις υπογλυκαιμίες, όπως στο [βήμα 6](#objectives-objective6)). Έτσι η αντλία γυρίζει στον προεπιλεγμένο βασικό ρυθμό. Παρατηρήστε πώς αλλάζει η **BG** σας: αν πέφτει, ο βασικός ρυθμός είναι πολύ υψηλός. Και αντίστροφα.<br/> Μια άλλη μέθοδος (μπορεί να είναι πιο δύσκολη) είναι να αφήσετε το κύκλωμα να λειτουργεί και να παρακολουθείτε πώς αλλάζει το **IOB**. Αν το **IOB** είναι αρνητικό, ο βασικός σας ρυθμός είναι πολύ υψηλός. Και αντίστροφα. Προσοχή: αυτή η μέθοδος βασίζεται στο **ISF** για να διορθώσει τη **BG**, άρα για να πετύχει πρέπει και οι άλλες τιμές να είναι αρκετά σωστές.<br/> Ένας άλλος τρόπος για να προσαρμόσετε τους βασικούς ρυθμούς είναι να παρακολουθείτε τι κάνει το κύκλωμα κατά τη διάρκεια της νύχτας, όταν όλοι οι COB έχουν απορροφηθεί. Αυτή η μέθοδος είναι ιδιαίτερα χρήσιμη για παιδιά, όταν η νηστεία είναι δύσκολη ή οι ανάγκες σε ινσουλίνη αλλάζουν συχνά. Ο [Dr Saleh Adi από το Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) δίνει χρήσιμους τρόπους για να αναλύσετε τις νυχτερινές γραμμές BG, ώστε να βελτιώσετε τους βασικούς σας ρυθμούς.
 
-See [here](../GettingHelp/ProfileTuning.md) how to tweak your basal profile, analyzing patterns in closed loop.
+Δείτε [εδώ](../GettingHelp/ProfileTuning.md) πώς να προσαρμόσετε το προφίλ βασικού ρυθμού, αναλύοντας τα μοτίβα στο κλειστό κύκλωμα.
 
-When taking action on the result of your basal testing, changes in the **Profile** should be done 1 to 2 hours (depends on your insulin type) before the rise/drop. Repeat the test as necessary until you are comfortable with your **basal rates** settings.
+Όταν κάνετε αλλαγές με βάση το αποτέλεσμα του ελέγχου βασικού ρυθμού, οι αλλαγές στο **Προφίλ** πρέπει να γίνονται 1 έως 2 ώρες (ανάλογα με τον τύπο της ινσουλίνης σας) πριν από την άνοδο/πτώση. Επαναλάβετε τη δοκιμή όσες φορές χρειάζεται, μέχρι να είστε σίγουροι για τις ρυθμίσεις των **βασικών ρυθμών** σας.
+
+(your-aaps-profile-basal-not-compatible)=
+#### Μήνυμα: «Ο βασικός ρυθμός δεν είναι συμβατός με την τρέχουσα αντλία»
+
+Κάθε αντλία έχει όρια: έναν ελάχιστο και έναν μέγιστο βασικό ρυθμό που μπορεί να δώσει. Σε μερικές αντλίες (για παράδειγμα Dana, Accu-Chek Combo, Medtronic και Diaconn G8), οι βασικοί ρυθμοί μπορούν να αλλάζουν μόνο σε ακέραιη ώρα. Το **AAPS** ελέγχει το προφίλ σας για την αντλία που χρησιμοποιείτε, **αφού** εφαρμόσει το ποσοστό που επιλέξατε.
+
+Αν ένας βασικός ρυθμός είναι έξω από αυτά τα όρια, η οθόνη **Ενεργοποίηση** δείχνει αυτό το μήνυμα και το κουμπί **Ενεργοποίηση** μένει γκρι:
+
+![Οθόνη ενεργοποίησης με το μήνυμα "Ο βασικός ρυθμός δεν είναι συμβατός με την τρέχουσα αντλία"](../images/v4/Profiles/profile_activate_pump_incompatible.png)
+
+Για παράδειγμα, με βασικό ρυθμό 0,10 U/h τη νύχτα και ποσοστό προφίλ 35%, το **AAPS** θα έπρεπε να δώσει 0,035 U/h. Αυτό είναι λιγότερο από όσο μπορεί να δώσει μια αντλία Dana (0,04 U/h).
+
+Για να το λύσετε, μπορείτε είτε:
+
+* να επιλέξετε άλλο ποσοστό: **υψηλότερο** αν ένας βασικός ρυθμός γίνεται πολύ χαμηλός, **χαμηλότερο** αν ένας βασικός ρυθμός γίνεται πολύ υψηλός, είτε
+* να [επεξεργαστείτε το προφίλ](#your-aaps-profile-create-and-edit-profiles) και να αλλάξετε τον βασικό ρυθμό.
+
+Ο επεξεργαστής προφίλ σας αφήνει να ξεκινάτε βασικούς ρυθμούς μόνο σε ακέραιη ώρα. Ένας βασικός ρυθμός που ξεκινά π.χ. στις 06:30 μπορεί να προέρχεται μόνο από ένα παλαιότερο προφίλ, για παράδειγμα αφού αλλάξετε σε αντλία που δεν το υποστηρίζει.
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 
-## Insulin sensitivity factor (ISF)
+## Συντελεστής ευαισθησίας στην ινσουλίνη (ISF)
 
-### Description
+### Περιγραφή
 
-The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin.
+Ο συντελεστής ευαισθησίας στην ινσουλίνη (λέγεται και συντελεστής διόρθωσης) δείχνει πόσο θα μειωθεί η γλυκόζη αίματός σας με 1 μονάδα ινσουλίνης.
 
-**In mg/dL units:** If you have an **ISF** of 40, each unit of insulin will reduce your blood glucose by approx. 40 mg/dL (for example, your blood glucose will fall from 140 mg/dL to 100 mg/dL).
+**Σε μονάδες mg/dl:** Αν έχετε **ISF** 40, κάθε μονάδα ινσουλίνης θα μειώσει τη γλυκόζη αίματος κατά περίπου 40 mg/dl (για παράδειγμα, η γλυκόζη θα πέσει από 140 mg/dl σε 100 mg/dl).
 
-**In mmol/L units:** If you have an **ISF** of 1.5, each unit of insulin will reduce your blood glucose by approx. 1.5 mmol/L (for example from 8 mmol/L to 6.5 mmol/L).
+**Σε μονάδες mmol/l:** Αν έχετε **ISF** 1,5, κάθε μονάδα ινσουλίνης θα μειώσει τη γλυκόζη αίματος κατά περίπου 1,5 mmol/l (για παράδειγμα από 8 mmol/l σε 6,5 mmol/l).
 
-From these examples you can see that the _smaller_ the **ISF** value, the less sensitive you are to insulin. So if you reduce your ISF from 40 to 35 (mg/dl) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dl) or 1.5 to 1.8 mmol/L) is weakening your **ISF**.
+Από αυτά τα παραδείγματα βλέπετε ότι όσο _μικρότερη_ είναι η τιμή του **ISF**, τόσο λιγότερο ευαίσθητοι είστε στην ινσουλίνη. Έτσι, αν μειώσετε το ISF από 40 σε 35 (mg/dl) ή από 1,5 σε 1,3 (mmol/l), αυτό συχνά λέγεται ενίσχυση του **ISF**. Αντίθετα, αν αυξήσετε την τιμή του **ISF** από 40 σε 45 (mg/dl) ή από 1,5 σε 1,8 (mmol/l), αποδυναμώνετε το **ISF** σας.
 
-### Impact
+### Επίδραση
 
-A **lower / stronger ISF** (i.e. 40 instead of 50) means insulin drops your **BG** less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If your **ISF** is too strong (small value), this can lead to low **BG**.
+Ένα **χαμηλότερο / ισχυρότερο ISF** (π.χ. 40 αντί για 50) σημαίνει ότι η ινσουλίνη ρίχνει τη **BG** σας λιγότερο ανά μονάδα. Αυτό οδηγεί σε πιο επιθετική / ισχυρότερη διόρθωση από το κύκλωμα, με **περισσότερη ινσουλίνη**. Αν το **ISF** σας είναι πολύ ισχυρό (μικρή τιμή), μπορεί να οδηγήσει σε χαμηλή **BG**.
 
-A **higher / weaker ISF** (i.e. 45 instead of 35) means insulin drops your **BG** more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If your **ISF** is too weak (large value), this can lead to high **BG**.
+Ένα **υψηλότερο / ασθενέστερο ISF** (π.χ. 45 αντί για 35) σημαίνει ότι η ινσουλίνη ρίχνει τη **BG** σας περισσότερο ανά μονάδα. Αυτό οδηγεί σε λιγότερο επιθετική / ασθενέστερη διόρθωση από το κύκλωμα, με **λιγότερη ινσουλίνη**. Αν το **ISF** σας είναι πολύ ασθενές (μεγάλη τιμή), μπορεί να οδηγήσει σε υψηλή **BG**.
 
 **Παράδειγμα:**
-* **BG** is 190 mg/dL (10,5 mmol/L) and target is 100 mg/dL (5,6 mmol/L).
-* So, you want a correction of `190 - 110 = 90 mg/dL` or `10,5 - 5,6 = 4.9 mmol/L`
-* If `ISF = 30` -> `90 / 30 = 3` or `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 units of insulin
-* If `ISF = 45` -> `90 / 45 = 2` or `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 units of insulin
+* Η **BG** είναι 190 mg/dl (10,5 mmol/l) και ο στόχος είναι 100 mg/dl (5,6 mmol/l).
+* Άρα θέλετε διόρθωση κατά `190 - 100 = 90 mg/dL` ή `10.5 - 5.6 = 4.9 mmol/L`
+* Αν `ISF = 30` -> `90 / 30 = 3` ή `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 μονάδες ινσουλίνης
+* Αν `ISF = 45` -> `90 / 45 = 2` ή `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 μονάδες ινσουλίνης
 
-An **ISF** that is too low (and therefore more aggressive, not uncommon) can result in ‘over corrections’, because **AAPS** calculates that the user needs more insulin to correct a high **BG** than actually required. This can lead to ‘roller coaster’ BG levels (esp. when fasting), as shown on the image below. In this circumstance, the **ISF** value should be increased in order to make **AAPS** less aggressive. This will ensure **AAPS** delivers smaller correction doses, and avoid over-correcting a high **BG** resulting in a low **BG**.
+Ένα **ISF** που είναι πολύ χαμηλό (άρα πιο επιθετικό, κάτι όχι σπάνιο) μπορεί να οδηγήσει σε «υπερδιορθώσεις», γιατί το **AAPS** υπολογίζει ότι χρειάζεστε περισσότερη ινσουλίνη για να διορθώσετε μια υψηλή **BG** από όση χρειάζεται πραγματικά. Αυτό μπορεί να οδηγήσει σε τιμές BG σαν «τρενάκι» (ειδικά όταν νηστεύετε), όπως φαίνεται στην παρακάτω εικόνα. Σε αυτή την περίπτωση, η τιμή του **ISF** πρέπει να αυξηθεί, ώστε το **AAPS** να γίνει λιγότερο επιθετικό. Έτσι το **AAPS** θα δίνει μικρότερες δόσεις διόρθωσης και θα αποφεύγει να υπερδιορθώνει μια υψηλή **BG**, κάτι που θα έφερνε χαμηλή **BG**.
 
 ![ISF πολύ χαμηλό](../images/isf.jpg)
 
-Conversely, an **ISF** set too high can result in under-corrections, meaning your **BG** remains above target – particularly noticeable overnight.
+Αντίθετα, ένα **ISF** που είναι πολύ υψηλό μπορεί να οδηγήσει σε ανεπαρκείς διορθώσεις. Αυτό σημαίνει ότι η **BG** σας μένει πάνω από τον στόχο – κάτι που φαίνεται ιδιαίτερα τη νύχτα.
 
-### How to set it
+### Πώς να το ρυθμίσετε
 
-See the **figure below** for an example of how ISF values could be set in an **AAPS** profile.
+Δείτε την **παρακάτω εικόνα** για ένα παράδειγμα του πώς μπορούν να οριστούν οι τιμές ISF σε ένα προφίλ του **AAPS**.
 
-![Profile ISF](../images/Profile_ISF.png)
+![ISF του προφίλ](../images/Profile_ISF.png)
 
-A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
+Ένα απλό σημείο εκκίνησης για να βρείτε το ISF της ημέρας είναι να το υπολογίσετε από τη συνολική ημερήσια δόση (TDD) με τον κανόνα του 1.700 (94). Περισσότερες λεπτομέρειες θα βρείτε στο κεφάλαιο 7 του βιβλίου [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) του Gary Scheiner.
 
-| 1700 (if measuring in mg/dl) or 94 (mmol/L)/ TDD = approx ISF.<br/><br/>Example: TDD = 40 U<br/>Approx ISF (mg/dl) = 1700/40 = 43<br/>Approx ISF (mmol/L) = 94/40 = 2.4 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                                                                                                                                                                                                 |
+| 1700 (αν μετράτε σε mg/dl) ή 94 (mmol/l) / TDD = περίπου ISF.<br/><br/>Παράδειγμα: TDD = 40 U<br/>Περίπου ISF (mg/dl) = 1700/40 = 43<br/>Περίπου ISF (mmol/l) = 94/40 = 2,4 |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                     |
 
-Assuming your basal levels are correct, you can test this by suspending the loop, checking **IOB** is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
+Αν οι βασικοί σας ρυθμοί είναι σωστοί, μπορείτε να το ελέγξετε ως εξής: κάντε αναστολή του κυκλώματος, ελέγξτε ότι το **IOB** είναι μηδέν και πάρτε μερικά δισκία γλυκόζης για να φτάσετε σε ένα σταθερό «υψηλό» επίπεδο.
 
-Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
+Στη συνέχεια, πάρτε μια εκτιμώμενη ποσότητα ινσουλίνης (με βάση το τρέχον 1/ISF) για να φτάσετε στον στόχο BG.
 
-Να είστε προσεκτικοί, καθώς αυτό είναι αρκετά συχνά ρυθμισμένο πολύ χαμηλά. Πάρα πολύ χαμηλά σημαίνει 1 U θα ρίξει το BG γρηγορότερα από το αναμενόμενο.
+Να είστε προσεκτικοί, καθώς αυτό είναι αρκετά συχνά ρυθμισμένο πολύ χαμηλά. Πολύ χαμηλό σημαίνει ότι 1 U θα ρίξει τη BG πιο γρήγορα από το αναμενόμενο.
 
 (your-aaps-profile-insulin-to-carbs-ratio)=
 
-## Insulin to Carb ratio (ICR)
+## Αναλογία ινσουλίνης προς υδατάνθρακες (ICR)
 
-### Description
+### Περιγραφή
 
-The **ICR** is a measure of how many grams of carbohydrate are covered by one unit of insulin.
+Το **ICR** δείχνει πόσα γραμμάρια υδατανθράκων καλύπτει μία μονάδα ινσουλίνης.
 
-Some people also use **I:C** as an abbreviation instead of **ICR**, or talk about carb ratio : **CR**.
+Μερικοί χρησιμοποιούν επίσης τη συντομογραφία **I:C** αντί για **ICR**, ή μιλούν για αναλογία υδατανθράκων: **CR**.
 
-For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of insulin for every 10 grams of carbs eaten. A meal of 25g carbs would need 2.5U of insulin.
+Για παράδειγμα, αναλογία ινσουλίνης προς υδατάνθρακες 1 προς 10 (1:10) σημαίνει ότι παίρνετε 1 U ινσουλίνης για κάθε 10 γραμμάρια υδατανθράκων που τρώτε. Ένα γεύμα με 25 g υδατανθράκων θα χρειαζόταν 2,5 U ινσουλίνης.
 
-If your **ICR** is weaker (higher value), perhaps 1:20, you would only need 0.5U of insulin to cover 10 g of carbs. A meal of 25g of carbs would need 25/20 = 1.25U of insulin.
+Αν το **ICR** σας είναι ασθενέστερο (υψηλότερη τιμή), π.χ. 1:20, θα χρειαζόσασταν μόνο 0,5 U ινσουλίνης για να καλύψετε 10 g υδατανθράκων. Ένα γεύμα με 25 g υδατανθράκων θα χρειαζόταν 25/20 = 1,25 U ινσουλίνης.
 
-It is common to have different **ICR** at different times of day due to hormone levels and physical activity. Many people find they have their lowest/strongest **ICR** around breakfast time because they tend to be more insulin resistant. So, for example, one adult user's **ICR** could be 1:8 for breakfast, 1:10 for lunch and 1:10 for dinner, but these patterns are not universal, and some people are more insulin resistant at dinner time, and require a stronger/smaller **ICR** then.
+Συχνά το **ICR** είναι διαφορετικό σε διαφορετικές ώρες της ημέρας, λόγω των ορμονών και της σωματικής δραστηριότητας. Πολλοί βλέπουν ότι έχουν το χαμηλότερο/ισχυρότερο **ICR** γύρω από την ώρα του πρωινού, γιατί τότε έχουν συνήθως μεγαλύτερη αντίσταση στην ινσουλίνη. Για παράδειγμα, το **ICR** ενός ενήλικα μπορεί να είναι 1:8 για το πρωινό, 1:10 για το μεσημεριανό και 1:10 για το βραδινό. Όμως αυτό δεν ισχύει για όλους: μερικοί έχουν μεγαλύτερη αντίσταση στην ινσουλίνη το βράδυ και τότε χρειάζονται ισχυρότερο/μικρότερο **ICR**.
 
-> **NOTE:**
+> **ΣΗΜΕΙΩΣΗ:**
 > 
-> In some European countries bread units were used for determination of how much insulin is needed for food. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
+> Σε μερικές ευρωπαϊκές χώρες χρησιμοποιούνταν οι μονάδες άρτου (BU) για να υπολογιστεί πόση ινσουλίνη χρειάζεται για το φαγητό. Στην αρχή 1 μονάδα άρτου ήταν ίση με 12 g υδατανθράκων. Αργότερα κάποιοι την άλλαξαν σε 10 g υδατανθράκων.
 > 
-> In this model the amount of carbs was fixed and the amount of insulin was variable. ("How much insulin is needed to cover one bread unit?")
+> Σε αυτό το μοντέλο η ποσότητα των υδατανθράκων ήταν σταθερή και η ποσότητα της ινσουλίνης μεταβλητή. («Πόση ινσουλίνη χρειάζεται για να καλύψει μία μονάδα άρτου;»)
 > 
-> When using **ICR** the amount of insulin is fixed and the amount of carbs is variable. ("How many g of carbs can be covered by one unit of insulin?")
+> Με το **ICR** η ποσότητα της ινσουλίνης είναι σταθερή και η ποσότητα των υδατανθράκων μεταβλητή. («Πόσα g υδατανθράκων καλύπτει μία μονάδα ινσουλίνης;»)
 > 
 > Παράδειγμα:
 > 
-> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
+> Συντελεστής μονάδας άρτου (BU = 12 g υδατανθράκων): 2,4 U/BU -> Χρειάζεστε 2,4 μονάδες ινσουλίνης όταν τρώτε μία μονάδα άρτου.
 > 
-> Corresponding **ICR**: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
+> Αντίστοιχο **ICR**: 12g / 2,4 U = 5,0 g/U -> 5,0 g υδατανθράκων καλύπτονται με μία μονάδα ινσουλίνης.
 > 
-> BU factor 2,4 U / 12g   ===>   IC = 12g / 2,4 U = 5,0 g/U
+> Συντελεστής BU 2,4 U / 12g   ===>   IC = 12g / 2,4 U = 5,0 g/U
 > 
-> Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Πίνακες μετατροπής υπάρχουν στο διαδίκτυο, π.χ. [εδώ](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
-### Impact
+### Επίδραση
 
-A **lower / stronger ICR** means less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Μπορεί επίσης να ονομάζεται "πιο επιθετική". If your IC is too strong, you are getting too much insulin, this can lead to low **BGs**.
+Ένα **χαμηλότερο / ισχυρότερο ICR** σημαίνει λιγότερο φαγητό ανά μονάδα, δηλαδή παίρνετε περισσότερη ινσουλίνη για μια σταθερή ποσότητα υδατανθράκων. Μπορεί επίσης να ονομάζεται "πιο επιθετική". Αν το IC σας είναι πολύ ισχυρό, παίρνετε πολλή ινσουλίνη και αυτό μπορεί να οδηγήσει σε χαμηλές τιμές **BG**.
 
-A **higher / weaker ICR** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Μπορεί επίσης να ονομάζεται "λιγότερο επιθετική". If your IC is too weak, you are getting less insulin than you need, this can lead to high **BGs**.
+Ένα **υψηλότερο / ασθενέστερο ICR** = περισσότερο φαγητό ανά μονάδα, δηλαδή παίρνετε λιγότερη ινσουλίνη για μια σταθερή ποσότητα υδατανθράκων. Μπορεί επίσης να ονομάζεται "λιγότερο επιθετική". Αν το IC σας είναι πολύ ασθενές, παίρνετε λιγότερη ινσουλίνη από όση χρειάζεστε και αυτό μπορεί να οδηγήσει σε υψηλές τιμές **BG**.
 
-### How to set it
+### Πώς να το ρυθμίσετε
 
-The **figure below** shows an example of a user's **ICR** and how it can be set in an **AAPS Profile**. When entering these values, we just enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
+Η **παρακάτω εικόνα** δείχνει ένα παράδειγμα του **ICR** ενός χρήστη και πώς μπορεί να οριστεί σε ένα **Προφίλ του AAPS**. Όταν βάζουμε αυτές τις τιμές, βάζουμε το τελευταίο μέρος της αναλογίας. Έτσι, μια αναλογία ινσουλίνης προς υδατάνθρακες 1:3,5 μπαίνει απλώς ως «3,5».
 
-![Profile ICR](../images/Profile_ICR.png)
+![ICR του προφίλ](../images/Profile_ICR.png)
 
-If after a meal has been digested and the **IOB** has returned to zero, your **BG** remains higher than before food, chances are your **ICR** is too weak (_i.e._ the number is too high and should be gradually lowered). Conversely, if your **BG** is lower than before food, **ICR** is too strong (_i.e._ the number is too small and should be gradually increased).
+Αν, αφού χωνευτεί ένα γεύμα και το **IOB** γυρίσει στο μηδέν, η **BG** σας μένει υψηλότερη από πριν το φαγητό, τότε πιθανώς το **ICR** σας είναι πολύ ασθενές (_δηλαδή_ ο αριθμός είναι πολύ μεγάλος και πρέπει να μειωθεί σταδιακά). Αντίθετα, αν η **BG** σας είναι χαμηλότερη από πριν το φαγητό, το **ICR** είναι πολύ ισχυρό (_δηλαδή_ ο αριθμός είναι πολύ μικρός και πρέπει να αυξηθεί σταδιακά).
 
-Assuming your basal rates are correct, you can test by checking if **IOB** is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food you normally eat at that time of day and count its carbs precisely.
+Αν οι βασικοί σας ρυθμοί είναι σωστοί, μπορείτε να το ελέγξετε ως εξής: ελέγξτε ότι το **IOB** είναι μηδέν και ότι είστε μέσα στο εύρος, φάτε υδατάνθρακες σε ποσότητα που ξέρετε ακριβώς και πάρτε μια εκτιμώμενη ποσότητα ινσουλίνης με βάση την τρέχουσα αναλογία ινσουλίνης προς υδατάνθρακες. Το καλύτερο είναι να φάτε φαγητό που τρώτε συνήθως εκείνη την ώρα της ημέρας και να μετρήσετε με ακρίβεια τους υδατάνθρακές του.
 
-## Common questions related to the Profile
+## Συχνές ερωτήσεις για το προφίλ
 
 ```{contents} Common questions related to the Profile
 :depth: 1
 :local: true
 ```
 
-### About the importance of getting your profile right
+### Γιατί είναι σημαντικό να έχετε σωστό προφίλ
 
-**Why should I try to get my profile settings right? Can’t the loop just take care of it?**
+**Γιατί πρέπει να προσπαθήσω να έχω σωστές ρυθμίσεις προφίλ; Δεν μπορεί το κύκλωμα απλώς να το φροντίσει;**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimise poor glycemic control that results from having incorrect **Profile** values. It can do this, for example, by withholding insulin delivery if you are going to hypo. However, you can achieve much better glycemic control if your **Profile** settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
+Ένα υβριδικό κλειστό κύκλωμα _μπορεί_ να προσπαθήσει να προσαρμόσει τη χορήγηση ινσουλίνης, για να μειώσει τον κακό γλυκαιμικό έλεγχο που προκαλούν λάθος τιμές στο **Προφίλ**. Μπορεί να το κάνει αυτό, για παράδειγμα, σταματώντας τη χορήγηση ινσουλίνης αν πρόκειται να πάθετε υπογλυκαιμία. Όμως μπορείτε να έχετε πολύ καλύτερο γλυκαιμικό έλεγχο αν οι ρυθμίσεις του **Προφίλ** σας είναι ήδη όσο πιο κοντά γίνεται σε αυτό που χρειάζεται το σώμα σας. Αυτός είναι ένας από τους λόγους που το **AAPS** χρησιμοποιεί βήματα (objectives), για να περάσετε σταδιακά από την αντλία με ανοιχτό κύκλωμα στο υβριδικό κλειστό κύκλωμα. Επιπλέον, θα υπάρξουν στιγμές που θα χρειαστεί να ανοίξετε το κύκλωμα (προθέρμανση αισθητήρα, βλάβη αισθητήρα _κ.λπ._), μερικές φορές στη μέση της νύχτας. Τότε θα θέλετε να έχετε σωστές ρυθμίσεις.
 
-If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (**BR**), insulin sensitivity factors (**ISF**) and insulin-to-carb ratios (**ICR**).
+Αν ξεκινάτε με το **AAPS** αφού χρησιμοποιήσατε άλλο σύστημα αντλίας με ανοιχτό ή κλειστό κύκλωμα, θα έχετε ήδη μια λογική ιδέα για τις τιμές των βασικών ρυθμών (**BR**), των συντελεστών ευαισθησίας στην ινσουλίνη (**ISF**) και των αναλογιών ινσουλίνης προς υδατάνθρακες (**ICR**).
 
-If you are moving from injections (MDI) to **AAPS**, then it is a good idea to read up on how to make the transfer from MDI to pump first, and plan and make the move carefully in consultation with your diabetes team. ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts and [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner are very useful.
+Αν περνάτε από τις ενέσεις (MDI) στο **AAPS**, καλό είναι να διαβάσετε πρώτα πώς γίνεται η μετάβαση από τις ενέσεις στην αντλία. Σχεδιάστε και κάντε την αλλαγή προσεκτικά, μαζί με την ομάδα του διαβήτη σας. Τα βιβλία ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) των John Walsh & Ruth Roberts και [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) του Gary Scheiner είναι πολύ χρήσιμα.
 
-### What causes high postprandial peaks in closed loop?
-Πρώτα απ 'όλα, ελέγξτε το βασικό σας ρυθμό και κάντε δοκιμασία βασικού ρυθμού χωρίς υδατάνθρακες. If it is correct and your **BG** is falling to reach your target after carbs are fully absorbed, try to set an 'eating soon' temp target in **AAPS** some time before the meal or think about an appropriate pre-bolus time with your endocrinologist. <br/> If your **BG** is too high after the meal and still too high after carbs are fully absorbed, consider decreasing your **ICR** with your endocrinologist. If your **BG** is too high while **COB** and too low after carbs are fully absorbed, think about increasing your **ICR** and an appropriate pre-bolus time with your endocrinologist.
+### Τι προκαλεί υψηλές μεταγευματικές κορυφές σε κλειστό κύκλωμα;
+Πρώτα απ 'όλα, ελέγξτε το βασικό σας ρυθμό και κάντε δοκιμασία βασικού ρυθμού χωρίς υδατάνθρακες. Αν είναι σωστό και η **BG** σας πέφτει και φτάνει στον στόχο αφού απορροφηθούν πλήρως οι υδατάνθρακες, δοκιμάστε να ορίσετε έναν προσωρινό στόχο «Γεύμα Σύντομα» στο **AAPS** λίγο πριν από το γεύμα, ή συζητήστε με τον ενδοκρινολόγο σας τον σωστό χρόνο για ένα bolus πριν το γεύμα (pre-bolus). <br/> Αν η **BG** σας είναι πολύ υψηλή μετά το γεύμα και μένει πολύ υψηλή και αφού απορροφηθούν πλήρως οι υδατάνθρακες, σκεφτείτε μαζί με τον ενδοκρινολόγο σας να μειώσετε το **ICR**. Αν η **BG** σας είναι πολύ υψηλή όσο υπάρχουν **COB** και πολύ χαμηλή αφού απορροφηθούν πλήρως οι υδατάνθρακες, σκεφτείτε μαζί με τον ενδοκρινολόγο σας να αυξήσετε το **ICR** και να βρείτε τον σωστό χρόνο για το bolus πριν το γεύμα.
 
-### I'm stuck high and the loop does not bring me down
-The possible reasons for **AAPS** not giving enough insulin are:
-* **ISF** is not strong enough
-* Basal might not be strong enough
-* A security setting might kick in, such as **maxIOB**. Or **SMB** is disabled at this time, depending on your settings.
-* Automation has been set up and has overridden **AAPS**.
+### Η γλυκόζη μου μένει ψηλά και το κύκλωμα δεν την κατεβάζει
+Οι πιθανοί λόγοι για τους οποίους το **AAPS** δεν δίνει αρκετή ινσουλίνη είναι:
+* Το **ISF** δεν είναι αρκετά ισχυρό
+* Ο βασικός ρυθμός μπορεί να μην είναι αρκετά ισχυρός
+* Μπορεί να ενεργοποιηθεί μια ρύθμιση ασφαλείας, όπως το **maxIOB**. Ή το **SMB** είναι απενεργοποιημένο αυτή την ώρα, ανάλογα με τις ρυθμίσεις σας.
+* Έχει οριστεί ένας αυτοματισμός που παρακάμπτει το **AAPS**.
 
-### I have negative IOB, is this an issue ?
-Negative **IOB** means the amount of absolute insulin (basal + bolus) in your body is less than the basal. It will cause **AAPS** to send more insulin as soon as the **BG** starts to rise, because it considers that insulin is missing, which can result in low **BG** later.
+Δείτε επίσης [Βελτίωση του προφίλ του AAPS](../GettingHelp/ProfileTuning.md).
 
-Here are some reasons why you may have negative IOB, and what action to take:
-* a too strong basal: tweak your **Profile**
-* too much bolus at the previous meal: tweak your **Profile** or check if you are bolusing at the right time.
-* DIA too short, resulting in insulin stacking: tweak your **Profile**
-* physical activity: next time, consider using a lower [Profile percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) during activity to account for increased sensitivity.
+### Έχω αρνητικό IOB. Είναι πρόβλημα;
+Αρνητικό **IOB** σημαίνει ότι η συνολική ποσότητα ινσουλίνης (βασικός ρυθμός + bolus) στο σώμα σας είναι μικρότερη από τον βασικό ρυθμό. Αυτό θα κάνει το **AAPS** να στείλει περισσότερη ινσουλίνη μόλις η **BG** αρχίσει να ανεβαίνει, γιατί θεωρεί ότι λείπει ινσουλίνη. Αυτό μπορεί να φέρει χαμηλή **BG** αργότερα.
 
-## Manage your Profiles
+Εδώ είναι μερικοί λόγοι για τους οποίους μπορεί να έχετε αρνητικό IOB, και τι να κάνετε:
+* πολύ ισχυρός βασικός ρυθμός: προσαρμόστε το **Προφίλ** σας
+* πολύ μεγάλο bolus στο προηγούμενο γεύμα: προσαρμόστε το **Προφίλ** σας ή ελέγξτε αν κάνετε το bolus τη σωστή στιγμή.
+* Η DIA για τον τύπο της ινσουλίνης σας είναι πολύ μικρή και η ινσουλίνη συσσωρεύεται: προσαρμόστε την στο [Διαχείριση → Ρυθμίσεις ινσουλίνης](#Config-Builder-insulin-dia)
+* σωματική δραστηριότητα: την επόμενη φορά, σκεφτείτε να χρησιμοποιήσετε χαμηλότερο [ποσοστό προφίλ](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) κατά τη δραστηριότητα, λόγω της αυξημένης ευαισθησίας.
+
+## Διαχείριση των προφίλ σας
 
 ```{contents} Operations that you can perform on your **Profiles** in **AAPS**
 :depth: 1
 :local: true
 ```
 (your-aaps-profile-create-and-edit-profiles)=
-### Create and edit Profiles
+### Δημιουργία και επεξεργασία προφίλ
 
-The **Profile** tab can be found from the top menu or hamburger menu, depending on your [Config Builder settings](../SettingUpAaps/ConfigBuilder.md).
+Στο **AAPS** v4 τα προφίλ σας βρίσκονται στην οθόνη **Διαχείριση** (κάτω μενού πλοήγησης) → **Προφίλ**. Εμφανίζονται ως κάρτες που αλλάζετε με σάρωση, με μια γραμμή ενεργειών (**➕ Προσθήκη**, **✏️ Επεξεργασία**, **⧉ Κλώνος**, **🗑️ Διαγραφή**, **▶ Ενεργοποίηση**). Για τη διαχείριση και την ενεργοποίηση ενός προφίλ, δείτε [Διαχείριση και ενεργοποίηση προφίλ](#ProfileSwitch-manage-v4). Έρχεστε από το **AAPS** v3, όπου τα προφίλ είχαν δική τους καρτέλα; Δείτε [Τι άλλαξε στο AAPS v4](#v4changes-manage).
 
-![Local Profile buttons](../images/LocalProfile_Settings.png)
+Πατώντας **✏️ Επεξεργασία** ανοίγει ο επεξεργαστής. Ορίστε το **όνομα** και τις **μονάδες** του προφίλ και μετά συμπληρώστε τα τέσσερα προγράμματα στις καρτέλες:
 
-Buttons:
+- **IC** — αναλογία ινσουλίνης προς υδατάνθρακες (g/U)
+- **ISF** — συντελεστής ευαισθησίας στην ινσουλίνη
+- **BAS** — βασικοί ρυθμοί
+- **ΣΤΟΧΟΣ** — εύρος στόχου
 
-- green plus: add
-- red X: delete
-- blue arrow: duplicate
+![Ο επεξεργαστής προφίλ — καρτέλες IC / ISF / BAS / ΣΤΟΧΟΣ](../images/setup-wizard/Wizard-Profile-IC.png)
 
-If you make any changes to your **Profile**, make sure you are editing the correct **Profile**. The **Profile** tab may not always show the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen, it may differ from the profile actually shown in profile tab as there is no connection between these.
+Κάθε πρόγραμμα είναι μια λίστα από **χρονικά διαστήματα**: προσθέστε ένα διάστημα, ορίστε την ώρα έναρξης και την τιμή του και μετά πατήστε **Αποθήκευση**.
+
+Αν κάνετε αλλαγές στο **Προφίλ** σας, βεβαιωθείτε ότι επεξεργάζεστε το σωστό **Προφίλ**: η κάρτα του προφίλ που χρησιμοποιείται έχει την ένδειξη **ΕΝΕΡΓΟ**, αλλά η κάρτα που είναι επιλεγμένη στην οθόνη μπορεί να είναι άλλη.
 
 (your-aaps-profile-profile-from-scratch-for-a-kid)=
-### Build a Profile from scratch for a kid
+### Δημιουργία προφίλ από την αρχή για παιδί
 
-The [Profile Helper](#aaps-screens-profile-helper) tab may help you to create a profile for a child (up to 18 years).
+Ο [Βοηθός ρύθμισης προφίλ](#aaps-screens-profile-helper) (μενού ☰ → **Βοηθός ρύθμισης προφίλ**) μπορεί να σας βοηθήσει να δημιουργήσετε προφίλ για παιδί (έως 18 ετών).
 
-**Important note:**
+**Σημαντική Σημείωση:**
 
-**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
+**Ο Βοηθός ρύθμισης προφίλ σας βοηθά να βρείτε το αρχικό προφίλ για το παιδί σας. Αν και βασίζεται σε δεδομένα από δύο διαφορετικά νοσοκομεία, πάντα να συζητάτε με την ιατρική σας ομάδα πριν χρησιμοποιήσετε ένα νέο προφίλ!**
 
-Profile helper offers data sets from two different hospitals for children to find initial profile for your kid up to 18 years.
+Ο Βοηθός ρύθμισης προφίλ προσφέρει δεδομένα για παιδιά από δύο διαφορετικά νοσοκομεία, για να βρείτε το αρχικό προφίλ για το παιδί σας, έως 18 ετών.
 
-![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
+![Βοηθός ρύθμισης προφίλ για παιδιά 1](../images/ProfileHelperKids1.png)
 
-1. Make sure you are in **Profile 1**.
-2. In **Profile type**, make sure you have "Default profile" selected.
-3. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
-4. Change screen by clicking on **Profile 2** on the right.
-5. Press **Profile type** and select "DPV Default profile".
-6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
-7. Press the button **Compare profiles** at the bottom of the screen. Comparison of the two adjusted profiles will be displayed (see screenshot below).
-8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button either from **Profile 1** ou **Profile 2**.
+1. Βεβαιωθείτε ότι είστε στην καρτέλα **Προφίλ 1**.
+2. Στο **Τύπος προφίλ**, βεβαιωθείτε ότι έχετε επιλέξει «Προεπιλεγμένο προφίλ».
+3. Προσαρμόστε το Προεπιλεγμένο προφίλ (με βάση τα δεδομένα του νοσοκομείου) βάζοντας την ηλικία του παιδιού και είτε το TDD σύνολο **είτε** το βάρος.
+4. Πηγαίνετε στην καρτέλα **Προφίλ 2**.
+5. Πατήστε **Τύπος προφίλ** και επιλέξτε «Προεπιλεγμένο προφίλ DPV».
+6. Προσαρμόστε το Προεπιλεγμένο προφίλ DPV (με βάση τα δεδομένα ενός άλλου νοσοκομείου) βάζοντας την ηλικία του παιδιού, το TDD σύνολο και το ποσοστό του βασικού ρυθμού. Σημειώστε ότι τα δεδομένα DPV δίνουν μόνο **βασικούς ρυθμούς**, γι' αυτό το IC και το ISF φαίνονται μηδέν σε αυτό το προφίλ.
+7. Ανοίξτε την καρτέλα **Σύγκριση**. Θα εμφανιστεί η σύγκριση των δύο προσαρμοσμένων προφίλ (δείτε την παρακάτω εικόνα).
+8. Αν θέλετε να αρχίσετε να προσαρμόζετε το προφίλ σας με βάση μία από αυτές τις προτάσεις, πατήστε το κουμπί **Κλώνος** κάτω από τη σύγκριση.
 
-![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
+![Βοηθός ρύθμισης προφίλ για παιδιά 2](../images/ProfileHelperKids2.png)
 
-### Switch Profile
+### Αλλαγή προφίλ
 
-See [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Δείτε [Αλλαγή προφίλ και ποσοστό προφίλ](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
 (your-aaps-profile-clone-profile-switch)=
-### Clone a Profile switch to a new Profile
+### Κλωνοποίηση μιας αλλαγής προφίλ σε νέο προφίλ
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Αλλαγή Προφίλ](../images/TreatmentsView4.png)
 
-The [Treatments](#aaps-screens-treatments) tab shows all past **Profile Switches**. When going to the **Profile Switch** sub-tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
+Το [Ιστορικό θεραπειών](#aaps-screens-treatments) δείχνει όλες τις προηγούμενες **Αλλαγές Προφίλ**. Στην καρτέλα **Αλλαγή Προφίλ**, μπορείτε να χρησιμοποιήσετε μια προηγούμενη **Αλλαγή Προφίλ** ως βάση για να δημιουργήσετε ένα νέο **Προφίλ**. Σε αυτή την περίπτωση, η χρονική μετατόπιση και το ποσοστό θα εφαρμοστούν στο νέο τοπικό προφίλ. Πατήστε το κουμπί **Κλώνος** στη γραμμή **2**.
 
-You can now go to the [Profile tab](#your-aaps-profile-create-and-edit-profiles) to edit the newly created Profile.
+Τώρα μπορείτε να πάτε στην [οθόνη Προφίλ](#your-aaps-profile-create-and-edit-profiles) (**Διαχείριση → Προφίλ**) για να επεξεργαστείτε το νέο προφίλ.
 
 (YourAapsProfile_Profile-backup)=
-### Profile backup
+### Αντίγραφο ασφαλείας προφίλ
 
-Being a core setting of your looping system, your **Profiles** are highly sensitive and something you really don't want to lose.
+Τα **Προφίλ** σας είναι βασική ρύθμιση του συστήματος κυκλώματος. Είναι πολύ ευαίσθητα δεδομένα και σίγουρα δεν θέλετε να τα χάσετε.
 
-* Your **Profiles** are stored in the **AAPS** database.
-* If enabled, **Profiles** are also uploaded to Nightscout. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Upload data to NS](#Preferences-nsclient).
+* Τα **Προφίλ** σας αποθηκεύονται στη βάση δεδομένων του **AAPS**.
+* Όταν έχει ρυθμιστεί το **NSClientV3** (δείτε [Συγχρονισμός](#SetupWizard-synchronization-with-the-reporting-server-and-more)), τα **Προφίλ** σας ανεβαίνουν και στο Nightscout αυτόματα.
+* Είναι επίσης μέρος των [ρυθμίσεων που εξάγετε](../Maintenance/ExportImportSettings.md). Γι' αυτό φροντίστε να έχετε ένα αντίγραφο ασφαλείας σε ασφαλές μέρος.
 
-![Backup Profile Nightscout](../images/LocalProfile_UploadNS_AASP30.png)
+### Επεξεργασία προφίλ από το Nightscout
 
-* They are also part of [exported settings](../Maintenance/ExportImportSettings.md). So make sure to have a backup in a safe place.
+Αν είναι ενεργοποιημένο, το **AAPS** μπορεί να λαμβάνει αλλαγές **Προφίλ** που έγιναν απευθείας στο Nightscout. Η ρύθμιση λέγεται «**Λήψη αποθήκης προφίλ από το NS**» και είναι μέρος των επιλογών **Αποδοχή δεδομένων Nightscout** (η αποδοχή δεδομένων από το Nightscout είναι απενεργοποιημένη από προεπιλογή, δείτε το [βήμα «Έλεγχος από πελάτες» του Οδηγού εγκατάστασης](../SettingUpAaps/SetupWizard.md)). Μπορείτε να τη βρείτε γρήγορα με τη **γραμμή αναζήτησης** στην κύρια οθόνη. Όσο ο έλεγχος από πελάτες είναι ενεργός, η ρύθμιση είναι κρυμμένη και το **AAPS** δεν δέχεται αλλαγές προφίλ από το Nightscout ([ενισχυμένη λειτουργία](#client-master-control-hardened-mode)). Αντί γι' αυτό, επεξεργαστείτε το προφίλ σε έναν συζευγμένο client ή φορτώστε το μία φορά με **Πλήρη συγχρονισμό**.
 
-### Editing Profiles from Nightscout
+Αυτό μπορεί να βοηθήσει όταν πρόκειται να κάνετε μεγάλες αλλαγές σε ένα πιο σύνθετο **Προφίλ**. Μπορείτε να τα εισάγετε πιο εύκολα από τη σελίδα web, _π.χ._ για να αντιγράψετε χειροκίνητα δεδομένα από ένα υπολογιστικό φύλλο.
 
-If enabled, **Profile** changes made directly in Nightscout can  be received in **AAPS**. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Receive profile store](#Preferences-nsclient).
+Για να γίνει αυτό, όμως, είναι σημαντικό να κλωνοποιήσετε ολόκληρη την **εγγραφή της βάσης δεδομένων**, που περιέχει πολλά προφίλ, στον επεξεργαστή του Nightscout (μπλε βέλος στην παρακάτω εικόνα). Οι νέες εγγραφές της βάσης δεδομένων έχουν τότε την τρέχουσα ημερομηνία. Μετά την αποθήκευση, το αλλαγμένο/νέο **Προφίλ** μπορεί να ενεργοποιηθεί στο **AAPS** με μια κανονική [αλλαγή προφίλ](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-This can be helpful when about to make major changes to a more extensive **Profile**. They can be entered more easily via the web interface, _e.g._ to manually copy data from a spreadsheet.
-
-To do this, however, it is important to clone the whole **database record** consisting of several profiles in the Nightscout editor (blue arrow on the screenshot below). The new database records then carries the current date. After saving, the changed/new **Profile** can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-
-![Clone database records](../images/Nightscout_Profile_Editor.PNG)
+![Κλωνοποίηση εγγραφών της βάσης δεδομένων](../images/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
-### Compare two Profiles
+### Σύγκριση δύο προφίλ
 
-You can use the [Profile Helper](#aaps-screens-profile-helper) tab also to compare two different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
+Μπορείτε επίσης να χρησιμοποιήσετε τον [Βοηθό ρύθμισης προφίλ](#aaps-screens-profile-helper) (μενού ☰ → **Βοηθός ρύθμισης προφίλ**) για να συγκρίνετε δύο διαφορετικά προφίλ ή αλλαγές προφίλ (ποσοστό ενός από τα προφίλ σας που χρησιμοποιήσατε πριν σε μια [αλλαγή προφίλ](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)).
 
-![Profile Helper 1](../images/ProfileHelper1.png)
+![Βοηθός ρύθμισης προφίλ 1](../images/ProfileHelper1.png)
 
-1. Make sure you are in **Profile 1**.
-2. In **Profile type**, select "Available profile" to choose between all stored **Profiles**.
-3. Choose the **Profile** you want to compare from.
-4. Change screen by clicking on **Profile 2** on the right.
-5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profiles Switched**.
-6. Choose the **Profile Switch** you want to compare to.
-7. Press the button **Compare profiles** at the bottom of the screen. Comparison of the two adjusted profiles will be displayed (see screenshot below).
+1. Βεβαιωθείτε ότι είστε στην καρτέλα **Προφίλ 1**.
+2. Στο **Τύπος προφίλ**, επιλέξτε «Διαθέσιμα προφίλ» για να διαλέξετε ανάμεσα σε όλα τα αποθηκευμένα **Προφίλ**.
+3. Επιλέξτε το **Προφίλ** από το οποίο θέλετε να ξεκινήσει η σύγκριση.
+4. Πηγαίνετε στην καρτέλα **Προφίλ 2**.
+5. Στο **Τύπος προφίλ**, επιλέξτε «Αλλαγή Προφίλ» για να διαλέξετε από το ιστορικό όλων των **Αλλαγών Προφίλ** σας.
+6. Επιλέξτε την **Αλλαγή Προφίλ** με την οποία θέλετε να το συγκρίνετε.
+7. Ανοίξτε την καρτέλα **Σύγκριση**. Θα εμφανιστεί η σύγκριση των δύο προφίλ (δείτε την παρακάτω εικόνα).
 
-![Profile Helper 2](../images/ProfileHelper2.png)
+![Βοηθός ρύθμισης προφίλ 2](../images/ProfileHelper2.png)

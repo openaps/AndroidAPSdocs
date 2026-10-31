@@ -1,34 +1,5 @@
 # Jelly
 
-## Jelly 2
-
-Do not confuse with Jelly Star (below).
-
-**Advantages**
-
-* It's really small.
-* Android 11.
-* Even if you tell people, they might not consider it as a normal smartphone and will except it easier as a exception when phones are normally not allowed.
-
-**Disadvantages**
-
-* Recommended only for experienced loopers (some settings are not recognizable, you have to know from experience with a big Android AAPS phone, how and where what is located. Some AAPS buttons are hard to touch with a lot of feeling, but not with stubby fingers.)
-* Can only be used as LooperPhone. It's better to have a normal smartphone in your pocket. 
-
-### Battery life optimization
-
-The Jelly 2 comes with strong optimization features that **must** be disabled for AAPS (and other DIY apps like BYODA, xDrip+, OOP2, Juggluco, etc...).
-
-![](../images/Jelly_Settings1.png)
-
-You can leave Intelligent assistance enabled, but it **must be disabled for DIY apps**.
-
-![](../images/Jelly_Settings2.png)
-
-You can enable NFC for Libre sensors.
-
-![](../images/Jelly_Settings3.png)
-
 ## Jelly Star Mini
 
 **Features**
@@ -36,24 +7,42 @@ You can enable NFC for Libre sensors.
 * Android 13
 * 8 GB RAM
 
-### Battery life optimization
+**Vantagens**
 
-To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' (and other **DIY apps** like BYODA, xDrip+, OOP2, Juggluco, etc...).
+* Ele é muito pequeno.
+* Mesmo que você avise as pessoas, elas podem não ver o aparelho como um smartphone normal e vão aceitar mais facilmente uma exceção quando telefones normalmente não são permitidos.
+
+**Desvantagens**
+
+* Recomendado só para loopers com experiência (algumas configurações são difíceis de reconhecer; você precisa saber, pela experiência com um telefone Android grande com AAPS, como e onde cada coisa fica. Alguns botões do AAPS são difíceis de tocar: é preciso um toque cuidadoso, e com dedos grossos não dá.)
+* Só pode ser usado como telefone do loop (LooperPhone). É melhor ter um smartphone normal no bolso. 
+
+### Otimização da duração da bateria
+
+O Jelly vem com fortes recursos de otimização que **devem** ser desativados para o AAPS (e para outros apps DIY como BYODA, xDrip, OOP2, Juggluco etc.).
+
+![](../images/Jelly_Settings1.png)
+
+Você pode deixar a Assistência inteligente ativada, mas ela **deve ser desativada para os apps DIY**.
+
+![](../images/Jelly_Settings2.png)
+
+Você pode ativar o NFC para sensores Libre.
+
+![](../images/Jelly_Settings3.png)
+
+### Otimização da duração da bateria
+
+Para evitar interferência com o **AAPS**, o 'uso da bateria' do Jelly Star deve ser desativado selecionando 'sem restrições' para o **AAPS** (e para outros **apps DIY** como BYODA, xDrip, OOP2, Juggluco etc.).
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
-### Intelligent Assistance and App Blocker
-
-Like with the Jelly 2 (above), the Jelly Star should have 'Intelligent Assistance' disabled for **DIY apps**. Similarly, 'App Blocker' under 'Settings' must also be switched off to avoid disruption with **AAPS**:
-
-![App Blocker Screenshot 2025-08-03 213400](../images/JellyStarMini2.jpg)
-
 ### Google Play Protect
 
-Remember to disable Google Play Protect.
+Lembre-se de desativar o Google Play Protect.
 
-### Remote Connection for Weak apk
+### Conexão remota para o Wear apk
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use the Jelly 2, **Wear.apk** & **AAPS** remotely via wifi.
+Em alguns smartwatches, como o Samsung Galaxy, a opção 'Remote Connection' (Conexão remota) nos Advanced Features (Recursos avançados) do Samsung Galaxy deve estar **ativada** para usar o Jelly, o **Wear.apk** & o **AAPS** remotamente via Wi-Fi.
 
-![MURCIMG-20251007-WA0000](../images/500234283-5db08a08-f256-49a0-8843-46bdd01b33d6.png)
+![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)

@@ -1,43 +1,42 @@
-# Ενημερώστε σε μια νέα έκδοση ή κλάδο
+# Ενημέρωση σε νέα έκδοση ή κλάδο
 
 ## Φτιάξτε το μόνοι σας, αντί να το κατεβάσετε
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Το **AAPS** δεν είναι διαθέσιμο για λήψη, λόγω των κανονισμών για τις ιατρικές συσκευές. Είναι νόμιμο να κάνετε build της εφαρμογής για δική σας χρήση, αλλά δεν πρέπει να δίνετε αντίγραφο σε άλλους! Δείτε τη σελίδα [Συχνές Ερωτήσεις](../UsefulLinks/FAQ.md) για λεπτομέρειες.
 
 ## Σημαντικές σημειώσεις
 
-- Please update to the new version of **AAPS** as soon as possible after a new release is available.
-- When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
-- The new version will also be announced on Facebook at the time of release.
-- Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
-- Do not forget to export your **AAPS'** settings.
+- Ενημερώστε στη νέα έκδοση του **AAPS** το συντομότερο δυνατό, αφού κυκλοφορήσει μια νέα έκδοση.
+- Όταν κυκλοφορεί μια νέα έκδοση, η ίδια η εφαρμογή **AAPS** θα σας δείξει ένα μήνυμα (banner) για τη νέα έκδοση.
+- Η νέα έκδοση θα ανακοινωθεί επίσης στο Facebook τη στιγμή της κυκλοφορίας.
+- Μετά την κυκλοφορία, διαβάστε προσεκτικά τις [Σημειώσεις έκδοσης](ReleaseNotes.md) και λύστε τις απορίες σας με την κοινότητα στο Facebook ή στο Discord, πριν ξεκινήσετε την ενημέρωση.
+- Μην ξεχάσετε να εξαγάγετε τις ρυθμίσεις του **AAPS**.
 
-## Update AAPS with browser build
+## Ενημέρωση του AAPS με δημιουργία μέσω browser
 
-You already built your AAPS app with a browser? Follow the instructions for the method you used:
+Έχετε ήδη κάνει build της εφαρμογής AAPS μέσω browser; Ακολουθήστε τις οδηγίες για τη μέθοδο που χρησιμοποιήσατε:
 
-- **AAPS Builder** (your private repository, usually named `my-aaps`): [Updating AAPS with AAPS Builder](#aaps-builder-updates). There is no fork to sync.
-- **Fork and preparation file** (your own copy of AndroidAPS): [Update with a browser (fork)](./UpdateBrowserBuild.md).
+- **AAPS Builder** (το ιδιωτικό σας αποθετήριο, συνήθως με το όνομα `my-aaps`): [Ενημέρωση του AAPS με το AAPS Builder](#aaps-builder-updates). Δεν υπάρχει fork για συγχρονισμό.
+- **Fork και αρχείο προετοιμασίας** (το δικό σας αντίγραφο του AndroidAPS): [Ενημέρωση μέσω browser (fork)](./UpdateBrowserBuild.md).
 
-## Update AAPS with Android Studio
+## Ενημέρωση του AAPS με το Android Studio
 
-Follow [these instructions.](./UpdateComputerBuild.md).
+Ακολουθήστε [αυτές τις οδηγίες](./UpdateComputerBuild.md).
 
-## Update AAPS with the command-line
+## Ενημέρωση του AAPS με τη γραμμή εντολών
 
-Use the [same instructions](../SettingUpAaps/CLIBuild.md) as when building AAPS previously, but pull new changes with git.
+Χρησιμοποιήστε τις [ίδιες οδηγίες](../SettingUpAaps/CLIBuild.md) όπως στο προηγούμενο build του AAPS, αλλά κατεβάστε τις νέες αλλαγές με το git.
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
 ### Ελέγξτε την έκδοση AAPS στο τηλέφωνό σας
 
-Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
+Ελέγξτε στις [Σημειώσεις έκδοσης](../Maintenance/ReleaseNotes.md) αν υπάρχουν ειδικές οδηγίες μετά την ενημέρωση.
 
-After you installed the new apk:
+Αφού εγκαταστήσετε το νέο apk:
 
-- you can check the **AAPS'** version on your phone by clicking the three dots menu on the top right and then 'About' (as per the screenshot below). The **AAPS'** current version can be viewed; 
-- ensure import settings have been actioned;
-- action a 'full synchroniation' under **NSClient** to ensure **AAPS** is working off accurate & complete data; and
-- please check your **AAPS'** settings under **Preferences** and ensure these remain accurate.
+- μπορείτε να ελέγξετε την έκδοση του **AAPS** στο τηλέφωνό σας: ανοίξτε το **μενού** (☰) πάνω αριστερά και μετά **Σχετικά** (όπως στην παρακάτω εικόνα). Μπορείτε να δείτε την τρέχουσα έκδοση του **AAPS**·
+- βεβαιωθείτε ότι έχει γίνει η εισαγωγή των ρυθμίσεων· και
+- ελέγξτε τις ρυθμίσεις του **AAPS** στις **Ρυθμίσεις** και βεβαιωθείτε ότι είναι ακόμα σωστές.
 
-![Η έκδοση AAPS έχει εγκατασταθεί](../images/Update_VersionCheck.png)
+![Παράθυρο «Σχετικά» με την εγκατεστημένη έκδοση του AAPS](../images/about_dialog_version.png)

@@ -2,7 +2,7 @@
 
 ## Как AAPS вычисляет значение COB?
 
-Когда пользователь вводит углеводы во время приема пищи или при коррекции, **AAPS** добавляет это значение к текущему количеству активных углеводов (**COB**). После этого **AAPS** рассчитывает усвоение углеводов на основе наблюдаемых отклонений от значений **ГК пользователя**. Скорость усвоения зависит от коэффициента чувствительности к углеводам (**CSF**). Эта функция не указана в **Профиле**, она рассчитывается алгоритмом **AAPS** в соответствии с настройками **ISF/I:C** и зависит от того, насколько 1 грамм углеводов потребляемой пищи увеличит гликемию **ГК** пользователя.
+Когда пользователь вводит углеводы во время приема пищи или при коррекции, **AAPS** добавляет это значение к текущему количеству активных углеводов (**COB**). После этого **AAPS** рассчитывает усвоение углеводов на основе наблюдаемых отклонений от значений **ГК пользователя**. The rate of absorption depends on the carb’s sensitivity factor (**CSF**). This is not a feature within the user’s **Profile** but is calculated by **AAPS** according to **ISF/I:C** setup, and is determined by how many mg/dL 1 g of carbs will raise the user’s **BG**.
 
 ## Фактор чувствительности к углеводам
 
@@ -18,7 +18,7 @@
 
 - _изменение_ ** процента Профиля** - увеличение/уменьшение обеих величин таким образом не влияет на время усвоения углеводов.
 
-Например, если в **Профиле** пользователя **ISF** равен 100, а углеводный коэффициент **I:C** равен 5, Rоэффициент чувствительности пользователя к углеводам будет равен 20. При каждом увеличении **гликемии** пользоателя на 20 мг/дл (1,1 ммоль/л) **AAPS** считает, что организм поглотил 1 г углеводов. Положительное значение активного инсулина **IOB** также влияет на расчет **COB**. Таким образом, если **AAPS** предсказывает, что **ГК пользователя** снизится на 20 мг/дл  (1,1 ммоль/л) из-за действия активного инсулина **IOB**, а гликемия вместо этого остается неизменной, то  алгоритм **AAPS** будет считать, что усвоен 1 г углеводов.
+Например, если в **Профиле** пользователя **ISF** равен 100, а углеводный коэффициент **I:C** равен 5, Rоэффициент чувствительности пользователя к углеводам будет равен 20. For every 20 mg/dL the user’s **BG** goes up, 1 g of carbs will be calculated as absorbed by **AAPS**. Положительное значение активного инсулина **IOB** также влияет на расчет **COB**. So, if **AAPS** predicts the user’s **BG** to go down by 20 mg/dL because of **IOB** and it instead stayed flat, **AAPS** would also calculate 1 g of carbs as absorbed.
 
 Усвоение углеводов также будет рассчитываться с помощью методов, описанных ниже, в зависимости от выбора алгоритма чувствительности в настройках **AAPS**.
 
@@ -28,14 +28,19 @@
 
 ![Oref1](../images/cob_oref0_orange_II.png)
 
-![Снимок экрана 2024-10-05 161009](../images/cob_oref0_orange_I.png)
+![COB graph with Oref1 cut-off](../images/cob_oref0_orange_I.png)
+
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version — in **AAPS** 4 the graphs look slightly different, but the **COB** graph carries the same information.
+```
 
 
 ## Чувствительность к углеводам - средневзвешенная
 
 Усвоение принимается из рассчета, что активные углеводы COB = 0 по истечении указанного времени:
 
-![AAPS, средневзвешенное значение](../images/cob_aaps2_orange_II.png)
+![AAPS, WeightedAverage](../images/cob_aaps2_orange_II.png)
 
 Если вместо значения, рассчитанного на основе отклонений **ГК**, используется минимальное поглощение углеводов (min_5m_carbimpact), на графике **COB** появится оранжевая точка.
 
@@ -50,7 +55,7 @@
 
 ![Подсказка о неверном значении COB](../images/Calculator_SlowCarbAbsorption.png)
 
-На снимке экрана выше 58% времени поглощения углеводов был вычислен математически методом min_5m_carbimpact вместо значения, основанного на отклонениях ГК. Это означает, что на самом деле у пользователя может быть меньше активных углеводов **COB**, чем рассчитывает алгоритм.
+In the screenshot above, 66% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. Это означает, что на самом деле у пользователя может быть меньше активных углеводов **COB**, чем рассчитывает алгоритм.
 
 ### Как относиться к этому предупреждению?
 
@@ -71,22 +76,23 @@
 
 ## Ручная коррекция введенных углеводов
 
-Если углеводов слишком много или наоборот недостаточно, это можно исправить с помощью вкладки "Терапия" и вкладки "Действия" / меню, как описано [ здесь](#screens-bolus-carbs).
+If carbs are over or underestimated this can be corrected through the **Treatments history** screen as described [here](#screens-bolus-carbs).
 
 
 ## Коррекция количества углеводов - как удалить запись из Терапии
 
 
-Для исправления ошибочной записи об углеводах, можно воспользоваться вкладкой "Терапия", удалив ее оттуда. Это может произойти из-за того, что пользователь переоценил или недооценил количество вводимых углеводов:
+The **Treatments history** screen can be used to correct a faulty carb entry by deleting it. Это может произойти из-за того, что пользователь переоценил или недооценил количество вводимых углеводов:
 
-![COB_Снимок экрана 2024-10-05 170124](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Deleting a carb entry from Treatments history](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
-1. Проверьте и запомните фактическое количество активных углеводов **COB** и активного инсулина **IOB** на главном экране **AAPS**.
-2. В зависимости от помпы, углеводы на вкладке "Терапия" могут отображаться на одной строке или в виде отдельной записи (например, на Dana RS).
-3. Удалите запись, сначала поставив галочку напротив мусорного ведра в правом верхнем углу (см. Фото выше, шаг 1). Затем отметьте галочкой количество неправильно введенных углеводов (см фото выше, шаг 2). Затем отметьте ‘мусорное ведро’ в правом верхнем углу (повторите шаг 1).
-4. Убедитесь, что углеводы удалены успешно, еще раз проверив **COB** на главном экране **AAPS**.
-5. Сделайте то же для активного инсулина **IOB**, если на вкладке терапии только одна общая строка для углеводов и инсулина.
-6. Если углеводы не удалены должным образом, значение **COB** будет слишком высоким, что может привести к введению слишком большого количества инсулина.
-7. Введите правильное количество углеводов с помощью кнопки "Углеводы" на главном экране ** AAPS** и проставьте правильное время события.
-8. Если на вкладке "терапия" углеводы и инсулин располагаются на одной строке, также укажите количество инсулина. Убедитесь, что установлено правильное время события, и проверьте количество активного инсулина **IOB** на главном экране после подтверждения новой записи.
+1. Check and remember actual **COB** and **IOB** on the **AAPS** main screen.
+2. Open **Treatments history** (drawer menu → *Treatments history*), tab **Carbs and bolus**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (e.g. with Dana RS).
+3. **Long-press** the faulty carb entry — the list switches to **selection mode** with a checkbox on every line, and the entry is ticked (marked **1** above). Tick any further entries you want to remove as well.
+4. Tap the **🗑 Delete** icon in the top bar (marked **2**) and confirm — the confirmation dialog lists exactly what will be removed.
+5. Make sure carbs are removed successfully by checking **COB** on the **AAPS** main screen again.
+6. Do the same for **IOB** if there is just one line including carbs and insulin.
+7. Если углеводы не удалены должным образом, значение **COB** будет слишком высоким, что может привести к введению слишком большого количества инсулина.
+8. Enter the correct carbs amount through the **Carbs** dialog (**Treatments** → **Carbs**) and set the correct event time.
+9. If there was just one line including carbs and insulin the user should also re-add the amount of insulin. Make sure to set the correct event time and check **IOB** on the main screen after confirming the new entry.
 

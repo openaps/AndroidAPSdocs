@@ -1,41 +1,41 @@
 # Γενικές συστάσεις CGM
 
-## CGM υγιεινή
+## Υγιεινή CGM
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
+Όποιο σύστημα CGM κι αν χρησιμοποιείτε, αν πρόκειται να κάνετε βαθμονόμηση με μέτρηση αίματος, υπάρχουν κάποιοι πολύ σαφείς κανόνες που πρέπει να ακολουθείτε, είτε χρησιμοποιείτε λογισμικό CGM DIY είτε τις επίσημες εφαρμογές.
 
 -   Βεβαιωθείτε ότι τα χέρια και το κιτ είναι καθαρά.
--   Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
+-   Προσπαθήστε να κάνετε βαθμονόμηση όταν έχετε μια σειρά από κουκκίδες με οριζόντιο βέλος (συνήθως αρκούν 15–30 λεπτά)
 -   Αποφύγετε τη βαθμονόμηση όταν τα επίπεδα γλυκόζης κινούνται προς τα επάνω ή προς τα κάτω.
--   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
--   For sensors not requiring or not allowing calibration, check at least daily real blood sugar. AAPS will be as safe as your sensor readings are reliable.
--   If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
+-   Κάνετε «αρκετές» βαθμονομήσεις: στις επίσημες εφαρμογές θα σας ζητηθεί έλεγχος μία ή δύο φορές την ημέρα. Στα συστήματα DIY μπορεί να μη σας ζητηθεί, και πρέπει να είστε προσεκτικοί αν συνεχίζετε χωρίς βαθμονομήσεις.
+-   Για αισθητήρες που δεν χρειάζονται ή δεν επιτρέπουν βαθμονόμηση, ελέγχετε την πραγματική γλυκόζη αίματος τουλάχιστον μία φορά την ημέρα. Το AAPS είναι τόσο ασφαλές όσο αξιόπιστες είναι οι μετρήσεις του αισθητήρα σας.
+-   Αν είναι δυνατόν, κάντε βαθμονόμηση με κάποιες μετρήσεις σε χαμηλότερο εύρος (4–5 mmol/l ή 72–90 mg/dl) και κάποιες σε λίγο υψηλότερο επίπεδο (7–9 mmol/l ή 126–160 mg/dl), γιατί έτσι η βαθμονόμηση σημείου/κλίσης έχει καλύτερο εύρος.
 
-## Ρυθμίζοντας τον αισθητήρα(G6)
+## Τοποθέτηση του αισθητήρα (G6)
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor contacts should not come into contact with blood.
+Όταν τοποθετείτε τον αισθητήρα, συνιστάται να μην πιέζετε τον εισαγωγέα πολύ δυνατά, για να αποφύγετε αιμορραγία. Οι επαφές του αισθητήρα δεν πρέπει να έρθουν σε επαφή με αίμα.
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Προσοχή! First click in the square side and then press down the round side.
+Αφού τοποθετήσετε τον αισθητήρα, μπορείτε να κουμπώσετε τον πομπό στη βάση του αισθητήρα. Προσοχή! Πρώτα κουμπώστε την τετράγωνη πλευρά και μετά πιέστε προς τα κάτω τη στρογγυλή πλευρά.
 
 (general-cgm-troubleshooting)=
-## Troubleshooting
+## Αντιμετώπιση προβλημάτων
 
 ### Προβλήματα σύνδεσης
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xDrip+ does not display any BG values. When Bluetooth connection is re-established the data is backfilled.
+Η σύνδεση Bluetooth μπορεί να διαταραχθεί από άλλες κοντινές συσκευές Bluetooth, όπως μετρητές γλυκόζης αίματος, ακουστικά, tablet ή συσκευές κουζίνας, όπως φούρνους μικροκυμάτων ή κεραμικές εστίες. Σε αυτή την περίπτωση, το xDrip δεν εμφανίζει τιμές BG. Όταν η σύνδεση Bluetooth αποκατασταθεί, τα δεδομένα που λείπουν συμπληρώνονται (backfill).
 
 ### Σφάλματα αισθητήρα
 
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor contacts should not come into contact with blood.
+Αν εμφανίζονται συχνά σφάλματα αισθητήρα, δοκιμάστε να τοποθετήσετε τον αισθητήρα σε άλλο σημείο του σώματος. Οι επαφές του αισθητήρα δεν πρέπει να έρθουν σε επαφή με αίμα.
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+Συχνά ένα "σφάλμα αισθητήρα" μπορεί να διορθωθεί με άμεση ενυδάτωση και μασάζ γύρω από τον αισθητήρα!
 
-### Παράξενες τιμές
+### Τιμές με απότομα άλματα
 
-You might try to change settings for noise blocking in xDrip+ (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+Μπορείτε να δοκιμάσετε να αλλάξετε τις ρυθμίσεις φραγής θορύβου στο xDrip (Settings - Inter-App Settings - Noise Blocking), π.χ. "Block Very High noise and worse". Δείτε επίσης [Εξομάλυνση των δεδομένων γλυκόζης στο αίμα](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
-### Negative Sensor Age
+### Αρνητική ηλικία αισθητήρα
 
-![Negative sensor age](../images/Troubleshooting_SensorAge.png)
+![Η ηλικία του αισθητήρα στη γραμμή Αισθητήρας του ανεπτυγμένου πίνακα κατάστασης](../images/main/main_status_row_expanded.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](#screens-action-tab) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.
+Η ηλικία του αισθητήρα εμφανίζεται στη γραμμή **Αισθητήρας** του πίνακα κατάστασης στην κύρια οθόνη (πατήστε το βελάκι για να τον αναπτύξετε). Αρνητική ηλικία εμφανίζεται όταν υπάρχει διπλή [καταχώριση careportal](#aaps-screens-careportal) «Τοποθέτηση αισθητήρα CGM» ("CGM Sensor Insert") ή τοποθέτηση αισθητήρα με λάθος ημερομηνία. Ανοίξτε το **Ιστορικό θεραπειών** (μενού ☰), επιλέξτε την καρτέλα **Careportal** και διαγράψτε τη λάθος καταχώριση.

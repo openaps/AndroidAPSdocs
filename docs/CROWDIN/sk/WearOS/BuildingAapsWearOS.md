@@ -1,37 +1,95 @@
-# Building the Wear AAPS app
+# Zostavenie aplikácie AAPS pre Wear OS
 
-The Wear OS App of **AAPS**  (“Wear OS apk”) required for the smartwatch has been separated from the "full" **AAPS** build for the Android phone. Therefore you have to generate a second installation file, or apk, to install **AAPS** wear onto the watch (which is done by side-loading it from the phone). It is strongly recommended that the **AAPS** Wear apk file is built immediately after first building the full **AAPS** apk for the phone. Not only is this very quick to do if you are [building **AAPS** for the first time](../SettingUpAaps/BuildingAaps.md), but it will avoid any potential compatibility issues when you try to set up the watch-phone communication. The **AAPS** Wear apk on the watch is unlikely to be compatible with the **AAPS** phone apk if they have been built in different versions of Android Studio, or if months have past since the initial **AAPS** build.
+Aplikácia **AAPS** pre inteligentné hodinky s Wear OS (**Wear apk**, `aaps-wear-….apk`) je samostatný inštalačný súbor, oddelený od aplikácie **AAPS** pre telefón. Potrebujete obe: aplikácia v telefóne riadi okruh, aplikácia v hodinkách zobrazuje jeho dáta a môže mu posielať príkazy. Aplikácia pre hodinky sa inštaluje z telefónu, pozrite [Nastavenie AAPS na hodinkách s Wear OS](WearOsSmartwatch.md).
 
-If you are already using **AAPS** on a phone and you did not build both the phone and watch (wear) **AAPS** apks at the same time, to ensure success it is therefore best to do a fresh build of both apk files at the same time. Build the AAPS phone and watch apks at the same time, using the same **keystore file**.
+Obe aplikácie spolu fungujú iba vtedy, keď k sebe pasujú:
 
-## Supported Wear OS versions
+- **Rovnaká verzia AAPS** v telefóne aj v hodinkách.
+- **Rovnaké úložisko kľúčov** použité na podpísanie oboch aplikácií.
 
-AAPS requires at least Wear OS API level 28 (Android 9).
+Najjednoduchšie to zaručíte tak, že obe aplikácie zostavíte **naraz**, v rovnakom zostavení. Zostavenie v prehliadači to urobí za vás: každé zostavenie vytvorí apk pre telefón aj Wear apk spolu. V Android Studiu alebo z príkazového riadku zostavíte Wear apk ako druhý krok hneď po apk pre telefón.
 
-```{warning}
-AAPS Watchfaces are available for Wear OS smartwatches with API level 28 to 33.<br>
-Wear OS 5 has [limitations](#BuildingAapsWearOs-WearOS5).
+```{note}
+Už používate **AAPS** v telefóne, ale nemáte Wear apk z rovnakého zostavenia? Zostavte obe aplikácie znova s rovnakým úložiskom kľúčov a preinštalujte aj aplikáciu v telefóne. Wear apk zostavený o niekoľko mesiacov neskôr alebo v inej verzii Android Studia pravdepodobne nebude s aplikáciou v telefóne kompatibilný.
 ```
 
-## Building the **AAPS** Wear apk
+## Podporované verzie Wear OS
 
-The build process for the Wear apk is similar to that for the "full" phone apk.
+**AAPS** funguje na hodinkách s **Wear OS 3.0, 3.2 alebo 3.5** (Android 11, úroveň API 30) **alebo novším** (Wear OS 4, 5 a 6). Hodinky s Wear OS 2 nie sú podporované.
 
-- Follow the instructions for [Building AAPS](../SettingUpAaps/BuildingAaps.md).
-- When you reach [module selection](#Building-APK-wearapk) in "Build the AAPS signed apk", make sure to select **`AndroidAPS.wear`**.
+```{warning}
+Ciferníky AAPS sú dostupné pre inteligentné hodinky s Wear OS s úrovňou API 30 až 33 (Wear OS 3.0, 3.2, 3.5 a 4).<br>
+Novšie verzie Wear OS ciferníky AAPS postupne pokazia – pozrite [Zmeny ciferníkov vo Wear OS](#wearos-watchface-changes) a [obmedzenia Wear OS 5](#BuildingAapsWearOs-WearOS5).
+```
 
-![Wear module](../images/Building-the-App/wear_build1.png)
+(building-aaps-wear-os-method)=
 
-Select "**fullRelease**" to generate the **AAPS** Wear apk file.
+## Ako získať Wear apk podľa spôsobu zostavenia
 
-![Wear module](../images/Building-the-App/wear_build2.png)
+Postupujte podľa časti pre spôsob, ktorým [zostavujete AAPS](../SettingUpAaps/BuildingAaps.md).
 
-If you prefer, you can build **“pumpcontrolRelease”** instead, from the drop-down menu, which will allow you to just remotely control the pump but without looping.
+(building-aaps-wear-os-browser)=
 
-## Troubleshooting
+### Zostavenie v prehliadači (odporúčané)
 
-In the process of building the 3.2 full **AAPS** app (and in fact any signed app), Android Studio generates a .json file in the same folder. This then causes errors with [uncommitted changes](#troubleshooting_androidstudio-uncommitted-changes) when you try to build the next signed app, like the **AAPS** wear app. The quickest way to resolve this is to navigate to the folder where the full AAPS app has been built, your folder is probably something like:
+**Nemusíte robiť nič navyše.** Každé zostavenie v prehliadači vytvorí dva súbory z rovnakého zdrojového kódu a s rovnakým úložiskom kľúčov:
+
+- `aaps-….apk`: aplikácia pre telefón.
+- `aaps-wear-….apk`: aplikácia pre hodinky.
+
+Wear apk zodpovedá [variantu](#browserbuild-variant), ktorý ste pre zostavenie vybrali: `fullRelease` dá aplikáciu **AAPS Wear**, `aapsclientRelease` aplikáciu **AAPSClient Wear** a `pumpcontrolRelease` aplikáciu **PumpControl Wear**. Každá aplikácia Wear komunikuje iba so svojou zodpovedajúcou aplikáciou v telefóne.
+
+Kde nájdete Wear apk:
+
+- **AAPS Builder**: na stránke zostavenia sa posuňte nadol na **Artifacts** a stiahnite `aaps-wear-….apk` vedľa aplikácie pre telefón, ako je ukázané v časti [Krok 6 – Nainštalujte aplikáciu do telefónu](#aaps-builder-step6). Stiahnite ho do telefónu s **AAPS**, ak aplikáciu do hodiniek inštalujete z telefónu (Wear Installer 2 alebo Easy Fire Tools), alebo do počítača, ak používate ADB.
+
+  ![Artifacts s aplikáciou pre telefón a pre hodinky](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
+
+- **Fork s Diskom Google**: otvorte svoj Disk Google, priečinok `AAPS` a potom priečinok verzie, ktorú ste zostavili. Obsahuje apk pre telefón aj Wear apk, pozrite [Krok 4 – Zostavte APK](#github-build-apk).
+
+  ![Umiestnenie na Disku Google](../images/update/CI/GitHubActions5.png)
+
+Wear apk si uchovávajte v zálohách spolu s apk pre telefón. Pri **AAPS Builder** zostávajú súbory na stránke zostavenia iba 14 dní.
+
+Ďalej: nainštalujte Wear apk do hodiniek, pozrite [Nastavenie AAPS na hodinkách s Wear OS](WearOsSmartwatch.md).
+
+(building-aaps-wear-os-android-studio)=
+
+### Android Studio
+
+Wear apk sa zostavuje rovnako ako apk pre telefón, ako druhé podpísané zostavenie. Urobte to hneď po apk pre telefón, v rovnakej verzii Android Studia a s rovnakým úložiskom kľúčov.
+
+- Postupujte podľa návodu [Zostavenie v Android Studiu](../SettingUpAaps/ComputerBuild.md).
+- Keď sa v časti „Zostavte podpísané apk AAPS“ dostanete k [výberu modulu](#Building-APK-wearapk), vyberte **`AndroidAPS.wear`**.
+
+![Modul Wear](../images/Building-the-App/wear_build1.png)
+
+Vyberte „**fullRelease**“, aby sa vytvoril súbor apk **AAPS** Wear.
+
+![Modul Wear](../images/Building-the-App/wear_build2.png)
+
+Ak chcete, môžete v rozbaľovacej ponuke namiesto toho zostaviť **„pumpcontrolRelease“**, ktorý vám umožní iba vzdialene ovládať pumpu, ale bez okruhu.
+
+Ďalej: nainštalujte Wear apk do hodiniek, pozrite [Nastavenie AAPS na hodinkách s Wear OS](WearOsSmartwatch.md).
+
+(building-aaps-wear-os-troubleshooting)=
+
+#### Riešenie problémov so zostavením v Android Studiu
+
+Pri zostavovaní plnej aplikácie **AAPS** (a v skutočnosti akejkoľvek podpísanej aplikácie) Android Studio vytvorí v rovnakom priečinku súbor .json. To potom spôsobí chyby s [necommitnutými zmenami](#troubleshooting_androidstudio-uncommitted-changes), keď sa pokúsite zostaviť ďalšiu podpísanú aplikáciu, napríklad aplikáciu **AAPS** Wear. Najrýchlejšie to vyriešite tak, že prejdete do priečinka, v ktorom bola zostavená plná aplikácia AAPS. Váš priečinok je pravdepodobne niečo ako:
 
 `C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\aapsclient\release.`
 
-Either delete, or move the unneeded .json file out of the folder. Then try to build the **AAPS** wear app again. If that doesn't work, the more detailed [troubleshooting guide](../GettingHelp/TroubleshootingAndroidStudio.md) will help you to identify the specific file causing the issue, which could also be your keystore file. 
+Nepotrebný súbor .json buď odstráňte, alebo ho presuňte z priečinka. Potom skúste aplikáciu **AAPS** Wear zostaviť znova. Ak to nepomôže, podrobnejší [návod na riešenie problémov](../GettingHelp/TroubleshootingAndroidStudio.md) vám pomôže nájsť konkrétny súbor, ktorý problém spôsobuje. Môže to byť aj váš súbor úložiska kľúčov.
+
+(building-aaps-wear-os-cli)=
+
+### Príkazový riadok
+
+Postupujte podľa časti [Návod na zostavenie z príkazového riadku](../SettingUpAaps/CLIBuild.md) a zopakujte kroky kompilácie a podpísania pre modul `wear` s rovnakým úložiskom kľúčov:
+
+```sh
+./gradlew :wear:assembleFullRelease
+```
+
+Nepodpísaný Wear apk sa uloží do `wear/build/outputs/apk/full/release/`. Podpíšte ho pomocou `apksigner` presne ako apk pre telefón a potom ho nainštalujte do hodiniek, pozrite [Nastavenie AAPS na hodinkách s Wear OS](WearOsSmartwatch.md).

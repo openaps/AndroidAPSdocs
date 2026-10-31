@@ -1,35 +1,35 @@
-# How to help with AAPS
+# Cómo ayudar con AAPS
 
-## AAPS operates entirely on volunteer efforts and has no paid staff.
+## AAPS funciona solo con el trabajo de voluntarios y no tiene personal pagado.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
+Los desarrolladores son padres, madres, cuidadores, familiares y personas con diabetes que trabajan juntos para desarrollar y mejorar una solución a una necesidad muy común. Los desarrolladores donan su tiempo libre gratis, pero no es justo esperar que además paguen costes extra para hacer algo tan increíble de código abierto y gratis para todos.
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*Para probar bien un nuevo sistema, los desarrolladores necesitan un teléfono y una bomba de repuesto, porque no se puede usar en una persona hasta que sea estable. Los modelos nuevos necesitan pruebas cuando salen al mercado. Parte del dinero donado también es necesario para los costes de envío de estos materiales entre países hasta los desarrolladores. A veces también es bueno ayudar con los costes de los desarrolladores para que salgan de sus habitaciones oscuras y se reúnan en conferencias y eventos, donde sus mentes creativas y analíticas pueden intercambiar ideas.*
 
-## I can write code! How do I participate?
+## ¡Sé escribir código! ¿Cómo puedo participar?
 
-Yay! Look at the issues, ask in the discord channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+¡Genial! Mira los issues, pregunta en el canal de Discord, ¡siempre hay mucho por hacer! ¡Elige primero una tarea pequeña y haz tu primer pull request! :)
 
-## I know the system and can write documentation!
+## ¡Conozco el sistema y puedo escribir documentación!
 
-Great, this is a highly appreciated thing and a good way to pay it forward!
+¡Genial! Esto se agradece mucho y es una buena forma de devolver la ayuda recibida.
 
-* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../SupportingAaps/HowToEditTheDocs.md). Other languages are only translated from English and can't be edited for consistency reasons.
+* El canal de Discord sobre la wiki está aquí: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
+* Hay una guía sobre cómo hacer commits en la wiki en inglés aquí: [Cómo hacer un PR](../SupportingAaps/HowToEditTheDocs.md). Los demás idiomas solo se traducen desde el inglés y no se pueden editar, para que todo sea coherente.
 
-## I do speak multiple languages and want to translate the app or the documentation
+## Hablo varios idiomas y quiero traducir la app o la documentación
 
-If you are translating something for the first time, please start with translating the strings for the app, as this is easier and you will get results faster.
+Si traduces algo por primera vez, empieza por traducir los textos de la app, porque es más fácil y verás los resultados antes.
 
-You are welcome to start as a translator for the documentation in parallel or later.
+También puedes empezar a traducir la documentación al mismo tiempo o más tarde.
 
-You can check the state of translations for the languages app and documentation [here](#StateOfTranslations).
+Puedes ver el estado de las traducciones de la app y de la documentación para cada idioma [aquí](#StateOfTranslations).
 
-* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
-* If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
+* Si quieres traducir **la app** a otros idiomas (gracias), usa [crowdin](https://crowdin.com/project/androidaps).
+* Si quieres traducir **la documentación** a otros idiomas (gracias), usa [crowdin](https://crowdin.com/project/androidapsdocs). 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+Solo tienes que registrarte en CROWDIN, hacer clic en tu idioma, esperar la autorización del administrador y ¡empezar!
 
-## Are there other ways to help?
+## ¿Hay otras formas de ayudar?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.
+Se necesitan habilidades como diseño gráfico, diseño UX, traducción o edición de la wiki. También puedes devolver la ayuda recibida respondiendo preguntas sencillas en Discord y Facebook, para que los desarrolladores tengan tiempo y espacio para centrarse en las tareas más difíciles.

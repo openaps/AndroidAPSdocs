@@ -1,85 +1,86 @@
 # Android Auto
 
-**AAPS** is capable of sending you information about your current status as a message, directly into Android Auto in your car.
+Το **AAPS** μπορεί να σας στέλνει πληροφορίες για την τρέχουσα κατάστασή σας ως μήνυμα, απευθείας στο Android Auto του αυτοκινήτου σας.
 
-```{admonition} version and last change information :class: dropdown date of last edit: 07/05/2023
+## Απαιτήσεις
 
-versions used for documentation:
+Το **AAPS** χρησιμοποιεί μια λειτουργία του Android Auto που στέλνει μηνύματα από εφαρμογές του κινητού στην οθόνη του Android Auto στο αυτοκίνητο.
 
-* AAPS 3.2.0-dev-i
-* Android Auto: 9.3.631434-release ```
+Αυτό σημαίνει ότι:
 
-## Requirements
+* Το Android πρέπει να επιτρέπει στο **AAPS** να εμφανίζει ειδοποιήσεις και
+* Επειδή το **AAPS** είναι ανεπίσημη εφαρμογή, επιτρέψτε τη χρήση «άγνωστων πηγών» στο Android Auto.
 
-**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of Auto Audio in the car.
+![Δεδομένα CGM του AAPS στο Android Auto](../images/android_auto_01.png)
 
-That means that:
+(androidauto-check-that-aaps-can-show-notifications)=
 
-* You must configure **AAPS** to use system notifications for alerts and notifications and
-* As **AAPS** is an unofficial App, allow the use of "unknown sources" with Android Auto.
+## Ελέγξτε ότι το AAPS μπορεί να εμφανίζει ειδοποιήσεις
 
-![AAPS CGM data on Android Auto](../images/android_auto_01.png)
+Το **AAPS** εμφανίζει πάντα μια ειδοποίηση κατάστασης με την τρέχουσα γλυκόζη, το IOB και το COB. Αυτή είναι η ειδοποίηση που δείχνει το Android Auto στο αυτοκίνητο. Δεν χρειάζεται να ενεργοποιήσετε τίποτα στο **AAPS**, αλλά το Android πρέπει να επιτρέπει στο **AAPS** να εμφανίζει ειδοποιήσεις.
 
-## Use system notifications in AAPS for alerts and notifications
+Στο τηλέφωνό σας, ανοίξτε **Ρυθμίσεις** > **Εφαρμογές** > **AAPS** > **Ειδοποιήσεις** και βεβαιωθείτε ότι το **Όλες οι ειδοποιήσεις AAPS** είναι ενεργό.
 
-Open 3-dot-menu on top right of **AAPS** home screen and select **Preferences**
+![Όλες οι ειδοποιήσεις AAPS ενεργές](../images/android_auto_notifications_all.png)
 
-![Use system notifications for alerts and notifications](../images/android_auto_02.png)
+Κάντε κύλιση προς τα κάτω και βεβαιωθείτε ότι το **Τρέχουσα κατάσταση** είναι ενεργό: αυτό είναι το κανάλι της ειδοποίησης κατάστασης.
 
-In **Local Alerts** activate **Use system notifications for alerts and notifications**
+![Κανάλι ειδοποιήσεων «Τρέχουσα κατάσταση» ενεργό](../images/android_auto_ongoing_channel.png)
 
-![Use system notifications for alerts and notifications](../images/android_auto_03.png)
+Ελέγξτε τώρα ότι βλέπετε την ειδοποίηση κατάστασης του **AAPS** στο τηλέφωνο, πριν πάτε στο αυτοκίνητό σας!
 
-Please check now that you get notifications from **AAPS** on the phone before you walk to your car!
+![Ειδοποίηση του AAPS στο τηλέφωνο](../images/android_auto_04.png)
 
-![Use system notifications for alerts and notifications](../images/android_auto_04.png)
+(androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
-## Allow the use of "unknown sources" with Android Auto.
+## Επιτρέψτε τη χρήση «άγνωστων πηγών» στο Android Auto.
 
-As **AAPS** is not an official Android Auto app, notifications have to be activated for "unknown sources" in Android Auto. This is done through the use of the developer mode which we will show you here.
+Επειδή το **AAPS** δεν είναι επίσημη εφαρμογή του Android Auto, οι ειδοποιήσεις πρέπει να ενεργοποιηθούν για «άγνωστες πηγές» στο Android Auto. Αυτό γίνεται με τη λειτουργία προγραμματιστή, που θα σας δείξουμε εδώ.
 
-Go to your car and connect your mobile with the cars audio system.
+Πηγαίνετε στο αυτοκίνητό σας και συνδέστε το κινητό σας με το ηχοσύστημα του αυτοκινήτου.
 
-You should now see a screen similar to this screen.
+Τώρα θα δείτε μια οθόνη παρόμοια με αυτήν.
 
-![Enable developer mode](../images/android_auto_05.png)
+![Ενεργοποίηση λειτουργίας προγραμματιστή](../images/android_auto_05.png)
 
-Press on the **setting** icon to start the configuration.
+Πατήστε το εικονίδιο **ρυθμίσεων** για να ξεκινήσει η διαμόρφωση.
 
-Scroll down to the end of the page and select **see more in the phone**.
+Κάντε κύλιση μέχρι το τέλος της σελίδας και επιλέξτε **see more in the phone** (δείτε περισσότερα στο τηλέφωνο).
 
-![Enable developer mode](../images/android_auto_06.png)
+![Ενεργοποίηση λειτουργίας προγραμματιστή](../images/android_auto_06.png)
 
-Now on the mobile we will activate the developer mode.
+Τώρα θα ενεργοποιήσουμε τη λειτουργία προγραμματιστή στο κινητό.
 
-The first screen looks like this. Scroll down to the end of the page.
+Η πρώτη οθόνη μοιάζει με αυτήν. Κάντε κύλιση μέχρι το τέλος της σελίδας.
 
-![Enable developer mode](../images/android_auto_07.png)
+![Ενεργοποίηση λειτουργίας προγραμματιστή](../images/android_auto_07.png)
 
-There you see the version of Android Auto listed. Tap 10 times (in word ten) on the version of Android Auto. With this hidden combination you have now enabled developer mode.
+Εκεί βλέπετε την έκδοση του Android Auto. Πατήστε 10 φορές (δέκα) πάνω στην έκδοση του Android Auto. Με αυτόν τον κρυφό συνδυασμό έχετε τώρα ενεργοποιήσει τη λειτουργία προγραμματιστή.
 
-![Enable developer mode](../images/android_auto_08.png)
+![Ενεργοποίηση λειτουργίας προγραμματιστή](../images/android_auto_08.png)
 
-Confirm that you want to enable the developer mode in the modal dialog "Allow development settings?".
+Επιβεβαιώστε ότι θέλετε να ενεργοποιήσετε τη λειτουργία προγραμματιστή στο παράθυρο «Allow development settings?» (Να επιτραπούν οι ρυθμίσεις ανάπτυξης;).
 
-![Enable developer mode](../images/android_auto_09.png)
+![Ενεργοποίηση λειτουργίας προγραμματιστή](../images/android_auto_09.png)
 
-In the **developer settings** enable the "Unknown sources".
+Στις **ρυθμίσεις προγραμματιστή** ενεργοποιήστε τις «Άγνωστες πηγές».
 
-![Enable developer mode](../images/android_auto_10.png)
+![Ενεργοποίηση λειτουργίας προγραμματιστή](../images/android_auto_10.png)
 
-Now you can quit developer mode if you want. Tap three dots menu on the top right to do so.
+Τώρα μπορείτε να βγείτε από τη λειτουργία προγραμματιστή, αν θέλετε. Πατήστε το μενού με τρία σημεία στην επάνω δεξιά γωνία για να το κάνετε.
 
-## Show notifications in car
+## Εμφάνιση ειδοποιήσεων στο αυτοκίνητο
 
-Tap the **number icon** on the lower right side in Android Auto in your car.
+Πατήστε το **εικονίδιο με τον αριθμό** κάτω δεξιά στο Android Auto στο αυτοκίνητό σας.
 
-![number icon - Android Auto in car](../images/android_auto_11.png)
+![εικονίδιο με τον αριθμό - Android Auto στο αυτοκίνητο](../images/android_auto_11.png)
 
-Your CGM data will be shown as follows:
+Τα δεδομένα CGM θα εμφανίζονται ως εξής:
 
-![AAPS CGM data on Android Auto](../images/android_auto_01.png)
+![Δεδομένα CGM του AAPS στο Android Auto](../images/android_auto_01.png)
 
-## Troubleshooting:
+(android-auto-troubleshooting)=
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#use-system-notifications-in-aaps-for-alerts-and-notifications) in Android and if [Android Auto has access rights to notifications](#allow-the-use-of-unknown-sources-with-android-auto).
+## Αντιμετώπιση προβλημάτων:
+
+* Αν δεν βλέπετε την ειδοποίηση, ελέγξτε αν [επιτρέψατε στο AAPS να εμφανίζει ειδοποιήσεις](#androidauto-check-that-aaps-can-show-notifications) στο Android και αν [το Android Auto έχει δικαίωμα πρόσβασης στις ειδοποιήσεις](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).

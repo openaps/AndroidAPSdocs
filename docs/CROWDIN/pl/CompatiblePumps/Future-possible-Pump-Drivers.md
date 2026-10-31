@@ -2,39 +2,61 @@
 
 Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, status ich wsparcia w dowolnym systemie pętlowym, oraz status dla systemu AAPS. Na końcu jest trochę informacji, jakie są wymagania, aby pompa nadawała się do pracy w pętli.
 
-## Pumps that are Loopable
+    {contents} Spis treści
+    :depth: 1
+    :local: true
 
-### Kaleido ([Homepage](https://www.hellokaleido.com/))
+## Pompy w fazie integracji z AAPS
 
-**Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
+**Wkrótce:** sterowniki dla tych pomp są w trakcie tworzenia i działają już w wersjach testowych.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+Omnipod 5 ([Strona domowa](https://www.omnipod.com/))
 
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+![Sterownik Omnipod 5 w trakcie tworzenia](../images/future-pumps/omnipod5-driver.png)
 
-**Loop status:** Not yet loopable.
+Tandem: t:Mobi ([Strona domowa](https://www.tandemdiabetes.com/))
 
-While in the past company has decided not to allow their pumps to be controlled by external devices, it seems that last few years have been a game changer. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
+![Sterownik Tandem t:Mobi w trakcie tworzenia](../images/future-pumps/tandem-mobi-driver.png)
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+## Pompy, które nadają się do pętli
 
-### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Kaleido ([Strona domowa](https://www.hellokaleido.com/))
 
-**Loop status:** All 3 pumps will be Loop candidates.
+**Status pętli:** Pompa może nadawać się do pętli, ale jej protokół jest na razie nieznany. Producent nie jest zainteresowany open source.
 
-Awaiting release of t:mobi in Europe (other two are not yet released anywhere). Development of AAPS t:mobi support has already started and should be available by end of 2025 (see more info on Discord).
+**Wymagany sprzęt dla AAPS:** brak. Wygląda na to, że ma obsługę BT.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+### Tandem: t:slim X3 ([Strona domowa](https://www.tandemdiabetes.com/about-us/pipeline))
 
-### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
+**Status pętli:** Możliwy przyszły kandydat do pętli. Mamy nadzieję, że t:slim X3 pozwoli na pełne sterowanie z telefonu, co umożliwi obsługę w AAPS, ale termin i funkcje wciąż nie są znane.
 
-**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
+**Wymagany sprzęt dla AAPS:** brak. Prawdopodobnie będzie mieć Bluetooth.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Uwagi:** Jeszcze nie wydana. Wygląda na to, że w planach Tandem t:slim X3 jest wciąż odsuwana na rzecz t:Mobi (także w wersji bez drenu) i Sigi (ich pompy typu patch).
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+### Twiist ([Strona domowa](https://www.twiist.com/))
 
-## Pumps no longer sold (companies no longer operating)
+**Status pętli:** Nadaje się do pętli.
+
+**Wymagany sprzęt dla AAPS:** brak. Ma Bluetooth.
+
+### Pompa insulinowa Willcare ([Strona domowa](http://shinmyungmedi.com/en/))
+
+**Status pętli:** Na razie nie nadaje się do pętli, ale skontaktowali się z nami pracownicy firmy, którzy chcą rozwinąć pompę tak, aby nadawała się do pętli (myślę, że na razie brakuje tylko poleceń odczytu/ustawienia profilu).
+
+**Wymagany sprzęt dla AAPS:** brak. Wygląda na to, że ma obsługę BT.
+
+**Uwagi:** Firma jest zainteresowana integracją z AAPS, więc może sama wykonać implementację.
+
+### Ypsopump ([Strona domowa](https://www.ypsomed.com/))
+
+**Status pętli:** Nadaje się do pętli. Protokół Bluetooth tej pompy został odtworzony przez społeczność (inżynieria wsteczna), więc komunikacja z nią jest w zasadzie możliwa.
+
+**Wymagany sprzęt dla AAPS:** brak. Ma Bluetooth.
+
+**Uwagi:** Ypsopump chroni komunikację Bluetooth silnym szyfrowaniem firmy zewnętrznej. Praca z nim jest technicznie trudna, przez co zbudowanie i utrzymanie niezawodnego sterownika jest trudne. Nie ma jeszcze sterownika AAPS gotowego do codziennego użytku.
+
+## Pompy, które nie są już sprzedawane (firmy już nie działają)
 
 ### Animas Vibe
 
@@ -44,53 +66,53 @@ Awaiting release of t:mobi in Europe (other two are not yet released anywhere). 
 
 ### Accu-Chek Insight
 
-**Comments:** End of support March 2025.
+**Uwagi:** Koniec wsparcia w marcu 2025.
 
-## Pumps that aren't Loopable
+## Pompy, które nie są odpowiednie dla pętli
 
 ### Medtronic Bluetooth
 
-**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**Uwagi:** Medtronic [wycofał się](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+
+### Tandem: t:slim X2 ([Strona domowa](https://www.tandemdiabetes.com/))
+
+**Uwagi:** Protokół Bluetooth Tandem został odtworzony (inżynieria wsteczna), ale w t:slim X2 można podawać tylko bolusy — nie da się sterować podawaniem bazy — więc nie można jej bezpiecznie używać w pętli. Raczej się to nie zmieni, chyba że Tandem pozwoli na pełne sterowanie X2 z telefonu, co bardziej prawdopodobnie pojawi się dopiero w t:slim X3.
 
 ### Accu-Chek Solo
 
-**Comments:** No community success in communicating with the Solo pump.
+**Uwagi:** Społeczności nie udało się nawiązać komunikacji z pompą Solo.
 
-### Ypsomed Pump
+## Wymagania, aby pompa nadawała się do pętli
 
-**Comments:** Ypso added very heavy 3rd party encryption.
+**Wymagania wstępne**
 
-## Requirements for pumps being loopable
+- Pompa musi obsługiwać pewien rodzaj zdalnego sterowania. (BT, częstotliwość radiowa itp.)
+- Protokół komunikacji jest złamany/udokumentowany itp.
 
-**Prerequisite**
+**Minimalne wymagania**
 
-- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
-- Protocol is hacked/documented/etc.
+- Ustawienie tymczasowej dawki bazowej
+- Odczyt statusu
+- Anulowanie tymczasowej dawki bazowej
 
-**Minimal requirement**
+**Dla oref1 (SMB) lub podawania bolusów:**
 
-- Set Temporary Basal Rate
-- Get Status
-- Cancel Temporary Basal Rate
+- Podanie bolusa
 
-**For oref1(SMB) or Bolusing:**
+**Dodatkowe przydatne funkcje**
 
-- Set Bolus
+- Anulowanie bolusa
+- Odczyt profilu bazowego (prawie wymagane)
+- Ustawienie profilu bazowego (dobrze, gdy jest)
+- Odczyt historii 
 
-**Good to have**
+**Inne (niewymagane, ale przydatne)**
 
-- Cancel Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- Ustawienie bolusa przedłużonego
+- Anulowanie bolusa przedłużonego
+- Odczyt historii
+- Odczyt TDD (całkowita dawka dobowa)
 
-**Other (not required but good to have)**
+### Obsługa innych pomp
 
-- Set Extended Bolus
-- Cancel Extended Bolus
-- Read History
-- Read TDD
-
-### Other pumps support
-
-If you have any other pumps you would like to see status on, please contact us on discord.
+Jeśli chcesz poznać status innych pomp, skontaktuj się z nami na Discordzie.

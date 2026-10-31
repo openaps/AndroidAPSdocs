@@ -1,38 +1,60 @@
 # Posibles (futuros) drivers para Bombas
 
-Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado de soporte a las mismas en cualquiera de los sistemas de Lazo cerrado y, a continuación, su situación respecto en AAPS. Al final hay alguna información, de lo que se requiere para que una bomba pueda ser utilizada para "Lazos Cerrados".
+Esta es una lista de algunas bombas que existen, con el estado de su soporte en los distintos sistemas de lazo y luego su estado en AAPS. Al final hay alguna información, de lo que se requiere para que una bomba pueda ser utilizada para "Lazos Cerrados".
+
+    {contents} Índice
+    :depth: 1
+    :local: true
+
+## Bombas en fase de integración en AAPS
+
+**Próximamente:** los drivers para estas bombas están en desarrollo y ya funcionan en versiones de prueba.
+
+Omnipod 5 ([página web](https://www.omnipod.com/))
+
+![Driver de Omnipod 5 en desarrollo](../images/future-pumps/omnipod5-driver.png)
+
+Tandem: t:Mobi ([página web](https://www.tandemdiabetes.com/))
+
+![Driver de Tandem t:Mobi en desarrollo](../images/future-pumps/tandem-mobi-driver.png)
 
 ## Bombas compatibles
 
-### Kaleido ([Homepage](https://www.hellokaleido.com/))
+### Kaleido ([página web](https://www.hellokaleido.com/))
 
-**Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
+**Estado del lazo:** La bomba es candidata para el lazo, pero por ahora no se conoce el protocolo. El fabricante no tiene interés en el código abierto.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Requisitos de hardware para AAPS:** ninguno. Parece estar habilitado para BT.
 
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+### Tandem: t:slim X3 ([página web](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** Not yet loopable.
+**Estado del lazo:** Posible candidata para el lazo en el futuro. Se espera que la t:slim X3 permita el control total desde un teléfono, lo que haría posible el soporte en AAPS, pero aún no se conocen las fechas ni las funciones.
 
-While in the past company has decided not to allow their pumps to be controlled by external devices, it seems that last few years have been a game changer. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
+**Requisitos de hardware para AAPS:** ninguno. Se espera que tenga Bluetooth.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Comentarios:** Aún no ha salido al mercado. Parece que Tandem retrasa una y otra vez la t:slim X3 en su plan de productos, para dar prioridad a la t:Mobi (incluida una versión sin tubo) y a Sigi (su bomba parche).
 
-### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Twiist ([página web](https://www.twiist.com/))
 
-**Loop status:** All 3 pumps will be Loop candidates.
+**Estado del lazo:** Candidata para el lazo.
 
-Awaiting release of t:mobi in Europe (other two are not yet released anywhere). Development of AAPS t:mobi support has already started and should be available by end of 2025 (see more info on Discord).
+**Requisitos de hardware para AAPS:** ninguno. Tiene Bluetooth.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+### Bomba de insulina Willcare ([página web](http://shinmyungmedi.com/en/))
 
-### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
+**Estado del lazo:** Por ahora no es candidata para el lazo, pero su personal nos ha contactado y están interesados en ampliar su bomba para que funcione con el lazo (por ahora creo que solo le faltan los comandos para leer y establecer el perfil).
 
-**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
+**Requisitos de hardware para AAPS:** ninguno. Parece estar habilitado para BT.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Comentarios:** Como la empresa está interesada en la integración con AAPS, es posible que hagan la implementación ellos mismos.
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+### Ypsopump ([página web](https://www.ypsomed.com/))
+
+**Estado del lazo:** Candidata para el lazo. La comunidad ha descifrado el protocolo Bluetooth de la bomba mediante ingeniería inversa, así que en principio es posible comunicarse con ella.
+
+**Requisitos de hardware para AAPS:** ninguno. Tiene Bluetooth.
+
+**Comentarios:** La Ypsopump protege su comunicación Bluetooth con un cifrado fuerte de un tercero. Trabajar con ella es técnicamente difícil, por eso es complicado crear y mantener un driver fiable. Todavía no hay un driver de AAPS listo para el uso real.
 
 ## Bombas que ya no se venden (las compañías ya no operan)
 
@@ -44,53 +66,53 @@ Awaiting release of t:mobi in Europe (other two are not yet released anywhere). 
 
 ### Accu-Chek Insight
 
-**Comments:** End of support March 2025.
+**Comentarios:** Fin del soporte en marzo de 2025.
 
 ## Bombas incompatibles
 
 ### Medtronic Bluetooth
 
-**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**Comentarios:** Medtronic [se retiró](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+
+### Tandem: t:slim X2 ([página web](https://www.tandemdiabetes.com/))
+
+**Comentarios:** El protocolo Bluetooth de Tandem se ha descifrado mediante ingeniería inversa, pero en la t:slim X2 solo se pueden administrar bolos (la basal no se puede controlar), así que no se puede usar de forma segura con el lazo. Es poco probable que esto cambie, salvo que Tandem permita el control total de la X2 desde un teléfono, algo que es más probable que llegue con la t:slim X3.
 
 ### Accu-Chek Solo
 
-**Comments:** No community success in communicating with the Solo pump.
+**Comentarios:** La comunidad no ha conseguido comunicarse con la bomba Solo.
 
-### Ypsomed Pump
+## Requisitos para que una bomba sea compatible con el lazo
 
-**Comments:** Ypso added very heavy 3rd party encryption.
+**Requisitos previos**
 
-## Requisitos para que una bombas sea compatible
-
-**Prerequisite**
-
-- La bomba debe disponer de algún tipo de control remoto. (BT, Radio frecuencia, etc)
+- La bomba debe disponer de algún tipo de control remoto. (BT, radiofrecuencia, etc.)
 - El protocolo está documentado/hackeado/etc.
 
-**Minimal requirement**
+**Requisitos mínimos**
 
 - Establecer basales temporales
 - Obtener estado
 - Cancelar basales temporales
 
-**For oref1(SMB) or Bolusing:**
+**Para oref1(SMB) o para dar bolos:**
 
 - Fijar Bolo
 
-**Good to have**
+**Recomendable**
 
 - Cancelar Bolo
 - Obtener perfil basal (casi un requisito)
 - Establecer Perfil Basal (recomendable)
 - Leer historial 
 
-**Other (not required but good to have)**
+**Otros (no necesarios, pero deseables)**
 
 - Suministrar bolos extendidos
 - Cancelar bolo extendido
 - Leer historial
 - Leer TDD
 
-### Other pumps support
+### Soporte para otras bombas
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Si quieres ver el estado de alguna otra bomba, contacta con nosotros en Discord.

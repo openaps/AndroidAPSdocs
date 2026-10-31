@@ -1,66 +1,116 @@
-# Daily Life - Pumps
-## Changing infusion sets: insulin reservoirs and cannulas
+# Αντλίες και καθετήρες
 
-The procedure described below is for tubed pumps only and does not apply to patch pumps like Omnipod, Medtrum Nano, Accu-Chek Solo etc. This procedure is sometimes referred to as a “set change”, with a “full” set change including the insulin reservoir and cannula, and a “partial” set change referring to a change of cannula only.
+## Αλλαγή σετ έγχυσης: δεξαμενές ινσουλίνης και καθετήρες
 
-Physical cartridge/reservoir changes cannot be done via **AAPS** and have to be carried out via the pump directly. These need to be logged in **AAPS** manually, once completed.
+Η διαδικασία παρακάτω ισχύει μόνο για αντλίες με σωληνάκι. Δεν ισχύει για αντλίες patch, όπως Omnipod, Medtrum Nano, Accu-Chek Solo κ.λπ. Αυτή η διαδικασία λέγεται μερικές φορές «αλλαγή σετ»: «πλήρης» αλλαγή σετ σημαίνει αλλαγή δεξαμενής ινσουλίνης και καθετήρα, ενώ «μερική» αλλαγή σετ σημαίνει αλλαγή μόνο του καθετήρα.
 
-### Guide for changing both the pump reservoir and cannula
+Οι αντλίες patch γεμίζουν και κάνουν πλήρωση μόνες τους στον δικό τους οδηγό ενεργοποίησης, και ο καθετήρας τους είναι ήδη στο σώμα. Το **AAPS** δεν προσφέρει πλήρωση για αυτές: το **Πλήρωση/Γέμισμα** δεν εμφανίζεται στο φύλλο **Διαχείριση** ούτε στο QuickLaunch. Δείτε τη σελίδα της αντλίας σας στις [Συμβατές αντλίες](../Getting-Started/CompatiblePumps.md).
 
-1)  In **AAPS**, disconnect the pump: Long press “Open Loop”/”Closed Loop” icon on the **AAPS** Home Screen and select ‘Disconnect pump - 1 hour”. The pump icon will change to a grey icon, indicating that the pump is disconnected.
+Η φυσική αλλαγή φυσιγγίου/δεξαμενής δεν μπορεί να γίνει μέσω του **AAPS** και πρέπει να γίνει απευθείας στην αντλία. Αφού ολοκληρωθεί, πρέπει να την καταγράψετε χειροκίνητα στο **AAPS**.
 
-2)  Physically change the insulin reservoir: physically disconnect your pump from the body, and change the reservoir/cartridge and cannula as per manufacturer's instructions.
+(pumps-cannulas-changing-reservoir-and-cannula)=
+### Οδηγός για την αλλαγή της δεξαμενής της αντλίας και του καθετήρα
 
-3)  Prime/fill the tubing and cannula: this can be done directly on the pump. Be sure to eliminate any bubbles in the tubing.
+1. Στο **AAPS**, αποσυνδέστε την αντλία: πατήστε το [εικονίδιο κυκλώματος](#AapsScreens-loop-status) στην κύρια οθόνη και επιλέξτε **Αποσύνδεση αντλίας** για 1 ώρα. Το εικονίδιο αλλάζει σε ένα γκρι βύσμα, που δείχνει ότι η αντλία είναι αποσυνδεδεμένη.
 
-4)  Attach the new cannula to the body. Once the cannula is inserted and the needle is removed, the attached cannula now has a small air gap which also needs to be primed. To announce this in **AAPS** and prime the site: select the PRIME/FILL button in the **AAPS** actions tab and tick “Pump site change” and/or “Insulin Cartridge Change” as appropriate to record the change. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select “OK”. Read the summary message, and confirm to execute the priming by tapping “OK”.
+2. Αλλάξτε τη δεξαμενή ινσουλίνης: αποσυνδέστε την αντλία από το σώμα σας και αλλάξτε τη δεξαμενή/φύσιγγα και τον καθετήρα σύμφωνα με τις οδηγίες του κατασκευαστή.
 
-5)  Reconnect the pump in **AAPS**: Press the grey disconnected pump symbol and select ‘Reconnect pump’ to continue looping.
+3. Κάντε πλήρωση/γέμισμα του σωληνακιού και του καθετήρα: αυτό μπορεί να γίνει απευθείας στην αντλία. Φροντίστε να μη μείνουν φυσαλίδες αέρα στο σωληνάκι.
 
-### Useful information concerning insulin/cannula changes
+4. Τοποθετήστε τον νέο καθετήρα στο σώμα σας. Αφού τοποθετηθεί ο καθετήρας και αφαιρεθεί η βελόνα, ο καθετήρας έχει ένα μικρό κενό αέρα που πρέπει επίσης να γεμίσει (πλήρωση). Για να το δηλώσετε στο **AAPS** και να κάνετε πλήρωση: ανοίξτε το **Πλήρωση/Γέμισμα** (στην ανοιγμένη περιοχή κατάστασης της κύριας οθόνης, στο φύλλο **Διαχείριση** ή ως κουμπί [QuickLaunch](QuickLaunch.md)) και επιλέξτε **Καταγράψτε την αλλαγή της τοποθεσίας αντλίας** ή/και **Καταγράψτε την αλλαγή του φυσιγγίου ινσουλίνης**, ανάλογα με την περίπτωση, για να καταγραφεί η αλλαγή. Τώρα πατήστε την προεπιλεγμένη ποσότητα πλήρωσης καθετήρα (συνήθως γύρω στις 0,3 U, αλλά ελέγξτε ότι η τιμή είναι σωστή για τον καθετήρα σας) και επιλέξτε **OK**. Διαβάστε το μήνυμα σύνοψης και επιβεβαιώστε την πλήρωση πατώντας **OK**.
 
-●   Logging a pump site change resets Autosens to 100%. It also resets the corresponding cannula/insulin status lights and ages on the **AAPS** Home screen.
+   ![Πλήρωση/Γέμισμα στο φύλλο Διαχείριση με αντλία με σωληνάκι](../images/v4/Screens/manage_sheet_tube_pump.png)
 
-●   You can set/adjust the default prime amount in Preferences > Overview > Fill/Prime standard insulin amounts. See your instruction booklet in your cannula box for how many units (depending on needle length and tubing length) should be primed for your cannula.
 
-●   Insulin delivered using the prime function is not taken into account by **AAPS** when calculating insulin on board (IOB), and is marked in the **AAPS** treatments menu as “Prime”.
+5. Επανασυνδέστε την αντλία στο **AAPS**: πατήστε το γκρι εικονίδιο βύσματος και επιλέξτε **Επανασύνδεση αντλίας** για να συνεχίσει το κύκλωμα.
 
-●   Any insulin bolused from the pump during a pump disconnection will also not be taken into account by **AAPS**. If you happen to bolus directly from the pump while **AAPS** is disconnected, once you reconnect the pump you can announce this insulin (without bolusing it) under the “insulin” tab (see link to below ”to announce delivered insulin without actually bolusing” for more details).
+### Χρήσιμες πληροφορίες για την αλλαγή ινσουλίνης/καθετήρα
 
-### Cannula, infusion site, tubing and/or pump issues
+* Η καταγραφή αλλαγής σημείου αντλίας επαναφέρει το Autosens στο 100%. Επαναφέρει επίσης τις αντίστοιχες ενδείξεις κατάστασης και ηλικίες καθετήρα/ινσουλίνης στην κύρια οθόνη του **AAPS**.
 
-If you are confident that you haven’t received any insulin for a period of time, despite **AAPS** recording that you have, and you know exactly when the issue started (_e.g._ you remove the cannula and see that the cannula was kinked during the insertion process) you can correct this in **AAPS**, while being aware that the insulin may in fact have been delivered but may be slow to act for some reason.
+* Μπορείτε να ορίσετε/αλλάξετε τις προεπιλεγμένες ποσότητες πλήρωσης στις ρυθμίσεις **Πλήρωση/Γέμισμα** — γράψτε "prime" στη γραμμή αναζήτησης της κύριας οθόνης για να τις ανοίξετε (δείτε [Ρυθμίσεις](../SettingUpAaps/Preferences.md)). Δείτε στο φυλλάδιο οδηγιών, μέσα στο κουτί των καθετήρων σας, πόσες μονάδες (ανάλογα με το μήκος της βελόνας και του σωληνακιού) χρειάζονται για την πλήρωση του καθετήρα σας.
+
+* Η ινσουλίνη που χορηγείται με τη λειτουργία πλήρωσης δεν λαμβάνεται υπόψη από το **AAPS** στον υπολογισμό της ινσουλίνης στον οργανισμό (IOB) και σημειώνεται στο [Ιστορικό θεραπειών](#aaps-screens-treatments) ως «Πλήρωση».
+
+* Ούτε η ινσουλίνη που δίνεται ως bolus από την αντλία όσο η αντλία είναι αποσυνδεδεμένη λαμβάνεται υπόψη από το **AAPS**. Αν τύχει να δώσετε bolus απευθείας από την αντλία όσο το **AAPS** είναι αποσυνδεδεμένο, μόλις επανασυνδέσετε την αντλία μπορείτε να δηλώσετε αυτή την ινσουλίνη (χωρίς να τη χορηγήσετε) στον διάλογο **Ινσουλίνη** (δείτε [Για να δηλώσετε ινσουλίνη που χορηγήθηκε χωρίς να δοθεί bolus](#pumps-cannulas-announce-insulin) παρακάτω).
+
+### Προβλήματα με τον καθετήρα, το σημείο έγχυσης, το σωληνάκι και/ή την αντλία
+
+Αν είστε σίγουροι ότι δεν πήρατε ινσουλίνη για κάποιο διάστημα, ενώ το **AAPS** καταγράφει ότι πήρατε, και ξέρετε ακριβώς πότε ξεκίνησε το πρόβλημα (_π.χ._ βγάζετε τον καθετήρα και βλέπετε ότι λύγισε κατά την τοποθέτηση), μπορείτε να το διορθώσετε στο **AAPS**. Να ξέρετε όμως ότι η ινσουλίνη μπορεί στην πραγματικότητα να χορηγήθηκε, αλλά να δρα αργά για κάποιο λόγο.
 
 ```{admonition} Caution - Risk of Hypoglycemia
 :class: danger
-Only delete insulin delivery from **AAPS** with EXTREME caution, in case insulin _has_ actually been delivered, and monitor BG closely for the next 24 h.
+Διαγράφετε χορήγηση ινσουλίνης από το **AAPS** μόνο με ΠΟΛΥ μεγάλη προσοχή, γιατί η ινσουλίνη μπορεί _να έχει_ πράγματι χορηγηθεί. Παρακολουθείτε στενά τη γλυκόζη αίματος (BG) τις επόμενες 24 ώρες.
 ```
 
-To remove boluses and SMBs which you know have not been delivered, open the Treatments tab and conservatively delete the logged bolus information from > carbs and bolus starting from the point the incident happened. This will correct the “insulin on board” (IOB) value which is key for **AAPS**’ calculations, if you now return to the homescreen you will see that the IOB has now reduced. Be aware that you cannot delete basal insulin which **AAPS** calculates to have been delivered, so that will still be taken into account by **AAPS**.
+Για να αφαιρέσετε bolus και SMB που ξέρετε ότι δεν χορηγήθηκαν, ανοίξτε το **μενού** (☰), επιλέξτε [Ιστορικό θεραπειών](#aaps-screens-treatments) και, στην καρτέλα **Υδατάνθρακες και bolus**, διαγράψτε με προσοχή τα καταγεγραμμένα bolus από τη στιγμή που έγινε το περιστατικό. Έτσι διορθώνεται η τιμή «ινσουλίνη στον οργανισμό» (IOB), που είναι βασική για τους υπολογισμούς του **AAPS**· αν επιστρέψετε τώρα στην κύρια οθόνη, θα δείτε ότι το IOB μειώθηκε. Προσέξτε ότι δεν μπορείτε να διαγράψετε βασική ινσουλίνη που το **AAPS** υπολογίζει ότι χορηγήθηκε, οπότε το **AAPS** θα συνεχίσει να τη λαμβάνει υπόψη.
 
-In less obvious cases of insulin delivery problems  _e.g._ leakages, occlusions or tunneling where either you are not sure when the issue started, or think some of the insulin was delivered, you need to be careful. You may detect these issues either by “smelling” the insulin, seeing a wet adhesive, encountering high glucose values or by getting an alarm. As you will never know how much insulin you got into your skin (which might be starting to work after a while) it will be hard to determine the correct amount of insulin which needs be deducted from the current “insulin on board” (IOB) value. One strategy is to pause looping for 5 hours (or your specific duration of insulin action) after you resolved the insulin delivery problem, and resume looping afterwards. This will ensure that IOB is correct once you restart looping.
+Σε λιγότερο προφανή προβλήματα χορήγησης ινσουλίνης, _π.χ._ διαρροές, αποφράξεις ή «τούνελ» (tunneling), όπου δεν ξέρετε πότε ξεκίνησε το πρόβλημα ή πιστεύετε ότι ένα μέρος της ινσουλίνης χορηγήθηκε, πρέπει να είστε προσεκτικοί. Μπορεί να καταλάβετε αυτά τα προβλήματα από τη «μυρωδιά» της ινσουλίνης, από υγρό αυτοκόλλητο, από υψηλές τιμές γλυκόζης ή από έναν συναγερμό. Επειδή δεν θα ξέρετε ποτέ πόση ινσουλίνη μπήκε στο δέρμα σας (που μπορεί να αρχίσει να δρα μετά από λίγο), είναι δύσκολο να βρείτε τη σωστή ποσότητα ινσουλίνης που πρέπει να αφαιρεθεί από την τρέχουσα τιμή «ινσουλίνη στον οργανισμό» (IOB). Μια στρατηγική είναι να σταματήσετε το κύκλωμα για 5 ώρες (ή για τη δική σας διάρκεια δράσης της ινσουλίνης) αφού λύσετε το πρόβλημα χορήγησης ινσουλίνης, και μετά να συνεχίσετε το κύκλωμα. Έτσι το IOB θα είναι σωστό όταν ξεκινήσετε ξανά το κύκλωμα.
 
-## Disconnecting the pump for showering or activity
+(pumps-cannulas-disconnecting)=
+## Αποσύνδεση της αντλίας για μπάνιο ή δραστηριότητα
 
-If you take your pump off for showering, bathing, swimming, contact sports or other activities you must let **AAPS** know that no insulin is being delivered, to keep the IOB correct. The pump can be disconnected using the Loop Status icon on the **AAPS** Home Screen.
+Αν βγάζετε την αντλία για ντους, μπάνιο, κολύμπι, αθλήματα επαφής ή άλλες δραστηριότητες, πρέπει να ενημερώσετε το **AAPS** ότι δεν χορηγείται ινσουλίνη, ώστε το IOB να μένει σωστό. Μπορείτε να αποσυνδέσετε την αντλία με το [εικονίδιο κυκλώματος](#AapsScreens-loop-status) στην κύρια οθόνη: πατήστε το και επιλέξτε **Αποσύνδεση αντλίας** με τη διάρκεια που χρειάζεστε. Αν η δραστηριότητα κρατήσει περισσότερο από όσο σχεδιάσατε, ανοίξτε ξανά τον ίδιο διάλογο και επιλέξτε νέα διάρκεια στο **Αποσύνδεση αντλίας**: η αποσύνδεση παρατείνεται και η νέα διάρκεια μετρά από τώρα. Δεν χρειάζεται να επανασυνδέσετε πρώτα.
 
-As you are not getting any insulin while the pump is disconnected, you should reconnect every two hours to catch up for the missing basal. You can do this by connecting, bolusing the missing basal amounts (_e.g._ of the last two hours) before disconnecting again. This should help to avoid a severe lack of insulin which could result in diabetic ketoacidosis (DKA). If it is inconvenient to reconnect the pump during activity (cannula site is covered by wearing a wetsuit _etc._), consider a pen injection instead. This manual injection can be logged in **AAPS**, and doesn’t have to be logged at the time of injection (just make a note of the time of injection) since you can announce the insulin and backdate the time the insulin was actually given when you reconnect the pump.
+Όσο η αντλία είναι αποσυνδεδεμένη δεν παίρνετε ινσουλίνη. Γι' αυτό πρέπει να την επανασυνδέετε κάθε δύο ώρες, για να αναπληρώσετε τον βασικό ρυθμό που χάσατε. Μπορείτε να το κάνετε συνδέοντας την αντλία και δίνοντας ως bolus τις ποσότητες βασικού ρυθμού που λείπουν (_π.χ._ των δύο τελευταίων ωρών) πριν την αποσυνδέσετε ξανά. Αυτό βοηθά να αποφύγετε σοβαρή έλλειψη ινσουλίνης, που μπορεί να προκαλέσει διαβητική κετοξέωση (DKA). Αν δεν είναι βολικό να ξανασυνδέσετε την αντλία κατά τη δραστηριότητα (το σημείο του καθετήρα καλύπτεται από στολή κατάδυσης _κ.λπ._), σκεφτείτε μια ένεση με πένα. Αυτή η χειροκίνητη ένεση μπορεί να καταγραφεί στο **AAPS** και δεν χρειάζεται να καταγραφεί τη στιγμή της ένεσης (απλώς σημειώστε την ώρα της ένεσης), γιατί μπορείτε να δηλώσετε την ινσουλίνη και να βάλετε την πραγματική ώρα που δόθηκε όταν επανασυνδέσετε την αντλία.
 
-## To announce delivered insulin without actually bolusing
+(pumps-cannulas-announce-insulin)=
+## Για να δηλώσετε ινσουλίνη που χορηγήθηκε, χωρίς να γίνει πραγματικά bolus
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections to **AAPS**: select the “insulin” tab, enter the amount in units and select “do not bolus, record only”. When you select this option, a “time offset” tab will appear. You can ignore this if the injection was given recently, but if the bolus was given some time ago, you can add a minus sign in front of the time (_e.g._ - 30 min) to record the actual time of the bolus. **AAPS** will then take into account the duration of insulin action and calculate the remaining insulin still in the system accordingly.
+Για να δηλώσετε ινσουλίνη που δόθηκε από την αντλία όσο το **AAPS** ήταν αποσυνδεδεμένο, ή από ενέσεις με πένα: ανοίξτε τον [διάλογο Ινσουλίνη](#aaps-screens-buttons-insulin) (**Θεραπείες** στην κάτω πλοήγηση ή ένα κουμπί QuickLaunch), εισάγετε την ποσότητα σε μονάδες και ενεργοποιήστε το **Το Bolus μόνο θα καταγραφεί**. Τότε μια γραμμή **Χρόνος** (ρυθμισμένη σε **Τώρα**) σας επιτρέπει να καταγράψετε την πραγματική ώρα της ένεσης: μπορείτε να την αγνοήσετε αν η ένεση έγινε πρόσφατα. Αν το bolus δόθηκε πριν από κάποιο χρόνο, χρησιμοποιήστε το **-** για να πάτε την ώρα πίσω (_π.χ._ -30 λεπτά) ή ανοίξτε τη γραμμή με το βέλος για να επιλέξετε ακριβή ημερομηνία και ώρα. Το **AAPS** θα λάβει τότε υπόψη τη διάρκεια δράσης της ινσουλίνης και θα υπολογίσει ανάλογα την ινσουλίνη που μένει ακόμα στον οργανισμό.
 
-If you are using **AAPS** as a careiver, you can remotely disconnect (and reconnect) the pump very easily by [SMS command](../RemoteFeatures/SMSCommands.md) using commands such as “pump disconnect 120” and “pump connect 120”. The range of duration for remote disconnect is from 1 - 120 min, (in this example it is 120 minutes). This is very useful if the **AAPS** handset is inconvenient for you to access, buried in a pump belt on a kid who is running off towards the swimming complex, or being closely guarded (or in use) by a teenager.
+Αν χρησιμοποιείτε το **AAPS** ως φροντιστής, μπορείτε πολύ εύκολα να αποσυνδέσετε (και να επανασυνδέσετε) την αντλία από απόσταση με [εντολή SMS](../RemoteFeatures/SMSCommands.md), με εντολές όπως "pump disconnect 120" και "pump connect 120". Η διάρκεια της αποσύνδεσης από απόσταση μπορεί να είναι από 1 έως 120 λεπτά (σε αυτό το παράδειγμα είναι 120 λεπτά). Αυτό είναι πολύ χρήσιμο αν δεν έχετε εύκολη πρόσβαση στο τηλέφωνο με το **AAPS**, π.χ. είναι θαμμένο σε ζώνη αντλίας σε ένα παιδί που τρέχει προς την πισίνα, ή το φυλάει στενά (ή το χρησιμοποιεί) ένας έφηβος.
 
-## Reconnecting the pump after activity
+## Επανασύνδεση της αντλίας μετά τη δραστηριότητα
 
-After a long disconnection (1 - 2 hours) it is fairly common for **AAPS** to calculate that you now have negative IOB. When you reconnect the pump, depending on preference/current glucose level/planned food or subsequent activity, you can either:
+Μετά από μεγάλη αποσύνδεση (1 - 2 ώρες) είναι αρκετά συνηθισμένο το **AAPS** να υπολογίζει ότι τώρα έχετε αρνητικό IOB. Όταν επανασυνδέσετε την αντλία, ανάλογα με τις προτιμήσεις σας, την τρέχουσα γλυκόζη, το φαγητό που σχεδιάζετε ή την επόμενη δραστηριότητα, μπορείτε είτε:
 
-a) Just reconnect the pump in **AAPS** (grey-to-green, for closed loop) and leave it up to **AAPS** to start to deliver insulin again
+α) Απλώς επανασυνδέστε την αντλία στο **AAPS** (από γκρι σε πράσινο, για κλειστό κύκλωμα) και αφήστε το **AAPS** να αρχίσει ξανά να χορηγεί ινσουλίνη
 
-_or_
+_ή_
 
-b) If you want to be more aggressive (for example, you are heading for hyperglycemia), you can navigate to the calculator and bolus for zero carbs, to immediately deliver the calculated missing insulin as a bolus.
+β) Αν θέλετε να είστε πιο επιθετικοί (για παράδειγμα, οδεύετε προς υπεργλυκαιμία), μπορείτε να ανοίξετε τον [Οδηγό Bolus](#aaps-screens-bolus-wizard) και να κάνετε bolus για μηδέν υδατάνθρακες, ώστε να χορηγηθεί αμέσως ως bolus η υπολογισμένη ινσουλίνη που λείπει.
+
+Ποια στρατηγική προτιμάτε είναι πολύ προσωπικό θέμα. Τη βρίσκετε καλύτερα με δοκιμή και λάθος.
 
 
-Which strategy you prefer is highly personal, and is best determined by trial and error.    
+(Aapsscreens-site-rotation)=
+## Εναλλαγή σημείων
+
+Το **Διαχείριση → Εναλλαγή σημείων** ανοίγει τον διάλογο Εναλλαγή σημείων σε λειτουργία προβολής:
+
+- Με τα δύο κουμπιά στο επάνω μέρος (εικονίδιο καθετήρα και εικονίδιο αισθητήρα) μπορείτε να δείξετε μόνο σημεία καθετήρα, μόνο σημεία αισθητήρα ή και τα δύο
+- Είναι διαθέσιμα όλα τα συμβάντα αλλαγής καθετήρα και αλλαγής αισθητήρα των τελευταίων 45 ημερών.
+- Πατήστε μια περιοχή σημείου ή μια καταχώριση στη λίστα από κάτω για να φιλτράρετε τη λίστα, ώστε να δείχνει μόνο τις καταχωρίσεις της επιλεγμένης περιοχής. Η επιλεγμένη περιοχή επισημαίνεται με ανοιχτό πράσινο χρώμα.
+- Πατήστε το εικονίδιο **μολυβιού** δίπλα σε μια καταχώριση για να ανοίξει η προβολή επεξεργασίας και να αλλάξετε την τοποθεσία σημείου, το βέλος ή τη σημείωσή της
+
+![Λειτουργία προβολής](../images/SiteRotation/ViewMode.png)
+
+- Το εικονίδιο με το **γρανάζι** (πάνω δεξιά) ανοίγει τις ρυθμίσεις: το **Προφίλ χρήστη για εναλλαγή σημείων** ανοίγει έναν διάλογο όπου επιλέγετε **Άνδρας**, **Γυναίκα** ή **Παιδί**, και οι διακόπτες **Διαχείριση εναλλαγής σημείων αντλίας** και **Διαχείριση εναλλαγής σημείων CGM** ορίζουν ποια σημεία διαχειρίζεστε.
+
+![Ρυθμίσεις](../images/SiteRotation/Settings.png)
+
+![Διάλογος Προφίλ χρήστη για εναλλαγή σημείων](../images/SiteRotation/Type.png)
+
+*Σημείωση: αυτή η ρύθμιση ορίζει αν θα ανοίγει αυτόματα ο διάλογος Εναλλαγή σημείων (λειτουργία επεξεργασίας) όταν γίνεται νέα καταχώριση από το «κουμπί Πλήρωση/Γέμισμα» ή το «κουμπί τοποθέτησης αισθητήρα CGM»*
+
+- Για αλλαγή σημείου που έγινε απευθείας από την αντλία, πρέπει να ανοίξετε τη λειτουργία προβολής και να επεξεργαστείτε τη νέα καταχώριση για να επιλέξετε τοποθεσία και βέλος
+
+Η λειτουργία επεξεργασίας σας επιτρέπει να επιλέξετε τοποθεσία, βέλος και σημείωση για την επιλεγμένη καταχώριση:
+
+- Η καταχώριση που επεξεργάζεστε φαίνεται κάτω από τις εικόνες του σώματος, με το εικονίδιο του τύπου της (καθετήρας ή αισθητήρας)
+- Η μπροστινή και η πίσω όψη φαίνονται δίπλα-δίπλα: πατήστε την περιοχή όπου το τοποθετήσατε
+- Μόλις επιλέξετε ένα σημείο (επισημαίνεται με πράσινο), βλέπετε στη λίστα από κάτω όλες τις καταχωρίσεις των τελευταίων 45 ημερών σε αυτό το σημείο
+
+![Λειτουργία επεξεργασίας](../images/SiteRotation/EditMode.png)
+
+- Μπορείτε να προσθέσετε ένα προαιρετικό βέλος πατώντας το εικονίδιο βέλους δεξιά από την καταχώριση: ο διάλογος **Επιλογή βέλους** σας επιτρέπει να ορίσετε μια πιο ακριβή θέση ή τον προσανατολισμό του pod
+
+![Θέση](../images/SiteRotation/EditModeSub.png)
+
+- Μπορείτε επίσης να προσθέσετε μια **Σημείωση** για το επιλεγμένο σημείο
+- Πατήστε το εικονίδιο **αποθήκευσης** (πάνω δεξιά) για να καταγράψετε το σημείο
+
+Το φιλτράρισμα γίνεται γραφικά πάνω στην εικόνα ή πατώντας ένα συμβάν θεραπείας στη λίστα Για να αφαιρέσετε το φίλτρο, απλώς πατήστε στην εικόνα έξω από κάθε σημείο
+
+![Φιλτράρισμα](../images/SiteRotation/Filtering.png)

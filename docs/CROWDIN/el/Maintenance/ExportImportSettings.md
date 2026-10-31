@@ -1,152 +1,189 @@
-# Creating and restoring back-ups
+# Δημιουργία και επαναφορά αντιγράφων ασφαλείας
 
-When installing AAPS on your phone it becomes a "medical device" you rely on daily. It is highly recommended to have an emergency backup plan for when your phone gets defective, stolen or lost. Therefore, it is essential to prepare by asking yourself, "What if?
+Όταν εγκαθιστάτε το AAPS στο τηλέφωνό σας, αυτό γίνεται μια «ιατρική συσκευή» στην οποία βασίζεστε κάθε μέρα. Συνιστάται έντονα να έχετε ένα σχέδιο έκτακτης ανάγκης για την περίπτωση που το τηλέφωνό σας χαλάσει, κλαπεί ή χαθεί. Γι' αυτό είναι σημαντικό να προετοιμαστείτε, ρωτώντας τον εαυτό σας: «Τι γίνεται αν...;»
 
-To restore your AAPS setup to an existing or new phone, it's important to keep following items in a secure location (read: not on your phone). Best practice is to keep at least two separate backups: on a local hard drive, USB stick and (preferred) on Cloud storage like Google Drive or Microsoft 365 OneDrive. By storing your backups in the cloud you'll always have everything needed accessible from your phone to restore your setup anywhere and anytime.
+Για να επαναφέρετε τη ρύθμιση του AAPS σε υπάρχον ή νέο τηλέφωνο, είναι σημαντικό να κρατάτε τα παρακάτω σε ασφαλές μέρος (δηλαδή: όχι στο τηλέφωνό σας). Η καλύτερη πρακτική είναι να κρατάτε τουλάχιστον δύο ξεχωριστά αντίγραφα ασφαλείας: σε τοπικό σκληρό δίσκο, σε USB stick και (καλύτερα) σε αποθήκευση cloud, όπως το Google Drive ή το Microsoft 365 OneDrive. Αν αποθηκεύετε τα αντίγραφα ασφαλείας στο cloud, θα έχετε πάντα όλα όσα χρειάζεστε διαθέσιμα από το τηλέφωνό σας, για να επαναφέρετε τη ρύθμισή σας οπουδήποτε και οποτεδήποτε.
 
-Consider acquiring a secondary backup phone and practicing restoring AAPS to ensure the backup phone works as expected. This step will give you confidence that your emergency plan is effective and that you can seamlessly continue using AAPS if your primary phone becomes unavailable.
+Σκεφτείτε να αποκτήσετε ένα δεύτερο εφεδρικό τηλέφωνο και να κάνετε δοκιμαστική επαναφορά του AAPS, ώστε να βεβαιωθείτε ότι το εφεδρικό τηλέφωνο λειτουργεί όπως περιμένετε. Αυτό το βήμα θα σας δώσει σιγουριά ότι το σχέδιο έκτακτης ανάγκης σας λειτουργεί και ότι μπορείτε να συνεχίσετε χωρίς διακοπή να χρησιμοποιείτε το AAPS, αν το κύριο τηλέφωνό σας δεν είναι διαθέσιμο.
 
-To be able to restore, having the following items at hand is important:
+Για να μπορείτε να κάνετε επαναφορά, είναι σημαντικό να έχετε διαθέσιμα τα παρακάτω:
 
-- Your **Android Studio keystore file** and associated **password**: Needed for (re)building the AAPS .APK installer file.
-- A recent copy of the **AAPS installer .APK**
-- A recent **settings export** file: For restoring important settings (which includes your objectives!).
-- Your **AAPS master password**
-- Backups of additional utilities: Such as BYODA and/or xDrip+.
-- Personal notes on your setup.
+- Το **αρχείο keystore του Android Studio** και τον σχετικό **κωδικό**: Χρειάζονται για να κάνετε (ξανά) build το αρχείο εγκατάστασης .APK του AAPS.
+- Ένα πρόσφατο αντίγραφο του **αρχείου εγκατάστασης .APK του AAPS**
+- Ένα πρόσφατο αρχείο **εξαγωγής ρυθμίσεων**: Για την επαναφορά σημαντικών ρυθμίσεων (μαζί με τα Βήματά σας!).
+- Τον **Κύριο κωδικό του AAPS**
+- Αντίγραφα ασφαλείας άλλων βοηθητικών εφαρμογών: Όπως BYODA και/ή xDrip.
+- Προσωπικές σημειώσεις για τη ρύθμισή σας.
 
-Below are the items that are recommended for keeping back-ups.
+Παρακάτω είναι τα στοιχεία για τα οποία συνιστάται να κρατάτε αντίγραφα ασφαλείας.
 
-## Creating back-ups
+## Δημιουργία αντιγράφων ασφαλείας
 
-### Keystore file from the computer you used to build the APK
-When building your .APK installer file from Android Studio, it uses the **keystore file and password to sign the .APK installer file**. To update your current AAPS installation, it is required to sign the update .APK installer file with the same keystore used for the initial installation. When updating, all settings and the AAPS database will be kept. Note that without this, you are required to first uninstall the current application and then reinstall and reconfigure AAPS.
+### Το αρχείο keystore από τον υπολογιστή που χρησιμοποιήσατε για να κάνετε build το APK
+Όταν κάνετε build το αρχείο εγκατάστασης .APK με το Android Studio, χρησιμοποιείται το **αρχείο keystore και ο κωδικός για την υπογραφή του αρχείου εγκατάστασης .APK**. Για να ενημερώσετε την τρέχουσα εγκατάσταση του AAPS, το αρχείο εγκατάστασης .APK της ενημέρωσης πρέπει να υπογραφεί με το ίδιο keystore που χρησιμοποιήθηκε στην αρχική εγκατάσταση. Κατά την ενημέρωση διατηρούνται όλες οι ρυθμίσεις και η βάση δεδομένων του AAPS. Χωρίς αυτό, πρέπει πρώτα να απεγκαταστήσετε την τρέχουσα εφαρμογή και μετά να [επανεγκαταστήσετε](#reinstall-aaps) και να ρυθμίσετε ξανά το AAPS.
 
-Maintaining the keystore and associated password will greatly reduce the complexity of updating the APK in the future, especially if you need to build the app from a new computer. See the [Updating AAPS](../Maintenance/UpdateToNewVersion.md) section for details on using the keystore when building a new APK.
+Αν κρατάτε το keystore και τον κωδικό του, οι μελλοντικές ενημερώσεις του APK θα είναι πολύ πιο απλές, ιδιαίτερα αν χρειαστεί να κάνετε build την εφαρμογή σε νέο υπολογιστή. Δείτε την ενότητα [Ενημέρωση σε νέα έκδοση ή κλάδο](../Maintenance/UpdateToNewVersion.md) για λεπτομέρειες σχετικά με τη χρήση του keystore όταν κάνετε build ένα νέο APK.
 
-**When to back-up:** The keystore should be backed up after you first build the **AAPS** .APK installer file.
+**Πότε να κάνετε αντίγραφο ασφαλείας:** Κάντε αντίγραφο ασφαλείας του keystore αφού κάνετε build για πρώτη φορά το αρχείο εγκατάστασης .APK του **AAPS**.
 
-**How to back-up:** Locate your keystore path. If you don’t remember it you can find it in Android Studio by selecting **Build > APK > Next**. The path will be listed in “Key store path”. Using your file explorer, navigate to this path and make a copy of your keystore file (ending in file extension `.jks`). Save it to a safe cloud location should your computer become unavailable. Make sure to also record your key store password, key alias and key password.
+**Πώς να κάνετε αντίγραφο ασφαλείας:** Βρείτε τη διαδρομή του keystore σας. Αν δεν το θυμάστε, μπορείτε να το βρείτε στο Android Studio επιλέγοντας **Build > APK > Next**. Η διαδρομή εμφανίζεται στο πεδίο “Key store path”. Με τον διαχειριστή αρχείων, πηγαίνετε σε αυτή τη διαδρομή και δημιουργήστε ένα αντίγραφο του αρχείου keystore (με κατάληξη αρχείου `.jks`). Αποθηκεύστε το σε ασφαλές μέρος στο cloud, για την περίπτωση που ο υπολογιστής σας δεν θα είναι διαθέσιμος. Σημειώστε επίσης τον κωδικό του keystore (key store password), το ψευδώνυμο κλειδιού (key alias) και τον κωδικό κλειδιού (key password).
 
-### Copies of the most recent APK
-In case your main **AAPS** phone is lost or damaged, having a copy of the APK available will allow you to quickly resume using **AAPS** with a new phone. Note: you will also need your preferences backed up as noted below.
+### Αντίγραφα του πιο πρόσφατου APK
+Αν το κύριο τηλέφωνο του **AAPS** χαθεί ή χαλάσει, με ένα αντίγραφο του APK θα μπορείτε να συνεχίσετε γρήγορα να χρησιμοποιείτε το **AAPS** σε νέο τηλέφωνο. Σημείωση: θα χρειαστείτε επίσης αντίγραφο ασφαλείας των ρυθμίσεων, όπως περιγράφεται παρακάτω.
 
-**When to back-up:** You should maintain a back-up of the most recent APK that you installed on your main **AAPS** phone. You may want to also maintain one earlier version in case you need to roll back to that for any reason.
+**Πότε να κάνετε αντίγραφο ασφαλείας:** Κρατάτε αντίγραφο ασφαλείας του πιο πρόσφατου APK που εγκαταστήσατε στο κύριο τηλέφωνο του **AAPS**. Καλό είναι να κρατάτε και μία παλαιότερη έκδοση, για την περίπτωση που χρειαστεί για οποιονδήποτε λόγο να επιστρέψετε σε αυτήν.
 
-**How to back-up:** Maintain a copy on the computer used to build the APK with Android Studio. Additionally, it is recommended to use a cloud platform to store a copy of the installer APK. Make sure you know how to locate both backups when needed. Consider setting up dedicated folders to store these backups.
+**Πώς να κάνετε αντίγραφο ασφαλείας:** Κρατήστε ένα αντίγραφο στον υπολογιστή όπου κάνατε build το APK με το Android Studio. Επιπλέον, συνιστάται να αποθηκεύετε ένα αντίγραφο του APK εγκατάστασης σε μια πλατφόρμα cloud. Βεβαιωθείτε ότι ξέρετε πού θα βρείτε και τα δύο αντίγραφα ασφαλείας όταν τα χρειαστείτε. Σκεφτείτε να δημιουργήσετε ξεχωριστούς φακέλους για αυτά τα αντίγραφα ασφαλείας.
 
-### AAPS settings file (also referred to as 'Preferences')
+### Αρχείο ρυθμίσεων του AAPS (λέγεται επίσης 'Preferences')
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS Directory** in Preferences > [Maintenance Settings](#preferences-maintenance-settings).
+Θα βρείτε τις ρυθμίσεις σας στον **Φάκελο AAPS** που επιλέξατε κατά τη [ρύθμιση του AAPS](#SetupWizard-StoragePermission).</br>
+Μπορείτε επίσης να αλλάξετε τον **Φάκελο AAPS** στην οθόνη **Συντήρηση** (**μενού** (☰) > **Συντήρηση**), δείτε [Ορισμός του τοπικού φακέλου AAPS](#preferences-maintenance-logdirectory).
 ```
 
-With a copy of the APK installer file (see above) and your **Settings** file, you can quickly get up and running on an existing or new phone.
+Με ένα αντίγραφο του αρχείου εγκατάστασης APK (δείτε παραπάνω) και το αρχείο **Ρυθμίσεων**, μπορείτε γρήγορα να ξεκινήσετε σε υπάρχον ή νέο τηλέφωνο.
 
-The **Settings** file is used to customize the AAPS application to fit your specific setup. They encompass details such as your config builder settings, objective status, third-party communication settings (e.g., Nightscout, Tidepool), automations, and profiles.
+Το αρχείο **Ρυθμίσεων** χρησιμοποιείται για να προσαρμόσει την εφαρμογή AAPS στη δική σας ρύθμιση. Περιλαμβάνουν στοιχεία όπως τις ρυθμίσεις της **Διαμόρφωσης**, την κατάσταση των Βημάτων, τις ρυθμίσεις επικοινωνίας με τρίτες υπηρεσίες (π.χ. Nightscout, Tidepool), τους αυτοματισμούς και τα προφίλ.
 
-Exporting the AAPS settings to file enables you to restore its configuration to a specific point in time. As mentioned, in addition to all configuration settings, the export file also contains the status of your objectives, which you need to restore when **(re)installing** AAPS. Without this you will be required to redo all objectives from start to enable closed loop. Settings files also enable you to restore "last known good" settings for undoing any configuration changes.
+Με την εξαγωγή των ρυθμίσεων του AAPS σε αρχείο μπορείτε να επαναφέρετε τη διαμόρφωσή του όπως ήταν σε μια συγκεκριμένη χρονική στιγμή. Όπως αναφέρθηκε, εκτός από όλες τις ρυθμίσεις διαμόρφωσης, το αρχείο εξαγωγής περιέχει και την κατάσταση των Βημάτων σας, την οποία πρέπει να επαναφέρετε όταν **(επαν)εγκαθιστάτε** το AAPS. Χωρίς αυτό θα πρέπει να κάνετε ξανά όλα τα Βήματα από την αρχή για να ενεργοποιήσετε το κλειστό κύκλωμα. Τα αρχεία ρυθμίσεων σας επιτρέπουν επίσης να επαναφέρετε τις «τελευταίες γνωστές καλές» ρυθμίσεις, για να αναιρέσετε αλλαγές στη διαμόρφωση.
 
-**When to back-up AAPS settings:**
-* Each time you complete an objective to prevent losing your progress. _Without a copy of your **Settings** you will have to complete all objectives again in the event you need to re-install AAPS or replace your phone._
+**Πότε να κάνετε αντίγραφο ασφαλείας των ρυθμίσεων του AAPS:**
+* Κάθε φορά που ολοκληρώνετε ένα Βήμα, ώστε να μη χάσετε την πρόοδό σας. _Χωρίς αντίγραφο των **Ρυθμίσεών** σας θα πρέπει να ολοκληρώσετε ξανά όλα τα Βήματα, αν χρειαστεί να επανεγκαταστήσετε το AAPS ή να αλλάξετε τηλέφωνο._
 
-* Any time you plan to make significant changes to your configuration (change SMB settings, change insulin types, change pump, make changes to automations) you should back up your **Settings** before and after making the changes. This way you have your most recent settings as well as a copy of what they were before the changes in case you need to revert back to them.
+* Κάθε φορά που σκοπεύετε να κάνετε σημαντικές αλλαγές στη διαμόρφωσή σας (αλλαγή ρυθμίσεων SMB, αλλαγή τύπου ινσουλίνης, αλλαγή αντλίας, αλλαγές σε αυτοματισμούς), πρέπει να κάνετε αντίγραφο ασφαλείας των **Ρυθμίσεων** πριν και μετά τις αλλαγές. Έτσι έχετε τις πιο πρόσφατες ρυθμίσεις σας και επίσης ένα αντίγραφο των ρυθμίσεων πριν από τις αλλαγές, για την περίπτωση που χρειαστεί να επιστρέψετε σε αυτές.
 
-* Tubeless pumps (Such as Omnipod and Medtrum) users only : the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. If you do not have a copy of your preferences exported after you started your current pod you will need to start a new pod in the event you need to replace your current phone.
+* Μόνο για χρήστες αντλιών χωρίς σωληνάκι (όπως Omnipod και Medtrum): το αρχείο **Ρυθμίσεων** περιέχει τα στοιχεία σύνδεσης του τρέχοντος pod σας και μπορεί να χρησιμοποιηθεί για να επαναφέρετε τη σύνδεση με αυτό το pod από νέο τηλέφωνο. Αν δεν έχετε αντίγραφο των ρυθμίσεων που εξάγατε αφού ξεκινήσατε το τρέχον pod, θα πρέπει να ξεκινήσετε νέο pod σε περίπτωση που χρειαστεί να αντικαταστήσετε το τρέχον τηλέφωνό σας.
 
-**How to back-up manually:**
+**Πώς να κάνετε αντίγραφο ασφαλείας χειροκίνητα:**
 
-1. If this your first time importing or exporting **Settings** you will need to set a master password in [Preferences > General > Protection](#Preferences-master-password). Set a password and record this in a safe place. _You will be unable to access your **Settings** back-ups without this password._
+1. Αν κάνετε εισαγωγή ή εξαγωγή **Ρυθμίσεων** για πρώτη φορά, θα πρέπει να ορίσετε έναν Κύριο κωδικό στο [Ρυθμίσεις > Προστασία](#Preferences-master-password). Ορίστε έναν κωδικό και σημειώστε τον σε ασφαλές μέρος. _Χωρίς αυτόν τον κωδικό δεν θα έχετε πρόσβαση στα αντίγραφα ασφαλείας των **Ρυθμίσεων**._
 
-2. From the **AAPS** home screen, select the three line (hamburger) menu in the top left > Maintenance > Export settings > type in Master password set above > Ok
+2. Από την κύρια οθόνη του **AAPS**, ανοίξτε το **μενού** (☰) > **Συντήρηση**. Επιλέξτε πού θα αποθηκευτεί το αρχείο με τα chips **Τοπικά** και **Cloud** δίπλα στο **Εξαγωγή ρυθμίσεων** (δείτε **Εξαγωγή ή εισαγωγή ρυθμίσεων** παρακάτω) και μετά πατήστε **Εξαγωγή ρυθμίσεων**. Το **AAPS** δείχνει πού θα αποθηκευτεί το αρχείο: το όνομα αρχείου για το **Τοπικά**, **Google Drive** για το **Cloud**. Πατήστε **ΟΚ**.
 
-![AAPS export settings 1](../images/Maintenance/AAPS_ExportSettings1.png) ![AAPS export settings 2](../images/Maintenance/AAPS_ExportSettings2.png)
+   ![Εξαγωγή ρυθμίσεων σε τοπικό αρχείο](../images/Maintenance/export_settings_confirm_local.png)
 
-3. Using the file explorer on your phone (commonly called “Files” or “My Files”) navigate to Internal Storage > AAPS > preferences. Here you will see a copy of all exported preferences files. The file name should be `YYYY-MM-DD_Time_appname.json`. Upload this file to the cloud platform of your choice. Then from the cloud platform, also download a copy to your local computer.
+   ![Εξαγωγή ρυθμίσεων στο Google Drive](../images/Maintenance/export_settings_confirm_cloud.png)
+
+   Πληκτρολογήστε τον Κύριο κωδικό που ορίσατε παραπάνω και πατήστε **ΟΚ**.
+
+   ![Κύριος κωδικός για την εξαγωγή](../images/Maintenance/export_settings_password.png)
+
+   Το μήνυμα **Έγινε εξαγωγή ρυθμίσεων** (τοπικά) ή **Η εξαγωγή στο cloud έγινε με επιτυχία** (cloud) επιβεβαιώνει την εξαγωγή.
+
+   ![Μήνυμα «Έγινε εξαγωγή ρυθμίσεων»](../images/Maintenance/export_settings_done_local.png)
+
+   ![Μήνυμα επιτυχούς εξαγωγής στο cloud](../images/Maintenance/export_settings_done_cloud.png)
+
+3. Με τον διαχειριστή αρχείων του τηλεφώνου σας (συνήθως λέγεται “Αρχεία” ή “Τα αρχεία μου”) πηγαίνετε στο Εσωτερικός χώρος αποθήκευσης > AAPS > preferences. Εδώ θα δείτε ένα αντίγραφο όλων των αρχείων ρυθμίσεων που έχουν εξαχθεί. Το όνομα αρχείου πρέπει να είναι `YYYY-MM-DD_Time_appname.json`. Ανεβάστε αυτό το αρχείο στην πλατφόρμα cloud της επιλογής σας. Στη συνέχεια, από την πλατφόρμα cloud, κατεβάστε ένα αντίγραφο και στον υπολογιστή σας.
 
 (ExportImportSettings-Settings-Export)=
 
-## Settings Export
+## Εξαγωγή ρυθμίσεων
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS Directory** in Preferences > [Maintenance Settings](#preferences-maintenance-settings).
+Θα βρείτε τις ρυθμίσεις σας στον **Φάκελο AAPS** που επιλέξατε κατά τη [ρύθμιση του AAPS](#SetupWizard-StoragePermission).</br>
+Μπορείτε επίσης να αλλάξετε τον **Φάκελο AAPS** στην οθόνη **Συντήρηση** (**μενού** (☰) > **Συντήρηση**), δείτε [Ορισμός του τοπικού φακέλου AAPS](#preferences-maintenance-logdirectory).
 ```
 
-It is recommended to do regular settings exports, especially before and after making configuration changes. You can choose to do exports **manually or (preferred) through automation**. Make sure to take a note of your AAPS master password and to backup your settings files by copying them off your phone to for instance a cloud storage location.
+Συνιστάται να κάνετε τακτικά εξαγωγή ρυθμίσεων, ιδιαίτερα πριν και μετά από αλλαγές στη διαμόρφωση. Μπορείτε να κάνετε τις εξαγωγές **χειροκίνητα ή (καλύτερα) με αυτοματισμό**. Σημειώστε τον Κύριο κωδικό του AAPS και κάντε αντίγραφο ασφαλείας των αρχείων ρυθμίσεων, αντιγράφοντάς τα έξω από το τηλέφωνο, για παράδειγμα σε αποθήκευση cloud.
 
-**Note**: _The exported settings will be encrypted with your AAPS master password: without the master password used for exporting you will be unable to import the settings file!_
+**Σημείωση**: _Οι ρυθμίσεις που εξάγονται κρυπτογραφούνται με τον Κύριο κωδικό του AAPS: χωρίς τον Κύριο κωδικό που χρησιμοποιήθηκε για την εξαγωγή δεν θα μπορείτε να κάνετε εισαγωγή του αρχείου ρυθμίσεων!_
 
-### Exporting or Importing Settings
-To export or import settings, use the **import or export buttons** in the AAPS **maintenance menu**
+### Εξαγωγή ή εισαγωγή ρυθμίσεων
+Για εξαγωγή ή εισαγωγή ρυθμίσεων, ανοίξτε το **μενού** (☰) και επιλέξτε **Συντήρηση**. Στην ενότητα **Διαχείριση αρχείων**, τα chips **Τοπικά** και **Cloud** δίπλα στα **Εξαγωγή ρυθμίσεων** και **Εισαγωγή ρυθμίσεων** ορίζουν πού αποθηκεύεται ή από πού διαβάζεται το αρχείο ρυθμίσεων: **Τοπικά** είναι ο φάκελος AAPS στο τηλέφωνό σας, το **Cloud** είναι διαθέσιμο όταν έχει ρυθμιστεί ένας [Φάκελος cloud](#preferences-maintenance-cloud). Με ένα πάτημα σε ένα chip το ενεργοποιείτε ή το απενεργοποιείτε· τουλάχιστον ένα μένει πάντα επιλεγμένο και οι δύο γραμμές έχουν την ίδια επιλογή. Μετά πατήστε το ίδιο το **Εξαγωγή ρυθμίσεων** ή **Εισαγωγή ρυθμίσεων** για να ξεκινήσει.
 
-![Maintenance menu export/import buttons](../images/Maintenance/maintenance_menu_import_export_400px.png)
+![Μενού Συντήρηση με τις γραμμές Εξαγωγή ρυθμίσεων και Εισαγωγή ρυθμίσεων](../images/Maintenance/maintenance_export_import.png)
 
 (ExportImportSettings-Automating-Settings-Export)=
-### Automating Settings Export
+### Αυτόματη εξαγωγή ρυθμίσεων
 
-For doing automating settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) enable the option "**Unattended Settings Exports**" in [Preferences > Maintenance](#preferences-maintenance-settings).
+Για αυτόματες εξαγωγές ρυθμίσεων [(**δείτε Αυτοματισμός**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) ανοίξτε [**Ρυθμίσεις** > **Συντήρηση**](#preferences-maintenance-settings), ανοίξτε την ενότητα **Αυτοματοποιημένη εξαγωγή ρυθμίσεων** και ενεργοποιήστε το **Ενεργοποίηση αυτόματης εξαγωγής ρυθμίσεων**.
 
-You can now configure [Automation](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) to export settings, either on a regular basis (_i.e._ each week), or after a pod change.
+Μπορείτε πλέον να ρυθμίσετε έναν [Αυτοματισμό](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) για την εξαγωγή ρυθμίσεων, είτε σε τακτική βάση (_π.χ._ κάθε εβδομάδα) είτε μετά από αλλαγή pod.
 
-_**Note:** On importing settings to user always needs to enter the AAPS password!_
+_**Σημείωση:** Κατά την εισαγωγή ρυθμίσεων, ο χρήστης πρέπει πάντα να πληκτρολογεί τον Κύριο κωδικό του AAPS!_
 
-![Maintenance menu unattended Settings Export](../images/Maintenance/maintenance_menu_preferences_400px.png)
+![Ρυθμίσεις > Συντήρηση > Αυτοματοποιημένη εξαγωγή ρυθμίσεων με τον διακόπτη Ενεργοποίηση αυτόματης εξαγωγής ρυθμίσεων](../images/Maintenance/settings_unattended_export.png)
 
 (ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps)=
-## Restoring from your backups on a new phone or fresh installation of AAPS
+## Επαναφορά από τα αντίγραφα ασφαλείας σε νέο τηλέφωνο ή σε νέα εγκατάσταση του AAPS
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS Directory** in Preferences > [Maintenance Settings](#preferences-maintenance-settings).
+Θα βρείτε τις ρυθμίσεις σας στον **Φάκελο AAPS** που επιλέξατε κατά τη [ρύθμιση του AAPS](#SetupWizard-StoragePermission).</br>
+Μπορείτε επίσης να αλλάξετε τον **Φάκελο AAPS** στην οθόνη **Συντήρηση** (**μενού** (☰) > **Συντήρηση**), δείτε [Ορισμός του τοπικού φακέλου AAPS](#preferences-maintenance-logdirectory).</br>
+Αν το **AAPS** χάσει την πρόσβαση σε αυτόν τον φάκελο (μπορεί να συμβεί μετά από επανεγκατάσταση ή μετά από διαγραφή του χώρου αποθήκευσης της εφαρμογής), εμφανίζει την ειδοποίηση **Χάθηκε η πρόσβαση στον φάκελο AAPS** και σταματά να αποθηκεύει ρυθμίσεις στο τηλέφωνο, μέχρι να [επιλέξετε ξανά τον φάκελο](#preferences-maintenance-logdirectory).
 ```
 
-Use these instructions if you have a back-up of your APK and **Preferences** that you want to load on to a new phone or if you needed to delete and reinstall the APK on your existing phone for any reason.
+Χρησιμοποιήστε αυτές τις οδηγίες αν έχετε αντίγραφο ασφαλείας του APK και των **Ρυθμίσεων** που θέλετε να φορτώσετε σε νέο τηλέφωνο ή αν χρειάστηκε για οποιονδήποτε λόγο να διαγράψετε και να εγκαταστήσετε ξανά το APK στο υπάρχον τηλέφωνό σας.
 
-_If you are updating **AAPS** using an APK built with the same keystore you should not need to follow this process. However, it is still advised to create a back-up before you apply the update._
+_Αν ενημερώνετε το **AAPS** με ένα APK που έγινε build με το ίδιο keystore, δεν χρειάζεται να ακολουθήσετε αυτή τη διαδικασία. Ωστόσο, συνιστάται να δημιουργήσετε ένα αντίγραφο ασφαλείας πριν εφαρμόσετε την ενημέρωση._
 
-If you are updating **AAPS** after you lost or replaced your original keystore (i.e. using a new build computer without transferring the keystore), ensure that you back up all settings per the above and then uninstall the existing version of **AAPS** on your phone.
+Αν ενημερώνετε το **AAPS** αφού χάσατε ή αντικαταστήσατε το αρχικό σας keystore (π.χ. με νέο υπολογιστή για build χωρίς να μεταφέρετε το keystore), βεβαιωθείτε ότι έχετε κάνει αντίγραφο ασφαλείας όλων των ρυθμίσεων όπως περιγράφεται παραπάνω και μετά απεγκαταστήστε την υπάρχουσα έκδοση του **AAPS** από το τηλέφωνό σας. Δείτε [Επανεγκατάσταση του AAPS με νέο keystore](#reinstall-aaps) για όλη τη διαδικασία.
 
-If needed, [set up your CGM/BG source receiver](../Getting-Started/CompatiblesCgms.md) prior to the steps listed below
+Αν χρειάζεται, [ρυθμίστε τον δέκτη της πηγής CGM/BG](../Getting-Started/CompatiblesCgms.md) πριν από τα παρακάτω βήματα
 
+(ExportImportSettings-tubeless-pumps)=
 ```{admonition} Tubeless pumps (Omnipod and Medtrum) users
 :class: warning
-Importing a **Preferences** file will deactivate your current pod if those **Preferences** were exported during a different active pod session. 
+Το αρχείο **Ρυθμίσεων** περιέχει τη συνεδρία του pod ή του patch που ήταν ενεργό όταν κάνατε την εξαγωγή.
+- **Κάντε εξαγωγή αμέσως μετά από κάθε ενεργοποίηση pod ή patch** και αντιγράψτε το αρχείο έξω από το τηλέφωνό σας.
+- **Ίδιο τηλέφωνο, το pod λειτουργεί ακόμα:** αφήστε το **Αντικατάσταση και των ρυθμίσεων αντλίας** χωρίς τσεκ. Το τρέχον pod σας διατηρείται και εισάγονται μόνο οι υπόλοιπες ρυθμίσεις.
+- **Νέο τηλέφωνο που αναλαμβάνει το pod:** τσεκάρετε το **Αντικατάσταση και των ρυθμίσεων αντλίας** και χρησιμοποιήστε μόνο αρχείο που εξήχθη κατά τη διάρκεια του pod που φοράτε τώρα. Ένα αρχείο από προηγούμενο pod αντικαθιστά τη συνεδρία του τρέχοντος pod σας και θα χρειαστεί να ξεκινήσετε νέο pod.
+- **Έγινε κατά λάθος εισαγωγή μιας παλιάς συνεδρίας pod:** το **AAPS** προσπαθεί συνέχεια να συνδεθεί με εκείνο το pod και δεν μπορείτε να ενεργοποιήσετε νέο. Απενεργοποιήστε το· αν αυτό αποτύχει, απορρίψτε το (δείτε για παράδειγμα [Απόρριψη pod](#omnipod-dash-discard-pod) για το Omnipod DASH).
 ```
 
-1. Using the back-up copy of your APK from above, follow the instructions for a [new installation](../SettingUpAaps/TransferringAndInstallingAaps.md)
+```{admonition} Pump settings are kept unless you say otherwise
+:class: note
+Από προεπιλογή, μια εισαγωγή δεν αλλάζει τις ρυθμίσεις της αντλίας: η αντλία που έχει επιλεγεί στη **Διαμόρφωση**, η σύζευξή της και όλες οι άλλες ρυθμίσεις της μένουν όπως είναι σε αυτό το τηλέφωνο. Τσεκάρετε το **Αντικατάσταση και των ρυθμίσεων αντλίας** στην οθόνη εισαγωγής μόνο όταν κάνετε επαναφορά σε νέο τηλέφωνο που πρέπει να αναλάβει την ίδια αντλία. Οι ρυθμίσεις που δεν υπάρχουν στο αρχείο δεν διαγράφονται ποτέ από μια εισαγωγή.
+```
 
-2. Launch **AAPS** and allow any requested permissions
+1. Με το αντίγραφο ασφαλείας του APK από παραπάνω, ακολουθήστε τις οδηγίες για [νέα εγκατάσταση](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
-3. Exit the Setup Wizard. We will be importing all the necessary settings from the back-up copy of **Preferences**
+2. Ανοίξτε το **AAPS** και δώστε όλες τις άδειες που ζητούνται
 
-4. From the **AAPS** home screen select Request and allow on all permissions listed in red on the top
+3. Βγείτε από τον Οδηγό εγκατάστασης. Θα κάνουμε εισαγωγή όλων των απαραίτητων ρυθμίσεων από το αντίγραφο ασφαλείας των **Ρυθμίσεων**
 
-5. From the **AAPS** home screen, set the master password in [Preferences > General > Protection](#Preferences-master-password) to the same password as you used with your back-ups.
+4. Από την κύρια οθόνη του **AAPS** πατήστε **Παραχώρηση** και δώστε όλες τις άδειες που εμφανίζονται στο πλαίσιο **Απαιτούνται άδειες** στο πάνω μέρος
 
-6. If you haven't done it yet, [set the **AAPS Directory**](#preferences-maintenance-settings): from the **AAPS** home screen, select the three line (hamburger) menu in the top left > Maintenance > AAPS DIRECTORY.
+5. Από την κύρια οθόνη του **AAPS**, ορίστε τον Κύριο κωδικό στο [Ρυθμίσεις > Προστασία](#Preferences-master-password) στον ίδιο κωδικό που χρησιμοποιήσατε για τα αντίγραφα ασφαλείας σας.
 
-7. From the **AAPS** home screen, select the three line (hamburger) menu in the top left > Maintenance > Export settings > type in Master password set above > Ok. This will create the preferences folder if it does not already exist on your phone.
+6. Αν δεν το έχετε κάνει ακόμα, [ορίστε τον **Φάκελο AAPS**](#preferences-maintenance-logdirectory): από την κύρια οθόνη του **AAPS**, ανοίξτε το **μενού** (☰) > **Συντήρηση** > **Φάκελος AAPS**.
 
-8. Download the back-up of your **Preferences** file from your cloud platform.
+7. Από την κύρια οθόνη του **AAPS**, ανοίξτε το **μενού** (☰) > **Συντήρηση** > **Εξαγωγή ρυθμίσεων** > πληκτρολογήστε τον Κύριο κωδικό που ορίσατε παραπάνω > **ΟΚ**. Έτσι δημιουργείται ο φάκελος preferences, αν δεν υπάρχει ήδη στο τηλέφωνό σας.
 
-9. Use your file explorer (commonly called “Files” or “My Files”) to move the file from your downloads to `/internal storage/AAPS/preferences` if your **AAPS Directory** has been set `/internal storage/AAPS`
+8. Κατεβάστε το αντίγραφο ασφαλείας του αρχείου **Ρυθμίσεων** από την πλατφόρμα cloud σας.
 
-10. From the **AAPS** home screen, select the three line (hamburger) menu in the top left > Maintenance > Import settings > select the preferences file you want to back-up from > Ok > type in Master password set above > Ok. Make sure you select the correct preferences file, all .json files from the preferences folder will be shown.
+9. Με τον διαχειριστή αρχείων (συνήθως λέγεται “Αρχεία” ή “Τα αρχεία μου”) μετακινήστε το αρχείο από τις λήψεις στο `/internal storage/AAPS/preferences`, αν ο **Φάκελος AAPS** έχει οριστεί σε `/internal storage/AAPS`
 
-![AAPS import settings 1](../images/Maintenance/AAPS_ImportSettings1.png) ![AAPS import settings 2](../images/Maintenance/AAPS_ImportSettings2.png)
+10. Από την κύρια οθόνη του **AAPS**, ανοίξτε το **μενού** (☰) > **Συντήρηση** και πατήστε **Εισαγωγή ρυθμίσεων**. Επιλέξτε το αρχείο ρυθμίσεων από το οποίο θέλετε να κάνετε επαναφορά (το νεότερο είναι στην κορυφή). Βεβαιωθείτε ότι επιλέγετε το σωστό αρχείο ρυθμίσεων· εμφανίζονται όλα τα αρχεία .json από τον φάκελο preferences (ή από τον φάκελο cloud, με το **Cloud**).
 
-10. **AAPS** will automatically restart and should then have all of your preferences imported.
+    ![Λίστα αρχείων ρυθμίσεων για εισαγωγή](../images/Maintenance/import_settings_files.png)
 
-11. Tubeless pumps (Omnipod and Medtrum) users only - if your **Preferences** were not backed up from the same pod you are currently using, you will need to start a new pod to begin insulin delivery.
+    Το **AAPS** δείχνει τα στοιχεία του αρχείου. Πληκτρολογήστε τον Κύριο κωδικό που ορίσατε παραπάνω και πατήστε **Αποκρυπτογράφηση & Έλεγχος**.
 
-**Troubleshooting:** if you are unable to get an active profile set from the **AAPS** home screen, select the three line (hamburger) menu in the top left > config builder > Pump > switch to Virtual Pump > then switch back to your pump type
+11. Όταν το αρχείο αποκρυπτογραφηθεί, αποφασίστε τι θα γίνει με τις ρυθμίσεις της αντλίας. Σε νέο τηλέφωνο που αναλαμβάνει την ίδια αντλία, τσεκάρετε το **Αντικατάσταση και των ρυθμίσεων αντλίας**, ώστε η σύζευξη και οι ρυθμίσεις της αντλίας να έρθουν από το αρχείο. Αφήστε το κουτί χωρίς τσεκ για να κρατήσετε την αντλία με την οποία είναι ήδη συζευγμένο αυτό το τηλέφωνο. Μετά πατήστε **Εισαγωγή**.
 
-### Note for Dana RS users
+    ![Αποκρυπτογραφημένο αρχείο ρυθμίσεων με το κουτί Αντικατάσταση και των ρυθμίσεων αντλίας και το κουμπί Εισαγωγή](../images/Maintenance/import_settings_review.png)
 
-- As pump connection settings are also imported **AAPS** on your new phone will already "know" the pump and therefore not start a bluetooth scan.
-- Please pair new phone and pump manually.
+12. Το **AAPS** ρωτά **Εφαρμογή των ρυθμίσεων που εισήχθησαν;** και σας λέει πόσες ρυθμίσεις θα αλλάξουν και, αν αφήσατε το κουτί χωρίς τσεκ, πόσες ρυθμίσεις αντλίας διατηρούνται. Δεν έχει γραφτεί τίποτα ακόμα, οπότε με το **Ακύρωση** το τηλέφωνό σας μένει ακριβώς όπως ήταν. Πατήστε **ΟΚ** για εφαρμογή.
+
+    ![Εφαρμογή των ρυθμίσεων που εισήχθησαν; παράθυρο διαλόγου](../images/Maintenance/import_settings_apply.png)
+
+13. Το **AAPS** εφαρμόζει αμέσως τις ρυθμίσεις που εισήχθησαν, χωρίς επανεκκίνηση. Επανεκκινούνται μόνο τα πρόσθετα (plugins) των οποίων οι ρυθμίσεις άλλαξαν. Όσο γίνεται αυτό, το **AAPS** δείχνει **Εφαρμογή ρυθμίσεων…**· αν η αντλία είναι απασχολημένη, δείχνει **Αναμονή για την αντλία…** και εφαρμόζει τις ρυθμίσεις μόλις η αντλία είναι ελεύθερη. Αν η αντλία είναι ακόμα απασχολημένη μετά από ένα λεπτό, το **AAPS** προτείνει να δοκιμάσετε ξανά. Το μήνυμα **Οι ρυθμίσεις εφαρμόστηκαν** επιβεβαιώνει ότι χρησιμοποιούνται οι ρυθμίσεις που εισήχθησαν. Κάθε θεραπεία που ήταν στην ουρά όσο γινόταν η εισαγωγή ακυρώνεται και το **AAPS** σας ενημερώνει ότι ακυρώθηκε, ώστε να μη σταλεί τίποτα δύο φορές στην αντλία.
+
+    ![Μήνυμα «Οι ρυθμίσεις εφαρμόστηκαν»](../images/Maintenance/import_settings_applied.png)
+
+Αν το αρχείο είχε επιλεγμένη μια αντλία που δεν υπάρχει σε αυτή την έκδοση του **AAPS**, το **AAPS** επιστρέφει στην **Εικονική Αντλία** και σας ενημερώνει. Επιλέξτε ξανά την αντλία σας στη **Διαμόρφωση** και ελέγξτε τις ρυθμίσεις της.
+
+14. Μόνο για χρήστες αντλιών χωρίς σωληνάκι (Omnipod και Medtrum) - αν τσεκάρατε το **Αντικατάσταση και των ρυθμίσεων αντλίας** και οι **Ρυθμίσεις** σας δεν εξήχθησαν κατά τη διάρκεια του pod που χρησιμοποιείτε τώρα, θα πρέπει να ξεκινήσετε νέο pod για να αρχίσει η χορήγηση ινσουλίνης.
+
+**Αντιμετώπιση προβλημάτων:** αν δεν μπορείτε να ορίσετε ενεργό προφίλ, από την κύρια οθόνη του **AAPS** ανοίξτε το **μενού** (☰) πάνω αριστερά > **Διαμόρφωση** > **Αντλία** > αλλάξτε σε **Εικονική Αντλία** > μετά αλλάξτε ξανά στον τύπο της αντλίας σας
+
+### Σημείωση για τους χρήστες της Dana RS
+
+- Αν τσεκάρατε το **Αντικατάσταση και των ρυθμίσεων αντλίας**, εισάγονται και οι ρυθμίσεις σύνδεσης της αντλίας: το **AAPS** στο νέο σας τηλέφωνο θα «γνωρίζει» ήδη την αντλία και γι' αυτό δεν θα ξεκινήσει αναζήτηση Bluetooth.
+- Συνδέστε (pair) χειροκίνητα το νέο τηλέφωνο με την αντλία.

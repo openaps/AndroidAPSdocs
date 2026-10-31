@@ -1,191 +1,236 @@
 # Cele tymczasowe
 
-## Czym są Cele tymczasowe, gdzie mogę je ustawić i skonfigurować?
+## Czym są cele tymczasowe i gdzie mogę je ustawić i skonfigurować?
 
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](#profile-glucose-targets) for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage.
+**Cel tymczasowy** (w skrócie **TT**) to funkcja **AAPS**, która pozwala zmienić [zakres docelowy **BG**](#profile-glucose-targets) na czas planowanych aktywności. **AAPS** robi to, zmieniając ilość insuliny podawanej użytkownikowi.
 
-A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
+Cel glukozy, szczególnie krótkotrwały (trwający mniej niż 4 godziny), nie musi być *rzeczywistą wartością*, do której ma dojść Twoja glukoza. To raczej dobry sposób, aby powiedzieć **AAPS**, żeby działał bardziej lub mniej agresywnie, a glukoza nadal była w zakresie.
 
-Temporary targets can be defined within those boundaries :
+Cele tymczasowe można ustawić w tych granicach:
 
-|         | Temporary target       |
-| ------- | ---------------------- |
-| Minimum | 4 mmol/l or 72 mg/dL   |
-| Maximum | 15 mmol/l or 225 mg/dL |
+|          | Cel tymczasowy (TT)     |
+| -------- | ----------------------- |
+| Minimum  | 4 mmol/l lub 72 mg/dl   |
+| Maksimum | 10 mmol/l lub 180 mg/dl |
 
-**AAPS** provides for three **Temp-Target** options suitable for exercise (**Temp-Target- Activity**), meals (**Temp-Target- Eating soon**) and predicted hypoglycemia (**Temp-Target-Hypo**). **Temp-Targets** are located under the **Actions tab**.
+**AAPS** ma trzy wbudowane presety **celu tymczasowego**: na ćwiczenia (**Aktywność**), na posiłki (**Wkrótce posiłek**) i na przewidywaną hipoglikemię (**Hipo**). Znajdziesz je na ekranie **Cel tymczasowy** (**Zarządzaj** → **Cel tymczasowy**), który możesz też otworzyć, dotykając **elementu celu** na ekranie głównym.
 
-Users should have realistic expectations on the results that can be achieved when selecting a **Temp-Target** in **AAPS**. The success of attaining a desired **BG** target will vary depending on a multiple factors ranging from: the reliability of the user’s **AAPS** settings, overall **BG** control, **IOB**, insulin sensitivity, insulin resistance, level of exertion undertaken during the exercise and so forth.
+Miej realistyczne oczekiwania co do wyników, które można osiągnąć, gdy wybierasz **cel tymczasowy** w **AAPS**. To, czy uda się osiągnąć żądany cel **BG**, zależy od wielu czynników, takich jak: poprawność ustawień **AAPS**, ogólna kontrola **BG**, **IOB**, wrażliwość na insulinę, insulinooporność, intensywność wysiłku podczas ćwiczeń i tak dalej.
 
-A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**.
+Osiągnięcie żądanego celu **BG** po ustawieniu **celu tymczasowego** może trwać około 30 minut lub dłużej. **AAPS** nie może osiągnąć celu **BG** natychmiast. Pamiętaj o tym, gdy wybierasz **cel tymczasowy**.
 
-The table below summarizes the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**, and **Temp-Target-Hypo**.
+Poniższe sekcje opisują funkcje **celu tymczasowego Ćwiczenia**, **celu tymczasowego Wkrótce posiłek** i **celu tymczasowego Hipo**. Pokazane wartości to ustawienia domyślne — możesz [dostosować każdy preset](#TempTargets-change-preset-defaults) do swoich potrzeb.
 
-### TT - Activity
+### TT - Ćwiczenia
 
-![TT Activity](../images/TempTarget2.png)
+![TT Ćwiczenia](../images/TempTarget2.png)
 
-**BG Target (depending on users' settings)**
+**Cel BG (domyślny preset, można go zmienić)**
 
-AAPS will aim to reach 8mmol/l or 144mg/dl for 40 minutes
+AAPS będzie dążyć do 140 mg/dl lub 7,8 mmol/l przez 1 godz. 30 min
 
-**Other considerations users may wish to factor in when selecting**:
+**Inne rzeczy, które warto wziąć pod uwagę przy wyborze**:
 
-Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
+W zależności od poziomu **BG** **AAPS** „zmniejszy” ilość podawanej insuliny, aby osiągnąć cel **BG**. Jeśli **BG** nie jest w zakresie docelowym (tzn. jest powyżej celu **BG** wybranego w **profilu**), **AAPS** może dalej podawać bazę.
 
-In closed loop mode, **SMB**:
+W trybie zamkniętej pętli **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *może być* wyłączony (więcej o tym poniżej); i/lub
+- baza może zostać włączona, jeśli **AAPS** ma ujemne **IOB**, lub <0.
 
-Users may also wish to consider:
+Możesz też rozważyć:
 
-- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary person to person); and
-- *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise as reduced **IOB** as some users experience a rapid rise in **BG **post exercise.
+- *wybranie* tego **TT** 1–2 godziny przed planowanymi ćwiczeniami, aby mieć mniejsze IOB (właściwy czas dla tego TT jest u każdego inny); i
+- *wybranie* tymczasowego profilu (zmniejszenie) na czas planowanej aktywności, aby mieć mniejsze **IOB**;
+- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
 
-### TT - Eating soon
+### TT - Wkrótce posiłek
 
-![TT Activity](../images/TempTarget1.png)
+![TT Wkrótce posiłek](../images/TempTarget1.png)
 
-**BG Target (depending on users' settings)**
+**Cel BG (domyślny preset, można go zmienić)**
 
-AAPS will aim to reach 5mmol/l or 90mg/dl for 30 minutes
+AAPS będzie dążyć do 90 mg/dl lub 5,0 mmol/l przez 45 minut
 
-**Other considerations users may wish to factor in when selecting**:
+**Inne rzeczy, które warto wziąć pod uwagę przy wyborze**:
 
-In closed loop mode, **SMB**:
+W trybie zamkniętej pętli **SMB**:
 
-- will remain activated; and/or
-- basal may be also activated depending on the user's **Profile's** settings.
+- pozostanie włączony; i/lub
+- baza też może zostać włączona, w zależności od ustawień **profilu**.
 
-Depending on **BG** level, **AAPS** will "increase" insulin usage within the user's **AAPS** setting parameters in order to achieve the desired **BG** target.
+W zależności od poziomu **BG** **AAPS** „zwiększy” ilość podawanej insuliny w granicach Twoich ustawień **AAPS**, aby osiągnąć żądany cel **BG**.
 
-### TT - Hypo
+### TT - Hipo
 
-![TT Activity](../images/TempTarget3.png)
+![TT Hipo](../images/TempTarget3.png)
 
-**BG Target (depending on users' settings)**
+**Cel BG (domyślny preset, można go zmienić)**
 
-AAPS will aim to reach 7mmol/l or 126mg/dl for 30 minutes
+AAPS będzie dążyć do 160 mg/dl lub 8,9 mmol/l przez 1 godzinę
 
-**Other considerations users may wish to factor in when selecting**:
+**Inne rzeczy, które warto wziąć pod uwagę przy wyborze**:
 
-In closed loop mode, **SMB**:
+W trybie zamkniętej pętli **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *może być* wyłączony (więcej o tym poniżej); i/lub
+- baza może zostać włączona, jeśli **AAPS** ma ujemne **IOB**, lub <0.
+
+(TempTargets-manage-v4)=
+
+## Ustawianie celów tymczasowych i zarządzanie nimi (Zarządzaj → Cel tymczasowy)
+
+W **AAPS** v4 zarządzasz **presetami** TT i uruchamiasz cel tymczasowy z ekranu **Zarządzaj** (dolny pasek nawigacji) → **Cel tymczasowy** (*„Zarządzaj i ustawiaj tymczasowe cele”*).
+
+![Ekran Cel tymczasowy — karuzela presetów, edytor i pasek akcji](../images/v4/TempTarget/tt_management.png)
+
+Ekran ma trzy części:
+
+1. **Karuzela presetów** (na górze) — przewijaj palcem swoje presety TT. Każda karta pokazuje **nazwę**, **cel** i **czas trwania** presetu; aktualnie działający TT jest wyróżniony.
+2. **Edytor** (w środku) — **Cel tymczasowy** i **Czas trwania**, które zostaną naprawdę użyte, oraz data/godzina **Aktywacji**.
+3. **Pasek akcji** (na dole) — przyciski **➕ dodaj**, **‘️ usuń** i **▶ aktywuj**.
+
+Wybranie karty presetu wczytuje jej **cel** i **czas trwania** do edytora.
+
+```{admonition} Presety wbudowane i własne :class: note Presety wbudowane — **Wkrótce posiłek**, **Aktywność** i **Hipo** — zawsze istnieją i **nie można ich usunąć** (możesz jednak zmienić ich wartości i je zapisać). Presety, które tworzysz sam, są **własne** i możesz je dowolnie edytować lub usuwać.
+
+    <br />### Aktywacja celu tymczasowego
+    
+    Przewiń do wybranego presetu (jego wartości wczytają się do edytora), opcjonalnie zmień **cel**/**czas trwania** w edytorze, a potem dotknij **▶ Aktywuj**. Zanim cokolwiek się zacznie, potwierdzenie pokazuje dokładny cel, czas trwania i powód:
+    
+    ![Potwierdzenie aktywacji](../images/TempTarget8.png)
+    
+    Po potwierdzeniu cel tymczasowy zaczyna działać od razu (albo o wybranym czasie **Aktywacji**) i trwa przez ustawiony **czas trwania**.
+    
+    ```{admonition} Zmiana liczb działa tylko raz — nie zmienia presetu
+    :class: important
+    **Cel** i **czas trwania** w edytorze to wartości, których **Aktywuj** użyje *teraz*. Jeśli je zmienisz, ta zmiana jest **tymczasowa**: dotyczy tylko tej aktywacji i **nie zmienia zapisanego presetu**. Dzięki temu możesz „poprawić i aktywować” jednorazowy TT (na przykład aktywować dziś *Aktywność* z trochę innym celem) bez trwałej zmiany presetu.
+    
+
+### Zapisywanie zmian w presecie
+
+Jeśli *chcesz* zachować zmienioną wartość, **zapisz** ją: gdy edytor różni się od wybranego presetu, na górnym pasku pojawia się ikona **Zachowaj**. Dotknięcie jej zapisuje aktualny **cel** i **czas trwania** (oraz nazwę, dla własnych presetów) w wybranym presecie. Dla presetów wbudowanych na pasku akcji pojawia się też przycisk **Przywróć domyślne** (↺): przywraca on domyślne wartości presetu.
+
+![Ekran Cel tymczasowy z ikoną Zachowaj i przyciskiem Przywróć domyślne](../images/v4/TempTarget/tt_preset_save_revert.png)
+
+Prosta zasada:
+
+- **Aktywuj** → użyj liczb **jeden raz** (preset się nie zmienia).
+- **Zachowaj** → liczby stają się **nowymi wartościami domyślnymi** presetu.
+
+Aby przywrócić wbudowany preset do ustawień fabrycznych, wybierz go i dotknij przycisku **↺ Przywróć** — pojawia się on na pasku akcji tylko dla presetu **wbudowanego**, którego wartości różnią się teraz od fabrycznych, i przywraca oryginalny **cel** i **czas trwania** tego presetu.
+
+### Dodawanie i usuwanie presetów
+
+- **➕ Dodaj** — tworzy **nowy własny preset** z aktualnych wartości w edytorze. Nowa karta pojawia się w karuzeli.
+- **‘️ Usuń** — usuwa wybrany preset **własny**. Presetów wbudowanych (*Wkrótce posiłek*, *Aktywność*, *Hipo*) nie można usunąć.
+
+Gdy masz co najmniej dwa presety **własne**, możesz też zmienić ich kolejność w karuzeli: dotknij ikony **Zmień kolejność** (⇅) na górnym pasku, przesuwaj kartę ze środka **przyciskami ◀ / ▶**, a potem potwierdź **✓**. Presety wbudowane zostają na swoich miejscach — przesuwać można tylko presety własne. (Przyciski wyglądają tak samo jak przy [zmianie kolejności profili](ProfileSwitch-ProfilePercentage.md)).
+
+Twoje presety są częścią synchronizowanej konfiguracji, więc są wspólne dla urządzenia pacjenta i sparowanych urządzeń opiekuna.
+
+### Inne sposoby ustawienia celu tymczasowego
+
+Cel tymczasowy możesz też ustawić bez otwierania tego ekranu:
+
+- **przełącznikami TT w oknie Węglowodany** — zobacz [poniżej](#TempTargets-carbs-dialog),
+- **przyciskiem presetu na [pasku QuickLaunch](QuickLaunch.md)** — kategoria *Ustawienia wstępne celów tymczasowych* w *Konfiguracja szybkich akcji* daje przycisk do szybkiego użycia dla każdego z Twoich presetów,
+- z **zegarka z Wear OS** (pozycja menu / kafelek **Cel tymczasowy**),
+- ze sparowanego **urządzenia opiekuna** — zobacz [Sterowanie Master ↔ Client](../RemoteFeatures/ClientMasterControl.md),
+- jako część **[sceny](Scenes.md)** (akcja *Cel tymczasowy*) lub
+- z reguły **Automatyzacji** (*Rozpocznij cel tymczasowy* / *Zatrzymaj cel tymczasowy*).
+
+* * *
 
 (TempTargets-where-can-i-select-a-temp-target)=
 
-## Where can I select a Temp-Target?
+## Gdzie mogę wybrać cel tymczasowy?
 
-In the **Actions** tab in **AAPS**.
+Najszybciej jest dotknąć **elementu celu** na ekranie głównym (pokazuje on Twój aktualny zakres docelowy):
 
-1. select **Temporary Target** button; and then
-2. select desired **Temp-Target**
+![Element celu na ekranie głównym](../images/TempTarget6.png)
 
-![Carbs TT](../images/TempTarget4a.png)
+Otwiera to opisany wyżej ekran **Cel tymczasowy** — przewiń do presetu i dotknij **▶ Aktywuj**. Ten sam ekran otworzysz też przez **Zarządzaj** → **Cel tymczasowy**.
 
-Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
+(TempTargets-carbs-dialog)= Gdy wpisujesz węglowodany, nie musisz wcale otwierać ekranu **Cel tymczasowy**: **okno Węglowodany** (**Leczenie** → **Węglowodany**) ma na górze przełączniki **Rozpocznij TT Hipo**, **Rozpocznij TT WkrótcePosiłek** i **Rozpocznij TT Ćwiczenia**. Włącz jeden z nich, a odpowiedni preset zostanie aktywowany razem z wpisem węglowodanów:
 
-![Carbs TT](../images/TempTarget6.png)
+![Przełączniki TT w oknie Węglowodany](../images/TempTarget5.png)
 
-- Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
+    {admonition} Automatyczny TT Hipo
+    :class: note
+    Jeśli otworzysz **okno Węglowodany**, gdy Twoja glukoza jest poniżej 72 mg/dl (4 mmol/l), **AAPS** sam zaznaczy przełącznik **Rozpocznij TT Hipo** (chyba że już działa wyższy cel tymczasowy z dłuższym pozostałym czasem).
 
-![Preferences > Use default temp targets](../images/Pref2020_OV_DefaultTT2.png)
+(TempTargets-change-preset-defaults)=
 
-## Where can I change the default Temp-Target and override with my own preferences?
+## Gdzie mogę zmienić domyślny cel tymczasowy i zastąpić go własnymi ustawieniami?
 
-To reconfigure the ‘BG target range’ and ‘duration’ allocated to the user’s default **Temp-Target** settings, go to the menu in **AAPS** on the top right hand corner and
+**Cel** i **czas trwania** każdego presetu edytujesz bezpośrednio na ekranie **Cel tymczasowy** — nie ma już do tego osobnej pozycji w ustawieniach:
 
-1. select **Preferences** 
-2. scroll down to 'Overview’ 
-3. select ‘Default Temp-Targets’
-4. step 4 indicates (below) where to change **TT- Eating soon** time period
-5. step 5 indicates (below) where to change **TT - Eating soon** **BG** target range (and the same steps can be repeated for **TT -Activity** and **TT - Hypo**.
+1. Otwórz ekran **Cel tymczasowy** (dotknij elementu celu albo **Zarządzaj** → **Cel tymczasowy**).
+2. Przewiń do presetu, który chcesz zmienić.
+3. Zmień **Cel tymczasowy** i/lub **Czas trwania** w edytorze.
+4. Dotknij ikony **Zachowaj**, która pojawi się na górnym pasku.
 
-![Custom TT](../images/TempTarget7.png)
+![Edycja presetu — ikona Zachowaj na pasku narzędzi, Przywróć na pasku akcji](../images/TempTarget7.png)
 
-## How do I cancel a Temp-Target?
+Gdy edytor różni się od fabrycznych wartości presetu wbudowanego, na pasku akcji pojawia się też przycisk **↺ Przywróć** — dotknij go, aby przywrócić oryginalny cel i czas trwania presetu.
 
-To cancel a **Temp-Target** running:
+## Jak anulować cel tymczasowy?
 
-Select the “Cancel” button in **Temporary Target** under the **Actions** tab as shown below.
+Gdy działa cel tymczasowy, element celu na ekranie głównym pokazuje cel i pozostały czas. Dotknij go — na ekranie **Cel tymczasowy** działający preset jest wyróżniony jako **AKTYWNY**, a czerwony przycisk **✗ Anuluj** pojawia się na końcu dolnego paska, tuż na lewo od przycisku **▶ Aktywuj**. Dotknij go i potwierdź:
 
-![Custom TT](../images/TempTarget8.png)
+![Anulowanie działającego celu tymczasowego](../images/TempTarget9.png)
 
-Or short-click on the ‘BG Target’ in the yellow/green box located in the top right corner of **AAPS**, and select ‘cancel’ as shown below:
-
-![Actions TT](../images/TempTarget9.png)
-
-## How do I select a “Default-Temp-Targets”
-
-In the **Actions** tab in **AAPS**.
-
-1. select **Temporary Target** button; and then
-2. select desired **Temp-Target**
-
-![Actions TT](../images/TempTarget4.png)
-
-Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
-
-![BG TT](../images/TempTarget6.png)
-
-Or in the **Carbs** button
-
-1. selecting the desired **Temp-Target** in the shortcuts
-
-![Carbs TT](../images/TempTarget5.png)
+Działający cel tymczasowy możesz też zatrzymać z **zegarka z Wear OS**, ze sparowanego **urządzenia opiekuna** albo regułą **Automatyzacji** (*Zatrzymaj cel tymczasowy*).
 
 (TempTargets-hypo-temp-target)=
 
-## Hipo Cel tymczasowy
+## Cel tymczasowy Hipo
 
-**Temp-Target Hypo** enables **AAPS** to prevent the user from experiencing low blood sugar by reducing insulin intake. If the user predicts their **BG** will go low: usually, **AAPS** should handle it, but much will depend on the stability of the user’s **AAPS'** settings. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
+**Cel tymczasowy Hipo** pozwala **AAPS** chronić Cię przed niskim poziomem cukru przez zmniejszenie ilości podawanej insuliny. Jeśli przewidujesz, że Twoja **BG** spadnie nisko: zwykle **AAPS** powinien sobie z tym poradzić, ale dużo zależy od tego, jak dobre są Twoje ustawienia **AAPS**. **Cel tymczasowy Hipo** pozwala zareagować wcześniej, przed przewidywanym spadkiem, i sprawić, że **AAPS** zmniejszy ilość insuliny.
 
-Sometimes when hypo-treated carbs are eaten, the user's **BG** can rapidly rise, and **AAPS** will correct against the fast rising **BG** by enabling **SMBs**.
+Czasem po zjedzeniu węglowodanów na leczenie hipoglikemii **BG** może szybko rosnąć, a **AAPS** koryguje szybki wzrost **BG**, podając **SMB**.
 
-Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. This is achieved by deactivating *'Enable SMB with high Temp-Target'* in **Preferences** (see further below):
+Niektórzy użytkownicy chcą uniknąć podawania **SMB** w czasie **celu tymczasowego Hipo**. Robisz to, wyłączając *'Włącz SMB z wysokim tymczasowym poziomem docelowym'* w **Ustawienia** → **OpenAPS SMB** (zobacz niżej):
 
-- In (Advanced, objective 9): the user can enable *“High Temp-Targets raises sensitivity”* for **Temp-Targets** of 100mg/dl or 5.5mmol/l or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- Dla zaawansowanych (zadanie 9): możesz włączyć *„Wysoki cel tymczasowy zwiększa wrażliwość”* dla **celów tymczasowych** od 100 mg/dl (5,6 mmol/l) wzwyż w OpenAPS SMB — wtedy **AAPS** będzie bardziej wrażliwy.
 
-- In (Advanced, objective 9): the user can deactivate *“SMB with high temp target”*, so that even if **AAPS** has COB > 0, “SMB with Temp-Target” or “SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- Dla zaawansowanych (zadanie 9): możesz wyłączyć *„Włącz SMB z wysokim tymczasowym poziomem docelowym”*. Wtedy **AAPS** nie poda SMB, gdy działa wysoki cel tymczasowy, nawet jeśli **AAPS** ma COB > 0, włączone jest „Włącz SMB z niskim tymczasowym poziomem docelowym” lub „Zawsze włącz SMB” i OpenAPS SMB jest aktywny.
 
-Note: if the user enters carbs with the carb button and your blood glucose is less than 72mg/dl or 4mmol/l, **Temp-Target Hypo** is automatically enabled by **AAPS**.
+Uwaga: jeśli otworzysz **okno Węglowodany**, gdy Twoja glukoza jest niższa niż 72 mg/dl lub 4 mmol/l, **AAPS** sam zaznaczy przełącznik **Rozpocznij TT Hipo**.
 
 (TempTargets-activity-temp-target)=
 
-## Ćwiczenia Cel tymczasowy
+## Cel tymczasowy Ćwiczenia
 
-Before and during exercise, the user may require a higher target to prevent hypoglycemia during the activity.
+Przed ćwiczeniami i w ich trakcie możesz potrzebować wyższego celu, aby zapobiec hipoglikemii podczas aktywności.
 
-To simplify **Temp-Target Activity**, the user can configure a default **Temp-Target - Activity** to raise **BG** levels by reducing insulin usage in order to slow down **BG** fall and avoid hypoglycemia.
+Aby ułatwić korzystanie z **celu tymczasowego Ćwiczenia**, możesz ustawić domyślny **cel tymczasowy Ćwiczenia**, który podnosi poziom **BG** przez zmniejszenie ilości insuliny. Spowalnia to spadek **BG** i pomaga uniknąć hipoglikemii.
 
-New users to **AAPS** may need to experiment and personalise their **Temp-Target Activity** default settings in order to optimise this feature to work best for them. Everyone is different when it comes to attaining stable BG control during exercise. See also the [sports section in FAQ](#FAQ-sports). in FAQ.
+Nowi użytkownicy **AAPS** mogą potrzebować prób i dopasowania domyślnych ustawień **celu tymczasowego Ćwiczenia**, aby ta funkcja działała u nich jak najlepiej. Każdy człowiek inaczej osiąga stabilną kontrolę BG podczas ćwiczeń. Zobacz też [sekcję o sporcie w FAQ](#FAQ-sports).
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduced insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on.
+Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. Możesz uruchomić oba w jednym kroku: dotknij nazwy profilu na ekranie głównym, dotknij okrągłego przycisku **▶**, ustaw **Procent** poniżej 100% i **Czas trwania**, a potem włącz **Cel tymczasowy / Aktywność**. Zobacz [Zmiana procentu profilu](#ProfileSwitch-change-percentage).
 
-Advanced, objective 9: users can enable *'High Temp-Targets raises sensitivity'* for **Temp-Targets** higher or equal 100mg/dl or 5.5mmol/L in OpenAPS **SMB**. Then **AAPS** is more sensitive.
+Dla zaawansowanych, zadanie 9: możesz włączyć *'Wysoki cel tymczasowy zwiększa wrażliwość'* dla **celów tymczasowych** od 100 mg/dl (5,6 mmol/l) wzwyż w OpenAPS **SMB**. Cel 99 mg/dl (5,5 mmol/l) jest celem normalnym, ani wysokim, ani niskim. Wtedy **AAPS** jest bardziej wrażliwy.
 
-Additionally, if *'SMB with high Temp-Target'* is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, *'SMB with Temp-Target-* or *'SMB always'* enabled and OpenAPS **SMB** active.
+Dodatkowo, jeśli *'Włącz SMB z wysokim tymczasowym poziomem docelowym'* jest wyłączone, **AAPS** nie poda **SMB**, nawet gdy COB > 0, włączone jest *'Włącz SMB z niskim tymczasowym poziomem docelowym'* lub *'Zawsze włącz SMB'* i OpenAPS **SMB** jest aktywny.
 
 (TempTargets-eating-soon-temp-target)=
 
-## Wkrótce posiłek Cel tymczasowy
+## Cel tymczasowy Wkrótce posiłek
 
-**Temp-Target -Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
+**Cel tymczasowy Wkrótce posiłek** może pomóc łagodnie obniżyć **BG** i zapewnić odpowiednią ilość **IOB** przed jedzeniem.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target -Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyjumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target -Eating soon** and this is particularly so, if eating a high carb diet.
+This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target -Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Zwykle, dopóki nie masz doświadczenia z **AAPS**, musisz liczyć się z podawaniem bolusa przed posiłkiem także przy **celu tymczasowym Wkrótce posiłek**. Dotyczy to szczególnie diety z dużą ilością węglowodanów.
 
-You can read more about the “Eating soon mode” in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
+Więcej o „trybie Eating soon” możesz przeczytać w artykule ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) lub [tutaj](https://diyps.org/tag/eating-soon-mode/).
 
-Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have *'Low temp target lowers sensitivity'*, **AAPS** works a little bit more aggressively. For this option there is a requirement for **Temp-Target** to be less than 100mg/dl or 5.5mmol/l.
+Dla zaawansowanych, [zadanie 9](#objectives-objective9): jeśli używasz OpenAPS SMB i masz włączone *'Niski cel tymczasowy obniża wrażliwość'*, **AAPS** działa trochę bardziej agresywnie. Ta opcja wymaga, aby **cel tymczasowy** wynosił 98 mg/dl (5,4 mmol/l) lub mniej.
 
-## How do I turn off SMB during Temp-Targets?
+## Jak wyłączyć SMB podczas celów tymczasowych?
 
-To action this select in **Preferences** > and deactivate *'Enable SMB with high Temp-Target'*.
+Aby to zrobić, otwórz **Ustawienia** → **OpenAPS SMB** i wyłącz *'Włącz SMB z wysokim tymczasowym poziomem docelowym'*.
 
-![Carbs TT](../images/TempTargetSMB.png)
+![Ustawienie Włącz SMB z wysokim tymczasowym poziomem docelowym](../images/TempTargetSMB.png)
 
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'SMB with Temp-Target'* or *'SMB always'* enabled and OpenAPS SMB active.
+Spowoduje to, że **AAPS** nie poda **SMB**, nawet gdy COB > 0, włączone jest *'Włącz SMB z niskim tymczasowym poziomem docelowym'* lub *'Zawsze włącz SMB'* i OpenAPS SMB jest aktywny.

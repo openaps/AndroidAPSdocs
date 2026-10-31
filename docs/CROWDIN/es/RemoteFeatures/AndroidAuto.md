@@ -1,85 +1,86 @@
 # Android Auto
 
-**AAPS** is capable of sending you information about your current status as a message, directly into Android Auto in your car.
+**AAPS** puede enviarte información sobre tu estado actual como un mensaje, directamente a Android Auto en tu coche.
 
-```{admonition} version and last change information :class: dropdown date of last edit: 07/05/2023
+## Requisitos
 
-versions used for documentation:
+**AAPS** usa una función de Android Auto que permite enviar los mensajes de las apps del móvil a la pantalla del sistema de audio del coche.
 
-* AAPS 3.2.0-dev-i
-* Android Auto: 9.3.631434-release ```
+Eso significa que:
 
-## Requirements
+* Android debe permitir que **AAPS** muestre notificaciones y
+* Como **AAPS** no es una app oficial, permite el uso de «fuentes desconocidas» en Android Auto.
 
-**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of Auto Audio in the car.
+![Datos de MCG de AAPS en Android Auto](../images/android_auto_01.png)
 
-That means that:
+(androidauto-check-that-aaps-can-show-notifications)=
 
-* You must configure **AAPS** to use system notifications for alerts and notifications and
-* As **AAPS** is an unofficial App, allow the use of "unknown sources" with Android Auto.
+## Comprueba que AAPS puede mostrar notificaciones
 
-![AAPS CGM data on Android Auto](../images/android_auto_01.png)
+**AAPS** siempre muestra una notificación de estado con tu glucosa actual, IOB y COB. Esta es la notificación que Android Auto muestra en el coche. No hay nada que activar en **AAPS**, pero Android debe permitir que **AAPS** muestre notificaciones.
 
-## Use system notifications in AAPS for alerts and notifications
+En tu teléfono, abre **Ajustes** > **Aplicaciones** > **AAPS** > **Notificaciones** y asegúrate de que **Todas las notificaciones de AAPS** está activado.
 
-Open 3-dot-menu on top right of **AAPS** home screen and select **Preferences**
+![Todas las notificaciones de AAPS activadas](../images/android_auto_notifications_all.png)
 
-![Use system notifications for alerts and notifications](../images/android_auto_02.png)
+Desplázate hacia abajo y asegúrate de que **Estado continuo** está activado: es el canal de la notificación de estado.
 
-In **Local Alerts** activate **Use system notifications for alerts and notifications**
+![Canal de notificación Estado continuo activado](../images/android_auto_ongoing_channel.png)
 
-![Use system notifications for alerts and notifications](../images/android_auto_03.png)
+¡Comprueba ahora que ves la notificación de estado de **AAPS** en el teléfono antes de ir a tu coche!
 
-Please check now that you get notifications from **AAPS** on the phone before you walk to your car!
+![Notificación de AAPS en el teléfono](../images/android_auto_04.png)
 
-![Use system notifications for alerts and notifications](../images/android_auto_04.png)
+(androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
-## Allow the use of "unknown sources" with Android Auto.
+## Permitir el uso de «fuentes desconocidas» en Android Auto.
 
-As **AAPS** is not an official Android Auto app, notifications have to be activated for "unknown sources" in Android Auto. This is done through the use of the developer mode which we will show you here.
+Como **AAPS** no es una app oficial de Android Auto, hay que activar las notificaciones para «fuentes desconocidas» en Android Auto. Esto se hace con el modo desarrollador, que te mostramos aquí.
 
-Go to your car and connect your mobile with the cars audio system.
+Ve a tu coche y conecta tu móvil al sistema de audio del coche.
 
-You should now see a screen similar to this screen.
+Ahora deberías ver una pantalla parecida a esta.
 
-![Enable developer mode](../images/android_auto_05.png)
+![Activar modo desarrollador](../images/android_auto_05.png)
 
-Press on the **setting** icon to start the configuration.
+Pulsa el icono de **ajustes** para empezar la configuración.
 
-Scroll down to the end of the page and select **see more in the phone**.
+Desplázate hasta el final de la página y selecciona **ver más en el teléfono**.
 
-![Enable developer mode](../images/android_auto_06.png)
+![Activar modo desarrollador](../images/android_auto_06.png)
 
-Now on the mobile we will activate the developer mode.
+Ahora activaremos el modo desarrollador en el móvil.
 
-The first screen looks like this. Scroll down to the end of the page.
+La primera pantalla se ve así. Desplázate hasta el final de la página.
 
-![Enable developer mode](../images/android_auto_07.png)
+![Activar modo desarrollador](../images/android_auto_07.png)
 
-There you see the version of Android Auto listed. Tap 10 times (in word ten) on the version of Android Auto. With this hidden combination you have now enabled developer mode.
+Allí ves la versión de Android Auto. Toca 10 veces (en letra: diez) la versión de Android Auto. Con esta combinación oculta ya has activado el modo desarrollador.
 
-![Enable developer mode](../images/android_auto_08.png)
+![Activar modo desarrollador](../images/android_auto_08.png)
 
-Confirm that you want to enable the developer mode in the modal dialog "Allow development settings?".
+Confirma que quieres activar el modo desarrollador en el diálogo «¿Permitir ajustes de desarrollo?» («Allow development settings?»).
 
-![Enable developer mode](../images/android_auto_09.png)
+![Activar modo desarrollador](../images/android_auto_09.png)
 
-In the **developer settings** enable the "Unknown sources".
+En los **ajustes de desarrollador**, activa «Fuentes desconocidas» («Unknown sources»).
 
-![Enable developer mode](../images/android_auto_10.png)
+![Activar modo desarrollador](../images/android_auto_10.png)
 
-Now you can quit developer mode if you want. Tap three dots menu on the top right to do so.
+Ahora puedes salir del modo desarrollador si quieres. Para ello, toca el menú de tres puntos arriba a la derecha.
 
-## Show notifications in car
+## Mostrar notificaciones en el coche
 
-Tap the **number icon** on the lower right side in Android Auto in your car.
+Toca el **icono del número** en la parte inferior derecha de Android Auto en tu coche.
 
-![number icon - Android Auto in car](../images/android_auto_11.png)
+![icono del número - Android Auto en el coche](../images/android_auto_11.png)
 
-Your CGM data will be shown as follows:
+Tus datos de MCG se mostrarán así:
 
-![AAPS CGM data on Android Auto](../images/android_auto_01.png)
+![Datos de MCG de AAPS en Android Auto](../images/android_auto_01.png)
 
-## Troubleshooting:
+(android-auto-troubleshooting)=
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#use-system-notifications-in-aaps-for-alerts-and-notifications) in Android and if [Android Auto has access rights to notifications](#allow-the-use-of-unknown-sources-with-android-auto).
+## Solución de problemas:
+
+* Si no ves la notificación, comprueba si [permitiste que AAPS muestre notificaciones](#androidauto-check-that-aaps-can-show-notifications) en Android y si [Android Auto tiene permiso de acceso a las notificaciones](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).

@@ -1,111 +1,111 @@
-# Update with a browser (fork)
+# Ενημέρωση μέσω browser (fork)
 
 ```{tip}
-You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+Κάνατε build του AAPS με το **AAPS Builder**; Δεν χρειάζεστε αυτή τη σελίδα: δείτε [Ενημέρωση του AAPS με το AAPS Builder](#aaps-builder-updates).
 ```
 
 ## Φτιάξτε το μόνοι σας, αντί να το κατεβάσετε
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Το **AAPS** δεν είναι διαθέσιμο για λήψη, λόγω των κανονισμών για τις ιατρικές συσκευές. Είναι νόμιμο να κάνετε build της εφαρμογής για δική σας χρήση, αλλά δεν πρέπει να δίνετε αντίγραφο σε άλλους! Δείτε τη σελίδα [Συχνές Ερωτήσεις](../UsefulLinks/FAQ.md) για λεπτομέρειες.
 
 ```{note}
-In case you want to upgrade **AAPS** with a browser for the first time : copy your back-up keystore file to your Google Drive. Then follow the [Browser Build **AAPS** procedure](../SettingUpAaps/BrowserBuild.md) instead of this guide. Instead of creating a new keystore, you must select the one you have copied from your computer.
-This operation will be mandatory only the first time, then for successive upgrades you will be able to follow this guide.
+Αν θέλετε να αναβαθμίσετε το **AAPS** μέσω browser για πρώτη φορά: αντιγράψτε το αντίγραφο ασφαλείας του αρχείου keystore στο Google Drive σας. Μετά ακολουθήστε τη [διαδικασία Δημιουργίας του **AAPS** μέσω browser](../SettingUpAaps/BrowserBuild.md) αντί για αυτόν τον οδηγό. Αντί να δημιουργήσετε νέο keystore, πρέπει να επιλέξετε αυτό που αντιγράψατε από τον υπολογιστή σας.
+Αυτό είναι υποχρεωτικό μόνο την πρώτη φορά. Στις επόμενες αναβαθμίσεις θα μπορείτε να ακολουθείτε αυτόν τον οδηγό.
 ```
 
 ```{tip}
-**Switching to AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) is the simpler browser build: no fork to sync, and you download the app directly from GitHub. You don't have to switch: this guide keeps working. If you switch, first get a copy of your keystore from your fork, as explained in [Coming from the previous browser build](#aaps-builder-from-fork). Otherwise the new build cannot update the AAPS on your phone.
+**Θέλετε να αλλάξετε σε AAPS Builder;** Το [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) είναι ο πιο απλός τρόπος δημιουργίας μέσω browser: δεν υπάρχει fork για συγχρονισμό και κατεβάζετε την εφαρμογή απευθείας από το GitHub. Δεν είστε υποχρεωμένοι να αλλάξετε: αυτός ο οδηγός συνεχίζει να λειτουργεί. Αν αλλάξετε, πάρτε πρώτα ένα αντίγραφο του keystore σας από το fork σας, όπως εξηγείται στο [Αν έρχεστε από την προηγούμενη δημιουργία μέσω browser](#aaps-builder-from-fork). Αλλιώς το νέο build δεν θα μπορεί να ενημερώσει το AAPS στο τηλέφωνό σας.
 ```
 
-## Overview for updating to a new version of AAPS with a browser
+## Επισκόπηση της ενημέρωσης σε νέα έκδοση του AAPS μέσω browser
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
+Αν έχετε προβλήματα, δείτε την ξεχωριστή σελίδα [Δημιουργία μέσω browser: αντιμετώπιση προβλημάτων](../GettingHelp/BrowserBuildTroubleshooting.md).
 
-### Export your settings
+### Εξαγωγή των ρυθμίσεων
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Εξαγάγετε τις ρυθμίσεις από την υπάρχουσα έκδοση του **AAPS** στο τηλέφωνό σας. Ίσως να μην τις χρειαστείτε, αλλά είναι καλύτερα να είστε ασφαλείς.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Δείτε τη σελίδα [Δημιουργία και επαναφορά αντιγράφων ασφαλείας](ExportImportSettings.md), αν δεν θυμάστε πώς γίνεται.
 
 (Update-to-new-version-update-your-repo)=
-### Update your GitHub repository
+### Ενημέρωση του αποθετηρίου σας στο GitHub
 
-```{admonition} WARNING
-:class: warning
-Browser Build is available from AAPS version 3.3.2.1.
-```
+[Συνδεθείτε στο GitHub](https://github.com/login).
 
-[Log into GitHub](https://github.com/login).
+1. Επιλέξτε Repositories.
+2. Κάντε κύλιση προς τα κάτω και επιλέξτε το δικό σας αποθετήριο AndroidAPS.
 
-1. Select Repositories.
-2. Scroll down and select your own AndroidAPS repository.
+![Επιλογή του αποθετηρίου AndroidAPS](../images/update/CI/GitHubUpdate1.png)
 
-![Select AndroidAPS repo](../images/update/CI/GitHubUpdate1.png)
-
-3. Verify you are using your own copy of AndroidAPS (Forked from nightscout/AndroidAPS)
-4. Tap Sync Fork to update it (the number of commits behind might differ from the picture)
+3. Βεβαιωθείτε ότι χρησιμοποιείτε το δικό σας αντίγραφο του AndroidAPS (Forked from nightscout/AndroidAPS)
+4. Πατήστε Sync Fork για να το ενημερώσετε (ο αριθμός των commits που λείπουν μπορεί να διαφέρει από την εικόνα)
 
 
 
-![Sync AndroidAPS repo](../images/update/CI/GitHubUpdate2.png)
+![Συγχρονισμός του αποθετηρίου AndroidAPS](../images/update/CI/GitHubUpdate2.png)
 
-5. Tap Update Branch
+5. Πατήστε Update Branch
 
-![Update AndroidAPS repo](../images/update/CI/GitHubUpdate3.png)
+![Ενημέρωση του αποθετηρίου AndroidAPS](../images/update/CI/GitHubUpdate3.png)
 
-Note: if you have modified your copy of AndroidAPS by mistake, you will see this screen. Discard all changes (commits) to return to the released version.
+Σημείωση: αν αλλάξατε κατά λάθος το αντίγραφό σας του AndroidAPS, θα δείτε αυτή την οθόνη. Απορρίψτε όλες τις αλλαγές (commits) για να επιστρέψετε στην έκδοση που έχει κυκλοφορήσει.
 
-![Discard rogue modifications](../images/update/CI/GitHubUpdate4.png)
+![Απόρριψη ανεπιθύμητων αλλαγών](../images/update/CI/GitHubUpdate4.png)
 
-You have now synchronized (updated) your own copy with the latest release of Android APS. Good job.
+Τώρα έχετε συγχρονίσει (ενημερώσει) το δικό σας αντίγραφο με την τελευταία έκδοση του Android APS. Μπράβο.
 
-![Repo sync'ed](../images/update/CI/GitHubUpdate5.png)
+![Το αποθετήριο συγχρονίστηκε](../images/update/CI/GitHubUpdate5.png)
 
-### Run the Workflow to Build the Signed APK
+### Εκτέλεση του workflow για το build του υπογεγραμμένου APK
 
-1. In your GitHub copy of AndroidAPS, select Actions.
-2. Expand All Workflows.
-3. Select AAPS-CI
+1. Στο αντίγραφό σας του AndroidAPS στο GitHub, επιλέξτε Actions.
+2. Ανοίξτε το All Workflows.
+3. Επιλέξτε AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
-4. Scroll down and tap Run Workflow.
+4. Κάντε κύλιση προς τα κάτω και πατήστε Run Workflow.
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Keep the branch set to master, select the AAPS Version you want to build — either the latest version or a specific required version — choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
+5. Αφήστε τον κλάδο (branch) στο master, επιλέξτε την AAPS Version που θέλετε να κάνετε build — είτε την πιο πρόσφατη έκδοση είτε μια συγκεκριμένη έκδοση που χρειάζεστε — επιλέξτε την [παραλλαγή (variant)](#browserbuild-variant) (fullRelease) και μετά πατήστε Run workflow.
 
 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of Android APS. This means that the Master and Wear apk is now directly saved into your Google Drive (as per below). AAPSClient apk can be downloaded from Github > nightscout > AndroidAPS [here](https://github.com/nightscout/AndroidAPS/releases)
+6. Θα δείτε το μήνυμα Workflow run was successfully requested. Ανανεώστε τη σελίδα του browser και θα μπορείτε να παρακολουθείτε την πρόοδο του build. Όταν τελειώσει η ενέργεια, το AAPS CI θα δείχνει ένα πράσινο σημάδι ελέγχου (tick). Έχετε κάνει με επιτυχία build της ενημερωμένης έκδοσης του Android APS. Αυτό σημαίνει ότι τα apk για το Master και το Wear αποθηκεύονται τώρα απευθείας στο Google Drive σας (όπως παρακάτω). Το apk του AAPSClient μπορείτε να το κατεβάσετε από το Github > nightscout > AndroidAPS [εδώ](https://github.com/nightscout/AndroidAPS/releases)
 
 
-![Monitor Workflow](../images/update/CI/GitHubActions4.png)
+![Παρακολούθηση του workflow](../images/update/CI/GitHubActions4.png)
 
 
-### Install the AAPS APK
+### Εγκατάσταση του APK του AAPS
 
-1. Open your Google Drive
-2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
+1. Ανοίξτε το Google Drive σας
+2. Ανοίξτε τον φάκελο AAPS, επιλέξτε τον φάκελο της νέας έκδοσης και θα βρείτε και την έκδοση για το τηλέφωνο και την έκδοση για Android Wear.
 
-![Google Drive Location](../images/update/CI/GitHubActions5.png)
+![Τοποθεσία στο Google Drive](../images/update/CI/GitHubActions5.png)
 
+```{note}
+Από τον Σεπτέμβριο του 2026, η [επαλήθευση προγραμματιστών Android](#android-developer-verification) της Google μπορεί να εμποδίζει την εγκατάσταση του APK με πάτημα στο αρχείο, ανάλογα με τη χώρα σας. Δωρεάν λύσεις εξηγούνται σε εκείνη τη σελίδα.
+```
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone)
+Συνεχίστε [εδώ](#Update-to-new-version-check-aaps-version-on-phone)
 
-## Troubleshooting
+(update-browser-build-troubleshooting)=
 
-If anything goes wrong, don't panic.
+## Αντιμετώπιση προβλημάτων
 
-Take a breath!
+Αν κάτι πάει στραβά, μην πανικοβάλλεστε.
 
-Then see the [troubleshooting tips](#aaps-ci-preparation) if your problem is already documented!
+Πάρτε μια ανάσα!
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Μετά ελέγξτε αν το πρόβλημά σας είναι ήδη καταγεγραμμένο: δείτε [Αντιμετώπιση προβλημάτων του AAPS Builder](#aaps-builder-troubleshooting) αν κάνετε build με το **AAPS Builder**, αλλιώς [Δημιουργία μέσω browser: αντιμετώπιση προβλημάτων](#aaps-ci-troubleshooting).
+
+Αν χρειάζεστε περισσότερη βοήθεια, επικοινωνήστε με άλλους χρήστες του **AAPS** στο [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) ή στο [Discord](https://discord.gg/4fQUWHZ4Mw).

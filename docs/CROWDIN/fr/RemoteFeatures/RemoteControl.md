@@ -1,309 +1,298 @@
-# Remote control of AAPS
-There are four highly effective tools for remotely managing **AAPS**:
+# Contrôle à distance d'AAPS
 
-1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower phone is Android) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device).  
-4) [Smartwatches](#RemoteControl_smartwatches) (Android)
+```{contents} In this page
+:backlinks: entry
+:depth: 2
+```
 
-The first three are mostly appropriate for caregivers/parents, but smartwatches are very useful for caregivers/parents **and** for adults with diabetes themselves.
+Il existe quatre outils très efficaces pour gérer **AAPS** à distance :
+
+1) [Commandes SMS](#RemoteControl_SMS-Commands) (le téléphone suiveur peut être Android ou iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (le téléphone suiveur est Android ; une version iPhone est en cours de développement) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS ou autre ordinateur/appareil), surtout pour suivre : voir la remarque sur le [contrôle par le client](#client-master-control) dans cette section.  
+4) [Montres connectées](#RemoteControl_smartwatches) (Android)
+
+Les trois premiers conviennent surtout aux aidants/parents, mais les montres connectées sont très utiles pour les aidants/parents **et** pour les adultes diabétiques eux-mêmes.
 
 ![image](../images/remote_control_and_following/AAPS_overview_remote_control_01.png)
 
 (RemoteControl_SMS-Commands)=
 
-## 1) SMS Commands
+## 1) Commandes SMS
 
-See the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
+Voir la page dédiée [Commandes SMS](../RemoteFeatures/SMSCommands.md).
 
 (RemoteControl_aapsclient)=
 ## 2) AAPSClient
 
-**AAPSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver tabs that will remotely action commands in **AAPS**:
+**AAPSClient** ressemble beaucoup à **AAPS**. Il offre à l'aidant les mêmes écrans et les mêmes boutons pour envoyer des commandes à distance à **AAPS** :
 
-![NSCLIENT_ 2024-05-17 134512](../images/remote_control_and_following/AAPSClient_main_view.png)
+![Écran d'accueil d'AAPSClient](../images/v4/AapsClient/aapsclient_home.png)
 
-### About AAPSClient and AAPSClient2
+(remotecontrol-aapsclient-versions)=
+### À propos d'AAPSClient, AAPSClient2 et AAPSClient3
 
-There are 2 versions of the apk that can be installed, **AAPSClient** & **AAPSClient2** which have a subtle but important difference as explained below.
+Il existe 3 versions de l'application client : **AAPSClient**, **AAPSClient2** et **AAPSClient3**. Elles fonctionnent de la même façon. La seule différence est qu'elles peuvent être installées côte à côte sur le même téléphone suiveur.
 
-Should a caregiver require a second copy of **AAPSClient** to remote control an additional patient with a Nightscout account, they should install **AAPSClient2** in addition to **AAPSClient**. **AAPSClient 2** allows a single caregiver to install the **AAPSClient** apk twice on the same follower phone in order to be given simultaneous access and remote control to two different patients.
+Un aidant qui suit une seule personne a seulement besoin d'**AAPSClient**. Pour suivre et contrôler à distance une deuxième personne (avec son propre site **Nightscout** et son propre téléphone **AAPS**), installez aussi **AAPSClient2**, et **AAPSClient3** pour une troisième personne. Chaque application est configurée et [appairée](#aapsclient-pairing-with-the-master) séparément, avec le site **Nightscout** et le téléphone **AAPS** de la personne qu'elle suit.
 
-To differentiate between the two apps, some elements have a different background color: yellow for **AAPSClient**, blue for **AAPSClient2**. Those elements are the app icon, the widget, and the **AAPS** status section in the app itself. <br/> Note : opacity of the widget background is customizable.
+Pour distinguer les applications, certains éléments ont une couleur différente : jaune pour **AAPSClient**, bleu pour **AAPSClient2** et vert pour **AAPSClient3**. Ces éléments sont l'icône de l'application, le fond du widget et la section d'état **AAPS** sur l'écran d'accueil de l'application. <br/> Remarque : l'opacité du fond du widget peut être réglée dans la configuration du widget. Avec une faible opacité, la couleur est difficile à voir.
 
-![AAPSClient_and_AAPSClient2.png](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
+![Couleurs du widget et de la section d'état d'AAPSClient, AAPSClient2 et AAPSClient3](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
 
-### Download and installation
+### Téléchargement et installation
 
-**AAPSClient** can be installed on a single phone or multiple follower phones (i.e. parent 1’s follower phone and parent 2’s follower phone) in order for both caregivers to be granted access and remote control a patient's **AAPS** phone.
+**AAPSClient** peut être installé sur un seul téléphone ou sur plusieurs téléphones suiveurs (par ex. le téléphone suiveur du parent 1 et celui du parent 2), pour que les deux aidants aient accès au téléphone **AAPS** du patient et puissent le contrôler à distance.
 
-To download **AAPSClient**, navigate to the [Github repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
+Pour télécharger **AAPSClient**, allez dans le [dépôt Github](https://github.com/nightscout/AndroidAPS/releases/) et cliquez sur le fichier **« app-AAPSClient-release_x.x.x.x »** (il peut s'agir d'une version plus récente que celle de la capture d'écran ci-dessous) :
 
 ![image](../images/remote_control_and_following/AAPSClient_download_02.png)
 
-Then go to  _downloads_ on your computer. On Windows, -downloads_ will show the right hand ribbon:
+Allez ensuite dans _téléchargements_ sur votre ordinateur. Sous Windows, les _téléchargements_ s'affichent dans le bandeau de droite :
 
 ![image](../images/remote_control_and_following/AAPSClient_download_folder_03.png)
 
-Once downloaded, click _show in folder_ to locate the file.
+Une fois le téléchargement terminé, cliquez sur _afficher dans le dossier_ pour trouver le fichier.
 
-The **AAPSClient** apk can now be either:
+L'apk **AAPSClient** peut maintenant être :
 
-Transferred by a USB cable onto the follower phone; or Dragged into Google drive folder, and then added onto the follower phone by clicking on the "app-AAPSClient-release" file.
+Transféré par un câble USB sur le téléphone suiveur ; ou Déplacé dans un dossier Google Drive, puis installé sur le téléphone suiveur en touchant le fichier « app-AAPSClient-release ».
 
-Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the Github repository as described above. The reason is that you can't install both **AAPS** and **AAPSClient** on the same phone, signed by a different key. <br/> To build **AAPSClient** yourself, follow the same process as [regular AAPS build](../SettingUpAaps/BuildingAaps.md). On the **Generate signed App Bundle or APK** page, select **aapsclientRelease** instead of **fullRelease**.
+Si vous avez besoin d'**AAPS** pour vous-même et d'**AAPSClient** pour suivre quelqu'un d'autre, vous devez compiler **AAPSClient** vous-même, au lieu de le télécharger depuis le dépôt Github comme décrit ci-dessus. En effet, vous ne pouvez pas installer **AAPS** et **AAPSClient** sur le même téléphone s'ils sont signés avec des clés différentes. <br/> Pour compiler **AAPSClient** vous-même, suivez la même procédure que pour la [compilation normale d'AAPS](../SettingUpAaps/BuildingAaps.md). Sur la page **Generate signed App Bundle or APK**, choisissez **aapsclientRelease** au lieu de **fullRelease**.
 
-### Synchronization- AAPSClient and AAPS set up (for Version 3.2.0.0 above)
+La même règle s'applique si vous installez plusieurs applications client (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) sur un même téléphone suiveur : elles doivent toutes être signées avec la **même clé**. Sinon, Android refuse d'installer la deuxième (erreur `INSTALL_FAILED_DUPLICATE_PERMISSION`).
 
-Once __AAPSClient__ apk is installed on the follower phone, the user must ensure their ‘Preferences’ in Config Builder are correctly set up and aligned with __AAPS__ for Nightscout 15 (see Release Notes [here](../Maintenance/UpdateToNewVersion)). The example below provides Synchronization guidance for NSClient and NSClientV3 using Nightscout15 but there are other options available with __AAPS__ (e.g xDrip+).
+### Synchronisation : configuration d'AAPSClient et d'AAPS
 
-Within the ‘Synchronization’ located under ‘Config Builder’, the user can opt for either Synchronization options for both __AAPS__ and follower phone being:
+Une fois l'apk __AAPSClient__ installé sur le téléphone suiveur, vérifiez que **NSClientV3** est configuré de la même façon sur les deux téléphones pour Nightscout 15 (voir les [notes de mise à jour](../Maintenance/UpdateToNewVersion.md)). L'exemple ci-dessous montre la configuration de la synchronisation avec NSClientV3 et Nightscout 15 ; d'autres sources de données sont disponibles dans __AAPS__ (par ex. xDrip).
 
-- Option 1: NSClient (also known as ‘v1’) - which synchronizes the user’s data with Nightscout; or
+Dans **Configuration** > **Communication**, l'utilisateur synchronise ses données avec Nightscout via __NSClientV3__ (avec l'API v3), configuré de la même façon dans __AAPS__ et sur le téléphone suiveur.
 
-- Option 2: NSClientV3 (also referred to as ‘v3’).- which synchronizes the user’s data with Nightscout using v3 API.
+![Configuration > Communication avec NSClientV3 sélectionné](../images/v4/Configuration/configuration_communication.png)
 
-![AAPS1_Screenshot 2024-05-17 133502](../images/4bdfed7e-3b2f-4fe8-b6db-6fcf0e5c7d98.png)
+L'utilisateur doit s'assurer que les téléphones AAPS et AAPS Client sont __tous les deux__ synchronisés, en configurant NSClientV3 sur chacun. Sur le téléphone suiveur, vous pouvez aussi le faire en scannant un QR code affiché par **AAPS**, voir [Appairer AAPSClient avec AAPS](#remotecontrol-pairing) ci-dessous :
 
-The user must ensure that __both__ the AAPS and AAPS Client phones are synched together by actioning either option for v1 or v3 being:
+- Saisissez votre **URL Nightscout** dans les **Paramètres** de NSClientV3
 
-Option 1: v1 for both phones:
+- Saisissez votre **Jeton d'accès Nightscout** dans les mêmes paramètres. Suivez les notes [ici](https://nightscout.github.io/nightscout/security/#create-a-token). Sur le téléphone **AAPS**, utilisez un **jeton admin** : avec lui, **AAPS** crée son propre jeton pour chaque téléphone suiveur.
 
-- Enter your Nightscout URL
+- Activez **Utiliser les websockets** sur les **deux** téléphones. Sur le téléphone **AAPS**, les websockets sont **obligatoires** pour le contrôle à distance : sans eux, **AAPS** ne peut pas recevoir de commandes d'**AAPSClient**. Sur les deux téléphones, ils rendent aussi la synchronisation plus rapide, mais consomment un peu plus de batterie.
 
-- Enter your API secret
-
-Option 2: v3 for both phones:
-
-- Enter your Nightscout URL under NSClientV3 tab
-
-- Enter your NS access token under ‘Config Build’ tab. Please follow the notes [here](https://nightscout.github.io/nightscout/security/#create-a-token)
-
-If selecting Websockets (which is optional) ensure this is activated or deactivated for both __AAPS’__ and __AAPSClient’s__ phone. Activating Websockets in __AAPS__ and not within __AAPSClient__ (and vice versa) will only cause __AAPS__ to malfunction. By enabling websockets will allow for faster synchronization with Nightscout but may lead to more phone battery consumption.
-
-![WB2_Screenshot 2024-05-17 140548](../images/d9a7dc5-b3ea-4bf3-9286-313f329b1966.png)
+![Paramètres > NSClientV3 avec URL Nightscout, Jeton d'accès Nightscout et Utiliser les websockets](../images/preferences/settings_nsclient.png)
 
 
-The user should ensure that both __AAPSClient__ and __AAPS__ are showing  ‘connected’ under the ‘NSClient' tab for each phone, and that ‘Profile Switches’ or ‘Temp Target' can be correctly activated in __AAPS__ once selected in __AAPSClient__.
+L'utilisateur doit vérifier que __AAPSClient__ et __AAPS__ affichent tous les deux « connecté » sur l'écran **NSClientV3** de chaque téléphone. À ce stade, **AAPSClient** suit **AAPS** (glycémie, traitements, profil), mais ne peut pas encore le contrôler : appairez les deux téléphones comme décrit ci-dessous.
 
-The user should also ensure that when carbs are entered in either __AAPS__ or __AAPSClient__ that the data is automatically logged in both ‘Treatments’ for both __AAPSClient__ and __AAPS__. Otherwise, this could indicate a malfunction within either the user’s __AAPS__ or __AAPSClient__ set up.
+(remotecontrol-pairing)=
+### Appairer AAPSClient avec AAPS (contrôle à distance)
 
-### Troubleshooting 'NS access token' configuration issues
+Depuis la version 4 d'**AAPS**, **AAPSClient** contrôle **AAPS** par une connexion sécurisée et **appairée**. La synchronisation seule ne suffit pas : tant que les téléphones ne sont pas appairés, **AAPSClient** affiche seulement **Gestion**, avec un **Profil** en lecture seule et **Associer au maître**.
 
-The precise 'NS access token' configuration may differ depending upon whether your Nightscout provider is a paid for hosted site or not.
+1. Sur le téléphone **AAPS**, ouvrez **Gestion → Clients autorisés** et activez **Autoriser le contrôle client** (désactivé par défaut, toujours activé en mode simple).
+2. Touchez **+**, saisissez un nom pour le téléphone suiveur, choisissez comment il est configuré et choisissez son **rôle** :
+   - **QR code : Nightscout et appairage** — **AAPS** affiche un QR code qui configure Nightscout sur le téléphone suiveur et l'appaire, en un seul scan. Il faut pour cela un jeton admin dans les paramètres NSClientV3 du téléphone **AAPS**.
+   - **PIN** — pour un téléphone suiveur sans caméra, déjà connecté à Nightscout : notez le **PIN** à usage unique (valable environ deux minutes).
+3. Sur le téléphone **AAPSClient**, scannez le code (dans l'Assistant de configuration, ou **Gestion → Associer au maître → Scanner le QR code**), ou ouvrez **Gestion → Associer au maître** et saisissez le PIN. Confirmer.
 
-If you are struggling with **AAPS** v3 to accept the 'NS access token' and using a paid for hosted Nightscout site, you may wish to first liaise with your Nightscout provider on how to resolve the 'NS access token' difficulties. Otherwise, please reach out to the **AAPS** group but please double check that you have correctly followed the notes before doing so [here](https://nightscout.github.io/nightscout/security/#create-a-token).
+Le téléphone suiveur apparaît alors comme **Actif** dans la liste **Clients autorisés**, et **AAPSClient** affiche **Traitements**, **Scénarii** et **Gestion**. Le téléphone suiveur reçoit son propre jeton Nightscout, avec seulement les droits dont il a besoin. La procédure complète, avec des captures d'écran et le dépannage, se trouve dans [Contrôle maître ↔ client](#client_master_master_setup).
 
-### Features of AAPSClient include:
+Vérifiez que la configuration fonctionne : saisissez des glucides dans **AAPSClient**, confirmez la quantité affichée et vérifiez que la saisie apparaît dans **Traitements** sur les deux téléphones.
 
-| Tab / Hamburger     | Features                                                                                                                                                                                                                             |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Action** Tab      | - Profile Switch <br>- Loop Status change <br>- Temp Target<br>- BG Check<br>- CGM Sensor Insert<br>- Note<br>- Exercise<br>- Announcement<br>- Question?<br>- History Browser |
-| **Food** Tab        |                                                                                                                                                                                                                                      |
-| **Treatments** Tab  | - Check Treatments delivered including bolus and carbs entered                                                                                                                                                                       |
-| **Maintenance** Tab | - Export and Import Settings                                                                                                                                                                                                         |
-| **Profile** Tab     | - Creating new profile<br>- Profile switch                                                                                                                                                                                     |
+(remotecontrol-nightscout-access-token)=
 
-**AAPSClient** allows the caregiver to make many of the adjustments that are allowed directly in **AAPS** (excluding insulin boluses) remotely, via the mobile or internet network. The main benefits of **AAPSClient** are the speed and ease with which caregivers/parents can use it to remotely control **APPS**. __AAPSClient__ _can_ be much faster than entering SMS Commands, if delivering a command which would require authentication. Commands entered on **AAPSClient** are uploaded onto Nightscout. In order for the actions taken in **AAPSClient** to be actually actioned in **AAPS**, the NSClient settings must allow to receive such orders. See the [Synchronization section of NSClient preferences](#Preferences-nsclient-synchronization).
+### Résoudre les problèmes de configuration du « Jeton d'accès Nightscout »
 
+La configuration exacte du « Jeton d'accès Nightscout » peut varier selon que votre Nightscout est un site hébergé payant ou non.
 
+Si vous avez du mal à faire accepter le « Jeton d'accès Nightscout » par **AAPS** et que vous utilisez un site Nightscout hébergé payant, contactez d'abord votre fournisseur Nightscout pour savoir comment résoudre ce problème. Sinon, contactez le groupe **AAPS**, mais vérifiez d'abord que vous avez bien suivi les notes [ici](https://nightscout.github.io/nightscout/security/#create-a-token).
 
-Remote control through **AAPSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc) see [release notes for Version 2.8.1.1](#important-hints-2-8-1-1) for further details.
+### Ce qu'offre AAPSClient
 
-### AAPSClient with smartwatch options
+Une fois appairé, **AAPSClient** offre à l'aidant presque les mêmes écrans qu'**AAPS** :
 
-A smartwatch can be a very useful tool for helping to manage **AAPS** with kids. A couple of different configurations are possible. If **AAPSClient** is installed on the caregiver's phone, the [**AAPSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. Ceci affichera l'état actuel de la glycémie, le statut de la boucle et autorisera l'entrée des glucides, des cibles temporaires et des changements de profil. Cela n'autorisera pas les bolus depuis l'application WearOS. You can read more about Smartwatches [here](#4-smartwatches).
+- **Traitements** : bolus d'insuline, glucides et assistant bolus.
+- **Scénarii** : démarrer et arrêter des [scénarios](../DailyLifeWithAaps/Scenes.md).
+- **Gestion** : profils, paramètres d'insuline, cibles temporaires, Assistant Rapide, automatisation, aliments, rotation des sites, appairage et débit basal temporaire en cours.
+- **Menu principal** : historique des traitements, navigateur d'historique, statistiques, maintenance, configuration.
+
+Il n'y a ni pompe ni objectifs dans **AAPSClient**. Voir [L'application AAPSClient](AapsClient.md) pour une description détaillée.
+
+**AAPSClient** permet à l'aidant de faire à distance la plupart des réglages possibles directement dans **AAPS**, **y compris des bolus d'insuline**, par le réseau mobile ou internet. Chaque commande est signée et envoyée via Nightscout au téléphone **AAPS**. Celui-ci la vérifie par rapport à ses propres données, la limite, vous montre sa propre confirmation, et seulement ensuite l'exécute. **AAPSClient** _peut_ être beaucoup plus rapide que les [Commandes SMS](../RemoteFeatures/SMSCommands.md), surtout pour les commandes qui demandent une authentification.
+
+Les traitements saisis dans Nightscout par d'autres moyens (par exemple le site web Nightscout) ne sont pas appliqués quand le contrôle client est activé : **AAPS** est alors en [mode renforcé](#client-master-control-hardened-mode) et accepte les changements uniquement des clients appairés. Quand le contrôle client est désactivé, ils sont appliqués seulement si les options **Recevoir** correspondantes sont activées dans la [section Synchronisation des préférences NSClient](#Preferences-nsclient-synchronization).
+
+Le contrôle à distance avec **AAPSClient** est recommandé seulement si votre synchronisation fonctionne bien (_c.-à-d._ si vous ne voyez pas de changements de données non voulus, comme une CT ou un DBT qui se modifie tout seul, etc.).
+
+### AAPSClient avec les options de montre connectée
+
+Une montre connectée peut être un outil très utile pour aider à gérer **AAPS** avec des enfants. Plusieurs configurations différentes sont possibles. Si **AAPSClient** est installé sur le téléphone de l'aidant, l'[application **AAPSClient WearOS**](https://github.com/nightscout/AndroidAPS/releases/) peut être téléchargée et installée sur une montre connectée compatible, reliée au téléphone du parent. Elle affiche la glycémie actuelle et l'état de la boucle. Une fois **AAPSClient** appairé avec **AAPS**, les actions de la montre (y compris bolus, glucides, cibles temporaires et changements de profil) sont transmises par **AAPSClient** à **AAPS**, qui les confirme et les exécute : voir [Wear OS sur un client](#clientmastercontrol-wear-os-on-a-client). Vous pouvez en savoir plus sur les montres connectées [ici](#remotecontrol-smartwatches).
 
 (RemoteControl_nightscout)=
 ## 3) Nightscout
 
-As well as Nightscout being a server in “the Cloud”, there is also a dedicated **Nightscout** app which can be downloaded directly from the App Store on your iPhone. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](#2-aapsclient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) app from the Playstore.
+En plus du serveur Nightscout dans « le Cloud », il existe aussi une application **Nightscout** dédiée, que vous pouvez télécharger directement depuis l'App Store sur votre iPhone. Si vous avez un téléphone suiveur Android, il n'y a pas d'application Nightscout dédiée. Il vaut mieux utiliser [**AAPSClient**](#2-aapsclient). Si vous voulez seulement suivre, sans envoyer de traitements, vous pouvez télécharger et installer l'application [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) depuis le Play Store.
 
-Once you have installed the **Nightscout** app on your iPhone, open the app and follow the set-up prompts, entering your Nightscout address (see below, left). The form of this may vary depending on how your Nightscout is hosted. (_e.g._ http://youraddresshere.herokuapp.com). Then enter your Nightscout API secret (see below, right). If not prompted for your API password, then you need to enter this by clicking on the padlock at the top of the app:
+Une fois l'application **Nightscout** installée sur votre iPhone, ouvrez-la et suivez les instructions de configuration. Saisissez l'adresse de votre Nightscout (voir ci-dessous, à gauche). Sa forme peut varier selon l'hébergement de votre Nightscout. (_par ex._ http://youraddresshere.herokuapp.com). Saisissez ensuite l'API secret de votre Nightscout (voir ci-dessous, à droite). Si l'application ne vous demande pas votre mot de passe API, vous devez le saisir en touchant le cadenas en haut de l'application :
 
 ![image](../images/remote-control-24.png)
 
-More info on setup is available directly from [Nightscout](https://nightscout.github.io/nightscout/discover/)
+Plus d'informations sur la configuration sont disponibles directement sur [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
-When you first log in, you will have a very simple display. Customize the display options, by selecting the “hamburger” in the top right and scrolling down:
+À la première connexion, l'affichage est très simple. Personnalisez les options d'affichage en touchant le menu « hamburger » en haut à droite, puis en faisant défiler vers le bas :
 
 ![image](../images/remote-control-25.png)
 
-Scroll down through to “Settings”. You may wish to change the “scale” to “linear” as the default for the BG display is logarithmic, and under “render basal” select “default” so that the pump basal shows up.
+Faites défiler vers le bas jusqu'à « Settings » (paramètres). Vous pouvez changer « scale » (échelle) en « linear » (linéaire), car l'affichage de la glycémie est logarithmique par défaut. Sous « render basal » (affichage du basal), choisissez « default » (par défaut) pour que le débit basal de la pompe s'affiche.
 
 ![image](../images/remote-control-25b.png)
 
-Select your desired options. Uncheck alarms if you use an alternative app for alarms.
+Choisissez les options souhaitées. Décochez les alarmes si vous utilisez une autre application pour les alarmes.
 
 ![image](../images/remote-control-26.png)
 
-Continue to scroll down until you get to “show plugins”.
+Continuez à faire défiler vers le bas jusqu'à « show plugins » (afficher les plugins).
 
-You need to make sure “careportal” is checked, and can also select various other metrics (most useful are: IOB, care portal, pump, cannula age, insulin age, basal profile and OpenAPS).
+Vérifiez que « careportal » est coché. Vous pouvez aussi choisir d'autres valeurs (les plus utiles sont : IOB, care portal, pump, cannula age, insulin age, basal profile et OpenAPS).
 
-Importantly, you now need to click “save” at the bottom for these changes to take effect.
+Important : vous devez maintenant toucher « save » (enregistrer) en bas pour que ces changements prennent effet.
 
 ![image](../images/remote-control-27.png)
 
-After pressing “save” the app will return to your main Nightscout screen which will look a little like this:
+Après avoir touché « save », l'application revient à l'écran principal de Nightscout, qui ressemble à peu près à ceci :
 
-1. Current glucose value
-2. Information on AAPS system status - touch the individual tabs on the screen to display more detail. Add or remove these display options using hamburger menu.
-3. Recent glucose trace with treatments (carbs, boluses) displayed
-4. Longer-term glucose trace
-5. "Hamburger" menu for setting display options, generating reports, editing profiles and Nightscout admin tools
-6. "**+**" menu for entering treatments to send to AAPS.
-7. Select different time period to display
-8. Basal insulin profile
-9. Green line = historical glucose Blue lines = predicted glucose
+1. Glycémie actuelle
+2. Informations sur l'état du système AAPS - touchez chaque onglet de l'écran pour afficher plus de détails. Ajoutez ou retirez ces options d'affichage avec le menu hamburger.
+3. Courbe de glycémie récente avec les traitements (glucides, bolus)
+4. Courbe de glycémie à plus long terme
+5. Menu « hamburger » pour régler les options d'affichage, créer des rapports, modifier les profils et accéder aux outils d'administration de Nightscout
+6. Menu « **+** » pour saisir des traitements (voir [ci-dessous](#RemoteControl_nightscout-treatments) pour savoir quand **AAPS** les applique).
+7. Choisir une autre période à afficher
+8. Profil d'insuline basale
+9. Ligne verte = glycémie passée Lignes bleues = glycémie prévue
 
 ![image](../images/remote-control-28.png)
 
-Looking in more detail at the top left menu of the Nightscout app:
+Regardons plus en détail le menu en haut à gauche de l'application Nightscout :
 
-1. Careportal retrospective edit
-2. Turn on/off alarms
-3. Hamburger - for setting preferences
-4. Careportal - Log treatment - to send changes to AAPS
+1. Modification rétrospective Careportal
+2. Activer/désactiver les alarmes
+3. Hamburger - pour régler les préférences
+4. Careportal - Enregistrer un traitement (voir [ci-dessous](#RemoteControl_nightscout-treatments) pour savoir quand **AAPS** les applique)
 
-![nightscout top bar](../images/remote-control-29.png)
+![barre supérieure de nightscout](../images/remote-control-29.png)
 
-There is a huge amount of information on the status of the **AAPS** system in the grey tabs (and even more information is revealed if you tap the tab) on this screen:
+Les onglets gris de cet écran donnent beaucoup d'informations sur l'état du système **AAPS** (et encore plus si vous touchez l'onglet) :
 
-1. 5min glucose trend
-2. Bolus wizard preview
-3. Press on Basal to see your current profile and basal information
-4. Time since latest CGM reading in AAPS
-5. **Pump**: insulin, battery % and when AAPS last connected to it
-6. Last time AAPS refreshed - if this is longer than 5 mins it can indicate a connection issue between AAPS phone and pump/CGM
-7. Press on IOB to see split of basal and bolus insulin
-8. Insulin age in reservoir
+1. Tendance de la glycémie sur 5 min
+2. Aperçu de l'assistant bolus
+3. Touchez Basal pour voir votre profil actuel et les informations sur le débit basal
+4. Temps écoulé depuis la dernière mesure MGC dans AAPS
+5. **Pompe** : insuline, batterie en % et dernière connexion d'AAPS à la pompe
+6. Dernière actualisation d'AAPS - si elle date de plus de 5 min, il peut y avoir un problème de connexion entre le téléphone AAPS et la pompe/le MGC
+7. Touchez l'IA pour voir la répartition entre insuline basale et insuline de bolus
+8. Âge de l'insuline dans le réservoir
 9. Âge de la canule
-10. Battery status of AAPS phone
-11. Size of your database. If it gets too full (DIY Nightscout only - hosted services just ignore) you may start having connectivity issues. You can delete data to reduce the size of the number in the Admin tools menu (via hamburger).
+10. État de la batterie du téléphone AAPS
+11. Taille de votre base de données. Si elle devient trop pleine (uniquement pour un Nightscout DIY, les services hébergés ne sont pas concernés), vous pouvez avoir des problèmes de connexion. Vous pouvez supprimer des données pour réduire cette taille dans le menu Admin tools (outils d'administration, via le menu hamburger).
 
 ![image](../images/remote-control-30.png)
 
 ![image](../images/remote-control-31.png)
 
-Press "refresh" at the bottom of the page to close the popup.
+Touchez « refresh » (actualiser) en bas de la page pour fermer la fenêtre.
 
-### Sending treatments through the Nightscout app to AAPS
+(RemoteControl_nightscout-treatments)=
+### Envoyer des traitements à AAPS avec l'application Nightscout
 
-To set-up sending treatments from the **Nightscout** app to **AAPS**, on the main AAPS phone, go into the **AAPSClient** tab in the **AAPS** app. Open the right-hand dot menu, and open AAPSClientpreferences – synchronisation and select the relevant options in this menu. Set it to receive the different commands (temporary targets, etc) and also to synchronise profiles. If things don’t seem to be synchronised, go back to the AAPSClient tab and select “full synchronisation” and wait a few minutes.
+Dans **AAPS** 4, la façon prise en charge de contrôler **AAPS** à distance est un **AAPSClient appairé**, voir [Contrôle maître ↔ client](#client-master-control) : chaque client a un [rôle](#client-master-control-roles) qui limite ce qu'il peut faire, et chaque commande est signée, vérifiée et confirmée par le téléphone **AAPS**. Quand le contrôle client est activé, le téléphone **AAPS** est en [mode renforcé](#client-master-control-hardened-mode) : les traitements, cibles temporaires et changements de profil saisis sur le site web Nightscout ou dans l'application Nightscout ne sont **pas** appliqués. L'application Nightscout sert alors uniquement à suivre.
 
-Nightscout on your iPhone has all the same functions as Nightscout on your PC. It allows you to send many commands to **AAPS**, but it does not allow you to send insulin boluses.
+```{admonition} Only when client control is off
+:class: warning
+Si **Autoriser le contrôle client** est désactivé dans **Gestion → Clients autorisés** (et si le mode simple est désactivé), **AAPS** applique les saisies careportal venant de Nightscout uniquement pour les types de données que vous avez activés sous **Recevoir** dans la [section Synchronisation des paramètres NSClientV3](#Preferences-nsclient-synchronization) : glucides, cibles temporaires, changements de profil et autres saisies careportal. L'insuline n'est jamais délivrée de cette façon : un « Correction bolus » saisi dans Nightscout est seulement *annoncé*, et **AAPS** le compte dans l'insuline active sans le délivrer. Cette configuration n'est pas recommandée pour le contrôle à distance ; utilisez plutôt un **AAPSClient** appairé.
+```
 
-### Cancelling negative insulin to avoid repeat hypos
+En savoir plus sur les options de **Nightscout** [ici](https://nightscout.github.io/)
 
-Although you cannot actually bolus insulin, you can however “announce” insulin through Nightscout as a “correction bolus”, although it is not delivered. Because AAPS now takes that fake insulin bolus into account, announcing insulin actually works to make AAPS _less aggressive_, and can be useful for cancelling negative insulin and preventing lows in the event that your profile has been too strong (for example due to prior exercise). You will want to check this for yourself in the presence of the **AAPS** phone, in case your **Nightscout** setup differs.
+### Conseils pour profiter au mieux de l'application Nightscout
 
-![24-10-23, cancel negative insulin NS](../images/0af1dbe4-8aca-466b-816f-8e63758208ca.png)
+1). Si vous êtes « bloqué » sur une page et voulez revoir l'écran principal, touchez simplement « refresh » (actualiser, en bas au milieu). Vous reviendrez à la page d'accueil de **Nightscout** avec le graphique de glycémie.
 
+Pour voir le profil actuel utilisé sur le téléphone, touchez les différentes icônes au-dessus du graphique. Plus d'informations (ratio G/I actuel, sensibilité, fuseau horaire, etc.) s'affichent en touchant « basal ». « OpenAPS » donne des informations sur le profil, la cible actuelle, etc. Le niveau de batterie (%) du téléphone et celui de la pompe peuvent aussi être surveillés. BWP donne des informations sur ce que l'algorithme prévoit pour la suite, en fonction de l'IA et des GA.
 
-Some of the most useful **Nightscout** commands are described in the table below.
+#### Autres icônes du menu : que signifie le crayon (modifier) ?
 
-#### Nightscout command table
+Vous pouvez (techniquement) utiliser le crayon pour déplacer ou supprimer des bolus ou des corrections des dernières 48 h.
 
-| Most commonly used treatments                             | Function, example of when command is useful                                                                                                                                                                                                               |
-| --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Correction bolus**                                      | Allows you to announce **but <u>not</u> bolus** insulin.<br>Very useful for cancelling negative insulin to prevent a hypo,<br>for example in the middle of the night, if the profile has been too strong.                                     |
-| **Carb correction**                                       | Announce carbs now                                                                                                                                                                                                                                        |
-| **Temporary Target**<br>**Temporary Target cancel** | Allows temp targets to be set and cancelled.<br>Note that cancelling does not always work,<br>in this instance you can set a new target for a short time period (2 min)<br>which will then revert back to the normal target afterwards. |
-| **Changement de profil**                                  | Allows you to check the current profile which is running,<br>and switch to another profile, either permanently,<br>or for a defined length of time (mins).                                                                                    |
+Plus d'informations à ce sujet [ici](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
 
+Cela pourrait être utile pour supprimer des glucides annoncés (mais sans bolus). En pratique, cela ne fonctionne pas bien avec **AAPS** pour le moment, et nous recommandons de faire ce type de modification directement dans l'application **AAPS**.
 
+(RemoteControl_smartwatches)= (remotecontrol-smartwatches)=
 
-| Less widely used commands                                                                                                           | Function, example of when command is useful                                                                                                                              |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **BG check**                                                                                                                        | Send a BG check to AAPS.                                                                                                                                                 |
-| **Snack bolus**<br>**Meal bolus**<br>**Combo bolus**                                                                    | Can announce carbs (plus proteins and fat)<br> from 60 min in the past to 60 min in the future.<br>Combo bolus allows insulin announcement at the same time. |
-| **Announcement**<br>**Note**<br>**Question**<br>**Exercise**<br>**Open APS offline**<br>**DAD alert** | Add these info notes (DAD = diabetic dog alert).                                                                                                                         |
-| **Pump site change**<br>**Battery change**<br>**Insulin cartridge change**                                              | Announces these pump changes.                                                                                                                                            |
-| **CGM sensor start**<br>**CGM sensor insert**<br>**CGM sensor stop**                                                    | Announces these CGM changes.                                                                                                                                             |
-| **Temp basal start**<br>**Temp basal end**                                                                                    | Most useful in open looping.                                                                                                                                             |
+## 4) Montres connectées
 
-Read more about **Nightscout** options [here](https://nightscout.github.io/)
-
-### Tips for getting the most out of the Nightscout app
-
-1). If you get “stuck” on a page and want to be able to see the main screen again, just click “refresh” (bottom middle) and this will take you back to the **Nightscout** homepage with the BG graph.
-
-To see the current profile which is running on the phone, press the various icons on the screen above the graph. More info (current carb ratio, sensitivity and timezone etc.) can be seen by pressing “basal” and “OpenAPS” gives info about the profile and current target etc. Both the phone battery% and the pump battery % can also be monitored. BWP gives information on what the algorithm thinks will happen in the future, given the IOB and COB.
-
-#### Other icons in the menu: what does the pencil (edit) mean?
-
-You can (technically) use the edit pencil to move or delete bolus or correction treatments from the last 48h.
-
-More about this [here](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
-
-Although this could potentially be useful for deleting announced (but not bolused for) carbs, in practice it doesn’t currently work well with **AAPS** and we recommend making changes like this via the **AAPS** app directly.
-
-(RemoteControl_smartwatches)=
-## 4) Smartwatches
-
-### Option 1) Controlling AAPS from a Wear OS Watch
+### Option 1) Contrôler AAPS depuis une montre Wear OS
 
 ![Wear Remote 1](../images/Wear_Remote1.png)
 
-Once you have [setup **AAPS** on your watch](../WearOS/BuildingAapsWearOS.md), extensive details about the smartwatch faces and their functions can be found in [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
+Une fois que vous avez [installé **AAPS** sur votre montre](../WearOS/BuildingAapsWearOS.md), vous trouverez tous les détails sur les cadrans de la montre connectée et leurs fonctions dans [Montre connectée Wear OS](../WearOS/WearOsSmartwatch.md).
 
-As a brief overview, the following functions can be triggered from the smartwatch:
+En bref, les fonctions suivantes peuvent être lancées depuis la montre connectée :
 
-* set a temporary target
+* définir une cible temporaire
 
-* use the bolus calculator (calculation variables can be defined in settings on the phone)
+* utiliser le calculateur de bolus (les variables de calcul peuvent être définies dans les paramètres du téléphone)
 
-* administer eCarbs
+* administrer des eGlucides
 
-* administer a bolus (insulin + carbs)
+* administrer un bolus (insuline + glucides)
 
-* watch settings
+* paramètres de la montre
 
-* status
+* état
 
-* check pump status
+* vérifier l'état de la pompe
 
-* check loop status
+* vérifier l'état de la boucle
 
-* check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
+* vérifier et modifier le profil, CPP (Circadian Percentage Profile, profil circadien en pourcentage = décalage horaire + pourcentage)
 
-* show TDD (Total daily dose = bolus + basal per day)
+* afficher la DTQ (Dose Totale Quotidienne = bolus + basal par jour)
 
-* Remote bolus where the caregiver and T1D child are in different locations (this is possible for the **AAPS** watch and **AAPS** phone providing both devices are connected to the network)
+* Bolus à distance quand l'aidant et l'enfant DT1 sont à des endroits différents (c'est possible avec la montre **AAPS** et le téléphone **AAPS** si les deux appareils sont connectés au réseau)
 
-#### Communication from caregivers to the watch using other apps (like WhatsApp)
+#### Communication des aidants vers la montre avec d'autres applications (comme WhatsApp)
 
-It is possible to add additional apps to the watch, like WhatsApp, for messaging (for example) between caregivers and kids. It is important only to have ONE Google account associated with the phone, or the watch will not bring this data across. You need to be 13 or older to have a Samsung account, and this needs to be set up in the same email address which is used on the Android phone.
+Il est possible d'ajouter d'autres applications sur la montre, comme WhatsApp, par exemple pour échanger des messages entre les aidants et les enfants. Il est important d'avoir UN SEUL compte Google associé au téléphone, sinon la montre ne récupère pas ces données. Vous devez avoir 13 ans ou plus pour avoir un compte Samsung, et il doit être créé avec la même adresse e-mail que celle utilisée sur le téléphone Android.
 
-A video explaining getting WhatsApp setup for messaging on the Galaxy 4 watch (you can’t get full functionality of WhatsApp) is shown [here](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
+Une vidéo qui explique comment configurer WhatsApp pour les messages sur la montre Galaxy 4 (toutes les fonctions de WhatsApp ne sont pas disponibles) est disponible [ici](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
 
-Making adjustments in both the **Galaxy wearable** app on the **AAPS** phone and the watch makes it possible for WhatsApp messages to announce with a slight vibration, and also for the WhatsApp message to display over the existing watchface.
+Avec quelques réglages dans l'application **Galaxy wearable** sur le téléphone **AAPS** et sur la montre, les messages WhatsApp peuvent être annoncés par une légère vibration et s'afficher par-dessus le cadran actuel.
 
-### Option 2) **AAPS** on watch, for remote control of **AAPS** on a phone
+### Option 2) **AAPS** sur la montre, pour contrôler à distance **AAPS** sur un téléphone
 
-Similarly to using a follower phone with either AAPSClient, Nightscout or SMS commands (link to sections) a smartwatch can be used to remotely control **AAPS** and provide full profile data. A key difference to using a follower phone is that the smartwatch to **AAPS** phone link is via bluetooth and does not require an authenticator code. As a side-note, if both smartwatch and **AAPS** phone linked by bluetooth are also on a Wi-Fi/Cellular data network, the watch will also interact with the **AAPS** phone, giving a longer range of communication. This includes remote delivery of a bolus where the caregiver with the **AAPS** watch and T1D child (with **AAPS** phone) are in different locations and which can useful in circumstances where the T1D child is in school.
+Comme avec un téléphone suiveur utilisant **AAPSClient** ou les commandes SMS (voir les sections ci-dessus), une montre connectée peut servir à contrôler **AAPS** à distance et à afficher toutes les données du profil. Une différence importante avec un téléphone suiveur : la montre connectée est reliée au téléphone **AAPS** par Bluetooth, et n'a besoin ni de Nightscout ni d'un code d'authentification. À noter : si la montre connectée et le téléphone **AAPS** reliés par Bluetooth sont aussi sur un réseau Wi-Fi ou de données mobiles, la montre communique aussi avec le téléphone **AAPS** par ce réseau, ce qui donne une plus grande portée. Cela permet notamment de délivrer un bolus à distance quand l'aidant avec la montre **AAPS** et l'enfant DT1 (avec le téléphone **AAPS**) sont à des endroits différents. C'est utile par exemple quand l'enfant DT1 est à l'école.
 
-A remote control smartwatch is therefore often useful in any situation where:
+Une montre connectée de contrôle à distance est donc souvent utile dans toutes les situations où :
 
-a)  **AAPSClient**/Nightscout/**SMS** commands cannot work; or
+a)  les commandes **AAPSClient** ou **SMS** ne peuvent pas fonctionner ; ou
 
-b)  The user wishes to avoid the need for authenticator code (as required for the follower phone with inputting data, selecting TT or entering carbs).
+b)  l'utilisateur veut éviter de saisir un code d'authentification (nécessaire pour les commandes SMS).
 
-A smartwatch needs to have **Android wear** software (ideally 10 or higher) to be able to control **AAPS**. Please check the technical specifications of the watch, and check the [Phones page](../Getting-Started/Phones.md). Search, or ask in the **AAPS**  Facebook/Discord groups if unsure.
+Une montre connectée doit avoir **Wear OS 3 ou plus récent** pour pouvoir contrôler **AAPS**. Vérifiez les caractéristiques techniques de la montre et consultez la page [Montres connectées et AAPS](../Getting-Started/Watches.md). Faites une recherche, ou demandez dans les groupes Facebook/Discord d'**AAPS** en cas de doute.
 
-Specific How-to guides for setting up **AAPS** on the popular [Samsung Galaxy Watch 4 (40mm) is given below. The [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) watch is also a popular choice. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](../SupportingAaps/HowToEditTheDocs.md) to share your findings with the wider **AAPS** community.
+Des guides pratiques pour configurer **AAPS** sur la Samsung Galaxy Watch 4 (40 mm), une montre populaire, sont donnés ci-dessous. La montre [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) est aussi un choix populaire. Si vous avez déjà configuré une autre montre connectée et pensez que cela peut être utile à d'autres, ajoutez-la dans ces pages ([modifier la documentation](../SupportingAaps/HowToEditTheDocs.md)) pour partager votre expérience avec toute la communauté **AAPS**.
 
-### Option 3) AAPSClient on a watch for remote control of **AAPS** on a phone
+### Option 3) AAPSClient sur une montre pour contrôler à distance **AAPS** sur un téléphone
 
 ![Wear Remote 2](../images/Wear_Remote2.png)
 
-The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [Github](https://github.com/nightscout/AndroidAPS/releases/).
+Le logiciel pour la montre, l'apk Wear **AAPSClient**, peut être téléchargé directement depuis [Github](https://github.com/nightscout/AndroidAPS/releases/).
 
-To download the software, click on the required app (in this screenshot, either **wear-aapsclient-release_3.2.0.1** or **wear-aapsclient2-release_3.2.0.1** would work, there are two versions in case you need a copy for a second caregiver watch):
+Pour télécharger le logiciel, cliquez sur l'application de montre qui correspond à l'application client du téléphone : **wear-aapsclient-release_**_version_ va avec **AAPSClient**, **wear-aapsclient2-release_**_version_ va avec **AAPSClient2** (voir [À propos d'AAPSClient, AAPSClient2 et AAPSClient3](#remotecontrol-aapsclient-versions)) :
 
 ![image](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
 
 
-Then "save as" and save the file to a convenient location on your computer:
+Choisissez ensuite « enregistrer sous » et enregistrez le fichier à un endroit pratique sur votre ordinateur :
 
 
 ![image](../images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
@@ -313,7 +302,7 @@ Then "save as" and save the file to a convenient location on your computer:
 
 
 
-The **AAPSClient** wear apk can be transferred to your phone and side-loaded onto the watch in the same way as the **AAPS** Wear app, as detailed in [Transferring the Wear app onto your AAPS phone](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)  
+L'apk Wear **AAPSClient** peut être transféré sur votre téléphone puis installé manuellement (side-load) sur la montre, de la même façon que l'application Wear **AAPS**, comme décrit dans [Transférer l'application Wear sur votre téléphone AAPS](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)  
 
 
 

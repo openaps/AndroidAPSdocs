@@ -1,108 +1,142 @@
-# Accu-Chek Insight 幫浦
+# Accu-Chek Insight
 
 **此軟體是DIY人工胰臟解決方案的一部分，不是產品， 你需要閱讀、學習並暸解整個系統，包括如何使用他。他並不是為你自動管理所有糖尿病控制，而是 讓你在投入必要時間的前提下，提升糖尿病管理和生活品質。不要急於使用， 請給自己時間學習。你對自己 所做的決定負全部責任。**
 
-* * *
+```{admonition} Accu-Chek Insight is being phased out :class: note
 
-## ***警告：** 如果你曾經使用過 Insight 與 **SightRemote**，請**更新至最新 AAPS 版本**並**卸載 SightRemote**。*
+Roche is withdrawing from the insulin pump market to refocus its diabetes portfolio on the Accu-Chek SmartGuide CGM. It has communicated the end of sales of both the Accu-Chek Combo and Accu-Chek Insight pumps; its remaining Accu-Chek Solo micropump is also being wound down (last deliveries in Germany at the end of 2025). The change is being rolled out by region, starting in Germany, with other European markets expected to follow. Support for the Insight is already listed as ended (see [Pumps no longer sold](./Future-possible-Pump-Drivers.md)). If you rely on this pump, plan ahead for a transition to a supported pump.
 
-## 硬體和軟體需求
-
-* 一台 Roche Accu-Chek Insight 幫浦（任何韌體都適用）
-
-注意：AAPS 將資料寫入**幫浦的第一個基礎率設定檔**。
-
-* 一台 Android 手機（基本上每個 Android 版本都適用於 Insight，但請檢查[模組](../Getting-Started/ComponentOverview)頁面了解運作 AAPS 所需的 Android 版本）。
-* 你的手機上安裝了 AAPS 應用程式
-
-## 設定
-
-* Insight 幫浦一次只能連線一個裝置。如果你之前使用過 Insight 遙控器（血糖機），必須從幫浦的配對裝置列表中移除該血糖機：選單 > 設定 > 通訊 > 移除裝置
+    <br />```{note}
+    Before **AAPS** had a native Insight driver, the Insight was controlled through the separate [SightRemote](https://github.com/TebbeUbben/SightRemote) app. SightRemote is no longer needed or maintained: if you still have it installed from those days, uninstall it and use a current version of **AAPS** instead.
     
-    ![移除血糖機 Insight 的螢幕截圖](../images/Insight_RemoveMeter.png)
 
-* 在[組態建置工具 > 幫浦](../SettingUpAaps/ConfigBuilder.md)中，選擇 Accu-Chek Insight。
+```{contents} Table of contents :depth: 1 :local: true
+
+    <br />## Pump capabilities with AAPS
     
-    ![組態建置工具 Insight 的螢幕截圖](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
-
-* 點擊齒輪圖示以打開 Insight 設定。
-
-* 在設定中，點擊螢幕頂部的“Insight 配對”按鈕。你應該會看到附近所有藍牙裝置的列表（左下方）。
-* 在 Insight 幫浦上，前往選單 > 設定 > 通訊 > 添加裝置。幫浦將顯示如下螢幕（右下方），顯示幫浦的序列號。
+    * Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
+    * Automatic DST and timezone handling.
     
-    ![Insight 配對 1 的螢幕截圖](../images/Insight_Pairing1.png)
-
-* 返回手機，點擊藍牙裝置列表中的幫浦序列號。然後點擊配對以確認。
+    ## Hardware and software requirements
     
-    ![Insight 配對 2 的螢幕截圖](../images/Insight_Pairing2.png)
-
-* 幫浦和手機將顯示一個代碼。確認兩個裝置上的代碼相同，並在幫浦和手機上確認。
+    * A Roche Accu-Chek Insight pump (any firmware, they all work)
     
-    ![Insight 配對 3 的螢幕截圖](../images/Insight_Pairing3.png)
-
-* 成功！配對成功後，為自己點個讚。
+    Note: AAPS will write data always in **first basal rate profile in the pump**.
     
-    ![Insight 配對 4 的螢幕截圖](../images/Insight_Pairing4.png)
-
-* 要檢查是否一切正常，返回 AAPS 中的組態建置工具並點擊 Insight 幫浦旁的齒輪圖示進入 Insight 設定，然後點擊 Insight 配對，你將看到一些關於幫浦的資訊：
+    * An Android phone running Android 12 or newer (see [Phones](../Getting-Started/Phones.md))
+    * The AAPS app installed on your phone
     
-    ![Insight 配對資訊的螢幕截圖](../images/Insight_PairingInformation.png)
-
-注意：幫浦和手機之間不會有永久連線。只有在需要時（例如設置臨時基礎率、進行注射、讀取幫浦歷史紀錄時）才會建立連線。否則手機和幫浦的電池會消耗過快。
-
-(Accu-Chek-Insight-Pump-settings-in-aaps)=
-
-## AAPS 設定
-
-**注意：現在可以（僅在 AAPS v2.7.0 及以上版本）使用「始終使用基礎絕對值」，如果你想使用 Autotune 與 Insight 幫浦，即使在 Nightscout 中啟用同步。**（在 AAPS 中轉到[偏好設定 > NSClient > 進階設定](#Preferences-advanced-settings-nsclient)）。
-
-![Insight 設定的螢幕截圖](../images/Insight_settings.png)
-
-在 AAPS 的 Insight 設定中，你可以啟用以下選項：
-
-* "紀錄儲液筒更換"：這將在幫浦運作“填充導管”程式時自動紀錄胰島素筒的更換。
-
-* "紀錄導管更換"：當你在幫浦上運作“填充導管”程式時，這會在 AAPS 資料庫中添加一個註記。
-
-* "紀錄注射點更換"：這會在幫浦上運作“填充導管”程式時，在 AAPS 資料庫中添加一個註記。**注意：更換注射點也會重置自動敏感度調整（Autosens）。**
-
-* "紀錄電池更換"：當你在幫浦中放入新電池時，這會紀錄電池更換。
-
-* "紀錄操作模式變更"：這會在 AAPS 資料庫中插入註記，當你啟動、停止或暫停幫浦時。
-
-* "紀錄警報"：這會在幫浦發出警報時紀錄在 AAPS 資料庫中（提醒、注射和臨時基礎率取消除外——這些不會被紀錄）。
-
-* "啟用臨時基礎率仿真"：Insight 幫浦最多只能發出250%的臨時基礎率（TBR）。為了繞過這一限制，當你請求超過250%的 TBR 時，TBR 仿真會指示幫浦發送一個延長注射以額外供應胰島素。
+    ## Setup
     
-    **注意：一次只使用一個延長注射，因為同時多次延長注射可能會導致錯誤。**
-
-* "停用手動注射時的震動"：這會在手動注射（或延長注射）時停用 Insight 幫浦的震動。此設定僅在最新的 Insight 韌體（3.x）版本中可用。
-
-* "停用自動注射時的震動"：這會在自動注射（SMB 或 TBR 仿真）時停用 Insight 幫浦的震動。此設定僅在最新的 Insight 韌體（3.x）版本中可用。
-
-* "恢復時間"：這定義了在連線失敗後，AAPS 將等待多長時間後再嘗試連線。你可以選擇0到20秒。如果你遇到連線問題，請選擇較長的等待時間。  
-      
-    恢復時間範例：最小恢復時間=5，最大恢復時間=20   
-      
-    無連線 -> 等待**5**秒。   
-    再試 -> 無連線 -> 等待**6**秒。   
-    再試 -> 無連線 -> 等待**7**秒。   
-    再試 -> 無連線 -> 等待**8**秒。   
-    ...   
-    再試 -> 無連線 -> 等待**20**秒。  
-    再試 -> 無連線 -> 等待**20**秒。   
-    ...
-
-* "斷線延遲"：這定義了在操作完成後 AAPS 將等待多少秒後再中斷與幫浦的連線。預設值為5秒。
-
-當幫浦停止時，AAPS 將紀錄臨時基礎率為0%。
-
-在 AAPS 中，Accu-Chek Insight 標籤顯示幫浦的目前狀態，並有兩個按鈕：
-
-* "重新整理"：重新整理幫浦狀態
-* "啟用/停用 TBR 通知"：標準的 Insight 幫浦在 TBR 結束時會發出警報。此按鈕讓你無需配置軟體即可啟用或停用此警報。
+    * The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: **Menu** > **Settings** > **Communication** > **Remove device**.
     
-    ![Insight 狀態的螢幕截圖](../images/Insight_Status2.png)
+       ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
+    
+    * In [Configuration > Pump](#Config-Builder-pump), select the **Accu-Chek Insight** card. Only one pump can be active at a time.
+    
+       ![Configuration > Pump with the Accu-Chek Insight plugin](../images/v4/Configuration/configuration_pump_list_1.png)
+    
+       Once it is selected, the **Accu-Chek Insight** card shows two buttons, **Settings** and **Open plugin**:
+    
+       ![The Accu-Chek Insight plugin selected in Configuration > Pump](../images/v4/Pumps/accu_chek_insight_enabled.png)
+    
+       **Settings** opens the settings of the Accu-Chek Insight driver (see [Settings in AAPS](#Accu-Chek-Insight-Pump-settings-in-aaps)).
+    
+       **Open plugin** (or **Manage → Pump**) opens the Accu-Chek Insight pump screen. Before a pump is paired it looks like this:
+    
+       ![Accu-Chek Insight pump screen before pairing](../images/v4/Pumps/accu_chek_insight_pump_screen.png)
+    
+    (accu-chek-insight-pairing)=
+    ### Pairing
+    
+    * On the pump screen, tap **Insight pairing**. The pairing wizard opens and searches for nearby Bluetooth devices (top of the picture below).
+    * On the Insight pump, go to **Menu** > **Settings** > **Communication** > **Add Device**. The pump shows the following screen (bottom of the picture below) with the serial number of the pump.
+    
+       ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
+    
+    * Back on your phone, tap the pump serial number in the list of Bluetooth devices. If Android asks you to confirm the pairing, tap **Pair**.
+    
+       ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
+    
+    * The pump and the phone both show a code. Check that the codes are the same on both devices. Confirm on the pump, and tap **Yes** on the phone. (Tap **No** if the codes do not match.)
+    
+       ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
+    
+    * The phone shows **Pairing completed**. Tap **Exit** to return to the pump screen.
+    
+       ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
+    
+    * To check that all is well, look at the pump screen (**Manage → Pump**). Once the pump is paired, it shows information about the pump, such as **Serial number**, **Manufacturing date**, **Release software version** and **Bluetooth address**.
+    
+       ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
+    
+       ```{admonition} Older screenshot
+       :class: note
+       Apart from the top of the first picture, the pairing screenshots above are from an earlier **AAPS** version and may look different in **AAPS** 4.
+       ```
+    
+    * To remove the pairing, tap **Unpair** on the pump screen and confirm **Reset pairing information?**. The **Insight pairing** button then appears again.
+    
+    Note: There is no permanent connection between the pump and the phone. **AAPS** only connects when needed (for example to set a temporary basal rate, give a bolus or read the pump history). Otherwise the batteries of the phone and the pump would drain far too fast.
+    
+    (Accu-Chek-Insight-Pump-settings-in-aaps)=
+    ## Settings in AAPS
+    
+    Open the settings with **Settings** on the **Accu-Chek Insight** card in **Configuration** > **Pump**, or with the gear icon in the top-right corner of the pump screen.
+    
+    ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
+    
+    In the Insight settings in **AAPS** you can enable the following options:
+    
+    * **Log reservoir changes**: automatically records an insulin cartridge change when you run the "fill cannula" program on the pump.
+    
+    * **Log tube changes**: adds a note to the **AAPS** database when you run the "tube filling" program on the pump.
+    
+    * **Log site changes**: adds a note to the **AAPS** database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
+    
+    * **Log battery changes**: records a battery change when you put a new battery in the pump.
+    
+    * **Log operating mode changes**: adds a note to the **AAPS** database whenever you start, stop or pause the pump.
+    
+    * **Log alerts**: adds a note to the **AAPS** database whenever the pump issues an alert (except reminders, bolus and TBR cancellation, which are not recorded).
+    
+    * **Enable TBR emulation**: the Insight pump can only set temporary basal rates (TBRs) up to 250%. To get around this limit, TBR emulation tells the pump to deliver an extended bolus for the extra insulin if a TBR of more than 250% is requested.
+    
+      **Note: Only use one extended bolus at a time. Several extended boluses at the same time might cause errors.**
+    
+    * **Disable vibrations on manual bolus delivery**: stops the Insight pump from vibrating when it delivers a manual bolus (or extended bolus). Only available with Insight firmware 3.x.
+    
+    * **Disable vibrations on automated bolus delivery**: stops the Insight pump from vibrating when it delivers an automatic bolus (SMB or temp basal with TBR emulation). Only available with Insight firmware 3.x.
+    
+    * **Min. recovery duration [s]** and **Max. recovery duration [s]**: how long **AAPS** waits before trying again after a failed connection attempt. 你可以選擇0到20秒。 If you have connection problems, choose a longer wait time.
+        <br><br>Example for min. 恢復時間=5，最大 recovery duration = 20
+        <br><br>no connection -> wait <b>5</b> sec.
+          <br>  retry -> no connection -> wait <b>6</b> sec.
+          <br>  retry -> no connection -> wait <b>7</b> sec.
+          <br>  retry -> no connection -> wait <b>8</b> sec.
+          <br>...
+          <br>retry -> no connection -> wait <b>20</b> sec.
+          <br>retry -> no connection -> wait <b>20</b> sec.
+          <br>...
+    
+    * **Disconnect delay [s]**: how long (in seconds) **AAPS** waits before disconnecting from the pump after an operation is finished. You can choose from 0 to 15 seconds. The default value is 5 seconds.
+    
+    For periods when the pump was stopped, **AAPS** logs a temporary basal rate of 0%.
+    
+    ### The pump screen
+    
+    The Accu-Chek Insight pump screen (**Manage → Pump**) shows the current status of the pump, for example **Status**, **Last connected**, **Operating mode**, **Battery**, **Reservoir level**, today's total daily doses (**TDD Bolus**, **TDD Basal**), basal rates and the last bolus. Once the pump is paired, it has these buttons:
+    
+    * **Refresh**: refreshes the pump status.
+    * **Enable notification of TBR end (pump setting)** / **Disable notification of TBR end (pump setting)**: a standard Insight pump sounds an alarm when a TBR finishes. This button turns that alarm on or off without the need for configuration software.
+    * **Unpair**: removes the pairing with the pump (see [Pairing](#accu-chek-insight-pairing)).
+    
+    ![Screenshot of Insight Status](../images/Insight_Status2.png)
+    
+    ```{admonition} Older screenshot
+    :class: note
+    The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen looks different and also has an **Unpair** button.
+    
 
 ## 幫浦中的設定
 
@@ -122,7 +156,7 @@
 
 * 韌體 1.x：設計上沒有震動。
 * 韌體 2.x：無法停用震動。
-* 韌體 3.x：AAPS 安靜地發送注射。(最低[版本 2.6.1.4](#Releasenotes-version-2-6-1-4))
+* 韌體 3.x：AAPS 安靜地發送注射。
 
 你可以在選單中找到韌體版本。
 
@@ -142,12 +176,22 @@ Insight 幫浦有一個小型內部電池，可在更換可拆卸電池時維持
 
 ### 逾時
 
-有時 Insight 幫浦在連線設置期間可能不會回應。在這種情況下，AAPS 將顯示以下訊息：“交握時逾時 - 重置藍牙”。
+Sometimes the Insight pump does not answer while **AAPS** sets up the connection. **AAPS** then shows the notification "Timeout during handshake - reset bluetooth".
 
 ![Insight 重置藍牙](../images/Insight_ResetBT.png)
 
-在這種情況下，請關閉幫浦和手機上的藍牙約10秒，然後重新開啟。
+If this happens, turn off Bluetooth on the pump AND on the phone for about 10 seconds, then turn it back on.
 
 ## 跨時區使用 Insight 幫浦
 
 有關跨時區旅行的訊息，請參見[幫浦旅行時的時區](#timezone-traveling-insight)。
+
+## 如何尋求協助
+
+Development of the Insight driver is done by the community on a **volunteer** basis. Before requesting help, please:
+
+1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
+2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
+3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+
+When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).

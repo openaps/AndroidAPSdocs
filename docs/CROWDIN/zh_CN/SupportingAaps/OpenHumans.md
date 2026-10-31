@@ -25,27 +25,46 @@
 ## 设置
 
 1. 如果尚未注册，请先在 [Open Humans](https://www.openhumans.org) 创建账户。您可以选择复用现有的 Google 或 Facebook 账户。
-2. 在 [配置生成器 > 同步](../SettingUpAaps/ConfigBuilder.md) 中启用 "Open Humans" 插件。
-3. 通过齿轮按钮打开设置。您可以限制仅在手机使用 Wi-Fi 和/或充电时上传。
-4. 打开 Open Humans 插件（通过 OH 标签页或汉堡菜单），点击 '登录'。
+2. Enable the **Open Humans** plugin in [**Configuration** > **Communication**](../SettingUpAaps/ConfigBuilder.md).
 
-![Open Humans Config Builder](../images/OHUploader1.png)
+![Open Humans enabled in Configuration > Communication](../images/OHUploader1.png)
 
-5. 仔细阅读关于 Open Humans 上传器的说明和使用条款。
-6. 通过勾选框确认并点击“LOGIN”。
+3. Tap **Settings** on the **Open Humans** card. You can restrict uploads to times when the phone uses Wi-Fi (**WiFi only**) and/or is charging (**Charging only**).
+
+![Open Humans settings with WiFi only and Charging only](../images/OHUploader_settings.png)
+
+4. Tap **Open plugin** on the **Open Humans** card, then tap **Setup**.
+
+![Open Humans plugin screen with the Setup button](../images/OHUploader_setup.png)
+
+5. On the **Welcome to Open Humans** screen, tap **Next**. Read the **Consent** screen carefully: it shows the terms of use and which data is uploaded and not uploaded.
+6. Switch on **I understand and agree.** (1) and tap **Login to Open Humans** (2).
+
+![Open Humans Welcome and Consent screens in AAPS](../images/OHUploader2.png)
+
 7. 将打开 Open Humans 网站。使用您的账户凭证登录。
-8. 选择是否要在公开的 Open Humans 个人资料中隐藏您的 AAPS 上传器成员身份。
-9. 点击 '授权项目' 按钮。
+8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile (1).
+9. Click **Authorize project** (2).
 
-![Open Humans Terms of Use + Login](../images/OHUploader2.png)
+![Login and project authorization on the Open Humans website](../images/OHUploader_web.png)
 
-10. 返回 AAPS 后，您将看到登录成功的提示。
-11. 保持 Open Humans 上传器插件和手机开启以完成设置。
-12. 点击关闭后，您将看到成员 ID。队列大小 > 0 表示仍有待上传数据。
-13. 点击 '退出登录' 可停止向 Open Humans 上传数据。
+```{admonition} Older screenshot
+:class: note
+The screenshots above show an earlier version of the Open Humans website and still use the old project name **AndroidAPS Uploader**. The steps are the same.
+```
+
+10. Back in **AAPS**, the **Final touches** screen asks whether you want to proceed. Tap **Proceed**.
+11. Wait until **We're done!** appears, then tap **Close**. From now on, your phone uploads data in the background from time to time.
+12. The **Open Humans** plugin screen now shows your **Project Member ID**. Tap **Upload now** if you want to start an upload right away.
+13. Tap **Logout** if you want to stop uploading data to Open Humans.
 14. Android 通知将提示上传运行状态。
 
 ![Open Humans finish setup](../images/OHUploader3.png)
+
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the confirmation screens are **Final touches** and **We're done!**, there is no queue size, and the buttons are **Upload now** and **Logout**.
+```
 
 15. 您可以通过登录 [Open Humans 网站](https://www.openhumans.org) 管理数据。
 
@@ -79,7 +98,7 @@ OpenAPS 数据共享库旨在为 DIYAPS 社区提供简便的数据共享方式�
 
 ## 数据隐私
 
-Open Humans 通过为每个项目分配数字 ID 来保护隐私。这使得项目能识别但无法确认您的身份。 AAPS 上传的应用 ID 类似，仅用于数据管理。更多信息请参考：
+Open Humans 通过为每个项目分配数字 ID 来保护隐私。 This allows projects to recognize but not identify you. AAPS 上传的应用 ID 类似，仅用于数据管理。更多信息请参考：
 
 - [Open Humans 数据使用政策](https://www.openhumans.org/data-use/)
 - [Open Humans GDPR](https://www.openhumans.org/gdpr/)

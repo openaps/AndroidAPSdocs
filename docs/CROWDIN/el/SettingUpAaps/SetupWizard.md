@@ -1,598 +1,538 @@
-# AAPS Setup Wizard
+# Οδηγός εγκατάστασης του AAPS
 
-When you first start **AAPS** you are guided by the "**Setup Wizard**", to quickly setup all the basic configurations of your app in one go. **Setup Wizard** guides you, in order to avoid forgetting something crucial. For example, the **permission settings** are fundamental for setting up **AAPS** correctly.
+```{contents} In this page
+:backlinks: entry
+:depth: 2
+```
 
-However, it's not mandatory to get everything completely configured in the first run of using the **Setup Wizard** and you can easily exit the Wizard and come back to it later. There are three routes available after the **Setup Wizard** to further optimise/change the configuration. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
+Όταν ξεκινάτε το **AAPS** για πρώτη φορά, σας καθοδηγεί ο «**Οδηγός εγκατάστασης**», ώστε να κάνετε γρήγορα όλες τις βασικές ρυθμίσεις της εφαρμογής με μία φορά. Ο **Οδηγός εγκατάστασης** σας καθοδηγεί, για να μην ξεχάσετε κάτι σημαντικό. Για παράδειγμα, οι **ρυθμίσεις αδειών** είναι βασικές για τη σωστή ρύθμιση του **AAPS**.
 
-During, and directly after using the **Setup Wizard** you may not notice any significant observable changes in **AAPS**. To enable your **AAPS** loop, you have to follow the **Objectives** to enable feature after feature. You will start **Objective 1** at the end of the Setup Wizard. You are the master of **AAPS**, not the other way around.
+Όμως δεν είναι υποχρεωτικό να ρυθμίσετε τα πάντα πλήρως την πρώτη φορά που χρησιμοποιείτε τον **Οδηγό εγκατάστασης**. Μπορείτε εύκολα να βγείτε από τον Οδηγό και να επιστρέψετε αργότερα. Μετά τον **Οδηγό εγκατάστασης** υπάρχουν τρεις τρόποι για να βελτιώσετε ή να αλλάξετε περισσότερο τη διαμόρφωση. Αυτά θα εξηγηθούν στην επόμενη ενότητα. Γι' αυτό δεν πειράζει αν παραλείψετε κάποια σημεία στον Οδηγό εγκατάστασης· μπορείτε εύκολα να τα ρυθμίσετε αργότερα.
+
+Κατά τη διάρκεια και αμέσως μετά τη χρήση του **Οδηγού εγκατάστασης** μπορεί να μη δείτε σημαντικές αλλαγές στο **AAPS**. Για να ενεργοποιήσετε το κύκλωμα του **AAPS**, πρέπει να ακολουθήσετε τα **Βήματα**, που ενεργοποιούν τη μία λειτουργία μετά την άλλη. Θα ξεκινήσετε το **Βήμα 1** στο τέλος του Οδηγού εγκατάστασης. Εσείς ελέγχετε το **AAPS**, όχι το αντίθετο.
 
 ```{admonition} Preview Objectives
 :class: note
-If you are keen to know the structure of the objectives, please read [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md) but then come back here to run the Setup Wizard first.
+Αν θέλετε να μάθετε τη δομή των Βημάτων, διαβάστε τη σελίδα [Βήματα](../SettingUpAaps/CompletingTheObjectives.md), αλλά μετά επιστρέψτε εδώ για να ολοκληρώσετε πρώτα τον Οδηγό εγκατάστασης.
 
 ```
 
-From previous experience, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve.
+Από την εμπειρία γνωρίζουμε ότι οι νέοι χρήστες συχνά πιέζουν τον εαυτό τους να ρυθμίσουν το **AAPS** όσο πιο γρήγορα γίνεται. Αυτό μπορεί να φέρει απογοήτευση, γιατί υπάρχουν πολλά να μάθετε.
 
-So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
+Γι' αυτό, αφιερώστε τον χρόνο που χρειάζεται για να ρυθμίσετε το κύκλωμά σας. Τα οφέλη ενός κυκλώματος **AAPS** που λειτουργεί καλά είναι τεράστια.
 
 ```{admonition} Ask for Help
 :class: note
-If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
+Αν υπάρχει λάθος στην τεκμηρίωση ή έχετε καλύτερη ιδέα για το πώς μπορεί να εξηγηθεί κάτι, μπορείτε να ζητήσετε βοήθεια από την κοινότητα, όπως εξηγείται στην ενότητα [Επικοινωνία με άλλους χρήστες](../GettingHelp/WhereCanIGetHelp.md).
 ```
-## Welcome message
+## Μήνυμα καλωσορίσματος
 
-This is just the welcome message which you can skip with the "NEXT" button:
+Όταν ανοίγει ο Οδηγός εγκατάστασης, σας καλωσορίζει με ένα σύντομο μήνυμα και αμέσως δείχνει ένα πλαίσιο «**Απαιτούνται άδειες**» στο κάτω μέρος της οθόνης (δείτε την επόμενη ενότητα).
 
-![Welcome](../images/setup-wizard/Wizard01.png)
+Αφού δώσετε τις άδειες, το πλαίσιο κλείνει και η οθόνη καλωσορίσματος δείχνει ένα κουμπί «**Επόμενο**». Πατήστε «**ΕΠΟΜΕΝΟ**» για να συνεχίσετε:
 
-## License agreement
+![Καλώς ήρθατε](../images/setup-wizard/Wizard-Welcome.png)
 
-In the end user license agreement there is important information about the legal aspects of using **AAPS**. Please read it carefully.
+## Απαιτούμενες άδειες
 
-If you don't understand, or can't agree to the end user license agreement please don't use **AAPS** at all!
+Το **AAPS** χρειάζεται μερικές άδειες για να λειτουργεί σωστά. Ο Οδηγός τις συγκεντρώνει σε ένα πλαίσιο «**Απαιτούνται άδειες**», η καθεμία με το δικό της κουμπί «**Παραχώρηση**». Δώστε τις μία μία — το εικονίδιο δίπλα σε κάθε άδεια γίνεται τικ όταν ολοκληρωθεί.
 
-If you understand and agree, please click the "I UNDERSTAND AND AGREE" button and follow the Setup Wizard:
+![Άδειες](../images/setup-wizard/Wizard-Permissions.png)
 
-![EULA](../images/setup-wizard/Wizard02.png)
+### Βελτιστοποίηση μπαταρίας
 
-## Required permissions
+Η κατανάλωση μπαταρίας στα smartphone είναι σημαντική, γιατί η απόδοση των μπαταριών είναι ακόμα αρκετά περιορισμένη. Γι' αυτό το λειτουργικό σύστημα Android στο smartphone σας περιορίζει τις εφαρμογές στο να εκτελούνται και να χρησιμοποιούν χρόνο CPU, άρα και μπαταρία.
 
-**AAPS** needs some requirements to operate correctly.
+Όμως το **AAPS** πρέπει να εκτελείται τακτικά, _π.χ._ για να λαμβάνει τις τιμές γλυκόζης κάθε λίγα λεπτά και μετά να εφαρμόζει τον αλγόριθμο, ώστε να αποφασίσει τι θα κάνει με τη γλυκόζη σας, με βάση τις ρυθμίσεις σας. Γι' αυτό πρέπει να εξαιρεθεί από τη βελτιστοποίηση μπαταρίας.
 
-In the following screen you are asked several questions you have to agree to, to get **AAPS** working. The Wizard itself explains why it asks for the relevant setting.
+Πατήστε «**Παραχώρηση**» δίπλα στο «**Βελτιστοποίηση μπαταρίας**» και μετά επιλέξτε «**Να επιτρέπεται**» (Allow) στο παράθυρο «Να εκτελείται πάντα η εφαρμογή στο παρασκήνιο;»:
 
-In this screen, we aim to give some more background information, translate more technical speak into common language or explain the reason. Continue reading below to see each permission request.
-
-![Permissions](../images/setup-wizard/Wizard03.png)
-
-### Notifications
-
-Android requires special permission for apps if they want to send you notifications.
-
-While it is a good feature to disable notifications _e.g._ from  social media apps, it is essential that you allow **AAPS** to send you notifications.
-
-Please click the first "ASK FOR PERMISSION" button:
-
-![Notifications](../images/setup-wizard/Wizard04.png)
-
-Select the "AAPS" app:
-
-![AAPS over other apps](../images/setup-wizard/Wizard04-AndroidSettings1.png)
-
-Enable "Allow display over other apps" by sliding the slider to the right:
-
-![image](../images/setup-wizard/Wizard04-AndroidSettings2.png)
-
-The slider should look this way if it is enabled:
-
-![image](../images/setup-wizard/Wizard04-AndroidSettings3.png)
-
-### Battery optimization
-
-Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
-
-However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Therefore it must be allowed to do so by Android.
-
-You do this by confirming the setting.
-
-Click the second "ASK FOR PERMISSION" button.
-
-![Allow Background](../images/setup-wizard/Wizard05.png)
-
-Please select "Allow":
-
-![Allow Background](../images/setup-wizard/Wizard05-Background.png)
-
-(setup-wizard-bluetooth-battery-optimisation)=
-### Bluetooth battery optimisation
-
-Newer versions of Android have added battery optimisation to the system Bluetooth application too.
-
-As well as Disabling battery optimisation for **AAPS**, you will likely need to also disable this for the Bluetooth system app. Failure to do this may lead to pump connection dropouts and issues.
-
-***NOTE: The xDrip documentation covers how to do this here: [xDrip documentation](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
-
-Follow these steps on Android 16, other versions will varies slightly from the provided screenshots:
-
-1. Open Android settings and search for **Apps**, and open the Apps settings.
-
-   ![settings_apps](../images/setup-wizard/settings_apps.png)
-
-2. You will see the App settings, however we need to expand to see all apps, click on **See all apps** to expand.
-
-   ![settings_apps](../images/setup-wizard/apps_not_expanded.png)
-
-3. As the Bluetooth app is a system app its hidden by default, we need to show system apps. Click on the **three dots (hamburger)** on the top left (1). Then click on **Show System** (2).
-
-   ![settings_apps](../images/setup-wizard/show_system.png)
-
-4. Search for the `Bluetooth` app and click on `Bluetooth` and/or `Legacy Bluetooth` if both are present ensure the procedure is followed for both.
-
-   ***NOTE: It's safe to ignore the `Bluetooth MIDI Service` this is not used by AAPS***
-
-   ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
-
-   1. On Android 12 Click on `Battery`, Android 13+ Click on `App battery usage`,
-
-   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
-
-5. On Android 12+ select the `Unrestricted` option, on Android 15+ you need to expand the `Allow background usage` setting, click on the section highlighted in red to do this then follow step 6 to complete.
-
-   ![bluetooth_settings_apps_12](../images/setup-wizard/app_bluetooth_unrestricted_12-14.png)    ![bluetooth_settings_apps_15](../images/setup-wizard/app_bluetooth_allow_background.png)
-
-6. On Android 16 Select `Unrestricted`
-
-   ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
+![Εκτέλεση στο παρασκήνιο](../images/setup-wizard/Wizard-Permissions-Battery.png)
 
 (SetupWizard-StoragePermission)=
 
-### Storage permission
+### Φάκελος AAPS
 
-**AAPS** needs to log information to the permanent storage of your smartphone. Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
+Το **AAPS** πρέπει να αποθηκεύει τις ρυθμίσεις του και πληροφορίες καταγραφής στη μόνιμη μνήμη του smartphone σας. Μόνιμη αποθήκευση σημαίνει ότι τα δεδομένα θα υπάρχουν ακόμα και μετά την επανεκκίνηση του τηλεφώνου σας. Οι άλλες πληροφορίες απλώς χάνονται, γιατί δεν αποθηκεύονται σε μόνιμη μνήμη.
 
-Click the first "ASK FOR PERMISSION" button:
-
-![Allow Background](../images/setup-wizard/Wizard06.png)
-
-Click "Allow":
-
-![image](../images/setup-wizard/Wizard06-Memory.png)
-
-Click "AAPS Directory". This opens the filesystem on your phone and allows you to choose where you want AAPS to store its information.
-
-![AAPS Directory](../images/setup-wizard/Wizard07.png)
+Πατήστε «**Παραχώρηση**» δίπλα στο «**Φάκελος AAPS**». Αυτό ανοίγει τα αρχεία του τηλεφώνου σας και σας αφήνει να επιλέξετε πού θα αποθηκεύει το **AAPS** τις πληροφορίες του.
 
 ```{tip}
-Choosing the default AAPS directory is recommended.</br>
-Do **not** select a subdirectory of AAPS.
+Προτείνεται να επιλέξετε τον προεπιλεγμένο φάκελο AAPS.</br>
+**Μην** επιλέξετε υποφάκελο του AAPS.
 ```
 
-The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it, and choose "Use this folder":
+Ο προεπιλεγμένος φάκελος είναι ο **AAPS**, αλλά μπορείτε να χρησιμοποιήσετε όποιον ξεχωριστό φάκελο θέλετε. Δημιουργήστε τον φάκελο αν χρειάζεται, μπείτε σε αυτόν και επιλέξτε «**ΧΡΗΣΗ ΑΥΤΟΥ ΤΟΥ ΦΑΚΕΛΟΥ**» (USE THIS FOLDER):
 
-![Select folder](../images/setup-wizard/Wizard07-Folder.png)
+![Επιλογή φακέλου](../images/setup-wizard/Wizard-Permissions-Directory.png)
 
-Confirm that you wish to grant access to **AAPS** to the selected directory:
+Επιβεβαιώστε με «**ΝΑ ΕΠΙΤΡΕΠΕΤΑΙ**» (ALLOW) ότι θέλετε να δώσετε στο **AAPS** πρόσβαση στον επιλεγμένο φάκελο:
 
-![Select folder](../images/setup-wizard/Wizard07-Confirm.png)
+![Πρόσβαση στον φάκελο](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
 
-Click the "NEXT" button:
+### Ειδοποιήσεις
 
-![Finish Permissions](../images/setup-wizard/Wizard08.png)
+Το Android απαιτεί ειδική άδεια για τις εφαρμογές που θέλουν να σας στέλνουν ειδοποιήσεις.
 
-### Location
+Είναι καλό να απενεργοποιείτε τις ειδοποιήσεις, _π.χ._ από εφαρμογές κοινωνικής δικτύωσης, αλλά είναι απαραίτητο να επιτρέψετε στο **AAPS** να σας στέλνει ειδοποιήσεις.
 
-Android links the use of Bluetooth communication to the ability to use location services. Perhaps you have seen it with other apps too. It's common to need location permission if you want to access Bluetooth.
+Πατήστε «**Παραχώρηση**» δίπλα στο «**Ειδοποιήσεις**» και επιλέξτε «**Να επιτρέπεται**» (Allow) στο μήνυμα του συστήματος:
 
-**AAPS** uses Bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. Details may differ from setup to setup.
+![Άδεια για ειδοποιήσεις](../images/setup-wizard/Wizard-Permissions-Notifications.png)
 
-Click the first "ASK FOR PERMISSION" button:
+### Ξυπνητήρια και υπενθυμίσεις
 
-![Allow Location](../images/setup-wizard/Wizard09.png)
+Στο **Android 14 και νεότερο**, το **AAPS** χρειάζεται την άδεια «**Ξυπνητήρια και υπενθυμίσεις**», ώστε οι συναγερμοί να ανάβουν την οθόνη ενώ το **AAPS** είναι στο παρασκήνιο και οι υπενθυμίσεις (για παράδειγμα από έναν **Αυτοματισμό**) να χτυπούν στην ώρα τους.
 
-This is important. Otherwise **AAPS** can not work properly at all.
+Αυτή η άδεια εμφανίζεται μόνο όταν χρειάζεται. Όταν το **AAPS** εξαιρεθεί από τη βελτιστοποίηση μπαταρίας (δείτε παραπάνω), το Android δίνει αυτόματα την άδεια για ακριβή ξυπνητήρια και η άδεια εξαφανίζεται από τη λίστα. Αν εμφανίζεται ακόμα, πατήστε «**Παραχώρηση**» δίπλα στο «**Ξυπνητήρια και υπενθυμίσεις**». Αυτό ανοίγει μια οθόνη ρυθμίσεων του συστήματος για το **AAPS**. Ενεργοποιήστε τον διακόπτη και επιστρέψτε στο **AAPS**. Στο Android 13 και παλαιότερο αυτή η άδεια δεν εμφανίζεται και δεν χρειάζεται να κάνετε τίποτα.
 
-Click "While using the app":
+Όταν όλες οι άδειες δείχνουν τικ (τρεις, ή τέσσερις στο Android 14 και νεότερο), το πλαίσιο «**Απαιτούνται άδειες**» κλείνει μόνο του και μπορείτε να πατήσετε «**ΕΠΟΜΕΝΟ**» στην οθόνη καλωσορίσματος για να συνεχίσετε.
 
-![Location](../images/setup-wizard/Wizard09-location.png)
+(setup-wizard-bluetooth-battery-optimisation)=
+### Βελτιστοποίηση μπαταρίας του Bluetooth
 
-Click the second "ASK FOR PERMISSION" button:
-
-![Location 2](../images/setup-wizard/Wizard10.png)
-
-Select "Allow all the time".
-
-![Location all the time](../images/setup-wizard/Wizard10-allthetime.png)
-
-
-
-Click the "NEXT" button:
-
-![Location 2](../images/setup-wizard/Wizard11.png)
-
-## Master password
-
-As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
-
-The second sentence is very important, please **DO NOT LOSE YOUR MASTER PASSWORD**. Please make a note of it _e.g._ on Google Drive. Google Drive is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
-
-After filling in the password twice, please click the "NEXT" button:
-
-![Κωδικόs πρόσβασης](../images/setup-wizard/Wizard12.png)
-
-### Ρυθμίσεις εισαγωγής
-
-```{tip}
-Import your last settings file if present.</br>
-You can also do this after completing the wizard.</br>
-If you already have them ready, importing now will be faster than recreating you profile.
+```{admonition} Extra Android setting, not part of the Wizard
+:class: note
+Τα παρακάτω είναι πρόσθετη ρύθμιση του Android, που γίνεται έξω από τον Οδηγό εγκατάστασης. Δεν είναι ένα από τα κουμπιά «Παραχώρηση» παραπάνω, αλλά είναι σημαντικό για αξιόπιστη σύνδεση με την αντλία.
 ```
 
-If your current AAPS directory contains settings, you will be asked if you want to import them.
+Οι νεότερες εκδόσεις του Android εφαρμόζουν βελτιστοποίηση μπαταρίας και στην εφαρμογή συστήματος Bluetooth.
 
-This will happen only if you uninstalled and reinstalled AAPS on the same phone.
+Εκτός από την απενεργοποίηση της βελτιστοποίησης μπαταρίας για το **AAPS**, πιθανότατα πρέπει να την απενεργοποιήσετε και για την εφαρμογή συστήματος Bluetooth. Αν δεν το κάνετε, μπορεί να έχετε διακοπές και προβλήματα στη σύνδεση με την αντλία.
 
-Tap NEXT if you don't want to restore them now.
+***ΣΗΜΕΙΩΣΗ: Η τεκμηρίωση του xDrip εξηγεί πώς να το κάνετε εδώ: [τεκμηρίωση του xDrip](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
 
-Tap RESTORE SETTINGS to select which file to restore, then NEXT.
+Ακολουθήστε αυτά τα βήματα στο Android 16. Σε άλλες εκδόσεις οι οθόνες θα είναι λίγο διαφορετικές από τις εικόνες:
 
-![Ρυθμίσεις](../images/setup-wizard/Wizard12b.png)
+1. Ανοίξτε τις ρυθμίσεις του Android, αναζητήστε **Εφαρμογές** (Apps) και ανοίξτε τις ρυθμίσεις εφαρμογών.
 
-## Units (mg/dL <-> mmol/L)
+   ![settings_apps](../images/setup-wizard/settings_apps.png)
 
-Please select if your glucose values are in mg/dL or mmol/L and then please click the "NEXT" button:
+2. Θα δείτε τις ρυθμίσεις εφαρμογών. Πρέπει όμως να εμφανίσετε όλες τις εφαρμογές: πατήστε **Εμφάνιση όλων των εφαρμογών** (See all apps).
 
-![Units](../images/setup-wizard/Wizard13.png)
+   ![settings_apps](../images/setup-wizard/apps_not_expanded.png)
 
-## Display settings
+3. Η εφαρμογή Bluetooth είναι εφαρμογή συστήματος και είναι κρυφή από προεπιλογή, οπότε πρέπει να εμφανίσουμε τις εφαρμογές συστήματος. Πατήστε τις **τρεις τελείες** (⋮) πάνω δεξιά (1). Μετά πατήστε **Εμφάνιση συστήματος** (Show system) (2).
 
- Here you select the range for the sensor glucose display, which will be shown as "in range" between the values you set. You can leave it as the default values for now, and edit it later.
+   ![settings_apps](../images/setup-wizard/show_system.png)
 
-The values you choose only affect the graphical presentation of the diagram, and nothing else.
+4. Αναζητήστε την εφαρμογή `Bluetooth` και πατήστε `Bluetooth` ή/και `Legacy Bluetooth`. Αν υπάρχουν και οι δύο, κάντε τη διαδικασία και για τις δύο.
 
-Your glucose target _e.g._ is configured separately in your profile.
+   ***ΣΗΜΕΙΩΣΗ: Μπορείτε να αγνοήσετε την `Bluetooth MIDI Service`, δεν τη χρησιμοποιεί το AAPS***
 
-Your range to analyze TIR (time in range) is configured separately in your reporting server.
+   ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-Please press the "NEXT" button:
+   1. Στο Android 12 πατήστε `Battery` (Μπαταρία), στο Android 13+ πατήστε `App battery usage` (Χρήση μπαταρίας εφαρμογής),
 
-![Range](../images/setup-wizard/Wizard14.png)
+   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
+
+5. Στο Android 12+ επιλέξτε `Unrestricted` (Χωρίς περιορισμούς). Στο Android 15+ πρέπει να ανοίξετε τη ρύθμιση `Allow background usage` (Να επιτρέπεται η χρήση στο παρασκήνιο): πατήστε την περιοχή με το κόκκινο πλαίσιο και μετά ακολουθήστε το βήμα 6 για να ολοκληρώσετε.
+
+   ![bluetooth_settings_apps_12](../images/setup-wizard/app_bluetooth_unrestricted_12-14.png)    ![bluetooth_settings_apps_15](../images/setup-wizard/app_bluetooth_allow_background.png)
+
+6. Στο Android 16 επιλέξτε `Unrestricted` (Χωρίς περιορισμούς)
+
+   ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
+
+## Άδεια χρήσης
+
+Η άδεια χρήσης τελικού χρήστη περιέχει σημαντικές πληροφορίες για τα νομικά θέματα της χρήσης του **AAPS**. Διαβάστε την προσεκτικά.
+
+Αν δεν καταλαβαίνετε ή δεν μπορείτε να συμφωνήσετε με την άδεια χρήσης τελικού χρήστη, μη χρησιμοποιήσετε καθόλου το **AAPS**!
+
+Αν καταλαβαίνετε και συμφωνείτε, πατήστε το κουμπί «**ΚΑΤΑΛΑΒΑ ΚΑΙ ΣΥΜΦΩΝΩ**» και ακολουθήστε τον Οδηγό εγκατάστασης:
+
+![EULA](../images/setup-wizard/Wizard-EULA.png)
+
+Όταν συμφωνήσετε, εμφανίζεται ένα κουμπί «**Επόμενο**». Πατήστε «**ΕΠΟΜΕΝΟ**».
+
+Η επόμενη οθόνη, «**Άδειες**», δείχνει ξανά τις άδειες. Όλες πρέπει να δείχνουν τικ, αφού τις δώσατε στην αρχή. Αν λείπει κάποια, πατήστε «**Παραχώρηση**» δίπλα της. Πατήστε «**ΕΠΟΜΕΝΟ**» για να συνεχίσετε:
+
+![Οι άδειες δόθηκαν](../images/setup-wizard/Wizard-Permissions-Granted.png)
+
+## Κύριος κωδικός
+
+Η διαμόρφωση του **AAPS** περιέχει κάποια ευαίσθητα δεδομένα (_π.χ._ το διακριτικό πρόσβασης για τον διακομιστή Nightscout σας). Γι' αυτό κρυπτογραφείται με έναν κωδικό που ορίζετε εδώ.
+
+Ο Οδηγός δείχνει «**Ο κωδικός δεν ορίστηκε**». Πατήστε «**Ορισμός**»:
+
+![Δεν ορίστηκε κύριος κωδικός πρόσβασης](../images/setup-wizard/Wizard-MasterPassword-NotSet.png)
+
+Αυτό ανοίγει την οθόνη «**Προστασία**». Πατήστε «**Κύριος κωδικός**» (με την ένδειξη «Ο κωδικός δεν ορίστηκε»):
+
+![Προστασία](../images/setup-wizard/Wizard-Protection.png)
+
+Εισάγετε τον ίδιο κωδικό και στα δύο πεδία και πατήστε «**OK**»:
+
+![Password](../images/setup-wizard/Wizard-Password.png)
+
+Επιστρέψτε με το βέλος πάνω αριστερά. Ο Οδηγός τώρα δείχνει «**Ο κωδικός ορίστηκε!**»:
+
+![Ο κύριος κωδικός ορίστηκε](../images/setup-wizard/Wizard-MasterPassword-Set.png)
+
+```{admonition} Do not lose your Master Password
+:class: danger
+**ΜΗ ΧΑΣΕΤΕ ΤΟΝ ΚΥΡΙΟ ΚΩΔΙΚΟ ΣΑΣ**. Σημειώστε τον κάπου, _π.χ._ στο Google Drive. Είναι καλή θέση, γιατί η Google κρατά αντίγραφα ασφαλείας για εσάς. Το τηλέφωνο ή ο υπολογιστής σας μπορεί να χαλάσει και να μην έχετε κανένα αντίγραφο. Αν ξεχάσετε τον Κύριο κωδικό σας, μπορεί να είναι δύσκολο να ανακτήσετε αργότερα τις ρυθμίσεις του προφίλ σας και την πρόοδό σας στα **Βήματα**.
+```
+
+Όταν τελειώσετε, πατήστε «**ΕΠΟΜΕΝΟ**» για να πάτε στην επόμενη οθόνη.
+
+(setup-wizard-import-settings)=
+## Εισαγωγή ρυθμίσεων
+
+Αυτή η οθόνη εμφανίζεται μόνο όταν το **AAPS** βρει ρυθμίσεις που εξάγατε παλαιότερα στον φάκελο **AAPS** («Βρέθηκαν αποθηκευμένες ρυθμίσεις»), για παράδειγμα όταν εγκαθιστάτε ξανά την εφαρμογή ή περνάτε σε νέο τηλέφωνο.
+
+- Για να επαναφέρετε την προηγούμενη διαμόρφωσή σας, πατήστε «**Εισαγωγή ρυθμίσεων**» — δείτε [Εξαγωγή και εισαγωγή ρυθμίσεων](../Maintenance/ExportImportSettings.md).
+- Για να ξεκινήσετε με νέα διαμόρφωση, πατήστε «**ΕΠΟΜΕΝΟ**» και συνεχίστε με τον Οδηγό.
+
+![Εισαγωγή ρυθμίσεων](../images/setup-wizard/Wizard-ImportSettings.png)
+
+## Μονάδες (mg/dl <-> mmol/l)
+
+Επιλέξτε αν οι τιμές γλυκόζης σας είναι σε mg/dl ή mmol/l και μετά πατήστε το κουμπί «**ΕΠΟΜΕΝΟ**»:
+
+![Μονάδες](../images/setup-wizard/Wizard-Units.png)
+
+## Ρυθμίσεις Εμφάνισης
+
+Εδώ ορίζετε το «**ΧΑΜΗΛΟ σημείο**» και το «**ΥΨΗΛΟ σημείο**» για την εμφάνιση της γλυκόζης του αισθητήρα. Οι τιμές γλυκόζης ανάμεσα σε αυτά τα δύο σημεία εμφανίζονται ως «εντός στόχου». Μπορείτε να αφήσετε τις προεπιλεγμένες τιμές (72 και 180 mg/dl) προς το παρόν και να τις αλλάξετε αργότερα.
+
+Οι τιμές που επιλέγετε επηρεάζουν μόνο την εμφάνιση του γραφήματος και τίποτε άλλο.
+
+Ο στόχος γλυκόζης σας, _π.χ._, ρυθμίζεται χωριστά στο προφίλ σας.
+
+Το εύρος σας για την ανάλυση του TIR (χρόνος εντός εύρους) ρυθμίζεται χωριστά στον διακομιστή αναφορών σας.
+
+Αλλάξτε τα σημεία με τα κουμπιά «−» / «+» αν χρειάζεται και μετά πατήστε το κουμπί «**ΕΠΟΜΕΝΟ**»:
+
+![Ρυθμίσεις Εμφάνισης](../images/setup-wizard/Wizard-Display.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
-## Synchronization with the reporting server and more
+## Επικοινωνία
 
-Here you are configuring the data upload to your reporting server.
+Η οθόνη «**Επικοινωνία**» δείχνει τα πρόσθετα που χρησιμοποιούνται για την αποστολή, τον συγχρονισμό και τη μετάδοση των δεδομένων σας:
 
-You could do other configurations here too, but for the first run we will just focus on the reporting server.
+- **Επικοινωνία με SMS** – απομακρυσμένος έλεγχος του **AAPS** με εντολές SMS
+- **NSClientV3** – συγχρονίζει τα δεδομένα σας με το Nightscout μέσω του API v3
+- **Tidepool** – στέλνει δεδομένα στο Tidepool
+- **xDrip** – στέλνει δεδομένα στο xDrip
+- **Open Humans** – ανεβάστε και δωρίστε τα δεδομένα του διαβήτη σας σε επιστημονικά έργα
+- **Wear** – παρακολούθηση και έλεγχος του **AAPS** από ρολόι WearOS
+- **Εξωτερικές συνοδευτικές εφαρμογές** – μετάδοση δεδομένων σε διάφορες εξωτερικές εφαρμογές
+- **Garmin** – σύνδεση με συσκευή Garmin
 
-If you are not able to set it up at the moment, skip it for now. You can configure it later.
+![Επικοινωνία](../images/setup-wizard/Wizard-Communication.png)
 
-If you select an item here on the left tick box, on the right you can then ticking the visibility (eye) box, which will place this plugin in the upper menu on the **AAPS** home screen. Please select the visibility too if you configure your reporting server at this point.
+Κάντε κύλιση προς τα κάτω για να δείτε την υπόλοιπη λίστα:
 
-In this example we select Nightscout as reporting server, and will configure it.
+![Επικοινωνία, περισσότερα](../images/setup-wizard/Wizard-Communication-More.png)
 
-```{admonition}  **NSClient** version
-:class: Note
+Μπορείτε να ρυθμίσετε αρκετά από αυτά τώρα, αλλά την πρώτη φορά θα ασχοληθούμε μόνο με τον διακομιστή αναφορών. Αν δεν μπορείτε να τον ρυθμίσετε τώρα, παραλείψτε το προς το παρόν — μπορείτε να το ρυθμίσετε αργότερα.
 
-Click [here](#version3200) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**.
-```
-For Tidepool it is even simpler, as you only need your personal login information.
+Σε αυτό το παράδειγμα χρησιμοποιούμε το Nightscout ως διακομιστή αναφορών. Επιλέξτε το κουτάκι δεξιά από το «**NSClientV3**» για να το ενεργοποιήσετε. Για το Tidepool είναι ακόμα πιο απλό, γιατί χρειάζεστε μόνο τα προσωπικά σας στοιχεία σύνδεσης.
 
-After making your selection, please press the cogwheel button next to the item you selected :
+Αφού το ενεργοποιήσετε, πατήστε «**Ρυθμίσεις**» κάτω από το NSClientV3 για να το ρυθμίσετε:
 
-![Synchronization](../images/setup-wizard/Wizard15.png)
+![NSClientV3](../images/setup-wizard/Wizard-Communication-NSClient.png)
 
-Here you are configuring the Nightscout reporting server.
+Εδώ ρυθμίζετε τον διακομιστή αναφορών Nightscout. Οι ρυθμίσεις του NSClientV3 εμφανίζονται σε μία σελίδα που κυλά:
 
-Please click on "Nightscout URL":
+![Ρυθμίσεις NSClientV3](../images/setup-wizard/Wizard-NSClientV3.png)
 
-![NSClient](../images/setup-wizard/Wizard16.png)
+Πατήστε «**Διεύθυνση Nightscout**» και εισάγετε τη διεύθυνση του προσωπικού σας διακομιστή Nightscout (τη διεύθυνση URL που ρυθμίσατε μόνοι σας ή που σας έδωσε ο πάροχός σας). Επιβεβαιώστε με «**OK**».
 
-Enter you Nightscout URL which is your personal Nightscout server. It's just an URL you setup yourself, or you were given from your service provider for Nightscout.
+Πατήστε «**Διακριτικό πρόσβασης Nightscout**» και εισάγετε το διακριτικό πρόσβασης (access token) για τον διακομιστή Nightscout σας. Χωρίς αυτό το διακριτικό η πρόσβαση δεν θα λειτουργήσει. Αν δεν το έχετε ακόμα, δείτε την τεκμηρίωση για τη ρύθμιση του διακομιστή αναφορών.
 
-Please click the "OK" button:
+Αφήστε ενεργό το «**Χρήση websockets**» για επικοινωνία σε πραγματικό χρόνο με το Nightscout.
 
-![NSClient ULR](../images/setup-wizard/Wizard16-URL.png)
+Οι υπόλοιπες ενότητες μπορούν να μείνουν με τις προεπιλογές προς το παρόν. Τις περιγράφουμε εδώ για να ξέρετε πού θα τις βρείτε αργότερα:
 
-Enter your Nightscout access token. This is the access token for your Nightscout server you configured. Without this token, access will not work.
+**Επιλογές συναγερμού** — συναγερμοί Nightscout, ανακοινώσεις και όρια για παλιά δεδομένα. Αφήστε τους διακόπτες απενεργοποιημένους προς το παρόν. Τις ανοίγουμε μόνο για να ξέρετε ότι υπάρχουν αυτές οι επιλογές.
 
-If you don't have it at the moment please check the documentation for setting up the reporting server in the **AAPS** documentation.
+**Ρυθμίσεις σύνδεσης** — επιλέξτε πώς μεταφέρονται τα δεδομένα. Οι φροντιστές πρέπει να ενεργοποιήσουν το «**Χρήση δεδομένων κινητής**». Αλλιώς το τηλέφωνο του ατόμου που φροντίζουν (_π.χ._ ενός παιδιού) δεν μπορεί να στείλει δεδομένα έξω από την εμβέλεια του Wi-Fi, _π.χ._ στον δρόμο για το σχολείο. Οι άλλοι χρήστες μπορούν να απενεργοποιήσουν τη μεταφορά μέσω κινητής για να εξοικονομήσουν δεδομένα ή μπαταρία. Αν έχετε αμφιβολίες, αφήστε τα όλα ενεργά.
 
-After filling in the "**Nightscout access token**" and clicking "OK", please click on the "Synchronization" button:
+![Ρυθμίσεις σύνδεσης](../images/setup-wizard/Wizard-NSClientV3-Connection.png)
 
-![NSClient Token](../images/setup-wizard/Wizard16-Token.png)
+**Ρυθμίσεις για Προχωρημένους** — ενεργοποιήστε το «**Καταγραφή εκκίνησης εφαρμογής**» αν θέλετε να βλέπετε στο Nightscout πότε ξεκινά ξανά η εφαρμογή (χρήσιμο για φροντιστές). Αφήστε ενεργά τα «**Ανακοινώσεις από σφάλματα**» και «**Ανακοινώσεις από απαιτούμενους υδατάνθρακες**». Αφήστε ανενεργό το «**Αργός συγχρονισμός**». Το χρησιμοποιείτε μόνο αν ο διακομιστής Nightscout επεξεργάζεται αργά μεγάλο όγκο δεδομένων.
 
-Please select "Upload data to NS" if you already configured Nightscout in the previous steps of the Setup Wizard.
+![Ρυθμίσεις για Προχωρημένους](../images/setup-wizard/Wizard-NSClientV3-Advanced.png)
 
-If you have stored profiles on Nightscout and want to download them to **AAPS**, enable "Receive profile store":
+Επιστρέψτε στη λίστα των πρόσθετων και πατήστε «**ΕΠΟΜΕΝΟ**» για να πάτε στην επόμενη οθόνη.
 
-![Syncronization](../images/setup-wizard/Wizard16-Sync.png)
+## Έλεγχος από πελάτες
 
+Από την έκδοση 4 του **AAPS**, συσκευές-πελάτες με το **AAPSClient** μπορούν να κάνουν **σύζευξη** με αυτό το τηλέφωνο (την **κύρια συσκευή**) και να το ελέγχουν με υπογεγραμμένες εντολές μέσω Nightscout. Αυτός είναι ο νέος προτεινόμενος τρόπος για απομακρυσμένο έλεγχο του **AAPS** — δείτε [Έλεγχος κύριας συσκευής ↔ πελάτη](../RemoteFeatures/ClientMasterControl.md) για την πλήρη εξήγηση και τη ρύθμιση.
 
-Go back to the previous screen and select "Alarm option":
+Δεν χρειάζεται να ρυθμίσετε τίποτα σε αυτή την οθόνη τώρα. Μπορείτε να κάνετε σύζευξη πελατών οποιαδήποτε στιγμή αργότερα από **Διαχείριση → Εξουσιοδοτημένοι πελάτες**. Εκεί προσθέτετε έναν πελάτη με **κωδικό QR** (ρυθμίζει και το Nightscout στον πελάτη) ή με **PIN** και του δίνετε έναν **ρόλο**.
 
-![Alarms](../images/setup-wizard/Wizard16-Alarm.png)
+- «**Εξουσιοδοτημένοι πελάτες**» — διαχείριση των συζευγμένων συσκευών-πελατών που επιτρέπεται να ελέγχουν αυτή την κύρια συσκευή.
+- «**Αποδοχή δεδομένων Nightscout**» — η αποδοχή θεραπειών και δεδομένων που εισάγονται απευθείας στο Nightscout (ο παλιός, λιγότερο ασφαλής τρόπος) είναι πλέον απενεργοποιημένη από προεπιλογή. Ανοίξτε αυτές τις ρυθμίσεις μόνο αν τη χρειάζεστε ακόμα, _π.χ._ για να εισάγετε δεδομένα μέσω Nightscout ή εφαρμογών τρίτων.
 
-For now, leave the switches disabled. We only walked to the screen to make you familiar with possible options you might configure in the future. At the moment there is no need to do it.
+Όταν ο έλεγχος από πελάτες είναι ήδη ενεργός — πάντα στην [Απλή λειτουργία](#preferences-simple-mode) — αυτό το τηλέφωνο είναι σε [ενισχυμένη λειτουργία](#client-master-control-hardened-mode): δέχεται αλλαγές μόνο από συζευγμένους πελάτες. Γι' αυτό η οθόνη εξηγεί την ενισχυμένη λειτουργία αντί να δείχνει τις ρυθμίσεις «**Αποδοχή δεδομένων Nightscout**».
 
-Go back to the previous screen before and select "Connection settings".
+![Έλεγχος από πελάτες](../images/setup-wizard/Wizard-ClientControl.png)
 
-Here you can configure how to transfer your data to the reporting server.
+Το «**Αποδοχή δεδομένων Nightscout**» ανοίγει τις ρυθμίσεις «**Συγχρονισμός**», όπου κάθε είδος δεδομένων που λαμβάνεται από το Nightscout έχει τον δικό του διακόπτη:
 
-Caregivers must enable "use cellular connection" as otherwise the smartphone which serves the dependant/child can not upload data outside of WiFi range _e.g._ on the way to school.
+![Ρυθμίσεις αποδοχής δεδομένων Nightscout](../images/setup-wizard/Wizard-ClientControl-Synchronization.png)
 
-Other **AAPS** users can disable the transfer via cellular connection if they want to save data or battery.
+Πατήστε «**ΕΠΟΜΕΝΟ**» για να πάτε στην επόμενη οθόνη.
 
-If in doubt, just leave all enabled.
+(setup-wizard-instance-name)=
+## Ποιος χρησιμοποιεί αυτό το τηλέφωνο;
 
-Go back to the screen before and select "Advanced Settings".
+Εδώ εισάγετε το όνομα του ατόμου που χρησιμοποιεί αυτό το τηλέφωνο. Ξεχωρίζει αυτή την εγκατάσταση του **AAPS** από άλλες στις αναφορές και στον συγχρονισμό, για παράδειγμα αν δύο παιδιά στην οικογένειά σας χρησιμοποιούν **AAPS**. Χρησιμοποιείται επίσης στα ονόματα των αρχείων εξαγόμενων ρυθμίσεων και εμφανίζεται στο ρολόι.
 
-![Connection](../images/setup-wizard/Wizard16-Connect.png)
+Μπορεί να είναι οτιδήποτε. Μπορείτε να το αλλάξετε αργότερα στις **Ρυθμίσεις → Γενικά → Όνομα εγκατάστασης**.
 
-Enable "Log app start to NS" if you want get this information in the reporting server. It can help you to know remotely if and when the app has been restarted, particularly as a caregiver.
+Πατήστε «**ΕΠΟΜΕΝΟ**» για να πάτε στην επόμενη οθόνη.
 
-It might be interesting to see if **AAPS** is correctly configured now, but later it is usually not that important to be able to see **AAPS** stopping or starting in Nightscout.
+![Όνομα](../images/setup-wizard/Wizard-Name.png)
 
-Enable "Create announcements from errors" and "Create announcements from carbs required alerts".
+## Τύπος ασθενή
 
-Leave "Slow down uploads" disabled. You would only use it in unusual circumstances if for example a lot of information is to be transferred to the Nightscout server, and the Nightscout server is being slow in processing this data.
+Εδώ επιλέγετε τον «Τύπος ασθενή». Αυτό είναι σημαντικό, γιατί το λογισμικό **AAPS** έχει διαφορετικά όρια ανάλογα με την ηλικία του ασθενή. Αυτό είναι σημαντικό για λόγους ασφάλειας.
 
-Go back twice, to the list of plugins and select "NEXT" to go to the next screen:
+Εδώ ρυθμίζετε επίσης το **μέγιστο επιτρεπτό bolus** για ένα γεύμα. Δηλαδή το μεγαλύτερο bolus που χρειάζεστε για να καλύψετε τα συνηθισμένα γεύματά σας. Είναι μια λειτουργία ασφαλείας που βοηθά να αποφύγετε κατά λάθος υπερδοσολογία όταν κάνετε bolus για ένα γεύμα.
 
-![image](../images/setup-wizard/Wizard16-App.png)
+Το δεύτερο όριο είναι παρόμοιο, αλλά αφορά τη μέγιστη ποσότητα υδατανθράκων που περιμένετε να φάτε.
 
-## Patient name
+Αφού ορίσετε αυτές τις τιμές, πατήστε «**ΕΠΟΜΕΝΟ**» για να πάτε στην επόμενη οθόνη:
 
-Here you can setup your name in **AAPS**.
+![Ασθενής](../images/setup-wizard/Wizard-PatientType.png)
 
-It can be anything. It's just for differentiating users.
+## Ινσουλίνη
 
-To keep it simple just enter first name and last name.
+Εδώ ρυθμίζετε την ινσουλίνη που χρησιμοποιείτε στην αντλία σας. Τα νέα προφίλ ινσουλίνης απαιτούν **DIA τουλάχιστον 5 ωρών**.
 
-Press "NEXT" to go to the next screen.
+Πατήστε το κουμπί «**Ινσουλίνη**» για να ανοίξετε τον επεξεργαστή ινσουλίνης:
 
-![Όνομα](../images/setup-wizard/Wizard17.png)
+![Ινσουλίνη](../images/setup-wizard/Wizard-Insulin.png)
 
-## Patient type
+Στον επεξεργαστή μπορείτε να δώσετε στην ινσουλίνη ένα **ψευδώνυμο** και να ορίσετε την **Κορυφή** της (σε λεπτά) και τη **DIA** (σε ώρες). Ο πιο γρήγορος τρόπος είναι να φορτώσετε μια έτοιμη ρύθμιση με το «**Φόρτωση κορυφής από**» — επιλέξτε **Novorapid**, **Fiasp** ή **Lyumjev** — και η κορυφή συμπληρώνεται αυτόματα. Το γράφημα στο κάτω μέρος δείχνει την καμπύλη δράσης της ινσουλίνης που προκύπτει.
 
-Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. This is important for security and safety reasons.
+![Επεξεργαστής ινσουλίνης](../images/setup-wizard/Wizard-Insulin-Novorapid.png)
 
-Here is where you also configure the **maximum allowed bolus** for a meal. That is, the largest bolus you need to give to cover your typical meals. It's a security feature to help avoid accidentally overdosing when you are bolusing for meal.
+Επιλέξτε την έτοιμη ρύθμιση που ταιριάζει με την ινσουλίνη σας, για παράδειγμα **Fiasp**:
 
-The second limit is similar in concept, but relates to the max carbohydrate intake you expect.
+![Ινσουλίνη Fiasp](../images/setup-wizard/Wizard-Insulin-Fiasp.png)
 
-After setting these values, press "NEXT" to go to the next screen:
-
-![Patient](../images/setup-wizard/Wizard18.png)
-
-## Used insulin
-
-Select the type of insulin being used in the pump.
-
-The insulin names should be self-explanatory.
-
-```{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
+```{admonition} Use your insulin brand's preset peak
 :class: danger
-For advanced users or medical studies there is the possibility to define with "Free-Peak Oref" a customised profile of how insulin acts. Please don't use it unless you are an expert, usually the pre-defined values work well for each branded insulin.
+Μην αλλάζετε την κορυφή αν δεν είστε ειδικός — συνήθως οι έτοιμες τιμές λειτουργούν καλά για κάθε εμπορική ινσουλίνη.
 ```
 
-Press "NEXT" to go to the next screen:
+Αν είστε νέος χρήστης του **AAPS**, ορίστε τη **DIA** στις 9 ώρες — δείτε [Διάρκεια δράσης ινσουλίνης (DIA) και κορυφή](#Config-Builder-insulin-dia) για να καταλάβετε γιατί.
 
-![Ινσουλίνη](../images/setup-wizard/Wizard19.png)
+```{admonition} "Insulin configuration changed" dialog
+:class: note
+Αν ένας συζευγμένος πελάτης (_π.χ._ ένα άλλο τηλέφωνο) έχει αλλάξει τη διαμόρφωση της ινσουλίνης, εμφανίζεται ένα παράθυρο. Πατήστε **OK** για να φορτώσετε τις αλλαγές του ή **Ακύρωση** για να συνεχίσετε την επεξεργασία (η επόμενη αποθήκευσή σας θα αντικαταστήσει τις δικές του).
+```
 
+![Η ινσουλίνη άλλαξε](../images/setup-wizard/Wizard-Insulin-Changed.png)
 
-## Blood sugar source
+Πατήστε το εικονίδιο αποθήκευσης (πάνω δεξιά) και μετά πατήστε «**ΕΠΟΜΕΝΟ**» για να πάτε στην επόμενη οθόνη.
 
-Select the BG source you are using. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
+## Πηγή γλυκόζης αίματος
 
-As there are several options available, we don't explain the configuration for all of them here. We are using xDrip+ in our example here:
+Εδώ επιλέγετε από πού παίρνει το **AAPS** τα δεδομένα γλυκόζης. Διαβάστε την τεκμηρίωση για την [πηγή BG](../Getting-Started/CompatiblesCgms.md) σας.
 
+Υπάρχουν πολλές πηγές — κυλήστε τη λίστα και επιλέξτε αυτή που χρησιμοποιείτε:
 
-![Πηγή BG](../images/setup-wizard/Wizard20.png)
+![Πηγή BG](../images/setup-wizard/Wizard-BGSource.png)
 
+Όταν επιλέξετε μια πηγή, η κάρτα της ανοίγει και δείχνει δύο κουμπιά: «**Ρυθμίσεις**» για να ρυθμίσετε πώς λαμβάνονται τα δεδομένα και «**Άνοιγμα πρόσθετου**» για να ανοίξετε την οθόνη της πηγής. Στο παρακάτω παράδειγμα είναι επιλεγμένο το **BYODA**. Κάποιες πηγές δεν έχουν τίποτα να ρυθμίσετε σε αυτό το στάδιο, οπότε συνήθως μπορείτε να πάτε κατευθείαν στην επόμενη οθόνη:
 
-Enable the visibility in the top level menu by clicking the check box on the right side.
+![Ρυθμίσεις πηγής BG](../images/setup-wizard/Wizard-BGSource-Settings.png)
 
-After making your selection, press "NEXT" to go to the next screen:
-
-![Select BG](../images/setup-wizard/Wizard20-Set.png)
-
-
-Click on the cogwheel button to access the settings.
-
-Enable the "Upload BG data to NS" and "Log sensor change to NS".
-
-Go back and press "NEXT" to go to the next screen:
-
-![Upload](../images/setup-wizard/Wizard20-Upload.png)
+Αφού κάνετε την επιλογή σας, πατήστε «**ΕΠΟΜΕΝΟ**» για να πάτε στην επόμενη οθόνη.
 
 (setup-wizard-profile)=
-## Profile
+## Προφίλ
 
-Now we are entering a very important part of the Setup Wizard.
+Τώρα φτάνουμε σε ένα πολύ σημαντικό μέρος του Οδηγού εγκατάστασης.
 
-Please read the documentation about [profiles](../SettingUpAaps/YourAapsProfile.md) before you try to enter your profile details on the following screen.
+Διαβάστε την τεκμηρίωση για τα [προφίλ](../SettingUpAaps/YourAapsProfile.md) πριν προσπαθήσετε να εισάγετε τα στοιχεία του προφίλ σας στην επόμενη οθόνη.
 
 ```{admonition} Working profile required - no exceptions here !
 :class: danger
-An accurate profile is necessary to control the safe action of **AAPS**.
+Ένα ακριβές προφίλ είναι απαραίτητο για την ασφαλή λειτουργία του **AAPS**.
 
-It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
+Πρέπει να έχετε καθορίσει και συζητήσει το προφίλ σας με τον γιατρό σας και να έχει αποδειχθεί ότι λειτουργεί, με επιτυχημένους ελέγχους του βασικού ρυθμού, του ISF και του IC!
 
-If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
+Αν ένα ρομπότ πάρει λάθος δεδομένα, θα αποτύχει - κάθε φορά. Το **AAPS** μπορεί να δουλέψει μόνο με τις πληροφορίες που του δίνετε. Αν το προφίλ σας είναι πολύ ισχυρό, κινδυνεύετε με υπογλυκαιμία. Αν είναι πολύ αδύναμο, κινδυνεύετε με υπεργλυκαιμία. 
 ```
 
-Press "NEXT" to go to the next screen. Enter a "profile name":
+Πατήστε το κουμπί «**Προφίλ**» για να ανοίξετε τον επεξεργαστή προφίλ:
 
-![image](../images/setup-wizard/Wizard21.png)
+![Προφίλ](../images/setup-wizard/Wizard-Profile.png)
 
+Ο επεξεργαστής ανοίγει άδειος («Δεν υπάρχουν διαθέσιμες εγγραφές»). Πατήστε το κουμπί «**+**» στο κάτω μέρος για να δημιουργήσετε ένα νέο προφίλ:
 
-You can have several profiles in the long-term if needed. We only create one here.
+![Άδειο προφίλ](../images/setup-wizard/Wizard-Profile-Empty.png)
+
+Μακροπρόθεσμα μπορείτε να έχετε πολλά προφίλ, αν χρειάζεται. Εδώ δημιουργούμε μόνο ένα.
 
 ```{admonition} Profile only for tutorial - not for your usage
-:class: information
-The example profile here is only to show you how to enter data.
+:class: note
+Το προφίλ του παραδείγματος υπάρχει μόνο για να σας δείξει πώς να εισάγετε δεδομένα.
 
-It is not intended to be an accurate profile or something very well optimised, because each person's needs are so different.
+Δεν είναι ένα ακριβές ή καλά βελτιστοποιημένο προφίλ, γιατί οι ανάγκες κάθε ατόμου είναι πολύ διαφορετικές.
 
-Don't use it for actually looping!
+Μην το χρησιμοποιείτε για πραγματικό κύκλωμα!
 ```
 
-Enter your [Duration of insulin Action (DIA)](#your-aaps-profile-duration-of-insulin-action) in hours. Then press "IC":
+Το νέο προφίλ (για παράδειγμα «**LocalProfile1**») έχει τέσσερις καρτέλες: **IC**, **ISF**, **BAS** και **ΣΤΟΧΟΣ**. Πατήστε το μολύβι δίπλα στο όνομα του προφίλ για να το μετονομάσετε. Συμπληρώστε κάθε καρτέλα — μια καρτέλα μένει κόκκινη και δείχνει μήνυμα σφάλματος μέχρι να έχει έγκυρες τιμές:
 
-![DIA](../images/setup-wizard/Wizard21-Name.png)
+![Νέο προφίλ με σφάλματα](../images/setup-wizard/Wizard-Profile-New-Error.png)
 
-Enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values:
+Πατήστε «**IC**» και εισάγετε τις τιμές [IC](#your-aaps-profile-insulin-to-carbs-ratio) σας. Χρησιμοποιήστε το κουμπί «**+**» για να προσθέσετε περισσότερα χρονικά διαστήματα:
 
-![IC](../images/setup-wizard/Wizard21-IC.png)
+![IC](../images/setup-wizard/Wizard-Profile-IC.png)
 
-Press "ISF". Enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
+Πατήστε «**ISF**» και εισάγετε τις [τιμές ISF](#your-aaps-profile-insulin-sensitivity-factor) σας:
 
-![ISF](../images/setup-wizard/Wizard21-ISF.png)
+![ISF](../images/setup-wizard/Wizard-Profile-ISF.png)
 
+Πατήστε «**BAS**» και εισάγετε τις [τιμές βασικού ρυθμού](#your-aaps-profile-basal-rates) σας:
 
-Press "BAS". Enter your [basal values](#your-aaps-profile-basal-rates):
+![BAS](../images/setup-wizard/Wizard-Profile-BAS.png)
 
-![image](../images/setup-wizard/Wizard21-Basal.png)
+Πατήστε «**ΣΤΟΧΟΣ**» και εισάγετε τις τιμές στόχου γλυκόζης αίματος.
 
+Στο ανοιχτό κύκλωμα αυτός ο στόχος μπορεί να είναι ένα ευρύτερο εύρος. Αλλιώς το **AAPS** θα σας ειδοποιεί συνέχεια να αλλάξετε τον προσωρινό βασικό ρυθμό ή κάποια άλλη ρύθμιση, κάτι που μπορεί να είναι κουραστικό.
 
-Press "TARG". Enter your blood sugar target values.
+Αργότερα, για το κλειστό κύκλωμα, θα έχετε συνήθως μόνο μία τιμή για το πάνω και το κάτω όριο. Έτσι το **AAPS** πετυχαίνει πιο εύκολα τον στόχο και σας δίνει καλύτερο συνολικό έλεγχο του διαβήτη.
 
-For open looping this target can be a wider range, as otherwise **AAPS** notifies you permanently to change the temporary basal rate or another setting, which can be exhausting.
+![ΣΤΟΧΟΣ](../images/setup-wizard/Wizard-Profile-TARG.png)
 
-Later, for closed looping, you will generally have only one value for top and bottom. That makes it easier for **AAPS** to hit the target and give you better overall diabetes control.
+Όταν και οι τέσσερις καρτέλες είναι έγκυρες, το **εικονίδιο αποθήκευσης** (πάνω δεξιά) ενεργοποιείται. Πατήστε το για να αποθηκεύσετε το προφίλ:
 
-Enter/confirm the target values:
+![Εικονίδιο αποθήκευσης](../images/setup-wizard/Wizard-Profile-SaveIcon.png)
 
-![Target](../images/setup-wizard/Wizard22.png)
+Κλείστε τον επεξεργαστή με το «**X**» πάνω αριστερά. Η σύνοψη του προφίλ δείχνει τότε το όνομά του, τον συνολικό ημερήσιο βασικό ρυθμό (∑), τις μονάδες και τις τιμές IC και ISF με τα γραφήματά τους:
 
-Save the profile by clicking on "SAVE":
-
-![Save](../images/setup-wizard/Wizard22-Save.png)
-
-
-After saving, a new button "Activate Profile" appears.
+![Αποθήκευση](../images/setup-wizard/Wizard-Profile-Save.png)
 
 ```{admonition} Several defined but only one active profile
-:class: information
-You can have several profiles defined, but only one activated profile running at any given time.
+:class: note
+Μπορείτε να έχετε πολλά προφίλ, αλλά μόνο ένα ενεργό προφίλ κάθε φορά.
 ```
 
-Press "Activate Profile":
+Πατήστε το κουμπί «**▶**» (ενεργοποίηση) κάτω δεξιά. Ανοίγει η οθόνη «**Ενεργοποίηση**». Επειδή δεν χρησιμοποιείται ακόμα καμία ινσουλίνη, σας ζητά πρώτα να επιλέξετε την ινσουλίνη που χρησιμοποιείτε, ώστε η αλλαγή προφίλ να την καταγράψει. Το κουμπί «**Ενεργοποίηση**» μένει γκρι μέχρι να το κάνετε:
 
-![image](../images/setup-wizard/Wizard22-Activate.png)
+![Επιλέξτε πρώτα την ινσουλίνη](../images/setup-wizard/Wizard-Profile-Switch-NoInsulin.png)
 
+Πατήστε «**Επιλογή ινσουλίνης**» και επιλέξτε την ινσουλίνη που ρυθμίσατε νωρίτερα. Αφήστε το ποσοστό στο 100% και πατήστε «**Ενεργοποίηση**»:
 
+![Ενεργοποίηση](../images/setup-wizard/Wizard-Profile-Activate.png)
 
+Εμφανίζεται ένα παράθυρο αλλαγής προφίλ. Σε αυτή την περίπτωση αφήστε τις προεπιλογές και επιβεβαιώστε με «**OK**»:
 
-
-The profile switch dialogue appears. In this case let it stay as preset.
-
-```{admonition} Several defined but only one active profile
-:class: information
-You will learn later how to use this general dialog to handle situations like illness or sport, where you need to change your profile suitable for the circumstances.
+```{admonition} Profile switch dialog
+:class: note
+Αργότερα θα μάθετε πώς να χρησιμοποιείτε αυτό το γενικό παράθυρο σε καταστάσεις όπως ασθένεια ή άθληση, όπου πρέπει να αλλάξετε το προφίλ σας ανάλογα με τις συνθήκες.
 ```
 
+![Αλλαγή](../images/setup-wizard/Wizard-Profile-Switch.png)
 
-Press "OK":
-
-
-![Switch](../images/setup-wizard/Wizard22-Switch.png)
-
-
-
-A confirmation dialog for the profile switch appears.
-
-You can confirm it with pressing "OK". Press "NEXT" to go to the next screen:
-
-![Ok](../images/setup-wizard/Wizard22-SwitchOk.png)
-
-Your profile has now been set:
-
-![Info](../images/setup-wizard/Wizard22-Info.png)
-
+Το προφίλ σας είναι τώρα ενεργό. Πατήστε «**ΕΠΟΜΕΝΟ**» για να πάτε στην επόμενη οθόνη.
 
 ## Αντλία ινσουλίνης
 
+Τώρα επιλέγετε την αντλία ινσουλίνης σας. Διαβάστε την τεκμηρίωση για την [αντλία ινσουλίνης](../Getting-Started/CompatiblePumps.md) σας.
 
+Κυλήστε τη λίστα και επιλέξτε την αντλία σας. Σε αυτό το παράδειγμα χρησιμοποιούμε την «**Εικονική Αντλία**», που είναι χρήσιμη όσο ακόμα μαθαίνετε και δεν έχετε συνδέσει πραγματική αντλία:
 
-Now you are selecting your insulin pump.
+![Αντλία](../images/setup-wizard/Wizard-Pump.png)
 
-You get an important warning dialog. Please read it, and press "OK".
+Υποστηρίζονται πολλές αντλίες — κυλήστε προς τα κάτω για να βρείτε τη δική σας:
 
-If your have already setup your profile in the steps before and you know how to connect your pump, feel free to connect it now.
+![Αντλία, περισσότερα](../images/setup-wizard/Wizard-Pump-More.png)
 
-Otherwise, leave the Setup Wizard, using the arrow in the top left corner and let **AAPS** first show you some blood glucose values. You can come back anytime or use one of the direct configuration options (not using the Wizard).
+Όταν επιλέγετε μια πραγματική αντλία, το **AAPS** ζητά επιβεβαίωση, γιατί θα αντιγράψει τους βασικούς ρυθμούς του προφίλ σας στην αντλία και θα αντικαταστήσει τους βασικούς ρυθμούς που είναι αποθηκευμένοι εκεί. Πατήστε «**OK**» μόνο αν οι βασικοί ρυθμοί στο προφίλ σας στο **AAPS** είναι σωστοί. Αλλιώς πατήστε «**Ακύρωση**» και αλλάξτε στην αντλία αργότερα:
 
-Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
+![Επιβεβαίωση κατά την επιλογή πραγματικής αντλίας](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-Press "NEXT" to go to the next screen.
+Αν η αντλία που επιλέγετε επικοινωνεί μέσω Bluetooth, το **AAPS** ζητά άδεια για σύνδεση με κοντινές συσκευές όταν τελειώσετε τον Οδηγό (δείτε [Άδεια Bluetooth](#bluetooth-permission)).
 
-![Pump Warning](../images/setup-wizard/Wizard23.png)
+Αν έχετε ήδη ρυθμίσει το προφίλ σας και ξέρετε πώς να συνδέσετε την αντλία σας, μπορείτε να τη συνδέσετε τώρα. Αλλιώς αφήστε την **Εικονική Αντλία** προς το παρόν — μπορείτε να την αλλάξετε οποιαδήποτε στιγμή. Ή βγείτε από τον Οδηγό εγκατάστασης με το βέλος πάνω αριστερά και αφήστε το **AAPS** να σας δείξει πρώτα κάποιες τιμές γλυκόζης αίματος.
 
-Once a pump requiring AAPS to use Bluetooth is select, you will see a warning: AAPS requires Bluetooth permission. This will be addressed after you complete the Wizard.
+Πατήστε «**ΕΠΟΜΕΝΟ**» για να πάτε στην επόμενη οθόνη.
 
-![Bluetooth Warning](../images/setup-wizard/Wizard23b.png)
+## Ο αλγόριθμος του APS
 
+Χρησιμοποιήστε τον αλγόριθμο OpenAPS SMB ως αλγόριθμο APS. Παρά το όνομα, η λειτουργία SMB του αλγορίθμου είναι απενεργοποιημένη μέχρι να εξοικειωθείτε με το AAPS και να ολοκληρώσετε τα πρώτα Βήματα. Το OpenAPS SMB είναι έτσι κι αλλιώς νεότερο και γενικά καλύτερο από το OpenAPS AMA.
 
-In this case we select "Virtual Pump".
-
-![Pump](../images/setup-wizard/Wizard23-Pump.png)
-
-## APS algorithm
-
-Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name the SMB feature of the algorithm is disabled until you are familiar with AAPS and already worked through the first objectives. OpenAPS SMB is newer and in general better compared to the OpenAPS AMA anyway.
-
-The reason SMB is disabled in the beginning is because the SMB feature enables faster reaction on blood sugar increase through the Super Micro Bolus instead of increasing the basal rate percentage. As in the beginning your profile is in general not as good as after some time of experience the feature is disabled in the beginning.
+Το SMB είναι απενεργοποιημένο στην αρχή, γιατί η λειτουργία SMB αντιδρά πιο γρήγορα στην άνοδο της γλυκόζης αίματος, με ένα Super Micro Bolus αντί να αυξάνει το ποσοστό του βασικού ρυθμού. Επειδή στην αρχή το προφίλ σας συνήθως δεν είναι τόσο καλό όσο μετά από κάποια εμπειρία, η λειτουργία είναι αρχικά απενεργοποιημένη.
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
-:class: information
-OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
+:class: note
+Το OpenAPS AMA είναι ο πιο βασικός αλγόριθμος και δεν υποστηρίζει μικρά bolus (micro bolus) για τη διόρθωση υψηλών τιμών. Μπορεί να υπάρχουν περιπτώσεις όπου είναι καλύτερο να χρησιμοποιήσετε αυτόν τον αλγόριθμο, αλλά δεν είναι η σύστασή μας.
 ```
 
-Press the cogwheel to see the details:
+Επιλέξτε «**OpenAPS SMB**» και μετά πατήστε «**Ρυθμίσεις**» για να δείτε τις λεπτομέρειες:
 
-![APS](../images/setup-wizard/Wizard24.png)
+![APS](../images/setup-wizard/Wizard-APS.png)
 
+Η μόνη επιλογή εδώ είναι το «**Χρήση δυναμικής ευαισθησίας**». Αφήστε το απενεργοποιημένο και μην αλλάξετε τίποτα προς το παρόν — απλώς διαβάστε το κείμενο.
 
-Only read the text and change nothing here.
+Λόγω των περιορισμών των **Βημάτων**, έτσι κι αλλιώς δεν μπορείτε να χρησιμοποιήσετε ακόμα ούτε «κλειστό κύκλωμα» ούτε «λειτουργίες SMB».
 
-Due to the limitations which are imposed by the **Objectives** you can't use either "closed loop" or "SMB features" at the moment anyway.
+Επιστρέψτε και πατήστε «**ΕΠΟΜΕΝΟ**» για να πάτε στην επόμενη οθόνη:
 
-Go back and press "NEXT" to go to the next screen:
-
-![Ρυθμίσεις](../images/setup-wizard/Wizard24-Settings.png)
+![Ρυθμίσεις APS](../images/setup-wizard/Wizard-APS-Settings.png)
 
 ## Ανίχνευση ευαισθησίας
 
-Let "Sensitivity Oref1" the standard for the sensitivity plugins selected.
+Αφήστε επιλεγμένο το «**Ευαισθησία Oref1**» ως το βασικό πρόσθετο ευαισθησίας:
 
-Press "NEXT" to go to the next screen:
+![Ευαισθησία](../images/setup-wizard/Wizard-Sensitivity.png)
 
-![Sensitivity](../images/setup-wizard/Wizard25.png)
+Αν πατήσετε «**Ρυθμίσεις**», μπορείτε να δείτε τις ρυθμίσεις απορρόφησης. Οι προεπιλογές (_π.χ._ όριο απορρόφησης 6 ώρ.) είναι καλές προς το παρόν.
 
-## Start Objective 1
+![Ρυθμίσεις ευαισθησίας](../images/setup-wizard/Wizard-Sensitivity-Settings.png)
 
-You are entering now the Objectives. The qualification for access to further **AAPS** features.
+Πατήστε «**ΕΠΟΜΕΝΟ**» για να πάτε στην επόμενη οθόνη.
 
-Here we start Objective 1, even if at the moment our setup is not completely ready to successfully complete this Objective.
+## Έναρξη του 1ου Βήματος
 
-But this is the start.
+Τώρα μπαίνετε στα Βήματα — τα προσόντα που χρειάζεστε για πρόσβαση σε περισσότερες λειτουργίες του **AAPS**.
 
-Press the green "START" to to start objective 1:
+Πατήστε «**Άνοιγμα Βημάτων**»:
 
-![Objectives](../images/setup-wizard/Wizard26.png)
+![Βήματα](../images/setup-wizard/Wizard-Objectives.png)
 
-You see that you already made some progress, but other areas are to be done.
+Εδώ ξεκινάμε το 1ο Βήμα, παρόλο που αυτή τη στιγμή η εγκατάστασή μας δεν είναι ακόμα πλήρως έτοιμη για να ολοκληρώσουμε με επιτυχία αυτό το Βήμα. Αλλά αυτή είναι η αρχή.
 
-Press "FINISH" to go to the next screen.
+Πατήστε το κουμπί «**Έναρξη**» δίπλα στο «**1. Βήμα**»:
 
-![Done](../images/setup-wizard/Wizard26-Started.png)
+![Λίστα Βημάτων](../images/setup-wizard/Wizard-Objectives-List.png)
 
-You are coming to the home screen of **AAPS**.
+Το Βήμα ανοίγει και δείχνει τους επιμέρους ελέγχους του. Μπορείτε να δείτε ότι έχετε ήδη κάνει κάποια πρόοδο, ενώ άλλα στοιχεία μένουν ακόμα να γίνουν:
 
-Here you find the information message in **AAPS** that you set your profile.
+![Το Βήμα ξεκίνησε](../images/setup-wizard/Wizard-Objectives-Started.png)
 
-This was done when we switched to our new profile.
+Επιστρέψτε και μετά πατήστε «**ΤΕΛΟΣ**» για να ολοκληρώσετε τον Οδηγό εγκατάστασης:
 
-You can click "SNOOZE" and it will disappear.
+![Τέλος](../images/setup-wizard/Wizard-Objectives-Finish.png)
 
-![image](../images/setup-wizard/Wizard26-Done.png)
+Αφού πατήσετε «**ΤΕΛΟΣ**», φτάνετε στην κύρια οθόνη του **AAPS**. Μπορεί να ανοίξει ένα πλαίσιο «**Ειδοποίηση**» με ενημερωτικά μηνύματα, για παράδειγμα για την αλλαγή προφίλ που μόλις κάνατε — πατήστε «**Παράβλεψη**» κάτω από κάθε μήνυμα για να το αφαιρέσετε.
 
-If you accidentally leave the Setup Wizard at any point, you can either simply re-start the Wizard, or change the [configuration of the AAPS loop](../SettingUpAaps/ChangeAapsConfiguration.md) manually.
+Αν κατά λάθος βγείτε από τον Οδηγό εγκατάστασης σε οποιοδήποτε σημείο, μπορείτε απλώς να ξεκινήσετε ξανά τον Οδηγό ή να αλλάξετε χειροκίνητα τη [διαμόρφωση του κυκλώματος AAPS](../SettingUpAaps/ChangeAapsConfiguration.md).
 
-## Restart AAPS to validate settings
+## Άδεια Bluetooth
 
-From the top right menu, select Exit to force AAPS to restart.
+Αν επιλέξετε αντλία που συνδέεται μέσω Bluetooth (για παράδειγμα **Omnipod Dash**), ένα μήνυμα σας θυμίζει ότι το **AAPS** χρειάζεται άδεια Bluetooth. Μπορείτε να πατήσετε «**Παράβλεψη**» προς το παρόν — η άδεια δίνεται αφού τελειώσετε τον Οδηγό:
 
-![Επανεκκίνηση](../images/setup-wizard/Wizard27.png)
+![Χρειάζεται Bluetooth](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
 
-If you selected a Bluetooth connected pump, you will now see the permission request:
+Όταν τελειώσει ο Οδηγός εγκατάστασης, η κύρια οθόνη του **AAPS** δείχνει ένα πλαίσιο «**Απαιτούνται άδειες**». Οι άλλες άδειες έχουν ήδη δοθεί. Πατήστε «**Παραχώρηση**» δίπλα στο «**Bluetooth**»:
 
-![Bluetooth Request](../images/setup-wizard/Wizard28.png)
+![Bluetooth, Παραχώρηση](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
 
-Allow AAPS to connect to nearby devices.
+Επιλέξτε «**Να επιτρέπεται**» (Allow), ώστε το **AAPS** να μπορεί να βρει την αντλία σας και να συνδεθεί με αυτήν:
 
-![Bluetooth Request](../images/setup-wizard/Wizard28b.png)
+![Bluetooth, Να επιτρέπεται](../images/setup-wizard/Wizard-Bluetooth-Allow.png)
 
-If your **AAPS** loop is now fully setup, please move on to the next section ["Completing the objectives"](../SettingUpAaps/CompletingTheObjectives.md).
+Αν το κύκλωμα **AAPS** είναι τώρα πλήρως ρυθμισμένο, συνεχίστε στην επόμενη ενότητα [«Βήματα»](../SettingUpAaps/CompletingTheObjectives.md).

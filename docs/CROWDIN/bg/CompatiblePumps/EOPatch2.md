@@ -1,156 +1,278 @@
-# EOPatch2 Instruction Manual
+# EOPatch2
 
-The patch requires the use of rapid-acting U-100 type insulin, such as NovoRapid or Humalog. Use a rapid-acting insulin that is suitable for you according to your doctor’s prescription and inject the prescribed dosage.
+Пачът изисква бързодействащ инсулин U-100, например NovoRapid или Humalog. Използвайте бързодействащия инсулин, който ви е предписал лекарят.
 
-The smallest injectable dose of insulin when using the patch is 0.05 U. The Profile BAS should therefore be set at a minimum value of 0.05 U/hr or more and an interval of 0.05 U/hr, as otherwise there may be an error between the estimated total infusion amount in the Profile and the actual infusion amount in the patch. Likewise, the bolus must also be set and infused with a minimum infusion volume of 0.05 U.
+Най-малката доза, която пачът може да подаде, е 0,05 U. Задайте всяка базална доза в своя **Профил** на най-малко 0,05 U/ч, на стъпки от 0,05 U/ч. В противен случай **AAPS** закръгля всяка доза до най-близките 0,05 U/ч (никога надолу до 0) и използва дозите, които пачът реално подава. Затова общото количество инсулин за денонощие леко се различава от вашия **Профил**. По същия начин болусите трябва да са най-малко 0,05 U.
 
-## Pump Setup
-1. On the AAPS home screen, click the hamburger menu in the upper left corner and go to Config Builder.
-1. Select 'EOPatch2' in the Pump section.
-1. Press the Back key to return to the home screen.
+```{contents} Table of contents
+:depth: 1
+:local: true
+```
 
+## Възможности на помпата при употреба с AAPS
 
-![Image1](../images/EOPatch/Bild1.png) ![Image2](../images/EOPatch/Bild2.png)
+* Комуникира с **AAPS** чрез вградения Bluetooth на телефона, без допълнително комуникационно устройство.
+* Преминаването към лятно часово време (DST) и смяната на часовата зона трябва да се правят ръчно.
 
-## Settings
-Select EOPATCH2 at the top of the home screen to go to the EOPATCH2 tab.
+## Настройване на помпата
 
-Select the EOPatch2 Preferences menu by clicking the three dots in the upper right corner.
+1. Отворете **менюто** (☰) в горния ляв ъгъл на главния екран на **AAPS** и изберете **Конфигурация**.
+1. В раздела **Помпа** изберете **EOPatch2**.
+1. Натиснете бутона „Назад“, за да се върнете на главния екран.
 
-The EOPatch2 Preferences menu offers a menu to set 3 types of notifications.
+![Менюто с елемента „Конфигурация“](../images/v4/Configuration/configuration_menu.png) ![Конфигурация > Помпа с плъгина EOPatch2](../images/v4/Configuration/configuration_pump_list_3.png)
 
-### Low reservoir Alerts
-A warning appears when the amount of insulin remaining in the reservoir reaches the set value or less while using the patch. It can be set from 10 to 50U in 5U increments.
+След като го изберете, картата на **EOPatch2** показва два бутона – **Настройки** и **Отвори плъгин**:
 
-### Patch expiration Reminder
-This is a reminder to notify you of the time remaining before the current patch expires. It can be set from 1 to 24 hours in 1 hour increments. The initial setting value is 4 hours.
+![Плъгинът EOPatch2, избран в Конфигурация > Помпа](../images/v4/Pumps/eopatch2_enabled.png)
 
-### Patch buzzer Reminder
-This is a reminder function for injections other than basal injection. If you are using an (extended) bolus injection or a temporary basal injection, the patch will make a buzzer sound when the injection starts and when the injection is complete. The initial setting value is Off.
+## Настройки
 
-![Image3](../images/EOPatch/Bild3.png)
+Можете да отворите настройките на EOPatch2 по един от двата начина:
 
-## Connecting the Patch
+* натиснете **Настройки** на картата на **EOPatch2** в **Конфигурация** или
+* отворете екрана на помпата (**Управление** → **Помпа**) и натиснете иконата със зъбно колело в горния десен ъгъл.
 
-### Move to patch connection screen
+Има три настройки:
 
-Select EOPATCH2 at the top of the home screen and click the ACTIVATE PATCH button at the bottom left.
+![Настройки на EOPatch2](../images/v4/Pumps/eopatch_settings.png)
 
-![Image4](../images/EOPatch/Bild4.png)
+### Предупреждение за празен резервоар
 
-### Connecting the patch
-Insert the syringe needle into the insulin inlet on the patch and then slowly push the piston to inject the insulin. When insulin is filled with more than 80U, the patch makes a booting sound (1 buzzer) and boots. After confirming the buzzer sound, click the START PAIRING button on the screen.
+Появява се предупреждение, когато останалият в пача инсулин спадне до това количество или по-малко. Можете да я зададете от 10 до 50 U на стъпки от 5 U. Стойността по подразбиране е 10 U.
 
-[Warning]
+### Напомняне за изтичане на Patch
 
-- Do not turn the needle action lever until instructed. It can cause serious problems during injection or safety checks otherwise.
-- The amount of insulin that can be injected into the patch is 80~200U. If you inject less than 80U into the patch initially, the patch will not work.
-- Take the insulin to be put into the patch from the refrigerator and leave it at room temperature for 15 to 30 minutes beforehand. The temperature of the insulin to be injected must be at least 10°C.
+Напомня ви колко време остава, преди срокът на текущия пач да изтече. Можете да я зададете от 1 до 24 часа на стъпки от 1 час. Стойността по подразбиране е 4 часа.
 
-![Image5](../images/EOPatch/Bild5.png)
+### Звуково напомняне за Patch
 
-### patch pairing
-The Patch pairing screen will be displayed, and pairing will be attempted automatically. If communication is successful, the Bluetooth pairing request notification appears. Click OK and when the Bluetooth pairing request notification appears a second time with the authentication code, select OK again.
+Когато тази настройка е включена, пачът издава звуков сигнал, когато започва и когато свършва болус, удължен болус или временен базал. Тя не влияе на обичайния ви базал. По подразбиране е изключена.
 
-[Warning]
+## Активиране на нов пач
 
-- For pairing, the patch and the smartphone must be located within 30 cm of each other.
-- After the patch booting is completed, the patch will beep every 3 minutes until the pairing is complete.
-- After booting the patch, the patch application must be completed via the app within 60 minutes. If the application cannot be completed within 60 minutes, the patch should be discarded.
+### Отваряне на съветника за активиране
 
-![Image6](../images/EOPatch/Bild6.png) ![Image7](../images/EOPatch/Bild7.png) ![Image8](../images/EOPatch/Bild8.png)
+Отворете екрана на помпата с **Управление** → **Помпа** (или натиснете **Отвори плъгин** на картата на **EOPatch2** в **Конфигурация**). Когато няма активен пач, екранът показва **Не е активирана** и бутон **Активирай Patch** в долната част.
 
+Натиснете **Активирай Patch**, за да стартирате съветника.
 
-### patch preparation
-After removing the adhesive tape of the patch, check if the needle is sticking out. If there are no problems with the patch, click NEXT.
+![Екранът на помпата EOPatch2 с бутона „Активирай Patch“](../images/v4/Pumps/eopatch_pump_screen.png)
 
-![Image9](../images/EOPatch/Bild9.png)
+Съветникът ви води през всяка стъпка. Редът с точки в горната част показва докъде сте стигнали.
 
-### Patch attachment
-Insulin should be injected in a spot with subcutaneous fat but few nerves or blood vessels, so it is recommended to use the abdomen, arm, or thigh for the patch attachment site. Choose a patch attachment site and apply the patch after disinfecting the location.
+```{note}
+Ако никога не сте активирали **Профил** в **AAPS**, съветникът първо показва страницата **Нужен е профил**. Изберете профила, който да се използва, и натиснете **Активирай профил**.
+```
 
-[Warning]
+### Пълнене на инсулин
 
-- Make sure to straighten the side of the patch tape attached to the body evenly, so that the patch adheres completely to the skin.
-- If the patch does not stick completely, air may enter between the patch and the skin, which can weaken the adhesive strength and waterproof effect of the patch.
+Вкарайте иглата на спринцовката в отвора за пълнене с инсулин на пача. Бавно натиснете буталото, за да напълните пача. Когато в пача има повече от 80 U, той издава един звуков сигнал и се включва (стартира).
 
-![Image10](../images/EOPatch/Bild10.png)
+Когато чуете звуковия сигнал, натиснете **Започване на сдвояване**.
 
-### Safety Check
-When patching is complete, touch Start Safety Check. When the safety check is completed, the patch will beep once.
+![Стъпката „Пълнене на инсулин“ с бутона „Започване на сдвояване“](../images/v4/Pumps/eopatch_activate_filling.png)
 
-[Warning]
+```{warning}
+- Не завъртайте лоста за действие на иглата, докато съветникът не ви каже. Ако го завъртите твърде рано, това може да причини сериозни проблеми при пълненето или при проверката за безопасност.
+- Пачът побира от 80 до 200 U. Ако сложите по-малко от 80 U, пачът не работи.
+- Извадете инсулина от хладилника 15 до 30 минути преди пълненето, за да достигне стайна температура. Температурата на инсулина трябва да е най-малко 10 °C.
+```
 
-- For safe use, do not turn the needle action lever until the safety check has been completed.
+### Сдвояване на Patch
 
-![Image11](../images/EOPatch/Bild11.png) ![Image12](../images/EOPatch/Bild12.png)
+Сега **AAPS** автоматично се опитва да се сдвои с пача. По време на сдвояването Android показва две заявки за сдвояване през Bluetooth. Натиснете **OK** на първата. Натиснете отново **OK** на втората, която показва ключ за достъп (passkey).
 
+```{warning}
+- По време на сдвояването дръжте пача и телефона на не повече от 30 см един от друг.
+- След като пачът се включи, той издава звуков сигнал на всеки 3 минути, докато сдвояването завърши.
+- Трябва да завършите активирането на пача до 60 минути след включването му. Ако не успеете, изхвърлете пача.
+```
 
-### Inserting the needle
-The needle is inserted by holding around the patch and turning the needle action lever more than 100° in the upward direction of the lever. There is a buzzer sound when the needle is inserted correctly. Turn the needle action lever further clockwise to release the lever. Click NEXT.
+![Стъпката „Сдвояване на Patch“](../images/EOPatch/Bild6.png) ![Първа заявка за сдвояване през Bluetooth](../images/EOPatch/Bild7.png) ![Втора заявка за сдвояване през Bluetooth с ключа за достъп](../images/EOPatch/Bild8.png)
 
-[Caution]
+```{admonition} Older screenshot
+:class: note
+Двете снимки на екрана на сдвояването през Bluetooth са от по-стара версия на **AAPS**: екранът на **AAPS** зад заявката за сдвояване на Android изглежда различно в **AAPS** 4.
+```
 
-- If you go to the next step without the buzzer sounding, a needle insertion error warning will appear.
+### Избор на инсулин
 
-## Discarding the patch
-Patches must be replaced in the case of low insulin levels, usage expiration, and defects. The recommended usage period for each patch is 84 hours after booting the patch.
+Изберете инсулина, с който сте напълнили пача, и натиснете **Напред**. След активирането **AAPS** прилага смяна на профил с този инсулин.
 
-### Discarding the patch
-Select EOPATCH2 at the top of the home screen and click the DISCARD/CHANGE PATCH button at the bottom. On the next screen, click the DISCARD PATCH button. A dialog box appears to confirm once more and if you select the DISCARD PATCH button, the disposal is completed.
+### Подгответе се за закрепване на Patch
 
-![Image13](../images/EOPatch/Bild13.png) ![Image14](../images/EOPatch/Bild14.png) ![Image15](../images/EOPatch/Bild15.png) ![Image16](../images/EOPatch/Bild16.png)
+Отстранете залепващата лента от пача, след което натиснете **Напред**.
 
-## Suspending and Resuming Insulin Delivery
-Suspending insulin delivery also cancels both extended bolus and temporary basal. When resuming insulin delivery, the canceled extended bolus and temporary basal will not be resumed. And when insulin delivery is suspended, the patch will give a sound every 15 minutes.
+Ако стърчи игла или ако пачът е мокър, замърсен или залепващата му лента е прегъната, вместо това натиснете **Изхвърли** и използвайте нов пач.
 
-### Suspending insulin delivery
-Select EOPATCH2 at the top of the home screen and click the SUSPEND button at the bottom right. When you select CONFIRM in the confirmation box, a time selection box appears. If you select the CONFIRM button after selecting the time, the insulin delivery will be suspended for the set amount of time.
+![Стъпката „Подгответе се за закрепване на Patch“](../images/EOPatch/Bild9.png)
 
-![Image17](../images/EOPatch/Bild17.png) ![Image18](../images/EOPatch/Bild18.png) ![Image19](../images/EOPatch/Bild19.png)
+### Локация
 
+Тази стъпка се появява само ако **Позволи следене на мястото на помпата** е включено в настройките за ротация на мястото. Докоснете мястото на схемата на тялото, където ще закрепите пача, и натиснете **Напред** или натиснете **Прескочи**.
 
-### Resuming insulin delivery
-Select EOPATCH2 at the top of the home screen and click the RESUME button at the bottom right. Insulin delivery will resume by selecting CONFIRM in the confirmation dialog box.
+### Закрепяне на Patch
 
-![Image20](../images/EOPatch/Bild20.png) ![Image21](../images/EOPatch/Bild21.png)
+Инсулинът трябва да попадне в място с мастна тъкан под кожата, но с малко нерви и кръвоносни съдове. Подходящи места са коремът, ръката или бедрото. Почистете и подсушете мястото, след това залепете пача на кожата си.
 
-## Alarms/Warnings
+Проверете мястото на инфузия и натиснете **Стартирайте проверката за безопасност**.
 
-### Alarm
+```{warning}
+- Притиснете равномерно краищата на лентата на пача, така че целият пач да залепне здраво за кожата.
+- Ако пачът не залепне напълно, между пача и кожата може да влезе въздух. Това отслабва лепилото и водоустойчивостта на пача.
+```
 
-Alarms are issued for emergency situations of the highest priority and require immediate action. The alarm signal does not disappear or time out until it is acknowledged. An alarm occurs when there is a problem with the patch being used, so there may be cases where the patch in use needs to be discarded and replaced with a new patch. The warning is displayed as a dialog box and switching to another screen is not possible until processing is completed.
+![Стъпката „Закрепяне на Patch“](../images/EOPatch/Bild10.png)
 
-![Image22](../images/EOPatch/Bild22.png) ![Image23](../images/EOPatch/Bild23.png)
+### Проверка за безопасност
 
-The different types of alarms are explained below.
+Проверката за безопасност отнема около 30 секунди. Когато приключи, пачът издава един звуков сигнал. Ако не успее, натиснете **Отново**.
 
-| Alarms                     | Explanation                                                                                                                                                                                                         |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Empty reservoir            | Occurs when the patch’s reservoir runs out of insulin.                                                                                                                                                              |
-| Patch expired              | Occurs when the patch usage time has expired, and no further insulin injections are possible.                                                                                                                       |
-| Occlusion                  | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                                                   |
-| Power on self-test failure | Occurs when the patch finds an unexpected error during the post-boot self-test process.                                                                                                                             |
-| Inappropriate temperature  | Occurs when the patch is outside the normal operating temperature range during patch application and use. To deal with this alarm, move the patch to an  appropriate operating temperature (4.4 to 37°C) condition. |
-| Needle insertion Error     | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.                         |
-| Patch battery Error        | Occurs just before the patch’s internal battery runs out and powers off.                                                                                                                                            |
-| Patch activation Error     | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                                                             |
-| Patch Error                | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                                                            |
+```{warning}
+За безопасна употреба не завъртайте лоста за действие на иглата, докато проверката за безопасност не завърши.
+```
 
-### Warning
+![Стъпката „Закрепяне на Patch“ с бутона „Стартирайте проверката за безопасност“](../images/EOPatch/Bild11.png) ![Проверката за безопасност е в ход](../images/EOPatch/Bild12.png)
 
-A warning occurs in a medium or low-priority situation. When a warning occurs, it is displayed as a notification in the Overview screen.
+```{admonition} Older screenshot
+:class: note
+Снимките на екрана от **Подгответе се за закрепване на Patch** до **Проверка за безопасност** са от по-стара версия на **AAPS** и може да изглеждат различно в **AAPS** 4.
+```
 
-![Image24](../images/EOPatch/Bild24.png)
+### Поставяне на иглата
 
-The different types of warnings are explained below.
+Хванете здраво пача. Завъртете лоста за действие на иглата нагоре на повече от 100°, за да вкарате иглата. Пачът издава един звуков сигнал, когато иглата е вкарана правилно. След това продължете да въртите лоста докрай, за да го махнете. Натиснете **Напред**.
 
-| Warnings                     | Explanation                                                                                                                           |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| End of insulin suspend       | Occurs when the time set by the user has elapsed after the insulin infusion suspension has been completed.                            |
-| Low reservoir                | Occurs when the remaining amount of insulin in the patch is below the set amount.                                                     |
-| Patch operating life expired | Occurs when the patch usage period is over.                                                                                           |
-| Patch will expire soon       | Occurs 1 hour before the patch must be discarded.                                                                                     |
-| Incomplete Patch activation  | Occurs when more than 3 minutes have elapsed due to an interruption during patch application in the stage after pairing is completed. |
-| Patch battery low            | Occurs when the patch's battery is low.                                                                                               |
+```{caution}
+Ако преминете към следващата стъпка, без да сте чули звуковия сигнал, се появява **Грешка при поставяне на иглата**. Проверете дали има звуков сигнал и натиснете **Отново**. Ако грешката остане, натиснете **Изхвърли**, за да деактивирате пача.
+```
 
+### Активирането на Patch завърши
+
+Последната страница потвърждава, че пачът е активен и че ще ви напомни, когато наближи краят на срока му. Натиснете **Край**, за да се върнете на екрана на помпата.
+
+## Изхвърляне на пача
+
+Сменете пача, когато инсулинът в него е малко, когато срокът му изтече или ако е повреден. Препоръчваме всеки пач да се използва не повече от 84 часа след включването му.
+
+1. Отворете екрана на помпата (**Управление** → **Помпа**). Докато има активен пач, натиснете **Изхвърлете Patch**.
+1. Страницата **Изхвърлете Patch** показва оставащото време и оставащия инсулин в пача. Натиснете **Изхвърлете Patch**.
+1. Появява се диалог, който иска потвърждение. Натиснете отново **Изхвърлете Patch**.
+1. Когато пачът бъде деактивиран, съветникът показва **Изхвърлянето на Patch е завършено.** Махнете пача от тялото си и натиснете **Потвърждаване**.
+
+След това съветникът преминава направо към активиране на нов пач (вижте по-горе). Натиснете стрелката за връщане, ако искате да спрете дотук.
+
+Докато няма активен пач, **AAPS** показва помпата като спряна и записва временен базал 0 U/ч. Така в IOB не се отчита базален инсулин, докато не бъде активиран следващият пач.
+
+![Екранът на помпата EOPatch2 с бутона DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![Страницата „Изхвърлете Patch“](../images/EOPatch/Bild14.png) ![Диалог за потвърждение „Изхвърлете Patch“](../images/EOPatch/Bild15.png) ![Изхвърлянето на Patch е завършено](../images/EOPatch/Bild16.png)
+
+```{admonition} Older screenshot
+:class: note
+Снимките на екрана по-горе са от по-стара версия на **AAPS**. В **AAPS** 4 отваряте екрана на помпата от **Управление** → **Помпа**, а бутонът на него е **Изхвърлете Patch**.
+```
+
+```{admonition} If the patch does not respond
+:class: warning
+Ако **AAPS** не може да се свърже с пача, може да се покаже страница за ръчно изключване на алармата на пача: махнете пача от тялото си, отлепете залепващата лента и с кламер натиснете силно в дупката до отвора за пълнене с инсулин.
+
+Страницата **Изхвърлете Patch** има и бутон **Форсирано нулиране**. Той само премахва пача от **AAPS**, без да изпраща команда до пача. Пачът продължава да подава инсулин, докато батерията му не се изтощи или докато не го изключите ръчно. Използвайте го само ако обичайното изхвърляне не успее, и махнете пача от тялото си.
+```
+
+## Спиране и възобновяване на подаването на инсулин
+
+Спирането на подаването на инсулин отменя също всеки удължен болус и временен базал. Когато възобновите подаването, те **не** се стартират отново. Докато подаването на инсулин е спряно, пачът издава звуков сигнал на всеки 15 минути.
+
+### Спиране на подаването на инсулин
+
+1. Отворете екрана на помпата (**Управление** → **Помпа**) и натиснете **Спри помпата**.
+1. Диалог обяснява какво ще бъде спряно. Натиснете **Потвърждаване**.
+1. В диалога **Време за спиране на базала** изберете за колко време да спрете подаването: 30 мин, 1 час, 1 ч 30 мин или 2 часа. Натиснете **Потвърждаване**.
+
+Подаването на инсулин се спира за избраното от вас време.
+
+![Екранът на помпата EOPatch2 с бутона SUSPEND](../images/EOPatch/Bild17.png) ![Диалог за потвърждение на спирането](../images/EOPatch/Bild18.png) ![Диалогът „Време за спиране на базала“](../images/EOPatch/Bild19.png)
+
+```{admonition} Older screenshot
+:class: note
+Снимките на екрана по-горе са от по-стара версия на **AAPS**. В **AAPS** 4 отваряте екрана на помпата от **Управление** → **Помпа**, а бутонът на него е **Спри помпата**.
+```
+
+### Възобновяване на подаването на инсулин
+
+1. Отворете екрана на помпата (**Управление** → **Помпа**) и натиснете **Възстанови помпата**.
+1. В диалога **Възобновяване доставянето на инсулин** натиснете **Потвърждаване**.
+
+![Екранът на помпата EOPatch2 с бутона RESUME](../images/EOPatch/Bild20.png) ![Диалогът „Възобновяване доставянето на инсулин“](../images/EOPatch/Bild21.png)
+
+```{admonition} Older screenshot
+:class: note
+Снимките на екрана по-горе са от по-стара версия на **AAPS**. В **AAPS** 4 отваряте екрана на помпата от **Управление** → **Помпа**, а бутонът на него е **Възстанови помпата**.
+```
+
+```{warning}
+Когато времето за спиране изтече, **AAPS** показва предупреждение **Край на временното спиране на инсулина**. Подаването на инсулин **не** се възобновява, докато не го потвърдите. Ако не го направите, може да развиете хипергликемия.
+```
+
+(eopatch2-alarms-and-warnings)=
+
+## Аларми и предупреждения
+
+### Аларми
+
+Алармите са за спешни ситуации с най-висок приоритет и изискват незабавни действия от вас. **AAPS** издава аларма, която продължава, докато не я потвърдите, и показва съобщението като известие на екрана **Общ преглед**. Алармата означава, че има проблем с използвания пач. В много случаи пачът трябва да бъде изхвърлен и сменен с нов.
+
+Когато натиснете **Потвърждаване** в известието, **AAPS** обработва алармата. При повечето аларми това деактивира пача. При аларма **Неподходяща температура** бутонът е **Отново**.
+
+![Аларма на EOPatch2](../images/EOPatch/Bild22.png) ![Аларма на EOPatch2, след като пачът е деактивиран](../images/EOPatch/Bild23.png)
+
+```{admonition} Older screenshot
+:class: note
+Снимките на екрана на алармите са от по-стара версия на **AAPS** и може да изглеждат различно в **AAPS** 4.
+```
+
+Различните аларми са обяснени по-долу.
+
+| Аларма                               | Обяснение                                                                                                                                                              |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Празен резервоар                     | Инсулинът в пача е свършил.                                                                                                                                            |
+| Срокът на пач помпата е изтекъл      | Срокът на използване на пача е изтекъл и той не може да подава повече инсулин.                                                                                         |
+| Запушване                            | Пътят на инсулина в пача изглежда запушен.                                                                                                                             |
+| Неуспешна самопроверка при включване | Пачът е открил неочаквана грешка при самопроверката си след включване.                                                                                                 |
+| Неподходяща температура              | Пачът е извън нормалната си работна температура, докато го активирате или използвате. Преместете пача на място с подходяща температура (от 4,4 до 37 °C).              |
+| Грешка при поставяне на иглата       | Иглата не е поставена правилно по време на активирането. Проверете дали ръбът на пача, през който влиза иглата, и лостът за действие на иглата са на една права линия. |
+| Грешка - батерия на помпа            | Вътрешната батерия на пача е почти изтощена и пачът ще се изключи.                                                                                                     |
+| Грешка при активиране на помпа       | Пачът не е бил напълно активиран до 60 минути след включването си.                                                                                                     |
+| Грешка в пач помпата                 | Пачът е открил неочаквана грешка при активиране или използване.                                                                                                        |
+
+### Предупреждения
+
+Предупрежденията са за ситуации със среден или нисък приоритет. Предупреждението се показва като известие на екрана **Общ преглед**.
+
+![Предупреждение от EOPatch2 на екрана „Общ преглед“](../images/EOPatch/Bild24.png)
+
+```{admonition} Older screenshot
+:class: note
+Тази снимка на екрана е от по-стара версия на **AAPS**: в **AAPS** 4 предупреждението се показва на главния екран, който изглежда различно.
+```
+
+Различните предупреждения са обяснени по-долу.
+
+| Предупреждение                         | Обяснение                                                                                                                              |
+| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Край на временното спиране на инсулина | Избраното от вас време за спиране е изтекло. Натиснете **Възстанови помпата** в известието, за да възобновите подаването на инсулин.   |
+| Минимален инсулин в резервоара         | Оставащият в пача инсулин е под количеството, зададено в **Предупреждение за празен резервоар**.                                       |
+| Срокът на пач помпата е изтекъл        | Периодът на използване на пача е изтекъл.                                                                                              |
+| Пач помпата ще изтече скоро            | Пачът трябва да бъде изхвърлен до 1 час.                                                                                               |
+| Непълно активиране на пач помпата      | Активирането на пача е прекъснато за повече от 3 минути след сдвояването. Отворете екрана на помпата и завършете активирането на пача. |
+| Изтощена батерия на пач помпа          | Батерията на пача е слаба.                                                                                                             |
+
+## Къде да получите помощ
+
+Разработката на драйвера за EOPatch2 се извършва от общността на **доброволчески** начала. Преди да поискате помощ, моля:
+
+1. **Прочетете** съответния раздел от тази документация, за да проверите как трябва да работи функцията.
+2. **Попитайте** в канала *#AAPS* в [Discord](https://discord.gg/4fQUWHZ4Mw) или в някой от другите [канали на общността](../GettingHelp/WhereCanIGetHelp.md).
+3. **Докладвайте грешка**, като първо потърсите в [съществуващите проблеми (issues)](https://github.com/nightscout/AndroidAPS/issues); ако вашият го няма там, отворете [нов проблем (issue)](https://github.com/nightscout/AndroidAPS/issues) и приложете вашите [лог файлове](../GettingHelp/AccessingLogFiles.md).
+
+Когато искате помощ, посочете марката и модела на телефона си, версията на Android, версията на **AAPS** и описание на проблема на прост английски език (какво се е променило, кога е работило за последно).

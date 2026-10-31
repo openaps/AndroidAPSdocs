@@ -1,62 +1,62 @@
-# Setting up the Reporting Server
+# Ρύθμιση του διακομιστή αναφορών
 
-There are currently two reporting servers available for use with **AAPS**:
+Αυτή τη στιγμή υπάρχουν δύο διακομιστές αναφορών που μπορείτε να χρησιμοποιήσετε με το **AAPS**:
 
 - [Nightscout](https://nightscout.github.io/)
 - [Tidepool](https://www.tidepool.org/)
 
-![Reporting Servers](../images/Building-the-App/ReportingServer.png)
+![Διακομιστές αναφορών](../images/Building-the-App/ReportingServer.png)
 
-We recommend using Nightscout.
+Προτείνουμε να χρησιμοποιήσετε το Nightscout.
 
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout is a web application that can log and display your CGM data and **AAPS** data and creates reports. It is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). It also allows caregivers to send remote commands to **AAPS**.
+Το Nightscout είναι μια διαδικτυακή εφαρμογή που καταγράφει και εμφανίζει τα δεδομένα του CGM σας και τα δεδομένα του **AAPS** και δημιουργεί αναφορές. Είναι μια ισχυρή πλατφόρμα που είναι ενσωματωμένη στο **AAPS** εδώ και πολλά χρόνια. Επιτρέπει στους χρήστες και στους φροντιστές να παρακολουθούν τα δεδομένα διαβήτη του ασθενή σχεδόν σε πραγματικό χρόνο (μπορεί να περάσουν μόνο λίγα δευτερόλεπτα από τη λήψη των δεδομένων μέχρι την εμφάνισή τους, αν υπάρχει καλή σύνδεση στο Internet ανάμεσα σε όλα τα μέρη του συστήματος). Επίσης μεταφέρει τις εντολές απομακρυσμένου ελέγχου που στέλνουν οι φροντιστές στο **AAPS** από το **AAPSClient** (δείτε [Έλεγχος κύριας συσκευής ↔ πελάτη](#client-master-control)).
 
-Nightscout is provided as open-source software. Anyone can create and operate a Nightscout server, using either free or paid-for services.
+Το Nightscout είναι λογισμικό ανοιχτού κώδικα. Οποιοσδήποτε μπορεί να δημιουργήσει και να λειτουργήσει έναν διακομιστή Nightscout, με δωρεάν ή επί πληρωμή υπηρεσίες.
 
-You can find more information on the [website of the Nightscout project](http://nightscout.github.io/).
+Περισσότερες πληροφορίες θα βρείτε στον [ιστότοπο του έργου Nightscout](http://nightscout.github.io/).
 
-### Option 1 - Set up your Nightscout server yourself
+### Επιλογή 1 - Ρυθμίστε μόνοι σας τον διακομιστή Nightscout
 
-Creating your Nightscout reporting server can require one or more web-based applications that will require maintenance. In order to have a completely free service, you may need to migrate your Nightscout site and data, if and when providers remove the free tier.
+Για τη δημιουργία του διακομιστή αναφορών Nightscout μπορεί να χρειαστούν μία ή περισσότερες διαδικτυακές εφαρμογές, που θα χρειάζονται συντήρηση. Για να έχετε μια εντελώς δωρεάν υπηρεσία, ίσως χρειαστεί να μεταφέρετε τη σελίδα και τα δεδομένα του Nightscout σας, αν και όταν οι πάροχοι καταργήσουν τη δωρεάν επιλογή τους.
 
-A description of how you can set up Nightscout with the advantages and disadvantages of the various operating options, including an estimate of the costs, can be found [here](https://nightscout.github.io/nightscout/new_user/#free-diy).
+Μια περιγραφή του πώς μπορείτε να στήσετε το Nightscout, με τα πλεονεκτήματα και τα μειονεκτήματα των διαφόρων επιλογών λειτουργίας και μια εκτίμηση του κόστους, θα βρείτε [εδώ](https://nightscout.github.io/nightscout/new_user/#free-diy).
 
-### Option 2 - Pay for a hosted Nightscout service
+### Επιλογή 2 - Πληρώστε για μια φιλοξενούμενη υπηρεσία Nightscout
 
-There are also options from different service providers who host Nightscout for you, with a monthly fee. The costs are manageable, and the advantage of a hosted option is that you do not need to be IT-literate, or have any operating infrastructure.
+Υπάρχουν επίσης επιλογές από διάφορους παρόχους που φιλοξενούν το Nightscout για εσάς, με μηνιαία συνδρομή. Το κόστος είναι λογικό, και το πλεονέκτημα μιας φιλοξενούμενης επιλογής είναι ότι δεν χρειάζεται να έχετε γνώσεις πληροφορικής ή δική σας υποδομή.
 
 
-Existing Nightscout users can reconsider where and how their Nightscout server is hosted from time to time, and change to a different option if it becomes more suitable.
+Όσοι ήδη χρησιμοποιούν το Nightscout μπορούν κατά καιρούς να ξανασκεφτούν πού και πώς φιλοξενείται ο διακομιστής Nightscout τους, και να αλλάξουν σε άλλη επιλογή αν τους ταιριάζει καλύτερα.
 
-Some Nightscout hosted services are listed [here](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
+Μερικές υπηρεσίες φιλοξενίας για το Nightscout αναφέρονται [εδώ](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
 
-### Further configuration of Nightscout
+### Περισσότερες ρυθμίσεις του Nightscout
 
-Once you have your Nightscout instance up and running, see [Nightscout configuration page](../SettingUpAaps/Nightscout.md) for additional considerations.
+Όταν το Nightscout σας είναι έτοιμο και λειτουργεί, δείτε τη [σελίδα ρύθμισης του Nightscout](../SettingUpAaps/Nightscout.md) για περισσότερα θέματα που πρέπει να προσέξετε.
 
 (SettingUpTheReportingServer-tidepool)=
 ## Tidepool
 
-Tidepool has been available in **AAPS** since version 3.2 which was released in late 2023.
+Το Tidepool είναι διαθέσιμο στο **AAPS** από την έκδοση 3.2, που κυκλοφόρησε στα τέλη του 2023.
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger  
-As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool it is not suitable for sharing real-time information with caregivers.  
-On the other hand, Tidepool can be a great solution for sharing reports with a patient's endocrinologist if Nightscout is not an accepted solution.  
+Επειδή με το **AAPS** υπάρχει καθυστέρηση τριών ωρών από τη λήψη των δεδομένων μέχρι την εμφάνισή τους στις αναφορές, το Tidepool δεν είναι κατάλληλο για να μοιράζεστε πληροφορίες σε πραγματικό χρόνο με φροντιστές.  
+Από την άλλη πλευρά, το Tidepool μπορεί να είναι μια πολύ καλή λύση για να μοιράζεστε αναφορές με τον ενδοκρινολόγο του ασθενούς, αν το Nightscout δεν είναι αποδεκτή λύση.  
 ```
 
-Tidepool is an [open source](https://github.com/tidepool-org) project. It offers to run an account free of charge on the Tidepool servers.
+Το Tidepool είναι ένα έργο [ανοιχτού κώδικα](https://github.com/tidepool-org). Σας επιτρέπει να έχετε δωρεάν λογαριασμό στους διακομιστές του Tidepool.
 
-More information about setting up Tidepool with AAPS [here](../SettingUpAaps/Tidepool.md).
+Περισσότερες πληροφορίες για τη ρύθμιση του Tidepool με το AAPS θα βρείτε [εδώ](../SettingUpAaps/Tidepool.md).
 
-```{admonition} **AAPS** has a the uploader for Tidepool integrated
+```{admonition} **AAPS** has the uploader for Tidepool integrated
 :class: note
-You do **not** need to use the uploader app to Tidepool: **AAPS** will upload blood glucose, treatments and basal for you. You only need a personal account with Tidepool. Do not upload your data with the separate Tidepool uploader tool as it will lead to duplicate values.  
+**Δεν** χρειάζεται να χρησιμοποιήσετε την εφαρμογή αποστολής (uploader) του Tidepool: το **AAPS** στέλνει για εσάς τη γλυκόζη αίματος, τις θεραπείες και τον βασικό ρυθμό. Χρειάζεστε μόνο έναν προσωπικό λογαριασμό στο Tidepool. Μην στέλνετε τα δεδομένα σας με το ξεχωριστό εργαλείο αποστολής (uploader) του Tidepool, γιατί αυτό θα δημιουργήσει διπλές τιμές.  
 ```
 
-## Next step
+## Επόμενο βήμα
 
-Once you have set up your reporting server, you can now either set up a [dedicated Google account for AAPS use](../UsefulLinks/DedicatedGoogleAccountForAaps.md), or go straight to [building the AAPS app](../SettingUpAaps/BuildingAaps.md). 
+Αφού ρυθμίσετε τον διακομιστή αναφορών σας, μπορείτε να διαμορφώσετε το **AAPS** στο τηλέφωνό σας με τον [Οδηγό εγκατάστασης](./SetupWizard.md), ο οποίος θα συνδέσει επίσης το **AAPS** με τον διακομιστή αναφορών σας.

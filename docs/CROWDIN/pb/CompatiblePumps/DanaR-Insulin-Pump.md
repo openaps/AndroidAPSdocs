@@ -1,26 +1,49 @@
-# DanaR Pump
+# DanaR
 
-*These instructions are for configuring the app and your pump if you have a DanaR. Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump.md) if you have the DanaRS launched in 2017 instead.*
+*Estas instruções são para configurar o aplicativo e a sua bomba se você tiver um DanaR. Se você tem o DanaRS, lançado em 2017, veja [Bomba de insulina DanaRS](./DanaRS-Insulin-Pump.md).*
 
-* In the pump go to Main Menu > Setting > User Option
-* Turn on "8. Extended Bolus"
+## Pump capabilities with AAPS
 
-![DanaR pump](../images/danar1.png)
+* Comunica-se com o **AAPS** pelo Bluetooth do próprio telefone, sem um dispositivo de comunicação extra.
+* Mudanças de fuso horário e de horário de verão não precisam de nenhuma ação especial, pois a bomba não usa o seu próprio histórico.
 
-* Go to Main Menu > Setting > Discovery
-* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). If DanaR is not showing in scan then restart phone and take DanaR battery out, replace and start these two steps again.
+## Setup
 
-* In AAPS go to Config Builder and select the type of DanaR you have (DanaR, DanaR Korean, DanaRv2)
+* Na bomba, vá para Main Menu > Setting > User Option
+* Ative "8. Extended Bolus"
 
-* Select Menu by tapping the 3 dots in the top right. Select Preferences.
-* Select DanaR Bluetooth device, and click your DanaR serial number.
-* Select Pump password, and input your password. (Default password is 1234)
-* If you want AAPS to allow basal rate above 200%, enable Use extended boluses for >200%. Note this means you cannot loop with high TBRs whilst using extended boluses for food.
-* In Preferences under DanaR pump settings you can change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
-* Set basal step on pump to 0.01 U/h
-* Set bolus step on pump to 0.1 U/h
-* Enable extended boluses on pump
+![Bomba DanaR](../images/danar1.png)
 
-## Timezone traveling with Dana R pump
+* Na bomba, vá para Main Menu > Setting > Discovery
+* Nas configurações do telefone, vá para Bluetooth, procure dispositivos próximos, selecione o número de série do seu DanaR e digite a sua senha (a senha de pareamento é 0000). Se o DanaR não aparecer na busca, reinicie o telefone, retire a bateria do DanaR, coloque-a de volta e repita estes dois passos.
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
+* No **AAPS**, abra o **menu** (☰) no canto superior esquerdo, vá para **Configuração** > **Bomba** e selecione o tipo de DanaR que você tem (**DanaR**, **DanaR Coreana** ou **DanaRv2**).
+  
+  ![Configuração > Bomba com os plugins DanaR](../images/v4/Configuration/configuration_pump_list_1.png)
+
+* Abra a tela da bomba: toque em **Abrir plugin** no cartão do DanaR (ou vá para **Gerenciar** > **Bomba**).
+
+* Toque em **Pareando**. Na tela de pareamento: 
+  * Digite a senha da bomba em **Senha da bomba** (a senha padrão é 1234).
+  * Em **Selecione o dispositivo pareado**, toque no número de série do seu DanaR. Se a lista estiver vazia, toque em **Abrir configurações de Bluetooth** e primeiro pareie a bomba com o seu telefone (veja o passo acima). Quando você voltar ao **AAPS**, a bomba aparece na lista. Se ela não aparecer, toque no ícone de atualizar.
+  * Toque em **Pareando**. O **AAPS** conecta-se à bomba e verifica a senha.
+* Para mudar as configurações do driver, toque em **Configurações** no cartão do DanaR em **Configuração** > **Bomba**: 
+  * **Velocidade do bólus** (DanaR e DanaRv2): muda a velocidade padrão do bólus (12 s/U, 30 s/U ou 60 s/U).
+  * **Usar bólus estendidos para >200%** (DanaR e DanaR Coreana): ative esta opção se você quiser que o **AAPS** permita uma taxa basal acima de 200%. Observe que isso significa que você não pode fazer loop com TBRs altas enquanto usa bólus estendidos para refeições.
+* Defina o incremento da basal na bomba como 0,01 U/h
+* Defina o incremento do bólus na bomba como 0,1 U. O **AAPS** lê o incremento do bólus da bomba e usa-o em todos os bólus.
+* Habilitar bólus estendido na bomba
+
+## Viagens entre fusos horários com a bomba Dana R
+
+Para informações sobre viagens entre fusos horários, veja a seção [Viagens entre fusos horários com bombas](#timezone-traveling-danarv2-danars).
+
+## Where to get help
+
+O desenvolvimento do driver DanaR é feito pela comunidade de forma **voluntária**. Before requesting help, please:
+
+1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
+2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
+3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+
+When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).

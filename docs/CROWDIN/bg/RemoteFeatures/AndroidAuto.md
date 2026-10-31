@@ -1,85 +1,86 @@
 # Android Auto
 
-**AAPS** is capable of sending you information about your current status as a message, directly into Android Auto in your car.
+**AAPS** може да ви изпраща информация за текущото ви състояние като съобщение направо в Android Auto в колата ви.
 
-```{admonition} version and last change information :class: dropdown date of last edit: 07/05/2023
+## Изисквания
 
-versions used for documentation:
+**AAPS** използва функция на Android Auto, която позволява съобщенията от приложенията на телефона да се показват на дисплея на аудиосистемата в колата.
 
-* AAPS 3.2.0-dev-i
-* Android Auto: 9.3.631434-release ```
+Това означава, че:
 
-## Requirements
+* Android трябва да позволява на **AAPS** да показва известия и
+* Тъй като **AAPS** е неофициално приложение, разрешете използването на „неизвестни източници“ (unknown sources) в Android Auto.
 
-**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of Auto Audio in the car.
+![CGM данни от AAPS в Android Auto](../images/android_auto_01.png)
 
-That means that:
+(androidauto-check-that-aaps-can-show-notifications)=
 
-* You must configure **AAPS** to use system notifications for alerts and notifications and
-* As **AAPS** is an unofficial App, allow the use of "unknown sources" with Android Auto.
+## Check that AAPS can show notifications
 
-![AAPS CGM data on Android Auto](../images/android_auto_01.png)
+**AAPS** винаги показва известие за статуса с текущата ви КЗ, IOB и COB. Това е известието, което Android Auto показва в колата. В **AAPS** няма нищо за включване, но Android трябва да позволява на **AAPS** да показва известия.
 
-## Use system notifications in AAPS for alerts and notifications
+На телефона отворете **Настройки** > **Приложения** > **AAPS** > **Известия** (Settings > Apps > AAPS > Notifications) и се уверете, че **Всички известия от AAPS** (All AAPS notifications) е включено.
 
-Open 3-dot-menu on top right of **AAPS** home screen and select **Preferences**
+![Всички известия от AAPS са включени](../images/android_auto_notifications_all.png)
 
-![Use system notifications for alerts and notifications](../images/android_auto_02.png)
+Превъртете надолу и се уверете, че **Текущ статус** е включено: това е каналът на известието за статуса.
 
-In **Local Alerts** activate **Use system notifications for alerts and notifications**
+![Каналът за известия „Текущ статус“ е включен](../images/android_auto_ongoing_channel.png)
 
-![Use system notifications for alerts and notifications](../images/android_auto_03.png)
+Моля, проверете сега, че виждате известието за статуса на **AAPS** на телефона, преди да тръгнете към колата!
 
-Please check now that you get notifications from **AAPS** on the phone before you walk to your car!
+![Известие на AAPS на телефона](../images/android_auto_04.png)
 
-![Use system notifications for alerts and notifications](../images/android_auto_04.png)
+(androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
 ## Allow the use of "unknown sources" with Android Auto.
 
-As **AAPS** is not an official Android Auto app, notifications have to be activated for "unknown sources" in Android Auto. This is done through the use of the developer mode which we will show you here.
+Тъй като **AAPS** не е официално приложение за Android Auto, известията трябва да бъдат активирани за „неизвестни източници“ (unknown sources) в Android Auto. Това става чрез режима за разработчици, който ще ви покажем тук.
 
-Go to your car and connect your mobile with the cars audio system.
+Отидете до колата си и свържете телефона с аудиосистемата на колата.
 
-You should now see a screen similar to this screen.
+Сега трябва да видите екран, подобен на този.
 
-![Enable developer mode](../images/android_auto_05.png)
+![Включване на режима за разработчици](../images/android_auto_05.png)
 
-Press on the **setting** icon to start the configuration.
+Натиснете иконата **настройки** (setting), за да започнете конфигурацията.
 
-Scroll down to the end of the page and select **see more in the phone**.
+Превъртете надолу до края на страницата и изберете **see more in the phone** (вижте още в телефона).
 
-![Enable developer mode](../images/android_auto_06.png)
+![Включване на режима за разработчици](../images/android_auto_06.png)
 
-Now on the mobile we will activate the developer mode.
+Сега ще активираме режима за разработчици на телефона.
 
-The first screen looks like this. Scroll down to the end of the page.
+Първият екран изглежда така. Превъртете надолу до края на страницата.
 
-![Enable developer mode](../images/android_auto_07.png)
+![Включване на режима за разработчици](../images/android_auto_07.png)
 
-There you see the version of Android Auto listed. Tap 10 times (in word ten) on the version of Android Auto. With this hidden combination you have now enabled developer mode.
+Там ще видите посочена версията на Android Auto. Докоснете 10 пъти (с думи: десет) версията на Android Auto. С тази скрита комбинация вече сте включили режима за разработчици.
 
-![Enable developer mode](../images/android_auto_08.png)
+![Включване на режима за разработчици](../images/android_auto_08.png)
 
-Confirm that you want to enable the developer mode in the modal dialog "Allow development settings?".
+Потвърдете, че искате да включите режима за разработчици, в диалоговия прозорец „Allow development settings?“ (Да се разрешат ли настройките за разработчици?).
 
-![Enable developer mode](../images/android_auto_09.png)
+![Включване на режима за разработчици](../images/android_auto_09.png)
 
-In the **developer settings** enable the "Unknown sources".
+В **настройките за разработчици** (developer settings) включете „Unknown sources“ (неизвестни източници).
 
-![Enable developer mode](../images/android_auto_10.png)
+![Включване на режима за разработчици](../images/android_auto_10.png)
 
-Now you can quit developer mode if you want. Tap three dots menu on the top right to do so.
+Сега можете да излезете от режима за разработчици, ако искате. За целта докоснете менюто с трите точки горе вдясно.
 
-## Show notifications in car
+## Показване на известия в колата
 
-Tap the **number icon** on the lower right side in Android Auto in your car.
+Докоснете **иконата с число** долу вдясно в Android Auto в колата.
 
-![number icon - Android Auto in car](../images/android_auto_11.png)
+![икона с число – Android Auto в колата](../images/android_auto_11.png)
 
-Your CGM data will be shown as follows:
+Вашите CGM данни ще се показват така:
 
-![AAPS CGM data on Android Auto](../images/android_auto_01.png)
+![CGM данни от AAPS в Android Auto](../images/android_auto_01.png)
 
-## Troubleshooting:
+(android-auto-troubleshooting)=
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#use-system-notifications-in-aaps-for-alerts-and-notifications) in Android and if [Android Auto has access rights to notifications](#allow-the-use-of-unknown-sources-with-android-auto).
+## Отстраняване на неизправности:
+
+* If you don't see the notification, check if you [allowed AAPS to show notifications](#androidauto-check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).

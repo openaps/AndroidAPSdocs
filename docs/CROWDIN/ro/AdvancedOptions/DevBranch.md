@@ -10,9 +10,9 @@ Versiunea dev a AAPS este doar pentru dezvoltatori și cei care testează care s
 
 Cu toate acestea, versiunea dev este un loc bun pentru a vedea care sunt funcțiile testate și pentru a ajuta la remedierea erorilor și a oferi sugestii cu privire la funcționarea practică a noilor caracteristici. Adesea, oamenii vor testa ramura dev pe un telefon vechi și pe o pompă până când vor avea încredere că este stabilă - orice utilizare a acesteia este pe propriul risc. Când testați orice caracteristici noi, țineți minte că alegeți să testați o caracteristică încă în dezvoltare. Faceți acest lucru pe propriul risc & cu grija cuvenită pentru a vă menține în siguranță.
 
-Dacă găsiți o eroare sau credeți că s-a întâmplat ceva greșit atunci când folosiți ramura Dev, atunci vedeți [secțiunea probleme](https://github.com/nightscout/AndroidAPS/issues) pentru a verifica dacă altcineva a găsit-o sau pentru a o adăuga chiar dumneavoastră dacă nu a fost semnalată încă. Cu cât puteți partaja mai multe informații aici cu atât mai bine (nu uitați că poate fi nevoie să partajați [fișierele de jurnal](../GettingHelp/AccessingLogFiles.md)). Noile caracteristici pot fi de asemenea discutate pe [discord](https://discord.gg/4fQUWHZ4Mw).
+Dacă găsiți o eroare sau credeți că s-a întâmplat ceva greșit atunci când folosiți ramura Dev, atunci vedeți [secțiunea probleme](https://github.com/nightscout/AndroidAPS/issues) pentru a verifica dacă altcineva a găsit-o sau pentru a o adăuga chiar dumneavoastră dacă nu a fost semnalată încă. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md)). Noile caracteristici pot fi de asemenea discutate pe [discord](https://discord.gg/4fQUWHZ4Mw).
 
-O versiune dev are o dată de expirare. Acest lucru pare deranjant atunci când o folosiți în mod satisfăcător, dar servește unui scop. Când o singură versiune de dezvoltator circulă, este mai ușor să urmărești erorile pe care oamenii le raportează. Dezvoltatorii nu doresc să se afle într-o poziție în care circulă trei versiuni de dev unde erorile sunt reparate în unele și în altele nu, iar oamenii continuă să le raporteze pe cele corectate.
+O versiune dev are o dată de expirare. Acest lucru pare deranjant atunci când o folosiți în mod satisfăcător, dar servește unui scop. When a single dev version is doing the rounds, it is easier to keep track of bugs that people are reporting. Dezvoltatorii nu doresc să se afle într-o poziție în care circulă trei versiuni de dev unde erorile sunt reparate în unele și în altele nu, iar oamenii continuă să le raporteze pe cele corectate.
 
 (branch-ci-test)=
 
@@ -39,7 +39,8 @@ Disponibil de la 3.3.2.1.dev
     <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
       <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
         <iframe
-          src="https://www.dailymotion.com/embed/video/x9rdx1q"
+          src="https://geo.dailymotion.com/player/x9rdx1q.html?video=x9rdx1q&loop=true&mute=true"
+          loading="lazy"
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
           frameborder="0"
           allowfullscreen>
@@ -49,6 +50,8 @@ Disponibil de la 3.3.2.1.dev
 ```
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
+
+- Target repository: the repository that contains the PR, in the format owner/repo. Leave the default **nightscout/AndroidAPS** unless you were told to use another repository (only developers should do this).
 
 - Numărul PR: Vă rugăm să introduceți numărul PR pe care doriți să-l testați.
 

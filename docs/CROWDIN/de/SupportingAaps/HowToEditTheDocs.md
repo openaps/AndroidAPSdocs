@@ -34,7 +34,7 @@ Oder klicke auf das Stift-Symbol, das in der oberen Leiste der zu bearbeitenden 
 
 3. Beide Optionen in Schritt 2 führen dazu, dass ein neuer Branch in DEINEM kopierten Repository erstellt wird, wo die Änderungen gespeichert werden sollen. Editiere die Datei.
 
-Wir verwenden Markdown für die Dokumentation. Die Datei hat das Suffix ".md". Die Markdown-Spezifikation ist nicht fixiert und wir verwenden im Moment den myst_parser für unsere Markdown-Dateien. Achte auf die [unten](#code-syntax) beschriebene richtige Syntax.
+Wir verwenden Markdown für die Dokumentation. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Achte auf die [unten](#code-syntax) beschriebene richtige Syntax.
 
 ![Edit branch](../images/PR3.png)
 
@@ -147,10 +147,10 @@ Um Bilder einzubinden, verwende diese Markdown-Syntax.
 
 Der Bildtyp sollte PNG oder JPEG sein.
 
-Bildnamen sollten einer der folgenden Namenskonventionen folgen. Im Beispiel benutze ich png als Dateiendung. Falls Du JPEG verwendest, nutze als Dateiendung jpeg.
+Image names should conform to one of the following naming rules. Im Beispiel benutze ich png als Dateiendung. Falls Du JPEG verwendest, nutze als Dateiendung jpeg.
 
 - `filename-image-xx.png` wobei xx is eine eindeutige zweistellige Zahl für die Bilder in der Datei ist.
-- `filename-image-xx.png` wobei xx ein sprechender Name für den Dateiauthor der md-Datei ist.
+- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
 
 Bilder befinden sich im 'images'-Ordner der englischen Dokumentation und werden von Crowdin automatisch in die anderen Sprachen überführt. Du musst hier nichts tun!
 
@@ -161,6 +161,7 @@ Derzeit übersetzen wir keine Bilder und Grafiken: Bilder sollten **so wenig Tex
 - Screenshots von Webseiten sollten bis zu **1050 Pixel breit** sein.
 - Prozessdiagramme sollten bis zu **1050 Pixel breit** sein.
 - Screenshots aus der App sollten bis zu **500 Pixel breit** sein. Platziere sie nicht nebeneinander, wenn es nicht unbedingt notwendig ist.
+- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
 
 ### Links
 
@@ -198,7 +199,7 @@ Mit der folgenden Schreibweise kannst Du den Link in Deinem Text setzen.
 
 Du kannst Notizen und Warnboxen zur Dokumentation hinzufügen.
 
-Zusätzlich kannst Du ausklappbare Hinweise für Detail- und Zusatzinformationen hinzufügen. Damit wird ein besserer Lesefluss für nicht Interessierte erreicht. Um die Dokumentation leicht lesen zu können, nutze Notizen, Warnungen und Detailinformationen sehr dosiert.
+Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Um die Dokumentation leicht lesen zu können, nutze Notizen, Warnungen und Detailinformationen sehr dosiert.
 
 #### Notiz
 
@@ -311,7 +312,7 @@ Beispiel eines **passiven Verbs**:
 
 - *„Das Insulin (Subjekt) wird (Verb) von der Pumpe (Objekt) geliefert“*
 
-*„wird geliefert“* ist hier passiv. Das Subjekt und das Objekt sind im Vergleich zum Aktivsatz vertauscht. Wir mussten den Satz verlängern, indem wir "wird" und "von der" hinzufügten. Es kann auch mit dem aktiven Verb begonnen werden.
+*“delivered”* is a passive verb here. Das Subjekt und das Objekt sind im Vergleich zum Aktivsatz vertauscht. Wir mussten den Satz verlängern, indem wir "wird" und "von der" hinzufügten. Es kann auch mit dem aktiven Verb begonnen werden.
 
 Anstatt: *„Du können Ihre Pumpe über das AAPS-Pumpenmenü mit dem Smartphone verbinden, und es stehen Dir eine Reihe von Pumpen zur Verfügung, mit denen Du sie verbinden kannst.“*
 
@@ -526,7 +527,7 @@ Eine Erklärung klärt, vertieft und erweitert das Verständnis des Lesenden fü
     
     *W ist besser als z, weil…*
     
-    Biete Einschätzungen oder sogar Meinungen an, wo sie sinnvoll erscheinen.
+    Offer judgements and even opinions where appropriate.
     
     *Ein x in System y ist analog zu einem w in System z. Allerdings…*
     
@@ -552,7 +553,7 @@ Der **Lektor (z. B. ein AAPS-Nutzender oder die Person, die die Pull-Request erh
 
 #### Allgemeine AAPS-Punkte
 
-- Bei Glukosewerten verwende immer sowohl mg/dl als auch mmol/l (wenn möglich auch bei Screenshots).
+- For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible).
 
 - Aus Konsistenzgründen verwende “AAPS” an Stelle von “Android APS”.
 

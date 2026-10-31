@@ -1,10 +1,10 @@
 (Sensitivity-detection-and-COB-sensitivity-detection)=
 
-# Gevoeligheids detectie (Autosens)
+# Gevoeligheidsdetectie (Autosens)
 
-## Sensitivity algorithm
+## Gevoeligheidsalgoritme
 
-Currently we have 3 sensitivity detection models:
+**AAPS** heeft op dit moment 3 modellen voor gevoeligheidsdetectie:
 
 * Gevoeligheid AAPS
 * Gemiddelde gevoeligheid
@@ -12,20 +12,23 @@ Currently we have 3 sensitivity detection models:
 
 ### Gevoeligheid AAPS
 
-Sensitivity is calculated the same way like Oref1 but you can specify time to the past. Minimal carbs absorption is calculated from max carbs absorption time from preferences
+De gevoeligheid wordt op dezelfde manier berekend als bij Oref1, maar je kunt instellen over welke periode terug wordt gekeken. De minimale koolhydraatopname wordt berekend uit de maximale opnametijd van koolhydraten die je in de instellingen hebt ingesteld.
 
 ### Gemiddelde gevoeligheid
 
-Sensitivity is calculated as a weighted average from deviations. You can specify time to the past. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
+De gevoeligheid wordt berekend als een gewogen gemiddelde van de afwijkingen. Je kunt instellen over welke periode terug wordt gekeken. Nieuwere afwijkingen tellen zwaarder mee. De minimale koolhydraatopname wordt berekend uit de maximale opnametijd van koolhydraten die je in de instellingen hebt ingesteld. Dit algoritme volgt veranderingen in gevoeligheid het snelst.
 
 (SensitivityDetectionAndCob-sensitivity-oref1)=
 
 ### Gevoeligheid Oref1
 
-Sensitivity is calculated from 8h data in the past or from last site change, if it is less than 8h ago. Carbs (if not absorbed) are cut after time specified in preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from sensitivity calculation. So if you are using SMB with UAM, you have to choose Oref1 algorithm to work properly. For more information read [OpenAPS Oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
+De gevoeligheid wordt berekend uit de gegevens van de laatste 8 uur, of vanaf de laatste canulewissel als die minder dan 8 uur geleden was. Koolhydraten die nog niet zijn opgenomen, worden afgekapt na de tijd die in de instellingen staat. Het Oref1 algoritme ondersteunt als enige UAM (onaangekondigde maaltijden, unannounced meals). Dit betekent dat periodes met gedetecteerde UAM niet worden meegeteld in de gevoeligheidsberekening. Als je SMB met UAM gebruikt, moet je dus het Oref1-algoritme kiezen om het goed te laten werken. Zie voor meer informatie over UAM het onderdeel [Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-Oref1 is the recommended option : it is the only one that can detect UAM and work with [OpenAps SMB](#Open-APS-features-super-micro-bolus-smb), the more recent algorithm.
+Oref1 is de aanbevolen keuze: het is het enige model dat UAM kan detecteren en kan werken met [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), het nieuwere algoritme.
 
 ## Gelijktijdige koolhydraten
 
-There is significant difference while using AAPS, WeightedAverage vs Oref1. Oref plugins expects only one meal decaying at time. It means 2nd meal starts decaying after 1st meal is completely decayed. AAPS+Weighted average starts decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to meal size and max absorption time. The minimum absorption accordingly will be higher in comparison to Oref plugins.
+Als meerdere maaltijden overlappen, is er een groot verschil tussen de algoritmes Gevoeligheid AAPS en Gemiddelde gevoeligheid (WeightedAverage) aan de ene kant, en Oref1 aan de andere kant.
+
+* Oref1 verwacht dat er maar één maaltijd tegelijk wordt opgenomen: de tweede maaltijd begint pas met opnemen als de eerste maaltijd volledig is opgenomen.
+* Gevoeligheid AAPS en Gemiddelde gevoeligheid (WeightedAverage) beginnen direct met opnemen als je de koolhydraten invoert. Als er meer dan één maaltijd actief is, past de minimale koolhydraatopname zich aan aan de grootte van de maaltijd en de maximale opnametijd. De minimale opname is daardoor hoger dan bij Oref1.

@@ -1,6 +1,6 @@
 # Cum să traducem fraze pentru aplicația AAPS sau documentație
 
-* Pentru frazele utilizate în aplicație mergeți la <https://crowdin.com/project/androidaps> și autentificați-vă folosind contul GitHub
+* For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
 * Pentru documentație vă rugăm să vizitați <https://crowdin.com/project/androidapsdocs> și să vă autentificați folosind contul GitHub
 
 * Trimiteți o cerere de aderare echipei ce se ocupă de documente. Pentru a face acest lucru, apăsați pe steagul limbii dorite și apoi pe butonul "Alăturare" din colțul din dreapta sus al paginii următoare. Vă rugăm să menționați limba, oferiți câteva informații despre dumneavoastră și experiența AAPS și dacă dorești să fii traducător sau corector (numai persoane competente în traducere + utilizatori avansați AAPS).
@@ -63,8 +63,8 @@ Aprobarea este un pas manual. Ca organizație non-profit, nu oferim SLA dar, în
     
         1. This is the translation you are preparing. You can copy the text from above or select one of the suggestions below.
     
-        1. These are the suggestion for a translation. Especially you can see how much Crowdin rates this as a fit or if it was already just in the past and come up through text rearrangements but not content change.
-        1. Press the "save" button to save a proposal for the translation. It will then promoted to a proofreader for final check.
+        1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
+        1. Press the "save" button to save a proposal for the translation. It will then be passed to a proofreader for final check.
     
     ![Translation docs](../images/translation_WikiTranslate.png)
     
@@ -101,4 +101,4 @@ It's the proofreaders job to have a special look on this!
     
     ![aprobă textul](../images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during hollidays. To speed up the process you can inform docs team about new translations.
+* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. To speed up the process you can inform docs team about new translations.

@@ -1,147 +1,147 @@
-# A dedicated Google account for AAPS (optional)
+# Een apart Google-account voor AAPS (optioneel)
 
-Some **AAPS** users prefer to use their main email account for **AAPS** as well. Alternatively, some **AAPS** users (or their caregivers) set-up a dedicated **AAPS** email account - this is optional, we give an example of how to do it below.
+Sommige **AAPS**-gebruikers gebruiken liever ook hun gewone e-mailaccount voor **AAPS**. Andere **AAPS**-gebruikers (of hun verzorgers) maken een apart e-mailaccount voor **AAPS**. Dit is optioneel; hieronder geven we een voorbeeld van hoe je dat doet.
 
-If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go straight to the next section, [building AAPS](../SettingUpAaps/BuildingAaps.md).
+Wil je geen apart Gmail-account voor **AAPS** maken? Ga dan direct naar het volgende deel, [AAPS bouwen](../SettingUpAaps/BuildingAaps.md).
 
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Dedicated Google drive space means you will not risk filling up your personal Google drive limit with **Export Preferences**.
-- Each version of **AAPS** (and supporting apps like xDrip+, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
-- By harmonizing the setup, it will make online support simpler across users with similar folder structure.
-- Depending on the setup (see below), you will have a separate identity as an alias to communicate within the community which can protect your privacy. 
-- Children with T1D can preserve their own “everyday” email account as minors while using **AAPS** and associated features which require an adult account.
-- Gmail allows you to register up to 4 accounts under the same phone number.
+- Met aparte Google Drive-ruimte loop je niet het risico dat je persoonlijke Google Drive-limiet volraakt door **Exporteer instellingen**.
+- Elke versie van **AAPS** (en ondersteunende apps zoals xDrip, BYODA, enz.) wordt op één plek opgeslagen, die los staat van je computer. Als je pc of telefoon gestolen, kwijt of kapot is, heb je er nog steeds toegang toe.
+- Als iedereen het op dezelfde manier inricht, met een vergelijkbare mappenstructuur, is online hulp geven eenvoudiger.
+- Afhankelijk van hoe je het inricht (zie hieronder), heb je een aparte identiteit als alias om in de community te communiceren. Dat kan je privacy beschermen. 
+- Kinderen met diabetes type 1 kunnen als minderjarige hun eigen “dagelijkse” e-mailaccount houden, terwijl ze **AAPS** gebruiken en functies die een account van een volwassene nodig hebben.
+- Bij Gmail kun je tot 4 accounts registreren met hetzelfde telefoonnummer.
 ```
 
-## How to set up a dedicated Google account for AAPS
+## Een apart Google-account voor AAPS instellen
 
-(⌛About 10 minutes)
+(⌛Ongeveer 10 minuten)
 
 ![](../images/Building-the-App/building_0001.png)
 
-Requirements:
+Benodigdheden:
 
-* You have a Windows’ PC (Windows 10 or newer) and a Android phone (Android 9 or newer) which will host the **AAPS** app. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
-* The Android phone is already set-up with your personal ”everyday” email address, such as a Gmail account.
+* Je hebt een Windows-pc (Windows 10 of nieuwer) en een Android-telefoon (Android 12 of nieuwer) waarop de **AAPS**-app komt. Op beide zijn de nieuwste beveiligingsupdates geïnstalleerd, en ze hebben internettoegang en beheerdersrechten, omdat je bij sommige stappen programma's moet downloaden en installeren.
+* De Android-telefoon is al ingesteld met je persoonlijke ”dagelijkse” e-mailadres, bijvoorbeeld een Gmail-account.
 
 ```{admonition} Things to consider when setting up your new account
 :class: dropdown
-- You could use a name different to your own, which has relevance to the account (like t1dsuperstar) for privacy reasons. You can then use it in **AAPS** public forums while keeping your own identity private. Since Google requires a recovery email and phone number, it is still traceable.
-- The new **AAPS** account will use the same phone number for verification as your “_everyday_” one. It will use the “everyday” email address for verification;
-- We will setup email forwarding such that any email sent to the new dedicated AAPS account will be forwarded to the primary one (so there is no need to check two different mailboxes);
-- Use separate passwords for your _everyday_ Gmail account and the AAPS-dedicated Gmail account
-- If you use google “2-step verification” (aka multifactor) authentication for one Gmail account, you might as well do it for both Gmail accounts.
-- If you plan to use Google “Passkeys”, make sure you register multiple devices. This is so you don’t lock yourself out. Only do it on devices that nobody else can access (_i.e._ not on a PC with a shared account that other people can unlock).
+- Om privacyredenen kun je een andere naam dan je eigen naam kiezen, die past bij het account (zoals t1dsuperstar). Die kun je dan gebruiken op openbare **AAPS**-forums, terwijl je eigen identiteit privé blijft. Omdat Google een herstel-e-mailadres en telefoonnummer vraagt, is het account nog steeds naar jou te herleiden.
+- Het nieuwe **AAPS**-account gebruikt hetzelfde telefoonnummer voor verificatie als je “_dagelijkse_” account. Het gebruikt het “dagelijkse” e-mailadres voor verificatie;
+- We stellen het doorsturen van e-mail zo in dat alle e-mail naar het nieuwe aparte AAPS-account wordt doorgestuurd naar het hoofdaccount (zo hoef je niet twee mailboxen te controleren);
+- Gebruik verschillende wachtwoorden voor je _dagelijkse_ Gmail-account en het aparte AAPS-Gmail-account
+- Als je Google “2-step verification” (verificatie in twee stappen, ook wel meervoudige verificatie) gebruikt voor één Gmail-account, kun je dat net zo goed voor beide Gmail-accounts doen.
+- Als je Google “Passkeys” wilt gebruiken, registreer dan meerdere apparaten. Zo sluit je jezelf niet buiten. Doe dit alleen op apparaten waar niemand anders toegang toe heeft (_dus_ niet op een pc met een gedeeld account dat andere mensen kunnen ontgrendelen).
 ```
 
 
-```{admonition}  Video Walkthrough! 
-:class: Note
-Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
+```{admonition} Video Walkthrough!
+:class: note
+Klik [hier](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) voor een video over hoe je een apart Google-account instelt.
 ```
 
- These are the steps outlined in the video:
+ Dit zijn de stappen uit de video:
 
-In this example: 
-- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
-- Your new “_AAPS_” Gmail account will be: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
+In dit voorbeeld: 
+- Je bestaande “_dagelijkse_” Google-account is <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
+- Je nieuwe “_AAPS_” Gmail-account wordt: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-### Go to <https://account.google.com> 
+### Ga naar <https://account.google.com> 
 
- If you are already logged into Google, this will direct you to your “Everyday” **My Account** page. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png) (2) select “_add another account_”.
+ Als je al bent ingelogd bij Google, kom je zo op de pagina **My Account** (Mijn account) van je “dagelijkse” account. (1) Klik rechtsboven op de pagina op je profielfoto (in dit geval een simpele ![](../images/Building-the-App/building_0002.png) (2) kies “_add another account_” (nog een account toevoegen).
 
 ![](../images/Building-the-App/building_0005.png)
 
 
-### Enter your NEW dedicated account details: 
+### Voer de gegevens van je NIEUWE aparte account in: 
 
-- Enter the new account: 
-- Create Account
-- for my personal use. 
+- Voer het nieuwe account in: 
+- Account maken
+- for my personal use (voor persoonlijk gebruik). 
 
 
-### Enter your persona:
- - Enter firstname
- - lastname
- - birthdate (needs to be an Adult age)
+### Vul je persoonlijke gegevens in:
+ - Vul je voornaam in
+ - achternaam
+ - geboortedatum (je moet volwassen zijn)
 
-### Choose your NEW email address & password
+### Kies je NIEUWE e-mailadres & wachtwoord
 
-This example appends “.AAPS” to Donald Muck’s existing one…\
-Set a password
+Dit voorbeeld voegt “.AAPS” toe aan het bestaande adres van Donald Muck…\
+Stel een wachtwoord in
 
-### Enter a phone number which can receive the SMS verification
+### Voer een telefoonnummer in dat de sms-verificatie kan ontvangen
 
-Gmail will now send you a unique code to enter for validation.
+Gmail stuurt je nu een unieke code die je moet invullen om te bevestigen.
 
-### Enter the recovery email address
+### Voer het herstel-e-mailadres in
 
-In this case it will be your existing “_everyday_” email…
+In dit geval is dat je bestaande “_dagelijkse_” e-mailadres…
 
-### Finish setting up the account
+### Het account verder instellen
 
-Gmail will display the account name. It will ask you to accept Gmail’s terms and conditions & confirm your personalization settings.
+Gmail toont de accountnaam. Je moet de voorwaarden van Gmail accepteren & je instellingen voor personalisatie bevestigen.
 
-### Customize the new profile display
+### De weergave van het nieuwe profiel aanpassen
 
-At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. The profile picture will be set by default to the first letter of your name. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png)
+Je zou nu op de pagina MyAccount van Gmail moeten zijn, met je nieuwe aparte **AAPS**-e-mailaccount. De profielfoto is standaard de eerste letter van je naam. Verander het in iets unieks om verwarring te voorkomen… in dit voorbeeld heeft Donald.Muck.AAPS ![](../images/Building-the-App/building_0002.png) vervangen door ![](../images/Building-the-App/building_0003.png)
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
 
-### Open the Gmail website on both windows to configure the new account
+### Open de Gmail-website in beide vensters om het nieuwe account in te stellen
 
-So that you don’t need to monitor a separate email account, forward all the emails from the new **AAPS**-dedicated account to your everyday account\
-This part can be a bit confusing, since you will have to switch back and forth between both accounts. To make it easier, open 2 separate browser windows on top of each other:
+Stuur alle e-mails van het nieuwe aparte **AAPS**-account door naar je dagelijkse account, zodat je geen extra e-mailaccount hoeft te controleren\
+Dit deel kan wat verwarrend zijn, omdat je steeds tussen beide accounts moet wisselen. Open voor het gemak 2 aparte browservensters boven elkaar:
 
-1. Move your existing browser to the top of your screen and resize it such that it only takes about half of the top of the screen…
-2. Right click on your Browser logo in your taskbar
-3. From the menu select “New Window”... and adjust it so it only takes the bottom half of the screen.
+1. Zet je bestaande browservenster bovenaan je scherm en maak het zo klein dat het ongeveer alleen de bovenste helft van het scherm vult…
+2. Klik met de rechtermuisknop op het logo van je browser in de taakbalk
+3. Kies in het menu “New Window” (Nieuw venster)… en zet het zo neer dat het alleen de onderste helft van het scherm vult.
 
-Open <https://gmail.com> in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. (if needed you can always switch accounts by clicking on the profile picture and selecting the correct one.
+Open <https://gmail.com> in elk browservenster. Zorg dat je persoonlijke account bovenaan staat en het nieuwe aparte **AAPS**-account onderaan. Dat account herken je makkelijk aan de profielfoto rechtsboven. (zo nodig kun je altijd van account wisselen door op de profielfoto te klikken en het juiste account te kiezen.
 
 ![](../images/Building-the-App/building_0009.png)
 
-Your Gmail homepages screen should look like this:\
+De startpagina's van Gmail zien er dan zo uit:\
 ![](../images/Building-the-App/building_0010.png)
 
- ### In the new Gmail account (bottom window), open Gmail settings…
+ ### Open in het nieuwe Gmail-account (onderste venster) de instellingen van Gmail…
 
-- Click on the gear on the left of the profile picture
-- then select “**See all Settings**”
+- Klik op het tandwiel links van de profielfoto
+- kies daarna “**See all Settings**” (Alle instellingen bekijken)
 
 ![](../images/Building-the-App/building_0011.png)
 
-### Setup forwarding…
+### Doorsturen instellen…
 
-- Click on the “Forwarding and POP/IMAP” Setting tab
-- Click on “add a forwarding address”
-- Add your “everyday” email address
-- Gmail will send a verification code to your “everyday” email address.
-- You will switch back to your everyday profile and click on the link to verify that you accept the forwarding (or get the code from Gmail’s verification email in your “everyday” Gmail window and cut and paste it in your “new AAPS dedicated” Gmail window).
+- Klik in de instellingen op het tabblad “Doorsturen en POP/IMAP”
+- Klik op “Een doorstuuradres toevoegen”
+- Voeg je “gewone” e-mailadres toe
+- Gmail stuurt een verificatiecode naar je “dagelijkse” e-mailadres.
+- Je gaat terug naar je gewone profiel en klikt op de link om te bevestigen dat je het doorsturen accepteert (of je haalt de code uit de bevestigingsmail van Gmail in je “gewone” Gmail-venster en plakt die in je “nieuwe aparte AAPS” Gmail-venster).
 
-There is quite a bit of back and forth between the windows but this will ensure that when you check your “everyday” account emails you will also see the emails forwarded from your AAPS dedicated account such as Gmail alerts.
+Je moet een paar keer heen en weer tussen de vensters, maar zo zie je, als je de e-mail van je “gewone” account bekijkt, ook de e-mails die je aparte AAPS-account doorstuurt, zoals Gmail-meldingen.
 
 ![](../images/Building-the-App/building_0012.png)
 
-### Verify the forwarded email address
+### Het doorgestuurde e-mailadres bevestigen
 
-- In the “Everyday” gmail (top window), you will get the “Gmail forwarding Confirmation” email.
-- Open it and “click the link to confirm the request”
+- In de “dagelijkse” Gmail (bovenste venster) krijg je de e-mail “Gmail forwarding Confirmation” (bevestiging voor doorsturen).
+- Open de e-mail en “klik op de link om het verzoek te bevestigen”
 
-### Archive forwarded emails in the new dedicated Gmail account (bottom window)
+### Doorgestuurde e-mails archiveren in het nieuwe aparte Gmail-account (onderste venster)
 
 <!---->
 
-1. Refresh the bottom window
-2. Check “forward incoming email”
-3. And archive Gmail’s copy (to keep your new dedicated mailbox clean)
-4. Scroll all the way to the bottom to save your changes\
+1. Vernieuw het onderste venster
+2. Vink “inkomende e-mail doorsturen” aan
+3. En archiveer de kopie van Gmail (zo blijft je nieuwe aparte mailbox opgeruimd)
+4. Scrol helemaal naar beneden om je wijzigingen op te slaan\
    ![](../images/Building-the-App/building_0013.png)
 
 ![](../images/Building-the-App/building_0014.png)
 
-Congratulations! Now you have created an AAPS-dedicated Google account. The next step is to [build the AAPS app](../SettingUpAaps/BuildingAaps.md).
+Gefeliciteerd! Nu heb je een apart Google-account voor AAPS gemaakt. De volgende stap is [de AAPS-app bouwen](../SettingUpAaps/BuildingAaps.md).

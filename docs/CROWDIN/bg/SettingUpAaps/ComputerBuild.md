@@ -1,88 +1,89 @@
 <!-- Android Studio Build, FKA Computer Build. Preserve filenames to avoid breaking URLs. -->
 
-# Android Studio Build
+# Компилиране с Android Studio
 
-This is the traditional method to build your AAPS app.
+Това е традиционният начин за компилиране на приложението AAPS.
 
-You can build the app without a computer using the [Browser Build](./BrowserBuild.md) method.
+Можете да компилирате приложението без компютър чрез метода [Компилиране в браузъра](./BrowserBuild.md).
 
-## Build yourself instead of download
+## Компилирайте сами, вместо да изтегляте
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**Приложението AAPS (файл apk) не може да бъде изтеглено готово заради правилата за медицинските изделия. Законно е да компилирате приложението за собствена употреба, но НЕ БИВА да давате копие на други хора!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Вижте [страницата с често задавани въпроси](../UsefulLinks/FAQ.md) за подробности.
 
 ---
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
-## Computer and software specifications for building AAPS
+## Изисквания към компютъра и софтуера за компилиране на AAPS
 
-* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk. See table below :
+* За компилиране на apk файла може да е нужна определена версия на **[Android Studio](https://developer.android.com/studio/)**. Вижте таблицата по-долу:
 
-| AAPS Version            | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| 2.6.2                   | 3.6.1                                                |                                                        | 5.6.4  | 11  |
-| 2.8.2.1                 | 4.1.1                                                |                                                        | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                             | up to Quail 1                                          | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                  | up to Quail 1                                          | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                      | up to Quail 1                                          | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                   | up to Quail 1                                          | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                   | up to Quail 1                                          | 8.13   | 21  |
-| [3.4.2.2](#version3422) | Panda 2 (2025.32)                                    | up to Quail 1                                          | 9      | 21  |
+| Версия на AAPS              | Препоръчителна<br/>версия на<br/>Android Studio | Алтернативна<br/>версия на<br/>Android Studio | Gradle | JVM |
+| --------------------------- | ----------------------------------------------------------- | --------------------------------------------------------- | ------ |:--- |
+| 2.6.2                       | 3.6.1                                                       |                                                           | 5.6.4  | 11  |
+| 2.8.2.1                     | 4.1.1                                                       |                                                           | 6.1.1  | 13  |
+| [3.1.0.3](#version3100)     | 2020.3.1                                                    | изпробвано до Quail 4                                     | 7.3.3  | 17  |
+| [3.2.0.4](#version3204)     | Hedgehog (2023.1.1)                                         | изпробвано до Quail 4                                     | 8.2    | 17  |
+| [3.3.1.3](#version3300)     | Ladybug Feature Drop (2024.2.2)                             | изпробвано до Quail 4                                     | 8.10   | 21  |
+| [3.3.2](#version3300)       | Meerkat (2024.3.1)                                          | изпробвано до Quail 4                                     | 8.11.1 | 21  |
+| [3.3.2.1](#version3321)     | Narwhal (2025.1.2)                                          | изпробвано до Quail 4                                     | 8.13   | 21  |
+| [3.4.2.6](#version3426)     | Panda 2 (2025.3.2)                                          | изпробвано до Quail 4                                     | 9      | 21  |
+| [4.0.0-beta1](#version4000) | Rabbit 1                                                    | до последната Rabbit 1                                    | 9.8    | 21  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+„Препоръчителната версия“ идва с подходящата версия на JVM. Препоръчителната версия е и най-ниската версия, с която можете да компилирате **AAPS**. **НЯМА** да можете да компилирате с версия, по-стара от „препоръчителната“. Ако използвате друга версия, може да срещнете проблеми, свързани с версията на JVM. Вижте страницата [Отстраняване на неизправности в Android Studio](#troubleshooting_androidstudio-uncommitted-changes) за помощ при решаването на тези проблеми. Ако текущата ви версия на Android Studio не е в таблицата, първо трябва да я актуализирате.
 
-The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
+Версията на Gradle е свързана с изходния код. Винаги ще получите правилната версия на Gradle, когато изтегляте или актуализирате изходния код. Тя е посочена тук само за справка, не е нужно да правите нищо с нея.
 
-* [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
+* [32-битови системи Windows](#troubleshooting_androidstudio-unable-to-start-daemon-process) не се поддържат от Android Studio. Моля, имайте предвид, че **64-битов процесор и 64-битова операционна система са задължително условие.** Ако вашата система НЕ отговаря на това условие, трябва да смените съответния хардуер или софтуер, или цялата система.
 
 <table class="tg">
 <tbody>
   <tr>
-    <th class="tg-baqh">OS (Only 64 bit)</th>
-    <td class="tg-baqh">Windows 8 or higher</td>
-    <td class="tg-baqh">Mac OS 10.14 or higher</td>
-    <td class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</td>
+    <th class="tg-baqh">ОС (само 64-битова)</th>
+    <td class="tg-baqh">Windows 8 или по-нова</td>
+    <td class="tg-baqh">Mac OS 10.14 или по-нова</td>
+    <td class="tg-baqh">Всеки Linux с поддръжка на Gnome, KDE или Unity DE;&nbsp;&nbsp;GNU C Library 2.31 или по-нова</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
+    <th class="tg-baqh"><p align="center">Процесор (само 64-битов)</th>
+    <td class="tg-baqh">Архитектура на процесора x86_64; Intel Core 2-ро поколение или по-нов, или процесор AMD с поддръжка на <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">Чипове с ARM или Intel Core 2-ро поколение или по-нов с поддръжка на <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">Архитектура на процесора x86_64; Intel Core 2-ро поколение или по-нов, или процесор AMD с поддръжка на AMD Virtualization (AMD-V) и SSSE3</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">16GB or more</td>
+    <th class="tg-baqh"><p align="center">Оперативна памет (RAM)</th>
+    <td class="tg-baqh" colspan="3"><p align="center">16 GB или повече</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+    <th class="tg-baqh"><p align="center">Диск</th>
+    <td class="tg-baqh" colspan="3"><p align="center">Поне 30 GB свободно място. Препоръчва се SSD.</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Resolution</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+    <th class="tg-baqh"><p align="center">Резолюция</th>
+    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 минимум<br></td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Internet</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <th class="tg-baqh"><p align="center">Интернет</th>
+    <td class="tg-baqh" colspan="3"><p align="center">Широколентов</td>
   </tr>
 </tbody>
 </table>
 
-**It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
+**Силно се препоръчва (не е задължително) да използвате SSD (Solid State Disk) вместо HDD (Hard Disk Drive), защото компилирането на apk файла на AAPS ще отнеме по-малко време.**  Все пак можете да използвате HDD, когато компилирате apk файла на **AAPS**. Ако го направите, компилирането може да отнеме много време, но след като започне, можете да го оставите да работи без надзор.
 
-## Help and support during the building process
+## Помощ и поддръжка по време на компилирането
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md) section, please consult that first.
+Ако срещнете трудности при компилирането на приложението **AAPS**, има специален раздел [**Отстраняване на неизправности в Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md) – моля, първо прочетете него.
 
-If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
+Ако смятате, че нещо в инструкциите за компилиране е грешно, липсва или е неясно, или все още имате трудности, моля, обърнете се към групата на потребителите на **AAPS** във [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) или в [Discord](https://discord.gg/4fQUWHZ4Mw). Ако искате сами да промените нещо (да обновите снимки на екрана _и т.н._), моля, изпратете [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
-## Step-by-step guide to building the AAPS app
+## Ръководство стъпка по стъпка за компилиране на приложението AAPS
 
 ```{admonition} WARNING
 :class: warning
-If you have built AAPS before, you don't need to take all the following steps again.
-Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)!
+Ако вече сте компилирали AAPS, не е нужно да изпълнявате отново всички следващи стъпки.
+Преминете направо към [ръководството за актуализиране](../Maintenance/UpdateToNewVersion.md)!
 ```
 
 ```{contents} The overall steps for building the **AAPS** apk file
@@ -90,343 +91,347 @@ Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)
 :local: true
 ```
 
-In this guide you will find _example_ screenshots of building of **AAPS** apk file. Because  **Android Studio** - the software which we use to build the **AAPS** apk - is regularly updated, these screenshots may not be identical to your installation, but they should still be possible to follow.
+В това ръководство ще намерите _примерни_ екранни снимки от компилирането на apk файла на **AAPS**. Тъй като **Android Studio** – програмата, с която компилираме apk файла на **AAPS** – редовно се актуализира, тези екранни снимки може да не са еднакви с вашата инсталация, но все пак би трябвало да можете да ги следвате.
 
-Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might be also be minor differences in the steps for the different  platforms.
+Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
 
 (install-git-if-you-dont-have-it)=
-### Install Git
+### Инсталиране на Git
 
 ```{admonition} Why Git? 
 :class: dropdown
 
-Git is known as a “_Versioning Control System_” (VCS).\
-Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Then, you will use Git on your computer to build the **AAPS** application (apk). 
+Git е известен като „_система за контрол на версиите_“ (Versioning Control System, VCS).\
+Git е програма, която ви позволява да проследявате промените в кода и да работите съвместно с други хора. Ще използвате Git, за да направите копие на изходния код на **AAPS** от уебсайта GitHub на своя компютър. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
-#### Steps for Installing Git
+#### Стъпки за инсталиране на Git
 
-1.  Check that you don’t already have **Git** installed. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#install-android-studio):
+1.  Проверете дали вече нямате инсталиран **Git**. Можете да направите това, като напишете „git“ в лентата за търсене на Windows – ако видите **„Git bash“** или друга форма на Git, той вече е инсталиран и можете да преминете направо към [инсталирането на Android Studio](#install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section on [**here**](https://git-scm.com/downloads). Any recent Git version should work, select the correct version according to your system, either Mac, Windows and Linux.
+2. Ако нямате инсталиран Git, изтеглете и инсталирайте най-новата версия за своята система от раздела „Download“ [**тук**](https://git-scm.com/downloads). Всяка нова версия на Git би трябвало да работи. Изберете правилната версия според системата си: Mac, Windows или Linux.
 
-**Note for Mac users:** the Git webpage will also guide you to install an additional program called "homebrew" to aid the installation. If you install Git via homebrew, there is no need to change any preferences.
+**Бележка за потребителите на Mac:** уеб страницата на Git ще ви насочи и към инсталиране на допълнителна програма, наречена „homebrew“, която помага при инсталирането. Ако инсталирате Git чрез homebrew, не е нужно да променяте никакви настройки.
 
 (Make_a_note_of_Git_path)=
 
-* During the installation, when you are asked to "select destination location" make a note of _where_ Git is being installed (the "**installation path**") you will need to check it in the next step. It will be something similar to "C:\Program Files\Git\cmd\git.exe"
+* По време на инсталирането, когато бъдете попитани „select destination location“ (изберете място за инсталиране), запишете си _къде_ се инсталира Git („**пътя за инсталиране**“) – ще трябва да го проверите в следващата стъпка. Той ще бъде нещо подобно на „C:\Program Files\Git\cmd\git.exe“
 
-*  As you proceed through several steps of the Git installation, just accept all the default options.
+*  Докато преминавате през стъпките на инсталирането на Git, просто приемайте всички опции по подразбиране.
 
-*  After the install, if you forgot to make a note of the where Git was installed, you can find it as follows: type "git" into the PC search bar, right click on "Git bash", select "open file location" hover over the "Git bash" icon with your mouse, which will then reveal where it is installed.
+*  Ако след инсталирането сте забравили да запишете къде е инсталиран Git, можете да го намерите така: въведете „git“ в лентата за търсене на компютъра, щракнете с десния бутон върху „Git bash“, изберете „open file location“ (отваряне на местоположението на файла) и задръжте мишката над иконата „Git bash“ – така ще видите къде е инсталиран.
 
-* Reboot your computer before the next step.
+* Рестартирайте компютъра преди следващата стъпка.
 
 (Building-APK-install-android-studio)=
-### Install Android Studio
+### Инсталиране на Android Studio
 
-- **You have to be online all of the time during the following steps, as Android Studio downloads several updates**
+- **По време на следващите стъпки трябва през цялото време да имате връзка с интернет, защото Android Studio изтегля няколко актуализации**
 
 ```{admonition} What is Android Studio?
 :class: dropdown
-Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes. 
+Android Studio е програма, която работи на компютъра ви. Тя ви позволява да изтегляте изходен код от интернет (с помощта на Git) и да компилирате приложения за смартфон (и за смарт часовник). Не можете да „счупите“ текущата версия на **AAPS** със затворен кръг, която може би работи на смартфона ви, като компилирате ново или актуализирано приложение на компютъра си с Android Studio – това са напълно отделни процеси. 
 ```
 
-One of the most important things when installing Android Studio is **be patient!** During installation and setup, Android Studio is downloading a lot of stuff which will take time.
+Едно от най-важните неща при инсталирането на Android Studio е: **бъдете търпеливи!** По време на инсталирането и настройката Android Studio изтегля много неща, което отнема време.
 
 ```{admonition} Different UI
 :class: warning
-Import note: Android Studio changed its UI during the last releases. This guide will show you the steps with the *new UI* in "Ladybug". If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
+Important note: Android Studio changed its UI during the last releases. Това ръководство показва стъпките с *новия интерфейс* (new UI). Екранните снимки са направени с „Ladybug“, така че по-новите версии може да изглеждат малко по-различно. Ако все още използвате стария интерфейс, може първо да превключите Android Studio към новия интерфейс, като следвате [тези инструкции](#computerbuild-NewUI).
 ```
 
-The Android studio version is very important. See the [instructions above](#Building-APK-recommended-specification-of-computer-for-building-apk-file) to pick the proper version of Android Studio.
+Версията на Android Studio е много важна. Вижте [инструкциите по-горе](#Building-APK-recommended-specification-of-computer-for-building-apk-file), за да изберете правилната версия на Android Studio.
 
-Download the [current version of Android Studio](https://developer.android.com/studio) or an older version from the [**Archives**](https://developer.android.com/studio/archive) and accept the download agreements.
+Изтеглете [текущата версия на Android Studio](https://developer.android.com/studio) или по-стара версия от [**Archives**](https://developer.android.com/studio/archive) (архива) и приемете условията за изтегляне.
 
 ![DownloadAndroidStudio](../images/Building-the-App/010_DownloadLadybug.png)
 
-Once the download is finished, start the downloaded application to install it on your computer. You might need to accept/confirm some warnings about downloaded apps from Windows!
+Когато изтеглянето приключи, стартирайте изтегленото приложение, за да го инсталирате на компютъра. Може да се наложи да приемете/потвърдите някои предупреждения на Windows за изтеглени приложения!
 
-Install Android Studio by clicking "Next", as shown in the following screenshots. You do **not** need to change any settings!
+Инсталирайте Android Studio, като щраквате върху „Next“, както е показано на следващите екранни снимки. **Не** е нужно да променяте никакви настройки!
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-If you want to save hard disk space, your you can uncheck Android Virtual Device: it is not used for building **AAPS**.
+If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
 ![Configuration_Settings](../images/Building-the-App/013_InstallLadybug.png)
 
-Now click on "Install":
+Сега щракнете върху „Install“:
 
 ![Choose_start_Menu_Folder](../images/Building-the-App/014_InstallLadybug.png)
 
-Once it's completed, press "Next"
+Когато приключи, натиснете „Next“
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-In the last step, click on "Finished" to start Android Studio for the first time.
+В последната стъпка щракнете върху „Finished“, за да стартирате Android Studio за първи път.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
-You will be asked if you want to help improve Android Studio. Choose the option to your liking, it won't make any difference for the following steps.
+Ще бъдете попитани дали искате да помогнете за подобряването на Android Studio. Изберете опцията, която предпочитате. Това няма да промени нищо в следващите стъпки.
 
 ![Help_improve_Android_Studio](../images/Building-the-App/020_ImproveAS.png)
 
-The welcome screen greets you to the installation of Android Studio. Press "Next".
+Началният екран ви приветства в инсталирането на Android Studio. Натиснете „Next“.
 
 ![Welcome](../images/Building-the-App/022_WelcomeAndroidStudioInstallation.png)
 
-Select "Standard" as installation type.
+Изберете „Standard“ като тип инсталация.
 
 ![Install_Type](../images/Building-the-App/023_DefaultInstallation.png)
 
-Verify the settings by clicking "Next" again.
+Проверете настройките, като отново щракнете върху „Next“.
 
 ![Verify_Settings](../images/Building-the-App/024_DefaultInstallation.png)
 
-Now you need to accept the license agreements. You have two sections (1 + 3) on the left side which you have to select one after the other and each select "Accept" (2 + 4) on the right side.
+Сега трябва да приемете лицензионните споразумения. Вляво има два раздела (1 + 3), които трябва да изберете един след друг, и за всеки да изберете „Accept“ (2 + 4) вдясно.
 
-Then the "Finish" (5) button can be clicked.
+След това можете да щракнете върху бутона „Finish“ (5).
 
 ![License_Agreement](../images/Building-the-App/025_LicenseAgreement.png)
 
-Some Android packages will now be downloaded and installed. Be patient and wait.
+Сега ще бъдат изтеглени и инсталирани някои пакети за Android. Бъдете търпеливи и изчакайте.
 
-When it's finished, you will find the following screen where you can select "Finish" again.
+Когато приключи, ще видите следния екран, в който отново можете да изберете „Finish“.
 
 ![Downloading_Components](../images/Building-the-App/026_DownloadFinished.png)
 
-You will now see the Welcome screen of Android Studio.
+Сега ще видите началния екран (Welcome) на Android Studio.
 
 ![Welcome_to_Android_Studio](../images/Building-the-App/031_WelcomeAndroidStudio.png)
 
 
 (Building-APK-download-AAPS-code)=
-### Download the AAPS code
+### Изтегляне на кода на AAPS
 
 ```{admonition} Why can it take a long time to download the AAPS code?
 :class: dropdown
 
-The first time **AAPS** is downloaded, Android Studio will connect over the internet to the Github website to download the source code for **AAPS**. This should take about 1 minute. 
+Първия път, когато **AAPS** се изтегля, Android Studio ще се свърже през интернет с уебсайта GitHub, за да изтегли изходния код на **AAPS**. Това би трябвало да отнеме около 1 минута. 
 
-Android Studio will then use **Gradle** (a development tool for Android apps) to identify other components needed to build these items on your computer. 
+След това Android Studio ще използва **Gradle** (инструмент за разработка на приложения за Android), за да определи другите компоненти, които са нужни за компилирането на компютъра ви. 
 ```
 
-On the Android Studio Welcome screen, check that "**Projects**" (1) is highlighted on the left.
+На началния екран на Android Studio (Welcome) проверете дали вляво е маркирано „**Projects**“ (1).
 
-Then click "**Clone Repository**" (2) on the right:
+След това натиснете „**Clone Repository**“ (2) вдясно:
 
 ![Get_from_VCS](../images/Building-the-App/032_GetVCS.png)
 
-We will now tell Android Studio where to get the code from:
+Сега ще кажем на Android Studio откъде да вземе кода:
 
 ![Get from Version Control](../images/Building-the-App/033_CloneGit.png)
 
-* "Repository URL" should be selected (by default) on the left (1).
-* "Git" should be selected (by default) as version control (2).
-* Now copy this URL:
+* „Repository URL“ трябва да е избрано (по подразбиране) вляво (1).
+* „Git“ трябва да е избран (по подразбиране) като система за контрол на версиите (2).
+* Сега копирайте този URL адрес:
     ```
     https://github.com/nightscout/AndroidAPS.git
     ```
-    and paste it into the URL textbox (3).
+    и го поставете в текстовото поле URL (3).
 
-* Check the (default) directory for saving the cloned code does not already exist on your computer (4). You can change it to some directory, but please remember where you stored it!
-* Now click the button "Clone" (5).
+* Проверете дали папката (по подразбиране) за записване на клонирания код все още не съществува на компютъра ви (4). Можете да го промените на друга папка, но запомнете къде сте го запазили!
+* Сега щракнете върху бутона „Clone“ (5).
 
 ```{admonition} INFORMATION
-:class: information
-Make a note of the directory. It is where your sourcecode is stored!
+:class: note
+Запишете си папката. Там се съхранява изходният ви код!
 ```
 
-You will now see a screen telling you that the repository is being cloned:
+Сега ще видите екран, който показва, че хранилището се клонира:
 
 ![cloning_repository](../images/Building-the-App/034_CloningProgress.png)
 
-At some point, Android Studio will close and start again. You may be asked whether you want to trust the project. Click on "Trust project":
+В някакъв момент Android Studio ще се затвори и ще стартира отново. Може да бъдете попитани дали искате да се доверите на проекта. Щракнете върху „Trust project“:
 
   ![Trust project](../images/Building-the-App/035_TrustProject.png)
 
 
-Only for Windows users: If your firewall asks for permission, grant access:
+Само за потребители на Windows: ако защитната стена поиска разрешение, разрешете достъпа:
 
- ![Firewall permission java](../images/AndroidStudio361_18.png)
+ ![Разрешение на защитната стена за Java](../images/AndroidStudio361_18.png)
 
-After the repository is cloned successfully, Android Studio will open the cloned project.
+След като хранилището бъде клонирано успешно, Android Studio ще отвори клонирания проект.
 
 (computerbuild-NewUI)=
 ```{admonition} New UI
-:class: information
-Android Studio changed its UI recently. New installations of Android Studio use the new UI by default!
+:class: note
+Android Studio промени интерфейса си наскоро. Новите инсталации на Android Studio използват новия интерфейс по подразбиране!
 
-Only if your Android Studio looks different, you might need to switch to the new UI:
-Click on the hamburger menu on the top left, then select **Settings** (or **Preferences** on Apple computers).
-In **Appearance & Behaviour**, go to **New UI** and tick **Enable new UI**. Then restart Android Studio to start using it.
+Само ако вашето Android Studio изглежда различно, може да трябва да превключите към новия интерфейс:
+Натиснете менюто (hamburger menu) горе вляво и изберете **Settings** (или **Preferences** на компютри на Apple).
+В **Appearance & Behavior** отидете на **New UI** и поставете отметка на **Enable new UI**. След това рестартирайте Android Studio, за да започнете да го използвате.
 
-If you don't find the option **New UI** don't worry: you are already using it!
+Ако не намирате опцията **New UI**, не се притеснявайте: вече използвате новия интерфейс!
 ```
 
 
-When Android Studio opened, wait patiently (this may take a few minutes), and particularly, **do not** update the project as suggested in the pop-up.
+Когато Android Studio се отвори, изчакайте търпеливо (това може да отнеме няколко минути) и особено **не** актуализирайте проекта, както се предлага в изскачащия прозорец.
 
-Android Studio will start a "Gradle project sync" automatically, which will take a couple of minutes to finish. You can see it (still) running:
+Android Studio автоматично ще стартира „Gradle project sync“, което ще отнеме няколко минути. Можете да видите, че (все още) работи:
 
 ![AS_download_dependencies](../images/Building-the-App/036_GradleSyncing.png)
 
 ```{admonition} NEVER UPDATE GRADLE!
 :class: warning
 
-Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties.
+Android Studio може да препоръча актуализиране на системата gradle. **Никога не актуализирайте gradle!** Това ще доведе до проблеми.
 ```
 
-Only on windows computers: You might get a notification about windows defender running: Click on **Automatically** and confirm, it will make the build run faster!
+Само на компютри с Windows: Може да получите известие, че работи Windows Defender: Натиснете **Automatically** и потвърдете – това ще направи компилирането по-бързо!
 
 ![Windows Defender](../images/Building-the-App/037_WindowsDefender.png)
 
 
-You can leave the gradle sync running and follow the next steps already.
+Можете да оставите синхронизацията на Gradle да работи и вече да следвате следващите стъпки.
 
 (Building-APK-set-git-path-in-preferences)=
-### Set Git path in Android Studio preferences
+### Задаване на пътя до Git в настройките на Android Studio
 
-Now we will tell Android studio where to find Git, which you installed [earlier](#install-git-if-you-dont-have-it).
+Сега ще кажем на Android Studio къде да намери Git, който инсталирахте [по-рано](#install-git-if-you-dont-have-it).
 
-* Windows users only: Make sure you have restarted your computer after [installing Git](#install-git-if-you-dont-have-it). If not, restart now and re-open Android Studio
+* Само за потребители на Windows: Уверете се, че сте рестартирали компютъра си след [инсталирането на Git](#install-git-if-you-dont-have-it). Ако не, рестартирайте сега и отворете отново Android Studio
 
-In the top left corner of **Android Studio**, open the hamburger menu and navigate to **File** > **Settings** (on Windows) or **Android Studio** > **Preferences** (on Mac). This opens the following window, click to expand the dropdown called **Version Control** (1) and select **Git**
+В горния ляв ъгъл на **Android Studio** отворете менюто (hamburger menu) и отидете на **File** > **Settings** (на Windows) или **Android Studio** > **Preferences** (на Mac). Това отваря следния прозорец: натиснете, за да разгънете падащия списък **Version Control** (1), и изберете **Git** (2)
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-Check if **Android Studio** can automatically locate the correct **Path to Git executable** automatically by clicking the button "Test" (1):
+Проверете дали **Android Studio** може автоматично да намери правилния **Path to Git executable** (път до изпълнимия файл на Git), като натиснете бутона „Test“ (1):
 
-![Git Executable](../images/Building-the-App/039_GitTest.png)
+![Изпълним файл на Git](../images/Building-the-App/039_GitTest.png)
 
 
-If the automatic setting is successful, your current version of **Git** will be displayed next to the path.
+Ако автоматичната настройка е успешна, текущата ви версия на **Git** ще се покаже до пътя.
 
    ![Git_version_displayed](../images/Building-the-App/039_GitTestSuccess.png)
 
 
-If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error (1), you can either
-* manually enter the path which you saved [earlier](#BuildingAaps-steps-for-installing-git), or
-* click on the folder icon (1) and manually navigating to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
-* Verify your settings with the **Test** button!
+Ако установите, че **git.exe** не се намира автоматично или че натискането на „Test“ води до грешка, можете:
+* да въведете ръчно пътя, който записахте [по-рано](#BuildingAaps-steps-for-installing-git), или
+* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
+* Проверете настройките си с бутона **Test**!
 
-  ![Git not found](../images/Building-the-App/039_GitTestError.png)
+  ![Git не е намерен](../images/Building-the-App/039_GitTestError.png)
 
 (Building-APK-generate-signed-apk)=
-### Build the AAPS "signed" APK
+### Компилиране на „подписания“ (signed) APK на AAPS
 
 ```{admonition} Why does the AAPS app need to be "signed"?
 :class: dropdown
 
-Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
+Android изисква всяко приложение да бъде _подписано_, за да се гарантира, че по-късно то може да бъде актуализирано само от същия доверен източник, който е издал оригиналното приложение. За повече информация по тази тема следвайте [тази връзка](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
 
-For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
+За нашите цели това просто означава, че създаваме файл за подписване, т.нар. „хранилище за ключове“ (keystore), и го използваме, когато компилираме приложението **AAPS**.
 ```
 
 
-**Important: Make sure the gradle sync is finished successfully before proceeding!**
+**Важно: Преди да продължите, се уверете, че синхронизирането на gradle (gradle sync) е завършило успешно!**
 
 
-Click the hamburger menu on the top left to open the menu bar. Select **Build** (1), then select **Generate Signed App Bundle / APK** (2)
+Щракнете върху менюто (hamburger menu) горе вляво, за да отворите лентата с менюта. Изберете **Build** (1), след това изберете **Generate Signed App Bundle / APK** (2)
 
-![Build apk](../images/Building-the-App/040_GenerateSignedAPK.png)
+![Компилиране на apk](../images/Building-the-App/040_GenerateSignedAPK.png)
 
-Select "APK" instead of "Android App Bundle" and click "Next":
+Изберете „APK“ (1) вместо „Android App Bundle“ и натиснете „Next“ (2):
 
-![APK instead of bundle](../images/Building-the-App/041_APK.png)
+![APK вместо bundle](../images/Building-the-App/041_APK.png)
 
-In the next screen, make sure that "Module" is set to "AAPS.app" (1).
+На следващия екран се уверете, че „Module“ е зададено на „AndroidAPS.app“ (1). Частта преди „.app“ е името на папката, в която клонирахте кода.
 
 (Building-APK-wearapk)=
 ```{admonition} INFORMATION!
-:class: information
-If you want to create the apk for your watch, you now need to select AAPS.wear!
+:class: note
+Ако искате да създадете apk файла за часовника си, сега трябва да изберете AndroidAPS.wear!
 ```
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
-Click "Create new..." (2) to start creating your key store.
+Щракнете върху „Create new...“ (2), за да започнете да създавате хранилището за ключове.
 
 ```{admonition} INFORMATION!
-:class: information
-You will only need to create the keystore once.
-If you have build AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
+:class: note
+Ще трябва да създадете хранилището за ключове (keystore) само веднъж.
+If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
 ```
 
-**_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.
+**_Бележка:_** Хранилището за ключове (keystore) е файл, в който се съхранява информацията за подписване на приложението. То е шифровано и информацията е защитена с пароли.
 
-![Create key store](../images/Building-the-App/043_Keystore.png)
+![Създаване на хранилище за ключове](../images/Building-the-App/043_Keystore.png)
 
-* Click the "folder" symbol (1) to select a path on your computer for your key store.
+* Щракнете върху символа на „папка“ (1), за да изберете място на компютъра за хранилището за ключове.
 
-  Do **not** use the directory where you stored your sourcecode but some directory that you would also transfer to a new computer.
+  **Не** използвайте папката, в която сте записали изходния си код, а някоя папка, която бихте прехвърлили и на нов компютър.
 
 ```{admonition} WARNING!
 :class: warning
-Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AndroidAPS update!
+Запишете си къде се съхранява вашето хранилище за ключове (keystore). Ще ви трябва, когато компилирате следващата актуализация на AndroidAPS!
 ```
 
-* Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).
+* Сега изберете проста парола (и я запишете), въведете я в полето за парола (2) и я потвърдете (2).
 
-  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [troubleshooting for lost key store](#troubleshooting_androidstudio-lost-keystore).
+  Паролите за хранилището за ключове и за ключа не е нужно да са сложни. Ако в бъдеще загубите паролата си, вижте [Преинсталиране на AAPS с ново хранилище за ключове (keystore)](#reinstall-aaps).
 
-* The default alias (3) for your key is "key0", leave this unchanged.
+```{warning}
+**Избягвайте специални знаци в паролите си.** Използвайте само букви и цифри за паролата на хранилището за ключове и за паролата на ключа. По-специално не използвайте `$`, обратен апостроф (backtick), `"` или `\`. Ако по-късно преминете към [компилиране в браузъра](#aaps-ci-option2) и използвате отново това хранилище за ключове, тези знаци могат да доведат до неуспех на стъпката за подписване – вижте [Компилиране в браузъра: отстраняване на неизправности](#aaps-ci-password-special-characters).
+```
 
-* You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm it.
+* Псевдонимът (alias) по подразбиране (3) за вашия ключ е „key0“ – не го променяйте.
+
+* Сега ви е нужна парола за ключа. За по-просто, ако искате, можете да използвате същата парола, която използвахте по-горе за хранилището за ключове. Въведете парола (4) и я потвърдете.
 
 ```{admonition} WARNING!
 :class: warning
-Note down these passwords! You will need them when you build the next AAPS update!
+Запишете си тези пароли! Ще ви трябват, когато компилирате следващата актуализация на AAPS!
 ```
 
-* The validity is 25 years by default, leave it as it is.
+* Валидността по подразбиране е 25 години – оставете я така.
 
-* Enter your first and last name (5). No other information needs to be added but you are free to do (6-7).
+* Въведете името и фамилията си (5). Не е нужно да добавяте друга информация, но можете да го направите (6-7).
 
-* Click "OK" (8) to continue:
-
-
-On the **Generate signed App Bundle or APK** page, the path to your keystore will now be displayed. Now re-enter the Key Store password (1) and Key password (2), and tick the box (3) to remember passwords, so you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version). Click "Next" (4):
-
-![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+* Щракнете върху „OK“ (8), за да продължите:
 
 
-On the next screen, select build variant "fullRelease" (2) and click "Create" (3). You should remember the directory displayed at (1), as later you will find your built apk file there!
+На страницата **Generate signed App Bundle or APK** вече ще се показва пътят до вашето хранилище за ключове (keystore). Сега въведете отново паролата на хранилището за ключове (Key Store password) (1) и паролата на ключа (Key password) (2) и отметнете полето (3) за запомняне на паролите, за да не се налага да ги въвеждате отново следващия път, когато компилирате APK (т.е. при актуализиране до нова версия на AAPS). Щракнете върху „Next“ (4):
 
-   ![Select build variant](../images/Building-the-App/045_BuildPath.png)
+![Запомняне на паролите](../images/Building-the-App/044_RememberPwd.png)
 
-Android Studio will now build the **AAPS** apk. It will show "Gradle Build running" (2) at the bottom right. The process takes some time, depending on your computer and internet connection, so **be patient!** If you want to watch the progress of the build, click on the small hammer "build" (1) at the bottom of Android Studio:
 
-![Gradle Running](../images/Building-the-App/046_BuildRunning.png)
+На следващия екран изберете вариант за компилиране „fullRelease“ (1) и натиснете „Create“ (3). Запомнете папката, показана в (2), защото по-късно там ще намерите компилирания apk файл!
 
-Now you can watch the building progress:
+   ![Избор на вариант за компилиране](../images/Building-the-App/045_BuildPath.png)
+
+Сега Android Studio ще компилира apk файла на **AAPS**. Долу вдясно ще се покаже „Gradle Build running“ (2). Процесът отнема известно време в зависимост от компютъра и интернет връзката ви, така че **бъдете търпеливи!** Ако искате да следите напредъка на компилирането, натиснете малкото чукче „build“ (1) в долната част на Android Studio:
+
+![Gradle работи](../images/Building-the-App/046_BuildRunning.png)
+
+Сега можете да следите напредъка на компилирането:
 
 ![Android_Studio_building](../images/Building-the-App/047_BuildDetails.png)
 
-Android Studio will display the information "BUILD SUCCESSFUL" after build is finished. You may see a popup notification which you can click to select "locate". If you miss this, click on the notification icon (1) and then on **locate** (2) at the very bottom of the screen to bring up the Notifications:
+Когато компилирането завърши, Android Studio ще покаже съобщението „BUILD SUCCESSFUL“. Може да видите изскачащо известие, в което можете да щракнете, за да изберете „locate“. Ако сте пропуснали това, натиснете иконата за известия (1), за да отворите известията (Notifications), и след това – **locate** (2):
 
-![Build finished](../images/Building-the-App/049_ReopenNotification.png)
+![Компилирането е завършено](../images/Building-the-App/049_ReopenNotification.png)
 
-**_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio.md)._**
+**_Ако компилирането не е успешно, вижте раздела [Отстраняване на неизправности в Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)._**
 
-In the Notifications box, click on the blue link "locate":
+В полето Notifications щракнете върху синята връзка „locate“:
 
-![Locate build](../images/Building-the-App/048_BuildFinished.png) Your file manager will open and show you the build apk file that you have just built.
+![Намиране на компилирания файл](../images/Building-the-App/048_BuildFinished.png) Файловият мениджър ще се отвори и ще ви покаже apk файла, който току-що компилирахте.
 
-   ![File location apk](../images/Building-the-App/050_LocateAPK.png)
+   ![Местоположение на apk файла](../images/Building-the-App/050_LocateAPK.png)
 
-Поздравления! Now you have built the **AAPS** apk file, you will be transferring this file to your smartphone in the next section of the docs.
+Поздравления! Сега, след като компилирахте apk файла на **AAPS**, в следващия раздел на документацията ще прехвърлите този файл на смартфона си.
 
 ```{tip}
-If you think you might want to use an Android Wear smartwatch in the future, this is the best time to build the AAPS Wear apk to be sure it will be synchronized with your AAPS apk.
+Ако смятате, че в бъдеще може да искате да използвате смарт часовник с Android Wear, сега е най-подходящият момент да компилирате apk файла на AAPS за Wear, за да сте сигурни, че той ще бъде синхронизиран с apk файла на AAPS.
 ```
 
-Move to the next stage of [Transferring and Installing **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md).
+Преминете към следващия етап: [Прехвърляне и инсталиране на **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md).
 
 
 

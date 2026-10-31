@@ -1,31 +1,31 @@
 # Freestyle Libre 1
 
-To use your Libre as a CGM that is getting new BG values every 5 minutes without having to scan the sensor, you need to buy an NFC to Bluetooth bridge (commercially available devices, based on the obsolete [LimiTTer](https://github.com/JoernL/LimiTTer) project).
+Para usar o seu Libre como CGM que recebe novos valores de glicose a cada 5 minutos sem precisar escanear o sensor, você precisa comprar uma ponte NFC para Bluetooth (dispositivos à venda, baseados no projeto [LimiTTer](https://github.com/JoernL/LimiTTer), que está obsoleto).
 
 ```{admonition} Libre 2, Libre 1 US and Libre Pro
 :class: warning
-Verify the bridge and the app you want to use are compatible with your sensor.  
+Verifique se a ponte e o app que você quer usar são compatíveis com o seu sensor.  
 ```
 
-Some bridges are still available on the market:
+Algumas pontes ainda estão à venda:
 
--   [MiaoMiao Reader](https://www.miaomiao.cool/) (version 1, 2 or 3) also available on AliExpress.
--   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) from European vendors ([BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). Also available on AliExpress.
--   Atom for Russian users.
+-   [MiaoMiao Reader](https://www.miaomiao.cool/) (versão 1, 2 ou 3), também disponível no AliExpress.
+-   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) de vendedores europeus ([BubbleShop](https://bubbleshop.eu/)) ou, para usuários na Rússia, [aqui](https://vk.com/saharmonitor/). Também disponível no AliExpress.
+-   Atom para usuários na Rússia.
 
-## 1. Using xDrip+
+## 1. Usando o xDrip
 
--   xDrip+ supports Miaomiao, Bubble, Blucon, Atom and LibreAlarm.
--   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
--   Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
--    You also need OOP2 for Libre 1 US (and Libre 2 EU).
--   Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   O xDrip é compatível com Miaomiao, Bubble, Blucon, Atom e LibreAlarm.
+-   Você pode baixar com segurança o [APK mais recente (estável)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), a menos que precise de funções recentes. Nesse caso, use o [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases) mais recente.
+-   Siga as instruções de configuração na [página de configurações do xDrip](../CompatibleCgms/xDrip.md).
+-    Você também precisa do OOP2 para o Libre 1 US (e o Libre 2 EU).
+-   Selecione xDrip em [**Configuração → Fonte de BG**](#Config-Builder-bg-source).
 
-## 2. Using Diabox
+## 2. Usando o Diabox
 
-- Diabox is the vendor app for Bubble.
-- Install [Diabox](https://t.me/s/DiaboxApp). In Settings, Integration, enable Share data with other apps.
+- O Diabox é o app do fabricante do Bubble.
+- Instale o [Diabox](https://t.me/s/DiaboxApp). Em Settings, Integration, ative Share data with other apps (compartilhar dados com outros apps).
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Selecione xDrip em [**Configuração → Fonte de BG**](#Config-Builder-bg-source).

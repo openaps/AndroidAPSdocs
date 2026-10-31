@@ -1,156 +1,278 @@
-# Manuel d'instruction EOPatch2
+# EOPatch2
 
-Le patch nécessite l'utilisation d'insuline de type U-100 à action rapide, comme NovoRapid ou Humalog. Utilisez une insuline à action rapide qui vous convient selon l’ordonnance de votre médecin et injectez le dosage prescrit.
+Le patch a besoin d'une insuline rapide U-100, comme NovoRapid ou Humalog. Utilisez l'insuline rapide que votre médecin vous a prescrite.
 
-La plus petite dose d'insuline injectable avec le patch est de 0,05 U. Le profil BAS doit donc être fixé à une valeur minimale de 0,05 U/h ou plus et un intervalle de 0,05U/h, autrement il peut y avoir une erreur entre le montant total estimé de l'injection par le profil et le montant réel de l'injection par le patch. De même, le bolus doit également être réglé et injecté avec un volume minimal de 0,05 U.
+La plus petite dose que le patch peut délivrer est de 0,05 U. Réglez chaque débit basal de votre **Profil** à au moins 0,05 U/h, par pas de 0,05 U/h. Sinon, **AAPS** arrondit chaque débit à la valeur de 0,05 U/h la plus proche (jamais à 0) et utilise les débits que le patch délivre vraiment ; le total d'insuline par jour est donc un peu différent de votre **Profil**. De la même façon, les bolus doivent être d'au moins 0,05 U.
 
-## Configuration de la Pompe
-1. On the AAPS home screen, click the hamburger menu in the upper left corner and go to Config Builder.
-1. Sélectionnez 'EOPatch2' dans la section Pompe.
-1. Appuyez sur la touche Retour pour revenir à l'écran d'accueil.
+```{contents} Table of contents
+:depth: 1
+:local: true
+```
 
+## Fonctionnalités de la pompe avec AAPS
 
-![Image1](../images/EOPatch/Bild1.png) ![Image2](../images/EOPatch/Bild2.png)
+* Communique avec **AAPS** par le Bluetooth natif de votre téléphone, sans appareil de communication supplémentaire.
+* Les changements d'heure d'été et de fuseau horaire doivent être faits à la main.
+
+## Configuration de la pompe
+
+1. Ouvrez le **menu** (☰) en haut à gauche de l'écran principal d'**AAPS** et sélectionnez **Configuration**.
+1. Dans la section **Pompe**, sélectionnez **EOPatch2**.
+1. Appuyez sur la touche Retour pour revenir à l'écran principal.
+
+![Le menu avec l'entrée Configuration](../images/v4/Configuration/configuration_menu.png) ![Configuration > Pompe avec le plugin EOPatch2](../images/v4/Configuration/configuration_pump_list_3.png)
+
+Une fois le plugin sélectionné, la carte **EOPatch2** affiche deux boutons, **Paramètres** et **Ouvrir le plugin** :
+
+![Le plugin EOPatch2 sélectionné dans Configuration > Pompe](../images/v4/Pumps/eopatch2_enabled.png)
 
 ## Paramètres
-Sélectionnez EOPATCH2 en haut de l'écran d'accueil pour aller à l'onglet EOPATCH2.
 
-Select the EOPatch2 Preferences menu by clicking the three dots in the upper right corner.
+Il y a deux façons d'ouvrir les paramètres EOPatch2 :
 
-The EOPatch2 Preferences menu offers a menu to set 3 types of notifications.
+* appuyez sur **Paramètres** sur la carte **EOPatch2** dans **Configuration**, ou
+* ouvrez l'écran de la pompe (**Gestion** → **Pompe**) et appuyez sur l'icône en forme de roue dentée en haut à droite.
+
+Il y a trois paramètres :
+
+![Paramètres EOPatch2](../images/v4/Pumps/eopatch_settings.png)
 
 ### Alertes réservoir bas
-A warning appears when the amount of insulin remaining in the reservoir reaches the set value or less while using the patch. It can be set from 10 to 50U in 5U increments.
+
+Un avertissement s'affiche quand l'insuline restante dans le patch descend à cette quantité ou moins. Vous pouvez le régler de 10 à 50 U, par pas de 5 U. La valeur par défaut est 10 U.
 
 ### Rappel d'expiration du Patch
-This is a reminder to notify you of the time remaining before the current patch expires. It can be set from 1 to 24 hours in 1 hour increments. The initial setting value is 4 hours.
 
-### Patch buzzer Reminder
-This is a reminder function for injections other than basal injection. If you are using an (extended) bolus injection or a temporary basal injection, the patch will make a buzzer sound when the injection starts and when the injection is complete. The initial setting value is Off.
+Vous rappelle combien de temps il reste avant l'expiration du patch actuel. Vous pouvez le régler de 1 à 24 heures, par pas de 1 heure. La valeur par défaut est 4 heures.
 
-![Image3](../images/EOPatch/Bild3.png)
+### Rappels sonores du Patch
 
-## Connecting the Patch
+Quand cette option est activée, le patch émet un bip quand un bolus, un bolus étendu ou un débit basal temporaire commence et quand il se termine. Elle n'a aucun effet sur votre débit basal normal. Par défaut, elle est désactivée.
 
-### Move to patch connection screen
+## Activer un nouveau patch
 
-Select EOPATCH2 at the top of the home screen and click the ACTIVATE PATCH button at the bottom left.
+### Ouvrir l'assistant d'activation
 
-![Image4](../images/EOPatch/Bild4.png)
+Ouvrez l'écran de la pompe avec **Gestion** → **Pompe** (ou appuyez sur **Ouvrir le plugin** sur la carte **EOPatch2** dans **Configuration**). Quand aucun patch n'est actif, l'écran affiche **Non activé** et un bouton **Activer le Patch** en bas.
 
-### Connecting the patch
-Insert the syringe needle into the insulin inlet on the patch and then slowly push the piston to inject the insulin. When insulin is filled with more than 80U, the patch makes a booting sound (1 buzzer) and boots. After confirming the buzzer sound, click the START PAIRING button on the screen.
+Appuyez sur **Activer le Patch** pour démarrer l'assistant.
 
-[Warning]
+![L'écran de la pompe EOPatch2 avec le bouton Activer le Patch](../images/v4/Pumps/eopatch_pump_screen.png)
 
-- Do not turn the needle action lever until instructed. It can cause serious problems during injection or safety checks otherwise.
-- The amount of insulin that can be injected into the patch is 80~200U. If you inject less than 80U into the patch initially, the patch will not work.
-- Take the insulin to be put into the patch from the refrigerator and leave it at room temperature for 15 to 30 minutes beforehand. The temperature of the insulin to be injected must be at least 10°C.
+L'assistant vous guide à chaque étape. La ligne de points en haut montre où vous en êtes.
 
-![Image5](../images/EOPatch/Bild5.png)
+```{note}
+Si vous n'avez jamais activé de **Profil** dans **AAPS**, l'assistant affiche d'abord une page **Profil nécessaire**. Sélectionnez le profil à utiliser et appuyez sur **Activer le profil**.
+```
 
-### appairage du Patch
-The Patch pairing screen will be displayed, and pairing will be attempted automatically. If communication is successful, the Bluetooth pairing request notification appears. Click OK and when the Bluetooth pairing request notification appears a second time with the authentication code, select OK again.
+### Remplissage de l'insuline
 
-[Warning]
+Insérez l'aiguille de la seringue dans le port de remplissage d'insuline du patch. Poussez lentement le piston pour remplir le patch. Dès qu'il y a plus de 80 U dans le patch, il émet un bip et démarre.
 
-- For pairing, the patch and the smartphone must be located within 30 cm of each other.
-- After the patch booting is completed, the patch will beep every 3 minutes until the pairing is complete.
-- After booting the patch, the patch application must be completed via the app within 60 minutes. If the application cannot be completed within 60 minutes, the patch should be discarded.
+Quand vous entendez le bip, appuyez sur **Démarrer l'appairage**.
 
-![Image6](../images/EOPatch/Bild6.png) ![Image7](../images/EOPatch/Bild7.png) ![Image8](../images/EOPatch/Bild8.png)
+![L'étape Remplissage de l'insuline avec le bouton Démarrer l'appairage](../images/v4/Pumps/eopatch_activate_filling.png)
 
+```{warning}
+- Ne tournez pas le levier de l'aiguille avant que l'assistant vous le demande. Le tourner trop tôt peut causer de graves problèmes pendant le remplissage ou le contrôle de sécurité.
+- Le patch contient de 80 à 200 U. Si vous mettez moins de 80 U, le patch ne fonctionne pas.
+- Sortez l'insuline du réfrigérateur 15 à 30 minutes avant le remplissage, pour qu'elle soit à température ambiante. L'insuline doit être à au moins 10 °C.
+```
 
-### patch preparation
-After removing the adhesive tape of the patch, check if the needle is sticking out. If there are no problems with the patch, click NEXT.
+### Appairage du Patch
 
-![Image9](../images/EOPatch/Bild9.png)
+**AAPS** essaie maintenant de s'appairer automatiquement avec le patch. Pendant l'appairage, deux demandes d'appairage Bluetooth Android s'affichent. Appuyez sur **OK** sur la première. Appuyez à nouveau sur **OK** sur la deuxième, qui affiche une clé d'accès.
 
-### Patch attachment
-Insulin should be injected in a spot with subcutaneous fat but few nerves or blood vessels, so it is recommended to use the abdomen, arm, or thigh for the patch attachment site. Choose a patch attachment site and apply the patch after disinfecting the location.
+```{warning}
+- Pendant l'appairage, gardez le patch et votre téléphone à moins de 30 cm l'un de l'autre.
+- Après le démarrage du patch, il émet un bip toutes les 3 minutes jusqu'à la fin de l'appairage.
+- Vous devez terminer l'activation du patch dans les 60 minutes après son démarrage. Si vous ne pouvez pas, retirez le patch.
+```
 
-[Warning]
+![Étape d'appairage du Patch](../images/EOPatch/Bild6.png) ![Première demande d'appairage Bluetooth](../images/EOPatch/Bild7.png) ![Deuxième demande d'appairage Bluetooth avec la clé d'accès](../images/EOPatch/Bild8.png)
 
-- Make sure to straighten the side of the patch tape attached to the body evenly, so that the patch adheres completely to the skin.
-- If the patch does not stick completely, air may enter between the patch and the skin, which can weaken the adhesive strength and waterproof effect of the patch.
+```{admonition} Older screenshot
+:class: note
+Les deux captures d'écran de l'appairage Bluetooth viennent d'une ancienne version d'**AAPS** : l'écran d'**AAPS** derrière la demande d'appairage Android est différent dans **AAPS** 4.
+```
 
-![Image10](../images/EOPatch/Bild10.png)
+### Sélectionner l'insuline
 
-### Safety Check
-When patching is complete, touch Start Safety Check. When the safety check is completed, the patch will beep once.
+Sélectionnez l'insuline avec laquelle vous avez rempli le patch et appuyez sur **Suivant**. **AAPS** applique un changement de profil avec cette insuline après l'activation.
 
-[Warning]
+### Préparez-vous à coller le Patch
 
-- For safe use, do not turn the needle action lever until the safety check has been completed.
+Retirez le ruban adhésif du patch, puis appuyez sur **Suivant**.
 
-![Image11](../images/EOPatch/Bild11.png) ![Image12](../images/EOPatch/Bild12.png)
+Si une aiguille dépasse, ou si le patch est mouillé, sale ou si son ruban adhésif est plié, appuyez plutôt sur **Supprimer** et utilisez un nouveau patch.
 
+![Étape Préparez-vous à coller le Patch](../images/EOPatch/Bild9.png)
+
+### Localisation du site
+
+Cette étape n'apparaît que si **Gérer la rotation du site de la pompe** est activé dans les paramètres de rotation des sites. Appuyez sur l'endroit du schéma du corps où vous allez coller le patch et appuyez sur **Suivant**, ou appuyez sur **Ignorer**.
+
+### Coller le Patch
+
+L'insuline doit aller dans une zone avec du tissu graisseux sous la peau, mais avec peu de nerfs ou de vaisseaux sanguins. L'abdomen, le bras ou la cuisse sont de bons choix. Nettoyez et séchez le site, puis collez le patch sur votre peau.
+
+Vérifiez le site de perfusion, puis appuyez sur **Démarrer la vérification de sécurité**.
+
+```{warning}
+- Appuyez de façon égale sur les bords de l'adhésif du patch, pour que tout le patch colle bien à votre peau.
+- Si le patch ne colle pas complètement, de l'air peut passer entre le patch et votre peau. Cela affaiblit l'adhésif et la résistance à l'eau du patch.
+```
+
+![Étape Coller le Patch](../images/EOPatch/Bild10.png)
+
+### Contrôle de sécurité
+
+Le contrôle de sécurité dure environ 30 secondes. Quand il est terminé, le patch émet un bip. S'il échoue, appuyez sur **Réessayer**.
+
+```{warning}
+Pour une utilisation sûre, ne tournez pas le levier de l'aiguille avant la fin du contrôle de sécurité.
+```
+
+![Étape Coller le Patch avec le bouton Démarrer la vérification de sécurité](../images/EOPatch/Bild11.png) ![Contrôle de sécurité en cours](../images/EOPatch/Bild12.png)
+
+```{admonition} Older screenshot
+:class: note
+Les captures d'écran de **Préparez-vous à coller le Patch** à **Contrôle de sécurité** viennent d'une ancienne version d'**AAPS** et peuvent être différentes dans **AAPS** 4.
+```
 
 ### Insertion de l'aiguille
-The needle is inserted by holding around the patch and turning the needle action lever more than 100° in the upward direction of the lever. There is a buzzer sound when the needle is inserted correctly. Turn the needle action lever further clockwise to release the lever. Click NEXT.
 
-[Caution]
+Tenez fermement le patch. Tournez le levier de l'aiguille vers le haut de plus de 100° pour insérer l'aiguille. Le patch émet un bip quand l'aiguille est bien insérée. Continuez ensuite à tourner le levier jusqu'au bout pour l'enlever. Appuyez sur **Suivant**.
 
-- If you go to the next step without the buzzer sounding, a needle insertion error warning will appear.
+```{caution}
+Si vous passez à l'étape suivante sans avoir entendu le bip, une **Erreur d'insertion de l'aiguille** s'affiche. Vérifiez le bip et appuyez sur **Réessayer**. Si l'erreur reste, appuyez sur **Supprimer** pour désactiver le patch.
+```
 
-## Discarding the patch
-Patches must be replaced in the case of low insulin levels, usage expiration, and defects. The recommended usage period for each patch is 84 hours after booting the patch.
+### Activation du Patch terminée
 
-### Discarding the patch
-Select EOPATCH2 at the top of the home screen and click the DISCARD/CHANGE PATCH button at the bottom. On the next screen, click the DISCARD PATCH button. A dialog box appears to confirm once more and if you select the DISCARD PATCH button, the disposal is completed.
+La dernière page confirme que le patch est actif et qu'il vous préviendra quand il approchera de sa date d'expiration. Appuyez sur **Terminer** pour revenir à l'écran de la pompe.
 
-![Image13](../images/EOPatch/Bild13.png) ![Image14](../images/EOPatch/Bild14.png) ![Image15](../images/EOPatch/Bild15.png) ![Image16](../images/EOPatch/Bild16.png)
+## Retirer le Patch
 
-## Suspendre et reprendre l'injection d'Insuline
-Suspending insulin delivery also cancels both extended bolus and temporary basal. When resuming insulin delivery, the canceled extended bolus and temporary basal will not be resumed. And when insulin delivery is suspended, the patch will give a sound every 15 minutes.
+Remplacez le patch quand il a peu d'insuline, quand il expire ou s'il est défectueux. Nous recommandons de ne pas utiliser un patch plus de 84 heures après son démarrage.
 
-### Suspending insulin delivery
-Select EOPATCH2 at the top of the home screen and click the SUSPEND button at the bottom right. When you select CONFIRM in the confirmation box, a time selection box appears. If you select the CONFIRM button after selecting the time, the insulin delivery will be suspended for the set amount of time.
+1. Ouvrez l'écran de la pompe (**Gestion** → **Pompe**). Quand un patch est actif, appuyez sur **Retirer le Patch**.
+1. La page **Retirer le Patch** affiche le temps restant et l'insuline restante dans le patch. Appuyez sur **Retirer le Patch**.
+1. Une fenêtre vous demande de confirmer. Appuyez à nouveau sur **Retirer le Patch**.
+1. Quand le patch a été désactivé, l'assistant affiche **La suppression du Patch est terminée.** Retirez le patch de votre corps et appuyez sur **Confirmer**.
 
-![Image17](../images/EOPatch/Bild17.png) ![Image18](../images/EOPatch/Bild18.png) ![Image19](../images/EOPatch/Bild19.png)
+Ensuite, l'assistant passe directement à l'activation d'un nouveau patch (voir ci-dessus). Appuyez sur la flèche de retour si vous voulez vous arrêter ici.
 
+Quand aucun patch n'est actif, **AAPS** affiche la pompe comme suspendue et enregistre un débit basal temporaire de 0 U/h ; ainsi, aucune insuline basale n'est comptée dans l'IA jusqu'à l'activation du patch suivant.
 
-### Resuming insulin delivery
-Select EOPATCH2 at the top of the home screen and click the RESUME button at the bottom right. Insulin delivery will resume by selecting CONFIRM in the confirmation dialog box.
+![L'écran de la pompe EOPatch2 avec le bouton DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![Page Retirer le Patch](../images/EOPatch/Bild14.png) ![Fenêtre de confirmation Retirer le Patch](../images/EOPatch/Bild15.png) ![La suppression du Patch est terminée](../images/EOPatch/Bild16.png)
 
-![Image20](../images/EOPatch/Bild20.png) ![Image21](../images/EOPatch/Bild21.png)
+```{admonition} Older screenshot
+:class: note
+Les captures d'écran ci-dessus viennent d'une version plus ancienne d'**AAPS**. Dans **AAPS** 4, vous ouvrez l'écran de la pompe avec **Gestion** → **Pompe**, et le bouton s'appelle **Retirer le Patch**.
+```
 
-## Alarms/Warnings
+```{admonition} If the patch does not respond
+:class: warning
+Si **AAPS** ne peut pas joindre le patch, il peut afficher une page expliquant comment arrêter l'alarme du patch à la main : retirez le patch de votre corps, enlevez le ruban adhésif et utilisez un trombone pour appuyer fermement dans le trou à côté du port de remplissage d'insuline.
 
-### Alarme
+La page **Retirer le Patch** a aussi un bouton **Forcer la réinitialisation**. Il efface seulement le patch dans **AAPS**, sans envoyer de commande au patch. Le patch continue à délivrer de l'insuline jusqu'à ce que sa batterie soit vide ou que vous l'éteigniez à la main. Utilisez-le seulement si le retrait normal échoue, et retirez le patch de votre corps.
+```
 
-Alarms are issued for emergency situations of the highest priority and require immediate action. The alarm signal does not disappear or time out until it is acknowledged. An alarm occurs when there is a problem with the patch being used, so there may be cases where the patch in use needs to be discarded and replaced with a new patch. The warning is displayed as a dialog box and switching to another screen is not possible until processing is completed.
+## Suspendre et reprendre l'injection d'insuline
 
-![Image22](../images/EOPatch/Bild22.png) ![Image23](../images/EOPatch/Bild23.png)
+Suspendre l'injection d'insuline annule aussi tout bolus étendu et tout débit basal temporaire. Quand vous reprenez, ils ne sont **pas** redémarrés. Tant que l'injection d'insuline est suspendue, le patch émet un bip toutes les 15 minutes.
 
-The different types of alarms are explained below.
+### Suspendre l'injection d'insuline
 
-| Alarmes                          | Explanation                                                                                                                                                                                                         |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Réservoir vide                   | Occurs when the patch’s reservoir runs out of insulin.                                                                                                                                                              |
-| Patch expired                    | Occurs when the patch usage time has expired, and no further insulin injections are possible.                                                                                                                       |
-| Occlusion                        | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                                                   |
-| Power on self-test failure       | Occurs when the patch finds an unexpected error during the post-boot self-test process.                                                                                                                             |
-| Inappropriate temperature        | Occurs when the patch is outside the normal operating temperature range during patch application and use. To deal with this alarm, move the patch to an  appropriate operating temperature (4.4 to 37°C) condition. |
-| Erreur d'insertion de l'aiguille | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.                         |
-| Patch battery Error              | Occurs just before the patch’s internal battery runs out and powers off.                                                                                                                                            |
-| Patch activation Error           | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                                                             |
-| Patch Error                      | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                                                            |
+1. Ouvrez l'écran de la pompe (**Gestion** → **Pompe**) et appuyez sur **Suspendre la pompe**.
+1. Une fenêtre explique ce qui sera suspendu. Appuyez sur **Confirmer**.
+1. Dans la fenêtre **Durée de suspension Basal**, choisissez la durée de la suspension : 30 min, 1 h, 1 h 30 ou 2 h. Appuyez sur **Confirmer**.
 
-### Attention
+L'injection d'insuline est suspendue pendant la durée choisie.
 
-A warning occurs in a medium or low-priority situation. When a warning occurs, it is displayed as a notification in the Overview screen.
+![L'écran de la pompe EOPatch2 avec le bouton SUSPEND](../images/EOPatch/Bild17.png) ![Fenêtre de confirmation de la suspension](../images/EOPatch/Bild18.png) ![Fenêtre Durée de suspension Basal](../images/EOPatch/Bild19.png)
 
-![Image24](../images/EOPatch/Bild24.png)
+```{admonition} Older screenshot
+:class: note
+Les captures d'écran ci-dessus viennent d'une version plus ancienne d'**AAPS**. Dans **AAPS** 4, vous ouvrez l'écran de la pompe avec **Gestion** → **Pompe**, et le bouton s'appelle **Suspendre la pompe**.
+```
 
-The different types of warnings are explained below.
+### Reprendre l'injection d'insuline
 
-| Warnings                     | Explanation                                                                                                                           |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| End of insulin suspend       | Occurs when the time set by the user has elapsed after the insulin infusion suspension has been completed.                            |
-| Réservoir bas                | Occurs when the remaining amount of insulin in the patch is below the set amount.                                                     |
-| Patch operating life expired | Occurs when the patch usage period is over.                                                                                           |
-| Patch will expire soon       | Occurs 1 hour before the patch must be discarded.                                                                                     |
-| Incomplete Patch activation  | Occurs when more than 3 minutes have elapsed due to an interruption during patch application in the stage after pairing is completed. |
-| Patch battery low            | Occurs when the patch's battery is low.                                                                                               |
+1. Ouvrez l'écran de la pompe (**Gestion** → **Pompe**) et appuyez sur **Reprendre la pompe**.
+1. Dans la fenêtre **Reprendre l'injection d'insuline**, appuyez sur **Confirmer**.
 
+![L'écran de la pompe EOPatch2 avec le bouton RESUME](../images/EOPatch/Bild20.png) ![Fenêtre Reprendre l'injection d'insuline](../images/EOPatch/Bild21.png)
+
+```{admonition} Older screenshot
+:class: note
+Les captures d'écran ci-dessus viennent d'une version plus ancienne d'**AAPS**. Dans **AAPS** 4, vous ouvrez l'écran de la pompe avec **Gestion** → **Pompe**, et le bouton s'appelle **Reprendre la pompe**.
+```
+
+```{warning}
+Quand la durée de suspension est terminée, **AAPS** affiche un avertissement **Fin de la suspension d'insuline**. L'injection d'insuline ne reprend **pas** tant que vous ne l'avez pas confirmée. Si vous ne le faites pas, vous pourriez développer une hyperglycémie.
+```
+
+(eopatch2-alarms-and-warnings)=
+
+## Alarmes et avertissements
+
+### Alarmes
+
+Les alarmes concernent des situations urgentes, de priorité maximale, et demandent une action immédiate de votre part. **AAPS** déclenche une alarme qui continue jusqu'à ce que vous l'acquittiez, et affiche le message sous forme de notification sur l'écran **Vue d'ensemble**. Une alarme signifie qu'il y a un problème avec le patch utilisé. Dans de nombreux cas, le patch doit être retiré et remplacé par un nouveau.
+
+Quand vous appuyez sur **Confirmer** dans la notification, **AAPS** traite l'alarme. Pour la plupart des alarmes, cela désactive le patch. Pour une alarme **Température inadaptée**, le bouton est **Réessayer**.
+
+![Alarme EOPatch2](../images/EOPatch/Bild22.png) ![Alarme EOPatch2 après la désactivation du patch](../images/EOPatch/Bild23.png)
+
+```{admonition} Older screenshot
+:class: note
+Les captures d'écran des alarmes viennent d'une ancienne version d'**AAPS** et peuvent être différentes dans **AAPS** 4.
+```
+
+Les différentes alarmes sont expliquées ci-dessous.
+
+| Alarme                            | Explication                                                                                                                                                                         |
+| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Réservoir vide                    | Le patch n'a plus d'insuline.                                                                                                                                                       |
+| Le Patch a expiré                 | La durée d'utilisation du patch est terminée et il ne peut plus délivrer d'insuline.                                                                                                |
+| Occlusion                         | Le circuit d'insuline du patch semble bouché.                                                                                                                                       |
+| Échec de l'auto-test au démarrage | Le patch a trouvé une erreur inattendue pendant son auto-test après le démarrage.                                                                                                   |
+| Température inadaptée             | Le patch est en dehors de sa température normale de fonctionnement pendant l'activation ou l'utilisation. Déplacez le patch dans un endroit à température adaptée (de 4,4 à 37 °C). |
+| Erreur d'insertion de l'aiguille  | L'aiguille n'a pas été bien insérée pendant l'activation. Vérifiez que le bord d'insertion de l'aiguille du patch et le levier de l'aiguille sont bien alignés.                     |
+| Erreur batterie du Patch          | La batterie interne du patch est presque vide et le patch va s'éteindre.                                                                                                            |
+| Erreur d'activation du Patch      | Le patch n'a pas été complètement activé dans les 60 minutes après son démarrage.                                                                                                   |
+| Erreur Patch                      | Le patch a trouvé une erreur inattendue pendant l'activation ou l'utilisation.                                                                                                      |
+
+### Avertissements
+
+Les avertissements concernent des situations de priorité moyenne ou basse. Un avertissement s'affiche sous forme de notification sur l'écran **Vue d'ensemble**.
+
+![Avertissement EOPatch2 affiché sur l'écran Vue d'ensemble](../images/EOPatch/Bild24.png)
+
+```{admonition} Older screenshot
+:class: note
+Cette capture d'écran vient d'une ancienne version d'**AAPS** : dans **AAPS** 4, l'avertissement s'affiche sur l'écran principal, qui est différent.
+```
+
+Les différents avertissements sont expliqués ci-dessous.
+
+| Attention                       | Explication                                                                                                                                                |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Fin de la suspension d'insuline | La durée de suspension que vous avez choisie est terminée. Appuyez sur **Reprendre la pompe** dans la notification pour redémarrer l'injection d'insuline. |
+| Réservoir bas                   | L'insuline restante dans le patch est inférieure à la quantité réglée dans **Alertes réservoir bas**.                                                      |
+| Le Patch a expiré               | La période d'utilisation du patch est terminée.                                                                                                            |
+| Le Patch va bientôt expirer     | Le patch doit être retiré dans 1 heure.                                                                                                                    |
+| Activation du Patch incomplète  | L'activation du patch a été interrompue pendant plus de 3 minutes après l'appairage. Ouvrez l'écran de la pompe et terminez l'activation du patch.         |
+| Batterie du Patch faible        | La batterie du patch est faible.                                                                                                                           |
+
+## Où obtenir de l'aide
+
+Le pilote EOPatch2 est développé par la communauté, de manière **bénévole**. Avant de demander de l'aide, merci de :
+
+1. **Lisez** la section correspondante de cette documentation pour vérifier comment la fonction doit marcher.
+2. **Demandez** sur le canal *#AAPS* de [Discord](https://discord.gg/4fQUWHZ4Mw), ou dans un des autres [canaux de la communauté](../GettingHelp/WhereCanIGetHelp.md).
+3. **Signalez un bug** : cherchez d'abord dans les [tickets existants](https://github.com/nightscout/AndroidAPS/issues) ; si le vôtre n'y est pas, ouvrez un [nouveau ticket](https://github.com/nightscout/AndroidAPS/issues) et joignez vos [fichiers log](../GettingHelp/AccessingLogFiles.md).
+
+Quand vous demandez de l'aide, indiquez la marque et le modèle de votre téléphone, la version d'Android, la version d'**AAPS** et une description simple du problème (ce qui a changé, quand cela a fonctionné pour la dernière fois).

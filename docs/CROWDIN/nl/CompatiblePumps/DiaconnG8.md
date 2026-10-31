@@ -1,91 +1,141 @@
-# Diaconn G8 Insulin Pump
+# Diaconn G8
 
-## Insulin Pump Bluetooth Pairing
+```{contents} Table of contents
+:depth: 1
+:local: true
+```
 
-- Click on the hamburger menu in the top left corner.
+## Mogelijkheden van de pomp met AAPS
 
-![image](../images/DiaconnG8/DiaconnG8_01.jpg)
+* Communiceert met **AAPS** via de eigen Bluetooth van je telefoon, zonder extra communicatieapparaat.
+* Zomertijd en wisselingen van tijdzone moet je zelf afhandelen.
 
-- Click on Config Builder.
+## Bluetooth-koppeling van de insulinepomp
 
-![image](../images/DiaconnG8/DiaconnG8_02.jpg)
+- Tik op het **menu** (☰) linksboven.
 
-- After selecting the Diaconn G8 Pump click on the Settings icon (cog wheel).
+![Het menu met het item Configuratie](../images/v4/Configuration/configuration_menu.png)
 
-![image](../images/DiaconnG8/DiaconnG8_03.jpg)
+- Tik op **Configuratie** > **Pomp** en kies **Diaconn G8**.
 
-- Choose Selected pump.
+![Configuratie > Pomp met de Diaconn G8-plugin](../images/v4/Configuration/configuration_pump_list_3.png)
 
-![image](../images/DiaconnG8/DiaconnG8_04.jpg)
+Als die gekozen is, toont de kaart **Diaconn G8** twee knoppen, **Instellingen** en **Plug-in openen**:
 
-- Select your insulin pump’s model number once it appears in the list.
+![De Diaconn G8-plugin gekozen in Configuratie > Pomp](../images/v4/Pumps/diaconn_g8_enabled.png)
 
-![image](../images/DiaconnG8/DiaconnG8_05.jpg)
+**Instellingen** opent de instellingen van de Diaconn G8-driver (zie [Instellingen van de Diaconn G8 insulinepomp](#diaconn-g8-insulin-pump-option-setting) hieronder).
 
-- There are two options to check your model number:
+**Plug-in openen** (of **Beheren** > **Pomp**) opent het pompscherm van de Diaconn G8. Voordat er een pomp gekoppeld is, ziet het er zo uit:
 
-1. The last 5 digits of the SN number on the back of the pump.
-2. Click on O button > Information > BLE > Last 5 digits.
+![Pompscherm van de Diaconn G8 vóór het koppelen](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
-![image](../images/DiaconnG8/DiaconnG8_06.jpg)
+![Afbeelding](../images/DiaconnG8/DiaconnG8_04.jpg)
 
-- Once you select your pump, a window appears asking for a pin code. Enter the pin number displayed on your pump to complete the connection.
+```{admonition} Older screenshot
+:class: note
+De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie. In **AAPS** 4 start het koppelen met de knop **Koppelen** op het pompscherm; er is geen instelling **Geselecteerde pomp**.
+```
 
- ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
+- Tik op het pompscherm op **Koppelen**. Het scherm **Diaconn Pomp Koppeling** opent en **AAPS** zoekt naar pompen in de buurt.
+- Tik op het modelnummer van je insulinepomp zodra het in de lijst staat (bijvoorbeeld **DIACONN-65010**).
 
-## Pump status check and log synchronization
+![Scherm Diaconn Pomp Koppeling zoekt naar pompen](../images/DiaconnG8/DiaconnG8_05.png)
 
-- Once your pump is connected, click on the Bluetooth symbol to check the status and to synchronize logs.
+- Je kunt je modelnummer op twee manieren vinden:
 
-![image](../images/DiaconnG8/DiaconnG8_08.jpg)
+1. De laatste 5 cijfers van het serienummer (SN) op de achterkant van de pomp.
+2. Klik op de O-knop > Information > BLE > laatste 5 cijfers.
 
-## Bluetooth Troubleshooting
+![Afbeelding](../images/DiaconnG8/DiaconnG8_06.jpg)
 
-**What to do in the case of an unstable Bluetooth connection with the pump.**
+- Als je de pomp kiest, verschijnt een venster dat om een pincode vraagt. Voer de pincode in die op je pomp staat om de verbinding te maken.
 
-### Method 1 ) Check the pump again after AAPS application is completed.
+ ![Afbeelding](../images/DiaconnG8/DiaconnG8_07.jpg)
 
-- Click on the 3 dots button on the top right.
+- Als **Succesvol gekoppeld!** verschijnt, tik je op **OK** om terug te gaan naar het pompscherm.
 
-![image](../images/DiaconnG8/DiaconnG8_09.jpg)
+## Pompstatus controleren en logs synchroniseren
 
-- Click on Exit.
+- Open het pompscherm (**Beheren** > **Pomp**) zodra je pomp verbonden is. Het toont de pompstatus (batterij, reservoir, laatste verbinding, laatste bolus, basaalstand en meer).
+- Tik op **Vernieuwen** om verbinding te maken met de pomp, de status bij te werken en de logs te synchroniseren.
+- Tik op **Historiek** om de geschiedenis te zien die uit de pomp is gelezen.
 
-![image](../images/DiaconnG8/DiaconnG8_10.jpg)
+![Afbeelding](../images/DiaconnG8/DiaconnG8_08.jpg)
 
-### Method 2) If the first method doesn’t work, disconnect Bluetooth and then reconnect.
+```{admonition} Older screenshot
+:class: note
+De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie. In **AAPS** 4 staat de pompstatus op het pompscherm (**Beheren** > **Pomp**) en synchroniseer je met de knop **Vernieuwen**.
+```
 
-- Press and hold the Bluetooth button at the top for about 3 seconds.
+(diaconn-g8-bluetooth-troubleshooting)=
 
-![image](../images/DiaconnG8/DiaconnG8_11.jpg)
+## Bluetooth-problemen oplossen
 
-- Click on the Setting button on the paired Diaconn G8 Insulin pump.
+**Wat te doen bij een instabiele Bluetooth-verbinding met de pomp.**
 
-![image](../images/DiaconnG8/DiaconnG8_12.jpg)
+### Methode 1) Start AAPS opnieuw en controleer dan de pomp opnieuw
 
-- Unpair.
+- Tik op het **menu** (☰) linksboven.
+- Tik op **Afsluiten** onderaan het menu.
 
-![image](../images/DiaconnG8/DiaconnG8_13.jpg)
+![Het menu met het item Afsluiten onderaan](../images/v4/Configuration/configuration_menu.png)
 
-- Repeat the Bluetooth pairing process for the pump (see above).
+- Start **AAPS** opnieuw en controleer de verbinding met de pomp.
 
-## Further Information
+### Methode 2) Werkt de eerste methode niet, verbreek dan de Bluetooth-verbinding en maak die opnieuw.
 
-### Diaconn G8 Insulin pump option setting
+- Houd de Bluetooth-knop bovenaan ongeveer 3 seconden ingedrukt.
 
-- Config manager > pump > Diaconn G8 > Settings
-- DIACONN G8 at the top> 3 dots button on the top right > Diaconn G8 Preferences
+![Afbeelding](../images/DiaconnG8/DiaconnG8_11.jpg)
 
-![Diaconn G8 pump options](../images/DiaconnG8/DiaconnG8_14.jpg)
+- Klik op de instellingenknop bij de gekoppelde Diaconn G8 insulinepomp.
 
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an “Insulin Change” event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a “Site Change” event occurs.
-- If the **Log tube change** option is activated, the relevant details are automatically uploaded to the careportal when a “Tube Change” event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a “Battery Change” event occurs, and the PUMP BATTERY CHANGE button in the ACTION tab is deactivated. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
+![Afbeelding](../images/DiaconnG8/DiaconnG8_12.jpg)
 
-![Diaconn G8 actions menu](../images/DiaconnG8/DiaconnG8_15.jpg)
+- Ontkoppelen.
 
-### Extended Bolus function
+![Afbeelding](../images/DiaconnG8/DiaconnG8_13.jpg)
 
-- If you use extended bolus it will disable closed loop.
-- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- Open in **AAPS** het pompscherm (**Beheren** > **Pomp**), tik op **Ontkoppelen** en bevestig **Koppelingsgegevens opnieuw instellen?**.
+- Koppel de pomp opnieuw via Bluetooth (zie hierboven).
+
+## Meer informatie
+
+(diaconn-g8-insulin-pump-option-setting)=
+
+### Instellingen van de Diaconn G8 insulinepomp
+
+- **Configuratie** > **Pomp** > **Diaconn G8** > **Instellingen**
+- Of tik op het pompscherm (**Beheren** > **Pomp**) op het instellingenicoon (tandwiel) rechtsboven.
+
+![Instellingen van de Diaconn G8-driver](../images/v4/Pumps/diaconn_g8_settings.png)
+
+- **Bolus snelheid** bepaalt hoe snel de pomp een bolus toedient.
+- Als de optie **Reservoir wissel vastleggen** aan staat, worden de gegevens automatisch naar de careportal geüpload bij een gebeurtenis "Insulin Change" (insulinewissel).
+- Als de optie **Canulewissel noteren** aan staat, worden de gegevens automatisch naar de careportal geüpload bij een gebeurtenis "Site Change" (infuuswissel).
+- Als de optie **Slangwissel noteren** aan staat, worden de gegevens automatisch als notitie toegevoegd bij een gebeurtenis "Tube Change" (slangwissel).
+- Als de optie **Batterijwissel noteren** aan staat, worden de gegevens automatisch naar de careportal geüpload bij een gebeurtenis "Battery Change" (batterijwissel). Je kunt een batterijwissel ook zelf vastleggen met **Beheren** > **Pomp bat. wissel**. (Let op: stop alle lopende toedieningen voordat je de batterij vervangt.)
+- **Diaconn Cloud Sync** stuurt de pomplogs naar de Diaconn Cloud.
+
+![Menu Acties van de Diaconn G8](../images/DiaconnG8/DiaconnG8_15.jpg)
+
+```{admonition} Older screenshot
+:class: note
+De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie. In **AAPS** 4 leg je een batterijwissel vast met **Beheren** > **Pomp bat. wissel**; er is geen tabblad **Acties**.
+```
+
+### Functie vertraagde bolus
+
+- Als je een vertraagde bolus gebruikt, wordt de gesloten loop uitgeschakeld.
+- Zie [deze pagina](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) voor de reden waarom een vertraagde bolus niet werkt in een gesloten loop.
+
+## Waar je hulp kunt krijgen
+
+De Diaconn G8-driver wordt door de community ontwikkeld, op **vrijwillige** basis. Doe het volgende voordat je om hulp vraagt:
+
+1. **Lees** het betreffende deel van deze documentatie om na te gaan hoe de functie hoort te werken.
+2. **Vraag** het in het kanaal *#AAPS* op [Discord](https://discord.gg/4fQUWHZ4Mw), of in een van de andere [community-kanalen](../GettingHelp/WhereCanIGetHelp.md).
+3. **Meld een bug**: zoek eerst in de [bestaande issues](https://github.com/nightscout/AndroidAPS/issues); staat jouw probleem er niet bij, open dan een [nieuwe issue](https://github.com/nightscout/AndroidAPS/issues) en voeg je [logbestanden](../GettingHelp/AccessingLogFiles.md) toe.
+
+Vermeld bij een hulpvraag het merk en model van je telefoon, de Android-versie, de **AAPS**-versie en een duidelijke beschrijving van het probleem (wat is er veranderd, wanneer werkte het voor het laatst).

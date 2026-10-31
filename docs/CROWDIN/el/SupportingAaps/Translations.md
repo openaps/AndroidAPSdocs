@@ -1,104 +1,104 @@
-# How to translate strings for the AAPS app or the documentation
+# Πώς να μεταφράσετε κείμενα της εφαρμογής AAPS ή της τεκμηρίωσης
 
-* For the the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
-* For the documentation please visit <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
+* Για τα κείμενα της εφαρμογής, πηγαίνετε στο <https://crowdin.com/project/androidaps> και συνδεθείτε με τον λογαριασμό σας στο GitHub
+* Για την τεκμηρίωση, επισκεφθείτε το <https://crowdin.com/project/androidapsdocs> και συνδεθείτε με τον λογαριασμό σας στο GitHub
 
-* Send a join request to the docs team. Για να το κάνετε, κάντε κλικ στη σημαία της τη γλώσσα που επιθυμείτε και, στη συνέχεια, το κουμπί "Συμμετοχή" στην πάνω δεξιά γωνία της επόμενης σελίδας. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
+* Στείλτε ένα αίτημα συμμετοχής στην ομάδα της τεκμηρίωσης. Για να το κάνετε, κάντε κλικ στη σημαία της γλώσσας που θέλετε και μετά στο κουμπί «Join» (συμμετοχή) πάνω δεξιά στην επόμενη σελίδα. Γράψτε τη γλώσσα, δώστε μερικές πληροφορίες για εσάς και την εμπειρία σας με το AAPS και πείτε αν θέλετε να γίνετε μεταφραστής ή επιμελητής (μόνο για άτομα με εμπειρία στη μετάφραση + προχωρημένους χρήστες του AAPS).
 
-```{admonition} Time for Approval :class: note
+```{admonition} Χρόνος για την έγκριση :class: note
 
-The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord.
+Η έγκριση είναι ένα χειροκίνητο βήμα. Ως μη κερδοσκοπικός οργανισμός δεν δίνουμε εγγυήσεις χρόνου (SLA), αλλά συνήθως η έγκριση γίνεται σε λιγότερο από 1 ημέρα. Αν όχι, επικοινωνήστε με την ομάδα της τεκμηρίωσης μέσω Facebook ή Discord.
 
-    <br />* When we approve you, click the flag
-       ![When we approve you, click the flag](../images/translation_flags.png)
+    <br />* Όταν σας εγκρίνουμε, κάντε κλικ στη σημαία
+       ![Όταν σας εγκρίνουμε, κάντε κλικ στη σημαία](../images/translation_flags.png)
     
-    ## Translation of the app
+    ## Μετάφραση της εφαρμογής
     
     (translations-translate-strings-for-AAPS-app)=
-    ### Translate strings for AAPS app
+    ### Μετάφραση κειμένων της εφαρμογής AAPS
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
+    * Αν δεν σας ενδιαφέρει ποια κείμενα θα μεταφράσετε, απλώς πατήστε το κουμπί «Translate All» (μετάφραση όλων) για να ξεκινήσετε. Θα σας δείξει τα κείμενα που χρειάζονται μετάφραση.
     
-       ![Click translate all](../images/translations-click-translate-all.png)
+       ![Κλικ στο Translate All](../images/translations-click-translate-all.png)
     
-    * If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
+    * Αν θέλετε να μεταφράσετε ένα συγκεκριμένο αρχείο, βρείτε το με την αναζήτηση ή στη δομή δέντρου και κάντε κλικ στο όνομα του αρχείου για να ξεκινήσετε τη μετάφραση των κειμένων του.
     
-       ![Click strings.xml](../images/translations-click-strings.png)
+       ![Κλικ στο strings.xml](../images/translations-click-strings.png)
     
-    * Translate sentences on left side by adding new translated text or use & edit suggestion 
+    * Μεταφράστε τις προτάσεις στην αριστερή πλευρά: γράψτε νέο μεταφρασμένο κείμενο ή χρησιμοποιήστε & διορθώστε μια πρόταση
     
-       ![Translation app](../images/translations-translate.png)
-    
-    
-    ### Proofread strings for AAPS app
-    
-    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
-    
-       ![Proofreading mode app](../images/translations-proofreading-mode.png) 
+       ![Μετάφραση της εφαρμογής](../images/translations-translate.png)
     
     
-      and approve translated texts 
+    ### Επιμέλεια κειμένων της εφαρμογής AAPS
     
-       ![approve text](../images/translations-proofreading.png)
+    * Οι επιμελητές ξεκινούν επιλέγοντας «Proofread» (επιμέλεια) στην αρχική οθόνη της γλώσσας.
     
-    When a proofreader approves a translation it will be added to the next version of AAPS.
+       ![Λειτουργία επιμέλειας της εφαρμογής](../images/translations-proofreading-mode.png)
+    
+    
+      και εγκρίνουν τα μεταφρασμένα κείμενα
+    
+       ![έγκριση κειμένου](../images/translations-proofreading.png)
+    
+    Όταν ένας επιμελητής εγκρίνει μια μετάφραση, αυτή θα μπει στην επόμενη έκδοση του AAPS.
     
     (translations-translation-of-the-documentation)=
-    ## Translation of the documentation
+    ## Μετάφραση της τεκμηρίωσης
     
-    * Click the name of the docs page you want to translate
+    * Κάντε κλικ στο όνομα της σελίδας της τεκμηρίωσης που θέλετε να μεταφράσετε
     
-    ![Click docs page](../images/translation_WikiPage.png)
+    ![Κλικ σε σελίδα της τεκμηρίωσης](../images/translation_WikiPage.png)
     
     
-    * Translate sentences by sentence
+    * Μεταφράστε πρόταση προς πρόταση
     
-        1. The yellow text is the text you are working at the moment.
+        1. Το κίτρινο κείμενο είναι το κείμενο στο οποίο δουλεύετε αυτή τη στιγμή.
     
-        1. The green text is already translated. You don't need to do this again.
+        1. Το πράσινο κείμενο είναι ήδη μεταφρασμένο. Δεν χρειάζεται να το ξανακάνετε.
     
-        1. The red text is the remaining text which have to be translated.
+        1. Το κόκκινο κείμενο είναι το κείμενο που μένει ακόμα να μεταφραστεί.
     
-        1. This is the source text you are working on at the moment
+        1. Αυτό είναι το αρχικό κείμενο πάνω στο οποίο εργάζεστε αυτή τη στιγμή
     
-        1. This is the translation you are preparing. You can copy the text from above or select one of the suggestions below.
+        1. Αυτή είναι η μετάφραση που προετοιμάζετε. Μπορείτε να αντιγράψετε το κείμενο από πάνω ή να διαλέξετε μία από τις παρακάτω προτάσεις.
     
-        1. These are the suggestion for a translation. Especially you can see how much Crowdin rates this as a fit or if it was already just in the past and come up through text rearrangements but not content change.
-        1. Press the "save" button to save a proposal for the translation. It will then promoted to a proofreader for final check.
+        1. Αυτές είναι οι προτάσεις για μια μετάφραση. Εδώ βλέπετε κυρίως πόσο καλά ταιριάζει η πρόταση κατά το Crowdin, ή αν το κείμενο είχε ήδη μεταφραστεί στο παρελθόν και εμφανίστηκε ξανά μόνο επειδή μετακινήθηκε, όχι επειδή άλλαξε.
+        1. Πατήστε το κουμπί «Save» (αποθήκευση) για να αποθηκεύσετε μια πρόταση μετάφρασης. Μετά θα περάσει σε έναν επιμελητή για τον τελικό έλεγχο.
     
-    ![Translation docs](../images/translation_WikiTranslate.png)
+    ![Μετάφραση της τεκμηρίωσης](../images/translation_WikiTranslate.png)
     
-    * A translated page will not be published in docs before 
+    * Μια μεταφρασμένη σελίδα δεν θα δημοσιευτεί στην τεκμηρίωση πριν
     
-        1. the translation is proofread
+        1. η μετάφραση έχει περάσει επιμέλεια
     
-        1. the sync run between Crowdin and Github finished (once an hour) which creates an PR for Github.
+        1. τελειώσει ο συγχρονισμός μεταξύ Crowdin και GitHub (μία φορά την ώρα), που δημιουργεί ένα PR στο GitHub.
     
-        1. the PR in Github was approved.
+        1. εγκριθεί το PR στο GitHub.
     
-    In general this needs 1 - 3 days but might during holiday take a little bit longer.
+    Συνήθως αυτό χρειάζεται 1–3 ημέρες, αλλά σε περιόδους διακοπών μπορεί να πάρει λίγο περισσότερο.
     
-    ### Translating links
+    ### Μετάφραση συνδέσμων
     
-    ```{admonition} Links are not translated anymore
+    ```{admonition} Οι σύνδεσμοι δεν μεταφράζονται πια
     :class: note
     
-    Links are not translated anymore. In the past we had a topic here but this is gone as through migraton to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    Οι σύνδεσμοι δεν μεταφράζονται πια. Παλιότερα υπήρχε εδώ μια ενότητα για αυτό. Δεν χρειάζεται πια: με τη μετάβαση στο Markdown και στο myst_parser δημιουργούμε ρητά ετικέτες (labels) στο αγγλικό κείμενο και αυτές περνούν αυτόματα στις άλλες γλώσσες.
     
     
 
-You are translating the text which represents the link. Please you have to be careful **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
+Μεταφράζετε το κείμενο που εμφανίζεται ως σύνδεσμος. Προσέξτε **να μη** διαγράψετε τον σύνδεσμο, που φαίνεται ως ένα ζευγάρι ετικετών `<0></0>` ή, αν υπάρχουν περισσότεροι σε μία παράγραφο, με άλλους αριθμούς.
 
-It's the proofreaders job to have a special look on this!
+Οι επιμελητές πρέπει να το ελέγχουν αυτό με ιδιαίτερη προσοχή!
 
-### Proofreading
+### Επιμέλεια
 
-* Οι επιμελητές (proofreaders) πρέπει να αλλάξουν στη λειτουργία Επιμέλειας (Proofreading mode)
+* Οι επιμελητές (proofreaders) πρέπει να αλλάξουν σε λειτουργία επιμέλειας (Proofreading mode)
     
-    ![Proofreading mode docs](../images/translation_WikiProofreadingmode.png)
+    ![Λειτουργία επιμέλειας για την τεκμηρίωση](../images/translation_WikiProofreadingmode.png)
     
     και να εγκρίνουν μεταφρασμένα κείμενα
     
     ![έγκριση κειμένου](../images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during hollidays. To speed up the process you can inform docs team about new translations.
+* Όταν ένας επιμελητής εγκρίνει μια μετάφραση, αυτή θα μπει στο επόμενο build της τεκμηρίωσης. Αυτό γίνεται χωρίς σταθερό πρόγραμμα, όταν χρειάζεται, αλλά περίπου μία φορά την εβδομάδα, εκτός από τις περιόδους διακοπών. Για να γίνει πιο γρήγορα η διαδικασία, μπορείτε να ενημερώσετε την ομάδα της τεκμηρίωσης για νέες μεταφράσεις.

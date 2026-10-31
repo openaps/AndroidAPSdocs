@@ -1,29 +1,29 @@
 # CareSens
 
-There are different ways to use CareSens data with **AAPS**:
+Il existe plusieurs façons d'utiliser les données CareSens avec **AAPS** :
 
-- xDrip+
+- xDrip
 - Juggluco
 
-**Note:** You do not need the Sens365 follower app to connect to AAPS.
+**Remarque :** Vous n'avez pas besoin de l'application de suivi Sens365 pour vous connecter à AAPS.
 
-## 1. xDrip+
+## 1. xDrip
 
-1. Install and set up the official CareSens app.
-2. In CareSens app, go to settings -> Manage Data and Connections -> turn on xDrip switch. If prefered, turn off the data connections to CareLevo, DIA:CONN, CloudLoop, etc. in "others" .
+1. Installez et configurez l'application officielle CareSens.
+2. Dans l'application CareSens, allez dans settings -> Manage Data and Connections -> activez l'interrupteur xDrip. Si vous le souhaitez, désactivez les connexions de données vers CareLevo, DIA:CONN, CloudLoop, etc. dans « others ».
 
-![CareSens App Data Connections](../images/eversenseapp-dataconnections.png)
+![Connexions de données de l'application CareSens](../images/eversenseapp-dataconnections.png)
 
 
-2. Install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip).
-3. In xDrip+, go to settings -> hardware data source, select `Companion App` as data source.
-4. In **AAPS**, select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+2. Installez xDrip : [xDrip](https://github.com/NightscoutFoundation/xDrip).
+3. Dans xDrip, allez dans settings -> hardware data source, sélectionnez `Companion App` comme source de données.
+4. Dans **AAPS**, sélectionnez xDrip dans [**Configuration → Source GLY**](#Config-Builder-bg-source).
 
 
 ## 2. Juggluco
 
-1. Install the Juggluco app.
-2. In Juggluco, open the left menu and select `Photo`
-3. Scan the QR code on the package of the sensor.
-4. In left menu -> settings -> exchange data make sure xDrip broadcast is turned on.
-5. In **AAPS**, select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+1. Installez l'application Juggluco.
+2. Dans Juggluco, ouvrez le menu de gauche et sélectionnez `Photo`
+3. Scannez le QR code sur l'emballage du capteur.
+4. Dans le menu de gauche -> settings -> exchange data, vérifiez que xDrip broadcast est activé.
+5. Dans **AAPS**, sélectionnez xDrip dans [**Configuration → Source GLY**](#Config-Builder-bg-source).

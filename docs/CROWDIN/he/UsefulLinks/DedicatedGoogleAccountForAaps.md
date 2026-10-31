@@ -8,7 +8,7 @@ If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go
 :class: dropdown
 
 - Dedicated Google drive space means you will not risk filling up your personal Google drive limit with **Export Preferences**.
-- Each version of **AAPS** (and supporting apps like xDrip+, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
+- Each version of **AAPS** (and supporting apps like xDrip, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
 - By harmonizing the setup, it will make online support simpler across users with similar folder structure.
 - Depending on the setup (see below), you will have a separate identity as an alias to communicate within the community which can protect your privacy. 
 - Children with T1D can preserve their own “everyday” email account as minors while using **AAPS** and associated features which require an adult account.
@@ -23,7 +23,7 @@ If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go
 
 Requirements:
 
-* You have a Windows’ PC (Windows 10 or newer) and a Android phone (Android 9 or newer) which will host the **AAPS** app. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
+* You have a Windows’ PC (Windows 10 or newer) and an Android phone (Android 12 or newer) which will host the **AAPS** app. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
 * The Android phone is already set-up with your personal ”everyday” email address, such as a Gmail account.
 
 ```{admonition} Things to consider when setting up your new account
@@ -37,8 +37,8 @@ Requirements:
 ```
 
 
-```{admonition}  Video Walkthrough! 
-:class: Note
+```{admonition} Video Walkthrough!
+:class: note
 Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
 ```
 

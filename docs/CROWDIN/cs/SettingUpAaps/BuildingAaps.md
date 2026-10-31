@@ -1,33 +1,50 @@
 # Sestavení AAPS
 
-## Vyrobte si místo stažení
+## Sestavte si aplikaci sami, místo stažení
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. Je legální vytvořit aplikaci pro své vlastní použití, ale nesmíte dát kopii ostatním!**
+**Aplikace AAPS (soubor apk) není k dispozici ke stažení kvůli předpisům pro zdravotnické prostředky. Sestavit si aplikaci pro vlastní použití je legální, ale nesmíte dávat kopii jiným!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Podrobnosti najdete na stránce [Nejčastější otázky uživatelů APS](../UsefulLinks/FAQ.md).
 
 ---
 
-Three methods are available to build the AAPS app:
+Aplikaci AAPS lze sestavit třemi způsoby:
 
-### Build with a browser (recommended)
+### Sestavení v prohlížeči (doporučeno)
 
-You can build the app with your smartphone using GitHub actions, and save it in your Google Drive.
+Aplikaci můžete sestavit ve svém chytrém telefonu pomocí GitHub Actions. Na telefonu s Androidem vás celým postupem provede stránka nastavení [AAPS Builder](#aaps-builder) a každé sestavení spouštíte sami. Z počítače nebo iPhonu můžete také sestavit aplikaci s forkem a uložit ji na svůj Disk Google.
 
-**[Follow these instructions.](./BrowserBuild.md)**
-
-----
-
-### Build with Android Studio
-
-You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
-
-**[Follow these instructions.](./ComputerBuild.md)**
+**[Postupujte podle tohoto návodu.](./BrowserBuild.md)**
 
 ----
 
-### Build using the command-line
+### Sestavení v Android Studiu
 
-This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
+Aplikaci můžete sestavit na počítači pomocí Android Studia. Dříve to byla jediná možnost sestavení, dnes Android Studio používají hlavně vývojáři, kteří chtějí upravovat kód.
 
-**[Follow these instructions.](./CLIBuild.md)**
+**[Postupujte podle tohoto návodu.](./ComputerBuild.md)**
+
+----
+
+### Sestavení z příkazové řádky
+
+Tato možnost je pro ty, kdo chtějí sestavit AAPS lokálně z příkazové řádky bez instalace Android Studia.
+
+**[Postupujte podle tohoto návodu.](./CLIBuild.md)**
+
+----
+
+(building-aaps-troubleshooting)=
+## Pokud sestavení selže
+
+Každý způsob sestavení má vlastní část o řešení problémů:
+
+* **AAPS Builder**: [Řešení problémů s AAPS Builder](#aaps-builder-troubleshooting)
+* **Sestavení v prohlížeči** z počítače nebo iPhonu: [Řešení problémů se sestavením v prohlížeči](#aaps-ci-troubleshooting)
+* **Android Studio**: [Řešení problémů s Android Studiem](../GettingHelp/TroubleshootingAndroidStudio.md)
+
+Ztratili jste úložiště klíčů nebo jeho heslo? Viz [Přeinstalace AAPS s novým úložištěm klíčů](#reinstall-aaps).
+
+Pokud je aplikace sestavená, ale v telefonu se nenainstaluje, viz [Přenos a instalace AAPS](TransferringAndInstallingAaps.md).
+
+Pokud váš problém v seznamu není, viz [Kde mohu získat pomoc](../GettingHelp/WhereCanIGetHelp.md).

@@ -1,41 +1,66 @@
 # Tidepool
 
-Tidepool is a third party tool that collects data regarding BG, insulin and carbs and can be used to analyze and share this data with your clinical team. Since AAPS version 3.2 it can be used as an alternative to Nightscout for satisfying part of Objective 1. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with.
+Tidepool is een externe tool die gegevens over BG, insuline en koolhydraten verzamelt (en de notities die je aan je behandelingen toevoegt). Je kunt deze gegevens analyseren en delen met je zorgteam. Sinds AAPS versie 3.2 kan het worden gebruikt als alternatief voor Nightscout om aan een deel van Doel 1 te voldoen. Je kunt het ook samen met Nightscout gebruiken als extra rapportageplatform dat goed aansluit bij de klinische zorg. Dit kan de gewenste optie zijn voor kinderen die AAPS gebruiken en de functies van Nightscout voor volgen en bedienen op afstand willen, maar ook een rapportageplatform willen waar hun diabetesteam beter mee overweg kan.
 
-It is important to understand the tidepool is for reporting only. It is NOT a real-time follow app. If you need to have followers apart from the main AAPS phone you must setup Nightscout as well.
+Het is belangrijk om te begrijpen dat Tidepool alleen dient voor rapportage. Het is GEEN app om in realtime te volgen. Als je volgers nodig hebt naast de AAPS-telefoon, moet je ook Nightscout instellen.
 
-Note: the Tidepool organization has brought the iOS Loop product to market with FDA approval. This effort has nothing to do with their data reporting platform or AAPS.
-
-
-## Step 1 - Setup a tidepool account
-
--Navigate to [tidepool.org](https://www.tidepool.org/)
-
--Select “Personal Sign Up” or “Sign Up”
-
--Create and document an email and password
-
--Select “Personal Account” and click “Continue”
-
--Complete the patient information section and accept the terms of use
-
--Verify your email address via the instructions received to your email
+Let op: de organisatie Tidepool heeft het product Loop voor iOS met FDA-goedkeuring op de markt gebracht. Dit project heeft niets te maken met hun platform voor gegevensrapportage of met AAPS.
 
 
-## Step 2 - Enter credentials into AAPS
+## Stap 1 - Maak een Tidepool-account aan
 
--Select the three-line “hamburger” menu in the top left and the select “Config Builder” (if “Config Builder is not located there it will instead be one of the tabs along the top)
+- Ga naar [tidepool.org](https://www.tidepool.org/)
 
--Scroll down to the “Synchronization” section and select the check mark to the left of “Tidepool”
+- Kies “Personal Sign Up” of “Sign Up”
 
--Click the gear icon to the right of “Tidepool”
+- Kies een e-mailadres en wachtwoord en schrijf ze op
 
--Enter the username and password you created in Step 1 above
+- Kies “Personal Account” en klik op “Continue”
 
--Click “Test Tidepool Login”
+- Vul het deel met patiëntgegevens in en accepteer de gebruiksvoorwaarden
 
--If you get the “Successfully logged into Tidepool” message you have successfully connected. If not, confirm your credentials are correct and that you have verified your email address with Tidepool.
+- Bevestig je e-mailadres met de instructies die je per e-mail krijgt
 
--Click on “Connection settings” and set based on your personal preferences
 
-For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data) 
+## Stap 2 - Verbind AAPS met Tidepool
+
+- Open het **menu** (☰) linksboven in het hoofdscherm en kies "**Configuratie**"
+
+- Open de categorie "**Communicatie**" en zet "**Tidepool**" aan:
+
+![Tidepool aanzetten](../images/v4/Tidepool/tidepool_enable.png)
+
+- Tik op "**Plug-in openen**" onder Tidepool en tik daarna rechtsboven op het pictogram **Aanmelden** (een pijl die een deur in gaat)
+
+- Er opent een browservenster met de aanmeldpagina van Tidepool. Meld je aan met het e-mailadres en wachtwoord die je hierboven in stap 1 hebt aangemaakt:
+
+![Aanmeldpagina van Tidepool](../images/v4/Tidepool/tidepool_login.png)
+
+- Na een geslaagde aanmelding sluit de browser en toont het Tidepool-scherm de status "**Verbonden**"; het logboek eronder toont de uploads van gegevens. Lukt het aanmelden niet, controleer dan of je gegevens juist zijn en of je je e-mailadres bij Tidepool hebt bevestigd.
+
+![Tidepool verbonden](../images/v4/Tidepool/tidepool_status.png)
+
+- Open in de "**Instellingen**" van de Tidepool-plugin "**Verbindings instellingen**". Standaard staat "**Gebruik Nightscout-verbindingsinstellingen**" aan. Tidepool uploadt dan onder dezelfde voorwaarden die je voor Nightscout hebt ingesteld. Zet het uit als je aparte voorwaarden voor Tidepool wilt, bijvoorbeeld om alleen via wifi en tijdens het opladen naar Tidepool te uploaden, terwijl Nightscout ook mobiele data gebruikt.
+
+![Verbindingsinstellingen met Gebruik Nightscout-verbindingsinstellingen aan](../images/v4/Tidepool/tidepool_connection_settings.png) ![Aparte verbindingsinstellingen voor Tidepool](../images/v4/Tidepool/tidepool_connection_settings_separate.png)
+
+Meer hulp bij het gebruik van je gegevens nadat ze naar Tidepool zijn geüpload vind je op: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
+
+(tidepool-menu)=
+## De knoppen van Tidepool
+
+Rechtsboven in het Tidepool-scherm:
+
+- Het pictogram **Aanmelden** of **Uitloggen** — verbinden met of loskoppelen van je Tidepool-account. Er wordt er maar één getoond: **Aanmelden** als je bent afgemeld, **Uitloggen** als je bent aangemeld. **AAPS** vraagt je om te bevestigen voordat je wordt uitgelogd.
+- Het tandwielpictogram — de Tidepool-instellingen.
+
+De knoppen onderaan het Tidepool-scherm:
+
+- "**Nu Uploaden**" — upload nieuwe gegevens meteen in plaats van te wachten op de volgende automatische upload.
+- "**Volledige synchronisatie**" — upload alle gegevens die in **AAPS** zijn opgeslagen opnieuw.
+- "**Verwijder alle gegevens**" — verwijder **alle** gegevens die **AAPS** naar je Tidepool-account heeft geüpload. Dit kan niet ongedaan worden gemaakt. Gebruik dit alleen om foute of dubbele gegevens te verwijderen. Start daarna "**Volledige synchronisatie**" om je gegevens opnieuw te uploaden.
+- "**Logboek wissen**" — maak het logboek op het Tidepool-scherm leeg.
+
+![Het Tidepool-scherm en de knoppen](../images/v4/Tidepool/tidepool_menu.png)
+
+In Tidepool worden de gegevens die **AAPS** 4 uploadt getoond onder de apparaatnaam **AAPS**. Zie [Wat is er veranderd in AAPS v4](#v4changes-tidepool) als je Tidepool met een oudere versie gebruikte. 

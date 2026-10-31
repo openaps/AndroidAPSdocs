@@ -1,8 +1,7 @@
-# 移宇（Medtrum）Nano/300U胰岛素泵
+(medtrum-nano-300u)=
+# Medtrum Nano 200U / 300U
 
 本说明用于配置移宇（Medtrum）胰岛素泵。
-
-本软件属于人工胰腺系统的DIY解决方案，并非商业产品，需要用户自行研习并全面掌握系统操作原理。使用后果由您自行承担。
 
 ```{contents} Table of contents
 :depth: 1
@@ -17,13 +16,12 @@
 ## 硬件和软件要求
 * **兼容的移宇(Medtrum)泵底板与储药器贴片**
     - 当前支持：
-        - 移宇TouchCare Nano胰岛素泵（配套泵基座型号：**MD0201**及**MD8201**）
+        - Medtrum TouchCare Nano 200U with pumpbase refs: **MD0201** and **MD8201**.
         - 移宇TouchCare 300U胰岛素泵（配套泵基座型号：**MD8301**）
         - 若您持有不受支持的型号，并愿意捐赠硬件或协助测试，请通过Discord[此处](https://discordapp.com/channels/629952586895851530/1076120802476441641)联系我们。
-* **已构建并安装AAPS 3.2.0.0或更高版本**，请参照[构建APK](../SettingUpAaps/BuildingAaps.md)说明进行操作。
+* **AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
 * **兼容的Android手机**（需具备BLE蓝牙连接功能）
     - 请参阅AAPS[版本说明](../Maintenance/ReleaseNotes.md)
-* [**持续血糖监测仪（CGM）**](../Getting-Started/CompatiblesCgms.md)
 
 ## 在您开始前
 
@@ -35,351 +33,362 @@
 
 **当未连接AAPS时，您的胰岛素泵不会停止输注胰岛素** 胰岛素泵将按照当前使用方案中设定的基础率持续输注。只要AAPS处于运行状态，就会发送最长持续120分钟的临时基础率指令。若因某些原因（如因胰岛素泵与手机距离过远导致通信中断）泵体未能接收到新指令，临时基础率结束后将自动恢复为泵体预设的基础率。
 
-**AAPS不支持30分钟基础率方案。****AAPS配置方案不支持30分钟基础率时间间隔。**若您初次使用AAPS并首次设置基础率方案，请注意系统不支持半点起始的基础率设置，您需要将基础率方案调整为整点起始。例如，若您设置了09:30开始、持续2小时至11:30结束的1.1单位基础率，该设置将无法生效。您需要将这个1.1单位的基础率时间段调整为9:00-11:00或10:00-12:00。尽管移宇胰岛素泵硬件本身支持30分钟基础率间隔设置，但AAPS当前算法尚无法兼容此类设置。
+**The AAPS Profile does not support a 30 minute basal rate time frame** If you are new to AAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. 例如，若您设置了09:30开始、持续2小时至11:30结束的1.1单位基础率，该设置将无法生效。您需要将这个1.1单位的基础率时间段调整为9:00-11:00或10:00-12:00。尽管移宇胰岛素泵硬件本身支持30分钟基础率间隔设置，但AAPS当前算法尚无法兼容此类设置。
 
-**AAPS不支持0U/h基础率方案设置**。虽然移宇胰岛素泵确实支持零基础率，但AAPS需基于基础率倍数进行自动化治疗计算，因此无法兼容零基础率设置。可通过"断开泵连接"功能，或结合停用循环/临时基础率与暂停循环/临时基础率功能，实现临时零基础率设置。
+**AAPS不支持0U/h基础率方案设置**。虽然移宇胰岛素泵确实支持零基础率，但AAPS需基于基础率倍数进行自动化治疗计算，因此无法兼容零基础率设置。 The minimum profile basal rate is 0.05 U/h.
+
+可通过"断开泵连接"功能，或结合停用循环/临时基础率与暂停循环/临时基础率功能，实现临时零基础率设置。
 
 ## 设置
 
-警告：使用AAPS激活贴片时，您**必须**禁用所有其他可与移宇泵基座通信的设备。例如：正在使用的PDM及移宇应用程序。请确保准备好您的泵基座及泵基座序列号，以便激活新贴片。
+```{caution}
+When you activate a patch with **AAPS**, you **MUST** turn off every other device that can talk to the Medtrum pump base, for example an active PDM or the Medtrum app.
+```
 
 ### 步骤1：选择移宇胰岛素泵
 
 #### Option 1: New installations
 
-若您首次安装AAPS，**设置向导**将引导您完成安装流程。当进入泵体选择界面时，请选择"移宇"。
+If you are installing **AAPS** for the first time, the **Setup Wizard** guides you through the setup. Select **Medtrum** when you reach the **Pump** step.
 
-如有疑问，您也可先选择"虚拟泵"，待完成AAPS设置后再选择"移宇"（参见选项2）。
+If in doubt, you can also select **Virtual Pump** and select **Medtrum** later, after setting up **AAPS** (see option 2).
 
-![设置向导](../images/medtrum/SetupWizard.png)
+![Setup Wizard pump step](../images/setup-wizard/Wizard-Pump.png)
 
-#### Option 2: The Config Builder
+#### Option 2: The Configuration screen
 
-在现有安装中，您可通过[配置生成器 > 泵](#Config-Builder-pump)选择**移宇**胰岛素泵：
+On an existing installation you can select the **Medtrum** pump in [Configuration > Pump](#Config-Builder-pump):
 
-在左上角**汉堡菜单**中选择**配置生成器** ➜ **泵** ➜ **移宇**，然后点击标有**移宇**的**启用按钮**。
+Open the top-left **menu** (☰), tap **Configuration** > **Pump**, and select the **Medtrum** card. Only one pump can be active at a time.
 
-勾选**设置齿轮**旁的**复选框**，即可在AAPS界面中显示名为**移宇**的标签页概览。勾选此选项将便于您在使用AAPS时访问移宇相关指令，强烈建议启用。
+![Configuration > Pump with the Medtrum plugin](../images/v4/Configuration/configuration_pump_list_4.png)
 
-![配置生成器](../images/medtrum/ConfigBuilder.png)
+Once it is selected, the **Medtrum** card shows two buttons, **Settings** and **Open plugin**:
 
+![The Medtrum plugin selected in Configuration > Pump](../images/v4/Pumps/medtrum_enabled.png)
+
+**Open plugin** (or **Manage → Pump**) opens the Medtrum pump screen. You use it to change patches and to see the pump status. Before a patch is activated it looks like this:
+
+![Medtrum pump screen before pairing](../images/v4/Pumps/medtrum_pump_screen.png)
+
+(medtrum-step-2)=
 ### 步骤2：调整移宇设置
 
-点击配置生成器中移宇模块的**设置齿轮**即可进入移宇设置界面。
+Tap **Settings** on the **Medtrum** card in **Configuration** > **Pump**. You can also tap the gear icon in the top-right corner of the Medtrum pump screen. This opens the **Medtrum pump settings**:
 
-![Medtrum Settings](../images/medtrum/MedtrumSettings.png)
+![Medtrum driver settings](../images/v4/Pumps/medtrum_settings.png)
 
-#### 序列号:
+```{note}
+There is no **Serial Number** setting any more. **AAPS** finds your pump base with a Bluetooth scan the first time you activate a patch (see [Step 3](#medtrum-activate-patch)), and remembers its serial number. To use a different pump base, see [Unpair](#medtrum-unpair).
+```
 
-请在此处输入您泵基座上标注的泵基座序列号。请确保序列号准确无误且未添加空格（字母大小写均可）。
-
-注意：此设置仅在无激活贴片时方可修改。
-
-#### 警报设置
+#### Alarm Settings
 
 ***默认设置：蜂鸣提示。***
 
-此设置将改变胰岛素泵在出现警告或错误时的警报方式。
+This setting changes the way that the pump alerts you when there is a warning or error.
 
-- 蜂鸣 > 贴片将通过蜂鸣声提示警报和警告
-- 静音 > 贴片将不会通过警报声或警告声提醒您
+- **Beep**: the patch beeps on alarms and warnings.
+- **Silent**: the patch does not alert you on alarms and warnings.
 
-注意：在静音模式下，AAPS仍会根据您手机的音量设置发出警报声。若您未响应警报，贴片最终仍会发出蜂鸣声。
+Note: In silent mode **AAPS** still sounds the alarm, depending on your phone's volume settings. If you do not respond to the alarm, the patch eventually beeps.
 
 #### 胰岛素泵警告通知
 
 ***默认状态：启用。***
 
-此设置将改变AAPS对非关键性泵警报的提示方式。当启用时，手机将在出现胰岛素泵警告时显示通知，包括：
-    - 电量不足
-    - 储药量不足（20单位）
-    - 贴片有效期警告
+This setting changes the way **AAPS** shows notifications for non-critical pump warnings. When enabled, a notification is shown on the phone when a pump warning occurs, including:
+- 电量不足
+- Low reservoir (20 units)
+- Patch expires soon
 
-无论何种情况，这些警告信息都将在移宇概览屏幕的[活动警报](#medtrum-active-alarms)项下显示。
+We recommend leaving this enabled when the pump alarms are set to **Silent**. In either case these warnings are also shown on the Medtrum pump screen under [Active alarms](#medtrum-active-alarms).
 
 (medtrum-patch-expiration)=
 #### 贴片到期警告
 
 ***默认状态：启用。***
 
-此设置将改变贴片的工作模式。当启用此设置时，贴片将在3天后到期，并在开启声音提示的情况下发出声音警告。 3天8小时后，贴片将停止工作。
+此设置将改变贴片的工作模式。 When enabled, the patch expires after 3 days and gives an audible warning if you have sound enabled. After 3 days and 8 hours the patch stops working.
 
-若禁用此设置，贴片将不会发出警告，并持续运行直至贴片电池耗尽或储药槽用尽。
+If this setting is disabled, the patch does not warn you before it stops. With recent pump base firmware, a patch runs for 5 days at most.
 
-#### 胰岛素泵到期警告
+#### Pump expiry warning [hours]
 
 ***默认值：72小时。***
 
-此设置将修改到期警告的时间：当启用[贴片到期](#medtrum-patch-expiration)功能时，AAPS会在激活后的设定小时数发出通知。
+This setting changes the time of the expiration warning. When [Patch Expiration](#medtrum-patch-expiration) is enabled, **AAPS** shows a notification this many hours after activation.
 
-#### 每小时最大胰岛素剂量
+#### Hourly Maximum Insulin [Units]
 
 ***默认值：25单位。***
 
-此设置将修改每小时的最大胰岛素输注量。若超过此限制，贴片将暂停输注并发出警报。 The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
+此设置将修改每小时的最大胰岛素输注量。 If this limit is exceeded, the patch suspends and gives an alarm. You can reset the alarm with the **Reset alarms** button on the pump screen, see [Reset alarms](#nano-reset-alarms).
 
 请根据您的胰岛素需求设置合理数值。
 
-#### 每日最大胰岛素剂量
+#### Daily Maximum Insulin [Units]
 
 ***默认值：80单位。***
 
-此设置将修改每日最大胰岛素输注量。若超过此限制，贴片将暂停输注并发出警报。 The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
+此设置将修改每日最大胰岛素输注量。 If this limit is exceeded, the patch suspends and gives an alarm. You can reset the alarm with the **Reset alarms** button on the pump screen, see [Reset alarms](#nano-reset-alarms).
 
 请根据您的胰岛素需求设置合理数值。
 
-#### 连接错误时扫描
+#### Scan on connection error
 
 ***默认状态：关闭。***
 
 位于**高级设置**项下。
 
-仅在出现连接问题时启用。若启用此功能，驱动程序将在尝试重新连接胰岛素泵前再次进行扫描。请确保将位置权限设置为"始终允许"。
+Only enable this if you have connection problems. When enabled, the driver scans for the pump again before trying to reconnect to it. Make sure the Location permission for **AAPS** is set to "Allow all the time".
 
-### 步骤2b：AAPS警报设置
+### Step 2b: AAPS alert settings
 
-前往偏好设置
+These settings are not part of the Medtrum driver. Open them from the **Settings** (gear) icon in the top-right corner of the main screen. See [Settings](../SettingUpAaps/Preferences.md) for more.
 
-#### 胰岛素泵:
+#### 蓝牙看门狗
 
-##### 蓝牙看门狗
+Open **Settings** > **Pump**:
 
-前往偏好设置并选择**胰岛素泵**：
+![Settings > Pump](../images/preferences/settings_pump.png)
 
-![蓝牙看门狗](../images/medtrum/BTWatchdogSetting.png)
+**BT Watchdog** switches off the phone's Bluetooth for one second if **AAPS** cannot connect to the pump. This may help on some phones where Bluetooth freezes.
 
-##### 蓝牙看门狗
+Enable this setting if you often have connection problems with your pump.
 
-此设置将尝试解决所有蓝牙低功耗(BLE)连接问题。当连接中断时，系统将尝试重新连接胰岛素泵。当胰岛素泵在一定时间内无法连接时，系统也将尝试重新建立连接。
+#### 本地警报
 
-若您的胰岛素泵频繁出现连接问题，请启用此设置。
+Open **Settings** > **Local alerts**:
 
-#### 本地警报：
-
-前往偏好设置并选择**本地警报**：
-
-![Local Alerts](../images/medtrum/LocalAlertsSettings.png)
+![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
 
 ##### 若胰岛素泵无法连接则发出警报
 
 ***默认状态：启用。***
 
-当移宇驱动程序启用时，此设置将强制启用。当泵无法连接时，系统将发出警报。当泵超出连接范围，或因贴片或泵座故障导致泵无响应时（例如泵座与贴片之间发生渗漏），系统将触发此警报。
+This setting is forced on when the Medtrum driver is enabled. It alerts you when the pump is unreachable. This can happen when the pump is out of range, or when it is not responding because of a faulty patch or pump base, for example when water leaks between the pump base and the patch.
 
 出于安全考虑，此设置不可禁用。
 
-##### 泵失联阈值[分钟]
+##### Pump unreachable threshold
 
 ***默认值：30分钟。***
 
-此设置用于调整移宇胰岛素泵失联后，AAPS系统触发警报的延迟时间。当泵超出连接范围，或因贴片或泵座故障导致泵无响应时（例如泵座与贴片之间发生渗漏），系统将触发此警报。
+This setting changes how long **AAPS** waits before alerting you that the pump is unreachable.
 
-使用移宇胰岛素泵时可调整此设置，但出于安全考虑建议保持30分钟默认值。
+You can change this setting when using the Medtrum pump, but we recommend keeping it at 30 minutes for safety reasons.
 
+(medtrum-activate-patch)=
 ### 步骤3：激活贴片
 
 **操作前须知：**
-- 请准备好您的移宇Nano泵座和储药贴片。
-- 请确保AAPS已正确设置并激活了[配置文件](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)。
-- 其他可与移宇泵通信的设备（PDM和移宇应用）已被禁用
+- Have your Medtrum pump base and a new reservoir patch ready.
+- Turn off other devices that can talk to the Medtrum pump (PDM and Medtrum app).
+- Ideally, make sure **AAPS** is set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). If no profile is active, the activation starts with a **Profile required** step where you choose the profile to activate.
 
-#### 从移宇概览标签页激活贴片
+#### Start the activation
 
-Navigate to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button in the bottom right corner.
+Open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**. If you have set up [settings protection](#Preferences-protection), you must enter your password or PIN first.
 
-如果已有贴片处于激活状态，系统将提示您先停用当前贴片。 see [Deactivate Patch](#nano-deactivate-patch).
+If a patch is already active, you are asked to deactivate it first, see [Deactivate patch](#nano-deactivate-patch).
 
-请按照提示操作，完成新贴片的填充和激活。请注意 - 必须严格按提示步骤操作，仅在系统提示时才能将泵底座与储药贴片连接。**必须严格遵照激活流程提示操作，仅当完成预充程序后系统提示时，方可将泵体佩戴至身上并插入导管。**
+The activation is a step-by-step wizard. 请按照提示操作，完成新贴片的填充和激活。 Tap **Cancel** at any step to stop.
 
-##### 开始激活
+```{important}
+Only put the patch on your body and insert the cannula when the wizard tells you to (after priming is complete).
+```
+
+The first steps you see depend on your setup:
+
+1. **Profile required**: only if no profile is active. Select the profile to apply, then continue.
+2. **Find Pump**: only the first time, or after you used [Unpair](#medtrum-unpair). Connect the pump base to a fresh patch to power it on. **AAPS** scans for nearby Medtrum pump bases (their names start with `MT`). Tap yours in the list. **AAPS** saves its serial number, then goes straight to filling the patch.
+
+   ![Find Pump step scanning for a Medtrum pump base](../images/medtrum/activation/FindPump.png)
+
+3. **Activate Patch**: only when **AAPS** already knows your pump base. The screen says "No active patch. Press **Next** to begin the activation process." Make sure the pump base is **not** connected to the patch yet, then tap **Next**.
 
 ![开始激活](../images/medtrum/activation/StartActivation.png)
 
-在此步骤中，请再次核对序列号，并确保泵底座尚未与贴片连接。
-
-点击**下一步**继续。
-
-##### 填充贴片
+#### Connect and fill the patch
 
 ![填充贴片](../images/medtrum/activation/FillPatch.png)
 
-当检测到贴片并填充至少70单位胰岛素后，将出现**下一步**按钮。
+Connect the pump base to the patch, remove the residual air and fill the patch with insulin. A minimum of 70 units is needed for activation. The screen shows the reservoir level. Do not attach the patch to your body yet.
 
-##### 预充贴片
+When the patch is detected and filled, the **Next** button appears. Tap it.
+
+#### Select insulin
+
+This step only appears if you have more than one insulin set up in **AAPS**. Select the insulin you are filling the patch with. **AAPS** applies a profile switch with this insulin after activation.
+
+#### 预充贴片
 
 ![Half press](../images/medtrum/activation/HalfPress.png)
 
-请勿移除安全锁，并按下贴片上的针头按钮。
-
-点击**下一步**开始预充
+Do **not** remove the safety lock. Half-press the needle button on the patch, then tap **Next** to start priming.
 
 ![Prime progress](../images/medtrum/activation/PrimeProgress.png)
 
+Wait for priming to complete.
+
 ![Prime complete](../images/medtrum/activation/PrimeComplete.png)
 
-预充完成后，点击**下一步**继续。
+When priming is complete, tap **Next** to continue.
 
-##### 安装贴片
+#### Site Rotation
+
+This step only appears if you manage pump sites with [Site Rotation](#Aapsscreens-site-rotation) (setting **Manage pump site rotation**). Choose where you place the patch on your body, or skip this step.
+
+#### Attach patch
 
 ![Attach patch](../images/medtrum/activation/AttachPatch.png)
 
-清洁皮肤，移除贴纸，将贴片安装到身体上。移除安全锁并按下贴片上的针头按钮以插入导管。
+Clean the skin and remove the stickers. Remove the safety lock, attach the patch to your body, and press the needle button to insert the cannula.
 
-点击**下一步**激活贴片。
+Tap **Next** to activate the patch.
 
-(medtrum-activate-patch)=
-##### 激活贴片
+#### Activate patch
 
 ![Activate patch](../images/medtrum/activation/ActivatePatch.png)
 
-当激活完成后，将出现以下界面
+**AAPS** activates the pump and sets the initial basal rate. Please wait. When activation is complete, the following screen appears:
 
 ![Activation complete](../images/medtrum/activation/ActivationComplete.png)
 
-点击**确定**返回主界面。
+```{admonition} Older screenshot
+:class: note
+Apart from **Find Pump**, the activation screenshots above are from an earlier **AAPS** version and may look different in **AAPS** 4.
+```
+
+It shows how many units are left in the patch. Tap **OK** to return to the pump screen.
+
+```{tip}
+After a new activation, [export your settings](../Maintenance/ExportImportSettings.md). This lets you recover this patch session later, for example on a new phone.
+```
 
 (nano-deactivate-patch)=
 
 ### 停用贴片
 
-To deactivate a currently active patch, go to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
+To deactivate the active patch, open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**.
 
 ![停用贴片](../images/medtrum/activation/DeactivatePatch.png)
 
-系统将要求您确认是否要停用当前贴片。**请注意此操作不可逆。** 停用完成后，可点击**下一步**继续新贴片激活流程。若尚未准备好激活新贴片，请点击**取消**返回主界面。
+You are asked to confirm that you want to deactivate the current patch. **This cannot be undone.** Tap **Next** to deactivate, or **Cancel** to return to the pump screen.
 
 ![Deactivate progress](../images/medtrum/activation/DeactivateProgress.png)
 
-若Android APS无法停用贴片（例如因泵底座已从储药贴片移除），可点击**丢弃**以终止当前贴片会话，从而激活新贴片。
+If **AAPS** cannot deactivate the patch (for example because the pump base has already been removed from the patch), tap **Discard** to forget the current patch session. You can then activate a new patch.
 
 ![Deactivate complete](../images/medtrum/activation/DeactivateComplete.png)
 
-停用完成后，点击**确定**返回主界面，或点击**下一步**继续新贴片激活流程。
+When deactivation is complete, retract the needle and remove the patch from your body. Remove the pump base and dispose of the used patch. Tap **OK** to return to the pump screen, or **Next** to start activating a new patch.
 
 (nano-resume-interrupted-activation)=
 
 ### 继续中断的激活
 
-If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
+If a patch activation is interrupted, for example because the phone battery runs out, you can resume it. Open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**.
 
 ![继续中断的激活](../images/medtrum/activation/ActivationInProgress.png)
 
-点击**下一步**继续激活流程。点击**丢弃**以终止当前贴片会话，从而激活新贴片。
+Tap **Next** to resume the activation. Tap **Discard** to reset the activation status, so you can activate a new patch.
 
 ![Reading activation status](../images/medtrum/activation/ReadingActivationStatus.png)
 
-驱动程序将尝试检测当前贴片激活状态。若检测成功，系统将从当前步骤继续激活流程。
+```{admonition} Older screenshot
+:class: note
+The screenshots in **Deactivate patch** and **Resume interrupted activation** are from an earlier **AAPS** version and may look different in **AAPS** 4.
+```
+
+The driver reads the activation status from the pump. If this works, the wizard continues at the step where it stopped.
 
 (nano-overview)=
 
-## 概览
+## Pump screen
 
-该概览显示移宇贴片的当前状态。同时包含更换贴片、重置警报和刷新状态的按钮。
+The Medtrum pump screen (**Manage → Pump**) shows the current status of the Medtrum patch. It also has buttons to change the patch, reset alarms and refresh the status. A banner at the top shows important states, for example **Patch not activated** or **Pump is suspended**.
 
-![Medtrum Overview](../images/medtrum/Overview.png)
+![Medtrum pump screen with an active patch](../images/v4/Pumps/medtrum_pump_screen_active.png)
 
-### 蓝牙状态：
+The screen can show these rows. Some rows only appear when they have a value.
 
-此处显示与泵底座的蓝牙连接当前状态。
-
-### 上次连接:
-
-此处显示泵上次连接AAPS的时间。
-
-### 泵状态：
-
-此处显示泵的当前状态。例如：
-    - 激活：泵已激活并正常运行
-    - 停止：贴片未激活
-
-### 基础率类型:
-
-此处显示当前基础率类型。
-
-### 基础率：
-
-此处显示当前基础率。
-
-### 最近一次大剂量：
-
-此处显示最近一次输注的大剂量。
-
-### 当前大剂量：
-
-此处显示正在输注的当前大剂量。
+- **Last connection**: how long ago **AAPS** last connected to the pump.
+- **Last bolus**: the last bolus that was delivered.
+- **Battery**: the current battery voltage of the patch.
+- **Reservoir**: the current reservoir level.
+- **Serial number**: the serial number of your pump base.
+- **Pump state**: the current state of the pump. For example **Active** (the patch is activated and running normally) or **Stopped** (the patch is not activated).
+- **Base basal rate**: the basal rate from your profile that is running now.
+- **Temp basal**: the temporary basal rate, if one is running.
+- **Active bolus**: the bolus that is being delivered right now.
+- **Active alarms**: see [below](#medtrum-active-alarms).
+- **Pump type**: the model of your pump base.
+- **FW version**: the firmware version of the pump base.
+- **Patch no**: the sequence number of the activated patch. It goes up by one every time you activate a new patch.
+- **Activation**: the date and time the patch was activated, and how long ago that was.
+- **Patch expires**: the date and time when the patch expires. Shows **Not enabled** if [Patch Expiration](#medtrum-patch-expiration) is off.
 
 (medtrum-active-alarms)=
-### 当前警报：
+### Active alarms
 
-此处显示当前所有激活中的警报状态。
+This row shows any alarms that are active right now, for example a low reservoir or an expiring patch.
 
-### 储药器:
+### Refresh
 
-此处显示当前储药器剩余药量。
+This button refreshes the status of the patch. It is only available when a patch is active and **AAPS** is not connected to the pump at that moment.
 
-### 电池:
+### Change Patch
 
-此处显示贴片当前电池电压。
+This button starts the wizard to change the patch. 详见[激活贴片](#medtrum-activate-patch)获取更多信息。
 
-### 泵类型：
+(medtrum-unpair)=
+### Unpair
 
-此处显示当前泵类型编号。
-
-### 固件版本：
-
-此处显示贴片当前固件版本。
-
-### 贴片编号：
-
-此处显示已激活贴片的序列号。该编号在每次激活新贴片时递增。
-
-### 贴片有效期：
-
-此处显示贴片到期日期和时间。
-
-### 刷新:
-
-此按钮将刷新贴片状态。
-
-### 更换贴片：
-
-此按钮将启动更换贴片流程。详见[激活贴片](#medtrum-activate-patch)获取更多信息。
+This button only appears when **AAPS** knows a pump base. It clears the stored pump base serial number and disconnects. The next time you activate a patch, **AAPS** scans for a pump base again (the **Find Pump** step). Use this if you switch to a different pump base. Only do this when no patch is active.
 
 (nano-reset-alarms)=
 
 ### 重置警报
 
-当存在可重置的激活警报时，警报按钮将显示在概览屏幕上。按下此按钮将重置警报，若贴片因警报暂停，将恢复胰岛素输注。例如当日胰岛素最大输注量警报触发暂停时。
+The **Reset alarms** button only appears on the pump screen when the patch has suspended itself, for example after a maximum daily insulin alarm. Tap it to reset the alarms and resume insulin delivery.
 
 ![重置警报](../images/medtrum/ResetAlarms.png)
 
-请按**重置警报**按钮以清除警报并恢复正常运行。
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen looks different, but the **Reset alarms** button works the same way.
+```
 
 ## 切换手机，导出/导入设置
 
-更换新手机时必须执行以下步骤：
-* 在旧手机[导出设置](../Maintenance/ExportImportSettings.md)
-* 将设置从旧手机传输至新手机，并导入至AAPS
+When you switch to a new phone, do the following:
+* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone.
+* Transfer the settings file from the old phone to the new phone, and import it into **AAPS**. Tick **Also replace pump settings** on the import screen, otherwise the patch session is not transferred to the new phone.
 
-导入的设置文件必须与当前使用的贴片会话相同，否则贴片将无法连接。
+The imported settings file must be from the patch session you are using now, otherwise the patch will not connect (see [Tubeless pumps](#ExportImportSettings-tubeless-pumps)).
 
-导入设置后，驱动程序将与泵同步历史记录，根据设置文件的生成时间，此过程可能需要一定时间。
+After a settings import, the driver syncs the history with the pump. This can take a while, depending on the age of the settings file. The progress ("Syncing records, ... left") is shown on the main screen:
 
-自AAPS 3.3.0.0版本起，主屏幕将显示同步进度：![Sync progress](../images/medtrum/SyncProgress.png)
+![Sync progress](../images/medtrum/SyncProgress.png)
+
+(medtrum-nano-troubleshooting)=
 
 ## 故障排除
 
 ### 连接问题
 
-若出现连接超时或其他连接问题：
-- 在AAPS的安卓应用设置中：将位置权限设为"始终允许"。
+If you have connection timeouts or other connection problems:
+- In the Android app settings for **AAPS**, set the Location permission to "Allow all the time".
+- Try enabling **Scan on connection error** (Medtrum settings > **Advanced Settings**) and **BT Watchdog** (**Settings** > **Pump**), see [Step 2](#medtrum-step-2).
 
 ### Bluetooth issues
 For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
 
 ### 激活中断
 
-若激活流程因手机电量耗尽或系统崩溃等原因中断。 The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#nano-resume-interrupted-activation)
+If the activation is interrupted, for example by an empty phone battery or a phone crash, you can resume it. Tap **Change Patch** on the pump screen and follow the steps in [Resume interrupted activation](#nano-resume-interrupted-activation).
 
 ### 预防贴片故障
 

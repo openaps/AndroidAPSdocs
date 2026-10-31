@@ -179,7 +179,7 @@ To have second_hand colored with default BG color (lowRange, midRange or highRan
     - 图像编辑器需支持透明通道处理（背景上层图像均需此功能），若使用位图则需兼容png格式。
     - 背景图像可采用jpg格式（体积较png更小）。
     - 图像编辑器需支持以像素为单位测量图形对象（如简单方形）的坐标参数（顶部、左侧、宽度、高度）。
-    - 图像编辑器需支持以十六进制RRVVBB代码显示颜色。
+    - Image editor should be able to show you colors with RRGGBB code in hexadecimal
     - 图像编辑器需能将图像调整为400px×400px分辨率（此分辨率至关重要）。
   - 如果您使用矢量图
     - 矢量图像应导出为svg格式。
@@ -265,7 +265,7 @@ json文件中包含多个颜色设定键：视图的`"color"`、`"fontColor"`，
 - 若您使用矢量图像编辑器（如Illustrator），建议优先选择`.svg`格式，该格式能生成体积小巧的文本文件且画质最佳。
 - 务必确保使用精确的文件名（含大小写敏感）。
 
-若需定制背景图，只需在zip文件中添加名为`Background.jpg`的文件（无需修改其他内容）。将zip文件发送至手表并查看效果！
+Now if you want a dedicated background image, you only have to include within the zip file a file named `Background.jpg` (without changing anything else). Send the zip file to the watch and check the result!
 
 若需定制模拟表盘的时针、分针或秒针，只需添加`HourHand.png`（或`HourHand.svg`）、`MinuteHand.png`及`SecondHand.png`文件。
 
@@ -416,7 +416,7 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
 
 (cwf-reference-background-management)=
 
-#### **背景管理**
+#### Background management
 
 首先，关于血糖值图像，此处别无选择——必须置于背景层（否则会遮挡图表视图导致不可见！）因此需将血糖值映射至背景层，再根据血糖值旋转背景图像。
 
@@ -464,9 +464,9 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
 
 在`"rotateSgv"`区块中，另两个键(`"minData":`和`"maxData":`)用于将数据范围调整为30至330。通过这些最小和最大值，我们可以直接使用数据值（无需转换）来旋转背景（以度为单位）。在此设置下，所有高于330mgdl的血糖值都将被限制在图像上限330度。
 
-#### **图表管理**
+#### Chart management
 
-图表默认背景为透明，为遮盖背景图像中的血糖刻度，需添加专用背景图（该图含蒸汽朋克表盘的整体阴影效果）。通过`"background":`键关联charBackground.jpg文件
+图表默认背景为透明，为遮盖背景图像中的血糖刻度，需添加专用背景图（该图含蒸汽朋克表盘的整体阴影效果）。 The link to chartBackground.jpg file is done with `"background":` key
 
 当然，视图的尺寸和定位必须精确到像素！
 
@@ -482,7 +482,7 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
 ```
 (cwf-reference-avg-delta-management)=
 
-#### **平均差值管理**
+#### Avg delta management
 
 为实现平均差值的动态范围调控，我们将使用四个自由文本视图。 freetext1用于调控刻度图像，freetext2至freetext4则根据刻度控制指针旋转。
 
@@ -602,7 +602,7 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
 
 - 蒸汽朋克表盘设计为指针提供-30度至30度的最大旋转范围。因此根据当前刻度（此处为-5mgdl至5mgdl），这些数值将对应30度的旋转角度。由于`minData`与`maxData`范围扩大4倍，对应的minValue和maxValue也需乘以4倍，即-120度至+120度。但当旋转角度超出±30度范围时指针将隐藏（无图像显示），仅当数值处于-5至+5mgdl区间时指针可见。这完全符合此处设计预期。
 
-其他dynData区块以相同方式定义，用于调整`"avgDelt10"`和`"avgDelta20"`。
+The other dynData blocks are defined the same way to tune `"avgDelta10"`and `"avgDelta20"`
 
 #### loop视图
 
@@ -743,11 +743,11 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
 
 随后您将看到两个采用"dynData"格式的json区块，系统将根据所选偏好设置调用对应区块。
 
-请注意"HardCoded"背景图像文件名现已被动态图像替代（当key_units为"true"时使用`Background_mgdl.png`文件，为false时使用`Background_mmol.png`），同时添加了`"invalidImage"`键确保即使未收到手机数据也始终显示背景图像。
+Note that the "HardCoded" file name for Background image is now replaced by a dynamic image that will be the same whatever the BG value (`Background_mgdl.png`file if key_units is "true", `Background_mmol.png` if key_units is false), and we also include an `"invalidImage"` key to always have a background image even if no data has been received from the phone.
 
 #### 在AAPS V2中整合dynPref的多项偏好设置
 
-多数情况下，设置偏好时并非为了获得"动态行为"，而仅是呈现所选结果——但在dynPref中，这被视为动态功能特性...
+Most of the time, when you set a preference, it's not to get "dynamic behavior", but only the results according to what you select, but within dynPref, it's considered as a dynamic feature...
 
 - 当`dynData`需要指定包含图像、字体颜色、颜色等参数的完整区块时，`dynPref`则能根据特定偏好设置逐项组合各参数。
 - 此处将演示如何将分隔线偏好与暗色偏好关联：当启用时（true），暗色表盘（dark参数为true）显示黑底白字，浅色表盘（dark为false）则显示白底黑字...
@@ -798,7 +798,7 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
 ```
 此dynPref区块与视图用标准区块的区别在于：此处未为`"key_dark"`参数的每个值配置dynData区块，仅列出主色列表（`highColor`、`midColor`等）
 
-现在查看"分隔条"内的项目（如下例中关联`"matchDivider"` dynPref视图的`"basalRate"`视图）：
+Lets now take a look on items included into the "divider banner" (in example below `"basalRate"` view linked to `"matchDivider"` dynPref view):
 
 ```text
 "basalRate": {
@@ -1133,7 +1133,7 @@ Note that this view is also available for external data (see [below](#cwf-refere
     }
 },
 ```
-- 当`status`视图可见时（即`"key_show_loop_satus"`键为`true`），采用单一格式（`"textvalue1"`），以`'`作为单位符号
+- here if `status` view is visible (so  `"key_show_loop_status"` key is `true`), a single format is used (`"textvalue1"`), with `'`  as "unit"
 - 若`status`视图隐藏，则采用两种格式：0或1时使用单数形式，大于2时使用复数形式
   - `"minData"`和`"maxData"`用于定义数值范围，确保单复数切换在1和2之间生效
   - 注意：`"maxData"`（整数值）设为3而非2，因系统处理的双精度数据并非整数，故略高于或低于1的值经四舍五入后可能仍为1，但需按单复数格式区分显示。
@@ -1212,12 +1212,12 @@ Note that this view is also available for external data (see [below](#cwf-refere
 | `"key_show_ago"`              | 若设计需要显示`timestamp`信息（最近血糖数据接收时间/分钟前）则设为true                                                                                    |
 | `"key_show_bg"`               | 若设计需要显示`sgv`信息（血糖值）则设为true                                                                                                     |
 | `"key_show_loop_status"`      | 若设计需要显示`loop`信息（闭环状态及时间间隔）则设为true                                                                                              |
-| `"key_show_week_number"`      | 若设计需要显示`week_number`信息（周数）则设为true                                                                                              |
+| `"key_show_week_number"`      | true if your design requires `week_number` information                                                                         |
 | `"key_show_date"`             | 若设计需要显示`Date`、`Month`或`Day of the week`信息则设为true                                                                               |
 
 #### 内部键
 
-| 键                     | 注释                                         |
+| 键                     | 备注                                         |
 | --------------------- | ------------------------------------------ |
 | `"filename"`          | 此键将在表盘加载时自动创建（或更新），并包含导出文件夹中的本地zip文件名      |
 | `"cwf_authorization"` | 此键将在表盘加载时创建，并在Wear设置中每次更改授权偏好时更新，用于同步授权至手表 |
@@ -1297,7 +1297,7 @@ delta_Ext1<br/>delta_Ext2                                                       
 | `"uploader_battery"`                                                                   | Text View           | phone battery level (%)                                                                                                               | uploader_battery                                                                                                                                 |
 | `"rig_battery"`<br/>`"rig_battery_Ext1"` *<br/>`"rig_battery_Ext2"` *      | Text View           | rig battery level (%)                                                                                                                 | rig_battery<br/>rig_battery_Ext1<br/>rig_battery_Ext2                                                                            |
 | `"basalRate"`<br/>`"basalRate_Ext1"` *<br/>`"basalRate_Ext2"` *            | Text View           | % or absolute value                                                                                                                   |                                                                                                                                                  |
-| `"bgi"`<br/>`"bgi_Ext1"` *<br/>`"bgi2_Ext2"` *                             | Text View           | mgdl/(5 min) or mmol/(5 min)                                                                                                          |                                                                                                                                                  |
+| `"bgi"`<br/>`"bgi_Ext1"` *<br/>`"bgi_Ext2"` *                              | Text View           | mgdl/(5 min) or mmol/(5 min)                                                                                                          |                                                                                                                                                  |
 | `"status"` *<br/>`"status_Ext1"` *<br/>`"status_Ext2"` *                   | Text View           | Synthesis of IOB (whatever IOB setting in watch), Detailed IOB (according to setting in watch and BGI (according to setting in watch) |                                                                                                                                                  |
 | `"time"`                                                                               | Text View           | HH:MM or HH:MM:SS                                                                                                                     |                                                                                                                                                  |
 | `"hour"`                                                                               | Text View           | HH                                                                                                                                    |                                                                                                                                                  |
@@ -1350,19 +1350,19 @@ delta_Ext1<br/>delta_Ext2                                                       
 
 #### 文本视图键
 
-| 键              | 类型      | 备注                                                                                                                                                                                                                                                                                                                              |
-| -------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"textsize"`   | int     | 字体大小（像素）（请注意字体可能包含上下边距，因此实际文本大小通常小于设定的像素值）。注意：字体大小应小于视图高度以避免被截断                                                                                                                                                                                                                                                                 |
-| `"gravity"`    | string  | 参见键值表                                                                                                                                                                                                                                                                                                                           |
-| `"font"`       | string  | 可用字体参见键值表。<br />也可使用zip包内字体文件名（不含扩展名）                                                                                                                                                                                                                                                                                     |
-| `"fontStyle"`  | string  | 参见键值表                                                                                                                                                                                                                                                                                                                           |
-| `"fontColor"`  | string  | 管理字体颜色<br />`"#RRVVBB"`：RVB格式色码（十六进制值，#FF0000为红色）<br />`"#AARRVVBB"`：AA含透明度（00全透明，FF不透明）<br />`"bgColor"`：键值bgColor可根据BG值自动选用highColor/midColor/lowColor                                                                                                                                                      |
-| `"allCaps"`    | boolean | 若需文本大写（主要用于星期或月份名称）则设为true                                                                                                                                                                                                                                                                                                      |
-| `"background"` | string  | `resource_filename` 可将资源图片设为文本视图背景（资源文件将按比例缩放以适应文本视图尺寸）。文本将显示在背景图前方。<br />- 注意：该键也可用于`图表`视图，为图表设置自定义背景（显示在背景图前方）                                                                                                                                                                                                          |
-| `"color"`      | string  | 管理视图背景色或调整图像色彩（仅限位图）<br />`"#RRVVBB"`：RVB格式色码（十六进制值，#FF0000为红色）<br />`"#AARRVVBB"`：AA含透明度（00全透明，FF不透明）<br />`"bgColor"`：键值bgColor可根据BG值自动选用highColor/midColor/lowColor<br />- 默认嵌入图像（指针/表盘）将直接应用该色彩，位图（jpg/png）会叠加饱和度渐变滤镜<br />- 对svg文件无效（svg色彩不可修改）<br />- 注意：该键也可用于`图表`视图，在背景图前方设置自定义图表背景 |
+| 键              | 类型      | 备注                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| -------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `"textsize"`   | int     | 字体大小（像素）（请注意字体可能包含上下边距，因此实际文本大小通常小于设定的像素值）。注意：字体大小应小于视图高度以避免被截断                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `"gravity"`    | string  | 参见键值表                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `"font"`       | string  | 可用字体参见键值表。<br />也可使用zip包内字体文件名（不含扩展名）                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `"fontStyle"`  | string  | 参见键值表                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `"fontColor"`  | string  | Manage color of the font<br />`"#RRGGBB"`: color code in RGB format, hexadecimal values #FF0000 is red<br />`"#AARRGGBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `"allCaps"`    | boolean | 若需文本大写（主要用于星期或月份名称）则设为true                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `"background"` | string  | `resource_filename` 可将资源图片设为文本视图背景（资源文件将按比例缩放以适应文本视图尺寸）。文本将显示在背景图前方。<br />- 注意：该键也可用于`图表`视图，为图表设置自定义背景（显示在背景图前方）                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `"color"`      | string  | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRGGBB"`: color code in RGB format, hexadecimal values #FF0000 is red<br />`"#AARRGGBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embedded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on image<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image |
 | `"textvalue"`  | string  | 布局中4个自由文本视图（从freetext1到freetext4）的专用键，用于设置要包含的文本（可以是标签，或仅`:`若需在小时视图和分钟视图间添加分隔符...）  
-自Custom Watchface插件v2（AAPS 3.3）起，textvalue可包含其他文本视图的格式字符串（需配合`dynValue`键及`dynData`或`dynPref`使用）。例如                                                                                                                                         |
-| `"dynValue"`*  | boolean | 若需包含原始数值（双精度型）则设为true 若需用特定格式显示数值，与`texvalue`键配合使用                                                                                                                                                                                                                                                                              |
+自Custom Watchface插件v2（AAPS 3.3）起，textvalue可包含其他文本视图的格式字符串（需配合`dynValue`键及`dynData`或`dynPref`使用）。例如                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `"dynValue"`*  | boolean | 若需包含原始数值（双精度型）则设为true Useful with `textvalue` key if you want a dedicated format to show value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 **在自定义表盘V2.0或更高版本中添加了按键（适用于AAPS 3.3.0 wear apk或更高版本）*
 
@@ -1370,18 +1370,18 @@ delta_Ext1<br/>delta_Ext2                                                       
 
 #### ImageView键
 
-| 键         | 类型     | 备注                                                                                                                                                                                                                                                                                                                              |
-| --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"color"` | string | 管理视图背景色或调整图像色彩（仅限位图）<br />`"#RRVVBB"`：RVB格式色码（十六进制值，#FF0000为红色）<br />`"#AARRVVBB"`：AA含透明度（00全透明，FF不透明）<br />`"bgColor"`：键值bgColor可根据BG值自动选用highColor/midColor/lowColor<br />- 默认嵌入图像（指针/表盘）将直接应用该色彩，位图（jpg/png）会叠加饱和度渐变滤镜<br />- 对svg文件无效（svg色彩不可修改）<br />- 注意：该键也可用于`图表`视图，在背景图前方设置自定义图表背景 |
+| 键         | 类型     | 备注                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `"color"` | string | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRGGBB"`: color code in RGB format, hexadecimal values #FF0000 is red<br />`"#AARRGGBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embedded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on image<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image |
 
 (cwf-reference-chartview-keys)=
 
 #### ChartView键
 
-| 键              | 类型     | 备注                                                                                                                                                                                                                                                                                                                              |
-| -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"color"`      | string | 管理视图背景色或调整图像色彩（仅限位图）<br />`"#RRVVBB"`：RVB格式色码（十六进制值，#FF0000为红色）<br />`"#AARRVVBB"`：AA含透明度（00全透明，FF不透明）<br />`"bgColor"`：键值bgColor可根据BG值自动选用highColor/midColor/lowColor<br />- 默认嵌入图像（指针/表盘）将直接应用该色彩，位图（jpg/png）会叠加饱和度渐变滤镜<br />- 对svg文件无效（svg色彩不可修改）<br />- 注意：该键也可用于`图表`视图，在背景图前方设置自定义图表背景 |
-| `"background"` | string | `resource_filename` 可将资源图片设为文本视图背景（资源文件将按比例缩放以适应文本视图尺寸）。文本将显示在背景图前方。<br />- 注意：该键也可用于`图表`视图，为图表设置自定义背景（显示在背景图前方）                                                                                                                                                                                                          |
+| 键              | 类型     | 备注                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `"color"`      | string | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRGGBB"`: color code in RGB format, hexadecimal values #FF0000 is red<br />`"#AARRGGBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embedded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on image<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image |
+| `"background"` | string | `resource_filename` 可将资源图片设为文本视图背景（资源文件将按比例缩放以适应文本视图尺寸）。文本将显示在背景图前方。<br />- 注意：该键也可用于`图表`视图，为图表设置自定义背景（显示在背景图前方）                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
 (cwf-reference-key-values)=
 
@@ -1412,35 +1412,35 @@ delta_Ext1<br/>delta_Ext2                                                       
 
 ### 动态数据键
 
-| 键                         | 类型     | 备注                                                                                                                                                                                                       |
-| ------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"dynData"`               | 区块     | 定义视图将使用的所有动态数据区块通常在末视图后<br />定义。本区块内所有键将作为视图区块的键值使用：<br />`"dynData": { 动态数据区块 }`<br />每个区块通过自定义名称及内部多个键定义：<br />`"customName": { 单个动态数据区块 }`                                    |
-| `"valueKey"`              | string | 使用的动态数据名称（通常与关联视图键同名）<br />若不存在，则默认采用调用本区块的视图数值。<br />例如可定义区块自定义电池百分比而不指定valueKey，随后复用该区块自定义上传器电池与设备电池                                                                                       |
-| `"minData"`               | int    | 设定AAPS数据的最小有效值：例如若数值为sgv（内部单位mgdl），当minData设为50时，所有低于50mgdl的血糖值将强制设为50<br />- 注意minData与maxData将用于计算动态值（像素或角度）                                                                                     |
-| `"maxData"`               | int    | 设定AAPS数据的最大有效值：例如若数值为sgv（内部单位mgdl），当maxData设为330时，所有高于330mgdl的血糖值将强制设为330。                                                                                                                               |
-| `"leftOffset"`            | 区块     | 根据最小/最大值设定视图水平位移像素值<br />- 包含minValue键、maxValue键及invalidValue键（可选）<br />- 若数据≤minData则视图位移至minValue像素，若数据≥maxData则位移至maxValue像素<br />注意：需在视图中将`leftOffset`设为true方可生效                   |
-| `"topOffset"`             | 区块     | 根据最小/最大值设定视图垂直位移像素值<br />- 包含minValue键、maxValue键及invalidValue键（可选）<br />- 若数据≤minData则视图位移至minValue像素，若数据≥maxData则位移至maxValue像素<br />注意：需在视图中将topOffset设为true方可生效                      |
-| `"rotationOffset"`        | 区块     | 根据最小/最大值设定视图旋转角度值（单位：度）<br />- 包含`minValue`键、`maxValue`键及`invalidValue`键（可选）<br />- 若数据≤`minData`则视图旋转`minValue`度，若数据≥`maxData`则旋转`maxValue`度<br />注意：需在视图中将`rotationOffset`设为true方可生效 |
-| `"dynValue"`*             | 区块     | 设定动态值转换规则：将数据范围映射为像素值范围<br />- 包含`minValue`键、`maxValue`键及`invalidValue`键（可选）<br />- 若数据≤`minData`则输出minValue（转为双精度），若数据≥`maxData`则输出maxValue（转为双精度）<br />注意：需在视图中启用`dynValue`键方可生效     |
-| `"minValue"`              | int    | 应用于视图的最终数值（该键仅适用于leftOffset、topOffset或rotationOffset区块内）                                                                                                                                                 |
-| `"maxValue"`              | int    | 应用于视图的最终数值（该键仅适用于leftOffset、topOffset或rotationOffset区块内）                                                                                                                                                 |
-| `"invalidValue"`          | int    | 数据无效时应用于视图的最终数值（该键仅适用于leftOffset、topOffset或rotationOffset区块内）                                                                                                                                            |
-| `"invalidImage"`          | string | 数据无效时ImageView或背景TextView使用的`资源文件名`                                                                                                                                                                      |
-| image*1_to_n*           | string | `资源文件名`图像用于从接近minData的`"image1"`到接近maxData的image*n*之间的每个阶梯<br />例如若设置5张图像（从image1到image5），minData与maxData之间的范围将被分为5个阶梯，根据数据值显示对应图像                                                                 |
-| `"invalidFontColor"`      | string | 管理数据无效时的字体颜色阶梯<br />`"#RRVVBB"`或`"#AARRVVBB"`：接收无效数据时使用的颜色（若AA=00可为透明色）                                                                                                                            |
-| fontColor*1_to_n*       | string | 管理字体颜色阶梯<br />`"#RRVVBB"`或`"#AARRVVBB"`：从接近minData的`"fontColor1"`到接近maxData的fontColor*n*之间每个阶梯使用的颜色                                                                                                |
-| `"invalidColor"`          | string | 管理数据无效时的背景色/图像颜色阶梯<br />`"#RRVVBB"`或`"#AARRVVBB"`：接收无效数据时使用的颜色（若AA=00可为透明色）                                                                                                                        |
-| color*1_to_n*           | string | 管理背景色/图像颜色阶梯<br />`"#RRVVBB"`或`"#AARRVVBB"`：从接近minData的`"color1"`到接近maxData的color*n*之间每个阶梯使用的颜色                                                                                                    |
-| `"invalidTextSize"`       | int    | 管理数据无效时的文本字号阶梯                                                                                                                                                                                           |
-| textsize*1_to_n*        | int    | 管理文本字号阶梯：从接近minData的`"textsize1"`到接近maxData的textsize*n*之间每个阶梯使用的字号                                                                                                                                       |
-| `"invalidLeftOffset"`     | int    | 管理数据无效时的水平位移阶梯                                                                                                                                                                                           |
-| leftOffset*1_to_n*      | int    | 管理水平位移阶梯：从接近minData的`"leftOffset1"`到接近maxData的leftOffset*n*之间每个阶梯使用的位移值<br />注：可与dynPref配合实现视图隐藏时的位移联动                                                                                             |
-| `"invalidTopOffset"`      | int    | 管理数据无效时的垂直位移阶梯                                                                                                                                                                                           |
-| topOffset*1_to_n*       | int    | 管理垂直位移阶梯：从接近minData的topOffset1到接近maxData的topOffset*n*之间每个阶梯使用的位移值<br />注：可与dynPref配合实现视图隐藏时的位移联动                                                                                                   |
-| `"invalidRotationOffset"` | int    | 管理数据无效时的旋转角度阶梯                                                                                                                                                                                           |
-| rotationOffset*1_to_n*  | int    | 管理旋转角度阶梯：从接近minData的rotationOffset1到接近maxData的rotationOffset*n*之间每个阶梯使用的旋转角度                                                                                                                             |
-| `"invalidTextvalue"`*     | string | 管理数据无效时的文本值                                                                                                                                                                                              |
-| textvalue*1_to_n* *     | string | 管理文本值阶梯：从接近minData的textvalue1到接近maxData的textvalue*n*之间每个阶梯使用的文本值<br />注：若在视图中启用`"dynValue"`键可包含格式化字符串                                                                                              |
+| 键                         | 类型     | 备注                                                                                                                                                                                                                                        |
+| ------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"dynData"`               | 区块     | 定义视图将使用的所有动态数据区块通常在末视图后<br />定义。本区块内所有键将作为视图区块的键值使用：<br />`"dynData": { 动态数据区块 }`<br />每个区块通过自定义名称及内部多个键定义：<br />`"customName": { 单个动态数据区块 }`                                                                     |
+| `"valueKey"`              | string | 使用的动态数据名称（通常与关联视图键同名）<br />若不存在，则默认采用调用本区块的视图数值。<br />例如可定义区块自定义电池百分比而不指定valueKey，随后复用该区块自定义上传器电池与设备电池                                                                                                                        |
+| `"minData"`               | int    | 设定AAPS数据的最小有效值：例如若数值为sgv（内部单位mgdl），当minData设为50时，所有低于50mgdl的血糖值将强制设为50<br />- 注意minData与maxData将用于计算动态值（像素或角度）                                                                                                                      |
+| `"maxData"`               | int    | 设定AAPS数据的最大有效值：例如若数值为sgv（内部单位mgdl），当maxData设为330时，所有高于330mgdl的血糖值将强制设为330。                                                                                                                                                                |
+| `"leftOffset"`            | 区块     | 根据最小/最大值设定视图水平位移像素值<br />- 包含minValue键、maxValue键及invalidValue键（可选）<br />- 若数据≤minData则视图位移至minValue像素，若数据≥maxData则位移至maxValue像素<br />注意：需在视图中将`leftOffset`设为true方可生效                                                    |
+| `"topOffset"`             | 区块     | 根据最小/最大值设定视图垂直位移像素值<br />- 包含minValue键、maxValue键及invalidValue键（可选）<br />- 若数据≤minData则视图位移至minValue像素，若数据≥maxData则位移至maxValue像素<br />注意：需在视图中将topOffset设为true方可生效                                                       |
+| `"rotationOffset"`        | 区块     | 根据最小/最大值设定视图旋转角度值（单位：度）<br />- 包含`minValue`键、`maxValue`键及`invalidValue`键（可选）<br />- 若数据≤`minData`则视图旋转`minValue`度，若数据≥`maxData`则旋转`maxValue`度<br />注意：需在视图中将`rotationOffset`设为true方可生效                                  |
+| `"dynValue"`*             | 区块     | 设定动态值转换规则：将数据范围映射为像素值范围<br />- 包含`minValue`键、`maxValue`键及`invalidValue`键（可选）<br />- 若数据≤`minData`则输出minValue（转为双精度），若数据≥`maxData`则输出maxValue（转为双精度）<br />注意：需在视图中启用`dynValue`键方可生效                                      |
+| `"minValue"`              | int    | 应用于视图的最终数值（该键仅适用于leftOffset、topOffset或rotationOffset区块内）                                                                                                                                                                                  |
+| `"maxValue"`              | int    | 应用于视图的最终数值（该键仅适用于leftOffset、topOffset或rotationOffset区块内）                                                                                                                                                                                  |
+| `"invalidValue"`          | int    | 数据无效时应用于视图的最终数值（该键仅适用于leftOffset、topOffset或rotationOffset区块内）                                                                                                                                                                             |
+| `"invalidImage"`          | string | 数据无效时ImageView或背景TextView使用的`资源文件名`                                                                                                                                                                                                       |
+| image*1_to_n*           | string | `资源文件名`图像用于从接近minData的`"image1"`到接近maxData的image*n*之间的每个阶梯<br />例如若设置5张图像（从image1到image5），minData与maxData之间的范围将被分为5个阶梯，根据数据值显示对应图像                                                                                                  |
+| `"invalidFontColor"`      | string | Manage fontColor steps if the data is invalid<br />`"#RRGGBB"` or `"#AARRGGBB"`: Color to use if an invalid data is received (can be transparent if AA=00)                                                                          |
+| fontColor*1_to_n*       | string | Manage fontColor steps<br />`"#RRGGBB"` or `"#AARRGGBB"`: color to use for each step between minData (or close to minData) with `"fontColor1"` and maxData (or close to maxData) with fontColor*n*                                  |
+| `"invalidColor"`          | string | Manage background color or image color steps if the data is invalid<br />`"#RRGGBB"` or `"#AARRGGBB"`: Color to use if an invalid data is received (can be transparent if AA=00)                                                    |
+| color*1_to_n*           | string | Manage background color or image Color steps<br />`"#RRGGBB"` or `"#AARRGGBB"`: color to use for each step between minData (or close to minData) with `"color1"` and maxData (or close to maxData) with color*n*                    |
+| `"invalidTextSize"`       | int    | 管理数据无效时的文本字号阶梯                                                                                                                                                                                                                            |
+| textsize*1_to_n*        | int    | 管理文本字号阶梯：从接近minData的`"textsize1"`到接近maxData的textsize*n*之间每个阶梯使用的字号                                                                                                                                                                        |
+| `"invalidLeftOffset"`     | int    | 管理数据无效时的水平位移阶梯                                                                                                                                                                                                                            |
+| leftOffset*1_to_n*      | int    | 管理水平位移阶梯：从接近minData的`"leftOffset1"`到接近maxData的leftOffset*n*之间每个阶梯使用的位移值<br />注：可与dynPref配合实现视图隐藏时的位移联动                                                                                                                              |
+| `"invalidTopOffset"`      | int    | 管理数据无效时的垂直位移阶梯                                                                                                                                                                                                                            |
+| topOffset*1_to_n*       | int    | 管理垂直位移阶梯：从接近minData的topOffset1到接近maxData的topOffset*n*之间每个阶梯使用的位移值<br />注：可与dynPref配合实现视图隐藏时的位移联动                                                                                                                                    |
+| `"invalidRotationOffset"` | int    | 管理数据无效时的旋转角度阶梯                                                                                                                                                                                                                            |
+| rotationOffset*1_to_n*  | int    | 管理旋转角度阶梯：从接近minData的rotationOffset1到接近maxData的rotationOffset*n*之间每个阶梯使用的旋转角度                                                                                                                                                              |
+| `"invalidTextvalue"`*     | string | 管理数据无效时的文本值                                                                                                                                                                                                                               |
+| textvalue*1_to_n* *     | string | Manage textvalue to use for each step between minData (or close to minData) with textvalue1 and maxData (or close to maxData) with textvalue*n*<br />Note, can include formatting string if `"dynValue"` is set to true within view |
 
 **在自定义表盘V2.0或更高版本中添加了按键（适用于AAPS 3.3.0 wear apk或更高版本）*
 
@@ -1489,10 +1489,10 @@ delta_Ext1<br/>delta_Ext2                                                       
 
 上文[偏好设置键](#cwf-reference-preference-keys)章节中包含的所有键都可用于调整视图参数
 
-您还可以使用以下AAPS(自定义)专属参数中包含的附加键：
+You can also use these additional keys below included into AAPS (Custom) specific parameters:
 
-| 键                     | 类型      | 备注                                                                                                                                                             |
-| --------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"key_units"`         | boolean | *true*: AAPS中选定单位为mgdl时<br />*false*: AAPS中选定单位为mmol时                                                                                                    |
-| `"key_dark"`          | boolean | *true*: 使用深色背景<br />false: 使用浅色背景<br />注：该参数常见于早期AAPS表盘（AAPS、AAPS V2等）中                                                                            |
-| `"key_match_divider"` | boolean | *true*: AAPS、AAPS v2表盘中的分隔线将不可见 <br />*false*: AAPS、AAPS v2表盘中的分隔线将可见 <br />注：该设置常与深色偏好结合使用（通过在`dynData`块中使用`dynPref`键），以设置与深色参数相同或相反的文本颜色（及背景）... |
+| 键                     | 类型      | 备注                                                                                                                                                                          |
+| --------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"key_units"`         | boolean | *true*: AAPS中选定单位为mgdl时<br />*false*: AAPS中选定单位为mmol时                                                                                                                 |
+| `"key_dark"`          | boolean | *true*: to use a dark background<br />*false*: to use a light background<br />Note: this parameter is often used in previous AAPS watchfaces (AAPS, AAPS V2...) |
+| `"key_match_divider"` | boolean | *true*: AAPS、AAPS v2表盘中的分隔线将不可见 <br />*false*: AAPS、AAPS v2表盘中的分隔线将可见 <br />注：该设置常与深色偏好结合使用（通过在`dynData`块中使用`dynPref`键），以设置与深色参数相同或相反的文本颜色（及背景）...              |

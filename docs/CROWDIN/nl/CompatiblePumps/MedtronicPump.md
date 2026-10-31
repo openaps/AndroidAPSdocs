@@ -1,187 +1,242 @@
 # Medtronic Pompen
 
-The driver does not work with any newer models, including all models ending in G (530G, 600-series [630G, 640G, 670G], 700-series [770G, 780G], etc.).
+De driver werkt niet met nieuwere modellen, ook niet met alle modellen die eindigen op G (530G, 600-serie [630G, 640G, 670G], 700-serie [770G, 780G], enz.).
 
-The following model and firmware combinations are compatible:
+De volgende combinaties van model en firmware zijn compatibel:
 
-- 512/712 (any firmware version)
-- 515/715 (any firmware version)
-- 522/722 (any firmware version)
-- 523/723 (firmware 2.4A or lower)
-- 554/754 EU release (firmware 2.6A or lower)
-- 554/754 Canada release (firmware 2.7A or lower)
+- 512/712 (elke firmwareversie)
+- 515/715 (elke firmwareversie)
+- 522/722 (elke firmwareversie)
+- 523/723 (firmware 2.4A of lager)
+- 554/754 EU-versie (firmware 2.6A of lager)
+- 554/754 Canadese versie (firmware 2.7A of lager)
 
-You can find out how to check the firmware on the pumps at [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) or [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
+Hoe je de firmware van de pomp controleert, lees je in de [OpenAPS-documentatie](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) of in [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
+
+    {contents} Inhoudsopgave
+    :depth: 1
+    :local: true
+
+## Mogelijkheden van de pomp met AAPS
+
+* Vereist een RileyLink-compatibel apparaat om met **AAPS** te communiceren.
+* Automatische afhandeling van zomertijd en tijdzones.
 
 ## Benodigde hardware en software
 
-- **Phone:** The Medtronic driver should work with any android phone that supports Bluetooth connections. **IMPORTANT: Phone manufacturers Bluetooth implementations can vary so how each phone model behaves can vary. For example, some phones will handle enabling/disabling Bluetooth differently. This can impact the user experience when AAPS needs to reconnect to your Rileylink type device.**
-- **RileyLink Compatible Device:** Android phones cannot communicate to Medtronic pumps without a separate device to handle communications. This device will link with your phone via Bluetooth and with your pump via a compatible radio connection. The first such device was called a Rileylink but a number of other options are now available which can offer additional functionality.
+- **Telefoon:** De Medtronic-driver zou moeten werken met elke Android-telefoon die Bluetooth-verbindingen ondersteunt. **BELANGRIJK: Elke telefoonfabrikant gebruikt Bluetooth op een eigen manier, dus elk telefoonmodel kan zich anders gedragen. Sommige telefoons gaan bijvoorbeeld anders om met het aan- en uitzetten van Bluetooth. Dit kan merkbaar zijn wanneer AAPS opnieuw verbinding moet maken met je Rileylink-apparaat.**
+- **RileyLink-compatibel apparaat:** Android-telefoons kunnen niet met Medtronic-pompen communiceren zonder een apart apparaat dat de communicatie regelt. Dit apparaat maakt via Bluetooth verbinding met je telefoon en via een compatibele radioverbinding met je pomp. Het eerste apparaat van dit type heette Rileylink, maar er zijn nu meer opties, die soms extra functies bieden.
     
-    - Rileylink available at [getrileylink.org](https://getrileylink.org/product/rileylink916)
-    - Orangelink available at [getrileylink.org](https://getrileylink.org/product/orangelink)
-    - Emalink (multiple model options) available at [github.com](https://github.com/sks01/EmaLink)
-    - Gnarl (some additional DIY required) details available at [github.com](https://github.com/ecc1/gnarl)
+    - Rileylink is verkrijgbaar via [getrileylink.org](https://getrileylink.org/product/rileylink916)
+    - Orangelink is verkrijgbaar via [getrileylink.org](https://getrileylink.org/product/orangelink)
+    - Emalink (meerdere modellen) is verkrijgbaar via [github.com](https://github.com/sks01/EmaLink)
+    - Gnarl (vraagt wat extra doe-het-zelfwerk): details op [github.com](https://github.com/ecc1/gnarl)
 
-A comparison chart for the various Rileylink compatible devices can be found at [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
+Een vergelijkingstabel van de verschillende Rileylink-compatibele apparaten vind je op [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
 
 (MedtronicPump-configuration-of-the-pump)=
 
-## Configuration of the pump
+## Configuratie van de pomp
 
-The following settings should be configured on the pump in order for AAPS to remotely send commands. The steps necessary to make each change on a Medtronic 715 are shown in brackets for each setting. The exact steps may vary based on pump type and/or firmware version.
+Stel de volgende instellingen in op de pomp, zodat AAPS op afstand commando's kan sturen. Bij elke instelling staan tussen haakjes de stappen voor een Medtronic 715. De precieze stappen kunnen verschillen per pomptype en/of firmwareversie.
 
-- **Enable remote mode on Pump** (On the pump press Act and go to Utilities -> Remote Options, Select On, and on next screen do Add ID and add any random id such as 111111). At least one ID must be on the Remote ID list in order for the pump to expect remote communication.
-- **Set Max Basal** (On the pump press Act and got to Basal and then select Max Basal Rate) As an example setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
-- **Set Max Bolus** (On the pump press Act and to to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept. The maximum value permitted by the pump is 25.
-- **Set profile to Standard**. (On the pump press Act and go to Basal and then Select Patterns) The pump will only need one profile as AAPS will manage different profiles on your phone. No other patterns are required.
-- **Set Temporary Basal Rate type** (On the pump press Act and go to Basal and then Temp Basal Type). Select Absolute (not Percent).
+- **Zet de remote-modus aan op de pomp** (druk op de pomp op Act en ga naar Utilities -> Remote Options, kies On, kies op het volgende scherm Add ID en voeg een willekeurige ID toe, zoals 111111). Er moet minstens één ID in de lijst Remote ID staan, anders verwacht de pomp geen communicatie op afstand.
+- **Stel Max Basal in** (druk op de pomp op Act en ga naar Basal en kies daarna Max Basal Rate). Als je deze waarde bijvoorbeeld op vier keer je hoogste standaard basaalstand zet, is een tijdelijke basaalstand van 400% mogelijk. De hoogste waarde die de pomp toestaat is 34,9 eenheden per uur.
+- **Stel Max Bolus in** (druk op de pomp op Act en ga naar Bolus en kies daarna Max Bolus). Dit is de grootste bolus die de pomp accepteert. De hoogste waarde die de pomp toestaat is 25.
+- **Zet het profiel op Standard**. (druk op de pomp op Act en ga naar Basal en daarna Select Patterns) De pomp heeft maar één profiel nodig, omdat AAPS de verschillende profielen op je telefoon beheert. Andere patronen zijn niet nodig.
+- **Stel het type tijdelijke basaalstand in** (druk op de pomp op Act en ga naar Basal en daarna Temp Basal Type). Kies Absolute (niet Percent).
 
-## Medtronic Configuration of Phone/AAPS
+## Medtronic-configuratie van telefoon/AAPS
 
-- **Do not pair RileyLink compatible device with the Bluetooth menu on your phone.** Pairing via the Bluetooth menu on your phone will stop AAPS from seeing your Rileylink Compatible device when you follow the instructions below.
-- Disable automatic screen rotation on your phone. On certain devices automatic screen rotation causes Bluetooth sessions to restart which would cause issues for your Medtronic pump. 
-- There are two ways to configure your Medtronic pump in AAPS:
+- **Koppel het RileyLink-compatibele apparaat niet via het Bluetooth-menu van je telefoon.** Als je koppelt via het Bluetooth-menu van je telefoon, kan AAPS je Rileylink-compatibele apparaat niet meer zien wanneer je de instructies hieronder volgt.
+- Zet automatisch draaien van het scherm uit op je telefoon. Op sommige toestellen zorgt automatisch draaien van het scherm ervoor dat Bluetooth-sessies opnieuw starten. Dat geeft problemen met je Medtronic-pomp. 
+- Er zijn twee manieren om je Medtronic-pomp in AAPS in te stellen:
 
-1. Using the setup wizard as part of a fresh install
-2. By selecting the cog icon beside the Medtronic selection in the pump selection option in Config Builder
-
-When configuring your Medtronic pump with the setup wizard it is possible that you will be prevented from completing setup because of Bluetooth issues (e.g. you cannot successfully connect to the pump). Should this happen you should select the virtual pump option in order to complete the configuration and allow for further troubleshooting by using option 2.
-
-![Medtronic Settings](../images/Medtronic01a.png)
-
-While setting up AAPS to work with your medtronic pump you need to set following items: (see picture above)
-
-- **Pump Serial Number**: Displayed on the back of your pump and starts with SN. You should only enter the 6 numbers shown without any alphabetic characters (e.g. 123456).
-- **Pump Type**: The model pump you are using (e.g. 522). 
-- **Pump Frequency**: There are two options based on where your pump was originally distributed. Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select): 
-    - for US & Canada, frequency used is 916 Mhz
-    - for Worldwide, frequency used is 868 Mhz
-- **Max Basal on Pump (U/h)**: This needs to match the setting set on your pump (see Configuration of the pump above). Again this setting must be carefully selected as it will determine how much AAPS can deliver via your basal rate. This will effectively set the maximum temporary basal rate. As an example, setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
-- **Max Bolus on Pump (U)** (in an hour): This needs to match the setting set on your pump (see Configuration of the pump above). This setting should be carefully considered as it determines how large a bolus AAPS can ever set.
-- **Delay before Bolus is started (s)**: The number of seconds after a bolus is issued before the command is actually sent to the pump. This period of time allows the user to cancel the bolus in the event a bolus command is sent in error. It is not possible to cancel a bolus that has started via AAPS. The only way to cancel a bolus that has already started is to suspend the pump manually followed by resuming it.
-- **Medtronic Encoding**: Determines if the medtronic encoding is carried out. Selecting Hardware encoding (i.e. carried out by the Rileylink compatible device) is preferred as this results in less data being sent. Selecting Software encoding (i.e. carried out by AAPS) can help in the event frequent disconnects are seen. This setting will be ignored if you have firmware version 0.x on Rileylink devices.
-- **Battery Type (Power View)**: In order to correctly determine the remaining battery power level you should select the type of AAA battery in use. When a value other than simple view is selected AAPS will display the remaining calculated battery percentage level and volts. The following options are available:
+1. De Setup Wizard gebruiken bij een nieuwe installatie
+2. In **Configuratie** > **Pomp**, door **Medtronic** te kiezen
     
-    - Not selected (Simple view)
-    - Alkaline (Extended view)
-    - Lithium (Extended view)
-    - NiZn (Extended view)
-    - NiMH (Extended view)
-- **Bolus/Treatments Debugging**: Select On or Off depending on requirements.
+    ![Configuratie > Pomp met de Medtronic-plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+    
+    Als hij gekozen is, toont de kaart **Medtronic** twee knoppen, **Instellingen** en **Plug-in openen**:
+    
+    ![De Medtronic-plugin gekozen in Configuratie > Pomp](../images/v4/Pumps/medtronic_enabled.png)
+    
+    **Instellingen** opent de instellingen van de Medtronic-driver:
+    
+    ![Instellingen van de Medtronic-driver](../images/v4/Pumps/medtronic_settings.png)
+    
+    **Plug-in openen** (of **Beheren** > **Pomp**) opent het Medtronic-pompscherm. Voordat er een pomp gekoppeld is, ziet het er zo uit:
+    
+    ![Medtronic-pompscherm vóór het koppelen](../images/v4/Pumps/medtronic_pump_screen.png)
 
-- **RileyLink Configuration**: This option allows you to find and pair your Rileylink compatible device. Selecting this will show any nearby Rileylink compatible devices and the signal strength.
-- **Use Scanning** Activates Bluetooth scanning before connecting with your Rileylink Compatible devices. This should improve the reliability of your connection to the device.
-- **Show battery level reported by OrangeLink/EmaLink/DiaLink** This feature is only supported on newer link devices such as the EmaLink or OrangeLink. Values will be shown in the Medtronic tab in AnroidAPS. 
-- **Set neutral temp basals** By default Medtronic pumps beep on the hour when a temporary basal rate is active. Enabling this option can help reduce the number of beeps heard by interrupting a temporary basal at the hour change in order to suppress the beep.
+Wanneer je je Medtronic-pomp instelt met de Setup Wizard, kan het gebeuren dat je de installatie niet kunt afronden door Bluetooth-problemen (je krijgt bijvoorbeeld geen verbinding met de pomp). Kies in dat geval de optie virtuele pomp om de configuratie af te ronden. Daarna kun je het probleem verder oplossen met optie 2.
 
-## MEDTRONIC (MDT) Tab
+Om AAPS met je Medtronic-pomp te laten werken, stel je de volgende punten in bij **Instellingen** (zie de afbeelding van de instellingen hierboven):
 
-![MDT Tab](../images/Medtronic02.png) When AAPS is configured to use a Medtronic pump a MDT tab will be shown in the list of tabs at the top of the screen. This tab displays the current pump status information along with some Medtronic specific actions.
+- **Serienummer van de pomp**: Staat op de achterkant van je pomp en begint met SN. Voer alleen de 6 cijfers in, zonder letters (bijv. 123456).
+- **Pomp Type**: Het model pomp dat je gebruikt (bijv. 522). 
+- **Pomp Frequentie**: Er zijn twee opties, afhankelijk van waar je pomp oorspronkelijk is verkocht. Kijk bij de [Veelgestelde vragen](#MedtronicPump-faq) als je niet zeker weet welke optie je moet kiezen): 
+    - voor VS & Canada is de gebruikte frequentie 916 MHz
+    - voor Wereldwijd is de gebruikte frequentie 868 MHz
+- **Max Basaal op Pomp (E/u)**: Dit moet gelijk zijn aan de instelling op je pomp (zie Configuratie van de pomp hierboven). Ook deze instelling moet je zorgvuldig kiezen, omdat ze bepaalt hoeveel AAPS via je basaalstand kan toedienen. Hiermee stel je in feite de maximale tijdelijke basaalstand in. Als je deze waarde bijvoorbeeld op vier keer je hoogste standaard basaalstand zet, is een tijdelijke basaalstand van 400% mogelijk. De hoogste waarde die de pomp toestaat is 34,9 eenheden per uur.
+- **Max Bolus op Pomp (E)** (per uur): Dit moet gelijk zijn aan de instelling op je pomp (zie Configuratie van de pomp hierboven). Denk goed na over deze instelling, want ze bepaalt hoe groot een bolus van AAPS ooit kan zijn.
+- **Vertraging voordat Bolus wordt gestart (s)**: Het aantal seconden tussen het geven van een bolus en het moment waarop het commando echt naar de pomp gaat. In deze tijd kun je de bolus annuleren als een bolus per ongeluk is verzonden. Het is niet mogelijk om een gestarte bolus via AAPS te annuleren. Een bolus die al gestart is, kun je alleen stoppen door de pomp handmatig te pauzeren (suspend) en daarna weer te hervatten.
+- **Medtronic Codering**: Bepaalt of de Medtronic-codering wordt uitgevoerd. Kies bij voorkeur Hardware-codering (dus uitgevoerd door het Rileylink-compatibele apparaat), omdat er dan minder data wordt verzonden. Software-codering (dus uitgevoerd door AAPS) kan helpen als de verbinding vaak wegvalt. Deze instelling wordt genegeerd als je Rileylink-apparaat firmwareversie 0.x heeft.
+- **Batterij type (batterij weergave)**: Om de resterende batterijlading goed te bepalen, moet je het type AAA-batterij kiezen dat je gebruikt. Als je iets anders kiest dan de eenvoudige weergave, toont AAPS het berekende resterende batterijpercentage en de spanning (volt). Je kunt kiezen uit:
+    
+    - Niet geselecteerd (Eenvoudige weergave)
+    - Alkaline (uitgebreide weergave)
+    - Lithium (uitgebreide weergave)
+    - NiZn (uitgebreide weergave)
+    - NiMH (Uitgebreide weergave)
+- **Gebruik scannen**: Zet Bluetooth-scannen aan voordat er verbinding wordt gemaakt met je Rileylink-compatibele apparaten. Dit maakt de verbinding met het apparaat betrouwbaarder.
 
-- **RileyLink Status**: The current status of the connection between your phone and Rileylink compatible device. This should show as Connected at all times. Any other status may require user intervention. 
-- **RileyLink Battery**: The current battery level of your EmaLink or OrangeLink device. Dependent on selecting "Show battery level reported by OrangeLink/EmaLink/DiaLink device" in the Medtronic Pump Configuration menu.
-- **Pump Status**: The current status of the pump connection. As the pump will not be constantly connected this will primarily show the sleep icon. There are a number of possible other status including "Waking Up" when AAPS is trying to issue a command or other possible pump commands such as "Get Time", "Set TBR", etc.
-- **Battery**: Shows battery status based on the value chosen for Battery Type (Power View) in the Medtronic Pump Configuration menu. 
-- **Last connection**: How long ago the last successful pump connection happened.
-- **Last Bolus**: How long ago the last successful bolus was delivered.
-- **Base Basal Rate**: This is the base basal rate that runs on pump at this hour in your active Profile.
-- **Temp basal**: Temp basal currently being delivered which can be 0 units per hour.
-- **Reservoir**: How much insulin is in reservoir (updated at least every hour).
-- **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
+- **Toon batterijniveau van OrangeLink/EmaLink/DiaLink**: Deze functie werkt alleen met nieuwere link-apparaten, zoals de EmaLink of OrangeLink. De waarde wordt getoond als **Batterij van de rileylink** op het Medtronic-pompscherm.
+- **Stel neutraal tijdelijk basaal in**: Standaard piepen Medtronic-pompen elk heel uur als er een tijdelijke basaalstand actief is. Deze optie kan het aantal piepjes verminderen: AAPS onderbreekt een tijdelijke basaalstand bij de wisseling van het uur, zodat de pomp niet piept.
 
-At the bottom of the screen there are three buttons:
+(pairing-your-rileylink-compatible-device)=
 
-- **Refresh** is for refreshing the current status of the pump. This should only be used if the connection was lost for a sustained period as this will require a full data refresh (retrieve history, get/set time, get profile, get battery status, etc).
-- **Pump History**: Shows pump history (see [below](#MedtronicPump-pump-history))
-- **RL Stats**: Show RL Stats (see [below](#MedtronicPump-rl-status-rileylink-status))
+### Je RileyLink-compatibele apparaat koppelen
+
+Je koppelt je RileyLink-compatibele apparaat vanuit het Medtronic-pompscherm, niet vanuit het Bluetooth-menu van je telefoon:
+
+- Open het pompscherm (**Beheren** > **Pomp**, of **Plug-in openen** op de Medtronic-kaart in **Configuratie** > **Pomp**).
+- Tik op **Koppel RileyLink**. **AAPS** zoekt naar RileyLink-compatibele apparaten in de buurt.
+- Tik op je apparaat in de lijst. Wanneer **RileyLink succesvol gekoppeld** verschijnt, tik je op **OK**.
+
+## Medtronic-pompscherm
+
+Ga naar **Beheren** > **Pomp** om het Medtronic-pompscherm te openen. Het pompscherm toont de huidige status van de pomp en een paar acties die alleen voor Medtronic zijn (zie de afbeelding van het pompscherm hierboven).
+
+- **RileyLink Status**: De huidige status van de verbinding tussen je telefoon en het Rileylink-compatibele apparaat. Hier moet altijd Verbonden staan. Bij elke andere status moet je misschien zelf iets doen. 
+- **Batterij van de rileylink**: Het huidige batterijniveau van je EmaLink- of OrangeLink-apparaat. Wordt alleen getoond als **Toon batterijniveau van OrangeLink/EmaLink/DiaLink** aan staat in de Medtronic-instellingen.
+- **Pompstatus**: De huidige status van de verbinding met de pomp. De pomp is niet steeds verbonden, daarom zie je hier meestal het slaap-icoon. Er zijn nog meer mogelijke statussen, zoals "Actief worden" wanneer AAPS een commando probeert te sturen, of andere pompcommando's zoals "Tijd ophalen", "Instellen Tijdelijke Basaal", enz.
+- **Batterij**: Toont de batterijstatus op basis van de waarde die je hebt gekozen bij **Batterij type (batterij weergave)** in de Medtronic-instellingen.
+- **Laatste verbinding**: Hoe lang geleden de laatste geslaagde verbinding met de pomp was.
+- **Laatste bolus**: Hoe lang geleden de laatste geslaagde bolus is gegeven.
+- **Basis basaalstand**: De basis basaalstand die in dit uur op de pomp loopt volgens je actieve profiel.
+- **Tijdelijk basaal**: De tijdelijke basaalstand die nu wordt toegediend. Dit kan ook 0 eenheden per uur zijn.
+- **Reservoir**: Hoeveel insuline er in het reservoir zit (minstens elk uur bijgewerkt).
+- **Foutmeldingen**: Een foutmelding als er een probleem is (meestal bij een fout in de configuratie).
+
+Onderaan het scherm staan deze knoppen:
+
+- **Vernieuwen** haalt de huidige status van de pomp opnieuw op. Gebruik dit alleen als de verbinding lange tijd weg was, want dan worden alle gegevens opnieuw opgehaald (historie ophalen, tijd ophalen/instellen, profiel ophalen, batterijstatus ophalen, enz.).
+- **Koppel RileyLink**: Zoekt en koppelt je RileyLink-compatibele apparaat (zie [hierboven](#pairing-your-rileylink-compatible-device)).
+- **Historiek**: Toont de pompgeschiedenis (zie [hieronder](#MedtronicPump-pump-history)).
+- **RL Statistieken**: Toont de RL-statistieken (zie [hieronder](#MedtronicPump-rl-status-rileylink-status)).
+- **Ontwaak en maak verbinding** en **Reset RileyLink**: Zie [Acties](#medtronic-actions) hieronder.
+- **Bolus Blokkering wissen**: Wordt alleen kort na een bolus getoond, terwijl **AAPS** wacht tot de pomp klaar is met toedienen. Als je erop tikt, stopt dit wachten.
 
 (MedtronicPump-pump-history)=
 
-## Pump History
+## Pompgeschiedenis
 
-![Pump History Dialog](../images/Medtronic03.png)
+![Het scherm Historiek met de filterknoppen](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored locally. Only the previous 24 hours worth of history is stored. The allows for a convenient way to see pump behaviour should that be required. The only items stored are those relevenant to AAPS and will not include a configuration function that has no relevance.
+De pompgeschiedenis wordt elke 5 minuten opgehaald en lokaal opgeslagen. Alleen de geschiedenis van de laatste 24 uur wordt bewaard. Zo kun je makkelijk zien wat de pomp heeft gedaan, als dat nodig is. Alleen gegevens die voor AAPS belangrijk zijn worden opgeslagen. Configuratiefuncties zonder belang voor AAPS worden niet opgeslagen.
+
+Tik op **Historiek** op het pompscherm om de geschiedenis te openen. Standaard is **Alle** gekozen. Tik bovenaan op een van de filterknoppen (bijvoorbeeld **Bolussen**, **Basaalstanden** of **Alarmen**) om maar één soort gegevens te tonen.
 
 (MedtronicPump-rl-status-rileylink-status)=
 
 ## RL Status (RileyLink Status)
 
-![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
+![RileyLink Status - Instellingen](../images/Medtronic04.png) ![RileyLink Status - Geschiedenis](../images/Medtronic05.png)
 
-The RL Status dialog has two tabs:
+Het venster RL Status heeft twee tabbladen:
 
-- **Settings**: Shows settings about the RileyLink compatible device: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
-- **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
+- **Instellingen**: Toont instellingen van het RileyLink-compatibele apparaat: ingesteld adres, verbonden apparaat, verbindingsstatus, verbindingsfout en de firmwareversies van de RileyLink. Apparaattype is altijd Medtronic Pomp, Model is jouw model, Serienummer is het ingestelde serienummer, Pompfrequentie toont welke frequentie je gebruikt, Laatst gebruikte frequentie is de frequentie die het laatst is gebruikt.
+- **Geschiedenis**: Toont de communicatiegeschiedenis. Regels met RileyLink tonen statuswijzigingen van de RileyLink, regels met Medtronic tonen welke commando's naar de pomp zijn gestuurd.
+
+(medtronic-actions)=
 
 ## Acties
 
-When the Medtronic driver is used, two additional actions are added to Actions Tab:
+Met de Medtronic-driver zijn er twee extra acties op het pompscherm (**Beheren** > **Pomp**):
 
-- **Wake and Tune Up** - In the event that AAPS hasn't connected to your pump for a sustained period (it should connect every 5 minutes), you can force a Tune Up. This will try to contact your pump, by searching all of the possible radio frequencies used by your pump. In the event a successful connection is made the successful frequency will be set as the default.
-- **Reset RileyLink Config** - If you reset your RileyLink compatible device you may need to use this action so that device can be reconfigured (frequency set, frequency type set, encoding configured).
+- **Ontwaak en maak verbinding** - Als AAPS lange tijd geen verbinding heeft gemaakt met je pomp (dat zou elke 5 minuten moeten gebeuren), kun je een Tune Up afdwingen. AAPS probeert dan contact te maken met je pomp door alle radiofrequenties te doorzoeken die je pomp kan gebruiken. Als er een verbinding lukt, wordt de werkende frequentie als standaard ingesteld. Terwijl de Tune Up loopt, is dat te zien aan de RileyLink-status op het pompscherm. Als een Tune Up mislukt (bijvoorbeeld omdat de pomp buiten bereik was), probeert **AAPS** het zelf ongeveer elke 10 minuten opnieuw.
+- **Reset RileyLink** - Als je je RileyLink-compatibele apparaat hebt gereset, moet je deze actie misschien gebruiken, zodat het apparaat opnieuw wordt ingesteld (frequentie, frequentietype en codering).
 
-## Belangrijk:
+## Belangrijke opmerkingen
 
-### Special attention in NS configuration needed
+### Extra aandacht nodig bij de configuratie van NS
 
-AAPS is using serial number for synchronization and serial number is exposed to NS. Because knowledge of serial number of old Medtronic pump can be used to control the pump remotely take special care to hardening NS site preventing leakage of SN of your pump. See https://nightscout.github.io/nightscout/security/
+AAPS gebruikt het serienummer voor synchronisatie, en het serienummer is zichtbaar in NS. Met het serienummer van een oude Medtronic-pomp kan iemand de pomp op afstand bedienen. Beveilig je NS-site daarom extra goed, zodat het serienummer van je pomp niet uitlekt. Zie https://nightscout.github.io/nightscout/security/
 
-### OpenAPS users
+### OpenAPS-gebruikers
 
-OpenAPS users should note that AAPS with Medtronic uses a completely different approach than OpenAPS. Using AAPS the primary method of interacting with the pump is via your phone. In normal use cases it is likely that the only time it is required to use the pump menu is when changing resevoirs. This is very different when using OpenAPS where at least some of a bolus is usually delivered via the quick bolus buttons. In the event the pump is used to manually deliver a bolus there can be issues if AAPS attempts to deliver one at the same time. There are checks to try and prevent issues in such cases but this should still be avoided where possible.
+OpenAPS-gebruikers moeten weten dat AAPS met Medtronic een heel andere aanpak gebruikt dan OpenAPS. Met AAPS bedien je de pomp vooral via je telefoon. Bij normaal gebruik heb je het pompmenu waarschijnlijk alleen nodig om het reservoir te wisselen. Dat is heel anders dan bij OpenAPS, waar ten minste een deel van een bolus meestal via de quick bolus-knoppen wordt gegeven. Als de pomp gebruikt wordt om handmatig een bolus te geven, kunnen er problemen ontstaan als AAPS op hetzelfde moment een bolus probeert te geven. Er zijn controles om problemen in zulke gevallen te voorkomen, maar vermijd dit toch zoveel mogelijk.
 
-### Logging
+### Logbestanden
 
-In the event you need to troubleshoot your Medtronic pump function select the menu icon in the upper left corner of the screen, select Maintenance and Log Settings. For troubleshooting any Medtronic issues Pump, PumpComm, PumpBTComm should be checked.
+Wil je problemen met je Medtronic-pomp onderzoeken, kies dan het menu-icoon linksboven in het scherm, en daarna Onderhoud en Logboekinstellingen. Controleer bij het oplossen van Medtronic-problemen de logcategorieën Pump, PumpComm en PumpBTComm.
 
 ### Medtronic CGM
 
-Medtronic CGM is currently NOT supported.
+Medtronic CGM wordt op dit moment NIET ondersteund.
 
-### Manual use of pump
+### Handmatig gebruik van de pomp
 
-You should avoid manually bolusing or setting TBRs on your pump. All such commands should be sent via AAPS. In the event manual commands are used there must be a delay of at least 3 minutes between them in order to reduce the risk of any issues.
+Geef geen handmatige bolussen en stel geen TBR's in op je pomp. Al zulke commando's moeten via AAPS worden gestuurd. Gebruik je toch handmatige commando's, laat er dan minstens 3 minuten tussen zitten om het risico op problemen te verkleinen.
 
-### Timezone changes and DST (Daylight Saving Time) or Traveling with Medtronic Pump and AAPS
+### Wisselen van tijdzone en zomertijd (DST) of reizen met een Medtronic-pomp en AAPS
 
-AAPS will automatically detect Timezone changes and will update the Pump's time when your phone switches to the new time.
+AAPS herkent automatisch een wisseling van tijdzone en past de tijd van de pomp aan wanneer je telefoon naar de nieuwe tijd gaat.
 
-Travelling east means you are going to be adding hours to the current time (ex. from GMT+0 to GMT+2) will not result in any issues as there will be no overlap (e.g. it won't be possible to have the same hour twice). Travelling west however can result in issues as you are effectively going back in time which can result in incorrect IOB data.
+Reizen naar het oosten betekent dat er uren bij de huidige tijd komen (bijv. van GMT+0 naar GMT+2). Dat geeft geen problemen, want er is geen overlap (je kunt bijvoorbeeld niet twee keer hetzelfde uur hebben). Reizen naar het westen kan wel problemen geven, omdat je dan in feite terug in de tijd gaat. Dat kan leiden tot onjuiste IOB-gegevens.
 
-The issues seen when travelling west are known to the developers and work on a possible solution is ongoing. See https://github.com/andyrozman/RileyLinkAAPS/issues/145 for more detail. For now, please be aware that this issue may occur and carefully monitor when changing time zones.
+De ontwikkelaars kennen de problemen bij reizen naar het westen en werken aan een mogelijke oplossing. Zie https://github.com/andyrozman/RileyLinkAAPS/issues/145 voor meer details. Wees je er voorlopig van bewust dat dit probleem kan optreden, en let goed op wanneer je van tijdzone wisselt.
 
-### Is a GNARL a fully compatible Rileylink compatible device?
+### Is GNARL een volledig compatibel Rileylink-compatibel apparaat?
 
-The GNARL code fully supports all of the functions used by the Medtronic driver in AAPS which means it is fully compatible. It is important to note that this will require additional work as you will have to source compatible hardware and then load the GNARL code on to the device.
+De GNARL-code ondersteunt alle functies die de Medtronic-driver in AAPS gebruikt. Hij is dus volledig compatibel. Let op: dit vraagt extra werk, want je moet zelf compatibele hardware regelen en daarna de GNARL-code op het apparaat zetten.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+**Opmerking van de auteur:** De GNARL-software is nog experimenteel en weinig getest. Beschouw hem niet als even veilig als een RileyLink.
 
 (MedtronicPump-faq)=
 
-## FAQ
+## Veelgestelde vragen
 
 (MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 
-### What to do if I loose connection to RileyLink and/or pump?
+### Wat moet ik doen als ik de verbinding met de RileyLink en/of de pomp verlies?
 
-There are a number of options to try and resolve connectivity issues.
+Er zijn verschillende dingen die je kunt proberen om verbindingsproblemen op te lossen.
 
-- Use the "Wake Up and Tune" button in the ACT tab as detailed above.
-- Disable Bluetooth on your phone, wait 10 seconds and then enable it again. This will force the Rileylink device to reconnect to the phone.
-- Reset the Rileylink device. You must then use the "Reset Rileylink Config" button in the ACT tab.
-- Other users have found the following steps to be effective in restoring connectivity when other methods have not: 
-    1. Restart the phone
-    2. *While* the phone is restarting restart the Rileylink device
-    3. Open AAPS and allow the connection to restore
+- Tik op **Ontwaak en maak verbinding** op het pompscherm (**Beheren** > **Pomp**), zoals hierboven beschreven.
+- Zet Bluetooth op je telefoon uit, wacht 10 seconden en zet het weer aan. Zo moet het Rileylink-apparaat opnieuw verbinding maken met de telefoon.
+- Reset het Rileylink-apparaat. Tik daarna op **Reset RileyLink** op het pompscherm (**Beheren** > **Pomp**).
+- Andere gebruikers hebben gemerkt dat de volgende stappen de verbinding herstellen als andere methoden niet werken: 
+    1. Start de telefoon opnieuw op
+    2. Start het Rileylink-apparaat opnieuw op *terwijl* de telefoon opnieuw opstart
+    3. Open AAPS en laat de verbinding herstellen
 
-### How to determine what Frequency my pump uses
+### Hoe weet ik welke frequentie mijn pomp gebruikt?
 
-![Pump Model](../images/Medtronic06.png)
+![Pompmodel](../images/Medtronic06.png)
 
-On the back of the pump you will find a line detailing your model number along with a special 3 letter code. The first two letters determine the frequency type and the last one determines color. Here are possible values for Frequency:
+Op de achterkant van de pomp staat een regel met je modelnummer en een speciale code van 3 letters. De eerste twee letters bepalen het frequentietype, de laatste letter de kleur. Mogelijke waarden voor de frequentie zijn:
 
-- NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
-- CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
-- WW - Worldwide (in frequency selection you need to select "Worldwide (868 Mhz)")
+- NA - Noord-Amerika (bij de frequentiekeuze moet je "VS & Canada (916 MHz)" kiezen)
+- CA - Canada (bij de frequentiekeuze moet je "VS & Canada (916 MHz)" kiezen)
+- WW - Wereldwijd (bij de frequentiekeuze moet je "Wereldwijd (868 Mhz)" kiezen)
+
+(MedtronicPump-pump-unreachable)=
+
+### De fout "pump unreachable" (pomp niet bereikbaar) oplossen
+
+Sommige Medtronic-pompen melden na een update van **AAPS** de fout "pump unreachable" (pomp niet bereikbaar). Verander het type codering om dit op te lossen:
+
+1. Ga naar **Configuratie** > **Pomp** en tik op **Instellingen** op de kaart **Medtronic**.
+2. Zet **Medtronic Codering** op **Hardware 4b6b codering**.
+
+## Waar je hulp kunt krijgen
+
+De Medtronic-driver wordt door de community ontwikkeld, op **vrijwillige** basis. Doe het volgende voordat je om hulp vraagt:
+
+1. **Lees** het betreffende deel van deze documentatie om te controleren hoe de functie hoort te werken.
+2. **Vraag** het op het kanaal *#AAPS* op [Discord](https://discord.gg/4fQUWHZ4Mw), of in een van de andere [community kanalen](../GettingHelp/WhereCanIGetHelp.md).
+3. **Meld een bug**: zoek eerst in de [bestaande issues](https://github.com/nightscout/AndroidAPS/issues). Staat jouw probleem er niet bij, open dan een [nieuwe issue](https://github.com/nightscout/AndroidAPS/issues) en voeg je [logbestanden](../GettingHelp/AccessingLogFiles.md) toe.
+
+Beschrijf als je om hulp vraagt: merk en model van je telefoon, Android versie, **AAPS** versie, en een duidelijke beschrijving van het probleem in gewone taal (wat er is veranderd, wanneer het voor het laatst werkte).

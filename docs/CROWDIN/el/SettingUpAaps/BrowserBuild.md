@@ -1,87 +1,77 @@
 (browser-build)=
 
-# Browser build
+# Δημιουργία μέσω browser
 
-Building AAPS with GitHub Actions.
+Δημιουργία του AAPS με το GitHub Actions.
 
-**Minimum AAPS version supported is 3.3.2.1.**
+**Η ελάχιστη υποστηριζόμενη έκδοση του AAPS είναι η 3.3.2.1.**
 
 ## Φτιάξτε το μόνοι σας, αντί να το κατεβάσετε
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**Η εφαρμογή AAPS (ένα αρχείο apk) δεν είναι διαθέσιμη για λήψη, λόγω των κανονισμών για τις ιατρικές συσκευές. Είναι νόμιμο να κάνετε build της εφαρμογής για δική σας χρήση, αλλά δεν πρέπει να δίνετε αντίγραφο σε άλλους!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Δείτε τη σελίδα [Συχνές Ερωτήσεις](../UsefulLinks/FAQ.md) για λεπτομέρειες.
 
 (Building-APK-without-a-computer)=
 
-## Choose how to build
+## Επιλέξτε τρόπο δημιουργίας
 
-Pick the method that matches the device you build from:
+Επιλέξτε τη μέθοδο που ταιριάζει στη συσκευή από την οποία κάνετε build:
 
-### On an Android phone: AAPS Builder (recommended)
+### Σε τηλέφωνο Android: AAPS Builder (συνιστάται)
 
-A setup page walks you through creating your own private build repository in GitHub. Nothing to install, no preparation file, and you start each build yourself. You download the app directly from GitHub. Google Drive is optional.
+Μια σελίδα ρύθμισης σας οδηγεί βήμα βήμα στη δημιουργία του δικού σας ιδιωτικού αποθετηρίου (repository) build στο GitHub. Δεν χρειάζεται εγκατάσταση ούτε αρχείο προετοιμασίας, και ξεκινάτε κάθε build μόνοι σας. Κατεβάζετε την εφαρμογή απευθείας από το GitHub. Το Google Drive είναι προαιρετικό.
 
-This also works from a computer browser.
+Αυτό λειτουργεί και από πρόγραμμα περιήγησης σε υπολογιστή.
 
-**→ [Build with AAPS Builder](BrowserBuildAapsBuilder.md)**
+**→ [Δημιουργία με το AAPS Builder](BrowserBuildAapsBuilder.md)**
 
-### On any device: fork and preparation file
+### Σε υπολογιστή ή iPhone / iPad: fork και αρχείο προετοιμασίας
 
-You make a copy (fork) of the AAPS source code in GitHub, create your keystore with a preparation file, and the built app is saved to your Google Drive. This works from an Android device, a computer or an iPhone / iPad. Follow the four steps below.
+Φτιάχνετε ένα αντίγραφο (fork) του πηγαίου κώδικα του AAPS στο GitHub, δημιουργείτε το keystore σας με ένα αρχείο προετοιμασίας, και η εφαρμογή που δημιουργείται αποθηκεύεται στο Google Drive σας. Ακολουθήστε τα τέσσερα βήματα παρακάτω.
 
 ```{note}
-**Already building with a fork?** Keep updating it as described in [Update with a browser](../Maintenance/UpdateBrowserBuild.md), or switch to AAPS Builder. To switch, first get a copy of your keystore from your fork: see [Coming from the previous browser build](#aaps-builder-from-fork).
+**Κάνετε ήδη build με fork;** Συνεχίστε να το ενημερώνετε όπως περιγράφεται στο [Ενημέρωση μέσω browser (fork)](../Maintenance/UpdateBrowserBuild.md), ή αλλάξτε στο AAPS Builder. Για να αλλάξετε, πρώτα πάρτε ένα αντίγραφο του keystore σας από το fork σας: δείτε [Αν έρχεστε από την προηγούμενη δημιουργία μέσω browser](#aaps-builder-from-fork).
 ```
 
-## Device and software specifications for the fork method
-
-You will need to use multiple tabs in your browser, and switch from one to the other. Example Chrome:
+Θα χρειαστεί να χρησιμοποιήσετε πολλές καρτέλες στο πρόγραμμα περιήγησης και να αλλάζετε από τη μία στην άλλη. Παράδειγμα Chrome:
 
 ![fork_aaps](../images/Building-the-App/CI/BrowserBuildTabs.png)
 
-You also need a Google account so that the app can be saved in your Google Drive.
-
 ```{note}
-This wiki assumes you're performing all operations with your cellular phone and the Chrome web browser.  
-You will need to jump from tab to tab: start with all tabs closed to avoid losing yourself when switching from one to another.
+Θα χρειαστεί να πηγαίνετε από καρτέλα σε καρτέλα: ξεκινήστε με όλες τις καρτέλες κλειστές, ώστε να μη χαθείτε όταν αλλάζετε από τη μία στην άλλη.
 ```
 
-## What you'll need
+#### Τι θα χρειαστείτε
 
-- A **Google account**, so the built app can be saved to your Google Drive (needed on every device).
-- A **GitHub account** (free) – you create this in Step 1.
-- A **web browser** that can keep several tabs open at once (Chrome is assumed below).
-- A small **helper to run the preparation file**. Which one you need depends on the device you build from – there is nothing to install now, Step 2 walks you through it for your device:
-  - **Android:** File Manager Plus (from the Play Store).
-  - **Computer (Windows / Mac / Linux):** Simple HTTP Server.
-  - **iPhone / iPad:** no extra app – you use the built-in Files app and browser.
+- Έναν **λογαριασμό Google**, ώστε η εφαρμογή να αποθηκεύεται στο Google Drive σας.
+- Έναν **λογαριασμό GitHub** (δωρεάν) – τον δημιουργείτε στο Βήμα 1.
+- Ένα **πρόγραμμα περιήγησης** που μπορεί να έχει πολλές καρτέλες ανοιχτές ταυτόχρονα (παρακάτω υποθέτουμε το Chrome).
+- Ένα μικρό **βοηθητικό πρόγραμμα για να εκτελέσετε το αρχείο προετοιμασίας**. Ποιο χρειάζεστε εξαρτάται από τη συσκευή από την οποία κάνετε build – δεν χρειάζεται να εγκαταστήσετε τίποτα τώρα, το Βήμα 2 σας καθοδηγεί για τη συσκευή σας:
+  - **Υπολογιστής (Windows / Mac / Linux):** Simple Web Server.
+  - **iPhone / iPad:** καμία επιπλέον εφαρμογή – χρησιμοποιείτε την ενσωματωμένη εφαρμογή Αρχεία (Files) και το πρόγραμμα περιήγησης.
 
-```{note}
-On Android, also make sure the **Google Drive app is up to date** (via the Play Store) so you can download the finished app afterwards.
-```
+#### Τα βήματα
 
-## The steps
+Η δημιουργία μέσω browser είναι μια σειρά από επιλογές. Ακολουθήστε αυτά τα βήματα με τη σειρά:
 
-The browser build is a series of choices. Follow these steps in order:
+1. **[Δημιουργήστε το fork σας στο GitHub](BrowserBuildFork.md)** – φτιάξτε το προσωπικό σας αντίγραφο του πηγαίου κώδικα του AAPS.
+2. **[Δημιουργήστε το keystore υπογραφής σας](BrowserBuildKeystore.md)** – η βασική απόφαση: δημιουργήστε νέο keystore (Επιλογή 1) ή ανεβάστε το υπάρχον σας (Επιλογή 2), και μετά ακολουθήστε τη σελίδα για τη συσκευή σας.
+3. **[Εξουσιοδοτήστε το Google Drive](BrowserBuildGoogleDrive.md)** – επιτρέψτε στο GitHub να αποθηκεύει την εφαρμογή στο Google Drive σας.
+4. **[Δημιουργήστε το APK](BrowserBuildAPK.md)** – εκτελέστε το workflow του GitHub Actions και επιλέξτε έκδοση και παραλλαγή.
 
-1. **[Create your GitHub fork](BrowserBuildFork.md)** – make your personal copy of the AAPS source code.
-2. **[Create your signing keystore](BrowserBuildKeystore.md)** – the key decision: generate a new keystore (Option 1) or upload your existing one (Option 2), then follow the page for your device.
-3. **[Authorize Google Drive](BrowserBuildGoogleDrive.md)** – let GitHub save the built app to your Google Drive.
-4. **[Build the APK](BrowserBuildAPK.md)** – run the GitHub Actions workflow and pick your version and variant.
-
-If you run into trouble, see **[Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md)**. For optional operations, see [exporting your keystore](#ci-keystore-export) or [cherry-picking a commit](#github-cherry-pick).
+Αν αντιμετωπίσετε προβλήματα, δείτε **[Δημιουργία μέσω browser: αντιμετώπιση προβλημάτων](../GettingHelp/BrowserBuildTroubleshooting.md)**. Για προαιρετικές ενέργειες με fork, δείτε [εξαγωγή του keystore σας](#ci-keystore-export) ή [cherry-pick ενός commit](#github-cherry-pick).
 
 ----
 
-**Start with [Step 1 – Create your GitHub fork](BrowserBuildFork.md) →**
+**Ξεκινήστε με το [Βήμα 1 – Δημιουργία του fork σας στο GitHub](BrowserBuildFork.md) →**
 
 ```{toctree}
 :hidden:
 
 AAPS Builder <BrowserBuildAapsBuilder.md>
-Step 1: Create your fork <BrowserBuildFork.md>
-Step 2: Create your keystore <BrowserBuildKeystore.md>
-Step 3: Authorize Google Drive <BrowserBuildGoogleDrive.md>
-Step 4: Build the APK <BrowserBuildAPK.md>
+Βήμα 1: Δημιουργία του fork σας <BrowserBuildFork.md>
+Βήμα 2: Δημιουργία του keystore σας <BrowserBuildKeystore.md>
+Βήμα 3: Εξουσιοδότηση του Google Drive <BrowserBuildGoogleDrive.md>
+Βήμα 4: Δημιουργία του APK <BrowserBuildAPK.md>
 ```

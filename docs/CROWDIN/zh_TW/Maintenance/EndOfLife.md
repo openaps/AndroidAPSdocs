@@ -6,7 +6,7 @@
 
 ## 如何使用本頁
 
-1. 在 AAPS 中，點選右上角的三個點，並選擇 **About**。你會在那裡看到你的 AAPS 版本。
+1. In AAPS, open the **menu** (☰) at the top left and choose **About**. 你會在那裡看到你的 AAPS 版本。
 2. 在下方第一個表格中找到相同的版本。讀取其旁邊的終止日期。日期以 **年-月-日** 表示。例如，`2026-10-30` 代表 2026 年 10 月 30 日。
 3. 在更新前，請先查看[發行說明](ReleaseNotes.md)與[更新指南](UpdateToNewVersion.md)。你可使用的版本也取決於你手機的 Android 版本。
 

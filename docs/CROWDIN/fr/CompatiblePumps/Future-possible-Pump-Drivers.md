@@ -1,38 +1,60 @@
 # Pilotes de pompe futurs (possibles)
 
-Voici une liste de certaines pompes et leur statut de prise en charge dans l'un des systèmes en boucle, puis leur statut dans AAPS. En fin de compte, il y a quelques informations de ce qui est nécessaire pour qu'une pompe soit "bouclable".
+Voici une liste de certaines pompes et leur statut de prise en charge dans l'un des systèmes en boucle, puis leur statut dans AAPS. À la fin, vous trouverez quelques informations sur ce qu'il faut pour qu'une pompe soit « bouclable ».
 
-## Pompes qui sont Bouclable
+    {contents} Table des matières
+    :depth: 1
+    :local: true
 
-### Kaleido ([Homepage](https://www.hellokaleido.com/))
+## Pompes en phase d'intégration dans AAPS
 
-**Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
+**Bientôt disponible :** les pilotes de ces pompes sont en développement et fonctionnent déjà dans des versions de test.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+Omnipod 5 ([Page d'accueil](https://www.omnipod.com/))
 
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+![Pilote Omnipod 5 en développement](../images/future-pumps/omnipod5-driver.png)
 
-**Loop status:** Not yet loopable.
+Tandem : t:Mobi ([Page d'accueil](https://www.tandemdiabetes.com/))
 
-While in the past company has decided not to allow their pumps to be controlled by external devices, it seems that last few years have been a game changer. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
+![Pilote Tandem t:Mobi en développement](../images/future-pumps/tandem-mobi-driver.png)
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+## Pompes qui sont bouclables
 
-### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Kaleido ([Page d'accueil](https://www.hellokaleido.com/))
 
-**Loop status:** All 3 pumps will be Loop candidates.
+**État de la boucle :** La pompe est candidate à la boucle, mais le protocole est inconnu pour le moment. Le fabricant ne s'intéresse pas à l'open source.
 
-Awaiting release of t:mobi in Europe (other two are not yet released anywhere). Development of AAPS t:mobi support has already started and should be available by end of 2025 (see more info on Discord).
+**Configuration matérielle requise pour AAPS :** Aucune. Il semble qu'elle dispose du Bluetooth.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+### Tandem : t:slim X3 ([Page d'accueil](https://www.tandemdiabetes.com/about-us/pipeline))
 
-### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
+**État de la boucle :** Peut-être candidate à la boucle dans le futur. On espère que la t:slim X3 permettra un contrôle complet depuis un téléphone, ce qui rendrait possible sa prise en charge par AAPS, mais le calendrier et les fonctions sont encore inconnus.
 
-**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
+**Configuration matérielle requise pour AAPS :** Aucune. Elle devrait avoir le Bluetooth.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Commentaires :** Pas encore sortie. La t:slim X3 semble être sans cesse repoussée dans les plans de Tandem, au profit de la t:Mobi (y compris une version sans tubulure) et de la Sigi (leur pompe patch).
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+### Twiist ([Page d'accueil](https://www.twiist.com/))
+
+**État de la boucle :** Candidate à la boucle.
+
+**Configuration matérielle requise pour AAPS :** Aucune. Elle a le Bluetooth.
+
+### Pompe à insuline Willcare ([Page d'accueil](http://shinmyungmedi.com/en/))
+
+**État de la boucle :** Pour le moment, elle n'est pas candidate à la boucle, mais leur équipe nous a contactés et ils veulent faire évoluer leur pompe pour la rendre bouclable (pour le moment, je pense qu'il ne manque que les commandes de lecture et de définition du profil).
+
+**Configuration matérielle requise pour AAPS :** Aucune. Il semble qu'elle dispose du Bluetooth.
+
+**Commentaires :** Comme l'entreprise est intéressée par une intégration à AAPS, elle pourrait faire l'implémentation elle-même.
+
+### Ypsopump ([Page d'accueil](https://www.ypsomed.com/))
+
+**État de la boucle :** Candidate à la boucle. Le protocole Bluetooth de la pompe a été décodé par rétro-ingénierie par la communauté ; il est donc possible en principe de communiquer avec elle.
+
+**Configuration matérielle requise pour AAPS :** Aucune. Elle a le Bluetooth.
+
+**Commentaires :** L'Ypsopump protège sa communication Bluetooth avec un chiffrement tiers très fort. Travailler avec ce chiffrement est techniquement difficile, ce qui rend dur le développement et la maintenance d'un pilote fiable. Il n'existe pas encore de pilote AAPS prêt pour l'utilisation réelle.
 
 ## Pompes plus vendues (les entreprises ne fonctionnent plus)
 
@@ -44,53 +66,53 @@ Awaiting release of t:mobi in Europe (other two are not yet released anywhere). 
 
 ### Accu-Chek Insight
 
-**Comments:** End of support March 2025.
+**Commentaires :** Fin de la prise en charge en mars 2025.
 
-## Pompes qui ne sont pas bouclable
+## Pompes qui ne sont pas bouclables
 
 ### Medtronic Bluetooth
 
-**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**Commentaires :** Medtronic s'est [retiré](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+
+### Tandem : t:slim X2 ([Page d'accueil](https://www.tandemdiabetes.com/))
+
+**Commentaires :** Le protocole Bluetooth de Tandem a été décodé par rétro-ingénierie, mais sur la t:slim X2, seuls les bolus peuvent être délivrés — le débit basal ne peut pas être contrôlé — elle ne peut donc pas être utilisée de façon sûre en boucle. Cela a peu de chances de changer, sauf si Tandem permet le contrôle complet de la X2 depuis un téléphone, ce qui arrivera plus probablement avec la t:slim X3.
 
 ### Accu-Chek Solo
 
-**Comments:** No community success in communicating with the Solo pump.
-
-### Ypsomed Pump
-
-**Comments:** Ypso added very heavy 3rd party encryption.
+**Commentaires :** La communauté n'a pas réussi à communiquer avec la pompe Solo.
 
 ## Exigences pour que les pompes soient bouclables
 
-**Prerequisite**
+**Prérequis**
 
 - La pompe doit prendre en charge un contrôle à distance (Bluetooth, fréquence radio, etc.).
 - Le protocole est piraté/documenté/etc.
 
-**Minimal requirement**
+**Exigences minimales**
 
 - Définir le Débit de Basal Temporaire
 - Obtenir l'état de la pompe
 - Annuler le Débit de Basal Temporaire
 
-**For oref1(SMB) or Bolusing:**
+**Pour oref1 (SMB) ou les bolus :**
 
 - Définir le Bolus
 
-**Good to have**
+**Souhaitable**
 
 - Annuler le Bolus en cours
 - Obtenir le profil de basal (presque requis)
 - Définir le profil de basal (souhaitable)
 - Lire l'historique 
 
-**Other (not required but good to have)**
+**Autres (pas nécessaire, mais souhaitable)**
 
 - Définir un bolus étendu
 - Annuler Bolus étendu
 - Lire l'historique
-- Lire la TDQ
+- Lire la DTQ
 
-### Other pumps support
+### Prise en charge d'autres pompes
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Si vous voulez connaître l'état d'autres pompes, contactez-nous sur Discord.

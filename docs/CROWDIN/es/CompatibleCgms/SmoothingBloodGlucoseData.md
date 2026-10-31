@@ -1,38 +1,44 @@
 # Suavizado de los datos de glucosa en la sangre
 
-If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors in your CGM data it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
+Si los datos de **glucosa** dan saltos o tienen ruido, **AAPS** puede dosificar mal la insulina y causar subidas o bajadas. Si ves errores o tu MCG da datos con saltos, es importante desactivar el lazo hasta que se resuelva el problema. Según tu MCG, estos problemas pueden deberse a la configuración del MCG en **AAPS** (como se explica más abajo) o a un problema en la zona del sensor del MCG (puede que tengas que cambiar el sensor del MCG).
 
-## Smoothing data within AAPS
+## Suavizado de datos en AAPS
 
-As of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. There are three options available in [Config Builder > Smoothing](../SettingUpAaps/ConfigBuilder.md).
+**AAPS** ofrece la opción de suavizar los datos dentro de **AAPS** en lugar de en la app del MCG. Abre el **menú** (☰), elige [**Configuración**](../SettingUpAaps/ConfigBuilder.md) y luego **Suavizado**. Hay cuatro opciones y solo una puede estar activa a la vez: **Sin suavizado**, **Suavizado exponencial**, **Suavizado promedio** y **Filtro de Kalman no lineal**.
 
-![Smoothing](../images/ConfBuild_Smoothing.png)
+![Configuración > Suavizado](../images/v4/Configuration/configuration_smoothing.png)
 
-### Exponential smoothing
+### Suavizado exponencial
 
-In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
+En general, esta es la opción recomendada para empezar, porque es la más agresiva para quitar el ruido y reescribe el valor más reciente. Sin embargo, mira la tabla de abajo para otras recomendaciones concretas.
 
-### Average smoothing
+### Suavizado promedio
 
-This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data.
+Esta opción funciona de forma parecida al suavizado hacia atrás (back smoothing) que antes tenían algunas plataformas de MCG. Reacciona más a los cambios recientes del valor de glucosa y, por eso, es más fácil que responda mal a datos de MCG con ruido.
 
-### No Smoothing
+### Sin suavizado
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
+Usa esta opción solo si tu app recolectora ya suaviza bien los datos del MCG antes de enviarlos a **AAPS**.
+
+### Filtro de Kalman no lineal (UKF, Unscented Kalman Filter)
+
+Esta opción usa un modelo estadístico para estimar de forma continua tu valor real de glucosa y su velocidad de cambio a partir de las lecturas que llegan (que pueden tener ruido). Se adapta sola al nivel de ruido que tiene tu sensor en cada momento. También detecta y descarta lecturas aisladas que se desvían de repente. Es una alternativa más avanzada al suavizado exponencial y al suavizado promedio. Es útil si quieres que el suavizado se ajuste solo al nivel de ruido cambiante de tu sensor, en lugar de usar un método fijo.
 
 (smoothing-xdrip-dexcom-g6)=
 
-## Suggestions to use smoothing
+## Sugerencias para usar el suavizado
 
-|               | Exponential |  Average  |    None     |
-| ------------- |:-----------:|:---------:|:-----------:|
-| G5/G6/ONE     |  If noisy   |           | Recommended |
-| G7/ONE+/Stelo |  If noisy   | If stable |             |
+También puedes cambiar el método de suavizado de forma automática, por ejemplo según la edad del sensor, con la [acción de automatización](#automations-automation-action) **Cambiar suavizado**.
 
-Libre sensors are noisy and can require smoothing. When using xDrip+ direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+|               | Exponencial  |   Promedio    | Sin suavizado |
+| ------------- |:------------:|:-------------:|:-------------:|
+| G5/G6/ONE     | Si hay ruido |               |  Recomendado  |
+| G7/ONE+/Stelo | Si hay ruido | Si es estable |               |
 
-| Sensor / Data source | Juggluco | xDrip+ direct | xDrip+ bridge | xDrip+ patched app |
-| -------------------- |:--------:|:-------------:|:-------------:|:------------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.      |    Average    |        N.A.        |
-| Libre 2/2+ (EU)      | Average  |     None      |    Average    |        None        |
-| Libre 2/2+/3/3+      | Average  |     N.A.      |     N.A.      |        None        |
+Los sensores Libre tienen ruido y pueden necesitar suavizado. Si usas la conexión directa de xDrip o la fuente de datos de la app parcheada (recibir datos de otra app, Juggluco incluido), [el suavizado ya se hace dentro de la app](#libre2-value-smoothing-raw-values).
+
+| Sensor / fuente de datos | Juggluco | xDrip directo | xDrip bridge | xDrip con app parcheada |
+| ------------------------ |:--------:|:-------------:|:------------:|:-----------------------:|
+| Libre 1/14 días/Pro      |   N/A    |      N/A      |   Promedio   |           N/A           |
+| Libre 2/2+ (UE)          | Promedio |    Ninguno    |   Promedio   |         Ninguno         |
+| Libre 2/2+/3/3+          | Promedio |      N/A      |     N/A      |         Ninguno         |

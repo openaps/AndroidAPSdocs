@@ -1,112 +1,243 @@
-# 組態建置工具
+# Configuration (Config Builder)
 
-根據你的設定，你可以透過**AAPS**螢幕頂部的選項卡或漢堡選單來開啟組態建置工具。
+```{admonition} Coming from AAPS v3? :class: note The **Config Builder** is now called **Configuration** and is in the **menu** (☰). See [What changed in AAPS v4](#v4-changes).
 
-![開啟組態建置工具](../images/ConfBuild_Open_AAPS30.png)
-
-強調**組態建置工具**是用來開啟和關閉模組功能的選項卡。在下方圖片中，左側的方框 (A) 讓你選擇想要啟用的模組。預設情況下，開啟組態建置工具時，區塊會收起來，只顯示活動中的外掛。點擊箭頭 (G) 來顯示所有可用選項。右側的方框 (C) 讓你將活動中的模組以選項卡 (E) 的方式顯示在 **AAPS** 中。如果右側的方框未被啟動，你可以使用螢幕左上方的漢堡選單 (D) 來進入該功能。請參閱下面的[選項卡或漢堡選單](#tab-or-hamburger-menu)。
-
-當模組內有額外設定可用時，你可以點擊齒輪圖示 (B)，這將帶你進入偏好設定中的具體設定。
-
-![組態建置工具框和齒輪](../images/ConfBuild_ConfigBuilder.png)
-
-(Config-Builder-tab-or-hamburger-menu)=
-
-## 標籤或選單
-
-透過眼睛圖示下方的選框，你可以決定如何開啟相應的程式區段。
-
-![標籤或選單](../images/ConfBuild_TabOrHH.png)
-
-```{contents}
-:backlinks: entry
-:depth: 2
-```
+    <br />**Configuration** is where you choose which plugins are active (CGM, pump, APS algorithm, sensitivity, sync, …) and open each plugin and its settings. The [walkthrough](#configuration-v4) is below; the rest of this page describes each section in detail.
+    
+    (configuration-v4)=
+    ## Configuration in AAPS v4
+    
+    In **AAPS** v4, tap the **menu** (☰) in the **top-left** corner of the main screen and choose **Configuration** (*“Set up your configuration (CGM, pump, …) and enable features”*).
+    
+    ![The top-left menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
+    
+    Plugins are grouped by **category** — for example *Smoothing*, *Calibration*, *Sensitivity detection*, *APS*, *Communication* and *General*. Each row shows the category name and the **currently active** plugin (e.g. *APS → OpenAPS SMB*). Tap a row to open a category.
+    
+    ![The Configuration screen, listing plugin categories](../images/v4/Configuration/configuration_plugins.png)
+    
+    Inside a category you see the plugins available for it. For single-choice categories you pick the active one; some categories are multi-select (*“Choose any that apply”*). Each plugin offers two actions:
+    
+    - **Open plugin** — opens the plugin's own screen.
+    - **Settings** — opens the plugin's preferences (settings may be grouped into expandable sections).
+    
+    ![A category showing its plugins, each with “Open plugin” and “Settings”](../images/v4/Configuration/configuration_open_plugin.png)
+    
+    (configuration_sync_icon)=
+    ### The mobile icon — “synced from the master”
+    
+    A small **mobile (phone) icon** next to a category or setting means that item is **synchronized from the master** — its value/selection is delivered to this device over the NSClientV3 (Nightscout) channel.
+    
+    On a **client** (**AAPSClient**) these items are **kept in sync with the master**. The icon is only shown on a client, so it does not appear in the screenshot above, which was taken on the main **AAPS** app. On a client it typically appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS*. Exactly how the master and clients stay aligned — and which settings you can change from either side — is covered under [Master ↔ Client control](#client-master-config-prefs).
+    
+    The same icon also appears **inside the settings**, next to the individual preferences that are synced. In the example below *Absorption cutoff* carries the icon; settings without the icon are configured per device:
+    
+    ![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+    
+    Items **without** the icon are configured **per device**. The most important example is the **NSClientV3 (Communication)** connection itself — the **Nightscout URL**, **access token** and **websockets** are set on each phone individually, so they do **not** show the mobile icon.
+    
+    ---
+    
+    (Config-Builder-tab-or-hamburger-menu)=
+    ## Opening a plugin screen
+    
+    Each plugin screen is opened in one of these ways (the tabs and the eye checkbox of **AAPS** v3 are gone, see [What changed in AAPS v4](#v4-changes)):
+    
+    - **Configuration** → the plugin's category → **Open plugin**,
+    - the **Manage** sheet of the bottom navigation, for the screens you use most (Profile, Insulin settings, Pump, Automation, Food...),
+    - a [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) button that you add yourself,
+    - the **search bar** on the main screen.
+    
+    ```{contents}
+    :backlinks: entry
+    :depth: 2
+    
 
 (ConfigBuilder_Profile)=
 
 ## 設定檔
 
-此模組無法停用，因為它是**AAPS**的核心部分。
+This module cannot be disabled as it is a core part of **AAPS**.
 
 請參閱[你的 AAPS 個人設定](../SettingUpAaps/YourAapsProfile.md)以基本了解你的**個人設定**中包含的內容。
 
-(Config-Builder-insulin)=
+(insulin)= (Config-Builder-insulin)=
 
 ## 胰島素
 
-![胰島素類型](../images/ConfBuild_Insulin_AAPS30.png)
+![Insulin settings](../images/manage/insulin_settings.png)
 
-選擇你正在使用的胰島素類型。
+In **AAPS** 4 the insulin is no longer a plugin selected in **Configuration**. Open **Manage → Insulin settings** to set up the insulin you are using.
+
+The insulin editor lets you:
+
+* give the profile an **Insulin nickname** so it is easy to recognise,
+* set the **Peak** (time to maximum insulin activity, in minutes) and the **DIA** (Duration of Insulin Activity, in hours), either by typing the value or using the **–** / **+** buttons,
+* tap a **Load peak from** preset button — **Novorapid** (75 min), **Fiasp** (55 min) or **Lyumjev** (45 min) — to fill in the standard peak time for that insulin in one step.
+
+The allowed ranges are the same whatever insulin you use:
+
+* **DIA**: 5 to 9 hours (5 to 10 hours if the patient type is set to **Pregnant**). See [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to choose a value.
+* **Peak**: 35 to 120 minutes.
+
+The **IOB** (insulin on board) and **Activity** curves shown at the bottom of the editor update as you change the values, so you can see straight away how your settings shape the insulin action.
 
 有關如何理解**AAPS**中顯示的胰島素個人設定的更多資訊，請[查看這裡](#AapsScreens-insulin-profile)。
 
-### 胰島素類型差異
+(Config-Builder-insulin-change-active)=
 
-* 選項 'Rapid-Acting Oref'、'Ultra-Rapid Oref'、'Lyumjev' 和 'Free-Peak Oref' 都具有指數形狀。
-* 對於 'Rapid-Acting'、'Ultra-Rapid' 和 'Lyumjev'，DIA 是唯一可以自行調整的變數，峰值時間是固定的。 
-* Free-Peak 允許你同時調整 DIA 和峰值時間，這僅應由了解這些設置效果的進階使用者使用。 
-* 該[胰島素曲線圖](#AapsScreens-insulin-profile)幫助你理解不同的曲線。
+### Changing the insulin in use (DIA or peak)
 
-#### Rapid-Acting Oref
+The insulin marked **ACTIVE** is the one your running profile uses. Its fields are greyed out: you cannot edit or delete it. This way, the insulin name shown in your running profile always matches the settings actually in use.
 
-![胰島素類型：快速作用 Oref](../images/ConfBuild_Insulin_RAO.png)
+To change the DIA or peak you are using:
 
-* 推薦用於 Humalog、Novolog 和 Novorapid
-* DIA = 至少 5.0 小時
-* 峰值峰值 = 注射後 75 分鐘（固定，不可調整）
+1. Open **Manage → Insulin settings**. If the screen opens read-only (a **✏️ pencil** in the top bar), tap the pencil and unlock your settings.
+2. Tap **+** (*Add new insulin*). **AAPS** creates a copy of the insulin shown on screen.
+3. Set the new **Peak** and/or **DIA**, then tap the save icon (top right).
+4. Tap **▶** (*Activate insulin*) and confirm. The new insulin becomes **ACTIVE**.
 
-#### Ultra-Rapid Oref
+```{admonition} The name includes peak and DIA :class: note **AAPS** adds the peak, DIA and concentration to the insulin name automatically (for example *Fiasp 55m 8h U100*), so you can tell your configurations apart at a glance.
 
-![胰島素類型：超快速作用 Oref](../images/ConfBuild_Insulin_URO.png)
+    <br />You can delete the old insulin once it is no longer active.
+    
+    ### The "Load peak from" presets
+    
+    In **AAPS** 4 there is no list of insulin types to choose from. Every insulin uses the same exponential activity curve; only its **Peak** and **DIA** differ. The **Load peak from** presets in the insulin editor fill in the recommended peak for the most common insulins in one tap (the small ⓘ next to **Load peak from** lists them with their peak values). You can still adjust the **Peak** and **DIA** afterwards.
+    
+    Only change the peak away from its recommended value if you understand the effect of doing so. The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the curves.
+    
+    #### Novorapid
+    
+    ![Insulin curve with the Novorapid peak](../images/Profile/ConfBuild_Insulin_RAO.png)
+    
+    * recommended for Humalog, Novolog and Novorapid (called *Rapid-Acting Oref* in **AAPS** v3)
+    * Peak = 75 minutes after injection
+    
+    #### Fiasp
+    
+    ![Insulin curve with the Fiasp peak](../images/Profile/ConfBuild_Insulin_URO.png)
+    
+    * recommended for Fiasp (called *Ultra-Rapid Oref* in **AAPS** v3)
+    * Peak = 55 minutes after injection
+    
+    (Config-Builder-lyumjev)=
+    #### Lyumjev
+    
+    ![Insulin curve with the Lyumjev peak](../images/Profile/ConfBuild_Insulin_L.png)
+    
+    * recommended for Lyumjev
+    * Peak = 45 minutes after injection
+    
+    #### Custom peak
+    
+    * There is no separate "Free-Peak Oref" insulin type in **AAPS** 4: enter any **Peak** (35 to 120 minutes) directly in the [insulin editor](#Config-Builder-insulin), without using a preset.
+    * A custom peak is useful if you use an insulin that is not in the list, or a mixture of different insulins.
+    
+    (Config-Builder-insulin-dia)=
+    ### Duration of insulin action (DIA) and peak
+    
+    ```{warning}
+    In looping, decreasing DIA or peak will always increase administered insulin. DIA works differently in AAPS than in commercial AID systems, and careless changes to these settings can change insulin dosing in a way which is much larger or smaller than expected.
+    
 
-* 推薦用於 FIASP
-* DIA = 至少 5.0 小時
-* 峰值峰值 = 注射後 55 分鐘（固定，不可調整）
+AAPS models the timeline of insulin action with a mathematical formula, configured using **DIA** and the closely related **peak** settings. DIA is the theoretical duration until IOB reaches zero and peak is the point in time when the effect of insulin is strongest. This yields an IOB curve and an activity curve, which is simply the **rate** of IOB decay.
 
-(Config-Builder-lyumjev)=
+Consider that when AAPS is looping, it's normal to have periods of [zero-temping](#Open-APS-features-super-micro-bolus-smb). This missing basal insulin is fully subtracted from the IOB, explaining why IOB will in practice reach zero many hours earlier than the configured DIA. You can inspect [bolus IOB and basal IOB](#aaps-screens-iob-cob-basal-sens) separately from the main screen.
 
-#### Lyumjev
+To configure DIA and peak, tap **Manage** in the main screen, and then tap **Insulin settings**. AAPS displays the active insulin configuration like this:
 
-![胰島素類型：Lyumjev](../images/ConfBuild_Insulin_L.png)
+![Sample insulin configuration](../images/manage/insulin_profile.png)
 
-* Lyumjev 的特殊胰島素設定檔
-* DIA = 至少 5.0 小時
-* 峰值峰值 = 注射後 45 分鐘（固定，不可調整）
+In this example, the peak setting is 55 minutes, DIA is 8 hours and [insulin concentration](#Insulin-Concentration) is the standard 100 IU/mL.
 
-#### Free Peak Oref
+Due to the influence of zero-temping explained above and the formula used for IOB decay in AAPS, most users set a clearly higher DIA than in commercial systems. In general, many people find that a **DIA** of 9h works well for them. After you have more experience with AAPS and have a well-tuned profile, you can try to find personalized DIA and peak settings with the information below.
 
-![胰島素類型：自由峰值 Oref](../images/ConfBuild_Insulin_FPO.png)
+````{admonition} Details on the impact of DIA and peak configuration :class: dropdown
 
-* 使用 "自由峰值 Oref" 設定檔，你可以單獨輸入峰值時間。要這麼做，點擊齒輪圖示以進入進階設定。
-* 如果設定檔中未指定更高值，則 DIA 自動設置為 5 小時。
-* 如果使用無背景支援的胰島素或不同胰島素的混合物，建議使用此效果設定檔。
+Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
 
-(Config-Builder-bg-source)=
+These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
 
-## 血糖來源
+Adjusting DIA:
 
-選擇你正在使用的血糖來源。請參閱[血糖來源](../Getting-Started/CompatiblesCgms.md)頁面以獲取更多設置資訊。
+```{image} ../images/iob_remaining_static_peak.png :width: 400px
 
-![組態建置工具：血糖來源選擇](../images/ConfBuild_BG.png)
+    <br />Adjusting peak:
+    
+    ```{image} ../images/iob_remaining_static_dia.png
+    :width: 400px
+    
 
-* [xDrip+](../CompatibleCgms/xDrip.md)
-* [NSClient 血糖](../CompatibleCgms/CgmNightscoutUpload.md) - 僅當你清楚操作時，查看[血糖來源](../Getting-Started/CompatiblesCgms.md)。
-* [MM640g](../CompatibleCgms/MM640g.md)
-* Glimp - 僅支援版本 4.15.57 及更新版本
-* [自建你的 Dexcom 應用程式 (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)。
-* [Poctech](../CompatibleCgms/PocTech.md)
-* Tomato 應用程式，用於 MiaoMiao 裝置
-* [Glunovo 應用程式](https://infinovo.com/) 用於 Glunovo CGM 系統
-* [歐態（Ottai）](../CompatibleCgms/OttaiM8.md)
-* [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
-* 隨機血糖：生成隨機血糖資料（僅限演示模式）
+Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
 
-## 平滑
+```{image} ../images/iob_remaining_uniform.png :width: 400px
 
-![平滑](../images/ConfBuild_Smoothing.png)
+    <br />Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+    
+    ````
+    
+    #### Further reading on DIA and peak configuration
+    
+    * [Technical details and historical background from the AAPS predecessor, OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
+    * [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) on Diabettech.
+    * [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) on See My CGM (archive).
+    * [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) and other articles on Bionic Wookie, recommending a DIA of 9h for Lyumjev, Fiasp, NovoRapid, Humalog.
+    
+    (Config-Builder-bg-source)=
+    ## BG Source
+    Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
+    
+    ![Configuration > BG Source](../images/v4/Configuration/configuration_bg_source.png)
+    
+    Scroll down to see the other sources:
+    
+    ![Configuration > BG Source, continued](../images/v4/Configuration/configuration_bg_source_2.png)
+    
+    ![Configuration > BG Source, end of the list](../images/v4/Configuration/configuration_bg_source_3.png)
+    
+    * [xDrip+ BG](../CompatibleCgms/xDrip.md) - also for compatible apps such as [Juggluco](../CompatibleCgms/Juggluco.md)
+    * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
+    * [MM640g](../CompatibleCgms/MM640g.md)
+    * Glimp - only version 4.15.57 and newer are supported
+    * [BYODA (Build Your Own Dexcom App)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
+    * MicroTech CGM App - for the Aidex / LinX CGM
+    * [Poctech](../CompatibleCgms/PocTech.md)
+    * Tomato (MiaoMiao) - Tomato App for MiaoMiao device
+    * [Glunovo](https://infinovo.com/) - Glunovo App for Glunovo CGM system
+    * Intelligo - Intelligo App
+    * Syai/Ottai - for the Syai and Ottai apps (see [Syai Tag](../CompatibleCgms/SyaiTagX1.md) and [Ottai](../CompatibleCgms/OttaiM8.md))
+    * SI App - patched SI App or Sibionics App for Sibionics CGM
+    * Sino App - patched app for Sinocare CGM
+    * Notification Reader - reads glucose values from the notifications shown by official CGM apps (Dexcom, Medtronic, Eversense, etc.)
+    * Instara - Instara App
+    * Random BG - generates random BG data for testing. It can only be enabled in an engineering (developer) build with the **Virtual Pump**, so in a normal **AAPS** installation it cannot be used.
+    
+    ## Smoothing
+    
+    ![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+    
+    See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+    
+    ## Calibration
+    
+    Choose how **AAPS** treats the values it receives from your sensor:
+    
+    - **No calibration**: the sensor values are used as they are. Use this when the sensor is already factory-calibrated and accurate. This is the default.
+    - **Linear calibration**: **AAPS** corrects the sensor values with a slope and an offset that it computes from your fingerstick entries.
+    
+    How **Linear calibration** works:
+    
+    - It needs a **sensor change** to be logged, so that it knows when the sensor session started. The first 2 hours of a session are skipped as warm-up.
+    - It needs at least **2 fingerstick entries**. Recent entries count more than old ones.
+    - The correction is only applied when the result is in a safe range. If your entries are too close together, only the offset is corrected.
+    - **Open plugin** shows the status of the calibration, the slope and correction in use, and the list of fingerstick entries. You can add an entry with **Add calibration** and remove a wrong one.
+    
+    ```{admonition} Calibrate with care
+    :class: warning
+    A wrong fingerstick value leads to wrong glucose values and therefore to wrong insulin dosing. Wash your hands before measuring, and do not calibrate while your glucose is changing fast.
+    
 
-請參閱[平滑血糖資料](../CompatibleCgms/SmoothingBloodGlucoseData.md)。
+![Configuration > Calibration](../images/v4/Configuration/configuration_calibration.png)
 
 (Config-Builder-pump)=
 
@@ -114,7 +245,19 @@
 
 選擇你正在使用的幫浦。請參閱[相容的幫浦](../Getting-Started/CompatiblePumps.md)頁面以獲取更多設置資訊。
 
-![組態建置工具幫浦選擇](../images/ConfBuild_Pump_AAPS33.png) ![組態建置工具幫浦選擇](../images/ConfBuild_Pump_AAPS33-2.png)
+![Configuration > Pump](../images/v4/Configuration/configuration_pump_list_1.png)
+
+Scroll down to see all the pump drivers:
+
+![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_2.png)
+
+![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_3.png)
+
+![Configuration > Pump, end of the list](../images/v4/Configuration/configuration_pump_list_4.png)
+
+When you select another pump, **AAPS** asks you to confirm the change:
+
+![Switch plugin confirmation](../images/v4/Pumps/switch_plugin_dialog.png)
 
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
 * Dana R Korean（適用於國內 DanaR 幫浦）
@@ -129,17 +272,30 @@
 * [EOPatch2](../CompatiblePumps/EOPatch2.md)
 * [Medtrum](../CompatiblePumps/MedtrumNano.md)
 * [Equil 5.3](../CompatiblePumps/Equil5.3.md)
+* [Carelevo](../CompatiblePumps/CareLevo.md)
 * 虛擬幫浦：開放循環 - 僅限**AAPS**建議 
   * 當你開始使用**AAPS**時，在首次[完成目標](../SettingUpAaps/CompletingTheObjectives.md)的過程中
   * 針對尚未擁有驅動程式的幫浦
+
+(config-builder-wrong-pump-data)=
+
+### Message: "Data is coming from different pump"
+
+**AAPS** remembers the pump it is connected to (pump type and serial number). If it receives data from another pump, for example after your pump was replaced by a new one of the same model, it shows this message and ignores the data from that pump:
+
+![Data is coming from different pump](../images/Screen_DifferentPump.png)
+
+To use the new pump, change the pump driver: select **Virtual pump**, confirm, then select your pump again. **AAPS** then registers the pump it is connected to now.
 
 (Config-Builder-sensitivity-detection)=
 
 ## 敏感性偵測
 
-選擇你正在使用的敏感性偵測類型。欲了解不同設計的更多詳細資訊，請[在這裡閱讀](../DailyLifeWithAaps/SensitivityDetectionAndCob.md)。此功能會即時分析歷史資料，並在你對胰島素的反應比平常更敏感（或相反，更具抗性）時進行調整。更多關於敏感性演算法的詳細資訊請參閱[OpenAPS 文件](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html)。
+![Configuration > Sensitivity detection](../images/v4/Configuration/configuration_sensitivity_detection.png)
 
-你可以在主畫面上查看你的敏感性，顯示在[額外圖表](#AapsScreens-section-g-additional-graphs)中。你可以在主畫面上選擇 SEN 並觀看白線來查看你的敏感性狀況。請注意，你需要在[目標 8](#objectives-objective8)中，以便讓敏感度檢測/[自動敏感調整](#Open-APS-features-autosens)所提供的胰島素量。在達到該目標之前，Autosens 的百分比/圖表中的線僅供參考。
+選擇你正在使用的敏感性偵測類型。欲了解不同設計的更多詳細資訊，請[在這裡閱讀](../DailyLifeWithAaps/SensitivityDetectionAndCob.md)。此功能會即時分析歷史資料，並在你對胰島素的反應比平常更敏感（或相反，更具抗性）時進行調整。 More details about how the sensitivity ratio itself is calculated can be found in [Key AAPS Features > Autosens](#Open-APS-features-autosens).
+
+You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs), by selecting SEN and watching the white line. 請注意，你需要在[目標 8](#objectives-objective8)中，以便讓敏感度檢測/[自動敏感調整](#Open-APS-features-autosens)所提供的胰島素量。在達到該目標之前，Autosens 的百分比/圖表中的線僅供參考。
 
 ### 吸收設定
 
@@ -149,7 +305,9 @@
 
 ## APS
 
-選擇用於治療調整的 APS 演算法。你可以在 OpenAPS (OAPS) 標籤中查看選定演算法的活動詳情。
+![Configuration > APS](../images/v4/Configuration/configuration_aps.png)
+
+選擇用於治療調整的 APS 演算法。 You can view the active detail of the chosen algorithm with **Open plugin**.
 
 * OpenAPS AMA 
   * 進階餐點輔助：不再建議使用的舊演算法。
@@ -158,30 +316,42 @@
   * 超微量注射：建議所有用戶使用的最新演算法。
   * 與 AMA 不同，SMB 不使用臨時基礎率來控制血糖水平，而主要使用小型**超微量注射**。
   * 注意：建議你從一開始就使用這個演算法，儘管你實際上直到[目標 9](#objectives-objective9)才會收到 SMB。
+* [Auto ISF](#Open-APS-features-auto-isf) 
+  * Experimental algorithm for advanced users. It is only listed once the objectives are completed.
 
-如果從 AMA 切換到 SMB 演算法，*min_5m_carbimpact* 必須手動更改為**8**（SMB 的預設值），在[偏好設定 > 敏感性檢測 > 敏感性 Oref1 設定](../SettingUpAaps/Preferences.md)中進行。
+If switching from AMA to SMB algorithm, *min_5m_carbimpact* must be changed manually to **8** (default value for SMB) in [Settings → Absorption settings](#Preferences-min_5m_carbimpact).
 
 ## 循環
 
-此模組不應停用，因為它是**AAPS**的核心部分。
+This module cannot be disabled as it is a core part of **AAPS**.
+
+![Configuration > Loop](../images/v4/Configuration/configuration_loop.png)
 
 ## 約束條件
 
+![Configuration > Constraints](../images/v4/Configuration/configuration_constraints.png)
+
 ### 目標
 
-**AAPS**有一個學習計畫（一系列目標），你需要逐步完成。這將引導你安全地設置閉合循環系統。他保證你已正確設置所有內容，並了解系統的具體操作。這是你可以信任系統的唯一方式。
+**AAPS**有一個學習計畫（一系列目標），你需要逐步完成。這將引導你安全地設置閉合循環系統。
 
 請參閱[目標](../SettingUpAaps/CompletingTheObjectives.md)頁面以獲取更多資訊。
 
-## 同步選項
+## Communication
 
-在這部分中，你可以選擇要將**AAPS**將資料傳送到哪裡。
+In this category (called **Synchronization** in **AAPS** v3), you choose if/where you want **AAPS** to send your data to.
 
-### NSClient 或 NSClientV3
+![Configuration > Communication](../images/v4/Configuration/configuration_communication.png)
+
+Scroll down to see the rest of the list:
+
+![Configuration > Communication, continued](../images/v4/Configuration/configuration_communication_2.png)
+
+### NSClientV3
 
 可用作[報告伺服器](../SettingUpAaps/SettingUpTheReportingServer.md)以及/或[遠端監控](../RemoteFeatures/RemoteMonitoring.md)、[遠端控制](../RemoteFeatures/RemoteControl.md)。
 
-請參閱[與報告伺服器的同步](#SetupWizard-synchronization-with-the-reporting-server-and-more)幫助你選擇 NSClient (v1) 和 NSClientV3。
+See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to set up NSClientV3 synchronization.
 
 ### Tidepool
 
@@ -191,19 +361,27 @@
 
 ### xDrip
 
-用於**傳送**資料，例如治療方式給 xDrip+。
+Used to **send** data such as glucose values and treatments to xDrip+ on the same phone. Its settings also hold **Send status to xDrip+**, a status line with IOB and COB that xDrip+ and some watch companion apps display.
 
 ### Open Humans
 
 請參閱[Open Humans](../SupportingAaps/OpenHumans.md)。
 
+(Config-Builder-wear)=
+
 ### Wear
 
-使用你的 Android WearOS 手錶來監控和控制**AAPS**（請參見[錶盤頁面](../WearOS/WearOsSmartwatch.md)）。
+Monitor and control **AAPS** from a Wear OS watch. Setting up the watch is explained on [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md). After enabling the plugin, choose its options in [Settings > Wear](#preferences-wear). Using the watch is explained on [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md).
 
-### 三星 Tizen
+(external-companion-apps)=
 
-將資料傳送到三星的 G-Watch Wear 應用程式 (Tizen OS).
+### External Companion Apps
+
+Broadcasts **AAPS** status data on the phone so that other apps installed on it can display it — for example watch or widget companion apps. The broadcast includes glucose and trend, IOB, COB, basal and temp basal, profile name, loop status, phone and pump battery, reservoir level and bolus progress. Enable it only if a companion app you use asks for this data.
+
+Apps known to read this broadcast are [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi and Amazfit watches), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS complications and widgets, and Android Auto through GlucoDataAuto) and the G-Watch app. Their setup is described on [Smartwatches and AAPS](#watches-external-companion-apps). Some of them also use **Send status to xDrip+** from the **xDrip** plugin above for a status line with IOB and COB.
+
+In earlier versions this plugin was called **Samsung Tizen**, after the [G-Watch app for Samsung Tizen watches](#Watchfaces-tizen) it was first made for.
 
 ### Garmin
 
@@ -211,37 +389,27 @@
 
 ## 治療
 
-如果你查看「治療」（Treat）標籤，你可以看到已上傳到 Nightscout 的治療紀錄。如果你希望編輯或刪除一個項目（例如，你攝取的碳水化合物少於預期），請選擇「移除」，然後透過 [主螢幕上的碳水化合物按鈕](#screens-bolus-carbs) 輸入新值（如有必要可以更改時間）。
+Open the **menu** (☰) and select [Treatments history](#aaps-screens-treatments) to see the treatments that have been recorded. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through **Treatments → Carbs** in the bottom navigation (see [Carbs](#screens-bolus-carbs)).
 
 ## 一般問題
 
+In **AAPS** 4 the **General** category of **Configuration** only lists **Autotune**. The other features described below are always available and no longer need to be enabled here; each paragraph says where to find them.
+
+![Configuration > General](../images/v4/Configuration/configuration_general.png)
+
 ### 首頁總覽
 
-這是**AAPS**的[主畫面](#AapsScreens-the-homescreen)，不可停用。
-
-#### 在治療對話框中顯示備註欄位
-
-選擇是否要在輸入治療時顯示備註欄位。
-
-#### 狀態燈
-
-選擇是否要在首頁總覽中顯示[狀態燈](#Preferences-status-lights)，顯示導管時間、胰島素時間、傳感器時間、電池時間、儲液罐液位或電池電量。當達到警告等級時，狀態燈的顏色會變為黃色。關鍵時間將顯示為紅色。
-
-#### 進階設定
-
-**交付此部分注射嚮導結果：**使用 SMB 時，許多人不會進行 100% 的餐前注射，而只注射一部分（例如 75%），其餘部分由 SMB 和 UAM（無人操作餐點偵測）處理。在這個設定中，你可以為注射嚮導計算的百分比選擇一個預設值。如果此設置為 75%，而你需要注射 10 單位，注射嚮導將建議餐前注射 7.5 單位。
-
-**在嚮導中啟用超級注射功能**（與*超微量注射*不同！）：請謹慎使用，在瞭解其真正作用之前不要啟用。基本上，接下來兩個小時的基礎率將加到注射中，並啟用兩小時的0基礎率。 **AAPS 的循環功能將停用——請小心使用！**如果你使用 SMB，根據你在[“限制 SMB 的最大基礎分鐘數”](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to)的設定，AAPS 循環功能將被停用；如果你不使用 SMB，則循環功能將在兩小時內被停用。詳細的超注射資訊可以在[這裡](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus)找到。
+The [main screen](#AapsScreens-the-homescreen) of **AAPS** is not a plugin any more and has no settings of its own in **Configuration**. The options that used to be here are in **Settings** (gear icon): [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs), [Status lights](#Preferences-status-lights) and the [Bolus percentage](#Preferences-deliver-this-part-of-bolus-wizard-result) used by the bolus wizard. The super bolus option of **AAPS** 3.x is [not available as a setting](#Preferences-advanced-settings-overview) in **AAPS** 4.
 
 (Config-Builder-actions)=
 
 ### 操作
 
-一個選項卡提供多個按鈕在**AAPS**中進行[操作](#screens-action-tab)。
+The Actions tab of **AAPS** 3.x no longer exists. Its buttons are now in the **Manage** sheet — see [Where did the Actions tab go?](#screens-action-tab).
 
 ### 自動化
 
-一個選項卡用於管理你的[自動化](../DailyLifeWithAaps/Automations.md)，從[目標 10](#objectives-objective10)開始。
+**Manage → Automation** lets you manage your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
 
 (Config-Builder-sms-communicator)=
 
@@ -251,24 +419,11 @@
 
 ### 食物
 
-顯示 Nightscout 食物資料庫中定義的食物預設值，更多設定資訊請參閱[Nightscout 讀我](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods)。
+**Manage → Food** displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
 注意：項目無法在**AAPS**計算機中使用。（僅供檢視）
 
-(Config-Builder-wear)=
-
-### Wear
-
-使用你的 Android Wear 手錶監控和控制 AAPS（請參見[錶盤頁面](../WearOS/WearOsSmartwatch.md)）。使用設置（齒輪圖示）來定義在透過手錶進行注射時應考慮哪些變數（例如 15 分鐘趨勢，COB...）。
-
-如果你想要透過手錶進行注射等操作。那麼在「Wear 設置」中需要啟用「從手錶進行控制」。
-
-![Wear 設置](../images/ConfBuild_Wear.png)
-
-透過 Wear 標籤或選單（螢幕左上角的選單圖示，如果標籤未顯示）你可以
-
-* 重新發送所有資料。如果手錶長時間未連線，你可能希望將訊息推送到手錶。
-* 直接從手機上打開手錶的設置。
+(Config-Builder-autotune)=
 
 ### 自動調整
 
@@ -276,8 +431,14 @@
 
 ### 維護
 
-進入此選項卡以匯出/匯入設定。
+Open the **menu** (☰) and select **Maintenance** to export / import settings and manage log files.
+
+![Maintenance screen, log files](../images/screens/maintenance.png)
+
+![Maintenance screen, file management](../images/screens/maintenance_2.png)
+
+![Maintenance screen, database management](../images/screens/maintenance_3.png)
 
 ### 組態建置工具
 
-當前選項卡。
+Now called **Configuration**: this current page.

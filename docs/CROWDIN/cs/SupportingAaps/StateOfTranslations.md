@@ -3,14 +3,14 @@
 Stav je aktualizován jednou za hodinu a odráží pouze stav na Crowdinu.
 
 ```{tip}
-Buďte opatrní, procento zrevidovaného obsahu musí být nižší než procento překladů, ale rozhodli se jej zobrazit nad překlady.
+Be careful the percentage of proofreading must be lower than the percentage of translations but they decided to show it on top of the translations.
 Je lepší se podívat pouze na procento překladů, abyste viděli, kolik práce ještě zbývá.
 ```
 
 ```{admonition} needed time for final publication
 Po přeložení na Crowdinu každý den probíhá synchronizace s Githubem, aby se překlady přenesly do Githubu jako žádost o začlenění (PR).
 
-PR je třeba přijmout ručně a bude tak učiněno co nejrychleji.
+The acceptance of the PR is a manual task which will be done as fast as possible.
 ```
 
 ## Stav překladu aplikace

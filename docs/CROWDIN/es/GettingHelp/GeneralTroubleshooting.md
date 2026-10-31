@@ -1,169 +1,195 @@
 (generaltroubleshooting)=
 
-# **Troubleshooting**
+# Solucionando problemas
 
-Puede encontrar información de resolución de problemas en muchas páginas de la wiki. This page is a collection of links to help you find the information to solve your problem for various known issues.
+**Empieza aquí cuando algo no funciona.** La información para solucionar problemas está en muchas páginas de la documentación. Esta página la reúne: es una sola colección de enlaces, ordenados por tema, que te ayuda a resolver los problemas más comunes.
 
-Additional useful information might also be available in the [FAQ](../UsefulLinks/FAQ.md).
+Si no encuentras tu respuesta abajo, mira también:
+
+* las [Preguntas frecuentes](../UsefulLinks/FAQ.md) para respuestas a preguntas comunes, y
+* la guía [Ajustar el perfil de AAPS](ProfileTuning.md) si tu lazo funciona pero tu control de la glucosa debe mejorar.
+
+```{admonition} Still stuck?
+:class: tip
+Si ninguno de los enlaces resuelve tu problema, mira [¿Dónde puedo obtener ayuda?](WhereCanIGetHelp.md) para preguntar a la comunidad (Facebook, Discord), o envía tus [archivos de log](AccessingLogFiles.md) a los desarrolladores.
+```
 
 ---
 
 (generaltroubleshooting-aaps-app)=
 
-## **AAPS app**
+## App AAPS
 
-### **Building & updating**
+### Compilar y actualizar
 
-* [Perdida de almacén de claves](#troubleshooting_androidstudio-lost-keystore)
-* [Troubleshooting AndroidStudio](TroubleshootingAndroidStudio)
-* [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) and [updating with AAPS Builder](#aaps-builder-updates)
-* [Browser build (CI) troubleshooting](#aaps-ci-troubleshooting)
+* Si la compilación falla, mira [Si la compilación falla](#building-aaps-troubleshooting): allí está la sección de solución de problemas de cada método de compilación:
+  * [AAPS Builder](#aaps-builder-troubleshooting)
+  * [Compilación en el navegador](#aaps-ci-troubleshooting)
+  * [Android Studio](TroubleshootingAndroidStudio.md)
+* Almacén de claves perdido o nuevo: [Reinstalar AAPS](#reinstall-aaps)
+* Actualizar **AAPS**: [con AAPS Builder](#aaps-builder-updates), [con una compilación en el navegador (fork)](#update-browser-build-troubleshooting), [con Android Studio](#update-computer-build-troubleshooting)
 
-### **Installing**
+### Instalación
 
-You may see a Google Play Protect warning that the app is unsafe, was built for older Android versions and doesn't include latest privacy protections.
+* [Aviso de Google Play Protect](#transferring-installing-play-protect-warning): la app se marca como no segura.
+* Instalación **bloqueada** con un mensaje sobre un desarrollador no verificado: mira [Verificación de desarrolladores de Android](#android-developer-verification) para ver los métodos de instalación gratuitos.
 
-Ignore it: More details, Install anyway.
+### Ajustes
 
-![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+* [Perfil: «La tasa basal no es compatible con la bomba actual»](#your-aaps-profile-basal-not-compatible)
+* [Bomba: «Los datos proceden de una bomba diferente»](#config-builder-wrong-pump-data)
+* [Nightscout Client](TroubleshootingNsClient.md)
 
-### **Configuración**
-* Perfil
+### Uso
 
-  ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
-
-* [Pump - data from different pump](#update30-failure-message-data-from-different-pump)
-
-  ![Mensaje de error: Los datos son de bombas diferentes](../images/BasalNotAlignedToHours2.png)
-
-* [Nightscout Client](../GettingHelp/TroubleshootingNsClient.md)
-
-### **Uso**
-* [Wrong carb values](#CobCalculation-detection-of-wrong-cob-values)
-
-   ![Error: Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
-
-* [SMS commands](#SMSCommands-troubleshooting)
+* [Valores de carbohidratos erróneos (absorción lenta de carbohidratos)](#CobCalculation-detection-of-wrong-cob-values)
+* [Automatizaciones](#automations-troubleshooting)
+* [Lazo cerrado completo](#full-closed-loop-troubleshooting)
 
 ---
 
 (generaltroubleshooting-bluetooth-related-issues)=
 
 
-## **Bluetooth related issues**
+## Problemas relacionados con Bluetooth
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Para problemas conocidos con conexiones Bluetooth, cortes de conexión de la bomba o del pod, o problemas de activación y conexión, consulta [Solución de problemas de Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
 (generaltroubleshooting-android-related-issues)=
 
-## **Android Related Issues**
+## Problemas relacionados con Android
 
-### **Battery optimization**
+### Optimización de batería
 
-Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
+**AAPS** puede ayudarte a encontrar los ajustes correctos para tu teléfono: abre el **menú** (☰) > **Acerca de** y toca **¿No matar mi aplicación?**. Abre las instrucciones para la marca de tu teléfono en [Don't kill my app](https://dontkillmyapp.com/). El [asistente de configuración](#setup-wizard-bluetooth-battery-optimisation) también te pide desactivar la optimización de batería para **AAPS** y Bluetooth.
 
-When this is enabled, it will very likely cause issue for **AAPS** and other supporting apps like **xDrip+**.
+Android tiene ajustes de ahorro de batería que están activados por defecto. Estos ajustes suspenden o pausan automáticamente las aplicaciones que el sistema no necesita para funcionar. Así ahorran la energía que gastan las apps que no tienen que estar siempre en marcha.
 
-It's important to ensure that you have disabled Battery Optimization to ensure **AAPS** and other supporting apps remain active all the time.
+Si está activada, es muy probable que cause problemas en **AAPS** y en otras apps de apoyo como **xDrip**.
 
-Depending on your phone model and make there may be more than one location and setting which needs to have this disabled.
+Es importante desactivar la optimización de batería para que **AAPS** y las otras apps de apoyo estén activas todo el tiempo.
 
-***NOTE:** Follow the steps below to Disable Battery Optimization for the Bluetooth service if your phone has this option, the same steps can be used to disable for **AAPS** and other apps, however the screenshots will only show how to do this for the Bluetooth service.*
+Según la marca y el modelo de tu teléfono, puede haber más de un lugar y más de un ajuste donde hay que desactivarla.
 
-#### **Pixel phones (stock Android)**
+***NOTA:** Sigue los pasos de abajo para desactivar la optimización de batería del servicio Bluetooth, si tu teléfono tiene esta opción. Puedes usar los mismos pasos para desactivarla en **AAPS** y en otras apps, pero las capturas de pantalla solo muestran cómo hacerlo para el servicio Bluetooth.*
 
-* Go to the Android settings, select "Apps".
+#### Teléfonos Pixel (Android original)
 
-  ![Android Settings¦Apps](../images/troubleshooting/pixel/01_androidsettings.png)
+* Ve a los ajustes de Android y selecciona «Aplicaciones».
 
-* Select "See all apps"
+  ![Ajustes de Android¦Aplicaciones](../images/troubleshooting/pixel/01_androidsettings.png)
 
-  ![See all apps](../images/troubleshooting/pixel/02_apps.png)
+* Selecciona «Ver todas las aplicaciones»
 
-* On the menu on the right, select "Show system" apps.
+  ![Ver todas las aplicaciones](../images/troubleshooting/pixel/02_apps.png)
 
-  ![Show system apps](../images/troubleshooting/pixel/03_allapps.png)
+* En el menú de la derecha, selecciona «Mostrar sistema».
 
-* Now search and select the app "Bluetooth".
+  ![Mostrar aplicaciones del sistema](../images/troubleshooting/pixel/03_allapps.png)
 
-  ![Bluetooth app](../images/troubleshooting/pixel/03_bluetooth.png)
+* Ahora busca y selecciona la app «Bluetooth».
 
-* Click the "App battery usage" and select "Not optimized".
+  ![App Bluetooth](../images/troubleshooting/pixel/03_bluetooth.png)
 
-  ![BT Battery optimization](../images/troubleshooting/pixel/04_btunrestricted.png)
+* Toca «Uso de batería de la aplicación» y selecciona «Sin restricciones» (en algunas versiones antiguas de Android se llama «No optimizada»).
+
+  ![Optimización de batería de Bluetooth](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-#### **Samsung phones**
+#### Teléfonos Samsung
 
-* Go to the android settings, select "Apps"
+* Ve a los ajustes de Android y selecciona «Aplicaciones»
 
-* On the icon that supposedly changes the sorting algorithm (1), select "Show system apps" (2).
+* En el icono que cambia el orden de la lista (1), selecciona «Mostrar aplicaciones del sistema» (2).
 
-  ![App Filter](../images/troubleshooting/samsung/Samsung01_Apps.png)
+  ![Filtro de aplicaciones](../images/troubleshooting/samsung/Samsung01_Apps.png)
 
-  ![Show system apps](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+  ![Mostrar aplicaciones del sistema](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
 
-* Now search the bluetooth app and select it to see its settings.
+* Ahora busca la app Bluetooth y selecciónala para ver sus ajustes.
 
-  ![Bluetooth App](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+  ![App Bluetooth](../images/troubleshooting/samsung/Samsung03_BtApp.png)
 
-* Select "battery".
+* Selecciona «Batería».
 
-  ![Battery](../images/troubleshooting/samsung/Samsung04_Battery.png)
+  ![Batería](../images/troubleshooting/samsung/Samsung04_Battery.png)
 
-* Set it to "Not optimized"
+* Ponla en «Sin restricciones» (en algunas versiones antiguas de Android se llama «No optimizada»).
 
-  ![Not optimized](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
+  ![Sin restricciones](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
-#### **Huawei phones**
+#### Teléfonos Huawei
 
-See this guide for [Huawei bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+Mira esta guía sobre [Bluetooth y optimización de batería en Huawei](../CompatiblePhones/Huawei.md)
 
 ---
 
 (generaltroubleshooting-cgm)=
 
-## **Continious Glucose Monitor (CGM)**
+## Monitor continuo de glucosa (MCG)
 
-Useful links to known issues and steps to resolve for CGMs.
+Enlaces útiles sobre problemas conocidos de los MCG y los pasos para resolverlos.
 
 * [General](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
+* [Libre 2 con Minimal Looper](#minimallooper-troubleshooting)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
-* [xDrip - no CGM data](#xdrip-identify-receiver)
-* [xDrip - Dexcom troubleshooting](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
+* [xDrip: no hay datos de MCG](#xdrip-identify-receiver)
+* [xDrip: solución de problemas con Dexcom](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
 ---
 
 (generaltroubleshooting-pumps)=
 
-## **Bombas**
+## Bombas
 
-Useful links to known issues and steps to resolve for Pumps
+Enlaces útiles sobre problemas conocidos de las bombas y los pasos para resolverlos
 
-* [DanaRS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
-* [Accu-Chek Combo general](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)
+* [Accu-Chek Combo](#combov2-tips-for-basic-usage)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
+* [CareLevo](#carelevo-alarms-and-notifications)
+* [DanaRS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
+* [Diaconn G8](#diaconn-g8-bluetooth-troubleshooting)
+* [EOPatch2](#eopatch2-alarms-and-warnings)
 * [Medtronic + RileyLink](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
+* [Medtrum Nano](#medtrum-nano-troubleshooting)
+* [Omnipod DASH](#omnipod-dash-troubleshooting)
+* [Omnipod Eros](#OmnipodEros-troubleshooting)
 
 ---
 
 (generaltroubleshooting-phones)=
 
-## **Teléfonos**
+## Teléfonos
 
-Useful links to known issues and steps to resolve for Phones
+Enlaces útiles sobre problemas conocidos de los teléfonos y los pasos para resolverlos
 
-* [List of tested phone and device setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
+* [Lista de teléfonos y configuraciones de dispositivos probados](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
 * [Jelly](../CompatiblePhones/Jelly.md)
-* [Huawei bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+* [Bluetooth y optimización de batería en Huawei](../CompatiblePhones/Huawei.md)
+
+---
+
+(generaltroubleshooting-remote-control)=
+
+## Control remoto
+
+* [AAPSClient y control remoto (emparejamiento, órdenes no recibidas)](#client-master-control-troubleshooting)
+* [Problemas con el «Token de acceso de Nightscout»](#remotecontrol-nightscout-access-token)
+* [Comandos SMS](#SMSCommands-troubleshooting)
+* [Android Auto](#android-auto-troubleshooting)
+
+---
 
 (generaltroubleshooting-smartwatches)=
 
-## Smartwatches (Relojes inteligentes)
+## Relojes inteligentes
 
-Useful links to known issues and steps to resolve for Smartwatches
+Enlaces útiles sobre problemas conocidos de los relojes inteligentes y los pasos para resolverlos
 
-* [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
+* [Solución de problemas de la app Wear](#Watchfaces-troubleshooting-the-wear-app)
+* [El reloj y el teléfono no se comunican](#wear-os-watch-phone-communication)
+* [Wear OS 5](#wear-os-5-troubleshooting)
+* [Compilar la app Wear](#building-aaps-wear-os-troubleshooting)

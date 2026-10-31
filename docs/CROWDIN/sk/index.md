@@ -1,198 +1,221 @@
-# Welcome to the AAPS documentation
+# Vitajte v dokumentácii AAPS
 
-![image](./images/basic-outline-of-AAPS.png)
+![obrázok](./images/basic-outline-of-AAPS.png)
 
 ```{admonition} Latest Release
 :class: note
 
- 2 August 2026 : Version 3.4.2.6 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
+ 31 October 2026 : Version 4.0.0 is out. Čo je nové, nájdete v [poznámkach k vydaniu](#latestrelease). Pri aktualizácii postupujte podľa [návodu na aktualizáciu](./Maintenance/UpdateToNewVersion.md).
 
 ```
 
-Android APS (**AAPS**) is an open source app for people living with insulin-dependent diabetes. It is an artificial pancreas system (APS) which runs on Android smartphones. **AAPS** uses an OpenAPS software algorithm and aims to do what a real pancreas does: keep blood sugar levels within healthy limits by using automated insulin dosing. To use **AAPS** you need **three** compatible devices: **(1)** an Android phone, **(2)** a continuous glucose monitor (CGM), and **(3)** a FDA/CE approved insulin pump. Optionally you will need cloud services **(4)** to remote control **AAPS**, share your data and store them in a reporting server, then also **(5)** a smartwatch.
+Android APS (**AAPS**) je aplikácia s otvoreným zdrojovým kódom pre ľudí s diabetom, ktorí sú závislí od inzulínu. Je to systém umelého pankreasu (APS), ktorý beží na smartfónoch s Androidom. **AAPS** používa algoritmus OpenAPS a snaží sa robiť to, čo robí skutočný pankreas: udržiavať hladinu cukru v krvi v zdravých hraniciach pomocou automatického dávkovania inzulínu. Na používanie **AAPS** potrebujete **tri** kompatibilné zariadenia: **(1)** telefón s Androidom, **(2)** senzor na kontinuálne monitorovanie glykémie (CGM) a **(3)** inzulínovú pumpu schválenú FDA/CE. Môžete pridať aj **(4)** cloudové služby na vzdialené ovládanie **AAPS**, zdieľanie údajov a ich ukladanie na reportovací server a **(5)** inteligentné hodinky.
 
-This documentation explains how to setup and use **AAPS**. You can navigate through the **AAPS** documentation either through the menu on the left (and the handy "**Search docs**" function), or by using the [index](#index-aaps-documentation-index) at the bottom of this page.
+Táto dokumentácia vysvetľuje, ako **AAPS** nastaviť a používať. V dokumentácii **AAPS** sa môžete pohybovať pomocou ponuky vľavo (a praktickej funkcie **Search docs** (hľadať v dokumentácii)) alebo pomocou [obsahu](#index-aaps-documentation-index) na konci tejto stránky.
 
-## Overview of the AAPS documentation ("The docs")
+## Prehľad dokumentácie AAPS („dokumentácia“)
 
-Section **2) Getting Started**, the [Introduction](Getting-Started/Introduction.md) explains the general concept of what an artificial pancreas system (APS) is designed to do. It outlines the background of looping in general, why **AAPS** was developed, compares **AAPS** to other systems, and addresses safety. It gives suggestions about how to talk to your clinical team about **AAPS**, explains why you need to build the **AAPS** app yourself rather than just downloading it, and gives an overview of the typical connectivity of an **AAPS** system. It also addresses accessibility, and who is likely to benefit from **AAPS**.
+V sekcii **1) Začíname** stránka [Úvod](Getting-Started/Introduction.md) vysvetľuje základnú myšlienku, na čo slúži systém umelého pankreasu (APS). Opisuje všeobecné pozadie používania okruhu, prečo vzniklo **AAPS**, porovnáva **AAPS** s inými systémami a venuje sa bezpečnosti. Radí, ako sa o **AAPS** rozprávať s vaším lekárskym tímom, vysvetľuje, prečo si aplikáciu **AAPS** musíte zostaviť sami a nemôžete si ju iba stiahnuť, a dáva prehľad o typickom prepojení zariadení v systéme **AAPS**. Venuje sa aj prístupnosti a tomu, komu môže **AAPS** pomôcť.
 
-[Preparing for AAPS](./Getting-Started/PreparingForAaps.md) gives more detail about safety considerations, and the phones, CGMs (Continuous Glucose Monitors) and insulin pumps which are compatible with **AAPS**. It gives an overview of the process you will go through, and provides an approximate timeline for gaining full functionality of **AAPS**. This section gets you technically prepared to assemble your **AAPS** setup as quickly and efficiently as possible. The subsection [CGM Configuration](./Getting-Started/CompatiblesCgms.md) explains how to optimse CGM setup and what smoothing options are best.
+Stránka [Príprava na štart s AAPS](./Getting-Started/PreparingForAaps.md) podrobnejšie opisuje bezpečnostné hľadiská a telefóny, CGM (senzory na kontinuálne monitorovanie glykémie) a inzulínové pumpy, ktoré sú s **AAPS** kompatibilné. Dáva prehľad o celom postupe, ktorým prejdete, a uvádza približný časový plán, kým budete môcť využívať všetky funkcie **AAPS**. Táto sekcia vás technicky pripraví, aby ste svoj systém **AAPS** zostavili čo najrýchlejšie a najefektívnejšie. Podsekcia [Kompatibilné CGM](./Getting-Started/CompatiblesCgms.md) vysvetľuje, ako optimálne nastaviť CGM a ktoré možnosti vyhladzovania sú najlepšie.
 
-Now that you have a solid understanding of the process, you can start assembling your **AAPS** loop.
+Teraz, keď dobre rozumiete celému postupu, môžete začať zostavovať svoj okruh **AAPS**.
 
-Section **3) Setting up AAPS** contains step-by-step instructions to do this. It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone, including [Android developer verification](./SettingUpAaps/AndroidDeveloperVerification.md), a change Google is rolling out from September 2026 that affects how self-built apps are installed. It also covers setting up the **AAPS** app using the setup Wizard, linking it with your CGM app, and either a real or virtual insulin pump, as well as linking **AAPS** to your reporting server. You are then slowly introduced to the full usage of what **AAPS** has to offer via a safe and carefully calibrated step-by-step process designed to make sure that you/your child are thoroughly familiar and comfortable navigating all the different levels and menu configurations before graduating on the next phase, commonly referred to as the next "Objective", until you are have enough experience to begin using the more advanced options available within the app. These Objectives are specially designed in such a way that will gradually unlock more possibilities of **AAPS** and switch from Open Loop to Closed Loop.
+Sekcia **2) Zostavenie aplikácie** vysvetľuje, prečo si aplikáciu **AAPS** musíte zostaviť sami a nemôžete si ju iba stiahnuť. Krok za krokom vás prevedie [jej zostavením](./SettingUpAaps/BuildingAaps.md) (v prehliadači, v Android Studiu alebo z príkazového riadku) a potom prenosom a inštaláciou do telefónu. Začína sa voliteľným krokom: nastavením [samostatného účtu Google](./UsefulLinks/DedicatedGoogleAccountForAaps.md), kde budete mať svoje zostavenia a zálohy. Vysvetľuje aj [overovanie vývojárov pre Android](#android-developer-verification), zmenu, ktorú Google zavádza od septembra 2026 a ktorá ovplyvňuje inštaláciu vlastnoručne zostavených aplikácií.
 
-Section **4) Daily life with AAPS** covers key **AAPS** features, to help you use (and customise)  **AAPS**. This including understanding the screens, carbs-on-board, sensitivity, profile switching, temp targets, extended carbs (or eCarbs), automations, and DynamicISF. It also covers frequent topics like how to manage different types of meals, how to deal with cannula and sensor changes, smartphone updates, daylight saving changes, and [travelling with AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) and sports. Common questions and answers are located within the troubleshooting section.
+Sekcia **3) Nastavenie reportovacieho servera** sa venuje výberu a [nastaveniu reportovacieho servera](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout alebo Tidepool), aby ste mohli svoje údaje kontrolovať a zdieľať.
 
-Section **5) [Remote AAPS features](./RemoteFeatures/RemoteControl.md)** highlights a real strength of **AAPS**. There are a wide range of possibilities for remotely sending commands to, or simply following the data from **AAPS**. This is equally useful for carers who want to use **AAPS** for minors, and for adults with diabetes who either want to monitor their sugars (and other metrics) more conveniently than just on their phone (on a watch, in the car _etc._), or wish to have significant others to also monitor the data. This section also provides guidance for using Android Auto so you can view glucose levels in the car.
+Sekcia **4) [Konfigurácia AAPS](./SettingUpAaps/SetupWizard.md)** sa venuje nastaveniu aplikácie **AAPS** pomocou sprievodcu nastavením, jej prepojeniu s aplikáciou CGM a so skutočnou alebo virtuálnou inzulínovou pumpou a tiež prepojeniu **AAPS** s vaším reportovacím serverom. Potom spoznáte všetko, čo **AAPS** dokáže, a to bezpečne, opatrne a krok za krokom. Tak budete mať istotu, že vy (alebo vaše dieťa) dobre poznáte všetky úrovne a nastavenia v ponukách a viete sa v nich pohybovať, skôr než prejdete do ďalšej fázy, ktorá sa zvyčajne nazýva ďalší „cieľ“. Takto postupujete ďalej, kým nemáte dosť skúseností, aby ste mohli začať používať pokročilejšie možnosti aplikácie. Tieto ciele sú špeciálne navrhnuté tak, aby postupne odomykali ďalšie možnosti **AAPS** a aby ste prešli z otvoreného okruhu na uzavretý okruh.
 
-Section **6) Wear OS smartwatches** gives information and procedures to use an Android **Wear OS** smartwatch with the dedicated **AAPS** watchfaces or custom watchfaces, either as a remote control of your phone or just a display indicator.
+Sekcia **5) [Každodenný život s AAPS](./DailyLifeWithAaps/AapsScreens.md)** sa venuje kľúčovým funkciám **AAPS**, aby ste vedeli **AAPS** používať (a prispôsobiť si ho). Patrí sem pochopenie obrazoviek, aktívnych sacharidov (COB), citlivosti, dynamickej ISF, prepínania profilov, dočasných cieľov, predĺžených sacharidov (eSacharidov), automatizácií a [kontroly údajov](./Maintenance/Reviewing.md) v prehliadači histórie a v štatistike. Venuje sa aj častým témam, napríklad ako zvládať rôzne druhy jedál, výmenu kanyly a senzora, aktualizácie smartfónu, prechod na letný čas, [cestovanie s AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) a šport. Časté otázky a odpovede nájdete v sekcii riešenia problémov.
 
+Sekcia **6) [Vzdialené funkcie AAPS](./RemoteFeatures/RemoteControl.md)** ukazuje jednu zo skutočných silných stránok **AAPS**. Existuje veľa možností, ako na diaľku posielať príkazy do **AAPS** alebo iba sledovať jeho údaje. Je to rovnako užitočné pre opatrovateľov, ktorí chcú používať **AAPS** pre deti, ako aj pre dospelých s diabetom, ktorí chcú sledovať svoju glykémiu (a ďalšie údaje) pohodlnejšie ako iba v telefóne (na hodinkách, v aute _atď._), alebo chcú, aby ich údaje sledovali aj blízki ľudia. Táto sekcia tiež vysvetľuje, ako používať Android Auto, aby ste videli glykémiu aj v aute.
 
-Section **7) Maintenance of AAPS** covers how to export and backup your settings (which is very important in case you lose/break your phone), gives the latest version notes and details how to update **AAPS**. You can expect that there will be one new version and 2-3 required updates per year. You are required to do these updates as with all software, as any minor bugs are ironed out, and improvements to **AAPS** are made. There is a dedicated "updating" troubleshooting section with the common queries.
-
-Section **8) [Getting Help](GettingHelp/WhereCanIGetHelp.md)** should help direct you to the best places to go to find general help with **AAPS**. This is very important so that you can get in touch with others as quickly as possible, clarify questions and solve the usual pitfalls. A lot of people are already using **AAPS** successfully, but everyone has a question at some point that they couldn't solve on their own. Due to the large number of users, the response times to questions are usually very quick, typically only a few hours. Don’t worry about asking for help, there is no such thing as a dumb question! We encourage users of any/all levels of experience to ask as many questions as they feel is necessary to help get them up and running safely. This section includes general troubleshooting for **AAPS** and **AAPSClient** (a companion following app) as well as explaining how to send your **AAPS** data (logfiles) to the developers for investigation, if you think a technical issue with **AAPS** needs looking at.
-
-Section **9)** covers **Advanced AAPS options** such as how to progress from using **AAPS** for hybrid-closed looping (bolusing for meals _etc._) to full closed looping (no bolusing), and details development and engineering modes. Most users get on just fine with the main or "Master" **AAPS** version without looking into these options, this section is for users who already have good control and are looking to further improve their setup.
-
-In section **10) [How to support AAPS](SupportingAaps/HowToEditTheDocs.md)** we provide  information so that you can support this project. You can donate money, equipment or expertise. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations) and provide your data through the Open Humans project.
-
-Section **11) Resources**, contains archived or additional documentation, including a subsection for [clinicians](UsefulLinks/ClinicianGuideToAaps.md) who have expressed interest in open source artificial pancreas technology such as **AAPS**, or for patients who want to share such information with their clinicians, this topic is also addressed in the introduction. More diabetes and looping references and resources are also contained in this section. It includes the  [Glossary](./UsefulLinks/Glossary.md), a list of the acronyms (or short-term names) used throughout **AAPS**. This is where to go to find out what the terms ISF or TT, stand for, for example.
+Sekcia **7) [Inteligentné hodinky s Wear OS](./WearOS/BuildingAapsWearOS.md)** obsahuje informácie a postupy, ako používať inteligentné hodinky s Androidom **Wear OS** so špeciálnymi ciferníkmi **AAPS** alebo vlastnými ciferníkmi, buď na vzdialené ovládanie telefónu, alebo iba na zobrazenie údajov.
 
 
- ### Interested in getting started with **AAPS**? Read more about **AAPS** in the [Introduction](Getting-Started/Introduction.md).
+Sekcia **8) [Údržba AAPS](./Maintenance/ExportImportSettings.md)** vysvetľuje, ako exportovať a zálohovať nastavenia (čo je veľmi dôležité pre prípad, že telefón stratíte alebo pokazíte), obsahuje poznámky k najnovšej verzii, opisuje, ako aktualizovať **AAPS**, a vysvetľuje, čo sa stane, keď sa končí podpora verzie. Počítajte s tým, že ročne vyjde jedna nová verzia a 2–3 povinné aktualizácie. Tieto aktualizácie musíte robiť ako pri každom softvéri, pretože sa v nich opravujú drobné chyby a **AAPS** sa zlepšuje. Pre aktualizácie existuje samostatná sekcia riešenia problémov s častými otázkami.
+
+Sekcia **9) [Pomoc a riešenie problémov](GettingHelp/WhereCanIGetHelp.md)** vám ukáže, kde najlepšie nájdete všeobecnú pomoc s **AAPS**. Je to jediné miesto, kam ísť, keď niečo nefunguje: stránka [Riešenie problémov](GettingHelp/GeneralTroubleshooting.md) zhromažďuje podľa tém riešenia najčastejších problémov a stránka [Najčastejšie otázky používateľov APS](UsefulLinks/FAQ.md) odpovedá na časté otázky. Je to veľmi dôležité, aby ste sa mohli čo najrýchlejšie spojiť s ostatnými, vyjasniť si otázky a vyriešiť bežné problémy. Veľa ľudí už **AAPS** úspešne používa, ale každý má niekedy otázku, ktorú sám nevyrieši. Keďže používateľov je veľa, odpovede na otázky prichádzajú zvyčajne veľmi rýchlo, väčšinou do niekoľkých hodín. Nebojte sa požiadať o pomoc, hlúpe otázky neexistujú! Povzbudzujeme používateľov s akoukoľvek úrovňou skúseností, aby sa pýtali toľko, koľko potrebujú, aby mohli s AAPS bezpečne začať. Táto sekcia obsahuje všeobecné riešenie problémov pre **AAPS** a **AAPSClient** (sprievodná aplikácia na sledovanie) a vysvetľuje, ako poslať vaše údaje **AAPS** (log súbory) vývojárom na preskúmanie, ak si myslíte, že ide o technický problém **AAPS**.
+
+Sekcia **10)** sa venuje **[pokročilým možnostiam AAPS](./AdvancedOptions/FullClosedLoop.md)**, napríklad ako prejsť od používania **AAPS** ako hybridného uzavretého okruhu (s bolusmi k jedlu _atď._) k plne uzavretému okruhu (bez bolusov), ako [vyladiť profil](./GettingHelp/ProfileTuning.md) a používať Autotune, a opisuje vývojársky a engineering režim. Väčšina používateľov si úplne vystačí s hlavnou verziou **AAPS** („Master“) a tieto možnosti nepotrebuje. Táto sekcia je pre používateľov, ktorí už majú dobrú kontrolu a chcú svoj systém ešte zlepšiť.
+
+V sekcii **11) [Ako podporiť AAPS](SupportingAaps/HowToEditTheDocs.md)** nájdete informácie, ako môžete tento projekt podporiť. Môžete prispieť peniazmi, vybavením alebo svojimi znalosťami. Môžete sami navrhovať alebo robiť zmeny v dokumentácii, pomôcť s [prekladom dokumentácie](SupportingAaps/Translations) a poskytnúť svoje údaje cez projekt Open Humans.
+
+Sekcia **12) Zdroje** obsahuje archívnu alebo doplňujúcu dokumentáciu, vrátane podsekcie pre [lekárov](UsefulLinks/ClinicianGuideToAaps.md), ktorí sa zaujímajú o technológiu umelého pankreasu s otvoreným zdrojovým kódom, ako je **AAPS**, alebo pre pacientov, ktorí chcú tieto informácie zdieľať so svojimi lekármi. Táto téma je opísaná aj v úvode. V tejto sekcii nájdete aj ďalšie odkazy a zdroje o diabete a používaní okruhu. Obsahuje [Slovník](./UsefulLinks/Glossary.md), zoznam skratiek (alebo krátkych názvov), ktoré sa v **AAPS** používajú. Tu napríklad zistíte, čo znamenajú skratky ISF alebo TT.
+
+
+ ### Chcete začať s **AAPS**? Viac o **AAPS** si prečítajte v časti [Úvod](Getting-Started/Introduction.md).
 
 ```{admonition} SAFETY NOTICE
 :class: danger
-The safety of **AAPS** relies on the safety features of your hardware (phone, pump, CGM). Only use a fully functioning FDA/CE approved insulin pump and CGM. Do not use broken, modified or self-built insulin pumps or CGM receivers. Only use original consumable supplies (inserters, cannulas and insulin reservoirs) approved by the manufacturer for use with your pump and CGM. Using untested or modified supplies can cause inaccuracy and insulin dosing errors, resulting in significant risk to the user. 
+Bezpečnosť **AAPS** závisí od bezpečnostných funkcií vášho hardvéru (telefón, pumpa, CGM). Používajte iba plne funkčnú inzulínovú pumpu a CGM schválené FDA/CE. Nepoužívajte pokazené, upravené alebo vlastnoručne vyrobené inzulínové pumpy ani prijímače CGM. Používajte iba originálny spotrebný materiál (zavádzače, kanyly a zásobníky inzulínu), ktorý výrobca schválil na použitie s vašou pumpou a CGM. Používanie neodskúšaného alebo upraveného materiálu môže spôsobiť nepresnosti a chyby v dávkovaní inzulínu, čo pre používateľa znamená vážne riziko. 
 
-Do not use **AAPS** if you take SGLT-2 inhibitors (gliflozins), as they lower blood sugar levels. You increase the risk diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
+Nepoužívajte **AAPS**, ak užívate SGLT-2 inhibítory (gliflozíny), pretože znižujú hladinu cukru v krvi. You increase the risk of diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
 ```
 
 ```{admonition} Disclaimer
 :class: note
 
-- All information and code described here is for informational and educational purposes only. Use [Nightscout](https://nightscout.github.io/) and **AAPS** at your own risk, and do not use the information or code to make medical decisions. Nightscout currently makes no attempt at HIPAA privacy compliance. 
-- Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
-- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
+- Všetky tu opísané informácie a kód slúžia iba na informačné a vzdelávacie účely. [Nightscout](https://nightscout.github.io/) a **AAPS** používate na vlastné riziko. Informácie ani kód nepoužívajte na prijímanie zdravotných rozhodnutí. Nightscout sa v súčasnosti nesnaží o súlad s pravidlami ochrany súkromia HIPAA. 
+- Kód z github.com používate bez akejkoľvek záruky alebo oficiálnej podpory. Podrobnosti nájdete v súbore LICENSE tohto repozitára.
+- Všetky názvy produktov a spoločností, ochranné známky, servisné známky, registrované ochranné známky a registrované servisné známky sú majetkom ich príslušných vlastníkov. Ich použitie má iba informačný účel a neznamená žiadne prepojenie s nimi ani ich podporu.
 
-**AAPS** has no association with, and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
+**AAPS** nie je nijako spojené s týmito spoločnosťami ani nimi podporované: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/), [Medtronic](https://www.medtronic.com/), [Diaconn](https://www.diaconn.com/en/index.html), [EOFlow](http://www.eoflow.com/), [MicroTech Medical (Equil)](https://www.microtechmd.com/), [Medtrum](https://www.medtrum.com/), [Senseonics (Eversense)](https://www.senseonics.com/), [i-SENS (CareSens)](https://i-sens.com/), [POCTech](https://poctechcorp.com/en/), [Ottai](https://ottai.com/) ani [Syai](https://www.syai.com/).
 
 ```
 
 (index-aaps-documentation-index)=
 
-## AAPS Documentation Index
+## Obsah dokumentácie AAPS
 
 ```{toctree}
-:caption: 1) Change language
+:caption: Používanie tejto dokumentácie
 
-Change language <./NavigateDoc/ChangeLanguage.md>
-Change version <./NavigateDoc/ChangeVersion.md>
+Zmena jazyka a verzie <./NavigateDoc/ChangeLanguageVersion.md>
+Vyhľadávanie v dokumentácii <./NavigateDoc/SearchDoc.md>
+Aktualizácie a zmeny dokumentácie <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
-:caption: 2) Getting started
+:caption: 1) Začíname
 
-Introduction to AAPS <./Getting-Started/Introduction.md>
-Preparing for AAPS <./Getting-Started/PreparingForAaps.md>
-Component Overview <./Getting-Started/ComponentOverview.md>
-- Compatible pumps <./Getting-Started/CompatiblePumps.md>
-- Compatible CGMs <./Getting-Started/CompatiblesCgms.md>
-- Compatible phones  <./Getting-Started/Phones.md>
-- Compatible watches  <./Getting-Started/Watches.md>
+Úvod do APS a AAPS <./Getting-Started/Introduction.md>
+Príprava na štart s AAPS <./Getting-Started/PreparingForAaps.md>
+Prehľad komponentov <./Getting-Started/ComponentOverview.md>
+- Kompatibilné pumpy <./Getting-Started/CompatiblePumps.md>
+- Kompatibilné CGM <./Getting-Started/CompatiblesCgms.md>
+- Telefóny  <./Getting-Started/Phones.md>
+- Inteligentné hodinky a AAPS  <./Getting-Started/Watches.md>
 ```
 
 ```{toctree}
-:caption: 3) Setting up AAPS
+:caption: 2) Zostavenie aplikácie
 
-Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+Samostatný účet Google pre AAPS (voliteľné) <./UsefulLinks/DedicatedGoogleAccountForAaps.md>
+Zostavenie AAPS <./SettingUpAaps/BuildingAaps.md>
+- Zostavenie v prehliadači <./SettingUpAaps/BrowserBuild.md>
+- Zostavenie v Android Studiu <./SettingUpAaps/ComputerBuild.md>
+- Návod na zostavenie z príkazového riadku <./SettingUpAaps/CLIBuild.md>
+Prenos a inštalácia AAPS do smartfónu <./SettingUpAaps/TransferringAndInstallingAaps.md>
+```
+```{toctree}
+:caption: 3) Nastavenie reportovacieho servera
+
+Nastavenie reportovacieho servera <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-Building AAPS <./SettingUpAaps/BuildingAaps.md>
-- Browser Build <./SettingUpAaps/BrowserBuild.md>
-- Android Studio Build <./SettingUpAaps/ComputerBuild.md>
-- CLI Build <./SettingUpAaps/CLIBuild.md>
-Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Android Developer Verification <./SettingUpAaps/AndroidDeveloperVerification.md>
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Config Builder <./SettingUpAaps/ConfigBuilder.md>
-- Preferences <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+```
+```{toctree}
+:caption: 4) Konfigurácia AAPS
+
+Sprievodca nastavením AAPS <./SettingUpAaps/SetupWizard.md>
+Váš profil AAPS <./SettingUpAaps/YourAapsProfile.md>
+Vykonávanie zmien v konfigurácii vášho AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Konfigurácia (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
+- Nastavenia <./SettingUpAaps/Preferences.md>
+Plnenie cieľov <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
-:caption: 4) Daily Life with AAPS
+:caption: 5) Každodenný život s AAPS
 
-AAPS Screens <./DailyLifeWithAaps/AapsScreens.md>
-Key AAPS Features <./DailyLifeWithAaps/KeyAapsFeatures.md>
-COB calculation <./DailyLifeWithAaps/CobCalculation.md>
-Sensitivity detection <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
-Profile Switch & Profile Percentage <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
-Temp-Targets <./DailyLifeWithAaps/TempTargets.md>
-Extended carbs <./DailyLifeWithAaps/ExtendedCarbs.md>
-Automations <./DailyLifeWithAaps/Automations.md>
-Dynamic ISF <./DailyLifeWithAaps/DynamicISF.md>
-AAPS for children <./DailyLifeWithAaps/AapsForChildren.md>
-Pumps and cannulas <./DailyLifeWithAaps/PumpsAndCannulas.md>
-Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
+Obrazovky AAPS <./DailyLifeWithAaps/AapsScreens.md>
+Kľúčové funkcie AAPS <./DailyLifeWithAaps/KeyAapsFeatures.md>
+Výpočet COB <./DailyLifeWithAaps/CobCalculation.md>
+Detekcia citlivosti <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
+Dynamická ISF <./DailyLifeWithAaps/DynamicISF.md>
+Prepnutie profilu a percento profilu <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
+Dočasné ciele <./DailyLifeWithAaps/TempTargets.md>
+Predĺžené sacharidy / „eSacharidy“ <./DailyLifeWithAaps/ExtendedCarbs.md>
+Rýchly sprievodca (bolusy na jedno ťuknutie) <./DailyLifeWithAaps/QuickWizards.md>
+Scény (predvoľby pre situácie) <./DailyLifeWithAaps/Scenes.md>
+Automatizácia <./DailyLifeWithAaps/Automations.md>
+Rýchle spustenie (panel rýchlych akcií v prehľade) <./DailyLifeWithAaps/QuickLaunch.md>
+Widgety na domovskej obrazovke <./DailyLifeWithAaps/Widgets.md>
+Jedlo (vaša databáza jedál) <./DailyLifeWithAaps/Food.md>
+Globálne vyhľadávanie <./DailyLifeWithAaps/GlobalSearch.md>
+Kontrola údajov <./Maintenance/Reviewing.md>
+AAPS pre deti <./DailyLifeWithAaps/AapsForChildren.md>
+Pumpy a kanyly <./DailyLifeWithAaps/PumpsAndCannulas.md>
+Zmena časového pásma a letný čas <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
 
 ```
 
 ```{toctree}
-:caption: 5) Remote AAPS features
+:caption: 6) Vzdialené funkcie AAPS
 
-Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
-Remote control <./RemoteFeatures/RemoteControl.md>
-SMS Commands <./RemoteFeatures/SMSCommands.md>
-Following Only <./RemoteFeatures/FollowingOnly.md>
+Vzdialené sledovanie <./RemoteFeatures/RemoteMonitoring.md>
+Sledovanie AAPS (bez zasahovania do systému AAPS) <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
+Vzdialené ovládanie AAPS <./RemoteFeatures/RemoteControl.md>
+Aplikácia AAPSClient <./RemoteFeatures/AapsClient.md>
+Ovládanie Master ↔ Client (podpísané vzdialené ovládanie) <./RemoteFeatures/ClientMasterControl.md>
+SMS príkazy <./RemoteFeatures/SMSCommands.md>
 
 ```
 ```{toctree}
-:caption: 6) Wear OS Smartwatches
+:caption: 7) Inteligentné hodinky s Wear OS
 
-AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
-Use the smartwatch <./WearOS/WearOsSmartwatch.md>
-Remote control <./RemoteFeatures/RemoteControlWearOS.md>
-Custom watchfaces reference <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
-Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
-
-```
-
-```{toctree}
-:caption: 7) Maintenance of AAPS
-
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-Reviewing your data <./Maintenance/Reviewing.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-End of life <./Maintenance/EndOfLife.md>
-Documentation updates <./Maintenance/DocumentationUpdate.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update (fork) <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
+Zostavenie aplikácie AAPS pre Wear OS <./WearOS/BuildingAapsWearOS.md>
+Nastavenie AAPS na hodinkách s Wear OS <./WearOS/WearOsSmartwatch.md>
+Ovládanie AAPS pomocou inteligentných hodiniek s Wear OS <./RemoteFeatures/RemoteControlWearOS.md>
+Referenčný dokument pre vlastné ciferníky <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
+Stránka na výmenu vlastných ciferníkov <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 
 ```{toctree}
-:caption: 8) Getting Help
+:caption: 8) Údržba AAPS
 
-Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
-General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
-- Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
-- Browser build troubleshooting <./GettingHelp/BrowserBuildTroubleshooting.md>
-Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
-Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
+Vytváranie a obnova záloh <./Maintenance/ExportImportSettings.md>
+Poznámky k vydaniu <./Maintenance/ReleaseNotes.md>
+Čo sa zmenilo v AAPS v4 <./Maintenance/V4Changes.md>
+Aktualizácia na novú verziu alebo vetvu <./Maintenance/UpdateToNewVersion.md>
+- Aktualizácia v prehliadači (fork) <./Maintenance/UpdateBrowserBuild.md>
+- Aktualizácia v Android Studiu <./Maintenance/UpdateComputerBuild.md>
+Koniec podpory <./Maintenance/EndOfLife.md>
+
 ```
 
 ```{toctree}
-:caption: 9) Advanced AAPS options
+:caption: 9) Pomoc a riešenie problémov
 
-Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
-Dev branch <./AdvancedOptions/DevBranch.md>
-Browser build: cherry-pick a commit <./AdvancedOptions/BrowserBuildCherryPick.md>
+Kde získať pomoc <./GettingHelp/WhereCanIGetHelp.md>
+Riešenie problémov (začnite tu) <./GettingHelp/GeneralTroubleshooting.md>
+- Problémy súvisiace s Bluetooth <./GettingHelp/BluetoothTroubleshooting.md>
+- Riešenie problémov s NSClient <./GettingHelp/TroubleshootingNsClient.md>
+- Riešenie problémov s Android Studiom <./GettingHelp/TroubleshootingAndroidStudio.md>
+- Zostavenie v prehliadači: riešenie problémov <./GettingHelp/BrowserBuildTroubleshooting.md>
+- Preinštalovanie AAPS s novým úložiskom kľúčov <./GettingHelp/ReinstallAaps.md>
+- Prístup k log súborom <./GettingHelp/AccessingLogFiles.md>
+Najčastejšie otázky používateľov APS <./UsefulLinks/FAQ.md>
+```
+
+```{toctree}
+:caption: 10) Pokročilé možnosti AAPS
+
+Plne uzavretý okruh <./AdvancedOptions/FullClosedLoop.md>
+Ladenie profilu AAPS <./GettingHelp/ProfileTuning.md>
 Autotune <./AdvancedOptions/Autotune.md>
+Koncentrácia inzulínu <./AdvancedOptions/InsulinConcentration.md>
+Vývojová vetva <./AdvancedOptions/DevBranch.md>
+Zostavenie v prehliadači: cherry-pick commitu <./AdvancedOptions/BrowserBuildCherryPick.md>
 
 ```
 ```{toctree}
-:caption: 10) How to support AAPS
+:caption: 11) Ako podporiť AAPS
 
-How to help <./SupportingAaps/HowCanIHelp.md>
-Editing the docs <./SupportingAaps/HowToEditTheDocs.md>
-Translating the app and docs <./SupportingAaps/Translations.md>
-State of translations <./SupportingAaps/StateOfTranslations.md>
+Ako pomôcť s AAPS <./SupportingAaps/HowCanIHelp.md>
+Ako upravovať dokumentáciu <./SupportingAaps/HowToEditTheDocs.md>
+Preklad aplikácie a dokumentácie <./SupportingAaps/Translations.md>
+Stav prekladu aplikácie a dokumentácie <./SupportingAaps/StateOfTranslations.md>
 Open Humans Uploader <./SupportingAaps/OpenHumans.md>
 
 ```
 ```{toctree}
-:caption: 11) Resources
+:caption: 12) Zdroje
 
-Glossary <./UsefulLinks/Glossary.md>
-FAQ <./UsefulLinks/FAQ.md>
-General diabetes and looping resources <./UsefulLinks/BackgroundReading.md>
-Dedicated Google account for AAPS (optional)<./UsefulLinks/DedicatedGoogleAccountForAaps.md>
-For Clinicians (outdated) <./UsefulLinks/ClinicianGuideToAaps.md>
+Slovník <./UsefulLinks/Glossary.md>
+Užitočné zdroje na prečítanie pred začatím <./UsefulLinks/BackgroundReading.md>
+Pre lekárov – všeobecný úvod a príručka k AAPS <./UsefulLinks/ClinicianGuideToAaps.md>
 ```

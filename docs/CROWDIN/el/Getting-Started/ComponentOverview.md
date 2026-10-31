@@ -1,88 +1,89 @@
-# Component Overview
+# Επισκόπηση των εξαρτημάτων
 
-**AAPS** is not just a (self-built) application, it is but one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the component documentation.
+Το **AAPS** δεν είναι απλώς μια εφαρμογή (που φτιάχνετε μόνοι σας)· είναι ένα από τα πολλά εξαρτήματα του συστήματος κλειστού κυκλώματός σας. Πριν αποφασίσετε για τα εξαρτήματα, καλό είναι να διαβάσετε την τεκμηρίωσή τους.
 
-![Components overview](../images/modules.png)
+![Επισκόπηση των εξαρτημάτων](../images/modules.png)
 
 ```{admonition} IMPORTANT SAFETY NOTICE
 :class: important
 
-The foundation of **AAPS** safety features discussed in this documentation is built on the safety features of the hardware used to build your system. For closing an automated insulin dosing loop, it is critically important that you only use an insulin pump and CGM that are tested, fully functioning and approved by the official instances of your country. Οι τροποποιήσεις υλικού ή λογισμικού σε αυτά τα εξαρτήματα μπορεί να προκαλέσουν απροσδόκητη δόση ινσουλίνης, προκαλώντας σημαντικό κίνδυνο για τον χρήστη. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, **do not use** these for creating an **AAPS** system.
+Η βάση των λειτουργιών ασφαλείας του **AAPS** που περιγράφονται σε αυτή την τεκμηρίωση είναι οι λειτουργίες ασφαλείας του υλικού (hardware) που χρησιμοποιείτε για το σύστημά σας. Για να κλείσετε ένα κύκλωμα αυτόματης χορήγησης ινσουλίνης, είναι πολύ σημαντικό να χρησιμοποιείτε μόνο αντλία ινσουλίνης και CGM που έχουν δοκιμαστεί, λειτουργούν πλήρως και έχουν εγκριθεί από τις επίσημες αρχές της χώρας σας. Οι τροποποιήσεις υλικού ή λογισμικού σε αυτά τα εξαρτήματα μπορεί να προκαλέσουν απροσδόκητη δόση ινσουλίνης, προκαλώντας σημαντικό κίνδυνο για τον χρήστη. Αν βρείτε ή σας προσφέρουν χαλασμένες, τροποποιημένες ή αυτοσχέδιες αντλίες ινσουλίνης ή δέκτες CGM, **μην τις χρησιμοποιήσετε** για να φτιάξετε ένα σύστημα **AAPS**.
 
-Επιπλέον, είναι εξίσου σημαντικό να χρησιμοποιείτε μόνο αυθεντικά προϊόντα όπως εισαγωγείς, κάνουλα και δοχεία ινσουλίνης εγκεκριμένα από τον κατασκευαστή για χρήση με την αντλία ή το CGM. Η χρήση μη δοκιμασμένων ή τροποποιημένων αναλωσίμων μπορεί να προκαλέσει ανακρίβεια CGM και σφάλματα δοσολογίας ινσουλίνης. Η ινσουλίνη είναι εξαιρετικά επικίνδυνη όταν δίνετε σε λάθος δοσολογία - παρακαλώ μην παίζετε με τη ζωή σας με μη εγκεκριμένες προμήθειες.
+Επιπλέον, είναι εξίσου σημαντικό να χρησιμοποιείτε μόνο αυθεντικά αναλώσιμα, όπως εισαγωγείς, καθετήρες και δοχεία ινσουλίνης, εγκεκριμένα από τον κατασκευαστή για χρήση με την αντλία ή το CGM σας. Η χρήση μη δοκιμασμένων ή τροποποιημένων αναλωσίμων μπορεί να προκαλέσει ανακρίβεια CGM και σφάλματα δοσολογίας ινσουλίνης. Η ινσουλίνη είναι εξαιρετικά επικίνδυνη όταν δίνεται σε λάθος δόση - μην παίζετε με τη ζωή σας τροποποιώντας τα αναλώσιμά σας.
 
-Last but not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels. The combination with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen. [More information here](#PreparingForAaps-no-sglt-2-inhibitors).
+Τέλος, αλλά εξίσου σημαντικό: δεν πρέπει να παίρνετε αναστολείς SGLT-2 (γλιφλοζίνες), επειδή μειώνουν τα επίπεδα σακχάρου στο αίμα με τρόπο που δεν μπορεί να υπολογιστεί. Ο συνδυασμός με ένα σύστημα που μειώνει τον βασικό ρυθμό για να αυξήσει τη γλυκόζη αίματος (BG) είναι ιδιαίτερα επικίνδυνος. Λόγω της γλιφλοζίνης, αυτή η αύξηση της BG μπορεί να μη συμβεί και να προκύψει επικίνδυνη έλλειψη ινσουλίνης. [Περισσότερες πληροφορίες εδώ](#PreparingForAaps-no-sglt-2-inhibitors).
 ```
 
-## Necessary Modules
+## Απαραίτητα εξαρτήματα
 
-### Good individual dosage algorithm for your diabetes therapy
+### Καλός, εξατομικευμένος αλγόριθμος δοσολογίας για τη θεραπεία του διαβήτη σας
 
-Even though this is not something to create or buy, this is the 'module' which is probably underestimated the most but essential. When you let an algorithm help manage your diabetes, it needs to know the right settings to not make severe mistakes. Even if you are still missing other modules, you can already verify and adapt your **Profile** in collaboration with your diabetes team.
+Αν και δεν είναι κάτι που φτιάχνετε ή αγοράζετε, είναι ίσως το πιο υποτιμημένο «εξάρτημα» — αλλά είναι απαραίτητο. Όταν αφήνετε έναν αλγόριθμο να σας βοηθά να διαχειριστείτε τον διαβήτη σας, πρέπει να γνωρίζει τις σωστές ρυθμίσεις, ώστε να μην κάνει σοβαρά λάθη. Ακόμα κι αν σας λείπουν άλλα εξαρτήματα, μπορείτε ήδη να ελέγξετε και να προσαρμόσετε το **Προφίλ** σας μαζί με την ομάδα που σας παρακολουθεί για τον διαβήτη.
 
-The **Profile** includes:
+Το **Προφίλ** περιλαμβάνει:
 
-- BR (Basal rates): provides background insulin;
-- ISF (insulin sensitivity factor): how much your blood glucose level will be reduced by 1 unit of insulin;
-- CR (carb ratio): how many grams of carbohydrate are covered by one unit of insulin;
-- DIA (duration of insulin action).
+- BR (βασικός ρυθμός): δίνει την ινσουλίνη υποβάθρου·
+- ISF (συντελεστής ευαισθησίας στην ινσουλίνη): πόσο θα μειωθεί η γλυκόζη αίματός σας με 1 μονάδα ινσουλίνης·
+- CR (λόγος υδατανθράκων): πόσα γραμμάρια υδατανθράκων καλύπτει μία μονάδα ινσουλίνης.
 
-Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
+Οι περισσότεροι χρήστες του κυκλώματος χρησιμοποιούν βασικό ρυθμό (BR), ISF και CR που αλλάζουν κατά τη διάρκεια της ημέρας, ώστε να προσαρμόζονται στην ορμονική ευαισθησία στην ινσουλίνη.
 
-More information about your **Profile** [on the dedicated page](../SettingUpAaps/YourAapsProfile.md).
+Εκτός από το **Προφίλ** σας, πρέπει επίσης να ρυθμίσετε την **ινσουλίνη** σας στη **Διαχείριση → Ρυθμίσεις ινσουλίνης**, μαζί με τη DIA της (διάρκεια δράσης της ινσουλίνης) — δείτε [Ρυθμίσεις ινσουλίνης](#Config-Builder-insulin-dia).
 
-### Phone
+Περισσότερες πληροφορίες για το **Προφίλ** σας θα βρείτε [στη σχετική σελίδα](../SettingUpAaps/YourAapsProfile.md).
 
-See the dedicated page [Phones](../Getting-Started/Phones.md).
+### Τηλέφωνο
+
+Δείτε τη σχετική σελίδα [Τηλέφωνα](../Getting-Started/Phones.md).
 
 ### Αντλία ινσουλίνης
 
-See the dedicated page [Compatible Pumps](../Getting-Started/CompatiblePumps.md).
+Δείτε τη σχετική σελίδα [Συμβατές αντλίες](../Getting-Started/CompatiblePumps.md).
 
-**Advantages and disadvantages of some pump models**
+**Πλεονεκτήματα και μειονεκτήματα ορισμένων μοντέλων αντλιών**
 
-The Combo, the Insight and the older Medtronic are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard Luer-Lock. And the battery is a default one you can buy at any gas station, 24-hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
+Η Combo, η Insight και οι παλαιότερες Medtronic είναι αξιόπιστες αντλίες και μπορούν να χρησιμοποιηθούν σε κύκλωμα. Η Combo έχει το πλεονέκτημα ότι μπορείτε να επιλέξετε από πολύ περισσότερους τύπους σετ έγχυσης, επειδή έχει τυπική σύνδεση Luer-Lock. Επίσης, η μπαταρία της είναι κοινή και μπορείτε να την αγοράσετε σε κάθε βενζινάδικο ή 24ωρο κατάστημα. Και αν τη χρειαστείτε πραγματικά, μπορείτε να την «δανειστείτε» από το τηλεχειριστήριο στο δωμάτιο του ξενοδοχείου ;-).
 
-The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice however are:
+Ωστόσο, τα πλεονεκτήματα των DanaR/RS και Dana-i σε σύγκριση με την Combo ως αντλία επιλογής είναι:
 
-- Initial pairing is simpler with the Dana-i/RS. Επειδή όμως συνήθως αυτό γίνεται μόνο μία φορά, σας επηρεάζει μόνο όταν θέλετε να δοκιμάσετε ένα νέο χαρακτηριστικό με διαφορετικές αντλίες.
-- Μέχρι στιγμής η αντλία Combo λειτουργεί με τεχνολογία οθόνης. Σε γενικές γραμμές αυτό λειτουργεί καλά αλλά είναι αργό. Για το κύκλωμα αυτό δεν έχει σημασία όσο όλα λειτουργούν στο παρασκήνιο. Still there is much more time you need to be connected so more time when the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
-- The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. At nighttime, you are likely to be using TBRs more than SMB.  The Dana-i/RS is configurable so that it does neither beep nor vibrate.
-- Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon as some CGM values are in.
-- All pumps **AAPS** can talk with are waterproof on delivery. Μόνο οι αντλίες Dana είναι επίσης "αδιάβροχες με εγγύηση" λόγω της σφραγισμένης θήκης των μπαταριών και του συστήματος πλήρωσης δεξαμενών.
+- Η αρχική σύζευξη είναι πιο απλή με την Dana-i/RS. Επειδή όμως συνήθως αυτό γίνεται μόνο μία φορά, σας επηρεάζει μόνο όταν θέλετε να δοκιμάσετε ένα νέο χαρακτηριστικό με διαφορετικές αντλίες.
+- Μέχρι στιγμής η Combo λειτουργεί με ανάγνωση της οθόνης της (screen parsing). Σε γενικές γραμμές αυτό λειτουργεί καλά αλλά είναι αργό. Για το κύκλωμα αυτό δεν έχει μεγάλη σημασία, αφού όλα γίνονται στο παρασκήνιο. Παρ' όλα αυτά, πρέπει να είστε συνδεδεμένοι για πολύ περισσότερο χρόνο, άρα υπάρχει περισσότερος χρόνος στον οποίο η σύνδεση BT μπορεί να διακοπεί. Αυτό δεν είναι εύκολο αν απομακρυνθείτε από το τηλέφωνό σας ενώ γίνεται bolus και μαγειρεύετε.
+- Η Combo δονείται στο τέλος κάθε TBR, ενώ η DanaR δονείται (ή κάνει ήχο) σε κάθε SMB. Τη νύχτα πιθανότατα θα χρησιμοποιείτε περισσότερο TBR παρά SMB.  Η Dana-i/RS μπορεί να ρυθμιστεί ώστε να μην κάνει ούτε ήχο ούτε δόνηση.
+- Η ανάγνωση του ιστορικού της Dana-i/RS, μαζί με τους υδατάνθρακες, γίνεται σε λίγα δευτερόλεπτα. Έτσι μπορείτε εύκολα να αλλάξετε τηλέφωνο χωρίς σύνδεση στο διαδίκτυο και να συνεχίσετε το κύκλωμα μόλις έρθουν μερικές τιμές CGM.
+- Όλες οι αντλίες με τις οποίες μπορεί να επικοινωνεί το **AAPS** είναι αδιάβροχες κατά την παράδοση. Μόνο οι αντλίες Dana είναι επίσης "αδιάβροχες με εγγύηση" λόγω της σφραγισμένης θήκης των μπαταριών και του συστήματος πλήρωσης δεξαμενών.
 
 ### Πηγή BG
 
-See the dedicated page [Compatible CGMs](../Getting-Started/CompatiblesCgms.md).
+Δείτε τη σχετική σελίδα [Συμβατά CGM](../Getting-Started/CompatiblesCgms.md).
 
-### **AAPS**-.apk file
+### Αρχείο **AAPS**-.apk
 
-The main component of the system. In order to install the app, you have to build the apk-file yourself first. Instructions are [here](../SettingUpAaps/BuildingAaps.md).
+Το κύριο εξάρτημα του συστήματος. Για να εγκαταστήσετε την εφαρμογή, πρέπει πρώτα να δημιουργήσετε μόνοι σας το αρχείο apk. Οι οδηγίες είναι [εδώ](../SettingUpAaps/BuildingAaps.md).
 
-### Reporting server
+### Διακομιστής αναφορών
 
-A reporting server displays your glucose and treatment data, and creates reports for detailed analysis. There are currently two reporting servers available for use with AAPS : [Nightscout](#SettingUpTheReportingServer-nightscout) and [Tidepool](#SettingUpTheReportingServer-tidepool). They both provide ways to visualize your diabetes data over time, provide statistics about the **time in range** (TIR) and other measures.
+Ένας διακομιστής αναφορών δείχνει τα δεδομένα γλυκόζης και θεραπειών σας και δημιουργεί αναφορές για λεπτομερή ανάλυση. Σήμερα υπάρχουν δύο διακομιστές αναφορών που μπορείτε να χρησιμοποιήσετε με το AAPS: [Nightscout](#SettingUpTheReportingServer-nightscout) και [Tidepool](#SettingUpTheReportingServer-tidepool). Και οι δύο δείχνουν τα δεδομένα του διαβήτη σας σε βάθος χρόνου και δίνουν στατιστικά για τον **χρόνο εντός στόχου** (TIR) και άλλες μετρήσεις.
 
-The Reporting server is independent of the other modules. If you don’t want to use a reporting server, you should know that it is not mandatory for running **AAPS** in the long term. But you still need to set up one as it will be required to fulfill [**Objective 1**](#objectives-objective1).
+Ο διακομιστής αναφορών είναι ανεξάρτητος από τα άλλα εξαρτήματα. Αν δεν θέλετε να χρησιμοποιείτε διακομιστή αναφορών, να ξέρετε ότι δεν είναι υποχρεωτικός για τη μακροχρόνια λειτουργία του **AAPS**. Πρέπει όμως να ρυθμίσετε έναν, επειδή χρειάζεται για να ολοκληρώσετε το [**Βήμα 1**](#objectives-objective1).
 
-Additional information on how to set up your reporting server can be found [here](../SettingUpAaps/SettingUpTheReportingServer.md).
+Περισσότερες πληροφορίες για το πώς να ρυθμίσετε τον διακομιστή αναφορών σας θα βρείτε [εδώ](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-## Optional Modules
+## Προαιρετικά εξαρτήματα
 
-### Smartwatch
+### Έξυπνο ρολόι
 
-You can choose any smartwatch with Android WearOS 2.x up to 4.x. **Beware, WearOS 5.x is not always compatible!**
+Μπορείτε να επιλέξετε οποιοδήποτε έξυπνο ρολόι με **Wear OS 3** ή νεότερο. Δείτε [Έξυπνα ρολόγια και AAPS](../Getting-Started/Watches.md) για λεπτομέρειες.
 
-Users are creating a [list of tested phones and watches](#Phones-list-of-tested-phones). There are different watchfaces for use with **AAPS**, which you can find [here](../WearOS/WearOsSmartwatch.md).
+Οι χρήστες φτιάχνουν μια [λίστα με δοκιμασμένα τηλέφωνα και ρολόγια](#Phones-list-of-tested-phones). Υπάρχουν διάφορα watchface για χρήση με το **AAPS**, που θα τα βρείτε [εδώ](../WearOS/WearOsSmartwatch.md).
 
-### xDrip+
+### xDrip
 
-Even if you don't need to have the xDrip+ App as **BG Source**, you can still use it for _i.e._ alarms or a different blood glucose display. You can have as many alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found [here](../CompatibleCgms/xDrip.md). Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
+Ακόμα κι αν δεν χρειάζεστε την εφαρμογή xDrip ως **Πηγή BG**, μπορείτε να τη χρησιμοποιείτε, για παράδειγμα για ειδοποιήσεις ή για διαφορετική εμφάνιση της γλυκόζης αίματος. Μπορείτε να έχετε όσες ειδοποιήσεις θέλετε, να ορίσετε πότε θα είναι ενεργή μια ειδοποίηση, να επιλέξετε αν μπορεί να παρακάμψει τη σίγαση κ.λπ. Ορισμένες πληροφορίες για το xDrip θα βρείτε [εδώ](../CompatibleCgms/xDrip.md). Να ξέρετε ότι η τεκμηρίωση αυτής της εφαρμογής δεν είναι πάντα ενημερωμένη, επειδή η εφαρμογή αλλάζει γρήγορα.
 
-## What to do while waiting for modules
+## Τι να κάνετε όσο περιμένετε τα εξαρτήματα
 
-It sometimes takes a while to get all the modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with **AAPS**. Using this mode, **AAPS** gives treatment recommendations you can manually execute.
+Μερικές φορές χρειάζεται χρόνος για να συγκεντρώσετε όλα τα εξαρτήματα για το κλείσιμο του κυκλώματος. Αλλά μην ανησυχείτε, υπάρχουν πολλά πράγματα που μπορείτε να κάνετε όσο περιμένετε. Είναι **απαραίτητο** να ελέγξετε και (όπου χρειάζεται) να προσαρμόσετε τον βασικό ρυθμό (BR), τον λόγο ινσουλίνης-υδατανθράκων (IC), τον συντελεστή ευαισθησίας στην ινσουλίνη (ISF) κ.λπ. Επίσης, το ανοιχτό κύκλωμα μπορεί να είναι ένας καλός τρόπος να δοκιμάσετε το σύστημα και να εξοικειωθείτε με το **AAPS**. Σε αυτή τη λειτουργία, το **AAPS** δίνει προτάσεις θεραπείας που μπορείτε να εκτελέσετε χειροκίνητα.
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../UsefulLinks/BackgroundReading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+Μπορείτε να συνεχίσετε να διαβάζετε την τεκμηρίωση εδώ, να μιλήσετε με άλλους χρήστες του κυκλώματος online ή από κοντά, να [διαβάσετε](../UsefulLinks/BackgroundReading.md) τεκμηρίωση ή όσα γράφουν άλλοι χρήστες (αλλά προσέξτε: δεν είναι όλα σωστά ή κατάλληλα για να τα επαναλάβετε εσείς).
 
-**Done?** If you have your **AAPS** components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective and setup up your hardware.
+**Έτοιμοι;** Αν έχετε συγκεντρώσει όλα τα εξαρτήματα του **AAPS** (συγχαρητήρια!) ή τουλάχιστον αρκετά για να ξεκινήσετε σε ανοιχτό κύκλωμα, πρέπει πρώτα να διαβάσετε την [περιγραφή των Βημάτων](../SettingUpAaps/CompletingTheObjectives.md) πριν από κάθε νέο Βήμα και να ρυθμίσετε το υλικό σας.

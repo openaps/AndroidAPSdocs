@@ -1,218 +1,236 @@
-# How to use Autotune plugin
+# Πώς να χρησιμοποιήσετε το πρόσθετο Autotune
 
-Documentation about Autotune algorithm can be found in [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
+Το πρόσθετο Autotune είναι μια υλοποίηση του αλγορίθμου autotune του OpenAPS μέσα στο AAPS. Αναλύει το πρόσφατο ιστορικό σας στο AAPS και προτείνει αλλαγές στους βασικούς ρυθμούς, στο ISF και στην αναλογία υδατανθράκων.
 
-Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
+Το πρόσθετο Autotune υπάρχει στις εκδόσεις του AAPS από την [3.4](#version3400), αλλά από προεπιλογή είναι κρυφό.
 
-Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
+(autotune-how-autotune-calculates-adjustments)=
+## Πώς υπολογίζει το Autotune τις αλλαγές
 
-## Show the Autotune plugin
+Το Autotune κοιτάζει το πρόσφατο ιστορικό σας στο AAPS — μετρήσεις CGM, bolus, υδατάνθρακες και προσωρινούς βασικούς ρυθμούς — και βρίσκει πού το **Προφίλ** σας (βασικοί ρυθμοί, ISF, αναλογία υδατανθράκων) δεν ταιριάζει ακριβώς με αυτό που πραγματικά έγινε με τη γλυκόζη αίματός σας.
 
-Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
+Για κάθε σημείο δεδομένων των 5 λεπτών, συγκρίνει την **πραγματική μεταβολή της BG** με τη μεταβολή που πρόβλεψε το Προφίλ σας και βάζει την απόκλιση που προκύπτει σε μία από τρεις ομάδες:
 
-***NOTE: Ensure you check in the **AAPS** settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.***
+* αποκλίσεις που έγιναν χωρίς ενεργούς υδατάνθρακες και χωρίς δράση ινσουλίνης (χρησιμοποιούνται για τον συντονισμό των **βασικών ρυθμών**, ώρα προς ώρα),
+* αποκλίσεις που έγιναν μετά από bolus/διόρθωση χωρίς υδατάνθρακες (χρησιμοποιούνται για τον συντονισμό του **ISF**), ή
+* αποκλίσεις που έγιναν ενώ απορροφούνταν υδατάνθρακες (χρησιμοποιούνται για τον συντονισμό της **αναλογίας υδατανθράκων**).
 
-![Enable Autotune](../images/Autotune/Autotune_0.png)
+Μετά εξετάζει το μοτίβο των αποκλίσεων σε κάθε ομάδα (με εκατοστημόρια και όχι με απλό μέσο όρο, ώστε λίγα σημεία με θόρυβο να μην αλλοιώνουν το αποτέλεσμα) και προτείνει μια νέα τιμή για αυτή την ώρα/παράμετρο.
 
-Autotune will then display in Config Builder after you restart AAPS.
+Για να μη γίνεται υπερβολική διόρθωση σε μία μόνο εκτέλεση, κάθε εκτέλεση του Autotune μετακινεί μια τιμή μόνο ένα μέρος της απόστασης προς αυτό που δείχνουν τα δεδομένα: έως 10% για το ISF και την αναλογία υδατανθράκων, και έως 20% για κάθε τμήμα του βασικού ρυθμού. Η συνολική μεταβολή περιορίζεται επιπλέον από τις ρυθμίσεις **Max autosens ratio** / **Min autosens ratio** (μέγιστη / ελάχιστη αναλογία autosens· δείτε παρακάτω την ενότητα [Άλλες ρυθμίσεις](#autotune-other-settings)) — τα ίδια όρια που περιορίζουν το Autosens. Γι' αυτό το Autotune είναι φτιαγμένο για να εκτελείται ξανά και ξανά (μέρα με τη μέρα ή κάθε νύχτα) και όχι για να το εμπιστεύεστε μετά από μία μόνο εκτέλεση: τα αποτελέσματα πρέπει να συγκλίνουν σιγά σιγά, και ένα μεγάλο άλμα σε μία εκτέλεση είναι σημάδι ότι πρέπει να ελέγξετε ξανά τα δεδομένα σας (υδατάνθρακες που δεν καταχωρήθηκαν, μια κακή ημέρα του αισθητήρα, _κ.λπ._) και όχι να το εμπιστευτείτε τυφλά.
 
-![Autotune plugin](../images/Autotune/Autotune_1.png)
+Το Autotune μπορεί να εκτελεστεί με τρεις τρόπους: χειροκίνητα, μία φορά, μέσα από το πρόσθετο (όπως περιγράφεται παρακάτω), αυτόματα κάθε νύχτα με έναν [κανόνα αυτοματισμού](#autotune-run-autotune-with-an-automation-rule), ή — εντελώς έξω από το AAPS — ως αυτόνομο εργαλείο γραμμής εντολών πάνω σε εξαγόμενα δεδομένα· έτσι περιγράφουν κάποιοι οδηγοί της κοινότητας τη χρήση του χωρίς τηλέφωνο που τρέχει το AAPS.
 
-***NOTE: If you are unable to see the `Autotune` option you will need to click the highlighted (red box) arrow to expand and show all settings in the `General` section.***
+*Για τον βασικό αλγόριθμο oref0 με όλες τις μαθηματικές λεπτομέρειες, δείτε την [τεκμηρίωση του Autotune του OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).*
 
-## Autotune user interface
+## Εμφάνιση του πρόσθετου Autotune
 
-![Autotune default screen](../images/Autotune/Autotune_1b.png)
+Δημιουργήστε ένα κενό αρχείο με όνομα `enable_autotune` στον υποφάκελο `extra` του [φακέλου AAPS](#preferences-maintenance-settings) στο τηλέφωνό σας.
 
-- You can select in the Profile dropdown menu the input profile you want to tune (by default your current active profile is selected)
-  - Note: each time you select a new profile, previous results will be removed and Tune days parameter will be set to default value
-- Then Tune days is to select the number of days used in calculation to tune your profile. The minimum value is 1 day and the maximum value 30 days. This number should not be too small to get correct iterative and smooth results (above 7 days for each calculation)
-  - Note: each time you change Tune days parameter, previous results will be removed
-- Last Run is a link that recover your latest valid calculation. If you didn't launch Autotune on current day, or if previous results was removed with a modification of calculation parameter above, then you can recover parameters and results of the latest successful run.
-- Warning show you for example some information about selected profile (if you have several IC values or several ISF values)
-  - Note: Autotune calculation works with only a single IC and a single ISF value. There is currently no existing Autotune algorithm to tune a circadian IC or circadian ISF. If your input profile  has several values, you can see in warning section the average value taken into account to tune your profile.
-- Check Input Profile button open the Profile Viewer to allow you a quick verification of your profile (Units, DIA, IC, ISF, basal and target)
-  - Note: Autotune will only tune your IC (single value), ISF (single value) and basal (with circadian variation). Units, DIA and target will remain unchanged in output profile.
+***ΣΗΜΕΙΩΣΗ: Ελέγξτε στις ρυθμίσεις του AAPS πού είναι ο φάκελος AAPS σας και ότι βάλατε το αρχείο στον σωστό φάκελο. Αρκετοί χρήστες έχουν βάλει το αρχείο σε λάθος φάκελο.***
 
-- "Run Autotune" will launch Autotune calculation with selected profile and the number of Tune days
-  - Note: Autotune calculation can take a long time. Once launched, you can switch to another view (home, ...) and come back later in Autotune plugin to see results
+![Ενεργοποίηση του Autotune](../images/Autotune/Autotune_0.png)
 
-  ![Autotune Run start](../images/Autotune/Autotune_2b.png)
+Κάντε επανεκκίνηση του **AAPS**. Μετά ανοίξτε το **μενού** (☰), επιλέξτε **Διαμόρφωση**, μετά την κατηγορία **Γενικά** και τσεκάρετε το **Autotune**. Η κάρτα τότε δείχνει **Ρυθμίσεις** και **Άνοιγμα πρόσθετου**:
 
-- Then during the run you will see intermediate results below
+![Το Autotune τσεκαρισμένο στη Διαμόρφωση > Γενικά](../images/v4/Configuration/configuration_general_autotune.png)
 
-  - Note: During run, settings are locked, so you cannot change anymore selected input profile or the number of day. You will have to wait the end of current calculation if you want to launch another run with other parameters.
+## Περιβάλλον χρήστη του Autotune
 
-  ![Autotune during run](../images/Autotune/Autotune_3b.png)
+Πατήστε **Άνοιγμα πρόσθετου** στην κάρτα **Autotune** για να ανοίξετε την οθόνη του Autotune:
 
-- When Autotune calculation is finished, you will see the result (Tuned profile) and four buttons below.
+![Η οθόνη του Autotune με το προφίλ, τον αριθμό ημερών δεδομένων και μια προειδοποίηση για το επιλεγμένο προφίλ](../images/Autotune/Autotune_1b.png)
 
-  ![Autotune Result](../images/Autotune/Autotune_4b.png)
+- Στο αναπτυσσόμενο μενού Προφίλ μπορείτε να επιλέξετε το προφίλ εισόδου που θέλετε να συντονίσετε (από προεπιλογή είναι επιλεγμένο το τρέχον ενεργό προφίλ σας)
+  - Σημείωση: Κάθε φορά που επιλέγετε νέο προφίλ, τα προηγούμενα αποτελέσματα διαγράφονται και ο **Αριθμός ημερών δεδομένων** παίρνει την προεπιλεγμένη τιμή του
+- Μετά, με τον **Αριθμό ημερών δεδομένων** (σε παλιότερες εκδόσεις λέγεται **Ημέρες συντονισμού**) επιλέγετε πόσες ημέρες θα χρησιμοποιηθούν στον υπολογισμό για τον συντονισμό του προφίλ σας. Η ελάχιστη τιμή είναι 1 ημέρα και η μέγιστη 30 ημέρες. Αυτός ο αριθμός δεν πρέπει να είναι πολύ μικρός, ώστε να έχετε σωστά επαναληπτικά και ομαλά αποτελέσματα (πάνω από 7 ημέρες για κάθε υπολογισμό)
+  - Σημείωση: Κάθε φορά που αλλάζετε τον **Αριθμό ημερών δεδομένων**, τα προηγούμενα αποτελέσματα διαγράφονται
+- Η Τελευταία εκτέλεση είναι ένας σύνδεσμος που επαναφέρει τον τελευταίο έγκυρο υπολογισμό σας. Αν δεν εκτελέσατε το Autotune την τρέχουσα ημέρα ή αν τα προηγούμενα αποτελέσματα διαγράφηκαν επειδή αλλάξατε μια παράμετρο υπολογισμού παραπάνω, μπορείτε να επαναφέρετε τις παραμέτρους και τα αποτελέσματα της τελευταίας επιτυχημένης εκτέλεσης.
+- Η Προειδοποίηση σας δείχνει, για παράδειγμα, κάποιες πληροφορίες για το επιλεγμένο προφίλ (αν έχετε πολλές τιμές IC ή πολλές τιμές ISF)
+  - Σημείωση: Ο υπολογισμός του Autotune δουλεύει μόνο με μία τιμή IC και μία τιμή ISF. Αυτή τη στιγμή δεν υπάρχει αλγόριθμος Autotune που να συντονίζει IC ή ISF με ημερήσια διακύμανση. Αν το προφίλ εισόδου σας έχει πολλές τιμές, στην ενότητα της προειδοποίησης βλέπετε τη μέση τιμή που λαμβάνεται υπόψη για τον συντονισμό του προφίλ σας.
+- Το κουμπί «Έλεγχος προφίλ εισόδου» ανοίγει την προβολή προφίλ, ώστε να ελέγξετε γρήγορα το προφίλ σας (Μονάδες, IC, ISF, βασικός ρυθμός και στόχος)
+  - Σημείωση: Το Autotune συντονίζει μόνο το IC σας (μία τιμή), το ISF σας (μία τιμή) και τον βασικό ρυθμό (με ημερήσια διακύμανση). Οι μονάδες και ο στόχος μένουν ίδιοι στο προφίλ εξόδου.
 
-- It's important to always compare input profile (column "Profile"), output profile (column "Tuned") and the percentage of variation for each value (Column "%").
+- Το «Εκτέλεση Autotune» ξεκινά τον υπολογισμό του Autotune με το επιλεγμένο προφίλ και τον επιλεγμένο αριθμό ημερών δεδομένων
+  - Σημείωση: Ο υπολογισμός του Autotune μπορεί να διαρκέσει πολύ. Μόλις ξεκινήσει, μπορείτε να πάτε σε άλλη οθόνη (αρχική, ...) και να επιστρέψετε αργότερα στο πρόσθετο Autotune για να δείτε τα αποτελέσματα
 
-- For basal rates, you also have the number of "missing days". You have missing days when Autotune don't have enough data categorized as "Basal" to tune basal rate for this period (for example after each meal when you have carbs absorption). This number should be as low as possible especially when basal is important (for example during the night or at the end of the afternoon)
+  ![Έναρξη εκτέλεσης του Autotune](../images/Autotune/Autotune_2b.png)
 
-- The "Compare profiles" button open the profile comparator view. Input profile is in blue, and output profile (named "Tuned") is in red.
+- Στη συνέχεια, κατά την εκτέλεση θα βλέπετε ενδιάμεσα αποτελέσματα από κάτω
 
-  - Note: in the example below input profile has circadian variation for IC and ISF, but output calculated profile has a single value. If it's important for you to get a circadian output profile see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
+  - Σημείωση: Κατά την εκτέλεση οι ρυθμίσεις είναι κλειδωμένες, οπότε δεν μπορείτε πια να αλλάξετε το επιλεγμένο προφίλ εισόδου ή τον αριθμό των ημερών. Αν θέλετε να ξεκινήσετε άλλη εκτέλεση με άλλες παραμέτρους, πρέπει να περιμένετε να τελειώσει ο τρέχων υπολογισμός.
 
-  ![Autotune Compare profiles](../images/Autotune/Autotune_5.png)
+  ![Το Autotune κατά την εκτέλεση](../images/Autotune/Autotune_3b.png)
 
-- If you trust results (low percentage of variation between input profile and output profile), you can click on "Activate profile" button and then click on OK to validated.
+- Όταν τελειώσει ο υπολογισμός του Autotune, θα δείτε το αποτέλεσμα (Συντονισμένο προφίλ) και τέσσερα κουμπιά από κάτω.
 
-  - Activate Tuned profile will automatically create a new profile "Tuned" in your Local profile plugin.
-  - If you already have a profile named "Tuned" in your local profile plugin, then this profile will be updated with calculated Autotune profile before the activation
+  ![Αποτέλεσμα του Autotune](../images/Autotune/Autotune_4b.png)
 
-  ![Autotune Activate profile](../images/Autotune/Autotune_6.png)
+- Είναι σημαντικό να συγκρίνετε πάντα το προφίλ εισόδου (στήλη «Προφίλ»), το προφίλ εξόδου (στήλη «Συντονισμένο») και το ποσοστό μεταβολής για κάθε τιμή (στήλη «%»).
 
-- If you think Tuned profile must be adjusted (for example if you think some variation are too important), then you can click on "Copy to local profile" button
+- Για τους βασικούς ρυθμούς βλέπετε επίσης τον αριθμό των «χαμένων ημερών». Έχετε χαμένες ημέρες όταν το Autotune δεν έχει αρκετά δεδομένα στην κατηγορία «Βασικός ρυθμός» για να συντονίσει τον βασικό ρυθμό για αυτή την περίοδο (για παράδειγμα μετά από κάθε γεύμα, όταν έχετε απορρόφηση υδατανθράκων). Αυτός ο αριθμός πρέπει να είναι όσο το δυνατόν πιο μικρός, ειδικά όταν ο βασικός ρυθμός είναι σημαντικός (για παράδειγμα κατά τη διάρκεια της νύχτας ή στο τέλος του απογεύματος)
 
-  - A new profile with the prefix "Tuned" and the date and time of the run will be created in local profile plugin
+- Το κουμπί «Σύγκριση προφίλ» ανοίγει την οθόνη σύγκρισης προφίλ. Το προφίλ εισόδου είναι με μπλε και το προφίλ εξόδου (με όνομα «Συντονισμένο») είναι με κόκκινο.
 
-  ![Autotune Copy to local profile](../images/Autotune/Autotune_7.png)
+  - Σημείωση: Στο παρακάτω παράδειγμα το προφίλ εισόδου έχει ημερήσια διακύμανση για IC και ISF, αλλά το υπολογισμένο προφίλ εξόδου έχει μία μόνο τιμή. Αν είναι σημαντικό για εσάς να πάρετε προφίλ εξόδου με ημερήσια διακύμανση, δείτε παρακάτω την ενότητα [Προφίλ IC ή ISF με ημερήσια διακύμανση](#autotune-circadian-ic-or-isf-profile).
 
-- You can then select local profile to edit the Tuned profile (it will be selected by default when you open Local profile plugin)
+  ![Autotune: Σύγκριση προφίλ](../images/Autotune/Autotune_5.png)
 
-  - the values in local profile will but rounded in the user interface to your pump capabilities
+- Αν εμπιστεύεστε τα αποτελέσματα (μικρό ποσοστό μεταβολής ανάμεσα στο προφίλ εισόδου και στο προφίλ εξόδου), μπορείτε να πατήσετε το κουμπί «Ενεργοποίηση προφίλ» και μετά OK για επιβεβαίωση.
 
-  ![Autotune local profile update](../images/Autotune/Autotune_8.png)
+  - Η ενεργοποίηση του Συντονισμένου προφίλ δημιουργεί αυτόματα ένα νέο προφίλ «Συντονισμένο» στη λίστα των προφίλ σας (**Διαχείριση → Προφίλ**).
+  - Αν έχετε ήδη ένα προφίλ με όνομα «Συντονισμένο» στη **Διαχείριση → Προφίλ**, τότε αυτό το προφίλ ενημερώνεται με το υπολογισμένο προφίλ του Autotune πριν από την ενεργοποίηση
 
-- If you want to replace your input profile with Autotune result, click on "Update input profile" button and validate the Popup with OK
+  ![Autotune: Ενεργοποίηση προφίλ](../images/Autotune/Autotune_6.png)
 
-  - Note: if you click on "Activate profile" after "Update input profile", then you will activate your updated profile and not the default "Tuned" profile?
+- Αν πιστεύετε ότι το Συντονισμένο προφίλ χρειάζεται διόρθωση (για παράδειγμα αν πιστεύετε ότι κάποιες μεταβολές είναι πολύ μεγάλες), μπορείτε να πατήσετε το κουμπί «Αντιγραφή στο τοπικό προφίλ»
 
-  ![Autotune Update input profile](../images/Autotune/Autotune_9.png)
+  - Ένα νέο προφίλ με το πρόθεμα «Συντονισμένο» και την ημερομηνία και ώρα της εκτέλεσης θα δημιουργηθεί στη **Διαχείριση → Προφίλ**
 
-- If you have updated your input profile, then the "Update input profile" button is replaced by "Revert input profile" button (see screenshot below). You can that way immediately see if your current input profile in Local profile plugin already include the result of last run or not. You also have the possibility to recover you input profile without autotune result with this button
+  ![Autotune: Αντιγραφή στο τοπικό προφίλ](../images/Autotune/Autotune_7.png)
 
-  ![Autotune Update input profile](../images/Autotune/Autotune_10.png)
+- Μετά μπορείτε να επεξεργαστείτε το Συντονισμένο προφίλ: ανοίξτε **Διαχείριση** > **Προφίλ**, σύρετε στην κάρτα με όνομα «Συντονισμένο» και την ημερομηνία και ώρα της εκτέλεσης και πατήστε το κουμπί **Επεξεργασία** (μολύβι)
+
+  - οι τιμές του προφίλ θα στρογγυλοποιηθούν στο περιβάλλον χρήστη σύμφωνα με τις δυνατότητες της αντλίας σας
+
+  ![Autotune: ενημέρωση τοπικού προφίλ](../images/Autotune/Autotune_8.png)
+
+- Αν θέλετε να αντικαταστήσετε το προφίλ εισόδου σας με το αποτέλεσμα του Autotune, πατήστε το κουμπί «Ενημέρωση προφίλ εισόδου» και επιβεβαιώστε το αναδυόμενο παράθυρο με OK
+
+  - Σημείωση: Αν πατήσετε «Ενεργοποίηση προφίλ» μετά από «Ενημέρωση προφίλ εισόδου», τότε θα ενεργοποιήσετε το ενημερωμένο προφίλ σας και όχι το προεπιλεγμένο προφίλ «Συντονισμένο».
+
+  ![Autotune: Ενημέρωση προφίλ εισόδου](../images/Autotune/Autotune_9.png)
+
+- Αν έχετε ενημερώσει το προφίλ εισόδου σας, τότε το κουμπί «Ενημέρωση προφίλ εισόδου» αντικαθίσταται από το κουμπί «Επαναφορά προφίλ εισόδου» (δείτε την εικόνα παρακάτω). Έτσι βλέπετε αμέσως αν το τρέχον προφίλ εισόδου σας στη **Διαχείριση → Προφίλ** περιέχει ήδη το αποτέλεσμα της τελευταίας εκτέλεσης ή όχι. Με αυτό το κουμπί μπορείτε επίσης να επαναφέρετε το προφίλ εισόδου σας χωρίς το αποτέλεσμα του Autotune
+
+  ![Autotune: Ενημέρωση προφίλ εισόδου](../images/Autotune/Autotune_10.png)
 
 
 
-## Autotune settings
+## Ρυθμίσεις Autotune
 
 (autotune-plugin-settings)=
 
-### Autotune plugin settings
+### Ρυθμίσεις του πρόσθετου Autotune
 
-  ![Autotune default screen](../images/Autotune/Autotune_11.png)
+  ![Ρυθμίσεις του Autotune στο AAPS 4](../images/preferences/settings_autotune.png)
 
 ```{admonition} Only DEV
-:class: info
-Automation Switch Profile feature is only available in Dev/Engineering mode.
+:class: note
+Η λειτουργία **Αυτόματη αλλαγή προφίλ** υπάρχει μόνο σε Dev/Engineering mode.
 ```
 
-- Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. If you change this setting to On, the input profile will automatically be updated by the Tuned profile, and it will be activated.
-  - **Be Careful, you must trust and verify during several following days, that after an update and activation of Tuned profile without modification, it improves your loop**
+- **Αυτόματη αλλαγή προφίλ** (προεπιλογή Ανενεργό): δείτε παρακάτω την ενότητα [Εκτέλεση του Autotune με κανόνα αυτοματισμού](#autotune-run-autotune-with-an-automation-rule). Αν αλλάξετε αυτή τη ρύθμιση σε Ενεργό, το προφίλ εισόδου θα ενημερώνεται αυτόματα με το Συντονισμένο προφίλ και θα ενεργοποιείται.
+  - **Προσοχή: πρέπει να εμπιστεύεστε και να ελέγχετε για αρκετές επόμενες ημέρες ότι, μετά από ενημέρωση και ενεργοποίηση του Συντονισμένου προφίλ χωρίς αλλαγές, το κύκλωμά σας βελτιώνεται**
 
-- Categorize UAM as basal (default On): This setting is for the users using AndroidAPS without any carbs entered (Full UAM). It will prevent (when Off) to categorize UAM as basal.
-  - Note: if you have at least one hour of Carbs absorption detected during one day, then all data categorized as "UAM" will be categorized as basal, whatever this setting (On or Off)
-- Number of days of data (default 5): You can define default value with this setting. Each time your select a new profile in Autotune plugin, Tune days parameter will be replaced by this default value
-- Apply average result in circadian IC/ISF (default Off): see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
+- **UAM ως βασικός ρυθμός** (προεπιλογή Ανενεργό): Αυτή η ρύθμιση είναι για χρήστες που χρησιμοποιούν το AndroidAPS χωρίς να καταχωρούν καθόλου υδατάνθρακες (Full UAM). Όταν είναι Ανενεργό, εμποδίζει την κατάταξη του UAM ως βασικού ρυθμού.
+  - Σημείωση: Αν μέσα σε μία ημέρα εντοπιστεί τουλάχιστον μία ώρα απορρόφησης υδατανθράκων, τότε όλα τα δεδομένα στην κατηγορία «UAM» θα καταταγούν ως βασικός ρυθμός, όποια κι αν είναι αυτή η ρύθμιση (Ενεργό ή Ανενεργό)
+- **Προεπιλεγμένες ημέρες ρύθμισης** (προεπιλογή 5): Με αυτή τη ρύθμιση ορίζετε την προεπιλεγμένη τιμή. Κάθε φορά που επιλέγετε νέο προφίλ στο πρόσθετο Autotune, ο **Αριθμός ημερών δεδομένων** αντικαθίσταται από αυτή την προεπιλεγμένη τιμή
+- **Χρήση ημερήσιας διακύμανσης IC/ISF** (προεπιλογή Ανενεργό): δείτε παρακάτω την ενότητα [Προφίλ IC ή ISF με ημερήσια διακύμανση](#autotune-circadian-ic-or-isf-profile).
 
-### Other settings
+(autotune-other-settings)=
+### Άλλες ρυθμίσεις
 
-- Autotune also uses Max autosens ratio and Min autosens ratio to limit variation. You can see and adjust these values in Config Builder > Sensitivity detection plugin > Settings > Advanced Settings
+- Το Autotune χρησιμοποιεί επίσης τη μέγιστη και την ελάχιστη αναλογία autosens (Max autosens ratio και Min autosens ratio) για να περιορίσει τη μεταβολή. Αυτές τις τιμές μπορείτε να τις δείτε και να τις αλλάξετε στις [**Ρυθμίσεις** > **Ρύθμιση απορρόφησης** > **Ρυθμίσεις για Προχωρημένους**](../SettingUpAaps/Preferences.md) (**Autosens μέγιστο** και **Autosens ελάχιστο**).
 
-  ![Autotune default screen](../images/Autotune/Autotune_12.png)
+  ![Autosens μέγιστο και Autosens ελάχιστο στις προχωρημένες ρυθμίσεις απορρόφησης](../images/preferences/settings_absorption_advanced.png)
 
 
 
-## Advanced feature
+## Προχωρημένη λειτουργία
 
 (autotune-circadian-ic-or-isf-profile)=
 
-### Circadian IC or ISF profile
+### Προφίλ IC ή ISF με ημερήσια διακύμανση
 
-- If you have important variation of IC and/or you ISF in your profile, and you fully trust in your circadian time and variation, then you can set "Apply average result in circadian IC/ISF"
+- Αν έχετε μεγάλη διακύμανση του IC και/ή του ISF στο προφίλ σας και εμπιστεύεστε πλήρως τις ώρες και τη διακύμανση μέσα στη μέρα, τότε μπορείτε να ενεργοποιήσετε τη **Χρήση ημερήσιας διακύμανσης IC/ISF** (σε παλιότερες εκδόσεις λεγόταν «Apply average result in circadian IC/ISF»)
 
-  - Note that Autotune calculation will always be done with a single value, and circadian variation will not be tuned by Autotune. This setting only apply average variation calculated for IC and/or ISF on your circadian values
+  - Να ξέρετε ότι ο υπολογισμός του Autotune γίνεται πάντα με μία μόνο τιμή και ότι το Autotune δεν συντονίζει την ημερήσια διακύμανση. Αυτή η ρύθμιση εφαρμόζει μόνο τη μέση μεταβολή που υπολογίστηκε για IC και/ή ISF στις τιμές σας με ημερήσια διακύμανση
 
-- See on screenshot below Tuned profile with Apply average variation Off (on the left) and On (on the right)
+- Δείτε στην παρακάτω εικόνα το Συντονισμένο προφίλ με την εφαρμογή της μέσης μεταβολής Ανενεργή (αριστερά) και Ενεργή (δεξιά)
 
-  ![Autotune default screen](../images/Autotune/Autotune_13.png)
+  ![Προεπιλεγμένη οθόνη του Autotune](../images/Autotune/Autotune_13.png)
 
 
 
-### Tune specific days of the week
+### Συντονισμός συγκεκριμένων ημερών της εβδομάδας
 
-- If you click on the checkbox with the eye on the right of "Tune days" parameter, you will see the day selection. You can specify which day of the week should be included in Autotune calculation (in screenshot below you can see an example for "working days" with Saturday and Sunday removed from autotune calculation)
-  - If the number of day included in Autotune calculation is lower than the number of Tune days, then you will see how many days will be included on the right of Tune days selector (10 days in the example below)
-  - This setting gives good results only if the number of remaining days is not to small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should select a minimum of 21 or 28 Tune days to have 6 or 8 days included in Autotune calculation)
+- Αν πατήσετε το εικονίδιο **μάτι** στα δεξιά του πεδίου **Αριθμός ημερών δεδομένων**, θα δείτε την επιλογή ημερών. Μπορείτε να ορίσετε ποιες ημέρες της εβδομάδας θα μπουν στον υπολογισμό του Autotune (στην παρακάτω εικόνα βλέπετε ένα παράδειγμα για «εργάσιμες ημέρες», όπου το Σάββατο και η Κυριακή έχουν αφαιρεθεί από τον υπολογισμό του Autotune)
+  - Αν ο αριθμός των ημερών που μπαίνουν στον υπολογισμό του Autotune είναι μικρότερος από τον **Αριθμό ημερών δεδομένων**, τότε θα δείτε πόσες ημέρες θα μπουν, στα δεξιά της επιλογής ημερών (10 ημέρες στο παρακάτω παράδειγμα)
+  - Αυτή η ρύθμιση δίνει καλά αποτελέσματα μόνο αν ο αριθμός των ημερών που μένουν δεν είναι πολύ μικρός (για παράδειγμα, αν συντονίζετε ένα συγκεκριμένο προφίλ για Σαββατοκύριακα με επιλεγμένα μόνο την Κυριακή και το Σάββατο, πρέπει να ορίσετε τον **Αριθμό ημερών δεδομένων** σε τουλάχιστον 21 ή 28, ώστε να μπουν 6 ή 8 ημέρες στον υπολογισμό του Autotune)
 
-  ![Autotune default screen](../images/Autotune/Autotune_14b.png)
+  ![Προεπιλεγμένη οθόνη του Autotune](../images/Autotune/Autotune_14b.png)
 
-- During Autotune calculation, you can see the progress of the calculations ("Partial result day 3 / 10 tuned" on example below)
+- Κατά τον υπολογισμό του Autotune βλέπετε την πρόοδο των υπολογισμών («Ημέρα μερικού αποτελέσματος 1 / 4 ρυθμίστηκε» στο παρακάτω παράδειγμα, με το Σάββατο και την Κυριακή εξαιρεμένα)
 
-  ![Autotune default screen](../images/Autotune/Autotune_15b.png)
+  ![Προεπιλεγμένη οθόνη του Autotune](../images/Autotune/Autotune_15b.png)
 
 
 
 (autotune-run-autotune-with-an-automation-rule)=
 
-## Run Autotune with an automation rule
+## Εκτέλεση του Autotune με κανόνα αυτοματισμού
 
 ```{admonition} Only DEV
-:class: info
-Automation Switch Profile feature is only available in Dev/Engineering mode.
+:class: note
+Η λειτουργία **Αυτόματη αλλαγή προφίλ** υπάρχει μόνο σε Dev/Engineering mode.
 ```
 
-First step is to define correct trigger for an automation rule with Autotune:
+Το πρώτο βήμα είναι να ορίσετε τη σωστή σκανδάλη (trigger) για έναν κανόνα αυτοματισμού με το Autotune:
 
-Note: for more information on how to set an automation rule, see [here](../DailyLifeWithAaps/Automations.md).
+Σημείωση: Για περισσότερες πληροφορίες για το πώς ορίζετε έναν κανόνα αυτοματισμού, δείτε [εδώ](../DailyLifeWithAaps/Automations.md).
 
-- You should select Recurring time trigger: only run Autotune once per day, and autotune is designed to be run daily (each new run you shift one day later and quickly profile modification should be tiny)
+- Πρέπει να επιλέξετε τη σκανδάλη «Χρόνος επαναλαμβανόμενων»: εκτελείτε το Autotune μόνο μία φορά την ημέρα· το Autotune είναι φτιαγμένο για να εκτελείται καθημερινά (με κάθε νέα εκτέλεση μετακινείστε μία ημέρα αργότερα και γρήγορα οι αλλαγές στο προφίλ πρέπει να γίνονται πολύ μικρές)
 
-  ![Autotune default screen](../images/Autotune/Autotune_16.png)
+  ![Προεπιλεγμένη οθόνη του Autotune](../images/Autotune/Autotune_16.png)
 
-- It's better at the beginning to run Autotune during the day to be able to check results. If you want to run Autotune during the night, you have to select in the trigger 4AM or later to include current day in next Autotune Calculation.
+- Στην αρχή είναι καλύτερο να εκτελείτε το Autotune κατά τη διάρκεια της ημέρας, ώστε να μπορείτε να ελέγχετε τα αποτελέσματα. Αν θέλετε να εκτελείτε το Autotune τη νύχτα, πρέπει να επιλέξετε στη σκανδάλη 4 π.μ. ή αργότερα, ώστε η τρέχουσα ημέρα να μπει στον επόμενο υπολογισμό του Autotune.
 
-  ![Autotune default screen](../images/Autotune/Autotune_17.png)
+  ![Προεπιλεγμένη οθόνη του Autotune](../images/Autotune/Autotune_17.png)
 
-- Then you can select "Run Autotune" Action in the list
+- Μετά μπορείτε να επιλέξετε την ενέργεια **Προφίλ Autotune** (στην ομάδα **Κύκλωμα & ινσουλίνη**)
 
-  ![Autotune default screen](../images/Autotune/Autotune_18.png)
+  ![Προεπιλεγμένη οθόνη του Autotune](../images/Autotune/Autotune_18.png)
 
-- You can then select Autotune Action to adjust parameters for your run. Default parameters are "Active Profile", default Tune days value defined in Autotune Plugin preferences, and All days are selected.
+- Μετά μπορείτε να ρυθμίσετε τις παραμέτρους της ενέργειας για την εκτέλεσή σας. Σε μια νέα ενέργεια, το **Επιλέξτε προφίλ για συντονισμό** δείχνει το πρώτο προφίλ της λίστας τοπικών προφίλ σας, το πεδίο **Ημέρες συντονισμού** είναι κενό και όλες οι ημέρες είναι επιλεγμένες. Επιλέξτε το προφίλ για συντονισμό και εισάγετε τον αριθμό **Ημέρες συντονισμού** (1 έως 30).
 
-  ![Autotune default screen](../images/Autotune/Autotune_19b.png)
+  ![Προεπιλεγμένη οθόνη του Autotune](../images/Autotune/Autotune_19b.png)
 
-- After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](#autotune-plugin-settings) "Automation Switch Profile" to enabled to automatically update and activate profile tuned after calculation.
+- Μετά από λίγες ημέρες, αν εμπιστεύεστε πλήρως τα αποτελέσματα του Autotune και το ποσοστό μεταβολής είναι μικρό, μπορείτε να ενεργοποιήσετε στις [Ρυθμίσεις του Autotune](#autotune-plugin-settings) την «**Αυτόματη αλλαγή προφίλ**», ώστε το συντονισμένο προφίλ να ενημερώνεται και να ενεργοποιείται αυτόματα μετά τον υπολογισμό.
 
-Note: if you want to automatically tune profiles for specific days of the week (for example a profile for "Weekend days" and another one for "Working days"), then create one rule for each profile, select the same days in Trigger and in Autotune Action, Tune days must be high enough to be sure tuning will be done with at least 6 or 8 days, and don't forget to select time after 4AM in trigger...
+Σημείωση: Αν θέλετε να συντονίζετε αυτόματα προφίλ για συγκεκριμένες ημέρες της εβδομάδας (για παράδειγμα ένα προφίλ για «Σαββατοκύριακα» και ένα άλλο για «Εργάσιμες ημέρες»), τότε δημιουργήστε έναν κανόνα για κάθε προφίλ, επιλέξτε τις ίδιες ημέρες στη Σκανδάλη και στην Ενέργεια του Autotune, οι ημέρες συντονισμού πρέπει να είναι αρκετές ώστε ο συντονισμός να γίνεται με τουλάχιστον 6 ή 8 ημέρες, και μην ξεχάσετε να επιλέξετε ώρα μετά τις 4 π.μ. στη σκανδάλη...
 
-- See below an example of rule to tune "my profile" on all "Working days" with 14 Tune days selected (so only 10 days included in autotune calculation).
+- Παρακάτω βλέπετε ένα παράδειγμα κανόνα που εκτελείται κάθε εργάσιμη ημέρα (Δευτέρα έως Παρασκευή) στις 04:00 και συντονίζει το προφίλ «Normal» με 14 **Ημέρες συντονισμού**, μόνο εργάσιμες ημέρες (οπότε στον υπολογισμό του Autotune μπαίνουν μόνο 10 ημέρες).
 
-  ![Autotune default screen](../images/Autotune/Autotune_20b.png)
+  ![Προεπιλεγμένη οθόνη του Autotune](../images/Autotune/Autotune_20b.png)
 
 
 
-## Tips and trick's
+## Συμβουλές και κόλπα
 
-Autotune works with information existing in your database, so if you just installed AAPS on a new phone, you will have to wait several days before being able to launch Autotune with enough days to get relevant results.
+Το Autotune δουλεύει με τις πληροφορίες που υπάρχουν στη βάση δεδομένων σας, οπότε αν μόλις εγκαταστήσατε το AAPS σε νέο τηλέφωνο, θα πρέπει να περιμένετε αρκετές ημέρες πριν μπορέσετε να εκτελέσετε το Autotune με αρκετές ημέρες για να πάρετε χρήσιμα αποτελέσματα.
 
-Autotune is just an help, it's important to regularly check if you agree with calculated profile. If you have any doubt, change Autotune settings (for example the number of days) or copy results in local profile and adjust profile before using it.
+Το Autotune είναι μόνο μια βοήθεια· είναι σημαντικό να ελέγχετε τακτικά αν συμφωνείτε με το υπολογισμένο προφίλ. Αν έχετε οποιαδήποτε αμφιβολία, αλλάξτε τις ρυθμίσεις του Autotune (για παράδειγμα τον αριθμό των ημερών) ή αντιγράψτε τα αποτελέσματα στο τοπικό προφίλ και διορθώστε το προφίλ πριν το χρησιμοποιήσετε.
 
-Always use Autotune several days manually to check results before applying them. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile than you start to use Automation (Never before)
+Εκτελείτε πάντα το Autotune χειροκίνητα για αρκετές ημέρες, για να ελέγξετε τα αποτελέσματα πριν τα εφαρμόσετε. Και μόνο όταν εμπιστεύεστε πλήρως τα αποτελέσματα του Autotune και η μεταβολή ανάμεσα στο προηγούμενο και στο υπολογισμένο προφίλ γίνει πολύ μικρή, αρχίζετε να χρησιμοποιείτε τον Αυτοματισμό (Ποτέ πριν)
 
-- Autotune can work very well for some users and not for others, so **If you don't trust Autotune result, don't use it**
+- Το Autotune μπορεί να δουλεύει πολύ καλά για κάποιους χρήστες και όχι για άλλους, γι' αυτό **αν δεν εμπιστεύεστε το αποτέλεσμα του Autotune, μην το χρησιμοποιείτε**
 
-It's also important to analyse Autotune results to understand (or try to understand) why Autotune propose these modifications
+Είναι επίσης σημαντικό να αναλύετε τα αποτελέσματα του Autotune για να καταλάβετε (ή να προσπαθήσετε να καταλάβετε) γιατί το Autotune προτείνει αυτές τις αλλαγές
 
-- you can have a whole increase or decrease of the strength of your profile (for example increase of total basal associated to decrease of ISF and IC values). it could be associated to several following days with autosens correction above 100% (more aggressivity required) or below 100% (you are more sensitive)
-- Sometimes Autotune proposes a different balance between basal rates and IC/ISF (for ex lower basal and more aggressive IC/ISF)
+- μπορεί να έχετε συνολική αύξηση ή μείωση της έντασης του προφίλ σας (για παράδειγμα αύξηση του συνολικού βασικού ρυθμού μαζί με μείωση των τιμών ISF και IC). μπορεί να συνδέεται με αρκετές επόμενες ημέρες με διόρθωση autosens πάνω από 100% (χρειάζεται πιο επιθετική ρύθμιση) ή κάτω από 100% (είστε πιο ευαίσθητοι)
+- Μερικές φορές το Autotune προτείνει διαφορετική ισορροπία ανάμεσα στους βασικούς ρυθμούς και στα IC/ISF (για παράδειγμα χαμηλότερο βασικό ρυθμό και πιο επιθετικά IC/ISF)
 
-We advise to not use Autotune in the following cases:
+Σας συνιστούμε να μη χρησιμοποιείτε το Autotune στις παρακάτω περιπτώσεις:
 
-- You don't enter all your carbs
-  - If you don't enter carbs correction for hypoglycemia, Autotune will see an unexpected increase of your BG value and will increase your basal rates 4 hours earlier, it could be the opposite of what you need to avoid hypo, especially if it's in the middle of the night. That's why it's important to enter all carbs, especially correction for hypo.
-- You have a lot of periods with UAM detected during the day.
-  - Do you have entered all your carbs and correctly estimated your Carbs?
-  - All UAM periods (except if you enter no carbs during a day and categorized UAM as basal is disabled), all your UAM periods will be categorized as basal, this can increase a lot your basal (much more than necessary)
+- Δεν καταχωρείτε όλους τους υδατάνθρακές σας
+  - Αν δεν καταχωρείτε τους υδατάνθρακες που παίρνετε για να διορθώσετε μια υπογλυκαιμία, το Autotune θα δει μια απρόσμενη άνοδο της τιμής γλυκόζης αίματος και θα αυξήσει τους βασικούς ρυθμούς σας 4 ώρες νωρίτερα· αυτό μπορεί να είναι το αντίθετο από ό,τι χρειάζεστε για να αποφύγετε την υπογλυκαιμία, ειδικά αν είναι στη μέση της νύχτας. Γι' αυτό είναι σημαντικό να καταχωρείτε όλους τους υδατάνθρακες, ειδικά αυτούς για τη διόρθωση υπογλυκαιμίας.
+- Έχετε πολλές περιόδους με UAM που εντοπίζεται κατά τη διάρκεια της ημέρας.
+  - Έχετε καταχωρήσει όλους τους υδατάνθρακές σας και τους έχετε υπολογίσει σωστά;
+  - Όλες οι περίοδοι UAM (εκτός αν δεν καταχωρήσετε καθόλου υδατάνθρακες σε μία ημέρα και η κατάταξη του UAM ως βασικού ρυθμού είναι απενεργοποιημένη): όλες οι περίοδοι UAM θα καταταγούν ως βασικός ρυθμός και αυτό μπορεί να αυξήσει πολύ τον βασικό ρυθμό σας (πολύ περισσότερο από όσο χρειάζεται)
 
-- Your carbs absorption is very slow: if most of your carbs absorption are calculated with min_5m_carbimpact parameter (you can see these periods with a little orange dot in the top of COB curve), the calculation of COB could be wrong and leads to wrong results.
-  - When you practice sport, you are generally more sensitive and your BG doesn't rise a lot, so during or after an exercise, it's usual to see some periods with slow carbs. But if you have too often unexpected slow carb absorption, then you may need a profile adjustment (higher value of IC) or a min_5m_carbimpact a bit too high.
-- You have "very bad days", for example stuck several hours in hyperglycemia with a huge amount of insulin to be able to go down within the range, or after a sensor change you have long periods of wrong BG values. If during the past weeks you only have one or 2 "bad days", you can disable manually these days in autotune calculation to exclude them from calculation, and again **check carefully if you can trust the results**
-- If the percentage of modification is too important
-  - You can try to increase the number of days to get smoother results
+- Η απορρόφηση των υδατανθράκων σας είναι πολύ αργή: αν το μεγαλύτερο μέρος της απορρόφησης υδατανθράκων υπολογίζεται με την παράμετρο min_5m_carbimpact (αυτές τις περιόδους τις βλέπετε με μια μικρή πορτοκαλί τελεία στο πάνω μέρος της καμπύλης COB), ο υπολογισμός του COB μπορεί να είναι λάθος και να οδηγεί σε λάθος αποτελέσματα.
+  - Όταν αθλείστε, συνήθως είστε πιο ευαίσθητοι και η γλυκόζη αίματος (BG) δεν ανεβαίνει πολύ, οπότε κατά τη διάρκεια ή μετά την άσκηση είναι συνηθισμένο να βλέπετε κάποιες περιόδους με αργούς υδατάνθρακες. Αν όμως έχετε πολύ συχνά απρόσμενα αργή απορρόφηση υδατανθράκων, τότε μπορεί να χρειάζεστε διόρθωση του προφίλ (μεγαλύτερη τιμή IC) ή το min_5m_carbimpact σας να είναι λίγο πολύ υψηλό.
+- Έχετε «πολύ κακές ημέρες», για παράδειγμα μείνατε αρκετές ώρες σε υπεργλυκαιμία και χρειάστηκε τεράστια ποσότητα ινσουλίνης για να πέσετε μέσα στο εύρος, ή μετά από αλλαγή αισθητήρα έχετε μεγάλες περιόδους με λάθος τιμές γλυκόζης αίματος. Αν τις τελευταίες εβδομάδες έχετε μόνο μία ή 2 «κακές ημέρες», μπορείτε να απενεργοποιήσετε χειροκίνητα αυτές τις ημέρες στον υπολογισμό του Autotune για να τις εξαιρέσετε, και πάλι **ελέγξτε προσεκτικά αν μπορείτε να εμπιστευτείτε τα αποτελέσματα**
+- Αν το ποσοστό μεταβολής είναι πολύ μεγάλο
+  - Μπορείτε να δοκιμάσετε να αυξήσετε τον αριθμό των ημερών για να πάρετε πιο ομαλά αποτελέσματα

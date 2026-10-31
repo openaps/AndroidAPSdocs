@@ -1,397 +1,406 @@
-# Medtrum Nano / 300U
+(medtrum-nano-300u)=
+# Medtrum Nano 200U / 300U
 
-These instructions are for configuring the Medtrum insulin pump.
-
-This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.
+Tento návod popisuje konfiguráciu inzulínovej pumpy Medtrum.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
-* All loop functionality supported (SMB, TBR etc)
-* Automatic DST and timezone handling
-* Extended bolus is not supported by AAPS driver
+## Funkcie pumpy s AAPS
+* Podporované sú všetky funkcie okruhu (SMB, TBR atď.)
+* Automatická zmena letného času a časového pásma
+* Ovládač v AAPS nepodporuje predĺžený bolus
 
-## Hardware and Software Requirements
-* **Compatible Medtrum pumpbase and reservoir patches**
-    - Currently supported:
-        - Medtrum TouchCare Nano with pumpbase refs: **MD0201** and **MD8201**.
-        - Medtrum TouchCare 300U with pumpbase ref: **MD8301**.
-        - If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [here](https://discordapp.com/channels/629952586895851530/1076120802476441641).
-* **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
-* **Compatible Android phone** with a BLE Bluetooth connection
-    - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
-* [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
+## Hardvérové a softvérové požiadavky
+* **Kompatibilné základne pumpy Medtrum a Patche so zásobníkom**
+    - Momentálne podporované:
+        - Medtrum TouchCare Nano 200U so základňou pumpy ref.: **MD0201** a **MD8201**.
+        - Medtrum TouchCare 300U so základňou pumpy ref.: **MD8301**.
+        - Ak máte nepodporovaný model a chcete darovať hardvér alebo pomôcť s testovaním, kontaktujte nás cez Discord [tu](https://discordapp.com/channels/629952586895851530/1076120802476441641).
+* **AAPS zostavené a nainštalované** podľa návodu [Zostavenie AAPS](../SettingUpAaps/BuildingAaps.md).
+* **Kompatibilný telefón s Androidom** s pripojením Bluetooth BLE
+    - Pozrite si [poznámky k vydaniu](../Maintenance/ReleaseNotes.md) AAPS
 
-## Before you begin
+## Skôr než začnete
 
-**SAFETY FIRST** Do not attempt this process in an environment where you cannot recover from an error (extra patches, insulin, and pump control devices are must-haves).
+**BEZPEČNOSŤ NA PRVOM MIESTE** Nerobte tento postup v prostredí, kde by ste sa nevedeli zotaviť z chyby (náhradné Patche, inzulín a zariadenia na ovládanie pumpy sú nevyhnutné).
 
-**The PDM and Medtrum App will not work with a patch that is activated by AAPS.** Previously you may have used your PDM or Medtrum app to send commands to your pump. For security reasons you can only use the activated patch with the device or app that was used to activate it.
+**PDM ani aplikácia Medtrum nebudú fungovať s Patchom, ktorý aktivoval AAPS.** Doteraz ste možno na posielanie príkazov do pumpy používali PDM alebo aplikáciu Medtrum. Z bezpečnostných dôvodov môžete aktivovaný Patch používať iba so zariadením alebo aplikáciou, ktorou bol aktivovaný.
 
-*This does NOT mean that you should throw away your PDM. It is recommended to keep it somewhere safe as a backup in case of emergencies, for instance if your phone gets lost or AAPS is not working correctly.*
+*To NEZNAMENÁ, že by ste mali PDM vyhodiť. Odporúčame uschovať ho na bezpečnom mieste ako zálohu pre núdzové situácie, napríklad ak stratíte telefón alebo AAPS nefunguje správne.*
 
-**Your pump will not stop delivering insulin when it is not connected to AAPS** Default basal rates are programmed on the pump as defined in the current active profile. As long as AAPS is operational, it will send temporary basal rate commands that run for a maximum of 120 minutes. If for some reason the pump does not receive any new commands (for instance because communication was lost due to pump - phone distance) the pump will fall back to the default basal rate programmed on the pump once the Temporary Basal Rate ends.
+**Vaša pumpa neprestane podávať inzulín, keď nie je pripojená k AAPS** Predvolené bazálne dávky sú naprogramované v pumpe podľa aktuálne aktívneho profilu. Kým AAPS funguje, posiela príkazy na dočasné bazály, ktoré trvajú najviac 120 minút. Ak pumpa z nejakého dôvodu nedostane žiadne nové príkazy (napríklad pretože sa stratilo spojenie kvôli vzdialenosti medzi pumpou a telefónom), po skončení dočasného bazálu sa pumpa vráti k predvolenej bazálnej dávke naprogramovanej v pumpe.
 
-**30 min Basal Rate Profiles are NOT supported in AAPS.** **The AAPS Profile does not support a 30 minute basal rate time frame** If you are new to AAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work. You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the Medtrum pump hardware itself supports the 30 min basal rate profile increments, AAPS is not able to take them into account with its algorithms currently.
+**Profil AAPS nepodporuje bazálne dávky v 30-minútových časových úsekoch** Ak s AAPS začínate a prvýkrát nastavujete profil bazálnych dávok, majte na pamäti, že bazálne dávky začínajúce v polhodine nie sú podporované a profil bazálnych dávok musíte upraviť tak, aby začínali vždy v celú hodinu. Ak máte napríklad bazálnu dávku 1,1 jednotky, ktorá začína o 09:30 a trvá 2 hodiny do 11:30, nebude to fungovať. Túto bazálnu dávku 1,1 jednotky musíte zmeniť na časový úsek 9:00 – 11:00 alebo 10:00 – 12:00. Hoci samotný hardvér pumpy Medtrum podporuje v profile bazálne dávky v 30-minútových krokoch, AAPS ich zatiaľ vo svojich algoritmoch nedokáže zohľadniť.
 
-**0U/h profile basal rates are NOT supported in AAPS** While the Medtrum pump does support a zero basal rate, AAPS uses multiples of the profile basal rate to determine automated treatment and therefore cannot function with a zero basal rate. A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.
+**Bazálne dávky 0 U/h v profile AAPS NEPODPORUJE** Hoci pumpa Medtrum nulovú bazálnu dávku podporuje, AAPS na určenie automatickej liečby používa násobky bazálnej dávky z profilu, a preto s nulovou bazálnou dávkou nemôže fungovať. Najnižšia bazálna dávka v profile je 0,05 U/h.
 
-## Nastavenia
+Dočasnú nulovú bazálnu dávku dosiahnete funkciou „Odpojiť pumpu“ alebo kombináciou Deaktivovať uzavretý okruh / dočasný bazál alebo Pozastaviť uzavretý okruh / dočasný bazál.
 
-CAUTION: When activating a patch with AAPS you **MUST** disable all other devices that can talk to the Medtrum pumpbase. e.g. active PDM and Medtrum app. Make sure you have your pumpbase and pumpbase SN ready for activation of a new patch.
+## Nastavenie
 
-### Step 1: Select Medtrum pump
+```{caution}
+Keď aktivujete Patch pomocou **AAPS**, **MUSÍTE** vypnúť všetky ostatné zariadenia, ktoré môžu komunikovať so základňou pumpy Medtrum, napríklad aktívny PDM alebo aplikáciu Medtrum.
+```
 
-#### Option 1: New installations
+### Krok 1: Vyberte pumpu Medtrum
 
-If you are installing AAPS for the first time, the **Setup Wizard** will guide you through installing AAPS. Select “Medtrum” when you reach Pump selection.
+#### Možnosť 1: Nové inštalácie
 
-If in doubt you can also select “Virtual Pump” and select “Medtrum” later, after setting up AAPS (see option 2).
+Ak inštalujete **AAPS** prvýkrát, nastavením vás prevedie **Sprievodca nastavením**. Keď sa dostanete ku kroku **Pumpa**, vyberte **Medtrum**.
 
-![Setup Wizard](../images/medtrum/SetupWizard.png)
+Ak si nie ste istí, môžete vybrať aj **Virtuálna pumpa** a **Medtrum** vybrať neskôr, po nastavení **AAPS** (pozrite možnosť 2).
 
-#### Option 2: The Config Builder
+![Krok Pumpa v sprievodcovi nastavením](../images/setup-wizard/Wizard-Pump.png)
 
-On an existing installation you can select the **Medtrum** pump in [Config Builder > Pump](#Config-Builder-pump):
+#### Možnosť 2: Obrazovka Konfigurácia
 
-On the top-left hand corner **hamburger menu** select **Config Builder**\ ➜\ **Pump**\ ➜\ **Medtrum**\ by selecting the **Enable button** titled **Medtrum**.
+Pri existujúcej inštalácii môžete pumpu **Medtrum** vybrať v časti [Konfigurácia > Pumpa](#Config-Builder-pump):
 
-Selecting the **checkbox** next to the **Settings Gear** will allow the Medtrum overview to be displayed as a tab in the AAPS interface titled **Medtrum**. Checking this box will facilitate your access to the Medtrum commands when using AAPS and is highly recommended.
+Otvorte **ponuku** (☰) vľavo hore, ťuknite na **Konfigurácia** > **Pumpa** a vyberte kartu **Medtrum**. Naraz môže byť aktívna iba jedna pumpa.
 
-![Konfigurácia](../images/medtrum/ConfigBuilder.png)
+![Konfigurácia > Pumpa s pluginom Medtrum](../images/v4/Configuration/configuration_pump_list_4.png)
 
-### Step 2: Change Medtrum settings
+Po výbere sa na karte **Medtrum** zobrazia dve tlačidlá, **Nastavenia** a **Otvoriť plugin**:
 
-Enter the Medtrum settings by tapping the **Settings Gear** of the Medtrum module in the Config Builder .
+![Plugin Medtrum vybraný v Konfigurácia > Pumpa](../images/v4/Pumps/medtrum_enabled.png)
 
-![Medtrum Settings](../images/medtrum/MedtrumSettings.png)
+**Otvoriť plugin** (alebo **Spravovať → Pumpa**) otvorí obrazovku pumpy Medtrum. Používate ju na výmenu Patchov a na zobrazenie stavu pumpy. Pred aktiváciou Patchu vyzerá takto:
 
-#### Serial Number:
+![Obrazovka pumpy Medtrum pred párovaním](../images/v4/Pumps/medtrum_pump_screen.png)
 
-Enter the serial number of your pumpbase here as noted on the pumpbase. Make sure the serial number is correct and there are no spaces added (You can either use capital or lowercase).
+(medtrum-step-2)=
+### Krok 2: Zmeňte nastavenia Medtrum
 
-NOTE: This setting can only be changed when there is no patch active.
+Ťuknite na **Nastavenia** na karte **Medtrum** v časti **Konfigurácia** > **Pumpa**. Môžete tiež ťuknúť na ikonu ozubeného kolieska v pravom hornom rohu obrazovky pumpy Medtrum. Otvorí sa **Nastavenie pumpy Medtrum**:
 
-#### Alarm settings
+![Nastavenia ovládača Medtrum](../images/v4/Pumps/medtrum_settings.png)
 
-***Default: Beep.***
+```{note}
+Nastavenie **Sériové číslo** už neexistuje. **AAPS** nájde vašu základňu pumpy pomocou vyhľadávania Bluetooth pri prvej aktivácii Patchu (pozrite [Krok 3](#medtrum-activate-patch)) a zapamätá si jej sériové číslo. Ak chcete použiť inú základňu pumpy, pozrite [Zrušiť párovanie](#medtrum-unpair).
+```
 
-This setting changes the way that the pump will alert you when there is a warning or error.
+#### Nastavenie výstrah
 
-- Beep > The patch will beep on alarms and warnings
-- Silent > The patch will not alert you on alarms and warnings
+***Predvolené: Pípnutie.***
 
-Note: In silent mode AAPS will still sound the alarm depending on your phone's volume settings. If you do not respond to the alarm, the patch will eventually beep.
+Toto nastavenie mení spôsob, akým vás pumpa upozorní na varovanie alebo chybu.
 
-#### Notification on pump warning
+- **Pípnutie**: Patch pri alarmoch a varovaniach pípa.
+- **Tichý**: Patch vás na alarmy a varovania neupozorní.
 
-***Default: Enabled.***
+Poznámka: V tichom režime **AAPS** aj tak spustí alarm, podľa nastavenia hlasitosti vášho telefónu. Ak na alarm nereagujete, Patch nakoniec začne pípať.
 
-This settings changes the way AAPS will show notification on non critical pump warnings. When enabled a Notification will be shown on the phone when a pump warning occurs, including:
-    - Low battery
-    - Low reservoir (20 Units)
-    - Patch expiration warning
+#### Oznámenie o výstrahe pumpy
 
-In either case these warnings are also shown on the Medtrum overview screen under [Active alarms](#medtrum-active-alarms).
+***Predvolené: Zapnuté.***
+
+Toto nastavenie mení spôsob, akým **AAPS** zobrazuje notifikácie pri nekritických varovaniach pumpy. Ak je zapnuté, pri varovaní pumpy sa na telefóne zobrazí notifikácia, napríklad pri:
+- Slabá batéria
+- Takmer prázdny zásobník (20 jednotiek)
+- Patch čoskoro expiruje
+
+Ak sú alarmy pumpy nastavené na **Tichý**, odporúčame toto nastavenie nechať zapnuté. V oboch prípadoch sa tieto varovania zobrazujú aj na obrazovke pumpy Medtrum v časti [Aktívne alarmy](#medtrum-active-alarms).
 
 (medtrum-patch-expiration)=
-#### Patch Expiration
+#### Expirácia Patchu
 
-***Default: Enabled.***
+***Predvolené: Zapnuté.***
 
-This setting changes the behavior of the patch. When enabled the patch will expire after 3 days and give an audible warning if you have sound enabled. After 3 days and 8 hours the patch will stop working.
+Toto nastavenie mení správanie Patchu. Ak je zapnuté, Patch expiruje po 3 dňoch a vydá zvukové varovanie, ak máte zapnutý zvuk. Po 3 dňoch a 8 hodinách Patch prestane fungovať.
 
-If this setting is disabled, the patch will not warn you and will continue running until the patch battery or reservoir runs out.
+Ak je toto nastavenie vypnuté, Patch vás pred zastavením nevaruje. S novším firmvérom základne pumpy funguje Patch najviac 5 dní.
 
-#### Pump expiry warning
+#### Výstraha expirácie pumpy [hodiny]
 
-***Default: 72 hours.***
+***Predvolené: 72 hodín.***
 
-This setting changes the time of the expiration warning, when [Patch Expiration](#medtrum-patch-expiration) is enabled, AAPS will give a notification on the set hour after activation.
+Toto nastavenie mení čas varovania pred expiráciou. Keď je zapnutá [Expirácia Patchu](#medtrum-patch-expiration), **AAPS** zobrazí notifikáciu po uplynutí tohto počtu hodín od aktivácie.
 
-#### Hourly Maximum Insulin
+#### Hodinové maximum inzulínu [jednotky]
 
-***Default: 25U.***
+***Predvolené: 25 U.***
 
-This setting changes the maximum amount of insulin that can be delivered in one hour. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
+Toto nastavenie mení maximálne množstvo inzulínu, ktoré sa môže podať za jednu hodinu. Ak sa tento limit prekročí, Patch sa pozastaví a spustí alarm. Alarm môžete resetovať tlačidlom **Resetovať alarmy** na obrazovke pumpy, pozrite [Resetovať alarmy](#nano-reset-alarms).
 
-Set this to a sensible value for your insulin requirements.
+Nastavte rozumnú hodnotu podľa vašej potreby inzulínu.
 
-#### Daily Maximum Insulin
+#### Denné maximum inzulínu [jednotky]
 
-***Default: 80U.***
+***Predvolené: 80 U.***
 
-This setting changes the maximum amount of insulin that can be delivered in one day. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
+Toto nastavenie mení maximálne množstvo inzulínu, ktoré sa môže podať za jeden deň. Ak sa tento limit prekročí, Patch sa pozastaví a spustí alarm. Alarm môžete resetovať tlačidlom **Resetovať alarmy** na obrazovke pumpy, pozrite [Resetovať alarmy](#nano-reset-alarms).
 
-Set this to a sensible value for your insulin requirements.
+Nastavte rozumnú hodnotu podľa vašej potreby inzulínu.
 
-#### Scan on Connection error
+#### Vykonať skenovanie pri chybách pripojenia
 
-***Default: Off.***
+***Predvolené: Vypnuté.***
 
-Located under **Advanced Settings**.
+Nachádza sa v časti **Rozšírené nastavenia**.
 
-Only enable if you have connection problems. If enabled the driver scans for the pump again before trying to reconnect to the pump. Make sure you have Location permission set to "Always allow".
+Zapnite iba vtedy, ak máte problémy s pripojením. Ak je zapnuté, ovládač pred pokusom o opätovné pripojenie znovu vyhľadá pumpu. Uistite sa, že povolenie Poloha pre **AAPS** je nastavené na „Povoliť vždy“ (Allow all the time).
 
-### Step 2b: AAPS Alerts settings
+### Krok 2b: Nastavenia upozornení AAPS
 
-Go to preferences
+Tieto nastavenia nie sú súčasťou ovládača Medtrum. Otvoríte ich ikonou **Nastavenia** (ozubené koliesko) v pravom hornom rohu hlavnej obrazovky. Viac nájdete v časti [Nastavenia](../SettingUpAaps/Preferences.md).
 
-#### Pump:
+#### Strážny pes BT
 
-##### Strážny pes BT
+Otvorte **Nastavenia** > **Pumpa**:
 
-Go to preferences and select **Pump**:
+![Nastavenia > Pumpa](../images/preferences/settings_pump.png)
 
-![Strážny pes BT](../images/medtrum/BTWatchdogSetting.png)
+**Strážny pes BT** vypne Bluetooth v telefóne na jednu sekundu, ak sa **AAPS** nedokáže pripojiť k pumpe. To môže pomôcť na niektorých telefónoch, kde Bluetooth zamŕza.
 
-##### Strážny pes BT
+Ak máte často problémy s pripojením k pumpe, zapnite toto nastavenie.
 
-This setting will try to work around any BLE issues. It will try to reconnect to the pump when the connection is lost. It will also try to reconnect to the pump when the pump is unreachable for a certain amount of time.
+#### Lokálne výstrahy
 
-Enable this setting if you experience frequent connection issues with your pump.
+Otvorte **Nastavenia** > **Lokálne výstrahy**:
 
-#### Local Alerts:
+![Nastavenia > Lokálne výstrahy](../images/preferences/settings_local_alerts.png)
 
-Go to preferences and select **Local Alerts**:
+##### Výstraha pri nedostupnej pumpe
 
-![Local Alerts](../images/medtrum/LocalAlertsSettings.png)
+***Predvolené: Zapnuté.***
 
-##### Alert if pump is unreachable
+Keď je zapnutý ovládač Medtrum, toto nastavenie je vždy zapnuté. Upozorní vás, keď je pumpa nedostupná. To sa môže stať, keď je pumpa mimo dosahu alebo keď nereaguje kvôli chybnému Patchu alebo základni pumpy, napríklad keď medzi základňu pumpy a Patch vnikne voda.
 
-***Default: Enabled.***
+Z bezpečnostných dôvodov sa toto nastavenie nedá vypnúť.
 
-This setting is forced to enabled when the Medtrum driver is enabled. It will alert you when the pump is unreachable. This can happen when the pump is out of range or when the pump is not responding due to a defective patch or pumpbase, for example when water leaks between the pumpbase and the patch.
+##### Prah nedostupnosti pumpy
 
-For safety reasons this setting cannot be disabled.
+***Predvolené: 30 min.***
 
-##### Pump unreachable threshold [min]
+Toto nastavenie mení, ako dlho **AAPS** čaká, kým vás upozorní, že pumpa je nedostupná.
 
-***Default: 30 min.***
-
-This setting changes the time after which AAPS will alert you when the pump is unreachable. This can happen when the pump is out of range or when the pump is not responding due to a defective patch or pumpbase, for example when water leaks between the pumpbase and the patch.
-
-This setting can be changed when using Medtrum pump but it is recommended to set it at 30 minutes for safety reasons.
-
-### Step 3: Activate patch
-
-**Before you continue:**
-- Have your Medtrum Nano pumpbase and a reservoir patch ready.
-- Make sure that AAPS is properly set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-- Other devices that can talk to the Medtrum pump are disabled (PDM and Medtrum app)
-
-#### Activate patch from the Medtrum overview Tab
-
-Navigate to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button in the bottom right corner.
-
-If a patch is already active, you will be prompted to deactivate this patch first. see [Deactivate Patch](#nano-deactivate-patch).
-
-Follow the prompts to fill and activate a new patch. Please note - it is important to only connect the pumpbase to the reservoir patch at the step when you are prompted to do so. **You must only put the pump on your body and insert the cannula when prompted to during the activation process (after priming is complete).**
-
-##### Start Activation
-
-![Start Activation](../images/medtrum/activation/StartActivation.png)
-
-At this step, double check your serial number and make sure the pumpbase is not connected to the patch yet.
-
-Press **Next** to continue.
-
-##### Fill the patch
-
-![Fill the patch](../images/medtrum/activation/FillPatch.png)
-
-Once the patch is detected and filled with a minimum of 70Units of insulin, press **Next** will appear.
-
-##### Prime the patch
-
-![Half press](../images/medtrum/activation/HalfPress.png)
-
-Do not remove the safety lock and press the needle button on the patch.
-
-Press **Next** to start prime
-
-![Prime progress](../images/medtrum/activation/PrimeProgress.png)
-
-![Prime complete](../images/medtrum/activation/PrimeComplete.png)
-
-Once the prime is complete, press **Next** to continue.
-
-##### Attach Patch
-
-![Attach patch](../images/medtrum/activation/AttachPatch.png)
-
-Clean the skin, remove stickers and attach the patch to your body. Remove safety lock and press the needle button on the patch to insert the cannula.
-
-Press **Next** to activate the patch.
+Pri pumpe Medtrum môžete toto nastavenie zmeniť, ale z bezpečnostných dôvodov odporúčame ponechať 30 minút.
 
 (medtrum-activate-patch)=
-##### Activate Patch
+### Krok 3: Aktivujte Patch
 
-![Activate patch](../images/medtrum/activation/ActivatePatch.png)
+**Skôr než budete pokračovať:**
+- Pripravte si základňu pumpy Medtrum a nový Patch so zásobníkom.
+- Vypnite ostatné zariadenia, ktoré môžu komunikovať s pumpou Medtrum (PDM a aplikáciu Medtrum).
+- Ideálne je, ak je **AAPS** nastavené a [profil je aktivovaný](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). Ak nie je aktívny žiadny profil, aktivácia začne krokom **Vyžaduje sa profil**, v ktorom zvolíte profil na aktiváciu.
 
-When activation is complete, the following screen will appear
+#### Spustenie aktivácie
 
-![Activation complete](../images/medtrum/activation/ActivationComplete.png)
+Otvorte [obrazovku pumpy Medtrum](#nano-overview) (**Spravovať → Pumpa**) a ťuknite na **Vymeniť Patch**. Ak ste nastavili [ochranu nastavení](#Preferences-protection), musíte najprv zadať heslo alebo PIN.
 
-Press **OK** to return to main screen.
+Ak je už nejaký Patch aktívny, najprv budete vyzvaní, aby ste ho deaktivovali, pozrite [Deaktivácia Patchu](#nano-deactivate-patch).
+
+Aktivácia je sprievodca krok za krokom. Podľa pokynov naplňte a aktivujte nový Patch. Ak chcete skončiť, v ktoromkoľvek kroku ťuknite na **Zrušiť**.
+
+```{important}
+Patch si nasaďte na telo a kanylu zaveďte až vtedy, keď vás k tomu vyzve sprievodca (po dokončení plnenia).
+```
+
+Prvé kroky, ktoré uvidíte, závisia od vášho nastavenia:
+
+1. **Vyžaduje sa profil**: iba ak nie je aktívny žiadny profil. Vyberte profil, ktorý sa má použiť, a pokračujte.
+2. **Vyhľadať pumpu**: iba prvýkrát alebo po použití [Zrušiť párovanie](#medtrum-unpair). Pripojte základňu pumpy k novému Patchu, aby sa zapla. **AAPS** vyhľadá základne pumpy Medtrum v okolí (ich názvy začínajú na `MT`). V zozname ťuknite na svoju. **AAPS** uloží jej sériové číslo a potom prejde rovno na plnenie Patchu.
+
+   ![Krok Vyhľadať pumpu – vyhľadávanie základne pumpy Medtrum](../images/medtrum/activation/FindPump.png)
+
+3. **Aktivovať Patch**: iba ak **AAPS** už vašu základňu pumpy pozná. Na obrazovke je text „Žiadny aktívny Patch. Stlačte **Ďalej** pre zahájenie aktivačného procesu.“ Uistite sa, že základňa pumpy ešte **nie je** pripojená k Patchu, a potom ťuknite na **Ďalej**.
+
+![Spustenie aktivácie](../images/medtrum/activation/StartActivation.png)
+
+#### Pripojenie a naplnenie Patchu
+
+![Naplnenie Patchu](../images/medtrum/activation/FillPatch.png)
+
+Pripojte základňu pumpy k Patchu, odstráňte zvyšný vzduch a naplňte Patch inzulínom. Na aktiváciu je potrebných najmenej 70 jednotiek. Na obrazovke sa zobrazuje stav zásobníka. Patch si zatiaľ nenasadzujte na telo.
+
+Keď je Patch rozpoznaný a naplnený, zobrazí sa tlačidlo **Ďalej**. Ťuknite naň.
+
+#### Výber inzulínu
+
+Tento krok sa zobrazí iba vtedy, ak máte v **AAPS** nastavený viac ako jeden inzulín. Vyberte inzulín, ktorým plníte Patch. **AAPS** po aktivácii použije prepnutie profilu s týmto inzulínom.
+
+#### Plnenie Patchu (prime)
+
+![Stlačenie do polovice](../images/medtrum/activation/HalfPress.png)
+
+**Neodstraňujte** bezpečnostný zámok. Stlačte tlačidlo ihly na Patchi do polovice a potom ťuknite na **Ďalej**, aby sa spustilo plnenie.
+
+![Priebeh plnenia](../images/medtrum/activation/PrimeProgress.png)
+
+Počkajte, kým sa plnenie dokončí.
+
+![Plnenie dokončené](../images/medtrum/activation/PrimeComplete.png)
+
+Keď je plnenie dokončené, pokračujte ťuknutím na **Ďalej**.
+
+#### Striedanie miest
+
+Tento krok sa zobrazí iba vtedy, ak miesta pumpy spravujete pomocou funkcie [Striedanie miest](#Aapsscreens-site-rotation) (nastavenie **Spravovať rotáciu umiestnenia pumpy**). Zvoľte, kam na tele Patch umiestnite, alebo tento krok preskočte.
+
+#### Pripojenie Patchu
+
+![Pripojenie Patchu](../images/medtrum/activation/AttachPatch.png)
+
+Očistite pokožku a odstráňte ochranné fólie. Odstráňte bezpečnostný zámok, nasaďte Patch na telo a stlačením tlačidla ihly zaveďte kanylu.
+
+Ťuknutím na **Ďalej** aktivujete Patch.
+
+#### Aktivácia Patchu
+
+![Aktivácia Patchu](../images/medtrum/activation/ActivatePatch.png)
+
+**AAPS** aktivuje pumpu a nastaví počiatočnú bazálnu dávku. Počkajte, prosím. Po dokončení aktivácie sa zobrazí táto obrazovka:
+
+![Aktivácia dokončená](../images/medtrum/activation/ActivationComplete.png)
+
+```{admonition} Older screenshot
+:class: note
+Okrem kroku **Vyhľadať pumpu** sú snímky obrazovky aktivácie vyššie zo staršej verzie **AAPS** a v **AAPS** 4 môžu vyzerať inak.
+```
+
+Ukazuje, koľko jednotiek zostáva v Patchi. Ťuknutím na **OK** sa vrátite na obrazovku pumpy.
+
+```{tip}
+Po novej aktivácii [exportujte svoje nastavenia](../Maintenance/ExportImportSettings.md). Vďaka tomu môžete túto reláciu Patchu neskôr obnoviť, napríklad v novom telefóne.
+```
 
 (nano-deactivate-patch)=
 
-### Deactivate patch
+### Deaktivácia Patchu
 
-To deactivate a currently active patch, go to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
+Ak chcete aktívny Patch deaktivovať, otvorte [obrazovku pumpy Medtrum](#nano-overview) (**Spravovať → Pumpa**) a ťuknite na **Vymeniť Patch**.
 
-![Deactivate patch](../images/medtrum/activation/DeactivatePatch.png)
+![Deaktivácia Patchu](../images/medtrum/activation/DeactivatePatch.png)
 
-You will be asked to confirm that you wish to deactivate the current patch. **Please note that this action is not reversible.** When deactivation is completed, you can press **Next** to continue the process to activate a new patch. If you are not ready to activate a new patch, press **Cancel** to return to the main screen.
+Budete vyzvaní, aby ste potvrdili, že chcete aktuálny Patch deaktivovať. **Tento krok sa nedá vrátiť späť.** Ťuknite na **Ďalej** pre deaktiváciu alebo na **Zrušiť** pre návrat na obrazovku pumpy.
 
-![Deactivate progress](../images/medtrum/activation/DeactivateProgress.png)
+![Priebeh deaktivácie](../images/medtrum/activation/DeactivateProgress.png)
 
-If Android APS in unable to deactivate the patch (For instance because the pumpbase has already been removed from the reservoir patch), you may press **Discard** to forget the current patch session and make it possible to activate a new patch.
+Ak **AAPS** nedokáže Patch deaktivovať (napríklad preto, že základňa pumpy už bola z Patchu odpojená), ťuknite na **Zahodiť**, aby AAPS zabudlo aktuálnu reláciu Patchu. Potom môžete aktivovať nový Patch.
 
-![Deactivate complete](../images/medtrum/activation/DeactivateComplete.png)
+![Deaktivácia dokončená](../images/medtrum/activation/DeactivateComplete.png)
 
-Once deactivation is complete, press **OK** to return to main screen or press **Next** to continue the process to activate a new patch.
+Po dokončení deaktivácie zasuňte ihlu a odstráňte Patch z tela. Odpojte základňu pumpy a použitý Patch zlikvidujte. Ťuknite na **OK** pre návrat na obrazovku pumpy alebo na **Ďalej** pre spustenie aktivácie nového Patchu.
 
 (nano-resume-interrupted-activation)=
 
-### Resume interrupted activation
+### Obnovenie prerušenej aktivácie
 
-If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
+Ak sa aktivácia Patchu preruší, napríklad pretože sa vybije batéria telefónu, môžete v nej pokračovať. Otvorte [obrazovku pumpy Medtrum](#nano-overview) (**Spravovať → Pumpa**) a ťuknite na **Vymeniť Patch**.
 
-![Resume interrupted activation](../images/medtrum/activation/ActivationInProgress.png)
+![Obnovenie prerušenej aktivácie](../images/medtrum/activation/ActivationInProgress.png)
 
-Press **Next** to continue the activation process. Press **Discard** to discard the current patch session and make it possible to activate a new patch.
+Ťuknutím na **Ďalej** budete v aktivácii pokračovať. Ťuknutím na **Zahodiť** resetujete stav aktivácie, aby ste mohli aktivovať nový Patch.
 
-![Reading activation status](../images/medtrum/activation/ReadingActivationStatus.png)
+![Načítanie stavu aktivácie](../images/medtrum/activation/ReadingActivationStatus.png)
 
-The driver will try to determine the current status of the patch activation. If this was successful it will go into the activation progress at the current step.
+```{admonition} Older screenshot
+:class: note
+Snímky obrazovky v častiach **Deaktivácia Patchu** a **Obnovenie prerušenej aktivácie** sú zo staršej verzie **AAPS** a v **AAPS** 4 môžu vyzerať inak.
+```
+
+Ovládač načíta stav aktivácie z pumpy. Ak sa to podarí, sprievodca pokračuje krokom, v ktorom sa zastavil.
 
 (nano-overview)=
 
-## Prehľad
+## Obrazovka pumpy
 
-The overview contains the current status of the Medtrum patch. It also contains buttons to change the patch, reset alarms and refresh the status.
+Obrazovka pumpy Medtrum (**Spravovať → Pumpa**) zobrazuje aktuálny stav Patchu Medtrum. Má aj tlačidlá na výmenu Patchu, resetovanie alarmov a obnovenie stavu. Pruh v hornej časti zobrazuje dôležité stavy, napríklad **Patch nie je aktivovaný** alebo **Pumpa je pozastavená**.
 
-![Medtrum Overview](../images/medtrum/Overview.png)
+![Obrazovka pumpy Medtrum s aktívnym Patchom](../images/v4/Pumps/medtrum_pump_screen_active.png)
 
-### BLE Status:
+Na obrazovke môžu byť tieto riadky. Niektoré riadky sa zobrazia iba vtedy, keď majú hodnotu.
 
-This shows the current status of the Bluetooth connection to the pumpbase.
-
-### Last connected:
-
-This shows the last time the pump was connected to AAPS.
-
-### Pump state:
-
-This shows the current state of the pump. For example:
-    - ACTIVE : The pump is activated and running normally
-    - STOPPED: The patch is not activated
-
-### Basal type:
-
-This shows the current basal type.
-
-### Basal rate:
-
-This shows the current basal rate.
-
-### Last bolus:
-
-This shows the last bolus that was delivered.
-
-### Active bolus:
-
-This shows the active bolus that is currently being delivered.
+- **Posledné spojenie**: ako dávno sa **AAPS** naposledy pripojilo k pumpe.
+- **Posledný bolus**: posledný podaný bolus.
+- **Batéria**: aktuálne napätie batérie Patchu.
+- **Zásobník**: aktuálny stav zásobníka.
+- **Sériové číslo**: sériové číslo vašej základne pumpy.
+- **Stav pumpy**: aktuálny stav pumpy. Napríklad **Aktívny** (Patch je aktivovaný a funguje normálne) alebo **Zastavený** (Patch nie je aktivovaný).
+- **Základná hodnota bazálu**: bazálna dávka z vášho profilu, ktorá práve beží.
+- **Dočasný bazál**: dočasný bazál, ak nejaký beží.
+- **Aktívny bolus**: bolus, ktorý sa práve podáva.
+- **Aktívne alarmy**: pozrite [nižšie](#medtrum-active-alarms).
+- **Typ pumpy**: model vašej základne pumpy.
+- **Verzia FW**: verzia firmvéru základne pumpy.
+- **Č. Patch**: poradové číslo aktivovaného Patchu. Pri každej aktivácii nového Patchu sa zvýši o jedna.
+- **Aktivácia**: dátum a čas aktivácie Patchu a ako dávno to bolo.
+- **Patch expiruje**: dátum a čas, kedy Patch expiruje. Ak je [Expirácia Patchu](#medtrum-patch-expiration) vypnutá, zobrazí sa **Nepovolené**.
 
 (medtrum-active-alarms)=
-### Active alarms:
+### Aktívne alarmy
 
-This shows any active alarms that are currently active.
+Tento riadok zobrazuje alarmy, ktoré sú práve aktívne, napríklad takmer prázdny zásobník alebo blížiacu sa expiráciu Patchu.
 
-### Reservoir:
+### Obnoviť
 
-This shows the current reservoir level.
+Toto tlačidlo obnoví stav Patchu. Je dostupné iba vtedy, keď je Patch aktívny a **AAPS** práve nie je pripojené k pumpe.
 
-### Battery:
+### Vymeniť Patch
 
-This shows the current battery voltage of the patch.
+Toto tlačidlo spustí sprievodcu výmenou Patchu. Viac informácií nájdete v časti [Aktivácia Patchu](#medtrum-activate-patch).
 
-### Pump type:
+(medtrum-unpair)=
+### Zrušiť párovanie
 
-This shows the current pump type number.
-
-### FW version:
-
-This shows the current firmware version of the patch.
-
-### Patch no:
-
-This shows the sequence number of the activated patch. This number is incremented every time a new patch is activated.
-
-### Patch expires:
-
-This shows the date and time when the patch will expire.
-
-### Refresh:
-
-This button will refresh the status of the patch.
-
-### Change patch:
-
-This button will start the process to change the patch. See [Activate patch](#medtrum-activate-patch) for more information.
+Toto tlačidlo sa zobrazí iba vtedy, keď **AAPS** pozná nejakú základňu pumpy. Vymaže uložené sériové číslo základne pumpy a odpojí ju. Pri ďalšej aktivácii Patchu **AAPS** znovu vyhľadá základňu pumpy (krok **Vyhľadať pumpu**). Použite ho, ak prechádzate na inú základňu pumpy. Urobte to iba vtedy, keď nie je aktívny žiadny Patch.
 
 (nano-reset-alarms)=
 
-### Reset alarms
+### Resetovať alarmy
 
-The alarm button will appear on the overview screen when there is an active alarm that can be reset. Pressing this button will reset the alarms and resume insulin delivery if the patch has been suspended due to the alarm. E.g. when suspended due to a maximum daily insulin delivery alarm.
+Tlačidlo **Resetovať alarmy** sa na obrazovke pumpy zobrazí iba vtedy, keď sa Patch sám pozastavil, napríklad po alarme denného maxima inzulínu. Ťuknutím naň resetujete alarmy a obnovíte podávanie inzulínu.
 
-![Reset alarms](../images/medtrum/ResetAlarms.png)
+![Resetovať alarmy](../images/medtrum/ResetAlarms.png)
 
-Press the **Reset Alarms** button to reset the alarms and resume normal operation.
+```{admonition} Older screenshot
+:class: note
+Snímka obrazovky vyššie je zo staršej verzie **AAPS**. V **AAPS** 4 vyzerá obrazovka pumpy inak, ale tlačidlo **Resetovať alarmy** funguje rovnako.
+```
 
-## Switching phone, export/import settings
+## Výmena telefónu, export/import nastavení
 
-When switching to a new phone the following steps are necessary:
-* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
-* Transfer settings from old to new phone, and import them into AAPS
+Pri prechode na nový telefón postupujte takto:
+* V starom telefóne [exportujte nastavenia](../Maintenance/ExportImportSettings.md).
+* Preneste súbor s nastaveniami zo starého telefónu do nového a importujte ho do **AAPS**. Na obrazovke importu zaškrtnite **Nahradiť aj nastavenia pumpy**, inak sa relácia Patchu do nového telefónu neprenesie.
 
-The imported settings file has to be of the same patch session that you are currently using, otherwise the patch will not connect.
+Importovaný súbor s nastaveniami musí byť z relácie Patchu, ktorú práve používate, inak sa Patch nepripojí (pozrite [Pumpy bez hadičky](#ExportImportSettings-tubeless-pumps)).
 
-After a settings import the driver will sync history with the pump, this can take a while depending on the age of the settings file.
+Po importe nastavení ovládač zosynchronizuje históriu s pumpou. Môže to chvíľu trvať, podľa toho, aký starý je súbor s nastaveniami. Priebeh („Synchronizujú sa záznamy, zostáva …“) sa zobrazuje na hlavnej obrazovke:
 
-From AAPS version 3.3.0.0 onwards, the sync progress is shown in the the home screen: ![Sync progress](../images/medtrum/SyncProgress.png)
+![Priebeh synchronizácie](../images/medtrum/SyncProgress.png)
 
-## Troubleshooting
+(medtrum-nano-troubleshooting)=
 
-### Connection issues
+## Riešenie problémov
 
-If you are experiencing connection timeouts or other connection issues:
-- In Android application settings for AAPS: Set location permission to "Allow all the time".
+### Problémy s pripojením
 
-### Bluetooth issues
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Ak máte časové limity pripojenia alebo iné problémy s pripojením:
+- V nastaveniach aplikácie **AAPS** v Androide nastavte povolenie Poloha na „Povoliť vždy“ (Allow all the time).
+- Skúste zapnúť **Vykonať skenovanie pri chybách pripojenia** (nastavenia Medtrum > **Rozšírené nastavenia**) a **Strážny pes BT** (**Nastavenia** > **Pumpa**), pozrite [Krok 2](#medtrum-step-2).
 
-### Activation interrupted
+### Problémy s Bluetooth
+Známe problémy s Bluetooth spojením, výpadky pumpy/Podov alebo problémy s aktiváciou a pripojením: [Problémy súvisiace s Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
-If the activation process is interrupted for example by and empty phone battery or phone crash. The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#nano-resume-interrupted-activation)
+### Aktivácia bola prerušená
 
-### Preventing patch faults
+Ak sa aktivácia preruší, napríklad kvôli vybitej batérii telefónu alebo pádu telefónu, môžete v nej pokračovať. Na obrazovke pumpy ťuknite na **Vymeniť Patch** a postupujte podľa krokov v časti [Obnovenie prerušenej aktivácie](#nano-resume-interrupted-activation).
 
-The patch can give a variety of errors. To prevent frequent errors:
-- Make sure the pumpbase is properly seated in the patch and no gaps are visible.
-- When filling the patch do not apply excessive force to the plunger. Do not try to fill the patch beyond the maximum that applies to your model.
+### Ako predchádzať chybám Patchu
 
-## Where to get help
+Patch môže hlásiť rôzne chyby. Aby ste predišli častým chybám:
+- Uistite sa, že základňa pumpy je v Patchi správne usadená a nie sú viditeľné žiadne medzery.
+- Pri plnení Patchu netlačte na piest príliš veľkou silou. Nesnažte sa naplniť Patch nad maximum, ktoré platí pre váš model.
 
-All of the development work for the Medtrum driver is done by the community on a **volunteer** basis; we ask that you to remember that fact and use the following guidelines before requesting assistance:
+## Kde získať pomoc
 
--  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#Medtrum* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
--  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+Všetku vývojársku prácu na ovládači Medtrum robí komunita na **dobrovoľníckom** základe; prosíme vás, aby ste na to pamätali a pred žiadosťou o pomoc postupovali podľa týchto pokynov:
+
+-  **Úroveň 0:** Prečítajte si príslušnú časť tejto dokumentácie, aby ste pochopili, ako má funkcia, s ktorou máte problém, fungovať.
+-  **Úroveň 1:** Ak máte stále problémy, ktoré pomocou tohto dokumentu neviete vyriešiť, prejdite na kanál *#Medtrum* na **Discorde** pomocou [tohto pozývacieho odkazu](https://discord.gg/4fQUWHZ4Mw).
+-  **Úroveň 2:** Pozrite si existujúce hlásenia v [Issues](https://github.com/nightscout/AAPS/issues), či už váš problém niekto nenahlásil. Ak áno, potvrďte ho, okomentujte ho alebo doplňte informácie o vašom probléme. Ak nie, vytvorte prosím [nové hlásenie (issue)](https://github.com/nightscout/AndroidAPS/issues) a priložte [vaše log súbory](../GettingHelp/AccessingLogFiles.md).
+-  **Buďte trpezliví – väčšinu členov našej komunity tvoria dobrosrdeční dobrovoľníci a riešenie problémov si často vyžaduje čas a trpezlivosť od používateľov aj vývojárov.**

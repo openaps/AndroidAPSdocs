@@ -1,198 +1,221 @@
-# Welcome to the AAPS documentation
+# Καλώς ήρθατε στην τεκμηρίωση του AAPS
 
 ![image](./images/basic-outline-of-AAPS.png)
 
 ```{admonition} Latest Release
 :class: note
 
- 2 August 2026 : Version 3.4.2.6 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
+ 31 Οκτωβρίου 2026: Κυκλοφόρησε η έκδοση 4.0.0. Δείτε τις [Σημειώσεις έκδοσης](#latestrelease) για να μάθετε τι νέο υπάρχει και ακολουθήστε τις οδηγίες του [οδηγού ενημέρωσης](./Maintenance/UpdateToNewVersion.md) για να κάνετε την ενημέρωση.
 
 ```
 
-Android APS (**AAPS**) is an open source app for people living with insulin-dependent diabetes. It is an artificial pancreas system (APS) which runs on Android smartphones. **AAPS** uses an OpenAPS software algorithm and aims to do what a real pancreas does: keep blood sugar levels within healthy limits by using automated insulin dosing. To use **AAPS** you need **three** compatible devices: **(1)** an Android phone, **(2)** a continuous glucose monitor (CGM), and **(3)** a FDA/CE approved insulin pump. Optionally you will need cloud services **(4)** to remote control **AAPS**, share your data and store them in a reporting server, then also **(5)** a smartwatch.
+Το Android APS (**AAPS**) είναι μια εφαρμογή ανοιχτού κώδικα για άτομα με διαβήτη που χρειάζονται ινσουλίνη. Είναι ένα σύστημα τεχνητού παγκρέατος (APS) που λειτουργεί σε τηλέφωνα Android. Το **AAPS** χρησιμοποιεί έναν αλγόριθμο λογισμικού του OpenAPS και προσπαθεί να κάνει ό,τι κάνει ένα πραγματικό πάγκρεας: να κρατά τη γλυκόζη αίματος σε υγιή όρια με αυτόματη χορήγηση ινσουλίνης. Για να χρησιμοποιήσετε το **AAPS** χρειάζεστε **τρεις** συμβατές συσκευές: **(1)** ένα τηλέφωνο Android, **(2)** ένα σύστημα συνεχούς μέτρησης γλυκόζης (CGM) και **(3)** μια αντλία ινσουλίνης με έγκριση FDA/CE. Μπορείτε επίσης να προσθέσετε **(4)** υπηρεσίες cloud για να ελέγχετε το **AAPS** από απόσταση, να μοιράζεστε τα δεδομένα σας και να τα αποθηκεύετε σε διακομιστή αναφορών, και **(5)** ένα έξυπνο ρολόι.
 
-This documentation explains how to setup and use **AAPS**. You can navigate through the **AAPS** documentation either through the menu on the left (and the handy "**Search docs**" function), or by using the [index](#index-aaps-documentation-index) at the bottom of this page.
+Αυτή η τεκμηρίωση εξηγεί πώς να ρυθμίσετε και να χρησιμοποιήσετε το **AAPS**. Μπορείτε να κινηθείτε στην τεκμηρίωση του **AAPS** είτε από το μενού αριστερά (και τη χρήσιμη λειτουργία αναζήτησης **Search docs**), είτε από το [ευρετήριο](#index-aaps-documentation-index) στο κάτω μέρος αυτής της σελίδας.
 
-## Overview of the AAPS documentation ("The docs")
+## Επισκόπηση της τεκμηρίωσης του AAPS («η τεκμηρίωση»)
 
-Section **2) Getting Started**, the [Introduction](Getting-Started/Introduction.md) explains the general concept of what an artificial pancreas system (APS) is designed to do. It outlines the background of looping in general, why **AAPS** was developed, compares **AAPS** to other systems, and addresses safety. It gives suggestions about how to talk to your clinical team about **AAPS**, explains why you need to build the **AAPS** app yourself rather than just downloading it, and gives an overview of the typical connectivity of an **AAPS** system. It also addresses accessibility, and who is likely to benefit from **AAPS**.
+Στην ενότητα **1) Ξεκινώντας**, η [Εισαγωγή στα APS και AAPS](Getting-Started/Introduction.md) εξηγεί τη γενική ιδέα και τι κάνει ένα σύστημα τεχνητού παγκρέατος (APS). Εξηγεί γενικά τι είναι το κύκλωμα, γιατί δημιουργήθηκε το **AAPS**, συγκρίνει το **AAPS** με άλλα συστήματα και μιλά για την ασφάλεια. Δίνει συμβουλές για το πώς να μιλήσετε για το **AAPS** με την ιατρική σας ομάδα, εξηγεί γιατί πρέπει να δημιουργήσετε μόνοι σας την εφαρμογή **AAPS** αντί απλώς να την κατεβάσετε, και δείχνει πώς συνδέονται συνήθως τα μέρη ενός συστήματος **AAPS**. Μιλά επίσης για την προσβασιμότητα και για το ποιοι μπορεί να ωφεληθούν από το **AAPS**.
 
-[Preparing for AAPS](./Getting-Started/PreparingForAaps.md) gives more detail about safety considerations, and the phones, CGMs (Continuous Glucose Monitors) and insulin pumps which are compatible with **AAPS**. It gives an overview of the process you will go through, and provides an approximate timeline for gaining full functionality of **AAPS**. This section gets you technically prepared to assemble your **AAPS** setup as quickly and efficiently as possible. The subsection [CGM Configuration](./Getting-Started/CompatiblesCgms.md) explains how to optimse CGM setup and what smoothing options are best.
+Η σελίδα [Προετοιμασία για την έναρξη με το AAPS](./Getting-Started/PreparingForAaps.md) δίνει περισσότερες λεπτομέρειες για την ασφάλεια και για τα τηλέφωνα, τα CGM (συστήματα συνεχούς μέτρησης γλυκόζης) και τις αντλίες ινσουλίνης που είναι συμβατά με το **AAPS**. Δίνει μια επισκόπηση της διαδικασίας που θα ακολουθήσετε και ένα κατά προσέγγιση χρονοδιάγραμμα μέχρι να χρησιμοποιείτε όλες τις λειτουργίες του **AAPS**. Αυτή η ενότητα σας προετοιμάζει τεχνικά, ώστε να στήσετε το σύστημα **AAPS** σας όσο πιο γρήγορα και αποτελεσματικά γίνεται. Η υποενότητα [Συμβατά CGM](./Getting-Started/CompatiblesCgms.md) εξηγεί πώς να βελτιώσετε τη ρύθμιση του CGM σας και ποιες επιλογές εξομάλυνσης είναι οι καλύτερες.
 
-Now that you have a solid understanding of the process, you can start assembling your **AAPS** loop.
+Τώρα που καταλαβαίνετε καλά τη διαδικασία, μπορείτε να αρχίσετε να στήνετε το κύκλωμα **AAPS** σας.
 
-Section **3) Setting up AAPS** contains step-by-step instructions to do this. It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone, including [Android developer verification](./SettingUpAaps/AndroidDeveloperVerification.md), a change Google is rolling out from September 2026 that affects how self-built apps are installed. It also covers setting up the **AAPS** app using the setup Wizard, linking it with your CGM app, and either a real or virtual insulin pump, as well as linking **AAPS** to your reporting server. You are then slowly introduced to the full usage of what **AAPS** has to offer via a safe and carefully calibrated step-by-step process designed to make sure that you/your child are thoroughly familiar and comfortable navigating all the different levels and menu configurations before graduating on the next phase, commonly referred to as the next "Objective", until you are have enough experience to begin using the more advanced options available within the app. These Objectives are specially designed in such a way that will gradually unlock more possibilities of **AAPS** and switch from Open Loop to Closed Loop.
+Η ενότητα **2) Δημιουργία της εφαρμογής** εξηγεί γιατί πρέπει να δημιουργήσετε μόνοι σας την εφαρμογή **AAPS** αντί απλώς να την κατεβάσετε. Σας οδηγεί βήμα προς βήμα στη [δημιουργία της](./SettingUpAaps/BuildingAaps.md) (μέσω browser, με το Android Studio ή από τη γραμμή εντολών) και μετά στη μεταφορά και εγκατάστασή της στο τηλέφωνό σας. Ξεκινά με ένα προαιρετικό βήμα: τη δημιουργία ενός [ξεχωριστού λογαριασμού Google](./UsefulLinks/DedicatedGoogleAccountForAaps.md) για τα builds και τα αντίγραφα ασφαλείας σας. Εξηγεί επίσης την [επαλήθευση προγραμματιστή Android](#android-developer-verification), μια αλλαγή που φέρνει η Google από τον Σεπτέμβριο 2026 και που επηρεάζει τον τρόπο εγκατάστασης των εφαρμογών που δημιουργείτε μόνοι σας.
 
-Section **4) Daily life with AAPS** covers key **AAPS** features, to help you use (and customise)  **AAPS**. This including understanding the screens, carbs-on-board, sensitivity, profile switching, temp targets, extended carbs (or eCarbs), automations, and DynamicISF. It also covers frequent topics like how to manage different types of meals, how to deal with cannula and sensor changes, smartphone updates, daylight saving changes, and [travelling with AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) and sports. Common questions and answers are located within the troubleshooting section.
+Η ενότητα **3) Ρύθμιση του διακομιστή αναφορών** εξηγεί πώς να επιλέξετε και να [ρυθμίσετε τον διακομιστή αναφορών σας](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout ή Tidepool), ώστε να ελέγχετε και να μοιράζεστε τα δεδομένα σας.
 
-Section **5) [Remote AAPS features](./RemoteFeatures/RemoteControl.md)** highlights a real strength of **AAPS**. There are a wide range of possibilities for remotely sending commands to, or simply following the data from **AAPS**. This is equally useful for carers who want to use **AAPS** for minors, and for adults with diabetes who either want to monitor their sugars (and other metrics) more conveniently than just on their phone (on a watch, in the car _etc._), or wish to have significant others to also monitor the data. This section also provides guidance for using Android Auto so you can view glucose levels in the car.
+Η ενότητα **4) [Διαμόρφωση του AAPS](./SettingUpAaps/SetupWizard.md)** εξηγεί τη ρύθμιση της εφαρμογής **AAPS** με τον Οδηγό εγκατάστασης, τη σύνδεσή της με την εφαρμογή CGM σας και με μια πραγματική ή εικονική αντλία ινσουλίνης, καθώς και τη σύνδεση του **AAPS** με τον διακομιστή αναφορών σας. Μετά γνωρίζετε όλα όσα μπορεί να κάνει το **AAPS**, μέσα από μια ασφαλή διαδικασία, βήμα προς βήμα, με προσεκτικό ρυθμό. Έτσι εξασφαλίζεται ότι εσείς (ή το παιδί σας) γνωρίζετε καλά και νιώθετε άνετα με όλα τα επίπεδα και τις ρυθμίσεις των μενού, πριν περάσετε στην επόμενη φάση, που συνήθως λέγεται επόμενο «Βήμα». Συνεχίζετε έτσι μέχρι να έχετε αρκετή εμπειρία για να αρχίσετε να χρησιμοποιείτε τις πιο προχωρημένες επιλογές της εφαρμογής. Αυτά τα Βήματα είναι σχεδιασμένα έτσι ώστε να ξεκλειδώνουν σταδιακά περισσότερες δυνατότητες του **AAPS** και να περνάτε από το Ανοιχτό Κύκλωμα στο Κλειστό Κύκλωμα.
 
-Section **6) Wear OS smartwatches** gives information and procedures to use an Android **Wear OS** smartwatch with the dedicated **AAPS** watchfaces or custom watchfaces, either as a remote control of your phone or just a display indicator.
+Η ενότητα **5) [Η καθημερινή ζωή με το AAPS](./DailyLifeWithAaps/AapsScreens.md)** εξηγεί τις βασικές λειτουργίες του **AAPS**, για να σας βοηθήσει να χρησιμοποιείτε (και να προσαρμόζετε) το **AAPS**. Αυτό περιλαμβάνει την κατανόηση των οθονών, των ενεργών υδατανθράκων (COB), της ευαισθησίας, της Δυναμικής ISF, της αλλαγής προφίλ, των προσωρινών στόχων, των εκτεταμένων υδατανθράκων (eCarbs), των αυτοματισμών και τον [έλεγχο των δεδομένων σας](./Maintenance/Reviewing.md) στο ιστορικό και στα στατιστικά. Καλύπτει επίσης συχνά θέματα, όπως πώς να χειρίζεστε διάφορα είδη γευμάτων, τις αλλαγές καθετήρα και αισθητήρα, τις ενημερώσεις του τηλεφώνου, την αλλαγή θερινής ώρας, τα [ταξίδια με το AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) και τον αθλητισμό. Συνηθισμένες ερωτήσεις και απαντήσεις θα βρείτε στην ενότητα αντιμετώπισης προβλημάτων.
 
+Η ενότητα **6) [Απομακρυσμένες λειτουργίες του AAPS](./RemoteFeatures/RemoteControl.md)** δείχνει ένα πραγματικά δυνατό σημείο του **AAPS**. Υπάρχουν πολλοί τρόποι για να στέλνετε εντολές από απόσταση στο **AAPS** ή απλώς να παρακολουθείτε τα δεδομένα του. Αυτό είναι εξίσου χρήσιμο για φροντιστές που θέλουν να χρησιμοποιήσουν το **AAPS** για ανήλικους, και για ενήλικες με διαβήτη που θέλουν να βλέπουν τη γλυκόζη τους (και άλλα δεδομένα) πιο εύκολα και όχι μόνο στο τηλέφωνο (σε ρολόι, στο αυτοκίνητο _κ.λπ._), ή θέλουν να βλέπουν τα δεδομένα και αγαπημένα τους πρόσωπα. Αυτή η ενότητα δίνει επίσης οδηγίες για το Android Auto, ώστε να βλέπετε τη γλυκόζη μέσα στο αυτοκίνητο.
 
-Section **7) Maintenance of AAPS** covers how to export and backup your settings (which is very important in case you lose/break your phone), gives the latest version notes and details how to update **AAPS**. You can expect that there will be one new version and 2-3 required updates per year. You are required to do these updates as with all software, as any minor bugs are ironed out, and improvements to **AAPS** are made. There is a dedicated "updating" troubleshooting section with the common queries.
-
-Section **8) [Getting Help](GettingHelp/WhereCanIGetHelp.md)** should help direct you to the best places to go to find general help with **AAPS**. This is very important so that you can get in touch with others as quickly as possible, clarify questions and solve the usual pitfalls. A lot of people are already using **AAPS** successfully, but everyone has a question at some point that they couldn't solve on their own. Due to the large number of users, the response times to questions are usually very quick, typically only a few hours. Don’t worry about asking for help, there is no such thing as a dumb question! We encourage users of any/all levels of experience to ask as many questions as they feel is necessary to help get them up and running safely. This section includes general troubleshooting for **AAPS** and **AAPSClient** (a companion following app) as well as explaining how to send your **AAPS** data (logfiles) to the developers for investigation, if you think a technical issue with **AAPS** needs looking at.
-
-Section **9)** covers **Advanced AAPS options** such as how to progress from using **AAPS** for hybrid-closed looping (bolusing for meals _etc._) to full closed looping (no bolusing), and details development and engineering modes. Most users get on just fine with the main or "Master" **AAPS** version without looking into these options, this section is for users who already have good control and are looking to further improve their setup.
-
-In section **10) [How to support AAPS](SupportingAaps/HowToEditTheDocs.md)** we provide  information so that you can support this project. You can donate money, equipment or expertise. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations) and provide your data through the Open Humans project.
-
-Section **11) Resources**, contains archived or additional documentation, including a subsection for [clinicians](UsefulLinks/ClinicianGuideToAaps.md) who have expressed interest in open source artificial pancreas technology such as **AAPS**, or for patients who want to share such information with their clinicians, this topic is also addressed in the introduction. More diabetes and looping references and resources are also contained in this section. It includes the  [Glossary](./UsefulLinks/Glossary.md), a list of the acronyms (or short-term names) used throughout **AAPS**. This is where to go to find out what the terms ISF or TT, stand for, for example.
+Η ενότητα **7) [Έξυπνα ρολόγια Wear OS](./WearOS/BuildingAapsWearOS.md)** δίνει πληροφορίες και οδηγίες για να χρησιμοποιήσετε ένα έξυπνο ρολόι Android **Wear OS** με τα ειδικά watchface του **AAPS** ή με προσαρμοσμένα watchface, είτε ως τηλεχειριστήριο του τηλεφώνου σας είτε μόνο ως οθόνη ενδείξεων.
 
 
- ### Interested in getting started with **AAPS**? Read more about **AAPS** in the [Introduction](Getting-Started/Introduction.md).
+Η ενότητα **8) [Συντήρηση του AAPS](./Maintenance/ExportImportSettings.md)** εξηγεί πώς να εξάγετε και να κρατάτε αντίγραφα ασφαλείας των ρυθμίσεών σας (πολύ σημαντικό αν χάσετε ή σπάσετε το τηλέφωνό σας), δίνει τις σημειώσεις της τελευταίας έκδοσης, περιγράφει πώς να ενημερώσετε το **AAPS** και εξηγεί τι γίνεται όταν μια έκδοση φτάνει στο τέλος υποστήριξης. Μπορείτε να περιμένετε μία νέα έκδοση και 2–3 υποχρεωτικές ενημερώσεις τον χρόνο. Όπως με κάθε λογισμικό, πρέπει να κάνετε αυτές τις ενημερώσεις, γιατί διορθώνουν μικρά σφάλματα και βελτιώνουν το **AAPS**. Υπάρχει ειδική ενότητα αντιμετώπισης προβλημάτων για τις «ενημερώσεις» με τις συνηθισμένες ερωτήσεις.
+
+Η ενότητα **9) [Βοήθεια και αντιμετώπιση προβλημάτων](GettingHelp/WhereCanIGetHelp.md)** σας δείχνει τα καλύτερα μέρη για να βρείτε γενική βοήθεια για το **AAPS**. Είναι το ένα μέρος όπου πηγαίνετε όταν κάτι δεν λειτουργεί: η σελίδα [Αντιμετώπιση προβλημάτων](GettingHelp/GeneralTroubleshooting.md) συγκεντρώνει, ανά θέμα, τις λύσεις στα πιο συνηθισμένα προβλήματα, και οι [Συχνές Ερωτήσεις](UsefulLinks/FAQ.md) απαντούν σε συχνές απορίες. Αυτό είναι πολύ σημαντικό, για να μπορείτε να έρθετε σε επαφή με άλλους όσο πιο γρήγορα γίνεται, να λύσετε απορίες και να αποφύγετε τα συνηθισμένα λάθη. Πολλοί άνθρωποι χρησιμοποιούν ήδη με επιτυχία το **AAPS**, αλλά όλοι κάποια στιγμή έχουν μια ερώτηση που δεν μπορούν να λύσουν μόνοι τους. Επειδή οι χρήστες είναι πολλοί, οι απαντήσεις στις ερωτήσεις έρχονται συνήθως πολύ γρήγορα, συχνά μέσα σε λίγες ώρες. Μη διστάζετε να ζητήσετε βοήθεια. Δεν υπάρχουν χαζές ερωτήσεις! Ενθαρρύνουμε τους χρήστες κάθε επιπέδου εμπειρίας να κάνουν όσες ερωτήσεις χρειάζονται, ώστε να ξεκινήσουν με ασφάλεια. Αυτή η ενότητα περιέχει γενική αντιμετώπιση προβλημάτων για το **AAPS** και το **AAPSClient** (μια συνοδευτική εφαρμογή παρακολούθησης). Εξηγεί επίσης πώς να στείλετε τα δεδομένα του **AAPS** σας (αρχεία καταγραφής) στους προγραμματιστές για έλεγχο, αν πιστεύετε ότι υπάρχει τεχνικό πρόβλημα στο **AAPS**.
+
+Η ενότητα **10)** εξηγεί τις **[Προχωρημένες επιλογές του AAPS](./AdvancedOptions/FullClosedLoop.md)**, όπως πώς να περάσετε από τη χρήση του **AAPS** ως υβριδικού κλειστού κυκλώματος (με bolus για τα γεύματα _κ.λπ._) σε πλήρως κλειστό κύκλωμα (χωρίς bolus), πώς να [βελτιώσετε το προφίλ σας](./GettingHelp/ProfileTuning.md) και να χρησιμοποιήσετε το Autotune, και περιγράφει τις λειτουργίες ανάπτυξης (development) και μηχανικού (engineering). Οι περισσότεροι χρήστες τα πάνε μια χαρά με την κύρια έκδοση («Master») του **AAPS** χωρίς να ασχοληθούν με αυτές τις επιλογές. Αυτή η ενότητα είναι για χρήστες που έχουν ήδη καλό έλεγχο και θέλουν να βελτιώσουν κι άλλο το σύστημά τους.
+
+Στην ενότητα **11) [Πώς να υποστηρίξετε το AAPS](SupportingAaps/HowToEditTheDocs.md)** δίνουμε πληροφορίες για να μπορείτε να υποστηρίξετε αυτό το έργο. Μπορείτε να δωρίσετε χρήματα, εξοπλισμό ή τις γνώσεις σας. Μπορείτε να προτείνετε ή να κάνετε μόνοι σας αλλαγές στην τεκμηρίωση, να βοηθήσετε στη [μετάφραση της τεκμηρίωσης](SupportingAaps/Translations) και να δώσετε τα δεδομένα σας μέσω του έργου Open Humans.
+
+Η ενότητα **12) Πηγές** περιέχει αρχειοθετημένη ή επιπλέον τεκμηρίωση. Περιλαμβάνει μια υποενότητα για [γιατρούς](UsefulLinks/ClinicianGuideToAaps.md) που ενδιαφέρονται για τεχνολογία τεχνητού παγκρέατος ανοιχτού κώδικα, όπως το **AAPS**, ή για ασθενείς που θέλουν να μοιραστούν τέτοιες πληροφορίες με τους γιατρούς τους. Αυτό το θέμα καλύπτεται και στην εισαγωγή. Σε αυτή την ενότητα θα βρείτε επίσης περισσότερες πηγές και υλικό για τον διαβήτη και το κύκλωμα. Περιλαμβάνει το [Γλωσσάριο](./UsefulLinks/Glossary.md), μια λίστα με τα ακρωνύμια (ή σύντομες ονομασίες) που χρησιμοποιούνται σε όλο το **AAPS**. Εδώ θα βρείτε, για παράδειγμα, τι σημαίνουν οι όροι ISF ή TT.
+
+
+ ### Θέλετε να ξεκινήσετε με το **AAPS**; Διαβάστε περισσότερα για το **AAPS** στην [Εισαγωγή στα APS και AAPS](Getting-Started/Introduction.md).
 
 ```{admonition} SAFETY NOTICE
 :class: danger
-The safety of **AAPS** relies on the safety features of your hardware (phone, pump, CGM). Only use a fully functioning FDA/CE approved insulin pump and CGM. Do not use broken, modified or self-built insulin pumps or CGM receivers. Only use original consumable supplies (inserters, cannulas and insulin reservoirs) approved by the manufacturer for use with your pump and CGM. Using untested or modified supplies can cause inaccuracy and insulin dosing errors, resulting in significant risk to the user. 
+Η ασφάλεια του **AAPS** βασίζεται στις λειτουργίες ασφαλείας του υλικού σας (τηλέφωνο, αντλία, CGM). Χρησιμοποιείτε μόνο αντλία ινσουλίνης και CGM που λειτουργούν πλήρως και έχουν έγκριση FDA/CE. Μη χρησιμοποιείτε χαλασμένες, τροποποιημένες ή αυτοσχέδιες αντλίες ινσουλίνης ή δέκτες CGM. Χρησιμοποιείτε μόνο γνήσια αναλώσιμα (εισαγωγείς, καθετήρες και δεξαμενές ινσουλίνης) που έχει εγκρίνει ο κατασκευαστής για χρήση με την αντλία και το CGM σας. Αν χρησιμοποιείτε αναλώσιμα που δεν έχουν ελεγχθεί ή έχουν τροποποιηθεί, μπορεί να προκύψουν ανακρίβειες και λάθη στη δόση ινσουλίνης, με σοβαρό κίνδυνο για τον χρήστη. 
 
-Do not use **AAPS** if you take SGLT-2 inhibitors (gliflozins), as they lower blood sugar levels. You increase the risk diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
+Μη χρησιμοποιείτε το **AAPS** αν παίρνετε αναστολείς SGLT-2 (γλιφλοζίνες), γιατί αυτοί μειώνουν τη γλυκόζη αίματος. Αυξάνετε τον κίνδυνο διαβητικής κετοξέωσης (DKA) λόγω μειωμένης χορήγησης ινσουλίνης και τον κίνδυνο υπογλυκαιμίας λόγω χαμηλότερης γλυκόζης αίματος. 
 ```
 
 ```{admonition} Disclaimer
 :class: note
 
-- All information and code described here is for informational and educational purposes only. Use [Nightscout](https://nightscout.github.io/) and **AAPS** at your own risk, and do not use the information or code to make medical decisions. Το Nightscout δεν πραγματοποιεί επί του παρόντος προσπάθεια συμμόρφωσης με το HIPAA. 
-- Use of code from github.com is without warranty or formal support of any kind. Ανατρέξτε στην ΑΔΕΙΑ ΑΠΟΣΤΟΛΗΣ αυτού του αποθετηρίου για λεπτομέρειες.
-- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Η χρήση τους είναι για ενημερωτικούς σκοπούς και δεν συνεπάγεται καμία προσχώρηση ή έγκριση από αυτούς.
+- Όλες οι πληροφορίες και ο κώδικας που περιγράφονται εδώ είναι μόνο για ενημέρωση και εκπαίδευση. Χρησιμοποιείτε το [Nightscout](https://nightscout.github.io/) και το **AAPS** με δική σας ευθύνη και μην χρησιμοποιείτε τις πληροφορίες ή τον κώδικα για να παίρνετε ιατρικές αποφάσεις. Το Nightscout δεν πραγματοποιεί επί του παρόντος προσπάθεια συμμόρφωσης με το HIPAA. 
+- Η χρήση του κώδικα από το github.com είναι χωρίς εγγύηση ή επίσημη υποστήριξη οποιασδήποτε μορφής. Για λεπτομέρειες, διαβάστε την άδεια χρήσης (LICENSE) αυτού του αποθετηρίου.
+- Όλα τα ονόματα των προϊόντων και των εταιρειών, τα εμπορικά σήματα, τα κατατεθέντα εμπορικά σήματα και τα καταχωρημένα λογότυπα υπηρεσίας αποτελούν ιδιοκτησία των αντίστοιχων κατόχων τους. Τα χρησιμοποιούμε μόνο για ενημέρωση. Αυτό δεν σημαίνει ότι έχουμε κάποια σχέση με αυτούς ή ότι μας υποστηρίζουν.
 
-**AAPS** has no association with, and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
+Το **AAPS** δεν έχει καμία σχέση με τις παρακάτω εταιρείες και δεν υποστηρίζεται από αυτές: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/), [Medtronic](https://www.medtronic.com/), [Diaconn](https://www.diaconn.com/en/index.html), [EOFlow](http://www.eoflow.com/), [MicroTech Medical (Equil)](https://www.microtechmd.com/), [Medtrum](https://www.medtrum.com/), [Senseonics (Eversense)](https://www.senseonics.com/), [i-SENS (CareSens)](https://i-sens.com/), [POCTech](https://poctechcorp.com/en/), [Ottai](https://ottai.com/) ή [Syai](https://www.syai.com/).
 
 ```
 
 (index-aaps-documentation-index)=
 
-## AAPS Documentation Index
+## Ευρετήριο της τεκμηρίωσης του AAPS
 
 ```{toctree}
-:caption: 1) Change language
+:caption: Χρήση αυτής της τεκμηρίωσης
 
-Change language <./NavigateDoc/ChangeLanguage.md>
-Change version <./NavigateDoc/ChangeVersion.md>
+Αλλαγή γλώσσας και έκδοσης <./NavigateDoc/ChangeLanguageVersion.md>
+Αναζήτηση στην τεκμηρίωση <./NavigateDoc/SearchDoc.md>
+Ενημερώσεις και αλλαγές της τεκμηρίωσης <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
-:caption: 2) Getting started
+:caption: 1) Ξεκινώντας
 
-Introduction to AAPS <./Getting-Started/Introduction.md>
-Preparing for AAPS <./Getting-Started/PreparingForAaps.md>
-Component Overview <./Getting-Started/ComponentOverview.md>
-- Compatible pumps <./Getting-Started/CompatiblePumps.md>
-- Compatible CGMs <./Getting-Started/CompatiblesCgms.md>
-- Compatible phones  <./Getting-Started/Phones.md>
-- Compatible watches  <./Getting-Started/Watches.md>
+Εισαγωγή στα APS και AAPS <./Getting-Started/Introduction.md>
+Προετοιμασία για την έναρξη με το AAPS <./Getting-Started/PreparingForAaps.md>
+Επισκόπηση των εξαρτημάτων <./Getting-Started/ComponentOverview.md>
+- Συμβατές αντλίες <./Getting-Started/CompatiblePumps.md>
+- Συμβατά CGM <./Getting-Started/CompatiblesCgms.md>
+- Τηλέφωνα <./Getting-Started/Phones.md>
+- Έξυπνα ρολόγια και AAPS <./Getting-Started/Watches.md>
 ```
 
 ```{toctree}
-:caption: 3) Setting up AAPS
+:caption: 2) Δημιουργία της εφαρμογής
 
-Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+Ξεχωριστός λογαριασμός Google για το AAPS (προαιρετικό) <./UsefulLinks/DedicatedGoogleAccountForAaps.md>
+Δημιουργία του AAPS <./SettingUpAaps/BuildingAaps.md>
+- Δημιουργία μέσω browser <./SettingUpAaps/BrowserBuild.md>
+- Δημιουργία με το Android Studio <./SettingUpAaps/ComputerBuild.md>
+- Οδηγίες δημιουργίας από τη γραμμή εντολών <./SettingUpAaps/CLIBuild.md>
+Μεταφορά και εγκατάσταση του AAPS στο τηλέφωνό σας <./SettingUpAaps/TransferringAndInstallingAaps.md>
+```
+```{toctree}
+:caption: 3) Ρύθμιση του διακομιστή αναφορών
+
+Ρύθμιση του διακομιστή αναφορών <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-Building AAPS <./SettingUpAaps/BuildingAaps.md>
-- Browser Build <./SettingUpAaps/BrowserBuild.md>
-- Android Studio Build <./SettingUpAaps/ComputerBuild.md>
-- CLI Build <./SettingUpAaps/CLIBuild.md>
-Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Android Developer Verification <./SettingUpAaps/AndroidDeveloperVerification.md>
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Config Builder <./SettingUpAaps/ConfigBuilder.md>
-- Preferences <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+```
+```{toctree}
+:caption: 4) Διαμόρφωση του AAPS
+
+Οδηγός εγκατάστασης του AAPS <./SettingUpAaps/SetupWizard.md>
+Το προφίλ σας στο AAPS <./SettingUpAaps/YourAapsProfile.md>
+Αλλαγές στη διαμόρφωση του AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Διαμόρφωση (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
+- Ρυθμίσεις <./SettingUpAaps/Preferences.md>
+Βήματα <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
-:caption: 4) Daily Life with AAPS
+:caption: 5) Η καθημερινή ζωή με το AAPS
 
-AAPS Screens <./DailyLifeWithAaps/AapsScreens.md>
-Key AAPS Features <./DailyLifeWithAaps/KeyAapsFeatures.md>
-COB calculation <./DailyLifeWithAaps/CobCalculation.md>
-Sensitivity detection <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
-Profile Switch & Profile Percentage <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
-Temp-Targets <./DailyLifeWithAaps/TempTargets.md>
-Extended carbs <./DailyLifeWithAaps/ExtendedCarbs.md>
-Automations <./DailyLifeWithAaps/Automations.md>
-Dynamic ISF <./DailyLifeWithAaps/DynamicISF.md>
-AAPS for children <./DailyLifeWithAaps/AapsForChildren.md>
-Pumps and cannulas <./DailyLifeWithAaps/PumpsAndCannulas.md>
-Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
+Οθόνες του AAPS <./DailyLifeWithAaps/AapsScreens.md>
+Βασικές λειτουργίες του AAPS <./DailyLifeWithAaps/KeyAapsFeatures.md>
+Υπολογισμός COB (ενεργοί υδατάνθρακες) <./DailyLifeWithAaps/CobCalculation.md>
+Ανίχνευση ευαισθησίας <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
+Δυναμική ISF (DynISF) <./DailyLifeWithAaps/DynamicISF.md>
+Αλλαγή προφίλ και ποσοστό προφίλ <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
+Προσωρινοί στόχοι <./DailyLifeWithAaps/TempTargets.md>
+Εκτεταμένοι υδατάνθρακες / "eCarbs" <./DailyLifeWithAaps/ExtendedCarbs.md>
+Γρήγορος Οδηγός (bolus με ένα πάτημα) <./DailyLifeWithAaps/QuickWizards.md>
+Σενάρια (έτοιμες ρυθμίσεις για καταστάσεις) <./DailyLifeWithAaps/Scenes.md>
+Αυτοματισμός <./DailyLifeWithAaps/Automations.md>
+QuickLaunch (γραμμή γρήγορων ενεργειών στην επισκόπηση) <./DailyLifeWithAaps/QuickLaunch.md>
+Widgets αρχικής οθόνης <./DailyLifeWithAaps/Widgets.md>
+Τρόφιμα (η βάση τροφίμων σας) <./DailyLifeWithAaps/Food.md>
+Καθολική αναζήτηση <./DailyLifeWithAaps/GlobalSearch.md>
+Έλεγχος των δεδομένων σας <./Maintenance/Reviewing.md>
+Το AAPS για παιδιά <./DailyLifeWithAaps/AapsForChildren.md>
+Αντλίες και καθετήρες <./DailyLifeWithAaps/PumpsAndCannulas.md>
+Αλλαγή ζώνης ώρας και θερινή ώρα <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
 
 ```
 
 ```{toctree}
-:caption: 5) Remote AAPS features
+:caption: 6) Απομακρυσμένες λειτουργίες του AAPS
 
-Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
-Remote control <./RemoteFeatures/RemoteControl.md>
-SMS Commands <./RemoteFeatures/SMSCommands.md>
-Following Only <./RemoteFeatures/FollowingOnly.md>
+Απομακρυσμένη παρακολούθηση <./RemoteFeatures/RemoteMonitoring.md>
+Παρακολούθηση του AAPS (χωρίς αλληλεπίδραση με το σύστημα AAPS) <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
+Απομακρυσμένος έλεγχος του AAPS <./RemoteFeatures/RemoteControl.md>
+Η εφαρμογή AAPSClient <./RemoteFeatures/AapsClient.md>
+Έλεγχος κύριας συσκευής ↔ πελάτη (υπογεγραμμένος απομακρυσμένος έλεγχος) <./RemoteFeatures/ClientMasterControl.md>
+Εντολές SMS <./RemoteFeatures/SMSCommands.md>
 
 ```
 ```{toctree}
-:caption: 6) Wear OS Smartwatches
+:caption: 7) Έξυπνα ρολόγια Wear OS
 
-AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
-Use the smartwatch <./WearOS/WearOsSmartwatch.md>
-Remote control <./RemoteFeatures/RemoteControlWearOS.md>
-Custom watchfaces reference <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
-Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
-
-```
-
-```{toctree}
-:caption: 7) Maintenance of AAPS
-
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-Reviewing your data <./Maintenance/Reviewing.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-End of life <./Maintenance/EndOfLife.md>
-Documentation updates <./Maintenance/DocumentationUpdate.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update (fork) <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
+Δημιουργία της εφαρμογής AAPS για Wear <./WearOS/BuildingAapsWearOS.md>
+Ρύθμιση του AAPS στο ρολόι Wear OS σας <./WearOS/WearOsSmartwatch.md>
+Χειρισμός του AAPS από το έξυπνο ρολόι Wear OS <./RemoteFeatures/RemoteControlWearOS.md>
+Έγγραφο αναφοράς για το Custom Watchface <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
+Ιστότοπος ανταλλαγής προσαρμοσμένων watchface <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 
 ```{toctree}
-:caption: 8) Getting Help
+:caption: 8) Συντήρηση του AAPS
 
-Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
-General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
-- Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
-- Browser build troubleshooting <./GettingHelp/BrowserBuildTroubleshooting.md>
-Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
-Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
+Δημιουργία και επαναφορά αντιγράφων ασφαλείας <./Maintenance/ExportImportSettings.md>
+Σημειώσεις έκδοσης <./Maintenance/ReleaseNotes.md>
+Τι άλλαξε στο AAPS v4 <./Maintenance/V4Changes.md>
+Ενημέρωση σε νέα έκδοση ή κλάδο <./Maintenance/UpdateToNewVersion.md>
+- Ενημέρωση μέσω browser (fork) <./Maintenance/UpdateBrowserBuild.md>
+- Ενημέρωση με το Android Studio <./Maintenance/UpdateComputerBuild.md>
+Τέλος υποστήριξης <./Maintenance/EndOfLife.md>
+
 ```
 
 ```{toctree}
-:caption: 9) Advanced AAPS options
+:caption: 9) Βοήθεια και αντιμετώπιση προβλημάτων
 
-Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
-Dev branch <./AdvancedOptions/DevBranch.md>
-Browser build: cherry-pick a commit <./AdvancedOptions/BrowserBuildCherryPick.md>
+Πού μπορώ να βρω βοήθεια; <./GettingHelp/WhereCanIGetHelp.md>
+Αντιμετώπιση προβλημάτων <./GettingHelp/GeneralTroubleshooting.md>
+- Προβλήματα σχετικά με το Bluetooth <./GettingHelp/BluetoothTroubleshooting.md>
+- Αντιμετώπιση προβλημάτων του NSClient <./GettingHelp/TroubleshootingNsClient.md>
+- Αντιμετώπιση προβλημάτων του Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
+- Δημιουργία μέσω browser: αντιμετώπιση προβλημάτων <./GettingHelp/BrowserBuildTroubleshooting.md>
+- Επανεγκατάσταση του AAPS με νέο keystore <./GettingHelp/ReinstallAaps.md>
+- Πρόσβαση σε αρχεία καταγραφής <./GettingHelp/AccessingLogFiles.md>
+Συχνές Ερωτήσεις <./UsefulLinks/FAQ.md>
+```
+
+```{toctree}
+:caption: 10) Προχωρημένες επιλογές του AAPS
+
+Πλήρως κλειστό κύκλωμα <./AdvancedOptions/FullClosedLoop.md>
+Βελτίωση του προφίλ του AAPS <./GettingHelp/ProfileTuning.md>
 Autotune <./AdvancedOptions/Autotune.md>
+Συγκέντρωση ινσουλίνης <./AdvancedOptions/InsulinConcentration.md>
+Κλάδος ανάπτυξης (dev) <./AdvancedOptions/DevBranch.md>
+Δημιουργία μέσω browser: cherry-pick ενός commit <./AdvancedOptions/BrowserBuildCherryPick.md>
 
 ```
 ```{toctree}
-:caption: 10) How to support AAPS
+:caption: 11) Πώς να υποστηρίξετε το AAPS
 
-How to help <./SupportingAaps/HowCanIHelp.md>
-Editing the docs <./SupportingAaps/HowToEditTheDocs.md>
-Translating the app and docs <./SupportingAaps/Translations.md>
-State of translations <./SupportingAaps/StateOfTranslations.md>
-Open Humans Uploader <./SupportingAaps/OpenHumans.md>
+Πώς να βοηθήσετε το AAPS <./SupportingAaps/HowCanIHelp.md>
+Πώς να επεξεργαστείτε την τεκμηρίωση <./SupportingAaps/HowToEditTheDocs.md>
+Πώς να μεταφράσετε κείμενα της εφαρμογής AAPS ή της τεκμηρίωσης <./SupportingAaps/Translations.md>
+Κατάσταση μετάφρασης της εφαρμογής και της τεκμηρίωσης <./SupportingAaps/StateOfTranslations.md>
+Ανέβασμα δεδομένων στο Open Humans <./SupportingAaps/OpenHumans.md>
 
 ```
 ```{toctree}
-:caption: 11) Resources
+:caption: 12) Πηγές
 
-Glossary <./UsefulLinks/Glossary.md>
-FAQ <./UsefulLinks/FAQ.md>
-General diabetes and looping resources <./UsefulLinks/BackgroundReading.md>
-Dedicated Google account for AAPS (optional)<./UsefulLinks/DedicatedGoogleAccountForAaps.md>
-For Clinicians (outdated) <./UsefulLinks/ClinicianGuideToAaps.md>
+Γλωσσάριο <./UsefulLinks/Glossary.md>
+Χρήσιμοι πόροι για ανάγνωση πριν ξεκινήσετε <./UsefulLinks/BackgroundReading.md>
+Για γιατρούς – Γενική εισαγωγή και οδηγός για το AAPS <./UsefulLinks/ClinicianGuideToAaps.md>
 ```

@@ -1,85 +1,104 @@
-# Open Humans Uploader
+# Качване на данни в Open Humans
 
-## Donate your data for science
+## Дарете данните си за науката
 
-You can help the community by donating your data to research projects! This helps scientists to pay it forward, develop new scientific ideas and broaden the open mind of open source closed loop systems. AAPS is ready to synchronize your data with [Open Humans](https://www.openhumans.org), a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data.
+Можете да помогнете на общността, като дарите данните си за изследователски проекти! Това помага на учените да предадат доброто нататък, да развиват нови научни идеи и да разширяват отворения подход на системите със затворен кръг с отворен код. AAPS е готов да синхронизира данните ви с [Open Humans](https://www.openhumans.org) – платформа, която ви позволява да качвате, свързвате и съхранявате личните си данни, например генетични данни, данни за активност и за здравето.
 
-You retain full control about what happens to your data and what projects you want to support by giving them access to your data. Depending on the project you have joined, data is evaluated and used by them in different ways and extent.
+Вие запазвате пълен контрол върху това какво се случва с данните ви и кои проекти искате да подкрепите, като им дадете достъп до данните си. В зависимост от проекта, към който сте се присъединили, данните се оценяват и използват по различни начини и в различна степен.
 
-The following data will be uploaded to your Open Humans account:
+Следните данни ще бъдат качени във вашия профил в Open Humans:
 
-- Glucose values
-- Careportal events (except notes)
-- Extended boluses
-- Profile switches
-- Total daily doses
-- Temporary basals
-- Temp targets
+- Стойности на КЗ
+- Събития от Портал за лечения (без бележки)
+- Удължени болуси
+- Смени на профил
+- Общи дневни дози
+- Временни базали
+- Временни цели
 - Опции
-- Application version
-- Device model
-- Screen dimensions
+- Версия на приложението
+- Модел на устройството
+- Размер на екрана
 
-Secret or private information such as your Nightscout URL or API secret will not be uploaded.
+Тайна или лична информация, като адреса (URL) на Nightscout или API secret, няма да бъде качвана.
 
-## Setup
+## Настройка
 
-1. Create your account on [Open Humans](https://www.openhumans.org) if not already done. You can reuse your existing Google or Facebook accounts if you wish to.
-2. Enable the “Open Humans” plugin in [Config Builder > Synchronization](../SettingUpAaps/ConfigBuilder.md).
-3. Open its setting using the cog wheel button. You can restrict upload to times when phone uses Wi-Fi and/or is charged.
-4. Open the Open Humans Plugin (either through OH tab or hamburger menu) and click 'LOGIN'.
+1. Създайте профил в [Open Humans](https://www.openhumans.org), ако все още нямате такъв. Ако желаете, можете да използвате съществуващия си профил в Google или Facebook.
+2. Активирайте плъгина **Open Humans** в [**Конфигурация** > **Комуникация**](../SettingUpAaps/ConfigBuilder.md).
 
-![Open Humans Config Builder](../images/OHUploader1.png)
+![Open Humans е активиран в Конфигурация > Комуникация](../images/OHUploader1.png)
 
-5. Read the given information about the Open Humans Uploader and terms of use carefully.
-6. Confirm by checking the box and click 'LOGIN'.
-7. Open Humans website will be opened. Login with your credentials.
-8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile.
-9. Click button 'Authorize project'.
+3. Докоснете **Настройки** в картата **Open Humans**. Можете да ограничите качването до времето, когато телефонът използва Wi-Fi (**Само с WiFi**) и/или се зарежда (**Само когато телефонът се зарежда**).
 
-![Open Humans Terms of Use + Login](../images/OHUploader2.png)
+![Настройки на Open Humans с „Само с WiFi“ и „Само когато телефонът се зарежда“](../images/OHUploader_settings.png)
 
-10. Returning to AAPS you will see a prompt that login succeeded.
-11. Keep Open Humans Uploader plugin and phone turned on for setup to complete.
-12. After clicking close you will see your member ID. Queue sizes > 0 shows that there is still data to be uploaded.
-13. Click 'LOGOUT' if you want to stop uploading data to Open Humans.
-14. Android notification will inform you about running upload.
+4. Докоснете **Отвори плъгин** в картата **Open Humans**, след това докоснете **Настройка**.
 
-![Open Humans finish setup](../images/OHUploader3.png)
+![Екранът на плъгина Open Humans с бутона „Настройка“](../images/OHUploader_setup.png)
 
-15. You can manage your data by logging in to the [Open Humans website](https://www.openhumans.org).
+5. На екрана **Добре дошли в Open Humans** докоснете **Напред**. Прочетете внимателно екрана **Съгласие**: той показва условията за ползване и кои данни се качват и кои не се качват.
+6. Включете **Разбирам и съм съгласен.** (1) и докоснете **Вход в Open Humans** (2).
 
-![Open Humans manage data](../images/OHWeb.png)
+![Екраните „Добре дошли“ и „Съгласие“ на Open Humans в AAPS](../images/OHUploader2.png)
 
-## Sharing Opportunities
+7. Ще се отвори уеб сайтът на Open Humans. Влезте с данните си за вход.
+8. Решете дали искате да скриете членството си в AAPS Uploader в публичния си профил в Open Humans (1).
+9. Натиснете **Authorize project** (упълномощаване на проекта) (2).
 
-### [The 'OPEN' project](https://www.open-diabetes.eu/)
+![Вход и упълномощаване на проекта в уеб сайта на Open Humans](../images/OHUploader_web.png)
 
-The 'OPEN' project brings together an international and intersectoral consortium of patient innovators, clinicians, social scientists, computer scientists and patient advocacy organizations in order to investigate various aspects of Do-it-Yourself Artificial Pancreas Systems (DIY APS) that are used by an increasing number of people with diabetes. For more details see their [website](https://www.open-diabetes.eu/).
+```{admonition} Older screenshot
+:class: note
+Екранните снимки по-горе показват по-стара версия на уеб сайта на Open Humans и все още използват старото име на проекта **AndroidAPS Uploader**. Стъпките са същите.
+```
 
-September 2020 the 'OPEN' project launched a [survey](https://survey.open-diabetes.eu/) including the option to donate data you uploaded to Open Humans. A [tutorial](https://open-diabetes.eu/en/open-survey/survey-tutorials/) how to donate your data to the 'OPEN' project is available on their site and within the survey itself.
+10. Обратно в **AAPS** екранът **Последни настройки** ви пита дали искате да продължите. Докоснете **Продължи**.
+11. Изчакайте да се появи **Готови сме!**, след това докоснете **Затвори**. Отсега нататък телефонът ви ще качва данни на заден фон от време на време.
+12. Екранът на плъгина **Open Humans** вече показва вашия **Номер на участник в проекта**. Докоснете **Качи сега**, ако искате да започнете качване веднага.
+13. Докоснете **Изход**, ако искате да спрете качването на данни в Open Humans.
+14. Известие в Android ще ви информира, че тече качване.
+
+![Open Humans – завършване на настройката](../images/OHUploader3.png)
+
+```{admonition} Older screenshot
+:class: note
+Екранната снимка по-горе е от по-стара версия на **AAPS**. В **AAPS** 4 екраните за потвърждение са **Последни настройки** и **Готови сме!**, няма размер на опашката, а бутоните са **Качи сега** и **Изход**.
+```
+
+15. Можете да управлявате данните си, като влезете в [уеб сайта на Open Humans](https://www.openhumans.org).
+
+![Open Humans – управление на данните](../images/OHWeb.png)
+
+## Възможности за споделяне
+
+### [Проектът „OPEN“](https://www.open-diabetes.eu/)
+
+Проектът „OPEN“ обединява международен и междусекторен консорциум от пациенти иноватори, лекари, социолози, компютърни специалисти и организации за защита на пациентите, за да изследва различни аспекти на системите за изкуствен панкреас „Направи си сам“ (DIY APS), които се използват от все повече хора с диабет. За повече подробности вижте техния [уеб сайт](https://www.open-diabetes.eu/).
+
+През септември 2020 г. проектът „OPEN“ стартира [проучване](https://survey.open-diabetes.eu/), което включва и възможност да дарите данните, които сте качили в Open Humans. На техния сайт и в самото проучване има [ръководство](https://open-diabetes.eu/en/open-survey/survey-tutorials/) как да дарите данните си на проекта „OPEN“.
 
 ### [OpenAPS Data Commons](https://www.openhumans.org/activity/openaps-data-commons/)
 
-The OpenAPS Data Commons was created to enable a simple way to share data sets from the DIYAPS community for research. The data is shared both with traditional researchers who will create traditional research studies, and with groups or individuals from the community who want to review data as part of their own research projects. The OpenAPS Data Commons uses the 'Open Humans' platform to enable people to easily upload and share their data from DIYAPS including AAPS, Loop, and OpenAPS.
+OpenAPS Data Commons е създаден, за да даде лесен начин за споделяне на набори от данни от общността DIYAPS за изследвания. Данните се споделят както с традиционни изследователи, които правят традиционни научни изследвания, така и с групи или хора от общността, които искат да прегледат данните като част от собствените си изследователски проекти. OpenAPS Data Commons използва платформата „Open Humans“, за да могат хората лесно да качват и споделят данните си от DIYAPS системи, включително AAPS, Loop и OpenAPS.
 
-You can get your data into Open Humans via one of three ways:
+Можете да качите данните си в Open Humans по един от три начина:
 
-1. use the AAPS uploader option to get your data into Open Humans
-2. use the Nightscout Data Transfer to get your data into Open Humans
-3. manually upload data files into Open Humans.
+1. използвайте функцията за качване в AAPS, за да качите данните си в Open Humans
+2. използвайте Nightscout Data Transfer, за да качите данните си в Open Humans
+3. качете файловете с данни ръчно в Open Humans.
 
-Once you've created an account and gotten your data flowing into Open Humans, make sure to also join the OpenAPS Data Commons in order to donate your data for research if you choose.
+След като създадете профил и данните ви започнат да постъпват в Open Humans, не забравяйте да се присъедините и към OpenAPS Data Commons, за да дарите данните си за изследвания, ако желаете.
 
-## Terms of Use
+## Условия за ползване
 
-This is an open source tool that will copy your data to [Open Humans](https://www.openhumans.org). We retain no rights to share your data with third parties without your explicit authorization. The data the project and app receive are identified via a random user ID and will only be securely transmitted to an Open Humans account with your authorization of that process. You can stop uploading and delete your upload data at any time via [www.openhumans.org](https://www.openhumans.org). Beware that some projects that receive data may not support this.
+Това е инструмент с отворен код, който ще копира данните ви в [Open Humans](https://www.openhumans.org). Ние не запазваме никакви права да споделяме данните ви с трети страни без вашето изрично разрешение. Данните, които проектът и приложението получават, се идентифицират чрез случаен потребителски идентификатор (ID) и ще бъдат предадени по сигурен начин към профил в Open Humans само с вашето разрешение за този процес. Можете да спрете качването и да изтриете качените данни по всяко време чрез [www.openhumans.org](https://www.openhumans.org). Имайте предвид, че някои проекти, които получават данни, може да не поддържат това.
 
-Also see [Open Humans Terms of Use](https://www.openhumans.org/terms/).
+Вижте също [Условията за ползване на Open Humans](https://www.openhumans.org/terms/).
 
-## Data Privacy
+## Поверителност на данните
 
-Open Humans takes care of protecting your privacy by assigning a numerical ID to you for each project. This allows projects to recognize but no identify you. The Application ID uploaded by AAPS is similar and only helps administrate the data. More information can be found here:
+Open Humans защитава поверителността ви, като ви дава числов идентификатор (ID) за всеки проект. This allows projects to recognize but not identify you. Идентификаторът на приложението (Application ID), който AAPS качва, е подобен и служи само за управление на данните. Повече информация можете да намерите тук:
 
-- [Open Humans Data Use Policy](https://www.openhumans.org/data-use/)
-- [Open Humans GDPR](https://www.openhumans.org/gdpr/)
+- [Политика за използване на данни на Open Humans](https://www.openhumans.org/data-use/)
+- [Open Humans и GDPR](https://www.openhumans.org/gdpr/)

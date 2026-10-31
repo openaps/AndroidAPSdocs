@@ -1,92 +1,98 @@
 # Cálculo de carbohidratos (COB)
 
-## ¿Cómo calcula la AAPS el valor de los carbohidratos (COB)?
+## ¿Cómo calcula AAPS el valor de los carbohidratos (COB)?
 
-When carbs are entered by the user as part of a meal entry or carb correction, **AAPS** will add this calculation to the current carbs on board (**COB**). **AAPS** then calculates the user’s carbs’ absorption based on observed deviations to the user’s **BG** values. The rate of absorption depends on the carb’s sensitivity factor (**’CSF**”). This is not a feature within the user’s **Profile**  but is calculated by **AAPS** according to **ISF/I:C** set up, and is determined by how many mg/dl 1g of carbs will raise the user’s **BG**.
+Cuando introduces carbohidratos como parte de una comida o de una corrección de carbohidratos, **AAPS** los suma a los carbohidratos activos actuales (**COB**). Después, **AAPS** calcula la absorción de tus carbohidratos a partir de las desviaciones observadas en tus valores de **glucosa**. La velocidad de absorción depende del factor de sensibilidad a los carbohidratos (**CSF**). No es un ajuste de tu **perfil**: **AAPS** lo calcula a partir de los valores de **ISF/I:C**, y depende de cuántos mg/dl sube tu **glucosa** 1 g de carbohidratos.
 
-## Carb Sensitivity Factor
+## Factor de sensibilidad a los carbohidratos
 
-The formula adopted by **AAPS** is:
+La fórmula que usa **AAPS** es:
 
 - absorbed_carbs = deviation * ic / isf.
 
-The effect on the user’s **Profile** will:
+El efecto sobre tu **perfil** es el siguiente:
 
-- _increase_ **IC**- by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
+- _aumentar_ el **IC**: aumenta los carbohidratos absorbidos cada 5 minutos y así acorta el tiempo total de absorción;
 
-- _increase_ **ISF** - by decreasing the carbs absorbed every 5 minutes thus prolong total time of absorption; and
+- _aumentar_ el **ISF**: reduce los carbohidratos absorbidos cada 5 minutos y así alarga el tiempo total de absorción; y
 
-- _change_ **Profile Percentage** -  increase/decrease both values thus has no impact on carbs absorption time.
+- _cambiar_ el **porcentaje del perfil**: aumenta o reduce los dos valores, así que no cambia el tiempo de absorción de los carbohidratos.
 
-For example, if the user’s  **Profile**  **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. For every 20 mg/dl the user’ **BG** goes up and 1g of carbs will be calculated as absorbed by **AAPS**. Positive **IOB** also affects the **COB** calculation. So, if **AAPS**  predicts the user’s **BG** to go down by 20 mg/dl because of **IOB** and it instead stayed flat, **AAPS**  would also calculate 1g of carbs as absorbed.
+Por ejemplo, si en tu **perfil** el **ISF** es 100 y el **I:C** es 5, tu factor de sensibilidad a los carbohidratos sería 20. Por cada 20 mg/dl que sube tu **glucosa**, **AAPS** calcula 1 g de carbohidratos como absorbido. La **IOB** positiva también influye en el cálculo de los **COB**. Así, si **AAPS** predice que tu **glucosa** bajará 20 mg/dl por la **IOB** y en cambio se queda estable, **AAPS** también calculará 1 g de carbohidratos como absorbido.
 
-Carbs will also be absorbed via the methods described below based on which sensitivity algorithm has been selected within the user's **AAPS**.
+Los carbohidratos también se absorben según los métodos descritos abajo, en función del algoritmo de sensibilidad que hayas elegido en tu **AAPS**.
 
-## Carbs Sensitivity - Oref1
+## Sensibilidad de carbohidratos - Oref1
 
-Unabsorbed carbs are cut off after specified time:
+Los carbohidratos no absorbidos se eliminarán después del tiempo especificado:
 
 ![Oref1](../images/cob_oref0_orange_II.png)
 
-![Screenshot 2024-10-05 161009](../images/cob_oref0_orange_I.png)
+![Gráfico de COB con el corte de Oref1](../images/cob_oref0_orange_I.png)
+
+```{admonition} Older screenshot
+:class: note
+La captura de pantalla de arriba es de una versión anterior de **AAPS**. En **AAPS** 4 los gráficos se ven un poco distintos, pero el gráfico de **COB** muestra la misma información.
+```
 
 
-## Carbs Sensitivity - WeightedAverage
+## Sensibilidad de carbohidratos - WeightedAverage
 
-Absorption is calculated to have COB = 0 after specified time:
+La absorción se calcula de forma que los COB sean 0 después del tiempo indicado:
 
-![AAPS, WheitedAverage](../images/cob_aaps2_orange_II.png)
+![AAPS, WeightedAverage](../images/cob_aaps2_orange_II.png)
 
-If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from **BG** deviations, an orange dot appears on the **COB** graph.
+Si se usa la absorción mínima de carbohidratos (min_5m_carbimpact) en lugar del valor calculado a partir de las desviaciones de **glucosa**, aparece un punto naranja en el gráfico de **COB**.
 
 (CobCalculation-detection-of-wrong-cob-values)=
 ## Detección de valores erróneos de carbohidratos (COB)
 
-**AAPS**  will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
+**AAPS** te avisará si vas a administrar un bolo con **COB** de una comida anterior y el algoritmo detecta que el cálculo actual de **COB** es incorrecto. En ese caso, te dará una pista adicional en la pantalla de confirmación después de usar el asistente de bolo.
 
 ### ¿Cómo detecta AAPS los valores de carbohidratos (COB) erróneos?
 
-Ordinarily __AAPS__ detects carb absorption through **BG** deviations. In case the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
+Normalmente, __AAPS__ detecta la absorción de carbohidratos a través de las desviaciones de **glucosa**. Si has introducido carbohidratos pero **AAPS** no puede detectar su absorción estimada a través de las desviaciones de **glucosa**, usará el método [min_5m_carbimpact](#Preferences-min_5m_carbimpact) para calcular la absorción (el llamado «fallback» o método de respaldo). Como este método solo calcula la absorción mínima de carbohidratos sin tener en cuenta las desviaciones de **glucosa**, puede dar valores de COB incorrectos.
 
-![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
+![Sugerencia sobre un valor incorrecto de COB](../images/Calculator_SlowCarbAbsorption.png)
 
-In the screenshot above, 58% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. This indicates that the user may have had less **COB** than calculated by the algorithm.
+En la captura de pantalla de arriba, el 66 % del tiempo la absorción de carbohidratos se calculó con min_5m_carbimpact en lugar del valor detectado a partir de las desviaciones. Esto indica que es posible que tuvieras menos **COB** de lo que calculó el algoritmo.
 
 ### ¿Cómo actuar ante esta advertencia?
 
-- Consider cancelling the treatment - press ‘Cancel’ instead of OK.
-- Calculate your upcoming meal again with bolus wizard leaving **COB** unticked.
-- If you need a correction bolus, enter it manually.
-- Be careful not to overdose or insulin stacking!
+- Plantéate cancelar el tratamiento: pulsa «Cancelar» en lugar de OK.
+- Calcula de nuevo tu próxima comida con el asistente de bolo, sin marcar **COB**.
+- Si necesitas un bolo de corrección, introdúcelo manualmente.
+- ¡Ten cuidado de no administrar una sobredosis ni acumular insulina!
 
 
 ### ¿Por qué el algoritmo no detecta correctamente los carbohidratos (COB)?
 
-This could be because:
-- Potentially the user overestimated carbs when entering them.
-- Activity / exercise after your previous meal.
-- I:C needs adjustment.
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA).
+Las causas pueden ser:
+- Puede que hayas sobrestimado los carbohidratos al introducirlos.
+- Actividad o ejercicio después de tu comida anterior.
+- El I:C necesita un ajuste.
+- El valor de min_5m_carbimpact es incorrecto (el recomendado es 8 con SMB, 3 con AMA).
 
 
 ## Corrección manual de los carbohidratos introducidos
 
-If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](#screens-bolus-carbs).
+Si los carbohidratos se sobrestimaron o subestimaron, puedes corregirlo en la pantalla **Historial de tratamientos**, como se describe [aquí](#screens-bolus-carbs).
 
 
-## Carb correction - how to delete a Carb entry from Treatments
+## Corrección de carbohidratos: cómo borrar una entrada de carbohidratos de Tratamientos
 
 
-The ‘Treatments’ tab can be used to correct a faulty carb entry by deleting the entry in Treatments. This may be because the user over or underestimated the carb entry:
+La pantalla **Historial de tratamientos** permite corregir una entrada de carbohidratos errónea borrándola. Puede deberse a que sobrestimaste o subestimaste los carbohidratos introducidos:
 
-![COB_Screenshot 2024-10-05 170124](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Borrar una entrada de carbohidratos del Historial de tratamientos](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
-1. Check and remember actual **COB** and **IOB** on the **AAPS'** homescreen.
-2. Depending on the pump, the carbs in the Treatments tab might show together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry by firstly 'ticking' the waste bin on the top right corner (see above photo, step 1). Then 'tick' the faulty carb amount (see above photo, step 2). Then 'tick' the ‘waste bin’ on the top right corner (step 1 again).
-4. Make sure carbs are removed successfully by checking **COB** on **AAPS’** homescreen again.
-5. Do the same for **IOB** if there is just one line in the Treatment tab including carbs and insulin.
-6. If carbs are not removed as intended and additional carbs are added as explained in this section, the **COB** entry will be too high and this could lead to **AAPS** delivering too much insulin.
-7. Enter correct carbs amount through carbs button on **AAPS’** homescreen and set the correct event time.
-8. If there is just one line in Treatment tab including carbs and insulin the user should add also the amount of insulin. Make sure to set the correct event time and check **IOB** on homescreen after confirming the new entry.
+1. Comprueba y recuerda los valores actuales de **COB** e **IOB** en la pantalla principal de **AAPS**.
+2. Abre **Historial de tratamientos** (menú lateral → *Historial de tratamientos*), pestaña **Carbohidratos y bolos**. Según la bomba, los carbohidratos pueden aparecer junto con la insulina en una sola línea o como una entrada aparte (por ejemplo, con Dana RS).
+3. **Mantén pulsada** la entrada de carbohidratos errónea: la lista pasa al **modo de selección** con una casilla en cada línea, y la entrada queda marcada (marca **1** arriba). Marca también las demás entradas que quieras borrar.
+4. Toca el icono **🗑 Borrar** de la barra superior (marca **2**) y confirma: el diálogo de confirmación muestra exactamente lo que se va a borrar.
+5. Comprueba que los carbohidratos se han borrado bien mirando de nuevo los **COB** en la pantalla principal de **AAPS**.
+6. Haz lo mismo con la **IOB** si solo hay una línea con carbohidratos e insulina.
+7. Si no se borran los carbohidratos como debe ser y se añaden más carbohidratos como se explica en esta sección, el valor de **COB** será demasiado alto y esto podría hacer que **AAPS** administre demasiada insulina.
+8. Introduce la cantidad correcta de carbohidratos en el diálogo **Carbohidratos** (**Tratamientos** → **Carbohidratos**) y fija la hora correcta del evento.
+9. Si solo había una línea con carbohidratos e insulina, también debes volver a añadir la cantidad de insulina. Asegúrate de fijar la hora correcta del evento y de comprobar la **IOB** en la pantalla principal después de confirmar la nueva entrada.
 

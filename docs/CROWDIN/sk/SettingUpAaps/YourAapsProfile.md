@@ -1,365 +1,355 @@
-# Váš AAPS profil
+# Váš profil AAPS
 
-Váš **Profil AAPS** je súbor piatich kľúčových parametrov, ktoré definujú, ako má **AAPS** podávať inzulín v reakcii na hladiny glukózy namerané senzorom. Toto sú hlavné parametre, na ktorých je postavený **AAPS**. Ako budete postupovať cez **Ciele**, odomknú sa vám ďalšie nastaviteľné parametre (napríklad nastavenia SMB), ale výkon týchto funkcií závisí od správneho nastavenia vášho **profilu**. **Profil** zahŕňa:
-* [duration of insulin action](#your-aaps-profile-duration-of-insulin-action) (DIA),
-* [glucose targets](#profile-glucose-targets),
-* [basal rates](#your-aaps-profile-basal-rates) (BR),
-* [insulin sensitivity factors](#your-aaps-profile-insulin-sensitivity-factor) (ISF) and
-* [insulin-to-carb ratios](#your-aaps-profile-insulin-to-carbs-ratio) (IC or ICR).
+Váš **profil AAPS** je súbor štyroch kľúčových parametrov, ktoré určujú, ako má **AAPS** podávať inzulín podľa hodnôt glykémie zo senzora. Toto sú hlavné parametre, na ktorých je postavený **AAPS**. Ako budete postupovať cez **Ciele**, odomknú sa vám ďalšie nastaviteľné parametre (napríklad nastavenia SMB), ale výkon týchto funkcií závisí od správneho nastavenia vášho **profilu**. **Profil** zahŕňa:
+* [cieľové glykémie](#profile-glucose-targets),
+* [bazálne dávky](#your-aaps-profile-basal-rates) (BR),
+* [faktory citlivosti na inzulín](#your-aaps-profile-insulin-sensitivity-factor) (ISF) a
+* [inzulínovo-sacharidové pomery](#your-aaps-profile-insulin-to-carbs-ratio) (IC alebo ICR).
 
-Pri používaní **AAPS** by ste mali stále sledovať a kontrolovať presnosť nastavení svojho **profilu**. Odporúča sa vykonať nastavenia v poradí, v akom sú uvedené tu. Cieľom je správne nastaviť jeden parameter pred tým než budete ladiť ten ďalší. Postupujte pomaly a nerobte súčasne viacero zmien. Po každej zmene si nezabudnite nový profil aktivovať. Pravidelne [zálohujte nastavenia svojho **profilu**](#YourAapsProfile_Profile-backup) exportovaním svojich nastavení.
+```{admonition} Where did DIA go?
+:class: note
+**Doba pôsobenia inzulínu (DIA)** už nie je súčasťou vášho **profilu**. Namiesto toho sa nastavuje pre každý inzulín – pozrite [Spravovať → Nastavenia inzulínu](#Config-Builder-insulin-dia).
+```
+
+Pri liečbe s **AAPS** by ste mali priebežne hodnotiť a kontrolovať, či sú nastavenia vášho **profilu** presné. Odporúča sa vykonať nastavenia v poradí, v akom sú uvedené tu. Snažte sa správne nastaviť jeden parameter predtým, než začnete meniť ďalší. Postupujte pomaly a nerobte súčasne viacero zmien. Po každej zmene si nezabudnite nový profil aktivovať. Pravidelne [zálohujte svoj **profil**](#YourAapsProfile_Profile-backup) exportom nastavení.
 
 Nastavenia vášho **profilu** sa navzájom ovplyvňujú – môžete mať „nesprávne“ nastavenia, ktoré za určitých okolností dobre fungujú, ale za iných nie. Napríklad sa môže stať, že je príliš vysoký bazál a súčasne príliš vysoký **CR**. To znamená, že musíte zvážiť jednotlivé nastavenia a skontrolovať, či spolu dobre spolupracujú za rôznych okolností.
 
-Môžete použiť [Autotune](https://autotuneweb.azurewebsites.net/) aby vás nasmeroval, ale nemali by ste ho slepo nasledovať: nemusí pre vás dobre fungovať, prípadne nie za všetkých okolností.
+Môžete použiť [Autotune](https://autotuneweb.azurewebsites.net/), aby vás nasmeroval, ale nemali by ste ho slepo nasledovať: nemusí pre vás dobre fungovať alebo nemusí fungovať za všetkých okolností.
 
 ```{admonition} Your diabetes may vary
-:class: information
-**Profiles** vary significantly from person-to-person.
+:class: note
+**Profily** sa od človeka k človeku veľmi líšia.
 
-For basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Brights Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+Pri bazálnych dávkach (BR), faktoroch citlivosti na inzulín (ISF) a inzulínovo-sacharidových pomeroch (IC alebo ICR) sa absolútne hodnoty a trendy potreby inzulínu veľmi líšia od človeka k človeku. Závisia od vašej biológie, pohlavia, veku, kondície atď., ako aj od krátkodobých faktorov, napríklad choroby alebo nedávneho cvičenia. For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
 
 ```
 
-The four last parameters (glucose targets, basal rates, insulin sensitivity factors and insulin-to-carb ratios) can be set to different values, changing hourly if required, over a 24-hour period.
+Posledné štyri parametre (cieľové glykémie, bazálne dávky, faktory citlivosti na inzulín a inzulínovo-sacharidové pomery) môžete počas 24 hodín nastaviť na rôzne hodnoty, v prípade potreby aj každú hodinu inak.
 
-![Hourly change of basal](../images/MaxDailyBasal2.png)
+![Hodinová zmena bazálu](../images/MaxDailyBasal2.png)
 
-Screenshots from **AAPS** of an _example_ profile are shown below. Please note, this sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
+Nižšie sú snímky obrazovky _vzorového_ profilu z **AAPS**. Upozorňujeme, že tento vzorový profil nižšie zobrazuje veľké množstvo časových bodov. Keď začnete s **AAPS**, váš profil bude pravdepodobne oveľa jednoduchší.
 
-(your-aaps-profile-duration-of-insulin-action)=
-## Duration of insulin action (DIA)
-
-### Description
-
-The length of time that insulin takes to decay to zero.
-
-The duration of insulin action is set to a single value in **AAPS**, because your pump will continually infuse the same type of insulin.
-
-![Sample insulin Profile](../images/Screenshot_insulin_profile.png)
-
-In combination with the [insulin type](#Config-Builder-insulin), this will result in the [insulin profile](#AapsScreens-insulin-profile), as shown in the image above. The important thing to note is that the decay has a **long tail**. If you have been used to manual pumping, you have probably been used to assuming that insulin decays over a much shorter period i.e. about 3.5 hours. However, when you are looping, the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the **AAPS** algorithm. Therefore, **AAPS** uses minimum 5h as **DIA**.
-
-Additional reading on the topic of duration of insulin action, and why it matters :
-* [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) on OpenAPS documentation.
-* [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) on Diabettech.
-* [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) on See My CGM (archive).
-* [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) and other articles on Bionic Wookie, recommending a DIA of 9h for Lyumjev, Fiasp, NovoRapid, Humalog.
-
-
-### Impact
-
-Too short **DIA** can lead to low BGs. And vice versa.
-
-If **DIA** is too short, **AAPS** will calculate too early that your previous bolus is all consumed, and if your **BG** is still high, it will over-deliver in insulin. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that **AAPS** is unaware of. This is especially noticeable at night, if you see negative IOB with no other explanation than the queue of the last bolus.
-
-Example of a too-short **DIA** is a **high BG** followed by **AAPS** over-correcting and giving a **low BG**.
-
-### How to set it
-
-The **figure below** shows an example of how the **DIA** is set in an **AAPS** profile.
-
-![DIA](../images/Profile_DIA.png)
-
-The **DIA** setting is often set too short by new users. A **DIA** of 6 or 7 is probably a good place to start. A growing number of people find that a **DIA** of 8 to 9 hours works good for them. See the additional reading mentioned above.
+![Príklad aktívneho profilu](../images/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
-## Glucose targets
+## Cieľové hodnoty glykémie
 
-### Description
+### Popis
 
-Your **BG target** is a core value and all of **AAPS** calculations are based on it. It is different from the target range which you usually aim to keep your blood glucose values in. The target is used in **AAPS** calculations: if **AAPS** predicts that your **BG** will land outside the target range, then it will take action to take you back in said range.
+Vaša **cieľová glykémia** je základná hodnota a na nej sú založené všetky výpočty **AAPS**. Líši sa od cieľového rozsahu, v ktorom sa zvyčajne snažíte udržať glykémiu. Cieľ sa používa vo výpočtoch **AAPS**: ak **AAPS** predpovedá, že vaša **glykémia** bude mimo cieľového rozsahu, urobí kroky, aby vás do tohto rozsahu vrátil.
 
-The targets can be defined within those boundaries :
+Ciele môžete nastaviť v rámci týchto hraníc:
 
-|         | _Low_ target           | _High_ target          |
-| ------- | ---------------------- | ---------------------- |
-| Minimum | 4 mmol/l or 72 mg/dL   | 5 mmol/l or 90 mg/dL   |
-| Maximum | 10 mmol/l or 180 mg/dL | 15 mmol/l or 225 mg/dL |
+|         | _Nízky_ cieľ              | _Vysoký_ cieľ               |
+| ------- | ------------------------- | --------------------------- |
+| Minimum | 4,4 mmol/l alebo 80 mg/dl | 5 mmol/l alebo 90 mg/dl     |
+| Maximum | 10 mmol/l alebo 180 mg/dl | 11,1 mmol/l alebo 200 mg/dl |
 
-### Impact
+### Vplyv
 
-If the target in your **Profile** is very wide (say, 3 or more mmol/l [50 mg/dl or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate are unlikely to be actioned by **AAPS**.
+Ak je cieľ vo vašom **profile** veľmi široký (napríklad 3 mmol/l [50 mg/dl] alebo viac), **AAPS** často urobí len málo zásahov. Je to preto, že predpovedaná **glykémia** bude pravdepodobne niekde v tomto širokom rozsahu, a preto **AAPS** dočasné bazály pravdepodobne nenastaví.
 
-### How to set it
+### Ako to nastaviť
 
-The **figure below** shows an example of how the target can be set in an **AAPS** profile.
+**Obrázok nižšie** ukazuje príklad, ako možno nastaviť cieľ v profile **AAPS**.
 
 ![Cieľ](../images/Profile_Target.png)
 
-**BG** targets are set according to your personal preferences and requirements. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117 mg/dL (6.5 mmol/L) from 9 pm - 7am. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
+Ciele **glykémie** si nastavujete podľa svojich osobných preferencií a potrieb. Ak sa napríklad obávate nočných hypoglykémií, môžete si od 21:00 do 7:00 nastaviť cieľ o niečo vyšší, na 117 mg/dl (6,5 mmol/l). Ak chcete mať ráno pred bolusom na raňajky dostatok aktívneho inzulínu (IOB), môžete od 7:00 do 8:00 nastaviť nižší cieľ 81 mg/dl (4,5 mmol/l).
 
-When In [Open Loop](#KeyAapsFeatures-OpenLoop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/> When In [Closed Loop](#KeyAapsFeatures-ClosedLoop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
+V [otvorenom okruhu](#KeyAapsFeatures-OpenLoop), najmä keď prechádzate [prvými cieľmi](../SettingUpAaps/CompletingTheObjectives.md), môže byť široký cieľový rozsah dobrou voľbou, kým sa učíte, ako sa **AAPS** správa, a upravujete svoj **profil**.<br/> V [uzavretom okruhu](#KeyAapsFeatures-ClosedLoop) (od **[Cieľa 6](#objectives-objective6)**) sa odporúča rozsah zužovať, až kým nebudete mať pre každú časť dňa jediný cieľ (_Nízky_ cieľ = _Vysoký_ cieľ), aby **AAPS** rýchlo reagoval na výkyvy **glykémie**.
 
 (your-aaps-profile-basal-rates)=
 
-## Basal rates
+## Bazálne dávky
 
-### Description
+### Popis
 
-Your basal rate of insulin (Units/hour) provides background insulin, keeping your glucose levels stable in the absence of food or exercise.
+Bazálna dávka inzulínu (jednotky/hodina) zabezpečuje bazálny inzulín, ktorý udržiava glykémiu stabilnú bez jedla alebo pohybu.
 
-The insulin pump delivers small amounts of rapid acting insulin every few minutes, to keep the liver from releasing too much glucose, and to move glucose into body cells. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. For more information, chapter 6 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner is very useful.
+Inzulínová pumpa každých pár minút podáva malé množstvá rýchlo pôsobiaceho inzulínu, aby pečeň neuvoľňovala príliš veľa glukózy a aby sa glukóza presúvala do buniek tela. Bazálny inzulín zvyčajne tvorí 40–50 % vašej celkovej dennej dávky (CDD) v závislosti od stravy a zvyčajne sleduje cirkadiánny rytmus s jedným vrcholom a jedným poklesom potreby inzulínu počas 24 hodín. Viac informácií nájdete v 6. kapitole knihy [„Think like a Pancreas“](https://amzn.eu/d/iVU0RGe) od Garyho Scheinera, ktorá je veľmi užitočná.
 
-Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimise your ISF and ICR.
+Väčšina edukátorov diabetu 1. typu (aj ľudí s diabetom 1. typu!) sa zhoduje, že najprv treba správne nastaviť bazálne dávky a až potom optimalizovať ISF a ICR.
 
-### Impact
+### Vplyv
 
-Accurate basal rates enable you to wake up in range, and to skip meals - or eat - earlier or later in the day, without going high or low.
+Presné bazálne dávky vám umožnia zobudiť sa v rozsahu a vynechať jedlo – alebo sa najesť – skôr alebo neskôr počas dňa bez toho, aby ste mali vysokú alebo nízku glykémiu.
 
-Too high basal rate can lead to low BGs. And vice versa.
+Príliš vysoká bazálna dávka môže viesť k nízkej glykémii. A naopak.
 
-**AAPS** ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to **AAPS** giving more subsequent corrections than it should to bring IOB ultimately to zero.
+**AAPS** berie predvolenú bazálnu dávku ako základnú líniu. Ak je bazálna dávka príliš vysoká, „nulový dočasný bazál“ sa započíta ako väčší záporný IOB, než by mal. Preto **AAPS** následne podá viac korekcií, než by mal, aby IOB nakoniec vrátil na nulu.
 
-So, a basal rate too high will create low **BGs** both with the default rate, but also some hours hence as **AAPS** corrects to target.
+Príliš vysoká bazálna dávka teda spôsobí nízke **glykémie** nielen pri predvolenej dávke, ale aj o niekoľko hodín neskôr, keď **AAPS** koriguje k cieľu.
 
-Conversely, a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+Naopak, príliš nízka bazálna dávka môže viesť k vysokým glykémiám a k tomu, že sa hodnoty nepodarí znížiť na cieľ.
 
-### How to set it
+### Ako to nastaviť
 
-The **figure below** shows an example of how the basal rates can be set in an **AAPS** profile.
+**Obrázok nižšie** ukazuje príklad, ako možno nastaviť bazálne dávky v profile **AAPS**.
 
-![Basal rates](../images/Profile_BasalRates.png)
+![Bazálne dávky](../images/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetic team.
+Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetes team.
 
-There are basal testing methods which usually entails observing your basal rates and insulin needs during an <u>intermittent</u> fasting over a 24-hour period. Although you need to test your basal rates for the whole day, it is not recommended to fast during 24h straight. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast 3 times for 8 hours.
+Existujú metódy testovania bazálu, pri ktorých zvyčajne sledujete bazálne dávky a potrebu inzulínu počas <u>prerušovaného</u> hladovania v priebehu 24 hodín. Hoci potrebujete otestovať bazálne dávky pre celý deň, neodporúča sa hladovať 24 hodín v kuse. Telo totiž spúšťa kompenzačné mechanizmy, napríklad hormóny. Odporúčaný spôsob je hladovať v 3 rôznych dňoch, vždy počas 8 hodín.
 
-The recommended method is to suspend the loop (for safety you can set AAPS to [**LGS**](#KeyAapsFeatures-LGS) to avoid lows, as done for achieving [objective 6](#objectives-objective6)), which will revert to your default background basal rate. Observe how your **BG** changes: if it is dropping, basal rate is too high. And vice versa.<br/> An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If **IOB** is negative, your basal rate is too high. And vice versa. Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/> Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyze overnight BG lines in order to optimize your basal rates.
+Odporúčaná metóda je pozastaviť okruh (pre bezpečnosť môžete AAPS prepnúť do režimu Ochrana pred nízkou glykémiou ([**LGS**](#KeyAapsFeatures-LGS)), aby ste sa vyhli hypoglykémiám, ako pri plnení [cieľa 6](#objectives-objective6)). Tým sa vráti vaša predvolená bazálna dávka. Sledujte, ako sa mení vaša **glykémia**: ak klesá, bazálna dávka je príliš vysoká. A naopak.<br/> Alternatívna metóda (môže byť zložitejšia) je nechať okruh bežať a sledovať, ako sa mení **IOB**. Ak je hodnota **IOB** záporná, vaša bazálna dávka je príliš vysoká. A naopak. Majte na pamäti, že táto metóda sa pri korekcii **glykémie** spolieha na **ISF**, a preto je úspešná, len ak sú aj ostatné premenné nastavené rozumne dobre.<br/> Ďalší spôsob úpravy bazálnych dávok je sledovať činnosť okruhu v noci, keď sú už všetky COB vstrebané. Táto metóda je užitočná najmä pri deťoch, keď je hladovanie ťažké alebo sa potreba inzulínu často mení. [Dr. Saleh Adi z Tidepoolu](https://www.youtube.com/watch?v=-fpWnGRhLSo) ukazuje užitočné spôsoby, ako analyzovať nočné krivky glykémie a optimalizovať bazálne dávky.
 
-See [here](../GettingHelp/ProfileTuning.md) how to tweak your basal profile, analyzing patterns in closed loop.
+[Tu](../GettingHelp/ProfileTuning.md) nájdete, ako upraviť bazálny profil analýzou vzorcov v uzavretom okruhu.
 
-When taking action on the result of your basal testing, changes in the **Profile** should be done 1 to 2 hours (depends on your insulin type) before the rise/drop. Repeat the test as necessary until you are comfortable with your **basal rates** settings.
+Keď na základe výsledku testu bazálu robíte zmeny, upravte **profil** 1 až 2 hodiny (podľa typu inzulínu) pred vzostupom/poklesom. Opakujte test podľa potreby, kým nebudete spokojní s nastaveniami **bazálnych dávok**.
+
+(your-aaps-profile-basal-not-compatible)=
+#### Správa: „Bazál nie je kompatibilný s aktuálnou pumpou“
+
+Každá pumpa má limity: najnižšiu a najvyššiu bazálnu dávku, ktorú dokáže podať, a pri niektorých pumpách (napríklad Dana, Accu-Chek Combo, Medtronic a Diaconn G8) sa bazálne dávky môžu meniť len v celú hodinu. **AAPS** kontroluje váš profil voči pumpe, ktorú používate, **po** použití zvoleného percenta.
+
+Ak je niektorá bazálna dávka mimo týchto limitov, obrazovka **Aktivovať** zobrazí túto správu a tlačidlo **Aktivovať** zostane sivé:
+
+![Obrazovka Aktivovať so správou "Bazál nie je kompatibilný s aktuálnou pumpou"](../images/v4/Profiles/profile_activate_pump_incompatible.png)
+
+Napríklad pri bazálnej dávke 0,10 U/h v noci a percente profilu 35 % by **AAPS** musel podávať 0,035 U/h. To je menej, než dokáže podať pumpa Dana (0,04 U/h).
+
+Vyriešite to tak, že buď:
+
+* zvolíte iné percento: **vyššie**, ak je bazálna dávka príliš nízka, alebo **nižšie**, ak je bazálna dávka príliš vysoká, alebo
+* [upravíte profil](#your-aaps-profile-create-and-edit-profiles) a zmeníte bazálnu dávku.
+
+Editor profilu umožňuje začať bazálne dávky len v celú hodinu. Bazálna dávka, ktorá začína napr. o 06:30, môže pochádzať len zo staršieho profilu, napríklad po prechode na pumpu, ktorá to nepodporuje.
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 
-## Insulin sensitivity factor (ISF)
+## Faktor citlivosti na inzulín (ISF)
 
-### Description
+### Popis
 
-The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin.
+Faktor citlivosti na inzulín (niekedy nazývaný korekčný faktor) udáva, o koľko jedna jednotka inzulínu zníži vašu glykémiu.
 
-**In mg/dL units:** If you have an **ISF** of 40, each unit of insulin will reduce your blood glucose by approx. 40 mg/dL (for example, your blood glucose will fall from 140 mg/dL to 100 mg/dL).
+**V jednotkách mg/dl:** Ak máte **ISF** 40, každá jednotka inzulínu zníži vašu glykémiu o cca 40 mg/dl (napríklad glykémia klesne zo 140 mg/dl na 100 mg/dl).
 
-**In mmol/L units:** If you have an **ISF** of 1.5, each unit of insulin will reduce your blood glucose by approx. 1.5 mmol/L (for example from 8 mmol/L to 6.5 mmol/L).
+**V jednotkách mmol/l:** Ak máte **ISF** 1,5, každá jednotka inzulínu zníži glykémiu približne o 1,5 mmol/l (napríklad z 8 mmol/l na 6,5 mmol/l).
 
-From these examples you can see that the _smaller_ the **ISF** value, the less sensitive you are to insulin. So if you reduce your ISF from 40 to 35 (mg/dl) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dl) or 1.5 to 1.8 mmol/L) is weakening your **ISF**.
+Z týchto príkladov vidíte, že čím _menšia_ je hodnota **ISF**, tým menej ste citliví na inzulín. Ak teda znížite ISF zo 40 na 35 (mg/dl) alebo z 1,5 na 1,3 (mmol/l), často sa tomu hovorí posilnenie **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
 
-### Impact
+### Vplyv
 
-A **lower / stronger ISF** (i.e. 40 instead of 50) means insulin drops your **BG** less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If your **ISF** is too strong (small value), this can lead to low **BG**.
+**Nižší / silnejší ISF** (napr. 40 namiesto 50) znamená, že jedna jednotka inzulínu zníži vašu **glykémiu** menej. To vedie k agresívnejšej / silnejšej korekcii okruhu s **väčším množstvom inzulínu**. Ak je váš **ISF** príliš silný (malá hodnota), môže to viesť k nízkej **glykémii**.
 
-A **higher / weaker ISF** (i.e. 45 instead of 35) means insulin drops your **BG** more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If your **ISF** is too weak (large value), this can lead to high **BG**.
+**Vyšší / slabší ISF** (napr. 45 namiesto 35) znamená, že jedna jednotka inzulínu zníži vašu **glykémiu** viac. To vedie k menej agresívnej / slabšej korekcii okruhu s **menším množstvom inzulínu**. Ak je váš **ISF** príliš slabý (veľká hodnota), môže to viesť k vysokej **glykémii**.
 
 **Example:**
-* **BG** is 190 mg/dL (10,5 mmol/L) and target is 100 mg/dL (5,6 mmol/L).
-* So, you want a correction of `190 - 110 = 90 mg/dL` or `10,5 - 5,6 = 4.9 mmol/L`
-* If `ISF = 30` -> `90 / 30 = 3` or `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 units of insulin
-* If `ISF = 45` -> `90 / 45 = 2` or `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 units of insulin
+* **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
+* So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
+* Ak `ISF = 30` -> `90 / 30 = 3` alebo `ISF = 1,63` -> `4,9 / 1,63 = 3`: 3 jednotky inzulínu
+* Ak `ISF = 45` -> `90 / 45 = 2` alebo `ISF = 2,45` -> `4,9 / 2,45 = 2`: 2 jednotky inzulínu
 
-An **ISF** that is too low (and therefore more aggressive, not uncommon) can result in ‘over corrections’, because **AAPS** calculates that the user needs more insulin to correct a high **BG** than actually required. This can lead to ‘roller coaster’ BG levels (esp. when fasting), as shown on the image below. In this circumstance, the **ISF** value should be increased in order to make **AAPS** less aggressive. This will ensure **AAPS** delivers smaller correction doses, and avoid over-correcting a high **BG** resulting in a low **BG**.
+Príliš nízky **ISF** (a teda agresívnejší, čo nie je nezvyčajné) môže viesť k „nadmerným korekciám“, pretože **AAPS** vypočíta, že na korekciu vysokej **glykémie** potrebujete viac inzulínu, než je naozaj potrebné. To môže viesť ku glykémii ako na „horskej dráhe“ (najmä pri hladovaní), ako vidíte na obrázku nižšie. V takom prípade treba hodnotu **ISF** zvýšiť, aby bol **AAPS** menej agresívny. Tak **AAPS** podá menšie korekčné dávky a nebude nadmerne korigovať vysokú **glykémiu**, čo by viedlo k nízkej **glykémii**.
 
-![ISF too low](../images/isf.jpg)
+![Príliš nízky ISF](../images/isf.jpg)
 
-Conversely, an **ISF** set too high can result in under-corrections, meaning your **BG** remains above target – particularly noticeable overnight.
+Naopak, príliš vysoký **ISF** môže viesť k nedostatočným korekciám, takže vaša **glykémia** zostane nad cieľom – čo je viditeľné najmä v noci.
 
-### How to set it
+### Ako to nastaviť
 
-See the **figure below** for an example of how ISF values could be set in an **AAPS** profile.
+Na **obrázku nižšie** je príklad, ako možno nastaviť hodnoty ISF v profile **AAPS**.
 
-![Profile ISF](../images/Profile_ISF.png)
+![Profil ISF](../images/Profile_ISF.png)
 
-A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
+Základným východiskovým bodom na určenie denného ISF je odvodiť ho z celkovej dennej dávky (CDD) pomocou pravidla 1700 (94). Viac podrobností nájdete v 7. kapitole knihy [„Think like a Pancreas“](https://amzn.eu/d/iVU0RGe) od Garyho Scheinera.
 
-| 1700 (if measuring in mg/dl) or 94 (mmol/L)/ TDD = approx ISF.<br/><br/>Example: TDD = 40 U<br/>Approx ISF (mg/dl) = 1700/40 = 43<br/>Approx ISF (mmol/L) = 94/40 = 2.4 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                                                                                                                                                                                                 |
+| 1700 (ak meriate v mg/dl) alebo 94 (mmol/l) / CDD (TDD) = približný ISF.<br/><br/>Príklad: CDD = 40 U<br/>Približný ISF (mg/dl) = 1700/40 = 43<br/>Približný ISF (mmol/l) = 94/40 = 2,4 |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                                 |
 
-Assuming your basal levels are correct, you can test this by suspending the loop, checking **IOB** is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
+Ak máte správne bazálne dávky, môžete to otestovať tak, že pozastavíte okruh, skontrolujete, že **IOB** je nula, a zjete niekoľko glukózových tabliet, aby ste sa dostali na stabilnú „vysokú“ hladinu.
 
-Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
+Potom si podajte odhadované množstvo inzulínu (podľa aktuálneho 1/ISF), aby ste sa dostali na cieľovú glykémiu.
 
-Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
+Buďte opatrní, pretože táto hodnota je dosť často nastavená príliš nízko. Príliš nízka znamená, že 1 U zníži glykémiu rýchlejšie, než sa očakáva.
 
 (your-aaps-profile-insulin-to-carbs-ratio)=
 
-## Insulin to Carb ratio (ICR)
+## Inzulínovo-sacharidový pomer (ICR)
 
-### Description
+### Popis
 
-The **ICR** is a measure of how many grams of carbohydrate are covered by one unit of insulin.
+**ICR** udáva, koľko gramov sacharidov pokryje jedna jednotka inzulínu.
 
-Some people also use **I:C** as an abbreviation instead of **ICR**, or talk about carb ratio : **CR**.
+Niektorí ľudia používajú namiesto **ICR** aj skratku **I:C** alebo hovoria o sacharidovom pomere: **CR**.
 
-For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of insulin for every 10 grams of carbs eaten. A meal of 25g carbs would need 2.5U of insulin.
+Napríklad inzulínovo-sacharidový pomer 1 ku 10 (1:10) znamená, že si podáte 1 U inzulínu na každých 10 gramov zjedených sacharidov. Jedlo s 25 g sacharidov by potrebovalo 2,5 U inzulínu.
 
-If your **ICR** is weaker (higher value), perhaps 1:20, you would only need 0.5U of insulin to cover 10 g of carbs. A meal of 25g of carbs would need 25/20 = 1.25U of insulin.
+Ak je váš **ICR** slabší (vyššia hodnota), napríklad 1:20, na pokrytie 10 g sacharidov budete potrebovať iba 0,5 U inzulínu. Jedlo s 25 g sacharidov by potrebovalo 25/20 = 1,25 U inzulínu.
 
-It is common to have different **ICR** at different times of day due to hormone levels and physical activity. Many people find they have their lowest/strongest **ICR** around breakfast time because they tend to be more insulin resistant. So, for example, one adult user's **ICR** could be 1:8 for breakfast, 1:10 for lunch and 1:10 for dinner, but these patterns are not universal, and some people are more insulin resistant at dinner time, and require a stronger/smaller **ICR** then.
+Je bežné mať v rôznych častiach dňa rôzny **ICR**, a to v dôsledku hladín hormónov a fyzickej aktivity. Mnohí ľudia zistia, že najnižší / najsilnejší **ICR** majú okolo raňajok, pretože vtedy bývajú rezistentnejší voči inzulínu. Napríklad **ICR** dospelého používateľa môže byť 1:8 na raňajky, 1:10 na obed a 1:10 na večeru. Tieto vzorce však nie sú univerzálne: niektorí ľudia sú rezistentnejší voči inzulínu pri večeri a vtedy potrebujú silnejší / menší **ICR**.
 
-> **NOTE:**
+> **POZNÁMKA:**
 > 
-> In some European countries bread units were used for determination of how much insulin is needed for food. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
+> V niektorých európskych krajinách sa na určenie množstva inzulínu potrebného na pokrytie jedla používali chlebové jednotky. Spočiatku sa 1 chlebová jednotka rovnala 12 g sacharidov, neskôr niektorí prešli na 10 g sacharidov.
 > 
-> In this model the amount of carbs was fixed and the amount of insulin was variable. ("How much insulin is needed to cover one bread unit?")
+> V tomto modeli bolo množstvo sacharidov fixné a množstvo inzulínu bolo variabilné. („Koľko inzulínu treba na pokrytie jednej chlebovej jednotky?“)
 > 
-> When using **ICR** the amount of insulin is fixed and the amount of carbs is variable. ("How many g of carbs can be covered by one unit of insulin?")
+> Pri **ICR** je množstvo inzulínu pevné a množstvo sacharidov sa mení. („Koľko g sacharidov dokáže pokryť jedna jednotka inzulínu?“)
 > 
 > Example:
 > 
-> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
+> Faktor chlebovej jednotky (BU = 12 g sacharidov): 2,4 U/BU -> Keď zjete jednu chlebovú jednotku, potrebujete 2,4 jednotky inzulínu.
 > 
-> Corresponding **ICR**: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
+> Zodpovedajúci **ICR**: 12 g / 2,4 U = 5,0 g/U -> Jednou jednotkou inzulínu sa dá pokryť 5,0 g sacharidov.
 > 
-> BU factor 2,4 U / 12g   ===>   IC = 12g / 2,4 U = 5,0 g/U
+> Faktor BU 2,4 U / 12 g   ===>   IC = 12 g / 2,4 U = 5,0 g/U
 > 
-> Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Prevodové tabuľky sú dostupné online, napr. [tu](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
-### Impact
+### Vplyv
 
-A **lower / stronger ICR** means less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’. If your IC is too strong, you are getting too much insulin, this can lead to low **BGs**.
+**Nižší / silnejší ICR** znamená menej jedla na jednotku, t. j. na pevné množstvo sacharidov dostávate viac inzulínu. Dá sa nazvať aj „agresívnejším“. Ak je váš IC príliš silný, dostávate príliš veľa inzulínu a to môže viesť k nízkym **glykémiám**.
 
-A **higher / weaker ICR** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’. If your IC is too weak, you are getting less insulin than you need, this can lead to high **BGs**.
+**Vyšší / slabší ICR** = viac jedla na jednotku, t. j. na pevné množstvo sacharidov dostávate menej inzulínu. Dá sa nazvať aj „menej agresívnym“. Ak je váš IC príliš slabý, dostávate menej inzulínu, než potrebujete, a to môže viesť k vysokým **glykémiám**.
 
-### How to set it
+### Ako to nastaviť
 
-The **figure below** shows an example of a user's **ICR** and how it can be set in an **AAPS Profile**. When entering these values, we just enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
+**Obrázok nižšie** ukazuje príklad **ICR** používateľa a ako ho možno nastaviť v **profile AAPS**. Pri zadávaní týchto hodnôt sa zadáva len posledná časť pomeru, takže inzulínovo-sacharidový pomer 1:3,5 zadáte jednoducho ako „3,5“.
 
-![Profile ICR](../images/Profile_ICR.png)
+![Profil ICR](../images/Profile_ICR.png)
 
-If after a meal has been digested and the **IOB** has returned to zero, your **BG** remains higher than before food, chances are your **ICR** is too weak (_i.e._ the number is too high and should be gradually lowered). Conversely, if your **BG** is lower than before food, **ICR** is too strong (_i.e._ the number is too small and should be gradually increased).
+Ak po strávení jedla a návrate **IOB** na nulu zostáva vaša **glykémia** vyššia ako pred jedlom, váš **ICR** je pravdepodobne príliš slabý (_t. j._ číslo je príliš vysoké a treba ho postupne znižovať). Naopak, ak je vaša **glykémia** nižšia ako pred jedlom, **ICR** je príliš silný (_t. j._ číslo je príliš malé a treba ho postupne zvyšovať).
 
-Assuming your basal rates are correct, you can test by checking if **IOB** is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food you normally eat at that time of day and count its carbs precisely.
+Ak máte správne bazálne dávky, môžete to otestovať takto: skontrolujte, že **IOB** je nula a glykémia je v rozsahu, zjedzte presne známe množstvo sacharidov a podajte si odhadované množstvo inzulínu podľa aktuálneho inzulínovo-sacharidového pomeru. Najlepšie je zjesť jedlo, ktoré v tomto čase dňa bežne jete, a presne spočítať jeho sacharidy.
 
-## Common questions related to the Profile
+## Bežné otázky týkajúce sa profilu
 
 ```{contents} Common questions related to the Profile
 :depth: 1
 :local: true
 ```
 
-### About the importance of getting your profile right
+### Prečo je správne nastavenie profilu také dôležité
 
-**Why should I try to get my profile settings right? Can’t the loop just take care of it?**
+**Prečo by som sa mal snažiť o správne nastavenie profilu? Nemôže sa o to jednoducho postarať okruh?**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimise poor glycemic control that results from having incorrect **Profile** values. It can do this, for example, by withholding insulin delivery if you are going to hypo. However, you can achieve much better glycemic control if your **Profile** settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
+Hybridný uzavretý okruh _sa môže_ pokúsiť upraviť podávanie inzulínu tak, aby zmiernil zlú kontrolu glykémie spôsobenú nesprávnymi hodnotami **profilu**. Môže to urobiť napríklad zastavením podávania inzulínu, ak idete do hypoglykémie. Oveľa lepšiu kontrolu glykémie však dosiahnete, ak sú nastavenia vášho **profilu** už čo najbližšie tomu, čo vaše telo potrebuje. To je jeden z dôvodov, prečo **AAPS** používa postupné ciele na prechod od liečby pumpou bez okruhu k hybridnému uzavretému okruhu. Okrem toho budú chvíle, keď budete musieť okruh otvoriť (zahrievanie senzora, porucha senzora _atď._), niekedy aj uprostred noci, a pre tieto situácie budete chcieť mať správne nastavenia.
 
-If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (**BR**), insulin sensitivity factors (**ISF**) and insulin-to-carb ratios (**ICR**).
+Ak začínate s **AAPS** po inom systéme s otvoreným alebo uzavretým okruhom, už budete mať dobrú predstavu, aké hodnoty použiť pre bazálne dávky (**BR**), faktory citlivosti na inzulín (**ISF**) a inzulínovo-sacharidové pomery (**ICR**).
 
-If you are moving from injections (MDI) to **AAPS**, then it is a good idea to read up on how to make the transfer from MDI to pump first, and plan and make the move carefully in consultation with your diabetes team. ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts and [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner are very useful.
+Ak prechádzate z injekcií (MDI) na **AAPS**, je dobré si najprv prečítať, ako prejsť z MDI na pumpu, a prechod starostlivo naplánovať a urobiť po dohode s vaším lekárskym tímom. [„Pumping insulin“](https://amzn.eu/d/iaCsFa2) od Johna Walsha a Ruth Robertsovej a [„Think like a Pancreas“](https://amzn.eu/d/iVU0RGe) od Garyho Scheinera sú veľmi užitočné knihy.
 
-### What causes high postprandial peaks in closed loop?
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your **BG** is falling to reach your target after carbs are fully absorbed, try to set an 'eating soon' temp target in **AAPS** some time before the meal or think about an appropriate pre-bolus time with your endocrinologist. <br/> If your **BG** is too high after the meal and still too high after carbs are fully absorbed, consider decreasing your **ICR** with your endocrinologist. If your **BG** is too high while **COB** and too low after carbs are fully absorbed, think about increasing your **ICR** and an appropriate pre-bolus time with your endocrinologist.
+### Čo spôsobuje vysoké vrcholy glykémie po jedle v uzavretom okruhu?
+Najprv skontrolujte bazálnu dávku a urobte test bazálu bez sacharidov. Ak je správny a vaša **glykémia** po úplnom vstrebaní sacharidov klesá k cieľu, skúste nejaký čas pred jedlom nastaviť v **AAPS** dočasný cieľ „Pred jedlom“ alebo sa so svojím diabetológom poraďte o vhodnom čase predbolusu. <br/> Ak je vaša **glykémia** po jedle príliš vysoká a zostáva príliš vysoká aj po úplnom vstrebaní sacharidov, zvážte so svojím endokrinológom zníženie **ICR**. Ak je vaša **glykémia** príliš vysoká, kým sú aktívne sacharidy (**COB**), a príliš nízka po úplnom vstrebaní sacharidov, poraďte sa so svojím diabetológom o zvýšení **ICR** a o vhodnom čase predbolusu.
 
-### I'm stuck high and the loop does not bring me down
-The possible reasons for **AAPS** not giving enough insulin are:
-* **ISF** is not strong enough
-* Basal might not be strong enough
-* A security setting might kick in, such as **maxIOB**. Or **SMB** is disabled at this time, depending on your settings.
-* Automation has been set up and has overridden **AAPS**.
+### Mám dlho vysokú glykémiu a okruh ju neznižuje
+Možné dôvody, prečo **AAPS** nepodáva dostatok inzulínu, sú:
+* **ISF** nie je dostatočne silný
+* Bazálna dávka možno nie je dostatočne silná
+* Môže zasahovať bezpečnostné nastavenie, napríklad **maxIOB**. Alebo je **SMB** v tomto čase podľa vašich nastavení vypnutý.
+* Je nastavená automatizácia, ktorá prepísala rozhodnutie **AAPS**.
 
-### I have negative IOB, is this an issue ?
-Negative **IOB** means the amount of absolute insulin (basal + bolus) in your body is less than the basal. It will cause **AAPS** to send more insulin as soon as the **BG** starts to rise, because it considers that insulin is missing, which can result in low **BG** later.
+Pozrite si aj [Ladenie profilu AAPS](../GettingHelp/ProfileTuning.md).
 
-Here are some reasons why you may have negative IOB, and what action to take:
-* a too strong basal: tweak your **Profile**
-* too much bolus at the previous meal: tweak your **Profile** or check if you are bolusing at the right time.
-* DIA too short, resulting in insulin stacking: tweak your **Profile**
-* physical activity: next time, consider using a lower [Profile percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) during activity to account for increased sensitivity.
+### Mám záporný IOB, je to problém?
+Záporný **IOB** znamená, že celkové množstvo inzulínu (bazál + bolus) vo vašom tele je menšie ako pri samotnom bazále. Spôsobí, že **AAPS** podá viac inzulínu hneď, ako **glykémia** začne stúpať, pretože si myslí, že inzulín chýba. To môže neskôr viesť k nízkej **glykémii**.
 
-## Manage your Profiles
+Tu je niekoľko dôvodov, prečo môžete mať záporný IOB, a čo s tým robiť:
+* príliš silný bazál: upravte svoj **profil**
+* príliš veľký bolus pri predchádzajúcom jedle: upravte svoj **profil** alebo skontrolujte, či podávate bolus v správnom čase.
+* DIA je pre váš typ inzulínu nastavená príliš krátko, takže sa inzulín hromadí: upravte ju v [Spravovať → Nastavenia inzulínu](#Config-Builder-insulin-dia)
+* fyzická aktivita: nabudúce zvážte zníženie [percenta profilu](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) počas aktivity, aby ste zohľadnili zvýšenú citlivosť.
+
+## Správa profilov
 
 ```{contents} Operations that you can perform on your **Profiles** in **AAPS**
 :depth: 1
 :local: true
 ```
 (your-aaps-profile-create-and-edit-profiles)=
-### Create and edit Profiles
+### Vytvorenie a úprava profilov
 
-The **Profile** tab can be found from the top menu or hamburger menu, depending on your [Config Builder settings](../SettingUpAaps/ConfigBuilder.md).
+V **AAPS** v4 nájdete svoje profily na obrazovke **Spravovať** (spodná navigácia) → **Profil**. Zobrazujú sa ako karty, medzi ktorými sa posúvate potiahnutím, s panelom akcií (**➕ Pridať**, **✏️ Upraviť**, **⧉ Klonovať**, **🗑️ Vymazať**, **▶ Aktivovať**). Ako spravovať a aktivovať profil, nájdete v časti [Správa a aktivácia profilov](#ProfileSwitch-manage-v4). Prechádzate z **AAPS** v3, kde mali profily vlastnú kartu? Pozrite si [Čo sa zmenilo v AAPS v4](#v4changes-manage).
 
-![Local Profile buttons](../images/LocalProfile_Settings.png)
+Ťuknutím na **✏️ Upraviť** otvoríte editor. Nastavte **názov** a **jednotky** profilu a potom na kartách vyplňte štyri časové plány:
 
-Buttons:
+- **I:C** — inzulínovo-sacharidový pomer (g/U)
+- **ISF** — faktor citlivosti na inzulín
+- **BAZ** — bazálne dávky
+- **CIEĽ** — cieľový rozsah
 
-- green plus: add
-- red X: delete
-- blue arrow: duplicate
+![Editor profilu – karty I:C / ISF / BAZ / CIEĽ](../images/setup-wizard/Wizard-Profile-IC.png)
 
-If you make any changes to your **Profile**, make sure you are editing the correct **Profile**. The **Profile** tab may not always show the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen, it may differ from the profile actually shown in profile tab as there is no connection between these.
+Každý časový plán je zoznam **časových blokov**: pridajte blok, nastavte jeho čas začiatku a hodnotu a potom ťuknite na **Uložiť**.
+
+Ak meníte svoj **profil**, uistite sa, že upravujete správny **profil**: karta používaného profilu je označená **AKTÍVNY**, ale karta vybratá na obrazovke môže byť iná.
 
 (your-aaps-profile-profile-from-scratch-for-a-kid)=
-### Build a Profile from scratch for a kid
+### Vytvorenie profilu pre dieťa od začiatku
 
-The [Profile Helper](#aaps-screens-profile-helper) tab may help you to create a profile for a child (up to 18 years).
+[Pomocník s profilom](#aaps-screens-profile-helper) (menu ☰ → **Pomocník s profilom**) vám môže pomôcť vytvoriť profil pre dieťa (do 18 rokov).
 
-**Important note:**
+**Dôležitá poznámka:**
 
-**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
+**Pomocník s profilom vám má pomôcť nájsť počiatočný profil pre vaše dieťa. Hoci vychádza zo súborov údajov dvoch rôznych nemocníc, pred použitím nového profilu sa vždy poraďte so svojím lekárskym tímom!**
 
-Profile helper offers data sets from two different hospitals for children to find initial profile for your kid up to 18 years.
+Pomocník s profilom ponúka súbory údajov pre deti z dvoch rôznych nemocníc, aby ste našli počiatočný profil pre vaše dieťa do 18 rokov.
 
-![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
+![Pomocník s profilom pre deti 1](../images/ProfileHelperKids1.png)
 
-1. Make sure you are in **Profile 1**.
-2. In **Profile type**, make sure you have "Default profile" selected.
-3. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
-4. Change screen by clicking on **Profile 2** on the right.
-5. Press **Profile type** and select "DPV Default profile".
-6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
-7. Press the button **Compare profiles** at the bottom of the screen. Comparison of the two adjusted profiles will be displayed (see screenshot below).
-8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button either from **Profile 1** ou **Profile 2**.
+1. Uistite sa, že ste na karte **Profil 1**.
+2. V poli **Typ profilu** sa uistite, že je vybraté „Predvolený profil“.
+3. Upravte predvolený profil (založený na súbore údajov nemocnice) zadaním veku dieťaťa a buď CDD celkom, **alebo** hmotnosti.
+4. Prepnite na kartu **Profil 2**.
+5. Ťuknite na **Typ profilu** a vyberte „Predvolený DPV profil“.
+6. Upravte predvolený DPV profil (založený na súbore údajov inej nemocnice) zadaním veku dieťaťa, CDD celkom a percenta bazálu. Súbor údajov DPV obsahuje iba **bazálne dávky**, preto sú IC a ISF pri tomto profile zobrazené ako nula.
+7. Otvorte kartu **Porovnanie**. Zobrazí sa porovnanie oboch upravených profilov (pozrite snímku obrazovky nižšie).
+8. Ak chcete začať ladiť svoj profil podľa jedného z týchto návrhov, použite tlačidlo **Klonovať** pod porovnaním.
 
-![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
+![Pomocník s profilom pre deti 2](../images/ProfileHelperKids2.png)
 
-### Switch Profile
+### Prepnutie profilu
 
-See [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Pozrite si [Prepnutie profilu a percento profilu](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
 (your-aaps-profile-clone-profile-switch)=
-### Clone a Profile switch to a new Profile
+### Klonovanie prepnutia profilu do nového profilu
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Prepnutie profilu](../images/TreatmentsView4.png)
 
-The [Treatments](#aaps-screens-treatments) tab shows all past **Profile Switches**. When going to the **Profile Switch** sub-tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
+[História ošetrení](#aaps-screens-treatments) zobrazuje všetky minulé **prepnutia profilu**. Na karte **Prepnutie profilu** môžete minulé **prepnutie profilu** použiť ako základ na vytvorenie nového **profilu**. V tomto prípade sa na nový lokálny profil aplikuje časový posun a percento profilu. Použite tlačidlo **Klonovať** v riadku **2**.
 
-You can now go to the [Profile tab](#your-aaps-profile-create-and-edit-profiles) to edit the newly created Profile.
+Teraz môžete prejsť na [obrazovku Profil](#your-aaps-profile-create-and-edit-profiles) (**Spravovať → Profil**) a upraviť novovytvorený profil.
 
 (YourAapsProfile_Profile-backup)=
-### Profile backup
+### Záloha profilu
 
-Being a core setting of your looping system, your **Profiles** are highly sensitive and something you really don't want to lose.
+Vaše **profily** sú základným nastavením vášho okruhu. Sú to veľmi citlivé údaje a určite o ne nechcete prísť.
 
-* Your **Profiles** are stored in the **AAPS** database.
-* If enabled, **Profiles** are also uploaded to Nightscout. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Upload data to NS](#Preferences-nsclient).
+* Vaše **profily** sú uložené v databáze **AAPS**.
+* Keď je nastavený **NSClientV3** (pozrite [Synchronizácia](#SetupWizard-synchronization-with-the-reporting-server-and-more)), vaše **profily** sa automaticky nahrávajú aj do Nightscoutu.
+* Sú tiež súčasťou [exportovaných nastavení](../Maintenance/ExportImportSettings.md). Preto sa uistite, že máte zálohu na bezpečnom mieste.
 
-![Backup Profile Nightscout](../images/LocalProfile_UploadNS_AASP30.png)
+### Úprava profilov v Nightscoute
 
-* They are also part of [exported settings](../Maintenance/ExportImportSettings.md). So make sure to have a backup in a safe place.
+Ak je to povolené, **AAPS** môže prijímať zmeny **profilu** urobené priamo v Nightscoute. Nastavenie sa volá „**Prijímať úložisko profilov z NS**“ a je súčasťou možností **Prijímanie dát z Nightscoutu** (prijímanie dát z Nightscoutu je predvolene vypnuté, pozrite [krok Ovládanie z klienta v Sprievodcovi nastavením](../SettingUpAaps/SetupWizard.md)); rýchlo ho nájdete cez **vyhľadávacie pole** na hlavnej obrazovke. Kým je ovládanie z klienta zapnuté, nastavenie je skryté a **AAPS** neprijíma z Nightscoutu žiadne zmeny profilu ([režim zvýšeného zabezpečenia](#client-master-control-hardened-mode)). Profil namiesto toho upravte v spárovanom klientovi alebo ho raz načítajte pomocou **Úplná synchronizácia**.
 
-### Editing Profiles from Nightscout
+To môže pomôcť, keď sa chystáte urobiť veľké zmeny v rozsiahlejšom **profile**. Cez webové rozhranie sa dajú zadať jednoduchšie, _napr._ keď ich ručne kopírujete z tabuľky.
 
-If enabled, **Profile** changes made directly in Nightscout can  be received in **AAPS**. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Receive profile store](#Preferences-nsclient).
+Na to je však dôležité klonovať celý **záznam databázy**, ktorý obsahuje viac profilov, v editore Nightscoutu (modrá šípka na snímke obrazovky nižšie). Nové záznamy databázy potom majú aktuálny dátum. Po uložení môžete zmenený/nový **profil** aktivovať v **AAPS** bežným [prepnutím profilu](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-This can be helpful when about to make major changes to a more extensive **Profile**. They can be entered more easily via the web interface, _e.g._ to manually copy data from a spreadsheet.
-
-To do this, however, it is important to clone the whole **database record** consisting of several profiles in the Nightscout editor (blue arrow on the screenshot below). The new database records then carries the current date. After saving, the changed/new **Profile** can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-
-![Clone database records](../images/Nightscout_Profile_Editor.PNG)
+![Klonovanie záznamov databázy](../images/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
-### Compare two Profiles
+### Porovnanie dvoch profilov
 
-You can use the [Profile Helper](#aaps-screens-profile-helper) tab also to compare two different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
+Na porovnanie dvoch rôznych profilov alebo prepnutí profilu (percento jedného z vašich profilov, ktoré ste predtým použili v [prepnutí profilu](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)) môžete použiť aj [Pomocníka s profilom](#aaps-screens-profile-helper) (menu ☰ → **Pomocník s profilom**).
 
-![Profile Helper 1](../images/ProfileHelper1.png)
+![Pomocník s profilom 1](../images/ProfileHelper1.png)
 
-1. Make sure you are in **Profile 1**.
-2. In **Profile type**, select "Available profile" to choose between all stored **Profiles**.
-3. Choose the **Profile** you want to compare from.
-4. Change screen by clicking on **Profile 2** on the right.
-5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profiles Switched**.
-6. Choose the **Profile Switch** you want to compare to.
-7. Press the button **Compare profiles** at the bottom of the screen. Comparison of the two adjusted profiles will be displayed (see screenshot below).
+1. Uistite sa, že ste na karte **Profil 1**.
+2. V poli **Typ profilu** vyberte „Dostupný profil“, aby ste mohli vyberať zo všetkých uložených **profilov**.
+3. Vyberte **profil**, ktorý chcete porovnať.
+4. Prepnite na kartu **Profil 2**.
+5. V poli **Typ profilu** vyberte „Prepnutie profilu“, aby ste mohli vyberať z histórie všetkých svojich **prepnutí profilu**.
+6. Vyberte **prepnutie profilu**, s ktorým ho chcete porovnať.
+7. Otvorte kartu **Porovnanie**. Zobrazí sa porovnanie oboch profilov (pozrite snímku obrazovky nižšie).
 
-![Profile Helper 2](../images/ProfileHelper2.png)
+![Pomocník s profilom 2](../images/ProfileHelper2.png)

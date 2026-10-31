@@ -1,27 +1,36 @@
 # Telefóny
 
-The current version of **AAPS** (3.4) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), **Android 16 is preferred**, Android 15 is not recommended.
+<!-- List of hidden pages to avoid overcrowding the menu -->
+
+```{toctree}
+:hidden:
+
+../CompatiblePhones/Jelly.md
+../CompatiblePhones/Huawei.md
+```
+
+Aktuálna verzia aplikácie **AAPS** (4.0) vyžaduje smartfón so systémom **Android 12.0 alebo novším**. Ak uvažujete o kúpe nového telefónu, (k januáru 2026) **uprednostnite Android 16**, Android 15 sa neodporúča.
 
 Najnovšie aktualizácie k tejto téme nájdete na [Facebooku alebo Discorde](../GettingHelp/WhereCanIGetHelp.md).
 
-Používateľom sa dôrazne odporúča, aby si z bezpečnostných dôvodov udržiavali svoju verziu **AAPS** aktuálnu. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+Používateľom sa dôrazne odporúča, aby si z bezpečnostných dôvodov udržiavali svoju verziu **AAPS** aktuálnu. Pre používateľov, ktorí nemôžu používať zariadenie so systémom Android 12.0 alebo novším, sú však stále k dispozícii staršie verzie **AAPS** kompatibilné so staršími verziami Androidu, pozrite: [Poznámky k vydaniu](#maintenance-android-version-aaps-version).
 
 - [Nastavenia Jelly Pro](../CompatiblePhones/Jelly.md)
 - [Nastavenia Huawei](../CompatiblePhones/Huawei.md)
 
 (Phones-list-of-tested-phones)=
 
-## Zoznam testovaných Telefónov
+## Zoznam testovaných telefónov
 
-We maintain a list of the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) that you can [explore with a friendly interface](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/). Contribute by filling out the [Google form](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) and adding your setup!
+Vedieme zoznam [otestovaných zostáv hardvéru](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true), ktorý si môžete [prezrieť v prívetivom rozhraní](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/). Prispejte vyplnením [formulára Google](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) a pridajte svoju zostavu!
 
 Tento zoznam poskytuje spätnú väzbu od používateľov o používaní telefónu spolu s **AAPS** a danou pumpou a CGM. Môže vám pomôcť skontrolovať, či váš telefón/pumpu/systém CGM úspešne používajú iní používatelia.
 
-The document is read-only. With CRTL-F, you can search in the text of the Google sheet.
+Dokument je iba na čítanie. Pomocou CTRL-F môžete hľadať v texte tabuľky Google.
 
-Ak chcete zaznamenať test vašej konfigurácie, vyplňte tento [formulár](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Po vyplnení údajov vo formulári sa hárok automaticky aktualizuje každých 5 minút
+Ak chcete zaznamenať test vašej konfigurácie, vyplňte tento [formulár](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Po vyplnení údajov vo formulári sa hárok automaticky aktualizuje každých 5 minút.
 
-V prípade akýchkoľvek problémov s tabuľkou kontaktujte jej správcu, *@theodoor5137*, na Discorde alebo si pozrite sekciu [Kde môžem získať pomoc? stránka](../GettingHelp/WhereCanIGetHelp.md).
+V prípade akýchkoľvek problémov s tabuľkou kontaktujte jej správcu, *@theodoor5137*, na Discorde, alebo si pozrite stránku [Kde môžem získať pomoc? ](../GettingHelp/WhereCanIGetHelp.md).
 
 ## Nenašiel som svoj telefón
 
@@ -31,7 +40,7 @@ Ak chcete poskytnúť smartfóny alebo inteligentné hodinky, ktoré je stále p
 
 (Phones-phone-wallpaper)=
 
-## Tapeta telefónu
+## Tapeta na telefón
 
 Ak si chcete ozdobiť telefón **AAPS**, môžete si stiahnuť obrázok na pozadie [tu](../images/bg_phone.jpg)!
 

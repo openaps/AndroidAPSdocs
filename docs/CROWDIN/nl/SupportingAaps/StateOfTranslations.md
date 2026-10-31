@@ -1,26 +1,26 @@
-# state of translation for app and the documentation
+# Status van de vertaling van de app en de documentatie
 
-The state is once per hour updated and reflects only the state in Crowdin.
+De status wordt eens per uur bijgewerkt en toont alleen de status in Crowdin.
 
 ```{tip}
-Be careful the percentage of proofreading must be lower then the percentage of translations but they decided to show it on top of the translations.
-It's better to look only at the percentage level of translations to see if work is to be done.
+Let op: het percentage proeflezen moet lager zijn dan het percentage vertaling, maar het wordt boven op de vertalingen getoond.
+Kijk liever alleen naar het percentage vertaling om te zien of er nog werk te doen is.
 ```
 
 ```{admonition} needed time for final publication
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+Na de vertaling in Crowdin is er elke dag een synchronisatie naar GitHub gepland. Die zet de vertalingen als pull request (PR) op GitHub.
 
-The acceptance of the PR is a manual task which will be done es fast as possible.
+Het accepteren van de PR gebeurt met de hand en zo snel mogelijk.
 ```
 
-## state app translation
+## status vertaling app
 
-State of the **app** translations per language (country code, percentage translation, percentage proofreading).
+Status van de **app** vertalingen per taal (landcode, percentage vertaling, percentage proeflezen).
 
-![state app translation](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
+![status vertaling app](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
-## state documentation translation
+## status vertaling documentatie
 
-State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
+Status van de **documentatie** vertalingen per taal (landcode, percentage vertaling, percentage proeflezen).
 
-![state documentation translation](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
+![status vertaling documentatie](https://badges.awesome-crowdin.com/translation-13588158-310610.png)

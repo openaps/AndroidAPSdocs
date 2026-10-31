@@ -136,7 +136,7 @@ You will need all three if you ever build AAPS another way, e.g. with Android St
 
    Du bekommst „Page not found“ (404)? Prüfe zuerst, ob Du in diesem Browser bei github.com angemeldet bist: Bei privaten Repositorys zeigt GitHub 404 an, wenn Du nicht angemeldet bist. Andernfalls passen Benutzername oder Repository-Name aus Schritt 1 nicht zu Deinem Repository. Prüfe sie auf github.com und gib sie in Schritt 1 richtig ein. Stattdessen hat sich die GitHub-App geöffnet? Tippe auf „RUN WORKFLOW“, prüfe Version und Variante und tippe noch einmal auf „RUN WORKFLOW“. Zeigt die App weiterhin „Nothing to see here“, zieh die Liste nach unten, um Deinen Build zu sehen.
 2. Falls Du gefragt wirst, klicke auf die grüne Schaltfläche, um Workflows zu aktivieren.
-3. Klicke auf „Run workflow“ und dann auf die grüne Schaltfläche „Run workflow“. „latest“ erstellt die neueste AAPS-Version.
+3. Klicke auf „Run workflow“ und dann auf die grüne Schaltfläche „Run workflow“. „latest“ erstellt die neueste AAPS-Version. ***tip:*** *you can build another version by typing its [tag](https://github.com/nightscout/AndroidAPS/tags) name instead of "latest"*
 4. Warte etwa 15–30 Minuten. Ein grünes Häkchen bedeutet, dass der Build fertig ist.
 Du möchtest eine E-Mail, wenn der Build fertig ist? GitHub schickt Dir nur dann eine E-Mail, wenn ein Build fehlschlägt. Damit Du auch bei Erfolg eine bekommst: Öffne auf github.com Dein Profilbild → Settings → Notifications → System → Actions und entferne das Häkchen bei „Only notify for failed workflows“.
 

@@ -1,793 +1,773 @@
-# AAPS screens
+# Οθόνες του AAPS
 
 ```{contents}
 :backlinks: entry
 :depth: 2
 ```
 
-(AapsScreens-the-homescreen)=
+(the-homescreen)= (AapsScreens-the-homescreen)=
 
-## The Homescreen
+## Η κύρια οθόνη
 
-![Homescreen V2.7](../images/Home_Homescreen.png)
+![Κύρια οθόνη](../images/Home_Homescreen.png)
 
-This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
+Αυτή είναι η πρώτη οθόνη που βλέπετε όταν ανοίγετε το **AAPS** και περιέχει τις περισσότερες πληροφορίες που χρειάζεστε καθημερινά.
 
-### Section A - Tabs
+### Ενότητα A - Πάνω γραμμή
 
-* Navigate between the various **AAPS** modules.
-* Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
+* Το **μενού** (☰) αριστερά ανοίγει το πλευρικό μενού με **Ιστορικό θεραπειών**, **Εξερεύνηση ιστορικού**, **Στατιστικά**, **Βοηθός ρύθμισης προφίλ**, **Συντήρηση**, **Οδηγός εγκατάστασης**, **Διαμόρφωση** και άλλα.
+* Η **γραμμή αναζήτησης** βρίσκει ρυθμίσεις, διαλόγους και τεκμηρίωση — απλώς αρχίστε να πληκτρολογείτε (δείτε [Καθολική αναζήτηση](../DailyLifeWithAaps/GlobalSearch.md)).
+* Το εικονίδιο **Ρυθμίσεις** (γρανάζι) δεξιά ανοίγει όλες τις [ρυθμίσεις](../SettingUpAaps/Preferences.md).
 
 (aaps-screens-profile--target)=
 
-### Section B - Profile & target
+### Ενότητα B - Περιοχή κατάστασης
 
-#### Current Profile
+#### Τρέχουσα γλυκόζη αίματος
 
-The current profile is displayed in the left bar.
+Η τελευταία τιμή γλυκόζης αίματος από το CGM σας εμφανίζεται στον μεγάλο κύκλο αριστερά, μαζί με τη διαφορά από την προηγούμενη τιμή (delta) και την ηλικία της τιμής.
 
-Short press profile bar to view profile details. Long press profile bar to [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Το χρώμα της τιμής BG δείχνει την κατάσταση σε σχέση με το ορισμένο [εύρος](#Preferences-range-for-visualization).
 
-![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+* πράσινο = εντός εύρους
+* κόκκινο = κάτω από το εύρος
+* κίτρινο = πάνω από το εύρος
 
-1. Regular display with a standard profile activation.
-2. Profile switch with a remaining duration of 59mn.
-3. Profile switch with a specific percentage of 120%.
-4. Profile switch with a specific percentage of 80% and a remaining duration of 59 mn.
-5. Profile switch with a time shift of -1 hour.
-6. Profile switch with a specific percentage of 120%, time shift of 1 hour, and a remaining duration of 59mn.
+![Κύκλος BG εντός εύρους, πράσινος](../images/Home_Delta.png) ![Κύκλος BG πάνω από το εύρος, κίτρινος](../images/Home_Delta_high.png) ![Κύκλος BG κάτω από το εύρος, κόκκινος](../images/Home_Delta_low.png)
 
-#### Target
+(loop-status)= (AapsScreens-loop-status)=
 
-![Temp target remaining duration](../images/Home2020_TT.png)
+#### Κατάσταση κυκλώματος
 
-Current target blood glucose level is displayed in the right bar.
+![Κατάσταση κυκλώματος](../images/Home2020_LoopStatus.png)
 
-Short press target bar to set a **[Temporary Target](../DailyLifeWithAaps/TempTargets.md)**.
+Δίπλα στον κύκλο BG, ένα εικονίδιο δείχνει τον τρόπο λειτουργίας του κυκλώματος (από πάνω προς τα κάτω στην εικόνα):
 
-If a temp target is set, the bar turns yellow and the remaining time in minutes is shown in brackets.
+1. Πράσινος κύκλος = [κλειστό κύκλωμα](#KeyAapsFeatures-ClosedLoop), το κύκλωμα λειτουργεί
+2. Μωβ κύκλος με διακεκομμένη γραμμή = [αναστολή λόγω χαμηλής γλυκόζης (LGS)](#KeyAapsFeatures-LGS)
+3. Μπλε κύκλος με διακεκομμένη γραμμή = [ανοιχτό κύκλωμα](#KeyAapsFeatures-OpenLoop)
+4. Κόκκινος κύκλος με σταυρό = το κύκλωμα είναι απενεργοποιημένο (δεν λειτουργεί μόνιμα)
+5. Κόκκινο εικονίδιο παύσης = το κύκλωμα είναι σε αναστολή (προσωρινή παύση, αλλά ο βασικός ρυθμός χορηγείται) - ο υπόλοιπος χρόνος εμφανίζεται δίπλα στο εικονίδιο
+6. Γκρι κύκλος με βύσμα = η αντλία είναι αποσυνδεδεμένη (προσωρινά καμία χορήγηση ινσουλίνης) - ο υπόλοιπος χρόνος εμφανίζεται δίπλα στο εικονίδιο
 
-(AapsScreens-visualization-of-dynamic-target-adjustment)=
+Πατήστε το εικονίδιο για να ανοίξει ο διάλογος του κυκλώματος. Το περιεχόμενο του διαλόγου εξαρτάται από την τρέχουσα κατάσταση:
 
-#### Visualization of Dynamic target adjustment
+* Όταν το κύκλωμα **λειτουργεί** (κλειστό, ανοιχτό ή LGS), μπορείτε να αλλάξετε τον τρόπο λειτουργίας (Κλειστό Κύκλωμα, Αναστολή Χαμηλής Γλυκόζης, Ανοιχτό Κύκλωμα ή Απενεργοποιήστε κύκλωμα), να κάνετε **αναστολή** του κυκλώματος ή να κάνετε **αποσύνδεση** της αντλίας για μια διάρκεια που επιλέγετε.
+* Όταν το κύκλωμα είναι **απενεργοποιημένο**, μπορείτε να το ενεργοποιήσετε ξανά επιλέγοντας έναν τρόπο λειτουργίας ή να αποσυνδέσετε την αντλία.
+* Όταν το κύκλωμα είναι **σε αναστολή**, μπορείτε να το **συνεχίσετε**, να αποσυνδέσετε την αντλία ή να επιλέξετε νέα διάρκεια στο **Αναστολή κυκλώματος** για να παρατείνετε την αναστολή.
+* Όταν η αντλία είναι **αποσυνδεδεμένη**, μπορείτε να κάνετε **επανασύνδεση** της αντλίας ή να επιλέξετε νέα διάρκεια στο **Αποσύνδεση αντλίας** για να παρατείνετε την αποσύνδεση.
 
-![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+Όταν παρατείνετε μια αναστολή ή μια αποσύνδεση, η νέα διάρκεια **ξεκινά από τώρα**: αντικαθιστά τον υπόλοιπο χρόνο, δεν προστίθεται σε αυτόν. Δεν χρειάζεται να κάνετε πρώτα συνέχιση ή επανασύνδεση.
 
-When using the [SMB algorithm](#Config-Builder-aps) and [Autosens](#Open-APS-features-autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity.
+Ο διάλογος όταν το κύκλωμα λειτουργεί ως κλειστό κύκλωμα:
 
-Enable either one or both of the following options in [Preferences > OpenAPS SMB settings](#Preferences-openaps-smb-settings):
+![Διάλογος κυκλώματος σε κλειστό κύκλωμα](../images/loop/loop_dialog_closed_loop.png)
 
-     * "sensitivity raises target" and/or 
-     * "resistance lowers target" 
+Ο διάλογος όταν το κύκλωμα είναι σε αναστολή, με **Συνέχιση** και τις διάρκειες για παράταση της αναστολής:
+
+![Διάλογος κυκλώματος όταν το κύκλωμα είναι σε αναστολή](../images/loop/loop_dialog_suspended.png)
+
+Ο διάλογος όταν η αντλία είναι αποσυνδεδεμένη, με **Επανασύνδεση αντλίας** και τις διάρκειες για παράταση της αποσύνδεσης:
+
+![Διάλογος κυκλώματος όταν η αντλία είναι αποσυνδεδεμένη](../images/loop/loop_dialog_disconnected.png)
+
+Ο διάλογος σε Αναστολή Χαμηλής Γλυκόζης, σε ανοιχτό κύκλωμα και όταν το κύκλωμα είναι απενεργοποιημένο διαφέρει μόνο στους τρόπους λειτουργίας που προσφέρει:
+
+![Διάλογος κυκλώματος σε Αναστολή Χαμηλής Γλυκόζης](../images/loop/loop_dialog_lgs.png)
+
+![Διάλογος κυκλώματος σε ανοιχτό κύκλωμα](../images/loop/loop_dialog_open_loop.png)
+
+![Διάλογος κυκλώματος όταν το κύκλωμα είναι απενεργοποιημένο](../images/loop/loop_dialog_disabled.png)
+
+Έτσι φαίνεται η κύρια οθόνη σε κάθε τρόπο λειτουργίας. Η χρωματιστή λωρίδα στο πάνω μέρος του γραφήματος αλλάζει τη στιγμή της αλλαγής.
+
+Αναστολή Χαμηλής Γλυκόζης:
+
+![Κύρια οθόνη σε Αναστολή Χαμηλής Γλυκόζης](../images/main/main_screen_loop_lgs.png)
+
+Ανοιχτό κύκλωμα:
+
+![Κύρια οθόνη σε ανοιχτό κύκλωμα](../images/main/main_screen_loop_open.png)
+
+Κύκλωμα απενεργοποιημένο:
+
+![Κύρια οθόνη με απενεργοποιημένο κύκλωμα](../images/main/main_screen_loop_disabled.png)
+
+Κύκλωμα σε αναστολή — ο υπόλοιπος χρόνος εμφανίζεται δίπλα στο εικονίδιο:
+
+![Κύρια οθόνη με το κύκλωμα σε αναστολή](../images/main/main_screen_loop_suspended.png)
+
+Αντλία αποσυνδεδεμένη — ο υπόλοιπος χρόνος εμφανίζεται δίπλα στο εικονίδιο. Τα κουμπιά θεραπειών μένουν στη γραμμή εργαλείων QuickLaunch, ώστε να μπορείτε ακόμη να καταγράψετε ινσουλίνη που δώσατε με πένα ή υδατάνθρακες:
+
+![Κύρια οθόνη με την αντλία αποσυνδεδεμένη](../images/main/main_screen_pump_disconnected.png)
+
+Μετά από κάθε επιλογή χρειάζεται επιβεβαίωση.
+
+```{admonition} Συναγερμός: η αντλία δεν δέχτηκε τον μηδενικό προσωρινό βασικό ρυθμό :class: warning Όσο η αντλία είναι αποσυνδεδεμένη, το **AAPS** διατηρεί έναν μηδενικό προσωρινό βασικό ρυθμό στην αντλία και τον ορίζει ξανά αν λείπει. Αν αυτό αποτυγχάνει ακόμη μετά από 10 λεπτά, το **AAPS** δίνει επείγοντα συναγερμό: *"Η αντλία δεν δέχτηκε τον μηδενικό προσωρινό βασικό ρυθμό. Μπορεί να χορηγεί ακόμα βασική ινσουλίνη. Ελέγξτε την αντλία."* Ο συναγερμός επαναλαμβάνεται κάθε 15 λεπτά μέχρι να οριστεί ο μηδενικός προσωρινός βασικός ρυθμός ή να τελειώσει η αποσύνδεση. Αν τον δείτε, ελέγξτε την αντλία σας: μπορεί να χορηγεί βασική ινσουλίνη, παρόλο που το **AAPS** τη δείχνει ως αποσυνδεδεμένη.
+
+    <br />Σημείωση: οι τρόποι λειτουργίας που προσφέρονται εξαρτώνται από την πρόοδό σας στα [Βήματα](../SettingUpAaps/CompletingTheObjectives.md) — το Κλειστό Κύκλωμα και το LGS γίνονται διαθέσιμα μόνο καθώς ολοκληρώνετε τα βήματα.
     
-
-If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile. When it alters the target glucose, the background will change to green.
-
-(AapsScreens-section-c-bg-loop-status)=
-
-### Section C - BG & loop status
-
-#### Current blood glucose
-
-The latest blood glucose reading from your CGM is shown on the left side.
-
-The color of the BG value reflects the status to the defined [range](#Preferences-range-for-visualization).
-
-     * green = in range
-     * red = below range
-     * yellow = above range 
+    (aaps-screens-bg-warning-sign)=
+    #### Σήμα προειδοποίησης BG
     
-
-![Deltas](../images/Home_Delta.png)
-
-The blocks in the middle shows:
-
-1. how many minutes since last **CGM** reading
-2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
-  Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
-
-(AapsScreens-loop-status)=
-
-#### Loop status
-
-![Loop status](../images/Home2020_LoopStatus.png)
-
-On the right side, an icon shows the loop status:
-
-1. Green circle = [closed loop](#KeyAapsFeatures-ClosedLoop), loop running
-2. Purple circle with dotted line = [low glucose suspend (LGS)](#KeyAapsFeatures-LGS)
-3. Red circle = loop disabled (not working permanently)
-4. Red circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-5. Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-6. Orange circle = super bolus running - remaining time is shown below icon
-7. Blue circle with dotted line = [open loop](#KeyAapsFeatures-OpenLoop)
-
-Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
-
-     * If short press on Loop icon, a validation is required after selection in Loop Dialog
+    Αν το **AAPS** ανιχνεύσει πρόβλημα με τις τιμές BG που λαμβάνει, μια συντόμευση προς την πηγή BG σας (με το όνομά της, για παράδειγμα **xDrip+ BG**) εμφανίζεται στην κάτω γραμμή της κύριας οθόνης, με ένα κόκκινο σήμα προειδοποίησης. Πατήστε τη για να ανοίξει η [οθόνη της πηγής BG](#aaps-screens-bg-source).
     
-     ![Loop status menu](../images/Home2020_Loop_Dialog.png)
+    ##### Διπλά δεδομένα BG
     
-
-(aaps-screens-bg-warning-sign)=
-
-#### BG warning sign
-
-If for any reason, there are issues in the BG readings **AAPS** receives, you will get a warning signal beneath your BG number on the main screen.
-
-##### Red warning sign: Duplicate BG data
-
-The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which does avoid the loop to do its work right. Therefore, your loop will be disabled until it is resolved.
-
-    {admonition} Your loop is not running
+    Το κόκκινο σήμα προειδοποίησης σάς λέει να ενεργήσετε αμέσως: λαμβάνετε **διπλά δεδομένα BG**, και αυτό εμποδίζει το κύκλωμα να κάνει σωστά τη δουλειά του. Το **AAPS** δεν μπορεί να υπολογίσει αξιόπιστα την τάση της BG από διπλές τιμές, γι' αυτό σταματά τις διορθώσεις.
+    
+    Αν το κύκλωμά σας ήταν κλειστό, το **AAPS** το αλλάζει σε [Αναστολή Χαμηλής Γλυκόζης (LGS)](#KeyAapsFeatures-LGS): το εικονίδιο του κυκλώματος γίνεται μωβ.
+    
+      ![Διπλά δεδομένα BG: εικονίδιο κυκλώματος LGS και η συντόμευση πηγής BG με κόκκινο σήμα προειδοποίησης](../images/bg_warn_red.png)
+    
+    Πατήστε το εικονίδιο του κυκλώματος: η κάρτα **Περιορισμοί** στο πάνω μέρος σάς λέει τον λόγο: "BgQualityCheck: Λειτουργία LGS λόγω διπλών τιμών στην πηγή γλυκόζης".
+    
+      ![Διάλογος τρόπου λειτουργίας: LGS λόγω διπλών τιμών](../images/main/bg_doubled_constraint.png)
+    
+    ```{admonition} Το κύκλωμά σας λειτουργεί σε Αναστολή Χαμηλής Γλυκόζης
     :class: note
-    Your loop is not running until you solve this issue !
-
-    ![Red BG warning](../images/bg_warn_red.png)
+    Το κύκλωμά σας συνεχίζει να λειτουργεί, αλλά μόνο για να σας προστατεύει από υπογλυκαιμίες: το **AAPS** μπορεί ακόμη να μειώσει ή να αναστείλει τον βασικό ρυθμό σας, αλλά δεν θα δώσει καμία ινσουλίνη διόρθωσης μέχρι να λύσετε αυτό το πρόβλημα!
     
 
 Θα πρέπει να βρείτε γιατί παίρνετε διπλά δεδομένα γλυκόζης αίματος:
 
-* Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (Για το heroku [λεπτομέρειες μπορείτε να βρείτε εδώ](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
-* Do multiple sources upload your BG to Nightscout? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip+, if you use that.
-* Do you have any followers that might receive your BG but do also upload it again to your Nightscout site?
-* Last resort: In **AAPS**, go to [Preferences > NSClient](#Preferences-nsclient), select the sync settings and disable the "Accept CGM data from NS" option.
+* Είναι ενεργοποιημένο το Dexcom bridge στον ιστότοπο Nightscout σας; Απενεργοποιήστε το bridge από τον πίνακα διαχείρισης (administration panel) του Nightscout σας: επεξεργαστείτε τη μεταβλητή "enable" και αφαιρέστε από εκεί το "bridge". (Για το heroku [λεπτομέρειες θα βρείτε εδώ](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* Στέλνουν πολλές πηγές τις τιμές BG σας στο Nightscout; Αν χρησιμοποιείτε την εφαρμογή BYODA, ενεργοποιήστε την αποστολή στο **AAPS**, αλλά μην την ενεργοποιήσετε στο xDrip, αν το χρησιμοποιείτε.
+* Έχετε ακόλουθους (followers) που λαμβάνουν τις τιμές BG σας αλλά τις στέλνουν και ξανά στον ιστότοπο Nightscout σας;
+* Τελευταία λύση: Στις [ρυθμίσεις του NSClient](#Preferences-nsclient), επιλέξτε τις ρυθμίσεις Συγχρονισμού και απενεργοποιήστε την επιλογή "Λήψη δεδομένων CGM από το NS".
 
-To remove the warning immediately and get to loop running again, you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
+Για να φύγει αμέσως η προειδοποίηση και να ξαναρχίσει το κύκλωμα τις διορθώσεις, διαγράψτε τις διπλές εγγραφές από την οθόνη της πηγής BG: πατήστε τη συντόμευση στην κάτω γραμμή. Η διπλή τιμή εμφανίζεται με κόκκινο χρώμα. Πατήστε παρατεταμένα μια τιμή για να ξεκινήσει η επιλογή, σημειώστε τις διπλές τιμές και πατήστε το εικονίδιο του κάδου πάνω δεξιά.
+
+![Οθόνη πηγής BG: διπλές τιμές επιλεγμένες για διαγραφή](../images/main/bg_source_delete_duplicates.png)
 
 Ωστόσο, όταν υπάρχουν πολλές διπλές καταχωρήσεις, μπορεί να είναι ευκολότερο να
 
-* [backup your settings](../Maintenance/ExportImportSettings.md),
+* [να κάνετε αντίγραφο ασφαλείας των ρυθμίσεών σας](../Maintenance/ExportImportSettings.md),
 * να επαναφέρετε τη βάση δεδομένων στο μενού συντήρησης και
-* [import your settings](../Maintenance/ExportImportSettings.md) again
+* [να εισαγάγετε τις ρυθμίσεις σας](../Maintenance/ExportImportSettings.md) ξανά
 
-##### Κίτρινο προειδοποιητικό σημάδι
+    {admonition} Επιστρέψτε μόνοι σας σε Κλειστό Κύκλωμα
+    :class: important
+    Το **AAPS** δεν επιστρέφει μόνο του σε **Κλειστό Κύκλωμα** όταν φύγουν οι διπλές τιμές. Πατήστε το εικονίδιο του κυκλώματος στην κύρια οθόνη και επιλέξτε ξανά **Κλειστό Κύκλωμα**.
 
-The yellow warning signal is indicating that your BG arrived in irregular time intervals or that some BGs are missing. When pressing the sign, the message indicates “Recalculated data used”.
+##### Σταθερά δεδομένα BG
 
-    ![Yellow BG warning](../images/bg_warn_yellow.png)
-    
+Με ορισμένες πηγές BG (Libre 1, AiDEX, Glutec, Medtronic και πηγές που δεν αναφέρουν τον τύπο του αισθητήρα τους), το **AAPS** ελέγχει επίσης για τιμές που δεν αλλάζουν: αν η BG σας άλλαξε λιγότερο από 2 mg/dl (0,1 mmol/l) σε 45 λεπτά, τα δεδομένα θεωρούνται λάθος. Τότε η συντόμευση της πηγής BG δείχνει ένα κόκκινο σήμα σταθερής τάσης, και το κύκλωμα σταματά κάθε υψηλό προσωρινό βασικό ρυθμό και δεν δίνει ινσουλίνη διόρθωσης μέχρι να αλλάξουν ξανά οι τιμές. Ελέγξτε τον αισθητήρα σας και την εφαρμογή που στέλνει τις τιμές.
 
-Συνήθως δεν χρειάζεται να κάνετε κάτι. Το κλειστό κύκλωμα θα συνεχίσει να λειτουργεί!
+##### Ακανόνιστα δεδομένα BG
 
-As a sensor change is interrupting the constant flow of BG data, a yellow warning sign after sensor change is normal and nothing to worry about.
+Όταν οι τιμές έρχονται σε ακανόνιστα διαστήματα ή κάποιες λείπουν, το **AAPS** υπολογίζει ξανά τιμές ανά 5 λεπτά από τις τιμές που έχει. Αυτό συμβαίνει για παράδειγμα μετά από αλλαγή αισθητήρα ή με αισθητήρες Libre, των οποίων ο χρονισμός μετακινείται ένα ή δύο λεπτά κάθε λίγες ώρες. Το κύκλωμα συνεχίζει να λειτουργεί και δεν χρειάζεται να κάνετε τίποτα. Το **AAPS** 4 δεν εμφανίζει πλέον κίτρινο σήμα προειδοποίησης για αυτό.
 
-Special note for Libre users:
+#### Τρέχον Προφίλ
 
-* Όλα τα libre χάνουν ένα ή δύο λεπτά κάθε λίγες ώρες, πράγμα που σημαίνει ότι δεν έχετε ποτέ μια τέλεια ροή κανονικών χρονικών διαστημάτων γλυκόζης αίματος.
-* Also, jumpy readings interrupt the continuous flow.
-* Therefore, the yellow warning sign will be 'always on' for Libre users.
+Το τρέχον προφίλ εμφανίζεται δίπλα στο εικονίδιο με το αστέρι.
 
-*Note*: Up to 30h hours are taken into accord for **AAPS** calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
+Πατήστε το όνομα του προφίλ για να ανοίξει η [οθόνη Προφίλ](#aaps-screens-profile), όπου μπορείτε να δείτε τις λεπτομέρειες του προφίλ και να [αλλάξετε μεταξύ διαφορετικών προφίλ](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-#### Simple mode
+Για να **αλλάξετε το ποσοστό του προφίλ** (και τη διάρκειά του), πατήστε το όνομα του προφίλ και μετά πατήστε το στρογγυλό κουμπί **▶** (Ενεργοποίηση) κάτω δεξιά στην οθόνη Προφίλ. Στο **AAPS** 3.x αυτή η οθόνη άνοιγε με παρατεταμένο πάτημα στο όνομα του προφίλ· στο **AAPS** 4 το παρατεταμένο πάτημα δεν κάνει τίποτα. Βήμα προς βήμα: [Αλλαγή του ποσοστού προφίλ](#ProfileSwitch-change-percentage).
 
-An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
+![Προφίλ με ενεργή αλλαγή προφίλ](../images/Home2020_ProfileSwitch.png)
 
-![Home2020_SimpleMode.png](../images/Home2020_SimpleMode.png)
+1. Κανονική εμφάνιση με ενεργοποίηση ενός τυπικού προφίλ.
+2. Αλλαγή προφίλ με ποσοστό 90% και υπόλοιπη διάρκεια 9 λεπτά — το όνομα του προφίλ γίνεται κίτρινο όσο τρέχει μια προσωρινή αλλαγή προφίλ.
+3. Αλλαγή προφίλ με χρονική μετατόπιση 1 ώρας και υπόλοιπη διάρκεια 9 λεπτά.
 
-### Section D - IOB, COB, BR and AS
+#### Στόχος
 
-![Ενότητα Δ](../images/Home2020_TBR.png)
+![Υπολειπόμενη διάρκεια προσωρινού στόχου](../images/Home2020_TT.png)
 
-1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
-  The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses.
-  
-  * IOB may be negative if there have recently been periods of reduced basal.
-  * Πιέστε το εικονίδιο για να δείτε το διαχωρισμό της γευματικής και της βασικής ινσουλίνης
+Ο τρέχων στόχος γλυκόζης αίματος εμφανίζεται κάτω από το όνομα του προφίλ.
 
-2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before The icon pulses red if carbs are required (see [below](#aaps-screens-carbs-required))
+Πατήστε σύντομα τον στόχο για να ανοίξει η οθόνη **[Προσωρινός στόχος](../DailyLifeWithAaps/TempTargets.md)**.
 
-3. **Purple line**: current basal rate. The icon changes to reflect temporary changes in basal rate (flat at 100%) 
-  * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
-4. **Arrows up & down**: indicates dynamic sensitivity features status ([Autosens](#Open-APS-features-autosens) or [DynamicISF](#Open-APS-features-DynamicISF)): enabled or disabled. Several values may be shown in this section: 
-  * AS: Autosens value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
-  * Alg: DynamicISF value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
+1. Κανονική εμφάνιση: το εύρος στόχου που ορίζεται στο προφίλ σας.
+2. Αν έχει οριστεί προσωρινός στόχος, ο στόχος γίνεται κίτρινος/πορτοκαλί με το εικονίδιο της προεπιλογής που χρησιμοποιήθηκε, και ο υπόλοιπος χρόνος σε λεπτά εμφανίζεται σε παρένθεση.
+
+(AapsScreens-visualization-of-dynamic-target-adjustment)=
+
+#### Εμφάνιση της δυναμικής προσαρμογής στόχου
+
+Όταν χρησιμοποιείτε τον [αλγόριθμο SMB](#Config-Builder-aps) και τη λειτουργία [Autosens](#Open-APS-features-autosens), το **AAPS** μπορεί να προσαρμόζει δυναμικά τον στόχο σας με βάση την ευαισθησία.
+
+Ενεργοποιήστε μία ή και τις δύο από τις παρακάτω επιλογές στις [ρυθμίσεις OpenAPS SMB](#Preferences-openaps-smb-settings):
+
+* "Η ευαισθησία ανεβάζει τον στόχο" και/ή
+* "Η αντίσταση χαμηλώνει τον στόχο"
+
+Αν το **AAPS** ανιχνεύσει αντίσταση ή ευαισθησία, ο στόχος θα αλλάξει από αυτόν που ορίζει το προφίλ, και ο στόχος που εμφανίζεται αλλάζει χρώμα για να δείξει την προσαρμογή.
+
+(aaps-screens-iob-cob-basal-sens)=
+
+#### IOB, COB, βασικός ρυθμός και ευαισθησία
+
+![IOB, COB, βασικός ρυθμός και ευαισθησία](../images/Home2020_TBR.png)
+
+1. **Σύριγγα**: ινσουλίνη στον οργανισμό (IOB) - ποσότητα ενεργής ινσουλίνης στο σώμα σας  
+    Η τιμή της ινσουλίνης στον οργανισμό θα ήταν μηδέν αν έτρεχε μόνο ο κανονικός βασικός ρυθμός σας και δεν υπήρχε υπόλοιπο ινσουλίνης από προηγούμενα bolus. 
+    * Το IOB μπορεί να είναι αρνητικό αν πρόσφατα υπήρξαν περίοδοι μειωμένου βασικού ρυθμού.
+    * Πατήστε το chip για να δείτε τον διαχωρισμό σε ινσουλίνη bolus και βασικού ρυθμού (πρώτος διάλογος στην εικόνα — εδώ με αρνητικό IOB μετά από περίοδο μειωμένου βασικού ρυθμού)
+2. **Κόκκος**: [υδατάνθρακες στον οργανισμό (COB)](../DailyLifeWithAaps/CobCalculation.md) - υδατάνθρακες που φάγατε πριν και δεν έχουν απορροφηθεί ακόμη
+3. Το γαλαζοπράσινο κουμπί δεξιά δείχνει την **τρέχουσα χορήγηση βασικού ρυθμού**: επίπεδη γραμμή όταν τρέχει ο βασικός ρυθμός του προφίλ, αλλαγμένο εικονίδιο όσο είναι ενεργός ένας προσωρινός βασικός ρυθμός
+4. Η **γραμμή ποσοστού** δείχνει την τρέχουσα ευαισθησία ([Autosens](#Open-APS-features-autosens) / [Δυναμική ISF](../DailyLifeWithAaps/DynamicISF.md)). Όταν το κύκλωμα αλλάζει το ISF σας, η γραμμή δείχνει επίσης το ISF του προφίλ, ένα βέλος και το ISF που χρησιμοποιεί τώρα το κύκλωμα, για παράδειγμα «80% 2,0 ↗ 2,5». Πατήστε την για να δείτε την τιμή Autosens και το πραγματικό ISF (δεύτερος διάλογος στην εικόνα). Αν το κύκλωμα δουλεύει με διαφορετική τιμή από το τελευταίο αποτέλεσμα του Autosens (για παράδειγμα επειδή ένας προσωρινός στόχος αλλάζει την ευαισθησία σας), ο διάλογος δείχνει επίσης αυτή την τιμή ως **Autosens σε αλγόριθμο**. Όταν το Autosens είναι απενεργοποιημένο, το κύκλωμα κρατά το ISF του προφίλ σας και δεν εμφανίζεται πραγματικό ISF.
+
+Ο διάλογος IOB, που ανοίγει όταν πατήσετε το chip IOB:
+
+![Διάλογος IOB με IOB από bolus και IOB από βασικό ρυθμό](../images/main/main_chip_iob.png)
+
+Πατήστε το γαλαζοπράσινο κουμπί για να δείτε τον προσωρινό βασικό ρυθμό που τρέχει, πότε ξεκίνησε και πόση ώρα τρέχει:
+
+![Διάλογος προσωρινού βασικού ρυθμού](../images/main/main_chip_temp_basal.png)
 
 (aaps-screens-carbs-required)=
 
 #### Απαιτούνται υδατάνθρακες
 
-![Απαιτούνται υδατάνθρακες](../images/Home2020_CarbsRequired.png)
+![Απαιτούμενοι υδατάνθρακες στο chip COB](../images/main/main_screen_carbs_required.png)
 
 Οι προτάσεις υδατανθράκων δίνονται όταν το πλάνο αναφοράς ανιχνεύει ότι απαιτούνται υδατάνθρακες.
 
-This is when the oref algorithm thinks it can't rescue you by zero-temping, and you will need carbs to fix.
+Αυτό συμβαίνει όταν ο αλγόριθμος oref κρίνει ότι δεν μπορεί να σας προστατέψει με μηδενικό βασικό (zero temp) και θα χρειαστείτε υδατάνθρακες για να το διορθώσετε.
 
-Οι ειδοποιήσεις υδατανθράκων είναι πολύ πιο εξελιγμένες από αυτές του υπολογιστή γεματικής δόσης. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
+Οι ειδοποιήσεις υδατανθράκων είναι πολύ πιο εξελιγμένες από αυτές του υπολογιστή bolus. Μπορεί να δείτε πρόταση υδατανθράκων ενώ ο υπολογιστής bolus δεν δείχνει υδατάνθρακες που λείπουν.
 
-Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+Οι ειδοποιήσεις για ανάγκη υδατανθράκων μπορούν να προωθηθούν στο Nightscout αν το επιθυμείτε, οπότε και θα εμφανιστεί και θα μεταδοθεί μια ανακοίνωση.
 
-### Section E - Status lights
+### Ενότητα C - Γραμμή κατάστασης
 
-![Section E](../images/Home2020_StatusLights.png)
+![Γραμμή κατάστασης](../images/Home2020_StatusLights.png)
 
-Status lights give a visual warning for
+Η γραμμή κατάστασης δίνει οπτική προειδοποίηση για
 
-* Cannula age
-* Insulin age (days reservoir is used)
-* Reservoir level (units)
-* Sensor age
-* Battery age and level (%)
+* Ηλικία καθετήρα
+* Ηλικία ινσουλίνης (ημέρες χρήσης της δεξαμενής) και επίπεδο δεξαμενής (μονάδες)
+* Ηλικία αισθητήρα
+* Ηλικία και επίπεδο μπαταρίας αντλίας (%)
 
-If threshold warning is exceeded, values will be shown in yellow.
+Εάν υπάρχει υπέρβαση του ορίου προειδοποίησης, οι τιμές θα εμφανίζονται με κίτρινο χρώμα.
 
-If threshold critical is exceeded, values will be shown in red.
+Αν ξεπεραστεί το κρίσιμο όριο, οι τιμές εμφανίζονται με κόκκινο χρώμα.
 
-Settings can be changed in [Preferences > Overview > Status lights](#Preferences-status-lights).
+Τα όρια αλλάζουν από το μικρό εικονίδιο **Ρυθμίσεις** που εμφανίζεται όταν η γραμμή κατάστασης είναι **ανοιγμένη** (βέλος δεξιά) — δείτε [Ενδείξεις κατάστασης](#Preferences-status-lights).
 
-Depending on the pump you use, you may not have all of these icons.
+Η ανοιγμένη περιοχή κατάστασης έχει επίσης ένα κουμπί στο τέλος ορισμένων γραμμών για να καταγράψετε μια αλλαγή, που μηδενίζει την αντίστοιχη ηλικία: το **Προσθήκη** στη γραμμή **Αισθητήρας** καταγράφει την τοποθέτηση αισθητήρα. Αν η αντλία σας το υποστηρίζει, το **Πλήρωση/Γέμισμα** εμφανίζεται στις γραμμές **Καθετήρας** (ή **Αυτοκόλλητη αντλία**) και **Ινσουλίνη**, και το **Προσθήκη** στη γραμμή **Μπαταρία αντλίας**.
+
+![Ανοιγμένη περιοχή κατάστασης με Πλήρωση/Γέμισμα στις γραμμές Καθετήρας και Ινσουλίνη και Προσθήκη στις γραμμές Αισθητήρας και Μπαταρία αντλίας](../images/main/main_status_row_expanded.png)
+
+Ανάλογα με την αντλία που χρησιμοποιείτε, μπορεί να μην έχετε όλα αυτά τα εικονίδια.
+
+(screens-sensor-level-battery)=
+
+#### Επίπεδο αισθητήρα (μπαταρία)
+
+Λειτουργεί για CGM με πρόσθετο πομπό, όπως το MiaoMiao 2. (Τεχνικά, ο αισθητήρας πρέπει να στέλνει πληροφορίες για το επίπεδο μπαταρίας στο xDrip.)
+
+Τα όρια ορίζονται στις [Ενδείξεις κατάστασης](#Preferences-status-lights).
 
 (aaps-screens-main-graph)=
 
-### Section F - Main graph
+### Ενότητα D - Κύριο γράφημα
 
-![Section F](../images/Home2020_MainGraph.png)
+![Κύριο γράφημα](../images/main/main_graph.png)
 
-The graph shows your blood glucose (BG) as read from your glucose monitor (CGM).
+Το γράφημα δείχνει τη γλυκόζη αίματος (BG) όπως τη μετράει ο μετρητής γλυκόζης σας (CGM).
 
-Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. You can choose between 6, 12, 18 or 24 hours.
+Χρησιμοποιήστε κύλιση και τσίμπημα (pinch-zoom) στο γράφημα για να αλλάξετε το χρονικό διάστημα που φαίνεται.
 
-The green area reflects your target range.
+Η πράσινη περιοχή δείχνει το εύρος στόχου σας.
 
-This information is also shown on this graph :
+Αυτές οι πληροφορίες εμφανίζονται επίσης σε αυτό το γράφημα:
 
-* Boluses: blue triangle on the BG curve and insulin amount
-* Carbs entries: orange triangle on the BG curve and carb amount
-* Target as defined in the profile or modified by temporary target: green line
-* Profile switches: star at the top of the graph
-* Loop status: color line at the top of the graph when the status is anything else than closed loop - see [Loop status](#AapsScreens-loop-status) for the colors
-* [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings): blue triangles at the bottom of the graph
+* Χειροκίνητα bolus: μπλε τρίγωνο ακριβώς πάνω από την καμπύλη BG, που δείχνει προς τα κάτω στην τιμή εκείνης της στιγμής, με την ποσότητα ινσουλίνης
+* Καταχωρήσεις υδατανθράκων: πορτοκαλί τρίγωνο ακριβώς κάτω από την καμπύλη BG, που δείχνει προς τα πάνω στην τιμή, με την ποσότητα υδατανθράκων. Ένα γεύμα που καταχωρήθηκε μαζί με το bolus του φαίνεται σαν ένα σημάδι, που χωρίζεται από την τιμή.
+* Τα τρίγωνα έχουν τρία μεγέθη (μικρό, μεσαίο, μεγάλο), ανάλογα με την ποσότητα σε σύγκριση με τη μεγαλύτερη της ημέρας. Αν δεν υπάρχει τιμή BG εκείνη τη στιγμή (κενό αισθητήρα), το τρίγωνο σχεδιάζεται στο κάτω μέρος του γραφήματος.
+* Έλεγχοι BG και βαθμονομήσεις: σχεδιάζονται στη δική τους μετρημένη τιμή, ώστε να τις συγκρίνετε με την καμπύλη του αισθητήρα
+* Στόχος όπως ορίζεται στο προφίλ ή όπως άλλαξε από προσωρινό στόχο: πράσινη γραμμή
+* Αλλαγές προφίλ: εικονίδια αστεριού στο πάνω μέρος του γραφήματος
+* Κατάσταση κυκλώματος: χρωματιστή λωρίδα στο πάνω μέρος του γραφήματος όταν ο [τρόπος λειτουργίας](#AapsScreens-loop-status) είναι οτιδήποτε άλλο εκτός από κλειστό κύκλωμα: μπλε = ανοιχτό κύκλωμα, μωβ = LGS, κόκκινο = απενεργοποιημένο κύκλωμα, κίτρινο = κύκλωμα σε αναστολή, γκρι = αντλία αποσυνδεδεμένη, πορτοκαλί = superbolus (στο στιγμιότυπο: μωβ και μετά κίτρινο). Το ιστορικό αυτών των αλλαγών εμφανίζεται στο [Τρόπος λειτουργίας](#AapsScreens-running-mode)
+* Τα [SMB](#Open-APS-features-super-micro-bolus-smb) δεν σχεδιάζονται στο γράφημα BG (θα υπήρχε ένα κάθε λίγα λεπτά): εμφανίζονται στο [γράφημα IOB](#aaps-screens-iob).
+
+Πατήστε έναν **Έλεγχο BG** στο γράφημα για να δείτε την τιμή του και τη σημείωσή του, αν γράψατε μία.
+
+(aaps-screens-graph-press-and-hold)=
+
+#### Δείτε τις τιμές σε μια συγκεκριμένη στιγμή
+
+**Πατήστε παρατεταμένα** το γράφημα BG για λίγο για να δείτε τις τιμές σε μια μέτρηση. Μια τελεία δείχνει την πιο κοντινή μέτρηση, μια διακεκομμένη γραμμή σχεδιάζεται σε εκείνη τη στιγμή σε όλα τα γραφήματα και ένα αναδυόμενο παράθυρο στο πάνω μέρος του γραφήματος δείχνει:
+
+* την ώρα και την τιμή BG
+* IOB, COB (μόνο όταν είναι πάνω από 0 g) και τον βασικό ρυθμό εκείνη τη στιγμή — το εικονίδιο βασικού ρυθμού δείχνει αν έτρεχε προσωρινός βασικός ρυθμός, όπως στην κύρια οθόνη
+* κάθε bolus, SMB ή υδατάνθρακες εκείνη τη στιγμή, με τα ίδια τρίγωνα όπως στα γραφήματα
+
+Κρατήστε το δάχτυλό σας στην οθόνη και μετακινήστε το αριστερά ή δεξιά για να πάτε από μια μέτρηση στην επόμενη. Νιώθετε μια ελαφριά δόνηση σε κάθε μέτρηση, και το γράφημα δεν κάνει κύλιση όσο το κάνετε αυτό. Το αναδυόμενο παράθυρο μένει 2 δευτερόλεπτα αφού σηκώσετε το δάχτυλό σας.
+
+Αυτό λειτουργεί με τον ίδιο τρόπο και στα [πρόσθετα γραφήματα](#aaps-screens-additional-graphs) κάτω από το γράφημα BG (IOB, COB...): πατήστε παρατεταμένα οποιοδήποτε από αυτά.
+
+![Παρατεταμένο πάτημα στο γράφημα BG: το αναδυόμενο παράθυρο δείχνει ώρα, BG, IOB και βασικό ρυθμό](../images/main/graph_press_and_hold.png)
 
 (AapsScreens-activate-optional-information)=
 
-#### Activate optional information
+#### Ενεργοποίηση προαιρετικών πληροφοριών
 
-Using the top right arrow, you can switch on these optional information:
+Πατήστε το εικονίδιο με το **μολύβι** πάνω δεξιά στο γράφημα για να ανοίξουν οι ρυθμίσεις του γραφήματος:
 
-* Predictions (see below)
-* Treatments : notes entered in action tab: grey, orange or red dot depending on the severity, as well as fingerstick calibrations: red dot
-* Basals 
-  * As defined in the profile: blue dotted line at the bottom of the graph
-  * Actually delivered basal: blue plain line with blue background
-* Activity - insulin activity curve: yellow line
+![Ρύθμιση κύριου γραφήματος](../images/Home2020_MainGraphSetting.png)
 
-To show this information, click the triangle on the right side of the main graph. For the main graph just the four options above the line "Graph 1 2 3 4" are available.
-
-     ![Main graph setting](../images/Home2020_MainGraphSetting.png)
-    
+* Το **Ύψος γραφήματος** ρυθμίζει πόσο ψηλό σχεδιάζεται το γράφημα.
+* Το **ACT** προσθέτει την καμπύλη δράσης της ινσουλίνης: μια συνεχής κιτρινοπράσινη γραμμή <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (μην τη μπερδέψετε με την κίτρινη διακεκομμένη πρόβλεψη UAM)
+* Το **PRED** προσθέτει τις [γραμμές πρόβλεψης](#aaps-screens-prediction-lines) (δείτε παρακάτω)
 
 (aaps-screens-prediction-lines)=
 
-#### Prediction lines
+#### Γραμμές προβλέψεων
 
-* **Orange** line: [COB](CobCalculation) (color is used generally to represent COB and carbs)
-  
-  This prediction line shows where your BG (not where COB itself!) will go based on the current **Profile** settings, assuming that the deviations due to carb absorption remain constant. Αυτή η γραμμή εμφανίζεται μόνο εάν υπάρχουν γνωστοί Ενεργοί Υδατάνθρακες.
+Όταν το **PRED** είναι ενεργό, το AAPS σχεδιάζει τις προβλέψεις του ως **διακεκομμένες γραμμές** δεξιά από τη γραμμή «τώρα». Κάθε πρόβλεψη έχει το δικό της χρώμα. Το σκούρο θέμα χρησιμοποιεί πιο ανοιχτές αποχρώσεις των ίδιων χρωμάτων, και μια γραμμή μέσα στο πράσινο εύρος στόχου μπορεί να φαίνεται λίγο πιο πράσινη.
 
-* **Dark blue** line: IOB (color is used generally to represent IOB and insulin)
-  
-  This prediction line shows what would happen under the influence of insulin only. For example if you dialed in some insulin and then didn’t eat any carbs.
+| Γραμμή                     | Φωτεινό θέμα                                                                                                                      | Σκούρο θέμα                                                                                                                        | Τι προβλέπει                                       |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| **IOB** (μπλε)             | <span style="background:#FFFFFF;color:#1E88E5;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#64B5F6;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | μόνο ινσουλίνη                                     |
+| **COB** (πορτοκαλί)        | <span style="background:#FFFFFF;color:#FB8C00;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#FFB74D;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | υδατάνθρακες στον οργανισμό                        |
+| **UAM** (κίτρινο)          | <span style="background:#FFFFFF;color:#C9BD60;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#E6D39A;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | μη δηλωμένο γεύμα                                  |
+| **ZT** (κυανό)             | <span style="background:#FFFFFF;color:#00D2D2;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#4DD4D4;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | μηδενικός βασικός (zero temp, η ινσουλίνη σταματά) |
+| **aCOB** (απαλό πορτοκαλί) | <span style="background:#FFFFFF;color:rgba(251,140,0,0.5);padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span> | <span style="background:#141218;color:rgba(255,183,77,0.5);padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span> | μόνο ο παλαιότερος αλγόριθμος AMA                  |
 
-* **Ανοιχτή μπλε γραμμή**: μηδενικός προσωρινός ρυθμός (προβλεπόμενη γλυκόζη αίματος αν θα οριζόταν προσωρινός βασικός ρυθμός στο 0%)
-  
-  This prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
-  
-  *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+Όταν δύο προβλέψεις δίνουν τις ίδιες τιμές, οι τελείες τους επικαλύπτονται και βλέπετε μόνο ένα από τα χρώματα (για παράδειγμα, UAM πάνω από IOB όταν η BG είναι σταθερή).
 
-* **Dark yellow** line: [UAM](#SensitivityDetectionAndCob-sensitivity-oref1) (un-announced meals)
-  
-  Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the **orange COB line**, but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
-  
-  *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+* Γραμμή **COB** (πορτοκαλί): [υδατάνθρακες στον οργανισμό](CobCalculation) (το πορτοκαλί χρησιμοποιείται σε όλο το AAPS για COB και υδατάνθρακες)
+    
+    Αυτή η γραμμή πρόβλεψης δείχνει πού θα πάει η BG σας (όχι το ίδιο το COB!) με βάση τις τρέχουσες ρυθμίσεις του **Προφίλ**, αν οι αποκλίσεις λόγω απορρόφησης υδατανθράκων μείνουν σταθερές. Αυτή η γραμμή εμφανίζεται μόνο εάν υπάρχουν γνωστοί Ενεργοί Υδατάνθρακες.
 
-* **Σκούρη πορτοκαλί** γραμμή: εΕΥ (επιταχυνόμενη απορρόφηση υδατανθράκων)
-  
-  Παρόμοια με τους Ενεργούς Υδατάνθρακες, αλλά υποθέτοντας ένα στατικό ρυθμό απορρόφησης υδατανθράκων 10 mg/dL/5m (-0.555 mmol/l/5m). Deprecated and of limited usefulness.
-  
-  *This line appears only when the older [AMA](#Config-Builder-aps) algorithm is used.*
+* Γραμμή **IOB** (μπλε): ινσουλίνη στον οργανισμό (το μπλε χρησιμοποιείται σε όλο το AAPS για IOB και ινσουλίνη)
+    
+    Αυτή η γραμμή πρόβλεψης δείχνει τι θα συνέβαινε μόνο με την επίδραση της ινσουλίνης. Για παράδειγμα, αν δώσατε ινσουλίνη και μετά δεν φάγατε υδατάνθρακες.
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+* Γραμμή **ZT** (κυανή): μηδενικός βασικός (zero temp) (προβλεπόμενη BG αν οριζόταν προσωρινός βασικός ρυθμός 0%)
+    
+    Αυτή η γραμμή πρόβλεψης δείχνει πώς θα άλλαζε η πορεία της BG αν η αντλία σταματούσε κάθε χορήγηση ινσουλίνης (TBR 0%). Η γραμμή σταματά μόλις ανέβει πάνω από τον στόχο σας.
+    
+    *Αυτή η γραμμή εμφανίζεται μόνο όταν χρησιμοποιείται ο αλγόριθμος [SMB](#Config-Builder-aps).*
 
-#### Basals
+* Γραμμή **UAM** (κίτρινη): [μη δηλωμένα γεύματα](#SensitivityDetectionAndCob-sensitivity-oref1)
+    
+    Μη δηλωμένα γεύματα σημαίνει ότι ανιχνεύτηκε σημαντική άνοδος της γλυκόζης λόγω γευμάτων, αδρεναλίνης ή άλλων παραγόντων. Η γραμμή πρόβλεψης μοιάζει με την **πορτοκαλί γραμμή COB**, αλλά υποθέτει ότι οι αποκλίσεις θα μειώνονται με σταθερό ρυθμό (συνεχίζοντας τον τρέχοντα ρυθμό μείωσης).
+    
+    *Αυτή η γραμμή εμφανίζεται μόνο όταν χρησιμοποιείται ο αλγόριθμος [SMB](#Config-Builder-aps), η επιλογή **Ενεργοποίηση UAM** είναι ενεργή στις ρυθμίσεις OpenAPS SMB και η BG ανεβαίνει περισσότερο από όσο εξηγεί μόνο η ινσουλίνη.*
 
-A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time.
+* Γραμμή **aCOB** (απαλή, διάφανη πορτοκαλί): επιταχυμένη απορρόφηση υδατανθράκων
+    
+    Παρόμοια με το COB, αλλά υποθέτει σταθερό ρυθμό απορρόφησης υδατανθράκων 10 mg/dl/5m (-0,555 mmol/l/5m). Έχει καταργηθεί και έχει περιορισμένη χρησιμότητα.
+    
+    *Αυτή η γραμμή εμφανίζεται μόνο όταν χρησιμοποιείται ο παλαιότερος αλγόριθμος [AMA](#Config-Builder-aps).*
 
-The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
+Συνήθως η πραγματική καμπύλη γλυκόζης καταλήγει στη μέση αυτών των γραμμών ή κοντά σε εκείνη της οποίας οι υποθέσεις μοιάζουν περισσότερο με την κατάστασή σας.
 
-When the standard basal rate is given, the area under the curve is shown in dark blue. When the basal rate is temporarily adjusted (increased or decreased), the area under the curve is shown in light blue.
+(aaps-screens-how-predictions-become-a-dosing-decision)=
 
-#### Άσκηση
+#### Πώς το AAPS μετατρέπει τις προβλέψεις σε απόφαση δοσολογίας
 
-The **thin yellow** line shows the activity of Insulin.
+Το AAPS δεν δίνει ινσουλίνη μόνο με βάση την τρέχουσα BG σας — σε κάθε κύκλο του κυκλώματος (περίπου κάθε 5 λεπτά) εξετάζει όλες τις παραπάνω γραμμές πρόβλεψης μαζί και βρίσκει την πιο ασφαλή ενέργεια.
 
-It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
+Ο βασικός κανόνας είναι **πρώτα η ασφάλεια**: αν *οποιαδήποτε* γραμμή πρόβλεψης, σε οποιοδήποτε χρονικό διάστημα, πέσει κάτω από το κατώτερο όριο ασφαλείας σας, το AAPS ορίζει μηδενικό βασικό (zero temp, προσωρινός βασικός ρυθμός 0%) και δεν δίνει άλλη ινσουλίνη, ακόμη κι αν η τρέχουσα BG σας είναι υψηλή. Μόνο όταν όλες οι γραμμές πρόβλεψης μένουν πάνω από αυτό το όριο, το AAPS θα εξετάσει να δώσει περισσότερη ινσουλίνη.
 
-(AapsScreens-section-g-additional-graphs)=
+Όταν είναι ασφαλές να δοθεί περισσότερη ινσουλίνη, το AAPS κοιτάζει πού προβλέπεται να καταλήξει τελικά η BG (η **τελική BG**) στις συνδυασμένες προβλέψεις, και υπολογίζει πόση διόρθωση χρειάζεται για να φέρει αυτή την τελική BG πίσω στον στόχο — είτε ως αυξημένο προσωρινό βασικό ρυθμό, είτε (αν είναι ενεργός ο αλγόριθμος oref1/[SMB](#Open-APS-features-super-micro-bolus-smb)) ως μικρό άμεσο bolus. Αν η BG είναι υψηλή τώρα αλλά ήδη πέφτει αρκετά από μόνη της, το AAPS θα περιμένει ή μπορεί ακόμη και να μειώσει τον βασικό ρυθμό, αντί να προσθέσει ινσουλίνη που θα έκανε μια μελλοντική υπογλυκαιμία ακόμη χειρότερη.
 
-### Section G - Additional graphs
+Για παραδείγματα αυτής της λογικής απόφασης με πραγματικά στιγμιότυπα, δείτε τα [σενάρια δοσολογίας στον Οδηγό για γιατρούς](#clinicianguide-dosing-scenarios) — γράφτηκαν για γιατρούς, αλλά ισχύουν για κάθε χρήστη του AAPS.
 
-You can activate up to four additional graphs below the main graph. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and can not be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
+*Για την πλήρη τεχνική περιγραφή του τρόπου υπολογισμού αυτών των προβλέψεων και της απόφασης δοσολογίας, δείτε την [τεκμηρίωση determine-basal του OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html).*
 
-To open settings for additional graphs click the triangle on the right side of the [main graph](#aaps-screens-main-graph) and scroll down.
+#### Βασικοί
 
-![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
+Μια **συνεχής μπλε** γραμμή δείχνει τη χορήγηση βασικού ρυθμού από την αντλία σας και αντιστοιχεί στην πραγματική χορήγηση στον χρόνο.
 
-To configure additional graphs, check the boxes corresponding to the data you want to see on each graph.
+Η **διακεκομμένη μπλε** γραμμή δείχνει ποιος θα ήταν ο βασικός ρυθμός αν δεν υπήρχαν προσωρινές αλλαγές βασικού ρυθμού (TBR).
 
-Most users find the following configuration of additional graphs to be adequate :
+Όταν χορηγείται ο κανονικός βασικός ρυθμός, η περιοχή κάτω από την καμπύλη εμφανίζεται σκούρα μπλε. Όταν ο βασικός ρυθμός αλλάζει προσωρινά (αυξάνεται ή μειώνεται), η περιοχή κάτω από την καμπύλη εμφανίζεται ανοιχτή μπλε.
 
-* Graph 1 with IOB, COB, Sensitivity change
-* Graph 2 with Deviations and BGI.
+#### Δράση ινσουλίνης
 
-#### Absolute insulin
+Η **λεπτή κίτρινη** γραμμή δείχνει τη δράση της ινσουλίνης.
 
-Active insulin including boluses **and basal**.
+Βασίζεται στην αναμενόμενη πτώση της BG από την ινσουλίνη στον οργανισμό σας, αν δεν υπήρχαν άλλοι παράγοντες (όπως υδατάνθρακες).
 
-#### Insulin on board
+(AapsScreens-section-g-additional-graphs)= (aaps-screens-additional-graphs)=
 
-Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
+### Ενότητα E - Πρόσθετα γραφήματα
 
-If there were no [SMBs](#Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+Μπορείτε να ενεργοποιήσετε πρόσθετα γραφήματα κάτω από το κύριο γράφημα. Σε [Απλή λειτουργία](#preferences-simple-mode), τα πρόσθετα γραφήματα είναι προκαθορισμένα και δεν αλλάζουν. Απενεργοποιήστε την **Απλή λειτουργία** αν θέλετε να ορίσετε δική σας διαμόρφωση για τα πρόσθετα γραφήματα.
 
-IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
+Τα πρόσθετα γραφήματα ακολουθούν το κύριο γράφημα: όταν κάνετε κύλιση ή ζουμ στο γράφημα BG, μετακινούνται μαζί του. Ένα σύρσιμο προς τα πλάγια σε ένα πρόσθετο γράφημα κάνει επίσης κύλιση σε όλα τα γραφήματα. Δεν έχουν δικές τους ενδείξεις ώρας — διαβάστε την ώρα στο γράφημα BG.
 
-Decaying depends on your [DIA and insulin profile settings](../SettingUpAaps/YourAapsProfile.md).
+Για να ρυθμίσετε ένα πρόσθετο γράφημα, πατήστε το εικονίδιο με το **μολύβι** πάνω δεξιά σε αυτό:
 
-#### Ενεργοί Υδατάνθρακες
+![Πρόσθετες ρυθμίσεις γραφημάτων](../images/Home2020_AdditionalGraphSetting.png)
 
-Shows the carbs you have on board (= active, not yet decayed carbs in your body).
+Επιλέξτε τα chips για τα δεδομένα που θέλετε να βλέπετε σε αυτό το γράφημα· το κουμπί **Αφαίρεση** διαγράφει το γράφημα.
 
-Decaying depends on the [deviations the algorithm detects](../DailyLifeWithAaps/CobCalculation.md).
+Για να δημιουργήσετε ένα ακόμη γράφημα, πατήστε **Προσθήκη γραφήματος** κάτω από το τελευταίο γράφημα και επιλέξτε τα chips του με τον ίδιο τρόπο:
 
-If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings).
+![Προσθήκη γραφήματος](../images/main/graph_add.png)
 
-#### Sensitivity change
+Το νέο γράφημα προστίθεται κάτω από τα άλλα — εδώ ένα δεύτερο πρόσθετο γράφημα με **SENS%** και **DEV**:
 
-Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
+![Κύρια οθόνη με δεύτερο πρόσθετο γράφημα](../images/main/main_screen_additional_graph.png)
 
-Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
+Οι περισσότεροι χρήστες βρίσκουν αρκετή την παρακάτω διαμόρφωση πρόσθετων γραφημάτων:
 
-Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
+* Γράφημα 1 με IOB, COB, Αλλαγή ευαισθησίας
+* Γράφημα 2 με Αποκλίσεις και BGI.
 
-### Variable sensitivity
+#### Απόλυτη ινσουλίνη (ABS)
 
-Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
+Ενεργή ινσουλίνη μαζί με τα bolus **και τον βασικό ρυθμό**.
+
+(aaps-screens-iob)=
+
+#### Ενεργή ινσουλίνη (IOB)
+
+Δείχνει την ινσουλίνη στον οργανισμό σας (= ενεργή ινσουλίνη στο σώμα σας). Περιλαμβάνει ινσουλίνη από bolus και από προσωρινό βασικό ρυθμό (**αλλά όχι τους βασικούς ρυθμούς του προφίλ σας**).
+
+Αν δεν υπήρχαν [SMB](#Open-APS-features-super-micro-bolus-smb), bolus και TBR κατά τη διάρκεια της DIA, αυτό θα ήταν μηδέν.
+
+Τα SMB εμφανίζονται σε αυτό το γράφημα ως μπλε τρίγωνα, σε τρία μεγέθη ανάλογα με την ποσότητα σε σύγκριση με το μεγαλύτερο SMB της ημέρας.
+
+Το IOB μπορεί να είναι αρνητικό αν δεν έχετε υπόλοιπο bolus και είχατε μηδενικό/χαμηλό προσωρινό ρυθμό για μεγάλο διάστημα.
+
+Η μείωση εξαρτάται από τις [ρυθμίσεις DIA και τύπου ινσουλίνης](#Config-Builder-insulin-dia).
+
+#### Ενεργοί υδατάνθρακες (COB)
+
+Δείχνει τους υδατάνθρακες στον οργανισμό σας (= ενεργοί υδατάνθρακες στο σώμα σας, που δεν έχουν απορροφηθεί ακόμη).
+
+Η απορρόφηση εξαρτάται από τις [αποκλίσεις που ανιχνεύει ο αλγόριθμος](../DailyLifeWithAaps/CobCalculation.md).
+
+Αν ανιχνεύσει μεγαλύτερη απορρόφηση υδατανθράκων από την αναμενόμενη, θα χορηγηθεί ινσουλίνη και αυτό θα αυξήσει το IOB (περισσότερο ή λιγότερο, ανάλογα με τις ρυθμίσεις ασφαλείας σας).
+
+#### Αλλαγή ευαισθησίας (SENS%)
+
+Δείχνει την ευαισθησία που ανίχνευσε το [Autosens](#Open-APS-features-autosens).
+
+Η ευαισθησία είναι ένας υπολογισμός της ευαισθησίας στην ινσουλίνη λόγω άσκησης, ορμονών κ.λπ.
+
+Σημείωση: πρέπει να βρίσκεστε στο [Βήμα 8](#objectives-objective8), ώστε η Ανίχνευση ευαισθησίας/το [Autosens](#Open-APS-features-autosens) να προσαρμόζει αυτόματα την ποσότητα ινσουλίνης που χορηγείται. Πριν φτάσετε σε αυτό το βήμα, η γραμμή στο γράφημα εμφανίζεται μόνο για ενημέρωση.
+
+### Μεταβλητή ευαισθησία (VSENS)
+
+Δείχνει την ευαισθησία όπως την υπολογίζει η [Δυναμική ISF](../DailyLifeWithAaps/DynamicISF.md). Έχει τιμές μόνο αν χρησιμοποιείτε αυτή τη λειτουργία.
 
 (screen-heart-rate-steps)=
 
-#### Heart rate & Steps
+#### Καρδιακός ρυθμός (HR) & Βήματα
 
-This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md). Enable them on **AAPS** Wear app and give permission for health data.
+Αυτά τα δεδομένα μπορεί να είναι διαθέσιμα όταν χρησιμοποιείτε ένα [έξυπνο ρολόι Wear OS](../WearOS/WearOsSmartwatch.md). Ενεργοποιήστε τα στην εφαρμογή Wear του **AAPS** και δώστε άδεια για τα δεδομένα υγείας.
 
-#### Αποκλίσεις
+#### Αποκλίσεις (DEV)
 
-* **Grey** bars show a deviation due to carbs. 
-* **Green** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](#Open-APS-features-autosens).
-* **Red** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](#Open-APS-features-autosens).
-* **Yellow** bars show a deviation due to UAM.
-* **Black** bars show small deviations not taken into account for sensitivity
+* Οι **γκρι** μπάρες δείχνουν απόκλιση λόγω υδατανθράκων.
+* Οι **πράσινες** μπάρες δείχνουν ότι η BG είναι υψηλότερη από ό,τι περίμενε ο αλγόριθμος. Οι πράσινες μπάρες χρησιμοποιούνται για να αυξήσουν την αντίσταση στο [Autosens](#Open-APS-features-autosens).
+* Οι **κόκκινες** μπάρες δείχνουν ότι η BG είναι χαμηλότερη από ό,τι περίμενε ο αλγόριθμος. Οι κόκκινες μπάρες χρησιμοποιούνται για να αυξήσουν την ευαισθησία στο [Autosens](#Open-APS-features-autosens).
+* Οι **κίτρινες** μπάρες δείχνουν απόκλιση λόγω UAM.
+* Οι **μαύρες** μπάρες δείχνουν μικρές αποκλίσεις που δεν λαμβάνονται υπόψη για την ευαισθησία
 
-#### Blood Glucose Impact
+#### Επίδραση στη γλυκόζη αίματος (-BGI)
 
-This line shows the degree to which BG ‘should’ rise or fall based on insulin activity alone.
+Αυτή η γραμμή δείχνει πόσο «θα έπρεπε» να ανέβει ή να πέσει η BG μόνο λόγω της δράσης της ινσουλίνης.
 
-![Homescreen buttons](../images/Screenshots_DEV_BGI.png)
+![Αποκλίσεις και BGI](../images/main/graph_dev_bgi.png)
 
-It is a good combination to display this line along with the Deviation bars. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparing the BGI line and the Deviation bars is another way to understand how **BG** fluctuates. Here, at the time marked **1**, the Deviation bars are greater than the BGI line, indicating that BG is rising. Later, during the hours marked **2**, BGI and DEV are pretty much in line, indicating that BG is stable.
+Είναι καλός συνδυασμός να εμφανίζετε αυτή τη γραμμή μαζί με τις μπάρες αποκλίσεων. Έχουν την ίδια κλίμακα, αλλά διαφορετική από τα άλλα προαιρετικά δεδομένα, γι' αυτό είναι καλή ιδέα να τα εμφανίζετε σε ξεχωριστό γράφημα, όπως φαίνεται παραπάνω. Η σύγκριση της γραμμής BGI με τις μπάρες αποκλίσεων είναι ένας ακόμη τρόπος να καταλάβετε πώς αλλάζει η **BG**. Εδώ, τη στιγμή που σημειώνεται με **1**, οι μπάρες αποκλίσεων είναι πολύ πάνω από τη γραμμή BGI: η BG ανεβαίνει περισσότερο από όσο εξηγεί μόνο η δράση της ινσουλίνης (για παράδειγμα μετά από υδατάνθρακες). Τη στιγμή που σημειώνεται με **2**, οι μπάρες αποκλίσεων είναι κάτω από το μηδέν (κόκκινες): η BG είναι χαμηλότερη από ό,τι περίμενε ο αλγόριθμος.
 
-### Section H - Buttons
+### Ενότητα F - Γραμμή εργαλείων QuickLaunch
 
-![Homescreen buttons](../images/Home2020_Buttons.png)
+![Γραμμή εργαλείων QuickLaunch](../images/Home2020_Buttons.png)
 
-Buttons for Insulin and Carbs are almost always visible. If the connection to the pump is lost, the Calculator button will not be visible.
+Η αιωρούμενη γραμμή εργαλείων στο κάτω μέρος της οθόνης περιέχει τις ενέργειες **[QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)**. Το μικρό **γρανάζι** ανοίγει τη ρύθμιση του QuickLaunch, όπου επιλέγετε ποια κουμπιά εμφανίζονται (θεραπείες, καταχωρήσεις Careportal, ενέργειες CGM, οι οθόνες του φύλλου **Διαχείριση**, κουμπιά [Γρήγορου Οδηγού](../DailyLifeWithAaps/QuickWizards.md), [Σενάρια](../DailyLifeWithAaps/Scenes.md) και άλλα).
 
-Other Buttons can be setup in [Preferences > Overview > Buttons](#Preferences-buttons).
+Μια συνηθισμένη διαμόρφωση φαίνεται παραπάνω: **Ινσουλίνη**, **Υδατάνθρακες** και ο **Οδηγός Bolus**.
 
-About using the Insulin, Carbs and Calculator buttons : If enabled in the [Preferences > Overview](#Preferences-show-notes-field-in-treatments-dialogs), the **Notes** field allows you to enter text that will show on the main graph, and may be uploaded to Nightscout - depending on your settings for NS client.
+Όσο η αντλία είναι **αποσυνδεδεμένη**, τα κουμπιά θεραπειών μένουν στη γραμμή εργαλείων, για παράδειγμα για να καταγράψετε ινσουλίνη που δώσατε με πένα (δείτε [Ινσουλίνη](#aaps-screens-buttons-insulin) παρακάτω). Οι ίδιες ενέργειες υπάρχουν και στο [φύλλο Θεραπείες](#aaps-screens-treatments-sheet) της κάτω πλοήγησης.
 
 (aaps-screens-buttons-insulin)=
 
 #### Ινσουλίνη
 
-![Insulin button](../images/Home2020_ButtonInsulin.png)
+![Διάλογος ινσουλίνης](../images/Home2020_ButtonInsulin.png)
 
-To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
+Για να δώσετε μια ποσότητα ινσουλίνης χωρίς να χρησιμοποιήσετε τον [υπολογιστή bolus](#aaps-screens-bolus-wizard).
 
-By checking the box **Start eating soon TT**, you can automatically start your [eating soon temp target](#TempTargets-eating-soon-temp-target).
+Αν ενεργοποιήσετε το **Εκκίνηση Τρώω σύντομα ΤΤ**, μπορείτε να ξεκινήσετε αυτόματα τον [προσωρινό στόχο «Γεύμα Σύντομα»](#TempTargets-eating-soon-temp-target).
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) check the corresponding box. When checking this box, you get an additional field “Time offset”, that you can use to record an insulin injection made in the past.
+Αν δεν θέλετε να κάνετε bolus μέσω της αντλίας αλλά μόνο να καταγράψετε μια ποσότητα ινσουλίνης (π.χ. ινσουλίνη από πένα), ενεργοποιήστε το "**Το Bolus μόνο θα καταγραφεί**". Μια πρόσθετη γραμμή **Χρόνος**, ρυθμισμένη στο **Τώρα**, σας επιτρέπει να καταγράψετε μια ένεση ινσουλίνης που έγινε στο παρελθόν: χρησιμοποιήστε **-** / **+** για να την αλλάξετε, ή πατήστε το βέλος για να γράψετε τα λεπτά ή να επιλέξετε ημερομηνία και ώρα.
 
-You can use the buttons to quickly increase the insulin quantity. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
+![Η γραμμή Χρόνος, κλειστή](../images/v4/Screens/insulin_dialog_record_only_time.png) ![Η γραμμή Χρόνος, ανοιγμένη με το βέλος](../images/v4/Screens/insulin_dialog_time_open.png)
 
-The insulin button can be used when the pump is suspended as well, i.e. to record insulin injected with a pen. In this case, the header will show in yellow, and the checkbox “Do not bolus, record only” can not be unchecked.
+Μπορείτε να χρησιμοποιήσετε τα κουμπιά **+0.5 / +1.0 / +2.0** για να αυξήσετε γρήγορα την ποσότητα ινσουλίνης. Οι τιμές των βημάτων αλλάζουν στις [ρυθμίσεις του Οδηγού Bolus](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-![Home2020_ButtonInsulin_PumpSuspended.png](../images/Home2020_ButtonInsulin_PumpSuspended.png)
+Ο διάλογος ινσουλίνης μπορεί να χρησιμοποιηθεί και όταν η αντλία είναι σε αναστολή ή αποσυνδεδεμένη, π.χ. για να καταγράψετε ινσουλίνη που κάνατε με πένα. Σε αυτή την περίπτωση, το "**Το Bolus μόνο θα καταγραφεί**" είναι υποχρεωτικά ενεργό (εμφανίζεται με κόκκινο) και εμφανίζονται πρόσθετα πεδία για να επιλέξετε τον τύπο ινσουλίνης και μια μετατόπιση **Χρόνος** για ένεση που έγινε στο παρελθόν:
+
+![Διάλογος ινσουλίνης με την αντλία αποσυνδεδεμένη](../images/main/insulin_dialog_pump_disconnected.png)
 
 #### Υδατάνθρακες
 
-![Carbs button](../images/Home2020_ButtonCarbs.png)
+![Διάλογος υδατανθράκων](../images/Home2020_ButtonCarbs.png)
 
-To record carbs without bolusing.
+Για να καταγράψετε υδατάνθρακες χωρίς bolus.
 
-Certain [pre-set temporary targets](#TempTargets-hypo-temp-target) can be set directly by checking the box.
+Ορισμένοι [προκαθορισμένοι προσωρινοί στόχοι](#TempTargets-hypo-temp-target) (Υπογλυκαιμία, Γεύμα Σύντομα, Άσκηση) μπορούν να ξεκινήσουν απευθείας με τους διακόπτες στο πάνω μέρος.
 
-**Time offset**: When will you / have you been eaten carbs (in minutes).
+**Χρόνος υδατανθράκων**: Πότε θα φάτε / πότε φάγατε τους υδατάνθρακες.
 
-**Duration**: To be used for ["extended carbs"](ExtendedCarbs)
+**Διάρκεια**: Χρησιμοποιείται για [«εκτεταμένους υδατάνθρακες»](ExtendedCarbs). Αυτή η γραμμή είναι κλειστή, ώστε να μη γράψετε κατά λάθος τα γραμμάρια σε αυτήν: χρησιμοποιήστε **-** / **+** για να την αλλάξετε, ή πατήστε το βέλος για να την ανοίξετε και να γράψετε μια τιμή.
 
-You can use the buttons to quickly increase the carb amount. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
+Μπορείτε να χρησιμοποιήσετε τα κουμπιά **+5 / +10 / +20** για να αυξήσετε γρήγορα την ποσότητα υδατανθράκων.
 
-#### Υπολογιτής
+#### Γρήγορος Οδηγός
 
-See Bolus Wizard [section below](#aaps-screens-bolus-wizard).
+Καταχωρήστε εύκολα την ποσότητα υδατανθράκων και ορίστε τις βάσεις του υπολογισμού με ένα μόνο προρυθμισμένο κουμπί.
 
-#### Calibrations
+Οι λεπτομέρειες ορίζονται στον [Γρήγορο Οδηγό](../DailyLifeWithAaps/QuickWizards.md).
 
-Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
+(aaps-screens-treatments-sheet)=
 
-Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
+### Ενότητα G - Κάτω πλοήγηση
 
-#### CGM
+Η κάτω γραμμή πλοήγησης δίνει πρόσβαση σε:
 
-Opens xDrip+.
+* **Θεραπείες** — ένα φύλλο γρήγορων ενεργειών με τις ενέργειες θεραπείας σας:
+    
+    ![Φύλλο Θεραπείες](../images/v4/Screens/treatments_sheet.png)
 
-Back button returns to **AAPS**.
+* **Σενάρια** — εμφανίζεται μόνο όταν έχετε τουλάχιστον ένα [σενάριο](../DailyLifeWithAaps/Scenes.md) ή έναν κανόνα **Αυτοματισμός** σημειωμένο ως **Ενέργεια χρήστη**. Ανοίγει ένα φύλλο από το οποίο μπορείτε να τα ξεκινήσετε· ένας αριθμός δείχνει πόσα μπορείτε να ξεκινήσετε αυτή τη στιγμή. Το **μολύβι** στο πάνω μέρος του φύλλου ανοίγει το **Διαχείριση → Σενάρια**.
 
-Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
+* **Διαχείριση** — το κέντρο για όλα όσα διαχειρίζεστε στο **AAPS**: Προφίλ, Ρυθμίσεις ινσουλίνης, Προσωρινός στόχος, Γρήγορος Οδηγός, Σενάρια, Αυτοματισμός, Τρόφιμα, Εναλλαγή σημείων, Αντλία και Εξουσιοδοτημένοι πελάτες. Από κάτω υπάρχουν ενέργειες για συσκευές και βασικό ρυθμό, όπως Τοποθέτηση αισθητήρα και Προσωρινός βασικός ρυθμός. Ορισμένα στοιχεία εμφανίζονται μόνο όταν ισχύουν για τη δική σας διάταξη — για παράδειγμα το Πλήρωση/Γέμισμα και η αλλαγή μπαταρίας εξαρτώνται από την αντλία σας, και ο Προσωρινός βασικός ρυθμός, το Εκτεταμένο bolus και οι καταχωρήσεις Careportal είναι κρυφά σε [Απλή λειτουργία](#preferences-simple-mode):
+    
+    ![Φύλλο Διαχείριση](../images/v4/Screens/manage_sheet.png)
 
-#### Quick Wizard
+* **Βήματα** — η πρόοδός σας στα [Βήματα](../SettingUpAaps/CompletingTheObjectives.md)· ένας αριθμός δείχνει πόσα έχουν ολοκληρωθεί. Αυτό το στοιχείο εξαφανίζεται μόλις ολοκληρωθούν όλα τα βήματα και δεν υπάρχει στο **AAPSClient**.
 
-Easily enter amount of carbs and set calculation basics.
+(aaps-screens-notifications)=
 
-Details are set up in [Preferences > Overview > QuickWizard settings](#Preferences-quick-wizard).
+#### Ειδοποιήσεις
 
-(aaps-screens-bolus-wizard)=
+Μια **φούσκα ειδοποιήσεων** μπορεί να εμφανιστεί πάνω από την κάτω γραμμή, δεξιά. Συγκεντρώνει τις ενεργές ειδοποιήσεις του **AAPS**· ο μικρός αριθμός δείχνει πόσες είναι. Το χρώμα της ακολουθεί την πιο σημαντική: κόκκινο για επείγον μήνυμα, πράσινο για απλή πληροφορία.
 
-## Bolus Wizard
+![Κύρια οθόνη με τη φούσκα ειδοποιήσεων](../images/main/main_screen_notification_bubble.png)
+
+Πατήστε τη φούσκα για να ανοίξει ο πίνακας **Ειδοποίηση**. Κάθε μήνυμα δείχνει την ώρα που εμφανίστηκε. Πατήστε **Παράβλεψη** κάτω από ένα μήνυμα για να το αφαιρέσετε· ορισμένα μηνύματα έχουν αντί γι' αυτό άλλο κουμπί, που σας πηγαίνει στη ρύθμιση που χρειάζεται την προσοχή σας.
+
+![Πίνακας ειδοποιήσεων με ένα μήνυμα και το κουμπί Παράβλεψη](../images/main/notification_panel.png)
+
+![Πίνακας ειδοποιήσεων](../images/main/main_notification_panel.png)
+
+(bolus-wizard)= (aaps-screens-bolus-wizard)=
+
+## Οδηγός Bolus
 
 ![Οδηγός Bolus](../images/Home2020_BolusWizard_v2.png)
 
-When you want to make a meal bolus, this is where you will normally make it from.
+Όταν θέλετε να κάνετε bolus γεύματος, συνήθως θα το κάνετε από εδώ.
 
-### Section I
+### Ενότητα I
 
-Εμφανίζει το υπολογισμένο bolus.
+Η επικεφαλίδα **Υπολογισμός** δείχνει το υπολογισμένο bolus. Αν η ινσουλίνη στον οργανισμό ήδη ξεπερνά το υπολογισμένο bolus, θα εμφανιστεί μόνο η ποσότητα υδατανθράκων που χρειάζεστε ακόμη.
 
-If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+Ο υπολογιστής bolus μπορεί να χρησιμοποιηθεί όποια κι αν είναι η τρέχουσα **BG** σας, ακόμη και όταν είναι πολύ υψηλή ή πολύ χαμηλή. Αν η **BG** είναι πάνω από τον στόχο, προστίθεται διόρθωση στο bolus γεύματος. Αν η **BG** είναι κάτω από τον στόχο, το bolus μειώνεται και, αν η ινσουλίνη που υπάρχει ήδη στον οργανισμό είναι περισσότερη από όση χρειάζεται, ο υπολογιστής σάς λέει πόσους υδατάνθρακες χρειάζεστε ακόμη, αντί να προτείνει ινσουλίνη.
 
-(AapsScreens-section-j)=
-
-### Section J
-
-BG field is normally already populated with the latest reading from your CGM. Εάν δεν έχετε λειτουργικό CGM τότε θα είναι κενό.
-
-In the **Carbs** field, you add your estimate of the amount of carbs - or equivalent - that you want to bolus for.
-
-The **Corr** field is if you want to modify the end dosage for some reason.
-
-The **Carb time** field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. Μπορείτε να βάλετε έναν αρνητικό αριθμό σε αυτό το πεδίο αν κάνετε bolusing για προηγούμενους υδατάνθρακες.
-
-**Eating reminder** : For carbs in the future, the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at the given time, when to eat the carbs you have input into **AAPS**.
-
-![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
-
-### Section K
-
-**Profile** allows you to select a different profile than the current one, to make the calculation for the insulin required. This profile selection applies only for the current bolus, it is not a profile change.
-
-**Super Bolus** is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable Superbolus in wizard" is set in the [Preferences > Overview > Advanced Settings](#Preferences-advanced-settings-overview). Η ιδέα είναι να παραδώσουμε την ινσουλίνη νωρίτερα και ελπίζουμε να μειώσουμε τις απότομες μεταβολές.
-
-For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
-
-### Section L
-
-Details of the wizard's bolus calculation.
-
-You can deselect any that you do not want to include, but you normally wouldn't want to.
-
-For safety reasons the **TT box must be ticked manually**, if you want the bolus wizard to calculate based on an existing temporary target.
+Η σειρά εικονιδίων κάτω από την επικεφαλίδα δείχνει ποια δεδομένα μπαίνουν στον υπολογισμό (BG, τάση, IOB, προσωρινός στόχος, COB). Πατώντας ένα εικονίδιο ενεργοποιείτε / απενεργοποιείτε αυτό το δεδομένο στον υπολογισμό· το εικονίδιο **(i)** δείχνει τους αναλυτικούς αριθμούς του υπολογισμού.
 
 #### Συνδυασμοί COB και IOB και τι σημαίνουν
 
-* For safety reasons, the IOB box cannot be unticked when COB box is ticked as you might run the risk of too much insulin as **AAPS** is not accounting for what’s already given.
-* If you tick COB and IOB, unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you tick IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. Αυτό οδηγεί σε μια ειδοποίηση σχετικά με την «εξαφάνιση των υδατανθράκων».
-* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
+* Για λόγους ασφαλείας, το IOB δεν μπορεί να απενεργοποιηθεί όταν το COB είναι ενεργό, γιατί υπάρχει κίνδυνος για υπερβολική ινσουλίνη, αφού το **AAPS** δεν θα λάβει υπόψη όσα έχουν ήδη δοθεί.
+* Αν ενεργοποιήσετε COB και IOB, λαμβάνονται υπόψη οι υδατάνθρακες που δεν έχουν απορροφηθεί και δεν καλύπτονται ήδη από ινσουλίνη + όλη η ινσουλίνη που έχει χορηγηθεί ως TBR ή SMB.
+* Αν ενεργοποιήσετε IOB χωρίς COB, το **AAPS** λαμβάνει υπόψη την ινσουλίνη που έχει ήδη χορηγηθεί, αλλά δεν τη συμψηφίζει με υδατάνθρακες που δεν έχουν απορροφηθεί ακόμη. Αυτό οδηγεί σε μια ειδοποίηση σχετικά με την «εξαφάνιση των υδατανθράκων».
+* Αν κάνετε bolus για **επιπλέον φαγητό** λίγο μετά από bolus γεύματος (π.χ. επιπλέον επιδόρπιο), μπορεί να βοηθήσει να **απενεργοποιήσετε όλα τα δεδομένα**. Με αυτόν τον τρόπο προστίθενται μόνο οι νέοι υδατάνθρακες καθώς το κύριο γεύμα δεν θα απορροφηθεί απαραιτήτως, έτσι ώστε το IOB να μην ταιριάζει με το COB με ακρίβεια λίγο μετά το bolus γεύματος.
+* Για λόγους ασφαλείας, ένας **προσωρινός στόχος** μπαίνει στον υπολογισμό μόνο αν ενεργοποιήσετε χειροκίνητα αυτό το δεδομένο.
 
-![BolusWizard with Details](../images/Home2021_BolusWizard_Details.png)
+(AapsScreens-section-j)=
 
-The box near the eye allows you to choose between the detailed view, with the numbers entering the calculation for each item, or the simple view with icons. Pressing on an icon will enable / disable this entry from the calculation.
+### Ενότητα J - Πεδία καταχώρησης
+
+Στο πεδίο **Υδατάνθρακες**, γράφετε την εκτίμησή σας για την ποσότητα υδατανθράκων, **σε γραμμάρια**, για την οποία θέλετε να κάνετε bolus· τα κουμπιά **+** από κάτω προσθέτουν γρήγορα υδατάνθρακες. Το **AAPS** δουλεύει μόνο με γραμμάρια: αν μετράτε σε ψωμομονάδες ή ισοδύναμα (*π.χ.* ισοδύναμα "CHO" του DAFNE), μετατρέψτε τα σε γραμμάρια πριν τα καταχωρήσετε. Δείτε τη [σημείωση για τις ψωμομονάδες](#your-aaps-profile-insulin-to-carbs-ratio) στη σελίδα του προφίλ.
+
+#### Τύπος υδατανθράκων: ψωμί, γλυκό ή πίτσα
+
+Κάτω από το πεδίο **Υδατάνθρακες**, τα κουμπιά **Ψωμί**, **Γλυκό** και **Πίτσα** λένε στο **AAPS** πόσο γρήγορα απορροφάται το γεύμα. Με **Γλυκό** και **Πίτσα**, το bolus καλύπτει τώρα μόνο ένα μέρος των υδατανθράκων και το υπόλοιπο προστίθεται αργότερα ως eCarbs. Δείτε [Τύπος υδατανθράκων: ψωμί, γλυκό ή πίτσα](#AapsScreens-carbs-type) στη σελίδα Εκτεταμένοι υδατάνθρακες για τα ποσοστά και τον χρονισμό.
+
+Η γραμμή **Διόρθωση** είναι για όταν θέλετε να αλλάξετε την τελική δόση για κάποιο λόγο.
+
+Μόνο το πεδίο **Υδατάνθρακες** είναι πάντα ανοιχτό. Οι άλλες γραμμές (**Διόρθωση**, **Χρόνος υδατανθράκων**, **BG** και **Χρήση ποσοστού**) είναι κλειστές: δείχνουν την τιμή τους με κουμπιά **-** / **+**, ώστε να την αλλάζετε σε μικρά βήματα. Πατήστε το βέλος για να ανοίξετε μια γραμμή και να γράψετε μια τιμή, και πατήστε το ξανά για να κλείσει η γραμμή. Έτσι αποφεύγετε να γράψετε κατά λάθος γραμμάρια στο πεδίο **Διόρθωση**.
+
+![Κλειστές γραμμές στον Οδηγό Bolus](../images/v4/Screens/bolus_wizard_bottom.png)
+
+Πατήστε οπουδήποτε στη γραμμή **Προφίλ** για να ανοίξει η λίστα των προφίλ σας και μετά πατήστε ένα όνομα για να χρησιμοποιήσετε εκείνο το προφίλ σε αυτόν τον υπολογισμό.
+
+![Η λίστα των προφίλ στον Οδηγό Bolus](../images/v4/Screens/bolus_wizard_profile_list.png)
+
+Το πεδίο **Χρόνος υδατανθράκων** είναι για pre-bolus: έτσι λέτε στο σύστημα ότι οι υδατάνθρακες αναμένονται με καθυστέρηση. Μπορείτε να βάλετε αρνητικό αριθμό σε αυτό το πεδίο αν κάνετε bolus για υδατάνθρακες που φάγατε νωρίτερα.
+
+**Ορισμός ειδοποίησης** (υπενθύμιση φαγητού): όταν καταχωρηθεί χρόνος υδατανθράκων στο μέλλον, εμφανίζεται ένας διακόπτης "**Ορισμός ειδοποίησης**", ώστε να σας θυμίσει τη συγκεκριμένη ώρα πότε να φάτε τους υδατάνθρακες που καταχωρήσατε στο **AAPS**:
+
+![Ορισμός ειδοποίησης για μελλοντικούς υδατάνθρακες](../images/Home2021_BolusWizard_EatingReminder.png)
+
+Η υπενθύμιση χτυπά ως συναγερμός του **AAPS**. Δεν δημιουργεί χρονόμετρο στην εφαρμογή ρολογιού του τηλεφώνου σας, και λειτουργεί επίσης όταν το bolus καταχωρήθηκε από το **AAPSClient** ενώ το **AAPS** έτρεχε στο παρασκήνιο.
+
+Το πεδίο **BG** είναι συνήθως ήδη συμπληρωμένο με την τελευταία μέτρηση από το CGM σας. Εάν δεν έχετε λειτουργικό CGM τότε θα είναι κενό. Όταν η μέτρηση είναι πρόσφατη, η γραμμή **BG** μένει κλειστή.
+
+Το κουμπί αποτελέσματος στο κάτω μέρος δείχνει το προτεινόμενο bolus· όταν το πατήσετε, ζητά επιβεβαίωση πριν χορηγηθεί οποιαδήποτε ινσουλίνη.
+
+Καλό είναι να ξέρετε:
+
+* Αν το υπολογισμένο bolus είναι πάνω από το **[Μέγιστο bolus](#Preferences-maximum-bolus)**, μειώνεται στο μέγιστο bolus, και η επιβεβαίωση δείχνει την προειδοποίηση "Ορίστηκε περιορισμός Bolus". Ένας [Γρήγορος Οδηγός](../DailyLifeWithAaps/QuickWizards.md) αντίθετα απορρίπτεται.
+* Όταν το bolus μόνο καταγράφεται (για παράδειγμα όσο η αντλία είναι αποσυνδεδεμένη), η προειδοποίηση "**Το Bolus μόνο θα καταγραφεί**" μένει στο πάνω μέρος του διαλόγου, και όταν κάνετε κύλιση.
+* Ένα bolus που δίνετε χειροκίνητα έχει προτεραιότητα έναντι ενός [SMB](#Open-APS-features-super-micro-bolus-smb) που περιμένει να χορηγηθεί: το SMB ακυρώνεται και το κύκλωμα υπολογίζει ξανά. Αν ένα SMB χορηγείται αυτή τη στιγμή, το bolus σας απορρίπτεται με το μήνυμα "Χορηγείται τώρα ένα SMB. Δοκιμάστε ξανά όταν τελειώσει." Δεν χορηγείται ινσουλίνη, και οι υδατάνθρακες που καταχωρήσατε με αυτό το bolus δεν αποθηκεύονται: περιμένετε λίγο και καταχωρήστε τους ξανά.
 
 (AapsScreens-wrong-cob-detection)=
 
-#### Wrong COB detection
+#### Λανθασμένη ανίχνευση COB
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
+![Αργή απορρόφηση υδατανθράκων](../images/Calculator_SlowCarbAbsorption.png)
 
-If you see the warning above after using bolus wizard, **AAPS** has detected that the calculated COB value may be wrong. So, if you want to bolus again after a previous meal with COB, you should be aware of overdosing!
+Αν δείτε την παραπάνω προειδοποίηση μετά τη χρήση του οδηγού bolus, το **AAPS** ανίχνευσε ότι η υπολογισμένη τιμή COB μπορεί να είναι λάθος. Γι' αυτό, αν θέλετε να κάνετε ξανά bolus μετά από προηγούμενο γεύμα με COB, προσέξτε τον κίνδυνο υπερδοσολογίας!
 
-For details, see the hints on [COB calculation page](#CobCalculation-detection-of-wrong-cob-values).
+Για λεπτομέρειες, δείτε τις συμβουλές στη [σελίδα υπολογισμού COB](#CobCalculation-detection-of-wrong-cob-values).
 
-(screens-action-tab)=
-
-## Action tab
-
-![Actions tab](../images/Home_Action.png)
-
-### Actions - section M
-
-Button **[Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** as an alternative to pressing the [current profile](#aaps-screens-profile--target) on homescreen.
-
-Button **[Temporary target](../DailyLifeWithAaps/TempTargets.md)** as an alternative to pressing the [current target](#aaps-screens-profile--target) on homescreen.
-
-Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
-
-Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
-
-* This option is only available for Dana RS and Insight pumps. 
-  * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
-  * Make sure to read the [details](../DailyLifeWithAaps/ExtendedCarbs.md) before using this option.
+Ψάχνετε την καρτέλα **Ενέργειες** του **AAPS** 3.x; Οι λειτουργίες της μετακινήθηκαν στην κύρια οθόνη, στο φύλλο **Διαχείριση** και στη γραμμή εργαλείων QuickLaunch: δείτε [Πού πήγε η καρτέλα Ενέργειες;](#screens-action-tab).
 
 (aaps-screens-careportal)=
 
-### Careportal - section N
+## Καταχωρήσεις Careportal
 
-Displays information on:
+Οι ηλικίες και τα επίπεδα που εμφανίζονται στη [γραμμή κατάστασης](#screens-sensor-level-battery) (αισθητήρας, ινσουλίνη, καθετήρας, μπαταρία αντλίας) βασίζονται σε καταχωρήσεις Careportal: **Πλήρωση/Γέμισμα** (καταγράφει αλλαγές σημείου έγχυσης και φυσιγγίου ινσουλίνης), **Τοποθέτηση αισθητήρα** και **Αλλαγή Μπαταρίας Αντλίας**.
 
-     * sensor age & level (battery percentage)
-     * insulin age & level (units)
-     * cannula age
-     * pump battery age & level (percentage
-    
+Μπορείτε να τις καταγράψετε από την ανοιγμένη περιοχή κατάστασης στην κύρια οθόνη, από το φύλλο **Διαχείριση** ή με κουμπιά [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md).
 
-Less information will be shown if **low resolution skin** is used ([Preferences > General > Skin](#Preferences-skin)).
+Το **Πλήρωση/Γέμισμα** καταγράφει αλλαγή σημείου έγχυσης και/ή αλλαγή φυσιγγίου ινσουλίνης, και μπορεί να χορηγήσει μια ποσότητα πλήρωσης:
 
-(screens-sensor-level-battery)=
+![Διάλογος Πλήρωση/Γέμισμα](../images/dialogs/prime_fill.png)
 
-#### Sensor level (battery)
+Το **Τοποθέτηση αισθητήρα** και το **Αλλαγή Μπαταρίας Αντλίας** ζητούν μόνο την ώρα του συμβάντος:
 
-Works for CGM with an additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level information to xDrip+.)
+![Διάλογος Τοποθέτηση αισθητήρα](../images/dialogs/sensor_insert.png)
 
-Thresholds can be set in [Preferences > Overview > Status lights](#Preferences-status-lights).
+![Διάλογος Αλλαγή Μπαταρίας Αντλίας](../images/dialogs/pump_battery_change.png) Οι καταχωρήσεις άσκησης, ανακοίνωσης, ερώτησης και σημείωσης αντιστοιχούν στο Careportal του Nightscout και είναι ειδικές μορφές σημειώσεων.
 
-### Careportal - section O
+Στο φύλλο **Διαχείριση**, κάντε κύλιση προς τα κάτω και πατήστε **Careportal** για να εμφανιστούν αυτές οι καταχωρήσεις: **Έλεγχος BG**, **Σημείωση**, **Άσκηση**, **Ερώτηση** και **Ανακοίνωση**.
 
-BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#aaps-screens-careportal).
+![Ενότητα Careportal του φύλλου Διαχείριση](../images/v4/Screens/manage_sheet_careportal.png)
 
-Prime/Fill allows you to record pump site and insulin cartridge change.
+Το **Έλεγχος BG**, η **Ερώτηση** και η **Ανακοίνωση** σας επιτρέπουν να καταχωρήσετε μια τιμή γλυκόζης (από μετρητή, από τον αισθητήρα ή από άλλη πηγή), μια σημείωση και την ώρα του συμβάντος. Στην **Ερώτηση** και στην **Ανακοίνωση**, η γραμμή γλυκόζης είναι κλειστή και δείχνει τον τύπο μέτρησης δίπλα στην τιμή: αν αλλάξετε την τιμή, ο τύπος αλλάζει από **Αισθητήρας** σε **Μετρητής**.
 
-Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
+![Ερώτηση με κλειστή τη γραμμή γλυκόζης](../images/dialogs/careportal_question.png)
 
-### Tools - section P
+![Διάλογος Έλεγχος BG](../images/dialogs/careportal_bg_check.png)
 
-(Aapsscreens-site-rotation)=
+Η **Σημείωση** και η **Άσκηση** σας επιτρέπουν να καταχωρήσετε διάρκεια (κλειστή γραμμή: χρησιμοποιήστε **-** / **+**, ή πατήστε το βέλος για να τη γράψετε), μια σημείωση και την ώρα του συμβάντος:
 
-#### Site Rotation
+![Διάλογος Άσκηση](../images/dialogs/careportal_exercise.png)
 
-Site Rotation button opens the Site Rotation Dialog in View mode:
+Σε όλους αυτούς τους διαλόγους (**Πλήρωση/Γέμισμα**, **Τοποθέτηση αισθητήρα**, **Αλλαγή Μπαταρίας Αντλίας** και οι καταχωρήσεις Careportal), η ώρα του συμβάντος χρησιμοποιεί την ίδια γραμμή **Χρόνος** όπως ο [διάλογος ινσουλίνης](#aaps-screens-buttons-insulin) και ο Οδηγός Bolus: χρησιμοποιήστε **-** / **+** για να μετακινήσετε την ώρα σε βήματα των 5 λεπτών (έως μία εβδομάδα πίσω και 12 ώρες μπροστά), ή πατήστε το βέλος για να επιλέξετε οποιαδήποτε ημερομηνία και ώρα.
 
-* You can select if you want to see Cannula sites only, Sensor sites only, or both with upper checkboxes
-* All Cannula change and Sensor change event since the past 45 days are available.
-* Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
-* You can open the Edit view to update Site location, Arrow, or Comment associated to each entry
+## Εναλλαγή σημείων
 
-![View Mode](../images/SiteRotation/ViewMode.png)
+Το **Διαχείριση → Εναλλαγή σημείων** καταγράφει πού τοποθετήθηκε κάθε καθετήρας και αισθητήρας πάνω σε έναν χάρτη του σώματος, ώστε να αλλάζετε σημεία: δείτε [Εναλλαγή σημείων](#Aapsscreens-site-rotation) στη σελίδα Αντλίες και καθετήρες.
 
-* The Setting tab (upper right cog) allows you to adjust the patient view (Man, Woman or Child), and to select if you want to manage only Pump sites, only Sensor sites or both.
-
-![Ρυθμίσεις](../images/SiteRotation/Settings.png)
-
-![Settings type](../images/SiteRotation/Type.png)
-
-*Note: this setting will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"*
-
-* For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
-
-Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
-
-* Entry type is visible on the to of Edit mode (Cannula Icon, or Sensor Icon)
-* You have to select Front or Back tab and then the Area
-* Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the pas 45 days in this site
-
-![Edit Mode](../images/SiteRotation/EditMode.png)
-
-* You can adjust an optional arrow with a click on little arrow icon on the top (Arrow allow you to precise sub-location, from 2 to 9, or Pod Orientation)
-
-![Position](../images/SiteRotation/EditModeSub.png)
-
-* You can also adjust comments concerning selected site
-* After confirmation, the site is recorded
-
-Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
-
-![Filtering](../images/SiteRotation/Filtering.png)
-
-#### History Browser
-
-Allows you to ride back in **AAPS** [history](../Maintenance/Reviewing.md).
-
-#### TDD
-
-Total daily dose = bolus + basal per day
-
-Μερικοί γιατροί χρησιμοποιούν - ειδικά για νέες αντλίες - μια αναλογία βασικού ρυθμού προς bolus 50:50.
-
-Therefore, ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours).
-
-Άλλοι προτιμούν το εύρος από 32% έως 37% του TDD για TBB.
-
-Όπως και οι περισσότεροι από αυτούς τους κανόνες, είναι περιορισμένης πραγματικής εγκυρότητας. Σημείωση: Ο διαβήτης σας μπορεί να διαφέρει!
+Το **TDD** (συνολική ημερήσια δόση) και ο πρακτικός κανόνας για τον λόγο βασικού/bolus εξηγούνται στην [καρτέλα Ινσουλίνη των Στατιστικών](#reviewing-tdd).
 
 (AapsScreens-insulin-profile)=
 
-## Προφίλ ινσουλίνης
+## Ινσουλίνη
 
-![Προφίλ ινσουλίνης](../images/Screenshot_insulin_profile.png)
+![Οθόνη ινσουλίνης](../images/manage/insulin_profile.png)
 
-This shows the activity profile of the insulin you have chosen in [Config builder > Insulin](#Config-Builder-insulin). The curves will vary based on the [DIA](#your-aaps-profile-duration-of-insulin-action) and the time to peak.
+Το **Διαχείριση → Ρυθμίσεις ινσουλίνης** δείχνει και διαχειρίζεται τις διαμορφώσεις ινσουλίνης σας. Κάθε διαμόρφωση εμφανίζεται σε μια κάρτα με τον **χρόνο κορυφής** και τη **[DIA](#Config-Builder-insulin-dia)**· αυτή που χρησιμοποιείται σημειώνεται ως **ΕΝΕΡΓΟ**. Κάτω από την κάρτα βλέπετε την καμπύλη δράσης. Μπορείτε να επεξεργαστείτε το ψευδώνυμο, την κορυφή και τη DIA κάθε διαμόρφωσης εκτός από την ενεργή: για να αλλάξετε την ινσουλίνη που χρησιμοποιείτε, [προσθέστε μια νέα διαμόρφωση και ενεργοποιήστε την](#Config-Builder-insulin-change-active).
 
-The **purple** line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is.
+Δείτε [Διάρκεια δράσης της ινσουλίνης](#Config-Builder-insulin-dia) για να μάθετε τι είναι και πώς τη ρυθμίζετε.
 
-See [Your AAPS Profile > Duration of insulin action](#your-aaps-profile-duration-of-insulin-action) to learn more about what it is and how to set it.
+## Κατάσταση Αντλίας
 
-## Pump Status
+![Οθόνη κατάστασης Εικονικής Αντλίας](../images/v4/Pumps/virtual_pump_screen.png)
 
-![Pump Status](../images/Screenshot_PumpStatus.png)
+Το **Διαχείριση → Αντλία** (ή **Διαμόρφωση → Αντλία → Άνοιγμα πρόσθετου**) δείχνει την κατάσταση της αντλίας σας: τελευταία σύνδεση, βασικός ρυθμός, μπαταρία, δεξαμενή...
 
-* Different information on pump status. Displayed information depends on your pump model.
-* See [pumps page](../Getting-Started/CompatiblePumps.md) for details.
+* Οι πληροφορίες που εμφανίζονται εξαρτώνται από το μοντέλο της αντλίας σας.
+* Δείτε τη [σελίδα των αντλιών](../Getting-Started/CompatiblePumps.md) για λεπτομέρειες.
 
-## Loop, AMA / SMB
+## Κύκλωμα, AMA / SMB
 
-These tabs show details about the algorithm's calculations and why **AAPS** acts the way it does.
+Το **Διαμόρφωση → Κύκλωμα → Άνοιγμα πρόσθετου** (και το **Διαμόρφωση → APS → Άνοιγμα πρόσθετου**) δείχνουν λεπτομέρειες για τους υπολογισμούς του αλγορίθμου και γιατί το **AAPS** ενεργεί όπως ενεργεί: τελευταία εκτέλεση, το αίτημα που προέκυψε και τους περιορισμούς. Η οθόνη **Κύκλωμα** δείχνει μόνο τους περιορισμούς που πραγματικά περιόρισαν τον προσωρινό βασικό ρυθμό ή το SMB που χορηγήθηκε (και γιατί δεν επιτρέπεται το κλειστό κύκλωμα, αν ισχύει αυτό)· η οθόνη **APS** δείχνει κάθε περιορισμό που μπήκε στον υπολογισμό.
 
-Calculations are run each time the system gets a fresh reading from the CGM.
+Οι υπολογισμοί γίνονται κάθε φορά που το σύστημα παίρνει νέα μέτρηση από το CGM.
 
-For more details see [APS section on config builder page](#Config-Builder-aps).
+Για περισσότερες λεπτομέρειες δείτε την [ενότητα APS της σελίδας Διαμόρφωση](#Config-Builder-aps).
 
 (aaps-screens-profile)=
 
-## Profile
+## Προφίλ
 
-![Profile](../images/Screenshots_Profile.png)
+![Προφίλ](../images/Screenshots_Profile.png)
 
-Profile contains information on your individual diabetes settings, see the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
+Το **Διαχείριση → Προφίλ** (ή ένα πάτημα στο όνομα του προφίλ στην κύρια οθόνη) ανοίγει την οθόνη Προφίλ: τα προφίλ σας ως κάρτες που αλλάζετε με σύρσιμο, με κουμπιά για προσθήκη, επεξεργασία, αντιγραφή, διαγραφή και **ενεργοποίηση** ενός προφίλ.
 
-## Αυτοματοποίηση
+Το προφίλ περιέχει πληροφορίες για τις προσωπικές σας ρυθμίσεις διαβήτη. Για περισσότερες πληροφορίες δείτε τη σελίδα **[Προφίλ](../SettingUpAaps/YourAapsProfile.md)**.
 
-See the dedicated page [here](../DailyLifeWithAaps/Automations.md).
+## Αυτοματισμός
+
+![Αυτοματισμός](../images/v4/Screens/automation_overview.png)
+
+Το **Διαχείριση → Αυτοματισμός** δείχνει τους κανόνες αυτοματισμού σας. Δείτε την ειδική σελίδα [εδώ](../DailyLifeWithAaps/Automations.md).
 
 ## NSClient
 
 ![NSClient](../images/Screenshots_NSClient.png)
 
-This page displays the status of the connection with your Nightscout site.
+Το **Διαμόρφωση → Επικοινωνία → NSClientV3 → Άνοιγμα πρόσθετου** δείχνει την κατάσταση της σύνδεσης με τον ιστότοπο Nightscout σας: URL, κατάσταση websocket, ουρά και αρχείο καταγραφής της δραστηριότητας συγχρονισμού.
 
-Settings can be changed in [Preferences > NS Client](#Preferences-nsclient).
+Οι ρυθμίσεις αλλάζουν στις [ρυθμίσεις του NSClient](#Preferences-nsclient).
 
-For troubleshooting see this [page](../GettingHelp/TroubleshootingNsClient.md).
+Για την αντιμετώπιση προβλημάτων δείτε αυτή τη [σελίδα](../GettingHelp/TroubleshootingNsClient.md).
 
-## BG Source - xDrip+, BYODA...
+(aaps-screens-bg-source)=
 
-![BG Source tab - here Nightscout](../images/Screenshots_BGSource.png)
+## Πηγή BG - xDrip, BYODA...
 
-Depending on your BG source settings, this tab is named differently.
+![Οθόνη πηγής BG](../images/Screenshots_BGSource.png)
 
-Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low) or duplicate readings.
+Το **Διαμόρφωση → Πηγή BG → Άνοιγμα πρόσθετου** δείχνει το ιστορικό των τιμών CGM και δίνει τη δυνατότητα να αφαιρέσετε τιμές σε περίπτωση σφάλματος (π.χ. compression low, ψευδώς χαμηλή τιμή από πίεση) ή διπλών τιμών.
 
-(aaps-screens-treatments)=
+## Ιστορικό θεραπειών
 
-## Θεραπείες
+Ανοίξτε το **μενού** (☰) και επιλέξτε **Ιστορικό θεραπειών** για να δείτε, να ελέγξετε και να διορθώσετε όλα όσα έχει καταγράψει το **AAPS**: υδατάνθρακες και bolus, προσωρινούς βασικούς ρυθμούς, προσωρινούς στόχους, αλλαγές προφίλ, καταχωρήσεις Careportal, αλλαγές τρόπου λειτουργίας κυκλώματος και εγγραφές χρήστη. Δείτε [Ιστορικό θεραπειών](#aaps-screens-treatments) στη σελίδα Έλεγχος των δεδομένων σας.
 
-This view can be accessed by pressing the 3 dots on the right of the menu, then Treatments. It is not possible to show it in the main menu through the Config Builder. In this view, you can view and alter the history of the following treatments:
+## Εξερεύνηση ιστορικού
 
-* Bolus & carbs
-* [Εκτεταμένο bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-* Temporary basal rate
-* [Temporary target](../DailyLifeWithAaps/TempTargets.md)
-* [Αλλαγή Προφίλ](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-* Careportal: notes entered through action tab and notes in dialogues
-* Running mode : history of loop status
-* User entry: other notes that are not sent to Nightscout
+![Εξερεύνηση ιστορικού](../images/v4/Screens/history_browser.png)
 
-In the last column, the data source for each line is displayed in blue. It can be :
+Ανοίξτε το **μενού** (☰) και επιλέξτε **Εξερεύνηση ιστορικού**.
 
-* NS for Nightscout : the data comes from or has been recorded to Nightscout
-* PH for Pump History : the data has been processed by the pump
+Σας επιτρέπει να γυρίσετε πίσω στο ιστορικό του **AAPS**. Δείτε την ειδική σελίδα [Έλεγχος των δεδομένων σας > Εξερεύνηση ιστορικού](../Maintenance/Reviewing.md).
 
-(screens-bolus-carbs)=
+(aaps-screens-statistics)=
 
-### Bolus & carbs
+## Στατιστικά
 
-![Carbs & bolus](../images/TreatmentsView1.png)
+![Στατιστικά](../images/v4/Screens/statistics.png)
 
-On this tab you can view the bolus and carbs log. Each bolus (line **1** and **4**) shows the remaining associated IOB next to the insulin amount. The origin of the bolus can be either :
+Ανοίξτε το **μενού** (☰) και επιλέξτε **Στατιστικά**.
 
-* Meal (manually entered though the Insulin, Quick Wizard or Bolus Wizard buttons)
-* SMB, when using the SMB Functionality
-
-The carbs (line **2**) are only stored in Nightscout. If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text (line **3**) to show the details of how the bolus was calculated.
-
-Depending on the pump used, insulin and carbs can be shown in one single line, or will result in multiple lines: one for the calculation detail, one for the carbs, one for the bolus itself.
-
-The treatment tab can be used to correct faulty carb entries (*i.e.* you over- or underestimated carbs). Note that it is not possible to edit an existing entry, you need to follow the following process:
-
-1. Check and remember actual COB and IOB on homescreen.
-2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry with the faulty carb amount. (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
-4. Make sure carbs are removed successfully by checking COB on homescreen again.
-5. Do the same for IOB if there is just one line in treatment tab including carbs and insulin.
-  
-  → If carbs are not removed as intended, and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
-
-6. Enter correct carb amount through carbs button on homescreen and make sure to set the correct event time.
-
-7. If there is just one line in treatment tab including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on homescreen after confirming the new entry.
-
-### Temp Basal
-
-![Temp Basal](../images/TreatmentsView2.png)
-
-The **temp basals** applied by the loop are shown here. When there is still an impact on the IOB for an entry, the information is shown in green. It can be:
-
-* Positive IOB if the temp basal was higher than the one set in the Profile (line **2**)
-* Negative IOB for a zero-temp or if the temp basal was lower than the one set in the Profile (line **1**)
-
-Deleting the entries only affects your reports in Nightscout and will probably tamper your real IOB - it is not recommended.
-
-On the left of a line, a red S means “Suspend” : it happens when basal is not currently delivered. This is a normal situation when in the process of changing a pod, for example.
-
-### Temporary target
-
-![Temporary target](../images/TreatmentsView3.png)
-
-The history of temporary targets can be seen here.
-
-### Profile Switch
-
-![Profile Switch](../images/TreatmentsView4.png)
-
-The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user. Line **2**, stored both in NS and PH, correspond to the actual switch.
-
-Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
-
-You can use the **Clone** button shown on line **1** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
-
-(AapsScreens-running-mode)=
-
-### Running mode
-
-![Running mode](../images/TreatmentsView6.png)
-
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, suspend loop.
-
-### Care portal
-
-![Care portal](../images/TreatmentsView5.png)
-
-This tab shows all notes and alerts recorded in Nightscout.
-
-(aaps-screens-running-mode)=
-
-## History Browser
-
-This view can be accessed by pressing the 3 dots on the right of the menu, then History. It is not possible to put in the main menu through the Config Builder. It can also be accessed through a button at the bottom of the [Action tab](#screens-action-tab).
-
-Allows you to ride back in **AAPS** history. See the dedicated page [Reviewing your data > History Browser](../Maintenance/Reviewing.md).
-
-## Statistics
-
-This view can be accessed by pressing the 3 dots on the right of the menu, then Statistics. It is not possible to put in the main menu through the Config Builder.
-
-Gives you statistics about your Time In Range and Total Daily Dose. See the dedicated page [Reviewing your data > Statistics](#reviewing-statistics).
+Σας δίνει στατιστικά για τη συνολική ημερήσια δόση, τον χρόνο εντός στόχου, το προφίλ γλυκόζης σας μέσα στην ημέρα (AGP) και το μοτίβο του κύκλου ινσουλίνης σας, σε τέσσερις καρτέλες. Δείτε την ειδική σελίδα [Έλεγχος των δεδομένων σας > Στατιστικά](#reviewing-statistics).
 
 (aaps-screens-profile-helper)=
 
-## Profile Helper
+## Βοηθός ρύθμισης προφίλ
 
-This view can be accessed by pressing the 3 dots on the right of the menu, then Profile Helper. It is not possible to put in the main menu through the Config Builder. The Profile Helper can help you:
+Ανοίξτε το **μενού** (☰) και επιλέξτε **Βοηθός ρύθμισης προφίλ**.
 
-* [build a profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid)
-* [compare two profiles](#your-aaps-profile-compare-profiles)
+![Βοηθός ρύθμισης προφίλ](../images/screens/profile_helper.png)
+
+Ο Βοηθός ρύθμισης προφίλ σας επιτρέπει να συγκρίνετε προφίλ και να δημιουργήσετε αρχικά προφίλ για παιδιά. Δείτε [Το προφίλ σας στο AAPS](../SettingUpAaps/YourAapsProfile.md) — ενότητες [Δημιουργία προφίλ από την αρχή για παιδί](#your-aaps-profile-profile-from-scratch-for-a-kid) και [Σύγκριση δύο προφίλ](#your-aaps-profile-compare-profiles).
+
+(aaps-screens-widgets)=
+
+## Widgets αρχικής οθόνης
+
+Το **AAPS** έχει πέντε widgets που μπορείτε να προσθέσετε στην αρχική οθόνη του τηλεφώνου σας, για να βλέπετε τα δεδομένα σας χωρίς να ανοίξετε την εφαρμογή. Δείτε την ειδική σελίδα [Widgets αρχικής οθόνης](../DailyLifeWithAaps/Widgets.md).
+
+![Widgets του AAPS στην αρχική οθόνη](../images/widgets/home_widgets_full_circle_small.png)

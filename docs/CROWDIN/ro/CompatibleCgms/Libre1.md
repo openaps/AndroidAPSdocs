@@ -13,13 +13,13 @@ Unele punți sunt încă disponibile pe piață:
 -   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) de la vânzătorii europeni ([BubbleShop](https://bubbleshop.eu/)) sau pentru utilizatorii ruși [aici](https://vk.com/saharmonitor/). De asemenea, este disponibil pe AliExpress.
 -   Atom pentru utilizatorii ruși.
 
-## 1. Utilizare xDrip+
+## 1. Using xDrip
 
--   xDrip+ suportă Miaomiao, Bubble, Blucon, Atom și LibreAlarm.
+-   xDrip supports Miaomiao, Bubble, Blucon, Atom and LibreAlarm.
 -   Puteți descărca în siguranță [ultimul APK (stabil)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) dacă nu aveți nevoie de caracteristici recente, caz în care ar trebui să utilizați cel mai recent [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
--   Urmăriți instrucțiunile de configurare pe pagina [xDrip+ de setări](../CompatibleCgms/xDrip.md).
+-   Follow setup instructions on [xDrip settings page](../CompatibleCgms/xDrip.md).
 -    De asemenea, aveți nevoie de OOP2 pentru Libre 1 SUA (și Libre 2 UE).
--   Selectați xDrip+ în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
+-   Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
 ## 2. Utilizarea Diabox
 
@@ -28,4 +28,4 @@ Unele punți sunt încă disponibile pe piață:
 
 ![Diabox](../images/Diabox.png)
 
-- Selectați xDrip+ în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
+- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).

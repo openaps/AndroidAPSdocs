@@ -1,103 +1,100 @@
-# Update with Android Studio
+# Актуализиране с Android Studio
 
-## Build yourself instead of download
+## Компилирайте сами, вместо да изтегляте
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** не може да се изтегли готово заради правилата за медицинските изделия. Законно е да компилирате приложението за собствена употреба, но НЕ БИВА да давате копие на други хора! Вижте [страницата с често задавани въпроси](../UsefulLinks/FAQ.md) за подробности.
 
 ```{note}
-In case you want to build **AAPS** on a new computer : copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+Ако искате да компилирате **AAPS** на нов компютър: копирайте резервното копие на файла на хранилището за ключове на новия компютър. След това следвайте [процедурата за първоначално компилиране на **AAPS**](../SettingUpAaps/BuildingAaps.md) вместо това ръководство. Единствената разлика е, че вместо да създавате ново хранилище за ключове, можете да изберете това, което сте копирали на новия компютър.
 ```
 
-## Overview for updating to a new version of AAPS with Android Studio
+## Преглед на актуализирането до нова версия на AAPS с Android Studio
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
+Ако имате проблеми, вижте отделната страница за [отстраняване на неизправности в Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
-### Export your settings
+### Експортирайте настройките си
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Експортирайте настройките от съществуващата версия на **AAPS** на телефона си. Може да не ви потрябват, но е по-добре да сте застраховани.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Вижте страницата [Експорт и импорт на настройките](ExportImportSettings.md), ако не помните как се прави това.
 
-### Check your Android Studio version
+### Проверете версията на Android Studio
 
-The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
+Минималната нужна версия е описана в [инструкциите за компилиране](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Ако вашата версия е по-стара, моля, [първо актуализирайте Android Studio](#Building-APK-install-android-studio)!
 
 (Update-to-new-version-update-your-local-copy)=
-### Update your local copy
+### Актуализирайте локалното си копие
 
-```{admonition} WARNING
-:class: warning
-If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../SettingUpAaps/BuildingAaps.md), as this guide will not work for you!
-```
+* Отворете съществуващия си проект AAPS в Android Studio. Може да се наложи да изберете проекта си. Натиснете (два пъти) върху проекта AAPS.
 
-* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
+  ![Android Studio – избор на проект (Select Project)](../images/update/01_ProjectSelection.png)
 
-  ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
+* В лентата с менюта на Android Studio изберете Git -> Fetch
 
-* In the menu bar of Android Studio, select Git -> Fetch
+   ![Меню на Android Studio – Git – Fetch](../images/update/02_GitFetch.png)
 
-   ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+* В долния десен ъгъл ще видите съобщение, че Fetch е успешен.
 
-* You will see a message in the lower right corner that Fetch was successful.
+   ![Меню на Android Studio – Git – Fetch е успешен](../images/update/03_GitFetchSuccessful.png)
 
-   ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
+* Сега в лентата с менюта изберете Git -> Pull
 
-* In the menu bar, now select Git -> Pull
+   ![Меню на Android Studio – Git – Pull](../images/update/04_GitPull.png)
 
-   ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+* Оставете всички опции както са (origin/master) и изберете Pull
 
-* Leave all options as they are (origin/master) and select Pull
+   ![Android Studio – Git – диалог Pull](../images/update/05_GitPullOptions.png)
 
-   ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
-
-* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
+* Изчакайте, докато изтеглянето приключи. Ще виждате информация за това в долната лента. Когато приключи, ще видите съобщение за успех.
 
   ```{note}
-  The files that were updated may vary! This is not an indication
+  Обновените файлове може да са различни! This is not an indication of a problem.
   ```
 
-   ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+   ![Android Studio – Pull е успешен](../images/update/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Wait until it is finished.
+* Ще се изпълни Gradle Sync, за да изтегли някои зависимости. Изчакайте, докато приключи.
 
-  ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
+  ![Android Studio – Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-### Check JVM version
+### Проверете версията на JVM
 
-This check is particularly indicated if you have already built a previous version of **AAPS** on the same computer.
+Тази проверка е особено нужна, ако вече сте компилирали предишна версия на **AAPS** на същия компютър.
 
-Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required version for JVM, matching the **AAPS** version you are now building. Then follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
+Проверете в [инструкциите за компилиране](#Building-APK-recommended-specification-of-computer-for-building-apk-file) нужната версия на JVM за версията на **AAPS**, която компилирате сега. След това следвайте стъпките, описани в [Incompatible Gradle JVM](#incompatible-gradle-jvm), за да сте сигурни, че използвате правилната версия.
 
 (Update-to-new-version-build-the-signed-apk)=
-### Build the Signed APK
+### Компилирайте подписания APK файл
 
-Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+Изходният ви код вече е текущата издадена версия и всички предварителни условия са проверени. Време е да компилирате подписания apk, както е описано в [раздела за компилиране на подписан apk](#Building-APK-generate-signed-apk).
 
 (Update-to-new-version-transfer-and-install)=
 
-### Transfer and install the apk
-You need to transfer the apk to your phone so you can install it.
+### Прехвърлете и инсталирайте apk файла
+Трябва да прехвърлите apk файла на телефона си, за да можете да го инсталирате.
 
 ```{note}
-If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
-For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
+Ако сте компилирали със същото съществуващо хранилище за ключове в Android Studio, не е нужно да премахвате съществуващото приложение от телефона си. Когато инсталирате apk файла, следвайте указанията за инсталиране на актуализации.
+В други случаи, например ако създадете ново хранилище за ключове в Android Studio за подписания apk, трябва да изтриете старото приложение, преди да инсталирате apk файла. **Не забравяйте да експортирате настройките си!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
+Вижте инструкциите за [прехвърляне и инсталиране на AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Там, където се прилага [проверката на разработчиците за Android](#android-developer-verification) на Google (от септември 2026 г., в зависимост от държавата ви), инсталирайте с [ADB](#android-developer-verification-adb), вместо да докосвате APK файла.
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
+Продължете [тук](#Update-to-new-version-check-aaps-version-on-phone).
 
-## Отстраняване на проблеми
+(update-computer-build-troubleshooting)=
 
-If anything goes wrong, don't panic.
+## Отстраняване на неизправности
 
-Take a breath!
+Ако нещо се обърка, не се паникьосвайте.
 
-Then see the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) if your problem is already documented!
+Поемете си дъх!
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+След това вижте отделната страница [Отстраняване на неизправности в Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md), за да проверите дали проблемът ви вече е описан!
+
+Ако ви трябва още помощ, моля, обърнете се към други потребители на **AAPS** във [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) или [Discord](https://discord.gg/4fQUWHZ4Mw).

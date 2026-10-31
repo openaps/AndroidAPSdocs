@@ -1,20 +1,16 @@
-# Preferences
+# Ustawienia (Preferencje)
 
-- **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+W **AAPS** v4 preferencje znajdziesz na ekranie **Ustawienia**. Dostać się do nich możesz na trzy sposoby – szczegóły znajdziesz na stronie [Zmiana konfiguracji AAPS](../SettingUpAaps/ChangeAapsConfiguration.md):
 
-![Open preferences](../images/Pref2020_Open2.png)
+1. Dotknij ikony **Ustawienia** (koło zębate) w prawym górnym rogu ekranu głównego: wszystkie ustawienia, pogrupowane w rozwijane sekcje.
+2. W **Konfiguracji** dotknij „**Ustawienia**” pod aktywną wtyczką: tylko ustawienia tej wtyczki.
+3. Użyj **paska wyszukiwania** u góry ekranu głównego: po prostu zacznij wpisywać część szukanego tekstu. W ten sposób znajdziesz pojedyncze ustawienia (także te niewidoczne na ekranie Ustawienia), okna dialogowe i dokumentację.
 
-- You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and clicking Plugin preferences.
+![Wyniki wyszukiwania dla "target"](../images/preferences/settings_search.png)
 
-![Open plugin preferences](../images/Pref2020_OpenPlugin2.png)
+- **Sekcje** otwierasz i zamykasz, dotykając ich. Widoczne sekcje zależą od włączonych wtyczek i od [trybu uproszczonego](#preferences-simple-mode).
 
-- **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
-
-![Open submenu](../images/Pref2020_Submenu2.png)
-
-- With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
-
-![Preferences filter](../images/Pref2021_Filter.png)
+![Ekran Ustawienia z rozwijanymi sekcjami](../images/v4/Configuration/settings_overview.png)
 
 ```{contents}
 :backlinks: entry
@@ -22,511 +18,544 @@
 ```
 
 (Preferences-general)=
-## General
+## Ogólne
 
-![Preferences > General](../images/Pref2020_General.png)
+![Ustawienia > Ogólne](../images/preferences/settings_general.png)
 
-**Units**
+**Jednostki**
 
-- Set units to mmol/l or mg/dl depending on your preferences.
+- Ustaw jednostki mmol/l lub mg/dl, zależnie od tego, czego używasz.
 
-**Language**
+**Język**
 
-- New option to use phone's default language (recommended).
+- Nowa opcja: używaj domyślnego języka telefonu (zalecane).
 
-- In case you want **AAPS** in a different language than your standard phone language, you can choose from a broad variety.
+- Jeśli chcesz używać **AAPS** w innym języku niż język telefonu, możesz wybrać z wielu języków.
 
-- If you use different languages, you might sometimes see a language mix. This is due to an android issue where overriding the default android language sometimes doesn't work.
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- Gdy zmienisz język, teksty **AAPS** od razu przełączą się na nowy język. Jeśli niektóre teksty są nadal w starym języku, uruchom ponownie **AAPS**.
+- Ustawienie ukryte w [trybie uproszczonym](#preferences-simple-mode).
 
-(preferences-simple-mode)= **Simple mode**
+(preferences-simple-mode)= **Tryb uproszczony**
 
-The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. [Additional graphs](#AapsScreens-section-g-additional-graphs) on the HomePage are also predefined for you. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
+**Tryb uproszczony** jest domyślnie włączony po pierwszej instalacji **AAPS**. W **trybie uproszczonym** wiele ustawień jest ukrytych, a ich wartości są zastąpione wartościami domyślnymi. Wyłącz tryb uproszczony, gdy dobrze poznasz interfejs i ustawienia **AAPS**.
 
-**Patient name**
+**Obsługa stężenia insuliny**
 
-- Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
-- Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
+- Włącza obsługę różnych stężeń insuliny (U50, U200, ...). Włącz to tylko wtedy, gdy naprawdę używasz innego stężenia niż U100, i dokładnie przeczytaj ostrzeżenia.
+- Ustawienie ukryte w [trybie uproszczonym](#preferences-simple-mode).
+
+**Utrzymuj ekran włączony**
+
+- Wymusza na Androidzie, aby ekran był zawsze włączony. Przydaje się to np. podczas prezentacji. Ale zużywa dużo energii baterii. Dlatego zalecamy podłączenie smartfona do ładowarki.
+
+**Nazwa pacjenta**
+
+- Imię osoby, która używa tego telefonu. Pozwala odróżnić tę instancję **AAPS** w raportach i synchronizacji, np. gdy w twojej rodzinie dwoje dzieci z cukrzycą typu 1 używa **AAPS**.
+- Używane w nazwach eksportowanych plików ustawień.
+- Pokazywana na [tarczy Dual](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
-### Skin
+### Motyw
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Wybór skórki z **AAPS** 3.x (Oryginalna, Niska rozdzielczość, Duży wyświetlacz...) nie istnieje już w **AAPS** 4. Nowy interfejs sam dopasowuje się do ekranu, a schemat kolorów możesz zmienić w sekcji [Wygląd](#preferences-appearance).
 
-You can choose from four types of skins:
+(preferences-appearance)=
+## Wygląd
 
-![Select skin](../images/Pref2021_SkinWExample.png)
-
-'Low resolution skin' comes with shorter labels and age/level removed to have more available space on a very low resolution screen.
-
-Difference between the other skins depends on the phone's display orientation:
-
-#### Portrait orientation
-
-- **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
-- **Large Display** has an increased height for all graphs compared to other skins
-
-#### Landscape orientation
-
-- Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
-
-- **Large Display** has an increased height for all graphs compared to other skins
-
-![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
-
-(Preferences-protection)=
-## Protection
-
-![Preferences > General - Protection](../images/Pref2020_General2.png)
-
-(Preferences-master-password)=
-### Master password
-
-Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
-
-**Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
-
-![Set master password](../images/MasterPW.png)
-
-### Settings protection
-
-- Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Preferences related view.
-
-- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md), and use a different one for editing the preferences.
-
-- If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
-
-![Protection](../images/Pref2020_Protection.png)
-
-### Application protection
-
-If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**.
-
-**AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
-
-### Bolus protection
-
-- Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
-
-- In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter thr master password.
-
-![Prompt biometric protection](../images/Pref2020_PW.png)
-
-### Password and PIN retention
-
-Define how long (in seconds), the preferences or bolus functionalities remain unlocked after you successfully enter the password.
-
-## Overview
-
-In the **Overview** section, you can define the preferences for the home screen.
-
-![Preferences > Overview](../images/Pref2020_OverviewII.png)
-
-### Keep screen on
-
-Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
-
-(Preferences-buttons)=
-### Buttons
-
-- Define which buttons are visible on the bottom of your home screen.
-- Setting hidden in [simple mode](#preferences-simple-mode).
-
-![Preferences > Buttons](../images/Pref2020_OV_Buttons.png)
-
-- The **Increment** options allow you to define the amount for the three buttons in the carb and insulin dialogues, for easy entry.
-
-![Preferences > Buttons > Insulin](../images/Pref2020_OV_Buttons2.png)
-
-![Preferences > Buttons > Carbs](../images/Pref2020_OV_Buttons3.png)
-
-(Preferences-quick-wizard)=
-### Quick Wizard
-
-Create customized buttons for certain standard meals or snacks which will be displayed on the home screen. Useful for standard meals frequently eaten.
-
-For each button, you define the carbs and calculation method for the bolus. Then, you define during which time period the button will be visible on your home screen - just one button per period. The button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
-
-![Preferences > Quick Wizard Button Setup](../images/Pref2020_OV_QuickWizard.png)
-
-If you click the quick wizard button **AAPS** will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
-
-The proposal has to be confirmed before insulin is delivered.
-
-![Preferences > Quick Wizard Button](../images/Pref2020_OV_QuickWizard2.png)
-
-Only one QuickWizard button can show up at the same time. If you want to execute a different one : long press on the Quick Wizard button currently showing. It will take you to the list of all Quick Wizard options. To execute one, long press on it. You will have to confirm before execution.
-
-(Preferences-default-temp-targets)=
-### Default temp targets
-
-Setting hidden in [simple mode](#preferences-simple-mode).
-
-[Temporary targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to change your blood glucose target for a certain time period. When setting a default TT, you can easily change your target for activity, eating soon etc.
-
-Here you can change the target and the duration for each predefined TT. Preset values are:
-
-* Eating soon: target 72 mg/dL / 4.0 mmol/l, duration 45 min
-* Activity: target 140 mg/dL / 7.8 mmol/l, duration 90 min
-* Hypo: target 125 mg/dL / 6.9 mmol/l, duration 45 min
-
-![Preferences > Default temp targets](../images/Pref2020_OV_DefaultTT.png)
-
-Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
-
-### Fill/Prime standard insulin amounts
-
-Setting hidden in [simple mode](#preferences-simple-mode).
-
-If you want to fill the tube or prime cannula through **AAPS** you can do this through the [**Actions** tab](#screens-action-tab).
-
-Pre-set values can be defined in this dialogue. Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
+![Ustawienia > Wygląd](../images/preferences/settings_appearance.png)
 
 (Preferences-range-for-visualization)=
-### Range for visualization
+### Zakres do wizualizacji (na wykresie)
 
-Choose the high and low marks for the BG-graph on **AAPS** overview and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
-
-![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
-
-### Shorten tab titles
-
-Setting hidden in [simple mode](#preferences-simple-mode).
-
-Useful to see more tab titles on screen.
-
-For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
-
-![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
+Wybierz górną i dolną granicę wykresu glikemii na ekranie głównym **AAPS** i na smartwatchu. To tylko wizualizacja, a nie zakres docelowy glikemii. Przykład: 70–180 mg/dl lub 3,9–10 mmol/l
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### Show notes field in treatments dialogs
+### Pokaż notatki w oknach dialogowych
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Pozwala dodawać krótkie notatki tekstowe do leczenia (kalkulator bolusa, węglowodany, insulina...)
 
-Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
+Ustawienie ukryte w [trybie uproszczonym](#preferences-simple-mode).
 
-![Preferences > Notes in treatment dialogs](../images/Pref2020_OV_Notes.png)
+### Schemat kolorów aplikacji
 
-(Preferences-status-lights)=
-### Status lights
+Wybierz jasny motyw, ciemny motyw lub ustawienie systemowe telefonu.
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+(Preferences-protection)=
+## Ochrona
 
-Status lights give a visual warning for:
+![Ustawienia > Ochrona](../images/preferences/settings_protection.png)
 
-- Sensor age
-- Sensor battery level for certain smart readers (see [screenshots page](#screens-sensor-level-battery) for details).
-- Insulin age (days reservoir is used)
-- Reservoir level (units)
-- Cannula age
-- Pump battery age
-- Pump battery level (%)
+(Preferences-master-password)=
+### Hasło główne
 
-If the warning threshold is exceeded, values will be shown in yellow. If the critical threshold is exceeded, values will be shown in red.
+Wymagane, aby można było [eksportować ustawienia](../Maintenance/ExportImportSettings.md), bo od wersji 2.7 są one szyfrowane.
 
-The last option allows you to import those settings from Nightscout if defined there. See [Nightscout documentation](https://nightscout.github.io/nightscout/setup_variables/#age-pills) for more information.
+**Ochrona biometryczna może nie działać na telefonach OnePlus. To znany problem niektórych telefonów OnePlus.**
 
-![Preferences > Status Lights](../images/Pref2020_OV_StatusLights2.png)
+![Ustaw hasło główne](../images/preferences/master_password_dialog.png)
 
-(Preferences-deliver-this-part-of-bolus-wizard-result)=
-### Deliver this part of bolus wizard result
+(Preferences-settings-protection)=
+### Ochrona ustawień
 
-Set the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
+- Chroń swoje ustawienia hasłem lub uwierzytelnianiem biometrycznym telefonu (np. gdy [dziecko używa **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). Jeśli włączysz tę funkcję, przy każdym otwarciu widoku związanego z Ustawieniami zostaniesz poproszony o uwierzytelnienie.
 
-Default is 100%: no correction. Even when setting a different value here, you can still change each time you use the bolus wizard. If this setting is 75 % and you had to bolus 10U, the bolus wizard will propose a meal bolus of only 7.5 units.
+- Ekrany zarządzania (**Profil**, **Ustawienia insuliny**, **Cel tymczasowy**, **Szybki kalkulator**) otwierają się wtedy **tylko do odczytu**. Nadal możesz aktywować lub użyć wpisu, ale dodawanie, edycja, klonowanie i usuwanie są ukryte, dopóki nie odblokujesz ustawień. Zobacz [Ochrona ustawień blokuje teraz także ekrany zarządzania](#v4changes-read-only-management).
 
-When using [SMB](#objectives-objective9), many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (Unattended Meal Detection) do the rest. Using a value lower than 100% here can be useful:
-* for people with slow digestion: sending all the bolus upfront can cause hypo because the insulin action is faster than the digestion.
-* to leave more room to **AAPS** to deal by itself with **BG rise**. In both cases, **AAPS** will compensate for the missing part of the bolus with SMBs, if/when deemed adequate.
+- Hasła użytkownika używaj wtedy, gdy chcesz, aby hasło główne chroniło tylko [eksportowane ustawienia](../Maintenance/ExportImportSettings.md), a do edycji ustawień chcesz używać innego hasła.
 
-### Old glycemia time threshold
+- Jeśli używasz hasła użytkownika, dotknij wiersza „Hasło do ustawień”, aby ustawić hasło tak, jak opisano [powyżej](#Preferences-master-password).
 
-If the last **BG** received is older than this threshold, then the bolus wizard will by default offer a 100% dose instead of the **Deliver this part of bolus wizard result** setting above. The reason for this is that when **BG** is missing, **AAPS** will not be able to send the remaining part of the bolus afterward (the loop is not running), which would result in high **BG**.
+### Ochrona aplikacji
 
-### Enabled bolus advisor
+Jeśli aplikacja jest chroniona, musisz wpisać hasło lub użyć uwierzytelniania biometrycznego telefonu, aby otworzyć **AAPS**, a także ponownie, gdy wracasz do aplikacji po upływie [czasu ochrony](#Preferences-password-and-pin-retention).
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Po wpisaniu złego hasła **AAPS** od razu się zamknie – ale nadal będzie działać w tle, jeśli wcześniej zostało poprawnie otwarte.
 
-![Bolus Advisor](../images/BolusAdvisor.png)
+### Ochrona Bolusa
 
-When enabled, when you use the bolus wizard as you are in hyperglycemia, you will get a warning, prompting you if you wish to pe-bolus and eat later, when your **BG** gets back in range.
+- Ochrona bolusa może być przydatna, jeśli **AAPS** używa małe dziecko, a ty [podajesz bolus przez SMS](../RemoteFeatures/SMSCommands.md).
 
-### Enabled bolus reminder
+- Opcję **Ochrona Bolusa** możesz wybrać dopiero wtedy, gdy ustawisz opcję **Ochrona ustawień** (poziom 2).
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+- W przykładzie poniżej ochrona bolusa używa opcji **Hasło główne**: **AAPS** prosi o hasło główne przed otwarciem okna leczenia, np. **Insulina**. Przy opcji **Biometryczne**, jeśli uwierzytelnianie biometryczne nie działa, możesz zamiast tego wpisać hasło główne.
 
-% todo
+![Okno „Wymagane uwierzytelnienie” z prośbą o hasło główne](../images/preferences/bolus_protection_prompt.png)
 
-(Preferences-advanced-settings-overview)=
-### Advanced Settings (Overview)
+(Preferences-password-and-pin-retention)=
+### Pamiętanie hasła i PIN-u
 
-![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
+**Czas do ponownego zablokowania** określa, jak długo (w sekundach) ustawienia lub funkcje bolusa pozostają odblokowane po poprawnym wpisaniu hasła.
 
-#### Superbolus
+## Bezpieczeństwo terapii
 
-Setting hidden in [simple mode](#preferences-simple-mode).
-
-Option to enable superbolus in bolus wizard.
-
-[Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes. It is different from *super micro bolus*!
-
-Use with caution and do not enable it until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB **AAPS** looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
-
-## Treatment safety
+![Ustawienia > Bezpieczeństwo terapii](../images/preferences/settings_safety.png)
 
 (preferences-patient-type)=
-### Patient type
+### Wiek pacjenta
 
-- Safety limits are set based on the age you select in this setting.
-- If you start hitting these hard limits (like max bolus) it's time to move one step up.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal dot, for example).
-- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
+- Limity bezpieczeństwa są ustawiane na podstawie wieku, który wybierzesz w tym ustawieniu.
+- Jeśli zaczynasz dochodzić do tych twardych limitów (np. maksymalny bolus), czas przejść o jeden krok wyżej.
+- Wybór wieku wyższego niż prawdziwy to zły pomysł, bo może prowadzić do przedawkowania przy wpisaniu złej wartości w oknie insuliny (np. gdy pominiesz przecinek dziesiętny).
+- Jeśli chcesz poznać dokładne wartości tych stałych limitów bezpieczeństwa, przewiń do funkcji algorytmu, której używasz, na [tej stronie](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
-### Max allowed bolus
+(Preferences-maximum-bolus)=
+### Maksymalny bolus
 
-- Defines the maximum amount of bolus insulin, in insulin units, that **AAPS** is allowed to deliver at once.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose.
-- This restriction is also applied to the results of the bolus calculator.
+- Określa maksymalną ilość insuliny w bolusie (w jednostkach insuliny), jaką **AAPS** może podać za jednym razem.
+- To ustawienie jest limitem bezpieczeństwa. Chroni przed podaniem bardzo dużego bolusa przez przypadkowe wpisanie wartości lub błąd użytkownika.
+- Zalecamy ustawić tu rozsądną wartość, która odpowiada mniej więcej największej dawce bolusa, jakiej możesz kiedykolwiek potrzebować na posiłek lub korektę.
+- To ograniczenie dotyczy też wyników kalkulatora bolusa.
 
-### Max allowed carbs
+### Maksymalna ilość węglowodanów
 
-- Defines the maximum amount of carbs, in grams, that **AAPS** bolus calculator is allowed to dose for.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+- Określa maksymalną ilość węglowodanów (w gramach), dla jakiej kalkulator bolusa **AAPS** może obliczyć dawkę.
+- To ustawienie jest limitem bezpieczeństwa. Chroni przed podaniem bardzo dużego bolusa przez przypadkowe wpisanie wartości lub błąd użytkownika.
+- Zalecamy ustawić tu rozsądną wartość, która odpowiada mniej więcej największej ilości węglowodanów, jaką możesz kiedykolwiek zjeść w jednym posiłku.
 
-## Loop
+## Źródła danych o poziomie cukru we krwi (BG) - CGM/FGM
 
-As of [AAPS version 3.4](#version3400), it is no longer possible to set the loop mode here. See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) to change loop mode now.
+Ustawienia wybranego [źródła BG](#Config-Builder-bg-source) pojawiają się jako osobna sekcja. Na przykład dla **xDrip+ BG**:
+
+![Ustawienia > xDrip+ BG](../images/preferences/settings_xdrip.png)
+
+- **Przekaż glikemię do NS**: **AAPS** wysyła otrzymane wartości glikemii do Nightscout. Włącz to tylko wtedy, gdy sama aplikacja CGM jeszcze ich nie wysyła.
+- **Odnotuj zmianę sensora**: po założeniu sensora automatycznie tworzy zdarzenie terapii „zmiana sensora”.
+
+## Ekran główny
+
+W **AAPS** 3.x te ustawienia były zebrane w sekcji „Przegląd” (Overview). W **AAPS** 4 ustawiasz je bezpośrednio w elementach ekranu głównego, do których należą.
+
+(Preferences-buttons)=
+### Przyciski szybkich akcji (QuickLaunch)
+
+Określ, które przyciski akcji są widoczne na ekranie głównym: dotknij małego **koła zębatego** na dole, na środku ekranu głównego („Konfiguracja szybkich akcji”) i wybierz **Dodaj** przy akcjach, do których chcesz mieć szybki dostęp (leczenie, akcje CGM, wpisy portalu opieki...).
+
+![Konfiguracja szybkich akcji](../images/preferences/quicklaunch_config.png)
+
+(Preferences-quick-wizard)=
+### Szybki kalkulator
+
+Utwórz własne przyciski dla wybranych standardowych posiłków lub przekąsek. Będą one widoczne na ekranie głównym. Przydatne przy standardowych posiłkach, które często jesz.
+
+Dla każdego przycisku określasz węglowodany i sposób obliczania bolusa. Następnie określasz, w jakim przedziale czasu przycisk będzie widoczny na ekranie głównym – tylko jeden przycisk na jeden przedział. Przycisk nie będzie widoczny poza ustawionym przedziałem czasu ani wtedy, gdy masz dość IOB, aby pokryć węglowodany ustawione w przycisku Szybkiego kalkulatora. Jeśli dla różnych posiłków ustawisz różne godziny, na ekranie głównym zawsze zobaczysz przycisk standardowego posiłku pasujący do pory dnia.
+
+Aby zarządzać ustawieniami Szybkiego kalkulatora, wpisz „QuickWizard” w pasku wyszukiwania na ekranie głównym i otwórz **Szybki kalkulator - Zarządzaj ustawieniami szybkiego kalkulatora**.
+
+Gdy klikniesz przycisk Szybkiego kalkulatora, **AAPS** obliczy i zaproponuje bolus na te węglowodany na podstawie twoich aktualnych współczynników (z uwzględnieniem glikemii lub aktywnej insuliny, jeśli tak ustawisz).
+
+Propozycję musisz potwierdzić, zanim insulina zostanie podana.
+
+(Preferences-default-temp-targets)=
+### Domyślne cele tymczasowe
+
+[Cele tymczasowe (TT)](../DailyLifeWithAaps/TempTargets.md) pozwalają zmienić cel glikemii na określony czas. Gdy ustawisz domyślne TT, możesz łatwo zmienić cel np. na aktywność czy wkrótce posiłek.
+
+Dotknij **zakresu docelowego** na ekranie głównym, aby otworzyć ekran **Cel tymczasowy**. Przesuwaj karty presetów (Wkrótce posiłek, Aktywność, Hipo) i zmień cel oraz czas trwania każdego presetu w **Ustawienia predefiniowane**. Wstępnie ustawione wartości to:
+
+* Wkrótce posiłek: cel 90 mg/dl / 5,0 mmol/l, czas trwania 45 min
+* Aktywność: cel 140 mg/dl / 7,8 mmol/l, czas trwania 90 min
+* Hipo: cel 160 mg/dl / 8,9 mmol/l, czas trwania 60 min
+
+![Presety celów tymczasowych](../images/preferences/temp_target_presets.png)
+
+Dowiedz się, [jak włączyć cele tymczasowe](#TempTargets-where-can-i-select-a-temp-target).
+
+### Standardowe ilości insuliny do wypełnienia/napełnienia
+
+Jeśli chcesz wypełnić dren lub napełnić kaniulę przez **AAPS**, użyj przycisków **Napełnij/Wypełnij** w rozwiniętym panelu stanu na ekranie głównym.
+
+Domyślne ilości dla trzech przycisków wypełniania możesz ustawić w ustawieniach **Napełnij/Wypełnij**, zależnie od długości twojego drenu. Aby je otworzyć, wpisz „prime” w pasku wyszukiwania na ekranie głównym.
+
+![Standardowe ilości Napełnij/Wypełnij](../images/preferences/settings_prime_fill.png)
+
+(Preferences-status-lights)=
+### Wskaźniki stanu
+
+Wskaźniki stanu dają wizualne ostrzeżenie dla:
+
+- Wiek sensora
+- Wiek insuliny (ile dni używany jest zbiornik)
+- Poziom zbiornika (jednostki)
+- Wiek wkłucia
+- Wiek baterii pompy
+- Poziom baterii pompy (%)
+
+Gdy próg ostrzeżenia zostanie przekroczony, wartości będą pokazane na żółto. Gdy próg krytyczny zostanie przekroczony, wartości będą pokazane na czerwono.
+
+Aby zmienić progi, rozwiń panel stanu na ekranie głównym (strzałka po prawej stronie wiersza stanu) i dotknij małej ikony **Ustawienia** obok „Status”:
+
+![Wskaźniki stanu](../images/preferences/status_lights.png)
+
+Dotknij elementu (**Kaniula**, **Insulina**, **Sensor** lub **Bateria pompy**), aby otworzyć jego progi ostrzeżenia i krytyczne:
+
+![Progi wskaźników stanu dla kaniuli](../images/preferences/status_lights_cannula.png)
+
+Ostatnia opcja pozwala zaimportować te ustawienia z Nightscout, jeśli są tam ustawione. Więcej informacji znajdziesz w [dokumentacji Nightscout](https://nightscout.github.io/nightscout/setup_variables/#age-pills).
+
+(Preferences-deliver-this-part-of-bolus-wizard-result)=
+### Ustawienia kalkulatora bolusa
+
+Aby otworzyć ustawienia **Kalkulator bolusa**, wpisz „bolus” w pasku wyszukiwania na ekranie głównym:
+
+![Ustawienia kalkulatora bolusa](../images/preferences/settings_bolus_wizard.png)
+
+**Procent bolusa** ustawia [domyślny procent](#AapsScreens-section-j) bolusa obliczonego przez kalkulator bolusa.
+
+Domyślnie 100%: bez zmiany. Nawet jeśli ustawisz tu inną wartość, nadal możesz ją zmienić przy każdym użyciu kalkulatora bolusa. Jeśli to ustawienie ma wartość 75%, a potrzebujesz bolusa 10 U, kalkulator bolusa zaproponuje bolus na posiłek tylko 7,5 U.
+
+Przy używaniu [SMB](#objectives-objective9) wiele osób nie podaje bolusa na posiłek w 100% potrzebnej insuliny, tylko część (np. 75%), a resztę zostawia SMB z UAM (wykrywanie nieogłoszonych posiłków). Wartość niższa niż 100% może być tu przydatna:
+* dla osób z wolnym trawieniem: podanie całego bolusa od razu może spowodować hipoglikemię, bo insulina działa szybciej, niż trwa trawienie.
+* aby zostawić **AAPS** więcej miejsca na samodzielne radzenie sobie ze **wzrostem glikemii**. W obu przypadkach **AAPS** uzupełni brakującą część bolusa za pomocą SMB, jeśli i kiedy uzna to za właściwe.
+
+**Włącz doradcę bolusa**
+
+Gdy ta opcja jest włączona i użyjesz kalkulatora bolusa przy hiperglikemii, dostaniesz ostrzeżenie z pytaniem, czy chcesz podać bolus wcześniej, a zjeść później, gdy twoja **glikemia** wróci do zakresu.
+
+(Preferences-advanced-settings-overview)=
+### Superbolus
+
+Opcja Superbolus z **AAPS** 3.x nie jest dostępna jako ustawienie w **AAPS** 4.
+
+## Pętla
+
+Aby teraz zmienić tryb pętli, zobacz [Ekrany AAPS > Ekran główny > Status pętli](#AapsScreens-loop-status).
 
 (Preferences-minimal-request-change)=
-### Minimal request change
+### Minimalna zmiana w trybie otwartej pętli
 
-When using **Open loop**, you will receive notifications every time **AAPS** recommends adjusting the basal rate. To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the minimal request rate. This defines the relative change required to trigger a notification.
+Gdy używasz trybu **Otwarta pętla**, dostajesz powiadomienie za każdym razem, gdy **AAPS** zaleca zmianę dawki bazowej. Aby zmniejszyć liczbę powiadomień, możesz użyć [szerszego zakresu docelowego glikemii](#profile-glucose-targets) albo zwiększyć procent w ustawieniu „**Minimalna zmiana w trybie otwartej pętli**”. Określa względną zmianę, która jest potrzebna, aby pojawiło się powiadomienie.
 
-## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
+![Ustawienia > Pętla](../images/preferences/settings_loop.png)
 
-Depending on your settings in [Config builder > APS](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
+## Advanced Meal Assist (AMA) lub Super Micro Bolus (SMB)
 
-- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
+Zależnie od ustawień w [Konfiguracja > APS](../SettingUpAaps/ConfigBuilder.md) możesz wybrać jeden z dwóch algorytmów:
 
-As of [**AAPS** version 3.3](#version3300), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved as part of OpenAPS SMB.
+- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) – stan algorytmu z 2017 roku
+- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) – najnowszy algorytm, zalecany dla początkujących
+
+Od [**AAPS** w wersji 3.3](#version3300) funkcja [Dynamiczny ISF](../DailyLifeWithAaps/DynamicISF.md) jest częścią OpenAPS SMB.
 
 ### OpenAPS AMA
 
-All the settings for OpenAPS AMA are described in the dedicated section in [Key AAPS Features > Advanced Meal Assist (AMA)](#Open-APS-features-advanced-meal-assist-ama).
+Wszystkie ustawienia OpenAPS AMA są opisane w osobnej sekcji [Kluczowe funkcje AAPS > Advanced Meal Assist (AMA)](#Open-APS-features-advanced-meal-assist-ama).
 
 (Preferences-openaps-smb-settings)=
 ### OpenAPS SMB
 
-All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
+Wszystkie ustawienia OpenAPS SMB są opisane w osobnej sekcji [Kluczowe funkcje AAPS > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-## Absorption settings
+Lista widocznych ustawień zależy od twoich postępów w [Zadaniach](../SettingUpAaps/CompletingTheObjectives.md) i od [trybu uproszczonego](#preferences-simple-mode). Po nowej instalacji widoczna jest tylko opcja **Włącz wrażliwość dynamiczną**. Po ukończeniu zadań sekcja wygląda tak:
+
+![Ustawienia > OpenAPS SMB, część pierwsza](../images/preferences/settings_openaps_smb_1.png)
+
+![Ustawienia > OpenAPS SMB, opcje SMB](../images/preferences/settings_openaps_smb_2.png)
+
+![Ustawienia > OpenAPS SMB, UAM i wymagane węglowodany](../images/preferences/settings_openaps_smb_3.png)
+
+**Ustawienia zaawansowane** na dole sekcji zawierają wartości, których zwykle nie trzeba zmieniać:
+
+![Ustawienia > OpenAPS SMB > Ustawienia zaawansowane](../images/preferences/settings_openaps_smb_advanced.png)
+
+![Ustawienia > OpenAPS SMB > Ustawienia zaawansowane, ciąg dalszy](../images/preferences/settings_openaps_smb_advanced_2.png)
+
+## Ustawienia wchłaniania
+
+![Ustawienia > Ustawienia wchłaniania](../images/preferences/settings_absorption.png)
 
 (Preferences-min_5m_carbimpact)=
-### min_5m_carbimpact
+### SMB min wpływ węglowodanów (5 min) (min_5m_carbimpact)
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Ustawienie ukryte w [trybie uproszczonym](#preferences-simple-mode).
 
-The algorithm uses BGI (blood glucose impact) to determine when [carbs are absorbed](../DailyLifeWithAaps/CobCalculation.md).
+Algorytm używa BGI (wpływu na glikemię), aby ustalić, kiedy [węglowodany są wchłaniane](../DailyLifeWithAaps/CobCalculation.md).
 
-At times when carb absorption can’t be dynamically worked out based on your blood's reactions, **AAPS** inserts a default decay to your carbs. Basically, it is a failsafe. This value is only used during gaps in **CGM** readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause **AAPS** to decay COB.
+Gdy wchłaniania węglowodanów nie da się obliczyć dynamicznie na podstawie reakcji twojego organizmu, **AAPS** stosuje domyślny spadek węglowodanów. Zasadniczo jest to taki bezpiecznik. Ta wartość jest używana tylko w czasie przerw w odczytach **CGM** lub gdy aktywność fizyczna „zużywa” cały wzrost glikemii, który w innym przypadku pozwoliłby **AAPS** zmniejszać COB.
 
-To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc.
+Mówiąc prosto: algorytm „wie”, jak twoja glikemia *powinna* się zachowywać pod wpływem aktualnej dawki insuliny itp. Za każdym razem, gdy glikemia rośnie bardziej niż oczekiwano, część węglowodanów zostaje uznana za wchłoniętą. Duża zmiana = dużo węglowodanów itd.
 
-The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
+Wartość min_5m_carbimpact określa domyślny wpływ wchłaniania węglowodanów na 5 minut. Pełny opis parametru znajdziesz w [dokumentacji OpenAPS o preferencjach i ustawieniach bezpieczeństwa](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
-Standard value for AMA is 5, for SMB it's 8.
+Wartość standardowa dla AMA to 3, dla SMB to 8.
 
-The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
+Wykres COB na ekranie głównym pokazuje, kiedy używana jest wartość min_5m_carbimpact: na górze krzywej COB pojawiają się pomarańczowe kropki.
 
-![COB graph](../images/Pref2020_min_5m_carbimpact.png)
+![Wykres COB](../images/main/cob_graph_min_5m_carbimpact.png)
 
-### Meal max absorption time
+### Czas odcięcia wchłaniania
 
-If you often eat high fat or protein meals you will need to increase your meal absorption time.
+Czas, po którym każdy posiłek jest uznany za wchłonięty; pozostałe węglowodany zostaną odcięte. Jeśli często jesz posiłki z dużą ilością tłuszczu lub białka, musisz wydłużyć czas wchłaniania posiłku.
 
-### Advanced settings - autosens ratio
+### Ustawienia zaawansowane – współczynnik autosens
 
-![Absorption settings](../images/Pref2020_Absorption.png)
+![Zaawansowane ustawienia wchłaniania](../images/preferences/settings_absorption_advanced.png)
 
-- Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
-- Normally standard values (max. 1.2 and min. 0.7) should not be changed.
+- Określ minimalny i maksymalny współczynnik [autosens](#Open-APS-features-autosens).
+- Zwykle nie zmienia się wartości standardowych (maks. 1,2 i min. 0,7).
 
-## Pump
+## Pompa
 
-### BT Watchdog
+![Ustawienia > Pompa](../images/preferences/settings_pump.png)
 
-Activate BT watchdog if necessary (e.g. for Dana pumps). It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+### Watchdog BT
 
-## Pump settings
+W razie potrzeby włącz Watchdog BT (np. dla pomp Dana). Wyłącza Bluetooth na jedną sekundę, jeśli nie można połączyć się z pompą. Może to pomóc na niektórych telefonach, na których stos Bluetooth się zawiesza.
 
-The options here will vary depending on which pump driver you have selected in [Config Builder > Pump](#Config-Builder-pump).  Pair and set your pump up according to the [pump related instructions](../Getting-Started/CompatiblePumps.md).
+## Ustawienia pompy
+
+Dostępne tu opcje zależą od sterownika pompy wybranego w [Konfiguracja > Pompa](#Config-Builder-pump). Sparuj i skonfiguruj pompę zgodnie z [instrukcjami dla twojej pompy](../Getting-Started/CompatiblePumps.md).
+
+Na przykład dla **Pompa wirtualna** sekcja nazywa się **Ustawienia pompy wirtualnej**. Wybierasz **Typ pompy**, który ma udawać wirtualna pompa, oraz to, czy jej stan jest wysyłany do Nightscout:
+
+![Ustawienia > Ustawienia pompy wirtualnej](../images/preferences/settings_virtual_pump.png)
 
 ## Tidepool
 
-More information on the dedicated [Tidepool](../SettingUpAaps/Tidepool.md) page.
+Więcej informacji na osobnej stronie [Tidepool](../SettingUpAaps/Tidepool.md).
 
 (Preferences-nsclient)=
 ## NSClient
 
-![NSClient](../images/Pref2020_NSClient.png)
+![Ustawienia > NSClientV3](../images/preferences/settings_nsclient.png)
 
-Original communication protocol, can be used with older Nightscout versions.
+Wtyczka NSClient (w menu konfiguracji widoczna jako **NSClientV3**) synchronizuje twoje dane z Nightscout. Używa Nightscout API v3.
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- The *[API secret](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)* (a 12 character password recorded in your Nightscout variables).
-- This enables data to be read and written between both the Nightscout website and **AAPS**.
-- Double check for typos here if you are stuck in Objective 1.
-
-## NSClientV3
-
-![NSClientV3](../images/Pref2024_NSClientV3.png)
-
-[New protocol introduced with AAPS 3.2.](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) Safer and more efficient.
-
-```{admonition} V3 data uploaders
+```{admonition} Data uploaders
 :class: warning
 
-When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let **AAPS** upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+Gdy używasz NSClientV3, wszystkie programy wysyłające dane (uploadery) muszą używać Nightscout API v3. If another uploader (for example your CGM app) is not API v3 compliant, **let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **NS access token** (not your API Secret!).
-- This enables data to be read and written between both the Nightscout website and **AAPS**.
-- Double check for typos here if you are stuck in Objective 1.
-- Leave Connect to websockets enabled (recommended).
+- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplatform.dom>).
+- **Upewnij się, że adres URL NIE ma na końcu /api/v1/.**
+- W Nightscout utwórz *[token Admin](https://nightscout.github.io/nightscout/security/#create-a-token)* (do API V3 potrzebny jest [Nightscout 15](https://nightscout.github.io/update/update/)) i wpisz go w polu **Token dostępu do Nightscout** (nie twój API Secret!). W **AAPSClient** możesz zamiast tego zeskanować kod QR z głównego telefonu. W ten sposób klient dostaje własny token. Klient sparowany za pomocą PIN-u po sparowaniu dostaje własny token od głównego telefonu. Zobacz [Własny token Nightscout klienta](#client-master-control-own-token).
+- Dzięki temu dane mogą być odczytywane i zapisywane zarówno na stronie Nightscout, jak i w **AAPS**.
+- Jeśli utknąłeś w Zadaniu 1, sprawdź tu dokładnie, czy nie ma literówek.
+- Zostaw włączoną opcję „Użyj websockets” (zalecane).
 
 (Preferences-nsclient-synchronization)=
-### Synchronization
+### Synchronizacja
 
-![Synchronization options](../images/Pref2025_NSclient_Synchronization.png)
+![Opcje synchronizacji](../images/preferences/settings_nsclient_sync.png)
 
-Synchronization choices will depend on the way you will want to use **AAPS**.
+Wybór synchronizacji zależy od tego, jak chcesz używać **AAPS**.
 
-You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
+Możesz wybrać, które dane chcesz [wysyłać do Nightscout i pobierać z Nightscout](#Nightscout-aaps-settings).
 
-### Alarm options
+Gdy sterowanie z urządzenia opiekuna jest włączone (zawsze w trybie uproszczonym), te ustawienia są ukryte: **AAPS** działa wtedy w [trybie silniejszych zabezpieczeń](#client-master-control-hardened-mode), nie przyjmuje zmian zrobionych bezpośrednio w Nightscout i wysyła wszystkie swoje dane.
 
-![Alarm options](../images/Pref2024_NSClient_Alarms.png)
+### Opcje alarmu
 
-- Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
-- For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
-- They will only work whilst you have a connection to Nightscout and are intended for parent/caregivers.
-- If you have the **CGM** source on your phone (i.e. xDrip+ or BYODA) then use those alarms instead of Nightscout Alarms.
-- Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the **AAPS** notifications bar.
-- You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
+![Opcje alarmu](../images/preferences/settings_nsclient_alarms.png)
 
-### Connection settings
+- Opcje alarmu pozwalają wybrać, których alarmów Nightscout ma używać aplikacja. **AAPS** uruchomi alarm, gdy włączy się alarm Nightscout.
+- Aby alarmy działały, musisz ustawić wartości alarmów Urgent High, High, Low i Urgent Low w [zmiennych Nightscout](https://nightscout.github.io/nightscout/setup_variables/#alarms).
+- Działają tylko wtedy, gdy masz połączenie z Nightscout, i są przeznaczone dla rodziców/opiekunów.
+- Jeśli źródło **CGM** masz na telefonie (np. xDrip lub BYODA), używaj jego alarmów zamiast alarmów Nightscout.
+- Ogłoszenia NS powtarzają [ogłoszenia](https://nightscout.github.io/nightscout/discover/#announcement) Nightscout w powiadomieniach **AAPS**.
+- Możesz zmienić próg alarmów o nieaktualnych danych (stale data i urgent stale data), gdy przez pewien czas nie przychodzą żadne dane z Nightscout.
 
-![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
+### Zdalne sterowanie
 
-- Connection settings define when Nightscout connection will be enabled.
-- Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
-- If you want to use only a specific Wi-Fi network you can enter its Wi-Fi SSID.
-- Multiple SSIDs can be separated by semicolon.
-- To delete all SSIDs enter a blank space in the field.
+Przełącznika „**Zezwalaj na sterowanie z urządzenia opiekuna**” nie ma już w tych ustawieniach: jest na górze ekranu **Zarządzaj → Autoryzowani opiekunowie**, gdzie zarządzasz sparowanymi klientami. Zobacz osobną stronę [Sterowanie Master ↔ Client](../RemoteFeatures/ClientMasterControl.md), także o [trybie silniejszych zabezpieczeń](#client-master-control-hardened-mode), który włącza ten przełącznik.
+
+### Ustawienia połączenia
+
+![Ustawienia połączenia NSClient](../images/preferences/settings_nsclient_connection.png)
+
+- Ustawienia połączenia określają, kiedy połączenie z Nightscout jest włączone.
+- Ogranicz wysyłanie do Nightscout tylko do Wi-Fi albo nawet do wybranych sieci Wi-Fi (SSID).
+- Jeśli chcesz używać tylko określonej sieci Wi-Fi, możesz wpisać jej SSID.
+- Kilka SSID możesz rozdzielić średnikiem.
+- Aby usunąć wszystkie SSID, wpisz w polu spację.
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClient)
+### Ustawienia zaawansowane (NSClient)
 
-![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
+![Zaawansowane ustawienia NSClient](../images/preferences/settings_nsclient_advanced.png)
 
-Options in advanced settings are self-explanatory.
+Opcje w ustawieniach zaawansowanych są zrozumiałe same przez się.
 
 ## Komunikator SMS
 
-More information on the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
+Więcej informacji na osobnej stronie [Polecenia SMS](../RemoteFeatures/SMSCommands.md).
 
-## Automation
+(preferences-wear)=
+## Oprogramowanie Wear (Smartwatch)
 
-Select which location service shall be used:
+Ta sekcja jest widoczna, gdy wtyczka **Oprogramowanie Wear (Smartwatch)** jest włączona w [Konfiguracja > Komunikacja](#Config-Builder-wear). Więcej informacji na osobnych stronach [Smartwatch z Wear OS](../WearOS/WearOsSmartwatch.md) i [Obsługa AAPS ze smartwatcha z Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
 
-- Use passive location: **AAPS** only takes locations if other apps are requesting it
-- Use network location: Location of your Wi-Fi
-- Use GPS location (Attention! May cause excessive battery drain!)
+![Ustawienia > Wear](../images/preferences/settings_wear.png)
 
-## Local alerts
+- **Sterowanie z zegarka**: pozwala wysyłać z zegarka leczenie i inne akcje. Bez tej opcji zegarek tylko pokazuje dane: telefon odrzuca każde polecenie z zegarka, a dotknięcie komplikacji, która otworzyłaby ekran sterowania, otwiera zamiast tego menu **AAPS** na zegarku.
 
-![Local alerts](../images/Pref2020_LocalAlerts.png)
+**Ustawienia kreatora Wear** określają, które obliczenia są uwzględniane w wyniku kalkulatora bolusa na zegarku. Na zegarku wpisujesz tylko węglowodany; te przełączniki zastępują wybory, których dokonałbyś w kalkulatorze bolusa na telefonie:
 
-Settings should be self-explanatory.
+- **Uwzględnij BG w kalkulatorze**: dodaje korektę na różnicę między aktualną glikemią a celem.
+- **Uwzględnij cel tymczasowy w kalkulatorze bolusa**: do tej korekty używa aktywnego celu tymczasowego zamiast celu z profilu.
+- **Uwzględnij trend w kalkulatorze**: bierze pod uwagę aktualny trend glikemii.
+- **Uwzględnij COB w kalkulatorze**: dodaje insulinę na węglowodany, które są jeszcze aktywne (COB).
+- **Uwzględnij IOB w kalkulatorze bolusa**: odejmuje insulinę, która jest jeszcze aktywna (IOB).
+
+![Ustawienia > Wear > Ustawienia kreatora Wear](../images/preferences/settings_wear_wear_wizard.png)
+
+**Ustawienia niestandardowej tarczy** zawierają opcję **Pozwól na niestandardowe tarcze zegarka**. Plik własnej tarczy może zawierać wartości niektórych ustawień zegarka. Gdy ten przełącznik jest włączony, wczytanie takiej tarczy może zmienić te ustawienia na zegarku; gdy jest wyłączony, tarcza zostaje wczytana, ale ustawienia się nie zmieniają:
+
+![Ustawienia > Wear > Ustawienia niestandardowej tarczy](../images/preferences/settings_wear_custom_watchface.png)
+
+**Ustawienia ogólne** zawierają opcję **Powiadamiaj o SMB**, aby dostawać powiadomienie na zegarku przy każdym podaniu SMB:
+
+![Ustawienia > Wear > Ustawienia ogólne](../images/preferences/settings_wear_general.png)
+
+## Autotune
+
+Ta sekcja jest widoczna, gdy wtyczka **Autotune** jest włączona w [Konfiguracja > Ogólne](#Config-Builder-autotune). Ustawienia są opisane na osobnej stronie [Autotune](../AdvancedOptions/Autotune.md).
+
+![Ustawienia > Autotune](../images/preferences/settings_autotune.png)
+
+## Automatyzacja
+
+![Ustawienia > Automatyzacja](../images/preferences/settings_automation.png)
+
+Wybierz, której usługi lokalizacji ma używać aplikacja:
+
+- Użyj lokalizacji pasywnej: **AAPS** pobiera lokalizację tylko wtedy, gdy prosi o nią inna aplikacja
+- Użyj lokalizacji sieciowej: lokalizacja twojej sieci Wi-Fi
+- Użyj lokalizacji GPS (Uwaga! Może bardzo szybko rozładowywać baterię!)
+
+## Lokalne alarmy
+
+![Ustawienia > Lokalne alarmy](../images/preferences/settings_local_alerts.png)
+
+Ustawienia są zrozumiałe same przez się.
 
 (preferences-maintenance-settings)=
-## Maintenance settings
+## Ustawienia konserwacji
 
-![Maintenance settings](../images/Pref2020_Maintenance.png)
+![Ustawienia > Konserwacja](../images/preferences/settings_maintenance.png)
 
-**Email recipient**: Standard recipient of logs is <logs@aaps.app>.
+**Odbiorca e-maili**: standardowym odbiorcą logów jest <logs@aaps.app>.
 
-**Data Choices**
+**Liczba plików dziennika do wysłania**: ile najnowszych plików logów jest dołączanych, gdy wysyłasz logi.
 
-![Data choices](../images/Pref2020_DataChoice.png)
+**Wybór Danych**
 
-You can help develop **AAPS** further by sending crash reports to the developers.
+![Wybór danych](../images/preferences/settings_data_choices.png)
 
-**Unattended Settings Export**<br/> By enabling this feature, you allow **AAPS** to execute settings exports without user intervention. For this the master password is securely stored on your phone (only) at the next manually export. The stored password will be used for up to 4 weeks. After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by manually exporting settings from the maintenance menu.
+Możesz pomóc w dalszym rozwoju **AAPS**, wysyłając raporty o awariach do programistów.
 
-After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking to reenter the password.  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged to the **AAPS** 'Careportal' and 'User entry' lists under Treatments.
+**Automatyczny Eksport Ustawień**<br/> Gdy włączysz tę funkcję, pozwalasz **AAPS** eksportować ustawienia bez twojego udziału. W tym celu hasło główne zostanie bezpiecznie zapisane (tylko) w twoim telefonie przy następnym ręcznym eksporcie. Zapisane hasło będzie używane przez maksymalnie 4 tygodnie. Po 4 tygodniach dostaniesz powiadomienie, że hasło wkrótce wygaśnie. W okresie przejściowym 1 tygodnia możesz wtedy odświeżyć hasło, eksportując ręcznie ustawienia z menu Konserwacja.
 
-After enabling this option, make sure to perform a manual settings export, where you will be requested for your password, so that **AAPS** can store it.
+Po upływie okresu przejściowego 1 tygodnia zapisane hasło wygasa, a każdy automatyczny eksport ustawień zostanie przerwany i pojawi się powiadomienie z prośbą o ponowne wpisanie hasła. [(**Automatyczne eksporty ustawień**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) będą zapisywane na listach „Portal opieki” i „Wpis użytkownika” w **AAPS**, w sekcji Leczenie.
 
-### Log files
+Po włączeniu tej opcji wykonaj ręczny eksport ustawień. Zostaniesz wtedy poproszony o hasło, aby **AAPS** mógł je zapisać.
 
-AAPS will save logs for troubleshooting.
+### Pliki logów
 
-Do not disable this feature: it will help understanding the reasons if something goes wrong.
+AAPS zapisuje logi, aby pomóc w rozwiązywaniu problemów.
 
-If you need to send the logs to the developers, make sure you file accurately the mail contents to describe the issue. It is preferable to send logs only after being requested to do so, following an [issue report in GitHub](https://github.com/nightscout/AndroidAPS/issues).
+Nie wyłączaj tej funkcji: pomoże zrozumieć przyczyny, jeśli coś pójdzie nie tak.
 
-You can find AAPS logs in your phone memory -> Android -> data -> info.nightscout.androidaps -> files.
+Jeśli musisz wysłać logi do programistów, dokładnie opisz problem w e-mailu. Najlepiej wysyłać logi dopiero wtedy, gdy ktoś cię o to poprosi, po [zgłoszeniu problemu na GitHub](https://github.com/nightscout/AndroidAPS/issues).
 
-![Log files options](../images/Pref2020_Maintenance_Logs.png)
+Logi AAPS znajdziesz w pamięci telefonu -> Android -> data -> info.nightscout.androidaps -> files.
+
+Obsługę logów (ustawienia logów, wysyłanie i usuwanie logów) i zarządzanie plikami znajdziesz na ekranie **Konserwacja**, który otwierasz z **menu** (☰) w lewym górnym rogu ekranu głównego:
+
+![Ekran Konserwacja](../images/preferences/maintenance_file_management.png)
 
 (preferences-maintenance-logdirectory)=
 
-### Setting the local AAPS directory
+### Ustawianie lokalnego katalogu AAPS
 
-Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files.
+Ekran **Konserwacja** zawiera też **Katalog AAPS**. To ustawienie pozwala wybrać katalog w telefonie, w którym **AAPS** będzie zapisywać ustawienia, logi i inne pliki. Po wybraniu katalogu jego ścieżka (np. `Documents/AAPS`) jest widoczna pod **Katalog AAPS**, więc zawsze wiesz, gdzie zapisywane są twoje pliki.
 
-![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
+Zdecydowanie zalecamy katalog bezpośrednio w głównym folderze pamięci telefonu. Domyślnie jest to AAPS.
 
-It is strongly recommended to use a directory directly in the main entry of your phone memory. Default is AAPS.
+![Lokalizacja lokalnego katalogu](../images/preferences/maintenance_settings_directory.png)
 
-![Local directory location](../images/preferences/maintenance_settings_directory.png)
+Jeśli wybierzesz podkatalog katalogu AAPS, zobaczysz komunikat o błędzie. Dotknij „OK” i spróbuj ponownie, wybierając właściwy katalog (o jeden poziom wyżej). Nie wybieraj „ZAMKNIJ”, chyba że dokładnie wiesz, co robisz.
 
-If you select a subdirectory of AAPS, you will see an error message. Tap "OK" and retry, selecting the correct directory (one above). Do not select "DISMISS" unless you clearly know what you are doing.
+![Lokalizacja lokalnego katalogu](../images/preferences/maintenance_settings_wrongdirectory.png)
 
-![Local directory location](../images/preferences/maintenance_settings_wrongdirectory.png)
+Android może bez ostrzeżenia odebrać uprawnienie do katalogu, np. po ponownej instalacji **AAPS** lub wyczyszczeniu jego danych. Gdy tak się stanie, **AAPS** pokazuje stałe powiadomienie **Utracono dostęp do katalogu AAPS**, a lokalny eksport ustawień przestaje działać, dopóki nie wrócisz tutaj i ponownie nie wybierzesz katalogu. Zrób to szybko, bo inaczej kopie zapasowe w telefonie przestaną być odświeżane.
 
 (preferences-maintenance-cloud)=
 
-### Setting a cloud directory
+### Ustawianie katalogu w chmurze
 
-You can export your settings, logs and CSV data to a cloud service.
+Możesz eksportować swoje ustawienia, logi i dane CSV do usługi w chmurze.
 
-1.  Select Cloud directory
-2. Select your cloud service
-3. Enable cloud export
+1. Otwórz **menu** (☰), wybierz **Konserwacja** i dotknij **Katalog w chmurze** (w sekcji **Zarządzanie plikami**).
 
-![Cloud directory](../images/preferences/maintenance_settings_cloud.png)
+   ![Katalog w chmurze w menu Konserwacja](../images/preferences/maintenance_settings_cloud.png)
 
-You can then define what data will be uploaded to the cloud.
+2. W oknie **Wybierz typ przechowywania** wybierz **Dysk Google**.
 
-![Cloud directory data](../images/preferences/maintenance_settings_clouddata.png)
+   ![Okno Wybierz typ przechowywania](../images/preferences/maintenance_cloud_select_storage.png)
 
-You can disable cloud export.
+3. Otworzy się strona logowania Google. Wybierz konto Google, na którym będą przechowywane twoje kopie zapasowe (możesz użyć [osobnego konta Google](../UsefulLinks/DedicatedGoogleAccountForAaps.md)).
 
-![Cloud directory disable](../images/preferences/maintenance_settings_cloudoff.png)
+   ![Strona logowania Google: wybór konta](../images/preferences/maintenance_cloud_google_account.png)
+
+4. Sprawdź, czy to właściwe konto, i dotknij **Dalej** (Continue), aby dać **AAPS** dostęp. Jeśli wcześniej był już ustawiony katalog w chmurze, strona informuje, że **AAPS** ma już pewien dostęp.
+
+   ![Strona Google z prośbą o dostęp dla AAPS, z przyciskiem Dalej (Continue)](../images/preferences/maintenance_cloud_google_access.png)
+
+5. Po powrocie do **AAPS** na dole ekranu głównego pojawi się komunikat **Uwierzytelnianie zapisu w chmurze powiodło się**:
+
+   ![Komunikat Uwierzytelnianie zapisu w chmurze powiodło się](../images/preferences/maintenance_cloud_auth_success.png)
+
+   W menu **Konserwacja** przy **Katalog w chmurze** jest teraz zielona kropka, a przyciski **Chmura** obok **Wyślij logi**, **Eksport ustawień**, **Importuj ustawienia** i **Eksportuj wpisy użytkownika do Excel-a (csv)** są dostępne.
+
+   ![Menu Konserwacja z ustawionym zapisem w chmurze: dostępne przyciski Chmura i ikona czyszczenia przy Katalog w chmurze](../images/preferences/maintenance_settings_cloud_ready.png)
+
+Aby zakończyć eksport do chmury, dotknij ikony **✕** (**Wyczyść ustawienia**) na końcu wiersza **Katalog w chmurze** w menu **Konserwacja** (jest widoczna, gdy usługa w chmurze jest ustawiona) i potwierdź **Wyczyść ustawienia chmury**. To przywraca zapis lokalny i usuwa autoryzację.
 
 ## Open Humans
 
-You can help the community by donating your data to research projects! Details are described on the [Open Humans page](../SupportingAaps/OpenHumans.md).
+Możesz pomóc społeczności, przekazując swoje dane do projektów badawczych! Szczegóły znajdziesz na [stronie Open Humans](../SupportingAaps/OpenHumans.md).
 
-In Preferences, you can define when data shall be uploaded
-- only if connected to Wi-Fi
-- only if charging
+W **Ustawienia → Open Humans** możesz określić, kiedy dane mają być wysyłane
+- tylko po połączeniu z Wi-Fi
+- tylko gdy się ładuje

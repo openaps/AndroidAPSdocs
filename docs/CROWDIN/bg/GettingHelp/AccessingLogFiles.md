@@ -1,15 +1,15 @@
 (Accessing-logfiles-accessing-logfiles)=
 
-# Accessing logfiles
+# Достъп до лог файловете
 
-* Connect phone to a computer in file transfer mode
-* Locate the log files in the AAPS data directory, in `Android\data\info.nightscout.androidaps\files`.  
-    The naming of the root storage folder may vary a little depending on the phone.
-* The location is `Android\data\info.nightscout.aapsclient\files` for [AAPSClient](#RemoteControl_aapsclient).
-* Note : log location has changed in **AAPS 3.3**. See the previous versions' documentation if needed.
+* Свържете телефона с компютър в режим за прехвърляне на файлове
+* Намерете лог файловете в директорията с данни на AAPS, в `Android\data\info.nightscout.androidaps\files`.  
+    Името на основната папка в паметта може да е малко по-различно в зависимост от телефона.
+* За [AAPSClient](#RemoteControl_aapsclient) мястото е `Android\data\info.nightscout.aapsclient\files`.
+* Бележка: мястото на логовете е променено в **AAPS 3.3**. Ако е нужно, вижте документацията за предишните версии.
 
 ![logs](../images/aapslog.png)
 
-* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) within Android Studio, any Log Viewer android app, or simply as plain text. 
-* Previous log files are zipped and stored in folders in date/time order. 
-* If you are sharing your log file in [discord](https://discord.gg/4fQUWHZ4Mw) to talk about a potential bug, please unzip and upload the file dated before the error occurred.
+* Текущият лог е файл .log, който може да се разглежда по различни начини, например с [LogCat](https://developer.android.com/studio/debug/am-logcat.html) в Android Studio, с всяко приложение за Android за преглед на логове или просто като обикновен текст. 
+* Предишните лог файлове са компресирани (zip) и се пазят в папки, подредени по дата и час. 
+* Ако споделяте лог файла си в [Discord](https://discord.gg/4fQUWHZ4Mw), за да обсъдите възможна грешка в програмата, моля, разархивирайте и качете файла с дата преди момента, в който е възникнала грешката.

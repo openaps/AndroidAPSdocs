@@ -1,41 +1,66 @@
 # Tidepool
 
-Tidepool is a third party tool that collects data regarding BG, insulin and carbs and can be used to analyze and share this data with your clinical team. Since AAPS version 3.2 it can be used as an alternative to Nightscout for satisfying part of Objective 1. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with.
+Tidepool е инструмент на трета страна, който събира данни за КЗ, инсулин и въглехидрати (и бележките, които добавяте към леченията си). С него можете да анализирате тези данни и да ги споделяте с медицинския си екип. От версия 3.2 на AAPS Tidepool може да се използва вместо Nightscout за изпълнение на част от Цел 1. Може да се използва и заедно с Nightscout като алтернативна платформа за отчети, която се интегрира добре в клинична среда. Това може да е желаният вариант за деца, които използват AAPS и искат възможностите на Nightscout за дистанционно наблюдение и управление, но и платформа за отчети, с която медицинският им екип е по-запознат.
 
-It is important to understand the tidepool is for reporting only. It is NOT a real-time follow app. If you need to have followers apart from the main AAPS phone you must setup Nightscout as well.
+Важно е да разберете, че Tidepool служи само за отчети. Това НЕ е приложение за следене в реално време. Ако имате нужда от последователи освен основния телефон с AAPS, трябва да настроите и Nightscout.
 
-Note: the Tidepool organization has brought the iOS Loop product to market with FDA approval. This effort has nothing to do with their data reporting platform or AAPS.
-
-
-## Step 1 - Setup a tidepool account
-
--Navigate to [tidepool.org](https://www.tidepool.org/)
-
--Select “Personal Sign Up” or “Sign Up”
-
--Create and document an email and password
-
--Select “Personal Account” and click “Continue”
-
--Complete the patient information section and accept the terms of use
-
--Verify your email address via the instructions received to your email
+Бележка: организацията Tidepool пусна на пазара продукта Loop за iOS с одобрение от FDA. Това усилие няма нищо общо с тяхната платформа за отчети или с AAPS.
 
 
-## Step 2 - Enter credentials into AAPS
+## Стъпка 1 – Създайте профил в Tidepool
 
--Select the three-line “hamburger” menu in the top left and the select “Config Builder” (if “Config Builder is not located there it will instead be one of the tabs along the top)
+- Отидете на [tidepool.org](https://www.tidepool.org/)
 
--Scroll down to the “Synchronization” section and select the check mark to the left of “Tidepool”
+- Изберете „Personal Sign Up“ (лична регистрация) или „Sign Up“ (регистрация)
 
--Click the gear icon to the right of “Tidepool”
+- Създайте имейл и парола и ги запишете
 
--Enter the username and password you created in Step 1 above
+- Изберете „Personal Account“ (личен профил) и натиснете „Continue“ (продължи)
 
--Click “Test Tidepool Login”
+- Попълнете раздела с информация за пациента и приемете условията за ползване
 
--If you get the “Successfully logged into Tidepool” message you have successfully connected. If not, confirm your credentials are correct and that you have verified your email address with Tidepool.
+- Потвърдете имейл адреса си, като следвате инструкциите, които ще получите по имейл
 
--Click on “Connection settings” and set based on your personal preferences
 
-For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data) 
+## Стъпка 2 – Свържете AAPS с Tidepool
+
+- Отворете **менюто** (☰) в горния ляв ъгъл на главния екран и изберете „**Конфигурация**“
+
+- Отворете категорията „**Комуникация**“ и включете „**Tidepool**“:
+
+![Включване на Tidepool](../images/v4/Tidepool/tidepool_enable.png)
+
+- Докоснете „**Отвори плъгин**“ под Tidepool, след това докоснете иконата **Вход** (стрелка, която влиза във врата) в горния десен ъгъл
+
+- Отваря се прозорец на браузъра със страницата за вход в Tidepool. Влезте с имейл адреса и паролата, които създадохте в Стъпка 1 по-горе:
+
+![Страница за вход в Tidepool](../images/v4/Tidepool/tidepool_login.png)
+
+- След успешен вход браузърът се затваря и екранът на Tidepool показва състояние „**Свързана**“; дневникът (log) по-долу показва качванията на данни. Ако входът не успее, проверете дали данните ви за вход са верни и дали сте потвърдили имейл адреса си в Tidepool.
+
+![Tidepool е свързан](../images/v4/Tidepool/tidepool_status.png)
+
+- В „**Настройки**“ на плъгина Tidepool отворете „**Настройки за свързване**“. По подразбиране „**Използвай настройките за връзка с Nightscout**“ е включено, така че Tidepool качва данни при същите условия, които сте задали за Nightscout. Изключете го, ако искате отделни условия за Tidepool, например да качвате в Tidepool само през Wi-Fi и по време на зареждане, докато Nightscout използва и мобилни данни.
+
+![Настройки за свързване с включено „Използвай настройките за връзка с Nightscout“](../images/v4/Tidepool/tidepool_connection_settings.png) ![Отделни настройки за свързване за Tidepool](../images/v4/Tidepool/tidepool_connection_settings_separate.png)
+
+За повече помощ как да използвате данните си, след като са качени в Tidepool, посетете: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
+
+(tidepool-menu)=
+## Бутоните на Tidepool
+
+В горния десен ъгъл на екрана на Tidepool:
+
+- Иконата **Вход** или **Изход** – свързване към профила ви в Tidepool или прекъсване на връзката с него. Показва се само една от тях: **Вход**, докато не сте влезли, и **Изход**, докато сте влезли. **AAPS** ви моли за потвърждение, преди да ви изведе от профила.
+- Иконата със зъбно колело – настройките на Tidepool.
+
+Бутоните в долната част на екрана на Tidepool:
+
+- „**Качи сега**“ – качва новите данни веднага, вместо да чака следващото автоматично качване.
+- „**Пълна синхронизация**“ – качва отново всички данни, запазени в **AAPS**.
+- „**Изтрий всички данни**“ – изтрива **всички** данни, които **AAPS** е качил във вашия профил в Tidepool. Това не може да бъде отменено. Използвайте го само за да премахнете грешни или повтарящи се данни, след това стартирайте „**Пълна синхронизация**“, за да качите данните си отново.
+- „**Изчисти лога**“ – изчиства дневника (log), показан на екрана на Tidepool.
+
+![Екранът на Tidepool и неговите бутони](../images/v4/Tidepool/tidepool_menu.png)
+
+В Tidepool данните, качени от **AAPS** 4, се показват под името на устройство **AAPS**. Вижте [Какво се промени в AAPS v4](#v4changes-tidepool), ако сте използвали Tidepool с по-стара версия. 

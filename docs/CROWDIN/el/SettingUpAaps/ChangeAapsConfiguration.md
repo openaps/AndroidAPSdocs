@@ -1,43 +1,43 @@
-# Making changes to your AAPS' configuration
+# Αλλαγές στη διαμόρφωση του AAPS
 
-After you have completed the **[Setup Wizard](../SettingUpAaps/SetupWizard.md)**, you don't need to run the entire Wizard again if you want to only change parts of your **AAPS**' configuration.
+Αφού ολοκληρώσετε τον **[Οδηγό εγκατάστασης](../SettingUpAaps/SetupWizard.md)**, δεν χρειάζεται να τρέξετε ξανά όλο τον Οδηγό αν θέλετε να αλλάξετε μόνο μερικά μέρη της διαμόρφωσης του **AAPS**.
 
-There are three routes to change AAPS’ configuration. As to which route you take, it is simply a matter of convenience or personal preference as each route leads to the same configuration settings.
+Υπάρχουν τρεις δρόμοι για να αλλάξετε τη διαμόρφωση του **AAPS**. Ποιον δρόμο θα διαλέξετε είναι απλώς θέμα ευκολίας ή προσωπικής προτίμησης, γιατί όλοι οι δρόμοι οδηγούν στις ίδιες ρυθμίσεις.
 
-These are as follows:
+Αυτές είναι οι εξής:
 
-1. Config builder,
-1. Three dot menu on the right and select "Preferences" or
-1. Three dot menu on the right and select "Plugin preferences".
+1. Η οθόνη **Διαμόρφωση**,
+2. Η οθόνη **Ρυθμίσεις** ή
+3. Οι **Ρυθμίσεις** ενός πρόσθετου, που ανοίγουν από την κατηγορία του στη **Διαμόρφωση**.
 
-Here we explain which option is most convenient for each situation:
+Εδώ εξηγούμε ποια επιλογή είναι η πιο βολική για κάθε περίπτωση:
 
-## Config builder
+## Διαμόρφωση
 
-![Open Config Builder](../images/ConfBuild_Open_AAPS30.png)
+Ανοίξτε το **μενού** (☰) πάνω αριστερά στην κύρια οθόνη και επιλέξτε **Διαμόρφωση**:
 
-The **config builder** is used if you want to **enable plugins** and their **visibility** in the top level menu. Once enabled, the **plugins** will always run, and you can decide if you want to be able to see them in the top menu or not. Disabled plugins can not be made visible.
+![Άνοιγμα της Διαμόρφωσης από το μενού πάνω αριστερά](../images/v4/Configuration/configuration_menu.png)
 
-You can use the cogwheel next to each activated plugin to access its settings.
+Η **Διαμόρφωση** χρησιμοποιείται για να **επιλέξετε ποια πρόσθετα είναι ενεργά** — το CGM, την αντλία, τον αλγόριθμο APS, την ανίχνευση ευαισθησίας, τον συγχρονισμό και άλλα, ομαδοποιημένα σε κατηγορίες. Είναι η ίδια οθόνη που ρύθμισε για εσάς ο Οδηγός εγκατάστασης.
 
-The documentation relating to the config builder is available [here](../SettingUpAaps/ConfigBuilder.md).
+Η τεκμηρίωση της οθόνης Διαμόρφωση υπάρχει [εδώ](../SettingUpAaps/ConfigBuilder.md).
 
-## Προτιμήσεις
+## Ρυθμίσεις
 
-![Open preferences](../images/Pref2020_Open2.png)
+Πατήστε το εικονίδιο **Ρυθμίσεις** (γρανάζι) πάνω δεξιά στην κύρια οθόνη. Ανοίγουν οι ρυθμίσεις **όλων των ενεργών πρόσθετων σε ένα μέρος**, ομαδοποιημένες σε ενότητες που ανοίγουν και κλείνουν:
 
-The **preferences** dialogue can be reached via the top right _three dots_ menu on any tab of **AAPS**. This allows to change the configuration of **all enabled plugins in a single place**.
+![Η οθόνη Ρυθμίσεις με τις ενότητες που ανοίγουν και κλείνουν](../images/v4/Configuration/settings_overview.png)
 
-This is a good route if you are not really sure where to look for a configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
+Αυτός είναι καλός δρόμος αν δεν ξέρετε ακριβώς πού να βρείτε μια επιλογή διαμόρφωσης. Μπορεί όμως να είναι λίγο κουραστικός αν ξέρετε ότι θέλετε να αλλάξετε τη διαμόρφωση μόνο ενός συγκεκριμένου πρόσθετου.
 
-The documentation of the preferences is available [here](../SettingUpAaps/Preferences.md).
+Η τεκμηρίωση των ρυθμίσεων υπάρχει [εδώ](../SettingUpAaps/Preferences.md).
 
-## Plugin preferences
+## Οι Ρυθμίσεις ενός πρόσθετου
 
-![Open plugin preferences](../images/Pref2020_OpenPlugin2.png)
+Μέσα στη **Διαμόρφωση**, ανοίξτε μια κατηγορία και πατήστε «**Ρυθμίσεις**» κάτω από το ενεργό πρόσθετο. Μεταφέρεστε κατευθείαν στις ρυθμίσεις **μόνο αυτού του πρόσθετου**:
 
-The **plugin preferences** dialogue can be reached via the top right _three dots_ menu on the home screen of **AAPS**. It allows to change the configuration of the **plugin currently on screen**.
+![Ρυθμίσεις και Άνοιγμα πρόσθετου κάτω από το ενεργό πρόσθετο](../images/v4/Configuration/configuration_open_plugin.png)
 
-For example, this is a good route if you know that you want to change the configuration for BYODA. Then, you would select the tab "BYODA" on the top menu of **AAPS**, and then once you are on the BYODA page, in the top right, select the _three dots_ menu and then the "plugin preferences" entry. You are taken directly to the preferences dialogue specifically for the BYODA plugin.
+Για παράδειγμα, αυτός είναι καλός δρόμος αν ξέρετε ότι θέλετε να αλλάξετε τη διαμόρφωση της αντλίας σας: ανοίξτε **Διαμόρφωση → Αντλία** και μετά πατήστε «**Ρυθμίσεις**» κάτω από την επιλεγμένη αντλία.
 
-This is a "shortcut" to the general preferences dialogue, the documentation of the preferences is available [here](../SettingUpAaps/Preferences.md).
+Αυτή είναι μια «συντόμευση» προς τις ίδιες ρυθμίσεις που εμφανίζονται στη γενική οθόνη **Ρυθμίσεις**.

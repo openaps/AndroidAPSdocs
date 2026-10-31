@@ -3,14 +3,14 @@
 Durum saatte bir güncellenir ve yalnızca Crowdin'deki durumu yansıtır.
 
 ```{tip}
-Redaksiyon yüzdesinin çeviri yüzdesinden daha düşük olmasına dikkat edin. Ancak çevirilerin üzerinde gösterilmektedir.
+Be careful the percentage of proofreading must be lower than the percentage of translations but they decided to show it on top of the translations.
 İşin ne kadar yapıldığını görmek için yalnızca çevirilerin yüzde düzeyine bakmak daha iyi olacaktır.
 ```
 
 ```{admonition} needed time for final publication
 Crowdin çevirisinden sonra, çevirileri çekme isteği (PR) olarak Github'a aktarmak için her gün Github'a bir senkronizasyon planlanır.
 
-PR'nin kabulü, mümkün olan en hızlı şekilde manuel olarak yapılacaktır.
+The acceptance of the PR is a manual task which will be done as fast as possible.
 ```
 
 ## uygulamanın çeviri durumu

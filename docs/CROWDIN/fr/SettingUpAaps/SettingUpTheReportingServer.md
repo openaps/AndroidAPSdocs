@@ -1,28 +1,28 @@
-# Mise en place du serveur de reporting
+# Mise en place du serveur de rapports
 
-There are currently two reporting servers available for use with **AAPS**:
+Il existe actuellement deux serveurs de rapports utilisables avec **AAPS** :
 
 - [Nightscout](https://nightscout.github.io/)
 - [Tidepool](https://www.tidepool.org/)
 
-![Reporting Servers](../images/Building-the-App/ReportingServer.png)
+![Serveurs de rapports](../images/Building-the-App/ReportingServer.png)
 
 Nous recommandons l'utilisation de Nightscout.
 
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout is a web application that can log and display your CGM data and **AAPS** data and creates reports. It is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). It also allows caregivers to send remote commands to **AAPS**.
+Nightscout est une application web. Elle peut enregistrer et afficher les données de votre MGC et les données d'**AAPS**, et elle crée des rapports. C'est une plateforme puissante, intégrée à **AAPS** depuis de nombreuses années. Il permet aux utilisateurs et aux aidants de suivre les données de diabète du patient presque en temps réel (quelques secondes seulement peuvent séparer la réception des données et leur mise à disposition, si la connexion Internet est suffisante entre tous les éléments concernés). Il transmet aussi les commandes à distance que les aidants envoient à **AAPS** depuis **AAPSClient** (voir [Contrôle maître ↔ client](#client-master-control)).
 
 Nightscout est un logiciel open-source. N'importe qui peut créer et maintenir un serveur Nightscout, en utilisant des services gratuits ou payants.
 
-You can find more information on the [website of the Nightscout project](http://nightscout.github.io/).
+Vous trouverez plus d'informations sur le [site web du projet Nightscout](http://nightscout.github.io/).
 
-### Option 1 - Set up your Nightscout server yourself
+### Option 1 - Mettre en place vous-même votre serveur Nightscout
 
-La création de votre serveur de reporting Nightscout peut nécessiter une ou plusieurs applications en ligne qu'il faudra ensuite maintenir. Afin de bénéficier d'un service totalement gratuit, vous aurez peut-être à migrer votre site Nightscout et vos données, si ou quand le fournisseur supprimera l'option gratuite.
+La création de votre serveur de rapports Nightscout peut nécessiter une ou plusieurs applications en ligne qu'il faudra ensuite maintenir. Afin de bénéficier d'un service totalement gratuit, vous aurez peut-être à migrer votre site Nightscout et vos données, si ou quand le fournisseur supprimera l'option gratuite.
 
-A description of how you can set up Nightscout with the advantages and disadvantages of the various operating options, including an estimate of the costs, can be found [here](https://nightscout.github.io/nightscout/new_user/#free-diy).
+Une description de la mise en place de Nightscout, avec les avantages et les inconvénients des différentes options d'hébergement et une estimation des coûts, se trouve [ici](https://nightscout.github.io/nightscout/new_user/#free-diy).
 
 ### Option 2 - Payer pour un service Nightscout hébergé
 
@@ -31,32 +31,32 @@ Il existe également les propositions de différents fournisseurs de services qu
 
 Les personnes qui utilisent déjà Nightscout peuvent reconsidérer de temps en temps où et comment leur serveur Nightscout est hébergé, et changer pour une autre option si elle devient plus appropriée.
 
-Some Nightscout hosted services are listed [here](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
+Quelques services d'hébergement Nightscout sont listés [ici](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
 
-### Further configuration of Nightscout
+### Suite de la configuration de Nightscout
 
-Once you have your Nightscout instance up and running, see [Nightscout configuration page](../SettingUpAaps/Nightscout.md) for additional considerations.
+Quand votre instance Nightscout est en place et fonctionne, consultez la [page de configuration de Nightscout](../SettingUpAaps/Nightscout.md) pour d'autres points à prendre en compte.
 
 (SettingUpTheReportingServer-tidepool)=
 ## Tidepool
 
-Tidepool has been available in **AAPS** since version 3.2 which was released in late 2023.
+Tidepool est disponible dans **AAPS** depuis la version 3.2, sortie fin 2023.
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger  
-As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool it is not suitable for sharing real-time information with caregivers.  
-On the other hand, Tidepool can be a great solution for sharing reports with a patient's endocrinologist if Nightscout is not an accepted solution.  
+Avec **AAPS**, il y a un délai de trois heures entre la réception des données et leur affichage dans les rapports. Tidepool ne convient donc pas pour partager des informations en temps réel avec les aidants.  
+D'autre part, Tidepool peut être une très bonne solution pour partager des rapports avec l'endocrinologue d'un patient si Nightscout n'est pas une solution acceptée.  
 ```
 
-Tidepool is an [open source](https://github.com/tidepool-org) project. Vous pouvez ouvrir un compte gratuitement sur les serveurs Tidepool.
+Tidepool est un projet [open source](https://github.com/tidepool-org). Vous pouvez ouvrir un compte gratuitement sur les serveurs Tidepool.
 
-More information about setting up Tidepool with AAPS [here](../SettingUpAaps/Tidepool.md).
+Plus d'informations sur la configuration de Tidepool avec AAPS [ici](../SettingUpAaps/Tidepool.md).
 
-```{admonition} **AAPS** has a the uploader for Tidepool integrated
+```{admonition} **AAPS** has the uploader for Tidepool integrated
 :class: note
-You do **not** need to use the uploader app to Tidepool: **AAPS** will upload blood glucose, treatments and basal for you. You only need a personal account with Tidepool. Do not upload your data with the separate Tidepool uploader tool as it will lead to duplicate values.  
+Vous n'avez **pas** besoin d'utiliser l'application d'envoi (uploader) vers Tidepool : **AAPS** envoie pour vous la glycémie, les traitements et le débit basal. Vous avez seulement besoin d'un compte personnel Tidepool. N'envoyez pas vos données avec l'outil d'envoi Tidepool séparé (uploader), car cela crée des valeurs en double.  
 ```
 
-## Next step
+## Étape suivante
 
-Once you have set up your reporting server, you can now either set up a [dedicated Google account for AAPS use](../UsefulLinks/DedicatedGoogleAccountForAaps.md), or go straight to [building the AAPS app](../SettingUpAaps/BuildingAaps.md). 
+Une fois votre serveur de rapports en place, vous pouvez configurer **AAPS** sur votre téléphone avec l'[Assistant de configuration](./SetupWizard.md), qui reliera aussi **AAPS** à votre serveur de rapports.

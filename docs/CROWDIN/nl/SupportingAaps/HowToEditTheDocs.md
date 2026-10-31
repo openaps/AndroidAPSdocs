@@ -1,564 +1,565 @@
-# How to edit the docs
+# Hoe je de docs bewerkt
 
-** Deze beschrijving is alleen bedoeld om de Engelstalige versie van de wiki te verbeteren. Wijzigingen moeten altijd eerst in de Engelse versie worden gedaan omdat dit de 'brontekst' is van waaruit de andere talen worden vertaald. De instructie voor het maken van wijzigingen is in het Engels omdat we ervan uitgaan dat je die taal machtig bent als je een wijziging eraan wilt doorvoeren;) Mocht dat een probleem zijn, vraag dan in de Looped-NL-BE Facebook groep om hulp. Als je de wiki naar andere talen wilt vertalen (waarvoor dank!), dan gebruik je [crowdin](https://crowdin.com/project/androidapsdocs).**
+**Deze beschrijving is alleen voor het bewerken van de Engelse documentatie. Alle nieuwe informatie moet eerst in het Engels worden toegevoegd. Als je de wiki naar andere talen wilt vertalen (waarvoor dank!), dan gebruik je [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#code-syntax) section of this page.
+Tips over het opmaken van tekst (kop, vet...) en het maken van links vind je in het deel ["Codesyntax"](#code-syntax) op deze pagina.
 
-## General
+## Algemeen
 
-For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw).
+Voor vragen, feedback of nieuwe ideeën kun je contact opnemen met het documentatieteam via [discord](https://discord.gg/4fQUWHZ4Mw).
 
-At some point it will be suggested that you make a pull request (PR), which is how your changes in the documentation are actually put onto the AAPS webpages, which are stored in GitHub. It's actually not too hard to do a PR and it is a great way to contribute. You are reading this documentation right now because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. Your changes are reviewed before they are merged into the "formal" AAPS documentation repository. You can't mess up the originals through any accidents in the process. The general process is:
+Op een gegeven moment wordt je gevraagd een pull request (PR) te maken. Zo komen je wijzigingen in de documentatie echt op de AAPS-webpagina's, die op GitHub staan. Een PR maken is eigenlijk niet zo moeilijk, en het is een mooie manier om bij te dragen. Je leest deze documentatie nu omdat mensen zoals jij PR's hebben gemaakt. Maak je geen zorgen dat je een fout maakt of per ongeluk de verkeerde documenten bewerkt. Je wijzigingen worden bekeken voordat ze worden samengevoegd in de "officiële" repository van de AAPS-documentatie. Je kunt de originelen dus niet per ongeluk kapotmaken. De algemene werkwijze is:
 
-- Make edits and improvements to code or documentation by editing the existing content.
-- Double-check that your edits look good to you.
-- Make a few notes of what's changed so people may understand the edits.
-- Create a pull request, which asks the administrators to use your changes.
-- They will do a review and either (1)merge your changes, (2)comment back to you about your changes, or (3)start a new document with your changes.
+- Maak wijzigingen en verbeteringen in code of documentatie door de bestaande inhoud te bewerken.
+- Controleer nog een keer of je wijzigingen er goed uitzien.
+- Schrijf kort op wat er veranderd is, zodat anderen de wijzigingen begrijpen.
+- Maak een pull request. Daarmee vraag je de beheerders om je wijzigingen te gebruiken.
+- Zij bekijken het en (1) voegen je wijzigingen samen (merge), (2) reageren op je wijzigingen, of (3) starten een nieuw document met je wijzigingen.
 
-(Side note: If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
+(Opmerking: leer je liever met beelden, dan is er [hier](https://youtu.be/4b6tsL0_kzg) een YouTube-video die de PR-werkwijze laat zien.)
 
-For our example we are going to make an edit to AndroidAPSdocs. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
+In ons voorbeeld maken we een wijziging in AndroidAPSdocs. Dit kan op elke Windows-pc, Mac, enz. (elke computer met internettoegang).
 
-1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
+1. Ga naar <https://github.com/openaps/AndroidAPSdocs> en klik rechtsboven op Fork om je eigen kopie van de repository te maken.
 
-![Fork repo](../images/PR0.png)
+![Repo forken](../images/PR0.png)
 
-2. Go to any page and navigate to the page you want to edit. You can click on the "Edit in GitHub" link in the upper right corner. This is only possible for English pages. 
+2. Ga naar een willekeurige pagina en navigeer naar de pagina die je wilt bewerken. Je kunt rechtsboven op de link "Edit in GitHub" klikken. Dat kan alleen bij Engelse pagina's. 
 
-![edit doc](../images/PR1.png)
+![document bewerken](../images/PR1.png)
 
-Or click the pencil icon that appears in the top bar of the page contents to be edited. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
+Of klik op het potloodicoon dat in de bovenste balk van de te bewerken pagina verschijnt. Je moet hiervoor al ingelogd zijn op je GitHub-account (heb je er nog geen, dan is die makkelijk aan te maken).
 
 ![RTD io](../images/PR2.png)
 
-3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
+3. Met een van de opties in stap 2 wordt een nieuwe branch gemaakt in JOUW repository. Daar worden je wijzigingen opgeslagen. Maak je wijzigingen in het bestand.
 
-We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#code-syntax).
+We gebruiken markdown voor de pagina's van de docs. De bestanden hebben de extensie ".md". De Markdown-specificatie ligt niet vast. We gebruiken op dit moment de myst_parser voor onze markdown-bestanden. Let op dat je de juiste syntax gebruikt, zoals [hieronder beschreven](#code-syntax).
 
-![Edit branch](../images/PR3.png)
+![Branch bewerken](../images/PR3.png)
 
-4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typos sic.). If you see a needed improvement, go back to the edit tab to make more improvements. 
+4. Je hebt gewerkt in het tabblad "<>Edit file". Kies het tabblad "Preview changes" om met een frisse blik te controleren of alles wat je veranderd hebt eruitziet zoals je bedoelde (typfouten enz.). Zie je nog iets dat beter kan, ga dan terug naar het tabblad om te bewerken en maak meer verbeteringen. 
 
-![preview mode](../images/PR5.png)
+![voorbeeldweergave](../images/PR5.png)
 
-5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
+5. Als je klaar bent met bewerken, scroll je naar onderaan de pagina. Schrijf in het vak onderaan je opmerkingen in het tekstveld met de tekst "Add an optional extended description...". De standaardtitel bevat de bestandsnaam. Schrijf als het kan een zin die de **reden** voor de wijziging uitlegt. De reden helpt reviewers te begrijpen wat je met de PR wilt bereiken.
 
-![commit comments](../images/PR4.png)
+![commit-opmerkingen](../images/PR4.png)
 
-6. Click the green "Propose file changes" or "Commit changes" button. In the page that appears click "Create Pull Request" and again in the next page click "Create Pull Request".
+6. Klik op de groene knop "Propose file changes" of "Commit changes". Klik op de pagina die verschijnt op "Create Pull Request" en klik op de volgende pagina nog een keer op "Create Pull Request".
 
-![create pull request](../images/PR6.png)
+![pull request maken](../images/PR6.png)
 
-7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
+7. Daarmee is de pull request (PR) geopend. GitHub geeft de PR een nummer. Dat staat na de titel en een hekje (#). Kom terug naar deze pagina om te kijken of er feedback is (of, als je GitHub-meldingen per e-mail krijgt, krijg je e-mails over alle activiteit op de PR). De wijziging staat nu in een lijst met PR's. Het team bekijkt die en geeft misschien feedback, voordat de wijziging in de hoofddocumentatie van AAPS komt! Wil je zien hoe het met de PR gaat, klik dan op het belletje rechtsboven in je GitHub-account. Daar zie je al je PR's.
 
-![PR tracking](../images/PR7.png)
+![PR volgen](../images/PR7.png)
 
-PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+PS: Je fork en branch blijven gewoon in je eigen GitHub-account staan. Als je een melding krijgt dat je PR is samengevoegd (merged), kun je je branch verwijderen als je er klaar mee bent (de meldingen uit stap 8 geven een link om de branch te verwijderen zodra die gesloten of samengevoegd is). Volg je bij volgende wijzigingen deze werkwijze, dan begin je altijd met een bijgewerkte versie van de AndroidAPSdocs repositories. Kies je een andere manier om een PR te starten (bijvoorbeeld bewerken vanaf de master branch van je eigen fork), dan moet je zorgen dat je repo bijgewerkt is. Doe dan eerst een "compare" en voeg alle updates samen die er zijn sinds je je fork voor het laatst hebt bijgewerkt. Mensen vergeten vaak hun repo bij te werken. Daarom raden we aan om de PR-werkwijze hierboven te gebruiken, tot je gewend bent aan het doen van een "compare".
 
 (edit-the-docs-code-syntax)=
 
-## Code syntax
+## Codesyntax
 
-We are using markdown for the documentation pages. The files have got the suffix ".md".
+We gebruiken markdown voor de pagina's van de documentatie. De bestanden hebben de extensie ".md".
 
-Markdown is a very simple text formatting language which separates text content from text formatting.
+Markdown is een heel eenvoudige taal voor tekstopmaak die de inhoud van de tekst scheidt van de opmaak.
 
-The writer only e.g. marks a headline as level 1 headline and the markdown processor generates the necessary HTML code during processing to render the heading in HTML.
+De schrijver geeft bijvoorbeeld alleen aan dat een kop een kop van niveau 1 is. De markdown-verwerker maakt tijdens de verwerking de nodige HTML-code om de kop in HTML te tonen.
 
-The idea behind this is that
+Het idee hierachter is dat
 
-- the writer should think about the text and not the formatting first,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Windows and
-- you can generate several output formats from one markdown file.
+- de schrijver eerst aan de tekst denkt en niet aan de opmaak,
+- de markdown-tekst uitwisselbaar is tussen verschillende markdown-tools, in plaats van bijvoorbeeld gesloten tools zoals Microsoft Windows, en
+- je meerdere uitvoerformaten kunt maken uit één markdown-bestand.
 
-Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard, to
+Markdown is geen 100% vaste standaard, en we proberen zo dicht mogelijk bij de standaard te blijven, om
 
-- stay flexible to change markdown tools as needed or forced in the further innovation of markdown tools and markdown SaaS services and
-- enable us to use translation services to translate the English language in a target language like French or German. They can work on markdown but not complex formatting codes, because they can't separate content from layout, which might be fatal.
+- we flexibel blijven om van markdown-tools te wisselen als dat nodig is of moet door nieuwe ontwikkelingen in markdown-tools en markdown SaaS-diensten, en
+- vertaaldiensten te kunnen gebruiken om het Engels te vertalen naar een doeltaal zoals Frans of Duits. Die kunnen met markdown werken, maar niet met ingewikkelde opmaakcodes, omdat ze inhoud en opmaak niet van elkaar kunnen scheiden. Dat kan fataal zijn.
 
-### Headlines
+### Koppen
 
-- Headline 1: `# headline`
-- Headline 2: `## headline`
-- Headline 3: `### headline`
-- Headline 4: `#### headline`
+- Kop 1: `# headline`
+- Kop 2: `## headline`
+- Kop 3: `### headline`
+- Kop 4: `#### headline`
 
-We try to avoid further levels of headlines.
+We proberen meer niveaus van koppen te vermijden.
 
-### Text format
+### Tekstopmaak
 
-- **bold**: `**text**`
-- *italic*: `*text*`
-- ***bold italic***: `***text***`
+- **vet**: `**text**`
+- *cursief*: `*text*`
+- ***vet cursief***: `***text***`
 
-### Ordered list
+### Genummerde lijst
 
-    1. first
-    1. second
-    1. third
+    1. eerste
+    1. tweede
+    1. derde
     
 
-1. first
-2. second
-3. third
+1. eerste
+2. tweede
+3. derde
 
-### Unordered list
+### Ongenummerde lijst
 
-    - one element
-    - another element
-    - and another element
+    - één element
+    - nog een element
+    - en nog een element
     
 
-- one element
-- another element
-- and another element
+- één element
+- nog een element
+- en nog een element
 
-### Multi level list
+### Lijst met meerdere niveaus
 
-You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
+Je kunt lijsten in lijsten zetten door het volgende niveau 4 spaties verder naar rechts te laten inspringen dan het niveau ervoor.
 
-    1. first
-    1. second
-    1. third
-      1. one element
-      1. another element
-      1. and another element
-    1. four
-    1. five
-    1. six
+    1. eerste
+    1. tweede
+    1. derde
+      1. één element
+      1. nog een element
+      1. en nog een element
+    1. vier
+    1. vijf
+    1. zes
     
 
-1. first
-2. second
-3. third 
-    1. one element
-    2. another element
-    3. and another element
-4. four
-5. five
-6. six
+1. eerste
+2. tweede
+3. derde 
+    1. één element
+    2. nog een element
+    3. en nog een element
+4. vier
+5. vijf
+6. zes
 
-### Images
+### Afbeeldingen
 
-To include images you use this markdown syntax.
+Om afbeeldingen toe te voegen gebruik je deze markdown-syntax.
 
-- images: `![alt text](../images/file.png)`
+- afbeeldingen: `![alt text](../images/file.png)`
 
-The type of image should be PNG or JPEG.
+Het type afbeelding moet PNG of JPEG zijn.
 
-Images names should confirm to one of following naming rules. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
+Namen van afbeeldingen moeten volgens een van de volgende naamregels zijn. In het voorbeeld gebruik ik png als extensie. Gebruik je JPEG, gebruik dan jpeg als extensie.
 
-- `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
-- `filename-image-xx.png` where xx is a meaning full name for the author of the md file.
+- `filename-image-xx.png` waarbij xx een uniek getal van twee cijfers is voor de afbeeldingen in dit bestand.
+- `filename-image-xx.png` waarbij xx een betekenisvolle naam is die de auteur van het md-bestand kiest.
 
-Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
+Afbeeldingen staan in de map images voor de Engelse taal. Crowdin zet ze automatisch door naar de andere talen. Daar hoef je niets voor te doen!
 
-We are not translating images at the moment: images should contain the **minimum possible text** to allow accessibility to non-English readers.
+We vertalen op dit moment geen afbeeldingen: afbeeldingen moeten **zo weinig mogelijk tekst** bevatten, zodat ze ook toegankelijk zijn voor lezers die geen Engels lezen.
 
-(make-a-PR-image-size)= Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
+(make-a-PR-image-size)= Gebruik een redelijke grootte voor de afbeeldingen. Ze moeten leesbaar zijn op pc, tablet en mobiel.
 
-- Screenshots from web pages images should be up to **1050 pixels wide**.
-- Diagrams of process flows should be up to **1050 pixels wide**.
-- Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
+- Schermafbeeldingen van webpagina's mogen maximaal **1050 pixels breed** zijn.
+- Diagrammen van processen mogen maximaal **1050 pixels breed** zijn.
+- Schermafbeeldingen van de app mogen maximaal **500 pixels breed** zijn. Zet ze niet naast elkaar als dat niet nodig is.
+- Schermafbeeldingen van het horloge (**Wear OS**) mogen maximaal **360 pixels breed** zijn. Vergroot nooit een kleinere schermafbeelding.
 
 ### Links
 
-#### External links
+#### Externe links
 
-External links are links to external web sites.
+Externe links zijn links naar externe websites.
 
-- external link: `[alt text](www.url.tld)`
+- externe link: `[alt text](www.url.tld)`
 
-#### Internal links to the start of a md file
+#### Interne links naar het begin van een md-bestand
 
-Internal links to pages are links to the start of a md file which is hosted on our own server.
+Interne links naar pagina's zijn links naar het begin van een md-bestand dat op onze eigen server staat.
 
-- internal link to .md page: `[alt text](../folder/file.md)`
+- interne link naar .md-pagina: `[alt text](../folder/file.md)`
 
-#### Internal links to named inline references
+#### Interne links naar referenties met een naam in de tekst
 
-Internal links to named inline references are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
+Interne links naar referenties met een naam zijn links naar een willekeurige plek in een md-bestand dat op onze eigen server staat, waar een referentie is gezet om naar te linken.
 
-Add a named reference at the location in the target md file you want to jump to.
+Zet een referentie met een naam op de plek in het doel-md-bestand waar je naartoe wilt springen.
 
 `(name-of-my-md-file-this-is-my-fancy-named-reference)=`
 
-The named reference must be unique in the whole AndroidAPSDocs md files and not only the own md file it resides in!
+De naam van de referentie moet uniek zijn in alle md-bestanden van AndroidAPSDocs, en niet alleen in het md-bestand waarin hij staat!
 
-Therefore it is a good practice to start with the filename and then the reference name you select.
+Daarom is het goed om te beginnen met de bestandsnaam en daarna de referentienaam die je kiest.
 
-Use only lowercase letters and hyphenate words.
+Gebruik alleen kleine letters en zet koppeltekens tussen woorden.
 
-Then link this reference in the text you are writing with the following kind of link.
+Link daarna in de tekst die je schrijft naar deze referentie met dit soort link.
 
-- Internal links to named inline references: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+- Interne links naar referenties met een naam: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
-### Notes, Warnings, Collapsing Notes
+### Notities, waarschuwingen, inklapbare notities
 
-You can add notes and warning boxes to documentation.
+Je kunt notities en waarschuwingsvakken toevoegen aan de documentatie.
 
-Furthermore you can add collapsing notes for detailed information which would users who are not interested in the details quench to read the text at all. Please use these carefully as the documentation should be as easy to read as possible.
+Je kunt ook inklapbare notities toevoegen voor gedetailleerde informatie, zodat gebruikers die niet in de details geïnteresseerd zijn niet afhaken bij het lezen van de tekst. Gebruik ze voorzichtig, want de documentatie moet zo makkelijk mogelijk te lezen zijn.
 
-#### Notes
+#### Notities
 
-    ```{admonition} Note headline
+    ```{admonition} Kop van de notitie
     :class: note
-    This is a note.
+    Dit is een notitie.
     ```
     
 
-```{admonition} Note headline :class: note This is a note.
+```{admonition} Kop van de notitie :class: note Dit is een notitie.
 
-    <br />#### Warnings
+    <br />#### Waarschuwingen
     
     ````
-    ```{admonition} Warning
+    ```{admonition} Waarschuwing
     :class: warning
-    This is a warning.
+    Dit is een waarschuwing.
     
 
-    ```{admonition} Warning headline 
+    ```{admonition} Kop van de waarschuwing
     :class: warning
-    This is a warning.
+    Dit is een waarschuwing.
     ```
     
-    #### Collapsing Notes
+    #### Inklapbare notities
     
     
 
-    {admonition} further detailed readings for interested readers
+    {admonition} meer gedetailleerde informatie voor geïnteresseerde lezers
     :class: dropdown
     
-    This admonition has been collapsed,
-    meaning you can add longer form content here,
-    without it taking up too much space on the page.
+    Deze notitie is ingeklapt,
+    dat betekent dat je hier langere tekst kunt toevoegen,
+    zonder dat die veel ruimte op de pagina inneemt.
     
 
 ````
 
-```{admonition} further detailed readings for interested readers :class: dropdown This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page.
+```{admonition} meer gedetailleerde informatie voor geïnteresseerde lezers :class: dropdown Deze notitie is ingeklapt, dat betekent dat je hier langere tekst kunt toevoegen, zonder dat die veel ruimte op de pagina inneemt.
 
 ```
 
-## Tables
+## Tabellen
 
-Avoid using tables with long texts as the contents is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Vermijd tabellen met lange teksten. De inhoud is lastig op te maken in Markdown, ze passen meestal niet op de breedte van een telefoonscherm, en na vertaling zien ze er waarschijnlijk anders uit.
 
-## Style Guide
+## Stijlgids
 
-### Contents
+### Inhoud
 
-1. English language writing tips
+1. Tips voor het schrijven in het Engels
 
-2. AAPS-specific writing notes
+2. Schrijfnotities specifiek voor AAPS
 
-3. Useful references
+3. Handige bronnen
 
-### ![Image](../images/styleguide01.png) 1\. English language writing tips
+### ![Afbeelding](../images/styleguide01.png) 1\. Tips voor het schrijven in het Engels
 
-#### Use language that is appropriate for the reader
+#### Gebruik taal die past bij de lezer
 
-Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
+Gebruik waar mogelijk eenvoudig Engels. Dat helpt lezers die geen moedertaalspreker zijn, en het maakt het vertalen van AAPS-documenten naar andere talen makkelijker. Schrijf alsof je een gesprek voert met de gebruiker. Stel je voor dat je aan een bureau zit tegenover de persoon voor wie je schrijft. Onthoud: de meeste AAPS-gebruikers hebben geen achtergrond in programmeren. Ook diabetes zelf heeft veel vakjargon en afkortingen. Denk eraan dat sommige mensen pas de diagnose hebben gekregen, minder ervaring hebben met diabetes dan jij, of een andere diabetesopleiding hebben gehad. Gebruik je een verkorte vorm of afkorting, schrijf die dan de eerste keer voluit, met de afkorting direct erna tussen haakjes, zoals “super micro bolus (SMB)”. Link ook naar de woordenlijst. Technische termen die de lezer misschien niet kent, kun je ook tussen haakjes toevoegen.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?"*
+In plaats van: *“What causes high postprandial BG peaks in closed loop?"*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
+Gebruik: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
 
-##### Use plain words that everyone can understand
+##### Gebruik eenvoudige woorden die iedereen begrijpt
 
-Find an A-Z of alternative words to make your writing easier to understand here:
+Een A-Z-lijst met andere woorden die je tekst makkelijker te begrijpen maken vind je hier:
 
 <https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html>
 
-#### Privacy/licensing concerns:
+#### Privacy en licenties:
 
-Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure YouTube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
+Vooral als je video of schermafbeeldingen opneemt: zorg dat je je privégegevens (API-sleutel, wachtwoorden) niet laat zien. Zorg dat YouTube-video's niet openbaar vermeld zijn, en dat je een link uit de documentatie nodig hebt om ze te bekijken. Vestig geen aandacht op materiaal dat auteursrecht schendt (BYODA enz.).
 
-#### Keep sentences short, get to the point
+#### Houd zinnen kort, kom ter zake
 
-- Clear writing should have an average sentence length of 15 to 20 words.
+- Duidelijke tekst heeft zinnen van gemiddeld 15 tot 20 woorden.
 
-- This does not mean making every sentence the same length. Be punchy. Vary your writing by mixing short sentences (like the last one) with longer ones (like this one).
+- Dat betekent niet dat elke zin even lang moet zijn. Wees krachtig. Wissel af door korte zinnen (zoals de vorige) te mengen met langere zinnen (zoals deze).
 
-- Stick to one main idea in a sentence, plus perhaps one other related point.
+- Houd het bij één hoofdidee per zin, plus misschien één ander punt dat erbij hoort.
 
-- You may still find yourself writing the odd long sentence, especially when trying to explain a complicated point. But most long sentences can be broken up in some way.
+- Soms schrijf je toch een lange zin, vooral als je iets ingewikkelds probeert uit te leggen. Maar de meeste lange zinnen kun je op een of andere manier opsplitsen.
 
-- Remove weak words: “you can”, “there is/are/were”, “in order to”.
+- Haal zwakke woorden weg: “you can”, “there is/are/were”, “in order to”.
 
-- Place keywords near the beginning of titles, sentences and paragraphs.
+- Zet sleutelwoorden aan het begin van titels, zinnen en alinea's.
 
-- Be visual! Wherever possible provide a brief diagram, screenshot or video.
+- Maak het visueel! Geef waar mogelijk een kort diagram, schermafbeelding of video.
 
-#### Don't be afraid to give instructions
+#### Wees niet bang om instructies te geven
 
-Commands are the fastest way to give instructions, but writers sometimes fear giving commands, writing “you should do this” instead of just “do this”. Perhaps people worry that commands sound too harsh. You can often solve this by putting the word 'please' in front. However, if something must be done, it is best not to say ‘please’ as it gives the reader the option to refuse.
+Opdrachten zijn de snelste manier om instructies te geven. Maar schrijvers zijn soms bang om opdrachten te geven en schrijven “you should do this” in plaats van gewoon “do this”. Misschien zijn mensen bang dat opdrachten te streng klinken. Dat los je vaak op door het woord 'please' ervoor te zetten. Maar als iets echt moet gebeuren, zeg je beter geen ‘please’, omdat de lezer dan de keuze krijgt om te weigeren.
 
-Instead of: *“You should just think of it as a complete statement."*
+In plaats van: *“You should just think of it as a complete statement."*
 
-Use: *“Think of it as a complete statement.”*
+Gebruik: *“Think of it as a complete statement.”*
 
-#### Mostly use active verbs, rather than passive verbs
+#### Gebruik vooral de bedrijvende vorm (actief), en niet de lijdende vorm (passief)
 
-Example of an **active verb**:
+Voorbeeld van een **actief werkwoord**:
 
-- *“The pump (subject) delivers (verb) the insulin (object).”*
+- *“The pump (onderwerp) delivers (werkwoord) the insulin (lijdend voorwerp).”*
 
-“delivers” is an active verb here. The sentence says what is doing the delivering before it says what is being delivered.
+“delivers” is hier een actief werkwoord. De zin zegt eerst wat er levert, en daarna wat er geleverd wordt.
 
-Example of a **passive verb**:
+Voorbeeld van een **passief werkwoord**:
 
-- *“The insulin (subject) is delivered (verb) by the pump (object)”*
+- *“The insulin (onderwerp) is delivered (werkwoord) by the pump (voorwerp)”*
 
-*“delivered”* a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
+*“delivered”* is hier een passief werkwoord. Onderwerp en voorwerp zijn omgedraaid, vergeleken met de zin met het actieve werkwoord. We moesten de zin langer maken door “is” en “by the” toe te voegen. Overweeg ook om met het actieve werkwoord te beginnen.
 
-Instead of: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
+In plaats van: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
 
-Use: *“Connect your desired pump to the phone through the AAPS pump menu.”*
+Gebruik: *“Connect your desired pump to the phone through the AAPS pump menu.”*
 
-Passive verbs can cause problems:
+Passieve werkwoorden kunnen problemen geven:
 
-- They can be confusing.
+- Ze kunnen verwarrend zijn.
 
-- They often make writing more long-winded.
+- Ze maken tekst vaak langdradiger.
 
-- They make writing less lively.
+- Ze maken tekst minder levendig.
 
-##### Good uses of passives
+##### Goed gebruik van de passieve vorm
 
-There are times when it might be appropriate to use a passive.
+Soms is het wel goed om de passieve vorm te gebruiken.
 
-- To make something less hostile - 'this bill has not been paid' (passive) is softer than 'you have not paid this bill' (active).
+- Om iets minder vijandig te maken: 'this bill has not been paid' (passief) is zachter dan 'you have not paid this bill' (actief).
 
-- To avoid taking the blame - 'a mistake was made' (passive) rather than 'You made a mistake' (active).
+- Om de schuld niet op je te nemen: 'a mistake was made' (passief) in plaats van 'You made a mistake' (actief).
 
-- When you don't know who or what the doer is - 'the England team has been picked'.
+- Als je niet weet wie of wat de handeling doet: 'the England team has been picked'.
 
-- If it simply sounds better.
+- Als het gewoon beter klinkt.
 
-#### Avoid nominalisations
+#### Vermijd naamwoordstijl (nominalisaties)
 
-A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalizations are formed from verbs.
+Een nominalisatie is de naam van iets dat geen fysiek voorwerp is, zoals een proces, techniek of emotie. Nominalisaties worden gevormd uit werkwoorden.
 
-For example:
+Bijvoorbeeld:
 
-| Verb      | Nominalization |
-| --------- | -------------- |
-| complete  | completion     |
-| introduce | introduction   |
-| provide   | provision      |
-| fail      | failure        |
+| Werkwoord | Nominalisatie |
+| --------- | ------------- |
+| complete  | completion    |
+| introduce | introduction  |
+| provide   | provision     |
+| fail      | failure       |
 
-They are often used **instead** of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
+Ze worden vaak gebruikt **in plaats van** de werkwoorden waar ze van komen, maar ze kunnen klinken alsof er eigenlijk niets gebeurt. Te veel ervan maakt een tekst saai en zwaar om te lezen.
 
-Instead of: *“The implementation of the method has been done by a team.”*
+In plaats van: *“The implementation of the method has been done by a team.”*
 
-Use: *“A team has implemented the method.”*
+Gebruik: *“A team has implemented the method.”*
 
-#### Use lists where appropriate
+#### Gebruik lijsten waar dat past
 
-Lists are excellent for splitting information up. There are two main types of list:
+Lijsten zijn heel goed om informatie op te delen. Er zijn twee hoofdsoorten lijsten:
 
-- A continuous sentence with several listed points picked out at the beginning, middle or end.
+- Een doorlopende zin met meerdere punten die aan het begin, in het midden of aan het eind genoemd worden.
 
-- Separate bullet points with an introductory statement.
+- Losse opsommingstekens met een inleidende zin.
 
-In the bulleted list above, each point is a complete sentence so they each start with a capital letter and end with a full stop. Use bullet points rather than numbers or letters, as they draw your attention to each point without giving you extra information to take in.
+In de lijst met opsommingstekens hierboven is elk punt een volledige zin. Daarom begint elk punt met een hoofdletter en eindigt het met een punt. Gebruik opsommingstekens in plaats van nummers of letters. Die vestigen de aandacht op elk punt, zonder je extra informatie te geven om te verwerken.
 
-#### Mythbusting
+#### Mythes ontkracht
 
-- You can start a sentence with **and, but, because, so or however**.
+- Je mag een zin beginnen met **and, but, because, so of however**.
 
-- You can split infinitives. So you can say **“to boldly go”**.
+- Je mag een infinitief splitsen (split infinitive). Je mag dus **“to boldly go”** zeggen.
 
-- You can end a sentence with a preposition. In fact, it is something **we should stand up for**.
+- Je mag een zin eindigen met een voorzetsel. Eigenlijk is dat iets **we should stand up for**.
 
-- And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.
+- En **je** mag hetzelfde **woord** twee keer in een zin gebruiken als **je** geen beter **woord** kunt vinden.
 
-#### Optimizing writing style by purpose
+#### Schrijfstijl aanpassen aan het doel
 
-To keep the documentation clear and short, we write different sections of the documentation in different styles.
+Om de documentatie duidelijk en kort te houden, schrijven we verschillende delen van de documentatie in verschillende stijlen.
 
-An “explanation” style is used for the introduction, background and knowledge development sections.
+De stijl “uitleg” (explanation) gebruiken we voor de delen over introductie, achtergrond en kennis opbouwen.
 
-A “How-to-guide” style (with minimal explanation) is used for building, configuring AAPS, and some of the troubleshooting sections.
+De stijl “handleiding” (how-to guide, met zo weinig mogelijk uitleg) gebruiken we voor het bouwen en instellen van AAPS en voor sommige delen over probleemoplossing.
 
-A tutorial helps the pupil acquire basic competence. The user will **learn by doing**.
+Een tutorial helpt de leerling om basisvaardigheden te krijgen. De gebruiker **leert door te doen**.
 
-![Image](../images/styleguide02.png)
+![Afbeelding](../images/styleguide02.png)
 
-##### ![Image](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
+##### ![Afbeelding](../images/styleguide03.png) Tutorials (bijv. een kind leren eiwit te kloppen)
 
-- narrator directly talks to the reader: In this tutorial **you** will (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
+- de verteller spreekt de lezer direct aan: In deze tutorial ga **je** (we) kan in enkele zeldzame gevallen gebruikt worden om het gevoel “we doen dit samen” over te brengen
 
-- Future Tense -> to show the final target
+- Toekomende tijd -> om het einddoel te laten zien
 
-- Imperative Tense -> to do the tasks -> Concrete steps - avoid abstract concepts
+- Gebiedende wijs -> om de taken te doen -> Concrete stappen - vermijd abstracte begrippen
 
-- Past Tense -> to show accomplished tasks -> Quick and immediate visible results
+- Verleden tijd -> om voltooide taken te laten zien -> Snelle en direct zichtbare resultaten
 
-- Minimum Explanations -> strict necessary to complete the task - **what and why**
+- Zo weinig mogelijk uitleg -> alleen wat echt nodig is om de taak te voltooien - **wat en waarom**
 
-- Ignore options/alternatives/…. No ambiguity
+- Negeer opties/alternatieven/…. Geen dubbelzinnigheid
 
-- Step Transitions: finish a step with a sentence leading to the next step as a logical progression flow. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- Overgangen tussen stappen: sluit een stap af met een zin die logisch naar de volgende stap leidt. Voorbeeld: *Je hebt nu de Let’s Encrypt-client geïnstalleerd, maar voordat je certificaten aanvraagt, moet je zorgen dat alle nodige poorten open zijn. Daarvoor pas je in de volgende stap je firewall-instellingen aan.*
 
-- **Tutorial** Title (Level 1 heading)
+- Titel van de **tutorial** (kop niveau 1)
 
-- Introduction (no heading)
+- Introductie (geen kop)
 
-- Prerequisites (Level 2 heading)
+- Vereisten (kop niveau 2)
 
-- Steps:
+- Stappen:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- Stap 1 — Het eerste doen (kop niveau 2)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- Stap 2 — Het volgende doen (kop niveau 2)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- Stap n — Het laatste doen (kop niveau 2)
 
-- Conclusion (Level 2 heading)
+- Conclusie (kop niveau 2)
     
-    - **The Language of Tutorials**
+    - **De taal van tutorials**
         
-        *In this tutorial, you will…*
+        *In deze tutorial ga je…*
         
-        Describe what the learner will accomplish (note - not: “you will learn…”).
+        Beschrijf wat de leerling zal bereiken (let op - niet: “je gaat leren…”).
         
-        *First, do x. Now, do y. Now that you have done y, do z.*
+        *Doe eerst x. Doe nu y. Nu je y hebt gedaan, doe je z.*
         
-        No room for ambiguity or doubt.
+        Geen ruimte voor dubbelzinnigheid of twijfel.
         
-        *We must always do x before we do y because… (see Explanation for more details).*
+        *We moeten altijd x doen voordat we y doen, omdat… (zie Uitleg voor meer details).*
         
-        Provide minimal explanation of actions in the most basic language possible. Link to more detailed explanation.
+        Leg handelingen zo kort mogelijk uit, in de eenvoudigste taal. Link naar een uitgebreidere uitleg.
         
-        *The output should look something like this…*
+        *Het resultaat ziet er ongeveer zo uit…*
         
-        Give your learner clear expectations.
+        Geef je leerling duidelijke verwachtingen.
         
-        *Notice that… Remember that…*
+        *Let op dat… Onthoud dat…*
         
-        Give your learner plenty of clues to help confirm they are on the right track and orient themselves.
+        Geef je leerling genoeg aanwijzingen, zodat die kan zien dat die op de goede weg is en weet waar die is.
         
-        *You have built a secure, three-layer hylomorphic stasis engine…*
+        *Je hebt een veilige, hylomorfe stasis-machine met drie lagen gebouwd…*
         
-        Describe (and admire, in a mild way) what your learner has accomplished (note - not: “you have learned…”)
+        Beschrijf (en bewonder, op een rustige manier) wat je leerling heeft bereikt (let op - niet: “je hebt geleerd…”)
 
-##### ![Image](../images/styleguide05.png) How-To Guides (e.g. a recipe)
+##### ![Afbeelding](../images/styleguide05.png) Handleidingen (how-to guides, bijv. een recept)
 
-A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
+Een handleiding is bedoeld om een gebruiker die het al kan te helpen een bepaalde taak goed uit te voeren.
 
-- HOW-to
+- HOE
 
-- narrator directly talks to the reader: In this tutorial **you** will
+- de verteller spreekt de lezer direct aan: In deze tutorial ga **je**
 
-- Future Tense -> to show the final target
+- Toekomende tijd -> om het einddoel te laten zien
 
-- Conditional Imperative Tense -> to get X do y -> Concrete steps - avoid abstract concepts
+- Voorwaardelijke gebiedende wijs -> om X te krijgen, doe y -> Concrete stappen - vermijd abstracte begrippen
 
-- Minimum Explanations -> strict necessary to complete the task -> **what and why**
+- Zo weinig mogelijk uitleg -> alleen wat echt nodig is om de taak te voltooien -> **wat en waarom**
 
-- Ignore options/alternatives/…. No ambiguity, but you can link to the reference entry or explanation entry
+- Negeer opties/alternatieven/…. Geen dubbelzinnigheid, maar je kunt linken naar de referentie of de uitleg
 
-- **How-to**: Title (Level 1 heading)
+- **Handleiding**: Titel (kop niveau 1)
 
-- Introduction paragraph
+- Alinea met introductie
 
-- Optional Prerequisites (paragraph or Level 2 heading if more than 1)
+- Optionele vereisten (alinea, of kop niveau 2 als het er meer dan 1 zijn)
 
-- Steps:
+- Stappen:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- Stap 1 — Het eerste doen (kop niveau 2)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- Stap 2 — Het volgende doen (kop niveau 2)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- Stap n — Het laatste doen (kop niveau 2)
 
-- Conclusion paragraph
+- Alinea met conclusie
     
-    - **The Language of How-To Guides**
+    - **De taal van handleidingen**
         
-        *This guide shows you how to…*
+        *Deze handleiding laat je zien hoe je…*
         
-        Describe clearly the problem or task that the guide shows the user how to solve.
+        Beschrijf duidelijk het probleem of de taak die de handleiding de gebruiker leert oplossen.
         
-        *If you want x, do y. To achieve w, do z.*
+        *Wil je x, doe dan y. Om w te bereiken, doe je z.*
         
-        Use conditional imperatives.
+        Gebruik een voorwaardelijke gebiedende wijs.
         
-        *Refer to the x reference guide for a full list of options.*
+        *Zie de referentiegids van x voor een volledige lijst met opties.*
         
-        Don’t pollute your practical how-to guide with every possible thing the user might do related to x.
+        Vul je praktische handleiding niet met alles wat de gebruiker maar kan doen met x.
 
-##### ![Image](../images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
+##### ![Afbeelding](../images/styleguide07.png) Uitleg (bijv. de wetenschap achter waarom eiwit stijf wordt als je het klopt)
 
-An explanation clarifies, deepens and broadens the reader’s understanding of a subject.
+Een uitleg maakt het begrip van de lezer over een onderwerp duidelijker, dieper en breder.
 
-- WHY
+- WAAROM
 
-- Start with **About**
+- Begin met **Over**
 
-- Provide context, link ALL relevant references
+- Geef context, link ALLE relevante bronnen
 
-- Discuss options/alternatives
+- Bespreek opties/alternatieven
 
-- Don’t instruct or provide reference (link to them)
+- Geef geen instructies of referentie (link ernaar)
 
-- State the unknown/moving targets etc…
+- Noem wat onbekend is of nog verandert enz…
 
-- **About** Title (Level 1 heading)
+- **Over** Titel (kop niveau 1)
 
-- Introduction (no heading)
+- Introductie (geen kop)
 
-- Optional Prerequisites (Level 2 heading)
+- Optionele vereisten (kop niveau 2)
 
-- Subtopic 1 (level 2 heading)
+- Subonderwerp 1 (kop niveau 2)
 
-- Conclusion (Level 2 heading)
+- Conclusie (kop niveau 2)
     
-    - **The Language of Explanation**
+    - **De taal van uitleg**
     
-    *The reason for x is because historically, y…*
+    *De reden voor x is dat vroeger y…*
     
-    Explain.
+    Leg uit.
     
-    *W is better than z, because…*
+    *W is beter dan z, omdat…*
     
-    Offer judgements and even opinions where appropriate..
+    Geef een oordeel en zelfs een mening waar dat past.
     
-    *An x in system y is analogous to a w in system z. However…*
+    *Een x in systeem y is te vergelijken met een w in systeem z. Maar…*
     
-    Provide context that helps the reader.
+    Geef context die de lezer helpt.
     
-    *Some users prefer w (because z). This can be a good approach, but…*
+    *Sommige gebruikers kiezen liever w (omdat z). Dit kan een goede aanpak zijn, maar…*
     
-    Weigh up alternatives.
+    Weeg alternatieven af.
     
-    *An x interacts with a y as follows:…*
+    *Een x werkt als volgt samen met een y:…*
     
-    Unfold the machinery’s internal secrets, to help understand why something does what it does.
+    Laat zien hoe het systeem van binnen werkt, zodat je begrijpt waarom iets doet wat het doet.
 
-### 2\. AAPS-specific writing/updating notes
+### 2\. Notities voor het schrijven/bijwerken specifiek voor AAPS
 
-#### Author & Editor
+#### Auteur & redacteur
 
-For writing/updating the AAPS documentation, consider the process as consisting of two stages. These can be carried out by the same person at different points, or more than one person.
+Zie het schrijven/bijwerken van de AAPS-documentatie als een proces in twee fasen. Die kunnen door dezelfde persoon op verschillende momenten worden gedaan, of door meer dan één persoon.
 
-An **author (e.g. you!)** writes/edits a section of the documentation in a concise conversational tone, then passes it to the editor.
+Een **auteur (bijv. jij!)** schrijft/bewerkt een deel van de documentatie in een korte, gewone spreektoon en geeft het dan door aan de redacteur.
 
-The **editor (e.g. a fellow AAPS user, or the person who receives the pull request)** reviews adherence to the style guide, edits the section for clarity and accessibility, removing as many words as possible (especially for tutorial/how-to sections). Reading the text out loud may help.
+De **redacteur (bijv. een andere AAPS-gebruiker, of de persoon die de pull request krijgt)** controleert of de stijlgids gevolgd is, en bewerkt het deel zodat het duidelijk en toegankelijk is. Daarbij haalt die zo veel mogelijk woorden weg (vooral bij delen in de stijl tutorial/handleiding). Het helpt soms om de tekst hardop te lezen.
 
-#### General AAPS points
+#### Algemene punten voor AAPS
 
-- For glucose values, state both mg/dl and mmol/l in each occurrence (also consider this for screenshots, if possible).
+- Noem bij glucosewaarden steeds zowel mg/dl als mmol/l (doe dat ook bij schermafbeeldingen, als het kan).
 
-- For consistency, use “AAPS” rather than “Android APS”.
+- Gebruik overal “AAPS” en niet “Android APS”, zodat het overal hetzelfde is.
 
-- Clearly state the version of Android Studio/AAPS you are writing for, or that the screenshots are taken from.
+- Noem duidelijk voor welke versie van Android Studio/AAPS je schrijft, of van welke versie de schermafbeeldingen zijn.
 
-### 3\. Useful References
+### 3\. Handige bronnen
 
 <https://dev.readthedocs.io/en/latest/style-guide.html>
 

@@ -8,13 +8,11 @@ NSClient依赖与Nightscout的稳定通信。不稳定的连接会导致同步�
 
 * 如何检测连接不稳定？
 
-进入AAPS的NSClient选项卡并查看日志。预期行为是每约30秒收到一次PING且几乎没有重连消息。如果看到多次重连，则存在问题。
-
-自AAPS 2.0版本起，当检测到此行为时，NSClient会暂停15分钟，并在主界面显示"NSClient故障"消息。
+Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. 如果看到多次重连，则存在问题。
 
 * 重新启动
 
-第一步应尝试重启：先重启Nightscout，再重启手机以确认问题是否持续
+As a first step, restart Nightscout and then your phone to see if the issue is permanent.
 
 如果Nightscout托管在Heroku上，可通过以下方式重启：登录Heroku，点击你的nightscout应用名称，点击"More"菜单，选择"Restart all dynos"。
 
@@ -36,7 +34,7 @@ Android可能会将手机置于睡眠模式。检查你的手机电源选项中�
 
 * Nightscout中无血糖读数
 
-如果AAPS已正确连接Nightscout但血糖显示为N/A，请进入NSClient选项卡，点击右上角三点菜单，选择"NSClient首选项"→"同步"，启用"接收/回填CGM数据"。
+If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSClientV3 settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**. This option is hidden while client control is on ([hardened mode](#client-master-control-hardened-mode)); in that case check that **NSClient BG** is selected in **Configuration** → **BG Source**.
 
 * 如果仍然出现错误...
 

@@ -1,6 +1,6 @@
 # How to translate strings for the AAPS app or the documentation
 
-* For the the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
+* For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
 * For the documentation please visit <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
 
 * Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
@@ -63,8 +63,8 @@ The approval is a manual step. As non profit organization we don't provide SLAs 
     
         1. This is the translation you are preparing. You can copy the text from above or select one of the suggestions below.
     
-        1. These are the suggestion for a translation. Especially you can see how much Crowdin rates this as a fit or if it was already just in the past and come up through text rearrangements but not content change.
-        1. Press the "save" button to save a proposal for the translation. It will then promoted to a proofreader for final check.
+        1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
+        1. Press the "save" button to save a proposal for the translation. It will then be passed to a proofreader for final check.
     
     ![Translation docs](../images/translation_WikiTranslate.png)
     
@@ -101,4 +101,4 @@ It's the proofreaders job to have a special look on this!
     
     ![approve text](../images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during hollidays. To speed up the process you can inform docs team about new translations.
+* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. To speed up the process you can inform docs team about new translations.

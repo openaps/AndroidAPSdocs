@@ -1,66 +1,102 @@
 (Extended-Carbs-extended-carbs-ecarbs)=
-# Extended carbs / "eCarbs"
+# Удължени въглехидрати / „eCarbs“
 
-## What are eCarbs and when are they useful?
+## Какво са eCarbs и кога са полезни?
 
-With a regular pump therapy, extended boluses are a good way to deal with fatty or otherwise slowly-absorbed meals which increase blood glucose longer than the insulin is in effect. In a loop context, however, extended boluses don't make as much sense (and pose technical difficulties), since they're basically a fixed high temporary basal rate, which goes against how the loop works, which is adjusting the basal rate dynamically. For details see [extended bolus](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) below.
+При обикновена терапия с помпа удължените болуси са добър начин да се справите с мазни или по друг начин бавно усвоявани храни, които повишават кръвната захар по-дълго, отколкото действа инсулинът. Но при затворен кръг удължените болуси нямат много смисъл (и създават технически трудности), защото по същество са постоянен висок временен базал. Това противоречи на начина, по който работи кръгът – той променя базалната доза динамично. За подробности вижте [удължен болус](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) по-долу.
 
-The need to deal with such meals still exists though. Which is why AAPS as of version 2.0 supports so called extended carbs or eCarbs.
+Но нуждата да се справите с такива храни все пак остава. Затова AAPS поддържа т.нар. удължени въглехидрати или eCarbs.
 
-eCarbs are carbs that are spilt up over several hours. For standard meals with more carbohydrates than fat/protein, entering the carbs up front (and reducing the initial bolus if needed) is usually sufficient to prevent too-early insulin delivery.  But for slower-absorbing meals where full carb entry up front results in too much IOB from SMB, eCarbs can be used to more accurately simulate how the carbs (and any carb equivalents you enter for other macronutrients) are absorbed and influence the blood glucose. With this information, the loop can administer SMBs more gradually to deal with those carbs, which can be seen as a dynamic extended bolus (this should also work without SMBs, but is probably less effective).
+eCarbs са въглехидрати, разпределени в рамките на няколко часа. При стандартни хранения с повече въглехидрати, отколкото мазнини/белтъчини, обикновено е достатъчно да въведете въглехидратите предварително (и при нужда да намалите началния болус), за да не се подаде инсулин твърде рано.  Но при бавно усвоявани храни, при които въвеждането на всички въглехидрати предварително води до твърде много IOB от SMB, можете да използвате eCarbs. Така по-точно се симулира как въглехидратите (и въглехидратните еквиваленти, които въвеждате за другите макронутриенти) се усвояват и влияят на кръвната захар. С тази информация кръгът може да подава SMB по-постепенно, за да покрие тези въглехидрати. Това може да се разглежда като динамичен удължен болус (това би трябвало да работи и без SMB, но вероятно е по-малко ефективно).
 
-**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can be also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
+**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
 
-## Mechanics of using eCarbs
+## Как се използват eCarbs
 
-To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
+За да въведете eCarbs, отворете прозореца **Въглехидрати** (**Лечения** → **Въглехидрати**), въведете общото количество въглехидрати, задайте **Продължителност** и при желание изместете началото с **Започват от** (*числата по-долу са само примери – ще трябва да изпробвате свои стойности, за да постигнете задоволителна реакция на глюкозата във вашите случаи*):
 
-![Enter carbs](../images/eCarbs_Dialog.png)
+![Въведете въглехидрати](../images/eCarbs_Dialog.png)
 
-The eCarbs on the overview tab, note the carbs in brackets at the COB field, which shows the carbs in the future:
+eCarbs на главния екран: числото в скоби в полето **COB** показва въглехидратите, които тепърва ще дойдат, а графиката на **COB** показва всеки бъдещ запис на eCarbs като оранжев маркер. Ако не виждате графика на **COB**, добавете я с **Добави графика** под графиките (вижте [Екраните на AAPS](../DailyLifeWithAaps/AapsScreens.md)).
 
-![eCarbs in graph](../images/eCarbs_Graph.png)
+![eCarbs в полето COB и на графиката на COB](../images/eCarbs_Graph.png)
+
+(AapsScreens-carbs-type)=
+## Вид въглехидрати в болус калкулатора: хляб, торта или пица
+
+В [Болус калкулатор](#aaps-screens-bolus-wizard) три бутона под полето **Въглехидрати** ви позволяват да изберете колко бързо се усвоява храната. Изберете един от тях, преди да потвърдите. В зависимост от вида **AAPS** взема част от въведените въглехидрати като обикновени въглехидрати и добавя по-късно [удължени въглехидрати („eCarbs“)](#Extended-Carbs-extended-carbs-ecarbs) за бавни, богати храни. Натиснете иконата **(i)** до бутоните, за да видите типичните храни за избрания вид и какво прави той с вашите въглехидрати.
+
+| Тип                        | Типични храни (както са изброени в приложението)                                                                                | Въглехидрати сега, използвани за болуса | Добавени eCarbs                                          |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | -------------------------------------------------------- |
+| **Хляб** (по подразбиране) | Хляб, солени тестени изделия, кисело мляко, плодове, картофи, ориз, овесени ядки, зеленчуци                                     | 100 %                                   | Няма                                                     |
+| **Торта**                  | Кнедли, паста, азиатски ястия с много въглехидрати и мазнини, сладки и дрождени тестени изделия, зърнени закуски, мед, конфитюр | 90 %                                    | 20 %, започват 60 минути по-късно, разпределени в 2 часа |
+| **Пица**                   | Лазаня, пица, хамбургери, пържени картофи, печени картофи, чипс                                                                 | 80 %                                    | 35 %, започват 60 минути по-късно, разпределени в 3 часа |
+
+**Пример**: въвеждате 100 г и избирате **Пица**. Болусът се изчислява за 80 г, записани сега. 35 г eCarbs започват 1 час по-късно и се разпределят в 3 часа.
+
+Добре е да знаете:
+* Това не е просто разделяне: при **Торта** и **Пица** записаните въглехидрати са общо **повече от въведеното** (110 % и 115 %). Разликата е само в eCarbs.
+* Болусът покрива само въглехидратите, приети сега. **AAPS** не подава болус предварително за eCarbs: кръгът ги взема предвид, след като започнат, както всички други [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
+* Ако зададете **Започват от**, eCarbs започват 60 минути след това време.
+* Прозорецът за потвърждение показва eCarbs на отделен ред, _напр._ „Уд въглехидрати 35гр / 3ч (+60мин)“.
+* Грамовете се закръглят надолу до цели числа.
+* Процентите, закъсненията и продължителностите са фиксирани; не могат да се променят в настройките.
+* Изборът не се запомня: калкулаторът се отваря на **Хляб** всеки път.
 
 ______________________________________________________________________
 
-A way to handle fat and protein with that feature is described here: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
+Един начин за справяне с мазнините и белтъчините с тази функция е описан тук: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
 
 ______________________________________________________________________
 
-## Recommended setup, example scenario, and important notes
+## Препоръчителна настройка, примерен сценарий и важни бележки
 
-The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the *Enable SMB with COB* preference being enabled.
+Препоръчителната настройка е да използвате APS плъгина OpenAPS SMB, с разрешени SMB и с включена опция *Разреши SMB с COB (въглехидрати)*.
 
-A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *calculator* and then use the *carbs* button to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours.
+Примерен сценарий, напр. за пица, може да бъде да подадете (частичен) болус предварително чрез *Болус калкулатор* и след това да използвате прозореца *Въглехидрати*, за да въведете останалите въглехидрати с продължителност 4–6 часа, с начало след 1 или 2 часа.
 
-**Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. With low carb, high fat/protein meals it may be enough to only use eCarbs without manual boluses (see the blog post above). When eCarbs are generated, a Careportal note is also created to document all inputs, to make it easier to iterate and improve inputs.
+За по-бързо начало *Болус калкулатор* може да добави eCarbs вместо вас: изберете [вид въглехидрати](#AapsScreens-carbs-type) **Торта** или **Пица** под полето **Въглехидрати** (вижте по-горе). Количествата и времето са фиксирани, затова използвайте прозореца *Въглехидрати*, ако искате други стойности.
+
+**Важни бележки:** Разбира се, ще трябва да изпробвате кои конкретни стойности са подходящи за вас. Можете също внимателно да промените настройката *Максимални минути до които да ограничава SMB*, за да направите алгоритъма по-агресивен или по-малко агресивен. При храни с малко въглехидрати и много мазнини/белтъчини може да е достатъчно да използвате само eCarbs без ръчни болуси (вижте публикацията в блога по-горе). Когато се създават eCarbs, се създава и бележка в Портал за лечения, която записва всички въведени данни. Така е по-лесно да ги проверявате и подобрявате стъпка по стъпка.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## Extended bolus and why they won't work in closed-loop environment?
+## Удължен болус и защо той не работи при затворен кръг?
 
-As mentioned above extended or multiwave boluses do not really work in a closed loop environment. [See below](#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details
+Както е посочено по-горе, удължените или многовълновите болуси всъщност не работят при затворен кръг. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
-### Extended bolus and switch to open loop - Dana and Insight pump only
+### Удължен болус и превключване към отворен кръг – само за помпи Dana и Insight
 
-Some people were asking for an option to use extended bolus in AAPS anyway as they wanted to treat special foods the way they are used to.
+Някои хора все пак искаха възможност да използват удължен болус в AAPS, защото искаха да покриват определени храни по начина, по който са свикнали.
 
-That's why as of version 2.6 there is an option for an extended bolus for users of Dana and Insight pumps.
+Затова **AAPS** предлага удължен болус за потребителите на помпи Dana и Insight: отворете **Управление** и изберете **Удължен болус**.
 
-- Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
-- Bolus units, remaining and total time will be shown on homescreen.
-- On Insight pump extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
+Първо **AAPS** ви предупреждава, че затвореният кръг ще бъде спрян, докато тече удълженият болус. Докоснете **ОК**, за да продължите:
 
-![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
+![Внимание: удълженият болус спира режима Затворен кръг](../images/extended_bolus_stops_loop.png)
+
+Въведете количеството **Инсулин** и **Продължителност**, след това докоснете бутона за потвърждение долу и **ОК**:
+
+![Прозорец за удължен болус с 2 U за 60 минути](../images/extended_bolus_dialog.png)
+
+При помпата Insight удълженият болус *не е достъпен*, ако се използва [емулация на TBR](#Accu-Chek-Insight-Pump-settings-in-aaps).
+
+Докато тече удълженият болус, кръгът работи в режим **Отворен кръг** (иконата на кръга на главния екран се променя), а затвореният кръг се включва отново автоматично, когато удълженият болус приключи:
+
+![Иконата Отворен кръг на главния екран, докато тече удължен болус](../images/extended_bolus_main_screen.png)
+
+Менюто **Управление** показва бутон **Откажи** със скоростта и изминалото / общото време (например **Откажи 2,00 U/h 1/60'**). Докоснете го, за да спрете удължения болус по-рано:
+
+![Бутонът „Откажи“ на текущ удължен болус в менюто „Управление“](../images/extended_bolus_running_manage.png)
 
 (why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
-### Why extended boluses won't work in a closed loop environment
+### Защо удължените болуси не работят при затворен кръг
 
-1. The loop determines that now 1.55U/h is to be delivered. Whether this is delivered as an extended bolus or TBR does not matter to the algorithm. In fact, some of the pumps use the extended bolus. What should happen then? Most pump drivers then stop the extended bolus -> You didn't even need to start it.
+1. Кръгът решава, че сега трябва да се подават 1,55 U/h. За алгоритъма няма значение дали това се подава като удължен болус или като TBR. Всъщност някои от помпите използват удължения болус. Какво трябва да стане тогава? Повечето драйвери за помпи тогава спират удължения болус -> Изобщо не е било нужно да го стартирате.
 
-2. If you had the extended bolus as input, what should happen in the model?
+2. Ако удълженият болус беше входна стойност, какво трябва да стане в модела?
 
-   1. Should it be considered neutral together with the BR and looped on it? Then the loop should also be able to reduce the bolus if, for example, you get too low and all the "neutral" insulin is taken away?
-   2. Should the extended bolus simply be added? So the loop should simply be allowed to continue? Even in the worst hypo? I don't think this is so good: A hypo is foreseen but it must not be prevented?
+   1. Трябва ли да се смята за неутрален заедно с BR и кръгът да работи с него? Тогава кръгът трябва ли да може и да намали болуса, ако например КЗ стане твърде ниска и целият „неутрален“ инсулин бъде премахнат?
+   2. Трябва ли удълженият болус просто да се добави? Значи кръгът просто трябва да може да продължи? Дори при най-тежката хипогликемия? Не мисля, че това е добре: хипогликемията е предвидена, но не бива да бъде предотвратена?
 
-3. The IOB that the extended bolus builds up materializes after 5 minutes at the next run. Accordingly, the loop would give less basal. So not much changes... except that the possibility of hypo avoidance is taken.
+3. IOB, който натрупва удълженият болус, се появява след 5 минути при следващото изпълнение. Затова кръгът ще подаде по-малко базал. Така че не се променя много... освен че се губи възможността да се избегне хипогликемия.

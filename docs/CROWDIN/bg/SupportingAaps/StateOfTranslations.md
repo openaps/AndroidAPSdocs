@@ -1,26 +1,26 @@
-# state of translation for app and the documentation
+# Състояние на превода на приложението и документацията
 
-The state is once per hour updated and reflects only the state in Crowdin.
+Състоянието се обновява веднъж на час и показва само състоянието в Crowdin.
 
 ```{tip}
-Be careful the percentage of proofreading must be lower then the percentage of translations but they decided to show it on top of the translations.
-It's better to look only at the percentage level of translations to see if work is to be done.
+Be careful the percentage of proofreading must be lower than the percentage of translations but they decided to show it on top of the translations.
+По-добре гледайте само процента на преводите, за да видите дали има още работа.
 ```
 
 ```{admonition} needed time for final publication
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+След превода в Crowdin всеки ден е насрочена синхронизация с GitHub, която пренася преводите в GitHub като заявка за сливане (pull request, PR).
 
-The acceptance of the PR is a manual task which will be done es fast as possible.
+The acceptance of the PR is a manual task which will be done as fast as possible.
 ```
 
-## state app translation
+## Състояние на превода на приложението
 
-State of the **app** translations per language (country code, percentage translation, percentage proofreading).
+Състояние на преводите на **приложението** по езици (код на държавата, процент преведени, процент проверени от коректор).
 
-![state app translation](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
+![Състояние на превода на приложението](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
-## state documentation translation
+## Състояние на превода на документацията
 
-State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
+Състояние на преводите на **документацията** по езици (код на държавата, процент преведени, процент проверени от коректор).
 
-![state documentation translation](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
+![Състояние на превода на документацията](https://badges.awesome-crowdin.com/translation-13588158-310610.png)

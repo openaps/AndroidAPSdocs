@@ -9,7 +9,7 @@
 -   Избегайте калибровки при повышении или понижении уровня глюкозы.
 -   По возможности проводите «достаточно» калибровок – на официальных приложениях раз или два раза за сутки появляется предложение откалибровать систему. В самодельных системах таких напоминаний не бывает, поэтому будьте осторожны если давно не делали калибровки.
 -   Для сенсоров, не требующих или не разрешающих калибровку, по крайней мере ежедневно проверяйте реальный сахар крови. AAPS будет насколько безопасным, насколько надежны данные с сенсора.
--   По возможности калибруйте, имея показания в нижнем диапазоне (4-5 ммоль/л или 72-90мг/дл.) а также в среднем (7-9 ммоль/л или 126-160мг/дл.), поскольку это обеспечивает более широкий охват диапазона калибровок.
+-   If it all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
 
 ## Установка сенсора (G6)
 
@@ -22,7 +22,7 @@
 
 ### Проблемы с подключением
 
-Соединение Bluetooth может быть нарушено другими близлежащими устройствами Bluetooth, такими как глюкометры, гарнитуры, планшеты, кухонные устройства, микроволновые печи или керамические плиты. В этом случае xDrip+ не отображает данные СК. Когда соединение Bluetooth восстанавливается, пропущенные данные заполняются.
+Соединение Bluetooth может быть нарушено другими близлежащими устройствами Bluetooth, такими как глюкометры, гарнитуры, планшеты, кухонные устройства, микроволновые печи или керамические плиты. In this case xDrip does not display any BG values. Когда соединение Bluetooth восстанавливается, пропущенные данные заполняются.
 
 ### Ошибки сенсора
 
@@ -32,10 +32,10 @@
 
 ### Скачки данных
 
-Можно попробовать изменить настройки блокировки шума в xDrip+ (Настройки - Настройки между приложениями - Блокировка шумов), т.е. "Блокировать очень высокие шумы". См. также [Сглаживание данных ГК](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+You might try to change settings for noise blocking in xDrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". См. также [Сглаживание данных ГК](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Отрицательный срок работы сенсора
 
-![Отрицательный срок работы сенсора](../images/Troubleshooting_SensorAge.png)
+![Sensor age on the Sensor row of the expanded status panel](../images/main/main_status_row_expanded.png)
 
-Это происходит, если появляется задвоенная запись об установке сенсора "CGM Sensor Insert" на [вкладке Действия / меню](#screens-action-tab), или при установке сенсора с неверной датой. Перейдите на вкладку терапии > портал терапии и удалите неверную запись.
+The sensor age is shown on the **Sensor** row of the status panel on the main screen (tap the chevron to expand it). A negative age occurs if there is either a double "CGM Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Open **Treatments history** (menu ☰), select the **Careportal** tab and delete the wrong entry.

@@ -1,24 +1,24 @@
-# Development branch
+# Rama de desarrollo
 
 ```{warning}
-Dev branch is for the further development of AAPS only. It should be used on a separate phone for testing <font color="#FF0000">**not for actual looping!**</font>
+La rama dev es solo para seguir desarrollando AAPS. Se debe usar en un teléfono aparte para pruebas, <font color="#FF0000">**¡no para usar el lazo de verdad!**</font>
 ```
 
-The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). It is advised to stay on the Master branch for actual looping.
+La versión más estable de AAPS es la de la [rama master](https://github.com/nightscout/AndroidAPS/tree/master). Se recomienda usar la rama master para el lazo de verdad.
 
-The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Therefore many unfinished features are disabled. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in directory /AAPS/extra . Enabling the engineering mode might break the loop entirely.
+La versión dev de AAPS es solo para desarrolladores y testers que saben manejar stacktraces, revisar archivos de log y quizá usar el depurador para crear informes de errores útiles para los desarrolladores (en resumen: personas que saben lo que hacen sin ayuda). Por eso muchas funciones sin terminar están desactivadas. Para activar estas funciones, entra en el **Modo de ingeniería** creando un archivo llamado `engineering_mode` en la carpeta /AAPS/extra . Activar el modo de ingeniería puede romper el lazo por completo.
 
-However, the Dev branch is a good place to see what features are being tested and to help iron out the bugs and give feedback on how the new features work in practice. Often people will test the Dev branch on an old phone and pump until they are confident it is stable - any use of it is at your own risk. When testing any new features, remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.
+Sin embargo, la rama dev es un buen lugar para ver qué funciones se están probando, ayudar a corregir errores y dar tu opinión sobre cómo funcionan las nuevas funciones en la práctica. Muchas personas prueban la rama dev en un teléfono y una bomba antiguos hasta que están seguras de que es estable. Cualquier uso es bajo tu propio riesgo. Cuando pruebes nuevas funciones, recuerda que eliges probar una función que aún está en desarrollo. Hazlo bajo tu propio riesgo y con el cuidado necesario para mantenerte a salvo.
 
-If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/nightscout/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md). The new features can also be discussed on [discord](https://discord.gg/4fQUWHZ4Mw).
+Si encuentras un error o crees que algo ha ido mal al usar la rama dev, mira la [pestaña issues](https://github.com/nightscout/AndroidAPS/issues) para ver si alguien más ya lo ha encontrado. Si no, añádelo tú. Cuanta más información compartas aquí, mejor (no olvides que quizá tengas que compartir tus [archivos de log](../GettingHelp/AccessingLogFiles.md)). Las nuevas funciones también se pueden comentar en [Discord](https://discord.gg/4fQUWHZ4Mw).
 
-A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. When a single dev version doing the rounds, it is easier to keep track of bugs that people are reporting. The developers do not want to be in a position where there are three versions of dev in the wild where bugs are fixed in some and not others, and people continue to report the fixed ones.
+Una versión dev tiene fecha de caducidad. Esto parece incómodo cuando la usas sin problemas, pero tiene un objetivo. Cuando solo circula una versión dev, es más fácil seguir los errores que reporta la gente. Los desarrolladores no quieren tener tres versiones dev en circulación, con errores corregidos en unas y no en otras, y con personas que siguen informando de errores ya corregidos.
 
 (branch-ci-test)=
 
-## Test a specific branch (branch-ci)
+## Probar una rama concreta (branch-ci)
 
-To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
+Para compilar una rama de prueba, selecciona branch-ci, que te permite elegir una rama concreta para crear el APK. Puedes usar este método cuando necesites probar la rama dev.
 
 ![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
 
@@ -26,11 +26,11 @@ To build a test branch, select branch-ci, which allows you to choose a specific 
 
 (github-pr-test)=
 
-## Test items in a pull request (GitHub CI actions deploy)
+## Probar cambios de un pull request (GitHub CI actions deploy)
 
-Available from 3.3.2.1.dev
+Disponible desde 3.3.2.1.dev
 
-- Suitable for testers or those helping with testing.
+- Adecuado para testers o para quien ayuda con las pruebas.
 
 ```{eval-rst}
 .. raw:: html
@@ -39,7 +39,8 @@ Available from 3.3.2.1.dev
     <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
       <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
         <iframe
-          src="https://www.dailymotion.com/embed/video/x9rdx1q"
+          src="https://geo.dailymotion.com/player/x9rdx1q.html?video=x9rdx1q&loop=true&mute=true"
+          loading="lazy"
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
           frameborder="0"
           allowfullscreen>
@@ -50,20 +51,22 @@ Available from 3.3.2.1.dev
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
 
-- PR number: Please enter the PR number that you want to test.
+- Target repository: el repositorio que contiene el PR, con el formato owner/repo. Deja el valor por defecto **nightscout/AndroidAPS** salvo que te hayan dicho que uses otro repositorio (solo los desarrolladores deberían hacerlo).
 
-- PR reference types: PR reference types include two options:
+- PR number: introduce el número del PR que quieres probar.
+
+- PR reference types: hay dos opciones de tipo de referencia del PR:
     
     - head:
-    - Fetches the actual content from the PR author’s branch (i.e., the original commit history without any merge operations).
-    - This is equivalent to the original state of the PR branch, as if it were fetched directly from a fork or feature branch.
+    - Obtiene el contenido real de la rama del autor del PR (es decir, el historial de commits original, sin ninguna fusión).
+    - Equivale al estado original de la rama del PR, como si se obtuviera directamente de un fork o de una rama de funcionalidad.
     
     - merge:
     
-    - Fetches the result of GitHub’s pre-simulated merge of the PR into the target branch (e.g., dev).
-    - This is a virtual merge commit automatically created by GitHub.
-    - This commit only exists when the PR has no conflicts and is mergeable.
+    - Obtiene el resultado de la fusión del PR en la rama de destino (por ejemplo, dev) que GitHub simula de antemano.
+    - Es un commit de fusión virtual que GitHub crea automáticamente.
+    - Este commit solo existe cuando el PR no tiene conflictos y se puede fusionar.
     
     - variant:
     
-    - Please refer to [variant](#browserbuild-variant)
+    - Consulta [variant](#browserbuild-variant)

@@ -1,40 +1,40 @@
-# End of life
+# Einde van de ondersteuning
 
-Even if your current AAPS system works exactly the way you like, upgrading is still worth it because newer releases bring safety fixes and bug corrections you may never notice until they matter, keep compatibility with new phone OS versions, CGM apps, pump firmware and Nightscout changes, add algorithm improvements and features that have been tested by the wider community, and ensure you stay on a version that is still supported and that others can actually help you troubleshoot. Some previous AAPS versions deliberately have no expiration date so they can keep working on older Android versions, so the lack of an expiration warning is not a sign that your version is still up to date or supported.
+Ook als je huidige AAPS precies werkt zoals jij wilt, is bijwerken toch de moeite waard. Nieuwe versies brengen veiligheidsfixes en foutcorrecties die je misschien pas merkt als het ertoe doet. Ze blijven werken met nieuwe versies van het telefoonbesturingssysteem, CGM-apps, pompfirmware en wijzigingen in Nightscout. Ze voegen verbeteringen aan het algoritme en functies toe die door de bredere gemeenschap getest zijn. En je blijft op een versie die nog ondersteund wordt, zodat anderen je echt kunnen helpen bij problemen. Sommige oudere AAPS-versies hebben bewust geen vervaldatum, zodat ze kunnen blijven werken op oudere Android-versies. Als je geen waarschuwing over het verlopen krijgt, betekent dat dus niet dat je versie nog actueel is of nog ondersteund wordt.
 
-Each AAPS version can have an end date. After this date, AAPS may [limit the loop](#version-enforcement). AAPS warns you before a version expires. Plan to update before the end date, and follow the [update guide](UpdateToNewVersion.md).
+Elke AAPS-versie kan een einddatum hebben. Na deze datum kan AAPS [de loop beperken](#version-enforcement). AAPS waarschuwt je voordat een versie verloopt. Plan je update vóór de einddatum en volg de [handleiding voor bijwerken](UpdateToNewVersion.md).
 
-## How to use this page
+## Hoe gebruik je deze pagina
 
-1. In AAPS, tap the three dots at the top right and choose **About**. You will see your AAPS version there.
-2. Find the same version in the first table below. Read the end date next to it. Dates are written as **year-month-day**. For example, `2026-10-30` means 30 October 2026.
-3. Check the [Release Notes](ReleaseNotes.md) and the [update guide](UpdateToNewVersion.md) before you update. The version you can use also depends on your phone's Android version.
+1. Open in AAPS het **Menu** (☰) linksboven en kies **Over**. Daar zie je je AAPS-versie.
+2. Zoek dezelfde versie in de eerste tabel hieronder. Lees de einddatum ernaast. Datums staan in de vorm **jaar-maand-dag**. Bijvoorbeeld: `2026-10-30` betekent 30 oktober 2026.
+3. Lees de [Release notes](ReleaseNotes.md) en de [handleiding voor bijwerken](UpdateToNewVersion.md) voordat je bijwerkt. Welke versie je kunt gebruiken, hangt ook af van de Android-versie van je telefoon.
 
-The table does not show an end date for every AAPS version. If your version is missing, its end date may not have been set yet. This does not mean it will be supported forever.
+De tabel toont niet voor elke AAPS-versie een einddatum. Als je versie ontbreekt, is de einddatum misschien nog niet vastgesteld. Dit betekent niet dat de versie altijd ondersteund blijft.
 
-## AAPS version end dates
+## Einddatums van AAPS-versies
 
-<div id="aaps-eol-status" role="status" aria-live="polite">Loading AAPS version data…</div>
+<div id="aaps-eol-status" role="status" aria-live="polite">AAPS-versiegegevens worden geladen…</div>
 <noscript>
-  Turn on JavaScript to see the tables.
+  Zet JavaScript aan om de tabellen te zien.
 </noscript>
 
 <div id="aaps-eol-versions" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">AAPS version</th><th scope="col">End date</th></tr></thead>
+    <thead><tr><th scope="col">AAPS-versie</th><th scope="col">Einddatum</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>
 
-## Android API levels
+## Android API-levels
 
-Android gives each system version an **API level**, which is a number used by apps. For example, API level 30 is Android 11. The table below uses API levels from AAPS version data. The AAPS version in each row is the value listed for the API level shown. This is not a full list of versions you can install.
+Android geeft elke systeemversie een **API-level**. Dat is een nummer dat apps gebruiken. Bijvoorbeeld: API-level 30 is Android 11. De tabel hieronder gebruikt API-levels uit de AAPS-versiegegevens. De AAPS-versie in elke rij is de waarde die voor het getoonde API-level vermeld staat. Dit is geen volledige lijst van versies die je kunt installeren.
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version). If no AAPS version is listed for an API level, the table says “None listed”.
+Gebruik de [uitleg over Android-versies in de Release notes](#maintenance-android-version-aaps-version) om een AAPS-versie voor je telefoon te kiezen. Als er voor een API-level geen AAPS-versie vermeld staat, toont de tabel “Niets vermeld”.
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">Android API level</th><th scope="col">AAPS version listed</th></tr></thead>
+    <thead><tr><th scope="col">Android API-level</th><th scope="col">Vermelde AAPS-versie</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>
@@ -75,11 +75,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     showRows('aaps-eol-android', android.map(entry => [
       entry.minAndroid === entry.maxAndroid
         ? String(entry.minAndroid) : `${entry.minAndroid}–${entry.maxAndroid}`,
-      typeof entry.supported === 'string' && entry.supported ? entry.supported : 'None listed'
+      typeof entry.supported === 'string' && entry.supported ? entry.supported : 'Niets vermeld'
     ]));
     status.remove();
   } catch {
-    status.textContent = 'Could not load AAPS version data. Please try again later.';
+    status.textContent = 'Kan de AAPS-versiegegevens niet laden. Probeer het later opnieuw.';
   }
 });
 </script>

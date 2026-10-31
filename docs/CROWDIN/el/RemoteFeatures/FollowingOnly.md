@@ -1,112 +1,112 @@
-# Following AAPS (no interaction with the AAPS system)
+# Παρακολούθηση του AAPS (χωρίς αλληλεπίδραση με το σύστημα AAPS)
 
-In addition to the range of possibilities available for remotely controlling _and_ following **AAPS** which are described at [remote control](../RemoteFeatures/RemoteControl.md), there are several additional apps and devices which the community has developed, to simply follow numbers (glucose levels and other information), without interacting with **AAPS**.
+Εκτός από τις πολλές δυνατότητες για απομακρυσμένο έλεγχο _και_ παρακολούθηση του **AAPS**, που περιγράφονται στον [απομακρυσμένο έλεγχο](../RemoteFeatures/RemoteControl.md), υπάρχουν αρκετές ακόμη εφαρμογές και συσκευές που έχει φτιάξει η κοινότητα, για να παρακολουθείτε απλώς τις τιμές (επίπεδα γλυκόζης και άλλες πληροφορίες), χωρίς αλληλεπίδραση με το **AAPS**.
 
-A good overview of the extensive options available for following **AAPS** is at [Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#) webpage.
+Μια καλή επισκόπηση των πολλών επιλογών για την παρακολούθηση του **AAPS** θα βρείτε στη σελίδα [Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#).
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-The most common strategies used in combination with **AAPS** are explained in more detail below.
+Οι πιο συνηθισμένες λύσεις που χρησιμοποιούνται μαζί με το **AAPS** εξηγούνται αναλυτικά παρακάτω.
 
-## Smartphone apps
+## Εφαρμογές για smartphone
 
 ```{contents} These are some of the main “follower” apps used by **AAPS** users. All of these apps are “free”: 
 :depth: 1
 :local: true
 ```
 
-### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) and [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
+### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) και [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
 
 ![image](../images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
 
-* Dexcom Follow is compatible with a wide range of handsets (both Android and iPhone). Dexcom Follow can be used even if you are not using the official Dexcom app to receive sensor data.
+* Το Dexcom Follow είναι συμβατό με πολλά τηλέφωνα (Android και iPhone). Το Dexcom Follow μπορεί να χρησιμοποιηθεί ακόμη κι αν δεν χρησιμοποιείτε την επίσημη εφαρμογή της Dexcom για να λαμβάνετε τα δεδομένα του αισθητήρα.
 
-* Many caregivers are familiar with Dexcom Follow, preferring its clear interface over something more complicated.
+* Πολλοί φροντιστές γνωρίζουν το Dexcom Follow και προτιμούν την καθαρή του εμφάνιση από κάτι πιο περίπλοκο.
 
-* Dexcom Follow is very good for teachers/grandparents and people who know very little about diabetes and sugar levels. It has customisable alerts (BG level, what sound to play etc.). Alarms can be completely switched off if needed, which is very useful if you have a sensor which is still settling down and creating multiple fake lows.
+* Το Dexcom Follow είναι πολύ καλό για δασκάλους, παππούδες και γιαγιάδες και ανθρώπους που ξέρουν πολύ λίγα για τον διαβήτη και τα επίπεδα γλυκόζης. Έχει συναγερμούς που μπορείτε να προσαρμόσετε (επίπεδο γλυκόζης, ποιος ήχος παίζει κ.λπ.). Οι συναγερμοί μπορούν να απενεργοποιηθούν εντελώς αν χρειάζεται. Αυτό είναι πολύ χρήσιμο αν έχετε έναν αισθητήρα που ακόμη σταθεροποιείται και δίνει πολλές ψεύτικες χαμηλές τιμές.
 
-#### Setting up Dexcom Follow: how-to-guide
+#### Ρύθμιση του Dexcom Follow: οδηγός
 
-If you use the unofficial Dexcom app BYODA for receiving sensor data, you may be able to send invites to followers from within the BYODA app.
+Αν χρησιμοποιείτε την ανεπίσημη εφαρμογή Dexcom BYODA για να λαμβάνετε τα δεδομένα του αισθητήρα, ίσως μπορείτε να στέλνετε προσκλήσεις σε ακόλουθους μέσα από την εφαρμογή BYODA.
 
-You cannot send invite emails to Dexcom followers anymore from third-party apps. In xDrip+ the invite request will just result in the message “invite not sent”.
+Δεν μπορείτε πια να στέλνετε email πρόσκλησης σε ακόλουθους της Dexcom από εφαρμογές τρίτων. Στο xDrip το αίτημα πρόσκλησης θα δώσει μόνο το μήνυμα «invite not sent» (η πρόσκληση δεν στάλθηκε).
 
-You must install the official Dexcom app, send the invite, and then uninstall the official app.
+Πρέπει να εγκαταστήσετε την επίσημη εφαρμογή της Dexcom, να στείλετε την πρόσκληση και μετά να απεγκαταστήσετε την επίσημη εφαρμογή.
 
-The steps to do this are as follows:
+Τα βήματα είναι τα εξής:
 
-1)  Install the official “Dexcom” app on _any_ smartphone (Android/iPhone), this can be the Follower phone, if it is more convenient. 2)  Log in with your Dexcom username and password, this is the same login details you would use for Dexcom Clarity, if you are already a current Dexcom/Clarity customer. If you don’t have a Dexcom login, there is the option to create a new login at this point.   
-3)  Swipe through the introduction menus. 4)  Add “no code” for the sensor code. 5)  Under Transmitter SN select “enter manually” and enter any valid transmitter code (use one of your expired transmitter codes, if you know one, so it doesn’t interfere with the running of your current transmitter, they follow a specific format of certain numbers and letters: “NLNNNL” and only use certain combinations, so it’s easiest to use one you already know is valid). 6)  Once the app is trying to find the transmitter and sensor, you will be able to invite followers: select the small three dots in the top left of the app, and add new follower. You can also use this if one of your followers has changed their handset and needs a fresh invite, here you can delete them from the follower list and resend a new invite email for them to use on their new handset. 7)  On the Follower phone, install Dexcom Follow by downloading it from the App Store (iPhone) or Play (Android). Set up the Dexcom Follow app, and you will be prompted to open your email to find the invite to be a Follower.    
-8)  You can now delete the official Dexcom G6 app.
+1)  Εγκαταστήστε την επίσημη εφαρμογή «Dexcom» σε _οποιοδήποτε_ smartphone (Android/iPhone). Μπορεί να είναι και το τηλέφωνο του ακόλουθου, αν σας βολεύει. 2)  Συνδεθείτε με το όνομα χρήστη και τον κωδικό σας στη Dexcom. Είναι τα ίδια στοιχεία σύνδεσης που χρησιμοποιείτε για το Dexcom Clarity, αν είστε ήδη πελάτης της Dexcom/Clarity. Αν δεν έχετε λογαριασμό Dexcom, σε αυτό το σημείο μπορείτε να δημιουργήσετε έναν νέο.   
+3)  Περάστε (σύροντας) τις οθόνες εισαγωγής. 4)  Επιλέξτε «no code» (χωρίς κωδικό) για τον κωδικό του αισθητήρα. 5)  Στο Transmitter SN (σειριακός αριθμός πομπού) επιλέξτε «enter manually» (χειροκίνητη εισαγωγή) και γράψτε έναν οποιονδήποτε έγκυρο κωδικό πομπού. Χρησιμοποιήστε έναν από τους κωδικούς των παλιών πομπών σας, αν ξέρετε κάποιον, ώστε να μην επηρεάσει τη λειτουργία του τωρινού πομπού σας. Οι κωδικοί έχουν συγκεκριμένη μορφή από αριθμούς και γράμματα: «NLNNNL» και χρησιμοποιούν μόνο ορισμένους συνδυασμούς, οπότε είναι πιο εύκολο να χρησιμοποιήσετε έναν που ξέρετε ήδη ότι είναι έγκυρος. 6)  Όταν η εφαρμογή προσπαθεί να βρει τον πομπό και τον αισθητήρα, θα μπορείτε να προσκαλέσετε ακόλουθους (followers): πατήστε τις τρεις μικρές τελείες πάνω αριστερά στην εφαρμογή και προσθέστε νέο ακόλουθο. Μπορείτε να το χρησιμοποιήσετε και όταν ένας ακόλουθός σας έχει αλλάξει τηλέφωνο και χρειάζεται νέα πρόσκληση. Εδώ μπορείτε να τον διαγράψετε από τη λίστα ακολούθων και να στείλετε ξανά email πρόσκλησης για να το χρησιμοποιήσει στο νέο του τηλέφωνο. 7)  Στο τηλέφωνο του ακόλουθου, εγκαταστήστε το Dexcom Follow από το App Store (iPhone) ή το Play (Android). Ρυθμίστε την εφαρμογή Dexcom Follow. Θα σας ζητηθεί να ανοίξετε το email σας για να βρείτε την πρόσκληση να γίνετε ακόλουθος.    
+8)  Τώρα μπορείτε να διαγράψετε την επίσημη εφαρμογή Dexcom G6.
 
-For Dexcom Follow, the sensor data is then exported from the **AAPS** phone either directly from BYODA, or from xDrip+, depending on which app you are using.
+Για το Dexcom Follow, τα δεδομένα του αισθητήρα στέλνονται από το τηλέφωνο του **AAPS** είτε απευθείας από το BYODA είτε από το xDrip, ανάλογα με την εφαρμογή που χρησιμοποιείτε.
 
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
 
 ![image](../images/f2c7d330-9889-4526-9a5c-bbb012d804ab.png)
 
-Pros (as reported by users):
+Πλεονεκτήματα (σύμφωνα με χρήστες):
 
-* Available in the [app store](https://apps.apple.com/us/app/nightguard/id1116430352), simple, user-friendly interface.
+* Διαθέσιμο στο [App Store](https://apps.apple.com/us/app/nightguard/id1116430352), με απλή και εύκολη εμφάνιση.
 
-* Swipe button or shake phone to snooze alarms at different intervals ranging from 5 min to 24 hours
+* Σύρετε το κουμπί ή κουνήστε το τηλέφωνο για αναβολή των συναγερμών για διάφορα διαστήματα, από 5 λεπ. έως 24 ώρες
 
-* Customize alarms (high, low alerts, missed readings when no data for 15-45 minutes).
+* Προσαρμογή συναγερμών (υψηλή, χαμηλή τιμή, χαμένες μετρήσεις όταν δεν υπάρχουν δεδομένα για 15–45 λεπτά).
 
-* Fast rise/drop over 2-5 consecutive readings (you choose). Can also choose the delta between two individual readings
+* Γρήγορη άνοδος/πτώση σε 2–5 διαδοχικές μετρήσεις (το επιλέγετε εσείς). Μπορείτε επίσης να επιλέξετε τη διαφορά (delta) ανάμεσα σε δύο διαδοχικές μετρήσεις
 
-* Smart snooze so doesn't alert if levels are moving in right direction
+* Έξυπνη αναβολή, ώστε να μην ειδοποιεί αν τα επίπεδα κινούνται προς τη σωστή κατεύθυνση
 
-* There is a Care tab which appears to enable you to set a new temp target for a certain duration, delete the temp target or enter carbs.
+* Υπάρχει μια καρτέλα Care που φαίνεται να σας επιτρέπει να ορίσετε νέο προσωρινό στόχο για ορισμένη διάρκεια, να διαγράψετε τον προσωρινό στόχο ή να καταχωρίσετε υδατάνθρακες.
 
-Cons (as reported by users)
+Μειονεκτήματα (σύμφωνα με χρήστες)
 
-* Only available for iOS
+* Διαθέσιμο μόνο για iOS
 
-* The TT shows as 5 mmol regardless of which TT level is set
+* Ο προσωρινός στόχος (TT) εμφανίζεται ως 5 mmol, όποιο επίπεδο TT κι αν έχει οριστεί
 
-* Never shows Temp Basal rate even though it shows TB
+* Δεν δείχνει ποτέ την τιμή του προσωρινού βασικού ρυθμού, αν και δείχνει TB
 
 ### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Android)
 
 ![image](../images/855c3a74-e612-4a6f-8b63-18d286ea0a3f.png)
 
 
-* Nightwatch markets itself as a Nightscout client and monitors the user’s Nightscout glucose levels on either Android phone or tablet.
+* Το Nightwatch παρουσιάζεται ως πελάτης (client) του Nightscout και παρακολουθεί τα επίπεδα γλυκόζης του χρήστη στο Nightscout σε τηλέφωνο ή tablet Android.
 
-* The app can be downloaded from [Google play](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) and displays BG data in real time.
+* Η εφαρμογή μπορεί να εγκατασταθεί από το [Google Play](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) και δείχνει τα δεδομένα γλυκόζης αίματος σε πραγματικό χρόνο.
 
-* The user can be alerted with customised noisy low and high alarms set.
+* Ο χρήστης μπορεί να ειδοποιείται με δυνατούς, προσαρμοσμένους συναγερμούς για χαμηλή και υψηλή τιμή.
 
-* BG data can be viewed in either mmol/L or mg/dL.
+* Τα δεδομένα γλυκόζης αίματος εμφανίζονται σε mmol/l ή mg/dl.
 
-* It requires Android 5.0 and up.
+* Χρειάζεται Android 5.0 ή νεότερο.
 
-* It has a dark Ul, large readings and buttons, designed for usage at night.
+* Έχει σκούρα εμφάνιση, μεγάλες τιμές και κουμπιά, σχεδιασμένα για χρήση τη νύχτα.
 
-### xDrip+ (Android)
+### xDrip (Android)
 
-You can use xDrip+ as a follower.
+Μπορείτε να χρησιμοποιήσετε το xDrip ως ακόλουθο.
 
-#### With Nightscout
+#### Με Nightscout
 
-Set xDrip+ as a Nightscout Follower. You will receive BG and treatments, not basal.
+Ρυθμίστε το xDrip ως Nightscout Follower. Θα λαμβάνετε γλυκόζη αίματος (BG) και θεραπείες, όχι βασικό ρυθμό.
 
 ![image](../images/remote_control_and_following/xDrip+_Nightscout_Follower.png)
 
-#### Without Nightscout - xDrip+ BG data source
+#### Χωρίς Nightscout - πηγή δεδομένων γλυκόζης xDrip
 
-If your **AAPS** data source is xDrip+ (or if xDrip+ can also receive BG from another app like BYODA, Juggluco, ...) you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
+Αν η πηγή δεδομένων του **AAPS** σας είναι το xDrip (ή αν το xDrip μπορεί επίσης να λαμβάνει γλυκόζη από άλλη εφαρμογή, όπως BYODA, Juggluco, ...), μπορείτε να το χρησιμοποιήσετε από το κύριο τηλέφωνο για να μοιράζεστε δεδομένα με ακόλουθους xDrip. Θα βλέπουν γλυκόζη, θεραπείες και βασικούς ρυθμούς.
 
 ![image](../images/remote_control_and_following/xDrip+_Master_Sync.png)
 
-#### Without Nightscout - xDrip+ BG companion app
+#### Χωρίς Nightscout - συνοδευτική εφαρμογή γλυκόζης xDrip
 
-If your **AAPS** data source is not xDrip+ but you can display BG data from the Companion App data source, you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
+Αν η πηγή δεδομένων του **AAPS** σας δεν είναι το xDrip, αλλά μπορείτε να δείχνετε δεδομένα γλυκόζης από την πηγή δεδομένων Companion App, μπορείτε να το χρησιμοποιήσετε από το κύριο τηλέφωνο για να μοιράζεστε δεδομένα με ακόλουθους xDrip. Θα βλέπουν γλυκόζη, θεραπείες και βασικούς ρυθμούς.
 
 ![image](../images/remote_control_and_following/xDrip+_Companion_Sync.png)
 
@@ -114,29 +114,29 @@ If your **AAPS** data source is not xDrip+ but you can display BG data from the 
 
 ![image](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift was created from porting the original xDrip app to iOS and evolved to "xDrip for iOS" written **xDrip4iOS** .
+Το xDripSwift δημιουργήθηκε με μεταφορά της αρχικής εφαρμογής xDrip στο iOS και εξελίχθηκε στο «xDrip for iOS», που γράφεται **xDrip4iOS** .
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
-The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) is the main community support for xDrip4iOS and Shuggah. **xDrip4iOS** can connect to many different CGM systems and transmitters and display blood glucose values, charts and statistics as well as provide alarms. It can also upload to Nightscout or act as a [follower app for Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). 
+Η [ομάδα xDrip4iOS στο Facebook](https://www.facebook.com/groups/853994615056838/announcements) είναι η κύρια κοινότητα υποστήριξης για το xDrip4iOS και το Shuggah. Το **xDrip4iOS** μπορεί να συνδεθεί με πολλά διαφορετικά συστήματα CGM και πομπούς και να δείχνει τιμές γλυκόζης αίματος, γραφήματα και στατιστικά, καθώς και να δίνει συναγερμούς. Μπορεί επίσης να ανεβάζει δεδομένα στο Nightscout ή να λειτουργεί ως [εφαρμογή ακόλουθου για το Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). 
 
-"How can I get **xDrip4iOS** on my iPhone?"
-There are two options:
+«Πώς μπορώ να αποκτήσω το **xDrip4iOS** στο iPhone μου;»
+Υπάρχουν δύο επιλογές:
 
-1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) you can build your own xDrip4iOS by [following the instructions](https://xdrip4ios.readthedocs.io/en/latest/install/build/).
+1. Αν έχετε Mac και λογαριασμό Apple Developer (99 EUR/USD τον χρόνο), μπορείτε να κάνετε build το δικό σας xDrip4iOS [ακολουθώντας τις οδηγίες](https://xdrip4ios.readthedocs.io/en/latest/install/build/).
 
-If you want, you can then become a "releaser" and [share a Personal Testflight xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/install/personal_testflight/) with up to 100 other people to help them.
+Αν θέλετε, μπορείτε μετά να γίνετε «releaser» και να [μοιραστείτε ένα προσωπικό Testflight του xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/install/personal_testflight/) με έως 100 άλλα άτομα για να τα βοηθήσετε.
 
-2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and read the pinned posts for current methods to get the app. **You should not ask for an invitation to the app** (read the group rules).
+2. Γίνετε μέλος της [ομάδας xDrip4iOS στο Facebook](https://www.facebook.com/groups/853994615056838/announcements) και διαβάστε τις καρφιτσωμένες αναρτήσεις για τους τωρινούς τρόπους να αποκτήσετε την εφαρμογή. **Μη ζητάτε πρόσκληση για την εφαρμογή** (διαβάστε τους κανόνες της ομάδας).
 ```
 
 
 
 ![image](../images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
 
-"What is **Shuggah**?" A group of Ukrainian developers copied the project code for xDrip4iOS (which is shared publicly on GitHub) and released it on the App Store under a business account. The Shuggah release is in no way managed by the xDrip4iOS developers.
+«Τι είναι το **Shuggah**;» Μια ομάδα Ουκρανών προγραμματιστών αντέγραψε τον κώδικα του xDrip4iOS (που είναι δημόσιος στο GitHub) και τον κυκλοφόρησε στο App Store με επαγγελματικό λογαριασμό. Η έκδοση Shuggah δεν τη διαχειρίζονται με κανέναν τρόπο οι προγραμματιστές του xDrip4iOS.
 
-The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) supports xDrip4iOS, and the matching Apple Watch apps.
+Η [ομάδα xDrip4iOS στο Facebook](https://www.facebook.com/groups/853994615056838/announcements) υποστηρίζει το xDrip4iOS και τις αντίστοιχες εφαρμογές για Apple Watch.
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 
@@ -145,28 +145,28 @@ The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/a
 ![image](../images/21b83c41-85c6-4619-a702-a65450768855.png)
 
 
-[Sugarmate](https://sugarmate.io/) is available to download onto iPhones from the App store. Sugarmate is compatible with:
-* Apple iPhone (Requires software version 13.0 or later)
-* Apple iPad (Requires software version 13.0 or later)
-* Google Android (Save web app to your homescreen)
+Το [Sugarmate](https://sugarmate.io/) μπορεί να εγκατασταθεί σε iPhone από το App Store. Το Sugarmate είναι συμβατό με:
+* Apple iPhone (χρειάζεται έκδοση λογισμικού 13.0 ή νεότερη)
+* Apple iPad (χρειάζεται έκδοση λογισμικού 13.0 ή νεότερη)
+* Google Android (αποθηκεύστε την εφαρμογή web στην αρχική σας οθόνη)
 
-It has been reported by users of Sugarmate that it can be used with Apple CarPlay in the USA to display glucose readings when driving. It is not yet established if this is possible in countries outside the USA. If you know more about this, please add details in here to the documentation by completing a pull-request (link) which is quick and easy to do.
+Χρήστες του Sugarmate αναφέρουν ότι μπορεί να χρησιμοποιηθεί με το Apple CarPlay στις ΗΠΑ για να δείχνει τις τιμές γλυκόζης όταν οδηγείτε. Δεν είναι ακόμη γνωστό αν αυτό είναι δυνατό σε χώρες εκτός των ΗΠΑ. Αν γνωρίζετε περισσότερα για αυτό, προσθέστε λεπτομέρειες εδώ στην τεκμηρίωση με ένα pull request (σύνδεσμος). Είναι γρήγορο και εύκολο.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
 
 ![image](../images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
 
-Spike can be used as a primary receiver or as a follower app, providing BG, alarms and IOB and more.
+Το Spike μπορεί να χρησιμοποιηθεί ως κύριος δέκτης ή ως εφαρμογή ακόλουθου και δίνει γλυκόζη αίματος, συναγερμούς, IOB και άλλα.
 
-The website and app are no longer developed. Support can be found on [Facebook](https://www.facebook.com/groups/1973791946274873) and [Gitter](https://gitter.im/SpikeiOS/Lobby).
+Ο ιστότοπος και η εφαρμογή δεν αναπτύσσονται πια. Υποστήριξη θα βρείτε στο [Facebook](https://www.facebook.com/groups/1973791946274873) και στο [Gitter](https://gitter.im/SpikeiOS/Lobby).
 
-## Smartwatches for **Monitoring of AAPS** (full profile data, or glucose-only) where **AAPS** is running on a phone.
+## Έξυπνα ρολόγια για **παρακολούθηση του AAPS** (πλήρη δεδομένα προφίλ ή μόνο γλυκόζη), όταν το **AAPS** τρέχει σε ένα τηλέφωνο.
 
-See [here](../Getting-Started/Watches.md).
+Δείτε [εδώ](../Getting-Started/Watches.md).
 
 
-## Devices for following AAPS
+## Συσκευές για την παρακολούθηση του AAPS
 
 ```{contents} Devices include:
 :depth: 1
@@ -177,34 +177,34 @@ See [here](../Getting-Started/Watches.md).
 
 ![image](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
 
-The M5Stack is a small box which can be programmed for many applications, Martin's project [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) is displaying sensor glucose values and trends, IOB and COB. It is in a plastic box, equipped with a colour display, micro SD card slot, 3 buttons, speaker and internal battery. It is a great blood sugar monitor and is relatively easy to set up if you have a Nightscout account. Users typically run it on their home Wi-Fi, but some users report using it as a display when motorbiking, by running it off a phone Wi-Fi hotspot.
+Το M5Stack είναι ένα μικρό κουτί που μπορεί να προγραμματιστεί για πολλές εφαρμογές. Το έργο του Martin [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) δείχνει τις τιμές γλυκόζης του αισθητήρα και τις τάσεις, το IOB και το COB. Είναι σε ένα πλαστικό κουτί, με έγχρωμη οθόνη, υποδοχή κάρτας micro SD, 3 κουμπιά, ηχείο και εσωτερική μπαταρία. Είναι μια πολύ καλή οθόνη γλυκόζης αίματος και ρυθμίζεται σχετικά εύκολα αν έχετε λογαριασμό Nightscout. Οι χρήστες συνήθως το χρησιμοποιούν με το Wi-Fi του σπιτιού τους, αλλά κάποιοι το χρησιμοποιούν ως οθόνη όταν οδηγούν μοτοσικλέτα, με σύνδεση στο hotspot Wi-Fi του τηλεφώνου.
 
 ### Sugarpixel
 
-SugarPixel is a device for secondary glucose display alert system for continuous glucose monitoring that connects with Dexcom app or Nightscout app on the user’s smartphone. The device displays real time blood sugar readings. This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customisable display options and native multi-user following.
+Το SugarPixel είναι μια συσκευή που λειτουργεί ως δεύτερη οθόνη γλυκόζης με συναγερμούς για συνεχή παρακολούθηση γλυκόζης. Συνδέεται με την εφαρμογή Dexcom ή με το Nightscout στο smartphone του χρήστη. Η συσκευή δείχνει τις τιμές γλυκόζης αίματος σε πραγματικό χρόνο. Αυτή η συσκευή παρακολούθησης CGM έχει ηχητικούς συναγερμούς με τυχαίους τόνους (που είναι πάρα πολύ δυνατοί), συναγερμούς με δόνηση για άτομα με προβλήματα ακοής, προσαρμόσιμες επιλογές οθόνης και ενσωματωμένη παρακολούθηση από πολλούς χρήστες.
 
 ![image](../images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
 
 ![image](../images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
 
-* SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with colour-coded glucose values.
-* The standard face displays BG, Trend Arrow, and Delta. Delta is the change + or - from the last reading.
-* SugarPixel can be customised for use in low brightness with the BG and Time face to see the user’s BG reading and current time on the user’s nightstand.
-* SugarPixel’s xolour face utilises the entire display to show a single colour representing the BG value. This enables the user to see BG readings at a distance through the window while outside playing in the backyard, patio, or pool.
-* The Big BG face is useful for nightstand users who wear glasses or contact lenses.
+* Το SugarPixel έχει πολλές επιλογές οθόνης σε mg/dl και mmol/l για τις ανάγκες του χρήστη, με τιμές γλυκόζης σε διαφορετικά χρώματα.
+* Η βασική οθόνη δείχνει γλυκόζη αίματος (BG), βέλος τάσης και διαφορά (delta). Η διαφορά (delta) είναι η αλλαγή + ή - από την προηγούμενη μέτρηση.
+* Το SugarPixel μπορεί να ρυθμιστεί για χαμηλή φωτεινότητα με την οθόνη BG and Time, ώστε ο χρήστης να βλέπει την τιμή γλυκόζης και την τρέχουσα ώρα στο κομοδίνο του.
+* Η χρωματική οθόνη του SugarPixel χρησιμοποιεί όλη την οθόνη για να δείξει ένα χρώμα που αντιστοιχεί στην τιμή γλυκόζης. Έτσι ο χρήστης μπορεί να βλέπει τις τιμές γλυκόζης από απόσταση μέσα από το παράθυρο, όταν παίζει έξω στην αυλή, στη βεράντα ή στην πισίνα.
+* Η οθόνη Big BG (μεγάλη τιμή γλυκόζης) είναι χρήσιμη για όσους το έχουν στο κομοδίνο και φορούν γυαλιά ή φακούς επαφής.
 
-### Nightscout Clock on Ulanzi TC001
+### Nightscout Clock στο Ulanzi TC001
 
-**Nightscout Clock** is an open source software running on the **Ulanzi TC001** device. It connects with Dexcom servers or Nightscout and displays real time blood sugar readings.
+Το **Nightscout Clock** είναι λογισμικό ανοιχτού κώδικα που τρέχει στη συσκευή **Ulanzi TC001**. Συνδέεται με τους διακομιστές της Dexcom ή με το Nightscout και δείχνει τις τιμές γλυκόζης αίματος σε πραγματικό χρόνο.
 
-![Following Nightscout Clock](../images/FollowingNightscoutClock.png)
+![Παρακολούθηση με το Nightscout Clock](../images/FollowingNightscoutClock.png)
 
-* The clock supports both mmol/L and mg/dL units, and includes audible alarms.
-* Several display available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
-* Setting up and configuring the device involves just a few simple steps. Once set up, it only requires power and Wi-Fi to function.
-* The Ulanzi TC001 device is significantly cheaper than the SugarPixel to buy.
-* The software along with installation instructions can be found on [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
-* It is developed and maintained by Artiom Kenibasov, offering support on the [Facebook AAPS Users group](https://www.facebook.com/groups/cgminthecloud/posts/8776932509094594/).
+* Το ρολόι υποστηρίζει μονάδες mmol/l και mg/dl και έχει ηχητικούς συναγερμούς.
+* Υπάρχουν διάφορες οθόνες. Δείτε το [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) για μια επισκόπηση.
+* Η ρύθμιση της συσκευής χρειάζεται μόνο λίγα απλά βήματα. Μετά τη ρύθμιση, χρειάζεται μόνο ρεύμα και Wi-Fi για να λειτουργεί.
+* Η συσκευή Ulanzi TC001 είναι πολύ φθηνότερη από το SugarPixel.
+* Το λογισμικό και οι οδηγίες εγκατάστασης βρίσκονται στο [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
+* Το αναπτύσσει και το συντηρεί ο Artiom Kenibasov, που δίνει υποστήριξη στην [ομάδα Facebook AAPS Users](https://www.facebook.com/groups/cgminthecloud/posts/8776932509094594/).
 
 ### PC (TeamViewer)
-Some users find a full remote access tool like [TeamViewer](https://www.teamviewer.com/) to be helpful for advanced remote troubleshooting.
+Ορισμένοι χρήστες βρίσκουν χρήσιμο ένα πλήρες εργαλείο απομακρυσμένης πρόσβασης, όπως το [TeamViewer](https://www.teamviewer.com/), για προχωρημένη απομακρυσμένη αντιμετώπιση προβλημάτων.

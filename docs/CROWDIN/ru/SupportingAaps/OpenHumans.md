@@ -25,27 +25,46 @@
 ## Setup
 
 1. Если это еще не сделано, создайте свой аккаунт на [Open Humans](https://www.openhumans.org). Можете для этого использовать существующие учетные записи Google или Facebook, если хотите.
-2. Enable the “Open Humans” plugin in [Config Builder > Synchronization](../SettingUpAaps/ConfigBuilder.md).
-3. При помощи значка шестеренки откройте его настройки. Вы можете ограничить загрузку когда телефон использует Wi-Fi и/или заряжается.
-4. Open the Open Humans Plugin (either through OH tab or hamburger menu) and click 'LOGIN'.
+2. Enable the **Open Humans** plugin in [**Configuration** > **Communication**](../SettingUpAaps/ConfigBuilder.md).
 
-![Конфигуратор Open Humans](../images/OHUploader1.png)
+![Open Humans enabled in Configuration > Communication](../images/OHUploader1.png)
 
-5. Внимательно прочтите информацию о Загрузчике Open Humans и условиях пользования.
-6. Подтвердите, установив флажок и нажмите 'ВОЙТИ'.
+3. Tap **Settings** on the **Open Humans** card. You can restrict uploads to times when the phone uses Wi-Fi (**WiFi only**) and/or is charging (**Charging only**).
+
+![Open Humans settings with WiFi only and Charging only](../images/OHUploader_settings.png)
+
+4. Tap **Open plugin** on the **Open Humans** card, then tap **Setup**.
+
+![Open Humans plugin screen with the Setup button](../images/OHUploader_setup.png)
+
+5. On the **Welcome to Open Humans** screen, tap **Next**. Read the **Consent** screen carefully: it shows the terms of use and which data is uploaded and not uploaded.
+6. Switch on **I understand and agree.** (1) and tap **Login to Open Humans** (2).
+
+![Open Humans Welcome and Consent screens in AAPS](../images/OHUploader2.png)
+
 7. Откроется сайт Open Humans. Войдите под своей учетной записью.
-8. Решите, хотите ли вы скрыть ваше членство в AAPS загрузчике в профиле Open Humans.
-9. Нажмите кнопку «Авторизовать проект».
+8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile (1).
+9. Click **Authorize project** (2).
 
-![Условия Пользования + Вход Open Humans](../images/OHUploader2.png)
+![Login and project authorization on the Open Humans website](../images/OHUploader_web.png)
 
-10. Возвращаясь в AAPS, вы увидитеподтверждение успешного входа в систему.
-11. Держите модуль Open Humans и телефон включенными для завершения установки.
-12. После нажатия на кнопку "Закрыть" вы увидите ваш идентификатор участника. Размер очереди > 0 показывает, что еще есть загружаемые данные.
-13. Нажмите 'ВЫХОД', если хотите остановить загрузку данных для Open Humans.
+```{admonition} Older screenshot
+:class: note
+The screenshots above show an earlier version of the Open Humans website and still use the old project name **AndroidAPS Uploader**. The steps are the same.
+```
+
+10. Back in **AAPS**, the **Final touches** screen asks whether you want to proceed. Tap **Proceed**.
+11. Wait until **We're done!** appears, then tap **Close**. From now on, your phone uploads data in the background from time to time.
+12. The **Open Humans** plugin screen now shows your **Project Member ID**. Tap **Upload now** if you want to start an upload right away.
+13. Tap **Logout** if you want to stop uploading data to Open Humans.
 14. Уведомление Android сообщит о работающей загрузке.
 
 ![завершение настройки Open Humans](../images/OHUploader3.png)
+
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the confirmation screens are **Final touches** and **We're done!**, there is no queue size, and the buttons are **Upload now** and **Logout**.
+```
 
 15. Управлять своими данными теперь можно, войдя на сайт [Open Humans](https://www.openhumans.org).
 
@@ -79,7 +98,7 @@
 
 ## Конфиденциальность данных
 
-Open Humans заботятся о защите конфиденциальности и назначают числовой идентификатор для каждого проекта. Это позволяет проектам распознавать, но не идентифицировать вас. Идентификатор приложения, загруженного из AAPS, помогает администрировать данные. Больше информации можно найти здесь:
+Open Humans заботятся о защите конфиденциальности и назначают числовой идентификатор для каждого проекта. This allows projects to recognize but not identify you. Идентификатор приложения, загруженного из AAPS, помогает администрировать данные. Больше информации можно найти здесь:
 
 - [Политика использования данных Open Humans](https://www.openhumans.org/data-use/)
 - [Open Humans GDPR](https://www.openhumans.org/gdpr/)

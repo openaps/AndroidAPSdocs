@@ -1,34 +1,35 @@
-# Vzdálené monitorování
+# Vzdálený dohled
 
 ![Monitorování dětí](../images/KidsMonitoring.png)
 
-__AAPS__ offers several features for remote monitoring of type 1 diabetic children and also faciltates remote commands which sends instructions to the __AAPS__ remotely. Similarly, __AAPSClient__ can also be used for remote monitoring to follow your partner's or friend's __AAPS__.
+__AAPS__ nabízí několik funkcí pro vzdálený dohled nad dětmi s diabetem 1. typu a umožňuje také vzdálené příkazy, které posílají pokyny do __AAPS__ na dálku. Podobně lze __AAPSClient__ použít i pro vzdálený dohled, abyste mohli sledovat __AAPS__ svého partnera nebo přítele.
 
 ## Funkce
 
-- Kid's pump is controlled by kid's phone using __AAPS__.
-- Caregivers can remotely follow viewing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **AAPSClient apk** on their phone which must be an Android phone. Settings amended in __AAPS__ will synchromise with __AAPSClient__ and vice versa.
-- Caregivers can be alarmed by using **xDrip+ app in follower mode** on their Android phone if xdrip companion mode is set up.
-- Remote control of __AAPS__ using [SMS Commands](../RemoteFeatures/SMSCommands.md) is secured by two-factor authentication.
-- Remote control through __AAPSClient__ is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](#important-hints-2-8-1-1) for further details. However synchonization is less likely to an issue if the user if usiing the latest version of __AAPS__ and __AAPSClient with NSClientv3/Nightscout15.
+- Pumpu dítěte ovládá telefon dítěte s __AAPS__.
+- Pečovatelé mohou na dálku sledovat všechna důležitá data, jako je glykémie, aktivní sacharidy, aktivní inzulín atd., pomocí **AAPSClient apk** na svém telefonu s Androidem (verze **AAPSClient** pro iPhone se připravuje, viz [AAPSClient](AapsClient.md)). Nastavení změněná v __AAPS__ se synchronizují s __AAPSClient__ a naopak.
+- Pečovatelé mohou dostávat alarmy pomocí **aplikace xDrip v režimu sledování** na svém telefonu s Androidem, pokud je nastavený režim doprovodné aplikace xDrip.
+- Vzdálené ovládání __AAPS__ pomocí [SMS příkazů](../RemoteFeatures/SMSCommands.md) je zabezpečené dvoufázovým ověřením.
+- Vzdálené ovládání přes __AAPSClient__ používá podepsaný kanál pro příkazy zavedený v **AAPS** 4: klient musí být nejdřív **spárovaný** s hlavním zařízením (pomocí QR kódu nebo PINu) a každý příkaz potvrdí a provede hlavní zařízení. Telefon každého pečovatele může mít vlastní [roli](#client-master-control-roles), od režimu jen pro čtení až po plné ovládání — viz [Ovládání master ↔ klient](#client-master-control).
 
 ## Nástroje a aplikace pro vzdálené monitorování
 
-- [Nightscout](https://nightscout.github.io/) v prohlížeči (hlavně zobrazení dat)
-- __AAPSClient__ apk is a stripped down version of __AAPS__ capable of following somebody, making __Profile Switches__, setting __TTs__ and entering carbs. K dispozici ke stažení jsou 2 tyto aplikace:  [AAPSClient & AAPSClient2](https://github.com/nightscout/AndroidAPS/releases/). AAPSClient should be used is the caregivers wishes to install the apk twice on the same phone to follow 2 different persons (e.g two children with type 1 each with their own nightscout acccount).
-- Dexcom follow, pokud používáte originální aplikaci Dexcom (pouze hodnoty glykémie)
-- [xDrip+](../CompatibleCgms/xDrip.md) in follower mode (mainly BG values and **alarms**)
-- [Sugarmate](https://sugarmate.io/) nebo [Spike](https://spike-app.com/) na iOS (hlavně hodnoty glykémií a **alarmy**)
-- Někteří uživatelé používají pro plnohodnotný vzdálený přístup aplikace jako je [TeamViewer](https://www.teamviewer.com/), který je užitečný i pro pokročilé řešení problémů na dálku
+- [Nightscout](https://nightscout.github.io/) ve webovém prohlížeči (hlavně zobrazení dat).
+- [__AAPSClient__](AapsClient.md) je zjednodušená verze __AAPS__, která umí sledovat hlavní __AAPS__ a po **spárování** posílat vzdálené příkazy: sacharidy, __Dočasné cíle__, __Přepnutí profilu__ a dokonce i bolusy (viz [Ovládání master ↔ klient](#client-master-control)). Jsou 3 aplikace: [AAPSClient, AAPSClient2 a AAPSClient3 ke stažení](https://github.com/nightscout/AndroidAPS/releases/), takže pečovatel může z jednoho telefonu sledovat až tři různé osoby (např. dvě děti s diabetem 1. typu, každé s vlastním účtem Nightscout a vlastním hlavním __AAPS__).
+- Dexcom follow, pokud používáte originální aplikaci Dexcom (pouze hodnoty glykémie).
+- [xDrip](../CompatibleCgms/xDrip.md) v režimu sledování (hlavně hodnoty glykémie a **alarmy**).
+- [Sugarmate](https://sugarmate.io/) nebo [Spike](https://spike-app.com/) v iOS (hlavně hodnoty glykémie a **alarmy**).
+- Někteří uživatelé používají pro plnohodnotný vzdálený přístup aplikace jako je [TeamViewer](https://www.teamviewer.com/), který je užitečný i pro pokročilé řešení problémů na dálku.
 
 ## Možnosti chytrých hodinek
 
-A smartwatch can be a very useful tool in helping manage __AAPS__ with T1D kids. A couple of different options are possible:
+Chytré hodinky mohou být velmi užitečným pomocníkem při používání __AAPS__ u dětí s diabetem 1. typu. Je několik možností:
 
-- Option 1 - If __AAPSClient__ is installed on the caregiver's phone, the [AAPSClient WearOS app](https://github.com/nightscout/AndroidAPS/releases/) can be installed on a compatible smartwatch connected to the caregiver's phone. This will show current BG, loop status and allow carb entry, Temp Targets and Profile changes. Z aplikace WearOS ale nebude možné posílat bolusy.
-- Option 2 - Alternatively, the [AAPS WearOS app](../WearOS/WearOsSmartwatch.md) can be built and installed on a compatible smartwatch, connected to the kid's phone but worn by the parent. Takto lze využít všechny funkce popsané v předchozím případě, ale navíc lze posílat i bolusy. This allows the caregiver o administer insulin without needing to remove the kid's phone from however it is kept on them.
+- Možnost 1 – Pokud je __AAPSClient__ nainstalovaný na telefonu pečovatele, můžete na kompatibilní chytré hodinky spojené s telefonem pečovatele nainstalovat [aplikaci AAPSClient pro WearOS](https://github.com/nightscout/AndroidAPS/releases/). Zobrazí aktuální __glykémii__, stav smyčky a historii bolusů a umožní zadat sacharidy a měnit __Dočasné cíle__ a __Profil__. Pokud je klient **spárovaný** s hlavním zařízením, mohou hodinky spustit i **bolus**: příkaz se předá přes klienta hlavnímu zařízení, které ho potvrdí a vydá (viz [Ovládání master ↔ klient](#client-master-control)).
+- Možnost 2 – [Aplikaci AAPS pro WearOS](../WearOS/WearOsSmartwatch.md) můžete také sestavit a nainstalovat na kompatibilní chytré hodinky, které jsou spojené s telefonem dítěte, ale nosí je pečovatel. To zahrnuje všechny výše uvedené funkce a navíc možnost vydat bolus inzulínu přímo, aniž byste museli dítěti brát telefon.
+- Možnost 3 – Jen zobrazení: hodinky, které **AAPS** přímo nepodporuje (Xiaomi, Amazfit nebo hodinky s Wear OS zobrazující komplikaci), mohou zobrazovat glykémii, IOB, COB a stav smyčky přes doprovodnou aplikaci, jako je WatchDrip+ nebo GlucoDataHandler, kterou zásobuje daty plugin **Externí aplikace** v telefonu s **AAPS** nebo **AAPSClient**, ke kterému jsou hodinky připojené. Viz [Externí aplikace](#watches-external-companion-apps).
 
 ## Co je třeba zvážit
 
-- Consider time gap between master and follower due to time for up- and download as well as the fact that __AAPS__ master phone will only upload after loop run.
-- What is your emergency plan for when remote control does not work (_i.e._ network problems or lost bluetooth connection)?  Always consider what will happen with **AAPS** if you suddenly can’t send a new command. **AAPS** overwrites the pump basal, ISF and ICR with the current profile values. Only use temporary profile switches (_i.e._ with a set time duration) if switching to a stronger insulin profile, in case your remote connection is disrupted. Then the pump will revert to the original profile when the time expires.
+- Počítejte s časovým zpožděním mezi hlavním zařízením a sledujícím kvůli času na nahrání a stažení dat a také s tím, že hlavní telefon s __AAPS__ nahrává data až po proběhnutí smyčky.
+- Jaký je váš nouzový plán pro případ, že vzdálené ovládání nefunguje (_např._ problémy se sítí nebo ztracené spojení Bluetooth)? Vždy zvažte, co se stane s **AAPS**, když najednou nebudete moci poslat nový příkaz. **AAPS** přepíše v pumpě nastavení bazálů, ISF a ICR aktuálními hodnotami profilu. Pokud přepínáte na silnější inzulínový profil, používejte jen dočasné přepnutí profilu (_tj._ s nastavenou dobou trvání) pro případ, že se vzdálené spojení přeruší. Po uplynutí nastavené doby se pak pumpa vrátí k původnímu profilu.

@@ -1,6 +1,6 @@
 # 如何為 AAPS 應用程式或文件翻譯文字
 
-* 要翻譯應用程式中使用的文字，請前往 <https://crowdin.com/project/androidaps>，並使用你的 GitHub 帳號登入
+* For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
 * 要翻譯文件，請查看 <https://crowdin.com/project/androidapsdocs>，並使用你的 GitHub 帳號登入
 
 * 向文件團隊發送加入請求。為此，點擊所需語系的國旗，然後在下一頁的右上角點擊“加入”按鈕。請指定語系，提供一些關於你的資訊以及你的 AAPS 經驗，並說明你想成為翻譯者還是校對者（僅限具有翻譯技能且為進階 AAPS 用戶的人成為校對者）。
@@ -63,8 +63,8 @@
     
         1. 這是你正在準備的翻譯。你可以從上方複製文本或選擇下方的建議之一。
     
-        1. 這些是翻譯建議。特別是，你可以看到 Crowdin 如何評價這一翻譯是否符合要求，或者這是否只是過去的內容經過文本重新排列而沒有內容更改。
-        1. 按下“儲存”按鈕以儲存翻譯建議。然後他會提交給校對者進行最終檢查。
+        1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
+        1. 按下“儲存”按鈕以儲存翻譯建議。 It will then be passed to a proofreader for final check.
     
     ![翻譯文件](../images/translation_WikiTranslate.png)
     
@@ -99,4 +99,4 @@
     
     ![批准文本](../images/translations-proofreading.png)
 
-* 當校對者批准翻譯後，他將被添加到下一次文件建置中，該建置沒有固定的時間表，按需進行，但通常每週一次，假期期間除外。為加快過程，你可以通知文件團隊關於新翻譯。
+* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. 為加快過程，你可以通知文件團隊關於新翻譯。

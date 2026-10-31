@@ -14,19 +14,16 @@
 
 更多详情请阅读Tim Street发表在[http://www.diabettech.com](https://www.diabettech.com)上的[文章](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/)。
 
-## 如使用G6或ONE搭配xDrip+
+## If using G6 or ONE with xDrip
 
-- 若您使用的是新款（萤火虫）发射器，预防性重启将被**忽略**。
-- 若您使用的是改装发射器，则**无需**进行预防性重启。
--   若您使用的是旧款更换电池的发射器，最安全的做法是**禁用**[预防性重启](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html)。不过，这种情况下您必须让G6在非[原生模式](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)下运行（不建议这样做，因为这会禁用出厂校准且不过滤噪声读数），否则传感器将在10天后停止工作。
--   Dexcom G6和ONE发射器可同时连接至Dexcom接收器（或替代使用的t:slim泵）及手机上的一个应用程序。
--   当使用xDrip+作为接收器时，请先卸载Dexcom应用程序。**无法同时将xDrip+和Dexcom应用程序连接到发射器！**
--   如需使用Clarity并希望利用xDrip+的警报功能，请选用[BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)方案（仅限G6），并通过本地广播传输至xDrip+。
--   您也可以将xDrip+作为官方Dexcom应用的辅助程序使用，但可能会遇到血糖读数延迟的情况。
--   如尚未设置，请下载[xDrip+](https://github.com/NightscoutFoundation/xDrip)并按照[xDrip+设置页面](../CompatibleCgms/xDrip.md)的说明操作。
--   在[ConfigBuilder的BG数据源](#Config-Builder-bg-source)中选择xDrip+。
-
-- 请根据[xDrip+设置页面](../CompatibleCgms/xDrip.md)调整xDrip+中的设置
+- If not already set up, download [xDrip](https://github.com/NightscoutFoundation/xDrip) and adjust its settings following the [xDrip settings page](../CompatibleCgms/xDrip.md).
+- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Dexcom G6和ONE发射器可同时连接至Dexcom接收器（或替代使用的t:slim泵）及手机上的一个应用程序。
+- When using xDrip as receiver uninstall the Dexcom app first. **You cannot connect xDrip and Dexcom app with the transmitter at the same time!**
+- If you need Clarity and want to profit from xDrip alarms use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip.
+- You can also use xDrip as a companion app of the official Dexcom app, but you might experience delays in BG readings.
+- xDrip always uses the transmitter's [native algorithm](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) with current transmitters; there is no reason to disable it. [Preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) only function on old transmitters (firmware 1.6.5.25 or earlier), where they are needed to prevent the sensor stopping after 10 days; recent (Firefly) transmitters ignore them. See [Restart a sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) before attempting any restart.
+- Everything related to the sensor and transmitter themselves is documented on the [xDrip Dexcom page](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
 (DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## 如使用G6搭配自建Dexcom应用（BYODA）
@@ -36,9 +33,7 @@
 Dexcom BYODA is now a very old version of the app and cannot be updated.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+
-
-![BYODA broadcast options](../images/BYODA.png)
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip
 
 -   此应用可让您在任意安卓智能手机上使用Dexcom G6。
 -   若您先前使用过原版Dexcom应用或修改版Dexcom应用，请将其卸载（**切勿终止**当前正在运行的传感器）。
@@ -49,14 +44,14 @@ Dexcom BYODA is now a very old version of the app and cannot be updated.
 
 ### AAPS 设置
 
--   在[ConfigBuilder的BG数据源](#Config-Builder-bg-source)中选择「Dexcom应用(修改版)」。
+-   Select **BYODA** in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
--   如未接收到任何数值，请先选择其他数据源，然后重新选择「Dexcom应用(修改版)」以触发权限请求，从而建立AAPS与BYODA广播之间的连接。
+-   If you don't receive any values select any other data source, then re-select **BYODA** to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
 
-### xDrip+ 设置
+### Settings for xDrip
 
 -   选择“640G/Eversense”作为数据源。
--   必须在xDrip+中执行「启动传感器」指令才能接收数值。此操作不会影响您当前由自建Dexcom应用控制的传感器。
+-   Command 'start sensor' must be performed in xDrip in order to receive values. 此操作不会影响您当前由自建Dexcom应用控制的传感器。
 
 
 (DexcomG6-troubleshooting-g6)=

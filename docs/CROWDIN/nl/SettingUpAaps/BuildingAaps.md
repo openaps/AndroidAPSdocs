@@ -1,33 +1,50 @@
-# Building AAPS
+# AAPS bouwen
 
 ## Zelf bouwen, in plaats van downloaden
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**De AAPS-app (een apk-bestand) is niet te downloaden, vanwege de regels voor medische hulpmiddelen. Je mag de app legaal bouwen voor eigen gebruik, maar je mag geen kopie aan anderen geven!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Zie de [FAQ-pagina](../UsefulLinks/FAQ.md) voor meer informatie.
 
 ---
 
-Three methods are available to build the AAPS app:
+Er zijn drie manieren om de AAPS-app te bouwen:
 
-### Build with a browser (recommended)
+### Bouwen in de browser (aanbevolen)
 
-You can build the app with your smartphone using GitHub actions, and save it in your Google Drive.
+Je kunt de app met je smartphone bouwen met GitHub Actions. Op een Android-telefoon helpt de setup-pagina van [AAPS Builder](#aaps-builder) je stap voor stap, en je start elke build zelf. Op een computer of een iPhone kun je ook bouwen met een fork en de app opslaan in je Google Drive.
 
-**[Follow these instructions.](./BrowserBuild.md)**
-
-----
-
-### Build with Android Studio
-
-You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
-
-**[Follow these instructions.](./ComputerBuild.md)**
+**[Volg deze instructies.](./BrowserBuild.md)**
 
 ----
 
-### Build using the command-line
+### Bouwen met Android Studio
 
-This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
+Je kunt de app op je computer bouwen met Android Studio. Vroeger was dit de enige manier om te bouwen, nu wordt Android Studio vooral gebruikt door ontwikkelaars die de code willen aanpassen.
 
-**[Follow these instructions.](./CLIBuild.md)**
+**[Volg deze instructies.](./ComputerBuild.md)**
+
+----
+
+### Bouwen via de opdrachtregel
+
+Deze optie is bedoeld voor wie AAPS liever lokaal via de opdrachtregel bouwt, zonder Android Studio te installeren.
+
+**[Volg deze instructies.](./CLIBuild.md)**
+
+----
+
+(building-aaps-troubleshooting)=
+## Als de build mislukt
+
+Elke manier van bouwen heeft een eigen hoofdstuk over probleemoplossing:
+
+* **AAPS Builder**: [Probleemoplossing voor AAPS Builder](#aaps-builder-troubleshooting)
+* **Bouwen in de browser** op een computer of een iPhone: [Bouwen in de browser: probleemoplossing](#aaps-ci-troubleshooting)
+* **Android Studio**: [Problemen met Android Studio oplossen](../GettingHelp/TroubleshootingAndroidStudio.md)
+
+Ben je je keystore of het wachtwoord ervan kwijt? Zie [AAPS opnieuw installeren met een nieuwe keystore](#reinstall-aaps).
+
+Wordt de app wel gebouwd maar installeert hij niet op je telefoon, zie dan [AAPS overzetten en installeren](TransferringAndInstallingAaps.md).
+
+Staat je probleem er niet bij, zie dan [Waar kan ik hulp krijgen?](../GettingHelp/WhereCanIGetHelp.md).

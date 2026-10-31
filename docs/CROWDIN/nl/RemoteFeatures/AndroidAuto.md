@@ -1,85 +1,86 @@
 # Android Auto
 
-**AAPS** is capable of sending you information about your current status as a message, directly into Android Auto in your car.
+**AAPS** kan je informatie over je huidige status als bericht sturen, direct naar Android Auto in je auto.
 
-```{admonition} version and last change information :class: dropdown date of last edit: 07/05/2023
+## Vereisten
 
-versions used for documentation:
+**AAPS** gebruikt een functie van Android Auto die berichten van apps op de telefoon naar het scherm van Android Auto in de auto stuurt.
 
-* AAPS 3.2.0-dev-i
-* Android Auto: 9.3.631434-release ```
+Dat betekent dat:
 
-## Requirements
+* Android moet **AAPS** toestaan om meldingen te tonen en
+* **AAPS** is geen officiële app. Sta daarom het gebruik van "onbekende bronnen" toe in Android Auto.
 
-**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of Auto Audio in the car.
+![AAPS CGM-gegevens in Android Auto](../images/android_auto_01.png)
 
-That means that:
+(androidauto-check-that-aaps-can-show-notifications)=
 
-* You must configure **AAPS** to use system notifications for alerts and notifications and
-* As **AAPS** is an unofficial App, allow the use of "unknown sources" with Android Auto.
+## Controleer of AAPS meldingen mag tonen
 
-![AAPS CGM data on Android Auto](../images/android_auto_01.png)
+**AAPS** toont altijd een statusmelding met je huidige glucose, IOB en COB. Dit is de melding die Android Auto in de auto toont. In **AAPS** hoef je niets aan te zetten, maar Android moet **AAPS** toestaan om meldingen te tonen.
 
-## Use system notifications in AAPS for alerts and notifications
+Open op je telefoon **Instellingen** > **Apps** > **AAPS** > **Meldingen** en controleer of **Alle AAPS-meldingen** aan staat.
 
-Open 3-dot-menu on top right of **AAPS** home screen and select **Preferences**
+![Alle AAPS-meldingen aangezet](../images/android_auto_notifications_all.png)
 
-![Use system notifications for alerts and notifications](../images/android_auto_02.png)
+Scrol naar beneden en controleer of **Lopende status** aan staat: dit is het kanaal van de statusmelding.
 
-In **Local Alerts** activate **Use system notifications for alerts and notifications**
+![Meldingskanaal Lopende status aangezet](../images/android_auto_ongoing_channel.png)
 
-![Use system notifications for alerts and notifications](../images/android_auto_03.png)
+Controleer nu eerst of je de statusmelding van **AAPS** op de telefoon ziet, voordat je naar je auto loopt!
 
-Please check now that you get notifications from **AAPS** on the phone before you walk to your car!
+![AAPS-melding op de telefoon](../images/android_auto_04.png)
 
-![Use system notifications for alerts and notifications](../images/android_auto_04.png)
+(androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
-## Allow the use of "unknown sources" with Android Auto.
+## Het gebruik van "onbekende bronnen" toestaan in Android Auto.
 
-As **AAPS** is not an official Android Auto app, notifications have to be activated for "unknown sources" in Android Auto. This is done through the use of the developer mode which we will show you here.
+**AAPS** is geen officiële Android Auto-app. Daarom moeten meldingen voor "onbekende bronnen" aangezet worden in Android Auto. Dit doe je met de ontwikkelaarsmodus. Hieronder laten we zien hoe.
 
-Go to your car and connect your mobile with the cars audio system.
+Ga naar je auto en verbind je telefoon met het audiosysteem van de auto.
 
-You should now see a screen similar to this screen.
+Je ziet nu een scherm dat lijkt op dit scherm.
 
-![Enable developer mode](../images/android_auto_05.png)
+![Ontwikkelaarsmodus inschakelen](../images/android_auto_05.png)
 
-Press on the **setting** icon to start the configuration.
+Tik op het pictogram **instellingen** om de configuratie te starten.
 
-Scroll down to the end of the page and select **see more in the phone**.
+Scrol naar beneden tot het einde van de pagina en kies **see more in the phone** (meer bekijken op de telefoon).
 
-![Enable developer mode](../images/android_auto_06.png)
+![Ontwikkelaarsmodus inschakelen](../images/android_auto_06.png)
 
-Now on the mobile we will activate the developer mode.
+Nu zetten we op de telefoon de ontwikkelaarsmodus aan.
 
-The first screen looks like this. Scroll down to the end of the page.
+Het eerste scherm ziet er zo uit. Scrol naar beneden tot het einde van de pagina.
 
-![Enable developer mode](../images/android_auto_07.png)
+![Ontwikkelaarsmodus inschakelen](../images/android_auto_07.png)
 
-There you see the version of Android Auto listed. Tap 10 times (in word ten) on the version of Android Auto. With this hidden combination you have now enabled developer mode.
+Daar zie je de versie van Android Auto staan. Tik 10 keer (tien keer) op de versie van Android Auto. Met deze verborgen combinatie heb je nu de ontwikkelaarsmodus aangezet.
 
-![Enable developer mode](../images/android_auto_08.png)
+![Ontwikkelaarsmodus inschakelen](../images/android_auto_08.png)
 
-Confirm that you want to enable the developer mode in the modal dialog "Allow development settings?".
+Bevestig in het venster "Allow development settings?" (ontwikkelaarsinstellingen toestaan?) dat je de ontwikkelaarsmodus wilt aanzetten.
 
-![Enable developer mode](../images/android_auto_09.png)
+![Ontwikkelaarsmodus inschakelen](../images/android_auto_09.png)
 
-In the **developer settings** enable the "Unknown sources".
+Zet in de **ontwikkelaarsinstellingen** "Onbekende bronnen" aan.
 
-![Enable developer mode](../images/android_auto_10.png)
+![Ontwikkelaarsmodus inschakelen](../images/android_auto_10.png)
 
-Now you can quit developer mode if you want. Tap three dots menu on the top right to do so.
+Nu kun je de ontwikkelaarsmodus verlaten als je wilt. Tik daarvoor op het menu met drie puntjes rechtsboven.
 
-## Show notifications in car
+## Meldingen tonen in de auto
 
-Tap the **number icon** on the lower right side in Android Auto in your car.
+Tik in Android Auto in je auto op het **cijferpictogram** rechtsonder.
 
-![number icon - Android Auto in car](../images/android_auto_11.png)
+![cijferpictogram - Android Auto in de auto](../images/android_auto_11.png)
 
-Your CGM data will be shown as follows:
+Je CGM-gegevens worden zo getoond:
 
-![AAPS CGM data on Android Auto](../images/android_auto_01.png)
+![AAPS CGM-gegevens in Android Auto](../images/android_auto_01.png)
 
-## Troubleshooting:
+(android-auto-troubleshooting)=
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#use-system-notifications-in-aaps-for-alerts-and-notifications) in Android and if [Android Auto has access rights to notifications](#allow-the-use-of-unknown-sources-with-android-auto).
+## Probleemoplossing:
+
+* Als je de melding niet ziet, controleer dan of je [AAPS hebt toegestaan om meldingen te tonen](#androidauto-check-that-aaps-can-show-notifications) in Android en of [Android Auto toegang heeft tot meldingen](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).

@@ -1,33 +1,50 @@
 # Compilation d'AAPS
 
-## Construire vous-même au lieu de télécharger
+## Compiler vous-même au lieu de télécharger
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. Il est légal de construire l'application pour votre usage personnel, mais vous ne devez en aucun cas donner une copie à d'autres personnes !**
+**L'application AAPS (le fichier apk) n'est pas disponible en téléchargement, en raison de la réglementation concernant les dispositifs médicaux. Il est légal de compiler l'application pour votre usage personnel, mais vous ne devez en aucun cas en donner une copie à d'autres personnes !**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Consultez la [Foire Aux Questions (FAQ)](../UsefulLinks/FAQ.md) pour plus de détails.
 
 ---
 
-Three methods are available to build the AAPS app:
+Il existe trois méthodes pour compiler l'application AAPS :
 
-### Build with a browser (recommended)
+### Compiler avec un navigateur (recommandé)
 
-You can build the app with your smartphone using GitHub actions, and save it in your Google Drive.
+Vous pouvez compiler l'application avec votre smartphone en utilisant GitHub Actions. Depuis un téléphone Android, la page de configuration [AAPS Builder](#aaps-builder) vous guide pas à pas, et vous lancez vous-même chaque compilation. Depuis un ordinateur ou un iPhone, vous pouvez aussi compiler avec un fork et enregistrer l'application dans votre Google Drive.
 
-**[Follow these instructions.](./BrowserBuild.md)**
-
-----
-
-### Build with Android Studio
-
-You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
-
-**[Follow these instructions.](./ComputerBuild.md)**
+**[Suivez ces instructions.](./BrowserBuild.md)**
 
 ----
 
-### Build using the command-line
+### Compiler avec Android Studio
 
-This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
+Vous pouvez compiler l'application sur votre ordinateur avec Android Studio. C'était autrefois la seule méthode de compilation ; aujourd'hui, Android Studio est surtout utilisé par les développeurs qui envisagent de modifier le code.
 
-**[Follow these instructions.](./CLIBuild.md)**
+**[Suivez ces instructions.](./ComputerBuild.md)**
+
+----
+
+### Compiler en ligne de commande
+
+Cette méthode est destinée à ceux qui préfèrent compiler AAPS en ligne de commande sur leur ordinateur, sans installer Android Studio.
+
+**[Suivez ces instructions.](./CLIBuild.md)**
+
+----
+
+(building-aaps-troubleshooting)=
+## Si la compilation échoue
+
+Chaque méthode de compilation a sa propre section de dépannage :
+
+* **AAPS Builder** : [Dépannage d'AAPS Builder](#aaps-builder-troubleshooting)
+* **Compilation dans le navigateur** depuis un ordinateur ou un iPhone : [Dépannage de la compilation dans le navigateur](#aaps-ci-troubleshooting)
+* **Android Studio** : [Dépannage d'Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+
+Vous avez perdu votre keystore ou son mot de passe ? Voir [Réinstaller AAPS avec un nouveau keystore](#reinstall-aaps).
+
+Si l'application est compilée mais ne s'installe pas sur votre téléphone, voir [Transfert et installation de AAPS sur votre smartphone](TransferringAndInstallingAaps.md).
+
+Si votre problème n'est pas dans la liste, voir [Où puis-je obtenir de l'aide ?](../GettingHelp/WhereCanIGetHelp.md).

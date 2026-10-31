@@ -1,92 +1,92 @@
-# Freestyle Libre 2 and 2+
+# Freestyle Libre 2 e 2+
 
-The Freestyle Libre 2 sensor is now a real CGM even with the official app. Still, LibreLink cannot send data to AAPS. There are several solutions to use it with AAPS.
+O sensor Freestyle Libre 2 agora é um CGM de verdade, mesmo com o app oficial. Mesmo assim, o LibreLink não pode enviar dados para o AAPS. Há várias soluções para usá-lo com o AAPS.
 
-## 1. Use a Bluetooth bridge and OOP
+## 1. Usar uma ponte Bluetooth e o OOP
 
-Bluetooth transmitters can be used with the Libre 2 (EU) or 2+ (EU) and an out of process algorithm app. You can receive blood sugar readings every 5 minutes like with the [Libre 1](./Libre1.md).
+Transmissores Bluetooth podem ser usados com o Libre 2 (EU) ou 2+ (EU) e um app com algoritmo fora do processo (OOP, out of process). Você pode receber leituras de glicose a cada 5 minutos, como com o [Libre 1](./Libre1.md).
 
-Check the bridge and app you want to use are compatible with your sensor and xDrip+.
+Verifique se a ponte e o app que você quer usar são compatíveis com o seu sensor e com o xDrip.
 
-The Libre2 OOP (find it [here](#Libre2_OOP2)) is creating the same BG readings as with the original reader. AAPS with Libre 2 do a 10 to 25 minutes smoothing to avoid certain jumps. See below [Value smoothing & raw values](#libre2-value-smoothing-raw-values). OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip+.
+O OOP do Libre2 (veja [aqui](#Libre2_OOP2)) gera as mesmas leituras de glicose que o leitor original. O AAPS com o Libre 2 faz uma suavização de 10 a 25 minutos para evitar alguns saltos. Veja abaixo [Suavização de valores e valores brutos](#libre2-value-smoothing-raw-values). O OOP gera leituras a cada 5 minutos com a média dos últimos 5 minutos. Por isso, as leituras de glicose não são tão suaves, mas correspondem ao leitor original e seguem mais rápido as leituras de glicose "reais". Se você tentar usar o loop com o OOP, ative todas as configurações de suavização no xDrip.
 
-There are some good reasons to use a Bluetooth transmitter:
+Há alguns bons motivos para usar um transmissor Bluetooth:
 
--   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the the readers like values with "calibrate based on glucose".  
-  Make sure to leave OOP1 disabled (2).
+-   Você pode escolher várias estratégias de calibração do OOP2 (1): ter os valores do leitor com "no calibration", calibrar o sensor como um Libre 1 com "calibrate based on raw" ou, por fim, calibrar os valores parecidos com os do leitor com "calibrate based on glucose".  
+  Deixe o OOP1 desativado (2).
 
-    → Hamburger Menu → Settings → Less common settings → Other misc. options
+    → Menu hambúrguer → Settings → Less common settings → Other misc. options
 
-![OOP2 Calibration](../images/Libre2_OOP2Calibration.png)
+![Calibração do OOP2](../images/Libre2_OOP2Calibration.png)
 
--   The Libre 2 sensor can be used 14.5 days as the Libre 1
--   8 hours backfilling is fully supported
+-   O sensor Libre 2 pode ser usado por 14,5 dias, como o Libre 1
+-   O preenchimento de 8 horas de dados (backfill) é totalmente suportado
 
-Remark: The transmitter can be used in parallel to the LibreLink app without interfering with it.
+Observação: o transmissor pode ser usado junto com o app LibreLink sem interferir nele.
 
 ### Start sensor
 
-- → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Answer "Not Today" (4).
+- → Menu hambúrguer (1) → Start sensor (2) → Start sensor (3) → Responda "Not Today" (4).
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
 
-This will not physically start any Libre2 sensor or interact with them in any case. This is simply to indicate xDrip+ that a new sensor is delivering blood sugar levels. If available, enter two bloody measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip+ every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
+Isto não inicia fisicamente nenhum sensor Libre2 e não interage com ele de nenhuma forma. Isto serve apenas para avisar o xDrip de que um novo sensor está enviando valores de glicose. Se disponível, insira dois valores medidos no sangue para a calibração inicial. Agora os valores de glicose devem aparecer no xDrip a cada 5 minutos. Valores perdidos, por exemplo porque você estava longe demais do seu telefone, não serão preenchidos depois (backfill).
 
-After a sensor change xDrip+ will automatically detect the new sensor and will delete all calibration data. You may check you blood glucose after activation and make a new initial calibration.
+Depois de uma troca de sensor, o xDrip detecta o novo sensor automaticamente e apaga todos os dados de calibração. Você pode verificar sua glicose depois da ativação e fazer uma nova calibração inicial.
 
-### Configure AAPS (for looping only)
+### Configurar o AAPS (somente para o loop)
 
--   In AAPS go to Config Builder > BG Source and check 'xDrip+'
+-   No **AAPS**, abra o **menu** (☰) no canto superior esquerdo, vá em **Configuração** > **Fonte de BG** e selecione **xDrip+**
 
-![xDrip+ BG Source](../images/ConfBuild_BG_xDrip.png)
+![Configuração > Fonte de BG com xDrip+ selecionado](../images/v4/Configuration/configuration_bg_source.png)
 
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](#xdrip-identify-receiver).
+-   Se o AAPS não receber valores de glicose quando o telefone estiver em modo avião, use 'Identify receiver' como descrito na [página de configurações do xDrip](#xdrip-identify-receiver).
 
-## 2. Use xDrip+ direct connection
+## 2. Usar a conexão direta do xDrip
 
 ```{admonition} Libre 2 EU only
 :class: warning
-xDrip+ doesn't support direct connection to Libre 2 US and AUS.
-Only Libre 2 and 2+ **EU** models.
+O xDrip não suporta conexão direta com o Libre 2 US e AUS.
+Somente os modelos Libre 2 e 2+ **EU**.
 ```
 
-- Follow [these instructions](./Libre2MinimalL00per.md) to setup xDrip+ as the original documentation links to an obsolete OOP2  version.
-- Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
+- Siga [estas instruções](./Libre2MinimalL00per.md) para configurar o xDrip, porque a documentação original aponta para uma versão obsoleta do OOP2.
+- Siga as instruções de configuração na [página de configurações do xDrip](../CompatibleCgms/xDrip.md).
 
--   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Selecione xDrip+ em [Configuração > Fonte de BG](#Config-Builder-bg-source).
 
 (libre2-value-smoothing-raw-values)=
 
-### Value smoothing & raw values
+### Suavização de valores e valores brutos
 
-Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
+Tecnicamente, o valor atual de glicose é enviado ao xDrip a cada minuto. Por padrão, um filtro de média ponderada calcula um valor suavizado dos últimos 25 minutos. Você pode mudar o período no menu NFC Scan features.
 
-→ Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
+→ Menu hambúrguer → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![xDrip+ advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
+![xDrip advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
 
-This is mandatory for looping. The curves look smooth and the loop results are great. The raw values on which the alarms are based jitter a little more, but correspond to the values that the reader also displays. In addition, the raw values can be displayed in the xDrip+ graph in order to be able to react in time to rapid changes. Please switch on Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" and "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor info is available in the system menu.
+Isto é obrigatório para usar o loop. As curvas ficam suaves e os resultados do loop são ótimos. Os valores brutos, nos quais os alarmes se baseiam, oscilam um pouco mais, mas correspondem aos valores que o leitor também mostra. Além disso, os valores brutos podem ser mostrados no gráfico do xDrip para que você possa reagir a tempo a mudanças rápidas. Ative Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" e "show Sensors Infos". Então os valores brutos também são mostrados como pequenos pontos brancos, e mais informações do sensor ficam disponíveis no menu do sistema.
 
-The raw values are very helpful when the blood sugar is moving fast. Even if the dots are jumpier you would detect the tendency much better as using the smoothed line to make proper therapy decisions.
+Os valores brutos ajudam muito quando a glicose muda rapidamente. Mesmo que os pontos oscilem mais, você vê a tendência muito melhor do que com a linha suavizada e pode tomar decisões de tratamento corretas.
 
-→ Hamburger menu → Settings → Less common settings → Advanced settings for Libre 2
+→ Menu hambúrguer → Settings → Less common settings → Advanced settings for Libre 2
 
-![xDrip+ advanced settings Libre 2 & raw values](../images/Libre2_RawValues.png)
+![xDrip advanced settings Libre 2 & raw values](../images/Libre2_RawValues.png)
 
 
 
-#### Calibration
+#### Calibração
 
-You can calibrate the Libre2 **with an offset of -40 mg/dl to +20 mg/dL \[-2,2 mmol/l to +1,1 mmol/l\]** (intercept). The slope isn't changeable. Please check by fingerpricking after setting a new sensor, keeping in mind it might not be accurate in the first 12 hours after insertion. Since there can be large differences to the blood measurements, verify every 24 hours and calibrate if necessary. If the sensor is completely off after a few days, it should then be replaced.
+Você pode calibrar o Libre2 **com um offset de -40 mg/dl a +20 mg/dl \[-2,2 mmol/l a +1,1 mmol/l\]** (intercept). A inclinação (slope) não pode ser alterada. Verifique com uma medição na ponta do dedo depois de colocar um novo sensor. Lembre-se de que ele pode não ser preciso nas primeiras 12 horas após a inserção. Como pode haver grandes diferenças em relação às medições no sangue, verifique a cada 24 horas e calibre se necessário. Se o sensor estiver totalmente errado depois de alguns dias, ele deve ser substituído.
 
-## 3. Use Diabox
+## 3. Usar o Diabox
 
-- Install [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). In Settings, Integration, enable Share data with other apps.
+- Instale o [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). Em Settings, Integration, ative Share data with other apps (compartilhar dados com outros apps).
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Selecione xDrip+ em [Configuração > Fonte de BG](#Config-Builder-bg-source).
 
-## 4. Use Juggluco
+## 4. Usar o Juggluco
 
-See [here](./Juggluco.md).
+Veja [aqui](./Juggluco.md).

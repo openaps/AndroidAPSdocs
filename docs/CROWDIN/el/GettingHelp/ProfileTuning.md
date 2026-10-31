@@ -1,136 +1,142 @@
-# **Tweaking the AAPS' Profile**
+# Βελτίωση του προφίλ του AAPS
 
 ```{admonition} This is NOT a medical advice
 :class: warning
-Please work with your care team for support and advice on your diabetes management.</br>
-Use this guide only once you have [set up your **Profile** correctly](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md), following all **AAPS** objectives.
+Συνεργαστείτε με την ομάδα φροντίδας σας για υποστήριξη και συμβουλές για τη διαχείριση του διαβήτη σας.</br>
+Χρησιμοποιήστε αυτόν τον οδηγό μόνο αφού έχετε [ρυθμίσει σωστά το **Προφίλ** σας](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md) και έχετε ολοκληρώσει όλα τα Βήματα του **AAPS**.
 ```
 
-This guide explains the logic of the OpenAPS algorithm results with a given __Profile__, and provides information about which values to adjust when certain situations are observed. The suggestions about basal testing below may diverge from what your care team  advises
+Αυτός ο οδηγός εξηγεί τη λογική των αποτελεσμάτων του αλγορίθμου OpenAPS με ένα δεδομένο __Προφίλ__. Δείχνει επίσης ποιες τιμές στο **AAPS** μπορείτε να αλλάξετε όταν βλέπετε ορισμένες καταστάσεις ή μοτίβα. Οι προτάσεις παρακάτω για τη δοκιμή του βασικού ρυθμού μπορεί να διαφέρουν από αυτό που συμβουλεύει η ομάδα φροντίδας σας.
 
-Using **closed loop** may make basal  testing easier and may significantly reduce  the hypo risk if your __Profile__ basal is too strong.
+Το **κλειστό κύκλωμα** μπορεί να κάνει πιο εύκολη τη δοκιμή του βασικού ρυθμού και να μειώσει πολύ τον κίνδυνο υπογλυκαιμίας, αν ο βασικός ρυθμός του __Προφίλ__ σας είναι πολύ ισχυρός.
 
-## **Changing profile's settings, how to proceed**
+## Αλλαγή των ρυθμίσεων του προφίλ: πώς να προχωρήσετε
 
-1. Ensure you have read and understand __AAPS’__ recommended settings and advice below. Not following this advice will make the whole process problematic and less likely to get a well tuned __Profile__
-2. Carefully observe and compare, **over several days**, what is happening with your __BG__ and __IOB__.
-3. Keep an eye out for patterns that happen around the same time (almost) everyday.
-4. It's important to do this over several days. Poor results tend to be yielded from using data observed on a single day to make __Profile’s__ adjustment decisions.
-5. After you have observed a repeatable pattern of behavior, e.g. at 1PM you see a spike in __BG__ or a negative __IOB__ value, only then start to make small changes to your __Profile__.
-6. It's important to limit the changes you make to one thing at a time. E.g. increase your basal by 10% around 1PM.
-7. After every change, it's important to monitor the impact on your __BG__ and __IOB__ for the next few days.
-8. Repeat this pattern, observe, decide, tweak again if needed
+1. Βεβαιωθείτε ότι έχετε διαβάσει και καταλάβει τις προτεινόμενες ρυθμίσεις και συμβουλές του __AAPS__ παρακάτω. Αν δεν ακολουθήσετε αυτή τη συμβουλή, η προσαρμογή μπορεί να γίνει δύσκολη και είναι λιγότερο πιθανό να πετύχετε ένα καλά ρυθμισμένο __Προφίλ__
+2. Παρατηρήστε και συγκρίνετε προσεκτικά, **για αρκετές ημέρες**, τι συμβαίνει με τη __BG__ και την __IOB__ σας.
+3. Προσέξτε μοτίβα στο **AAPS** που συμβαίνουν περίπου την ίδια ώρα (σχεδόν) κάθε μέρα.
+4. Είναι σημαντικό να το κάνετε αυτό για αρκετές ημέρες. Όταν αποφασίζετε αλλαγές στο __Προφίλ__ με βάση δεδομένα μίας μόνο ημέρας, τα αποτελέσματα είναι συνήθως κακά.
+5. Μόνο αφού δείτε ένα μοτίβο που επαναλαμβάνεται, π.χ. στη 1 μ.μ. βλέπετε απότομη άνοδο της __BG__ ή αρνητική τιμή __IOB__, ξεκινήστε να κάνετε μικρές αλλαγές στο __Προφίλ__ σας.
+6. Είναι σημαντικό να αλλάζετε μόνο ένα πράγμα κάθε φορά. Π.χ. αυξήστε τον βασικό ρυθμό σας κατά 10% γύρω στη 1 μ.μ.
+7. Μετά από κάθε αλλαγή, είναι σημαντικό να παρακολουθείτε την επίδραση στη __BG__ και την __IOB__ σας για τις επόμενες ημέρες.
+8. Επαναλάβετε αυτή τη διαδικασία: παρατηρήστε, αποφασίστε, αλλάξτε ξανά αν χρειάζεται
 
-Don't rush, go slow!
+Μη βιάζεστε, προχωρήστε αργά!
 
-## **Recommended settings and advice while tweaking basal**
+## Προτεινόμενες ρυθμίσεις και συμβουλές κατά τη ρύθμιση του βασικού ρυθμού
 
-- Do all testing with [closed loop enabled](#AapsScreens-loop-status).
-- **Turn <u>OFF</u> all [automations](../DailyLifeWithAaps/Automations.md)**
-- **Turn <u>OFF</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](../AdvancedOptions/DevBranch.md), [AutoSens](#Open-APS-features-autosens)** so that they will not try to adapt your profile.
-- Do not make manual user actions (manual bolus, temp targets etc…) while testing: let the system use the **Profile** settings only.
-- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board, Carbs On Board (and Sensitivity change). On graph 2, use Deviations and Blood Glucose Impact. When asking for advice, always include those on your screenshots.
+- Κάντε όλες τις δοκιμές με [ενεργό κλειστό κύκλωμα](#AapsScreens-loop-status).
+- **<u>Απενεργοποιήστε</u> όλους τους [αυτοματισμούς](../DailyLifeWithAaps/Automations.md)**
+- **<u>Απενεργοποιήστε</u> τα [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)**, ώστε να μην προσπαθούν να προσαρμόσουν το προφίλ σας.
+- Μην κάνετε χειροκίνητες ενέργειες (χειροκίνητο bolus, προσωρινούς στόχους κ.λπ.) κατά τις δοκιμές: αφήστε το σύστημα να χρησιμοποιεί μόνο τις ρυθμίσεις του **Προφίλ**.
+- Για τα [επιπλέον γραφήματα](#AapsScreens-section-g-additional-graphs): στο γράφημα 1, χρησιμοποιήστε Ενεργή ινσουλίνη, Ενεργοί υδατάνθρακες (και Αλλαγή ευαισθησίας). Στο γράφημα 2, χρησιμοποιήστε Αποκλίσεις και Επίδραση στη γλυκόζη αίματος. Όταν ζητάτε συμβουλές, να τα δείχνετε πάντα στα στιγμιότυπα οθόνης σας.
 - COB=0[*](#profiletuning-cob-zero)
-- No physical activities.
-- No stress.
-- No illness.
-- No extreme weather like high or low temperatures.
-- If your [basal rate profile](#your-aaps-profile-basal-rates) is correct, when you are on target with COB=0[*](#profiletuning-cob-zero) and IOB=0, you will remain constantly on target whatever your ISF (ISF is only used when you are higher than your target).
-- You need to check the actual IOB but also, the IOB chart to see how the IOB was during the past few hours.
+
+Άλλα πράγματα που καλό είναι να αποφύγετε, γιατί επηρεάζουν τα δεδομένα και μπορεί να οδηγήσουν σε λάθος συμπεράσματα:
+- Καμία σωματική δραστηριότητα.
+- Καθόλου άγχος.
+- Καμία ασθένεια.
+- Καθόλου ακραίος καιρός, όπως πολύ υψηλές ή πολύ χαμηλές θερμοκρασίες.
+- Καμία αποτυχία αντλίας ή αισθητήρα CGM.
+- Κανένας υδατάνθρακας που δεν δηλώθηκε.
+
+Σημειώστε επίσης:
+- Αν το [προφίλ βασικού ρυθμού](#your-aaps-profile-basal-rates) σας είναι σωστό, όταν είστε στον στόχο με COB=0[*](#profiletuning-cob-zero) και IOB=0, θα μένετε σταθερά στον στόχο όποιος κι αν είναι ο **ISF** σας (ο **ISF** χρησιμοποιείται μόνο όταν είστε πάνω από τον στόχο **BG**).
+- Πρέπει να ελέγχετε την τρέχουσα **IOB**, αλλά και το γράφημα **IOB**, για να δείτε πώς άλλαξε η **IOB** τις τελευταίες ώρες.
 
 (profiletuning-cob-zero)=
 
 ***COB = 0**
 
-Meaning that the meal is digested, and there are no more carbs in your body.
+Αυτό σημαίνει ότι το γεύμα έχει χωνευτεί και δεν υπάρχουν πια υδατάνθρακες στον οργανισμό σας.
 
-AAPS might indicate [COB=0 while you still have carbs on board](../DailyLifeWithAaps/CobCalculation.md).
+Το **AAPS** μπορεί να δείχνει [COB=0 ενώ έχετε ακόμη ενεργούς υδατάνθρακες](../DailyLifeWithAaps/CobCalculation.md).
 
-## **[Profile](../SettingUpAaps/YourAapsProfile.md) definitions**
+## Ορισμοί του [Προφίλ](../SettingUpAaps/YourAapsProfile.md)
 
-A too **strong Profile** indicates some combination of the following:
+Ένα πολύ **ισχυρό Προφίλ** σημαίνει κάποιον συνδυασμό από τα παρακάτω:
 
-- [ISF](#your-aaps-profile-insulin-sensitivity-factor) number is too small
-- The [basal](#your-aaps-profile-basal-rates) number is too big
-- [I:C](#your-aaps-profile-insulin-to-carbs-ratio) number is too small
+- Ο αριθμός του [ISF](#your-aaps-profile-insulin-sensitivity-factor) είναι πολύ μικρός.
+- Ο αριθμός του [βασικού ρυθμού](#your-aaps-profile-basal-rates) είναι πολύ μεγάλος.
+- Ο αριθμός του [I:C](#your-aaps-profile-insulin-to-carbs-ratio) είναι πολύ μικρός.
 
-## **IOB Observations**
+## Παρατηρήσεις της IOB
 
-*Note: you can also use Loopalyzer IOB graph in Nightscout reports to view IOB on several days.*
+*Σημείωση: μπορείτε επίσης να χρησιμοποιήσετε το γράφημα IOB του Loopalyzer στις αναφορές του Nightscout, για να δείτε την IOB για αρκετές ημέρες.*
 
-If you observe the following patterns after a few days, consider the following changes
+Αν μετά από μερικές ημέρες δείτε τα παρακάτω μοτίβα, σκεφτείτε τις εξής αλλαγές:
 
-### **IOB positive**
+### Θετική IOB
 
-- **Profile** basal might not be strong enough (this could also be because of things like unannounced food, illness, bad site absorption, etc.)
+- Ο βασικός ρυθμός του **Προφίλ** ίσως δεν είναι αρκετά ισχυρός (αυτό μπορεί να οφείλεται και σε πράγματα όπως φαγητό που δεν δηλώθηκε, ασθένεια, κακή απορρόφηση στο σημείο έγχυσης κ.λπ.)
 
-![Positive IOB](../images/troubleshooting/profiletuning/PositiveInsulin.png)
+![Θετική IOB](../images/troubleshooting/profiletuning/PositiveInsulin.png)
 
-### **IOB negative**
+### Αρνητική IOB
 
-- Default basal too strong
-- May be the effect from past exercise/physical activity
+- Ο προεπιλεγμένος βασικός ρυθμός είναι πολύ ισχυρός.
+- Μπορεί να είναι επίδραση από προηγούμενη άσκηση/σωματική δραστηριότητα.
 
-![Negative IOB](../images/troubleshooting/profiletuning/NegativeInsulin.png)
+![Αρνητική IOB](../images/troubleshooting/profiletuning/NegativeInsulin.png)
 
-- Previous meal: too much bolus (which resulted in a very long zero temp basal)
+- Προηγούμενο γεύμα: πολύ μεγάλο bolus (που οδήγησε σε πολύ μακρύ μηδενικό προσωρινό βασικό ρυθμό)
 
-![Negative IOB](../images/troubleshooting/profiletuning/NegativeInsulin2.png)
+![Αρνητική IOB](../images/troubleshooting/profiletuning/NegativeInsulin2.png)
 
-## **BG Target Observations**
+## Παρατηρήσεις του στόχου BG
 
-### **Stuck High**
+### Κολλημένη ψηλά
 
-- __ISF__ ‘s number is high and not strong enough (calculated insulin is too weak)
+- Ο αριθμός του __ISF__ είναι μεγάλος και όχι αρκετά ισχυρός (η υπολογισμένη ινσουλίνη είναι πολύ λίγη)
 
-![Stuck High](../images/troubleshooting/profiletuning/StuckHigh.png)
+![Κολλημένη ψηλά](../images/troubleshooting/profiletuning/StuckHigh.png)
 
-- __Profile__ basal might not be strong enough (SMBs do not have enough "basal stock" to use)
-- A security ([MaxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)?) might have kicked in and is limiting insulin injection. Verify in the [SMB](#Open-APS-features-super-micro-bolus-smb) tab.
-- Technical issue: site absorption, infusion set, ...
+- Ο βασικός ρυθμός του __Προφίλ__ ίσως δεν είναι αρκετά ισχυρός (τα **SMB** δεν έχουν αρκετό «απόθεμα βασικού ρυθμού» για να χρησιμοποιήσουν)
+- Μια ασφάλεια ([MaxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over);) μπορεί να έχει ενεργοποιηθεί και να περιορίζει τη χορήγηση ινσουλίνης. Ελέγξτε στην οθόνη του πρόσθετου **APS** (**Διαμόρφωση → APS → Άνοιγμα πρόσθετου**)· δείτε [SMB](#Open-APS-features-super-micro-bolus-smb).
+- Τεχνικό πρόβλημα: απορρόφηση στο σημείο έγχυσης, σετ έγχυσης, ...
 
-### **Stuck Low**
+### Κολλημένη χαμηλά
 
-- __ISF__ too strong and the number needs to be raised higher
-- __Profile__ basal too strong (if also negative IOB)
+- Ο __ISF__ είναι πολύ ισχυρός και ο αριθμός πρέπει να αυξηθεί
+- Ο βασικός ρυθμός του __Προφίλ__ είναι πολύ ισχυρός (αν υπάρχει και αρνητική IOB)
 
-### **Rollercoaster (ups and downs)**
+### Τρενάκι (άνοδοι και πτώσεις)
 
-- **ISF** too strong? See your [AAPS Profile](#your-aaps-profile-insulin-sensitivity-factor)
+- Ο **ISF** είναι πολύ ισχυρός; Δείτε το [Προφίλ σας στο AAPS](#your-aaps-profile-insulin-sensitivity-factor)
 
-![Rollercoaster](../images/troubleshooting/profiletuning/StrongISF.png)
+![Τρενάκι](../images/troubleshooting/profiletuning/StrongISF.png)
 
-## **BG After Meals Observations**
+## Παρατηρήσεις της BG μετά τα γεύματα
 
-### **Fast rise and BG going high**
+### Γρήγορη άνοδος και η BG ανεβαίνει ψηλά
 
-- Food contains fast carbs
-- Consider doing a pre-bolus
-- Bolus (IC or injected %) not strong enough
+- Το φαγητό περιέχει γρήγορους υδατάνθρακες (όπως χυμό φρούτων).
+- Σκεφτείτε να κάνετε pre-bolus ή να κάνετε το pre-bolus λίγο νωρίτερα.
+- Το bolus (IC ή ποσοστό % της ένεσης) δεν είναι αρκετά ισχυρό.
 
-![Rise High](../images/troubleshooting/profiletuning/FastRise.png)
+![Άνοδος ψηλά](../images/troubleshooting/profiletuning/FastRise.png)
 
-### **Fast rise and then BG going low**
+### Γρήγορη άνοδος και μετά η BG πέφτει χαμηλά
 
-- Consider doing a pre-bolus, profile might be too aggressive (over correction of the raise)
-- Bolus too strong
+- Σκεφτείτε να κάνετε pre-bolus. Το **Προφίλ** σας μπορεί να είναι πολύ επιθετικό (υπερβολική διόρθωση της ανόδου)
+- Το bolus είναι πολύ ισχυρό.
 
 
 
-## **[How to calculate your I:C](#your-aaps-profile-insulin-to-carbs-ratio)**
+## [Πώς να υπολογίσετε τον λόγο I:C](#your-aaps-profile-insulin-to-carbs-ratio)
 
-1. First, you need the correct default basal settings in your **Profile**.
-2. Start on target, better without negative IOB.
-3. Record the total insulin given in the pump tab (or pump history) and call it Start insulin C4. Very accurately measure a known portion of carbs, and record the start time and Start IOB. Then enter carbs and bolus information into AAPS using the wizard (with the current configured CI). Don't forget to eat the carbs ;)
-4. After some hours, when COB=0[*](#profiletuning-cob-zero) and you're back on target, record end time, and note down the End IOB, check the total insulin given as before and call it End insulin. *NOTE: The time frame is NOT important, as long as it is longer than your digestion*
-5. From the difference between Start and End insulin amount, subtract/add the difference end IOB - start IOB. Then subtract the basal insulin calculated from your profile settings.
-6. If __BG__ is in target, you'll have the total insulin used to “digest” your carbs. Calculate your **I:C**.
+1. Πρώτα, χρειάζεστε σωστές ρυθμίσεις για τον προεπιλεγμένο βασικό ρυθμό στο **Προφίλ** σας.
+2. Ξεκινήστε όταν είστε στον στόχο, καλύτερα χωρίς αρνητική IOB.
+3. Καταγράψτε τη συνολική ινσουλίνη που χορηγήθηκε από το **Διαχείριση → Αντλία** (ή το ιστορικό της αντλίας) και ονομάστε την ινσουλίνη έναρξης. Μετρήστε με μεγάλη ακρίβεια μια γνωστή ποσότητα υδατανθράκων και καταγράψτε την ώρα έναρξης και την IOB έναρξης. Μετά καταχωρίστε τους υδατάνθρακες και το bolus στο **AAPS** με τον οδηγό (με τον λόγο I:C που έχετε ρυθμίσει τώρα). Μην ξεχάσετε να φάτε τους υδατάνθρακες ;)
+4. Μετά από μερικές ώρες, όταν COB=0[*](#profiletuning-cob-zero) και είστε ξανά στον στόχο, καταγράψτε την ώρα λήξης και σημειώστε την IOB λήξης. Ελέγξτε τη συνολική ινσουλίνη που χορηγήθηκε όπως πριν και ονομάστε την ινσουλίνη λήξης. *ΣΗΜΕΙΩΣΗ: Το χρονικό διάστημα ΔΕΝ είναι σημαντικό, αρκεί να είναι μεγαλύτερο από τον χρόνο της πέψης σας*
+5. Από τη διαφορά ανάμεσα στην ινσουλίνη έναρξης και την ινσουλίνη λήξης, αφαιρέστε/προσθέστε τη διαφορά IOB λήξης - IOB έναρξης. Μετά αφαιρέστε την ινσουλίνη του βασικού ρυθμού που υπολογίζεται από τις ρυθμίσεις του **Προφίλ** σας.
+6. Αν η __BG__ είναι στον στόχο, θα έχετε τη συνολική ινσουλίνη που χρειάστηκε για να «χωνευτούν» οι υδατάνθρακές σας. Υπολογίστε τον λόγο **I:C** σας.
 
-### **Explanations for the I:C calculations**
+### Εξηγήσεις για τους υπολογισμούς του I:C
 
-- With a **Profile** that has the correct default basal rate, during any time frame, you should stay on target and have an IOB near 0. You get your **Profile** basal only.
-- You add carbs and bolus to this mix. Wait till your body digests all the carbs and be back on **BG** target. Your insulin usage will be the sum of your basal + the insulin needed for the carbs. You calculate the insulin used for your basal (by using your **Profile**) and the surplus will be the insulin used to digest the carbs.
-- If the time frame is too short, there will be carbs undigested, thus your "insulin needed for the carbs" will be wrong.
-- If the time frame is too long, nothing bad will happen. You'll use all your carbs and you'll get more basal. At the end, you'll subtract the basal from the total insulin used, the extended time frame (with more basal use) will not affect the result.
+- Με ένα **Προφίλ** που έχει σωστό προεπιλεγμένο βασικό ρυθμό, σε οποιοδήποτε χρονικό διάστημα πρέπει να μένετε στον στόχο και να έχετε IOB κοντά στο 0. Παίρνετε μόνο τον βασικό ρυθμό του **Προφίλ** σας.
+- Σε αυτό προσθέτετε υδατάνθρακες και bolus. Περιμένετε μέχρι ο οργανισμός σας να χωνέψει όλους τους υδατάνθρακες και να επιστρέψετε στον στόχο **BG**. Η ινσουλίνη που χρησιμοποιήσατε θα είναι το άθροισμα του βασικού ρυθμού + της ινσουλίνης που χρειάστηκε για τους υδατάνθρακες. Υπολογίζετε την ινσουλίνη του βασικού ρυθμού (με βάση το **Προφίλ** σας) και ό,τι περισσεύει είναι η ινσουλίνη που χρειάστηκε για τους υδατάνθρακες.
+- Αν το χρονικό διάστημα είναι πολύ μικρό, θα μείνουν υδατάνθρακες που δεν χωνεύτηκαν, άρα η «ινσουλίνη που χρειάστηκε για τους υδατάνθρακες» θα είναι λάθος.
+- Αν το χρονικό διάστημα είναι πολύ μεγάλο, δεν θα συμβεί τίποτα κακό. Θα χρησιμοποιηθούν όλοι οι υδατάνθρακες και θα πάρετε περισσότερο βασικό ρυθμό. Στο τέλος θα αφαιρέσετε τον βασικό ρυθμό από τη συνολική ινσουλίνη, οπότε το μεγαλύτερο χρονικό διάστημα (με περισσότερο βασικό ρυθμό) δεν θα επηρεάσει το αποτέλεσμα.
 
-Originally written up by @Robby (Discord) on tips and tricks to help tune your AAPS Profile, reviewed and edited by the community (thank you!).
+Γράφτηκε αρχικά από τον @Robby (Discord) ως συμβουλές για να ρυθμίσετε το **Προφίλ του AAPS** σας, και ελέγχθηκε και διορθώθηκε από την κοινότητα (ευχαριστούμε!).

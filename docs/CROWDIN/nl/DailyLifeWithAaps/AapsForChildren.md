@@ -1,27 +1,31 @@
-# AAPS for children
+# AAPS voor kinderen
 
-**AAPS** can be used successfully with type 1 kids as well. Anyway, there are things to consider.
+**AAPS** kan ook goed worden gebruikt bij kinderen met type 1. Er zijn echter enkele punten om rekening mee te houden.
 
-## Things to consider
+## Waar je aan moet denken
 
-### Initial Profile
+### Eerste profiel
 
-Setting the correct [**Profile**](../SettingUpAaps/YourAapsProfile.md) (basal rate, DIA, ISF...) may prove difficult for children with type 1, especially when growth hormones are involved. Take your time to test and ensure that you are happy with your child’s basal, I:C, DIA and ISF. Test them in real life with your kid next to you before starting remote monitoring and remote treatment. Weekends or school holidays might be a good time for that.<br/>
+Het juiste [**Profiel**](../SettingUpAaps/YourAapsProfile.md) (basaalstand, ISF, I:C...) en [insulinetype](#Config-Builder-insulin-dia) (DIA) instellen kan moeilijk zijn voor kinderen met type 1, vooral als groeihormonen een rol spelen. Neem de tijd om de basaal, I:C, ISF en DIA van je kind te testen en zorg dat je er tevreden mee bent. Test ze in het echte leven met je kind naast je, voordat je begint met volgen op afstand en behandelen op afstand. Weekenden of schoolvakanties zijn daar misschien een goed moment voor.
 
-### Monitor and adjust your child’s Profile where necessary
+### Controleer het profiel van je kind en pas het aan waar nodig
 
-As the child grows, **Profile** adjustments will be necessary in order to account for your child’s body’s demands and needs. However this issue exists for all type 1 children including those who are on other pumps or injections.
+Als het kind groeit, moet je het **Profiel** aanpassen aan wat het lichaam van je kind vraagt en nodig heeft. Dit probleem bestaat echter voor alle kinderen met type 1, ook voor kinderen met een andere pomp of met injecties.
 
-### Keeping the phone in range
+### De telefoon binnen bereik houden
 
-Think about how you will keep the child’s phone in range of their pump and **CGM**. This can be challenging with children who are too young to be responsible for a phone. An **AAPS** phone with a good bluetooth connection range should be selected as well as finding a comfortable way for the child to carry the pump and phone. Many solutions exist, like insulin pump belts that also have space for a phone, or a harness to carry like a backpack.
+Denk na over hoe je de telefoon van het kind binnen bereik houdt van de pomp en de **CGM**. Dit kan lastig zijn bij kinderen die te jong zijn om zelf op een telefoon te letten. Kies een **AAPS**-telefoon met een goed Bluetooth-bereik, en zoek een comfortabele manier waarop het kind de pomp en de telefoon kan dragen. Er zijn veel oplossingen, zoals insulinepompriemen met ook plaats voor een telefoon, of een tuigje dat je als een rugzak draagt.
 
-### How to protect your child’s AAPS from being misused?
+### Hoe bescherm je de AAPS van je kind tegen misbruik?
 
-There are several protection settings available with **AAPS** to avoid the child or a stranger misuse of **AAPS**. See [Preferences > General > Protection](#Preferences-protection) to add password or biometric protection to boluses, settings changes, or even **AAPS** itself.
+Er zijn in **AAPS** verschillende beveiligingsinstellingen om te voorkomen dat het kind of een vreemde **AAPS** misbruikt. Zie [Instellingen → Beveiliging](#Preferences-protection) om een wachtwoord of biometrische beveiliging toe te voegen aan bolussen, wijzigingen van instellingen, of zelfs aan **AAPS** zelf.
 
-## Remote monitoring and remote control
+## Volgen op afstand en bediening op afstand
 
-Remote monitoring is an essential functionality when using **AAPS** for children. See the dedicated section [Remote Monitoring](../RemoteFeatures/RemoteMonitoring.md) to explore possible options.
+Volgen op afstand is een essentiële functie als je **AAPS** gebruikt voor kinderen. Zie de aparte sectie [Volgen op afstand](../RemoteFeatures/RemoteMonitoring.md) voor de mogelijke opties.
 
-Remote monitoring and treatment can be hugely beneficial for parents of a type 1 child and this is particularly so when the child attends kindergarten and elementary school. But make sure the teachers and educators are aware of your kid's treatment plan.<br/> Work out how adding in remote control is going to work with/enhance the existing plan. Many parents find it helpful to have a separate line of communication with childcare providers, for example a cheap small teacher “follow” phone.<br/> Examples for school care plans can be found in the [files section of AAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) on Facebook. 
+Volgen en behandelen op afstand kan ouders van een kind met type 1 enorm helpen, vooral als het kind naar de kinderopvang of de basisschool gaat. Zorg er wel voor dat de leerkrachten en begeleiders het behandelplan van je kind kennen.
+
+Bepaal hoe bediening op afstand past in het bestaande plan en hoe het dit plan kan verbeteren. Veel ouders vinden het handig om een apart communicatiekanaal te hebben met de begeleiders, bijvoorbeeld een goedkope kleine "volg"-telefoon voor de leerkracht.
+
+Voorbeelden van zorgplannen voor school vind je in de [bestandensectie van AAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) op Facebook. 

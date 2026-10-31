@@ -1,360 +1,398 @@
-# Key AAPS features
+# Основни функции на AAPS
 
-## Loop mode
+## Режим на кръга
 
-The loop status is shown on the main screen with one of the icons below.
+Статусът на кръга се показва на главния екран с една от иконите по-долу.
 
-**AAPS** offers several loop modes, such as Open Loop (7), Closed Loop (1) and Low Glucose Suspend (LGS - 2).
+**AAPS** предлага няколко режима на кръга: Затворен кръг (1), Спиране на базал при ниска КЗ (LGS – 2) и Отворен кръг (3).
 
-See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) for information on how to select the loop mode.
+Вижте [Екрани на AAPS > Главният екран > Статус на кръга](#AapsScreens-loop-status) за информация как да изберете режима на кръга и за другите икони на снимката (4 до 6).
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Статус на кръга](../images/Home2020_LoopStatus.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
-### Open Loop
+### Отворен кръг
 
-**AAPS** continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions (temporary basal rates) on how to adjust your therapy if necessary.
+**AAPS** непрекъснато оценява всички налични данни (IOB, COB, КЗ...) и дава предложения за лечение (временни базални дози) как да промените терапията си, ако е необходимо.
 
-The suggestions will not be executed automatically (as in closed loop). The suggestions have to be enacted by the user manually into the pump (if using virtual pump) or by using a button if **AAPS** is connected to a real pump.
+Предложенията не се изпълняват автоматично (както при затворен кръг). Потребителят трябва сам да въведе предложенията в помпата (ако използва виртуална помпа) или да ги приложи с бутон, ако **AAPS** е свързан с реална помпа.
 
-This option is for getting to know how **AAPS** works or if you are using an unsupported pump. You will be in Open Loop, no matter what choice you make here, until the end of **[Objective 5](#objectives-objective5)**.
+Когато **AAPS** има предложение, в долната навигация на главния екран се появява елемент **Кръг** със значка. Натиснете го, за да прочетете предложението („Приложи нов временен базал“) с неговата доза, продължителност и причина, и след това натиснете **Изпълнение**, за да го изпълните:
+
+![Предложение в режим Отворен кръг с бутона „Изпълнение“](../images/screens/loop_tab.png)
+
+Предложението е валидно само няколко минути. Ако е по-старо от около 9 минути или ако междувременно кръгът е бил спрян или помпата е била разкачена, **AAPS** го отказва и нищо не се изпраща към помпата (*„Това предложение е твърде старо. Нищо не е приложено в помпата. Изчакайте следващото предложение.“*). Изчакайте следващото предложение.
+
+Тази опция е за запознаване с начина, по който работи **AAPS**, или ако използвате неподдържана помпа. Каквото и да изберете тук, ще бъдете в режим Отворен кръг до края на **[Цел 5](#objectives-objective5)**.
 
 (KeyAapsFeatures-LGS)=
 
-### Low Glucose Suspend (LGS)
+### Спиране на базал при ниска КЗ (LGS)
 
-In this mode, [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero.
+В този режим [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) е зададен на нула.
 
-This means that if blood glucose is dropping, **AAPS** can reduce the basal for you. But if blood glucose is rising, no automatic correction will be made. Your basal rates will remain the same as defined in your current **Profile**. Only if IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower **BG**.
+Това означава, че ако кръвната захар спада, **AAPS** може да намали базала вместо вас. Но ако кръвната захар се покачва, няма да се прави автоматична корекция. Базалните ви дози ще останат същите, както са зададени в текущия ви **Профил**. Допълнителен инсулин за понижаване на **КЗ** ще бъде подаден само ако IOB е отрицателен (от предишно спиране на базала при ниска КЗ).
 
-This mode is available starting at **[Objective 6](#objectives-objective6)**.
+Този режим е достъпен от **[Цел 6](#objectives-objective6)**.
+
+Освен когато го изберете сами, **AAPS** може и сам да превключи в този режим: докато изпълнявате **[Цел 6](#objectives-objective6)** и винаги когато открие повтарящи се стойности на КЗ (вижте [предупредителен знак за КЗ](#aaps-screens-bg-warning-sign)).
 
 (KeyAapsFeatures-ClosedLoop)=
 
-### Closed Loop
+### Затворен кръг
 
-**AAPS** continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (*i.e.* without further intervention by you) to reach the set [target range or value](#profile-glucose-targets) (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.).
+**AAPS** непрекъснато оценява всички налични данни (IOB, COB, КЗ...) и при нужда автоматично променя лечението (*т.е.* без допълнителна намеса от ваша страна), за да достигне зададения [целеви диапазон или стойност](#profile-glucose-targets) (подаване на болус, временна базална доза, спиране на инсулина, за да се избегне хипогликемия и др.).
 
-The Closed Loop works within numerous safety limits, which can be set individually.
+Затвореният кръг работи в рамките на много граници за безопасност, които могат да се задават индивидуално.
 
-Closed Loop is only possible if you are in **[Objective 7](#objectives-objective7)** or higher and use a supported pump.
+Затворен кръг е възможен само ако сте на **[Цел 7](#objectives-objective7)** или по-висока и използвате поддържана помпа.
 
-(Open-APS-features-autosens)=
+(autosens)= (Open-APS-features-autosens)=
 
 ## Autosens
 
-- Autosens is an algorithm which looks at blood glucose deviations (positive/negative/neutral).
-- It will try and figure out how sensitive/resistant you are based on these deviations.
-- The oref implementation in **OpenAPS** runs off a combination of 24 and 8 hours worth of data. It uses either one which is more sensitive.
-- In versions prior to **AAPS 2.7**, the user had to choose between 8 or 24 hours manually.
-- From **AAPS 2.7** on Autosens in **AAPS** will switch between a 24 and 8 hours window for calculating sensitivity. It will pick whichever one is more sensitive. 
-- If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
-- Changing a cannula or changing a profile will reset Autosens ratio back to 100% (a percentual profile switch with duration won't reset autosens).
-- Autosens adjusts your basal and ISF (i.e.: mimicking what a Profile shift does).
-- If continuously eating carbs over an extended period, Autosens will be less effective during that period as carbs are excluded from **BG** delta calculations.
+- Autosens е алгоритъм, който следи отклоненията на кръвната захар (положителни/отрицателни/неутрални).
+- Той се опитва да определи колко сте чувствителни или резистентни въз основа на тези отклонения.
+- Реализацията на oref в **OpenAPS** използва комбинация от данни за 24 и за 8 часа. Използва този от двата резултата, който показва по-голяма чувствителност.
+- Потребителите, които идват от oref1, вероятно ще забележат, че системата може да реагира по-малко динамично на промени, защото чувствителността се изчислява ту за 24, ту за 8 часа.
+- Смяната на канюла или смяната на профил връща коефициента на Autosens на 100 % (смяна на профил с процент и с продължителност не нулира Autosens).
+- Autosens променя вашия базал и ISF (т.е. действа подобно на смяна на профила).
+- Ако ядете въглехидрати непрекъснато за по-дълго време, Autosens ще бъде по-малко ефективен през този период, защото въглехидратите се изключват от изчисленията на делтата на **КЗ**.
+- The deviations are converted into a **sensitivity ratio** (a percentage): a ratio below 100% means AAPS thinks you're more sensitive to insulin than your **Profile** assumes (so it lowers effective basal and raises the ISF value), while a ratio above 100% means you're more resistant (so it raises basal and lowers the ISF value).
+- По подразбиране този коефициент се поддържа между 0,7 (70 %, по-чувствителни) и 1,2 (120 %, по-резистентни), така че поредица от необичайни данни не може да отклони дозирането ви твърде много от вашия **Профил**. Тези граници могат да се променят в разширените настройки на определянето на чувствителност.
+- Autosens и [Autotune](../AdvancedOptions/Autotune.md) решават един и същ основен проблем в различен времеви мащаб: Autosens леко коригира *текущото* дозиране от минута на минута въз основа на последните 8–24 ч, а Autotune бавно променя самия *Профил* въз основа на историята от няколко седмици. Използването на двете е нормално и очаквано – те се допълват, а не се дублират.
+
+*Пълното техническо описание на алгоритъма autosens ще намерите в [документацията на OpenAPS за Autosens](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).*
 
 (Open-APS-features-super-micro-bolus-smb)=
 
-## Super Micro Bolus (SMB)
+## Супер микро болус (SMB)
 
-**SMB**, the shortform of **Super micro bolus**, is an OpenAPS feature introduced from 2018 onwards, within the Oref1 algorithm. In contrast to **AMA**, **SMB** does not use temporary basal rates to control glucose levels, but mainly **small super micro boluses**. In situations where **AMA** would add 1.0 IU insulin using a temporary basal rate, **SMB** delivers several super micro boluses in small steps at **5 minute intervals**, e.g. 0.4 IU, 0.3 IU, 0.2 IU and 0.1 IU. At the same time (for safety reasons) the actual basal rate is set to 0 IU/h for a certain period to prevent overdose (**'zero-temping'**). This allows the system to adjust the blood glucose faster than with the temporary basal rate increase in **AMA**.
+**SMB**, съкращение от **Super micro bolus** (супер микро болус), е функция на OpenAPS, въведена от 2018 г. в алгоритъма Oref1. За разлика от **AMA**, **SMB** не управлява нивото на глюкозата с временни базални дози, а главно с **малки супер микро болуси**. В ситуации, в които **AMA** би добавил 1,0 IU инсулин чрез временна базална доза, **SMB** подава няколко супер микро болуса на малки стъпки през **интервали от 5 минути**, напр. 0,4 IU, 0,3 IU, 0,2 IU и 0,1 IU. В същото време (от съображения за безопасност) действителната базална доза се задава на 0 IU/ч за определено време, за да се избегне предозиране (**„нулев временен базал“ (zero-temping)**). Така системата може да коригира кръвната захар по-бързо, отколкото с увеличаването на временната базална доза при **AMA**.
 
-Thanks to SMB, it may be sufficient for meals containing only "slow" carbs to inform the system of the planned amount of carbohydrate and leave the rest to **AAPS**. However, this may lead to higher postprandial (post-meal) peaks because pre-bolusing isn’t possible. Or you can give, if necessary with pre-bolusing, a **start bolus**, which **only partly** covers the carbohydrates (e.g. 2/3 of the estimated amount) and let **SMB** deliver the rest of the insulin.
+Благодарение на SMB при хранения само с „бавни“ въглехидрати може да е достатъчно да въведете в системата планираното количество въглехидрати и да оставите останалото на **AAPS**. Това обаче може да доведе до по-високи пикове след хранене, защото не е възможен болус преди хранене (pre-bolus). Или можете да подадете (при нужда като болус преди хранене) **начален болус**, който покрива въглехидратите **само частично** (напр. 2/3 от очакваното количество), и да оставите **SMB** да подаде останалия инсулин.
 
-![SMBs on main graph](../images/SMBs.png)
+![SMB на главната графика](../images/SMBs.png)
 
-SMBs are shown on the main graph with blue triangles. Tap on the triangle to see how much insulin was delivered, or use the [Treatments tab](#aaps-screens-treatments).
+SMB се показват на [графиката на IOB](#aaps-screens-iob) със сини триъгълници. [Натиснете продължително](#aaps-screens-graph-press-and-hold) графиката върху триъгълник, за да видите колко инсулин е подаден, или използвайте [История на леченията](#aaps-screens-treatments).
 
-**SMB's** features contain some safety mechanisms:
+Функциите на **SMB** съдържат няколко механизма за безопасност:
 
-1. **Largest single SMB dose**  
-    The largest single SMB dose can only be the smallest value of:
-    
-    - value corresponding to the current basal rate (as adjusted by autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
-    - half the amount of insulin currently required, or
-    - the remaining portion of your maxIOB value in the settings.
+1. **Най-голяма единична доза SMB**  
+  Най-голямата единична доза SMB може да бъде само най-малката от следните стойности:
+  
+        * стойност, равна на текущата базална доза (както е коригирана от autosens) за времето, зададено в „Максимални минути до които да ограничава SMB“, напр. базалното количество за следващите 30 минути, или
+        * половината от количеството инсулин, което е нужно в момента, или
+        * оставащата част от стойността на maxIOB в настройките.
+      
 
-2. **Low temp basal rates**  
-    Low temporary basal rates (called 'low temps') or temporary basal rates at 0 U/h (called 'zero-temps') are activated more in **SMB**. This is by design for safety reasons and has no negative effects if the **Profile** is set correctly. On the main graph, the IOB curve (yellow thin line) is more meaningful than the course of the temporary basal rates.
+2. **Ниски временни базални дози**  
+  Ниските временни базални дози (наричани „low temps“) или временните базални дози от 0 U/ч (наричани „zero-temps“) се включват по-често при **SMB**. Това е направено нарочно от съображения за безопасност и няма отрицателни последствия, ако **Профилът** е настроен правилно. На главната графика кривата на IOB (тънка жълта линия) казва повече от хода на временните базални дози.
 
-3. **Un-Announced Meals**  
-    Additional calculations to predict the course of glucose, e.g. by **UAM** (un-announced meals). Even without manual carbohydrate input from the user, **UAM** can automatically detect a significant increase in glucose levels due to meals, adrenaline or other influences and try to adjust this with **SMB**. To be on the safe side this also works the other way round and can stop the SMB earlier if an unexpectedly rapid drop in glucose occurs. That's why UAM should always be active at SMB.
+3. **Необявени хранения**  
+  Допълнителни изчисления за прогнозиране на хода на глюкозата, напр. чрез **UAM** (необявени хранения). Дори без ръчно въвеждане на въглехидрати от потребителя **UAM** може автоматично да открие значително покачване на глюкозата заради хранене, адреналин или други влияния и да се опита да го коригира със **SMB**. За по-голяма безопасност това работи и в обратната посока: SMB може да спре по-рано, ако глюкозата неочаквано бързо спада. Затова UAM винаги трябва да е активен при SMB.
 
-**You must have started [objective 9](#objectives-objective9) to use SMB.**
+SMB не решава сам, че е нужен инсулин – той използва същите комбинирани прогнози за КЗ (eventual BG, zero-temp, COB, UAM), описани в [как AAPS превръща прогнозите в решение за дозиране](#aaps-screens-how-predictions-become-a-dosing-decision). SMB и нулевият временен базал са просто двата инструмента, с които AAPS изпълнява това решение.
 
-See also :
+**Трябва да сте започнали [цел 9](#objectives-objective9), за да използвате SMB.**
 
-- [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
-- [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)
-- [Tim's info on SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
+Вижте също [документацията на OpenAPS за oref1/SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb) за пълното техническо описание или [информацията на Tim за SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/) – описание от общността.
 
-The settings for OpenAPS SMB are described below.
+Настройките за OpenAPS SMB са описани по-долу.
 
 (Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)=
 
-### Max U/h a temp basal can be set to
+### Maximum basal rate
 
-This safety setting determines the maximum temporary basal rate the insulin pump may deliver. It is also known as **max-basal**.
+Тази настройка за безопасност определя максималната временна базална доза, която инсулиновата помпа може да подава. Тя е известна и като **max-basal**.
 
-The value is measured in units per hour (U/h). It is advised to set this to something sensible. A good recommendation for setting this parameter is:
+Стойността се измерва в единици на час (U/ч). Препоръчително е да зададете разумна стойност. Добра препоръка за задаване на този параметър е:
 
-**MAX-BASAL = HIGHEST BASAL RATE x 4**
+**MAX-BASAL = НАЙ-ВИСОКАТА БАЗАЛНА ДОЗА x 4**
 
-For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
+Например, ако най-високата базална доза във вашия профил е 0,5 U/ч, можете да я умножите по 4 и да получите стойност 2 U/ч.
 
-**AAPS** limits this value as a 'hard limit' according to [Preferences > Treatments safety > Patient Type](#preferences-patient-type). The hard limits are as follows:
+**AAPS** ограничава тази стойност с „твърд лимит“ според [Настройки > Сигурност > Възраст на пациента](#preferences-patient-type). Твърдите лимити са следните:
 
-- Child: 2
-- Teenager: 5
-- Adult: 10
-- Insulin-resistant adult: 12
-- Pregnant: 25
+- Дете: 2
+- Тийнейджър: 5
+- Възрастен: 10
+- Възрастни с голяма инсулинова резистентност: 12
+- Бременност: 25
 
-*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
+*Вижте също [преглед на твърдо зададените лимити](#Open-APS-features-overview-of-hard-coded-limits).*
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
-### Maximum total IOB OpenAPS can’t go over
+### Максимален общ IOB, над който OpenAPS не може да премине (Макс IOB за SMB)
 
-This value determines the maximum **Insulin on Board** (basal and bolus IOB) that **AAPS** will remain under while running in closed loop mode. It is also known as **maxIOB**.
+Тази стойност определя максималния **Активен инсулин** (IOB от базал и болус), под който **AAPS** остава, докато работи в режим Затворен кръг. Тя е известна и като **maxIOB**.
 
-If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
+Ако текущият IOB (напр. след болус за хранене) е над зададената стойност, кръгът спира да подава инсулин, докато IOB не спадне под зададената граница.
 
-A good start for setting this parameter is:
+Добро начало за задаване на този параметър е:
 
-    maxIOB = average mealbolus + 3x max daily basal
+      maxIOB = среден болус за хранене + 3 x максимален дневен базал
     
 
-Be careful and patient when adjusting your **max-IOB**. It is different for everyone and can also depend on the average total daily dose (TDD).
+Бъдете внимателни и търпеливи, когато променяте **max-IOB**. Стойността е различна за всеки човек и може да зависи и от средната обща дневна доза (TDD).
 
-**AAPS** limits this value as a 'hard limit' according to [Preferences > Treatments safety > Patient Type](#preferences-patient-type). The hard limits are as follows:
+**AAPS** ограничава тази стойност с „твърд лимит“ според [Настройки > Сигурност > Възраст на пациента](#preferences-patient-type). Твърдите лимити са следните:
 
-- Child: 3
-- Teenager: 7
-- Adult: 12
-- Insulin resistant adult: 25
-- Pregnant: 40
+- Дете: 7
+- Тийнейджър: 13
+- Възрастен: 22
+- Възрастни с голяма инсулинова резистентност: 30
+- Бременност: 70
 
-*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
+*Вижте също [преглед на твърдо зададените лимити](#Open-APS-features-overview-of-hard-coded-limits).*
 
-Note : When using **SMB**, the **max-IOB** is calculated differently than in AMA. In **AMA**, maxIOB is a safety-parameter for basal **IOB**, while in SMB-mode, it also includes bolus IOB.
+Бележка: при използване на **SMB** **max-IOB** се изчислява по различен начин от AMA. При **AMA** maxIOB е параметър за безопасност за базалния **IOB**, а в режим SMB той включва и IOB от болуси.
 
-See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
+### Използвай динамична чувствителност
 
-### Enable dynamic sensitivity
+Това е функцията [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Когато е включена, стават достъпни нови настройки. Настройките са обяснени на страницата [DynamicISF](#dyn-isf-preferences).
 
-This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](#dyn-isf-preferences) page.
+### Използвай Autosens
 
-### Use Autosens feature
+Това е функцията [Autosens](#Open-APS-features-autosens). Когато използвате DynamicISF, Autosens не може да се използва, защото това са два различни алгоритъма, които променят една и съща стойност (чувствителността).
 
-This is the [Autosens](#Open-APS-features-autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
+Autosens следи отклоненията на кръвната захар (положителни/отрицателни/неутрални). Той се опитва да определи колко сте чувствителни или резистентни въз основа на тези отклонения и според тях променя базалната доза и ISF.
 
-Autosens looks at blood glucose deviations (positive/negative/neutral). It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
+Когато е включена, стават достъпни нови настройки.
 
-When enabled, new settings become available.
+#### Чувствителността увеличава целта
 
-#### Sensitivity raises target
+Ако тази опция е включена, определянето на чувствителност (autosens) може да повиши целта, когато бъде открита чувствителност (под 100 %). В този случай целта ви ще бъде повишена с процента на откритата чувствителност.
 
-If this option is enabled, the sensitivity detection (autosens) can raise the target when sensitivity is detected (below 100%). In this case your target will be raised by the percentage of the detected sensitivity.
+Ако целта е променена заради определянето на чувствителност, тя се показва със зелен фон на главния екран.
 
-If the target is modified due to sensitivity detection, it will be displayed with a green background on your home screen.
+![Цел, променена от autosens](../images/Home2020_DynamicTargetAdjustment.png)
 
-![Target modified by autosens](../images/Home2020_DynamicTargetAdjustment.png)
+Тази настройка е достъпна, когато е включена „Използвай динамична чувствителност“ или „Използвай Autosens“.
 
-This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
+#### Инсулиновата резистентност намалява целта
 
-#### Resistance lowers target
+Ако тази опция е включена, определянето на чувствителност (autosens) може да понижи целта, когато бъде открита резистентност (над 100 %). В този случай целта ви ще бъде понижена с процента на откритата резистентност.
 
-If this option is enabled, the sensitivity detection (autosens) can lower the target when resistance is detected (above 100%). In this case your target will be lowered by the percentage of the detected resistance.
+Тази настройка е достъпна, когато е включена „Използвай динамична чувствителност“ или „Използвай Autosens“.
 
-This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
+### Използвай SMB
 
-### Enable SMB
+Включете тази опция, за да използвате функцията SMB. Ако е изключена, няма да се подават **SMB**.
 
-Enable this to use SMB functionality. If disabled, no **SMBs** will be given.
-
-When enabled, new settings become available.
+Когато е включена, стават достъпни нови настройки.
 
 (Open-APS-features-enable-smb-with-high-temp-targets)=
 
-#### Enable SMB with high temp targets
+#### Използвай SMB с високи цели
 
-If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as anything above 100mg/dL or 5.6mmol/l, regardless of **Profile** target). This option is intended to be used to disable SMBs when the setting is disabled. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** above 100mg/dL or 5.6mmol/l. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB.
+Ако тази настройка е включена, **SMB** ще се подават дори ако потребителят е избрал висока **Временна цел** (100 mg/dl или 5,6 mmol/l и повече, независимо от целта в **Профила**). Бъдете внимателни, когато я включвате: **SMB** могат да станат прекалено агресивни, ако настройките ви не са добре настроени или ако вашият **Профил** често се променя (например при деца).
 
-If this setting is enabled, **SMB** will only be enabled with a high temp target if **Enable SMB with temp targets** is also enabled.
+When this setting is disabled, a high **Temp Target** turns **SMBs** off. Например, ако тази опция е изключена, **SMB** могат да бъдат изключени, като зададете **Временна цел** от 100 mg/dl или 5,6 mmol/l и повече. Тази опция изключва **SMB** и независимо от това кое друго условие се опитва да разреши SMB – с изключение на ниска **Временна цел** като **Преди хранене** (или всяка **Временна цел** от 98 mg/dl или 5,4 mmol/l и по-малко), при която **SMB** могат все пак да се подават, за да доведат **КЗ** до целта.
+
+This setting does not turn **SMB** on by itself. With a high temp target, **SMB** is only given if one of the other settings below (for example **Enable SMB always** or **Enable SMB with COB**) also allows it.
 
 (Open-APS-features-enable-smb-always)=
 
-#### Enable SMB always
+#### Винаги използвай SMB
 
-If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). If this setting is enabled, the rest of the enable settings below will have no effect. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled.
+Ако тази настройка е включена, SMB е винаги разрешен (независимо от COB, временните цели или болусите). Ако тази настройка е включена, останалите настройки за разрешаване на SMB по-долу няма да имат ефект. Ако обаче **Използвай SMB с високи цели** е изключена и е зададена висока временна цел, SMB ще бъдат изключени.
 
-This setting is only available if **AAPS** detects that you are using a [reliable BG source](#GettingStarted-TrustedBGSource), with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
+Тази настройка е достъпна само ако **AAPS** установи, че използвате [надежден източник на КЗ](#GettingStarted-TrustedBGSource) с разширено филтриране. FreeStyle Libre 1 не се смята за надежден източник, защото при повреда на сензора има риск старите данни за КЗ да се повтарят безкрайно.
 
-Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+Данни с много шум могат да накарат **AAPS** да смята, че КЗ се покачва много бързо, и така да бъдат подадени ненужни SMB. Повече информация за шума и изглаждането на данните ще намерите [тук](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
-#### Enable SMB with COB
+#### Разреши SMB с COB (въглехидрати)
 
-If this setting is enabled, SMB is enabled when the COB is greater than 0.
+Ако тази настройка е включена, SMB е разрешен, когато COB е по-голямо от 0.
 
-This setting is not visible if "Enable SMB always" is switched on.
+Тази настройка не се вижда, ако „Винаги използвай SMB“ е включена.
 
-#### Enable SMB with temp targets
+#### Разреши SMB с ниски цели
 
-If this setting is enabled, SMB is enabled when there is any temp target set (eating soon, activity, hypo, custom). If this setting is enabled but **Enable SMB with high temp targets** is disabled, SMB will be enabled when a low temp target is set (below 100mg/dL or 5.6mmol/l) but disabled when a high temp target is set.
+Ако тази настройка е включена, SMB е разрешен, когато е зададена временна цел (преди хранене, физическа активност, хипогликемия, потребителска). Ако тази настройка е включена, но **Използвай SMB с високи цели** е изключена, SMB ще бъде разрешен при ниска временна цел (98 mg/dl или 5,4 mmol/l и по-малко), но ще бъде изключен при висока временна цел.
 
-This setting is not visible if "Enable SMB always" is switched on.
+Тази настройка не се вижда, ако „Винаги използвай SMB“ е включена.
 
-#### Enable SMB after carbs
+#### Разреши SMB след въглехидрати
 
-If enabled, SMB is enabled for 6h after carbohydrates are announced, even if COB has reached 0.
+Ако е включена, SMB е разрешен за 6 ч след въвеждане на въглехидрати, дори ако COB вече е 0.
 
-For safety reasons, this setting is only available if **AAPS** detects that you are using a reliable BG source. It is not visible if "Enable SMB always" is switched on.
+От съображения за безопасност тази настройка е достъпна само ако **AAPS** установи, че използвате надежден източник на КЗ. Тя не се вижда, ако „Винаги използвай SMB“ е включена.
 
-This setting is only available if **AAPS** detects that you are using a [reliable BG source,](#GettingStarted-TrustedBGSource) with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
+Тази настройка е достъпна само ако **AAPS** установи, че използвате [надежден източник на КЗ](#GettingStarted-TrustedBGSource) с разширено филтриране. FreeStyle Libre 1 не се смята за надежден източник, защото при повреда на сензора има риск старите данни за КЗ да се повтарят безкрайно.
 
-Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
-This setting is not visible if "Enable SMB always" is switched on.
+Данни с много шум могат да накарат **AAPS** да смята, че КЗ се покачва много бързо, и така да бъдат подадени ненужни SMB. Повече информация за шума и изглаждането на данните ще намерите [тук](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
+Тази настройка не се вижда, ако „Винаги използвай SMB“ е включена.
 
-#### How frequently SMBs will be given in min
+#### SMB интервал
 
-This feature limits the frequency of SMBs. This value determines the minimum time between SMBs. Note that the loop runs every time a glucose value comes in (generally 5 minutes). Subtract 2 minute to give loop additional time to complete. E.g. if you want SMB to be given every loop run, set this to 3 minutes.
+Тази функция ограничава колко често се подават SMB. Тази стойност определя минималното време между два SMB. Имайте предвид, че кръгът се изпълнява всеки път, когато пристигне нова стойност на глюкозата (обикновено на 5 минути). Извадете 2 минути, за да има кръгът допълнително време да завърши. Например, ако искате SMB да може да се подава при всяко изпълнение на кръга, задайте 3 минути.
 
-Default value: 3 min.
+Стойност по подразбиране: 3 мин.
 
 (Open-APS-features-max-minutes-of-basal-to-limit-smb-to)=
 
-#### Max minutes of basal to limit SMB to
+#### Максимални минути до които да ограничава SMB
 
-This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
+Това е важна настройка за безопасност. Тази стойност определя колко SMB може да се подаде въз основа на количеството базален инсулин за определено време, когато то е покрито от COB.
 
-Making this value larger allows the SMB to be more aggressive. You should start with the default value of 30 minutes. After some experience, increase the value in 15 minutes increments and observe the effects over multiple meals.
+По-голяма стойност прави SMB по-агресивен. Започнете със стойността по подразбиране 30 минути. След като натрупате опит, увеличавайте стойността на стъпки от 15 минути и наблюдавайте ефекта при няколко хранения.
 
-It is recommended not to set the value higher than 90 minutes, as this would lead to a point where the algorithm might not be able to accommodate a decreasing BG with 0 U/h basal ('zero-temp'). You should also set alarms, especially if you are still testing new settings, which will warn you well before a hypo.
+Не се препоръчва стойност над 90 минути, защото тогава алгоритъмът може да не успее да компенсира спадаща КЗ с базал 0 U/ч („нулев временен базал“, zero-temp). Задайте и аларми, особено докато още тествате нови настройки, които да ви предупредят навреме преди хипогликемия.
 
-Default value: 30 min.
+Стойност по подразбиране: 30 мин.
 
-#### Max minutes of basal to limit SMB to for UAM
+#### UAM Максимални минути от базал до които да лимитира SMB
 
-This setting allows to adjust the strength of SMB during UAM, when there are no more carbs.
+Тази настройка позволява да промените силата на SMB по време на UAM, когато вече няма въглехидрати.
 
-Default value : the same as **Max minutes of basal to limit SMB to**.
+Стойност по подразбиране: същата като **Максимални минути до които да ограничава SMB**.
 
-This setting is only visible if "Enable SMB" and "Enable UAM " are switched on.
+Тази настройка се вижда само ако „Използвай SMB“ и „Разреши UAM“ са включени.
 
-### Enable UAM
+(enable-uam)=
 
-With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful if you forget to tell **AAPS** about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increase caused by carbs, adrenaline, etc., and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decrease, it can stop SMBs earlier.
+### Разреши UAM
 
-**Therefore, UAM should always be activated when using SMB.**
+Когато тази опция е включена, алгоритъмът SMB може да разпознава необявени хранения. Това помага, ако забравите да въведете въглехидратите в **AAPS**, ако сте ги преценили грешно и въведеното количество не е вярно, или ако хранене с много мазнини и белтъчини продължава по-дълго от очакваното. Без въведени въглехидрати UAM може да разпознае бързо покачване на глюкозата, причинено от въглехидрати, адреналин и др., и се опитва да го коригира със SMB. Това работи и в обратната посока: ако глюкозата бързо спада, SMB могат да бъдат спрени по-рано.
+
+**Затова UAM винаги трябва да е включен, когато използвате SMB.**
 
 (key-aaps-features-minimal-carbs-required-for-suggestion)=
 
-### Minimal carbs required for suggestion
+### Граница за необходими въглехидрати
 
-Minimum grams of carbs to display a carbs suggestion alert. Eating of additional carbs will be suggested when the reference design detects that it requires carbs. In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
+Минимално количество въглехидрати в грамове, при което се показва предупреждение с предложение за въглехидрати. Приемът на допълнителни въглехидрати ще бъде предложен, когато алгоритъмът (reference design) установи, че са нужни въглехидрати. В този случай ще получите известие, което може да бъде отложено за 5, 15 или 30 минути.
 
-Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+При желание известията за нужни въглехидрати могат да се изпращат към Nightscout. В този случай ще се покаже и разпространи известие.
 
-In any case, the required carbs will be displayed in the COB section on your home screen.
+Във всички случаи необходимите въглехидрати ще се покажат в секцията COB на главния екран.
 
-![Display carbs required on home screen](../images/Pref2020_CarbsRequired.png)
+![Показване на необходимите въглехидрати на главния екран](../images/main/main_screen_carbs_required.png)
 
-### Advanced Settings
+### Разширени настройки
 
-You can read more here : [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
+Пълното описание на всички параметри (включително настройки, които не са описани тук) ще намерите в [документацията на OpenAPS за настройките и настройките за безопасност](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
 
-**Always use short average delta instead of simple data** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps **AAPS** to be steadier with noisy data sources like xDrip+ and Libre.
+**Винаги използвай краткоср делта** Ако включите тази функция, **AAPS** използва кратката средна делта на кръвната захар за последните 15 минути, която обикновено е средната стойност от последните три стойности. Това помага на **AAPS** да работи по-стабилно с източници на данни с много шум като xDrip и Libre.
 
-**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump and/or profile. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then **AAPS** can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+**Макс дневен множител** Това е важна граница за безопасност. Стойността по подразбиране (която най-вероятно не трябва да се променя) е 3. Това означава, че **AAPS** никога няма да може да зададе временна базална доза, която е повече от 3 пъти по-висока от най-високата часова базална доза, програмирана в помпата и/или профила на потребителя. Пример: ако най-високата ви базална доза е 1,0 U/ч, а максималният дневен множител е 3, **AAPS** може да зададе временна базална доза най-много 3,0 U/ч (= 3 x 1,0 U/ч).
 
-Default value: 3 (shouldn’t be changed unless you really need to and know what you are doing)
+Стойност по подразбиране: 3 (не трябва да се променя, освен ако наистина се налага и знаете какво правите)
 
-**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump and/or profile.
+**Множител за текущия базал** Това е друга важна граница за безопасност. Стойността по подразбиране (която също най-вероятно не трябва да се променя) е 4. Това означава, че **AAPS** никога няма да може да зададе временна базална доза, която е повече от 4 пъти по-висока от текущата часова базална доза, програмирана в помпата и/или профила на потребителя.
 
-Default value: 4 (shouldn’t be changed unless you really need to and know what you are doing)
+Стойност по подразбиране: 4 (не трябва да се променя, освен ако наистина се налага и знаете какво правите)
 
 * * *
 
+(Open-APS-features-auto-isf)=
+
+## Автом ISF
+
+**Автом ISF** (Auto ISF) е **експериментален** алгоритъм за напреднали потребители. Той е изграден върху OpenAPS SMB и добавя правила, които правят инсулиновата чувствителност (ISF) по-силна или по-слаба според поведението на глюкозата ви.
+
+Това е функция за разработка: тя може да бъде включена само в [компилация за разработка (dev)](../AdvancedOptions/DevBranch.md) с включен **режим за разработчици (Engineering mode)**. В обикновена компилация (release) тя е принудително изключена и затова не се показва в **Конфигурация → APS**. Изпълнението на [Целите](../SettingUpAaps/CompletingTheObjectives.md) не я отключва.
+
+След като го изберете, неговите **Настройки** съдържат настройките на OpenAPS SMB и още една група **AutoISF настройки**:
+
+- **Разреши AutoISF**: включва промените на ISF. Без нея алгоритъмът работи като OpenAPS SMB.
+- **AutoISF минимум** и **AutoISF максимум**: колко слаба и колко силна може да стане ISF – по същия начин като границите на Autosens. При стойност по подразбиране 1,0 ефектът е изключен.
+- **Тегла**: всяко тегло управлява едно правило, а стойността по подразбиране 0,0 изключва правилото. 
+  - докато изменението на глюкозата се **ускорява**, ISF се засилва (повече инсулин);
+  - докато изменението на глюкозата се **забавя**, ISF се отслабва (по-малко инсулин);
+  - докато глюкозата е **под целта**, ISF се отслабва;
+  - докато глюкозата е **над целта**, ISF се засилва;
+  - тегло **след хранене** (post-prandial) и тегло за **продължителност** действат след хранене и когато глюкозата остава висока дълго време.
+- **Съотношение на прилагания SMB** (с минимум, максимум и диапазон на КЗ): каква част от нужния инсулин може да се подаде като SMB.
+- **SMB максимален диапазон**: с какъв множител може да бъде надвишена обичайната граница за размера на SMB ([максимални минути базал](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), обикновено 120 минути). Стойността по подразбиране 1 не променя нищо; възможни са стойности до 5. Увеличавайте тази експериментална стойност бавно и внимателно.
+- **IOB граница в проценти**: процентът от max IOB, над който SMB се изключват.
+
+    {admonition} Само за опитни потребители
+    :class: danger
+    Със стойностите по подразбиране Автом ISF не променя нищо. Всяка стойност, която увеличите, прави **AAPS** по-агресивен. Променяйте само по една стойност, на малки стъпки, и наблюдавайте резултата няколко дни. Бъдете изключително внимателни с **AutoISF максимум** над 2,5.
+
 (Open-APS-features-advanced-meal-assist-ama)=
 
-## Advanced Meal Assist (AMA)
+## Разширен помощник за хранене (AMA)
 
-AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
+AMA, съкращение от „advanced meal assist“ (разширен помощник за хранене), е функция на OpenAPS от 2017 г. (oref0). OpenAPS Advanced Meal Assist (AMA) позволява на системата по-бързо да зададе висок временен базал след болус за хранене, ако въвеждате въглехидратите надеждно.
 
-You can find more information in the [OpenAPS documentation](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
+Повече информация ще намерите в [документацията на OpenAPS](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
-### Max U/hr a Temp Basal can be set to (OpenAPS "max-basal")
+### Maximum basal rate (OpenAPS "max-basal")
 
-This safety setting helps **AAPS** from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. It is advised to set this to something sensible. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
+Тази настройка за безопасност не позволява на **AAPS** никога да подаде опасно висока базална доза и ограничава временната базална доза до x U/ч. Препоръчително е да зададете разумна стойност. Добра препоръка е да вземете най-високата базална доза във вашия профил и да я умножите по 4, но най-малко по 3. Например, ако най-високата базална доза във вашия профил е 1,0 U/ч, можете да я умножите по 4, да получите стойност 4 U/ч и да зададете 4 като ваш параметър за безопасност.
 
-You cannot choose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
+Не можете да изберете произволна стойност: от съображения за безопасност има „твърд лимит“, който зависи от възрастта на пациента. „Твърдият лимит“ за maxIOB е по-нисък при AMA, отколкото при SMB. За деца стойността е най-ниска, а за възрастни с голяма инсулинова резистентност е най-висока.
 
-The hardcoded parameters in **AAPS** are:
+Твърдо зададените параметри в **AAPS** са:
 
-- Child: 2
-- Teenager: 5
-- Adult: 10
-- Insulin resistant adult: 12
-- Pregnant: 25
+- Дете: 2
+- Тийнейджър: 5
+- Възрастен: 10
+- Възрастни с голяма инсулинова резистентност: 12
+- Бременност: 25
 
-*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
+*Вижте също [преглед на твърдо зададените лимити](#Open-APS-features-overview-of-hard-coded-limits).*
 
-### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
+### Максимален базален IOB, който OpenAPS може да подаде \[U\] (OpenAPS „max-iob“)
 
-This parameter limits the maximum of basal IOB where **AAPS** still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
+Този параметър ограничава максималния базален IOB, при който **AAPS** все още работи. Ако IOB е по-висок, AAPS спира да подава допълнителен базален инсулин, докато базалният IOB не спадне под границата.
 
-The default value is 2, but you should rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in AMA than in SMB.
+Стойността по подразбиране е 2, но трябва да увеличавате този параметър бавно, за да видите колко ви влияе и коя стойност е най-подходяща. Стойността е различна за всеки човек и зависи и от средната обща дневна доза (TDD). От съображения за безопасност има граница, която зависи от възрастта на пациента. „Твърдият лимит“ за maxIOB е по-нисък при AMA, отколкото при SMB.
 
-- Child: 3
-- Teenager: 5
-- Adult: 7
-- Insulin resistant adult: 12
-- Pregnant: 25
+- Дете: 3
+- Тийнейджър: 5
+- Възрастен: 7
+- Възрастни с голяма инсулинова резистентност: 12
+- Бременност: 25
 
-*See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
+*Вижте също [преглед на твърдо зададените лимити](#Open-APS-features-overview-of-hard-coded-limits).*
 
-### Enable AMA Autosens
+### Използвай Autosens (AMA)
 
-Here, you can choose, if you want to use the [sensitivity detection](../DailyLifeWithAaps/SensitivityDetectionAndCob.md) autosens or not.
+Тук можете да изберете дали искате да използвате [определянето на чувствителност](../DailyLifeWithAaps/SensitivityDetectionAndCob.md) autosens.
 
-### Autosens adjust temp targets too
+### Autosens регулира целите
 
-If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. This lets **AAPS** work more 'aggressive' or not. The actual target might be reached faster with this.
+Ако тази опция е включена, autosens може да променя и целите (освен базала и ISF). Така **AAPS** работи по-„агресивно“ или по-малко агресивно. Така действителната цел може да бъде достигната по-бързо.
 
-### Advanced Settings
+### Разширени настройки
 
-- Normally you do not have to change the settings in this dialogue!
-- If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
+- Обикновено не е нужно да променяте настройките в този прозорец!
+- Ако все пак искате да ги промените, уверете се, че разбирате какво правите – вижте пълното описание на параметрите в [документацията на OpenAPS за настройките и настройките за безопасност](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
 
-**Always use short average delta instead of simple data** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps **AAPS** to work more steady with noisy data sources like xDrip+ and Libre.
+**Винаги използвай краткоср делта** Ако включите тази функция, **AAPS** използва кратката средна делта на кръвната захар за последните 15 минути, която обикновено е средната стойност от последните три стойности. Това помага на **AAPS** да работи по-стабилно с източници на данни с много шум като xDrip и Libre.
 
-**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then **AAPS** can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+**Макс дневен множител** Това е важна граница за безопасност. Стойността по подразбиране (която най-вероятно не трябва да се променя) е 3. Това означава, че **AAPS** никога няма да може да зададе временна базална доза, която е повече от 3 пъти по-висока от най-високата часова базална доза, програмирана в помпата на потребителя. Пример: ако най-високата ви базална доза е 1,0 U/ч, а максималният дневен множител е 3, **AAPS** може да зададе временна базална доза най-много 3,0 U/ч (= 3 x 1,0 U/ч).
 
-Default value: 3 (shouldn’t be changed unless you really need to and know what you are doing)
+Стойност по подразбиране: 3 (не трябва да се променя, освен ако наистина се налага и знаете какво правите)
 
-**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that **AAPS** will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump.
+**Множител за текущия базал** Това е друга важна граница за безопасност. Стойността по подразбиране (която също най-вероятно не трябва да се променя) е 4. Това означава, че **AAPS** никога няма да може да зададе временна базална доза, която е повече от 4 пъти по-висока от текущата часова базална доза, програмирана в помпата на потребителя.
 
-Default value: 4 (shouldn’t be changed unless you really need to and know what you are doing)
+Стойност по подразбиране: 4 (не трябва да се променя, освен ако наистина се налага и знаете какво правите)
 
-**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. **AAPS** doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
+**Делител на DIA за отлагане на болус** Функцията „отлагане на болус“ (bolus snooze) действа след болус за хранене. **AAPS** не задава ниски временни базални дози след хранене за период, равен на DIA, разделено на параметъра „отлагане на болус“. Стойността по подразбиране е 2. Това означава, че при DIA 5 ч „отлагането на болус“ ще продължи 5 ч : 2 = 2,5 ч.
 
-Default value: 2
+Стойност по подразбиране: 2
 
 * * *
 
 (Open-APS-features-overview-of-hard-coded-limits)=
 
-## Overview of hard-coded limits
+## Преглед на твърдо зададените лимити
 
-|            | Child | Teenager | Adult | Insulin resistant adult | Pregnant |
-| ---------- | ----- | -------- | ----- | ----------------------- | -------- |
-| MAXBOLUS   | 5     | 10       | 17    | 25                      | 60       |
-| MINDIA     | 5     | 5        | 5     | 5                       | 5        |
-| MAXDIA     | 9     | 9        | 9     | 9                       | 10       |
-| MINIC      | 2     | 2        | 2     | 2                       | 0.3      |
-| MAXIC      | 100   | 100      | 100   | 100                     | 100      |
-| MAXIOB_AMA | 3     | 5        | 7     | 12                      | 25       |
-| MAXIOB_SMB | 7     | 13       | 22    | 30                      | 70       |
-| MAXBASAL   | 2     | 5        | 10    | 12                      | 25       |
+|            | Дете | Тийнейджър | Възрастен | Възрастни с голяма инсулинова резистентност | Бременност |
+| ---------- | ---- | ---------- | --------- | ------------------------------------------- | ---------- |
+| MAXBOLUS   | 5    | 10         | 17        | 25                                          | 60         |
+| MINDIA     | 5    | 5          | 5         | 5                                           | 5          |
+| MAXDIA     | 9    | 9          | 9         | 9                                           | 10         |
+| MINIC      | 2    | 2          | 2         | 2                                           | 0,3        |
+| MAXIC      | 100  | 100        | 100       | 100                                         | 100        |
+| MAXIOB_AMA | 3    | 5          | 7         | 12                                          | 25         |
+| MAXIOB_SMB | 7    | 13         | 22        | 30                                          | 70         |
+| MAXBASAL   | 2    | 5          | 10        | 12                                          | 25         |

@@ -1,30 +1,34 @@
-# internal sandbox file 1 for testing our sprint
+- - -
+orphan: true
+- - -
+
+# εσωτερικό αρχείο δοκιμών 1 για τη δοκιμή του sprint μας
 
 ```{admonition} no need to translate this
 :class: note
 
-No need to translate this.
+Δεν χρειάζεται να μεταφραστεί αυτό.
 ```
 
 ```{danger}
-Here is danger on the road.
+Εδώ υπάρχει κίνδυνος στον δρόμο.
 ```
 
-Test for Setup
+Δοκιμή για τη Ρύθμιση
 
-"The number 43 is, in The Hitchhiker's Guide to the Galaxy by Douglas Adams, the "Answer to the Ultimate Question of Life, the Universe, and Everything," calculated by an enormous supercomputer named Deep Thought over a period of 7.5 million years." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
+«Ο αριθμός 42 είναι, στο βιβλίο του Douglas Adams «Γυρίστε τον γαλαξία με ωτοστόπ», η «Απάντηση στο Απόλυτο Ερώτημα της Ζωής, του Σύμπαντος και των Πάντων», που υπολογίστηκε από έναν τεράστιο υπερυπολογιστή με το όνομα Deep Thought σε διάστημα 7,5 εκατομμυρίων ετών.» - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
 
-This is an internal sandbox file for the documentation team to test
+Αυτό είναι ένα εσωτερικό αρχείο δοκιμών (sandbox) για την ομάδα τεκμηρίωσης, για δοκιμή
 
-1. markdown syntax and
+1. της σύνταξης markdown και
 
-1. background process for
-    1. CROWDIN translation and
-    2. Read The Docs deployment.
+1. της διαδικασίας παρασκηνίου για
+    1. τη μετάφραση στο CROWDIN και
+    2. τη δημοσίευση στο Read The Docs.
 
-You can directly jump from here to the second label in this file - ["Jump"](#this-is-another-test) or [tag jump](#sandbox1-this-is-another-test).
+Μπορείτε να πάτε απευθείας από εδώ στη δεύτερη ετικέτα αυτού του αρχείου - [«Μετάβαση»](#this-is-another-test) ή [μετάβαση με ετικέτα](#sandbox1-this-is-another-test).
 
-And you can jump to the first label too - ["Jump"](#this-is-a-test) or [tag jump](#sandbox1-this-is-a-test).
+Και μπορείτε να πάτε και στην πρώτη ετικέτα - [«Μετάβαση»](#this-is-a-test) ή [μετάβαση με ετικέτα](#sandbox1-this-is-a-test).
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
@@ -35,27 +39,27 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 (sandbox1-this-is-a-test)=
-## This is a test
+## Αυτή είναι μια δοκιμή
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 (sandbox1-this-is-another-test)=
-## This is another test
+## Αυτή είναι άλλη μια δοκιμή
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-Label in the middle of [nowhere](#sandbox1-in-the-middle-of-nowhere) This instead is the label to [](#sandbox1-this-is-another-test) and it should display its name
+Ετικέτα στη μέση του [πουθενά](#sandbox1-in-the-middle-of-nowhere) Αυτή αντίθετα είναι η ετικέτα προς [](#sandbox1-this-is-another-test) και θα πρέπει να δείχνει το όνομά της
 
-Links with anchor :
-- [how long will it take?](#preparing-how-long-will-it-take)
-- [NSClient settings in Preferences](#Preferences-nsclient).
-- [prediction lines in AAPS OVERVIEW](#aaps-screens-prediction-lines) to header level 4
-- [Screenshots](../DailyLifeWithAaps/AapsScreens.md)
-- [Screenshot main graph](#aaps-screens-main-graph) to header level 3
-- [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)
-- [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)
-- [SMB section in this documentation](#Open-APS-features-super-micro-bolus-smb)
+Σύνδεσμοι με άγκυρα:
+- [πόσο θα διαρκέσει;](#preparing-how-long-will-it-take)
+- [Ρυθμίσεις NSClient στις Προτιμήσεις](#Preferences-nsclient).
+- [γραμμές πρόβλεψης στην ΕΠΙΣΚΟΠΗΣΗ του AAPS](#aaps-screens-prediction-lines) σε επικεφαλίδα επιπέδου 4
+- [Στιγμιότυπα οθόνης](../DailyLifeWithAaps/AapsScreens.md)
+- [Στιγμιότυπο του κύριου γραφήματος](#aaps-screens-main-graph) σε επικεφαλίδα επιπέδου 3
+- [Λειτουργίες OpenAPS](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)
+- [μέγιστο IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)
+- [Ενότητα SMB σε αυτή την τεκμηρίωση](#Open-APS-features-super-micro-bolus-smb)

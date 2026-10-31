@@ -1,169 +1,195 @@
 (generaltroubleshooting)=
 
-# **Отстраняване на проблеми**
+# Отстраняване на неизправности
 
-You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem for various known issues.
+**Започнете оттук, когато нещо не работи.** Информацията за отстраняване на неизправности е на много страници в документацията. Тази страница я събира на едно място: това е обща колекция от връзки, подредени по теми, която ще ви помогне да решите най-честите проблеми.
 
-Additional useful information might also be available in the [FAQ](../UsefulLinks/FAQ.md).
+Ако не намерите отговор по-долу, проверете също:
+
+* раздела [Често задавани въпроси](../UsefulLinks/FAQ.md) с отговори на често срещани въпроси и
+* ръководството [Настройване на профила в AAPS](ProfileTuning.md), ако кръгът ви работи, но контролът на кръвната захар трябва да се подобри.
+
+```{admonition} Still stuck?
+:class: tip
+Ако никоя от връзките не реши проблема ви, вижте [Къде мога да получа помощ?](WhereCanIGetHelp.md), за да попитате общността (Facebook, Discord), или изпратете своите [лог файлове](AccessingLogFiles.md) на разработчиците.
+```
 
 ---
 
 (generaltroubleshooting-aaps-app)=
 
-## **AAPS app**
+## Приложението AAPS
 
-### **Building & updating**
+### Компилиране и актуализиране
 
-* [Lost keystore](#troubleshooting_androidstudio-lost-keystore)
-* [Troubleshooting AndroidStudio](TroubleshootingAndroidStudio)
-* [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) and [updating with AAPS Builder](#aaps-builder-updates)
-* [Browser build (CI) troubleshooting](#aaps-ci-troubleshooting)
+* Ако компилирането е неуспешно, вижте [Ако компилирането е неуспешно](#building-aaps-troubleshooting): там е посочен разделът за отстраняване на неизправности за всеки метод на компилиране:
+  * [AAPS Builder](#aaps-builder-troubleshooting)
+  * [Компилиране в браузъра](#aaps-ci-troubleshooting)
+  * [Android Studio](TroubleshootingAndroidStudio.md)
+* Изгубено или ново хранилище за ключове: [Преинсталиране на AAPS с ново хранилище за ключове](#reinstall-aaps)
+* Актуализиране на **AAPS**: [с AAPS Builder](#aaps-builder-updates), [с компилиране в браузъра (fork)](#update-browser-build-troubleshooting), [с Android Studio](#update-computer-build-troubleshooting)
 
-### **Installing**
+### Инсталиране
 
-You may see a Google Play Protect warning that the app is unsafe, was built for older Android versions and doesn't include latest privacy protections.
+* [Предупреждение от Google Play Protect](#transferring-installing-play-protect-warning): приложението е отбелязано като опасно.
+* Инсталирането е **блокирано** със съобщение за непроверен разработчик: вижте [Проверка на разработчиците за Android](#android-developer-verification) за безплатните начини за инсталиране.
 
-Ignore it: More details, Install anyway.
+### Настройки
 
-![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+* [Профил: „Базалът не се поддържа от помпата“](#your-aaps-profile-basal-not-compatible)
+* [Помпа: „Данните идват от различна помпа“](#config-builder-wrong-pump-data)
+* [Nightscout Client](TroubleshootingNsClient.md)
 
-### **Settings**
-* Профил
+### Употреба
 
-  ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
-
-* [Pump - data from different pump](#update30-failure-message-data-from-different-pump)
-
-  ![Failure message: Data from different pump](../images/BasalNotAlignedToHours2.png)
-
-* [Nightscout Client](../GettingHelp/TroubleshootingNsClient.md)
-
-### **Usage**
-* [Wrong carb values](#CobCalculation-detection-of-wrong-cob-values)
-
-   ![Error: Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
-
-* [SMS commands](#SMSCommands-troubleshooting)
+* [Грешни стойности за въглехидратите (бавно усвояване на въглехидратите)](#CobCalculation-detection-of-wrong-cob-values)
+* [Автоматизации](#automations-troubleshooting)
+* [Напълно затворен кръг](#full-closed-loop-troubleshooting)
 
 ---
 
 (generaltroubleshooting-bluetooth-related-issues)=
 
 
-## **Проблеми, свързани с Bluetooth**
+## Проблеми, свързани с Bluetooth
 
-За известни проблеми с Bluetooth връзките, прекъсвания на помпата/пачовете, или проблеми с активирането и връзката вижте [Отстраняване на проблеми с Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
+За известни проблеми с Bluetooth връзките, прекъсвания на връзката с помпата/пачовете или проблеми с активирането и връзката вижте [Отстраняване на неизправности с Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
 (generaltroubleshooting-android-related-issues)=
 
-## **Android Related Issues**
+## Проблеми, свързани с Android
 
-### **Battery optimization**
+### Оптимизиране на батерията
 
-Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
+**AAPS** може да ви помогне да намерите правилните настройки за телефона си: отворете **менюто** (☰) > **За приложението** и докоснете **Don't kill my app?**. Така се отварят указанията за вашата марка телефон в [Don't kill my app](https://dontkillmyapp.com/). [Съветникът за настройване](#setup-wizard-bluetooth-battery-optimisation) също ви моли да изключите оптимизирането на батерията за **AAPS** и Bluetooth.
 
-When this is enabled, it will very likely cause issue for **AAPS** and other supporting apps like **xDrip+**.
+Android има вградени настройки за пестене на батерията, които са включени по подразбиране. Тези настройки автоматично спират или поставят на пауза приложения, които не са нужни за работата на системата. Така се пести енергията на батерията, която използват приложения, които не е нужно да работят постоянно.
 
-It's important to ensure that you have disabled Battery Optimization to ensure **AAPS** and other supporting apps remain active all the time.
+Ако то е включено, много вероятно ще причини проблеми на **AAPS** и на други помощни приложения, като **xDrip**.
 
-Depending on your phone model and make there may be more than one location and setting which needs to have this disabled.
+Важно е да изключите оптимизирането на батерията, за да сте сигурни, че **AAPS** и другите помощни приложения остават активни през цялото време.
 
-***NOTE:** Follow the steps below to Disable Battery Optimization for the Bluetooth service if your phone has this option, the same steps can be used to disable for **AAPS** and other apps, however the screenshots will only show how to do this for the Bluetooth service.*
+В зависимост от модела и марката на телефона може да има повече от едно място и настройка, където това трябва да се изключи.
 
-#### **Pixel phones (stock Android)**
+***ЗАБЕЛЕЖКА:** Следвайте стъпките по-долу, за да изключите оптимизирането на батерията за услугата Bluetooth, ако телефонът ви има тази опция. Същите стъпки може да се използват и за **AAPS** и други приложения, но екранните снимки показват как става това само за услугата Bluetooth.*
 
-* Go to the Android settings, select "Apps".
+#### Телефони Pixel (стандартен Android)
 
-  ![Android Settings¦Apps](../images/troubleshooting/pixel/01_androidsettings.png)
+* Отидете в настройките на Android и изберете „Приложения“ (Apps).
 
-* Select "See all apps"
+  ![Настройки на Android¦Приложения](../images/troubleshooting/pixel/01_androidsettings.png)
 
-  ![See all apps](../images/troubleshooting/pixel/02_apps.png)
+* Изберете „Вижте всички приложения“ (See all apps)
 
-* On the menu on the right, select "Show system" apps.
+  ![Вижте всички приложения](../images/troubleshooting/pixel/02_apps.png)
 
-  ![Show system apps](../images/troubleshooting/pixel/03_allapps.png)
+* В менюто вдясно изберете „Показване на системните приложения“ (Show system).
 
-* Now search and select the app "Bluetooth".
+  ![Показване на системните приложения](../images/troubleshooting/pixel/03_allapps.png)
 
-  ![Bluetooth app](../images/troubleshooting/pixel/03_bluetooth.png)
+* Сега потърсете и изберете приложението „Bluetooth“.
 
-* Click the "App battery usage" and select "Not optimized".
+  ![Приложение Bluetooth](../images/troubleshooting/pixel/03_bluetooth.png)
 
-  ![BT Battery optimization](../images/troubleshooting/pixel/04_btunrestricted.png)
+* Натиснете „Използване на батерията от приложението“ (App battery usage) и изберете „Без ограничения“ (Unrestricted). В някои по-стари версии на Android тази опция се нарича „Не е оптимизирано“ (Not optimized).
+
+  ![Оптимизиране на батерията за BT](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-#### **Samsung phones**
+#### Телефони Samsung
 
-* Go to the android settings, select "Apps"
+* Отидете в настройките на Android и изберете „Приложения“ (Apps)
 
-* On the icon that supposedly changes the sorting algorithm (1), select "Show system apps" (2).
+* Върху иконата, която уж променя начина на сортиране (1), изберете „Показване на системните приложения“ (Show system apps) (2).
 
-  ![App Filter](../images/troubleshooting/samsung/Samsung01_Apps.png)
+  ![Филтър на приложенията](../images/troubleshooting/samsung/Samsung01_Apps.png)
 
-  ![Show system apps](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+  ![Показване на системните приложения](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
 
-* Now search the bluetooth app and select it to see its settings.
+* Сега потърсете приложението Bluetooth и го изберете, за да видите настройките му.
 
-  ![Bluetooth App](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+  ![Приложение Bluetooth](../images/troubleshooting/samsung/Samsung03_BtApp.png)
 
-* Select "battery".
+* Изберете „Батерия“ (battery).
 
-  ![Battery](../images/troubleshooting/samsung/Samsung04_Battery.png)
+  ![Батерия](../images/troubleshooting/samsung/Samsung04_Battery.png)
 
-* Set it to "Not optimized"
+* Задайте „Без ограничения“ (Unrestricted). В някои по-стари версии на Android тази опция се нарича „Не е оптимизирано“ (Not optimized).
 
-  ![Not optimized](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
+  ![Без ограничения](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
-#### **Huawei phones**
+#### Телефони Huawei
 
-See this guide for [Huawei bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+Вижте това ръководство за [Huawei: Bluetooth и оптимизиране на батерията](../CompatiblePhones/Huawei.md)
 
 ---
 
 (generaltroubleshooting-cgm)=
 
-## **Continious Glucose Monitor (CGM)**
+## Устройство за непрекъснато мониториране на глюкозата (CGM)
 
-Useful links to known issues and steps to resolve for CGMs.
+Полезни връзки към известни проблеми и стъпки за решаването им при CGM.
 
-* [General](#general-cgm-troubleshooting)
+* [Общи](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
+* [Libre 2 с Minimal Looper](#minimallooper-troubleshooting)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
-* [xDrip - no CGM data](#xdrip-identify-receiver)
-* [xDrip - Dexcom troubleshooting](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
+* [xDrip - няма данни от CGM](#xdrip-identify-receiver)
+* [xDrip - отстраняване на неизправности с Dexcom](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
 ---
 
 (generaltroubleshooting-pumps)=
 
-## **Pumps**
+## Помпи
 
-Useful links to known issues and steps to resolve for Pumps
+Полезни връзки към известни проблеми и стъпки за решаването им при помпите
 
-* [DanaRS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
-* [Accu-Chek Combo general](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)
+* [Accu-Chek Combo](#combov2-tips-for-basic-usage)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
+* [CareLevo](#carelevo-alarms-and-notifications)
+* [DanaRS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
+* [Diaconn G8](#diaconn-g8-bluetooth-troubleshooting)
+* [EOPatch2](#eopatch2-alarms-and-warnings)
 * [Medtronic + RileyLink](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
+* [Medtrum Nano](#medtrum-nano-troubleshooting)
+* [Omnipod DASH](#omnipod-dash-troubleshooting)
+* [Omnipod Eros](#OmnipodEros-troubleshooting)
 
 ---
 
 (generaltroubleshooting-phones)=
 
-## **Phones**
+## Телефони
 
-Useful links to known issues and steps to resolve for Phones
+Полезни връзки към известни проблеми и стъпки за решаването им при телефоните
 
-* [List of tested phone and device setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
+* [Списък с тествани конфигурации на телефони и устройства](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
 * [Jelly](../CompatiblePhones/Jelly.md)
-* [Huawei bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+* [Huawei: Bluetooth и оптимизиране на батерията](../CompatiblePhones/Huawei.md)
+
+---
+
+(generaltroubleshooting-remote-control)=
+
+## Дистанционно управление
+
+* [AAPSClient и дистанционно управление (сдвояване, командите не се получават)](#client-master-control-troubleshooting)
+* [Проблеми с „Токен за достъп до Nightscout“](#remotecontrol-nightscout-access-token)
+* [SMS команди](#SMSCommands-troubleshooting)
+* [Android Auto](#android-auto-troubleshooting)
+
+---
 
 (generaltroubleshooting-smartwatches)=
 
-## Smartwatches
+## Смарт часовници
 
-Useful links to known issues and steps to resolve for Smartwatches
+Полезни връзки към известни проблеми и стъпки за решаването им при смарт часовниците
 
-* [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
+* [Отстраняване на неизправности с приложението Wear](#Watchfaces-troubleshooting-the-wear-app)
+* [Часовникът и телефонът не комуникират](#wear-os-watch-phone-communication)
+* [Wear OS 5](#wear-os-5-troubleshooting)
+* [Компилиране на приложението Wear](#building-aaps-wear-os-troubleshooting)

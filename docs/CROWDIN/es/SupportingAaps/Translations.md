@@ -1,104 +1,104 @@
-# How to translate strings for the AAPS app or the documentation
+# Cómo traducir textos de la app AAPS o de la documentación
 
-* For the the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
-* For the documentation please visit <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
+* Para los textos de la app, ve a <https://crowdin.com/project/androidaps> e inicia sesión con tu cuenta de GitHub
+* Para la documentación, visita <https://crowdin.com/project/androidapsdocs> e inicia sesión con tu cuenta de GitHub
 
-* Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
+* Envía una solicitud para unirte al equipo de la documentación. Para ello, haz clic en la bandera del idioma que quieres y después en el botón «Join» en la esquina superior derecha de la página siguiente. Indica el idioma, da algo de información sobre ti y tu experiencia con AAPS, y si quieres ser traductor o revisor (solo personas con experiencia en traducción y usuarios avanzados de AAPS).
 
-```{admonition} Time for Approval :class: note
+```{admonition} Tiempo para la aprobación :class: note
 
-The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord.
+La aprobación es un paso manual. Como organización sin ánimo de lucro no damos plazos garantizados (SLA), pero en general la aprobación se hace en menos de 1 día. Si no es así, contacta con el equipo de la documentación por Facebook o Discord.
 
-    <br />* When we approve you, click the flag
-       ![When we approve you, click the flag](../images/translation_flags.png)
+    <br />* Cuando te aprobemos, haz clic en la bandera
+       ![Cuando te aprobemos, haz clic en la bandera](../images/translation_flags.png)
     
-    ## Translation of the app
+    ## Traducción de la app
     
     (translations-translate-strings-for-AAPS-app)=
-    ### Translate strings for AAPS app
+    ### Traducir textos de la app AAPS
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
+    * Si no tienes preferencia por los textos que traduces, simplemente pulsa el botón «Translate All» para empezar. Te muestra los textos que necesitan traducción.
     
-       ![Click translate all](../images/translations-click-translate-all.png)
+       ![Haz clic en Translate All](../images/translations-click-translate-all.png)
     
-    * If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
+    * Si quieres traducir un archivo concreto, búscalo con el cuadro de búsqueda o en la estructura de árbol y haz clic en el nombre del archivo para empezar a traducir los textos de ese archivo.
     
-       ![Click strings.xml](../images/translations-click-strings.png)
+       ![Haz clic en strings.xml](../images/translations-click-strings.png)
     
-    * Translate sentences on left side by adding new translated text or use & edit suggestion 
+    * Traduce las frases del lado izquierdo: añade un texto traducido nuevo o usa y edita una sugerencia
     
-       ![Translation app](../images/translations-translate.png)
-    
-    
-    ### Proofread strings for AAPS app
-    
-    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
-    
-       ![Proofreading mode app](../images/translations-proofreading-mode.png) 
+       ![Traducción de la app](../images/translations-translate.png)
     
     
-      and approve translated texts 
+    ### Revisar textos de la app AAPS
     
-       ![approve text](../images/translations-proofreading.png)
+    * Los revisores empiezan pulsando «Proofread» en la pantalla de inicio del idioma.
     
-    When a proofreader approves a translation it will be added to the next version of AAPS.
+       ![Modo de revisión de la app](../images/translations-proofreading-mode.png)
+    
+    
+      y aprueban los textos traducidos
+    
+       ![aprobar texto](../images/translations-proofreading.png)
+    
+    Cuando un revisor aprueba una traducción, esta se añade a la siguiente versión de AAPS.
     
     (translations-translation-of-the-documentation)=
-    ## Translation of the documentation
+    ## Traducción de la documentación
     
-    * Click the name of the docs page you want to translate
+    * Haz clic en el nombre de la página de la documentación que quieres traducir
     
-    ![Click docs page](../images/translation_WikiPage.png)
+    ![Haz clic en la página de la documentación](../images/translation_WikiPage.png)
     
     
-    * Translate sentences by sentence
+    * Traduce frase por frase
     
-        1. The yellow text is the text you are working at the moment.
+        1. El texto amarillo es el texto en el que estás trabajando ahora.
     
-        1. The green text is already translated. You don't need to do this again.
+        1. El texto verde ya está traducido. No tienes que hacerlo otra vez.
     
-        1. The red text is the remaining text which have to be translated.
+        1. El texto rojo es el texto que todavía hay que traducir.
     
-        1. This is the source text you are working on at the moment
+        1. Este es el texto original en el que estás trabajando ahora
     
-        1. This is the translation you are preparing. You can copy the text from above or select one of the suggestions below.
+        1. Esta es la traducción que estás preparando. Puedes copiar el texto de arriba o elegir una de las sugerencias de abajo.
     
-        1. These are the suggestion for a translation. Especially you can see how much Crowdin rates this as a fit or if it was already just in the past and come up through text rearrangements but not content change.
-        1. Press the "save" button to save a proposal for the translation. It will then promoted to a proofreader for final check.
+        1. Estas son las sugerencias de traducción. En especial, puedes ver cuánto encaja según Crowdin, o si ya se tradujo antes y solo volvió porque el texto se movió, no porque cambió.
+        1. Pulsa el botón «save» para guardar una propuesta de traducción. Después pasará a un revisor para la comprobación final.
     
-    ![Translation docs](../images/translation_WikiTranslate.png)
+    ![Traducción de la documentación](../images/translation_WikiTranslate.png)
     
-    * A translated page will not be published in docs before 
+    * Una página traducida no se publica en la documentación hasta que
     
-        1. the translation is proofread
+        1. la traducción está revisada
     
-        1. the sync run between Crowdin and Github finished (once an hour) which creates an PR for Github.
+        1. la sincronización entre Crowdin y GitHub terminó (una vez por hora) y creó un PR en GitHub.
     
-        1. the PR in Github was approved.
+        1. el PR en GitHub fue aprobado.
     
-    In general this needs 1 - 3 days but might during holiday take a little bit longer.
+    En general esto tarda de 1 a 3 días, pero en vacaciones puede tardar un poco más.
     
-    ### Translating links
+    ### Traducir enlaces
     
-    ```{admonition} Links are not translated anymore
+    ```{admonition} Los enlaces ya no se traducen
     :class: note
     
-    Links are not translated anymore. In the past we had a topic here but this is gone as through migraton to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    Los enlaces ya no se traducen. Antes había aquí un apartado sobre esto, pero ya no existe: con la migración a Markdown y myst_parser creamos etiquetas de forma explícita en el texto en inglés y estas etiquetas pasan de forma interna a los otros idiomas.
     
     
 
-You are translating the text which represents the link. Please you have to be careful **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
+Traduces el texto que representa el enlace. Ten cuidado de **no** borrar el enlace, que se representa con un par de etiquetas `<0></0>` (u otros números si hay más enlaces en un párrafo).
 
-It's the proofreaders job to have a special look on this!
+¡Los revisores deben prestar una atención especial a esto!
 
-### Proofreading
+### Revisión
 
-* Proofreaders have to switch to Proofreading mode
+* Los revisores tienen que cambiar al modo de revisión (Proofreading)
     
-    ![Proofreading mode docs](../images/translation_WikiProofreadingmode.png)
+    ![Modo de revisión de la documentación](../images/translation_WikiProofreadingmode.png)
     
-    and approve translated texts
+    y aprobar los textos traducidos
     
-    ![approve text](../images/translations-proofreading.png)
+    ![aprobar texto](../images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during hollidays. To speed up the process you can inform docs team about new translations.
+* Cuando un revisor aprueba una traducción, esta se añade a la siguiente compilación de la documentación. Esta no tiene un calendario fijo, se hace cuando hace falta, pero más o menos una vez por semana, excepto en vacaciones. Para acelerar el proceso, puedes avisar al equipo de la documentación sobre las nuevas traducciones.

@@ -1,92 +1,98 @@
-# COB calculation
+# Výpočet COB
 
-## How does AAPS calculate the COB value?
+## Ako AAPS vypočítava hodnotu COB?
 
-When carbs are entered by the user as part of a meal entry or carb correction, **AAPS** will add this calculation to the current carbs on board (**COB**). **AAPS** then calculates the user’s carbs’ absorption based on observed deviations to the user’s **BG** values. The rate of absorption depends on the carb’s sensitivity factor (**’CSF**”). This is not a feature within the user’s **Profile**  but is calculated by **AAPS** according to **ISF/I:C** set up, and is determined by how many mg/dl 1g of carbs will raise the user’s **BG**.
+Keď používateľ zadá sacharidy k jedlu alebo ako korekciu sacharidmi, **AAPS** ich pripočíta k aktuálnym aktívnym sacharidom (**COB**). **AAPS** potom počíta vstrebávanie sacharidov používateľa na základe pozorovaných odchýlok **glykémie** používateľa. The rate of absorption depends on the carb’s sensitivity factor (**CSF**). Nie je to nastavenie v **Profile** používateľa, ale **AAPS** ho počíta podľa nastavenia **ISF/I:C**. Udáva, o koľko mg/dl zvýši 1 g sacharidov **glykémiu** používateľa.
 
-## Carb Sensitivity Factor
+## Faktor citlivosti na sacharidy
 
-The formula adopted by **AAPS** is:
+Vzorec, ktorý **AAPS** používa, je:
 
-- absorbed_carbs = deviation * ic / isf.
+- vstrebané sacharidy = odchýlka * ic / isf.
 
-The effect on the user’s **Profile** will:
+Zmeny v **Profile** používateľa majú tento účinok:
 
-- _increase_ **IC**- by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
+- _zvýšenie_ **IC** – zvýši množstvo sacharidov vstrebaných každých 5 minút, a tým skráti celkový čas vstrebávania;
 
-- _increase_ **ISF** - by decreasing the carbs absorbed every 5 minutes thus prolong total time of absorption; and
+- _zvýšenie_ **ISF** – zníži množstvo sacharidov vstrebaných každých 5 minút, a tým predĺži celkový čas vstrebávania; a
 
-- _change_ **Profile Percentage** -  increase/decrease both values thus has no impact on carbs absorption time.
+- _zmena_ **Percenta profilu** – zvýši alebo zníži obe hodnoty, a preto nemá žiadny vplyv na čas vstrebávania sacharidov.
 
-For example, if the user’s  **Profile**  **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. For every 20 mg/dl the user’ **BG** goes up and 1g of carbs will be calculated as absorbed by **AAPS**. Positive **IOB** also affects the **COB** calculation. So, if **AAPS**  predicts the user’s **BG** to go down by 20 mg/dl because of **IOB** and it instead stayed flat, **AAPS**  would also calculate 1g of carbs as absorbed.
+Ak je napríklad **ISF** v **Profile** používateľa 100 a **I:C** je 5, faktor citlivosti na sacharidy používateľa bude 20. Za každých 20 mg/dl, o ktoré stúpne **glykémia** používateľa, **AAPS** započíta 1 g sacharidov ako vstrebaný. Výpočet **COB** ovplyvňuje aj kladný **IOB**. Ak teda **AAPS** predpovedá, že **glykémia** používateľa kvôli **IOB** klesne o 20 mg/dl, ale namiesto toho zostane stabilná, **AAPS** tiež započíta 1 g sacharidov ako vstrebaný.
 
-Carbs will also be absorbed via the methods described below based on which sensitivity algorithm has been selected within the user's **AAPS**.
+Sacharidy sa vstrebávajú aj spôsobmi opísanými nižšie, podľa toho, ktorý algoritmus citlivosti si používateľ v **AAPS** vybral.
 
-## Carbs Sensitivity - Oref1
+## Citlivosť na sacharidy – Oref1
 
-Unabsorbed carbs are cut off after specified time:
+Nevstrebané sacharidy sa po určitom čase odstránia z výpočtov:
 
 ![Oref1](../images/cob_oref0_orange_II.png)
 
-![Screenshot 2024-10-05 161009](../images/cob_oref0_orange_I.png)
+![Graf COB s ukončením vstrebávania (cut-off) pri Oref1](../images/cob_oref0_orange_I.png)
+
+```{admonition} Older screenshot
+:class: note
+Snímka obrazovky vyššie je zo staršej verzie **AAPS** – v **AAPS** 4 vyzerajú grafy trochu inak, ale graf **COB** obsahuje rovnaké informácie.
+```
 
 
-## Carbs Sensitivity - WeightedAverage
+## Citlivosť na sacharidy – vážený priemer (WeightedAverage)
 
-Absorption is calculated to have COB = 0 after specified time:
+Vstrebávanie sa počíta tak, aby po určenom čase bolo COB = 0:
 
-![AAPS, WheitedAverage](../images/cob_aaps2_orange_II.png)
+![AAPS, WeightedAverage](../images/cob_aaps2_orange_II.png)
 
-If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from **BG** deviations, an orange dot appears on the **COB** graph.
+Ak sa namiesto hodnoty vypočítanej z odchýlok **glykémie** použije minimálne vstrebávanie sacharidov (min_5m_carbimpact), na grafe **COB** sa zobrazí oranžová bodka.
 
 (CobCalculation-detection-of-wrong-cob-values)=
-## Detection of wrong COB values
+## Zisťovanie nesprávnych hodnôt COB
 
-**AAPS**  will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
+**AAPS** upozorní používateľa, ak sa chystá podať bolus s **COB** z predchádzajúceho jedla a algoritmus vyhodnotí aktuálny výpočet **COB** ako nesprávny. V takom prípade sa používateľovi po použití bolusovej kalkulačky zobrazí na potvrdzovacej obrazovke ďalšia nápoveda.
 
-### How does AAPS detect wrong COB values?
+### Ako AAPS zisťuje nesprávne hodnoty COB?
 
-Ordinarily __AAPS__ detects carb absorption through **BG** deviations. In case the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
+__AAPS__ bežne zisťuje vstrebávanie sacharidov podľa odchýlok **glykémie**. Ak používateľ zadal sacharidy, ale **AAPS** nedokáže zistiť ich odhadované vstrebávanie z odchýlok **glykémie**, použije na výpočet vstrebávania metódu [min_5m_carbimpact](#Preferences-min_5m_carbimpact) (tzv. „záložná metóda“, fallback). Keďže táto metóda počíta iba minimálne vstrebávanie sacharidov a nezohľadňuje odchýlky **glykémie**, môže viesť k nesprávnym hodnotám COB.
 
-![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
+![Nápoveda pri nesprávnej hodnote COB](../images/Calculator_SlowCarbAbsorption.png)
 
-In the screenshot above, 58% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. This indicates that the user may have had less **COB** than calculated by the algorithm.
+Na obrázku vyššie bola v 66 % času absorpcia sacharidov vypočítaná pomocou min_5m_carbimpact namiesto hodnoty zistenej z odchýlok. To naznačuje, že používateľ mohol mať menej **COB**, ako vypočítal algoritmus.
 
-### How to deal with this warning?
+### Ako vyriešiť toto varovanie?
 
-- Consider cancelling the treatment - press ‘Cancel’ instead of OK.
-- Calculate your upcoming meal again with bolus wizard leaving **COB** unticked.
-- If you need a correction bolus, enter it manually.
-- Be careful not to overdose or insulin stacking!
-
-
-### Why does the algorithm not detect COB correctly?
-
-This could be because:
-- Potentially the user overestimated carbs when entering them.
-- Activity / exercise after your previous meal.
-- I:C needs adjustment.
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA).
+- Zvážte zrušenie ošetrenia – namiesto OK stlačte „Zrušiť“.
+- Vypočítajte si nadchádzajúce jedlo znova pomocou bolusovej kalkulačky a nechajte políčko **COB** nezaškrtnuté.
+- Ak potrebujete korekčný bolus, zadajte ho ručne.
+- Dávajte pozor, aby ste sa nepredávkovali a aby sa inzulín nekumuloval (insulin stacking)!
 
 
-## Manual correction of carbs entered
+### Prečo algoritmus správne nedetekuje COB?
 
-If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](#screens-bolus-carbs).
+Môže to byť preto, lebo:
+- Používateľ možno pri zadávaní nadhodnotil množstvo sacharidov.
+- Aktivita/cvičenie po predchádzajúcom jedle.
+- I:C treba upraviť.
+- Hodnota min_5m_carbimpact je nesprávna (odporúčaná hodnota je 8 so SMB a 3 s AMA).
 
 
-## Carb correction - how to delete a Carb entry from Treatments
+## Ručná oprava zadaných sacharidov
+
+Ak boli sacharidy nadhodnotené alebo podhodnotené, môžete to opraviť na obrazovke **História ošetrení**, ako je opísané [tu](#screens-bolus-carbs).
 
 
-The ‘Treatments’ tab can be used to correct a faulty carb entry by deleting the entry in Treatments. This may be because the user over or underestimated the carb entry:
+## Oprava sacharidov – ako vymazať záznam sacharidov z ošetrení
 
-![COB_Screenshot 2024-10-05 170124](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
-1. Check and remember actual **COB** and **IOB** on the **AAPS'** homescreen.
-2. Depending on the pump, the carbs in the Treatments tab might show together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry by firstly 'ticking' the waste bin on the top right corner (see above photo, step 1). Then 'tick' the faulty carb amount (see above photo, step 2). Then 'tick' the ‘waste bin’ on the top right corner (step 1 again).
-4. Make sure carbs are removed successfully by checking **COB** on **AAPS’** homescreen again.
-5. Do the same for **IOB** if there is just one line in the Treatment tab including carbs and insulin.
-6. If carbs are not removed as intended and additional carbs are added as explained in this section, the **COB** entry will be too high and this could lead to **AAPS** delivering too much insulin.
-7. Enter correct carbs amount through carbs button on **AAPS’** homescreen and set the correct event time.
-8. If there is just one line in Treatment tab including carbs and insulin the user should add also the amount of insulin. Make sure to set the correct event time and check **IOB** on homescreen after confirming the new entry.
+Obrazovku **História ošetrení** môžete použiť na opravu chybného záznamu sacharidov tak, že ho vymažete. Môže to byť preto, že používateľ pri zadávaní sacharidy nadhodnotil alebo podhodnotil:
+
+![Vymazanie záznamu sacharidov z histórie ošetrení](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+
+1. Skontrolujte a zapamätajte si aktuálne **COB** a **IOB** na hlavnej obrazovke **AAPS**.
+2. Otvorte **História ošetrení** (bočné menu → *História ošetrení*), kartu **Sacharidy a bolusy**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (e.g. with Dana RS).
+3. **Dlho podržte** chybný záznam sacharidov – zoznam sa prepne do **režimu výberu** so zaškrtávacím políčkom na každom riadku a záznam sa zaškrtne (vyššie označené ako **1**). Zaškrtnite aj ďalšie záznamy, ktoré chcete odstrániť.
+4. Ťuknite na ikonu **🗑 Vymazať** v hornej lište (označená **2**) a potvrďte – potvrdzovací dialóg presne vypíše, čo sa odstráni.
+5. Uistite sa, že sacharidy boli úspešne odstránené – znova skontrolujte **COB** na hlavnej obrazovke **AAPS**.
+6. To isté urobte pre **IOB**, ak bol iba jeden riadok so sacharidmi aj inzulínom.
+7. Ak sacharidy nevymažete tak, ako treba, a pridáte ďalšie sacharidy podľa tejto časti, hodnota **COB** bude príliš vysoká a **AAPS** môže podať príliš veľa inzulínu.
+8. Zadajte správne množstvo sacharidov v dialógu **Sacharidy** (**Ošetrenia** → **Sacharidy**) a nastavte správny čas udalosti.
+9. Ak bol iba jeden riadok so sacharidmi aj inzulínom, používateľ by mal znova pridať aj množstvo inzulínu. Nezabudnite nastaviť správny čas udalosti a po potvrdení nového záznamu skontrolujte **IOB** na hlavnej obrazovke.
 

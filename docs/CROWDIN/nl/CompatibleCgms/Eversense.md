@@ -1,66 +1,75 @@
 # Eversense
 
-There are three different methods to access the readings from Eversense:
+Er zijn vier verschillende manieren om de metingen van Eversense te lezen:
 
-- ESEL companion mode
-- ESEL patched mode
-- xDrip+ companion app
+- ESEL companion-modus
+- ESEL patched-modus
+- xDrip companion-app
+- Notificatielezer (ingebouwd in **AAPS**)
 
 ## ESEL
 
-Get and install the [ESEL app](https://github.com/BernhardRo/Esel/tree/master/apk), following these [instructions](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
+Download en installeer de [ESEL-app](https://github.com/BernhardRo/Esel/tree/master/apk) volgens deze [instructies](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
 
-- Enable "Send to AAPS and xDrip"
-- **Disable** "Send to Nightscout"
-- As the BG data from Eversense can be noisy, it is recommended to enable "Smooth Data" in ESEL.
+- Open in ESEL rechtsboven het menu met de drie puntjes (⋮) en selecteer **Settings** (ook te vinden in het ☰-menu). In de instellingen:
+  - Zet "Send to AAPS and xDrip" aan
+  - Zet "Send to Nightscout" **uit**
+  - De BG-gegevens van Eversense kunnen veel ruis hebben. Daarom is het aan te raden om "Smooth Data" in ESEL aan te zetten.
 
 ![ESEL Broadcast](../images/ESEL.png)
 
-### Companion Mode
+### Companion-modus
 
-Reads the data from the Eversense app notifications (works with the standard Eversense App, available since ESEL version 3.0.1).
+Leest de gegevens uit de notificaties van de Eversense-app (werkt met de standaard Eversense-app, beschikbaar sinds ESEL-versie 3.0.1).
 
-1. Use the official Eversense App from the Google Play Store
-   - Optional, but required for backfilling: Login to your Eversense account
-   - In Sync, enable Auto synchronization
-2. Configuration of ESEL:
-   - Disable the setting "Get data from patched Eversense App"
-   - For backfilling: Enable "Fill missing data from eversensedms.com"
-   - Provide as Email address and password your Eversense login data
-3. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+1. Gebruik de officiële Eversense-app uit de Google Play Store
+   - Optioneel, maar nodig voor backfilling (ontbrekende gegevens aanvullen): meld je aan bij je Eversense-account
+   - Zet bij Sync de automatische synchronisatie (Auto synchronization) aan
+2. Configuratie van ESEL:
+   - Zet de instelling "Get data from patched Eversense App" uit
+   - Voor backfilling: zet "Fill missing data from eversensedms.com" aan
+   - Vul als e-mailadres en wachtwoord je aanmeldgegevens van Eversense in
+3. Stel "MM640g" in als BG-bron in [**Configuratie → BG bron**](#Config-Builder-bg-source).
 
-### Patched Eversense App
+### Aangepaste (patched) Eversense-app
 
- Requires a patched version of the Eversense App (works completely offline, including backfilling).
+ Hiervoor is een aangepaste (patched) versie van de Eversense-app nodig (werkt volledig offline, ook backfilling).
 
-1. Uninstall the Eversense App (Warning: your local historical data (older than 1 week) will be lost!)
+1. Verwijder de Eversense-app (Waarschuwing: je lokale historische gegevens (ouder dan 1 week) gaan verloren!)
 
-2. Install the [patched Eversense app](https://cr4ck3d3v3r53n53.club) and use it as described by the vendor
+2. Installeer de [aangepaste Eversense-app](https://cr4ck3d3v3r53n53.club) en gebruik deze zoals de maker beschrijft
 
-   - Start the Eversense App, login, connect to your transmitter and use it just like the normal app.
+   - Start de Eversense-app, meld je aan, maak verbinding met je zender en gebruik de app net als de normale app.
 
-3. Configuration of ESEL:
+3. Configuratie van ESEL:
 
-   - Enable the setting "Get data from patched Eversense App"
+   - Zet de instelling "Get data from patched Eversense App" aan
 
 
 
 ![ESEL Broadcast](../images/ESELpatch.png)
 
-​       If you run ESEL with a fresh installation of Eversense for the first time, it can take up to 15min until your first values appear in xDrip!
+Als je ESEL voor het eerst gebruikt met een nieuwe installatie van Eversense, kan het tot 15 min duren voordat je eerste waarden in xDrip verschijnen!
 
-4. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+4. Stel "MM640g" in als BG-bron in [**Configuratie → BG bron**](#Config-Builder-bg-source).
 
-## xDrip+
+## xDrip
 
-xDrip+ can read notifications from the vendor app, like ESEL does. No backfilling available.
+xDrip kan notificaties van de app van de fabrikant lezen, net zoals ESEL. Geen backfilling beschikbaar.
 
-- Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip+ “Companion App” must be selected.
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
-- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page [xDrip+ settings](../CompatibleCgms/xDrip.md).
-- Enable [Exponential Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md) in AAPS.
+- Download en installeer xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- In xDrip moet je “Companion App” selecteren als gegevensbron.
+- Selecteer xDrip in [**Configuratie → BG bron**](#Config-Builder-bg-source).
+- Pas de instellingen van xDrip aan volgens de uitleg op de pagina [xDrip-instellingen](../CompatibleCgms/xDrip.md).
+- Zet [Exponentieel vloeiend maken](../CompatibleCgms/SmoothingBloodGlucoseData.md) aan in AAPS.
+
+## Notificatielezer
+
+**AAPS** kan de glucosewaarden direct lezen uit de notificaties van de officiële Eversense-app, zonder een andere app ertussen. Geen backfilling beschikbaar.
+
+- Selecteer **Notificatielezer** in [**Configuratie → BG bron**](#Config-Builder-bg-source) en geef **AAPS** toegang tot notificaties als daarom wordt gevraagd.
+- Zorg dat de Eversense-app de actuele glucosewaarde in de notificatie toont.
 
 ```{warning}
-BG values reading frequency is not always 5 minutes and duplicates can occur.
+BG-waarden komen niet altijd elke 5 minuten binnen en er kunnen dubbele waarden voorkomen.
 ```

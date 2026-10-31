@@ -1,564 +1,565 @@
-# How to edit the docs
+# Как да редактирате документацията
 
-**This description is just for editing the English documentation. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
+**Това описание е само за редактиране на документацията на английски език. Цялата нова информация трябва първо да се добави на английски език. Ако искате да превеждате на други езици (благодарим ви), моля, използвайте [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#code-syntax) section of this page.
+За съвети как да форматирате текст (заглавие, удебелен шрифт...) и да добавяте връзки, вижте раздела [„Синтаксис на кода“](#code-syntax) на тази страница.
 
-## General
+## Общи
 
-For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw).
+За въпроси, обратна връзка или нови идеи можете да се свържете с екипа на документацията в [Discord](https://discord.gg/4fQUWHZ4Mw).
 
-At some point it will be suggested that you make a pull request (PR), which is how your changes in the documentation are actually put onto the AAPS webpages, which are stored in GitHub. It's actually not too hard to do a PR and it is a great way to contribute. You are reading this documentation right now because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. Your changes are reviewed before they are merged into the "formal" AAPS documentation repository. You can't mess up the originals through any accidents in the process. The general process is:
+В даден момент може да ви предложат да направите заявка за сливане (pull request, PR). Чрез нея промените ви в документацията наистина влизат в уеб страниците на AAPS, които се съхраняват в GitHub. Всъщност не е много трудно да направите PR и това е чудесен начин да помогнете. Четете тази документация в момента, защото хора като вас са направили PR. Не се притеснявайте, че ще сгрешите или по някакъв начин ще редактирате грешните документи. Промените ви се преглеждат, преди да бъдат слети в „официалното“ хранилище на документацията на AAPS. Не можете да развалите оригиналите по погрешка по време на процеса. Общият процес е следният:
 
-- Make edits and improvements to code or documentation by editing the existing content.
-- Double-check that your edits look good to you.
-- Make a few notes of what's changed so people may understand the edits.
-- Create a pull request, which asks the administrators to use your changes.
-- They will do a review and either (1)merge your changes, (2)comment back to you about your changes, or (3)start a new document with your changes.
+- Направете промени и подобрения в кода или документацията, като редактирате съществуващото съдържание.
+- Проверете още веднъж дали промените ви изглеждат добре.
+- Напишете кратки бележки какво е променено, за да могат другите да разберат промените.
+- Създайте заявка за сливане (pull request), с която молите администраторите да приемат промените ви.
+- Те ще направят преглед и или (1) ще слеят промените ви, (2) ще ви отговорят с коментар за промените, или (3) ще започнат нов документ с вашите промени.
 
-(Side note: If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
+(Забележка: Ако учите по-лесно визуално, има видео в YouTube [тук](https://youtu.be/4b6tsL0_kzg), което показва работния процес с PR.)
 
-For our example we are going to make an edit to AndroidAPSdocs. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
+За пример ще направим промяна в AndroidAPSdocs. Това може да се направи на всеки компютър с Windows, Mac и т.н. (всеки компютър с достъп до интернет).
 
-1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
+1. Отидете на <https://github.com/openaps/AndroidAPSdocs> и натиснете Fork горе вдясно, за да направите собствено копие на хранилището.
 
-![Fork repo](../images/PR0.png)
+![Fork на хранилището](../images/PR0.png)
 
-2. Go to any page and navigate to the page you want to edit. You can click on the "Edit in GitHub" link in the upper right corner. This is only possible for English pages. 
+2. Отидете на която и да е страница и стигнете до страницата, която искате да редактирате. Можете да натиснете връзката „Edit in GitHub“ в горния десен ъгъл. Това е възможно само за страниците на английски език. 
 
-![edit doc](../images/PR1.png)
+![Редактиране на документ](../images/PR1.png)
 
-Or click the pencil icon that appears in the top bar of the page contents to be edited. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
+Или натиснете иконата с молив, която се появява в горната лента на съдържанието на страницата, която ще редактирате. За това трябва вече да сте влезли в профила си в GitHub (ако нямате такъв, той се създава лесно).
 
 ![RTD io](../images/PR2.png)
 
-3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
+3. Всеки от двата варианта в стъпка 2 ще създаде нов клон във ВАШЕТО хранилище (repository), където ще се запазят промените ви. Направете промените си във файла.
 
-We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#code-syntax).
+За страниците на документацията използваме Markdown. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Внимавайте да използвате правилния синтаксис, както е [описано по-долу](#code-syntax).
 
-![Edit branch](../images/PR3.png)
+![Клон за редактиране](../images/PR3.png)
 
-4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typos sic.). If you see a needed improvement, go back to the edit tab to make more improvements. 
+4. Вие работите в раздела „<>Edit file“. Изберете раздела „Preview changes“, за да погледнете промените отново и да се уверите, че всичко изглежда така, както сте искали (проверете и за правописни грешки). Ако видите, че нещо трябва да се подобри, върнете се в раздела за редактиране и направете още подобрения. 
 
-![preview mode](../images/PR5.png)
+![Режим на преглед](../images/PR5.png)
 
-5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
+5. Когато приключите с промените, превъртете до края на страницата. В полето най-долу напишете коментарите си в текстовото поле с надпис „Add an optional extended description...“. Заглавието по подразбиране съдържа името на файла. Опитайте да добавите изречение, което обяснява **причината** за промяната. Когато посочите причината, проверяващите по-лесно разбират какво искате да постигнете с PR.
 
-![commit comments](../images/PR4.png)
+![Коментари към commit](../images/PR4.png)
 
-6. Click the green "Propose file changes" or "Commit changes" button. In the page that appears click "Create Pull Request" and again in the next page click "Create Pull Request".
+6. Натиснете зеления бутон „Propose file changes“ или „Commit changes“. На страницата, която се появи, натиснете „Create Pull Request“ и на следващата страница отново натиснете „Create Pull Request“.
 
-![create pull request](../images/PR6.png)
+![Създаване на pull request](../images/PR6.png)
 
-7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
+7. С това отварянето на заявката за сливане (PR) е завършено. GitHub дава на PR номер, който стои след заглавието и знака „#“. Връщайте се на тази страница, за да проверите за обратна връзка (или, ако получавате известията от GitHub по имейл, ще получавате имейли за всяка активност по PR). Промяната вече ще е в списъка с PR, които екипът ще прегледа и евентуално ще коментира, преди да бъдат включени в основната документация на AAPS! Ако искате да проверите докъде е стигнал PR, можете да натиснете иконата с камбанка в горния десен ъгъл на профила си в GitHub и да видите всички свои PR.
 
-![PR tracking](../images/PR7.png)
+![Проследяване на PR](../images/PR7.png)
 
-PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+П.П.: Вашият fork и клон ще останат във вашия личен профил в GitHub. След като получите известие, че вашият PR е слят, можете да изтриете клона си, ако вече не ви трябва (зоната за известия от стъпка 8 ще ви даде връзка за изтриване на клона, след като PR бъде затворен или слят). При бъдещи промени, ако следвате тази процедура, промените винаги ще започват от актуална версия на хранилищата на AndroidAPSdocs. Ако изберете друг начин да започнете PR (например като редактирате, започвайки от клона master на вашето fork хранилище), първо трябва да се уверите, че хранилището ви е актуално, като направите „compare“ и слеете всички промени, направени след последното обновяване на вашия fork. Тъй като хората често забравят да обновяват хранилищата си, препоръчваме да използвате описания по-горе процес за PR, докато свикнете да правите „compare“.
 
 (edit-the-docs-code-syntax)=
 
-## Code syntax
+## Синтаксис на кода
 
-We are using markdown for the documentation pages. The files have got the suffix ".md".
+За страниците на документацията използваме Markdown. Файловете имат разширение „.md“.
 
-Markdown is a very simple text formatting language which separates text content from text formatting.
+Markdown е много прост език за форматиране на текст, който отделя съдържанието на текста от форматирането му.
 
-The writer only e.g. marks a headline as level 1 headline and the markdown processor generates the necessary HTML code during processing to render the heading in HTML.
+Авторът само отбелязва например едно заглавие като заглавие от ниво 1, а процесорът на Markdown създава нужния HTML код по време на обработката, за да покаже заглавието в HTML.
 
-The idea behind this is that
+Идеята е, че
 
-- the writer should think about the text and not the formatting first,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Windows and
-- you can generate several output formats from one markdown file.
+- авторът трябва първо да мисли за текста, а не за форматирането,
+- текстът в Markdown може да се използва с различни инструменти за Markdown, вместо например със собственически инструменти като Microsoft Windows, и
+- можете да създавате няколко изходни формата от един файл в Markdown.
 
-Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard, to
+Markdown не е 100 % фиксиран стандарт и се опитваме да сме възможно най-близо до стандарта, за да
 
-- stay flexible to change markdown tools as needed or forced in the further innovation of markdown tools and markdown SaaS services and
-- enable us to use translation services to translate the English language in a target language like French or German. They can work on markdown but not complex formatting codes, because they can't separate content from layout, which might be fatal.
+- можем да останем гъвкави и да сменяме инструментите за Markdown, когато е нужно или когато бъдещото развитие на инструментите и SaaS услугите за Markdown го наложи, и
+- можем да използваме услуги за превод, които превеждат от английски на целеви език, например френски или немски. Те могат да работят с Markdown, но не и със сложни кодове за форматиране, защото не могат да отделят съдържанието от оформлението, а това може да има фатални последици.
 
-### Headlines
+### Заглавия
 
-- Headline 1: `# headline`
-- Headline 2: `## headline`
-- Headline 3: `### headline`
-- Headline 4: `#### headline`
+- Заглавие 1: `# headline`
+- Заглавие 2: `## headline`
+- Заглавие 3: `### headline`
+- Заглавие 4: `#### headline`
 
-We try to avoid further levels of headlines.
+Опитваме се да не използваме повече нива на заглавия.
 
-### Text format
+### Форматиране на текст
 
-- **bold**: `**text**`
-- *italic*: `*text*`
-- ***bold italic***: `***text***`
+- **удебелен**: `**text**`
+- *курсив*: `*text*`
+- ***удебелен курсив***: `***text***`
 
-### Ordered list
+### Номериран списък
 
-    1. first
-    1. second
-    1. third
+    1. първи
+    1. втори
+    1. трети
     
 
-1. first
-2. second
-3. third
+1. първи
+2. втори
+3. трети
 
-### Unordered list
+### Неномериран списък
 
-    - one element
-    - another element
-    - and another element
+    - един елемент
+    - друг елемент
+    - и още един елемент
     
 
-- one element
-- another element
-- and another element
+- един елемент
+- друг елемент
+- и още един елемент
 
-### Multi level list
+### Многостепенен списък
 
-You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
+Можете да вмъквате списъци в списъци, като отместите следващото ниво с 4 интервала повече надясно от предишното.
 
-    1. first
-    1. second
-    1. third
-      1. one element
-      1. another element
-      1. and another element
-    1. four
-    1. five
-    1. six
+    1. първи
+    1. втори
+    1. трети
+      1. един елемент
+      1. друг елемент
+      1. и още един елемент
+    1. четвърти
+    1. пети
+    1. шести
     
 
-1. first
-2. second
-3. third 
-    1. one element
-    2. another element
-    3. and another element
-4. four
-5. five
-6. six
+1. първи
+2. втори
+3. трети 
+    1. един елемент
+    2. друг елемент
+    3. и още един елемент
+4. четвърти
+5. пети
+6. шести
 
-### Images
+### Изображения
 
-To include images you use this markdown syntax.
+За да добавите изображения, използвайте този синтаксис на Markdown.
 
-- images: `![alt text](../images/file.png)`
+- изображения: `![alt text](../images/file.png)`
 
-The type of image should be PNG or JPEG.
+Изображението трябва да е във формат PNG или JPEG.
 
-Images names should confirm to one of following naming rules. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
+Image names should conform to one of the following naming rules. В примера използвам png като разширение. Ако използвате JPEG, моля, използвайте jpeg като разширение.
 
-- `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
-- `filename-image-xx.png` where xx is a meaning full name for the author of the md file.
+- `filename-image-xx.png`, където xx е уникално двуцифрено число за изображенията в този файл.
+- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
 
-Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
+Изображенията се намират в папката images за английския език и Crowdin ги пренася автоматично към другите езици. Не е нужно да правите нищо за това!
 
-We are not translating images at the moment: images should contain the **minimum possible text** to allow accessibility to non-English readers.
+В момента не превеждаме изображенията: изображенията трябва да съдържат **възможно най-малко текст**, за да са достъпни за читатели, които не владеят английски.
 
-(make-a-PR-image-size)= Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
+(make-a-PR-image-size)= Използвайте разумен размер за изображенията, така че да се четат на компютър, таблет и мобилен телефон.
 
-- Screenshots from web pages images should be up to **1050 pixels wide**.
-- Diagrams of process flows should be up to **1050 pixels wide**.
-- Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
+- Екранните снимки от уеб страници трябва да са с ширина до **1050 пиксела**.
+- Диаграмите на процеси трябва да са с ширина до **1050 пиксела**.
+- Екранните снимки от приложението трябва да са с ширина до **500 пиксела**. Не ги поставяйте една до друга, ако не е необходимо.
+- Екранните снимки от часовника (**Wear OS**) трябва да са с ширина до **360 пиксела**. Никога не увеличавайте екранна снимка, която е по-малка.
 
-### Links
+### Връзки
 
-#### External links
+#### Външни връзки
 
-External links are links to external web sites.
+Външните връзки са връзки към външни уеб сайтове.
 
-- external link: `[alt text](www.url.tld)`
+- външна връзка: `[alt text](www.url.tld)`
 
-#### Internal links to the start of a md file
+#### Вътрешни връзки към началото на md файл
 
-Internal links to pages are links to the start of a md file which is hosted on our own server.
+Вътрешните връзки към страници са връзки към началото на md файл, който се намира на нашия собствен сървър.
 
-- internal link to .md page: `[alt text](../folder/file.md)`
+- вътрешна връзка към .md страница: `[alt text](../folder/file.md)`
 
-#### Internal links to named inline references
+#### Вътрешни връзки към именувани препратки в текста
 
-Internal links to named inline references are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
+Вътрешните връзки към именувани препратки са връзки към произволно място в md файл, който се намира на нашия собствен сървър и където е поставена препратка, към която да сочи връзката.
 
-Add a named reference at the location in the target md file you want to jump to.
+Добавете именувана препратка на мястото в целевия md файл, към което искате да прескочите.
 
 `(name-of-my-md-file-this-is-my-fancy-named-reference)=`
 
-The named reference must be unique in the whole AndroidAPSDocs md files and not only the own md file it resides in!
+Именуваната препратка трябва да е уникална във всички md файлове на AndroidAPSDocs, а не само в md файла, в който се намира!
 
-Therefore it is a good practice to start with the filename and then the reference name you select.
+Затова е добра практика да започнете с името на файла и след това да добавите избраното от вас име на препратката.
 
-Use only lowercase letters and hyphenate words.
+Използвайте само малки букви и свързвайте думите с тире.
 
-Then link this reference in the text you are writing with the following kind of link.
+След това добавете връзка към тази препратка в текста, който пишете, със следния вид връзка.
 
-- Internal links to named inline references: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+- Вътрешни връзки към именувани препратки: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
-### Notes, Warnings, Collapsing Notes
+### Бележки, предупреждения, сгъваеми бележки
 
-You can add notes and warning boxes to documentation.
+Можете да добавяте в документацията полета с бележки и предупреждения.
 
-Furthermore you can add collapsing notes for detailed information which would users who are not interested in the details quench to read the text at all. Please use these carefully as the documentation should be as easy to read as possible.
+Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Моля, използвайте ги внимателно, защото документацията трябва да се чете възможно най-лесно.
 
-#### Notes
+#### Бележки
 
-    ```{admonition} Note headline
+    ```{admonition} Заглавие на бележката
     :class: note
-    This is a note.
+    Това е бележка.
     ```
     
 
-```{admonition} Note headline :class: note This is a note.
+```{admonition} Заглавие на бележката :class: note Това е бележка.
 
-    <br />#### Warnings
+    <br />#### Предупреждения
     
     ````
-    ```{admonition} Warning
+    ```{admonition} Внимание
     :class: warning
-    This is a warning.
+    Това е предупреждение.
     
 
-    ```{admonition} Warning headline 
+    ```{admonition} Заглавие на предупреждението
     :class: warning
-    This is a warning.
+    Това е предупреждение.
     ```
     
-    #### Collapsing Notes
+    #### Сгъваеми бележки
     
     
 
-    {admonition} further detailed readings for interested readers
+    {admonition} по-подробна информация за интересуващите се читатели
     :class: dropdown
     
-    This admonition has been collapsed,
-    meaning you can add longer form content here,
-    without it taking up too much space on the page.
+    Този блок е сгънат,
+    което означава, че тук можете да добавите по-дълго съдържание,
+    без то да заема много място на страницата.
     
 
 ````
 
-```{admonition} further detailed readings for interested readers :class: dropdown This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page.
+```{admonition} по-подробна информация за интересуващите се читатели :class: dropdown Този блок е сгънат, което означава, че тук можете да добавите по-дълго съдържание, без то да заема много място на страницата.
 
 ```
 
-## Tables
+## Таблици
 
-Avoid using tables with long texts as the contents is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Избягвайте таблици с дълги текстове, защото съдържанието им е трудно за оформяне в Markdown, обикновено не се побират в ширината на екрана на мобилен телефон и вероятно няма да изглеждат по същия начин след превод.
 
-## Style Guide
+## Ръководство за стил
 
-### Contents
+### Съдържание
 
-1. English language writing tips
+1. Съвети за писане на английски език
 
-2. AAPS-specific writing notes
+2. Бележки за писане, специфични за AAPS
 
-3. Useful references
+3. Полезни източници
 
-### ![Image](../images/styleguide01.png) 1\. English language writing tips
+### ![Изображение](../images/styleguide01.png) 1\. Съвети за писане на английски език
 
-#### Use language that is appropriate for the reader
+#### Използвайте език, подходящ за читателя
 
-Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
+Използвайте прост английски език навсякъде, където е възможно. Това помага на читателите, за които английският не е роден език, и улеснява превода на документите на AAPS на други езици. Пишете като в разговор с потребителя – представете си, че седите на бюрото срещу човека, за когото пишете. Запомнете – повечето потребители на AAPS нямат опит в програмирането. Самият диабет също има много специфични термини и съкращения. Имайте предвид, че някои хора може да са диагностицирани наскоро, може да нямат вашия опит с диабета или да са получили различно обучение за диабета. Ако използвате съкращение, изпишете го изцяло първия път, когато го използвате, и поставете съкращението веднага след него в скоби, например „super micro bolus (SMB)“. Също така добавете връзка към речника. Технически термини, които може да не са познати на читателя, също могат да се добавят в скоби.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?"*
+Вместо: *“What causes high postprandial BG peaks in closed loop?"*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
+Използвайте: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
 
-##### Use plain words that everyone can understand
+##### Използвайте прости думи, които всеки може да разбере
 
-Find an A-Z of alternative words to make your writing easier to understand here:
+Тук ще намерите списък от А до Я с алтернативни думи, които правят текста по-лесен за разбиране:
 
 <https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html>
 
-#### Privacy/licensing concerns:
+#### Въпроси за поверителност и лицензи:
 
-Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure YouTube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
+Особено ако записвате видео или правите екранни снимки, внимавайте да не разкриете личните си данни (API ключ, пароли). Уверете се, че съдържанието в YouTube не е публично в списъците и може да се гледа само чрез връзка от документацията. Не привличайте внимание към материали, които нарушават авторски права (BYODA и др.).
 
-#### Keep sentences short, get to the point
+#### Пишете кратки изречения, говорете по същество
 
-- Clear writing should have an average sentence length of 15 to 20 words.
+- Ясният текст трябва да има средна дължина на изречението от 15 до 20 думи.
 
-- This does not mean making every sentence the same length. Be punchy. Vary your writing by mixing short sentences (like the last one) with longer ones (like this one).
+- Това не означава всяко изречение да е със същата дължина. Пишете стегнато. Разнообразявайте текста, като смесвате кратки изречения (като предишното) с по-дълги (като това).
 
-- Stick to one main idea in a sentence, plus perhaps one other related point.
+- Придържайте се към една основна идея в изречение, плюс може би още една свързана мисъл.
 
-- You may still find yourself writing the odd long sentence, especially when trying to explain a complicated point. But most long sentences can be broken up in some way.
+- Възможно е понякога пак да напишете дълго изречение, особено когато обяснявате нещо сложно. Но повечето дълги изречения могат да се разделят по някакъв начин.
 
-- Remove weak words: “you can”, “there is/are/were”, “in order to”.
+- Премахвайте слабите думи: „you can“, „there is/are/were“, „in order to“.
 
-- Place keywords near the beginning of titles, sentences and paragraphs.
+- Поставяйте ключовите думи близо до началото на заглавията, изреченията и абзаците.
 
-- Be visual! Wherever possible provide a brief diagram, screenshot or video.
+- Бъдете нагледни! Когато е възможно, добавете кратка диаграма, екранна снимка или видео.
 
-#### Don't be afraid to give instructions
+#### Не се страхувайте да давате инструкции
 
-Commands are the fastest way to give instructions, but writers sometimes fear giving commands, writing “you should do this” instead of just “do this”. Perhaps people worry that commands sound too harsh. You can often solve this by putting the word 'please' in front. However, if something must be done, it is best not to say ‘please’ as it gives the reader the option to refuse.
+Командите са най-бързият начин да дадете инструкции, но авторите понякога се страхуват да дават команди и пишат „you should do this“ вместо просто „do this“. Може би хората се притесняват, че командите звучат твърде грубо. Често можете да решите това, като поставите думата „please“ (моля) отпред. Ако обаче нещо задължително трябва да се направи, по-добре е да не казвате „please“, защото това дава на читателя възможност да откаже.
 
-Instead of: *“You should just think of it as a complete statement."*
+Вместо: *“You should just think of it as a complete statement."*
 
-Use: *“Think of it as a complete statement.”*
+Използвайте: *“Think of it as a complete statement.”*
 
-#### Mostly use active verbs, rather than passive verbs
+#### Използвайте предимно глаголи в деятелен залог, а не в страдателен залог
 
-Example of an **active verb**:
+Пример за **глагол в деятелен залог**:
 
 - *“The pump (subject) delivers (verb) the insulin (object).”*
 
-“delivers” is an active verb here. The sentence says what is doing the delivering before it says what is being delivered.
+„delivers“ тук е глагол в деятелен залог. Изречението казва кой извършва подаването, преди да каже какво се подава.
 
-Example of a **passive verb**:
+Пример за **глагол в страдателен залог**:
 
 - *“The insulin (subject) is delivered (verb) by the pump (object)”*
 
-*“delivered”* a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
+*“delivered”* is a passive verb here. Подлогът и допълнението са разменени в сравнение с изречението с деятелен залог. Трябваше да направим изречението по-дълго, като добавихме „is“ и „by the“. Помислете също дали да не започнете с глагола в деятелен залог.
 
-Instead of: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
+Вместо: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
 
-Use: *“Connect your desired pump to the phone through the AAPS pump menu.”*
+Използвайте: *“Connect your desired pump to the phone through the AAPS pump menu.”*
 
-Passive verbs can cause problems:
+Страдателният залог може да създаде проблеми:
 
-- They can be confusing.
+- Може да обърква.
 
-- They often make writing more long-winded.
+- Често прави текста по-разтеглен.
 
-- They make writing less lively.
+- Прави текста по-малко жив.
 
-##### Good uses of passives
+##### Добри случаи за страдателен залог
 
-There are times when it might be appropriate to use a passive.
+Понякога страдателният залог може да е подходящ.
 
-- To make something less hostile - 'this bill has not been paid' (passive) is softer than 'you have not paid this bill' (active).
+- За да звучи нещо по-малко враждебно – „this bill has not been paid“ (страдателен залог) е по-меко от „you have not paid this bill“ (деятелен залог).
 
-- To avoid taking the blame - 'a mistake was made' (passive) rather than 'You made a mistake' (active).
+- За да не търсите вина – „a mistake was made“ (страдателен залог) вместо „You made a mistake“ (деятелен залог).
 
-- When you don't know who or what the doer is - 'the England team has been picked'.
+- Когато не знаете кой или какво извършва действието – „the England team has been picked“.
 
-- If it simply sounds better.
+- Ако просто звучи по-добре.
 
-#### Avoid nominalisations
+#### Избягвайте номинализациите (отглаголните съществителни)
 
-A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalizations are formed from verbs.
+Номинализацията е име на нещо, което не е физически предмет, например процес, техника или емоция. Номинализациите се образуват от глаголи.
 
 Например:
 
-| Verb      | Nominalization |
-| --------- | -------------- |
-| complete  | completion     |
-| introduce | introduction   |
-| provide   | provision      |
-| fail      | failure        |
+| Глагол    | Номинализация |
+| --------- | ------------- |
+| complete  | completion    |
+| introduce | introduction  |
+| provide   | provision     |
+| fail      | failure       |
 
-They are often used **instead** of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
+Те често се използват **вместо** глаголите, от които произлизат, но могат да звучат така, сякаш всъщност нищо не се случва. Твърде много номинализации правят текста много скучен и тежък за четене.
 
-Instead of: *“The implementation of the method has been done by a team.”*
+Вместо: *“The implementation of the method has been done by a team.”*
 
-Use: *“A team has implemented the method.”*
+Използвайте: *“A team has implemented the method.”*
 
-#### Use lists where appropriate
+#### Използвайте списъци, където е подходящо
 
-Lists are excellent for splitting information up. There are two main types of list:
+Списъците са отличен начин да разделите информацията. Има два основни вида списъци:
 
-- A continuous sentence with several listed points picked out at the beginning, middle or end.
+- Едно продължително изречение с няколко изброени точки в началото, в средата или в края.
 
-- Separate bullet points with an introductory statement.
+- Отделни водещи точки с въвеждащо изречение.
 
-In the bulleted list above, each point is a complete sentence so they each start with a capital letter and end with a full stop. Use bullet points rather than numbers or letters, as they draw your attention to each point without giving you extra information to take in.
+В списъка с водещи точки по-горе всяка точка е пълно изречение, затова всяка започва с главна буква и завършва с точка. Използвайте водещи точки вместо цифри или букви, защото те насочват вниманието ви към всяка точка, без да ви дават допълнителна информация, която да обработвате.
 
-#### Mythbusting
+#### Разбиване на митове
 
-- You can start a sentence with **and, but, because, so or however**.
+- Можете да започнете изречение с **and, but, because, so or however**.
 
-- You can split infinitives. So you can say **“to boldly go”**.
+- Можете да разделяте инфинитива (split infinitive). Така можете да кажете **“to boldly go”**.
 
-- You can end a sentence with a preposition. In fact, it is something **we should stand up for**.
+- Можете да завършите изречение с предлог. Всъщност това е нещо, което трябва да отстояваме (**we should stand up for**).
 
-- And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.
+- И **вие** можете да използвате една и съща **дума** два пъти в изречение, ако **вие** не намерите по-добра **дума**.
 
-#### Optimizing writing style by purpose
+#### Оптимизиране на стила на писане според целта
 
-To keep the documentation clear and short, we write different sections of the documentation in different styles.
+За да е документацията ясна и кратка, пишем различните ѝ раздели в различни стилове.
 
-An “explanation” style is used for the introduction, background and knowledge development sections.
+Стилът „обяснение“ (explanation) се използва за въведението, основната информация и разделите за задълбочаване на знанията.
 
-A “How-to-guide” style (with minimal explanation) is used for building, configuring AAPS, and some of the troubleshooting sections.
+Стилът „ръководство как да“ (how-to guide), с минимални обяснения, се използва за компилирането и конфигурирането на AAPS и за някои от разделите за отстраняване на неизправности.
 
-A tutorial helps the pupil acquire basic competence. The user will **learn by doing**.
+Урокът (tutorial) помага на обучаващия се да придобие основни умения. Потребителят ще **се учи, като прави**.
 
-![Image](../images/styleguide02.png)
+![Изображение](../images/styleguide02.png)
 
-##### ![Image](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
+##### ![Изображение](../images/styleguide03.png) Уроци (tutorials) (например как да научите дете да разбива белтъци)
 
-- narrator directly talks to the reader: In this tutorial **you** will (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
+- разказвачът говори директно на читателя: In this tutorial **you** will (we) може да се използва в редки случаи, за да предаде усещането „ние сме заедно в това“
 
-- Future Tense -> to show the final target
+- Бъдеще време -> за да покажете крайната цел
 
-- Imperative Tense -> to do the tasks -> Concrete steps - avoid abstract concepts
+- Повелително наклонение -> за изпълнение на задачите -> Конкретни стъпки – избягвайте абстрактни понятия
 
-- Past Tense -> to show accomplished tasks -> Quick and immediate visible results
+- Минало време -> за да покажете изпълнените задачи -> Бързи и веднага видими резултати
 
-- Minimum Explanations -> strict necessary to complete the task - **what and why**
+- Минимум обяснения -> само строго необходимото за изпълнение на задачата – **какво и защо**
 
-- Ignore options/alternatives/…. No ambiguity
+- Пропускайте опциите/алтернативите/…. Без двусмислие
 
-- Step Transitions: finish a step with a sentence leading to the next step as a logical progression flow. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- Преходи между стъпките: завършвайте всяка стъпка с изречение, което води към следващата стъпка като логично продължение. Пример: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
 
-- **Tutorial** Title (Level 1 heading)
+- Заглавие на **урок** (заглавие от ниво 1)
 
-- Introduction (no heading)
+- Въведение (без заглавие)
 
-- Prerequisites (Level 2 heading)
+- Предпоставки (заглавие от ниво 2)
 
-- Steps:
+- Стъпки:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- Стъпка 1 — Изпълнение на първото действие (заглавие от ниво 2)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- Стъпка 2 — Изпълнение на следващото действие (заглавие от ниво 2)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- Стъпка n — Изпълнение на последното действие (заглавие от ниво 2)
 
-- Conclusion (Level 2 heading)
+- Заключение (заглавие от ниво 2)
     
-    - **The Language of Tutorials**
+    - **Езикът на уроците**
         
         *In this tutorial, you will…*
         
-        Describe what the learner will accomplish (note - not: “you will learn…”).
+        Опишете какво ще постигне обучаващият се (забележка – не: „you will learn…“).
         
         *First, do x. Now, do y. Now that you have done y, do z.*
         
-        No room for ambiguity or doubt.
+        Без място за двусмислие или съмнение.
         
         *We must always do x before we do y because… (see Explanation for more details).*
         
-        Provide minimal explanation of actions in the most basic language possible. Link to more detailed explanation.
+        Давайте минимални обяснения на действията с възможно най-простия език. Дайте връзка към по-подробно обяснение.
         
         *The output should look something like this…*
         
-        Give your learner clear expectations.
+        Дайте на обучаващия се ясни очаквания.
         
         *Notice that… Remember that…*
         
-        Give your learner plenty of clues to help confirm they are on the right track and orient themselves.
+        Давайте на обучаващия се много подсказки, които да му помогнат да потвърди, че е на прав път, и да се ориентира.
         
         *You have built a secure, three-layer hylomorphic stasis engine…*
         
-        Describe (and admire, in a mild way) what your learner has accomplished (note - not: “you have learned…”)
+        Опишете (и похвалете умерено) какво е постигнал обучаващият се (забележка – не: „you have learned…“)
 
-##### ![Image](../images/styleguide05.png) How-To Guides (e.g. a recipe)
+##### ![Изображение](../images/styleguide05.png) Ръководства „как да“ (how-to guides) (например рецепта)
 
-A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
+Целта на ръководството „как да“ е да помогне на вече подготвения потребител да изпълни правилно определена задача.
 
-- HOW-to
+- КАК да (HOW-to)
 
-- narrator directly talks to the reader: In this tutorial **you** will
+- разказвачът говори директно на читателя: In this tutorial **you** will
 
-- Future Tense -> to show the final target
+- Бъдеще време -> за да покажете крайната цел
 
-- Conditional Imperative Tense -> to get X do y -> Concrete steps - avoid abstract concepts
+- Условно повелително наклонение -> за да получите X, направете y -> Конкретни стъпки – избягвайте абстрактни понятия
 
-- Minimum Explanations -> strict necessary to complete the task -> **what and why**
+- Минимум обяснения -> само строго необходимото за изпълнение на задачата -> **какво и защо**
 
-- Ignore options/alternatives/…. No ambiguity, but you can link to the reference entry or explanation entry
+- Пропускайте опциите/алтернативите/…. Без двусмислие, но можете да дадете връзка към справочния запис или към обяснението
 
-- **How-to**: Title (Level 1 heading)
+- **Как да**: заглавие (заглавие от ниво 1)
 
-- Introduction paragraph
+- Въвеждащ абзац
 
-- Optional Prerequisites (paragraph or Level 2 heading if more than 1)
+- Предпоставки по избор (абзац или заглавие от ниво 2, ако са повече от 1)
 
-- Steps:
+- Стъпки:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- Стъпка 1 — Изпълнение на първото действие (заглавие от ниво 2)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- Стъпка 2 — Изпълнение на следващото действие (заглавие от ниво 2)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- Стъпка n — Изпълнение на последното действие (заглавие от ниво 2)
 
-- Conclusion paragraph
+- Заключителен абзац
     
-    - **The Language of How-To Guides**
+    - **Езикът на ръководствата „как да“**
         
         *This guide shows you how to…*
         
-        Describe clearly the problem or task that the guide shows the user how to solve.
+        Опишете ясно проблема или задачата, които ръководството показва как да се решат.
         
         *If you want x, do y. To achieve w, do z.*
         
-        Use conditional imperatives.
+        Използвайте условно повелително наклонение.
         
         *Refer to the x reference guide for a full list of options.*
         
-        Don’t pollute your practical how-to guide with every possible thing the user might do related to x.
+        Не претрупвайте практическото си ръководство „как да“ с всичко възможно, което потребителят би могъл да направи във връзка с x.
 
-##### ![Image](../images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
+##### ![Изображение](../images/styleguide07.png) Обяснение (explanation) (например науката зад това защо белтъците се втвърдяват, когато ги разбивате)
 
-An explanation clarifies, deepens and broadens the reader’s understanding of a subject.
+Обяснението изяснява, задълбочава и разширява разбирането на читателя за дадена тема.
 
-- WHY
+- ЗАЩО
 
-- Start with **About**
+- Започнете с **About** („Относно“)
 
-- Provide context, link ALL relevant references
+- Дайте контекст, добавете връзки към ВСИЧКИ свързани източници
 
-- Discuss options/alternatives
+- Обсъдете опциите/алтернативите
 
-- Don’t instruct or provide reference (link to them)
+- Не давайте инструкции и справочна информация (дайте връзка към тях)
 
-- State the unknown/moving targets etc…
+- Посочете неизвестните неща, променящите се цели и т.н.…
 
-- **About** Title (Level 1 heading)
+- Заглавие с **About** (заглавие от ниво 1)
 
-- Introduction (no heading)
+- Въведение (без заглавие)
 
-- Optional Prerequisites (Level 2 heading)
+- Предпоставки по избор (заглавие от ниво 2)
 
-- Subtopic 1 (level 2 heading)
+- Подтема 1 (заглавие от ниво 2)
 
-- Conclusion (Level 2 heading)
+- Заключение (заглавие от ниво 2)
     
-    - **The Language of Explanation**
+    - **Езикът на обясненията**
     
     *The reason for x is because historically, y…*
     
-    Explain.
+    Обяснявайте.
     
     *W is better than z, because…*
     
-    Offer judgements and even opinions where appropriate..
+    Offer judgements and even opinions where appropriate.
     
     *An x in system y is analogous to a w in system z. However…*
     
-    Provide context that helps the reader.
+    Дайте контекст, който помага на читателя.
     
     *Some users prefer w (because z). This can be a good approach, but…*
     
-    Weigh up alternatives.
+    Претеглете алтернативите.
     
     *An x interacts with a y as follows:…*
     
-    Unfold the machinery’s internal secrets, to help understand why something does what it does.
+    Разкрийте вътрешните тайни на механизма, за да помогнете да се разбере защо нещо прави това, което прави.
 
-### 2\. AAPS-specific writing/updating notes
+### 2\. Бележки за писане/обновяване, специфични за AAPS
 
-#### Author & Editor
+#### Автор и редактор
 
-For writing/updating the AAPS documentation, consider the process as consisting of two stages. These can be carried out by the same person at different points, or more than one person.
+Когато пишете или обновявате документацията на AAPS, разглеждайте процеса като два етапа. Те могат да се изпълнят от един и същ човек в различно време или от повече от един човек.
 
-An **author (e.g. you!)** writes/edits a section of the documentation in a concise conversational tone, then passes it to the editor.
+**Авторът (например вие!)** пише/редактира раздел от документацията в сбит разговорен тон и след това го предава на редактора.
 
-The **editor (e.g. a fellow AAPS user, or the person who receives the pull request)** reviews adherence to the style guide, edits the section for clarity and accessibility, removing as many words as possible (especially for tutorial/how-to sections). Reading the text out loud may help.
+**Редакторът (например друг потребител на AAPS или човекът, който получава заявката за сливане)** проверява дали е спазено ръководството за стил, редактира раздела за яснота и достъпност и премахва колкото се може повече думи (особено в разделите тип урок/„как да“). Може да помогне да прочетете текста на глас.
 
-#### General AAPS points
+#### Общи бележки за AAPS
 
-- For glucose values, state both mg/dl and mmol/l in each occurrence (also consider this for screenshots, if possible).
+- За стойностите на глюкозата посочвайте и mg/dl, и mmol/l всеки път (помислете за това и при екранните снимки, ако е възможно).
 
-- For consistency, use “AAPS” rather than “Android APS”.
+- За последователност използвайте „AAPS“, а не „Android APS“.
 
-- Clearly state the version of Android Studio/AAPS you are writing for, or that the screenshots are taken from.
+- Посочете ясно версията на Android Studio/AAPS, за която пишете или от която са направени екранните снимки.
 
-### 3\. Useful References
+### 3\. Полезни източници
 
 <https://dev.readthedocs.io/en/latest/style-guide.html>
 

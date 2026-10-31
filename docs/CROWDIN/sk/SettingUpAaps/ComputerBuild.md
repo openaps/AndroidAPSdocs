@@ -2,15 +2,15 @@
 
 # Zostavenie v Android Studiu
 
-Toto je klasická metóda na vytvorenie vašej aplikácie AAPS.
+Toto je klasický spôsob, ako zostaviť vašu aplikáciu AAPS.
 
-Aplikáciu môžete zostaviť aj bez počítača metódou [Browser Build](./BrowserBuild.md).
+Aplikáciu môžete zostaviť aj bez počítača, spôsobom [Zostavenie v prehliadači](./BrowserBuild.md).
 
 ## Zostavte si ju sami namiesto sťahovania
 
-**Aplikácia AAPS (súbor APK) nie je k dispozícii na stiahnutie z dôvodu predpisov týkajúcich sa zdravotníckych pomôcok. Je legálne vytvoriť si aplikáciu pre vlastné použitie ale nesmiete jej kópiu poskytnúť iným osobám!**
+**Aplikácia AAPS (súbor APK) nie je k dispozícii na stiahnutie z dôvodu predpisov týkajúcich sa zdravotníckych pomôcok. Je legálne zostaviť si aplikáciu pre vlastné použitie, ale nesmiete jej kópiu poskytnúť iným osobám!**
 
-Podrobnosti nájdete na [stránke s častými otázkami](../UsefulLinks/FAQ.md).
+Podrobnosti nájdete na stránke [Najčastejšie otázky používateľov APS](../UsefulLinks/FAQ.md).
 
 ---
 
@@ -19,16 +19,17 @@ Podrobnosti nájdete na [stránke s častými otázkami](../UsefulLinks/FAQ.md).
 
 * Na zostavenie súboru APK môže byť potrebná konkrétna verzia **[Android Studia](https://developer.android.com/studio/)**. Pozrite si tabuľku nižšie:
 
-| Verzia AAPS             | Preferovaná <br/>Android Studio<br/> Verzia | Alternatívna<br/>Android Studio<br/>Verzia | Gradle | JVM |
-| ----------------------- | ------------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| 2.6.2                   | 3.6.1                                                   |                                                        | 5.6.4  | 11  |
-| 2.8.2.1                 | 4.1.1                                                   |                                                        | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                                | up to Quail 1                                          | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                     | up to Quail 1                                          | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                         | up to Quail 1                                          | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                      | up to Quail 1                                          | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                      | up to Quail 1                                          | 8.13   | 21  |
-| [3.4.2.2](#version3422) | Panda 2 (2025.32)                                       | up to Quail 1                                          | 9      | 21  |
+| Verzia AAPS                 | Preferovaná <br/>Android Studio<br/> Verzia | Alternatívna<br/>Android Studio<br/>Verzia | Gradle | JVM |
+| --------------------------- | ------------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
+| 2.6.2                       | 3.6.1                                                   |                                                        | 5.6.4  | 11  |
+| 2.8.2.1                     | 4.1.1                                                   |                                                        | 6.1.1  | 13  |
+| [3.1.0.3](#version3100)     | 2020.3.1                                                | otestované až po Quail 4                               | 7.3.3  | 17  |
+| [3.2.0.4](#version3204)     | Hedgehog (2023.1.1)                                     | otestované až po Quail 4                               | 8.2    | 17  |
+| [3.3.1.3](#version3300)     | Ladybug Feature Drop (2024.2.2)                         | otestované až po Quail 4                               | 8.10   | 21  |
+| [3.3.2](#version3300)       | Meerkat (2024.3.1)                                      | otestované až po Quail 4                               | 8.11.1 | 21  |
+| [3.3.2.1](#version3321)     | Narwhal (2025.1.2)                                      | otestované až po Quail 4                               | 8.13   | 21  |
+| [3.4.2.6](#version3426)     | Panda 2 (2025.3.2)                                      | otestované až po Quail 4                               | 9      | 21  |
+| [4.0.0-beta1](#version4000) | Rabbit 1                                                | až po najnovší Rabbit 1                                | 9.8    | 21  |
 
 „Požadovaná verzia“ je dodávaná s príslušnou verziou JVM. Táto verzia je zároveň minimálnou verziou, ktorú možno použiť na zostavenie **AAPS**. **Nebudete** môcť zostavovať na verzii staršej, než je tá „požadovaná“. Ak používate inú verziu, môžete naraziť na problémy súvisiace s verziou JVM. V prípade problému si pozrite stránku [Riešenie problémov v Android Studiu](#troubleshooting_androidstudio-uncommitted-changes), ktorá vám pomôže tieto problémy vyriešiť. Ak vaša aktuálna verzia Android Studia nie je uvedená v tabuľke, musíte ju najprv aktualizovať.
 
@@ -52,7 +53,7 @@ Verzia Gradle je naviazaná na zdrojový kód a pri sťahovaní alebo aktualizá
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">16GB alebo viacej</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16 GB alebo viac</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Disk</th>
@@ -73,7 +74,7 @@ Verzia Gradle je naviazaná na zdrojový kód a pri sťahovaní alebo aktualizá
 
 ## Pomoc a podpora počas procesu zostavovania
 
-Ak budete mať pri vytváraní aplikácie **AAPS** problémy, k dispozícii je špeciálna sekcia [**Riešenie problémov s Android Studiom**](../GettingHelp/TroubleshootingAndroidStudio.md), najskôr si ju prečítajte.
+Ak budete mať pri zostavovaní aplikácie **AAPS** problémy, existuje na to samostatná sekcia [**Riešenie problémov s Android Studiom**](../GettingHelp/TroubleshootingAndroidStudio.md), najskôr si ju prečítajte.
 
 Ak si myslíte, že niečo v návode na zostavenie je nesprávne, chýba alebo je mätúce, prípadne ak máte stále problémy, obráťte sa na ostatných používateľov **AAPS** v skupinách na [Facebooku](https://www.facebook.com/groups/AndroidAPSUsers) alebo [Discorde](https://discord.gg/4fQUWHZ4Mw). Ak chcete sami niečo zmeniť (aktualizácia snímok obrazovky _a pod._), odošlite prosím žiadosť o [(pull request – PR)](../SupportingAaps/HowToEditTheDocs.md).
 
@@ -81,9 +82,8 @@ Ak si myslíte, že niečo v návode na zostavenie je nesprávne, chýba alebo j
 
 ```{admonition} WARNING
 :class: warning
-Ak ste už vytvorili AAPS, nemusíte znova opakovať všetky nasledujúce kroky.
-Prejdite priamo na [pomoc s aktualizáciou]
-(../Maintenance/UpdateToNewVersion.md)!
+Ak ste už AAPS niekedy zostavili, nemusíte znova robiť všetky nasledujúce kroky.
+Prejdite priamo na [návod na aktualizáciu](../Maintenance/UpdateToNewVersion.md)!
 ```
 
 ```{contents} The overall steps for building the **AAPS** apk file
@@ -91,343 +91,347 @@ Prejdite priamo na [pomoc s aktualizáciou]
 :local: true
 ```
 
-V tomto návode nájdete _príklady_ snímky obrazovky zostavovania súboru apk **AAPS**. Pretože **Android Studio** – softvér, ktorý používame na zostavenie súboru **AAPS** apk – sa pravidelne aktualizuje, tieto snímky obrazovky nemusia byť identické s vašou inštaláciou, no malo by byť možné ich použiť.
+V tomto návode nájdete _ukážkové_ snímky obrazovky zo zostavenia súboru apk **AAPS**. Keďže **Android Studio** – softvér, ktorým zostavujeme apk **AAPS** – sa pravidelne aktualizuje, tieto snímky obrazovky sa nemusia presne zhodovať s vašou inštaláciou, ale stále by ste podľa nich mali vedieť postupovať.
 
-Keďže **Android Studio** beží na platformách Windows, Mac OS X a Linux, môžu existovať menšie rozdiely v krokoch pre rôzne platformy.
+Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
 
 (install-git-if-you-dont-have-it)=
-### Install Git
+### Inštalácia Gitu
 
 ```{admonition} Why Git? 
 :class: dropdown
 
-Git is known as a “_Versioning Control System_” (VCS).\
-Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Then, you will use Git on your computer to build the **AAPS** application (apk). 
+Git je známy ako „_Versioning Control System_“ (VCS).\
+Git je program, ktorý vám umožňuje sledovať zmeny v kóde a spolupracovať s ostatnými. Git použijete na vytvorenie kópie zdrojového kódu **AAPS** z webovej stránky GitHub do vášho lokálneho počítača. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
-#### Steps for Installing Git
+#### Postup inštalácie Gitu
 
-1.  Check that you don’t already have **Git** installed. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#install-android-studio):
+1.  Skontrolujte, či už nemáte nainštalovaný **Git**. Overíte to tak, že do vyhľadávania vo Windows napíšete „git“ – ak vidíte **„Git bash“** alebo inú formu Gitu, je už nainštalovaný a môžete prejsť priamo na [inštaláciu Android Studia](#install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section on [**here**](https://git-scm.com/downloads). Any recent Git version should work, select the correct version according to your system, either Mac, Windows and Linux.
+2. Ak Git nemáte nainštalovaný, stiahnite si a nainštalujte najnovšiu verziu pre váš systém zo sekcie „Download“ (Stiahnuť) [**tu**](https://git-scm.com/downloads). Mala by fungovať akákoľvek novšia verzia Gitu. Vyberte správnu verziu podľa svojho systému: Mac, Windows alebo Linux.
 
-**Note for Mac users:** the Git webpage will also guide you to install an additional program called "homebrew" to aid the installation. If you install Git via homebrew, there is no need to change any preferences.
+**Poznámka pre používateľov počítačov Mac:** webová stránka Gitu vás navedie aj na inštaláciu ďalšieho programu s názvom „homebrew“, ktorý inštaláciu uľahčí. Ak Git inštalujete cez homebrew, nemusíte meniť žiadne nastavenia.
 
 (Make_a_note_of_Git_path)=
 
-* During the installation, when you are asked to "select destination location" make a note of _where_ Git is being installed (the "**installation path**") you will need to check it in the next step. It will be something similar to "C:\Program Files\Git\cmd\git.exe"
+* Keď sa vás počas inštalácie opýta na „select destination location“ (výber cieľového umiestnenia), poznačte si, _kam_ sa Git inštaluje („**cesta inštalácie**“). Budete ju potrebovať v ďalšom kroku. Bude to niečo podobné ako „C:\Program Files\Git\cmd\git.exe“
 
-*  As you proceed through several steps of the Git installation, just accept all the default options.
+*  Počas jednotlivých krokov inštalácie Gitu jednoducho prijmite všetky predvolené možnosti.
 
-*  After the install, if you forgot to make a note of the where Git was installed, you can find it as follows: type "git" into the PC search bar, right click on "Git bash", select "open file location" hover over the "Git bash" icon with your mouse, which will then reveal where it is installed.
+*  Ak ste si po inštalácii zabudli poznačiť, kam sa Git nainštaloval, nájdete to takto: do vyhľadávania vo Windows napíšte „git“, kliknite pravým tlačidlom na „Git bash“, vyberte „open file location“ (otvoriť umiestnenie súboru) a podržte myš nad ikonou „Git bash“, čím sa zobrazí, kde je nainštalovaný.
 
-* Reboot your computer before the next step.
+* Pred ďalším krokom reštartujte počítač.
 
 (Building-APK-install-android-studio)=
-### Install Android Studio
+### Inštalácia Android Studia
 
-- **You have to be online all of the time during the following steps, as Android Studio downloads several updates**
+- **Počas nasledujúcich krokov musíte byť neustále online, pretože Android Studio sťahuje niekoľko aktualizácií**
 
 ```{admonition} What is Android Studio?
 :class: dropdown
-Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes. 
+Android Studio je program, ktorý beží na vašom počítači. Umožňuje sťahovať zdrojový kód z internetu (pomocou Gitu) a zostavovať aplikácie pre smartfóny (a inteligentné hodinky). Zostavením novej alebo aktualizovanej aplikácie v Android Studiu na počítači nemôžete „pokaziť“ aktuálnu verziu **AAPS**, ktorá vám možno beží v smartfóne s okruhom. Sú to úplne oddelené procesy. 
 ```
 
-One of the most important things when installing Android Studio is **be patient!** During installation and setup, Android Studio is downloading a lot of stuff which will take time.
+Jednou z najdôležitejších vecí pri inštalácii Android Studia je **byť trpezliví!** Počas inštalácie a nastavenia Android Studio sťahuje veľa vecí, čo si vyžaduje čas.
 
 ```{admonition} Different UI
 :class: warning
-Import note: Android Studio changed its UI during the last releases. This guide will show you the steps with the *new UI* in "Ladybug". If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
+Important note: Android Studio changed its UI during the last releases. Tento návod ukazuje kroky v *novom používateľskom rozhraní*. Snímky obrazovky sú z verzie „Ladybug“, takže novšie verzie môžu vyzerať trochu inak. Ak stále používate staršie používateľské rozhranie, možno budete chcieť najprv prepnúť Android Studio na nové rozhranie podľa [tohto návodu](#computerbuild-NewUI).
 ```
 
-The Android studio version is very important. See the [instructions above](#Building-APK-recommended-specification-of-computer-for-building-apk-file) to pick the proper version of Android Studio.
+Verzia Android Studia je veľmi dôležitá. Ak chcete vybrať správnu verziu Android Studia, pozrite si [pokyny vyššie](#Building-APK-recommended-specification-of-computer-for-building-apk-file).
 
-Download the [current version of Android Studio](https://developer.android.com/studio) or an older version from the [**Archives**](https://developer.android.com/studio/archive) and accept the download agreements.
+Stiahnite si [aktuálnu verziu Android Studia](https://developer.android.com/studio) alebo staršiu verziu z [**archívu**](https://developer.android.com/studio/archive) (Archives) a prijmite licenčné podmienky na stiahnutie.
 
 ![DownloadAndroidStudio](../images/Building-the-App/010_DownloadLadybug.png)
 
-Once the download is finished, start the downloaded application to install it on your computer. You might need to accept/confirm some warnings about downloaded apps from Windows!
+Po dokončení sťahovania spustite stiahnutú aplikáciu a nainštalujte ju do počítača. Možno budete musieť prijať/potvrdiť niektoré varovania Windows o stiahnutých aplikáciách!
 
-Install Android Studio by clicking "Next", as shown in the following screenshots. You do **not** need to change any settings!
+Nainštalujte Android Studio klikaním na „Next“, ako je znázornené na nasledujúcich snímkach obrazovky. **Nemusíte** meniť žiadne nastavenia!
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-If you want to save hard disk space, your you can uncheck Android Virtual Device: it is not used for building **AAPS**.
+If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
 ![Configuration_Settings](../images/Building-the-App/013_InstallLadybug.png)
 
-Now click on "Install":
+Teraz kliknite na „Install“:
 
 ![Choose_start_Menu_Folder](../images/Building-the-App/014_InstallLadybug.png)
 
-Once it's completed, press "Next"
+Po dokončení stlačte „Next“
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-In the last step, click on "Finished" to start Android Studio for the first time.
+V poslednom kroku kliknite na „Finished“ a Android Studio sa prvýkrát spustí.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
-You will be asked if you want to help improve Android Studio. Choose the option to your liking, it won't make any difference for the following steps.
+Zobrazí sa otázka, či chcete pomôcť zlepšiť Android Studio. Vyberte možnosť podľa svojho uváženia, na ďalšie kroky to nemá žiadny vplyv.
 
 ![Help_improve_Android_Studio](../images/Building-the-App/020_ImproveAS.png)
 
-The welcome screen greets you to the installation of Android Studio. Press "Next".
+Uvítacia obrazovka vás privíta pri inštalácii Android Studia. Stlačte „Next“.
 
-![Welcome](../images/Building-the-App/022_WelcomeAndroidStudioInstallation.png)
+![Vitajte](../images/Building-the-App/022_WelcomeAndroidStudioInstallation.png)
 
-Select "Standard" as installation type.
+Ako typ inštalácie vyberte „Standard“.
 
 ![Install_Type](../images/Building-the-App/023_DefaultInstallation.png)
 
-Verify the settings by clicking "Next" again.
+Nastavenia overte opätovným kliknutím na „Next“.
 
 ![Verify_Settings](../images/Building-the-App/024_DefaultInstallation.png)
 
-Now you need to accept the license agreements. You have two sections (1 + 3) on the left side which you have to select one after the other and each select "Accept" (2 + 4) on the right side.
+Teraz musíte prijať licenčné zmluvy. Vľavo sú dve časti (1 + 3), ktoré musíte vybrať jednu po druhej a pri každej vpravo vybrať „Accept“ (2 + 4).
 
-Then the "Finish" (5) button can be clicked.
+Potom môžete kliknúť na tlačidlo „Finish“ (5).
 
 ![License_Agreement](../images/Building-the-App/025_LicenseAgreement.png)
 
-Some Android packages will now be downloaded and installed. Be patient and wait.
+Teraz sa stiahnu a nainštalujú niektoré balíky Androidu. Buďte trpezliví a počkajte.
 
-When it's finished, you will find the following screen where you can select "Finish" again.
+Po dokončení sa zobrazí nasledujúca obrazovka, kde znova vyberiete „Finish“.
 
 ![Downloading_Components](../images/Building-the-App/026_DownloadFinished.png)
 
-You will now see the Welcome screen of Android Studio.
+Teraz uvidíte uvítaciu obrazovku Android Studia.
 
 ![Welcome_to_Android_Studio](../images/Building-the-App/031_WelcomeAndroidStudio.png)
 
 
 (Building-APK-download-AAPS-code)=
-### Download the AAPS code
+### Stiahnutie kódu AAPS
 
 ```{admonition} Why can it take a long time to download the AAPS code?
 :class: dropdown
 
-The first time **AAPS** is downloaded, Android Studio will connect over the internet to the Github website to download the source code for **AAPS**. This should take about 1 minute. 
+Pri prvom sťahovaní **AAPS** sa Android Studio pripojí cez internet k webovej stránke GitHub a stiahne zdrojový kód **AAPS**. Malo by to trvať približne 1 minútu. 
 
-Android Studio will then use **Gradle** (a development tool for Android apps) to identify other components needed to build these items on your computer. 
+Android Studio potom použije **Gradle** (vývojový nástroj pre aplikácie pre Android) na identifikáciu ďalších komponentov potrebných na zostavenie týchto položiek vo vašom počítači. 
 ```
 
-On the Android Studio Welcome screen, check that "**Projects**" (1) is highlighted on the left.
+Na uvítacej obrazovke Android Studia skontrolujte, či je vľavo zvýraznená položka „**Projects**“ (1).
 
-Then click "**Clone Repository**" (2) on the right:
+Potom vpravo kliknite na „**Clone Repository**“ (2):
 
 ![Get_from_VCS](../images/Building-the-App/032_GetVCS.png)
 
-We will now tell Android Studio where to get the code from:
+Teraz Android Studiu nastavíme, odkiaľ má kód stiahnuť:
 
 ![Get from Version Control](../images/Building-the-App/033_CloneGit.png)
 
-* "Repository URL" should be selected (by default) on the left (1).
-* "Git" should be selected (by default) as version control (2).
-* Now copy this URL:
+* Vľavo by mala byť (predvolene) vybraná možnosť „Repository URL“ (1).
+* Ako systém na správu verzií by mal byť (predvolene) vybraný „Git“ (2).
+* Teraz skopírujte túto URL:
     ```
     https://github.com/nightscout/AndroidAPS.git
     ```
-    and paste it into the URL textbox (3).
+    a vložte ju do textového poľa URL (3).
 
-* Check the (default) directory for saving the cloned code does not already exist on your computer (4). You can change it to some directory, but please remember where you stored it!
-* Now click the button "Clone" (5).
+* Skontrolujte, či (predvolený) adresár na uloženie klonovaného kódu vo vašom počítači už neexistuje (4). Môžete ho zmeniť na iný adresár, ale zapamätajte si, kam ste ho uložili!
+* Teraz kliknite na tlačidlo „Clone“ (5).
 
 ```{admonition} INFORMATION
-:class: information
-Make a note of the directory. It is where your sourcecode is stored!
+:class: note
+Poznačte si tento adresár. Je to miesto, kde je uložený váš zdrojový kód!
 ```
 
-You will now see a screen telling you that the repository is being cloned:
+Teraz uvidíte obrazovku s informáciou, že sa repozitár klonuje:
 
 ![cloning_repository](../images/Building-the-App/034_CloningProgress.png)
 
-At some point, Android Studio will close and start again. You may be asked whether you want to trust the project. Click on "Trust project":
+V istom momente sa Android Studio zatvorí a znova spustí. Môže sa zobraziť otázka, či projektu dôverujete. Kliknite na „Trust project“:
 
   ![Trust project](../images/Building-the-App/035_TrustProject.png)
 
 
-Only for Windows users: If your firewall asks for permission, grant access:
+Iba pre používateľov Windows: ak sa váš firewall pýta na povolenie, povoľte prístup:
 
- ![Firewall permission java](../images/AndroidStudio361_18.png)
+ ![Povolenie pre java vo firewalle](../images/AndroidStudio361_18.png)
 
-After the repository is cloned successfully, Android Studio will open the cloned project.
+Po úspešnom naklonovaní repozitára Android Studio otvorí naklonovaný projekt.
 
 (computerbuild-NewUI)=
 ```{admonition} New UI
-:class: information
-Android Studio changed its UI recently. New installations of Android Studio use the new UI by default!
+:class: note
+Android Studio nedávno zmenilo svoje používateľské rozhranie. Nové inštalácie Android Studia štandardne používajú nové používateľské rozhranie!
 
-Only if your Android Studio looks different, you might need to switch to the new UI:
-Click on the hamburger menu on the top left, then select **Settings** (or **Preferences** on Apple computers).
-In **Appearance & Behaviour**, go to **New UI** and tick **Enable new UI**. Then restart Android Studio to start using it.
+Iba ak vaše Android Studio vyzerá inak, možno budete musieť prepnúť na nové používateľské rozhranie:
+Kliknite vľavo hore na hamburgerovú ponuku a potom vyberte **Settings** (alebo **Preferences** na počítačoch Apple).
+V časti **Appearance & Behavior** prejdite na **New UI** a zaškrtnite **Enable new UI**. Potom Android Studio reštartujte, aby ste ho mohli začať používať.
 
-If you don't find the option **New UI** don't worry: you are already using it!
+Ak možnosť **New UI** nenájdete, nebojte sa: už ho používate!
 ```
 
 
-When Android Studio opened, wait patiently (this may take a few minutes), and particularly, **do not** update the project as suggested in the pop-up.
+Po otvorení aplikácie Android Studio počkajte (môže to trvať niekoľko minút) a najmä **neaktualizujte** projekt, ako sa navrhuje vo vyskakovacom okne.
 
-Android Studio will start a "Gradle project sync" automatically, which will take a couple of minutes to finish. You can see it (still) running:
+Android Studio automaticky spustí „Gradle project sync“ (synchronizáciu projektu Gradle), ktorá potrvá niekoľko minút. Môžete vidieť, že (stále) beží:
 
 ![AS_download_dependencies](../images/Building-the-App/036_GradleSyncing.png)
 
 ```{admonition} NEVER UPDATE GRADLE!
 :class: warning
 
-Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties.
+Android Studio môže odporučiť aktualizáciu systému gradle. **Nikdy neaktualizujte gradle!** To povedie k ťažkostiam.
 ```
 
-Only on windows computers: You might get a notification about windows defender running: Click on **Automatically** and confirm, it will make the build run faster!
+Iba na počítačoch s Windows: môže sa zobraziť upozornenie, že beží Windows Defender. Kliknite na **Automatically** a potvrďte, zostavenie potom pobeží rýchlejšie!
 
 ![Windows Defender](../images/Building-the-App/037_WindowsDefender.png)
 
 
-You can leave the gradle sync running and follow the next steps already.
+Synchronizáciu Gradle môžete nechať bežať a už pokračovať ďalšími krokmi.
 
 (Building-APK-set-git-path-in-preferences)=
-### Set Git path in Android Studio preferences
+### Nastavenie cesty ku Gitu v nastaveniach Android Studia
 
-Now we will tell Android studio where to find Git, which you installed [earlier](#install-git-if-you-dont-have-it).
+Teraz Android Studiu nastavíme, kde nájde Git, ktorý ste nainštalovali [predtým](#install-git-if-you-dont-have-it).
 
-* Windows users only: Make sure you have restarted your computer after [installing Git](#install-git-if-you-dont-have-it). If not, restart now and re-open Android Studio
+* Iba pre používateľov Windows: uistite sa, že ste po [inštalácii Gitu](#install-git-if-you-dont-have-it) reštartovali počítač. Ak nie, reštartujte ho teraz a znova otvorte Android Studio
 
-In the top left corner of **Android Studio**, open the hamburger menu and navigate to **File** > **Settings** (on Windows) or **Android Studio** > **Preferences** (on Mac). This opens the following window, click to expand the dropdown called **Version Control** (1) and select **Git**
+V ľavom hornom rohu **Android Studia** otvorte hamburgerovú ponuku a prejdite na **File** > **Settings** (vo Windows) alebo **Android Studio** > **Preferences** (na Macu). Otvorí sa nasledujúce okno. Kliknutím rozbaľte rozbaľovaciu ponuku **Version Control** (1) a vyberte **Git** (2)
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-Check if **Android Studio** can automatically locate the correct **Path to Git executable** automatically by clicking the button "Test" (1):
+Kliknutím na tlačidlo „Test“ (1) skontrolujte, či **Android Studio** dokáže automaticky nájsť správnu cestu v poli **Path to Git executable** (cesta k spustiteľnému súboru Git):
 
-![Git Executable](../images/Building-the-App/039_GitTest.png)
+![Spustiteľný súbor Git](../images/Building-the-App/039_GitTest.png)
 
 
-If the automatic setting is successful, your current version of **Git** will be displayed next to the path.
+Ak je automatické nastavenie úspešné, vedľa cesty sa zobrazí vaša aktuálna verzia **Gitu**.
 
    ![Git_version_displayed](../images/Building-the-App/039_GitTestSuccess.png)
 
 
-If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error (1), you can either
-* manually enter the path which you saved [earlier](#BuildingAaps-steps-for-installing-git), or
-* click on the folder icon (1) and manually navigating to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
-* Verify your settings with the **Test** button!
+Ak sa **git.exe** nenájde automaticky alebo ak kliknutie na „Test“ skončí chybou, môžete buď
+* ručne zadajte cestu, ktorú ste uložili [skôr](#BuildingAaps-steps-for-installing-git), alebo
+* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
+* Overte svoje nastavenia pomocou tlačidla **Test**!
 
-  ![Git not found](../images/Building-the-App/039_GitTestError.png)
+  ![Git sa nenašiel](../images/Building-the-App/039_GitTestError.png)
 
 (Building-APK-generate-signed-apk)=
-### Build the AAPS "signed" APK
+### Zostavenie „podpísaného“ APK AAPS
 
 ```{admonition} Why does the AAPS app need to be "signed"?
 :class: dropdown
 
-Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
+Android vyžaduje, aby bola každá aplikácia _podpísaná_, aby sa zaistilo, že ju bude možné neskôr aktualizovať iba z rovnakého dôveryhodného zdroja, ktorý vydal pôvodnú aplikáciu. Viac informácií o tejto téme nájdete na [tomto odkaze](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
 
-For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
+Pre naše účely to znamená len to, že vygenerujeme podpisový súbor, teda „úložisko kľúčov“ (keystore), a použijeme ho pri zostavovaní aplikácie **AAPS**.
 ```
 
 
-**Important: Make sure the gradle sync is finished successfully before proceeding!**
+**Dôležité: Pred pokračovaním sa uistite, že synchronizácia gradle bola úspešne dokončená!**
 
 
-Click the hamburger menu on the top left to open the menu bar. Select **Build** (1), then select **Generate Signed App Bundle / APK** (2)
+Kliknutím na hamburgerovú ponuku vľavo hore otvorte panel ponuky. Vyberte možnosť **Build** (1) a potom vyberte možnosť **Generate Signed App Bundle / APK** (2)
 
-![Build apk](../images/Building-the-App/040_GenerateSignedAPK.png)
+![Zostavenie apk](../images/Building-the-App/040_GenerateSignedAPK.png)
 
-Select "APK" instead of "Android App Bundle" and click "Next":
+Vyberte „APK“ (1) namiesto „Android App Bundle“ a kliknite na „Next“ (2):
 
-![APK instead of bundle](../images/Building-the-App/041_APK.png)
+![APK namiesto bundle](../images/Building-the-App/041_APK.png)
 
-In the next screen, make sure that "Module" is set to "AAPS.app" (1).
+Na ďalšej obrazovke skontrolujte, či je „Module“ nastavené na „AndroidAPS.app“ (1). Časť pred „.app“ je názov priečinka, do ktorého ste naklonovali kód.
 
 (Building-APK-wearapk)=
 ```{admonition} INFORMATION!
-:class: information
-If you want to create the apk for your watch, you now need to select AAPS.wear!
+:class: note
+Ak chcete vytvoriť apk pre hodinky, musíte teraz vybrať AndroidAPS.wear!
 ```
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
-Click "Create new..." (2) to start creating your key store.
+Kliknite na „Create new...“ (2) a začnite vytvárať úložisko kľúčov.
 
 ```{admonition} INFORMATION!
-:class: information
-You will only need to create the keystore once.
-If you have build AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
+:class: note
+Úložisko kľúčov stačí vytvoriť iba raz.
+If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
 ```
 
-**_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.
+**_Poznámka:_** Úložisko kľúčov je súbor, v ktorom sú uložené informácie na podpísanie aplikácie. Je zašifrované a informácie sú chránené heslami.
 
-![Create key store](../images/Building-the-App/043_Keystore.png)
+![Vytvorenie úložiska kľúčov](../images/Building-the-App/043_Keystore.png)
 
-* Click the "folder" symbol (1) to select a path on your computer for your key store.
+* Kliknite na symbol „priečinka“ (1) a vyberte cestu vo svojom počítači pre úložisko kľúčov.
 
-  Do **not** use the directory where you stored your sourcecode but some directory that you would also transfer to a new computer.
+  **Nepoužívajte** adresár, do ktorého ste uložili zdrojový kód, ale taký adresár, ktorý by ste preniesli aj do nového počítača.
 
 ```{admonition} WARNING!
 :class: warning
-Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AndroidAPS update!
+Nezabudnite si poznačiť, kde máte uložené úložisko kľúčov. Budete ho potrebovať pri zostavovaní ďalšej aktualizácie AndroidAPS!
 ```
 
-* Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).
+* Teraz zvoľte jednoduché heslo (a poznačte si ho), zadajte ho do poľa pre heslo (2) a potvrďte ho (2).
 
-  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [troubleshooting for lost key store](#troubleshooting_androidstudio-lost-keystore).
+  Heslá k úložisku kľúčov a ku kľúču nemusia byť zložité. Ak v budúcnosti stratíte heslo, pozrite si stránku [Preinštalovanie AAPS s novým úložiskom kľúčov](#reinstall-aaps).
 
-* The default alias (3) for your key is "key0", leave this unchanged.
+```{warning}
+**V heslách sa vyhnite špeciálnym znakom.** Pre heslo úložiska kľúčov aj heslo kľúča používajte iba písmená a číslice. Nepoužívajte najmä `$`, spätný apostrof (backtick), `"` ani `\`. Ak neskôr prejdete na [Zostavenie v prehliadači](#aaps-ci-option2) a použijete toto úložisko kľúčov znova, tieto znaky môžu spôsobiť zlyhanie kroku podpisovania, pozrite si [Zostavenie v prehliadači: riešenie problémov](#aaps-ci-password-special-characters).
+```
 
-* You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm it.
+* Predvolený alias (3) vášho kľúča je „key0“, nemeňte ho.
+
+* Teraz potrebujete heslo pre svoj kľúč. Pre jednoduchosť môžete, ak chcete, použiť rovnaké heslo, aké ste vyššie použili pre úložisko kľúčov. Zadajte heslo (4) a potvrďte ho.
 
 ```{admonition} WARNING!
 :class: warning
-Note down these passwords! You will need them when you build the next AAPS update!
+Poznamenajte si tieto heslá! Budete ich potrebovať pri zostavovaní ďalšej aktualizácie AAPS!
 ```
 
-* The validity is 25 years by default, leave it as it is.
+* Platnosť je predvolene 25 rokov, nechajte ju tak.
 
-* Enter your first and last name (5). No other information needs to be added but you are free to do (6-7).
+* Zadajte svoje meno a priezvisko (5). Žiadne ďalšie údaje netreba pridávať, ale môžete (6–7).
 
-* Click "OK" (8) to continue:
-
-
-On the **Generate signed App Bundle or APK** page, the path to your keystore will now be displayed. Now re-enter the Key Store password (1) and Key password (2), and tick the box (3) to remember passwords, so you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version). Click "Next" (4):
-
-![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+* Pokračujte kliknutím na „OK“ (8):
 
 
-On the next screen, select build variant "fullRelease" (2) and click "Create" (3). You should remember the directory displayed at (1), as later you will find your built apk file there!
+Na stránke **Generate signed App Bundle or APK** sa teraz zobrazí cesta k vášmu úložisku kľúčov. Teraz znova zadajte heslo úložiska kľúčov – Key Store password (1) a heslo kľúča – Key password (2) a zaškrtnite políčko (3) na zapamätanie hesiel, aby ste ich nemuseli zadávať pri ďalšom zostavovaní apk (t. j. pri aktualizácii na novú verziu AAPS). Kliknite na „Next“ (4):
 
-   ![Select build variant](../images/Building-the-App/045_BuildPath.png)
+![Zapamätanie hesiel](../images/Building-the-App/044_RememberPwd.png)
 
-Android Studio will now build the **AAPS** apk. It will show "Gradle Build running" (2) at the bottom right. The process takes some time, depending on your computer and internet connection, so **be patient!** If you want to watch the progress of the build, click on the small hammer "build" (1) at the bottom of Android Studio:
 
-![Gradle Running](../images/Building-the-App/046_BuildRunning.png)
+Na ďalšej obrazovke vyberte variant zostavenia „fullRelease“ (1) a kliknite na „Create“ (3). Zapamätajte si cieľový priečinok zobrazený v (2), pretože tam neskôr nájdete zostavený súbor apk!
 
-Now you can watch the building progress:
+   ![Výber variantu zostavenia](../images/Building-the-App/045_BuildPath.png)
+
+Android Studio teraz zostaví apk **AAPS**. Vpravo dole sa zobrazí „Gradle Build running“ (2). Proces trvá nejaký čas v závislosti od vášho počítača a internetového pripojenia, takže **buďte trpezliví!** Ak chcete sledovať priebeh zostavovania, kliknite na malé kladivko „build“ (1) v spodnej časti Android Studia:
+
+![Gradle beží](../images/Building-the-App/046_BuildRunning.png)
+
+Teraz môžete sledovať priebeh zostavovania:
 
 ![Android_Studio_building](../images/Building-the-App/047_BuildDetails.png)
 
-Android Studio will display the information "BUILD SUCCESSFUL" after build is finished. You may see a popup notification which you can click to select "locate". If you miss this, click on the notification icon (1) and then on **locate** (2) at the very bottom of the screen to bring up the Notifications:
+Po dokončení zostavenia Android Studio zobrazí informáciu „BUILD SUCCESSFUL“. Môže sa zobraziť vyskakovacia notifikácia, v ktorej môžete kliknúť na „locate“. Ak to prehliadnete, kliknite na ikonu notifikácií (1), aby sa zobrazili notifikácie (Notifications), a potom na **locate** (2):
 
-![Build finished](../images/Building-the-App/049_ReopenNotification.png)
+![Zostavenie dokončené](../images/Building-the-App/049_ReopenNotification.png)
 
-**_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio.md)._**
+**_Ak zostavenie nebolo úspešné, pozrite si časť [Riešenie problémov s Android Studiom](../GettingHelp/TroubleshootingAndroidStudio.md)._**
 
-In the Notifications box, click on the blue link "locate":
+V okne Notifications kliknite na modrý odkaz „locate“:
 
-![Locate build](../images/Building-the-App/048_BuildFinished.png) Your file manager will open and show you the build apk file that you have just built.
+![Nájdenie zostavenia](../images/Building-the-App/048_BuildFinished.png) Otvorí sa váš správca súborov a ukáže vám súbor apk, ktorý ste práve zostavili.
 
-   ![File location apk](../images/Building-the-App/050_LocateAPK.png)
+   ![Umiestnenie súboru apk](../images/Building-the-App/050_LocateAPK.png)
 
-Congratulations! Now you have built the **AAPS** apk file, you will be transferring this file to your smartphone in the next section of the docs.
+Gratulujeme! Teraz máte zostavený súbor apk **AAPS** a v ďalšej časti dokumentácie ho prenesiete do svojho smartfónu.
 
 ```{tip}
-If you think you might want to use an Android Wear smartwatch in the future, this is the best time to build the AAPS Wear apk to be sure it will be synchronized with your AAPS apk.
+Ak by ste chceli v budúcnosti používať inteligentné hodinky Android Wear, toto je najlepší čas na zostavenie súboru AAPS Wear apk, aby ste mali istotu, že bude synchronizovaný s AAPS.
 ```
 
-Move to the next stage of [Transferring and Installing **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md).
+Prejdite na ďalšiu časť [Prenos a inštalácia **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md).
 
 
 

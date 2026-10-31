@@ -1,19 +1,19 @@
 # Syai X1
 
 
-## Using X1 And Syai Tag app
+## Używanie X1 z aplikacją Syai Tag
 
--   Install the apk from <https://play.google.com/store/apps/details?id=com.syai.tag>.
+-   Zainstaluj aplikację z <https://play.google.com/store/apps/details?id=com.syai.tag>.
 
--   Start X1 sensor
+-   Uruchom sensor X1
 
-- Select Syai Tag in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Wybierz **Syai/Ottai** w [Konfiguracja, Źródło BG](#Config-Builder-bg-source).
 
-Enable broadcast in the Syai app:
+Włącz wysyłanie danych (broadcast) w aplikacji Syai:
 
-1. Select Profile
+1. Wybierz Profile (profil)
 2. Syai Health Ecosystem
-3. Tap Connect Now with AAPS, accept the third party data transfer agreement
-4. Enable share data with AAPS
+3. Dotknij Connect Now with AAPS (połącz teraz z AAPS) i zaakceptuj umowę o przekazywaniu danych innej firmie
+4. Włącz share data with AAPS (udostępnianie danych dla AAPS)
 
 ![Syai](../images/Syai.png)

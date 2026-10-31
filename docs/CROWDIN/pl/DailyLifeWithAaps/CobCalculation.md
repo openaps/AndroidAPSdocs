@@ -1,92 +1,98 @@
-# COB calculation
+# Obliczanie COB
 
-## How does AAPS calculate the COB value?
+## Jak AAPS oblicza wartość COB?
 
-When carbs are entered by the user as part of a meal entry or carb correction, **AAPS** will add this calculation to the current carbs on board (**COB**). **AAPS** then calculates the user’s carbs’ absorption based on observed deviations to the user’s **BG** values. The rate of absorption depends on the carb’s sensitivity factor (**’CSF**”). This is not a feature within the user’s **Profile**  but is calculated by **AAPS** according to **ISF/I:C** set up, and is determined by how many mg/dl 1g of carbs will raise the user’s **BG**.
+Gdy wprowadzasz węglowodany jako posiłek lub korektę węglowodanami, **AAPS** doda je do aktualnych aktywnych węglowodanów (**COB**). Następnie **AAPS** oblicza wchłanianie węglowodanów na podstawie zaobserwowanych odchyleń Twoich wartości **BG**. The rate of absorption depends on the carb’s sensitivity factor (**CSF**). Nie jest to ustawienie w Twoim **Profilu**. **AAPS** oblicza go na podstawie ustawień **ISF/I:C**. Mówi on, o ile mg/dl 1 g węglowodanów podniesie Twoją **BG**.
 
-## Carb Sensitivity Factor
+## Współczynnik wrażliwości na węglowodany (CSF)
 
-The formula adopted by **AAPS** is:
+**AAPS** używa wzoru:
 
 - absorbed_carbs = deviation * ic / isf.
 
-The effect on the user’s **Profile** will:
+Zmiana w Twoim **Profilu** działa tak:
 
-- _increase_ **IC**- by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
+- _zwiększenie_ **IC** - zwiększa ilość węglowodanów wchłoniętych co 5 minut, więc skraca całkowity czas wchłaniania;
 
-- _increase_ **ISF** - by decreasing the carbs absorbed every 5 minutes thus prolong total time of absorption; and
+- _zwiększenie_ **ISF** - zmniejsza ilość węglowodanów wchłoniętych co 5 minut, więc wydłuża całkowity czas wchłaniania; a
 
-- _change_ **Profile Percentage** -  increase/decrease both values thus has no impact on carbs absorption time.
+- _zmiana_ **procentu profilu** - zwiększa/zmniejsza obie wartości, więc nie wpływa na czas wchłaniania węglowodanów.
 
-For example, if the user’s  **Profile**  **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. For every 20 mg/dl the user’ **BG** goes up and 1g of carbs will be calculated as absorbed by **AAPS**. Positive **IOB** also affects the **COB** calculation. So, if **AAPS**  predicts the user’s **BG** to go down by 20 mg/dl because of **IOB** and it instead stayed flat, **AAPS**  would also calculate 1g of carbs as absorbed.
+Na przykład jeśli w Twoim **Profilu** **ISF** wynosi 100, a **I:C** wynosi 5, to Twój współczynnik wrażliwości na węglowodany wynosi 20. Na każde 20 mg/dl wzrostu Twojej **BG** **AAPS** uzna 1 g węglowodanów za wchłonięty. Dodatni **IOB** także wpływa na obliczanie **COB**. Jeśli więc **AAPS** przewiduje spadek Twojej **BG** o 20 mg/dl z powodu **IOB**, a glikemia pozostała stała, **AAPS** także uzna 1 g węglowodanów za wchłonięty.
 
-Carbs will also be absorbed via the methods described below based on which sensitivity algorithm has been selected within the user's **AAPS**.
+Węglowodany są też uznawane za wchłonięte metodami opisanymi poniżej, zależnie od tego, który algorytm wrażliwości wybrano w Twoim **AAPS**.
 
-## Carbs Sensitivity - Oref1
+## Wrażliwość a węglowodany - Oref1
 
-Unabsorbed carbs are cut off after specified time:
+Niewchłonięte węglowodany są usuwane po określonym czasie:
 
 ![Oref1](../images/cob_oref0_orange_II.png)
 
-![Screenshot 2024-10-05 161009](../images/cob_oref0_orange_I.png)
+![Wykres COB z odcięciem w Oref1](../images/cob_oref0_orange_I.png)
+
+```{admonition} Older screenshot
+:class: note
+Powyższy zrzut ekranu pochodzi ze starszej wersji **AAPS** — w **AAPS** 4 wykresy wyglądają nieco inaczej, ale wykres **COB** pokazuje te same informacje.
+```
 
 
-## Carbs Sensitivity - WeightedAverage
+## Wrażliwość a węglowodany - WeightedAverage
 
-Absorption is calculated to have COB = 0 after specified time:
+Wchłanianie jest obliczane tak, aby po określonym czasie COB = 0:
 
-![AAPS, WheitedAverage](../images/cob_aaps2_orange_II.png)
+![AAPS, WeightedAverage](../images/cob_aaps2_orange_II.png)
 
-If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from **BG** deviations, an orange dot appears on the **COB** graph.
+Jeśli zamiast wartości obliczonej z odchyleń **BG** używane jest minimalne wchłanianie węglowodanów (min_5m_carbimpact), na wykresie **COB** pojawia się pomarańczowa kropka.
 
 (CobCalculation-detection-of-wrong-cob-values)=
-## Detection of wrong COB values
+## Wykrywanie nieprawidłowych wartości COB
 
-**AAPS**  will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
+**AAPS** ostrzeże Cię, jeśli zamierzasz podać bolus z **COB** z poprzedniego posiłku, a algorytm uzna obecne obliczenie **COB** za nieprawidłowe. W takim przypadku pokaże dodatkową podpowiedź na ekranie potwierdzenia po użyciu kalkulatora bolusa.
 
-### How does AAPS detect wrong COB values?
+### Jak AAPS wykrywa nieprawidłowe wartości COB?
 
-Ordinarily __AAPS__ detects carb absorption through **BG** deviations. In case the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
+Zwykle __AAPS__ wykrywa wchłanianie węglowodanów na podstawie odchyleń **BG**. Jeśli wprowadzisz węglowodany, ale **AAPS** nie może wykryć ich wchłaniania na podstawie odchyleń **BG**, do obliczenia wchłaniania użyje metody [min_5m_carbimpact](#Preferences-min_5m_carbimpact) (tzw. „fallback”, metoda zapasowa). Ta metoda oblicza tylko minimalne wchłanianie węglowodanów, bez uwzględnienia odchyleń **BG**, więc może dać nieprawidłowe wartości COB.
 
-![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
+![Podpowiedź o nieprawidłowej wartości COB](../images/Calculator_SlowCarbAbsorption.png)
 
-In the screenshot above, 58% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. This indicates that the user may have had less **COB** than calculated by the algorithm.
+Na powyższym zrzucie ekranu przez 66% czasu wchłanianie węglowodanów było obliczane z min_5m_carbimpact zamiast z wartości wykrytej z odchyleń. Oznacza to, że możesz mieć mniej **COB**, niż obliczył algorytm.
 
-### How to deal with this warning?
+### Co zrobić z tym ostrzeżeniem?
 
-- Consider cancelling the treatment - press ‘Cancel’ instead of OK.
-- Calculate your upcoming meal again with bolus wizard leaving **COB** unticked.
-- If you need a correction bolus, enter it manually.
-- Be careful not to overdose or insulin stacking!
-
-
-### Why does the algorithm not detect COB correctly?
-
-This could be because:
-- Potentially the user overestimated carbs when entering them.
-- Activity / exercise after your previous meal.
-- I:C needs adjustment.
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA).
+- Rozważ anulowanie leczenia - naciśnij „Anuluj” zamiast OK.
+- Oblicz nadchodzący posiłek jeszcze raz w kalkulatorze bolusa, bez zaznaczania **COB**.
+- Jeśli potrzebujesz bolusa korekcyjnego, wprowadź go ręcznie.
+- Uważaj, aby nie podać za dużo insuliny i nie nakładać dawek insuliny!
 
 
-## Manual correction of carbs entered
+### Dlaczego algorytm nie wykrywa poprawnie COB?
 
-If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](#screens-bolus-carbs).
+Możliwe przyczyny:
+- Możliwe, że wprowadzono za dużo węglowodanów.
+- Aktywność / wysiłek fizyczny po poprzednim posiłku.
+- Trzeba dostosować I:C.
+- Wartość min_5m_carbimpact jest nieprawidłowa (zalecana to 8 z SMB, 3 z AMA).
 
 
-## Carb correction - how to delete a Carb entry from Treatments
+## Ręczna korekta wprowadzonych węglowodanów
+
+Jeśli wprowadzono za dużo lub za mało węglowodanów, możesz to poprawić na ekranie **Historia leczenia**, jak opisano [tutaj](#screens-bolus-carbs).
 
 
-The ‘Treatments’ tab can be used to correct a faulty carb entry by deleting the entry in Treatments. This may be because the user over or underestimated the carb entry:
+## Korekta węglowodanów - jak usunąć wpis węglowodanów z leczenia
 
-![COB_Screenshot 2024-10-05 170124](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
-1. Check and remember actual **COB** and **IOB** on the **AAPS'** homescreen.
-2. Depending on the pump, the carbs in the Treatments tab might show together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry by firstly 'ticking' the waste bin on the top right corner (see above photo, step 1). Then 'tick' the faulty carb amount (see above photo, step 2). Then 'tick' the ‘waste bin’ on the top right corner (step 1 again).
-4. Make sure carbs are removed successfully by checking **COB** on **AAPS’** homescreen again.
-5. Do the same for **IOB** if there is just one line in the Treatment tab including carbs and insulin.
-6. If carbs are not removed as intended and additional carbs are added as explained in this section, the **COB** entry will be too high and this could lead to **AAPS** delivering too much insulin.
-7. Enter correct carbs amount through carbs button on **AAPS’** homescreen and set the correct event time.
-8. If there is just one line in Treatment tab including carbs and insulin the user should add also the amount of insulin. Make sure to set the correct event time and check **IOB** on homescreen after confirming the new entry.
+Na ekranie **Historia leczenia** możesz poprawić błędny wpis węglowodanów, usuwając go. Może to wynikać z tego, że wprowadzono za dużo lub za mało węglowodanów:
+
+![Usuwanie wpisu węglowodanów z historii leczenia](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+
+1. Sprawdź i zapamiętaj aktualne **COB** i **IOB** na ekranie głównym **AAPS**.
+2. Otwórz **Historia leczenia** (menu boczne → *Historia leczenia*), zakładka **Węglowodany i bolus**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (e.g. with Dana RS).
+3. **Naciśnij i przytrzymaj** błędny wpis węglowodanów — lista przejdzie w **tryb wyboru** z polem wyboru w każdej linii, a wpis zostanie zaznaczony (oznaczenie **1** powyżej). Zaznacz też inne wpisy, które chcesz usunąć.
+4. Dotknij ikony **🗑 Usuń** na górnym pasku (oznaczenie **2**) i potwierdź — okno potwierdzenia pokazuje dokładnie, co zostanie usunięte.
+5. Upewnij się, że węglowodany zostały usunięte, sprawdzając ponownie **COB** na ekranie głównym **AAPS**.
+6. Zrób to samo dla **IOB**, jeśli była tylko jedna linia z węglowodanami i insuliną.
+7. Jeśli węglowodany nie zostaną usunięte zgodnie z planem, a dodatkowe węglowodany zostaną dodane tak, jak opisano w tej sekcji, wartość **COB** będzie za wysoka i **AAPS** może podać za dużo insuliny.
+8. Wprowadź poprawną ilość węglowodanów w oknie **Węglowodany** (**Leczenie** → **Węglowodany**) i ustaw poprawny czas zdarzenia.
+9. Jeśli była tylko jedna linia z węglowodanami i insuliną, dodaj też ponownie ilość insuliny. Pamiętaj, aby ustawić poprawny czas zdarzenia i sprawdzić **IOB** na ekranie głównym po potwierdzeniu nowego wpisu.
 

@@ -1,38 +1,44 @@
 # Wygładzanie danych dotyczących poziomu glukozy we krwi
 
-If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors in your CGM data it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
+Jeśli dane **BG** skaczą lub mają szumy, **AAPS** może podać złą dawkę insuliny, co prowadzi do wysokich lub niskich glikemii. Jeśli widzisz błędy lub dane z CGM skaczą, ważne jest, aby wyłączyć pętlę, dopóki problem nie zostanie rozwiązany. Zależnie od Twojego CGM takie problemy mogą wynikać z konfiguracji CGM w **AAPS** (opisanej niżej) albo z problemu z miejscem założenia sensora CGM (wtedy może być potrzebna wymiana sensora).
 
-## Smoothing data within AAPS
+## Wygładzanie danych w AAPS
 
-As of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. There are three options available in [Config Builder > Smoothing](../SettingUpAaps/ConfigBuilder.md).
+**AAPS** pozwala wygładzać dane w **AAPS** zamiast w aplikacji CGM. Otwórz **menu** (☰), wybierz [**Konfiguracja**](../SettingUpAaps/ConfigBuilder.md), a następnie **Wygładzanie**. Są cztery opcje i tylko jedna może być aktywna naraz: **Bez wygładzania**, **Wygładzanie wykładnicze**, **Wygładzanie uśredniające** i **Bezśladowy filtr Kalmana (UKF)**.
 
-![Smoothing](../images/ConfBuild_Smoothing.png)
+![Konfiguracja > Wygładzanie](../images/v4/Configuration/configuration_smoothing.png)
 
-### Exponential smoothing
+### Wygładzanie wykładnicze
 
-In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
+Zwykle od tej opcji warto zacząć, bo najmocniej usuwa szumy i nadpisuje najnowszą wartość. W tabeli poniżej znajdziesz jednak inne, szczegółowe zalecenia.
 
-### Average smoothing
+### Wygładzanie uśredniające
 
-This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data.
+Ta opcja działa podobnie do wygładzania wstecznego (back smoothing), które było wcześniej dostępne na niektórych platformach CGM. Szybciej reaguje na ostatnie zmiany wartości BG, dlatego łatwiej może źle zareagować na zaszumione dane CGM.
 
-### No Smoothing
+### Bez wygładzania
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
+Używaj tej opcji tylko wtedy, gdy dane CGM są już poprawnie wygładzane przez aplikację zbierającą dane, zanim zostaną wysłane do **AAPS**.
+
+### Bezśladowy filtr Kalmana (UKF)
+
+Ta opcja używa modelu statystycznego. Na podstawie przychodzących (być może zaszumionych) odczytów stale szacuje Twoją prawdziwą wartość glukozy i tempo jej zmian. Sama dopasowuje się do tego, jak duże są w danej chwili szumy Twojego sensora. Wykrywa też i odrzuca nagłe, odstające odczyty. Jest to bardziej zaawansowana alternatywa dla wygładzania wykładniczego i uśredniającego. Przydaje się, gdy chcesz, aby wygładzanie samo dopasowywało się do zmieniającego się poziomu szumów sensora, zamiast używać stałej metody.
 
 (smoothing-xdrip-dexcom-g6)=
 
-## Suggestions to use smoothing
+## Zalecenia dotyczące wygładzania
 
-|               | Exponential |  Average  |    None     |
-| ------------- |:-----------:|:---------:|:-----------:|
-| G5/G6/ONE     |  If noisy   |           | Recommended |
-| G7/ONE+/Stelo |  If noisy   | If stable |             |
+Możesz też zmieniać metodę wygładzania automatycznie, na przykład zależnie od wieku sensora, za pomocą [akcji automatyzacji](#automations-automation-action) **Zmień wygładzanie**.
 
-Libre sensors are noisy and can require smoothing. When using xDrip+ direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+|               |      Wykładnicze      |      Uśredniające      | Bez wygładzania |
+| ------------- |:---------------------:|:----------------------:|:---------------:|
+| G5/G6/ONE     | Jeśli dane mają szumy |                        |    Zalecane     |
+| G7/ONE+/Stelo | Jeśli dane mają szumy | Jeśli dane są stabilne |                 |
 
-| Sensor / Data source | Juggluco | xDrip+ direct | xDrip+ bridge | xDrip+ patched app |
-| -------------------- |:--------:|:-------------:|:-------------:|:------------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.      |    Average    |        N.A.        |
-| Libre 2/2+ (EU)      | Average  |     None      |    Average    |        None        |
-| Libre 2/2+/3/3+      | Average  |     N.A.      |     N.A.      |        None        |
+Sensory Libre mają szumy i mogą wymagać wygładzania. Gdy używasz bezpośredniego połączenia xDrip lub źródła danych ze zmodyfikowanej aplikacji (patched) (odbieranie z innej aplikacji, także z Juggluco), [wygładzanie jest już wykonywane w tej aplikacji](#libre2-value-smoothing-raw-values).
+
+| Sensor / źródło danych |   Juggluco   | xDrip direct | xDrip bridge | xDrip patched app |
+| ---------------------- |:------------:|:------------:|:------------:|:-----------------:|
+| Libre 1/14 dni/Pro     |     nd.      |     nd.      | Uśredniające |        nd.        |
+| Libre 2/2+ (EU)        | Uśredniające |     Brak     | Uśredniające |       Brak        |
+| Libre 2/2+/3/3+        | Uśredniające |     nd.      |     nd.      |       Brak        |

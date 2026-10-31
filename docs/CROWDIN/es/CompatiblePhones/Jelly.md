@@ -1,59 +1,48 @@
 # Jelly
 
-## Jelly 2
+## Jelly Star Mini
 
-Do not confuse with Jelly Star (below).
+**Funciones**
 
-**Advantages**
+* Android 13
+* 8 GB de RAM
+
+**Ventajas**
 
 * Es realmente pequeño.
-* Android 11.
-* Incluso si se lo dice a la gente, es posible que no lo consideren como un smartphone normal y lo hará más fácil como una excepción cuando los teléfonos normalmente no están permitidos.
+* Aunque se lo digas a la gente, puede que no lo vean como un smartphone normal y lo acepten más fácilmente como excepción donde los teléfonos normalmente no están permitidos.
 
-**Disadvantages**
+**Desventajas**
 
-* Recomendado sólo para los loopers experimentados (algunos ajustes no son reconocibles, tienes que tener la experiencia de un teléfono grande Android AAPS, cómo y dónde se encuentra cada cosa. Algunos botones de AAPS son difíciles de tocar con mucha sensación, pero no con los dedos rechonchos.)
+* Recomendado sólo para los loopers experimentados (algunos ajustes no son reconocibles, tienes que tener la experiencia de un teléfono grande Android AAPS, cómo y dónde se encuentra cada cosa. Algunos botones de AAPS son difíciles de tocar: se puede con mucho cuidado, pero no con dedos gruesos.)
 * Sólo se puede utilizar como LooperPhone. Es mejor tener un smartphone normal en tu bolsillo. 
 
-### Battery life optimization
+### Optimización de la duración de la batería
 
-The Jelly 2 comes with strong optimization features that **must** be disabled for AAPS (and other DIY apps like BYODA, xDrip+, OOP2, Juggluco, etc...).
+El Jelly tiene funciones de optimización fuertes que **deben** desactivarse para AAPS (y para otras apps DIY como BYODA, xDrip, OOP2, Juggluco, etc.).
 
 ![](../images/Jelly_Settings1.png)
 
-You can leave Intelligent assistance enabled, but it **must be disabled for DIY apps**.
+Puedes dejar activada la asistencia inteligente (Intelligent assistance), pero **debe estar desactivada para las apps DIY**.
 
 ![](../images/Jelly_Settings2.png)
 
-You can enable NFC for Libre sensors.
+Puedes activar NFC para los sensores Libre.
 
 ![](../images/Jelly_Settings3.png)
 
-## Jelly Star Mini
+### Optimización de la duración de la batería
 
-**Features**
-
-* Android 13
-* 8 GB RAM
-
-### Battery life optimization
-
-To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' (and other **DIY apps** like BYODA, xDrip+, OOP2, Juggluco, etc...).
+Para evitar problemas con **AAPS**, desactiva el «uso de batería» del Jelly Star seleccionando «sin restricciones» para **AAPS** (y para otras **apps DIY** como BYODA, xDrip, OOP2, Juggluco, etc.).
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
-### Intelligent Assistance and App Blocker
-
-Like with the Jelly 2 (above), the Jelly Star should have 'Intelligent Assistance' disabled for **DIY apps**. Similarly, 'App Blocker' under 'Settings' must also be switched off to avoid disruption with **AAPS**:
-
-![App Blocker Screenshot 2025-08-03 213400](../images/JellyStarMini2.jpg)
-
 ### Google Play Protect
 
-Remember to disable Google Play Protect.
+Recuerda desactivar Google Play Protect.
 
-### Remote Connection for Weak apk
+### Conexión remota para la apk Wear
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use the Jelly 2, **Wear.apk** & **AAPS** remotely via wifi.
+Para algunos relojes inteligentes, como el Samsung Galaxy, la opción «Remote Connection» (Conexión remota) en las funciones avanzadas del Samsung Galaxy debe estar **activada** para usar el Jelly, **Wear.apk** y **AAPS** de forma remota por Wi-Fi.
 
-![MURCIMG-20251007-WA0000](../images/500234283-5db08a08-f256-49a0-8843-46bdd01b33d6.png)
+![Galaxy Wearable, Funciones avanzadas, Conexión remota activada](../images/wearos/galaxy_wearable_remote_connection.png)

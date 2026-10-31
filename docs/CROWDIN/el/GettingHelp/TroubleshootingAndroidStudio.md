@@ -1,6 +1,6 @@
 (troubleshooting_androidstudio-troubleshooting-android-studio)=
 
-# Troubleshooting Android Studio
+# Αντιμετώπιση προβλημάτων του Android Studio
 
 ```{contents} List of common issues
 :depth: 2
@@ -8,135 +8,119 @@
 ```
 
 (troubleshooting_androidstudio-lost-keystore)=
-## Lost keystore
-If you use the same keystore when updating **AAPS** you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a safe place.
+## Χαμένο keystore
+Αν χάσατε το keystore σας ή τον κωδικό του, ένα apk υπογεγραμμένο με νέο keystore δεν μπορεί να ενημερώσει το τρέχον **AAPS** σας: πρέπει να το απεγκαταστήσετε και να το εγκαταστήσετε ξανά. Δείτε [Επανεγκατάσταση του AAPS με νέο keystore](#reinstall-aaps).
 
-If you try to install the apk, signed with a different keystore than before, you will get an error message explaining that the installation failed!
+## Gradle Sync failed (αποτυχία συγχρονισμού Gradle)
+Το Gradle Sync μπορεί να αποτύχει για διάφορους λόγους. Όταν δείτε ένα μήνυμα που λέει 'gradle sync failed', ανοίξτε την καρτέλα "Build" (1) στο κάτω μέρος του Android Studio και δείτε ποιο μήνυμα σφάλματος (2) εμφανίζεται.
 
-In the event that you cannot trace your old keystore or password, proceed as follows:
-
-1. [Export settings](../Maintenance/ExportImportSettings.md) on your phone.
-2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service...).
-4. Generate a new version of the signed apk as described on the [Update guide](../Maintenance/UpdateToNewVersion) and transfer it to your phone.
-5. Uninstall previous **AAPS** version on your phone.
-6. Install new **AAPS** version on your phone.
-7. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
-
-   If you can't find these on your phone, copy them from the external storage to your phone.
-
-8. Check your battery optimization options and disable them again.
-9. Keep on looping.
-
-## Gradle Sync failed
-Gradle Sync can fail for various reasons. When you receive a message saying that 'gradle sync failed', open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
-
-![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
+![Αποτυχία Gradle](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 ```{contents} Likely reasons for gradle sync failures are:
 :depth: 1
 :local: true
 ```
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
+*Σημαντικό*: Αφού ακολουθήσετε τις οδηγίες για το δικό σας πρόβλημα, πρέπει να ξεκινήσετε ξανά τον [συγχρονισμό gradle](#gradle-resync).
 
 (troubleshooting_androidstudio-uncommitted-changes)=
 ### Μη δεσμευμένες αλλαγές
 
-If you receive a failure message like this one:
+Αν δείτε ένα μήνυμα αποτυχίας όπως αυτό:
 
-![Gradle Uncommitted Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+![Gradle: αλλαγές χωρίς commit](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
 ```
 Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
 
 There are uncommitted changes.
-Clone sources again as described in wiki and do not allow gradle update
+Κατεβάστε ξανά τον κώδικα (clone) όπως περιγράφεται στο wiki και μην επιτρέψετε ενημέρωση του gradle
 ```
 
-#### Step 1 - Check git installation
-  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal.
+#### Βήμα 1 - Ελέγξτε την εγκατάσταση του git
+  * Ανοίξτε την καρτέλα terminal (1) στο κάτω μέρος του Android Studio, αντιγράψτε το παρακάτω κείμενο και επικολλήστε ή πληκτρολογήστε το στο τερματικό (2).
     ```
     git --version
     ```
 
-    ![Gradle Git Version](../images/studioTroubleshooting/03_GitVersion.png)
+    ![Έκδοση Git στο Gradle](../images/studioTroubleshooting/03_GitVersion.png)
 
-    Note: There is a space and two hyphens between Git and version!
+    Σημείωση: Ανάμεσα στο Git και στο version υπάρχει ένα κενό και δύο παύλες!
 
-  * You must receive a message saying what Git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
+  * Πρέπει να δείτε ένα μήνυμα που λέει ποια έκδοση του Git είναι εγκατεστημένη, όπως φαίνεται στο παραπάνω στιγμιότυπο. Σε αυτή την περίπτωση, πηγαίνετε στο [Βήμα 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * In case you get an message saying
+  * Αν δείτε ένα μήνυμα που λέει
     ```
     Git: command not found
     ```
-    your Git installation is not right.
+    η εγκατάσταση του Git δεν είναι σωστή.
 
-  * [Check git installation](#BuildingAaps-steps-for-installing-git)
+  * [Έλεγχος της εγκατάστασης του git](#BuildingAaps-steps-for-installing-git)
 
-  * if on Windows and the Git was just installed, you should restart your computer to make Git globally available after the installation
+  * Αν έχετε Windows και μόλις εγκαταστήσατε το Git, πρέπει να επανεκκινήσετε τον υπολογιστή σας, ώστε το Git να είναι διαθέσιμο παντού μετά την εγκατάσταση
 
-  * If Git is installed, you have restarted (if on windows), and Git still couldn't found:
+  * Αν το Git είναι εγκατεστημένο, έχετε κάνει επανεκκίνηση (σε Windows) και το Git ακόμη δεν βρίσκεται:
 
-  * Search your computer for a file "git.exe".
+  * Αναζητήστε στον υπολογιστή σας ένα αρχείο "git.exe".
 
-    Note for yourself, which directory it is saved in.
+    Σημειώστε σε ποιον φάκελο είναι αποθηκευμένο.
 
-  * Go to the Environment variables in windows, select the variable "PATH" and click edit. Add the directory where you have found your Git installation.
+  * Μεταβείτε στις μεταβλητές περιβάλλοντος (Environment variables) των Windows, επιλέξτε τη μεταβλητή "PATH" και πατήστε edit (επεξεργασία). Προσθέστε τον φάκελο όπου βρήκατε την εγκατάσταση του Git.
 
-  * Save and close.
+  * Αποθηκεύστε και κλείστε.
 
-  * Restart Android Studio.
+  * Επανεκκινήστε το Android Studio.
 
 (troubleshooting-android-studio-check-for-uncommitted-changes)=
-#### Step 2: Check for uncommitted changes.
+#### Βήμα 2: Ελέγξτε για αλλαγές χωρίς commit.
 
-  * In Android Studio, open the 'Commit' tab (1) on the left-hand side. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * You can see either a "Default changeset" (2) or "Unversioned files" (3):
+  * Στο Android Studio, ανοίξτε την καρτέλα 'Commit' (1) στην αριστερή πλευρά. ![Καρτέλα Commit: αλλαγές χωρίς commit](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
+  * Θα δείτε είτε "Changes" (σε παλαιότερες εκδόσεις του Android Studio λέγεται "Default changeset") (2) είτε "Unversioned Files" (3):
 
-    * For "Default changeset", you probably updated 'Gradle' or changed some of the file contents by mistake.
+    * Για τα "Changes", πιθανότατα ενημερώσατε το 'Gradle' ή αλλάξατε κατά λάθος το περιεχόμενο κάποιων αρχείων.
 
-    * Right click on "Default Changeset" and select "Rollback"
+    * Κάντε δεξί κλικ στο "Changes" και επιλέξτε "Rollback…" (1)
 
-      ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
+      ![Καρτέλα Commit: αναίρεση αλλαγών (Rollback)](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-    * The files are fetched again from the Git server. If there are no other changes in the commit tab, go to [Step 3](#gradle-resync).
+    * Τα αρχεία κατεβαίνουν ξανά από τον διακομιστή Git. Αν δεν υπάρχουν άλλες αλλαγές στην καρτέλα commit, πηγαίνετε στο [Βήμα 3](#gradle-resync).
 
-  * If you can see "Unversioned Files", you might have stored files in your source code directory by mistake. Maybe they are important files: like your keystore file, that should be moved elsewhere. If you don't know what those files are and you have not created them yourself, you can delete them.
+  * Αν βλέπετε "Unversioned Files", ίσως αποθηκεύσατε κατά λάθος αρχεία στον φάκελο του πηγαίου κώδικα. Ίσως είναι σημαντικά αρχεία, όπως το αρχείο keystore σας, που πρέπει να μετακινηθούν αλλού. Αν δεν ξέρετε τι είναι αυτά τα αρχεία και δεν τα δημιουργήσατε εσείς, μπορείτε να τα διαγράψετε.
 
-    * Use your regular file explorer on your computer to move or cut and paste that file to a safe place.
+    * Με τον συνηθισμένο διαχειριστή αρχείων του υπολογιστή σας, μετακινήστε (ή αποκόψτε και επικολλήστε) αυτό το αρχείο σε ασφαλές μέρος.
 
-    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the **AAPS** directory anymore.
+    * Επιστρέψτε στο Android Studio και πατήστε το κουμπί Refresh (4) στην καρτέλα Commit, για να βεβαιωθείτε ότι το αρχείο δεν βρίσκεται πια στον φάκελο του **AAPS**.
 
-      If there are no other changes in the Commit tab, go to [Step 3](#gradle-resync).
+      Αν δεν υπάρχουν άλλες αλλαγές στην καρτέλα Commit, πηγαίνετε στο [Βήμα 3](#gradle-resync).
 
 
-#### Step 3: Resync Gradle (again)
+#### Βήμα 3: Συγχρονίστε ξανά το Gradle (ξανά)
 
-Follow the instructions at [Gradle Resync](#gradle-resync).
+Ακολουθήστε τις οδηγίες στην ενότητα [Επανασυγχρονισμός Gradle](#gradle-resync).
 
 ### Git Pull Failed - Please tell me who you are
 
-If you see this message, Git needs you to identify yourself.
+Αν δείτε αυτό το μήνυμα, το Git χρειάζεται να δηλώσετε ποιος είστε.
 
-![Git identification](../images/studioTroubleshooting/164_Git_Identify.png)
+![Ταυτοποίηση στο Git](../images/studioTroubleshooting/164_Git_Identify.png)
 
-Open the terminal and type the following two commands, one after the other.
+Ανοίξτε το τερματικό και πληκτρολογήστε τις δύο παρακάτω εντολές, τη μία μετά την άλλη.
 
 ```
 git config --global user.name "Your name here"
 git config --global user.email your.email@here.com
 ```
 
-Your name needs to be written between quotation marks.
+Το όνομά σας πρέπει να γραφτεί μέσα σε εισαγωγικά.
 
-![Git identification fix](../images/studioTroubleshooting/164_Git_Identify2.png)
+![Διόρθωση της ταυτοποίησης στο Git](../images/studioTroubleshooting/164_Git_Identify2.png)
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
 (incompatible-gradle-jvm)=
-### Incompatible Gradle JVM
+### Μη συμβατό Gradle JVM
 
-![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
+![Μη συμβατό Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
 
 ```
 Your build is currently configured to use incompatible Java 21.0.3 and Gradle 8.2.
@@ -149,146 +133,147 @@ The minimum compatible Gradle version is 8.5.
 The maximum compatible Gradle JVM version is 19.
 ```
 
-Or:
+ή:
 
 ```
 Cause: error: invalid source release: 21
 ```
 
-If you experience the above error message, you need to download a correct JVM version before you can try rebuild again:
+Αν δείτε το παραπάνω μήνυμα σφάλματος, πρέπει να κατεβάσετε μια σωστή έκδοση JVM πριν δοκιμάσετε ξανά το build:
 
-1.  Check in the [requirement table](#Building-APK-recommended-specification-of-computer-for-building-apk-file) which JVM version you need for the **AAPS** version you are building, and make a note of it.
+1.  Ελέγξτε στον [πίνακα απαιτήσεων](#Building-APK-recommended-specification-of-computer-for-building-apk-file) ποια έκδοση JVM χρειάζεστε για την έκδοση του **AAPS** που δημιουργείτε, και σημειώστε την.
 
-2. Open the Gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
+2. Ανοίξτε την προβολή Gradle πατώντας τον ελέφαντα (1) στη δεξιά πλευρά του Android Studio, ανοίξτε τις ρυθμίσεις (2) και επιλέξτε **Gradle Settings** (3):
 
-![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
+![Άνοιγμα των ρυθμίσεων Gradle](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. The example below shows JVM 21 is labeled as “jbr-21”. If you find it, just select it, and you are done. If not available, then select 'Download JDK'.
+3.  Στο πεδίο **Gradle JDK**, ελέγξτε αν είναι επιλεγμένη η σωστή έκδοση (1). Αν όχι, πατήστε στο πεδίο και δείτε αν υπάρχει ήδη στη λίστα. Το παρακάτω παράδειγμα δείχνει ότι το JVM 21 εμφανίζεται ως “jbr-21”. Αν το βρείτε, απλά επιλέξτε το και τελειώσατε. Αν δεν υπάρχει, επιλέξτε **Download JDK** (2).
 
 
-![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
+![Επιλογή Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. In Version (1), select the JDK required for your **AAPS** version (the one you made a note of when you checked the requirement table). In Vendor (2) select any Vendor. Location (3): do not change.
+4. Στο Version (1), επιλέξτε το JDK που χρειάζεται η έκδοση του **AAPS** σας (αυτό που σημειώσατε όταν ελέγξατε τον πίνακα απαιτήσεων). Στο Vendor (2) επιλέξτε οποιονδήποτε προμηθευτή. Location (3): μην το αλλάξετε. Πατήστε **Download** (4).
 
-![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
+![Επιλογή JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
-5.  Close the **Settings** dialog with **OK**.
-6. You now need to restart the Gradle Sync. Follow the instructions at [Gradle Resync](#gradle-resync).
+5.  Κλείστε το παράθυρο **Settings** με **OK**.
+6. Τώρα πρέπει να ξεκινήσετε ξανά το Gradle Sync. Ακολουθήστε τις οδηγίες στην ενότητα [Επανασυγχρονισμός Gradle](#gradle-resync).
 
 (incompatible-version-of-android-gradle-plugin)=
-### Incompatible version of Android Gradle plugin
+### Μη συμβατή έκδοση του Android Gradle plugin
 
-  If you experience the following error message
+  Αν δείτε το παρακάτω μήνυμα σφάλματος
 
 `The project is using an incompatible version (AGP x.x.x) of the Android Gradle plugin. Latest supported version is AGP x.x.x`
 
-  ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+  ![Μη συμβατή έκδοση του Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
 
-  You are using an outdated version of Android Studio. In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
+  Χρησιμοποιείτε μια παλιά έκδοση του Android Studio. Στο μενού, μεταβείτε στο Help > Check for updates και εγκαταστήστε όσες ενημερώσεις βρεθούν για το Android Studio και τα plugins του.
 
 (troubleshooting_androidstudio-could-not-resolve-no-cached-version)=
 ### Could not resolve/No cached version
 
-  You might get this error message:
+  Μπορεί να δείτε αυτό το μήνυμα σφάλματος:
 
 ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
-  * On the right side, open the Gradle tab (1).
+  * Στη δεξιά πλευρά, ανοίξτε την καρτέλα Gradle (1).
 
-    Make sure the button shown at (2) is *NOT* selected.
+    Βεβαιωθείτε ότι το κουμπί που φαίνεται στο (2) *ΔΕΝ* είναι επιλεγμένο.
 
-    ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
+    ![Λειτουργία εκτός σύνδεσης (Offline) του Gradle](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * Now you need to trigger a [Gradle Resync](#gradle-resync)
+  * Τώρα πρέπει να ξεκινήσετε έναν [Επανασυγχρονισμό Gradle](#gradle-resync)
 
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
 ### Unable to start daemon process
 
-  If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately there is nothing that the **AAPS** developers can do about this!
+  Αν δείτε ένα μήνυμα σφάλματος όπως το παρακάτω, πιθανότατα χρησιμοποιείτε σύστημα Windows 10 32-bit. Αυτό δεν υποστηρίζεται από το Android Studio 3.5.1 και νεότερο, και δυστυχώς οι προγραμματιστές του **AAPS** δεν μπορούν να κάνουν τίποτα γι' αυτό!
 
-  There is information on the internet about how to determine whether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
+  Στο διαδίκτυο υπάρχουν πληροφορίες για το πώς να δείτε αν έχετε λειτουργικό σύστημα 32-bit ή 64-bit, π.χ. [αυτές εδώ](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Στιγμιότυπο οθόνης Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
-### Gradle Resync
+### Επανασυγχρονισμός Gradle
 
-  If you can still see the message that the gradle sync failed, now select the Link "Try again". ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
-
-
-  If you don't see the message anymore, you can still trigger this manually:
-
-  * Open the Gradle tab (1) on the right border of Android Studio.
-
-    ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
-
-  * Right-click on AAPS (2)
-
-  * Click on "Reload Gradle Project" (3)
-
-## Generate Signed APK generated successfully with 0 build variants
-
-When you generate the signed apk, you might get the notification that generation was successfully but are told that this is with '0 build variants' were generated:
-
-![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
-
-This is a false warning. Check the directory for your selected "Destination folder" for generation (step [Generate Signed APK](#Building-APK-generate-signed-apk)) and you will find the generated apk there!
+  Αν βλέπετε ακόμη το μήνυμα ότι ο συγχρονισμός gradle απέτυχε, επιλέξτε τώρα τον σύνδεσμο **Try again** (1). ![Αποτυχία συγχρονισμού Gradle](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
-## App was created with compiler/kotlin warnings
+  Αν δεν βλέπετε πια το μήνυμα, μπορείτε να το ξεκινήσετε και χειροκίνητα:
 
-If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
+  * Ανοίξτε την καρτέλα Gradle (1) στο δεξί άκρο του Android Studio.
 
- ![Gradle finished with warnings](../images/studioTroubleshooting/13_BuildWithWarnings.png)
+    ![Επαναφόρτωση Gradle](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
-Your apk was built successfully and can be transferred to your phone!
+  * Δεξί κλικ στο AAPS (2)
+
+  * Πατήστε "Reload Gradle Project" (3)
+
+## Generate Signed APK: η δημιουργία ολοκληρώθηκε με 0 build variants
+
+Όταν δημιουργείτε το υπογεγραμμένο apk, μπορεί να δείτε ειδοποίηση ότι η δημιουργία ήταν επιτυχής αλλά ότι δημιουργήθηκαν '0 build variants':
+
+![Το APK δημιουργήθηκε με 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
+
+Αυτή είναι μια ψευδής προειδοποίηση. Ελέγξτε τον φάκελο που επιλέξατε ως "Destination folder" για τη δημιουργία (βήμα [Generate Signed APK](#Building-APK-generate-signed-apk)) και θα βρείτε εκεί το apk που δημιουργήθηκε!
 
 
-## No CGM data is received by AAPS
+## Η εφαρμογή δημιουργήθηκε με προειδοποιήσεις του μεταγλωττιστή/kotlin
 
-* If you are using patched Dexcom G6 app: this app is outdated. Use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
+Αν το build ολοκληρώθηκε με επιτυχία αλλά βλέπετε προειδοποιήσεις του μεταγλωττιστή ή του kotlin (με κίτρινο ή μπλε θαυμαστικό), μπορείτε απλά να τις αγνοήσετε.
 
-* If you are using xDrip+: identify receiver as described on [xDrip+ settings page](#xdrip-identify-receiver).
+ ![Το Gradle ολοκληρώθηκε με προειδοποιήσεις](../images/studioTroubleshooting/13_BuildWithWarnings.png)
+
+Το apk σας δημιουργήθηκε με επιτυχία και μπορείτε να το μεταφέρετε στο τηλέφωνό σας!
 
 
-## Apk not installed
+## Το AAPS δεν λαμβάνει δεδομένα CGM
 
-![phone app note installed](../images/Update_AppNotInstalled.png)
+* Αν χρησιμοποιείτε την τροποποιημένη εφαρμογή Dexcom G6: αυτή η εφαρμογή είναι παλιά. Χρησιμοποιήστε την εφαρμογή [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps:
+* Αν χρησιμοποιείτε xDrip: δηλώστε τον δέκτη όπως περιγράφεται στη [σελίδα ρυθμίσεων του xDrip](#xdrip-identify-receiver).
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
-2. Uninstall **AAPS** on your phone.
-3. Enable airplane mode & turn off bluetooth.
+
+## Το apk δεν εγκαταστάθηκε
+
+![η εφαρμογή δεν εγκαταστάθηκε στο τηλέφωνο](../images/Update_AppNotInstalled.png)
+
+* Βεβαιωθείτε ότι έχετε μεταφέρει το αρχείο "app-full-release.apk" στο τηλέφωνό σας.
+* Αυτό το σφάλμα συνήθως σημαίνει ότι το νέο apk είναι υπογεγραμμένο με διαφορετικό keystore από το εγκατεστημένο **AAPS** σας. Αν έχετε ακόμη το προηγούμενο keystore σας, επιλέξτε το και κάντε ξανά build. Αλλιώς, δείτε [Επανεγκατάσταση του AAPS με νέο keystore](#reinstall-aaps).
+* Εάν στο τηλέφωνό σας εμφανίζεται "Δεν έχει εγκατασταθεί η εφαρμογή", ακολουθήστε αυτά τα βήματα:
+
+1. [Εξαγωγή ρυθμίσεων](../Maintenance/ExportImportSettings.md) (στην έκδοση του AAPS που είναι ήδη εγκατεστημένη στο τηλέφωνό σας)
+2. Απεγκαταστήστε το **AAPS** από το τηλέφωνό σας.
+3. Ενεργοποιήστε τη λειτουργία πτήσης και απενεργοποιήστε το Bluetooth.
 4. Εγκατάσταση νέας έκδοσης ("app-full-release.apk")
-5. [Ρυθμίσεις εισαγωγής](../Maintenance/ExportImportSettings.md)
-6. Ενεργοποιήστε ξανά το bluetooth και απενεργοποιήστε τη λειτουργία του αεροπλάνου
+5. [Εισαγωγή ρυθμίσεων](../Maintenance/ExportImportSettings.md)
+6. Ενεργοποιήστε ξανά το Bluetooth και απενεργοποιήστε τη λειτουργία πτήσης
 
-## Apk installed but old version
+## Το apk εγκαταστάθηκε, αλλά με την παλιά έκδοση
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](#Update-to-new-version-update-your-local-copy)
+Αν δημιουργήσατε την εφαρμογή με επιτυχία, τη μεταφέρατε στο τηλέφωνό σας και την εγκαταστήσατε με επιτυχία, αλλά ο αριθμός έκδοσης έμεινε ίδιος, τότε ίσως ξεχάσατε να [ενημερώσετε το τοπικό σας αντίγραφο](#Update-to-new-version-update-your-local-copy)
 
-## None of the above worked
+## Τίποτα από τα παραπάνω δεν βοήθησε
 
-If none of the above tips helped you might consider building the apk from scratch:
+Αν καμία από τις παραπάνω συμβουλές δεν βοήθησε, μπορείτε να δημιουργήσετε το apk από την αρχή:
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
+1. [Εξαγωγή ρυθμίσεων](../Maintenance/ExportImportSettings.md) (στην έκδοση του AAPS που είναι ήδη εγκατεστημένη στο τηλέφωνό σας)
 
-2. Have your key password and key store password ready.
+2. Έχετε έτοιμο τον κωδικό του κλειδιού (key password) και τον κωδικό του keystore (key store password).
 
-    Or you just use a new keystore.
+    Ή απλά χρησιμοποιήστε ένα νέο keystore.
 
-3. Build the apk from scratch as described [here](#Building-APK-download-AAPS-code).
+3. Δημιουργήστε το apk από την αρχή, όπως περιγράφεται [εδώ](#Building-APK-download-AAPS-code).
 
-4. When you have built the apk successfully delete the existing apk on your phone, transfer the new apk to your phone and install.
-5. [Import settings](../Maintenance/ExportImportSettings.md) again to restore your objectives and settings.
-6. You should check your battery optimization options and disable them again.
+4. Όταν δημιουργήσετε το apk με επιτυχία, διαγράψτε το υπάρχον apk στο τηλέφωνό σας, μεταφέρετε το νέο apk στο τηλέφωνο και εγκαταστήστε το.
+5. Κάντε ξανά [Εισαγωγή ρυθμίσεων](../Maintenance/ExportImportSettings.md) για να επαναφέρετε τα Βήματα και τις ρυθμίσεις σας.
+6. Ελέγξτε τις επιλογές βελτιστοποίησης μπαταρίας και απενεργοποιήστε τις ξανά.
 
-## Worst case scenario
+## Στη χειρότερη περίπτωση
 
-If the above does not solve your build issue you may wish to try to uninstall Android Studio completely and rebuild from scratch.  Some users find that this can resolve their build problem.  When deleting Android Studio, do not delete Android user settings and **Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e.
+Αν τα παραπάνω δεν λύνουν το πρόβλημα με το build, μπορείτε να δοκιμάσετε να απεγκαταστήσετε εντελώς το Android Studio και να κάνετε build από την αρχή.  Κάποιοι χρήστες βρίσκουν ότι αυτό λύνει το πρόβλημα με το build.  Όταν διαγράφετε το Android Studio, μη διαγράψετε τις ρυθμίσεις χρήστη του Android και **βεβαιωθείτε ότι απεγκαθιστάτε όλα τα αρχεία που σχετίζονται με το Android Studio.** Αν δεν αφαιρέσετε εντελώς το Android Studio μαζί με όλα τα κρυφά αρχεία, η απεγκατάσταση μπορεί να δημιουργήσει νέα προβλήματα αντί να λύσει τα υπάρχοντα. Οδηγίες για πλήρη απεγκατάσταση θα βρείτε στο διαδίκτυο, π.χ.
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](#Building-APK-install-android-studio).
+Εγκαταστήστε το Android Studio από την αρχή, όπως περιγράφεται [εδώ](#Building-APK-install-android-studio).

@@ -1,29 +1,29 @@
 # CareSens
 
-There are different ways to use CareSens data with **AAPS**:
+Data CareSens můžete s **AAPS** používat několika způsoby:
 
-- xDrip+
+- xDrip
 - Juggluco
 
-**Note:** You do not need the Sens365 follower app to connect to AAPS.
+**Poznámka:** Pro připojení k AAPS nepotřebujete aplikaci pro sledující Sens365.
 
-## 1. xDrip+
+## 1. xDrip
 
-1. Install and set up the official CareSens app.
-2. In CareSens app, go to settings -> Manage Data and Connections -> turn on xDrip switch. If prefered, turn off the data connections to CareLevo, DIA:CONN, CloudLoop, etc. in "others" .
+1. Nainstalujte a nastavte oficiální aplikaci CareSens.
+2. V aplikaci CareSens jděte do settings -> Manage Data and Connections -> zapněte přepínač xDrip. If preferred, turn off the data connections to CareLevo, DIA:CONN, CloudLoop, etc. in "others".
 
-![CareSens App Data Connections](../images/eversenseapp-dataconnections.png)
+![Datová připojení v aplikaci CareSens](../images/eversenseapp-dataconnections.png)
 
 
-2. Install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip).
-3. In xDrip+, go to settings -> hardware data source, select `Companion App` as data source.
-4. In **AAPS**, select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+2. Nainstalujte xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip).
+3. V xDrip jděte do settings -> hardware data source a jako zdroj dat vyberte `Companion App`.
+4. V **AAPS** vyberte xDrip v [**Konfigurace → Zdroj glykémie**](#Config-Builder-bg-source).
 
 
 ## 2. Juggluco
 
-1. Install the Juggluco app.
-2. In Juggluco, open the left menu and select `Photo`
-3. Scan the QR code on the package of the sensor.
-4. In left menu -> settings -> exchange data make sure xDrip broadcast is turned on.
-5. In **AAPS**, select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+1. Nainstalujte aplikaci Juggluco.
+2. V Juggluco otevřete levou nabídku a vyberte `Photo`
+3. Naskenujte QR kód na balení senzoru.
+4. V levé nabídce -> settings -> exchange data se ujistěte, že je zapnutý xDrip broadcast.
+5. V **AAPS** vyberte xDrip v [**Konfigurace → Zdroj glykémie**](#Config-Builder-bg-source).

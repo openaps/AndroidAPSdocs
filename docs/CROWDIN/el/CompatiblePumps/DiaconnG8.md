@@ -1,91 +1,141 @@
-# Diaconn G8 Insulin Pump
+# Diaconn G8
 
-## Insulin Pump Bluetooth Pairing
+```{contents} Table of contents
+:depth: 1
+:local: true
+```
 
-- Click on the hamburger menu in the top left corner.
+## Δυνατότητες της αντλίας με το AAPS
 
-![image](../images/DiaconnG8/DiaconnG8_01.jpg)
+* Επικοινωνεί με το **AAPS** μέσω του Bluetooth του τηλεφώνου σας, χωρίς επιπλέον συσκευή επικοινωνίας.
+* Τις αλλαγές θερινής ώρας και ζώνης ώρας πρέπει να τις κάνετε χειροκίνητα.
 
-- Click on Config Builder.
+## Σύζευξη Bluetooth της αντλίας ινσουλίνης
 
-![image](../images/DiaconnG8/DiaconnG8_02.jpg)
+- Πατήστε το **μενού** (☰) στην πάνω αριστερή γωνία.
 
-- After selecting the Diaconn G8 Pump click on the Settings icon (cog wheel).
+![Το μενού με την επιλογή Διαμόρφωση](../images/v4/Configuration/configuration_menu.png)
 
-![image](../images/DiaconnG8/DiaconnG8_03.jpg)
+- Πατήστε **Διαμόρφωση** > **Αντλία** και επιλέξτε **Diaconn G8**.
 
-- Choose Selected pump.
+![Διαμόρφωση > Αντλία με το πρόσθετο Diaconn G8](../images/v4/Configuration/configuration_pump_list_3.png)
+
+Μόλις το επιλέξετε, η κάρτα **Diaconn G8** δείχνει δύο κουμπιά, **Ρυθμίσεις** και **Άνοιγμα πρόσθετου**:
+
+![Το πρόσθετο Diaconn G8 επιλεγμένο στη Διαμόρφωση > Αντλία](../images/v4/Pumps/diaconn_g8_enabled.png)
+
+Το **Ρυθμίσεις** ανοίγει τις ρυθμίσεις του οδηγού Diaconn G8 (δείτε [Ρυθμίσεις επιλογών της αντλίας ινσουλίνης Diaconn G8](#diaconn-g8-insulin-pump-option-setting) παρακάτω).
+
+Το **Άνοιγμα πρόσθετου** (ή **Διαχείριση** > **Αντλία**) ανοίγει την οθόνη της αντλίας Diaconn G8. Πριν από τη σύζευξη μιας αντλίας, η οθόνη μοιάζει έτσι:
+
+![Η οθόνη της αντλίας Diaconn G8 πριν από τη σύζευξη](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
 ![image](../images/DiaconnG8/DiaconnG8_04.jpg)
 
-- Select your insulin pump’s model number once it appears in the list.
+```{admonition} Older screenshot
+:class: note
+Η παραπάνω εικόνα είναι από παλαιότερη έκδοση του **AAPS**. Στο **AAPS** 4 η σύζευξη ξεκινά από το κουμπί **Σύζευξη** στην οθόνη της αντλίας· δεν υπάρχει ρύθμιση **Επιλεγμένη αντλία**.
+```
 
-![image](../images/DiaconnG8/DiaconnG8_05.jpg)
+- Στην οθόνη της αντλίας πατήστε **Σύζευξη**. Ανοίγει η οθόνη **Σύζευξη Αντλίας Diaconn** και το **AAPS** αναζητά αντλίες κοντά σας.
+- Πατήστε τον αριθμό μοντέλου της αντλίας σας μόλις εμφανιστεί στη λίστα (για παράδειγμα **DIACONN-65010**).
 
-- There are two options to check your model number:
+![Η οθόνη Σύζευξη Αντλίας Diaconn αναζητά αντλίες](../images/DiaconnG8/DiaconnG8_05.png)
 
-1. The last 5 digits of the SN number on the back of the pump.
-2. Click on O button > Information > BLE > Last 5 digits.
+- Υπάρχουν δύο τρόποι να δείτε τον αριθμό μοντέλου σας:
+
+1. Τα τελευταία 5 ψηφία του αριθμού SN στο πίσω μέρος της αντλίας.
+2. Πατήστε το κουμπί O > Information > BLE > τελευταία 5 ψηφία.
 
 ![image](../images/DiaconnG8/DiaconnG8_06.jpg)
 
-- Once you select your pump, a window appears asking for a pin code. Enter the pin number displayed on your pump to complete the connection.
+- Μόλις επιλέξετε την αντλία σας, εμφανίζεται ένα παράθυρο που ζητά κωδικό PIN. Εισαγάγετε τον αριθμό PIN που δείχνει η αντλία σας για να ολοκληρωθεί η σύνδεση.
 
  ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
 
-## Pump status check and log synchronization
+- Όταν εμφανιστεί το **Η σύζευξη πέτυχε!**, πατήστε **OK** για να επιστρέψετε στην οθόνη της αντλίας.
 
-- Once your pump is connected, click on the Bluetooth symbol to check the status and to synchronize logs.
+## Έλεγχος κατάστασης αντλίας και συγχρονισμός καταγραφών
+
+- Μόλις συνδεθεί η αντλία σας, ανοίξτε την οθόνη της αντλίας (**Διαχείριση** > **Αντλία**). Δείχνει την κατάσταση της αντλίας (μπαταρία, δεξαμενή, τελευταία σύνδεση, τελευταίο bolus, βασικό ρυθμό και άλλα).
+- Πατήστε **Ανανέωση** για να συνδεθείτε με την αντλία, να ενημερώσετε την κατάσταση και να συγχρονίσετε τις καταγραφές.
+- Πατήστε **Ιστορικό αντλίας** για να δείτε το ιστορικό που διαβάστηκε από την αντλία.
 
 ![image](../images/DiaconnG8/DiaconnG8_08.jpg)
 
-## Bluetooth Troubleshooting
+```{admonition} Older screenshot
+:class: note
+Η παραπάνω εικόνα είναι από παλαιότερη έκδοση του **AAPS**. Στο **AAPS** 4 η κατάσταση της αντλίας εμφανίζεται στην οθόνη της αντλίας (**Διαχείριση** > **Αντλία**) και συγχρονίζεται με το κουμπί **Ανανέωση**.
+```
 
-**What to do in the case of an unstable Bluetooth connection with the pump.**
+(diaconn-g8-bluetooth-troubleshooting)=
 
-### Method 1 ) Check the pump again after AAPS application is completed.
+## Αντιμετώπιση προβλημάτων Bluetooth
 
-- Click on the 3 dots button on the top right.
+**Τι να κάνετε αν η σύνδεση Bluetooth με την αντλία δεν είναι σταθερή.**
 
-![image](../images/DiaconnG8/DiaconnG8_09.jpg)
+### Μέθοδος 1) Επανεκκινήστε το AAPS και μετά ελέγξτε ξανά την αντλία
 
-- Click on Exit.
+- Πατήστε το **μενού** (☰) στην πάνω αριστερή γωνία.
+- Πατήστε **Έξοδος** στο κάτω μέρος του μενού.
 
-![image](../images/DiaconnG8/DiaconnG8_10.jpg)
+![Το μενού με την επιλογή Έξοδος στο κάτω μέρος](../images/v4/Configuration/configuration_menu.png)
 
-### Method 2) If the first method doesn’t work, disconnect Bluetooth and then reconnect.
+- Ξεκινήστε ξανά το **AAPS** και ελέγξτε τη σύνδεση με την αντλία.
 
-- Press and hold the Bluetooth button at the top for about 3 seconds.
+### Μέθοδος 2) Αν η πρώτη μέθοδος δεν λειτουργήσει, αποσυνδέστε το Bluetooth και συνδέστε το ξανά.
+
+- Πατήστε και κρατήστε πατημένο το κουμπί Bluetooth στο πάνω μέρος για περίπου 3 δευτερόλεπτα.
 
 ![image](../images/DiaconnG8/DiaconnG8_11.jpg)
 
-- Click on the Setting button on the paired Diaconn G8 Insulin pump.
+- Πατήστε το κουμπί Setting στη συζευγμένη αντλία ινσουλίνης Diaconn G8.
 
 ![image](../images/DiaconnG8/DiaconnG8_12.jpg)
 
-- Unpair.
+- Unpair (κατάργηση σύζευξης).
 
 ![image](../images/DiaconnG8/DiaconnG8_13.jpg)
 
-- Repeat the Bluetooth pairing process for the pump (see above).
+- Στο **AAPS** ανοίξτε την οθόνη της αντλίας (**Διαχείριση** > **Αντλία**), πατήστε **Κατάργηση σύζευξης** και επιβεβαιώστε το **Επαναφορά στοιχείων σύζευξης;**.
+- Επαναλάβετε τη διαδικασία σύζευξης Bluetooth για την αντλία (δείτε παραπάνω).
 
-## Further Information
+## Περισσότερες πληροφορίες
 
-### Diaconn G8 Insulin pump option setting
+(diaconn-g8-insulin-pump-option-setting)=
 
-- Config manager > pump > Diaconn G8 > Settings
-- DIACONN G8 at the top> 3 dots button on the top right > Diaconn G8 Preferences
+### Ρυθμίσεις επιλογών της αντλίας ινσουλίνης Diaconn G8
 
-![Diaconn G8 pump options](../images/DiaconnG8/DiaconnG8_14.jpg)
+- **Διαμόρφωση** > **Αντλία** > **Diaconn G8** > **Ρυθμίσεις**
+- Ή, στην οθόνη της αντλίας (**Διαχείριση** > **Αντλία**), πατήστε το εικονίδιο ρυθμίσεων (γρανάζι) στην πάνω δεξιά γωνία.
 
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an “Insulin Change” event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a “Site Change” event occurs.
-- If the **Log tube change** option is activated, the relevant details are automatically uploaded to the careportal when a “Tube Change” event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a “Battery Change” event occurs, and the PUMP BATTERY CHANGE button in the ACTION tab is deactivated. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
+![Ρυθμίσεις του οδηγού Diaconn G8](../images/v4/Pumps/diaconn_g8_settings.png)
 
-![Diaconn G8 actions menu](../images/DiaconnG8/DiaconnG8_15.jpg)
+- Η **Ταχύτητα Bolus** ορίζει πόσο γρήγορα η αντλία χορηγεί ένα bolus.
+- Αν η επιλογή **Καταγραφή αλλαγής δεξαμενής** είναι ενεργή, τα σχετικά στοιχεία ανεβαίνουν αυτόματα στο careportal όταν συμβεί το συμβάν "Insulin Change" (αλλαγή ινσουλίνης).
+- Αν η επιλογή **Καταγραφή αλλαγής βελόνας** είναι ενεργή, τα σχετικά στοιχεία ανεβαίνουν αυτόματα στο careportal όταν συμβεί το συμβάν "Site Change" (αλλαγή σημείου).
+- Αν η επιλογή **Καταγραφή αλλαγής σωλήνωσης** είναι ενεργή, τα σχετικά στοιχεία προστίθενται αυτόματα ως σημείωση όταν συμβεί το συμβάν "Tube Change" (αλλαγή σωλήνωσης).
+- Αν η επιλογή **Καταγραφή αλλαγής μπαταρίας** είναι ενεργή, τα σχετικά στοιχεία ανεβαίνουν αυτόματα στο careportal όταν συμβεί το συμβάν "Battery Change" (αλλαγή μπαταρίας). Μπορείτε επίσης να καταγράψετε μόνοι σας μια αλλαγή μπαταρίας με **Διαχείριση** > **Αλλαγή Μπαταρίας Αντλίας**. (Σημείωση: Για να αλλάξετε την μπαταρία, σταματήστε πρώτα όλες τις χορηγήσεις που είναι σε εξέλιξη.)
+- Ο **Συγχρονισμός Diaconn Cloud** στέλνει τις καταγραφές της αντλίας στο Diaconn Cloud.
 
-### Extended Bolus function
+![Μενού ενεργειών του Diaconn G8](../images/DiaconnG8/DiaconnG8_15.jpg)
 
-- If you use extended bolus it will disable closed loop.
-- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+```{admonition} Older screenshot
+:class: note
+Η παραπάνω εικόνα είναι από παλαιότερη έκδοση του **AAPS**. Στο **AAPS** 4 μια αλλαγή μπαταρίας καταγράφεται με **Διαχείριση** > **Αλλαγή Μπαταρίας Αντλίας**· δεν υπάρχει καρτέλα **Ενέργειες**.
+```
+
+### Λειτουργία εκτεταμένου bolus
+
+- Αν χρησιμοποιήσετε εκτεταμένο bolus, το κλειστό κύκλωμα θα απενεργοποιηθεί.
+- Δείτε [αυτή τη σελίδα](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) για να μάθετε γιατί το εκτεταμένο bolus δεν λειτουργεί σε κλειστό κύκλωμα.
+
+## Πού θα βρείτε βοήθεια
+
+Την ανάπτυξη του οδηγού Diaconn G8 την κάνει η κοινότητα **εθελοντικά**. Πριν ζητήσετε βοήθεια:
+
+1. **Διαβάστε** τη σχετική ενότητα αυτής της τεκμηρίωσης για να επιβεβαιώσετε πώς πρέπει να λειτουργεί η λειτουργία.
+2. **Ρωτήστε** στο κανάλι *#AAPS* στο [Discord](https://discord.gg/4fQUWHZ4Mw) ή σε ένα από τα άλλα [κανάλια της κοινότητας](../GettingHelp/WhereCanIGetHelp.md).
+3. **Αναφέρετε ένα σφάλμα**: ψάξτε πρώτα στα [υπάρχοντα issues](https://github.com/nightscout/AndroidAPS/issues)· αν το δικό σας δεν υπάρχει, ανοίξτε ένα [νέο issue](https://github.com/nightscout/AndroidAPS/issues) και επισυνάψτε τα [αρχεία καταγραφής](../GettingHelp/AccessingLogFiles.md) σας.
+
+Όταν ζητάτε βοήθεια, γράψτε τη μάρκα και το μοντέλο του τηλεφώνου σας, την έκδοση Android, την έκδοση του **AAPS** και μια απλή περιγραφή του προβλήματος (τι άλλαξε, πότε λειτουργούσε τελευταία φορά).

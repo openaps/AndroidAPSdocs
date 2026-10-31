@@ -1,91 +1,141 @@
-# Diaconn G8 Insulin Pump
+# Diaconn G8
 
-## Insulin Pump Bluetooth Pairing
+```{contents} Table of contents
+:depth: 1
+:local: true
+```
 
-- Click on the hamburger menu in the top left corner.
+## Funkcie pumpy s AAPS
 
-![image](../images/DiaconnG8/DiaconnG8_01.jpg)
+* Komunikuje s **AAPS** priamo cez Bluetooth vášho telefónu, bez ďalšieho komunikačného zariadenia.
+* Zmeny letného času a časového pásma musíte riešiť ručne.
 
-- Click on Config Builder.
+## Párovanie inzulínovej pumpy cez Bluetooth
 
-![image](../images/DiaconnG8/DiaconnG8_02.jpg)
+- Ťuknite na **ponuku** (☰) v ľavom hornom rohu.
 
-- After selecting the Diaconn G8 Pump click on the Settings icon (cog wheel).
+![Ponuka s položkou Konfigurácia](../images/v4/Configuration/configuration_menu.png)
 
-![image](../images/DiaconnG8/DiaconnG8_03.jpg)
+- Ťuknite na **Konfigurácia** > **Pumpa** a vyberte **Diaconn G8**.
 
-- Choose Selected pump.
+![Konfigurácia > Pumpa s pluginom Diaconn G8](../images/v4/Configuration/configuration_pump_list_3.png)
 
-![image](../images/DiaconnG8/DiaconnG8_04.jpg)
+Po výbere sa na karte **Diaconn G8** zobrazia dve tlačidlá, **Nastavenia** a **Otvoriť plugin**:
 
-- Select your insulin pump’s model number once it appears in the list.
+![Plugin Diaconn G8 vybraný v Konfigurácia > Pumpa](../images/v4/Pumps/diaconn_g8_enabled.png)
 
-![image](../images/DiaconnG8/DiaconnG8_05.jpg)
+**Nastavenia** otvorí nastavenia ovládača Diaconn G8 (pozrite [Nastavenia možností inzulínovej pumpy Diaconn G8](#diaconn-g8-insulin-pump-option-setting) nižšie).
 
-- There are two options to check your model number:
+**Otvoriť plugin** (alebo **Spravovať** > **Pumpa**) otvorí obrazovku pumpy Diaconn G8. Kým nie je pumpa spárovaná, vyzerá takto:
 
-1. The last 5 digits of the SN number on the back of the pump.
-2. Click on O button > Information > BLE > Last 5 digits.
+![Obrazovka pumpy Diaconn G8 pred párovaním](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
-![image](../images/DiaconnG8/DiaconnG8_06.jpg)
+![obrázok](../images/DiaconnG8/DiaconnG8_04.jpg)
 
-- Once you select your pump, a window appears asking for a pin code. Enter the pin number displayed on your pump to complete the connection.
+```{admonition} Older screenshot
+:class: note
+Snímka obrazovky vyššie je zo staršej verzie **AAPS**. V **AAPS** 4 sa párovanie spúšťa tlačidlom **Spárovať** na obrazovke pumpy; nastavenie **Vybraná pumpa** už neexistuje.
+```
 
- ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
+- Na obrazovke pumpy ťuknite na **Spárovať**. Otvorí sa obrazovka **Párovanie pumpy Diaconn** a **AAPS** vyhľadá pumpy v okolí.
+- Keď sa v zozname zobrazí číslo modelu vašej inzulínovej pumpy, ťuknite naň (napríklad **DIACONN-65010**).
 
-## Pump status check and log synchronization
+![Obrazovka Párovanie pumpy Diaconn pri vyhľadávaní púmp](../images/DiaconnG8/DiaconnG8_05.png)
 
-- Once your pump is connected, click on the Bluetooth symbol to check the status and to synchronize logs.
+- Číslo modelu môžete zistiť dvoma spôsobmi:
 
-![image](../images/DiaconnG8/DiaconnG8_08.jpg)
+1. Posledných 5 číslic sériového čísla (SN) na zadnej strane pumpy.
+2. Stlačte tlačidlo O > Information > BLE > posledných 5 číslic.
 
-## Bluetooth Troubleshooting
+![obrázok](../images/DiaconnG8/DiaconnG8_06.jpg)
 
-**What to do in the case of an unstable Bluetooth connection with the pump.**
+- Po výbere pumpy sa zobrazí okno s výzvou na zadanie PIN kódu. Zadajte PIN, ktorý sa zobrazuje na pumpe, a dokončite tak pripojenie.
 
-### Method 1 ) Check the pump again after AAPS application is completed.
+ ![obrázok](../images/DiaconnG8/DiaconnG8_07.jpg)
 
-- Click on the 3 dots button on the top right.
+- Keď sa zobrazí **Spárovanie úspešné!**, ťuknite na **OK** a vrátite sa na obrazovku pumpy.
 
-![image](../images/DiaconnG8/DiaconnG8_09.jpg)
+## Kontrola stavu pumpy a synchronizácia logov
 
-- Click on Exit.
+- Keď je pumpa pripojená, otvorte obrazovku pumpy (**Spravovať** > **Pumpa**). Zobrazuje stav pumpy (batériu, zásobník, posledné spojenie, posledný bolus, bazálnu dávku a ďalšie).
+- Ťuknutím na **Obnoviť** sa pripojíte k pumpe, aktualizujete stav a zosynchronizujete logy.
+- Ťuknutím na **História pumpy** zobrazíte históriu načítanú z pumpy.
 
-![image](../images/DiaconnG8/DiaconnG8_10.jpg)
+![obrázok](../images/DiaconnG8/DiaconnG8_08.jpg)
 
-### Method 2) If the first method doesn’t work, disconnect Bluetooth and then reconnect.
+```{admonition} Older screenshot
+:class: note
+Snímka obrazovky vyššie je zo staršej verzie **AAPS**. V **AAPS** 4 sa stav pumpy zobrazuje na obrazovke pumpy (**Spravovať** > **Pumpa**) a synchronizuje sa tlačidlom **Obnoviť**.
+```
 
-- Press and hold the Bluetooth button at the top for about 3 seconds.
+(diaconn-g8-bluetooth-troubleshooting)=
 
-![image](../images/DiaconnG8/DiaconnG8_11.jpg)
+## Riešenie problémov s Bluetooth
 
-- Click on the Setting button on the paired Diaconn G8 Insulin pump.
+**Čo robiť pri nestabilnom spojení s pumpou cez Bluetooth.**
 
-![image](../images/DiaconnG8/DiaconnG8_12.jpg)
+### Spôsob 1) Reštartujte AAPS a potom znovu skontrolujte pumpu
 
-- Unpair.
+- Ťuknite na **ponuku** (☰) v ľavom hornom rohu.
+- Ťuknite na **Ukončiť** v dolnej časti ponuky.
 
-![image](../images/DiaconnG8/DiaconnG8_13.jpg)
+![Ponuka s položkou Ukončiť v dolnej časti](../images/v4/Configuration/configuration_menu.png)
 
-- Repeat the Bluetooth pairing process for the pump (see above).
+- Znovu spustite **AAPS** a skontrolujte spojenie s pumpou.
 
-## Further Information
+### Spôsob 2) Ak prvý spôsob nepomôže, odpojte Bluetooth a potom ho znovu pripojte.
 
-### Diaconn G8 Insulin pump option setting
+- Stlačte a podržte tlačidlo Bluetooth hore asi 3 sekundy.
 
-- Config manager > pump > Diaconn G8 > Settings
-- DIACONN G8 at the top> 3 dots button on the top right > Diaconn G8 Preferences
+![obrázok](../images/DiaconnG8/DiaconnG8_11.jpg)
 
-![Diaconn G8 pump options](../images/DiaconnG8/DiaconnG8_14.jpg)
+- Na spárovanej inzulínovej pumpe Diaconn G8 stlačte tlačidlo Setting.
 
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an “Insulin Change” event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a “Site Change” event occurs.
-- If the **Log tube change** option is activated, the relevant details are automatically uploaded to the careportal when a “Tube Change” event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a “Battery Change” event occurs, and the PUMP BATTERY CHANGE button in the ACTION tab is deactivated. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
+![obrázok](../images/DiaconnG8/DiaconnG8_12.jpg)
 
-![Diaconn G8 actions menu](../images/DiaconnG8/DiaconnG8_15.jpg)
+- Zvoľte Unpair (zrušenie párovania).
 
-### Extended Bolus function
+![obrázok](../images/DiaconnG8/DiaconnG8_13.jpg)
 
-- If you use extended bolus it will disable closed loop.
-- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- V **AAPS** otvorte obrazovku pumpy (**Spravovať** > **Pumpa**), ťuknite na **Zrušiť párovanie** a potvrďte **Resetovať informácie o párovaní?**.
+- Zopakujte postup párovania pumpy cez Bluetooth (pozrite vyššie).
+
+## Ďalšie informácie
+
+(diaconn-g8-insulin-pump-option-setting)=
+
+### Nastavenia možností inzulínovej pumpy Diaconn G8
+
+- **Konfigurácia** > **Pumpa** > **Diaconn G8** > **Nastavenia**
+- Alebo na obrazovke pumpy (**Spravovať** > **Pumpa**) ťuknite na ikonu nastavení (ozubené koliesko) v pravom hornom rohu.
+
+![Nastavenia ovládača Diaconn G8](../images/v4/Pumps/diaconn_g8_settings.png)
+
+- **Rýchlosť bolusu** určuje, ako rýchlo pumpa podáva bolus.
+- Ak je zapnutá možnosť **Zaznamenať výmenu zásobníka**, pri udalosti „Výmena inzulínu“ sa príslušné údaje automaticky nahrajú do Starostlivosti.
+- Ak je zapnutá možnosť **Zaznamenať výmenu kanyly**, pri udalosti „Výmena setu“ sa príslušné údaje automaticky nahrajú do Starostlivosti.
+- Ak je zapnutá možnosť **Zaznamenať výmenu hadičky**, pri udalosti „Výmena hadičky“ sa príslušné údaje automaticky pridajú ako poznámka.
+- Ak je zapnutá možnosť **Zaznamenať výmenu batérie**, pri udalosti „Výmena batérie“ sa príslušné údaje automaticky nahrajú do Starostlivosti. Výmenu batérie môžete zaznamenať aj sami cez **Spravovať** > **Výmena batérie v pumpe**. (Poznámka: Pred výmenou batérie zastavte všetky prebiehajúce funkcie podávania inzulínu.)
+- **Synchronizácia do Diaconn cloudu** posiela logy pumpy do Diaconn cloudu.
+
+![Ponuka akcií Diaconn G8](../images/DiaconnG8/DiaconnG8_15.jpg)
+
+```{admonition} Older screenshot
+:class: note
+Snímka obrazovky vyššie je zo staršej verzie **AAPS**. V **AAPS** 4 sa výmena batérie zaznamenáva cez **Spravovať** > **Výmena batérie v pumpe**; karta **Akcie** už neexistuje.
+```
+
+### Funkcia predĺženého bolusu
+
+- Ak použijete predĺžený bolus, vypne sa uzavretý okruh.
+- Prečo predĺžený bolus nefunguje v uzavretom okruhu, sa dočítate na [tejto stránke](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment).
+
+## Kde získať pomoc
+
+Vývoj ovládača Diaconn G8 robí komunita na **dobrovoľníckom** základe. Skôr než požiadate o pomoc:
+
+1. **Prečítajte si** príslušnú časť tejto dokumentácie a overte si, ako má funkcia fungovať.
+2. **Opýtajte sa** na kanáli *#AAPS* na [Discorde](https://discord.gg/4fQUWHZ4Mw) alebo v niektorom z ďalších [komunitných kanálov](../GettingHelp/WhereCanIGetHelp.md).
+3. **Nahláste chybu**: prehľadajte [existujúce hlásenia (issues)](https://github.com/nightscout/AndroidAPS/issues); ak tam vaša chyba nie je, otvorte [nové hlásenie](https://github.com/nightscout/AndroidAPS/issues) a priložte svoje [log súbory](../GettingHelp/AccessingLogFiles.md).
+
+Keď žiadate o pomoc, uveďte značku a model telefónu, verziu Androidu, verziu **AAPS** a jednoduchý opis problému (čo sa zmenilo a kedy to naposledy fungovalo).

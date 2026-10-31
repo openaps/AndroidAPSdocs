@@ -8,7 +8,7 @@
 
 ### Отключите выгрузку в Nightscout
 
-Начиная с AAPS 3.2, не позволяйте никаким другим приложениям загружать данные (уровень глюкозы в крови и терапию) в Nightscout.
+You shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
 
 Отключите в Juggluco любой активный загрузчик в Nightscout.
 
@@ -22,7 +22,7 @@ Juggluco может передавать гликемию непосредств
 
 При использовании датчика Libre 2/2+/3/3+ гликемия будет отправляться в AAPS ежеминутно, однако это не приведет к ежеминутным же расчетам.
 
-В Juggluco поставьте галочку у xDrip broadcast (не ставьте у Patched Libre), проставьте галочку у пакета androidaps и сохраните выбор. В AAPS выберите источник данных ГК xDrip+.
+В Juggluco поставьте галочку у xDrip broadcast (не ставьте у Patched Libre), проставьте галочку у пакета androidaps и сохраните выбор. Select the xDrip BG data source in AAPS.
 
 Применить подходящее [сглаживание](./SmoothingBloodGlucoseData.md) в AAPS.
 
@@ -30,12 +30,12 @@ Juggluco может передавать гликемию непосредств
 
 (juggluco-to-xdrip)=
 
-## Из Juggluco в xDrip+
+## Juggluco to xDrip
 
-Juggluco может отправлять гликемию в xDrip+, который в свою очередь передаст ее в AAPS.
+Juggluco can send blood glucose to xDrip which will then send them to AAPS.
 
-В Juggluco поставьте галочку у Patched Libre (не ставьте у xDrip broadcast), проставьте галочку у пакета dexdrip и сохраните выбор. В AAPS выберите источник данных ГК xDrip+.
+В Juggluco поставьте галочку у Patched Libre (не ставьте у xDrip broadcast), проставьте галочку у пакета dexdrip и сохраните выбор. Select the xDrip BG data source in AAPS.
 
-Примените подходящее [сглаживание](./SmoothingBloodGlucoseData.md) в AAPS, при использовании датчиков Libre 2/2+/3/3+, xDrip+ приведет ежеминутные показания к среднему за 5 минут и [также сгладит](#libre2-value-smoothing-raw-values) их.
+Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary, when using a Libre 2/2+/3/3+ sensor, xDrip will average the minute-by-minute to 5 minutes readings and [also smoothen](#libre2-value-smoothing-raw-values) them.
 
-![Из Juggluco в xDrip+](../images/juggluco/Juggluco-xDrip+.png)
+![Juggluco to xDrip](../images/juggluco/Juggluco-xDrip+.png)

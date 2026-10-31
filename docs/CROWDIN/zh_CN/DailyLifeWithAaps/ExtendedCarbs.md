@@ -5,21 +5,43 @@
 
 在常规泵治疗中，扩展大剂量是一个很好的方式来处理富含脂肪或其他缓慢吸收的餐食，这些食物会使血糖升高的时间长于胰岛素的作用时间。然而，在闭环环境中，扩展输注并没有太多意义（并且存在技术难题），因为它们基本上是一个固定的、较高的临时基础率，这与闭环如何工作（即动态调整基础率）相悖。详情请参阅下文关于[扩展输注](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment)的部分。
 
-尽管如此，处理这类餐食的需求仍然存在。这就是为什么从版本2.0开始，AAPS支持所谓的扩展碳水化合物或eCarbs。
+尽管如此，处理这类餐食的需求仍然存在。 Which is why AAPS supports so called extended carbs or eCarbs.
 
-eCarbs是指分散在几个小时内的碳水化合物。对于标准餐食，如果碳水化合物多于脂肪/蛋白质，通常只需提前输入碳水化合物（并根据需要减少初始输注量）就足以防止胰岛素过早输注。但对于吸收较慢的餐食，如果一开始就输入全部碳水化合物会导致SMB产生过多的IOB，此时可以使用eCarbs来更准确地模拟碳水化合物（以及为其他广义上的营养素输入的任何碳水化合物等价物）的吸收过程及其对血糖的影响。有了这些信息，闭环可以逐渐地给予SMBs来处理这些碳水化合物，这可以看作是一个动态的扩展输注（在没有SMBs的情况下也可以使用，但效果可能较差）。
+eCarbs are carbs that are split up over several hours. 对于标准餐食，如果碳水化合物多于脂肪/蛋白质，通常只需提前输入碳水化合物（并根据需要减少初始输注量）就足以防止胰岛素过早输注。但对于吸收较慢的餐食，如果一开始就输入全部碳水化合物会导致SMB产生过多的IOB，此时可以使用eCarbs来更准确地模拟碳水化合物（以及为其他广义上的营养素输入的任何碳水化合物等价物）的吸收过程及其对血糖的影响。有了这些信息，闭环可以逐渐地给予SMBs来处理这些碳水化合物，这可以看作是一个动态的扩展输注（在没有SMBs的情况下也可以使用，但效果可能较差）。
 
-**注意**：eCarbs不仅限于富含脂肪/蛋白质的餐食：它们还可以用于任何影响血糖升高的情况，例如服用皮质类固醇等其他药物。
+**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
 
 ## 使用eCarbs的机制
 
-要输入eCarbs，请在概览标签页的*“碳水化合物”*对话框中设置持续时间、总碳水化合物量，并可选择时间偏移（*下面的数字只是示例，您需要根据自己的情况尝试不同的值，以获得满意的血糖响应*）：
+To enter eCarbs, open the **Carbs** dialog (**Treatments** → **Carbs**), enter the total carbs, set a **Duration**, and optionally shift the start with **Carb time** (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
 
 ![输入碳水化合物](../images/eCarbs_Dialog.png)
 
-概览标签页上的eCarbs，注意COB字段中的括号内碳水化合物，显示的是未来的碳水化合物：
+The eCarbs on the main screen: the number in brackets in the **COB** field shows the carbs still to come, and the **COB** graph shows each future eCarbs entry as an orange marker. If you don't see a **COB** graph, add one with **Add graph** below the graphs (see [AAPS screens](../DailyLifeWithAaps/AapsScreens.md)).
 
-![eCarbs图表](../images/eCarbs_Graph.png)
+![eCarbs in the COB field and on the COB graph](../images/eCarbs_Graph.png)
+
+(AapsScreens-carbs-type)=
+## Carbs type in the Bolus wizard: bread, cake or pizza
+
+In the [Bolus wizard](#aaps-screens-bolus-wizard), three buttons below the **Carbs** field let you choose how fast your meal is absorbed. Pick one before you confirm. Depending on the type, **AAPS** takes a part of the carbs you typed as normal carbs, and adds [extended carbs ("eCarbs")](#Extended-Carbs-extended-carbs-ecarbs) later for slow, rich meals. Press the **(i)** icon next to the buttons to see the typical foods for the selected type and what it does to your carbs.
+
+| Type                | Typical foods (as listed in the app)                                                                 | Carbs now, used for the bolus | eCarbs added                                         |
+| ------------------- | ---------------------------------------------------------------------------------------------------- | ----------------------------- | ---------------------------------------------------- |
+| **Bread** (default) | Bread, savory pastries, yogurt, fruit, potatoes, rice, oatmeal, vegetables                           | 100 %                         | 无                                                    |
+| **Cake**            | Dumplings, pasta, Asian dishes rich in carbs and fats, sweet and yeast pastries, cereals, honey, jam | 90 %                          | 20 %, starting 60 minutes later, spread over 2 hours |
+| **Pizza**           | Lasagna, pizza, hamburgers, fries, baked potatoes, chips                                             | 80 %                          | 35 %, starting 60 minutes later, spread over 3 hours |
+
+**Example**: you type 100 g and choose **Pizza**. The bolus is calculated for 80 g, recorded now. 35 g of eCarbs start 1 hour later and are spread over 3 hours.
+
+Good to know:
+* This is not a simple split: with **Cake** and **Pizza**, the carbs recorded add up to **more than you typed** (110 % and 115 %). The extra is only in the eCarbs.
+* The bolus only covers the carbs taken now. **AAPS** does not bolus up front for the eCarbs: the loop takes them into account once they start, like any other [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
+* If you set a **Carb time**, the eCarbs start 60 minutes after that time.
+* The confirmation dialog shows the eCarbs on their own line, _e.g._ "eCarbs 35g / 3h (+60min)".
+* Grams are rounded down to whole numbers.
+* The percentages, delays and durations are fixed; they can't be changed in the settings.
+* The choice is not remembered: the wizard opens on **Bread** every time.
 
 ______________________________________________________________________
 
@@ -31,27 +53,41 @@ ______________________________________________________________________
 
 推荐设置是使用OpenAPS SMB APS插件，启用SMBs以及*启用带有COB的SMB*偏好设置。
 
-一个示例场景，比如吃披萨，可能是先通过*“计算器”*给予（部分）输注，然后使用*“碳水化合物”*按钮为接下来的4-6小时输入剩余的碳水化合物，从1或2小时后开始。
+A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *Bolus wizard* and then use the *Carbs* dialog to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours.
+
+For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carbs type](#AapsScreens-carbs-type) **Cake** or **Pizza** below the **Carbs** field (see above). The amounts and timing are fixed, so use the *Carbs* dialog instead if you want other values.
 
 **重要注意事项**：当然，您需要尝试并确定哪些具体值对您有效。您可能还需要仔细调整*“限制SMB的基础分钟数”*设置，以使算法更激进或更保守。对于低碳水化合物、高脂肪/蛋白质的餐食，可能只使用eCarbs而无需手动输注就足够了（请参阅上面的博客文章）。当生成eCarbs时，还会创建一个Careportal备注来记录所有输入，以便更容易地迭代和改进输入。
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## 扩展大剂量及其在闭环环境中为何不起作用？
 
-如上所述，扩展大剂量或多波大剂量在闭环环境中实际上并不起作用。详见[下文](#why-extended-boluses-wont-work-in-a-closed-loop-environment)。
+如上所述，扩展大剂量或多波大剂量在闭环环境中实际上并不起作用。 [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### 扩展大剂量并切换到开环——仅限Dana和Insight泵
 
 有些人仍然希望在AAPS中使用扩展大剂量选项，以便按照他们习惯的方式处理特殊食物。
 
-因此，从2.6版本开始，为Dana和Insight泵的用户提供了扩展大剂量的选项。
+That's why **AAPS** offers an extended bolus for users of Dana and Insight pumps: open **Manage** and select **Extended Bolus**.
 
-- 闭环将自动停止并切换到开环模式，以运行扩展大剂量。
-- 注射单位、剩余量和总时间将在主屏幕上显示。
-- 如果使用[TBR模拟](#Accu-Chek-Insight-Pump-settings-in-aaps)，Insight泵上则*无法使用*扩展大剂量。
+**AAPS** first warns you that the closed loop will be stopped while the extended bolus runs. Tap **OK** to continue:
 
-![AAPS 2.6版的扩展大剂量](../images/ExtendedBolus2_6.png)
+![Warning: extended bolus stops closed loop mode](../images/extended_bolus_stops_loop.png)
+
+Enter the **Insulin** amount and the **Duration**, then tap the confirm button at the bottom and **OK**:
+
+![Extended bolus dialog with 2 U over 60 minutes](../images/extended_bolus_dialog.png)
+
+On the Insight pump, the extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
+
+While the extended bolus is running, the loop runs in **Open Loop** mode (the loop icon on the main screen changes), and closed loop is switched on again automatically when the extended bolus ends:
+
+![Open Loop icon on the main screen while an extended bolus is running](../images/extended_bolus_main_screen.png)
+
+The **Manage** menu shows a **Cancel** button with the rate and the elapsed / total time (for example **Cancel 2.00 U/h 1/60'**). Tap it to stop the extended bolus early:
+
+![Cancel button of a running extended bolus in the Manage menu](../images/extended_bolus_running_manage.png)
 
 (why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### 扩展大剂量在闭环环境中不起作用的原因

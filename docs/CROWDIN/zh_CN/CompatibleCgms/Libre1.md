@@ -13,13 +13,13 @@ Some bridges are still available on the market:
 -   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) from European vendors ([BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). 也可在 AliExpress 上找到。
 -   俄罗斯用户的 Atom。
 
-## 1. 使用 xDrip+
+## 1. Using xDrip
 
--   xDrip+ 支持 Miaomiao、Bubble、Blucon、Atom 和 LibreAlarm。
+-   xDrip supports Miaomiao, Bubble, Blucon, Atom and LibreAlarm.
 -   您可安全下载[最新稳定版APK](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)；若需最新功能，则应使用[每日快照版](https://github.com/NightscoutFoundation/xDrip/releases)。
--   请按照[xDrip+设置页面](../CompatibleCgms/xDrip.md)上的安装说明进行操作。
+-   Follow setup instructions on [xDrip settings page](../CompatibleCgms/xDrip.md).
 -    You also need OOP2 for Libre 1 US (and Libre 2 EU).
--   在[ConfigBuilder, BG Source](#Config-Builder-bg-source)中选择xDrip+。
+-   Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
 ## 2. 使用 Diabox
 
@@ -28,4 +28,4 @@ Some bridges are still available on the market:
 
 ![Diabox](../images/Diabox.png)
 
-- 在[ConfigBuilder, BG Source](#Config-Builder-bg-source)中选择xDrip+。
+- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).

@@ -1,40 +1,40 @@
-# End of life
+# Koniec podpory
 
-Even if your current AAPS system works exactly the way you like, upgrading is still worth it because newer releases bring safety fixes and bug corrections you may never notice until they matter, keep compatibility with new phone OS versions, CGM apps, pump firmware and Nightscout changes, add algorithm improvements and features that have been tested by the wider community, and ensure you stay on a version that is still supported and that others can actually help you troubleshoot. Some previous AAPS versions deliberately have no expiration date so they can keep working on older Android versions, so the lack of an expiration warning is not a sign that your version is still up to date or supported.
+Aj keď váš súčasný systém AAPS funguje presne tak, ako chcete, aktualizácia sa oplatí. Novšie vydania prinášajú bezpečnostné opravy a opravy chýb, ktoré si možno nevšimnete, kým nebudú dôležité. Udržiavajú kompatibilitu s novými verziami operačného systému telefónu, aplikáciami CGM, firmvérom púmp a zmenami v Nightscoute. Pridávajú vylepšenia algoritmu a funkcie, ktoré otestovala širšia komunita. A zaistia, že zostanete na verzii, ktorá je stále podporovaná a pri ktorej vám ostatní naozaj vedia pomôcť s riešením problémov. Niektoré staršie verzie AAPS zámerne nemajú dátum vypršania platnosti, aby mohli fungovať na starších verziách Androidu. Ak teda nevidíte upozornenie na vypršanie platnosti, neznamená to, že je vaša verzia stále aktuálna alebo podporovaná.
 
-Each AAPS version can have an end date. After this date, AAPS may [limit the loop](#version-enforcement). AAPS warns you before a version expires. Plan to update before the end date, and follow the [update guide](UpdateToNewVersion.md).
+Každá verzia AAPS môže mať dátum ukončenia podpory. Po tomto dátume môže AAPS [obmedziť okruh](#version-enforcement). AAPS vás upozorní ešte predtým, ako platnosť verzie vyprší. Naplánujte si aktualizáciu pred dátumom ukončenia a postupujte podľa [návodu na aktualizáciu](UpdateToNewVersion.md).
 
-## How to use this page
+## Ako používať túto stránku
 
-1. In AAPS, tap the three dots at the top right and choose **About**. You will see your AAPS version there.
-2. Find the same version in the first table below. Read the end date next to it. Dates are written as **year-month-day**. For example, `2026-10-30` means 30 October 2026.
-3. Check the [Release Notes](ReleaseNotes.md) and the [update guide](UpdateToNewVersion.md) before you update. The version you can use also depends on your phone's Android version.
+1. V AAPS otvorte **ponuku** (☰) vľavo hore a vyberte **O aplikácii**. Tam uvidíte svoju verziu AAPS.
+2. Nájdite rovnakú verziu v prvej tabuľke nižšie. Prečítajte si dátum ukončenia vedľa nej. Dátumy sú uvedené vo formáte **rok-mesiac-deň**. Napríklad `2026-10-30` znamená 30. októbra 2026.
+3. Pred aktualizáciou si prečítajte [poznámky k vydaniu](ReleaseNotes.md) a [návod na aktualizáciu](UpdateToNewVersion.md). Verzia, ktorú môžete používať, závisí aj od verzie Androidu vo vašom telefóne.
 
-The table does not show an end date for every AAPS version. If your version is missing, its end date may not have been set yet. This does not mean it will be supported forever.
+Tabuľka neuvádza dátum ukončenia pre každú verziu AAPS. Ak vaša verzia chýba, jej dátum ukončenia možno ešte nebol stanovený. To neznamená, že bude podporovaná navždy.
 
-## AAPS version end dates
+## Dátumy ukončenia podpory verzií AAPS
 
-<div id="aaps-eol-status" role="status" aria-live="polite">Loading AAPS version data…</div>
+<div id="aaps-eol-status" role="status" aria-live="polite">Načítavajú sa údaje o verziách AAPS…</div>
 <noscript>
-  Turn on JavaScript to see the tables.
+  Ak chcete vidieť tabuľky, zapnite JavaScript.
 </noscript>
 
 <div id="aaps-eol-versions" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">AAPS version</th><th scope="col">End date</th></tr></thead>
+    <thead><tr><th scope="col">Verzia AAPS</th><th scope="col">Dátum ukončenia</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>
 
-## Android API levels
+## Úrovne API Androidu
 
-Android gives each system version an **API level**, which is a number used by apps. For example, API level 30 is Android 11. The table below uses API levels from AAPS version data. The AAPS version in each row is the value listed for the API level shown. This is not a full list of versions you can install.
+Android priraďuje každej verzii systému **úroveň API**, čo je číslo, ktoré používajú aplikácie. Napríklad úroveň API 30 je Android 11. Tabuľka nižšie používa úrovne API z údajov o verziách AAPS. Verzia AAPS v každom riadku je hodnota uvedená pre zobrazenú úroveň API. Toto nie je úplný zoznam verzií, ktoré môžete nainštalovať.
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version). If no AAPS version is listed for an API level, the table says “None listed”.
+Ak chcete vybrať verziu AAPS pre svoj telefón, použite [odporúčania pre verzie Androidu v poznámkach k vydaniu](#maintenance-android-version-aaps-version). Ak pre úroveň API nie je uvedená žiadna verzia AAPS, v tabuľke je „None listed“ (žiadna uvedená).
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">Android API level</th><th scope="col">AAPS version listed</th></tr></thead>
+    <thead><tr><th scope="col">Úroveň API Androidu</th><th scope="col">Uvedená verzia AAPS</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>

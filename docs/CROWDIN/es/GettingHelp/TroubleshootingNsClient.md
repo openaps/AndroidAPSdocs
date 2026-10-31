@@ -8,13 +8,11 @@ Si nadie te está siguiendo en Nightscout, puedes optar por pausar NSClient para
 
 * ¿Cómo detectar una conexión inestable?
 
-Ve a la pestaña de NSClient en AAPS y observa el registro. El comportamiento esperado es recibir un PING cada ~30 segundos y casi ningún mensaje de reconexión. Si ves muchas reconexiones, entonces hay un problema.
-
-Desde la versión 2.0 de AAPS, cuando se detecta este comportamiento, NSClient se pausa durante 15 minutos y se muestra el mensaje "Mal funcionamiento de NSClient" en la pantalla principal de Resumen.
+Abre la pantalla de NSClient (**Configuración** > **Comunicación** > **NSClientV3** > **Abrir complemento**) y observa el **Estado** y el registro. Con los websockets activados, el estado debe quedarse en «connected», casi sin mensajes de reconexión en el registro. Si ves muchas reconexiones, entonces hay un problema.
 
 * Reiniciar
 
-Lo que debes intentar como primer paso es reiniciar tanto Nightscout como el teléfono para ver si el problema es permanente.
+Como primer paso, reinicia Nightscout y después tu teléfono para ver si el problema es permanente.
 
 Si tu Nightscout está alojado en Heroku, puedes reiniciarlo de la siguiente manera: Inicia sesión en Heroku, haz clic en el nombre de tu aplicación de Nightscout, haz clic en el menú 'More' y después en 'Restart all dynos'.
 
@@ -36,10 +34,10 @@ Una solución temporal para los problemas de conexión en Azure es configurar en
 
 * No hay lectura de glucosa en sangre de Nightscout
 
-Si AAPS se conecta correctamente a Nightscout pero la lectura de glucosa en sangre se muestra como N/A. Ve a la pestaña de NSCLIENT, presiona el menú de tres puntos en la esquina superior derecha, haz clic en "Preferencias de NSClient" -> "Sincronización" y activa "Recibir/rellenar datos del MCG".
+Si **AAPS** se conecta bien a Nightscout pero la glucosa aparece como N/A: en los [ajustes de NSClientV3](#Preferences-nsclient), abre **Sincronización** y activa **Recibir datos de MCG desde NS**. Esta opción está oculta mientras el control de clientes está activado ([Modo reforzado](#client-master-control-hardened-mode)); en ese caso, comprueba que **NSClient BG** esté seleccionado en **Configuración** → **Fuente de glucosa**.
 
 * Si aún recibes un error...
 
 Verifica el tamaño de tu base de datos en MongoDB (o a través del complemento de tamaño de la base de datos en Nightscout). Si estás utilizando el alojamiento gratuito en MongoDB, 496MB significa que está lleno y necesita ser limpiado. [Sigue estas instrucciones de Nightscout para verificar el tamaño de tu base de datos y eliminar datos](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
 
-Antes de borrar datos de tu base de datos y si aún no lo has configurado, deberías considerar donar tus datos de AAPS al proyecto Open Humans (para fines de investigación). The instructions are on the [OpenHumans configuration page](../SupportingAaps/OpenHumans.md).
+Antes de borrar datos de tu base de datos y si aún no lo has configurado, deberías considerar donar tus datos de AAPS al proyecto Open Humans (para fines de investigación). Las instrucciones están en la [página de configuración de Open Humans](../SupportingAaps/OpenHumans.md).

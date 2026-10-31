@@ -9,7 +9,7 @@ Unabhängig davon, welches CGM-System Du nutzt und egal, ob Du die offizielle Ap
 -   Vermeide die Kalibrierung, wenn der Glukoselevel steigt oder fällt.
 -   Kalibriere "ausreichend" oft. Die offiziellen Apps fordern Dich ein oder zwei Mal pro Tag zum blutigen Test auf. Bei DIY Systemen ist das evtl. nicht der Fall und Du solltest vorsichtig sein, ohne die empfohlenen Kalibrierungen zu arbeiten.
 -   Überprüfe Deinen echten Glukosewert mindestens einmal am Tag, wenn Du Sensoren nutzt, die keine Kalibrierung benötigen oder zulassen. AAPS ist nur so sicher, wie Deine Sensorwerte verlässlich sind.
--   Falls möglich, kalibriere mal mit Werten im niedrigen Bereich (72 - 90 mg/dl bzw. 4 - 5 mmol) und mal im erhöhten Bereich (126 - 160 mg/dl bzw. 7 - 9 mmol).  Dies führt zu besseren Ergebnissen, da sich die Kalibrierungsgerade leichter durch zwei entferntere Punkte legen lässt.
+-   If it all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
 
 ## Sensor setzen (Dexcom G6)
 
@@ -22,7 +22,7 @@ Nach dem Setzen des Sensors wird der Transmitter in den Halter auf dem Sensorpfl
 
 ### Verbindungsprobleme
 
-Die Bluetooth-Verbindung kann durch andere Bluetooth-Geräte, die sich in der Nähe befinden, gestört werden, Solche Geräte können Blutzuckermessgeräte, Headsets, Tablets (iPad...) aber auch Küchengeräte wie Mikrowellen oder Cerankochfelder sein. In diesem Fall zeigt xDrip+ keine Glukosewerte an. Die Daten werden nachgetragen, sobald die Bluetooth-Verbindung wieder hergestellt wurde.
+Die Bluetooth-Verbindung kann durch andere Bluetooth-Geräte, die sich in der Nähe befinden, gestört werden, Solche Geräte können Blutzuckermessgeräte, Headsets, Tablets (iPad...) aber auch Küchengeräte wie Mikrowellen oder Cerankochfelder sein. In this case xDrip does not display any BG values. Die Daten werden nachgetragen, sobald die Bluetooth-Verbindung wieder hergestellt wurde.
 
 ### Sensorfehler
 
@@ -32,10 +32,10 @@ Oftmals kann ein Sensorfehler durch sofortiges Trinken und "Massage" an der Sens
 
 ### Springende Werte
 
-Versuche, die Einstellungen zum „Noise Blocking“ in xDrip+ (Einstellungen -> Inter-App Einstellungen -> Verrauschungsunterdrückung) zu ändern, z.B. „Block Very High noise and worse“. Siehe auch [Glättung der Blut-Glukose-Daten](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+You might try to change settings for noise blocking in xDrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". Siehe auch [Glättung der Blut-Glukose-Daten](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Negatives Sensor-Alter
 
-![Negatives Sensor-Alter](../images/Troubleshooting_SensorAge.png)
+![Sensor age on the Sensor row of the expanded status panel](../images/main/main_status_row_expanded.png)
 
-Dies tritt dann auf, wenn im [Aktionen-Reiter / Menü](#screens-action-tab) ein doppelter Eintrag „CGM-Sensor gesetzt“ oder ein falsches Sensorsetzdatum zu erkennen ist. Wechsle zum Reiter „Behandlungen“ > „Careportal“ und lösche den falschen Eintrag.
+The sensor age is shown on the **Sensor** row of the status panel on the main screen (tap the chevron to expand it). A negative age occurs if there is either a double "CGM Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Open **Treatments history** (menu ☰), select the **Careportal** tab and delete the wrong entry.

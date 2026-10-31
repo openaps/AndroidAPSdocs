@@ -2,37 +2,36 @@
 
 **AAPS**能够将您当前状态的信息作为消息直接发送到汽车中的Android Auto显示屏上。
 
-```{admonition} 版本和最后更改信息提示 :class: dropdown 最后编辑日期：07/05/2023
-
-用于文档的版本：
-
-* AAPS 3.2.0-dev-i
-* Android Auto：9.3.631434-release} ```
-
 ## 要求
 
 **AAPS**使用Android Auto的一项功能，该功能允许将手机上的应用程序消息路由到Auto Audio的汽车显示屏上。
 
 这意味着：
 
-* 您必须将**AAPS**配置为使用系统通知进行警报和通知，并且
+* Android must allow **AAPS** to show notifications and
 * 由于**AAPS**是非官方应用程序，因此请允许Android Auto使用“未知来源”。
 
 ![AAPS CGM数据在Android Auto上](../images/android_auto_01.png)
 
-## 在AAPS中为警报和通知使用系统通知
+(androidauto-check-that-aaps-can-show-notifications)=
 
-在**AAPS**主屏幕的右上角打开三点菜单，并选择**Preferences**（偏好设置）
+## Check that AAPS can show notifications
 
-![对警报和通知使用系统通知音](../images/android_auto_02.png)
+**AAPS** always shows a status notification with your current glucose, IOB and COB. This is the notification that Android Auto displays in the car. There is nothing to switch on in **AAPS**, but Android must allow **AAPS** to show notifications.
 
-在**Local Alerts**（本地警报）中激活**Use system notifications for alerts and notifications**（使用系统通知进行警报和通知）
+On your phone, open **Settings** > **Apps** > **AAPS** > **Notifications** and make sure **All AAPS notifications** is on.
 
-![对警报和通知使用系统通知音](../images/android_auto_03.png)
+![All AAPS notifications switched on](../images/android_auto_notifications_all.png)
 
-在走向汽车之前，请先确认您的手机上能够收到来自**AAPS**的通知！
+Scroll down and make sure **Ongoing status** is on: this is the channel of the status notification.
 
-![对警报和通知使用系统通知音](../images/android_auto_04.png)
+![Ongoing status notification channel switched on](../images/android_auto_ongoing_channel.png)
+
+Please check now that you see the **AAPS** status notification on the phone before you walk to your car!
+
+![AAPS notification on the phone](../images/android_auto_04.png)
+
+(androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
 ## 允许Android Auto使用“未知来源”
 
@@ -80,6 +79,8 @@
 
 ![AAPS CGM数据在Android Auto上](../images/android_auto_01.png)
 
+(android-auto-troubleshooting)=
+
 ## 故障排除:
 
-* 如果您看不到通知，请检查您是否在Android中[允许AAPS显示通知](#use-system-notifications-in-aaps-for-alerts-and-notifications)，以及[Android Auto是否具有访问通知的权限](#allow-the-use-of-unknown-sources-with-android-auto)。
+* If you don't see the notification, check if you [allowed AAPS to show notifications](#androidauto-check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).

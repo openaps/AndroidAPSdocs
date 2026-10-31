@@ -1,111 +1,111 @@
-# Update with a browser (fork)
+# Actualizar con un navegador (fork)
 
 ```{tip}
-You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+¿Compilaste AAPS con **AAPS Builder**? No necesitas esta página: consulta [Actualizar AAPS con AAPS Builder](#aaps-builder-updates).
 ```
 
-## Construyela tú mismo en lugar de descargarla
+## Compílala tú en lugar de descargarla
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** no está disponible para descargar, debido a la normativa sobre productos sanitarios. Es legal compilar la app para tu propio uso, ¡pero no debes dar una copia a otras personas! Consulta la página de [preguntas frecuentes](../UsefulLinks/FAQ.md) para más detalles.
 
 ```{note}
-In case you want to upgrade **AAPS** with a browser for the first time : copy your back-up keystore file to your Google Drive. Then follow the [Browser Build **AAPS** procedure](../SettingUpAaps/BrowserBuild.md) instead of this guide. Instead of creating a new keystore, you must select the one you have copied from your computer.
-This operation will be mandatory only the first time, then for successive upgrades you will be able to follow this guide.
+Si quieres actualizar **AAPS** con un navegador por primera vez: copia el archivo de copia de seguridad de tu almacén de claves a tu Google Drive. Luego sigue el [procedimiento de compilación de **AAPS** en el navegador](../SettingUpAaps/BrowserBuild.md) en lugar de esta guía. En lugar de crear un almacén de claves nuevo, debes seleccionar el que has copiado desde tu ordenador.
+Este paso solo es obligatorio la primera vez; en las siguientes actualizaciones podrás seguir esta guía.
 ```
 
 ```{tip}
-**Switching to AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) is the simpler browser build: no fork to sync, and you download the app directly from GitHub. You don't have to switch: this guide keeps working. If you switch, first get a copy of your keystore from your fork, as explained in [Coming from the previous browser build](#aaps-builder-from-fork). Otherwise the new build cannot update the AAPS on your phone.
+**¿Te pasas a AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) es la compilación en el navegador más sencilla: no hay fork que sincronizar y descargas la app directamente desde GitHub. No tienes que cambiar: esta guía sigue funcionando. Si cambias, primero obtén una copia de tu almacén de claves desde tu fork, como se explica en [Si vienes de la compilación en el navegador anterior](#aaps-builder-from-fork). Si no, la nueva compilación no podrá actualizar el AAPS de tu teléfono.
 ```
 
-## Overview for updating to a new version of AAPS with a browser
+## Resumen de la actualización a una nueva versión de AAPS con un navegador
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
+Si tienes problemas, consulta la página aparte [Compilación en el navegador: solución de problemas](../GettingHelp/BrowserBuildTroubleshooting.md).
 
-### Export your settings
+### Exporta tus ajustes
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Exporta tus ajustes desde la versión de **AAPS** que tienes en el teléfono. Puede que no lo necesites, pero más vale prevenir.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Consulta la página [Crear y restaurar copias de seguridad](ExportImportSettings.md) si no recuerdas cómo hacerlo.
 
 (Update-to-new-version-update-your-repo)=
-### Update your GitHub repository
+### Actualiza tu repositorio de GitHub
 
-```{admonition} WARNING
-:class: warning
-Browser Build is available from AAPS version 3.3.2.1.
-```
+[Inicia sesión en GitHub](https://github.com/login).
 
-[Log into GitHub](https://github.com/login).
+1. Selecciona Repositories.
+2. Desplázate hacia abajo y selecciona tu propio repositorio de AndroidAPS.
 
-1. Select Repositories.
-2. Scroll down and select your own AndroidAPS repository.
+![Seleccionar el repositorio de AndroidAPS](../images/update/CI/GitHubUpdate1.png)
 
-![Select AndroidAPS repo](../images/update/CI/GitHubUpdate1.png)
-
-3. Verify you are using your own copy of AndroidAPS (Forked from nightscout/AndroidAPS)
-4. Tap Sync Fork to update it (the number of commits behind might differ from the picture)
+3. Comprueba que usas tu propia copia de AndroidAPS (Forked from nightscout/AndroidAPS)
+4. Toca Sync Fork para actualizarla (el número de commits de retraso puede ser distinto al de la imagen)
 
 
 
-![Sync AndroidAPS repo](../images/update/CI/GitHubUpdate2.png)
+![Sincronizar el repositorio de AndroidAPS](../images/update/CI/GitHubUpdate2.png)
 
-5. Tap Update Branch
+5. Toca Update Branch
 
-![Update AndroidAPS repo](../images/update/CI/GitHubUpdate3.png)
+![Actualizar el repositorio de AndroidAPS](../images/update/CI/GitHubUpdate3.png)
 
-Note: if you have modified your copy of AndroidAPS by mistake, you will see this screen. Discard all changes (commits) to return to the released version.
+Nota: si has modificado tu copia de AndroidAPS por error, verás esta pantalla. Descarta todos los cambios (commits) para volver a la versión publicada.
 
-![Discard rogue modifications](../images/update/CI/GitHubUpdate4.png)
+![Descartar cambios no deseados](../images/update/CI/GitHubUpdate4.png)
 
-You have now synchronized (updated) your own copy with the latest release of Android APS. Good job.
+Ya has sincronizado (actualizado) tu propia copia con la última versión de Android APS. ¡Buen trabajo!
 
-![Repo sync'ed](../images/update/CI/GitHubUpdate5.png)
+![Repositorio sincronizado](../images/update/CI/GitHubUpdate5.png)
 
-### Run the Workflow to Build the Signed APK
+### Ejecuta el workflow para compilar el APK firmado
 
-1. In your GitHub copy of AndroidAPS, select Actions.
-2. Expand All Workflows.
-3. Select AAPS-CI
+1. En tu copia de AndroidAPS en GitHub, selecciona Actions.
+2. Despliega All Workflows.
+3. Selecciona AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
-4. Scroll down and tap Run Workflow.
+4. Desplázate hacia abajo y toca Run Workflow.
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Keep the branch set to master, select the AAPS Version you want to build — either the latest version or a specific required version — choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
+5. Deja la rama en master, selecciona la AAPS Version que quieres compilar (la última versión o una versión concreta necesaria), elige la [variante](#browserbuild-variant) (fullRelease) y luego toca Run workflow.
 
 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of Android APS. This means that the Master and Wear apk is now directly saved into your Google Drive (as per below). AAPSClient apk can be downloaded from Github > nightscout > AndroidAPS [here](https://github.com/nightscout/AndroidAPS/releases)
+6. Verás el mensaje Workflow run was successfully requested. Actualiza la página del navegador y podrás seguir el progreso de la compilación. Cuando la acción termine, la acción AAPS CI mostrará una marca verde. Has compilado con éxito la versión actualizada de Android APS. Esto significa que el APK del máster y el APK para Wear se guardan ahora directamente en tu Google Drive (como se ve abajo). El APK de AAPSClient se puede descargar desde Github > nightscout > AndroidAPS [aquí](https://github.com/nightscout/AndroidAPS/releases)
 
 
-![Monitor Workflow](../images/update/CI/GitHubActions4.png)
+![Seguir el workflow](../images/update/CI/GitHubActions4.png)
 
 
-### Install the AAPS APK
+### Instala el APK de AAPS
 
-1. Open your Google Drive
-2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
+1. Abre tu Google Drive
+2. Entra en AAPS, selecciona la carpeta de la nueva versión y encontrarás la versión para el teléfono y la versión para Android Wear.
 
-![Google Drive Location](../images/update/CI/GitHubActions5.png)
+![Ubicación en Google Drive](../images/update/CI/GitHubActions5.png)
 
+```{note}
+Desde septiembre de 2026, la [verificación de desarrolladores de Android](#android-developer-verification) de Google puede bloquear la instalación del APK al tocar el archivo, según tu país. En esa página se explican soluciones gratuitas.
+```
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone)
+Continúa [aquí](#Update-to-new-version-check-aaps-version-on-phone)
 
-## Troubleshooting
+(update-browser-build-troubleshooting)=
 
-If anything goes wrong, don't panic.
+## Solucionando problemas
 
-Take a breath!
+Si algo sale mal, no te asustes.
 
-Then see the [troubleshooting tips](#aaps-ci-preparation) if your problem is already documented!
+¡Respira hondo!
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Luego comprueba si tu problema ya está documentado: consulta [Solución de problemas de AAPS Builder](#aaps-builder-troubleshooting) si compilas con **AAPS Builder**, o [Solución de problemas de la compilación en el navegador](#aaps-ci-troubleshooting) en otro caso.
+
+Si necesitas más ayuda, contacta con otros usuarios de **AAPS** en [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) o [Discord](https://discord.gg/4fQUWHZ4Mw).

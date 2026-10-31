@@ -1,66 +1,116 @@
-# Daily Life - Pumps
-## Changing infusion sets: insulin reservoirs and cannulas
+# Pumpy a kanyly
 
-The procedure described below is for tubed pumps only and does not apply to patch pumps like Omnipod, Medtrum Nano, Accu-Chek Solo etc. This procedure is sometimes referred to as a “set change”, with a “full” set change including the insulin reservoir and cannula, and a “partial” set change referring to a change of cannula only.
+## Výmena infúznych setov: zásobníky inzulínu a kanyly
 
-Physical cartridge/reservoir changes cannot be done via **AAPS** and have to be carried out via the pump directly. These need to be logged in **AAPS** manually, once completed.
+Postup opísaný nižšie platí iba pre pumpy s hadičkou a netýka sa náplasťových púmp, ako sú Omnipod, Medtrum Nano, Accu-Chek Solo a pod. Tento postup sa niekedy nazýva „výmena setu“. „Úplná“ výmena setu zahŕňa zásobník inzulínu aj kanylu, „čiastočná“ výmena setu znamená výmenu iba kanyly.
 
-### Guide for changing both the pump reservoir and cannula
+Náplasťové pumpy sa plnia samy vo vlastnom sprievodcovi aktiváciou a ich kanyla je už v tele. **AAPS** pre ne neponúka plnenie: **Plnenie/doplňovanie** sa nezobrazuje v paneli **Spravovať** ani v Rýchlom spustení. Pozrite si stránku svojej pumpy v časti [Kompatibilné pumpy](../Getting-Started/CompatiblePumps.md).
 
-1)  In **AAPS**, disconnect the pump: Long press “Open Loop”/”Closed Loop” icon on the **AAPS** Home Screen and select ‘Disconnect pump - 1 hour”. The pump icon will change to a grey icon, indicating that the pump is disconnected.
+Fyzickú výmenu náplne/zásobníka nie je možné urobiť cez **AAPS**, musí sa urobiť priamo na pumpe. Po dokončení je potrebné ich manuálne zaznamenať do **AAPS**.
 
-2)  Physically change the insulin reservoir: physically disconnect your pump from the body, and change the reservoir/cartridge and cannula as per manufacturer's instructions.
+(pumps-cannulas-changing-reservoir-and-cannula)=
+### Návod na výmenu zásobníka pumpy aj kanyly
 
-3)  Prime/fill the tubing and cannula: this can be done directly on the pump. Be sure to eliminate any bubbles in the tubing.
+1. V **AAPS** odpojte pumpu: na hlavnej obrazovke stlačte [ikonu okruhu](#AapsScreens-loop-status) a vyberte **Odpojiť pumpu** na 1 hodinu. Ikona sa zmení na sivú ikonu zástrčky, čo znamená, že pumpa je odpojená.
 
-4)  Attach the new cannula to the body. Once the cannula is inserted and the needle is removed, the attached cannula now has a small air gap which also needs to be primed. To announce this in **AAPS** and prime the site: select the PRIME/FILL button in the **AAPS** actions tab and tick “Pump site change” and/or “Insulin Cartridge Change” as appropriate to record the change. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select “OK”. Read the summary message, and confirm to execute the priming by tapping “OK”.
+2. Fyzicky vymeňte zásobník inzulínu: fyzicky odpojte pumpu od tela a vymeňte zásobník/náplň a kanylu podľa pokynov výrobcu.
 
-5)  Reconnect the pump in **AAPS**: Press the grey disconnected pump symbol and select ‘Reconnect pump’ to continue looping.
+3. Naplňte hadičku a kanylu: môžete to urobiť priamo na pumpe. Uistite sa, že v hadičke nezostali žiadne bubliny.
 
-### Useful information concerning insulin/cannula changes
+4. Pripevnite novú kanylu na telo. Keď je kanyla zavedená a ihla vytiahnutá, v pripevnenej kanyle je malá vzduchová medzera, ktorú treba tiež naplniť. To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Record pump site change** and/or **Record insulin cartridge change** as appropriate to record the change. Teraz stlačte predvolené množstvo na plnenie kanyly (zvyčajne okolo 0,3 U, ale overte, či je táto hodnota správna pre vašu kanylu) a vyberte **OK**. Prečítajte si súhrnnú správu a plnenie potvrďte ťuknutím na **OK**.
 
-●   Logging a pump site change resets Autosens to 100%. It also resets the corresponding cannula/insulin status lights and ages on the **AAPS** Home screen.
+   ![Plnenie/doplňovanie v paneli Spravovať pri pumpe s hadičkou](../images/v4/Screens/manage_sheet_tube_pump.png)
 
-●   You can set/adjust the default prime amount in Preferences > Overview > Fill/Prime standard insulin amounts. See your instruction booklet in your cannula box for how many units (depending on needle length and tubing length) should be primed for your cannula.
 
-●   Insulin delivered using the prime function is not taken into account by **AAPS** when calculating insulin on board (IOB), and is marked in the **AAPS** treatments menu as “Prime”.
+5. Znovu pripojte pumpu v **AAPS**: stlačte sivú ikonu zástrčky a vyberte **Znovu pripojiť pumpu**, aby okruh pokračoval.
 
-●   Any insulin bolused from the pump during a pump disconnection will also not be taken into account by **AAPS**. If you happen to bolus directly from the pump while **AAPS** is disconnected, once you reconnect the pump you can announce this insulin (without bolusing it) under the “insulin” tab (see link to below ”to announce delivered insulin without actually bolusing” for more details).
+### Užitočné informácie o výmene inzulínu/kanyly
 
-### Cannula, infusion site, tubing and/or pump issues
+* Zaznamenanie výmeny setu nastaví Autosens späť na 100 %. Vynuluje tiež príslušné stavové kontrolky a vek kanyly/inzulínu na hlavnej obrazovke **AAPS**.
 
-If you are confident that you haven’t received any insulin for a period of time, despite **AAPS** recording that you have, and you know exactly when the issue started (_e.g._ you remove the cannula and see that the cannula was kinked during the insertion process) you can correct this in **AAPS**, while being aware that the insulin may in fact have been delivered but may be slow to act for some reason.
+* Predvolené množstvá na plnenie môžete nastaviť/upraviť v nastaveniach **Plnenie/doplňovanie** – otvoríte ich tak, že do vyhľadávacieho riadka na hlavnej obrazovke napíšete „plnenie“ (pozrite [Nastavenia](../SettingUpAaps/Preferences.md)). Koľko jednotiek treba na naplnenie vašej kanyly (podľa dĺžky ihly a dĺžky hadičky), nájdete v návode v balení kanýl.
+
+* Inzulín podaný funkciou plnenia **AAPS** nezapočítava do výpočtu aktívneho inzulínu (IOB) a v [Histórii ošetrení](#aaps-screens-treatments) je označený ako „Plnenie“.
+
+* Ani inzulín podaný bolusom z pumpy počas odpojenia pumpy **AAPS** nezapočíta. Ak náhodou podáte bolus priamo z pumpy, kým je **AAPS** odpojený, po opätovnom pripojení pumpy môžete tento inzulín oznámiť (bez jeho podania) v dialógu **Inzulín** (pozrite [Oznámenie podaného inzulínu bez skutočného podania bolusu](#pumps-cannulas-announce-insulin) nižšie).
+
+### Problémy s kanylou, miestom vpichu, hadičkou a/alebo pumpou
+
+Ak ste si istí, že ste istý čas nedostávali žiadny inzulín, hoci ho **AAPS** zaznamenal ako podaný, a presne viete, kedy problém začal (_napr._ vyberiete kanylu a vidíte, že sa pri zavádzaní zalomila), môžete to v **AAPS** opraviť. Majte však na pamäti, že inzulín mohol byť v skutočnosti podaný, len z nejakého dôvodu pôsobí pomaly.
 
 ```{admonition} Caution - Risk of Hypoglycemia
 :class: danger
-Only delete insulin delivery from **AAPS** with EXTREME caution, in case insulin _has_ actually been delivered, and monitor BG closely for the next 24 h.
+Podávanie inzulínu z **AAPS** odstraňujte len s MIMORIADNOU opatrnosťou pre prípad, že inzulín _bol_ v skutočnosti podaný, a ďalších 24 h pozorne sledujte glykémiu.
 ```
 
-To remove boluses and SMBs which you know have not been delivered, open the Treatments tab and conservatively delete the logged bolus information from > carbs and bolus starting from the point the incident happened. This will correct the “insulin on board” (IOB) value which is key for **AAPS**’ calculations, if you now return to the homescreen you will see that the IOB has now reduced. Be aware that you cannot delete basal insulin which **AAPS** calculates to have been delivered, so that will still be taken into account by **AAPS**.
+Ak chcete odstrániť bolusy a SMB, o ktorých viete, že neboli podané, otvorte **menu** (☰), vyberte [Históriu ošetrení](#aaps-screens-treatments) a na karte **Sacharidy a bolusy** opatrne vymažte zaznamenané bolusy od chvíle, keď problém nastal. Tým sa opraví hodnota „aktívneho inzulínu“ (IOB), ktorá je pre výpočty **AAPS** kľúčová. Keď sa teraz vrátite na hlavnú obrazovku, uvidíte, že sa IOB znížil. Upozorňujeme, že bazálny inzulín, ktorý systém **AAPS** vypočíta ako podaný, nemôžete vymazať, takže systém **AAPS** ho stále zohľadní.
 
-In less obvious cases of insulin delivery problems  _e.g._ leakages, occlusions or tunneling where either you are not sure when the issue started, or think some of the insulin was delivered, you need to be careful. You may detect these issues either by “smelling” the insulin, seeing a wet adhesive, encountering high glucose values or by getting an alarm. As you will never know how much insulin you got into your skin (which might be starting to work after a while) it will be hard to determine the correct amount of insulin which needs be deducted from the current “insulin on board” (IOB) value. One strategy is to pause looping for 5 hours (or your specific duration of insulin action) after you resolved the insulin delivery problem, and resume looping afterwards. This will ensure that IOB is correct once you restart looping.
+V menej zjavných prípadoch problémov s podávaním inzulínu, _napr._ pri úniku, upchatí alebo tunelovaní, keď si nie ste istí, kedy problém začal, alebo si myslíte, že časť inzulínu bola podaná, musíte byť opatrní. Tieto problémy môžete zistiť tak, že „cítite“ inzulín, vidíte mokrú náplasť, máte vysoké hodnoty glykémie alebo dostanete alarm. Keďže nikdy nebudete vedieť, koľko inzulínu sa dostalo do kože (a môže začať pôsobiť až po čase), bude ťažké určiť správne množstvo inzulínu, ktoré treba odpočítať od aktuálnej hodnoty „aktívneho inzulínu“ (IOB). Jednou z možností je po vyriešení problému s podávaním inzulínu pozastaviť okruh na 5 hodín (alebo na vašu dobu pôsobenia inzulínu) a potom okruh znova obnoviť. Tým zaistíte, že IOB bude po opätovnom spustení okruhu správny.
 
-## Disconnecting the pump for showering or activity
+(pumps-cannulas-disconnecting)=
+## Odpojenie pumpy pri sprchovaní alebo aktivite
 
-If you take your pump off for showering, bathing, swimming, contact sports or other activities you must let **AAPS** know that no insulin is being delivered, to keep the IOB correct. The pump can be disconnected using the Loop Status icon on the **AAPS** Home Screen.
+Ak si pumpu zložíte kvôli sprchovaniu, kúpaniu, plávaniu, kontaktným športom alebo iným aktivitám, musíte informovať **AAPS**, že sa nepodáva žiadny inzulín, aby sa zachovala správna hodnota IOB. Pumpu môžete odpojiť pomocou [ikony okruhu](#AapsScreens-loop-status) na hlavnej obrazovke: stlačte ju a vyberte **Odpojiť pumpu** s potrebnou dobou. Ak aktivita trvá dlhšie, ako ste plánovali, otvorte znova ten istý dialóg a v časti **Odpojiť pumpu** vyberte novú dobu: odpojenie sa predĺži a nová doba začína plynúť od tejto chvíle. Pumpu nemusíte najprv znova pripojiť.
 
-As you are not getting any insulin while the pump is disconnected, you should reconnect every two hours to catch up for the missing basal. You can do this by connecting, bolusing the missing basal amounts (_e.g._ of the last two hours) before disconnecting again. This should help to avoid a severe lack of insulin which could result in diabetic ketoacidosis (DKA). If it is inconvenient to reconnect the pump during activity (cannula site is covered by wearing a wetsuit _etc._), consider a pen injection instead. This manual injection can be logged in **AAPS**, and doesn’t have to be logged at the time of injection (just make a note of the time of injection) since you can announce the insulin and backdate the time the insulin was actually given when you reconnect the pump.
+Keďže počas odpojenia pumpy nedostávate žiadny inzulín, mali by ste sa pripojiť každé dve hodiny a doplniť chýbajúci bazál. Môžete to urobiť tak, že pumpu pripojíte, bolusom podáte chýbajúce množstvo bazálu (_napr._ za posledné dve hodiny) a potom ju znova odpojíte. Pomôže to predísť závažnému nedostatku inzulínu, ktorý by mohol viesť k diabetickej ketoacidóze (DKA). Ak je nepohodlné pripojiť pumpu počas aktivity (miesto kanyly je zakryté neoprénom _a pod._), zvážte namiesto toho injekciu inzulínovým perom. Túto ručnú injekciu môžete zaznamenať v **AAPS** a nemusíte ju zaznamenať hneď pri podaní (len si poznačte čas injekcie). Inzulín totiž môžete oznámiť po opätovnom pripojení pumpy a spätne nastaviť čas, kedy bol skutočne podaný.
 
-## To announce delivered insulin without actually bolusing
+(pumps-cannulas-announce-insulin)=
+## Oznámenie podaného inzulínu bez skutočného podania bolusu
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections to **AAPS**: select the “insulin” tab, enter the amount in units and select “do not bolus, record only”. When you select this option, a “time offset” tab will appear. You can ignore this if the injection was given recently, but if the bolus was given some time ago, you can add a minus sign in front of the time (_e.g._ - 30 min) to record the actual time of the bolus. **AAPS** will then take into account the duration of insulin action and calculate the remaining insulin still in the system accordingly.
+Ak chcete oznámiť inzulín podaný z pumpy, kým bol **AAPS** odpojený, alebo inzulín z injekcií perom: otvorte [dialóg Inzulín](#aaps-screens-buttons-insulin) (**Ošetrenia** v dolnej navigácii alebo tlačidlo Rýchleho spustenia), zadajte množstvo v jednotkách a zapnite **Bolus bude iba zaznamenaný (nie pumpou vydaný)**. Potom sa zobrazí riadok **Čas** (nastavený na **Teraz**), v ktorom môžete zaznamenať skutočný čas injekcie: ak bola injekcia podaná nedávno, môžete ho ignorovať. Ak bol bolus podaný pred nejakým časom, posuňte čas späť pomocou **-** (_napr._ -30 min) alebo riadok otvorte šípkou a vyberte presný dátum a čas. **AAPS** potom zohľadní dobu pôsobenia inzulínu a podľa toho vypočíta zostávajúci inzulín v tele.
 
-If you are using **AAPS** as a careiver, you can remotely disconnect (and reconnect) the pump very easily by [SMS command](../RemoteFeatures/SMSCommands.md) using commands such as “pump disconnect 120” and “pump connect 120”. The range of duration for remote disconnect is from 1 - 120 min, (in this example it is 120 minutes). This is very useful if the **AAPS** handset is inconvenient for you to access, buried in a pump belt on a kid who is running off towards the swimming complex, or being closely guarded (or in use) by a teenager.
+Ak používate **AAPS** ako opatrovateľ, môžete pumpu na diaľku veľmi jednoducho odpojiť (a znova pripojiť) pomocou [SMS príkazu](../RemoteFeatures/SMSCommands.md), napríklad príkazmi „pump disconnect 120“ a „pump connect 120“. Doba vzdialeného odpojenia môže byť od 1 do 120 min (v tomto príklade je to 120 minút). Je to veľmi užitočné, ak sa k telefónu s **AAPS** neviete ľahko dostať – napríklad je schovaný v páse na pumpu u dieťaťa, ktoré uteká k bazénu, alebo ho starostlivo stráži (či používa) tínedžer.
 
-## Reconnecting the pump after activity
+## Opätovné pripojenie pumpy po aktivite
 
-After a long disconnection (1 - 2 hours) it is fairly common for **AAPS** to calculate that you now have negative IOB. When you reconnect the pump, depending on preference/current glucose level/planned food or subsequent activity, you can either:
+Po dlhom odpojení (1–2 hodiny) je pomerne bežné, že **AAPS** vypočíta, že teraz máte záporný IOB. Keď pumpu znova pripojíte, podľa svojich preferencií, aktuálnej glykémie, plánovaného jedla alebo ďalšej aktivity môžete buď:
 
-a) Just reconnect the pump in **AAPS** (grey-to-green, for closed loop) and leave it up to **AAPS** to start to deliver insulin again
+a) Jednoducho znovu pripojte pumpu v **AAPS** (zo sivej na zelenú, pri uzavretom okruhu) a nechajte na **AAPS**, aby znova začal podávať inzulín
 
-_or_
+_alebo_
 
-b) If you want to be more aggressive (for example, you are heading for hyperglycemia), you can navigate to the calculator and bolus for zero carbs, to immediately deliver the calculated missing insulin as a bolus.
+b) Ak chcete postupovať agresívnejšie (napríklad ak smerujete k hyperglykémii), môžete otvoriť [Bolusovú kalkulačku](#aaps-screens-bolus-wizard) a podať bolus na nula sacharidov, aby sa vypočítaný chýbajúci inzulín ihneď podal ako bolus.
+
+Ktorý postup uprednostníte, je veľmi individuálne a najlepšie to zistíte skúšaním.
 
 
-Which strategy you prefer is highly personal, and is best determined by trial and error.    
+(Aapsscreens-site-rotation)=
+## Striedanie miest
+
+**Spravovať → Striedanie miest** otvorí dialóg Striedanie miest v režime zobrazenia:
+
+- Dvoma tlačidlami hore (ikona kanyly a ikona senzora) môžete zobraziť iba miesta kanyly, iba miesta senzora alebo oboje
+- All Cannula change and Sensor change events from the past 45 days are available.
+- Kliknite na oblasť miesta alebo na jeden záznam v zozname nižšie a zoznam sa vyfiltruje len na záznamy vo vybranej oblasti. Vybraná oblasť bude zvýraznená svetlo zelenou farbou.
+- Ťuknite na ikonu **ceruzky** vedľa záznamu, otvorí sa režim úprav, kde môžete zmeniť miesto aplikácie, šípku alebo poznámku
+
+![Režim zobrazenia](../images/SiteRotation/ViewMode.png)
+
+- Ikona **ozubeného kolieska** (vpravo hore) otvorí nastavenia: **Používateľský profil pre rotáciu miest** otvorí dialóg, v ktorom vyberiete **Muž**, **Žena** alebo **Dieťa**, a prepínače **Spravovať rotáciu umiestnenia pumpy** a **Spravovať rotáciu umiestnení CGM** určujú, ktoré miesta spravujete.
+
+![Nastavenia](../images/SiteRotation/Settings.png)
+
+![Dialóg Používateľský profil pre rotáciu miest](../images/SiteRotation/Type.png)
+
+*Poznámka: toto nastavenie určuje, či sa dialóg Striedanie miest (režim úprav) automaticky otvorí, keď sa nový záznam vytvorí tlačidlom „Plnenie/doplňovanie“ alebo tlačidlom „Zavedenie senzora“ pre CGM*
+
+- Pri výmene setu urobenej priamo na pumpe musíte otvoriť režim zobrazenia a nový záznam upraviť, aby ste vybrali miesto a šípku
+
+Režim úprav vám umožňuje vybrať miesto, šípku a poznámku k vybranému záznamu:
+
+- Upravovaný záznam sa zobrazuje pod obrázkami tela spolu s ikonou svojho typu (kanyla alebo senzor)
+- Pohľad spredu a zozadu sa zobrazujú vedľa seba: ťuknite na oblasť, kde ste ho umiestnili
+- Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the past 45 days in this site
+
+![Režim úprav](../images/SiteRotation/EditMode.png)
+
+- Ťuknutím na ikonu šípky vpravo od záznamu môžete pridať voliteľnú šípku: dialóg **Zvoliť šípku** vám umožní určiť presnejšie miesto alebo orientáciu podu
+
+![Poloha](../images/SiteRotation/EditModeSub.png)
+
+- Môžete tiež pridať **Poznámku** k vybranému miestu
+- Ťuknutím na ikonu **uloženia** (vpravo hore) miesto zaznamenáte
+
+Filtrovať môžete graficky na obrázku alebo kliknutím na udalosť ošetrenia v zozname Filtrovanie zrušíte jednoducho kliknutím na obrázok mimo akýchkoľvek miest
+
+![Filtrovanie](../images/SiteRotation/Filtering.png)

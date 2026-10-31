@@ -1,59 +1,48 @@
 # Jelly
 
-## Jelly 2
-
-Do not confuse with Jelly Star (below).
-
-**Advantages**
-
-* Είναι πραγματικά μικρό.
-* Android 11.
-* Ακόμα και αν λέτε στους ανθρώπους, ίσως να μην το θεωρούν κανονικό smartphone και θα το κάνει ευκολότερη εξαίρεση όταν τα τηλέφωνα κανονικά δεν επιτρέπονται.
-
-**Disadvantages**
-
-* Συνιστάται μόνο για έμπειρους loopers (ορισμένες ρυθμίσεις δεν είναι αναγνωρίσιμες, πρέπει να ξέρετε από την εμπειρία με ένα μεγάλο τηλέφωνο Android AAPS, πώς και πού βρίσκεται. Ορισμένα κουμπιά AAPS είναι δύσκολο να αγγιχτούν με πολλή αίσθηση, αλλά όχι με πενιχρά δάχτυλα.)
-* Μπορεί να χρησιμοποιηθεί μόνο ως κινητό για το κύκλωμα. Είναι καλύτερα να έχετε ένα κανονικό smartphone στην τσέπη σας. 
-
-### Battery life optimization
-
-The Jelly 2 comes with strong optimization features that **must** be disabled for AAPS (and other DIY apps like BYODA, xDrip+, OOP2, Juggluco, etc...).
-
-![](../images/Jelly_Settings1.png)
-
-You can leave Intelligent assistance enabled, but it **must be disabled for DIY apps**.
-
-![](../images/Jelly_Settings2.png)
-
-You can enable NFC for Libre sensors.
-
-![](../images/Jelly_Settings3.png)
-
 ## Jelly Star Mini
 
-**Features**
+**Λειτουργίες**
 
 * Android 13
 * 8 GB RAM
 
-### Battery life optimization
+**Πλεονεκτήματα**
 
-To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' (and other **DIY apps** like BYODA, xDrip+, OOP2, Juggluco, etc...).
+* Είναι πραγματικά μικρό.
+* Ακόμα κι αν το πείτε στους άλλους, ίσως δεν το θεωρήσουν κανονικό smartphone. Έτσι θα το δεχτούν πιο εύκολα ως εξαίρεση, όταν τα τηλέφωνα κανονικά δεν επιτρέπονται.
+
+**Μειονεκτήματα**
+
+* Συνιστάται μόνο για έμπειρους loopers (ορισμένες ρυθμίσεις δεν είναι αναγνωρίσιμες, πρέπει να ξέρετε από την εμπειρία με ένα μεγάλο τηλέφωνο Android AAPS, πώς και πού βρίσκεται. Ορισμένα κουμπιά του AAPS πατιούνται μόνο με πολλή προσοχή και όχι με χοντρά δάχτυλα.)
+* Μπορεί να χρησιμοποιηθεί μόνο ως κινητό για το κύκλωμα. Είναι καλύτερα να έχετε ένα κανονικό smartphone στην τσέπη σας. 
+
+### Βελτιστοποίηση διάρκειας μπαταρίας
+
+Το Jelly έχει ισχυρές λειτουργίες βελτιστοποίησης που **πρέπει** να απενεργοποιηθούν για το AAPS (και για άλλες εφαρμογές DIY, όπως BYODA, xDrip, OOP2, Juggluco κ.λπ.).
+
+![](../images/Jelly_Settings1.png)
+
+Μπορείτε να αφήσετε ενεργή την Intelligent assistance (έξυπνη βοήθεια), αλλά **πρέπει να είναι απενεργοποιημένη για τις εφαρμογές DIY**.
+
+![](../images/Jelly_Settings2.png)
+
+Μπορείτε να ενεργοποιήσετε το NFC για τους αισθητήρες Libre.
+
+![](../images/Jelly_Settings3.png)
+
+### Βελτιστοποίηση διάρκειας μπαταρίας
+
+Για να μην υπάρχουν παρεμβολές στο **AAPS**, απενεργοποιήστε τον περιορισμό 'battery usage' (χρήση μπαταρίας) του Jelly Star, επιλέγοντας 'unrestricted' (χωρίς περιορισμούς) για το **AAPS** (και για άλλες **εφαρμογές DIY**, όπως BYODA, xDrip, OOP2, Juggluco κ.λπ.).
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
-### Intelligent Assistance and App Blocker
-
-Like with the Jelly 2 (above), the Jelly Star should have 'Intelligent Assistance' disabled for **DIY apps**. Similarly, 'App Blocker' under 'Settings' must also be switched off to avoid disruption with **AAPS**:
-
-![App Blocker Screenshot 2025-08-03 213400](../images/JellyStarMini2.jpg)
-
 ### Google Play Protect
 
-Remember to disable Google Play Protect.
+Θυμηθείτε να απενεργοποιήσετε το Google Play Protect.
 
-### Remote Connection for Weak apk
+### Remote Connection (απομακρυσμένη σύνδεση) για το Wear apk
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use the Jelly 2, **Wear.apk** & **AAPS** remotely via wifi.
+Σε ορισμένα έξυπνα ρολόγια, όπως το Samsung Galaxy, η ρύθμιση 'Remote Connection' στις Advanced Features του Samsung Galaxy πρέπει να είναι **ενεργή**, για να χρησιμοποιείτε το Jelly, το **Wear.apk** & το **AAPS** απομακρυσμένα μέσω Wi-Fi.
 
-![MURCIMG-20251007-WA0000](../images/500234283-5db08a08-f256-49a0-8843-46bdd01b33d6.png)
+![Galaxy Wearable, Προηγμένες λειτουργίες, Απομακρυσμένη σύνδεση ενεργοποιημένη](../images/wearos/galaxy_wearable_remote_connection.png)

@@ -7,7 +7,7 @@
 
 -   Sensörü başlatın
 
-- Select Ottai in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Select **Syai/Ottai** in [Configuration, BG Source](#Config-Builder-bg-source).
 
 Enable broadcast in the Ottai app:
 

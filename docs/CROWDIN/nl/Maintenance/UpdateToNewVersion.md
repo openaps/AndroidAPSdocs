@@ -1,43 +1,42 @@
-# Bijwerken naar een nieuwe versie
+# Bijwerken naar een nieuwe versie of branch
 
 ## Zelf bouwen, in plaats van downloaden
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** kun je niet downloaden, vanwege de regels voor medische hulpmiddelen. Je mag de app legaal bouwen voor eigen gebruik, maar je mag geen kopie aan anderen geven! Zie de [FAQ-pagina](../UsefulLinks/FAQ.md) voor meer informatie.
 
 ## Belangrijk:
 
-- Please update to the new version of **AAPS** as soon as possible after a new release is available.
-- When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
-- The new version will also be announced on Facebook at the time of release.
-- Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
-- Do not forget to export your **AAPS'** settings.
+- Werk zo snel mogelijk bij naar de nieuwe versie van **AAPS** als er een nieuwe release is.
+- Als er een nieuwe release is, krijg je in de **AAPS** app zelf een informatiebalk over de nieuwe versie.
+- De nieuwe versie wordt bij de release ook op Facebook aangekondigd.
+- Lees na de release de [Release notes](ReleaseNotes.md) goed door, en stel je vragen aan de community op Facebook of Discord, voordat je gaat bijwerken.
+- Vergeet niet de instellingen van **AAPS** te exporteren.
 
-## Update AAPS with browser build
+## AAPS bijwerken door in de browser te bouwen
 
-You already built your AAPS app with a browser? Follow the instructions for the method you used:
+Heb je je AAPS app al eerder in de browser gebouwd? Volg de instructies voor de manier die je hebt gebruikt:
 
-- **AAPS Builder** (your private repository, usually named `my-aaps`): [Updating AAPS with AAPS Builder](#aaps-builder-updates). There is no fork to sync.
-- **Fork and preparation file** (your own copy of AndroidAPS): [Update with a browser (fork)](./UpdateBrowserBuild.md).
+- **AAPS Builder** (je privé-repository, meestal met de naam `my-aaps`): [AAPS bijwerken met AAPS Builder](#aaps-builder-updates). Er is geen fork om te synchroniseren.
+- **Fork en voorbereidingsbestand** (je eigen kopie van AndroidAPS): [Bijwerken met een browser (fork)](./UpdateBrowserBuild.md).
 
-## Update AAPS with Android Studio
+## AAPS bijwerken met Android Studio
 
-Follow [these instructions.](./UpdateComputerBuild.md).
+Volg [deze instructies](./UpdateComputerBuild.md).
 
-## Update AAPS with the command-line
+## AAPS bijwerken via de opdrachtregel
 
-Use the [same instructions](../SettingUpAaps/CLIBuild.md) as when building AAPS previously, but pull new changes with git.
+Gebruik [dezelfde instructies](../SettingUpAaps/CLIBuild.md) als toen je AAPS eerder bouwde, maar haal de nieuwe wijzigingen op met git (pull).
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-### Check AAPS version on phone
+### Controleer de AAPS-versie op je telefoon
 
-Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
+Kijk in de [Release notes](../Maintenance/ReleaseNotes.md) of er speciale instructies zijn na de update.
 
-After you installed the new apk:
+Nadat je de nieuwe apk hebt geïnstalleerd:
 
-- you can check the **AAPS'** version on your phone by clicking the three dots menu on the top right and then 'About' (as per the screenshot below). The **AAPS'** current version can be viewed; 
-- ensure import settings have been actioned;
-- action a 'full synchroniation' under **NSClient** to ensure **AAPS** is working off accurate & complete data; and
-- please check your **AAPS'** settings under **Preferences** and ensure these remain accurate.
+- je kunt de versie van **AAPS** op je telefoon controleren: open linksboven het **menu** (☰) en kies dan **Over** (zie de schermafbeelding hieronder). kun je de huidige versie van **AAPS** bekijken;
+- controleer of het importeren van de instellingen is uitgevoerd; en
+- controleer je instellingen van **AAPS** onder **Instellingen** en zorg dat ze nog kloppen.
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![Venster Over met de geïnstalleerde AAPS-versie](../images/about_dialog_version.png)

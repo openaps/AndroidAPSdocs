@@ -4,7 +4,7 @@
 
 ## Sensitivity algorithm
 
-Şu anda 3 duyarlılık algılama modelimiz var:
+**AAPS** currently offers 3 sensitivity detection models:
 
 * AAPS duyarlılık
 * Ağırlıklı ortalama duyarlılık
@@ -12,20 +12,23 @@
 
 ### AAPS duyarlılık
 
-Duyarlılık, Oref1 ile aynı şekilde hesaplanır ancak geçmişe zaman belirtebilirsiniz. Minimum karbonhidrat emilimi, tercihlerden maksimum karbonhidrat emilim süresinden hesaplanır
+Sensitivity is calculated the same way as in Oref1, but you can specify the time range to look back on. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences.
 
 ### Ağırlıklı ortalama duyarlılık
 
-Duyarlılık, sapmalardan ağırlıklı bir ortalama olarak hesaplanır. Geçmişe zaman belirtebilirsiniz. Daha yeni sapmalar daha yüksek ağırlığa sahiptir. Minimum karbonhidrat emilimi, tercihlerden maksimum karbonhidrat emilim süresinden hesaplanır. Bu algoritma, hassasiyet değişikliklerini takip etmede en hızlıdır.
+Sensitivity is calculated as a weighted average of the deviations. You can specify the time range to look back on. Newer deviations have a higher weight. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences. This algorithm is the fastest in following sensitivity changes.
 
 (SensitivityDetectionAndCob-sensitivity-oref1)=
 
 ### Oref1 duyarlılık
 
-Duyarlılık, geçmişteki 8 saatlik verilerden veya 8 saatten az ise son set değişikliğinden itibaren hesaplanır. Karbonhidratlar (emilmemişse) tercihlerde belirtilen süreden sonra kesilir. Yalnızca Oref1 algoritması, bildirilmemiş öğünleri (UAM) destekler. Bu, tespit edilen bildirilmemiş öğünlü zamanların duyarlılık hesaplamasının dışında tutulduğu anlamına gelir. Yani UAM ile SMB kullanıyorsanız, düzgün çalışması için Oref1 algoritmasını seçmelisiniz. Daha fazla bilgi için [OpenAPS Oref1 dokümantasyonunu](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) okuyun.
+Sensitivity is calculated from the last 8 hours of data, or from the last site change if it is less than 8 hours ago. Carbs (if not absorbed) are cut after the time specified in the preferences. Yalnızca Oref1 algoritması, bildirilmemiş öğünleri (UAM) destekler. This means that times with detected UAM are excluded from the sensitivity calculation. So if you are using SMB with UAM, you have to choose the Oref1 algorithm for it to work properly. For more information about UAM, see the [Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb) section.
 
-Oref1 is the recommended option : it is the only one that can detect UAM and work with [OpenAps SMB](#Open-APS-features-super-micro-bolus-smb), the more recent algorithm.
+Oref1 is the recommended option: it is the only one that can detect UAM and work with [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), the more recent algorithm.
 
 ## Eşzamanlı karbonhidratlar
 
-AAPS bu algoritmaları kullanırken Ağırlıklı ortalama ile Oref1 arasında önemli bir fark vardır. Oref eklentileri, aynı anda yalnızca bir öğünün bozulmasını bekler. Bu, 1. öğün tamamen bozulduktan sonra 2. öğünün bozulmaya başladığı anlamına gelir. AAPS+Ağırlıklı ortalama, karbonhidrat girdiğinizde hemen düşmeye başlar. Vücutta birden fazla öğün varsa, minimum karbonhidrat azalması öğün boyutuna ve maksimum emilim süresine göre ayarlanacaktır. Buna göre minimum emilim, Oref eklentilerine kıyasla daha yüksek olacaktır.
+There is a significant difference between the Sensitivity AAPS and WeightedAverage algorithms on one side, and Oref1 on the other, when several meals overlap.
+
+* Oref1 expects only one meal decaying at a time: the second meal starts decaying after the first meal is completely decayed.
+* Sensitivity AAPS and WeightedAverage start decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to the meal size and the max absorption time. The minimum absorption will accordingly be higher in comparison to Oref1.

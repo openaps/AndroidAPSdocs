@@ -1,397 +1,406 @@
-# Medtrum Nano / 300U
+(medtrum-nano-300u)=
+# Medtrum Nano 200U / 300U
 
-These instructions are for configuring the Medtrum insulin pump.
-
-This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Jij alleen bent verantwoordelijk voor wat je ermee doet.
+Deze instructies zijn voor het instellen van de Medtrum-insulinepomp.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
-* All loop functionality supported (SMB, TBR etc)
-* Automatic DST and timezone handling
-* Extended bolus is not supported by AAPS driver
+## Mogelijkheden van de pomp met AAPS
+* Alle loop functionaliteiten ondersteund (SMB, TBR enz.)
+* Automatische afhandeling van zomertijd en tijdzone
+* Vertraagde bolus wordt niet ondersteund door het AAPS stuurprogramma
 
-## Hardware and Software Requirements
-* **Compatible Medtrum pumpbase and reservoir patches**
-    - Currently supported:
-        - Medtrum TouchCare Nano with pumpbase refs: **MD0201** and **MD8201**.
-        - Medtrum TouchCare 300U with pumpbase ref: **MD8301**.
-        - If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [here](https://discordapp.com/channels/629952586895851530/1076120802476441641).
-* **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
-* **Compatible Android phone** with a BLE Bluetooth connection
-    - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
-* [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
+## Benodigde hardware en software
+* **Compatibele Medtrum-pompbasis en reservoirpatches**
+    - Momenteel ondersteund:
+        - Medtrum TouchCare Nano 200U met pompbasis referentie: **MD0201** en **MD8201**.
+        - Medtrum TouchCare 300U met pompbasis referentie: **MD8301**.
+        - Heb je een model dat niet wordt ondersteund en wil je hardware doneren of helpen met testen? Neem dan contact met ons op via Discord, [hier](https://discordapp.com/channels/629952586895851530/1076120802476441641).
+* **AAPS gebouwd en geïnstalleerd** volgens de instructies in [APK bouwen](../SettingUpAaps/BuildingAaps.md).
+* **Compatibele Android-telefoon** met een BLE Bluetooth-verbinding
+    - Zie de AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
 
-## Before you begin
+## Voordat je begint
 
-**SAFETY FIRST** Do not attempt this process in an environment where you cannot recover from an error (extra patches, insulin, and pump control devices are must-haves).
+**VEILIGHEID VOOROP** Begin niet aan dit proces in een situatie waarin je een fout niet kunt herstellen (extra patches, insuline en apparaten om de pomp te bedienen zijn een must).
 
-**The PDM and Medtrum App will not work with a patch that is activated by AAPS.** Previously you may have used your PDM or Medtrum app to send commands to your pump. For security reasons you can only use the activated patch with the device or app that was used to activate it.
+**De PDM en de Medtrum-app werken niet met een patch die door AAPS is geactiveerd.** Misschien gebruikte je eerder je PDM of de Medtrum-app om opdrachten naar je pomp te sturen. Om veiligheidsredenen kun je de geactiveerde patch alleen gebruiken met het apparaat of de app waarmee hij is geactiveerd.
 
-*This does NOT mean that you should throw away your PDM. It is recommended to keep it somewhere safe as a backup in case of emergencies, for instance if your phone gets lost or AAPS is not working correctly.*
+*Dit betekent NIET dat je je PDM moet weggooien. We raden aan om de PDM op een veilige plek te bewaren als back-up voor noodgevallen, bijvoorbeeld als je je telefoon verliest of als AAPS niet goed werkt.*
 
-**Your pump will not stop delivering insulin when it is not connected to AAPS** Default basal rates are programmed on the pump as defined in the current active profile. As long as AAPS is operational, it will send temporary basal rate commands that run for a maximum of 120 minutes. If for some reason the pump does not receive any new commands (for instance because communication was lost due to pump - phone distance) the pump will fall back to the default basal rate programmed on the pump once the Temporary Basal Rate ends.
+**Je pomp stopt niet met het afgeven van insuline als hij niet met AAPS verbonden is** De standaard basaalstanden staan in de pomp, zoals ingesteld in het huidige actieve profiel. Zolang AAPS actief is, zal het tijdelijke basaalstanden sturen die maximaal 120 minuten lopen. Als de pomp om een of andere reden geen nieuwe opdrachten krijgt (bijvoorbeeld omdat de verbinding is verbroken door de afstand tussen pomp en telefoon), gaat de pomp terug naar de standaard basaalstand die in de pomp staat, zodra de tijdelijke basaalstand afloopt.
 
-**30 min Basal Rate Profiles are NOT supported in AAPS.** **The AAPS Profile does not support a 30 minute basal rate time frame** If you are new to AAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work. You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the Medtrum pump hardware itself supports the 30 min basal rate profile increments, AAPS is not able to take them into account with its algorithms currently.
+**Het AAPS-profiel ondersteunt geen basaalstanden die op het halve uur beginnen** Ben je nieuw met AAPS en stel je je basaalprofiel voor het eerst in? Let op: basaalstanden die op een half uur beginnen worden niet ondersteund. Je moet je basaalprofiel aanpassen zodat elke stand op het hele uur begint. Bijvoorbeeld: je hebt een basaalstand van 1,1 eenheden die om 09:30 begint en 2 uur duurt, dus eindigt om 11:30. Dit werkt niet. Je moet deze basaalstand van 1,1 eenheden veranderen naar een tijdsperiode van 9:00–11:00 of 10:00–12:00. Hoewel de hardware van de Medtrum-pomp zelf stappen van 30 minuten in het basaalprofiel ondersteunt, kan AAPS hier in de huidige algoritmen geen rekening mee houden.
 
-**0U/h profile basal rates are NOT supported in AAPS** While the Medtrum pump does support a zero basal rate, AAPS uses multiples of the profile basal rate to determine automated treatment and therefore cannot function with a zero basal rate. A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.
+**Basaalstanden van 0 E/u in het profiel worden NIET ondersteund in AAPS** De Medtrum-pomp ondersteunt wel een basaalstand van nul, maar AAPS gebruikt veelvouden van de basaalstand uit het profiel om automatische behandelingen te bepalen. Daarom kan AAPS niet werken met een basaalstand van nul. De laagste basaalstand in het profiel is 0,05 E/u.
 
-## Pomp koppelen
+Een tijdelijke basaalstand van nul kun je instellen met de functie "Verbreek verbinding met de pomp", of met een combinatie van Loop deactiveren/Tijdelijke basaalstand of Onderbreek loop/Tijdelijke basaalstand.
 
-CAUTION: When activating a patch with AAPS you **MUST** disable all other devices that can talk to the Medtrum pumpbase. e.g. active PDM and Medtrum app. Make sure you have your pumpbase and pumpbase SN ready for activation of a new patch.
+## Instellen
 
-### Step 1: Select Medtrum pump
+```{caution}
+Als je een patch met **AAPS** activeert, **MOET** je elk ander apparaat uitzetten dat met de Medtrum-pompbasis kan praten, bijvoorbeeld een actieve PDM of de Medtrum-app.
+```
 
-#### Option 1: New installations
+### Stap 1: Selecteer de Medtrum-pomp
 
-If you are installing AAPS for the first time, the **Setup Wizard** will guide you through installing AAPS. Select “Medtrum” when you reach Pump selection.
+#### Optie 1: Nieuwe installaties
 
-If in doubt you can also select “Virtual Pump” and select “Medtrum” later, after setting up AAPS (see option 2).
+Installeer je **AAPS** voor de eerste keer? Dan leidt de **Setup Wizard** je door de installatie. Kies **Medtrum** als je bij de stap **Pomp** komt.
 
-![Setup Wizard](../images/medtrum/SetupWizard.png)
+Twijfel je? Dan kun je ook **Virtuele Pomp** kiezen en later **Medtrum** selecteren, nadat je **AAPS** hebt ingesteld (zie optie 2).
 
-#### Option 2: The Config Builder
+![Pompstap in de Setup Wizard](../images/setup-wizard/Wizard-Pump.png)
 
-On an existing installation you can select the **Medtrum** pump in [Config Builder > Pump](#Config-Builder-pump):
+#### Optie 2: Het scherm Configuratie
 
-On the top-left hand corner **hamburger menu** select **Config Builder**\ ➜\ **Pump**\ ➜\ **Medtrum**\ by selecting the **Enable button** titled **Medtrum**.
+Bij een bestaande installatie kun je de **Medtrum**-pomp kiezen in [Configuratie > Pomp](#Config-Builder-pump):
 
-Selecting the **checkbox** next to the **Settings Gear** will allow the Medtrum overview to be displayed as a tab in the AAPS interface titled **Medtrum**. Checking this box will facilitate your access to the Medtrum commands when using AAPS and is highly recommended.
+Open het **menu** (☰) linksboven, tik op **Configuratie** > **Pomp** en kies de kaart **Medtrum**. Er kan maar één pomp tegelijk actief zijn.
 
-![Configurator](../images/medtrum/ConfigBuilder.png)
+![Configuratie > Pomp met de Medtrum-plugin](../images/v4/Configuration/configuration_pump_list_4.png)
 
-### Step 2: Change Medtrum settings
+Als hij gekozen is, toont de kaart **Medtrum** twee knoppen: **Instellingen** en **Plug-in openen**:
 
-Enter the Medtrum settings by tapping the **Settings Gear** of the Medtrum module in the Config Builder .
+![De Medtrum-plugin gekozen in Configuratie > Pomp](../images/v4/Pumps/medtrum_enabled.png)
 
-![Medtrum Settings](../images/medtrum/MedtrumSettings.png)
+**Plug-in openen** (of **Beheren → Pomp**) opent het Medtrum-pompscherm. Hier wissel je patches en zie je de status van de pomp. Voordat een patch is geactiveerd, ziet het scherm er zo uit:
 
-#### Serial Number:
+![Medtrum-pompscherm voor het koppelen](../images/v4/Pumps/medtrum_pump_screen.png)
 
-Enter the serial number of your pumpbase here as noted on the pumpbase. Make sure the serial number is correct and there are no spaces added (You can either use capital or lowercase).
+(medtrum-step-2)=
+### Stap 2: Wijzig de Medtrum-instellingen
 
-NOTE: This setting can only be changed when there is no patch active.
+Tik op **Instellingen** op de kaart **Medtrum** in **Configuratie** > **Pomp**. Je kunt ook op het tandwiel rechtsboven in het Medtrum-pompscherm tikken. Dit opent de **Medtrum pomp instellingen**:
 
-#### Alarm settings
+![Instellingen van de Medtrum-driver](../images/v4/Pumps/medtrum_settings.png)
 
-***Default: Beep.***
+```{note}
+Er is geen instelling **Serienummer** meer. **AAPS** zoekt je pompbasis met een Bluetooth-scan de eerste keer dat je een patch activeert (zie [Stap 3](#medtrum-activate-patch)), en onthoudt het serienummer. Wil je een andere pompbasis gebruiken? Zie dan [Ontkoppelen](#medtrum-unpair).
+```
 
-This setting changes the way that the pump will alert you when there is a warning or error.
+#### Alarminstellingen
 
-- Beep > The patch will beep on alarms and warnings
-- Silent > The patch will not alert you on alarms and warnings
+***Standaard: Pieptoon.***
 
-Note: In silent mode AAPS will still sound the alarm depending on your phone's volume settings. If you do not respond to the alarm, the patch will eventually beep.
+Deze instelling bepaalt hoe de pomp je waarschuwt bij een waarschuwing of fout.
 
-#### Notification on pump warning
+- **Pieptoon**: de patch piept bij alarmen en waarschuwingen.
+- **Stil**: de patch waarschuwt je niet bij alarmen en waarschuwingen.
 
-***Default: Enabled.***
+Let op: in de stille modus laat **AAPS** het alarm nog steeds horen, afhankelijk van de volume-instellingen van je telefoon. Als je niet op het alarm reageert, gaat de patch na een tijd toch piepen.
 
-This settings changes the way AAPS will show notification on non critical pump warnings. When enabled a Notification will be shown on the phone when a pump warning occurs, including:
-    - Low battery
-    - Low reservoir (20 Units)
-    - Patch expiration warning
+#### Notificatie bij pomp waarschuwing
 
-In either case these warnings are also shown on the Medtrum overview screen under [Active alarms](#medtrum-active-alarms).
+***Standaard: ingeschakeld.***
+
+Deze instelling bepaalt hoe **AAPS** meldingen toont voor niet-kritische pompwaarschuwingen. Als dit aan staat, toont de telefoon een melding bij een pompwaarschuwing, onder andere:
+- Batterij bijna leeg
+- Reservoir bijna leeg (20 eenheden)
+- Patch verloopt binnenkort
+
+We raden aan dit aan te laten als de pompalarmen op **Stil** staan. In beide gevallen staan deze waarschuwingen ook op het Medtrum-pompscherm onder [Actieve alarmen](#medtrum-active-alarms).
 
 (medtrum-patch-expiration)=
-#### Patch Expiration
+#### Patch vervalt
 
-***Default: Enabled.***
+***Standaard: ingeschakeld.***
 
-This setting changes the behavior of the patch. When enabled the patch will expire after 3 days and give an audible warning if you have sound enabled. After 3 days and 8 hours the patch will stop working.
+Deze instelling wijzigt het gedrag van de patch. Als dit aan staat, verloopt de patch na 3 dagen en geeft hij een hoorbare waarschuwing als het geluid aan staat. Na 3 dagen en 8 uur stopt de patch met werken.
 
-If this setting is disabled, the patch will not warn you and will continue running until the patch battery or reservoir runs out.
+Als deze instelling uit staat, waarschuwt de patch je niet voordat hij stopt. Met recente firmware van de pompbasis werkt een patch maximaal 5 dagen.
 
-#### Pump expiry warning
+#### Waarschuwing vervallen pomp [uren]
 
-***Default: 72 hours.***
+***Standaard: 72 uur.***
 
-This setting changes the time of the expiration warning, when [Patch Expiration](#medtrum-patch-expiration) is enabled, AAPS will give a notification on the set hour after activation.
+Deze instelling bepaalt het tijdstip van de waarschuwing dat de patch verloopt. Als [Patch vervalt](#medtrum-patch-expiration) aan staat, toont **AAPS** dit aantal uren na de activatie een melding.
 
-#### Hourly Maximum Insulin
+#### Maximale insuline per uur [Eenheden]
 
-***Default: 25U.***
+***Standaard: 25 E.***
 
-This setting changes the maximum amount of insulin that can be delivered in one hour. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
+Deze instelling wijzigt de maximale hoeveelheid insuline die in één uur kan worden toegediend. Als deze grens wordt overschreden, onderbreekt de patch de toediening en geeft hij een alarm. Je kunt het alarm resetten met de knop **Reset alarmen** op het pompscherm, zie [Reset alarmen](#nano-reset-alarms).
 
-Set this to a sensible value for your insulin requirements.
+Stel dit in op een waarde die past bij jouw insulinebehoefte.
 
-#### Daily Maximum Insulin
+#### Maximale insuline per dag [Eenheden]
 
-***Default: 80U.***
+***Standaard: 80 E.***
 
-This setting changes the maximum amount of insulin that can be delivered in one day. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
+Deze instelling wijzigt de maximale hoeveelheid insuline die in één dag kan worden toegediend. Als deze grens wordt overschreden, onderbreekt de patch de toediening en geeft hij een alarm. Je kunt het alarm resetten met de knop **Reset alarmen** op het pompscherm, zie [Reset alarmen](#nano-reset-alarms).
 
-Set this to a sensible value for your insulin requirements.
+Stel dit in op een waarde die past bij jouw insulinebehoefte.
 
-#### Scan on Connection error
+#### Scan bij verbindingsfout
 
-***Default: Off.***
+***Standaard: Uit.***
 
-Located under **Advanced Settings**.
+Te vinden onder **Geavanceerde instellingen**.
 
-Only enable if you have connection problems. If enabled the driver scans for the pump again before trying to reconnect to the pump. Make sure you have Location permission set to "Always allow".
+Zet dit alleen aan als je verbindingsproblemen hebt. Als dit aan staat, zoekt de driver opnieuw naar de pomp voordat hij opnieuw verbinding probeert te maken. Zorg dat de machtiging Locatie voor **AAPS** op "Altijd toestaan" staat.
 
-### Step 2b: AAPS Alerts settings
+### Stap 2b: Alarminstellingen van AAPS
 
-Go to preferences
+Deze instellingen horen niet bij de Medtrum-driver. Je opent ze met het pictogram **Instellingen** (tandwiel) rechtsboven in het hoofdscherm. Zie [Instellingen](../SettingUpAaps/Preferences.md) voor meer informatie.
 
-#### Pump:
+#### BT Watchdog
 
-##### BT Watchdog
+Open **Instellingen** > **Pomp**:
 
-Go to preferences and select **Pump**:
+![Instellingen > Pomp](../images/preferences/settings_pump.png)
 
-![BT Watchdog](../images/medtrum/BTWatchdogSetting.png)
+**BT Watchdog** zet Bluetooth op de telefoon één seconde uit als **AAPS** geen verbinding met de pomp kan maken. Dit kan helpen op sommige telefoons waar Bluetooth vastloopt.
 
-##### BT Watchdog
+Zet deze instelling aan als je vaak verbindingsproblemen met je pomp hebt.
 
-This setting will try to work around any BLE issues. It will try to reconnect to the pump when the connection is lost. It will also try to reconnect to the pump when the pump is unreachable for a certain amount of time.
+#### Lokale alarmen
 
-Enable this setting if you experience frequent connection issues with your pump.
+Open **Instellingen** > **Lokale alarmen**:
 
-#### Local Alerts:
+![Instellingen > Lokale alarmen](../images/preferences/settings_local_alerts.png)
 
-Go to preferences and select **Local Alerts**:
+##### Waarschuw als de pomp niet bereikbaar is
 
-![Local Alerts](../images/medtrum/LocalAlertsSettings.png)
+***Standaard: ingeschakeld.***
 
-##### Alert if pump is unreachable
+Deze instelling staat altijd aan als de Medtrum-driver is ingeschakeld. Je krijgt een waarschuwing als de pomp niet bereikbaar is. Dit kan gebeuren als de pomp buiten bereik is, of als hij niet reageert door een defecte patch of pompbasis, bijvoorbeeld als er water lekt tussen de pompbasis en de patch.
 
-***Default: Enabled.***
+Om veiligheidsredenen kan deze instelling niet worden uitgeschakeld.
 
-This setting is forced to enabled when the Medtrum driver is enabled. It will alert you when the pump is unreachable. This can happen when the pump is out of range or when the pump is not responding due to a defective patch or pumpbase, for example when water leaks between the pumpbase and the patch.
+##### Maximale tijd pomp onbereikbaar
 
-For safety reasons this setting cannot be disabled.
+***Standaard: 30 min.***
 
-##### Pump unreachable threshold [min]
+Deze instelling bepaalt hoe lang **AAPS** wacht voordat je een waarschuwing krijgt dat de pomp niet bereikbaar is.
 
-***Default: 30 min.***
-
-This setting changes the time after which AAPS will alert you when the pump is unreachable. This can happen when the pump is out of range or when the pump is not responding due to a defective patch or pumpbase, for example when water leaks between the pumpbase and the patch.
-
-This setting can be changed when using Medtrum pump but it is recommended to set it at 30 minutes for safety reasons.
-
-### Step 3: Activate patch
-
-**Before you continue:**
-- Have your Medtrum Nano pumpbase and a reservoir patch ready.
-- Make sure that AAPS is properly set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-- Other devices that can talk to the Medtrum pump are disabled (PDM and Medtrum app)
-
-#### Activate patch from the Medtrum overview Tab
-
-Navigate to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button in the bottom right corner.
-
-If a patch is already active, you will be prompted to deactivate this patch first. see [Deactivate Patch](#nano-deactivate-patch).
-
-Follow the prompts to fill and activate a new patch. Please note - it is important to only connect the pumpbase to the reservoir patch at the step when you are prompted to do so. **You must only put the pump on your body and insert the cannula when prompted to during the activation process (after priming is complete).**
-
-##### Start Activation
-
-![Start Activation](../images/medtrum/activation/StartActivation.png)
-
-At this step, double check your serial number and make sure the pumpbase is not connected to the patch yet.
-
-Press **Next** to continue.
-
-##### Fill the patch
-
-![Fill the patch](../images/medtrum/activation/FillPatch.png)
-
-Once the patch is detected and filled with a minimum of 70Units of insulin, press **Next** will appear.
-
-##### Prime the patch
-
-![Half press](../images/medtrum/activation/HalfPress.png)
-
-Do not remove the safety lock and press the needle button on the patch.
-
-Press **Next** to start prime
-
-![Prime progress](../images/medtrum/activation/PrimeProgress.png)
-
-![Prime complete](../images/medtrum/activation/PrimeComplete.png)
-
-Once the prime is complete, press **Next** to continue.
-
-##### Attach Patch
-
-![Attach patch](../images/medtrum/activation/AttachPatch.png)
-
-Clean the skin, remove stickers and attach the patch to your body. Remove safety lock and press the needle button on the patch to insert the cannula.
-
-Press **Next** to activate the patch.
+Je kunt deze instelling aanpassen als je de Medtrum-pomp gebruikt, maar om veiligheidsredenen raden we aan hem op 30 minuten te laten.
 
 (medtrum-activate-patch)=
-##### Activate Patch
+### Stap 3: Activeer de patch
 
-![Activate patch](../images/medtrum/activation/ActivatePatch.png)
+**Voordat je verdergaat:**
+- Zorg dat je Medtrum-pompbasis en een nieuwe reservoirpatch klaarliggen.
+- Zet andere apparaten uit die met de Medtrum-pomp kunnen praten (PDM en Medtrum-app).
+- Zorg het liefst dat **AAPS** is ingesteld en dat er een [profiel is geactiveerd](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). Als er geen profiel actief is, begint de activering met de stap **Profiel vereist**, waar je het profiel kiest dat geactiveerd wordt.
 
-When activation is complete, the following screen will appear
+#### Activering starten
 
-![Activation complete](../images/medtrum/activation/ActivationComplete.png)
+Open het [Medtrum-pompscherm](#nano-overview) (**Beheren → Pomp**) en tik op **Patch verwisselen**. Als je [beveiliging van de instellingen](#Preferences-protection) hebt ingesteld, moet je eerst je wachtwoord of pincode invoeren.
 
-Press **OK** to return to main screen.
+Als er al een patch actief is, wordt gevraagd om die eerst te deactiveren, zie [Patch deactiveren](#nano-deactivate-patch).
+
+De activering is een wizard die je stap voor stap volgt. Volg de aanwijzingen om een nieuwe patch te vullen en te activeren. Tik bij elke stap op **Annuleren** om te stoppen.
+
+```{important}
+Plak de patch pas op je lichaam en breng de canule pas in als de wizard dat zegt (nadat het voorvullen klaar is).
+```
+
+Welke stappen je eerst ziet, hangt af van je situatie:
+
+1. **Profiel vereist**: alleen als er geen profiel actief is. Kies het profiel dat moet worden toegepast en ga dan verder.
+2. **Pomp zoeken**: alleen de eerste keer, of nadat je [Ontkoppelen](#medtrum-unpair) hebt gebruikt. Verbind de pompbasis met een nieuwe patch om hem aan te zetten. **AAPS** zoekt naar Medtrum-pompbases in de buurt (hun naam begint met `MT`). Tik op die van jou in de lijst. **AAPS** slaat het serienummer op en gaat dan direct door naar het vullen van de patch.
+
+   ![Stap Pomp zoeken, die naar een Medtrum-pompbasis zoekt](../images/medtrum/activation/FindPump.png)
+
+3. **Activeer Patch**: alleen als **AAPS** je pompbasis al kent. Het scherm toont "Geen actieve patch. Druk op **Volgende** om het activeringsproces te starten." Zorg dat de pompbasis **nog niet** met de patch verbonden is en tik dan op **Volgende**.
+
+![Activering starten](../images/medtrum/activation/StartActivation.png)
+
+#### Verbinden en vullen van de patch
+
+![Vul de patch](../images/medtrum/activation/FillPatch.png)
+
+Verbind de pompbasis met de patch, verwijder de resterende lucht en vul de patch met insuline. Voor de activering is minimaal 70 eenheden nodig. Het scherm toont het niveau van het reservoir. Plak de patch nog niet op je lichaam.
+
+Als de patch is gevonden en gevuld, verschijnt de knop **Volgende**. Tik erop.
+
+#### Selecteer insuline
+
+Deze stap verschijnt alleen als je meer dan één insuline in **AAPS** hebt ingesteld. Kies de insuline waarmee je de patch vult. **AAPS** doet na de activering een profielwissel met deze insuline.
+
+#### Patch voorvullen
+
+![Half indrukken](../images/medtrum/activation/HalfPress.png)
+
+Verwijder het veiligheidsslot **niet**. Druk de naaldknop op de patch half in en tik dan op **Volgende** om het voorvullen te starten.
+
+![Voortgang voorvullen](../images/medtrum/activation/PrimeProgress.png)
+
+Wacht tot het voorvullen klaar is.
+
+![Voorvullen voltooid](../images/medtrum/activation/PrimeComplete.png)
+
+Als het voorvullen klaar is, tik je op **Volgende** om verder te gaan.
+
+#### Site rotatie
+
+Deze stap verschijnt alleen als je de plaatsen van de pomp beheert met [Site rotatie](#Aapsscreens-site-rotation) (instelling **Plaatsingslocatie pomp beheren**). Kies waar je de patch op je lichaam plakt, of sla deze stap over.
+
+#### Bevestig de patch
+
+![Bevestig de patch](../images/medtrum/activation/AttachPatch.png)
+
+Maak de huid schoon en verwijder de stickers. Verwijder het veiligheidsslot, plak de patch op je lichaam en druk op de naaldknop om de canule in te brengen.
+
+Tik op **Volgende** om de patch te activeren.
+
+#### Patch activeren
+
+![Patch activeren](../images/medtrum/activation/ActivatePatch.png)
+
+**AAPS** activeert de pomp en stelt de eerste basaalstand in. Even geduld. Als de activering klaar is, verschijnt het volgende scherm:
+
+![Activatie voltooid](../images/medtrum/activation/ActivationComplete.png)
+
+```{admonition} Older screenshot
+:class: note
+Behalve **Pomp zoeken** komen de schermafbeeldingen van de activering hierboven uit een eerdere versie van **AAPS**. In **AAPS** 4 kunnen ze er anders uitzien.
+```
+
+Het toont hoeveel eenheden er nog in de patch zitten. Tik op **OK** om terug te gaan naar het pompscherm.
+
+```{tip}
+Na een nieuwe activering: [exporteer je instellingen](../Maintenance/ExportImportSettings.md). Zo kun je deze patchsessie later herstellen, bijvoorbeeld op een nieuwe telefoon.
+```
 
 (nano-deactivate-patch)=
 
-### Deactivate patch
+### Patch deactiveren
 
-To deactivate a currently active patch, go to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
+Om de actieve patch te deactiveren, open je het [Medtrum-pompscherm](#nano-overview) (**Beheren → Pomp**) en tik je op **Patch verwisselen**.
 
-![Deactivate patch](../images/medtrum/activation/DeactivatePatch.png)
+![Patch deactiveren](../images/medtrum/activation/DeactivatePatch.png)
 
-You will be asked to confirm that you wish to deactivate the current patch. **Please note that this action is not reversible.** When deactivation is completed, you can press **Next** to continue the process to activate a new patch. If you are not ready to activate a new patch, press **Cancel** to return to the main screen.
+Je moet bevestigen dat je de huidige patch wilt deactiveren. **Dit kan niet ongedaan worden gemaakt.** Tik op **Volgende** om te deactiveren, of op **Annuleren** om terug te gaan naar het pompscherm.
 
-![Deactivate progress](../images/medtrum/activation/DeactivateProgress.png)
+![Voortgang deactiveren](../images/medtrum/activation/DeactivateProgress.png)
 
-If Android APS in unable to deactivate the patch (For instance because the pumpbase has already been removed from the reservoir patch), you may press **Discard** to forget the current patch session and make it possible to activate a new patch.
+Als **AAPS** de patch niet kan deactiveren (bijvoorbeeld omdat de pompbasis al van de patch is gehaald), tik dan op **Weggooien** om de huidige patchsessie te vergeten. Daarna kun je een nieuwe patch activeren.
 
-![Deactivate complete](../images/medtrum/activation/DeactivateComplete.png)
+![Deactivering voltooid](../images/medtrum/activation/DeactivateComplete.png)
 
-Once deactivation is complete, press **OK** to return to main screen or press **Next** to continue the process to activate a new patch.
+Als het deactiveren klaar is, trek je de naald terug en haal je de patch van je lichaam. Haal de pompbasis eraf en gooi de gebruikte patch weg. Tik op **OK** om terug te gaan naar het pompscherm, of op **Volgende** om een nieuwe patch te activeren.
 
 (nano-resume-interrupted-activation)=
 
-### Resume interrupted activation
+### Onderbroken activering hervatten
 
-If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
+Als het activeren van een patch wordt onderbroken, bijvoorbeeld omdat de batterij van de telefoon leeg is, kun je het hervatten. Open het [Medtrum-pompscherm](#nano-overview) (**Beheren → Pomp**) en tik op **Patch verwisselen**.
 
-![Resume interrupted activation](../images/medtrum/activation/ActivationInProgress.png)
+![Onderbroken activering hervatten](../images/medtrum/activation/ActivationInProgress.png)
 
-Press **Next** to continue the activation process. Press **Discard** to discard the current patch session and make it possible to activate a new patch.
+Tik op **Volgende** om de activering te hervatten. Tik op **Weggooien** om de activeringsstatus te resetten, zodat je een nieuwe patch kunt activeren.
 
-![Reading activation status](../images/medtrum/activation/ReadingActivationStatus.png)
+![Activeringsstatus lezen](../images/medtrum/activation/ReadingActivationStatus.png)
 
-The driver will try to determine the current status of the patch activation. If this was successful it will go into the activation progress at the current step.
+```{admonition} Older screenshot
+:class: note
+De schermafbeeldingen in **Patch deactiveren** en **Onderbroken activering hervatten** komen uit een eerdere versie van **AAPS**. In **AAPS** 4 kunnen ze er anders uitzien.
+```
+
+De driver leest de activeringsstatus uit de pomp. Als dit lukt, gaat de wizard verder bij de stap waar hij gestopt was.
 
 (nano-overview)=
 
-## Overzicht
+## Pompscherm
 
-The overview contains the current status of the Medtrum patch. It also contains buttons to change the patch, reset alarms and refresh the status.
+Het Medtrum-pompscherm (**Beheren → Pomp**) toont de huidige status van de Medtrum-patch. Er staan ook knoppen op om de patch te wisselen, alarmen te resetten en de status te vernieuwen. Een balk bovenaan toont belangrijke toestanden, bijvoorbeeld **Patch niet geactiveerd** of **Pomp is onderbroken**.
 
-![Medtrum Overview](../images/medtrum/Overview.png)
+![Medtrum-pompscherm met een actieve patch](../images/v4/Pumps/medtrum_pump_screen_active.png)
 
-### BLE Status:
+Het scherm kan deze regels tonen. Sommige regels verschijnen alleen als ze een waarde hebben.
 
-This shows the current status of the Bluetooth connection to the pumpbase.
-
-### Last connected:
-
-This shows the last time the pump was connected to AAPS.
-
-### Pump state:
-
-This shows the current state of the pump. For example:
-    - ACTIVE : The pump is activated and running normally
-    - STOPPED: The patch is not activated
-
-### Basal type:
-
-This shows the current basal type.
-
-### Basal rate:
-
-This shows the current basal rate.
-
-### Last bolus:
-
-This shows the last bolus that was delivered.
-
-### Active bolus:
-
-This shows the active bolus that is currently being delivered.
+- **Laatste verbinding**: hoe lang geleden **AAPS** voor het laatst verbinding had met de pomp.
+- **Laatste bolus**: de laatste bolus die is afgegeven.
+- **Batterij**: de huidige batterijspanning van de patch.
+- **Reservoir**: het huidige niveau van het reservoir.
+- **Serienummer**: het serienummer van je pompbasis.
+- **Pomp status**: de huidige toestand van de pomp. Bijvoorbeeld **Actief** (de patch is geactiveerd en werkt normaal) of **Gestopt** (de patch is niet geactiveerd).
+- **Basis basaalstand**: de basaalstand uit je profiel die nu loopt.
+- **Tijdelijk basaal**: de tijdelijke basaalstand, als er een loopt.
+- **Actieve bolus**: de bolus die op dit moment wordt afgegeven.
+- **Actieve alarmen**: zie [hieronder](#medtrum-active-alarms).
+- **Type pomp**: het model van je pompbasis.
+- **FW versie**: de firmwareversie van de pompbasis.
+- **Patch nr**: het volgnummer van de geactiveerde patch. Het gaat met één omhoog elke keer dat je een nieuwe patch activeert.
+- **Activatie**: de datum en tijd waarop de patch is geactiveerd, en hoe lang geleden dat was.
+- **Patch verloopt**: de datum en tijd waarop de patch verloopt. Toont **Niet ingeschakeld** als [Patch vervalt](#medtrum-patch-expiration) uit staat.
 
 (medtrum-active-alarms)=
-### Active alarms:
+### Actieve alarmen
 
-This shows any active alarms that are currently active.
+Deze regel toont alle alarmen die op dit moment actief zijn, bijvoorbeeld een bijna leeg reservoir of een patch die bijna verloopt.
 
-### Reservoir:
+### Vernieuwen
 
-This shows the current reservoir level.
+Deze knop vernieuwt de status van de patch. Hij is alleen beschikbaar als er een patch actief is en **AAPS** op dat moment geen verbinding heeft met de pomp.
 
-### Battery:
+### Patch verwisselen
 
-This shows the current battery voltage of the patch.
+Deze knop start de wizard om de patch te wisselen. Zie [Patch activeren](#medtrum-activate-patch) voor meer informatie.
 
-### Pump type:
+(medtrum-unpair)=
+### Ontkoppelen
 
-This shows the current pump type number.
-
-### FW version:
-
-This shows the current firmware version of the patch.
-
-### Patch no:
-
-This shows the sequence number of the activated patch. This number is incremented every time a new patch is activated.
-
-### Patch expires:
-
-This shows the date and time when the patch will expire.
-
-### Refresh:
-
-This button will refresh the status of the patch.
-
-### Change patch:
-
-This button will start the process to change the patch. See [Activate patch](#medtrum-activate-patch) for more information.
+Deze knop verschijnt alleen als **AAPS** een pompbasis kent. Hij wist het opgeslagen serienummer van de pompbasis en verbreekt de verbinding. De volgende keer dat je een patch activeert, zoekt **AAPS** opnieuw naar een pompbasis (de stap **Pomp zoeken**). Gebruik dit als je overstapt naar een andere pompbasis. Doe dit alleen als er geen patch actief is.
 
 (nano-reset-alarms)=
 
-### Reset alarms
+### Reset alarmen
 
-The alarm button will appear on the overview screen when there is an active alarm that can be reset. Pressing this button will reset the alarms and resume insulin delivery if the patch has been suspended due to the alarm. E.g. when suspended due to a maximum daily insulin delivery alarm.
+De knop **Reset alarmen** verschijnt alleen op het pompscherm als de patch zichzelf heeft onderbroken, bijvoorbeeld na een alarm voor de maximale insuline per dag. Tik erop om de alarmen te resetten en de insulinetoediening te hervatten.
 
-![Reset alarms](../images/medtrum/ResetAlarms.png)
+![Reset alarmen](../images/medtrum/ResetAlarms.png)
 
-Press the **Reset Alarms** button to reset the alarms and resume normal operation.
+```{admonition} Older screenshot
+:class: note
+De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie. In **AAPS** 4 ziet het pompscherm er anders uit, maar de knop **Reset alarmen** werkt op dezelfde manier.
+```
 
-## Switching phone, export/import settings
+## Overstappen naar een andere telefoon, instellingen exporteren/importeren
 
-When switching to a new phone the following steps are necessary:
-* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
-* Transfer settings from old to new phone, and import them into AAPS
+Als je overstapt naar een nieuwe telefoon, doe dan het volgende:
+* [Exporteer instellingen](../Maintenance/ExportImportSettings.md) op je oude telefoon.
+* Zet het instellingenbestand van de oude telefoon over naar de nieuwe telefoon en importeer het in **AAPS**. Vink **Vervang ook de pompinstellingen** aan op het importscherm. Anders wordt de patchsessie niet naar de nieuwe telefoon overgezet.
 
-The imported settings file has to be of the same patch session that you are currently using, otherwise the patch will not connect.
+Het geïmporteerde instellingenbestand moet van de patchsessie zijn die je nu gebruikt. Anders maakt de patch geen verbinding (zie [Pompen zonder slang](#ExportImportSettings-tubeless-pumps)).
 
-After a settings import the driver will sync history with the pump, this can take a while depending on the age of the settings file.
+Na het importeren van instellingen synchroniseert de driver de geschiedenis met de pomp. Dit kan even duren, afhankelijk van hoe oud het instellingenbestand is. De voortgang ("Records synchroniseren, nog ... te doen") staat op het hoofdscherm:
 
-From AAPS version 3.3.0.0 onwards, the sync progress is shown in the the home screen: ![Sync progress](../images/medtrum/SyncProgress.png)
+![Synchronisatievoortgang](../images/medtrum/SyncProgress.png)
 
-## Troubleshooting
+(medtrum-nano-troubleshooting)=
 
-### Connection issues
+## Probleemoplossing
 
-If you are experiencing connection timeouts or other connection issues:
-- In Android application settings for AAPS: Set location permission to "Allow all the time".
+### Verbindingsproblemen
 
-### Bluetooth issues
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Als je time-outs of andere verbindingsproblemen hebt:
+- Zet in de Android-app-instellingen van **AAPS** de machtiging Locatie op "Altijd toestaan".
+- Probeer **Scan bij verbindingsfout** (Medtrum-instellingen > **Geavanceerde instellingen**) en **BT Watchdog** (**Instellingen** > **Pomp**) aan te zetten, zie [Stap 2](#medtrum-step-2).
 
-### Activation interrupted
+### Bluetooth-problemen
+Voor bekende problemen met Bluetooth-verbindingen, het wegvallen van pomp/pods, of problemen met activeren en verbinden: zie [Bluetooth-probleemoplossing](../GettingHelp/BluetoothTroubleshooting.md)
 
-If the activation process is interrupted for example by and empty phone battery or phone crash. The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#nano-resume-interrupted-activation)
+### Activering onderbroken
 
-### Preventing patch faults
+Als de activering wordt onderbroken, bijvoorbeeld door een lege telefoonbatterij of een crash van de telefoon, kun je hem hervatten. Tik op **Patch verwisselen** op het pompscherm en volg de stappen in [Onderbroken activering hervatten](#nano-resume-interrupted-activation).
 
-The patch can give a variety of errors. To prevent frequent errors:
-- Make sure the pumpbase is properly seated in the patch and no gaps are visible.
-- When filling the patch do not apply excessive force to the plunger. Do not try to fill the patch beyond the maximum that applies to your model.
+### Patchfouten voorkomen
 
-## Where to get help
+De patch kan verschillende fouten geven. Om veelvoorkomende fouten te voorkomen:
+- Zorg ervoor dat de pompbasis goed in de patch zit en dat er geen openingen zichtbaar zijn.
+- Oefen bij het vullen van de patch geen overmatige kracht uit op de plunjer. Probeer de patch niet verder te vullen dan het maximum voor jouw model.
 
-All of the development work for the Medtrum driver is done by the community on a **volunteer** basis; we ask that you to remember that fact and use the following guidelines before requesting assistance:
+## Waar je hulp kunt krijgen
 
--  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#Medtrum* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
--  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+Al het ontwikkelwerk voor de Medtrum-driver wordt door de community op **vrijwillige** basis gedaan. Denk daaraan en volg de volgende richtlijnen voordat je om hulp vraagt:
+
+-  **Niveau 0:** Lees het betreffende deel van deze documentatie, zodat je begrijpt hoe de functie waarmee je problemen hebt hoort te werken.
+-  **Niveau 1:** Als je nog steeds problemen ondervindt die je niet met behulp van dit document kunt oplossen, ga dan naar het *#Medtrum*-kanaal op **Discord** via [deze uitnodigingslink](https://discord.gg/4fQUWHZ4Mw).
+-  **Niveau 2:** Zoek in de bestaande issues of je probleem al gemeld is bij [Issues](https://github.com/nightscout/AAPS/issues). Als het er al staat, bevestig het dan, reageer erop of voeg informatie over je probleem toe. Zo niet, maak dan een [nieuw issue](https://github.com/nightscout/AndroidAPS/issues) aan en voeg [je logbestanden](../GettingHelp/AccessingLogFiles.md) toe.
+-  **Wees geduldig - de meeste leden van onze community zijn vriendelijke vrijwilligers, en het oplossen van problemen kost vaak tijd en geduld van zowel gebruikers als ontwikkelaars.**

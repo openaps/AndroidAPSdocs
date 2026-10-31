@@ -1,85 +1,104 @@
-# Open Humans Uploader
+# Ανέβασμα δεδομένων στο Open Humans
 
-## Donate your data for science
+## Δωρίστε τα δεδομένα σας στην επιστήμη
 
-You can help the community by donating your data to research projects! This helps scientists to pay it forward, develop new scientific ideas and broaden the open mind of open source closed loop systems. AAPS is ready to synchronize your data with [Open Humans](https://www.openhumans.org), a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data.
+Μπορείτε να βοηθήσετε την κοινότητα, αν δωρίσετε τα δεδομένα σας σε ερευνητικά προγράμματα! Έτσι οι επιστήμονες μπορούν να δώσουν κάτι πίσω, να αναπτύξουν νέες επιστημονικές ιδέες και να ανοίξουν ακόμα περισσότερο τον κόσμο των κλειστών κυκλωμάτων ανοιχτού κώδικα. Το AAPS μπορεί να συγχρονίσει τα δεδομένα σας με το [Open Humans](https://www.openhumans.org), μια πλατφόρμα όπου μπορείτε να στείλετε, να συνδέσετε και να αποθηκεύσετε τα προσωπικά σας δεδομένα – όπως γενετικά δεδομένα, δεδομένα δραστηριότητας και υγείας.
 
-You retain full control about what happens to your data and what projects you want to support by giving them access to your data. Depending on the project you have joined, data is evaluated and used by them in different ways and extent.
+Έχετε πάντα τον πλήρη έλεγχο για το τι γίνεται με τα δεδομένα σας και ποια προγράμματα θέλετε να υποστηρίξετε, δίνοντάς τους πρόσβαση στα δεδομένα σας. Ανάλογα με το πρόγραμμα στο οποίο συμμετέχετε, τα δεδομένα αξιολογούνται και χρησιμοποιούνται με διαφορετικούς τρόπους και σε διαφορετικό βαθμό.
 
-The following data will be uploaded to your Open Humans account:
+Τα παρακάτω δεδομένα θα σταλούν στον λογαριασμό σας στο Open Humans:
 
-- Glucose values
-- Careportal events (except notes)
-- Extended boluses
-- Profile switches
-- Total daily doses
-- Temporary basals
-- Temp targets
-- Προτιμήσεις
-- Application version
-- Device model
-- Screen dimensions
+- Τιμές γλυκόζης
+- Συμβάντα Careportal (εκτός από σημειώσεις)
+- Εκτεταμένα bolus
+- Αλλαγές προφίλ
+- Συνολικές ημερήσιες δόσεις
+- Προσωρινοί βασικοί ρυθμοί
+- Προσωρινοί στόχοι
+- Ρυθμίσεις
+- Έκδοση εφαρμογής
+- Μοντέλο συσκευής
+- Διαστάσεις οθόνης
 
-Secret or private information such as your Nightscout URL or API secret will not be uploaded.
+Μυστικές ή προσωπικές πληροφορίες, όπως η διεύθυνση (URL) του Nightscout ή το API secret, δεν θα σταλούν.
 
 ## Ρύθμιση
 
-1. Create your account on [Open Humans](https://www.openhumans.org) if not already done. You can reuse your existing Google or Facebook accounts if you wish to.
-2. Enable the “Open Humans” plugin in [Config Builder > Synchronization](../SettingUpAaps/ConfigBuilder.md).
-3. Open its setting using the cog wheel button. You can restrict upload to times when phone uses Wi-Fi and/or is charged.
-4. Open the Open Humans Plugin (either through OH tab or hamburger menu) and click 'LOGIN'.
+1. Δημιουργήστε τον λογαριασμό σας στο [Open Humans](https://www.openhumans.org), αν δεν το έχετε κάνει ήδη. Αν θέλετε, μπορείτε να χρησιμοποιήσετε τον λογαριασμό σας στο Google ή στο Facebook.
+2. Ενεργοποιήστε το πρόσθετο **Open Humans** στο [**Διαμόρφωση** > **Επικοινωνία**](../SettingUpAaps/ConfigBuilder.md).
 
-![Open Humans Config Builder](../images/OHUploader1.png)
+![Το Open Humans ενεργό στη Διαμόρφωση > Επικοινωνία](../images/OHUploader1.png)
 
-5. Read the given information about the Open Humans Uploader and terms of use carefully.
-6. Confirm by checking the box and click 'LOGIN'.
-7. Open Humans website will be opened. Login with your credentials.
-8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile.
-9. Click button 'Authorize project'.
+3. Πατήστε **Ρυθμίσεις** στην κάρτα **Open Humans**. Μπορείτε να περιορίσετε το ανέβασμα μόνο όταν το τηλέφωνο χρησιμοποιεί Wi-Fi (**Μόνο με WiFi**) και/ή όταν φορτίζει (**Μόνο κατά τη φόρτιση**).
 
-![Open Humans Terms of Use + Login](../images/OHUploader2.png)
+![Ρυθμίσεις του Open Humans με τις επιλογές Μόνο με WiFi και Μόνο κατά τη φόρτιση](../images/OHUploader_settings.png)
 
-10. Returning to AAPS you will see a prompt that login succeeded.
-11. Keep Open Humans Uploader plugin and phone turned on for setup to complete.
-12. After clicking close you will see your member ID. Queue sizes > 0 shows that there is still data to be uploaded.
-13. Click 'LOGOUT' if you want to stop uploading data to Open Humans.
-14. Android notification will inform you about running upload.
+4. Πατήστε **Άνοιγμα πρόσθετου** στην κάρτα **Open Humans** και μετά πατήστε **Ρύθμιση**.
 
-![Open Humans finish setup](../images/OHUploader3.png)
+![Η οθόνη του πρόσθετου Open Humans με το κουμπί Ρύθμιση](../images/OHUploader_setup.png)
 
-15. You can manage your data by logging in to the [Open Humans website](https://www.openhumans.org).
+5. Στην οθόνη **Καλώς ήρθατε στο Open Humans**, πατήστε **Επόμενο**. Διαβάστε προσεκτικά την οθόνη **Συγκατάθεση**: δείχνει τους όρους χρήσης και ποια δεδομένα ανεβαίνουν και ποια όχι.
+6. Ενεργοποιήστε το **Καταλαβαίνω και συμφωνώ.** (1) και πατήστε **Σύνδεση στο Open Humans** (2).
 
-![Open Humans manage data](../images/OHWeb.png)
+![Οι οθόνες Καλώς ήρθατε και Συγκατάθεση του Open Humans στο AAPS](../images/OHUploader2.png)
 
-## Sharing Opportunities
+7. Θα ανοίξει η ιστοσελίδα του Open Humans. Συνδεθείτε με τα στοιχεία σύνδεσής σας.
+8. Αποφασίστε αν θέλετε να κρύψετε τη συμμετοχή σας στο AAPS Uploader στο δημόσιο προφίλ σας στο Open Humans (1).
+9. Κάντε κλικ στο **Authorize project** (εξουσιοδότηση του προγράμματος) (2).
 
-### [The 'OPEN' project](https://www.open-diabetes.eu/)
+![Σύνδεση και εξουσιοδότηση του προγράμματος στην ιστοσελίδα του Open Humans](../images/OHUploader_web.png)
 
-The 'OPEN' project brings together an international and intersectoral consortium of patient innovators, clinicians, social scientists, computer scientists and patient advocacy organizations in order to investigate various aspects of Do-it-Yourself Artificial Pancreas Systems (DIY APS) that are used by an increasing number of people with diabetes. For more details see their [website](https://www.open-diabetes.eu/).
+```{admonition} Older screenshot
+:class: note
+Οι παραπάνω εικόνες δείχνουν μια παλαιότερη έκδοση της ιστοσελίδας του Open Humans και έχουν ακόμα το παλιό όνομα του προγράμματος **AndroidAPS Uploader**. Τα βήματα είναι τα ίδια.
+```
 
-September 2020 the 'OPEN' project launched a [survey](https://survey.open-diabetes.eu/) including the option to donate data you uploaded to Open Humans. A [tutorial](https://open-diabetes.eu/en/open-survey/survey-tutorials/) how to donate your data to the 'OPEN' project is available on their site and within the survey itself.
+10. Πίσω στο **AAPS**, η οθόνη **Τελικές πινελιές** ρωτά αν θέλετε να συνεχίσετε. Πατήστε **Συνέχεια**.
+11. Περιμένετε μέχρι να εμφανιστεί το **Είμαστε έτοιμοι!** και μετά πατήστε **Κλείσιμο**. Από εδώ και πέρα, το τηλέφωνό σας ανεβάζει δεδομένα στο παρασκήνιο κατά διαστήματα.
+12. Η οθόνη του πρόσθετου **Open Humans** δείχνει τώρα το **ID Μέλους Έργου** σας. Πατήστε **Ανέβασμα τώρα** αν θέλετε να ξεκινήσει ένα ανέβασμα αμέσως.
+13. Πατήστε **Αποσύνδεση** αν θέλετε να σταματήσετε το ανέβασμα δεδομένων στο Open Humans.
+14. Μια ειδοποίηση του Android θα σας ενημερώνει όταν γίνεται ανέβασμα δεδομένων.
+
+![Open Humans: ολοκλήρωση της ρύθμισης](../images/OHUploader3.png)
+
+```{admonition} Older screenshot
+:class: note
+Η παραπάνω εικόνα είναι από παλαιότερη έκδοση του **AAPS**. Στο **AAPS** 4 οι οθόνες επιβεβαίωσης είναι οι **Τελικές πινελιές** και **Είμαστε έτοιμοι!**, δεν υπάρχει μέγεθος ουράς και τα κουμπιά είναι **Ανέβασμα τώρα** και **Αποσύνδεση**.
+```
+
+15. Μπορείτε να διαχειριστείτε τα δεδομένα σας, αν συνδεθείτε στην [ιστοσελίδα του Open Humans](https://www.openhumans.org).
+
+![Open Humans: διαχείριση δεδομένων](../images/OHWeb.png)
+
+## Ευκαιρίες για κοινή χρήση
+
+### [Το πρόγραμμα 'OPEN'](https://www.open-diabetes.eu/)
+
+Το πρόγραμμα 'OPEN' φέρνει μαζί μια διεθνή και διατομεακή ομάδα από ασθενείς-καινοτόμους, γιατρούς, κοινωνικούς επιστήμονες, επιστήμονες πληροφορικής και οργανώσεις που υποστηρίζουν ασθενείς. Στόχος είναι να ερευνήσουν διάφορες πλευρές των συστημάτων τεχνητού παγκρέατος «φτιάξ' το μόνος σου» (DIY APS), που τα χρησιμοποιούν όλο και περισσότεροι άνθρωποι με διαβήτη. Για περισσότερες λεπτομέρειες δείτε την [ιστοσελίδα](https://www.open-diabetes.eu/) τους.
+
+Τον Σεπτέμβριο του 2020 το πρόγραμμα 'OPEN' ξεκίνησε μια [έρευνα](https://survey.open-diabetes.eu/), με την επιλογή να δωρίσετε τα δεδομένα που στείλατε στο Open Humans. Ένας [οδηγός](https://open-diabetes.eu/en/open-survey/survey-tutorials/) για το πώς να δωρίσετε τα δεδομένα σας στο πρόγραμμα 'OPEN' υπάρχει στην ιστοσελίδα τους και μέσα στην ίδια την έρευνα.
 
 ### [OpenAPS Data Commons](https://www.openhumans.org/activity/openaps-data-commons/)
 
-The OpenAPS Data Commons was created to enable a simple way to share data sets from the DIYAPS community for research. The data is shared both with traditional researchers who will create traditional research studies, and with groups or individuals from the community who want to review data as part of their own research projects. The OpenAPS Data Commons uses the 'Open Humans' platform to enable people to easily upload and share their data from DIYAPS including AAPS, Loop, and OpenAPS.
+Το OpenAPS Data Commons δημιουργήθηκε για να μπορεί η κοινότητα DIYAPS να μοιράζεται εύκολα σύνολα δεδομένων για έρευνα. Τα δεδομένα μοιράζονται τόσο με κλασικούς ερευνητές, που κάνουν κλασικές ερευνητικές μελέτες, όσο και με ομάδες ή άτομα από την κοινότητα, που θέλουν να εξετάσουν δεδομένα για τα δικά τους ερευνητικά προγράμματα. Το OpenAPS Data Commons χρησιμοποιεί την πλατφόρμα 'Open Humans', ώστε οι χρήστες να ανεβάζουν και να μοιράζονται εύκολα τα δεδομένα τους από συστήματα DIYAPS, όπως το AAPS, το Loop και το OpenAPS.
 
-You can get your data into Open Humans via one of three ways:
+Μπορείτε να στείλετε τα δεδομένα σας στο Open Humans με έναν από τρεις τρόπους:
 
-1. use the AAPS uploader option to get your data into Open Humans
-2. use the Nightscout Data Transfer to get your data into Open Humans
-3. manually upload data files into Open Humans.
+1. χρησιμοποιήστε την επιλογή ανεβάσματος του AAPS για να ανεβάσετε τα δεδομένα σας στο Open Humans
+2. χρησιμοποιήστε το Nightscout Data Transfer για να στείλετε τα δεδομένα σας στο Open Humans
+3. στείλτε αρχεία δεδομένων στο Open Humans χειροκίνητα.
 
-Once you've created an account and gotten your data flowing into Open Humans, make sure to also join the OpenAPS Data Commons in order to donate your data for research if you choose.
+Όταν δημιουργήσετε λογαριασμό και τα δεδομένα σας αρχίσουν να φτάνουν στο Open Humans, μη ξεχάσετε να συμμετέχετε και στο OpenAPS Data Commons, για να δωρίσετε τα δεδομένα σας για έρευνα, αν το θέλετε.
 
-## Terms of Use
+## Όροι Χρήσης
 
-This is an open source tool that will copy your data to [Open Humans](https://www.openhumans.org). We retain no rights to share your data with third parties without your explicit authorization. The data the project and app receive are identified via a random user ID and will only be securely transmitted to an Open Humans account with your authorization of that process. You can stop uploading and delete your upload data at any time via [www.openhumans.org](https://www.openhumans.org). Beware that some projects that receive data may not support this.
+Αυτό είναι ένα εργαλείο ανοιχτού κώδικα που θα αντιγράψει τα δεδομένα σας στο [Open Humans](https://www.openhumans.org). Δεν έχουμε κανένα δικαίωμα να μοιραστούμε τα δεδομένα σας με τρίτους χωρίς τη ρητή άδειά σας. Τα δεδομένα που λαμβάνουν το πρόγραμμα και η εφαρμογή αναγνωρίζονται μέσω ενός τυχαίου αναγνωριστικού χρήστη (ID). Στέλνονται με ασφάλεια μόνο σε έναν λογαριασμό Open Humans και μόνο με τη δική σας άδεια για αυτή τη διαδικασία. Μπορείτε να σταματήσετε το ανέβασμα και να διαγράψετε τα δεδομένα που ανεβάσατε οποιαδήποτε στιγμή μέσω του [www.openhumans.org](https://www.openhumans.org). Προσοχή: μερικά προγράμματα που λαμβάνουν δεδομένα μπορεί να μην το υποστηρίζουν αυτό.
 
-Also see [Open Humans Terms of Use](https://www.openhumans.org/terms/).
+Δείτε επίσης τους [Όρους Χρήσης του Open Humans](https://www.openhumans.org/terms/).
 
-## Data Privacy
+## Προστασία δεδομένων
 
-Open Humans takes care of protecting your privacy by assigning a numerical ID to you for each project. This allows projects to recognize but no identify you. The Application ID uploaded by AAPS is similar and only helps administrate the data. More information can be found here:
+Το Open Humans προστατεύει την ιδιωτικότητά σας: σας δίνει ένα αριθμητικό αναγνωριστικό (ID) για κάθε πρόγραμμα. Έτσι τα προγράμματα μπορούν να σας αναγνωρίζουν, αλλά όχι να μάθουν ποιος είστε. Το αναγνωριστικό εφαρμογής (Application ID) που ανεβάζει το AAPS είναι παρόμοιο και βοηθά μόνο στη διαχείριση των δεδομένων. Περισσότερες πληροφορίες θα βρείτε εδώ:
 
-- [Open Humans Data Use Policy](https://www.openhumans.org/data-use/)
+- [Πολιτική χρήσης δεδομένων του Open Humans](https://www.openhumans.org/data-use/)
 - [Open Humans GDPR](https://www.openhumans.org/gdpr/)

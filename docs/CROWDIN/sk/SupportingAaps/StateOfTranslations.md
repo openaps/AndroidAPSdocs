@@ -1,26 +1,26 @@
-# state of translation for app and the documentation
+# Stav prekladu aplikácie a dokumentácie
 
-The state is once per hour updated and reflects only the state in Crowdin.
+Stav sa aktualizuje raz za hodinu a ukazuje len stav v Crowdine.
 
 ```{tip}
-Be careful the percentage of proofreading must be lower then the percentage of translations but they decided to show it on top of the translations.
-It's better to look only at the percentage level of translations to see if work is to be done.
+Be careful the percentage of proofreading must be lower than the percentage of translations but they decided to show it on top of the translations.
+Ak chcete zistiť, či je ešte potrebné niečo preložiť, pozerajte sa radšej len na percento prekladov.
 ```
 
 ```{admonition} needed time for final publication
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+Po preklade v Crowdine sa každý deň spustí synchronizácia na GitHub, ktorá prenesie preklady na GitHub ako pull request (PR).
 
-The acceptance of the PR is a manual task which will be done es fast as possible.
+The acceptance of the PR is a manual task which will be done as fast as possible.
 ```
 
-## state app translation
+## stav prekladu aplikácie
 
-State of the **app** translations per language (country code, percentage translation, percentage proofreading).
+Stav prekladov **aplikácie** podľa jazykov (kód krajiny, percento preložených reťazcov, percento korektúry).
 
-![state app translation](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
+![stav prekladu aplikácie](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
-## state documentation translation
+## stav prekladu dokumentácie
 
-State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
+Stav prekladov **dokumentácie** podľa jazykov (kód krajiny, percento preložených reťazcov, percento korektúry).
 
-![state documentation translation](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
+![stav prekladu dokumentácie](https://badges.awesome-crowdin.com/translation-13588158-310610.png)

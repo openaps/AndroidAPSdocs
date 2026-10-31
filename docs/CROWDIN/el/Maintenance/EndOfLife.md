@@ -1,40 +1,40 @@
-# End of life
+# Τέλος υποστήριξης
 
-Even if your current AAPS system works exactly the way you like, upgrading is still worth it because newer releases bring safety fixes and bug corrections you may never notice until they matter, keep compatibility with new phone OS versions, CGM apps, pump firmware and Nightscout changes, add algorithm improvements and features that have been tested by the wider community, and ensure you stay on a version that is still supported and that others can actually help you troubleshoot. Some previous AAPS versions deliberately have no expiration date so they can keep working on older Android versions, so the lack of an expiration warning is not a sign that your version is still up to date or supported.
+Ακόμη κι αν το σύστημα AAPS που έχετε τώρα λειτουργεί ακριβώς όπως θέλετε, η αναβάθμιση αξίζει. Οι νέες εκδόσεις φέρνουν διορθώσεις ασφάλειας και σφαλμάτων που ίσως δεν θα προσέξετε μέχρι να γίνουν σημαντικές. Διατηρούν τη συμβατότητα με νέες εκδόσεις του λειτουργικού συστήματος του τηλεφώνου, με εφαρμογές CGM, με το firmware της αντλίας και με αλλαγές στο Nightscout. Προσθέτουν βελτιώσεις στον αλγόριθμο και λειτουργίες που έχει δοκιμάσει η ευρύτερη κοινότητα. Και εξασφαλίζουν ότι μένετε σε μια έκδοση που υποστηρίζεται ακόμη, ώστε οι άλλοι να μπορούν πραγματικά να σας βοηθήσουν να λύσετε προβλήματα. Ορισμένες παλαιότερες εκδόσεις του AAPS σκόπιμα δεν έχουν ημερομηνία λήξης, ώστε να συνεχίζουν να λειτουργούν σε παλαιότερες εκδόσεις Android. Γι' αυτό, αν δεν βλέπετε προειδοποίηση λήξης, αυτό δεν σημαίνει ότι η έκδοσή σας είναι ενημερωμένη ή ότι υποστηρίζεται ακόμη.
 
-Each AAPS version can have an end date. After this date, AAPS may [limit the loop](#version-enforcement). AAPS warns you before a version expires. Plan to update before the end date, and follow the [update guide](UpdateToNewVersion.md).
+Κάθε έκδοση του AAPS μπορεί να έχει ημερομηνία λήξης. Μετά από αυτή την ημερομηνία, το AAPS μπορεί να [περιορίσει το κύκλωμα](#version-enforcement). Το AAPS σας προειδοποιεί πριν λήξει μια έκδοση. Σχεδιάστε την ενημέρωση πριν από την ημερομηνία λήξης και ακολουθήστε τον [οδηγό ενημέρωσης](UpdateToNewVersion.md).
 
-## How to use this page
+## Πώς να χρησιμοποιήσετε αυτή τη σελίδα
 
-1. In AAPS, tap the three dots at the top right and choose **About**. You will see your AAPS version there.
-2. Find the same version in the first table below. Read the end date next to it. Dates are written as **year-month-day**. For example, `2026-10-30` means 30 October 2026.
-3. Check the [Release Notes](ReleaseNotes.md) and the [update guide](UpdateToNewVersion.md) before you update. The version you can use also depends on your phone's Android version.
+1. Στο AAPS, ανοίξτε το **μενού** (☰) πάνω αριστερά και επιλέξτε **Σχετικά**. Εκεί θα δείτε την έκδοση του AAPS σας.
+2. Βρείτε την ίδια έκδοση στον πρώτο πίνακα παρακάτω. Διαβάστε την ημερομηνία λήξης δίπλα της. Οι ημερομηνίες γράφονται ως **έτος-μήνας-ημέρα**. Για παράδειγμα, το `2026-10-30` σημαίνει 30 Οκτωβρίου 2026.
+3. Πριν από την ενημέρωση, διαβάστε τις [Σημειώσεις έκδοσης](ReleaseNotes.md) και τον [οδηγό ενημέρωσης](UpdateToNewVersion.md). Η έκδοση που μπορείτε να χρησιμοποιήσετε εξαρτάται και από την έκδοση Android του τηλεφώνου σας.
 
-The table does not show an end date for every AAPS version. If your version is missing, its end date may not have been set yet. This does not mean it will be supported forever.
+Ο πίνακας δεν δείχνει ημερομηνία λήξης για κάθε έκδοση του AAPS. Αν η έκδοσή σας λείπει, μπορεί να μην έχει οριστεί ακόμη η ημερομηνία λήξης της. Αυτό δεν σημαίνει ότι θα υποστηρίζεται για πάντα.
 
-## AAPS version end dates
+## Ημερομηνίες λήξης των εκδόσεων του AAPS
 
-<div id="aaps-eol-status" role="status" aria-live="polite">Loading AAPS version data…</div>
+<div id="aaps-eol-status" role="status" aria-live="polite">Φόρτωση δεδομένων εκδόσεων του AAPS…</div>
 <noscript>
-  Turn on JavaScript to see the tables.
+  Ενεργοποιήστε τη JavaScript για να δείτε τους πίνακες.
 </noscript>
 
 <div id="aaps-eol-versions" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">AAPS version</th><th scope="col">End date</th></tr></thead>
+    <thead><tr><th scope="col">Έκδοση AAPS</th><th scope="col">Ημερομηνία λήξης</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>
 
-## Android API levels
+## Επίπεδα API του Android
 
-Android gives each system version an **API level**, which is a number used by apps. For example, API level 30 is Android 11. The table below uses API levels from AAPS version data. The AAPS version in each row is the value listed for the API level shown. This is not a full list of versions you can install.
+Το Android δίνει σε κάθε έκδοση του συστήματος ένα **επίπεδο API**, δηλαδή έναν αριθμό που χρησιμοποιούν οι εφαρμογές. Για παράδειγμα, το επίπεδο API 30 είναι το Android 11. Ο παρακάτω πίνακας χρησιμοποιεί επίπεδα API από τα δεδομένα εκδόσεων του AAPS. Η έκδοση του AAPS σε κάθε γραμμή είναι η τιμή που αναφέρεται για το επίπεδο API που φαίνεται. Αυτή δεν είναι πλήρης λίστα των εκδόσεων που μπορείτε να εγκαταστήσετε.
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version). If no AAPS version is listed for an API level, the table says “None listed”.
+Για να επιλέξετε μια έκδοση του AAPS για το τηλέφωνό σας, χρησιμοποιήστε τις [οδηγίες για την έκδοση Android στις Σημειώσεις έκδοσης](#maintenance-android-version-aaps-version). Αν δεν αναφέρεται καμία έκδοση του AAPS για ένα επίπεδο API, ο πίνακας γράφει «Καμία έκδοση».
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">Android API level</th><th scope="col">AAPS version listed</th></tr></thead>
+    <thead><tr><th scope="col">Επίπεδο API του Android</th><th scope="col">Έκδοση AAPS που αναφέρεται</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>
@@ -75,11 +75,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     showRows('aaps-eol-android', android.map(entry => [
       entry.minAndroid === entry.maxAndroid
         ? String(entry.minAndroid) : `${entry.minAndroid}–${entry.maxAndroid}`,
-      typeof entry.supported === 'string' && entry.supported ? entry.supported : 'None listed'
+      typeof entry.supported === 'string' && entry.supported ? entry.supported : 'Καμία έκδοση'
     ]));
     status.remove();
   } catch {
-    status.textContent = 'Could not load AAPS version data. Please try again later.';
+    status.textContent = 'Δεν ήταν δυνατή η φόρτωση των δεδομένων εκδόσεων του AAPS. Δοκιμάστε ξανά αργότερα.';
   }
 });
 </script>

@@ -1,41 +1,66 @@
 # Tidepool
 
-Tidepool is a third party tool that collects data regarding BG, insulin and carbs and can be used to analyze and share this data with your clinical team. Since AAPS version 3.2 it can be used as an alternative to Nightscout for satisfying part of Objective 1. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with.
+Tidepool to narzędzie innej firmy. Zbiera dane o glikemii, insulinie i węglowodanach (oraz notatki, które dodajesz do wpisów leczenia). Możesz je analizować i udostępniać swojemu zespołowi diabetologicznemu. Od wersji AAPS 3.2 Tidepool może zastąpić Nightscout przy spełnieniu części Zadania 1. Może też być używany razem z Nightscout jako dodatkowa platforma raportów, która dobrze współpracuje z placówkami medycznymi. Może to być dobra opcja dla dzieci używających AAPS, które chcą mieć zdalne monitorowanie i sterowanie z Nightscout, ale też platformę raportów, z którą zespół diabetologiczny czuje się pewniej.
 
-It is important to understand the tidepool is for reporting only. It is NOT a real-time follow app. If you need to have followers apart from the main AAPS phone you must setup Nightscout as well.
+Ważne: Tidepool służy tylko do raportów. NIE jest to aplikacja do obserwowania danych w czasie rzeczywistym. Jeśli potrzebujesz obserwujących poza głównym telefonem z AAPS, musisz także skonfigurować Nightscout.
 
-Note: the Tidepool organization has brought the iOS Loop product to market with FDA approval. This effort has nothing to do with their data reporting platform or AAPS.
-
-
-## Step 1 - Setup a tidepool account
-
--Navigate to [tidepool.org](https://www.tidepool.org/)
-
--Select “Personal Sign Up” or “Sign Up”
-
--Create and document an email and password
-
--Select “Personal Account” and click “Continue”
-
--Complete the patient information section and accept the terms of use
-
--Verify your email address via the instructions received to your email
+Uwaga: organizacja Tidepool wprowadziła na rynek produkt iOS Loop z zatwierdzeniem FDA. Nie ma to nic wspólnego z ich platformą raportów danych ani z AAPS.
 
 
-## Step 2 - Enter credentials into AAPS
+## Krok 1 – Załóż konto Tidepool
 
--Select the three-line “hamburger” menu in the top left and the select “Config Builder” (if “Config Builder is not located there it will instead be one of the tabs along the top)
+- Wejdź na [tidepool.org](https://www.tidepool.org/)
 
--Scroll down to the “Synchronization” section and select the check mark to the left of “Tidepool”
+- Wybierz „Personal Sign Up” lub „Sign Up” (rejestracja)
 
--Click the gear icon to the right of “Tidepool”
+- Utwórz adres e-mail i hasło i zapisz je
 
--Enter the username and password you created in Step 1 above
+- Wybierz „Personal Account” (konto osobiste) i kliknij „Continue” (dalej)
 
--Click “Test Tidepool Login”
+- Wypełnij sekcję z danymi pacjenta i zaakceptuj warunki korzystania
 
--If you get the “Successfully logged into Tidepool” message you have successfully connected. If not, confirm your credentials are correct and that you have verified your email address with Tidepool.
+- Potwierdź swój adres e-mail według instrukcji, które dostaniesz w wiadomości e-mail
 
--Click on “Connection settings” and set based on your personal preferences
 
-For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data) 
+## Krok 2 – Połącz AAPS z Tidepool
+
+- Otwórz **menu** (☰) w lewym górnym rogu ekranu głównego i wybierz „**Konfiguracja**”
+
+- Otwórz kategorię „**Komunikacja**” i włącz „**Tidepool**”:
+
+![Włączenie Tidepool](../images/v4/Tidepool/tidepool_enable.png)
+
+- Dotknij „**Otwórz wtyczkę**” pod Tidepool, a potem dotknij ikony **Zaloguj się** (strzałka wchodząca do drzwi) w prawym górnym rogu
+
+- Otworzy się okno przeglądarki ze stroną logowania Tidepool. Zaloguj się adresem e-mail i hasłem utworzonymi w kroku 1:
+
+![Strona logowania Tidepool](../images/v4/Tidepool/tidepool_login.png)
+
+- Po udanym logowaniu przeglądarka się zamknie, a ekran Tidepool pokaże status „**Połączono**”. Log poniżej pokazuje przesyłanie danych. Jeśli logowanie się nie uda, sprawdź, czy dane logowania są poprawne i czy potwierdziłeś swój adres e-mail w Tidepool.
+
+![Tidepool połączony](../images/v4/Tidepool/tidepool_status.png)
+
+- W „**Ustawieniach**” wtyczki Tidepool otwórz „**Ustawienia połączenia**”. Domyślnie opcja „**Użyj ustawień połączenia Nightscout**” jest włączona, więc Tidepool przesyła dane na tych samych warunkach, które ustawiłeś dla Nightscout. Wyłącz ją, jeśli chcesz osobne warunki dla Tidepool, na przykład przesyłanie do Tidepool tylko przez Wi-Fi i podczas ładowania, a Nightscout korzysta też z danych komórkowych.
+
+![Ustawienia połączenia z włączoną opcją Użyj ustawień połączenia Nightscout](../images/v4/Tidepool/tidepool_connection_settings.png) ![Osobne ustawienia połączenia dla Tidepool](../images/v4/Tidepool/tidepool_connection_settings_separate.png)
+
+Więcej pomocy na temat korzystania z danych przesłanych do Tidepool znajdziesz tutaj: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
+
+(tidepool-menu)=
+## Przyciski Tidepool
+
+W prawym górnym rogu ekranu Tidepool:
+
+- Ikona **Zaloguj się** lub **Wyloguj się** — połączenie z kontem Tidepool lub rozłączenie. Widoczna jest tylko jedna z nich: **Zaloguj się**, gdy jesteś wylogowany, **Wyloguj się**, gdy jesteś zalogowany. **AAPS** prosi o potwierdzenie przed wylogowaniem.
+- Ikona koła zębatego — ustawienia Tidepool.
+
+Przyciski na dole ekranu Tidepool:
+
+- „**Prześlij teraz**” — prześlij nowe dane od razu, bez czekania na następne automatyczne przesłanie.
+- „**Pełna synchronizacja**” — prześlij ponownie wszystkie dane zapisane w **AAPS**.
+- „**Wyczyść wszystkie dane**” — usuń **wszystkie** dane, które **AAPS** przesłał na twoje konto Tidepool. Tego nie można cofnąć. Używaj tego tylko do usunięcia błędnych lub zdublowanych danych, a potem uruchom „**Pełna synchronizacja**”, aby ponownie przesłać swoje dane.
+- „**Wyczyść log**” — wyczyść log widoczny na ekranie Tidepool.
+
+![Ekran Tidepool i jego przyciski](../images/v4/Tidepool/tidepool_menu.png)
+
+W Tidepool dane przesłane przez **AAPS** 4 są widoczne pod nazwą urządzenia **AAPS**. Jeśli używałeś Tidepool ze starszą wersją, zobacz [Co zmieniło się w AAPS v4](#v4changes-tidepool). 

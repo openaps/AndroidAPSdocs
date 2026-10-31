@@ -1,6 +1,15 @@
 # 手機
 
-目前版本的 **AAPS**（3.4）需要使用 Google **Android 12.0 或更高版本** 的 Android 智慧型手機。如果你正在考慮購買新智慧型手機（截至 2026 年 1 月），**建議優先選擇 Android 16**，不建議使用 Android 15。
+<!-- List of hidden pages to avoid overcrowding the menu -->
+
+```{toctree}
+:hidden:
+
+../CompatiblePhones/Jelly.md
+../CompatiblePhones/Huawei.md
+```
+
+The current version of **AAPS** (4.0) requires an Android smartphone with Google **Android 12.0 or above**. 如果你正在考慮購買新智慧型手機（截至 2026 年 1 月），**建議優先選擇 Android 16**，不建議使用 Android 15。
 
 請查看 [Facebook 或 Discord](../GettingHelp/WhereCanIGetHelp.md) 獲取有關此主題的最新更新。
 
@@ -11,15 +20,15 @@
 
 (Phones-list-of-tested-phones)=
 
-## 測試過的手機列表
+## List of tested phones
 
 我們維護一份[已測試過的硬體設定](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)清單，你可以透過[友善的介面來瀏覽](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/)。透過填寫 [Google 表單](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) 並新增你的設定來參與貢獻！
 
 此列表提供用戶對於使用手機搭配**AAPS**以及指定的幫浦和 CGM 的回饋。這可以幫助你檢查你的手機/幫浦/CGM 是否有其他用戶已成功使用。
 
-該文件為唯讀。使用CTRL-F，你可以在Google表單的文字中搜尋。
+該文件為唯讀。 With CTRL-F, you can search in the text of the Google sheet.
 
-若要記錄你的硬體設置測試，請填寫這個[表單](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform)。填寫表單資料後，該表格會自動每 5 分鐘更新一次
+若要記錄你的硬體設置測試，請填寫這個[表單](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform)。 After you fill in the form data, the sheet is updated automatically every 5 minutes.
 
 對於試算表的任何問題，請聯繫其維護者*@theodoor5137*，在 Discord 聯絡，或請參閱[我可以在哪裡獲得幫助? 頁面](../GettingHelp/WhereCanIGetHelp.md)。
 
@@ -31,7 +40,7 @@
 
 (Phones-phone-wallpaper)=
 
-## 手機桌布
+## Phone wallpaper
 
 如果你想以更多 **AAPS** 裝飾你的手機，可以 [在這裡下載背景圖片](../images/bg_phone.jpg)！
 

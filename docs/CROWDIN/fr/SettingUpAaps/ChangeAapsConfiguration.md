@@ -1,43 +1,43 @@
-# Making changes to your AAPS' configuration
+# Modifier la configuration d'AAPS
 
-After you have completed the **[Setup Wizard](../SettingUpAaps/SetupWizard.md)**, you don't need to run the entire Wizard again if you want to only change parts of your **AAPS**' configuration.
+Après avoir terminé l'**[Assistant de configuration](../SettingUpAaps/SetupWizard.md)**, vous n'avez pas besoin de relancer tout l'assistant si vous voulez seulement modifier une partie de la configuration d'**AAPS**.
 
-There are three routes to change AAPS’ configuration. As to which route you take, it is simply a matter of convenience or personal preference as each route leads to the same configuration settings.
+Il y a trois voies pour modifier la configuration d'**AAPS**. Le choix de la voie est simplement une question de commodité ou de préférence personnelle, car chaque voie mène aux mêmes paramètres.
 
 Ces possibilités sont les suivantes :
 
-1. Menu hamburger à gauche, puis "Configuration",
-1. Three dot menu on the right and select "Preferences" or
-1. Three dot menu on the right and select "Plugin preferences".
+1. L'écran **Configuration**,
+2. L'écran **Paramètres** ou
+3. Les **Paramètres** d'un plugin, ouverts depuis sa catégorie dans **Configuration**.
 
 Nous expliquons ci-dessous quelle option est la plus pratique pour chaque situation :
 
 ## Configuration
 
-![Open Config Builder](../images/ConfBuild_Open_AAPS30.png)
+Ouvrez le **menu** (☰) en haut à gauche de l'écran principal et choisissez **Configuration** :
 
-The **config builder** is used if you want to **enable plugins** and their **visibility** in the top level menu. Once enabled, the **plugins** will always run, and you can decide if you want to be able to see them in the top menu or not. Disabled plugins can not be made visible.
+![Ouvrir Configuration depuis le menu en haut à gauche](../images/v4/Configuration/configuration_menu.png)
 
-You can use the cogwheel next to each activated plugin to access its settings.
+**Configuration** sert à **choisir les plugins actifs** : votre MGC, votre pompe, l'algorithme APS, le calcul de sensibilité, la synchronisation et plus encore, regroupés par catégorie. C'est le même écran que l'Assistant de configuration a réglé pour vous.
 
-The documentation relating to the config builder is available [here](../SettingUpAaps/ConfigBuilder.md).
+La documentation de l'écran Configuration est disponible [ici](../SettingUpAaps/ConfigBuilder.md).
 
-## Préférences
+## Paramètres
 
-![Open preferences](../images/Pref2020_Open2.png)
+Touchez l'icône **Paramètres** (roue dentée) en haut à droite de l'écran principal. Cela ouvre les paramètres de **tous les plugins activés à un seul endroit**, regroupés en sections dépliables :
 
-The **preferences** dialogue can be reached via the top right _three dots_ menu on any tab of **AAPS**. This allows to change the configuration of **all enabled plugins in a single place**.
+![L'écran Paramètres avec ses sections dépliables](../images/v4/Configuration/settings_overview.png)
 
-This is a good route if you are not really sure where to look for a configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
+C'est une bonne voie si vous ne savez pas bien où chercher une option de configuration. Mais elle peut être un peu longue si vous savez que vous voulez modifier la configuration d'un seul plugin précis.
 
-The documentation of the preferences is available [here](../SettingUpAaps/Preferences.md).
+La documentation des paramètres est disponible [ici](../SettingUpAaps/Preferences.md).
 
-## Préférences du plugin
+## Les Paramètres d'un plugin
 
-![Open plugin preferences](../images/Pref2020_OpenPlugin2.png)
+Dans **Configuration**, ouvrez une catégorie et touchez « **Paramètres** » sous le plugin actif. Vous arrivez directement aux paramètres de **ce plugin seulement** :
 
-The **plugin preferences** dialogue can be reached via the top right _three dots_ menu on the home screen of **AAPS**. It allows to change the configuration of the **plugin currently on screen**.
+![Paramètres et Ouvrir le plugin sous le plugin actif](../images/v4/Configuration/configuration_open_plugin.png)
 
-For example, this is a good route if you know that you want to change the configuration for BYODA. Then, you would select the tab "BYODA" on the top menu of **AAPS**, and then once you are on the BYODA page, in the top right, select the _three dots_ menu and then the "plugin preferences" entry. Vous arrivez directement sur la section des préférences du plugin BYODA.
+Par exemple, c'est une bonne voie si vous savez que vous voulez modifier la configuration de votre pompe : ouvrez **Configuration → Pompe**, puis touchez « **Paramètres** » sous la pompe choisie.
 
-This is a "shortcut" to the general preferences dialogue, the documentation of the preferences is available [here](../SettingUpAaps/Preferences.md).
+C'est un « raccourci » vers les mêmes paramètres que ceux de l'écran général **Paramètres**.

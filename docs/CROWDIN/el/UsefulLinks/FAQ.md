@@ -1,199 +1,211 @@
 # Συχνές Ερωτήσεις
 
-How to add questions to the FAQ: Follow the these [instructions](../SupportingAaps/HowToEditTheDocs.md)
+Πώς να προσθέσετε ερωτήσεις στις Συχνές Ερωτήσεις: ακολουθήστε αυτές τις [οδηγίες](../SupportingAaps/HowToEditTheDocs.md)
 
-## General
+## Γενικά
 
-### Can I just download the AAPS installation file?
+### Μπορώ απλά να κατεβάσω το αρχείο εγκατάστασης του AAPS;
 
-Όχι. Δεν υπάρχει κανένα αρχείο apk που να μπορείτε να κατεβάσετε για το AAPS. You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. Ο λόγος που δεν διανέμεται τέτοιο αρχείο είναι ο εξής:
+Όχι. Δεν υπάρχει κανένα αρχείο apk που να μπορείτε να κατεβάσετε για το AAPS. Πρέπει να το [δημιουργήσετε](../SettingUpAaps/BuildingAaps.md) μόνοι σας. Ο λόγος που δεν διανέμεται τέτοιο αρχείο είναι ο εξής:
 
-Το AAPS χρησιμοποιείται για να ελέγξει την αντλία σας και να χορηγήσει ινσουλίνη. Σύμφωνα με την ισχύουσα νομοθεσία στην Ευρώπη, όλα τα συστήματα που ανήκουν σε κατηγορίες όπως είναι οι lla ή llb χαρακτηρίζονται ως ιατρικές συσκευές. Για την κυκλοφορία τέτοιων συσκευών απαιτείται έγκριση από τους αρμόδιους φορείς. Προκειμένου να ληφθεί τέτοιου είδους έγκριση (CE) απαιτείται μία σειρά μελετών, δοκιμών και ελέγχων. Διαφορετικά, η διάθεση τους δεν είναι νόμιμη. Τέτοιες διαδικασίες ελέγχου και εγκρίσεων υπάρχουν και σε άλλα μέρη του κόσμου.
+Το AAPS χρησιμοποιείται για να ελέγξει την αντλία σας και να χορηγήσει ινσουλίνη. Σύμφωνα με την ισχύουσα νομοθεσία στην Ευρώπη, όλα τα συστήματα που ανήκουν στις κατηγορίες IIa ή IIb είναι ιατρικές συσκευές. Για αυτές απαιτείται έγκριση από τους αρμόδιους φορείς (σήμανση CE), για την οποία χρειάζονται διάφορες μελέτες και υπογραφές. Η διανομή μιας ιατρικής συσκευής χωρίς έγκριση είναι παράνομη. Τέτοιες διαδικασίες ελέγχου και εγκρίσεων υπάρχουν και σε άλλα μέρη του κόσμου.
 
-Τα παραπάνω δεν αφορούν μόνο συστήματα που διατίθενται προς πώληση (δηλ. έναντι χρηματικού ποσού) αλλά σε όλα τα συστήματα, με όποιον τρόπο και αν διανέμονται (ακόμα και αν διατίθενται δωρεάν). Το να δημιουργήσεις μια ιατρική συσκευή για δική σου χρήση και με δική σου ευθύνη, είναι η μόνη περίπτωση μη εφαρμογής των παραπάνω.
+Τα παραπάνω δεν αφορούν μόνο συστήματα που διατίθενται προς πώληση (δηλ. έναντι χρηματικού ποσού) αλλά σε όλα τα συστήματα, με όποιον τρόπο και αν διανέμονται (ακόμα και αν διατίθενται δωρεάν). Ο μόνος τρόπος να χρησιμοποιήσετε την εφαρμογή μέσα σε αυτούς τους κανόνες είναι να δημιουργήσετε μόνοι σας την ιατρική συσκευή για τον εαυτό σας.
 
-Για αυτό δεν διατίθενται εκτελέσιμα αρχεία εγκατάστασης του AndroidAPS.
+Γι' αυτό δεν διατίθενται αρχεία apk.
 
 (FAQ-how-to-begin)=
 
-### How to begin?
+### Από πού να ξεκινήσω;
+
+Ξεκινήστε με τη σελίδα [Προετοιμασία για την έναρξη με το AAPS](../Getting-Started/PreparingForAaps.md): σας εξηγεί πιο αναλυτικά όλα όσα ακολουθούν.
 
 Πρώτον, χρειάζονται τα εξής (hardware) **εξαρτήματα συμβατά με το κύκλωμα**:
 
-- A [supported insulin pump](../Getting-Started/CompatiblePumps.md), 
-- an [Android smartphone](../Getting-Started/Phones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
-- a [continuous glucose monitoring system](../Getting-Started/CompatiblesCgms.md). 
+* Μια [υποστηριζόμενη αντλία ινσουλίνης](../Getting-Started/CompatiblePumps.md), 
+* ένα [τηλέφωνο Android](../Getting-Started/Phones.md) (το Apple iOS δεν υποστηρίζεται από το AAPS - μπορείτε να δείτε το [iOS Loop](https://loopkit.github.io/loopdocs/)) και
+* ένα [σύστημα συνεχούς παρακολούθησης γλυκόζης](../Getting-Started/CompatiblesCgms.md). 
 
-Secondly, you have to **setup your software components**: [AAPS](../SettingUpAaps/BuildingAaps.md), [CGM/FGM source](../Getting-Started/CompatiblesCgms.md) and a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
+Δεύτερον, πρέπει να **ρυθμίσετε τα στοιχεία λογισμικού**: το [AAPS](../SettingUpAaps/BuildingAaps.md), την [πηγή CGM/FGM](../Getting-Started/CompatiblesCgms.md) και έναν [διακομιστή αναφορών](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-Thirdly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your [basal rate and carb ratio](../SettingUpAaps/YourAapsProfile.md) are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). Οι ρυθμίσεις που μπορεί να κάνει το κλειστό κύκλωμα έχουν περιοριστεί λόγο ασφάλειας (δείτε το μέγιστο επιτρεπόμενο προσωρινό βασικό ρυθμό στο [ OpenAPS Reference Design ](https://openaps.org/reference-design/)), πράγμα που σημαίνει ότι δεν θέλετε να χάσετε την επιτρεπόμενη δοσολογία στη διόρθωση ενός λάθους βασικού. Αν, για παράδειγμα, έχετε συχνά χαμηλές μετρήσεις στην προσέγγιση ενός γεύματος, τότε είναι πιθανό να πρέπει να προσαρμόσετε τις βασικές σας ανάγκες. You can use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old-fashioned way](https://integrateddiabetes.com/basal-testing/).
+Τρίτον, πρέπει να μάθετε και να **κατανοήσετε το OpenAPS reference design, για να ελέγξετε τις παραμέτρους της θεραπείας σας**. Η βασική αρχή του κλειστού κυκλώματος είναι ότι ο [βασικός ρυθμός και η αναλογία υδατανθράκων](../SettingUpAaps/YourAapsProfile.md) σας είναι σωστά. Όλες οι συστάσεις προϋποθέτουν ότι ο βασικός ρυθμός σας καλύπτει τις ανάγκες σας και ότι οι κορυφές ή οι πτώσεις που βλέπετε οφείλονται σε άλλους παράγοντες, που χρειάζονται κάποιες έκτακτες προσαρμογές (άσκηση, άγχος κ.λπ.). Οι αλλαγές που μπορεί να κάνει το κλειστό κύκλωμα είναι περιορισμένες για λόγους ασφαλείας (δείτε τον μέγιστο επιτρεπόμενο προσωρινό βασικό ρυθμό στο [OpenAPS Reference Design](https://openaps.org/reference-design/)). Αυτό σημαίνει ότι δεν θέλετε να σπαταλάτε την επιτρεπόμενη δόση για να διορθώνετε έναν λάθος βασικό ρυθμό. Αν, για παράδειγμα, έχετε συχνά χαμηλό προσωρινό βασικό ρυθμό πριν από ένα γεύμα, τότε πιθανότατα ο βασικός σας ρυθμός χρειάζεται προσαρμογή. Μπορείτε να χρησιμοποιήσετε το [Autotune](#autotune-how-autotune-calculates-adjustments), που εξετάζει μεγάλο όγκο δεδομένων και προτείνει αν και πώς πρέπει να προσαρμοστούν ο βασικός ρυθμός και/ή το ISF, καθώς και αν πρέπει να αλλάξει η αναλογία υδατανθράκων. Ή μπορείτε να ελέγξετε και να ορίσετε τον βασικό σας ρυθμό με τον [παραδοσιακό τρόπο](https://integrateddiabetes.com/basal-testing/).
 
-### What practicalities of looping do I have?
+### Ποια πρακτικά θέματα έχει το κύκλωμα;
 
-#### Password protection
+#### Προστασία με κωδικό πρόσβασης
 
-If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. Την επόμενη φορά που θα μεταβείτε στο μενού προτιμήσεων, θα ζητηθεί αυτός ο κωδικός πρόσβασης προτού προχωρήσετε περαιτέρω. Εάν αργότερα θέλετε να καταργήσετε την επιλογή κωδικού πρόσβασης, μεταβείτε στον "κωδικό πρόσβασης για τις ρυθμίσεις" και διαγράψτε το κείμενο.
+Αν δεν θέλετε να αλλάζουν εύκολα οι ρυθμίσεις σας, μπορείτε να τις προστατέψετε με κωδικό, PIN ή με βιομετρική ταυτοποίηση του τηλεφώνου σας (δακτυλικό αποτύπωμα, πρόσωπο). Ανοίξτε **Ρυθμίσεις** > **Προστασία** > **Προστασία ρυθμίσεων** και επιλέξτε τον τύπο προστασίας. Στο ίδιο σημείο μπορείτε επίσης να προστατέψετε ολόκληρη την εφαρμογή ή μόνο τα bolus. Για λεπτομέρειες δείτε [Προστασία ρυθμίσεων](#Preferences-settings-protection).
 
-#### Android Wear Smartwatches
+#### Έξυπνα ρολόγια Android Wear
 
-Εάν σκοπεύετε να χρησιμοποιήσετε την εφαρμογή wear του Android για χορηγηση ινσουλίνης ή για να αλλάξετε τις ρυθμίσεις, τότε θα πρέπει να διασφαλίσετε ότι οι ειδοποιήσεις από το AndroidAPS δεν αποκλείονται. Η επιβεβαίωση των ενεργειών γίνεται μέσω ειδοποιήσεων.
+Αν χρησιμοποιείτε την εφαρμογή ρολογιού του AAPS για να κάνετε bolus ή να αλλάξετε ρυθμίσεις, κάθε αίτημα πρέπει να επιβεβαιωθεί στο ρολόι: αφού το στείλετε, το ρολόι δείχνει μια σύνοψη με ένα κουμπί **ΕΠΙΒΕΒΑΙΩΣΗ**. Δείτε [Χειρισμός του AAPS από το έξυπνο ρολόι Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
 
 (FAQ-disconnect-pump)=
 
-#### Disconnect pump
+#### Αποσύνδεση αντλίας
 
-Εάν αφαιρέσετε την αντλία σας για ντους, κολύμβηση, κολύμπι, σπορ ή άλλες δραστηριότητες θα πρέπει να ενημερώσετε το AAPS ότι δεν χορηγείται ινσουλίνη για να διατηρηθεί η ενεργή σας ινσουλίνη σωστά.
+Αν αφαιρέσετε την αντλία για ντους, μπάνιο, κολύμπι, άθληση ή άλλες δραστηριότητες, πρέπει να ενημερώσετε το AAPS ότι δεν χορηγείται ινσουλίνη, ώστε το IOB να παραμένει σωστό.
 
-The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](#AapsScreens-loop-status).
+Μπορείτε να αποσυνδέσετε την αντλία με το [εικονίδιο κυκλώματος](#AapsScreens-loop-status) στην κύρια οθόνη του AAPS: πατήστε το και επιλέξτε **Αποσύνδεση αντλίας** με τη διάρκεια που χρειάζεστε. Αν η δραστηριότητα διαρκέσει περισσότερο από όσο σχεδιάσατε, πατήστε ξανά το εικονίδιο και επιλέξτε νέα διάρκεια: δεν χρειάζεται να συνδέσετε πρώτα ξανά την αντλία. Δείτε [Αποσύνδεση της αντλίας για ντους ή δραστηριότητα](#pumps-cannulas-disconnecting) για να μάθετε πώς να αποφύγετε την έλλειψη ινσουλίνης όταν η αντλία μένει αποσυνδεδεμένη για πολύ ώρα.
 
-#### Recommendations not only based on one single CGM reading
+#### Συστάσεις που δεν βασίζονται σε μία μόνο μέτρηση CGM
 
-Για λόγους ασφάλειας, οι συστάσεις που γίνονται δεν βασίζονται σε μία ανάγνωση CGM αλλά στο μέσο δέλτα. Επομένως, εάν χάσετε μερικές τιμές, μπορεί να χρειαστεί λίγος χρόνος μετά την επιστροφή των δεδομένων των τιμών πριν ξεκινήσει ξανά η επαναφορά του AndroidAPS.
+Για λόγους ασφάλειας, οι συστάσεις που γίνονται δεν βασίζονται σε μία ανάγνωση CGM αλλά στο μέσο δέλτα. Επομένως, αν χάσετε κάποιες μετρήσεις, μπορεί να περάσει λίγος χρόνος αφού επανέλθουν τα δεδομένα μέχρι το AAPS να ξεκινήσει ξανά το κύκλωμα.
 
-#### Further readings
+#### Περαιτέρω αναγνώσεις
 
-Υπάρχουν διάφορα αγγλικά blogs που έχουν συμβουλές για να καταλάβετε καλύτερα το κλειστό κύκλωμα:
+Υπάρχουν αρκετά blogs με καλές συμβουλές που σας βοηθούν να καταλάβετε τα πρακτικά θέματα του κυκλώματος. Κάποια από αυτά δεν είναι πια online: οι παρακάτω σύνδεσμοι με την ένδειξη "archived copy" ανοίγουν ένα αποθηκευμένο αντίγραφο στο Internet Archive.
 
-- [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-- [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
-- [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-- [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
-
-(FAQ-emergency-equipment)=
-
-### What emergency equipment is recommended to take with me?
-
-You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AAPS it is strongly recommended to have the following additional equipment with or near to you:
-
-- Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
-- Μπαταρίες για την αντλία έγχυσης ινσουλίνης
-- Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Maintenance/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
-
-### How can I safely and securely attach the CGM/FGM?
-
-You can tape it. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Κάποιοι χρήστες χρησιμοποιούν χαμηλού κόστους ελαστικές ταινίες κινησιολογίας ή rocktape.
-
-You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
-
-## APS algorithm
-
-### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
-
-![AMA 3 ώρες](../images/Screenshot_AMA3h.png)
-
-Στην ΑΜΑ, η DIA στην πραγματικότητα δεν σημαίνει «διάρκεια δράσης της ινσουλίνης». Πρόκειται για μια παράμετρο, η οποία χρησιμοποιείται για τη σύνδεση με το DIA. Τώρα, αυτό σημαίνει, «σε ποιο χρονικό σημείο πρέπει να ολοκληρωθεί η διόρθωση». Δεν έχει καμία σχέση με τον υπολογισμό του IOB. In OpenAPS SMB, there is no need for this parameter any longer.
-
-## Other settings
-
-### Nightscout settings
-
-#### AAPSClient says 'not allowed' and does not upload data. What can I do?
-
-In AAPSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
-
-### CGM settings
-
-#### Why does AAPS say 'BG source doesn't support advanced filtering'?
-
-If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AAPS OpenAPS-tab. See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md) for more details.
-
-### Pump
-
-#### Where to place the pump?
-
-Υπάρχουν αναρίθμητες δυνατότητες για την τοποθέτηση της αντλίας. Δεν έχει σημασία αν είστε σε κύκλωμα ή όχι.
-
-#### Batteries
-
-Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. Το καλύτερο είναι να αλλάξετε τη μπαταρία στο 25%, καθώς η επικοινωνία γίνεται πιο δύσκολη. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site. Τα κόλπα για την αύξηση της διάρκειας ζωής της μπαταρίας περιλαμβάνουν:
-
-- μειώστε τη διάρκεια ενεργής οθόνης LCD (στο μενού ρυθμίσεων της αντλίας)
-- reduce the length of time the backlight stays on (within pump settings menu)
-- select notification settings to a beep rather than vibrate (within pump settings menu)
-- only press the buttons on the pump to reload, use AAPS to view all history, battery level and reservoir volume.
-- AAPS app may often be closed to save energy or free RAM on some phones. When AAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. Αυτό καταναλώνει μπαταρία. Για να δείτε αν συμβαίνει κάτι τέτοιο, μεταβείτε στην επιλογή Προτιμήσεις> NSClient και ενεργοποιήστε την επιλογή "Αρχείο καταγραφής εφαρμογής σε NS". Nightscout will receive an event at every restart of AAPS, which makes it easy to track the issue. To reduce this happening, whitelist AAPS app in the phone battery settings to stop the app power monitor closing it down.
+    * [Fine-tuning Settings](https://web.archive.org/web/20171029031305/http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM (archived copy)
+    * [Why DIA matters](https://web.archive.org/web/20231130035027/http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM (archived copy)
+    * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
+    * [Hormones and autosens](https://web.archive.org/web/20170902081839/http://seemycgm.com/2017/06/06/hormones-2/) See my CGM (archived copy)
     
-    For example, to whitelist on a Samsung phone running Android Pie:
-    
-    - Go to Settings -> Device Care -> Battery 
-    - Scroll until you find AAPS and select it
-    - De-select "Put app to sleep"
-    - ALSO go to Settings -> Apps -> (Three circle symbol in the top-right of the screen) select "special access" -> Optimize battery usage
-    - Scroll to AAPS and make sure it is de-selected.
 
-- clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
+(what-emergency-equipment-is-recommended-to-take-with-me)= (FAQ-emergency-equipment)=
 
-- for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Αφαιρέστε και επανατοποθετήστε την μπαταρία 2-3 φορές μέχρι να εμφανιστεί 100% στην οθόνη ή χρησιμοποιήστε το κλειδί της μπαταρίας για βραχυκύκλωμα μπαταρίας πριν την τοποθέτηση εφαρμόζοντας και στους δύο ακροδέκτες για ένα δευτερόλεπτο.
-- see also more tips for [particular types of battery](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
+### Τι εξοπλισμός έκτακτης ανάγκης προτείνεται να έχω μαζί μου;
 
-#### Changing reservoirs and cannulas
+Πρέπει να έχετε μαζί σας τον ίδιο εξοπλισμό έκτακτης ανάγκης όπως κάθε άλλο άτομο με διαβήτη τύπου 1 που χρησιμοποιεί αντλία ινσουλίνης. Όταν χρησιμοποιείτε κύκλωμα με το AAPS, συνιστάται έντονα να έχετε τον παρακάτω επιπλέον εξοπλισμό μαζί σας ή κοντά σας:
 
-The change of cartridge cannot be done via AAPS but must be carried out as before directly via the pump.
+* Φορητή μπαταρία (power bank) και καλώδια για τη φόρτιση του τηλεφώνου, του ρολογιού και (αν χρειάζεται) του αναγνώστη BT ή της συσκευής Link
+* Μπαταρίες για την αντλία έγχυσης ινσουλίνης
+* Πρόσβαση στα αντίγραφα ασφαλείας σας, τόσο στο τηλέφωνο όσο και στο cloud (π.χ. Google Drive, Dropbox), ώστε να μπορείτε να ρυθμίσετε ξανά το AAPS σε άλλο τηλέφωνο (δείτε [Δημιουργία και επαναφορά αντιγράφων ασφαλείας](../Maintenance/ExportImportSettings.md)): 
+  * το τρέχον [apk](../SettingUpAaps/BuildingAaps.md) του AAPS και κάθε άλλης εφαρμογής που χρησιμοποιείτε (π.χ. xDrip, Juggluco, BYODA).
+  * το αρχείο keystore σας (από τη δημιουργία του apk) και τον κωδικό του,
+  * τα πιο πρόσφατα αρχεία εξαγωγής ρυθμίσεων από το AAPS και τις άλλες εφαρμογές σας,
+  * τον κύριο κωδικό του **AAPS**: χωρίς αυτόν δεν μπορείτε να εισαγάγετε το αρχείο ρυθμίσεων.
 
-- Long press on "Open Loop"/"Closed Loop" on the Home tab of AAPS and select 'Suspend Loop for 1h'
-- Now nnect the pump and change the reservoir as per pump instructions.
-- Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](#screens-action-tab) in the actions tab just to record the change.
-- Μόλις επανασυνδεθείτε με την αντλία, συνεχίστε με το πάτημα του κουμπιού "Αναστολή (X m)".
+(FAQ-organize-backups)=
 
-The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. Αυτό σημαίνει ότι δεν διακόπτει ένα τρέχον προσωρινό βασικό ρυθμό. On the Actions (Act) tab, use the [PRIME/FILL button](#screens-action-tab) to set the amount of insulin needed to fill the infusion set and start the priming. Αν η ποσότητα δεν είναι αρκετή, επαναλάβετε την πλήρωση. Μπορείτε να ορίσετε κουμπιά προεπιλεγμένου ποσού στις Προτιμήσεις > Άλλο > Συμπληρώστε / Αρχίστε την κανονική ποσότητα ινσουλίνης. Ανατρέξτε στο φυλλάδιο οδηγιών στο κουτί της κάνουλας για το πόσες μονάδες θα πρέπει να γίνουν ανάλογα με το μήκος της βελόνας και το μήκος της σωλήνωσης.
+#### Πώς να οργανώσω τα αντίγραφα ασφαλείας μου;
 
-### Wallpaper
+Κάνετε εξαγωγή ρυθμίσεων πολύ τακτικά: μετά από κάθε αλλαγή pod ή δεξαμενής, μετά από αλλαγή του προφίλ σας, όταν ολοκληρώσετε ένα βήμα, αν αλλάξετε αντλία… Ακόμα και αν δεν αλλάζει τίποτα, κάντε εξαγωγή μία φορά τον μήνα. Κρατήστε αρκετά παλιά αρχεία εξαγωγής.
 
-You can find the AAPS wallpaper for your phone on the [phones page](#Phones-phone-wallpaper).
+Το **AAPS** μπορεί να το κάνει για εσάς: μπορεί να εξάγει τις ρυθμίσεις σας αυτόματα (για παράδειγμα με έναν [Αυτοματισμό](#ExportImportSettings-Automating-Settings-Export) μετά από κάθε αλλαγή pod) και να αποθηκεύει την εξαγωγή απευθείας σε φάκελο στο cloud (Google Drive). Δείτε [Δημιουργία και επαναφορά αντιγράφων ασφαλείας](../Maintenance/ExportImportSettings.md).
 
-### Daily usage
+### Πώς μπορώ να στερεώσω το CGM/FGM με ασφάλεια;
 
-#### Hygiene
+Μπορείτε να το στερεώσετε με ταινία. Υπάρχουν διάφορα έτοιμα, προ-διάτρητα αυτοκόλλητα ('overpatches') για τα συνηθισμένα συστήματα CGM (αναζητήστε στο Google, το eBay ή το Amazon). Κάποιοι χρήστες χρησιμοποιούν χαμηλού κόστους ελαστικές ταινίες κινησιολογίας ή rocktape.
 
-##### What to do when taking a shower or bath?
+Μπορείτε να το στερεώσετε. Μπορείτε επίσης να αγοράσετε περιβραχιόνια που στερεώνουν το CGM/FGM με μια ταινία στο πάνω μέρος του χεριού (αναζητήστε στο Google, το eBay ή το Amazon).
 
-Μπορείτε να αφαιρέσετε την αντλία ενώ κάνετε ντους ή μπάνιο. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump).
+## Ο αλγόριθμος του APS
 
-#### Work
+### Γιατί το OpenAPS AMA δείχνει "dia: 3", ενώ στο προφίλ μου έχω διαφορετική DIA;
 
-Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+Όταν έχετε επιλέξει **OpenAPS AMA** στη **Διαμόρφωση** > **APS**, το **Άνοιγμα πρόσθετου** δείχνει τα δεδομένα που στέλνονται στον αλγόριθμο. Στην ενότητα **Προφίλ**, το `dia` είναι πάντα 3.0 ή λιγότερο:
 
-### Leisure activities
+![Οθόνη του πρόσθετου OpenAPS AMA με dia 3.0 στα δεδομένα του προφίλ](../images/screens/openaps_ama_plugin.png)
+
+Στην ΑΜΑ, η DIA στην πραγματικότητα δεν σημαίνει «διάρκεια δράσης της ινσουλίνης». Πρόκειται για μια παράμετρο που παλιότερα συνδεόταν με τη DIA. Τώρα, αυτό σημαίνει, «σε ποιο χρονικό σημείο πρέπει να ολοκληρωθεί η διόρθωση». Δεν έχει καμία σχέση με τον υπολογισμό του IOB. Στο OpenAPS SMB αυτή η παράμετρος δεν χρειάζεται πια.
+
+## Άλλες ρυθμίσεις
+
+### Ρυθμίσεις Nightscout
+
+(FAQ-nsclient-blocked)=
+
+#### Το AAPSClient (ή το AAPS) δεν ανεβάζει δεδομένα: «Αποκλεισμός από…». Τι μπορώ να κάνω;
+
+Η κατάσταση του NSClient δείχνει γιατί δεν στέλνονται δεδομένα:
+
+* **Αποκλεισμός από τις επιλογές συνδεσιμότητας**: οι ρυθμίσεις σύνδεσης δεν επιτρέπουν την τρέχουσα σύνδεση. Για παράδειγμα, χρησιμοποιείτε δεδομένα κινητής, αλλά επιτρέπεται μόνο το Wi-Fi, ή δεν είστε συνδεδεμένοι σε ένα από τα επιτρεπόμενα δίκτυα Wi-Fi (SSID).
+* **Αποκλεισμός από τις επιλογές φόρτισης**: οι ρυθμίσεις σύνδεσης επιτρέπουν συγχρονισμό μόνο όταν το τηλέφωνο φορτίζει (ή μόνο με μπαταρία), και αυτό δεν ισχύει αυτή τη στιγμή.
+* **Χωρίς σύνδεση**: το τηλέφωνο δεν έχει σύνδεση στο internet.
+
+Ελέγξτε τις [ρυθμίσεις σύνδεσης του NSClient](#Preferences-nsclient): **Χρήση δεδομένων κινητής**, **Χρήση περιαγωγής**, **Χρήση WiFi**, **WiFi SSID**, **Συγχρονισμός με μπαταρία** και **Συγχρονισμός κατά τη φόρτιση**.
+
+### Ρυθμίσεις CGM
+
+(FAQ-advanced-filtering)=
+
+#### Γιατί το AAPS λέει «Το SMB πάντα και μετά το γεύμα απενεργοποιείται επειδή η ενεργή πηγή BG δεν υποστηρίζει προηγμένο φιλτράρισμα»;
+
+Οι επιλογές **Ενεργοποίηση SMB πάντα** και **Ενεργοποίηση SMB μετά από υδατάνθρακες** μπορούν να χρησιμοποιηθούν μόνο με μια [αξιόπιστη πηγή δεδομένων BG](#GettingStarted-TrustedBGSource): έναν αισθητήρα και μια εφαρμογή CGM που μπορούν να πουν στο **AAPS** από ποιον αισθητήρα έρχονται οι μετρήσεις. Με οποιαδήποτε άλλη πηγή BG, το **AAPS** απενεργοποιεί αυτές τις δύο επιλογές και δείχνει αυτό το μήνυμα. Ελέγξτε τη λίστα με τις αξιόπιστες πηγές και, αν ο αισθητήρας σας είναι στη λίστα, βεβαιωθείτε ότι χρησιμοποιείτε μία από τις εφαρμογές CGM που αναφέρονται για αυτόν. Δείτε επίσης [Εξομάλυνση των δεδομένων γλυκόζης στο αίμα](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+
+### Αντλία
+
+#### Μπαταρίες
+
+Το κύκλωμα μπορεί να αδειάζει την μπαταρία της αντλίας πιο γρήγορα από την κανονική χρήση, επειδή το σύστημα επικοινωνεί μέσω Bluetooth πολύ πιο συχνά από έναν χρήστη που χειρίζεται την αντλία με το χέρι. Το καλύτερο είναι να αλλάξετε τη μπαταρία στο 25%, καθώς η επικοινωνία γίνεται πιο δύσκολη. Μπορείτε να ορίσετε συναγερμούς για την μπαταρία της αντλίας με τη μεταβλητή PUMP_WARN_BATT_P στον ιστότοπο Nightscout σας. Τα κόλπα για την αύξηση της διάρκειας ζωής της μπαταρίας περιλαμβάνουν:
+
+* μειώστε τη διάρκεια ενεργής οθόνης LCD (στο μενού ρυθμίσεων της αντλίας)
+* μειώστε τη διάρκεια παραμονής του φωτισμού (στο μενού ρυθμίσεων της αντλίας)
+* επιλέξτε τις ρυθμίσεις ειδοποίησης σε μπιπ και όχι σε δόνηση (στο μενού ρυθμίσεων αντλίας)
+* πατάτε τα κουμπιά της αντλίας μόνο για την επαναφόρτωση και χρησιμοποιείτε το AAPS για να δείτε όλο το ιστορικό, τη στάθμη της μπαταρίας και τον όγκο της δεξαμενής.
+* Σε ορισμένα τηλέφωνα η εφαρμογή AAPS μπορεί να κλείνει συχνά για εξοικονόμηση ενέργειας ή για να ελευθερωθεί μνήμη RAM. Όταν το AAPS ξεκινά ξανά σε κάθε εκκίνηση, δημιουργεί σύνδεση Bluetooth με την αντλία και διαβάζει ξανά τον τρέχοντα βασικό ρυθμό και το ιστορικό bolus. Αυτό καταναλώνει μπαταρία. Για να δείτε αν συμβαίνει αυτό, ενεργοποιήστε την επιλογή **Καταγραφή εκκίνησης εφαρμογής** στις **Ρυθμίσεις για Προχωρημένους** του NSClient: το Nightscout θα λαμβάνει ένα συμβάν σε κάθε επανεκκίνηση του AAPS, και έτσι μπορείτε εύκολα να παρακολουθείτε το πρόβλημα. Για να συμβαίνει αυτό λιγότερο, απενεργοποιήστε τη βελτιστοποίηση μπαταρίας για το AAPS, ώστε το τηλέφωνο να σταματήσει να το κλείνει: δείτε την [εξοικονόμηση μπαταρίας](#FAQ-battery-savings) παρακάτω.
+* καθαρίστε τους ακροδέκτες της μπαταρίας με οινόπνευμα για να διασφαλίσετε ότι δεν παραμένει κατασκευαστικό κερί / λίπος.
+* στις [αντλίες Dana R/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md) η διαδικασία εκκίνησης τραβά υψηλό ρεύμα από την μπαταρία, ώστε να σπάσει σκόπιμα το φιλμ παθητικοποίησης (που εμποδίζει την απώλεια ενέργειας όσο η μπαταρία είναι αποθηκευμένη), αλλά δεν το σπάει πάντα 100%. Αφαιρέστε και επανατοποθετήστε την μπαταρία 2-3 φορές μέχρι να εμφανιστεί 100% στην οθόνη ή χρησιμοποιήστε το κλειδί της μπαταρίας για βραχυκύκλωμα μπαταρίας πριν την τοποθέτηση εφαρμόζοντας και στους δύο ακροδέκτες για ένα δευτερόλεπτο.
+* δείτε επίσης περισσότερες συμβουλές για [συγκεκριμένους τύπους μπαταρίας](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
+
+#### Αλλαγή δεξαμενών και καθετήρων
+
+Η δεξαμενή πρέπει να αλλάζεται απευθείας στην αντλία και μετά η αλλαγή καταγράφεται στο **AAPS**. Ακολουθήστε τον [οδηγό βήμα προς βήμα για την αλλαγή δεξαμενής και καθετήρα της αντλίας](#pumps-cannulas-changing-reservoir-and-cannula).
+
+### Ταπετσαρία
+
+Θα βρείτε την ταπετσαρία του AAPS για το τηλέφωνό σας στη [σελίδα για τα τηλέφωνα](#Phones-phone-wallpaper).
+
+### Καθημερινή χρήση
+
+Πολλές από τις παρακάτω καταστάσεις μπορούν να προετοιμαστούν μία φορά ως [σενάριο](#scenes): μια έτοιμη ρύθμιση που αλλάζει προφίλ, προσωρινό στόχο και άλλες ρυθμίσεις με ένα πάτημα. Το **AAPS** προσφέρει έτοιμα πρότυπα, για παράδειγμα *Άσκηση*, *Ύπνος*, *Αλκοόλ* ή *Μπάνιο*.
+
+#### Υγιεινή
+
+(what-to-do-when-taking-a-shower-or-bath)=
+
+##### Τι κάνω όταν κάνω ντους ή μπάνιο;
+
+Μπορείτε να αφαιρέσετε την αντλία ενώ κάνετε ντους ή μπάνιο. Για αυτό το μικρό χρονικό διάστημα ίσως δεν τη χρειάζεστε, αλλά πρέπει να πείτε στο AAPS ότι την έχετε αποσυνδέσει, ώστε οι υπολογισμοί του IOB να είναι σωστοί. Δείτε την [περιγραφή παραπάνω](#FAQ-disconnect-pump). Το πρότυπο [σεναρίου](#scenes) *Μπάνιο* το κάνει αυτό για εσάς.
+
+#### Εργασία
+
+Ανάλογα με τη δουλειά σας, μπορείτε να χρησιμοποιείτε διαφορετικές παραμέτρους θεραπείας τις εργάσιμες ημέρες. Ως χρήστης κυκλώματος, σκεφτείτε μια [αλλαγή προφίλ](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) για την τυπική εργάσιμη ημέρα σας. Για παράδειγμα, μπορείτε να αλλάξετε σε προφίλ πάνω από 100% αν έχετε μια λιγότερο κουραστική δουλειά (π.χ. σε γραφείο), ή κάτω από 100% αν κινείστε και είστε όρθιοι όλη την ημέρα. Μπορείτε επίσης να σκεφτείτε έναν υψηλό ή χαμηλό προσωρινό στόχο ή μια [χρονική μετατόπιση του προφίλ σας](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) όταν εργάζεστε πολύ νωρίτερα ή αργότερα από το συνηθισμένο ή αν δουλεύετε σε βάρδιες. Μπορείτε επίσης να δημιουργήσετε ένα δεύτερο προφίλ (π.χ. 'σπίτι' και 'εργάσιμη') και να κάνετε κάθε μέρα αλλαγή προφίλ σε αυτό που πραγματικά χρειάζεστε, ή να αποθηκεύσετε τις ρυθμίσεις της εργάσιμης ημέρας ως [σενάριο](#scenes).
+
+### Δραστηριότητες ελεύθερου χρόνου
 
 (FAQ-sports)=
 
-#### Sports
+#### Αθλήματα
 
-You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
+Πρέπει να αλλάξετε τις παλιές αθλητικές σας συνήθειες από την εποχή πριν από το κύκλωμα. Αν απλώς καταναλώσετε έναν ή περισσότερους υδατάνθρακες για άθληση όπως πριν, το σύστημα κλειστού κυκλώματος θα τους αναγνωρίσει και θα τους διορθώσει ανάλογα.
 
-So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
+Έτσι θα έχετε περισσότερους ενεργούς υδατάνθρακες, αλλά ταυτόχρονα το κύκλωμα θα αντιδρά και θα χορηγεί ινσουλίνη.
 
-When looping you should try these steps:
+Με το κύκλωμα θα πρέπει να δοκιμάσετε τα εξής βήματα:
 
-- Make a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) < 100%.
-- Set an [activity temp target](#TempTargets-activity-temp-target) above your standard target.
-- If you are using SMB make sure ["Enable SMB with high temp targets"](#Open-APS-features-enable-smb-with-high-temp-targets) and ["Enable SMB always"](#Open-APS-features-enable-smb-always) are disabled.
+* Κάντε μια [αλλαγή προφίλ](#ProfileSwitch-change-percentage) < 100%: πατήστε το όνομα του προφίλ στην κύρια οθόνη, πατήστε το στρογγυλό κουμπί **▶** και μετά ορίστε **Ποσοστό** και **Διάρκεια**.
+* Ορίστε έναν [προσωρινό στόχο άσκησης](#TempTargets-activity-temp-target) πάνω από τον συνηθισμένο σας στόχο. Με ποσοστό κάτω από 100 % και μια διάρκεια, η ίδια οθόνη **Ενεργοποίηση** προσφέρει έναν διακόπτη **Προσωρινός στόχος / Άσκηση** που ξεκινά και τα δύο μαζί.
+* Αν χρησιμοποιείτε SMB, βεβαιωθείτε ότι οι επιλογές [«Ενεργοποίηση SMB με υψηλό προσωρινό στόχο»](#Open-APS-features-enable-smb-with-high-temp-targets) και [«Ενεργοποίηση SMB πάντα»](#Open-APS-features-enable-smb-always) είναι απενεργοποιημένες.
 
-Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
+Η προετοιμασία πριν και η προσαρμογή μετά από αυτές τις ρυθμίσεις είναι σημαντικές. Κάντε τις αλλαγές έγκαιρα πριν από την άθληση και λάβετε υπόψη την αναπλήρωση του γλυκογόνου στους μύες.
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../DailyLifeWithAaps/Automations.md) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
+Τα πρότυπα [σεναρίων](#scenes) *Άσκηση* και *Νύχτα μετά την άσκηση* περιέχουν αυτές τις ρυθμίσεις, ώστε να μπορείτε να τα ξεκινάτε με ένα πάτημα. Αν αθλείστε τακτικά την ίδια ώρα (π.χ. μάθημα στο γυμναστήριο), μπορείτε να χρησιμοποιήσετε [αυτοματισμό](../DailyLifeWithAaps/Automations.md) για να ξεκινά η αλλαγή προφίλ και ο TT, ή το σενάριο. Ένας αυτοματισμός με βάση την τοποθεσία μπορεί επίσης να είναι μια ιδέα, αλλά κάνει την προετοιμασία πιο δύσκολη.
 
-The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
+Το ποσοστό της αλλαγής προφίλ, η τιμή του προσωρινού στόχου άσκησης και η καλύτερη ώρα για τις αλλαγές είναι διαφορετικά για τον καθένα. Ξεκινήστε με ασφάλεια όταν ψάχνετε τη σωστή τιμή για εσάς (ξεκινήστε με χαμηλότερο ποσοστό και υψηλότερο TT).
 
-#### Sex
+#### Σεξ
 
-You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump).
+Μπορείτε να αφαιρέσετε την αντλία για να είστε «ελεύθεροι», αλλά πρέπει να το πείτε στο AAPS, ώστε οι υπολογισμοί του IOB να είναι σωστοί. Δείτε την [περιγραφή παραπάνω](#FAQ-disconnect-pump).
 
-#### Drinking alcohol
+#### Κατανάλωση αλκοόλ
 
-Το αλκοολούχο ποτό είναι επικίνδυνο σε λειτουργία κλειστού κυκλώματος, καθώς ο αλγόριθμος δεν μπορεί να προβλέψει σωστά το BG που επηρεάζεται από το αλκοόλ. You have to check out your own method for treating this using the following functions in AAPS:
+Το αλκοολούχο ποτό είναι επικίνδυνο σε λειτουργία κλειστού κυκλώματος, καθώς ο αλγόριθμος δεν μπορεί να προβλέψει σωστά το BG που επηρεάζεται από το αλκοόλ. Πρέπει να βρείτε τη δική σας μέθοδο αντιμετώπισης χρησιμοποιώντας τις παρακάτω λειτουργίες του AAPS:
 
-- Απενεργοποίηση λειτουργίας κλειστού κυκλώματος και θεραπεία του διαβήτη χειροκίνητα ή
-- θέτοντας στόχους υψηλούς και απενεργοποιώντας UAM για να αποφευχθεί ο αυξανόμενος κύκλος IOB λόγω ενός μη επιτηρούμενου γεύματος ή
-- κάντε μια αλλαγή προφίλ σε αισθητά λιγότερο από 100% 
+* Απενεργοποίηση λειτουργίας κλειστού κυκλώματος και θεραπεία του διαβήτη χειροκίνητα ή
+* θέτοντας υψηλούς προσωρινούς στόχους και απενεργοποιώντας το UAM, ώστε το κύκλωμα να μην αυξάνει το IOB λόγω ενός γεύματος που δεν έχει καταχωρηθεί ή
+* κάντε [αλλαγή προφίλ](#ProfileSwitch-change-percentage) σε αισθητά λιγότερο από 100% 
+
+Το πρότυπο [σεναρίου](#scenes) *Αλκοόλ* είναι ένα σημείο εκκίνησης που μπορείτε να προσαρμόσετε στη δική σας μέθοδο.
 
 Όταν πίνετε αλκοόλ πρέπει πάντα να προσέχετε το CGM σας για να αποφύγετε χειροκίνητα μια υπογλυκαιμία τρώγοντας υδατάνθρακες.
 
-#### Sleeping
+#### Ύπνος
 
-##### How can I loop during the night without mobile and WIFI radiation?
+##### Πώς μπορώ να έχω κύκλωμα τη νύχτα χωρίς ακτινοβολία από δίκτυο κινητής και Wi-Fi;
 
-Πολλοί χρήστες γυρίζουν το τηλέφωνο τους σε λειτουργία αεροπλάνου το βράδυ. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+Πολλοί χρήστες γυρίζουν το τηλέφωνο τους σε λειτουργία αεροπλάνου το βράδυ. Αν θέλετε να σας υποστηρίζει το κύκλωμα όσο κοιμάστε, κάντε τα εξής (λειτουργεί μόνο αν η εφαρμογή CGM σας τρέχει στο ίδιο τηλέφωνο με το AAPS, όπως το xDrip, το Juggluco ή το BYODA· ΔΕΝ λειτουργεί αν παίρνετε τις τιμές BG μέσω Nightscout):
 
 1. Ενεργοποιήστε τη "λειτουργία πτήσης" στο κινητό σας.
 2. Περιμένετε μέχρι να ενεργοποιηθεί η λειτουργία του αεροπλάνου.
@@ -201,152 +213,211 @@ You can remove the pump to be 'free', but you should tell AAPS so that the IOB c
 
 Τώρα δεν δέχεστε τηλεφωνήματα ούτε είναι συνδεδεμένο το κινητό σας στο διαδίκτυο. Όμως το κύκλωμα λειτουργεί κανονικά.
 
-Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+Κάποιοι χρήστες είχαν προβλήματα με το local broadcast (το AAPS δεν λαμβάνει τιμές BG από το xDrip) όταν το τηλέφωνο είναι σε λειτουργία πτήσης. Στο xDrip, πηγαίνετε στο Settings > Inter-app settings > Identify receiver και εισαγάγετε `info.nightscout.androidaps`.
 
-![+xDrip Basic Inter-app Ρυθμίσεις Προσδιορίζουν δέκτη](../images/xDrip_InterApp_NS.png)
+![xDrip Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
-#### Travelling
+Αν θέλετε διαφορετικές ρυθμίσεις τη νύχτα (για παράδειγμα υψηλότερο στόχο), το πρότυπο [σεναρίου](#scenes) *Ύπνος* είναι ένα καλό σημείο εκκίνησης.
 
-##### How to deal with time zone changes?
+#### Ταξίδια
 
-Με τις αντλίες DanaR και DanaR Korean δεν απαιτείται καμία ρύθμιση από τον χρήστη. For other pumps see [time zone travelling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) page for more details.
+##### Πώς να διαχειριστώ τις αλλαγές ζώνης ώρας;
 
-### Medical topics
+Με τις αντλίες DanaR και DanaR Korean δεν απαιτείται καμία ρύθμιση από τον χρήστη. Για άλλες αντλίες δείτε τη σελίδα [Αλλαγή ζώνης ώρας και θερινή ώρα](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) για περισσότερες λεπτομέρειες.
 
-#### Hospitalization
+### Ιατρικά θέματα
 
-If you want to share some information about AAPS and DIY looping with your clinicians, you can print out the [guide to AAPS for clinicians](../UsefulLinks/ClinicianGuideToAaps.md).
+#### Νοσηλεία σε νοσοκομείο
 
-#### Medical appointment with your endocrinologist
+Αν θέλετε να δώσετε πληροφορίες για το AAPS και το κύκλωμα DIY στους γιατρούς σας, μπορείτε να εκτυπώσετε τον [οδηγό του AAPS για γιατρούς](../UsefulLinks/ClinicianGuideToAaps.md).
 
-##### Reporting
+#### Ιατρικό ραντεβού με τον ενδοκρινολόγο σας
 
-You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+##### Αναφορές
 
-## Frequent questions on Discord and their answers...
+Μπορείτε να δείξετε τις αναφορές του Nightscout σας (https://YOUR-NS-SITE.com/report) ή να χρησιμοποιήσετε το [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
 
-### My problem is not listed here.
+## Συχνές ερωτήσεις στο Discord και οι απαντήσεις τους...
 
-[Information to get help.](../GettingHelp/WhereCanIGetHelp.md)
+### Το πρόβλημά μου δεν υπάρχει εδώ.
 
-### My problem is not listed here but I found the solution
+Δείτε [πού θα βρείτε βοήθεια](../GettingHelp/WhereCanIGetHelp.md). Αν βρήκατε τη λύση μόνοι σας, **θυμίστε μας να την προσθέσουμε σε αυτή τη λίστα!**
 
-[Information to get help.](../GettingHelp/WhereCanIGetHelp.md)
+### Δημιουργία και εγκατάσταση
 
-**Remind us to add your solution to this list!**
+(FAQ-build-errors)=
 
-### AAPS stops everyday around the same time.
+#### Έχω προβλήματα και σφάλματα κατά τη δημιουργία της εφαρμογής.
 
-Stop Google Play Protect. Check for "cleaning" apps (ie CCleaner etc) and uninstall them. AAPS / 3 dots menu / About / follow the link "Keep app running in the background" to stop all battery optimizations.
+Ελέγξτε τη σελίδα αντιμετώπισης προβλημάτων για τον τρόπο με τον οποίο δημιουργείτε το **AAPS** (δείτε [Δημιουργία του AAPS](../SettingUpAaps/BuildingAaps.md)):
 
-(FAQ-organize-backups)=
+* δημιουργία μέσω browser: [Δημιουργία μέσω browser: αντιμετώπιση προβλημάτων](#aaps-ci-troubleshooting),
+* δημιουργία με το Android Studio: [Αντιμετώπιση προβλημάτων του Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
-### How to organize my backups ?
+(FAQ-build-error-file-name-too-long)=
 
-Export settings very regularly: after each pod change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. Keep several old export files.
+#### Σφάλμα build: file name too long (πολύ μεγάλο όνομα αρχείου)
 
-Copy on an internet drive (Dropbox, Google etc) : all the apks you used to install apps on your phone (AAPS, xDrip, BYODA, Patched LibreLink…) as well as the exported setting files from all your apps.
+Αυτό το σφάλμα μπορεί να εμφανιστεί όταν κάνετε build με το Android Studio: το build σταματά με ένα σφάλμα που λέει ότι το όνομα του αρχείου είναι πολύ μεγάλο. Πιθανές λύσεις: Μετακινήστε τον πηγαίο κώδικα σε έναν φάκελο πιο κοντά στον ριζικό φάκελο του δίσκου σας (π.χ. "C:\src\AndroidAPS").
 
-### I have problems, errors building the app.
+Από το Android Studio: Βεβαιωθείτε ότι το "Gradle" έχει ολοκληρώσει τον συγχρονισμό και την ευρετηρίαση μετά το άνοιγμα του έργου και το pull από το GitHub. Εκτελέστε Build->Clean Project πριν κάνετε Rebuild Project. Εκτελέστε File->Invalidate Caches και επανεκκινήστε το Android Studio.
 
-Please
+(FAQ-running-dev-version)=
 
-- check [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) for typical errors and
-- the tipps for with a [step by step walktrough](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
+#### Ειδοποίηση: Εκτελείται έκδοση Dev. Το κλειστό κύκλωμα είναι απενεργοποιημένο
 
-### I'm stuck on an objective and need help.
+Το **AAPS** δείχνει αυτό το μήνυμα όταν τρέχετε μια έκδοση ανάπτυξης (dev) χωρίς μηχανική λειτουργία (engineering mode): σε μια έκδοση dev, το κλειστό κύκλωμα λειτουργεί μόνο σε μηχανική λειτουργία.
 
-Screen capture the question and answers. Post-it on the Discord AAPS channel. Don't forget to tell which options you choose (or not) and why. You'll get hints and help but you'll need to find the answers.
+Η έκδοση dev προορίζεται για δοκιμές, όχι για πραγματική χρήση του κυκλώματος: διαβάστε τη σελίδα [Κλάδος ανάπτυξης (dev)](../AdvancedOptions/DevBranch.md) πριν προχωρήσετε.
 
-### How to reset the password in AAPS v2.8.x ?
+Για να ενεργοποιήσετε τη μηχανική λειτουργία:
 
-Open the hamburger menu, start the Configuration wizard and enter new password when asked. You can quit the wizard after the password phase.
+1. Τοποθετήστε ένα αρχείο με όνομα `engineering_mode` στον υποφάκελο `extra` του φακέλου AAPS (του φακέλου που επιλέξατε στον οδηγό εγκατάστασης, συνήθως `AAPS/extra`). Οποιοδήποτε αρχείο κάνει, αρκεί να έχει το σωστό όνομα.
+2. Κάντε επανεκκίνηση του **AAPS**, ώστε να βρει το αρχείο.
 
-### How to reset the password in AAPS v3.x
+Συμβουλή: Κάντε ένα αντίγραφο ενός υπάρχοντος αρχείου καταγραφής και μετονομάστε το σε "engineering_mode" (προσοχή: χωρίς επέκταση αρχείου!).
 
-You find the documentation [here](#Update3_0-reset-master-password).
+### Βήματα
 
-### My link/pump/pod is unresponsive (RL/OL/EmaLink…)
+#### Έχω κολλήσει σε ένα βήμα και χρειάζομαι βοήθεια.
 
-With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaL...).
+Διαβάστε πρώτα τη σελίδα [Βήματα](../SettingUpAaps/CompletingTheObjectives.md). Αν εξακολουθείτε να έχετε κολλήσει, τραβήξτε στιγμιότυπο οθόνης με την ερώτηση και τις απαντήσεις και δημοσιεύστε το στο κανάλι AAPS στο Discord. Μην ξεχάσετε να πείτε ποιες επιλογές κάνατε (ή δεν κάνατε) και γιατί. Θα λάβετε υποδείξεις και βοήθεια, αλλά τις απαντήσεις θα πρέπει να τις βρείτε εσείς.
 
-Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump.)
+### Ρυθμίσεις, κωδικοί και αντίγραφα ασφαλείας
 
-The easiest way to get all these parts working together is : 1/ Delete Link from AAPS 2/ Power off Link 3/ AAPS 3 dot menu, quit AAPS 4/ Long press AAPS icon, Android menu, info on app AAPS, Force stop AAPS and then Delete cache memory (Do not delete main memory !) 4bis/ Rarely some phones may need a reboot here. You can try without reboot. 5/Power on Link 6/Start AAPS 7/Pod tab, 3 dot menu, search and connect Link
+(FAQ-reset-master-password)=
 
-### Build error: file name too long
+#### Πώς επαναφέρω τον κύριο κωδικό;
 
-While trying to build I get an error stating the file name is too long. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "c:\src\AndroidAPS-EROS").
+Αν ξεχάσατε τον κύριο κωδικό σας, μπορείτε να τον επαναφέρετε στον σειριακό αριθμό της αντλίας σας:
 
-From Android Studio: Make sure "Gradle" is done syncing and indexing after opening the project and pulling from GitHub. Execute a Build->Clean Project before doing a Rebuild Project. Execute File->Invalidate Caches and Restart Android Studio.
+1. Δημιουργήστε ένα κενό αρχείο με όνομα `PasswordReset` (χωρίς επέκταση αρχείου) στον υποφάκελο `extra` του φακέλου AAPS (συνήθως `AAPS/extra`).
+2. Κάντε επανεκκίνηση του **AAPS**. Η αντλία σας πρέπει να είναι συνδεδεμένη: το **AAPS** δείχνει «Αναμονή για την αντλία…» και πρέπει να διαβάσει τον σειριακό αριθμό της αντλίας μέσα σε 30 δευτερόλεπτα.
+3. Το **AAPS** δείχνει «Ο κωδικός ορίστηκε!»: ο κύριος κωδικός σας είναι τώρα ο **σειριακός αριθμός της αντλίας**. Το αρχείο `PasswordReset` διαγράφεται αυτόματα.
+4. Ανοίξτε **Ρυθμίσεις** > **Προστασία** > **Κύριος κωδικός** και ορίστε νέο κωδικό.
 
-### Alert: Running dev version. Closed loop is disabled
+Αν η αντλία δεν απαντήσει εγκαίρως, δεν αλλάζει τίποτα: ελέγξτε τη σύνδεση της αντλίας και δοκιμάστε ξανά.
 
-AAPS is not running in "developer mode". AAPS shows the following message: "running dev version. Closed loop is disabled".
+Αυτό επαναφέρει μόνο τον κύριο κωδικό. Ένας κωδικός ή PIN για ρυθμίσεις, εφαρμογή ή bolus δεν επαναφέρεται, αλλά μπορείτε πάντα να χρησιμοποιείτε τον κύριο κωδικό στη θέση τους.
 
-Make sure AAPS is running in "developer mode": Place a file named "engineering_mode" at the location "AAPS/extra". Any file will do as long as it is properly named. Make sure to restart AAPS for it to find the file and go into "developer mode".
+    {admonition} Παλιά αρχεία ρυθμίσεων
+    :class: warning
+    Τα αρχεία ρυθμίσεων που εξήχθησαν με τον παλιό κύριο κωδικό μπορούν να εισαχθούν μόνο με αυτόν τον παλιό κωδικό.
 
-Hint: Make a copy of an existing logfile and rename it to "engineering_mode" (note: no file extension!).
+(FAQ-where-are-settings-files)=
 
-### Where can I find settings files?
+#### Πού βρίσκω τα αρχεία ρυθμίσεων;
 
-Settings files will be stored on your phone's internal storage in the directory "/AAPS/preferences". WARNING: Make sure not to lose your password as without it you will not be able to import an encrypted settings file!
+Τα αρχεία ρυθμίσεων αποθηκεύονται στον υποφάκελο `preferences` του φακέλου AAPS που επιλέξατε στον [οδηγό εγκατάστασης](#SetupWizard-StoragePermission) (για παράδειγμα `/internal storage/AAPS/preferences`). Αν έχετε ρυθμίσει φάκελο στο cloud (Google Drive), οι εξαγωγές σας μπορούν να αποθηκεύονται και εκεί. Δείτε [Δημιουργία και επαναφορά αντιγράφων ασφαλείας](../Maintenance/ExportImportSettings.md).
 
-### How to configure battery savings?
+ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Μην χάσετε τον κωδικό σας, γιατί χωρίς αυτόν δεν θα μπορείτε να εισαγάγετε ένα κρυπτογραφημένο αρχείο ρυθμίσεων!
 
-Properly configuring Power Management is important to prevent your Phone's OS to suspend AAPS and related app's and services when your phone is not being used. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. On the phone, go to settings->Apps and disable battery savings for: AAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
+(FAQ-import-settings-earlier-versions)=
 
-### Pump unreachable alerts several times a day or at night.
+#### Πώς εισάγω ρυθμίσεις από παλαιότερες εκδόσεις του AAPS στο AAPS v3 ή v4;
 
-Your phone may be suspending AAPS services or even Bluetooth causing it to loose connection to RL (see battery savings) Consider configuring unreachable alerts to 120 minutes by going to the top right-hand side three-dot menu, selecting Preferences->Local Alerts->Pump unreachable threshold [min].
+Μπορείτε να εισαγάγετε (στο AAPS v3 ή v4) μόνο ρυθμίσεις που εξήχθησαν με το AAPS v2.8x ή νεότερο. Αν χρησιμοποιούσατε έκδοση του AAPS παλαιότερη από την v2.8x ή χρειάζεται να χρησιμοποιήσετε εξαγωγές ρυθμίσεων παλαιότερες από την v2.8x, τότε πρέπει πρώτα να εγκαταστήσετε το AAPS v2.8. Εισαγάγετε τις παλαιότερες ρυθμίσεις της v2.x στη v2.8. Αφού ελέγξετε ότι όλα είναι σωστά, μπορείτε να κάνετε εξαγωγή ρυθμίσεων από τη v2.8. Εγκαταστήστε την τρέχουσα έκδοση του AAPS και εισαγάγετε σε αυτήν τις ρυθμίσεις της v2.8.
 
-### Where can I delete treatments in AAPS v3 ?
+Αν χρησιμοποιείτε το ίδιο κλειδί για να δημιουργήσετε την παλιά και τη νέα έκδοση, δεν θα χρειαστεί καν να εισαγάγετε ρυθμίσεις. Μπορείτε να εγκαταστήσετε τη νέα έκδοση πάνω από την παλιά.
 
-3 dots menu, select treatments, then 3 dots menu again and you have different options available.
+Προστέθηκαν κάποια νέα βήματα. Θα πρέπει να τα ολοκληρώσετε.
 
-### Configuring and Using the AAPSClient remote app
+(FAQ-delete-treatments)=
 
-AAPS can be monitored and controlled remotely via the AAPSClient app and optionally via the associated Wear app running on Android Wear watches. Note that the AAPSClient (remote) app is distinct from the NSClient configuration in AAPS, and the AAPSClient (remote) Wear app is distinct from the AAPS Wear app--for clarity the remote apps will be referred to as 'AAPSClient remote' and 'AAPS remote Wear' apps.
+#### Πού μπορώ να διαγράψω θεραπείες;
 
-To enable AAPSClient remote functionality you must: 1) Install the AAPSClient remote app (the version should match the version of AAPS being used) 2) Run the AAPSClient remote app and proceed through the configuration wizard to grant required permissions and configure access to your Nightscout site. 3) At this point you may want to disable some of the Alarm options, and/or advanced settings which log the start of the AAPSClient remote app to your Nightscout site. Once this is done, AAPSClient remote will download Profile data from your Nightscout site, the 'Overview' tab will display CGM data and some AAPS data, but but may not display graph data, and will indicate that a profile isn't yet set. 4) To activate the profile:
+Ανοίξτε το **μενού** (☰) και επιλέξτε **Ιστορικό θεραπειών**. Πατήστε παρατεταμένα μια εγγραφή για να την επιλέξετε, πατήστε κι άλλες εγγραφές αν χρειάζεται, μετά πατήστε το εικονίδιο **κάδου απορριμμάτων** και επιβεβαιώστε. Δείτε [Ιστορικό θεραπειών](#aaps-screens-treatments).
 
-- Enable remote profile synchronization in AAPS > NSClient > Options
-- Activate the profile in NSClient remote > Profile After doing so, the profile will be set, and AAPSClient remote should display all data from AAPS. Hint: If the graph is still missing, try changing the graph settings to trigger an update. 5) To enable remote control by the AAPSClient, selectively enable the aspects of AAPS (Profile changes, Temp Targets, Carbs, etc.) that you would like to be able to control remotely via AAPS > NSClient > Options . Once these changes are made, you'll be able to remotely control AAPS via either Nightscout or AAPSClient remote.
+### Προβλήματα τηλεφώνου και σύνδεσης
 
-If you'd like to monitor/control AAPS via the AAPSClient remote Wear App, you'll need both AAPSClient remote and the associated Wear app to be installed. To compile the AAPSClient remote Wear app, follow the standard instructions for installing/configuring the AAPS wear app, except when compiling it, choose the AAPSClient variant.
+(FAQ-aaps-stops)=
 
-### I have a red triangle / AAPS won't enable closed loop / Loops stays in LGS / I have a yellow triangle
+#### Το AAPS σταματά κάθε μέρα περίπου την ίδια ώρα.
 
-The red and yellow triangles are a security feature in AAPS v3.
+* Σε ορισμένα τηλέφωνα το Google Play Protect μπορεί να κλείνει το **AAPS** κάθε πρωί. Αν συμβαίνει αυτό, πηγαίνετε στις επιλογές του Google Play και απενεργοποιήστε το **Google Play Protect**.
+* Ελέγξτε αν υπάρχουν εφαρμογές «καθαρισμού» (π.χ. CCleaner κ.λπ.) και απεγκαταστήστε τις.
+* Απενεργοποιήστε όλες τις βελτιστοποιήσεις μπαταρίας για το **AAPS** (δείτε την [εξοικονόμηση μπαταρίας](#FAQ-battery-savings) παρακάτω).
 
-Red triangle means that you have duplicate BGs and AAPS can't calculate precisely the deltas. You can't close the loop. You need to delete one BG of each duplicated value in order to clear the red triangle. Go to BYODA or xDRIP tab, long press one line you want to delete, check one of each lines that are doubled (or via 3 dots menu and Delete, depending on your AAPS version). You may need to reset the AAPS databases if there are too many double BGs. In this case, you'll also loose stats, IOB, COB, selected profile.
+(FAQ-battery-savings)=
 
-Possible origin of the problem: xDrip and/or NS backfilling BGs.
+#### Πώς ρυθμίζω την εξοικονόμηση μπαταρίας;
 
-The yellow triangle means unstable delay between each BG reading. You don't receive BGs every 5 min regularly or missing BGs. It is often a Libre problem. It also happens when you change G6 transmitter. If the yellow triangle is related to the G6 tansmitter change, it will go away by itself after several hours (around 24h). In case of Libre, the yellow triangle will stay. The loop can be closed and works correctly.
+Το τηλέφωνό σας μπορεί να αναστέλλει το **AAPS** και σχετικές εφαρμογές (εφαρμογή CGM, Bluetooth) όταν δεν το χρησιμοποιείτε. Τότε το **AAPS** δεν μπορεί να κάνει τη δουλειά του και οι συνδέσεις Bluetooth με τον αισθητήρα και την αντλία (ή το RileyLink) μπορεί να κλείσουν, με αποτέλεσμα ειδοποιήσεις «Η αντλία δεν είναι διαθέσιμη» και σφάλματα επικοινωνίας.
 
-### Can I move an active DASH Pod to other hardware?
+Απενεργοποιήστε τη βελτιστοποίηση μπαταρίας για το **AAPS**, την εφαρμογή CGM σας (π.χ. xDrip) και την εφαρμογή συστήματος Bluetooth. Ο τρόπος εξαρτάται από τη μάρκα, το μοντέλο και την έκδοση Android του τηλεφώνου:
 
-This is possible. Note that as moving is "unsupported" and "untested" there is some risk involved. Best to try the procedure when your Pod is about to expire so when things go wrong not much is lost.
+* δείτε [Βελτιστοποίηση μπαταρίας](#generaltroubleshooting-android-related-issues) για τηλέφωνα Pixel, Samsung και Huawei,
+* στο **AAPS**, ανοίξτε το **μενού** (☰) > **Σχετικά** και πατήστε **Μην σκοτώσεις την εφαρμογή μου;**, ή επισκεφθείτε το [Don't kill my app](https://dontkillmyapp.com/) για άλλες μάρκες.
 
-Critical is that pump "state" (which includes it's MAC address) in AAPS and DASH match on reconnecting
+Αν δεν είστε σίγουροι ότι η εξοικονόμηση μπαταρίας προκαλεί το πρόβλημά σας, μπορείτε προσωρινά να απενεργοποιήσετε όλες τις λειτουργίες εξοικονόμησης μπαταρίας στο τηλέφωνο: η μπαταρία θα αδειάζει πιο γρήγορα, αλλά θα δείτε γρήγορα αν το πρόβλημα φεύγει.
 
-### Procedure I follow in this:
+(FAQ-pump-unreachable-alerts)=
 
-1) Suspend the DASH pump. This makes sure there are no running or queued commands active when DASH loses connection 2) Put the phone into airplane mode to disable BT (as well as WiFi and Mobile data). This way it is guaranteed AAPS and DASH can not communicate. 3) Export settings (which includes the DASH state) 4) Copy the settings file just exported from the phone (as it is in airplane mode and we do not want to change that, easiest way is using USB cable) 5) Copy the settings file to the alternate phone. 6) Import settings on the alternate phones AAPS. 7) Check the DASH tab to verify it is seeing the Pod. 8) Un-suspend the Pod. 9) Check the DASH tab and confirm it is communicating with the Pod (use the refresh button)
+#### Ειδοποιήσεις «Η αντλία δεν είναι διαθέσιμη» αρκετές φορές την ημέρα ή τη νύχτα.
 
-Congratulations: you did it!
+Το τηλέφωνό σας μπορεί να αναστέλλει το **AAPS** ή ακόμα και το Bluetooth, με αποτέλεσμα να χάνεται η σύνδεση με την αντλία ή το RileyLink (δείτε την [εξοικονόμηση μπαταρίας](#FAQ-battery-savings) παραπάνω).
 
-*Wait!* You still have the main phone thinking it can reconnect to the same DASH:
+Μπορείτε επίσης να αλλάξετε πότε εμφανίζεται η ειδοποίηση: πατήστε το εικονίδιο **Ρυθμίσεις** (γρανάζι) πάνω δεξιά στην κύρια οθόνη και μετά επιλέξτε **Τοπικές ειδοποιήσεις** > **Όριο μη προσβάσιμης αντλίας** (30 έως 300 λεπτά). Ελέγξτε τη σελίδα της αντλίας σας: για κάποιες αντλίες προτείνεται μια τιμή, π.χ. 120 λεπτά για το [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md).
 
-1) On the main phone choose "deactivate". This is safe because the phone has no way of communicating with DASH to actually deactivated the Pod (it is still in airplane mode) 2) Deactivation will result in a communications error - this is expected. 3) Just hit "retry" a couple of times until AAPS offers the option to "Discard" the Pod.
+(FAQ-link-unresponsive)=
 
-When Discarded, verify AAPS is reporting "No Active Pod". You can now safely disable airplane mode again.
+#### Η συσκευή Link/αντλία/pod δεν αποκρίνεται (RL/OL/EmaLink…)
 
-### How do I import settings from earlier versions of AAPS into AAPS v3 ?
+Σε ορισμένα τηλέφωνα η σύνδεση Bluetooth με τις συσκευές Link (RL/OL/EmaL...) διακόπτεται.
 
-You can only import settings (in AAPS v3) that were exported using AAPS v2.8x or v3.x. If you were using a version of AAPS older than v2.8x or you need to use setting exports older than v2.8x, then you need to install AAPS v2.8 first. Import the older settings of v2.x in v2.8. After checking that all is OK, you can export settings from v2.8. Install AAPS v3 and import v2.8 settings in v3.
+Σε κάποια άλλα οι συσκευές Link δεν αποκρίνονται (το AAPS λέει ότι είναι συνδεδεμένες, αλλά οι συσκευές Link δεν μπορούν να φτάσουν ή να δώσουν εντολές στην αντλία.)
 
-If you use the same key to build v2.8 and v3, you won't even have to import settings. You can install v3 over v2.8.
+Δοκιμάστε πρώτα το κουμπί **Επαναφορά RileyLink** στην οθόνη της αντλίας (δείτε τη σελίδα της αντλίας σας: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). Αν αυτό δεν βοηθήσει, ο πιο εύκολος τρόπος για να λειτουργήσουν ξανά όλα αυτά μαζί είναι:
 
-There were some new objectives added. You'll need to validate them.
+1. Απενεργοποιήστε τη συσκευή Link.
+2. Κλείστε το **AAPS** (**μενού** (☰) > **Έξοδος**).
+3. Πατήστε παρατεταμένα το εικονίδιο του **AAPS**, ανοίξτε τις **App info** (πληροφορίες εφαρμογής) του Android, πατήστε **Force stop** (αναγκαστική διακοπή) και μετά **Storage** > **Clear cache** (εκκαθάριση cache) (ΜΗΝ διαγράψετε τον αποθηκευτικό χώρο/τα δεδομένα!).
+4. Σπάνια, κάποια τηλέφωνα μπορεί να χρειαστούν επανεκκίνηση σε αυτό το σημείο. Μπορείτε να δοκιμάσετε χωρίς επανεκκίνηση.
+5. Ενεργοποιήστε τη συσκευή Link.
+6. Ξεκινήστε το **AAPS**.
+7. Στην οθόνη της αντλίας, πατήστε **Σύζευξη RileyLink** και επιλέξτε ξανά τη συσκευή Link σας.
+
+### Απομακρυσμένος έλεγχος
+
+(FAQ-aapsclient)=
+
+#### Ρύθμιση και χρήση της απομακρυσμένης εφαρμογής AAPSClient
+
+Το **AAPSClient** είναι μια ξεχωριστή εφαρμογή με την οποία ένας φροντιστής μπορεί να παρακολουθεί και να ελέγχει το **AAPS** από απόσταση. Από το **AAPS** v4, ο έλεγχος του **AAPS** από το AAPSClient χρειάζεται μια σύζευξη των δύο εφαρμογών, που γίνεται μία φορά. Δείτε:
+
+* [Η εφαρμογή AAPSClient](#aapsclient-app): εγκατάσταση, πρώτη εκκίνηση και σύζευξη,
+* [Έλεγχος κύριας συσκευής ↔ πελάτη](#client-master-control): τι μπορεί να ελεγχθεί και πώς λειτουργεί η σύζευξη,
+* [Το AAPSClient σε έξυπνο ρολόι](#remotecontrol-smartwatches).
+
+(FAQ-hardened-mode)=
+
+#### Οι θεραπείες που εισάγω στον ιστότοπο του Nightscout δεν εφαρμόζονται
+
+Αυτή είναι η [ενισχυμένη λειτουργία](#client-master-control-hardened-mode). Όσο ο έλεγχος από πελάτες είναι ενεργός — πάντα στην Απλή λειτουργία — το **AAPS** δέχεται αλλαγές μόνο από συζευγμένους πελάτες, όχι από τον ιστότοπο του Nightscout ή άλλες εφαρμογές. Εισάγετέ τις σε ένα συζευγμένο **AAPSClient**.
+
+### Ειδοποιήσεις και προειδοποιήσεις
+
+#### Έχω ένα κόκκινο σήμα προειδοποίησης (κόκκινο τρίγωνο) / Το AAPS δεν ενεργοποιεί το κλειστό κύκλωμα / Το κύκλωμα μένει σε LGS / Είχα ένα κίτρινο τρίγωνο
+
+Το κόκκινο σήμα προειδοποίησης στη συντόμευση της πηγής BG είναι μια λειτουργία ασφαλείας του AAPS. Δείτε [Σήμα προειδοποίησης BG](#aaps-screens-bg-warning-sign) για την πλήρη εξήγηση.
+
+Ένα κόκκινο σήμα προειδοποίησης στη συντόμευση της πηγής BG στην κάτω γραμμή (το κόκκινο τρίγωνο των παλαιότερων εκδόσεων) σημαίνει ότι έχετε διπλές τιμές BG και το AAPS δεν μπορεί να υπολογίσει με ακρίβεια τα delta. Ένα κλειστό κύκλωμα αλλάζει σε λειτουργία **Αναστολή Χαμηλής Γλυκόζης**: εξακολουθεί να μειώνει ή να αναστέλλει τον βασικό ρυθμό για να σας προστατεύει από υπογλυκαιμίες, αλλά δεν δίνει ινσουλίνη διόρθωσης. Πρέπει να διαγράψετε μία τιμή BG από κάθε διπλή τιμή για να φύγει η προειδοποίηση. Πατήστε τη συντόμευση για να ανοίξετε την [οθόνη της πηγής BG](#aaps-screens-bg-source): η διπλή τιμή εμφανίζεται με κόκκινο χρώμα. Πατήστε παρατεταμένα μια γραμμή που θέλετε να διαγράψετε, επιλέξτε μία από κάθε διπλή γραμμή και πατήστε το εικονίδιο του κάδου. Ίσως χρειαστεί να επαναφέρετε τις βάσεις δεδομένων του AAPS αν υπάρχουν πάρα πολλές διπλές τιμές BG. Σε αυτή την περίπτωση θα χάσετε επίσης τα στατιστικά, το IOB, το COB και το επιλεγμένο προφίλ.
+
+Όταν φύγει η προειδοποίηση, το AAPS δεν επιστρέφει μόνο του σε **Κλειστό Κύκλωμα**. Πατήστε το εικονίδιο κυκλώματος στην κύρια οθόνη και επιλέξτε ξανά **Κλειστό Κύκλωμα**.
+
+Πιθανή αιτία του προβλήματος: το xDrip και/ή το NS συμπληρώνουν παλιές τιμές BG (backfilling).
+
+Το κίτρινο τρίγωνο των παλαιότερων εκδόσεων σήμαινε ασταθή χρόνο ανάμεσα στις μετρήσεις BG (οι τιμές BG δεν έρχονται τακτικά κάθε 5 λεπ. ή λείπουν τιμές BG), κάτι που συμβαίνει συχνά με το Libre ή μετά από αλλαγή πομπού του G6. Το **AAPS** 4 δεν το δείχνει πια: υπολογίζει ξανά τις τιμές στο παρασκήνιο και το κύκλωμα λειτουργεί σωστά.
+
+### Omnipod DASH
+
+(FAQ-move-dash-pod)=
+
+#### Μπορώ να μεταφέρω ένα ενεργό DASH Pod σε άλλο τηλέφωνο;
+
+Η κατάσταση του Pod περιλαμβάνεται στις ρυθμίσεις που εξάγετε, οπότε ένα ενεργό Pod μπορεί να μεταφερθεί σε άλλο τηλέφωνο: κάνετε εξαγωγή ρυθμίσεων λίγο πριν από τη μεταφορά και εισαγωγή στο άλλο τηλέφωνο. Αυτό δεν υποστηρίζεται επίσημα και υπάρχει κίνδυνος να χάσετε το Pod: αν είναι δυνατόν, δοκιμάστε το όταν το Pod σας πρόκειται να λήξει.
+
+Διαβάστε πρώτα αυτές τις ενότητες:
+
+* [Εξαγωγή και εισαγωγή ρυθμίσεων](#omnipod-dash-export-import) στη σελίδα του Omnipod DASH και [Αντλίες χωρίς σωληνάκι](#ExportImportSettings-tubeless-pumps): στο νέο τηλέφωνο, επιλέξτε **Αντικατάσταση και των ρυθμίσεων αντλίας** και χρησιμοποιήστε ένα αρχείο που εξήχθη κατά τη διάρκεια του Pod που φοράτε τώρα,
+* [Απόρριψη ενός pod](#omnipod-dash-discard-pod), για να αφαιρέσετε μετά το Pod από το παλιό τηλέφωνο. Κρατήστε το παλιό τηλέφωνο σε λειτουργία πτήσης μέχρι να απορριφθεί το Pod, ώστε τα δύο τηλέφωνα να μην επικοινωνούν ποτέ με το Pod την ίδια ώρα.

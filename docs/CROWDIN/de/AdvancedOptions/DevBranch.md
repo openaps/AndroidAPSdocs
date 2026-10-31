@@ -10,9 +10,9 @@ Achtung: Die AAPS-Entwicklungsversion (Dev Branch) ist für Entwickler sowie Tes
 
 Im Dev Branch sieht man, welche Funktionen gerade getestet werden. Damit können Fehler ausgebügelt und Feedback dazu gegeben werden, wie die neuen Funktionen in der Praxis funktionieren. Meist wird die Entwicklerversion auf einem alten Smartphone mit einer separaten Pumpe so lange getestet bis sie stabil läuft. Jede Benutzung des Dev Branch erfolgt auf eigene Gefahr! Sei Dir beim Ausprobieren neuer Funktionen im Klaren, dass Du Funktionen verwendest, die sich noch in Entwicklung befinden und nicht final freigegeben sind. Um Deine eigene Sicherheit zu gewährleisten, tue dies auf eigene Gefahr und mit der gebotenen Sorgfalt.
 
-Wenn Du einen Fehler gefunden hast oder glaubst, dass etwas nicht richtig funktioniert, sieh im [Issues Tab](https://github.com/nightscout/AndroidAPS/issues) nach, um zu sehen, ob schon jemand diesen Fehler gefunden hat. Falls nicht, kannst Du ein neues Issue eröffnen. Je mehr Informationen Du dabei mitlieferst, desto besser/schneller kann der Fehler reproduziert und behoben werden. Vergiss nicht, die [Protokolldateien](../GettingHelp/AccessingLogFiles.md) anzufügen. Die neuen Funktionen können auch auf [Discord](https://discord.gg/4fQUWHZ4Mw) diskutiert werden.
+Wenn Du einen Fehler gefunden hast oder glaubst, dass etwas nicht richtig funktioniert, sieh im [Issues Tab](https://github.com/nightscout/AndroidAPS/issues) nach, um zu sehen, ob schon jemand diesen Fehler gefunden hat. Falls nicht, kannst Du ein neues Issue eröffnen. Je mehr Informationen Du dabei mitlieferst, desto besser/schneller kann der Fehler reproduziert und behoben werden. Vergiss nicht, die [Protokolldateien](../GettingHelp/AccessingLogFiles.md) anzufügen). Die neuen Funktionen können auch auf [Discord](https://discord.gg/4fQUWHZ4Mw) diskutiert werden.
 
-Eine Entwicklerversion hat ein Ablaufdatum. Das scheint unpraktisch, wenn es zufriedenstellend genutzt wird, aber es dient einem Zweck. Wenn nur eine Entwicklerversion im Umlauf, ist es einfacher, die gemeldet Fehler nachzuverfolgen. Die Entwickler wollen nicht in die Lage geraten, dass drei verschiedene Entwicklerversionen m Umlauf sind, in denen parallel Fehler behoben werden müssen und Testuser Fehler, die schon behoben wurden, in der neuesten Entwicklerversion, (in guter Absicht) noch einmal melden.
+Eine Entwicklerversion hat ein Ablaufdatum. Das scheint unpraktisch, wenn es zufriedenstellend genutzt wird, aber es dient einem Zweck. Wenn nur eine Entwicklerversion im Umlauf ist, ist es einfacher, die gemeldeten Fehler nachzuvollziehen. Die Entwickler wollen nicht in die Lage geraten, dass drei verschiedene Entwicklerversionen m Umlauf sind, in denen parallel Fehler behoben werden müssen und Testuser Fehler, die schon behoben wurden, in der neuesten Entwicklerversion, (in guter Absicht) noch einmal melden.
 
 (branch-ci-test)=
 
@@ -39,7 +39,8 @@ Verfügbar ab 3.3.2.1. Dev
     <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
       <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
         <iframe
-          src="https://www.dailymotion.com/embed/video/x9rdx1q"
+          src="https://geo.dailymotion.com/player/x9rdx1q.html?video=x9rdx1q&loop=true&mute=true"
+          loading="lazy"
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
           frameborder="0"
           allowfullscreen>
@@ -49,6 +50,8 @@ Verfügbar ab 3.3.2.1. Dev
 ```
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
+
+- Target-Repository: das Repository, das den PR im Format Owner/Repo enthält. Lass den Standard **nightscout/AndroidAPS** unverändert, es sei denn, Dir wurde gesagt, ein anderes Repository zu verwenden (das sollten nur Entwickler tun).
 
 - PR-Nummer: Bitte gib die zu testende PR-Nummer ein.
 

@@ -2,7 +2,7 @@
 
 ## AAPS funcționează integral pe baza eforturilor de voluntariat și nu are personal remunerat.
 
-Dezvoltatorii sunt părinți, îngrijitorii, cei dragi și persoanele cu diabet care lucrează împreună pentru dezvoltarea și îmbunătățirea unei soluții pentru o nevoie des întâlnită. Dezvoltatorii își donează timpul lor liber fără a cere nimic în schimb și este totuși un pic nedrept să ne așteptăm de la ei să aibă costuri financiare adiționale pentru a putea dintr-un proiect așa de minunat ceva open source și gratuit pentru toți.
+Developers are parents, caregivers, loved ones and people with diabetes working together to develop and improve a solution to a very common want. Dezvoltatorii își donează timpul lor liber fără a cere nimic în schimb și este totuși un pic nedrept să ne așteptăm de la ei să aibă costuri financiare adiționale pentru a putea dintr-un proiect așa de minunat ceva open source și gratuit pentru toți.
 
 *Pentru a putea testa în întregime un dispozitiv nou, dezvoltatorii trebuie să folosească un telefon de rezervă și o pompă de rezervă, deoarece sistemul nu poate fi folosit pe oameni atâta timp cât nu este stabil. Noile modele necesită testare pe măsură ce devin disponibile. O parte din banii donați sunt necesari, de asemenea, pentru a acoperi costurile logistice de curierat al acestor dispozitive între diferitele țări, între dezvoltatori. Câteodată este frumos să se contribuie la acoperirea costurilor pe care dezvoltatorii le suportă pentru a se putea întâlni la conferințe sau evenimente în vederea participării la ședințe care să le permită să-și pună împreună la muncă creativitatea și mintea analitică.*
 

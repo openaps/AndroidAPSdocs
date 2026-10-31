@@ -8,13 +8,11 @@
 
 * Как обнаружить нестабильную связь?
 
-Перейдите на вкладку NSClient в AAPS и просмотрите журнал событий. Обычно отклик PING происходит каждые ~ 30 секунд и сообщения о повторном подключении не поступают. Если вы видите много повторных попыток соединения, то это свидетельство проблем со связью.
-
-Начиная с версии AndroidAPS 2.0, при обнаружении такого поведения, происходит приостановка NSClient на 15 минут и на главном экране появляется сообщение "Сбой (ошибка) NSClient".
+Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. Если вы видите много повторных попыток соединения, то это свидетельство проблем со связью.
 
 * перезапуск
 
-В качестве первого шага попробуйте перезапустить Nightcout и затем телефон, чтобы понять, сохраняется ли проблема
+As a first step, restart Nightscout and then your phone to see if the issue is permanent.
 
 Если Nightscout размещен на Heroku, вы можете перезапустить Nightscout так: зайдите в Heroku, нажмите на имя приложения, нажмите в меню «More», затем «Restart all dynos».
 
@@ -36,7 +34,7 @@ Android может перевести телефон в спящий режим.
 
 * Нет данных ГК из Nightscout
 
-Если AAPS правильно подключается к Nightscout, но ГК отображается как n/a Перейдите на вкладку NSCLIENT, нажмите в верхней части меню с тремя точками, нажмите NSClient Preferences -> полная синхронизация.
+If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSClientV3 settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**. This option is hidden while client control is on ([hardened mode](#client-master-control-hardened-mode)); in that case check that **NSClient BG** is selected in **Configuration** → **BG Source**.
 
 * Если все еще приходят сообщения об ошибке...
 

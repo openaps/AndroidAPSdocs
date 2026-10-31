@@ -1,8 +1,7 @@
-# Medtrum Nano / 300U
+(medtrum-nano-300u)=
+# Medtrum Nano 200U / 300U
 
 Aceste instrucțiuni sunt pentru configurarea pompei de insulină Medtrum.
-
-Această aplicație face parte dintr-o soluție DIY (do-it-yourself/ o aplicație pe care o construiți singur) și nu este un produs finit; și necesită ca dumneavoastră să citiți, să învățați și să înțelegeți sistemul, de la construcție pana la modul de utilizare. You alone are responsible for what you do with it.
 
 ```{contents} Table of contents
 :depth: 1
@@ -17,13 +16,12 @@ Această aplicație face parte dintr-o soluție DIY (do-it-yourself/ o aplicați
 ## Cerințe hardware și software
 * **Pompa de bază Medtrum compatibilă și plasturii cu rezervor**
     - Acceptat în prezent:
-        - Medtrum TouchCare Nano cu referințe ale pompei de bază: **MD0201** și **MD8201**.
+        - Medtrum TouchCare Nano 200U with pumpbase refs: **MD0201** and **MD8201**.
         - Medtrum TouchCare 300U cu referințe ale pompei de bază: **MD8301**.
         - Dacă aveți un model neacceptat și sunteți dispuși să donați echipamente sau să asistați cu testarea, vă rugăm să ne contactați prin intermediul discord [aici](https://discordapp.com/channels/629952586895851530/1076120802476441641).
-* **Versiunea 3.2.0.0 sau mai nouă de AAPS construită și instalată** folosind instrucțiunile [construiește APK](../SettingUpAaps/BuildingAaps.md).
+* **AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
 * **Telefon Compatibil Android** cu o conexiune Bluetooth BLE
     - Vedeți [Notele de lansare](../Maintenance/ReleaseNotes.md) AAPS
-* [**Senzor de monitorizarea continuă a glicemiei (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
 ## Înainte să începeți
 
@@ -35,351 +33,362 @@ Această aplicație face parte dintr-o soluție DIY (do-it-yourself/ o aplicați
 
 **Pompa nu va opri administrarea insulinei atunci când nu este conectată la AAPS** Ratele bazale implicite sunt programate în pompă așa cum sunt definite în profilul activ în prezent. Atâta timp cât AAPS este operațional, va trimite comenzi pentru rate bazale temporare care rulează pentru un maximum de 120 de minute. Dacă dintr-un motiv sau altul pompa nu primește nicio comandă nouă (spre exemplu deoarece comunicarea a fost pierdută din distanței dintre pompă și telefonul), pompa va reveni la rata bazală implicită programată în pompă odată ce rata bazală temporară se încheie.
 
-**Profile cu rate bazale pe durate de 30 de minute NU sunt acceptate în AAPS.** **Profilul AAPS nu accepta un interval de timp de 30 de minute al ratei bazale** Dacă sunteți la început în AAPS și vă configurați pentru prima dată profilul de rată bazală pentru prima dată, vă rugăm să rețineți că intervalele de rate bazale care încep la și jumătate nu sunt acceptate, și va trebui să ajustați profilul de rată a bazalei pentru a începe la fix. Spre exemplu, dacă ai o rată bazală de 1,1 unități care începe la ora 09:30 și are o durată de 2 ore cu terminare la ora 11:30, aceasta nu va funcționa. Va trebui să schimbați această rată bazală de 1,1 unități într-un interval de timp ca 9:00-11:00 sau 10:00-12:00. Chiar dacă dispozitivul pompei Medtrum în sine acceptă incrementele de 30 de minute ale profilului bazalei AAPS nu le poate lua în considerare cu algoritmii săi în prezent.
+**The AAPS Profile does not support a 30 minute basal rate time frame** If you are new to AAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. Spre exemplu, dacă ai o rată bazală de 1,1 unități care începe la ora 09:30 și are o durată de 2 ore cu terminare la ora 11:30, aceasta nu va funcționa. Va trebui să schimbați această rată bazală de 1,1 unități într-un interval de timp ca 9:00-11:00 sau 10:00-12:00. Chiar dacă dispozitivul pompei Medtrum în sine acceptă incrementele de 30 de minute ale profilului bazalei AAPS nu le poate lua în considerare cu algoritmii săi în prezent.
 
-**Ratele bazale de 0U/h din profil NU sunt acceptate în AAPS** Deși pompa Medtrum acceptă o rată bazală de zero unități AAPS folosește multipli ai ratei bazale de profil pentru a determina tratamentul automat și prin urmare nu poate funcționa cu o rată bazală de zero unități. O rată bazală temporară de zero unități poate fi obținută prin intermediul funcției "Deconectare pompă" sau printr-o combinație de Dezactivare a buclei/ratei bazale temporare sau prin Suspendarea Buclei/Ratei bazale temporare.
+**Ratele bazale de 0U/h din profil NU sunt acceptate în AAPS** Deși pompa Medtrum acceptă o rată bazală de zero unități AAPS folosește multipli ai ratei bazale de profil pentru a determina tratamentul automat și prin urmare nu poate funcționa cu o rată bazală de zero unități. The minimum profile basal rate is 0.05 U/h.
+
+O rată bazală temporară de zero unități poate fi obținută prin intermediul funcției "Deconectare pompă" sau printr-o combinație de Dezactivare a buclei/ratei bazale temporare sau prin Suspendarea Buclei/Ratei bazale temporare.
 
 ## Instalare
 
-ATENȚIE: Când activați un plasture cu AAPS, **TREBUIE** dezactivate toate celelalte dispozitive care pot vorbi cu baza pompei Medtrum. spre exemplu telecomandă activă și aplicație Medtrum. Asigurați-vă că aveți baza pompei dumneavoastră și numărul de serie al bazei pompei pregătit pentru activarea unui nou plasture.
+```{caution}
+When you activate a patch with **AAPS**, you **MUST** turn off every other device that can talk to the Medtrum pump base, for example an active PDM or the Medtrum app.
+```
 
 ### Pasul 1: Selectați pompa Medtrum
 
 #### Opțiunea 1: Instalări noi
 
-Dacă instalați AAPS pentru prima dată, **Asistentul de configurare** vă va ghida în instalarea AAPS. Selectați "Medtrum" când ajungeți la selecția pompei.
+If you are installing **AAPS** for the first time, the **Setup Wizard** guides you through the setup. Select **Medtrum** when you reach the **Pump** step.
 
-Dacă aveți dubii puteți selecta "Pompa virtuală" și selecta "Medtrum" mai târziu, după ce ați configurat AAPS (vedeți opțiunea 2).
+If in doubt, you can also select **Virtual Pump** and select **Medtrum** later, after setting up **AAPS** (see option 2).
 
-![Asistent de configurare](../images/medtrum/SetupWizard.png)
+![Setup Wizard pump step](../images/setup-wizard/Wizard-Pump.png)
 
-#### Opțiunea 2: Configurator
+#### Option 2: The Configuration screen
 
-Pe o instalare existentă, puteți selecta pompa **Medtrum** în [Configurator > Pompa](#Config-Builder-pump):
+On an existing installation you can select the **Medtrum** pump in [Configuration > Pump](#Config-Builder-pump):
 
-În colțul din stânga sus **meniu hamburger** selectați **Configurator**\ ➜\ **Pompă**\ ➜ \ **Medtrum**\ prin selectarea butonului **Activare** intitulat **Medtrum**.
+Open the top-left **menu** (☰), tap **Configuration** > **Pump**, and select the **Medtrum** card. Only one pump can be active at a time.
 
-Selectarea **casetei de selectare** lângă **Roata Zimțată de Setări** va permite privirii de ansamblu asupra Medtrum să fie afișată ca o filă în interfața AAPS intitulată **Medtrum**. Bifarea acestei casete vă va facilita accesul la comenzile Medtrum atunci când folosiți AAPS și este recomandată în mod special.
+![Configuration > Pump with the Medtrum plugin](../images/v4/Configuration/configuration_pump_list_4.png)
 
-![Configurarea Sistemului (Config Builder)](../images/medtrum/ConfigBuilder.png)
+Once it is selected, the **Medtrum** card shows two buttons, **Settings** and **Open plugin**:
 
+![The Medtrum plugin selected in Configuration > Pump](../images/v4/Pumps/medtrum_enabled.png)
+
+**Open plugin** (or **Manage → Pump**) opens the Medtrum pump screen. You use it to change patches and to see the pump status. Before a patch is activated it looks like this:
+
+![Medtrum pump screen before pairing](../images/v4/Pumps/medtrum_pump_screen.png)
+
+(medtrum-step-2)=
 ### Pasul 2: Modificați setările Medtrum
 
-Introduceți setările Medtrum prin atingerea **Rotiței zimțate a Setărilor** din modulul Medtrum în Configurator.
+Tap **Settings** on the **Medtrum** card in **Configuration** > **Pump**. You can also tap the gear icon in the top-right corner of the Medtrum pump screen. This opens the **Medtrum pump settings**:
 
-![Setări Medtrum](../images/medtrum/MedtrumSettings.png)
+![Medtrum driver settings](../images/v4/Pumps/medtrum_settings.png)
 
-#### Număr de serie:
+```{note}
+There is no **Serial Number** setting any more. **AAPS** finds your pump base with a Bluetooth scan the first time you activate a patch (see [Step 3](#medtrum-activate-patch)), and remembers its serial number. To use a different pump base, see [Unpair](#medtrum-unpair).
+```
 
-Introduceți aici numărul de serie al bazei pompei dumneavoastră așa cum este înscris pe baza pompei. Asigurați-vă că numărul de serie este corect și că nu există spații adăugate (puteți folosi litere mari sau mici).
-
-NOTĂ: Această setare poate fi schimbată doar când nu există un plasture activ.
-
-#### Setări alarmă
+#### Alarm Settings
 
 ***Implicit: semnal sonor.***
 
-Această setare schimbă modul în care pompa vă va alerta atunci când există un avertisment sau o eroare.
+This setting changes the way that the pump alerts you when there is a warning or error.
 
-- Semnal sonor > Plasturele va suna la alarme și avertismente
-- Silențios > Plasturele nu vă va alerta prin alarme și avertismente
+- **Beep**: the patch beeps on alarms and warnings.
+- **Silent**: the patch does not alert you on alarms and warnings.
 
-Notă: În modul silențios, AAPS încă va suna alarma în funcție de setările de volum ale telefonului. Dacă nu răspundeți la alarmă, în cele din urmă plasturele va emite un semnal sonor.
+Note: In silent mode **AAPS** still sounds the alarm, depending on your phone's volume settings. If you do not respond to the alarm, the patch eventually beeps.
 
 #### Notificare la avertizarea pompei
 
 ***Implicit: Activat.***
 
-Aceste setări schimbă modul în care AAPS va afișa notificarea în cazul avertismentelor non-critice ale pompei. Când este activată, o notificare va fi afișată pe telefon atunci când apare un avertisment al pompei, inclusiv:
-    - Baterie slabă
-    - Rezervor redus (20 de unități)
-    - Avertizare de expirare a plasturelui
+This setting changes the way **AAPS** shows notifications for non-critical pump warnings. When enabled, a notification is shown on the phone when a pump warning occurs, including:
+- Baterie slabă
+- Low reservoir (20 units)
+- Patch expires soon
 
-În orice caz, aceste avertismente sunt afișate și în ecranul privire de ansamblu al Medtrum sub [Alarme active](#medtrum-active-alarms).
+We recommend leaving this enabled when the pump alarms are set to **Silent**. In either case these warnings are also shown on the Medtrum pump screen under [Active alarms](#medtrum-active-alarms).
 
 (medtrum-patch-expiration)=
 #### Expirare plasture
 
 ***Implicit: Activat.***
 
-Această setare schimbă comportamentul plasturelui. Când este activat, plasturele va expira după 3 zile și va emite un avertisment sonor dacă aveți sunetul activat. După 3 zile și 8 ore, plasturele va înceta să funcționeze.
+Această setare schimbă comportamentul plasturelui. When enabled, the patch expires after 3 days and gives an audible warning if you have sound enabled. After 3 days and 8 hours the patch stops working.
 
-Dacă această setare este dezactivată, plasturele nu vă va avertiza și va continua să ruleze până când bateria plasturelui sau rezervorul se vor termina.
+If this setting is disabled, the patch does not warn you before it stops. With recent pump base firmware, a patch runs for 5 days at most.
 
-#### Avertizare de expirare pompă
+#### Pump expiry warning [hours]
 
 ***Implicit: 72 de ore.***
 
-Această setare schimbă ora de expirare când [Expirare plasture](#medtrum-patch-expiration) este activată, AAPS va notifica la o oră după activare.
+This setting changes the time of the expiration warning. When [Patch Expiration](#medtrum-patch-expiration) is enabled, **AAPS** shows a notification this many hours after activation.
 
-#### Insulină maximă pe oră
+#### Hourly Maximum Insulin [Units]
 
 ***Implicit: 25U.***
 
-Această setare modifică cantitatea maximă de insulină care poate fi administrată într-o oră. Dacă această limită este depășită, plasturele se va suspenda și va da o alarmă. Alarma poate fi resetată prin apăsarea butonului de resetare din meniul general vedeți [Resetați alarmele](#nano-reset-alarms).
+Această setare modifică cantitatea maximă de insulină care poate fi administrată într-o oră. If this limit is exceeded, the patch suspends and gives an alarm. You can reset the alarm with the **Reset alarms** button on the pump screen, see [Reset alarms](#nano-reset-alarms).
 
 Stabiliți aceasta la o valoare rezonabilă pentru necesarul dumneavoastră de insulină.
 
-#### Insulină maximă zilnică
+#### Daily Maximum Insulin [Units]
 
 ***Implicit: 80U.***
 
-Această setare schimbă cantitatea maximă de insulină care poate fi administrată într-o zi. Dacă această limită este depășită, plasturele se va suspenda și va da o alarmă. Alarma poate fi resetată prin apăsarea butonului de resetare din meniul general vedeți [Resetați alarmele](#nano-reset-alarms).
+Această setare schimbă cantitatea maximă de insulină care poate fi administrată într-o zi. If this limit is exceeded, the patch suspends and gives an alarm. You can reset the alarm with the **Reset alarms** button on the pump screen, see [Reset alarms](#nano-reset-alarms).
 
 Stabiliți aceasta la o valoare rezonabilă pentru necesarul dumneavoastră de insulină.
 
-#### Eroare Scanare la conexiune
+#### Scan on connection error
 
 ***Implicit: oprit.***
 
 Localizat sub **Setări avansate**.
 
-Activați numai dacă aveți probleme de conexiune. Dacă este activată, driverul scanează după pompa din nou înainte de a încerca reconectarea la pompă. Asigurați-vă că aveți permisiunea de locație setată la "Întotdeauna permiteți".
+Only enable this if you have connection problems. When enabled, the driver scans for the pump again before trying to reconnect to it. Make sure the Location permission for **AAPS** is set to "Allow all the time".
 
-### Pasul 2b: Setările alertelor AAPS
+### Step 2b: AAPS alert settings
 
-Mergeți la preferințe
+These settings are not part of the Medtrum driver. Open them from the **Settings** (gear) icon in the top-right corner of the main screen. See [Settings](../SettingUpAaps/Preferences.md) for more.
 
-#### Pompă:
+#### BT Watchdog
 
-##### BT Watchdog
+Open **Settings** > **Pump**:
 
-Mergeți la preferințe și selectați **Pompa**:
+![Settings > Pump](../images/preferences/settings_pump.png)
 
-![BT Watchdog](../images/medtrum/BTWatchdogSetting.png)
+**BT Watchdog** switches off the phone's Bluetooth for one second if **AAPS** cannot connect to the pump. This may help on some phones where Bluetooth freezes.
 
-##### BT Watchdog
+Enable this setting if you often have connection problems with your pump.
 
-Această setare va încerca să remedieze orice probleme legate de BLE. Va încerca să se reconecteze la pompă atunci când conexiunea este pierdută. De asemenea, va încerca să se reconecteze la pompă atunci când pompa nu mai este accesibilă pentru o anumită perioadă de timp.
+#### Alerte locale
 
-Activați această setare dacă întâmpinați probleme frecvente de conectare cu pompa.
+Open **Settings** > **Local alerts**:
 
-#### Alerte locale:
-
-Mergeți la preferințe și selectați **Alerte locale**:
-
-![Alerte locale](../images/medtrum/LocalAlertsSettings.png)
+![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
 
 ##### Alertați dacă pompa este indisponibilă
 
 ***Implicit: Activat.***
 
-Această setare este forțată să fie activată atunci când driverul Medtrum este activ. Vă va alerta când pompa nu este accesibilă. Acest lucru se poate întâmpla atunci când pompa nu este în preajmă sau când pompa nu răspunde din cauza unui plasture sau a unei baze de pompă defecte, spre exemplu, când apa se scurge între baza pompei și plasture.
+This setting is forced on when the Medtrum driver is enabled. It alerts you when the pump is unreachable. This can happen when the pump is out of range, or when it is not responding because of a faulty patch or pump base, for example when water leaks between the pump base and the patch.
 
 Din motive de siguranță, această setare nu poate fi dezactivată.
 
-##### Prag pompă indisponibilă [min]
+##### Pump unreachable threshold
 
 ***Implicit: 30 de minute.***
 
-Această setare schimbă timpul după care AAPS vă va alerta atunci când pompa nu este accesibilă. Acest lucru se poate întâmpla atunci când pompa nu este în preajmă sau când pompa nu răspunde din cauza unui plasture sau a unei baze de pompă defecte, spre exemplu, când apa se scurge între baza pompei și plasture.
+This setting changes how long **AAPS** waits before alerting you that the pump is unreachable.
 
-Această setare poate fi schimbată când se utilizează pompa Medtrum, dar se recomandă setarea acesteia la 30 de minute, din motive de siguranță.
+You can change this setting when using the Medtrum pump, but we recommend keeping it at 30 minutes for safety reasons.
 
+(medtrum-activate-patch)=
 ### Pasul 3: Activați plasturele
 
 **Înainte să continuați:**
-- Să aveți baza pompei Medtrum Nano și un plasture cu rezervor pregătite.
-- Asigurați-vă că AAPS este configurat în mod corespunzător și că [este activat un profil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-- Alte dispozitive care pot vorbi cu pompa Medtrum sunt dezactivate (telecomanda sau aplicația Medtrum)
+- Have your Medtrum pump base and a new reservoir patch ready.
+- Turn off other devices that can talk to the Medtrum pump (PDM and Medtrum app).
+- Ideally, make sure **AAPS** is set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). If no profile is active, the activation starts with a **Profile required** step where you choose the profile to activate.
 
-#### Activați plasturele din fila vedere de ansamblu Medtrum
+#### Start the activation
 
-Navigați spre [fila Medtrum](#nano-overview) în interfața AAPS și apăsați butonul **Schimbați plasturele** din colțul din dreapta jos.
+Open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**. If you have set up [settings protection](#Preferences-protection), you must enter your password or PIN first.
 
-Dacă un plasture este deja activ, vi se va cere să dezactivați mai întâi acest plasture. vedeți [Dezactivați plasturele](#nano-deactivate-patch).
+If a patch is already active, you are asked to deactivate it first, see [Deactivate patch](#nano-deactivate-patch).
 
-Urmați instrucțiunile pentru a umple și a activa un nou plasture. Vă rugăm să rețineți - este important să conectați baza pompei la plasturele rezervor doar în etapa în care vi se cere să faceți acest lucru. **Trebuie să puneți pompa pe corpul dumneavoastră și să introduceți canula numai când vi se cere în timpul procesului de activare (după ce amorsarea este completă).**
+The activation is a step-by-step wizard. Urmați instrucțiunile pentru a umple și a activa un nou plasture. Tap **Cancel** at any step to stop.
 
-##### Pornire activare
+```{important}
+Only put the patch on your body and insert the cannula when the wizard tells you to (after priming is complete).
+```
 
-![Porniți activarea](../images/medtrum/activation/StartActivation.png)
+The first steps you see depend on your setup:
 
-În această etapă, verificați numărul de serie și asigurați-vă că baza pompei nu este încă conectată la plasture.
+1. **Profile required**: only if no profile is active. Select the profile to apply, then continue.
+2. **Find Pump**: only the first time, or after you used [Unpair](#medtrum-unpair). Connect the pump base to a fresh patch to power it on. **AAPS** scans for nearby Medtrum pump bases (their names start with `MT`). Tap yours in the list. **AAPS** saves its serial number, then goes straight to filling the patch.
 
-Apăsați **Înainte** pentru a continua.
+   ![Find Pump step scanning for a Medtrum pump base](../images/medtrum/activation/FindPump.png)
 
-##### Umpleți plasturele transdermic
+3. **Activate Patch**: only when **AAPS** already knows your pump base. The screen says "No active patch. Press **Next** to begin the activation process." Make sure the pump base is **not** connected to the patch yet, then tap **Next**.
+
+![Pornire activare](../images/medtrum/activation/StartActivation.png)
+
+#### Connect and fill the patch
 
 ![Umpleți plasturele transdermic](../images/medtrum/activation/FillPatch.png)
 
-Odată ce plasturele este detectat și umplut cu minim 70 de unități de insulină, va apărea **Următorul**.
+Connect the pump base to the patch, remove the residual air and fill the patch with insulin. A minimum of 70 units is needed for activation. The screen shows the reservoir level. Do not attach the patch to your body yet.
 
-##### Amorsați plasturele transdermic
+When the patch is detected and filled, the **Next** button appears. Tap it.
+
+#### Select insulin
+
+This step only appears if you have more than one insulin set up in **AAPS**. Select the insulin you are filling the patch with. **AAPS** applies a profile switch with this insulin after activation.
+
+#### Amorsați plasturele transdermic
 
 ![Jumătate de apăsare](../images/medtrum/activation/HalfPress.png)
 
-Nu îndepărtați piedica de siguranță și apăsați butonul acului de pe plasture.
-
-Apăsați **Următorul** pentru a începe să amorsați
+Do **not** remove the safety lock. Half-press the needle button on the patch, then tap **Next** to start priming.
 
 ![Progresul amorsării](../images/medtrum/activation/PrimeProgress.png)
 
+Wait for priming to complete.
+
 ![Amorsare finalizată](../images/medtrum/activation/PrimeComplete.png)
 
-Odată ce amorsarea este finalizată, apăsați **Următorul** pentru a continua.
+When priming is complete, tap **Next** to continue.
 
-##### Atașați plasturele
+#### Rotație loc
+
+This step only appears if you manage pump sites with [Site Rotation](#Aapsscreens-site-rotation) (setting **Manage pump site rotation**). Choose where you place the patch on your body, or skip this step.
+
+#### Atașați plasturele
 
 ![Atașați plasturele](../images/medtrum/activation/AttachPatch.png)
 
-Curățați pielea, îndepărtați autocolantele și atașați plasturele pe corpul dumneavoastră. Îndepărtați piedica de siguranță și apăsați pe butonul acului de pe plasture pentru a introduce canula.
+Clean the skin and remove the stickers. Remove the safety lock, attach the patch to your body, and press the needle button to insert the cannula.
 
-Apăsați **Următorul** pentru a activa plasturele.
+Tap **Next** to activate the patch.
 
-(medtrum-activate-patch)=
-##### Activați plasturele
+#### Activați plasturele
 
 ![Activați plasturele](../images/medtrum/activation/ActivatePatch.png)
 
-Când activarea este finalizată, va apărea următorul ecran
+**AAPS** activates the pump and sets the initial basal rate. Please wait. When activation is complete, the following screen appears:
 
 ![Activare completă](../images/medtrum/activation/ActivationComplete.png)
 
-**OK** pentru a reveni la ecranul principal.
+```{admonition} Older screenshot
+:class: note
+Apart from **Find Pump**, the activation screenshots above are from an earlier **AAPS** version and may look different in **AAPS** 4.
+```
+
+It shows how many units are left in the patch. Tap **OK** to return to the pump screen.
+
+```{tip}
+After a new activation, [export your settings](../Maintenance/ExportImportSettings.md). This lets you recover this patch session later, for example on a new phone.
+```
 
 (nano-deactivate-patch)=
 
 ### Dezactivați plasturele
 
-Pentru a dezactiva un plasture activ, accesați [fila Medtrum](#nano-overview) din interfața AAPS și apăsați butonul **Schimbați plasture**.
+To deactivate the active patch, open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**.
 
 ![Dezactivați plasturele](../images/medtrum/activation/DeactivatePatch.png)
 
-Vi se va cere să confirmați că doriți să dezactivați plasturele curent. **Vă rugăm să rețineți că această acțiune nu este reversibilă.** Când dezactivarea este finalizată, puteți apăsa **Următorul** pentru a continua procesul de activare a unui nou plasture. Dacă nu sunteți gata să activați un nou plasture, apăsați **Anulați** pentru a reveni la ecranul principal.
+You are asked to confirm that you want to deactivate the current patch. **This cannot be undone.** Tap **Next** to deactivate, or **Cancel** to return to the pump screen.
 
 ![Dezactivați progres](../images/medtrum/activation/DeactivateProgress.png)
 
-Dacă Android APS nu poate dezactiva plasturele (de exemplu, pentru că baza pompei a fost deja scoasă din plasturele rezervor), puteți apăsa **Renunțați** pentru a uita sesiunea curentă a plasturelui și pentru a face posibilă activarea unui nou plasture.
+If **AAPS** cannot deactivate the patch (for example because the pump base has already been removed from the patch), tap **Discard** to forget the current patch session. You can then activate a new patch.
 
 ![Dezactivare finalizată](../images/medtrum/activation/DeactivateComplete.png)
 
-Odată ce dezactivarea este finalizată, apăsați **OK** pentru a reveni la ecranul principal sau apăsați **Următorul** pentru a continua procesul de activare a unui nou plasture.
+When deactivation is complete, retract the needle and remove the patch from your body. Remove the pump base and dispose of the used patch. Tap **OK** to return to the pump screen, or **Next** to start activating a new patch.
 
 (nano-resume-interrupted-activation)=
 
 ### Reluați activarea întreruptă
 
-Dacă activarea unui plasture este întreruptă, de exemplu pentru că bateria telefonului se oprește, poți relua procesul de activare prin [fila Medtrum](#nano-overview) în interfața AAPS și apăsați butonul **Schimbați plasturele**.
+If a patch activation is interrupted, for example because the phone battery runs out, you can resume it. Open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**.
 
 ![Reluați activarea întreruptă](../images/medtrum/activation/ActivationInProgress.png)
 
-Apăsați **Următorul** pentru a continua procesul de activare. Apăsați **Aruncați** pentru a renunța la sesiunea curentă a plasturelui și pentru a face posibilă activarea unui nou plasture.
+Tap **Next** to resume the activation. Tap **Discard** to reset the activation status, so you can activate a new patch.
 
 ![Se citește starea activării](../images/medtrum/activation/ReadingActivationStatus.png)
 
-Driverul va încerca să determine starea actuală a activării plasturelui. Dacă operațiunea a reușit, procesul de activare va continua de la pasul curent.
+```{admonition} Older screenshot
+:class: note
+The screenshots in **Deactivate patch** and **Resume interrupted activation** are from an earlier **AAPS** version and may look different in **AAPS** 4.
+```
+
+The driver reads the activation status from the pump. If this works, the wizard continues at the step where it stopped.
 
 (nano-overview)=
 
-## Privire de ansamblu
+## Pump screen
 
-Vederea de ansamblu conține starea curentă a plasturelui Medtrum. Conține de asemenea butoane pentru a schimba plasturele, pentru a reseta alarme și a actualiza starea.
+The Medtrum pump screen (**Manage → Pump**) shows the current status of the Medtrum patch. It also has buttons to change the patch, reset alarms and refresh the status. A banner at the top shows important states, for example **Patch not activated** or **Pump is suspended**.
 
-![Vederea de ansamblu Medtrum](../images/medtrum/Overview.png)
+![Medtrum pump screen with an active patch](../images/v4/Pumps/medtrum_pump_screen_active.png)
 
-### Stare BLE:
+The screen can show these rows. Some rows only appear when they have a value.
 
-Aceasta afișează starea curentă a conexiunii Bluetooth cu baza de pompă.
-
-### Ultima conexiune:
-
-Aceasta arată ultima dată când pompa a fost conectată la AAPS.
-
-### Stare pompă:
-
-Aceasta arată starea curentă a pompei. Spre exemplu:
-    - ACTIV: Pompa este activată și rulează normal
-    - OPRIT: Plasturele nu este activat
-
-### Tip bazală:
-
-Aceasta arată tipul bazalei curente.
-
-### Rată bazală:
-
-Acesta arată rata bazală curentă.
-
-### Ultimul bolus:
-
-Acest lucru arată ultimul bolus care a fost administrat.
-
-### Bolus activ:
-
-Acest lucru arată bolusul activ care este în prezent în curs de livrare.
+- **Last connection**: how long ago **AAPS** last connected to the pump.
+- **Last bolus**: the last bolus that was delivered.
+- **Battery**: the current battery voltage of the patch.
+- **Reservoir**: the current reservoir level.
+- **Serial number**: the serial number of your pump base.
+- **Pump state**: the current state of the pump. For example **Active** (the patch is activated and running normally) or **Stopped** (the patch is not activated).
+- **Base basal rate**: the basal rate from your profile that is running now.
+- **Temp basal**: the temporary basal rate, if one is running.
+- **Active bolus**: the bolus that is being delivered right now.
+- **Active alarms**: see [below](#medtrum-active-alarms).
+- **Pump type**: the model of your pump base.
+- **FW version**: the firmware version of the pump base.
+- **Patch no**: the sequence number of the activated patch. It goes up by one every time you activate a new patch.
+- **Activation**: the date and time the patch was activated, and how long ago that was.
+- **Patch expires**: the date and time when the patch expires. Shows **Not enabled** if [Patch Expiration](#medtrum-patch-expiration) is off.
 
 (medtrum-active-alarms)=
-### Alarme active:
+### Active alarms
 
-Acest lucru arată orice alarme active care sunt active în prezent.
+This row shows any alarms that are active right now, for example a low reservoir or an expiring patch.
 
-### Rezervor:
+### Refresh
 
-Acesta indică nivelul curent al rezervorului.
+This button refreshes the status of the patch. It is only available when a patch is active and **AAPS** is not connected to the pump at that moment.
 
-### Baterie:
+### Change Patch
 
-Acest lucru arată tensiunea curentă a bateriei plasturelui.
+This button starts the wizard to change the patch. Vedeți [Activați plasture](#medtrum-activate-patch) pentru mai multe informații.
 
-### Tip pompă:
+(medtrum-unpair)=
+### Unpair
 
-Aceasta afișează numărul actual al tipului de pompă.
-
-### Versiune FW:
-
-Acesta arată versiunea curentă de firmware a plasturelui.
-
-### Numărul plasturelui:
-
-Acesta arată numărul de ordine al plasturelui activat. Acest număr este incrementat de fiecare dată când este activat un nou plasture.
-
-### Plasturele expiră:
-
-Acesta arată data și ora când plasturele va expira.
-
-### Reîncărcați:
-
-Acest buton va reîmprospăta starea plasturelui.
-
-### Schimbați plasturele transdermic:
-
-Acest buton va începe procesul de schimbare a plasturelui. Vedeți [Activați plasture](#medtrum-activate-patch) pentru mai multe informații.
+This button only appears when **AAPS** knows a pump base. It clears the stored pump base serial number and disconnects. The next time you activate a patch, **AAPS** scans for a pump base again (the **Find Pump** step). Use this if you switch to a different pump base. Only do this when no patch is active.
 
 (nano-reset-alarms)=
 
 ### Resetați alarmele
 
-Butonul de alarmă va apărea pe ecranul vedere de ansamblu atunci când există o alarmă activă care poate fi resetată. Apăsarea acestui buton va reseta alarmele și va relua administrarea insulinei dacă plasturele a fost suspendat din cauza alarmei. Spre exemplu în cazul suspendării cauzate de alarma privind doza maximă zilnică de insulină.
+The **Reset alarms** button only appears on the pump screen when the patch has suspended itself, for example after a maximum daily insulin alarm. Tap it to reset the alarms and resume insulin delivery.
 
 ![Resetați alarmele](../images/medtrum/ResetAlarms.png)
 
-Apăsați butonul **Resetați alarmele** pentru a reseta alarmele și a relua operațiunea normală.
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen looks different, but the **Reset alarms** button works the same way.
+```
 
 ## Schimbarea telefonului, setări export/import
 
-Când treceți la un telefon nou, sunt necesari următorii pași:
-* [Exportați setările](../Maintenance/ExportImportSettings.md) pe telefonul tău vechi
-* Transferați setările de pe telefonul vechi la cel nou și importați-le în AAPS
+When you switch to a new phone, do the following:
+* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone.
+* Transfer the settings file from the old phone to the new phone, and import it into **AAPS**. Tick **Also replace pump settings** on the import screen, otherwise the patch session is not transferred to the new phone.
 
-Fișierul de setări importat trebuie să aparțină aceleiași sesiuni de plasture pe care o utilizați în prezent, altfel plasturele nu se va conecta.
+The imported settings file must be from the patch session you are using now, otherwise the patch will not connect (see [Tubeless pumps](#ExportImportSettings-tubeless-pumps)).
 
-După ce se importă setările, driverul va sincroniza istoricul cu pompa, iar acest lucru poate dura o vreme în funcție de vârsta fișierului de setări.
+After a settings import, the driver syncs the history with the pump. This can take a while, depending on the age of the settings file. The progress ("Syncing records, ... left") is shown on the main screen:
 
-De la versiunea 3.0.0 AAPS, progresul sincronizării este afișat în ecranul principal: ![Progresul sincronizării](../images/medtrum/SyncProgress.png)
+![Progresul sincronizării](../images/medtrum/SyncProgress.png)
+
+(medtrum-nano-troubleshooting)=
 
 ## Depanare
 
 ### Probleme de conexiune
 
-Dacă aveți întreruperi de conexiune sau alte probleme de conexiune:
-- În setările Android ale aplicației AAPS: Setați permisiunea de localizare la "Permiteți tot timpul".
+If you have connection timeouts or other connection problems:
+- In the Android app settings for **AAPS**, set the Location permission to "Allow all the time".
+- Try enabling **Scan on connection error** (Medtrum settings > **Advanced Settings**) and **BT Watchdog** (**Settings** > **Pump**), see [Step 2](#medtrum-step-2).
 
 ### Probleme Bluetooth
 Pentru probleme cunoscute cu conexiunile Bluetooth, întreruperile pompei, activarea și problemele de conexiune [Depanarea Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ### Activare întreruptă
 
-Dacă procesul de activare este întrerupt spre exemplu de către bateria descărcată a telefonului sau ale unei erori de sistem a telefonului. Procesul de activare poate fi reluat mergând la ecranul de schimbare a plasturelui și urmați pașii pentru a relua activarea, așa cum este subliniat aici: [Reluați activare întreruptă](#nano-resume-interrupted-activation)
+If the activation is interrupted, for example by an empty phone battery or a phone crash, you can resume it. Tap **Change Patch** on the pump screen and follow the steps in [Resume interrupted activation](#nano-resume-interrupted-activation).
 
 ### Prevenirea defecțiunilor plasturelui
 

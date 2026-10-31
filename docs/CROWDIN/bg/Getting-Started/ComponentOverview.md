@@ -1,88 +1,89 @@
-# Component Overview
+# Преглед на компонентите
 
-**AAPS** is not just a (self-built) application, it is but one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the component documentation.
+**AAPS** не е просто (компилирано от вас) приложение – то е един от няколкото модула на вашата система със затворен кръг. Преди да изберете компонентите, е добре да прегледате документацията за тях.
 
-![Components overview](../images/modules.png)
+![Преглед на компонентите](../images/modules.png)
 
 ```{admonition} IMPORTANT SAFETY NOTICE
 :class: important
 
-The foundation of **AAPS** safety features discussed in this documentation is built on the safety features of the hardware used to build your system. For closing an automated insulin dosing loop, it is critically important that you only use an insulin pump and CGM that are tested, fully functioning and approved by the official instances of your country. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, **do not use** these for creating an **AAPS** system.
+Основата на функциите за безопасност на **AAPS**, описани в тази документация, са функциите за безопасност на хардуера, от който е изградена вашата система. За затворен кръг с автоматично дозиране на инсулин е изключително важно да използвате само инсулинова помпа и CGM, които са изпитани, работят напълно и са одобрени от официалните органи във вашата държава. Хардуерни или софтуерни промени по тези компоненти могат да доведат до неочаквано дозиране на инсулин и така да създадат сериозен риск за потребителя. Ако намерите или ви предложат повредени, променени или самоделни инсулинови помпи или приемници за CGM, **не ги използвайте** за изграждане на система с **AAPS**.
 
-Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
+Също толкова важно е да използвате само оригинални консумативи, като апликатори (инсертери), канюли и резервоари за инсулин, одобрени от производителя за използване с вашата помпа или CGM. Неизпитани или променени консумативи могат да доведат до неточни стойности на CGM и до грешки в дозирането на инсулина. Инсулинът е изключително опасен при грешна доза – моля, не играйте с живота си, като правите промени по своите консумативи.
 
-Last but not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels. The combination with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen. [More information here](#PreparingForAaps-no-sglt-2-inhibitors).
+Не на последно място, НЕ БИВА да приемате SGLT-2 инхибитори (глифлозини), защото те понижават кръвната захар по непредвидим начин. Комбинацията със система, която намалява базалните дози, за да повиши КЗ, е особено опасна, защото заради глифлозина това повишаване на КЗ може да не настъпи и може да се стигне до опасно състояние на липса на инсулин. [Повече информация тук](#PreparingForAaps-no-sglt-2-inhibitors).
 ```
 
-## Necessary Modules
+## Необходими модули
 
-### Good individual dosage algorithm for your diabetes therapy
+### Добър индивидуален алгоритъм за дозиране при лечението на вашия диабет
 
-Even though this is not something to create or buy, this is the 'module' which is probably underestimated the most but essential. When you let an algorithm help manage your diabetes, it needs to know the right settings to not make severe mistakes. Even if you are still missing other modules, you can already verify and adapt your **Profile** in collaboration with your diabetes team.
+Въпреки че това не е нещо, което се създава или купува, то е може би най-подценяваният „модул“ – но е от съществено значение. Когато оставите алгоритъм да ви помага при лечението на диабета, той трябва да знае правилните настройки, за да не прави сериозни грешки. Дори ако все още ви липсват други модули, вече можете да проверите и да коригирате своя **Профил** заедно с вашия екип, който лекува диабета ви.
 
-The **Profile** includes:
+**Профилът** включва:
 
-- BR (Basal rates): provides background insulin;
-- ISF (insulin sensitivity factor): how much your blood glucose level will be reduced by 1 unit of insulin;
-- CR (carb ratio): how many grams of carbohydrate are covered by one unit of insulin;
-- DIA (duration of insulin action).
+- BR (базални дози): осигуряват фоновия инсулин;
+- ISF (инсулинова чувствителност): с колко ще се понижи кръвната ви захар от 1 единица инсулин;
+- CR (коефициент за въглехидрати): колко грама въглехидрати покрива една единица инсулин.
 
-Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
+Повечето потребители на затворен кръг използват циркадни (зависещи от часа на деня) BR, ISF и CR, които отчитат хормоналните промени в чувствителността към инсулин през деня.
 
-More information about your **Profile** [on the dedicated page](../SettingUpAaps/YourAapsProfile.md).
+Освен **Профила** трябва да конфигурирате и своя **инсулин** в **Управление → Настройки на инсулина**, включително неговото DIA (време на действие на инсулина) – вижте [Настройки на инсулина](#Config-Builder-insulin-dia).
 
-### Phone
+Повече информация за вашия **Профил** ще намерите [на специалната страница](../SettingUpAaps/YourAapsProfile.md).
 
-See the dedicated page [Phones](../Getting-Started/Phones.md).
+### Телефон
 
-### Insulin pump
+Вижте специалната страница [Телефони](../Getting-Started/Phones.md).
 
-See the dedicated page [Compatible Pumps](../Getting-Started/CompatiblePumps.md).
+### Инсулинова помпа
 
-**Advantages and disadvantages of some pump models**
+Вижте специалната страница [Съвместими помпи](../Getting-Started/CompatiblePumps.md).
 
-The Combo, the Insight and the older Medtronic are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard Luer-Lock. And the battery is a default one you can buy at any gas station, 24-hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
+**Предимства и недостатъци на някои модели помпи**
 
-The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice however are:
+Combo, Insight и по-старите помпи Medtronic са надеждни помпи и могат да се използват в затворен кръг. Предимството на Combo е, че можете да избирате от много повече видове инфузионни сетове, защото има стандартна връзка Luer-Lock. А батерията е стандартна – можете да я купите на всяка бензиностанция или денонощен магазин, а ако наистина ви трябва, можете да я „вземете назаем“ от дистанционното в хотелската стая ;-).
 
-- Initial pairing is simpler with the Dana-i/RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
-- So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time when the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
-- The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. At nighttime, you are likely to be using TBRs more than SMB.  The Dana-i/RS is configurable so that it does neither beep nor vibrate.
-- Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon as some CGM values are in.
-- All pumps **AAPS** can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
+Предимствата на DanaR/RS и Dana-i пред Combo като избор на помпа обаче са:
 
-### Източник на данни за КЗ
+- Първоначалното сдвояване е по-лесно с Dana-i/RS. Но обикновено го правите само веднъж, така че това има значение само ако искате да изпробвате нова функция с различни помпи.
+- Засега Combo работи чрез разчитане на екрана (screen parsing). По принцип това работи много добре, но е бавно. За затворения кръг това няма голямо значение, защото всичко работи във фонов режим. Все пак връзката трябва да е активна много повече време, така че има повече време, в което Bluetooth връзката може да прекъсне. Това не е лесно, ако се отдалечите от телефона, докато се подава болус и готвите.
+- Combo вибрира в края на временните базали (TBR), а DanaR вибрира (или издава звук) при SMB. През нощта е по-вероятно да използвате повече временни базали (TBR), отколкото SMB.  Dana-i/RS може да се настрои така, че да не издава звук и да не вибрира.
+- Тъй като историята на Dana-i/RS (заедно с въглехидратите) се прочита за няколко секунди, можете лесно да смените телефона без интернет връзка и да продължите със затворения кръг веднага щом се появят няколко стойности от CGM.
+- Всички помпи, с които **AAPS** може да комуникира, са водоустойчиви при доставката. Само помпите Dana са и „водоустойчиви по гаранция“ благодарение на запечатаното отделение за батерията и системата за пълнене на резервоара.
 
-See the dedicated page [Compatible CGMs](../Getting-Started/CompatiblesCgms.md).
+### Източник на КЗ
 
-### **AAPS**-.apk file
+Вижте специалната страница [Съвместими CGM](../Getting-Started/CompatiblesCgms.md).
 
-The main component of the system. In order to install the app, you have to build the apk-file yourself first. Instructions are [here](../SettingUpAaps/BuildingAaps.md).
+### **AAPS**-.apk файл
 
-### Reporting server
+Основният компонент на системата. За да инсталирате приложението, първо трябва сами да компилирате apk файла. Указанията ще намерите [тук](../SettingUpAaps/BuildingAaps.md).
 
-A reporting server displays your glucose and treatment data, and creates reports for detailed analysis. There are currently two reporting servers available for use with AAPS : [Nightscout](#SettingUpTheReportingServer-nightscout) and [Tidepool](#SettingUpTheReportingServer-tidepool). They both provide ways to visualize your diabetes data over time, provide statistics about the **time in range** (TIR) and other measures.
+### Сървър за отчети
 
-The Reporting server is independent of the other modules. If you don’t want to use a reporting server, you should know that it is not mandatory for running **AAPS** in the long term. But you still need to set up one as it will be required to fulfill [**Objective 1**](#objectives-objective1).
+Сървърът за отчети показва данните ви за глюкозата и леченията и създава отчети за подробен анализ. В момента има два сървъра за отчети, които могат да се използват с AAPS: [Nightscout](#SettingUpTheReportingServer-nightscout) и [Tidepool](#SettingUpTheReportingServer-tidepool). И двата ви дават начини да визуализирате данните за диабета си във времето и показват статистика за **времето в целта** (TIR) и други показатели.
 
-Additional information on how to set up your reporting server can be found [here](../SettingUpAaps/SettingUpTheReportingServer.md).
+Сървърът за отчети не зависи от другите модули. Ако не искате да използвате сървър за отчети, трябва да знаете, че той не е задължителен за дългосрочното използване на **AAPS**. Но все пак трябва да настроите такъв сървър, защото е нужен за изпълнението на [**Цел 1**](#objectives-objective1).
 
-## Optional Modules
+Допълнителна информация как да настроите сървъра си за отчети ще намерите [тук](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-### Smartwatch
+## Допълнителни модули
 
-You can choose any smartwatch with Android WearOS 2.x up to 4.x. **Beware, WearOS 5.x is not always compatible!**
+### Смарт часовник
 
-Users are creating a [list of tested phones and watches](#Phones-list-of-tested-phones). There are different watchfaces for use with **AAPS**, which you can find [here](../WearOS/WearOsSmartwatch.md).
+Можете да изберете всеки смарт часовник с **Wear OS 3** или по-нова версия. Подробности ще намерите на страницата [Смарт часовници и AAPS](../Getting-Started/Watches.md).
 
-### xDrip+
+Потребителите съставят [списък с изпробвани телефони и часовници](#Phones-list-of-tested-phones). Има различни циферблати за използване с **AAPS**, които ще намерите [тук](../WearOS/WearOsSmartwatch.md).
 
-Even if you don't need to have the xDrip+ App as **BG Source**, you can still use it for _i.e._ alarms or a different blood glucose display. You can have as many alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found [here](../CompatibleCgms/xDrip.md). Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
+### xDrip
 
-## What to do while waiting for modules
+Дори ако не ви трябва приложението xDrip като **Източник на КЗ**, пак можете да го използвате, например за аларми или за друг начин на показване на кръвната захар. Можете да имате колкото искате аларми, да задавате времето, в което всяка аларма да е активна, да избирате дали тя може да пренебрегне тихия режим и т.н. Информация за xDrip ще намерите [тук](../CompatibleCgms/xDrip.md). Имайте предвид, че документацията за това приложение не винаги е актуална, защото то се променя бързо.
 
-It sometimes takes a while to get all the modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with **AAPS**. Using this mode, **AAPS** gives treatment recommendations you can manually execute.
+## Какво да правите, докато чакате модулите
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../UsefulLinks/BackgroundReading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+Понякога е нужно време, докато съберете всички модули за затворения кръг. Но не се притеснявайте – има много неща, които можете да правите, докато чакате. **Необходимо** е да проверите и (когато е нужно) да коригирате базалните дози (BR), коефициента инсулин/въглехидрати (IC), инсулиновата чувствителност (ISF) и т.н. Режимът Отворен кръг също може да е добър начин да изпробвате системата и да се запознаете с **AAPS**. В този режим **AAPS** дава препоръки за лечение, които можете да изпълните ръчно.
 
-**Done?** If you have your **AAPS** components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective and setup up your hardware.
+Можете да продължите да четете документацията тук, да се свържете с други потребители на затворен кръг онлайн или на живо, да [прочетете](../UsefulLinks/BackgroundReading.md) документация или какво пишат другите потребители (но бъдете внимателни – не всичко е вярно или подходящо да го повторите при себе си).
+
+**Готово?** Ако вече имате всички компоненти за **AAPS** (поздравления!) или поне достатъчно, за да започнете в режим Отворен кръг, първо прочетете [описанието на целите](../SettingUpAaps/CompletingTheObjectives.md) преди всяка нова цел и настройте хардуера си.

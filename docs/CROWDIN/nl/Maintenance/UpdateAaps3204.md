@@ -1,141 +1,141 @@
-# Updating to AAPS 3.2.0.4
+# Bijwerken naar AAPS 3.2.0.4
 
 (update-aaps-3204)=
 
 ## Zelf bouwen, in plaats van downloaden
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**De AAPS-app (een apk-bestand) is niet te downloaden, vanwege de regels voor medische hulpmiddelen. Je mag de app legaal bouwen voor eigen gebruik, maar je mag geen kopie aan anderen geven!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Zie de [FAQ-pagina](../UsefulLinks/FAQ.md) voor meer informatie.
 
-## Computer and software specifications for building AAPS 3.2.0.4
+## Computer en software om AAPS 3.2.0.4 te bouwen
 
-* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk.
+* Om de apk te bouwen kan een bepaalde versie van **[Android Studio](https://developer.android.com/studio/)** nodig zijn.
 
-| AAPS Version            | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                                  | up to Meerkat                                          | 8.2    | 17  |
+| AAPS versie             | Aanbevolen<br/>Android Studio<br/>versie | Andere<br/>Android Studio<br/>versie | Gradle | JVM |
+| ----------------------- | ---------------------------------------------------- | ------------------------------------------------ | ------ |:--- |
+| [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                                  | tot en met Meerkat                               | 8.2    | 17  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+De "aanbevolen versie" heeft al de juiste JVM-versie aan boord. De aanbevolen versie is ook de laagste versie waarmee je **AAPS** kunt bouwen. Met een versie die ouder is dan de "aanbevolen" versie kun je **NIET** bouwen. Met een andere versie kun je problemen krijgen met de JVM-versie. Zie de pagina [Problemen met Android Studio oplossen](#incompatible-gradle-jvm) voor hulp bij deze problemen. Staat je huidige versie van Android Studio niet in de tabel? Werk Android Studio dan eerst bij.
 
-The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
+De Gradle-versie hoort bij de broncode. Als je de broncode downloadt of bijwerkt, krijg je altijd de juiste Gradle-versie. Hij staat hier alleen ter informatie. Je hoeft er niets mee te doen.
 
-* [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
+* [32-bit Windows-systemen](#troubleshooting_androidstudio-unable-to-start-daemon-process) worden niet ondersteund door Android Studio. Let op: **een 64-bit processor en een 64-bit besturingssysteem zijn allebei verplicht.** Voldoet je systeem hier NIET aan, dan moet je de hardware of software in kwestie vervangen, of het hele systeem.
 
 <table class="tg">
 <tbody>
   <tr>
-    <th class="tg-baqh">OS (Only 64 bit)</th>
-    <td class="tg-baqh">Windows 8 or higher</td>
-    <td class="tg-baqh">Mac OS 10.14 or higher</td>
-    <td class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</td>
+    <th class="tg-baqh">OS (Alleen 64 bit)</th>
+    <td class="tg-baqh">Windows 8 of hoger</td>
+    <td class="tg-baqh">Mac OS 10.14 of hoger</td>
+    <td class="tg-baqh">Elke Linux die Gnome, KDE of Unity DE ondersteunt;&nbsp;&nbsp;GNU C Library 2.31 of hoger</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
+    <th class="tg-baqh"><p align="center">CPU (Alleen 64 bit)</th>
+    <td class="tg-baqh">x86_64 CPU-architectuur; 2e generatie Intel Core of nieuwer, of AMD CPU met ondersteuning voor een <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">ARM-chips, of 2e generatie Intel Core of nieuwer met ondersteuning voor <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">x86_64 CPU-architectuur; 2e generatie Intel Core of nieuwer, of AMD-processor met ondersteuning voor AMD Virtualization (AMD-V) en SSSE3</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
+    <td class="tg-baqh" colspan="3"><p align="center">8GB of meer</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+    <th class="tg-baqh"><p align="center">Schijf</th>
+    <td class="tg-baqh" colspan="3"><p align="center">Minstens 30GB vrije ruimte. SSD wordt aanbevolen.</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Resolution</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+    <th class="tg-baqh"><p align="center">Schermresolutie</th>
+    <td class="tg-baqh" colspan="3"><p align="center">Minimaal 1280 x 800 <br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Breedband</td>
   </tr>
 </tbody>
 </table>
 
-**It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
+**We raden sterk aan (niet verplicht) om een SSD (Solid State Disk) te gebruiken in plaats van een HDD (harde schijf), omdat het bouwen van het AAPS apk-bestand dan minder tijd kost.**  Je kunt ook een HDD gebruiken om het **AAPS** apk-bestand te bouwen. Als je dat doet, kan het bouwen lang duren. Maar als het eenmaal gestart is, kun je het zonder toezicht laten lopen.
 
-## Help and support during 3.2.0.4 building process
+## Hulp bij het bouwen van 3.2.0.4
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html) section, please consult that first.
+Heb je problemen bij het bouwen van de **AAPS** app? Er is een aparte sectie [**Problemen met Android Studio oplossen**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html). Kijk daar eerst.
 
-If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
+Denk je dat iets in de bouwinstructies fout, onvolledig of onduidelijk is, of lukt het je nog steeds niet? Vraag het dan aan andere **AAPS**-gebruikers in de groep op [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) of op [Discord](https://discord.gg/4fQUWHZ4Mw). Wil je zelf iets aanpassen (schermafbeeldingen bijwerken _enz._)? Dien dan een [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md) in.
 
 ```{note}
-This page provides both example pictures for the **New** and old (**Classic**) Android Studio user interfaces.
+Deze pagina toont voorbeeldafbeeldingen voor zowel de **nieuwe** (New) als de oude (**Classic**) gebruikersinterface van Android Studio.
 ```
 
-## Overview for updating 3.2.0.x to 3.2.0.4
+## Overzicht: bijwerken van 3.2.0.x naar 3.2.0.4
 
 ```{contents} Steps for updating to 3.2.0.4
 :depth: 1
 :local: true
 ```
 
-### Export your current settings
+### Exporteer je huidige instellingen
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Exporteer je instellingen uit de **AAPS**-versie die nu op je telefoon staat. Misschien heb je ze niet nodig, maar het is beter om het zeker te doen.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Weet je niet meer hoe dit moet? Kijk dan op de pagina [Back-ups maken en terugzetten](ExportImportSettings.md).
 
-### Update your local AAPS copy
+### Werk je lokale kopie van AAPS bij
 
-* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
+* Open je bestaande AAPS-project in Android Studio. Misschien moet je je project kiezen. Klik (dubbel) op het AAPS-project.
 
-![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
-
-<br>
-
-![Android Studio - Select Project](https://androidaps.readthedocs.io/en/3.1/_images/01_ProjectSelection.png)
-
-* In the menu bar of Android Studio, select Git -> Fetch
-
-![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+![Android Studio - project kiezen (Select Project)](../images/update/01_ProjectSelection.png)
 
 <br>
 
-![Android Studio Menu - Git - Fetch](https://androidaps.readthedocs.io/en/3.1/_images/02_GitFetch.png)
+![Android Studio - project kiezen (Select Project)](https://androidaps.readthedocs.io/en/3.1/_images/01_ProjectSelection.png)
 
-* You will see a message in the lower right corner that Fetch was successful.
+* Kies in de menubalk van Android Studio Git -> Fetch
 
-![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
-
-<br>
-
-![Android Studio Menu - Git - Fetch successful](https://androidaps.readthedocs.io/en/3.1/_images/03_GitFetchSuccessful.png)
-
-* In the menu bar, now select Git -> Pull
-
-![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+![Android Studio-menu - Git - Fetch](../images/update/02_GitFetch.png)
 
 <br>
 
-![Android Studio Menu - Git - Pull](https://androidaps.readthedocs.io/en/3.1/_images/04_GitPull.png)
+![Android Studio-menu - Git - Fetch](https://androidaps.readthedocs.io/en/3.1/_images/02_GitFetch.png)
 
-* Leave all options as they are (origin/master) and select Pull
+* Rechtsonder zie je een melding dat Fetch gelukt is.
 
-![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
+![Android Studio-menu - Git - Fetch gelukt](../images/update/03_GitFetchSuccessful.png)
 
 <br>
 
-![Android Studio - Git - Pull dialog](https://androidaps.readthedocs.io/en/3.1/_images/05_GitPullOptions.png)
+![Android Studio-menu - Git - Fetch gelukt](https://androidaps.readthedocs.io/en/3.1/_images/03_GitFetchSuccessful.png)
 
-* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
+* Kies nu in de menubalk Git -> Pull
+
+![Android Studio-menu - Git - Pull](../images/update/04_GitPull.png)
+
+<br>
+
+![Android Studio-menu - Git - Pull](https://androidaps.readthedocs.io/en/3.1/_images/04_GitPull.png)
+
+* Laat alle opties zoals ze zijn (origin/master) en kies Pull
+
+![Android Studio - Git - Pull-venster](../images/update/05_GitPullOptions.png)
+
+<br>
+
+![Android Studio - Git - Pull-venster](https://androidaps.readthedocs.io/en/3.1/_images/05_GitPullOptions.png)
+
+* Wacht tot het downloaden klaar is. Je ziet de voortgang als informatie in de balk onderaan. Als het klaar is, zie je een melding dat het gelukt is.
 
   ```{note}
-  The files that were updated may vary! This is not an indication
+  Welke bestanden bijgewerkt zijn, kan verschillen! Dit betekent niet dat er een probleem is.
   ```
 
 
-![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+![Android Studio - Pull gelukt](../images/update/06_GitPullSuccess.png)
 
 <br>
 
-![Android Studio - Pull successful](https://androidaps.readthedocs.io/en/3.1/_images/06_GitPullSuccess.png)
+![Android Studio - Pull gelukt](https://androidaps.readthedocs.io/en/3.1/_images/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Wait until it is finished.
+* Gradle Sync gaat nu een aantal dependencies (benodigde onderdelen) downloaden. Wacht tot dit klaar is.
 
 ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
@@ -143,69 +143,69 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio - Gradle Sync](https://androidaps.readthedocs.io/en/3.1/_images/40_BackgroundTasks.png)
 
-### Select JVM version 17
+### Kies JVM-versie 17
 
-- Open the Gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
+- Open de Gradle-weergave door rechts in Android Studio op de olifant (1) te klikken, open de instellingen (2) en kies **Gradle Settings** (3):
 
-![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
-
-<br>
-
-![Open Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
-
-- In **Gradle JDK** field, check if the appropriate version: **jbr-17** is selected (1) If not, click on the field, and see if it is already available in the list.
-
-![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
-
-
-
-- In Version (1), select **17**. In Vendor (2) select JetBrains Runtime or any Vendor. Location (3): do not change.
-
-![Select JDK 17](https://androidaps.readthedocs.io/en/3.2/_images/163_JDKSelection.png)
-
-- Close the **Settings** dialog with **OK**.
-
-### Select the AAPS 3.2.0.4 branch
-
-- At the bottom left, select the Git symbol, right-click on 3.2.0.4 and Checkout.
-
-![Select Download JDK](../images/studioTroubleshooting/17_Checkout.png)
+![Gradle Settings openen](../images/studioTroubleshooting/161_GradleSettings.png)
 
 <br>
 
-![Select Download JDK](../images/studioTroubleshooting/17_CheckoutOld.png)
+![Gradle Settings openen](../images/studioTroubleshooting/09_GradleSettings.png)
 
-### Sync project with Gradle
+- Controleer in het veld **Gradle JDK** (1) of de juiste versie is gekozen: **jbr-17**. Zo niet, klik dan op het veld en kijk of deze versie al in de lijst staat. Staat hij niet in de lijst (de schermafbeelding hieronder toont een computer waarop alleen **jbr-21** beschikbaar is), kies dan **Download JDK...** (2).
+
+![Download JDK kiezen](../images/studioTroubleshooting/162_DownloadJDK.png)
+
+
+
+- Kies bij Version (1) **17**. Kies bij Vendor (2) JetBrains Runtime of een andere leverancier. Location (3): niet wijzigen.
+
+![JDK 17 kiezen](https://androidaps.readthedocs.io/en/3.2/_images/163_JDKSelection.png)
+
+- Sluit het venster **Settings** met **OK**.
+
+### Kies de branch AAPS 3.2.0.4
+
+- Klik linksonder op het Git-symbool, klik met de rechtermuisknop op 3.2.0.4 en kies Checkout.
+
+![Download JDK kiezen](../images/studioTroubleshooting/17_Checkout.png)
+
+<br>
+
+![Download JDK kiezen](../images/studioTroubleshooting/17_CheckoutOld.png)
+
+### Synchroniseer het project met Gradle
 
 ```{admonition} WARNING!
 :class: warning
-**Never update Gradle.** Always sync it with the project.
+**Werk Gradle nooit bij.** Synchroniseer het altijd met het project.
 ```
 
-Use the elephant icon and Sync Project with Gradle Files (or follow [this](#gradle-resync)) for the new UI.
+Gebruik in de nieuwe interface het olifant-icoon en Sync Project with Gradle Files (of volg [deze stappen](#gradle-resync)).
 
 ![Sync Project with Gradle Files](../images/studioTroubleshooting/06_GradleResyncElephant.png)
 
-Or ([this](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html#gradle-resync)) for the classic UI.
+Of volg ([deze stappen](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html#gradle-resync)) voor de klassieke interface.
 
 ![Sync Project with Gradle Files](../images/studioTroubleshooting/06_GradleResyncElephantOld.png)
 
-### Build the Signed 3.2.0.4 APK
+### Bouw de ondertekende 3.2.0.4 APK
 
-Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+Je broncode is nu de huidige uitgebrachte versie, en alle voorwaarden zijn gecontroleerd. Nu kun je de ondertekende apk bouwen zoals beschreven in de sectie [ondertekende apk bouwen](#Building-APK-generate-signed-apk).
 
-### Transfer and install the 3.2.0.4 APK
+### Zet de 3.2.0.4 APK over en installeer hem
 
-You need to transfer the apk to your phone so you can install it.
+Je moet de apk naar je telefoon overzetten om hem te kunnen installeren.
 
 ```{note}
-If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
-For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
+Heb je in Android Studio gebouwd met dezelfde bestaande keystore? Dan hoef je de bestaande app op je telefoon niet te verwijderen. Volg bij het installeren van de apk de meldingen om de update te installeren.
+In andere gevallen, bijvoorbeeld als je in Android Studio een nieuwe keystore hebt gemaakt voor je ondertekende apk, moet je de oude app verwijderen voordat je de apk installeert. **Exporteer zeker eerst je instellingen!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
+Zie de instructies voor [AAPS overzetten en installeren](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
-### Check AAPS version 3.2.0.4 on phone
+### Controleer op je telefoon of AAPS versie 3.2.0.4 is
 
-After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
+Als je de nieuwe apk hebt geïnstalleerd, kun je de AAPS-versie op je telefoon controleren: tik rechtsboven op het menu met de drie puntjes en daarna op Over. Je zou nu de huidige versie moeten zien.
 

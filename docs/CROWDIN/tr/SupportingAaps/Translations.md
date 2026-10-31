@@ -1,6 +1,6 @@
 # How to translate strings for the AAPS app or the documentation
 
-* Uygulamada kullanılan dizeler için <https://crowdin.com/project/androidaps> adresine gidin ve GitHub hesabınızı kullanarak giriş yapın
+* For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
 * Dokümantasyon için lütfen <https://crowdin.com/project/androidapsdocs> adresini ziyaret edin ve GitHub hesabınızı kullanarak giriş yapın
 
 * Dokümanlar ekibine katılma isteği gönderin. Bunu yapmak için istediğiniz dilin bayrağına ve ardından sonraki sayfanın sağ üst köşesindeki "join" katıl düğmesine tıklayın. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
@@ -63,8 +63,8 @@ Onay manuel bir adımdır. Kâr amacı gütmeyen kuruluş olarak SLA'lar sağlam
     
          1. Bu, hazırladığınız çeviridir. Yukarıdaki metni kopyalayabilir veya aşağıdaki önerilerden birini seçebilirsiniz.
     
-        1. Bunlar bir çeviri önerisidir. Özellikle Crowdin'in bunu ne kadar uyumlu olarak değerlendirdiğini veya geçmişte olup olmadığını ve metin düzenlemeleriyle ortaya çıkıp içerik değişikliği yapılıp yapılmadığını görebilirsiniz.
-        1. Bir çeviri önerisini kaydetmek için "kaydet" düğmesine basın. Daha sonra son kontrol için redaktöre terfi ettirilecektir.
+        1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
+        1. Bir çeviri önerisini kaydetmek için "kaydet" düğmesine basın. It will then be passed to a proofreader for final check.
     
     ![Translation docs](../images/translation_WikiTranslate.png)
     
@@ -101,4 +101,4 @@ Bu bağlantılar ve karakter çiftleri için dokümanı kontrol edip göz atmak 
     
     ![metni onayla](../images/translations-proofreading.png)
 
-* Redaktör bir çeviriyi onayladığında, sabit bir takvim olmamakla birlikte, tatil günleri dışında yaklaşık haftada bir kez gerçekleşecek bir sonraki doküman güncellemesine eklenecektir. Süreci hızlandırmak için dokümantasyon ekibini yeni çeviriler hakkında bilgilendirebilirsiniz.
+* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. Süreci hızlandırmak için dokümantasyon ekibini yeni çeviriler hakkında bilgilendirebilirsiniz.

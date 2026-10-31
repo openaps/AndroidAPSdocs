@@ -34,7 +34,7 @@
 
 3. 执行步骤2中的任一操作，都将在您的代码库中创建一个新分支，用于保存您的编辑内容。对文件进行编辑修改。
 
-我们的文档页面使用Markdown格式。这些文件使用".md"后缀。目前我们采用myst_parser解析器来处理Markdown文件（注：Markdown规范并非固定不变）。请注意使用[下文所述](#code-syntax)的正确语法格式。
+我们的文档页面使用Markdown格式。 The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. 请注意使用[下文所述](#code-syntax)的正确语法格式。
 
 ![Edit branch](../images/PR3.png)
 
@@ -147,10 +147,10 @@ Markdown并非完全固化的标准规范，我们力求最大程度遵循该标
 
 图片的类型应为 PNG 或 JPEG。
 
-图片名称需符合下列命名规则之一：示例中我使用.png作为文件后缀名。如果您使用 JPEG，请改用 jpeg 作为后缀。
+Image names should conform to one of the following naming rules. 示例中我使用.png作为文件后缀名。如果您使用 JPEG，请改用 jpeg 作为后缀。
 
 - `文件名-图片-xx.png`（其中xx为此文件中图片的唯一两位数字编号）
-- `文件名-图片-xx.png`（其中xx代表该md文件作者的有意义命名）
+- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
 
 图片统一存放在英文版的images文件夹中，并通过Crowdin自动同步至其他语言版本。您无需对此进行任何操作！
 
@@ -161,6 +161,7 @@ Markdown并非完全固化的标准规范，我们力求最大程度遵循该标
 - 网页截图类图片的宽度应控制在**1050像素**以内。
 - 流程图类图示的宽度应不超过**1050像素**。
 - 应用界面截图的宽度应限制在**500像素**以内。如非必要，请勿将图片并排排列。
+- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
 
 ### 链接
 
@@ -198,7 +199,7 @@ Markdown并非完全固化的标准规范，我们力求最大程度遵循该标
 
 您可以在文档中添加注释框和警告框。
 
-此外，您可添加可折叠的注释框来包含详细信息，避免不关注细节的用户被迫阅读全部内容。请谨慎使用这些功能，因为文档应尽可能保持易读性。
+Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. 请谨慎使用这些功能，因为文档应尽可能保持易读性。
 
 #### 备注
 
@@ -312,7 +313,7 @@ Markdown并非完全固化的标准规范，我们力求最大程度遵循该标
 
 - *"胰岛素（主语）由泵（宾语）输送（动词）"*
 
-*"delivered"*在此处为被动语态动词。与主动语态句子相比，主语和宾语的位置互换了。我们不得不通过添加"is"和"by the"使句子变长。​ 亦可考虑以主动语态动词开头。​
+*“delivered”* is a passive verb here. 与主动语态句子相比，主语和宾语的位置互换了。我们不得不通过添加"is"和"by the"使句子变长。​ 亦可考虑以主动语态动词开头。​
 
 避免的说法：​*“通过AAPS泵菜单将泵与手机连接，可选多种兼容泵型号。”*
 
@@ -527,7 +528,7 @@ Markdown并非完全固化的标准规范，我们力求最大程度遵循该标
     
     *W 比 z 好，因为...*
     
-    在适当情况下提供判断乃至观点…
+    Offer judgements and even opinions where appropriate.
     
     *Y系统中的X组件，其功能类似于Z系统中的W组件。然而...*
     
@@ -553,7 +554,7 @@ Markdown并非完全固化的标准规范，我们力求最大程度遵循该标
 
 #### AAPS通用要点
 
-- 血糖值需同时标注毫克/分升（mg/dl）和毫摩尔/升（mmol/l）（如有可能，截图也应遵循此规则）。
+- For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible).
 
 - 为保持统一性，请使用"AAPS"而非"Android APS"。
 

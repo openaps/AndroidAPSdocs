@@ -5,303 +5,453 @@
 ## Циферблаты AAPS
 
 ```{warning}
-AAPS Watchfaces are available for Wear OS smartwatches with API level 28 to 33.
-Wear OS 5 changes locked the watchfaces: only complications can be used.
+The classic **AAPS** watchfaces run on Wear OS 5 and older only, and Wear OS 5 already limits them. On **Wear OS 6 and newer** the watch app installs one watchface in Google's Watch Face Format instead: your custom watchface as a picture, or the **Complications watchface**. See [Wear OS watch face changes](#wearos-watchface-changes) for what breaks on each Wear OS version, and [the watchface AAPS installs](#wearos-aaps-v4-watchface) for Wear OS 6.
 ```
 
-Есть несколько циферблатов которые включены в базовую сборку APK AAPS Wear APK. Эти циферблаты показывают среднюю дельту ГК, активный инсулин IOB, действующий временный базал, профили базы и график мониторинга.
+On Wear OS 5 and older, several classic watchfaces are built into the **AAPS** watch app. They show the glucose value with delta, IOB, the active basal rate and a graph of the readings. Two taps work on them:
 
-Некоторые из доступных действий для циферблатов:
+* Double-tap the glucose value to open the **AAPS** main menu
+* Double-tap the graph to change its time range
 
-* Двойное нажатие на ГК, чтобы попасть в меню AAPS
-* Двойное нажатие на график ГК для изменения временной шкалы графика
+On every Wear OS version, the [complications](#Watchfaces-complications) and the [tiles](#WearOsSmartwatch-wear-os-tiles) described on this page work with any watchface that has room for them.
 
 ## Configuration
 
-Enable the Wear module in the [Config Builder > Synchronization](../SettingUpAaps/ConfigBuilder.md).
+Enable **Wear** in [**Configuration** > **Communication**](#Config-Builder-wear).
 
-Use the Wear Preferences to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+To bolus or take other actions from the watch, turn on **Wear control**. The bolus wizard options for the watch are set in the same place: see [Settings > Wear](#preferences-wear). While **Wear control** is off, the phone refuses every treatment or mode change sent from the watch, and the watch shows *"Wear control is turned off in the Wear settings on the phone."*
 
-If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
+With **Open plugin** on the **Wear** card you open the Wear screen:
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Wear plugin screen](../images/screens/wear_plugin.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+The top line shows the name of the connected watch, or **(No Watch Connected)**. From this screen you can
 
 * Resend all data. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
 * Open settings on your watch directly from your phone.
+* Choose which watchface **AAPS** installs on the watch (**Watchface installed on watch**: your custom watchface, or the complications watchface). This card is only shown while a **Wear OS 6** or newer watch is connected. See [the watchface AAPS installs](#wearos-aaps-v4-watchface).
+* Manage the **Custom Watchface** (the card is shown while a watch is connected): **Load Watchface** sends a custom watchface to the watch, **Infos Watchface** lists the details of the loaded watchface and the fields it contains, **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) in your browser, and **Export template** saves a template you can edit. A preview of the loaded watchface is shown below the buttons. See [Changing to an AAPS Watchface](#WearOS_changing-to-AAPS-watchface).
 
 Убедитесь, что уведомления AAPS не заблокированы на часах. Подтверждение действия (например, болюс, временные цели) происходит через уведомления, которые нужно смахнуть в сторону и нажать на галочку.
 
 ## Доступ к главному меню AAPS
 
-Для доступа к главному меню AAPS можно использовать следующие опции:
+![AAPS main menu on the watch](../images/wearos/main_menu.png)
 
-* дважды нажмите на значение ГК
-* выбрать значок AAPS в меню приложений для часов
-* нажмите на осложнение для AAPS (если настроено для меню)
+To open the main menu of **AAPS**, use one of these:
 
-## Параметры (в часах Wear)
+* open **AAPS** from the watch's app list
+* tap an **AAPS** complication that opens the menu, see [Complication related settings](#WearOsSmartwatch-complication-settings)
+* tap the **BG Graph** tile with its **Tap action** set to **Main Menu**, see [Tile settings](#WearOsSmartwatch-wear-os-tiles)
+* on a classic **AAPS** watchface, double-tap the glucose value
 
-Чтобы получить доступ к настройкам циферблатов, войдите в главное меню AAPS, сдвиньте экран вверх и выберите "Настройки".
+(WearOsSmartwatch-loop-status)=
 
-Заполненная звездочка соответствует включенному состоянию (**Вкл.**), а незаполненная указывает, что настройка отключена (**Выкл**):
+## Loop Status screen
 
-![Параметры вкл./выкл](../images/Watchface_Settings_On_Off.png)
+The **Loop Status** screen gives a summary of what the loop is doing, without taking out your phone. Open it from the AAPS main menu (**Loop status**, or **Status → Loop**), or by tapping the **Blood Glucose** complication. The **Status** menu also has a **Pump** page and a **TDD** page with the total daily doses.
 
-### Сопутствующие параметры AAPS
+![Status menu: Pump, Loop and TDD](../images/wearos/status_menu.png)
 
-* ** Вибрировать при болюсе ** (по умолчанию ` Вкл`):
-* ** Единицы для принятия действий ** (по умолчанию ` мг/дл `): если ** Вкл** то на основе ` мг/дл `, если ** Выкл ** то на основе ` ммоль/л `. Используется при установке временной цели ТТ с часов.
+![Loop Status screen](../images/wearos/loop_status.png)
 
-(Циферблаты-настройки-циферблатов)=
+The screen is a list of cards. Scroll down to see them all:
 
-### Параметры циферблатов
-
-* ** Показать дату ** (значение по умолчанию `Выкл `): примечание: дата доступна не на всех циферблатах
-* ** Показывать активный инсулин IOB ** (значение по умолчанию ` Вкл`): показывать или не показывать значение IOB (детализация задается в параметрах Wear в AAPS)
-* ** Показать активные углеводы COB ** (по умолчанию ` Вкл `): Показывать или не показывать значение COB
-* ** Показать дельту ** (по умолчанию ` Вкл `): Показывать или не показывать изменение ГК за последние 5 минут
-* ** Показывать среднюю дельту ** (по умолчанию ` Вкл `): Показывать или не показывать среднее изменение ГК за последние 15 минут
-* ** Показывать заряд батареи телефона ** (по умолчанию ` Вкл `): Батарея телефона в%. Красная, если ниже 30%.
-* ** Показать батарею платформы ** (по умолчанию ` Выкл`): Батарея платформы - это интегральная величина заряда батареи телефона, помпы и трансмиттера (как правило, наименьшее из трех значений)
-* ** Показать базальную скорость ** (по умолчанию ` Вкл `): показывать на экране или нет текущую скорость базала (в ед/ч или в%, если TBR)
-* ** Показать состояние цикла ** (по умолчанию ` Вкл`): показывает время в мин после недавней работы цикла (стрелки вокруг значения покраснеют, если выше 15 ').
-* **Показать ГК** (по умолчанию `Вкл`): показывать или не показывать последнее значение ГК
-* **Показать стрелку тренда** (по умолчанию `Вкл`): показывать или не показывать стрелку тренда ГК
-* ** Показать Истекшее время ** (по умолчанию ` Вкл `): показать, сколько минут прошло с момента последнего поступления данных.
-* **Темный фон ** (по умолчанию `Вкл`): Можно переключиться с темного фона на светлый фон (за исключением циферблатов Cockpit и Steampunk)
-* ** Выделять базал ** (по умолчанию ` Выкл `): Улучшить видимость скорости базала и временных базалов
-* **Разделитель в цвет** (по умолчанию `Выкл`): для циферблатов AAPS, AAPSv2 и AAPS(Крупный), показывать контрастный фон разделителя (**Выкл.**) или разделитель совпадает с цветом фона (**Вкл.**)
-* ** Охват времени графика ** (по умолчанию ` 3 часа `): в подменю можно выбрать максимальное время от 1 часа до 5 часов.
-
-### Настройка интерфейса пользователя
-
-* **Дизайн ввода**: этим параметром вы можете выбрать положение кнопок "+" и "-" при вводе команд для AAPS (TT, Insulin, Carbs...)
-
-![Варианты дизайна ввода](../images/Watchface_InputDesign.png)
-
-### Специфические параметры циферблатов
-
-#### Циферблат Стимпанк
-
-* **Зернистость** (по умолчанию `Средняя`)
-
-![Манометры_Стимпанк](../images/Watchface_Steampunk_Gauge.png)
-
-#### Круглый циферблат
-
-* ** Крупные цифры ** (по умолчанию ` Выкл.`): Увеличить размер текста для улучшения видимости
-* ** Кольца хронологии ** (значение по умолчанию ` Выкл.`): Графическое представление хронологии ГК серыми кольцами в зеленом кольце часа
-* **Light Ring History** (default `On`): Ring history more discrete with a darker gray
-* ** Анимация ** (по умолчанию ` Вкл. `): Во включенном состоянии, при поддержке циферблатом и не в режиме энергосбережения, анимация циферблата
-
-### Настройки команд
-
-* ** Помощник в меню ** (по умолчанию ` Вкл. `): Разрешить интерфейс помощника в главном меню для ввода углеводов и подачи болюса с циферблата часов
-* ** Первичное заполнение ** (по умолчанию ` Выкл. `): Разрешить действие Prime/Fill с часов
-* ** Единичная цель ** (по умолчанию ` Вкл `):
-  
-  * ` Вкл. `: задается одно значение для временной цели TT
-  * ` Выкл. `: задается низкое и высокое значение временной цели TT
-
-* **Процент мастера** (по умолчанию `Выкл.`): разрешить коррекцию болюса с мастера (значение вводится в процентах до уведомления подтверждения)
-
-(Циферблаты-дополнительный-функционал)=
-
-## Усложнения (дополнительные функции)
-
-* Усложнение *-это термин из традиционной часовой механики, который описывает дополнения основного циферблата в виде еще одного окошка ( с датой, днем недели, фазой луны и т. д.). Операционная система Wear OS 2.0 позволяет употребить эту метафору для описания дополнительных функций, выводимых на экран вроде погоды, уведомлений, счетчиков фитнеса а также добавлять их в любые циферблаты, поддерживающие усложнения.
-
-Приложение AAPS на Wear OS начиная с версии `2.6` поддерживает дополнительный функционал и допускает конфигурирование циферблатов сторонних разработчиков для отображения данных AAPS (глюкоза крови и тренд, база, углеводы и т. д.).
-
-Кроме того, усложнения служат ** ярлыками ** для функций AAPS. Нажав на них вы можете открывать меню и диалогоовые окна, связанные с AAPS (в зависимости от типа усложнения и конфигурации).
-
-![Усложнения_на_Циферблатах](../images/Watchface_Complications_On_Watchfaces.png)
-
-### Типы усложнений (дополнительных функций)
-
-Приложение AAPS Wear обеспечивает только необработанные данные в соответствии с заданными форматами. Решение о том, где и как отображать усложнения, включая их макет, границу, цвет и шрифт, зависит от авторов стороннего циферблата. Из многих доступных типов усложнений Wear AAPS использует:
-
-* ` КРАТКИЙ ТЕКСТ`-Содержит две строки текста, по 7 символов каждый, иногда именуется значением и меткой. Обычно отображаетя внутри круга или небольшой таблетки - один под другим, или сбоку друг от друга. Это очень ограниченное размерами усложнение. AAPS пытается удалить ненужные символы чтобы уместить информацию: округляет значения, удаляет начальные и хвостовые нули из значений и т. д.
-* `ДЛИННЫЙ ТЕКСТ` - содержит две строки текста, около 20 знаков в каждой. Обычно выводится внутри прямоугольника или длинной таблетки-один ниже другого. Он используется для более детальной информации в виде текста.
-* `ВРЕМЯ В ЦЕЛЕВОМ ДИАПАЗОНЕ`-используется для значений из предопределенного диапазона, например, в процентах. Он содержит иконку, ярлык и обычно отображается в виде круга с достигнутыми значениями.
-* ` КРУПНОЕ ИЗОБРАЖЕНИЕ`-пользовательское фоновое изображение, которое можно использовать (при поддержке циферблатом) в качестве фона.
-
-### Настройка усложнений (дополнительных функций)
-
-Чтобы добавить дополнительные функции на циферблат, настройте его долгим нажатием на значок шестеренки внизу. В зависимости от конфигурации нажмите на соответствующее место на экране или войдите в меню настройки циферблата для настройки усложнений. Усложнения AAPS сгруппированы в меню AAPS.
-
-При настройке усложнений на циферблате, Wear OS показывает и фильтрует список усложнений, которые могут быть помещены в выбранное место на экране. Если в списке не удается найти конкретные усложнения, то, вероятно, это связано с отсутствием достаточного места.
-
-### Усложнения, предоставляемые AAPS
-
-AAPS дает возможность отображать следующие настраиваемые параметры:
-
-![AAPS_Список_усложнений](../images/Watchface_Complications_List.png)
-
-* ** BR, CoB & IoB ** (` КРАТКИЙ ТЕКСТ `, открывается через * Меню *): Отображает * Скорость базального инсулина* на первой строке, * Активные углеводы* и * Активный инсулин * на второй.
-* ** Глюкоза крови ** (` КРАТКИЙ ТЕКСТ`, открывает * Меню *): Отображает * Кровь глюкозы * и * trend * стрелка на первой строке и * возраст измерений * и * дельта * на второй строке.
-* **Акт Угл CoB & Акт инс IoB ** (` КРАТКИЙ ТЕКСТ `, открывается через * Меню *): Отображает * Активные углеводы COB * на первой строке и *Активный инсулин* на второй.
-* **Акт Угл CoB Подробно ** (` КРАТКИЙ ТЕКСТ `, открывается через * Мастер *): Отображает актуальные * Активные углеводы COB * на первой строке и планируемые (e-Углеводы) на второй.
-* ** Значок CoB ** (`КРАТКИЙ ТЕКСТ`, открывает * Wizard *): Отображает значение *Активные углеводы* со статичной иконкой.
-* **Подробно** (` ПОЛНЫЙ ТЕКСТ `, открывает * Меню *): Содержит большую часть данных одновременно: * Глюкозу крови * и * тренд *, * дельту ГК* и * время от измерения * в первой строке. На второй строке * Активные углеводы *, *Активный инсулин * and * Базальную скорость *.
-* ** Полный статус (перевернут) ** (`ДЛИННЫЙ ТЕКСТ `, открывается через * Меню *): те же данные, что и для стандартного * Полного состояние *, но текст перевернут. Может быть использован в циферблатах, которые игнорируют одну из двух строк `ДЛИННОГО ТЕКСТА`
-* ** IOB Подробно ** (` КРАТКИЙ ТЕКСТ `, открывается через *Болюс*): Отображает суммарный * Активный инсулин IOB * на первой строке и разделение * IOB * на * Болюсный* и * Базальный* на второй.
-* ** Значок IoB ** (`КРАТКИЙ ТЕКСТ`, открывается через * Болюс *): Отображает величину *Активных углеводов IOB* со статичной иконкой.
-* ** Загрузчик/батарея телефона ** (`ДИАПАЗОН ВЕЛИЧИН `, открывает * Состояние *): Показывает процент батареи с телефона с AAPS (загрузчика). Выводится в виде процентной шкалы с значком батареи, отражающий сообщаемые значения. Он обновляется не в режиме реального времени, а наряду с изменением других важных данных AAPS (обычно: каждые ~ 5 минут с новым значением * гликемии *).
-
-Кроме того, существуют три усложнения типа ` КРУПНОЕ ИЗОБРАЖЕНИЕ `: ** Темные обои **, ** Серые обои ** и ** Светлые обои**, являющиеся статическим фоном.
-
-### Параметры, связанные с усложнениями
-
-* **Действия при шлепке по значку усложнений** (по умолчанию ` Default `): определяет, какой диалог открывается при нажатии на усложнение: 
-  * * По умолчанию*: действия, связанные с типом усложнения * (см. список выше) *
-  * * Меню *: главное меню AAPS
-  * *мастер*: болюс мастер - калькулятор болюса
-  * * Болюс *: прямой ввод величины болюса
-  * * eCarb *: диалоговое окно конфигурации eCarb
-  * * Состояние *: подменю состояния
-  * * Отсутствует *: Отключает действие по шлепку для усложнений AAPS
-* **Unicode в усложнениях** (по умолчанию - `Вкл`): в положении `Вкл`, будут использоваться символы Unicode для таких величин как `Δ` суммарное изменение `⁞` вертикальный точечный разделитель или `⎍` символ базальной скорости. Отрисовка их зависит от шрифта, который специфичен для каждого циферблата. Эта опция позволяет при необходимости отключать символы Unicode (` Выкл `)- если шрифт, используемый циферблатом, их не поддерживает-чтобы избежать ошибок графики.
-
-(WearOsSmartwatch-wear-os-tiles)=
-
-## Плитки Wear OS
-
-Плитки Wear OS дают быстрый доступ к информации пользователя и терапии. Плитки доступны только на Wear Os версии 2.0 и выше.
-
-Плитки позволяют быстро получить доступ к действиям в приложении AAPS без использования внешнего меню. Плитки являются необязательными и могут быть добавлены и настроены пользователем.
-
-Плитки находятся рядом с циферблатами. Чтобы получить доступ к плитке, проведите пальцем справа налево на экране.
-
-Обратите внимание, что плитки не несут в себе фактическое состояние приложения AAPS, а только делают запрос, который перед принятием следует подтвердить на часах.
-
-## Как добавлять плитки
-
-Перед использованием плиток необходимо включить "Контроль с часов" в настройках "Wear OS" Android APS.
-
-![Настройки смартфона включены](../images/wear_phone_preferences.jpg)
-
-В зависимости от версии Wear OS, бренда и смартфона есть два способа включения плиток:
-
-1. On your watch, from your watch face; 
-  * Swipe right to left till you reach the "+ Add tiles" 
-  * Select one of the tiles.
-2. На телефоне откройте приложение для часов. 
-  * For Samsung open "Galaxy Wearable", or for other brands "Wear OS"
-  * Щелкните по разделу «Плитки», затем нажмите кнопку «+Добавить»
-  * Find the AAPS tile you like to add by selecting it. ![Wear phone add tile](../images/wear_companion_app_add_tile.png)
-  * The order of the tiles can be changed by dragging and dropping
-
-Содержимое плитки может быть изменено долгим нажатием на плитку и нажатием на кнопку "Редактировать" или "Значка шестеренки".
-
-### Плитка APS (Действия)
-
-Плитка действия может содержать от 1 до 4 пользовательских кнопок действий. Для настройки удерживайте плитку которая покажет параметры конфигурации. Аналогичные действия также доступны через стандартное меню часов.
-
-Действия поддерживаемые на плитке Действия могут запрашивать телефонное приложение AAPS для:
-
-* **Calc**; выполните расчет болюса, основываясь на вводе углеводов и необязательном проценте [1]
-* **Insulin**; запрашивает подколку инсулина путем ввода единиц инсулина
-* **Treatment**; запрашивает и подколку инсулина, и вписывание углеводов
-* **Carbs**; добавить (растянутые) углеводы
-* **TempT**; установите временную цель и продолжительность
-
-![Плитка активности, калькулятор](../images/wear_actions.png)
-
-[1] Через меню Wear OS установите опцию "Процент калькулятора" на "Вкл.", чтобы показать процент введенного в калькулятор болюсов. The default percentage is based on the phone settings in the "Overview" section ["Deliver this part of the bolus wizard result %"](#Preferences-deliver-this-part-of-bolus-wizard-result) When the user does not provide a percentage, the default value from the phone is used. Настройте в приложении другие параметры калькулятора болюсов с помощью "Настроек" "Настройки мастера".
-
-### Плитка AAPS(Временная Цель)
-
-Плитка Временная Цель может отправить запрос на установку временной цели, основанной на предустановках AAPS. Configure preset time and targets through the phone app setting by going to "Preferences", "Overview", ["Default Temp-Targets"](#Preferences-default-temp-targets) and set the duration and targets for each preset. Настройте видимые действия на плитке через меню настройки плиток. Долгое удержание плитки покажет параметры конфигурации и выбор параметров 1-4:
-
-* **Нагрузка**; для занятий спортом
-* **Гипо**; поднять целевые значения ГК при купировании гипо
-* **Предстоящий прием пищи**; снизить цель для увеличения активного инсулина
-* **Ручное управление**; вручную установить цель и продолжительность
-* **Отмена**; остановить текущую временную цель
-
-![Редактирование плитки действий на часах Wear](../images/wear_tile_tempt_edit.png)
-
-### Плитка AAPS(БыстрыйДоступ)
-
-Плитка Быстрого доступа может уместить от 1 до 4 кнопок, определяемых приложением телефона[2]. See [QuickWizard](#Preferences-quick-wizard). В зависимости от времени дня можно установить на плитке стандартные приемы пищи (углеводы и калькулятор болюса). Подходит для самых распространенных блюд/перекусов, которые вы едите в течение дня. Вы можете указать чтобы кнопки быстрых настроек отображались на телефоне, часах или обоих устройствах. Обратите внимание, что телефон может показывать только одну кнопку быстрого запуска за раз. Настройки Быстрого доступа также могут уточнять процент инсулина для болюса. Этот процент позволяет подстраиваться, например, перекус на 120%, завтрак из медленных углеводов 80% и сладкий перекус на гипо на 0%
-
-![Плитка действий и настройки телефона](../images/quickwizard_watch_phone.png)
-
-[2] Wear OS ограничивает частоту обновления иконок, т.е. только каждые 30 секунд. Когда вы заметили, что изменения на вашем телефоне не отражены на плитке, подождите 30 секунд, нажмите кнопку "Повторно отправить все данные" из раздела "Wear OS AAPS", или удалите плитку и добавьте её снова. Чтобы изменить порядок кнопок БыстрогоДоступа, перетаскивайте элемент вверх или вниз.
-
-## Всегда включен
-
-Хороший заряд батареи смартфонов на Android Wear OS - это задача. Некоторые смартфоны выдерживают аж 30 часов до перезарядки. Дисплей должен быть выключен для оптимального энергосбережения, если он не используется. Большинство часов поддерживают дисплей «Всегда включен».
-
-Начиная с версии 3 AAPS мы можем использовать «Упростить интерфейс» в режиме постоянно включенного экрана. Этот интерфейс содержит только глюкозу крови, направление и время. This UI is power-optimized with less frequent updates, showing less information and lighting up fewer pixels to save power on OLED displays.
-
-Упрощенный интерфейс доступен для часов: AAPS, AAPS V2, Home Big, Digital Style, Steampunk и Cockpit. Упрощенный интерфейс является необязательным и настраивается через настройки. (выполнить долгое нажатие на циферблат и выбрать кнопку «редактировать» или значок шестеренки) выбрать конфигурацию «Упростить интерфейс» и перевести в положение «Всегда включен» или «Всегда включен и заряжается».
-
-### Ночной режим
-
-Во время зарядки будет полезно, если дисплей остается «всегда вкл.» и показывает глюкозу крови ночью. Однако, стандартные дисплеи слишком яркие и имеют слишком много информации, а детали трудно прочитать заспанными глазами. Поэтому мы добавили опцию настройки для упрощения интерфейса только во время зарядки.
-
-Упрощенный интерфейс доступен для часов: AAPS, AAPS V2, Home Big, Digital Style, Steampunk и Cockpit. Упрощенный интерфейс является необязательным и настраивается через настройки. (выполните долгое нажмите на кнопку «Редактировать» или значок шестеренки) выберете конфигурацию «Упростить интерфейс» и установить ее «Во время зарядки» или «Всегда включён и заряжается»
-
-Опции разработчика Android позволяют вашим часам не засыпать во время зарядки. Чтобы настройки разработчика были доступны смотри раздел [официальная документация](https://developer.android.com/training/wearables/get-started/debugging). Установите «Не уходить в спящий режим при зарядке», на «включить» в настройках разработчика».
-
-Обратите внимание: не все дисплеи работают хорошо с опцией "не отключаться". Это может вызвать перегорание экрана, особенно на старых OLED дисплеях. Часы, как правило, затемняют дисплей, чтобы предотвратить его перегорание; пожалуйста, проверьте руководство пользователя, рекомендации изготовителя или поищите информацию в интернете.
-
-![Часы на прикроватной тумбочке](../images/Watchface_nightstand.jpg)
-
-![Упрощенный интерфейс](../images/Watchface_simplified_ui.png)
-
-## Ярлык Отложить оповещения
-
-Можно создать ярлык, чтобы отложить оповещения от AAPS. Отключение звука через часы - удобный и быстрый способ без необходимости обращения к телефону. Обратите внимание; все еще нужно проверить оповещение на телефоне, чтобы выполнить соответствующие действия, но это можно сделать позже. Если в часвх есть две кнопки, одну из них можно привязать к утилите `Убрать оповещения AAPS`.
-
-Чтобы привязать кнопку на Samsung Watch 4 перейдите в `Настройки > Дополнительные возможности > Настройка кнопок > Двойное нажатие > Отложить оповещения AAPS`
-
-### Отложить оповещения xDrip
-
-Когда xDrip установлен на час, ярлык 'Отложить оповещения AAPS' также отложит звуковые оповещения xDrip.
-
-## Советы по производительности и автономности батареи
-
-Часы на операционной системе Wear OS очень ограничены в расходе батареи. Размер их корпуса ограничивает емкость встроенной батареи. Даже с последними достижениями в аппаратном и программном обеспечении часов Wear OS по-прежнему требуется ежедневная подзарядка.
-
-Если аккумулятор работает меньше светового дня (от рассвета до заката), то рассмотрите несколько советов по увеличению работоспособности устройства.
-
-Основными зонами, расходующими заряд батари, являются:
-
-* Активный дисплей с подсветкой на (для светодиодов) или в режиме полной интенсивности (для OLED)
-* Визуализации на экране
-* Радио связь по Bluetooth
-
-Поскольку мы не можем жертвовать связью (нам нужны свежие данные) большинство оптимизаций можно выполнить только за счет * дисплея *:
-
-* Штатные циферблаты, как правило, лучше оптимизированы, чем пользовательские, загруженные из google play.
-* Лучше использовать циферблаты, которые ограничивают объем выводимой информации в неактивном/затемненном режиме.
-* Всегда будьте начеку при параллельном использовании других уложнений, таких как сторонние виджеты погоды, или других - при использовании данных из внешних источников.
-* Начинайте с более простых циферблатов. Добавляйте по одному усложнению и наблюдайте, как они влияют на работу батареи.
-* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](#watchface-settings). На устройствах OLED это ограничит количество подсвечиваемых пикселей и ограничит расход энергии.
-* Проверьте, что лучше для ваших часов: штатные циферблаты AAPS или другие циферблаты с усложнениями AAPS.
-* Понаблюдайте несколько дней, на различных профилях активности. Большинство часов активируют дисплей при просмотре, движении или других активаторах, связанных с использованием.
-* Проверьте общие параметры системы, влияющие на производительность: уведомления, тайм-аут подсветки экрана/активного вывода, активизации GPS.
-* Check [list of tested phones and watches](#Phones-list-of-tested-phones) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
-* ** Мы не можем гарантировать, что данные, отображаемые на циферблате или усложнении, будут актуальны **. В конечном итоге, решать, когда обновлять циферблат или усложнение, зависит от Wear OS. Даже если приложение AAPS запрашивает обновление, система может решить отложить или игнорировать обновления для экономии батареи. При сомнениях и низком заряде батареи на часах - всегда сверяйтесь с основным приложением AAPS на телефоне.
-
-(Циферблаты - Устранение неполадок - приложение wear)=
-
-## Устранение неполадок в приложении Wear:
-
-* Включите отладку ADB в настройках разработчика (инженерное меню на часах), подключите часы через USB к компьютеру и запустите приложение Wear в Android Studio.
-* Если в усложнении не происходит обновление данных, то сначала проверьте, работает ли циферблат AAPS вообще.
-
-## Additional AAPS custom watchfaces are also available
-
-[Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
-
-## Build your own watchface
-
-If you want to build your own watchface, follow the [guide here](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
-
-Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into Github. During merge of the pull request, the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.
+* **Running mode** — the current mode (closed loop, open loop, LGS, suspended, disconnected…) and, for a temporary mode, how long it still runs.
+* **Loop result** — when the loop last ran, and the temporary basal or SMB it requested.
+* **Scene** — only while a [scene](#scenes-from-watch) is active: its name, the time left (or **Until ended** for a scene without end time) and the **Follow-up** scene that starts when it ends.
+* **Targets** — your target, and the temporary target if one is running.
+* **Profile** — the name of the active profile, with its **Percentage** and **Timeshift** when they are not the default values. A temporary profile switch is highlighted and shows how long it still runs and the profile it **Returns to** when it ends.
+* **Sensitivity** — the same lines as the sensitivity chip on the phone's main screen: the autosens value and the profile, variable and effective ISF.
+
+A small scene icon next to a running mode, a temporary target or a profile switch means it was **set by the active scene**. The same icon is shown in the **Running mode** picker.
+
+![Profile card with a temporary profile switch set by a scene](../images/wearos/loop_status_profile_scene.png)
+
+(WearOsSmartwatch-bolus-calculator)=
+
+## The bolus calculator on the watch
+
+Open **Calculator** from the **AAPS** main menu, from the [Actions tile](#WearOsSmartwatch-wear-os-tiles) or from a complication set to open the wizard. It walks through a few pages, swipe from right to left to go on:
+
+| Углеводы                                                        | Request                                                             | Result                                                            | Calculation                                                                       | Confirm                                                             |
+| --------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| ![Carbs page](../images/wearos/calculator/calculator_carbs.png) | ![Request page](../images/wearos/calculator/calculator_request.png) | ![Result page](../images/wearos/calculator/calculator_result.png) | ![Calculation details](../images/wearos/calculator/calculator_result_details.png) | ![Confirm page](../images/wearos/calculator/calculator_confirm.png) |
+
+1. **Carbs**: enter the carbs with the **+10**, **+5**, **−** and **+** buttons.
+2. **Request**: the last page before the phone takes over. It shows what you entered: the carbs, and the meal type, carb time and percentage when you use them, see [Optional pages](#WearOsSmartwatch-calculator-optional-pages). Tap the check mark to send it to the phone, which runs the calculation.
+3. **Result**: the bolus **AAPS** proposes, with the carbs under it: the carbs now and the eCarbs later, the carb time and the bell of the eat reminder. Adjust the dose with **−** and **+**, see below. Scroll down for the **Calculation** card: tap it to see every line of the calculation, the same as on the phone.
+4. **Confirm**: swipe to the second page and tap the check mark. The phone delivers the bolus and records the carbs.
+
+(WearOsSmartwatch-calculator-optional-pages)=
+
+### Optional pages
+
+Three watch settings each add a page after **Carbs**. They are off by default. Open the **AAPS** main menu, then **Settings** > **Interface**, and turn on the ones you want; when more than one is on, the pages come in the order **Meal type**, **Carb time**, **Percentage**. The dots at the bottom of the calculator show how many pages it has.
+
+| Настройки                                                                                | Meal type                                                               | Carb time                                                               | Percentage                                                                |
+| ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| ![Calculator settings on the watch](../images/wearos/calculator/calculator_settings.png) | ![Meal type page](../images/wearos/calculator/calculator_meal_type.png) | ![Carb time page](../images/wearos/calculator/calculator_carb_time.png) | ![Percentage page](../images/wearos/calculator/calculator_percentage.png) |
+
+* **Calculator Meal Type**: **Bread**, **Cake** or **Pizza**, which splits the carbs of a slow meal into carbs now and eCarbs later, see [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
+* **Calculator Carb Time**: the minutes until you eat, with a **Set alarm** bell for the eat reminder, see [Carb time and the eat reminder](#WearOsSmartwatch-wizard-carb-time).
+* **Calculator Percentage**: a percentage of the calculated bolus, for example 70 % when you want a smaller dose. It starts at the **Bolus percentage** of the phone's [Bolus wizard settings](#Preferences-deliver-this-part-of-bolus-wizard-result), 100 % unless you changed it. See also the note under [Adjusting the bolus on the result page](#WearOsSmartwatch-wizard-result).
+
+(WearOsSmartwatch-wizard-result)=
+
+### Adjusting the bolus on the result page
+
+The result page shows the bolus **AAPS** proposes, together with a **−** and a **+** button. Use them to adjust the dose before you confirm it, without going back to the phone.
+
+| Proposed                                                                          | More                                                                                | Less                                                                                   |
+| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| ![The proposed bolus](../images/wearos/calculator/calculator_result_proposed.png) | ![The bolus raised by 0.20 U](../images/wearos/calculator/calculator_result_up.png) | ![The bolus lowered by 0.10 U](../images/wearos/calculator/calculator_result_down.png) |
+
+* Each press changes the bolus by **one step of your pump**, so the amounts offered always match what your pump can actually deliver.
+* **Press and hold** a button to keep changing the value. The longer you hold, the faster it goes.
+* You cannot go below **0 U**, nor above your **max bolus** setting.
+
+The running total is shown on the result page, so you always see the amount you are about to confirm. The change is shown after the carbs, for example *(+0.20 U)*, and the button you used turns green for more or red for less.
+
+If **AAPS** had to limit the dose, for example because the calculated bolus is above your **max bolus** setting, a warning line in amber below the total says so (for example *"Bolus constraint applied"*). The same applies to a limited carbs amount.
+
+```{admonition} This is not the same as Calculator Percentage :class: note The **Calculator Percentage** setting lets you enter a *percentage* of the calculated bolus **before** the result page appears. The **−** and **+** buttons adjust the *final amount* **on** the result page. You can use both.
+
+    <br />(WearOsSmartwatch-wizard-meal-type)=
+    
+    ### Choosing the meal type
+    
+    The watch calculator can split the carbs of a slow meal into carbs now and eCarbs later, like the [carbs type](#AapsScreens-carbs-type) of the phone wizard. Turn on **Calculator Meal Type** in the watch's **Settings** > **Interface**. The setting is off by default, and then the **Meal type** page is skipped.
+    
+    * After you enter the carbs, a **Meal type** page shows three icons: **Bread**, **Cake** and **Pizza**. Tap an icon: its name and the carbs it gives show below the icons, for example *65 g* for bread, or *52+22 g* for pizza (52 g now and 22 g of eCarbs later). **Bread** is the default and keeps all the carbs now.
+    * The request and confirm pages show the carbs in the same way (*52+22 g*). The result page also shows when the eCarbs start and how long they last.
+    * The bolus is calculated only for the carbs eaten now. The split uses the same numbers as the phone wizard.
+    
+    (WearOsSmartwatch-wizard-carb-time)=
+    
+    ### Carb time and the eat reminder
+    
+    With **Calculator Carb Time** turned on in the watch's **Settings** > **Interface**, a **Carb time** page follows the carbs: the minutes until you eat, like the [carb time](#aaps-screens-bolus-wizard) of the phone wizard. **Now** is the default. **−** and **+** move it in steps of 5 minutes, up to an hour before or after now. A time in the past is for carbs you have eaten already.
+    
+    With a time in the future, a **Set alarm** bell appears under the value. It is on by default, tap it to turn it off. The request and result pages show the carb time, for example *+30 min*, and the bell. The phone records the carbs at that time, moves the eCarbs of the meal type with it, and starts its **time to eat** reminder.
+    
+    | Result | BG graph | Running | Time to eat |
+    | --- | --- | --- | --- |
+    | ![Result page with a carb time](../images/wearos/calculator/calculator_result_carb_time.png) | ![The reminder in the BG graph](../images/wearos/eat_reminder/eat_reminder_graph.png) | ![The running reminder](../images/wearos/eat_reminder/eat_reminder_running.png) | ![The reminder rings](../images/wearos/eat_reminder/eat_reminder_ringing.png) |
+    
+    The reminder also lives on the watch, so it rings when the phone is out of reach too:
+    
+    * The **BG Graph** screen, the **BG Graph** tile and the graph of the **Complications watchface** draw a dashed orange line where the reminder rings, with the minutes left next to it.
+    * While it runs, a silent **Time to eat** notification with **Stop** and **+5 min** sits in the notification stream. It comes back when you swipe it away, until the reminder is over.
+    * When the time has come, the watch vibrates, and again every half minute for five minutes until you answer. The notification offers **Silence** and **+5 min**, and swiping it away silences it too.
+    
+    **Stop**, **Silence** and **+5 min** do the same on the watch, on the phone and on an **AAPSClient**, and all of them show the same reminder.
+    
+    (Watchfaces-complications)=
+    
+    ## Complications
+    
+    _Complication_ is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Операционная система Wear OS 2.0 позволяет употребить эту метафору для описания дополнительных функций, выводимых на экран вроде погоды, уведомлений, счетчиков фитнеса а также добавлять их в любые циферблаты, поддерживающие усложнения.
+    
+    AAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
+    
+    Complications also serve as **shortcut** to AAPS functions. Нажав на них вы можете открывать меню и диалогоовые окна, связанные с AAPS (в зависимости от типа усложнения и конфигурации).
+    
+    ![The Complications watchface, every slot filled with an AAPS complication](../images/wearos/complications_on_watchface.png)
+    
+    ### Complication Types
+    
+    AAPS Wear OS app provides only raw data, according to predefined formats. Решение о том, где и как отображать усложнения, включая их макет, границу, цвет и шрифт, зависит от авторов стороннего циферблата. From many Wear OS complication types available, AAPS uses:
+    
+    * `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Обычно отображаетя внутри круга или небольшой таблетки - один под другим, или сбоку друг от друга. Это очень ограниченное размерами усложнение. AAPS пытается удалить ненужные символы чтобы уместить информацию: округляет значения, удаляет начальные и хвостовые нули из значений и т. д.
+    * `LONG TEXT` - Contains two lines of text, about 20 characters each. Обычно выводится внутри прямоугольника или длинной таблетки-один ниже другого. Он используется для более детальной информации в виде текста.
+    * `RANGED VALUE` - Used for values from predefined range, like a percentage. Он содержит иконку, ярлык и обычно отображается в виде круга с достигнутыми значениями.
+    * `LARGE IMAGE` - Custom background image that can be used (when supported by watchface) as background.
+    * `SMALL IMAGE` / `MONOCHROMATIC IMAGE` - A small icon. In a `SMALL IMAGE` slot AAPS draws it in its own colour; in a `MONOCHROMATIC IMAGE` slot the watchface tints it.
+    
+    ### Complication Setup
+    
+    To add complication to watchface, configure it by long press and clicking the gear icon below. В зависимости от конфигурации нажмите на соответствующее место на экране или войдите в меню настройки циферблата для настройки усложнений. Усложнения AAPS сгруппированы в меню AAPS.
+    
+    При настройке усложнений на циферблате, Wear OS показывает и фильтрует список усложнений, которые могут быть помещены в выбранное место на экране. Если в списке не удается найти конкретные усложнения, то, вероятно, это связано с отсутствием достаточного места.
+    
+    ### Complications provided by AAPS
+    
+    AAPS provides the complications below. "Opens" is what a tap does with **Complication Tap Action** left at **Default**, see [Complication related settings](#WearOsSmartwatch-complication-settings).
+    
+    **Glucose**
+    
+    * **Blood Glucose** (`SHORT TEXT`, opens _Loop Status_): the glucose value with the trend arrow on the first line, the age of the reading and the delta on the second.
+    * **Blood Glucose (large)** (`SHORT TEXT`, opens _BG Graph_): the glucose value alone on the first line, so the watchface can draw it big. The age and the trend arrow are on the second line.
+    * **BG Graph** (`SMALL IMAGE` / `LARGE IMAGE`, opens _BG Graph_): the BG graph as a picture, for watchfaces with an image slot. This is the graph on the **Complications watchface**.
+    * **Full Status** (`LONG TEXT`, opens _Menu_): most of the data in one line: the glucose value with the trend arrow, the delta and the age of the reading, then carbs on board, insulin on board and the basal rate.
+    * **Full Status (flipped)** (`LONG TEXT`, opens _Menu_): the same, with the two lines swapped, for watchfaces that show only one of the two lines of a `LONG TEXT` slot.
+    
+    **Insulin and carbs**
+    
+    * **IoB Icon** (`SHORT TEXT`, opens _Bolus_): insulin on board with a syringe icon.
+    * **IoB Detailed** (`SHORT TEXT`, opens _Bolus_): total insulin on board on the first line, the bolus and basal parts on the second.
+    * **CoB Icon** (`SHORT TEXT`, opens _Wizard_): carbs on board with a carbs icon.
+    * **CoB Detailed** (`SHORT TEXT`, opens _Wizard_): the carbs on board now on the first line, the carbs still to come (eCarbs) on the second.
+    * **CoB & IoB** (`SHORT TEXT`, opens _Wizard_): insulin on board on the first line, carbs on board on the second.
+    
+    **Basal and target**
+    
+    * **Basal rate** (`SHORT TEXT`, opens _Menu_): the current basal rate.
+    * **BR & IoB** (`SHORT TEXT`, opens _Menu_): insulin on board on the first line, the basal rate on the second.
+    * **BR & Target** (`SHORT TEXT`, opens _Temp Target_): the target on the first line, with the time left when a temporary target runs, and the basal rate on the second.
+    * **Target** (`SHORT TEXT`, opens _Temp Target_): the target on the first line and, while a temporary target runs, its time left on the second.
+    * **BR, CoB & IoB** (`SHORT TEXT`, opens _Menu_): the basal rate on the first line, carbs on board and insulin on board on the second.
+    
+    **Loop and phone**
+    
+    * **Running mode** (`SMALL IMAGE` / `ICON`, opens _Running mode picker_): the current loop mode as an icon: closed loop, open loop, low glucose suspend, suspended, disconnected or disabled. A tap opens a picker with the mode changes allowed right now, for example **Suspend loop**, **Disconnect pump**, **Resume loop** or **Reconnect pump**. The same picker is in the **AAPS** main menu under **Running mode**.
+    * **Uploader/Phone Battery** (`RANGED VALUE` / `SHORT TEXT` / `ICON`, opens _Status_): the battery of the **AAPS** phone, as a gauge with a battery icon, as a number, or as the icon alone. It updates together with the other **AAPS** data, usually every 5 minutes with a new reading.
+    
+    The **Running mode** picker, as opened from the complication, the main menu or the Running mode tile:
+    
+    ![Running mode picker with the modes you can switch to](../images/wearos/running_mode_picker.png)
+    
+    (WearOsSmartwatch-complication-settings)=
+    
+    ### Complication related settings
+    
+    In the **AAPS** main menu on the watch, open **Settings** > **Complication**:
+    
+    ![Settings > Complication on the watch](../images/wearos/settings_complication.png)
+    
+    * **Complication Tap Action** (default `Default`): what a tap on an **AAPS** complication opens, for all complications at once:
+      * _Default_: what the complication itself opens, see the list above
+      * _Menu_: the **AAPS** main menu
+      * _Calculator_: the bolus calculator
+      * _Treatment_: the treatment dialog, insulin and carbs
+      * _eCarbs_: the eCarbs dialog
+      * _Status_: the status menu
+      * _Running mode_: the running mode picker. Needs **Wear control** turned on in the phone's Wear settings, otherwise the main menu opens instead.
+      * _None_: a tap does nothing
+    * **BG graph time range** (default `3 hours`): how many hours the **BG Graph** complication shows, 1, 3 or 6. The BG Graph tile has its own setting.
+    * **Unicode in Complications** (default `On`): the complications use Unicode symbols like `Δ` for the delta, `⁞` as separator and `⎍` for the basal rate. How they look depends on the font of the watchface. Turn this `Off` when a watchface draws them as boxes or blanks.
+    
+    (WearOsSmartwatch-wear-os-tiles)=
+    
+    ## Wear OS Tiles
+    
+    Tiles are the pages you reach by swiping from the watchface. **AAPS** brings seven of them, each a set of up to four buttons. A tap on a button opens the matching dialog on the watch, or asks you to confirm, and the phone then does the work. A tile is a shortcut, not a status display: it does not hold the state of the phone app.
+    
+    Before using the tiles, turn on **Wear control** in [Settings > Wear](#preferences-wear).
+    
+    ### Adding a tile
+    
+    There are two ways, depending on your watch and phone:
+    
+    1. On the watch: swipe from the watchface past the last tile to **Add tile** and pick an **AAPS** tile. On most watches a long-press on a tile also opens the add and remove view.
+    2. On the phone, in the companion app for your watch (**Galaxy Wearable** for Samsung, **Wear OS** for other brands): open **Tiles**, tap **Add** and pick the **AAPS** tiles you want. The order of the tiles can be changed by dragging.
+    
+    ![The seven AAPS tiles in the companion app](../images/wearos/tiles/tiles_list_companion_app.png)
+    
+    ### Tile settings
+    
+    The **Actions**, **Temp Target**, **BG Graph** and **Scene** tiles have settings on the watch. Open the **AAPS** main menu, then **Settings** > **Tiles**, and pick the tile. A long-press on the tile also opens its settings, except on Pixel watches. The other three tiles are filled from the phone and have nothing to set on the watch.
+    
+    | Main menu | Settings | Tiles |
+    | --- | --- | --- |
+    | ![AAPS main menu, Settings](../images/wearos/tiles/tile_settings_menu.png) | ![Settings, Tiles](../images/wearos/tiles/tile_settings_settings.png) | ![Tiles, pick the tile](../images/wearos/tiles/tile_settings_tiles.png) |
+    
+    The settings of a tile are a list of its four places. Tap a place to pick what it shows, or **None** to leave it empty.
+    
+    | Long-press on the tile | Settings of the Temp Target tile |
+    | --- | --- |
+    | ![Long-press on a tile, tap the pencil](../images/wearos/tiles/tile_settings_long_press.png) | ![Temp Target tile settings, one entry per place](../images/wearos/tiles/tile_settings_temp_target.png) |
+    
+    Every tile has four places. A tile with more entries than that shows the first four.
+    
+    ### Actions tile
+    
+    ![Actions tile](../images/wearos/tiles/tile_actions.png)
+    
+    Shortcuts to the dialogs of the **AAPS** watch app. Pick up to four of these in the tile settings:
+    
+    * **Calc**: the bolus calculator, with a carbs input, an optional percentage [1] and an optional meal type [2]
+    * **Treat**: insulin and carbs in one go
+    * **Insulin**: a bolus, entered in units
+    * **Carbs**: carbs, also extended carbs. A **negative** amount is accepted, down to your current COB, to correct carbs you entered earlier. Carb removals are shown on the watch's BG graph.
+    * **eCarbs**: extended carbs
+    * **TempT**: a temporary target with a custom target and duration
+    * **Profile switch**: a profile switch with percentage, time shift and duration
+    
+    ![Actions tile settings: one entry per place](../images/wearos/tiles/tile_settings_actions.png)
+    
+    The dialogs the buttons open. Swipe from right to left to reach the next page of a dialog, and tap the check mark on the last page to send the request to the phone:
+    
+    | Treat | Insulin | Carbs | eCarbs | TempT | Profile switch |
+    | --- | --- | --- | --- | --- | --- |
+    | ![Treatment dialog, insulin page](../images/wearos/dialogs/dialog_treatment.png) | ![Insulin dialog](../images/wearos/dialogs/dialog_insulin.png) | ![Carbs dialog](../images/wearos/dialogs/dialog_carbs.png) | ![eCarbs dialog](../images/wearos/dialogs/dialog_ecarbs.png) | ![Temp Target dialog, duration page](../images/wearos/dialogs/dialog_temp_target.png) | ![Profile switch dialog](../images/wearos/dialogs/dialog_profile_switch.png) |
+    
+    [1] In the watch's **Settings** > **Interface**, turn on **Calculator Percentage** to show the percentage input in the bolus calculator. The default percentage comes from the phone's ["Deliver this part of the bolus wizard result %"](#Preferences-deliver-this-part-of-bolus-wizard-result). The other calculator settings are those of the phone under **Settings** > **Bolus wizard settings**.
+    
+    [2] In the watch's **Settings** > **Interface**, turn on **Calculator Meal Type** to show the **Meal type** page, where you pick **Bread**, **Cake** or **Pizza** to split the carbs of a slow meal into carbs now and eCarbs later. See [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
+    
+    ### Temp Target tile
+    
+    ![Temp Target tile](../images/wearos/tiles/tile_temp_target.png)
+    
+    Temporary targets from the phone's presets. Set the duration and the target of each preset on the phone under **Settings** > [Default temp targets](#Preferences-default-temp-targets). Pick up to four of these in the tile settings:
+    
+    * **Activity**: for sport
+    * **Eating**: eating soon, a lower target so there is more insulin on board at the meal
+    * **Hypo**: a higher target during a hypo treatment
+    * **Manual**: a custom target and duration
+    * **Cancel**: stops the running temporary target. The button is shown only while a temporary target is running.
+    
+    ### Quick Wizard tile
+    
+    ![Quick Wizard tile](../images/wearos/tiles/tile_quick_wizard.png)
+    
+    The [QuickWizard](#quickwizards) entries of the phone that have **Show on Watch** turned on, within their valid hours. A carbs entry shows its carbs in g, an insulin entry its fixed dose in U. A tap runs the entry after a confirmation on the watch. There is nothing to set on the watch: edit the entries on the phone, and turn on **Show on Watch** under **Device Selection** for each entry you want on the tile. Outside the valid hours of all your entries, the tile shows **No config available**.
+    
+    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/quickwizard_watch_phone.png)
+    
+    ### Scene tile
+    
+    ![Scene tile](../images/wearos/tiles/tile_scene.png)
+    
+    The [Scenes](#scenes-from-watch) of the phone. Each of the four places is set to **Automatic**, **None** or one scene in the tile settings. An **Automatic** place takes the next scene from the phone's list that no other place has claimed. A place set to a scene that no longer exists on the phone shows **Unavailable**.
+    
+    ![Scene tile settings, four places set to Automatic](../images/wearos/tiles/tile_settings_scene.png)
+    
+    ### Running mode tile
+    
+    ![Running mode tile](../images/wearos/tiles/tile_running_mode.png)
+    
+    The [running modes](#aaps-screens-running-mode) you can switch to from the current one, with the same icons as on the phone: closed loop, low glucose suspend, open loop, disable loop, suspend loop and disconnect pump, or resume and reconnect while one of those runs. **Suspend loop** and **Disconnect pump** ask for a duration first. The phone decides which modes are offered, the watch shows the first four and leaves out **Disable loop** when **Suspend loop** is on the list.
+    
+    ### User Action tile
+    
+    ![User Action tile](../images/wearos/tiles/tile_user_action.png)
+    
+    One button for each [automation](#automations-automation-triggers) on the phone whose trigger is **User action**. A tap asks you to confirm, then the phone runs the automation's actions. The buttons are named after the automations, so give them short names. There is nothing to set on the watch.
+    
+    ### BG Graph tile
+    
+    ![BG Graph tile](../images/wearos/tiles/tile_bg_graph.png)
+    
+    The glucose value with arrow, delta and age, below it IOB, COB, basal rate and target, and the BG graph with predictions, boluses, carbs and SMBs. Two settings on the watch: **Time range** (1, 3 or 6 hours) and **Tap action**, which opens the full **BG Graph**, the **Main Menu** or the **Loop Status** screen.
+    
+    ![The BG Graph screen](../images/wearos/bg_graph.png)
+    
+    ![BG Graph tile settings: Time range and Tap action](../images/wearos/tiles/tile_settings_bg_graph.png)
+    
+    ## Always on
+    
+    This section and the next apply to the classic **AAPS** watchfaces on Wear OS 5 and older. On Wear OS 6 the **Complications watchface** has an always-on display of its own, see [the watchface AAPS installs](#wearos-aaps-v4-watchface).
+    
+    Хороший заряд батареи смартфонов на Android Wear OS - это задача. Некоторые смартфоны выдерживают аж 30 часов до перезарядки. Дисплей должен быть выключен для оптимального энергосбережения, если он не используется. Большинство часов поддерживают дисплей «Всегда включен».
+    
+    Начиная с версии 3 AAPS мы можем использовать «Упростить интерфейс» в режиме постоянно включенного экрана. Этот интерфейс содержит только глюкозу крови, направление и время. This UI is power-optimized with less frequent updates, showing less information and lighting up fewer pixels to save power on OLED displays.
+    
+    The simplified UI mode is available for the Digital Style and Custom watchfaces. The simplified UI is optional and is configured through the watch face settings (long press the watch face and click “edit” or the gear icon). Select the configuration “Simplify UI" and set it to “Always On Mode” or “Always On and Charging”.
+    
+    ### Night-time mode
+    
+    While charging, it would be helpful if the display could stay “always-on” and show your blood glucose during the night. Однако, стандартные дисплеи слишком яркие и имеют слишком много информации, а детали трудно прочитать заспанными глазами. Поэтому мы добавили опцию настройки для упрощения интерфейса только во время зарядки.
+    
+    The simplified UI mode is available for the Digital Style and Custom watchfaces. The simplified UI is optional and is configured through the watch face settings (long press the watch face and click “edit” or the gear icon). Select the configuration “Simplify UI" and set it to “During Charging” or “Always On and Charging”.
+    
+    Опции разработчика Android позволяют вашим часам не засыпать во время зарядки. To make the developer options available, see the [official documentation](https://developer.android.com/training/wearables/get-started/debugging). Установите «Не уходить в спящий режим при зарядке», на «включить» в настройках разработчика».
+    
+    Обратите внимание: не все дисплеи работают хорошо с опцией "не отключаться". Это может вызвать перегорание экрана, особенно на старых OLED дисплеях. Часы, как правило, затемняют дисплей, чтобы предотвратить его перегорание; пожалуйста, проверьте руководство пользователя, рекомендации изготовителя или поищите информацию в интернете.
+    
+    ![Watchface Nightstand](../images/Watchface_nightstand.jpg)
+    
+    ![Simplified UI](../images/Watchface_simplified_ui.png)
+    
+    (WearOsSmartwatch-phone-alarms)=
+    
+    ## Phone alarms on the watch
+    
+    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
+    
+    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. The watch vibrates, and again every half minute for five minutes until you answer. A notification shows the title and the text of the alarm, with the same answers as the [time to eat](#WearOsSmartwatch-wizard-carb-time) reminder:
+    
+    * **Silence**, or a swipe: the alarm stops, and the alarm screen on the phone closes.
+    * **Mute 5 min**: the alarm stops and rings again after five minutes, on the phone and on the watch.
+    
+    Two kinds of alarm reach the watch:
+    
+    * The alarm screen of the phone (pump errors, automation alarms, BG alarms): **Silence** and **Mute 5 min**.
+    * Urgent notifications with a sound, like *Pump unreachable* or a Nightscout alarm: **Silence** only. The phone has only **Dismiss** for those, and they come back by themselves while their cause lasts.
+    
+    The *time to eat* reminder is not sent this way: the watch rings that one by itself.
+    
+    ## Snooze Alert shortcut
+    
+    The watch [shows the alarm](#WearOsSmartwatch-phone-alarms) itself; the shortcut is a second way to silence it, with one press. Можно создать ярлык, чтобы отложить оповещения от AAPS. Отключение звука через часы - удобный и быстрый способ без необходимости обращения к телефону. Обратите внимание; все еще нужно проверить оповещение на телефоне, чтобы выполнить соответствующие действия, но это можно сделать позже. When your watch has two buttons, you can assign a key to the `AAPS Snooze Alert` program.
+    
+    To link the button on the Samsung Watch 4 go to `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
+    
+    On a watchface with complications, an **App shortcut** complication set to **AAPS Snooze Alert** does the same with a tap. The [alternative setup of the Complications watchface](#wearos-complications-watchface-setup) uses its top-right slot for it.
+    
+    ### Snooze xDrip
+    
+    When you use xDrip and have xDrip installed on the watch, the 'AAPS Snooze Alert' shortcut will also Snooze any xDrip alarm. 
+    
+    
+    ## Performance and battery life tips
+    
+    Wear OS watches are very power-constrained devices. Размер их корпуса ограничивает емкость встроенной батареи. Даже с последними достижениями в аппаратном и программном обеспечении часов Wear OS по-прежнему требуется ежедневная подзарядка.
+    
+    If an experienced battery span is shorter than a day (from dawn to dusk), here are some tips to troubleshoot the issues.
+    
+    Main battery-demanding areas are:
+    
+    * Active display with a backlight on (for LED) or in full intensity mode (for OLED)
+    * Rendering on screen
+    * Radio communication over Bluetooth
+    
+    Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in _display time_ area:
+    
+    * Stock watchfaces are usually better optimized than custom one, downloaded from the store.
+    * It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
+    * Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
+    * Start with simpler watchfaces. Добавляйте по одному усложнению и наблюдайте, как они влияют на работу батареи.
+    * Use a dark theme on the watchface. On OLED displays fewer lit pixels mean less power and less burn-in.
+    * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
+    * Observe over a few days, with different activity profiles. Большинство часов активируют дисплей при просмотре, движении или других активаторах, связанных с использованием.
+    * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
+    * Check [list of tested phones and watches](#Phones-list-of-tested-phones) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
+    * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. В конечном итоге, решать, когда обновлять циферблат или усложнение, зависит от Wear OS. Даже если приложение AAPS запрашивает обновление, система может решить отложить или игнорировать обновления для экономии батареи. При сомнениях и низком заряде батареи на часах - всегда сверяйтесь с основным приложением AAPS на телефоне.
+    
+    (Watchfaces-troubleshooting-the-wear-app)=
+    
+    ## Troubleshooting the wear app
+    
+    If the watch shows no data or old data, first check the connection between the watch and the phone, see [Troubleshooting the AAPS watch - AAPS phone communication](#wear-os-watch-phone-communication). For a watch on Wear OS 5, see also the [general troubleshooting recommendations for Wear OS 5](#wear-os-5-troubleshooting). A complication that does not update has the same causes as a tile or watchface that does not update, so check those first.
+    
+    ## Additional AAPS custom watchfaces are also available
+    
+    [Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
+    
+    ## Build your own watchface
+    
+    If you want to build your own watchface, follow the [guide here](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
+    
+    Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder  "ExchangeSiteCustomWatchfaces" via a Pull Request into Github. During merge of the pull request, the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.
+    
+    (WearOsSmartwatch-complications-watchface-download)=
+    
+    ## Make your own version of the Complications watchface
+    
+    The **Complications watchface** that **AAPS** installs on Wear OS 6 (see [the watchface AAPS installs](#wearos-aaps-v4-watchface)) is made with Samsung's **Watch Face Studio**. Its project file is free to download, so you can change it to your taste, or use it on a watch with Wear OS 5 or older where **AAPS** does not install it:
+    
+    [Complications watchface (AAPS V4), zip](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/wearos/Complications_watchface_AAPS_V4.zip)
+    
+    The zip holds four files:
+    
+    * `AAPS V4_0_2.wfs`: the project. Open it in [Watch Face Studio](https://developer.samsung.com/watch-face-studio/download.html), change what you like, and install it on the watch from there.
+    * `com.watchfacestudio.aapsv4.apk`: the watchface as it is, ready to install with [adb](https://developer.android.com/tools/releases/platform-tools): `adb install com.watchfacestudio.aapsv4.apk` with the watch connected over ADB debugging.
+    * `README.txt`: the two recommended complication setups, the same as on the [Wear OS page](#wearos-complications-watchface-setup).
+    * `AAPS V4.png`: a preview.
+    
+    ```{admonition} This is not a custom watchface
+    :class: note
+    The zip is not a custom watchface for **Load Watchface** in the **Wear** plugin, and the phone cannot install it. It must be unzipped and installed on the watch with Watch Face Studio or adb, as above.

@@ -1,191 +1,236 @@
 # Objetivos temporales
 
-## ¿Qué son los objetivos temporales y como puedo ajustarlos y configurarlos?
+## ¿Qué son los objetivos temporales y cómo puedo ponerlos y configurarlos?
 
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](#profile-glucose-targets) for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage.
+Un **objetivo temporal** (o, abreviado, **OT**) es una función de **AAPS** que permite al usuario cambiar su [rango objetivo de **glucosa**](#profile-glucose-targets) para actividades planificadas. **AAPS** lo consigue cambiando el uso de insulina del usuario.
 
-A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
+Un objetivo de glucosa, sobre todo si es solo a corto plazo (menos de 4 horas), no tiene que ser el *valor real* al que esperas o quieres que llegue tu glucosa. Es más bien una buena forma de decirle a **AAPS** que sea más o menos agresivo, manteniendo tu glucosa dentro del rango.
 
-Temporary targets can be defined within those boundaries :
+Los objetivos temporales se pueden definir dentro de estos límites:
 
-|         | Objetivo temporal      |
-| ------- | ---------------------- |
-| Minimum | 4 mmol/l or 72 mg/dL   |
-| Maximum | 15 mmol/l or 225 mg/dL |
+|        | Objetivo temporal     |
+| ------ | --------------------- |
+| Mínimo | 4 mmol/l o 72 mg/dl   |
+| Máximo | 10 mmol/l o 180 mg/dl |
 
-**AAPS** provides for three **Temp-Target** options suitable for exercise (**Temp-Target- Activity**), meals (**Temp-Target- Eating soon**) and predicted hypoglycemia (**Temp-Target-Hypo**). **Temp-Targets** are located under the **Actions tab**.
+**AAPS** trae tres ajustes de **objetivo temporal** incluidos, para el ejercicio (**Actividad**), las comidas (**Comiendo Pronto**) y una hipoglucemia prevista (**Hipo**). Están en la pantalla **Objetivo temporal** (**Administrar** → **Objetivo temporal**), que también puedes abrir simplemente tocando el **chip del objetivo** en la pantalla principal.
 
-Users should have realistic expectations on the results that can be achieved when selecting a **Temp-Target** in **AAPS**. The success of attaining a desired **BG** target will vary depending on a multiple factors ranging from: the reliability of the user’s **AAPS** settings, overall **BG** control, **IOB**, insulin sensitivity, insulin resistance, level of exertion undertaken during the exercise and so forth.
+Los usuarios deben tener expectativas realistas sobre los resultados que se pueden conseguir al elegir un **objetivo temporal** en **AAPS**. Lograr el objetivo de **glucosa** deseado depende de muchos factores, por ejemplo: la fiabilidad de los ajustes de **AAPS** del usuario, el control general de la **glucosa**, la **IOB**, la sensibilidad a la insulina, la resistencia a la insulina, el nivel de esfuerzo durante el ejercicio, etc.
 
-A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**.
+Un **objetivo temporal** puede tardar unos 30 minutos o más en alcanzar el objetivo de **glucosa** deseado. **AAPS** no puede alcanzar un objetivo de **glucosa** de forma inmediata, y los usuarios deben tenerlo en cuenta al elegir un **objetivo temporal**.
 
-The table below summarizes the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**, and **Temp-Target-Hypo**.
+Las secciones siguientes resumen las funciones del **objetivo temporal - Actividad**, el **objetivo temporal - Comiendo Pronto** y el **objetivo temporal - Hipo**. Los valores que se muestran son los predeterminados de fábrica — puedes [ajustar cada preajuste](#TempTargets-change-preset-defaults) a tus necesidades.
 
-### TT - Activity
+### OT - Actividad
 
-![TT Activity](../images/TempTarget2.png)
+![Objetivo temporal "Actividad"](../images/TempTarget2.png)
 
-**BG Target (depending on users' settings)**
+**Objetivo de glucosa (preajuste predeterminado, ajustable)**
 
-AAPS will aim to reach 8mmol/l or 144mg/dl for 40 minutes
+AAPS intentará llegar a 140 mg/dl o 7,8 mmol/l durante 1 h 30 min
 
-**Other considerations users may wish to factor in when selecting**:
+**Otros aspectos que los usuarios pueden tener en cuenta al elegirlo**:
 
-Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
+Según el nivel de **glucosa**, **AAPS** «reducirá» el uso de insulina para alcanzar el objetivo de **glucosa**. Si el objetivo de **glucosa** no está dentro del rango (es decir, está por encima del objetivo de **glucosa** elegido en el **perfil** del usuario), **AAPS** puede mantener la basal activa.
 
-In closed loop mode, **SMB**:
+En modo de lazo cerrado, **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *puede* desactivarse (se explica más abajo); y/o
+- la basal puede activarse si **AAPS** tiene **IOB** negativa, o <0.
 
-Users may also wish to consider:
+Los usuarios también pueden considerar:
 
-- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary person to person); and
-- *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise as reduced **IOB** as some users experience a rapid rise in **BG **post exercise.
+- *elegir* este **OT** 1–2 horas antes del ejercicio planificado para asegurar una IOB más baja (el momento correcto para este OT es diferente en cada persona); y
+- *elegir* un perfil temporal (reducido) durante la actividad planificada para asegurar una **IOB** más baja;
+- *asegurar* que el **OT** esté programado para *desactivarse* poco antes del ejercicio, porque la **IOB** ya está reducida y algunos usuarios tienen una subida rápida de la **glucosa** después del ejercicio.
 
-### TT - Eating soon
+### OT - Comiendo Pronto
 
-![TT Activity](../images/TempTarget1.png)
+![OT Comiendo Pronto](../images/TempTarget1.png)
 
-**BG Target (depending on users' settings)**
+**Objetivo de glucosa (preajuste predeterminado, ajustable)**
 
-AAPS will aim to reach 5mmol/l or 90mg/dl for 30 minutes
+AAPS intentará llegar a 90 mg/dl o 5,0 mmol/l durante 45 minutos
 
-**Other considerations users may wish to factor in when selecting**:
+**Otros aspectos que los usuarios pueden tener en cuenta al elegirlo**:
 
-In closed loop mode, **SMB**:
+En modo de lazo cerrado, **SMB**:
 
-- will remain activated; and/or
-- basal may be also activated depending on the user's **Profile's** settings.
+- seguirá activado; y/o
+- la basal también puede activarse según los ajustes del **perfil** del usuario.
 
-Depending on **BG** level, **AAPS** will "increase" insulin usage within the user's **AAPS** setting parameters in order to achieve the desired **BG** target.
+Según el nivel de **glucosa**, **AAPS** «aumentará» el uso de insulina, dentro de los parámetros de los ajustes de **AAPS** del usuario, para alcanzar el objetivo de **glucosa** deseado.
 
-### TT - Hypo
+### OT - Hipo
 
-![TT Activity](../images/TempTarget3.png)
+![Objetivo temporal "Hipo"](../images/TempTarget3.png)
 
-**BG Target (depending on users' settings)**
+**Objetivo de glucosa (preajuste predeterminado, ajustable)**
 
-AAPS will aim to reach 7mmol/l or 126mg/dl for 30 minutes
+AAPS intentará llegar a 160 mg/dl o 8,9 mmol/l durante 1 hora
 
-**Other considerations users may wish to factor in when selecting**:
+**Otros aspectos que los usuarios pueden tener en cuenta al elegirlo**:
 
-In closed loop mode, **SMB**:
+En modo de lazo cerrado, **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *puede* desactivarse (se explica más abajo); y/o
+- la basal puede activarse si **AAPS** tiene **IOB** negativa, o <0.
+
+(TempTargets-manage-v4)=
+
+## Poner y administrar objetivos temporales (Administrar → Objetivo temporal)
+
+En **AAPS** v4 administras tus **preajustes** de OT e inicias un objetivo temporal desde la pantalla **Administrar** (navegación inferior) → **Objetivo temporal** (*«Gestionar y establecer objetivos temporales»*).
+
+![La pantalla Objetivo temporal — carrusel de preajustes, editor y barra de acciones](../images/v4/TempTarget/tt_management.png)
+
+La pantalla tiene tres partes:
+
+1. **Carrusel de preajustes** (arriba) — desliza para pasar por tus preajustes de OT. Cada tarjeta muestra el **nombre**, el **objetivo** y la **duración** del preajuste; el OT que está en marcha se resalta.
+2. **Editor** (en el centro) — el **Objetivo temporal** y la **Duración** que se aplicarán de verdad, además de una fecha/hora de **Activación**.
+3. **Barra de acciones** (abajo) — **➕ añadir**, **‘️ borrar** y el botón **▶ activar**.
+
+Al elegir una tarjeta de preajuste, su **objetivo** y su **duración** se cargan en el editor.
+
+```{admonition} Preajustes incluidos y preajustes propios :class: note Los preajustes incluidos — **Comiendo Pronto**, **Actividad** e **Hipo** — siempre existen y **no se pueden borrar** (aunque sí puedes cambiar sus valores y guardarlos). Los preajustes que creas tú son **propios** y puedes editarlos o borrarlos libremente.
+
+    <br />### Activar un objetivo temporal
+    
+    Desliza hasta el preajuste que quieres (sus valores se cargan en el editor), si quieres ajusta el **objetivo**/la **duración** en el editor y luego toca **▶ Activar**. Una confirmación muestra el objetivo, la duración y el motivo exactos antes de que empiece nada:
+    
+    ![Confirmación de la activación](../images/TempTarget8.png)
+    
+    Después de confirmar, el objetivo temporal empieza de inmediato (o a la hora de **Activación** elegida) y dura la **duración** indicada.
+    
+    ```{admonition} Editar los números es solo para una vez — no cambia el preajuste
+    :class: important
+    El **objetivo** y la **duración** del editor son los valores que **Activar** usará *ahora mismo*. Si los cambias, ese cambio es **temporal**: solo se aplica a esta activación y **no modifica el preajuste guardado**. Así puedes «ajustar y activar» un OT de una sola vez (por ejemplo, activar *Actividad* hoy con un objetivo un poco distinto) sin cambiar el preajuste para siempre.
+    
+
+### Guardar cambios en un preajuste
+
+Si *sí* quieres conservar un valor editado, **Guárdalo**: cuando el editor es distinto del preajuste elegido, aparece un icono **Guardar** en la barra superior. Al tocarlo se guardan el **objetivo** y la **duración** actuales (y el nombre, en los preajustes propios) en el preajuste elegido. En los preajustes incluidos también aparece un botón **Restablecer valores predeterminados** (↺) en la barra de acciones: devuelve los valores predeterminados del preajuste.
+
+![Pantalla Objetivo temporal con el icono Guardar y el botón Restablecer valores predeterminados](../images/v4/TempTarget/tt_preset_save_revert.png)
+
+Así que la regla general es:
+
+- **Activar** → usa los números **una vez** (el preajuste no cambia).
+- **Guardar** → convierte los números en los **nuevos valores predeterminados** del preajuste.
+
+Para devolver un preajuste incluido a su estado de fábrica, elígelo y toca el botón **↺ Restablecer**. Solo aparece en la barra de acciones para un preajuste **incluido** cuyos valores son ahora distintos de los de fábrica, y restablece el **objetivo** y la **duración** originales de ese preajuste.
+
+### Añadir y eliminar preajustes
+
+- **➕ Añadir** — crea un **nuevo preajuste propio** con los valores actuales del editor. La nueva tarjeta aparece en el carrusel.
+- **‘️ Borrar** — elimina el preajuste **propio** elegido. Los preajustes incluidos (*Comiendo Pronto*, *Actividad*, *Hipo*) no se pueden borrar.
+
+Cuando tienes al menos dos preajustes **propios**, también puedes cambiar su orden en el carrusel: toca el icono **Reordenar** (⇅) en la barra superior, mueve la tarjeta central con los **botones de mover ◀ / ▶** y confirma con **✓**. Los preajustes incluidos mantienen su lugar — solo se pueden mover los preajustes propios. (Los controles son iguales que al [reordenar perfiles](ProfileSwitch-ProfilePercentage.md).)
+
+Tus preajustes forman parte de la configuración sincronizada, así que se comparten entre tu máster y los clientes emparejados.
+
+### Otras formas de poner un objetivo temporal
+
+También puedes poner un objetivo temporal sin abrir esta pantalla:
+
+- con los **interruptores de OT del diálogo Carbohidratos** — consulta [más abajo](#TempTargets-carbs-dialog),
+- con un **botón de preajuste en la [barra de Lanzamiento rápido](QuickLaunch.md)** — la categoría *Ajustes de objetivos temporales* en *Configurar Lanzamiento Rápido* ofrece un botón de un toque para cada uno de tus preajustes,
+- desde un **reloj Wear OS** (el elemento de menú / mosaico **Objetivo temporal**),
+- desde un **cliente** emparejado — consulta [Control máster ↔ cliente](../RemoteFeatures/ClientMasterControl.md),
+- como parte de una **[escena](Scenes.md)** (la acción *Objetivo temporal*), o
+- desde una regla de **Automatización** (*Iniciar objetivo temporal* / *Detener objetivo temporal*).
+
+* * *
 
 (TempTargets-where-can-i-select-a-temp-target)=
 
-## Where can I select a Temp-Target?
+## ¿Dónde puedo elegir un objetivo temporal?
 
-In the **Actions** tab in **AAPS**.
+La forma más rápida es tocar el **chip del objetivo** en la pantalla principal (muestra tu rango objetivo actual):
 
-1. select **Temporary Target** button; and then
-2. select desired **Temp-Target**
+![Chip del objetivo en la pantalla principal](../images/TempTarget6.png)
 
-![Carbs TT](../images/TempTarget4a.png)
+Así se abre la pantalla **Objetivo temporal** descrita arriba — desliza hasta un preajuste y toca **▶ Activar**. A la misma pantalla también se llega con **Administrar** → **Objetivo temporal**.
 
-Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
+(TempTargets-carbs-dialog)= Al introducir carbohidratos no hace falta abrir la pantalla **Objetivo temporal**: el **diálogo Carbohidratos** (**Tratamientos** → **Carbohidratos**) tiene arriba los interruptores **Iniciar OT Hipo**, **Iniciar OT Comiendo Pronto** e **Iniciar OT Actividad**. Activa uno y el preajuste correspondiente se activa junto con la entrada de carbohidratos:
 
-![Carbs TT](../images/TempTarget6.png)
+![Interruptores de OT en el diálogo Carbohidratos](../images/TempTarget5.png)
 
-- Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
+    {admonition} OT Hipo automático
+    :class: note
+    Si abres el **diálogo Carbohidratos** cuando tu glucosa está por debajo de 72 mg/dl (4 mmol/l), **AAPS** marca por ti el interruptor **Iniciar OT Hipo** (salvo que ya esté en marcha un objetivo temporal más alto con más tiempo restante).
 
-![Preferences > Use default temp targets](../images/Pref2020_OV_DefaultTT2.png)
+(TempTargets-change-preset-defaults)=
 
-## Where can I change the default Temp-Target and override with my own preferences?
+## ¿Dónde puedo cambiar el objetivo temporal predeterminado y sustituirlo por mis propias preferencias?
 
-To reconfigure the ‘BG target range’ and ‘duration’ allocated to the user’s default **Temp-Target** settings, go to the menu in **AAPS** on the top right hand corner and
+El **objetivo** y la **duración** de cada preajuste se editan directamente en la pantalla **Objetivo temporal** — ya no hay una entrada aparte en las preferencias para esto:
 
-1. select **Preferences** 
-2. scroll down to 'Overview’ 
-3. select ‘Default Temp-Targets’
-4. step 4 indicates (below) where to change **TT- Eating soon** time period
-5. step 5 indicates (below) where to change **TT - Eating soon** **BG** target range (and the same steps can be repeated for **TT -Activity** and **TT - Hypo**.
+1. Abre la pantalla **Objetivo temporal** (toca el chip del objetivo, o **Administrar** → **Objetivo temporal**).
+2. Desliza hasta el preajuste que quieres cambiar.
+3. Ajusta el **Objetivo temporal** y/o la **Duración** en el editor.
+4. Toca el icono **Guardar** que aparece en la barra superior.
 
-![Custom TT](../images/TempTarget7.png)
+![Editar un preajuste — icono Guardar en la barra superior, Restablecer en la barra de acciones](../images/TempTarget7.png)
 
-## How do I cancel a Temp-Target?
+Mientras el editor es distinto de los valores de fábrica de un preajuste incluido, también aparece un botón **↺ Restablecer** en la barra de acciones — tócalo para devolver el objetivo y la duración originales del preajuste.
 
-To cancel a **Temp-Target** running:
+## ¿Cómo cancelo un objetivo temporal?
 
-Select the “Cancel” button in **Temporary Target** under the **Actions** tab as shown below.
+Mientras un objetivo temporal está en marcha, el chip del objetivo en la pantalla principal muestra el objetivo y el tiempo que le queda. Tócalo — en la pantalla **Objetivo temporal** el preajuste en marcha se resalta como **ACTIVO**, y aparece un botón rojo **✗ Cancelar** al final de la barra inferior, justo a la izquierda del botón **▶ Activar**. Tócalo y confirma:
 
-![Custom TT](../images/TempTarget8.png)
+![Cancelar un objetivo temporal en marcha](../images/TempTarget9.png)
 
-Or short-click on the ‘BG Target’ in the yellow/green box located in the top right corner of **AAPS**, and select ‘cancel’ as shown below:
-
-![Actions TT](../images/TempTarget9.png)
-
-## How do I select a “Default-Temp-Targets”
-
-In the **Actions** tab in **AAPS**.
-
-1. select **Temporary Target** button; and then
-2. select desired **Temp-Target**
-
-![Actions TT](../images/TempTarget4.png)
-
-Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
-
-![BG TT](../images/TempTarget6.png)
-
-Or in the **Carbs** button
-
-1. selecting the desired **Temp-Target** in the shortcuts
-
-![Carbs TT](../images/TempTarget5.png)
+Un objetivo temporal en marcha también se puede detener desde un **reloj Wear OS**, desde un **cliente** emparejado o con una regla de **Automatización** (*Detener objetivo temporal*).
 
 (TempTargets-hypo-temp-target)=
 
 ## Objetivo temporal ante Hipoglucemia
 
-**Temp-Target Hypo** enables **AAPS** to prevent the user from experiencing low blood sugar by reducing insulin intake. If the user predicts their **BG** will go low: usually, **AAPS** should handle it, but much will depend on the stability of the user’s **AAPS'** settings. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
+El **objetivo temporal Hipo** permite a **AAPS** evitar que el usuario tenga una glucosa baja, reduciendo la insulina. Si el usuario prevé que su **glucosa** va a bajar: normalmente **AAPS** debería manejarlo, pero mucho depende de lo estables que sean los ajustes de **AAPS** del usuario. Un **objetivo temporal Hipo** permite al usuario adelantarse a la bajada prevista e indicar a **AAPS** que reduzca la insulina.
 
-Sometimes when hypo-treated carbs are eaten, the user's **BG** can rapidly rise, and **AAPS** will correct against the fast rising **BG** by enabling **SMBs**.
+A veces, al comer carbohidratos para tratar una hipoglucemia, la **glucosa** del usuario puede subir rápido, y **AAPS** corregirá esa subida rápida de la **glucosa** activando **SMB**.
 
-Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. This is achieved by deactivating *'Enable SMB with high Temp-Target'* in **Preferences** (see further below):
+Algunos usuarios quieren evitar que se den **SMB** durante el **objetivo temporal Hipo**. Para ello, desactiva *'Habilitar SMB con objetivo temporal elevado'* en **Ajustes** → **OpenAPS SMB** (ver más abajo):
 
-- In (Advanced, objective 9): the user can enable *“High Temp-Targets raises sensitivity”* for **Temp-Targets** of 100mg/dl or 5.5mmol/l or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- En (Avanzado, objetivo 9): el usuario puede activar *«Objetivo temporal alto aumenta la sensibilidad»* para **objetivos temporales** de 100 mg/dl (5,6 mmol/l) o más en OpenAPS SMB; así **AAPS** será más sensible.
 
-- In (Advanced, objective 9): the user can deactivate *“SMB with high temp target”*, so that even if **AAPS** has COB > 0, “SMB with Temp-Target” or “SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- En (Avanzado, objetivo 9): el usuario puede desactivar *«Habilitar SMB con objetivo temporal elevado»*, para que **AAPS** no dé SMB mientras haya objetivos temporales altos activos, aunque **AAPS** tenga COB > 0, «Habilitar SMB con objetivo temporal bajo» o «Habilitar SMB siempre» activados y OpenAPS SMB activo.
 
-Note: if the user enters carbs with the carb button and your blood glucose is less than 72mg/dl or 4mmol/l, **Temp-Target Hypo** is automatically enabled by **AAPS**.
+Nota: si abres el **diálogo Carbohidratos** cuando tu glucosa está por debajo de 72 mg/dl o 4 mmol/l, **AAPS** marca automáticamente el interruptor **Iniciar OT Hipo**.
 
 (TempTargets-activity-temp-target)=
 
-## Actividad con Objetivo-Temporal
+## Objetivo temporal Actividad
 
-Before and during exercise, the user may require a higher target to prevent hypoglycemia during the activity.
+Antes y durante el ejercicio, el usuario puede necesitar un objetivo más alto para evitar una hipoglucemia durante la actividad.
 
-To simplify **Temp-Target Activity**, the user can configure a default **Temp-Target - Activity** to raise **BG** levels by reducing insulin usage in order to slow down **BG** fall and avoid hypoglycemia.
+Para simplificar el **objetivo temporal Actividad**, el usuario puede configurar un **objetivo temporal - Actividad** predeterminado que sube la **glucosa** reduciendo el uso de insulina, para frenar la bajada de la **glucosa** y evitar una hipoglucemia.
 
-New users to **AAPS** may need to experiment and personalise their **Temp-Target Activity** default settings in order to optimise this feature to work best for them. Everyone is different when it comes to attaining stable BG control during exercise. See also the [sports section in FAQ](#FAQ-sports). in FAQ.
+Los usuarios nuevos de **AAPS** pueden necesitar probar y personalizar los ajustes predeterminados de su **objetivo temporal Actividad** para que esta función les funcione lo mejor posible. Cada persona es diferente a la hora de conseguir un control estable de la glucosa durante el ejercicio. Consulta también la [sección de deportes en las preguntas frecuentes](#FAQ-sports).
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduced insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on.
+Algunos usuarios también prefieren activar un **Cambio de perfil** (una reducción del perfil < 100 % para que **AAPS** administre menos insulina) antes y mientras el **objetivo temporal Actividad** está activo. Puedes iniciar los dos en un solo paso: toca el nombre del perfil en la pantalla principal, toca el botón redondo **▶**, pon un **Porcentaje** por debajo del 100 % y una **Duración**, y luego activa **Objetivo temporal / Actividad**. Consulta [Cambiar el porcentaje del perfil](#ProfileSwitch-change-percentage).
 
-Advanced, objective 9: users can enable *'High Temp-Targets raises sensitivity'* for **Temp-Targets** higher or equal 100mg/dl or 5.5mmol/L in OpenAPS **SMB**. Then **AAPS** is more sensitive.
+Avanzado, objetivo 9: los usuarios pueden activar *'Objetivo temporal alto aumenta la sensibilidad'* para **objetivos temporales** de 100 mg/dl (5,6 mmol/l) o más en OpenAPS **SMB**. Un objetivo de 99 mg/dl (5,5 mmol/l) es un objetivo normal, ni alto ni bajo. Así **AAPS** es más sensible.
 
-Additionally, if *'SMB with high Temp-Target'* is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, *'SMB with Temp-Target-* or *'SMB always'* enabled and OpenAPS **SMB** active.
+Además, si *'Habilitar SMB con objetivo temporal elevado'* está desactivado, **AAPS** no administrará **SMB**, aunque haya COB > 0, *'Habilitar SMB con objetivo temporal bajo'* o *'Habilitar SMB siempre'* activados y OpenAPS **SMB** activo.
 
 (TempTargets-eating-soon-temp-target)=
 
-## Comer pronto objetivo-temporal
+## Objetivo temporal Comiendo Pronto
 
-**Temp-Target -Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
+El **objetivo temporal - Comiendo Pronto** puede ayudar a bajar la **glucosa** de forma suave y asegurar que haya suficiente **IOB** antes de comer.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target -Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyjumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target -Eating soon** and this is particularly so, if eating a high carb diet.
+Puede ser una herramienta importante para los usuarios que no hacen prebolo. Sin embargo, la eficacia del **objetivo temporal - Comiendo Pronto** depende de varios factores, entre ellos: los ajustes del usuario, si sigue una dieta baja en carbohidratos y si usa una insulina de acción rápida (como Fiasp o Lyumjev) para no necesitar el prebolo. Normalmente, hasta que tengan experiencia con **AAPS**, los usuarios deben contar con hacer un prebolo al usar el **objetivo temporal - Comiendo Pronto**, sobre todo si siguen una dieta alta en carbohidratos.
 
-You can read more about the “Eating soon mode” in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
+Puedes leer más sobre el «modo Eating soon» (comiendo pronto) en el artículo ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) (en inglés) o [aquí](https://diyps.org/tag/eating-soon-mode/).
 
-Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have *'Low temp target lowers sensitivity'*, **AAPS** works a little bit more aggressively. For this option there is a requirement for **Temp-Target** to be less than 100mg/dl or 5.5mmol/l.
+Avanzado, [objetivo 9](#objectives-objective9): si usas OpenAPS SMB y tienes activado *'Objetivo temporal bajo reduce la sensibilidad'*, **AAPS** actúa de forma un poco más agresiva. Para esta opción, el **objetivo temporal** debe ser de 98 mg/dl (5,4 mmol/l) o menos.
 
-## How do I turn off SMB during Temp-Targets?
+## ¿Cómo desactivo SMB durante los objetivos temporales?
 
-To action this select in **Preferences** > and deactivate *'Enable SMB with high Temp-Target'*.
+Para hacerlo, abre **Ajustes** → **OpenAPS SMB** y desactiva *'Habilitar SMB con objetivo temporal elevado'*.
 
-![Carbs TT](../images/TempTargetSMB.png)
+![Preferencia Habilitar SMB con objetivo temporal elevado](../images/TempTargetSMB.png)
 
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'SMB with Temp-Target'* or *'SMB always'* enabled and OpenAPS SMB active.
+Así **AAPS** no dará **SMB**, aunque haya COB > 0, *'Habilitar SMB con objetivo temporal bajo'* o *'Habilitar SMB siempre'* activados y OpenAPS SMB activo.

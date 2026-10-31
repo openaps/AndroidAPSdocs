@@ -1,91 +1,141 @@
-# Diaconn G8 Insulin Pump
+# Diaconn G8
 
-## Insulin Pump Bluetooth Pairing
+```{contents} Table of contents
+:depth: 1
+:local: true
+```
 
-- Click on the hamburger menu in the top left corner.
+## Възможности на помпата при употреба с AAPS
 
-![image](../images/DiaconnG8/DiaconnG8_01.jpg)
+* Комуникира с **AAPS** чрез вградения Bluetooth на телефона, без допълнително комуникационно устройство.
+* Преминаването към лятно часово време (DST) и смяната на часовата зона трябва да се правят ръчно.
 
-- Click on Config Builder.
+## Свързване на инсулиновата помпа чрез Bluetooth
 
-![image](../images/DiaconnG8/DiaconnG8_02.jpg)
+- Докоснете **менюто** (☰) в горния ляв ъгъл.
 
-- After selecting the Diaconn G8 Pump click on the Settings icon (cog wheel).
+![Менюто с елемента „Конфигурация“](../images/v4/Configuration/configuration_menu.png)
 
-![image](../images/DiaconnG8/DiaconnG8_03.jpg)
+- Докоснете **Конфигурация** > **Помпа** и изберете **Diaconn G8**.
 
-- Choose Selected pump.
+![Конфигурация > Помпа с плъгина Diaconn G8](../images/v4/Configuration/configuration_pump_list_3.png)
 
-![image](../images/DiaconnG8/DiaconnG8_04.jpg)
+След като го изберете, картата **Diaconn G8** показва два бутона – **Настройки** и **Отвори плъгин**:
 
-- Select your insulin pump’s model number once it appears in the list.
+![Плъгинът Diaconn G8, избран в Конфигурация > Помпа](../images/v4/Pumps/diaconn_g8_enabled.png)
 
-![image](../images/DiaconnG8/DiaconnG8_05.jpg)
+**Настройки** отваря настройките на драйвера за Diaconn G8 (вижте [Настройки на инсулиновата помпа Diaconn G8](#diaconn-g8-insulin-pump-option-setting) по-долу).
 
-- There are two options to check your model number:
+**Отвори плъгин** (или **Управление** > **Помпа**) отваря екрана на помпата Diaconn G8. Преди сдвояване на помпа екранът изглежда така:
 
-1. The last 5 digits of the SN number on the back of the pump.
-2. Click on O button > Information > BLE > Last 5 digits.
+![Екранът на помпата Diaconn G8 преди свързване](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
-![image](../images/DiaconnG8/DiaconnG8_06.jpg)
+![изображение](../images/DiaconnG8/DiaconnG8_04.jpg)
 
-- Once you select your pump, a window appears asking for a pin code. Enter the pin number displayed on your pump to complete the connection.
+```{admonition} Older screenshot
+:class: note
+Екранната снимка по-горе е от по-стара версия на **AAPS**. В **AAPS** 4 свързването започва от бутона **Свържи** на екрана на помпата; настройката **Избрана помпа** вече не съществува.
+```
 
- ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
+- На екрана на помпата докоснете **Свържи**. Отваря се екранът **Сдвояване на помпа Diaconn** и **AAPS** търси помпи наблизо.
+- Докоснете номера на модела на вашата инсулинова помпа, когато се появи в списъка (например **DIACONN-65010**).
 
-## Pump status check and log synchronization
+![Екранът „Сдвояване на помпа Diaconn“ търси помпи](../images/DiaconnG8/DiaconnG8_05.png)
 
-- Once your pump is connected, click on the Bluetooth symbol to check the status and to synchronize logs.
+- Има два начина да проверите номера на модела:
 
-![image](../images/DiaconnG8/DiaconnG8_08.jpg)
+1. Последните 5 цифри от серийния номер (SN) на гърба на помпата.
+2. Натиснете бутона O > Information > BLE > последните 5 цифри.
 
-## Bluetooth Troubleshooting
+![изображение](../images/DiaconnG8/DiaconnG8_06.jpg)
 
-**What to do in the case of an unstable Bluetooth connection with the pump.**
+- След като изберете помпата си, се появява прозорец, който иска ПИН код. Въведете ПИН кода, показан на помпата, за да завършите свързването.
 
-### Method 1 ) Check the pump again after AAPS application is completed.
+ ![изображение](../images/DiaconnG8/DiaconnG8_07.jpg)
 
-- Click on the 3 dots button on the top right.
+- Когато се покаже **Успешно свързване!**, докоснете **ОК**, за да се върнете на екрана на помпата.
 
-![image](../images/DiaconnG8/DiaconnG8_09.jpg)
+## Проверка на състоянието на помпата и синхронизация на логовете
 
-- Click on Exit.
+- След като помпата е свързана, отворете екрана на помпата (**Управление** > **Помпа**). Той показва състоянието на помпата (батерия, резервоар, последно свързване, последен болус, базална доза и др.).
+- Докоснете **Обнови**, за да се свържете с помпата, да обновите състоянието и да синхронизирате логовете.
+- Докоснете **История**, за да видите историята, прочетена от помпата.
 
-![image](../images/DiaconnG8/DiaconnG8_10.jpg)
+![изображение](../images/DiaconnG8/DiaconnG8_08.jpg)
 
-### Method 2) If the first method doesn’t work, disconnect Bluetooth and then reconnect.
+```{admonition} Older screenshot
+:class: note
+Екранната снимка по-горе е от по-стара версия на **AAPS**. В **AAPS** 4 състоянието на помпата се показва на екрана на помпата (**Управление** > **Помпа**) и се синхронизира с бутона **Обнови**.
+```
 
-- Press and hold the Bluetooth button at the top for about 3 seconds.
+(diaconn-g8-bluetooth-troubleshooting)=
 
-![image](../images/DiaconnG8/DiaconnG8_11.jpg)
+## Отстраняване на проблеми с Bluetooth
 
-- Click on the Setting button on the paired Diaconn G8 Insulin pump.
+**Какво да направите, ако Bluetooth връзката с помпата е нестабилна.**
 
-![image](../images/DiaconnG8/DiaconnG8_12.jpg)
+### Начин 1) Рестартирайте AAPS и след това проверете помпата отново
 
-- Unpair.
+- Докоснете **менюто** (☰) в горния ляв ъгъл.
+- Докоснете **Изход** в долната част на менюто.
 
-![image](../images/DiaconnG8/DiaconnG8_13.jpg)
+![Менюто с елемента „Изход“ най-долу](../images/v4/Configuration/configuration_menu.png)
 
-- Repeat the Bluetooth pairing process for the pump (see above).
+- Стартирайте **AAPS** отново и проверете връзката с помпата.
 
-## Further Information
+### Начин 2) Ако първият начин не помогне, прекъснете Bluetooth връзката и я свържете отново.
 
-### Diaconn G8 Insulin pump option setting
+- Натиснете и задръжте бутона за Bluetooth горе за около 3 секунди.
 
-- Config manager > pump > Diaconn G8 > Settings
-- DIACONN G8 at the top> 3 dots button on the top right > Diaconn G8 Preferences
+![изображение](../images/DiaconnG8/DiaconnG8_11.jpg)
 
-![Diaconn G8 pump options](../images/DiaconnG8/DiaconnG8_14.jpg)
+- Натиснете бутона за настройки на свързаната инсулинова помпа Diaconn G8.
 
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an “Insulin Change” event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a “Site Change” event occurs.
-- If the **Log tube change** option is activated, the relevant details are automatically uploaded to the careportal when a “Tube Change” event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a “Battery Change” event occurs, and the PUMP BATTERY CHANGE button in the ACTION tab is deactivated. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
+![изображение](../images/DiaconnG8/DiaconnG8_12.jpg)
 
-![Diaconn G8 actions menu](../images/DiaconnG8/DiaconnG8_15.jpg)
+- Изберете Unpair (раздвояване).
 
-### Extended Bolus function
+![изображение](../images/DiaconnG8/DiaconnG8_13.jpg)
 
-- If you use extended bolus it will disable closed loop.
-- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- В **AAPS** отворете екрана на помпата (**Управление** > **Помпа**), докоснете **Раздвояване** и потвърдете **Да нулирам ли информацията за сдвояване?**.
+- Повторете процеса на свързване на помпата чрез Bluetooth (вижте по-горе).
+
+## Допълнителна информация
+
+(diaconn-g8-insulin-pump-option-setting)=
+
+### Настройки на инсулиновата помпа Diaconn G8
+
+- **Конфигурация** > **Помпа** > **Diaconn G8** > **Настройки**
+- Или на екрана на помпата (**Управление** > **Помпа**) докоснете иконата за настройки (зъбно колело) в горния десен ъгъл.
+
+![Настройки на драйвера за Diaconn G8](../images/v4/Pumps/diaconn_g8_settings.png)
+
+- **Скорост на болус** определя колко бързо помпата подава болуса.
+- Ако опцията **Записвай смените на резервоар** е включена, при събитие „Смяна на резервоар“ (Insulin Change) данните автоматично се качват в портала за лечения.
+- Ако опцията **Записвай смяна на иглата** е включена, при събитие „Смяна на канюла“ (Site Change) данните автоматично се качват в портала за лечения.
+- Ако опцията **Запиши смяната на тръба за инфузионен сет** е включена, при събитие „Смяна на тръба за инфузионен сет“ (Tube Change) данните автоматично се добавят като бележка.
+- Ако опцията **Записвай смяната на батерия** е включена, при събитие „Смяна на батерията“ (Battery Change) данните автоматично се качват в портала за лечения. Можете и сами да запишете смяна на батерията чрез **Управление** > **Смяна на батерия на помпата**. (Забележка: Преди да смените батерията, спрете всички функции за подаване на инсулин, които са в ход.)
+- **Diaconn Cloud Синхронизиране** изпраща логовете на помпата в Diaconn Cloud.
+
+![Меню с действия на Diaconn G8](../images/DiaconnG8/DiaconnG8_15.jpg)
+
+```{admonition} Older screenshot
+:class: note
+Екранната снимка по-горе е от по-стара версия на **AAPS**. В **AAPS** 4 смяната на батерията се записва чрез **Управление** > **Смяна на батерия на помпата**; раздел **Действия** вече няма.
+```
+
+### Функция „Удължен болус“
+
+- Ако използвате удължен болус, затвореният кръг ще бъде изключен.
+- Вижте [тази страница](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment), за да разберете защо удълженият болус не работи в затворен кръг.
+
+## Къде да получите помощ
+
+Драйверът за Diaconn G8 се разработва от общността на **доброволчески** начала. Преди да поискате помощ, моля:
+
+1. **Прочетете** съответния раздел от тази документация, за да проверите как трябва да работи функцията.
+2. **Попитайте** в канала *#AAPS* в [Discord](https://discord.gg/4fQUWHZ4Mw) или в някой от другите [канали на общността](../GettingHelp/WhereCanIGetHelp.md).
+3. **Докладвайте грешка**, като първо потърсите в [съществуващите проблеми (issues)](https://github.com/nightscout/AndroidAPS/issues); ако вашият го няма там, отворете [нов проблем (issue)](https://github.com/nightscout/AndroidAPS/issues) и приложете вашите [лог файлове](../GettingHelp/AccessingLogFiles.md).
+
+Когато искате помощ, посочете марката и модела на телефона си, версията на Android, версията на **AAPS** и описание на проблема на прост английски език (какво се е променило, кога е работило за последно).

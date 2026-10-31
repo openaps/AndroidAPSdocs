@@ -8,7 +8,7 @@
 :class: dropdown
 
 - 專用的Google雲端空間意味著你不會冒著填滿個人Google雲端限額的風險，與**匯出偏好設定**有關。
-- 每個版本的 **AAPS**（和支持的應用，如 xDrip+、BYODA 等）都將存儲在一個獨立於你計算機硬體的單一位置。如果你的PC或手機被盜/遺失/損壞，你仍然可以使用。
+- Each version of **AAPS** (and supporting apps like xDrip, BYODA, etc) will be stored in one single place which is independent of your computer hardware. 如果你的PC或手機被盜/遺失/損壞，你仍然可以使用。
 - 通過統一設置，將簡化具有相似資料夾結構的使用者之間的線上支援。
 - 根據設置（見下文），你將有一個獨立身份作為別名在社群中進行溝通，這可以保護你的隱私。 
 - 患有1型糖尿病的孩子在使用**AAPS**和其他需要成人帳號的相關功能時可以保留自己的“日常”電子郵件帳號。
@@ -23,7 +23,7 @@
 
 需求：
 
-* 你有一台Windows電腦（Windows 10或更新版）和一部Android手機（Android 9或更新版），將會主機**AAPS**應用程式。這些設備都已安裝最新的安全更新，具備網際網路連線和管理員權限，因為某些步驟需要下載和安裝程式。
+* You have a Windows’ PC (Windows 10 or newer) and an Android phone (Android 12 or newer) which will host the **AAPS** app. 這些設備都已安裝最新的安全更新，具備網際網路連線和管理員權限，因為某些步驟需要下載和安裝程式。
 * 安卓手機已設定為你的個人「日常」電子郵件地址，例如 Gmail 帳號。
 
 ```{admonition} Things to consider when setting up your new account
@@ -37,9 +37,9 @@
 ```
 
 
-```{admonition}  Video Walkthrough! 
-:class: Note
-點擊[這裡](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>)觀看如何設置專用Google帳戶的影片說明。
+```{admonition} Video Walkthrough!
+:class: note
+Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
 ```
 
  影片中列出的步驟如下：

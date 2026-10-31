@@ -1,40 +1,40 @@
-# End of life
+# Край на поддръжката
 
-Even if your current AAPS system works exactly the way you like, upgrading is still worth it because newer releases bring safety fixes and bug corrections you may never notice until they matter, keep compatibility with new phone OS versions, CGM apps, pump firmware and Nightscout changes, add algorithm improvements and features that have been tested by the wider community, and ensure you stay on a version that is still supported and that others can actually help you troubleshoot. Some previous AAPS versions deliberately have no expiration date so they can keep working on older Android versions, so the lack of an expiration warning is not a sign that your version is still up to date or supported.
+Дори ако сегашната ви система с AAPS работи точно както искате, актуализирането пак си струва, защото новите версии носят поправки за безопасност и на грешки, които може да не забележите, докато не станат важни; запазват съвместимостта с нови версии на операционната система на телефона, приложенията за CGM, фърмуера на помпите и промените в Nightscout; добавят подобрения в алгоритъма и функции, тествани от по-широката общност; и гарантират, че сте на версия, която все още се поддържа и при която другите наистина могат да ви помогнат да отстраните проблеми. Някои по-стари версии на AAPS нарочно нямат крайна дата, за да могат да продължат да работят на по-стари версии на Android, така че липсата на предупреждение за изтичане не означава, че вашата версия е актуална или че все още се поддържа.
 
-Each AAPS version can have an end date. After this date, AAPS may [limit the loop](#version-enforcement). AAPS warns you before a version expires. Plan to update before the end date, and follow the [update guide](UpdateToNewVersion.md).
+Всяка версия на AAPS може да има крайна дата. След тази дата AAPS може да [ограничи кръга](#version-enforcement). AAPS ви предупреждава, преди дадена версия да изтече. Планирайте да актуализирате преди крайната дата и следвайте [ръководството за актуализиране](UpdateToNewVersion.md).
 
-## How to use this page
+## Как да използвате тази страница
 
-1. In AAPS, tap the three dots at the top right and choose **About**. You will see your AAPS version there.
-2. Find the same version in the first table below. Read the end date next to it. Dates are written as **year-month-day**. For example, `2026-10-30` means 30 October 2026.
-3. Check the [Release Notes](ReleaseNotes.md) and the [update guide](UpdateToNewVersion.md) before you update. The version you can use also depends on your phone's Android version.
+1. В AAPS отворете **меню** (☰) горе вляво и изберете **За приложението**. Там ще видите вашата версия на AAPS.
+2. Намерете същата версия в първата таблица по-долу. Прочетете крайната дата до нея. Датите са записани като **година-месец-ден**. Например `2026-10-30` означава 30 октомври 2026 г.
+3. Прегледайте [бележките към версиите](ReleaseNotes.md) и [ръководството за актуализиране](UpdateToNewVersion.md), преди да актуализирате. Версията, която можете да използвате, зависи и от версията на Android на телефона ви.
 
-The table does not show an end date for every AAPS version. If your version is missing, its end date may not have been set yet. This does not mean it will be supported forever.
+Таблицата не показва крайна дата за всяка версия на AAPS. Ако вашата версия липсва, може крайната ѝ дата още да не е определена. Това не означава, че тя ще се поддържа завинаги.
 
-## AAPS version end dates
+## Крайни дати на версиите на AAPS
 
-<div id="aaps-eol-status" role="status" aria-live="polite">Loading AAPS version data…</div>
+<div id="aaps-eol-status" role="status" aria-live="polite">Зареждане на данните за версиите на AAPS…</div>
 <noscript>
-  Turn on JavaScript to see the tables.
+  Включете JavaScript, за да видите таблиците.
 </noscript>
 
 <div id="aaps-eol-versions" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">AAPS version</th><th scope="col">End date</th></tr></thead>
+    <thead><tr><th scope="col">Версия на AAPS</th><th scope="col">Крайна дата</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>
 
-## Android API levels
+## Нива на API на Android
 
-Android gives each system version an **API level**, which is a number used by apps. For example, API level 30 is Android 11. The table below uses API levels from AAPS version data. The AAPS version in each row is the value listed for the API level shown. This is not a full list of versions you can install.
+Android дава на всяка версия на системата **ниво на API** (API level) – число, което се използва от приложенията. Например ниво на API 30 е Android 11. Таблицата по-долу използва нивата на API от данните за версиите на AAPS. Версията на AAPS във всеки ред е стойността, посочена за показаното ниво на API. Това не е пълен списък на версиите, които можете да инсталирате.
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version). If no AAPS version is listed for an API level, the table says “None listed”.
+За да изберете версия на AAPS за телефона си, използвайте [указанията за версията на Android в бележките към версиите](#maintenance-android-version-aaps-version). Ако за някое ниво на API няма посочена версия на AAPS, в таблицата пише „None listed“ (няма посочена).
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">Android API level</th><th scope="col">AAPS version listed</th></tr></thead>
+    <thead><tr><th scope="col">Ниво на API на Android</th><th scope="col">Посочена версия на AAPS</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>

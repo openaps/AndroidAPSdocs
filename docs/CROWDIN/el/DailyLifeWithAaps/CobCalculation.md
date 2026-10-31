@@ -1,92 +1,98 @@
-# COB calculation
+# Υπολογισμός COB (ενεργοί υδατάνθρακες)
 
-## How does AAPS calculate the COB value?
+## Πώς υπολογίζει το AAPS την τιμή COB;
 
-When carbs are entered by the user as part of a meal entry or carb correction, **AAPS** will add this calculation to the current carbs on board (**COB**). **AAPS** then calculates the user’s carbs’ absorption based on observed deviations to the user’s **BG** values. The rate of absorption depends on the carb’s sensitivity factor (**’CSF**”). This is not a feature within the user’s **Profile**  but is calculated by **AAPS** according to **ISF/I:C** set up, and is determined by how many mg/dl 1g of carbs will raise the user’s **BG**.
+Όταν ο χρήστης καταχωρίζει υδατάνθρακες για ένα γεύμα ή για διόρθωση, το **AAPS** τους προσθέτει στους τρέχοντες υδατάνθρακες στον οργανισμό (**COB**). Στη συνέχεια το **AAPS** υπολογίζει την απορρόφηση των υδατανθράκων από τις αποκλίσεις που βλέπει στις τιμές **BG** του χρήστη. Ο ρυθμός απορρόφησης εξαρτάται από τον συντελεστή ευαισθησίας υδατανθράκων (**CSF**). Αυτό δεν είναι ρύθμιση στο **Προφίλ** του χρήστη. Το υπολογίζει το **AAPS** από τις ρυθμίσεις **ISF/I:C** και δείχνει πόσα mg/dl ανεβάζει 1 g υδατανθράκων τη **BG** του χρήστη.
 
-## Carb Sensitivity Factor
+## Συντελεστής ευαισθησίας υδατανθράκων
 
-The formula adopted by **AAPS** is:
+Ο τύπος που χρησιμοποιεί το **AAPS** είναι:
 
 - absorbed_carbs = deviation * ic / isf.
 
-The effect on the user’s **Profile** will:
+Η επίδραση στο **Προφίλ** του χρήστη είναι:
 
-- _increase_ **IC**- by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
+- _αύξηση_ του **IC** - αυξάνει τους υδατάνθρακες που απορροφώνται κάθε 5 λεπτά, άρα μικραίνει ο συνολικός χρόνος απορρόφησης·
 
-- _increase_ **ISF** - by decreasing the carbs absorbed every 5 minutes thus prolong total time of absorption; and
+- _αύξηση_ του **ISF** - μειώνει τους υδατάνθρακες που απορροφώνται κάθε 5 λεπτά, άρα μεγαλώνει ο συνολικός χρόνος απορρόφησης· και
 
-- _change_ **Profile Percentage** -  increase/decrease both values thus has no impact on carbs absorption time.
+- _αλλαγή_ του **Ποσοστού προφίλ** - αυξάνει/μειώνει και τις δύο τιμές, άρα δεν αλλάζει τον χρόνο απορρόφησης των υδατανθράκων.
 
-For example, if the user’s  **Profile**  **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. For every 20 mg/dl the user’ **BG** goes up and 1g of carbs will be calculated as absorbed by **AAPS**. Positive **IOB** also affects the **COB** calculation. So, if **AAPS**  predicts the user’s **BG** to go down by 20 mg/dl because of **IOB** and it instead stayed flat, **AAPS**  would also calculate 1g of carbs as absorbed.
+Για παράδειγμα, αν στο **Προφίλ** του χρήστη το **ISF** είναι 100 και το **I:C** είναι 5, ο συντελεστής ευαισθησίας υδατανθράκων του χρήστη είναι 20. Για κάθε 20 mg/dl που ανεβαίνει η **BG** του χρήστη, το **AAPS** υπολογίζει ότι απορροφήθηκε 1 g υδατανθράκων. Το θετικό **IOB** επηρεάζει επίσης τον υπολογισμό των **COB**. Έτσι, αν το **AAPS** προβλέπει ότι η **BG** του χρήστη θα πέσει κατά 20 mg/dl λόγω του **IOB**, αλλά αντί γι' αυτό έμεινε σταθερή, το **AAPS** θα υπολογίσει επίσης ότι απορροφήθηκε 1 g υδατανθράκων.
 
-Carbs will also be absorbed via the methods described below based on which sensitivity algorithm has been selected within the user's **AAPS**.
+Οι υδατάνθρακες απορροφώνται επίσης με τους τρόπους που περιγράφονται παρακάτω, ανάλογα με τον αλγόριθμο ευαισθησίας που έχει επιλέξει ο χρήστης στο **AAPS**.
 
-## Carbs Sensitivity - Oref1
+## Ευαισθησία υδατανθράκων - Oref1
 
-Unabsorbed carbs are cut off after specified time:
+Οι υδατάνθρακες που δεν απορροφήθηκαν μηδενίζονται μετά από ορισμένο χρόνο:
 
 ![Oref1](../images/cob_oref0_orange_II.png)
 
-![Screenshot 2024-10-05 161009](../images/cob_oref0_orange_I.png)
+![Γράφημα COB με μηδενισμό Oref1](../images/cob_oref0_orange_I.png)
+
+```{admonition} Older screenshot
+:class: note
+Η παραπάνω εικόνα είναι από παλαιότερη έκδοση του **AAPS** — στο **AAPS** 4 τα γραφήματα φαίνονται λίγο διαφορετικά, αλλά το γράφημα **COB** δείχνει τις ίδιες πληροφορίες.
+```
 
 
-## Carbs Sensitivity - WeightedAverage
+## Ευαισθησία υδατανθράκων - WeightedAverage
 
-Absorption is calculated to have COB = 0 after specified time:
+Η απορρόφηση υπολογίζεται έτσι ώστε COB = 0 μετά από ορισμένο χρόνο:
 
-![AAPS, WheitedAverage](../images/cob_aaps2_orange_II.png)
+![AAPS, WeightedAverage](../images/cob_aaps2_orange_II.png)
 
-If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from **BG** deviations, an orange dot appears on the **COB** graph.
+Αν χρησιμοποιείται η ελάχιστη απορρόφηση υδατανθράκων (min_5m_carbimpact) αντί για την τιμή που υπολογίζεται από τις αποκλίσεις της **BG**, εμφανίζεται μια πορτοκαλί κουκκίδα στο γράφημα **COB**.
 
 (CobCalculation-detection-of-wrong-cob-values)=
-## Detection of wrong COB values
+## Ανίχνευση λάθος τιμών COB
 
-**AAPS**  will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
+Το **AAPS** θα προειδοποιήσει τον χρήστη αν πρόκειται να κάνει bolus με **COB** από προηγούμενο γεύμα και ο αλγόριθμος κρίνει ότι ο τρέχων υπολογισμός των **COB** είναι λάθος. Σε αυτή την περίπτωση θα δώσει στον χρήστη μια επιπλέον υπόδειξη στην οθόνη επιβεβαίωσης, μετά τη χρήση του οδηγού bolus.
 
-### How does AAPS detect wrong COB values?
+### Πώς ανιχνεύει το AAPS λάθος τιμές COB;
 
-Ordinarily __AAPS__ detects carb absorption through **BG** deviations. In case the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
+Κανονικά το __AAPS__ ανιχνεύει την απορρόφηση υδατανθράκων από τις αποκλίσεις της **BG**. Αν ο χρήστης έχει καταχωρίσει υδατάνθρακες αλλά το **AAPS** δεν μπορεί να ανιχνεύσει την απορρόφησή τους από τις αποκλίσεις της **BG**, θα χρησιμοποιήσει αντί γι' αυτό τη μέθοδο [min_5m_carbimpact](#Preferences-min_5m_carbimpact) για να υπολογίσει την απορρόφηση (η λεγόμενη «εφεδρική» μέθοδος, fallback). Επειδή αυτή η μέθοδος υπολογίζει μόνο την ελάχιστη απορρόφηση υδατανθράκων, χωρίς να λαμβάνει υπόψη τις αποκλίσεις της **BG**, μπορεί να οδηγήσει σε λάθος τιμές COB.
 
-![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
+![Υπόδειξη για λάθος τιμή COB](../images/Calculator_SlowCarbAbsorption.png)
 
-In the screenshot above, 58% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. This indicates that the user may have had less **COB** than calculated by the algorithm.
+Στην παραπάνω εικόνα, στο 66% του χρόνου η απορρόφηση υδατανθράκων υπολογίστηκε με το min_5m_carbimpact αντί για την τιμή που ανιχνεύθηκε από τις αποκλίσεις. Αυτό δείχνει ότι ο χρήστης μπορεί να είχε λιγότερους **COB** από όσους υπολόγισε ο αλγόριθμος.
 
-### How to deal with this warning?
+### Τι κάνετε με αυτή την προειδοποίηση;
 
-- Consider cancelling the treatment - press ‘Cancel’ instead of OK.
-- Calculate your upcoming meal again with bolus wizard leaving **COB** unticked.
-- If you need a correction bolus, enter it manually.
-- Be careful not to overdose or insulin stacking!
-
-
-### Why does the algorithm not detect COB correctly?
-
-This could be because:
-- Potentially the user overestimated carbs when entering them.
-- Activity / exercise after your previous meal.
-- I:C needs adjustment.
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA).
+- Σκεφτείτε να ακυρώσετε τη θεραπεία - πατήστε «Ακύρωση» αντί για OK.
+- Υπολογίστε ξανά το επόμενο γεύμα σας με τον οδηγό bolus, χωρίς να επιλέξετε τους **COB**.
+- Αν χρειάζεστε bolus διόρθωσης, καταχωρίστε το χειροκίνητα.
+- Προσέξτε να μην κάνετε υπερδοσολογία ή συσσώρευση ινσουλίνης!
 
 
-## Manual correction of carbs entered
+### Γιατί ο αλγόριθμος δεν ανιχνεύει σωστά τους COB;
 
-If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](#screens-bolus-carbs).
+Αυτό μπορεί να συμβαίνει επειδή:
+- Ίσως ο χρήστης υπολόγισε περισσότερους υδατάνθρακες από όσους έφαγε, όταν τους καταχώρισε.
+- Δραστηριότητα / άσκηση μετά το προηγούμενο γεύμα σας.
+- Ο λόγος I:C χρειάζεται διόρθωση.
+- Η τιμή του min_5m_carbimpact είναι λάθος (προτείνεται 8 με SMB, 3 με AMA).
 
 
-## Carb correction - how to delete a Carb entry from Treatments
+## Χειροκίνητη διόρθωση των υδατανθράκων που καταχωρίσατε
+
+Αν οι υδατάνθρακες υπολογίστηκαν περισσότεροι ή λιγότεροι, αυτό διορθώνεται από την οθόνη **Ιστορικό θεραπειών**, όπως περιγράφεται [εδώ](#screens-bolus-carbs).
 
 
-The ‘Treatments’ tab can be used to correct a faulty carb entry by deleting the entry in Treatments. This may be because the user over or underestimated the carb entry:
+## Διόρθωση υδατανθράκων - πώς διαγράφετε μια καταχώριση υδατανθράκων από τις Θεραπείες
 
-![COB_Screenshot 2024-10-05 170124](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
-1. Check and remember actual **COB** and **IOB** on the **AAPS'** homescreen.
-2. Depending on the pump, the carbs in the Treatments tab might show together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry by firstly 'ticking' the waste bin on the top right corner (see above photo, step 1). Then 'tick' the faulty carb amount (see above photo, step 2). Then 'tick' the ‘waste bin’ on the top right corner (step 1 again).
-4. Make sure carbs are removed successfully by checking **COB** on **AAPS’** homescreen again.
-5. Do the same for **IOB** if there is just one line in the Treatment tab including carbs and insulin.
-6. If carbs are not removed as intended and additional carbs are added as explained in this section, the **COB** entry will be too high and this could lead to **AAPS** delivering too much insulin.
-7. Enter correct carbs amount through carbs button on **AAPS’** homescreen and set the correct event time.
-8. If there is just one line in Treatment tab including carbs and insulin the user should add also the amount of insulin. Make sure to set the correct event time and check **IOB** on homescreen after confirming the new entry.
+Η οθόνη **Ιστορικό θεραπειών** μπορεί να χρησιμοποιηθεί για να διορθώσετε μια λάθος καταχώριση υδατανθράκων, διαγράφοντάς την. Αυτό μπορεί να συμβαίνει επειδή ο χρήστης υπολόγισε περισσότερους ή λιγότερους υδατάνθρακες στην καταχώριση:
+
+![Διαγραφή καταχώρισης υδατανθράκων από το Ιστορικό θεραπειών](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+
+1. Ελέγξτε και θυμηθείτε τους τρέχοντες **COB** και το **IOB** στην κύρια οθόνη του **AAPS**.
+2. Ανοίξτε το **Ιστορικό θεραπειών** (πλευρικό μενού → *Ιστορικό θεραπειών*), καρτέλα **Υδατάνθρακες και bolus**. Ανάλογα με την αντλία, οι υδατάνθρακες μπορεί να εμφανίζονται μαζί με την ινσουλίνη σε μία γραμμή ή ως ξεχωριστή καταχώριση (π.χ. με το Dana RS).
+3. **Πατήστε παρατεταμένα** τη λάθος καταχώριση υδατανθράκων — η λίστα περνά σε **λειτουργία επιλογής** με ένα πλαίσιο επιλογής σε κάθε γραμμή, και η καταχώριση είναι επιλεγμένη (σημείο **1** παραπάνω). Επιλέξτε και όσες άλλες καταχωρίσεις θέλετε να διαγράψετε.
+4. Πατήστε το εικονίδιο **🗑 Διαγραφή** στην επάνω γραμμή (σημείο **2**) και επιβεβαιώστε — το παράθυρο επιβεβαίωσης δείχνει ακριβώς τι θα διαγραφεί.
+5. Βεβαιωθείτε ότι οι υδατάνθρακες διαγράφηκαν σωστά, ελέγχοντας ξανά τους **COB** στην κύρια οθόνη του **AAPS**.
+6. Κάντε το ίδιο για το **IOB**, αν υπάρχει μόνο μία γραμμή με υδατάνθρακες και ινσουλίνη μαζί.
+7. Αν οι υδατάνθρακες δεν διαγραφούν όπως πρέπει και προστεθούν επιπλέον υδατάνθρακες όπως εξηγεί αυτή η ενότητα, η τιμή **COB** θα είναι πολύ υψηλή και αυτό μπορεί να κάνει το **AAPS** να χορηγήσει πολύ ινσουλίνη.
+8. Καταχωρίστε τη σωστή ποσότητα υδατανθράκων από το παράθυρο **Υδατάνθρακες** (**Θεραπείες** → **Υδατάνθρακες**) και ορίστε τη σωστή ώρα του συμβάντος.
+9. Αν υπήρχε μόνο μία γραμμή με υδατάνθρακες και ινσουλίνη μαζί, ο χρήστης πρέπει να προσθέσει ξανά και την ποσότητα ινσουλίνης. Προσέξτε να ορίσετε τη σωστή ώρα του συμβάντος και ελέγξτε το **IOB** στην κύρια οθόνη μετά την επιβεβαίωση της νέας καταχώρισης.
 

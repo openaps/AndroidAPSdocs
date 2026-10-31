@@ -1,40 +1,62 @@
-# Future (possible) Pump Drivers
+# Бъдещи (възможни) драйвери за помпи
 
-This is list of some Pumps floating around there, and status of support for them in any of Looping systems and then status in AAPS. On end there is some info, what is required for a pump to be "Loop capable".
+Това е списък с някои помпи на пазара и състоянието на поддръжката им в системите със затворен кръг, а след това и в AAPS. В края има информация какво е нужно, за да може една помпа да работи в затворен кръг.
 
-## Pumps that are Loopable
+    {contents} Съдържание
+    :depth: 1
+    :local: true
 
-### Kaleido ([Homepage](https://www.hellokaleido.com/))
+## Помпи във фаза на интеграция в AAPS
 
-**Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
+**Очаквайте скоро:** драйверите за тези помпи се разработват и вече работят в тестови компилации.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+Omnipod 5 ([Уебсайт](https://www.omnipod.com/))
 
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+![Драйверът за Omnipod 5 се разработва](../images/future-pumps/omnipod5-driver.png)
 
-**Loop status:** Not yet loopable.
+Tandem: t:Mobi ([Уебсайт](https://www.tandemdiabetes.com/))
 
-While in the past company has decided not to allow their pumps to be controlled by external devices, it seems that last few years have been a game changer. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
+![Драйверът за Tandem t:Mobi се разработва](../images/future-pumps/tandem-mobi-driver.png)
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+## Помпи, подходящи за затворен кръг
 
-### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Kaleido ([Уебсайт](https://www.hellokaleido.com/))
 
-**Loop status:** All 3 pumps will be Loop candidates.
+**Статус за затворен кръг:** Помпата е кандидат за затворен кръг, но протоколът засега не е известен. Производителят не проявява интерес към отворения код.
 
-Awaiting release of t:mobi in Europe (other two are not yet released anywhere). Development of AAPS t:mobi support has already started and should be available by end of 2025 (see more info on Discord).
+**Хардуерно изискване за AAPS:** Няма. Изглежда, че има Bluetooth.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+### Tandem: t:slim X3 ([Уебсайт](https://www.tandemdiabetes.com/about-us/pipeline))
 
-### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
+**Статус за затворен кръг:** Възможен бъдещ кандидат за затворен кръг. Надеждата е, че t:slim X3 ще позволява пълно управление от телефон, което би направило възможна поддръжката в AAPS, но сроковете и функциите все още не са известни.
 
-**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
+**Хардуерно изискване за AAPS:** Няма. Очаква се да има Bluetooth.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Коментари:** Все още не е пусната на пазара. Изглежда, че в плановете на Tandem t:slim X3 многократно отстъпва по приоритет на t:Mobi (включително версия без тръбичка) и на Sigi (тяхната пач помпа).
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+### Twiist ([Уебсайт](https://www.twiist.com/))
 
-## Pumps no longer sold (companies no longer operating)
+**Статус за затворен кръг:** Кандидат за затворен кръг.
+
+**Хардуерно изискване за AAPS:** Няма. Има Bluetooth.
+
+### Инсулинова помпа Willcare ([Уебсайт](http://shinmyungmedi.com/en/))
+
+**Статус за затворен кръг:** В момента не е кандидат за затворен кръг, но служители на компанията се свързаха с нас и проявяват интерес да направят помпата си подходяща за затворен кръг (в момента мисля, че липсват само командите за получаване/задаване на профил).
+
+**Хардуерно изискване за AAPS:** Няма. Изглежда, че има Bluetooth.
+
+**Коментари:** Тъй като компанията се интересува от интеграция с AAPS, тя може сама да направи реализацията.
+
+### Ypsopump ([Уебсайт](https://www.ypsomed.com/))
+
+**Статус за затворен кръг:** Кандидат за затворен кръг. Bluetooth протоколът на помпата е разкрит чрез обратно инженерство от общността, така че по принцип комуникацията с нея е възможна.
+
+**Хардуерно изискване за AAPS:** Няма. Има Bluetooth.
+
+**Коментари:** Ypsopump защитава Bluetooth комуникацията си със силно шифроване от трета страна. Работата с нея е технически трудна и затова е трудно да се създаде и поддържа надежден драйвер. Все още няма драйвер за AAPS, готов за ежедневна употреба.
+
+## Помпи, които вече не се продават (компаниите вече не работят)
 
 ### Animas Vibe
 
@@ -44,53 +66,53 @@ Awaiting release of t:mobi in Europe (other two are not yet released anywhere). 
 
 ### Accu-Chek Insight
 
-**Comments:** End of support March 2025.
+**Коментари:** Краят на поддръжката е през март 2025 г.
 
-## Pumps that aren't Loopable
+## Помпи, неподходящи за затворен кръг
 
 ### Medtronic Bluetooth
 
-**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**Коментари:** Medtronic се [оттегли](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+
+### Tandem: t:slim X2 ([Уебсайт](https://www.tandemdiabetes.com/))
+
+**Коментари:** Bluetooth протоколът на Tandem е разкрит чрез обратно инженерство, но при t:slim X2 може да се подават само болуси – подаването на базал не може да се управлява – затова помпата не може да се използва безопасно в затворен кръг. Това едва ли ще се промени, освен ако Tandem не позволи пълно управление на X2 от телефон, което по-вероятно ще дойде с t:slim X3.
 
 ### Accu-Chek Solo
 
-**Comments:** No community success in communicating with the Solo pump.
+**Коментари:** Общността не е успяла да осъществи комуникация с помпата Solo.
 
-### Ypsomed Pump
+## Изисквания към помпите за работа в затворен кръг
 
-**Comments:** Ypso added very heavy 3rd party encryption.
+**Предварително условие**
 
-## Requirements for pumps being loopable
+- Помпата трябва да поддържа някакъв вид дистанционно управление. (Bluetooth, радиочестота и др.)
+- Протоколът е разбит, документиран или подобно.
 
-**Prerequisite**
+**Минимално изискване**
 
-- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
-- Protocol is hacked/documented/etc.
+- Задаване на временна базална доза
+- Получаване на статуса
+- Отменяне на временна базална доза
 
-**Minimal requirement**
+**За oref1 (SMB) или за болуси:**
 
-- Set Temporary Basal Rate
-- Get Status
-- Cancel Temporary Basal Rate
+- Задаване на болус
 
-**For oref1(SMB) or Bolusing:**
+**Желателно**
 
-- Set Bolus
+- Отменяне на болус
+- Получаване на базалния профил (почти задължително)
+- Задаване на базалния профил (желателно)
+- Четене на историята 
 
-**Good to have**
+**Друго (не е задължително, но е желателно)**
 
-- Cancel Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- Задаване на удължен болус
+- Отменяне на удължен болус
+- Четене на историята
+- Четене на TDD (общата дневна доза)
 
-**Other (not required but good to have)**
+### Поддръжка на други помпи
 
-- Set Extended Bolus
-- Cancel Extended Bolus
-- Read History
-- Read TDD
-
-### Other pumps support
-
-If you have any other pumps you would like to see status on, please contact us on discord.
+Ако искате да видите статуса на други помпи, моля, свържете се с нас в Discord.

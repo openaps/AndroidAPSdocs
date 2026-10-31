@@ -1,244 +1,250 @@
-# Completing the Objectives
+# Βήματα
 
-**AAPS** has a series of **Objectives** required to be completed to help the user progress from basic open looping to hybrid closed looping and full **AAPS** functionality. Completing the **Objectives** aims to ensure you have:
+Το **AAPS** έχει μια σειρά από **Βήματα** που πρέπει να ολοκληρωθούν. Βοηθούν τον χρήστη να προχωρήσει από το απλό ανοιχτό κύκλωμα στο υβριδικό κλειστό κύκλωμα και σε όλες τις λειτουργίες του **AAPS**. Η ολοκλήρωση των **Βημάτων** έχει σκοπό να βεβαιωθεί ότι:
 
-* Configured everything correctly in your **AAPS** setup;
-* Learned about the essential features of **AAPS**; and
-* A basic understanding of what your system can do, in order to help instill confidence when using **AAPS**.
+* Έχετε ρυθμίσει τα πάντα σωστά στο **AAPS** σας,
+* Έχετε μάθει τις βασικές λειτουργίες του **AAPS** και
+* Καταλαβαίνετε βασικά τι μπορεί να κάνει το σύστημά σας, ώστε να έχετε εμπιστοσύνη όταν χρησιμοποιείτε το **AAPS**.
 
-When **AAPS** is installed for the first time, each objective must be completed before moving on to the next one. New features will gradually be unlocked as progress is made through each **Objective**.
+Όταν το **AAPS** εγκαθίσταται για πρώτη φορά, κάθε βήμα πρέπει να ολοκληρωθεί πριν περάσετε στο επόμενο. Νέες λειτουργίες ξεκλειδώνονται σιγά σιγά καθώς προχωράτε σε κάθε **Βήμα**.
 
-**Objectives 1 to 8** will guide you from configuring **AAPS** on your smartphone to “basic” hybrid closed looping. This will take about 6 weeks to complete. You can proceed up to **Objective 5** using a virtual pump (and using some other method of insulin delivery in the meantime). **Objectives 9 to 11** are designed to test more advanced **AAPS** features with the aim of better control of your diabetes, and will take up to 3 months to complete, possibly longer. Further details on an estimated breakdown of time can be obtained here: [How long will it take?](#preparing-how-long-will-it-take)
+Τα **Βήματα 1 έως 8** σας οδηγούν από τη ρύθμιση του **AAPS** στο smartphone σας μέχρι το «βασικό» υβριδικό κλειστό κύκλωμα. Αυτό θα πάρει περίπου 6 εβδομάδες για να ολοκληρωθεί. Μπορείτε να προχωρήσετε μέχρι το **Βήμα 5** με μια εικονική αντλία (και στο μεταξύ να χορηγείτε ινσουλίνη με άλλον τρόπο). Τα **Βήματα 9 και 10** δοκιμάζουν πιο προχωρημένες λειτουργίες του **AAPS**, με σκοπό καλύτερο έλεγχο του διαβήτη σας. Χρειάζονται έως 3 μήνες για να ολοκληρωθούν, ίσως και περισσότερο. Περισσότερες λεπτομέρειες για τον εκτιμώμενο χρόνο θα βρείτε εδώ: [Πόσο χρόνο θα πάρει;](#preparing-how-long-will-it-take)
 
-As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#go-back-in-objectives).
+Εκτός από το να προχωράτε στα **Βήματα**, μπορείτε επίσης, αν χρειαστεί, να διαγράψετε την πρόοδό σας και να [γυρίσετε σε ένα προηγούμενο βήμα](#go-back-in-objectives).
 
-## Backup your settings
+## Αντίγραφο ασφαλείας των ρυθμίσεών σας
 
 ```{admonition} Note
 :class: note
 
-Exporting your **AAPS** settings is recommended after completing each **Objective**!
+Συνιστούμε να εξάγετε τις ρυθμίσεις του **AAPS** μετά από κάθε **Βήμα** που ολοκληρώνετε!
 ```
 
-It is strongly recommended that you [export your settings](../Maintenance/ExportImportSettings.md) after completing each objective to avoid losing any progress made in **AAPS**. This exporting process creates a **settings file** (.json) which should be backed-up in one or more safe places (e.g. Google Drive, hard disk, email attachment _etc._). This ensures that any progress made in **AAPS** is saved. If your phone is lost or if you accidentally delete your progress, the json file can be re-loaded to **AAPS** by importing a recent settings file. Having a backup **settings file** is also required if a new **AAPS** smartphone is required for any reason (upgrading/lost/broken phone _etc._)
+Σας συνιστούμε έντονα να [εξάγετε τις ρυθμίσεις σας](../Maintenance/ExportImportSettings.md) μετά από κάθε βήμα που ολοκληρώνετε, ώστε να μη χάσετε την πρόοδό σας στο **AAPS**. Η εξαγωγή δημιουργεί ένα **αρχείο ρυθμίσεων** (.json). Αυτό πρέπει να φυλάσσεται ως αντίγραφο ασφαλείας σε ένα ή περισσότερα ασφαλή μέρη (π.χ. Google Drive, σκληρό δίσκο, συνημμένο σε email _κ.λπ._). Έτσι η πρόοδός σας στο **AAPS** είναι αποθηκευμένη. Αν χάσετε το τηλέφωνό σας ή αν διαγράψετε κατά λάθος την πρόοδό σας, μπορείτε να φορτώσετε ξανά το αρχείο json στο **AAPS**, εισάγοντας ένα πρόσφατο αρχείο ρυθμίσεων. Ένα αντίγραφο ασφαλείας του **αρχείου ρυθμίσεων** χρειάζεται επίσης αν για κάποιο λόγο χρειαστείτε νέο smartphone για το **AAPS** (αναβάθμιση, χαμένο ή χαλασμένο τηλέφωνο _κ.λπ._)
 
-The **settings** file will save not only your progress through the **Objectives**, but also all your **AAPS** settings such as **max bolus** _etc._
+Το αρχείο **ρυθμίσεων** αποθηκεύει όχι μόνο την πρόοδό σας στα **Βήματα**, αλλά και όλες τις ρυθμίσεις του **AAPS**, όπως το **μέγιστο bolus** _κ.λπ._
 
-The **Objectives** will need to be restarted from the beginning should you fail to have a backup of your settings and anything happens to your **AAPS** smartphone. Progressing through the **Objectives** takes time, and having to re-complete them again because for example you lost your smartphone, is a situation to be best avoided.
+Αν δεν έχετε αντίγραφο ασφαλείας των ρυθμίσεών σας και συμβεί κάτι στο smartphone του **AAPS**, θα πρέπει να ξεκινήσετε τα **Βήματα** από την αρχή. Η πρόοδος στα **Βήματα** παίρνει χρόνο. Είναι καλύτερα να αποφύγετε να τα κάνετε ξανά από την αρχή, για παράδειγμα επειδή χάσατε το smartphone σας.
 
 (objectives-objective1)=
-## Objective 1: Setting up visualization and monitoring, analyzing basals and ratios
+## Βήμα 1: Ρύθμιση απεικόνισης και παρακολούθησης, ανάλυση βασικών ρυθμών και αναλογιών
 
-**Objective 1** requires the user to set up their basic technical setup in **AAPS**. No progress can be made until this step has been completed.
+Στο **Βήμα 1** ο χρήστης κάνει τη βασική τεχνική ρύθμιση στο **AAPS**. Δεν μπορείτε να προχωρήσετε μέχρι να ολοκληρωθεί αυτό το βήμα.
 
-- Select the correct CGM/FGM in [Config Builder > BG Source](#Config-Builder-bg-source). See [BG Source](../Getting-Started/CompatiblesCgms.md) for more information.
-- Select the correct Pump in [Config Builder > Pump](../SettingUpAaps/ConfigBuilder.md) to ensure your pump can communicate with **AAPS**. Select **virtual pump** if you are using a pump model with no **AAPS** driver for looping, or if you want to work through the early **Objectives** while using another system for insulin delivery. See [insulin pump](../Getting-Started/CompatiblePumps.md) for more information.
-- If using Nightscout:
-  - Follow instructions in [Nightscout](../SettingUpAaps/Nightscout.md) page to ensure **Nightscout** can receive and display **AAPS** data.
-  - Note that URL in **NSClient** must be **_without_ "/api/v1/"** at the end - see [Preferences > NSClient](#Preferences-nsclient).
-- If using Tidepool:
-  - Follow instructions in [Tidepool](../SettingUpAaps/Tidepool.md) page to ensure **Tidepool** can receive and display **AAPS** data.
+- Επιλέξτε το σωστό CGM/FGM στη [Διαμόρφωση → Πηγή BG](#Config-Builder-bg-source). Δείτε την [Πηγή BG](../Getting-Started/CompatiblesCgms.md) για περισσότερες πληροφορίες.
+- Επιλέξτε τη σωστή αντλία στη [Διαμόρφωση → Αντλία](#Config-Builder-pump), ώστε η αντλία σας να μπορεί να επικοινωνεί με το **AAPS**. Επιλέξτε **εικονική αντλία** αν χρησιμοποιείτε μοντέλο αντλίας χωρίς οδηγό του **AAPS** για κύκλωμα, ή αν θέλετε να περάσετε τα πρώτα **Βήματα** ενώ χορηγείτε ινσουλίνη με άλλο σύστημα. Δείτε την [αντλία ινσουλίνης](../Getting-Started/CompatiblePumps.md) για περισσότερες πληροφορίες.
+- Αν χρησιμοποιείτε Nightscout:
+  - Ακολουθήστε τις οδηγίες στη σελίδα [Nightscout](../SettingUpAaps/Nightscout.md), ώστε το **Nightscout** να μπορεί να λαμβάνει και να εμφανίζει τα δεδομένα του **AAPS**.
+  - Προσέξτε ότι το URL στο **NSClientV3** πρέπει να είναι **_χωρίς_ "/api/v1/"** στο τέλος - δείτε [Ρυθμίσεις → NSClientV3](#Preferences-nsclient).
+- Αν χρησιμοποιείτε Tidepool:
+  - Ακολουθήστε τις οδηγίες στη σελίδα [Tidepool](../SettingUpAaps/Tidepool.md), ώστε το **Tidepool** να μπορεί να λαμβάνει και να εμφανίζει τα δεδομένα του **AAPS**.
 
-Note - *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognise it.*
+Σημείωση - *Ίσως χρειαστεί να περιμένετε την επόμενη μέτρηση γλυκόζης του αισθητήρα πριν το **AAPS** την αναγνωρίσει.*
 
 (objectives-objective2)=
-## Objective 2: Learn how to control AAPS
+## Βήμα 2: Μάθετε πώς να χειρίζεστε το AAPS
 
-**Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below Click on the orange text "Not completed yet" to access the to-dos. Links will be provided to guide you, in case you are not familiar with a specific action yet.
+Στο **Βήμα 2** πρέπει να γίνουν αρκετές «εργασίες», όπως φαίνεται στο στιγμιότυπο παρακάτω. Κάθε εργασία δείχνει την κατάστασή της (**1**): το πορτοκαλί «**Δεν ολοκληρώθηκε ακόμη**» γίνεται «**Ολοκληρώθηκε, συγχαρητήρια!**» μόλις το **AAPS** καταγράψει την ενέργεια. Πατήστε **Υπόδειξη** (**2**) κάτω από μια εργασία για να ανοίξει η σχετική τεκμηρίωση, αν δεν ξέρετε ακόμη μια συγκεκριμένη ενέργεια.
 
-![Screenshot objective 2](../images/Objective2_V2_5.png)
+![Στιγμιότυπο οθόνης βήμα 2](../images/Objective2_V2_5.png)
 
-Tasks to complete **Objective 2** are:
-- Set your **Profile** to 90% for a duration of 10 min.
-  - _Hint_: Long press your Profile name on the OVERVIEW screen. More information in [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-  - _Note_: **AAPS** does not accept basal rates below 0.05U/hr. If your **Profile** includes rates 0.06U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Switch back to your normal **Profile** after completing this task.
-- Simulate "taking a shower" by [disconnecting your pump](#AapsScreens-section-c-bg-loop-status) in **AAPS** for a duration of 1h.
-  - _Hint_: press the loop icon on the OVERVIEW screen to open the Loop dialogue.
-- End "taking a shower" by reconnecting your pump.
-  - _Hint_: press the "disconnected"-icon to open the loop dialog.
-- Set a custom [**Temporary Target**](../DailyLifeWithAaps/TempTargets.md) with a duration of 10 min.
-  - _Hint_: press the target bar on the OVERVIEW screen to bring up the temporary target dialog.
-- Activate the **Actions** plugin in [**Config Builder**](../SettingUpAaps/ConfigBuilder.md) to make it appear on the top scrollable menu bar.
-  - _Hint_: Go to **Config Builder** and scroll down to General.
-- Display the **Loop** plugin's content.
-- [Scale the BG-Chart](#aaps-screens-main-graph) to be able to look at larger or smaller time frames: toggling between 6h, 12h, 18h 24h of past data.
-  - _Hint_: Long press on the chart or use the arrow at the top right.
-- Check that AAPS master password is set and known
-  - Hint : see [Preferences > Protection](#Preferences-protection).
+Οι εργασίες για να ολοκληρώσετε το **Βήμα 2** είναι:
+- Ορίστε το **Προφίλ** σας στο 90% για διάρκεια 10 λεπ.
+  - _Υπόδειξη_: Πατήστε το όνομα του Προφίλ σας στην κύρια οθόνη για να ανοίξει η οθόνη **Προφίλ**. Μετά πατήστε το κουμπί **Ενεργοποίηση** (▶) και ορίστε ποσοστό και διάρκεια. Περισσότερες πληροφορίες στη σελίδα [Αλλαγή προφίλ και ποσοστό προφίλ](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+  - _Σημείωση_: Το **AAPS** δεν δέχεται βασικούς ρυθμούς κάτω από 0,05 U/ώρ. Αν το **Προφίλ** σας έχει ρυθμούς 0,06 U/ώρ. ή χαμηλότερους, πρέπει να δημιουργήσετε ένα προσωρινό **Προφίλ** με υψηλότερους βασικούς ρυθμούς πριν ολοκληρώσετε αυτή την εργασία. Μετά την εργασία, γυρίστε πάλι στο κανονικό σας **Προφίλ**.
+- Δοκιμάστε ότι «κάνετε μπάνιο»: [αποσυνδέστε την αντλία σας](#AapsScreens-loop-status) στο **AAPS** για διάρκεια 1 ώρας.
+  - _Υπόδειξη_: πατήστε το εικονίδιο του κυκλώματος στην κύρια οθόνη για να ανοίξει το παράθυρο Κύκλωμα. Μετά επιλέξτε μια διάρκεια κάτω από το **Αποσύνδεση αντλίας**.
+- Τελειώστε το «μπάνιο» επανασυνδέοντας την αντλία σας.
+  - _Υπόδειξη_: πατήστε το εικονίδιο «αποσυνδεδεμένο» για να ανοίξει ξανά το παράθυρο κυκλώματος και επιλέξτε **Επανασύνδεση αντλίας**.
+- Ορίστε έναν δικό σας [**Προσωρινό στόχο**](../DailyLifeWithAaps/TempTargets.md) με διάρκεια 10 λεπ.
+  - _Υπόδειξη_: πατήστε το εύρος στόχου στην κύρια οθόνη για να ανοίξει η οθόνη προσωρινού στόχου.
+- Εμφανίστε το περιεχόμενο του πρόσθετου **Κύκλωμα**.
+  - _Υπόδειξη_: ανοίξτε **Διαμόρφωση → Κύκλωμα** και πατήστε «**Άνοιγμα πρόσθετου**».
+- Κάντε κύλιση ή ζουμ στο γράφημα γλυκόζης για να δείτε μεγαλύτερα ή μικρότερα χρονικά διαστήματα.
 
 
 (objectives-objective3)=
-## Objective 3: Prove your knowledge
+## Βήμα 3: Αποδείξτε τις γνώσεις σας
 
-**Objective 3** requires the user to pass a multiple-choice exam which is designed to test your **AAPS** knowledge.
+Στο **Βήμα 3** ο χρήστης πρέπει να περάσει ένα τεστ πολλαπλής επιλογής, που ελέγχει τις γνώσεις σας για το **AAPS**.
 
-Some users find **Objective 3** to be the most difficult objective to complete. Please read the **AAPS** documents in conjunction with the questions. If you are genuinely stuck after researching the **AAPS** documents, please search the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group for "Objective 3" (because it is likely that your question has been asked before - and answered by the group). These groups can provide friendly hints, or redirect you to the relevant part of the **AAPS** documents.
+Μερικοί χρήστες βρίσκουν ότι το **Βήμα 3** είναι το πιο δύσκολο βήμα. Διαβάστε την τεκμηρίωση του **AAPS** μαζί με τις ερωτήσεις. Αν πραγματικά δεν μπορείτε να προχωρήσετε αφού ψάξετε στην τεκμηρίωση του **AAPS**, αναζητήστε στην ομάδα του [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) ή του [Discord](https://discord.gg/4fQUWHZ4Mw) το «Objective 3» (γιατί πιθανότατα η ερώτησή σας έχει ήδη γίνει - και έχει απαντηθεί από την ομάδα). Αυτές οι ομάδες μπορούν να σας δώσουν φιλικές υποδείξεις ή να σας δείξουν το σωστό μέρος της τεκμηρίωσης του **AAPS**.
 
-In the meantime :
-- To reduce the number of notifications / decisions you are asked to make (temporary basal rates) while in Open Loop, set a wide target range in your **Profile** _e.g._ 90 - 150 mg/dl or 5.0 - 8.5 mmol/l.
-- You might want to set a wider upper limit, or even disable Open Loop, at night.
+Στο μεταξύ:
+- Για να μειώσετε τον αριθμό των ειδοποιήσεων / αποφάσεων που σας ζητούνται (προσωρινοί βασικοί ρυθμοί) στο ανοιχτό κύκλωμα, ορίστε ένα ευρύ εύρος στόχου στο **Προφίλ** σας, _π.χ._ 90–150 mg/dl ή 5,0–8,5 mmol/l.
+- Ίσως θελήσετε να ορίσετε ένα ευρύτερο ανώτερο όριο τη νύχτα, ή ακόμη και να απενεργοποιήσετε το ανοιχτό κύκλωμα.
 
-To proceed with **Objective 3**, click on the orange text “**Not completed yet**” to access the relevant question. Please read each question carefully and select your answer(s).
+Για να συνεχίσετε στο **Βήμα 3**, πατήστε τη γραμμή μιας ερώτησης για να την ανοίξετε. Διαβάστε κάθε ερώτηση προσεκτικά και επιλέξτε την απάντηση ή τις απαντήσεις σας.
 
-For each question, there may be more than one answer that is correct! If an incorrect answer is selected, the question will be time-locked for 1 hour before you can go back and answer the question again. Be aware that the order of the answers may have changed when you next try to answer, this is to make sure you read them carefully and really understand the validity (or not) of each response.
+Σε κάθε ερώτηση μπορεί να είναι σωστές περισσότερες από μία απαντήσεις! Αν επιλέξετε λάθος απάντηση, η ερώτηση κλειδώνει για 1 ώρα πριν μπορέσετε να γυρίσετε και να απαντήσετε ξανά. Προσέξτε ότι η σειρά των απαντήσεων μπορεί να έχει αλλάξει την επόμενη φορά που θα απαντήσετε. Αυτό γίνεται για να τις διαβάζετε προσεκτικά και να καταλαβαίνετε πραγματικά αν κάθε απάντηση είναι σωστή ή όχι.
 
-```{admonition}  __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
-:class: Note
-From time to time, new features are added to **AAPS** which may require a new question to be added to the **Objectives**, particularly **Objective 3**. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other **Objectives** remain completed.
+```{admonition} __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
+:class: note
+Από καιρό σε καιρό προστίθενται νέες λειτουργίες στο **AAPS**, που μπορεί να χρειάζονται μια νέα ερώτηση στα **Βήματα**, κυρίως στο **Βήμα 3**. Γι' αυτό κάθε νέα ερώτηση που προστίθεται στο **Βήμα 3** θα εμφανίζεται ως «μη ολοκληρωμένη», γιατί το **AAPS** θα σας ζητήσει να την απαντήσετε. Μην ανησυχείτε: κάθε **Βήμα** είναι ανεξάρτητο, οπότε **δεν θα χάσετε τις λειτουργίες του AAPS που ήδη έχετε**, εφόσον τα άλλα **Βήματα** μένουν ολοκληρωμένα.
 ```
 
-## Objective 4: Starting on an open loop
+## Βήμα 4: Ξεκινήστε σε ανοιχτό κύκλωμα
 
-The purpose of **Objective 4** is to recognise how often **AAPS** will evaluate the user's basal rate against glucose levels, and recommend temporary basal rate adjustments. As part of this **Objective**, you will activate open looping for the first time, and will accept 20 proposed temporary basal rate changes, and if required, apply these manually on your pump. You will also observe the impact of [**Temporary Targets**](../DailyLifeWithAaps/TempTargets.md). If you are not familiar with setting a temporary basal rate change in **AAPS** yet, please refer to the [**Actions** tab](#screens-action-tab).
+Ο σκοπός του **Βήματος 4** είναι να δείτε πόσο συχνά το **AAPS** αξιολογεί τον βασικό ρυθμό του χρήστη σε σχέση με τα επίπεδα γλυκόζης και προτείνει αλλαγές προσωρινού βασικού ρυθμού. Σε αυτό το **Βήμα** θα ενεργοποιήσετε το ανοιχτό κύκλωμα για πρώτη φορά. Θα αποδεχτείτε 20 προτεινόμενες αλλαγές προσωρινού βασικού ρυθμού και, αν χρειάζεται, θα τις εφαρμόσετε χειροκίνητα στην αντλία σας. Θα δείτε επίσης την επίδραση των [**Προσωρινών στόχων**](../DailyLifeWithAaps/TempTargets.md). Αν δεν ξέρετε ακόμη πώς να ορίσετε αλλαγή προσωρινού βασικού ρυθμού στο **AAPS**, δείτε τις ενέργειες αντλίας στο φύλλο **Διαχείριση** ([Πού πήγε η καρτέλα Ενέργειες;](#screens-action-tab)).
 
-The minimal time to complete this objective: **7 days**. This is a mandatory wait time. It is not possible to proceed to the next **Objective**, even if all basal rate changes were enacted already.
+Ελάχιστος χρόνος για να ολοκληρώσετε αυτό το βήμα: **7 ημέρες**. Αυτός είναι ένας υποχρεωτικός χρόνος αναμονής. Δεν μπορείτε να προχωρήσετε στο επόμενο **Βήμα**, ακόμη κι αν έχουν ήδη γίνει όλες οι αλλαγές βασικού ρυθμού.
 
-- Select Open Loop either by pressing and holding the [Loop icon](#AapsScreens-loop-status) on the top right of the **Overview** screen.
-- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; key them into your (physical) pump and confirm in AAPS that you have accepted them. Ensure these basal rate adjustments show up in **AAPS** and **Nightscout**.
-- Use [**Temp Targets**](../DailyLifeWithAaps/TempTargets.md) when necessary. After treating a hypo, use the predefined "hypo temp target" to prevent the system from overcorrecting upon the bounce back.
-- If you are still in [Simple Mode](#preferences-simple-mode) at this point, now is probably a good time to switch it off.
+- Επιλέξτε ανοιχτό κύκλωμα: πατήστε το [εικονίδιο του Κυκλώματος](#AapsScreens-loop-status) στην κύρια οθόνη και επιλέξτε **Ανοιχτό Κύκλωμα** ως τρόπο λειτουργίας.
+- Εφαρμόστε χειροκίνητα τουλάχιστον 20 από τις προτάσεις προσωρινού βασικού ρυθμού μέσα σε 7 ημέρες: περάστε τις στην (πραγματική) αντλία σας και επιβεβαιώστε στο AAPS ότι τις αποδεχτήκατε. Βεβαιωθείτε ότι αυτές οι αλλαγές βασικού ρυθμού εμφανίζονται στο **AAPS** και στο **Nightscout**.
+- Χρησιμοποιήστε [**Προσωρινούς στόχους**](../DailyLifeWithAaps/TempTargets.md) όταν χρειάζεται. Μετά την αντιμετώπιση μιας υπογλυκαιμίας, χρησιμοποιήστε τον έτοιμο «προσωρινό στόχο υπογλυκαιμίας», ώστε το σύστημα να μη διορθώσει υπερβολικά όταν η γλυκόζη ανεβαίνει ξανά.
+- Αν σε αυτό το σημείο είστε ακόμη σε [Απλή λειτουργία](#preferences-simple-mode), τώρα είναι πιθανώς καλή στιγμή να την απενεργοποιήσετε.
 
-To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objective-3-prove-your-knowledge). Additionally, you can change the minimum percentage for recommended basal rate changes. The higher the value, the fewer change notifications you will receive.
+Για να μειώσετε τον αριθμό των προτεινόμενων αλλαγών βασικού ρυθμού στο ανοιχτό κύκλωμα, μπορείτε και πάλι να χρησιμοποιήσετε τις συμβουλές του [**Βήματος 3**](#objective-3-prove-your-knowledge). Επίσης, μπορείτε να αλλάξετε το ελάχιστο ποσοστό για τις προτεινόμενες αλλαγές βασικού ρυθμού με τη ρύθμιση «**Ελάχιστη αλλαγή σε ανοιχτό κύκλωμα**» στις **Ρυθμίσεις → Κύκλωμα**. Όσο υψηλότερη είναι η τιμή, τόσο λιγότερες ειδοποιήσεις αλλαγής θα λαμβάνετε.
 
-![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
+![Ελάχιστη αλλαγή αιτήματος σε ανοιχτό κύκλωμα](../images/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
-:class: Note
+:class: note
 
-You don't need to action each and every system recommendation!
+Δεν χρειάζεται να εφαρμόσετε κάθε πρόταση του συστήματος!
 ```
 (objectives-objective5)=
-## Objective 5: Understanding your open loop, including its temp basal recommendations
+## Βήμα 5: Κατανόηση του ανοιχτού κυκλώματος και των προτάσεων προσωρινού βασικού ρυθμού
 
-As part of **Objective 5** you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in **AAPS Overview**](#aaps-screens-prediction-lines) (or Nightscout) and looking at detailed calculations shown on your **OpenAPS** tab.
+Στο **Βήμα 5** θα αρχίσετε να καταλαβαίνετε πώς προκύπτουν οι προτάσεις προσωρινού βασικού ρυθμού. Αυτό περιλαμβάνει τον [τρόπο που αποφασίζεται ο βασικός ρυθμός](#aaps-screens-how-predictions-become-a-dosing-decision), την ανάλυση της επίδρασης παρατηρώντας τις [γραμμές πρόβλεψης στην **Επισκόπηση του AAPS**](#aaps-screens-prediction-lines) (ή στο Nightscout) και τους αναλυτικούς υπολογισμούς στην οθόνη του πρόσθετου **OpenAPS SMB** (**Διαμόρφωση → APS → Άνοιγμα πρόσθετου**).
 
-Estimated time to complete this objective: **7 days**.
+Εκτιμώμενος χρόνος για να ολοκληρώσετε αυτό το βήμα: **7 ημέρες**.
 
-This **Objective** requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). This value can be set in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings). If you are still using a virtual pump, make sure this safety setting is set in both **AAPS** and your insulin pump.
+Σε αυτό το **Βήμα** πρέπει να βρείτε και να ορίσετε την τιμή «Μέγιστος βασικός ρυθμός» (max-basal), όπως περιγράφεται στις [Λειτουργίες OpenAPS](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). Αυτή η τιμή ορίζεται στις [Ρυθμίσεις → OpenAPS SMB](#Preferences-openaps-smb-settings). Σε [απλή λειτουργία](#preferences-simple-mode), το **AAPS** ορίζει αυτή την τιμή αυτόματα και δεν χρειάζεται να την αλλάξετε. Αν χρησιμοποιείτε ακόμη εικονική αντλία, βεβαιωθείτε ότι αυτή η ρύθμιση ασφαλείας έχει οριστεί και στο **AAPS** και στην αντλία ινσουλίνης σας.
 
-You might wish to set your [**Profile** BG target](#profile-glucose-targets) higher than usual until you are comfortable with **AAPS**' calculations and settings. You may wish to experiment with adjusting your **BG target** in your **Profile** being in a tighter range (say, 1 or less mmol/l [20 mg/dl or less] wide) and observe the resulting behavior.
+Ίσως θελήσετε να ορίσετε τον [στόχο BG του **Προφίλ**](#profile-glucose-targets) πιο ψηλά από ό,τι συνήθως, μέχρι να νιώσετε άνετα με τους υπολογισμούς και τις ρυθμίσεις του **AAPS**. Μπορείτε να δοκιμάσετε να ορίσετε τον **στόχο BG** στο **Προφίλ** σας σε πιο στενό εύρος (π.χ. εύρος 1 mmol/l ή λιγότερο [20 mg/dl ή λιγότερο]) και να δείτε πώς συμπεριφέρεται το σύστημα.
 
-![Stop sign](../images/sign_stop.png)
+![Σήμα στοπ](../images/sign_stop.png)
 
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-If you are open looping with a virtual pump **stop here**. Only click verify at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
+Αν χρησιμοποιείτε ανοιχτό κύκλωμα με εικονική αντλία, **σταματήστε εδώ**. Πατήστε επαλήθευση στο τέλος αυτού του **Βήματος** μόνο όταν έχετε περάσει σε «πραγματική» αντλία που χορηγεί ινσουλίνη.
 
 ```
 
-![blank](../images/blank.png)
+![κενό](../images/blank.png)
 
 (objectives-objective6)=
-## Objective 6: Starting to close the loop with Low Glucose Suspend
+## Βήμα 6: Έναρξη κλειστού κυκλώματος με Αναστολή Χαμηλής Γλυκόζης
 
-![Warning sign](../images/sign_warning.png)
-```{admonition}  Closed loop will not correct high **BG** values in **Objective 6** as it is limited to **Low Glucose Suspend** only!
-:class: Note
-You will still need to correct high BG values by yourself (manually with corrections by pump or pen)!
+![Σήμα προειδοποίησης](../images/sign_warning.png)
+```{admonition} Closed loop will not correct high **BG** values in **Objective 6** as it is limited to **Low Glucose Suspend** only!
+:class: note
+Θα πρέπει ακόμη να διορθώνετε μόνοι σας τις υψηλές τιμές BG (χειροκίνητα, με διορθώσεις από την αντλία ή με πένα)!
 ```
 
-As part of **Objective 6** you will close the loop and activate its **Low Glucose Suspend** (LGS) mode while [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero. You have to remain in LGS mode for 5 days to complete this **objective**. You should use this time to check if your **Profile** settings are accurate and LGS events are not triggered too often.
+Στο **Βήμα 6** θα κλείσετε το κύκλωμα και θα ενεργοποιήσετε τη λειτουργία **Αναστολή Χαμηλής Γλυκόζης** (LGS), ενώ το [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) είναι μηδέν. Πρέπει να μείνετε σε λειτουργία LGS για 5 ημέρες για να ολοκληρώσετε αυτό το **βήμα**. Χρησιμοποιήστε αυτόν τον χρόνο για να ελέγξετε αν οι ρυθμίσεις του **Προφίλ** σας είναι σωστές και αν τα συμβάντα LGS δεν ενεργοποιούνται πολύ συχνά.
 
-Minimal time to complete this objective: **5 days**. This is a mandatory wait time. You cannot proceed to the next **Objective** before this time is up.
+Ελάχιστος χρόνος για να ολοκληρώσετε αυτό το βήμα: **5 ημέρες**. Αυτός είναι ένας υποχρεωτικός χρόνος αναμονής. Δεν μπορείτε να προχωρήσετε στο επόμενο **Βήμα** πριν περάσει αυτός ο χρόνος.
 
-It is crucial that your current **Profile** (basal, ISF, IC) have been well tested before you close your loop in **LGS** mode. Incorrect **Profile** settings might force you into hypo situations which have to be treated manually. An accurate **Profile** will help reduce the need for low glucose treatments during the 5 days period.
+Είναι πολύ σημαντικό το τρέχον **Προφίλ** σας (βασικός ρυθμός, ISF, IC) να έχει δοκιμαστεί καλά πριν κλείσετε το κύκλωμα σε λειτουργία **LGS**. Λάθος ρυθμίσεις **Προφίλ** μπορεί να σας φέρουν σε υπογλυκαιμίες που πρέπει να αντιμετωπίσετε χειροκίνητα. Ένα σωστό **Προφίλ** θα μειώσει την ανάγκη για θεραπεία χαμηλής γλυκόζης στη διάρκεια των 5 ημερών.
 
-**If you still observe frequent or severe low glucose episodes consider refining your DIA, basal, ISF and carb ratios.** Please refer to the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group which has much discussion on this.
+**Αν εξακολουθείτε να έχετε συχνά ή σοβαρά επεισόδια χαμηλής γλυκόζης, σκεφτείτε να βελτιώσετε τη [DIA του τύπου ινσουλίνης σας](#Config-Builder-insulin-dia), τον βασικό ρυθμό, το ISF και τους λόγους υδατανθράκων.** Δείτε την ομάδα του [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) ή του [Discord](https://discord.gg/4fQUWHZ4Mw), όπου υπάρχει πολλή συζήτηση για αυτό.
 
 
-During **Objective 6**, **AAPS** will override the maxIOB setting to zero. **This override will end when moving to Objective 7.**
+Στο **Βήμα 6**, το **AAPS** θα αντικαταστήσει τη ρύθμιση maxIOB με μηδέν. **Αυτό τελειώνει όταν περάσετε στο Βήμα 7.**
 
-This means that when you are on **Objective 6**, if sensor glucose levels are dropping, **AAPS** will reduce your basal insulin delivery for you. But, if sensor glucose levels are rising, **AAPS** will  increase the basal rate above your **Profile** value only if **basal IOB** is negative as a result of  a previous **LGS**. Otherwise, **AAPS** will not increase basal above your current profile value, even if glucose levels are rising. This caution is to avoid hypos as you are learning to use **AAPS**.
+Αυτό σημαίνει ότι στο **Βήμα 6**, αν τα επίπεδα γλυκόζης του αισθητήρα πέφτουν, το **AAPS** θα μειώσει για εσάς τη χορήγηση βασικής ινσουλίνης. Αν όμως τα επίπεδα γλυκόζης του αισθητήρα ανεβαίνουν, το **AAPS** θα αυξήσει τον βασικό ρυθμό πάνω από την τιμή του **Προφίλ** σας μόνο αν το **βασικό IOB** είναι αρνητικό λόγω προηγούμενης **LGS**. Αλλιώς, το **AAPS** δεν θα αυξήσει τον βασικό ρυθμό πάνω από την τρέχουσα τιμή του προφίλ σας, ακόμη κι αν τα επίπεδα γλυκόζης ανεβαίνουν. Αυτή η προφύλαξη είναι για να αποφύγετε υπογλυκαιμίες όσο μαθαίνετε να χρησιμοποιείτε το **AAPS**.
 
-**As a consequence, you have to handle high glucose values with manual insulin bolus corrections.**
+**Γι' αυτό πρέπει να διορθώνετε τις υψηλές τιμές γλυκόζης με χειροκίνητα bolus διόρθωσης.**
 
-- If your IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in **Objective 6**.
+- Αν το IOB σας είναι αρνητικό (δείτε το στιγμιότυπο παρακάτω), στο **Βήμα 6** μπορεί να ενεργοποιηθεί προσωρινός βασικός ρυθμός (TBR) > 100%.
 
-![Example negative IOB](../images/Objective6_negIOB.png)
+![Παράδειγμα αρνητικού IOB](../images/Objective6_negIOB.png)
 
-- Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
-- Enable 'Low Glucose Suspend' mode by pressing and holding the Loop icon in the top right corner of the OVERVIEW screen and selecting the Loop - LGS mode icon.
-- Watch active temporary basals by looking at the turquoise basal text on the OVERVIEW screen or the turquoise basal render as part of the OVERVIEW graph.
-- You may temporarily experience spikes following treated hypos without being able to increase basals on the rebound.
+- Ορίστε το εύρος στόχου σας λίγο πιο ψηλά από ό,τι συνήθως, για ασφάλεια και για να έχετε ένα περιθώριο ασφαλείας.
+- Ενεργοποιήστε τη λειτουργία «Αναστολή Χαμηλής Γλυκόζης»: πατήστε το εικονίδιο του Κυκλώματος στην κύρια οθόνη και επιλέξτε **Αναστολή Χαμηλής Γλυκόζης** ως τρόπο λειτουργίας.
+- Παρακολουθήστε τους ενεργούς προσωρινούς βασικούς ρυθμούς από το τιρκουάζ κείμενο του βασικού ρυθμού στην οθόνη ΕΠΙΣΚΟΠΗΣΗ ή από την τιρκουάζ γραμμή του βασικού ρυθμού στο γράφημα της ΕΠΙΣΚΟΠΗΣΗΣ.
+- Μπορεί για λίγο καιρό να έχετε απότομες ανόδους μετά από υπογλυκαιμίες που αντιμετωπίσατε, γιατί ο βασικός ρυθμός δεν μπορεί να αυξηθεί όταν η γλυκόζη ανεβαίνει ξανά.
 
 (objectives-objective7)=
-## Objective 7: Tuning the closed loop, raising maxIOB above 0 and gradually lowering BG targets
+## Βήμα 7: Ρύθμιση του κλειστού κυκλώματος, αύξηση του maxIOB πάνω από 0 και σταδιακή μείωση των στόχων BG
 
-To complete **Objective 7** you have to close your loop and raise your [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over). **maxIOB** was zeroed out automatically in **Objective 6**, due to the Low Glucose Suspend mode. This is no longer the case. **AAPS** will start to use your defined maxIOB value to correct high glucose values.
+Για να ολοκληρώσετε το **Βήμα 7** πρέπει να κλείσετε το κύκλωμα και να αυξήσετε το [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over). Στο **Βήμα 6** το **maxIOB** μηδενίστηκε αυτόματα λόγω της λειτουργίας Αναστολή Χαμηλής Γλυκόζης. Αυτό δεν ισχύει πια. Το **AAPS** θα αρχίσει να χρησιμοποιεί την τιμή maxIOB που έχετε ορίσει για να διορθώνει υψηλές τιμές γλυκόζης. Σε [απλή λειτουργία](#preferences-simple-mode), το **AAPS** ορίζει το maxIOB αυτόματα και δεν χρειάζεται να το αλλάξετε.
 
-Minimal time to complete this objective: **1 day**. This is a mandatory wait time. It is not possible to proceed to the next **Objective** until this period of time has expired.
+Ελάχιστος χρόνος για να ολοκληρώσετε αυτό το βήμα: **1 ημέρα**. Αυτός είναι ένας υποχρεωτικός χρόνος αναμονής. Δεν μπορείτε να προχωρήσετε στο επόμενο **Βήμα** μέχρι να περάσει αυτός ο χρόνος.
 
-- Select **Closed Loop** by pressing and holding the [Loop icon](#AapsScreens-loop-status) in the top right corner of the **Overview** screen. Stay in **Closed Loop** over a period of 1 day.
+- Επιλέξτε **Κλειστό Κύκλωμα**: πατήστε το [εικονίδιο του Κυκλώματος](#AapsScreens-loop-status) στην κύρια οθόνη και επιλέξτε **Κλειστό Κύκλωμα** ως τρόπο λειτουργίας. Μείνετε σε **Κλειστό Κύκλωμα** για 1 ημέρα.
 
-- Slowly raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
+- Αυξήστε σιγά σιγά πάνω από 0 τη ρύθμιση «Μέγιστο συνολικό IOB που δεν μπορεί να ξεπεράσει το OpenAPS» (στο OpenAPS λέγεται «max-iob»), μέχρι να βρείτε τις ρυθμίσεις που σας ταιριάζουν καλύτερα.
 
-The default recommendation for this setting is “**average meal bolus + 3x max daily basal**”, where “max daily basal” is the maximum hourly value in any time segment of the day.
+Η προεπιλεγμένη σύσταση για αυτή τη ρύθμιση είναι «**μέσο bolus γεύματος + 3x μέγιστος ημερήσιος βασικός ρυθμός**», όπου «μέγιστος ημερήσιος βασικός ρυθμός» είναι η μεγαλύτερη ωριαία τιμή σε οποιοδήποτε χρονικό τμήμα της ημέρας.
 
-![max daily basal](../images/MaxDailyBasal2.png)
+![μέγιστος ημερήσιος βασικός ρυθμός](../images/MaxDailyBasal2.png)
 
-Αυτή η σύσταση πρέπει να θεωρηθεί ως σημείο εκκίνησης. If you use this rule but are experiencing AAPS delivering too much insulin as glucose levels rise, you may need to :
-* lower the "Maximum total IOB OpenAPS can’t go over" value;
-* review your **Profile** settings, only making one adjustment at a time.
+Αυτή η σύσταση πρέπει να θεωρηθεί ως σημείο εκκίνησης. Αν χρησιμοποιείτε αυτόν τον κανόνα αλλά βλέπετε ότι το AAPS χορηγεί πάρα πολλή ινσουλίνη όταν η γλυκόζη ανεβαίνει, ίσως χρειαστεί να:
+* μειώσετε την τιμή «Μέγιστο συνολικό IOB που δεν μπορεί να ξεπεράσει το OpenAPS»,
+* ελέγξτε ξανά τις ρυθμίσεις του **Προφίλ** σας, κάνοντας μόνο μία αλλαγή κάθε φορά.
 
-Alternatively, if you are very insulin resistant, raise the **maxIOB** value very cautiously.
+Αλλιώς, αν έχετε μεγάλη αντίσταση στην ινσουλίνη, αυξήστε την τιμή **maxIOB** πολύ προσεκτικά.
 
-Once confident on how much **maxIOB** suits your looping patterns, lower your **BG targets** to your desired level.
+Όταν είστε σίγουροι για το πόσο **maxIOB** ταιριάζει στον τρόπο που λειτουργεί το κύκλωμά σας, κατεβάστε τους **στόχους BG** στο επίπεδο που θέλετε.
 
 (objectives-objective8)=
-## Objective 8: Adjust basals and ratios if needed, and then enable Autosens
+## Βήμα 8: Προσαρμογή βασικών ρυθμών και αναλογιών αν χρειάζεται, και μετά ενεργοποίηση του Autosens
 
-As part of this **objective**, you will revisit your **Profile**'s performance and will use [Autosens](#Open-APS-features-autosens) functionality as an indicator for wrong settings.
+Σε αυτό το **βήμα** θα ελέγξετε ξανά πώς αποδίδει το **Προφίλ** σας και θα χρησιμοποιήσετε τη λειτουργία [Autosens](#Open-APS-features-autosens) ως ένδειξη για λάθος ρυθμίσεις.
 
-Minimal time to complete this objective: **7 days**. This is a mandatory wait time. It is not possible to proceed to the next **Objective** until this period of time has expired.
+Ελάχιστος χρόνος για να ολοκληρώσετε αυτό το βήμα: **7 ημέρες**. Αυτός είναι ένας υποχρεωτικός χρόνος αναμονής. Δεν μπορείτε να προχωρήσετε στο επόμενο **Βήμα** μέχρι να περάσει αυτός ο χρόνος.
 
-Enable [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) over a period of 7 days and watch [**Overview**'s graph white line](#AapsScreens-section-g-additional-graphs) showing your insulin sensitivity rising or falling due to exercise or hormones etc. Keep an eye on the OpenAPS report tab which shows **AAPS** adjusting the sensitivity, basals and targets accordingly.
+Ενεργοποιήστε το [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) για 7 ημέρες (σε [απλή λειτουργία](#preferences-simple-mode) είναι ενεργό από προεπιλογή) και παρακολουθήστε τη [λευκή γραμμή στο γράφημα της **Επισκόπησης**](#AapsScreens-section-g-additional-graphs), που δείχνει την ευαισθησία σας στην ινσουλίνη να ανεβαίνει ή να πέφτει λόγω άσκησης, ορμονών κ.λπ. Παρακολουθήστε την οθόνη του πρόσθετου **OpenAPS SMB** (**Διαμόρφωση → APS → Άνοιγμα πρόσθετου**), που δείχνει πώς το **AAPS** προσαρμόζει ανάλογα την ευαισθησία, τους βασικούς ρυθμούς και τους στόχους.
 
-This is a good time to review your settings for [Sensitivity Detection](#Config-Builder-sensitivity-detection). You can view your sensitivity on the homescreen in an [additional graph](#AapsScreens-section-g-additional-graphs).
+Είναι καλή στιγμή να ελέγξετε τις ρυθμίσεις σας για την [Ανίχνευση ευαισθησίας](#Config-Builder-sensitivity-detection). Μπορείτε να δείτε την ευαισθησία σας στην κύρια οθόνη σε ένα [επιπλέον γράφημα](#AapsScreens-section-g-additional-graphs).
 
-Additionally, you can use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
+Επίσης, μπορείτε να χρησιμοποιήσετε το [Autotune](#autotune-how-autotune-calculates-adjustments) μία φορά για να ελέγξετε ότι οι βασικοί ρυθμοί σας είναι ακόμη σωστοί, ή να κάνετε ένα κλασικό τεστ βασικού ρυθμού.
 
 (objectives-objective9)=
-## Objective 9: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
+## Βήμα 9: Ενεργοποίηση πρόσθετων λειτουργιών oref1 για χρήση κατά τη διάρκεια της ημέρας, όπως το super micro bolus (SMB)
 
-In **Objective 9**, you will tackle and use **"Super Micro Bolus (SMB)"** as one core functionality. After working through the mandatory readings you will have a good understanding of what SMBs are, how these work, and why basal is set to zero temporarily after SMBs are given (zero-temping).
+Στο **Βήμα 9** θα μάθετε και θα χρησιμοποιήσετε το **«Super Micro Bolus (SMB)»** ως μία από τις κύριες λειτουργίες. Αφού διαβάσετε τα υποχρεωτικά κείμενα, θα καταλαβαίνετε καλά τι είναι τα SMB, πώς δουλεύουν και γιατί ο βασικός ρυθμός ορίζεται προσωρινά στο μηδέν μετά από ένα SMB (zero-temping).
 
-Minimal time to complete this objective: **28 days**. This is a mandatory wait time. You can’t proceed to the next Objective before this time is up.
+Ελάχιστος χρόνος για να ολοκληρώσετε αυτό το βήμα: **28 ημέρες**. Αυτός είναι ένας υποχρεωτικός χρόνος αναμονής. Δεν μπορείτε να προχωρήσετε στο επόμενο Βήμα πριν περάσει αυτός ο χρόνος.
 
-- The [SMB section in this documentation](#Open-APS-features-super-micro-bolus-smb) and [oref1 coverage in the openAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand **SMB** and the concept of **zero-temping**.
-- Once done, you can [raise maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) to get **SMBs** working more effectively. maxIOB now includes all **IOB**, not just accumulated basal. This threshold pauses **SMBs** until IOB drops below this value (_e.g._ **maxIOB** is set to 7U and a bolus of 8U is given to cover a meal: SMBs will be paused and not given unless **IOB** drops below 7U). A good start is setting **maxIOB** = **average meal bolus + 3x max daily basal** where "max daily basal" is the maximum hourly value in any time segment of the day. See [objective 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) as reference.
-- Evaluate your carb absorption rate and consider changing the “min_5m_carbimpact”-parameter in [Preferences > Absorption settings > min_5m_carbimpact](#Preferences-min_5m_carbimpact) if you find it too slow or too fast.
+- Η [ενότητα SMB σε αυτή την τεκμηρίωση](#Open-APS-features-super-micro-bolus-smb) και η [περιγραφή του oref1 στην τεκμηρίωση του openAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) πρέπει οπωσδήποτε να διαβαστούν, για να καταλάβετε το **SMB** και την ιδέα του **μηδενικού βασικού (zero temp)**.
+- Μετά από αυτό, μπορείτε να [αυξήσετε το maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over), ώστε τα **SMB** να δουλεύουν πιο αποτελεσματικά. Το maxIOB περιλαμβάνει τώρα όλο το **IOB**, όχι μόνο τη βασική ινσουλίνη που έχει συσσωρευτεί. Αυτό το όριο σταματά προσωρινά τα **SMB** μέχρι το IOB να πέσει κάτω από αυτή την τιμή (_π.χ._ το **maxIOB** είναι 7U και δίνεται bolus 8U για ένα γεύμα: τα SMB σταματούν και δεν δίνονται μέχρι το **IOB** να πέσει κάτω από 7U). Μια καλή αρχή είναι να ορίσετε **maxIOB** = **μέσο bolus γεύματος + 3x μέγιστος ημερήσιος βασικός ρυθμός**, όπου «μέγιστος ημερήσιος βασικός ρυθμός» είναι η μεγαλύτερη ωριαία τιμή σε οποιοδήποτε χρονικό τμήμα της ημέρας. Δείτε το [βήμα 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) για αναφορά.
+- Αξιολογήστε τον ρυθμό απορρόφησης υδατανθράκων και σκεφτείτε να αλλάξετε την παράμετρο «min_5m_carbimpact» στις [Ρυθμίσεις → Ρύθμιση απορρόφησης → min_5m_carbimpact](#Preferences-min_5m_carbimpact), αν τη βρίσκετε πολύ αργή ή πολύ γρήγορη.
 
 (objectives-objective10)=
-## Objective 10: Automation
+## Βήμα 10: Αυτοματισμός
 
-**Automations** become available when **Objective 10** is started.
+Οι **Αυτοματισμοί** γίνονται διαθέσιμοι όταν ξεκινήσει το **Βήμα 10**.
 
-Minimal time to complete this objective: **28 days**. This is a mandatory wait time. You can’t proceed to the next Objective before this time is up.
+Ελάχιστος χρόνος για να ολοκληρώσετε αυτό το βήμα: **28 ημέρες**. Αυτός είναι ένας υποχρεωτικός χρόνος αναμονής. Δεν μπορείτε να προχωρήσετε στο επόμενο Βήμα πριν περάσει αυτός ο χρόνος.
 
-Read the documentation page [Automation](../DailyLifeWithAaps/Automations.md) first.
+Διαβάστε πρώτα τη σελίδα τεκμηρίωσης [Αυτοματισμός](../DailyLifeWithAaps/Automations.md).
 
-Set-up the most basic automation rule; for example trigger an Android notification in a few minutes:
-- Select the notification tab
-- From the top right 3 dots menu, select add rule
-- Give a task name "My first automation notification"
-- "edit"  "condition"
-  - click the "+" symbol to add the first trigger
-  - select "Time"  & "OK", it will create a default entry AT TODAY HOUR:MINUTE
-  - click the MINUTE portion to edit the time such that it triggers in a few minutes. Then click ok to close
-  - click "ok"  to close the Triggers screen
-- "ADD" an "Action"
-  - select "Notification", "OK"
-  - click "Notification" to edit the message, enter something like "My first automation"
-- Wait until the time triggers the notification (note that depending on your phone, it can be a few minutes late)
+Φτιάξτε τον πιο απλό κανόνα αυτοματισμού, για παράδειγμα μια ειδοποίηση Android σε λίγα λεπτά:
+- Ανοίξτε **Διαχείριση → Αυτοματισμός** και πατήστε το κουμπί **+** (**Προσθήκη κανόνα**).
+- Γράψτε ένα **Όνομα εργασίας**, για παράδειγμα «Η πρώτη μου ειδοποίηση αυτοματισμού».
+- Κάτω από τη **Συνθήκη**, πατήστε «**Επεξεργασία**».
+  - Πατήστε «**Προσθήκη συνθήκης**» και επιλέξτε «**Χρόνος**». Το **AAPS** δημιουργεί μια καταχώριση για σήμερα με την τρέχουσα ώρα.
+  - Αλλάξτε την ώρα ώστε να ενεργοποιηθεί σε λίγα λεπτά.
+  - Πατήστε το εικονίδιο **Αποθήκευση** (πάνω δεξιά) για να γυρίσετε στον κανόνα.
+- Κάτω από την **Ενέργεια**, πατήστε «**Προσθήκη**» και επιλέξτε «**Ειδοποίηση**».
+  - Γράψτε ένα μήνυμα στην κάρτα της ενέργειας, για παράδειγμα «Ο πρώτος μου αυτοματισμός».
+- Πατήστε το εικονίδιο **Αποθήκευση** (πάνω δεξιά) και βεβαιωθείτε ότι ο κανόνας έχει την ένδειξη **Ενεργοποιημένο**.
+- Περιμένετε μέχρι η ώρα να ενεργοποιήσει την ειδοποίηση (ανάλογα με το τηλέφωνό σας, μπορεί να καθυστερήσει λίγα λεπτά)
 
-You can then experiment with setting up a more useful **Automation**. The documentation page gives a few examples, and you can search for "Automation" screenshots on the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group. There is also a dedicated channel in the [Discord](https://discord.gg/4fQUWHZ4Mw) community.
+Μετά μπορείτε να δοκιμάσετε να φτιάξετε έναν πιο χρήσιμο **Αυτοματισμό**. Η σελίδα τεκμηρίωσης δίνει μερικά παραδείγματα. Μπορείτε επίσης να αναζητήσετε στιγμιότυπα οθόνης «Automation» στην ομάδα του [Facebook](https://www.facebook.com/groups/AndroidAPSUsers). Υπάρχει επίσης ειδικό κανάλι στην κοινότητα του [Discord](https://discord.gg/4fQUWHZ4Mw).
 
-For example, if you eat the same thing for breakfast at the same time every morning before school/work, you can create an **Automation** such as "before-breakfast-target" to set a slightly lower **Temporary Target** 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consist of "Start temp target" with a lower than usual target value and a 30 minutes duration.
+Για παράδειγμα, αν τρώτε το ίδιο πρωινό την ίδια ώρα κάθε πρωί πριν από το σχολείο ή τη δουλειά, μπορείτε να φτιάξετε έναν **Αυτοματισμό**, όπως «στόχος-πριν-το-πρωινό», που ορίζει έναν λίγο χαμηλότερο **Προσωρινό στόχο** 30 λεπτά πριν από το πρωινό. Σε αυτή την περίπτωση, η συνθήκη σας θα περιλαμβάνει πιθανώς «επαναλαμβανόμενο χρόνο», δηλαδή επιλογή συγκεκριμένων ημερών της εβδομάδας (Δευτέρα, Τρίτη, Τετάρτη, Πέμπτη, Παρασκευή) και συγκεκριμένης ώρας (06:30 π.μ.). Η ενέργεια θα είναι «Έναρξη προσ. στόχου» με τιμή στόχου χαμηλότερη από τη συνηθισμένη και διάρκεια 30 λεπτών.
+
+## Όταν ολοκληρωθούν όλα τα βήματα
+
+Όταν ολοκληρώσετε όλα τα **Βήματα**, η λίστα δείχνει το καθένα με ένα σημάδι επιλογής και την ημερομηνία που ολοκληρώθηκε. Το στοιχείο **Βήματα** εξαφανίζεται από την κάτω γραμμή πλοήγησης. Μπορείτε ακόμη να ανοίξετε τη λίστα με **Διαμόρφωση → Περιορισμοί → Βήματα → Άνοιγμα πρόσθετου**.
+
+![Όλα τα βήματα ολοκληρώθηκαν](../images/objectives/objectives_completed.png)
+
+Πατήστε «**Περισσότερα**» κάτω από ένα βήμα για να δείτε ξανά τις εργασίες του:
+
+![Λεπτομέρειες ενός ολοκληρωμένου βήματος](../images/objectives/objective_1_details.png)
 
 (CompletingTheObjectives-go-back-in-objectives)=
-## Go back in objectives
+## Επιστροφή σε προηγούμενο Βήμα
 
-If you wish to go back in the **Objectives** for whatever reason you can do so by clicking at "clear finished".
+Αν για οποιονδήποτε λόγο θέλετε να γυρίσετε πίσω στα **Βήματα**, ανοίξτε το ολοκληρωμένο **Βήμα** με «**Περισσότερα**» και πατήστε «**Επαναφορά ολοκληρωμένης κατάστασης**»:
 
-![Go back in objectives](../images/Objective_ClearFinished.png)
+![Επιστροφή σε προηγούμενο Βήμα](../images/Objective_ClearFinished.png)
+
+Με τον ίδιο τρόπο, το **Βήμα** στο οποίο δουλεύετε τώρα μπορεί να ξεκινήσει από την αρχή με «**Επαναφορά κατάστασης εκκίνησης**».

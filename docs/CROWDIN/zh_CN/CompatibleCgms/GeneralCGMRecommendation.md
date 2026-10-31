@@ -9,7 +9,7 @@
 -   避免在血糖水平上升或下降时进行校准。
 -   请进行"充分"校准——在官方应用程序中，系统会提示您每天检查一至两次。对于DIY系统可能无校准提示，需谨慎对待长期未校准的情况。
 -   对于无需或无法校准的传感器，请至少每日检测一次真实血糖值。 AAPS系统的安全性与您传感器读数的可靠性直接相关。
--   如有可能，建议分别在较低范围（4-5mmol/l或72-90mg/dl）和稍高范围（7-9mmol/l或126-160mg/dl）内选取读数进行校准，此举可为点斜式校准提供更优的数据范围。
+-   If it all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
 
 ## 设置传感器 (G6)
 
@@ -22,7 +22,7 @@
 
 ### 连接问题
 
-蓝牙连接可能受到附近其他蓝牙设备的干扰，例如血糖仪、耳机、平板电脑，或微波炉、电磁炉等厨房电器。若出现此情况，xDrip+将不会显示任何血糖值。当蓝牙连接恢复时，系统将自动回填数据。
+蓝牙连接可能受到附近其他蓝牙设备的干扰，例如血糖仪、耳机、平板电脑，或微波炉、电磁炉等厨房电器。 In this case xDrip does not display any BG values. 当蓝牙连接恢复时，系统将自动回填数据。
 
 ### 传感器错误
 
@@ -32,10 +32,10 @@
 
 ### 跳点
 
-您可以尝试在xDrip+中调整噪声阻断设置（设置 - 应用间设置 - 噪声阻断），例如选择"阻断极高噪声及更差信号"。另请参阅[血糖数据平滑处理](../CompatibleCgms/SmoothingBloodGlucoseData.md)。
+You might try to change settings for noise blocking in xDrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". 另请参阅[血糖数据平滑处理](../CompatibleCgms/SmoothingBloodGlucoseData.md)。
 
 ### 传感器负向使用时长
 
-![Negative sensor age](../images/Troubleshooting_SensorAge.png)
+![Sensor age on the Sensor row of the expanded status panel](../images/main/main_status_row_expanded.png)
 
-当[操作选项卡/菜单](#screens-action-tab)中出现重复的"CGM传感器植入"记录，或传感器植入日期错误时，即会出现此情况。请前往治疗记录选项卡 > careportal删除错误条目。
+The sensor age is shown on the **Sensor** row of the status panel on the main screen (tap the chevron to expand it). A negative age occurs if there is either a double "CGM Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Open **Treatments history** (menu ☰), select the **Careportal** tab and delete the wrong entry.

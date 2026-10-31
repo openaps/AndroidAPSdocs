@@ -1,9 +1,9 @@
 (aaps-builder)=
 
-# Browser build with AAPS Builder
+# Δημιουργία μέσω browser με το AAPS Builder
 
 ```{note}
-This is the recommended way to build AAPS from an **Android phone**. It also works from any computer browser. For the other ways to build from a computer or an iPhone, see the [Browser build](BrowserBuild.md) overview.
+Αυτός είναι ο προτεινόμενος τρόπος για να δημιουργήσετε το AAPS από ένα **τηλέφωνο Android**. Λειτουργεί επίσης από οποιονδήποτε browser σε υπολογιστή. Για τους άλλους τρόπους δημιουργίας από υπολογιστή ή iPhone, δείτε την επισκόπηση [Δημιουργία μέσω browser](BrowserBuild.md).
 ```
 
 ```{contents} In this page
@@ -11,384 +11,381 @@ This is the recommended way to build AAPS from an **Android phone**. It also wor
 :depth: 2
 ```
 
-**AAPS Builder** builds the AAPS app for you in GitHub, the free code-hosting website. There is nothing to install on your phone, and no preparation file to open.
+Το **AAPS Builder** δημιουργεί την εφαρμογή AAPS για εσάς στο GitHub, τον δωρεάν ιστότοπο φιλοξενίας κώδικα. Δεν χρειάζεται να εγκαταστήσετε τίποτα στο τηλέφωνό σας και δεν υπάρχει αρχείο προετοιμασίας για να ανοίξετε.
 
-A setup page on this site walks you through it. It takes about 10 minutes the first time:
+Μια σελίδα ρύθμισης σε αυτόν τον ιστότοπο σας καθοδηγεί βήμα προς βήμα. Την πρώτη φορά χρειάζεται περίπου 10 λεπτά:
 
-1. Create an empty **private** repository in your GitHub account: the setup page opens GitHub with everything filled in, you only confirm.
-2. Add the **build workflow**, the file that tells GitHub how to build AAPS.
-3. Create or upload your **signing key** (the keystore).
-4. Give the key to your repository as a GitHub **secret**.
-5. **Build** the app. One build takes 15 to 30 minutes.
-6. **Download and install** the app on your phone.
+1. Δημιουργήστε ένα κενό **ιδιωτικό** αποθετήριο στον λογαριασμό σας στο GitHub: η σελίδα ρύθμισης ανοίγει το GitHub με όλα συμπληρωμένα, εσείς απλώς επιβεβαιώνετε.
+2. Προσθέστε το **build workflow**, το αρχείο που λέει στο GitHub πώς να δημιουργήσει το AAPS.
+3. Δημιουργήστε ή ανεβάστε το **κλειδί υπογραφής** σας (το keystore).
+4. Δώστε το κλειδί στο αποθετήριό σας ως **secret** του GitHub.
+5. Κάντε **build** της εφαρμογής. Ένα build διαρκεί 15 έως 30 λεπτά.
+6. **Κατεβάστε και εγκαταστήστε** την εφαρμογή στο τηλέφωνό σας.
 
-You do **not** need to fork AndroidAPS: the AAPS source code is downloaded from the official AndroidAPS repository at every build. You also do **not** need Google Drive: you download the app directly from GitHub.
+**Δεν** χρειάζεται να κάνετε fork το AndroidAPS: ο πηγαίος κώδικας του AAPS κατεβαίνει από το επίσημο αποθετήριο AndroidAPS σε κάθε build. Επίσης **δεν** χρειάζεστε το Google Drive: κατεβάζετε την εφαρμογή απευθείας από το GitHub.
 
 ```{admonition} Where the code comes from
 :class: note
 
-The setup page and the build workflow are part of this documentation: they are maintained and reviewed together with it. The <a href="../_static/aaps-builder/aaps-builder-build.yml">workflow</a> you add to your repository is short: it runs the [build steps](https://github.com/openaps/AndroidAPSdocs/blob/dev/.github/workflows/aaps-builder.yml) kept in the documentation repository, pinned to one reviewed version. You can read both before you use them. When it builds, the workflow downloads only the official AAPS source code and GitHub's own build tools. Your keystore never leaves your browser and your private repository.
+Η σελίδα ρύθμισης και το build workflow είναι μέρος αυτής της τεκμηρίωσης: συντηρούνται και ελέγχονται μαζί με αυτήν. Το <a href="../_static/aaps-builder/aaps-builder-build.yml">workflow</a> που προσθέτετε στο αποθετήριό σας είναι μικρό: εκτελεί τα [βήματα build](https://github.com/openaps/AndroidAPSdocs/blob/dev/.github/workflows/aaps-builder.yml) που φυλάσσονται στο αποθετήριο της τεκμηρίωσης, κλειδωμένα σε μία ελεγμένη έκδοση. Μπορείτε να διαβάσετε και τα δύο πριν τα χρησιμοποιήσετε. Κατά το build, το workflow κατεβάζει μόνο τον επίσημο πηγαίο κώδικα του AAPS και τα εργαλεία build του ίδιου του GitHub. Το keystore σας δεν φεύγει ποτέ από τον browser σας και το ιδιωτικό αποθετήριό σας.
 ```
 
 (aaps-builder-before-you-start)=
 
-## Before you start
+## Πριν ξεκινήσετε
 
-You will need:
+Θα χρειαστείτε:
 
-- A **GitHub account** (free). If you don't have one, create it on [github.com](https://github.com/signup) first.
-- A **web browser**: Chrome on your phone, or any browser on a computer. Log in to github.com in that browser before you start.
-- **GitHub app on your phone?** You can keep it. Some buttons of the setup page then open the app instead of Chrome. Building works in the app, but the app **cannot download** the finished AAPS: [step 6](#aaps-builder-step6) shows how to switch to Chrome for the download.
-- Your **existing keystore** (`.jks` file), its password and its alias, if you built AAPS before and want to update it without reinstalling.
+- Έναν **λογαριασμό GitHub** (δωρεάν). Αν δεν έχετε, δημιουργήστε πρώτα έναν στο [github.com](https://github.com/signup).
+- Έναν **browser**: το Chrome στο τηλέφωνό σας ή οποιονδήποτε browser σε υπολογιστή. Συνδεθείτε στο github.com σε αυτόν τον browser πριν ξεκινήσετε.
+- **Έχετε την εφαρμογή GitHub στο τηλέφωνό σας;** Μπορείτε να την κρατήσετε. Τότε κάποια κουμπιά της σελίδας ρύθμισης ανοίγουν την εφαρμογή αντί για το Chrome. Το build λειτουργεί στην εφαρμογή, αλλά η εφαρμογή **δεν μπορεί να κατεβάσει** το έτοιμο AAPS: το [βήμα 6](#aaps-builder-step6) δείχνει πώς να περάσετε στο Chrome για τη λήψη.
+- Το **υπάρχον keystore** σας (αρχείο `.jks`), τον κωδικό του και το alias του, αν έχετε δημιουργήσει το AAPS στο παρελθόν και θέλετε να το ενημερώσετε χωρίς επανεγκατάσταση.
 
 ```{warning}
-**Your build repository must stay private.** Everything a build produces is visible to anyone who can see the repository. The setup page creates a private repository for you. Never change it to public.
+**Το αποθετήριο build σας πρέπει να μείνει ιδιωτικό.** Ό,τι παράγει ένα build το βλέπει όποιος μπορεί να δει το αποθετήριο. Η σελίδα ρύθμισης δημιουργεί για εσάς ένα ιδιωτικό αποθετήριο. Μην το αλλάξετε ποτέ σε δημόσιο.
 
-A private repository gets 2000 free GitHub Actions minutes per month, which is enough for several builds.
+Ένα ιδιωτικό αποθετήριο έχει 2000 δωρεάν λεπτά GitHub Actions τον μήνα, που αρκούν για αρκετά builds.
 ```
 
 ```{warning}
-**New key or existing key: this decides whether you can update AAPS.**
+**Νέο κλειδί ή υπάρχον κλειδί: αυτό αποφασίζει αν μπορείτε να ενημερώσετε το AAPS.**
 
-- **You already have AAPS on your phone, built with a keystore you still have**: choose **I already have a keystore** on the setup page and upload it. Your next build will update AAPS in place. Built AAPS with the previous browser build (your own fork)? Your keystore is in your fork: [get a copy of it first](#aaps-builder-from-fork).
-- **You build AAPS for the first time, or you lost your keystore or its password**: choose **Create a new key**. An app signed with a new key **cannot update** an AAPS signed with another key. You must export your settings, copy the file off your phone, uninstall the old AAPS, install the new one, then import your settings: see [Lost keystore](#troubleshooting_androidstudio-lost-keystore).
+- **Έχετε ήδη το AAPS στο τηλέφωνό σας, δημιουργημένο με ένα keystore που ακόμα έχετε**: επιλέξτε **I already have a keystore** (έχω ήδη keystore) στη σελίδα ρύθμισης και ανεβάστε το. Το επόμενο build σας θα ενημερώσει το υπάρχον AAPS. Δημιουργήσατε το AAPS με την προηγούμενη μέθοδο μέσω browser (το δικό σας fork); Το keystore σας βρίσκεται στο fork σας: [πάρτε πρώτα ένα αντίγραφό του](#aaps-builder-from-fork).
+- **Δημιουργείτε το AAPS για πρώτη φορά ή χάσατε το keystore ή τον κωδικό του**: επιλέξτε **Create a new key** (δημιουργία νέου κλειδιού). Μια εφαρμογή υπογεγραμμένη με νέο κλειδί **δεν μπορεί να ενημερώσει** ένα AAPS υπογεγραμμένο με άλλο κλειδί. Πρέπει να εξαγάγετε τις ρυθμίσεις σας, να αντιγράψετε το αρχείο έξω από το τηλέφωνό σας, να απεγκαταστήσετε το παλιό AAPS, να εγκαταστήσετε το νέο και μετά να εισαγάγετε τις ρυθμίσεις σας: δείτε [Επανεγκατάσταση του AAPS με νέο keystore](#reinstall-aaps).
 
-Always keep using the same key afterwards. When you create a new key, download the backup the page offers and store it with its password and its alias (`key0`) somewhere safe, off your phone.
+Μετά, χρησιμοποιείτε πάντα το ίδιο κλειδί. Όταν δημιουργείτε νέο κλειδί, κατεβάστε το αντίγραφο ασφαλείας που προσφέρει η σελίδα και φυλάξτε το μαζί με τον κωδικό του και το alias του (`key0`) σε ασφαλές μέρος, έξω από το τηλέφωνό σας.
 ```
 
 (aaps-builder-from-fork)=
 
-## Coming from the previous browser build (fork)
+## Αν έρχεστε από την προηγούμενη μέθοδο μέσω browser (fork)
 
-Skip this section if you never built AAPS with the previous browser build method (your own copy, or fork, of AndroidAPS in GitHub, with the preparation file and Google Drive).
+Παραλείψτε αυτή την ενότητα αν δεν έχετε δημιουργήσει ποτέ το AAPS με την προηγούμενη μέθοδο μέσω browser (το δικό σας αντίγραφο, ή fork, του AndroidAPS στο GitHub, με το αρχείο προετοιμασίας και το Google Drive).
 
-Your keystore is stored as secrets in your fork. GitHub never shows a secret again, so you can't copy it to your new repository. Get a copy of your keystore first, then use it in [step 3](#aaps-builder-step3) with **I already have a keystore**.
+Το keystore σας είναι αποθηκευμένο ως secrets στο fork σας. Το GitHub δεν δείχνει ποτέ ξανά ένα secret, οπότε δεν μπορείτε να το αντιγράψετε στο νέο σας αποθετήριο. Πάρτε πρώτα ένα αντίγραφο του keystore σας και μετά χρησιμοποιήστε το στο [βήμα 3](#aaps-builder-step3) με το **I already have a keystore**.
 
 ```{warning}
-Don't choose **Create a new key**. AAPS built with a new key cannot update the AAPS on your phone.
+Μην επιλέξετε **Create a new key**. Ένα AAPS δημιουργημένο με νέο κλειδί δεν μπορεί να ενημερώσει το AAPS στο τηλέφωνό σας.
 ```
 
-Which case is yours?
+Ποια είναι η δική σας περίπτωση;
 
-- **You used Option 2** (you uploaded your own keystore from Android Studio), and you still have the `.jks` file, its passwords and its alias: nothing to do here. Use that file in step 3.
-- **You used Option 1** (the preparation file created your key), or you no longer have your keystore file: export it from your fork as below.
+- **Χρησιμοποιήσατε την Επιλογή 2** (ανεβάσατε το δικό σας keystore από το Android Studio) και έχετε ακόμα το αρχείο `.jks`, τους κωδικούς του και το alias του: δεν χρειάζεται να κάνετε τίποτα εδώ. Χρησιμοποιήστε αυτό το αρχείο στο βήμα 3.
+- **Χρησιμοποιήσατε την Επιλογή 1** (το αρχείο προετοιμασίας δημιούργησε το κλειδί σας) ή δεν έχετε πια το αρχείο του keystore: εξαγάγετέ το από το fork σας όπως παρακάτω.
 
-To export your keystore from your fork:
+Για να εξαγάγετε το keystore σας από το fork σας:
 
-1. In your fork, open **Settings** → **Secrets and variables** → **Actions** and add a secret named `ZIP_PASSWORD`. Choose a password with only English letters and numbers. It protects the file you are about to create.
-2. Open the **Actions** tab of your fork, tap **CI Keystore Export**, then **Run workflow**. More details: [Export your keystore](#ci-keystore-export).
-3. When the run has a green check, open your Google Drive: the file `keystore.zip` is in the folder **AAPS** → **KeyStore**. If the run fails at the Google Drive step, your fork's Google Drive access has expired: see [Google refresh token expired](#aaps-ci-google-token-expired).
-4. Download `keystore.zip` and open it with your `ZIP_PASSWORD`: on a computer, or on your phone with a file manager app that can open password-protected ZIP files. It contains:
-   - `keystore.jks`: your keystore,
-   - `keyStoreInfo.txt`: your `KEYSTORE_PASSWORD`, `KEY_PASSWORD` and `ALIAS` (usually `key0`).
-5. Copy `keystore.jks` to your phone (or to Google Drive, so you can pick it from there).
+1. Στο fork σας, ανοίξτε **Settings** → **Secrets and variables** → **Actions** και προσθέστε ένα secret με όνομα `ZIP_PASSWORD`. Επιλέξτε έναν κωδικό μόνο με αγγλικά γράμματα και αριθμούς. Προστατεύει το αρχείο που θα δημιουργήσετε.
+2. Ανοίξτε την καρτέλα **Actions** του fork σας, πατήστε **CI Keystore Export** και μετά **Run workflow**. Περισσότερες λεπτομέρειες: [Εξαγωγή του keystore σας](#ci-keystore-export).
+3. Όταν η εκτέλεση έχει πράσινο τικ, ανοίξτε το Google Drive σας: το αρχείο `keystore.zip` βρίσκεται στον φάκελο **AAPS** → **KeyStore**. Αν η εκτέλεση αποτύχει στο βήμα του Google Drive, η πρόσβαση του fork σας στο Google Drive έχει λήξει: δείτε [Το Google Refresh Token έληξε](#aaps-ci-google-token-expired).
+4. Κατεβάστε το `keystore.zip` και ανοίξτε το με το `ZIP_PASSWORD` σας: σε υπολογιστή ή στο τηλέφωνό σας με μια εφαρμογή διαχείρισης αρχείων που ανοίγει αρχεία ZIP με κωδικό. Περιέχει:
+   - `keystore.jks`: το keystore σας,
+   - `keyStoreInfo.txt`: τα `KEYSTORE_PASSWORD`, `KEY_PASSWORD` και `ALIAS` σας (συνήθως `key0`).
+5. Αντιγράψτε το `keystore.jks` στο τηλέφωνό σας (ή στο Google Drive, για να το επιλέξετε από εκεί).
 
-In [step 3](#aaps-builder-step3) of the setup page:
+Στο [βήμα 3](#aaps-builder-step3) της σελίδας ρύθμισης:
 
-1. Tap **I already have a keystore**.
-2. In **Keystore file**, choose `keystore.jks`.
-3. In **Keystore password**, type the `KEYSTORE_PASSWORD` from `keyStoreInfo.txt`.
-4. In **Key alias**, pick or type the `ALIAS` from `keyStoreInfo.txt`.
-5. If `KEY_PASSWORD` is different from `KEYSTORE_PASSWORD`, untick **Key password is the same as the keystore password** and type the `KEY_PASSWORD`.
+1. Πατήστε **I already have a keystore**.
+2. Στο **Keystore file**, επιλέξτε `keystore.jks`.
+3. Στο **Keystore password**, πληκτρολογήστε το `KEYSTORE_PASSWORD` από το `keyStoreInfo.txt`.
+4. Στο **Key alias**, επιλέξτε ή πληκτρολογήστε το `ALIAS` από το `keyStoreInfo.txt`.
+5. Αν το `KEY_PASSWORD` είναι διαφορετικό από το `KEYSTORE_PASSWORD`, αποεπιλέξτε το **Key password is the same as the keystore password** και πληκτρολογήστε το `KEY_PASSWORD`.
 
-Keep `keystore.zip` and its `ZIP_PASSWORD` somewhere safe, off your phone: it is the backup of your key.
+Φυλάξτε το `keystore.zip` και το `ZIP_PASSWORD` του σε ασφαλές μέρος, έξω από το τηλέφωνό σας: είναι το αντίγραφο ασφαλείας του κλειδιού σας.
 
-Your fork's Google Drive access can't be copied either. To also save the builds of AAPS Builder in Google Drive, do [step 7](#aaps-builder-google-drive). You can keep your fork until AAPS built with AAPS Builder is installed on your phone.
+Ούτε η πρόσβαση του fork σας στο Google Drive μπορεί να αντιγραφεί. Για να αποθηκεύονται και τα builds του AAPS Builder στο Google Drive, κάντε το [βήμα 7](#aaps-builder-google-drive). Μπορείτε να κρατήσετε το fork σας μέχρι να εγκατασταθεί στο τηλέφωνό σας το AAPS που δημιουργήθηκε με το AAPS Builder.
 
-## Open the setup page
+## Ανοίξτε τη σελίδα ρύθμισης
 
-**→ [Open the AAPS Builder setup page](#aaps-builder-setup)**
+**→ [Ανοίξτε τη σελίδα ρύθμισης του AAPS Builder](#aaps-builder-setup)**
 
-Keep this documentation page open: long-press the link above and choose **Open in new tab**. The steps below explain each part of the setup page in more detail.
+Κρατήστε αυτή τη σελίδα της τεκμηρίωσης ανοιχτή: πατήστε παρατεταμένα τον παραπάνω σύνδεσμο και επιλέξτε **Open in new tab** (Άνοιγμα σε νέα καρτέλα). Τα παρακάτω βήματα εξηγούν πιο αναλυτικά κάθε μέρος της σελίδας ρύθμισης.
 
-The setup page opens each GitHub page in a new Chrome tab. To come back to the setup page, tap the tab button next to Chrome's address bar (the square with a number) and choose the AAPS Builder setup page.
+Η σελίδα ρύθμισης ανοίγει κάθε σελίδα του GitHub σε νέα καρτέλα του Chrome. Για να επιστρέψετε στη σελίδα ρύθμισης, πατήστε το κουμπί καρτελών δίπλα στη γραμμή διευθύνσεων του Chrome (το τετράγωνο με έναν αριθμό) και επιλέξτε τη σελίδα ρύθμισης του AAPS Builder.
 
-The setup page runs entirely in your browser: your key and passwords are never sent anywhere, except into the GitHub secret you paste them into yourself. Only your GitHub username is sent to GitHub, to check that it exists. It remembers your GitHub username and repository name, so you can come back to it at any time to reopen your secrets page or your builds.
+Η σελίδα ρύθμισης λειτουργεί εξ ολοκλήρου στον browser σας: το κλειδί και οι κωδικοί σας δεν στέλνονται πουθενά, εκτός από το secret του GitHub στο οποίο τα επικολλάτε εσείς. Μόνο το όνομα χρήστη σας στο GitHub στέλνεται στο GitHub, για να ελεγχθεί ότι υπάρχει. Θυμάται το όνομα χρήστη σας στο GitHub και το όνομα του αποθετηρίου, ώστε να μπορείτε να επιστρέψετε οποιαδήποτε στιγμή για να ανοίξετε ξανά τη σελίδα των secrets ή τα builds σας.
 
-![The AAPS Builder setup page](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
+![Η σελίδα ρύθμισης του AAPS Builder](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
 
 (aaps-builder-step1)=
 
-## Step 1 – Create your private build repository
+## Βήμα 1 – Δημιουργήστε το ιδιωτικό αποθετήριο build
 
-This step creates an empty private repository in your GitHub account. Only you can see it and the apps it builds.
+Αυτό το βήμα δημιουργεί ένα κενό ιδιωτικό αποθετήριο στον λογαριασμό σας στο GitHub. Μόνο εσείς μπορείτε να δείτε το αποθετήριο και τις εφαρμογές που δημιουργεί.
 
-1. Make sure you are logged in to github.com in this browser.
+1. Βεβαιωθείτε ότι είστε συνδεδεμένοι στο github.com σε αυτόν τον browser.
 
-2. In **Your GitHub username**, type your GitHub username, not your e-mail. The page checks it with GitHub: **✓ GitHub user found** means it is right.
+2. Στο **Your GitHub username** (το όνομα χρήστη σας στο GitHub), πληκτρολογήστε το όνομα χρήστη σας στο GitHub, όχι το e-mail σας. Η σελίδα το ελέγχει με το GitHub: το **✓ GitHub user found** (βρέθηκε ο χρήστης GitHub) σημαίνει ότι είναι σωστό.
 
-3. In **Name of your repository**, keep the suggestion `my-aaps`. If you already created your repository with another name, type that exact name.
+3. Στο **Name of your repository** (όνομα του αποθετηρίου σας), αφήστε την πρόταση `my-aaps`. Αν έχετε ήδη δημιουργήσει το αποθετήριό σας με άλλο όνομα, πληκτρολογήστε ακριβώς αυτό το όνομα.
 
    ```{tip}
-   **Already created an empty private repository yourself?** Type its exact name here, don't tap **Create my private repository**, and go to [step 2](#aaps-builder-step2).
+   **Έχετε ήδη δημιουργήσει μόνοι σας ένα κενό ιδιωτικό αποθετήριο;** Πληκτρολογήστε εδώ ακριβώς το όνομά του, μην πατήσετε **Create my private repository** και πηγαίνετε στο [βήμα 2](#aaps-builder-step2).
    ```
 
-4. Check the line **Your repository:** it shows `github.com/<your username>/my-aaps`.
+4. Ελέγξτε τη γραμμή **Your repository:** (το αποθετήριό σας): δείχνει `github.com/<your username>/my-aaps`.
 
-5. Tap **Create my private repository**.
+5. Πατήστε **Create my private repository** (δημιουργία του ιδιωτικού μου αποθετηρίου).
 
-   ![Setup page step 1 filled in](../images/Building-the-App/CI/AapsBuilder31_Step1Filled.png)
+   ![Το βήμα 1 της σελίδας ρύθμισης συμπληρωμένο](../images/Building-the-App/CI/AapsBuilder31_Step1Filled.png)
 
-6. GitHub opens in a new tab with your account as **Owner** and the name you chose.
+6. Το GitHub ανοίγει σε νέα καρτέλα με τον λογαριασμό σας ως **Owner** (κάτοχος) και το όνομα που επιλέξατε.
 
-   ![GitHub Create a new repository page](../images/Building-the-App/CI/AapsBuilder32_GitHubNewRepo.png)
+   ![Η σελίδα Create a new repository του GitHub](../images/Building-the-App/CI/AapsBuilder32_GitHubNewRepo.png)
 
-   Scroll down: **Private**, **No template** and **Add README: Off** are already selected. Don't change anything, and don't add a README or other files.
+   Κάντε κύλιση προς τα κάτω: τα **Private**, **No template** και **Add README: Off** είναι ήδη επιλεγμένα. Μην αλλάξετε τίποτα και μην προσθέσετε README ή άλλα αρχεία.
 
-7. Scroll down and tap the green **Create repository** button.
+7. Κάντε κύλιση προς τα κάτω και πατήστε το πράσινο κουμπί **Create repository**.
 
-   ![Create repository button](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
+   ![Το κουμπί Create repository](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
 
-   GitHub shows your new, empty repository. **Go back to the setup page tab** for step 2: tap the tab button next to Chrome's address bar and choose the setup page.
+   Το GitHub δείχνει το νέο, κενό αποθετήριό σας. **Επιστρέψτε στην καρτέλα της σελίδας ρύθμισης** για το βήμα 2: πατήστε το κουμπί καρτελών δίπλα στη γραμμή διευθύνσεων του Chrome και επιλέξτε τη σελίδα ρύθμισης.
 
 (aaps-builder-step2)=
 
-## Step 2 – Add the build workflow
+## Βήμα 2 – Προσθέστε το build workflow
 
-The build workflow is a short text file that tells GitHub how to build AAPS. The setup page adds it to your repository, once: you only confirm it.
+Το build workflow είναι ένα μικρό αρχείο κειμένου που λέει στο GitHub πώς να δημιουργήσει το AAPS. Η σελίδα ρύθμισης το προσθέτει στο αποθετήριό σας μία φορά: εσείς απλώς το επιβεβαιώνετε.
 
-1. Check that the page shows **Workflow version … is ready**, then tap **Add the workflow to my repository**.
+1. Ελέγξτε ότι η σελίδα δείχνει **Workflow version … is ready** (η έκδοση του workflow είναι έτοιμη) και μετά πατήστε **Add the workflow to my repository** (προσθήκη του workflow στο αποθετήριό μου).
 
-   ![Step 2 of the setup page](../images/Building-the-App/CI/AapsBuilder35_Step2.png)
+   ![Βήμα 2 της σελίδας ρύθμισης](../images/Building-the-App/CI/AapsBuilder35_Step2.png)
 
-2. GitHub opens a new file in your repository, already named `.github/workflows/build.yml` and already filled in. Check the file name at the top: it must be exactly `.github/workflows/build.yml`. Don't change the text.
+2. Το GitHub ανοίγει ένα νέο αρχείο στο αποθετήριό σας, που έχει ήδη το όνομα `.github/workflows/build.yml` και είναι ήδη συμπληρωμένο. Ελέγξτε το όνομα του αρχείου στο πάνω μέρος: πρέπει να είναι ακριβώς `.github/workflows/build.yml`. Μην αλλάξετε το κείμενο.
 
-3. Tap **Commit changes…**
+3. Πατήστε **Commit changes…**
 
-   ![The workflow, filled in by the setup page](../images/Building-the-App/CI/AapsBuilder37_NewFilePasted.png)
+   ![Το workflow, συμπληρωμένο από τη σελίδα ρύθμισης](../images/Building-the-App/CI/AapsBuilder37_NewFilePasted.png)
 
-4. then **Commit changes** again in the window that opens.
+4. και μετά ξανά **Commit changes** στο παράθυρο που ανοίγει.
 
-   ![Commit changes window](../images/Building-the-App/CI/AapsBuilder38_CommitDialog.png)
+   ![Το παράθυρο Commit changes](../images/Building-the-App/CI/AapsBuilder38_CommitDialog.png)
 
-   GitHub shows the new file `build.yml` in the `.github/workflows` folder of your repository.
+   Το GitHub δείχνει το νέο αρχείο `build.yml` στον φάκελο `.github/workflows` του αποθετηρίου σας.
 
-   ![The workflow file in your repository](../images/Building-the-App/CI/AapsBuilder39_WorkflowAdded.png)
+   ![Το αρχείο του workflow στο αποθετήριό σας](../images/Building-the-App/CI/AapsBuilder39_WorkflowAdded.png)
 
 ```{warning}
-Don't press your phone's **Back** button or pull the page down while the file editor is open: GitHub reloads the page and the text disappears. If that happens, tap **Restore** in the blue banner, or go back to the setup page and tap the button again.
+Μην πατήσετε το κουμπί **Back** (Πίσω) του τηλεφώνου σας και μην τραβήξετε τη σελίδα προς τα κάτω ενώ είναι ανοιχτός ο επεξεργαστής αρχείου: το GitHub φορτώνει ξανά τη σελίδα και το κείμενο χάνεται. Αν συμβεί αυτό, πατήστε **Restore** (επαναφορά) στη μπλε λωρίδα ή επιστρέψτε στη σελίδα ρύθμισης και πατήστε ξανά το κουμπί.
 ```
 
-If the text area is empty, tap **Updating the workflow, or the text area is empty?** at the bottom of step 2 on the setup page: tap **Copy workflow** and paste it into the text area (long press on a phone).
+Αν το πλαίσιο κειμένου είναι κενό, πατήστε **Updating the workflow, or the text area is empty?** στο κάτω μέρος του βήματος 2 στη σελίδα ρύθμισης: πατήστε **Copy workflow** και επικολλήστε το στο πλαίσιο κειμένου (σε τηλέφωνο, με παρατεταμένο πάτημα).
 
 ```{warning}
-Only use the workflow from this setup page. Don't copy a build workflow from another website or repository: the workflow runs next to your signing key.
+Χρησιμοποιείτε μόνο το workflow από αυτή τη σελίδα ρύθμισης. Μην αντιγράψετε build workflow από άλλον ιστότοπο ή αποθετήριο: το workflow εκτελείται δίπλα στο κλειδί υπογραφής σας.
 ```
 
 (aaps-builder-step3)=
 
-## Step 3 – Your signing key
+## Βήμα 3 – Το κλειδί υπογραφής σας
 
-The app must be signed with your own key. Choose one of the two tabs. Read the [new key or existing key warning](#aaps-builder-before-you-start) first.
+Η εφαρμογή πρέπει να υπογραφεί με το δικό σας κλειδί. Επιλέξτε μία από τις δύο καρτέλες. Διαβάστε πρώτα την [προειδοποίηση για νέο ή υπάρχον κλειδί](#aaps-builder-before-you-start).
 
-![Setup page step 3: the two key options](../images/Building-the-App/CI/AapsBuilder40_Step3.png)
+![Βήμα 3 της σελίδας ρύθμισης: οι δύο επιλογές κλειδιού](../images/Building-the-App/CI/AapsBuilder40_Step3.png)
 
-### I already have a keystore
+### I already have a keystore (έχω ήδη keystore)
 
-1. Tap **I already have a keystore**.
-2. In **Keystore file**, choose your `.jks` file (or `.keystore`, `.p12`, `.pfx`). On a phone, copy the file to your phone or to Google Drive first.
-3. In **Keystore password**, type the keystore password.
-4. In **Key alias**, pick your alias from the list, or type it if there is no list. For keystores made with Android Studio it is usually `key0`.
-5. If your key password is different from the keystore password, untick **Key password is the same as the keystore password** and type the key password.
-6. Tap **Check and continue**.
+1. Πατήστε **I already have a keystore**.
+2. Στο **Keystore file** (αρχείο keystore), επιλέξτε το αρχείο `.jks` σας (ή `.keystore`, `.p12`, `.pfx`). Σε τηλέφωνο, αντιγράψτε πρώτα το αρχείο στο τηλέφωνό σας ή στο Google Drive.
+3. Στο **Keystore password** (κωδικός keystore), πληκτρολογήστε τον κωδικό του keystore.
+4. Στο **Key alias** (alias κλειδιού), επιλέξτε το alias σας από τη λίστα ή πληκτρολογήστε το αν δεν υπάρχει λίστα. Για keystore που δημιουργήθηκαν με το Android Studio είναι συνήθως `key0`.
+5. Αν ο κωδικός του κλειδιού σας είναι διαφορετικός από τον κωδικό του keystore, αποεπιλέξτε το **Key password is the same as the keystore password** (ο κωδικός κλειδιού είναι ίδιος με τον κωδικό keystore) και πληκτρολογήστε τον κωδικό του κλειδιού.
+6. Πατήστε **Check and continue** (έλεγχος και συνέχεια).
 
-The page checks the password and the alias on your device. **Keystore OK! Continue with step 4.** means everything is right. If it says the password will be checked when you build, continue anyway: the build tells you if something is wrong.
+Η σελίδα ελέγχει τον κωδικό και το alias στη συσκευή σας. **Keystore OK! Continue with step 4.** σημαίνει ότι όλα είναι σωστά. Αν λέει ότι ο κωδικός θα ελεγχθεί κατά το build, συνεχίστε κανονικά: το build θα σας πει αν κάτι είναι λάθος.
 
-### Create a new key
+### Create a new key (δημιουργία νέου κλειδιού)
 
-1. Tap **Create a new key**.
+1. Πατήστε **Create a new key**.
 
-2. Choose a password and type it twice. Rules: at least 8 characters, only the letters a–z and A–Z, the digits 0–9 and symbols such as `! ? #`. No spaces, no accented letters, and not the `|` character.
+2. Επιλέξτε έναν κωδικό και πληκτρολογήστε τον δύο φορές. Κανόνες: τουλάχιστον 8 χαρακτήρες, μόνο τα γράμματα a–z και A–Z, τα ψηφία 0–9 και σύμβολα όπως `! ? #`. Χωρίς κενά, χωρίς γράμματα με τόνους και χωρίς τον χαρακτήρα `|`.
 
-3. Tap **Create key**. It takes a few seconds before **Key created** appears.
+3. Πατήστε **Create key** (δημιουργία κλειδιού). Χρειάζονται λίγα δευτερόλεπτα μέχρι να εμφανιστεί το **Key created** (το κλειδί δημιουργήθηκε).
 
-   ![New key form with the password typed twice](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
+   ![Η φόρμα νέου κλειδιού με τον κωδικό πληκτρολογημένο δύο φορές](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
 
-4. Tap **Download backup (aaps-keystore.jks)**. If Chrome asks **Download file again?**, an older backup with the same name is already on your phone: tap **Download again**. Chrome then saves the new key as `aaps-keystore (1).jks`: that is the file that goes with this key, keep it and don't mix it up with the older one.
+4. Πατήστε **Download backup (aaps-keystore.jks)** (λήψη αντιγράφου ασφαλείας). Αν το Chrome ρωτήσει **Download file again?** (Λήψη του αρχείου ξανά;), ένα παλαιότερο αντίγραφο ασφαλείας με το ίδιο όνομα υπάρχει ήδη στο τηλέφωνό σας: πατήστε **Download again** (Λήψη ξανά). Τότε το Chrome αποθηκεύει το νέο κλειδί ως `aaps-keystore (1).jks`: αυτό είναι το αρχείο που ανήκει σε αυτό το κλειδί· κρατήστε το και μην το μπερδέψετε με το παλαιότερο.
 
-   Keep these three together, somewhere safe off your phone (for example your own cloud storage):
+   Κρατήστε αυτά τα τρία μαζί, σε ασφαλές μέρος έξω από το τηλέφωνό σας (για παράδειγμα στον δικό σας χώρο αποθήκευσης στο cloud):
 
-   - the file `aaps-keystore.jks`,
-   - your password,
-   - the alias of the key: **`key0`**.
+   - το αρχείο `aaps-keystore.jks`,
+   - τον κωδικό σας,
+   - το alias του κλειδιού: **`key0`**.
 
-   You need all three if you ever build AAPS another way, for example with Android Studio. Keys created with an earlier version of the setup page have the alias `aaps`.
+   Τα χρειάζεστε και τα τρία αν κάποτε δημιουργήσετε το AAPS με άλλον τρόπο, για παράδειγμα με το Android Studio. Τα κλειδιά που δημιουργήθηκαν με παλαιότερη έκδοση της σελίδας ρύθμισης έχουν το alias `aaps`.
 
-   ![Key created and the backup box](../images/Building-the-App/CI/AapsBuilder42_KeyCreated.png)
+   ![Το κλειδί δημιουργήθηκε και το πλαίσιο αντιγράφου ασφαλείας](../images/Building-the-App/CI/AapsBuilder42_KeyCreated.png)
 
 (aaps-builder-step4)=
 
-## Step 4 – Give the key to your repository
+## Βήμα 4 – Δώστε το κλειδί στο αποθετήριό σας
 
-Step 4 unlocks when step 3 is done. Your key, its passwords and its alias are packed into one value, the `KEYSTORE_SET` secret.
+Το βήμα 4 ξεκλειδώνει όταν ολοκληρωθεί το βήμα 3. Το κλειδί σας, οι κωδικοί του και το alias του συσκευάζονται σε μία τιμή, το secret `KEYSTORE_SET`.
 
-1. Tap **Open the secrets page**.
+1. Πατήστε **Open the secrets page** (άνοιγμα της σελίδας secrets).
 
-![Setup page step 4](../images/Building-the-App/CI/AapsBuilder43_Step4.png)
+![Βήμα 4 της σελίδας ρύθμισης](../images/Building-the-App/CI/AapsBuilder43_Step4.png)
 
-2. GitHub opens the **New secret** page of your repository. On a phone, it is below the settings menu: scroll down.
+2. Το GitHub ανοίγει τη σελίδα **New secret** του αποθετηρίου σας. Σε τηλέφωνο, βρίσκεται κάτω από το μενού ρυθμίσεων: κάντε κύλιση προς τα κάτω.
 
-![GitHub New secret form](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
+![Η φόρμα New secret του GitHub](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
 
-3. Switch to the setup page tab and tap **Copy name**. Switch back to the GitHub tab and paste it into the small **Name** field. The name is `KEYSTORE_SET`.
+3. Πηγαίνετε στην καρτέλα της σελίδας ρύθμισης και πατήστε **Copy name** (αντιγραφή ονόματος). Γυρίστε στην καρτέλα του GitHub και επικολλήστε το στο μικρό πεδίο **Name**. Το όνομα είναι `KEYSTORE_SET`.
 
-4. Switch to the setup page tab and tap **Copy secret**. Switch back to the GitHub tab and paste it into the big **Secret** box (long press on a phone). The secret is a very long code, thousands of characters: the setup page shows its first characters next to the button. Don't paste the word `KEYSTORE_SET` there.
+4. Πηγαίνετε στην καρτέλα της σελίδας ρύθμισης και πατήστε **Copy secret** (αντιγραφή secret). Γυρίστε στην καρτέλα του GitHub και επικολλήστε το στο μεγάλο πλαίσιο **Secret** (σε τηλέφωνο, με παρατεταμένο πάτημα). Το secret είναι ένας πολύ μεγάλος κωδικός, χιλιάδες χαρακτήρες: η σελίδα ρύθμισης δείχνει τους πρώτους χαρακτήρες του δίπλα στο κουμπί. Μην επικολλήσετε εκεί τη λέξη `KEYSTORE_SET`.
 
-5. Tap **Add secret**. `KEYSTORE_SET` now shows under **Repository secrets**.
+5. Πατήστε **Add secret**. Το `KEYSTORE_SET` εμφανίζεται τώρα στο **Repository secrets**.
 
-![Repository secrets list with KEYSTORE_SET](../images/Building-the-App/CI/AapsBuilder13_SecretList.png)
+![Η λίστα Repository secrets με το KEYSTORE_SET](../images/Building-the-App/CI/AapsBuilder13_SecretList.png)
 
-You only need to do this once.
+Αυτό το κάνετε μόνο μία φορά.
 
 ```{tip}
-GitHub shows **Page not found** (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise the username or repository name in step 1 doesn't match your repository. Check the name on github.com, correct it in step 1, and tap the button again.
+Το GitHub δείχνει **Page not found** (404); Ελέγξτε πρώτα ότι είστε συνδεδεμένοι στο github.com σε αυτόν τον browser: το GitHub δείχνει 404 για ιδιωτικά αποθετήρια όταν δεν είστε συνδεδεμένοι. Αλλιώς, το όνομα χρήστη ή το όνομα του αποθετηρίου στο βήμα 1 δεν ταιριάζει με το αποθετήριό σας. Ελέγξτε το όνομα στο github.com, διορθώστε το στο βήμα 1 και πατήστε ξανά το κουμπί.
 ```
 
 (aaps-builder-step5)=
 
-## Step 5 – Build the app
+## Βήμα 5 – Δημιουργήστε την εφαρμογή
 
-1. On the setup page, tap **Open the build page**. GitHub opens the **Build AAPS** page of your repository.
+1. Στη σελίδα ρύθμισης, πατήστε **Open the build page** (άνοιγμα της σελίδας build). Το GitHub ανοίγει τη σελίδα **Build AAPS** του αποθετηρίου σας.
 
-   ![GitHub Build AAPS page with the Run workflow button](../images/Building-the-App/CI/AapsBuilder15_BuildPage.png)
+   ![Η σελίδα Build AAPS του GitHub με το κουμπί Run workflow](../images/Building-the-App/CI/AapsBuilder15_BuildPage.png)
 
-   If the **GitHub app** opens instead: tap **RUN WORKFLOW**, check the version and the variant, and tap **RUN WORKFLOW** again. The app may still show **Nothing to see here**: pull the list down to refresh it and see your build. Then continue with step 4 below.
+   Αν ανοίξει η **εφαρμογή GitHub**: πατήστε **RUN WORKFLOW**, ελέγξτε την έκδοση και την παραλλαγή και πατήστε ξανά **RUN WORKFLOW**. Η εφαρμογή μπορεί να δείχνει ακόμα **Nothing to see here**: τραβήξτε τη λίστα προς τα κάτω για να ανανεωθεί και να δείτε το build σας. Μετά συνεχίστε με το βήμα 4 παρακάτω.
 
-2. If GitHub asks, tap the green button to enable workflows.
-3. Tap **Run workflow**. A small form opens:
-   - **Version**: keep `latest` to build the newest AAPS release, or type a release number such as `3.3.2.1`.
-   - **Variant**: keep `fullRelease` for normal use with a pump. The other variants are explained in [build variants](#browserbuild-variant). Don't choose `aapsclient3Release`: **AAPSClient3** only exists from **AAPS** version 4.0.
-   - Tap the green **Run workflow** button.
+2. Αν το GitHub το ζητήσει, πατήστε το πράσινο κουμπί για να ενεργοποιήσετε τα workflows.
+3. Πατήστε **Run workflow**. Ανοίγει μια μικρή φόρμα:
+   - **Version** (έκδοση): αφήστε το `latest` για να δημιουργήσετε την πιο νέα έκδοση του AAPS ή πληκτρολογήστε έναν αριθμό έκδοσης, για παράδειγμα `3.3.2.1`.
+   - **Variant** (παραλλαγή): αφήστε το `fullRelease` για κανονική χρήση με αντλία. Οι άλλες παραλλαγές εξηγούνται στις [παραλλαγές του build](#browserbuild-variant). Το `aapsclient3Release` δημιουργεί το **AAPSClient3**, που υπάρχει από την έκδοση 4.0 του **AAPS** (δείτε [Σχετικά με τα AAPSClient, AAPSClient2 και AAPSClient3](#remotecontrol-aapsclient-versions)).
+   - Πατήστε το πράσινο κουμπί **Run workflow**.
 
-   ![Run workflow form with latest and fullRelease](../images/Building-the-App/CI/AapsBuilder16_RunWorkflow.png)
+   ![Η φόρμα Run workflow με latest και fullRelease](../images/Building-the-App/CI/AapsBuilder16_RunWorkflow.png)
 
-4. The build starts and shows **In progress**, with two parts: **AAPS / Check**, then **AAPS / Build AAPS**.
+4. Το build ξεκινά και δείχνει **In progress** (σε εξέλιξη), με δύο μέρη: πρώτα **AAPS / Check** και μετά **AAPS / Build AAPS**.
 
-   ![Build in progress](../images/Building-the-App/CI/AapsBuilder45_BuildRunning.png)
+   ![Build σε εξέλιξη](../images/Building-the-App/CI/AapsBuilder45_BuildRunning.png)
 
-5. Wait 15 to 30 minutes. A green check means the build is done. A red cross means it failed: open the build to read the message, then see [troubleshooting](#aaps-builder-troubleshooting).
+5. Περιμένετε 15 έως 30 λεπτά. Ένα πράσινο τικ σημαίνει ότι το build ολοκληρώθηκε. Ένας κόκκινος σταυρός σημαίνει ότι απέτυχε: ανοίξτε το build για να διαβάσετε το μήνυμα και μετά δείτε την [αντιμετώπιση προβλημάτων](#aaps-builder-troubleshooting).
 
-   ![Finished build with a green check](../images/Building-the-App/CI/AapsBuilder22_BuildDone.png)
+   ![Ολοκληρωμένο build με πράσινο τικ](../images/Building-the-App/CI/AapsBuilder22_BuildDone.png)
 
    ```{tip}
-   **E-mail when a build is done:** GitHub only e-mails you when a build fails. To also get an e-mail when it succeeds: on github.com, open your profile picture → **Settings** → **Notifications** → **System** → **Actions**, and untick **Only notify for failed workflows**.
+   **E-mail όταν τελειώνει ένα build:** το GitHub σας στέλνει e-mail μόνο όταν ένα build αποτύχει. Για να παίρνετε e-mail και όταν πετυχαίνει: στο github.com, ανοίξτε την εικόνα του προφίλ σας → **Settings** → **Notifications** → **System** → **Actions** και αποεπιλέξτε το **Only notify for failed workflows**.
    ```
 
-If there is no **Build AAPS** or **Run workflow** button:
+Αν δεν υπάρχει κουμπί **Build AAPS** ή **Run workflow**:
 
-- Open your repository and check that the file `.github/workflows/build.yml` is there. If it is missing or has another name, do [step 2](#aaps-builder-step2) again.
-- Open the **Actions** tab. If it says workflows are disabled, tap the green button to enable them, then tap **Build AAPS** in the list.
+- Ανοίξτε το αποθετήριό σας και ελέγξτε ότι το αρχείο `.github/workflows/build.yml` υπάρχει. Αν λείπει ή έχει άλλο όνομα, κάντε ξανά το [βήμα 2](#aaps-builder-step2).
+- Ανοίξτε την καρτέλα **Actions**. Αν λέει ότι τα workflows είναι απενεργοποιημένα, πατήστε το πράσινο κουμπί για να τα ενεργοποιήσετε και μετά πατήστε **Build AAPS** στη λίστα.
 
 (aaps-builder-step6)=
 
-## Step 6 – Install the app on your phone
+## Βήμα 6 – Εγκαταστήστε την εφαρμογή στο τηλέφωνό σας
 
 ```{warning}
-**Before every update**, [export your settings](#ExportImportSettings-Automating-Settings-Export) in AAPS and copy the file **off the phone** (Google Drive, Dropbox…). Keep several older exports and the APK files there too, so you can always go back.
+**Πριν από κάθε ενημέρωση**, [εξαγάγετε τις ρυθμίσεις σας](#ExportImportSettings-Automating-Settings-Export) στο AAPS και αντιγράψτε το αρχείο **έξω από το τηλέφωνο** (Google Drive, Dropbox…). Κρατήστε εκεί και αρκετές παλαιότερες εξαγωγές και τα αρχεία APK, ώστε να μπορείτε πάντα να επιστρέψετε σε προηγούμενη έκδοση.
 ```
 
-1. On your phone, open the setup page in **Chrome**. Log in to github.com if asked.
-2. Tap **Open my builds**, then the newest build with a green check.
+1. Στο τηλέφωνό σας, ανοίξτε τη σελίδα ρύθμισης στο **Chrome**. Συνδεθείτε στο github.com αν σας ζητηθεί.
+2. Πατήστε **Open my builds** (άνοιγμα των builds μου) και μετά το πιο νέο build με πράσινο τικ.
 
    ```{admonition} The GitHub app opened instead of Chrome?
    :class: note
 
-   The GitHub app cannot download builds. In the app, open the newest build, then tap **Artifacts ↗**, or tap the share icon at the top and choose **Chrome** (or **Copy link**, then paste the link in Chrome's address bar). The build opens in Chrome: continue with the next step there.
+   Η εφαρμογή GitHub δεν μπορεί να κατεβάσει builds. Στην εφαρμογή, ανοίξτε το πιο νέο build και μετά πατήστε **Artifacts ↗** ή πατήστε το εικονίδιο κοινοποίησης στο πάνω μέρος και επιλέξτε **Chrome** (ή **Copy link** και μετά επικολλήστε τον σύνδεσμο στη γραμμή διευθύνσεων του Chrome). Το build ανοίγει στο Chrome: συνεχίστε εκεί με το επόμενο βήμα.
 
-   To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
+   Για να μην ανοίγουν οι σύνδεσμοι του GitHub στην εφαρμογή: στο Android **Ρυθμίσεις** → **Εφαρμογές** → **GitHub** → **Άνοιγμα από προεπιλογή** → απενεργοποιήστε το **Άνοιγμα υποστηριζόμενων συνδέσμων**.
    ```
 
-   ![Finished build: status Success and 2 artifacts](../images/Building-the-App/CI/AapsBuilder50_RunSummary.png)
+   ![Ολοκληρωμένο build: κατάσταση Success και 2 artifacts](../images/Building-the-App/CI/AapsBuilder50_RunSummary.png)
 
-3. Scroll down to the build summary and tap the **Download AAPS** link.
+3. Κάντε κύλιση προς τα κάτω στη σύνοψη του build και πατήστε τον σύνδεσμο **Download AAPS**.
 
-   ![Build summary with the Download AAPS link](../images/Building-the-App/CI/AapsBuilder51_DownloadLink.png)
+   ![Η σύνοψη του build με τον σύνδεσμο Download AAPS](../images/Building-the-App/CI/AapsBuilder51_DownloadLink.png)
 
    ```{tip}
-   Scroll with your finger on the text, not on the diagram of the build steps: the diagram moves instead of the page.
+   Κάντε κύλιση με το δάχτυλο πάνω στο κείμενο, όχι πάνω στο διάγραμμα με τα βήματα του build: αλλιώς μετακινείται το διάγραμμα αντί για τη σελίδα.
    ```
 
-   You can also scroll further down to **Artifacts** and tap the download icon next to `aaps-….apk`.
+   Μπορείτε επίσης να κάνετε κύλιση πιο κάτω στο **Artifacts** και να πατήσετε το εικονίδιο λήψης δίπλα στο `aaps-….apk`.
 
-   ![Artifacts with the phone and watch apps](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
+   ![Artifacts με τις εφαρμογές για τηλέφωνο και ρολόι](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 
-4. When the download is done, open Chrome's menu **⋮** → **Downloads**, tap `aaps-….apk` and choose **Install**. If asked, allow installing apps from this source.
+4. Όταν τελειώσει η λήψη, ανοίξτε το μενού του Chrome **⋮** → **Downloads** (Λήψεις), πατήστε `aaps-….apk` και επιλέξτε **Install** (Εγκατάσταση). Αν σας ζητηθεί, επιτρέψτε την εγκατάσταση εφαρμογών από αυτή την πηγή.
 
-   ![Chrome Downloads with the AAPS APK](../images/Building-the-App/CI/AapsBuilder29_Downloads.png)
+   ![Οι λήψεις του Chrome με το APK του AAPS](../images/Building-the-App/CI/AapsBuilder29_Downloads.png)
 
-`aaps-wear-….apk` is the smartwatch app. Skip it if you don't use one.
+Το `aaps-wear-….apk` είναι η εφαρμογή για το έξυπνο ρολόι. Παραλείψτε το αν δεν χρησιμοποιείτε ρολόι.
 
-The app is kept on the build page for **14 days**. It is not shown under **Code** in your repository. Copy it somewhere safe, off your phone, together with your settings exports.
+Η εφαρμογή μένει στη σελίδα του build για **14 ημέρες**. Δεν εμφανίζεται στο **Code** του αποθετηρίου σας. Αντιγράψτε την σε ασφαλές μέρος, έξω από το τηλέφωνό σας, μαζί με τις εξαγωγές των ρυθμίσεών σας.
 
-For more ways to install the app, see [Transferring and Installing AAPS](TransferringAndInstallingAaps.md).
+Για περισσότερους τρόπους εγκατάστασης της εφαρμογής, δείτε [Μεταφορά και εγκατάσταση του AAPS στο τηλέφωνό σας](TransferringAndInstallingAaps.md).
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+Από τον Σεπτέμβριο του 2026, η [επαλήθευση προγραμματιστών Android](#android-developer-verification) της Google μπορεί να εμποδίζει την εγκατάσταση του APK με πάτημα στο αρχείο, ανάλογα με τη χώρα σας. Δωρεάν λύσεις εξηγούνται σε εκείνη τη σελίδα.
 ```
 
 (aaps-builder-google-drive)=
 
-## Step 7 (optional) – Also save the app in Google Drive
+## Βήμα 7 (προαιρετικό) – Αποθηκεύστε την εφαρμογή και στο Google Drive
 
-You can also have each build saved to your Google Drive, in the folder `AAPS/<version>`. This is optional: the app is always available on the build page.
+Μπορείτε επίσης να αποθηκεύεται κάθε build στο Google Drive σας, στον φάκελο `AAPS/<version>`. Αυτό είναι προαιρετικό: η εφαρμογή είναι πάντα διαθέσιμη στη σελίδα του build.
 
-It needs one more secret, `GDRIVE_OAUTH2`. You get its value with the preparation file used by the other browser build methods:
+Χρειάζεται ένα ακόμα secret, το `GDRIVE_OAUTH2`. Την τιμή του την παίρνετε με το αρχείο προετοιμασίας που χρησιμοποιούν οι άλλες μέθοδοι δημιουργίας μέσω browser:
 
-1. On a **computer**, download the preparation file and open it as described in [Option 1 – Computer](BrowserBuildO1Computer.md). Skip the keystore part: you already have your key.
-2. Follow [Step 3 – Authorize Google Drive](#aaps-ci-google-drive-auth) to get the `GDRIVE_OAUTH2` value.
-3. On the setup page, step 7 opens your secrets page.
+1. Σε **υπολογιστή**, κατεβάστε το αρχείο προετοιμασίας και ανοίξτε το όπως περιγράφεται στην [Επιλογή 1 – Υπολογιστής](BrowserBuildO1Computer.md). Παραλείψτε το μέρος του keystore: έχετε ήδη το κλειδί σας.
+2. Ακολουθήστε το [Βήμα 3 – Εξουσιοδότηση του Google Drive](#aaps-ci-google-drive-auth) για να πάρετε την τιμή `GDRIVE_OAUTH2`.
+3. Στη σελίδα ρύθμισης, το βήμα 7 ανοίγει τη σελίδα των secrets σας.
 
-   ![Setup page step 7](../images/Building-the-App/CI/AapsBuilder48_Step7.png)
+   ![Βήμα 7 της σελίδας ρύθμισης](../images/Building-the-App/CI/AapsBuilder48_Step7.png)
 
-   Tap **Copy name**, then paste it into the small **Name** field (the name is `GDRIVE_OAUTH2`). Paste your `GDRIVE_OAUTH2` value into the big **Secret** box and tap **Add secret**.
+   Πατήστε **Copy name** και μετά επικολλήστε το στο μικρό πεδίο **Name** (το όνομα είναι `GDRIVE_OAUTH2`). Επικολλήστε την τιμή `GDRIVE_OAUTH2` σας στο μεγάλο πλαίσιο **Secret** και πατήστε **Add secret**.
 
-From the next build, the APKs are also saved in Google Drive.
+Από το επόμενο build, τα APK αποθηκεύονται και στο Google Drive.
 
-Google stops the access if you don't build for 6 months, or if you change your Google password. The build then tells you so: redo these steps. See [Google refresh token expired](#aaps-ci-google-token-expired).
+Η Google σταματά την πρόσβαση αν δεν κάνετε build για 6 μήνες ή αν αλλάξετε τον κωδικό σας στη Google. Τότε το build θα σας το πει: κάντε ξανά αυτά τα βήματα. Δείτε [Το Google Refresh Token έληξε](#aaps-ci-google-token-expired).
 
 (aaps-builder-updates)=
 
-## Updating AAPS
+## Ενημέρωση AAPS
 
-Your repository never builds anything by itself: you decide when to build, which version and which variant. When a new AAPS version is released:
+Το αποθετήριό σας δεν κάνει ποτέ build μόνο του: εσείς αποφασίζετε πότε θα γίνει build, ποια έκδοση και ποια παραλλαγή. Όταν βγει μια νέα έκδοση του AAPS:
 
-1. [Back up your settings](#aaps-builder-step6) as explained in step 6.
-2. Build the new version as in [step 5](#aaps-builder-step5). Keep `latest`, or type the release number.
-3. Download and install it as in [step 6](#aaps-builder-step6).
+1. [Κάντε αντίγραφο ασφαλείας των ρυθμίσεών σας](#aaps-builder-step6) όπως εξηγείται στο βήμα 6.
+2. Δημιουργήστε τη νέα έκδοση όπως στο [βήμα 5](#aaps-builder-step5). Αφήστε το `latest` ή πληκτρολογήστε τον αριθμό της έκδοσης.
+3. Κατεβάστε την και εγκαταστήστε την όπως στο [βήμα 6](#aaps-builder-step6).
 
-**Updates of the build workflow:** your repository never downloads a new workflow by itself, and the build steps it runs are pinned to one reviewed version. When the workflow changes, the [Docs updates & changes](../Maintenance/DocumentationUpdate.md) page says so. To update, open step 2 of the setup page, then tap **Updating the workflow, or the text area is empty?**:
+**Ενημερώσεις του build workflow:** το αποθετήριό σας δεν κατεβάζει ποτέ μόνο του νέο workflow, και τα βήματα build που εκτελεί είναι κλειδωμένα σε μία ελεγμένη έκδοση. Όταν αλλάζει το workflow, η σελίδα [Ενημερώσεις και αλλαγές της τεκμηρίωσης](../Maintenance/DocumentationUpdate.md) το αναφέρει. Για ενημέρωση, ανοίξτε το βήμα 2 της σελίδας ρύθμισης και μετά πατήστε **Updating the workflow, or the text area is empty?**:
 
-1. Tap **Copy workflow**, then **Open my workflow file**.
-2. Replace the whole text with the copied workflow (long press on a phone: **Select all**, then **Paste**).
-3. Tap **Commit changes…**, then **Commit changes**.
+1. Πατήστε **Copy workflow** (αντιγραφή workflow) και μετά **Open my workflow file** (άνοιγμα του αρχείου workflow μου).
+2. Αντικαταστήστε όλο το κείμενο με το workflow που αντιγράψατε (σε τηλέφωνο, παρατεταμένο πάτημα: **Select all** (Επιλογή όλων) και μετά **Paste** (Επικόλληση)).
+3. Πατήστε **Commit changes…** και μετά **Commit changes**.
 
-The first line of the file shows its version.
+Η πρώτη γραμμή του αρχείου δείχνει την έκδοσή του.
 
 (aaps-builder-troubleshooting)=
 
-## Troubleshooting
+## Αντιμετώπιση προβλημάτων
 
-To see why a build failed, open it from **Open my builds** on the setup page: the **Annotations** box below the diagram shows the error message. For the full log, tap the job with the red cross, then the step with the red cross.
+Για να δείτε γιατί απέτυχε ένα build, [διαβάστε το log του build](#aaps-ci-read-the-logs): τα ονόματα των βημάτων είναι διαφορετικά, αλλά βρίσκετε το σφάλμα με τον ίδιο τρόπο. Με τον ίδιο τρόπο μπορείτε επίσης να [ενημερώσετε ένα secret](#aaps-ci-update-secret) και να [τρέξετε ξανά το build](#aaps-ci-rerun).
 
-- **To change a secret**: open your repository's **Settings** → **Secrets and variables** → **Actions**, tap the pencil next to the secret, paste the new value and tap **Update secret**.
-- **To run the build again** after a fix: open the failed build, tap **⋯** at the top, then **Re-run all jobs**, or start a new build as in [step 5](#aaps-builder-step5).
+- **Το build σταματά με το μήνυμα "This repository is PUBLIC"**: στο αποθετήριό σας, ανοίξτε **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private** και μετά κάντε ξανά build.
+- **"Secret KEYSTORE_SET is missing"**: κάντε το βήμα 4 της σελίδας ρύθμισης.
+- **"The secret is too short"**, **"The secret is not a valid code"** ή **"The secret does not contain a keystore"**: επικολλήθηκε λάθος κείμενο στο secret, συχνά η ίδια η λέξη `KEYSTORE_SET` ή μόνο ένα μέρος του κωδικού. Στο αποθετήριό σας, ανοίξτε **Settings** → **Secrets and variables** → **Actions**, επεξεργαστείτε το `KEYSTORE_SET` και επικολλήστε ξανά τον μεγάλο κωδικό από το **Copy secret** (αν κλείσατε τη σελίδα ρύθμισης, κάντε πρώτα ξανά το βήμα 3).
+- **"Keystore, password or alias is wrong"**: ελέγξτε τον κωδικό και το alias του keystore σας και μετά κάντε ξανά τα βήματα 3 και 4 της σελίδας ρύθμισης.
+- **"Version … does not exist"**: η έκδοση που πληκτρολογήσατε δεν είναι έκδοση του AAPS. Χρησιμοποιήστε `latest` ή ελέγξτε τον αριθμό της έκδοσης.
+- **"Page not found" (404) όταν η σελίδα ρύθμισης ανοίγει το GitHub**: συνδεθείτε στο github.com στον ίδιο browser (το GitHub δείχνει 404 για ιδιωτικά αποθετήρια όταν δεν είστε συνδεδεμένοι). Αν είστε συνδεδεμένοι, το όνομα χρήστη ή το όνομα του αποθετηρίου στο βήμα 1 της σελίδας ρύθμισης δεν ταιριάζει με το αποθετήριό σας. Πληκτρολογήστε ακριβώς τα ονόματα.
+- **"No GitHub user with this name"** στο βήμα 1: πληκτρολογήστε το όνομα χρήστη σας στο GitHub, όπως φαίνεται στο προφίλ σας στο GitHub, όχι το e-mail σας.
+- **Δεν υπάρχει σύνδεσμος Download ή άνοιξε η εφαρμογή GitHub**: η εφαρμογή GitHub δεν μπορεί να κατεβάσει builds. Ανοίξτε το build στο Chrome όπως εξηγείται στο [βήμα 6](#aaps-builder-step6). Για να μην ανοίγουν οι σύνδεσμοι του GitHub στην εφαρμογή: στο Android **Ρυθμίσεις** → **Εφαρμογές** → **GitHub** → **Άνοιγμα από προεπιλογή** → απενεργοποιήστε το **Άνοιγμα υποστηριζόμενων συνδέσμων**.
+- **"Could not read the workflow file"** στη σελίδα ρύθμισης: φορτώστε ξανά τη σελίδα και πατήστε ξανά το κουμπί. Η σελίδα ρύθμισης πρέπει να ανοίγει από αυτόν τον ιστότοπο τεκμηρίωσης.
+- **Το GitHub λέει ότι το αρχείο υπάρχει ήδη** όταν κάνετε commit το workflow: το αποθετήριό σας έχει ήδη workflow. Ενημερώστε το αντί γι' αυτό, όπως εξηγείται στην [Ενημέρωση AAPS](#aaps-builder-updates).
+- **"Google Drive access has expired or was revoked"**: κάντε ξανά το [βήμα 7](#aaps-builder-google-drive) και ενημερώστε το secret `GDRIVE_OAUTH2`.
 
-- **The build stops with "This repository is PUBLIC"**: in your repository, open **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**, then build again.
-- **"Secret KEYSTORE_SET is missing"**: do step 4 of the setup page.
-- **"The secret is too short"**, **"The secret is not a valid code"** or **"The secret does not contain a keystore"**: the wrong text was pasted into the secret, often the word `KEYSTORE_SET` itself, or only part of the code. In your repository, open **Settings** → **Secrets and variables** → **Actions**, edit `KEYSTORE_SET` and paste the long code from **Copy secret** again (redo step 3 of the setup page first if you closed it).
-- **"Keystore, password or alias is wrong"**: check your keystore's password and alias, then redo steps 3 and 4 of the setup page.
-- **"Version … does not exist"**: the version you typed is not an AAPS release. Use `latest`, or check the release number.
-- **"Page not found" (404) when the setup page opens GitHub**: log in to github.com in the same browser (GitHub shows 404 for private repositories when you are not logged in). If you are logged in, the username or repository name in step 1 of the setup page does not match your repository. Type the exact names.
-- **"No GitHub user with this name"** in step 1: type your GitHub username, as shown in your GitHub profile, not your e-mail.
-- **No Download link, or the GitHub app opened**: the GitHub app cannot download builds. Open the build in Chrome as explained in [step 6](#aaps-builder-step6). To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
-- **"Could not read the workflow file"** on the setup page: reload the page and tap the button again. The setup page must be opened from this documentation site.
-- **GitHub says the file already exists** when you commit the workflow: your repository already has a workflow. Update it instead, as explained in [Updating AAPS](#aaps-builder-updates).
-- **"Google Drive access has expired or was revoked"**: redo [step 7](#aaps-builder-google-drive) and update the `GDRIVE_OAUTH2` secret.
-
-For other GitHub and Google Drive issues, see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+Για άλλα προβλήματα με το GitHub και το Google Drive, δείτε [Δημιουργία μέσω browser: αντιμετώπιση προβλημάτων](../GettingHelp/BrowserBuildTroubleshooting.md).
 
 ```{toctree}
 :hidden:
 
-AAPS Builder setup page <BrowserBuildAapsBuilderSetup.md>
+Σελίδα ρύθμισης του AAPS Builder <BrowserBuildAapsBuilderSetup.md>
 ```

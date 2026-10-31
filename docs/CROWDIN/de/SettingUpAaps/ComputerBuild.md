@@ -19,16 +19,17 @@ Zu den Details schaue bitte auf die [FAQ-Seite](../UsefulLinks/FAQ.md).
 
 * Um die APK zu erstellen ist möglicherweise eine bestimmte **[Android Studio](https://developer.android.com/studio/)**-Version erforderlich. Siehe Tabelle unten:
 
-| AAPS-Version            | Empfohlene <br/>Android Studio<br/> Version | Alternative <br/>Android Studio<br/> Version | Gradle | JVM |
-| ----------------------- | ------------------------------------------------------- | -------------------------------------------------------- | ------ |:--- |
-| 2.6.2                   | 3.6.1                                                   |                                                          | 5.6.4  | 11  |
-| 2.8.2.1                 | 4.1.1                                                   |                                                          | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                                | bis Quail 1                                              | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                     | bis Quail 1                                              | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                         | bis Quail 1                                              | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                      | bis Quail 1                                              | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                      | bis Quail 1                                              | 8.13   | 21  |
-| [3.4.2.2](#version3422) | Panda 2 (2025.32)                                       | bis Quail 1                                              | 9      | 21  |
+| AAPS-Version                | Empfohlene <br/>Android Studio<br/> Version | Alternative <br/>Android Studio<br/> Version | Gradle | JVM |
+| --------------------------- | ------------------------------------------------------- | -------------------------------------------------------- | ------ |:--- |
+| 2.6.2                       | 3.6.1                                                   |                                                          | 5.6.4  | 11  |
+| 2.8.2.1                     | 4.1.1                                                   |                                                          | 6.1.1  | 13  |
+| [3.1.0.3](#version3100)     | 2020.3.1                                                | tested up to Quail 4                                     | 7.3.3  | 17  |
+| [3.2.0.4](#version3204)     | Hedgehog (2023.1.1)                                     | tested up to Quail 4                                     | 8.2    | 17  |
+| [3.3.1.3](#version3300)     | Ladybug Feature Drop (2024.2.2)                         | tested up to Quail 4                                     | 8.10   | 21  |
+| [3.3.2](#version3300)       | Meerkat (2024.3.1)                                      | tested up to Quail 4                                     | 8.11.1 | 21  |
+| [3.3.2.1](#version3321)     | Narwhal (2025.1.2)                                      | tested up to Quail 4                                     | 8.13   | 21  |
+| [3.4.2.6](#version3426)     | Panda 2 (2025.3.2)                                      | tested up to Quail 4                                     | 9      | 21  |
+| [4.0.0-beta1](#version4000) | Rabbit 1                                                | up to latest Rabbit 1                                    | 9.8    | 21  |
 
 Die „empfohlene Version“ enthält im Paket bereits die entsprechende JVM-Version. Die empfohlene Version ist gleichzeitig auch die Mindestversion, die Du zum Erstellen von **AAPS** nutzen kannst. Mit einer älteren Version als der, die unter „empfohlen“ aufgeführt ist, wirst Du **NICHT** in der Lage sein, AAPS zu erstellen. Solltest Du eine andere Version verwenden, kann es aufgrund der JVM-Version zu Problemen kommen. Schaue auf den Seiten zur [Fehlerbehebung für Android Studio](#troubleshooting_androidstudio-uncommitted-changes) nach, um diese Probleme zu lösen. Wenn Deine aktuelle Android Studio Version nicht in der Tabelle aufgeführt ist, musst Du sie zuerst aktualisieren.
 
@@ -92,7 +93,7 @@ Bitte springe direkt zur [Update-Anleitung](../Maintenance/UpdateToNewVersion.md
 
 Diese Anleitung enthält _beispielhafte_ Screenshots zum Erstellen der **AAPS**-APK-Datei. Weil **Android Studio** - die Software, die wir zum Erstellen der **AAPS**-APK verwenden - regelmäßig aktualisiert wird, sind diese Screenshots vielleicht nicht mit Deiner Installation identisch. Sie sollten trotzdem ausreichen durch den Prozess zu kommen.
 
-Da **Android Studio** auf Windows, Mac OS X und Linux Plattformen läuft, kann es auch kleinere Unterschiede in den Schritten zwischen den verschiedenen Plattformen geben.
+Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
 
 (install-git-if-you-dont-have-it)=
 ### Git installieren
@@ -101,7 +102,7 @@ Da **Android Studio** auf Windows, Mac OS X und Linux Plattformen läuft, kann e
 :class: dropdown
 
 Git ist ein „_Versioning Control System_“ (VCS).
-Git ist ein Programm, das es Dir erlaubt Änderungen im Code zu verfolgen und mit anderen zusammenzuarbeiten. Du wirst Git dazu nutzen, eine Kopie des **AAPS** Quellcodes von der Github Webseite auf Deinem lokalen Computer zu erstellen. Anschließend wirst Du Git auf Deinem Computer verwenden, um die **AAPS** Anwendung (apk) zu erstellen. 
+Git ist ein Programm, das es Dir erlaubt Änderungen im Code zu verfolgen und mit anderen zusammenzuarbeiten. Du wirst Git dazu nutzen, eine Kopie des **AAPS** Quellcodes von der Github Webseite auf Deinem lokalen Computer zu erstellen. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
@@ -140,7 +141,7 @@ Einer der wichtigsten Punkte bei der Installation von Android Studio ist: **Gedu
 
 ```{admonition} Different UI
 :class: warning
-Wichtige Anmerkung: Android Studio hat seine Benutzeroberfläche (UI) seit den letzten Versionen geändert. Diese Anleitung zeigt Dir die Schritte in dem *neuen UI* „Ladybug“. Nutzt Du noch eine ältere Version der Benutzeroberfläche, dann solltest Du Android Studio als Erstes auf das neue Design umstellen. Wie das funktioniert ist [hier beschrieben](#computerbuild-NewUI).
+Important note: Android Studio changed its UI during the last releases. This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. Nutzt Du noch eine ältere Version der Benutzeroberfläche, dann solltest Du Android Studio als Erstes auf das neue Design umstellen. Wie das funktioniert ist [hier beschrieben](#computerbuild-NewUI).
 ```
 
 Die Android-Studio-Version ist sehr wichtig. Schaue Dir die [Anleitung oben](#Building-APK-recommended-specification-of-computer-for-building-apk-file) an, um die richtige Android Studio Version auszuwählen.
@@ -155,7 +156,7 @@ Installiere Android Studio, indem Du, wie in den folgenden Screenshots gezeigt, 
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-Wenn Du Festplattenplatz sparen möchtest, kannst Du Option Android Virtual Device deaktivieren: Diese wird nicht zum Erstellen von **AAPS** genutzt.
+If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
@@ -239,8 +240,8 @@ Wir werden Android Studio nun sagen, wo es den Code herunterladen soll:
 * Klicke nun auf "Clone" (5).
 
 ```{admonition} INFORMATION
-:class: information
-Notiere Dir das Verzeichnis. Das ist die Stelle, an der Dein Quellcode gespeichert ist!
+:class: note
+Make a note of the directory. Das ist die Stelle, an der Dein Quellcode gespeichert ist!
 ```
 
 Du wirst jetzt einen Screen sehen, der Dir sagt, dass das Repository geklont wurde:
@@ -260,12 +261,12 @@ Nachdem das Projektarchiv erfolgreich geklont wurde, wird Android Studio das gek
 
 (computerbuild-NewUI)=
 ```{admonition} New UI
-:class: Informationen
-Android Studios Benutzeroberfläche wurde kürzlich geändert. Neue Installationen des Android Studio verwenden standardmäßig die neue Benutzeroberfläche!
+:class: note
+Android Studio changed its UI recently. Neue Installationen des Android Studio verwenden standardmäßig die neue Benutzeroberfläche!
 
 Nur wenn Dein Android Studio anders aussieht, musst Du möglicherweise auf das neue UI umschalten:
 Klicke oben links auf das Hamburger-Menü und wähle dann **Settings** (oder bei Apple-Rechnern auf **Preferences**).
-Im Menü **Appearance & Behaviour**, gehe auf **New UI** und aktiviere dort **Enable new UI**. Starte Android Studio danach neu, damit die Änderungen aktiv werden.
+In **Appearance & Behavior**, go to **New UI** and tick **Enable new UI**. Starte Android Studio danach neu, damit die Änderungen aktiv werden.
 
 Wenn Du die Option **New UI** nicht findest, mache Dir keine Sorgen: Du nutzt sie dann schon!
 ```
@@ -297,7 +298,7 @@ Sage Android Studio nun, wo Git, das Du [vorher](#install-git-if-you-dont-have-i
 
 * Nur für Windows-Rechner: Starte Deinen Rechner nach der [Git-Installation](#install-git-if-you-dont-have-it) auf jeden Fall neu. Falls nicht, starte jetzt neu und öffne Android Studio dann erneut
 
-Öffne in der linken oberen Ecke des **Android Studio** das Hamburger-Menü und navigiere zu **File** > **Settings** (Windows) oder **Android Studio** > **Preferences** (Mac). Damit öffnet sich das folgende Fenster. Klicke auf das Dropdown-Menü **Version Control** (1), um es aufzuklappen und wähle **Git**
+Öffne in der linken oberen Ecke des **Android Studio** das Hamburger-Menü und navigiere zu **File** > **Settings** (Windows) oder **Android Studio** > **Preferences** (Mac). This opens the following window, click to expand the dropdown called **Version Control** (1) and select **Git** (2)
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
@@ -311,9 +312,9 @@ Wenn die automatische Erkennung funktioniert, wird die **Git**-Version in der N�
    ![Git_version_displayed](../images/Building-the-App/039_GitTestSuccess.png)
 
 
-Wenn **git.exe** nicht automatisch gefunden wird oder wenn Du nach dem Klicken auf „Test“ eine Fehlermeldung erhältst (1), kannst Du entweder
+If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error, you can either
 * den Pfad, den Du [vorher](#BuildingAaps-steps-for-installing-git) gespeichert hast, manuell eingeben oder
-* auf das Ordnersymbol (1) klicken und manuell zum Verzeichnis, in dem **git.exe** [vorher](#BuildingAaps-steps-for-installing-git) installiert wurde, navigieren.
+* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
 * Überprüfe die Einstellungen mit dem **Test**-Button!
 
   ![Git wurde nicht gefunden](../images/Building-the-App/039_GitTestError.png)
@@ -337,25 +338,25 @@ Klicke oben links auf das Hamburger-Menü, um die Menüleiste zu öffnen. Wähle
 
 ![Apk erstellen](../images/Building-the-App/040_GenerateSignedAPK.png)
 
-Wähle "APK" anstelle von "Android App Bundle" aus und klicke auf "Next":
+Select "APK" (1) instead of "Android App Bundle" and click "Next" (2):
 
 ![APK statt Bundle](../images/Building-the-App/041_APK.png)
 
-In der nächsten Ansicht muss "Modul" auf "AAPS.app" (1) eingestellt sein/werden.
+In the next screen, make sure that "Module" is set to "AndroidAPS.app" (1). The part before ".app" is the name of the folder you cloned the code into.
 
 (Building-APK-wearapk)=
 ```{admonition} INFORMATION!
-:class: information
-Wenn Du die APK für Deine Smartwatch erstellen möchtest, musst Du jetzt AAPS.wear auswählen!
+:class: note
+If you want to create the apk for your watch, you now need to select AndroidAPS.wear!
 ```
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
 Klicke auf "Create new..." (2), um mit der Erzeugung Deines Keystore zu beginnen.
 
 ```{admonition} INFORMATION!
-:class: information
-Der Keystore muss nur einmal erstellt werden.
-Wenn Du AAPS schon einmal erstellt (gebaut) hast, erstelle KEINEN neuen Keystore, sondern wähle den bestehenden und gib dessen Passwörter ein!
+:class: note
+You will only need to create the keystore once.
+If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
 ```
 
 **_Hinweis:_** Der Keystore ist eine Datei, in der die Informationen zum Signieren der App gespeichert sind. Die Datei ist verschlüsselt und passwortgeschützt.
@@ -373,7 +374,11 @@ Schreib Dir auf, wo Dein Keystore gespeichert wird. Du wirst es für Dein nächs
 
 * Wähle jetzt ein einfaches Passwort (und notiere es Dir), gib es in das Passwortfeld (2) ein und bestätige es (2).
 
-  Die Passwörter für Keystore und Key müssen nicht sehr anspruchsvoll sein. Solltest Du Dein Passwort verlieren, lies dazu bitte den Abschnitt[Verlorener Keystore](#troubleshooting_androidstudio-lost-keystore).
+  Die Passwörter für Keystore und Key müssen nicht sehr anspruchsvoll sein. If you lose your password in the future, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+
+```{warning}
+**Avoid special characters in your passwords.** Use only letters and digits for the keystore and key passwords. In particular, do not use `$`, a backtick, `"` or `\`. If you later switch to the [Browser build](#aaps-ci-option2) and reuse this keystore, these characters can make the signing step fail, see [Browser build troubleshooting](#aaps-ci-password-special-characters).
+```
 
 * Der Standard-Alias (3) für den Key lautet "key0". Lass ihn unverändert.
 
@@ -396,7 +401,7 @@ Auf der Seite **Generate signed App Bundle or APK** wird jetzt der Pfad zu Deine
 ![Passwörter speichern](../images/Building-the-App/044_RememberPwd.png)
 
 
-Auf der nächsten Seite wähle die Build-Variante "fullRelease" (2) aus und klicke auf "Create" (3). Merke Dir das Verzeichnis, das in (1) angezeigt wird, da dort später die Build-APK-Datei zu finden sein wird!
+On the next screen, select build variant "fullRelease" (1) and click "Create" (3). You should remember the destination folder displayed at (2), as later you will find your built apk file there!
 
    ![Build-Variante auswählen](../images/Building-the-App/045_BuildPath.png)
 
@@ -408,7 +413,7 @@ Jetzt kannst Du den Build-Fortschritt verfolgen:
 
 ![Android_Studio_building](../images/Building-the-App/047_BuildDetails.png)
 
-Sobald der Build abgeschlossen ist, wird Android Studio "BUILD SUCCESSFUL" anzeigen. Möglicherweise erscheint eine Popup-Benachrichtigung auf der Du "locate" anklicken kannst. Wenn Du diesen Moment verpasst haben solltest, klicke ganz unten auf dem Bildschirm auf das Benachrichtigungs-Symbol (1) und dann auf **locate** (2), um die Benachrichtigungen anzeigen zu lassen:
+Sobald der Build abgeschlossen ist, wird Android Studio "BUILD SUCCESSFUL" anzeigen. Möglicherweise erscheint eine Popup-Benachrichtigung auf der Du "locate" anklicken kannst. If you miss this, click on the notification icon (1) to bring up the Notifications, and then on **locate** (2):
 
 ![Build abgeschlossen](../images/Building-the-App/049_ReopenNotification.png)
 

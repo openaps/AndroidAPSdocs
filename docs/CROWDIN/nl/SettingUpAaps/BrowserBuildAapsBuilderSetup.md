@@ -1,231 +1,231 @@
 (aaps-builder-setup)=
 
-# AAPS Builder setup page
+# AAPS Builder-instelpagina
 
-Build your own **AAPS** app in GitHub. No programs to install, no terminal. Takes about 10 minutes the first time, then you start each build yourself.
+Bouw je eigen **AAPS**-app in GitHub. Je hoeft geen programma's te installeren en geen terminal te gebruiken. De eerste keer duurt het ongeveer 10 minuten. Daarna start je elke build zelf.
 
-Each step is explained in more detail, with screenshots, in [Browser build with AAPS Builder](#aaps-builder). Keep that page open in another tab.
+Elke stap wordt uitgebreider uitgelegd, met schermafbeeldingen, in [Bouwen in de browser met AAPS Builder](#aaps-builder). Houd die pagina open in een ander tabblad.
 
-The buttons below open GitHub in a new Chrome tab. To come back to this page, tap the tab button next to Chrome's address bar (the square with a number) and choose this page.
+De knoppen hieronder openen GitHub in een nieuw tabblad van Chrome. Om terug te komen naar deze pagina tik je op de tabbladknop naast de adresbalk van Chrome (het vierkantje met een getal) en kies je deze pagina.
 
 (aaps-builder-setup-step1)=
 
-## Step 1 – Create your private build repository
+## Stap 1 – Maak je privé build-repository
 
-This creates an empty private repository in your GitHub account. Only you can see it and the apps it builds. You do **not** need to fork AndroidAPS: the AAPS source code is downloaded from the official AndroidAPS repository at every build.
+Dit maakt een lege privé-repository in je GitHub-account. Alleen jij kunt hem zien, en ook de apps die hij bouwt. Je hoeft AndroidAPS **niet** te forken: de broncode van AAPS wordt bij elke build gedownload uit de officiële AndroidAPS-repository.
 
-<label class="aapsb-label" for="aapsb-user">Your GitHub username</label>
+<label class="aapsb-label" for="aapsb-user">Je GitHub-gebruikersnaam</label>
 <input class="aapsb-input" type="text" id="aapsb-user" autocomplete="username" spellcheck="false" placeholder="my-github-name" />
 <span class="aapsb-msg" id="aapsb-userMsg"></span>
 
-First log in to github.com in this browser (no account? create one for free). Then come back here. Use your username (shown in your GitHub profile), not your e-mail: the page asks GitHub whether this username exists.
+Log eerst in op github.com in deze browser (nog geen account? maak er gratis een aan). Kom daarna hier terug. Gebruik je gebruikersnaam (te zien in je GitHub-profiel), niet je e-mailadres: de pagina vraagt aan GitHub of deze gebruikersnaam bestaat.
 
-<label class="aapsb-label" for="aapsb-repo">Name of your repository</label>
+<label class="aapsb-label" for="aapsb-repo">Naam van je repository</label>
 <input class="aapsb-input" type="text" id="aapsb-repo" spellcheck="false" placeholder="my-aaps" />
 
-Keep the suggestion. Already created your repository with another name? Type that exact name here.
+Houd de voorgestelde naam. Heb je je repository al met een andere naam gemaakt? Typ dan hier precies die naam.
 
-Your repository: <code class="aapsb-repoUrl"></code>
+Je repository:<code class="aapsb-repoUrl"></code>
 
-Already created an empty private repository yourself? Do not tap the button below: type its exact name above and go to [step 2](#aaps-builder-setup-step2).
+Heb je zelf al een lege privé-repository gemaakt? Tik dan niet op de knop hieronder: typ hierboven precies de naam ervan en ga naar [stap 2](#aaps-builder-setup-step2).
 
-<a class="aapsb-btn" id="aapsb-createRepo" target="_blank" rel="noopener">Create my private repository</a>
+<a class="aapsb-btn" id="aapsb-createRepo" target="_blank" rel="noopener">Mijn privé-repository maken</a>
 
-On the GitHub page that opens, the name is filled in and **Private** is selected. Do not change anything, do not add a README or other files.
+Op de GitHub-pagina die opent, is de naam al ingevuld en is **Private** gekozen. Verander niets en voeg geen README of andere bestanden toe.
 
-1. Click the green **Create repository** button.
-2. Come back to this page for step 2.
+1. Klik op de groene knop **Create repository**.
+2. Kom terug naar deze pagina voor stap 2.
 
 (aaps-builder-setup-step2)=
 
-## Step 2 – Add the build workflow
+## Stap 2 – De build workflow toevoegen
 
-The build workflow is the file that tells GitHub how to build AAPS. It comes from the AAPS documentation: <a id="aapsb-viewWorkflow" href="../_static/aaps-builder/aaps-builder-build.yml" target="_blank" rel="noopener">view the workflow</a>.
+De build-workflow is het bestand dat GitHub vertelt hoe AAPS gebouwd moet worden. Het komt uit de AAPS-documentatie: <a id="aapsb-viewWorkflow" href="../_static/aaps-builder/aaps-builder-build.yml" target="_blank" rel="noopener">bekijk de workflow</a>.
 
-1. <a class="aapsb-btn" id="aapsb-addWorkflow" target="_blank" rel="noopener">Add the workflow to my repository</a> <span class="aapsb-msg" id="aapsb-workflowMsg"></span>
+1. <a class="aapsb-btn" id="aapsb-addWorkflow" target="_blank" rel="noopener">De workflow aan mijn repository toevoegen</a> <span class="aapsb-msg" id="aapsb-workflowMsg"></span>
 
-   Opens: <code class="aapsb-repoUrl"></code>, new file `.github/workflows/build.yml`, already filled in.
-2. Check that the file name at the top is `.github/workflows/build.yml`. Do not change the text.
-3. Click **Commit changes…**, then **Commit changes** again in the window that opens.
+   Opent: <code class="aapsb-repoUrl"></code>, nieuw bestand `.github/workflows/build.yml`, al ingevuld.
+2. Controleer dat de bestandsnaam bovenaan `.github/workflows/build.yml` is. Verander de tekst niet.
+3. Klik op **Commit changes…** en daarna nog een keer op **Commit changes** in het venster dat opent.
 
 ```{admonition} Updating the workflow, or the text area is empty?
 :class: dropdown
 
-1. <button class="aapsb-btn aapsb-secondary" type="button" id="aapsb-copyWorkflow">Copy workflow</button> <span class="aapsb-msg" id="aapsb-copyWorkflowMsg"></span>
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
+1. <button class="aapsb-btn aapsb-secondary" type="button" id="aapsb-copyWorkflow">Workflow kopiëren</button> <span class="aapsb-msg" id="aapsb-copyWorkflowMsg"></span>
+2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Mijn workflowbestand openen</a>
 
-   To add the workflow for the first time instead, use the button above.
-3. Replace the whole text with the copied workflow (long press on a phone), then click **Commit changes…** twice.
+   Wil je de workflow voor het eerst toevoegen? Gebruik dan de knop hierboven.
+3. Vervang de hele tekst door de gekopieerde workflow (op een telefoon: lang indrukken) en klik daarna twee keer op **Commit changes…**.
 ```
 
 (aaps-builder-setup-step3)=
 
-## Step 3 – Your signing key
+## Stap 3 – Je ondertekeningssleutel
 
-The app must be signed with your own key. Always use the same key, otherwise you have to uninstall AAPS (and lose its settings) to update. Choose one of the two tabs.
+De app moet met je eigen sleutel ondertekend worden. Gebruik altijd dezelfde sleutel. Anders moet je AAPS verwijderen (en verlies je de instellingen) om bij te werken. Kies een van de twee tabbladen.
 
 `````{tab-set}
 
-````{tab-item} I already have a keystore
-For example from Android Studio (.jks).
+````{tab-item} Ik heb al een keystore
+Bijvoorbeeld uit Android Studio (.jks).
 
-<label class="aapsb-label" for="aapsb-ksFile">Keystore file</label>
+<label class="aapsb-label" for="aapsb-ksFile">Keystore-bestand</label>
 <input type="file" id="aapsb-ksFile" accept=".jks,.keystore,.p12,.pfx,application/octet-stream">
 
-<label class="aapsb-label" for="aapsb-ksPass">Keystore password</label>
+<label class="aapsb-label" for="aapsb-ksPass">Keystore-wachtwoord</label>
 <input class="aapsb-input" type="password" id="aapsb-ksPass" autocomplete="off">
 
-<label class="aapsb-label" for="aapsb-ksAlias">Key alias</label>
+<label class="aapsb-label" for="aapsb-ksAlias">Sleutelalias (key alias)</label>
 <select class="aapsb-input" id="aapsb-ksAliasSel" hidden></select>
 <input class="aapsb-input" type="text" id="aapsb-ksAlias" autocomplete="off" spellcheck="false" placeholder="key0">
 
-<label class="aapsb-check"><input type="checkbox" id="aapsb-samePass" checked> Key password is the same as the keystore password</label>
+<label class="aapsb-check"><input type="checkbox" id="aapsb-samePass" checked> Het sleutelwachtwoord is hetzelfde als het keystore-wachtwoord</label>
 
 <div id="aapsb-keyPassWrap" hidden>
 
-<label class="aapsb-label" for="aapsb-keyPass">Key password</label>
+<label class="aapsb-label" for="aapsb-keyPass">Sleutelwachtwoord (key password)</label>
 <input class="aapsb-input" type="password" id="aapsb-keyPass" autocomplete="off">
 
 </div>
 
-<button class="aapsb-btn" type="button" id="aapsb-haveGo">Check and continue</button> <span class="aapsb-msg" id="aapsb-haveMsg"></span>
+<button class="aapsb-btn" type="button" id="aapsb-haveGo">Controleren en doorgaan</button> <span class="aapsb-msg" id="aapsb-haveMsg"></span>
 ````
 
-````{tab-item} Create a new key
-First time building AAPS? A new key is created here in your browser. Nothing is sent anywhere.
+````{tab-item} Een nieuwe sleutel maken
+Bouw je AAPS voor het eerst? Hier in je browser wordt een nieuwe sleutel gemaakt. Er wordt niets verstuurd.
 
-<label class="aapsb-label" for="aapsb-newPass">Choose a password (at least 8 characters, no accented letters)</label>
+<label class="aapsb-label" for="aapsb-newPass">Kies een wachtwoord (minstens 8 tekens, geen letters met accenten)</label>
 <input class="aapsb-input" type="password" id="aapsb-newPass" autocomplete="new-password">
 
-<label class="aapsb-label" for="aapsb-newPass2">Repeat the password</label>
+<label class="aapsb-label" for="aapsb-newPass2">Herhaal het wachtwoord</label>
 <input class="aapsb-input" type="password" id="aapsb-newPass2" autocomplete="new-password">
 
-<button class="aapsb-btn" type="button" id="aapsb-newGo">Create key</button> <span class="aapsb-msg" id="aapsb-newMsg"></span>
+<button class="aapsb-btn" type="button" id="aapsb-newGo">Sleutel maken</button> <span class="aapsb-msg" id="aapsb-newMsg"></span>
 
 <div class="aapsb-box" id="aapsb-backupBox" hidden>
 
-**Save a backup of your key!**
+**Bewaar een back-up van je sleutel!**
 
-Download the file. Keep these three together, somewhere safe off your phone (e.g. your own cloud storage):
+Download het bestand. Bewaar deze drie samen op een veilige plek buiten je telefoon (bijv. je eigen cloudopslag):
 
-- the file `aaps-keystore.jks`
-- your password
-- the alias of the key: **`key0`**
+- het bestand `aaps-keystore.jks`
+- je wachtwoord
+- de alias van de sleutel: **`key0`**
 
-You will need all three if you ever build AAPS another way, e.g. with Android Studio.
+Je hebt ze alle drie nodig als je AAPS ooit op een andere manier bouwt, bijv. met Android Studio.
 
-<button class="aapsb-btn" type="button" id="aapsb-downloadKs">Download backup (aaps-keystore.jks)</button>
+<button class="aapsb-btn" type="button" id="aapsb-downloadKs">Back-up downloaden (aaps-keystore.jks)</button>
 
 </div>
 ````
 
 `````
 (aaps-builder-setup-step4)=
-## Step 4 – Give the key to your repository
-<span id="aapsb-s4wait">Finish step 3 first.</span>
+## Stap 4 – Geef de sleutel aan je repository
+<span id="aapsb-s4wait">Rond eerst stap 3 af.</span>
 
 <div id="aapsb-s4ready" hidden>
-  1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Open the secrets page</a> Opens: <code class="aapsb-repoUrl"></code> Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1. 2. Tap "Copy name", then paste it into the small "Name" field: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Copy name</button> 3. Tap "Copy secret", then paste the long code into the big "Secret" box: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Copy secret</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> The secret is a very long code (thousands of characters), NOT the word KEYSTORE_SET. Copy and paste the name first, then the long code. 4. Tap "Add secret". Done, you never need to do this again.
+  1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">De pagina met secrets openen</a> Opent: <code class="aapsb-repoUrl"></code> Krijg je "Page not found" (404)? Controleer eerst of je in deze browser bent ingelogd op github.com: GitHub toont 404 voor privé-repositories als je niet bent ingelogd. Anders past je gebruikersnaam of de naam van je repository in stap 1 niet bij je repository: controleer ze op github.com en typ ze in stap 1. 2. Tik op "Naam kopiëren" en plak het in het kleine veld "Name": `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Naam kopiëren</button> 3. Tik op "Secret kopiëren" en plak de lange code in het grote vak "Secret": <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Secret kopiëren</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> Het secret is een heel lange code (duizenden tekens), NIET het woord KEYSTORE_SET. Kopieer en plak eerst de naam, daarna de lange code. 4. Tik op "Add secret". Klaar, dit hoef je nooit meer te doen.
 </div>
 (aaps-builder-setup-step5)=
-## Step 5 – Build the app
+## Stap 5 – De app bouwen
 
-1. <a class="aapsb-btn" id="aapsb-openActions" target="_blank" rel="noopener">Open the build page</a>
+1. <a class="aapsb-btn" id="aapsb-openActions" target="_blank" rel="noopener">De buildpagina openen</a>
 
-   Opens: <code class="aapsb-repoUrl"></code>
+   Opent: <code class="aapsb-repoUrl"></code>
 
-   Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1. The GitHub app opened instead? Tap "RUN WORKFLOW", check the version and variant, and tap "RUN WORKFLOW" again. If the app still shows "Nothing to see here", pull the list down to see your build.
-2. If asked, click the green button to enable workflows.
-3. Click "Run workflow", then the green "Run workflow" button. "latest" builds the newest AAPS version.
-4. Wait about 15–30 minutes. A green check means it is done.
-Want an e-mail when the build is done? GitHub only e-mails you when a build fails. To also get one when it succeeds: on github.com, open your profile picture → Settings → Notifications → System → Actions, and untick "Only notify for failed workflows".
+   Krijg je "Page not found" (404)? Controleer eerst of je in deze browser bent ingelogd op github.com: GitHub toont 404 voor privé-repositories als je niet bent ingelogd. Anders past je gebruikersnaam of de naam van je repository in stap 1 niet bij je repository: controleer ze op github.com en typ ze in stap 1. Is in plaats daarvan de GitHub-app geopend? Tik op "RUN WORKFLOW", controleer de versie en de variant en tik nog een keer op "RUN WORKFLOW". Toont de app nog steeds "Nothing to see here"? Trek de lijst dan omlaag om je build te zien.
+2. Als dat gevraagd wordt, klik je op de groene knop om workflows aan te zetten.
+3. Klik op "Run workflow" en daarna op de groene knop "Run workflow". "latest" bouwt de nieuwste versie van AAPS. ***tip:*** *je kunt een andere versie bouwen door de naam van de [tag](https://github.com/nightscout/AndroidAPS/tags) te typen in plaats van "latest"*
+4. Wacht ongeveer 15–30 minuten. Een groen vinkje betekent dat de build klaar is.
+Wil je een e-mail krijgen als de build klaar is? GitHub stuurt je alleen een e-mail als een build mislukt. Om er ook een te krijgen als hij lukt: open op github.com je profielfoto → Settings → Notifications → System → Actions en zet het vinkje bij "Only notify for failed workflows" uit.
 
 ```{admonition} No "Build AAPS" / "Run workflow" button?
 :class: warning
 
-1. Open your repository and check that the file `.github/workflows/build.yml` is there. If it is missing or has another name, do [step 2](#aaps-builder-setup-step2) again.
-2. Open the Actions tab. If it says workflows are disabled, click the green button to enable them. Then click "Build AAPS" in the list.
+1. Open je repository en controleer of het bestand `.github/workflows/build.yml` er is. Als het ontbreekt of een andere naam heeft, doe dan [stap 2](#aaps-builder-setup-step2) opnieuw.
+2. Open het tabblad Actions. Staat er dat workflows uitgeschakeld zijn? Klik dan op de groene knop om ze aan te zetten. Klik daarna in de lijst op "Build AAPS".
 ```
 
 (aaps-builder-setup-step6)=
 
-## Step 6 – Install on your phone
+## Stap 6 – Installeren op je telefoon
 
 ```{admonition} Before every update: back up your settings!
 :class: warning
 
-1. In AAPS: Maintenance → Export settings. (Do this regularly anyway, e.g. after a profile change or once a month.)
-2. Copy the exported file OFF the phone, e.g. to Google Drive or Dropbox. A backup that only lives on the phone is lost together with the phone.
-3. Keep the APK files and several older exports there too. Then you can always go back.
+1. In AAPS: Onderhoud → Exporteer instellingen. (Doe dit sowieso regelmatig, bijv. na een wijziging van je profiel of één keer per maand.)
+2. Kopieer het geëxporteerde bestand NAAR BUITEN de telefoon, bijv. naar Google Drive of Dropbox. Een back-up die alleen op de telefoon staat, raak je samen met de telefoon kwijt.
+3. Bewaar daar ook de APK-bestanden en een paar oudere exports. Dan kun je altijd terug.
 
-[How to export settings](#ExportImportSettings-Settings-Export) · [AAPS FAQ: how to organize backups](#FAQ-organize-backups)
+[Instellingen exporteren](#ExportImportSettings-Settings-Export) · [AAPS FAQ: back-ups ordenen](#FAQ-organize-backups)
 ```
 
-1. Open this page on your phone, in the web browser (Chrome). Log in to github.com if asked.
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openRuns" target="_blank" rel="noopener">Open my builds</a>
+1. Open deze pagina op je telefoon, in de webbrowser (Chrome). Log in op github.com als daarom gevraagd wordt.
+2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openRuns" target="_blank" rel="noopener">Mijn builds openen</a>
 
-   The GitHub app opened instead? It cannot download builds. In the app, open the newest build and tap "Artifacts ↗", or tap the share icon and choose Chrome (or "Copy link", then paste the link in Chrome's address bar). Continue in Chrome.
+   Is in plaats daarvan de GitHub-app geopend? Die kan geen builds downloaden. Open in de app de nieuwste build en tik op "Artifacts ↗", of tik op het deelicoon en kies Chrome (of "Copy link" en plak de link daarna in de adresbalk van Chrome). Ga verder in Chrome.
 
-   Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1.
+   Krijg je "Page not found" (404)? Controleer eerst of je in deze browser bent ingelogd op github.com: GitHub toont 404 voor privé-repositories als je niet bent ingelogd. Anders past je gebruikersnaam of de naam van je repository in stap 1 niet bij je repository: controleer ze op github.com en typ ze in stap 1.
 
-   To stop GitHub links opening in the app: Android Settings → Apps → GitHub → Open by default → turn off "Open supported links".
-3. Tap the newest build with a green check ✅.
-4. Scroll down to the build summary and tap the big link "📱 Download AAPS …" (or scroll further down to "Artifacts" and tap aaps-….apk). Scroll with your finger on the text, not on the diagram of the build steps.
-5. When the download is done, tap the file and choose Install. If asked, allow installing apps from this source.
-6. aaps-wear-….apk is for a smartwatch. Skip it if you do not use one.
+   Zo voorkom je dat GitHub-links in de app openen: Android-instellingen → Apps → GitHub → Standaard openen → zet "Ondersteunde links openen" uit.
+3. Tik op de nieuwste build met een groen vinkje ✅.
+4. Scrol omlaag naar de samenvatting van de build en tik op de grote link "📱 Download AAPS …" (of scrol verder omlaag naar "Artifacts" en tik op aaps-….apk). Scrol met je vinger op de tekst, niet op het schema met de buildstappen.
+5. Als de download klaar is, tik je op het bestand en kies je Installeren. Als erom gevraagd wordt, sta dan het installeren van apps uit deze bron toe.
+6. aaps-wear-….apk is voor een smartwatch. Sla het over als je er geen gebruikt.
 
-The APK is not shown under "Code" in your repository, only on the build page. It is kept for 14 days.
+De APK staat niet onder "Code" in je repository, alleen op de buildpagina. Hij wordt 14 dagen bewaard.
 
-New AAPS version? Back up your settings, then build it with [step 5](#aaps-builder-setup-step5). Your repository never builds anything by itself.
+Nieuwe versie van AAPS? Maak een back-up van je instellingen en bouw hem daarna met [stap 5](#aaps-builder-setup-step5). Je repository bouwt nooit zelf iets.
 
 (aaps-builder-setup-step7)=
 
-## Step 7 – Optional: get the app in Google Drive
+## Stap 7 – Optioneel: de app in Google Drive krijgen
 
-Want the APK to show up in your Google Drive (kept forever)? Add one more secret.
+Wil je dat de APK in je Google Drive verschijnt (voor altijd bewaard)? Voeg nog één secret toe.
 
-1. Get a GDRIVE_OAUTH2 value as explained in the AAPS documentation (it uses the official AAPS preparation page, on a computer): [Save the builds in Google Drive](#aaps-builder-google-drive).
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets2" target="_blank" rel="noopener">Open the secrets page</a>
+1. Haal een GDRIVE_OAUTH2-waarde op zoals uitgelegd in de AAPS-documentatie (dit gebruikt de officiële AAPS-voorbereidingspagina, op een computer): [De builds in Google Drive opslaan](#aaps-builder-google-drive).
+2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets2" target="_blank" rel="noopener">De pagina met secrets openen</a>
 
-   Opens: <code class="aapsb-repoUrl"></code>
+   Opent:<code class="aapsb-repoUrl"></code>
 
-   Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1.
-3. Tap "Copy name", then paste it into the small "Name" field: `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Copy name</button>
-4. Paste your GDRIVE_OAUTH2 value into the big "Secret" box, then tap "Add secret".
+   Krijg je "Page not found" (404)? Controleer eerst of je in deze browser bent ingelogd op github.com: GitHub toont 404 voor privé-repositories als je niet bent ingelogd. Anders past je gebruikersnaam of de naam van je repository in stap 1 niet bij je repository: controleer ze op github.com en typ ze in stap 1.
+3. Tik op "Naam kopiëren" en plak het in het kleine veld "Name": `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Naam kopiëren</button>
+4. Plak je GDRIVE_OAUTH2-waarde in het grote vak "Secret" en tik daarna op "Add secret".
 
-Next build, the APKs are also saved in Google Drive in the folder AAPS/&lt;version&gt;.
+Bij de volgende build worden de APK's ook in Google Drive opgeslagen, in de map AAPS/&lt;version&gt;.
 
-If you do not build for 6 months, or change your Google password, Google stops the access. The build then says so: redo this step.
+Als je 6 maanden niet bouwt of je Google-wachtwoord verandert, stopt Google de toegang. De build meldt dat dan: doe deze stap opnieuw.
 
 ----
 
-Everything on this page runs in your browser. Your key and passwords are never sent anywhere except where you paste them yourself. Only your GitHub username is sent to GitHub, to check that it exists. Page and workflow are part of the AAPS documentation, based on AAPS Builder (AGPL-3.0).
+Alles op deze pagina draait in je browser. Je sleutel en wachtwoorden worden nooit verstuurd, behalve naar de plek waar je ze zelf plakt. Alleen je GitHub-gebruikersnaam wordt naar GitHub gestuurd, om te controleren of die bestaat. De pagina en de workflow horen bij de AAPS-documentatie en zijn gebaseerd op AAPS Builder (AGPL-3.0).
 
 <div id="aapsb-msgs" hidden>
 
-- <span data-aapsb-msg="copied">Long code copied: paste it in the big "Secret" box, then tap "Add secret".</span>
-- <span data-aapsb-msg="copiedName">Name copied: paste it in the small "Name" field.</span>
-- <span data-aapsb-msg="userOk">✓ GitHub user found.</span>
-- <span data-aapsb-msg="userBad">✗ No GitHub user with this name. Use your username (shown in your GitHub profile), not your e-mail.</span>
-- <span data-aapsb-msg="copiedShort">Copied ✓</span>
-- <span data-aapsb-msg="needUser">Enter your GitHub username in step 1 first.</span>
-- <span data-aapsb-msg="workflowCopied">Workflow copied (version {v}). Paste it in GitHub.</span>
-- <span data-aapsb-msg="workflowReady">Workflow version {v} is ready.</span>
-- <span data-aapsb-msg="workflowErr">Could not read the workflow file. Reload this page and try again.</span>
-- <span data-aapsb-msg="errPipe">Passwords and alias cannot contain the character |</span>
-- <span data-aapsb-msg="errNoFile">Choose your keystore file.</span>
-- <span data-aapsb-msg="errEmpty">Fill in password and alias.</span>
-- <span data-aapsb-msg="errPass">Wrong keystore password.</span>
-- <span data-aapsb-msg="errKeyPass">Wrong key password.</span>
-- <span data-aapsb-msg="errAlias">Alias not found in the keystore. Available: {aliases}</span>
-- <span data-aapsb-msg="errFormat">This does not look like a keystore file.</span>
-- <span data-aapsb-msg="okHave">Keystore OK! Continue with step 4.</span>
-- <span data-aapsb-msg="okHaveUnchecked">Keystore read. The password will be checked when you build. Continue with step 4.</span>
-- <span data-aapsb-msg="errShort">The password must be at least 8 characters.</span>
-- <span data-aapsb-msg="errAscii">Use only a–z, A–Z, 0–9 and symbols such as ! ? # – no spaces, no accented letters and not |</span>
-- <span data-aapsb-msg="errMatch">The passwords do not match.</span>
-- <span data-aapsb-msg="working">Creating key…</span>
-- <span data-aapsb-msg="okNew">Key created. Download the backup below, then continue with step 4.</span>
+- <span data-aapsb-msg="copied">Lange code gekopieerd: plak hem in het grote vak "Secret" en tik daarna op "Add secret".</span>
+- <span data-aapsb-msg="copiedName">Naam gekopieerd: plak hem in het kleine veld "Name".</span>
+- <span data-aapsb-msg="userOk">✓ GitHub-gebruiker gevonden.</span>
+- <span data-aapsb-msg="userBad">✗ Geen GitHub-gebruiker met deze naam. Gebruik je gebruikersnaam (te zien in je GitHub-profiel), niet je e-mailadres.</span>
+- <span data-aapsb-msg="copiedShort">Gekopieerd ✓</span>
+- <span data-aapsb-msg="needUser">Vul eerst in stap 1 je GitHub-gebruikersnaam in.</span>
+- <span data-aapsb-msg="workflowCopied">Workflow gekopieerd (versie {v}). Plak hem in GitHub.</span>
+- <span data-aapsb-msg="workflowReady">Workflow versie {v} is klaar.</span>
+- <span data-aapsb-msg="workflowErr">Het workflowbestand kon niet gelezen worden. Laad deze pagina opnieuw en probeer het nog een keer.</span>
+- <span data-aapsb-msg="errPipe">Wachtwoorden en alias mogen het teken | niet bevatten</span>
+- <span data-aapsb-msg="errNoFile">Kies je keystore-bestand.</span>
+- <span data-aapsb-msg="errEmpty">Vul het wachtwoord en de alias in.</span>
+- <span data-aapsb-msg="errPass">Verkeerd keystore-wachtwoord.</span>
+- <span data-aapsb-msg="errKeyPass">Verkeerd sleutelwachtwoord.</span>
+- <span data-aapsb-msg="errAlias">Alias niet gevonden in de keystore. Beschikbaar: {aliases}</span>
+- <span data-aapsb-msg="errFormat">Dit lijkt geen keystore-bestand te zijn.</span>
+- <span data-aapsb-msg="okHave">Keystore OK! Ga verder met stap 4.</span>
+- <span data-aapsb-msg="okHaveUnchecked">Keystore gelezen. Het wachtwoord wordt gecontroleerd als je bouwt. Ga verder met stap 4.</span>
+- <span data-aapsb-msg="errShort">Het wachtwoord moet minstens 8 tekens hebben.</span>
+- <span data-aapsb-msg="errAscii">Gebruik alleen a–z, A–Z, 0–9 en tekens zoals ! ? # – geen spaties, geen letters met accenten en geen |</span>
+- <span data-aapsb-msg="errMatch">De wachtwoorden zijn niet gelijk.</span>
+- <span data-aapsb-msg="working">Sleutel wordt gemaakt…</span>
+- <span data-aapsb-msg="okNew">Sleutel gemaakt. Download hieronder de back-up en ga daarna verder met stap 4.</span>
 
 </div>
 

@@ -1,37 +1,95 @@
-# Building the Wear AAPS app
+# Δημιουργία της εφαρμογής AAPS για Wear
 
-The Wear OS App of **AAPS**  (“Wear OS apk”) required for the smartwatch has been separated from the "full" **AAPS** build for the Android phone. Therefore you have to generate a second installation file, or apk, to install **AAPS** wear onto the watch (which is done by side-loading it from the phone). It is strongly recommended that the **AAPS** Wear apk file is built immediately after first building the full **AAPS** apk for the phone. Not only is this very quick to do if you are [building **AAPS** for the first time](../SettingUpAaps/BuildingAaps.md), but it will avoid any potential compatibility issues when you try to set up the watch-phone communication. The **AAPS** Wear apk on the watch is unlikely to be compatible with the **AAPS** phone apk if they have been built in different versions of Android Studio, or if months have past since the initial **AAPS** build.
+Η εφαρμογή **AAPS** για έξυπνο ρολόι Wear OS (το **Wear apk**, `aaps-wear-….apk`) είναι ξεχωριστό αρχείο εγκατάστασης από την εφαρμογή **AAPS** του τηλεφώνου. Χρειάζεστε και τις δύο: η εφαρμογή του τηλεφώνου εκτελεί το κύκλωμα, η εφαρμογή του ρολογιού δείχνει τα δεδομένα του και μπορεί να του στέλνει εντολές. Η εφαρμογή του ρολογιού εγκαθίσταται από το τηλέφωνο, δείτε [Ρύθμιση του AAPS στο ρολόι Wear OS σας](WearOsSmartwatch.md).
 
-If you are already using **AAPS** on a phone and you did not build both the phone and watch (wear) **AAPS** apks at the same time, to ensure success it is therefore best to do a fresh build of both apk files at the same time. Build the AAPS phone and watch apks at the same time, using the same **keystore file**.
+Οι δύο εφαρμογές λειτουργούν μαζί μόνο όταν ταιριάζουν:
 
-## Supported Wear OS versions
+- **Ίδια έκδοση AAPS** στο τηλέφωνο και στο ρολόι.
+- **Ίδιο keystore** για την υπογραφή και των δύο εφαρμογών.
 
-AAPS requires at least Wear OS API level 28 (Android 9).
+Ο πιο απλός τρόπος να το εξασφαλίσετε είναι να δημιουργήσετε και τις δύο εφαρμογές **ταυτόχρονα**, στο ίδιο build. Η δημιουργία μέσω browser το κάνει αυτό για εσάς: κάθε build παράγει μαζί το apk του τηλεφώνου και το Wear apk. Με το Android Studio ή τη γραμμή εντολών, δημιουργείτε το Wear apk ως δεύτερο βήμα, αμέσως μετά το apk του τηλεφώνου.
 
-```{warning}
-AAPS Watchfaces are available for Wear OS smartwatches with API level 28 to 33.<br>
-Wear OS 5 has [limitations](#BuildingAapsWearOs-WearOS5).
+```{note}
+Χρησιμοποιείτε ήδη το **AAPS** στο τηλέφωνό σας, αλλά δεν έχετε Wear apk από το ίδιο build; Δημιουργήστε ξανά και τις δύο εφαρμογές, με το ίδιο keystore, και εγκαταστήστε ξανά και την εφαρμογή του τηλεφώνου. Ένα Wear apk που δημιουργήθηκε μήνες αργότερα, ή με άλλη έκδοση του Android Studio, πιθανότατα δεν θα είναι συμβατό με την εφαρμογή του τηλεφώνου.
 ```
 
-## Building the **AAPS** Wear apk
+## Υποστηριζόμενες εκδόσεις Wear OS
 
-The build process for the Wear apk is similar to that for the "full" phone apk.
+Το **AAPS** λειτουργεί σε ρολόγια με **Wear OS 3.0, 3.2 ή 3.5** (Android 11, επίπεδο API 30) **ή νεότερο** (Wear OS 4, 5 και 6). Τα ρολόγια με Wear OS 2 δεν υποστηρίζονται.
 
-- Follow the instructions for [Building AAPS](../SettingUpAaps/BuildingAaps.md).
-- When you reach [module selection](#Building-APK-wearapk) in "Build the AAPS signed apk", make sure to select **`AndroidAPS.wear`**.
+```{warning}
+Τα watchface του AAPS είναι διαθέσιμα για έξυπνα ρολόγια Wear OS με επίπεδο API 30 έως 33 (Wear OS 3.0, 3.2, 3.5 και 4).<br>
+Οι νεότερες εκδόσεις του Wear OS χαλάνε σταδιακά τα watchface του AAPS — δείτε [Αλλαγές στα watchface του Wear OS](#wearos-watchface-changes) και τους [Περιορισμούς του Wear OS 5](#BuildingAapsWearOs-WearOS5).
+```
 
-![Wear module](../images/Building-the-App/wear_build1.png)
+(building-aaps-wear-os-method)=
 
-Select "**fullRelease**" to generate the **AAPS** Wear apk file.
+## Πάρτε το Wear apk με τη μέθοδο δημιουργίας σας
 
-![Wear module](../images/Building-the-App/wear_build2.png)
+Ακολουθήστε την ενότητα για τη μέθοδο που χρησιμοποιείτε για τη [δημιουργία του AAPS](../SettingUpAaps/BuildingAaps.md).
 
-If you prefer, you can build **“pumpcontrolRelease”** instead, from the drop-down menu, which will allow you to just remotely control the pump but without looping.
+(building-aaps-wear-os-browser)=
 
-## Troubleshooting
+### Δημιουργία μέσω browser (συνιστάται)
 
-In the process of building the 3.2 full **AAPS** app (and in fact any signed app), Android Studio generates a .json file in the same folder. This then causes errors with [uncommitted changes](#troubleshooting_androidstudio-uncommitted-changes) when you try to build the next signed app, like the **AAPS** wear app. The quickest way to resolve this is to navigate to the folder where the full AAPS app has been built, your folder is probably something like:
+**Δεν χρειάζεται να κάνετε τίποτα επιπλέον.** Κάθε δημιουργία μέσω browser παράγει δύο αρχεία από τον ίδιο πηγαίο κώδικα και το ίδιο keystore:
+
+- `aaps-….apk`: η εφαρμογή του τηλεφώνου.
+- `aaps-wear-….apk`: η εφαρμογή του ρολογιού.
+
+Το Wear apk ακολουθεί την [παραλλαγή (variant)](#browserbuild-variant) που επιλέξατε για το build: το `fullRelease` δίνει την εφαρμογή **AAPS Wear**, το `aapsclientRelease` την εφαρμογή **AAPSClient Wear**, το `pumpcontrolRelease` την εφαρμογή **PumpControl Wear**. Κάθε εφαρμογή Wear επικοινωνεί μόνο με την αντίστοιχη εφαρμογή του τηλεφώνου.
+
+Πού θα βρείτε το Wear apk:
+
+- **AAPS Builder**: στη σελίδα του build, κάντε κύλιση προς τα κάτω στο **Artifacts** και κατεβάστε το `aaps-wear-….apk` δίπλα στην εφαρμογή του τηλεφώνου, όπως φαίνεται στο [Βήμα 6 – Εγκατάσταση στο τηλέφωνό σας](#aaps-builder-step6). Κατεβάστε το στο τηλέφωνο που εκτελεί το **AAPS**, αν εγκαθιστάτε την εφαρμογή του ρολογιού από το τηλέφωνο (Wear Installer 2 ή Easy Fire Tools), ή στον υπολογιστή σας, αν χρησιμοποιείτε ADB.
+
+  ![Artifacts με τις εφαρμογές για τηλέφωνο και ρολόι](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
+
+- **Fork με Google Drive**: ανοίξτε το Google Drive σας, τον φάκελο `AAPS`, και μετά τον φάκελο της έκδοσης που δημιουργήσατε. Περιέχει το apk του τηλεφώνου και το Wear apk, δείτε [Βήμα 4 – Δημιουργία του APK](#github-build-apk).
+
+  ![Τοποθεσία στο Google Drive](../images/update/CI/GitHubActions5.png)
+
+Κρατήστε το Wear apk μαζί με το apk του τηλεφώνου στα αντίγραφα ασφαλείας σας. Με το **AAPS Builder**, τα αρχεία μένουν στη σελίδα του build μόνο για 14 ημέρες.
+
+Επόμενο: εγκαταστήστε το Wear apk στο ρολόι, δείτε [Ρύθμιση του AAPS στο ρολόι Wear OS σας](WearOsSmartwatch.md).
+
+(building-aaps-wear-os-android-studio)=
+
+### Android Studio
+
+Το Wear apk δημιουργείται όπως το apk του τηλεφώνου, ως δεύτερο υπογεγραμμένο build. Κάντε το αμέσως μετά το apk του τηλεφώνου, με την ίδια έκδοση του Android Studio και το ίδιο keystore.
+
+- Ακολουθήστε τις οδηγίες για τη [δημιουργία με το Android Studio](../SettingUpAaps/ComputerBuild.md).
+- Όταν φτάσετε στην [επιλογή module](#Building-APK-wearapk) στο «Δημιουργία του υπογεγραμμένου apk του AAPS», βεβαιωθείτε ότι επιλέγετε **`AndroidAPS.wear`**.
+
+![Module του Wear](../images/Building-the-App/wear_build1.png)
+
+Επιλέξτε «**fullRelease**» για να δημιουργήσετε το αρχείο apk του **AAPS** για Wear.
+
+![Module του Wear](../images/Building-the-App/wear_build2.png)
+
+Αν προτιμάτε, μπορείτε να δημιουργήσετε αντί γι' αυτό το **“pumpcontrolRelease”** από το αναπτυσσόμενο μενού. Με αυτό μπορείτε μόνο να ελέγχετε την αντλία από απόσταση, χωρίς κύκλωμα.
+
+Επόμενο: εγκαταστήστε το Wear apk στο ρολόι, δείτε [Ρύθμιση του AAPS στο ρολόι Wear OS σας](WearOsSmartwatch.md).
+
+(building-aaps-wear-os-troubleshooting)=
+
+#### Αντιμετώπιση προβλημάτων στη δημιουργία με το Android Studio
+
+Κατά τη δημιουργία της πλήρους εφαρμογής **AAPS** (και στην πραγματικότητα κάθε υπογεγραμμένης εφαρμογής), το Android Studio δημιουργεί ένα αρχείο .json στον ίδιο φάκελο. Αυτό προκαλεί μετά σφάλματα με [αλλαγές που δεν έχουν γίνει commit](#troubleshooting_androidstudio-uncommitted-changes), όταν προσπαθείτε να δημιουργήσετε την επόμενη υπογεγραμμένη εφαρμογή, όπως την εφαρμογή **AAPS** για Wear. Ο πιο γρήγορος τρόπος να το λύσετε είναι να πάτε στον φάκελο όπου δημιουργήθηκε η πλήρης εφαρμογή AAPS. Ο φάκελός σας είναι πιθανώς κάτι σαν:
 
 `C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\aapsclient\release.`
 
-Either delete, or move the unneeded .json file out of the folder. Then try to build the **AAPS** wear app again. If that doesn't work, the more detailed [troubleshooting guide](../GettingHelp/TroubleshootingAndroidStudio.md) will help you to identify the specific file causing the issue, which could also be your keystore file. 
+Διαγράψτε το περιττό αρχείο .json ή μετακινήστε το έξω από τον φάκελο. Μετά προσπαθήστε ξανά να δημιουργήσετε την εφαρμογή **AAPS** για Wear. Αν αυτό δεν βοηθήσει, ο πιο αναλυτικός [οδηγός αντιμετώπισης προβλημάτων](../GettingHelp/TroubleshootingAndroidStudio.md) θα σας βοηθήσει να βρείτε το συγκεκριμένο αρχείο που προκαλεί το πρόβλημα. Μπορεί να είναι και το αρχείο keystore σας.
+
+(building-aaps-wear-os-cli)=
+
+### Γραμμή εντολών
+
+Ακολουθήστε τις [Οδηγίες δημιουργίας από τη γραμμή εντολών](../SettingUpAaps/CLIBuild.md) και επαναλάβετε τα βήματα μεταγλώττισης και υπογραφής για το module `wear`, με το ίδιο keystore:
+
+```sh
+./gradlew :wear:assembleFullRelease
+```
+
+Το μη υπογεγραμμένο Wear apk γράφεται στο `wear/build/outputs/apk/full/release/`. Υπογράψτε το με το `apksigner` ακριβώς όπως το apk του τηλεφώνου και μετά εγκαταστήστε το στο ρολόι, δείτε [Ρύθμιση του AAPS στο ρολόι Wear OS σας](WearOsSmartwatch.md).

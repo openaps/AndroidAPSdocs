@@ -1,6 +1,6 @@
 # Prezentare generală componentă
 
-**AAPS** nu este doar o aplicație (auto-construită), ci doar unul dintre modulele sistemului dumneavoastră cu buclă închisă. Înainte de a vă decide asupra componentelor, ar fi o idee bună să aruncați o privire către documentația componentelor.
+**AAPS** is not just a (self-built) application; it is one of several modules of your closed loop system. Before deciding on components, it is a good idea to look at the component documentation.
 
 ![Prezentare generală a componentelor](../images/modules.png)
 
@@ -18,32 +18,33 @@ Nu în ultimul rând, nu trebuie să luați inhibitori ai SGLT-2 (gliflozine), d
 
 ### Algoritm de dozaj individual bun pentru tratamentul diabetului dumneavoastră
 
-Chiar dacă acest lucru nu este ceva de creat sau cumpărat, acesta este "modulul”, care este probabil cel mai subestimat, dar esențial. Când permiteți unui algoritm să ajute la gestionarea diabetului, trebuie să cunoască setările corecte pentru a nu face greșeli grave. Chiar dacă încă vă lipsesc alte module, puteți deja să vă verificați și să vă adaptați **Profilul** în colaborare cu echipa dumneavoastră medicală de diabet.
+Even though this is not something to create or buy, it is probably the most underestimated 'module' — but it is essential. When you let an algorithm help manage your diabetes, it needs to know the right settings so it does not make severe mistakes. Chiar dacă încă vă lipsesc alte module, puteți deja să vă verificați și să vă adaptați **Profilul** în colaborare cu echipa dumneavoastră medicală de diabet.
 
 **Profilul** include:
 
 - RB (Rate bazale): furnizează insulină de fond;
 - ISF (factorul de sensibilitate la insulină): cât de mult va fi redus nivelul glicemiei cu 1 unitate de insulină;
-- CR (raportul carbohidraților): câte grame de carbohidrați sunt acoperite de o unitate de insulină;
-- DAI (durata acțiunii insulinei).
+- CR (carb ratio): how many grams of carbohydrate are covered by one unit of insulin.
 
 Majoritatea utilizatorilor de buclă utilizează setări circadiene, rate bazale, ISF și CR, care adaptează sensibilitatea hormonală a insulinei în timpul zilei.
 
-Mai multe informații despre **profilul**dumneavoastră pe [pagina dedicată](../SettingUpAaps/YourAapsProfile.md).
+Alongside your **Profile**, you also need to configure your **insulin** in **Manage → Insulin settings**, including its DIA (duration of insulin action) — see [Insulin settings](#Config-Builder-insulin-dia).
+
+More information about your **Profile** [on the dedicated page](../SettingUpAaps/YourAapsProfile.md).
 
 ### Telefon
 
-Consultați pagina dedicată [telefoanelor](../Getting-Started/Phones.md).
+See the dedicated page [Phones](../Getting-Started/Phones.md).
 
 ### Pompa de insulină
 
-Consultați pagina dedicată [Pompe compatibile](../Getting-Started/CompatiblePumps.md).
+See the dedicated page [Compatible Pumps](../Getting-Started/CompatiblePumps.md).
 
-**Avantajele și dezavantajele unor modele de pompă**
+**Advantages and disadvantages of some pump models**
 
-Combo, Insight și modelul mai vechi Medtronic sunt pompe solide și cu funcție de buclă. Combo are avantajul că oferă mult mai multe tipuri de seturi de perfuzie din care puteți alege, deoarece are un conector Luer-Lock standard. Și bateria este una implicită pe care o poți cumpăra de la orice benzinărie, magazin deschis non-stop și, dacă chiar ai nevoie de una, o poți fura/împrumuta de la telecomanda din camera de hotel ;-).
+The Combo, the Insight and the older Medtronic are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard Luer-Lock. And the battery is a default one you can buy at any gas station, 24-hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
 
-Avantajele DanaR/RS și Dana-i față de Combo, ca pompă preferată, sunt însă:
+The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice however are:
 
 - Asocierea inițială este mai simplă cu Dana-i/RS. Dar, de obicei, faceți asta o singură dată, așa că are impact doar dacă vreți să testați o nouă funcție cu pompe diferite.
 - Până acum, Combo funcționează prin analizarea ecranului. În general, funcționează excelent, dar este lent. Pentru buclă, acest lucru nu contează prea mult, deoarece totul funcționează în fundal. Still there is much more time you need to be connected so more time when the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
@@ -61,9 +62,9 @@ The main component of the system. In order to install the app, you have to build
 
 ### Reporting server
 
-A reporting server displays your glucose and treatment data, and creates reports for detailed analysis. There are currently two reporting servers available for use with AAPS : [Nightscout](#SettingUpTheReportingServer-nightscout) and [Tidepool](#SettingUpTheReportingServer-tidepool). They both provide ways to visualize your diabetes data over time, provide statistics about the **time in range** (TIR) and other measures.
+A reporting server displays your glucose and treatment data, and creates reports for detailed analysis. There are currently two reporting servers available for use with AAPS: [Nightscout](#SettingUpTheReportingServer-nightscout) and [Tidepool](#SettingUpTheReportingServer-tidepool). They both provide ways to visualize your diabetes data over time, provide statistics about the **time in range** (TIR) and other measures.
 
-The Reporting server is independent of the other modules. If you don’t want to use a reporting server, you should know that it is not mandatory for running **AAPS** in the long term. But you still need to set up one as it will be required to fulfill [**Objective 1**](#objectives-objective1).
+The Reporting server is independent of the other modules. If you don’t want to use a reporting server, you should know that it is not mandatory for running **AAPS** in the long term. But you still need to set one up, as it is required to fulfill [**Objective 1**](#objectives-objective1).
 
 Additional information on how to set up your reporting server can be found [here](../SettingUpAaps/SettingUpTheReportingServer.md).
 
@@ -71,18 +72,18 @@ Additional information on how to set up your reporting server can be found [here
 
 ### Ceas inteligent
 
-You can choose any smartwatch with Android WearOS 2.x up to 4.x. **Beware, WearOS 5.x is not always compatible!**
+You can choose any smartwatch running **Wear OS 3** or newer. See [Watches](../Getting-Started/Watches.md) for details.
 
 Users are creating a [list of tested phones and watches](#Phones-list-of-tested-phones). There are different watchfaces for use with **AAPS**, which you can find [here](../WearOS/WearOsSmartwatch.md).
 
-### xDrip+
+### xDrip
 
-Even if you don't need to have the xDrip+ App as **BG Source**, you can still use it for _i.e._ alarms or a different blood glucose display. You can have as many alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found [here](../CompatibleCgms/xDrip.md). Vă rugăm să rețineți că documentația pentru această aplicație nu este întotdeauna actualizată, deoarece progresul său este destul de rapid.
+Even if you don't need the xDrip app as your **BG Source**, you can still use it, for example for alarms or a different blood glucose display. You can have as many alarms as you want, specify the time when an alarm should be active, choose whether it can override silent mode, etc. Some xDrip information can be found [here](../CompatibleCgms/xDrip.md). Please be aware that the documentation for this app is not always up to date, as it changes quickly.
 
 ## Ce trebuie făcut în timp ce așteptați modulele
 
-It sometimes takes a while to get all the modules for closing the loop. Dar nu vă faceți griji, sunt multe lucruri pe care le puteți face în timp ce așteptați. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with **AAPS**. Using this mode, **AAPS** gives treatment recommendations you can manually execute.
+It sometimes takes a while to get all the modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with **AAPS**. Using this mode, **AAPS** gives treatment recommendations you can manually execute.
 
 You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../UsefulLinks/BackgroundReading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 
-**Gata?** Dacă aveți componentele **AAPS** împreună (felicitări!) sau cel puțin suficient pentru a începe în modul buclă deschisă, ar trebui să citiți mai întâi [descrierea obiectivului](../SettingUpAaps/CompletingTheObjectives.md) înaintea fiecărui nou obiectiv și să vă configurați echipamentul.
+**Done?** If you have your **AAPS** components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective, and set up your hardware.

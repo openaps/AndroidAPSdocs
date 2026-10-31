@@ -1,85 +1,114 @@
-# DanaRS and Dana-i Pump
+# DanaRS, Dana-i και Dana-i2
 
-*Αυτές οι οδηγίες αφορούν στη διαμόρφωση της εφαρμογής και της αντλίας σας εάν έχετε μια αντλία DanaRS από το 2017 και μετά. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead.*
+*Αυτές οι οδηγίες αφορούν τη διαμόρφωση της εφαρμογής και της αντλίας σας, αν έχετε μια DanaRS από το 2017 και μετά, μια Dana-i ή μια Dana-i2. Αν έχετε την αρχική DanaR, δείτε τη σελίδα [Αντλία ινσουλίνης DanaR](./DanaR-Insulin-Pump.md).*
 
-**Το νέο υλικολογισμικό της Dana RS v3 μπορεί να χρησιμοποιηθεί από την έκδοση AAPS 2.7 και μετά.**
+**Η Dana-i2 μπορεί να χρησιμοποιηθεί από την έκδοση 4.0 του AAPS και μετά.** Χρησιμοποιεί τον ίδιο οδηγό **Dana-i/RS** με την Dana-i.
 
-**Το νέο υλικολογισμικό της Dana RS v3 μπορεί να χρησιμοποιηθεί από την έκδοση AAPS 3.0 και μετά.**
+* Στην αντλία DanaRS/i/i2 η εφαρμογή χρησιμοποιεί το "BASAL A". Τα υπάρχοντα δεδομένα αντικαθίστανται.
 
-* Στην αντλία DanaRS χρησιμοποιείται η εφαρμογή "βασικός ρυθμός Α". Τα υπάρχοντα δεδομένα αντικαθίστανται.
+    {contents} Περιεχόμενα
+    :depth: 1
+    :local: true
+
+## Δυνατότητες της αντλίας με το AAPS
+
+* Επικοινωνεί με το **AAPS** μέσω του Bluetooth του τηλεφώνου σας, χωρίς επιπλέον συσκευή επικοινωνίας.
+* Οι αλλαγές θερινής ώρας και ζώνης ώρας πρέπει να γίνονται χειροκίνητα (δείτε [Ταξίδια σε άλλες ζώνες ώρας](#timezone-traveling-danarv2-danars)).
 
 (DanaRS-Insulin-Pump-pairing-pump)=
 
 ## Σύζευξη αντλίας
 
-* Στην αρχική οθόνη του AAPS κάντε κλικ στο μενού χάμπουργκερ στην επάνω αριστερή γωνία και μεταβείτε στην διαμόρφωση παραμέτρων (Config Builder).
-* Στην ενότητα της αντλίας επιλέξτε 'Dana-i/RS'.
-* Κάντε κλικ στον γρανάζι για να μεταβείτε απευθείας στις ρυθμίσεις της αντλίας ή να επιστρέψετε στην αρχική οθόνη.
+* Ανοίξτε το **μενού** (☰) πάνω αριστερά στην κύρια οθόνη του **AAPS** και επιλέξτε **Διαμόρφωση**.
+* Πατήστε **Αντλία** και επιλέξτε **Dana-i/RS**.
     
-    ![Επιλογές διαμόρφωσης του AAPS για την αντλία Dana-i/RS](../images/DanaRS_i_ConfigB.png)
-
-* Μεταβείτε στην καρτέλα 'DANA-i/RS'.
-
-* Επιλέξτε το μενού προτιμήσεων, πατώντας τις 3 τελείες πάνω δεξιά. 
-* Επιλέξτε 'Dana-i/RS Προτιμήσεις'.
-* Κάντε κλικ στο "Επιλεγμένη αντλία".
-* Στο παράθυρο σύζευξης κάντε κλικ στην καταχώρηση για την αντλία σας.
+    ![Διαμόρφωση > Αντλία με το πρόσθετο Dana-i/RS](../images/v4/Configuration/configuration_pump_list_2.png)
     
-    ![Το AAPS κάνει σύζευξη με την αντλία Dana-i/RS](../images/DanaRS_i_Pairing.png)
+    Μόλις επιλεγεί, η κάρτα **Dana-i/RS** δείχνει δύο κουμπιά, **Ρυθμίσεις** και **Άνοιγμα πρόσθετου**:
+    
+    ![Το πρόσθετο Dana-i/RS επιλεγμένο στο Διαμόρφωση > Αντλία](../images/v4/Pumps/dana_i_rs_enabled.png)
+    
+    Το **Ρυθμίσεις** ανοίγει τις ρυθμίσεις του οδηγού Dana-i/RS:
+    
+    ![Ρυθμίσεις του οδηγού Dana-i/RS](../images/v4/Pumps/dana_i_rs_settings.png)
+    
+    Το **Άνοιγμα πρόσθετου** (ή **Διαχείριση** > **Αντλία**) ανοίγει την οθόνη της αντλίας Dana-i/RS. Πριν από τη σύζευξη μιας αντλίας, η οθόνη μοιάζει έτσι:
+    
+    ![Οθόνη της αντλίας Dana-i/RS πριν από τη σύζευξη](../images/v4/Pumps/dana_i_rs_pump_screen.png)
 
-* Πρέπει να επιβεβαιώσετε την σύζευξη στην αντλία! </b> Αυτός είναι ο τρόπος με τον οποίο γίνονται και άλλες συνδέσεις bluetooth (δηλαδή smartphone και ηχείο αυτοκινήτου).
+* Στην οθόνη της αντλίας, πατήστε **Σύζευξη**. Το **AAPS** αναζητά κοντινές αντλίες.
+
+* Πατήστε την αντλία σας στη λίστα.
+    
+    ![Η οθόνη σύζευξης με μια αντλία Dana που βρέθηκε στη σάρωση](../images/DanaRS_i_Pairing.png)
+
+* **Πρέπει να επιβεβαιώσετε τη σύζευξη στην αντλία!** Αυτό γίνεται όπως και σε άλλες συζεύξεις Bluetooth που ίσως γνωρίζετε (για παράδειγμα, smartphone και ηχοσύστημα αυτοκινήτου).
     
     ![Επιβεβαίωση σύζευξης Dana RS](../images/DanaRS_Pairing.png)
 
-* Follow the pairing process based on the type and firmware of your pump:
+* Ακολουθήστε τη διαδικασία σύζευξης ανάλογα με τον τύπο και το firmware της αντλίας σας:
     
-    * For DanaRS v1 select pump password in preferences and set your password.
-    * For DanaRS v3 you have to type 2 sequences of numbers and letters displayed on pump to AAPS pairing dialog.
-    * For Dana-i standard Android pairing dialog appear and you have to enter 6-digit number displayed on pump.
+    * Για την DanaRS v1, το **AAPS** ζητά τον **Κωδικός πρόσβασης αντλίας (μόνο v1)**. Εισαγάγετε τον κωδικό της αντλίας σας (δείτε [Προεπιλεγμένος κωδικός](#DanaRS-Insulin-Pump-default-password)).
+    * Για την DanaRS v3, το **AAPS** σας ζητά να πατήσετε OK στην αντλία και να πληκτρολογήσετε τις 2 σειρές αριθμών και γραμμάτων που δείχνει η αντλία. Κρατήστε την οθόνη της αντλίας αναμμένη πατώντας το κουμπί μείον, μέχρι να τελειώσετε. Μετά πατήστε **Τέλος**.
+    * Για την Dana-i και την Dana-i2 εμφανίζεται το κανονικό παράθυρο σύζευξης του Android. Εισαγάγετε τον 6ψήφιο αριθμό που δείχνει η αντλία.
 
-* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* Όταν εμφανιστεί το **Η σύζευξη πέτυχε!**, πατήστε **Τέλος**.
+    
+    ![Η σύζευξη πέτυχε!](../images/v4/Pumps/dana_i_rs_pairing_success.png)
+    
+    Επιστρέφετε στην οθόνη της αντλίας, που τώρα δείχνει την κατάσταση της αντλίας σας.
+    
+    ![Οθόνη της αντλίας Dana-i/RS μετά τη σύζευξη](../images/v4/Pumps/dana_i_rs_pump_screen_paired.png)
 
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide).
-* Set bolus step on pump to 0.05 U/h using Doctors menu (see pump user guide).
+* Στις **Ρυθμίσεις**, επιλέξτε **Ταχύτητα bolus** για να αλλάξετε την προεπιλεγμένη ταχύτητα bolus (12 s/U, 30 s/U ή 60 s/U).
+
+* Ορίστε το βήμα του βασικού ρυθμού στην αντλία σε 0,01 U/h από το Doctors menu (δείτε τις οδηγίες χρήσης της αντλίας).
+* Ορίστε το βήμα bolus στην αντλία σε 0,05 U από το Doctors menu (δείτε τις οδηγίες χρήσης της αντλίας). Το **AAPS** διαβάζει τα βήματα βασικού ρυθμού και bolus από την αντλία και τα χρησιμοποιεί για κάθε bolus, ώστε ένα bolus να ταιριάζει πάντα με το βήμα που έχει οριστεί στην αντλία. Η οθόνη της αντλίας τα δείχνει στη γραμμή **Βήμα βασικού/bolus**.
 * Ενεργοποιήστε το εκτεταμένο bolus στην αντλία
+
+### Επιλογές που εμφανίζονται μόνο σε κάποια μοντέλα
+
+* **Αυτόματο κλείδωμα**: σε μια Dana-i2, η οθόνη **Ρυθμίσεις χρήστη** (στην οθόνη της αντλίας, **Διαχείριση** > **Αντλία**) έχει διακόπτη **Αυτόματο κλείδωμα** για τη ρύθμιση αυτόματου κλειδώματος της αντλίας. Πατήστε **Αποθήκευση ρυθμίσεων στην αντλία** αφού την αλλάξετε.
+* **Easy mode**: σε μοντέλα αντλίας που έχουν απλό μενού (easy mode), η οθόνη της αντλίας δείχνει μια γραμμή **Easy mode** με **Ενεργό** ή **Ανενεργό**.
+* Αν μια Dana-i2 αρνηθεί ένα bolus, το **AAPS** δείχνει τον λόγο, για παράδειγμα *Δεν έχει γίνει πλήρωση της αντλίας*, *Δεν υπάρχει αρκετή ινσουλίνη στη δεξαμενή* ή *Η λειτουργία Easy sleep είναι ενεργή στην αντλία*.
 
 (DanaRS-Insulin-Pump-default-password)=
 
-### Default password
+### Προεπιλεγμένος κωδικός πρόσβασης
 
-* For DanaRS with firmware v1 and v2 the default password is 1234.
-* For DanaRS with firmware v3 or Dana-i the default password is derived from the manufacturing date and calculates as MMDD where MM is the month and DD is the day, the pump was produced (i.e. '0124' representing month 01 and day 24).
+* Για την DanaRS με firmware v1 και v2 ο προεπιλεγμένος κωδικός είναι 1234.
+* Για την DanaRS με firmware v3 ή την Dana-i, ο προεπιλεγμένος κωδικός προκύπτει από την ημερομηνία κατασκευής και υπολογίζεται ως MMDD, όπου MM είναι ο μήνας και DD η ημέρα που κατασκευάστηκε η αντλία (π.χ. '0124' σημαίνει μήνας 01 και ημέρα 24).
     
-    * From MAIN MENU select REVIEW then open SHIPPING INFORMATION from the sub menu
+    * Από το MAIN MENU επιλέξτε REVIEW και μετά ανοίξτε το SHIPPING INFORMATION από το υπομενού
     * Ο αριθμός 3 είναι η ημερομηνία κατασκευής. 
-    * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AAPS.
+    * Στις v3/i αυτός ο κωδικός χρησιμοποιείται μόνο για το κλείδωμα του μενού στην αντλία. Δεν χρησιμοποιείται για την επικοινωνία και δεν χρειάζεται να τον εισαγάγετε στο AAPS.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
 
 ## Αλλαγή κωδικού πρόσβασης στην αντλία
 
 * Πατήστε το κουμπί OK στην αντλία
-* Στο κυρίως μενού επιλέξτε "ΕΠΙΛΟΓΗ" (πηγαίνετε δεξιά πατώντας το κουμπί βέλους αρκετές φορές)
+* Στο main menu επιλέξτε "OPTION" (μετακινηθείτε δεξιά πατώντας μερικές φορές το κουμπί βέλους)
     
     ![Κεντρικό Μενού αντλίας DanaRS](../images/DanaRSPW_01_MainMenu.png)
 
-* Στο μενού επιλογών επιλέξτε "ΕΠΙΛΟΓΗ ΧΡΗΣΤΗ"
+* Στο μενού options επιλέξτε "USER OPTION"
     
-    ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
+    ![Μενού Option της DanaRS](../images/DanaRSPW_02_OptionMenu.png)
 
-* Χρησιμοποιήστε το κουμπί βέλους για να μετακινηθείτε προς τα κάτω στο "11. κωδικός πρόσβασης
+* Χρησιμοποιήστε το κουμπί βέλους για να μετακινηθείτε προς τα κάτω στο "11. password"
     
-    ![DanaRS 11. Κωδικόs πρόσβασης](../images/DanaRSPW_03_11PW.png)
+    ![DanaRS 11. Password](../images/DanaRSPW_03_11PW.png)
 
 * Πατήστε OK για να εισάγετε τον παλιό κωδικό πρόσβασης.
 
-* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
+* Εισαγάγετε τον **παλιό κωδικό** (για τον προεπιλεγμένο κωδικό δείτε [παραπάνω](#DanaRS-Insulin-Pump-default-password)) και πατήστε OK
     
     ![Εισαγωγή παλιού κωδικού πρόσβασης για την αντλία DanaRS](../images/DanaRSPW_04_11PWenter.png)
 
 * Εάν εισάγετε λάθος κωδικό πρόσβασης εδώ δεν θα υπάρχει κάποιο μήνυμα που να υποδεικνύει αποτυχία!
 
-* Set **new password** (Change numbers with + & - buttons / Move right with arrow button).
+* Ορίστε **νέο κωδικό** (αλλάξτε τους αριθμούς με τα κουμπιά + & - / μετακινηθείτε δεξιά με το κουμπί βέλους).
     
     ![DanaRS Νέος κωδικός πρόσβασης](../images/DanaRSPW_05_PWnew.png)
 
@@ -91,42 +120,52 @@
 
 * Πηγαίνετε κάτω στο "14. EXIT" και πατήστε OK για έξοδο.
     
-    ![Έξοδος Του DanaRS](../images/DanaRSPW_07_Exit.png)
+    ![DanaRS: έξοδος](../images/DanaRSPW_07_Exit.png)
 
 (DanaRS-Insulin-Pump-dana-rs-specific-errors)=
 
-## Dana RS specific errors
+## Ειδικά σφάλματα της Dana RS
 
-### Βλάβη κατά την χορήγηση ινσουλίνης
+### Σφάλμα κατά τη χορήγηση ινσουλίνης
 
-In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+Αν χαθεί η σύνδεση μεταξύ AAPS και Dana RS κατά τη χορήγηση ενός bolus (π.χ. απομακρυνθείτε από το τηλέφωνο ενώ η Dana RS χορηγεί ινσουλίνη), θα δείτε το παρακάτω μήνυμα και θα ακούσετε έναν ήχο συναγερμού.
 
-![Συναγερμός παράδοσης ινσουλίνης](../images/DanaRS_Error_bolus.png)
+![Συναγερμός χορήγησης ινσουλίνης](../images/DanaRS_Error_bolus.png)
 
-* In most cases this is just a communication issue and the correct amount of insulin is delivered.
-* Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
-* Delete error entry in [treatments tab](#screens-bolus-carbs) if you wish.
-* Real amount is read and recorded on next connect. To force this press BT icon on dana tab or just wait for next connect.
+* Στις περισσότερες περιπτώσεις πρόκειται για θέμα επικοινωνίας και παρέχεται η σωστή ποσότητα ινσουλίνης.
+* Ελέγξτε στο ιστορικό της αντλίας ότι δόθηκε το σωστό bolus. Μπορείτε να το κάνετε στην ίδια την αντλία ή στο **AAPS** στην οθόνη της αντλίας (**Διαχείριση** > **Αντλία**) > **Ιστορικό αντλίας** > **Bolus**.
+* Αν θέλετε, διαγράψτε την εγγραφή του σφάλματος στις [θεραπείες](#screens-bolus-carbs).
+* Η πραγματική ποσότητα διαβάζεται και καταγράφεται στην επόμενη σύνδεση. Για να γίνει αυτό αμέσως, πατήστε **Ανανέωση** στην οθόνη της αντλίας ή απλώς περιμένετε την επόμενη σύνδεση.
 
 ## Ειδική σημείωση για την αλλαγή τηλεφώνου
 
 Κατά τη μετάβαση σε νέο τηλέφωνο απαιτούνται τα ακόλουθα βήματα:
 
-* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
-* Transfer settings from old to new phone
+* [Εξαγωγή ρυθμίσεων](../Maintenance/ExportImportSettings.md) στο παλιό σας τηλέφωνο
+* Μεταφορά ρυθμίσεων από το παλιό στο νέο τηλέφωνο
 
 ### DanaRS v1
 
-* **Manually pair** Dana RS with the new phone
-* As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
+* **Χειροκίνητη σύζευξη** της Dana RS με το νέο τηλέφωνο
+* Αν επιλέξετε **Αντικατάσταση και των ρυθμίσεων αντλίας** κατά την εισαγωγή, εισάγονται και οι ρυθμίσεις σύνδεσης της αντλίας, και το AAPS στο νέο σας τηλέφωνο θα "γνωρίζει" ήδη την αντλία και έτσι δεν θα ξεκινήσει σάρωση Bluetooth. Γι' αυτό η σύζευξη του νέου τηλεφώνου με την αντλία πρέπει να γίνει χειροκίνητα.
 * Εγκατάσταση του AAPS στο νέο τηλέφωνο.
-* [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
+* [Εισαγωγή ρυθμίσεων](../Maintenance/ExportImportSettings.md) στο νέο σας τηλέφωνο
 
-### DanaRS v3, Dana-i
+### DanaRS v3, Dana-i, Dana-i2
 
-* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
-* Sometimes it may be necessary to clear pairing information in AAPS by long-click BT icon on Dana-i/RS tab.
+* Ξεκινήστε τη διαδικασία σύζευξης όπως περιγράφεται [παραπάνω](#DanaRS-Insulin-Pump-pairing-pump).
+* Μερικές φορές μπορεί να χρειαστεί πρώτα να διαγράψετε τα στοιχεία σύζευξης στο **AAPS**. Στην οθόνη της αντλίας (**Διαχείριση** > **Αντλία**), πατήστε **Κατάργηση σύζευξης** και επιβεβαιώστε το **Επαναφορά στοιχείων σύζευξης;**. Μετά πατήστε ξανά **Σύζευξη**.
 
-## Ταξιδεύοντας σε διαφορετικές ζώνες ώρας με την Dana Rs
+## Ταξίδια σε άλλες ζώνες ώρας με αντλίες DanaRS, Dana-i και Dana-i2
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
+Για πληροφορίες σχετικά με τα ταξίδια σε άλλες ζώνες ώρας, δείτε την ενότητα [Ταξίδια σε άλλες ζώνες ώρας με αντλίες](#timezone-traveling-danarv2-danars).
+
+## Πού θα βρείτε βοήθεια
+
+Η ανάπτυξη του οδηγού DanaRS/Dana-i/Dana-i2 γίνεται από την κοινότητα σε **εθελοντική** βάση. Πριν ζητήσετε βοήθεια:
+
+1. **Διαβάστε** τη σχετική ενότητα αυτής της τεκμηρίωσης, για να βεβαιωθείτε πώς πρέπει να λειτουργεί η λειτουργία.
+2. **Ρωτήστε** στο κανάλι *#AAPS* στο [Discord](https://discord.gg/4fQUWHZ4Mw) ή σε ένα από τα άλλα [κανάλια της κοινότητας](../GettingHelp/WhereCanIGetHelp.md).
+3. **Αναφέρετε ένα σφάλμα**: ψάξτε πρώτα στα [υπάρχοντα issues](https://github.com/nightscout/AndroidAPS/issues). Αν το δικό σας δεν υπάρχει, ανοίξτε ένα [νέο issue](https://github.com/nightscout/AndroidAPS/issues) και επισυνάψτε τα [αρχεία καταγραφής](../GettingHelp/AccessingLogFiles.md) σας.
+
+Όταν ζητάτε βοήθεια, αναφέρετε τη μάρκα και το μοντέλο του τηλεφώνου σας, την έκδοση Android, την έκδοση του **AAPS** και μια περιγραφή του προβλήματος σε απλά αγγλικά (τι άλλαξε, πότε λειτούργησε τελευταία φορά).

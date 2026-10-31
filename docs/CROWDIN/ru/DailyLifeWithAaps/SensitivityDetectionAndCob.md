@@ -4,7 +4,7 @@
 
 ## Sensitivity algorithm
 
-В настоящее время есть 3 модели определения чувствительности:
+**AAPS** currently offers 3 sensitivity detection models:
 
 * Чувствительность AAPS
 * Средневзвешенная чувствительность
@@ -12,20 +12,23 @@
 
 ### Чувствительность AAPS
 
-Чувствительность вычисляется таким же образом, как Oref1, но можно указать время начала отсчета. Минимальное усвоение углеводов рассчитывается из максимального времени поглощения углеводов в настройках
+Sensitivity is calculated the same way as in Oref1, but you can specify the time range to look back on. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences.
 
 ### Средневзвешенная чувствительность
 
-Чувствительность рассчитывается как средневзвешанная от отклонений. Можно указать время в прошлом. Новые отклонения имеют большее значение. Минимальное усвоение углеводов рассчитывается из максимального времени поглощения углеводов в настройках. Этот алгоритм является самым быстрым при отслеживании изменений чувствительности.
+Sensitivity is calculated as a weighted average of the deviations. You can specify the time range to look back on. Newer deviations have a higher weight. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences. This algorithm is the fastest in following sensitivity changes.
 
 (SensitivityDetectionAndCob-sensitivity-oref1)=
 
 ### Чувствительность Oref1
 
-Чувствительность рассчитывается на основе данных за прошедшие 8 часов или с последней смены катетера, если это меньше 8 часов назад. Углеводы (не усвоенные) не учитываются по прошествии времени, указанного в настройках. Только алгоритм Oref1 поддерживает непредвиденный прием пищи (UAM). Это означает, что время с распознанным непредвиденным приемом пищи UAM исключено из расчета чувствительности. Поэтому если вы используете супермикроболюс SMB с непредвиденным приемом пищи UAM, вам необходимо выбрать алгоритм Oref1 для правильной работы. Для получения дополнительной информации читайте документацию [OpenAPS Oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
+Sensitivity is calculated from the last 8 hours of data, or from the last site change if it is less than 8 hours ago. Carbs (if not absorbed) are cut after the time specified in the preferences. Только алгоритм Oref1 поддерживает непредвиденный прием пищи (UAM). This means that times with detected UAM are excluded from the sensitivity calculation. So if you are using SMB with UAM, you have to choose the Oref1 algorithm for it to work properly. For more information about UAM, see the [Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb) section.
 
-Oref1 is the recommended option : it is the only one that can detect UAM and work with [OpenAps SMB](#Open-APS-features-super-micro-bolus-smb), the more recent algorithm.
+Oref1 is the recommended option: it is the only one that can detect UAM and work with [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), the more recent algorithm.
 
 ## Одновременный учет углеводов
 
-Существует значительное отличие при учете средневзвешенного количества углеводов в AAPS по сравнению с Oref1. Компоненты Oref принимают в расчет усвоение углеводов только от однократного приема пищи. Это означает, что второй прием пищи начинает учитываться только после полного усвоения первого. AAPS + средневзвешенные углеводы начинают учет сразу же после ввода углеводов. Если имеет место более одного приема пищи, то минимальный расход углеводов рассчитываться в зависимости от объема еды и максимального времени усвоения. Соответственно, минимальное усвоение будет выше в сравнении с надстройками Oref.
+There is a significant difference between the Sensitivity AAPS and WeightedAverage algorithms on one side, and Oref1 on the other, when several meals overlap.
+
+* Oref1 expects only one meal decaying at a time: the second meal starts decaying after the first meal is completely decayed.
+* Sensitivity AAPS and WeightedAverage start decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to the meal size and the max absorption time. The minimum absorption will accordingly be higher in comparison to Oref1.

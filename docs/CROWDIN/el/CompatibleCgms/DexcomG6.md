@@ -1,75 +1,70 @@
-# Dexcom G6 and ONE
+# Dexcom G6 και ONE
 
 ## Πρώτα τα βασικά
 
--   Follow general CGM hygiene and setting sensor recommendation [here](../CompatibleCgms/GeneralCGMRecommendation.md).
+-   Ακολουθήστε τις γενικές συστάσεις για την υγιεινή του CGM και την τοποθέτηση του αισθητήρα [εδώ](../CompatibleCgms/GeneralCGMRecommendation.md).
 
-## General hints for looping with G6 and ONE
+## Γενικές συμβουλές για κύκλωμα με G6 και ONE
 
-- Recent transmitters are called Firefly. Sensors cannot be restarted without removing the transmitter, which itself cannot be reset, they also do not generate raw data.
+- Οι νεότεροι πομποί ονομάζονται Firefly. Οι αισθητήρες δεν μπορούν να επανεκκινηθούν χωρίς να αφαιρεθεί ο πομπός, ο οποίος δεν μπορεί να γίνει reset. Επίσης δεν παράγουν ακατέργαστα (raw) δεδομένα.
 
-- If you are restarting sensors, ensure you are ready to calibrate and keep an eye on variation.
+- Αν κάνετε επανεκκίνηση αισθητήρων, να είστε έτοιμοι να κάνετε βαθμονόμηση και να παρακολουθείτε τις αποκλίσεις.
 
-- Pre-soaking of the G6/ONE with factory calibration is likely to give variation in results. Αν κάνετε προ-εμβάπτιση, τότε για να έχετε τα καλύτερα αποτελέσματα, πιθανόν να χρειαστεί να βαθμονομήσετε τον αισθητήρα.
+- Η προ-εμβάπτιση του G6/ONE με εργοστασιακή βαθμονόμηση πιθανόν να δώσει αποκλίσεις στα αποτελέσματα. Αν κάνετε προ-εμβάπτιση, τότε για να έχετε τα καλύτερα αποτελέσματα, πιθανόν να χρειαστεί να βαθμονομήσετε τον αισθητήρα.
 
-Read more in the [article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+Διαβάστε περισσότερα στο [άρθρο](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) του Tim Street στο [www.diabettech.com](https://www.diabettech.com).
 
-## If using G6 or ONE with xDrip+
+## Αν χρησιμοποιείτε το G6 ή το ONE με το xDrip
 
-- If you are using a recent (Firefly) transmitter, preemptive restarts are **ignored**.
-- If you are using a modded transmitter you do **not need** to use preemptive restarts.
--   If you are using an old rebatteried transmitter, the safest thing to do is **disable** [preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html). Though, in this case you will have to use the G6 in non-[native mode](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) (which is unadvisable as it disables factory calibration and doesn't filter noisy readings), or else the sensor will stop after 10 days.
--   The Dexcom G6 and ONE transmitters can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
--   When using xDrip+ as receiver uninstall the Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
--   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip+.
--   You can also use xDrip+ as a companion app of the official Dexcom app, but you might experience delays in BG readings.
--   If not already set up, download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
--   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
-
-- Adjust settings in xDrip+ according to [xDrip+ settings page](../CompatibleCgms/xDrip.md)
+- Αν δεν το έχετε ήδη ρυθμίσει, κατεβάστε το [xDrip](https://github.com/NightscoutFoundation/xDrip) και προσαρμόστε τις ρυθμίσεις του σύμφωνα με τη [σελίδα ρυθμίσεων του xDrip](../CompatibleCgms/xDrip.md).
+- Επιλέξτε xDrip στη [**Διαμόρφωση → Πηγή BG**](#Config-Builder-bg-source).
+- Οι πομποί Dexcom G6 και ONE μπορούν να συνδεθούν ταυτόχρονα με τον δέκτη Dexcom (ή εναλλακτικά με την αντλία t:slim) και με μία εφαρμογή στο τηλέφωνό σας.
+- Όταν χρησιμοποιείτε το xDrip ως δέκτη, απεγκαταστήστε πρώτα την εφαρμογή Dexcom. **Δεν μπορείτε να συνδέσετε το xDrip και την εφαρμογή Dexcom με τον πομπό ταυτόχρονα!**
+- Αν χρειάζεστε το Clarity και θέλετε να έχετε τους συναγερμούς του xDrip, χρησιμοποιήστε το [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (μόνο G6) με τοπική μετάδοση (local broadcast) στο xDrip.
+- Μπορείτε επίσης να χρησιμοποιήσετε το xDrip ως συνοδευτική εφαρμογή (companion app) της επίσημης εφαρμογής Dexcom, αλλά μπορεί να έχετε καθυστερήσεις στις τιμές BG.
+- Το xDrip χρησιμοποιεί πάντα τον [εγγενή αλγόριθμο](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) του πομπού με τους τρέχοντες πομπούς. Δεν υπάρχει λόγος να τον απενεργοποιήσετε. Οι [προληπτικές επανεκκινήσεις](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) λειτουργούν μόνο σε παλιούς πομπούς (firmware 1.6.5.25 ή παλαιότερο), όπου χρειάζονται για να μη σταματήσει ο αισθητήρας μετά από 10 ημέρες. Οι νεότεροι πομποί (Firefly) τις αγνοούν. Δείτε το [Restart a sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) πριν δοκιμάσετε οποιαδήποτε επανεκκίνηση.
+- Όλα όσα αφορούν τον ίδιο τον αισθητήρα και τον πομπό περιγράφονται στη [σελίδα Dexcom του xDrip](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
 (DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
-## If using G6 with Build Your Own Dexcom App
+## Αν χρησιμοποιείτε το G6 με το Build Your Own Dexcom App
 
 ```{admonition} Old app version
 :class: warning
-Dexcom BYODA is now a very old version of the app and cannot be updated.
+Το Dexcom BYODA είναι πλέον μια πολύ παλιά έκδοση της εφαρμογής και δεν μπορεί να ενημερωθεί.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+
+-   Το [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) υποστηρίζει τοπική μετάδοση (local broadcast) προς το AAPS και/ή το xDrip
 
-![BYODA broadcast options](../images/BYODA.png)
+-   Αυτή η εφαρμογή σας επιτρέπει να χρησιμοποιήσετε το Dexcom G6 με οποιοδήποτε Android smartphone.
+-   Απεγκαταστήστε την αρχική εφαρμογή Dexcom ή την τροποποιημένη εφαρμογή Dexcom, αν χρησιμοποιούσατε μία από αυτές πριν (**μη σταματήσετε** τον αισθητήρα που λειτουργεί τώρα)
+-   Εγκαταστήστε το apk που κατεβάσατε
+-   Εισαγάγετε τον κωδικό του αισθητήρα και τον σειριακό αριθμό του πομπού στην τροποποιημένη εφαρμογή.
+-   Στις ρυθμίσεις του τηλεφώνου πηγαίνετε στο apps > Dexcom G6 > permissions > additional permissions και πατήστε 'Access Dexcom app'.
+-   Μετά από λίγο, το BYODA θα πρέπει να λάβει το σήμα του πομπού.
 
--   This app lets you use your Dexcom G6 with any Android smartphone.
--   Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously (**do not stop** the currently running sensor)
--   Install the downloaded apk
--   Enter sensor code and transmitter serial no. in patched app.
--   In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
--   After short time BYODA should pick-up transmitter signal.
+### Ρυθμίσεις στο AAPS
 
-### Settings for AAPS
+-   Επιλέξτε **BYODA** στη [**Διαμόρφωση → Πηγή BG**](#Config-Builder-bg-source).
 
--   Select 'Dexcom App (patched)' in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Αν δεν λαμβάνετε τιμές, επιλέξτε οποιαδήποτε άλλη πηγή δεδομένων και μετά επιλέξτε ξανά το **BYODA**, ώστε να ζητηθούν τα δικαιώματα για τη σύνδεση μεταξύ του AAPS και της μετάδοσης (broadcast) του BYODA.
 
--   If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
+### Ρυθμίσεις για το xDrip
 
-### Settings for xDrip+
-
--   Select '640G/Eversense' as data source.
--   Command 'start sensor' must be performed in xDrip+ in order to receive values. This will not affect your current sensor controlled by Build Your Own Dexcom App.
+-   Επιλέξτε '640G/Eversense' ως πηγή δεδομένων.
+-   Η εντολή 'start sensor' πρέπει να εκτελεστεί στο xDrip για να λαμβάνετε τιμές. Αυτό δεν θα επηρεάσει τον τρέχοντα αισθητήρα σας, που ελέγχεται από το Build Your Own Dexcom App.
 
 
 (DexcomG6-troubleshooting-g6)=
-## Troubleshooting G6 and ONE
+## Αντιμετώπιση προβλημάτων G6 και ONE
 
-### Dexcom G6/ONE specific troubleshooting
+### Ειδική αντιμετώπιση προβλημάτων για Dexcom G6/ONE
 
--   Scroll down to **Troubleshooting** [here](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
+-   Κάντε κύλιση προς τα κάτω στο **Troubleshooting** [εδώ](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
-### General troubleshooting
+### Γενική αντιμετώπιση προβλημάτων
 
-General Troubleshooting for CGMs can be found [here](#general-cgm-troubleshooting).
+Γενική αντιμετώπιση προβλημάτων για CGM θα βρείτε [εδώ](#general-cgm-troubleshooting).
 
-### Νέος πομπός με αισθητήρα λειτουργίας που λειτουργούσε
+### Νέος πομπός με αισθητήρα σε λειτουργία
 
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found [here](https://navid200.github.io/xDrip/docs/Remove-transmitter.html). If you opt for [this solution](https://youtu.be/tx-kTsrkNUM) instead, you must be careful to avoid [damaging sensor contacts](https://navid200.github.io/xDrip/docs/Petroleum-jelly-in-Dexcom-G6-Sensor.html) with the strip.
+Αν αλλάξετε πομπό κατά τη διάρκεια μιας περιόδου λειτουργίας του αισθητήρα, μπορείτε να δοκιμάσετε να αφαιρέσετε τον πομπό χωρίς να καταστρέψετε τη βάση του αισθητήρα. Ένα βίντεο θα βρείτε [εδώ](https://navid200.github.io/xDrip/docs/Remove-transmitter.html). Αν επιλέξετε [αυτή τη λύση](https://youtu.be/tx-kTsrkNUM), πρέπει να προσέχετε να μην [καταστρέψετε τις επαφές του αισθητήρα](https://navid200.github.io/xDrip/docs/Petroleum-jelly-in-Dexcom-G6-Sensor.html) με τη λωρίδα.

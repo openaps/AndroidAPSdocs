@@ -1,19 +1,19 @@
 # Ottai M8
 
 
-## Using M8 with Ottai app
+## Използване на M8 с приложението Ottai
 
--   Download and Install the apk from <https://play.google.com/store/apps/details?id=com.ottai.seas>. For the Chinese version of Ottai use <https://ottai.com.cn/70ICjxAI4i>
+-   Изтеглете и инсталирайте apk файла от <https://play.google.com/store/apps/details?id=com.ottai.seas>. За китайската версия на Ottai използвайте <https://ottai.com.cn/70ICjxAI4i>
 
--   Start sensor
+-   Стартиране на сензора
 
-- Select Ottai in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Изберете **Syai/Ottai** в [Конфигурация, Източник на КЗ](#Config-Builder-bg-source).
 
-Enable broadcast in the Ottai app:
+Включете излъчването (broadcast) в приложението Ottai:
 
-1. Select Profile
+1. Изберете Profile
 2. Ottai hub
-3. Tap Share with AAPS, accept the third party data transfer agreement
-4. Enable Share glucose data with AAPS
+3. Докоснете Share with AAPS и приемете споразумението за предаване на данни на трета страна
+4. Включете Share glucose data with AAPS
 
 ![Ottai](../images/Ottai.png)

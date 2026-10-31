@@ -1,341 +1,408 @@
-# Αυτοματοποίηση
+# Αυτοματισμός
 
-## What is an Automation?
+```{contents} In this page
+:backlinks: entry
+:depth: 2
+```
 
-"**Automation**" is a feature which can automate task for AAPS.
+## Τι είναι ένας Αυτοματισμός;
 
-Automations performs specific actions based on one or more conditions or triggers. Triggers can include irregular events like low or high blood glucose (BG) levels, or a set amount of negative insulin on board (IOB). Automations can also handle recurring events, such as meals or exercise at certain times of day, or when the user is within a specific distance of a GPS location or a WIFI SSID area. Automation can execute AAPS settings backups based on a schedule or on every Pod change.
+Ο «**Αυτοματισμός**» είναι μια λειτουργία που κάνει εργασίες στο AAPS αυτόματα.
 
-Automations rules are created and modified from the Automations tab. Each rule is defined by two properties:
+Ο Αυτοματισμός εκτελεί συγκεκριμένες ενέργειες με βάση μία ή περισσότερες συνθήκες. Οι συνθήκες μπορεί να είναι ακανόνιστα συμβάντα, όπως χαμηλά ή υψηλά επίπεδα γλυκόζης αίματος (BG) ή μια ορισμένη ποσότητα αρνητικής ινσουλίνης στον οργανισμό (IOB). Οι Αυτοματισμοί μπορούν επίσης να χειριστούν επαναλαμβανόμενα συμβάντα, όπως γεύματα ή άσκηση σε ορισμένες ώρες της ημέρας, ή όταν ο χρήστης βρίσκεται σε ορισμένη απόσταση από μια τοποθεσία GPS ή στην περιοχή ενός δικτύου Wi-Fi (SSID). Ο Αυτοματισμός μπορεί να κάνει αντίγραφα ασφαλείας των ρυθμίσεων του AAPS με βάση ένα πρόγραμμα ή σε κάθε αλλαγή Pod.
 
-- One or more conditions or 'triggers' that start an action.
+Οι κανόνες Αυτοματισμού δημιουργούνται και αλλάζουν στην οθόνη **Αυτοματισμός** (**Διαχείριση → Αυτοματισμός**). Κάθε κανόνας ορίζεται από δύο στοιχεία:
 
-    Think of a certain time schedule, an event or properties value in AAPS
+- Μία ή περισσότερες συνθήκες (triggers) που ξεκινούν μια ενέργεια.
 
-- One or more actions to perform.
+    Για παράδειγμα ένα χρονικό πρόγραμμα, ένα συμβάν ή μια τιμή στο AAPS
 
-    Such as an alarm or settings a profile percentage or exporting the AAPS settings on Pod change.
+- Μία ή περισσότερες ενέργειες που θα εκτελεστούν.
 
-
-There are a wide range of Automation options, and users are encouraged to study these within the AAPS app, in the Automation section. You can also search the AAPS user groups on [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and [**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users.
-
-## How Automation can help
-
-1. **Automate reoccurring tasks:** Automatically executing programmed actions without user interaction.
-
-1. **Decreasing decision fatigue:** The primary benefit of **Automations** is to relieve the user from the burden of having to make manual interventions in **AAPS**. [Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) estimates that an average of 180 additional daily decisions have to be made by those living with Type 1 diabetes. **Automations** can lessen the mental load, freeing up the user’s mental energy for other aspects of life.
-
-1. **Potentially improving glycemic control:** for example, **Automations** can help ensure **Temp Targets** are always set when needed, even during busy schedules or periods of forgetfulness. For example, if a child with diabetes has sports scheduled at school on Tuesdays at 10am and Thursdays at 2pm and requires a high Temp Target ('TT') actioned 30 minutes before the sports activity, the **Temp Target** can be enabled by way of an **Automation**.
-
-1. **Enabling AAPS to be highly customised** to be more or less aggressive in specific situations, according to a user's preference. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong.
-
-The example below illustrates how an **Automation** can enable steps to be eliminated.
-
-User exercises every morning at 6 am: he needs to remember to manually set a "Temp Target-Activity" in AAPS at 5am, before exercising.
-
-![Alt text](../images/automation_2024-02-12_20-54-50.png)
-
-The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
-
-![Alt text](../images/automation_2024-02-12_20-54-49.png)
-
-## Key considerations before starting with Automations
-
-1. Before setting up certain Automations, you should have reasonable **BG** control with **AAPS**. Automations should not be used to compensate for sub-optimal basal, **ISF** or **CR** settings (discussed further below). Avoid setting an automated **Profile switch** to compensate for **BG** rises due to _e.g._ food, these are better dealt with via other strategies (SMBs etc).
-
-1. As with any technology, **CGMs**, **Pumps** and phones can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed.
-
-1. **Requirements for **Automations** are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need a Automation set up for school sports or daily exercise, or need to adjust the timings.
-
-1. **Automations** may conflict with each other, and it is good to review any new **Automation(s)** setting carefully in a safe environment, and understand why an **Automation** may or may not have triggered in the way you expect.
-
-1. If using Autosens, try to use **Temp Targets** instead of **Profile Switches**. **Temp Targets** do not reset Autosens back to 0. **Profile Switches** reset Autosens.
-
-1. Most **Automations** should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the **Automation**, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/l for 30 min" or "start **Profile** 110% for 10 min" _and_ "start temp target of 5.0 mmol/l for 10 min". Using **Automations** to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.
-
-## When can I start using Automation?
-
-**Automations** can be started in **objective 10**.
-
-## Where are Automations located in AAPS?
-
-Depending on your [Config builder > General](../SettingUpAaps/ConfigBuilder.md) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
-
-## How can I set up an Automation?
-
-To set up an **Automation** create a ‘rule’ with **AAPS** as follows:
-
-![Automation create](../images/automation_create.png)
-
-* give your ‘rule’ a title;
-* select at least one ‘Condition’;
-
-![Automation condition](../images/automation_condition.png)
-
-* select one ‘Action’;
-
-![Automation action](../images/automation_action.png)
-
-* check the right box to the **Automation** event is ‘ticked’ to activate the **Automation**:
-
-![Αυτοματοποίηση](../images/automation_2024-10-26_17-48-05.png)
+    Για παράδειγμα ένας συναγερμός, η ρύθμιση ενός ποσοστού προφίλ ή η εξαγωγή των ρυθμίσεων του AAPS σε αλλαγή Pod.
 
 
+Υπάρχουν πολλές επιλογές Αυτοματισμού. Σας προτείνουμε να τις μελετήσετε μέσα στην εφαρμογή AAPS, στην ενότητα Αυτοματισμός. Μπορείτε επίσης να ψάξετε στις ομάδες χρηστών του AAPS στο [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) και στο [**Discord**](https://discord.gg/4fQUWHZ4Mw) για παραδείγματα Αυτοματισμών από άλλους χρήστες.
 
-To deactivate an **Automation** rule, untick the box left of the name of the **Automation**. The example below shows an **Automation** entitled ‘Low Glucose TT’ as either activated (‘ticked') or deactivated (‘unticked’).
+## Πώς μπορεί να βοηθήσει ο Αυτοματισμός
 
-![Alt text](../images/automation_2024-02-12_20-56-08.png)
+1. **Αυτόματη εκτέλεση επαναλαμβανόμενων εργασιών:** Οι προγραμματισμένες ενέργειες εκτελούνται αυτόματα, χωρίς να κάνει κάτι ο χρήστης.
+
+1. **Λιγότερη κούραση από τις αποφάσεις:** Το κύριο όφελος των **Αυτοματισμών** είναι ότι ο χρήστης δεν χρειάζεται να κάνει τόσες χειροκίνητες παρεμβάσεις στο **AAPS**. Μια [έρευνα](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) εκτιμά ότι τα άτομα με διαβήτη τύπου 1 πρέπει να παίρνουν κατά μέσο όρο 180 επιπλέον αποφάσεις κάθε μέρα. Οι **Αυτοματισμοί** μπορούν να μειώσουν το νοητικό φορτίο και να αφήσουν στον χρήστη περισσότερη ενέργεια για άλλα πράγματα στη ζωή του.
+
+1. **Πιθανώς καλύτερος γλυκαιμικός έλεγχος:** για παράδειγμα, οι **Αυτοματισμοί** βοηθούν ώστε οι **Προσωρινοί στόχοι** να ορίζονται πάντα όταν χρειάζεται, ακόμα και σε μέρες με πολλή δουλειά ή όταν ξεχνάτε. Για παράδειγμα, αν ένα παιδί με διαβήτη έχει γυμναστική στο σχολείο την Τρίτη στις 10:00 και την Πέμπτη στις 14:00 και χρειάζεται υψηλό Προσωρινό στόχο («TT») 30 λεπτά πριν από τη γυμναστική, ο **Προσωρινός στόχος** μπορεί να ενεργοποιείται με έναν **Αυτοματισμό**.
+
+1. **Το AAPS προσαρμόζεται πολύ**, ώστε να είναι πιο επιθετικό ή λιγότερο επιθετικό σε ορισμένες καταστάσεις, όπως προτιμά ο χρήστης. Για παράδειγμα, μπορεί να ενεργοποιεί για ορισμένο χρόνο ένα προσωρινά μειωμένο % **Προφίλ**, αν εμφανιστεί αρνητικό **IOB** μέσα στη νύχτα, που δείχνει ότι το τρέχον **Προφίλ** μπορεί να είναι πολύ ισχυρό.
+
+Το παρακάτω παράδειγμα δείχνει πώς ένας **Αυτοματισμός** μπορεί να σας γλιτώσει από κάποια βήματα.
+
+Ο χρήστης γυμνάζεται κάθε πρωί στις 6:00: πρέπει να θυμηθεί να ορίσει χειροκίνητα στις 5:00 στο AAPS έναν «Προσωρινό στόχο - Άσκηση», πριν από τη γυμναστική.
+
+![Εναλλακτικό κείμενο](../images/Automations/automation_concept_manual.png)
+
+Ο χρήστης έχει ορίσει έναν **Αυτοματισμό** που ενεργοποιεί στις 5:00 έναν «Προσωρινό στόχο - Άσκηση», ώστε η **BG** και το **IOB** του να είναι στο καλύτερο επίπεδο για τη γυμναστική των 6:00:
+
+![Εναλλακτικό κείμενο](../images/Automations/automation_concept_automated.png)
+
+## Τι πρέπει να σκεφτείτε πριν ξεκινήσετε με τους Αυτοματισμούς
+
+1. Πριν ρυθμίσετε ορισμένους Αυτοματισμούς, πρέπει να έχετε αρκετά καλό έλεγχο της **BG** με το **AAPS**. Οι Αυτοματισμοί δεν πρέπει να χρησιμοποιούνται για να καλύψουν ρυθμίσεις βασικού ρυθμού, **ISF** ή **CR** που δεν είναι σωστές (δείτε παρακάτω). Μην ορίζετε αυτόματη **Αλλαγή Προφίλ** για να αντισταθμίσετε ανόδους της **BG** που οφείλονται _π.χ._ σε φαγητό. Αυτές αντιμετωπίζονται καλύτερα με άλλους τρόπους (SMB κ.λπ.).
+
+1. Όπως κάθε τεχνολογία, τα **CGM**, οι **αντλίες** και τα τηλέφωνα μπορεί να παρουσιάσουν βλάβη: Τεχνικά προβλήματα ή σφάλματα αισθητήρα μπορεί να διακόψουν τις ενέργειες του **Αυτοματισμού** και μπορεί να χρειαστεί χειροκίνητη παρέμβαση.
+
+1. **Οι ανάγκες για Αυτοματισμούς είναι πιθανό να αλλάξουν όταν αλλάζει η καθημερινότητα**. Όταν αλλάζετε ανάμεσα σε περιόδους δουλειάς/σχολείου/διακοπών, βάλτε μια υπενθύμιση στο ημερολόγιό σας για να ελέγξετε ποιοι **Αυτοματισμοί** είναι ενεργοί (ενεργοποιούνται και απενεργοποιούνται εύκολα). Για παράδειγμα, αν πάτε διακοπές και δεν χρειάζεστε πια έναν Αυτοματισμό για τη γυμναστική στο σχολείο ή για την καθημερινή άσκηση, ή αν πρέπει να αλλάξετε τις ώρες.
+
+1. Οι **Αυτοματισμοί** μπορεί να συγκρούονται μεταξύ τους. Καλό είναι να ελέγχετε προσεκτικά κάθε νέα ρύθμιση **Αυτοματισμού** σε ασφαλές περιβάλλον και να καταλαβαίνετε γιατί ένας **Αυτοματισμός** ενεργοποιήθηκε ή δεν ενεργοποιήθηκε όπως περιμένατε.
+
+1. Αν χρησιμοποιείτε το Autosens, προσπαθήστε να χρησιμοποιείτε **Προσωρινούς στόχους** αντί για **Αλλαγές Προφίλ**. Οι **Προσωρινοί στόχοι** δεν μηδενίζουν το Autosens. Οι **Αλλαγές Προφίλ** μηδενίζουν το Autosens.
+
+1. Οι περισσότεροι **Αυτοματισμοί** πρέπει να ορίζονται μόνο για **περιορισμένη διάρκεια**. Μετά το **AAPS** μπορεί να ελέγξει ξανά και να επαναλάβει τον **Αυτοματισμό**, αν χρειάζεται και αν η συνθήκη ισχύει ακόμα. Για παράδειγμα, «έναρξη προσωρινού στόχου 7,0 mmol/l για 30 λεπτά» ή «έναρξη **Προφίλ** 110% για 10 λεπτά» _και_ «έναρξη προσωρινού στόχου 5,0 mmol/l για 10 λεπτά». Αν χρησιμοποιείτε **Αυτοματισμούς** για μόνιμες αλλαγές (π.χ. σε ισχυρότερο % προφίλ), υπάρχει κίνδυνος υπογλυκαιμίας.
+
+## Πότε μπορώ να αρχίσω να χρησιμοποιώ τον Αυτοματισμό;
+
+Μπορείτε να ξεκινήσετε με τους **Αυτοματισμούς** στο **Βήμα 10**.
+
+## Πού βρίσκονται οι Αυτοματισμοί στο AAPS;
+
+Ανοίξτε τη **Διαχείριση** στην κάτω πλοήγηση της κύριας οθόνης και επιλέξτε **Αυτοματισμός**.
+
+## Πώς μπορώ να ρυθμίσω έναν Αυτοματισμό;
+
+Για να ρυθμίσετε έναν **Αυτοματισμό**, πατήστε το κουμπί **+** στην οθόνη Αυτοματισμός για να δημιουργήσετε έναν «κανόνα»:
+
+![Δημιουργία αυτοματισμού](../images/Automations/automation_create.png)
+
+* δώστε έναν τίτλο στον «κανόνα» σας (Όνομα εργασίας)·
+* πατήστε «**Επεξεργασία**» κάτω από τη **Συνθήκη**. Στην οθόνη **Συνθήκη**, επιλέξτε πώς συνδέονται οι συνθήκες (**Και**, **Ή**, **Αποκλειστικό ή**) και πατήστε «**Προσθήκη συνθήκης**»:
+
+![Συνθήκη αυτοματισμού](../images/Automations/automation_trigger_editor.png)
+
+* προσθέστε τουλάχιστον μία συνθήκη:
+
+![Συνθήκες αυτοματισμού](../images/Automations/automation_triggers.png)
+
+* πατήστε «**Προσθήκη**» κάτω από την **Ενέργεια** και επιλέξτε μία ενέργεια:
+
+![Ενέργειες αυτοματισμού](../images/Automations/automation_actions.png)
+
+* αποθηκεύστε τον κανόνα με το κουμπί **Αποθήκευση** και βεβαιωθείτε ότι το κουτί αριστερά από το όνομα του κανόνα είναι «επιλεγμένο», για να ενεργοποιηθεί ο **Αυτοματισμός**:
+
+![Ενεργοποιημένος αυτοματισμός](../images/Automations/automation_rule_activated.png)
+
+Για να απενεργοποιήσετε έναν κανόνα **Αυτοματισμού**, βγάλτε το σημάδι από το κουτί αριστερά από το όνομα του **Αυτοματισμού**. Το παρακάτω παράδειγμα δείχνει έναν **Αυτοματισμό** ενεργοποιημένο («επιλεγμένο») ή απενεργοποιημένο («μη επιλεγμένο»):
+
+![Εναλλακτικό κείμενο](../images/Automations/automation_rule_activated_deactivated.png)
 
 
-When setting up an **Automation**, you can first test it by activating the ‘notification’ option under "Actions". This triggers **AAPS** to first display a notification rather than actually automating an action. When you are comfortable that the notification has been triggered at the correct time/conditions, the **Automation** rule can be updated to replace the ‘Notification’ with an ‘Action’.
+Όταν ρυθμίζετε έναν **Αυτοματισμό**, μπορείτε πρώτα να τον δοκιμάσετε επιλέγοντας την «ειδοποίηση» στις «Ενέργειες». Έτσι το **AAPS** πρώτα εμφανίζει μια ειδοποίηση, αντί να κάνει πραγματικά την ενέργεια αυτόματα. Όταν είστε σίγουροι ότι η ειδοποίηση εμφανίζεται τη σωστή ώρα και με τις σωστές συνθήκες, μπορείτε να αλλάξετε τον κανόνα **Αυτοματισμού** και να βάλετε μια «Ενέργεια» στη θέση της «Ειδοποίησης».
 
-![Alt text](../images/automation_2024-02-12_20-55-05.png)
+![Εναλλακτικό κείμενο](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
 
-**Automations** are still active when the Loop is disabled!
+Οι **Αυτοματισμοί** παραμένουν ενεργοί και όταν το Κύκλωμα είναι απενεργοποιημένο!
 ```
 
 
-## Safety limits
+## Πότε ελέγχονται οι κανόνες
 
-There are safety limits set for **Automations**:
+Το **AAPS** ελέγχει όλους τους κανόνες **Αυτοματισμού** κάθε φορά που επεξεργάζεται μια νέα μέτρηση γλυκόζης. Έτσι οι κανόνες ελέγχονται με τον ρυθμό του CGM σας, ακόμα και όταν η οθόνη του τηλεφώνου είναι σβηστή. Οι κανόνες ελέγχονται επίσης όταν το τηλέφωνο αρχίζει να φορτίζει, όταν αλλάζει το δίκτυο ή η τοποθεσία και όταν συνδέεται μια συσκευή Bluetooth. Γίνεται μόνο ένας έλεγχος κάθε φορά, οπότε ένας κανόνας με ενέργειες που παίρνουν χρόνο (για παράδειγμα μια εντολή στην αντλία) δεν μπορεί να εκτελεστεί δύο φορές.
 
-* The **glucose** value has to be between 72 and 270 mg/dl (or 4 and 15 mmol/l).
-* The **Profile Percentage** has to be between 70% and 130%.
-* There is a 5 minute time limit between executions of  **Automation** (and first execution).
+## Όρια ασφαλείας
 
-## Correct use of negative values
+Οι **Αυτοματισμοί** έχουν όρια ασφαλείας:
+
+* Ένας **Προσωρινός στόχος** που ορίζεται από **Αυτοματισμό** πρέπει να είναι μεταξύ 72 και 180 mg/dl (ή 4 και 10 mmol/l).
+* Το **Ποσοστό προφίλ** πρέπει να είναι μεταξύ 50% και 130%.
+* Υπάρχει χρονικό όριο 5 λεπτών ανάμεσα στις εκτελέσεις ενός **Αυτοματισμού** (και πριν από την πρώτη εκτέλεση).
+
+## Σωστή χρήση αρνητικών τιμών
 
 ```{admonition} Warning
 :class: warning
 
-Please be careful when selecting a negative value in **Automation**
+Προσέξτε όταν επιλέγετε αρνητική τιμή στον **Αυτοματισμό**
 ```
 
-Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. For example:
+Χρειάζεται προσοχή όταν επιλέγετε μια «αρνητική τιμή» σε μια «Συνθήκη», όπως «λιγότερο από», στους **Αυτοματισμούς**. Για παράδειγμα:
 
-![Alt text](../images/automation_2024-02-12_20-56-25.png-500x.png)
+![Εναλλακτικό κείμενο](../images/Automations/automation_comparison_operators.png)
 
-**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/l" (or "-2mg/dl") will:
+**Παράδειγμα 1:** Αν δημιουργήσετε μια Συνθήκη **«είναι λιγότερο από»** «-0,1 mmol/l» (ή «-2 mg/dl»), αυτή:
 
-Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/l (-2 mg/dl)" _would_ include -0.1 mmol/l or -2 mg/dl).
+Ενεργοποιεί έναν **Αυτοματισμό** για κάθε αριθμό που είναι **αυστηρά μικρότερος από** -0,1 (-2). Αυτό περιλαμβάνει αριθμούς όπως -0,2, -0,3, -0,4 (-4, -6, -8) κ.λπ. Θυμηθείτε ότι το ίδιο το -0,1 (-2) **δεν** περιλαμβάνεται σε αυτή τη συνθήκη. (Η συνθήκη «είναι ίσο ή μικρότερο από -0,1 mmol/l (-2 mg/dl)» _θα_ περιλάμβανε το -0,1 mmol/l ή το -2 mg/dl).
 
-**Example 2:** Creating a Condition "is greater than" -0.1mmol/l (-2mg/dl) will:
+**Παράδειγμα 2:** Αν δημιουργήσετε μια Συνθήκη «είναι μεγαλύτερο από» -0,1 mmol/l (-2 mg/dl), αυτή:
 
-Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-2mg/dl). This includes numbers like 0, 0.2, 0.4mmol/l, (0, 4, 8mg/dl) and any other positive number.
+Ενεργοποιεί έναν **Αυτοματισμό** για κάθε αριθμό που είναι **μεγαλύτερος από** -0,1 mmol/l (-2 mg/dl). Αυτό περιλαμβάνει αριθμούς όπως 0, 0,2, 0,4 mmol/l (0, 4, 8 mg/dl) και κάθε άλλον θετικό αριθμό.
 
-It is important to carefully consider the exact intention of your **Automation** when choosing these conditions and values.
+Είναι σημαντικό να σκεφτείτε προσεκτικά τι ακριβώς θέλετε να κάνει ο **Αυτοματισμός** σας, όταν επιλέγετε αυτές τις συνθήκες και τιμές.
 
 (automations-automation-triggers)=
-## Automation Triggers
+## Συνθήκες Αυτοματισμού
 
-![Automation Triggers](../images/automation_triggers.png)
+![Συνθήκες Αυτοματισμού](../images/Automations/automation_triggers.png)
 
-There are various ‘Triggers’ that can be selected by the user. Triggers are the conditions that must be met in order for the automation to execute. The list below is non-exhaustive:
+Κάντε κύλιση προς τα κάτω για να δείτε την υπόλοιπη λίστα:
 
-**Trigger:** connect conditions
+![Συνθήκες Αυτοματισμού, συνέχεια](../images/Automations/automation_trigger_picker_2.png)
 
-**Options:**
+Ο χρήστης μπορεί να επιλέξει διάφορες «Συνθήκες». Οι συνθήκες είναι αυτά που πρέπει να ισχύουν για να εκτελεστεί ο αυτοματισμός. Η παρακάτω λίστα δεν είναι πλήρης:
 
-Several conditions can be linked with
-* “And”
-* “Or”
-* “Exclusive or” (which means that if one - and only one of the - conditions applies, the action(s) will happen)
+**Συνθήκη:** σύνδεση συνθηκών
 
-**Trigger:** time vs. recurring time
+**Επιλογές:**
 
-**Options:**
+Πολλές συνθήκες μπορούν να συνδεθούν με
+* «Και»
+* «Ή»
+* «Αποκλειστικό ή» (σημαίνει ότι αν ισχύει μία - και μόνο μία - από τις συνθήκες, θα γίνει η ενέργεια ή οι ενέργειες)
 
-* time = single time event
-* recurring time = something that happens regularly (i.e. once a week, every working day etc.)
+**Συνθήκη:** χρόνος ή επαναλαμβανόμενος χρόνος
 
-**Trigger:** location
+**Επιλογές:**
 
-**Options:**
+* χρόνος = συμβάν μίας φοράς
+* επαναλαμβανόμενος χρόνος = κάτι που συμβαίνει τακτικά (π.χ. μία φορά την εβδομάδα, κάθε εργάσιμη ημέρα κ.λπ.)
 
-* in the **config builder** (Automation), the user can select their required location service.
+**Συνθήκη:** τοποθεσία
 
-**Trigger:** location service
+**Επιλογές:**
 
-**Options:**
+* στις [Ρυθμίσεις > Αυτοματισμός](#preferences-maintenance-settings) ο χρήστης μπορεί να επιλέξει την υπηρεσία τοποθεσίας που χρειάζεται.
 
-* Use passive location: **AAPS** only takes locations when other apps are requesting it.
-* Use network location: Location of your Wi-Fi.
-* Use GPS location (Attention! This can cause excessive battery drain!)
+**Συνθήκη:** υπηρεσία τοποθεσίας
 
-**Triggers** : pump and sensor data
+**Επιλογές:**
 
-* Cannula age trigger: Available for all pumps
-* Insulin age trigger: Available for supported pumps
-* Battery age trigger: Available for supported pumps
-* Sensor age trigger: always available
-* Pod Activation trigger: Available for patch pumps
+* Χρήση παθητικής τοποθεσίας: το **AAPS** παίρνει την τοποθεσία μόνο όταν τη ζητούν άλλες εφαρμογές.
+* Χρήση τοποθεσίας δικτύου: η τοποθεσία του Wi-Fi σας.
+* Χρήση τοποθεσίας GPS (Προσοχή! Αυτό μπορεί να αδειάσει γρήγορα την μπαταρία!)
 
-Note that for all age related triggers the equal comparison is unlikely to trigger, so in that case two triggers are required to create a range
+**Συνθήκες**: δεδομένα αντλίας και αισθητήρα
 
-* Reservoir level trigger: Available for all pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
-* Pump battery level trigger: Available for supported pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
+* Συνθήκη ηλικίας καθετήρα: Διαθέσιμη για όλες τις αντλίες
+* Συνθήκη ηλικίας ινσουλίνης: Διαθέσιμη για τις αντλίες που την υποστηρίζουν
+* Συνθήκη ηλικίας μπαταρίας: Διαθέσιμη για τις αντλίες που την υποστηρίζουν
+* Συνθήκη ηλικίας αισθητήρα: πάντα διαθέσιμη
+* Συνθήκη ενεργοποίησης Pod: Διαθέσιμη για αντλίες patch
+
+Σημειώστε ότι σε όλες τις συνθήκες ηλικίας η σύγκριση «ίσο» σχεδόν ποτέ δεν ενεργοποιείται, οπότε σε αυτή την περίπτωση χρειάζονται δύο συνθήκες για να φτιάξετε ένα εύρος
+
+* Συνθήκη επιπέδου δεξαμενής: Διαθέσιμη για όλες τις αντλίες. Η σύγκριση "NOT\_AVAILABLE" δεν λειτουργεί σε αυτή τη συνθήκη, γιατί η τιμή υπάρχει πάντα στο **AAPS**
+* Συνθήκη επιπέδου μπαταρίας αντλίας: Διαθέσιμη για τις αντλίες που την υποστηρίζουν. Η σύγκριση "NOT\_AVAILABLE" δεν λειτουργεί σε αυτή τη συνθήκη, γιατί η τιμή υπάρχει πάντα στο **AAPS**
 
 (automations-automation-action)=
 ## Ενέργεια
 
-![Automation Actions](../images/automation_actions.png)
+![Ενέργειες Αυτοματισμού](../images/Automations/automation_actions.png)
 
-**Actions:** start **Temp Target**
+Κάντε κύλιση προς τα κάτω για να δείτε την υπόλοιπη λίστα:
 
-**Options:**
+![Ενέργειες Αυτοματισμού, συνέχεια](../images/Automations/automation_action_picker_2.png)
 
-* **BG** must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
-* **TT** works only if there is no previous Temp Target
+**Ενέργειες:** έναρξη **Προσωρινού στόχου**
 
-**Actions:** stop **Temp Target**
+**Επιλογές:**
 
-**Options:**
+* Η **BG** πρέπει να είναι μεταξύ 72 mg/dl και 180 mg/dl (4 mmol/l και 10 mmol/l)
+* Ο **TT** λειτουργεί μόνο αν δεν υπάρχει ήδη Προσωρινός στόχος — το **AAPS** το προσθέτει αυτόματα στον κανόνα ως γραμμή «**Προϋποθέσεις: Προσ. στόχος δεν υπάρχει**»
 
-none
+**Ενέργειες:** λήξη **Προσωρινού στόχου**
 
-**Actions:** **Profile Percentage**
+**Επιλογές:**
 
-**Options:**
+καμία
 
-* **Profile** must be between 70% and 130%
-* works only if the previous Percentage is 100%
+**Ενέργειες:** **Ποσοστό προφίλ**
 
-Once the ‘Action’ is added,  the default values must be changed to the desired number by clicking and adjusting the default values.
+**Επιλογές:**
 
-![Alt text](../images/automation_2024-02-12_20-57-07.png)
+* Το **Προφίλ** πρέπει να είναι μεταξύ 50% και 130%
+* λειτουργεί μόνο αν το προηγούμενο Ποσοστό είναι 100%
+
+**Ενέργειες:** **Αλλαγή εξομάλυνσης**
+
+**Επιλογές:**
+
+* επιλέξτε τη [μέθοδο εξομάλυνσης](../CompatibleCgms/SmoothingBloodGlucoseData.md) στην οποία θα γίνει η αλλαγή
+* εκτελείται μόνο αν αυτή η μέθοδος εξομάλυνσης δεν είναι ήδη ενεργή — το **AAPS** το προσθέτει αυτόματα στον κανόνα ως γραμμή «**Προϋποθέσεις: Η εξομάλυνση … δεν είναι ενεργή**». Όταν η επιλεγμένη εξομάλυνση είναι ήδη ενεργή, ο κανόνας παραλείπεται χωρίς μήνυμα.
+* Παράδειγμα: σε συνδυασμό με τη συνθήκη **Ηλικία αισθητήρα**, αλλάξτε σε **Μέση εξομάλυνση** την πρώτη ημέρα ενός νέου αισθητήρα και μετά πάλι σε **Χωρίς εξομάλυνση**.
+
+**Ενέργειες:** **Σημείωση** (στην ομάδα **Ειδοποιήσεις** της λίστας)
+
+**Επιλογές:**
+
+* επιλέξτε το συμβάν που θα καταγραφεί: **Σημείωση**, **Άσκηση**, **Ερώτηση**, **Ανακοίνωση** ή **Αλλαγή σημείου αντλίας**, και προαιρετικά μια σημείωση. Το όνομα της ενέργειας αλλάζει στο συμβάν που επιλέγετε.
+* **Διάρκεια**: χρησιμοποιείται για **Σημείωση**, **Άσκηση** και **Αλλαγή σημείου αντλίας**. Η **Ερώτηση** και η **Ανακοίνωση** δεν έχουν διάρκεια: αντί γι' αυτό καταγράφουν την τρέχουσα BG σας.
+* Η **Αλλαγή σημείου αντλίας** μηδενίζει την ηλικία του καθετήρα, σαν να είχατε καταγράψει μόνοι σας μια αλλαγή σημείου. Παράδειγμα: κάποιες αντλίες (όπως η Combo) καταγράφουν μόνες τους την αλλαγή δεξαμενής, αλλά όχι την αλλαγή σημείου. Αν αλλάζετε πάντα και τα δύο μαζί, ένας κανόνας με **Ηλικία ινσουλίνης** μικρότερη από 1 ώρα και **Ηλικία καθετήρα** μεγαλύτερη από 24 ώρες μπορεί να καταγράψει την αλλαγή σημείου για εσάς.
+
+![Τα συμβάντα της ενέργειας Σημείωση](../images/Automations/automation_action_careportal_events.png) ![Η ενέργεια Σημείωση ρυθμισμένη σε Αλλαγή σημείου αντλίας](../images/Automations/automation_action_careportal_site_change.png)
+
+**Ενέργειες:** **Στείλτε SMS** (στην ομάδα **Ειδοποιήσεις**)
+
+**Επιλογές:**
+
+* γράψτε το κείμενο του μηνύματος. Στέλνεται σε όλους τους αριθμούς τηλεφώνου που επιτρέπονται στις ρυθμίσεις της [Επικοινωνίας με SMS](../RemoteFeatures/SMSCommands.md). Το πρόσθετο Επικοινωνία με SMS πρέπει να είναι ενεργοποιημένο.
+
+**Ενέργειες:** **Αλλαγή προφίλ σε** (στην ομάδα **Προφίλ**)
+
+**Επιλογές:**
+
+* επιλέξτε το **Προφίλ** που θα ενεργοποιηθεί. Ενεργοποιείται στο 100%, χωρίς χρονική μετατόπιση. Αν αυτό το προφίλ είναι ήδη ενεργό, η ενέργεια δεν κάνει τίποτα.
+
+**Ενέργειες:** **Ενεργοποίηση/απενεργοποίηση SMB** (στην ομάδα **Κύκλωμα & ινσουλίνη**)
+
+**Επιλογές:**
+
+* επιλέξτε **Ενεργό** ή **Ανενεργό**. Αυτό αλλάζει τη ρύθμιση **Ενεργοποίηση SMB** του OpenAPS SMB, ακριβώς σαν να την είχατε αλλάξει στις **Ρυθμίσεις**, και μένει έτσι μέχρι να την αλλάξετε πάλι εσείς ή κάποιος άλλος κανόνας.
+
+**Ενέργειες:** **Προφίλ Autotune** (στην ομάδα **Κύκλωμα & ινσουλίνη**)
+
+**Επιλογές:**
+
+* επιλέξτε το προφίλ που θα ρυθμιστεί και τον αριθμό των ημερών: δείτε [Εκτέλεση του Autotune με κανόνα αυτοματισμού](#autotune-run-autotune-with-an-automation-rule).
+
+**Ενέργειες:** **Διακοπή επεξεργασίας** (στην ομάδα **Κύκλωμα & ινσουλίνη**)
+
+**Επιλογές:**
+
+* καμία. Όταν εκτελείται ένας κανόνας με αυτή την ενέργεια, το **AAPS** δεν ελέγχει τους κανόνες που βρίσκονται κάτω από αυτόν στη λίστα σε αυτή την εκτέλεση. Προσθέστε την σε έναν κανόνα που πρέπει να έχει προτεραιότητα από τους κανόνες κάτω από αυτόν (δείτε [τη σειρά των Αυτοματισμών](#Automations-the-order-of-the-automations-in-the-list-matters)).
+
+**Ενέργειες:** **Εκτέλεση σεναρίου**, **Ενεργοποίηση σεναρίου**, **Απενεργοποίηση σεναρίου** (στην ομάδα **Σενάρια**)
+
+**Επιλογές:**
+
+* επιλέξτε το [σενάριο](Scenes.md) που θα εκτελεστεί, θα ενεργοποιηθεί ή θα απενεργοποιηθεί.
+
+Αφού προσθέσετε την «Ενέργεια», πρέπει να αλλάξετε τις προεπιλεγμένες τιμές στον αριθμό που θέλετε, πατώντας πάνω τους και αλλάζοντάς τες.
+
+![Εναλλακτικό κείμενο](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
-## The order of the **Automations** in the list matters
- **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. For example, if the ‘Low’  **Automation** is the most important **Automation**, above all other rules, then this  **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
+## Η σειρά των **Αυτοματισμών** στη λίστα έχει σημασία
+ Το **AAPS** εκτελεί τους κανόνες με τη σειρά προτεραιότητας, ξεκινώντας από την κορυφή της λίστας **Αυτοματισμού**. Για παράδειγμα, αν ο **Αυτοματισμός** «Χαμηλή» είναι ο πιο σημαντικός **Αυτοματισμός**, πάνω από όλους τους άλλους κανόνες, τότε αυτός ο **Αυτοματισμός** πρέπει να βρίσκεται στην κορυφή της λίστας **Αυτοματισμού** του χρήστη, όπως φαίνεται παρακάτω:
 
 
-![Alt text](../images/automation_2024-02-12_20-57-48.png-500x.png)
+![Εναλλακτικό κείμενο](../images/Automations/automation_rule_list.png)
 
-To reprioritize the **Automation** rules, click and hold the four-lines-button on the right side of the screen. Reorder the  **Automations** by moving the rules up or down.
+Για να αλλάξετε την προτεραιότητα των κανόνων **Αυτοματισμού**, πατήστε παρατεταμένα τη λαβή **=** στη δεξιά πλευρά του κανόνα. Αλλάξτε τη σειρά των **Αυτοματισμών** μετακινώντας τους κανόνες πάνω ή κάτω.
 
-![Alt text](../images/automation_2024-02-12_20-58-00.png-500x.png)
+![Εναλλακτικό κείμενο](../images/Automations/automation_rule_reorder.png)
 
-## How to delete Automation rules
+## Πώς διαγράφετε κανόνες Αυτοματισμού
 
-To delete an **Automation** rule click on the trash icon.
+Για να διαγράψετε έναν κανόνα **Αυτοματισμού**, πατήστε το εικονίδιο του κάδου.
 
-![Alt text](../images/automation_2024-02-12_20-58-26.png-500x.png)
+![Εναλλακτικό κείμενο](../images/Automations/automation_rule_delete.png)
 
-## Examples of Automations
+## Παραδείγματα Αυτοματισμών
 
-Below are examples of **Automations**. Further discussion on **Automations** and how users have individualised their  **Automation** can be found in Facebook discussions groups or on Discord. The examples below should not be replicated without the user having a good understanding of how the **Automation** will work.
+Παρακάτω υπάρχουν παραδείγματα **Αυτοματισμών**. Περισσότερη συζήτηση για τους **Αυτοματισμούς** και για το πώς οι χρήστες έχουν προσαρμόσει τον δικό τους **Αυτοματισμό** θα βρείτε σε ομάδες συζήτησης στο Facebook ή στο Discord. Μην αντιγράψετε τα παρακάτω παραδείγματα αν δεν καταλαβαίνετε καλά πώς θα λειτουργήσει ο **Αυτοματισμός**.
 
-### Low Glucose Temp Target
+(automations-low-glucose-temp-target)=
+### Προσωρινός Στόχος Χαμηλής Γλυκόζης
 
-This **Automation**  triggers an automatic ‘Temp Target Hypo’ when low **BG** is at a certain threshold.
+Αυτός ο **Αυτοματισμός** ενεργοποιεί αυτόματα έναν **Προσωρινό στόχο** όταν η **BG** πέσει κάτω από ένα όριο — εδώ, όταν η γλυκόζη είναι λιγότερο από 70 mg/dl, ξεκινά ένας στόχος 110 mg/dl για 30 λεπτά:
 
-![Alt text](../images/automation_2024-02-12_21-04-01.png-500x.png)
+![Εναλλακτικό κείμενο](../images/Automations/automation_example_low_glucose_rule.png)
 
-### Lunch Time Temp Target (with ‘Location’)
+### Προσωρινός στόχος για το μεσημεριανό (με «Τοποθεσία»)
 
-![Alt text](../images/automation_2024-02-12_21-04-25.png-500x.png)
+![Εναλλακτικό κείμενο](../images/Automations/automation_example_lunch_rule.png)
 
-This **Automation** has been created for a user who eats their lunch at work around the same time every weekday but triggered only if the user is situated within a set ‘location’.  So if the user is not at work one day, this **Automation** will be activated.
+Αυτός ο **Αυτοματισμός** δημιουργήθηκε για έναν χρήστη που τρώει μεσημεριανό στη δουλειά περίπου την ίδια ώρα κάθε εργάσιμη ημέρα, αλλά ενεργοποιείται μόνο αν ο χρήστης βρίσκεται σε μια ορισμένη «τοποθεσία».  Έτσι, αν ο χρήστης δεν είναι στη δουλειά μια μέρα, αυτός ο **Αυτοματισμός** δεν θα ενεργοποιηθεί.
 
-This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to drive ‘BG, to 90mg (or 5 mmol/l) in preparation for lunch.
+Αυτός ο **Αυτοματισμός** θα ορίσει έναν χαμηλό **Προσωρινό στόχο** (Γεύμα Σύντομα) στις 13:00, για να φέρει τη BG στα 90 mg/dl (ή 5 mmol/l) πριν από το μεσημεριανό.
 
-The ‘Trigger’ location is set by inputting the latitude and longitude GPS coordinates as below:
+Η «Συνθήκη» τοποθεσίας έχει όνομα, θέση (πατήστε **Επιλογή από χάρτη** ή χρησιμοποιήστε την τρέχουσα τοποθεσία σας) και ακτίνα σε μέτρα, και ενεργοποιείται όταν είστε μέσα (ή έξω) από την περιοχή:
 
-![Alt text](../images/automation_2024-02-12_21-04-40.png-500x.png)
+![Εναλλακτικό κείμενο](../images/Automations/automation_example_lunch_location_condition.png)
 
-Because of the ‘And’ connection, the **Automation** only happens during the ‘chosen time’ and if the user is at the selected location.
+Λόγω της σύνδεσης «Και», ο **Αυτοματισμός** εκτελείται μόνο στον «επιλεγμένο χρόνο» και μόνο αν ο χρήστης βρίσκεται στην επιλεγμένη τοποθεσία.
 
-The **Automation** will not be triggered on any other time at this location or on this time outside of 50 meters set GPS coordinates.
+Ο **Αυτοματισμός** δεν θα ενεργοποιηθεί σε καμία άλλη ώρα σε αυτή την τοποθεσία, ούτε αυτή την ώρα έξω από την ακτίνα των 50 μέτρων γύρω από την επιλεγμένη θέση.
 
-### WIFI SSID Location Automation
+### Αυτοματισμός τοποθεσίας με Wi-Fi SSID
 
-Using WIFI SSID is a good option to trigger an **Automation** while within range of a specific wifi network (than compared with GPS), it is fairly precise, uses less battery and works in enclosed spaces where GPS and other location services might not be available.
+Ένα Wi-Fi SSID είναι καλή επιλογή για να ενεργοποιείται ένας **Αυτοματισμός** όταν είστε μέσα στην εμβέλεια ενός συγκεκριμένου δικτύου Wi-Fi (σε σύγκριση με το GPS): είναι αρκετά ακριβές, καταναλώνει λιγότερη μπαταρία και λειτουργεί σε κλειστούς χώρους όπου το GPS και άλλες υπηρεσίες τοποθεσίας μπορεί να μην είναι διαθέσιμες.
 
-Here is another example of setting up a **Temp Target** for work days only before breakfast(1).
-
-
-The **Automation** will trigger at 05:30am only on Monday-Friday(2)  
-and while being connected to a home wifi network (3).
+Εδώ είναι ένα άλλο παράδειγμα που ορίζει έναν **Προσωρινό στόχο** μόνο τις εργάσιμες ημέρες, πριν από το πρωινό (1).
 
 
-It will then set a **Temp Target**  of 75mg/dl for 30 minutes (4). One of the advantages of including the location is that it will not trigger if the user is travelling on vacation for instance.
+Ο **Αυτοματισμός** θα ενεργοποιηθεί στις 05:30 μόνο από Δευτέρα έως Παρασκευή (2)  
+και ενώ το τηλέφωνο είναι συνδεδεμένο σε ένα οικιακό δίκτυο Wi-Fi (3).
 
-![Alt text](../images/automation_2024-02-12_21-05-02.png-500x.png)
 
-Here is the screenshot detailing the **Automation** triggers:
+Μετά θα ορίσει έναν **Προσωρινό στόχο** 75 mg/dl για 30 λεπτά (4). Ένα πλεονέκτημα όταν προσθέτετε την τοποθεσία είναι ότι ο κανόνας δεν θα ενεργοποιηθεί, για παράδειγμα, αν ο χρήστης ταξιδεύει σε διακοπές.
 
-1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
-1) WIFI SSID = My_Home_WiFi_Name
+![Κανόνας Wi-Fi: όνομα εργασίας (1), συνθήκη χρόνου για εργάσιμες ημέρες (2) και συνθήκη Wi-Fi SSID (3)](../images/Automations/automation_example_wifi_rule.png)
 
-![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
+Κάντε κύλιση προς τα κάτω για να δείτε την ενέργεια: έναν **Προσωρινό στόχο** 75 mg/dl για 30 λεπτά (4).
+
+![Ενέργεια κανόνα Wi-Fi: Έναρξη προσωρινού στόχου 75 mg/dl για 30 λεπτά (4)](../images/Automations/automation_example_wifi_action.png)
+
+Εδώ είναι η εικόνα με τις συνθήκες του **Αυτοματισμού**:
+
+1) Κάτω από το κύριο «ΚΑΙ» (πρέπει να ισχύουν και οι δύο συνθήκες για να ενεργοποιηθεί) 1) Επαναλαμβανόμενος χρόνος = Δ,Τ,Τ,Π,Π στις 5:30  
+1) Wi-Fi SSID = My_Home_WiFi_Name
+
+![Εναλλακτικό κείμενο](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
-## Automating Preference Settings Export
+## Αυτόματη εξαγωγή ρυθμίσεων
 
-### Unattended Exports: scheduled (daily)
+### Αυτόματες εξαγωγές: προγραμματισμένες (καθημερινά)
 
-Screenshots detailing the Automation triggers:
+Εικόνες με τις συνθήκες του Αυτοματισμού:
 
-1) Condition: Recurring time = M,T,W,T,F At 8:00am 1) Action: Settings Export (For "Text in treatments" enter "Daily")
+1) Συνθήκη: Επαναλαμβανόμενος χρόνος = Δ,Τ,Τ,Π,Π στις 8:00 1) Ενέργεια: Εξαγωγή ρυθμίσεων (στο «Κείμενο σε θεραπείες» γράψτε «Ημερήσια»)
 
-![Scheduled exports](../images/Automations/automation_settingsexport_scheduled_400px.png)
+![Προγραμματισμένες εξαγωγές](../images/Automations/automation_settings_export_daily.png)
 
-Note: Export execution will be logged on Careportal
+Σημείωση: Η εκτέλεση της εξαγωγής καταγράφεται στο Careportal
 
-### Unattended Exports: Pod Activation (patch pump only)
+### Αυτόματες εξαγωγές: Ενεργοποίηση Pod (μόνο για αντλίες patch)
 
-Screenshots detailing the Automation triggers:
+Εικόνες με τις συνθήκες του Αυτοματισμού:
 
-1) Condition: Pod Activation 1) Action: Settings Export (For "Text in treatments" enter "Pod Activation: settings export")
+1) Συνθήκη: Ενεργοποίηση Pod 1) Ενέργεια: Εξαγωγή ρυθμίσεων (στο «Κείμενο σε θεραπείες» γράψτε «Ενεργοποίηση Pod: εξαγωγή ρυθμίσεων»)
 
-![Export on Pod activation](../images/Automations/automation_settingsexport_podactivation_400px.png)
+![Εξαγωγή κατά την ενεργοποίηση Pod](../images/Automations/automation_settings_export_pod_activation.png)
 
-Note: Export execution will be logged on Careportal. Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Preferences > Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
+Σημείωση: Η εκτέλεση της εξαγωγής καταγράφεται στο Careportal. Σημείωση: Ο Αυτοματισμός **δεν** θα ενεργοποιηθεί καθόλου αν δεν έχετε κάνει πριν μια χειροκίνητη εξαγωγή ρυθμίσεων. Δείτε [Ρυθμίσεις → Συντήρηση](#preferences-maintenance-settings) για τη σωστή ενεργοποίηση της αυτόματης εξαγωγής ρυθμίσεων.
 
 
-## Automation Logs
+## Ημερολόγιο Αυτοματισμού
 
-**AAPS** has a log of the most recent **Automation** triggered at the bottom of the screen under the **Automation** tab.
+Το **AAPS** δείχνει ένα ημερολόγιο με τα πιο πρόσφατα συμβάντα **Αυτοματισμού** στο κάτω μέρος της οθόνης **Αυτοματισμός**, κάτω από τους κανόνες. Χρησιμοποιήστε το για να ελέγξετε ότι οι κανόνες σας ενεργοποιήθηκαν όταν το περιμένατε.
 
-In the example below the logs indicate:
+Στο παρακάτω παράδειγμα, ο κανόνας **Προσωρινός Στόχος Χαμηλής Γλυκόζης** (1) (δείτε [Προσωρινός Στόχος Χαμηλής Γλυκόζης](#automations-low-glucose-temp-target) παραπάνω) είναι ενεργοποιημένος. Το ημερολόγιο (2) δείχνει ότι στις 15:09 η γλυκόζη έπεσε κάτω από 70 mg/dl και ο κανόνας ενεργοποιήθηκε:
+* η ενέργεια ήταν «Έναρξη προσ. στόχου: 110mg/dL@30 min»: ένας **Προσωρινός στόχος** 110 mg/dl για 30 λεπτά·
+* Το **OK** στο τέλος σημαίνει ότι η ενέργεια εκτελέστηκε με επιτυχία.
 
-(1) at 01:58 am, the “Low BG triggers temp hypo profile” is activated
-* glucose value is less than 75mg/dl;
-* delta is negative (ie: the BG is going down);
-* time is within 01:00 am and 06:00 am.
+![Οθόνη Αυτοματισμός: ένας ενεργοποιημένος κανόνας (1) και η καταχώρισή του στο ημερολόγιο (2)](../images/Automations/automation_example_log.png)
 
-The **Automation** will:
-* set a **Temp Target** to 110mg/dl for 40 minutes;
-* start a temporary **Profile** at 50% for 40 minutes.
+(automations-troubleshooting)=
 
-(2) at 03:38 am,  the “High carb after low at night” is triggered
-* time is between 01:05 am and 06:00 am;
-* glucose value is greater than 110mg/dl.
+## Αντιμετώπιση προβλημάτων
 
-The **Automation** will:
-* change **Profile** to LocalProfile1 (ie: cancel the temporary profile if any)
-* stop **Temp Target** (if any)
+* Πρόβλημα: __Οι αυτοματισμοί μου δεν ενεργοποιούνται από το AAPS;__
 
-![Alt text](../images/automation_2024-02-12_21-05-56.png-500x.png)
+Ελέγξτε ότι το κουτί αριστερά από το όνομα του **Αυτοματισμού** είναι «επιλεγμένο», ώστε ο κανόνας να είναι ενεργοποιημένος:
 
-## Troubleshooting
+![Εναλλακτικό κείμενο](../images/Automations/automation_rule_activated_deactivated.png)
 
-* Problem: __My automations are not being triggered by AAPS?__
+* Πρόβλημα: __Οι αυτοματισμοί μου ενεργοποιούνται με λάθος σειρά.__
 
-Check the box to the right of **Automation** event is ‘ticked’ to ensure the rule is activated.
+Ελέγξτε τη σειρά προτεραιότητας των κανόνων σας, όπως εξηγήθηκε παραπάνω.
 
-## Troubleshooting
+* Πρόβλημα: __Μια συνθήκη δείχνει «Άγνωστη συνθήκη … - ποτέ αληθής».__
 
-![Alt text](../images/automation_2024-02-12_21-06-12.png-500x.png)
+Ο κανόνας περιέχει μια συνθήκη που αυτή η έκδοση του **AAPS** δεν μπορεί να διαβάσει, για παράδειγμα αφού γυρίσατε σε παλαιότερη έκδοση ή εισαγάγατε ρυθμίσεις από νεότερη. Μια τέτοια συνθήκη δεν είναι ποτέ αληθής, οπότε ο κανόνας δεν εκτελείται. Μένει όπως είναι, ώστε μια νεότερη έκδοση να μπορεί να τη χρησιμοποιήσει. Επεξεργαστείτε τον κανόνα και αντικαταστήστε τη συνθήκη, ή ενημερώστε το **AAPS**.
 
-* Problem: __My automations are being triggered in the wrong order.__
+## Εναλλακτικές λύσεις αντί για Αυτοματισμούς
 
-Check your rule prioritisation order as discussed above here.
-
-## Alternatives to Automations
-
-For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. 
+Για προχωρημένους χρήστες, υπάρχουν κι άλλες δυνατότητες για αυτοματοποίηση χρησιμοποιώντας το IFTTT ή μια εφαρμογή Android από τρίτους που ονομάζεται Automate. 

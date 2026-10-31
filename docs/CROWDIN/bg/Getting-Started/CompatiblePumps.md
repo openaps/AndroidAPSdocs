@@ -1,34 +1,61 @@
-# Compatible Pumps
+# Съвместими помпи
 
-AAPS works with a number of insulin pumps.  The following list shows the currently supported devices and indicates if AAPS communicates with the pump using your phone's native Bluetooth function or if it requires a Rileylink Compatible device in brackets.
+AAPS работи с редица инсулинови помпи. Следващият списък показва устройствата, които се поддържат в момента. В скоби е посочено дали AAPS комуникира с помпата чрез вградената Bluetooth функция на телефона ви, или е нужно устройство, съвместимо с RileyLink.
 
-- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; see also [Accu-Chek Combo Tips for Basic usage](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md))
+<!-- List of hidden pages to avoid overcrowding the menu -->
+
+```{toctree}
+:hidden:
+
+../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md
+../CompatiblePumps/Accu-Chek-Insight-Pump.md
+../CompatiblePumps/CareLevo.md
+../CompatiblePumps/DanaR-Insulin-Pump.md
+../CompatiblePumps/DanaRS-Insulin-Pump.md
+../CompatiblePumps/DiaconnG8.md
+../CompatiblePumps/EOPatch2.md
+../CompatiblePumps/Equil5.3.md
+../CompatiblePumps/MedtronicPump.md
+../CompatiblePumps/MedtrumNano.md
+../CompatiblePumps/OmnipodDASH.md
+../CompatiblePumps/OmnipodEros.md
+../CompatiblePumps/Future-possible-Pump-Drivers.md
+```
+
+- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; вижте също [Съвети за основно използване](#combov2-tips-for-basic-usage))
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (Bluetooth)
+- [CareLevo](../CompatiblePumps/CareLevo.md) (Bluetooth)
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (Bluetooth)
 - [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md) (Bluetooth)
 - [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) (Bluetooth)
-- [Diaconn G8 ](../CompatiblePumps/DiaconnG8.md)  (Bluetooth)
+- [Dana-i2](../CompatiblePumps/DanaRS-Insulin-Pump.md) (Bluetooth)
+- [Diaconn G8](../CompatiblePumps/DiaconnG8.md) (Bluetooth)
 - [EOPatch2](../CompatiblePumps/EOPatch2.md) (Bluetooth)
-- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)  ([additional communication device](#CompatiblePumps-additional-communication-device) needed)
-- [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)  (Bluetooth)
-- [Medtrum Nano](../CompatiblePumps/MedtrumNano.md)  (Bluetooth)
-- [Medtrum 300U](../CompatiblePumps/MedtrumNano.md)  (Bluetooth)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md) (Bluetooth)
-- Certain older [Medtronic](../CompatiblePumps/MedtronicPump.md) ([additional communication device](#CompatiblePumps-additional-communication-device) needed)
+- Някои по-стари помпи [Medtronic](../CompatiblePumps/MedtronicPump.md) (нужно е [допълнително комуникационно устройство](#CompatiblePumps-additional-communication-device))
+- [Medtrum Nano 200U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
+- [Medtrum 300U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
+- [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) (Bluetooth)
+- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) (нужно е [допълнително комуникационно устройство](#CompatiblePumps-additional-communication-device))
 
-## My pump is not listed
+## Моята помпа не е в списъка
 
-Details of the status of other pumps that may have the potential to work with AAPS are listed on the [Future (possible) Pumps](../CompatiblePumps/Future-possible-Pump-Drivers.md) page.
+Подробности за състоянието на други помпи, които може да работят с AAPS, ще намерите на страницата [Бъдещи (възможни) драйвери за помпи](../CompatiblePumps/Future-possible-Pump-Drivers.md).
 
 (CompatiblePumps-additional-communication-device)=
-## Additional communication device
+## Допълнително комуникационно устройство
 
-If no additional communication device is mentioned, the communication between insulin pump and **AAPS** is based on the integrated bluetooth stack of Android, without the need of an additional communication device to translate the communication protocol.
+Ако не е посочено допълнително комуникационно устройство, комуникацията между инсулиновата помпа и **AAPS** става чрез вградения в Android Bluetooth стек, без нужда от допълнително устройство, което да превежда комуникационния протокол.
 
-For old Medtronic pumps and Omnipod Eros, an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
+За старите помпи Medtronic и за Omnipod Eros е нужно допълнително комуникационно устройство (освен телефона), което да „превежда“ радиосигнала от помпата към Bluetooth. Устройството трябва да използва същата радиочестота като помпата ви:
 
-- ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
-- ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
-- ![EmaLink](../images/omnipod/EmaLink.png)  [Emalink Website](https://github.com/sks01/EmaLink) - [Contact Info](mailto:getemalink@gmail.com)
-- ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
-- ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested
+- **Omnipod Eros**: 433 MHz.
+- **Medtronic**: 916 MHz за помпите, продавани в САЩ и Канада, и 868 MHz за помпите, продавани другаде. Вижте [Как да разбера каква честота използва моята помпа](#MedtronicPump-faq).
+
+Налични комуникационни устройства:
+
+- ![OrangeLink](../images/omnipod/OrangeLink.png)  [Уебсайт на OrangeLink](https://getrileylink.org/product/orangelink)
+- ![RileyLink](../images/omnipod/RileyLink.png) [RileyLink 433MHz](https://getrileylink.org/product/rileylink433)
+- ![EmaLink](../images/omnipod/EmaLink.png)  [Уебсайт на Emalink](https://github.com/sks01/EmaLink) - [Контакт](mailto:getemalink@gmail.com)
+- ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Контакт](mailto:Boshetyn@ukr.net)
+- ![LoopLink](../images/omnipod/LoopLink.png)  [Уебсайт на LoopLink](https://www.getlooplink.org/) - [Контакт](https://jameswedding.substack.com/) - Не е тестван

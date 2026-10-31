@@ -1,59 +1,48 @@
 # Jelly
 
-## Jelly 2
-
-Do not confuse with Jelly Star (below).
-
-**Advantages**
-
-* It's really small.
-* Android 11.
-* Even if you tell people, they might not consider it as a normal smartphone and will except it easier as a exception when phones are normally not allowed.
-
-**Disadvantages**
-
-* Recommended only for experienced loopers (some settings are not recognizable, you have to know from experience with a big Android AAPS phone, how and where what is located. Some AAPS buttons are hard to touch with a lot of feeling, but not with stubby fingers.)
-* Can only be used as LooperPhone. It's better to have a normal smartphone in your pocket. 
-
-### Battery life optimization
-
-The Jelly 2 comes with strong optimization features that **must** be disabled for AAPS (and other DIY apps like BYODA, xDrip+, OOP2, Juggluco, etc...).
-
-![](../images/Jelly_Settings1.png)
-
-You can leave Intelligent assistance enabled, but it **must be disabled for DIY apps**.
-
-![](../images/Jelly_Settings2.png)
-
-You can enable NFC for Libre sensors.
-
-![](../images/Jelly_Settings3.png)
-
 ## Jelly Star Mini
 
-**Features**
+**Функции**
 
 * Android 13
 * 8 GB RAM
 
-### Battery life optimization
+**Предимства**
 
-To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' (and other **DIY apps** like BYODA, xDrip+, OOP2, Juggluco, etc...).
+* Той е наистина малък.
+* Even if you tell people, they might not consider it as a normal smartphone and will accept it more easily as an exception when phones are normally not allowed.
+
+**Недостатъци**
+
+* Препоръчва се само за опитни потребители на затворен кръг (някои настройки трудно се разпознават – трябва от опит с голям телефон с Android и AAPS да знаете как и къде се намира всичко. Някои бутони в AAPS се натискат трудно – става с много внимание, но не и с дебели пръсти.)
+* Може да се използва само като телефон за затворения кръг (LooperPhone). По-добре е да имате и нормален смартфон в джоба си. 
+
+### Оптимизация на живота на батерията
+
+Jelly има силни функции за оптимизация, които **трябва** да се изключат за AAPS (и за други DIY приложения като BYODA, xDrip, OOP2, Juggluco и др.).
+
+![](../images/Jelly_Settings1.png)
+
+Можете да оставите включена „Интелигентна помощ“ (Intelligent assistance), но тя **трябва да е изключена за DIY приложенията**.
+
+![](../images/Jelly_Settings2.png)
+
+Можете да включите NFC за сензорите Libre.
+
+![](../images/Jelly_Settings3.png)
+
+### Оптимизация на живота на батерията
+
+To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' for **AAPS** (and for other **DIY apps** like BYODA, xDrip, OOP2, Juggluco, etc...).
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
-### Intelligent Assistance and App Blocker
-
-Like with the Jelly 2 (above), the Jelly Star should have 'Intelligent Assistance' disabled for **DIY apps**. Similarly, 'App Blocker' under 'Settings' must also be switched off to avoid disruption with **AAPS**:
-
-![App Blocker Screenshot 2025-08-03 213400](../images/JellyStarMini2.jpg)
-
 ### Google Play Protect
 
-Remember to disable Google Play Protect.
+Не забравяйте да изключите Google Play Protect.
 
-### Remote Connection for Weak apk
+### Remote Connection (отдалечена връзка) за Wear apk
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use the Jelly 2, **Wear.apk** & **AAPS** remotely via wifi.
+При някои смарт часовници, например Samsung Galaxy, „Отдалечена връзка“ (Remote Connection) в „Разширени функции“ (Advanced Features) на Samsung Galaxy трябва да е **включена**, за да използвате Jelly, **Wear.apk** и **AAPS** дистанционно през Wi-Fi.
 
-![MURCIMG-20251007-WA0000](../images/500234283-5db08a08-f256-49a0-8843-46bdd01b33d6.png)
+![Galaxy Wearable, Разширени функции, Отдалечена връзка – включено](../images/wearos/galaxy_wearable_remote_connection.png)

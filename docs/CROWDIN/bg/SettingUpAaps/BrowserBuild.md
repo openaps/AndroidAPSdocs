@@ -1,87 +1,77 @@
 (browser-build)=
 
-# Browser build
+# Компилиране в браузъра
 
-Building AAPS with GitHub Actions.
+Компилиране на AAPS с GitHub Actions.
 
-**Minimum AAPS version supported is 3.3.2.1.**
+**Най-ниската поддържана версия на AAPS е 3.3.2.1.**
 
-## Build yourself instead of download
+## Компилирайте сами, вместо да изтегляте
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**Приложението AAPS (файл apk) не може да бъде изтеглено готово заради правилата за медицинските изделия. Законно е да компилирате приложението за собствена употреба, но НЕ БИВА да давате копие на други хора!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Вижте [страницата с често задавани въпроси](../UsefulLinks/FAQ.md) за подробности.
 
 (Building-APK-without-a-computer)=
 
-## Choose how to build
+## Изберете начин за компилиране
 
-Pick the method that matches the device you build from:
+Изберете начина, който отговаря на устройството, от което компилирате:
 
-### On an Android phone: AAPS Builder (recommended)
+### На телефон с Android: AAPS Builder (препоръчително)
 
-A setup page walks you through creating your own private build repository in GitHub. Nothing to install, no preparation file, and you start each build yourself. You download the app directly from GitHub. Google Drive is optional.
+Страница за настройка ви води стъпка по стъпка, докато създадете свое лично хранилище (repository) за компилиране в GitHub. Нищо не се инсталира, няма подготвителен файл и вие сами стартирате всяко компилиране. Изтегляте приложението директно от GitHub. Google Drive не е задължителен.
 
-This also works from a computer browser.
+Това работи и от браузър на компютър.
 
-**→ [Build with AAPS Builder](BrowserBuildAapsBuilder.md)**
+**→ [Компилиране в браузъра с AAPS Builder](BrowserBuildAapsBuilder.md)**
 
-### On any device: fork and preparation file
+### На компютър или iPhone / iPad: fork и подготвителен файл
 
-You make a copy (fork) of the AAPS source code in GitHub, create your keystore with a preparation file, and the built app is saved to your Google Drive. This works from an Android device, a computer or an iPhone / iPad. Follow the four steps below.
+Правите копие (fork) на изходния код на AAPS в GitHub, създавате хранилището си за ключове (keystore) с подготвителен файл, а компилираното приложение се записва във вашия Google Drive. Следвайте четирите стъпки по-долу.
 
 ```{note}
-**Already building with a fork?** Keep updating it as described in [Update with a browser](../Maintenance/UpdateBrowserBuild.md), or switch to AAPS Builder. To switch, first get a copy of your keystore from your fork: see [Coming from the previous browser build](#aaps-builder-from-fork).
+**Вече компилирате с fork?** Продължете да го актуализирате, както е описано в [Актуализиране в браузъра](../Maintenance/UpdateBrowserBuild.md), или преминете към AAPS Builder. За да преминете, първо вземете копие на хранилището си за ключове от вашия fork: вижте [Преминаване от предишното компилиране в браузъра](#aaps-builder-from-fork).
 ```
 
-## Device and software specifications for the fork method
-
-You will need to use multiple tabs in your browser, and switch from one to the other. Example Chrome:
+Ще трябва да използвате няколко раздела в браузъра си и да превключвате между тях. Пример с Chrome:
 
 ![fork_aaps](../images/Building-the-App/CI/BrowserBuildTabs.png)
 
-You also need a Google account so that the app can be saved in your Google Drive.
-
 ```{note}
-This wiki assumes you're performing all operations with your cellular phone and the Chrome web browser.  
-You will need to jump from tab to tab: start with all tabs closed to avoid losing yourself when switching from one to another.
+Ще трябва да минавате от раздел на раздел: започнете, като затворите всички раздели, за да не се объркате, когато превключвате между тях.
 ```
 
-## What you'll need
+#### Какво ви трябва
 
-- A **Google account**, so the built app can be saved to your Google Drive (needed on every device).
-- A **GitHub account** (free) – you create this in Step 1.
-- A **web browser** that can keep several tabs open at once (Chrome is assumed below).
-- A small **helper to run the preparation file**. Which one you need depends on the device you build from – there is nothing to install now, Step 2 walks you through it for your device:
-  - **Android:** File Manager Plus (from the Play Store).
-  - **Computer (Windows / Mac / Linux):** Simple HTTP Server.
-  - **iPhone / iPad:** no extra app – you use the built-in Files app and browser.
+- **Профил в Google**, за да може компилираното приложение да се запише във вашия Google Drive.
+- **Профил в GitHub** (безплатен) – създавате го в Стъпка 1.
+- **Уеб браузър**, който може да държи няколко раздела отворени едновременно (по-долу се приема, че е Chrome).
+- Малка **помощна програма за стартиране на подготвителния файл**. Коя ви трябва, зависи от устройството, от което компилирате – сега не инсталирате нищо, Стъпка 2 ще ви покаже как за вашето устройство:
+  - **Компютър (Windows / Mac / Linux):** Simple Web Server.
+  - **iPhone / iPad:** не е нужно допълнително приложение – използвате вграденото приложение Files (Файлове) и браузъра.
 
-```{note}
-On Android, also make sure the **Google Drive app is up to date** (via the Play Store) so you can download the finished app afterwards.
-```
+#### Стъпките
 
-## The steps
+Компилирането в браузъра е поредица от избори. Следвайте тези стъпки по ред:
 
-The browser build is a series of choices. Follow these steps in order:
+1. **[Създайте свой fork в GitHub](BrowserBuildFork.md)** – направете свое лично копие на изходния код на AAPS.
+2. **[Създайте хранилището си за ключове за подписване](BrowserBuildKeystore.md)** – основният избор: създайте ново хранилище за ключове (Вариант 1) или качете съществуващото (Вариант 2), след това следвайте страницата за вашето устройство.
+3. **[Разрешете достъп до Google Drive](BrowserBuildGoogleDrive.md)** – позволете на GitHub да записва компилираното приложение във вашия Google Drive.
+4. **[Компилирайте APK](BrowserBuildAPK.md)** – стартирайте workflow в GitHub Actions и изберете версията и варианта на приложението.
 
-1. **[Create your GitHub fork](BrowserBuildFork.md)** – make your personal copy of the AAPS source code.
-2. **[Create your signing keystore](BrowserBuildKeystore.md)** – the key decision: generate a new keystore (Option 1) or upload your existing one (Option 2), then follow the page for your device.
-3. **[Authorize Google Drive](BrowserBuildGoogleDrive.md)** – let GitHub save the built app to your Google Drive.
-4. **[Build the APK](BrowserBuildAPK.md)** – run the GitHub Actions workflow and pick your version and variant.
-
-If you run into trouble, see **[Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md)**. For optional operations, see [exporting your keystore](#ci-keystore-export) or [cherry-picking a commit](#github-cherry-pick).
+Ако срещнете проблем, вижте **[Отстраняване на неизправности при компилиране в браузъра](../GettingHelp/BrowserBuildTroubleshooting.md)**. За допълнителни действия с fork вижте [експорт на хранилището за ключове](#ci-keystore-export) или [cherry-pick на commit](#github-cherry-pick).
 
 ----
 
-**Start with [Step 1 – Create your GitHub fork](BrowserBuildFork.md) →**
+**Започнете със [Стъпка 1 – Създаване на ваш fork в GitHub](BrowserBuildFork.md) →**
 
 ```{toctree}
 :hidden:
 
 AAPS Builder <BrowserBuildAapsBuilder.md>
-Step 1: Create your fork <BrowserBuildFork.md>
-Step 2: Create your keystore <BrowserBuildKeystore.md>
-Step 3: Authorize Google Drive <BrowserBuildGoogleDrive.md>
-Step 4: Build the APK <BrowserBuildAPK.md>
+Стъпка 1: Създаване на fork <BrowserBuildFork.md>
+Стъпка 2: Създаване на хранилище за ключове <BrowserBuildKeystore.md>
+Стъпка 3: Разрешаване на Google Drive <BrowserBuildGoogleDrive.md>
+Стъпка 4: Компилиране на APK <BrowserBuildAPK.md>
 ```

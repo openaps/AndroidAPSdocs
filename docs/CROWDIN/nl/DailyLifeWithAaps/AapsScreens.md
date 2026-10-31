@@ -1,793 +1,773 @@
-# AAPS screens
+# AAPS-schermen
 
 ```{contents}
 :backlinks: entry
 :depth: 2
 ```
 
-(AapsScreens-the-homescreen)=
+(the-homescreen)= (AapsScreens-the-homescreen)=
 
-## The Homescreen
+## Het hoofdscherm
 
-![Homescreen V2.7](../images/Home_Homescreen.png)
+![Hoofdscherm](../images/Home_Homescreen.png)
 
-This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
+Dit is het eerste scherm dat je ziet als je **AAPS** opent. Het bevat de meeste informatie die je elke dag nodig hebt.
 
-### Section A - Tabs
+### Sectie A - Bovenste balk
 
-* Navigate between the various **AAPS** modules.
-* Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
+* Het **menu** (☰) links opent het navigatiemenu met **Behandelingen geschiedenis**, **Historie bekijken**, **Statistieken**, **Profielhulp**, **Onderhoud**, **Setup Wizard**, **Configuratie** en meer.
+* De **zoekbalk** vindt instellingen, dialoogvensters en documentatie. Begin gewoon te typen (zie [Overal zoeken](../DailyLifeWithAaps/GlobalSearch.md)).
+* Het pictogram **Instellingen** (tandwiel) rechts opent alle [instellingen](../SettingUpAaps/Preferences.md).
 
 (aaps-screens-profile--target)=
 
-### Section B - Profile & target
+### Sectie B - Statusblok
 
-#### Current Profile
+#### Huidige bloedglucose
 
-The current profile is displayed in the left bar.
+De laatste bloedglucosewaarde van je CGM staat in de grote cirkel links, samen met het verschil met de vorige waarde (delta) en de leeftijd van de waarde.
 
-Short press profile bar to view profile details. Long press profile bar to [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+De kleur van de BG-waarde toont de stand ten opzichte van het ingestelde [bereik](#Preferences-range-for-visualization).
 
-![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+* groen = binnen bereik
+* rood = onder bereik
+* geel = boven bereik
 
-1. Regular display with a standard profile activation.
-2. Profile switch with a remaining duration of 59mn.
-3. Profile switch with a specific percentage of 120%.
-4. Profile switch with a specific percentage of 80% and a remaining duration of 59 mn.
-5. Profile switch with a time shift of -1 hour.
-6. Profile switch with a specific percentage of 120%, time shift of 1 hour, and a remaining duration of 59mn.
+![BG-cirkel binnen bereik, groen](../images/Home_Delta.png) ![BG-cirkel boven bereik, geel](../images/Home_Delta_high.png) ![BG-cirkel onder bereik, rood](../images/Home_Delta_low.png)
 
-#### Target
-
-![Temp target remaining duration](../images/Home2020_TT.png)
-
-Current target blood glucose level is displayed in the right bar.
-
-Short press target bar to set a **[Temporary Target](../DailyLifeWithAaps/TempTargets.md)**.
-
-If a temp target is set, the bar turns yellow and the remaining time in minutes is shown in brackets.
-
-(AapsScreens-visualization-of-dynamic-target-adjustment)=
-
-#### Visualization of Dynamic target adjustment
-
-![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
-
-When using the [SMB algorithm](#Config-Builder-aps) and [Autosens](#Open-APS-features-autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity.
-
-Enable either one or both of the following options in [Preferences > OpenAPS SMB settings](#Preferences-openaps-smb-settings):
-
-     * "sensitivity raises target" and/or 
-     * "resistance lowers target" 
-    
-
-If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile. When it alters the target glucose, the background will change to green.
-
-(AapsScreens-section-c-bg-loop-status)=
-
-### Section C - BG & loop status
-
-#### Current blood glucose
-
-The latest blood glucose reading from your CGM is shown on the left side.
-
-The color of the BG value reflects the status to the defined [range](#Preferences-range-for-visualization).
-
-     * green = in range
-     * red = below range
-     * yellow = above range 
-    
-
-![Deltas](../images/Home_Delta.png)
-
-The blocks in the middle shows:
-
-1. how many minutes since last **CGM** reading
-2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
-  Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
-
-(AapsScreens-loop-status)=
+(loop-status)= (AapsScreens-loop-status)=
 
 #### Loop status
 
 ![Loop status](../images/Home2020_LoopStatus.png)
 
-On the right side, an icon shows the loop status:
+Naast de BG-cirkel toont een pictogram de bedrijfsmodus van de loop (van boven naar beneden in de afbeelding):
 
-1. Green circle = [closed loop](#KeyAapsFeatures-ClosedLoop), loop running
-2. Purple circle with dotted line = [low glucose suspend (LGS)](#KeyAapsFeatures-LGS)
-3. Red circle = loop disabled (not working permanently)
-4. Red circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-5. Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-6. Orange circle = super bolus running - remaining time is shown below icon
-7. Blue circle with dotted line = [open loop](#KeyAapsFeatures-OpenLoop)
+1. Groene cirkel = [gesloten loop](#KeyAapsFeatures-ClosedLoop), loop actief
+2. Paarse cirkel met stippellijn = [stop bij laag (LGS)](#KeyAapsFeatures-LGS)
+3. Blauwe cirkel met stippellijn = [open loop](#KeyAapsFeatures-OpenLoop)
+4. Rode cirkel met kruis = loop gedeactiveerd (blijvend uit)
+5. Rood pauzepictogram = loop onderbroken (tijdelijk gepauzeerd, maar de basale insuline wordt wel gegeven) - de resterende tijd staat naast het pictogram
+6. Grijze cirkel met stekker = pomp ontkoppeld (tijdelijk helemaal geen insulinetoediening) - de resterende tijd staat naast het pictogram
 
-Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
+Druk op het pictogram om het Loop-dialoogvenster te openen. De inhoud van het dialoogvenster hangt af van de huidige toestand:
 
-     * If short press on Loop icon, a validation is required after selection in Loop Dialog
+* Als de loop **actief** is (gesloten, open of LGS), kun je de bedrijfsmodus wisselen (Closed loop, Stop bij laag, Open loop of Loop deactiveren), de loop **onderbreken** of de pomp **ontkoppelen** voor een gekozen tijdsduur.
+* Als de loop **gedeactiveerd** is, kun je hem weer aanzetten door een bedrijfsmodus te kiezen, of de pomp ontkoppelen.
+* Als de loop **onderbroken** is, kun je hem **hervatten**, de pomp ontkoppelen, of een nieuwe tijdsduur kiezen onder **Onderbreek loop** om de onderbreking te verlengen.
+* Als de pomp **ontkoppeld** is, kun je de pomp **opnieuw verbinden**, of een nieuwe tijdsduur kiezen onder **Verbreek verbinding met de pomp** om de ontkoppeling te verlengen.
+
+Als je een onderbreking of ontkoppeling verlengt, **begint de nieuwe tijdsduur vanaf nu**: die vervangt de resterende tijd en wordt er niet bij opgeteld. Je hoeft niet eerst te hervatten of opnieuw te verbinden.
+
+Het dialoogvenster als de loop in gesloten loop draait:
+
+![Loop-dialoogvenster in gesloten loop](../images/loop/loop_dialog_closed_loop.png)
+
+Het dialoogvenster als de loop onderbroken is, met **Hervatten** en de tijdsduren om de onderbreking te verlengen:
+
+![Loop-dialoogvenster als de loop onderbroken is](../images/loop/loop_dialog_suspended.png)
+
+Het dialoogvenster als de pomp ontkoppeld is, met **Opnieuw verbinden met pomp** en de tijdsduren om de ontkoppeling te verlengen:
+
+![Loop-dialoogvenster als de pomp ontkoppeld is](../images/loop/loop_dialog_disconnected.png)
+
+Het dialoogvenster in Stop bij laag, in open loop en als de loop gedeactiveerd is, verschilt alleen in de bedrijfsmodi die het aanbiedt:
+
+![Loop-dialoogvenster in Stop bij laag](../images/loop/loop_dialog_lgs.png)
+
+![Loop-dialoogvenster in open loop](../images/loop/loop_dialog_open_loop.png)
+
+![Loop-dialoogvenster als de loop gedeactiveerd is](../images/loop/loop_dialog_disabled.png)
+
+Zo ziet het hoofdscherm eruit in elke modus. De kleurenband bovenaan de grafiek verandert op het moment van de wissel.
+
+Stop bij laag:
+
+![Hoofdscherm in Stop bij laag](../images/main/main_screen_loop_lgs.png)
+
+Open loop:
+
+![Hoofdscherm in open loop](../images/main/main_screen_loop_open.png)
+
+Loop gedeactiveerd:
+
+![Hoofdscherm met de loop gedeactiveerd](../images/main/main_screen_loop_disabled.png)
+
+Loop onderbroken — de resterende tijd staat naast het pictogram:
+
+![Hoofdscherm met de loop onderbroken](../images/main/main_screen_loop_suspended.png)
+
+Pomp ontkoppeld — de resterende tijd staat naast het pictogram. De behandelknoppen blijven in de QuickLaunch-werkbalk, zodat je nog steeds insuline van een pen of koolhydraten kunt registreren:
+
+![Hoofdscherm met de pomp ontkoppeld](../images/main/main_screen_pump_disconnected.png)
+
+Na elke keuze is een bevestiging nodig.
+
+```{admonition} Alarm: de pomp heeft de tijdelijke nul-basaalstand niet geaccepteerd :class: warning Als de pomp ontkoppeld is, houdt **AAPS** een tijdelijke basaalstand van nul op de pomp, en stelt die opnieuw in als hij ontbreekt. Als dit na 10 minuten nog steeds mislukt, geeft **AAPS** een urgent alarm: *"De pomp heeft de tijdelijke nul-basaalstand niet geaccepteerd. Mogelijk wordt er nog steeds basale insuline afgegeven. Controleer de pomp."* Het alarm wordt elke 15 minuten herhaald, totdat de tijdelijke basaalstand van nul is ingesteld of de ontkoppeling eindigt. Als je dit ziet, controleer dan je pomp: misschien geeft hij nog basale insuline, ook al toont **AAPS** hem als ontkoppeld.
+
+    <br />Let op: welke modi je kunt kiezen hangt af van je voortgang in de [Doelen](../SettingUpAaps/CompletingTheObjectives.md). Closed loop en LGS komen pas beschikbaar als je de doelen voltooit.
     
-     ![Loop status menu](../images/Home2020_Loop_Dialog.png)
+    (aaps-screens-bg-warning-sign)=
+    #### BG-waarschuwingsteken
     
-
-(aaps-screens-bg-warning-sign)=
-
-#### BG warning sign
-
-If for any reason, there are issues in the BG readings **AAPS** receives, you will get a warning signal beneath your BG number on the main screen.
-
-##### Red warning sign: Duplicate BG data
-
-The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which does avoid the loop to do its work right. Therefore, your loop will be disabled until it is resolved.
-
-    {admonition} Your loop is not running
+    Als **AAPS** een probleem ziet met de BG-waarden die het ontvangt, verschijnt in de onderste balk van het hoofdscherm een snelkoppeling naar je BG-bron (met de naam van de bron, bijvoorbeeld **xDrip+ BG**), met een rood waarschuwingsbadge. Tik erop om het [BG-bronscherm](#aaps-screens-bg-source) te openen.
+    
+    ##### Dubbele BG-gegevens
+    
+    Het rode waarschuwingsteken betekent dat je meteen in actie moet komen: je ontvangt **dubbele BG-gegevens**, en daardoor kan de loop zijn werk niet goed doen. **AAPS** kan je BG-trend niet betrouwbaar berekenen uit dubbele waarden, en stopt daarom met corrigeren.
+    
+    Als je loop gesloten was, zet **AAPS** hem in de modus [Stop bij laag (LGS)](#KeyAapsFeatures-LGS): het loop-pictogram wordt paars.
+    
+      ![Dubbele BG-gegevens: LGS-loop-pictogram en de snelkoppeling naar de BG-bron met een rood waarschuwingsbadge](../images/bg_warn_red.png)
+    
+    Druk op het loop-pictogram: de kaart **Beperkingen** bovenaan vertelt je waarom: "BgQualityCheck: LGS modus als gevolg van dubbele waarden in de BG bron".
+    
+      ![Dialoogvenster Bedrijfsmodus: LGS door dubbele waarden](../images/main/bg_doubled_constraint.png)
+    
+    ```{admonition} Je loop draait in Stop bij laag
     :class: note
-    Your loop is not running until you solve this issue !
-
-    ![Red BG warning](../images/bg_warn_red.png)
+    Je loop blijft draaien, maar alleen om je tegen lage waarden te beschermen: **AAPS** kan je basaal nog verlagen of stoppen, maar geeft geen correctie-insuline totdat je dit probleem hebt opgelost!
     
 
-You need to find out why you get duplicate BGs:
+Je moet uitzoeken waarom je dubbele BG-waarden krijgt:
 
-* Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
-* Do multiple sources upload your BG to Nightscout? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip+, if you use that.
-* Do you have any followers that might receive your BG but do also upload it again to your Nightscout site?
-* Last resort: In **AAPS**, go to [Preferences > NSClient](#Preferences-nsclient), select the sync settings and disable the "Accept CGM data from NS" option.
+* Staat de Dexcom bridge aan op je Nightscout-site? Zet de bridge uit in het beheerpaneel van je Nightscout-installatie: pas de variabele "enable" aan en haal daar het deel "bridge" weg. (Voor heroku zijn [hier details te vinden](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* Uploaden meerdere bronnen je BG naar Nightscout? Als je de BYODA-app gebruikt, zet de upload dan aan in **AAPS**, maar niet in xDrip (als je dat gebruikt).
+* Heb je volgers die je BG ontvangen, maar die ook weer naar je Nightscout-site uploaden?
+* Laatste redmiddel: kies in de [NSClient-instellingen](#Preferences-nsclient) de instellingen voor Synchronisatie en zet de optie "Ontvang CGM gegevens van NS" uit.
 
-To remove the warning immediately and get to loop running again, you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
+Om de waarschuwing meteen weg te halen en de loop weer te laten corrigeren, verwijder je de dubbele waarden in het BG-bronscherm: tik op de snelkoppeling in de onderste balk. De dubbele waarde is rood gemarkeerd. Druk lang op een waarde om te beginnen met selecteren, vink de dubbele waarden aan en tik op het prullenbakpictogram rechtsboven.
 
-However, when there are a lot of duplicates, it might be easier to
+![BG-bronscherm: dubbele waarden geselecteerd om te verwijderen](../images/main/bg_source_delete_duplicates.png)
 
-* [backup your settings](../Maintenance/ExportImportSettings.md),
-* reset your database in the maintenance menu and
-* [import your settings](../Maintenance/ExportImportSettings.md) again
+Maar als er veel dubbele waarden zijn, kan het makkelijker zijn om
 
-##### Yellow warning sign
+* [maak een back-up van je instellingen](../Maintenance/ExportImportSettings.md),
+* zet je database terug in het onderhoudsmenu en
+* [importeer je instellingen](../Maintenance/ExportImportSettings.md) opnieuw
 
-The yellow warning signal is indicating that your BG arrived in irregular time intervals or that some BGs are missing. When pressing the sign, the message indicates “Recalculated data used”.
+    {admonition} Zet zelf terug naar Closed loop
+    :class: important
+    **AAPS** gaat niet vanzelf terug naar **Closed loop** als de dubbele waarden weg zijn. Druk op het loop-pictogram op het hoofdscherm en kies weer **Closed loop**.
 
-    ![Yellow BG warning](../images/bg_warn_yellow.png)
-    
+##### Vlakke BG-gegevens
 
-Usually you do not have to take any action. The closed loop will continue to work!
+Bij sommige BG-bronnen (Libre 1, AiDEX, Glutec, Medtronic en bronnen die hun sensortype niet doorgeven) controleert **AAPS** ook op waarden die niet veranderen: als je BG 45 minuten lang minder dan 2 mg/dl (0,1 mmol/l) is veranderd, worden de gegevens als fout gezien. De snelkoppeling naar de BG-bron toont dan een rood badge met een vlakke trend. De loop stopt elke hoge tijdelijke basaalstand en geeft geen correctie-insuline totdat de waarden weer veranderen. Controleer je sensor en de app die de waarden verstuurt.
 
-As a sensor change is interrupting the constant flow of BG data, a yellow warning sign after sensor change is normal and nothing to worry about.
+##### Onregelmatige BG-gegevens
 
-Special note for Libre users:
+Als waarden met onregelmatige tussenpozen binnenkomen of als er waarden ontbreken, berekent **AAPS** opnieuw waarden per 5 minuten uit de waarden die het heeft. Dit gebeurt bijvoorbeeld na een sensorwissel, of bij Libre-sensoren, waarvan de timing elke paar uur een minuut of twee verschuift. De loop blijft werken en je hoeft niets te doen. **AAPS** 4 toont hiervoor geen geel waarschuwingsteken meer.
 
-* Every single libre slips a minute or two every few hours, meaning you never get a perfect flow of regular BG intervals.
-* Also, jumpy readings interrupt the continuous flow.
-* Therefore, the yellow warning sign will be 'always on' for Libre users.
+#### Huidig profiel
 
-*Note*: Up to 30h hours are taken into accord for **AAPS** calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
+Het huidige profiel staat naast het sterpictogram.
 
-#### Simple mode
+Tik op de profielnaam om het [Profielscherm](#aaps-screens-profile) te openen. Daar kun je de details van het profiel bekijken en [tussen verschillende profielen wisselen](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
+**Om het profielpercentage te wijzigen** (en de tijdsduur), tik je op de profielnaam en daarna op de ronde knop **▶** (Activeer) rechtsonder in het Profielscherm. In **AAPS** 3.x opende dit scherm met lang drukken op de profielnaam; in **AAPS** 4 doet lang drukken niets. Stap voor stap: [Het profielpercentage wijzigen](#ProfileSwitch-change-percentage).
 
-![Home2020_SimpleMode.png](../images/Home2020_SimpleMode.png)
+![Profiel met een actieve profielwissel](../images/Home2020_ProfileSwitch.png)
 
-### Sectie D - IOB, COB, BR en AS
+1. Normale weergave met een standaard profielactivering.
+2. Profielwissel met een percentage van 90% en een resterende tijdsduur van 9 minuten. De profielnaam wordt geel zolang een tijdelijke profielwissel actief is.
+3. Profielwissel met een tijdverschuiving van 1 uur en een resterende tijdsduur van 9 minuten.
 
-![Section D](../images/Home2020_TBR.png)
+#### Streefdoel
 
-1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
-  The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses.
-  
-  * IOB may be negative if there have recently been periods of reduced basal.
-  * Press the icon to see the split of bolus and basal insulin
+![Resterende duur tijdelijk streefdoel](../images/Home2020_TT.png)
 
-2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before The icon pulses red if carbs are required (see [below](#aaps-screens-carbs-required))
+Het huidige streefdoel voor de bloedglucose staat onder de profielnaam.
 
-3. **Purple line**: current basal rate. The icon changes to reflect temporary changes in basal rate (flat at 100%) 
-  * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
-4. **Arrows up & down**: indicates dynamic sensitivity features status ([Autosens](#Open-APS-features-autosens) or [DynamicISF](#Open-APS-features-DynamicISF)): enabled or disabled. Several values may be shown in this section: 
-  * AS: Autosens value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
-  * Alg: DynamicISF value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
+Druk kort op het streefdoel om het scherm **[Tijdelijk streefdoel](../DailyLifeWithAaps/TempTargets.md)** te openen.
+
+1. Normale weergave: het streefbereik uit je profiel.
+2. Als er een tijdelijk streefdoel is ingesteld, wordt het streefdoel geel/oranje met het pictogram van de gebruikte voorinstelling, en staat de resterende tijd in minuten tussen haakjes.
+
+(AapsScreens-visualization-of-dynamic-target-adjustment)=
+
+#### Weergave van dynamisch aangepast streefdoel
+
+Als je het [SMB-algoritme](#Config-Builder-aps) en de functie [Autosens](#Open-APS-features-autosens) gebruikt, kan **AAPS** je streefdoel dynamisch aanpassen op basis van je gevoeligheid.
+
+Zet een of beide van de volgende opties aan in de [OpenAPS SMB-instellingen](#Preferences-openaps-smb-settings):
+
+* "Gevoeligheid verhoogt streefdoel" en/of
+* "Resistentie verlaagt streefdoel"
+
+Als **AAPS** resistentie of gevoeligheid ziet, wijkt het streefdoel af van wat in het profiel staat, en verandert de kleur van het getoonde streefdoel om de aanpassing te laten zien.
+
+(aaps-screens-iob-cob-basal-sens)=
+
+#### IOB, COB, basaal en gevoeligheid
+
+![IOB, COB, basaal en gevoeligheid](../images/Home2020_TBR.png)
+
+1. **Spuit**: insuline aan boord (IOB) - hoeveelheid actieve insuline in je lichaam  
+    De insuline aan boord zou nul zijn als alleen je standaard basaal liep en er geen insuline meer over was van eerdere bolussen. 
+    * IOB kan negatief zijn als er kort geleden periodes met minder basaal waren.
+    * Druk op de chip om de verdeling tussen bolus- en basale insuline te zien (eerste dialoogvenster in de afbeelding, hier met een negatieve IOB na een periode met minder basaal)
+2. **Graan**: [koolhydraten aan boord (COB)](../DailyLifeWithAaps/CobCalculation.md) - koolhydraten die je eerder hebt gegeten en die nog niet zijn opgenomen
+3. De blauwgroene knop rechts toont de **huidige basaaltoediening**: een vlakke lijn als de basaal uit het profiel loopt, een ander pictogram als er een tijdelijke basaalstand actief is
+4. De **percentagerij** toont de huidige gevoeligheid ([Autosens](#Open-APS-features-autosens) / [DynamicISF](../DailyLifeWithAaps/DynamicISF.md)). Als de loop je ISF wijzigt, toont de rij ook de ISF uit het profiel, een pijl en de ISF die de loop nu gebruikt, bijvoorbeeld "80% 2,0 ↗ 2,5". Druk erop om de Autosens-waarde en de effectieve ISF te zien (tweede dialoogvenster in de afbeelding). Als de loop met een andere waarde werkt dan het laatste Autosens-resultaat (bijvoorbeeld omdat een tijdelijk streefdoel je gevoeligheid wijzigt), toont het dialoogvenster die waarde ook als **Autosens in algoritme**. Als Autosens uit staat, houdt de loop de ISF uit je profiel en wordt er geen effectieve ISF getoond.
+
+Het IOB-dialoogvenster, geopend door op de IOB-chip te drukken:
+
+![IOB-dialoogvenster met bolus-IOB en basaal-IOB](../images/main/main_chip_iob.png)
+
+Druk op de blauwgroene knop om de actieve tijdelijke basaalstand te zien, wanneer die begon en hoe lang die al loopt:
+
+![Dialoogvenster tijdelijk basaal](../images/main/main_chip_temp_basal.png)
 
 (aaps-screens-carbs-required)=
 
-#### Carbs required
+#### Koolhydraten benodigd
 
-![Carbs required](../images/Home2020_CarbsRequired.png)
+![Benodigde koolhydraten getoond in de COB-chip](../images/main/main_screen_carbs_required.png)
 
-Carbs suggestions are given when the reference design detects that it requires carbs.
+Er wordt een koolhydratenadvies gegeven als het algoritme ziet dat er koolhydraten nodig zijn.
 
-This is when the oref algorithm thinks it can't rescue you by zero-temping, and you will need carbs to fix.
+Dit is wanneer het oref-algoritme denkt dat het je niet kan redden met een tijdelijk basaal van nul, en je koolhydraten nodig hebt.
 
-The carb notifications are much more sophisticated than the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
+De berekening achter de waarschuwing voor benodigde koolhydraten is veel geavanceerder dan de berekening achter de bolus calculator. Je kunt een koolhydratenadvies zien terwijl de bolus calculator geen ontbrekende koolhydraten toont.
 
-Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+Meldingen 'koolhydraten nodig' kunnen naar Nightscout worden gestuurd als je dat wilt. Dan wordt er een mededeling getoond en verstuurd.
 
-### Sectie E - Statusindicatoren
+### Sectie C - Statusrij
 
-![Section E](../images/Home2020_StatusLights.png)
+![Statusrij](../images/Home2020_StatusLights.png)
 
-Status lights give a visual warning for
+De statusrij geeft een zichtbare waarschuwing voor
 
-* Cannula age
-* Insulin age (days reservoir is used)
-* Reservoir level (units)
-* Sensor age
-* Battery age and level (%)
+* Canule leeftijd
+* Insuline leeftijd (aantal dagen dat het reservoir in gebruik is) en reservoirniveau (eenheden)
+* Sensor leeftijd
+* Pomp batterij leeftijd en niveau (%)
 
-If threshold warning is exceeded, values will be shown in yellow.
+Als de drempelwaarde voor waarschuwing wordt overschreden, worden de waarden in geel weergegeven.
 
-If threshold critical is exceeded, values will be shown in red.
+Als de drempelwaarde voor alarm wordt overschreden, worden de waarden in rood weergegeven.
 
-Settings can be changed in [Preferences > Overview > Status lights](#Preferences-status-lights).
+De drempelwaarden kun je wijzigen via het kleine pictogram **Instellingen** dat verschijnt als de statusrij is **uitgeklapt** (pijltje rechts). Zie [Statusindicatoren](#Preferences-status-lights).
 
-Depending on the pump you use, you may not have all of these icons.
+Het uitgeklapte statuspaneel heeft aan het eind van sommige rijen ook een knop om een wissel te registreren. Die zet de bijbehorende leeftijd terug: **Toevoegen** op de rij **Sensor** registreert het plaatsen van een sensor. Als je pomp het ondersteunt, verschijnt **Prime/Vul** op de rijen **Canule** (of **Patchpomp**) en **Insuline**, en **Toevoegen** op de rij **Pomp batterij**.
+
+![Uitgeklapt statuspaneel met Prime/Vul op de rijen Canule en Insuline, en Toevoegen op de rijen Sensor en Pomp batterij](../images/main/main_status_row_expanded.png)
+
+Afhankelijk van je pomp heb je misschien niet al deze pictogrammen.
+
+(screens-sensor-level-battery)=
+
+#### Sensorniveau (batterij)
+
+Werkt voor CGM met een extra zender, zoals de MiaoMiao 2. (Technisch gezien moet de sensor informatie over het batterijniveau naar xDrip sturen.)
+
+De drempelwaarden kun je instellen in [Statusindicatoren](#Preferences-status-lights).
 
 (aaps-screens-main-graph)=
 
-### Sectie F - Hoofdgrafiek
+### Sectie D - Hoofdgrafiek
 
-![Section F](../images/Home2020_MainGraph.png)
+![Hoofdgrafiek](../images/main/main_graph.png)
 
-The graph shows your blood glucose (BG) as read from your glucose monitor (CGM).
+De grafiek toont je bloedglucose (BG) zoals gelezen van je glucosemeter (CGM).
 
-Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. You can choose between 6, 12, 18 or 24 hours.
+Scroll en knijp-zoom op de grafiek om het zichtbare tijdvak te wijzigen.
 
-The green area reflects your target range.
+Het groene gebied weerspiegelt je doelbereik.
 
-This information is also shown on this graph :
+Deze informatie wordt ook in deze grafiek getoond:
 
-* Boluses: blue triangle on the BG curve and insulin amount
-* Carbs entries: orange triangle on the BG curve and carb amount
-* Target as defined in the profile or modified by temporary target: green line
-* Profile switches: star at the top of the graph
-* Loop status: color line at the top of the graph when the status is anything else than closed loop - see [Loop status](#AapsScreens-loop-status) for the colors
-* [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings): blue triangles at the bottom of the graph
+* Handmatige bolussen: blauwe driehoek net boven de BG-curve, met de punt naar beneden naar de waarde op dat moment, met de hoeveelheid insuline
+* Ingevoerde koolhydraten: oranje driehoek net onder de BG-curve, met de punt naar boven naar de waarde, met de hoeveelheid koolhydraten. Een maaltijd die met de bolus is ingevoerd, ziet eruit als één markering, gesplitst door de waarde.
+* De driehoeken zijn er in drie maten (klein, middel, groot), afhankelijk van de hoeveelheid vergeleken met de grootste van de dag. Als er op dat moment geen BG-waarde is (gat in de sensorgegevens), wordt de driehoek onderaan de grafiek getekend.
+* BG-controles en kalibraties: getekend op hun eigen gemeten waarde, zodat je ze kunt vergelijken met de sensorcurve
+* Streefdoel zoals ingesteld in het profiel of aangepast door een tijdelijk streefdoel: groene lijn
+* Profielwissels: sterpictogrammen bovenaan de grafiek
+* Loopstatus: kleurenband bovenaan de grafiek als de [bedrijfsmodus](#AapsScreens-loop-status) iets anders is dan gesloten loop: blauw = open loop, paars = LGS, rood = loop gedeactiveerd, geel = loop onderbroken, grijs = pomp ontkoppeld, oranje = superbolus (in de schermafbeelding: paars, daarna geel). De geschiedenis van deze wissels staat in [Bedrijfsmodus](#AapsScreens-running-mode)
+* [SMB's](#Open-APS-features-super-micro-bolus-smb) worden niet in de BG-grafiek getekend (er zou er elke paar minuten een zijn): ze worden getoond in de [IOB-grafiek](#aaps-screens-iob).
+
+Tik op een **BG-controle** in de grafiek om de waarde te zien, en de notitie als je er een hebt geschreven.
+
+(aaps-screens-graph-press-and-hold)=
+
+#### De waarden op een bepaald moment bekijken
+
+**Houd de BG-grafiek even ingedrukt** om de waarden bij één meting te zien. Een stip markeert de dichtstbijzijnde waarde, er wordt op dat moment een stippellijn door alle grafieken getekend, en een pop-up bovenaan de grafiek toont:
+
+* de tijd en de BG-waarde
+* IOB, COB (alleen als die boven 0 g is) en de basaalstand op dat moment. Het basaalpictogram toont of er een tijdelijke basaalstand actief was, net als op het hoofdscherm
+* elke bolus, SMB of koolhydraten op dat moment, met dezelfde driehoeken als in de grafieken
+
+Houd je vinger op het scherm en beweeg hem naar links of rechts om van de ene waarde naar de volgende te gaan. Je voelt bij elke waarde een lichte tik, en de grafiek scrolt niet terwijl je dit doet. De pop-up blijft 2 seconden staan nadat je je vinger hebt opgetild.
+
+Dit werkt op dezelfde manier bij de [extra grafieken](#aaps-screens-additional-graphs) onder de BG-grafiek (IOB, COB...): houd er een ingedrukt.
+
+![BG-grafiek ingedrukt houden: de pop-up toont tijd, BG, IOB en basaal](../images/main/graph_press_and_hold.png)
 
 (AapsScreens-activate-optional-information)=
 
-#### Activate optional information
+#### Optionele informatie laten weergeven
 
-Using the top right arrow, you can switch on these optional information:
+Druk op het **potlood**pictogram rechtsboven in de grafiek om de grafiekinstellingen te openen:
 
-* Predictions (see below)
-* Treatments : notes entered in action tab: grey, orange or red dot depending on the severity, as well as fingerstick calibrations: red dot
-* Basals 
-  * As defined in the profile: blue dotted line at the bottom of the graph
-  * Actually delivered basal: blue plain line with blue background
-* Activity - insulin activity curve: yellow line
+![Hoofdgrafiek instelling](../images/Home2020_MainGraphSetting.png)
 
-To show this information, click the triangle on the right side of the main graph. For the main graph just the four options above the line "Graph 1 2 3 4" are available.
-
-     ![Main graph setting](../images/Home2020_MainGraphSetting.png)
-    
+* **Grafiekhoogte** bepaalt hoe hoog de grafiek wordt getekend.
+* **ACT** toont de curve van de insulineactiviteit: een ononderbroken geelgroene lijn <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (niet te verwarren met de gestippelde gele UAM-voorspelling)
+* **PRED** toont de [voorspellingslijnen](#aaps-screens-prediction-lines) (zie hieronder)
 
 (aaps-screens-prediction-lines)=
 
-#### Prediction lines
+#### Voorspellingslijnen
 
-* **Orange** line: [COB](CobCalculation) (color is used generally to represent COB and carbs)
-  
-  This prediction line shows where your BG (not where COB itself!) will go based on the current **Profile** settings, assuming that the deviations due to carb absorption remain constant. This line only appears if there are known COB.
+Als **PRED** aan staat, tekent AAPS de voorspellingen als **stippellijnen** rechts van de lijn "nu". Elke voorspelling heeft een eigen kleur. Het donkere thema gebruikt lichtere tinten van dezelfde kleuren, en een lijn binnen het groene streefbereik kan iets groener lijken.
 
-* **Dark blue** line: IOB (color is used generally to represent IOB and insulin)
-  
-  This prediction line shows what would happen under the influence of insulin only. For example if you dialed in some insulin and then didn’t eat any carbs.
+| Lijn                   | Licht thema                                                                                                                       | Donker thema                                                                                                                       | Wat hij voorspelt               |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| **IOB** (blauw)        | <span style="background:#FFFFFF;color:#1E88E5;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#64B5F6;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | alleen insuline                 |
+| **COB** (oranje)       | <span style="background:#FFFFFF;color:#FB8C00;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#FFB74D;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | koolhydraten aan boord          |
+| **UAM** (geel)         | <span style="background:#FFFFFF;color:#C9BD60;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#E6D39A;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | niet-aangekondigde maaltijd     |
+| **ZT** (cyaan)         | <span style="background:#FFFFFF;color:#00D2D2;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#4DD4D4;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | zero-temp (insuline gestopt)    |
+| **aCOB** (lichtoranje) | <span style="background:#FFFFFF;color:rgba(251,140,0,0.5);padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span> | <span style="background:#141218;color:rgba(255,183,77,0.5);padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span> | alleen het oudere AMA-algoritme |
 
-* **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
-  
-  This prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
-  
-  *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+Als twee voorspellingen dezelfde waarden geven, liggen hun stippen over elkaar en zie je maar één van de kleuren (bijvoorbeeld UAM over IOB als de BG vlak is).
 
-* **Dark yellow** line: [UAM](#SensitivityDetectionAndCob-sensitivity-oref1) (un-announced meals)
-  
-  Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the **orange COB line**, but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
-  
-  *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+* **COB**-lijn (oranje): [koolhydraten aan boord](CobCalculation) (oranje wordt overal in AAPS gebruikt voor COB en koolhydraten)
+    
+    Deze voorspellingslijn toont waar je BG (niet de COB zelf!) naartoe gaat op basis van de huidige instellingen van het **Profiel**, als de afwijkingen door koolhydraatopname gelijk blijven. Deze lijn wordt alleen getoond als je COB hebt.
 
-* **Dark orange** line: aCOB (accelerated carbohydrate absorption)
-  
-  Similar to COB, but assuming a static 10 mg/dL/5m (-0.555 mmol/l/5m) carb absorption rate. Deprecated and of limited usefulness.
-  
-  *This line appears only when the older [AMA](#Config-Builder-aps) algorithm is used.*
+* **IOB**-lijn (blauw): insuline aan boord (blauw wordt overal in AAPS gebruikt voor IOB en insuline)
+    
+    Deze voorspellingslijn toont wat er zou gebeuren onder invloed van alleen insuline. Bijvoorbeeld als je insuline hebt gegeven en daarna geen koolhydraten hebt gegeten.
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+* **ZT**-lijn (cyaan): zero-temp (voorspelde BG als er een tijdelijke basaalstand van 0% zou worden ingesteld)
+    
+    Deze voorspellingslijn toont hoe het BG-verloop zou veranderen als de pomp alle insulinetoediening zou stoppen (0% TBR). De lijn stopt zodra hij boven je streefdoel komt.
+    
+    *Deze lijn verschijnt alleen als het [SMB](#Config-Builder-aps)-algoritme wordt gebruikt.*
 
-#### Basals
+* **UAM**-lijn (geel): [niet-aangekondigde maaltijden](#SensitivityDetectionAndCob-sensitivity-oref1)
+    
+    Niet-aangekondigde maaltijden (UAM) betekent dat er een duidelijke stijging van de glucose is gezien door maaltijden, adrenaline of andere invloeden. De voorspellingslijn lijkt op de **oranje COB-lijn**, maar gaat ervan uit dat de afwijkingen met een vaste snelheid afnemen (door de huidige snelheid van afname door te trekken).
+    
+    *Deze lijn verschijnt alleen als het [SMB](#Config-Builder-aps)-algoritme wordt gebruikt, **Activeer UAM** aan staat in de OpenAPS SMB-instellingen, en de BG meer stijgt dan alleen de insuline kan verklaren.*
 
-A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time.
+* **aCOB**-lijn (licht, doorzichtig oranje): versnelde koolhydraatopname
+    
+    Net als COB, maar uitgaande van een vaste koolhydraatopname van 10 mg/dl/5m (-0,555 mmol/l/5m). Verouderd en beperkt nuttig.
+    
+    *Deze lijn verschijnt alleen als het oudere [AMA](#Config-Builder-aps)-algoritme wordt gebruikt.*
 
-The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
+Meestal ligt je echte glucosecurve in het midden van deze lijnen, of dicht bij de lijn waarvan de aannames het meest op jouw situatie lijken.
 
-When the standard basal rate is given, the area under the curve is shown in dark blue. When the basal rate is temporarily adjusted (increased or decreased), the area under the curve is shown in light blue.
+(aaps-screens-how-predictions-become-a-dosing-decision)=
 
-#### Activity
+#### Hoe AAPS van voorspellingen een doseringsbeslissing maakt
 
-The **thin yellow** line shows the activity of Insulin.
+AAPS doseert insuline niet alleen op basis van je huidige BG. Bij elke loopcyclus (ongeveer elke 5 minuten) kijkt het naar alle voorspellingslijnen hierboven samen en bepaalt het de veiligste aanpak.
 
-It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
+De basisregel is **veiligheid eerst**: als *een* voorspellingslijn, in welk tijdvak dan ook, onder je lage veiligheidsgrens zakt, stelt AAPS een zero-temp in (tijdelijke basaalstand van 0%) en geeft het geen extra insuline, ook als je huidige BG hoog is. Pas als elke voorspellingslijn boven die grens blijft, overweegt AAPS om meer insuline te geven.
 
-(AapsScreens-section-g-additional-graphs)=
+Als het veilig is om meer insuline te geven, kijkt AAPS waar de BG volgens de gecombineerde voorspellingen uiteindelijk uitkomt (de **eventual BG**, de uiteindelijke BG), en berekent het hoeveel correctie nodig is om die uiteindelijke BG terug te brengen naar het streefdoel. Dat wordt gegeven als een hogere tijdelijke basaalstand, of (als het oref1/[SMB](#Open-APS-features-super-micro-bolus-smb)-algoritme aan staat) als een kleine directe bolus. Als de BG nu hoog is maar al genoeg vanzelf daalt, wacht AAPS af, of verlaagt het misschien zelfs de basaalstand, in plaats van insuline toe te voegen die een latere lage waarde alleen nog lager zou maken.
 
-### Section G - Additional graphs
+Voor uitgewerkte voorbeelden van deze beslisregels met echte schermafbeeldingen, zie de [doseringsscenario's in de gids voor zorgverleners](#clinicianguide-dosing-scenarios). Ze zijn geschreven voor zorgverleners, maar gelden voor elke AAPS-gebruiker.
 
-You can activate up to four additional graphs below the main graph. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and can not be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
+*Voor de volledige technische uitleg over hoe deze voorspellingen en de doseringsbeslissing worden berekend, zie de [documentatie van OpenAPS over determine-basal](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html).*
 
-To open settings for additional graphs click the triangle on the right side of the [main graph](#aaps-screens-main-graph) and scroll down.
+#### Basalen
 
-![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
+Een **ononderbroken blauwe** lijn toont de basaal die je pomp afgeeft, en laat de werkelijke afgifte in de tijd zien.
 
-To configure additional graphs, check the boxes corresponding to the data you want to see on each graph.
+De **gestippelde blauwe** lijn toont wat de basaalstand zou zijn als er geen tijdelijke basaalaanpassingen (TBR's) waren.
 
-Most users find the following configuration of additional graphs to be adequate :
+Als de standaard basaalstand wordt gegeven, is het gebied onder de curve donkerblauw. Als de basaalstand tijdelijk is aangepast (hoger of lager), is het gebied onder de curve lichtblauw.
 
-* Graph 1 with IOB, COB, Sensitivity change
-* Graph 2 with Deviations and BGI.
+#### Activiteit
 
-#### Absolute insulin
+De **dunne gele** lijn is de insuline activiteit.
 
-Active insulin including boluses **and basal**.
+Het is gebaseerd op de verwachte daling in BG, alleen veroorzaakt door de aanwezige insuline, alsof er geen andere invloeden (zoals koolhydraten) aanwezig zijn.
 
-#### Insulin on board
+(AapsScreens-section-g-additional-graphs)= (aaps-screens-additional-graphs)=
 
-Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
+### Sectie E - Extra grafieken
 
-If there were no [SMBs](#Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+Je kunt extra grafieken onder de hoofdgrafiek aanzetten. In de [Eenvoudige modus](#preferences-simple-mode) zijn de extra grafieken vooraf ingesteld en kun je ze niet wijzigen. Zet de **Eenvoudige modus** uit als je zelf wilt kiezen welke extra grafieken je ziet.
 
-IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
+De extra grafieken volgen de hoofdgrafiek: als je in de BG-grafiek scrolt of zoomt, bewegen ze mee. Een zijwaartse veegbeweging op een extra grafiek scrolt ook alle grafieken. Ze hebben geen eigen tijdlabels. Lees de tijd af op de BG-grafiek.
 
-Decaying depends on your [DIA and insulin profile settings](../SettingUpAaps/YourAapsProfile.md).
+Om een extra grafiek in te stellen, druk je op het **potlood**pictogram rechtsboven in die grafiek:
 
-#### Carbs On Board
+![Instellingen extra grafieken](../images/Home2020_AdditionalGraphSetting.png)
 
-Shows the carbs you have on board (= active, not yet decayed carbs in your body).
+Kies de chips voor de gegevens die je in deze grafiek wilt zien; de knop **Verwijderen** verwijdert de grafiek.
 
-Decaying depends on the [deviations the algorithm detects](../DailyLifeWithAaps/CobCalculation.md).
+Om nog een grafiek te maken, druk je op **Grafiek toevoegen** onder de laatste grafiek en kies je de chips op dezelfde manier:
 
-If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings).
+![Grafiek toevoegen](../images/main/graph_add.png)
 
-#### Sensitivity change
+De nieuwe grafiek wordt onder de andere toegevoegd. Hier een tweede extra grafiek met **SENS%** en **DEV**:
 
-Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
+![Hoofdscherm met een tweede extra grafiek](../images/main/main_screen_additional_graph.png)
 
-Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
+De meeste gebruikers vinden de volgende instelling van extra grafieken voldoende:
 
-Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
+* Grafiek 1 met IOB, COB, Gevoeligheid wijziging
+* Grafiek 2 met Afwijkingen en BGI.
 
-### Variable sensitivity
+#### Absolute insuline (ABS)
 
-Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
+Actieve insuline inclusief bolussen **en basaal**.
+
+(aaps-screens-iob)=
+
+#### Actieve insuline (IOB)
+
+Toont de insuline aan boord (= actieve insuline in jouw lichaam). Dit is inclusief insuline van bolussen en tijdelijke basaalstanden (**maar zonder de basaalstanden uit je profiel**).
+
+Als er tijdens de DIA-tijd geen [SMB's](#Open-APS-features-super-micro-bolus-smb), geen bolussen en geen TBR waren, zou dit nul zijn.
+
+SMB's worden in deze grafiek getoond als blauwe driehoeken, in drie maten, afhankelijk van de hoeveelheid vergeleken met de grootste SMB van de dag.
+
+IOB kan negatief zijn als je geen insuline meer aan boord hebt van een voorafgaande bolus en je voor een langere tijd een laag (of zelfs nul) tijdelijk basaal hebt gekregen.
+
+Het afnemen hangt af van je [instellingen voor DIA en insulinetype](#Config-Builder-insulin-dia).
+
+#### Actieve koolhydraten (COB)
+
+Toont de koolhydraten aan boord (= actieve, nog niet opgenomen koolhydraten in jouw lichaam).
+
+Het afnemen hangt af van de [afwijkingen die het algoritme ziet](../DailyLifeWithAaps/CobCalculation.md).
+
+Als het algoritme een hogere koolhydraatopname ziet dan verwacht, wordt er insuline gegeven en stijgt de IOB (meer of minder, afhankelijk van je veiligheidsinstellingen).
+
+#### Gevoeligheid wijziging (SENS%)
+
+Toont de gevoeligheid die [Autosens](#Open-APS-features-autosens) heeft gevonden.
+
+Gevoeligheid is een berekening van je gevoeligheid voor insuline door sport, hormonen enz.
+
+Let op: je moet in [Doel 8](#objectives-objective8) zijn voordat gevoeligheidsdetectie/[Autosens](#Open-APS-features-autosens) de hoeveelheid toegediende insuline automatisch mag aanpassen. Voordat je dat doel hebt bereikt, wordt de lijn in je grafiek alleen ter informatie getoond.
+
+### Variabele gevoeligheid (VSENS)
+
+Toont de gevoeligheid zoals berekend door [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Alleen gevuld als je deze functie gebruikt.
 
 (screen-heart-rate-steps)=
 
-#### Heart rate & Steps
+#### Hartslag (HR) & Stappen
 
-This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md). Enable them on **AAPS** Wear app and give permission for health data.
+Deze gegevens kunnen beschikbaar zijn als je een [Wear-smartwatch](../WearOS/WearOsSmartwatch.md) gebruikt. Zet ze aan in de **AAPS** Wear-app en geef toestemming voor gezondheidsgegevens.
 
-#### Deviations
+#### Afwijkingen (DEV)
 
-* **Grey** bars show a deviation due to carbs. 
-* **Green** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](#Open-APS-features-autosens).
-* **Red** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](#Open-APS-features-autosens).
-* **Yellow** bars show a deviation due to UAM.
-* **Black** bars show small deviations not taken into account for sensitivity
+* **Grijze** balken tonen een afwijking door koolhydraten.
+* **Groene** balken tonen dat de BG hoger is dan het algoritme verwachtte. Groene balken worden gebruikt om de resistentie te verhogen in [Autosens](#Open-APS-features-autosens).
+* **Rode** balken tonen dat de BG lager is dan het algoritme verwachtte. Rode balken worden gebruikt om de gevoeligheid te verhogen in [Autosens](#Open-APS-features-autosens).
+* **Gele** balken tonen een afwijking door UAM.
+* **Zwarte** balken tonen kleine afwijkingen die niet worden meegeteld voor de gevoeligheid
 
-#### Blood Glucose Impact
+#### Bloedglucose impact (-BGI)
 
-This line shows the degree to which BG ‘should’ rise or fall based on insulin activity alone.
+Deze lijn toont hoeveel de BG zou ‘moeten’ stijgen of dalen door alleen de insulineactiviteit.
 
-![Homescreen buttons](../images/Screenshots_DEV_BGI.png)
+![Afwijkingen en BGI](../images/main/graph_dev_bgi.png)
 
-It is a good combination to display this line along with the Deviation bars. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparing the BGI line and the Deviation bars is another way to understand how **BG** fluctuates. Here, at the time marked **1**, the Deviation bars are greater than the BGI line, indicating that BG is rising. Later, during the hours marked **2**, BGI and DEV are pretty much in line, indicating that BG is stable.
+Het is een goede combinatie om deze lijn samen met de afwijkingsbalken te tonen. Ze hebben dezelfde schaal, maar die is anders dan bij de andere optionele gegevens. Daarom is het een goed idee om ze in een aparte grafiek te tonen, zoals hierboven. De BGI-lijn vergelijken met de afwijkingsbalken is nog een manier om te begrijpen hoe de **BG** schommelt. Hier liggen op het moment dat met **1** is gemarkeerd de afwijkingsbalken ruim boven de BGI-lijn: de BG stijgt meer dan alleen de insulineactiviteit kan verklaren (bijvoorbeeld na koolhydraten). Op het moment dat met **2** is gemarkeerd liggen de afwijkingsbalken onder nul (rood): de BG is lager dan het algoritme verwachtte.
 
-### Sectie H - Knoppen
+### Sectie F - QuickLaunch-werkbalk
 
-![Homescreen buttons](../images/Home2020_Buttons.png)
+![QuickLaunch-werkbalk](../images/Home2020_Buttons.png)
 
-Buttons for Insulin and Carbs are almost always visible. If the connection to the pump is lost, the Calculator button will not be visible.
+De zwevende werkbalk onderaan het scherm bevat je **[QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)**-acties. Het kleine **tandwiel** opent de QuickLaunch-instellingen. Daar kies je welke knoppen je ziet (behandelingen, Careportal-invoer, CGM-acties, de schermen van het menu **Beheren**, [QuickWizard](../DailyLifeWithAaps/QuickWizards.md)-knoppen, [Scènes](../DailyLifeWithAaps/Scenes.md) en meer).
 
-Other Buttons can be setup in [Preferences > Overview > Buttons](#Preferences-buttons).
+Hierboven zie je een gebruikelijke instelling: **Insuline**, **Koolhydraten** en de **Bolus wizard**.
 
-About using the Insulin, Carbs and Calculator buttons : If enabled in the [Preferences > Overview](#Preferences-show-notes-field-in-treatments-dialogs), the **Notes** field allows you to enter text that will show on the main graph, and may be uploaded to Nightscout - depending on your settings for NS client.
+Als de pomp **ontkoppeld** is, blijven de behandelknoppen in de werkbalk, bijvoorbeeld om insuline van een pen te registreren (zie [Insuline](#aaps-screens-buttons-insulin) hieronder). Dezelfde acties staan ook in het [menu Behandelingen](#aaps-screens-treatments-sheet) in de onderste navigatiebalk.
 
 (aaps-screens-buttons-insulin)=
 
 #### Insuline
 
-![Insulin button](../images/Home2020_ButtonInsulin.png)
+![Dialoogvenster Insuline](../images/Home2020_ButtonInsulin.png)
 
-To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
+Om een bepaalde hoeveelheid insuline te geven zonder de [bolus calculator](#aaps-screens-bolus-wizard) te gebruiken.
 
-By checking the box **Start eating soon TT**, you can automatically start your [eating soon temp target](#TempTargets-eating-soon-temp-target).
+Als je **Start binnenkort eten TT** aanzet, kun je automatisch je [tijdelijk streefdoel voor binnenkort eten](#TempTargets-eating-soon-temp-target) starten.
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) check the corresponding box. When checking this box, you get an additional field “Time offset”, that you can use to record an insulin injection made in the past.
+Als je geen bolus via de pomp wilt geven, maar een hoeveelheid insuline wilt registreren (bijv. insuline gegeven met een pen), zet dan "**Bolus wordt alleen geregistreerd**" aan. Met een extra rij **Tijd**, ingesteld op **Nu**, kun je een insuline-injectie uit het verleden registreren: gebruik **-** / **+** om de tijd te wijzigen, of tik op het pijltje om de minuten te typen of een datum en tijd te kiezen.
 
-You can use the buttons to quickly increase the insulin quantity. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
+![De rij Tijd, ingeklapt](../images/v4/Screens/insulin_dialog_record_only_time.png) ![De rij Tijd, geopend met het pijltje](../images/v4/Screens/insulin_dialog_time_open.png)
 
-The insulin button can be used when the pump is suspended as well, i.e. to record insulin injected with a pen. In this case, the header will show in yellow, and the checkbox “Do not bolus, record only” can not be unchecked.
+Met de knoppen **+0,5 / +1,0 / +2,0** kun je de hoeveelheid insuline snel verhogen. De stapwaarden kun je wijzigen in de [instellingen van de Bolus wizard](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-![Home2020_ButtonInsulin_PumpSuspended.png](../images/Home2020_ButtonInsulin_PumpSuspended.png)
+Het dialoogvenster Insuline kun je ook gebruiken als de pomp onderbroken of ontkoppeld is, bijv. om insuline te registreren die met een pen is gespoten. In dat geval staat "**Bolus wordt alleen geregistreerd**" verplicht aan (rood getoond), en verschijnen er extra velden om het insulinetype en een **Tijd**-verschuiving te kiezen voor een injectie uit het verleden:
+
+![Dialoogvenster Insuline met ontkoppelde pomp](../images/main/insulin_dialog_pump_disconnected.png)
 
 #### Koolhydraten
 
-![Carbs button](../images/Home2020_ButtonCarbs.png)
+![Dialoogvenster Koolhydraten](../images/Home2020_ButtonCarbs.png)
 
-To record carbs without bolusing.
+Om koolhydraten in te voeren zonder erbij te bolussen.
 
-Certain [pre-set temporary targets](#TempTargets-hypo-temp-target) can be set directly by checking the box.
+Bepaalde [vooraf ingestelde tijdelijke streefdoelen](#TempTargets-hypo-temp-target) (Hypo, Eet Binnenkort, Activiteit) kun je direct starten met de schakelaars bovenaan.
 
-**Time offset**: When will you / have you been eaten carbs (in minutes).
+**Koolhydraattijd**: wanneer ga je de koolhydraten eten, of wanneer heb je ze gegeten.
 
-**Duration**: To be used for ["extended carbs"](ExtendedCarbs)
+**Tijdsduur**: te gebruiken voor ["vertraagde koolhydraten"](ExtendedCarbs). Deze rij is ingeklapt, zodat je er niet per ongeluk de grammen in typt: gebruik **-** / **+** om de waarde te wijzigen, of tik op het pijltje om de rij te openen en een waarde te typen.
 
-You can use the buttons to quickly increase the carb amount. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
+Met de knoppen **+5 / +10 / +20** kun je de hoeveelheid koolhydraten snel verhogen.
 
-#### Boluscalculator
+#### Quick Wizard
 
-See Bolus Wizard [section below](#aaps-screens-bolus-wizard).
+Voer makkelijk een hoeveelheid koolhydraten in en stel de basis van de berekening in met één vooraf ingestelde knop.
 
-#### Calibrations
+De details stel je in bij [QuickWizard](../DailyLifeWithAaps/QuickWizards.md).
 
-Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
+(aaps-screens-treatments-sheet)=
 
-Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
+### Sectie G - Onderste navigatiebalk
 
-#### CGM
+De onderste navigatiebalk geeft toegang tot:
 
-Opens xDrip+.
+* **Behandelingen** — een menu met snelle acties voor je behandelingen:
+    
+    ![Menu Behandelingen](../images/v4/Screens/treatments_sheet.png)
 
-Back button returns to **AAPS**.
+* **Scènes** — alleen zichtbaar als je minstens één [scène](../DailyLifeWithAaps/Scenes.md) hebt, of een regel in **Automatisering** die is gemarkeerd als **Gebruikersactie**. Het opent een menu waarin je ze kunt starten; een badge toont hoeveel je er nu kunt starten. Het **potlood** bovenaan het menu opent **Beheren → Scènes**.
 
-Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
+* **Beheren** — de centrale plek voor alles wat je in **AAPS** beheert: Profiel, Insuline instellingen, Tijdelijk streefdoel, QuickWizard, Scènes, Automatisering, Voeding, Site rotatie, Pomp en Geautoriseerde clients. Daaronder staan acties voor apparaten en basaal, zoals Sensor ingebracht en Tijdelijk basaal. Sommige onderdelen verschijnen alleen als ze bij jouw opstelling horen. Zo hangen Prime/Vul en batterijwissel af van je pomp, en zijn Tijdelijk basaal, Vertraagde bolus en de Careportal-invoer verborgen in de [Eenvoudige modus](#preferences-simple-mode):
+    
+    ![Menu Beheren](../images/v4/Screens/manage_sheet.png)
 
-#### Vaste maaltijd
+* **Doelen** — je voortgang in de [Doelen](../SettingUpAaps/CompletingTheObjectives.md); een badge toont hoeveel er zijn voltooid. Dit onderdeel verdwijnt zodra alle doelen zijn voltooid, en staat niet in **AAPSClient**.
 
-Easily enter amount of carbs and set calculation basics.
+(aaps-screens-notifications)=
 
-Details are set up in [Preferences > Overview > QuickWizard settings](#Preferences-quick-wizard).
+#### Notificaties
 
-(aaps-screens-bolus-wizard)=
+Er kan een **notificatiebubbel** rechts boven de onderste balk verschijnen. Die verzamelt de actieve notificaties van **AAPS**; het kleine getal toont hoeveel het er zijn. De kleur volgt de belangrijkste notificatie: rood voor een urgent bericht, groen voor gewone informatie.
+
+![Hoofdscherm met de notificatiebubbel](../images/main/main_screen_notification_bubble.png)
+
+Tik op de bubbel om het paneel **Notificatie** te openen. Bij elk bericht staat de tijd waarop het is ontstaan. Druk op **Negeren** onder een bericht om het weg te halen. Sommige berichten hebben in plaats daarvan een andere knop, die je naar de instelling brengt die je aandacht nodig heeft.
+
+![Notificatiepaneel met één bericht en de knop Negeren](../images/main/notification_panel.png)
+
+![Notificatiepaneel](../images/main/main_notification_panel.png)
+
+(bolus-wizard)= (aaps-screens-bolus-wizard)=
 
 ## Bolus calculator
 
 ![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
 
-When you want to make a meal bolus, this is where you will normally make it from.
+Als je een maaltijdbolus wilt geven, doe je dat meestal hier.
 
 ### Sectie I
 
-Shows the calculated bolus.
+De kop **Berekening** toont de berekende bolus. Wanneer je al meer insuline aan boord (IOB) hebt dan de berekende bolus, dan zal hier alleen de ontbrekende hoeveelheid koolhydraten te zien zijn.
 
-If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+Je kunt de bolus calculator gebruiken bij elke huidige **BG**, ook als die te hoog of te laag is. Als de **BG** boven het streefdoel is, wordt er een correctie bij de maaltijdbolus opgeteld. Als de **BG** onder het streefdoel is, wordt de bolus verlaagd. Als de insuline aan boord meer is dan nodig, vertelt de calculator hoeveel koolhydraten je nog nodig hebt, in plaats van insuline voor te stellen.
+
+De rij pictogrammen onder de kop toont welke gegevens in de berekening worden meegenomen (BG, trend, IOB, tijdelijk streefdoel, COB). Druk op een pictogram om dat gegeven aan of uit te zetten in de berekening; het pictogram **(i)** toont de gedetailleerde getallen achter de berekening.
+
+#### Combinaties van COB en IOB en hun betekenis
+
+* Om veiligheidsredenen kun je IOB niet uitzetten als COB aan staat. Anders loop je het risico op te veel insuline, omdat **AAPS** dan geen rekening houdt met wat al gegeven is.
+* Als je COB en IOB aanzet, wordt rekening gehouden met niet-opgenomen koolhydraten die nog niet met insuline zijn gedekt, en met alle insuline die als TBR of SMB is gegeven.
+* Als je IOB aanzet zonder COB, houdt **AAPS** rekening met de al gegeven insuline, maar zet die niet af tegen koolhydraten die nog moeten worden opgenomen. Dit geeft een melding over ontbrekende koolhydraten.
+* Als je kort na een maaltijdbolus bolust voor **extra eten** (bijv. een extra toetje), kan het handig zijn om **alle invoer uit te zetten**. Zo worden alleen de nieuwe koolhydraten meegeteld. De hoofdmaaltijd is dan nog niet altijd opgenomen, dus kort na een maaltijdbolus klopt IOB niet precies met COB.
+* Om veiligheidsredenen wordt een **tijdelijk streefdoel** alleen in de berekening meegenomen als je dat gegeven zelf aanzet.
 
 (AapsScreens-section-j)=
 
-### Sectie J
+### Sectie J - Invoervelden
 
-BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank.
+In het veld **Koolhydraten** vul je je schatting in van de hoeveelheid koolhydraten, **in grammen**, waarvoor je wilt bolussen; met de **+**-knoppen eronder voeg je snel koolhydraten toe. **AAPS** werkt alleen met grammen: als je telt in broodeenheden of ruilwaarden (*bijv.* DAFNE "CHO"-ruilwaarden), reken ze dan om naar grammen voordat je ze invoert. Zie de [opmerking over broodeenheden](#your-aaps-profile-insulin-to-carbs-ratio) op de profielpagina.
 
-In the **Carbs** field, you add your estimate of the amount of carbs - or equivalent - that you want to bolus for.
+#### Soort koolhydraten: brood, cake of pizza
 
-The **Corr** field is if you want to modify the end dosage for some reason.
+Onder het veld **Koolhydraten** vertellen de knoppen **Brood**, **Cake** en **Pizza** aan **AAPS** hoe snel de maaltijd wordt opgenomen. Bij **Cake** en **Pizza** dekt de bolus nu maar een deel van de koolhydraten, en de rest wordt later toegevoegd als eCarbs. Zie [Soort koolhydraten: brood, cake of pizza](#AapsScreens-carbs-type) op de pagina Vertraagde koolhydraten voor de percentages en de timing.
 
-The **Carb time** field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+De rij **Correctie** is er als je de uiteindelijke dosis om een bepaalde reden wilt aanpassen.
 
-**Eating reminder** : For carbs in the future, the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at the given time, when to eat the carbs you have input into **AAPS**.
+Alleen het veld **Koolhydraten** is altijd open. De andere rijen (**Correctie**, **Koolhydraattijd**, **BG** en **Percentage toepassen**) zijn ingeklapt: ze tonen hun waarde met de knoppen **-** / **+**, zodat je die in kleine stappen kunt wijzigen. Tik op het pijltje om een rij te openen en een waarde te typen, en tik er nog een keer op om de rij te sluiten. Zo typ je niet per ongeluk grammen in het veld **Correctie**.
 
-![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
+![Ingeklapte rijen in de bolus wizard](../images/v4/Screens/bolus_wizard_bottom.png)
 
-### Sectie K
+Tik ergens op de rij **Profiel** om de lijst met je profielen te openen, en tik dan op een naam om dat profiel voor deze berekening te gebruiken.
 
-**Profile** allows you to select a different profile than the current one, to make the calculation for the insulin required. This profile selection applies only for the current bolus, it is not a profile change.
+![De lijst met profielen in de bolus wizard](../images/v4/Screens/bolus_wizard_profile_list.png)
 
-**Super Bolus** is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable Superbolus in wizard" is set in the [Preferences > Overview > Advanced Settings](#Preferences-advanced-settings-overview). The idea is to deliver the insulin sooner and hopefully reduce spikes.
+Het veld **Koolhydraattijd** is voor een bolus vooraf: zo vertel je het systeem dat de koolhydraten pas na een tijdje komen. Je kunt een negatief getal in dit veld invullen als je bolust voor koolhydraten die je al eerder hebt gegeten.
 
-For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
+**Alarm instellen** (herinnering om te eten): als je een koolhydraattijd in de toekomst invult, verschijnt een schakelaar "**Alarm instellen**". Zo krijg je op het ingestelde moment een herinnering om de koolhydraten te eten die je in **AAPS** hebt ingevoerd:
 
-### Sectie L
+![Alarm instellen voor toekomstige koolhydraten](../images/Home2021_BolusWizard_EatingReminder.png)
 
-Details of the wizard's bolus calculation.
+De herinnering gaat af als een alarm van **AAPS**. Er wordt geen timer gemaakt in de klok-app van je telefoon, en het werkt ook als de bolus is ingevoerd vanuit **AAPSClient** terwijl **AAPS** op de achtergrond draaide.
 
-You can deselect any that you do not want to include, but you normally wouldn't want to.
+Het veld **BG** is meestal al ingevuld met de laatste waarde van je CGM. Wanneer jouw CGM het niet doet, dan is dit veld leeg. Als de waarde recent is, blijft de rij **BG** ingeklapt.
 
-For safety reasons the **TT box must be ticked manually**, if you want the bolus wizard to calculate based on an existing temporary target.
+De resultaatknop onderaan toont de voorgestelde bolus. Als je erop drukt, wordt om bevestiging gevraagd voordat er insuline wordt gegeven.
 
-#### Combinations of COB and IOB and what they mean
+Goed om te weten:
 
-* For safety reasons, the IOB box cannot be unticked when COB box is ticked as you might run the risk of too much insulin as **AAPS** is not accounting for what’s already given.
-* If you tick COB and IOB, unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you tick IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
-* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
-
-![BolusWizard with Details](../images/Home2021_BolusWizard_Details.png)
-
-The box near the eye allows you to choose between the detailed view, with the numbers entering the calculation for each item, or the simple view with icons. Pressing on an icon will enable / disable this entry from the calculation.
+* Als de berekende bolus hoger is dan je **[Maximum bolus](#Preferences-maximum-bolus)**, wordt hij verlaagd tot de maximale bolus, en toont de bevestiging de waarschuwing "Bolusbeperking toegepast". Een [QuickWizard](../DailyLifeWithAaps/QuickWizards.md) wordt in dat geval geweigerd.
+* Als de bolus alleen wordt geregistreerd (bijvoorbeeld als de pomp ontkoppeld is), blijft de waarschuwing "**Bolus wordt alleen geregistreerd**" bovenaan het dialoogvenster staan, ook als je scrolt.
+* Een bolus die je zelf geeft, gaat voor op een [SMB](#Open-APS-features-super-micro-bolus-smb) die nog moet worden gegeven: de SMB vervalt en de loop rekent opnieuw. Als er op dat moment een SMB wordt gegeven, wordt je bolus geweigerd met de melding "Er wordt nu een SMB toegediend. Probeer het opnieuw wanneer die klaar is." Er wordt geen insuline gegeven, en koolhydraten die je met die bolus hebt ingevoerd worden niet opgeslagen: wacht even en voer ze opnieuw in.
 
 (AapsScreens-wrong-cob-detection)=
 
-#### Wrong COB detection
+#### Verkeerde COB-detectie
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
+![Langzame koolhydraat absorptie](../images/Calculator_SlowCarbAbsorption.png)
 
-If you see the warning above after using bolus wizard, **AAPS** has detected that the calculated COB value may be wrong. So, if you want to bolus again after a previous meal with COB, you should be aware of overdosing!
+Als je de waarschuwing hierboven ziet na het gebruik van de bolus wizard, heeft **AAPS** gezien dat de berekende COB-waarde misschien niet klopt. Dus als je opnieuw wilt bolussen na een eerdere maaltijd met COB, let dan op dat je niet te veel insuline geeft!
 
-For details, see the hints on [COB calculation page](#CobCalculation-detection-of-wrong-cob-values).
+Zie voor details de tips op de [pagina COB berekening](#CobCalculation-detection-of-wrong-cob-values).
 
-(screens-action-tab)=
-
-## Acties tabblad
-
-![Actions tab](../images/Home_Action.png)
-
-### Acties - sectie M
-
-Button **[Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** as an alternative to pressing the [current profile](#aaps-screens-profile--target) on homescreen.
-
-Button **[Temporary target](../DailyLifeWithAaps/TempTargets.md)** as an alternative to pressing the [current target](#aaps-screens-profile--target) on homescreen.
-
-Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
-
-Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
-
-* This option is only available for Dana RS and Insight pumps. 
-  * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
-  * Make sure to read the [details](../DailyLifeWithAaps/ExtendedCarbs.md) before using this option.
+Zoek je het tabblad **Acties** van **AAPS** 3.x? De functies ervan zijn verhuisd naar het hoofdscherm, het menu **Beheren** en de QuickLaunch-werkbalk: zie [Waar is het tabblad Acties gebleven?](#screens-action-tab).
 
 (aaps-screens-careportal)=
 
-### Careportal - sectie N
+## Careportal-invoer
 
-Displays information on:
+De leeftijden en niveaus in de [statusrij](#screens-sensor-level-battery) (sensor, insuline, canule, pompbatterij) zijn gebaseerd op Careportal-invoer: **Prime/Vul** (registreert het wisselen van de infuusplek en de insulinepatroon), **Sensor ingebracht** en **Pomp bat. wissel**.
 
-     * sensor age & level (battery percentage)
-     * insulin age & level (units)
-     * cannula age
-     * pump battery age & level (percentage
-    
+Je kunt ze registreren vanuit het uitgeklapte statuspaneel op het hoofdscherm, vanuit het menu **Beheren**, of met [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)-knoppen.
 
-Less information will be shown if **low resolution skin** is used ([Preferences > General > Skin](#Preferences-skin)).
+**Prime/Vul** registreert een wissel van de infuusplek en/of van de insulinepatroon, en kan een hoeveelheid insuline geven om te ontluchten:
 
-(screens-sensor-level-battery)=
+![Dialoogvenster Prime/Vul](../images/dialogs/prime_fill.png)
 
-#### Sensor level (battery)
+**Sensor ingebracht** en **Pomp bat. wissel** vragen alleen naar de tijd van de gebeurtenis:
 
-Works for CGM with an additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level information to xDrip+.)
+![Dialoogvenster Sensor ingebracht](../images/dialogs/sensor_insert.png)
 
-Thresholds can be set in [Preferences > Overview > Status lights](#Preferences-status-lights).
+![Dialoogvenster Pomp bat. wissel](../images/dialogs/pump_battery_change.png) Invoer voor sport, mededeling, vraag en notitie komt van de Nightscout Careportal en is een bijzondere vorm van notities.
 
-### Careportal - sectie O
+Scroll in het menu **Beheren** naar beneden en druk op **Careportal** om deze invoer te zien: **BG Controle**, **Notitie**, **Sport**, **Vraag** en **Mededeling**.
 
-BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#aaps-screens-careportal).
+![Careportal-deel van het menu Beheren](../images/v4/Screens/manage_sheet_careportal.png)
 
-Prime/Fill allows you to record pump site and insulin cartridge change.
+Bij **BG Controle**, **Vraag** en **Mededeling** kun je een glucosewaarde invullen (van een meter, de sensor of een andere bron), een notitie en de tijd van de gebeurtenis. Bij **Vraag** en **Mededeling** is de glucoserij ingeklapt en staat het metertype naast de waarde: als je de waarde wijzigt, verandert het type van **Sensor** naar **Meter**.
 
-Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
+![Vraag met de ingeklapte glucoserij](../images/dialogs/careportal_question.png)
 
-### Hulpmiddelen - sectie P
+![Dialoogvenster BG Controle](../images/dialogs/careportal_bg_check.png)
 
-(Aapsscreens-site-rotation)=
+Bij **Notitie** en **Sport** kun je een tijdsduur invullen (een ingeklapte rij: gebruik **-** / **+**, of tik op het pijltje om hem te typen), een notitie en de tijd van de gebeurtenis:
 
-#### Site Rotation
+![Dialoogvenster Sport](../images/dialogs/careportal_exercise.png)
 
-Site Rotation button opens the Site Rotation Dialog in View mode:
+In al deze dialoogvensters (**Prime/Vul**, **Sensor ingebracht**, **Pomp bat. wissel** en de Careportal-invoer) gebruikt de tijd van de gebeurtenis dezelfde rij **Tijd** als het [dialoogvenster Insuline](#aaps-screens-buttons-insulin) en de bolus wizard: gebruik **-** / **+** om de tijd in stappen van 5 minuten te verschuiven (tot een week terug en 12 uur vooruit), of tik op het pijltje om een datum en tijd te kiezen.
 
-* You can select if you want to see Cannula sites only, Sensor sites only, or both with upper checkboxes
-* All Cannula change and Sensor change event since the past 45 days are available.
-* Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
-* You can open the Edit view to update Site location, Arrow, or Comment associated to each entry
+## Site rotatie
 
-![View Mode](../images/SiteRotation/ViewMode.png)
+**Beheren → Site rotatie** registreert op een lichaamskaart waar elke canule en sensor is geplaatst, zodat je van plek kunt wisselen: zie [Site rotatie](#Aapsscreens-site-rotation) op de pagina Pompen en canules.
 
-* The Setting tab (upper right cog) allows you to adjust the patient view (Man, Woman or Child), and to select if you want to manage only Pump sites, only Sensor sites or both.
-
-![Verdere instellingen](../images/SiteRotation/Settings.png)
-
-![Settings type](../images/SiteRotation/Type.png)
-
-*Note: this setting will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"*
-
-* For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
-
-Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
-
-* Entry type is visible on the to of Edit mode (Cannula Icon, or Sensor Icon)
-* You have to select Front or Back tab and then the Area
-* Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the pas 45 days in this site
-
-![Edit Mode](../images/SiteRotation/EditMode.png)
-
-* You can adjust an optional arrow with a click on little arrow icon on the top (Arrow allow you to precise sub-location, from 2 to 9, or Pod Orientation)
-
-![Position](../images/SiteRotation/EditModeSub.png)
-
-* You can also adjust comments concerning selected site
-* After confirmation, the site is recorded
-
-Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
-
-![Filtering](../images/SiteRotation/Filtering.png)
-
-#### History Browser
-
-Allows you to ride back in **AAPS** [history](../Maintenance/Reviewing.md).
-
-#### TDD
-
-Total daily dose = bolus + basal per day
-
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50.
-
-Therefore, ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours).
-
-Others prefer range of 32% to 37% of TDD for TBB.
-
-Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+**TDD** (totale dagdosis) en de vuistregel voor de verhouding basaal/bolus worden uitgelegd bij het [tabblad Insuline van Statistieken](#reviewing-tdd).
 
 (AapsScreens-insulin-profile)=
 
-## Insuline curve
+## Insuline
 
-![Insuline curve](../images/Screenshot_insulin_profile.png)
+![Scherm Insuline](../images/manage/insulin_profile.png)
 
-This shows the activity profile of the insulin you have chosen in [Config builder > Insulin](#Config-Builder-insulin). The curves will vary based on the [DIA](#your-aaps-profile-duration-of-insulin-action) and the time to peak.
+**Beheren → Insuline instellingen** toont en beheert je insuline-instellingen. Elke instelling staat op een kaart met de **piektijd** en de **[DIA](#Config-Builder-insulin-dia)**; de instelling die in gebruik is, is gemarkeerd met **ACTIEF**. Onder de kaart zie je de activiteitscurve. Je kunt de bijnaam, piek en DIA van elke instelling wijzigen, behalve van de actieve: om de insuline te wijzigen die je gebruikt, [voeg je een nieuwe instelling toe en activeer je die](#Config-Builder-insulin-change-active).
 
-The **purple** line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is.
-
-See [Your AAPS Profile > Duration of insulin action](#your-aaps-profile-duration-of-insulin-action) to learn more about what it is and how to set it.
+Zie [Werkingsduur van insuline](#Config-Builder-insulin-dia) voor meer uitleg over wat het is en hoe je het instelt.
 
 ## Pompstatus
 
-![Pompstatus](../images/Screenshot_PumpStatus.png)
+![Statusscherm Virtuele Pomp](../images/v4/Pumps/virtual_pump_screen.png)
 
-* Different information on pump status. Displayed information depends on your pump model.
-* See [pumps page](../Getting-Started/CompatiblePumps.md) for details.
+**Beheren → Pomp** (of **Configuratie → Pomp → Plug-in openen**) toont de status van je pomp: laatste verbinding, basis-basaalstand, batterij, reservoir...
+
+* De weergegeven informatie is afhankelijk van jouw pompmodel.
+* Zie de [pagina over pompen](../Getting-Started/CompatiblePumps.md) voor meer details.
 
 ## Loop, AMA / SMB
 
-These tabs show details about the algorithm's calculations and why **AAPS** acts the way it does.
+**Configuratie → Loop → Plug-in openen** (en **Configuratie → APS → Plug-in openen**) tonen details over de berekeningen van het algoritme en waarom **AAPS** doet wat het doet: laatste uitvoering, het resulterende verzoek en de beperkingen. Het scherm **Loop** toont alleen de beperkingen die de gegeven tijdelijke basaalstand of SMB echt hebben beperkt (en waarom de gesloten loop niet is toegestaan, als dat zo is); het scherm **APS** toont elke beperking die in de berekening is meegenomen.
 
-Calculations are run each time the system gets a fresh reading from the CGM.
+De berekeningen worden uitgevoerd telkens als het systeem een nieuwe waarde van de CGM krijgt.
 
-For more details see [APS section on config builder page](#Config-Builder-aps).
+Zie voor meer details de [sectie APS op de pagina Configuratie](#Config-Builder-aps).
 
 (aaps-screens-profile)=
 
-## Profile
+## Profiel
 
-![Profile](../images/Screenshots_Profile.png)
+![Profiel](../images/Screenshots_Profile.png)
 
-Profile contains information on your individual diabetes settings, see the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
+**Beheren → Profiel** (of tikken op de profielnaam op het hoofdscherm) opent het Profielscherm: je profielen als kaarten die je opzij kunt vegen, met knoppen om een profiel toe te voegen, te bewerken, te dupliceren, te verwijderen en te **activeren**.
+
+Het profiel bevat informatie over jouw persoonlijke diabetesinstellingen. Zie de uitgebreide pagina **[Profiel](../SettingUpAaps/YourAapsProfile.md)** voor meer informatie.
 
 ## Automatisering
 
-See the dedicated page [here](../DailyLifeWithAaps/Automations.md).
+![Automatisering](../images/v4/Screens/automation_overview.png)
+
+**Beheren → Automatisering** toont je automatiseringsregels. Zie de aparte pagina [hier](../DailyLifeWithAaps/Automations.md).
 
 ## NSClient
 
 ![NSClient](../images/Screenshots_NSClient.png)
 
-This page displays the status of the connection with your Nightscout site.
+**Configuratie → Communicatie → NSClientV3 → Plug-in openen** toont de status van de verbinding met je Nightscout-site: URL, websocket-status, wachtrij en een logboek van de synchronisatie.
 
-Settings can be changed in [Preferences > NS Client](#Preferences-nsclient).
+Instellingen kun je wijzigen in de [NSClient-instellingen](#Preferences-nsclient).
 
-For troubleshooting see this [page](../GettingHelp/TroubleshootingNsClient.md).
+Zie deze [pagina](../GettingHelp/TroubleshootingNsClient.md) voor het oplossen van problemen.
 
-## BG Source - xDrip+, BYODA...
+(aaps-screens-bg-source)=
 
-![BG Source tab - here Nightscout](../images/Screenshots_BGSource.png)
+## BG bron - xDrip, BYODA...
 
-Depending on your BG source settings, this tab is named differently.
+![Scherm BG bron](../images/Screenshots_BGSource.png)
 
-Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low) or duplicate readings.
+**Configuratie → BG bron → Plug-in openen** toont de geschiedenis van CGM-waarden en geeft de mogelijkheid om waarden te verwijderen bij een storing (bijv. compression low) of bij dubbele waarden.
 
-(aaps-screens-treatments)=
+## Behandelingen geschiedenis
 
-## Behandelingen
+Open het **menu** (☰) en kies **Behandelingen geschiedenis** om alles wat **AAPS** heeft geregistreerd te bekijken, te controleren en te corrigeren: koolhydraten en bolussen, tijdelijke basaalstanden, tijdelijke streefdoelen, profielwissels, Careportal-invoer, wijzigingen van de loopmodus en gebruikersinvoer. Zie [Behandelingen geschiedenis](#aaps-screens-treatments) op de pagina Je gegevens bekijken.
 
-This view can be accessed by pressing the 3 dots on the right of the menu, then Treatments. It is not possible to show it in the main menu through the Config Builder. In this view, you can view and alter the history of the following treatments:
+## Historie bekijken
 
-* Bolus & carbs
-* [Vertraagde bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-* Temporary basal rate
-* [Temporary target](../DailyLifeWithAaps/TempTargets.md)
-* [Profiel wissel](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-* Careportal: notes entered through action tab and notes in dialogues
-* Running mode : history of loop status
-* User entry: other notes that are not sent to Nightscout
+![Historie bekijken](../images/v4/Screens/history_browser.png)
 
-In the last column, the data source for each line is displayed in blue. It can be :
+Open het **menu** (☰) en kies **Historie bekijken**.
 
-* NS for Nightscout : the data comes from or has been recorded to Nightscout
-* PH for Pump History : the data has been processed by the pump
+Hiermee kun je terug in de tijd gaan in de geschiedenis van **AAPS**. Zie de aparte pagina [Je gegevens bekijken > Historie bekijken](../Maintenance/Reviewing.md).
 
-(screens-bolus-carbs)=
+(aaps-screens-statistics)=
 
-### Bolus & carbs
+## Statistieken
 
-![Carbs & bolus](../images/TreatmentsView1.png)
+![Statistieken](../images/v4/Screens/statistics.png)
 
-On this tab you can view the bolus and carbs log. Each bolus (line **1** and **4**) shows the remaining associated IOB next to the insulin amount. The origin of the bolus can be either :
+Open het **menu** (☰) en kies **Statistieken**.
 
-* Meal (manually entered though the Insulin, Quick Wizard or Bolus Wizard buttons)
-* SMB, when using the SMB Functionality
-
-The carbs (line **2**) are only stored in Nightscout. If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text (line **3**) to show the details of how the bolus was calculated.
-
-Depending on the pump used, insulin and carbs can be shown in one single line, or will result in multiple lines: one for the calculation detail, one for the carbs, one for the bolus itself.
-
-The treatment tab can be used to correct faulty carb entries (*i.e.* you over- or underestimated carbs). Note that it is not possible to edit an existing entry, you need to follow the following process:
-
-1. Bekijk en onthoud de werkelijke COB en IOB op Overzichtscherm.
-2. Afhankelijk van de pomp op het behandelingen-tabblad kunnen koolhydraten samen met insuline op één regel staan, of als een aparte regel (dit laatste is zo bij de DanaRS).
-3. Remove the entry with the faulty carb amount. (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
-4. Controleer op het Overzicht scherm of de koolhydraten inderdaad zijn verwijderd, het aantal COB zou moeten zijn aangepast.
-5. Doe hetzelfde voor de IOB als er slechts één regel is op het Behandelingen-tabblad voor koolhydraten en insuline.
-  
-  → If carbs are not removed as intended, and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
-
-6. Voer de juiste hoeveelheid koolhydraten in via de koolhydraten knop op het Overzichtscherm, zorg ervoor dat je het tijdstip aanpast naar het moment dat de koolhydraten daadwerkelijk zijn gegeten.
-
-7. Als er op jouw Behandelingen-tabblad één regel wordt gebruikt voor koolhydraten en insuline, moet je ook de hoeveelheid insuline weer toevoegen. Doe dit via de insuline knop op het Overzichtscherm en zorg er ook hierbij voor dat je het tijdstip aanpast naar het moment dat de insuline was toegediend. Controleer tenslotte op het Overzichtscherm of de IOB is meeveranderd.
-
-### Temp Basal
-
-![Temp Basal](../images/TreatmentsView2.png)
-
-The **temp basals** applied by the loop are shown here. When there is still an impact on the IOB for an entry, the information is shown in green. It can be:
-
-* Positive IOB if the temp basal was higher than the one set in the Profile (line **2**)
-* Negative IOB for a zero-temp or if the temp basal was lower than the one set in the Profile (line **1**)
-
-Deleting the entries only affects your reports in Nightscout and will probably tamper your real IOB - it is not recommended.
-
-On the left of a line, a red S means “Suspend” : it happens when basal is not currently delivered. This is a normal situation when in the process of changing a pod, for example.
-
-### Temporary target
-
-![Temporary target](../images/TreatmentsView3.png)
-
-The history of temporary targets can be seen here.
-
-### Profile Switch
-
-![Profile Switch](../images/TreatmentsView4.png)
-
-The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user. Line **2**, stored both in NS and PH, correspond to the actual switch.
-
-Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
-
-You can use the **Clone** button shown on line **1** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
-
-(AapsScreens-running-mode)=
-
-### Running mode
-
-![Running mode](../images/TreatmentsView6.png)
-
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, suspend loop.
-
-### Care portal
-
-![Care portal](../images/TreatmentsView5.png)
-
-This tab shows all notes and alerts recorded in Nightscout.
-
-(aaps-screens-running-mode)=
-
-## History Browser
-
-This view can be accessed by pressing the 3 dots on the right of the menu, then History. It is not possible to put in the main menu through the Config Builder. It can also be accessed through a button at the bottom of the [Action tab](#screens-action-tab).
-
-Allows you to ride back in **AAPS** history. See the dedicated page [Reviewing your data > History Browser](../Maintenance/Reviewing.md).
-
-## Statistics
-
-This view can be accessed by pressing the 3 dots on the right of the menu, then Statistics. It is not possible to put in the main menu through the Config Builder.
-
-Gives you statistics about your Time In Range and Total Daily Dose. See the dedicated page [Reviewing your data > Statistics](#reviewing-statistics).
+Geeft je statistieken over je totale dagdosis (TDD), tijd binnen bereik (TIR), je glucoseprofiel over de dag (AGP) en het patroon van je insulinecyclus, op vier tabbladen. Zie de aparte pagina [Je gegevens bekijken > Statistieken](#reviewing-statistics).
 
 (aaps-screens-profile-helper)=
 
-## Profile Helper
+## Profielhulp
 
-This view can be accessed by pressing the 3 dots on the right of the menu, then Profile Helper. It is not possible to put in the main menu through the Config Builder. The Profile Helper can help you:
+Open het **menu** (☰) en kies **Profielhulp**.
 
-* [build a profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid)
-* [compare two profiles](#your-aaps-profile-compare-profiles)
+![Profielhulp](../images/screens/profile_helper.png)
+
+Met de Profielhulp kun je profielen vergelijken en startprofielen voor kinderen maken. Zie [Je AAPS-profiel](../SettingUpAaps/YourAapsProfile.md), de secties [Een profiel vanaf nul maken voor een kind](#your-aaps-profile-profile-from-scratch-for-a-kid) en [Twee profielen vergelijken](#your-aaps-profile-compare-profiles).
+
+(aaps-screens-widgets)=
+
+## Widgets op het startscherm
+
+**AAPS** heeft vijf widgets die je op het startscherm van je telefoon kunt zetten, zodat je je gegevens ziet zonder de app te openen. Zie de aparte pagina [Widgets op het startscherm](../DailyLifeWithAaps/Widgets.md).
+
+![AAPS-widgets op het startscherm](../images/widgets/home_widgets_full_circle_small.png)

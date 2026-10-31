@@ -1,6 +1,6 @@
 (bluetoothtroubleshooting-bluetooth-related-issues)=
 
-# **Bluetooth-Probleme**
+# Bluetooth-Probleme
 
 Einige Benutzer haben Probleme bei der Aktivierung des Omnipod DASH, Verbindungsprobleme mit der Medtrum Nano und haben andere Pod-Fehler, die auf Bluetooth-Probleme hinweisen, erhalten. Viele dieser Probleme sind auf eines der folgenden Probleme zurückzuführen.
 
@@ -19,11 +19,11 @@ Einige dieser Probleme betreffen wahrscheinlich auch andere Bluetooth Insulinpum
 
 ## Bluetooth-Akku-Optimierung
 
-Neuere Android-Versionen haben standardmäßig die Akku-Optimierung für die Bluetooth-App des Systems eingeschaltet. Dies führt erwiesenerrmaßen zu einigen Problemen bei Pumpen und CGMs, die Bluetooth nutzen.
+Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. Dies führt erwiesenerrmaßen zu einigen Problemen bei Pumpen und CGMs, die Bluetooth nutzen.
 
-Wenn Du den [Einrichtungsassistenten](../SettingUpAaps/SetupWizard) genutzt hast, und den Konfigurationsvorschlägen im Abschnitt [Bluetooth Akku-Optimierung](#setup-wizard-bluetooth-battery-optimisation) gefolgt bist, sollte die Einstellung bereits korrekt sein. Bist Du allerdings durch eine ältere Version der Anleitung gegangen, wurde die Einstellung nicht auf den richtigen Wert geändert.
+If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard.md) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide it's possible you have not changed this setting.
 
-Solltest Du Verbindungsabbrüche zwischen dem CGM und Deiner Pumpe haben, überprüfe, ob die Einstellung richtig gesetzt ist.
+Verify this is correctly configured if you have pump and CGM disconnections.
 
 ---
 
@@ -31,13 +31,13 @@ Solltest Du Verbindungsabbrüche zwischen dem CGM und Deiner Pumpe haben, überp
 
 ## Apps, die die Android-Berechtigung „Geräte in der Nähe“ verwenden, können Verbindungsabbrüche und Pod-Aktivierungsprobleme verursachen
 
-Du kannst mit Android durch ein Berechtigungsmodell genau festlegen, was jede App tun darf und wie sie auf Dein Smartphone zugreifen darf. Für jede installierte App kannst Du einzelne Berechtigungen zuweisen oder verweigern (z. B. den Dateizugriff auf Dein Gerät, die Bluetooth-Nutzung oder die Suche nach Geräten in der Nähe).
+Du kannst mit Android durch ein Berechtigungsmodell genau festlegen, was jede App tun darf und wie sie auf Dein Smartphone zugreifen darf. For each app installed you can choose to allow or deny specific permissions, e.g. access files on the device, access to Bluetooth, scan for nearby devices etc.
 
-Um funktionieren zu können, benötigt **AAPS** eine Reihe spezifischer Berechtigungen. Eine davon, die sicherstellt, dass die Pods funktionieren, ist die Berechtigung für „Geräte in der Nähe“. Es gibt viele andere Anwendungen, die diese Berechtigung ebenfalls benötigen. Die Community hat herausgefunden, dass eine Reihe von Anwendungen, wenn ihnen diese Berechtigung gegeben wird, Probleme bei der Aktivierung neuer Pods auf einigen Geräten verursachen können.
+**AAPS** requires a number of specific permissions to function, one which is required to ensure that Pods work is the "Nearby devices" permission. Es gibt viele andere Anwendungen, die diese Berechtigung ebenfalls benötigen. Die Community hat herausgefunden, dass eine Reihe von Anwendungen, wenn ihnen diese Berechtigung gegeben wird, Probleme bei der Aktivierung neuer Pods auf einigen Geräten verursachen können.
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
-### **Apps, die die Berechtigung „Geräte in der Nähe“ benötigen und von denen man weiß, dass sie problematisch sind:**
+### Apps that use "Nearby device" permissions and are known to have caused problems:
 
 Die in dieser Liste aufgeführten Apps wurden an einer oder mehreren Stellen in der Community als Verursacher der Probleme mit Omnipod-DASH-Geräten und in einigen Fällen auch der Medtrum Nano diskutiert.
 
@@ -50,16 +50,16 @@ Ping @XiTatiON im Discord-Kanal #omnipod-dash an, um Apps, die zur Liste hinzuge
 
 - **Amazon Alexa** Das Löschen der Berechtigung „Geräte in der Nähe“ für die Alexa-App, hat das Problem für einige Leute gelöst, hat aber den Nebeneffekt, dass Matter-IoT-Geräte nicht mehr gekoppelt werden können
 
-- **MINI App** Die App scheint auf der myBMW-App zu basieren und verhält sich folglich genau so
+- **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
 
 - **BM2** Eine App zum Management einer Solarbatterie. Sie wird in Wohnmobilen und im Camping-Bereich für Solarinstallationen genutzt. Wenn die App läuft, verhindert sie die Aktivierung eines neuen Pods. Als Workaround kannst Du für den Zeitraum in dem ein neuer Pod aktiviert werden soll, die App deaktivieren (Stopp erzwingen). Das Ausführen der App danach schien die Funktion des DASH (auf einem Pixel 8 Pro mit Android 16) zu beeinträchtigen.
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
-### **Wie man die „Geräte in der Nähe“-Berechtigungen für andere Apps entzieht:**
-Solltest Du die richtige unterstütze **AAPS**-Version für Deine Android-Version im Einsatz haben und Du dennoch Probleme bei der Pod-Aktivierung haben: Es kann notwendig sein, für den Zeitraum der Pod-Aktivierung die Berechtigung den andere Apps zu entziehen.
+### How to revoke "Nearby device" permissions for other apps:
+If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android, it may be necessary to revoke the permission for other apps while activating a new Pod.
 
-Befolge die folgenden Schritte, um die „Geräte in der Nähe“-Berechtigung allen Apps außer **AAPS** zu entziehen:
+Follow this procedure to revoke the "Nearby device" permission for all apps except **AAPS**:
 
 ```{admonition} Menus and settings
 :class: note
@@ -101,7 +101,7 @@ Wenn Du nicht genau weißt, welche App das Problem verursacht (denke auch daran 
 
 (bluetoothtroubleshooting-re-enable-nearby-device-permission)=
 
-### **Wie man die Berechtigung „Geräte in der Nähe“ für System- und andere Apps wieder aktiviert:**
+### How to re-enable "Nearby device" permissions for system apps and other apps:
 
 1. Falls erforderlich, schau im Abschnitt **„Wie man die „Geräte in der Nähe“-Berechtigungen für andere Apps entzieht“** nach, wie man zu den Datenschutz-Einstellungen der App gelangt. Wenn Du dann in der **Geräte in der Nähe**-Konfiguration bist, mach mit 2. weiter.
 
@@ -113,7 +113,7 @@ Wenn Du nicht genau weißt, welche App das Problem verursacht (denke auch daran 
 
    ![android_auto_nearby_dev_missing](../images/android_16/android_auto_nearby_dev_missing.png)
 
-3. Um versteckte System-Apps anzuzeigen, tippe oben rechts auf die **drei Punkte (Hamburger) (1)** und dann auf **„Systemanwendungen anzeigen (1)“**. Du solltest nun auch die versteckte System-App **Android Auto (3)** in der Liste sehen können.
+3. To show hidden system apps press the **three-dot menu (⋮) (1)** in the top right corner, then press **"Show system" (2)**. Du solltest nun auch die versteckte System-App **Android Auto (3)** in der Liste sehen können.
 
 ```{admonition} Find your app
 :class: tip
@@ -130,22 +130,21 @@ Wenn eine App „widerrufen“ ist, musst Du nach unten scrollen. „Widerrufene
 
 ## Android 15 - Häufige auftretende Bluetooth-Verbindungsprobleme
 
-Nach einem Android-Upgrade oder dem Umzug auf ein neueres Smartphone verliert **AAPS** häufig die Bluetooth-Verbindung zur Pumpe. Mit einem Neustart des Smartphones verschwindet das Problem vorübergehend. Wenn das Smartphone mit Android 15 läuft. Aktivieren der Option **Koppeln des BT Geräts mit Android 15+** innerhalb der **AAPS**-Einstellungen kann helfen, die Stabilität der Bluetooth-Verbindungen zu verbessern. Arbeite die folgende Anleitung ab, um die Option zu aktivieren:
+Nach einem Android-Upgrade oder dem Umzug auf ein neueres Smartphone verliert **AAPS** häufig die Bluetooth-Verbindung zur Pumpe. Mit einem Neustart des Smartphones verschwindet das Problem vorübergehend. If you use an **Omnipod DASH** and your phone runs Android 15, turning on the **Bluetooth bonding** setting may help improve the stability of the Bluetooth connection. To turn it on:
 
 ```{admonition} Android 16
 :class: warning
-Aktiviere die Option **Koppeln des BT Geräts mit Android 15+** unter Android 15 wirklich nur dann, wenn Du Verbindungsprobleme hast. Aktiviere die Koppelungs-Option NICHT unter Android 16.
+Only turn on **Bluetooth bonding** on Android 15, and only if you experience connectivity issues. DO NOT turn on bonding on Android 16.
 ```
 
-1) **Öffne die Einstellungen** durch einen Klick auf das 3-Punkte-Menü rechts oben auf dem Startbildschirm.
+1. Open the [Dash settings](#omnipod-dash-settings): open the DASH pump screen with **Manage** > **Pump** and press the **Settings** (gear) icon in the top-right corner.
 
-   ![Einstellungen öffnen](../images/Pref2020_Open2.png)
+   ![The DASH pump screen](../images/v4/Pumps/dash_pump_screen.png)
 
-2. Scrolle ganz herunter und öffne das **Bestätigungstöne** / **Erweitertes**-Untermenü. Aktiviere **Verbinde BT-Gerät bei Android 15+**.
+2. Open the **Advanced Settings** section and turn on **Bluetooth bonding**.
 
-   ![BondBT](../images/troubleshooting/BondBT.png)
+   ![Bluetooth bonding in the Advanced Settings section](../images/v4/Pumps/dash_settings_advanced.png)
 
-
-3. Wenn die Pumpe eine Koppelungsanfrage schickt, nimm sie an.
+3. If the phone shows a pairing request, accept it.
 
 4. Starte dein Smartphone neu.

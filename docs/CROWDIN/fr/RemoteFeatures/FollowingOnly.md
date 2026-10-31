@@ -1,112 +1,112 @@
 # Suivre AAPS (pas d'interaction avec le système AAPS)
 
-In addition to the range of possibilities available for remotely controlling _and_ following **AAPS** which are described at [remote control](../RemoteFeatures/RemoteControl.md), there are several additional apps and devices which the community has developed, to simply follow numbers (glucose levels and other information), without interacting with **AAPS**.
+En plus des nombreuses possibilités pour contrôler _et_ suivre **AAPS** à distance, décrites dans [Contrôle à distance d'AAPS](../RemoteFeatures/RemoteControl.md), la communauté a développé plusieurs autres applications et appareils pour simplement suivre les valeurs (glycémie et autres informations), sans interagir avec **AAPS**.
 
-A good overview of the extensive options available for following **AAPS** is at [Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#) webpage.
+Vous trouverez un bon aperçu des nombreuses options pour suivre **AAPS** sur la page web [Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#).
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-The most common strategies used in combination with **AAPS** are explained in more detail below.
+Les stratégies les plus courantes utilisées avec **AAPS** sont expliquées plus en détail ci-dessous.
 
-## Smartphone apps
+## Applications pour smartphone
 
 ```{contents} These are some of the main “follower” apps used by **AAPS** users. All of these apps are “free”: 
 :depth: 1
 :local: true
 ```
 
-### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) and [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
+### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) et [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
 
 ![image](../images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
 
-* Dexcom Follow is compatible with a wide range of handsets (both Android and iPhone). Dexcom Follow can be used even if you are not using the official Dexcom app to receive sensor data.
+* Dexcom Follow est compatible avec de nombreux téléphones (Android et iPhone). Dexcom Follow peut être utilisé même si vous n'utilisez pas l'application officielle Dexcom pour recevoir les données du capteur.
 
-* Many caregivers are familiar with Dexcom Follow, preferring its clear interface over something more complicated.
+* Beaucoup d'aidants connaissent Dexcom Follow et préfèrent son interface claire à quelque chose de plus compliqué.
 
-* Dexcom Follow is very good for teachers/grandparents and people who know very little about diabetes and sugar levels. It has customisable alerts (BG level, what sound to play etc.). Alarms can be completely switched off if needed, which is very useful if you have a sensor which is still settling down and creating multiple fake lows.
+* Dexcom Follow convient très bien aux enseignants, aux grands-parents et aux personnes qui connaissent peu le diabète et la glycémie. Il a des alertes personnalisables (niveau de glycémie, son à jouer, etc.). Les alarmes peuvent être complètement désactivées si besoin. C'est très utile si vous avez un capteur qui se stabilise encore et crée plusieurs fausses hypoglycémies.
 
-#### Setting up Dexcom Follow: how-to-guide
+#### Configurer Dexcom Follow : guide pratique
 
-If you use the unofficial Dexcom app BYODA for receiving sensor data, you may be able to send invites to followers from within the BYODA app.
+Si vous utilisez l'application Dexcom non officielle BYODA pour recevoir les données du capteur, vous pourrez peut-être envoyer des invitations aux suiveurs depuis l'application BYODA.
 
-You cannot send invite emails to Dexcom followers anymore from third-party apps. In xDrip+ the invite request will just result in the message “invite not sent”.
+Vous ne pouvez plus envoyer d'e-mails d'invitation aux suiveurs Dexcom depuis des applications tierces. Dans xDrip, la demande d'invitation donne seulement le message « invite not sent » (invitation non envoyée).
 
-You must install the official Dexcom app, send the invite, and then uninstall the official app.
+Vous devez installer l'application officielle Dexcom, envoyer l'invitation, puis désinstaller l'application officielle.
 
-The steps to do this are as follows:
+Voici les étapes à suivre :
 
-1)  Install the official “Dexcom” app on _any_ smartphone (Android/iPhone), this can be the Follower phone, if it is more convenient. 2)  Log in with your Dexcom username and password, this is the same login details you would use for Dexcom Clarity, if you are already a current Dexcom/Clarity customer. If you don’t have a Dexcom login, there is the option to create a new login at this point.   
-3)  Swipe through the introduction menus. 4)  Add “no code” for the sensor code. 5)  Under Transmitter SN select “enter manually” and enter any valid transmitter code (use one of your expired transmitter codes, if you know one, so it doesn’t interfere with the running of your current transmitter, they follow a specific format of certain numbers and letters: “NLNNNL” and only use certain combinations, so it’s easiest to use one you already know is valid). 6)  Once the app is trying to find the transmitter and sensor, you will be able to invite followers: select the small three dots in the top left of the app, and add new follower. You can also use this if one of your followers has changed their handset and needs a fresh invite, here you can delete them from the follower list and resend a new invite email for them to use on their new handset. 7)  On the Follower phone, install Dexcom Follow by downloading it from the App Store (iPhone) or Play (Android). Set up the Dexcom Follow app, and you will be prompted to open your email to find the invite to be a Follower.    
-8)  You can now delete the official Dexcom G6 app.
+1)  Installez l'application officielle « Dexcom » sur _n'importe quel_ smartphone (Android/iPhone). Cela peut être le téléphone du suiveur, si c'est plus pratique. 2)  Connectez-vous avec votre nom d'utilisateur et votre mot de passe Dexcom. Ce sont les mêmes identifiants que pour Dexcom Clarity, si vous êtes déjà client Dexcom/Clarity. Si vous n'avez pas de compte Dexcom, vous pouvez en créer un à cette étape.   
+3)  Faites défiler les menus d'introduction. 4)  Choisissez « pas de code » pour le code du capteur. 5)  Sous Transmitter SN (n° de série de l'émetteur), choisissez « saisir manuellement » et saisissez un code d'émetteur valide quelconque. Utilisez si possible le code d'un de vos émetteurs expirés, pour ne pas gêner le fonctionnement de votre émetteur actuel. Ces codes suivent un format précis de chiffres et de lettres : « NLNNNL », et seules certaines combinaisons sont valides. Le plus simple est donc d'utiliser un code que vous savez valide. 6)  Quand l'application cherche l'émetteur et le capteur, vous pouvez inviter des suiveurs : touchez les trois petits points en haut à gauche de l'application, puis ajoutez un nouveau suiveur. Vous pouvez aussi utiliser cette fonction si un de vos suiveurs a changé de téléphone et a besoin d'une nouvelle invitation : supprimez-le de la liste des suiveurs et renvoyez-lui un nouvel e-mail d'invitation à utiliser sur son nouveau téléphone. 7)  Sur le téléphone du suiveur, installez Dexcom Follow depuis l'App Store (iPhone) ou Google Play (Android). Configurez l'application Dexcom Follow. Elle vous demandera d'ouvrir vos e-mails pour trouver l'invitation à devenir suiveur.    
+8)  Vous pouvez maintenant supprimer l'application officielle Dexcom G6.
 
-For Dexcom Follow, the sensor data is then exported from the **AAPS** phone either directly from BYODA, or from xDrip+, depending on which app you are using.
+Pour Dexcom Follow, les données du capteur sont ensuite exportées depuis le téléphone **AAPS**, soit directement depuis BYODA, soit depuis xDrip, selon l'application que vous utilisez.
 
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
 
 ![image](../images/f2c7d330-9889-4526-9a5c-bbb012d804ab.png)
 
-Pros (as reported by users):
+Avantages (selon les utilisateurs) :
 
-* Available in the [app store](https://apps.apple.com/us/app/nightguard/id1116430352), simple, user-friendly interface.
+* Disponible sur l'[App Store](https://apps.apple.com/us/app/nightguard/id1116430352), avec une interface simple et facile à utiliser.
 
-* Swipe button or shake phone to snooze alarms at different intervals ranging from 5 min to 24 hours
+* Glissez le bouton ou secouez le téléphone pour mettre les alarmes en pause pour différentes durées, de 5 min à 24 heures
 
-* Customize alarms (high, low alerts, missed readings when no data for 15-45 minutes).
+* Alarmes personnalisables (glycémie haute, basse, mesures manquantes quand il n'y a pas de données pendant 15 à 45 minutes).
 
-* Fast rise/drop over 2-5 consecutive readings (you choose). Can also choose the delta between two individual readings
+* Montée ou baisse rapide sur 2 à 5 mesures de suite (au choix). Possibilité de choisir aussi le delta entre deux mesures
 
-* Smart snooze so doesn't alert if levels are moving in right direction
+* Pause intelligente : pas d'alerte si la glycémie évolue dans la bonne direction
 
-* There is a Care tab which appears to enable you to set a new temp target for a certain duration, delete the temp target or enter carbs.
+* Il y a un onglet Care (soins) qui semble permettre de définir une nouvelle cible temporaire pour une durée donnée, de supprimer la cible temporaire ou de saisir des glucides.
 
-Cons (as reported by users)
+Inconvénients (selon les utilisateurs)
 
-* Only available for iOS
+* Disponible uniquement pour iOS
 
-* The TT shows as 5 mmol regardless of which TT level is set
+* La CT s'affiche toujours à 5 mmol, quelle que soit la valeur de CT définie
 
-* Never shows Temp Basal rate even though it shows TB
+* N'affiche jamais le débit basal temporaire, même s'il affiche TB
 
 ### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Android)
 
 ![image](../images/855c3a74-e612-4a6f-8b63-18d286ea0a3f.png)
 
 
-* Nightwatch markets itself as a Nightscout client and monitors the user’s Nightscout glucose levels on either Android phone or tablet.
+* Nightwatch se présente comme un client Nightscout. Il surveille la glycémie Nightscout de l'utilisateur sur un téléphone ou une tablette Android.
 
-* The app can be downloaded from [Google play](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) and displays BG data in real time.
+* L'application peut être téléchargée sur [Google Play](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) et affiche la glycémie en temps réel.
 
-* The user can be alerted with customised noisy low and high alarms set.
+* L'utilisateur peut être alerté par des alarmes sonores personnalisées de glycémie basse et haute.
 
-* BG data can be viewed in either mmol/L or mg/dL.
+* La glycémie peut être affichée en mmol/l ou en mg/dl.
 
-* It requires Android 5.0 and up.
+* Elle nécessite Android 5.0 ou plus récent.
 
-* It has a dark Ul, large readings and buttons, designed for usage at night.
+* Il a une interface sombre, de grandes valeurs et de grands boutons, conçus pour une utilisation la nuit.
 
-### xDrip+ (Android)
+### xDrip (Android)
 
-You can use xDrip+ as a follower.
+Vous pouvez utiliser xDrip comme suiveur.
 
-#### With Nightscout
+#### Avec Nightscout
 
-Set xDrip+ as a Nightscout Follower. You will receive BG and treatments, not basal.
+Configurez xDrip comme suiveur Nightscout. Vous recevez la glycémie et les traitements, mais pas le débit basal.
 
 ![image](../images/remote_control_and_following/xDrip+_Nightscout_Follower.png)
 
-#### Without Nightscout - xDrip+ BG data source
+#### Sans Nightscout - source de glycémie xDrip
 
-If your **AAPS** data source is xDrip+ (or if xDrip+ can also receive BG from another app like BYODA, Juggluco, ...) you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
+Si la source de données d'**AAPS** est xDrip (ou si xDrip peut aussi recevoir la glycémie d'une autre application comme BYODA, Juggluco, ...), vous pouvez l'utiliser depuis le téléphone maître pour partager les données avec des suiveurs xDrip. Ils voient la glycémie, les traitements et les débits basaux.
 
 ![image](../images/remote_control_and_following/xDrip+_Master_Sync.png)
 
-#### Without Nightscout - xDrip+ BG companion app
+#### Sans Nightscout - application compagnon de glycémie dans xDrip
 
-If your **AAPS** data source is not xDrip+ but you can display BG data from the Companion App data source, you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
+Si la source de données d'**AAPS** n'est pas xDrip, mais que vous pouvez afficher la glycémie avec la source de données Companion App (application compagnon), vous pouvez l'utiliser depuis le téléphone maître pour partager les données avec des suiveurs xDrip. Ils voient la glycémie, les traitements et les débits basaux.
 
 ![image](../images/remote_control_and_following/xDrip+_Companion_Sync.png)
 
@@ -114,29 +114,29 @@ If your **AAPS** data source is not xDrip+ but you can display BG data from the 
 
 ![image](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift was created from porting the original xDrip app to iOS and evolved to "xDrip for iOS" written **xDrip4iOS** .
+xDripSwift est né du portage de l'application xDrip d'origine vers iOS, puis il a évolué en « xDrip for iOS », écrit **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
-The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) is the main community support for xDrip4iOS and Shuggah. **xDrip4iOS** can connect to many different CGM systems and transmitters and display blood glucose values, charts and statistics as well as provide alarms. It can also upload to Nightscout or act as a [follower app for Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). 
+Le [groupe Facebook xDrip4iOS](https://www.facebook.com/groups/853994615056838/announcements) est le principal lieu d'entraide de la communauté pour xDrip4iOS et Shuggah. **xDrip4iOS** peut se connecter à de nombreux systèmes MGC et émetteurs, et afficher la glycémie, des graphiques et des statistiques. Il peut aussi émettre des alarmes. Il peut aussi envoyer les données à Nightscout ou servir d'[application de suivi pour Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). 
 
-"How can I get **xDrip4iOS** on my iPhone?"
-There are two options:
+« Comment obtenir **xDrip4iOS** sur mon iPhone ? »
+Il y a deux possibilités :
 
-1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) you can build your own xDrip4iOS by [following the instructions](https://xdrip4ios.readthedocs.io/en/latest/install/build/).
+1. Si vous avez un Mac et un compte Apple Developer (99 EUR/USD par an), vous pouvez compiler votre propre xDrip4iOS en [suivant les instructions](https://xdrip4ios.readthedocs.io/en/latest/install/build/).
 
-If you want, you can then become a "releaser" and [share a Personal Testflight xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/install/personal_testflight/) with up to 100 other people to help them.
+Si vous le souhaitez, vous pouvez ensuite devenir « releaser » (diffuseur) et [partager une version Personal Testflight de xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/install/personal_testflight/) avec jusqu'à 100 autres personnes pour les aider.
 
-2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and read the pinned posts for current methods to get the app. **You should not ask for an invitation to the app** (read the group rules).
+2. Rejoignez le [groupe Facebook xDrip4iOS](https://www.facebook.com/groups/853994615056838/announcements) et lisez les messages épinglés pour connaître les méthodes actuelles pour obtenir l'application. **Ne demandez pas d'invitation à l'application** (lisez les règles du groupe).
 ```
 
 
 
 ![image](../images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
 
-"What is **Shuggah**?" A group of Ukrainian developers copied the project code for xDrip4iOS (which is shared publicly on GitHub) and released it on the App Store under a business account. The Shuggah release is in no way managed by the xDrip4iOS developers.
+« Qu'est-ce que **Shuggah** ? » Un groupe de développeurs ukrainiens a copié le code du projet xDrip4iOS (qui est public sur GitHub) et l'a publié sur l'App Store avec un compte professionnel. La version Shuggah n'est en aucun cas gérée par les développeurs de xDrip4iOS.
 
-The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) supports xDrip4iOS, and the matching Apple Watch apps.
+Le [groupe Facebook xDrip4iOS](https://www.facebook.com/groups/853994615056838/announcements) aide pour xDrip4iOS et les applications Apple Watch correspondantes.
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 
@@ -145,28 +145,28 @@ The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/a
 ![image](../images/21b83c41-85c6-4619-a702-a65450768855.png)
 
 
-[Sugarmate](https://sugarmate.io/) is available to download onto iPhones from the App store. Sugarmate is compatible with:
-* Apple iPhone (Requires software version 13.0 or later)
-* Apple iPad (Requires software version 13.0 or later)
-* Google Android (Save web app to your homescreen)
+[Sugarmate](https://sugarmate.io/) peut être téléchargé sur iPhone depuis l'App Store. Sugarmate est compatible avec :
+* Apple iPhone (nécessite la version 13.0 du système ou plus récente)
+* Apple iPad (nécessite la version 13.0 du système ou plus récente)
+* Google Android (enregistrez l'application web sur votre écran d'accueil)
 
-It has been reported by users of Sugarmate that it can be used with Apple CarPlay in the USA to display glucose readings when driving. It is not yet established if this is possible in countries outside the USA. If you know more about this, please add details in here to the documentation by completing a pull-request (link) which is quick and easy to do.
+Des utilisateurs de Sugarmate indiquent qu'il peut être utilisé avec Apple CarPlay aux États-Unis pour afficher la glycémie en conduisant. On ne sait pas encore si cela est possible dans d'autres pays que les États-Unis. Si vous en savez plus, ajoutez les détails ici dans la documentation en faisant une pull request (lien). C'est simple et rapide.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
 
 ![image](../images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
 
-Spike can be used as a primary receiver or as a follower app, providing BG, alarms and IOB and more.
+Spike peut être utilisé comme récepteur principal ou comme application de suivi. Il fournit la glycémie, des alarmes, l'IA et plus encore.
 
-The website and app are no longer developed. Support can be found on [Facebook](https://www.facebook.com/groups/1973791946274873) and [Gitter](https://gitter.im/SpikeiOS/Lobby).
+Le site web et l'application ne sont plus développés. Vous trouverez de l'aide sur [Facebook](https://www.facebook.com/groups/1973791946274873) et [Gitter](https://gitter.im/SpikeiOS/Lobby).
 
-## Smartwatches for **Monitoring of AAPS** (full profile data, or glucose-only) where **AAPS** is running on a phone.
+## Montres connectées pour la **surveillance d'AAPS** (données complètes du profil ou glycémie seule) quand **AAPS** fonctionne sur un téléphone.
 
-See [here](../Getting-Started/Watches.md).
+Voir [ici](../Getting-Started/Watches.md).
 
 
-## Devices for following AAPS
+## Appareils pour suivre AAPS
 
 ```{contents} Devices include:
 :depth: 1
@@ -177,34 +177,34 @@ See [here](../Getting-Started/Watches.md).
 
 ![image](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
 
-The M5Stack is a small box which can be programmed for many applications, Martin's project [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) is displaying sensor glucose values and trends, IOB and COB. It is in a plastic box, equipped with a colour display, micro SD card slot, 3 buttons, speaker and internal battery. It is a great blood sugar monitor and is relatively easy to set up if you have a Nightscout account. Users typically run it on their home Wi-Fi, but some users report using it as a display when motorbiking, by running it off a phone Wi-Fi hotspot.
+Le M5Stack est un petit boîtier qui peut être programmé pour de nombreuses applications. Le projet de Martin, [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki), affiche la glycémie du capteur et sa tendance, l'IA et les GA. Il est dans un boîtier en plastique, avec un écran couleur, un emplacement pour carte micro SD, 3 boutons, un haut-parleur et une batterie interne. C'est un très bon moniteur de glycémie, assez facile à configurer si vous avez un compte Nightscout. Les utilisateurs l'utilisent en général sur le Wi-Fi de leur domicile. Certains disent aussi l'utiliser comme écran à moto, en le connectant au point d'accès Wi-Fi d'un téléphone.
 
 ### Sugarpixel
 
-SugarPixel is a device for secondary glucose display alert system for continuous glucose monitoring that connects with Dexcom app or Nightscout app on the user’s smartphone. The device displays real time blood sugar readings. This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customisable display options and native multi-user following.
+SugarPixel est un appareil d'affichage et d'alerte secondaire de la glycémie pour la mesure du glucose en continu. Il se connecte à l'application Dexcom ou à l'application Nightscout sur le smartphone de l'utilisateur. L'appareil affiche la glycémie en temps réel. Ce moniteur matériel de MGC a des alertes sonores avec des tons aléatoires (qui sont très forts), des alertes par vibration pour les personnes malentendantes, des options d'affichage personnalisables et un suivi multi-utilisateur intégré.
 
 ![image](../images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
 
 ![image](../images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
 
-* SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with colour-coded glucose values.
-* The standard face displays BG, Trend Arrow, and Delta. Delta is the change + or - from the last reading.
-* SugarPixel can be customised for use in low brightness with the BG and Time face to see the user’s BG reading and current time on the user’s nightstand.
-* SugarPixel’s xolour face utilises the entire display to show a single colour representing the BG value. This enables the user to see BG readings at a distance through the window while outside playing in the backyard, patio, or pool.
-* The Big BG face is useful for nightstand users who wear glasses or contact lenses.
+* SugarPixel a plusieurs options d'affichage en mg/dl et en mmol/l pour répondre aux besoins de l'utilisateur, avec des couleurs selon la valeur de glycémie.
+* L'écran standard affiche la glycémie, la flèche de tendance et le delta. Le delta est la variation (+ ou -) par rapport à la dernière mesure.
+* SugarPixel peut être réglé pour une faible luminosité avec l'écran BG and Time (glycémie et heure), pour voir la glycémie et l'heure actuelle sur la table de nuit.
+* L'écran couleur de SugarPixel utilise tout l'écran pour afficher une seule couleur qui représente la valeur de glycémie. L'utilisateur peut ainsi voir la glycémie à distance à travers la fenêtre, quand il joue dehors dans le jardin, sur la terrasse ou à la piscine.
+* L'écran Big BG (grande glycémie) est utile sur une table de nuit pour les personnes qui portent des lunettes ou des lentilles de contact.
 
-### Nightscout Clock on Ulanzi TC001
+### Nightscout Clock sur Ulanzi TC001
 
-**Nightscout Clock** is an open source software running on the **Ulanzi TC001** device. It connects with Dexcom servers or Nightscout and displays real time blood sugar readings.
+**Nightscout Clock** est un logiciel open source qui fonctionne sur l'appareil **Ulanzi TC001**. Il se connecte aux serveurs Dexcom ou à Nightscout et affiche la glycémie en temps réel.
 
-![Following Nightscout Clock](../images/FollowingNightscoutClock.png)
+![Suivre avec Nightscout Clock](../images/FollowingNightscoutClock.png)
 
-* The clock supports both mmol/L and mg/dL units, and includes audible alarms.
-* Several display available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
-* Setting up and configuring the device involves just a few simple steps. Once set up, it only requires power and Wi-Fi to function.
-* The Ulanzi TC001 device is significantly cheaper than the SugarPixel to buy.
-* The software along with installation instructions can be found on [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
-* It is developed and maintained by Artiom Kenibasov, offering support on the [Facebook AAPS Users group](https://www.facebook.com/groups/cgminthecloud/posts/8776932509094594/).
+* L'horloge accepte les unités mmol/l et mg/dl, et possède des alarmes sonores.
+* Plusieurs écrans sont disponibles, voir [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) pour un aperçu.
+* L'installation et la configuration de l'appareil se font en quelques étapes simples. Une fois configuré, il a seulement besoin d'électricité et du Wi-Fi pour fonctionner.
+* L'appareil Ulanzi TC001 coûte nettement moins cher que le SugarPixel.
+* Le logiciel et les instructions d'installation se trouvent sur [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
+* Il est développé et maintenu par Artiom Kenibasov, qui offre de l'aide dans le [groupe Facebook AAPS Users](https://www.facebook.com/groups/cgminthecloud/posts/8776932509094594/).
 
 ### PC (TeamViewer)
-Some users find a full remote access tool like [TeamViewer](https://www.teamviewer.com/) to be helpful for advanced remote troubleshooting.
+Certains utilisateurs trouvent qu'un outil complet d'accès à distance comme [TeamViewer](https://www.teamviewer.com/) est utile pour un dépannage avancé à distance.

@@ -5,136 +5,140 @@
 :depth: 2
 ```
 
-Экраны AAPS - главный экран
+(the-homescreen)= (AapsScreens-the-homescreen)=
 
-## Главный экран
+## The main screen
 
-![Главный экран V2.7](../images/Home_Homescreen.png)
+![Main screen](../images/Home_Homescreen.png)
 
 Это первый экран, который виден при открытии приложения **AAPS**. Он отображает почти всю информацию, требующуюся повседневно.
 
-### Раздел А - Вкладки
+### Section A - Top bar
 
-* Позволяют выполнять переход между различными модулями **AAPS**.
-* Между экранами также можно переходить свайпом влево или вправо.
-* Видимые вкладки можно выбрать в [Конфигураторе](#Config-Builder-tab-or-hamburger-menu).
+* The **menu** (☰) on the left opens the navigation drawer with **Treatments history**, **History browser**, **Statistics**, **Profile helper**, **Maintenance**, **Setup Wizard**, **Configuration** and more.
+* The **search bar** finds settings, dialogs and documentation — just start typing (see [Global search](../DailyLifeWithAaps/GlobalSearch.md)).
+* The **Settings** (gear) icon on the right opens all [settings](../SettingUpAaps/Preferences.md).
 
 (aaps-screens-profile-target)=
 
-### Раздел B - Профиль & Цель
-
-#### Текущий профиль
-
-Текущий профиль отображается на левой панели главного экрана.
-
-Короткое нажатие на панель открывает подробности о текущем профиле. Долгое нажатие дает возможность [переключаться между различными профилями](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-
-![Оставшееся время замененного профиля](../images/Home2020_ProfileSwitch.png)
-
-1. Обычный вид с активацией стандартного профиля.
-2. Смена профиля с остающейся продолжительностью 59мн.
-3. Смена профиля с заданным процентом 120%.
-4. Смена профиля с заданным процентом 80% и остающейся продолжительностью 59 мин.
-5. Смена профиля со сдвигом по времени --1 час.
-6. Смена профиля с заданным процентом 120%, сдвигом по времени 1 час и остающейся продолжительностью 59 мин.
-
-#### Целевое значение ГК (Цель)
-
-![Оставшаяся продолжительность временной цели](../images/Home2020_TT.png)
-
-Текущее целевое значение глюкозы крови (ГК) отображается на правой панели.
-
-Короткое нажатие позволяет установить **[временную цель](../DailyLifeWithAaps/TempTargets.md)**.
-
-При установленной временной цели панель становится желтой, а в скобках отображается оставшееся время в минутах.
-
-(Визуализация динамического изменения цели)=
-
-#### Визуализация динамического изменения цели
-
-![Визуализация динамического изменения цели](../images/Home2020_DynamicTargetAdjustment.png)
-
-При использовании алгоритма [микроболюсов SMB](#Config-Builder-aps) и [Autosens](#Open-APS-features-autosens) **AAPS** может динамически настроить цель на основе чувствительности.
-
-Включите один или оба параметра в [Настройки > настройки OpenAPS SMB](#Preferences-openaps-smb-settings):
-
-     * "Чувствительность повышает цель" и/или
-     * "Резистентность понижает цель" 
-    
-
-Если **AAPS** обнаружит повышенную сопротивляемость или чувствительность - цель, заданная в профиле, будет изменена. При таком изменении панель окрашивается в зеленый цвет.
-
-(AapsScreens-section-c-bg-loop-status)=
-
-### Раздел C - ГК & статус контура
+### Section B - Status block
 
 #### Текущий уровень глюкозы крови
 
-Самое свежее значение ГК, переданное системой мониторинга, отображается в левой части экрана.
+The latest blood glucose reading from your CGM is shown in the big circle on the left, together with the difference to the previous reading (delta) and the age of the reading.
 
 Цвет показаний ГК соответствует настроенному [даипазону](#Preferences-range-for-visualization).
 
-     * зеленый = в диапазоне
-     * красный = ниже цели
-     * желтый = выше цели 
-    
+* green = in range
+* red = below range
+* yellow = above range
 
-![Дельта](../images/Home_Delta.png)
+![BG circle in range, green](../images/Home_Delta.png) ![BG circle above range, yellow](../images/Home_Delta_high.png) ![BG circle below range, red](../images/Home_Delta_low.png)
 
-Блоки в середине показывают:
-
-1. минуты с предыдущего замера **мониторинга**
-2. отличие от предыдущего замера: Δ, и от 15 и 40 минутного среднего (Δ15 и Δ40).  
-  Большие дельты рассчитаны как среднее значение предыдущих изменений, и показывают, какое было среднее изменение в те периоды.
-
-(AapsScreens-loop-status)=
+(loop-status)= (AapsScreens-loop-status)=
 
 #### Статус контура
 
 ![Статус контура](../images/Home2020_LoopStatus.png)
 
-Пиктограмма справа показывает состояние цикла:
+Next to the BG circle, an icon shows the running mode of the loop (from top to bottom in the picture):
 
 1. Зеленый круг = [замкнутый цикл](#KeyAapsFeatures-ClosedLoop), цикл работает
 2. Фиолетовый круг с пунктирной линией = [приостановка на низкой ГК (LGS, ЛГС)](#KeyAapsFeatures-LGS)
-3. Красный круг = цикл деактивирован (постоянно отключен)
-4. Красный круг = Цикл приостановлен (временно, но выдается базальный инсулин) - оставшееся время показано ниже значка
-5. Серый круг = помпа отключена (временно отключена любая подача инсулина) - оставшееся время остановки отображается под пиктограммой
-6. Оранжевый круг = запущен суперболюс - оставшееся время отображаешься под пиктограммой
-7. Голубой круг с пунктирной линией = [открытый цикл](#KeyAapsFeatures-OpenLoop)
+3. Голубой круг с пунктирной линией = [открытый цикл](#KeyAapsFeatures-OpenLoop)
+4. Red circle with cross = loop disabled (not working permanently)
+5. Red pause icon = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown next to the icon
+6. Grey circle with plug = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown next to the icon
 
-Короткое или длинное нажатие на пиктограмму откроет диалоговое окно для переключения между режимами контура (Закрытый, Приостановка на низкой ГК, Открытый или Отключен), для отключения / возобновления цикла или отключения / подключения помпы обратно.
+Press the icon to open the Loop dialog. The dialog's content depends on the current state:
 
-     * Если кратко тапнуть на иконку цикла - необходимо будет подтверить выбранный режим работы цикла
+* While the loop is **running** (closed, open or LGS), you can switch the running mode (Closed Loop, Low Glucose Suspend, Open Loop or Disable loop), **suspend** the loop or **disconnect** the pump for a chosen duration.
+* While the loop is **disabled**, you can re-enable it by selecting a running mode, or disconnect the pump.
+* While the loop is **suspended**, you can **resume** it, disconnect the pump, or pick a new duration under **Suspend loop** to extend the suspension.
+* While the pump is **disconnected**, you can **reconnect** the pump, or pick a new duration under **Disconnect pump** to extend the disconnection.
+
+When you extend a suspension or a disconnection, the new duration **starts from now**: it replaces the remaining time, it is not added to it. You do not have to resume or reconnect first.
+
+The dialog while the loop is running in closed loop:
+
+![Loop dialog in closed loop](../images/loop/loop_dialog_closed_loop.png)
+
+The dialog while the loop is suspended, with **Resume** and the durations to extend the suspension:
+
+![Loop dialog while the loop is suspended](../images/loop/loop_dialog_suspended.png)
+
+The dialog while the pump is disconnected, with **Reconnect Pump** and the durations to extend the disconnection:
+
+![Loop dialog while the pump is disconnected](../images/loop/loop_dialog_disconnected.png)
+
+The dialog in Low Glucose Suspend, in open loop and while the loop is disabled only differs in the running modes it offers:
+
+![Loop dialog in Low Glucose Suspend](../images/loop/loop_dialog_lgs.png)
+
+![Loop dialog in open loop](../images/loop/loop_dialog_open_loop.png)
+
+![Loop dialog while the loop is disabled](../images/loop/loop_dialog_disabled.png)
+
+This is how the main screen looks in each mode. The color band at the top of the graph changes at the time of the switch.
+
+Low Glucose Suspend:
+
+![Main screen in Low Glucose Suspend](../images/main/main_screen_loop_lgs.png)
+
+Open loop:
+
+![Main screen in open loop](../images/main/main_screen_loop_open.png)
+
+Loop disabled:
+
+![Main screen with the loop disabled](../images/main/main_screen_loop_disabled.png)
+
+Loop suspended — the remaining time is shown next to the icon:
+
+![Main screen with the loop suspended](../images/main/main_screen_loop_suspended.png)
+
+Pump disconnected — the remaining time is shown next to the icon. The treatment buttons stay in the QuickLaunch toolbar, so you can still record insulin given with a pen or carbs:
+
+![Main screen with the pump disconnected](../images/main/main_screen_pump_disconnected.png)
+
+A validation is required after each selection.
+
+```{admonition} Alarm: the pump did not accept the zero temp basal :class: warning While the pump is disconnected, **AAPS** keeps a zero temporary basal on the pump and sets it again if it is missing. If this still fails after 10 minutes, **AAPS** raises an urgent alarm: *"The pump did not accept the zero temp basal. It may still be giving basal insulin. Check the pump."* The alarm repeats every 15 minutes until the zero temporary basal is set or the disconnection ends. If you see it, check your pump: it may be delivering basal insulin although **AAPS** shows it as disconnected.
+
+    <br />Note: the modes offered depend on your progress in the [Objectives](../SettingUpAaps/CompletingTheObjectives.md) — Closed Loop and LGS only become available as you complete them.
     
-     ![Loop status menu](../images/Home2020_Loop_Dialog.png)
+    (aaps-screens-bg-warning-sign)=
+    #### BG warning sign
     
-
-(aaps-screens-bg-warning-sign)=
-
-#### Восклицательный знак возле ГК
-
-Если по какой-то причине возникают проблемы с показаниями ГК, которые поступают в **AAPS**, на главном экране под значением ГК появляется восклицательный знак.
-
-##### Красный восклицательный знак: Задвоенные данные ГК
-
-Красный предупреждающий знак служит сигналом для немедленных действий: поступают **дублирующиеся данные ГК**, не позволяющие алгоритму цикла работать правильно. Поэтому замкнутый цикл будет отключен до устранения проблемы.
-
-    {admonition} {предупреждение} Цикл не запущен
-    :class::класс: примечание
-    Цикл не будет работать до устранения проблемы!
-
-    ![Red BG warning](../images/bg_warn_red.png)
+    If **AAPS** detects a problem with the BG readings it receives, a shortcut to your BG source (named after it, for example **xDrip+ BG**) appears in the bottom bar of the main screen, with a red warning badge. Tap it to open the [BG source screen](#aaps-screens-bg-source).
+    
+    ##### Duplicate BG data
+    
+    The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which prevents the loop from doing its work right. **AAPS** cannot calculate your BG trend reliably from duplicated readings, so it stops correcting.
+    
+    If your loop was closed, **AAPS** switches it to [Low Glucose Suspend (LGS)](#KeyAapsFeatures-LGS) mode: the loop icon turns purple.
+    
+      ![Duplicate BG data: LGS loop icon and the BG source shortcut with a red warning badge](../images/bg_warn_red.png)
+    
+    Press the loop icon: the **Constraints** card at the top tells you why: "BgQualityCheck: LGS mode due to doubled values in BG source".
+    
+      ![Running mode dialog: LGS due to doubled values](../images/main/bg_doubled_constraint.png)
+    
+    ```{admonition} Your loop is running in Low Glucose Suspend
+    :class: note
+    Your loop keeps running, but only to protect you against lows: **AAPS** can still reduce or suspend your basal, and it will not give any correction insulin until you solve this issue !
     
 
 Следует выяснить, почему дублируются данные ГК:
 
-* Активирован ли мост Dexcom на сайте NS? Отключите мост, перейдя в панель управления сайта NS, отредактируйте переменную «enable» и удалите оттуда "bridge". (Для Heroku [подробности можно найти здесь](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
-* Данные о ГК поступают в Nightscout (NS) из нескольких источников? Если у вас самостоятельно собранное приложение BYODA, включите выгрузку в **AAPS**, но не активируйте её в xDrip+.
+* Активирован ли мост Dexcom на сайте NS? Отключите мост, перейдя в панель управления сайта NS, отредактируйте переменную «enable» и удалите оттуда "bridge". (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* Данные о ГК поступают в Nightscout (NS) из нескольких источников? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip, if you use that.
 * Есть ли у вас подписчики (фолоуеры), которые могут получать ГК и снова передавать ее на ваш сайт NS?
-* Последний вариант: В **AAPS** перейдите в [Настройки > NS Client ](#Preferences-nsclient), выберите настройки синхронизации и отключите опцию "Принимать данные CGM из NS".
+* Last resort: In [NSClient settings](#Preferences-nsclient), select the Synchronization settings and disable the "Receive CGM data from NS" option.
 
-Чтобы немедленно удалить знак предупреждения, нужно вручную удалить несколько задвоенных записей из вкладки Dexcom/xDrip+.
+To remove the warning immediately and get your loop correcting again, delete the duplicate entries from the BG source screen: tap the shortcut in the bottom bar. The duplicate reading is highlighted in red. Long press a reading to start selecting, tick the duplicates and tap the trash icon at the top right.
+
+![BG source screen: duplicates selected for deletion](../images/main/bg_source_delete_duplicates.png)
 
 Однако если задублированных данных много, проще сделать следующее
 
@@ -142,153 +146,233 @@
 * сбросьте базу данных в меню обслуживания и
 * [импортируйте настройки](../Maintenance/ExportImportSettings.md) заново
 
-##### Желтый восклицательный знак
+    {admonition} Switch back to Closed Loop yourself
+    :class: important
+    **AAPS** does not return to **Closed Loop** on its own once the duplicates are gone. Press the loop icon on the main screen and select **Closed Loop** again.
 
-Желтый сигнал предупреждения указывает, что значения ГК получены через нерегулярные промежутки времени или имеются пропуски значений. При нажатии на значок появляется сообщение «Используются пересчитанные данные».
+##### Flat BG data
 
-    ![Yellow BG warning](../images/bg_warn_yellow.png)
-    
+With some BG sources (Libre 1, AiDEX, Glutec, Medtronic and sources that do not report their sensor type), **AAPS** also checks for readings that do not change: if your BG has changed by less than 2 mg/dL (0.1 mmol/L) for 45 minutes, the data is considered wrong. The BG source shortcut then shows a red flat-trend badge, and the loop stops any high temporary basal and gives no correction insulin until the readings change again. Check your sensor and the app that sends the readings.
 
-Обычно предпринимать никаких действий не требуется. Замкнутый цикл продолжит работать!
+##### Irregular BG data
 
-Так как замена сенсора прерывает поток данных, то появление предупреждающего знака после замены сенсора - явление нормальное и не должно вызывать беспокойства.
+When readings arrive at irregular intervals or some are missing, **AAPS** recalculates 5-minute values from the readings it has. This happens for example after a sensor change, or with Libre sensors, whose timing slips a minute or two every few hours. The loop keeps working and you do not have to take any action. **AAPS** 4 no longer shows a yellow warning sign for this.
 
-Специальное примечание для пользователей Libre:
+#### Текущий профиль
 
-* Cенсорs Libre раз или два за несколько часов могут пропускать данные, а это означает, что идеального потока значений ГК не получится.
-* Непрерывный поток также нарушается скачками данных.
-* Поэтому желтый предупреждающий «постоянно включен» для пользователей Libre.
+The current profile is displayed next to the star icon.
 
-*Примечание*: В своих расчетах.**AAPS** учитывает данные за 30 часов. Поэтому даже после устранения проблемы нерегулярной передачи данных, может потребоваться до 30 часов, чтобы исчез желтый треугольник.
+Tap the profile name to open the [Profile screen](#aaps-screens-profile), where you can view the profile details and [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-#### Простой режим
+To **change the profile percentage** (and its duration), tap the profile name, then tap the round **▶** (Activate) button at the bottom right of the Profile screen. In **AAPS** 3.x this screen opened with a long press on the profile name; in **AAPS** 4 a long press does nothing. Step by step: [Change the Profile Percentage](#ProfileSwitch-change-percentage).
 
-Значок с изображением лица ребенка в правом верхнем углу этого раздела указывает на то, что вы находитесь в [ простом режиме](#preferences-simple-mode).
+![Profile with an active profile switch](../images/Home2020_ProfileSwitch.png)
 
-![Начальный экран2020_ПростойРежим.png](../images/Home2020_SimpleMode.png)
+1. Обычный вид с активацией стандартного профиля.
+2. Profile switch with a specific percentage of 90% and a remaining duration of 9 minutes — the profile name turns yellow while a temporary profile switch is running.
+3. Profile switch with a time shift of 1 hour and a remaining duration of 9 minutes.
 
-### Раздел D - АктИнс, АктУгл, БС и AS
+#### Целевое значение ГК (Цель)
 
-![Раздел D](../images/Home2020_TBR.png)
+![Оставшаяся продолжительность временной цели](../images/Home2020_TT.png)
 
-1. **Шприц**: активный инсулин (IOB) - количество активного инсулина в организме  
-  Активный инсулин равен нулю, если работает стандартная база и нет инсулина, оставшегося от предыдущих болюсов.
-  
-  * IOB может быть отрицательным если был период с пониженным относительно текущего профиля базалом.
-  * Нажмите на иконку (только короткое нажатие), чтобы увидеть как IOB распределяется между базой и болюсом.
+The current target blood glucose level is displayed below the profile name.
 
-2. **Колосок**: [активные углеводы (COB)](../DailyLifeWithAaps/CobCalculation.md) - неусвоенные углеводы из тех, что были заведены ранее. Иконка пульсирует красным, если требуется съесть еще углеводов (смотри [ниже](#aaps-screens-carbs-required))
+Short press the target to open the **[Temporary Target](../DailyLifeWithAaps/TempTargets.md)** screen.
 
-3. **Фиолетовая линия**: текущая скорость базала. Пиктограмма меняется, отражая временные изменения в базальной скорости (плоская при 100%) 
-  * Кратко нажмите на иконку, чтобы увидеть подробности базала (значение текущего базала, время начала, остаток/общая продолжительность в минутах)
-4. **Стрелки вверх & вниз**: указывает состояние динамической чувствительности ([Autosens](#Open-APS-features-autosens) или [DynamicISF](#Open-APS-features-DynamicISF)): включено или отключено. В этом разделе: может быть показано несколько значений: 
-  * AS: Значение Autosens. Показывается даже если Autosens отключен (только для информации). Также показывается, когда DynISF активирован, хотя и не оказывает никакого воздействия.
-  * Alg: значение DynamicISF (на основе суточной дозировки TDD). Подробнее о последней строке см. на странице [DynamicISF](#Open-APS-features-DynamicISF).
+1. Regular display: the target range defined in your profile.
+2. If a temp target is set, the target turns yellow/orange with the icon of the used preset, and the remaining time in minutes is shown in brackets.
+
+(Визуализация динамического изменения цели)=
+
+#### Визуализация динамического изменения цели
+
+При использовании алгоритма [микроболюсов SMB](#Config-Builder-aps) и [Autosens](#Open-APS-features-autosens) **AAPS** может динамически настроить цель на основе чувствительности.
+
+Enable either one or both of the following options in [OpenAPS SMB settings](#Preferences-openaps-smb-settings):
+
+* "Sensitivity raises target" and/or
+* "Resistance lowers target"
+
+If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile, and the displayed target changes color to indicate the adjustment.
+
+(aaps-screens-iob-cob-basal-sens)=
+
+#### IOB, COB, basal and sensitivity
+
+![IOB, COB, basal and sensitivity](../images/Home2020_TBR.png)
+
+1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
+    The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
+    * IOB может быть отрицательным если был период с пониженным относительно текущего профиля базалом.
+    * Press the chip to see the split of bolus and basal insulin (first dialog in the picture — here with a negative IOB after a period of reduced basal)
+2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before
+3. The teal button on the right reflects the **current basal delivery**: a flat line when the profile basal is running, a changed icon while a temporary basal rate is active
+4. The **percentage row** shows the current sensitivity ([Autosens](#Open-APS-features-autosens) / [DynamicISF](../DailyLifeWithAaps/DynamicISF.md)). When the loop changes your ISF, the row also shows the profile ISF, an arrow and the ISF the loop uses now, for example "80% 2.0 ↗ 2.5". Press it to see the Autosens value and the effective ISF (second dialog in the picture). If the loop works with a different value than the last Autosens result (for example because a temp target changes your sensitivity), the dialog also shows that value as **Autosens in algorithm**. When Autosens is off, the loop keeps your profile ISF and no effective ISF is shown.
+
+The IOB dialog, opened by pressing the IOB chip:
+
+![IOB dialog with bolus IOB and basal IOB](../images/main/main_chip_iob.png)
+
+Press the teal button to see the temporary basal rate that is running, when it started and how long it has been running:
+
+![Temp basal dialog](../images/main/main_chip_temp_basal.png)
 
 (aaps-screens-carbs-requirement)=
 
 #### Требуются углеводы
 
-![Требуются углеводы](../images/Home2020_CarbsRequired.png)
+![Carbs required shown in the COB chip](../images/main/main_screen_carbs_required.png)
 
 Требование углеводов появляется, когда расчеты определяют их недостаток.
 
 Это происходит, когда алгоритм Oref решает, что не сможет помочь простым отключением подачи инсулина и во избежание гипогликемии необходимы углеводы.
 
-Уведомления об углеводах значительно сложнее, чем уведомления калькулятора болюса. Вы можете увидеть требование углеводов даже когда калькулятор болюса не показывает их нехватку.
+Уведомления об углеводах значительно сложнее, чем уведомления калькулятора болюса. You might see a carbs suggestion while the bolus calculator does not show missing carbs.
 
 При желании уведомления об углеводах могут быть переданы в Nightscout. В этом случае сработают стандартные настройки оповещения NS. 
 
-### Раздел E- Индикаторы состояния
+### Section C - Status row
 
-![Раздел E](../images/Home2020_StatusLights.png)
+![Status row](../images/Home2020_StatusLights.png)
 
-Индикаторы состояния сообщают:
+The status row gives a visual warning for
 
 * сколько времени прошло с момента установки канюли
-* сколько времени прошло с момента установки резервуара
-* об уровне заполнения резервуара (в единицах)
+* Insulin age (days reservoir is used) and reservoir level (units)
 * сколько времени отработал сенсор
-* сколько времени прошло с замены батареи и об уровне ее заряда (%)
+* Pump battery age and level (%)
 
 Если превышено пороговое значение, данные показываются желтым цветом.
 
 Если превышено критическое пороговое значение, значения будут показаны красным цветом.
 
-Настройки можно изменить в [Настройках > Обзор > Статус](#Preferences-status-lights).
+Thresholds can be changed via the small **Settings** icon shown when the status row is **expanded** (chevron on the right) — see [Status lights](#Preferences-status-lights).
+
+The expanded status panel also has a button at the end of some rows to record a change, which resets the corresponding age: **Add** on the **Sensor** row records a sensor insertion. If your pump supports it, **Prime/Fill** appears on the **Cannula** (or **Patch pump**) and **Insulin** rows, and **Add** on the **Pump battery** row.
+
+![Expanded status panel with Prime/Fill on the Cannula and Insulin rows and Add on the Sensor and Pump battery rows](../images/main/main_status_row_expanded.png)
 
 В зависимости от помпы у вас могут отсутствовать некоторые пиктограммы.
 
+(снимки экрана-сенсор-уровень-заряд батареи)
+
+#### Уровень заряда сенсора (батарея)
+
+Работает в мониторинге с дополнительным передатчиком, например MiaoMiao 2. (Technically sensor has to send battery level information to xDrip.)
+
+Thresholds can be set in [Status lights](#Preferences-status-lights).
+
 (aaps-screens-main-graph)=
 
-### Раздел F - Основной график
+### Section D - Main graph
 
-![Раздел F](../images/Home2020_MainGraph.png)
+![Main graph](../images/main/main_graph.png)
 
 График показывает уровень глюкозы в крови (ГК) считываемый с мониторинга глюкозы (CGM).
 
-Чтобы изменить шкалу времени выберите меню сверху слева от графика или удерживайте в любом месте графика. Можно выбрать между 6, 12, 18 или 24 часами.
+Use scroll and pinch-zoom gestures on the graph to change the visible time frame.
 
 Зеленая область отражает ваш целевой диапазон.
 
 На этом графике также отображается:
 
-* Болюсы: синие треугольники на кривой ГК и количество введенного инсулина
-* Приемы углеводов: оранжевые треугольники на кривой ГК и количество углеводов
+* Manual boluses: blue triangle just above the BG curve, pointing down at the reading of that moment, with the insulin amount
+* Carbs entries: orange triangle just below the BG curve, pointing up at the reading, with the carb amount. A meal entered with its bolus looks like one marker, split by the reading.
+* The triangles come in three sizes (small, medium, large), following the amount compared with the largest of the day. If there is no BG reading at that time (sensor gap), the triangle is drawn at the bottom of the graph.
+* BG checks and calibrations: drawn at their own measured value, so you can compare them with the sensor curve
 * Целевая ГК из профиля или временная цель: зеленая линия
-* Переключение профиля: звезда сверху графика
-* Статус цикла: цветная линия сверху графика, когда выбран любой режим кроме закрытого цикла - цветовая дифференциация описана в [Статус цикла](#AapsScreens-loop-status)
-* [СМБ](#Open-APS-features-super-micro-bolus-smb), если включены в [Конфигуратор > OpenAPS SMB](#Preferences-openaps-smb-settings): синие треугольники внизу графика
+* Profile switches: star icons at the top of the graph
+* Loop status: color band at the top of the graph when the [running mode](#AapsScreens-loop-status) is anything else than closed loop: blue = open loop, purple = LGS, red = loop disabled, yellow = loop suspended, grey = pump disconnected, orange = superbolus (in the screenshot: purple, then yellow). The history of these changes is listed in [Running mode](#AapsScreens-running-mode)
+* [SMBs](#Open-APS-features-super-micro-bolus-smb) are not drawn on the BG graph (there would be one every few minutes): they are shown on the [IOB graph](#aaps-screens-iob).
+
+Tap a **BG check** in the graph to see its value, and its note if you wrote one.
+
+(aaps-screens-graph-press-and-hold)=
+
+#### See the values at a given time
+
+**Press and hold** the BG graph for a moment to see the values at one reading. A dot marks the nearest reading, a dashed line is drawn at that time in all the graphs, and a pop-up at the top of the graph shows:
+
+* the time and the BG value
+* IOB, COB (only when it is above 0 g) and the basal rate at that time — the basal icon shows whether a temporary basal rate was running, as on the main screen
+* any bolus, SMB or carbs at that time, with the same triangles as in the graphs
+
+Keep your finger on the screen and move it left or right to go from one reading to the next. You feel a light tick at each reading, and the graph does not scroll while you do this. The pop-up stays for 2 seconds after you lift your finger.
+
+This works the same way on the [additional graphs](#aaps-screens-additional-graphs) below the BG graph (IOB, COB...): press and hold any of them.
+
+![Press and hold the BG graph: the pop-up shows time, BG, IOB and basal](../images/main/graph_press_and_hold.png)
 
 (AapsScreens-activate-optional-information)=
 
 #### Активация дополнительной информации
 
-Можно дополнительно отобразить следующую информацию, нажав на треугольничек сверху справа:
+Press the **pencil** icon in the top-right corner of the graph to open the graph settings:
 
-* Прогнозы (см. ниже)
-* Терапия: заметки, введенные на вкладке Действий: серые, оранжевые или красные точки в зависимости от важности действия, в том числе показания с глюкометра: красная точка
-* Базал 
-  * Указанный в профиле: голубая пунктирная линия внизу графика
-  * Реально подающийся: сплошная синяя линия с синим же заполнением
-* Активность, кривая активности инсулина: желтая линия
+![Main graph setting](../images/Home2020_MainGraphSetting.png)
 
-Нажмите на треугольничек справа от основного графика, чтобы эта информация отобразилась. Для основного графика доступны только эти четыре варианта, написанные над блоком "График 1 2 3 4".
-
-     ![Main graph setting](../images/Home2020_MainGraphSetting.png)
-    
+* **Graph height** adjusts how tall the graph is drawn.
+* **ACT** overlays the insulin activity curve: a solid yellow-green line <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (not to be confused with the dotted yellow UAM prediction)
+* **PRED** overlays the [prediction lines](#aaps-screens-prediction-lines) (see below)
 
 (aaps-screens-prediction-lines)=
 
 #### Линии прогнозирования
 
-* **Оранжевая** линия: активные углеводы [COB](CobCalculation)- (этот цвет как правило используется для представления активных углеводов COB и углеводов в целом)
-  
-  Эта линия прогнозирования показывает, где будет ГК (а не сами активные углеводы COB) на основе текущих настроек **Профиля** с учетом того, что отклонения из-за усвоения углеводов останутся постоянными. Эта линия появляется только при известном наличии активных углеводов COB.
+When **PRED** is on, AAPS draws its predictions as **dotted lines** to the right of the "now" line. Each prediction has its own color. The dark theme uses lighter shades of the same colors, and a line inside the green target range can look slightly greener.
 
-* **Темно-синяя** линия: активный инсулин IOB (этот цвет обычно используется для отображения активного инсулина IOB и инсулина)
-  
-  Эта линия прогнозирования показывает, что будет происходить только под воздействием инсулина. Например, если ввести инсулин, а потом не есть никаких углеводов.
+| Line                   | Light theme                                                                                                                       | Dark theme                                                                                                                         | What it predicts            |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| **IOB** (blue)         | <span style="background:#FFFFFF;color:#1E88E5;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#64B5F6;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | insulin only                |
+| **COB** (orange)       | <span style="background:#FFFFFF;color:#FB8C00;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#FFB74D;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | carbs on board              |
+| **UAM** (yellow)       | <span style="background:#FFFFFF;color:#C9BD60;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#E6D39A;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | unannounced meal            |
+| **ZT** (cyan)          | <span style="background:#FFFFFF;color:#00D2D2;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#4DD4D4;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | zero-temp (insulin stopped) |
+| **aCOB** (pale orange) | <span style="background:#FFFFFF;color:rgba(251,140,0,0.5);padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span> | <span style="background:#141218;color:rgba(255,183,77,0.5);padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span> | older AMA algorithm only    |
 
-* **Голубая** линия: нулевой временный базал (предсказанная ГК, если будет установлена временная базальная скорость в 0%)
-  
-  Эта линия прогнозирования показывает, как изменится траектория ГК, если помпа прекратит введение инсулина (0% временной базальной скорости TBR).
-  
-  *Эта линия появляется только при использовании алгоритма [SMB](#Config-Builder-aps).*
+When two predictions give the same values, their dots overlap and you only see one of the colors (for example, UAM on top of IOB when BG is flat).
 
-* **Темно-желтая** линия: [UAM](#SensitivityDetectionAndCob-sensitivity-oref1) (незаявленное питание)
-  
-  Незапланированный прием пищи - обнаружение значительного повышения уровня глюкозы, как следствие приема пищи, выброса адреналина или других факторов. Линия прогнозирования аналогична **оранжевой линии активных углеводов COB**, но предполагает, что отклонения будут понижаться с постоянной скоростью (за счет продления текущей скорости понижения).
-  
-  *Эта линия появляется только при использовании алгоритма [SMB](#Config-Builder-aps).*
+* **COB** line (orange): [carbs on board](CobCalculation) (orange is used throughout AAPS for COB and carbs)
+    
+    Эта линия прогнозирования показывает, где будет ГК (а не сами активные углеводы COB) на основе текущих настроек **Профиля** с учетом того, что отклонения из-за усвоения углеводов останутся постоянными. Эта линия появляется только при известном наличии активных углеводов COB.
 
-* **Темно-оранжевая** линия: aCOB (ускоренное усвоение углеводов)
-  
-  Аналогично COB, но скорость усвоения углеводов считается постоянной и равной 10 мг/дл/5м (-0.555 ммоль/л/5м). Устарело и имеет ограниченную полезность.
-  
-  *Эта линия появляется только при использовании устаревшего алгоритма помощника болюса[AMA](#Config-Builder-aps).*
+* **IOB** line (blue): insulin on board (blue is used throughout AAPS for IOB and insulin)
+    
+    Эта линия прогнозирования показывает, что будет происходить только под воздействием инсулина. Например, если ввести инсулин, а потом не есть никаких углеводов.
+
+* **ZT** line (cyan): zero-temp (predicted BG if temporary basal rate at 0% would be set)
+    
+    Эта линия прогнозирования показывает, как изменится траектория ГК, если помпа прекратит введение инсулина (0% временной базальной скорости TBR). The line stops once it rises above your target.
+    
+    *Эта линия появляется только при использовании алгоритма [SMB](#Config-Builder-aps).*
+
+* **UAM** line (yellow): [unannounced meals](#SensitivityDetectionAndCob-sensitivity-oref1)
+    
+    Незапланированный прием пищи - обнаружение значительного повышения уровня глюкозы, как следствие приема пищи, выброса адреналина или других факторов. Линия прогнозирования аналогична **оранжевой линии активных углеводов COB**, но предполагает, что отклонения будут понижаться с постоянной скоростью (за счет продления текущей скорости понижения).
+    
+    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used, **Enable UAM** is on in the OpenAPS SMB settings, and BG is rising more than insulin alone explains.*
+
+* **aCOB** line (pale, see-through orange): accelerated carbohydrate absorption
+    
+    Similar to COB, but assuming a static 10 mg/dL/5m (-0.555 mmol/L/5m) carb absorption rate. Устарело и имеет ограниченную полезность.
+    
+    *Эта линия появляется только при использовании устаревшего алгоритма помощника болюса[AMA](#Config-Builder-aps).*
 
 Обычно реальная кривая глюкозы находится где-то между этих линий, или близка к той, которая ближе всего описывает вашу текущую ситуацию.
+
+(aaps-screens-how-predictions-become-a-dosing-decision)=
+
+#### How AAPS turns predictions into a dosing decision
+
+AAPS doesn't dose insulin based on your current BG alone — every loop cycle (roughly every 5 minutes) it looks at all of the prediction lines above together and works out the safest course of action.
+
+The core rule is **safety first**: if *any* prediction line, in any time frame, dips below your low safety threshold, AAPS issues a zero-temp (0% temporary basal rate) and withholds further insulin, even if your current BG is high. Only once every prediction line stays above that threshold will AAPS consider giving more insulin.
+
+When it is safe to give more insulin, AAPS looks at where BG is ultimately predicted to end up (the **eventual BG**) across the blended predictions, and works out how much correction is needed to bring that eventual BG back to target — delivered either as an increased temporary basal rate, or (if the oref1/[SMB](#Open-APS-features-super-micro-bolus-smb) algorithm is enabled) as a small immediate bolus. If BG is high now but is already trending down enough on its own, AAPS will hold off, or may even reduce the basal rate, rather than add insulin that would only push a later low even lower.
+
+For worked examples of this decision logic with real screenshots, see the [dosing scenarios in the Clinician's guide](#clinicianguide-dosing-scenarios) — they were written for a clinician audience but apply to any AAPS user.
+
+*For the full technical treatment of how these predictions and the resulting dosing decision are calculated, see [OpenAPS's determine-basal documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html).*
 
 #### Базал
 
@@ -304,38 +388,52 @@
 
 Она основана на ожидаемом падении ГК из-за действия инсулина в системе, если не присутствуют другие факторы (например, углеводы).
 
-(AapsScreens-section-g-additional-graphs)=
+(AapsScreens-section-g-additional-graphs)= (aaps-screens-additional-graphs)=
 
-### Раздел G - Дополнительные графики
+### Section E - Additional graphs
 
-Можно активировать до четырех дополнительных графиков ниже главного графика. В [Простом режиме](#preferences-simple-mode)дополнительные графики предустановлены и не могут быть изменены. Выключите **Простой режим**, если хотите установить собственную конфигурацию дополнительных графиков.
+You can activate additional graphs below the main graph. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and cannot be changed. Выключите **Простой режим**, если хотите установить собственную конфигурацию дополнительных графиков.
 
-Чтобы настроить дополнительные графики - щелкните по треугольничку справа от [главного](#aaps-screens-main-graph) и прокрутите вниз.
+The additional graphs follow the main graph: when you scroll or zoom the BG graph, they move with it. A sideways drag on an additional graph also scrolls all the graphs. They have no time labels of their own — read the time on the BG graph.
+
+To configure an additional graph, press the **pencil** icon in its top-right corner:
 
 ![Дополнительные параметры графика](../images/Home2020_AdditionalGraphSetting.png)
 
-Чтобы настроить дополнительные графики, установите флажки соответствующие данным на каждом графике.
+Select the chips corresponding to the data you want to see on this graph; the **Remove** button deletes the graph.
+
+To create one more graph, press **Add graph** below the last graph and select its chips in the same way:
+
+![Add graph](../images/main/graph_add.png)
+
+The new graph is added below the others — here a second additional graph with **SENS%** and **DEV**:
+
+![Main screen with a second additional graph](../images/main/main_screen_additional_graph.png)
 
 Большинство пользователей считают достаточной следующую конфигурацию дополнительных графиков:
 
 * График 1 с Активным инсулином (IOB, АктИнс), Активными углеводами (COB, АктУг), Изменением чувствительности
 * Диаграмма 2 с отклонениями и влиянием ГК
 
-#### Абсолютный инсулин
+#### Absolute insulin (ABS)
 
 Активный инсулин, включая болюсный **и базальный**.
 
-#### Активный инсулин (IOB)
+(aaps-screens-iob)=
+
+#### Insulin on board (IOB)
 
 Показывает инсулин, который вы имеете "на борту" (= активный инсулин в вашем теле). Он включает инсулин болюсов и временного базала (**но исключает базальную скорость, установленную в вашем профиле**).
 
 Если бы не было болюсов, микроболюсов [SMB](#Open-APS-features-super-micro-bolus-smb), временных базалов TBR во время действия инсулина DIA, он равнялся бы нулю.
 
+SMBs are shown on this graph as blue triangles, in three sizes following the amount compared with the largest SMB of the day.
+
 Активный инсулин IOB может быть отрицательным, если у васне осталось ни болюсов, ни нулевого/низкого временного базала в течение более длительного времени чем DIA.
 
-Усвоение инсулина зависит от времени его действия [DIA и настроек профиля инсулина](../SettingUpAaps/YourAapsProfile.md).
+Decaying depends on your [DIA and insulin type settings](#Config-Builder-insulin-dia).
 
-#### Активные углеводы (COB)
+#### Carbs On Board (COB)
 
 Показывает активные углеводы в организме (= еще не усвоенные углеводы).
 
@@ -343,7 +441,7 @@
 
 Если обнаружится более быстрое усвоение углеводов, чем ожидалось, будет подан инсулин, и это увеличит количество активного инсулина IOB (с учетом настроек безопасности).
 
-#### Изменение чувствительности
+#### Sensitivity change (SENS%)
 
 Показывает чувствительность, обнаруженную алгоритмом [Autosens](#Open-APS-features-autosens).
 
@@ -351,99 +449,115 @@
 
 Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. До достижения этой цели линия Autosens на диаграмме отображается только для информации.
 
-### Переменная чувствительность
+### Variable sensitivity (VSENS)
 
 Показывает чувствительность, рассчитанную при помощи [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Заполняется только если используется эта функция.
 
 (screen-heart-rate-steps)=
 
-#### Сердечный ритм & Шаги
+#### Heart rate (HR) & Steps
 
 Эти данные доступны при использовании [смарт-часов на Wear](../WearOS/WearOsSmartwatch.md). Включите их в приложении **AAPS** Wear и предоставьте доступ к данным о здоровье.
 
-#### Отклонения
+#### Deviations (DEV)
 
-* **Серые** столбцы показывают отклонения, вызванные углеводами. 
+* **Серые** столбцы показывают отклонения, вызванные углеводами.
 * **Зеленые** столбцы показывают, что ГК превышает уровень, ожидаемый алгоритмом. Зеленые столбцы используются для увеличения сопротивляемости в [Autosens](#Open-APS-features-autosens).
 * **Красные** столбцы показывают, что ГК ниже величины, ожидаемой алгоритмом. Красные столбцы используются для увеличения чувствительности в [Autosens](#Open-APS-features-autosens).
 * **Желтые** столбцы показывают отклонение, вызванное непредвиденным приемом пищи UAM.
 * **Черные** столбцы показывают небольшие отклонения, не принятые во внимание при расчете чувствительности
 
-#### Влияние ГК
+#### Blood Glucose Impact (-BGI)
 
 Эта линия показывает, в какой степени ГК "должна" подниматься или падать, только на основании активности инсулина.
 
-![Кнопки главного экрана](../images/Screenshots_DEV_BGI.png)
+![Deviations and BGI](../images/main/graph_dev_bgi.png)
 
-Эту линию стоит вывести вместе со столбцами отклонения. Они имеют одинаковые масштабы, но отличаются от других необязательных данных,, поэтому неплохо отобразить их на отдельном графике, как показано выше. Сравнение линии влияния ГК и шкалы отклонений -еще один способ понять флуктуации **ГК**. Здесь, в момент, отмеченный **1**, столбцы отклонения больше линии влияния ГК, что указывает на повышение ГК. Позднее, в часы, отмеченные **2**, линии влияния ГК и отклонения DEV в значительной степени совпадают, что указывает на стабильность ГК.
+Эту линию стоит вывести вместе со столбцами отклонения. Они имеют одинаковые масштабы, но отличаются от других необязательных данных,, поэтому неплохо отобразить их на отдельном графике, как показано выше. Сравнение линии влияния ГК и шкалы отклонений -еще один способ понять флуктуации **ГК**. Here, at the time marked **1**, the Deviation bars are well above the BGI line: BG rises more than insulin activity alone explains (for example after carbs). At the time marked **2**, the Deviation bars are below zero (red): BG is lower than the algorithm expected.
 
-### Раздел H - Кнопки
+### Section F - QuickLaunch toolbar
 
-![Кнопки главного экрана](../images/Home2020_Buttons.png)
+![QuickLaunch toolbar](../images/Home2020_Buttons.png)
 
-Кнопки инсулина, углеводов и калькулятора отображаются почти всегда. При потере связи с помпой кнопка калькулятора не отображается.
+The floating toolbar at the bottom of the screen holds your **[QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)** actions. The small **gear** opens the QuickLaunch configuration where you choose which buttons are shown (treatments, careportal entries, CGM actions, the screens of the **Manage** sheet, [Quick Wizard](../DailyLifeWithAaps/QuickWizards.md) buttons, [Scenes](../DailyLifeWithAaps/Scenes.md) and more).
 
-Другие кнопки можно установить в [Настройках > Обзор > Кнопки](#Preferences-buttons).
+A typical configuration is shown above: **Insulin**, **Carbs** and the **Bolus wizard**.
 
-Что касается использовании кнопок Insulin, Carbs и Калькулятора : При включении в [Настройках > Обзор](#Preferences-show-notes-field-in-treatments-dialogs), поле **Примечания** позволяет ввести текст, который будет отображаться на главном графике, и может быть загружен в Nightscout - в зависимости от ваших настроек для клиента NS.
+While the pump is **disconnected**, the treatment buttons stay in the toolbar, for example to record insulin given with a pen (see [Insulin](#aaps-screens-buttons-insulin) below). The same actions are also available in the [Treatments sheet](#aaps-screens-treatments-sheet) of the bottom navigation.
 
 (aaps-screens-buttons-insulin)=
 
 #### Инсулин
 
-![Кнопка инсулина](../images/Home2020_ButtonInsulin.png)
+![Insulin dialog](../images/Home2020_ButtonInsulin.png)
 
 Чтобы ввести нужное количество инсулина без использования [калькулятора болюса](#aaps-screens-bolus-wizard).
 
-Можно автоматически начать временную цель TT **Ожидаемый прием пищи**, поставив флажок рядом с опцией [Начать ВЦ ожидаемый прием пищи](#TempTargets-eating-soon-temp-target).
+By enabling **Start Eating soon TT**, you can automatically start your [eating soon temp target](#TempTargets-eating-soon-temp-target).
 
-Если не хотите подавать болюс с помпы, а только сделать запись о введенном инсулине (например, поданного шприц-ручкой), поставьте флажок рядом с соответствующей опцией. При установке этого флажка, появится дополнительное поле "Смещение по времени", которое можно использовать для записи об инъекциях, сделанных в прошлом.
+If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only**". An additional **Time** row, set to **Now**, lets you record an insulin injection made in the past: use **-** / **+** to change it, or tap the chevron to type the minutes or pick a date and time.
 
-Можно использовать кнопки для быстрого приращения количества инсулина. Величину приращения можно изменить в [Настройках > Общие > Кнопки](#Preferences-buttons).
+![The Time row, folded](../images/v4/Screens/insulin_dialog_record_only_time.png) ![The Time row, opened with the chevron](../images/v4/Screens/insulin_dialog_time_open.png)
 
-Кнопка инсулин может быть использована, когда помпа не подключена, чтобы указать инсулин, введенный ручкой. В этом случае заголовок окна ввода будет желтым, а галочка "Не вводить болюс, только ввести запись" будет проставлена и её нельзя будет снять.
+You can use the **+0.5 / +1.0 / +2.0** buttons to quickly increase the insulin quantity. The increment values can be changed in the [Bolus wizard settings](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-![Home2020_ButtonInsulin_PumpSuspended.png](../images/Home2020_ButtonInsulin_PumpSuspended.png)
+The insulin dialog can be used when the pump is suspended or disconnected as well, e.g. to record insulin injected with a pen. In this case, "**Bolus will be recorded only**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
+
+![Insulin dialog with pump disconnected](../images/main/insulin_dialog_pump_disconnected.png)
 
 #### Углеводы
 
-![Кнопка углеводов](../images/Home2020_ButtonCarbs.png)
+![Carbs dialog](../images/Home2020_ButtonCarbs.png)
 
 Для записи углеводов без подачи болюса.
 
-Можно активировать [заранее настроенную временную цель](#TempTargets-hypo-temp-target) отметив ее флажком.
+Certain [pre-set temporary targets](#TempTargets-hypo-temp-target) (Hypo, Eating soon, Activity) can be started directly with the switches on top.
 
-**Смещение по времени**: сколько минут пройдет до начала приема пищи (или после этого момента).
+**Carb time**: When will you / have you been eating carbs.
 
-**Длительность действия**: для ["растянутых углеводов"](ExtendedCarbs)
+**Duration**: To be used for ["extended carbs"](ExtendedCarbs). This row is folded, so that you do not type the grams into it by mistake: use **-** / **+** to change it, or tap the chevron to open it and type a value.
 
-Можно использовать кнопки для быстрого приращения количества углеводов. Величину приращения можно изменить в [Настройках > Общие > Кнопки](#Preferences-buttons).
-
-#### Калькулятор
-
-Смотрите раздел Мастер болюса [ниже](#aaps-screens-bolus-wizard).
-
-#### Калибровки
-
-Отправляет калибровку в xDrip+ или открывает диалог калибровки Dexcom.
-
-Должен быть активирован в [Настройках > Обзор > Кнопки](#Preferences-buttons).
-
-#### CGM / НМГ
-
-Открывает xDrip+.
-
-Кнопка Назад возвращает в **AAPS**.
-
-Должен быть активирован в [Настройках > Обзор > Кнопки](#Preferences-buttons).
+You can use the **+5 / +10 / +20** buttons to quickly increase the carb amount.
 
 #### Мастер быстрых настроек
 
-Быстрый ввод заранее заданного количества углеводов с предварительно настроенными параметрами расчета дозы.
+Easily enter amount of carbs and set calculation basics with a single pre-configured button.
 
-Детали настраиваются в [Настройках > Общее > БыстрыйБолюс настройки](#Preferences-quick-wizard).
+Details are set up in [Quick Wizard](../DailyLifeWithAaps/QuickWizards.md).
 
-(aaps-screens-bolus-wizard)=
+(aaps-screens-treatments-sheet)=
+
+### Section G - Bottom navigation
+
+The bottom navigation bar gives access to:
+
+* **Treatments** — a quick-actions sheet with your treatment actions:
+    
+    ![Treatments sheet](../images/v4/Screens/treatments_sheet.png)
+
+* **Scenes** — shown only when you have at least one [scene](../DailyLifeWithAaps/Scenes.md) or an **Automation** rule marked as **User action**. It opens a sheet from which you can start them; a badge shows how many you can start right now. The **pencil** at the top of the sheet opens **Manage → Scenes**.
+
+* **Manage** — the hub for everything you manage in **AAPS**: Profile, Insulin settings, Temp Target, QuickWizard, Scenes, Automation, Food, Site Rotation, Pump and Authorized clients. Below them are device and basal actions such as Sensor Insert and Temp Basal. Some items only appear when they apply to your setup — for example Prime/Fill and battery change depend on your pump, and Temp Basal, Extended Bolus and the Careportal entries are hidden in [Simple Mode](#preferences-simple-mode):
+    
+    ![Manage sheet](../images/v4/Screens/manage_sheet.png)
+
+* **Objectives** — your progress through the [Objectives](../SettingUpAaps/CompletingTheObjectives.md); a badge shows how many are completed. This item disappears once all objectives are finished, and is not present on **AAPSClient**.
+
+(aaps-screens-notifications)=
+
+#### Notifications
+
+A **notification bubble** may appear above the bottom bar, on the right. It collects the active notifications of **AAPS**; the small number shows how many there are. Its color follows the most important one: red for an urgent message, green for a simple information.
+
+![Main screen with the notification bubble](../images/main/main_screen_notification_bubble.png)
+
+Tap the bubble to open the **Notification** panel. Each message shows the time it was raised. Press **Dismiss** below a message to remove it; some messages have another button instead, to take you to the setting that needs your attention.
+
+![Notification panel with one message and its Dismiss button](../images/main/notification_panel.png)
+
+![Notification panel](../images/main/main_notification_panel.png)
+
+(bolus-wizard)= (aaps-screens-bolus-wizard)=
 
 ## Мастер Болюса
 
@@ -453,52 +567,57 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 ### Раздел I
 
-Показывает рассчитываемый болюс.
+The **Calculation** header shows the calculated bolus. Если количество активного инсулина превышает рассчитанный болюс, то оно просто покажет количество углеводов, которые еще требуются.
 
-Если количество активного инсулина превышает рассчитанный болюс, то оно просто покажет количество углеводов, которые еще требуются.
+The bolus calculator can be used whatever your current **BG**, including when it is too high or too low. If **BG** is above target, a correction is added to the meal bolus. If **BG** is below target, the bolus is reduced and, if the insulin already on board is more than needed, the calculator tells you how many carbs are still required instead of proposing insulin.
 
-(AapsScreens-section-j)=
-
-### Раздел J
-
-Поле ГК обычно уже заполнено данными с мониторинга. Если мониторинг ГК не работает, то поле будет пустым.
-
-В поле **Углеводы** вводим расчетное количество углеводов - или эквивалент - на которое хотим дать болюс.
-
-Поле **Коррекция** - для корректировки, если вы по какой-либо причине хотите изменить конечную дозу.
-
-Поле **Время приема углеводов** предназначено для преболюса, чтобы сообщить системе о задержке в появлении углеводов. Вы можете добавить отрицательное число в это поле, если даете болюс на прошлые углеводы.
-
-**Напоминание о "будущих" углеводах**: можно поставить флажок в поле рядом с иконкой будильника (флажок поставится автоматически, если указано время в будущем), в этом случае в указанное время сработает оповещение о необходимости начать есть заведенные в **AAPS** углеводы.
-
-![Мастер болюса с напоминанием о питании](../images/Home2021_BolusWizard_EatingReminder.png)
-
-### Раздел K
-
-**Профиль** позволяет выбрать другой профиль, отличный от текущего профиля, для расчета требуемого инсулина. Выбор профиля применяется только для текущего болюса, это не изменение профиля.
-
-**Суперболюс** означает, что к обычной дозе вводимого сейчас болюса будет добавлена база следующих двух часов, а ВБС на это время будет установлен в ноль, чтобы компенсировать этот дополнительный инсулин. Эта опция появляется только если отмечено "активировать суперболюс в помощнике болюса" в [Настройках > Начало > Дополнительные настройки](#Preferences-advanced-settings-overview). Идея заключается в том, чтобы доставить инсулин по возможности раньше и, желательно, сократить пики.
-
-Подробная информация находится на сайте [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
-
-### Раздел L
-
-Подробности расчётов мастера болюса.
-
-Можно отменить выбор нежелательный опций, но обычно это не требуется.
-
-По соображениям безопасности флажок против временной цели **TT ставится вручную**, если нужно, чтобы калькулятор болюса отталкивался от действующей временной цели.
+The icon row below the header shows which inputs enter the calculation (BG, trend, IOB, temporary target, COB). Pressing an icon enables / disables this entry from the calculation; the **(i)** icon shows the detailed numbers behind the calculation.
 
 #### Комбинации активных углеводов COB и активного инсулина IOB и что они означают
 
-* По соображениям безопасности флажок активного инсулина IOB не может быть снят когда отмечены активные углеводы COB, из-за риска передозировки инсулина, поскольку **AAPS **не может учесть то, что уже введено.
-* Если отметить галочками COB и IOB, то будут учтены неусвоенные углеводы которые еще не покрыты инсулином + все инсулины, которые были введены в качестве временного базала или микроболюсов SMB.
-* Если отметить галочкой активный инсулин IOB без активных углеводов COB, **AAPS** примет в расчет уже введенный инсулин, но не инсулин на углеводы, которые еще предстоит усвоить. Это приводит к уведомлению о "недостатке углеводов".
-* Если подается болюс на ** дополнительную еду** вскоре после болюса на прием пищи (напр. дополнительный десерт) полезно **снять все галочки**. Таким образом, добавляются только новые углеводы а поскольку основная еда не еще не усвоена, то IOB не будет точно соответствовать углеводам COB вскоре после болюса на еду.
+* For safety reasons, the IOB input cannot be disabled when COB is enabled as you might run the risk of too much insulin as **AAPS** is not accounting for what’s already given.
+* If you enable COB and IOB, unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
+* If you enable IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. Это приводит к уведомлению о "недостатке углеводов".
+* If you bolus for **additional food** shortly after a meal bolus (e.g. additional dessert) it can be helpful to **disable all inputs**. Таким образом, добавляются только новые углеводы а поскольку основная еда не еще не усвоена, то IOB не будет точно соответствовать углеводам COB вскоре после болюса на еду.
+* For safety reasons, a **temporary target** is only included in the calculation if you enable its input manually.
 
-![Помощник болюса с подробностями](../images/Home2021_BolusWizard_Details.png)
+(AapsScreens-section-j)=
 
-Блок возле символа глаза позволяет выбрать между подробным представлением, с числами, входящими в расчет каждого элемента, или простым видом с пиктограммами. Нажатие на флажок включит / исключит эту запись из вычисления.
+### Section J - Entry fields
+
+In the **Carbs** field, you add your estimate of the amount of carbs, **in grams**, that you want to bolus for; the **+** buttons below it add carbs quickly. **AAPS** only works with grams: if you count in bread units or exchanges (*e.g.* DAFNE "CHO" exchanges), convert them to grams before entering them. See the [note about bread units](#your-aaps-profile-insulin-to-carbs-ratio) on the profile page.
+
+#### Carbs type: bread, cake or pizza
+
+Below the **Carbs** field, the **Bread**, **Cake** and **Pizza** buttons tell **AAPS** how fast the meal is absorbed. With **Cake** and **Pizza**, the bolus covers only a part of the carbs now and the rest is added later as eCarbs. See [Carbs type: bread, cake or pizza](#AapsScreens-carbs-type) on the Extended carbs page for the percentages and timing.
+
+The **Correction** row is if you want to modify the end dosage for some reason.
+
+Only the **Carbs** field is always open. The other rows (**Correction**, **Carb time**, **BG** and **Use percentage**) are folded: they show their value with **-** / **+** buttons, so you can change it in small steps. Tap the chevron to open a row and type a value, and tap it again to close the row. This avoids typing grams into the **Correction** field by mistake.
+
+![Folded rows in the bolus wizard](../images/v4/Screens/bolus_wizard_bottom.png)
+
+Tap anywhere on the **Profile** row to open the list of your profiles, then tap a name to use that profile for this calculation.
+
+![The list of profiles in the bolus wizard](../images/v4/Screens/bolus_wizard_profile_list.png)
+
+Поле **Время приема углеводов** предназначено для преболюса, чтобы сообщить системе о задержке в появлении углеводов. Вы можете добавить отрицательное число в это поле, если даете болюс на прошлые углеводы.
+
+**Set alarm** (eating reminder): when a carb time in the future is entered, a "**Set alarm**" switch appears so that you are reminded at the given time, when to eat the carbs you have input into **AAPS**:
+
+![Set alarm for future carbs](../images/Home2021_BolusWizard_EatingReminder.png)
+
+The reminder rings as an **AAPS** alarm. It does not create a timer in your phone's clock app, and it also works when the bolus was entered from **AAPSClient** while **AAPS** was running in the background.
+
+The **BG** field is normally already populated with the latest reading from your CGM. Если мониторинг ГК не работает, то поле будет пустым. When the reading is recent, the **BG** row stays folded.
+
+The result button at the bottom shows the proposed bolus; pressing it asks for confirmation before any insulin is delivered.
+
+Good to know:
+
+* If the calculated bolus is above your **[Maximum bolus](#Preferences-maximum-bolus)**, it is reduced to the max bolus, and the confirmation shows the warning "Bolus constraint applied". A [QuickWizard](../DailyLifeWithAaps/QuickWizards.md) is refused instead.
+* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only**" warning stays at the top of the dialog, also when you scroll.
+* A bolus you give by hand has priority over an [SMB](#Open-APS-features-super-micro-bolus-smb) that is waiting to be delivered: the SMB is dropped and the loop calculates again. If an SMB is being delivered right now, your bolus is refused with the message "An SMB is being delivered right now. Try again when it has finished." No insulin is given, and carbs entered with that bolus are not saved: wait a moment and enter them again.
 
 (AapsScreens-wrong-cob-detection)=
 
@@ -510,142 +629,74 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 Подробнее см. в подсказках на странице расчета активных углеводов [COB](#CobCalculation-detection-of-wrong-cob-values).
 
-(screens-action-tab)=
-
-## Вкладка "Действия"
-
-![Вкладка "Действия"](../images/Home_Action.png)
-
-### Действия-раздел M
-
-Кнопка **[Смена профиля](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** является альтернативой нажатию на [текущий профиль](#aaps-screens-profile--target) на главном экране.
-
-Кнопка **[Временная цель](../DailyLifeWithAaps/TempTargets.md)** - альтернатива нажатию на [текущую цель](#aaps-screens-profile--target) на главном экране.
-
-Кнопка начала или отмены временного базала. Обратите внимание, что кнопка меняется с “TEMPBASAL” (ВРЕМБАЗАЛ) на “CANCEL x%” (ОТМЕНА х%), после начала действия.
-
-Несмотря на то, что [растянутые болюсы](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) не работают в замкнутом цикле, некоторые всё равно просили оставить эту опцию.
-
-* Эта опция доступна только для помп Dana RS и Insight. 
-  * Замкнутый цикл автоматически будет остановлен и переключится на режим открытого цикла на время пролонгированных болюсов.
-  * Убедитесь, что ознакомились с [подробностями](../DailyLifeWithAaps/ExtendedCarbs.md) перед использованием этой опции.
+Looking for the **Actions** tab of **AAPS** 3.x? Its functions moved to the main screen, the **Manage** sheet and the QuickLaunch toolbar: see [Where did the Actions tab go?](#screens-action-tab).
 
 (aaps-screens-careportal)=
 
-### Портал терапии-раздел N
+## Careportal entries
 
-Отображает информацию о:
+The ages and levels shown in the [status row](#screens-sensor-level-battery) (sensor, insulin, cannula, pump battery) are based on careportal entries: **Prime/Fill** (records pump site and insulin cartridge changes), **Sensor Insert** and **Pump Battery Change**.
 
-     * возраст датчика & заряд (% заряда батареи)
-     * возраст картриджа & его заполненость (единицы)
-     * возраст канюли
-     * возраст батареи помпы & заряд (% заряда)
-    
+You can record them from the expanded status panel on the main screen, from the **Manage** sheet, or with [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
 
-Будет показано меньше информация, если применена э**тема экрана с низким разрешением ** ([Настройки > Общее > тема оформления](#Preferences-skin)).
+**Prime/Fill** records a pump site change and/or an insulin cartridge change, and can deliver a prime amount:
 
-(снимки экрана-сенсор-уровень-заряд батареи)
+![Prime/Fill dialog](../images/dialogs/prime_fill.png)
 
-#### Уровень заряда сенсора (батарея)
+**Sensor Insert** and **Pump Battery Change** only ask for the time of the event:
 
-Работает в мониторинге с дополнительным передатчиком, например MiaoMiao 2. (Датчик должен послать информацию об уровне батареи на xDrip+.)
+![Sensor Insert dialog](../images/dialogs/sensor_insert.png)
 
-Пороговые значения можно задать в [Настройках расширений > Индикаторы состояния](#Preferences-status-lights).
+![Pump Battery Change dialog](../images/dialogs/pump_battery_change.png) Exercise, announcement, question and note entries reflect the Nightscout careportal and are special forms of notes.
 
-### Портал терапии-раздел О
+In the **Manage** sheet, scroll down and press **Careportal** to show these entries: **BG Check**, **Note**, **Exercise**, **Question** and **Announcement**.
 
-Контроль ГК, заполнение инфузионного набора, установка сенсора и замена батареи помпы - основные данные в [разделе N](#aaps-screens-careportal).
+![Careportal section of the Manage sheet](../images/v4/Screens/manage_sheet_careportal.png)
 
-Кнопка Заполнение инфузионного набора позволяет регистрировать смену места катетера помпы, а также замену картриджа инсулина.
+**BG Check**, **Question** and **Announcement** let you enter a glucose value (from a meter, the sensor or another source), a note and the time of the event. In **Question** and **Announcement**, the glucose row is folded and shows the meter type next to the value: if you change the value, the type changes from **Sensor** to **Meter**.
 
-Раздел O отражает состояние портала терапии сайта Nightscout. Так что упражнения, объявление и вопрос являются специальными формами заметок.
+![Question with the folded glucose row](../images/dialogs/careportal_question.png)
 
-### Инструменты - раздел P
+![BG Check dialog](../images/dialogs/careportal_bg_check.png)
 
-(Aapsscreens-site-rotation)=
+**Note** and **Exercise** let you enter a duration (a folded row: use **-** / **+**, or tap the chevron to type it), a note and the time of the event:
 
-#### Смена мест установки
+![Exercise dialog](../images/dialogs/careportal_exercise.png)
 
-Кнопка "Места установки" открывает диалоговое окно "Смена мест установки" в режиме просмотра:
+In all these dialogs (**Prime/Fill**, **Sensor Insert**, **Pump Battery Change** and the careportal entries), the time of the event uses the same **Time** row as the [insulin dialog](#aaps-screens-buttons-insulin) and the bolus wizard: use **-** / **+** to move the time in 5-minute steps (up to one week back and 12 hours ahead), or tap the chevron to pick any date and time.
 
-* Можно выбрать, отображать только места установки канюли, или только места установки сенсора, или и те и другие, поставив обе галочки.
-* Доступны все записи мест установки канюли и датчика за последние 45 дней.
-* Тапните на определенную зону или на одну из записей из списка под картинкой, чтобы отфильтровать записи только в выбранном месте. Выбранная зона будет подсвечена светлозеленым цветом.
-* Вы можете открыть режим редактирования, чтобы изменить Зону, Направление или Комментарий, связанные с записью
+## Смена мест установки
 
-![View Mode](../images/SiteRotation/ViewMode.png)
+**Manage → Site Rotation** records where each cannula and sensor was placed on a body map, so you can rotate your sites: see [Site Rotation](#Aapsscreens-site-rotation) on the Pumps and cannulas page.
 
-* В Настройках модуля (верхний правый угол) можно настроить вид пациента (мужчина, женщина или ребенок), и выбрать, какие данные вы хотите отслеживать - только помпу, только датчик, или оба.
-
-![Настройки](../images/SiteRotation/Settings.png)
-
-![Settings type](../images/SiteRotation/Type.png)
-
-*Примечание: эти настройки будут использованы, чтобы автоматически открывать или не открывать диалоговое окно указания мест установки всякий раз, когда вы будете выбирать в действиях "Промывка/заполнение" или "Установка НМГ"*
-
-* Чтобы указать место уставки в ситуации, когда вы заполняете канюлю или устанавливаете резервуар непосредственно с помпы, вам придется вручную открывать этот диалог и указывать Зону и Направление
-
-Режим редактирования позволяет вам указать Место, Направление (зону) и Заметку, связанные с каждой записью:
-
-* Тип записи отображается в заголовке в режиме редактирования (иконка канюли или датчика)
-* Перейдите на вкладку Спереди или Сзади и выберите место
-* После выбора места установки (подсвечивается зеленым) внизу экрана отобразится список всех установок на этом месте за последние 45 дней
-
-![Edit Mode](../images/SiteRotation/EditMode.png)
-
-* Вы можете дополнительно указать направление (зону) установки, если кликните на иконку со стрелочками сверху (эта стрелка позволит вам уточнить зону установки в выбранном месте, от 2 до 9, или положение пода)
-
-![Position](../images/SiteRotation/EditModeSub.png)
-
-* Так же можно оставить заметку к этому месту установки
-* После подтверждение запись будет сохранена
-
-Можно отфильтровать записи установок нажав на соответствующее место на изображении пациента или на записи из списка ниже Чтобы сбросить фильтрацию - просто нажмите на свободное место на изображении
-
-![Filtering](../images/SiteRotation/Filtering.png)
-
-#### Просмотр истории
-
-Позволяет перемещаться по **журналу** [AAPS](../Maintenance/Reviewing.md).
-
-#### TDD / общая суточная доза инсулина
-
-Общая суточная доза = болюс + базал за сутки
-
-Некоторые врачи рекомендуют - особенно для новых пользователей - соотношение базал-болюс 50:50.
-
-Поэтому эта величина рассчитывается как TDD / 2 * TBB (общая суточная база = сумма базала в течение 24 часов).
-
-Другие принимают за суточную базу TBB диапазон от 32% до 37% от суммарной суточной дозы TDD.
-
-Как и большинство подобных подсказок они имеют ограниченное практическое значение. Примечание: Ваш диабет может быть иным!
+**TDD** (total daily dose) and the basal/bolus ratio rule of thumb are explained with the [Statistics Insulin tab](#reviewing-tdd).
 
 (AapsScreens-insulin-profile)=
 
-## Профиль инсулина
+## Инсулин
 
-![Профиль инсулина](../images/Screenshot_insulin_profile.png)
+![Insulin screen](../images/manage/insulin_profile.png)
 
-Отображает профиль инсулина, который вы выбрали в [Конфигураторе](#Config-Builder-insulin). Кривые зависят от продолжительности действия инсулина [DIA](#your-aaps-profile-duration-of-insulin-action) и времени пика.
+**Manage → Insulin settings** shows and manages your insulin configurations. Each configuration is shown on a card with its **peak time** and **[DIA](#Config-Builder-insulin-dia)**; the one in use is marked **ACTIVE**. Below the card you see the activity curve. You can edit the nickname, peak and DIA of any configuration except the active one: to change the insulin you are using, [add a new configuration and activate it](#Config-Builder-insulin-change-active).
 
-**Фиолетовая** линия показывает, сколько инсулина остается после его введения по мере усваивания, а **синяя** линия показывает его активность.
-
-См. [Ваш профиль AAPS > Продолжительность действия инсулина (DIA)](#your-aaps-profile-duration-of-insulin-action), чтобы узнать больше о том, что это, и как правильно ее настроить.
+See [Duration of insulin action](#Config-Builder-insulin-dia) to learn more about what it is and how to set it.
 
 ## Статус помпы
 
-![Статус помпы](../images/Screenshot_PumpStatus.png)
+![Virtual Pump status screen](../images/v4/Pumps/virtual_pump_screen.png)
 
-* Разная информация о состоянии помпы. Отображаемая информация зависит от модели помпы.
+**Manage → Pump** (or **Configuration → Pump → Open plugin**) shows the status of your pump: last connection, base basal rate, battery, reservoir...
+
+* Отображаемая информация зависит от модели помпы.
 * Подробнее см страницу [помпы](../Getting-Started/CompatiblePumps.md).
 
 ## Замкнутый цикл, помощник болюса AMA / микроболюсы SMB
 
-Эти вкладки показывают подробную информацию о расчетах алгоритма и почему **AAPS** действует так, а не иначе.
+**Configuration → Loop → Open plugin** (and **Configuration → APS → Open plugin**) show details about the algorithm's calculations and why **AAPS** acts the way it does: last run, the resulting request, and the constraints. The **Loop** screen lists only the constraints that actually limited the delivered temp basal rate or SMB (and why closed loop is not allowed, if that is the case); the **APS** screen lists every constraint that went into the calculation.
 
 Расчеты производятся каждый раз, когда система получает свежие данные мониторинга CGM.
 
-Дополнительную информацию см. в разделе [система ИПЖ на вкладке конфигуратора](#Config-Builder-aps).
+For more details see the [APS section of the Configuration page](#Config-Builder-aps).
 
 (aaps-screens-profile)=
 
@@ -653,141 +704,70 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 ![Профиль](../images/Screenshots_Profile.png)
 
+**Manage → Profile** (or a tap on the profile name on the main screen) opens the Profile screen: your profiles as a swipeable card carousel, with buttons to add, edit, clone, delete and **activate** a profile.
+
 Профиль содержит информацию о ваших индивидуальных параметрах диабета, дополнительную информацию см на стр **[профиль](../SettingUpAaps/YourAapsProfile.md)**.
 
 ## Автоматизация
 
-Смотрите специальную страницу, посвященную этому вопросу [здесь](../DailyLifeWithAaps/Automations.md).
+![Автоматизация](../images/v4/Screens/automation_overview.png)
+
+**Manage → Automation** lists your automation rules. Смотрите специальную страницу, посвященную этому вопросу [здесь](../DailyLifeWithAaps/Automations.md).
 
 ## клиент NS
 
 ![клиент NS](../images/Screenshots_NSClient.png)
 
-Эта страница отображает состояние связи с вашим сайтом Nightscout.
+**Configuration → Communication → NSClientV3 → Open plugin** displays the status of the connection with your Nightscout site: URL, websocket status, queue and a log of the synchronization activity.
 
-Настройки можно изменить в [Настройках > Клиент NS](#Preferences-nsclient).
+Settings can be changed in [NSClient settings](#Preferences-nsclient).
 
 Для устранения неполадок см [эту страницу ](../GettingHelp/TroubleshootingNsClient.md).
 
-## Источник ГК - xDrip+, BYODA...
+(aaps-screens-bg-source)=
 
-![Вкладка источника ГК - здесь Nightscout](../images/Screenshots_BGSource.png)
+## BG Source - xDrip, BYODA...
 
-В зависимости от источника ГК, заданного в параметрах, эта вкладка называется по-разному.
+![BG Source screen](../images/Screenshots_BGSource.png)
 
-Показывает хронологию показаний мониторинга и предлагает возможность удаления данных при сбое (например, при компрессии сенсора).
+**Configuration → BG Source → Open plugin** shows the history of CGM readings and offers the option to remove readings in case of failure (i.e. compression low) or duplicate readings.
 
-(aaps-screens-treatments) =
+## Treatments history
 
-## Терапия
-
-Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Терапия. Его невозможно показать в главном меню через Конфигуратор. Здесь можно просматривать и изменять историю следующих видов терапии:
-
-* Углеводы и болюсы
-* [Пролонгированный болюс](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-* Временная базальная скорость
-* [Временная цель](../DailyLifeWithAaps/TempTargets.md)
-* [Смена профиля](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-* Запись терапии - примечания, введенные через вкладку действий и примечания в диалогах
-* Режим работы: история состояния цикла
-* Записи пользователя: другие заметки, которые не отправляются в Nightscout
-
-В последнем столбце источник данных для каждой строки, отображается синим. Это может быть :
-
-* NS или Nightscout: данные переданы в Nightscout или поступили из него
-* PH или журнал помпы: данные были обработанные помпой
-
-(screens-bolus-carbs) =
-
-### Углеводы и болюсы
-
-![Углеводы & болюс](../images/TreatmentsView1.png)
-
-На этой вкладке показывается журнал болюсов и углеводов. Каждый болюс (строка **1** и **4**) показывает остающийся активный инсулин IOB рядом с количеством введенного инсулина. Источники болюса указываются следующим образом:
-
-* Прием пищи (вручную введенный кнопками Insulin, Quick Wizard или Bolus Wizard)
-* Микроболюсы SMB, при включенной опции подачи микроболюсов
-
-Углеводы (строка **2**) хранятся только в Nightscout. Если вы пользовались [Помощником болюса](#aaps-screens-bolus-wizard) для расчета дозы инсулина, то можете нажать на текст «Кальк» (строка **3**) и увидеть детали расчета.
-
-В зависимости от используемой помпы инсулин и углеводов могут быть показаны на одной строке или на нескольких - для углеводов и для собственно болюса.
-
-На вкладке Терапии можно исправить ошибочные записи углеводов (*напр* если вы их переоценили или недооценили). Обратите внимание, что редактирование существующей записи невозможно, для этого надо действовать по следующему процедуре:
-
-1. Проверьте и запомните фактические активные углеводы COB и активный инсулин IOB на главном экране.
-2. В зависимости от помпы углеводы на вкладке терапии могут быть показаны одной линией с инсулином или в виде отдельной записи (например, для Dana RS).
-3. Удалите запись с неверным количеством углеводов. (В свежих версиях терапии есть иконка корзины для удаления записи). Нажмите на значок Корзина, выберите строки для удаления, а затем нажмите на Корзину для завершения.)
-4. Убедитесь, что углеводы удалены успешно, повторно проверив активные углеводы COB на главном экране.
-5. Сделайте то же для активного инсулина IOB, если на вкладке терапии только одна линия для углеводов и инсулина.
-  
-  → Если углеводы не удаляются должным образом, а вы добавили дополнительные углеводы, как описано здесь (в п. 6), активных углеводов COB окажется слишком много, что может привести к передозировке инсулина.
-
-6. Введите правильное количество углеводов при помощи кнопки углеводов на главном экране и убедитесь, что точное время события также введено.
-
-7. Если на вкладке терапии только одна линия для углеводов и инсулина, следует также добавить и запись о количестве инсулина. Убедитесь в том, чтобы установить правильное время событие и проверить активный инсулин IOB на главном экране после подтверждения новой записи.
-
-### Временный базал
-
-![Временный базал](../images/TreatmentsView2.png)
-
-На этой вкладке показаны все **временные базалы Tbr**, примененные алгоритмом. Когда на активный инсулин IOB, показанный на строчке, продолжается воздействие, информация показана зеленым цветом. Возможны:
-
-* Положительное значение IOB, если временный базал TBR был выше, чем установленный в профиле (строка **2**)
-* Отрицательный IOB для нулевой скорости базала (zero temp) или если временный базал TBR был ниже, чем в Профиле (строка **1**)
-
-Удаление записей затрагивает только отчеты в Nightscout и скорее всего исказит реальный IOB - делать это не рекомендуется.
-
-В левой части строки красный S означает "Suspend": это происходит когда базал не выполнен на данный момент. Это нормальная ситуация, например, в процессе замены POD'а.
-
-### Временная цель
-
-![Временная цель](../images/TreatmentsView3.png)
-
-Здесь можно просмотреть историю временных целей.
-
-### Cмена профиля
-
-![Cмена профиля](../images/TreatmentsView4.png)
-
-Здесь можно просмотреть историю смен профиля. Каждый раз при переключении профиля об этом вносится запись : строка **1**, хранится в Nightscout но не в Журнале Помпы и соответствует запросу на переключение профиля со стороны пользователя. Строка **2**, хранимая как в NS, так и в истории помпы (PH) соответствует фактическому переключению.
-
-Удаление записей влияет только на отчеты в Nightscout и на самом деле никогда не изменяет текущий профиль.
-
-Вы можете использовать кнопку **Клонировать** на строке **1** для копирования **смены профиля** в качестве обычного профиля. См. [Ваш профиль AAPS > Управление профилями](#your-aaps-profile-clone-profile-switch).
-
-(AapsScreens-running-mode)=
-
-### Режим работы
-
-![Режим работы](../images/TreatmentsView6.png)
-
-Эта вкладка показывает историю изменения [состояния цикла](#AapsScreens-loop-status): открыт, закрыт, приостановлен.
-
-### Портал терапии
-
-![Портал терапии](../images/TreatmentsView5.png)
-
-Эта вкладка показывает все заметки и оповещения, записанные в Nightscout.
-
-(aaps-screens-running-mode)=
+Open the **menu** (☰) and select **Treatments history** to view, check and correct everything **AAPS** has recorded: carbs and boluses, temp basals, temporary targets, profile switches, careportal entries, loop mode changes and user entries. See [Treatments history](#aaps-screens-treatments) on the Reviewing your data page.
 
 ## Просмотр истории
 
-Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Просмотр журнала. Его невозможно показать в главном меню через Конфигуратор. Доступ к нему также можно получить через кнопку в нижней части вкладки [Действия](#screens-action-tab).
+![History browser](../images/v4/Screens/history_browser.png)
+
+Open the **menu** (☰) and select **History browser**.
 
 Позволяет перемещаться по журналу **AAPS**. См соответствующую страницу - [ Просмотр данных > Журнал истории](../Maintenance/Reviewing.md).
 
+(aaps-screens-statistics)=
+
 ## Статистика
 
-Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Статистика. Его невозможно показать в главном меню через Конфигуратор.
+![Статистика](../images/v4/Screens/statistics.png)
 
-Дает статистику о времени в целевом диапазоне и суммарной суточной дозе инсулина TDD. См соответствующую страницу - [Просмотр данных > Статистика](#reviewing-statistics).
+Open the **menu** (☰) and select **Statistics**.
+
+Gives you statistics about your Total Daily Dose, Time In Range, your glucose profile over the day (AGP) and your insulin cycle pattern, on four tabs. См соответствующую страницу - [Просмотр данных > Статистика](#reviewing-statistics).
 
 (aaps-screens-profile-helper)=
 
 ## Profile Helper
 
-Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Помощник профиля. Его невозможно показать в главном меню через Конфигуратор. Помощник профиля поможет:
+Open the **menu** (☰) and select **Profile helper**.
 
-* [build a profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid)
-* [сравнение двух профилей](#your-aaps-profile-compare-profiles)
+![Profile helper](../images/screens/profile_helper.png)
+
+The Profile helper lets you compare profiles and generate starting profiles for children. See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) — sections [Build a Profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid) and [Compare two Profiles](#your-aaps-profile-compare-profiles).
+
+(aaps-screens-widgets)=
+
+## Home screen widgets
+
+**AAPS** provides five widgets that you can add to your phone's home screen, to see your data without opening the app. See the dedicated page [Home screen widgets](../DailyLifeWithAaps/Widgets.md).
+
+![AAPS widgets on the home screen](../images/widgets/home_widgets_full_circle_small.png)

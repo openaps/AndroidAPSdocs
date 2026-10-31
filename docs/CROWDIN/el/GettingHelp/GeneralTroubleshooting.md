@@ -1,169 +1,195 @@
 (generaltroubleshooting)=
 
-# **Troubleshooting**
+# Αντιμετώπιση προβλημάτων
 
-You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem for various known issues.
+**Ξεκινήστε από εδώ όταν κάτι δεν λειτουργεί.** Οι πληροφορίες για την αντιμετώπιση προβλημάτων βρίσκονται σε πολλές σελίδες της τεκμηρίωσης. Αυτή η σελίδα τις συγκεντρώνει: είναι μια συλλογή συνδέσμων, ταξινομημένων ανά θέμα, που σας βοηθά να λύσετε τα πιο συχνά προβλήματα.
 
-Additional useful information might also be available in the [FAQ](../UsefulLinks/FAQ.md).
+Αν δεν βρείτε την απάντηση παρακάτω, δείτε επίσης:
+
+* τις [Συχνές Ερωτήσεις](../UsefulLinks/FAQ.md) για απαντήσεις σε συχνές ερωτήσεις, και
+* τον [οδηγό βελτίωσης του προφίλ](ProfileTuning.md), αν το κύκλωμά σας λειτουργεί αλλά ο έλεγχος της γλυκόζης χρειάζεται βελτίωση.
+
+```{admonition} Still stuck?
+:class: tip
+Αν κανένας σύνδεσμος δεν λύνει το πρόβλημά σας, δείτε τη σελίδα [Πού μπορώ να βρω βοήθεια;](WhereCanIGetHelp.md) για να ρωτήσετε την κοινότητα (Facebook, Discord), ή στείλτε τα [αρχεία καταγραφής](AccessingLogFiles.md) σας στους προγραμματιστές.
+```
 
 ---
 
 (generaltroubleshooting-aaps-app)=
 
-## **AAPS app**
+## Εφαρμογή AAPS
 
-### **Building & updating**
+### Δημιουργία και ενημέρωση
 
-* [Lost keystore](#troubleshooting_androidstudio-lost-keystore)
-* [Troubleshooting AndroidStudio](TroubleshootingAndroidStudio)
-* [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) and [updating with AAPS Builder](#aaps-builder-updates)
-* [Browser build (CI) troubleshooting](#aaps-ci-troubleshooting)
+* Αν το build αποτύχει, δείτε την ενότητα [Αν το build αποτύχει](#building-aaps-troubleshooting): εκεί υπάρχει η ενότητα αντιμετώπισης προβλημάτων για κάθε τρόπο δημιουργίας:
+  * [AAPS Builder](#aaps-builder-troubleshooting)
+  * [Δημιουργία μέσω browser](#aaps-ci-troubleshooting)
+  * [Android Studio](TroubleshootingAndroidStudio.md)
+* Χαμένο ή νέο keystore: [Επανεγκατάσταση του AAPS](#reinstall-aaps)
+* Ενημέρωση του **AAPS**: [με το AAPS Builder](#aaps-builder-updates), [με δημιουργία μέσω browser (fork)](#update-browser-build-troubleshooting), [με το Android Studio](#update-computer-build-troubleshooting)
 
-### **Installing**
+### Εγκατάσταση
 
-You may see a Google Play Protect warning that the app is unsafe, was built for older Android versions and doesn't include latest privacy protections.
+* [Προειδοποίηση Google Play Protect](#transferring-installing-play-protect-warning): η εφαρμογή αναφέρεται ως μη ασφαλής.
+* Η εγκατάσταση **μπλοκάρεται** με μήνυμα για μη επαληθευμένο προγραμματιστή: δείτε την ενότητα [Επαλήθευση προγραμματιστή Android](#android-developer-verification) για τους δωρεάν τρόπους εγκατάστασης.
 
-Ignore it: More details, Install anyway.
+### Ρυθμίσεις
 
-![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+* [Προφίλ: «Ο βασικός ρυθμός δεν είναι συμβατός με την τρέχουσα αντλία»](#your-aaps-profile-basal-not-compatible)
+* [Αντλία: «Τα δεδομένα προέρχονται από διαφορετική αντλία»](#config-builder-wrong-pump-data)
+* [Nightscout Client](TroubleshootingNsClient.md)
 
-### **Ρυθμίσεις**
-* Profile
+### Χρήση
 
-  ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
-
-* [Pump - data from different pump](#update30-failure-message-data-from-different-pump)
-
-  ![Failure message: Data from different pump](../images/BasalNotAlignedToHours2.png)
-
-* [Nightscout Client](../GettingHelp/TroubleshootingNsClient.md)
-
-### **Χρήσιμες συμβουλές**
-* [Wrong carb values](#CobCalculation-detection-of-wrong-cob-values)
-
-   ![Error: Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
-
-* [SMS commands](#SMSCommands-troubleshooting)
+* [Λάθος τιμές υδατανθράκων (αργή απορρόφηση υδατανθράκων)](#CobCalculation-detection-of-wrong-cob-values)
+* [Αυτοματισμοί](#automations-troubleshooting)
+* [Πλήρως κλειστό κύκλωμα](#full-closed-loop-troubleshooting)
 
 ---
 
 (generaltroubleshooting-bluetooth-related-issues)=
 
 
-## **Bluetooth related issues**
+## Προβλήματα σχετικά με το Bluetooth
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Για γνωστά προβλήματα με συνδέσεις Bluetooth, διακοπές σύνδεσης με αντλίες/Pod ή προβλήματα ενεργοποίησης και σύνδεσης, δείτε τη σελίδα [Προβλήματα σχετικά με το Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
 (generaltroubleshooting-android-related-issues)=
 
-## **Android Related Issues**
+## Προβλήματα που σχετίζονται με το Android
 
-### **Battery optimization**
+### Βελτιστοποίηση μπαταρίας
 
-Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
+Το **AAPS** μπορεί να σας βοηθήσει να βρείτε τις σωστές ρυθμίσεις για το τηλέφωνό σας: ανοίξτε το **μενού** (☰) > **Σχετικά** και πατήστε **Μην σκοτώσεις την εφαρμογή μου;**. Ανοίγει τις οδηγίες για τη μάρκα του τηλεφώνου σας στον ιστότοπο [Don't kill my app](https://dontkillmyapp.com/). Ο [οδηγός εγκατάστασης](#setup-wizard-bluetooth-battery-optimisation) σας ζητά επίσης να απενεργοποιήσετε τη βελτιστοποίηση μπαταρίας για το **AAPS** και το Bluetooth.
 
-When this is enabled, it will very likely cause issue for **AAPS** and other supporting apps like **xDrip+**.
+Το Android έχει ρυθμίσεις εξοικονόμησης μπαταρίας που είναι ενεργές από προεπιλογή. Αυτές οι ρυθμίσεις αναστέλλουν/σταματούν αυτόματα εφαρμογές που δεν χρειάζονται για τη λειτουργία του συστήματος. Έτσι εξοικονομείται η μπαταρία που καταναλώνουν εφαρμογές που δεν χρειάζεται να τρέχουν συνέχεια.
 
-It's important to ensure that you have disabled Battery Optimization to ensure **AAPS** and other supporting apps remain active all the time.
+Όταν αυτή η ρύθμιση είναι ενεργή, είναι πολύ πιθανό να δημιουργήσει προβλήματα στο **AAPS** και σε άλλες βοηθητικές εφαρμογές, όπως το **xDrip**.
 
-Depending on your phone model and make there may be more than one location and setting which needs to have this disabled.
+Είναι σημαντικό να απενεργοποιήσετε τη βελτιστοποίηση μπαταρίας, ώστε το **AAPS** και οι άλλες βοηθητικές εφαρμογές να μένουν ενεργές όλη την ώρα.
 
-***NOTE:** Follow the steps below to Disable Battery Optimization for the Bluetooth service if your phone has this option, the same steps can be used to disable for **AAPS** and other apps, however the screenshots will only show how to do this for the Bluetooth service.*
+Ανάλογα με τον κατασκευαστή και το μοντέλο του τηλεφώνου σας, μπορεί να υπάρχουν περισσότερα από ένα σημεία και ρυθμίσεις που πρέπει να απενεργοποιήσετε.
 
-#### **Pixel phones (stock Android)**
+***ΣΗΜΕΙΩΣΗ:** Ακολουθήστε τα παρακάτω βήματα για να απενεργοποιήσετε τη βελτιστοποίηση μπαταρίας για την υπηρεσία Bluetooth, αν το τηλέφωνό σας έχει αυτή την επιλογή. Τα ίδια βήματα ισχύουν και για το **AAPS** και άλλες εφαρμογές, αλλά τα στιγμιότυπα οθόνης δείχνουν μόνο την υπηρεσία Bluetooth.*
 
-* Go to the Android settings, select "Apps".
+#### Τηλέφωνα Pixel (Android χωρίς αλλαγές)
 
-  ![Android Settings¦Apps](../images/troubleshooting/pixel/01_androidsettings.png)
+* Μεταβείτε στις ρυθμίσεις του Android και επιλέξτε «Εφαρμογές».
 
-* Select "See all apps"
+  ![Ρυθμίσεις Android¦Εφαρμογές](../images/troubleshooting/pixel/01_androidsettings.png)
 
-  ![See all apps](../images/troubleshooting/pixel/02_apps.png)
+* Επιλέξτε «Εμφάνιση όλων των εφαρμογών» ("See all apps")
 
-* On the menu on the right, select "Show system" apps.
+  ![Εμφάνιση όλων των εφαρμογών](../images/troubleshooting/pixel/02_apps.png)
 
-  ![Show system apps](../images/troubleshooting/pixel/03_allapps.png)
+* Στο μενού δεξιά, επιλέξτε να εμφανίζονται και οι εφαρμογές συστήματος («Εμφάνιση συστήματος», "Show system").
 
-* Now search and select the app "Bluetooth".
+  ![Εμφάνιση εφαρμογών συστήματος](../images/troubleshooting/pixel/03_allapps.png)
 
-  ![Bluetooth app](../images/troubleshooting/pixel/03_bluetooth.png)
+* Τώρα αναζητήστε και επιλέξτε την εφαρμογή «Bluetooth».
 
-* Click the "App battery usage" and select "Not optimized".
+  ![Εφαρμογή Bluetooth](../images/troubleshooting/pixel/03_bluetooth.png)
 
-  ![BT Battery optimization](../images/troubleshooting/pixel/04_btunrestricted.png)
+* Πατήστε «Χρήση μπαταρίας εφαρμογής» ("App battery usage") και επιλέξτε «Χωρίς περιορισμούς» ("Unrestricted", σε μερικές παλαιότερες εκδόσεις Android λέγεται «Χωρίς βελτιστοποίηση», "Not optimized").
+
+  ![Βελτιστοποίηση μπαταρίας για το Bluetooth](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-#### **Samsung phones**
+#### Τηλέφωνα Samsung
 
-* Go to the android settings, select "Apps"
+* Μεταβείτε στις ρυθμίσεις του Android και επιλέξτε «Εφαρμογές»
 
-* On the icon that supposedly changes the sorting algorithm (1), select "Show system apps" (2).
+* Στο εικονίδιο που κανονικά αλλάζει την ταξινόμηση (1), επιλέξτε «Εμφάνιση εφαρμογών συστήματος» (2).
 
-  ![App Filter](../images/troubleshooting/samsung/Samsung01_Apps.png)
+  ![Φίλτρο εφαρμογών](../images/troubleshooting/samsung/Samsung01_Apps.png)
 
-  ![Show system apps](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+  ![Εμφάνιση εφαρμογών συστήματος](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
 
-* Now search the bluetooth app and select it to see its settings.
+* Τώρα αναζητήστε την εφαρμογή Bluetooth και επιλέξτε την για να δείτε τις ρυθμίσεις της.
 
-  ![Bluetooth App](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+  ![Εφαρμογή Bluetooth](../images/troubleshooting/samsung/Samsung03_BtApp.png)
 
-* Select "battery".
+* Επιλέξτε «Μπαταρία».
 
-  ![Battery](../images/troubleshooting/samsung/Samsung04_Battery.png)
+  ![Μπαταρία](../images/troubleshooting/samsung/Samsung04_Battery.png)
 
-* Set it to "Not optimized"
+* Ρυθμίστε την σε «Χωρίς περιορισμούς» ("Unrestricted", σε μερικές παλαιότερες εκδόσεις Android λέγεται «Χωρίς βελτιστοποίηση», "Not optimized").
 
-  ![Not optimized](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
+  ![Χωρίς περιορισμούς](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
-#### **Huawei phones**
+#### Τηλέφωνα Huawei
 
-See this guide for [Huawei bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+Δείτε αυτόν τον οδηγό για [Bluetooth και βελτιστοποίηση μπαταρίας σε Huawei](../CompatiblePhones/Huawei.md)
 
 ---
 
 (generaltroubleshooting-cgm)=
 
-## **Continious Glucose Monitor (CGM)**
+## Συνεχής Παρακολούθηση Γλυκόζης (CGM)
 
-Useful links to known issues and steps to resolve for CGMs.
+Χρήσιμοι σύνδεσμοι για γνωστά προβλήματα των CGM και τις λύσεις τους.
 
-* [General](#general-cgm-troubleshooting)
+* [Γενικά](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
+* [Libre 2 με Minimal Looper](#minimallooper-troubleshooting)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
-* [xDrip - no CGM data](#xdrip-identify-receiver)
-* [xDrip - Dexcom troubleshooting](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
+* [xDrip – δεν υπάρχουν δεδομένα CGM](#xdrip-identify-receiver)
+* [xDrip – αντιμετώπιση προβλημάτων με Dexcom](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
 ---
 
 (generaltroubleshooting-pumps)=
 
-## **Pumps**
+## Αντλίες
 
-Useful links to known issues and steps to resolve for Pumps
+Χρήσιμοι σύνδεσμοι για γνωστά προβλήματα των αντλιών και τις λύσεις τους
 
-* [DanaRS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
-* [Accu-Chek Combo general](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)
+* [Accu-Chek Combo](#combov2-tips-for-basic-usage)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
+* [CareLevo](#carelevo-alarms-and-notifications)
+* [DanaRS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
+* [Diaconn G8](#diaconn-g8-bluetooth-troubleshooting)
+* [EOPatch2](#eopatch2-alarms-and-warnings)
 * [Medtronic + RileyLink](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
+* [Medtrum Nano](#medtrum-nano-troubleshooting)
+* [Omnipod DASH](#omnipod-dash-troubleshooting)
+* [Omnipod Eros](#OmnipodEros-troubleshooting)
 
 ---
 
 (generaltroubleshooting-phones)=
 
-## **Τηλέφωνα**
+## Τηλέφωνα
 
-Useful links to known issues and steps to resolve for Phones
+Χρήσιμοι σύνδεσμοι για γνωστά προβλήματα των τηλεφώνων και τις λύσεις τους
 
-* [List of tested phone and device setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
+* [Λίστα με δοκιμασμένα τηλέφωνα και συσκευές](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
 * [Jelly](../CompatiblePhones/Jelly.md)
-* [Huawei bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+* [Bluetooth και βελτιστοποίηση μπαταρίας σε Huawei](../CompatiblePhones/Huawei.md)
+
+---
+
+(generaltroubleshooting-remote-control)=
+
+## Απομακρυσμένος έλεγχος
+
+* [AAPSClient και απομακρυσμένος έλεγχος (σύζευξη, οι εντολές δεν φτάνουν)](#client-master-control-troubleshooting)
+* [Προβλήματα με το «Διακριτικό πρόσβασης Nightscout»](#remotecontrol-nightscout-access-token)
+* [Εντολές SMS](#SMSCommands-troubleshooting)
+* [Android Auto](#android-auto-troubleshooting)
+
+---
 
 (generaltroubleshooting-smartwatches)=
 
-## Smartwatches
+## Έξυπνα ρολόγια
 
-Useful links to known issues and steps to resolve for Smartwatches
+Χρήσιμοι σύνδεσμοι για γνωστά προβλήματα των έξυπνων ρολογιών και τις λύσεις τους
 
-* [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
+* [Αντιμετώπιση προβλημάτων της εφαρμογής Wear](#Watchfaces-troubleshooting-the-wear-app)
+* [Το ρολόι και το τηλέφωνο δεν επικοινωνούν](#wear-os-watch-phone-communication)
+* [Wear OS 5](#wear-os-5-troubleshooting)
+* [Δημιουργία της εφαρμογής Wear](#building-aaps-wear-os-troubleshooting)

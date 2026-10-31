@@ -1,36 +1,57 @@
-# 如何配置华为手机
+# How to configure a Huawei phone
 
-这里有一些不同的选项，一些是安卓特定的，一些是华为特定的：
+**Which phones this page covers:** Huawei phones running **EMUI 12 to EMUI 15**. All of these are based on Android 12, the minimum for the current version of **AAPS**. On a phone with an older EMUI version, you can only use an [older AAPS version](#maintenance-android-version-aaps-version).
 
-* 将 AAPS 和 xdrip+ 添加到忽略电池优化的应用列表中：
-  
-  * 设置 / 应用 / 设置 / 特殊访问权限 / 忽略电池优化 / 选择“所有应用” / 将应用设置为允许
-    
-    ![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
+```{admonition} HarmonyOS NEXT / HarmonyOS 5 phones :class: warning
 
-* 设置电池选项设置：
-  
-  * 设置 / 应用 / 选择 AndroidAPS/xdrip+ / 在电池下 / 应用启动
-    
-    * 确保移除“自动管理”
-    * 允许：
-      
-      * 自动启动
-      * 辅助启动（可以从其他应用启动）
-      * 后台运行
-        
-        ![Huawei - battery options](../images/Huawei_BatteryOptions.png)
+Recent Huawei phones sold in China run HarmonyOS NEXT (HarmonyOS 5 and above). This system is not Android anymore and cannot run **AAPS**. ```
 
-* 锁定应用
-  
-  * 进入应用最近列表并选择锁定图标
-    
-    ![Huawei - lock app](../images/Huawei_LockApp.png)
+Huawei phones close apps running in the background very aggressively. Apply all the settings below to **AAPS** and to your CGM app (for example xDrip+ or Juggluco), otherwise the loop and glucose readings may stop when the screen is off.
 
-对于 xDrip+，你必须启用持久通知（在 xDrip+ 应用内）：
+Menu names can differ slightly between models. If you can't find a setting, type its name in the search bar at the top of **Settings**.
 
-* 设置 / 不常用设置 / 其他杂项选项 / 在前台运行采集器
-  
-  ![xdrip+ settings - collector in foreground](../images/xdrip_collector_foreground.png)
+The screenshots below come from an older EMUI version. The settings are the same on EMUI 12 to 15.
 
-根据Android版本不同，这些设置的位置会有所变化。这些说明适用于Android 8.1系统。
+## Ignore battery optimization
+
+1. Open **Settings > Apps > Apps**.
+2. Tap the menu **⋮** in the top right corner and select **Special access > Battery optimization**.
+3. Tap the arrow at the top of the list and select **All apps**.
+4. Select **AAPS** and choose **Don't allow**. Huawei won't optimize apps in this list anymore.
+5. Repeat for your CGM app.
+
+![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
+
+## App launch: allow running in the background
+
+1. Open **Settings > Battery > App launch** (or **Settings > Apps > Apps >** select the app **> Battery > App launch**).
+2. Find **AAPS** and turn off **Manage automatically**.
+3. In the **Manage manually** window, turn on all three options: 
+    - **Auto-launch**
+    - **Secondary launch** (can be launched by other apps)
+    - **Run in background**
+4. Repeat for your CGM app.
+
+![Huawei - battery options](../images/Huawei_BatteryOptions.png)
+
+## Lock AAPS in the recent apps
+
+Locked apps are not closed when you clear the recent apps list.
+
+1. Open the recent apps list.
+2. Swipe down on the **AAPS** card. A lock symbol appears on the card.
+3. Do the same for your CGM app.
+
+![Huawei - lock app](../images/Huawei_LockApp.png)
+
+## Power saving mode
+
+Keep **Power saving mode** and **Ultra power saving** turned off (**Settings > Battery**). They close background apps regardless of the settings above.
+
+## If AAPS still stops in the background
+
+See [Don't kill my app](https://dontkillmyapp.com/huawei) for more Huawei-specific solutions.
+
+## Honor phones
+
+Honor is a separate brand now and its phones run MagicOS instead of EMUI. The background settings are very similar: look for **App launch** in the app's battery settings, turn off **Manage automatically** and allow all three options, then remove the app from battery optimization.

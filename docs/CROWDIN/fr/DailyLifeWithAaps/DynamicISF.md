@@ -1,137 +1,137 @@
 (Open-APS-features-DynamicISF)=
-# Dynamic ISF (DynISF)
+# SI dynamique (DynISF)
 
-Up until now, with **AMA** and **SMB**, **ISF** was defined in the **Profile** and was static for each defined period in the day. But in reality, a person’s **ISF** is not that static and varies depending on their **BG** level: when at a high BG level, the user will need more insulin to bring their **BG** down 50mg/dL / 3mmol/L than compared to a lower  **BG**. [Autosens](#Open-APS-features-autosens) was the first algorithm to try and address this issue, by adjusting **ISF** outside of mealtimes.
+Jusqu'à présent, avec **AMA** et **SMB**, la **SI** était définie dans le **Profil** et restait fixe pour chaque période définie de la journée. Mais en réalité, la **SI** d'une personne n'est pas aussi fixe : elle varie selon son niveau de **glycémie**. Quand la glycémie est haute, l'utilisateur a besoin de plus d'insuline pour faire baisser sa **glycémie** de 50 mg/dl / 3 mmol/l que quand sa **glycémie** est plus basse. [Autosens](#Open-APS-features-autosens) a été le premier algorithme à essayer de résoudre ce problème, en ajustant la **SI** en dehors des repas.
 
-**Dynamic ISF** (also called **DynISF**) serves the same purpose but is more advanced as it can be used at all times. It is recommended only for advanced users that have a good handle on their **AAPS**’ controls and monitoring. Read the [Things to consider when activating Dynamic ISF](#dyn-isf-things-to-consider-when-activating-dynamicisf) below before trying it out.
+La **SI dynamique** (aussi appelée **DynISF**) a le même but, mais elle est plus avancée, car elle peut être utilisée à tout moment. Elle est recommandée seulement aux utilisateurs avancés qui maîtrisent bien les réglages et la surveillance d'**AAPS**. Lisez la section [Points à prendre en compte avant d'activer la SI dynamique](#dyn-isf-things-to-consider-when-activating-dynamicisf) ci-dessous avant de l'essayer.
 
 ```{admonition} CAUTION - Automations or Profile Percentage change
 :class: warning
 
-**Automations** should always be used with care. This is particularly so with **Dynamic ISF**.
+Les **Automatisations** doivent toujours être utilisées avec prudence. C'est particulièrement vrai avec la **SI dynamique**.
 
-When using **Dynamic ISF**, disable any temporary **Profile** change as an **Automation** rule, because it would cause **Dynamic ISF** to be overly aggressive in correction bolusing and result in hypoglycemia. This is the exact purpose of **Dynamic ISF** and so there is no need for **AAPS** to be told to provide additional insulin by way of Automation in the event of high **BGs**.
+Quand vous utilisez la **SI dynamique**, désactivez toute règle d'**Automatisation** qui change temporairement le **Profil**, car la **SI dynamique** deviendrait trop agressive dans ses bolus de correction et provoquerait une hypoglycémie. C'est exactement le rôle de la **SI dynamique** : il n'est donc pas nécessaire de demander à **AAPS**, par une Automatisation, de donner plus d'insuline en cas de **glycémie** élevée.
 
 ```
 
-To use **Dynamic ISF**, **AAPS'** database requires a minimum of 7 days of the user's **AAPS** data.
+Pour utiliser la **SI dynamique**, la base de données d'**AAPS** doit contenir au moins 7 jours de données **AAPS** de l'utilisateur.
 
-## What does Dynamic ISF do ?
+## Que fait la SI dynamique ?
 
-**Dynamic ISF** adapts the insulin sensitivity factor (**ISF**) dynamically based on the user's:
+La **SI dynamique** adapte le facteur de sensibilité à l'insuline (**SI**) de façon dynamique, en fonction de :
 
-- Total Daily Dose of insulin (**TDD**); and
-- current and predicted blood glucose values.
+- la Dose Totale Quotidienne d'insuline (**DTQ**) ; et
+- les valeurs de glycémie actuelles et prévues.
 
-When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are not used at all anymore, except as a fallback if there is not enough TDD data in **AAPS** database (*i.e.* fresh reinstallation  of the app).
+Avec la **SI dynamique**, les valeurs de **SI** saisies dans le **Profil** ne sont plus du tout utilisées, sauf comme valeur de secours s'il n'y a pas assez de données de DTQ dans la base de données d'**AAPS** (*par ex.* après une nouvelle installation de l'application).
 
-**SMB/AMA** - an example of a user's **Profile** with static **ISF** as set by the user and utilised by **SMB** and **AMA**.
+**SMB/AMA** : un exemple de **Profil** avec une **SI** statique, définie par l'utilisateur et utilisée par **SMB** et **AMA**.
 
-![Static ISF](../images/DynamicISF/DynISF1.png)
+![SI statique](../images/DynamicISF/profile_viewer_isf.png)
 
-**Dynamic ISF** - an example of a user's **ISF** subject to change as determined by **Dynamic ISF**.
+**SI dynamique** : un exemple de **SI** qui change selon le calcul de la **SI dynamique**.
 
-![Dyn ISF](../images/DynamicISF/DynISF2.png)
+![SI dyn.](../images/DynamicISF/DynISF2.png)
 
-The section circled in red shows: `profile ISF` -> `ISF as calculated by DynISF`. <br/> Taping on this section shows a dialog with additional information, such as the **ISF** used for the calculator and carbs absorption (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
+La partie entourée en rouge montre : `profile ISF` -> `ISF as calculated by DynISF` (SI du profil, puis SI calculée par DynISF). <br/> Un appui sur cette section ouvre une boîte de dialogue avec des informations supplémentaires, comme la **SI** utilisée pour l'assistant et pour l'absorption des glucides (voir [Autres utilisations de la SI](#dynisf-other-usages-of-isf) ci-dessous).
 
-The **DynISF** value can also be shown in an additional graph, enabling “Variable sensitivity” data. It shows as a white line (see red arrow on the image above).
+La valeur de la **DynISF** peut aussi être affichée dans un graphique : appuyez sur **Ajouter graphique** sous les graphiques de l'écran principal et choisissez **V_SI** (sensibilité variable). Elle apparaît comme une ligne blanche (en bas de l'image ci-dessus).
 
-## How is Dynamic ISF calculated ?
+## Comment la SI dynamique est-elle calculée ?
 
-**Dynamic ISF** uses Chris Wilson’s model to determine **ISF** instead of the user's static **ISF** value as set within the **Profile**. A detailed explanation can be found here: [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
+La **SI dynamique** utilise le modèle de Chris Wilson pour déterminer la **SI**, au lieu de la valeur de **SI** statique définie par l'utilisateur dans le **Profil**. Une explication détaillée est disponible ici (en anglais) : [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
 
-The **Dynamic ISF** equation implemented is: `ISF = 1800 / ((TDD * DynISF Adjust Factor) * Ln (( current BG / insulin divisor) + 1 ))`
+L'équation de la **SI dynamique** utilisée est : `ISF = 1800 / ((TDD * DynISF Adjust Factor) * Ln (( current BG / insulin divisor) + 1 ))`
 
-The variables used in this equation are detailed below.<br/> Note : `Ln` stands for natural logarithm, a mathematical function.
+Les variables de cette équation sont détaillées ci-dessous.<br/> Remarque : `Ln` désigne le logarithme népérien (naturel), une fonction mathématique.
 
-The implementation uses the above equation to calculate current **ISF** and in the oref1 [predictions for **IOB**, **ZT** (zero-temping) and **UAM**](#aaps-screens-prediction-lines). It is also used for **COB** and in the bolus wizard (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
+L'implémentation utilise l'équation ci-dessus pour calculer la **SI** actuelle, et aussi dans les [prédictions oref1 pour l'**IA**, **ZT** (basal temporaire à zéro) et les **RNS**](#aaps-screens-prediction-lines). Elle est aussi utilisée pour les **GA** et dans l'assistant bolus (voir [Autres utilisations de la SI](#dynisf-other-usages-of-isf) ci-dessous).
 
-### TDD (Total Daily Dose)
-TDD will use a combination of the following values:
-1.  7 day's average **TDD**;
-2.  the previous day’s **TDD**; and
-3.  a weighted average of the last eight (8) hours of insulin use extrapolated out for 24 hours.
+### DTQ (Dose Totale Quotidienne)
+La DTQ utilise une combinaison des valeurs suivantes :
+1.  la moyenne de la **DTQ** sur 7 jours ;
+2.  la **DTQ** de la veille ; et
+3.  une moyenne pondérée des huit (8) dernières heures d'insuline, extrapolée sur 24 heures.
 
-The **TDD** used in the above equation is weighted one third of each of the above values.
+Dans l'équation ci-dessus, la **DTQ** utilisée est composée pour un tiers de chacune des valeurs ci-dessus.
 
-### Dynamic ISF Adjustment Factor
+### Facteur d'ajustement de la SI dynamique
 
-This is set within the user’s **Preferences** and is used to make **Dynamic ISF** more or less aggressive. See the [Preferences](#dyn-isf-preferences) section below.
+Il se règle dans les **Paramètres** de l'utilisateur et sert à rendre la **SI dynamique** plus ou moins agressive. Voir la section [Préférences](#dyn-isf-preferences) ci-dessous.
 
-### Insulin Divisor
-The insulin divisor depends on the peak of the insulin used and is inversely proportional to the peak time. For Lyumjev this value is 75, for Fiasp, 65 and regular rapid insulin, 55.
+### Diviseur d'insuline
+Le diviseur d'insuline dépend du pic de l'insuline utilisée et il est inversement proportionnel au temps de pic. Pour la Lyumjev, cette valeur est de 75, pour la Fiasp de 65 et pour une insuline rapide standard de 55.
 
-### ISF based on predicted BG for dosing decisions
+### SI basée sur la glycémie prévue pour les décisions de dosage
 
-Dynamic sensitivity is computed with the **current BG** value, and displayed as your current ISF in **AAPS**. But when doing dosing calculations, the oref1 algorithm computes and uses **Future ISF** instead.
+La sensibilité dynamique est calculée avec la valeur de **glycémie actuelle**, et elle est affichée comme votre SI actuelle dans **AAPS**. Mais pour les calculs de dosage, l'algorithme oref1 calcule et utilise à la place la **SI future**.
 
-This is done to prevent dosing too much insulin when **BG** is low or predicted to go low.
+Le but est d'éviter de donner trop d'insuline quand la **glycémie** est basse ou qu'elle devrait baisser.
 
-**Future ISF** uses the same formula as described above, except that it may use **minimum predicted BG** instead of **current BG**. **Minimum predicted BG**, [as calculated in oref1](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), is the minimum value your BG is predicted to go during all the course of the predictions.
+La **SI future** utilise la même formule que ci-dessus, mais elle peut utiliser la **glycémie minimale prévue** au lieu de la **glycémie actuelle**. La **glycémie minimale prévue**, [telle que calculée par oref1](#aaps-screens-how-predictions-become-a-dosing-decision), est la valeur la plus basse que votre glycémie devrait atteindre sur toute la durée des prédictions.
 
-* If the current **BG** is above target  <br/> **and** if **BG** levels are flat, within +/- 3 mg/dL:<br/>BG is used in the formula as follows: `average(minimum predicted BG, current BG)`.
-* If eventual **BG** is above target and glucose levels are increasing,<br/>  
-  **or** eventual **BG** is above current **BG**:<br/>BG is used in the formula as follows: `current BG`.
-* Otherwise:<br/>BG is used in the formula as follows: `minimum predicted BG`.
+* Si la **glycémie** actuelle est au-dessus de la cible  <br/> **et** si la **glycémie** est stable, à +/- 3 mg/dl près :<br/>la glycémie utilisée dans la formule est : `average(minimum predicted BG, current BG)` (moyenne de la glycémie minimale prévue et de la glycémie actuelle).
+* Si la **glycémie** finale prévue est au-dessus de la cible et que la glycémie monte,<br/>  
+  **ou** si la **glycémie** finale prévue est au-dessus de la **glycémie** actuelle :<br/>la glycémie utilisée dans la formule est : `current BG` (glycémie actuelle).
+* Sinon :<br/>la glycémie utilisée dans la formule est : `minimum predicted BG` (glycémie minimale prévue).
 
-For a simplified explanation, refer to the screenshot below, which illustrates the above situation. Orange dots use **predicted BG**, purple dots use **average(predicted BG, current BG)**, and blue dots use **current BG**.
+Pour une explication simplifiée, regardez la capture d'écran ci-dessous, qui illustre la situation décrite ci-dessus. Les points orange utilisent la **glycémie prévue**, les points violets la **moyenne(glycémie prévue, glycémie actuelle)** et les points bleus la **glycémie actuelle**.
 
 ![DynISF_BGValue.png](../images/DynamicISF/DynISF_BGValue.png)
 
 (dynisf-other-usages-of-isf)=
-## Other usages of ISF
+## Autres utilisations de la SI
 
-### ISF and COB absorption
+### SI et absorption des GA
 
-As described in the [COB Calculation](../DailyLifeWithAaps/CobCalculation.md) page, usually, the absorption of COB is calculated with this formula :   
+Comme décrit dans la page [Calcul GA](../DailyLifeWithAaps/CobCalculation.md), l'absorption des GA est normalement calculée avec cette formule :   
 `absorbed_carbs = deviation * ic / isf`  
-When using **Dynamic ISF**, the **ISF** used here is the average of past 24h Dynamic ISF values.
+Avec la **SI dynamique**, la **SI** utilisée ici est la moyenne des valeurs de SI dynamique des dernières 24 h.
 
-### ISF in Bolus Wizard
+### SI dans l'Assistant Bolus
 
-When using the [Bolus wizard](#aaps-screens-bolus-wizard), **ISF** is used if **BG** is above target to add a correction.
+Avec l'[Assistant Bolus](#aaps-screens-bolus-wizard), la **SI** est utilisée pour ajouter une correction si la **glycémie** est au-dessus de la cible.
 
-When using **Dynamic ISF**, the **ISF** used here is the average of past 24h Dynamic ISF values.
+Avec la **SI dynamique**, la **SI** utilisée ici est la moyenne des valeurs de SI dynamique des dernières 24 h.
 
 (dyn-isf-preferences)=
-## Préférences
+## Paramètres
 
-Check **Enable dynamic sensitivity** in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings) to activate. New settings become available once selected.
+Pour l'activer, cochez **Activer la sensibilité dynamique** dans [Paramètres > OpenAPS SMB](#Preferences-openaps-smb-settings). De nouveaux paramètres sont disponibles une fois l'option sélectionnée.
 
-![Dynamic ISF settings](../images/Pref2020_DynISF.png)
+![Paramètres de la SI dynamique](../images/preferences/settings_dynamic_isf.png)
 
 (dyn-isf-adjustment-factor)=
-### Dynamic ISF Adjustment Factor
-**Dynamic ISF** works based on a single rule which is supposed to apply to everyone, implying that people having the same **TDD** would have the same sensitivity. As each user has their own personal sensitivity, the **Adjustment Factor** allows the user to define whether they are more or less sensitive to insulin than the "standard" person.
+### Facteur d'ajustement DynamicISF
+La **SI dynamique** repose sur une seule règle, censée s'appliquer à tout le monde : des personnes avec la même **DTQ** auraient donc la même sensibilité. Comme chaque utilisateur a sa propre sensibilité, le **Facteur d'ajustement** permet à l'utilisateur d'indiquer s'il est plus ou moins sensible à l'insuline que la personne « standard ».
 
-The **Adjustment Factor** is a value between 1% and 300%. This acts as a multiplier on the **TDD** value.
+Le **Facteur d'ajustement** est une valeur entre 1 % et 300 %. Il agit comme un multiplicateur de la valeur de **DTQ**.
 
-* Increasing this value above 100 % makes **DynISF** more aggressive: the **ISF** values become *smaller* (_i.e._ more insulin required to decrease **BG** levels a small amount)
-* Lowering this value under 100% makes **DynISF** less aggressive: the **ISF** values become larger (_i.e._ less insulin required to decrease **BG** levels a small amount).
+* Augmenter cette valeur au-dessus de 100 % rend la **DynISF** plus agressive : les valeurs de **SI** deviennent *plus petites* (_c.-à-d._ il faut plus d'insuline pour faire baisser un peu la **glycémie**)
+* Baisser cette valeur sous 100 % rend la **DynISF** moins agressive : les valeurs de **SI** deviennent plus grandes (_c.-à-d._ il faut moins d'insuline pour faire baisser un peu la **glycémie**).
 
-The **Adjustment Factor** is also altered when activating a [**Profile Switch** with percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). A lower **Profile Percentage** will lower the **Adjustment Factor**, and vice versa in respect of higher **Profile Percentage**.
+Le **Facteur d'ajustement** change aussi quand vous activez un [**Changement de profil** avec un pourcentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). Un **Pourcentage du profil** plus bas diminue le **Facteur d'ajustement**, et un **Pourcentage du profil** plus haut l'augmente.
 
-For example, if your **Adjustment Factor** is 80%, and **Profile Switch** to 80% is actioned , the resulting **Adjustment Factor** will be `0.8*0.8=0.64`.
+Par exemple, si votre **Facteur d'ajustement** est de 80 % et que vous faites un **Changement de profil** à 80 %, le **Facteur d'ajustement** résultant sera `0,8 × 0,8 = 0,64`.
 
-This means that, when using **DynISF**, you can use **Profile Percentage** to temporarily fine tune your sensitivity manually. This can be useful for physical activity (lower percentage), illness (higher percentage), etc.
+Cela signifie qu'avec la **DynISF**, vous pouvez utiliser le **Pourcentage du profil** pour ajuster temporairement et manuellement votre sensibilité. C'est utile par exemple pour une activité physique (pourcentage plus bas), une maladie (pourcentage plus haut), etc.
 
-### BG level below which low glucose suspend occurs
+### Seuil AGB
 
-**BG** value below which insulin is suspended. Default value uses the standard target model. A user can set this value between 60mg/dl (3.3mmol/l) and 100mg/dl(5.5mmol/l). Values below 65/3.6 result in use of the default model.
+Valeur de **glycémie** sous laquelle l'insuline est arrêtée (arrêt glycémie basse, AGB). La valeur par défaut utilise le modèle de cible standard. L'utilisateur peut régler cette valeur entre 60 mg/dl (3,3 mmol/l) et 100 mg/dl (5,5 mmol/l). Les valeurs sous 65/3,6 entraînent l'utilisation du modèle par défaut.
 
-### Enable TDD based sensitivity ratio for basal and glucose target modification
+### DynamicISF ajuste la sensibilité
 
-This setting replaces Autosens, and uses the last 24h **TDD**/7D **TDD** as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. This calculated value is also used to adjust target, if the options to adjust target with sensitivity are enabled. Unlike Autosens, this option does not adjust **ISF** values.
+Ce paramètre (*« Ajuster les calculs de sensibilité avec DynamicISF »*) remplace Autosens et utilise le rapport **DTQ** des dernières 24 h / **DTQ** sur 7 jours comme base pour augmenter ou diminuer le débit basal, de la même manière qu'Autosens standard. Cette valeur calculée sert aussi à ajuster la cible, si les options d'ajustement de la cible selon la sensibilité sont activées. Contrairement à Autosens, cette option n'ajuste pas les valeurs de **SI**.
 
 (dyn-isf-things-to-consider-when-activating-dynamicisf)=
-## Things to consider when activating Dynamic ISF
+## Points à prendre en compte avant d'activer la SI dynamique
 
-* **Dynamic ISF** is recommended only for advanced users that have a good handle on their **AAPS'** controls and monitoring. Users should ideally have attained good control with **SMB** before moving onto **Dynamic ISF**.
-* As mentioned above, turn off all [**Automations**](../DailyLifeWithAaps/Automations.md) which activate a **Profile Percentage** in relation to **BG** because it will be too aggressive and may over deliver in insulin! This is already part of the **Dynamic ISF** algorithm.
-* [Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) is taken into account for the Dynamic ISF calculation (see [Dynamic ISF Adjustment Factor](#dyn-isf-adjustment-factor) above). It is bad practice to use a **Profile Percentage** other than 100% for a long time. If you determine that your **Profile** has changed, create a new **Profile** with your revised values in order to replicate the **Profile** with a specific percentage.
-* **Dynamic ISF** may not work for everyone. Specifically, you may see unexpected results if one of these situations apply to you:
-  * Variable lifestyle (inconsistent eating or physical activity patterns)
-  * Inconsistent TDD or sensitivity from day to day.
-* There is no precise guide to set the initial value of the **Adjustment Factor**. However, as a starting point: assuming your **Profile** values are correct, when you are in range and **BG** levels are flat, the **DynISF** value should be about the same as the one you had in your **Profile** before.<br/>If you see that **Dynamic ISF** is too aggressive, lower the **Adjustment Factor**, and vice-versa.
-* Even though **DynISF** does not use **Profile ISF** at all, if you notice that your sensitivity is very different from what was previously stored in your **Profile**, you should consider keeping it up-to-date. This may be useful in case you loose your **AAPS** data (_i.e._ new phone, new **AAPS** version…), as your **Profile ISF** will be used as fallback for the next 7 days.
+* La **SI dynamique** est recommandée seulement aux utilisateurs avancés qui maîtrisent bien les réglages et la surveillance d'**AAPS**. Idéalement, les utilisateurs devraient avoir obtenu un bon contrôle avec **SMB** avant de passer à la **SI dynamique**.
+* Comme indiqué ci-dessus, désactivez toutes les [**Automatisations**](../DailyLifeWithAaps/Automations.md) qui activent un **Pourcentage du profil** en fonction de la **glycémie**, car ce serait trop agressif et pourrait délivrer trop d'insuline ! Cela fait déjà partie de l'algorithme de la **SI dynamique**.
+* Le [Pourcentage du profil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) est pris en compte dans le calcul de la SI dynamique (voir [Facteur d'ajustement de la SI dynamique](#dyn-isf-adjustment-factor) ci-dessus). Il est déconseillé d'utiliser longtemps un **Pourcentage du profil** différent de 100 %. Si vous constatez que votre **Profil** a changé, créez un nouveau **Profil** avec vos valeurs corrigées, au lieu de garder le **Profil** avec un pourcentage spécifique.
+* La **SI dynamique** ne convient pas forcément à tout le monde. En particulier, vous pouvez avoir des résultats inattendus si l'une de ces situations vous concerne :
+  * Mode de vie variable (repas ou activité physique irréguliers)
+  * DTQ ou sensibilité irrégulières d'un jour à l'autre.
+* Il n'existe pas de guide précis pour régler la valeur de départ du **Facteur d'ajustement**. Mais comme point de départ : si les valeurs de votre **Profil** sont correctes, quand vous êtes dans la cible et que la **glycémie** est stable, la valeur de la **DynISF** devrait être à peu près la même que celle de votre **Profil** avant.<br/>Si vous voyez que la **SI dynamique** est trop agressive, baissez le **Facteur d'ajustement**, et inversement.
+* Même si la **DynISF** n'utilise pas du tout la **SI du profil**, si vous remarquez que votre sensibilité est très différente de celle enregistrée dans votre **Profil**, pensez à mettre le profil à jour. Cela peut être utile si vous perdez vos données **AAPS** (_par ex._ nouveau téléphone, nouvelle version d'**AAPS**…), car la **SI du profil** sera utilisée comme valeur de secours pendant les 7 jours suivants.

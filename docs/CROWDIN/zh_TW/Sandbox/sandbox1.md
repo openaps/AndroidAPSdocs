@@ -1,3 +1,7 @@
+- - -
+orphan: true
+- - -
+
 # 內部沙盒文件 1，用於測試我們的衝刺
 
 ```{admonition} no need to translate this
@@ -12,7 +16,7 @@
 
 設置測試
 
-「在道格拉斯·亞當斯的《銀河便車指南》一書中，數字 43 是由一台名為「深思」的超級電腦在 750 萬年內計算出來的『生命、宇宙以及一切的最終答案』。」 - [維基百科](https://en.wikipedia.org/wiki/42_(number))。
+"The number 42 is, in The Hitchhiker's Guide to the Galaxy by Douglas Adams, the "Answer to the Ultimate Question of Life, the Universe, and Everything," calculated by an enormous supercomputer named Deep Thought over a period of 7.5 million years." - [維基百科](https://en.wikipedia.org/wiki/42_(number))。
 
 這是供文件團隊測試的內部沙盒文件
 

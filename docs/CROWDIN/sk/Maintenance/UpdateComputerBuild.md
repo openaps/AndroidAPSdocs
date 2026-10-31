@@ -1,103 +1,100 @@
-# Update with Android Studio
+# Aktualizácia v Android Studiu
 
-## Build yourself instead of download
+## Zostavte si aplikáciu sami namiesto stiahnutia
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** nie je možné stiahnuť kvôli predpisom pre zdravotnícke pomôcky. Zostaviť si aplikáciu pre vlastné použitie je legálne, ale nesmiete jej kópiu dávať iným! Podrobnosti nájdete na stránke [Najčastejšie otázky používateľov APS](../UsefulLinks/FAQ.md).
 
 ```{note}
-In case you want to build **AAPS** on a new computer : copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+Ak chcete zostaviť **AAPS** na novom počítači: skopírujte záložný súbor úložiska kľúčov do nového počítača. Potom namiesto tohto návodu postupujte podľa [postupu prvého zostavenia **AAPS**](../SettingUpAaps/BuildingAaps.md). Jediný rozdiel je v tom, že namiesto vytvorenia nového úložiska kľúčov môžete vybrať to, ktoré ste skopírovali do nového počítača.
 ```
 
-## Overview for updating to a new version of AAPS with Android Studio
+## Prehľad aktualizácie na novú verziu AAPS v Android Studiu
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
+Ak máte problémy, pozrite si samostatnú stránku [Riešenie problémov s Android Studiom](../GettingHelp/TroubleshootingAndroidStudio.md).
 
-### Export your settings
+### Exportujte svoje nastavenia
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Exportujte nastavenia z existujúcej verzie **AAPS** vo vašom telefóne. Možno ich nebudete potrebovať, ale opatrnosti nikdy nie je dosť.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Ak si nepamätáte, ako na to, pozrite si stránku [Vytváranie a obnova záloh](ExportImportSettings.md).
 
-### Check your Android Studio version
+### Skontrolujte verziu Android Studia
 
-The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
+Minimálna požadovaná verzia je uvedená v [návode na zostavenie](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Ak máte staršiu verziu, [najprv aktualizujte Android Studio](#Building-APK-install-android-studio)!
 
 (Update-to-new-version-update-your-local-copy)=
-### Update your local copy
+### Aktualizujte svoju lokálnu kópiu
 
-```{admonition} WARNING
-:class: warning
-If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../SettingUpAaps/BuildingAaps.md), as this guide will not work for you!
-```
+* Otvorte svoj existujúci projekt AAPS v Android Studiu. Možno budete musieť vybrať svoj projekt. (Dvakrát) kliknite na projekt AAPS.
 
-* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
+  ![Android Studio – výber projektu](../images/update/01_ProjectSelection.png)
 
-  ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
+* Na paneli ponuky Android Studia vyberte Git -> Fetch
 
-* In the menu bar of Android Studio, select Git -> Fetch
+   ![Ponuka Android Studia – Git – Fetch](../images/update/02_GitFetch.png)
 
-   ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+* V pravom dolnom rohu sa zobrazí správa, že Fetch prebehol úspešne.
 
-* You will see a message in the lower right corner that Fetch was successful.
+   ![Ponuka Android Studia – Git – Fetch úspešný](../images/update/03_GitFetchSuccessful.png)
 
-   ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
+* Teraz na paneli ponuky vyberte Git -> Pull
 
-* In the menu bar, now select Git -> Pull
+   ![Ponuka Android Studia – Git – Pull](../images/update/04_GitPull.png)
 
-   ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+* Všetky možnosti nechajte tak, ako sú (origin/master), a vyberte Pull
 
-* Leave all options as they are (origin/master) and select Pull
+   ![Android Studio – Git – dialóg Pull](../images/update/05_GitPullOptions.png)
 
-   ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
-
-* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
+* Počkajte, kým prebieha sťahovanie. Uvidíte to ako informáciu na spodnom paneli. Po dokončení sa zobrazí správa o úspechu.
 
   ```{note}
-  The files that were updated may vary! This is not an indication
+  Aktualizované súbory sa môžu líšiť! This is not an indication of a problem.
   ```
 
-   ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+   ![Android Studio – Pull úspešný](../images/update/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Wait until it is finished.
+* Spustí sa Gradle Sync, ktorý stiahne niektoré závislosti. Počkajte, kým sa dokončí.
 
-  ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
+  ![Android Studio – Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-### Check JVM version
+### Skontrolujte verziu JVM
 
-This check is particularly indicated if you have already built a previous version of **AAPS** on the same computer.
+Táto kontrola je vhodná najmä vtedy, ak ste už na tom istom počítači zostavili predchádzajúcu verziu **AAPS**.
 
-Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required version for JVM, matching the **AAPS** version you are now building. Then follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
+V [návode na zostavenie](#Building-APK-recommended-specification-of-computer-for-building-apk-file) si overte požadovanú verziu JVM pre verziu **AAPS**, ktorú teraz zostavujete. Potom postupujte podľa krokov v časti [Incompatible Gradle JVM](#incompatible-gradle-jvm) (nekompatibilná JVM pre Gradle), aby ste sa uistili, že používate správnu verziu.
 
 (Update-to-new-version-build-the-signed-apk)=
-### Build the Signed APK
+### Zostavte podpísané APK
 
-Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+Váš zdrojový kód je teraz aktuálna vydaná verzia a všetky predpoklady sú skontrolované. Teraz je čas zostaviť podpísaný APK podľa popisu v [časti o zostavení podpísaného APK](#Building-APK-generate-signed-apk).
 
 (Update-to-new-version-transfer-and-install)=
 
-### Transfer and install the apk
-You need to transfer the apk to your phone so you can install it.
+### Preneste a nainštalujte APK
+APK musíte preniesť do telefónu, aby ste ho mohli nainštalovať.
 
 ```{note}
-If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
-For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
+Ak ste zostavenie dokončili s rovnakým existujúcim úložiskom kľúčov v Android Studiu, nemusíte existujúcu aplikáciu v telefóne odstraňovať. Pri inštalácii APK postupujte podľa pokynov na inštaláciu aktualizácií.
+V iných prípadoch, napríklad keď ste si pre podpísaný APK vytvorili v Android Studiu nové úložisko kľúčov, musíte pred inštaláciou APK starú aplikáciu odstrániť. **Nezabudnite exportovať nastavenia!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
+Pozrite si návod [Prenos a inštalácia AAPS do smartfónu](../SettingUpAaps/TransferringAndInstallingAaps.md). Tam, kde Google vyžaduje [overovanie vývojárov pre Android](#android-developer-verification) (od septembra 2026, v závislosti od krajiny), inštalujte pomocou [ADB](#android-developer-verification-adb) namiesto ťuknutia na súbor APK.
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
+Pokračujte [tu](#Update-to-new-version-check-aaps-version-on-phone).
 
-## Troubleshooting
+(update-computer-build-troubleshooting)=
 
-If anything goes wrong, don't panic.
+## Riešenie problémov
 
-Take a breath!
+Ak sa niečo pokazí, nepanikárte.
 
-Then see the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) if your problem is already documented!
+Zhlboka sa nadýchnite!
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Potom si pozrite samostatnú stránku [Riešenie problémov s Android Studiom](../GettingHelp/TroubleshootingAndroidStudio.md), či už váš problém nie je popísaný!
+
+Ak potrebujete ďalšiu pomoc, obráťte sa na ostatných používateľov **AAPS** na [Facebooku](https://www.facebook.com/groups/AndroidAPSUsers) alebo [Discorde](https://discord.gg/4fQUWHZ4Mw).

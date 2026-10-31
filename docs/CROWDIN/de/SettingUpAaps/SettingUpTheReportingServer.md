@@ -12,7 +12,7 @@ Wir empfehlen Nightscout zu nutzen.
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout ist eine Web-Anwendung, die Deine CGM-Daten und **AAPS**-Daten protokolliert, anzeigen und daraus Berichte erstellt. Es ist eine leistungsstarke Plattform, die seit vielen Jahren in **AAPS** integriert ist. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). Es ermöglicht auch Betreuenden, Befehle remote an **AAPS** zu senden.
+Nightscout ist eine Web-Anwendung, die Deine CGM-Daten und **AAPS**-Daten protokolliert, anzeigen und daraus Berichte erstellt. Es ist eine leistungsstarke Plattform, die seit vielen Jahren in **AAPS** integriert ist. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). It also carries the remote commands that caregivers send to **AAPS** from **AAPSClient** (see [Master ↔ Client control](#client-master-control)).
 
 Nightscout steht als Open-Source-Software zur Verfügung. Jeder kann einen Nightscout-Server erstellen und betreiben, entweder kostenlos oder als kostenpflichtiger Dienst.
 
@@ -44,7 +44,7 @@ Tidepool ist erst seit der Ende 2023 erschienenen Version 3.2 in **AAPS** verfü
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger  
-Tidepool ist nicht für das Teilen von **AAPS**-Echtzeit-Informationen mit Betreuenden geeignet, da es zwischen dem Dateneingang und der Datenverfügbarkeit eine Verzögerung von drei Stunden gibt.  
+As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool is not suitable for sharing real-time information with caregivers.  
 Auf der anderen Seite kann Tidepool eine großartige Lösung sein, wenn Berichte mit dem Diabetes-Team geteilt werden sollen, und Nightscout dort keine akzeptierte Lösung ist.  
 ```
 
@@ -52,11 +52,11 @@ Tidepool ist ein [Open-Source](https://github.com/tidepool-org)-Projekt. Es biet
 
 Weitere Informationen, um Tidepool mit AAPS einzurichten, findest Du [hier](../SettingUpAaps/Tidepool.md).
 
-```{admonition} **AAPS** has a the uploader for Tidepool integrated
+```{admonition} **AAPS** has the uploader for Tidepool integrated
 :class: note
 Du brauchst die Tidepool Uploadedr App ** nicht nutzen: **AAPS** lädt die Glukosewerte, die Behandlungs- und die Basalinformationen für Dich hoch. Du brauchst nur ein eigenes Tidepool-Konto. Lade Deine Daten nicht mit Tidepools separaten Upload-Tool hoch, da dies zu doppelten Werten führen wird.  
 ```
 
 ## Next step
 
-Sobald Du Deinen Berichtsserver eingerichtet hast, kannst Du jetzt entweder ein [dediziertes Google-Konto für die AAPS-Nutzung](../UsefulLinks/DedicatedGoogleAccountForAaps.md)einrichten, oder direkt zum Abschnitt [AAPS erstellen](../SettingUpAaps/BuildingAaps.md) weiter gehen. 
+Once you have set up your reporting server, you can configure **AAPS** on your phone with the [Setup Wizard](./SetupWizard.md), which will also link **AAPS** to your reporting server.

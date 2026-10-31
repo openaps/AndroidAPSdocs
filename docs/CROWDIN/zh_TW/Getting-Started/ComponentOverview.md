@@ -1,6 +1,6 @@
 # 組件總覽
 
-**AAPS** 不僅僅是一個（自建的）應用程式，它只是你封閉循環系統中幾個模組之一。在決定組件之前，查看組件文件將是一個好主意。
+**AAPS** is not just a (self-built) application; it is one of several modules of your closed loop system. Before deciding on components, it is a good idea to look at the component documentation.
 
 ![組件總覽](../images/modules.png)
 
@@ -18,32 +18,33 @@
 
 ### 適合你的糖尿病治療的個性化劑量演算法
 
-雖然這不是可以製作或購買的東西，但這是最容易被低估但卻至關重要的「模組」。當你讓一個演算法幫助管理你的糖尿病時，他需要正確的設定才能避免嚴重錯誤。即使你仍在缺少其他模組，你也可以在你的糖尿病團隊的協助下驗證和調整你的 **設定檔**。
+Even though this is not something to create or buy, it is probably the most underestimated 'module' — but it is essential. When you let an algorithm help manage your diabetes, it needs to know the right settings so it does not make severe mistakes. 即使你仍在缺少其他模組，你也可以在你的糖尿病團隊的協助下驗證和調整你的 **設定檔**。
 
 該 **設定檔** 包含：
 
 - BR（基礎率）：提供背景胰島素；
 - ISF（胰島素敏感性因子）：一單位胰島素可以降低你的血糖值的幅度；
-- CR（碳水比）：一單位胰島素能覆蓋多少克碳水化合物；
-- DIA（胰島素作用時間）。
+- CR (carb ratio): how many grams of carbohydrate are covered by one unit of insulin.
 
 大多數使用閉環系統的人會使用日夜節律的 BR、ISF 和 CR，這些數值會根據一天中激素影響調整胰島素敏感性。
 
-有關你的 **設定檔** 的更多資訊 [請見專頁](../SettingUpAaps/YourAapsProfile.md)。
+Alongside your **Profile**, you also need to configure your **insulin** in **Manage → Insulin settings**, including its DIA (duration of insulin action) — see [Insulin settings](#Config-Builder-insulin-dia).
+
+More information about your **Profile** [on the dedicated page](../SettingUpAaps/YourAapsProfile.md).
 
 ### 手機
 
-請參閱專頁 [智慧型手機](../Getting-Started/Phones.md)。
+See the dedicated page [Phones](../Getting-Started/Phones.md).
 
 ### 胰島素幫浦
 
-請參閱專頁 [相容的幫浦](../Getting-Started/CompatiblePumps.md)。
+See the dedicated page [Compatible Pumps](../Getting-Started/CompatiblePumps.md).
 
-**某些幫浦型號的優缺點**
+**Advantages and disadvantages of some pump models**
 
-Combo、Insight 及舊版 Medtronic 是穩定的幫浦，且可以迴路使用。 Combo 的優勢在於有更多類型的輸入套件可以選擇，因為它具有標準的 Luer-Lock。而且其電池是你可以在任何加油站或 24 小時便利商店購買的預設電池，若你真的需要，還可以從酒店房間的遙控器上偷/借一個。;-)
+The Combo, the Insight and the older Medtronic are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard Luer-Lock. And the battery is a default one you can buy at any gas station, 24-hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
 
-然而，DanaR/RS 和 Dana-i 相對於 Combo 作為首選幫浦的優勢在於：
+The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice however are:
 
 - Dana-i/RS 的初始配對比較簡單。但通常這只需要做一次，所以他僅在你想使用不同幫浦測試新功能時才有影響。
 - 目前，Combo 使用螢幕解析進行工作。總的來說，這效果不錯，但速度較慢。對於閉環系統來說，這並不太重要，因為所有操作都在背景中進行。不過，你需要連線的時間仍然相對較長，因此在進行注射和烹飪時，藍牙連線可能會斷開，這並不容易。
@@ -53,36 +54,36 @@ Combo、Insight 及舊版 Medtronic 是穩定的幫浦，且可以迴路使用�
 
 ### 血糖來源
 
-請參閱專頁 [相容的 CGM](../Getting-Started/CompatiblesCgms.md)。
+See the dedicated page [Compatible CGMs](../Getting-Started/CompatiblesCgms.md).
 
 ### **AAPS**-.apk 檔案
 
-系統的主要組件。要安裝應用程式，你必須先自己建立 apk 檔案。安裝說明請見 [這裡](../SettingUpAaps/BuildingAaps.md)。
+The main component of the system. In order to install the app, you have to build the apk-file yourself first. Instructions are [here](../SettingUpAaps/BuildingAaps.md).
 
 ### 報告伺服器
 
-報告伺服器顯示你的血糖和治療資料，並生成詳細分析報告。目前有兩個報告伺服器可以與 AAPS 一起使用：[Nightscout](#SettingUpTheReportingServer-nightscout) 和 [Tidepool](#SettingUpTheReportingServer-tidepool)。它們都提供可視化你的糖尿病資料的方式，提供有關 **目標範圍內**（TIR）及其他指標的統計資料。
+A reporting server displays your glucose and treatment data, and creates reports for detailed analysis. There are currently two reporting servers available for use with AAPS: [Nightscout](#SettingUpTheReportingServer-nightscout) and [Tidepool](#SettingUpTheReportingServer-tidepool). They both provide ways to visualize your diabetes data over time, provide statistics about the **time in range** (TIR) and other measures.
 
-報告伺服器獨立於其他模組。如果你不想使用報告伺服器，請知道這在長期運行 **AAPS** 時並不是強制的。但你仍需設置一個，因為這將是完成 [**目標 1**](#objectives-objective1) 的必要條件。
+The Reporting server is independent of the other modules. If you don’t want to use a reporting server, you should know that it is not mandatory for running **AAPS** in the long term. But you still need to set one up, as it is required to fulfill [**Objective 1**](#objectives-objective1).
 
-有關如何設置報告伺服器的更多資訊，可以在 [這裡](../SettingUpAaps/SettingUpTheReportingServer.md)找到。
+Additional information on how to set up your reporting server can be found [here](../SettingUpAaps/SettingUpTheReportingServer.md).
 
 ## 可選模組
 
 ### 智慧型手錶
 
-你可以選擇任何搭載 Android WearOS 2.x 至 4.x 的智慧型手錶。**注意，WearOS 5.x不一定相容！**
+You can choose any smartwatch running **Wear OS 3** or newer. See [Watches](../Getting-Started/Watches.md) for details.
 
-用戶正在建立一個[已測試的手機和手錶清單](#Phones-list-of-tested-phones)。有不同的錶盤可供 **AAPS** 使用，你可以在 [這裡](../WearOS/WearOsSmartwatch.md)找到。
+Users are creating a [list of tested phones and watches](#Phones-list-of-tested-phones). There are different watchfaces for use with **AAPS**, which you can find [here](../WearOS/WearOsSmartwatch.md).
 
-### xDrip+
+### xDrip
 
-即使你不需要將 xDrip+ 應用程式設為 **血糖來源**，仍然可以用於 _即_ 警報或不同的血糖顯示。你可以設定任意多的警報，指定警報應該在什麼時間啟動，是否可以覆蓋靜音模式等。有關一些 xDrip+ 資訊，請參閱[這裡](../CompatibleCgms/xDrip.md)。請注意，這款應用程式的文件並非總是最新的，因為其進展相當快速。
+Even if you don't need the xDrip app as your **BG Source**, you can still use it, for example for alarms or a different blood glucose display. You can have as many alarms as you want, specify the time when an alarm should be active, choose whether it can override silent mode, etc. Some xDrip information can be found [here](../CompatibleCgms/xDrip.md). Please be aware that the documentation for this app is not always up to date, as it changes quickly.
 
 ## 等待模組期間該做什麼
 
-有時候獲得所有模組以完成迴路需要一些時間。但不用擔心，還有很多事情可以在等待期間進行。確定需要檢查和（如有需要）調整基礎率（BR）、胰島素-碳水比（IC）、胰島素敏感性因子（ISF）等是**必要的**。或許開放迴路可以是一個測試該系統並熟悉 **AAPS** 的好方法。使用此模式，**AAPS** 會提供你可以手動執行的治療建議。
+It sometimes takes a while to get all the modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with **AAPS**. Using this mode, **AAPS** gives treatment recommendations you can manually execute.
 
-你可以繼續閱讀這裡的文件，與其他閉環系統用戶線上或離線交流，或[閱讀](../UsefulLinks/BackgroundReading.md)文件或其他用戶撰寫的內容（即使需要小心，不是所有內容都正確或適合你複製）。
+You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../UsefulLinks/BackgroundReading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 
-**完成了嗎？** 如果你已經擁有所有 **AAPS** 組件（恭喜你！）或至少足夠開始使用開放迴路模式，你應該首先閱讀每個新目標的 [目標說明](../SettingUpAaps/CompletingTheObjectives.md) 並設置你的硬體。
+**Done?** If you have your **AAPS** components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective, and set up your hardware.

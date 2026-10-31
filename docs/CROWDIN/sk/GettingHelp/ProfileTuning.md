@@ -1,136 +1,142 @@
-# **Tweaking the AAPS' Profile**
+# Ladenie profilu AAPS
 
 ```{admonition} This is NOT a medical advice
 :class: warning
-Please work with your care team for support and advice on your diabetes management.</br>
-Use this guide only once you have [set up your **Profile** correctly](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md), following all **AAPS** objectives.
+Pri liečbe diabetu spolupracujte so svojím lekárskym tímom, ktorý vám poskytne podporu a rady.</br>
+Tento návod používajte až potom, čo ste [správne nastavili svoj **profil**](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md) a splnili všetky ciele **AAPS**.
 ```
 
-This guide explains the logic of the OpenAPS algorithm results with a given __Profile__, and provides information about which values to adjust when certain situations are observed. The suggestions about basal testing below may diverge from what your care team  advises
+Tento návod vysvetľuje logiku výsledkov algoritmu OpenAPS pri danom __profile__ a uvádza, ktoré hodnoty v **AAPS** môžete upraviť, keď spozorujete určité situácie alebo vzory. Nasledujúce rady o testovaní bazálu sa môžu líšiť od toho, čo vám odporúča váš lekársky tím.
 
-Using **closed loop** may make basal  testing easier and may significantly reduce  the hypo risk if your __Profile__ basal is too strong.
+Používanie **uzavretého okruhu** môže testovanie bazálu uľahčiť a môže výrazne znížiť riziko hypoglykémie, ak je bazál vo vašom __profile__ príliš silný.
 
-## **Changing profile's settings, how to proceed**
+## Zmena nastavení profilu: ako postupovať
 
-1. Ensure you have read and understand __AAPS’__ recommended settings and advice below. Not following this advice will make the whole process problematic and less likely to get a well tuned __Profile__
-2. Carefully observe and compare, **over several days**, what is happening with your __BG__ and __IOB__.
-3. Keep an eye out for patterns that happen around the same time (almost) everyday.
-4. It's important to do this over several days. Poor results tend to be yielded from using data observed on a single day to make __Profile’s__ adjustment decisions.
-5. After you have observed a repeatable pattern of behavior, e.g. at 1PM you see a spike in __BG__ or a negative __IOB__ value, only then start to make small changes to your __Profile__.
-6. It's important to limit the changes you make to one thing at a time. E.g. increase your basal by 10% around 1PM.
-7. After every change, it's important to monitor the impact on your __BG__ and __IOB__ for the next few days.
-8. Repeat this pattern, observe, decide, tweak again if needed
+1. Uistite sa, že ste si prečítali odporúčané nastavenia a rady __AAPS__ uvedené nižšie a že im rozumiete. Ak sa týmito radami nebudete riadiť, úpravy môžu byť problematické a je menšia šanca, že získate dobre vyladený __profil__
+2. Starostlivo sledujte a porovnávajte **počas niekoľkých dní**, čo sa deje s vašou __glykémiou__ a __IOB__.
+3. Všímajte si vzory v **AAPS**, ktoré sa objavujú (takmer) každý deň v rovnakom čase.
+4. Je dôležité robiť to počas niekoľkých dní. Keď sa rozhodnutia o úprave __profilu__ robia podľa údajov z jediného dňa, výsledky bývajú zlé.
+5. Až keď spozorujete opakujúci sa vzor, napr. o 13:00 vidíte prudký nárast __glykémie__ alebo zápornú hodnotu __IOB__, začnite robiť malé zmeny vo svojom __profile__.
+6. Je dôležité meniť naraz iba jednu vec. Napr. zvýšte bazál okolo 13:00 o 10 %.
+7. Po každej zmene je dôležité sledovať jej vplyv na __glykémiu__ a __IOB__ počas niekoľkých ďalších dní.
+8. Tento postup opakujte: sledujte, rozhodnite sa a v prípade potreby znova upravte
 
-Don't rush, go slow!
+Neponáhľajte sa, postupujte pomaly!
 
-## **Recommended settings and advice while tweaking basal**
+## Odporúčané nastavenia a rady pri ladení bazálu
 
-- Do all testing with [closed loop enabled](#AapsScreens-loop-status).
-- **Turn <u>OFF</u> all [automations](../DailyLifeWithAaps/Automations.md)**
-- **Turn <u>OFF</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](../AdvancedOptions/DevBranch.md), [AutoSens](#Open-APS-features-autosens)** so that they will not try to adapt your profile.
-- Do not make manual user actions (manual bolus, temp targets etc…) while testing: let the system use the **Profile** settings only.
-- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board, Carbs On Board (and Sensitivity change). On graph 2, use Deviations and Blood Glucose Impact. When asking for advice, always include those on your screenshots.
+- Všetky testy robte so [zapnutým uzavretým okruhom](#AapsScreens-loop-status).
+- **Vypnite (<u>OFF</u>) všetky [automatizácie](../DailyLifeWithAaps/Automations.md)**
+- **Vypnite (<u>OFF</u>) [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)**, aby sa nepokúšali prispôsobovať váš profil.
+- Počas testovania nerobte žiadne ručné zásahy (ručný bolus, dočasné ciele atď.): nechajte systém používať iba nastavenia **profilu**.
+- Pre [ďalšie grafy](#AapsScreens-section-g-additional-graphs): v grafe 1 použite Aktívny inzulín, Aktívne sacharidy (a Zmena citlivosti). V grafe 2 použite Odchýlky a Vplyv na glykémiu. Keď žiadate o radu, vždy ich majte na svojich snímkach obrazovky.
 - COB=0[*](#profiletuning-cob-zero)
-- No physical activities.
-- No stress.
-- No illness.
-- No extreme weather like high or low temperatures.
-- If your [basal rate profile](#your-aaps-profile-basal-rates) is correct, when you are on target with COB=0[*](#profiletuning-cob-zero) and IOB=0, you will remain constantly on target whatever your ISF (ISF is only used when you are higher than your target).
-- You need to check the actual IOB but also, the IOB chart to see how the IOB was during the past few hours.
+
+Ďalšie vplyvy, ktorým by ste sa mali pokiaľ možno vyhnúť, pretože ovplyvňujú údaje a môžu viesť k zlým záverom:
+- Žiadne fyzické aktivity.
+- Žiadny stres.
+- Žiadna choroba.
+- Žiadne extrémne počasie, napríklad vysoké alebo nízke teploty.
+- Žiadne zlyhané relácie pumpy alebo CGM.
+- Žiadne neohlásené sacharidy.
+
+Všimnite si tiež:
+- Ak je váš [profil bazálnych dávok](#your-aaps-profile-basal-rates) správny, potom keď ste na cieľovej glykémii s COB=0[*](#profiletuning-cob-zero) a IOB=0, zostanete stále na cieľovej glykémii bez ohľadu na váš **ISF** (**ISF** sa používa iba vtedy, keď ste nad cieľovou **glykémiou**).
+- Musíte skontrolovať aktuálny **IOB**, ale aj graf **IOB**, aby ste videli, ako sa **IOB** vyvíjal počas niekoľkých posledných hodín.
 
 (profiletuning-cob-zero)=
 
 ***COB = 0**
 
-Meaning that the meal is digested, and there are no more carbs in your body.
+To znamená, že jedlo je strávené a v tele už nie sú žiadne sacharidy.
 
-AAPS might indicate [COB=0 while you still have carbs on board](../DailyLifeWithAaps/CobCalculation.md).
+**AAPS** môže ukazovať [COB=0, aj keď ešte máte aktívne sacharidy](../DailyLifeWithAaps/CobCalculation.md).
 
-## **[Profile](../SettingUpAaps/YourAapsProfile.md) definitions**
+## Definície [profilu](../SettingUpAaps/YourAapsProfile.md)
 
-A too **strong Profile** indicates some combination of the following:
+Príliš **silný profil** znamená určitú kombináciu nasledujúcich vecí:
 
-- [ISF](#your-aaps-profile-insulin-sensitivity-factor) number is too small
-- The [basal](#your-aaps-profile-basal-rates) number is too big
-- [I:C](#your-aaps-profile-insulin-to-carbs-ratio) number is too small
+- Hodnota [ISF](#your-aaps-profile-insulin-sensitivity-factor) je príliš malá.
+- Hodnota [bazálu](#your-aaps-profile-basal-rates) je príliš veľká.
+- Hodnota [I:C](#your-aaps-profile-insulin-to-carbs-ratio) je príliš malá.
 
-## **IOB Observations**
+## Pozorovanie IOB
 
-*Note: you can also use Loopalyzer IOB graph in Nightscout reports to view IOB on several days.*
+*Poznámka: na zobrazenie IOB za niekoľko dní môžete použiť aj graf IOB v nástroji Loopalyzer v reportoch Nightscoutu.*
 
-If you observe the following patterns after a few days, consider the following changes
+Ak po niekoľkých dňoch spozorujete nasledujúce vzory, zvážte tieto zmeny:
 
-### **IOB positive**
+### Kladný IOB
 
-- **Profile** basal might not be strong enough (this could also be because of things like unannounced food, illness, bad site absorption, etc.)
+- Bazál v **profile** možno nie je dosť silný (môže to byť aj kvôli veciam ako neohlásené jedlo, choroba, zlé vstrebávanie v mieste vpichu atď.)
 
-![Positive IOB](../images/troubleshooting/profiletuning/PositiveInsulin.png)
+![Kladný IOB](../images/troubleshooting/profiletuning/PositiveInsulin.png)
 
-### **IOB negative**
+### Záporný IOB
 
-- Default basal too strong
-- May be the effect from past exercise/physical activity
+- Predvolený bazál je príliš silný.
+- Môže to byť účinok predchádzajúceho cvičenia/fyzickej aktivity.
 
-![Negative IOB](../images/troubleshooting/profiletuning/NegativeInsulin.png)
+![Záporný IOB](../images/troubleshooting/profiletuning/NegativeInsulin.png)
 
-- Previous meal: too much bolus (which resulted in a very long zero temp basal)
+- Predchádzajúce jedlo: príliš veľký bolus (čo viedlo k veľmi dlhému nulovému dočasnému bazálu)
 
-![Negative IOB](../images/troubleshooting/profiletuning/NegativeInsulin2.png)
+![Záporný IOB](../images/troubleshooting/profiletuning/NegativeInsulin2.png)
 
-## **BG Target Observations**
+## Pozorovanie cieľovej glykémie
 
-### **Stuck High**
+### Glykémia zostáva vysoko
 
-- __ISF__ ‘s number is high and not strong enough (calculated insulin is too weak)
+- Hodnota __ISF__ je vysoká a nie dosť silná (vypočítaný inzulín je príliš slabý)
 
-![Stuck High](../images/troubleshooting/profiletuning/StuckHigh.png)
+![Glykémia zostáva vysoko](../images/troubleshooting/profiletuning/StuckHigh.png)
 
-- __Profile__ basal might not be strong enough (SMBs do not have enough "basal stock" to use)
-- A security ([MaxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)?) might have kicked in and is limiting insulin injection. Verify in the [SMB](#Open-APS-features-super-micro-bolus-smb) tab.
-- Technical issue: site absorption, infusion set, ...
+- Bazál v __profile__ možno nie je dosť silný (**SMB** nemajú dosť „zásoby bazálu“, ktorú by mohli použiť)
+- Mohla zasiahnuť bezpečnostná poistka ([MaxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)?), ktorá obmedzuje podávanie inzulínu. Overte to na obrazovke pluginu **APS** (**Konfigurácia → APS → Otvoriť plugin**); pozrite [SMB](#Open-APS-features-super-micro-bolus-smb).
+- Technický problém: vstrebávanie v mieste vpichu, infúzny set, ...
 
-### **Stuck Low**
+### Glykémia zostáva nízko
 
-- __ISF__ too strong and the number needs to be raised higher
-- __Profile__ basal too strong (if also negative IOB)
+- __ISF__ je príliš silný a jeho hodnotu treba zvýšiť
+- Bazál v __profile__ je príliš silný (ak je aj IOB záporný)
 
-### **Rollercoaster (ups and downs)**
+### Horská dráha (výkyvy hore a dole)
 
-- **ISF** too strong? See your [AAPS Profile](#your-aaps-profile-insulin-sensitivity-factor)
+- **ISF** je príliš silný? Pozrite si svoj [profil AAPS](#your-aaps-profile-insulin-sensitivity-factor)
 
-![Rollercoaster](../images/troubleshooting/profiletuning/StrongISF.png)
+![Horská dráha](../images/troubleshooting/profiletuning/StrongISF.png)
 
-## **BG After Meals Observations**
+## Pozorovanie glykémie po jedle
 
-### **Fast rise and BG going high**
+### Rýchly nárast a glykémia stúpa vysoko
 
-- Food contains fast carbs
-- Consider doing a pre-bolus
-- Bolus (IC or injected %) not strong enough
+- Jedlo obsahuje rýchle sacharidy (napríklad ovocný džús).
+- Zvážte bolus vopred (predbolus) alebo trochu skorší predbolus.
+- Bolus (IC alebo podané %) nie je dosť silný.
 
-![Rise High](../images/troubleshooting/profiletuning/FastRise.png)
+![Nárast vysoko](../images/troubleshooting/profiletuning/FastRise.png)
 
-### **Fast rise and then BG going low**
+### Rýchly nárast a potom glykémia klesá nízko
 
-- Consider doing a pre-bolus, profile might be too aggressive (over correction of the raise)
-- Bolus too strong
+- Zvážte predbolus, váš **profil** môže byť príliš agresívny (nadmerná korekcia nárastu)
+- Bolus je príliš silný.
 
 
 
-## **[How to calculate your I:C](#your-aaps-profile-insulin-to-carbs-ratio)**
+## [Ako vypočítať I:C](#your-aaps-profile-insulin-to-carbs-ratio)
 
-1. First, you need the correct default basal settings in your **Profile**.
-2. Start on target, better without negative IOB.
-3. Record the total insulin given in the pump tab (or pump history) and call it Start insulin C4. Very accurately measure a known portion of carbs, and record the start time and Start IOB. Then enter carbs and bolus information into AAPS using the wizard (with the current configured CI). Don't forget to eat the carbs ;)
-4. After some hours, when COB=0[*](#profiletuning-cob-zero) and you're back on target, record end time, and note down the End IOB, check the total insulin given as before and call it End insulin. *NOTE: The time frame is NOT important, as long as it is longer than your digestion*
-5. From the difference between Start and End insulin amount, subtract/add the difference end IOB - start IOB. Then subtract the basal insulin calculated from your profile settings.
-6. If __BG__ is in target, you'll have the total insulin used to “digest” your carbs. Calculate your **I:C**.
+1. Najprv potrebujete mať v **profile** správne nastavený predvolený bazál.
+2. Začnite na cieľovej glykémii, najlepšie bez záporného IOB.
+3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin. Veľmi presne odmerajte známe množstvo sacharidov a zapíšte si čas začiatku a počiatočný IOB. Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured I:C). Nezabudnite sacharidy zjesť ;)
+4. Po niekoľkých hodinách, keď je COB=0[*](#profiletuning-cob-zero) a ste znova na cieľovej glykémii, zapíšte si čas konca a konečný IOB. Rovnako ako predtým skontrolujte celkový podaný inzulín a nazvite ho konečný inzulín. *POZNÁMKA: Dĺžka časového úseku NIE je dôležitá, pokiaľ je dlhšia ako vaše trávenie*
+5. K rozdielu medzi počiatočným a konečným množstvom inzulínu pripočítajte alebo od neho odpočítajte rozdiel konečný IOB - počiatočný IOB. Potom odpočítajte bazálny inzulín vypočítaný z nastavení vášho **profilu**.
+6. Ak je __glykémia__ v cieli, dostanete celkový inzulín, ktorý sa spotreboval na „strávenie“ vašich sacharidov. Vypočítajte svoj **I:C**.
 
-### **Explanations for the I:C calculations**
+### Vysvetlenie výpočtov I:C
 
-- With a **Profile** that has the correct default basal rate, during any time frame, you should stay on target and have an IOB near 0. You get your **Profile** basal only.
-- You add carbs and bolus to this mix. Wait till your body digests all the carbs and be back on **BG** target. Your insulin usage will be the sum of your basal + the insulin needed for the carbs. You calculate the insulin used for your basal (by using your **Profile**) and the surplus will be the insulin used to digest the carbs.
-- If the time frame is too short, there will be carbs undigested, thus your "insulin needed for the carbs" will be wrong.
-- If the time frame is too long, nothing bad will happen. You'll use all your carbs and you'll get more basal. At the end, you'll subtract the basal from the total insulin used, the extended time frame (with more basal use) will not affect the result.
+- S **profilom**, ktorý má správny predvolený bazál, by ste mali v akomkoľvek časovom úseku zostať na cieľovej glykémii a mať IOB blízko 0. Dostávate iba bazál z **profilu**.
+- K tomu pridáte sacharidy a bolus. Počkajte, kým telo strávi všetky sacharidy a vy budete znova na cieľovej **glykémii**. Spotreba inzulínu bude súčet vášho bazálu + inzulínu potrebného na sacharidy. Vypočítate inzulín spotrebovaný na bazál (pomocou svojho **profilu**) a zvyšok bude inzulín spotrebovaný na strávenie sacharidov.
+- Ak je časový úsek príliš krátky, zostanú nestrávené sacharidy, a preto bude váš „inzulín potrebný na sacharidy“ nesprávny.
+- Ak je časový úsek príliš dlhý, nič zlé sa nestane. Spotrebujete všetky sacharidy a dostanete viac bazálu. Na konci od celkového spotrebovaného inzulínu odpočítate bazál, takže dlhší časový úsek (s väčšou spotrebou bazálu) výsledok neovplyvní.
 
-Originally written up by @Robby (Discord) on tips and tricks to help tune your AAPS Profile, reviewed and edited by the community (thank you!).
+Pôvodne to napísal @Robby (Discord) ako tipy a triky na vyladenie vášho **profilu AAPS**; komunita to skontrolovala a upravila (ďakujeme!).

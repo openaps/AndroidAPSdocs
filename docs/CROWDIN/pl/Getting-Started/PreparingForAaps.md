@@ -1,236 +1,249 @@
-# Preparing to start with AAPS
+# Przygotowanie do rozpoczęcia pracy z AAPS
 
-Welcome. This documentation aims to guide users who are preparing to setup and start using the Android Artificial Pancreas System (**AAPS**).
+Witaj. Ta dokumentacja ma pomóc użytkownikom, którzy przygotowują się do konfiguracji i rozpoczęcia używania systemu sztucznej trzustki na Androida (**AAPS**).
 
-## Finding your way around the documentation
+## Poruszanie się po dokumentacji
 
-An **index** and explanation of the documentation structure can be found [here](../index.md), you can also reach it by clicking on the **AAPS** symbol at the top left of the documentation. There you will find an overview of the purpose of the different documentation sections. You can also use the headings to the left of this page to navigate through the documentation. Finally, there is a handy search function, directly below the **AAPS** symbol.
+**Spis treści** i opis struktury dokumentacji znajdziesz [tutaj](../index.md). Możesz też do niego przejść, klikając symbol **AAPS** w lewym górnym rogu dokumentacji. Znajdziesz tam przegląd przeznaczenia poszczególnych rozdziałów dokumentacji. Do poruszania się po dokumentacji możesz też używać nagłówków po lewej stronie tej strony. I wreszcie, istnieje wygodna funkcja wyszukiwania, bezpośrednio pod symbolem **AAPS**.
 
-We aim to make it easy to determine both the capabilities and limitations of **AAPS**. It can be disappointing to discover after investing time in reading the documentation that you might not have a compatible insulin pump or CGM, or that **AAPS** offers different functionality than hoped for.
+Chcemy, aby łatwo było poznać zarówno możliwości, jak i ograniczenia **AAPS**. Rozczarowujące może być odkrycie, po zainwestowaniu czasu w czytanie dokumentacji, że nie masz kompatybilnej pompy insulinowej lub systemu CGM, lub że **AAPS** oferuje inne funkcje, niż te, na które liczyłeś.
 
-Many experience-related details in the **AAPS** documentation make more sense when you are actually using **AAPS** in real-time. Just as it is difficult to learn a sport only by reading the rules, it takes a combination of learning the foundations of the rules for safely operating **AAPS** and then learning how best to apply those rules as you start to use **AAPS**.
+Wiele szczegółów w dokumentacji **AAPS**, które dotyczą praktyki, stanie się bardziej zrozumiałych, gdy zaczniesz naprawdę używać **AAPS** na co dzień. Tak jak trudno nauczyć się sportu tylko przez czytanie zasad, tak tutaj musisz najpierw poznać podstawowe zasady bezpiecznego używania **AAPS**, a potem uczyć się, jak najlepiej je stosować, gdy zaczniesz używać **AAPS**.
 
 (preparing-safety-first)=
 
-## Safety First
-“With great power comes great responsibility…”
+## Najpierw bezpieczeństwo
+„Z wielką mocą wiąże się wielka odpowiedzialność…”
 
-### Technical safety
-**AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](../SettingUpAaps/CompletingTheObjectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
+### Bezpieczeństwo techniczne
+**AAPS** ma szeroki zestaw funkcji bezpieczeństwa. Wprowadzają one ograniczenia, które są stopniowo usuwane, gdy kończysz kolejne [zadania](../SettingUpAaps/CompletingTheObjectives.md). Zadania obejmują testowanie określonych parametrów i odpowiadanie na pytania wielokrotnego wyboru. Funkcje **AAPS** są odblokowywane w miarę pomyślnego ukończenia kolejnych zadań. Dzięki temu możesz bezpiecznie, krok po kroku, przejść od otwartej pętli do zamkniętej pętli i przy tym poznać różne funkcje **AAPS**.
 
-The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) aim to minimise these issues.
+[Zadania](../SettingUpAaps/CompletingTheObjectives.md) zaprojektowano tak, aby jak najlepiej wprowadzić Cię w **AAPS**. Uwzględniają one typowe błędy i ogólne tendencje, które twórcy **AAPS** zauważyli u nowych użytkowników. Błędy mogą się zdarzyć, bo początkujący nie ma doświadczenia i zbyt szybko chce zacząć używać **AAPS** albo przeoczył ważne kwestie. [Zadania](../SettingUpAaps/CompletingTheObjectives.md) mają ograniczyć te problemy do minimum.
 
-### Medical safety
+### Bezpieczeństwo medyczne
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
 :class: danger
-Caution is advised concerning rapid improvements in blood glucose control and lowering of HbA1c 
+Zaleca się zachowanie ostrożności przy szybkiej poprawie kontroli poziomu glukozy i obniżaniu HbA1c 
 ```
 
-An important safety consideration is that a **rapid reduction in HbA1c and improved blood glucose control in those who have had elevated glucose levels for some time can cause permanent damage**. Many people with diabetes are unaware of this, and not all clinicans make their patients aware of this issue.
+Ważnym aspektem bezpieczeństwa jest to, że **szybkie obniżenie poziomu HbA1c i poprawa kontroli poziomu glukozy we krwi u pacjentów, którzy mieli od pewnego czasu podwyższone poziomy glukozy może spowodować trwałe szkody**. Wiele osób z cukrzycą o tym nie wie i nie wszyscy lekarze informują o tym swoich pacjentów.
 
-This damage can include **sight loss, and permanent neuropathy (pain)**. It is possible to avoid this damage occurring, by reducing average glucose levels more slowly. If you currently have an elevated HbA1c and are moving to **AAPS** (or any other closed loop system), _please_ discuss this potential risk with your clinical team before starting, and agree a timescale with gradually decreasing safe glucose targets with them. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 10.6 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
+Te szkody to m.in. **utrata wzroku i trwała neuropatia (ból)**. Można uniknąć tych szkód, obniżając średni poziom glukozy wolniej. Jeśli masz teraz podwyższone HbA1c i przechodzisz na **AAPS** (lub inny system zamkniętej pętli), _koniecznie_ omów to ryzyko ze swoim zespołem diabetologicznym przed rozpoczęciem i ustal z nim harmonogram stopniowego obniżania bezpiecznych docelowych wartości glukozy. Na początku możesz łatwo ustawić w **AAPS** wyższe cele glukozy (obecnie najwyższy cel, jaki możesz wybrać, to 11,1 mmol/l, ale w razie potrzeby możesz też celowo używać słabszego profilu), a potem obniżać cel z upływem miesięcy.
 
-#### How quickly can I reduce my HbA1c without risking permanent damage?
+#### Jak szybko mogę obniżyć HbA1c bez ryzyka trwałych uszkodzeń?
 
-One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the Hba1C dropped 1%, 2% or 3% respectively over a 6 month period. They suggested that the **"decrease in HbA1c value during any 6-month period should be limited to less than 2% in order to prevent the progression of retinopathy....Too rapid a decrease at the initiation of glycemic control could cause severe or transient exacerbation of the progression of retinopathy."**
+One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the HbA1c dropped 1%, 2% or 3% respectively over a 6 month period. Autorzy zalecili, że **„spadek wartości HbA1c w każdym okresie 6 miesięcy powinien być mniejszy niż 2%, aby zapobiec postępowi retinopatii.... Zbyt szybki spadek na początku kontroli glikemii może spowodować ciężkie lub przejściowe zaostrzenie postępu retinopatii.”**
 
-N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for a HbA1c calculator tool.
+Uwaga Jeśli używasz innych jednostek HbA1c (mmol/mol zamiast %), kliknij [tutaj](https://www.diabetes.co.uk/hba1c-units-converter.html), aby otworzyć kalkulator HbA1c.
 
-In another retrospective [evaluation](https://academic.oup.com/brain/article/138/1/43/337923) of 954 patients, researchers noted that:
+W innej retrospektywnej [ocenie](https://academic.oup.com/brain/article/138/1/43/337923) 954 pacjentów, badacze zauważyli, że:
 
-**"With a decrease in HbA1c of 2–3% points over 3 months there was a 20% absolute risk of developing treatment-induced neuropathy in diabetes, with a decrease in HbA1c of >4% points over 3 months the absolute risk of developing treatment-induced neuropathy in diabetes exceeded 80%."**
+**„Przy spadku wartości HbA1c o 2–3 punkty proc. w ciągu 3 miesięcy występowało 20% bezwzględne ryzyko wystąpienia neuropatii wywołanej leczeniem w cukrzycy, przy zmniejszeniu wartości HbA1c o >4 punkty proc. w ciągu 3 miesięcy bezwzględne ryzyko wystąpienia neuropatii wywołanej leczeniem w cukrzycy przekroczyło 80%.”**
 
-A [commentary](https://academic.oup.com/brain/article/138/1/2/340563) on this work agreed that to avoid complications **the goal should be to reduce A1c by <2% over 3 months.** You can read other reviews on the topic [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) and [here](https://www.mdpi.com/1999-4923/15/7/1791).
+[Komentarz](https://academic.oup.com/brain/article/138/1/2/340563) do tej pracy potwierdził, że aby uniknąć powikłań, **celem powinno być obniżenie A1c o <2 punkty proc. w ciągu 3 miesięcy.** Inne przeglądy na ten temat możesz przeczytać [tutaj](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) i [tutaj](https://www.mdpi.com/1999-4923/15/7/1791).
 
-It is generally recognised that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. However, it is still a consideration which you should discuss with your clinician.
+Ogólnie uważa się, że osoby z _nowo_ zdiagnozowaną cukrzycą typu 1 (które przy diagnozie, przed rozpoczęciem leczenia insuliną, często mają bardzo wysokie HbA1c) mogą szybko obniżyć HbA1c zaraz po diagnozie bez takiego samego ryzyka, ponieważ nie miały podwyższonej glikemii przez tak długi czas. Jednakże nadal jest to zagadnienie, które powinieneś omówić ze swoim lekarzem.
 
 (PreparingForAaps-no-sglt-2-inhibitors)=
-### No SGLT-2 inhibitors
+### Nie stosuj inhibitorów SGLT-2
 
 ```{admonition} NO SGLT-2 inhibitors
 :class: danger
-SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins incalculably lower blood sugar levels, and so you MUST NOT take them while using a closed loop system like AAPS! There would be a significant risk of ketoacidosis and/or hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous. 
+Inhibitory SGLT-2, zwane też flozynami, hamują wchłanianie zwrotne glukozy w nerkach. Flozyny obniżają poziom glukozy we krwi w sposób, którego nie da się obliczyć, dlatego NIE WOLNO Ci ich przyjmować, gdy używasz systemu zamkniętej pętli, takiego jak AAPS! Istnieje znaczne ryzyko kwasicy ketonowej i/lub hipoglikemii! Połączenie tego leku z systemem, który obniża dawki bazowe, aby podnieść glikemię, jest szczególnie niebezpieczne. 
 
-In a nutshell:
-- **Example 1: risk of Hypo**
->During lunch, you use **AAPS** to bolus based on consuming 45g of glucose. The problem is that unbeknownst to AAPS, the inhibitors cause the body to eliminate some of the carbs resulting in your body having too much insulin compared to the absorbed Carbs, resulting in hypoglycemia.
+W skrócie:
+- **Przykład 1: ryzyko hipoglikemii**
+>Podczas obiadu używasz **AAPS**, aby podać bolus na 45 g glukozy. Problem polega na tym, że inhibitory powodują, że organizm usuwa część węglowodanów, a AAPS o tym nie wie. W efekcie w organizmie jest za dużo insuliny w stosunku do wchłoniętych węglowodanów, co powoduje hipoglikemię.
 
-- **Example 2: risk of Ketoacidosis**
->The inhibitors eliminate some of the carbs in the background causing a reduction in your BG. **AAPS** will automatically instruct the pump to decrease insulin intake  including basal. Over time this can result  in your  BG remaining below target value to the point where the body does not have enough background insulin to absorb any carbs resulting in Ketoacidosis. Ordinarily, Ketoacidosis  develops in T1D patients because their pump fails which would trigger alerts on their phone and be noticeable due to a high BG value. However, the danger with Gliflozins  is that there would be no AAPS alerts as  the pump remains operational and the BG potentially remains within target.  
+- **Przykład 2: ryzyko kwasicy ketonowej**
+>Inhibitory w tle usuwają część węglowodanów, przez co Twoja glikemia spada. **AAPS** automatycznie każe pompie zmniejszyć podawanie insuliny, także bazy. Z czasem Twoja glikemia może utrzymywać się poniżej celu, aż organizm nie będzie miał wystarczającej ilości insuliny bazowej, aby przyswoić węglowodany, co prowadzi do kwasicy ketonowej. Zwykle kwasica ketonowa rozwija się u osób z cukrzycą typu 1, gdy zawiedzie pompa. Wtedy telefon pokazuje alarmy, a problem widać po wysokiej glikemii. Niebezpieczeństwo przy flozynach polega jednak na tym, że AAPS nie pokaże żadnych alarmów, bo pompa działa normalnie, a glikemia może pozostawać w zakresie docelowym.
 
-Common brand names of SGLT-2 inhibitors include: Invokana, Farxiga, Jardiance, Glyxambi, Synjardy, Steglatro, and Xigduo XR, others.
+Do typowych nazw inhibitorów SGLT-2 należą: Invokana, Farxiga, Jardiance, Glyxambi, Synjardy, Steglatro i Xigduo XR oraz inne.
 ```
 
 
-### Key principles of looping with AAPS
+### Najważniejsze zasady korzystania z pętli AAPS
 
-The key principles and concepts of looping must be understood before using **AAPS**. This is achieved by investing your personal time into reading the **AAPS** documentation, and completing the Objectives which aim to provide you with a solid platform for safe and effective use of **AAPS**. The volume of **AAPS** documentation may seem overwhelming at first but be patient and trust the process - with the proper approach, you'll get there!
+Zanim zaczniesz używać **AAPS**, musisz zrozumieć najważniejsze zasady i pojęcia pętli. Aby to osiągnąć, poświęć swój czas na przeczytanie dokumentacji **AAPS** i ukończenie zadań, które mają dać Ci solidną podstawę do bezpiecznego i skutecznego używania **AAPS**. Ilość dokumentacji **AAPS** może na początku przytłaczać, ale bądź cierpliwy i zaufaj procesowi – przy właściwym podejściu na pewno Ci się uda!
 
-The speed of progression will depend upon the individual, but be aware that completion of all the objectives typically takes 6 - 9 weeks. Many people start to build, install and setup **AAPS** well in advance of starting to use it. To aid with this, the system has a "virtual pump" which can be used during completion of the early objectives, so that you can become familiar with **AAPS** without actually using it to deliver insulin. A detailed breakdown of the timeline is given below, be aware that by objective 8 of **AAPS** you are closed looping, the later objectives add in additional features like **SMS commands** and **automations** which are useful to some users, but not essential to the core function of **AAPS**.
+Tempo postępów zależy od osoby, ale pamiętaj, że ukończenie wszystkich zadań zwykle zajmuje 6–9 tygodni. Wiele osób buduje, instaluje i konfiguruje **AAPS** dużo wcześniej, niż zaczyna go używać. Pomaga w tym „wirtualna pompa”, której możesz używać podczas pierwszych zadań. Dzięki niej poznasz **AAPS**, zanim zaczniesz używać go do podawania insuliny. Poniżej znajdziesz szczegółowy harmonogram. Pamiętaj, że od zadania 7 w **AAPS** używasz już zamkniętej pętli. Dalsze zadania dodają funkcje, takie jak **SMB** i **automatyzacje**, które są przydatne dla części użytkowników, ale nie są niezbędne do podstawowego działania **AAPS**.
 
-Success with **AAPS** requires a proactive approach, a willingness to reflect on the BG data and flexibility to make the necessary adjustments to **AAPS** in order to improve your outcomes. Just as it is nearly impossible to learn to play a sport by reading about the rules alone, the same can be said of **AAPS**.
+Sukces z **AAPS** wymaga aktywnego podejścia, gotowości do analizowania danych glikemii i elastyczności we wprowadzaniu potrzebnych zmian w **AAPS**, aby poprawić Twoje wyniki. Tak jak prawie nie da się nauczyć uprawiania sportu tylko przez czytanie zasad, tak samo jest z **AAPS**.
 
-#### Plan for delays and minor issues in getting everything set up and running
+#### Zaplanuj czas na opóźnienia i drobne problemy przy konfiguracji i uruchamianiu wszystkiego
 
-In the preliminary stages of getting started with **AAPS**, you may experience difficulties getting all the components of the loop communicating effectively with each other (and potential followers), and when fine-tuning your settings. Some glitches cannot be resolved until **AAPS** is used in everyday life, but plenty of help is available on the Facebook group and Discord. Please plan accordingly and choose "good" times, like a quiet morning of a weekend (i.e. not late at night or when you are tired, or before a big meeting or travel) to troubleshoot and resolve issues.
+Na początku pracy z **AAPS** możesz mieć trudności z tym, aby wszystkie elementy pętli dobrze komunikowały się ze sobą (i z ewentualnymi obserwującymi), a także z dostrajaniem ustawień. Niektórych usterek nie da się rozwiązać, dopóki nie zaczniesz używać **AAPS** na co dzień, ale dużo pomocy znajdziesz na grupie na Facebooku i na Discordzie. Zaplanuj to dobrze i do szukania i rozwiązywania problemów wybieraj „dobre” momenty, np. spokojny poranek w weekend (czyli nie późno w nocy, nie gdy jesteś zmęczony i nie przed ważnym spotkaniem lub podróżą).
 
-#### Technology compatibility
+#### Zgodność technologiczna
 
-**AAPS** is only compatible with certain types of insulin pumps, CGMs and phones, and some technology may not be available for use in various countries. In order to avoid any disappointment or frustrations, please read the [CGM](../Getting-Started/CompatiblesCgms.md), [pump](../Getting-Started/CompatiblePumps.md) and [phone](../Getting-Started/Phones.md) sections.
+**AAPS** jest kompatybilny tylko z niektórymi rodzajami pomp insulinowych, systemami CGM i telefonami, a niektóre technologie mogą nie być dostępne do użytku w różnych krajach. Aby uniknąć rozczarowania i frustracji, przeczytaj rozdziały o [CGM](../Getting-Started/CompatiblesCgms.md), [pompach](../Getting-Started/CompatiblePumps.md) i [telefonach](../Getting-Started/Phones.md).
 
-#### App build time and progressing to full looping
+#### Czas budowania aplikacji i przejście do pełnej pętli
 
-The time to build the **AAPS** app  depends on your level of expertise and technical ability. Typically for inexperienced users, it can take up to half a day or a full day (with help from the community) in order to build **AAPS**. The process will significantly speed up for newer **AAPS** versions, as you become more experienced.
+Czas potrzebny na zbudowanie aplikacji **AAPS** zależy od Twojej wiedzy i umiejętności technicznych. Niedoświadczonym użytkownikom zbudowanie **AAPS** zajmuje zwykle do pół dnia lub cały dzień (z pomocą społeczności). Przy kolejnych wersjach **AAPS** proces będzie dużo szybszy, bo zdobędziesz doświadczenie.
 
-To aid the build process there are dedicated sections:
+Kilka części tej dokumentacji pomaga Ci w procesie budowania:
 
-- List of questions and answers for frequent errors that are likely to occur in [FAQs](../UsefulLinks/FAQ.md) (Section 11);
+- [Budowanie AAPS](../SettingUpAaps/BuildingAaps.md) prowadzi Cię krok po kroku przez budowanie aplikacji i instalowanie jej na telefonie;
 
-- “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section 3) and [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) (Section 8).
+- [FAQ](../UsefulLinks/FAQ.md) odpowiada na częste pytania i wyjaśnia najczęstsze błędy;
 
-How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#preparing-how-long-will-it-take))
+- [Rozwiązywanie problemów](../GettingHelp/GeneralTroubleshooting.md) zbiera rozwiązania najczęstszych problemów, uporządkowane według tematów.
 
-
-#### Keystore & configuration settings export file
-
-A “keystore” (.jks file) is a password encrypted file unique to your own copy of **AAPS**. Your Android phone uses it to ensure that nobody else can upgrade your own copy without the keystore. In short, as part of the **AAPS** build, you should:
-
-1.  Save the your keystore file (.jks file used to sign your app) in a safe place;
-
-2.  Keep a note of your password for your keystore file.
+Czas dojścia do zamkniętej pętli zależy od osoby; przybliżony harmonogram osiągnięcia pełnej pętli z **AAPS** znajdziesz [poniżej](#preparing-how-long-will-it-take).
 
 
-How you save the keystore depends on your build method:
+#### Magazyn kluczy (keystore) i plik eksportu ustawień konfiguracji
 
-- **Android Studio (computer) build**: the keystore is created during the build — see [Generate signed APK](#Building-APK-generate-signed-apk) for instructions on where to save it.
-- **AAPS Builder**: keep the backup file `aaps-keystore.jks` the setup page offered when you created your key, with its password and alias. If you uploaded your own keystore, keep that file.
-- **Browser build with a fork**: use the dedicated [Export keystore](#ci-keystore-export) workflow to download a copy to your Google Drive.
+Magazyn kluczy („keystore”, plik .jks) to zaszyfrowany hasłem plik, który należy tylko do Twojej kopii **AAPS**. Twój telefon z Androidem używa go, aby nikt inny nie mógł zaktualizować Twojej kopii bez tego magazynu kluczy. Krótko mówiąc, w ramach zbudowania **AAPS** powinieneś:
 
-This will ensure that you can use that exact same keystore file each time an updated version of **AAPS** is created. On average, there will be 2 **AAPS** updates required each year.
+1.  Zapisać plik magazynu kluczy (plik .jks, którym podpisujesz aplikację) w bezpiecznym miejscu;
 
-In addition, **AAPS** provides the ability to [export all your configuration settings](../Maintenance/ExportImportSettings.md). This ensures that you can safely recover your system while changing phones, upgrading/reinstalling the application with minimum disruption. 
+2.  Zapisać hasło do swojego pliku magazynu kluczy.
 
-#### Troubleshooting
+Sposób zapisania magazynu kluczy zależy od metody budowania:
 
-Please feel free to reach out to the AAPS community if there is anything you feel unsure about - there is no such thing as a silly question! All users with various levels of experience are encouraged to ask questions. Response times to questions are usually quick due to the number of **AAPS** users.
+- **Budowanie w Android Studio (na komputerze)**: magazyn kluczy jest tworzony podczas budowania – zobacz [Generowanie podpisanego APK](#Building-APK-generate-signed-apk), aby dowiedzieć się, gdzie go zapisać.
+- **AAPS Builder**: zachowaj plik kopii zapasowej `aaps-keystore.jks`, który strona konfiguracji zaproponowała przy tworzeniu klucza, razem z jego hasłem i aliasem. Jeśli przesłałeś własny magazyn kluczy, zachowaj ten plik.
+- **Budowanie w przeglądarce z forkiem**: użyj specjalnego workflow [Export keystore](#ci-keystore-export), aby pobrać kopię na swój Dysk Google.
 
-##### [ask on the AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/)
+Dzięki temu będziesz mógł używać dokładnie tego samego pliku magazynu kluczy za każdym razem, gdy budujesz nową wersję **AAPS**. Średnio potrzebne są 2 aktualizacje **AAPS** w roku.
 
-##### [ask on the AAPS Discord channel](https://discord.gg/4fQUWHZ4Mw)
+Ponadto **AAPS** zapewnia możliwość [eksportu wszystkich ustawień konfiguracji](../Maintenance/ExportImportSettings.md). Zapewnia to możliwość bezpiecznego odzyskania systemu podczas zmiany telefonu, aktualizacji/reinstalacji aplikacji z minimalnymi zakłóceniami. 
+
+#### Rozwiązywanie problemów
+
+Jeśli czujesz się niepewnie w jakimkolwiek temacie, nie krępuj się skontaktować ze społecznością AAPS — nie ma głupich pytań! Zachęcamy do zadawania pytań wszystkich użytkowników, bez względu na poziom doświadczenia. Odpowiedzi przychodzą zwykle szybko, bo użytkowników **AAPS** jest wielu.
+
+##### [zapytaj na grupie AAPS na Facebooku](https://www.facebook.com/groups/AndroidAPSUsers/)
+
+##### [zapytaj na kanale AAPS na Discordzie](https://discord.gg/4fQUWHZ4Mw)
 
 
 
 
 
-#### [Where to go for help](../UsefulLinks/BackgroundReading.md)?
+#### [Where to go for help](../GettingHelp/WhereCanIGetHelp.md)?
 
-This section is aimed to provide new users with links on resources in order to get help including accessing community support made up of both new and experienced users who can clarify questions, and resolve the usual pitfalls that come with AAPS.
+Ten rozdział daje nowym użytkownikom linki do źródeł pomocy, w tym do społeczności nowych i doświadczonych użytkowników, którzy mogą odpowiedzieć na pytania i pomóc w typowych problemach z AAPS.
 
-#### [Section For Clinicians](../UsefulLinks/ClinicianGuideToAaps.md)
+#### [Rozdział dla lekarzy](../UsefulLinks/ClinicianGuideToAaps.md)
 
-This is a [section specifically for clinicians](../UsefulLinks/ClinicianGuideToAaps.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
+To jest [rozdział specjalnie dla lekarzy](../UsefulLinks/ClinicianGuideToAaps.md), którzy chcą dowiedzieć się więcej o AAPS i technologii sztucznej trzustki open source. We wprowadzeniu znajdziesz też wskazówki, [jak rozmawiać ze swoim zespołem diabetologicznym](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team).
 
-## What are we going to build and install?
+## Co zamierzamy zbudować i zainstalować?
 
-This diagram provides an overview of the key components (both hardware and software) of the **AAPS** system:
+Ten schemat przedstawia przegląd kluczowych komponentów (sprzętowych i oprogramowania) systemu **AAPS**:
 
 ![preparing_overview](../images/preparing_images/AAPS_preparing_overview_01.png)
 
 
-In addition to the three basic hardware components (phone, pump, glucose sensor), we also need: 1) The **AAPS** app 2) A reporting server and 3) A continuous glucose monitor (CGM) app
+Oprócz trzech podstawowych elementów sprzętowych (telefon, pompa, sensor glukozy) potrzebujemy też: 1) aplikacji **AAPS** 2) serwera raportów i 3) aplikacji do ciągłego monitorowania glukozy (CGM)
 
-### 1) An Android Phone Application: **AAPS**
+### 1) Aplikacja na Androida: **AAPS**
 
-**AAPS** is an app that runs on android smartphones & devices. You are going to build the **AAPS** app (an apk file) yourself, using a step-by-step guide, by downloading the **AAPS** source code from GitHub, installing the necessary programs (Android Studio, GitHub desktop) on your computer and building your own copy of **AAPS** app. You will then transfer the **AAPS** app across to your smartphone (by email, USB cable _etc._) and install it.
+**AAPS** to aplikacja działająca na smartfonach i urządzeniach z Androidem. Samodzielnie zbudujesz aplikację **AAPS** (plik apk) według instrukcji krok po kroku: pobierzesz kod źródłowy **AAPS** z GitHub, zainstalujesz na komputerze potrzebne programy (Android Studio, GitHub Desktop) i zbudujesz własną kopię aplikacji **AAPS**. Następnie przeniesiesz aplikację **AAPS** na swój smartfon (e-mailem, kablem USB _itp._) i ją zainstalujesz.
 
-### 2) A reporting server: NightScout (Tidepool*)
+### 2) Serwer raportów: Nightscout (Tidepool*)
 
-In order to fully take advantage of **AAPS**, you need to setup a Nightscout server. You can [do this yourself](https://nightscout.github.io/nightscout/new_user/#free-diy) or alternatively, pay a small fee for a [managed Nightscout service](https://nightscout.github.io/#nightscout-as-a-service) to be set up for you. Nightscout is used to collect data from **AAPS** over time and can generate detailed reports correlating CGM and insulin patterns. It is also possible for caregivers to use Nightscout to remotely communicate with the **AAPS** application, to oversee their child’s diabetic management. Such remote communication features include real-time monitoring of glucose and insulin levels, remote bolusing of insulin (by texting) and meal announcements. Attempting to analyse your diabetes performance by looking at CGM data separately from the pump data is like driving a car where the driver is blind and the passenger describes the scene.  Tidepool is also available as an alternative to Nightscout, for AAPS versions 3.2 and later.
+Aby w pełni korzystać z **AAPS**, musisz skonfigurować serwer Nightscout. Możesz [zrobić to sam](https://nightscout.github.io/nightscout/new_user/#free-diy) albo za niewielką opłatą zlecić konfigurację [zarządzanej usługi Nightscout](https://nightscout.github.io/#nightscout-as-a-service). Nightscout zbiera dane z **AAPS** przez dłuższy czas i może tworzyć szczegółowe raporty, które pokazują zależności między danymi CGM a insuliną. Opiekunowie mogą też używać Nightscout do zdalnej komunikacji z aplikacją **AAPS**, aby nadzorować leczenie cukrzycy swojego dziecka. Takie funkcje zdalne to m.in. monitorowanie glukozy i insuliny w czasie rzeczywistym, zdalne podawanie bolusów insuliny (przez SMS) i ogłaszanie posiłków. Analizowanie leczenia cukrzycy na podstawie danych CGM oddzielnie od danych pompy przypomina jazdę samochodem, w którym kierowca nic nie widzi, a pasażer opisuje mu drogę. Zamiast Nightscout możesz też używać Tidepool.
 
-### 3) CGM sensor app
+### 3) Aplikacja sensora CGM
 
-Depending on your glucose sensor/CGM, you will need a compatible app for receiving glucose readings and sending them to **AAPS**. The different options are shown below and more information is given in the [compatible CGMs section](../Getting-Started/CompatiblesCgms.md):
+W zależności od Twojego sensora glukozy/CGM potrzebujesz zgodnej aplikacji, która odbiera odczyty glukozy i wysyła je do **AAPS**. Różne opcje pokazano poniżej, a więcej informacji znajdziesz w [rozdziale o kompatybilnych systemach CGM](../Getting-Started/CompatiblesCgms.md):
 
 ![dexcom_options](../images/preparing_images/AAPS_connectivity_Dex_02.png) ![libre_options](../images/preparing_images/AAPSconnectivity_libre.png) ![eversense_options](../images/preparing_images/AAPS_connectivity_eversense.png)
 
-### Maintenance of the **AAPS** system
+### Konserwacja systemu **AAPS**
 
-Both **Nightscout** and **AAPS** must be updated approximately once a year, as improved versions are released. In some cases, the update can be delayed, in others it is strongly recommended or considered essential for safety. Notification of these updates will be given on the Facebook groups and Discord servers. The release notes will make it clear what the scenario is. There are likely to be many people asking similar questions to you at update time, and you will have support for performing the updates.
+Zarówno **Nightscout**, jak i **AAPS** trzeba aktualizować mniej więcej raz w roku, gdy pojawiają się ulepszone wersje. Czasem aktualizację można odłożyć, a czasem jest ona zdecydowanie zalecana lub konieczna ze względów bezpieczeństwa. Informacje o aktualizacjach pojawiają się na grupach na Facebooku i na serwerach Discord. Z informacji o wersji jasno wynika, która sytuacja ma miejsce. W czasie aktualizacji wiele osób zwykle zadaje podobne pytania jak Ty, więc otrzymasz pomoc przy aktualizacji.
 
 (preparing-how-long-will-it-take)=
-## How long will it take to set everything up?
+## Ile czasu zajmie konfiguracja wszystkiego?
 
-As mentioned earlier, using **AAPS** is more of a “journey” that requires investment of your personal time. It is not a one-time setup. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 4 to 6 months overall. It is therefore suggested that you prioritize building the **AAPS** app and working through the early objectives as soon as possible, even if you are still using a different insulin delivery system (you can use a virtual pump up to objective 5).
+Jak wspomnieliśmy wcześniej, używanie **AAPS** to raczej „podróż”, która wymaga poświęcenia Twojego czasu. To nie jest jednorazowa konfiguracja. Według obecnych szacunków zbudowanie **AAPS**, instalacja i konfiguracja **AAPS** oraz oprogramowania **CGM** i przejście od otwartej pętli do hybrydowej zamkniętej pętli z **AAPS** zajmuje łącznie około 4 do 6 miesięcy. Dlatego zalecamy, aby jak najszybciej zbudować aplikację **AAPS** i zacząć wykonywać pierwsze zadania, nawet jeśli nadal używasz innego systemu podawania insuliny (wirtualnej pompy możesz używać do zadania 5).
 
-Some of the objectives require a given amount of days to pass to make sure you understand the new functionality. It is not possible to bypass this waiting time, these minimal timings have been set-up for your own safety.
+Niektóre zadania wymagają, aby minęła określona liczba dni. Dzięki temu masz pewność, że rozumiesz nowe funkcje. Nie można pominąć tego czasu oczekiwania; minimalne czasy oczekiwania ustalono dla Twojego bezpieczeństwa.
 
-Here is an approximate timeframe:
+Oto przybliżony harmonogram:
 
-| Tasks                                                         |           Approx time            |
-| ------------------------------------------------------------- |:--------------------------------:|
-| Initial reading of the documentation                          |             1-2 days             |
-| Installing/configuring PC to allow the build                  |            2-8 hours             |
-| Setting up a reporting server                                 |              1 hour              |
-| Installing a CGM app (xDrip+, BYODA, …)                       |              1 hour              |
-| Configuring CGM → xDrip+ → APPS initially                     |              1 hour              |
-| Configuring AAPS → pump initially                             |              1 hour              |
-| Configuring AAPS → Nightscout/Tidepool (reporting only)       |              1 hour              |
-| Optional : Configuring NightScout ↔ **AAPS** & NSFollowers    |              1 hour              |
-| Objective 1: Setting up visualization and monitoring          |              1 hour              |
-| Objective 2: Learn how to control AAPS                        |              2 hour              |
-| Objective 3: Prove your knowledge                             |          Up to 14 days           |
-| Objective 4: Starting on an open loop                         |        Minimum of 7 days         |
-| Objective 5: Understanding your open loop                     |              7 days              |
-| Objective 6: Starting to close the loop (Low Glucose Suspend) |   Minimum of 5, up to 14 days    |
-| Objective 7: Tuning the closed loop                           |  Minimum of 1 day, up to 7 days  |
-| Objective 8: Adjust basals and ratios, enable Autosens        | Minimum of 7 days, up to 14 days |
-| Objective 9: Enabling Super Micro Bolus (SMB)                 |        Minimum of 28 days        |
-| Objective 10: Automation                                      |        Minimum of 28 days        |
-| Objective 11: Dynamic ISF                                     |        Minimum of 28 days        |
+| Czynności                                                                    |            Przybliżony czas            |
+| ---------------------------------------------------------------------------- |:--------------------------------------:|
+| Pierwsze czytanie dokumentacji                                               |                1–2 dni                 |
+| Konfiguracja GitHub do budowania w przeglądarce                              |               1–4 godz.                |
+| Konfiguracja serwera raportów                                                |               1 godzina                |
+| Instalacja aplikacji CGM (xDrip, BYODA, …)                                   |               1 godzina                |
+| Configuring CGM → xDrip → AAPS initially                                     |               1 godzina                |
+| Wstępna konfiguracja AAPS → pompa                                            |               1 godzina                |
+| Konfiguracja AAPS → Nightscout/Tidepool (tylko raportowanie)                 |               1 godzina                |
+| Optional: Configuring Nightscout ↔ **AAPS** & NSFollowers                    |               1 godzina                |
+| Zadanie 1: Konfiguracja wizualizacji i monitorowania                         |               1 godzina                |
+| Zadanie 2: Dowiedz się, jak kontrolować AAPS                                 |                2 hours                 |
+| Zadanie 3: Sprawdź swoją wiedzę                                              |               Do 14 dni                |
+| Zadanie 4: Rozpoczęcie w trybie otwartej pętli                               |           Co najmniej 7 dni            |
+| Zadanie 5: Zrozumienie działania otwartej pętli                              |                 7 dni                  |
+| Zadanie 6: Rozpoczęcie zamknięcia pętli z zawieszeniem przy niskiej glikemii |   Co najmniej 5, maksymalnie 14 dni    |
+| Zadanie 7: Dostrajanie zamkniętej pętli                                      | Co najmniej 1 dzień, maksymalnie 7 dni |
+| Zadanie 8: Dostosowanie bazy i współczynników, włączenie Autosens            | Co najmniej 7 dni, maksymalnie 14 dni  |
+| Zadanie 9: Włączenie SMB (Super Mikro Bolusy)                                |           Co najmniej 28 dni           |
+| Zadanie 10: Włączanie automatyzacji                                          |           Co najmniej 28 dni           |
 
-Once you are fully operational on **AAPS**, you will still need to regularly fine tune your settings in order to improve your overall diabetic management.
+Nawet gdy **AAPS** będzie już w pełni działać, nadal musisz regularnie dostrajać ustawienia, aby poprawić ogólne leczenie cukrzycy.
 
-## Requirements
+## Wymagania
 
-### Medical considerations
+### Kwestie medyczne
 
-In addition to the medical warnings in the [safety section](#preparing-safety-first) there are also different parameters, depending on which insulin you are using in the pump.
+Oprócz ostrzeżeń medycznych w [rozdziale o bezpieczeństwie](#preparing-safety-first) są też różne parametry, zależne od insuliny, której używasz w pompie.
 
-#### Insulin choice
+#### Wybór insuliny
 
-**AAPS** calculations are based on insulin concentrations of 100U/ml (same as pump’s standard). The following types of insulin profile presets are supported:
+Obliczenia **AAPS** opierają się na stężeniu insuliny 100 U/ml (tak jak standard w pompach). Insulinę konfigurujesz w **Zarządzaj → Ustawienia insuliny**: ustaw jej **Szczyt** i **DIA** albo użyj **Pobierz szczyt z**, aby wpisać standardowy czas szczytu z jednego z gotowych ustawień:
 
-- Rapid-Acting Oref: Humalog/NovoRapid/NovoLog
-- Ultra-Rapid ORef:  Fiasp
-- Lyumjev:
+- **Novorapid** (także dla Humalog i NovoLog)
+- **Fiasp**
+- **Lyumjev**
 
-For Experimental/Advanced users only:
-- Free-Peak Oref: Allows you to define peak of the insulin activity
+Zaawansowani użytkownicy mogą bezpośrednio wpisać dowolny czas szczytu (od 35 do 120 minut), np. dla mieszanki insulin. Zobacz [Ustawienia insuliny](#Config-Builder-insulin).
 
 
-### Technical
+### Kwestie techniczne
 
-This documentation aims to reduce the technical expertise required to an absolute minimum. You will need to use your computer to build the **AAPS** application in Android Studio (step-by-step instructions). You also need to set up a server over the internet in a public cloud, configure several android phone apps and develop expertise in diabetes management. This can be  achieved by moving step-by-step, being patient, and help from the **AAPS** community. If you are already able to navigate the internet, manage your own Gmail emails, and keep your computer up-to-date, then it is a feasible task to build the **AAPS**. Just take your time.
+Ta dokumentacja ma na celu ograniczenie potrzebnej wiedzy technicznej do absolutnego minimum. Aplikację **AAPS** możesz zbudować na kilka sposobów – przegląd znajdziesz na stronie [Budowanie AAPS](../SettingUpAaps/BuildingAaps.md):
 
-### Smartphones
+- **Budowanie w przeglądarce** (zalecane): zbuduj aplikację bezpośrednio ze smartfona za pomocą GitHub Actions, bez komputera i bez Android Studio. Z [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) potrzebujesz tylko konta GitHub: aplikację pobierasz bezpośrednio z GitHub. Metoda z forkiem wymaga też konta Google, aby zapisać aplikację na Twoim Dysku Google.
+- **Budowanie w Android Studio**: zbuduj aplikację na komputerze za pomocą Android Studio. Używają tego głównie programiści, którzy chcą zmieniać kod.
+- **Budowanie z wiersza poleceń**: dla użytkowników, którzy wolą budować lokalnie bez instalowania Android Studio.
 
-#### AAPS and Android Versions
+Oprócz zbudowania aplikacji musisz też skonfigurować serwer raportów, kilka aplikacji na telefonie z Androidem i zdobyć wiedzę o leczeniu cukrzycy. Uda Ci się to, jeśli będziesz działać krok po kroku, cierpliwie i z pomocą społeczności **AAPS**. Jeśli potrafisz poruszać się po internecie i obsługiwać swoją pocztę Gmail, zbudowanie **AAPS** jest w Twoim zasięgu. Po prostu nie spiesz się.
 
-The current version of **AAPS** (3.4) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), Android 16 is preferred.<br/> Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+### Smartfony
 
-#### Smartphone model choice
-The exact model you buy depends on the desired function(s). You can find on the [Phones page](../Getting-Started/Phones.md) recommendations and user feedback about working setups.
+#### AAPS i wersje Androida
 
-Users are encouraged to keep their phone Android version up-to-date, including with security parameters. However, if you are new with **AAPS** or are not a technical expert you might want to delay updating your phone until others have done so and confirmed it is safe to do so, on our various forums.
+Obecna wersja **AAPS** (4.0) wymaga smartfona z systemem Google **Android 12.0 lub nowszym**. Jeśli planujesz kupić nowy telefon (stan na styczeń 2026), zalecany jest Android 16.<br/> Ze względów bezpieczeństwa zdecydowanie zalecamy, aby zawsze używać aktualnej wersji **AAPS**. Jeśli jednak nie możesz używać urządzenia z Androidem 12.0 lub nowszym, nadal są dostępne starsze wersje **AAPS** zgodne ze starszymi wersjami Androida, zobacz: [Informacje o wersji](#maintenance-android-version-aaps-version).
 
-```{admonition} delaying Samsung phones updates
+#### Wybór modelu smartfona
+Wybór konkretnego modelu zależy od funkcji, których potrzebujesz. Na [stronie Telefony](../Getting-Started/Phones.md) znajdziesz zalecenia i opinie użytkowników o działających konfiguracjach.
+
+Zachęcamy, aby aktualizować wersję Androida na telefonie, w tym poprawki zabezpieczeń. Jeśli jednak dopiero zaczynasz z **AAPS** lub nie jesteś ekspertem technicznym, możesz wstrzymać się z aktualizacją telefonu, dopóki inni jej nie wykonają i nie potwierdzą na naszych forach, że jest bezpieczna.
+
+```{admonition} Delaying Samsung phone updates
 :class: warning
-Samsung has an unfortunate track record of forcing updates of their phones which cause bluetooth connectivity issues. To disable these forced updates you need to switch the phone to "developer mode" by:
- go to settings and about then software information, then tap build number until it confirms you have unlocked developer mode. Got back to main settings menu and you should see a new developer options menu item. Open developer options and scroll to find auto system update and turn it off
+Samsung niestety ma zwyczaj wymuszania aktualizacji na swoich telefonach, co może powodować problemy z połączeniem Bluetooth. Aby wyłączyć te wymuszone aktualizacje, musisz przełączyć telefon w „tryb programisty”:
+
+1. Przejdź do **Ustawienia** > **Informacje o telefonie** (About phone) > **Informacje o oprogramowaniu** (Software information), a potem stukaj w **Numer wersji** (Build number), aż telefon potwierdzi, że tryb programisty jest odblokowany.
+2. Wróć do głównego menu **Ustawienia**. Powinna się w nim pojawić nowa pozycja **Opcje programisty** (Developer options).
+3. Otwórz **Opcje programisty**, znajdź **Automatyczne aktualizacje systemu** (Auto system update) i wyłącz tę opcję.
 ```
 
-```{admonition} Google Play Protect potential Issue
+```{admonition} Google Play Protect potential issue
 :class: warning
-There have been several reports of **AAPS** being shut down arbitrarily by Google Play Protect every morning. If this happens you will have to go to the google play options and disable “Google Play Protect”. Not all  phone models or all Android versions are affected..
+Było kilka zgłoszeń, że **AAPS** jest co rano bez powodu zamykany przez Google Play Protect. Jeśli tak się dzieje, musisz przejść do opcji Google Play i wyłączyć **Google Play Protect**. Nie dotyczy to wszystkich modeli telefonów ani wszystkich wersji Androida.
+```
+
+```{admonition} Android developer verification
+:class: note
+Od września 2026 Google stopniowo wprowadza [weryfikację deweloperów Androida](#android-developer-verification), która zmienia sposób instalowania samodzielnie zbudowanej aplikacji na telefonie. Nie ma to wpływu na budowanie **AAPS**, a darmowe metody instalacji nadal są dostępne – szczegóły znajdziesz na podlinkowanej stronie.
 ```
 

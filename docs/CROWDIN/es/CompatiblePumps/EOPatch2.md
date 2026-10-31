@@ -1,156 +1,278 @@
-# Manual de instrucciones de EOPatch2 (Glucomen Day Pump)
+# EOPatch2
 
-El parche requiere de insulina de acción rápida del tipo U-100, como NovoRapid o Humalog. Utiliza una insulina de acción rápida adecuada para tí, según la prescripción de tu médico e inyéctate la dosis prescrita.
+El parche necesita insulina de acción rápida U-100, como NovoRapid o Humalog. Usa la insulina de acción rápida que te ha recetado tu médico.
 
-La dosis más pequeña de insulina que puede ponerse cuando usamos es parche es de 0.05U. Por lo tanto, el perfil basal debe ajustarse a un valor mínimo de 0.05U o más, con un intervalo de 0.05U/h, ya que de lo contrario, puede haber un error entre la cantidad total de infusión estimada en el perfil y la cantidad real de infusión en el parche. Del mismo modo, el bolo también debe fijarse con un volumen de infusión mínimo de 0.05U.
+La dosis más pequeña que puede administrar el parche es 0,05 U. Pon cada dosis basal de tu **Perfil** en al menos 0,05 U/h, en pasos de 0,05 U/h. Si no, **AAPS** redondea cada dosis al valor de 0,05 U/h más cercano (nunca a 0) y usa las dosis que el parche da de verdad, así que la insulina total por día es un poco distinta de la de tu **Perfil**. De la misma forma, los bolos deben ser de al menos 0,05 U.
 
-## Configuración de la bomba
-1. En la pantalla de inicio de AAPS, haga clic en el menú hamburguesa de la esquina superior izquierda y vaya a Tabla de configuraciones
-1. Selecciona "EOPatch2" en la seción de las bombas.
-1. Pulsa el botón de Atrás para volver a la pantalla de inicio.
+```{contents} Table of contents
+:depth: 1
+:local: true
+```
 
+## Funciones de la bomba con AAPS
 
-![Imagen1](../images/EOPatch/Bild1.png) ![Imagen2](../images/EOPatch/Bild2.png)
+* Se comunica con **AAPS** mediante el Bluetooth propio del teléfono, sin un dispositivo de comunicación adicional.
+* Los cambios de horario de verano (DST) y de zona horaria se deben hacer a mano.
 
-## Configuración
-Selecciona EOPATCH2 en la parte superior de la pantalla de inicio para ir a la pestaña EOPATCH2.
+## Configurar la bomba
 
-Selecciona el menú Preferencias de EOPatch2, pulsando sobre los tres puntos de la esquina superior derecha.
+1. Abre el **menú** (☰) en la esquina superior izquierda de la pantalla principal de **AAPS** y selecciona **Configuración**.
+1. En la sección **Bomba**, selecciona **EOPatch2**.
+1. Pulsa la tecla Atrás para volver a la pantalla principal.
 
-El menú Preferencias de EOPatch2 ofrece un menú para configurar tres tipos de notificaciones.
+![El menú con la entrada Configuración](../images/v4/Configuration/configuration_menu.png) ![Configuración > Bomba con el complemento EOPatch2](../images/v4/Configuration/configuration_pump_list_3.png)
+
+Cuando está seleccionado, la tarjeta **EOPatch2** muestra dos botones, **Ajustes** y **Abrir complemento**:
+
+![El complemento EOPatch2 seleccionado en Configuración > Bomba](../images/v4/Pumps/eopatch2_enabled.png)
+
+## Ajustes
+
+Abre los ajustes de EOPatch2 de una de estas dos formas:
+
+* pulsa **Ajustes** en la tarjeta **EOPatch2** de **Configuración**, o
+* abre la pantalla de la bomba (**Administrar** → **Bomba**) y pulsa el icono de rueda dentada en la esquina superior derecha.
+
+Hay tres ajustes:
+
+![Ajustes de EOPatch2](../images/v4/Pumps/eopatch_settings.png)
 
 ### Alertas de reservorio bajo
-Aparece una advertencia cuando la cantidad de insulina restante en el reservorio alcanza el valor establecido o menos, durante el uso del parche. Se puede ajustar entre 10-50U, con incrementos de 5U.
+
+Aparece una advertencia cuando la insulina que queda en el parche baja a esta cantidad o menos. Puedes ponerlo entre 10 y 50 U, en pasos de 5 U. El valor predeterminado es 10 U.
 
 ### Recordatorio de expiración del parche
-Se trata de un recordatorio para informarte del tiempo que falta para que caduque el parche actual. Puede ajustarse entre 1-24 horas, con incrementos de 1 hora. Por defecto, viene configurado en 4 horas.
 
-### Recordatorio de zumbidos del parche
-Se trata de una función de recordatorio para inyecciones distintas de la inyección basal. Si estás usando una inyección en bolo (extendido) o una inyección basal temporal, el parche emitirá un zumbido cuando comience la inyección y otro cuando finalice. La configuración predeterminada es Desactivado.
+Te recuerda cuánto tiempo queda hasta que caduque el parche actual. Puedes ponerlo entre 1 y 24 horas, en pasos de 1 hora. El valor predeterminado es 4 horas.
 
-![Imagen3](../images/EOPatch/Bild3.png)
+### Recordatorios de sonidos del parche
 
-## Conexión del parche
+Si está activado, el parche pita cuando empieza y cuando termina un bolo, un bolo extendido o una basal temporal. No afecta a tu basal normal. El valor predeterminado es desactivado.
 
-### Ir a la pantalla de conexión del parche
+## Activar un parche nuevo
 
-Selecciona EOPATCH2 en la parte superior de la pantalla de inicio y pulsa el botón ACTIVAR PARCHE en la parte inferior izquierda.
+### Abrir el asistente de activación
 
-![Image4](../images/EOPatch/Bild4.png)
+Abre la pantalla de la bomba con **Administrar** → **Bomba** (o pulsa **Abrir complemento** en la tarjeta **EOPatch2** de **Configuración**). Cuando no hay ningún parche activo, la pantalla muestra **No activado** y un botón **Activar parche** en la parte inferior.
 
-### Conexión del parche
-Inserta la aguja de la jeringa en la entrada de insulina del parche y, a continuación, empujea lentamente el émbolo para inyectar la insulina. Cuando se introducen mas de 80U, el parche emite un sonido de arranque (1 zumbido) y arranca. Después de confirmar el sonido del zumbido, haz clic en el botón INICIAR EMPAREJAMIENTO de la pantalla.
+Pulsa **Activar parche** para iniciar el asistente.
 
-[Advertencia]
+![La pantalla de la bomba EOPatch2 con el botón Activar parche](../images/v4/Pumps/eopatch_pump_screen.png)
 
-- No gires la palanca de acción de la aguja hasta que se indique. De lo contrario, puedes causar graves problemas durante la inyección o con los controles de seguridad.
-- La cantidad de insulina que puede inyectarse en el parche es de 80~200U. Si inyectas menos de 80U en el parche inicialmente, el parche no funcionará.
-- Saque del frigorífico la insulina que vas a poner en el parche y déjala a temperatura ambiente entre 15 y 30 minutos antes. La temperatura de la insulina a inyectar debe ser de al menos 10°C.
+El asistente te guía por cada paso. La fila de puntos de la parte superior muestra en qué paso estás.
 
-![Imagen5](../images/EOPatch/Bild5.png)
+```{note}
+Si nunca has activado un **Perfil** en **AAPS**, el asistente muestra primero una página **Perfil requerido**. Selecciona el perfil que quieres usar y pulsa **Activar perfil**.
+```
+
+### Llenado de insulina
+
+Introduce la aguja de la jeringa en el puerto de llenado de insulina del parche. Empuja el émbolo despacio para llenar el parche. Cuando hay más de 80 U en el parche, pita una vez y se enciende (arranca).
+
+Cuando oigas el pitido, pulsa **Iniciar el emparejamiento**.
+
+![El paso Llenado de insulina con el botón Iniciar el emparejamiento](../images/v4/Pumps/eopatch_activate_filling.png)
+
+```{warning}
+- No gires la palanca de la aguja hasta que el asistente te lo diga. Si la giras demasiado pronto, puede causar problemas graves durante el llenado o la revisión de seguridad.
+- El parche admite de 80 a 200 U. Si pones menos de 80 U, el parche no funciona.
+- Saca la insulina de la nevera de 15 a 30 minutos antes de llenar, para que llegue a temperatura ambiente. La insulina debe estar al menos a 10 °C.
+```
 
 ### Emparejamiento del parche
-Se mostrará la pantalla de emparejamiento del patche y se intentará realizar el emparejamiento automáticamente. Si la comunicación se realiza correctamente, aparece una notificación de solicitud de emparejamiento Bluetooth. Haz clic en Aceptar y cuando aparezca por segunda vez la notificación de solicitud de emparejamiento Bluetooth con el código de autenticación, vuelva a seleccionar Aceptar.
 
-[Advertencia]
+Ahora **AAPS** intenta emparejarse con el parche de forma automática. Durante el emparejamiento aparecen dos solicitudes de emparejamiento Bluetooth de Android. Pulsa **OK** en la primera. Vuelve a pulsar **OK** en la segunda, que muestra una clave de acceso.
 
-- Para el emparejamiento, el parche y el teléfono deben estar situados a menos de 30 cm el uno del otro.
-- Una vez completado el inicio del parche, éste emitirá un pitido cada 3 minutos hasta que se complete el emparejamiento.
-- Después de iniciar el parche, la aplicación del parche debe completarse mediante la aplicación, en un plazo de 60 minutos. Si la aplicación no puede completarse en 60 minutos, el parche deberá desecharse.
+```{warning}
+- Mantén el parche y el teléfono a menos de 30 cm el uno del otro durante el emparejamiento.
+- Después de arrancar, el parche pita cada 3 minutos hasta que termina el emparejamiento.
+- Debes terminar de activar el parche en los 60 minutos siguientes a su arranque. Si no puedes, descarta el parche.
+```
 
-![Imagen6](../images/EOPatch/Bild6.png) ![Imagen7](../images/EOPatch/Bild7.png) ![Imagen8](../images/EOPatch/Bild8.png)
+![Paso de emparejamiento del parche](../images/EOPatch/Bild6.png) ![Primera solicitud de emparejamiento Bluetooth](../images/EOPatch/Bild7.png) ![Segunda solicitud de emparejamiento Bluetooth con la clave de acceso](../images/EOPatch/Bild8.png)
 
+```{admonition} Older screenshot
+:class: note
+Las dos capturas del emparejamiento Bluetooth son de una versión anterior de **AAPS**: la pantalla de **AAPS** detrás de la solicitud de emparejamiento de Android se ve distinta en **AAPS** 4.
+```
 
-### Preparación del parche
-Tras retirar la cinta adhesiva del parche, comprueba si la aguja sobresale. Si no hay problemas con el parche, haga clic en SIGUIENTE.
+### Seleccionar insulina
 
-![Imagen9](../images/EOPatch/Bild9.png)
+Selecciona la insulina con la que has llenado el parche y pulsa **Siguiente**. **AAPS** aplica un cambio de perfil con esta insulina después de la activación.
 
-### Fijación del parche
-La insulina debe inyectarse en un lugar con grasa subcutánea, pero con pocos nervios o vasos sanguíneos, por lo que se recomienda utilizar el abdomen, el brazo o el muslo, como lugar de fijación del parche. Elije un lugar de fijación del parche y aplíqualo después de desinfectar la zona.
+### Prepárate para colocar el parche
 
-[Advertencia]
+Quita la cinta adhesiva del parche y luego pulsa **Siguiente**.
 
-- Asegúrate de enderezar uniformemente el lado de la cinta adhesiva del parche pegado al cuerpo, para que se adhiera completamente a la piel.
-- Si el parche no se adhiere completamente, puede entrar aire entre el parche y la piel, lo que puede debilitar la fuerza adhesiva y el efecto impermeable del parche.
+Si sale una aguja, o si el parche está mojado o sucio o su cinta adhesiva está doblada, pulsa **Descartar** y usa un parche nuevo.
 
-![Imagen10](../images/EOPatch/Bild10.png)
+![Paso Prepárate para colocar el parche](../images/EOPatch/Bild9.png)
 
-### Comprobación de seguridad
-Una vez finalizada la aplicación del parche, toca Iniciar comprobación de seguridad. Una vez finalizadas las comprobaciones de seguridad, el parche emitirá un pitido.
+### Ubicación de la zona
 
-[Advertencia]
+Este paso solo aparece si **Gestionar la rotación del lugar de inserción de la bomba** está activado en los ajustes de rotación de zonas. Toca en el dibujo del cuerpo el lugar donde vas a colocar el parche y pulsa **Siguiente**, o pulsa **Omitir**.
 
-- Para un uso seguro, no gires la palanca de accionamiento de la aguja hasta que se haya completado la comprobación de seguridad.
+### Coloca el parche en tu cuerpo
 
-![Imagen11](../images/EOPatch/Bild11.png) ![Imagen12](../images/EOPatch/Bild12.png)
+La insulina debe ir a un lugar con tejido graso bajo la piel, pero con pocos nervios o vasos sanguíneos. El abdomen, el brazo o el muslo son buenas opciones. Limpia y seca la zona y luego pega el parche en la piel.
 
+Revisa el lugar de infusión y luego pulsa **Empezar la revisión de seguridad**.
+
+```{warning}
+- Presiona los bordes de la cinta del parche de forma uniforme, para que todo el parche quede bien pegado a la piel.
+- Si el parche no se pega por completo, puede entrar aire entre el parche y la piel. Esto debilita el adhesivo y la resistencia al agua del parche.
+```
+
+![Paso Coloca el parche en tu cuerpo](../images/EOPatch/Bild10.png)
+
+### Comprobaciones de seguridad
+
+La revisión de seguridad dura unos 30 segundos. Cuando termina, el parche pita una vez. Si falla, pulsa **Reintentar**.
+
+```{warning}
+Para un uso seguro, no gires la palanca de la aguja hasta que termine la revisión de seguridad.
+```
+
+![Paso Coloca el parche en tu cuerpo con el botón Empezar la revisión de seguridad](../images/EOPatch/Bild11.png) ![Revisión de seguridad en curso](../images/EOPatch/Bild12.png)
+
+```{admonition} Older screenshot
+:class: note
+Las capturas desde **Prepárate para colocar el parche** hasta **Comprobaciones de seguridad** son de una versión anterior de **AAPS** y pueden verse distintas en **AAPS** 4.
+```
 
 ### Inserción de la aguja
-La aguja se inserta sujetando la zona alrededor del parche y girando la palanca de acción de la aguja más de 100°, en la dirección de la flecha de la palanca. Se escuchará un zumbido cuando la aguja se introduce correctamente. Gira aún más la palanca de acción de la aguja, en el sentido de las agujas del reloj para soltarla. Haz clic en SIGUIENTE
 
-[Precaución]
+Sujeta el parche con firmeza. Gira la palanca de la aguja hacia arriba más de 100° para insertar la aguja. El parche pita una vez cuando la aguja está bien insertada. Después sigue girando la palanca hasta el final para quitarla. Pulsa **Siguiente**.
 
-- Si vas al siguiente paso sin haber escuchado el zumbido, aparecerá un aviso de error de inserción de la aguja.
+```{caution}
+Si pasas al siguiente paso sin oír el pitido, aparece un **Error de inserción de la aguja**. Comprueba el pitido y pulsa **Reintentar**. Si el error sigue, pulsa **Descartar** para desactivar el parche.
+```
+
+### Activación del parche completada
+
+La última página confirma que el parche está activo y que te avisará cuando se acerque su fecha de caducidad. Pulsa **Finalizar** para volver a la pantalla de la bomba.
 
 ## Descartando el parche
-Los parches deben sustituirse en caso de: bajos niveles de insulina, caducidad de uso y defectos. El periodo de uso recomendado para cada parche es de 84 horas después de iniciarlo.
 
-### Descartando el parche
-Selecciona EOPATCH2 en la parte superior de la pantalla de inicio y pulsa el botón DESCARTAR/CAMBIAR PARCHE, en la parte inferior. En la siguiente pantalla, haz clic en el botón DESCARTAR PARCHE. Aparecerá un cuadro de diálogo para confirmar una vez más, y si pulsas sobre el botón DESCARTAR PARCHE, se completará la eliminación.
+Cambia el parche cuando le quede poca insulina, cuando caduque o si falla. Te recomendamos usar cada parche como máximo 84 horas desde su arranque.
 
-![Imagen13](../images/EOPatch/Bild13.png) ![Imagen14](../images/EOPatch/Bild14.png) ![Imagen15](../images/EOPatch/Bild15.png) ![Imagen16](../images/EOPatch/Bild16.png)
+1. Abre la pantalla de la bomba (**Administrar** → **Bomba**). Mientras hay un parche activo, pulsa **Descartar parche**.
+1. La página **Descartar parche** muestra el tiempo y la insulina que le quedan al parche. Pulsa **Descartar parche**.
+1. Un cuadro de diálogo te pide que lo confirmes. Vuelve a pulsar **Descartar parche**.
+1. Cuando el parche se ha desactivado, el asistente muestra **El parche se ha desactivado por completo.** Quítate el parche del cuerpo y pulsa **Confirmar**.
+
+Después, el asistente pasa directamente a activar un parche nuevo (ver arriba). Pulsa la flecha atrás si quieres parar aquí.
+
+Mientras no hay ningún parche activo, **AAPS** muestra la bomba como suspendida y registra una basal temporal de 0 U/h, así que no se cuenta insulina basal en la IOB hasta que se active el siguiente parche.
+
+![La pantalla de la bomba EOPatch2 con el botón DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![Página Descartar parche](../images/EOPatch/Bild14.png) ![Cuadro de confirmación de Descartar parche](../images/EOPatch/Bild15.png) ![El parche se ha desactivado por completo](../images/EOPatch/Bild16.png)
+
+```{admonition} Older screenshot
+:class: note
+Las capturas de pantalla de arriba son de una versión anterior de **AAPS**. En **AAPS** 4 la pantalla de la bomba se abre desde **Administrar** → **Bomba**, y su botón se llama **Descartar parche**.
+```
+
+```{admonition} If the patch does not respond
+:class: warning
+Si **AAPS** no puede comunicarse con el parche, puede mostrar una página sobre cómo apagar a mano la alarma del parche: quítate el parche del cuerpo, despega la cinta adhesiva y usa un clip para presionar con fuerza en el agujero que está junto al puerto de llenado de insulina.
+
+La página **Descartar parche** también tiene un botón **Reinicio forzado**. Solo borra el parche de **AAPS**, sin enviar ninguna orden al parche. El parche sigue administrando insulina hasta que se agote su batería o lo apagues a mano. Úsalo solo si falla el descarte normal, y quítate el parche del cuerpo.
+```
 
 ## Suspender y reanudar la administración de insulina
-La suspensión de la administración de insulina,  anula tanto el bolo extendido como la basal temporal. Al reanudar la administración de insulina, no se reanudará ni el bolo extendido, ni la basal temporal canceladas. Cuando se suspenda la administración de insulina, el parche emitirá un sonido cada 15 minutos.
+
+Al suspender la administración de insulina también se cancela cualquier bolo extendido y basal temporal. Cuando reanudas, **no** se vuelven a iniciar. Mientras la administración de insulina está suspendida, el parche pita cada 15 minutos.
 
 ### Suspender la administración de insulina
-Selecciona EOPATCH2 en la parte superior de la pantalla de inicio y pulsa el botón SUSPENDER en la parte inferior derecha. Cuando selecciones CONFIRMAR en el cuadro de confirmación, aparecerá un cuadro de selección de hora. Si seleccionas el botón CONFIRMAR después de seleccionar la hora, la administración de insulina se suspenderá durante el tiempo establecido.
 
-![Imagen17](../images/EOPatch/Bild17.png) ![Imagen18](../images/EOPatch/Bild18.png) ![Imagen19](../images/EOPatch/Bild19.png)
+1. Abre la pantalla de la bomba (**Administrar** → **Bomba**) y pulsa **Suspender bomba**.
+1. Un cuadro de diálogo explica qué se va a suspender. Pulsa **Confirmar**.
+1. En el cuadro **Tiempo de suspensión basal**, elige cuánto tiempo suspender: 30 min, 1 h, 1 h 30 min o 2 h. Pulsa **Confirmar**.
 
+La administración de insulina se suspende durante el tiempo que elegiste.
+
+![La pantalla de la bomba EOPatch2 con el botón SUSPENDER](../images/EOPatch/Bild17.png) ![Cuadro de confirmación de la suspensión](../images/EOPatch/Bild18.png) ![Cuadro Tiempo de suspensión basal](../images/EOPatch/Bild19.png)
+
+```{admonition} Older screenshot
+:class: note
+Las capturas de pantalla de arriba son de una versión anterior de **AAPS**. En **AAPS** 4 la pantalla de la bomba se abre desde **Administrar** → **Bomba**, y su botón se llama **Suspender bomba**.
+```
 
 ### Reanudación de la administración de insulina
-Selecciona EOPATCH2 en la parte superior de la pantalla de inicio y pulsa el botón REANUDAR en la parte inferior derecha. La administración de insulina se reanudará seleccionando CONFIRMAR en el cuadro de diálogo de confirmación.
 
-![Imagen20](../images/EOPatch/Bild20.png) ![Imagen21](../images/EOPatch/Bild21.png)
+1. Abre la pantalla de la bomba (**Administrar** → **Bomba**) y pulsa **Reanudar bomba**.
+1. En el cuadro **Reanudar la administración de insulina**, pulsa **Confirmar**.
 
-## Alarmas/Advertencias
+![La pantalla de la bomba EOPatch2 con el botón REANUDAR](../images/EOPatch/Bild20.png) ![Cuadro Reanudar la administración de insulina](../images/EOPatch/Bild21.png)
+
+```{admonition} Older screenshot
+:class: note
+Las capturas de pantalla de arriba son de una versión anterior de **AAPS**. En **AAPS** 4 la pantalla de la bomba se abre desde **Administrar** → **Bomba**, y su botón se llama **Reanudar bomba**.
+```
+
+```{warning}
+Cuando termina el tiempo de suspensión, **AAPS** muestra una advertencia **Fin de la suspensión de insulina**. La administración de insulina **no** se reanuda hasta que lo confirmes. Si no lo haces, podrías tener una hiperglucemia.
+```
+
+(eopatch2-alarms-and-warnings)=
+
+## Alarmas y advertencias
 
 ### Alarmas
 
-Las alarmas se emiten en situaciones de emergencia de máxima prioridad y que requieren una actuación inmediata. La señal de alarma no desaparece hasta que se confirma. Se produce una alarma cuando hay un problema con el parche que se está utilizando, por lo que puede haber casos en los que sea necesario desechar el parche en uso y sustituirlo por uno nuevo. La advertencia se muestra como un cuadro de diálogo y no es posible cambiar a otra pantalla hasta que se complete el proceso.
+Las alarmas son para situaciones urgentes y de máxima prioridad, y necesitan que actúes enseguida. **AAPS** hace sonar una alarma que no para hasta que la confirmas, y muestra el mensaje como notificación en la pantalla **Inicio**. Una alarma significa que hay un problema con el parche en uso. En muchos casos hay que descartar el parche y cambiarlo por uno nuevo.
 
-![Imagen22](../images/EOPatch/Bild22.png) ![Imagen23](../images/EOPatch/Bild23.png)
+Cuando pulsas **Confirmar** en la notificación, **AAPS** gestiona la alarma. En la mayoría de las alarmas, esto desactiva el parche. En la alarma **Temperatura inadecuada**, el botón es **Reintentar**.
 
-A continuación, se explican los distintos tipos de alarmas.
+![Alarma de EOPatch2](../images/EOPatch/Bild22.png) ![Alarma de EOPatch2 después de desactivar el parche](../images/EOPatch/Bild23.png)
 
-| Alarmas                            | Explicación                                                                                                                                                                                                                                                     |
-| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Reservorio vacío                   | Se produce cuando el reservorio del parche se queda sin insulina.                                                                                                                                                                                               |
-| Parche caducado                    | Ocurre cuando el tiempo de uso del parche ha expirado y no es posible realizar más inyecciones de insulina.                                                                                                                                                     |
-| Oclusión                           | Se produce cuando parece que la entrada de insulina del parche está obstruida.                                                                                                                                                                                  |
-| Fallo en el auto-test de encendido | Se produce cuando el parche encuentra un error inesperado durante el proceso de autocomprobación posterior al arranque.                                                                                                                                         |
-| Temperatura inadecuada             | Se produce cuando el parche se encuentra fuera del intervalo normal de temperatura de funcionamiento, durante su aplicación y uso. Para hacer frente a esta alarma, mueva el parche a una condición de temperatura de funcionamiento adecuada (de 4,4° a 37°C). |
-| Error de inserción de la aguja     | Se produce cuando la inserción de la aguja no es normal durante el proceso de aplicación del parche. Comprueba que el borde de inserción de la aguja del parche y el botón de activación de la aguja están en línea recta.                                      |
-| Error de la batería del parche     | Se produce justo antes de que la batería interna del parche se agote y se apague.                                                                                                                                                                               |
-| Error de activación del parche     | Ocurre cuando la aplicación no consigue completar el proceso de aplicación del parche en los 60 minutos siguientes al inicio del mismo.                                                                                                                         |
-| Error del parche                   | Ocurre cuando el parche encuentra un error inesperado al aplicar y utilizar el parche.                                                                                                                                                                          |
+```{admonition} Older screenshot
+:class: note
+Las capturas de las alarmas son de una versión anterior de **AAPS** y pueden verse distintas en **AAPS** 4.
+```
+
+Las distintas alarmas se explican a continuación.
+
+| Alarma                             | Explicación                                                                                                                                                              |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Reservorio vacío                   | El parche se ha quedado sin insulina.                                                                                                                                    |
+| Parche caducado                    | El tiempo de uso del parche ha terminado y ya no puede administrar más insulina.                                                                                         |
+| Oclusión                           | Parece que el conducto de insulina del parche está bloqueado.                                                                                                            |
+| Fallo en el auto-test de encendido | El parche ha encontrado un error inesperado en su autoprueba después de arrancar.                                                                                        |
+| Temperatura inadecuada             | El parche está fuera de su temperatura normal de funcionamiento mientras lo activas o lo usas. Lleva el parche a un lugar con una temperatura adecuada (de 4,4 a 37 °C). |
+| Error de inserción de la aguja     | La aguja no se insertó bien durante la activación. Comprueba que el borde de inserción de la aguja del parche y la palanca de la aguja están en línea recta.             |
+| Error de la batería del parche     | La batería interna del parche está a punto de agotarse y el parche se apagará.                                                                                           |
+| Error de activación del parche     | El parche no se activó por completo en los 60 minutos siguientes a su arranque.                                                                                          |
+| Error del parche                   | El parche ha encontrado un error inesperado mientras se activaba o se usaba.                                                                                             |
 
 ### Advertencias
 
-Una advertencia se produce en una situación de prioridad media o baja. Cuando se produce una advertencia, se muestra como una notificación en la pantalla de Inicio.
+Las advertencias son para situaciones de prioridad media o baja. Una advertencia aparece como notificación en la pantalla **Inicio**.
 
-![Imagen24](../images/EOPatch/Bild24.png)
+![Advertencia de EOPatch2 en la pantalla Inicio](../images/EOPatch/Bild24.png)
 
-A continuación, se explican los distintos tipos de advertencias.
+```{admonition} Older screenshot
+:class: note
+Esta captura es de una versión anterior de **AAPS**: en **AAPS** 4 la advertencia aparece en la pantalla principal, que se ve distinta.
+```
 
-| Advertencias                          | Explicación                                                                                                                                                                |
-| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Fin de la suspensión de insulina      | Ocurre cuando ha transcurrido el tiempo establecido por el usuario tras finalizar la suspensión de la infusión de insulina.                                                |
-| Reservorio bajo                       | Se produce cuando la cantidad restante de insulina en el parche es inferior a la cantidad establecida.                                                                     |
-| Expiración de la vida útil del parche | Se produce cuando finaliza el periodo de uso del parche.                                                                                                                   |
-| El parche caducará pronto             | Se produce 1 hora antes de que deba desecharse el parche.                                                                                                                  |
-| Activación incompleta del parche      | Se produce cuando han transcurrido más de 3 minutos debido a una interrupción durante la aplicación del parche, en la fase posterior a la finalización del emparejamiento. |
-| Batería del parche baja               | Ocurre cuando la batería del parche está baja.                                                                                                                             |
+Las distintas advertencias se explican a continuación.
 
+| Advertencia                           | Explicación                                                                                                                                               |
+| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Fin de la suspensión de insulina      | El tiempo de suspensión que elegiste ha terminado. Pulsa **Reanudar bomba** en la notificación para reanudar la administración de insulina.               |
+| Reservorio bajo                       | La insulina que queda en el parche está por debajo de la cantidad fijada en **Alertas de reservorio bajo**.                                               |
+| Expiración de la vida útil del parche | El periodo de uso del parche ha terminado.                                                                                                                |
+| El parche caducará pronto             | El parche debe descartarse en 1 hora.                                                                                                                     |
+| Activación incompleta del parche      | La activación del parche se interrumpió durante más de 3 minutos después del emparejamiento. Abre la pantalla de la bomba y termina de activar el parche. |
+| Batería del parche baja               | La batería del parche está baja.                                                                                                                          |
+
+## Dónde obtener ayuda
+
+El desarrollo del driver de EOPatch2 lo hace la comunidad de forma **voluntaria**. Antes de pedir ayuda:
+
+1. **Lee** la sección correspondiente de esta documentación para confirmar cómo debe funcionar la función.
+2. **Pregunta** en el canal *#AAPS* de [Discord](https://discord.gg/4fQUWHZ4Mw) o en uno de los otros [canales de la comunidad](../GettingHelp/WhereCanIGetHelp.md).
+3. **Informa de un error** buscando primero en los [problemas existentes](https://github.com/nightscout/AndroidAPS/issues); si el tuyo no aparece, abre un [nuevo problema](https://github.com/nightscout/AndroidAPS/issues) y adjunta tus [archivos de registro](../GettingHelp/AccessingLogFiles.md).
+
+Cuando pidas ayuda, indica la marca y el modelo de tu teléfono, la versión de Android, la versión de **AAPS** y una descripción sencilla del problema (qué cambió y cuándo funcionó por última vez).

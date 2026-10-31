@@ -1,40 +1,49 @@
 # Τηλέφωνα
 
-The current version of **AAPS** (3.4) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), **Android 16 is preferred**, Android 15 is not recommended.
+<!-- List of hidden pages to avoid overcrowding the menu -->
 
-Check [Facebook or Discord](../GettingHelp/WhereCanIGetHelp.md) for latest updates on this subject.
+```{toctree}
+:hidden:
 
-Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+../CompatiblePhones/Jelly.md
+../CompatiblePhones/Huawei.md
+```
 
-- [Jelly Pro Settings](../CompatiblePhones/Jelly.md)
-- [Huawei Settings](../CompatiblePhones/Huawei.md)
+Η τρέχουσα έκδοση του **AAPS** (4.0) απαιτεί smartphone Android με Google **Android 12.0 ή νεότερο**. Αν σκέφτεστε να αγοράσετε νέο τηλέφωνο (στοιχεία Ιανουαρίου 2026), **προτιμάται το Android 16**· το Android 15 δεν συνιστάται.
+
+Δείτε στο [Facebook ή στο Discord](../GettingHelp/WhereCanIGetHelp.md) για τα πιο πρόσφατα νέα σχετικά με αυτό το θέμα.
+
+Για λόγους ασφάλειας, συνιστούμε έντονα στους χρήστες να έχουν πάντα ενημερωμένη την έκδοση του **AAPS** που χρησιμοποιούν. Ωστόσο, για χρήστες που δεν μπορούν να χρησιμοποιήσουν συσκευή με Android 12.0 ή νεότερο, παραμένουν διαθέσιμες παλαιότερες εκδόσεις του **AAPS** που είναι συμβατές με παλαιότερες εκδόσεις Android. Δείτε: [Σημειώσεις έκδοσης](#maintenance-android-version-aaps-version).
+
+- [Ρυθμίσεις Jelly Pro](../CompatiblePhones/Jelly.md)
+- [Ρυθμίσεις Huawei](../CompatiblePhones/Huawei.md)
 
 (Phones-list-of-tested-phones)=
 
-## List of tested Phones
+## Λίστα δοκιμασμένων τηλεφώνων
 
-We maintain a list of the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) that you can [explore with a friendly interface](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/). Contribute by filling out the [Google form](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) and adding your setup!
+Διατηρούμε μια λίστα με τους [δοκιμασμένους συνδυασμούς συσκευών](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true), που μπορείτε να [εξερευνήσετε με ένα εύχρηστο περιβάλλον](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/). Συμβάλετε συμπληρώνοντας τη [φόρμα Google](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) και προσθέτοντας τον δικό σας συνδυασμό!
 
-This list provides user feedback on the usage of a phone along with **AAPS** and a given pump and CGM. It can help you check if your phone / pump / CGM has been used successfully by other users.
+Αυτή η λίστα δείχνει την εμπειρία χρηστών με ένα τηλέφωνο μαζί με το **AAPS** και μια συγκεκριμένη αντλία και CGM. Σας βοηθά να ελέγξετε αν το τηλέφωνο / η αντλία / το CGM σας έχει χρησιμοποιηθεί με επιτυχία από άλλους χρήστες.
 
-The document is read-only. With CRTL-F, you can search in the text of the Google sheet.
+Το έγγραφο είναι μόνο για ανάγνωση. Με CTRL-F μπορείτε να κάνετε αναζήτηση στο κείμενο του φύλλου Google.
 
-To record your test of a hardware setup, please fill in this [form](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). After you fill in the form data, the sheet is updated automatically every 5 minutes
+Για να καταγράψετε τη δοκιμή σας για έναν συνδυασμό συσκευών, συμπληρώστε αυτή τη [φόρμα](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Αφού συμπληρώσετε τη φόρμα, το φύλλο ενημερώνεται αυτόματα κάθε 5 λεπτά.
 
-Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the [Where can I get help? page](../GettingHelp/WhereCanIGetHelp.md).
+Για οποιοδήποτε πρόβλημα με το υπολογιστικό φύλλο, επικοινωνήστε με τον υπεύθυνό του, *@theodoor5137*, στο Discord, ή δείτε τη [σελίδα «Πού μπορώ να βρω βοήθεια; »](../GettingHelp/WhereCanIGetHelp.md).
 
-## I didn't find my phone
+## Δεν βρήκα το τηλέφωνό μου
 
-If you have questions regarding a specific phone model, please search or ask in our [Facebook or Discord community](../GettingHelp/WhereCanIGetHelp.md).
+Αν έχετε ερωτήσεις για ένα συγκεκριμένο μοντέλο τηλεφώνου, κάντε αναζήτηση ή ρωτήστε στην [κοινότητά μας στο Facebook ή στο Discord](../GettingHelp/WhereCanIGetHelp.md).
 
-To make a donation of smartphone or smartwatch models that still need testing, please email <donations@androidaps.org>.
+Για να δωρίσετε μοντέλα smartphone ή έξυπνων ρολογιών που χρειάζονται ακόμη δοκιμή, στείλτε email στο <donations@androidaps.org>.
 
 (Phones-phone-wallpaper)=
 
-## Phone Wallpaper
+## Ταπετσαρία τηλεφώνου
 
-If you want to decorate your phone with more **AAPS**, you can download your background image [here](../images/bg_phone.jpg)!
+Αν θέλετε να διακοσμήσετε το τηλέφωνό σας με περισσότερο **AAPS**, μπορείτε να κατεβάσετε την εικόνα φόντου [εδώ](../images/bg_phone.jpg)!
 
-![phone background](../images/bg_phone_thump.jpg)
+![φόντο τηλεφώνου](../images/bg_phone_thump.jpg)
 
-Design: Thiago :)
+Σχέδιο: Thiago :)

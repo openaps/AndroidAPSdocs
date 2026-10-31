@@ -1,169 +1,195 @@
 (generaltroubleshooting)=
 
-# **Troubleshooting**
+# Riešenie problémov
 
-You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem for various known issues.
+**Začnite tu, keď niečo nefunguje.** Informácie o riešení problémov sú na mnohých stránkach dokumentácie. Táto stránka ich spája: je to jeden zoznam odkazov zoradených podľa tém, ktorý vám pomôže vyriešiť najčastejšie problémy.
 
-Additional useful information might also be available in the [FAQ](../UsefulLinks/FAQ.md).
+Ak tu odpoveď nenájdete, pozrite si aj:
+
+* [Najčastejšie otázky používateľov APS](../UsefulLinks/FAQ.md) s odpoveďami na časté otázky a
+* návod [Ladenie profilu AAPS](ProfileTuning.md), ak váš okruh beží, ale kontrolu glykémie treba zlepšiť.
+
+```{admonition} Still stuck?
+:class: tip
+Ak vám žiadny z odkazov nepomôže, pozrite si stránku [Kde získať pomoc](WhereCanIGetHelp.md) a opýtajte sa komunity (Facebook, Discord), alebo pošlite vývojárom svoje [log súbory](AccessingLogFiles.md).
+```
 
 ---
 
 (generaltroubleshooting-aaps-app)=
 
-## **AAPS app**
+## Aplikácia AAPS
 
-### **Building & updating**
+### Zostavenie a aktualizácia
 
-* [Lost keystore](#troubleshooting_androidstudio-lost-keystore)
-* [Troubleshooting AndroidStudio](TroubleshootingAndroidStudio)
-* [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) and [updating with AAPS Builder](#aaps-builder-updates)
-* [Browser build (CI) troubleshooting](#aaps-ci-troubleshooting)
+* Ak zostavenie zlyhá, pozrite si [Ak zostavenie zlyhá](#building-aaps-troubleshooting): je tam časť o riešení problémov pre každý spôsob zostavenia:
+  * [AAPS Builder](#aaps-builder-troubleshooting)
+  * [Zostavenie v prehliadači](#aaps-ci-troubleshooting)
+  * [Android Studio](TroubleshootingAndroidStudio.md)
+* Stratené alebo nové úložisko kľúčov: [Preinštalovanie AAPS](#reinstall-aaps)
+* Aktualizácia **AAPS**: [s AAPS Builderom](#aaps-builder-updates), [so zostavením v prehliadači (fork)](#update-browser-build-troubleshooting), [s Android Studiom](#update-computer-build-troubleshooting)
 
-### **Installing**
+### Inštalácia
 
-You may see a Google Play Protect warning that the app is unsafe, was built for older Android versions and doesn't include latest privacy protections.
+* [Varovanie Google Play Protect](#transferring-installing-play-protect-warning): aplikácia je označená ako nebezpečná.
+* Inštalácia je **zablokovaná** so správou o neoverenom vývojárovi: bezplatné spôsoby inštalácie nájdete v časti [Overovanie vývojárov pre Android](#android-developer-verification).
 
-Ignore it: More details, Install anyway.
+### Nastavenia
 
-![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+* [Profil: „Bazál nie je kompatibilný s aktuálnou pumpou“](#your-aaps-profile-basal-not-compatible)
+* [Pumpa: „Dáta prichádzajú z inej pumpy“](#config-builder-wrong-pump-data)
+* [Nightscout Client](TroubleshootingNsClient.md)
 
-### **Settings**
-* Profil
+### Používanie
 
-  ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
-
-* [Pump - data from different pump](#update30-failure-message-data-from-different-pump)
-
-  ![Failure message: Data from different pump](../images/BasalNotAlignedToHours2.png)
-
-* [Nightscout Client](../GettingHelp/TroubleshootingNsClient.md)
-
-### **Usage**
-* [Wrong carb values](#CobCalculation-detection-of-wrong-cob-values)
-
-   ![Error: Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
-
-* [SMS commands](#SMSCommands-troubleshooting)
+* [Nesprávne hodnoty sacharidov (pomalé vstrebávanie sacharidov)](#CobCalculation-detection-of-wrong-cob-values)
+* [Automatizácie](#automations-troubleshooting)
+* [Plne uzavretý okruh](#full-closed-loop-troubleshooting)
 
 ---
 
 (generaltroubleshooting-bluetooth-related-issues)=
 
 
-## **Bluetooth related issues**
+## Problémy súvisiace s Bluetooth
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Známe problémy s Bluetooth spojením, výpadky pumpy/Podov alebo problémy s aktiváciou a pripojením: [Problémy súvisiace s Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
 (generaltroubleshooting-android-related-issues)=
 
-## **Android Related Issues**
+## Problémy súvisiace s Androidom
 
-### **Battery optimization**
+### Optimalizácia batérie
 
-Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
+**AAPS** vám môže pomôcť nájsť správne nastavenia pre váš telefón: otvorte **ponuku** (☰) > **O aplikácii** a ťuknite na **Nepotláčať moju aplikáciu?**. Otvorí sa návod pre značku vášho telefónu na stránke [Don't kill my app](https://dontkillmyapp.com/). [Sprievodca nastavením](#setup-wizard-bluetooth-battery-optimisation) vás tiež požiada, aby ste vypli optimalizáciu batérie pre **AAPS** a Bluetooth.
 
-When this is enabled, it will very likely cause issue for **AAPS** and other supporting apps like **xDrip+**.
+Android má nastavenia na šetrenie batérie, ktoré sú predvolene zapnuté. Tieto nastavenia automaticky uspávajú/pozastavujú aplikácie, ktoré systém nepotrebuje na svoju činnosť. Tak šetria energiu batérie, ktorú spotrebúvajú aplikácie, ktoré nemusia bežať stále.
 
-It's important to ensure that you have disabled Battery Optimization to ensure **AAPS** and other supporting apps remain active all the time.
+Keď je zapnutá, veľmi pravdepodobne spôsobí problémy **AAPS** a ďalším podporným aplikáciám, ako je **xDrip**.
 
-Depending on your phone model and make there may be more than one location and setting which needs to have this disabled.
+Je dôležité vypnúť optimalizáciu batérie, aby **AAPS** a ďalšie podporné aplikácie zostali stále aktívne.
 
-***NOTE:** Follow the steps below to Disable Battery Optimization for the Bluetooth service if your phone has this option, the same steps can be used to disable for **AAPS** and other apps, however the screenshots will only show how to do this for the Bluetooth service.*
+Podľa modelu a výrobcu telefónu môže byť na vypnutie viac miest a nastavení.
 
-#### **Pixel phones (stock Android)**
+***POZNÁMKA:** Ak má váš telefón túto možnosť, podľa krokov nižšie vypnite optimalizáciu batérie pre službu Bluetooth. Rovnaké kroky môžete použiť aj na vypnutie pre **AAPS** a ďalšie aplikácie, snímky obrazovky však ukazujú postup iba pre službu Bluetooth.*
 
-* Go to the Android settings, select "Apps".
+#### Telefóny Pixel (čistý Android)
 
-  ![Android Settings¦Apps](../images/troubleshooting/pixel/01_androidsettings.png)
+* Prejdite do nastavení Androidu, vyberte „Aplikácie“ (Apps).
 
-* Select "See all apps"
+  ![Nastavenia Androidu¦Aplikácie](../images/troubleshooting/pixel/01_androidsettings.png)
 
-  ![See all apps](../images/troubleshooting/pixel/02_apps.png)
+* Vyberte „Zobraziť všetky aplikácie“ (See all apps)
 
-* On the menu on the right, select "Show system" apps.
+  ![Zobraziť všetky aplikácie](../images/troubleshooting/pixel/02_apps.png)
 
-  ![Show system apps](../images/troubleshooting/pixel/03_allapps.png)
+* V ponuke vpravo vyberte „Zobraziť systémové“ (Show system) aplikácie.
 
-* Now search and select the app "Bluetooth".
+  ![Zobraziť systémové aplikácie](../images/troubleshooting/pixel/03_allapps.png)
 
-  ![Bluetooth app](../images/troubleshooting/pixel/03_bluetooth.png)
+* Teraz vyhľadajte a vyberte aplikáciu „Bluetooth“.
 
-* Click the "App battery usage" and select "Not optimized".
+  ![Aplikácia Bluetooth](../images/troubleshooting/pixel/03_bluetooth.png)
 
-  ![BT Battery optimization](../images/troubleshooting/pixel/04_btunrestricted.png)
+* Kliknite na „Využitie batérie aplikáciou“ (App battery usage) a vyberte „Bez obmedzení“ (Unrestricted) (v niektorých starších verziách Androidu sa volá „Neoptimalizované“ (Not optimized)).
+
+  ![Optimalizácia batérie pre Bluetooth](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-#### **Samsung phones**
+#### Telefóny Samsung
 
-* Go to the android settings, select "Apps"
+* Prejdite do nastavení Androidu, vyberte „Aplikácie“ (Apps)
 
-* On the icon that supposedly changes the sorting algorithm (1), select "Show system apps" (2).
+* Na ikone, ktorá by mala meniť spôsob triedenia (1), vyberte „Zobraziť systémové aplikácie“ (Show system apps) (2).
 
-  ![App Filter](../images/troubleshooting/samsung/Samsung01_Apps.png)
+  ![Filter aplikácií](../images/troubleshooting/samsung/Samsung01_Apps.png)
 
-  ![Show system apps](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+  ![Zobraziť systémové aplikácie](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
 
-* Now search the bluetooth app and select it to see its settings.
+* Teraz vyhľadajte aplikáciu Bluetooth a vyberte ju, aby ste videli jej nastavenia.
 
-  ![Bluetooth App](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+  ![Aplikácia Bluetooth](../images/troubleshooting/samsung/Samsung03_BtApp.png)
 
-* Select "battery".
+* Vyberte „Batéria“ (Battery).
 
-  ![Battery](../images/troubleshooting/samsung/Samsung04_Battery.png)
+  ![Batéria](../images/troubleshooting/samsung/Samsung04_Battery.png)
 
-* Set it to "Not optimized"
+* Nastavte ju na „Bez obmedzení“ (Unrestricted) (v niektorých starších verziách Androidu sa volá „Neoptimalizované“ (Not optimized)).
 
-  ![Not optimized](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
+  ![Bez obmedzení](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
-#### **Huawei phones**
+#### Telefóny Huawei
 
-See this guide for [Huawei bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+Pozrite si tento návod: [Huawei: Bluetooth a optimalizácia batérie](../CompatiblePhones/Huawei.md)
 
 ---
 
 (generaltroubleshooting-cgm)=
 
-## **Continious Glucose Monitor (CGM)**
+## Kontinuálny monitor glykémie (CGM)
 
-Useful links to known issues and steps to resolve for CGMs.
+Užitočné odkazy na známe problémy a postupy ich riešenia pre CGM.
 
 * [Všeobecne](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
+* [Libre 2 s Minimal Looper](#minimallooper-troubleshooting)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
-* [xDrip - no CGM data](#xdrip-identify-receiver)
-* [xDrip - Dexcom troubleshooting](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
+* [xDrip – žiadne dáta z CGM](#xdrip-identify-receiver)
+* [xDrip – riešenie problémov s Dexcomom](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
 ---
 
 (generaltroubleshooting-pumps)=
 
-## **Pumps**
+## Pumpy
 
-Useful links to known issues and steps to resolve for Pumps
+Užitočné odkazy na známe problémy a postupy ich riešenia pre pumpy
 
-* [DanaRS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
-* [Accu-Chek Combo general](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)
+* [Accu-Chek Combo](#combov2-tips-for-basic-usage)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
+* [CareLevo](#carelevo-alarms-and-notifications)
+* [DanaRS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
+* [Diaconn G8](#diaconn-g8-bluetooth-troubleshooting)
+* [EOPatch2](#eopatch2-alarms-and-warnings)
 * [Medtronic + RileyLink](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
+* [Medtrum Nano](#medtrum-nano-troubleshooting)
+* [Omnipod DASH](#omnipod-dash-troubleshooting)
+* [Omnipod Eros](#OmnipodEros-troubleshooting)
 
 ---
 
 (generaltroubleshooting-phones)=
 
-## **Telefóny**
+## Telefóny
 
-Useful links to known issues and steps to resolve for Phones
+Užitočné odkazy na známe problémy a postupy ich riešenia pre telefóny
 
-* [List of tested phone and device setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
+* [Zoznam otestovaných telefónov a zostáv zariadení](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
 * [Jelly](../CompatiblePhones/Jelly.md)
-* [Huawei bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+* [Huawei: Bluetooth a optimalizácia batérie](../CompatiblePhones/Huawei.md)
+
+---
+
+(generaltroubleshooting-remote-control)=
+
+## Vzdialené ovládanie
+
+* [AAPSClient a vzdialené ovládanie (párovanie, príkazy neprichádzajú)](#client-master-control-troubleshooting)
+* [Problémy s „Nightscout prístupový token“](#remotecontrol-nightscout-access-token)
+* [SMS príkazy](#SMSCommands-troubleshooting)
+* [Android Auto](#android-auto-troubleshooting)
+
+---
 
 (generaltroubleshooting-smartwatches)=
 
-## Smartwatches
+## Inteligentné hodinky
 
-Useful links to known issues and steps to resolve for Smartwatches
+Užitočné odkazy na známe problémy a postupy ich riešenia pre inteligentné hodinky
 
-* [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
+* [Riešenie problémov s aplikáciou pre hodinky (Wear)](#Watchfaces-troubleshooting-the-wear-app)
+* [Hodinky a telefón spolu nekomunikujú](#wear-os-watch-phone-communication)
+* [Wear OS 5](#wear-os-5-troubleshooting)
+* [Zostavenie aplikácie pre hodinky (Wear)](#building-aaps-wear-os-troubleshooting)

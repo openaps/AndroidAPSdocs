@@ -1,397 +1,406 @@
-# Medtrum Nano / 300U
+(medtrum-nano-300u)=
+# Medtrum Nano 200U / 300U
 
-These instructions are for configuring the Medtrum insulin pump.
-
-This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Εσείς και μόνο είστε υπεύθυνοι για οτιδήποτε κάνετε με αυτό.
+Αυτές οι οδηγίες αφορούν τη διαμόρφωση της αντλίας ινσουλίνης Medtrum.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
-* All loop functionality supported (SMB, TBR etc)
-* Automatic DST and timezone handling
-* Extended bolus is not supported by AAPS driver
+## Δυνατότητες της αντλίας με το AAPS
+* Υποστηρίζονται όλες οι λειτουργίες του κυκλώματος (SMB, TBR κ.λπ.)
+* Αυτόματος χειρισμός θερινής ώρας (DST) και ζώνης ώρας
+* Το εκτεταμένο bolus δεν υποστηρίζεται από το πρόγραμμα οδήγησης του AAPS
 
-## Hardware and Software Requirements
-* **Compatible Medtrum pumpbase and reservoir patches**
-    - Currently supported:
-        - Medtrum TouchCare Nano with pumpbase refs: **MD0201** and **MD8201**.
-        - Medtrum TouchCare 300U with pumpbase ref: **MD8301**.
-        - If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [here](https://discordapp.com/channels/629952586895851530/1076120802476441641).
-* **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
-* **Compatible Android phone** with a BLE Bluetooth connection
-    - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
-* [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
+## Απαιτήσεις υλικού και λογισμικού
+* **Συμβατές βάσεις αντλίας (pumpbase) και patch δεξαμενής Medtrum**
+    - Υποστηρίζονται προς το παρόν:
+        - Medtrum TouchCare Nano 200U με κωδικούς βάσης αντλίας: **MD0201** και **MD8201**.
+        - Medtrum TouchCare 300U με κωδικό βάσης αντλίας: **MD8301**.
+        - Αν έχετε ένα μοντέλο που δεν υποστηρίζεται και θέλετε να δωρίσετε υλικό ή να βοηθήσετε με δοκιμές, επικοινωνήστε μαζί μας στο discord [εδώ](https://discordapp.com/channels/629952586895851530/1076120802476441641).
+* **Το AAPS δημιουργημένο και εγκατεστημένο** με τις οδηγίες [Δημιουργία του APK](../SettingUpAaps/BuildingAaps.md).
+* **Συμβατό τηλέφωνο Android** με σύνδεση BLE Bluetooth
+    - Δείτε τις [Σημειώσεις έκδοσης](../Maintenance/ReleaseNotes.md) του AAPS
 
-## Before you begin
+## Πριν ξεκινήσετε
 
-**SAFETY FIRST** Do not attempt this process in an environment where you cannot recover from an error (extra patches, insulin, and pump control devices are must-haves).
+**ΠΡΩΤΑ Η ΑΣΦΑΛΕΙΑ** Μην κάνετε αυτή τη διαδικασία σε περιβάλλον όπου δεν μπορείτε να διορθώσετε ένα λάθος (πρέπει να έχετε μαζί σας επιπλέον patch, ινσουλίνη και συσκευές ελέγχου της αντλίας).
 
-**The PDM and Medtrum App will not work with a patch that is activated by AAPS.** Previously you may have used your PDM or Medtrum app to send commands to your pump. For security reasons you can only use the activated patch with the device or app that was used to activate it.
+**Το PDM και η εφαρμογή Medtrum δεν λειτουργούν με patch που ενεργοποιήθηκε από το AAPS.** Μέχρι τώρα μπορεί να χρησιμοποιούσατε το PDM ή την εφαρμογή Medtrum για να στέλνετε εντολές στην αντλία σας. Για λόγους ασφαλείας, μπορείτε να χρησιμοποιείτε το ενεργοποιημένο patch μόνο με τη συσκευή ή την εφαρμογή που το ενεργοποίησε.
 
-*This does NOT mean that you should throw away your PDM. It is recommended to keep it somewhere safe as a backup in case of emergencies, for instance if your phone gets lost or AAPS is not working correctly.*
+*Αυτό ΔΕΝ σημαίνει ότι πρέπει να πετάξετε το PDM σας. Σας συνιστούμε να το φυλάτε σε ασφαλές μέρος ως εφεδρικό για έκτακτες ανάγκες, για παράδειγμα αν χάσετε το τηλέφωνό σας ή αν το AAPS δεν λειτουργεί σωστά.*
 
-**Your pump will not stop delivering insulin when it is not connected to AAPS** Default basal rates are programmed on the pump as defined in the current active profile. As long as AAPS is operational, it will send temporary basal rate commands that run for a maximum of 120 minutes. If for some reason the pump does not receive any new commands (for instance because communication was lost due to pump - phone distance) the pump will fall back to the default basal rate programmed on the pump once the Temporary Basal Rate ends.
+**Η αντλία σας δεν σταματά να χορηγεί ινσουλίνη όταν δεν είναι συνδεδεμένη με το AAPS** Οι προεπιλεγμένοι βασικοί ρυθμοί προγραμματίζονται στην αντλία όπως ορίζονται στο τρέχον ενεργό προφίλ. Όσο το AAPS λειτουργεί, στέλνει εντολές προσωρινού βασικού ρυθμού που διαρκούν το πολύ 120 λεπτά. Αν για κάποιο λόγο η αντλία δεν λάβει νέες εντολές (για παράδειγμα επειδή χάθηκε η επικοινωνία λόγω της απόστασης αντλίας - τηλεφώνου), η αντλία επιστρέφει στον προεπιλεγμένο βασικό ρυθμό που είναι προγραμματισμένος σε αυτήν, μόλις τελειώσει ο προσωρινός βασικός ρυθμός.
 
-**30 min Basal Rate Profiles are NOT supported in AAPS.** **The AAPS Profile does not support a 30 minute basal rate time frame** If you are new to AAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work. You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the Medtrum pump hardware itself supports the 30 min basal rate profile increments, AAPS is not able to take them into account with its algorithms currently.
+**Το προφίλ του AAPS δεν υποστηρίζει βασικούς ρυθμούς σε διαστήματα 30 λεπτών** Αν είστε νέοι στο AAPS και ρυθμίζετε το προφίλ βασικού ρυθμού για πρώτη φορά, να ξέρετε ότι βασικοί ρυθμοί που ξεκινούν στη μισή ώρα δεν υποστηρίζονται. Πρέπει να προσαρμόσετε το προφίλ βασικού ρυθμού ώστε να ξεκινά σε ακέραιη ώρα. Για παράδειγμα, αν έχετε βασικό ρυθμό 1,1 μονάδων που ξεκινά στις 09:30 και διαρκεί 2 ώρες, μέχρι τις 11:30, αυτό δεν θα λειτουργήσει. Θα πρέπει να αλλάξετε αυτόν τον βασικό ρυθμό των 1,1 μονάδων σε χρονικό διάστημα 9:00-11:00 ή 10:00-12:00. Παρόλο που το υλικό της αντλίας Medtrum υποστηρίζει βήματα 30 λεπτών στο προφίλ βασικού ρυθμού, το AAPS προς το παρόν δεν μπορεί να τα λάβει υπόψη στους αλγορίθμους του.
 
-**0U/h profile basal rates are NOT supported in AAPS** While the Medtrum pump does support a zero basal rate, AAPS uses multiples of the profile basal rate to determine automated treatment and therefore cannot function with a zero basal rate. A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.
+**Βασικοί ρυθμοί προφίλ 0U/h ΔΕΝ υποστηρίζονται στο AAPS** Αν και η αντλία Medtrum υποστηρίζει μηδενικό βασικό ρυθμό, το AAPS χρησιμοποιεί πολλαπλάσια του βασικού ρυθμού του προφίλ για να αποφασίσει την αυτόματη θεραπεία, γι' αυτό δεν μπορεί να λειτουργήσει με μηδενικό βασικό ρυθμό. Ο ελάχιστος βασικός ρυθμός προφίλ είναι 0,05 U/h.
+
+Προσωρινό μηδενικό βασικό ρυθμό μπορείτε να έχετε με τη λειτουργία «Αποσύνδεση αντλίας» ή με συνδυασμό Απενεργοποίησης κυκλώματος/Προσωρινού βασικού ρυθμού ή Αναστολής κυκλώματος/Προσωρινού βασικού ρυθμού.
 
 ## Ρύθμιση
 
-CAUTION: When activating a patch with AAPS you **MUST** disable all other devices that can talk to the Medtrum pumpbase. e.g. active PDM and Medtrum app. Make sure you have your pumpbase and pumpbase SN ready for activation of a new patch.
+```{caution}
+Όταν ενεργοποιείτε ένα patch με το **AAPS**, **ΠΡΕΠΕΙ** να κλείσετε κάθε άλλη συσκευή που μπορεί να επικοινωνεί με τη βάση της αντλίας Medtrum, για παράδειγμα ένα ενεργό PDM ή την εφαρμογή Medtrum.
+```
 
-### Step 1: Select Medtrum pump
+### Βήμα 1: Επιλέξτε την αντλία Medtrum
 
-#### Option 1: New installations
+#### Επιλογή 1: Νέες εγκαταστάσεις
 
-If you are installing AAPS for the first time, the **Setup Wizard** will guide you through installing AAPS. Select “Medtrum” when you reach Pump selection.
+Αν εγκαθιστάτε το **AAPS** για πρώτη φορά, ο **Οδηγός εγκατάστασης** σας καθοδηγεί στη ρύθμιση. Επιλέξτε **Medtrum** όταν φτάσετε στο βήμα **Αντλία**.
 
-If in doubt you can also select “Virtual Pump” and select “Medtrum” later, after setting up AAPS (see option 2).
+Αν δεν είστε σίγουροι, μπορείτε επίσης να επιλέξετε **Εικονική Αντλία** και να επιλέξετε **Medtrum** αργότερα, αφού ρυθμίσετε το **AAPS** (δείτε την επιλογή 2).
 
-![Setup Wizard](../images/medtrum/SetupWizard.png)
+![Το βήμα αντλίας στον Οδηγό εγκατάστασης](../images/setup-wizard/Wizard-Pump.png)
 
-#### Option 2: The Config Builder
+#### Επιλογή 2: Η οθόνη Διαμόρφωση
 
-On an existing installation you can select the **Medtrum** pump in [Config Builder > Pump](#Config-Builder-pump):
+Σε μια υπάρχουσα εγκατάσταση μπορείτε να επιλέξετε την αντλία **Medtrum** στο [Διαμόρφωση > Αντλία](#Config-Builder-pump):
 
-On the top-left hand corner **hamburger menu** select **Config Builder**\ ➜\ **Pump**\ ➜\ **Medtrum**\ by selecting the **Enable button** titled **Medtrum**.
+Ανοίξτε το **μενού** (☰) πάνω αριστερά, πατήστε **Διαμόρφωση** > **Αντλία** και επιλέξτε την κάρτα **Medtrum**. Μόνο μία αντλία μπορεί να είναι ενεργή κάθε φορά.
 
-Selecting the **checkbox** next to the **Settings Gear** will allow the Medtrum overview to be displayed as a tab in the AAPS interface titled **Medtrum**. Checking this box will facilitate your access to the Medtrum commands when using AAPS and is highly recommended.
+![Διαμόρφωση > Αντλία με το πρόσθετο Medtrum](../images/v4/Configuration/configuration_pump_list_4.png)
 
-![Διαμόρφωση](../images/medtrum/ConfigBuilder.png)
+Μόλις το επιλέξετε, η κάρτα **Medtrum** δείχνει δύο κουμπιά, **Ρυθμίσεις** και **Άνοιγμα πρόσθετου**:
 
-### Step 2: Change Medtrum settings
+![Το πρόσθετο Medtrum επιλεγμένο στο Διαμόρφωση > Αντλία](../images/v4/Pumps/medtrum_enabled.png)
 
-Enter the Medtrum settings by tapping the **Settings Gear** of the Medtrum module in the Config Builder .
+Το **Άνοιγμα πρόσθετου** (ή **Διαχείριση → Αντλία**) ανοίγει την οθόνη της αντλίας Medtrum. Τη χρησιμοποιείτε για να αλλάζετε patch και να βλέπετε την κατάσταση της αντλίας. Πριν ενεργοποιηθεί ένα patch, φαίνεται έτσι:
 
-![Medtrum Settings](../images/medtrum/MedtrumSettings.png)
+![Η οθόνη της αντλίας Medtrum πριν από τη σύζευξη](../images/v4/Pumps/medtrum_pump_screen.png)
 
-#### Serial Number:
+(medtrum-step-2)=
+### Βήμα 2: Αλλάξτε τις ρυθμίσεις Medtrum
 
-Enter the serial number of your pumpbase here as noted on the pumpbase. Make sure the serial number is correct and there are no spaces added (You can either use capital or lowercase).
+Πατήστε **Ρυθμίσεις** στην κάρτα **Medtrum** στο **Διαμόρφωση** > **Αντλία**. Μπορείτε επίσης να πατήσετε το εικονίδιο με το γρανάζι πάνω δεξιά στην οθόνη της αντλίας Medtrum. Ανοίγουν οι **Ρυθμίσεις αντλίας Medtrum**:
 
-NOTE: This setting can only be changed when there is no patch active.
+![Ρυθμίσεις του προγράμματος οδήγησης Medtrum](../images/v4/Pumps/medtrum_settings.png)
 
-#### Alarm settings
+```{note}
+Δεν υπάρχει πια ρύθμιση **Σειριακός αριθμός**. Το **AAPS** βρίσκει τη βάση της αντλίας σας με σάρωση Bluetooth την πρώτη φορά που ενεργοποιείτε ένα patch (δείτε το [Βήμα 3](#medtrum-activate-patch)) και θυμάται τον σειριακό της αριθμό. Για να χρησιμοποιήσετε άλλη βάση αντλίας, δείτε την [Κατάργηση σύζευξης](#medtrum-unpair).
+```
 
-***Default: Beep.***
+#### Ρυθμίσεις συναγερμού
 
-This setting changes the way that the pump will alert you when there is a warning or error.
+***Προεπιλογή: Μπιπ.***
 
-- Beep > The patch will beep on alarms and warnings
-- Silent > The patch will not alert you on alarms and warnings
+Αυτή η ρύθμιση αλλάζει τον τρόπο που η αντλία σας ειδοποιεί όταν υπάρχει προειδοποίηση ή σφάλμα.
 
-Note: In silent mode AAPS will still sound the alarm depending on your phone's volume settings. If you do not respond to the alarm, the patch will eventually beep.
+- **Μπιπ**: το patch κάνει μπιπ σε συναγερμούς και προειδοποιήσεις.
+- **Σίγαση**: το patch δεν σας ειδοποιεί σε συναγερμούς και προειδοποιήσεις.
 
-#### Notification on pump warning
+Σημείωση: Σε αθόρυβη λειτουργία το **AAPS** παίζει ακόμα τον ήχο του συναγερμού, ανάλογα με τις ρυθμίσεις έντασης του τηλεφώνου σας. Αν δεν απαντήσετε στον συναγερμό, στο τέλος το patch θα κάνει μπιπ.
 
-***Default: Enabled.***
+#### Ειδοποίηση για προειδοποίηση αντλίας
 
-This settings changes the way AAPS will show notification on non critical pump warnings. When enabled a Notification will be shown on the phone when a pump warning occurs, including:
-    - Low battery
-    - Low reservoir (20 Units)
-    - Patch expiration warning
+***Προεπιλογή: Ενεργό.***
 
-In either case these warnings are also shown on the Medtrum overview screen under [Active alarms](#medtrum-active-alarms).
+Αυτή η ρύθμιση αλλάζει τον τρόπο που το **AAPS** δείχνει ειδοποιήσεις για μη κρίσιμες προειδοποιήσεις της αντλίας. Όταν είναι ενεργή, εμφανίζεται ειδοποίηση στο τηλέφωνο όταν υπάρχει προειδοποίηση της αντλίας, όπως:
+- Χαμηλή μπαταρία
+- Χαμηλή δεξαμενή (20 μονάδες)
+- Το patch λήγει σύντομα
+
+Σας συνιστούμε να την αφήσετε ενεργή όταν οι συναγερμοί της αντλίας είναι ρυθμισμένοι σε **Σίγαση**. Και στις δύο περιπτώσεις αυτές οι προειδοποιήσεις φαίνονται επίσης στην οθόνη της αντλίας Medtrum, στο [Ενεργοί συναγερμοί](#medtrum-active-alarms).
 
 (medtrum-patch-expiration)=
-#### Patch Expiration
+#### Λήξη Patch
 
-***Default: Enabled.***
+***Προεπιλογή: Ενεργό.***
 
-This setting changes the behavior of the patch. When enabled the patch will expire after 3 days and give an audible warning if you have sound enabled. After 3 days and 8 hours the patch will stop working.
+Αυτή η ρύθμιση αλλάζει τη συμπεριφορά του patch. Όταν είναι ενεργή, το patch λήγει μετά από 3 ημέρες και δίνει ηχητική προειδοποίηση, αν έχετε ενεργοποιημένο τον ήχο. Μετά από 3 ημέρες και 8 ώρες το patch σταματά να λειτουργεί.
 
-If this setting is disabled, the patch will not warn you and will continue running until the patch battery or reservoir runs out.
+Αν αυτή η ρύθμιση είναι ανενεργή, το patch δεν σας προειδοποιεί πριν σταματήσει. Με πρόσφατο firmware της βάσης αντλίας, ένα patch λειτουργεί το πολύ 5 ημέρες.
 
-#### Pump expiry warning
+#### Προειδοποίηση λήξης αντλίας [ώρες]
 
-***Default: 72 hours.***
+***Προεπιλογή: 72 ώρες.***
 
-This setting changes the time of the expiration warning, when [Patch Expiration](#medtrum-patch-expiration) is enabled, AAPS will give a notification on the set hour after activation.
+Αυτή η ρύθμιση αλλάζει την ώρα της προειδοποίησης λήξης. Όταν η [Λήξη Patch](#medtrum-patch-expiration) είναι ενεργή, το **AAPS** δείχνει μια ειδοποίηση τόσες ώρες μετά την ενεργοποίηση.
 
-#### Hourly Maximum Insulin
+#### Ωριαία μέγιστη ινσουλίνη [μονάδες]
 
-***Default: 25U.***
+***Προεπιλογή: 25U.***
 
-This setting changes the maximum amount of insulin that can be delivered in one hour. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
+Αυτή η ρύθμιση αλλάζει τη μέγιστη ποσότητα ινσουλίνης που μπορεί να χορηγηθεί σε μία ώρα. Αν ξεπεραστεί αυτό το όριο, το patch μπαίνει σε αναστολή και δίνει συναγερμό. Μπορείτε να κάνετε επαναφορά του συναγερμού με το κουμπί **Επαναφορά συναγερμών** στην οθόνη της αντλίας, δείτε την [Επαναφορά συναγερμών](#nano-reset-alarms).
 
-Set this to a sensible value for your insulin requirements.
+Ορίστε μια λογική τιμή για τις ανάγκες σας σε ινσουλίνη.
 
-#### Daily Maximum Insulin
+#### Ημερήσια μέγιστη ινσουλίνη [μονάδες]
 
-***Default: 80U.***
+***Προεπιλογή: 80U.***
 
-This setting changes the maximum amount of insulin that can be delivered in one day. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
+Αυτή η ρύθμιση αλλάζει τη μέγιστη ποσότητα ινσουλίνης που μπορεί να χορηγηθεί σε μία ημέρα. Αν ξεπεραστεί αυτό το όριο, το patch μπαίνει σε αναστολή και δίνει συναγερμό. Μπορείτε να κάνετε επαναφορά του συναγερμού με το κουμπί **Επαναφορά συναγερμών** στην οθόνη της αντλίας, δείτε την [Επαναφορά συναγερμών](#nano-reset-alarms).
 
-Set this to a sensible value for your insulin requirements.
+Ορίστε μια λογική τιμή για τις ανάγκες σας σε ινσουλίνη.
 
-#### Scan on Connection error
+#### Σάρωση σε περίπτωση σφάλματος σύνδεσης
 
-***Default: Off.***
+***Προεπιλογή: Ανενεργό.***
 
-Located under **Advanced Settings**.
+Βρίσκεται στις **Ρυθμίσεις για Προχωρημένους**.
 
-Only enable if you have connection problems. If enabled the driver scans for the pump again before trying to reconnect to the pump. Make sure you have Location permission set to "Always allow".
+Ενεργοποιήστε το μόνο αν έχετε προβλήματα σύνδεσης. Όταν είναι ενεργό, το πρόγραμμα οδήγησης ψάχνει ξανά την αντλία πριν προσπαθήσει να συνδεθεί ξανά με αυτήν. Βεβαιωθείτε ότι η άδεια Τοποθεσίας για το **AAPS** είναι ρυθμισμένη σε «Να επιτρέπεται πάντα».
 
-### Step 2b: AAPS Alerts settings
+### Βήμα 2β: Ρυθμίσεις ειδοποιήσεων του AAPS
 
-Go to preferences
+Αυτές οι ρυθμίσεις δεν ανήκουν στο πρόγραμμα οδήγησης Medtrum. Ανοίξτε τις από το εικονίδιο **Ρυθμίσεις** (γρανάζι) πάνω δεξιά στην κύρια οθόνη. Δείτε τις [Ρυθμίσεις](../SettingUpAaps/Preferences.md) για περισσότερα.
 
-#### Pump:
+#### BT Watchdog
 
-##### BT Watchdog
+Ανοίξτε **Ρυθμίσεις** > **Αντλία**:
 
-Go to preferences and select **Pump**:
+![Ρυθμίσεις > Αντλία](../images/preferences/settings_pump.png)
 
-![BT Watchdog](../images/medtrum/BTWatchdogSetting.png)
+Το **BT Watchdog** κλείνει το Bluetooth του τηλεφώνου για ένα δευτερόλεπτο, αν το **AAPS** δεν μπορεί να συνδεθεί με την αντλία. Αυτό μπορεί να βοηθήσει σε κάποια τηλέφωνα όπου το Bluetooth «κολλάει».
 
-##### BT Watchdog
+Ενεργοποιήστε αυτή τη ρύθμιση αν έχετε συχνά προβλήματα σύνδεσης με την αντλία σας.
 
-This setting will try to work around any BLE issues. It will try to reconnect to the pump when the connection is lost. It will also try to reconnect to the pump when the pump is unreachable for a certain amount of time.
+#### Τοπικές ειδοποιήσεις
 
-Enable this setting if you experience frequent connection issues with your pump.
+Ανοίξτε **Ρυθμίσεις** > **Τοπικές ειδοποιήσεις**:
 
-#### Local Alerts:
+![Ρυθμίσεις > Τοπικές ειδοποιήσεις](../images/preferences/settings_local_alerts.png)
 
-Go to preferences and select **Local Alerts**:
+##### Ειδοποίηση αν η αντλία δεν είναι προσβάσιμη
 
-![Local Alerts](../images/medtrum/LocalAlertsSettings.png)
+***Προεπιλογή: Ενεργό.***
 
-##### Alert if pump is unreachable
+Αυτή η ρύθμιση είναι πάντα ενεργή όταν είναι ενεργό το πρόγραμμα οδήγησης Medtrum. Σας ειδοποιεί όταν η αντλία δεν είναι προσβάσιμη. Αυτό μπορεί να συμβεί όταν η αντλία είναι εκτός εμβέλειας ή όταν δεν απαντά λόγω χαλασμένου patch ή βάσης αντλίας, για παράδειγμα όταν μπει νερό ανάμεσα στη βάση της αντλίας και στο patch.
 
-***Default: Enabled.***
+Για λόγους ασφαλείας αυτή η ρύθμιση δεν μπορεί να απενεργοποιηθεί.
 
-This setting is forced to enabled when the Medtrum driver is enabled. It will alert you when the pump is unreachable. This can happen when the pump is out of range or when the pump is not responding due to a defective patch or pumpbase, for example when water leaks between the pumpbase and the patch.
+##### Όριο μη προσβάσιμης αντλίας
 
-For safety reasons this setting cannot be disabled.
+***Προεπιλογή: 30 λεπτά.***
 
-##### Pump unreachable threshold [min]
+Αυτή η ρύθμιση αλλάζει πόσο χρόνο περιμένει το **AAPS** πριν σας ειδοποιήσει ότι η αντλία δεν είναι προσβάσιμη.
 
-***Default: 30 min.***
-
-This setting changes the time after which AAPS will alert you when the pump is unreachable. This can happen when the pump is out of range or when the pump is not responding due to a defective patch or pumpbase, for example when water leaks between the pumpbase and the patch.
-
-This setting can be changed when using Medtrum pump but it is recommended to set it at 30 minutes for safety reasons.
-
-### Step 3: Activate patch
-
-**Before you continue:**
-- Have your Medtrum Nano pumpbase and a reservoir patch ready.
-- Make sure that AAPS is properly set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-- Other devices that can talk to the Medtrum pump are disabled (PDM and Medtrum app)
-
-#### Activate patch from the Medtrum overview Tab
-
-Navigate to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button in the bottom right corner.
-
-If a patch is already active, you will be prompted to deactivate this patch first. see [Deactivate Patch](#nano-deactivate-patch).
-
-Follow the prompts to fill and activate a new patch. Please note - it is important to only connect the pumpbase to the reservoir patch at the step when you are prompted to do so. **You must only put the pump on your body and insert the cannula when prompted to during the activation process (after priming is complete).**
-
-##### Start Activation
-
-![Start Activation](../images/medtrum/activation/StartActivation.png)
-
-At this step, double check your serial number and make sure the pumpbase is not connected to the patch yet.
-
-Press **Next** to continue.
-
-##### Fill the patch
-
-![Fill the patch](../images/medtrum/activation/FillPatch.png)
-
-Once the patch is detected and filled with a minimum of 70Units of insulin, press **Next** will appear.
-
-##### Prime the patch
-
-![Half press](../images/medtrum/activation/HalfPress.png)
-
-Do not remove the safety lock and press the needle button on the patch.
-
-Press **Next** to start prime
-
-![Prime progress](../images/medtrum/activation/PrimeProgress.png)
-
-![Prime complete](../images/medtrum/activation/PrimeComplete.png)
-
-Once the prime is complete, press **Next** to continue.
-
-##### Attach Patch
-
-![Attach patch](../images/medtrum/activation/AttachPatch.png)
-
-Clean the skin, remove stickers and attach the patch to your body. Remove safety lock and press the needle button on the patch to insert the cannula.
-
-Press **Next** to activate the patch.
+Μπορείτε να αλλάξετε αυτή τη ρύθμιση όταν χρησιμοποιείτε την αντλία Medtrum, αλλά για λόγους ασφαλείας σας συνιστούμε να την αφήσετε στα 30 λεπτά.
 
 (medtrum-activate-patch)=
-##### Activate Patch
+### Βήμα 3: Ενεργοποίηση του patch
 
-![Activate patch](../images/medtrum/activation/ActivatePatch.png)
+**Πριν συνεχίσετε:**
+- Έχετε έτοιμα τη βάση της αντλίας Medtrum και ένα νέο patch δεξαμενής.
+- Κλείστε τις άλλες συσκευές που μπορούν να επικοινωνούν με την αντλία Medtrum (PDM και εφαρμογή Medtrum).
+- Ιδανικά, βεβαιωθείτε ότι το **AAPS** είναι ρυθμισμένο και ότι έχει [ενεργοποιηθεί ένα προφίλ](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). Αν δεν υπάρχει ενεργό προφίλ, η ενεργοποίηση ξεκινά με το βήμα **Απαιτείται προφίλ**, όπου επιλέγετε το προφίλ που θα ενεργοποιηθεί.
 
-When activation is complete, the following screen will appear
+#### Ξεκινήστε την ενεργοποίηση
 
-![Activation complete](../images/medtrum/activation/ActivationComplete.png)
+Ανοίξτε την [οθόνη της αντλίας Medtrum](#nano-overview) (**Διαχείριση → Αντλία**) και πατήστε **Αλλαγή Patch**. Αν έχετε ρυθμίσει [προστασία ρυθμίσεων](#Preferences-protection), πρέπει πρώτα να γράψετε τον κωδικό πρόσβασης ή το PIN σας.
 
-Press **OK** to return to main screen.
+Αν υπάρχει ήδη ενεργό patch, θα σας ζητηθεί να το απενεργοποιήσετε πρώτα, δείτε την [Απενεργοποίηση του patch](#nano-deactivate-patch).
+
+Η ενεργοποίηση είναι ένας οδηγός βήμα προς βήμα. Ακολουθήστε τις οδηγίες για να γεμίσετε και να ενεργοποιήσετε ένα νέο patch. Πατήστε **Ακύρωση** σε οποιοδήποτε βήμα για να σταματήσετε.
+
+```{important}
+Βάλτε το patch στο σώμα σας και εισάγετε τον καθετήρα μόνο όταν σας το πει ο οδηγός (αφού ολοκληρωθεί η πλήρωση).
+```
+
+Τα πρώτα βήματα που βλέπετε εξαρτώνται από τη ρύθμισή σας:
+
+1. **Απαιτείται προφίλ**: μόνο αν δεν υπάρχει ενεργό προφίλ. Επιλέξτε το προφίλ που θα εφαρμοστεί και μετά συνεχίστε.
+2. **Εύρεση αντλίας**: μόνο την πρώτη φορά ή αφού χρησιμοποιήσετε την [Κατάργηση σύζευξης](#medtrum-unpair). Συνδέστε τη βάση της αντλίας σε ένα καινούργιο patch για να ενεργοποιηθεί. Το **AAPS** ψάχνει για κοντινές βάσεις αντλίας Medtrum (τα ονόματά τους ξεκινούν με `MT`). Πατήστε τη δική σας στη λίστα. Το **AAPS** αποθηκεύει τον σειριακό της αριθμό και μετά πηγαίνει κατευθείαν στο γέμισμα του patch.
+
+   ![Το βήμα Εύρεση αντλίας ψάχνει για βάση αντλίας Medtrum](../images/medtrum/activation/FindPump.png)
+
+3. **Ενεργοποίηση Patch**: μόνο όταν το **AAPS** ξέρει ήδη τη βάση της αντλίας σας. Η οθόνη λέει «Δεν υπάρχει ενεργό patch. Πατήστε **Επόμενο** για να ξεκινήσετε τη διαδικασία ενεργοποίησης.» Βεβαιωθείτε ότι η βάση της αντλίας **δεν** είναι ακόμα συνδεδεμένη με το patch και μετά πατήστε **Επόμενο**.
+
+![Έναρξη της ενεργοποίησης](../images/medtrum/activation/StartActivation.png)
+
+#### Σύνδεση και γέμισμα του patch
+
+![Γέμισμα του patch](../images/medtrum/activation/FillPatch.png)
+
+Συνδέστε τη βάση της αντλίας με το patch, αφαιρέστε τον αέρα που έχει μείνει και γεμίστε το patch με ινσουλίνη. Για την ενεργοποίηση χρειάζονται τουλάχιστον 70 μονάδες. Η οθόνη δείχνει τη στάθμη της δεξαμενής. Μην βάλετε ακόμα το patch στο σώμα σας.
+
+Όταν το patch ανιχνευθεί και γεμίσει, εμφανίζεται το κουμπί **Επόμενο**. Πατήστε το.
+
+#### Επιλογή ινσουλίνης
+
+Αυτό το βήμα εμφανίζεται μόνο αν έχετε ρυθμίσει περισσότερες από μία ινσουλίνες στο **AAPS**. Επιλέξτε την ινσουλίνη με την οποία γεμίζετε το patch. Το **AAPS** κάνει αλλαγή προφίλ με αυτή την ινσουλίνη μετά την ενεργοποίηση.
+
+#### Πλήρωση του patch
+
+![Μισό πάτημα](../images/medtrum/activation/HalfPress.png)
+
+**Μην** αφαιρέσετε το κλείδωμα ασφάλειας. Μισοπατήστε το κουμπί της βελόνας στο patch και μετά πατήστε **Επόμενο** για να αρχίσει η πλήρωση.
+
+![Πρόοδος πλήρωσης](../images/medtrum/activation/PrimeProgress.png)
+
+Περιμένετε να ολοκληρωθεί η πλήρωση.
+
+![Η πλήρωση ολοκληρώθηκε](../images/medtrum/activation/PrimeComplete.png)
+
+Όταν ολοκληρωθεί η πλήρωση, πατήστε **Επόμενο** για να συνεχίσετε.
+
+#### Εναλλαγή σημείων
+
+Αυτό το βήμα εμφανίζεται μόνο αν διαχειρίζεστε τα σημεία της αντλίας με την [Εναλλαγή σημείων](#Aapsscreens-site-rotation) (ρύθμιση **Διαχείριση εναλλαγής σημείων αντλίας**). Επιλέξτε σε ποιο σημείο του σώματός σας βάζετε το patch ή παραλείψτε αυτό το βήμα.
+
+#### Τοποθέτηση του patch
+
+![Τοποθέτηση του patch](../images/medtrum/activation/AttachPatch.png)
+
+Καθαρίστε το δέρμα και αφαιρέστε τα αυτοκόλλητα. Αφαιρέστε το κλείδωμα ασφάλειας, βάλτε το patch στο σώμα σας και πατήστε το κουμπί της βελόνας για να εισαχθεί ο καθετήρας.
+
+Πατήστε **Επόμενο** για να ενεργοποιηθεί το patch.
+
+#### Ενεργοποίηση του patch
+
+![Ενεργοποίηση του patch](../images/medtrum/activation/ActivatePatch.png)
+
+Το **AAPS** ενεργοποιεί την αντλία και ορίζει τον αρχικό βασικό ρυθμό. Παρακαλώ περιμένετε. Όταν ολοκληρωθεί η ενεργοποίηση, εμφανίζεται η παρακάτω οθόνη:
+
+![Η ενεργοποίηση ολοκληρώθηκε](../images/medtrum/activation/ActivationComplete.png)
+
+```{admonition} Older screenshot
+:class: note
+Εκτός από την **Εύρεση αντλίας**, οι εικόνες της ενεργοποίησης παραπάνω είναι από παλαιότερη έκδοση του **AAPS** και μπορεί να φαίνονται διαφορετικά στο **AAPS** 4.
+```
+
+Δείχνει πόσες μονάδες έχουν μείνει στο patch. Πατήστε **OK** για να γυρίσετε στην οθόνη της αντλίας.
+
+```{tip}
+Μετά από μια νέα ενεργοποίηση, [κάντε εξαγωγή των ρυθμίσεών σας](../Maintenance/ExportImportSettings.md). Έτσι μπορείτε αργότερα να ανακτήσετε αυτή τη συνεδρία του patch, για παράδειγμα σε ένα νέο τηλέφωνο.
+```
 
 (nano-deactivate-patch)=
 
-### Deactivate patch
+### Απενεργοποίηση του patch
 
-To deactivate a currently active patch, go to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
+Για να απενεργοποιήσετε το ενεργό patch, ανοίξτε την [οθόνη της αντλίας Medtrum](#nano-overview) (**Διαχείριση → Αντλία**) και πατήστε **Αλλαγή Patch**.
 
-![Deactivate patch](../images/medtrum/activation/DeactivatePatch.png)
+![Απενεργοποίηση του patch](../images/medtrum/activation/DeactivatePatch.png)
 
-You will be asked to confirm that you wish to deactivate the current patch. **Please note that this action is not reversible.** When deactivation is completed, you can press **Next** to continue the process to activate a new patch. If you are not ready to activate a new patch, press **Cancel** to return to the main screen.
+Θα σας ζητηθεί να επιβεβαιώσετε ότι θέλετε να απενεργοποιήσετε το τρέχον patch. **Αυτό δεν μπορεί να αναιρεθεί.** Πατήστε **Επόμενο** για απενεργοποίηση ή **Ακύρωση** για να γυρίσετε στην οθόνη της αντλίας.
 
-![Deactivate progress](../images/medtrum/activation/DeactivateProgress.png)
+![Πρόοδος απενεργοποίησης](../images/medtrum/activation/DeactivateProgress.png)
 
-If Android APS in unable to deactivate the patch (For instance because the pumpbase has already been removed from the reservoir patch), you may press **Discard** to forget the current patch session and make it possible to activate a new patch.
+Αν το **AAPS** δεν μπορεί να απενεργοποιήσει το patch (για παράδειγμα επειδή η βάση της αντλίας έχει ήδη αφαιρεθεί από το patch), πατήστε **Απόρριψη** για να ξεχάσει το AAPS την τρέχουσα συνεδρία του patch. Μετά μπορείτε να ενεργοποιήσετε ένα νέο patch.
 
-![Deactivate complete](../images/medtrum/activation/DeactivateComplete.png)
+![Η απενεργοποίηση ολοκληρώθηκε](../images/medtrum/activation/DeactivateComplete.png)
 
-Once deactivation is complete, press **OK** to return to main screen or press **Next** to continue the process to activate a new patch.
+Όταν ολοκληρωθεί η απενεργοποίηση, τραβήξτε πίσω τη βελόνα και αφαιρέστε το patch από το σώμα σας. Αφαιρέστε τη βάση της αντλίας και πετάξτε το χρησιμοποιημένο patch. Πατήστε **OK** για να γυρίσετε στην οθόνη της αντλίας ή **Επόμενο** για να ξεκινήσετε την ενεργοποίηση ενός νέου patch.
 
 (nano-resume-interrupted-activation)=
 
-### Resume interrupted activation
+### Συνέχιση μιας ενεργοποίησης που διακόπηκε
 
-If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
+Αν μια ενεργοποίηση patch διακοπεί, για παράδειγμα επειδή τελείωσε η μπαταρία του τηλεφώνου, μπορείτε να τη συνεχίσετε. Ανοίξτε την [οθόνη της αντλίας Medtrum](#nano-overview) (**Διαχείριση → Αντλία**) και πατήστε **Αλλαγή Patch**.
 
-![Resume interrupted activation](../images/medtrum/activation/ActivationInProgress.png)
+![Συνέχιση μιας ενεργοποίησης που διακόπηκε](../images/medtrum/activation/ActivationInProgress.png)
 
-Press **Next** to continue the activation process. Press **Discard** to discard the current patch session and make it possible to activate a new patch.
+Πατήστε **Επόμενο** για να συνεχίσετε την ενεργοποίηση. Πατήστε **Απόρριψη** για να γίνει επαναφορά της κατάστασης ενεργοποίησης, ώστε να μπορείτε να ενεργοποιήσετε ένα νέο patch.
 
-![Reading activation status](../images/medtrum/activation/ReadingActivationStatus.png)
+![Ανάγνωση της κατάστασης ενεργοποίησης](../images/medtrum/activation/ReadingActivationStatus.png)
 
-The driver will try to determine the current status of the patch activation. If this was successful it will go into the activation progress at the current step.
+```{admonition} Older screenshot
+:class: note
+Οι εικόνες στις ενότητες **Απενεργοποίηση του patch** και **Συνέχιση μιας ενεργοποίησης που διακόπηκε** είναι από παλαιότερη έκδοση του **AAPS** και μπορεί να φαίνονται διαφορετικά στο **AAPS** 4.
+```
+
+Το πρόγραμμα οδήγησης διαβάζει την κατάσταση ενεργοποίησης από την αντλία. Αν αυτό πετύχει, ο οδηγός συνεχίζει από το βήμα όπου σταμάτησε.
 
 (nano-overview)=
 
-## Σφαιρική Εικόνα
+## Οθόνη της αντλίας
 
-The overview contains the current status of the Medtrum patch. It also contains buttons to change the patch, reset alarms and refresh the status.
+Η οθόνη της αντλίας Medtrum (**Διαχείριση → Αντλία**) δείχνει την τρέχουσα κατάσταση του patch Medtrum. Έχει επίσης κουμπιά για αλλαγή του patch, επαναφορά συναγερμών και ανανέωση της κατάστασης. Μια λωρίδα στο πάνω μέρος δείχνει σημαντικές καταστάσεις, για παράδειγμα **Μη ενεργοποιημένο Patch** ή **Η αντλία είναι σε αναστολή**.
 
-![Medtrum Overview](../images/medtrum/Overview.png)
+![Η οθόνη της αντλίας Medtrum με ενεργό patch](../images/v4/Pumps/medtrum_pump_screen_active.png)
 
-### BLE Status:
+Η οθόνη μπορεί να δείχνει αυτές τις γραμμές. Κάποιες γραμμές εμφανίζονται μόνο όταν έχουν τιμή.
 
-This shows the current status of the Bluetooth connection to the pumpbase.
-
-### Last connected:
-
-This shows the last time the pump was connected to AAPS.
-
-### Pump state:
-
-This shows the current state of the pump. For example:
-    - ACTIVE : The pump is activated and running normally
-    - STOPPED: The patch is not activated
-
-### Basal type:
-
-This shows the current basal type.
-
-### Basal rate:
-
-This shows the current basal rate.
-
-### Last bolus:
-
-This shows the last bolus that was delivered.
-
-### Active bolus:
-
-This shows the active bolus that is currently being delivered.
+- **Τελευταία σύνδεση**: πριν από πόσο χρόνο το **AAPS** συνδέθηκε τελευταία φορά με την αντλία.
+- **Τελευταίο Bolus**: το τελευταίο bolus που χορηγήθηκε.
+- **Μπαταρία**: η τρέχουσα τάση της μπαταρίας του patch.
+- **Δεξαμενή**: η τρέχουσα στάθμη της δεξαμενής.
+- **Σειριακός αριθμός**: ο σειριακός αριθμός της βάσης της αντλίας σας.
+- **Κατάσταση Αντλίας**: η τρέχουσα κατάσταση της αντλίας. Για παράδειγμα **Ενεργό** (το patch είναι ενεργοποιημένο και λειτουργεί κανονικά) ή **Σταματημένο** (το patch δεν είναι ενεργοποιημένο).
+- **Βάση Βασικού Ρυθμού**: ο βασικός ρυθμός του προφίλ σας που τρέχει τώρα.
+- **Προσωρινός Ρυθμός**: ο προσωρινός βασικός ρυθμός, αν τρέχει κάποιος.
+- **Ενεργό bolus**: το bolus που χορηγείται αυτή τη στιγμή.
+- **Ενεργοί συναγερμοί**: δείτε [παρακάτω](#medtrum-active-alarms).
+- **Τύπος Αντλίας**: το μοντέλο της βάσης της αντλίας σας.
+- **Έκδοση FW**: η έκδοση firmware της βάσης της αντλίας.
+- **Patch no**: ο αύξων αριθμός του ενεργοποιημένου patch. Αυξάνεται κατά ένα κάθε φορά που ενεργοποιείτε ένα νέο patch.
+- **Ενεργοποίηση**: η ημερομηνία και η ώρα που ενεργοποιήθηκε το patch και πόσος χρόνος πέρασε από τότε.
+- **Το Patch λήγει**: η ημερομηνία και η ώρα που λήγει το patch. Δείχνει **Μη ενεργοποιημένο** αν η [Λήξη Patch](#medtrum-patch-expiration) είναι ανενεργή.
 
 (medtrum-active-alarms)=
-### Active alarms:
+### Ενεργοί συναγερμοί
 
-This shows any active alarms that are currently active.
+Αυτή η γραμμή δείχνει τους συναγερμούς που είναι ενεργοί τώρα, για παράδειγμα χαμηλή δεξαμενή ή patch που λήγει.
 
-### Reservoir:
+### Ανανέωση
 
-This shows the current reservoir level.
+Αυτό το κουμπί ανανεώνει την κατάσταση του patch. Είναι διαθέσιμο μόνο όταν υπάρχει ενεργό patch και το **AAPS** δεν είναι συνδεδεμένο με την αντλία εκείνη τη στιγμή.
 
-### Battery:
+### Αλλαγή Patch
 
-This shows the current battery voltage of the patch.
+Αυτό το κουμπί ξεκινά τον οδηγό για την αλλαγή του patch. Δείτε την [Ενεργοποίηση του patch](#medtrum-activate-patch) για περισσότερες πληροφορίες.
 
-### Pump type:
+(medtrum-unpair)=
+### Κατάργηση σύζευξης
 
-This shows the current pump type number.
-
-### FW version:
-
-This shows the current firmware version of the patch.
-
-### Patch no:
-
-This shows the sequence number of the activated patch. This number is incremented every time a new patch is activated.
-
-### Patch expires:
-
-This shows the date and time when the patch will expire.
-
-### Refresh:
-
-This button will refresh the status of the patch.
-
-### Change patch:
-
-This button will start the process to change the patch. See [Activate patch](#medtrum-activate-patch) for more information.
+Αυτό το κουμπί εμφανίζεται μόνο όταν το **AAPS** ξέρει μια βάση αντλίας. Διαγράφει τον αποθηκευμένο σειριακό αριθμό της βάσης αντλίας και αποσυνδέεται. Την επόμενη φορά που θα ενεργοποιήσετε ένα patch, το **AAPS** ψάχνει ξανά για βάση αντλίας (το βήμα **Εύρεση αντλίας**). Χρησιμοποιήστε το αν αλλάξετε σε άλλη βάση αντλίας. Κάντε το μόνο όταν δεν υπάρχει ενεργό patch.
 
 (nano-reset-alarms)=
 
-### Reset alarms
+### Επαναφορά συναγερμών
 
-The alarm button will appear on the overview screen when there is an active alarm that can be reset. Pressing this button will reset the alarms and resume insulin delivery if the patch has been suspended due to the alarm. E.g. when suspended due to a maximum daily insulin delivery alarm.
+Το κουμπί **Επαναφορά συναγερμών** εμφανίζεται στην οθόνη της αντλίας μόνο όταν το patch έχει μπει μόνο του σε αναστολή, για παράδειγμα μετά από συναγερμό μέγιστης ημερήσιας ινσουλίνης. Πατήστε το για να γίνει επαναφορά των συναγερμών και να συνεχιστεί η χορήγηση ινσουλίνης.
 
-![Reset alarms](../images/medtrum/ResetAlarms.png)
+![Επαναφορά συναγερμών](../images/medtrum/ResetAlarms.png)
 
-Press the **Reset Alarms** button to reset the alarms and resume normal operation.
+```{admonition} Older screenshot
+:class: note
+Η παραπάνω εικόνα είναι από παλαιότερη έκδοση του **AAPS**. Στο **AAPS** 4 η οθόνη της αντλίας φαίνεται διαφορετική, αλλά το κουμπί **Επαναφορά συναγερμών** λειτουργεί με τον ίδιο τρόπο.
+```
 
-## Switching phone, export/import settings
+## Αλλαγή τηλεφώνου, εξαγωγή/εισαγωγή ρυθμίσεων
 
-Κατά τη μετάβαση σε νέο τηλέφωνο απαιτούνται τα ακόλουθα βήματα:
-* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
-* Transfer settings from old to new phone, and import them into AAPS
+Όταν αλλάζετε σε νέο τηλέφωνο, κάντε τα εξής:
+* Κάντε [Εξαγωγή ρυθμίσεων](../Maintenance/ExportImportSettings.md) στο παλιό σας τηλέφωνο.
+* Μεταφέρετε το αρχείο ρυθμίσεων από το παλιό τηλέφωνο στο νέο και κάντε εισαγωγή του στο **AAPS**. Επιλέξτε **Αντικατάσταση και των ρυθμίσεων αντλίας** στην οθόνη εισαγωγής, αλλιώς η συνεδρία του patch δεν μεταφέρεται στο νέο τηλέφωνο.
 
-The imported settings file has to be of the same patch session that you are currently using, otherwise the patch will not connect.
+Το αρχείο ρυθμίσεων που εισάγετε πρέπει να είναι από τη συνεδρία του patch που χρησιμοποιείτε τώρα, αλλιώς το patch δεν θα συνδεθεί (δείτε τις [Αντλίες χωρίς σωληνάκι](#ExportImportSettings-tubeless-pumps)).
 
-After a settings import the driver will sync history with the pump, this can take a while depending on the age of the settings file.
+Μετά από εισαγωγή ρυθμίσεων, το πρόγραμμα οδήγησης συγχρονίζει το ιστορικό με την αντλία. Αυτό μπορεί να πάρει λίγο χρόνο, ανάλογα με το πόσο παλιό είναι το αρχείο ρυθμίσεων. Η πρόοδος («Συγχρονισμός εγγραφών, απομένουν ...») φαίνεται στην κύρια οθόνη:
 
-From AAPS version 3.3.0.0 onwards, the sync progress is shown in the the home screen: ![Sync progress](../images/medtrum/SyncProgress.png)
+![Πρόοδος συγχρονισμού](../images/medtrum/SyncProgress.png)
 
-## Troubleshooting
+(medtrum-nano-troubleshooting)=
 
-### Connection issues
+## Αντιμετώπιση προβλημάτων
 
-If you are experiencing connection timeouts or other connection issues:
-- In Android application settings for AAPS: Set location permission to "Allow all the time".
+### Προβλήματα σύνδεσης
 
-### Bluetooth issues
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Αν έχετε λήξεις χρόνου σύνδεσης ή άλλα προβλήματα σύνδεσης:
+- Στις ρυθμίσεις εφαρμογών του Android για το **AAPS**, ορίστε την άδεια Τοποθεσίας σε «Να επιτρέπεται πάντα».
+- Δοκιμάστε να ενεργοποιήσετε το **Σάρωση σε περίπτωση σφάλματος σύνδεσης** (ρυθμίσεις Medtrum > **Ρυθμίσεις για Προχωρημένους**) και το **BT Watchdog** (**Ρυθμίσεις** > **Αντλία**), δείτε το [Βήμα 2](#medtrum-step-2).
 
-### Activation interrupted
+### Προβλήματα Bluetooth
+Για γνωστά προβλήματα με συνδέσεις Bluetooth, διακοπές σύνδεσης με αντλίες/Pod ή προβλήματα ενεργοποίησης και σύνδεσης, δείτε τη σελίδα [Προβλήματα σχετικά με το Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
-If the activation process is interrupted for example by and empty phone battery or phone crash. The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#nano-resume-interrupted-activation)
+### Η ενεργοποίηση διακόπηκε
 
-### Preventing patch faults
+Αν η ενεργοποίηση διακοπεί, για παράδειγμα επειδή άδειασε η μπαταρία του τηλεφώνου ή επειδή κόλλησε το τηλέφωνο, μπορείτε να τη συνεχίσετε. Πατήστε **Αλλαγή Patch** στην οθόνη της αντλίας και ακολουθήστε τα βήματα στη [Συνέχιση μιας ενεργοποίησης που διακόπηκε](#nano-resume-interrupted-activation).
 
-The patch can give a variety of errors. To prevent frequent errors:
-- Make sure the pumpbase is properly seated in the patch and no gaps are visible.
-- When filling the patch do not apply excessive force to the plunger. Do not try to fill the patch beyond the maximum that applies to your model.
+### Πρόληψη σφαλμάτων του patch
 
-## Where to get help
+Το patch μπορεί να δώσει διάφορα σφάλματα. Για να αποφύγετε συχνά σφάλματα:
+- Βεβαιωθείτε ότι η βάση της αντλίας κάθεται σωστά στο patch και ότι δεν φαίνονται κενά.
+- Όταν γεμίζετε το patch, μην πιέζετε υπερβολικά το έμβολο. Μην προσπαθήσετε να γεμίσετε το patch πάνω από το μέγιστο που ισχύει για το μοντέλο σας.
 
-All of the development work for the Medtrum driver is done by the community on a **volunteer** basis; we ask that you to remember that fact and use the following guidelines before requesting assistance:
+## Πού θα βρείτε βοήθεια
 
--  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#Medtrum* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
--  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+Όλη η ανάπτυξη του προγράμματος οδήγησης Medtrum γίνεται από την κοινότητα σε **εθελοντική** βάση. Σας ζητάμε να το θυμάστε αυτό και να ακολουθείτε τις παρακάτω οδηγίες πριν ζητήσετε βοήθεια:
+
+-  **Επίπεδο 0:** Διαβάστε το σχετικό τμήμα αυτής της τεκμηρίωσης, για να καταλάβετε πώς πρέπει να λειτουργεί η λειτουργία με την οποία έχετε πρόβλημα.
+-  **Επίπεδο 1:** Αν έχετε ακόμα προβλήματα που δεν μπορείτε να λύσετε με αυτό το κείμενο, πηγαίνετε στο κανάλι *#Medtrum* στο **Discord** με [αυτόν τον σύνδεσμο πρόσκλησης](https://discord.gg/4fQUWHZ4Mw).
+-  **Επίπεδο 2:** Ψάξτε στα υπάρχοντα θέματα για να δείτε αν το πρόβλημά σας έχει ήδη αναφερθεί στα [Issues](https://github.com/nightscout/AAPS/issues). Αν υπάρχει, επιβεβαιώστε/σχολιάστε/προσθέστε πληροφορίες για το πρόβλημά σας. Αν όχι, δημιουργήστε ένα [νέο θέμα (issue)](https://github.com/nightscout/AndroidAPS/issues) και επισυνάψτε [τα αρχεία καταγραφής σας](../GettingHelp/AccessingLogFiles.md).
+-  **Κάντε υπομονή - τα περισσότερα μέλη της κοινότητάς μας είναι καλοπροαίρετοι εθελοντές, και η λύση των προβλημάτων συχνά χρειάζεται χρόνο και υπομονή τόσο από τους χρήστες όσο και από τους προγραμματιστές.**

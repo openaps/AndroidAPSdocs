@@ -1,43 +1,42 @@
-# Update to a new version or branch
+# Актуализиране до нова версия или клон
 
-## Build yourself instead of download
+## Компилирайте сами, вместо да изтегляте
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** не може да се изтегли готово заради правилата за медицинските изделия. Законно е да компилирате приложението за собствена употреба, но НЕ БИВА да давате копие на други хора! Вижте [страницата с често задавани въпроси](../UsefulLinks/FAQ.md) за подробности.
 
-## Important notes
+## Важни бележки
 
-- Please update to the new version of **AAPS** as soon as possible after a new release is available.
-- When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
-- The new version will also be announced on Facebook at the time of release.
-- Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
-- Do not forget to export your **AAPS'** settings.
+- Моля, актуализирайте до новата версия на **AAPS** възможно най-скоро след като излезе нова версия.
+- Когато излезе нова версия, в самото приложение **AAPS** ще получите информационно съобщение (банер) за новата версия.
+- Новата версия ще бъде обявена и във Facebook, когато излезе.
+- След излизането на новата версия, моля, прочетете внимателно [бележките към версиите](ReleaseNotes.md) и изяснете всички въпроси с общността във Facebook или Discord, преди да започнете актуализирането.
+- Не забравяйте да експортирате настройките на **AAPS**.
 
-## Update AAPS with browser build
+## Актуализиране на AAPS с компилиране в браузъра
 
-You already built your AAPS app with a browser? Follow the instructions for the method you used:
+Вече сте компилирали приложението AAPS в браузъра? Следвайте инструкциите за метода, който сте използвали:
 
-- **AAPS Builder** (your private repository, usually named `my-aaps`): [Updating AAPS with AAPS Builder](#aaps-builder-updates). There is no fork to sync.
-- **Fork and preparation file** (your own copy of AndroidAPS): [Update with a browser (fork)](./UpdateBrowserBuild.md).
+- **AAPS Builder** (вашето частно хранилище, обикновено с име `my-aaps`): [Актуализиране на AAPS с AAPS Builder](#aaps-builder-updates). Няма fork, който да синхронизирате.
+- **Fork и подготвителен файл** (ваше собствено копие на AndroidAPS): [Актуализиране в браузъра (fork)](./UpdateBrowserBuild.md).
 
-## Update AAPS with Android Studio
+## Актуализиране на AAPS с Android Studio
 
-Follow [these instructions.](./UpdateComputerBuild.md).
+Follow [these instructions](./UpdateComputerBuild.md).
 
-## Update AAPS with the command-line
+## Актуализиране на AAPS от командния ред
 
-Use the [same instructions](../SettingUpAaps/CLIBuild.md) as when building AAPS previously, but pull new changes with git.
+Използвайте [същите инструкции](../SettingUpAaps/CLIBuild.md) като при предишното компилиране на AAPS, но изтеглете новите промени с git.
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-### Check AAPS version on phone
+### Проверка на версията на AAPS на телефона
 
-Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
+Проверете в [бележките към версиите](../Maintenance/ReleaseNotes.md) дали има специални инструкции след актуализирането.
 
-After you installed the new apk:
+След като инсталирате новия apk файл:
 
-- you can check the **AAPS'** version on your phone by clicking the three dots menu on the top right and then 'About' (as per the screenshot below). The **AAPS'** current version can be viewed; 
-- ensure import settings have been actioned;
-- action a 'full synchroniation' under **NSClient** to ensure **AAPS** is working off accurate & complete data; and
-- please check your **AAPS'** settings under **Preferences** and ensure these remain accurate.
+- можете да проверите версията на **AAPS** на телефона си, като отворите **меню** (☰) горе вляво и след това **За приложението** (както е на екранната снимка по-долу). Можете да видите текущата версия на **AAPS**;
+- уверете се, че настройките са импортирани; и
+- моля, проверете настройките на **AAPS** в **Настройки** и се уверете, че те са все още правилни.
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![Прозорец „За приложението“ с инсталираната версия на AAPS](../images/about_dialog_version.png)

@@ -1,141 +1,141 @@
-# Updating to AAPS 3.2.0.4
+# Ενημέρωση στο AAPS 3.2.0.4
 
 (update-aaps-3204)=
 
 ## Φτιάξτε το μόνοι σας, αντί να το κατεβάσετε
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**Η εφαρμογή AAPS (ένα αρχείο apk) δεν είναι διαθέσιμη για λήψη, λόγω των κανονισμών για τις ιατρικές συσκευές. Είναι νόμιμο να κάνετε build της εφαρμογής για δική σας χρήση, αλλά δεν πρέπει να δίνετε αντίγραφο σε άλλους!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Δείτε τη σελίδα [Συχνές Ερωτήσεις](../UsefulLinks/FAQ.md) για λεπτομέρειες.
 
-## Computer and software specifications for building AAPS 3.2.0.4
+## Προδιαγραφές υπολογιστή και λογισμικού για το build του AAPS 3.2.0.4
 
-* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk.
+* Για το build του apk μπορεί να χρειάζεται μια συγκεκριμένη έκδοση του **[Android Studio](https://developer.android.com/studio/)**.
 
-| AAPS Version            | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                                  | up to Meerkat                                          | 8.2    | 17  |
+| Έκδοση AAPS             | Προτεινόμενη<br/>έκδοση<br/>Android Studio | Εναλλακτική<br/>έκδοση<br/>Android Studio | Gradle | JVM |
+| ----------------------- | ------------------------------------------------------ | ----------------------------------------------------- | ------ |:--- |
+| [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                                    | έως Meerkat                                           | 8.2    | 17  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+Η «προτεινόμενη έκδοση» περιέχει ήδη την κατάλληλη έκδοση JVM. Η προτεινόμενη έκδοση είναι επίσης η ελάχιστη έκδοση που μπορείτε να χρησιμοποιήσετε για το build του **AAPS**. **ΔΕΝ** θα μπορείτε να κάνετε build με έκδοση παλαιότερη από την «προτεινόμενη». Αν χρησιμοποιείτε άλλη έκδοση, μπορεί να έχετε προβλήματα που σχετίζονται με την έκδοση του JVM. Δείτε τη σελίδα [Αντιμετώπιση προβλημάτων του Android Studio](#incompatible-gradle-jvm) για να λύσετε αυτά τα προβλήματα. Αν η τρέχουσα έκδοση του Android Studio δεν υπάρχει στον πίνακα, πρέπει πρώτα να την ενημερώσετε.
 
-The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
+Η έκδοση του Gradle συνδέεται με τον πηγαίο κώδικα. Θα παίρνετε πάντα τη σωστή έκδοση του Gradle όταν κατεβάζετε / ενημερώνετε τον πηγαίο κώδικα. Αναφέρεται εδώ μόνο για πληροφόρηση. Δεν χρειάζεται να κάνετε κάτι γι' αυτό.
 
-* [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
+* Τα [συστήματα Windows 32-bit](#troubleshooting_androidstudio-unable-to-start-daemon-process) δεν υποστηρίζονται από το Android Studio. Να θυμάστε ότι **και CPU 64 bit και λειτουργικό σύστημα 64 bit είναι υποχρεωτική προϋπόθεση.** Αν το σύστημά σας ΔΕΝ πληροί αυτή την προϋπόθεση, πρέπει να αλλάξετε το υλικό ή το λογισμικό που δεν την πληροί ή όλο το σύστημα.
 
 <table class="tg">
 <tbody>
   <tr>
-    <th class="tg-baqh">OS (Only 64 bit)</th>
-    <td class="tg-baqh">Windows 8 or higher</td>
-    <td class="tg-baqh">Mac OS 10.14 or higher</td>
-    <td class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</td>
+    <th class="tg-baqh">Λειτουργικό σύστημα (μόνο 64 bit)</th>
+    <td class="tg-baqh">Windows 8 ή νεότερα</td>
+    <td class="tg-baqh">Mac OS 10.14 ή νεότερο</td>
+    <td class="tg-baqh">Οποιοδήποτε Linux που υποστηρίζει Gnome, KDE ή Unity DE,&nbsp;&nbsp;GNU C Library 2.31 ή νεότερη</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
+    <th class="tg-baqh"><p align="center">CPU (μόνο 64 bit)</th>
+    <td class="tg-baqh">Αρχιτεκτονική CPU x86_64, Intel Core 2ης γενιάς ή νεότερο, ή CPU AMD με υποστήριξη για <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">Chip με αρχιτεκτονική ARM, ή Intel Core 2ης γενιάς ή νεότερο με υποστήριξη για <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">Αρχιτεκτονική CPU x86_64, Intel Core 2ης γενιάς ή νεότερο, ή επεξεργαστής AMD με υποστήριξη για AMD Virtualization (AMD-V) και SSSE3</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
+    <td class="tg-baqh" colspan="3"><p align="center">8GB ή περισσότερο</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+    <th class="tg-baqh"><p align="center">Δίσκος</th>
+    <td class="tg-baqh" colspan="3"><p align="center">Τουλάχιστον 30GB ελεύθερος χώρος. Συνιστάται SSD.</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Resolution</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+    <th class="tg-baqh"><p align="center">Ανάλυση οθόνης</th>
+    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 τουλάχιστον<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Ευρυζωνική σύνδεση</td>
   </tr>
 </tbody>
 </table>
 
-**It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
+**Συνιστάται έντονα (δεν είναι υποχρεωτικό) να χρησιμοποιείτε SSD (Solid State Disk) αντί για HDD (Hard Disk Drive), γιατί το build του αρχείου apk του AAPS θα διαρκεί λιγότερο.**  Μπορείτε όμως να χρησιμοποιήσετε και HDD για το build του αρχείου apk του **AAPS**. Αν το κάνετε, το build μπορεί να διαρκέσει πολύ. Όμως, όταν ξεκινήσει, μπορείτε να το αφήσετε να τρέχει χωρίς επίβλεψη.
 
-## Help and support during 3.2.0.4 building process
+## Βοήθεια και υποστήριξη κατά το build της 3.2.0.4
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html) section, please consult that first.
+Αν έχετε δυσκολίες κατά το build της εφαρμογής **AAPS**, υπάρχει ειδική ενότητα [**αντιμετώπισης προβλημάτων του Android Studio**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html). Διαβάστε την πρώτα.
 
-If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
+Αν πιστεύετε ότι κάτι στις οδηγίες build είναι λάθος, λείπει ή δεν είναι σαφές, ή αν συνεχίζετε να έχετε δυσκολίες, επικοινωνήστε με την ομάδα χρηστών του **AAPS** στο [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) ή στο [Discord](https://discord.gg/4fQUWHZ4Mw). Αν θέλετε να αλλάξετε κάτι μόνοι σας (ενημέρωση στιγμιότυπων οθόνης _κ.λπ._), υποβάλετε ένα [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
 ```{note}
-This page provides both example pictures for the **New** and old (**Classic**) Android Studio user interfaces.
+Αυτή η σελίδα δείχνει παραδείγματα εικόνων και για το **νέο** (New) και για το παλιό (**Classic**) περιβάλλον χρήσης του Android Studio.
 ```
 
-## Overview for updating 3.2.0.x to 3.2.0.4
+## Επισκόπηση της ενημέρωσης από 3.2.0.x σε 3.2.0.4
 
 ```{contents} Steps for updating to 3.2.0.4
 :depth: 1
 :local: true
 ```
 
-### Export your current settings
+### Εξαγωγή των τρεχουσών ρυθμίσεων
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Εξαγάγετε τις ρυθμίσεις από την υπάρχουσα έκδοση του **AAPS** στο τηλέφωνό σας. Ίσως να μην τις χρειαστείτε, αλλά είναι καλύτερα να είστε ασφαλείς.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Δείτε τη σελίδα [Δημιουργία και επαναφορά αντιγράφων ασφαλείας](ExportImportSettings.md), αν δεν θυμάστε πώς γίνεται.
 
-### Update your local AAPS copy
+### Ενημέρωση του τοπικού αντιγράφου του AAPS
 
-* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
+* Ανοίξτε το υπάρχον έργο (project) του AAPS στο Android Studio. Ίσως χρειαστεί να επιλέξετε το έργο σας. Κάντε (διπλό) κλικ στο έργο του AAPS.
 
-![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
-
-<br>
-
-![Android Studio - Select Project](https://androidaps.readthedocs.io/en/3.1/_images/01_ProjectSelection.png)
-
-* In the menu bar of Android Studio, select Git -> Fetch
-
-![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+![Android Studio - Επιλογή έργου](../images/update/01_ProjectSelection.png)
 
 <br>
 
-![Android Studio Menu - Git - Fetch](https://androidaps.readthedocs.io/en/3.1/_images/02_GitFetch.png)
+![Android Studio - Επιλογή έργου](https://androidaps.readthedocs.io/en/3.1/_images/01_ProjectSelection.png)
 
-* You will see a message in the lower right corner that Fetch was successful.
+* Στη γραμμή μενού του Android Studio, επιλέξτε Git -> Fetch
 
-![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
-
-<br>
-
-![Android Studio Menu - Git - Fetch successful](https://androidaps.readthedocs.io/en/3.1/_images/03_GitFetchSuccessful.png)
-
-* In the menu bar, now select Git -> Pull
-
-![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+![Μενού Android Studio - Git - Fetch](../images/update/02_GitFetch.png)
 
 <br>
 
-![Android Studio Menu - Git - Pull](https://androidaps.readthedocs.io/en/3.1/_images/04_GitPull.png)
+![Μενού Android Studio - Git - Fetch](https://androidaps.readthedocs.io/en/3.1/_images/02_GitFetch.png)
 
-* Leave all options as they are (origin/master) and select Pull
+* Κάτω δεξιά θα δείτε ένα μήνυμα ότι το Fetch έγινε με επιτυχία.
 
-![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
+![Μενού Android Studio - Git - Fetch επιτυχές](../images/update/03_GitFetchSuccessful.png)
 
 <br>
 
-![Android Studio - Git - Pull dialog](https://androidaps.readthedocs.io/en/3.1/_images/05_GitPullOptions.png)
+![Μενού Android Studio - Git - Fetch επιτυχές](https://androidaps.readthedocs.io/en/3.1/_images/03_GitFetchSuccessful.png)
 
-* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
+* Τώρα στη γραμμή μενού επιλέξτε Git -> Pull
+
+![Μενού Android Studio - Git - Pull](../images/update/04_GitPull.png)
+
+<br>
+
+![Μενού Android Studio - Git - Pull](https://androidaps.readthedocs.io/en/3.1/_images/04_GitPull.png)
+
+* Αφήστε όλες τις επιλογές όπως είναι (origin/master) και επιλέξτε Pull
+
+![Android Studio - Git - παράθυρο Pull](../images/update/05_GitPullOptions.png)
+
+<br>
+
+![Android Studio - Git - παράθυρο Pull](https://androidaps.readthedocs.io/en/3.1/_images/05_GitPullOptions.png)
+
+* Περιμένετε όσο γίνεται η λήψη. Θα το βλέπετε ως πληροφορία στην κάτω γραμμή. Όταν τελειώσει, θα δείτε ένα μήνυμα επιτυχίας.
 
   ```{note}
-  The files that were updated may vary! This is not an indication
+  Τα αρχεία που ενημερώθηκαν μπορεί να διαφέρουν! Αυτό δεν σημαίνει ότι υπάρχει πρόβλημα.
   ```
 
 
-![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+![Android Studio - Pull επιτυχές](../images/update/06_GitPullSuccess.png)
 
 <br>
 
-![Android Studio - Pull successful](https://androidaps.readthedocs.io/en/3.1/_images/06_GitPullSuccess.png)
+![Android Studio - Pull επιτυχές](https://androidaps.readthedocs.io/en/3.1/_images/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Wait until it is finished.
+* Θα τρέξει το Gradle Sync για να κατεβάσει κάποιες εξαρτήσεις (dependencies). Περιμένετε μέχρι να τελειώσει.
 
 ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
@@ -143,69 +143,69 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio - Gradle Sync](https://androidaps.readthedocs.io/en/3.1/_images/40_BackgroundTasks.png)
 
-### Select JVM version 17
+### Επιλογή έκδοσης JVM 17
 
-- Open the Gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
+- Ανοίξτε την προβολή Gradle πατώντας τον ελέφαντα (1) στη δεξιά πλευρά του Android Studio, ανοίξτε τις ρυθμίσεις (2) και επιλέξτε **Gradle Settings** (3):
 
-![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
-
-<br>
-
-![Open Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
-
-- In **Gradle JDK** field, check if the appropriate version: **jbr-17** is selected (1) If not, click on the field, and see if it is already available in the list.
-
-![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
-
-
-
-- In Version (1), select **17**. In Vendor (2) select JetBrains Runtime or any Vendor. Location (3): do not change.
-
-![Select JDK 17](https://androidaps.readthedocs.io/en/3.2/_images/163_JDKSelection.png)
-
-- Close the **Settings** dialog with **OK**.
-
-### Select the AAPS 3.2.0.4 branch
-
-- At the bottom left, select the Git symbol, right-click on 3.2.0.4 and Checkout.
-
-![Select Download JDK](../images/studioTroubleshooting/17_Checkout.png)
+![Άνοιγμα των ρυθμίσεων Gradle](../images/studioTroubleshooting/161_GradleSettings.png)
 
 <br>
 
-![Select Download JDK](../images/studioTroubleshooting/17_CheckoutOld.png)
+![Άνοιγμα των ρυθμίσεων Gradle](../images/studioTroubleshooting/09_GradleSettings.png)
 
-### Sync project with Gradle
+- Στο πεδίο **Gradle JDK** (1), ελέγξτε αν είναι επιλεγμένη η κατάλληλη έκδοση: **jbr-17**. Αν όχι, κάντε κλικ στο πεδίο και δείτε αν υπάρχει ήδη στη λίστα. Αν δεν υπάρχει στη λίστα (η παρακάτω εικόνα δείχνει έναν υπολογιστή όπου υπάρχει μόνο το **jbr-21**), επιλέξτε **Download JDK...** (2).
+
+![Επιλογή Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
+
+
+
+- Στο Version (1), επιλέξτε **17**. Στο Vendor (2), επιλέξτε JetBrains Runtime ή οποιονδήποτε Vendor. Location (3): μην το αλλάξετε.
+
+![Επιλογή JDK 17](https://androidaps.readthedocs.io/en/3.2/_images/163_JDKSelection.png)
+
+- Κλείστε το παράθυρο **Settings** με **OK**.
+
+### Επιλογή του κλάδου AAPS 3.2.0.4
+
+- Κάτω αριστερά, επιλέξτε το σύμβολο του Git, κάντε δεξί κλικ στο 3.2.0.4 και επιλέξτε Checkout.
+
+![Επιλογή Download JDK](../images/studioTroubleshooting/17_Checkout.png)
+
+<br>
+
+![Επιλογή Download JDK](../images/studioTroubleshooting/17_CheckoutOld.png)
+
+### Συγχρονισμός του έργου με το Gradle
 
 ```{admonition} WARNING!
 :class: warning
-**Never update Gradle.** Always sync it with the project.
+**Μην ενημερώνετε ποτέ το Gradle.** Να το συγχρονίζετε πάντα με το έργο.
 ```
 
-Use the elephant icon and Sync Project with Gradle Files (or follow [this](#gradle-resync)) for the new UI.
+Για το νέο περιβάλλον χρήσης, χρησιμοποιήστε το εικονίδιο με τον ελέφαντα και το Sync Project with Gradle Files (ή ακολουθήστε [αυτό](#gradle-resync)).
 
 ![Sync Project with Gradle Files](../images/studioTroubleshooting/06_GradleResyncElephant.png)
 
-Or ([this](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html#gradle-resync)) for the classic UI.
+Ή ([αυτό](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html#gradle-resync)) για το κλασικό περιβάλλον χρήσης.
 
 ![Sync Project with Gradle Files](../images/studioTroubleshooting/06_GradleResyncElephantOld.png)
 
-### Build the Signed 3.2.0.4 APK
+### Build του υπογεγραμμένου APK 3.2.0.4
 
-Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+Ο πηγαίος κώδικάς σας είναι τώρα η τρέχουσα έκδοση που έχει κυκλοφορήσει και όλες οι προϋποθέσεις έχουν ελεγχθεί. Ήρθε η ώρα να κάνετε build του υπογεγραμμένου apk, όπως περιγράφεται στην [ενότητα build υπογεγραμμένου apk](#Building-APK-generate-signed-apk).
 
-### Transfer and install the 3.2.0.4 APK
+### Μεταφορά και εγκατάσταση του APK 3.2.0.4
 
-You need to transfer the apk to your phone so you can install it.
+Πρέπει να μεταφέρετε το apk στο τηλέφωνό σας για να το εγκαταστήσετε.
 
 ```{note}
-If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
-For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
+Αν κάνατε το build με το ίδιο υπάρχον keystore στο Android Studio, δεν χρειάζεται να αφαιρέσετε την υπάρχουσα εφαρμογή από το τηλέφωνό σας. Όταν εγκαθιστάτε το apk, ακολουθήστε τις οδηγίες στην οθόνη για να εγκαταστήσετε την ενημέρωση.
+Σε άλλες περιπτώσεις, όπως όταν δημιουργείτε νέο keystore στο Android Studio για το υπογεγραμμένο apk, πρέπει να διαγράψετε την παλιά εφαρμογή πριν εγκαταστήσετε το apk. **Μην ξεχάσετε να εξαγάγετε τις ρυθμίσεις σας!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
+Δείτε τις οδηγίες για τη [μεταφορά και εγκατάσταση του AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
-### Check AAPS version 3.2.0.4 on phone
+### Έλεγχος της έκδοσης AAPS 3.2.0.4 στο τηλέφωνο
 
-After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
+Αφού εγκαταστήσετε το νέο apk, μπορείτε να ελέγξετε την έκδοση του AAPS στο τηλέφωνό σας: πατήστε το μενού με τις τρεις τελείες πάνω δεξιά και μετά Σχετικά. Θα πρέπει να δείτε την τρέχουσα έκδοση.
 

@@ -1,43 +1,43 @@
-# Making changes to your AAPS' configuration
+# Промени в конфигурацията на AAPS
 
-After you have completed the **[Setup Wizard](../SettingUpAaps/SetupWizard.md)**, you don't need to run the entire Wizard again if you want to only change parts of your **AAPS**' configuration.
+След като сте завършили **[Съветника за настройване](../SettingUpAaps/SetupWizard.md)**, не е нужно да го стартирате целия отново, ако искате да промените само части от конфигурацията на **AAPS**.
 
-There are three routes to change AAPS’ configuration. As to which route you take, it is simply a matter of convenience or personal preference as each route leads to the same configuration settings.
+Има три начина да промените конфигурацията на **AAPS**. Кой начин ще изберете, е въпрос на удобство или лично предпочитание, защото всеки от тях води до едни и същи настройки.
 
-These are as follows:
+Те са следните:
 
-1. Config builder,
-1. Three dot menu on the right and select "Preferences" or
-1. Three dot menu on the right and select "Plugin preferences".
+1. Екранът **Конфигурация**,
+2. Екранът **Настройки** или
+3. **Настройките** на даден плъгин, отворени от неговата категория в **Конфигурация**.
 
-Here we explain which option is most convenient for each situation:
+Тук обясняваме коя опция е най-удобна за всяка ситуация:
 
-## Config builder
+## Конфигурация
 
-![Open Config Builder](../images/ConfBuild_Open_AAPS30.png)
+Отворете **менюто** (☰) в горния ляв ъгъл на главния екран и изберете **Конфигурация**:
 
-The **config builder** is used if you want to **enable plugins** and their **visibility** in the top level menu. Once enabled, the **plugins** will always run, and you can decide if you want to be able to see them in the top menu or not. Disabled plugins can not be made visible.
+![Отваряне на Конфигурация от менюто горе вляво](../images/v4/Configuration/configuration_menu.png)
 
-You can use the cogwheel next to each activated plugin to access its settings.
+**Конфигурация** служи, за да **изберете кои плъгини са активни** – вашият CGM, помпа, APS алгоритъм, определяне на чувствителност, синхронизация и други, групирани по категории. Това е същият екран, който Съветникът за настройване е конфигурирал за вас.
 
-The documentation relating to the config builder is available [here](../SettingUpAaps/ConfigBuilder.md).
+Документацията за екрана Конфигурация ще намерите [тук](../SettingUpAaps/ConfigBuilder.md).
 
-## Опции
+## Настройки
 
-![Open preferences](../images/Pref2020_Open2.png)
+Докоснете иконата **Настройки** (зъбно колело) в горния десен ъгъл на главния екран. Така се отварят настройките на **всички включени плъгини на едно място**, групирани в раздели, които можете да разгъвате:
 
-The **preferences** dialogue can be reached via the top right _three dots_ menu on any tab of **AAPS**. This allows to change the configuration of **all enabled plugins in a single place**.
+![Екранът Настройки с разделите, които можете да разгъвате](../images/v4/Configuration/settings_overview.png)
 
-This is a good route if you are not really sure where to look for a configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
+Този начин е удобен, ако не сте сигурни къде да търсите дадена опция за конфигурация, но може да е малко досаден, ако знаете, че искате да промените конфигурацията само на един конкретен плъгин.
 
-The documentation of the preferences is available [here](../SettingUpAaps/Preferences.md).
+Документацията за настройките ще намерите [тук](../SettingUpAaps/Preferences.md).
 
-## Plugin preferences
+## Настройките на даден плъгин
 
-![Open plugin preferences](../images/Pref2020_OpenPlugin2.png)
+В **Конфигурация** отворете категория и докоснете „**Настройки**“ под активния плъгин. Отваряте директно настройките **само на този плъгин**:
 
-The **plugin preferences** dialogue can be reached via the top right _three dots_ menu on the home screen of **AAPS**. It allows to change the configuration of the **plugin currently on screen**.
+![„Настройки“ и „Отвори плъгин“ под активния плъгин](../images/v4/Configuration/configuration_open_plugin.png)
 
-For example, this is a good route if you know that you want to change the configuration for BYODA. Then, you would select the tab "BYODA" on the top menu of **AAPS**, and then once you are on the BYODA page, in the top right, select the _three dots_ menu and then the "plugin preferences" entry. You are taken directly to the preferences dialogue specifically for the BYODA plugin.
+Например този начин е удобен, ако знаете, че искате да промените конфигурацията на помпата си: отворете **Конфигурация → Помпа**, след това докоснете „**Настройки**“ под избраната помпа.
 
-This is a "shortcut" to the general preferences dialogue, the documentation of the preferences is available [here](../SettingUpAaps/Preferences.md).
+Това е „пряк път“ към същите настройки, които се показват на общия екран **Настройки**.

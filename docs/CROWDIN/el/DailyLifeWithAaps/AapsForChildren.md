@@ -1,27 +1,31 @@
-# AAPS for children
+# Το AAPS για παιδιά
 
-**AAPS** can be used successfully with type 1 kids as well. Anyway, there are things to consider.
+Το **AAPS** μπορεί να χρησιμοποιηθεί με επιτυχία και από παιδιά με διαβήτη τύπου 1. Όμως υπάρχουν μερικά πράγματα που πρέπει να σκεφτείτε.
 
 ## Πράγματα που πρέπει να σκεφτείτε
 
-### Initial Profile
+### Αρχικό προφίλ
 
-Setting the correct [**Profile**](../SettingUpAaps/YourAapsProfile.md) (basal rate, DIA, ISF...) may prove difficult for children with type 1, especially when growth hormones are involved. Take your time to test and ensure that you are happy with your child’s basal, I:C, DIA and ISF. Test them in real life with your kid next to you before starting remote monitoring and remote treatment. Weekends or school holidays might be a good time for that.<br/>
+Η σωστή ρύθμιση του [**Προφίλ**](../SettingUpAaps/YourAapsProfile.md) (βασικός ρυθμός, ISF, I:C...) και του [τύπου ινσουλίνης](#Config-Builder-insulin-dia) (DIA) μπορεί να είναι δύσκολη για παιδιά με διαβήτη τύπου 1, ειδικά όταν παίζουν ρόλο οι αυξητικές ορμόνες. Δώστε στον εαυτό σας χρόνο να δοκιμάσετε και να βεβαιωθείτε ότι είστε ικανοποιημένοι με τον βασικό ρυθμό, το I:C, το ISF και το DIA του παιδιού σας. Δοκιμάστε τα στην πράξη με το παιδί σας δίπλα σας, πριν ξεκινήσετε την απομακρυσμένη παρακολούθηση και την απομακρυσμένη θεραπεία. Τα Σαββατοκύριακα ή οι σχολικές διακοπές μπορεί να είναι μια καλή στιγμή για αυτό.
 
-### Monitor and adjust your child’s Profile where necessary
+### Παρακολουθείτε και προσαρμόζετε το προφίλ του παιδιού σας όπου χρειάζεται
 
-As the child grows, **Profile** adjustments will be necessary in order to account for your child’s body’s demands and needs. However this issue exists for all type 1 children including those who are on other pumps or injections.
+Καθώς το παιδί μεγαλώνει, θα χρειάζονται προσαρμογές στο **Προφίλ**, ώστε να καλύπτονται οι ανάγκες του σώματος του παιδιού σας. Όμως αυτό ισχύει για όλα τα παιδιά με διαβήτη τύπου 1, και για εκείνα που χρησιμοποιούν άλλες αντλίες ή ενέσεις.
 
-### Keeping the phone in range
+### Το τηλέφωνο να είναι εντός εμβέλειας
 
-Think about how you will keep the child’s phone in range of their pump and **CGM**. This can be challenging with children who are too young to be responsible for a phone. An **AAPS** phone with a good bluetooth connection range should be selected as well as finding a comfortable way for the child to carry the pump and phone. Many solutions exist, like insulin pump belts that also have space for a phone, or a harness to carry like a backpack.
+Σκεφτείτε πώς θα κρατάτε το τηλέφωνο του παιδιού εντός εμβέλειας της αντλίας και του **CGM**. Αυτό μπορεί να είναι δύσκολο με παιδιά που είναι πολύ μικρά για να είναι υπεύθυνα για ένα τηλέφωνο. Επιλέξτε ένα τηλέφωνο για το **AAPS** με καλή εμβέλεια Bluetooth και βρείτε έναν άνετο τρόπο για να κουβαλά το παιδί την αντλία και το τηλέφωνο. Υπάρχουν πολλές λύσεις, όπως ζώνες αντλίας ινσουλίνης που έχουν χώρο και για τηλέφωνο, ή μια θήκη με λουριά που φοριέται σαν σακίδιο.
 
-### How to protect your child’s AAPS from being misused?
+### Πώς να προστατέψετε το AAPS του παιδιού σας από λάθος χρήση;
 
-There are several protection settings available with **AAPS** to avoid the child or a stranger misuse of **AAPS**. See [Preferences > General > Protection](#Preferences-protection) to add password or biometric protection to boluses, settings changes, or even **AAPS** itself.
+Στο **AAPS** υπάρχουν διάφορες ρυθμίσεις προστασίας, ώστε το παιδί ή ένας άγνωστος να μη χρησιμοποιήσει λάθος το **AAPS**. Δείτε [Ρυθμίσεις → Προστασία](#Preferences-protection) για να προσθέσετε κωδικό ή βιομετρική προστασία στα bolus, στις αλλαγές ρυθμίσεων ή ακόμα και στο ίδιο το **AAPS**.
 
-## Remote monitoring and remote control
+## Απομακρυσμένη παρακολούθηση και απομακρυσμένος έλεγχος
 
-Remote monitoring is an essential functionality when using **AAPS** for children. See the dedicated section [Remote Monitoring](../RemoteFeatures/RemoteMonitoring.md) to explore possible options.
+Η απομακρυσμένη παρακολούθηση είναι βασική λειτουργία όταν χρησιμοποιείτε το **AAPS** για παιδιά. Δείτε την ειδική ενότητα [Απομακρυσμένη παρακολούθηση](../RemoteFeatures/RemoteMonitoring.md) για τις πιθανές επιλογές.
 
-Remote monitoring and treatment can be hugely beneficial for parents of a type 1 child and this is particularly so when the child attends kindergarten and elementary school. But make sure the teachers and educators are aware of your kid's treatment plan.<br/> Work out how adding in remote control is going to work with/enhance the existing plan. Many parents find it helpful to have a separate line of communication with childcare providers, for example a cheap small teacher “follow” phone.<br/> Examples for school care plans can be found in the [files section of AAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) on Facebook. 
+Η απομακρυσμένη παρακολούθηση και θεραπεία μπορεί να βοηθήσει πολύ τους γονείς ενός παιδιού με διαβήτη τύπου 1, ειδικά όταν το παιδί πηγαίνει στο νηπιαγωγείο και στο δημοτικό σχολείο. Αλλά βεβαιωθείτε ότι οι δάσκαλοι και οι εκπαιδευτικοί γνωρίζουν το θεραπευτικό πλάνο του παιδιού σας.
+
+Σκεφτείτε πώς ο απομακρυσμένος έλεγχος θα ταιριάξει με το υπάρχον πλάνο και πώς θα το βελτιώσει. Πολλοί γονείς βρίσκουν χρήσιμο να έχουν ξεχωριστό τρόπο επικοινωνίας με όσους φροντίζουν το παιδί, για παράδειγμα ένα φθηνό, μικρό τηλέφωνο για τον δάσκαλο, που «ακολουθεί» (follow) το παιδί.
+
+Παραδείγματα σχολικών πλάνων φροντίδας θα βρείτε στην [ενότητα αρχείων της ομάδας AAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) στο Facebook. 

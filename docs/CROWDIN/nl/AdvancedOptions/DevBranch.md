@@ -1,24 +1,24 @@
-# Development branch
+# Development branch (ontwikkelversie)
 
 ```{warning}
-Dev branch is for the further development of AAPS only. It should be used on a separate phone for testing <font color="#FF0000">**not for actual looping!**</font>
+De dev branch is alleen bedoeld voor de verdere ontwikkeling van AAPS. Gebruik hem op een aparte telefoon om te testen, <font color="#FF0000">**niet om echt mee te loopen!**</font>
 ```
 
-The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). It is advised to stay on the Master branch for actual looping.
+De meest stabiele versie van AAPS staat in de [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). Blijf voor echt gebruik van de loop op de Master branch.
 
-The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Therefore many unfinished features are disabled. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in directory /AAPS/extra . Enabling the engineering mode might break the loop entirely.
+De dev versie van AAPS is alleen voor ontwikkelaars en testers die goed overweg kunnen met stacktraces, logbestanden kunnen doorzoeken en misschien de debugger starten om bugrapporten te maken waar de ontwikkelaars iets aan hebben (kort gezegd: mensen die weten wat ze doen, zonder hulp!). Daarom zijn veel functies die nog niet af zijn uitgeschakeld. Om deze functies in te schakelen, zet je de **Engineering Mode** aan: maak een bestand met de naam `engineering_mode` in de map /AAPS/extra . Het inschakelen van de Engineering Mode kan de loop helemaal laten stoppen met werken.
 
-However, the Dev branch is a good place to see what features are being tested and to help iron out the bugs and give feedback on how the new features work in practice. Often people will test the Dev branch on an old phone and pump until they are confident it is stable - any use of it is at your own risk. When testing any new features, remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.
+Toch is de dev branch een goede plek om te zien welke functies worden getest. Je kunt er helpen bugs op te lossen en feedback geven over hoe de nieuwe functies in de praktijk werken. Vaak zullen mensen de Dev-branch testen met een oude telefoon en pomp totdat ze er vertrouwen in hebben dat die versie stabiel is - gebruik ervan is op jouw eigen risico. Als je nieuwe functies test, onthoud dan dat je bewust kiest om een functie te testen die nog in ontwikkeling is. Doe dit op je eigen risico & met de nodige voorzichtigheid om jezelf veilig te houden.
 
-If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/nightscout/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md). The new features can also be discussed on [discord](https://discord.gg/4fQUWHZ4Mw).
+Vind je een bug, of denk je dat er iets fout is gegaan bij het gebruik van de dev branch? Kijk dan in het [issues-tabblad](https://github.com/nightscout/AndroidAPS/issues) of iemand anders het al heeft gevonden. Zo niet, voeg het dan zelf toe. Hoe meer informatie je hier kunt delen, hoe beter (vergeet niet dat je misschien je [logbestanden](../GettingHelp/AccessingLogFiles.md) moet delen). De nieuwe functies kun je ook bespreken op [Discord](https://discord.gg/4fQUWHZ4Mw).
 
-A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. When a single dev version doing the rounds, it is easier to keep track of bugs that people are reporting. The developers do not want to be in a position where there are three versions of dev in the wild where bugs are fixed in some and not others, and people continue to report the fixed ones.
+Een dev versie heeft een vervaldatum. Dat lijkt lastig als alles goed werkt, maar het heeft een doel. Als er maar één dev versie in omloop is, is het makkelijker om de gemelde bugs bij te houden. De ontwikkelaars willen niet dat er drie dev versies in omloop zijn, waarbij bugs in sommige versies zijn opgelost en in andere niet, en mensen de opgeloste bugs blijven melden.
 
 (branch-ci-test)=
 
-## Test a specific branch (branch-ci)
+## Een bepaalde branch testen (branch-ci)
 
-To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
+Om een test-branch te bouwen kies je branch-ci. Daarmee kun je een bepaalde branch kiezen om de APK van te maken. Je kunt deze methode gebruiken als je de dev branch moet testen.
 
 ![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
 
@@ -26,11 +26,11 @@ To build a test branch, select branch-ci, which allows you to choose a specific 
 
 (github-pr-test)=
 
-## Test items in a pull request (GitHub CI actions deploy)
+## Onderdelen van een pull request testen (GitHub CI actions deploy)
 
-Available from 3.3.2.1.dev
+Beschikbaar vanaf 3.3.2.1.dev
 
-- Suitable for testers or those helping with testing.
+- Geschikt voor testers of voor mensen die helpen met testen.
 
 ```{eval-rst}
 .. raw:: html
@@ -39,7 +39,8 @@ Available from 3.3.2.1.dev
     <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
       <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
         <iframe
-          src="https://www.dailymotion.com/embed/video/x9rdx1q"
+          src="https://geo.dailymotion.com/player/x9rdx1q.html?video=x9rdx1q&loop=true&mute=true"
+          loading="lazy"
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
           frameborder="0"
           allowfullscreen>
@@ -50,20 +51,22 @@ Available from 3.3.2.1.dev
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
 
-- PR number: Please enter the PR number that you want to test.
+- Target repository: de repository met de PR, in de vorm owner/repo. Laat de standaardwaarde **nightscout/AndroidAPS** staan, tenzij je gevraagd is een andere repository te gebruiken (alleen ontwikkelaars horen dat te doen).
 
-- PR reference types: PR reference types include two options:
+- PR number: vul het nummer in van de PR die je wilt testen.
+
+- PR reference types: er zijn twee soorten PR-referenties:
     
     - head:
-    - Fetches the actual content from the PR author’s branch (i.e., the original commit history without any merge operations).
-    - This is equivalent to the original state of the PR branch, as if it were fetched directly from a fork or feature branch.
+    - Haalt de echte inhoud op uit de branch van de auteur van de PR (dus de oorspronkelijke commitgeschiedenis, zonder merge).
+    - Dit is gelijk aan de oorspronkelijke staat van de PR branch, alsof je die direct uit een fork of feature branch haalt.
     
     - merge:
     
-    - Fetches the result of GitHub’s pre-simulated merge of the PR into the target branch (e.g., dev).
-    - This is a virtual merge commit automatically created by GitHub.
-    - This commit only exists when the PR has no conflicts and is mergeable.
+    - Haalt het resultaat op van de merge die GitHub vooraf simuleert van de PR in de doel-branch (bijv. dev).
+    - Dit is een virtuele merge commit die GitHub automatisch maakt.
+    - Deze commit bestaat alleen als de PR geen conflicten heeft en gemerged kan worden.
     
     - variant:
     
-    - Please refer to [variant](#browserbuild-variant)
+    - Zie [variant](#browserbuild-variant)

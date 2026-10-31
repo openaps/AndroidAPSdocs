@@ -1,236 +1,249 @@
-# Preparing to start with AAPS
+# Προετοιμασία για την έναρξη με το AAPS
 
-Welcome. This documentation aims to guide users who are preparing to setup and start using the Android Artificial Pancreas System (**AAPS**).
+Καλώς ήρθατε. Αυτή η τεκμηρίωση θέλει να καθοδηγήσει τους χρήστες που προετοιμάζονται να ρυθμίσουν και να αρχίσουν να χρησιμοποιούν το Android Artificial Pancreas System (**AAPS**).
 
-## Finding your way around the documentation
+## Πώς να βρίσκετε τον δρόμο σας στην τεκμηρίωση
 
-An **index** and explanation of the documentation structure can be found [here](../index.md), you can also reach it by clicking on the **AAPS** symbol at the top left of the documentation. There you will find an overview of the purpose of the different documentation sections. You can also use the headings to the left of this page to navigate through the documentation. Finally, there is a handy search function, directly below the **AAPS** symbol.
+Ένα **ευρετήριο** και εξήγηση της δομής της τεκμηρίωσης θα βρείτε [εδώ](../index.md). Μπορείτε να φτάσετε εκεί και πατώντας το σύμβολο του **AAPS** πάνω αριστερά στην τεκμηρίωση. Εκεί θα βρείτε μια επισκόπηση του σκοπού των διάφορων ενοτήτων της τεκμηρίωσης. Μπορείτε επίσης να χρησιμοποιήσετε τις επικεφαλίδες στα αριστερά αυτής της σελίδας για να κινηθείτε στην τεκμηρίωση. Τέλος, υπάρχει μια πρακτική λειτουργία αναζήτησης, ακριβώς κάτω από το σύμβολο του **AAPS**.
 
-We aim to make it easy to determine both the capabilities and limitations of **AAPS**. It can be disappointing to discover after investing time in reading the documentation that you might not have a compatible insulin pump or CGM, or that **AAPS** offers different functionality than hoped for.
+Θέλουμε να είναι εύκολο να καταλάβετε τόσο τις δυνατότητες όσο και τους περιορισμούς του **AAPS**. Μπορεί να είναι απογοητευτικό να ανακαλύψετε, αφού αφιερώσατε χρόνο στο διάβασμα της τεκμηρίωσης, ότι μπορεί να μην έχετε συμβατή αντλία ινσουλίνης ή CGM, ή ότι το **AAPS** προσφέρει διαφορετικές λειτουργίες από αυτές που περιμένατε.
 
-Many experience-related details in the **AAPS** documentation make more sense when you are actually using **AAPS** in real-time. Just as it is difficult to learn a sport only by reading the rules, it takes a combination of learning the foundations of the rules for safely operating **AAPS** and then learning how best to apply those rules as you start to use **AAPS**.
+Πολλές λεπτομέρειες στην τεκμηρίωση του **AAPS** που αφορούν την εμπειρία βγάζουν περισσότερο νόημα όταν χρησιμοποιείτε πραγματικά το **AAPS** στην καθημερινότητα. Όπως είναι δύσκολο να μάθετε ένα άθλημα μόνο διαβάζοντας τους κανόνες, χρειάζεται συνδυασμός: πρώτα μαθαίνετε τις βασικές αρχές για την ασφαλή λειτουργία του **AAPS** και μετά μαθαίνετε πώς να τις εφαρμόζετε καλύτερα καθώς αρχίζετε να χρησιμοποιείτε το **AAPS**.
 
 (preparing-safety-first)=
 
 ## Πρώτα η ασφάλεια
-“With great power comes great responsibility…”
+«Η μεγάλη δύναμη φέρνει μεγάλη ευθύνη…»
 
-### Technical safety
-**AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](../SettingUpAaps/CompletingTheObjectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
+### Τεχνική ασφάλεια
+Το **AAPS** έχει πολλές λειτουργίες ασφάλειας. Αυτές βάζουν περιορισμούς, που αφαιρούνται σταδιακά καθώς ολοκληρώνετε με τη σειρά μια σειρά από [Βήματα](../SettingUpAaps/CompletingTheObjectives.md). Τα Βήματα περιλαμβάνουν δοκιμή συγκεκριμένων παραμέτρων και απαντήσεις σε ερωτήσεις πολλαπλής επιλογής. Οι λειτουργίες του **AAPS** ξεκλειδώνουν καθώς ολοκληρώνετε με επιτυχία τα Βήματα. Έτσι ο χρήστης περνά με ασφάλεια, σε στάδια, από το Ανοιχτό Κύκλωμα στο Κλειστό Κύκλωμα, ενώ μαθαίνει τις διάφορες λειτουργίες του **AAPS**.
 
-The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) aim to minimise these issues.
+Τα [Βήματα](../SettingUpAaps/CompletingTheObjectives.md) σχεδιάστηκαν για την καλύτερη δυνατή εισαγωγή στο **AAPS**, με βάση τα συνηθισμένα λάθη και τις γενικές τάσεις που έχουν δει οι προγραμματιστές του **AAPS** στους νέους χρήστες. Λάθη μπορεί να συμβούν επειδή ο αρχάριος δεν έχει εμπειρία και βιάζεται πολύ να ξεκινήσει με το **AAPS**, ή επειδή δεν πρόσεξε σημαντικά σημεία. Τα [Βήματα](../SettingUpAaps/CompletingTheObjectives.md) θέλουν να περιορίσουν αυτά τα προβλήματα.
 
-### Medical safety
+### Ιατρική ασφάλεια
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
 :class: danger
-Caution is advised concerning rapid improvements in blood glucose control and lowering of HbA1c 
+Προσοχή στις γρήγορες βελτιώσεις στον έλεγχο της γλυκόζης αίματος και στη μείωση της HbA1c 
 ```
 
-An important safety consideration is that a **rapid reduction in HbA1c and improved blood glucose control in those who have had elevated glucose levels for some time can cause permanent damage**. Many people with diabetes are unaware of this, and not all clinicans make their patients aware of this issue.
+Ένα σημαντικό θέμα ασφάλειας είναι ότι **η γρήγορη μείωση της HbA1c και ο βελτιωμένος έλεγχος της γλυκόζης αίματος σε άτομα που είχαν αυξημένη γλυκόζη για αρκετό καιρό μπορεί να προκαλέσουν μόνιμη βλάβη**. Πολλά άτομα με διαβήτη δεν το γνωρίζουν αυτό, και δεν ενημερώνουν όλοι οι γιατροί τους ασθενείς τους για αυτό το θέμα.
 
-This damage can include **sight loss, and permanent neuropathy (pain)**. It is possible to avoid this damage occurring, by reducing average glucose levels more slowly. If you currently have an elevated HbA1c and are moving to **AAPS** (or any other closed loop system), _please_ discuss this potential risk with your clinical team before starting, and agree a timescale with gradually decreasing safe glucose targets with them. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 10.6 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
+Αυτή η βλάβη μπορεί να περιλαμβάνει **απώλεια όρασης και μόνιμη νευροπάθεια (πόνο)**. Μπορείτε να αποφύγετε αυτή τη βλάβη αν μειώνετε πιο αργά τα μέσα επίπεδα γλυκόζης. Αν τώρα έχετε αυξημένη HbA1c και περνάτε στο **AAPS** (ή σε οποιοδήποτε άλλο σύστημα κλειστού κυκλώματος), _παρακαλούμε_ συζητήστε αυτόν τον πιθανό κίνδυνο με την ιατρική σας ομάδα πριν ξεκινήσετε, και συμφωνήστε μαζί τους ένα χρονοδιάγραμμα με σταδιακά χαμηλότερους, ασφαλείς στόχους γλυκόζης. Μπορείτε εύκολα να ορίσετε στην αρχή υψηλότερους στόχους γλυκόζης στο **AAPS** (σήμερα ο υψηλότερος στόχος που μπορείτε να επιλέξετε είναι 11,1 mmol/l, αλλά αν χρειάζεται μπορείτε επίσης να κρατήσετε σκόπιμα ένα αδύναμο προφίλ) και μετά να μειώνετε τον στόχο καθώς περνούν οι μήνες.
 
-#### How quickly can I reduce my HbA1c without risking permanent damage?
+#### Πόσο γρήγορα μπορώ να μειώσω την HbA1c χωρίς κίνδυνο για μόνιμη βλάβη;
 
-One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the Hba1C dropped 1%, 2% or 3% respectively over a 6 month period. They suggested that the **"decrease in HbA1c value during any 6-month period should be limited to less than 2% in order to prevent the progression of retinopathy....Too rapid a decrease at the initiation of glycemic control could cause severe or transient exacerbation of the progression of retinopathy."**
+Μια αναδρομική [μελέτη](https://pubmed.ncbi.nlm.nih.gov/1464975/) σε 76 ασθενείς ανέφερε ότι ο κίνδυνος εξέλιξης της αμφιβληστροειδοπάθειας αυξανόταν 1,6 φορές, 2,4 φορές και 3,8 φορές αν η HbA1c έπεφτε 1%, 2% ή 3% αντίστοιχα μέσα σε 6 μήνες. Πρότειναν ότι **«η μείωση της τιμής HbA1c σε οποιοδήποτε διάστημα 6 μηνών πρέπει να περιορίζεται σε λιγότερο από 2%, ώστε να αποφεύγεται η εξέλιξη της αμφιβληστροειδοπάθειας.... Πολύ γρήγορη μείωση στην αρχή του γλυκαιμικού ελέγχου θα μπορούσε να προκαλέσει σοβαρή ή παροδική επιδείνωση της εξέλιξης της αμφιβληστροειδοπάθειας.»**
 
-N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for a HbA1c calculator tool.
+Σημείωση: Αν χρησιμοποιείτε άλλες μονάδες για την HbA1c (mmol/mol αντί για %), πατήστε [εδώ](https://www.diabetes.co.uk/hba1c-units-converter.html) για ένα εργαλείο μετατροπής HbA1c.
 
-In another retrospective [evaluation](https://academic.oup.com/brain/article/138/1/43/337923) of 954 patients, researchers noted that:
+Σε μια άλλη αναδρομική [αξιολόγηση](https://academic.oup.com/brain/article/138/1/43/337923) 954 ασθενών, οι ερευνητές σημείωσαν ότι:
 
-**"With a decrease in HbA1c of 2–3% points over 3 months there was a 20% absolute risk of developing treatment-induced neuropathy in diabetes, with a decrease in HbA1c of >4% points over 3 months the absolute risk of developing treatment-induced neuropathy in diabetes exceeded 80%."**
+**«Με μείωση της HbA1c κατά 2–3 ποσοστιαίες μονάδες μέσα σε 3 μήνες, υπήρχε απόλυτος κίνδυνος 20% για ανάπτυξη νευροπάθειας από τη θεραπεία στον διαβήτη. Με μείωση της HbA1c κατά >4 ποσοστιαίες μονάδες μέσα σε 3 μήνες, ο απόλυτος κίνδυνος για ανάπτυξη νευροπάθειας από τη θεραπεία στον διαβήτη ξεπερνούσε το 80%.»**
 
-A [commentary](https://academic.oup.com/brain/article/138/1/2/340563) on this work agreed that to avoid complications **the goal should be to reduce A1c by <2% over 3 months.** You can read other reviews on the topic [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) and [here](https://www.mdpi.com/1999-4923/15/7/1791).
+Ένα [σχόλιο](https://academic.oup.com/brain/article/138/1/2/340563) σε αυτή την εργασία συμφώνησε ότι, για να αποφευχθούν επιπλοκές, **ο στόχος πρέπει να είναι μείωση της A1c κατά <2% μέσα σε 3 μήνες.** Μπορείτε να διαβάσετε άλλες ανασκοπήσεις για το θέμα [εδώ](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) και [εδώ](https://www.mdpi.com/1999-4923/15/7/1791).
 
-It is generally recognised that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. However, it is still a consideration which you should discuss with your clinician.
+Είναι γενικά αποδεκτό ότι οι _νεοδιαγνωσμένοι_ με διαβήτη τύπου 1 (που συχνά έχουν πολύ υψηλή HbA1c κατά τη διάγνωση, πριν αρχίσουν θεραπεία με ινσουλίνη) φαίνεται ότι μπορούν να μειώσουν γρήγορα την HbA1c αμέσως μετά τη διάγνωση χωρίς να αντιμετωπίζουν αυτούς τους κινδύνους στον ίδιο βαθμό, επειδή δεν είχαν αυξημένη γλυκόζη αίματος για τόσο μεγάλο διάστημα. Ωστόσο, παραμένει ένα θέμα που πρέπει να συζητήσετε με τον γιατρό σας.
 
 (PreparingForAaps-no-sglt-2-inhibitors)=
-### No SGLT-2 inhibitors
+### Όχι αναστολείς SGLT-2
 
 ```{admonition} NO SGLT-2 inhibitors
 :class: danger
-SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins incalculably lower blood sugar levels, and so you MUST NOT take them while using a closed loop system like AAPS! There would be a significant risk of ketoacidosis and/or hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous. 
+Οι αναστολείς SGLT-2, που λέγονται και γλιφλοζίνες, εμποδίζουν την επαναρρόφηση της γλυκόζης στα νεφρά. Οι γλιφλοζίνες μειώνουν τη γλυκόζη αίματος με τρόπο που δεν μπορεί να υπολογιστεί, γι' αυτό ΔΕΝ ΠΡΕΠΕΙ να τις παίρνετε όσο χρησιμοποιείτε σύστημα κλειστού κυκλώματος όπως το AAPS! Θα υπήρχε σοβαρός κίνδυνος κετοξέωσης και/ή υπογλυκαιμίας! Ο συνδυασμός αυτού του φαρμάκου με ένα σύστημα που μειώνει τον βασικό ρυθμό για να αυξήσει τη γλυκόζη αίματος (BG) είναι ιδιαίτερα επικίνδυνος. 
 
-In a nutshell:
-- **Example 1: risk of Hypo**
->During lunch, you use **AAPS** to bolus based on consuming 45g of glucose. The problem is that unbeknownst to AAPS, the inhibitors cause the body to eliminate some of the carbs resulting in your body having too much insulin compared to the absorbed Carbs, resulting in hypoglycemia.
+Με λίγα λόγια:
+- **Παράδειγμα 1: κίνδυνος υπογλυκαιμίας**
+>Στο μεσημεριανό, χρησιμοποιείτε το **AAPS** για bolus με βάση την κατανάλωση 45 g γλυκόζης. Το πρόβλημα είναι ότι, χωρίς να το ξέρει το AAPS, οι αναστολείς κάνουν τον οργανισμό να αποβάλλει ένα μέρος των υδατανθράκων. Έτσι στον οργανισμό σας μένει πολύ ινσουλίνη σε σχέση με τους υδατάνθρακες που απορροφήθηκαν, και αυτό προκαλεί υπογλυκαιμία.
 
-- **Example 2: risk of Ketoacidosis**
->The inhibitors eliminate some of the carbs in the background causing a reduction in your BG. **AAPS** will automatically instruct the pump to decrease insulin intake  including basal. Over time this can result  in your  BG remaining below target value to the point where the body does not have enough background insulin to absorb any carbs resulting in Ketoacidosis. Ordinarily, Ketoacidosis  develops in T1D patients because their pump fails which would trigger alerts on their phone and be noticeable due to a high BG value. However, the danger with Gliflozins  is that there would be no AAPS alerts as  the pump remains operational and the BG potentially remains within target.  
+- **Παράδειγμα 2: κίνδυνος κετοξέωσης**
+>Οι αναστολείς αποβάλλουν ένα μέρος των υδατανθράκων στο παρασκήνιο, και αυτό μειώνει τη γλυκόζη αίματος (BG). Το **AAPS** θα δώσει αυτόματα εντολή στην αντλία να μειώσει την ινσουλίνη, και τον βασικό ρυθμό. Με τον καιρό η γλυκόζη αίματος (BG) μπορεί να μένει κάτω από τον στόχο, μέχρι το σημείο που ο οργανισμός δεν έχει αρκετή βασική ινσουλίνη για να απορροφήσει υδατάνθρακες, και αυτό προκαλεί κετοξέωση. Συνήθως η κετοξέωση εμφανίζεται σε ασθενείς με ΣΔ1 όταν χαλάσει η αντλία τους. Αυτό θα έβγαζε ειδοποιήσεις στο τηλέφωνο και θα φαινόταν από την υψηλή τιμή γλυκόζης αίματος. Όμως ο κίνδυνος με τις γλιφλοζίνες είναι ότι δεν θα υπήρχαν ειδοποιήσεις από το AAPS, επειδή η αντλία λειτουργεί κανονικά και η γλυκόζη αίματος (BG) μπορεί να μένει μέσα στον στόχο.
 
-Common brand names of SGLT-2 inhibitors include: Invokana, Farxiga, Jardiance, Glyxambi, Synjardy, Steglatro, and Xigduo XR, others.
+Συνηθισμένες εμπορικές ονομασίες αναστολέων SGLT-2 είναι: Invokana, Farxiga, Jardiance, Glyxambi, Synjardy, Steglatro και Xigduo XR, και άλλες.
 ```
 
 
-### Key principles of looping with AAPS
+### Βασικές αρχές του κυκλώματος με το AAPS
 
-The key principles and concepts of looping must be understood before using **AAPS**. This is achieved by investing your personal time into reading the **AAPS** documentation, and completing the Objectives which aim to provide you with a solid platform for safe and effective use of **AAPS**. The volume of **AAPS** documentation may seem overwhelming at first but be patient and trust the process - with the proper approach, you'll get there!
+Πρέπει να κατανοήσετε τις βασικές αρχές και έννοιες του κυκλώματος πριν χρησιμοποιήσετε το **AAPS**. Αυτό το πετυχαίνετε αν αφιερώσετε προσωπικό χρόνο στο διάβασμα της τεκμηρίωσης του **AAPS** και ολοκληρώσετε τα Βήματα, που σκοπό έχουν να σας δώσουν μια σταθερή βάση για ασφαλή και αποτελεσματική χρήση του **AAPS**. Ο όγκος της τεκμηρίωσης του **AAPS** μπορεί στην αρχή να φαίνεται πολύ μεγάλος, αλλά να είστε υπομονετικοί και να εμπιστευτείτε τη διαδικασία - με τη σωστή προσέγγιση θα τα καταφέρετε!
 
-The speed of progression will depend upon the individual, but be aware that completion of all the objectives typically takes 6 - 9 weeks. Many people start to build, install and setup **AAPS** well in advance of starting to use it. To aid with this, the system has a "virtual pump" which can be used during completion of the early objectives, so that you can become familiar with **AAPS** without actually using it to deliver insulin. A detailed breakdown of the timeline is given below, be aware that by objective 8 of **AAPS** you are closed looping, the later objectives add in additional features like **SMS commands** and **automations** which are useful to some users, but not essential to the core function of **AAPS**.
+Η ταχύτητα της προόδου εξαρτάται από τον καθένα, αλλά να ξέρετε ότι η ολοκλήρωση όλων των Βημάτων συνήθως παίρνει 6–9 εβδομάδες. Πολλοί άνθρωποι αρχίζουν να δημιουργούν, να εγκαθιστούν και να ρυθμίζουν το **AAPS** αρκετά πριν αρχίσουν να το χρησιμοποιούν. Για να σας βοηθήσει σε αυτό, το σύστημα έχει μια «εικονική αντλία», που μπορείτε να χρησιμοποιήσετε στα πρώτα Βήματα. Έτσι εξοικειώνεστε με το **AAPS** χωρίς να το χρησιμοποιείτε πραγματικά για χορήγηση ινσουλίνης. Παρακάτω υπάρχει αναλυτικό χρονοδιάγραμμα. Να ξέρετε ότι στο Βήμα 7 του **AAPS** έχετε ήδη κλειστό κύκλωμα. Τα επόμενα Βήματα προσθέτουν επιπλέον λειτουργίες, όπως **SMB** και **αυτοματισμούς**, που είναι χρήσιμες για κάποιους χρήστες, αλλά δεν είναι απαραίτητες για τη βασική λειτουργία του **AAPS**.
 
-Success with **AAPS** requires a proactive approach, a willingness to reflect on the BG data and flexibility to make the necessary adjustments to **AAPS** in order to improve your outcomes. Just as it is nearly impossible to learn to play a sport by reading about the rules alone, the same can be said of **AAPS**.
+Η επιτυχία με το **AAPS** χρειάζεται ενεργή στάση, διάθεση να σκέφτεστε τα δεδομένα γλυκόζης αίματος (BG) και ευελιξία για να κάνετε τις απαραίτητες αλλαγές στο **AAPS**, ώστε να βελτιώσετε τα αποτελέσματά σας. Όπως είναι σχεδόν αδύνατο να μάθετε ένα άθλημα μόνο διαβάζοντας τους κανόνες, το ίδιο ισχύει και για το **AAPS**.
 
-#### Plan for delays and minor issues in getting everything set up and running
+#### Υπολογίστε καθυστερήσεις και μικρά προβλήματα μέχρι να ρυθμιστούν και να λειτουργήσουν όλα
 
-In the preliminary stages of getting started with **AAPS**, you may experience difficulties getting all the components of the loop communicating effectively with each other (and potential followers), and when fine-tuning your settings. Some glitches cannot be resolved until **AAPS** is used in everyday life, but plenty of help is available on the Facebook group and Discord. Please plan accordingly and choose "good" times, like a quiet morning of a weekend (i.e. not late at night or when you are tired, or before a big meeting or travel) to troubleshoot and resolve issues.
+Στα πρώτα στάδια με το **AAPS**, μπορεί να έχετε δυσκολίες ώστε όλα τα μέρη του κυκλώματος να επικοινωνούν σωστά μεταξύ τους (και με πιθανούς ακόλουθους), καθώς και όταν βελτιώνετε τις ρυθμίσεις σας. Κάποια προβλήματα λύνονται μόνο όταν το **AAPS** χρησιμοποιείται στην καθημερινή ζωή, αλλά υπάρχει πολλή βοήθεια στην ομάδα του Facebook και στο Discord. Προγραμματίστε ανάλογα και επιλέξτε «καλές» ώρες για να εντοπίσετε και να λύσετε προβλήματα, όπως ένα ήσυχο πρωινό Σαββατοκύριακου (δηλαδή όχι αργά το βράδυ ή όταν είστε κουρασμένοι, ούτε πριν από μια σημαντική συνάντηση ή ένα ταξίδι).
 
-#### Technology compatibility
+#### Συμβατότητα τεχνολογίας
 
-**AAPS** is only compatible with certain types of insulin pumps, CGMs and phones, and some technology may not be available for use in various countries. In order to avoid any disappointment or frustrations, please read the [CGM](../Getting-Started/CompatiblesCgms.md), [pump](../Getting-Started/CompatiblePumps.md) and [phone](../Getting-Started/Phones.md) sections.
+Το **AAPS** είναι συμβατό μόνο με ορισμένους τύπους αντλιών ινσουλίνης, CGM και τηλεφώνων, και κάποιες συσκευές μπορεί να μην είναι διαθέσιμες σε όλες τις χώρες. Για να αποφύγετε απογοήτευση, διαβάστε τις ενότητες για [CGM](../Getting-Started/CompatiblesCgms.md), [αντλίες](../Getting-Started/CompatiblePumps.md) και [τηλέφωνα](../Getting-Started/Phones.md).
 
-#### App build time and progressing to full looping
+#### Χρόνος δημιουργίας της εφαρμογής και πορεία μέχρι το πλήρες κύκλωμα
 
-The time to build the **AAPS** app  depends on your level of expertise and technical ability. Typically for inexperienced users, it can take up to half a day or a full day (with help from the community) in order to build **AAPS**. The process will significantly speed up for newer **AAPS** versions, as you become more experienced.
+Ο χρόνος για να δημιουργήσετε την εφαρμογή **AAPS** εξαρτάται από την εμπειρία και τις τεχνικές σας γνώσεις. Συνήθως, για χρήστες χωρίς εμπειρία, η δημιουργία του **AAPS** μπορεί να πάρει από μισή έως μία ολόκληρη ημέρα (με βοήθεια από την κοινότητα). Η διαδικασία θα γίνεται πολύ πιο γρήγορα στις νεότερες εκδόσεις του **AAPS**, καθώς θα αποκτάτε εμπειρία.
 
-To aid the build process there are dedicated sections:
+Αρκετά μέρη αυτής της τεκμηρίωσης σας βοηθούν στη διαδικασία δημιουργίας:
 
-- List of questions and answers for frequent errors that are likely to occur in [FAQs](../UsefulLinks/FAQ.md) (Section 11);
+- Η [Δημιουργία του AAPS](../SettingUpAaps/BuildingAaps.md) σας οδηγεί βήμα προς βήμα στη δημιουργία της εφαρμογής και στην εγκατάστασή της στο τηλέφωνό σας·
 
-- “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section 3) and [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) (Section 8).
+- οι [Συχνές Ερωτήσεις](../UsefulLinks/FAQ.md) απαντούν σε συνηθισμένες ερωτήσεις και εξηγούν τα λάθη που εμφανίζονται πιο συχνά· και
 
-How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#preparing-how-long-will-it-take))
+- η σελίδα [Αντιμετώπιση προβλημάτων](../GettingHelp/GeneralTroubleshooting.md) συγκεντρώνει λύσεις για τα πιο συχνά προβλήματα, οργανωμένες ανά θέμα.
 
-
-#### Keystore & configuration settings export file
-
-A “keystore” (.jks file) is a password encrypted file unique to your own copy of **AAPS**. Your Android phone uses it to ensure that nobody else can upgrade your own copy without the keystore. In short, as part of the **AAPS** build, you should:
-
-1.  Save the your keystore file (.jks file used to sign your app) in a safe place;
-
-2.  Keep a note of your password for your keystore file.
+Ο χρόνος μέχρι το κλειστό κύκλωμα εξαρτάται από τον καθένα. Ένα κατά προσέγγιση χρονοδιάγραμμα για το πλήρες κύκλωμα με το **AAPS** υπάρχει [παρακάτω](#preparing-how-long-will-it-take).
 
 
-How you save the keystore depends on your build method:
+#### Keystore και αρχείο εξαγωγής ρυθμίσεων διαμόρφωσης
 
-- **Android Studio (computer) build**: the keystore is created during the build — see [Generate signed APK](#Building-APK-generate-signed-apk) for instructions on where to save it.
-- **AAPS Builder**: keep the backup file `aaps-keystore.jks` the setup page offered when you created your key, with its password and alias. If you uploaded your own keystore, keep that file.
-- **Browser build with a fork**: use the dedicated [Export keystore](#ci-keystore-export) workflow to download a copy to your Google Drive.
+Το «keystore» (αρχείο .jks) είναι ένα αρχείο κρυπτογραφημένο με κωδικό, μοναδικό για το δικό σας αντίγραφο του **AAPS**. Το τηλέφωνό σας Android το χρησιμοποιεί για να βεβαιωθεί ότι κανείς άλλος δεν μπορεί να ενημερώσει το δικό σας αντίγραφο χωρίς το keystore. Με λίγα λόγια, κατά τη δημιουργία του **AAPS** πρέπει:
 
-This will ensure that you can use that exact same keystore file each time an updated version of **AAPS** is created. On average, there will be 2 **AAPS** updates required each year.
+1.  Να αποθηκεύσετε το αρχείο keystore (αρχείο .jks που υπογράφει την εφαρμογή σας) σε ασφαλές μέρος·
 
-In addition, **AAPS** provides the ability to [export all your configuration settings](../Maintenance/ExportImportSettings.md). This ensures that you can safely recover your system while changing phones, upgrading/reinstalling the application with minimum disruption. 
+2.  Να σημειώσετε τον κωδικό του αρχείου keystore.
 
-#### Troubleshooting
+Ο τρόπος που αποθηκεύετε το keystore εξαρτάται από τη μέθοδο δημιουργίας:
 
-Please feel free to reach out to the AAPS community if there is anything you feel unsure about - there is no such thing as a silly question! All users with various levels of experience are encouraged to ask questions. Response times to questions are usually quick due to the number of **AAPS** users.
+- **Δημιουργία με Android Studio (υπολογιστής)**: το keystore δημιουργείται κατά τη δημιουργία της εφαρμογής — δείτε [Δημιουργία υπογεγραμμένου APK](#Building-APK-generate-signed-apk) για οδηγίες για το πού να το αποθηκεύσετε.
+- **AAPS Builder**: κρατήστε το αρχείο αντιγράφου ασφαλείας `aaps-keystore.jks` που σας πρόσφερε η σελίδα ρύθμισης όταν δημιουργήσατε το κλειδί σας, μαζί με τον κωδικό και το alias του. Αν ανεβάσατε το δικό σας keystore, κρατήστε εκείνο το αρχείο.
+- **Δημιουργία μέσω browser με fork**: χρησιμοποιήστε το ειδικό workflow [Export keystore](#ci-keystore-export) για να κατεβάσετε ένα αντίγραφο στο Google Drive σας.
 
-##### [ask on the AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/)
+Έτσι θα μπορείτε να χρησιμοποιείτε ακριβώς το ίδιο αρχείο keystore κάθε φορά που δημιουργείται μια νέα έκδοση του **AAPS**. Κατά μέσο όρο χρειάζονται 2 ενημερώσεις του **AAPS** κάθε χρόνο.
 
-##### [ask on the AAPS Discord channel](https://discord.gg/4fQUWHZ4Mw)
+Επιπλέον, το **AAPS** σας δίνει τη δυνατότητα να [εξάγετε όλες τις ρυθμίσεις διαμόρφωσης](../Maintenance/ExportImportSettings.md). Έτσι μπορείτε να επαναφέρετε με ασφάλεια το σύστημά σας όταν αλλάζετε τηλέφωνο ή όταν ενημερώνετε/επανεγκαθιστάτε την εφαρμογή, με τη μικρότερη δυνατή αναστάτωση. 
+
+#### Αντιμετώπιση προβλημάτων
+
+Μη διστάσετε να απευθυνθείτε στην κοινότητα του AAPS αν δεν είστε σίγουροι για κάτι - δεν υπάρχει ανόητη ερώτηση! Ενθαρρύνουμε όλους τους χρήστες, με κάθε επίπεδο εμπειρίας, να κάνουν ερωτήσεις. Οι απαντήσεις έρχονται συνήθως γρήγορα, χάρη στον μεγάλο αριθμό χρηστών του **AAPS**.
+
+##### [ρωτήστε στην ομάδα του AAPS στο Facebook](https://www.facebook.com/groups/AndroidAPSUsers/)
+
+##### [ρωτήστε στο κανάλι του AAPS στο Discord](https://discord.gg/4fQUWHZ4Mw)
 
 
 
 
 
-#### [Where to go for help](../UsefulLinks/BackgroundReading.md)?
+#### [Πού να βρείτε βοήθεια](../GettingHelp/WhereCanIGetHelp.md);
 
-This section is aimed to provide new users with links on resources in order to get help including accessing community support made up of both new and experienced users who can clarify questions, and resolve the usual pitfalls that come with AAPS.
+Αυτή η ενότητα δίνει στους νέους χρήστες συνδέσμους σε πηγές βοήθειας, μαζί με την υποστήριξη της κοινότητας. Η κοινότητα αποτελείται από νέους και έμπειρους χρήστες, που μπορούν να απαντήσουν σε ερωτήσεις και να λύσουν τα συνηθισμένα προβλήματα που έρχονται με το AAPS.
 
-#### [Section For Clinicians](../UsefulLinks/ClinicianGuideToAaps.md)
+#### [Ενότητα για γιατρούς](../UsefulLinks/ClinicianGuideToAaps.md)
 
-This is a [section specifically for clinicians](../UsefulLinks/ClinicianGuideToAaps.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
+Αυτή είναι μια [ενότητα ειδικά για γιατρούς](../UsefulLinks/ClinicianGuideToAaps.md) που θέλουν να μάθουν περισσότερα για το AAPS και την τεχνολογία τεχνητού παγκρέατος ανοιχτού κώδικα. Υπάρχουν επίσης οδηγίες για το [πώς να μιλήσετε με την ιατρική σας ομάδα](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) στην Εισαγωγή.
 
-## What are we going to build and install?
+## Τι θα δημιουργήσουμε και θα εγκαταστήσουμε;
 
-This diagram provides an overview of the key components (both hardware and software) of the **AAPS** system:
+Αυτό το διάγραμμα δίνει μια επισκόπηση των βασικών μερών (υλικό και λογισμικό) του συστήματος **AAPS**:
 
 ![preparing_overview](../images/preparing_images/AAPS_preparing_overview_01.png)
 
 
-In addition to the three basic hardware components (phone, pump, glucose sensor), we also need: 1) The **AAPS** app 2) A reporting server and 3) A continuous glucose monitor (CGM) app
+Εκτός από τα τρία βασικά μέρη υλικού (τηλέφωνο, αντλία, αισθητήρας γλυκόζης), χρειαζόμαστε επίσης: 1) Την εφαρμογή **AAPS** 2) Έναν διακομιστή αναφορών και 3) Μια εφαρμογή για τον συνεχή μετρητή γλυκόζης (CGM)
 
-### 1) An Android Phone Application: **AAPS**
+### 1) Μια εφαρμογή για τηλέφωνο Android: **AAPS**
 
-**AAPS** is an app that runs on android smartphones & devices. You are going to build the **AAPS** app (an apk file) yourself, using a step-by-step guide, by downloading the **AAPS** source code from GitHub, installing the necessary programs (Android Studio, GitHub desktop) on your computer and building your own copy of **AAPS** app. You will then transfer the **AAPS** app across to your smartphone (by email, USB cable _etc._) and install it.
+Το **AAPS** είναι μια εφαρμογή που τρέχει σε smartphone και συσκευές Android. Θα δημιουργήσετε μόνοι σας την εφαρμογή **AAPS** (ένα αρχείο apk) με έναν οδηγό βήμα προς βήμα: θα κατεβάσετε τον πηγαίο κώδικα του **AAPS** από το GitHub, θα εγκαταστήσετε τα απαραίτητα προγράμματα (Android Studio, GitHub desktop) στον υπολογιστή σας και θα δημιουργήσετε το δικό σας αντίγραφο της εφαρμογής **AAPS**. Μετά θα μεταφέρετε την εφαρμογή **AAPS** στο smartphone σας (με email, καλώδιο USB _κ.λπ._) και θα την εγκαταστήσετε.
 
-### 2) A reporting server: NightScout (Tidepool*)
+### 2) Ένας διακομιστής αναφορών: Nightscout (Tidepool*)
 
-In order to fully take advantage of **AAPS**, you need to setup a Nightscout server. You can [do this yourself](https://nightscout.github.io/nightscout/new_user/#free-diy) or alternatively, pay a small fee for a [managed Nightscout service](https://nightscout.github.io/#nightscout-as-a-service) to be set up for you. Nightscout is used to collect data from **AAPS** over time and can generate detailed reports correlating CGM and insulin patterns. It is also possible for caregivers to use Nightscout to remotely communicate with the **AAPS** application, to oversee their child’s diabetic management. Such remote communication features include real-time monitoring of glucose and insulin levels, remote bolusing of insulin (by texting) and meal announcements. Attempting to analyse your diabetes performance by looking at CGM data separately from the pump data is like driving a car where the driver is blind and the passenger describes the scene.  Tidepool is also available as an alternative to Nightscout, for AAPS versions 3.2 and later.
+Για να εκμεταλλευτείτε πλήρως το **AAPS**, πρέπει να ρυθμίσετε έναν διακομιστή Nightscout. Μπορείτε να [το κάνετε μόνοι σας](https://nightscout.github.io/nightscout/new_user/#free-diy) ή να πληρώσετε ένα μικρό ποσό για μια [διαχειριζόμενη υπηρεσία Nightscout](https://nightscout.github.io/#nightscout-as-a-service) που θα το ρυθμίσει για εσάς. Το Nightscout συλλέγει δεδομένα από το **AAPS** με την πάροδο του χρόνου και μπορεί να δημιουργεί αναλυτικές αναφορές που συσχετίζουν τα μοτίβα του CGM και της ινσουλίνης. Οι φροντιστές μπορούν επίσης να χρησιμοποιούν το Nightscout για να επικοινωνούν από απόσταση με την εφαρμογή **AAPS** και να παρακολουθούν τη διαχείριση του διαβήτη του παιδιού τους. Αυτές οι λειτουργίες απομακρυσμένης επικοινωνίας περιλαμβάνουν παρακολούθηση της γλυκόζης και της ινσουλίνης σε πραγματικό χρόνο, απομακρυσμένο bolus ινσουλίνης (με μήνυμα SMS) και ανακοινώσεις γευμάτων. Αν προσπαθείτε να αναλύσετε τη διαχείριση του διαβήτη σας κοιτάζοντας τα δεδομένα του CGM χωριστά από τα δεδομένα της αντλίας, είναι σαν να οδηγείτε ένα αυτοκίνητο όπου ο οδηγός είναι τυφλός και ο συνοδηγός περιγράφει τον δρόμο. Το Tidepool είναι επίσης διαθέσιμο ως εναλλακτική λύση στο Nightscout.
 
-### 3) CGM sensor app
+### 3) Εφαρμογή για τον αισθητήρα CGM
 
-Depending on your glucose sensor/CGM, you will need a compatible app for receiving glucose readings and sending them to **AAPS**. The different options are shown below and more information is given in the [compatible CGMs section](../Getting-Started/CompatiblesCgms.md):
+Ανάλογα με τον αισθητήρα γλυκόζης/CGM σας, θα χρειαστείτε μια συμβατή εφαρμογή που λαμβάνει τις μετρήσεις γλυκόζης και τις στέλνει στο **AAPS**. Οι διάφορες επιλογές φαίνονται παρακάτω, και περισσότερες πληροφορίες θα βρείτε στην [ενότητα συμβατών CGM](../Getting-Started/CompatiblesCgms.md):
 
 ![dexcom_options](../images/preparing_images/AAPS_connectivity_Dex_02.png) ![libre_options](../images/preparing_images/AAPSconnectivity_libre.png) ![eversense_options](../images/preparing_images/AAPS_connectivity_eversense.png)
 
-### Maintenance of the **AAPS** system
+### Συντήρηση του συστήματος **AAPS**
 
-Both **Nightscout** and **AAPS** must be updated approximately once a year, as improved versions are released. In some cases, the update can be delayed, in others it is strongly recommended or considered essential for safety. Notification of these updates will be given on the Facebook groups and Discord servers. The release notes will make it clear what the scenario is. There are likely to be many people asking similar questions to you at update time, and you will have support for performing the updates.
+Και το **Nightscout** και το **AAPS** πρέπει να ενημερώνονται περίπου μία φορά τον χρόνο, όταν βγαίνουν βελτιωμένες εκδόσεις. Σε κάποιες περιπτώσεις η ενημέρωση μπορεί να περιμένει, σε άλλες συνιστάται έντονα ή θεωρείται απαραίτητη για την ασφάλεια. Οι ενημερώσεις ανακοινώνονται στις ομάδες του Facebook και στους διακομιστές Discord. Οι σημειώσεις έκδοσης θα εξηγούν καθαρά ποια είναι η περίπτωση. Την περίοδο των ενημερώσεων πολλοί άνθρωποι θα κάνουν ερωτήσεις παρόμοιες με τις δικές σας, και θα έχετε υποστήριξη για να κάνετε τις ενημερώσεις.
 
 (preparing-how-long-will-it-take)=
-## How long will it take to set everything up?
+## Πόσο χρόνο θα πάρει να ρυθμιστούν όλα;
 
-As mentioned earlier, using **AAPS** is more of a “journey” that requires investment of your personal time. It is not a one-time setup. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 4 to 6 months overall. It is therefore suggested that you prioritize building the **AAPS** app and working through the early objectives as soon as possible, even if you are still using a different insulin delivery system (you can use a virtual pump up to objective 5).
+Όπως είπαμε πριν, η χρήση του **AAPS** είναι περισσότερο ένα «ταξίδι» που χρειάζεται προσωπικό χρόνο. Δεν είναι μια ρύθμιση που γίνεται μία φορά. Σύμφωνα με τις τρέχουσες εκτιμήσεις, η δημιουργία του **AAPS**, η εγκατάσταση και η ρύθμιση του λογισμικού του **AAPS** και του **CGM**, και η μετάβαση από το ανοιχτό κύκλωμα στο υβριδικό κλειστό κύκλωμα με το **AAPS** παίρνουν συνολικά περίπου 4 έως 6 μήνες. Γι' αυτό προτείνουμε να δώσετε προτεραιότητα στη δημιουργία της εφαρμογής **AAPS** και στα πρώτα Βήματα όσο πιο νωρίς γίνεται, ακόμα κι αν χρησιμοποιείτε ακόμη άλλο σύστημα χορήγησης ινσουλίνης (μπορείτε να χρησιμοποιείτε εικονική αντλία μέχρι το Βήμα 5).
 
-Some of the objectives require a given amount of days to pass to make sure you understand the new functionality. It is not possible to bypass this waiting time, these minimal timings have been set-up for your own safety.
+Κάποια Βήματα χρειάζονται να περάσει ένας ορισμένος αριθμός ημερών, για να βεβαιωθείτε ότι κατανοείτε τις νέες λειτουργίες. Δεν μπορείτε να παρακάμψετε αυτόν τον χρόνο αναμονής· αυτοί οι ελάχιστοι χρόνοι αναμονής υπάρχουν για τη δική σας ασφάλεια.
 
-Here is an approximate timeframe:
+Ένα κατά προσέγγιση χρονοδιάγραμμα:
 
-| Tasks                                                         |           Approx time            |
-| ------------------------------------------------------------- |:--------------------------------:|
-| Initial reading of the documentation                          |             1-2 days             |
-| Installing/configuring PC to allow the build                  |            2-8 hours             |
-| Setting up a reporting server                                 |              1 hour              |
-| Installing a CGM app (xDrip+, BYODA, …)                       |              1 hour              |
-| Configuring CGM → xDrip+ → APPS initially                     |              1 hour              |
-| Configuring AAPS → pump initially                             |              1 hour              |
-| Configuring AAPS → Nightscout/Tidepool (reporting only)       |              1 hour              |
-| Optional : Configuring NightScout ↔ **AAPS** & NSFollowers    |              1 hour              |
-| Objective 1: Setting up visualization and monitoring          |              1 hour              |
-| Objective 2: Learn how to control AAPS                        |              2 hour              |
-| Objective 3: Prove your knowledge                             |          Up to 14 days           |
-| Objective 4: Starting on an open loop                         |        Minimum of 7 days         |
-| Objective 5: Understanding your open loop                     |              7 days              |
-| Objective 6: Starting to close the loop (Low Glucose Suspend) |   Minimum of 5, up to 14 days    |
-| Objective 7: Tuning the closed loop                           |  Minimum of 1 day, up to 7 days  |
-| Objective 8: Adjust basals and ratios, enable Autosens        | Minimum of 7 days, up to 14 days |
-| Objective 9: Enabling Super Micro Bolus (SMB)                 |        Minimum of 28 days        |
-| Objective 10: Automation                                      |        Minimum of 28 days        |
-| Objective 11: Dynamic ISF                                     |        Minimum of 28 days        |
+| Εργασίες                                                                       |       Κατά προσέγγιση χρόνος        |
+| ------------------------------------------------------------------------------ |:-----------------------------------:|
+| Πρώτη ανάγνωση της τεκμηρίωσης                                                 |             1–2 ημέρες              |
+| Ρύθμιση του GitHub για τη δημιουργία μέσω browser                              |              1–4 ώρες               |
+| Ρύθμιση ενός διακομιστή αναφορών                                               |                1 ώρα                |
+| Εγκατάσταση εφαρμογής CGM (xDrip, BYODA, …)                                    |                1 ώρα                |
+| Αρχική ρύθμιση CGM → xDrip → AAPS                                              |                1 ώρα                |
+| Αρχική ρύθμιση AAPS → αντλία                                                   |                1 ώρα                |
+| Ρύθμιση AAPS → Nightscout/Tidepool (μόνο για αναφορές)                         |                1 ώρα                |
+| Προαιρετικά: Ρύθμιση Nightscout ↔ **AAPS** και NSFollowers                     |                1 ώρα                |
+| Βήμα 1: Ρύθμιση απεικόνισης και παρακολούθησης                                 |                1 ώρα                |
+| Βήμα 2: Μάθετε πώς να χειρίζεστε το AAPS                                       |               2 ώρες                |
+| Βήμα 3: Αποδείξτε τις γνώσεις σας                                              |            Έως 14 ημέρες            |
+| Βήμα 4: Ξεκινήστε σε ανοιχτό κύκλωμα                                           |        Τουλάχιστον 7 ημέρες         |
+| Βήμα 5: Κατανοήστε το ανοιχτό κύκλωμα                                          |              7 ημέρες               |
+| Βήμα 6: Ξεκινήστε να κλείσετε το κύκλωμα (Αναστολή Χαμηλής Γλυκόζης)           |    Τουλάχιστον 5, έως 14 ημέρες     |
+| Βήμα 7: Ρύθμιση του κλειστού κυκλώματος                                        |  Τουλάχιστον 1 ημέρα, έως 7 ημέρες  |
+| Βήμα 8: Ρυθμίστε τον βασικό ρυθμό και τις αναλογίες, ενεργοποιήστε το Autosens | Τουλάχιστον 7 ημέρες, έως 14 ημέρες |
+| Βήμα 9: Ενεργοποίηση του Super Micro Bolus (SMB)                               |        Τουλάχιστον 28 ημέρες        |
+| Βήμα 10: Αυτοματισμός                                                          |        Τουλάχιστον 28 ημέρες        |
 
-Once you are fully operational on **AAPS**, you will still need to regularly fine tune your settings in order to improve your overall diabetic management.
+Ακόμα και όταν το **AAPS** λειτουργεί πλήρως, θα χρειάζεται να βελτιώνετε τακτικά τις ρυθμίσεις σας, για να βελτιώσετε συνολικά τη διαχείριση του διαβήτη σας.
 
-## Requirements
+## Απαιτήσεις
 
-### Medical considerations
+### Ιατρικά θέματα
 
-In addition to the medical warnings in the [safety section](#preparing-safety-first) there are also different parameters, depending on which insulin you are using in the pump.
+Εκτός από τις ιατρικές προειδοποιήσεις στην [ενότητα ασφάλειας](#preparing-safety-first), υπάρχουν και διαφορετικές παράμετροι, ανάλογα με την ινσουλίνη που χρησιμοποιείτε στην αντλία.
 
-#### Insulin choice
+#### Επιλογή ινσουλίνης
 
-**AAPS** calculations are based on insulin concentrations of 100U/ml (same as pump’s standard). The following types of insulin profile presets are supported:
+Οι υπολογισμοί του **AAPS** βασίζονται σε συγκέντρωση ινσουλίνης 100U/ml (το ίδιο με το πρότυπο των αντλιών). Ρυθμίζετε την ινσουλίνη σας στο **Διαχείριση → Ρυθμίσεις ινσουλίνης**: ορίστε την **Κορυφή** και τη **DIA**, ή χρησιμοποιήστε το **Φόρτωση κορυφής από** για να συμπληρώσετε τον τυπικό χρόνο κορυφής μιας από τις προεπιλογές:
 
-- Rapid-Acting Oref: Humalog/NovoRapid/NovoLog
-- Ultra-Rapid ORef:  Fiasp
-- Lyumjev:
+- **Novorapid** (και για Humalog και NovoLog)
+- **Fiasp**
+- **Lyumjev**
 
-For Experimental/Advanced users only:
-- Free-Peak Oref: Allows you to define peak of the insulin activity
+Οι προχωρημένοι χρήστες μπορούν να εισάγουν απευθείας οποιονδήποτε χρόνο κορυφής (35 έως 120 λεπτά), για παράδειγμα για μείγμα ινσουλινών. Δείτε [Ρυθμίσεις ινσουλίνης](#Config-Builder-insulin).
 
 
-### Technical
+### Τεχνικά
 
-This documentation aims to reduce the technical expertise required to an absolute minimum. You will need to use your computer to build the **AAPS** application in Android Studio (step-by-step instructions). You also need to set up a server over the internet in a public cloud, configure several android phone apps and develop expertise in diabetes management. This can be  achieved by moving step-by-step, being patient, and help from the **AAPS** community. If you are already able to navigate the internet, manage your own Gmail emails, and keep your computer up-to-date, then it is a feasible task to build the **AAPS**. Just take your time.
+Αυτή η τεκμηρίωση έχει στόχο να μειώσει στο απόλυτο ελάχιστο τις τεχνικές γνώσεις που χρειάζονται. Για να δημιουργήσετε την εφαρμογή **AAPS**, έχετε διάφορες επιλογές — δείτε τη [Δημιουργία του AAPS](../SettingUpAaps/BuildingAaps.md) για μια επισκόπηση:
 
-### Smartphones
+- **Δημιουργία μέσω browser** (προτείνεται): δημιουργήστε την εφαρμογή απευθείας από το smartphone σας με το GitHub Actions, χωρίς υπολογιστή ή Android Studio. Με το [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) χρειάζεστε μόνο λογαριασμό GitHub: κατεβάζετε την εφαρμογή απευθείας από το GitHub. Η μέθοδος με fork χρειάζεται επίσης λογαριασμό Google, για να αποθηκεύει την εφαρμογή στο Google Drive σας.
+- **Δημιουργία με Android Studio**: δημιουργήστε την εφαρμογή στον υπολογιστή σας με το Android Studio. Αυτή τη μέθοδο τη χρησιμοποιούν κυρίως προγραμματιστές που θέλουν να κάνουν αλλαγές στον κώδικα.
+- **Δημιουργία από τη γραμμή εντολών**: για χρήστες που προτιμούν να δημιουργούν την εφαρμογή τοπικά χωρίς να εγκαταστήσουν το Android Studio.
 
-#### AAPS and Android Versions
+Εκτός από τη δημιουργία της εφαρμογής, πρέπει επίσης να ρυθμίσετε έναν διακομιστή αναφορών, να ρυθμίσετε αρκετές εφαρμογές στο τηλέφωνο Android και να αποκτήσετε γνώσεις στη διαχείριση του διαβήτη. Αυτό μπορείτε να το πετύχετε αν προχωράτε βήμα προς βήμα, με υπομονή και με βοήθεια από την κοινότητα του **AAPS**. Αν ήδη μπορείτε να χρησιμοποιείτε το internet και να διαχειρίζεστε τα email σας στο Gmail, η δημιουργία του **AAPS** είναι κάτι που μπορείτε να κάνετε. Απλώς πάρτε τον χρόνο σας.
 
-The current version of **AAPS** (3.4) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), Android 16 is preferred.<br/> Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+### Smartphone
 
-#### Smartphone model choice
-The exact model you buy depends on the desired function(s). You can find on the [Phones page](../Getting-Started/Phones.md) recommendations and user feedback about working setups.
+#### AAPS και εκδόσεις Android
 
-Users are encouraged to keep their phone Android version up-to-date, including with security parameters. However, if you are new with **AAPS** or are not a technical expert you might want to delay updating your phone until others have done so and confirmed it is safe to do so, on our various forums.
+Η τρέχουσα έκδοση του **AAPS** (4.0) απαιτεί smartphone Android με Google **Android 12.0 ή νεότερο**. Αν σκέφτεστε να αγοράσετε νέο τηλέφωνο (στοιχεία Ιανουαρίου 2026), προτιμάται το Android 16.<br/> Για λόγους ασφάλειας, συνιστούμε έντονα στους χρήστες να έχουν πάντα ενημερωμένη την έκδοση του **AAPS** που χρησιμοποιούν. Ωστόσο, για χρήστες που δεν μπορούν να χρησιμοποιήσουν συσκευή με Android 12.0 ή νεότερο, παραμένουν διαθέσιμες παλαιότερες εκδόσεις του **AAPS** που είναι συμβατές με παλαιότερες εκδόσεις Android. Δείτε: [Σημειώσεις έκδοσης](#maintenance-android-version-aaps-version).
 
-```{admonition} delaying Samsung phones updates
+#### Επιλογή μοντέλου smartphone
+Το ακριβές μοντέλο που θα αγοράσετε εξαρτάται από τις λειτουργίες που θέλετε. Στη [σελίδα Τηλέφωνα](../Getting-Started/Phones.md) θα βρείτε προτάσεις και εμπειρίες χρηστών για συνδυασμούς που λειτουργούν.
+
+Ενθαρρύνουμε τους χρήστες να έχουν ενημερωμένη την έκδοση Android του τηλεφώνου τους, μαζί με τις ενημερώσεις ασφαλείας. Ωστόσο, αν είστε νέοι στο **AAPS** ή δεν είστε τεχνικά έμπειροι, ίσως θέλετε να περιμένετε με την ενημέρωση του τηλεφώνου σας μέχρι να την κάνουν άλλοι και να επιβεβαιώσουν στα διάφορα φόρουμ μας ότι είναι ασφαλής.
+
+```{admonition} Delaying Samsung phone updates
 :class: warning
-Samsung has an unfortunate track record of forcing updates of their phones which cause bluetooth connectivity issues. To disable these forced updates you need to switch the phone to "developer mode" by:
- go to settings and about then software information, then tap build number until it confirms you have unlocked developer mode. Got back to main settings menu and you should see a new developer options menu item. Open developer options and scroll to find auto system update and turn it off
+Η Samsung έχει δυστυχώς ιστορικό με αναγκαστικές ενημερώσεις στα τηλέφωνά της, που μπορεί να προκαλέσουν προβλήματα στη σύνδεση Bluetooth. Για να απενεργοποιήσετε αυτές τις αναγκαστικές ενημερώσεις, πρέπει να βάλετε το τηλέφωνο σε «λειτουργία προγραμματιστή»:
+
+1. Πηγαίνετε στο **Ρυθμίσεις** (Settings) > **Πληροφορίες τηλεφώνου** (About phone) > **Πληροφορίες λογισμικού** (Software information) και πατήστε επανειλημμένα το **Αριθμός έκδοσης** (Build number) μέχρι να επιβεβαιωθεί ότι ξεκλειδώσατε τη λειτουργία προγραμματιστή.
+2. Επιστρέψτε στο κύριο μενού **Ρυθμίσεις**, όπου θα δείτε ένα νέο στοιχείο μενού **Επιλογές προγραμματιστή** (Developer options).
+3. Ανοίξτε τις **Επιλογές προγραμματιστή**, βρείτε το **Αυτόματη ενημέρωση συστήματος** (Auto system update) και απενεργοποιήστε το.
 ```
 
-```{admonition} Google Play Protect potential Issue
+```{admonition} Google Play Protect potential issue
 :class: warning
-There have been several reports of **AAPS** being shut down arbitrarily by Google Play Protect every morning. If this happens you will have to go to the google play options and disable “Google Play Protect”. Not all  phone models or all Android versions are affected..
+Υπάρχουν αρκετές αναφορές ότι το Google Play Protect κλείνει χωρίς λόγο το **AAPS** κάθε πρωί. Αν συμβεί αυτό, πρέπει να πάτε στις επιλογές του Google Play και να απενεργοποιήσετε το **Google Play Protect**. Δεν επηρεάζονται όλα τα μοντέλα τηλεφώνων ούτε όλες οι εκδόσεις Android.
+```
+
+```{admonition} Android developer verification
+:class: note
+Από τον Σεπτέμβριο του 2026, η Google εισάγει σταδιακά την [επαλήθευση προγραμματιστών Android](#android-developer-verification), που αλλάζει τον τρόπο που εγκαθίσταται στο τηλέφωνο μια εφαρμογή που δημιουργήσατε μόνοι σας. Η δημιουργία του **AAPS** δεν επηρεάζεται, και παραμένουν διαθέσιμοι δωρεάν τρόποι εγκατάστασης — δείτε τη συνδεδεμένη σελίδα για λεπτομέρειες.
 ```
 

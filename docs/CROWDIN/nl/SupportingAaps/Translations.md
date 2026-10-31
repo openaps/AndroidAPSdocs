@@ -1,104 +1,104 @@
-# How to translate strings for the AAPS app or the documentation
+# Strings vertalen voor de AAPS-app of de documentatie
 
-* For the the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
-* For the documentation please visit <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
+* Voor de strings van de app ga je naar <https://crowdin.com/project/androidaps> en log je in met je GitHub-account
+* Voor de documentatie ga je naar <https://crowdin.com/project/androidapsdocs> en log je in met je GitHub-account
 
-* Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
+* Stuur een verzoek om lid te worden naar het docs-team. Klik daarvoor op de vlag van de gewenste taal en daarna op de knop "Join" rechtsboven op de volgende pagina. Geef de taal op, vertel iets over jezelf en je ervaring met AAPS, en of je vertaler of proeflezer wilt worden (alleen voor mensen die goed kunnen vertalen + gevorderde AAPS-gebruikers).
 
-```{admonition} Time for Approval :class: note
+```{admonition} Tijd voor goedkeuring :class: note
 
-The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord.
+De goedkeuring gebeurt met de hand. Als non-profitorganisatie geven we geen SLA's, maar meestal gebeurt de goedkeuring binnen 1 dag (< 1 dag). Lukt dat niet, neem dan contact op met het docs-team via Facebook of Discord.
 
-    <br />* When we approve you, click the flag
-       ![When we approve you, click the flag](../images/translation_flags.png)
+    <br />* Als we je goedkeuren, klik je op de vlag
+       ![Als we je goedkeuren, klik je op de vlag](../images/translation_flags.png)
     
-    ## Translation of the app
+    ## Vertaling van de app
     
     (translations-translate-strings-for-AAPS-app)=
-    ### Translate strings for AAPS app
+    ### Strings vertalen voor de AAPS-app
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
+    * Heb je geen voorkeur voor welke strings je vertaalt, klik dan op de knop "Translate All" om te beginnen. Je ziet dan de strings die vertaald moeten worden.
     
-       ![Click translate all](../images/translations-click-translate-all.png)
+       ![Klik op Translate All](../images/translations-click-translate-all.png)
     
-    * If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
+    * Wil je één bestand vertalen, zoek het bestand dan via het zoekvenster of de mappenstructuur en klik op de bestandsnaam. Dan begin je met de strings in dat bestand.
     
-       ![Click strings.xml](../images/translations-click-strings.png)
+       ![Klik op strings.xml](../images/translations-click-strings.png)
     
-    * Translate sentences on left side by adding new translated text or use & edit suggestion 
+    * Vertaal zinnen aan de linkerkant door nieuwe vertaalde tekst toe te voegen, of gebruik & bewerk een suggestie
     
-       ![Translation app](../images/translations-translate.png)
-    
-    
-    ### Proofread strings for AAPS app
-    
-    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
-    
-       ![Proofreading mode app](../images/translations-proofreading-mode.png) 
+       ![App vertalen](../images/translations-translate.png)
     
     
-      and approve translated texts 
+    ### Strings van de AAPS-app proeflezen
     
-       ![approve text](../images/translations-proofreading.png)
+    * Proeflezers beginnen met "Proofread" te kiezen op het startscherm van de taal.
     
-    When a proofreader approves a translation it will be added to the next version of AAPS.
+       ![Proeflees-modus app](../images/translations-proofreading-mode.png)
+    
+    
+      en vertaalde teksten goedkeuren
+    
+       ![tekst goedkeuren](../images/translations-proofreading.png)
+    
+    Als een proeflezer een vertaling goedkeurt, komt die in de volgende versie van AAPS.
     
     (translations-translation-of-the-documentation)=
-    ## Translation of the documentation
+    ## Vertaling van de documentatie
     
-    * Click the name of the docs page you want to translate
+    * Klik op de naam van de docs-pagina die je wilt vertalen
     
-    ![Click docs page](../images/translation_WikiPage.png)
+    ![Klik op docs-pagina](../images/translation_WikiPage.png)
     
     
-    * Translate sentences by sentence
+    * Vertaal zin voor zin
     
-        1. The yellow text is the text you are working at the moment.
+        1. De gele tekst is de tekst waar je nu aan werkt.
     
-        1. The green text is already translated. You don't need to do this again.
+        1. De groene tekst is al vertaald. Die hoef je niet opnieuw te doen.
     
-        1. The red text is the remaining text which have to be translated.
+        1. De rode tekst is de tekst die nog vertaald moet worden.
     
-        1. This is the source text you are working on at the moment
+        1. Dit is de brontekst waar je nu aan werkt
     
-        1. This is the translation you are preparing. You can copy the text from above or select one of the suggestions below.
+        1. Dit is de vertaling die je maakt. Je kunt de tekst hierboven kopiëren of een van de suggesties hieronder kiezen.
     
-        1. These are the suggestion for a translation. Especially you can see how much Crowdin rates this as a fit or if it was already just in the past and come up through text rearrangements but not content change.
-        1. Press the "save" button to save a proposal for the translation. It will then promoted to a proofreader for final check.
+        1. Dit zijn de suggesties voor een vertaling. Je ziet vooral hoe goed Crowdin de suggestie vindt passen, of dat de tekst al eerder vertaald was en alleen terugkwam omdat de tekst verplaatst is, niet veranderd.
+        1. Klik op de knop "Save" om een voorstel voor de vertaling op te slaan. Daarna gaat die naar een proeflezer voor de laatste controle.
     
-    ![Translation docs](../images/translation_WikiTranslate.png)
+    ![Docs vertalen](../images/translation_WikiTranslate.png)
     
-    * A translated page will not be published in docs before 
+    * Een vertaalde pagina wordt pas in de docs gepubliceerd als
     
-        1. the translation is proofread
+        1. de vertaling proefgelezen is
     
-        1. the sync run between Crowdin and Github finished (once an hour) which creates an PR for Github.
+        1. de synchronisatie tussen Crowdin en GitHub klaar is (eens per uur). Die maakt een PR voor GitHub.
     
-        1. the PR in Github was approved.
+        1. de PR op GitHub goedgekeurd is.
     
-    In general this needs 1 - 3 days but might during holiday take a little bit longer.
+    Meestal duurt dit 1–3 dagen, maar in vakanties kan het wat langer duren.
     
-    ### Translating links
+    ### Links vertalen
     
-    ```{admonition} Links are not translated anymore
+    ```{admonition} Links worden niet meer vertaald
     :class: note
     
-    Links are not translated anymore. In the past we had a topic here but this is gone as through migraton to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    Links worden niet meer vertaald. Vroeger stond hier een onderwerp over, maar dat is weg. Door de overstap naar Markdown en de myst_parser maken we labels in de Engelse tekst, en die labels worden op de achtergrond doorgegeven aan de andere talen.
     
     
 
-You are translating the text which represents the link. Please you have to be careful **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
+Je vertaalt de tekst die de link weergeeft. Let goed op dat je de link **niet** verwijdert. Die wordt weergegeven door een paar `<0></0>`-tags, of door andere nummers als er meer links in één alinea staan.
 
-It's the proofreaders job to have a special look on this!
+De proeflezer moet hier extra goed op letten!
 
-### Proofreading
+### Proeflezen
 
-* Proofreaders have to switch to Proofreading mode
+* Proeflezers moeten overschakelen naar de modus "Proofread"
     
-    ![Proofreading mode docs](../images/translation_WikiProofreadingmode.png)
+    ![Proeflees-modus docs](../images/translation_WikiProofreadingmode.png)
     
-    and approve translated texts
+    en vertaalde teksten goedkeuren
     
-    ![approve text](../images/translations-proofreading.png)
+    ![tekst goedkeuren](../images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during hollidays. To speed up the process you can inform docs team about new translations.
+* Als een proeflezer een vertaling goedkeurt, komt die in de volgende build van de docs. Die gebeurt niet volgens een vast schema maar op aanvraag, ongeveer eens per week, behalve in vakanties. Om het proces te versnellen kun je het docs-team laten weten dat er nieuwe vertalingen zijn.

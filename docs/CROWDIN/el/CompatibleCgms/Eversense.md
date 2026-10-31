@@ -1,66 +1,75 @@
-# Για χρήστες του Eversense
+# Eversense
 
-There are three different methods to access the readings from Eversense:
+Υπάρχουν τέσσερις διαφορετικοί τρόποι για να πάρετε τις μετρήσεις από το Eversense:
 
-- ESEL companion mode
-- ESEL patched mode
-- xDrip+ companion app
+- ESEL σε λειτουργία companion
+- ESEL με τροποποιημένη εφαρμογή
+- xDrip companion app
+- Ανάγνωση ειδοποιήσεων (ενσωματωμένη στο **AAPS**)
 
 ## ESEL
 
-Get and install the [ESEL app](https://github.com/BernhardRo/Esel/tree/master/apk), following these [instructions](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
+Κατεβάστε και εγκαταστήστε την [εφαρμογή ESEL](https://github.com/BernhardRo/Esel/tree/master/apk), ακολουθώντας αυτές τις [οδηγίες](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
 
-- Enable "Send to AAPS and xDrip"
-- **Disable** "Send to Nightscout"
-- As the BG data from Eversense can be noisy, it is recommended to enable "Smooth Data" in ESEL.
+- Στο ESEL, ανοίξτε το μενού με τις τρεις τελείες (⋮) πάνω δεξιά και επιλέξτε **Settings** (διαθέσιμο και από το μενού ☰). Στις ρυθμίσεις:
+  - Ενεργοποιήστε το "Send to AAPS and xDrip"
+  - **Απενεργοποιήστε** το "Send to Nightscout"
+  - Επειδή τα δεδομένα BG από το Eversense μπορεί να έχουν θόρυβο, συνιστάται να ενεργοποιήσετε το "Smooth Data" στο ESEL.
 
 ![ESEL Broadcast](../images/ESEL.png)
 
-### Companion Mode
+### Λειτουργία Companion
 
-Reads the data from the Eversense app notifications (works with the standard Eversense App, available since ESEL version 3.0.1).
+Διαβάζει τα δεδομένα από τις ειδοποιήσεις της εφαρμογής Eversense (λειτουργεί με την κανονική εφαρμογή Eversense, διαθέσιμο από την έκδοση ESEL 3.0.1).
 
-1. Use the official Eversense App from the Google Play Store
-   - Optional, but required for backfilling: Login to your Eversense account
-   - In Sync, enable Auto synchronization
-2. Configuration of ESEL:
-   - Disable the setting "Get data from patched Eversense App"
-   - For backfilling: Enable "Fill missing data from eversensedms.com"
-   - Provide as Email address and password your Eversense login data
-3. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+1. Χρησιμοποιήστε την επίσημη εφαρμογή Eversense από το Google Play Store
+   - Προαιρετικό, αλλά απαραίτητο για τη συμπλήρωση κενών (backfilling): συνδεθείτε στον λογαριασμό σας Eversense
+   - Στο Sync, ενεργοποιήστε το Auto synchronization
+2. Διαμόρφωση του ESEL:
+   - Απενεργοποιήστε τη ρύθμιση "Get data from patched Eversense App"
+   - Για συμπλήρωση κενών (backfilling): ενεργοποιήστε το "Fill missing data from eversensedms.com"
+   - Ως διεύθυνση email και κωδικό, δώστε τα στοιχεία σύνδεσης του Eversense
+3. Ορίστε το "MM640g" ως πηγή BG στη [**Διαμόρφωση → Πηγή BG**](#Config-Builder-bg-source).
 
-### Patched Eversense App
+### Τροποποιημένη εφαρμογή Eversense
 
- Requires a patched version of the Eversense App (works completely offline, including backfilling).
+ Απαιτεί μια τροποποιημένη έκδοση της εφαρμογής Eversense (λειτουργεί εντελώς χωρίς σύνδεση στο internet, μαζί με τη συμπλήρωση κενών).
 
-1. Uninstall the Eversense App (Warning: your local historical data (older than 1 week) will be lost!)
+1. Απεγκαταστήστε την εφαρμογή Eversense (Προειδοποίηση: τα τοπικά ιστορικά δεδομένα σας (παλαιότερα από 1 εβδομάδα) θα χαθούν!)
 
-2. Install the [patched Eversense app](https://cr4ck3d3v3r53n53.club) and use it as described by the vendor
+2. Εγκαταστήστε την [τροποποιημένη εφαρμογή Eversense](https://cr4ck3d3v3r53n53.club) και χρησιμοποιήστε την όπως περιγράφει ο δημιουργός της
 
-   - Start the Eversense App, login, connect to your transmitter and use it just like the normal app.
+   - Ανοίξτε την εφαρμογή Eversense, συνδεθείτε, συνδέστε τον πομπό σας και χρησιμοποιήστε την όπως την κανονική εφαρμογή.
 
-3. Configuration of ESEL:
+3. Διαμόρφωση του ESEL:
 
-   - Enable the setting "Get data from patched Eversense App"
+   - Ενεργοποιήστε τη ρύθμιση "Get data from patched Eversense App"
 
 
 
 ![ESEL Broadcast](../images/ESELpatch.png)
 
-​       If you run ESEL with a fresh installation of Eversense for the first time, it can take up to 15min until your first values appear in xDrip!
+Αν χρησιμοποιείτε το ESEL με νέα εγκατάσταση του Eversense για πρώτη φορά, μπορεί να χρειαστούν έως 15 λεπτά μέχρι να εμφανιστούν οι πρώτες τιμές στο xDrip!
 
-4. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+4. Ορίστε το "MM640g" ως πηγή BG στη [**Διαμόρφωση → Πηγή BG**](#Config-Builder-bg-source).
 
-## xDrip+
+## xDrip
 
-xDrip+ can read notifications from the vendor app, like ESEL does. No backfilling available.
+Το xDrip μπορεί να διαβάζει τις ειδοποιήσεις της εφαρμογής του κατασκευαστή, όπως κάνει το ESEL. Δεν υπάρχει συμπλήρωση κενών (backfilling).
 
-- Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip+ “Companion App” must be selected.
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
-- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page [xDrip+ settings](../CompatibleCgms/xDrip.md).
-- Enable [Exponential Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md) in AAPS.
+- Κατεβάστε και εγκαταστήστε το xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- Ως πηγή δεδομένων στο xDrip πρέπει να επιλέξετε «Companion App».
+- Επιλέξτε xDrip στη [**Διαμόρφωση → Πηγή BG**](#Config-Builder-bg-source).
+- Προσαρμόστε τις ρυθμίσεις του xDrip σύμφωνα με τις εξηγήσεις στη σελίδα ρυθμίσεων του xDrip [Ρυθμίσεις xDrip](../CompatibleCgms/xDrip.md).
+- Ενεργοποιήστε την [Εκθετική εξομάλυνση](../CompatibleCgms/SmoothingBloodGlucoseData.md) στο AAPS.
+
+## Ανάγνωση ειδοποιήσεων
+
+Το **AAPS** μπορεί να διαβάζει τις τιμές γλυκόζης απευθείας από τις ειδοποιήσεις της επίσημης εφαρμογής Eversense, χωρίς άλλη εφαρμογή στη μέση. Δεν υπάρχει συμπλήρωση κενών (backfilling).
+
+- Επιλέξτε **Ανάγνωση ειδοποιήσεων** στη [**Διαμόρφωση → Πηγή BG**](#Config-Builder-bg-source) και δώστε στο **AAPS** πρόσβαση στις ειδοποιήσεις όταν σας ζητηθεί.
+- Βεβαιωθείτε ότι η εφαρμογή Eversense δείχνει την τρέχουσα τιμή γλυκόζης στην ειδοποίησή της.
 
 ```{warning}
-BG values reading frequency is not always 5 minutes and duplicates can occur.
+Οι τιμές BG δεν έρχονται πάντα κάθε 5 λεπτά και μπορεί να εμφανιστούν διπλές τιμές.
 ```

@@ -1,18 +1,20 @@
-# Для пользователей Eversense
+# Eversense
 
-Существует три различных способа получения данных от Eversense:
+There are four different methods to access the readings from Eversense:
 
 - Режим спутника ESEL
 - Режим модифицированного приложения ESEL
-- Приложение спутника xDrip+
+- xDrip companion app
+- Notification Reader (built into **AAPS**)
 
 ## ESEL
 
 Скачайте и установите приложение [ESEL app](https://github.com/BernhardRo/Esel/tree/master/apk), следуя этим [инструкциям](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
 
-- Включите "Транслировать в AAPS и xDrip"
-- **Отключите** "Отправлять в Nightscout"
-- Поскольку данные ГК из Eversense могут быть зашумленными, рекомендуется включить "Сглаживать данные" в ESEL.
+- In ESEL, open the three dots menu (⋮) at the top right and select **Settings** (also available from the ☰ menu). In the settings:
+  - Включите "Транслировать в AAPS и xDrip"
+  - **Отключите** "Отправлять в Nightscout"
+  - Поскольку данные ГК из Eversense могут быть зашумленными, рекомендуется включить "Сглаживать данные" в ESEL.
 
 ![трансляция ESEL](../images/ESEL.png)
 
@@ -27,7 +29,7 @@
    - Отключить настройку «Получать данные из модифицированного приложения Eversense»
    - Для обратного заполнения: включите «Заполнять недостающие данные из eversensedms.com»
    - В качестве адреса электронной почты и пароля предоставьте ваши данные для входа в систему Eversense
-3. Выберите "MM640g" в качестве источника ГК в [Конфигураторе, Источник ГК](#Config-Builder-bg-source).
+3. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
 ### Модифицированное приложение Eversense
 
@@ -47,19 +49,26 @@
 
 ![трансляция ESEL](../images/ESELpatch.png)
 
-Если вы запускаете ESEL с новой установкой Eversense впервые, то до появления первых данных в xDrip может понадобиться до 15 минут!
+If you run ESEL with a fresh installation of Eversense for the first time, it can take up to 15min until your first values appear in xDrip!
 
-4. Выберите "MM640g" в качестве источника ГК в [Конфигураторе, Источник ГК](#Config-Builder-bg-source).
+4. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
-## xDrip +
+## xDrip
 
-xDrip+ может читать уведомления из оригинального приложения, как и ESEL. При этом обратное заполнение недоступно.
+xDrip can read notifications from the vendor app, like ESEL does. При этом обратное заполнение недоступно.
 
-- Скачайте и установите xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- В качестве источника данных в xDrip+ следует выбрать."Companion App".
-- В [Конфигураторе, Источник ГК](#Config-Builder-bg-source) выберите xDrip+.
-- Настройте параметры xDrip+ в соответствии с пояснениями на странице [настройки xDrip+](../CompatibleCgms/xDrip.md).
+- Download and install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- As data source in xDrip “Companion App” must be selected.
+- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
 - Включите [экспоненциальное сглаживание](../CompatibleCgms/SmoothingBloodGlucoseData.md) в AAPS.
+
+## Notification Reader
+
+**AAPS** can read the glucose values directly from the notifications posted by the official Eversense app, without any other app in between. При этом обратное заполнение недоступно.
+
+- Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and grant **AAPS** access to notifications when asked.
+- Make sure the Eversense app shows the current glucose value in its notification.
 
 ```{warning}
 Частота чтения значений BG не всегда 5 минут, могут возникнуть дубликаты.

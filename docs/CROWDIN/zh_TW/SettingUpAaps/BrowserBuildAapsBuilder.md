@@ -51,7 +51,7 @@
 **新金鑰或既有金鑰：這將決定你是否能更新 AAPS。**
 
 - **你的手機上已安裝 AAPS，且你仍保有當時使用的金鑰庫**：在設定頁面選擇 **I already have a keystore（我已經有金鑰庫）**，並上傳它。你下一次的建置會就地更新 AAPS。曾用先前的瀏覽器建置（你自己的 fork）建置 AAPS 嗎？你的金鑰庫在你的 fork 裡：<a href="#aaps-builder-from-fork">請先取得其副本</a>。
-- **你是第一次建置 AAPS，或你已遺失金鑰庫或其密碼**：請選擇 **Create a new key（建立新金鑰）**。以新金鑰簽署的應用程式，**無法更新**以其他金鑰簽署的 AAPS。你必須先匯出你的設定，將檔案複製到手機以外的位置，解除安裝舊版 AAPS，安裝新版後再匯入你的設定；請參閱 [遺失金鑰庫](#troubleshooting_androidstudio-lost-keystore)。
+- **你是第一次建置 AAPS，或你已遺失金鑰庫或其密碼**：請選擇 **Create a new key（建立新金鑰）**。以新金鑰簽署的應用程式，**無法更新**以其他金鑰簽署的 AAPS。 You must export your settings, copy the file off your phone, uninstall the old AAPS, install the new one, then import your settings: see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 
 此後請務必持續使用同一把金鑰。當你建立新金鑰時，請下載頁面提供的備份，並將其與密碼及別名（<code>key0</code>）一併安全保存，且不要放在手機裡。
 ```
@@ -259,7 +259,7 @@ GitHub 顯示 **找不到頁面**（404）？請先確認你已在此瀏覽器�
 2. 若 GitHub 要求，請點選綠色按鈕以啟用工作流程。
 3. 點選 **Run workflow**。會開啟一個小型表單：
    - **Version**：維持 `latest` 以建置最新的 AAPS 發行版，或輸入如 `3.3.2.1` 的發行版本號。
-   - **Variant**：一般與幫浦搭配使用時，維持 `fullRelease`。其他變體的說明請參閱 [建置變體](#browserbuild-variant)。請勿選擇 `aapsclient3Release`：**AAPSClient3** 僅自 **AAPS** 版本 4.0 起存在。
+   - **Variant**：一般與幫浦搭配使用時，維持 `fullRelease`。其他變體的說明請參閱 [建置變體](#browserbuild-variant)。 `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
    - 點選綠色的 **Run workflow** 按鈕。
 
    ![Run workflow 表單，設定為 latest 與 fullRelease](../images/Building-the-App/CI/AapsBuilder16_RunWorkflow.png)
@@ -370,10 +370,7 @@ GitHub 顯示 **找不到頁面**（404）？請先確認你已在此瀏覽器�
 
 ## 問題排除
 
-若要查看建置失敗的原因，從設定頁面的 **Open my builds** 開啟該建置：圖表下方的 **Annotations** 區塊會顯示錯誤訊息。若要查看完整日誌，點選帶紅色叉號的作業，然後點選帶紅色叉號的步驟。
-
-- **要變更機密**：開啟你儲存庫的 **Settings** → **Secrets and variables** → **Actions**，點選該機密旁的鉛筆圖示，貼上新數值並點選 **Update secret**。
-- **在修正後要再次執行建置**：開啟失敗的建置，點選頂端的 **⋯**，然後 **Re-run all jobs**；或依照 [步驟 5](#aaps-builder-step5) 開始新的建置。
+To see why a build failed, [read the build log](#aaps-ci-read-the-logs): the step names are different, but you find the error the same way. You can also [update a secret](#aaps-ci-update-secret) and [run the build again](#aaps-ci-rerun) the same way.
 
 - **建置停止並顯示 "This repository is PUBLIC"**：在你的儲存庫中，開啟 **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**，然後再建置一次。
 - **"Secret KEYSTORE_SET is missing"**：請執行設定頁面的第 4 步。

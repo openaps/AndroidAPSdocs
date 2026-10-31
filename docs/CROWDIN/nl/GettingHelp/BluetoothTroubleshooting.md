@@ -1,151 +1,150 @@
 (bluetoothtroubleshooting-bluetooth-related-issues)=
 
-# **Bluetooth related issues**
+# Problemen met Bluetooth
 
-Some users have been running into issues with Omnipod DASH activation failures, Medtrum Nano connectivity problems, and other pod errors related to Bluetooth. Many of these issues can be traced to one of the following issues.
+Sommige gebruikers hebben problemen met mislukte activering van de Omnipod DASH, verbindingsproblemen met de Medtrum Nano en andere pod-fouten die met Bluetooth te maken hebben. Veel van deze problemen komen door een van de volgende oorzaken.
 
-Some of these issues likely apply to other Bluetooth Insulin pumps too, the Medtrum Nano has known issues with nearby device permission as well as the Omnipod DASH.
+Sommige van deze problemen gelden waarschijnlijk ook voor andere Bluetooth-insulinepompen. De Medtrum Nano heeft, net als de Omnipod DASH, bekende problemen met de toestemming voor apparaten in de buurt.
 
 ---
 
 (bluetoothtroubleshooting-cannot-start-omnipod-with-android-16)=
 
-## Cannot start Omnipod with Android 16
-- Android 16 needs at a minimum **AAPS** version 3.3.2.1 for the Omnipod DASH to work correctly, as this versions has fixes added to specifically address known problems introduced in Android 16 for Omnipod.
+## Omnipod start niet met Android 16
+- Voor Android 16 heb je minimaal **AAPS** versie 3.3.2.1 nodig om de Omnipod DASH goed te laten werken. Deze versie bevat oplossingen speciaal voor bekende problemen die Android 16 voor Omnipod heeft veroorzaakt.
 
 ---
 
 (bluetoothtroubleshooting-bluetooth-battery-optimisation)=
 
-## Bluetooth Battery Optimisation
+## Batterijoptimalisatie van Bluetooth
 
-Newer versions of Android have enable Battery optimisation for the system Bluetooth app. This is known to cause some issues for Bluetooth pumps and CGMs.
+In nieuwere versies van Android staat batterijoptimalisatie aan voor de Bluetooth-app van het systeem. Dit geeft bekende problemen met Bluetooth-pompen en -CGM's.
 
-If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide its possible you have not changed this setting.
+Als je de [Setup Wizard](../SettingUpAaps/SetupWizard.md) hebt gevolgd en de instellingen uit het hoofdstuk [Batterijoptimalisatie van Bluetooth](#setup-wizard-bluetooth-battery-optimisation) hebt gebruikt, zou deze instelling goed moeten staan. Heb je een oudere versie van deze handleiding gevolgd, dan heb je deze instelling misschien niet gewijzigd.
 
-Verify this is correctly configured if you have pump an CGM disconnections.
+Controleer of dit goed is ingesteld als je pomp en CGM de verbinding verliezen.
 
 ---
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission)=
 
-## Apps that use the "Nearby devices" Android permission can cause connection drops and Pod activation problems
+## Apps die de Android-toestemming "Apparaten in de buurt" gebruiken, kunnen verbindingsverlies en problemen bij het activeren van een pod veroorzaken
 
-Android allows you to control what each app is able to do or access on your phone via a permission model. For each app installed you can choose to allow or deny specific permissions, e.g. access files on the device, access to bluetooth, scan for nearby devices etc.
+Met een systeem van toestemmingen kun je in Android bepalen wat elke app op je telefoon mag doen of gebruiken. Voor elke geïnstalleerde app kun je bepaalde toestemmingen geven of weigeren, bijvoorbeeld toegang tot bestanden op het apparaat, toegang tot Bluetooth, zoeken naar apparaten in de buurt enz.
 
-**AAPS** requires a number of specific permission to function, one which is required ensure that Pods work is the "Nearby devices" permission. There are many other applications which also require this permission, the community is finding that a number of applications when they are granted this permission can cause issues with activating new Pods on some devices.
+**AAPS** heeft een aantal specifieke toestemmingen nodig om te werken. Eén daarvan, nodig om pods te laten werken, is de toestemming "Apparaten in de buurt". Er zijn veel andere apps die deze toestemming ook nodig hebben. De community merkt dat een aantal apps met deze toestemming op sommige apparaten problemen kan geven bij het activeren van nieuwe pods.
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
-### **Apps that use "Nearby device" permissions and are known to have caused problems:**
+### Apps die de toestemming "Apparaten in de buurt" gebruiken en waarvan bekend is dat ze problemen hebben gegeven:
 
-Apps in this list have been discussed in one or more places in the community as causing problems for Omnipod DASH devices and in some cases Medtrum Nano too.
+Over de apps in deze lijst is op een of meer plaatsen in de community gemeld dat ze problemen geven met de Omnipod DASH, en soms ook met de Medtrum Nano.
 
 ```{admonition} Updating the list
 :class: note
-Ping @XiTatiON on #omnipod-dash Discord channel to discuss apps to be added to this list.
+Stuur een bericht naar @XiTatiON in het Discord-kanaal #omnipod-dash om apps te bespreken die aan deze lijst moeten worden toegevoegd.
 ```
 
-- **myBMW** MyBMW interrupted Medtrum Nano and Omnipod DASH. The MyBMW app prompts regarding permission for "find nearby devices" only once, if you don't grant it, it still works absolutely OK
+- **myBMW** MyBMW verstoorde de Medtrum Nano en de Omnipod DASH. De MyBMW-app vraagt maar één keer om de toestemming "apparaten in de buurt vinden". Als je die niet geeft, werkt de app nog steeds prima
 
-- **Amazon Alexa**  Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IOT devices
+- **Amazon Alexa**  Het weghalen van "Apparaten in de buurt" voor de Alexa-app loste het probleem bij sommige mensen op, maar dan kun je geen Matter IoT-apparaten meer koppelen
 
-- **MINI app**  Appears the app is based on myBMW app and might mirror it's behavior as a result
+- **MINI-app**  Deze app lijkt gebaseerd op de myBMW-app en gedraagt zich daardoor misschien hetzelfde
 
-- **BM2** Solar Battery Monitoring app, used in a some camper van and camping solar setups, when the app is running it prevented activation of a new Pod. Force Stopping the app while activating an new pod is a workaround to the issue. Running the app after that didn't appear to interfere with Dash functionality (On a Pixel 8 Pro running A16).
+- **BM2** App voor het bewaken van een zonnebatterij, gebruikt in sommige campers en kampeeropstellingen met zonnepanelen. Als de app draaide, kon er geen nieuwe pod worden geactiveerd. Een oplossing is de app geforceerd te stoppen terwijl je een nieuwe pod activeert. Daarna leek de app de werking van de Dash niet te verstoren (op een Pixel 8 Pro met Android 16).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
-### **How to revoke "Nearby device" permissions for other apps:**
-If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android. It may be necessary to revoked the permission for other apps while activating a new Pod.
+### Toestemming "Apparaten in de buurt" intrekken voor andere apps:
+Heb je problemen met het activeren van een nieuwe pod en gebruik je de juiste ondersteunde versie van **AAPS** voor jouw Android-versie? Dan kan het nodig zijn om de toestemming voor andere apps in te trekken terwijl je een nieuwe pod activeert.
 
-Follow this procedure to revoked the "Nearby device" permission for all apps except **AAPS**:
+Volg deze stappen om de toestemming "Apparaten in de buurt" in te trekken voor alle apps behalve **AAPS**:
 
 ```{admonition} Menus and settings
 :class: note
-The screenshots and instructions in this guide are from a Vanilla Android 16 install on Google Pixel 8 Pro. Other manufactures and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.
+De screenshots en instructies in deze handleiding komen van een standaard Android 16 op een Google Pixel 8 Pro. Op andere merken en apparaten zien de menu's en instellingen er waarschijnlijk niet precies zo uit. Pas de stappen aan je eigen apparaat aan. Kom je er niet uit, lees dan het hoofdstuk [Waar krijg je hulp voor de DASH](#omnipod-dash-where-to-get-help-for-dash) over hoe je de community om hulp vraagt.
 ```
 
-1. Open Android settings on your phone, scroll down and press on **Security and privacy (1)**.
+1. Open de Android-instellingen op je telefoon, scroll omlaag en tik op **Beveiliging en privacy (1)**.
 
     ![android_settings_sec_priv](../images/android_16/android_settings_sec_priv.png)
 
-2. Scroll down and press on **Privacy controls (1)**.
+2. Scroll omlaag en tik op **Privacyopties (1)**.
 
    ![android_sec_priv](../images/android_16/android_sec_priv.png)
 
-3. Press on **Permission manager (1)**.
+3. Tik op **Rechtenbeheer (1)**.
 
    ![android_priv_control](../images/android_16/android_priv_control.png)
 
-3. Scroll down and press on **Nearby devices (1)**.
+3. Scroll omlaag en tik op **Apparaten in de buurt (1)**.
 
    ![android_perm_man_nearby_dev](../images/android_16/android_perm_man_nearby_dev.png)
 
-4. Browse the list of apps and press on the app you wish to revoke **Nearby devices** permissions for.
+4. Zoek in de lijst met apps de app waarvoor je de toestemming **Apparaten in de buurt** wilt intrekken en tik erop.
 
-   In this guide **Android Auto (1)** is the app we will revoke the permission on.
+   In deze handleiding trekken we de toestemming in voor **Android Auto (1)**.
 
-   To avoid bricking more pods we advise everyone initially to revoke the permission on all apps except **AAPS**.
+   Om te voorkomen dat er nog meer pods kapotgaan, raden we iedereen aan om eerst de toestemming in te trekken voor alle apps behalve **AAPS**.
 
 ```{admonition} Which app to select?
 :class: tip
-If you are unsure which app is causing you an issue, disable them all (remember to check the list of known problem apps too and start with those) and if you can spare a few bricked pods on the way, enable the permission on one new app before every new Pod activation, until you can narrow down which app specifically causes your Pod issues. If you do identify new problematic apps please let us know on the #omnipod-dash Discord channel.
+Weet je niet welke app het probleem geeft? Schakel ze dan allemaal uit (kijk ook naar de lijst met bekende probleem-apps en begin daarmee). Als je onderweg een paar kapotte pods kunt missen, zet dan vóór elke nieuwe pod-activering de toestemming voor één app weer aan, tot je weet welke app precies de problemen met je pod geeft. Vind je nieuwe apps die problemen geven? Laat het ons dan weten in het Discord-kanaal #omnipod-dash.
 ```
 
    ![android_nearby_dev](../images/android_16/android_nearby_dev.png)
 
-5. To revoke the permission Press on **Don't allow (1)**, then Press on **Don't allow anyway (2)**. If done correctly you should see **Don't allow (3)** as the selected Toggle option. You can now go back to the **Nearby device** menu by pressing the **Back arrow (4)** and change this setting on other apps if required.
+5. Om de toestemming in te trekken tik je op **Niet toestaan (1)** en daarna op **Toch niet toestaan (2)**. Als het goed is gegaan, zie je dat **Niet toestaan (3)** is geselecteerd. Je kunt nu teruggaan naar het menu **Apparaten in de buurt** met de **pijl terug (4)**, en zo nodig deze instelling ook voor andere apps wijzigen.
 
    ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dev.png) ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dont_allow_anyway.png)  ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dont_allow.png)
 
 (bluetoothtroubleshooting-re-enable-nearby-device-permission)=
 
-### **How to re-enable "Nearby device" permissions for system apps and other apps:**
+### Toestemming "Apparaten in de buurt" weer aanzetten voor systeem-apps en andere apps:
 
-1. If required Reference the **"How to revoke "Nearby device" permissions for other apps"** section on how to get to the app privacy settings, then once in the **Nearby device** configuration proceed to 2.
+1. Kijk zo nodig in het hoofdstuk **"Toestemming "Apparaten in de buurt" intrekken voor andere apps"** hoe je bij de privacy-instellingen van apps komt. Ga daarna, als je in het menu **Apparaten in de buurt** bent, verder met stap 2.
 
-2. Browse the list of apps and press on the app you wish to allow **Nearby devices** permissions for.
+2. Zoek in de lijst met apps de app waarvoor je de toestemming **Apparaten in de buurt** wilt toestaan en tik erop.
 
-   In this guide **Android Auto (1)** is the app we will allow the permission on.
+   In deze handleiding staan we de toestemming toe voor **Android Auto (1)**.
 
-   You will notice that **Android Auto (1)** is missing in the app list after the permission is revoked. This is because the **Android Auto** app is a **System app** and by default system apps are hidden.
+   Je ziet dat **Android Auto (1)** na het intrekken van de toestemming niet meer in de lijst met apps staat. Dit komt doordat **Android Auto** een **systeem-app** is, en systeem-apps zijn standaard verborgen.
 
    ![android_auto_nearby_dev_missing](../images/android_16/android_auto_nearby_dev_missing.png)
 
-3. To show hidden system apps Press on the **Three Dotted Lines (Hamburger) (1)**, then Press on **"Show System (1)"**. You should now be able to see the hidden system app in the list **Android Auto (3)**.
+3. Om verborgen systeem-apps te tonen, tik je rechtsboven op het **menu met drie puntjes (⋮) (1)** en daarna op **"Systeem tonen" (2)**. Je ziet nu de verborgen systeem-app **Android Auto (3)** in de lijst.
 
 ```{admonition} Find your app
 :class: tip
-If an app is revoked you will need to scroll down until you see the list of revoked apps lower down in the list.
+Als de toestemming voor een app is ingetrokken, moet je omlaag scrollen tot je verderop de lijst met geweigerde apps ziet.
 ```
 
    ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png)
 
-5. Follow the guidance in **"How to revoke "Nearby device" permissions for other apps"** in reverse to re-enable permissions for each app.
+5. Volg de stappen in **"Toestemming "Apparaten in de buurt" intrekken voor andere apps"** in omgekeerde volgorde om de toestemming voor elke app weer aan te zetten.
 
 ---
 
 (bluetoothtroubleshooting-android-15-bluetooth-connection-problems)=
 
-## Android 15 Frequent Bluetooth connection problems
+## Android 15: vaak problemen met de Bluetooth-verbinding
 
-After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If the phone runs Android 15. Enabling the **Bond BT device on Android 15+** setting within **AAPS** settings may help improve stability of Bluetooth connections, follow guide below to enable this:
+Na een Android-update of na de overstap naar een nieuwe telefoon verliest **AAPS** vaak de Bluetooth-verbinding met de pomp. Het probleem verdwijnt tijdelijk als je de telefoon herstart. Als je een **Omnipod DASH** gebruikt en je telefoon Android 15 heeft, kan het aanzetten van de instelling **Bluetooth bonding** de Bluetooth-verbinding stabieler maken. Zo zet je het aan:
 
 ```{admonition} Android 16
 :class: warning
-Only enable the **Bond BT device on Android 15+** option on Android 15, and only if you experience connectivity issues. DO NOT enable bonding option on Android 16.
+Zet **Bluetooth bonding** alleen aan op Android 15, en alleen als je verbindingsproblemen hebt. Zet bonding NIET aan op Android 16.
 ```
 
-1) **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+1. Open de [Dash-instellingen](#omnipod-dash-settings): open het DASH-pompscherm via **Beheren** > **Pomp** en tik rechtsboven op het pictogram **Instellingen** (tandwiel).
 
-   ![Open preferences](../images/Pref2020_Open2.png)
+   ![Het DASH-pompscherm](../images/v4/Pumps/dash_pump_screen.png)
 
-2. Scroll down and open the **Confirmation beeps** / **Advanced** submenu. Enable **Bond BT device on Android 15+**.
+2. Open het onderdeel **Geavanceerde instellingen** en zet **Bluetooth bonding** aan.
 
-   ![BondBT](../images/troubleshooting/BondBT.png)
+   ![Bluetooth bonding in het onderdeel Geavanceerde instellingen](../images/v4/Pumps/dash_settings_advanced.png)
 
+3. Als de telefoon om koppelen vraagt, accepteer dit dan.
 
-3. If the pump asks for a pairing request, accept it.
-
-4. Restart your phone.
+4. Herstart je telefoon.

@@ -1,61 +1,61 @@
-# How to translate strings for the AAPS app or the documentation
+# Comment traduire les textes de l'application AAPS ou de la documentation
 
-* Pour les chaînes utilisées dans l'application, allez sur <https://crowdin.com/project/androidaps> et connectez-vous à l'aide de votre compte GitHub
+* Pour les textes de l'application, allez sur <https://crowdin.com/project/androidaps> et connectez-vous avec votre compte GitHub
 * Pour la documentation, allez sur <https://crowdin.com/project/androidapsdocs> et connectez vous à l'aide de votre compte GitHub
 
-* Envoyez une demande d'adhésion à l'équipe Wiki. Pour le faire, cliquez sur le drapeau de la langue souhaitée, puis sur le bouton "Join" dans le coin supérieur droit de la page suivante. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
+* Envoyez une demande d'adhésion à l'équipe Wiki. Pour le faire, cliquez sur le drapeau de la langue souhaitée, puis sur le bouton "Join" dans le coin supérieur droit de la page suivante. Indiquez la langue, donnez quelques informations sur vous et sur votre expérience avec AAPS, et dites si vous voulez être traducteur ou relecteur (seulement pour les personnes qui savent bien traduire et qui sont des utilisateurs avancés d'AAPS).
 
-```{admonition} Etape d'Approbation :class: Remarque
+```{admonition} Délai d'approbation :class: note
 
 L'approbation est une étape manuelle. En tant qu’organisation à but non lucratif, nous ne fournissons pas de SLA, mais en général l’approbation se fera dans la journée. Si ce n'est pas le cas, veuillez contacter l'équipe Doc via Facebook ou Discord.
 
-    <br />* When we approve you, click the flag
-       ![When we approve you, click the flag](../images/translation_flags.png)
+    <br />* Quand nous vous avons accepté, cliquez sur le drapeau
+       ![Quand nous vous avons accepté, cliquez sur le drapeau](../images/translation_flags.png)
     
-    ## Translation of the app
+    ## Traduction de l'application
     
     (translations-translate-strings-for-AAPS-app)=
-    ### Translate strings for AAPS app
+    ### Traduire les textes de l'application AAPS
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. Cela vous montrera toutes les chaînes de caractères qui ont besoin de traduction.
+    * Si vous n'avez pas de préférence pour les textes à traduire, cliquez simplement sur le bouton « Translate All » pour commencer. Cela vous montrera toutes les chaînes de caractères qui ont besoin de traduction.
     
-       ![Click translate all](../images/translations-click-translate-all.png)
+       ![Cliquer sur Translate All](../images/translations-click-translate-all.png)
     
-    * If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
+    * Si vous voulez traduire un fichier précis, cherchez le fichier avec la recherche ou dans l'arborescence, puis cliquez sur le nom du fichier pour commencer à traduire les textes de ce fichier.
     
-       ![Click strings.xml](../images/translations-click-strings.png)
+       ![Cliquer sur strings.xml](../images/translations-click-strings.png)
     
-    * Translate sentences on left side by adding new translated text or use & edit suggestion 
+    * Traduisez les phrases du côté gauche : écrivez une nouvelle traduction ou utilisez et modifiez une suggestion
     
-       ![Translation app](../images/translations-translate.png)
-    
-    
-    ### Proofread strings for AAPS app
-    
-    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
-    
-       ![Proofreading mode app](../images/translations-proofreading-mode.png) 
+       ![Traduction de l'application](../images/translations-translate.png)
     
     
-      and approve translated texts 
+    ### Relire les textes de l'application AAPS
     
-       ![approve text](../images/translations-proofreading.png)
+    * Les relecteurs commencent en choisissant « Proofread » depuis l'écran d'accueil de la langue.
     
-    When a proofreader approves a translation it will be added to the next version of AAPS.
+       ![Mode relecture de l'application](../images/translations-proofreading-mode.png)
+    
+    
+      et approuvent les textes traduits
+    
+       ![Approuver le texte](../images/translations-proofreading.png)
+    
+    Quand un relecteur approuve une traduction, elle sera ajoutée dans la prochaine version d'AAPS.
     
     (translations-translation-of-the-documentation)=
-    ## Translation of the documentation
+    ## Traduction de la documentation
     
-    * Click the name of the docs page you want to translate
+    * Cliquez sur le nom de la page de la documentation que vous voulez traduire
     
-    ![Click docs page](../images/translation_WikiPage.png)
+    ![Cliquer sur la page de la documentation](../images/translation_WikiPage.png)
     
     
-    * Translate sentences by sentence
+    * Traduisez phrase par phrase
     
         1. Le texte jaune est le texte que vous travaillez actuellement.
     
-        1. Le texte vert est déjà traduit. Vous n’avez rien à faire.
+        1. Le texte vert est déjà traduit. Vous n'avez pas besoin de le refaire.
     
         1. Le texte rouge est le texte qui reste à traduire.
     
@@ -63,12 +63,12 @@ L'approbation est une étape manuelle. En tant qu’organisation à but non lucr
     
         1. C'est la traduction que vous êtes en train de préparer. Vous pouvez copier le texte au dessus ou sélectionner une des suggestions au dessous.
     
-        1. Voilà la proposition de traduction. Surtout vous pouvez voir le taux de modification calculé par Crowdin ou si c'est quelquechose qui a déjà été traduit, et de voir si c'est juste une reformulation du texte sans changement de contenu.
-        1. Appuyez sur le bouton "Save" pour enregistrer une proposition pour la traduction. Il sera ensuite soumis à un correcteur pour la vérification finale.
+        1. Ce sont les suggestions de traduction. Vous pouvez voir en particulier à quel point Crowdin juge la suggestion adaptée, ou si le texte a déjà été traduit avant et revient seulement parce qu'il a été déplacé, pas modifié.
+        1. Appuyez sur le bouton "Save" pour enregistrer une proposition pour la traduction. Elle sera ensuite transmise à un relecteur pour une dernière vérification.
     
-    ![Translation docs](../images/translation_WikiTranslate.png)
+    ![Traduction de la documentation](../images/translation_WikiTranslate.png)
     
-    * A translated page will not be published in docs before 
+    * Une page traduite ne sera pas publiée dans la documentation avant que :
     
         1. la traduction est approuvée
     
@@ -81,15 +81,15 @@ L'approbation est une étape manuelle. En tant qu’organisation à but non lucr
     ### Traduction des liens
     
     ```{admonition} Les liens ne sont plus traduits
-    :class: Remarque
+    :class: note
     
     Les liens ne sont plus traduits. Dans le passé, nous avions un chapitre particulier ici mais c'est terminé depuis la migraton vers Markdown et le myst_parser nous créons explicitement des étiquettes dans le texte anglais ce qui permet de propager ces étiquettes et les liens vers les autres langues.
     
     
 
-Vous traduisez le texte qui représente le lien. Please you have to be careful **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
+Vous traduisez le texte qui représente le lien. Faites bien attention à **ne pas** supprimer le lien, qui est représenté par une paire de balises `<0></0>` (ou par d'autres numéros s'il y a plusieurs liens dans un paragraphe).
 
-C'est le travail des correcteurs pour avoir un regard spécial sur ça !
+Les relecteurs doivent y faire particulièrement attention !
 
 ### Relecture (Proofreading)
 
@@ -101,4 +101,4 @@ C'est le travail des correcteurs pour avoir un regard spécial sur ça !
     
     ![approuver le texte](../images/translations-proofreading.png)
 
-* Lorsqu'un correcteur approuve une traduction, elle sera ajoutée à la prochaine compilation de la doc qui ne se produit pas régulièrement, mais environ une fois par semaine, sauf pendant les vacances. Pour accélérer le processus, vous pouvez informer l'équipe doc sur les nouvelles traductions.
+* Quand un relecteur approuve une traduction, elle sera ajoutée dans la prochaine compilation de la documentation. Celle-ci se fait à la demande, sans calendrier fixe, mais environ une fois par semaine, sauf pendant les vacances. Pour accélérer le processus, vous pouvez informer l'équipe doc sur les nouvelles traductions.

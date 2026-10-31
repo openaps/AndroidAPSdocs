@@ -1,37 +1,95 @@
-# Building the Wear AAPS app
+# Компилиране на приложението Wear AAPS
 
-The Wear OS App of **AAPS**  (“Wear OS apk”) required for the smartwatch has been separated from the "full" **AAPS** build for the Android phone. Therefore you have to generate a second installation file, or apk, to install **AAPS** wear onto the watch (which is done by side-loading it from the phone). It is strongly recommended that the **AAPS** Wear apk file is built immediately after first building the full **AAPS** apk for the phone. Not only is this very quick to do if you are [building **AAPS** for the first time](../SettingUpAaps/BuildingAaps.md), but it will avoid any potential compatibility issues when you try to set up the watch-phone communication. The **AAPS** Wear apk on the watch is unlikely to be compatible with the **AAPS** phone apk if they have been built in different versions of Android Studio, or if months have past since the initial **AAPS** build.
+Приложението **AAPS** за смарт часовник с Wear OS (**Wear apk**, `aaps-wear-….apk`) е отделен инсталационен файл, различен от приложението **AAPS** за телефона. Нужни са ви и двете: приложението на телефона управлява кръга, а приложението на часовника показва данните му и може да му изпраща команди. Приложението за часовника се инсталира от телефона, вижте [Настройване на AAPS на часовник с Wear OS](WearOsSmartwatch.md).
 
-If you are already using **AAPS** on a phone and you did not build both the phone and watch (wear) **AAPS** apks at the same time, to ensure success it is therefore best to do a fresh build of both apk files at the same time. Build the AAPS phone and watch apks at the same time, using the same **keystore file**.
+Двете приложения работят заедно само когато си съответстват:
 
-## Supported Wear OS versions
+- **Еднаква версия на AAPS** на телефона и на часовника.
+- **Едно и също хранилище за ключове**, с което са подписани двете приложения.
 
-AAPS requires at least Wear OS API level 28 (Android 9).
+Най-простият начин да осигурите това е да компилирате двете приложения **едновременно**, в една и съща компилация. Компилирането в браузъра прави това вместо вас: всяка компилация създава apk файла за телефона и Wear apk файла заедно. С Android Studio или от командния ред компилирате Wear apk файла като втора стъпка веднага след apk файла за телефона.
 
-```{warning}
-AAPS Watchfaces are available for Wear OS smartwatches with API level 28 to 33.<br>
-Wear OS 5 has [limitations](#BuildingAapsWearOs-WearOS5).
+```{note}
+Вече използвате **AAPS** на телефона, но нямате Wear apk файл от същата компилация? Компилирайте отново двете приложения със същото хранилище за ключове и инсталирайте отново и приложението за телефона. Wear apk файл, компилиран месеци по-късно или с друга версия на Android Studio, най-вероятно няма да е съвместим с приложението за телефона.
 ```
 
-## Building the **AAPS** Wear apk
+## Поддържани версии на Wear OS
 
-The build process for the Wear apk is similar to that for the "full" phone apk.
+**AAPS** работи на часовници с **Wear OS 3.0, 3.2 или 3.5** (Android 11, ниво на API 30) **или по-нова версия** (Wear OS 4, 5 и 6). Часовници с Wear OS 2 не се поддържат.
 
-- Follow the instructions for [Building AAPS](../SettingUpAaps/BuildingAaps.md).
-- When you reach [module selection](#Building-APK-wearapk) in "Build the AAPS signed apk", make sure to select **`AndroidAPS.wear`**.
+```{warning}
+Циферблатите на AAPS са налични за смарт часовници с Wear OS с ниво на API от 30 до 33 (Wear OS 3.0, 3.2, 3.5 и 4).<br>
+По-новите версии на Wear OS постепенно нарушават работата на циферблатите на AAPS — вижте [Промени в циферблатите при Wear OS](#wearos-watchface-changes) и [ограниченията при Wear OS 5](#BuildingAapsWearOs-WearOS5).
+```
 
-![Wear module](../images/Building-the-App/wear_build1.png)
+(building-aaps-wear-os-method)=
 
-Select "**fullRelease**" to generate the **AAPS** Wear apk file.
+## Вземете Wear apk файла според вашия начин на компилиране
 
-![Wear module](../images/Building-the-App/wear_build2.png)
+Следвайте раздела за начина, по който [компилирате AAPS](../SettingUpAaps/BuildingAaps.md).
 
-If you prefer, you can build **“pumpcontrolRelease”** instead, from the drop-down menu, which will allow you to just remotely control the pump but without looping.
+(building-aaps-wear-os-browser)=
 
-## Отстраняване на проблеми
+### Компилиране в браузъра (препоръчително)
 
-In the process of building the 3.2 full **AAPS** app (and in fact any signed app), Android Studio generates a .json file in the same folder. This then causes errors with [uncommitted changes](#troubleshooting_androidstudio-uncommitted-changes) when you try to build the next signed app, like the **AAPS** wear app. The quickest way to resolve this is to navigate to the folder where the full AAPS app has been built, your folder is probably something like:
+**Не е нужно да правите нищо допълнително.** Всяка компилация в браузъра създава два файла от един и същ изходен код и със същото хранилище за ключове:
+
+- `aaps-….apk`: приложението за телефона.
+- `aaps-wear-….apk`: приложението за часовника.
+
+Wear apk файлът следва [варианта](#browserbuild-variant), който сте избрали за компилацията: `fullRelease` дава приложението **AAPS Wear**, `aapsclientRelease` – приложението **AAPSClient Wear**, `pumpcontrolRelease` – приложението **PumpControl Wear**. Всяко приложение Wear комуникира само със съответното приложение за телефона.
+
+Къде да намерите Wear apk файла:
+
+- **AAPS Builder**: на страницата на компилацията превъртете надолу до **Artifacts** (артефакти) и изтеглете `aaps-wear-….apk` до приложението за телефона, както е показано в [Стъпка 6 – Инсталирайте приложението на телефона си](#aaps-builder-step6). Изтеглете го на телефона, на който работи **AAPS**, ако инсталирате приложението за часовника от телефона (Wear Installer 2 или Easy Fire Tools), или на компютъра си, ако използвате ADB.
+
+  ![Artifacts с приложенията за телефона и за часовника](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
+
+- **Fork с Google Drive**: отворете своя Google Drive, папката `AAPS`, след това папката на версията, която сте компилирали. Тя съдържа apk файла за телефона и Wear apk файла, вижте [Стъпка 4 – Компилиране на APK](#github-build-apk).
+
+  ![Местоположение в Google Drive](../images/update/CI/GitHubActions5.png)
+
+Пазете Wear apk файла заедно с apk файла за телефона в резервните си копия. При **AAPS Builder** файловете остават на страницата на компилацията само 14 дни.
+
+Следваща стъпка: инсталирайте Wear apk файла на часовника, вижте [Настройване на AAPS на часовник с Wear OS](WearOsSmartwatch.md).
+
+(building-aaps-wear-os-android-studio)=
+
+### Android Studio
+
+Wear apk файлът се компилира като apk файла за телефона – като втора подписана компилация. Направете го веднага след apk файла за телефона, със същата версия на Android Studio и със същото хранилище за ключове.
+
+- Следвайте инструкциите за [Компилиране с Android Studio](../SettingUpAaps/ComputerBuild.md).
+- Когато стигнете до [избора на модул](#Building-APK-wearapk) в „Build the AAPS signed apk“ (компилиране на подписания apk файл на AAPS), изберете **`AndroidAPS.wear`**.
+
+![Модул Wear](../images/Building-the-App/wear_build1.png)
+
+Изберете „**fullRelease**“, за да създадете apk файла **AAPS** Wear.
+
+![Модул Wear](../images/Building-the-App/wear_build2.png)
+
+Ако предпочитате, можете вместо това да изберете от падащото меню **„pumpcontrolRelease“**. Тогава ще можете само да управлявате помпата дистанционно, но без затворен кръг.
+
+Следваща стъпка: инсталирайте Wear apk файла на часовника, вижте [Настройване на AAPS на часовник с Wear OS](WearOsSmartwatch.md).
+
+(building-aaps-wear-os-troubleshooting)=
+
+#### Отстраняване на неизправности при компилиране с Android Studio
+
+При компилирането на пълното приложение **AAPS** (и всъщност на всяко подписано приложение) Android Studio създава .json файл в същата папка. Това след това причинява грешки с [незапазени промени (uncommitted changes)](#troubleshooting_androidstudio-uncommitted-changes), когато се опитате да компилирате следващото подписано приложение, например приложението **AAPS** wear. Най-бързият начин да решите това е да отидете в папката, в която е компилирано пълното приложение AAPS. Папката ви вероятно е нещо като:
 
 `C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\aapsclient\release.`
 
-Either delete, or move the unneeded .json file out of the folder. Then try to build the **AAPS** wear app again. If that doesn't work, the more detailed [troubleshooting guide](../GettingHelp/TroubleshootingAndroidStudio.md) will help you to identify the specific file causing the issue, which could also be your keystore file. 
+Изтрийте ненужния .json файл или го преместете извън папката. След това опитайте отново да компилирате приложението **AAPS** wear. Ако това не помогне, по-подробното [ръководство за отстраняване на неизправности](../GettingHelp/TroubleshootingAndroidStudio.md) ще ви помогне да откриете конкретния файл, който причинява проблема – това може да е и файлът на хранилището за ключове.
+
+(building-aaps-wear-os-cli)=
+
+### Команден ред
+
+Следвайте [Инструкции за компилиране от командния ред](../SettingUpAaps/CLIBuild.md) и повторете стъпките за компилиране и подписване за модула `wear` със същото хранилище за ключове:
+
+```sh
+./gradlew :wear:assembleFullRelease
+```
+
+Неподписаният Wear apk файл се записва в `wear/build/outputs/apk/full/release/`. Подпишете го с `apksigner` точно както apk файла за телефона, след това го инсталирайте на часовника, вижте [Настройване на AAPS на часовник с Wear OS](WearOsSmartwatch.md).

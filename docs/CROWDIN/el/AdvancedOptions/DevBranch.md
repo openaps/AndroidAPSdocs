@@ -1,24 +1,24 @@
-# Development branch
+# Κλάδος ανάπτυξης (dev)
 
 ```{warning}
-Dev branch is for the further development of AAPS only. It should be used on a separate phone for testing <font color="#FF0000">**not for actual looping!**</font>
+Ο κλάδος dev προορίζεται μόνο για την περαιτέρω ανάπτυξη του AAPS. Πρέπει να χρησιμοποιείται σε ξεχωριστό τηλέφωνο για δοκιμές <font color="#FF0000">**όχι για πραγματική χρήση του κυκλώματος!**</font>
 ```
 
-The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). It is advised to stay on the Master branch for actual looping.
+Η πιο σταθερή έκδοση του AAPS για χρήση είναι αυτή στον [κλάδο Master](https://github.com/nightscout/AndroidAPS/tree/master). Για την πραγματική χρήση του κυκλώματος συνιστάται να μείνετε στον κλάδο Master.
 
-The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Therefore many unfinished features are disabled. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in directory /AAPS/extra . Enabling the engineering mode might break the loop entirely.
+Η έκδοση dev του AAPS είναι μόνο για προγραμματιστές και δοκιμαστές που μπορούν να διαβάσουν stacktraces, να ψάξουν σε αρχεία καταγραφής και ίσως να ξεκινήσουν τον debugger, ώστε να γράψουν αναφορές σφαλμάτων που βοηθούν τους προγραμματιστές (με λίγα λόγια: άνθρωποι που ξέρουν τι κάνουν χωρίς βοήθεια!). Γι' αυτό πολλές ημιτελείς λειτουργίες είναι απενεργοποιημένες. Για να ενεργοποιήσετε αυτές τις λειτουργίες, μπείτε στη **Engineering Mode** (λειτουργία μηχανικού): δημιουργήστε ένα αρχείο με όνομα `engineering_mode` στον φάκελο /AAPS/extra . Η ενεργοποίηση της Engineering Mode μπορεί να χαλάσει εντελώς το κύκλωμα.
 
-However, the Dev branch is a good place to see what features are being tested and to help iron out the bugs and give feedback on how the new features work in practice. Often people will test the Dev branch on an old phone and pump until they are confident it is stable - any use of it is at your own risk. When testing any new features, remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.
+Ωστόσο, ο κλάδος dev είναι ένα καλό μέρος για να δείτε ποιες λειτουργίες δοκιμάζονται, να βοηθήσετε να διορθωθούν τα σφάλματα και να πείτε πώς δουλεύουν οι νέες λειτουργίες στην πράξη. Συχνά οι χρήστες δοκιμάζουν τον κλάδο dev σε ένα παλιό τηλέφωνο και μια παλιά αντλία, μέχρι να είναι σίγουροι ότι είναι σταθερός - κάθε χρήση του είναι με δική σας ευθύνη. Όταν δοκιμάζετε νέες λειτουργίες, να θυμάστε ότι επιλέγετε να δοκιμάσετε μια λειτουργία που είναι ακόμα υπό ανάπτυξη. Κάντε το με δική σας ευθύνη & με τη σωστή προσοχή, ώστε να είστε ασφαλείς.
 
-If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/nightscout/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md). The new features can also be discussed on [discord](https://discord.gg/4fQUWHZ4Mw).
+Αν βρείτε ένα σφάλμα ή πιστεύετε ότι κάτι πήγε λάθος όταν χρησιμοποιείτε τον κλάδο dev, δείτε την [καρτέλα issues](https://github.com/nightscout/AndroidAPS/issues) για να ελέγξετε αν κάποιος άλλος το έχει ήδη βρει, ή προσθέστε το εσείς αν όχι. Όσο περισσότερες πληροφορίες μπορείτε να δώσετε εδώ, τόσο καλύτερα (μην ξεχάσετε ότι ίσως χρειαστεί να μοιραστείτε τα [αρχεία καταγραφής](../GettingHelp/AccessingLogFiles.md) σας). Για τις νέες λειτουργίες μπορείτε επίσης να συζητήσετε στο [discord](https://discord.gg/4fQUWHZ4Mw).
 
-A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. When a single dev version doing the rounds, it is easier to keep track of bugs that people are reporting. The developers do not want to be in a position where there are three versions of dev in the wild where bugs are fixed in some and not others, and people continue to report the fixed ones.
+Μια έκδοση dev έχει ημερομηνία λήξης. Αυτό φαίνεται άβολο όταν η έκδοση δουλεύει καλά, αλλά έχει έναν σκοπό. Όταν κυκλοφορεί μόνο μία έκδοση dev, είναι πιο εύκολο να παρακολουθούνται τα σφάλματα που αναφέρουν οι χρήστες. Οι προγραμματιστές δεν θέλουν να υπάρχουν τρεις εκδόσεις dev σε χρήση, όπου τα σφάλματα έχουν διορθωθεί σε κάποιες και όχι σε άλλες, και οι χρήστες συνεχίζουν να αναφέρουν σφάλματα που έχουν ήδη διορθωθεί.
 
 (branch-ci-test)=
 
-## Test a specific branch (branch-ci)
+## Δοκιμή ενός συγκεκριμένου κλάδου (branch-ci)
 
-To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
+Για να κάνετε build έναν δοκιμαστικό κλάδο, επιλέξτε branch-ci, που σας επιτρέπει να διαλέξετε έναν συγκεκριμένο κλάδο για τη δημιουργία του APK. Μπορείτε να χρησιμοποιήσετε αυτόν τον τρόπο όταν χρειάζεται να δοκιμάσετε τον κλάδο dev.
 
 ![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
 
@@ -26,11 +26,11 @@ To build a test branch, select branch-ci, which allows you to choose a specific 
 
 (github-pr-test)=
 
-## Test items in a pull request (GitHub CI actions deploy)
+## Δοκιμή αλλαγών από ένα pull request (ανάπτυξη με GitHub CI actions)
 
-Available from 3.3.2.1.dev
+Διαθέσιμο από την έκδοση 3.3.2.1.dev
 
-- Suitable for testers or those helping with testing.
+- Κατάλληλο για δοκιμαστές ή για όσους βοηθούν στις δοκιμές.
 
 ```{eval-rst}
 .. raw:: html
@@ -39,7 +39,8 @@ Available from 3.3.2.1.dev
     <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
       <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
         <iframe
-          src="https://www.dailymotion.com/embed/video/x9rdx1q"
+          src="https://geo.dailymotion.com/player/x9rdx1q.html?video=x9rdx1q&loop=true&mute=true"
+          loading="lazy"
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
           frameborder="0"
           allowfullscreen>
@@ -50,20 +51,22 @@ Available from 3.3.2.1.dev
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
 
-- PR number: Please enter the PR number that you want to test.
+- Target repository: το αποθετήριο που περιέχει το PR, στη μορφή owner/repo. Αφήστε την προεπιλογή **nightscout/AndroidAPS**, εκτός αν σας είπαν να χρησιμοποιήσετε άλλο αποθετήριο (αυτό πρέπει να το κάνουν μόνο προγραμματιστές).
 
-- PR reference types: PR reference types include two options:
+- PR number: Εισάγετε τον αριθμό του PR που θέλετε να δοκιμάσετε.
+
+- PR reference types: Οι τύποι αναφοράς PR έχουν δύο επιλογές:
     
     - head:
-    - Fetches the actual content from the PR author’s branch (i.e., the original commit history without any merge operations).
-    - This is equivalent to the original state of the PR branch, as if it were fetched directly from a fork or feature branch.
+    - Παίρνει το πραγματικό περιεχόμενο από τον κλάδο (branch) του συντάκτη του PR (δηλαδή το αρχικό ιστορικό των commits χωρίς καμία συγχώνευση).
+    - Αυτό αντιστοιχεί στην αρχική κατάσταση του κλάδου του PR, σαν να το παίρνατε απευθείας από ένα fork ή έναν κλάδο λειτουργίας (feature branch).
     
     - merge:
     
-    - Fetches the result of GitHub’s pre-simulated merge of the PR into the target branch (e.g., dev).
-    - This is a virtual merge commit automatically created by GitHub.
-    - This commit only exists when the PR has no conflicts and is mergeable.
+    - Παίρνει το αποτέλεσμα της συγχώνευσης (merge) του PR στον κλάδο-στόχο (π.χ. dev), που το GitHub έχει προσομοιώσει από πριν.
+    - Αυτό είναι ένα εικονικό merge commit που δημιουργεί αυτόματα το GitHub.
+    - Αυτό το commit υπάρχει μόνο όταν το PR δεν έχει συγκρούσεις (conflicts) και μπορεί να συγχωνευτεί.
     
     - variant:
     
-    - Please refer to [variant](#browserbuild-variant)
+    - Δείτε την ενότητα [variant](#browserbuild-variant)

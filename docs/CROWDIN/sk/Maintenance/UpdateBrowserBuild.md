@@ -1,111 +1,111 @@
-# Update with a browser (fork)
+# Aktualizácia v prehliadači (fork)
 
 ```{tip}
-You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+Zostavili ste AAPS pomocou **AAPS Builder**? Túto stránku nepotrebujete: pozrite [Aktualizácia AAPS pomocou AAPS Builder](#aaps-builder-updates).
 ```
 
-## Build yourself instead of download
+## Zostavte si aplikáciu sami namiesto stiahnutia
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** nie je možné stiahnuť kvôli predpisom pre zdravotnícke pomôcky. Zostaviť si aplikáciu pre vlastné použitie je legálne, ale nesmiete jej kópiu dávať iným! Podrobnosti nájdete na stránke [Najčastejšie otázky používateľov APS](../UsefulLinks/FAQ.md).
 
 ```{note}
-In case you want to upgrade **AAPS** with a browser for the first time : copy your back-up keystore file to your Google Drive. Then follow the [Browser Build **AAPS** procedure](../SettingUpAaps/BrowserBuild.md) instead of this guide. Instead of creating a new keystore, you must select the one you have copied from your computer.
-This operation will be mandatory only the first time, then for successive upgrades you will be able to follow this guide.
+Ak chcete **AAPS** aktualizovať v prehliadači prvýkrát: skopírujte záložný súbor úložiska kľúčov na Disk Google. Potom namiesto tohto návodu postupujte podľa postupu [Zostavenie **AAPS** v prehliadači](../SettingUpAaps/BrowserBuild.md). Namiesto vytvorenia nového úložiska kľúčov musíte vybrať to, ktoré ste skopírovali zo svojho počítača.
+Tento krok je povinný iba prvýkrát, pri ďalších aktualizáciách potom môžete postupovať podľa tohto návodu.
 ```
 
 ```{tip}
-**Switching to AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) is the simpler browser build: no fork to sync, and you download the app directly from GitHub. You don't have to switch: this guide keeps working. If you switch, first get a copy of your keystore from your fork, as explained in [Coming from the previous browser build](#aaps-builder-from-fork). Otherwise the new build cannot update the AAPS on your phone.
+**Prechádzate na AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) je jednoduchšie zostavenie v prehliadači: nemusíte synchronizovať fork a aplikáciu si stiahnete priamo z GitHubu. Prechádzať nemusíte: tento návod naďalej funguje. Ak prejdete, najprv si zo svojho forku získajte kópiu úložiska kľúčov, ako je vysvetlené v časti [Prechod z predchádzajúceho zostavenia v prehliadači](#aaps-builder-from-fork). Inak nové zostavenie nebude môcť aktualizovať AAPS vo vašom telefóne.
 ```
 
-## Overview for updating to a new version of AAPS with a browser
+## Prehľad aktualizácie na novú verziu AAPS v prehliadači
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
+In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
 
-### Export your settings
+### Exportujte svoje nastavenia
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Exportujte nastavenia z existujúcej verzie **AAPS** vo vašom telefóne. Možno ich nebudete potrebovať, ale opatrnosti nikdy nie je dosť.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Ak si nepamätáte, ako na to, pozrite si stránku [Vytváranie a obnova záloh](ExportImportSettings.md).
 
 (Update-to-new-version-update-your-repo)=
-### Update your GitHub repository
+### Aktualizujte svoj repozitár na GitHube
 
-```{admonition} WARNING
-:class: warning
-Browser Build is available from AAPS version 3.3.2.1.
-```
+[Prihláste sa do GitHubu](https://github.com/login).
 
-[Log into GitHub](https://github.com/login).
+1. Vyberte Repositories.
+2. Posuňte sa nadol a vyberte svoj vlastný repozitár AndroidAPS.
 
-1. Select Repositories.
-2. Scroll down and select your own AndroidAPS repository.
+![Výber repozitára AndroidAPS](../images/update/CI/GitHubUpdate1.png)
 
-![Select AndroidAPS repo](../images/update/CI/GitHubUpdate1.png)
-
-3. Verify you are using your own copy of AndroidAPS (Forked from nightscout/AndroidAPS)
-4. Tap Sync Fork to update it (the number of commits behind might differ from the picture)
+3. Overte, že používate svoju vlastnú kópiu AndroidAPS (Forked from nightscout/AndroidAPS)
+4. Ťuknite na Sync Fork a aktualizujte ho (počet zaostávajúcich commitov sa môže od obrázka líšiť)
 
 
 
-![Sync AndroidAPS repo](../images/update/CI/GitHubUpdate2.png)
+![Synchronizácia repozitára AndroidAPS](../images/update/CI/GitHubUpdate2.png)
 
-5. Tap Update Branch
+5. Ťuknite na Update Branch
 
-![Update AndroidAPS repo](../images/update/CI/GitHubUpdate3.png)
+![Aktualizácia repozitára AndroidAPS](../images/update/CI/GitHubUpdate3.png)
 
-Note: if you have modified your copy of AndroidAPS by mistake, you will see this screen. Discard all changes (commits) to return to the released version.
+Poznámka: ak ste svoju kópiu AndroidAPS omylom zmenili, uvidíte túto obrazovku. Zahoďte všetky zmeny (commity), aby ste sa vrátili k vydanej verzii.
 
-![Discard rogue modifications](../images/update/CI/GitHubUpdate4.png)
+![Zahodenie nechcených zmien](../images/update/CI/GitHubUpdate4.png)
 
-You have now synchronized (updated) your own copy with the latest release of Android APS. Good job.
+Teraz ste svoju vlastnú kópiu synchronizovali (aktualizovali) s najnovším vydaním AndroidAPS. Výborne.
 
-![Repo sync'ed](../images/update/CI/GitHubUpdate5.png)
+![Repozitár je synchronizovaný](../images/update/CI/GitHubUpdate5.png)
 
-### Run the Workflow to Build the Signed APK
+### Spustite workflow na zostavenie podpísaného APK
 
-1. In your GitHub copy of AndroidAPS, select Actions.
-2. Expand All Workflows.
-3. Select AAPS-CI
+1. Vo svojej kópii AndroidAPS na GitHube vyberte Actions.
+2. Rozbaľte All Workflows.
+3. Vyberte AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
-4. Scroll down and tap Run Workflow.
+4. Posuňte sa nadol a ťuknite na Run Workflow.
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Keep the branch set to master, select the AAPS Version you want to build — either the latest version or a specific required version — choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
+5. Vetvu nechajte nastavenú na master, vyberte AAPS Version, ktorú chcete zostaviť – buď najnovšiu verziu, alebo konkrétnu potrebnú verziu –, zvoľte [variant](#browserbuild-variant) (fullRelease) a potom ťuknite na Run workflow.
 
 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of Android APS. This means that the Master and Wear apk is now directly saved into your Google Drive (as per below). AAPSClient apk can be downloaded from Github > nightscout > AndroidAPS [here](https://github.com/nightscout/AndroidAPS/releases)
+6. Zobrazí sa správa Workflow run was successfully requested. Obnovte stránku v prehliadači a budete môcť sledovať priebeh zostavenia. Keď sa akcia dokončí, pri akcii AAPS CI sa zobrazí zelená fajka. Úspešne ste zostavili aktualizovanú verziu AndroidAPS. To znamená, že APK pre hlavný telefón (Master) a pre hodinky (Wear) sa teraz ukladajú priamo na váš Disk Google (pozrite nižšie). APK AAPSClient si môžete stiahnuť z GitHub > nightscout > AndroidAPS [tu](https://github.com/nightscout/AndroidAPS/releases)
 
 
-![Monitor Workflow](../images/update/CI/GitHubActions4.png)
+![Sledovanie workflowu](../images/update/CI/GitHubActions4.png)
 
 
-### Install the AAPS APK
+### Nainštalujte APK AAPS
 
-1. Open your Google Drive
-2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
+1. Otvorte svoj Disk Google
+2. Prejdite do priečinka AAPS, vyberte priečinok s novou verziou a nájdete v ňom verziu pre telefón aj pre Android Wear.
 
-![Google Drive Location](../images/update/CI/GitHubActions5.png)
+![Umiestnenie na Disku Google](../images/update/CI/GitHubActions5.png)
 
+```{note}
+Od septembra 2026 môže [overovanie vývojárov pre Android](#android-developer-verification) od Googlu v závislosti od vašej krajiny zablokovať inštaláciu APK ťuknutím na súbor. Bezplatné riešenia sú vysvetlené na tej stránke.
+```
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone)
+Pokračujte [tu](#Update-to-new-version-check-aaps-version-on-phone)
 
-## Troubleshooting
+(update-browser-build-troubleshooting)=
 
-If anything goes wrong, don't panic.
+## Riešenie problémov
 
-Take a breath!
+Ak sa niečo pokazí, nepanikárte.
 
-Then see the [troubleshooting tips](#aaps-ci-preparation) if your problem is already documented!
+Zhlboka sa nadýchnite!
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Potom skontrolujte, či už váš problém nie je opísaný: ak zostavujete pomocou **AAPS Builder**, pozrite [riešenie problémov s AAPS Builder](#aaps-builder-troubleshooting), inak pozrite [Riešenie problémov so zostavením v prehliadači](#aaps-ci-troubleshooting).
+
+Ak potrebujete ďalšiu pomoc, obráťte sa na ostatných používateľov **AAPS** na [Facebooku](https://www.facebook.com/groups/AndroidAPSUsers) alebo [Discorde](https://discord.gg/4fQUWHZ4Mw).
