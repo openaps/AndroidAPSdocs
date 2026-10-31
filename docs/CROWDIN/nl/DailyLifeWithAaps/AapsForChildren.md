@@ -2,7 +2,7 @@
 
 **AAPS** kan ook goed worden gebruikt bij kinderen met type 1. Er zijn echter enkele punten om rekening mee te houden.
 
-## Things to consider
+## Waar je aan moet denken
 
 ### Eerste profiel
 
