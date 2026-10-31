@@ -17,7 +17,7 @@ L'approbation est une étape manuelle. En tant qu’organisation à but non lucr
     (translations-translate-strings-for-AAPS-app)=
     ### Traduire les textes de l'application AAPS
     
-    * Si vous n'avez pas de préférence pour les textes à traduire, cliquez simplement sur le bouton « Translate All » pour commencer. Cela vous montrera toutes les chaînes de caractères qui ont besoin de traduction.
+    * Si vous n'avez pas de préférence pour les textes à traduire, cliquez simplement sur le bouton « Translate All » pour commencer. Cela vous montrera toutes les chaînes de caractères qui ont besoin de traduction.
     
        ![Cliquer sur Translate All](../images/translations-click-translate-all.png)
     
@@ -25,14 +25,14 @@ L'approbation est une étape manuelle. En tant qu’organisation à but non lucr
     
        ![Cliquer sur strings.xml](../images/translations-click-strings.png)
     
-    * Traduisez les phrases du côté gauche : écrivez une nouvelle traduction ou utilisez et modifiez une suggestion
+    * Traduisez les phrases du côté gauche : écrivez une nouvelle traduction ou utilisez et modifiez une suggestion
     
        ![Traduction de l'application](../images/translations-translate.png)
     
     
     ### Relire les textes de l'application AAPS
     
-    * Les relecteurs commencent en choisissant « Proofread » depuis l'écran d'accueil de la langue.
+    * Les relecteurs commencent en choisissant « Proofread » depuis l'écran d'accueil de la langue.
     
        ![Mode relecture de l'application](../images/translations-proofreading-mode.png)
     
@@ -68,7 +68,7 @@ L'approbation est une étape manuelle. En tant qu’organisation à but non lucr
     
     ![Traduction de la documentation](../images/translation_WikiTranslate.png)
     
-    * Une page traduite ne sera pas publiée dans la documentation avant que :
+    * Une page traduite ne sera pas publiée dans la documentation avant que :
     
         1. la traduction est approuvée
     
@@ -89,7 +89,7 @@ L'approbation est une étape manuelle. En tant qu’organisation à but non lucr
 
 Vous traduisez le texte qui représente le lien. Faites bien attention à **ne pas** supprimer le lien, qui est représenté par une paire de balises `<0></0>` (ou par d'autres numéros s'il y a plusieurs liens dans un paragraphe).
 
-Les relecteurs doivent y faire particulièrement attention !
+Les relecteurs doivent y faire particulièrement attention !
 
 ### Relecture (Proofreading)
 
