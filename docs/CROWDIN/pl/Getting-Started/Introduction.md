@@ -252,7 +252,7 @@ Jeśli czujesz, że twój zespół nie wspiera cię w korzystaniu z pętli **AAP
 
 a) System **AAPS** został zaprojektowany PRZEZ pacjentów i ich opiekunów. Został on zaprojektowany z myślą o bezpieczeństwie, ale także na podstawie dogłębnych doświadczeń pacjentów. Na całym świecie jest wiele tysięcy użytkowników **AAPS**. Dlatego prawdopodobnie wśród pacjentów twojej poradni są inne osoby używające pętli OS-AID (niezależnie od tego, czy poradnia o tym wie, czy nie).
 
-b) Niedawne recenzowane wytyczne opublikowane w czołowym międzynarodowym czasopiśmie medycznym [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_ potwierdziły, że pętle OS-AID są **bezpieczne** i **skutecznie poprawiają kontrolę cukrzycy**, w tym czas w zakresie. W czołowych czasopismach, takich jak [Nature](https://doi.org/10.1038/d41586-023-02648-9)_(3)_, regularnie ukazują się artykuły, które pokazują postępy społeczności pętli OS-AID.
+b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)(_1_) has confirmed that OS-AID loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)(_3_) which highlight the progress of the OS-AID looping community.
 
 c) Rozpoczęcie pracy z **AAPS** oznacza _stopniowe_ przejście od używania pompy w „otwartej” pętli, przez zawieszenie przy niskiej glikemii, aż do hybrydowej „zamkniętej” pętli, przez zaliczenie kolejnych zadań. Istnieje zatem ustrukturyzowany program, wymagający od użytkownika wykazania kompetencji na każdym etapie i odpowiedniego dostosowania ich podstawowych ustawień (bazy, współczynnika wrażliwości na insulinę (ISF) i współczynnika insuliny do węglowodanów (ICR)) przed zamknięciem pętli.
 
@@ -264,7 +264,7 @@ f) Jeśli zespół nadal ma poważne zastrzeżenia, przekaż lekarzom wydruki ar
 
 #### Wsparcie dla pętli OS-AID ze strony innych lekarzy
 
-Artykuł opublikowany w [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_)[ (współprowadzony przez Kings’ and Guy’s and St Thomas’ NHS Foundation Trust oraz przez dr. Sufyana Hussaina, konsultanta diabetologa i honorowego starszego wykładowcę z King’s w Londynie) zawiera:
+The paper published in the [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) (co-led by King’s and Guy’s and St Thomas’ NHS Foundation Trust, and co-led by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s in London) provides:
 
 a) **Zapewnienie** dla profesjonalistów, że systemy sztucznej trzustki OS-AID / open-source są „bezpieczną i skuteczną” opcją leczenia cukrzycy typu 1, oraz wskazówki dotyczące zaleceń, rozmów, wsparcia i dokumentacji;
 
