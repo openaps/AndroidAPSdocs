@@ -125,7 +125,7 @@ W **AAPS** v3 **AAPSClient** sterował **AAPS** przez zapisywanie wpisów portal
 W **AAPS** v4 urządzenie opiekuna i główny telefon są raz **parowane**, a każde polecenie jest podpisane. Główny telefon sprawdza i potwierdza każde polecenie, a urządzenie opiekuna może teraz także podać bolus.
 
 - Każde urządzenie opiekuna ma **[rolę](#client-master-control-roles)**, która ogranicza, co może robić.
-- Gdy kontrola z urządzenia opiekuna jest włączona, główny telefon działa w **[trybie silniejszych zabezpieczeń](#client-master-control-hardened-mode)**: leczenie i zmiany wpisane bezpośrednio do Nightscout (na stronie, w innych aplikacjach) nie są już stosowane.
+- Gdy sterowanie z urządzenia opiekuna jest włączone, główny telefon działa w **[trybie silniejszych zabezpieczeń](#client-master-control-hardened-mode)**: leczenie i zmiany wpisane bezpośrednio do Nightscout (na stronie, w innych aplikacjach) nie są już stosowane.
 - Każde urządzenie opiekuna dostaje **[własny token Nightscout](#client-master-control-own-token)** tylko z potrzebnymi uprawnieniami.
 
 ```{admonition} What you need to do
