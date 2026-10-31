@@ -1,6 +1,6 @@
 (generaltroubleshooting)=
 
-# Troubleshooting
+# Resolução de Problemas
 
 **Start here when something is not working.** Troubleshooting information lives on many pages across the documentation. This page brings it together: it is a single collection of links, sorted by topic, to help you solve the most common problems.
 
@@ -34,7 +34,7 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 * [Google Play Protect warning](#transferring-installing-play-protect-warning): the app is reported as unsafe.
 * Installation **blocked** with a message about an unverified developer: see [Android developer verification](#android-developer-verification) for the free installation methods.
 
-### Configurações
+### Definições
 
 * [Profile: "Basal rate is not compatible with the current pump"](#your-aaps-profile-basal-not-compatible)
 * [Pump: "Data is coming from different pump"](#config-builder-wrong-pump-data)
@@ -51,9 +51,9 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 (generaltroubleshooting-bluetooth-related-issues)=
 
 
-## Bluetooth related issues
+## Problemas relacionados com o Bluetooth
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Para problemas conhecidos com ligações Bluetooth, perdas de ligação a bombas/Pods, ou problemas de ativação e de ligação, veja [Problemas relacionados com o Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
