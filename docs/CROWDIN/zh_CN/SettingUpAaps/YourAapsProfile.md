@@ -21,7 +21,7 @@ As part of **AAPS**’ management, users should continually assess and scrutiniz
 :class: note
 **Profiles** vary significantly from person-to-person.
 
-对于基础率（BR）、胰岛素敏感因子（ISF）和碳水系数（IC或ICR），胰岛素需求的绝对值和趋势因个人的生物学特征、性别、年龄、健康状况等因素而异，还受到短期因素如疾病和近期运动的影响。有关此方面的更多指导，Adam Brown的书籍[“亮点与雷区（Brights Spots and Landmines）”](https://diatribe.org/bright-spots-and-landmines/)是一本值得一读的优秀书籍。
+对于基础率（BR）、胰岛素敏感因子（ISF）和碳水系数（IC或ICR），胰岛素需求的绝对值和趋势因个人的生物学特征、性别、年龄、健康状况等因素而异，还受到短期因素如疾病和近期运动的影响。 For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
 
 ```
 
@@ -91,7 +91,7 @@ AAPS以默认基础率为“基线”。如果基础率设置得太高，那么�
 
 ![基础率](../images/Profile_BasalRates.png)
 
-正确设置基础率需要通过反复试验来确定，并且应该与您的糖尿病治疗团队协商进行。
+Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetes team.
 
 There are basal testing methods which usually entails observing your basal rates and insulin needs during an <u>intermittent</u> fasting over a 24-hour period. 虽然你需要测试一整天的基础率，但不建议连续24小时禁食。这是因为身体会触发激素等机制进行补偿。 A recommended way is to fast over 3 different days for a period of 8 hours.
 
@@ -131,7 +131,7 @@ The profile editor only lets you start basal rates on a full hour. A basal rate 
 
 **以mmol/L单位**： 如果你的ISF为1.5，每单位胰岛素将使你的血糖降低约1.5 mmol/L（例如，从8 mmol/L降至6.5 mmol/L）。
 
-从这些例子中你可以看出，**ISF**值<1>越小</1>，你对胰岛素的敏感性就越低。 So if you reduce your ISF from 40 to 35 (mg/dL) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 mmol/L) is weakening your **ISF**.
+从这些例子中你可以看出，**ISF**值<1>越小</1>，你对胰岛素的敏感性就越低。 So if you reduce your ISF from 40 to 35 (mg/dL) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
 
 ### 影响
 
@@ -139,9 +139,9 @@ The profile editor only lets you start basal rates on a full hour. A basal rate 
 
 **较高/较弱的ISF**（即45而不是35）意味着每单位胰岛素降低的BG更多。这会导致循环进行不那么激进/较弱的纠正，**输注较少胰岛素**。如果你的ISF过弱（值较大），这可能导致高血糖。
 
-**示例：**
-* BG为190 mg/dL（10.5 mmol/L），目标为100 mg/dL（5.6 mmol/L）。
-* 因此，你需要纠正`190 - 110 = 90 mg/dL`或`10.5 - 5.6 = 4.9 mmol/L`
+**Example:**
+* **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
+* So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
 * 如果`ISF = 30` -> `90 / 30 = 3`或`ISF = 1.63` -> `4.9 / 1.63 = 3`：3单位胰岛素
 * 如果`ISF = 45` -> `90 / 45 = 2`或`ISF = 2.45` -> `4.9 / 2.45 = 2`：2单位胰岛素
 
@@ -193,7 +193,7 @@ The profile editor only lets you start basal rates on a full hour. A basal rate 
 > 
 > 在使用**ICR（Insulin to Carb Ratio，胰岛素与碳水比例）**时，胰岛素的量是固定的，而碳水化合物的量是变化的。（“一单位胰岛素可以覆盖多少克碳水化合物？”）
 > 
-> 示例：
+> Example:
 > 
 > 面包单位因子（BU = 12g碳水化合物）：2.4 U/BU -> 你吃一个面包单位时需要2.4单位胰岛素。
 > 
