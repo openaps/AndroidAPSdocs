@@ -1,6 +1,6 @@
 # Equil
 
-These instructions are for configuring the Equil insulin pump.
+Tento návod popisuje nastavení inzulínové pumpy Equil.
 
 ```{contents} Table of contents
 :depth: 1
@@ -9,123 +9,123 @@ These instructions are for configuring the Equil insulin pump.
 
 ## Možnosti pumpy s AAPS
 
-* Tubeless patch pump that communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights, and **Prime/Fill** and **Pump battery change** are not offered. Filling, priming and changing the battery are done in the pump wizards.
-* While the pump is suspended or stopped, **AAPS** records a 0 U/h temporary basal, so no basal insulin is counted in IOB.
-* DST and timezone changes must be handled manually.
+* Patch pumpa bez hadičky, která komunikuje s **AAPS** přes vestavěný Bluetooth vašeho telefonu, bez dalšího komunikačního zařízení.
+* **AAPS** považuje Equil za patch pumpu se zásobníkem 200 U: hlavní obrazovka ukazuje stavové kontrolky patch pumpy a volby **Plnění/doplňování** a **Výměna baterie pumpy** se nenabízejí. Plnění, naplnění kanyly a výměna baterie se provádějí v průvodcích pumpy.
+* Když je pumpa pozastavená nebo zastavená, **AAPS** zaznamená dočasný bazál 0 U/h, takže se do IOB nezapočítává žádný bazální inzulín.
+* Letní čas a změny časového pásma musíte řešit ručně.
 
 ## Hardwarové a softwarové požadavky
-* **Compatible Equil hardware**
+* **Kompatibilní hardware Equil**
 
-  Currently Equil 5.3 and 5.4 are supported.
+  Aktuálně jsou podporovány verze Equil 5.3 a 5.4.
 
-* **AAPS** built and installed using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions
+* **AAPS** sestavené a nainstalované podle návodu [Sestavení AAPS](../SettingUpAaps/BuildingAaps.md)
 
 ## Nastavení
 
-### Select Equil pump
+### Výběr pumpy Equil
 
-Open the **menu** (☰) in the top-left corner, choose **[Configuration](#Config-Builder-pump)**, and under **Pump** select **Equil**.
+Otevřete **nabídku** (☰) v levém horním rohu, zvolte **[Konfigurace](#Config-Builder-pump)** a v sekci **Pumpa** vyberte **Equil**.
 
-Once it is selected, the **Equil** card shows two buttons, **Settings** and **Open plugin**:
+Po výběru se na kartě **Equil** zobrazí dvě tlačítka, **Nastavení** a **Otevřít plugin**:
 
-![The Equil plugin selected in Configuration > Pump](../images/v4/Pumps/equil_enabled.png)
+![Plugin Equil vybraný v Konfigurace > Pumpa](../images/v4/Pumps/equil_enabled.png)
 
-**Open plugin** (or **Manage** → **Pump**) opens the Equil pump screen. Before a pump is paired it looks like this:
+**Otevřít plugin** (nebo **Spravovat** → **Pumpa**) otevře obrazovku pumpy Equil. Před spárováním pumpy vypadá takto:
 
-![Equil pump screen before pairing](../images/v4/Pumps/equil_pump_screen.png)
+![Obrazovka pumpy Equil před spárováním](../images/v4/Pumps/equil_pump_screen.png)
 
 ### Nastavení
 
-Open the Equil settings with **Settings** on the **Equil** card, or with the gear icon in the top-right corner of the pump screen.
+Nastavení Equil otevřete tlačítkem **Nastavení** na kartě **Equil** nebo ikonou ozubeného kola v pravém horním rohu obrazovky pumpy.
 
-![Equil driver settings](../images/v4/Pumps/equil_settings.png)
+![Nastavení ovladače Equil](../images/v4/Pumps/equil_settings.png)
 
-* **Low battery alarm**: warns you when the pump battery is low.
-* **Low drug storage alarm**: warns you when the insulin in the reservoir is low.
-* **Alert tone**: how the pump alerts you: **Mute**, **Vibrate only**, **Tone only** or **Vibrate and tone**.
-* **Bolus speed**: how fast a bolus is given: **1.5 U/min (standard)**, **3 U/min**, **6 U/min** or **12 U/min**. A faster bolus may give more occlusion alarms.
+* **Upozornění na nízký stav baterie**: upozorní vás, když je baterie pumpy slabá.
+* **Výstraha nízké hladiny inzulínu**: upozorní vás, když je v zásobníku málo inzulínu.
+* **Typ výstrahy**: jak vás pumpa upozorňuje: **Ztlumit**, **Pouze vibrovat**, **Pouze zvuky** nebo **Vibrace a zvuky**.
+* **Rychlost bolusu**: jak rychle se bolus podá: **1,5 U/min (standardní)**, **3 U/min**, **6 U/min** nebo **12 U/min**. Rychlejší bolus může způsobit více alarmů okluze.
 
-![The Bolus speed choices in the Equil settings](../images/v4/Pumps/equil_bolus_speed.png)
+![Volby rychlosti bolusu v nastavení Equil](../images/v4/Pumps/equil_bolus_speed.png)
 
 ```{admonition} Max basal and max bolus on the patch
 :class: note
-The patch itself refuses any basal rate above a maximum that **AAPS** programs into it. **AAPS** takes the higher of your **max basal** [setting](../SettingUpAaps/Preferences.md) and the highest hourly basal rate in your **Profile**, so the patch always accepts your profile and the temp basals the loop asks for. **AAPS** also sends your maximum allowed bolus to the patch.
+Samotný patch odmítne každou bazální dávku nad maximem, které do něj **AAPS** naprogramuje. **AAPS** vezme vyšší z hodnot: vaše [nastavení](../SettingUpAaps/Preferences.md) **maximální bazální dávky**, nebo nejvyšší hodinovou bazální dávku ve vašem **profilu**, takže patch vždy přijme váš profil i dočasné bazály, které smyčka požaduje. **AAPS** do patche posílá také váš maximální povolený bolus.
 
-When you change your **max basal** or **max bolus**, **AAPS** sends the new values to the patch automatically. They are also sent with every profile switch. There is nothing to set on the patch itself.
+Když změníte **maximální bazální dávku** nebo **maximální bolus**, **AAPS** pošle nové hodnoty do patche automaticky. Posílají se také při každém přepnutí profilu. Na samotném patchi není potřeba nic nastavovat.
 ```
 
-### Pair the pump
+### Spárování pumpy
 
-On the pump screen, press **Pair**. A wizard guides you through each step. Řada teček nahoře ukazuje, jak daleko jste.
+Na obrazovce pumpy stiskněte **Párovat**. Průvodce vás provede každým krokem. Řada teček nahoře ukazuje, jak daleko jste.
 
-If Android asks whether **AAPS** may find and connect to nearby devices, press **Allow**. **AAPS** needs this to find the pump.
+Pokud se Android zeptá, zda smí **AAPS** vyhledávat zařízení v okolí a připojovat se k nim, stiskněte **Povolit**. **AAPS** to potřebuje, aby pumpu našlo.
 
-![Android asking for permission to find nearby devices](../images/Equil/activate1.png)
+![Android žádá o oprávnění vyhledávat zařízení v okolí](../images/Equil/activate1.png)
 
-The wizard has these steps. Press **Next** to move on, or **Cancel** to leave the wizard.
+Průvodce má tyto kroky. Stisknutím **Další** pokračujete, stisknutím **Zrušit** průvodce opustíte.
 
-1. **Profile required**: only shown if you have never activated a **Profile** in **AAPS**. Select the profile to use and press **Activate profile**.
-1. **Assemble pump**: put together the pump, the filled reservoir and the charged battery.
+1. **Vyžadován profil**: zobrazí se jen tehdy, pokud jste v **AAPS** ještě nikdy neaktivovali žádný **profil**. Vyberte profil, který chcete použít, a stiskněte **Aktivovat profil**.
+1. **Sestavit pumpu**: složte dohromady pumpu, naplněný zásobník a nabitou baterii.
 
-   ![Assemble pump step](../images/Equil/activate2.png)
+   ![Krok Sestavit pumpu](../images/Equil/activate2.png)
 
-1. **Find Pump**: **AAPS** scans for nearby Equil pumps. Select your pump from the list.
+1. **Najít pumpu**: **AAPS** vyhledá pumpy Equil v okolí. Vyberte ze seznamu svou pumpu.
 
-   ![Find Pump step with an Equil pump in the list](../images/Equil/find_pump.png)
-1. **Pair device**: you can enter a pairing password in **Set pair password**. It must be 4 characters long, chosen from `ABCDEF0123456789`. Press **Pair**.
+   ![Krok Najít pumpu s pumpou Equil v seznamu](../images/Equil/find_pump.png)
+1. **Spárovat zařízení**: v poli **Nastavit heslo pro párování** můžete zadat heslo pro párování. Musí mít 4 znaky, vybrané z `ABCDEF0123456789`. Stiskněte **Párovat**.
 
-   ![Pair device step with the pairing password](../images/Equil/activate3.png)
+   ![Krok Spárovat zařízení s heslem pro párování](../images/Equil/activate3.png)
 
-1. **Select Insulin**: only shown if you have more than one insulin set up. Select the insulin in the reservoir.
-1. **Prime / Fill**: the pump must **not** be on its base plate. Press **Prime/Fill** and prime the reservoir until there is a drop of insulin on the needle tip. Press **Next**.
+1. **Vybrat inzulín**: zobrazí se jen tehdy, pokud máte nastaveno více než jeden inzulín. Vyberte inzulín, který je v zásobníku.
+1. **Naplnit**: pumpa **nesmí** být na své základně. Stiskněte **Plnění/doplňování** a plňte zásobník, dokud se na špičce jehly neobjeví kapka inzulínu. Stiskněte **Další**.
 
-   ![Prime / Fill step](../images/Equil/prime_fill.png)
-1. **Site Rotation**: only shown if **Manage pump site rotation** is turned on in the site rotation settings. Tap where you will attach the pump, or press **Skip**.
-1. **Attach pump**: attach the pump to its base plate.
+   ![Krok Naplnit](../images/Equil/prime_fill.png)
+1. **Rotace míst aplikace**: zobrazí se jen tehdy, pokud je v nastavení rotace míst aplikace zapnutá volba **Spravovat střídání míst pumpy**. Klepněte na místo, kam pumpu připevníte, nebo stiskněte **Přeskočit**.
+1. **Připojit pumpu**: připevněte pumpu na její základnu.
 
-   ![Attach pump step](../images/Equil/attach_pump.png)
-1. **Prime cannula**: once the pump is on the base plate, press **Purge air** to remove air from the cannula. Press **Next**.
+   ![Krok Připojit pumpu](../images/Equil/attach_pump.png)
+1. **Naplnit kanylu**: když je pumpa na základně, stiskněte **Odstranit vzduch**, aby se z kanyly odstranil vzduch. Stiskněte **Další**.
 
-   ![Prime cannula step with the Purge air button](../images/Equil/prime_cannula.png)
+   ![Krok Naplnit kanylu s tlačítkem Odstranit vzduch](../images/Equil/prime_cannula.png)
 
-1. **Confirm**: put the pump on your body and press **Finish**.
+1. **Potvrdit**: nasaďte si pumpu na tělo a stiskněte **Dokončit**.
 
-   ![Confirm step with the Finish button](../images/Equil/confirm.png)
+   ![Krok Potvrdit s tlačítkem Dokončit](../images/Equil/confirm.png)
 
 ```{warning}
-If you set your own pairing password (recommended for your safety), store it somewhere safe. The password is saved in the pump. The pump asks for it at every new pairing until you unpair it properly in **AAPS**. Until then, the pump also cannot be used with the original handheld controller (PDA).
+Pokud si nastavíte vlastní heslo pro párování (doporučeno kvůli vaší bezpečnosti), uložte si ho na bezpečné místo. Heslo se uloží v pumpě. Pumpa ho vyžaduje při každém novém párování, dokud ji v **AAPS** správně neodpárujete. Do té doby nelze pumpu používat ani s původním ručním ovladačem (PDA).
 ```
 
-### Pump screen after pairing
+### Obrazovka pumpy po spárování
 
-Once the pump is paired, the pump screen shows these buttons:
+Po spárování pumpy ukazuje obrazovka pumpy tato tlačítka:
 
-* **Refresh**: reads the state and the history of the pump now.
-* **Suspend** / **Resume delivery**: stop or restart insulin delivery.
-* **Change reservoir**: guides you through detaching the pump, fitting a new reservoir (and, if needed, a new battery), priming and attaching it again. The first step asks *Will you also put on a new infusion set (base plate and cannula)?*
-  * **Yes, new infusion set**: you choose the site, the cannula is primed, and **AAPS** records an insulin change and a cannula change.
-  * **No, only reservoir or battery**: the cannula is not primed and **AAPS** records only an insulin change.
+* **Obnovit**: hned načte stav a historii pumpy.
+* **Pozastavit** / **Obnovit podávání inzulínu**: zastaví nebo znovu spustí výdej inzulínu.
+* **Vyměnit zásobník**: provede vás odpojením pumpy, vložením nového zásobníku (a v případě potřeby nové baterie), plněním a opětovným připojením. První krok se zeptá: *Budete také aplikovat nový infuzní set (základnu a kanylu)?*
+  * **Ano, nový infuzní set**: zvolíte místo, kanyla se naplní a **AAPS** zaznamená výměnu inzulínu a výměnu kanyly.
+  * **Ne, pouze zásobník nebo baterie**: kanyla se nenaplní a **AAPS** zaznamená jen výměnu inzulínu.
 
-  After a reservoir change the battery level shows **-** until **AAPS** reads it again from the pump.
+  Po výměně zásobníku ukazuje úroveň baterie **-**, dokud ji **AAPS** znovu nenačte z pumpy.
 
-  ![The first step of Change reservoir asks about a new infusion set](../images/Equil/change_reservoir_question.png)
+  ![První krok Vyměnit zásobník se ptá na nový infuzní set](../images/Equil/change_reservoir_question.png)
 
-* **History**: shows the events recorded by the pump.
-* **Unpair device**: guides you through detaching the pump and unpairing it from **AAPS**. This stops insulin delivery, moves the pump plunger back to the bottom, and deletes the pairing.
+* **Historie**: ukazuje události zaznamenané pumpou.
+* **Zrušit párování zařízení**: provede vás odpojením pumpy a zrušením jejího spárování s **AAPS**. Tím se zastaví výdej inzulínu, píst pumpy se vrátí zpět dolů a spárování se smaže.
 
 ### Alarmy
 
-* The low insulin alarm sounds once at each level (10 U, 5 U and 2 U) and when the reservoir is empty. The low battery alarm sounds once at 10% and once at 5%. Each level alarms only once until the next reservoir change.
-* Pump alarms and stops are also recorded as announcements in the treatments, at the time the pump logged them, so you can see later when and why the pump stopped.
-* If the reservoir runs empty during a bolus, **AAPS** records only the insulin given until then and tells you both amounts.
+* Alarm nízkého stavu inzulínu zazní jednou na každé úrovni (10 U, 5 U a 2 U) a když je zásobník prázdný. Alarm slabé baterie zazní jednou při 10 % a jednou při 5 %. Každá úroveň spustí alarm jen jednou až do další výměny zásobníku.
+* Alarmy a zastavení pumpy se také zaznamenají jako oznámení v ošetřeních, s časem, kdy je pumpa zapsala, takže později uvidíte, kdy a proč se pumpa zastavila.
+* Pokud se zásobník během bolusu vyprázdní, **AAPS** zaznamená jen inzulín podaný do té doby a sdělí vám obě množství.
 
 ## Kde získat pomoc
 
-Development of the Equil driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Vývoj ovladače Equil provádí komunita na **dobrovolnické** bázi. Než požádáte o pomoc:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Přečtěte si** příslušnou část této dokumentace a ověřte, jak má funkce fungovat.
+2. **Zeptejte se** na kanálu *#AAPS* na [Discordu](https://discord.gg/4fQUWHZ4Mw) nebo v jiném z [komunitních kanálů](../GettingHelp/WhereCanIGetHelp.md).
+3. **Nahlaste chybu**: prohledejte [existující hlášení (issues)](https://github.com/nightscout/AndroidAPS/issues); pokud tam vaše chyba není, založte [nové hlášení (issue)](https://github.com/nightscout/AndroidAPS/issues) a přiložte své [log soubory](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Když žádáte o pomoc, uveďte značku a model telefonu, verzi Androidu, verzi **AAPS** a jednoduchý popis problému v angličtině (co se změnilo, kdy to naposledy fungovalo).
