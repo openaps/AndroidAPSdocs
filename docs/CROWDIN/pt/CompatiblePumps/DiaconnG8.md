@@ -30,7 +30,7 @@ Depois de selecionado, o cartão **Diaconn G8** mostra dois botões, **Definiç�
 
 ![Ecrã da bomba Diaconn G8 antes do emparelhamento](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
-![image](../images/DiaconnG8/DiaconnG8_04.jpg)
+![imagem](../images/DiaconnG8/DiaconnG8_04.jpg)
 
 ```{admonition} Older screenshot
 :class: note
@@ -47,11 +47,11 @@ A captura de ecrã acima é de uma versão anterior do **AAPS**. No **AAPS** 4, 
 1. Os últimos 5 dígitos do número de série (SN) na parte de trás da bomba.
 2. Prima o botão O > Information > BLE > últimos 5 dígitos.
 
-![image](../images/DiaconnG8/DiaconnG8_06.jpg)
+![imagem](../images/DiaconnG8/DiaconnG8_06.jpg)
 
 - Depois de selecionar a bomba, aparece uma janela a pedir um código PIN. Introduza o número PIN mostrado na bomba para concluir a ligação.
 
- ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
+ ![imagem](../images/DiaconnG8/DiaconnG8_07.jpg)
 
 - Quando aparecer **Emparelhamento bem-sucedido!**, toque em **OK** para voltar ao ecrã da bomba.
 
@@ -61,7 +61,7 @@ A captura de ecrã acima é de uma versão anterior do **AAPS**. No **AAPS** 4, 
 - Toque em **Atualizar** para ligar à bomba, atualizar o estado e sincronizar os registos.
 - Toque em **Histórico da Bomba** para ver o histórico lido da bomba.
 
-![image](../images/DiaconnG8/DiaconnG8_08.jpg)
+![imagem](../images/DiaconnG8/DiaconnG8_08.jpg)
 
 ```{admonition} Older screenshot
 :class: note
@@ -87,15 +87,15 @@ A captura de ecrã acima é de uma versão anterior do **AAPS**. No **AAPS** 4, 
 
 - Mantenha premido o botão Bluetooth no topo durante cerca de 3 segundos.
 
-![image](../images/DiaconnG8/DiaconnG8_11.jpg)
+![imagem](../images/DiaconnG8/DiaconnG8_11.jpg)
 
 - Toque no botão de definições ao lado da bomba de insulina Diaconn G8 emparelhada.
 
-![image](../images/DiaconnG8/DiaconnG8_12.jpg)
+![imagem](../images/DiaconnG8/DiaconnG8_12.jpg)
 
 - Desemparelhe.
 
-![image](../images/DiaconnG8/DiaconnG8_13.jpg)
+![imagem](../images/DiaconnG8/DiaconnG8_13.jpg)
 
 - No **AAPS**, abra o ecrã da bomba (**Gerir** > **Bomba**), toque em **Desemparelhar** e confirme **Repor as informações de emparelhamento?**.
 - Repita o processo de emparelhamento Bluetooth da bomba (ver acima).
