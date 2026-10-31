@@ -1,4 +1,4 @@
-# Transferring and Installing AAPS on your smartphone
+# Μεταφορά και εγκατάσταση του AAPS στο τηλέφωνό σας
 
 Στην προηγούμενη ενότητα, [Δημιουργία του **AAPS**](../SettingUpAaps/BuildingAaps.md), δημιουργήσατε την εφαρμογή **AAPS** (ένα αρχείο .apk) σε έναν υπολογιστή.
 
@@ -13,23 +13,23 @@
 
 ## Εγκατάσταση του AAPS με πάτημα στο αρχείο APK
 
-Σήμερα, εγκαθιστάτε το **AAPS** μεταφέροντας το αρχείο APK στο τηλέφωνό σας και ανοίγοντάς το (με ένα «πάτημα»). Υπάρχουν διάφοροι τρόποι για να μεταφέρετε το αρχείο APK του **AAPS** από τον υπολογιστή σας στο τηλέφωνο. Here we explain two different ways:
+Σήμερα, εγκαθιστάτε το **AAPS** μεταφέροντας το αρχείο APK στο τηλέφωνό σας και ανοίγοντάς το (με ένα «πάτημα»). Υπάρχουν διάφοροι τρόποι για να μεταφέρετε το αρχείο APK του **AAPS** από τον υπολογιστή σας στο τηλέφωνο. Εδώ εξηγούμε δύο διαφορετικούς τρόπους:
 
-* Option 1 -  Use your Google drive (Gdrive)
-* Option 2 -  Use a USB cable
+* Επιλογή 1 -  Χρησιμοποιήστε το Google Drive σας (Gdrive)
+* Επιλογή 2 -  Χρησιμοποιήστε καλώδιο USB
 
-Please note that transfer by email might cause difficulties, and is discouraged.
+Σημειώστε ότι η μεταφορά με email μπορεί να δημιουργήσει προβλήματα και δεν συνιστάται.
 
 ```{admonition} Android developer verification
 :class: warning
 Η Google εισάγει σταδιακά την [επαλήθευση προγραμματιστή Android](#android-developer-verification) από τον Σεπτέμβριο του 2026 (ξεκινά στη Βραζιλία, την Ινδονησία, τη Σιγκαπούρη και την Ταϊλάνδη· σε όλο τον κόσμο το 2027). Όπου εφαρμόζεται, η εγκατάσταση ενός APK με πάτημα στο αρχείο —όπως περιγράφεται και στις δύο επιλογές παρακάτω— μπλοκάρεται. Σε αυτή την περίπτωση, χρησιμοποιήστε έναν από τους [δωρεάν τρόπους εγκατάστασης](#android-developer-verification-free-methods) πιο κάτω σε αυτή τη σελίδα.
 ```
 
-### Option 1. Use Google drive to transfer files
+### Επιλογή 1. Χρησιμοποιήστε το Google Drive για τη μεταφορά αρχείων
 
 Ανοίξτε το [Google.com](https://www.google.com/) στο πρόγραμμα περιήγησης και συνδεθείτε στον λογαριασμό σας Google.
 
-On the right upper side select the Drive app in the Google menu.
+Πάνω δεξιά, στο μενού της Google, επιλέξτε την εφαρμογή Drive.
 
 ![Έναρξη της εφαρμογής Drive](../images/GoogleDriveInWebbrowser.png)
 
@@ -37,11 +37,11 @@ On the right upper side select the Drive app in the Google menu.
 
 ![Ανέβασμα του αρχείου apk με την εφαρμογή Google Drive](../images/GoogleDriveUploadFile.png)
 
-The apk file should now be uploaded on Google Drive.
+Το αρχείο apk θα πρέπει τώρα να έχει ανέβει στο Google Drive.
 
-#### Use the Google Drive app to execute the apk file for installation
+#### Χρησιμοποιήστε την εφαρμογή Google Drive για να ανοίξετε το αρχείο apk και να το εγκαταστήσετε
 
-Switch to your mobile and start the Google Drive app. It is a preinstalled app and can be found where the other Google apps are located or with search for the name of the app.
+Πηγαίνετε στο κινητό σας και ανοίξτε την εφαρμογή Google Drive. Είναι προεγκατεστημένη εφαρμογή και θα τη βρείτε εκεί που βρίσκονται οι άλλες εφαρμογές της Google ή αναζητώντας το όνομα της εφαρμογής.
 
 ![ανοίξτε την εφαρμογή Google Drive](../images/GoogleDriveMobileAPPLaunch.png)
 
@@ -66,13 +66,13 @@ Switch to your mobile and start the Google Drive app. It is a preinstalled app a
 
 Συνεχίστε με τη [ρύθμιση του κυκλώματος AAPS](../SettingUpAaps/SetupWizard.md).
 
-### Option 2. Use a USB cable to transfer files
+### Επιλογή 2. Χρησιμοποιήστε καλώδιο USB για τη μεταφορά αρχείων
 
 Ο δεύτερος τρόπος για να μεταφέρετε το αρχείο apk του AAPS είναι με ένα [καλώδιο USB](https://support.google.com/android/answer/9064445?hl=en).
 
-Transfer the file from its location on your computer to the "downloads" folder on the phone.
+Μεταφέρετε το αρχείο από τη θέση του στον υπολογιστή σας στον φάκελο «downloads» (λήψεις) του τηλεφώνου.
 
-On your phone, you will have to allow installation from unknown sources. Οδηγίες για το πώς γίνεται αυτό θα βρείτε στο διαδίκτυο (_π.χ._ [εδώ](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) ή [εδώ](https://www.androidcentral.com/unknown-sources)).
+Στο τηλέφωνό σας θα πρέπει να επιτρέψετε την εγκατάσταση από άγνωστες πηγές. Οδηγίες για το πώς γίνεται αυτό θα βρείτε στο διαδίκτυο (_π.χ._ [εδώ](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) ή [εδώ](https://www.androidcentral.com/unknown-sources)).
 
 Αφού μεταφέρετε το αρχείο σύροντάς το, ανοίξτε τον φάκελο «Λήψεις» (Downloads) στο τηλέφωνο και πατήστε το αρχείο apk του AAPS:
 
