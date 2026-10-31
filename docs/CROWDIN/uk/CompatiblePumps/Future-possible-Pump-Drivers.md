@@ -1,62 +1,62 @@
-# Future (possible) Pump Drivers
+# Майбутні (можливі) драйвери помп
 
-This is list of some Pumps floating around there, and status of support for them in any of Looping systems and then status in AAPS. On end there is some info, what is required for a pump to be "Loop capable".
+Це список деяких помп, які є на ринку, і стан їхньої підтримки в будь-яких системах петлі, а потім стан в AAPS. Наприкінці є інформація про те, що потрібно, щоб помпа могла працювати в петлі.
 
-    {contents} Table of contents
+    {contents} Зміст
     :depth: 1
     :local: true
 
-## Pumps in AAPS integration phase
+## Помпи на етапі інтеграції в AAPS
 
-**Coming soon:** drivers for these pumps are in development and already running in test builds.
+**Незабаром:** драйвери для цих помп розробляються і вже працюють у тестових збірках.
 
-Omnipod 5 ([Homepage](https://www.omnipod.com/))
+Omnipod 5 ([Вебсайт](https://www.omnipod.com/))
 
-![Omnipod 5 driver in development](../images/future-pumps/omnipod5-driver.png)
+![Драйвер Omnipod 5 у розробці](../images/future-pumps/omnipod5-driver.png)
 
-Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
+Tandem: t:Mobi ([Вебсайт](https://www.tandemdiabetes.com/))
 
-![Tandem t:Mobi driver in development](../images/future-pumps/tandem-mobi-driver.png)
+![Драйвер Tandem t:Mobi у розробці](../images/future-pumps/tandem-mobi-driver.png)
 
-## Pumps that are Loopable
+## Помпи, які можуть працювати в петлі
 
-### Kaleido ([Homepage](https://www.hellokaleido.com/))
+### Kaleido ([Вебсайт](https://www.hellokaleido.com/))
 
-**Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
+**Стан для петлі:** помпа є кандидатом для петлі, але протокол поки невідомий. Виробник не зацікавлений у відкритому коді.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Апаратні вимоги для AAPS:** немає. Схоже, має Bluetooth.
 
-### Tandem: t:slim X3 ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem: t:slim X3 ([Вебсайт](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** Possible future Loop candidate. The hope is that t:slim X3 will allow full control from a phone, which would enable AAPS support, but the timeline and features are still unknown.
+**Стан для петлі:** можливий майбутній кандидат для петлі. Є надія, що t:slim X3 дозволить повне керування з телефону, і тоді AAPS зможе його підтримувати, але терміни і функції поки невідомі.
 
-**Hardware requirement for AAPS:** None. It is expected to be Bluetooth enabled.
+**Апаратні вимоги для AAPS:** немає. Очікується, що він матиме Bluetooth.
 
-**Comments:** Not yet released. t:slim X3 appears to be repeatedly deprioritized on Tandem's roadmap in favour of t:Mobi (including a tubeless version) and Sigi (their patch pump).
+**Коментарі:** Ще не випущено. Схоже, Tandem знову і знову відкладає t:slim X3 у своїх планах на користь t:Mobi (зокрема безтрубкової версії) і Sigi (їхньої патч-помпи).
 
-### Twiist ([Homepage](https://www.twiist.com/))
+### Twiist ([Вебсайт](https://www.twiist.com/))
 
-**Loop status:** Loop candidate.
+**Стан для петлі:** кандидат для петлі.
 
-**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
+**Апаратні вимоги для AAPS:** немає. Має Bluetooth.
 
-### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
+### Інсулінова помпа Willcare ([Вебсайт](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
+**Стан для петлі:** зараз не є кандидатом для петлі, але з нами зв'язалися працівники компанії, і вони зацікавлені доробити помпу для роботи в петлі (наскільки я знаю, зараз бракує лише команд отримання/встановлення профілю).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Апаратні вимоги для AAPS:** немає. Схоже, має Bluetooth.
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+**Коментарі:** Оскільки компанія зацікавлена в інтеграції з AAPS, вона може зробити реалізацію сама.
 
-### Ypsopump ([Homepage](https://www.ypsomed.com/))
+### Ypsopump ([Вебсайт](https://www.ypsomed.com/))
 
-**Loop status:** Loop candidate. The pump's Bluetooth protocol has been reverse-engineered by the community, so communicating with it is possible in principle.
+**Стан для петлі:** кандидат для петлі. Спільнота розшифрувала протокол Bluetooth цієї помпи (reverse engineering), тож зв'язок з нею в принципі можливий.
 
-**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
+**Апаратні вимоги для AAPS:** немає. Має Bluetooth.
 
-**Comments:** The Ypsopump protects its Bluetooth communication with heavy third-party encryption. Working with it is technically demanding, which makes building and maintaining a reliable driver hard. There is no production-ready AAPS driver yet.
+**Коментарі:** Ypsopump захищає свій Bluetooth-зв'язок складним стороннім шифруванням. Працювати з ним технічно складно, тому створити і підтримувати надійний драйвер важко. Готового до використання драйвера AAPS поки немає.
 
-## Pumps no longer sold (companies no longer operating)
+## Помпи, які більше не продаються (компанії більше не працюють)
 
 ### Animas Vibe
 
@@ -66,53 +66,53 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Accu-Chek Insight
 
-**Comments:** End of support March 2025.
+**Коментарі:** Підтримка закінчилася в березні 2025 року.
 
-## Pumps that aren't Loopable
+## Помпи, які не можуть працювати в петлі
 
 ### Medtronic Bluetooth
 
-**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**Коментарі:** Medtronic [відмовилася](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
 
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+### Tandem: t:slim X2 ([Вебсайт](https://www.tandemdiabetes.com/))
 
-**Comments:** The Tandem Bluetooth protocol has been reverse-engineered, but on the t:slim X2 only boluses can be delivered — basal delivery cannot be controlled — so it cannot be used safely for looping. This is unlikely to change unless Tandem allows full control of the X2 from a phone, which would more probably arrive with the t:slim X3 instead.
+**Коментарі:** Протокол Bluetooth Tandem розшифровано, але на t:slim X2 можна вводити лише болюси — базальним введенням керувати не можна — тому її не можна безпечно використовувати в петлі. Це навряд чи зміниться, якщо Tandem не дозволить повне керування X2 з телефону; імовірніше, це з'явиться вже в t:slim X3.
 
 ### Accu-Chek Solo
 
-**Comments:** No community success in communicating with the Solo pump.
+**Коментарі:** Спільноті не вдалося налагодити зв'язок з помпою Solo.
 
-## Requirements for pumps being loopable
+## Вимоги до помп для роботи в петлі
 
-**Prerequisite**
+**Передумова**
 
-- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
-- Protocol is hacked/documented/etc.
+- Помпа повинна підтримувати якийсь вид дистанційного керування. (BT, радіочастотний зв'язок тощо)
+- Протокол зламано / задокументовано тощо.
 
-**Minimal requirement**
+**Мінімальні вимоги**
 
-- Set Temporary Basal Rate
-- Get Status
-- Cancel Temporary Basal Rate
+- Встановити тимчасову базальну швидкість
+- Отримати статус
+- Скасувати тимчасову базальну швидкість
 
-**For oref1(SMB) or Bolusing:**
+**Для oref1 (SMB) або введення болюсів:**
 
-- Set Bolus
+- Встановити болюс
 
-**Good to have**
+**Бажано мати**
 
-- Cancel Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- Скасувати болюс
+- Отримати базальний профіль (майже обов'язково)
+- Встановити базальний профіль (бажано)
+- Читати історію 
 
-**Other (not required but good to have)**
+**Інше (не обов'язково, але бажано)**
 
-- Set Extended Bolus
-- Cancel Extended Bolus
-- Read History
-- Read TDD
+- Встановити подовжений болюс
+- Скасувати подовжений болюс
+- Читати історію
+- Читати TDD (загальну добову дозу)
 
-### Other pumps support
+### Підтримка інших помп
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Якщо ви хочете дізнатися стан підтримки іншої помпи, напишіть нам у Discord.
