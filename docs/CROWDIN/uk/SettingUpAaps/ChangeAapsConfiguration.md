@@ -1,43 +1,43 @@
-# Making changes to your AAPS' configuration
+# Зміна конфігурації AAPS
 
-After you have completed the **[Setup Wizard](../SettingUpAaps/SetupWizard.md)**, you don't need to run the entire Wizard again if you want to only change parts of your **AAPS**' configuration.
+Після того як ви пройшли **[Майстер налаштування](../SettingUpAaps/SetupWizard.md)**, не потрібно запускати весь майстер знову, якщо ви хочете змінити лише частину конфігурації **AAPS**.
 
-There are three routes to change **AAPS**' configuration. As to which route you take, it is simply a matter of convenience or personal preference, as each route leads to the same settings.
+Є три шляхи, щоб змінити конфігурацію **AAPS**. Який шлях вибрати — це лише питання зручності або особистої звички, бо кожен шлях веде до тих самих налаштувань.
 
 These are as follows:
 
-1. The **Configuration** screen,
-2. The **Settings** screen or
-3. A plugin's **Settings**, opened from its category in **Configuration**.
+1. Екран **Конфігурація**,
+2. Екран **Налаштування** або
+3. **Налаштування** плагіна, які відкриваються з його категорії в **Конфігурація**.
 
 Here we explain which option is most convenient for each situation:
 
-## Configuration
+## Налаштування
 
-Open the **menu** (☰) in the top-left corner of the main screen and choose **Configuration**:
+Відкрийте **меню** (☰) у верхньому лівому куті головного екрана й виберіть **Конфігурація**:
 
-![Open Configuration from the top-left menu](../images/v4/Configuration/configuration_menu.png)
+![Відкрийте Конфігурацію з меню вгорі зліва](../images/v4/Configuration/configuration_menu.png)
 
-**Configuration** is used to **choose which plugins are active** — your CGM, pump, APS algorithm, sensitivity detection, synchronization and more, grouped by category. It is the same screen the Setup Wizard configured for you.
+**Конфігурація** служить для того, щоб **вибрати, які плагіни активні**: ваш CGM, помпа, алгоритм APS, визначення чутливості, синхронізація та інше, згруповане за категоріями. Це той самий екран, який для вас налаштував Майстер налаштування.
 
-The documentation of the Configuration screen is available [here](../SettingUpAaps/ConfigBuilder.md).
+Документація до екрана Конфігурація доступна [тут](../SettingUpAaps/ConfigBuilder.md).
 
 ## Налаштування
 
-Tap the **Settings** (gear) icon in the top-right corner of the main screen. This opens the settings of **all enabled plugins in a single place**, grouped into expandable sections:
+Торкніться значка **Налаштування** (шестерня) у верхньому правому куті головного екрана. Відкриються налаштування **усіх увімкнених плагінів в одному місці**, згруповані в розгортувані розділи:
 
-![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
+![Екран Налаштування з розгортуваними розділами](../images/v4/Configuration/settings_overview.png)
 
-This is a good route if you are not really sure where to look for a configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
+Цей шлях добрий, якщо ви не зовсім знаєте, де шукати потрібний параметр. Але він може бути трохи довгим, якщо ви знаєте, що хочете змінити конфігурацію лише одного конкретного плагіна.
 
-The documentation of the settings is available [here](../SettingUpAaps/Preferences.md).
+Документація до налаштувань доступна [тут](../SettingUpAaps/Preferences.md).
 
-## A plugin's Settings
+## Налаштування плагіна
 
-Inside **Configuration**, open a category and tap "**Settings**" underneath the active plugin. You are taken directly to the settings of **that plugin only**:
+У **Конфігурація** відкрийте категорію й торкніться «**Налаштування**» під активним плагіном. Ви відразу потрапите до налаштувань **лише цього плагіна**:
 
-![Settings and Open plugin underneath the active plugin](../images/v4/Configuration/configuration_open_plugin.png)
+![Налаштування та Відкрити плагін під активним плагіном](../images/v4/Configuration/configuration_open_plugin.png)
 
-For example, this is a good route if you know that you want to change the configuration for your pump: open **Configuration → Pump**, then tap "**Settings**" under the selected pump.
+Наприклад, цей шлях добрий, якщо ви знаєте, що хочете змінити конфігурацію вашої помпи: відкрийте **Конфігурація → Помпа**, потім торкніться «**Налаштування**» під вибраною помпою.
 
-This is a "shortcut" to the same settings shown on the general **Settings** screen.
+Це «швидкий шлях» до тих самих налаштувань, що й на загальному екрані **Налаштування**.
