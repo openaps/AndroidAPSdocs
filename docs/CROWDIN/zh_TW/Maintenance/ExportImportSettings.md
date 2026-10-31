@@ -1,6 +1,6 @@
 # 建立和恢復備份
 
-當你在手機上安裝 AAPS 時，它將成為你每日依賴的「醫療設備」。強烈建議針對手機故障、被盜或遺失時有一個緊急備份計畫。因此，事先準備是必要的，問自己：「如果...怎麼辦？」
+當你在手機上安裝 AAPS 時，它將成為你每日依賴的「醫療設備」。強烈建議針對手機故障、被盜或遺失時有一個緊急備份計畫。 Therefore, it is essential to prepare by asking yourself: "What if?"
 
 要將你的 AAPS 設定恢復到現有或新手機，重要的是將以下項目保存在安全的地方（也就是說：不能放在你的手機上）。最佳做法是保留至少兩份獨立備份：一份在本機硬碟、USB 隨身碟，並且（建議）再放一份在雲端儲存空間，例如 Google Drive 或 Microsoft 365 OneDrive。將備份存放在雲端後，你就能隨時隨地從手機讀取所有所需資訊，以便在任何地點、任何時間還原你的設定。
 
@@ -104,7 +104,7 @@ For doing automating settings exports [(**see Automation**)](../DailyLifeWithAap
 
 你現在可以將[自動化](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)配置為定期匯出設定（_例如_每週），或在pod變更後進行匯出。
 
-_**注意：**在匯入設定時，用戶始終需要輸入 AAPS 密碼！_
+_**Note:** On importing settings, the user always needs to enter the AAPS master password!_
 
 ![Settings > Maintenance > Unattended Settings Export with the Enable automated settings export switch](../images/Maintenance/settings_unattended_export.png)
 
@@ -147,7 +147,7 @@ By default, an import leaves your pump settings alone: the pump selected in **Co
 
 3. 退出安裝嚮導。 We will be importing all the necessary settings from the back-up copy of **Settings**
 
-4. From the **AAPS** main screen select Request and allow on all permissions listed in red on the top
+4. From the **AAPS** main screen press **Grant** and allow all permissions listed in the **Permissions Required** panel on the top
 
 5. From the **AAPS** main screen, set the master password in [Settings > Protection](#Preferences-master-password) to the same password as you used with your back-ups.
 
