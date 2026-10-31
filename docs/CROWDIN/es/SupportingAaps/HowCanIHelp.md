@@ -2,7 +2,7 @@
 
 ## AAPS funciona solo con el trabajo de voluntarios y no tiene personal pagado.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to develop and improve a solution to a very common want. Los desarrolladores donan su tiempo libre gratis, pero no es justo esperar que además paguen costes extra para hacer algo tan increíble de código abierto y gratis para todos.
+Los desarrolladores son padres, madres, cuidadores, familiares y personas con diabetes que trabajan juntos para desarrollar y mejorar una solución a una necesidad muy común. Los desarrolladores donan su tiempo libre gratis, pero no es justo esperar que además paguen costes extra para hacer algo tan increíble de código abierto y gratis para todos.
 
 *Para probar bien un nuevo sistema, los desarrolladores necesitan un teléfono y una bomba de repuesto, porque no se puede usar en una persona hasta que sea estable. Los modelos nuevos necesitan pruebas cuando salen al mercado. Parte del dinero donado también es necesario para los costes de envío de estos materiales entre países hasta los desarrolladores. A veces también es bueno ayudar con los costes de los desarrolladores para que salgan de sus habitaciones oscuras y se reúnan en conferencias y eventos, donde sus mentes creativas y analíticas pueden intercambiar ideas.*
 
