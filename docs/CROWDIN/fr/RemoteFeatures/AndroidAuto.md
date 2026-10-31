@@ -6,10 +6,10 @@
 
 **AAPS** utilise une fonction d'Android Auto qui permet d'envoyer les messages des applications du téléphone vers l'écran d'Android Auto dans la voiture.
 
-Cela veut dire que :
+Cela veut dire que :
 
 * Android doit autoriser **AAPS** à afficher des notifications et
-* Comme **AAPS** n'est pas une application officielle, autorisez les « sources inconnues » dans Android Auto.
+* Comme **AAPS** n'est pas une application officielle, autorisez les « sources inconnues » dans Android Auto.
 
 ![Données MGC AAPS sur Android Auto](../images/android_auto_01.png)
 
@@ -23,19 +23,19 @@ Sur votre téléphone, ouvrez **Paramètres** > **Applications** > **AAPS** > **
 
 ![Toutes les notifications AAPS activées](../images/android_auto_notifications_all.png)
 
-Faites défiler vers le bas et vérifiez que **État en cours** est activé : c'est le canal de la notification d'état.
+Faites défiler vers le bas et vérifiez que **État en cours** est activé : c'est le canal de la notification d'état.
 
 ![Canal de notification État en cours activé](../images/android_auto_ongoing_channel.png)
 
-Vérifiez maintenant que vous voyez la notification d'état d'**AAPS** sur le téléphone avant d'aller à votre voiture !
+Vérifiez maintenant que vous voyez la notification d'état d'**AAPS** sur le téléphone avant d'aller à votre voiture !
 
 ![Notification AAPS sur le téléphone](../images/android_auto_04.png)
 
 (androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
-## Autoriser les « sources inconnues » dans Android Auto
+## Autoriser les « sources inconnues » dans Android Auto
 
-Comme **AAPS** n'est pas une application officielle pour Android Auto, les notifications doivent être activées pour les « sources inconnues » dans Android Auto. Cela se fait avec le mode développeur, que nous allons vous montrer ici.
+Comme **AAPS** n'est pas une application officielle pour Android Auto, les notifications doivent être activées pour les « sources inconnues » dans Android Auto. Cela se fait avec le mode développeur, que nous allons vous montrer ici.
 
 Allez dans votre voiture et connectez votre téléphone au système audio de la voiture.
 
@@ -63,7 +63,7 @@ Confirmez que vous voulez activer le mode développeur dans la fenêtre « Allow
 
 ![Activer le mode développeur](../images/android_auto_09.png)
 
-Dans les **paramètres pour les développeurs**, activez « Sources inconnues » (Unknown sources).
+Dans les **paramètres pour les développeurs**, activez « Sources inconnues » (Unknown sources).
 
 ![Activer le mode développeur](../images/android_auto_10.png)
 
@@ -75,12 +75,12 @@ Dans Android Auto, dans votre voiture, appuyez sur l'**icône avec un nombre** e
 
 ![icône avec un nombre - Android Auto dans la voiture](../images/android_auto_11.png)
 
-Vos données MGC seront affichées comme ceci :
+Vos données MGC seront affichées comme ceci :
 
 ![Données MGC AAPS sur Android Auto](../images/android_auto_01.png)
 
 (android-auto-troubleshooting)=
 
-## Résolution de problèmes :
+## Dépannage :
 
 * Si vous ne voyez pas la notification, vérifiez que vous avez [autorisé AAPS à afficher des notifications](#androidauto-check-that-aaps-can-show-notifications) dans Android et qu'[Android Auto a accès aux notifications](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
