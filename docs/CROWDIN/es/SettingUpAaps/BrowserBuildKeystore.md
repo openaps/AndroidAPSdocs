@@ -1,82 +1,82 @@
 (aaps-ci-preparation)=
 
-# Browser build – Step 2: Create your signing keystore
+# Compilación en el navegador – Paso 2: crear tu almacén de claves de firma
 
 ```{note}
-This is **Step 2** of the [Browser build](BrowserBuild.md). First complete [Step 1 – Create your GitHub fork](BrowserBuildFork.md).
+Este es el **Paso 2** de la [Compilación en el navegador](BrowserBuild.md). Primero completa el [Paso 1 – Crear tu fork de GitHub](BrowserBuildFork.md).
 ```
 
-AndroidAPS must be signed with private keys stored in a **Java KeyStore (JKS)**. This is the most important decision of the whole process, because it determines whether you will be able to **upgrade** AAPS later without reinstalling.
+AndroidAPS debe estar firmado con claves privadas guardadas en un **almacén de claves Java (JKS, Java KeyStore)**. Esta es la decisión más importante de todo el proceso, porque determina si más adelante podrás **actualizar** AAPS sin reinstalarlo.
 
 ```{note}
-In the next steps you will store private information (your keystore, and later your Google Drive access) inside GitHub as **secrets**. A secret is simply an encrypted value that only your own build can read – nobody else, not even people looking at your fork, can see it. This is what keeps your build yours.
+En los próximos pasos guardarás información privada (tu almacén de claves y, más adelante, tu acceso a Google Drive) dentro de GitHub como **secretos** (secrets). Un secreto es simplemente un valor cifrado que solo tu propia compilación puede leer: nadie más puede verlo, ni siquiera las personas que miran tu fork. Así tu compilación sigue siendo solo tuya.
 ```
 
-## Choose your keystore strategy
+## Elige tu opción de almacén de claves
 
-Read both options and pick the one that matches your situation.
+Lee las dos opciones y elige la que corresponde a tu situación.
 
-### Option 1 – Generate a new keystore (new users)
+### Opción 1 – Generar un nuevo almacén de claves (usuarios nuevos)
 
-Choose this if **any** of these is true:
+Elige esta opción si **cualquiera** de estas frases es cierta:
 
-- This is your **first time** building AAPS.
-- You don't have a keystore from a previous Android Studio (computer) build.
-- You have forgotten your keystore password or alias.
+- Es la **primera vez** que compilas AAPS.
+- No tienes un almacén de claves de una compilación anterior con Android Studio (en el ordenador).
+- Has olvidado la contraseña o el alias de tu almacén de claves.
 
 ```{warning}
-Building AAPS with **Option 1** creates a brand-new keystore, so it **will not allow you to upgrade your existing AAPS** in place. To move to this new build you must export your settings, uninstall the old AAPS, install the new one and import your settings again. Follow the steps in [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Compilar AAPS con la **Opción 1** crea un almacén de claves totalmente nuevo, así que **no te permitirá actualizar tu AAPS actual** sin reinstalarlo. Para pasar a esta nueva compilación debes exportar tus ajustes, desinstalar el AAPS antiguo, instalar el nuevo e importar tus ajustes otra vez. Sigue los pasos de [Reinstalar AAPS con un nuevo almacén de claves](#reinstall-aaps).
 ```
 
-**→ [Continue with Option 1 – Generate a new keystore](BrowserBuildO1.md)**
+**→ [Continuar con la Opción 1 – Generar un nuevo almacén de claves](BrowserBuildO1.md)**
 
-### Option 2 – Upload your existing keystore (existing / past users)
+### Opción 2 – Subir tu almacén de claves existente (usuarios actuales o anteriores)
 
-Choose this if you **already have** the `.jks` keystore you used on a previous build of AAPS from a computer in Android Studio, **and** you know its password and alias (usually `key0`).
+Elige esta opción si **ya tienes** el almacén de claves `.jks` que usaste en una compilación anterior de AAPS en un ordenador con Android Studio, **y** conoces su contraseña y su alias (normalmente `key0`).
 
-This keeps your current AAPS install upgradeable: future updates will use the same keystore.
+Así tu instalación actual de AAPS se puede seguir actualizando: las próximas actualizaciones usarán el mismo almacén de claves.
 
-**→ [Continue with Option 2 – Upload your existing keystore](BrowserBuildO2.md)**
+**→ [Continuar con la Opción 2 – Subir tu almacén de claves existente](BrowserBuildO2.md)**
 
 ----
 
 ```{note}
-On the next page you will pick your device (computer or iPhone). Each device page then walks you through downloading and opening the preparation file the right way for that device, and creating your keystore. The built AAPS app will be saved in your Google Drive.
+En la siguiente página elegirás tu dispositivo (ordenador o iPhone). Después, cada página de dispositivo te guía para descargar y abrir el archivo de preparación de la forma correcta para ese dispositivo, y para crear tu almacén de claves. La app AAPS compilada se guardará en tu Google Drive.
 ```
 
-**Next: choose [Option 1](BrowserBuildO1.md) or [Option 2](BrowserBuildO2.md) above, then follow the page for your device.**
+**Siguiente: elige la [Opción 1](BrowserBuildO1.md) o la [Opción 2](BrowserBuildO2.md) de arriba y luego sigue la página de tu dispositivo.**
 
 ----
 
 (ci-keystore-export)=
 
-## Export your keystore (optional)
+## Exportar tu almacén de claves (opcional)
 
-If you want to export your stored keystore, use this method.
+Si quieres exportar tu almacén de claves guardado, usa este método.
 
-This script will export your previously configured keystore information (from Option 1 or Option 2) as a password-protected ZIP file to the `/AAPS/KeyStore` directory in your Google Drive.
+Este script exportará la información de tu almacén de claves ya configurado (de la Opción 1 o de la Opción 2) como un archivo ZIP protegido con contraseña a la carpeta `/AAPS/KeyStore` de tu Google Drive.
 
 ```{warning}
-Before using this export method, make sure your keystore and Google Drive settings have been completed.
+Antes de usar este método de exportación, asegúrate de que has terminado la configuración del almacén de claves y de Google Drive.
 ```
 
-### Steps:
+### Pasos:
 
-1. **Add ZIP Password Secret:**
-   - Go to your repository's **Settings** → **Secrets and variables** → **Actions**
-   - Click **New repository secret**
-   - In the **Name** field, enter: `ZIP_PASSWORD`
-   - In the **Secret** field, enter your custom ZIP encryption password
-   - Use only English letters and numbers for the password (no special symbols)
-   - Click **Add secret**
+1. **Añadir el secreto con la contraseña del ZIP:**
+   - Ve a **Settings** → **Secrets and variables** → **Actions** de tu repositorio
+   - Haz clic en **New repository secret**
+   - En el campo **Name**, escribe: `ZIP_PASSWORD`
+   - En el campo **Secret**, escribe tu propia contraseña para cifrar el ZIP
+   - Usa solo letras inglesas (sin tildes ni ñ) y números en la contraseña (sin símbolos especiales)
+   - Haz clic en **Add secret**
 
    ![aaps_ci_zip_password.png](../images/Building-the-App/CI/aaps_ci_zip_password.png)
 
-2. **Run Export Workflow:**
-   - Go to the **Actions** tab in your repository
-   - Select **CI KeyStore Export**
-   - Click **Run workflow**
-   - The exported keystore ZIP file will be saved to your Google Drive
+2. **Ejecutar el workflow de exportación:**
+   - Ve a la pestaña **Actions** de tu repositorio
+   - Selecciona **CI KeyStore Export**
+   - Haz clic en **Run workflow**
+   - El archivo ZIP con el almacén de claves exportado se guardará en tu Google Drive
 
    ![aaps_ci_keystore_export.png](../images/Building-the-App/CI/aaps_ci_keystore_export.png)
 
@@ -85,6 +85,6 @@ Before using this export method, make sure your keystore and Google Drive settin
 ```{toctree}
 :hidden:
 
-Option 1 – Generate a new keystore <BrowserBuildO1.md>
-Option 2 – Upload your existing keystore <BrowserBuildO2.md>
+Opción 1 – Generar un nuevo almacén de claves <BrowserBuildO1.md>
+Opción 2 – Subir tu almacén de claves existente <BrowserBuildO2.md>
 ```
