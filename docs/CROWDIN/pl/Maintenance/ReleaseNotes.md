@@ -263,7 +263,7 @@ Release date: 31-12-2025
 ### UI/UX Improvements
 * various improvemnts @MilosKozak @Philoul @olorinmaia
 
-### Automation
+### Automatyzacja
 * New SMB control action - enable/disable SMB via automation @MilosKozak
 
 ### Testing
