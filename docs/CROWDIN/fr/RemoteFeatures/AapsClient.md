@@ -80,7 +80,7 @@ Le maître décide ce que ce téléphone peut faire avec son **[rôle](#client-m
 
 L'écran d'accueil du client reflète la boucle suivie :
 
-![AAPSClient home screen](../images/v4/AapsClient/aapsclient_home.png)
+![Écran d'accueil d'AAPSClient](../images/v4/AapsClient/aapsclient_home.png)
 
 - **Glycémie, graphiques, IA/GA et profil** viennent de Nightscout, tels que le maître les a envoyés.
 - L'**état de la boucle** affiché est celui du **maître** (un client n'a pas de boucle propre). Tant que le client n'a pas reçu de Nightscout le mode de fonctionnement du maître, la puce du mode de fonctionnement affiche un **point d'interrogation** (inconnu).
