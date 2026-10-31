@@ -1,17 +1,17 @@
 (aapsclient-app)=
-# The AAPSClient app
+# Η εφαρμογή AAPSClient
 
-**AAPSClient** is the accessory app of **AAPS**: a companion app for a second phone — typically a caregiver's — that **follows** the person using **AAPS**. From **AAPS** version 4, the caregiver can also **control** the loop remotely through signed commands. Both phones communicate through your **Nightscout** site; no direct connection between the phones is needed.
+Το **AAPSClient** είναι η βοηθητική εφαρμογή του **AAPS**: μια συνοδευτική εφαρμογή για ένα δεύτερο τηλέφωνο — συνήθως του φροντιστή — που **παρακολουθεί** το άτομο που χρησιμοποιεί το **AAPS**. Από την έκδοση 4 του **AAPS**, ο φροντιστής μπορεί επίσης να **ελέγχει** το κύκλωμα από απόσταση με υπογεγραμμένες εντολές. Τα δύο τηλέφωνα επικοινωνούν μέσω του ιστότοπου **Nightscout** σας. Δεν χρειάζεται απευθείας σύνδεση μεταξύ των τηλεφώνων.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Client** = a phone running **AAPSClient**.
-- **Master** = the main **AAPS** phone that owns the pump and runs the loop.
+- **Client** (πελάτης) = ένα τηλέφωνο με το **AAPSClient**.
+- **Master** (κύρια συσκευή) = το κύριο τηλέφωνο με το **AAPS**, που ελέγχει την αντλία και εκτελεί το κύκλωμα.
 ```
 
 ```{admonition} iPhone version in development
 :class: note
-**AAPSClient** currently runs on Android phones. An iPhone version of **AAPSClient** is being developed and is in early testing. It is not released yet: there is no App Store listing and nothing to download. This page will be updated when it becomes available.
+Το **AAPSClient** λειτουργεί προς το παρόν σε τηλέφωνα Android. Μια έκδοση του **AAPSClient** για iPhone αναπτύσσεται και είναι σε πρώιμες δοκιμές. Δεν έχει κυκλοφορήσει ακόμα: δεν υπάρχει στο App Store και δεν υπάρχει τίποτα για λήψη. Αυτή η σελίδα θα ενημερωθεί όταν γίνει διαθέσιμη.
 ```
 
 ```{contents} Table of contents
@@ -19,100 +19,100 @@
 :local: true
 ```
 
-## What AAPSClient is (and is not)
+## Τι είναι (και τι δεν είναι) το AAPSClient
 
-**AAPSClient** looks and feels like **AAPS**, but it has **no loop of its own**:
+Το **AAPSClient** μοιάζει με το **AAPS** στην εμφάνιση και στη χρήση, αλλά **δεν έχει δικό του κύκλωμα**:
 
-- It contains **no APS algorithm**, no **Objectives**, and **no pump drivers** — it never doses on its own.
-- The plugins used only by the main app (**SMS Communicator**, **Tidepool**, **Open Humans**) are not included either.
-- What it *does* contain: **NSClientV3** synchronization, the BG-source plugins, **xDrip+** broadcasting, and the **Wear OS** / **Garmin** connectors — everything needed to follow and to relay commands. A **Garmin** watch connected to a client can show the data, but carbs it sends are not entered and it cannot connect or disconnect the pump: the client shows a message, and you enter them in **AAPS** instead.
+- Δεν περιέχει **αλγόριθμο APS**, ούτε **Βήματα**, ούτε **οδηγούς αντλιών** — δεν χορηγεί ποτέ ινσουλίνη μόνο του.
+- Δεν περιλαμβάνονται επίσης τα πρόσθετα που χρησιμοποιεί μόνο η κύρια εφαρμογή (**Επικοινωνία με SMS**, **Tidepool**, **Open Humans**).
+- Τι *περιέχει*: συγχρονισμό **NSClientV3**, τα πρόσθετα πηγής BG, εκπομπή δεδομένων στο **xDrip+** και τις συνδέσεις για **Wear OS** / **Garmin** — όλα όσα χρειάζονται για την παρακολούθηση και για τη μεταβίβαση εντολών. Ένα ρολόι **Garmin** συνδεδεμένο σε έναν πελάτη μπορεί να δείχνει τα δεδομένα, αλλά οι υδατάνθρακες που στέλνει δεν καταχωρίζονται και δεν μπορεί να συνδέσει ή να αποσυνδέσει την αντλία: ο πελάτης δείχνει ένα μήνυμα, και τα καταχωρίζετε στο **AAPS**.
 
-Everything you trigger from **AAPSClient** is checked, capped, confirmed and **executed by the master** (the phone with the pump). The dedicated [Master ↔ Client control](ClientMasterControl.md) page explains how this works: how to pair the two phones, how the master writes the confirmation text you see, how a bolus started on the client is delivered, and what happens when the master is offline.
+Ό,τι ξεκινάτε από το **AAPSClient** ελέγχεται, περιορίζεται στα όρια, επιβεβαιώνεται και **εκτελείται από την κύρια συσκευή** (το τηλέφωνο με την αντλία). Η ειδική σελίδα [Έλεγχος Master ↔ Client](ClientMasterControl.md) εξηγεί πώς λειτουργεί αυτό: πώς κάνετε σύζευξη των δύο τηλεφώνων, πώς η κύρια συσκευή γράφει το κείμενο επιβεβαίωσης που βλέπετε, πώς χορηγείται ένα bolus που ξεκίνησε στον πελάτη, και τι γίνεται όταν η κύρια συσκευή είναι εκτός σύνδεσης.
 
-## Versions: AAPSClient, AAPSClient2 and AAPSClient3
+## Εκδόσεις: AAPSClient, AAPSClient2 και AAPSClient3
 
-Up to three client apps can be installed side by side on the same follower phone, each following a **different** person: **AAPSClient** (yellow owl icon), **AAPSClient2** (blue owl) and — new in **AAPS** version 4 — **AAPSClient3** (green owl). They are functionally identical. Only the name and the color differ (app icon, widget background and the status section on the home screen), so you can tell them apart. Each app is paired with its own master. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions) for details.
+Μέχρι τρεις εφαρμογές πελάτη μπορούν να εγκατασταθούν δίπλα-δίπλα στο ίδιο τηλέφωνο ακολούθου, και η καθεμία παρακολουθεί ένα **διαφορετικό** άτομο: **AAPSClient** (εικονίδιο κίτρινης κουκουβάγιας), **AAPSClient2** (μπλε κουκουβάγια) και — νέο στην έκδοση 4 του **AAPS** — **AAPSClient3** (πράσινη κουκουβάγια). Λειτουργούν ακριβώς με τον ίδιο τρόπο. Διαφέρουν μόνο στο όνομα και στο χρώμα (εικονίδιο εφαρμογής, φόντο του widget και ενότητα κατάστασης στην αρχική οθόνη), ώστε να τις ξεχωρίζετε. Κάθε εφαρμογή έχει σύζευξη με τη δική της κύρια συσκευή. Δείτε [Σχετικά με τα AAPSClient, AAPSClient2 και AAPSClient3](#remotecontrol-aapsclient-versions) για λεπτομέρειες.
 
-## Getting the app
+## Πώς να αποκτήσετε την εφαρμογή
 
-**AAPSClient** is obtained the same way as **AAPS** — see [Download and installation of AAPSClient](#RemoteControl_aapsclient), and install it like the main app ([Transferring and installing](../SettingUpAaps/TransferringAndInstallingAaps.md)).
+Το **AAPSClient** το αποκτάτε με τον ίδιο τρόπο όπως το **AAPS** — δείτε [Λήψη και εγκατάσταση του AAPSClient](#RemoteControl_aapsclient) — και το εγκαθιστάτε όπως την κύρια εφαρμογή ([Μεταφορά και εγκατάσταση](../SettingUpAaps/TransferringAndInstallingAaps.md)).
 
-## First start: a shorter Setup Wizard
+## Πρώτη εκκίνηση: ένας συντομότερος Οδηγός εγκατάστασης
 
-On first start **AAPSClient** runs the same **Setup Wizard** you know from **AAPS**, but with far fewer steps — there is no profile, insulin, pump, APS or objectives configuration on a follower:
+Στην πρώτη εκκίνηση το **AAPSClient** εκτελεί τον ίδιο **Οδηγό εγκατάστασης** που ξέρετε από το **AAPS**, αλλά με πολύ λιγότερα βήματα — σε έναν ακόλουθο δεν ρυθμίζετε προφίλ, ινσουλίνη, αντλία, APS ή Βήματα:
 
-1. **Welcome**, **license agreement**, **permissions** and **master password** — identical to the main app, see the [AAPS Setup Wizard](../SettingUpAaps/SetupWizard.md).
-2. The client does **not** ask for **units** or the **low/high marks**: it takes them from the main phone as soon as it is connected to Nightscout. You can see them later in **Settings**, where a small **phone icon** shows that they are [synchronized with the main phone](#client-master-config-prefs). They can only be edited while the master is reachable.
-3. **Set up from the master** — on the master, open **Manage → Authorized clients**, add this phone with a **QR code** and tap **Scan the QR code** here. One scan sets up Nightscout with a token of this phone's own and, with a code that pairs, also pairs the phone. The phone also takes the name it was added with on the master as its instance name (letters with accents become plain letters, "Miloš" becomes "Milos"). **After the scan, the setup is finished**: the wizard closes, because the next steps would only show what the code did. Without a QR code, skip this step. (Android only: the scanner is not available on iOS yet.)
+1. **Καλώς ήρθατε**, **άδεια χρήσης**, **Άδειες** και **Κύριος κωδικός** — ίδια με την κύρια εφαρμογή, δείτε [Οδηγός εγκατάστασης του AAPS](../SettingUpAaps/SetupWizard.md).
+2. Ο πελάτης **δεν** ζητά **Μονάδες** ή το **χαμηλό/υψηλό σημείο**: τα παίρνει από το κύριο τηλέφωνο μόλις συνδεθεί στο Nightscout. Μπορείτε να τα δείτε αργότερα στις **Ρυθμίσεις**, όπου ένα μικρό **εικονίδιο τηλεφώνου** δείχνει ότι [συγχρονίζονται με το κύριο τηλέφωνο](#client-master-config-prefs). Μπορείτε να τα αλλάξετε μόνο όταν η κύρια συσκευή είναι προσβάσιμη.
+3. **Ρύθμιση από την κύρια συσκευή** — στην κύρια συσκευή, ανοίξτε **Διαχείριση → Εξουσιοδοτημένοι πελάτες**, προσθέστε αυτό το τηλέφωνο με **κωδικό QR** και πατήστε εδώ **Σάρωση του κωδικού QR**. Μία σάρωση ρυθμίζει το Nightscout με ένα δικό του token για αυτό το τηλέφωνο και, αν ο κωδικός περιέχει σύζευξη, κάνει και τη σύζευξη του τηλεφώνου. Το τηλέφωνο παίρνει επίσης ως όνομα εγκατάστασης το όνομα με το οποίο προστέθηκε στην κύρια συσκευή (τα γράμματα με τόνους ή σημεία γίνονται απλά γράμματα: το «Miloš» γίνεται «Milos»). **Μετά τη σάρωση, η ρύθμιση έχει τελειώσει**: ο οδηγός κλείνει, γιατί τα επόμενα βήματα θα έδειχναν μόνο αυτό που έκανε ήδη ο κωδικός. Χωρίς κωδικό QR, παραλείψτε αυτό το βήμα. (Μόνο Android: ο σαρωτής δεν είναι ακόμα διαθέσιμος στο iOS.)
 
-   ![The Set up from the master step with the Scan the QR code button](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+   ![Το βήμα Ρύθμιση από την κύρια συσκευή με το κουμπί Σάρωση του κωδικού QR](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **Communication** — the plugin list only offers what a follower needs (NSClientV3, xDrip+, Wear, External Companion Apps, Garmin). If you did not scan a QR code, enable **NSClientV3** and enter the **same Nightscout URL** as on the main phone and an access token, with **websockets** enabled — exactly as described in [Synchronization](#RemoteControl_aapsclient).
+4. **Επικοινωνία** — η λίστα προσθέτων δείχνει μόνο ό,τι χρειάζεται ένας ακόλουθος (NSClientV3, xDrip+, Wear, Εξωτερικές συνοδευτικές εφαρμογές, Garmin). Αν δεν σαρώσατε κωδικό QR, ενεργοποιήστε το **NSClientV3** και εισάγετε την **ίδια Διεύθυνση Nightscout** όπως στο κύριο τηλέφωνο και ένα διακριτικό πρόσβασης (access token), με ενεργοποιημένα τα **websockets** — ακριβώς όπως περιγράφεται στο [Συγχρονισμός](#RemoteControl_aapsclient).
 
-   ![Communication step on the client](../images/v4/AapsClient/aapsclient_wizard_communication.png)
+   ![Το βήμα Επικοινωνία στον πελάτη](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
-5. **Pair with master** — this step exists **only** on the client. It connects this device to the master over the secure command channel, with the PIN, and takes the name the phone was added with on the master, like the QR code. **After the pairing, the setup is finished.** You can also skip it and pair at any time later from **Manage → Pair with master**.
+5. **Σύζευξη με κύρια συσκευή** — αυτό το βήμα υπάρχει **μόνο** στον πελάτη. Συνδέει αυτή τη συσκευή με την κύρια συσκευή μέσω του ασφαλούς καναλιού εντολών, με το PIN, και παίρνει το όνομα με το οποίο προστέθηκε το τηλέφωνο στην κύρια συσκευή, όπως και με τον κωδικό QR. **Μετά τη σύζευξη, η ρύθμιση έχει τελειώσει.** Μπορείτε επίσης να το παραλείψετε και να κάνετε τη σύζευξη αργότερα, οποιαδήποτε στιγμή, από **Διαχείριση → Σύζευξη με κύρια συσκευή**.
 
-   ![Pair with master step in the client wizard](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
+   ![Το βήμα Σύζευξη με κύρια συσκευή στον οδηγό του πελάτη](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
 
-6. **Who is using this phone?** — only when you did not pair in the wizard: the name of the person using this phone. It tells this instance apart in reports and synchronization.
+6. **Ποιος χρησιμοποιεί αυτό το τηλέφωνο;** — μόνο αν δεν κάνατε σύζευξη στον οδηγό: το όνομα του ατόμου που χρησιμοποιεί αυτό το τηλέφωνο. Ξεχωρίζει αυτή την εγκατάσταση στις αναφορές και στον συγχρονισμό.
 
 (aapsclient-pairing-with-the-master)=
 
-## Pairing with the master
+## Σύζευξη με την κύρια συσκευή
 
-On the **master**, open **Manage → Authorized clients** and add a client. There are two ways to pair:
+Στην **κύρια συσκευή**, ανοίξτε **Διαχείριση → Εξουσιοδοτημένοι πελάτες** και προσθέστε έναν πελάτη. Υπάρχουν δύο τρόποι σύζευξης:
 
-- **With a QR code** (the quickest, if the phone has a camera): scan the code in the wizard step "**Set up from the master**" or from **Manage → Pair with master → Scan QR code**, and confirm with "**Use**". It sets up Nightscout too.
-- **With the PIN**: on the **client**, open the wizard step above (or **Manage → Pair with master**), type the one-time PIN shown on the master and press "**Pair**". The client then shows who it is about to trust — confirm with "**Pair**":
+- **Με κωδικό QR** (ο πιο γρήγορος, αν το τηλέφωνο έχει κάμερα): σαρώστε τον κωδικό στο βήμα του οδηγού «**Ρύθμιση από την κύρια συσκευή**» ή από **Διαχείριση → Σύζευξη με κύρια συσκευή → Σάρωση κωδικού QR**, και επιβεβαιώστε με «**Χρήση**». Ρυθμίζει και το Nightscout.
+- **Με το PIN**: στον **πελάτη**, ανοίξτε το παραπάνω βήμα του οδηγού (ή **Διαχείριση → Σύζευξη με κύρια συσκευή**), γράψτε το PIN μίας χρήσης που δείχνει η κύρια συσκευή και πατήστε «**Σύζευξη**». Ο πελάτης δείχνει τότε ποια συσκευή πρόκειται να εμπιστευτεί — επιβεβαιώστε με «**Σύζευξη**»:
 
-![Confirmation on the client before completing the pairing](../images/v4/AapsClient/aapsclient_pair_confirm.png)
+![Επιβεβαίωση στον πελάτη πριν ολοκληρωθεί η σύζευξη](../images/v4/AapsClient/aapsclient_pair_confirm.png)
 
-From the wizard, a successful pairing finishes the setup and opens the home screen. On the master the client appears as **Active** in the [Authorized clients](#client_master_master_setup) list. Afterwards, **Manage → Pair with master** shows "*Already paired*", the phone's role and whether hardened mode is on:
+Από τον οδηγό, μια επιτυχημένη σύζευξη ολοκληρώνει τη ρύθμιση και ανοίγει την αρχική οθόνη. Στην κύρια συσκευή ο πελάτης εμφανίζεται ως **Ενεργός** στη λίστα [Εξουσιοδοτημένοι πελάτες](#client_master_master_setup). Μετά, το **Διαχείριση → Σύζευξη με κύρια συσκευή** δείχνει «*Υπάρχει ήδη σύζευξη*», τον ρόλο του τηλεφώνου και αν η ενισχυμένη λειτουργία είναι ενεργή:
 
-![Manage → Pair with master on a paired client: Already paired, Role: Caregiver, Hardened mode on](../images/v4/ClientMaster/pair_with_master_client.png) The full pairing procedure, security details and troubleshooting are on [Master ↔ Client control](#client_master_client_setup).
+![Διαχείριση → Σύζευξη με κύρια συσκευή σε πελάτη με σύζευξη: Υπάρχει ήδη σύζευξη, Ρόλος: Φροντιστής, Ενισχυμένη λειτουργία ενεργή](../images/v4/ClientMaster/pair_with_master_client.png) Η πλήρης διαδικασία σύζευξης, οι λεπτομέρειες ασφαλείας και η αντιμετώπιση προβλημάτων βρίσκονται στη σελίδα [Έλεγχος Master ↔ Client](#client_master_client_setup).
 
-After pairing, the client gets a Nightscout token of its own from the master (if the master has an admin token), with only the rights a client needs, and stops using the token you may have entered. **AAPSClient** never writes treatments or BG to Nightscout itself: everything it does is sent to the master, which writes it. See [The client's own Nightscout token](#client-master-control-own-token).
+Μετά τη σύζευξη, ο πελάτης παίρνει από την κύρια συσκευή ένα δικό του token Nightscout (αν η κύρια συσκευή έχει admin token), μόνο με τα δικαιώματα που χρειάζεται ένας πελάτης, και σταματά να χρησιμοποιεί το token που ίσως είχατε εισάγει. Το **AAPSClient** δεν γράφει ποτέ το ίδιο θεραπείες ή BG στο Nightscout: ό,τι κάνει στέλνεται στην κύρια συσκευή, που το γράφει. Δείτε [Το δικό του διακριτικό Nightscout του πελάτη](#client-master-control-own-token).
 
-The master decides what this phone may do with its **[role](#client-master-control-roles)** (Read-only, Meals, Caregiver or Admin). **Manage → Pair with master** shows the phone's role.
+Η κύρια συσκευή αποφασίζει τι μπορεί να κάνει αυτό το τηλέφωνο με τον **[ρόλο](#client-master-control-roles)** του (Μόνο ανάγνωση, Γεύματα, Φροντιστής ή Διαχειριστής). Το **Διαχείριση → Σύζευξη με κύρια συσκευή** δείχνει τον ρόλο του τηλεφώνου.
 
-## The home screen
+## Η αρχική οθόνη
 
-The client's home screen mirrors the followed loop:
+Η αρχική οθόνη του πελάτη δείχνει το κύκλωμα που παρακολουθεί:
 
-![AAPSClient home screen](../images/v4/AapsClient/aapsclient_home.png)
+![Αρχική οθόνη του AAPSClient](../images/v4/AapsClient/aapsclient_home.png)
 
-- **BG, graphs, IOB/COB and profile** come from Nightscout, just as the master uploaded them.
-- The **loop status** shown is the **master's** (a client has no loop of its own). Until the client has received the master's running mode from Nightscout, the running mode chip shows a **question mark** (unknown).
-- The **status card** shows the **followed pump's** reservoir and battery and the uploader battery, taken from the Nightscout device status — a client has no pump, so there is no local pump status and no pump management anywhere in the app.
-- The bottom bar offers **Treatments**, **Scenes** and **Manage** once the client is paired (only **Manage** before pairing) — there are no pump or objectives tabs.
+- **BG, γραφήματα, IOB/COB και προφίλ** έρχονται από το Nightscout, όπως ακριβώς τα ανέβασε η κύρια συσκευή.
+- Η **κατάσταση κυκλώματος** που φαίνεται είναι **της κύριας συσκευής** (ένας πελάτης δεν έχει δικό του κύκλωμα). Μέχρι ο πελάτης να λάβει από το Nightscout τον τρόπο λειτουργίας της κύριας συσκευής, η ένδειξη τρόπου λειτουργίας δείχνει ένα **ερωτηματικό** (άγνωστο).
+- Η **κάρτα κατάστασης** δείχνει τη δεξαμενή και την μπαταρία της **αντλίας που παρακολουθείται** και την μπαταρία του uploader, από την κατάσταση συσκευής (device status) του Nightscout — ένας πελάτης δεν έχει αντλία, οπότε δεν υπάρχει τοπική κατάσταση αντλίας ούτε διαχείριση αντλίας πουθενά στην εφαρμογή.
+- Η κάτω γραμμή δίνει **Θεραπείες**, **Σενάρια** και **Διαχείριση** μόλις ο πελάτης έχει σύζευξη (μόνο **Διαχείριση** πριν από τη σύζευξη) — δεν υπάρχουν καρτέλες για αντλία ή Βήματα.
 
-## Treatments and actions
+## Θεραπείες και ενέργειες
 
-Everything under **Manage** works like on the main app, with one important difference: on a client, actions that would change therapy (bolus, carbs, temp targets, scenes…) are **hidden until the device is paired**, and once paired they are **relayed to the master** for confirmation and execution — see [Using remote control](#client-master-control).
+Όλα στη **Διαχείριση** λειτουργούν όπως στην κύρια εφαρμογή, με μία σημαντική διαφορά: σε έναν πελάτη, οι ενέργειες που θα άλλαζαν τη θεραπεία (bolus, υδατάνθρακες, προσωρινοί στόχοι, σενάρια…) είναι **κρυμμένες μέχρι να γίνει σύζευξη της συσκευής**, και μετά τη σύζευξη **μεταβιβάζονται στην κύρια συσκευή** για επιβεβαίωση και εκτέλεση — δείτε [Χρήση του απομακρυσμένου ελέγχου](#client-master-control).
 
-The **Profile** entry is the exception: it is shown even on an **unpaired** client, but opens **view-only** — the client shows the profiles it receives through Nightscout (it needs them for its own calculations), without edit or activate buttons. Once the client is **paired**, the profile list is synchronized with the master and you can edit and activate profiles from the client like any other remote action.
+Η εξαίρεση είναι το **Προφίλ**: φαίνεται ακόμα και σε πελάτη **χωρίς σύζευξη**, αλλά ανοίγει **μόνο για προβολή** — ο πελάτης δείχνει τα προφίλ που λαμβάνει μέσω του Nightscout (τα χρειάζεται για τους δικούς του υπολογισμούς), χωρίς κουμπιά επεξεργασίας ή ενεργοποίησης. Μόλις ο πελάτης έχει **σύζευξη**, η λίστα προφίλ συγχρονίζεται με την κύρια συσκευή και μπορείτε να επεξεργάζεστε και να ενεργοποιείτε προφίλ από τον πελάτη, όπως κάθε άλλη απομακρυσμένη ενέργεια.
 
-On an **unpaired** client, **Manage** only offers **Profile** and **Pair with master**:
+Σε πελάτη **χωρίς σύζευξη**, η **Διαχείριση** δίνει μόνο **Προφίλ** και **Σύζευξη με κύρια συσκευή**:
 
-![The Manage screen on an unpaired client: only Profile and Pair with master](../images/v4/AapsClient/aapsclient_manage_unpaired.png)
+![Η οθόνη Διαχείριση σε πελάτη χωρίς σύζευξη: μόνο Προφίλ και Σύζευξη με κύρια συσκευή](../images/v4/AapsClient/aapsclient_manage_unpaired.png)
 
-The red banner "*Master device unreachable. Editing is disabled until the connection is restored.*" also appears on an unpaired client. This is expected: there is no master to reach yet. The banner disappears once the client is paired and the master is online.
+Το κόκκινο πλαίσιο «*Η κύρια συσκευή δεν είναι προσβάσιμη. Η επεξεργασία είναι απενεργοποιημένη μέχρι να αποκατασταθεί η σύνδεση.*» εμφανίζεται και σε πελάτη χωρίς σύζευξη. Αυτό είναι αναμενόμενο: δεν υπάρχει ακόμα κύρια συσκευή για σύνδεση. Το πλαίσιο εξαφανίζεται μόλις ο πελάτης έχει σύζευξη και η κύρια συσκευή είναι συνδεδεμένη.
 
-Once the client is paired, the therapy actions appear:
+Μόλις ο πελάτης έχει σύζευξη, εμφανίζονται οι ενέργειες θεραπείας:
 
-![The Manage screen on a paired client, including the Pair with master entry](../images/v4/AapsClient/aapsclient_manage.png)
+![Η οθόνη Διαχείριση σε πελάτη με σύζευξη, μαζί με την καταχώριση Σύζευξη με κύρια συσκευή](../images/v4/AapsClient/aapsclient_manage.png)
 
-There is **no Pump entry** — a client has no pump.
+Δεν υπάρχει **καταχώριση Αντλία** — ένας πελάτης δεν έχει αντλία.
 
-If the master is not reachable, the same banner appears on a paired client: the therapy actions are greyed out, and anything you try is blocked before it is sent. The client notices that the master is offline when you try an action, and re-enables the actions once the master is back online.
+Αν η κύρια συσκευή δεν είναι προσβάσιμη, το ίδιο πλαίσιο εμφανίζεται και σε πελάτη με σύζευξη: οι ενέργειες θεραπείας είναι γκριζαρισμένες, και ό,τι δοκιμάσετε μπλοκάρεται πριν σταλεί. Ο πελάτης καταλαβαίνει ότι η κύρια συσκευή είναι εκτός σύνδεσης όταν δοκιμάσετε μια ενέργεια, και ενεργοποιεί ξανά τις ενέργειες μόλις η κύρια συσκευή συνδεθεί ξανά.
 
-![The Manage screen on a paired client while the master is offline: actions greyed out under the banner](../images/v4/AapsClient/aapsclient_manage_master_offline.png)
+![Η οθόνη Διαχείριση σε πελάτη με σύζευξη, όταν η κύρια συσκευή είναι εκτός σύνδεσης: ενέργειες γκριζαρισμένες κάτω από το πλαίσιο](../images/v4/AapsClient/aapsclient_manage_master_offline.png)
 
-## Settings synchronized with the master
+## Ρυθμίσεις που συγχρονίζονται με την κύρια συσκευή
 
-The active plugin **configuration** and many **preferences** are kept in sync between the master and its paired clients; synced items are marked with a small **phone icon** and are disabled (with a "*Master device unreachable*" banner) while the master cannot be reached. This is described in [Changing configuration and preferences](#client-master-config-prefs).
+Η ενεργή **διαμόρφωση** προσθέτων και πολλές **προτιμήσεις** μένουν συγχρονισμένες μεταξύ της κύριας συσκευής και των πελατών της με σύζευξη. Τα συγχρονισμένα στοιχεία έχουν ένα μικρό **εικονίδιο τηλεφώνου** και είναι απενεργοποιημένα (με το πλαίσιο «*Η κύρια συσκευή δεν είναι προσβάσιμη*») όσο η κύρια συσκευή δεν είναι προσβάσιμη. Αυτό περιγράφεται στο [Αλλαγή διαμόρφωσης και προτιμήσεων](#client-master-config-prefs).
 
-## AAPSClient on a smartwatch
+## Το AAPSClient σε έξυπνο ρολόι
 
-A Wear OS watch can be paired with the **client** phone; its actions are relayed through the client to the master. See [Wear OS](../WearOS/WearOsSmartwatch.md) and the [smartwatch options in Remote control](#RemoteControl_smartwatches).
+Ένα ρολόι Wear OS μπορεί να συνδεθεί με το τηλέφωνο του **πελάτη**. Οι ενέργειές του μεταβιβάζονται μέσω του πελάτη στην κύρια συσκευή. Δείτε [Wear OS](../WearOS/WearOsSmartwatch.md) και τις [επιλογές για έξυπνα ρολόγια στον Απομακρυσμένο έλεγχο](#RemoteControl_smartwatches).
