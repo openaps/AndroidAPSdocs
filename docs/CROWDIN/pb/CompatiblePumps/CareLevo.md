@@ -16,22 +16,22 @@ The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the *
 
 ## Pump capabilities with AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
+* Comunica-se com o **AAPS** pelo Bluetooth do próprio celular, sem um dispositivo de comunicação adicional.
 * Bolus in steps of 0.05 U.
 * Basal rates from 0.05 U/h to 15 U/h in steps of 0.05 U/h, with 30-minute basal segments.
 * Temporary basal rates set as an absolute rate, up to 12 hours.
 * Extended bolus up to 8 hours.
-* DST and timezone changes must be handled manually. The patch notifies you when the time zone changes.
+* As mudanças de horário de verão e de fuso horário devem ser feitas manualmente. The patch notifies you when the time zone changes.
 
 ## Pump Setup
 
-1. Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
+1. Abra o **menu** (☰) no canto superior esquerdo da tela principal do **AAPS** e selecione **Configuração**.
 1. Select **Carelevo** in the Pump section.
-1. Press the Back key to return to the main screen.
+1. Pressione a tecla Voltar para retornar à tela principal.
 
 ![The Carelevo plugin selected in Configuration > Pump](../images/v4/Pumps/carelevo_enabled.png)
 
-## Settings
+## Configurações
 
 Open the pump screen with **Manage → Pump** (or **Configuration → Pump → Open plugin**).
 
@@ -49,7 +49,7 @@ The patch notifies you when it has been worn for the chosen number of hours, so 
 
 ### Patch Info Alarm
 
-When this is on, the patch beeps when a bolus, extended bolus or temporary basal starts and when it ends. The default is off.
+Quando esta opção está ligada, o patch emite um bipe quando um bólus, um bólus estendido ou uma basal temporária começa e quando termina. O padrão é desligado.
 
 ## The pump screen
 
@@ -84,7 +84,7 @@ Fill the patch with 50 to 300 U, considering how long you will wear it. Press **
 1. Press the power button of the patch for more than one second. After the beep, tap **Search Patch**.
 1. When the patch found is the right one, tap **Confirm**. Tap **Rescan** if it is not.
 
-### Safety check
+### Verificação de segurança
 
 Once the patch is connected, press **Safety Check**. The patch tests itself and primes. Check that a droplet of insulin has formed at the needle tip. If no droplet is visible, press **Retry**. When the check is complete, press **Next**.
 
