@@ -828,12 +828,7 @@ Pod 通訊裝置的設定。請在幫浦畫面上按下 **配對 RileyLink** 按
 
 主畫面[狀態列](#screens-sensor-level-battery)中的**胰島素**與**套管**使用時間，會在**每次更換 Pod 後**重設為 0 天 0 小時。這是根據 Omnipod 幫浦的設計和運作方式所設。每個 Pod 內都包含 **幫浦電池** 和 **胰島素儲液器**。由於 Pod 直接將套管插入應用 Pod 的皮膚上，因此 Omnipod 幫浦不使用傳統的管路。*因此，在更換 Pod 後，這些數值的時間將自動重置為零。* **幫浦電池時間** 不會被報告，因為 Pod 中的電池壽命始終比 Pod 的最大壽命（80 小時）長。
 
-![操作_分頁](../images/omnipod/Actions_Tab.png)
-
-```{admonition} Older screenshot
-:class: note
-上方的螢幕截圖來自較早期的 **AAPS** 版本，當時這些使用時間顯示在 **操作（ACT）** 分頁的 **照護入口** 區段。在 **AAPS** 4 中，這些資訊會顯示在主畫面的狀態列。
-```
+![Expanded status panel of a patch pump: cannula and insulin ages at 0h after a pod change, no pump battery row](../images/omnipod/Actions_Tab.png)
 
 ### 層級
 
