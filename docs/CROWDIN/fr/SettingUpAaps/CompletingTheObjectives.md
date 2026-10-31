@@ -110,7 +110,7 @@ Dans l'**Objectif 5**, vous allez commencer à comprendre comment les recommanda
 
 Temps estimé pour compléter cet objectif : **7 jours**.
 
-This **Objective** requires you to determine and set your “Maximum basal rate” (max-basal) value as described in [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). Cette valeur peut être réglée dans [Paramètres → OpenAPS SMB](#Preferences-openaps-smb-settings). En [mode simple](#preferences-simple-mode), **AAPS** règle cette valeur automatiquement et vous n'avez pas besoin de la modifier. Si vous utilisez encore une pompe virtuelle, vérifiez que ce paramètre de sécurité est réglé à la fois dans **AAPS** et dans votre pompe à insuline.
+Cet **Objectif** vous demande de déterminer et de régler votre valeur de « Débit de base maximum » (max-basal), comme décrit dans [Fonctionnalités OpenAPS](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). Cette valeur peut être réglée dans [Paramètres → OpenAPS SMB](#Preferences-openaps-smb-settings). En [mode simple](#preferences-simple-mode), **AAPS** règle cette valeur automatiquement et vous n'avez pas besoin de la modifier. Si vous utilisez encore une pompe virtuelle, vérifiez que ce paramètre de sécurité est réglé à la fois dans **AAPS** et dans votre pompe à insuline.
 
 Vous pouvez régler la [cible de glycémie de votre **Profil**](#profile-glucose-targets) plus haut que d'habitude, jusqu'à ce que vous soyez à l'aise avec les calculs et les paramètres d'**AAPS**. Vous pouvez essayer de régler la **cible de glycémie** de votre **Profil** dans une plage plus étroite (par exemple 1 mmol/l [20 mg/dl] de large ou moins) et observer le résultat.
 
