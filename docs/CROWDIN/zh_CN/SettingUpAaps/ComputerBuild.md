@@ -92,7 +92,7 @@ If you run into difficulties in the process of building the **AAPS** app, there 
 
 在本指南中，您将看到构建**AAPS** apk文件的_示例_截图。由于我们用于构建**AAPS** apk的软件**Android Studio**会定期更新，这些截图可能与您的安装界面不完全一致，但您仍然可以按照它们进行操作。
 
-**Android Studio**可在Windows、Mac OS X和Linux平台上运行，因此不同平台的步骤可能会存在细微差异。
+Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
 
 (install-git-if-you-dont-have-it)=
 ### Git安装步骤
@@ -100,7 +100,7 @@ If you run into difficulties in the process of building the **AAPS** app, there 
 ```{admonition} Why Git? 
 :class: 下拉菜单（dropdown？）
 Git是一个“_版本控制系统_”（VCS）。\
-Git是一个程序，允许您跟踪代码中的更改并与他人协作。您将使用Git从GitHub网站将**AAPS**源代码的副本复制到您的本地计算机。然后，您将在计算机上使用Git来构建**AAPS**应用程序（apk）。 
+Git是一个程序，允许您跟踪代码中的更改并与他人协作。您将使用Git从GitHub网站将**AAPS**源代码的副本复制到您的本地计算机。 Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
@@ -138,8 +138,8 @@ Android Studio 是一个运行在计算机上的程序。 Android Studio允许�
 安装Android Studio时最重要的一点就是**要有耐心！**在安装和设置过程中，Android Studio会下载大量内容，这需要一些时间。
 
 ```{admonition} Different UI
-:class:警告
-重要提示：Android Studio在最近的版本中更改了其用户界面。 This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
+:class: warning
+Important note: Android Studio changed its UI during the last releases. This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
 ```
 
 Android Studio版本至关重要。请参考[前文说明](#Building-APK-recommended-specification-of-computer-for-building-apk-file)选择合适的Android Studio版本。
@@ -154,7 +154,7 @@ Android Studio版本至关重要。请参考[前文说明](#Building-APK-recomme
 
 ![欢迎来到Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-If you want to save hard disk space, your you can uncheck Android Virtual Device: it is not used for building **AAPS**.
+If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
 
 ![选择组件](../images/Building-the-App/012_InstallLadybug.png)
 
@@ -310,7 +310,7 @@ Android Studio可能会建议更新Gradle系统。不要更新Gradle！ 这会�
 
 If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error, you can either
 * 手动输入你[之前](#BuildingAaps-steps-for-installing-git)保存的路径，要么
-* 点击文件夹图标（1），然后手动导航到之前[已安装](#BuildingAaps-steps-for-installing-git)**git.exe**的目录。
+* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
 * 使用Test按钮验证你的设置！
 
   ![Git not found](../images/Building-the-App/039_GitTestError.png)
@@ -352,7 +352,7 @@ If you want to create the apk for your watch, you now need to select AndroidAPS.
 ```{admonition} INFORMATION!
 :class: note
 You will only need to create the keystore once.
-如果您之前已经构建过AAPS，请不要创建新的keystore，而是选择您现有的keystore并输入其密码！
+If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
 ```
 
 **_注意：_** keystore是一个文件，用于存储签名应用的信息。它是加密的，并且信息通过密码保护。
