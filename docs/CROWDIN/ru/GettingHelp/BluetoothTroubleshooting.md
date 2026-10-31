@@ -19,11 +19,11 @@
 
 ## Оптимизация энергопотребления Bluetooth-устройств
 
-В новых версиях Android для системных Bluetooth-приложений включена оптимизация энергопотребления. Известно, что это может вызывать проблемы с Bluetooth помпами и НМГ.
+Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. Известно, что это может вызывать проблемы с Bluetooth помпами и НМГ.
 
-Если вы следовали инструкциям [Мастера установки](../SettingUpAaps/SetupWizard) и выполнили настройки из раздела [Оптимизация энергопотребления Bluetooth](#setup-wizard-bluetooth-battery-optimisation), то этот параметр должен быть установлен правильно. Однако если вы следовали более ранней версии этого руководства, возможно, вы не меняли этот параметр.
+If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard.md) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide it's possible you have not changed this setting.
 
-Убедитесь в правильности этой настройки если ваша помпа или НМГ регулярно отключается.
+Verify this is correctly configured if you have pump and CGM disconnections.
 
 ---
 
@@ -33,7 +33,7 @@
 
 Android allows you to control what each app is able to do or access on your phone via a permission model. For each app installed you can choose to allow or deny specific permissions, e.g. access files on the device, access to Bluetooth, scan for nearby devices etc.
 
-**AAPS** requires a number of specific permission to function, one which is required ensure that Pods work is the "Nearby devices" permission. There are many other applications which also require this permission, the community is finding that a number of applications when they are granted this permission can cause issues with activating new Pods on some devices.
+**AAPS** requires a number of specific permissions to function, one which is required to ensure that Pods work is the "Nearby devices" permission. There are many other applications which also require this permission, the community is finding that a number of applications when they are granted this permission can cause issues with activating new Pods on some devices.
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
@@ -50,16 +50,16 @@ Android allows you to control what each app is able to do or access on your phon
 
 - **Amazon Alexa**  Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IOT devices
 
-- **MINI app**  Appears the app is based on myBMW app and might mirror it's behavior as a result
+- **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
 
 - **BM2** Solar Battery Monitoring app, used in a some camper van and camping solar setups, when the app is running it prevented activation of a new Pod. Force Stopping the app while activating an new pod is a workaround to the issue. Running the app after that didn't appear to interfere with Dash functionality (On a Pixel 8 Pro running A16).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
 ### How to revoke "Nearby device" permissions for other apps:
-Если у вас возникли проблемы с активацией нового пода и вы используете правильную, поддерживаемую версию **AAPS**, совместимую с вашей версией Android. На время активации нового пода может потребоваться отозвать разрешения у других приложений.
+If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android, it may be necessary to revoke the permission for other apps while activating a new Pod.
 
-Выполните следующую инструкцию для отзыва разрешения "Устройства поблизости" для всех приложений кроме **AAPS**:
+Follow this procedure to revoke the "Nearby device" permission for all apps except **AAPS**:
 
 ```{admonition} Menus and settings
 :class: note
