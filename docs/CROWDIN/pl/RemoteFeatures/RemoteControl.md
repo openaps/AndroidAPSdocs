@@ -46,7 +46,7 @@ Aby pobrać **AAPSClient**, przejdź do [repozytorium GitHub](https://github.com
 
 ![image](../images/remote_control_and_following/AAPSClient_download_02.png)
 
-Następnie przejdź do folderu _pobrane_ na komputerze. W Windows folder pobranych plików pokaże się na pasku po prawej stronie:
+Następnie przejdź do folderu _pobrane_ na komputerze. On Windows, _downloads_ will show in the right hand ribbon:
 
 ![image](../images/remote_control_and_following/AAPSClient_download_folder_03.png)
 
@@ -62,7 +62,7 @@ Ta sama zasada obowiązuje, gdy instalujesz kilka aplikacji opiekuna (**AAPSClie
 
 ### Synchronizacja: konfiguracja AAPSClient i AAPS
 
-Po zainstalowaniu apk __AAPSClient__ na telefonie opiekuna upewnij się, że **NSClientV3** jest ustawiony tak samo na obu telefonach dla Nightscout 15 (zobacz [informacje o aktualizacji](../Maintenance/UpdateToNewVersion)). Poniższy przykład pokazuje konfigurację synchronizacji z NSClientV3 i Nightscout 15. W __AAPS__ dostępne są też inne źródła danych (np. xDrip).
+Once the __AAPSClient__ apk is installed on the follower phone, make sure **NSClientV3** is set up the same way on both phones for Nightscout 15 (see the [update notes](../Maintenance/UpdateToNewVersion.md)). Poniższy przykład pokazuje konfigurację synchronizacji z NSClientV3 i Nightscout 15. W __AAPS__ dostępne są też inne źródła danych (np. xDrip).
 
 W **Konfiguracja** > **Komunikacja** użytkownik synchronizuje swoje dane z Nightscout przez __NSClientV3__ (używając API v3), ustawiony tak samo w __AAPS__ i na telefonie opiekuna.
 
@@ -241,7 +241,7 @@ W skrócie, ze smartwatcha możesz uruchomić te funkcje:
 
 * użyć kalkulatora bolusa (parametry obliczeń możesz ustawić w ustawieniach na telefonie)
 
-* podać wirtualne węgle (eCarbs)
+* podać eCarbs
 
 * podać bolus (insulina + węglowodany)
 
@@ -279,7 +279,7 @@ b)  użytkownik nie chce wpisywać kodu uwierzytelniającego (wymaganego przy po
 
 Smartwatch potrzebuje **Wear OS 3 lub nowszego**, aby móc sterować **AAPS**. Sprawdź specyfikację techniczną zegarka i zobacz stronę [Smartwatche i AAPS](../Getting-Started/Watches.md). Jeśli nie masz pewności, poszukaj informacji lub zapytaj w grupach **AAPS**  na Facebooku/Discordzie.
 
-Poniżej znajdziesz instrukcje konfiguracji **AAPS** na popularnym [Samsung Galaxy Watch 4 (40 mm). Popularnym wyborem jest też zegarek [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0). Jeśli masz doświadczenie z konfiguracją innego smartwatcha i uważasz, że przyda się innym, dodaj je do tych stron ([edytuj dokumentację](../SupportingAaps/HowToEditTheDocs.md)), aby podzielić się wiedzą z całą społecznością **AAPS**.
+Specific How-to guides for setting up **AAPS** on the popular Samsung Galaxy Watch 4 (40mm) are given below. Popularnym wyborem jest też zegarek [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0). Jeśli masz doświadczenie z konfiguracją innego smartwatcha i uważasz, że przyda się innym, dodaj je do tych stron ([edytuj dokumentację](../SupportingAaps/HowToEditTheDocs.md)), aby podzielić się wiedzą z całą społecznością **AAPS**.
 
 ### Opcja 3) AAPSClient na zegarku do zdalnego sterowania **AAPS** na telefonie
 
