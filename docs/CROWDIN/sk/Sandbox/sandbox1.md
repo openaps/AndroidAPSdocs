@@ -16,7 +16,7 @@ Na ceste je nebezpečenstvo.
 
 Test pre nastavenie
 
-„Číslo 42 je v knihe Stopárov sprievodca po Galaxii od Douglasa Adamsa ‚Odpoveď na základnú otázku života, vesmíru a vôbec‘, ktorú počas 7,5 milióna rokov vypočítal obrovský superpočítač Hlbina myslenia (Deep Thought).“ - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
+"The number 42 is, in The Hitchhiker's Guide to the Galaxy by Douglas Adams, the "Answer to the Ultimate Question of Life, the Universe, and Everything," calculated by an enormous supercomputer named Deep Thought over a period of 7.5 million years." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
 
 Toto je interný testovací súbor (sandbox) pre tím dokumentácie na testovanie
 
