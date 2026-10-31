@@ -21,7 +21,7 @@ Gradle Sync peut échouer pour différentes raisons. Quand vous recevez un messa
 :local: true
 ```
 
-*Important*: Après avoir suivi les instructions pour votre problème spécifique, vous devez déclencher la [synchronisation gradle](#gradle-resync) à nouveau.
+*Important* : Après avoir suivi les instructions pour votre problème spécifique, vous devez déclencher la [synchronisation gradle](#gradle-resync) à nouveau.
 
 (troubleshooting_androidstudio-uncommitted-changes)=
 ### Uncommitted changes
@@ -72,16 +72,16 @@ Clone sources again as described in wiki and do not allow gradle update
   * Redémarrer Android Studio.
 
 (troubleshooting-android-studio-check-for-uncommitted-changes)=
-#### Étape 2 : Vérifier les modifications non commitées.
+#### Étape 2 : Vérifier les modifications non commitées.
 
-  * Dans Android Studio, ouvrez l'onglet « Commit » (1) sur le côté gauche. ![Onglet de commit : changements non commités](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
+  * Dans Android Studio, ouvrez l'onglet « Commit » (1) sur le côté gauche. ![Onglet de commit : changements non commités](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
   * Vous pouvez voir soit « Changes » (appelé « Default changeset » dans les anciennes versions d'Android Studio) (2), soit « Unversioned Files » (3) :
 
     * Pour « Changes », vous avez probablement mis à jour « Gradle » ou modifié par erreur le contenu de certains fichiers.
 
     * Faites un clic droit sur « Changes » et sélectionnez « Rollback… » (1)
 
-      ![Onglet de commit : Restaurer les modifications](../images/studioTroubleshooting/05_CommitTabRollback.png)
+      ![Onglet de commit : Restaurer les modifications](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
     * Les fichiers sont récupérés à nouveau depuis le serveur Git. S'il n'y a pas d'autres changements dans l'onglet commit, allez à l'[étape 3](#gradle-resync).
 
@@ -94,7 +94,7 @@ Clone sources again as described in wiki and do not allow gradle update
       S'il n'y a pas d'autres changements dans l'onglet Commit, allez à l'[étape 3](#gradle-resync).
 
 
-#### Étape 3 : Resynchroniser Gradle (encore)
+#### Étape 3 : Resynchroniser Gradle (encore)
 
 Suivez les instructions de [Resynchronisation Gradle](#gradle-resync).
 
@@ -133,7 +133,7 @@ The minimum compatible Gradle version is 8.5.
 The maximum compatible Gradle JVM version is 19.
 ```
 
-Ou :
+Ou :
 
 ```
 Cause: error: invalid source release: 21
@@ -241,12 +241,12 @@ Votre apk a été compilé avec succès et peut être transféré sur votre tél
 
 * Assurez-vous d'avoir transféré le fichier “app-full-release.apk” sur votre téléphone.
 * Cette erreur veut généralement dire que le nouvel apk est signé avec un autre keystore que votre **AAPS** installé. Si vous avez encore votre ancien keystore, sélectionnez-le et compilez à nouveau. Sinon, voir [Réinstaller AAPS avec un nouveau keystore](#reinstall-aaps).
-* Si vous avez le message "App non installé" sur votre téléphone, suivez ces étapes :
+* Si vous avez le message "App non installé" sur votre téléphone, suivez ces étapes :
 
 1. [Exportez les paramètres](../Maintenance/ExportImportSettings.md) (dans la version d'AAPS déjà installée sur votre téléphone)
 2. Désinstallez **AAPS** sur votre téléphone.
 3. Activez le mode avion et désactivez le Bluetooth.
-4. Installer la nouvelle version (« app-full-release.apk »)
+4. Installer la nouvelle version (« app-full-release.apk »)
 5. [Importer les paramètres](../Maintenance/ExportImportSettings.md)
 6. Réactivez le Bluetooth et désactivez le mode avion
 
