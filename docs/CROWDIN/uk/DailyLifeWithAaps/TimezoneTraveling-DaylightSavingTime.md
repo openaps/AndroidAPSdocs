@@ -1,134 +1,134 @@
-# Timezone Change and Daylight Saving
+# Зміна часового поясу та літній час
 
-When the time zone of your phone changes, **AAPS** calculates **IOB**, basal and sensitivity for the past again from scratch, about 10 seconds after the change. While this runs, the graphs and values on the main screen may take a moment to update.
+Коли змінюється часовий пояс телефону, **AAPS** приблизно через 10 секунд після зміни заново розраховує **IOB**, базал і чутливість за минулий час. Поки це триває, графіки та значення на головному екрані можуть оновитися не одразу.
 
 (timezone-traveling-with-pumps)=
 
-## Timezone change for Omnipod Dash
+## Зміна часового поясу для Omnipod Dash
 
-* Refresh the pump status in **Manage → Pump**
-* Temporarily select a different **Profile** and then switch back to your original or desired **Profile**
+* Оновіть стан помпи в **Керувати → Помпа**
+* Тимчасово виберіть інший **Профіль**, а потім поверніться до свого початкового або потрібного **Профілю**
 
-## Timezone change for DanaR, Korean DanaR
+## Зміна часового поясу для DanaR, корейської DanaR
 
-There is no issue with changing timezone in phone because pump doesn't use history
+Зміна часового поясу в телефоні не створює проблем, бо помпа не використовує історію
 
 (timezone-traveling-danarv2-danars)=
 
-## Timezone change for DanaRv2, DanaRS, Dana-i
+## Зміна часового поясу для DanaRv2, DanaRS, Dana-i
 
-These pumps require special care because **AAPS** uses history from the pump but the records in pump do not have timezone stamp. **This means that if you change time zone in your phone, records will be read with different time zone and will be doubled.**
+Ці помпи потребують особливої уваги, бо **AAPS** використовує історію з помпи, але записи в помпі не мають позначки часового поясу. **Це означає, що якщо ви зміните часовий пояс у телефоні, записи будуть прочитані з іншим часовим поясом і задвояться.**
 
-To avoid this there are two possibilities:
+Щоб цього уникнути, є дві можливості:
 
-### Option 1: Keep home time and timeshift profile
+### Варіант 1: залишити домашній час і зсунути профіль у часі
 
-* Turn off 'Automatic date and time' in your phone's settings (manual time zone change).
+* Вимкніть «Автоматичні дата й час» у налаштуваннях телефону (ручна зміна часового поясу).
 
-* Your phone must keep your standard time as at home for the whole travel period.
+* На телефоні має залишатися ваш звичайний домашній час протягом усієї подорожі.
 
-* Time-shift your **Profile** according to time difference between home time and destination time.
+* Зсуньте свій **Профіль** у часі відповідно до різниці між домашнім часом і часом у місці призначення.
    
-   * Tap the **Profile** name on the main screen to open the [Profile screen](#ProfileSwitch-manage-v4)
-   * Select your **Profile** and tap **▶ Activate**
-   * Set '**Time shift**' according to your destination and tap **Activate**.
+   * Торкніться назви **Профілю** на головному екрані, щоб відкрити [екран профілю](#ProfileSwitch-manage-v4)
+   * Виберіть свій **Профіль** і торкніться **▶ Активувати**
+   * Встановіть «**Зсув часу**» відповідно до місця призначення й торкніться **Активувати**.
    
-   ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
+   ![Перемикання профілю зі зсувом часу](../images/ProfileSwitchTimeShift2.png)
    
-   * e.g. Vienna -> New York: **Profile Switch** +6 hours
-   * e.g. Vienna -> Sydney: **Profile Switch** -8 hours
+   * напр. Відень -> Нью-Йорк: **Перемикання профілю** +6 годин
+   * напр. Відень -> Сідней: **Перемикання профілю** -8 годин
 
-### Option 2: Delete pump history
+### Варіант 2: видалити історію помпи
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change)
+* Вимкніть «Автоматичні дата й час» у налаштуваннях телефону (ручна зміна часового поясу)
 
-When you get off the plane:
+Коли ви вийдете з літака:
 
-* turn off pump
-* change timezone on phone
-* turn off phone, turn on pump
-* clear history in pump
-* change time in pump
-* turn on phone
-* let phone connect to the pump and fine-tune time
+* вимкніть помпу
+* змініть часовий пояс на телефоні
+* вимкніть телефон, увімкніть помпу
+* очистіть історію в помпі
+* змініть час у помпі
+* увімкніть телефон
+* дайте телефону підключитися до помпи й точно налаштувати час
 
 (timezone-traveling-insight)=
 
-## Timezone Change for Insight
+## Зміна часового поясу для Insight
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Драйвер автоматично підлаштовує час помпи під час телефону.
 
-The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in **AAPS** despite the time change.
+Insight також записує в історію момент зміни часу, а також старий і новий час. Тож **AAPS** може визначити правильний час, попри зміну часу.
 
-It may cause inaccuracies in the **TDDs**. But it shouldn't be a problem.
+Це може спричинити неточності в **TDD** (загальна добова доза). Але це не має бути проблемою.
 
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes too long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+Тож користувачу Insight не треба хвилюватися через зміну часового поясу чи часу. Є один виняток із цього правила: помпа Insight має невелику внутрішню батарейку, яка живить годинник тощо, поки ви міняєте «справжню» батарейку. Якщо заміна батарейки триває надто довго, ця внутрішня батарейка розряджається, годинник скидається, і після встановлення нової батарейки вас попросять ввести час і дату. У цьому випадку всі записи до заміни батарейки AAPS не враховує в розрахунках, бо правильний час неможливо точно визначити.
 
-## Timezone Change for Accu-Chek Combo
+## Зміна часового поясу для Accu-Chek Combo
 
-The [Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the driver programs into the pump. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
+[Драйвер Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) автоматично підлаштовує час помпи під час телефону. Combo не може зберігати часові пояси, лише місцевий час, і саме його драйвер записує в помпу. Крім того, він зберігає часовий пояс у локальних налаштуваннях AAPS, щоб перетворювати місцевий час помпи на повну позначку часу зі зміщенням часового поясу. Користувачу нічого не треба робити: якщо час на Combo надто відрізняється від поточного часу телефону, час помпи підлаштовується автоматично.
 
-Note that this takes some time, however, since it can only be done in the remote-terminal mode, which is generally slow. This is a Combo limitation that cannot be overcome.
+Але зауважте, що це займає деякий час, бо це можна зробити лише в режимі віддаленого терміналу, який загалом повільний. Це обмеження Combo, яке неможливо обійти.
 
-## Timezone Change for Medtrum
+## Зміна часового поясу для Medtrum
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Драйвер автоматично підлаштовує час помпи під час телефону.
 
-Time zone changes keep the history intact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and **IOB**. If you change time manually double check the **IOB**.
+Зміна часового поясу не пошкоджує історію, лише TDD може бути неточною. Ручна зміна часу на телефоні може спричинити проблеми з історією та **IOB**. Якщо ви змінюєте час вручну, двічі перевірте **IOB**.
 
-When the time zone or time changes running **TBR's** are stopped.
+Коли змінюється часовий пояс або час, запущені **TBR** зупиняються.
 
 (time-adjustment-daylight-savings-time-dst)=
 
-## DAYLIGHT SAVING (DST)
+## ЛІТНІЙ ЧАС (DST)
 
-Time adjustment for daylight savings time.
+Переведення часу на літній час.
 
-Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctly. For some pumps it is better to make time zone adjustments while awake before DST takes place and not during the night.
+Залежно від вашої помпи та CGM, стрибки в часі можуть заважати правильній роботі **AAPS**. Для деяких помп краще змінити часовий пояс, поки ви не спите, ще до переходу на літній час, а не вночі.
 
-### DST automatic adjustment for most pumps
+### Автоматичне підлаштування до літнього часу для більшості помп
 
-* However, the **Loop** will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**. This is done for safety reasons - **IOB** may be too high due to duplicated bolus prior to DST change.
-* After DST has taken place, make a **Profile Switch** to the desired **Profile** to enable the **Loop**: tap the profile name on the main screen, then the round **▶** button (see [Activating a profile](#ProfileSwitch-manage-v4)).
-* You will also receive a notification on **AAPS** main screen prior to DST change that the **Loop** has been disabled temporarily. This message will appear without beep, vibration or similar sound.
+* Але **Петлю** буде вимкнено на 3 години ПІСЛЯ переходу на літній час (зазвичай від 1:00), і **AAPS** перейде на фоновий базал, вибраний у вашому **Профілі**. Це зроблено з міркувань безпеки: **IOB** може бути надто високим через задвоєний болюс перед переходом на літній час.
+* Після переходу на літній час зробіть **Перемикання профілю** на потрібний **Профіль**, щоб увімкнути **Петлю**: торкніться назви профілю на головному екрані, потім круглої кнопки **▶** (див. [Активація профілю](#ProfileSwitch-manage-v4)).
+* Перед переходом на літній час ви також отримаєте на головному екрані **AAPS** сповіщення, що **Петлю** тимчасово вимкнено. Це повідомлення з'явиться без звуку, вібрації чи іншого сигналу.
 
-If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** data unless you are sure this data is absolutely correct. Take caution and do not use this feature for a couple of hours after DST switch has taken place.
+Якщо ви робите болюс через калькулятор **AAPS**, не використовуйте дані **COB** та **IOB**, якщо ви не впевнені, що ці дані повністю правильні. Будьте обережні й не використовуйте цю функцію кілька годин після переходу на літній час.
 
-### DST for Accu-Chek Insight
+### Літній час для Accu-Chek Insight
 
-* Change to DST is done automatically. No action required.
+* Перехід на літній час відбувається автоматично. Нічого робити не потрібно.
 
-### DST for Accu-Chek Combo
+### Літній час для Accu-Chek Combo
 
-* Change to DST is done automatically. No action required.
+* Перехід на літній час відбувається автоматично. Нічого робити не потрібно.
 
-### DST for Medtrum
+### Літній час для Medtrum
 
-* Change to DST is done automatically. No action required.
+* Перехід на літній час відбувається автоматично. Нічого робити не потрібно.
 
-### DST for Omnipod Dash
+### Літній час для Omnipod Dash
 
-* Either allow **AAPS** to temporarily default background basal after DST has taken place as explained above.
-* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day prior DST is due to take place to avoid overnight disruption. NOTE THIS OPTION MAY CAUSE YOUR POD TO PREMATURELY EXPIRE. PLEASE HAVE SUPPLIES WITH YOU IF OPTING FOR THE FEATURE BELOW.
+* Або дозвольте **AAPS** після переходу на літній час тимчасово перейти на фоновий базал, як описано вище.
+* Або, якщо ви не хочете, щоб **AAPS** вночі тимчасово переходив на фоновий базал, можна змінити часовий пояс за день до переходу на літній час, щоб уникнути збоїв уночі. УВАГА: ЦЕЙ ВАРІАНТ МОЖЕ СПРИЧИНИТИ ПЕРЕДЧАСНЕ ЗАВЕРШЕННЯ ТЕРМІНУ ДІЇ ВАШОГО ПОДА. ЯКЩО ВИ ВИБИРАЄТЕ ЦЮ ФУНКЦІЮ, МАЙТЕ ПРИ СОБІ ЗАПАСНІ МАТЕРІАЛИ.
 
-#### Actions to take before the clock change
+#### Що зробити перед переведенням годинника
 
-1. Switch OFF any Phone's settings that automatically sets the Phone's time zone, so the user can change to a desired time zone that does not use DST. How to enable this will depend on your smartphone and Android version.
+1. Вимкніть усі налаштування телефону, які автоматично встановлюють часовий пояс, щоб можна було вибрати потрібний часовий пояс без літнього часу. Як це увімкнути, залежить від вашого смартфона та версії Android.
    
-   * Some phones have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the time zone (which you must turn OFF: **Set automatically** under **Time zone** in the screenshot below).
-   * Unfortunately, some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
+   * Деякі телефони мають два налаштування: одне для автоматичного встановлення часу (його краще залишити увімкненим) і одне для автоматичного встановлення часового поясу (його потрібно ВИМКНУТИ: **Set automatically** (Налаштовувати автоматично) у розділі **Time zone** (Часовий пояс) на знімку екрана нижче).
+   * На жаль, у деяких версіях Android є лише один перемикач, який вмикає автоматичне налаштування і часу, і часового поясу. Поки що вам доведеться це вимкнути.
 
 ![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
 
-2. Find a timezone that has the same time as your current location but doesn't use DST.
+2. Знайдіть часовий пояс, який має той самий час, що й ваше поточне місце, але не використовує літній час.
    
-   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Congo). Change your phone's timezone to Congo.
+   * Список цих країн є тут: [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
+   * Для центральноєвропейського часу (CET) це може бути «Brazzaville» (Конго). Змініть часовий пояс телефону на Конго.
 
 ![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
 
-3. In **AAPS** refresh your pump and switch to your desired **Profile**.
+3. В **AAPS** оновіть стан помпи й перемкніться на потрібний **Профіль**.
 
-4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA and Max-Carb-Time - whatever is bigger.
+4. Перевірте **IOB** і **COB** в **AAPS**, і якщо вони неточні, вимкніть **Петлю** щонайменше на один DIA або максимальний час поглинання вуглеводів, залежно від того, що більше.
 
-5. Actions to take after the clock change. A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Ideally your **COB** and **IOB** should both be close to zero.
+5. Що зробити після переведення годинника. Повертатися до місцевого часового поясу краще, коли **IOB** низький. Наприклад, за годину до їжі, як-от сніданку. В ідеалі ваші **COB** та **IOB** мають бути близькі до нуля.
