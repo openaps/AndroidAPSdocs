@@ -10,9 +10,9 @@ Vývojová verze AAPS je pouze pro vývojáře a testery, kteří si poradí s v
 
 Vývojová větev je však dobré místo, kde můžete vidět, jaké funkce se testují, pomoci odstranit chyby a dát zpětnou vazbu, jak nové funkce fungují v praxi. Lidé často testují vývojovou větev na starém telefonu a pumpě, dokud si nejsou jistí, že je stabilní – jakékoli použití je na vaše vlastní riziko. Při testování nových funkcí pamatujte, že se sami rozhodujete testovat funkci, která je stále ve vývoji. Dělejte to na vlastní riziko a s náležitou pečlivostí, abyste zůstali v bezpečí.
 
-Pokud najdete chybu nebo si myslíte, že se při používání vývojové větve stalo něco špatně, podívejte se na [kartu issues](https://github.com/nightscout/AndroidAPS/issues), zda ji už někdo nenašel, a pokud ne, přidejte ji sami. Čím více informací zde uvedete, tím lépe (nezapomeňte, že možná budete muset sdílet své [log soubory](../GettingHelp/AccessingLogFiles.md). O nových funkcích se můžete bavit také na [Discordu](https://discord.gg/4fQUWHZ4Mw).
+Pokud najdete chybu nebo si myslíte, že se při používání vývojové větve stalo něco špatně, podívejte se na [kartu issues](https://github.com/nightscout/AndroidAPS/issues), zda ji už někdo nenašel, a pokud ne, přidejte ji sami. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md)). O nových funkcích se můžete bavit také na [Discordu](https://discord.gg/4fQUWHZ4Mw).
 
-Vývojová verze má datum vypršení platnosti. Když ji používáte a jste spokojení, může to působit nepohodlně, ale má to svůj účel. Když je v oběhu jen jedna vývojová verze, je snazší sledovat chyby, které lidé hlásí. Vývojáři se nechtějí dostat do situace, kdy jsou mezi lidmi tři vývojové verze, v některých jsou chyby opravené a v jiných ne, a lidé dál hlásí ty už opravené.
+Vývojová verze má datum vypršení platnosti. Když ji používáte a jste spokojení, může to působit nepohodlně, ale má to svůj účel. When a single dev version is doing the rounds, it is easier to keep track of bugs that people are reporting. Vývojáři se nechtějí dostat do situace, kdy jsou mezi lidmi tři vývojové verze, v některých jsou chyby opravené a v jiných ne, a lidé dál hlásí ty už opravené.
 
 (branch-ci-test)=
 
