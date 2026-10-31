@@ -95,7 +95,7 @@ When using the [Bolus wizard](#aaps-screens-bolus-wizard), **ISF** is used if **
 When using **Dynamic ISF**, the **ISF** used here is the average of past 24h Dynamic ISF values.
 
 (dyn-isf-preferences)=
-## Settings
+## Configurações
 
 Check **Use dynamic sensitivity** in [Settings > OpenAPS SMB](#Preferences-openaps-smb-settings) to activate. New settings become available once selected.
 
