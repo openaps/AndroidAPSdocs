@@ -2,7 +2,7 @@
 
 ## Ako AAPS vypočítava hodnotu COB?
 
-Keď používateľ zadá sacharidy k jedlu alebo ako korekciu sacharidmi, **AAPS** ich pripočíta k aktuálnym aktívnym sacharidom (**COB**). **AAPS** potom počíta vstrebávanie sacharidov používateľa na základe pozorovaných odchýlok **glykémie** používateľa. Rýchlosť vstrebávania závisí od faktora citlivosti na sacharidy (**„CSF“**). Nie je to nastavenie v **Profile** používateľa, ale **AAPS** ho počíta podľa nastavenia **ISF/I:C**. Udáva, o koľko mg/dl zvýši 1 g sacharidov **glykémiu** používateľa.
+Keď používateľ zadá sacharidy k jedlu alebo ako korekciu sacharidmi, **AAPS** ich pripočíta k aktuálnym aktívnym sacharidom (**COB**). **AAPS** potom počíta vstrebávanie sacharidov používateľa na základe pozorovaných odchýlok **glykémie** používateľa. The rate of absorption depends on the carb’s sensitivity factor (**CSF**). Nie je to nastavenie v **Profile** používateľa, ale **AAPS** ho počíta podľa nastavenia **ISF/I:C**. Udáva, o koľko mg/dl zvýši 1 g sacharidov **glykémiu** používateľa.
 
 ## Faktor citlivosti na sacharidy
 
@@ -40,7 +40,7 @@ Snímka obrazovky vyššie je zo staršej verzie **AAPS** – v **AAPS** 4 vyzer
 
 Vstrebávanie sa počíta tak, aby po určenom čase bolo COB = 0:
 
-![AAPS, vážený priemer (WeightedAverage)](../images/cob_aaps2_orange_II.png)
+![AAPS, WeightedAverage](../images/cob_aaps2_orange_II.png)
 
 Ak sa namiesto hodnoty vypočítanej z odchýlok **glykémie** použije minimálne vstrebávanie sacharidov (min_5m_carbimpact), na grafe **COB** sa zobrazí oranžová bodka.
 
@@ -87,7 +87,7 @@ Obrazovku **História ošetrení** môžete použiť na opravu chybného záznam
 ![Vymazanie záznamu sacharidov z histórie ošetrení](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
 1. Skontrolujte a zapamätajte si aktuálne **COB** a **IOB** na hlavnej obrazovke **AAPS**.
-2. Otvorte **História ošetrení** (bočné menu → *História ošetrení*), kartu **Sacharidy a bolusy**. V závislosti od pumpy sa sacharidy môžu zobraziť spolu s inzulínom v jednom riadku alebo ako samostatný záznam (napr. pri Dana RS).
+2. Otvorte **História ošetrení** (bočné menu → *História ošetrení*), kartu **Sacharidy a bolusy**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (e.g. with Dana RS).
 3. **Dlho podržte** chybný záznam sacharidov – zoznam sa prepne do **režimu výberu** so zaškrtávacím políčkom na každom riadku a záznam sa zaškrtne (vyššie označené ako **1**). Zaškrtnite aj ďalšie záznamy, ktoré chcete odstrániť.
 4. Ťuknite na ikonu **🗑 Vymazať** v hornej lište (označená **2**) a potvrďte – potvrdzovací dialóg presne vypíše, čo sa odstráni.
 5. Uistite sa, že sacharidy boli úspešne odstránené – znova skontrolujte **COB** na hlavnej obrazovke **AAPS**.
