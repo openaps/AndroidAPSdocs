@@ -1,20 +1,20 @@
 # Mise à jour avec un navigateur (fork)
 
 ```{tip}
-Vous avez compilé AAPS avec **AAPS Builder** ? Vous n'avez pas besoin de cette page : consultez [Mettre à jour AAPS avec AAPS Builder](#aaps-builder-updates).
+Vous avez compilé AAPS avec **AAPS Builder** ? Vous n'avez pas besoin de cette page : consultez [Mettre à jour AAPS avec AAPS Builder](#aaps-builder-updates).
 ```
 
 ## Compiler vous-même au lieu de télécharger
 
-**AAPS** n'est pas disponible au téléchargement, à cause des règles sur les dispositifs médicaux. Il est légal de compiler l'application pour votre usage personnel, mais vous ne devez en aucun cas en donner une copie à d'autres personnes ! Consultez la [Foire Aux Questions (FAQ)](../UsefulLinks/FAQ.md) pour plus de détails.
+**AAPS** n'est pas disponible au téléchargement, à cause des règles sur les dispositifs médicaux. Il est légal de compiler l'application pour votre usage personnel, mais vous ne devez en aucun cas en donner une copie à d'autres personnes ! Consultez la [Foire Aux Questions (FAQ)](../UsefulLinks/FAQ.md) pour plus de détails.
 
 ```{note}
-Si vous voulez mettre à jour **AAPS** avec un navigateur pour la première fois : copiez la sauvegarde de votre fichier keystore dans votre Google Drive. Suivez ensuite la [procédure de Compilation dans le navigateur d'**AAPS**](../SettingUpAaps/BrowserBuild.md) au lieu de ce guide. Au lieu de créer un nouveau keystore, vous devez sélectionner celui que vous avez copié depuis votre ordinateur.
+Si vous voulez mettre à jour **AAPS** avec un navigateur pour la première fois : copiez la sauvegarde de votre fichier keystore dans votre Google Drive. Suivez ensuite la [procédure de Compilation dans le navigateur d'**AAPS**](../SettingUpAaps/BrowserBuild.md) au lieu de ce guide. Au lieu de créer un nouveau keystore, vous devez sélectionner celui que vous avez copié depuis votre ordinateur.
 Cette opération est obligatoire seulement la première fois. Ensuite, pour les mises à jour suivantes, vous pourrez suivre ce guide.
 ```
 
 ```{tip}
-**Vous passez à AAPS Builder ?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) est la compilation dans le navigateur la plus simple : pas de fork à synchroniser, et vous téléchargez l'application directement depuis GitHub. Vous n'êtes pas obligé de changer : ce guide continue de fonctionner. Si vous changez, récupérez d'abord une copie de votre keystore depuis votre fork, comme expliqué dans [Venir de l'ancienne compilation dans le navigateur](#aaps-builder-from-fork). Sinon, la nouvelle compilation ne pourra pas mettre à jour AAPS sur votre téléphone.
+**Vous passez à AAPS Builder ?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) est la compilation dans le navigateur la plus simple : pas de fork à synchroniser, et vous téléchargez l'application directement depuis GitHub. Vous n'êtes pas obligé de changer : ce guide continue de fonctionner. Si vous changez, récupérez d'abord une copie de votre keystore depuis votre fork, comme expliqué dans [Venir de l'ancienne compilation dans le navigateur](#aaps-builder-from-fork). Sinon, la nouvelle compilation ne pourra pas mettre à jour AAPS sur votre téléphone.
 ```
 
 ## Vue d'ensemble de la mise à jour vers une nouvelle version d'AAPS avec un navigateur
@@ -53,7 +53,7 @@ Consultez la page [Créer et restaurer des sauvegardes](ExportImportSettings.md)
 
 ![Mettre à jour le dépôt AndroidAPS](../images/update/CI/GitHubUpdate3.png)
 
-Remarque : si vous avez modifié votre copie d'AndroidAPS par erreur, vous verrez cet écran. Supprimez toutes les modifications (commits) pour revenir à la version publiée.
+Remarque : si vous avez modifié votre copie d'AndroidAPS par erreur, vous verrez cet écran. Supprimez toutes les modifications (commits) pour revenir à la version publiée.
 
 ![Supprimer les modifications non voulues](../images/update/CI/GitHubUpdate4.png)
 
@@ -88,7 +88,7 @@ Vous avez maintenant synchronisé (mis à jour) votre propre copie avec la derni
 ### Installer l'APK AAPS
 
 1. Ouvrez votre Google Drive
-2. Ouvrez le dossier AAPS, sélectionnez le dossier de la nouvelle version : vous y trouverez la version pour le téléphone et la version pour Android Wear.
+2. Ouvrez le dossier AAPS, sélectionnez le dossier de la nouvelle version : vous y trouverez la version pour le téléphone et la version pour Android Wear.
 
 ![Emplacement dans Google Drive](../images/update/CI/GitHubActions5.png)
 
@@ -104,8 +104,8 @@ Continuez [ici](#Update-to-new-version-check-aaps-version-on-phone)
 
 Si quelque chose ne va pas, ne paniquez pas.
 
-Respirez un bon coup !
+Respirez un bon coup !
 
-Vérifiez ensuite si votre problème est déjà décrit : consultez le [dépannage d'AAPS Builder](#aaps-builder-troubleshooting) si vous compilez avec **AAPS Builder**, sinon le [dépannage de la compilation dans le navigateur](#aaps-ci-troubleshooting).
+Vérifiez ensuite si votre problème est déjà décrit : consultez le [dépannage d'AAPS Builder](#aaps-builder-troubleshooting) si vous compilez avec **AAPS Builder**, sinon le [dépannage de la compilation dans le navigateur](#aaps-ci-troubleshooting).
 
 Si vous avez besoin de plus d'aide, contactez d'autres utilisateurs d'**AAPS** sur [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) ou [Discord](https://discord.gg/4fQUWHZ4Mw).
