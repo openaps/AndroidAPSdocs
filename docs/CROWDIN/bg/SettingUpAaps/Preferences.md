@@ -363,10 +363,10 @@ min_5m_carbimpact определя стандартното въздействи
 ```{admonition} Data uploaders
 :class: warning
 
-Когато използвате NSClientV3, всички програми за качване (uploaders) трябва да използват Nightscout API v3. Ако друга програма за качване (например приложението ви за CGM) не поддържа API v3, **оставете **AAPS** да качва всички данни** (КЗ, лечения, ...) в Nightscout и изключете другата програма за качване.
+Когато използвате NSClientV3, всички програми за качване (uploaders) трябва да използват Nightscout API v3. If another uploader (for example your CGM app) is not API v3 compliant, **let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
 ```
 
-- Задайте своя *Nightscout адрес* (напр. <https://yoursitename.yourplaform.dom>).
+- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplatform.dom>).
 - **Уверете се, че адресът е БЕЗ /api/v1/ в края.**
 - В Nightscout създайте *[Admin токен](https://nightscout.github.io/nightscout/security/#create-a-token)* (за V3 API е нужен [Nightscout 15](https://nightscout.github.io/update/update/)) и го въведете в **Токен за достъп до Nightscout** (не вашия API Secret!). В **AAPSClient** вместо това можете да сканирате QR кода на главния телефон – така се настройва собствен токен на клиента. Клиент, свързан с PIN, получава собствен токен от главния телефон след свързването. Вижте [Собственият токен за Nightscout на клиента](#client-master-control-own-token).
 - Така данните могат да се четат и записват и в двете посоки между сайта на Nightscout и **AAPS**.
