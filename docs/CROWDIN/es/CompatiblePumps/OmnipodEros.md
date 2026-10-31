@@ -243,7 +243,7 @@ Para desactivar un pod (porque ha caducado o porque ha fallado):
    >    Las capturas de pantalla de arriba son de una versión anterior de **AAPS**. En **AAPS** 4, **Desactivar Pod** es un botón en la pantalla de la bomba Omnipod, en lugar de estar en el menú **POD MGMT**.
    > ```
 
-2. En la pantalla **Desactivar Pod**, primero asegúrate de que el RileyLink está muy cerca del pod, pero no encima ni justo al lado del pod. Después pulsa **Siguiente**. Un diálogo pregunta *Un POD desactivado no se puede volver a utilizar. ¿Desea desactivar este POD ahora?* Pulsa **OK** para empezar a desactivar el pod, o **Cancelar** para conservarlo. La desactivación suspende toda la administración de insulina y no se puede deshacer.
+2. En la pantalla **Desactivar Pod**, primero asegúrate de que el RileyLink está muy cerca del pod, pero no encima ni justo al lado del pod. Después pulsa **Siguiente**. Un diálogo pregunta *Un POD desactivado no se puede volver a utilizar. ¿Quieres desactivar este POD ahora?* Pulsa **OK** para empezar a desactivar el pod, o **Cancelar** para conservarlo. La desactivación suspende toda la administración de insulina y no se puede deshacer.
 
    > ![Deactivate_Pod_3](../images/omnipod/Deactivate_Pod_3.png)
 
@@ -498,7 +498,7 @@ Aquí tienes una explicación de los campos de estado y de los botones de la **p
 
 El icono del engranaje de arriba a la derecha abre los [ajustes de Omnipod](#OmnipodEros-omnipod-settings).
 
-*NOTA: si algún campo de estado muestra (inseguro), pulsa **Actualizar** para actualizar el estado del pod y borrarlo.*
+*NOTA: si algún campo de estado muestra (incierto), pulsa **Actualizar** para actualizar el estado del pod y borrarlo.*
 
 ![Pantalla de la bomba Omnipod](../images/v4/Pumps/omnipod_pump_screen.png)
 
@@ -564,7 +564,7 @@ Los botones de la parte de abajo de la pantalla de la bomba cambian según la si
 
 **Botones de estado del pod** (aparecen cuando hay un pod activo):
 
-- **Actualizar:** envía un comando de actualización al pod activo para actualizar su estado. Úsalo para actualizar el estado del pod y borrar los campos de estado que contienen el texto (inseguro). Consulta la [sección Solución de problemas](#OmnipodEros-troubleshooting) de abajo para más información.
+- **Actualizar:** envía un comando de actualización al pod activo para actualizar su estado. Úsalo para actualizar el estado del pod y borrar los campos de estado que contienen el texto (incierto). Consulta la [sección Solución de problemas](#OmnipodEros-troubleshooting) de abajo para más información.
 
   ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png)
 
