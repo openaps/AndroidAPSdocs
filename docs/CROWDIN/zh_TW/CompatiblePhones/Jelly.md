@@ -10,7 +10,7 @@
 **優點**
 
 * 他真的很小。
-* Even if you tell people, they might not consider it as a normal smartphone and will accept it more easily as an exception when phones are normally not allowed.
+* 即使您有告知他人，他們可能還是不會把它當成一般智慧型手機；而在通常不允許使用手機的情況下，他們也比較容易接受將它視為例外。
 
 **缺點**
 
@@ -19,7 +19,7 @@
 
 ### 電池壽命最佳化
 
-The Jelly comes with strong optimization features that **must** be disabled for AAPS (and other DIY apps like BYODA, xDrip, OOP2, Juggluco, etc...).
+Jelly 配備了強大的最佳化功能，使用 AAPS（以及 BYODA、xDrip、OOP2、Juggluco 等其他 DIY 應用程式）時，**必須**停用這些功能。
 
 ![](../images/Jelly_Settings1.png)
 
@@ -33,7 +33,7 @@ The Jelly comes with strong optimization features that **must** be disabled for 
 
 ### 電池壽命最佳化
 
-To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' for **AAPS** (and for other **DIY apps** like BYODA, xDrip, OOP2, Juggluco, etc...).
+為避免干擾 **AAPS**，請將 **AAPS**（以及 BYODA、xDrip、OOP2、Juggluco 等其他 **DIY 應用程式**）的「電池用量」設定為「不受限制」，以停用 Jelly Star 的電池用量限制。
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
@@ -41,8 +41,8 @@ To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be di
 
 請記得關閉 Google Play 保護。
 
-### Remote Connection for Wear apk
+### Wear APK 的遠端連線
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
+若要透過 Wi-Fi 遠端使用 Jelly、**Wear.apk** 和 **AAPS**，部分智慧型手錶（例如 Samsung Galaxy 手錶）必須開啟 Samsung Galaxy 進階功能中的「遠端連線」。
 
-![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
+![已開啟遠端連線的 Galaxy Wearable「進階功能」畫面](../images/wearos/galaxy_wearable_remote_connection.png)
