@@ -13,6 +13,8 @@
 
 ![CGM данни от AAPS в Android Auto](../images/android_auto_01.png)
 
+(androidauto-check-that-aaps-can-show-notifications)=
+
 ## Check that AAPS can show notifications
 
 **AAPS** винаги показва известие за статуса с текущата ви КЗ, IOB и COB. Това е известието, което Android Auto показва в колата. В **AAPS** няма нищо за включване, но Android трябва да позволява на **AAPS** да показва известия.
@@ -28,6 +30,8 @@
 Моля, проверете сега, че виждате известието за статуса на **AAPS** на телефона, преди да тръгнете към колата!
 
 ![Известие на AAPS на телефона](../images/android_auto_04.png)
+
+(androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
 ## Allow the use of "unknown sources" with Android Auto.
 
@@ -79,4 +83,4 @@
 
 ## Отстраняване на неизправности:
 
-* Ако не виждате известието, проверете дали сте [разрешили на AAPS да показва известия](#check-that-aaps-can-show-notifications) в Android и дали [Android Auto има права за достъп до известията](#allow-the-use-of-unknown-sources-with-android-auto).
+* If you don't see the notification, check if you [allowed AAPS to show notifications](#androidauto-check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
