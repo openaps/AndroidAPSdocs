@@ -112,7 +112,7 @@ Para verificar se o **Omnipod Dash** está selecionado, abra **Gerenciar** (nave
 
 (omnipod-dash-tab)=
 
-## The DASH pump screen
+## A tela da bomba DASH
 
 A tela da bomba DASH é onde você gerencia os seus pods: ativa e desativa os pods, atualiza o status do pod, silencia alertas e vê o histórico do pod. Abra a tela com **Gerenciar** > **Bomba**, ou com **Abrir plugin** no cartão **Omnipod Dash** em **Configuração** > **Bomba**.
 
@@ -521,7 +521,7 @@ Escolha se o **AAPS** toca um som com as suas notificações quando não tem cer
 
 (omnipod-dash-advanced-settings)=
 
-### Advanced Settings
+### Configurações Avançadas
 
 ![A seção Configurações Avançadas](../images/v4/Pumps/dash_settings_advanced.png)
 
