@@ -1,4 +1,4 @@
-# Transferring and Installing AAPS on your smartphone
+# Transferir e instalar o AAPS no seu smartphone
 
 Na secção anterior, [compilar o **AAPS**](../SettingUpAaps/BuildingAaps.md), compilou a app **AAPS** (que é um ficheiro .apk) num computador.
 
