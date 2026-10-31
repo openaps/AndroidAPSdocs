@@ -127,7 +127,7 @@ Ak po niekoľkých dňoch spozorujete nasledujúce vzory, zvážte tieto zmeny:
 
 1. Najprv potrebujete mať v **profile** správne nastavený predvolený bazál.
 2. Začnite na cieľovej glykémii, najlepšie bez záporného IOB.
-3. Zapíšte si celkový podaný inzulín v **Spravovať → Pumpa** (alebo v histórii pumpy) a nazvite ho počiatočný inzulín C4. Veľmi presne odmerajte známe množstvo sacharidov a zapíšte si čas začiatku a počiatočný IOB. Potom zadajte sacharidy a bolus do **AAPS** pomocou kalkulačky (s aktuálne nastaveným CI). Nezabudnite sacharidy zjesť ;)
+3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin. Veľmi presne odmerajte známe množstvo sacharidov a zapíšte si čas začiatku a počiatočný IOB. Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured I:C). Nezabudnite sacharidy zjesť ;)
 4. Po niekoľkých hodinách, keď je COB=0[*](#profiletuning-cob-zero) a ste znova na cieľovej glykémii, zapíšte si čas konca a konečný IOB. Rovnako ako predtým skontrolujte celkový podaný inzulín a nazvite ho konečný inzulín. *POZNÁMKA: Dĺžka časového úseku NIE je dôležitá, pokiaľ je dlhšia ako vaše trávenie*
 5. K rozdielu medzi počiatočným a konečným množstvom inzulínu pripočítajte alebo od neho odpočítajte rozdiel konečný IOB - počiatočný IOB. Potom odpočítajte bazálny inzulín vypočítaný z nastavení vášho **profilu**.
 6. Ak je __glykémia__ v cieli, dostanete celkový inzulín, ktorý sa spotreboval na „strávenie“ vašich sacharidov. Vypočítajte svoj **I:C**.
