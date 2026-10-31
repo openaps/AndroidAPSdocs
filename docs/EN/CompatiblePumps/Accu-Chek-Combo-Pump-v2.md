@@ -214,7 +214,7 @@ These autodetections can be turned off in the driver [settings](#combov2-prefere
 (combov2-alerts)=
 ## Alerts (warnings and errors) and how they are handled
 
-The Combo shows alerts as remote-terminal screens. Warnings are shown with a "Wx" code (x is a digit), along with by a short description. One example is "W7", "TBR OVER". Errors are similar, but show up with an "Ex" code instead.
+The Combo shows alerts as remote-terminal screens. Warnings are shown with a "Wx" code (x is a digit), along with a short description. One example is "W7", "TBR OVER". Errors are similar, but show up with an "Ex" code instead.
 
 Certain warnings are automatically dismissed by the driver. These are:
 

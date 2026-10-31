@@ -571,7 +571,7 @@ v3 is new protocol. More safe and efficient
 LIMITATIONS
 - NS 15 must be used with AAPS 3.2
 - v3 doesn't see updates done by v1 protocol (probably it will be resolved in some future version of NS)
-- in opposite because of old uneffective method of tracking changes v1 see changes done by v3
+- in the opposite direction, because of the old ineffective method of tracking changes, v1 sees changes done by v3
 - remember NS still uses v1 internally so far thus is not possible to enter data through NS web UI if you are using v3. You must use AAPSClient or SMS if you want to enter data remotely
 
 RECOMMENDED SETTING

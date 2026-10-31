@@ -182,9 +182,9 @@ Here is an approximate timeframe:
 | Configuring CGM → xDrip → AAPS initially                                            | 1 hour          |
 | Configuring AAPS → pump initially                                                    | 1 hour          |
 | Configuring AAPS → Nightscout/Tidepool (reporting only)                              | 1 hour          |
-| Optional : Configuring NightScout ↔ **AAPS** & NSFollowers                           | 1 hour          |
+| Optional: Configuring Nightscout ↔ **AAPS** & NSFollowers                            | 1 hour          |
 | Objective 1: Setting up visualization and monitoring                                 | 1 hour          |
-| Objective 2: Learn how to control AAPS                                               | 2 hour          |
+| Objective 2: Learn how to control AAPS                                               | 2 hours         |
 | Objective 3: Prove your knowledge                                                    | Up to 14 days   |
 | Objective 4: Starting on an open loop                                                | Minimum of 7 days |
 | Objective 5: Understanding your open loop                                            | 7 days          |

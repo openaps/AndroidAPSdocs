@@ -58,7 +58,7 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * [Check git installation](#BuildingAaps-steps-for-installing-git)
 
-  * if on Windows and the Git was just installed, you should restart your computer to make Git globally available after the installation
+  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
 
   * If Git is installed, you have restarted (if on windows), and Git still cannot be found:
 
@@ -217,7 +217,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ## Generate Signed APK generated successfully with 0 build variants
 
-When you generate the signed apk, you might get the notification that generation was successfully but are told that this is with '0 build variants' were generated:
+When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
 
 ![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
