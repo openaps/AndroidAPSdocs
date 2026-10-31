@@ -1,7 +1,7 @@
-(food)=
-# Food (your food database)
+(食物)=
+# 食物（你的食物資料庫）
 
-The **Food** database is your personal list of saved foods. Each entry stores a food's **carbs** (and, optionally, its fat, protein, energy and a category), so you can keep the things you eat often in one place and start a bolus from a saved food with its carbs already filled in.
+**食物**資料庫是你個人儲存的食物清單。每筆項目都會記錄食物的**碳水化合物**含量（也可選擇記錄脂肪、蛋白質、熱量及分類），讓你能將常吃的食物集中管理，並直接使用已儲存食物中的碳水化合物含量開始注射。
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,80 +10,80 @@ The **Food** database is your personal list of saved foods. Each entry stores a 
 
 ---
 
-## Opening the food database
+## 開啟食物資料庫
 
-Open the **Manage** screen (bottom navigation) and choose **Food** (*“Manage food database entries”*). In **AAPS** v4 Food is **no longer a plugin** — there is nothing to enable; it is a standalone screen reached from the [Manage sheet](#v4changes-manage).
-
----
-
-## The food list
-
-Your foods are shown as a scrollable list. Each row shows the food's **name**, its **portion / unit / category**, and its **carbs**:
-
-![The food database list, with search and the add button](../images/v4/Food/food_list.png)
-
-- **🔍 Search** (top) — filter the list by **name** (case-insensitive).
-- **Category filter** — chips let you narrow the list to a **category**; once a category is picked, **subcategory** chips appear for it. (Tap a selected chip again to clear it.)
-- **➕** (bottom-right) — add a new food (see below).
-- Tap a row to **edit** that food.
-
-If the list (or the current filter) has no entries, the screen shows **No data**.
+開啟**管理**畫面（底部導覽列），然後選取**食物**（*「管理食物資料庫項目」*）。在 **AAPS** v4 中，食物功能**已不再是外掛**，因此不需要啟用；這是獨立的畫面，可從[管理面板](#v4changes-manage)開啟。
 
 ---
 
-## Adding and editing a food
+## 食物清單
 
-Tap **➕** to add, or tap an existing row to edit. An editor opens as a bottom sheet (**Add Food** / **Edit Food**):
+你的食物會以可捲動的清單顯示。每列會顯示食物的**名稱**、**份量／單位／分類**及**碳水化合物**含量：
 
-![The food editor — name, category, portion, carbs and macros](../images/v4/Food/food_editor.png)
+![食物資料庫清單，包含搜尋功能和新增按鈕](../images/v4/Food/food_list.png)
 
-The fields are:
+- **🔍 搜尋**（上方）— 依**名稱**篩選清單（不區分大小寫）。
+- **分類篩選器**— 點選分類標籤即可縮小清單範圍；選取分類後，會顯示該分類的**子分類**標籤。（再次點選已選取的標籤即可清除篩選。）
+- **➕**（右下角）— 新增食物（請參閱下方說明）。
+- 點選某一列即可**編輯**該食物。
 
-- **Name** — required (you can't save without it).
-- **Category** and **Subcategory** — optional, used to group/filter foods.
-- **Portion** and **Unit** — the typical serving size; **Unit** defaults to **g**.
-- **Carbs (g)** — the carbohydrate amount for the food.
-- **Fat (g)**, **Protein (g)**, **Energy (kJ)** — optional nutrition values.
+如果清單（或目前的篩選結果）沒有項目，畫面會顯示**沒有資料**。
 
-Tap **Save** to store it, or **Cancel** to discard. When editing an existing food the editor also has a **Delete** button.
+---
+
+## 新增及編輯食物
+
+點選**➕**即可新增食物，或點選現有項目進行編輯。編輯器會以底部面板開啟（**新增食物**／**編輯食物**）：
+
+![食物編輯器 — 名稱、分類、份量、碳水化合物及營養素](../images/v4/Food/food_editor.png)
+
+欄位如下：
+
+- **名稱**— 必填（未填寫就無法儲存）。
+- **分類**和**子分類**— 選填，用來將食物分組或篩選。
+- **份量**和**單位**— 一般食用份量；**單位**預設為 **g**。
+- **碳水化合物（g）**— 食物所含的碳水化合物量。
+- **脂肪（g）**、**蛋白質（g）**、**熱量（kJ）**— 選填的營養資訊。
+
+點選**儲存**以儲存資料，或點選**取消**以放棄變更。編輯現有食物時，編輯器也會顯示**刪除**按鈕。
 
 ```{admonition} Deleting is undoable
 :class: note
-Deleting a food shows a **“Food deleted”** message with an **Undo** action, so an accidental delete is easy to reverse.
+刪除食物後會顯示 **「食物已刪除」** 訊息，並提供 **復原** 選項，方便你還原不小心刪除的食物。
 ```
 
 ---
 
-## Using a food for a bolus
+## 使用食物進行注射
 
-Each food row has a **calculator** button. Tapping it opens the **bolus wizard** with that food's **carbs** already filled in and the food's **name** added as the treatment note — so you confirm and deliver without re-typing the carbs.
+每筆食物項目旁都有**計算機**按鈕。點選後會開啟**注射嚮導**，並預先填入該食物的**碳水化合物**含量，也會將食物**名稱**加入治療備註，讓你確認後即可執行注射，不必重新輸入碳水化合物含量。
 
 ```{admonition} The carbs value is used as-is
 :class: note
-The food's stored **carbs** number is passed straight to the wizard — **AAPS** does not multiply it by the portion or by how much you ate. If you have a different amount, adjust the carbs in the wizard before confirming. (There is no food picker *inside* the bolus wizard or the carbs dialog; you start from the food row here.)
+食物中儲存的<strong>碳水化合物</strong>數值會直接傳入嚮導 — <strong>AAPS</strong> 不會依照份量或實際食用量換算。如果實際食用量不同，請在確認前於嚮導中調整碳水化合物含量。（注射嚮導或碳水化合物對話方塊中沒有食物選擇器；你必須從這裡的食物項目開始操作。）
 ```
 
 ---
 
-## Where foods come from (Nightscout sync)
+## 食物的來源（Nightscout 同步）
 
-The food database is shared through **Nightscout**, but **in one direction only**:
+食物資料庫透過 **Nightscout** 共用，但**資料只會單向傳輸**：
 
-- **Download:** **AAPS** **reads** foods from your Nightscout site's **food database** and keeps the local list in sync with it. This runs as part of NSClient syncing, so a paired **client/follower** ends up with the same foods too.
-- **Upload:** **AAPS** does **not** push foods **to** Nightscout — NSClient does not support uploading food entries. Foods you create or edit **inside AAPS** therefore stay **on that device** and are not propagated to Nightscout or to your other devices.
+- **下載：****AAPS** 會從你的 Nightscout 網站**讀取****食物資料庫**中的食物，並讓本機清單與其保持同步。這項作業會在 NSClient 同步時一併執行，因此配對的**用戶端／追蹤者**也會取得相同的食物清單。
+- **上傳：****AAPS****不會**將食物**上傳至**Nightscout — NSClient 不支援上傳食物項目。因此，你在**AAPS 中**建立或編輯的食物只會**保留在該裝置**上，不會同步到 Nightscout 或你的其他裝置。
 
 ```{admonition} Maintain your shared list in Nightscout
 :class: important
-Because food is **download-only**, the way to share one food list across your phone, your follower/[client](../RemoteFeatures/ClientMasterControl.md) and the rest of your setup is to maintain it in **Nightscout** (its built-in food editor). **AAPS** will pull those entries down. A food added only in **AAPS** is local to that device — and stays put: a download matches Nightscout entries by their Nightscout ID, so it adds and updates those but never overwrites or removes a food you created locally (a food is only removed when its Nightscout copy is deleted in Nightscout).
+由於食物資料<strong>只能下載</strong>，若要讓手機、追蹤者／[用戶端](../RemoteFeatures/ClientMasterControl.md)及其他裝置共用同一份食物清單，請在<strong>Nightscout</strong>（內建的食物編輯器）中管理清單。 <strong>AAPS</strong> 會下載這些項目。只在 <strong>AAPS</strong> 中新增的食物只會保留在該裝置上。下載資料時會依照 Nightscout ID 比對 Nightscout 項目，因此只會新增或更新這些項目，不會覆寫或移除你在本機建立的食物（只有在 Nightscout 中刪除該食物的 Nightscout 版本時，才會移除該食物）。
 
-Note that the food database is **not** part of the master ↔ client signed control channel either — it travels purely as Nightscout data.
+請注意，食物資料庫也<strong>不會</strong>透過主控端 ↔ 用戶端的簽章控制通道傳輸，而是僅以 Nightscout 資料的形式傳輸。
 ```
 
 ---
 
-## Not on the watch
+## 手錶上無法使用
 
-The food database is a **phone** feature — there is no food browser, tile or menu on a **Wear OS watch**.
+食物資料庫是**手機**上的功能；**Wear OS 手錶**上沒有食物瀏覽器、圖塊或選單。
 
 ---
 
