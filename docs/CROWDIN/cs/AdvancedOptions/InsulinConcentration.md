@@ -22,7 +22,7 @@ Inzulín se vyrábí v různých silách. Síla je určena počtem jednotek v je
 
 - **U100:** Celosvětový standard, obsahuje **100 IU/ml**.
 - **U200–U500:** Koncentrovanější inzulíny (např. U200 obsahuje 200 IU/ml) pro menší objem při podání.
-- **U40:** Méně běžné, historické koncentrace (40 IU/ml a 50 IU/ml). **U40 vyžaduje stříkačky určené pro U40.**
+- **U40/U50:** Less common, historical concentrations (40 IU/ml and 50 IU/ml). **U40 vyžaduje stříkačky určené pro U40.**
 - **Ruční ředění:** Klinický postup, kterým se připravuje velmi zředěný inzulín (např. U50, U10) pro vzácné případy, jako je použití u novorozenců nebo extrémní citlivost. Vyžaduje to velmi pečlivou přípravu v lékárně.
 
 ```{admonition} Critical Warning
@@ -150,7 +150,7 @@ Pro vytvoření inzulínu s jinou koncentrací nejdříve otevřete **Spravovat 
 
 - Klepněte na ikonu „+“ v dolní části obrazovky.
 - V rozbalovací nabídce vyberte novou požadovanou koncentraci (k dispozici jsou U10, U20, U50, U100, U200).
-  - zředěné koncentrace jako U10, U20 nebo U50 jsou pro děti s velmi nízkými bazálními dávkami.
+  - Diluted concentrations like U10, U20 or U50 are for children with very low basal rates.
   - U200 je spíše pro dospělé s vysokou potřebou inzulínu.
 
   ![Rozbalovací nabídka koncentrace v Nastavení inzulínu](../images/v4/Insulin/insulin_concentration_dropdown.png)
