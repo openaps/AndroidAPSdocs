@@ -51,7 +51,7 @@ Voor **Doel 2** moet je verschillende ‘taken’ uitvoeren, zoals te zien is in
 Taken om **Doel 2** te voltooien:
 - Zet je **Profiel** op 90% voor een duur van 10 min.
   - _Tip_: tik op de naam van je profiel in het hoofdscherm om het scherm **Profiel** te openen. Gebruik daarna de knop **Activeer** (▶) en stel het percentage en de duur in. Meer informatie in [Profiel wissel & Profiel percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-  - _Let op_: **AAPS** accepteert geen basaalstanden lager dan 0,05 E/uur. Als je **Profiel** standen van 0,06 E/uur of lager heeft, moet je eerst een tijdelijk **Profiel** met hogere basaalstanden maken voordat je deze taak doet. Ga na het voltooien van deze taak terug naar je normale **Profiel**.
+  - _Let op_: **AAPS** accepteert geen basaalstanden lager dan 0,05 E/u. Als je **Profiel** standen van 0,06 E/u of lager heeft, moet je eerst een tijdelijk **Profiel** met hogere basaalstanden maken voordat je deze taak doet. Ga na het voltooien van deze taak terug naar je normale **Profiel**.
 - Doe alsof je "gaat douchen" door in **AAPS** [de verbinding met je pomp te verbreken](#AapsScreens-loop-status) voor een duur van 1 uur.
   - _Tip_: druk op het loop-pictogram in het hoofdscherm om het Loop-venster te openen. Kies dan een duur onder **Verbreek verbinding met de pomp**.
 - Beëindig "douchen" door je pomp weer aan te sluiten.
