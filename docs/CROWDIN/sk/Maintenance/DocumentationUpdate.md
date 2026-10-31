@@ -34,7 +34,7 @@
 
 ## Január 2025
 
-- Vydanie [3.4](#version3400) a súhrnná aktualizácia dokumentácie (Sprievodca, verzie pre zostavenie v počítači, Config Builder)
+- [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
 - Aktualizácia zoznamu CGM. Dexcom G5, Tomato a Glimp boli odstránené.
 - [Rozhranie Striedania miest](#Aapsscreens-site-rotation)
 - [Režim prevádzky](#AapsScreens-running-mode)
@@ -148,7 +148,7 @@ Dokumentácia AAPS 3.1 je dostupná [tu](https://androidaps.readthedocs.io/en/3.
 - Dexcom G6 s aplikáciou [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
 - Libre smart reader – [úroveň batérie](#screens-sensor-level-battery)
 - [Ciele](#objectives-objective3) – nové otázky
-- Ďalšie [nové funkcie AAPS 2.8.0](#Releasenotes-version-2-8-0)
+- Other [new AAPS 2.8.0 functions](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.0)
 
 ## December 2020
 
@@ -167,7 +167,7 @@ Dokumentácia AAPS 3.1 je dostupná [tu](https://androidaps.readthedocs.io/en/3.
 ## September 2020
 
 - Veľká aktualizácia pre novú verziu AAPS 2.7
-- For details see the [release notes](#Releasenotes-version-2-7-0)
+- For details see the [release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.7.0)
 
 ## Jún 2020
 
@@ -202,7 +202,7 @@ Dokumentácia AAPS 3.1 je dostupná [tu](https://androidaps.readthedocs.io/en/3.
 - Funkcia [Predĺžený bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) – uzavretý okruh sa vypne
 - Nový [plugin Lokálny profil](../SettingUpAaps/ConfigBuilder.md)
 - Vzorové nastavenie – aktualizácia Dexcom G6
-- [Verzia 2.6.0](#Releasenotes-version-2-6-0) – hlavné nové funkcie
+- [Version 2.6.0](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-260) - major new features
 - [Komplikácie pre hodinky](../WearOS/WearOsSmartwatch.md)
 
 ## Január 2020
@@ -237,7 +237,7 @@ Dokumentácia AAPS 3.1 je dostupná [tu](https://androidaps.readthedocs.io/en/3.
 
 ## Október 2019
 
-- Aktualizácie pre [AAPS verzie 2.5](#Releasenotes-version-2-5-0) (najmä na [stránke o aktualizácii](../Maintenance/UpdateToNewVersion.md))
+- [AAPS version 2.5](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-250) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
 - [AccuChek Insight – možnosti logov](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [Výpočet COB na samostatnej stránke](../DailyLifeWithAaps/CobCalculation.md)
 - [COB – detekcia nesprávnej hodnoty COB](#CobCalculation-detection-of-wrong-cob-values)
