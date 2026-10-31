@@ -375,7 +375,7 @@ Supervisa y controla **AAPS** desde un reloj Wear OS. La configuración del relo
 
 (external-companion-apps)=
 
-### External Companion Apps
+### Aplicaciones complementarias externas
 
 Emite los datos de estado de **AAPS** en el teléfono para que otras apps instaladas en él puedan mostrarlos, por ejemplo apps complementarias para relojes o widgets. Los datos emitidos incluyen la glucosa y su tendencia, IOB, COB, basal y basal temporal, nombre del perfil, estado del lazo, batería del teléfono y de la bomba, nivel del reservorio y progreso del bolo. Actívalo solo si una app complementaria que usas te pide estos datos.
 
