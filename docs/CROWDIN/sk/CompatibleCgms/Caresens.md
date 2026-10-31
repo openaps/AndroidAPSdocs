@@ -10,7 +10,7 @@
 ## 1. xDrip
 
 1. Nainštalujte a nastavte oficiálnu aplikáciu CareSens.
-2. V aplikácii CareSens choďte do settings -> Manage Data and Connections -> zapnite prepínač xDrip. Ak chcete, v časti „others“ vypnite dátové pripojenia k CareLevo, DIA:CONN, CloudLoop atď.
+2. V aplikácii CareSens choďte do settings -> Manage Data and Connections -> zapnite prepínač xDrip. If preferred, turn off the data connections to CareLevo, DIA:CONN, CloudLoop, etc. in "others".
 
 ![Dátové pripojenia aplikácie CareSens](../images/eversenseapp-dataconnections.png)
 
