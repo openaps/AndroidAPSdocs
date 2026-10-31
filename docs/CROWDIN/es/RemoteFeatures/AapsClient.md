@@ -41,11 +41,11 @@ En el mismo teléfono seguidor se pueden instalar hasta tres apps cliente a la v
 
 En el primer inicio, **AAPSClient** ejecuta el mismo **Asistente de configuración** que conoces de **AAPS**, pero con muchos menos pasos: en un seguidor no se configura perfil, insulina, bomba, APS ni objetivos:
 
-1. **Bienvenido**, **acuerdo de licencia**, **permisos** y **contraseña maestra**: igual que en la app principal, consulta [Asistente de configuración](../SettingUpAaps/SetupWizard.md).
+1. **Bienvenido**, **acuerdo de licencia**, **permisos** y **contraseña maestra**: igual que en la app principal, consulta el [Asistente de configuración](../SettingUpAaps/SetupWizard.md).
 2. El cliente **no** pregunta las **unidades** ni los **límites bajo/alto**: los toma del teléfono principal en cuanto se conecta a Nightscout. Puedes verlos más tarde en **Ajustes**, donde un pequeño **icono de teléfono** indica que están [sincronizados con el teléfono principal](#client-master-config-prefs). Solo se pueden editar mientras el máster está accesible.
-3. **Configurar desde el master**: en el máster, abre **Administrar → Clientes autorizados**, añade este teléfono con un **código QR** y toca aquí **Escanee el código QR**. Un solo escaneo configura Nightscout con un token propio de este teléfono y, si el código incluye el emparejamiento, también empareja el teléfono. El teléfono también toma como nombre de instancia el nombre con el que se añadió en el máster (las letras con acento pasan a letras sin acento: «Miloš» pasa a ser «Milos»). **Después del escaneo, la configuración ha terminado**: el asistente se cierra, porque los pasos siguientes solo mostrarían lo que ya hizo el código. Si no tienes un código QR, sáltate este paso. (Solo en Android: el escáner aún no está disponible en iOS).
+3. **Configurar desde el máster**: en el máster, abre **Administrar → Clientes autorizados**, añade este teléfono con un **código QR** y toca aquí **Escanea el código QR**. Un solo escaneo configura Nightscout con un token propio de este teléfono y, si el código incluye el emparejamiento, también empareja el teléfono. El teléfono también toma como nombre de instancia el nombre con el que se añadió en el máster (las letras con acento pasan a letras sin acento: «Miloš» pasa a ser «Milos»). **Después del escaneo, la configuración ha terminado**: el asistente se cierra, porque los pasos siguientes solo mostrarían lo que ya hizo el código. Si no tienes un código QR, sáltate este paso. (Solo en Android: el escáner aún no está disponible en iOS).
 
-   ![El paso Configurar desde el master con el botón Escanee el código QR](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+   ![El paso Configurar desde el máster con el botón Escanea el código QR](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
 4. **Comunicación**: la lista de complementos solo ofrece lo que necesita un seguidor (NSClientV3, xDrip+, Reloj, Aplicaciones complementarias externas, Garmin). Si no escaneaste un código QR, activa **NSClientV3** e introduce la **misma URL de Nightscout** que en el teléfono principal y un token de acceso, con los **websockets** activados, tal como se describe en [Sincronización](#RemoteControl_aapsclient).
 
@@ -63,7 +63,7 @@ En el primer inicio, **AAPSClient** ejecuta el mismo **Asistente de configuraci�
 
 En el **máster**, abre **Administrar → Clientes autorizados** y añade un cliente. Hay dos formas de emparejar:
 
-- **Con un código QR** (la más rápida, si el teléfono tiene cámara): escanea el código en el paso del asistente «**Configurar desde el master**» o desde **Administrar → Emparejar con el máster → Escanear código QR**, y confirma con «**Usar**». También configura Nightscout.
+- **Con un código QR** (la más rápida, si el teléfono tiene cámara): escanea el código en el paso del asistente «**Configurar desde el máster**» o desde **Administrar → Emparejar con el máster → Escanear código QR**, y confirma con «**Usar**». También configura Nightscout.
 - **Con el PIN**: en el **cliente**, abre el paso del asistente de arriba (o **Administrar → Emparejar con el máster**), escribe el PIN de un solo uso que muestra el máster y pulsa «**Vincular**». Después, el cliente muestra en quién va a confiar; confirma con «**Vincular**»:
 
 ![Confirmación en el cliente antes de completar el emparejamiento](../images/v4/AapsClient/aapsclient_pair_confirm.png)
