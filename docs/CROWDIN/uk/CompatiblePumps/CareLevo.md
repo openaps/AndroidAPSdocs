@@ -1,162 +1,162 @@
 # CareLevo
 
-The CareLevo is a tubeless patch pump made by CareMedi. Each patch holds up to 300 U of insulin and is worn for up to 7 days (168 hours). It communicates with **AAPS** over your phone's Bluetooth, with no additional device.
+CareLevo — це безтрубкова патч-помпа від компанії CareMedi. Кожен патч вміщує до 300 Од інсуліну, і його носять до 7 днів (168 годин). Помпа зв'язується з **AAPS** через Bluetooth телефону, без додаткового пристрою.
 
 ```{admonition} New driver
 :class: warning
-The CareLevo driver is new in **AAPS**. Read this whole page before you activate your first patch, and keep the pump's own instructions for use at hand.
+Драйвер CareLevo новий в **AAPS**. Прочитайте всю цю сторінку, перш ніж активувати перший патч, і тримайте під рукою інструкцію з використання помпи.
 ```
 
-The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the **Profile** to a minimum of 0.05 U/h in steps of 0.05 U/h, otherwise the insulin the **Profile** expects and the insulin the patch delivers differ slightly. **AAPS** uses the basal rates the patch accepted.
+Найменша доза, яку може ввести патч, — 0,05 Од. Встановіть базальні швидкості в **Профіль** щонайменше 0,05 Од/год з кроком 0,05 Од/год, інакше інсулін, який очікує **Профіль**, і інсулін, який вводить патч, трохи відрізнятимуться. **AAPS** використовує базальні швидкості, які прийняв патч.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Можливості помпи з AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Bolus in steps of 0.05 U.
-* Basal rates from 0.05 U/h to 15 U/h in steps of 0.05 U/h, with 30-minute basal segments.
-* Temporary basal rates set as an absolute rate, up to 12 hours.
-* Extended bolus up to 8 hours.
-* DST and timezone changes must be handled manually. The patch notifies you when the time zone changes.
+* Зв'язується з **AAPS** через вбудований Bluetooth вашого телефону, без додаткового пристрою зв'язку.
+* Болюс з кроком 0,05 Од.
+* Базальні швидкості від 0,05 Од/год до 15 Од/год з кроком 0,05 Од/год, з базальними сегментами по 30 хвилин.
+* Тимчасові базальні швидкості задаються як абсолютна швидкість, до 12 годин.
+* Подовжений болюс до 8 годин.
+* Перехід на літній/зимовий час і зміну часового поясу потрібно виконувати вручну. Патч повідомляє вас, коли змінюється часовий пояс.
 
-## Pump Setup
+## Налаштування помпи
 
-1. Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-1. Select **Carelevo** in the Pump section.
-1. Press the Back key to return to the main screen.
+1. Відкрийте **меню** (☰) у верхньому лівому куті головного екрана **AAPS** і виберіть **Конфігурація**.
+1. Виберіть **Carelevo** у розділі «Помпа».
+1. Натисніть кнопку «Назад», щоб повернутися на головний екран.
 
-![The Carelevo plugin selected in Configuration > Pump](../images/v4/Pumps/carelevo_enabled.png)
+![Плагін Carelevo, вибраний у Конфігурація > Помпа](../images/v4/Pumps/carelevo_enabled.png)
 
-## Settings
+## Налаштування
 
-Open the pump screen with **Manage → Pump** (or **Configuration → Pump → Open plugin**).
+Відкрийте екран помпи через **Керувати → Помпа** (або **Конфігурація → Помпа → Відкрити плагін**).
 
-Open the CareLevo settings by pressing the **Settings** (gear) icon in the upper right corner. Three settings are available:
+Відкрийте налаштування CareLevo, натиснувши значок **Налаштування** (шестерня) у верхньому правому куті. Доступні три налаштування:
 
-![Carelevo driver settings](../images/v4/Pumps/carelevo_settings.png)
+![Налаштування драйвера Carelevo](../images/v4/Pumps/carelevo_settings.png)
 
-### Low Insulin Notification Setting
+### Налаштування сповіщення про низький рівень інсуліну
 
-The patch notifies you when the insulin remaining in the reservoir reaches the chosen amount. It can be set from 20 U to 50 U in 5 U steps. The default is 30 U. Independently of this setting, the patch raises a critical alarm and stops delivering insulin when less than 10 U remain.
+Патч повідомляє вас, коли залишок інсуліну в резервуарі досягає вибраної кількості. Можна встановити від 20 Од до 50 Од з кроком 5 Од. За замовчуванням — 30 Од. Незалежно від цього налаштування, коли залишається менше 10 Од, патч подає критичний сигнал тривоги і зупиняє введення інсуліну.
 
-### Patch Usage Notification Setting
+### Налаштування сповіщення про використання патча
 
-The patch notifies you when it has been worn for the chosen number of hours, so you can plan the change. It can be set from 24 to 167 hours. The default is 116 hours.
+Патч повідомляє вас, коли його носять вибрану кількість годин, щоб ви могли спланувати заміну. Можна встановити від 24 до 167 годин. За замовчуванням — 116 годин.
 
-### Patch Info Alarm
+### Сигнал інформації патча
 
-When this is on, the patch beeps when a bolus, extended bolus or temporary basal starts and when it ends. The default is off.
+Коли це увімкнено, патч подає звуковий сигнал на початку і в кінці болюсу, подовженого болюсу або тимчасового базалу. За замовчуванням вимкнено.
 
-## The pump screen
+## Екран помпи
 
-![Carelevo pump screen without an active patch](../images/v4/Pumps/carelevo_pump_screen.png)
+![Екран помпи Carelevo без активного патча](../images/v4/Pumps/carelevo_pump_screen.png)
 
-The pump screen shows the **Bluetooth status** (No Active Patch, Disconnected or Connected), the **Serial No.** of the patch, its **Activation Time** and **Expiration**, the current **Basal Rate** and **Temp basal rate**, the **Insulin Remaining** (remaining / filled), the **Patch Time Remaining** and the **Total insulin delivered**.
+Екран помпи показує **Стан Bluetooth** (Немає активного патча, Від’єднано або Підключено), **Серійний №** патча, його **Час активації** і **Термін дії**, поточну **Базальна швидкість** і **Швидкість тимчасового базалу**, **Залишок інсуліну** (залишок / заповнено), **Залишок часу патча** та **Усього введено інсуліну**.
 
-The buttons depend on the state of the patch:
+Кнопки залежать від стану патча:
 
-* **Activate Patch**: starts the activation of a new patch, see below.
-* **Insulin Guide**: shows the twelve steps for filling a patch with insulin.
-* **Suspend Infusion** / **Resume Infusion**: pauses and restarts insulin delivery, see below.
-* **Discard Patch**: stops the current patch so a new one can be activated.
+* **Активувати патч**: починає активацію нового патча, див. нижче.
+* **Інструкція із заповнення**: показує дванадцять кроків заповнення патча інсуліном.
+* **Призупинити введення** / **Відновити введення**: призупиняє і знову запускає введення інсуліну, див. нижче.
+* **Викинути патч**: зупиняє поточний патч, щоб можна було активувати новий.
 
-## Activating a patch
+## Активація патча
 
-Before you start, make sure a **Profile** is active in **AAPS** and that Bluetooth is on. The patch must be activated within a limited time once it is switched on; if the time runs out, the patch raises a **Patch Application Timeout** alarm and cannot be used.
+Перед початком переконайтеся, що в **AAPS** активний **Профіль** і Bluetooth увімкнено. Після увімкнення патч потрібно активувати протягом обмеженого часу; якщо час вийде, патч подасть сигнал **Час накладання патча вичерпано**, і його не можна буде використати.
 
-Press **Activate Patch** on the pump screen and follow the steps. You can cancel at any time before the needle is inserted; what you have entered is discarded.
+Натисніть **Активувати патч** на екрані помпи і виконайте кроки. Ви можете скасувати будь-коли до введення голки; введені дані буде відкинуто.
 
-### Select the insulin
+### Виберіть інсулін
 
-Confirm the insulin you use. The patch requires rapid-acting U-100 insulin.
+Підтвердьте інсулін, який ви використовуєте. Для патча потрібен інсулін швидкої дії U-100.
 
-### Fill the patch with insulin
+### Заповніть патч інсуліном
 
-Fill the patch with 50 to 300 U, considering how long you will wear it. Press **Insulin Guide** if you need the filling instructions. Then tap the fill amount and select the amount you filled; **AAPS** uses it to show the insulin remaining.
+Заповніть патч від 50 до 300 Од, враховуючи, як довго ви будете його носити. Якщо вам потрібна інструкція із заповнення, натисніть **Інструкція із заповнення**. Потім торкніться кількості заповнення і виберіть кількість, яку ви заповнили; **AAPS** використовує її, щоб показувати залишок інсуліну.
 
-### Connect the patch
+### Підключіть патч
 
-1. Take the patch out of its blister and remove the needle cap.
-1. Press the power button of the patch for more than one second. After the beep, tap **Search Patch**.
-1. When the patch found is the right one, tap **Confirm**. Tap **Rescan** if it is not.
+1. Вийміть патч з блістера і зніміть ковпачок голки.
+1. Натисніть кнопку живлення патча більше ніж на одну секунду. Після звукового сигналу торкніться **Шукати патч**.
+1. Якщо знайдено правильний патч, торкніться **Підтвердити**. Якщо ні, торкніться **Шукати знову**.
 
-### Safety check
+### Перевірка безпеки
 
-Once the patch is connected, press **Safety Check**. The patch tests itself and primes. Check that a droplet of insulin has formed at the needle tip. If no droplet is visible, press **Retry**. When the check is complete, press **Next**.
+Коли патч підключено, натисніть **Перевірка безпеки**. Патч перевіряє себе і виконує заповнення. Перевірте, що на кінчику голки з'явилася крапля інсуліну. Якщо краплі не видно, натисніть **Повторити**. Коли перевірку завершено, натисніть **Далі**.
 
-### Site and patch attachment
+### Місце і накладання патча
 
-1. Select the site where you will wear the patch.
-1. Clean the site thoroughly with an alcohol swab.
-1. Remove the backing tape and attach the patch to your skin with the marked dot facing upward.
-1. Press **Next** once the patch is attached.
+1. Виберіть місце, де ви будете носити патч.
+1. Ретельно очистіть місце спиртовою серветкою.
+1. Зніміть захисну плівку і приклейте патч до шкіри позначеною точкою вгору.
+1. Коли патч приклеєно, натисніть **Далі**.
 
-### Insert the needle
+### Введіть голку
 
-1. Turn the safety cap in the direction of the arrow and remove it.
-1. Press the applicator push button all the way down and hold it for 10 seconds. A beep sounds when the needle is inserted.
-1. Remove the applicator and press **Confirm Insertion**.
+1. Поверніть запобіжний ковпачок у напрямку стрілки і зніміть його.
+1. Натисніть кнопку аплікатора до кінця і тримайте 10 секунд. Коли голку введено, лунає звуковий сигнал.
+1. Зніміть аплікатор і натисніть **Підтвердити введення**.
 
-If the insertion fails, **AAPS** tells you how many attempts are left. When no attempt is left, the patch raises a **Needle Insertion Error** alarm and must be replaced.
+Якщо ввести голку не вдалося, **AAPS** покаже, скільки спроб залишилося. Коли спроб не залишилося, патч подає сигнал **Помилка введення голки**, і його потрібно замінити.
 
-Insulin delivery starts as soon as the insertion is confirmed.
+Введення інсуліну починається одразу після підтвердження введення голки.
 
-## Bolus messages
+## Повідомлення про болюс
 
-If the patch refuses a bolus, **AAPS** tells you why. For example *Bolus can't be delivered. Bolus available: 2.8 U* means the patch can deliver only that amount now.
+Якщо патч відмовляється вводити болюс, **AAPS** показує причину. Наприклад, *Болюс неможливо ввести. Доступний болюс: 2,8 Од* означає, що зараз патч може ввести лише цю кількість.
 
-If you stop a bolus and the patch does not confirm the stop, **AAPS** waits for the bolus to end and records the amount the patch reports. If a bolus was not recorded (for example because it was stopped while it was running), **AAPS** adds it from the patch total and asks you to check IOB before you try again.
+Якщо ви зупиняєте болюс, а патч не підтверджує зупинку, **AAPS** чекає завершення болюсу і записує кількість, яку повідомляє патч. Якщо болюс не записано (наприклад, бо його зупинили під час введення), **AAPS** додає його із загальної суми патча і просить перевірити IOB, перш ніж пробувати знову.
 
-## Suspending and resuming insulin delivery
+## Призупинення і відновлення введення інсуліну
 
-Press **Suspend Infusion** on the pump screen and select how long delivery should pause: from 30 minutes to 4 hours in 30-minute steps. Delivery does not resume by itself: when the pause is over, the patch raises a **Start Insulin** alert. Press **Resume Infusion** on the pump screen, or **Start Insulin** on the alert, and confirm.
+Натисніть **Призупинити введення** на екрані помпи і виберіть, на скільки призупинити введення: від 30 хвилин до 4 годин з кроком 30 хвилин. Введення не відновлюється само: коли пауза закінчується, патч подає попередження **Почати введення інсуліну**. Натисніть **Відновити введення** на екрані помпи або **Почати введення інсуліну** у попередженні і підтвердьте.
 
-## Discarding a patch
+## Викидання патча
 
-Press **Discard Patch** on the pump screen and confirm. Insulin delivery stops and the patch can no longer be used. Remove the patch from your body and activate a new one.
+Натисніть **Викинути патч** на екрані помпи і підтвердьте. Введення інсуліну зупиняється, і патч більше не можна використовувати. Зніміть патч з тіла і активуйте новий.
 
-When a critical alarm has stopped the patch, the alarm offers **Deactivate Patch** instead. Pressing it discards the patch the same way.
+Якщо патч зупинено критичним сигналом тривоги, сигнал натомість пропонує **Деактивувати патч**. Натискання цієї кнопки викидає патч так само.
 
 (carelevo-alarms-and-notifications)=
 
-## Alarms and notifications
+## Сигнали тривоги та сповіщення
 
-The patch reports three levels of events. All of them are shown as **AAPS** notifications.
+Патч повідомляє про події трьох рівнів. Усі вони показуються як сповіщення **AAPS**.
 
-### Critical alarms
+### Критичні сигнали тривоги
 
-Insulin delivery has stopped. Act now:
+Введення інсуліну зупинено. Дійте негайно:
 
-* **Low Insulin**: less than 10 U remain. Deactivate the patch and change it.
-* **Patch Expired**: the patch reached the end of its life. Deactivate the patch and change it.
-* **Low Battery**: discard the patch and change it.
-* **High/Low Temperature**: move to a suitable temperature, between 40 ℉ and 99 ℉ (5 ℃ and 37 ℃).
-* **Auto-Off**: the patch stopped because the Auto-Off alert was ignored. Press **Start Insulin** to restart basal delivery.
-* **Patch Application Timeout**, **Self-Diagnosis Failed**, **Patch Error**, **Occlusion** and **Needle Insertion Error**: deactivate the patch and change it.
+* **Мало інсуліну**: залишилося менше 10 Од. Деактивуйте патч і замініть його.
+* **Термін дії патча закінчився**: патч досяг кінця терміну служби. Деактивуйте патч і замініть його.
+* **Низький заряд батареї**: викиньте патч і замініть його.
+* **Висока/низька температура**: перейдіть у місце з відповідною температурою, від 40 ℉ до 99 ℉ (від 5 ℃ до 37 ℃).
+* **Автовимкнення**: патч зупинився, бо попередження про автовимкнення було проігноровано. Натисніть **Почати введення інсуліну**, щоб знову запустити введення базалу.
+* **Час накладання патча вичерпано**, **Самодіагностика не вдалася**, **Помилка патча**, **Закупорка** і **Помилка введення голки**: деактивуйте патч і замініть його.
 
-### Alerts
+### Попередження
 
-Insulin delivery continues, but something needs your attention:
+Введення інсуліну триває, але щось потребує вашої уваги:
 
-* **Low Insulin**: the reservoir reached the amount set in **Low Insulin Notification Setting**. Prepare to change the patch.
-* **Patch Will Expire Soon** and **Patch Operating Life Expired**: change the patch.
-* **Low Battery**: prepare to change the patch.
-* **High/Low Temperature**: delivery is paused until the patch is back between 40 ℉ and 99 ℉.
-* **Auto-Off**: tap **OK**. If ignored, the alert escalates to a critical alarm and delivery stops.
-* **Patch Activation Incomplete**: tap **OK** to complete the activation.
-* **Start Insulin**: the pause you set has ended. Tap **Start Insulin** to resume delivery.
-* **Turn Bluetooth On** and **BLE Not Connected**: the phone cannot reach the patch. Turn Bluetooth on or check the patch connection.
+* **Мало інсуліну**: резервуар досяг кількості, встановленої в **Налаштування сповіщення про низький рівень інсуліну**. Підготуйтеся до заміни патча.
+* **Термін дії патча скоро закінчиться** і **Термін роботи патча закінчився**: замініть патч.
+* **Низький заряд батареї**: підготуйтеся до заміни патча.
+* **Висока/низька температура**: введення призупинено, доки температура патча не повернеться в межі від 40 ℉ до 99 ℉.
+* **Автовимкнення**: торкніться **OK**. Якщо його проігнорувати, попередження переходить у критичний сигнал тривоги, і введення зупиняється.
+* **Активацію патча не завершено**: торкніться **OK**, щоб завершити активацію.
+* **Почати введення інсуліну**: встановлена вами пауза закінчилася. Торкніться **Почати введення інсуліну**, щоб відновити введення.
+* **Увімкніть Bluetooth** і **BLE не підключено**: телефон не може зв'язатися з патчем. Увімкніть Bluetooth або перевірте з'єднання з патчем.
 
-### Notices
+### Повідомлення
 
-For information only: **Low Insulin**, **Patch Usage Time Notification** (the time set in **Patch Usage Notification Setting** has passed), **Patch Check Notification**, **Time Zone Change** and **Check Blood Glucose** (a set time after a bolus).
+Лише для інформації: **Мало інсуліну**, **Сповіщення про час використання патча** (час, встановлений у **Налаштування сповіщення про використання патча**, минув), **Сповіщення про перевірку патча**, **Зміна часового поясу** і **Перевірте глюкозу крові** (через встановлений час після болюсу).
 
-The patch also reports when its own low glucose suspend (**LGS**) function starts or ends. **AAPS** does not use this function; the loop handles low glucose itself.
+Патч також повідомляє, коли його власна функція призупинення при низькій глюкозі (**LGS**) починає або закінчує роботу. **AAPS** не використовує цю функцію; петля сама керує низькою глюкозою.
 
-## Where to get help
+## Де отримати допомогу
 
-Report problems with the CareLevo driver on the [AAPS GitHub issues page](https://github.com/nightscout/AndroidAPS/issues) or in the AAPS community channels, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Повідомляйте про проблеми з драйвером CareLevo на [сторінці GitHub issues AAPS](https://github.com/nightscout/AndroidAPS/issues) або в каналах спільноти AAPS, див. [Де отримати допомогу](../GettingHelp/WhereCanIGetHelp.md).
