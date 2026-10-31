@@ -9,7 +9,7 @@ La plus petite dose que le patch peut délivrer est de 0,05 U. Réglez chaque d�
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Fonctionnalités de la pompe avec AAPS
 
 * Communique avec **AAPS** par le Bluetooth natif de votre téléphone, sans appareil de communication supplémentaire.
 * Les changements d'heure d'été et de fuseau horaire doivent être faits à la main.
@@ -96,9 +96,9 @@ Quand vous entendez le bip, appuyez sur **Démarrer l'appairage**.
 Les deux captures d'écran de l'appairage Bluetooth viennent d'une ancienne version d'**AAPS** : l'écran d'**AAPS** derrière la demande d'appairage Android est différent dans **AAPS** 4.
 ```
 
-### Select insulin
+### Sélectionner l'insuline
 
-Sélectionnez l'insuline avec laquelle vous avez rempli le patch et appuyez sur **Suivant**. **AAPS** applies a profile switch with this insulin after activation.
+Sélectionnez l'insuline avec laquelle vous avez rempli le patch et appuyez sur **Suivant**. **AAPS** applique un changement de profil avec cette insuline après l'activation.
 
 ### Préparez-vous à coller le Patch
 
@@ -142,7 +142,7 @@ Les captures d'écran de **Préparez-vous à coller le Patch** à **Contrôle de
 
 ### Insertion de l'aiguille
 
-Tenez fermement le patch. Tournez le levier de l'aiguille vers le haut de plus de 100° pour insérer l'aiguille. Le patch émet un bip quand l'aiguille est bien insérée. Continuez ensuite à tourner le levier jusqu'au bout pour l'enlever. Press **Next**.
+Tenez fermement le patch. Tournez le levier de l'aiguille vers le haut de plus de 100° pour insérer l'aiguille. Le patch émet un bip quand l'aiguille est bien insérée. Continuez ensuite à tourner le levier jusqu'au bout pour l'enlever. Appuyez sur **Suivant**.
 
 ```{caution}
 Si vous passez à l'étape suivante sans avoir entendu le bip, une **Erreur d'insertion de l'aiguille** s'affiche. Vérifiez le bip et appuyez sur **Réessayer**. Si l'erreur reste, appuyez sur **Supprimer** pour désactiver le patch.
@@ -169,7 +169,7 @@ Quand aucun patch n'est actif, **AAPS** affiche la pompe comme suspendue et enre
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. Dans **AAPS** 4, vous ouvrez l'écran de la pompe avec **Gestion** → **Pompe**, et le bouton s'appelle **Retirer le Patch**.
+Les captures d'écran ci-dessus viennent d'une version plus ancienne d'**AAPS**. Dans **AAPS** 4, vous ouvrez l'écran de la pompe avec **Gestion** → **Pompe**, et le bouton s'appelle **Retirer le Patch**.
 ```
 
 ```{admonition} If the patch does not respond
@@ -195,7 +195,7 @@ L'injection d'insuline est suspendue pendant la durée choisie.
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. Dans **AAPS** 4, vous ouvrez l'écran de la pompe avec **Gestion** → **Pompe**, et le bouton s'appelle **Suspendre la pompe**.
+Les captures d'écran ci-dessus viennent d'une version plus ancienne d'**AAPS**. Dans **AAPS** 4, vous ouvrez l'écran de la pompe avec **Gestion** → **Pompe**, et le bouton s'appelle **Suspendre la pompe**.
 ```
 
 ### Reprendre l'injection d'insuline
@@ -207,7 +207,7 @@ The screenshots above are from an earlier **AAPS** version. Dans **AAPS** 4, vou
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. Dans **AAPS** 4, vous ouvrez l'écran de la pompe avec **Gestion** → **Pompe**, et le bouton s'appelle **Reprendre la pompe**.
+Les captures d'écran ci-dessus viennent d'une version plus ancienne d'**AAPS**. Dans **AAPS** 4, vous ouvrez l'écran de la pompe avec **Gestion** → **Pompe**, et le bouton s'appelle **Reprendre la pompe**.
 ```
 
 ```{warning}
@@ -267,7 +267,7 @@ Les différents avertissements sont expliqués ci-dessous.
 | Activation du Patch incomplète  | L'activation du patch a été interrompue pendant plus de 3 minutes après l'appairage. Ouvrez l'écran de la pompe et terminez l'activation du patch.         |
 | Batterie du Patch faible        | La batterie du patch est faible.                                                                                                                           |
 
-## Where to get help
+## Où obtenir de l'aide
 
 Le pilote EOPatch2 est développé par la communauté, de manière **bénévole**. Avant de demander de l'aide, merci de :
 
