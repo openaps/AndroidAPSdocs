@@ -80,7 +80,7 @@
 * 對於韌體版本 v3 或 Dana-i，預設密碼來自製造日期，計算方式為 MMDD，其中 MM 是月份，DD 是製造日期（例如「0124」代表 1 月 24 日）。
     
     * 從主選單選擇「回顧」，然後從子選單打開「運送資訊」。
-    * 第三個項目是製造日期。 
+    * Number 3 is manufacturing date. 
     * 對於 v3/i，該密碼僅用於鎖定幫浦選單。這不會用於通訊，因此不需要在 AAPS 中輸入該密碼。
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
