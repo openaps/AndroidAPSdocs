@@ -6,15 +6,15 @@ NSClient repose sur une communication stable avec Nightscout. Une connexion inst
 
 Si personne ne vous suit sur Nightscout, vous pouvez choisir de mettre en pause NSClient pour économiser l'autonomie de la batterie ou vous pouvez choisir de configurer NSClient pour qu'il se connecte seulement en Wi-Fi et/ou pendant la charge.
 
-* Comment détecter une connexion instable ?
+* Comment détecter une connexion instable ?
 
-Ouvrez l'écran NSClient (**Configuration** > **Communication** > **NSClientV3** > **Ouvrir le plugin**) et observez l'**État** et le journal. Avec les websockets activés, l'état doit rester « connected » (connecté), avec presque aucun message de reconnexion dans le journal. Si vous voyez beaucoup de reconnexions, alors il y a un problème.
+Ouvrez l'écran NSClient (**Configuration** > **Communication** > **NSClientV3** > **Ouvrir le plugin**) et observez l'**État** et le journal. Avec les websockets activés, l'état doit rester « connected » (connecté), avec presque aucun message de reconnexion dans le journal. Si vous voyez beaucoup de reconnexions, alors il y a un problème.
 
 * Redémarrer
 
 Pour commencer, redémarrez Nightscout puis votre téléphone pour voir si le problème persiste.
 
-Si votre site Nightscout est hébergé sur Heroku, vous pouvez redémarrer Nightscout en vous connectant à Heroku, puis en cliquant sur le nom de votre application Nightscout, et enfin en cliquant sur le menu « More », puis « Restart all dynos ».
+Si votre site Nightscout est hébergé sur Heroku, vous pouvez redémarrer Nightscout en vous connectant à Heroku, puis en cliquant sur le nom de votre application Nightscout, et enfin en cliquant sur le menu « More », puis « Restart all dynos ».
 
 Pour les autres hébergeurs, veuillez suivre la documentation de votre hébergeur.
 
@@ -34,7 +34,7 @@ Une solution aux problèmes de connexion dans Azure est de définir dans les par
 
 * Pas de lecture de glycémie depuis Nightscout
 
-Si **AAPS** se connecte correctement à Nightscout mais que la glycémie s'affiche comme N/A : dans les [paramètres NSClientV3](#Preferences-nsclient), ouvrez **Synchronisation** et activez **Recevoir les données MGC depuis NS**. Cette option est masquée quand le contrôle client est activé ([mode renforcé](#client-master-control-hardened-mode)) ; dans ce cas, vérifiez que **Glycémie NSClient** est sélectionné dans **Configuration** → **Source GLY**.
+Si **AAPS** se connecte correctement à Nightscout mais que la glycémie s'affiche comme N/A : dans les [paramètres NSClientV3](#Preferences-nsclient), ouvrez **Synchronisation** et activez **Recevoir les données MGC depuis NS**. Cette option est masquée quand le contrôle client est activé ([mode renforcé](#client-master-control-hardened-mode)) ; dans ce cas, vérifiez que **Glycémie NSClient** est sélectionné dans **Configuration** → **Source GLY**.
 
 * Si vous avez toujours une erreur...
 
