@@ -98,7 +98,7 @@ Zobacz też [Warunki użytkowania Open Humans](https://www.openhumans.org/terms/
 
 ## Prywatność danych
 
-Open Humans chroni Twoją prywatność, nadając Ci numeryczny identyfikator osobno dla każdego projektu. Dzięki temu projekty mogą Cię rozpoznać, ale nie mogą Cię zidentyfikować. Identyfikator aplikacji (Application ID) przesyłany przez AAPS działa podobnie i służy tylko do zarządzania danymi. Więcej informacji znajdziesz tutaj:
+Open Humans chroni Twoją prywatność, nadając Ci numeryczny identyfikator osobno dla każdego projektu. This allows projects to recognize but not identify you. Identyfikator aplikacji (Application ID) przesyłany przez AAPS działa podobnie i służy tylko do zarządzania danymi. Więcej informacji znajdziesz tutaj:
 
 - [Zasady używania danych Open Humans](https://www.openhumans.org/data-use/)
 - [Open Humans i RODO (GDPR)](https://www.openhumans.org/gdpr/)
