@@ -80,7 +80,7 @@
 * v3 cihaz yazılımlı DanaRS veya Dana-i'ye sahip olanlar için varsayılan parola üretim tarihinden çıkarılır ve MMDD olarak hesaplanır; burada MM ay, DD ise pompanın üretildiği gündür (yani '0124', 01. ayı ve 24. günü temsil eder).
     
     * MAIN MENU'den REVIEW'i seçin ve alt menüden SHIPPING INFORMATION'nu açın.
-    * 3. numara üretim tarihidir. 
+    * Number 3 is manufacturing date. 
     * v3/i için bu şifre sadece pompada menüyü kilitlemek için kullanılır. İletişim veya AAPS'e girmek için gerekli değildir.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
