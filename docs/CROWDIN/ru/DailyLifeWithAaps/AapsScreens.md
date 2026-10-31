@@ -131,7 +131,7 @@ A validation is required after each selection.
 
 Следует выяснить, почему дублируются данные ГК:
 
-* Активирован ли мост Dexcom на сайте NS? Отключите мост, перейдя в панель управления сайта NS, отредактируйте переменную «enable» и удалите оттуда "bridge". (Для Heroku [подробности можно найти здесь](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* Активирован ли мост Dexcom на сайте NS? Отключите мост, перейдя в панель управления сайта NS, отредактируйте переменную «enable» и удалите оттуда "bridge". (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * Данные о ГК поступают в Nightscout (NS) из нескольких источников? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip, if you use that.
 * Есть ли у вас подписчики (фолоуеры), которые могут получать ГК и снова передавать ее на ваш сайт NS?
 * Last resort: In [NSClient settings](#Preferences-nsclient), select the Synchronization settings and disable the "Receive CGM data from NS" option.
@@ -578,7 +578,7 @@ The icon row below the header shows which inputs enter the calculation (BG, tren
 * For safety reasons, the IOB input cannot be disabled when COB is enabled as you might run the risk of too much insulin as **AAPS** is not accounting for what’s already given.
 * If you enable COB and IOB, unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
 * If you enable IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. Это приводит к уведомлению о "недостатке углеводов".
-* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **disable all inputs**. Таким образом, добавляются только новые углеводы а поскольку основная еда не еще не усвоена, то IOB не будет точно соответствовать углеводам COB вскоре после болюса на еду.
+* If you bolus for **additional food** shortly after a meal bolus (e.g. additional dessert) it can be helpful to **disable all inputs**. Таким образом, добавляются только новые углеводы а поскольку основная еда не еще не усвоена, то IOB не будет точно соответствовать углеводам COB вскоре после болюса на еду.
 * For safety reasons, a **temporary target** is only included in the calculation if you enable its input manually.
 
 (AapsScreens-section-j)=
