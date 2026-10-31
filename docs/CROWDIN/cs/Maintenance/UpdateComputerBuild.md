@@ -53,7 +53,7 @@ Minimální požadovaná verze je popsána v [návodu k sestavení](#Building-AP
 * Počkejte, než stahování skončí. Průběh uvidíte jako informaci ve spodní liště. Po dokončení uvidíte zprávu o úspěchu.
 
   ```{note}
-  Aktualizované soubory se mohou lišit! Nic to neznamená
+  Aktualizované soubory se mohou lišit! This is not an indication of a problem.
   ```
 
    ![Android Studio – Pull úspěšný](../images/update/06_GitPullSuccess.png)
