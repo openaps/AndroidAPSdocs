@@ -1,62 +1,62 @@
-# Future (possible) Pump Drivers
+# Futuros (possíveis) controladores de bombas
 
-This is list of some Pumps floating around there, and status of support for them in any of Looping systems and then status in AAPS. On end there is some info, what is required for a pump to be "Loop capable".
+Esta é uma lista de algumas bombas que existem no mercado, com o estado do seu suporte nos sistemas de loop em geral e depois no AAPS. No fim há alguma informação sobre o que uma bomba precisa para poder ser usada em loop («Loop capable»).
 
-    {contents} Table of contents
+    {contents} Índice
     :depth: 1
     :local: true
 
-## Pumps in AAPS integration phase
+## Bombas em fase de integração no AAPS
 
-**Coming soon:** drivers for these pumps are in development and already running in test builds.
+**Em breve:** os controladores destas bombas estão em desenvolvimento e já funcionam em versões de teste.
 
-Omnipod 5 ([Homepage](https://www.omnipod.com/))
+Omnipod 5 ([Página inicial](https://www.omnipod.com/))
 
-![Omnipod 5 driver in development](../images/future-pumps/omnipod5-driver.png)
+![Controlador do Omnipod 5 em desenvolvimento](../images/future-pumps/omnipod5-driver.png)
 
-Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
+Tandem: t:Mobi ([Página inicial](https://www.tandemdiabetes.com/))
 
-![Tandem t:Mobi driver in development](../images/future-pumps/tandem-mobi-driver.png)
+![Controlador da Tandem t:Mobi em desenvolvimento](../images/future-pumps/tandem-mobi-driver.png)
 
-## Pumps that are Loopable
+## Bombas que podem ser usadas em loop
 
-### Kaleido ([Homepage](https://www.hellokaleido.com/))
+### Kaleido ([Página inicial](https://www.hellokaleido.com/))
 
-**Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
+**Estado do loop:** A bomba é candidata a loop, mas o protocolo ainda não é conhecido. O fabricante não tem interesse em código aberto.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Requisito de hardware para o AAPS:** nenhum. Parece ter Bluetooth.
 
-### Tandem: t:slim X3 ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem: t:slim X3 ([Página inicial](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** Possible future Loop candidate. The hope is that t:slim X3 will allow full control from a phone, which would enable AAPS support, but the timeline and features are still unknown.
+**Estado do loop:** Possível futura candidata a loop. Espera-se que a t:slim X3 permita o controlo total a partir de um telefone, o que tornaria possível o suporte no AAPS, mas o calendário e as funções ainda não são conhecidos.
 
-**Hardware requirement for AAPS:** None. It is expected to be Bluetooth enabled.
+**Requisito de hardware para o AAPS:** nenhum. Espera-se que tenha Bluetooth.
 
-**Comments:** Not yet released. t:slim X3 appears to be repeatedly deprioritized on Tandem's roadmap in favour of t:Mobi (including a tubeless version) and Sigi (their patch pump).
+**Comentários:** Ainda não foi lançada. A t:slim X3 parece ser repetidamente adiada no plano da Tandem, a favor da t:Mobi (incluindo uma versão sem tubo) e da Sigi (a sua bomba patch).
 
-### Twiist ([Homepage](https://www.twiist.com/))
+### Twiist ([Página inicial](https://www.twiist.com/))
 
-**Loop status:** Loop candidate.
+**Estado do loop:** Candidata a loop.
 
-**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
+**Requisito de hardware para o AAPS:** nenhum. Tem Bluetooth.
 
-### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
+### Bomba de insulina Willcare ([Página inicial](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
+**Estado do loop:** Neste momento não é candidata a loop, mas fomos contactados pela equipa da empresa e estão interessados em adaptar a bomba para poder ser usada em loop (neste momento, penso que só faltam os comandos para obter/definir o perfil).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Requisito de hardware para o AAPS:** nenhum. Parece ter Bluetooth.
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+**Comentários:** Como a empresa está interessada na integração com o AAPS, poderá fazer ela própria a implementação.
 
-### Ypsopump ([Homepage](https://www.ypsomed.com/))
+### Ypsopump ([Página inicial](https://www.ypsomed.com/))
 
-**Loop status:** Loop candidate. The pump's Bluetooth protocol has been reverse-engineered by the community, so communicating with it is possible in principle.
+**Estado do loop:** Candidata a loop. O protocolo Bluetooth da bomba foi descodificado pela comunidade (engenharia inversa); por isso, em princípio, é possível comunicar com ela.
 
-**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
+**Requisito de hardware para o AAPS:** nenhum. Tem Bluetooth.
 
-**Comments:** The Ypsopump protects its Bluetooth communication with heavy third-party encryption. Working with it is technically demanding, which makes building and maintaining a reliable driver hard. There is no production-ready AAPS driver yet.
+**Comentários:** A Ypsopump protege a sua comunicação Bluetooth com uma encriptação forte de terceiros. Trabalhar com ela é tecnicamente exigente, o que torna difícil criar e manter um controlador fiável. Ainda não existe nenhum controlador do AAPS pronto para uso real.
 
-## Pumps no longer sold (companies no longer operating)
+## Bombas que já não são vendidas (empresas que já não estão em atividade)
 
 ### Animas Vibe
 
@@ -66,53 +66,53 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Accu-Chek Insight
 
-**Comments:** End of support March 2025.
+**Comentários:** Fim do suporte em março de 2025.
 
-## Pumps that aren't Loopable
+## Bombas que não podem ser usadas em loop
 
 ### Medtronic Bluetooth
 
-**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**Comentários:** A Medtronic [desistiu](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
 
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+### Tandem: t:slim X2 ([Página inicial](https://www.tandemdiabetes.com/))
 
-**Comments:** The Tandem Bluetooth protocol has been reverse-engineered, but on the t:slim X2 only boluses can be delivered — basal delivery cannot be controlled — so it cannot be used safely for looping. This is unlikely to change unless Tandem allows full control of the X2 from a phone, which would more probably arrive with the t:slim X3 instead.
+**Comentários:** O protocolo Bluetooth da Tandem foi descodificado (engenharia inversa), mas na t:slim X2 só é possível administrar bólus — a administração basal não pode ser controlada — e, por isso,, não pode ser usada em loop com segurança. É pouco provável que isto mude, a não ser que a Tandem permita o controlo total da X2 a partir de um telefone, o que deverá chegar antes com a t:slim X3.
 
 ### Accu-Chek Solo
 
-**Comments:** No community success in communicating with the Solo pump.
+**Comentários:** A comunidade ainda não conseguiu comunicar com a bomba Solo.
 
-## Requirements for pumps being loopable
+## Requisitos para uma bomba poder ser usada em loop
 
-**Prerequisite**
+**Pré-requisito**
 
-- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
-- Protocol is hacked/documented/etc.
+- A bomba tem de suportar algum tipo de controlo remoto. (BT, radiofrequência, etc.)
+- O protocolo foi descodificado (hacked), está documentado, etc.
 
-**Minimal requirement**
+**Requisito mínimo**
 
-- Set Temporary Basal Rate
-- Get Status
-- Cancel Temporary Basal Rate
+- Definir taxa basal temporária
+- Obter Estado
+- Cancelar taxa basal temporária
 
-**For oref1(SMB) or Bolusing:**
+**Para oref1 (SMB) ou para dar bólus:**
 
-- Set Bolus
+- Definir Bólus
 
-**Good to have**
+**Bom ter**
 
-- Cancel Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- Cancelar Bólus
+- Obter perfil basal (quase obrigatório)
+- Definir perfil basal (bom ter)
+- Ler histórico 
 
-**Other (not required but good to have)**
+**Outros (não obrigatórios, mas bom ter)**
 
-- Set Extended Bolus
-- Cancel Extended Bolus
-- Read History
-- Read TDD
+- Definir bólus prolongado
+- Cancelar Bólus Prolongado
+- Ler histórico
+- Ler TID
 
-### Other pumps support
+### Suporte de outras bombas
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Se houver outras bombas cujo estado gostaria de conhecer, contacte-nos no Discord.
