@@ -8,7 +8,7 @@ Esta es una operación opcional y avanzada. Solo funciona si compilas con un **f
 
 Úsalo solo cuando un desarrollador te pida probar un cambio concreto (te da uno o más hashes de commit) antes de que esté en una versión publicada.
 
-## Before you start
+## Antes de empezar
 
 - [Sincroniza tu fork](#Update-to-new-version-update-your-repo): este workflow compila el estado actual de tu rama, no una versión que eliges de una lista.
 - Google Drive debe estar autorizado ([paso 3](../SettingUpAaps/BrowserBuildGoogleDrive.md)): la app compilada se guarda allí, como en una compilación normal.
@@ -25,4 +25,4 @@ Esta es una operación opcional y avanzada. Solo funciona si compilas con un **f
    - **Upstream repository**: de dónde vienen los commits. Deja `nightscout/AndroidAPS` salvo que el desarrollador te diga otra cosa.
    - **Commit hash(es) to cherry-pick**: el o los hashes que te dieron, separados por espacios.
    - **Select Build Variant**: consulta las [variantes](#browserbuild-variant) (normalmente `fullRelease`).
-4. Tap **Run workflow**. Cuando termine, la app estará en tu Google Drive, como después de una [compilación normal](../SettingUpAaps/BrowserBuildAPK.md).
+4. Toca **Run workflow**. Cuando termine, la app estará en tu Google Drive, como después de una [compilación normal](../SettingUpAaps/BrowserBuildAPK.md).
