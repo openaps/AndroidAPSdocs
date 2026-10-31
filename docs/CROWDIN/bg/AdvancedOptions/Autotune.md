@@ -1,60 +1,60 @@
-# Как да използвате Autotune plugin
+# Как да използвате плъгина Autotune
 
-Autotune plugin е имплементация на OpenAPS autotune алгоритъма в рамките на AAPS. It analyzes your recent AAPS history to suggest adjustments to your basal rates, ISF and carb ratio.
+Плъгинът Autotune е реализация на алгоритъма OpenAPS autotune в AAPS. Той анализира скорошната история в AAPS и предлага промени в базалните дози, ISF и коефициента за въглехидрати.
 
-Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
+Плъгинът Autotune е наличен във версиите на AAPS от [3.4](#version3400) насам, но по подразбиране е скрит.
 
 (autotune-how-autotune-calculates-adjustments)=
-## How Autotune calculates adjustments
+## Как Autotune изчислява промените
 
-Autotune looks back over your recent AAPS history — CGM readings, boluses, carbs and temporary basal rates — and works out where your **Profile** (basal rates, ISF, carb ratio) doesn't quite match what actually happened to your BG.
+Autotune преглежда скорошната история в AAPS – стойностите от CGM, болусите, въглехидратите и временните базали – и установява къде вашият **Профил** (базални дози, ISF, коефициент за въглехидрати) не съвпада напълно с това, което реално се е случило с КЗ.
 
-For each 5-minute data point, it compares your **actual BG change** to the change your Profile predicted, and sorts the resulting deviation into one of three buckets:
+За всяка 5-минутна точка от данните той сравнява **реалната промяна на КЗ** с промяната, която е предвидил профилът, и разпределя полученото отклонение в една от три групи:
 
-* deviations that happened with no carbs on board and no insulin activity (used to tune **basal rates**, hour by hour),
-* deviations that happened after a bolus/correction with no carbs (used to tune **ISF**), or
-* deviations that happened while carbs were absorbing (used to tune **carb ratio**).
+* отклонения без активни въглехидрати и без активност на инсулина (използват се за настройка на **базалните дози**, час по час),
+* отклонения след болус/корекция без въглехидрати (използват се за настройка на **ISF**), или
+* отклонения по време на усвояване на въглехидрати (използват се за настройка на **коефициента за въглехидрати**).
 
-It then looks at the pattern of deviations in each bucket (using percentiles rather than a simple average, so a few noisy data points don't skew the result) and proposes a new value for that hour/parameter.
+След това той разглежда разпределението на отклоненията във всяка група (с персентили вместо обикновена средна стойност, така че няколко точки с шум да не изкривят резултата) и предлага нова стойност за този час/параметър.
 
-To keep any single run from overcorrecting, each Autotune run only ever moves a value a fraction of the way towards what the data suggests: up to 10% for ISF and carb ratio, and up to 20% for each basal segment. Overall drift is further capped by the **Max autosens ratio** / **Min autosens ratio** settings (see [Other settings](#autotune-other-settings) below) — the same bounds that limit Autosens. This is why Autotune is meant to be run repeatedly (day after day, or nightly) rather than trusted after a single run: results should converge gradually, and a big jump on one run is a sign to double check your data (missed carbs, a bad sensor day, _etc._) rather than to trust it blindly.
+За да не коригира прекалено при едно изпълнение, всяко изпълнение на Autotune придвижва стойността само част от пътя към това, което показват данните: до 10 % за ISF и коефициента за въглехидрати и до 20 % за всеки базален сегмент. Общото отклонение е допълнително ограничено от настройките **Аутосенс максимум** / **Аутосенс минимум** (вижте [Други настройки](#autotune-other-settings) по-долу) – същите граници, които ограничават Autosens. Затова Autotune е предназначен да се изпълнява многократно (ден след ден или всяка нощ), а не да му се вярва след едно изпълнение: резултатите трябва постепенно да се сближат, а голям скок при едно изпълнение е знак да проверите отново данните си (пропуснати въглехидрати, лош ден на сензора, _и т.н._), а не да му се доверите сляпо.
 
-Autotune can be run three ways: manually as a one-off from within the plugin (as described below), automatically every night via an [automation rule](#autotune-run-autotune-with-an-automation-rule), or — outside of AAPS entirely — as a standalone command-line tool against exported data, which is how some community guides describe using it without a phone actively running AAPS.
+Autotune може да се изпълнява по три начина: ръчно, еднократно от плъгина (както е описано по-долу), автоматично всяка нощ чрез [правило за автоматизация](#autotune-run-autotune-with-an-automation-rule) или – изцяло извън AAPS – като самостоятелен инструмент от командния ред върху експортирани данни. Така някои ръководства на общността описват използването му без телефон, на който работи AAPS.
 
-*For the underlying oref0 algorithm in full mathematical detail, see [OpenAPS's Autotune documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).*
+*За пълните математически подробности на алгоритъма oref0 вижте [документацията на OpenAPS за Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).*
 
-## Показване на Autotune plugin
+## Показване на плъгина Autotune
 
-Създайте празен файл с име `enable_autotune`, в подпапка `extra` в папката на AAPS на вашия телефон, за да активирате Autotune.
+Създайте празен файл с име `enable_autotune` в подпапката `extra` на [AAPS директорията](#preferences-maintenance-settings) на телефона си.
 
-*ЗАБЕЛЕЖКА: Проверете в настройките на AAPS къде се намира AAPS директорията и, че сте поставили файла на правилното място, защото множество хора са хванати с грешно поставен файл.
+***ЗАБЕЛЕЖКА: Проверете в настройките на **AAPS** къде е AAPS директорията и дали сте поставили файла в правилната папка – много хора са поставили файла в грешна папка.***
 
-![Разреши Autotune](../images/Autotune/Autotune_0.png)
+![Включване на Autotune](../images/Autotune/Autotune_0.png)
 
-Restart **AAPS**. Then open the **menu** (☰), select **Configuration**, then the **General** category, and tick **Autotune**. The card then shows **Settings** and **Open plugin**:
+Рестартирайте **AAPS**. След това отворете **менюто** (☰), изберете **Конфигурация**, после категорията **Основни** и отметнете **Autotune**. Тогава картата показва **Настройки** и **Отвори плъгин**:
 
-![Autotune ticked in Configuration > General](../images/v4/Configuration/configuration_general_autotune.png)
+![Autotune е отметнат в Конфигурация > Основни](../images/v4/Configuration/configuration_general_autotune.png)
 
 ## Потребителски интерфейс на Autotune
 
-Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
+Докоснете **Отвори плъгин** на картата **Autotune**, за да отворите екрана на Autotune:
 
-![Autotune screen with the profile, the number of days of data and a warning about the selected profile](../images/Autotune/Autotune_1b.png)
+![Екранът на Autotune с профила, броя дни с данни и предупреждение за избрания профил](../images/Autotune/Autotune_1b.png)
 
-- В падащото меню Profile можете да изберете входния профил, който искате да настроите (по подразбиране е избран текущият ви активен профил)
-  - Note: each time you select a new profile, previous results will be removed and the **Number of days of data** will be set to its default value
-- Then **Number of days of data** (called **Tune days** in older versions) is to select the number of days used in calculation to tune your profile. Минималната стойност е 1 ден, а максималната – 30 дни. Това число не трябва да е твърде малко, за да се получат правилни, итеративни и плавни резултати (над 7 дни за всяко изчисление)
-  - Note: each time you change the **Number of days of data**, previous results will be removed
-- Последен старт/Last run е връзка, която възстановява последното ви валидно изчисление. Ако не сте стартирали Autotune през текущия ден, или ако предишните резултати са били премахнати чрез промяна на параметър за изчисление по-горе, можете да възстановите параметрите и резултатите от последното успешно стартиране.
-- Warning ви показва например информация за избрания профил (ако имате няколко IC стойности или няколко ISF стойности)
+- В падащото меню „Профил“ можете да изберете входния профил, който искате да настроите (по подразбиране е избран текущият ви активен профил)
+  - Забележка: всеки път, когато изберете нов профил, предишните резултати ще бъдат изтрити, а **Брой дни с данни** ще получи стойността по подразбиране
+- След това **Брой дни с данни** (в по-старите версии **Tune days**) служи за избор на броя дни, използвани в изчислението за настройка на профила. Минималната стойност е 1 ден, а максималната – 30 дни. Това число не трябва да е твърде малко, за да се получат правилни, итеративни и плавни резултати (над 7 дни за всяко изчисление)
+  - Забележка: всеки път, когато промените **Брой дни с данни**, предишните резултати ще бъдат изтрити
+- „Последно стартиран“ е връзка, която възстановява последното ви валидно изчисление. Ако не сте стартирали Autotune през текущия ден, или ако предишните резултати са били премахнати чрез промяна на параметър за изчисление по-горе, можете да възстановите параметрите и резултатите от последното успешно стартиране.
+- „Внимание“ ви показва например информация за избрания профил (ако имате няколко стойности на IC или няколко стойности на ISF)
   - Забележка: изчислението на Autotune работи само с една единствена IC стойност и една единствена ISF стойност. Понастоящем не съществува алгоритъм за Autotune, който да настройва циркадни (circadian) IC или циркадни ISF. Ако входният ви профил има няколко стойности, в секцията с предупреждения можете да видите средната стойност, взета предвид при настройката на вашия профил.
-- Check Input Profile button open the Profile Viewer to allow you a quick verification of your profile (Units, IC, ISF, basal and target)
-  - Забележка: Autotune ще настрои само вашия IC (единична стойност), ISF (единична стойност) и базал (с циркадна вариация). Units and target will remain unchanged in output profile.
+- Бутонът „Провери зададен профил“ (Check Input Profile) отваря прегледа на профила, за да можете бързо да проверите профила си (единици, IC, ISF, базал и цел)
+  - Забележка: Autotune ще настрои само вашия IC (единична стойност), ISF (единична стойност) и базал (с циркадна вариация). Единиците и целта ще останат непроменени в изходния профил.
 
-- "Run Autotune" will launch Autotune calculation with selected profile and the selected number of days of data
-  - Забележка: изчислението на Autotune може да отнеме дълго време. След стартиране можете да превключите към друго (начален екран и др.) и да се върнете по-късно в Autotune plugin, за да видите резултатите
+- „Стартирай Autotune“ ще стартира изчислението на Autotune с избрания профил и избрания брой дни с данни
+  - Забележка: изчислението на Autotune може да отнеме дълго време. След стартиране можете да преминете към друг изглед (начален екран, ...) и по-късно да се върнете в плъгина Autotune, за да видите резултатите
 
-  ![Autotune Стартиране](../images/Autotune/Autotune_2b.png)
+  ![Стартиране на Autotune](../images/Autotune/Autotune_2b.png)
 
 - След това по време на изпълнението ще виждате междинни резултати по-долу
 
@@ -64,46 +64,46 @@ Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
 
 - Когато изчислението на Autotune приключи, ще видите резултата (Настроен профил) и четири бутона по-долу.
 
-  ![Autotune Резултат](../images/Autotune/Autotune_4b.png)
+  ![Резултат от Autotune](../images/Autotune/Autotune_4b.png)
 
-- Важно е винаги да сравнявате входния профил (колона "Profile"), изходния профил (колона "Tuned") и процента на вариация за всяка стойност (колона "%").
+- Важно е винаги да сравнявате входния профил (колона „Профил“), изходния профил (колона „Настроен“) и процента на промяна за всяка стойност (колона „%“).
 
-- а базалните стойности (basal rates) имате също така броя на „липсващите дни" ("missing days"). Имате липсващи дни, когато Autotune няма достатъчно данни, категоризирани като „Базал", за да настрои базалния темп за този период (например след всяко хранене, когато имате усвояване на въглехидрати). Това число трябва да бъде възможно най-ниско, особено когато базалният темп е важен (например през нощта или в края на следобеда)
+- За базалните дози имате и броя на „липсващите дни“ (missing days). Липсващи дни има, когато Autotune няма достатъчно данни, категоризирани като „Базал“, за да настрои базалната доза за този период (например след всяко хранене, когато се усвояват въглехидрати). Това число трябва да е възможно най-ниско, особено когато базалът е важен (например през нощта или в края на следобеда)
 
-- Бутонът "Compare profiles" отваря изгледа за сравняване на профили. Входният профил е в синьо, а изходният профил (наречен "Настроен") е в червено.
+- Бутонът „Сравняване на профили“ отваря изгледа за сравняване на профилите. Входният профил е в синьо, а изходният профил (наречен „Настроен“) е в червено.
 
   - Забележка: в примера по-долу входният профил има циркадна вариация за IC и ISF, но изчисленият изходен профил има единична стойност. Ако за вас е важно да получите циркаден изходен профил, вижте [Циркаден IC или ISF профил](#autotune-circadian-ic-or-isf-profile) по-долу.
 
   ![Autotune Сравняване на профили](../images/Autotune/Autotune_5.png)
 
-- Ако имате доверие на резултатите (нисък процент на вариация между входния и изходния профил), можете да кликнете върху бутона "Активирай профил" и след това да кликнете OK, за да потвърдите.
+- Ако имате доверие на резултатите (малък процент на промяна между входния и изходния профил), можете да натиснете бутона „Активирай профил“ и след това ОК, за да потвърдите.
 
-  - Activate Tuned profile will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
-  - If you already have a profile named "Tuned" in **Manage → Profile**, then this profile will be updated with calculated Autotune profile before the activation
+  - „Активирай профил“ автоматично ще създаде нов профил „Настроен“ в списъка ви с профили (**Управление → Профил**).
+  - Ако вече имате профил с име „Настроен“ в **Управление → Профил**, този профил ще бъде обновен с изчисления от Autotune профил преди активирането
 
   ![Autotune Активирай профил](../images/Autotune/Autotune_6.png)
 
-- Ако смятате, че настроеният профил трябва да бъде коригиран (например ако смятате, че някои вариации са твърде значителни), можете да кликнете на бутона "Копирай в локален профил"
+- Ако смятате, че настроеният профил трябва да се коригира (например ако смятате, че някои промени са твърде големи), можете да натиснете бутона „Копиране в основен профил“
 
-  - A new profile with the prefix "Tuned" and the date and time of the run will be created in **Manage → Profile**
+  - В **Управление → Профил** ще бъде създаден нов профил с префикс „Настроен“ и датата и часа на изпълнението
 
   ![Копиране в основен профил](../images/Autotune/Autotune_7.png)
 
-- You can then edit the Tuned profile: open **Manage** > **Profile**, swipe to the card named "Tuned" with the date and time of the run, and tap the **Edit** (pencil) button
+- След това можете да редактирате настроения профил: отворете **Управление** > **Профил**, плъзнете до картата с име „Настроен“ с датата и часа на изпълнението и докоснете бутона **Редакция** (молив)
 
-  - the values in the profile will be rounded in the user interface to your pump capabilities
+  - стойностите в профила ще бъдат закръглени в потребителския интерфейс според възможностите на помпата ви
 
   ![Autotune Обновяване на локален профил](../images/Autotune/Autotune_8.png)
 
-- Ако искате да замените входния си профил с резултата от Autotune, кликнете на бутона "Обнови входящ профил" и потвърдете изскачащия прозорец с OK
+- Ако искате да замените входния си профил с резултата от Autotune, натиснете бутона „Обновяване на начален профил“ и потвърдете изскачащия прозорец с ОК
 
-  - Забележка: ако кликнете на "Activate profile" след "Update input profile", тогава ще активирате обновения си профил, а не профила по подразбиране "Настроен"
+  - Забележка: ако натиснете „Активирай профил“ след „Обновяване на начален профил“, ще активирате обновения си профил, а не профила по подразбиране „Настроен“.
 
-  ![Autotune Обновяване на входящ профил](../images/Autotune/Autotune_9.png)
+  ![Autotune – Обновяване на начален профил](../images/Autotune/Autotune_9.png)
 
-- Ако сте обновили входния си профил, тогава бутонът "Обнови входен профил" се заменя с бутона "Върни входен профил" (вижте снимката по-долу). You can that way immediately see if your current input profile in **Manage → Profile** already includes the result of last run or not. Имате също така възможността да възстановите входния си профил без резултата от autotune с този бутон
+- Ако сте обновили входния си профил, бутонът „Обновяване на начален профил“ се заменя с бутона „Възстановяване на начален профил“ (вижте снимката по-долу). Така веднага можете да видите дали текущият ви входен профил в **Управление → Профил** вече включва резултата от последното изпълнение или не. Имате също така възможността да възстановите входния си профил без резултата от autotune с този бутон
 
-  ![Autotune Обновяване на входящ профил](../images/Autotune/Autotune_10.png)
+  ![Autotune – Обновяване на начален профил](../images/Autotune/Autotune_10.png)
 
 
 
@@ -111,29 +111,29 @@ Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
 
 (autotune-plugin-settings)=
 
-### Autotune plugin settings
+### Настройки на плъгина Autotune
 
-  ![Autotune settings in AAPS 4](../images/preferences/settings_autotune.png)
+  ![Настройки на Autotune в AAPS 4](../images/preferences/settings_autotune.png)
 
 ```{admonition} Only DEV
 :class: note
-The **Auto switch profile** feature is only available in Dev/Engineering mode.
+Функцията **Автоматично превключване на профил** е налична само в режим Dev/Engineering (за разработчици).
 ```
 
-- **Auto switch profile** (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. Ако промените тази настройка на включено, входният профил автоматично ще бъде обновен с Настроен профила и той ще бъде активиран.
-  - **Внимавайте, трябва да имате доверие и да проверявате в продължение на няколко следващи дни, че след обновяване и активиране на Настроен профил без модификация, той подобрява вашия цикъл**
+- **Автоматично превключване на профил** (по подразбиране изключено): вижте [Изпълнение на Autotune с правило за автоматизация](#autotune-run-autotune-with-an-automation-rule) по-долу. Ако включите тази настройка (On), входният профил автоматично ще бъде обновен с профила „Настроен“ и той ще бъде активиран.
+  - **Внимавайте: трябва да имате доверие и да проверявате в продължение на няколко дни, че след обновяване и активиране на настроения профил без промени той подобрява работата на кръга**
 
-- **Categorize UAM as basal** (default Off): This setting is for the users using AndroidAPS without any carbs entered (Full UAM). Тя ще предотврати (когато е Off) категоризирането на UAM като базал.
-  - Забележка: ако имате поне един час засечено усвояване на въглехидрати през даден ден, тогава всички данни, категоризирани като "UAM", ще бъдат категоризирани като базал, независимо от тази настройка (On или Off)
-- **Default tune days** (default 5): You can define the default value with this setting. Each time you select a new profile in the Autotune plugin, the **Number of days of data** will be replaced by this default value
-- **Use circadian IC/ISF** (default Off): see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
+- **Категоризирай UAM като базал** (по подразбиране изключено): Тази настройка е за потребители, които използват AndroidAPS, без да въвеждат въглехидрати (пълен UAM). Когато е изключена (Off), тя не позволява UAM да се категоризира като базал.
+  - Забележка: ако през даден ден има поне един час засечено усвояване на въглехидрати, тогава всички данни, категоризирани като „UAM“, ще бъдат категоризирани като базал, независимо от тази настройка (включена или изключена)
+- **Дни за настройка** (по подразбиране 5): С тази настройка можете да зададете стойността по подразбиране. Всеки път, когато изберете нов профил в плъгина Autotune, **Брой дни с данни** ще бъде заменен с тази стойност по подразбиране
+- **Използвай циркадни IC/ISF** (по подразбиране изключено): вижте [Циркаден IC или ISF профил](#autotune-circadian-ic-or-isf-profile) по-долу.
 
 (autotune-other-settings)=
-### Other settings
+### Други настройки
 
-- Utotune също използва Max autosens ratio и Min autosens ratio, за да ограничи вариацията. You can see and adjust these values in [**Settings** > **Absorption settings** > **Advanced Settings**](../SettingUpAaps/Preferences.md) (**Autosens max** and **Autosens min**).
+- Autotune използва и Max autosens ratio и Min autosens ratio (в приложението: „Аутосенс максимум“ и „Аутосенс минимум“), за да ограничи промяната. Можете да видите и промените тези стойности в [**Настройки** > **Настройки за абсорбция** > **Разширени настройки**](../SettingUpAaps/Preferences.md) (**Аутосенс максимум** и **Аутосенс минимум**).
 
-  ![Autosens max and Autosens min in the advanced absorption settings](../images/preferences/settings_absorption_advanced.png)
+  ![Аутосенс максимум и Аутосенс минимум в разширените настройки за абсорбция](../images/preferences/settings_absorption_advanced.png)
 
 
 
@@ -143,7 +143,7 @@ The **Auto switch profile** feature is only available in Dev/Engineering mode.
 
 ### Циркаден IC или ISF профил
 
-- If you have important variation of IC and/or you ISF in your profile, and you fully trust in your circadian time and variation, then you can enable **Use circadian IC/ISF** (called "Apply average result in circadian IC/ISF" in older versions)
+- Ако имате значителна вариация на IC и/или ISF в профила си и напълно се доверявате на циркадното време и вариацията си, можете да включите **Използвай циркадни IC/ISF** (в по-старите версии „Apply average result in circadian IC/ISF“)
 
   - Обърнете внимание, че изчислението на Autotune винаги ще се извършва с единична стойност, а циркадната вариация няма да бъде настройвана от Autotune. Тази настройка прилага само средната изчислена вариация за IC и/или ISF върху вашите циркадни стойности
 
@@ -155,13 +155,13 @@ The **Auto switch profile** feature is only available in Dev/Engineering mode.
 
 ### Настройка на конкретни дни от седмицата
 
-- If you tap the **eye** icon on the right of the **Number of days of data** field, you will see the day selection. Можете да зададете кой ден от седмицата трябва да бъде включен в изчислението на Autotune (на снимката по-долу можете да видите пример за „работни дни" с изключени събота и неделя от изчислението на autotune)
-  - If the number of days included in Autotune calculation is lower than the **Number of days of data**, then you will see how many days will be included on the right of the days selector (10 days in the example below)
-  - This setting gives good results only if the number of remaining days is not to small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should set **Number of days of data** to at least 21 or 28 to have 6 or 8 days included in Autotune calculation)
+- Ако докоснете иконата **око** вдясно от полето **Брой дни с данни**, ще видите избора на дни. Можете да зададете кои дни от седмицата да бъдат включени в изчислението на Autotune (на снимката по-долу можете да видите пример за „работни дни“, при които събота и неделя са изключени от изчислението на Autotune)
+  - Ако броят дни, включени в изчислението на Autotune, е по-малък от **Брой дни с данни**, вдясно от избора на дни ще видите колко дни ще бъдат включени (10 дни в примера по-долу)
+  - Тази настройка дава добри резултати само ако броят на оставащите дни не е твърде малък (например ако настройвате специален профил за почивните дни само с избрани неделя и събота, трябва да зададете **Брой дни с данни** на поне 21 или 28, за да бъдат включени 6 или 8 дни в изчислението на Autotune)
 
   ![Autotune екран](../images/Autotune/Autotune_14b.png)
 
-- During Autotune calculation, you can see the progress of the calculations ("Partial result day 1 / 4 tuned" in the example below, with Saturday and Sunday excluded)
+- По време на изчислението на Autotune можете да видите напредъка („Частичен резултат ден 1 / 4 настроен“ в примера по-долу, с изключени събота и неделя)
 
   ![Autotune екран](../images/Autotune/Autotune_15b.png)
 
@@ -169,18 +169,18 @@ The **Auto switch profile** feature is only available in Dev/Engineering mode.
 
 (autotune-run-autotune-with-an-automation-rule)=
 
-## Изпълнение на Autotune с правило за автомация
+## Изпълнение на Autotune с правило за автоматизация
 
 ```{admonition} Only DEV
 :class: note
-The **Auto switch profile** feature is only available in Dev/Engineering mode.
+Функцията **Автоматично превключване на профил** е налична само в режим Dev/Engineering (за разработчици).
 ```
 
-Първата стъпка е да зададете правилния тригер за правило за автомация с Autotune:
+Първата стъпка е да зададете правилния тригер за правило за автоматизация с Autotune:
 
-Забележка: за повече информация как да зададете правило за автомация, вижте [тук](../DailyLifeWithAaps/Automations.md).
+Забележка: за повече информация как да зададете правило за автоматизация вижте [тук](../DailyLifeWithAaps/Automations.md).
 
-- Трябва да изберете условие Повтарящо се време на изпълнение Autotune само веднъж на ден, тъй като autotune е проектиран да се изпълнява ежедневно (при всяко ново изпълнение се измествате с един ден напред и промените в профила бързо трябва да станат минимални)
+- Трябва да изберете тригера „Повтарящо се време“: изпълнявайте Autotune само веднъж на ден, тъй като Autotune е създаден да се изпълнява ежедневно (при всяко ново изпълнение периодът се премества с един ден напред и промените в профила бързо трябва да станат минимални)
 
   ![Autotune екран](../images/Autotune/Autotune_16.png)
 
@@ -188,19 +188,19 @@ The **Auto switch profile** feature is only available in Dev/Engineering mode.
 
   ![Autotune екран](../images/Autotune/Autotune_17.png)
 
-- Then you can select the **Autotune profile** action (in the **Loop & insulin** group)
+- След това можете да изберете действието **Стартирай Autotune** (в групата **Кръг & инсулин**)
 
   ![Autotune екран](../images/Autotune/Autotune_18.png)
 
-- You can then adjust the parameters of the action for your run. In a new action, **Select profile to tune** shows the first profile of your local profile list, the **Tune days** field is empty and all days are selected. Choose the profile to tune and enter the number of **Tune days** (1 to 30).
+- След това можете да настроите параметрите на действието за вашето изпълнение. В ново действие **Изберете профил за настройка** показва първия профил от списъка ви с локални профили, полето **Дни на настройка** е празно и всички дни са избрани. Изберете профила за настройка и въведете броя **Дни на настройка** (от 1 до 30).
 
   ![Autotune екран](../images/Autotune/Autotune_19b.png)
 
-- After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](#autotune-plugin-settings) "**Auto switch profile**" to enabled to automatically update and activate profile tuned after calculation.
+- След няколко дни, ако напълно се доверявате на резултатите от Autotune и процентът на промяна е малък, можете да включите „**Автоматично превключване на профил**“ в [настройките на Autotune](#autotune-plugin-settings), за да се обновява и активира автоматично настроеният профил след изчислението.
 
-Забележка: ако искате автоматично да настройвате профили за конкретни дни от седмицата (например профил за „почивни дни" и друг за „работни дни"), тогава създайте по едно правило за всеки профил, изберете същите дни в Trigger и в Autotune Action, Tune days трябва да е достатъчно високо, за да сте сигурни, че настройката ще се извърши с поне 6 или 8 дни, и не забравяйте да изберете час след 4 сутринта в условието...
+Забележка: ако искате автоматично да настройвате профили за конкретни дни от седмицата (например профил за „почивни дни“ и друг за „работни дни“), създайте по едно правило за всеки профил, изберете същите дни в тригера и в действието на Autotune, „Дни на настройка“ трябва да е достатъчно голямо, за да сте сигурни, че настройката ще се извърши с поне 6 или 8 дни, и не забравяйте да изберете час след 4:00 в тригера...
 
-- See below an example of rule that runs every working day (Monday to Friday) at 04:00 and tunes the profile "Normal" with 14 **Tune days**, working days only (so only 10 days are included in the Autotune calculation).
+- Вижте по-долу пример за правило, което се изпълнява всеки работен ден (от понеделник до петък) в 04:00 и настройва профила „Normal“ с 14 **Дни на настройка**, само за работните дни (така в изчислението на Autotune се включват само 10 дни).
 
   ![Autotune екран](../images/Autotune/Autotune_20b.png)
 
@@ -212,25 +212,25 @@ Autotune работи с информацията, съществуваща въ
 
 Autotune е просто помощно средство, важно е редовно да проверявате дали сте съгласни с изчисления профил. Ако имате някакво съмнение, променете настройките на Autotune (например броя дни) или копирайте резултатите в локален профил и коригирайте профила, преди да го използвате.
 
-Винаги използвайте Autotune ръчно в продължение на няколко дни, за да проверите резултатите, преди да ги приложите. И едва когато напълно се доверявате на резултатите от Autotune и вариацията стане минимална между предишния профил и изчисления профил, тогава започвате да използвате Automation (никога преди това)
+Винаги използвайте Autotune ръчно в продължение на няколко дни, за да проверите резултатите, преди да ги приложите. И едва когато напълно се доверявате на резултатите от Autotune и промяната между предишния и изчисления профил стане минимална, започнете да използвате Автоматизация (никога преди това)
 
 - Autotune може да работи много добре за някои потребители, а за други – не, затова **ако не се доверявате на резултата от Autotune, не го използвайте**
 
-It's also important to analyze Autotune results to understand (or try to understand) why Autotune proposes these modifications
+Важно е също да анализирате резултатите от Autotune, за да разберете (или да опитате да разберете) защо Autotune предлага тези промени
 
-- може да имате цялостно увеличение или намаление на силата на профила ви (например увеличение на общия basal, свързано с намаление на стойностите на ISF и IC). това може да е свързано с няколко последователни дни с autosens корекция над 100% (необходима е по-голяма агресивност) или под 100% (по-чувствителни сте)
-- Понякога Autotune предлага различен баланс между базалните темпове и IC/ISF (например по-нисък basal и по-агресивни IC/ISF)
+- може да имате цялостно увеличение или намаление на силата на профила ви (например увеличение на общия базал, свързано с намаление на стойностите на ISF и IC). това може да е свързано с няколко последователни дни с autosens корекция над 100% (необходима е по-голяма агресивност) или под 100% (по-чувствителни сте)
+- Понякога Autotune предлага различен баланс между базалните дози и IC/ISF (например по-нисък базал и по-агресивни IC/ISF)
 
 Съветваме да не използвате Autotune в следните случаи:
 
 - Не въвеждате всичките си въглехидрати
-  - Ако не въвеждате корекция с въглехидрати за хипогликемия, Autotune ще види неочаквано покачване на стойността на вашето BG и ще увеличи базалните ви темпове 4 часа по-рано, което може да е обратното на това, което ви е необходимо, за да избегнете хипо, особено ако е посред нощ. Затова е важно да въвеждате всички въглехидрати, особено корекции за хипо.
+  - Ако не въвеждате въглехидратите, приети за коригиране на хипогликемия, Autotune ще види неочаквано покачване на КЗ и ще увеличи базалните ви дози 4 часа по-рано. Това може да е обратното на това, което ви трябва, за да избегнете хипогликемия, особено посред нощ. Затова е важно да въвеждате всички въглехидрати, особено корекции за хипо.
 - Имате много периоди с открит UAM през деня.
   - Въвели ли сте всичките си въглехидрати и правилно ли сте оценили въглехидратите си?
-  - Всички UAM периоди (освен ако не въвеждате никакви въглехидрати през даден ден и categorized UAM as basal е деактивирано), всички ваши UAM периоди ще бъдат категоризирани като basal, това може значително да увеличи вашия basal (много повече от необходимото)
+  - Всички периоди с UAM (освен ако през деня не въвеждате никакви въглехидрати и „Категоризирай UAM като базал“ е изключено) ще бъдат категоризирани като базал, а това може силно да увеличи базала ви (много повече от необходимото)
 
 - Усвояването на въглехидратите ви е много бавно: ако повечето от усвояването на вашите въглехидрати се изчислява с параметъра min_5m_carbimpact (можете да видите тези периоди с малка оранжева точка в горната част на кривата на COB), изчислението на COB може да е грешно и да доведе до грешни резултати.
-  - Когато спортувате, обикновено сте по-чувствителни и BG не се покачва много, така че по време на или след тренировка е обичайно да виждате някои периоди с бавни въглехидрати. Но ако твърде често имате неочаквано бавно усвояване на въглехидрати, тогава може да имате нужда от корекция на профила (по-висока стойност на IC) или min_5m_carbimpact е малко твърде висок.
-- Имате „много лоши дни", например заседнали в хипергликемия няколко часа с огромно количество инсулин, за да можете да слезете в диапазона, или след смяна на сензора имате продължителни периоди с грешни BG стойности. Ако през последните няколко седмици имате само 1 или 2 „лоши дни", можете ръчно да деактивирате тези дни в изчислението на autotune, за да ги изключите от изчислението, и отново **внимателно проверете дали можете да се доверите на резултатите**
+  - Когато спортувате, обикновено сте по-чувствителни и КЗ не се покачва много, затова по време на или след тренировка е обичайно да виждате периоди с бавни въглехидрати. Но ако твърде често имате неочаквано бавно усвояване на въглехидрати, тогава може да имате нужда от корекция на профила (по-висока стойност на IC) или min_5m_carbimpact е малко твърде висок.
+- Имате „много лоши дни“, например няколко часа в хипергликемия, от която излизате с огромно количество инсулин, или след смяна на сензора имате дълги периоди с грешни стойности на КЗ. Ако през последните седмици имате само 1 или 2 „лоши дни“, можете ръчно да изключите тези дни от изчислението на Autotune и отново **внимателно да проверите дали можете да се доверите на резултатите**
 - Ако процентът на модификация е твърде голям
   - Можете да опитате да увеличите броя на дните, за да получите по-плавни резултати
