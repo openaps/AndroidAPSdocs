@@ -1,102 +1,102 @@
 (Extended-Carbs-extended-carbs-ecarbs)=
 # Εκτεταμένοι υδατάνθρακες / "eCarbs"
 
-## What are eCarbs and when are they useful?
+## Τι είναι οι eCarbs και πότε είναι χρήσιμοι;
 
-Με μια τακτική θεραπεία αντλίας, τα εκτεταμένα bolus είναι ένας καλός τρόπος αντιμετώπισης λιπαρών ή άλλως αργά απορροφούμενων γευμάτων που αυξάνουν τη γλυκόζη του αίματος για εκτεταμένη διάρκεια περισσότερο από την διάρκεια ζωής της ινσουλίνη στον οργανισμό. Σε ένα πλαίσιο κυκλώματος, ωστόσο, τα εκτεταμένα bolus δεν έχουν τόσο νόημα (και δημιουργούν τεχνικές δυσκολίες), επειδή είναι βασικά ένας σταθερός υψηλός προσωρινός βασικός ρυθμός, το οποίο αντίκειται στον τρόπο λειτουργίας του κυκλώματος, ο οποίος ρυθμίζει δυναμικά το βασικό ρυθμό. For details see [extended bolus](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) below.
+Στην κλασική θεραπεία με αντλία, τα εκτεταμένα bolus είναι ένας καλός τρόπος για λιπαρά γεύματα ή άλλα γεύματα με αργή απορρόφηση, που ανεβάζουν τη γλυκόζη αίματος για περισσότερο χρόνο από όσο δρα η ινσουλίνη. Σε ένα πλαίσιο κυκλώματος, ωστόσο, τα εκτεταμένα bolus δεν έχουν τόσο νόημα (και δημιουργούν τεχνικές δυσκολίες), επειδή είναι βασικά ένας σταθερός υψηλός προσωρινός βασικός ρυθμός, το οποίο αντίκειται στον τρόπο λειτουργίας του κυκλώματος, ο οποίος ρυθμίζει δυναμικά το βασικό ρυθμό. Για λεπτομέρειες δείτε το [εκτεταμένο bolus](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) παρακάτω.
 
-Ωστόσο, η ανάγκη αντιμετώπισης τέτοιων γευμάτων εξακολουθεί να υπάρχει. Which is why AAPS supports so called extended carbs or eCarbs.
+Ωστόσο, η ανάγκη αντιμετώπισης τέτοιων γευμάτων εξακολουθεί να υπάρχει. Γι' αυτό το AAPS υποστηρίζει τους λεγόμενους εκτεταμένους υδατάνθρακες ή eCarbs.
 
-eCarbs are carbs that are split up over several hours. Για τα συνηθισμένα γεύματα με περισσότερους υδατάνθρακες από ότι λίπος / πρωτεΐνη, η εισαγωγή των υδατανθράκων από πριν (και η μείωση του αρχικού bolus, αν χρειαστεί) είναι συνήθως αρκετή για να αποτρέψει την πρόωρη χορήγηση ινσουλίνης.  Αλλά για βραδέως απορροφησήμα γεύματα, όπου η πλήρης εισαγωγή υδατανθράκων από πριν οδηγεί σε υπερβολικά μεγάλο IOB από SMB, τα eCarbs μπορούν να χρησιμοποιηθούν για να προσομοιώσουν με μεγαλύτερη ακρίβεια πώς οι υδατάνθρακες (και τα ισοδύναμα υδατανθράκων που εισάγετε για άλλα μακροθρεπτικά συστατικά) απορροφώνται και επηρεάζουν τη γλυκόζη του αίματος. Με αυτές τις πληροφορίες, το κύκλωμα μπορεί να διαχειριστεί τις SMBs πιο σταδιακά για να αντιμετωπίσει αυτούς τους υδατάνθρακες, πράγμα που μπορεί να θεωρηθεί ως ένα δυναμικό εκτεταμένο bolus (αυτό θα πρέπει επίσης να λειτουργεί χωρίς SMBs, αλλά είναι πιθανώς λιγότερο αποτελεσματικό).
+Οι eCarbs είναι υδατάνθρακες που μοιράζονται σε αρκετές ώρες. Για τα συνηθισμένα γεύματα με περισσότερους υδατάνθρακες από ότι λίπος / πρωτεΐνη, η εισαγωγή των υδατανθράκων από πριν (και η μείωση του αρχικού bolus, αν χρειαστεί) είναι συνήθως αρκετή για να αποτρέψει την πρόωρη χορήγηση ινσουλίνης.  Αλλά για γεύματα με πιο αργή απορρόφηση, όπου η πλήρης εισαγωγή των υδατανθράκων από την αρχή δίνει πολύ μεγάλο IOB από SMB, οι eCarbs μπορούν να προσομοιώσουν με μεγαλύτερη ακρίβεια πώς οι υδατάνθρακες (και τα ισοδύναμα υδατανθράκων που εισάγετε για άλλα μακροθρεπτικά συστατικά) απορροφώνται και επηρεάζουν τη γλυκόζη αίματος. Με αυτές τις πληροφορίες, το κύκλωμα μπορεί να διαχειριστεί τις SMBs πιο σταδιακά για να αντιμετωπίσει αυτούς τους υδατάνθρακες, πράγμα που μπορεί να θεωρηθεί ως ένα δυναμικό εκτεταμένο bolus (αυτό θα πρέπει επίσης να λειτουργεί χωρίς SMBs, αλλά είναι πιθανώς λιγότερο αποτελεσματικό).
 
-**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
+**Σημείωση:** Οι eCarbs δεν είναι μόνο για γεύματα με πολλά λιπαρά / πρωτεΐνες: μπορούν επίσης να βοηθήσουν σε κάθε περίπτωση όπου κάτι ανεβάζει το σάκχαρο αίματος, π.χ. άλλα φάρμακα όπως τα κορτικοστεροειδή.
 
-## Mechanics of using eCarbs
+## Πώς χρησιμοποιούνται οι eCarbs
 
-To enter eCarbs, open the **Carbs** dialog (**Treatments** → **Carbs**), enter the total carbs, set a **Duration**, and optionally shift the start with **Carb time** (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
+Για να εισάγετε eCarbs, ανοίξτε το παράθυρο **Υδατάνθρακες** (**Θεραπείες** → **Υδατάνθρακες**), εισάγετε τους συνολικούς υδατάνθρακες, ορίστε μια **Διάρκεια** και, αν θέλετε, μετακινήστε την έναρξη με τον **Χρόνο υδατανθράκων** (*οι αριθμοί παρακάτω είναι μόνο παραδείγματα· πρέπει να δοκιμάσετε τις δικές σας τιμές, ώστε να έχετε ικανοποιητική απόκριση της γλυκόζης στις δικές σας περιπτώσεις*):
 
-![Enter carbs](../images/eCarbs_Dialog.png)
+![Εισαγωγή υδατανθράκων](../images/eCarbs_Dialog.png)
 
-The eCarbs on the main screen: the number in brackets in the **COB** field shows the carbs still to come, and the **COB** graph shows each future eCarbs entry as an orange marker. If you don't see a **COB** graph, add one with **Add graph** below the graphs (see [AAPS screens](../DailyLifeWithAaps/AapsScreens.md)).
+Οι eCarbs στην κύρια οθόνη: ο αριθμός σε παρένθεση στο πεδίο **COB** δείχνει τους υδατάνθρακες που έρχονται ακόμη, και το γράφημα **COB** δείχνει κάθε μελλοντική εγγραφή eCarbs ως πορτοκαλί σημάδι. Αν δεν βλέπετε γράφημα **COB**, προσθέστε ένα με την **Προσθήκη γραφήματος** κάτω από τα γραφήματα (δείτε [Οθόνες του AAPS](../DailyLifeWithAaps/AapsScreens.md)).
 
-![eCarbs in the COB field and on the COB graph](../images/eCarbs_Graph.png)
+![eCarbs στο πεδίο COB και στο γράφημα COB](../images/eCarbs_Graph.png)
 
 (AapsScreens-carbs-type)=
-## Carbs type in the Bolus wizard: bread, cake or pizza
+## Τύπος υδατανθράκων στον Οδηγό Bolus: ψωμί, γλυκό ή πίτσα
 
-In the [Bolus wizard](#aaps-screens-bolus-wizard), three buttons below the **Carbs** field let you choose how fast your meal is absorbed. Pick one before you confirm. Depending on the type, **AAPS** takes a part of the carbs you typed as normal carbs, and adds [extended carbs ("eCarbs")](#Extended-Carbs-extended-carbs-ecarbs) later for slow, rich meals. Press the **(i)** icon next to the buttons to see the typical foods for the selected type and what it does to your carbs.
+Στον [Οδηγό Bolus](#aaps-screens-bolus-wizard), τρία κουμπιά κάτω από το πεδίο **Υδατάνθρακες** σας επιτρέπουν να επιλέξετε πόσο γρήγορα απορροφάται το γεύμα σας. Επιλέξτε ένα πριν επιβεβαιώσετε. Ανάλογα με τον τύπο, το **AAPS** παίρνει ένα μέρος των υδατανθράκων που πληκτρολογήσατε ως κανονικούς υδατάνθρακες και προσθέτει αργότερα [εκτεταμένους υδατάνθρακες («eCarbs»)](#Extended-Carbs-extended-carbs-ecarbs) για αργά, πλούσια γεύματα. Πατήστε το εικονίδιο **(i)** δίπλα στα κουμπιά για να δείτε τις τυπικές τροφές για τον επιλεγμένο τύπο και τι κάνει στους υδατάνθρακές σας.
 
-| Type                | Typical foods (as listed in the app)                                                                 | Carbs now, used for the bolus | eCarbs added                                         |
-| ------------------- | ---------------------------------------------------------------------------------------------------- | ----------------------------- | ---------------------------------------------------- |
-| **Bread** (default) | Bread, savory pastries, yogurt, fruit, potatoes, rice, oatmeal, vegetables                           | 100 %                         | None                                                 |
-| **Cake**            | Dumplings, pasta, Asian dishes rich in carbs and fats, sweet and yeast pastries, cereals, honey, jam | 90 %                          | 20 %, starting 60 minutes later, spread over 2 hours |
-| **Pizza**           | Lasagna, pizza, hamburgers, fries, baked potatoes, chips                                             | 80 %                          | 35 %, starting 60 minutes later, spread over 3 hours |
+| Τύπος                 | Τυπικές τροφές (όπως στην εφαρμογή)                                                                                                                        | Υδατάνθρακες τώρα, για το bolus | eCarbs που προστίθενται                              |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- | ---------------------------------------------------- |
+| **Ψωμί** (προεπιλογή) | Ψωμί, αλμυρά αρτοσκευάσματα, γιαούρτι, φρούτα, πατάτες, ρύζι, βρώμη, λαχανικά                                                                              | 100%                            | None                                                 |
+| **Γλυκό**             | Ζυμαρικά γεμιστά (ντάμπλινγκ), ζυμαρικά, ασιατικά πιάτα με πολλούς υδατάνθρακες και λιπαρά, γλυκά και αρτοσκευάσματα με μαγιά, δημητριακά, μέλι, μαρμελάδα | 90%                             | 20%, με έναρξη 60 λεπτά αργότερα, σε διάρκεια 2 ωρών |
+| **Πίτσα**             | Λαζάνια, πίτσα, χάμπουργκερ, πατάτες τηγανητές, ψητές πατάτες, πατατάκια                                                                                   | 80%                             | 35%, με έναρξη 60 λεπτά αργότερα, σε διάρκεια 3 ωρών |
 
-**Example**: you type 100 g and choose **Pizza**. The bolus is calculated for 80 g, recorded now. 35 g of eCarbs start 1 hour later and are spread over 3 hours.
+**Παράδειγμα**: πληκτρολογείτε 100 g και επιλέγετε **Πίτσα**. Το bolus υπολογίζεται για 80 g, που καταγράφονται τώρα. 35 g eCarbs ξεκινούν 1 ώρα αργότερα και μοιράζονται σε 3 ώρες.
 
-Good to know:
-* This is not a simple split: with **Cake** and **Pizza**, the carbs recorded add up to **more than you typed** (110 % and 115 %). The extra is only in the eCarbs.
-* The bolus only covers the carbs taken now. **AAPS** does not bolus up front for the eCarbs: the loop takes them into account once they start, like any other [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
-* If you set a **Carb time**, the eCarbs start 60 minutes after that time.
-* The confirmation dialog shows the eCarbs on their own line, _e.g._ "eCarbs 35g / 3h (+60min)".
-* Grams are rounded down to whole numbers.
-* The percentages, delays and durations are fixed; they can't be changed in the settings.
-* The choice is not remembered: the wizard opens on **Bread** every time.
-
-______________________________________________________________________
-
-A way to handle fat and protein with that feature is described here: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
+Καλό είναι να ξέρετε:
+* Δεν είναι ένας απλός διαχωρισμός: με **Γλυκό** και **Πίτσα**, οι υδατάνθρακες που καταγράφονται είναι συνολικά **περισσότεροι από όσους πληκτρολογήσατε** (110% και 115%). Οι επιπλέον υδατάνθρακες είναι μόνο στους eCarbs.
+* Το bolus καλύπτει μόνο τους υδατάνθρακες που καταγράφονται τώρα. Το **AAPS** δεν δίνει bolus από πριν για τους eCarbs: το κύκλωμα τους λαμβάνει υπόψη μόλις ξεκινήσουν, όπως όλους τους άλλους [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
+* Αν ορίσετε **Χρόνο υδατανθράκων**, οι eCarbs ξεκινούν 60 λεπτά μετά από αυτόν τον χρόνο.
+* Το παράθυρο επιβεβαίωσης δείχνει τους eCarbs σε δική τους γραμμή, _π.χ._ «eCarbs 35g / 3h (+60min)».
+* Τα γραμμάρια στρογγυλοποιούνται προς τα κάτω σε ακέραιους αριθμούς.
+* Τα ποσοστά, οι καθυστερήσεις και οι διάρκειες είναι σταθερά· δεν μπορούν να αλλάξουν στις ρυθμίσεις.
+* Η επιλογή δεν αποθηκεύεται: ο οδηγός ανοίγει κάθε φορά με **Ψωμί**.
 
 ______________________________________________________________________
 
-## Recommended setup, example scenario, and important notes
+Ένας τρόπος να χειριστείτε τα λιπαρά και τις πρωτεΐνες με αυτή τη λειτουργία περιγράφεται εδώ: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
 
-The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the *Enable SMB with COB* preference being enabled.
+______________________________________________________________________
 
-A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *Bolus wizard* and then use the *Carbs* dialog to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours.
+## Προτεινόμενη ρύθμιση, παράδειγμα και σημαντικές σημειώσεις
 
-For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carbs type](#AapsScreens-carbs-type) **Cake** or **Pizza** below the **Carbs** field (see above). The amounts and timing are fixed, so use the *Carbs* dialog instead if you want other values.
+Η προτεινόμενη ρύθμιση είναι να χρησιμοποιήσετε το πρόσθετο OpenAPS SMB, με ενεργοποιημένα τα SMB και με ενεργοποιημένη την επιλογή *Ενεργοποίηση SMB με COB*.
 
-**Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. Με γεύματα χαμηλών υδατανθράκων, υψηλών λιπαρών / πρωτεϊνών μπορεί να αρκεί να χρησιμοποιείτε μόνο τα eCarbs χωρίς χειροκίνητα bolus (βλ. Την ανάρτηση του ιστολογίου παραπάνω). Όταν δημιουργούνται τα eCarbs, δημιουργείται επίσης μια Σημείωση Careport για την τεκμηρίωση όλων των εισροών, για να διευκολυνθεί η επανάληψη και η βελτίωση των εισροών.
+Ένα σενάριο, π.χ. για πίτσα, μπορεί να είναι να δώσετε ένα (μερικό) bolus από την αρχή με τον *Οδηγό Bolus* και μετά να χρησιμοποιήσετε το παράθυρο *Υδατάνθρακες* για να εισάγετε τους υπόλοιπους υδατάνθρακες με διάρκεια 4–6 ωρών, με έναρξη μετά από 1 ή 2 ώρες.
+
+Για πιο γρήγορο ξεκίνημα, ο *Οδηγός Bolus* μπορεί να προσθέσει eCarbs για εσάς: επιλέξτε τον [τύπο υδατανθράκων](#AapsScreens-carbs-type) **Γλυκό** ή **Πίτσα** κάτω από το πεδίο **Υδατάνθρακες** (δείτε παραπάνω). Οι ποσότητες και οι χρόνοι είναι σταθεροί, οπότε χρησιμοποιήστε το παράθυρο *Υδατάνθρακες* αν θέλετε άλλες τιμές.
+
+**Σημαντικές σημειώσεις:** Φυσικά, θα πρέπει να δοκιμάσετε για να δείτε ποιες συγκεκριμένες τιμές ταιριάζουν σε εσάς. Μπορείτε επίσης να ρυθμίσετε προσεκτικά την επιλογή *Μέγιστα λεπτά βασικού ρυθμού για όριο SMB*, ώστε ο αλγόριθμος να γίνει πιο ή λιγότερο επιθετικός. Σε γεύματα με λίγους υδατάνθρακες και πολλά λιπαρά / πρωτεΐνες μπορεί να αρκεί να χρησιμοποιήσετε μόνο eCarbs χωρίς χειροκίνητα bolus (δείτε την ανάρτηση του ιστολογίου παραπάνω). Όταν δημιουργούνται eCarbs, δημιουργείται επίσης μια σημείωση Careportal που καταγράφει όλες τις τιμές που εισάγατε, ώστε να είναι πιο εύκολο να δοκιμάζετε και να βελτιώνετε τις τιμές σας.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## Extended bolus and why they won't work in closed-loop environment?
+## Εκτεταμένο bolus: γιατί δεν λειτουργεί σε κλειστό κύκλωμα;
 
-As mentioned above extended or multiwave boluses do not really work in a closed loop environment. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
+Όπως αναφέρθηκε παραπάνω, τα εκτεταμένα bolus ή τα bolus πολλαπλού κύματος δεν λειτουργούν πραγματικά σε κλειστό κύκλωμα. [Δείτε παρακάτω](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) για λεπτομέρειες
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
-### Extended bolus and switch to open loop - Dana and Insight pump only
+### Εκτεταμένο bolus και αλλαγή σε ανοιχτό κύκλωμα - μόνο για αντλίες Dana και Insight
 
-Some people were asking for an option to use extended bolus in AAPS anyway as they wanted to treat special foods the way they are used to.
+Κάποιοι χρήστες ζήτησαν μια επιλογή για εκτεταμένο bolus στο AAPS, επειδή ήθελαν να αντιμετωπίζουν ειδικές τροφές με τον τρόπο που έχουν συνηθίσει.
 
-That's why **AAPS** offers an extended bolus for users of Dana and Insight pumps: open **Manage** and select **Extended Bolus**.
+Γι' αυτό το **AAPS** προσφέρει εκτεταμένο bolus για τους χρήστες αντλιών Dana και Insight: ανοίξτε τη **Διαχείριση** και επιλέξτε **Εκτεταμένο Bolus**.
 
-**AAPS** first warns you that the closed loop will be stopped while the extended bolus runs. Tap **OK** to continue:
+Το **AAPS** πρώτα σας προειδοποιεί ότι το κλειστό κύκλωμα θα σταματήσει όσο τρέχει το εκτεταμένο bolus. Πατήστε **OK** για να συνεχίσετε:
 
-![Warning: extended bolus stops closed loop mode](../images/extended_bolus_stops_loop.png)
+![Προειδοποίηση: το εκτεταμένο bolus σταματά τη λειτουργία κλειστού κυκλώματος](../images/extended_bolus_stops_loop.png)
 
-Enter the **Insulin** amount and the **Duration**, then tap the confirm button at the bottom and **OK**:
+Εισαγάγετε την ποσότητα **Ινσουλίνη** και τη **Διάρκεια**, μετά πατήστε το κουμπί επιβεβαίωσης στο κάτω μέρος και **OK**:
 
-![Extended bolus dialog with 2 U over 60 minutes](../images/extended_bolus_dialog.png)
+![Παράθυρο εκτεταμένου bolus με 2 U σε 60 λεπτά](../images/extended_bolus_dialog.png)
 
-On the Insight pump, the extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
+Στην αντλία Insight, το εκτεταμένο bolus *δεν είναι διαθέσιμο* αν χρησιμοποιείται [προσομοίωση TBR](#Accu-Chek-Insight-Pump-settings-in-aaps).
 
-While the extended bolus is running, the loop runs in **Open Loop** mode (the loop icon on the main screen changes), and closed loop is switched on again automatically when the extended bolus ends:
+Όσο τρέχει το εκτεταμένο bolus, το κύκλωμα λειτουργεί σε **Ανοιχτό Κύκλωμα** (το εικονίδιο του κυκλώματος στην κύρια οθόνη αλλάζει) και το κλειστό κύκλωμα ενεργοποιείται ξανά αυτόματα όταν τελειώσει το εκτεταμένο bolus:
 
-![Open Loop icon on the main screen while an extended bolus is running](../images/extended_bolus_main_screen.png)
+![Εικονίδιο Ανοιχτού Κυκλώματος στην κύρια οθόνη όσο τρέχει ένα εκτεταμένο bolus](../images/extended_bolus_main_screen.png)
 
-The **Manage** menu shows a **Cancel** button with the rate and the elapsed / total time (for example **Cancel 2.00 U/h 1/60'**). Tap it to stop the extended bolus early:
+Το μενού **Διαχείριση** δείχνει ένα κουμπί **Ακύρωση** με τον ρυθμό και τον χρόνο που πέρασε / συνολικό χρόνο (για παράδειγμα **Ακύρωση 2,00 U/h 1/60'**). Πατήστε το για να σταματήσετε το εκτεταμένο bolus νωρίτερα:
 
-![Cancel button of a running extended bolus in the Manage menu](../images/extended_bolus_running_manage.png)
+![Κουμπί Ακύρωση ενός εκτεταμένου bolus που τρέχει, στο μενού Διαχείριση](../images/extended_bolus_running_manage.png)
 
 (why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
-### Why extended boluses won't work in a closed loop environment
+### Γιατί τα εκτεταμένα bolus δεν λειτουργούν σε κλειστό κύκλωμα
 
-1. The loop determines that now 1.55U/h is to be delivered. Whether this is delivered as an extended bolus or TBR does not matter to the algorithm. In fact, some of the pumps use the extended bolus. What should happen then? Most pump drivers then stop the extended bolus -> You didn't even need to start it.
+1. Το κύκλωμα αποφασίζει ότι τώρα πρέπει να χορηγηθούν 1,55 U/h. Για τον αλγόριθμο δεν έχει σημασία αν αυτό χορηγείται ως εκτεταμένο bolus ή ως TBR. Στην πραγματικότητα, κάποιες αντλίες χρησιμοποιούν το εκτεταμένο bolus. Τι πρέπει να γίνει τότε; Οι περισσότεροι οδηγοί αντλιών τότε σταματούν το εκτεταμένο bolus -> Δεν χρειαζόταν καν να το ξεκινήσετε.
 
-2. If you had the extended bolus as input, what should happen in the model?
+2. Αν το εκτεταμένο bolus ήταν δεδομένο εισόδου, τι πρέπει να γίνει στο μοντέλο;
 
-   1. Should it be considered neutral together with the BR and looped on it? Then the loop should also be able to reduce the bolus if, for example, you get too low and all the "neutral" insulin is taken away?
-   2. Should the extended bolus simply be added? So the loop should simply be allowed to continue? Even in the worst hypo? I don't think this is so good: A hypo is foreseen but it must not be prevented?
+   1. Πρέπει να θεωρείται ουδέτερο μαζί με τον βασικό ρυθμό (BR) και το κύκλωμα να δουλεύει πάνω σε αυτό; Τότε το κύκλωμα θα έπρεπε να μπορεί να μειώσει και το bolus αν, για παράδειγμα, η γλυκόζη πέσει πολύ χαμηλά και αφαιρεθεί όλη η «ουδέτερη» ινσουλίνη;
+   2. Πρέπει το εκτεταμένο bolus απλώς να προστίθεται; Δηλαδή το κύκλωμα πρέπει απλώς να αφεθεί να συνεχίσει; Ακόμη και στη χειρότερη υπογλυκαιμία; Δεν νομίζω ότι αυτό είναι πολύ καλό: Προβλέπεται υπογλυκαιμία, αλλά δεν επιτρέπεται να αποφευχθεί;
 
-3. The IOB that the extended bolus builds up materializes after 5 minutes at the next run. Accordingly, the loop would give less basal. So not much changes... except that the possibility of hypo avoidance is taken.
+3. Το IOB που δημιουργεί το εκτεταμένο bolus εμφανίζεται μετά από 5 λεπτά, στον επόμενο κύκλο. Έτσι, το κύκλωμα θα έδινε λιγότερο βασικό ρυθμό. Άρα δεν αλλάζουν πολλά... εκτός από το ότι χάνεται η δυνατότητα να αποφευχθεί η υπογλυκαιμία.
