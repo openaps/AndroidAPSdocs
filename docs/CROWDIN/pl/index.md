@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- xx xxxx 202x : Wersja {{ aaps_version }}.x.x jest już dostępna. Sprawdź w [informacjach o wersji](#latestrelease), co nowego, i zaktualizuj AAPS według [instrukcji aktualizacji](./Maintenance/UpdateToNewVersion.md).
+ 31 October 2026 : Version 4.0.0 is out. Sprawdź w [informacjach o wersji](#latestrelease), co nowego, i zaktualizuj AAPS według [instrukcji aktualizacji](./Maintenance/UpdateToNewVersion.md).
 
 ```
 
@@ -51,7 +51,7 @@ Rozdział **12) Zasoby** zawiera zarchiwizowaną lub dodatkową dokumentację, w
 :class: danger
 Bezpieczeństwo **AAPS** zależy od funkcji bezpieczeństwa twojego sprzętu (telefonu, pompy, systemu CGM). Używaj tylko w pełni działającej pompy insulinowej i systemu CGM zatwierdzonych przez FDA lub CE. Nie używaj uszkodzonych, zmodyfikowanych lub własnoręcznie stworzonych pomp insulinowych i odbiorników CGM. Używaj tylko oryginalnych materiałów eksploatacyjnych (wkłuwacze, kaniule i zbiorniki na insulinę) zatwierdzonych przez producenta do użytku z twoją pompą i systemem CGM. Używanie nieprzetestowanych lub zmodyfikowanych materiałów może spowodować niedokładności i błędy w dozowaniu insuliny, które mogą spowodować znaczne ryzyko dla użytkownika. 
 
-Nie używaj **AAPS**, jeśli przyjmujesz inhibitory SGLT-2 (flozyny), ponieważ obniżają one poziom cukru we krwi. Zwiększasz ryzyko kwasicy ketonowej (DKA, ang. diabetic ketoacidosis) z powodu zmniejszonego podawania insuliny i hipoglikemii z powodu obniżonych poziomów cukru we krwi. 
+Nie używaj **AAPS**, jeśli przyjmujesz inhibitory SGLT-2 (flozyny), ponieważ obniżają one poziom cukru we krwi. You increase the risk of diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
 ```
 
 ```{admonition} Disclaimer
