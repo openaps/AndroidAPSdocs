@@ -38,7 +38,7 @@ Zoznam definícií nájdete na konci tohto dokumentu. Ak nepoznáte niektoré po
 
 - [*Stable*](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) – najnovšia stabilná otestovaná verzia.
 
-- **POZNÁMKA: nové senzory vyžadujú aktualizovanú aplikáciu OOP2. Preto odporúčame používať aspoň najnovšiu verziu xDrip (Stable), ktorá zodpovedá najnovšej OOP2.**
+- **NOTE: new sensors require an updated OOP2 app, for this it is recommended to use at least the latest xDrip release (Stable) version, matching the latest OOP2.**
 
  
 
@@ -315,7 +315,7 @@ Na obrazovke **BT Device** (potiahnite doľava) môžete overiť ďalšie podrob
 
 - - **Čo sa deje?** Pri vytvorení pripojenia cez Bluetooth sa vytvorí súkromný zdieľaný kľúč, ktorý je potrebný na komunikáciu medzi senzorom a pripájajúcou sa aplikáciou/zariadením. Je veľmi pravdepodobné, že aplikácia LL alebo čítačka (Reader) počas pripájania vytvorí nový súkromný zdieľaný kľúč na komunikáciu. To znamená, že po spárovaní xDrip nový kľúč nepozná a nebude môcť so senzorom komunikovať.
 
-  - Niekoľko používateľov hlásilo, že aplikáciu LL je možné znova spustiť po úspešnom spustení senzora a prijímaní hodnôt v xDrip. V povoleniach Androidu pre aplikáciu LL stačí vypnúť nastavenie **Povoliť prístup k polohe**. Potom by ste mali môcť používať aplikáciu LL a xDrip súčasne. Odporúčam nevyberať predvolenú aplikáciu na skenovanie NFC a pri každom skenovaní NFC zvoliť, ktorou aplikáciou chcete senzor načítať. NEZABUDNITE tiež pri ďalšej výmene senzora po úvodnom skenovaní NFC pre zahrievanie nového senzora vynútene zastaviť aplikáciu LL. Keď je senzor nastavený a xDrip prijíma hodnoty, môžete aplikáciu LL znova spustiť.
+  - Several users have reported that the LL app can be restarted after successfully starting the sensor and receiving readings in xDrip. V povoleniach Androidu pre aplikáciu LL stačí vypnúť nastavenie **Povoliť prístup k polohe**. Potom by ste mali môcť používať aplikáciu LL a xDrip súčasne. Odporúčam nevyberať predvolenú aplikáciu na skenovanie NFC a pri každom skenovaní NFC zvoliť, ktorou aplikáciou chcete senzor načítať. NEZABUDNITE tiež pri ďalšej výmene senzora po úvodnom skenovaní NFC pre zahrievanie nového senzora vynútene zastaviť aplikáciu LL. Keď je senzor nastavený a xDrip prijíma hodnoty, môžete aplikáciu LL znova spustiť.
 
 &nbsp;
 
@@ -353,7 +353,7 @@ Na obrazovke **BT Device** (potiahnite doľava) môžete overiť ďalšie podrob
 
 - **Hodnoty budete môcť stále skenovať cez NFC čítačkou FSL2 Reader (verzia 1 s aktualizovaným firmvérom alebo verzia 2), AK bol senzor FSL2 spustený NAJPRV čítačkou FSL Reader.** Samostatnú čítačku FSL2 môžete stále používať na skenovanie hodnôt z aktívneho senzora aj potom, čo je spárovaný cez Bluetooth s xDrip.
 
-  - Senzor **MUSÍTE** spustiť úplne prvým skenovaním NFC, ktoré spustí zahrievanie senzora, **NAJPRV čítačkou FSL Reader**. Potom budú môcť hodnoty z už aktivovaného senzora načítavať cez NFC aj iné aplikácie.
+  - You **MUST** start the sensor with the very first NFC scan to initiate sensor warmup **with the FSL Reader FIRST**. Potom budú môcť hodnoty z už aktivovaného senzora načítavať cez NFC aj iné aplikácie.
 - Podľa môjho chápania senzor FSL2 (pokiaľ nemá vytvorené pripojenie a ani sa oň nepokúša) vždy presne každé 2 minúty oznamuje cez BLE svoju prítomnosť (a dostupnosť) (vidí to každé zariadenie Bluetooth, ktoré dokáže vyhľadávať zariadenia Bluetooth). Zariadenie, ktoré na toto oznámenie odpovie ako prvé, vyhráva a je *jediné* zariadenie, ktoré sa môže k senzoru pripojiť a čítať ho, pretože počas pripájania pri skenovaní NFC sa vytvorí súkromný zdieľaný kľúč, ktorým sa dešifruje komunikácia FSL 2. Senzor potom nie je dostupný pre iné zariadenia, ktoré tento súkromný zdieľaný kľúč nemajú a možno sa tiež pokúšajú pripojiť. Zdá sa, že čítačka FSL 2 vyhrá vždy, nech je „súperom“ ktokoľvek.
 
 &nbsp;
@@ -375,12 +375,12 @@ Na obrazovke **BT Device** (potiahnite doľava) môžete overiť ďalšie podrob
 &nbsp;
 
 - **LL a xDrip nemôžete súčasne používať na hodnoty cez Bluetooth**. LL sa vždy bude snažiť „ukradnúť“ pripojenie Bluetooth k senzoru a spárovanie. Ak sa to stane, zostanete s LL až do konca životnosti senzora. Takže súčasný beh oboch aplikácií nefunguje vždy. Ako uvádzam nižšie, môžete povoliť aplikáciu LL a skenovaním NFC získať hodnotu v LL (ak potrebujete porovnať hodnoty, chcete získať históriu pre seba alebo reporty pre diabetológa), ale hneď ako hodnotu máte, aplikáciu zakážte a nepokúšajte sa o to v minúte pred tým, ako xDrip načíta svoju hodnotu cez Bluetooth. Nie som si istý, ako pri tom funguje čítačka FSL2, ale vyskúšam to neskôr.
-- Niekoľko používateľov hlásilo, že aplikáciu LL je možné znova spustiť po úspešnom spustení senzora a prijímaní hodnôt v xDrip. V povoleniach Androidu pre aplikáciu LL stačí vypnúť nastavenie **Povoliť prístup k polohe**. Potom by ste mali môcť používať aplikáciu LL a xDrip súčasne. Odporúčam nevyberať predvolenú aplikáciu na skenovanie NFC a pri každom skenovaní NFC zvoliť, ktorou aplikáciou chcete senzor načítať. NEZABUDNITE tiež pri ďalšej výmene senzora po úvodnom skenovaní NFC pre zahrievanie nového senzora vynútene zastaviť aplikáciu LL. Keď je senzor nastavený a xDrip prijíma hodnoty, môžete aplikáciu LL znova spustiť.
+- Several users have reported that the LL app can be restarted after successfully starting the sensor and receiving readings in xDrip. V povoleniach Androidu pre aplikáciu LL stačí vypnúť nastavenie **Povoliť prístup k polohe**. Potom by ste mali môcť používať aplikáciu LL a xDrip súčasne. Odporúčam nevyberať predvolenú aplikáciu na skenovanie NFC a pri každom skenovaní NFC zvoliť, ktorou aplikáciou chcete senzor načítať. NEZABUDNITE tiež pri ďalšej výmene senzora po úvodnom skenovaní NFC pre zahrievanie nového senzora vynútene zastaviť aplikáciu LL. Keď je senzor nastavený a xDrip prijíma hodnoty, môžete aplikáciu LL znova spustiť.
 
 &nbsp;
 
 - **Skenovacie zariadenia NFC od tretích strán sa stále dajú používať**. Áno, uviedol som to ako nevýhodu, ale chcel som tiež upozorniť, že ak sa so senzorom niečo pokazí a LL nad ním prevezme kontrolu, vždy sa môžete vrátiť k tomu, že na senzor umiestnite skenovacie zariadenie NFC a budete dostávať hodnoty v xDrip. Ak vám viac vyhovuje zostava so skenovacím zariadením NFC od tretej strany (Miaomiao, Bubble, Blucon), môžete ho použiť aj namiesto priameho pripojenia cez Bluetooth. Niektoré telefóny niekedy nefungujú dobre s priamym spárovaním senzora cez Bluetooth a získavaním dát. Tieto zariadenia môžete používať ako zálohu alebo bežne, v každom prípade je to stále jedna z možností.
-- Ak plánujete používať **čítačku FSL Reader** ako skenovacie zariadenie NFC na načítavanie hodnôt, MUSÍTE senzor FSL2 zahriať **ÚPLNE PRVÝM skenovaním NFC** **NAJPRV ČÍTAČKOU**.
+- If you are planning on using the **FSL Reader** as an NFC scanning device to take readings, you MUST start the FSL2 sensor with the **VERY FIRST NFC scan** to warm up the sensor with the **READER FIRST**.
 
 &nbsp;
 
@@ -425,7 +425,7 @@ Na obrazovke **BT Device** (potiahnite doľava) môžete overiť ďalšie podrob
 
 - Uistite sa, že máte v nastaveniach Androidu zapnutú čítačku NFC v telefóne.
 - Čítačka NFC musí byť kompatibilná so štítkami **ISO 15693**. Niektoré telefóny Cubot sa používajú veľmi ťažko.
-- V dokumentácii k telefónu zistite, kde je umiestnená anténa NFC. Priložte telefón k senzoru a podržte ho tam 10 sekúnd: čítanie NFC v xDrip trvá dlhšie ako v aplikácii výrobcu alebo v čítačke.
+- Look into your phone documentation to identify the NFC antenna position. Priložte telefón k senzoru a podržte ho tam 10 sekúnd: čítanie NFC v xDrip trvá dlhšie ako v aplikácii výrobcu alebo v čítačke.
 - Pred skenovaním senzora skúste xDrip zatvoriť.
 - Uistite sa, že senzor nechce čítať žiadna iná aplikácia (pri skenovaní sa môže zobraziť výber z rôznych aplikácií: zvoľte xDrip, ale telefónom nehýbte).
 - Vyskúšajte všetky kombinácie nastavení NFC v xDrip *Use faster multi-block reading method* a *Use Any-tag optimized reading method*. Skenovanie NFC je zvyčajne spoľahlivejšie, keď sú obe tieto možnosti **vypnuté**.
