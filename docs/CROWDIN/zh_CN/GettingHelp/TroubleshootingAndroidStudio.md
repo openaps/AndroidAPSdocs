@@ -56,9 +56,9 @@ Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
 
   * [检查 Git 安装](#BuildingAaps-steps-for-installing-git)
 
-  * 若在 Windows 系统且刚安装 Git，需重启计算机使 Git 全局生效
+  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
 
-  * 若已安装 Git 并重启后仍无法识别：
+  * If Git is installed, you have restarted (if on windows), and Git still cannot be found:
 
   * 在计算机中搜索"git.exe"文件
 
@@ -211,7 +211,7 @@ git config --global user.email 您的邮箱@example.com
 
 ## 成功生成签名 APK 但显示 0 个构建变体
 
-生成签名 APK 时可能出现"0 build variants"的误报：
+When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
 
 ![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
@@ -236,7 +236,7 @@ APK 已成功生成，可传输至手机安装。
 
 ## APK 安装失败
 
-![phone app note installed](../images/Update_AppNotInstalled.png)
+![phone app not installed](../images/Update_AppNotInstalled.png)
 
 * 确认已将"app-full-release.apk"传输至手机
 * This error usually means the new apk is signed with a different keystore than your installed **AAPS**. If you still have your previous keystore, select it and build again. Otherwise, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
