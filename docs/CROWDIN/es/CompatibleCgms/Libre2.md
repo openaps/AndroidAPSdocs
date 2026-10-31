@@ -24,7 +24,7 @@ Hay algunas buenas razones para usar un transmisor Bluetooth:
 
 Nota: el transmisor se puede usar a la vez que la app LibreLink sin interferir con ella.
 
-### Start sensor
+### Iniciar Sensor
 
 - → Menú hamburguesa (1) → Start sensor (2) → Start sensor (3) → Responde "Not Today" (4).
 
