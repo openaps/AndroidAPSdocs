@@ -12,8 +12,8 @@ The Libre2 OOP (find it [here](#Libre2_OOP2)) is creating the same BG readings a
 
 使用蓝牙发射器存在若干重要优势：
 
--   您可选择多种OOP2校准策略（1）：采用"无校准"模式直接使用读取器数值，或像Libre 1那样通过"基于原始值校准"模式处理传感器数据，亦可最终采用"基于血糖值校准"模式对读取器数值进行校准。  
-  请确保禁用OOP1功能（2）。
+-   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the reader-like values with "calibrate based on glucose".  
+  Make sure to leave OOP1 disabled (2).
 
     → 汉堡菜单 → 设置 → 较少使用的设置 → 其他杂项选项
 
@@ -30,9 +30,9 @@ The Libre2 OOP (find it [here](#Libre2_OOP2)) is creating the same BG readings a
 
 ![xDrip Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
 
-此操作不会实际启动任何Libre2传感器，也不会与其产生任何交互。 This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. 若有条件，请输入两次指尖血测量值进行初始校准。 Now the blood glucose values should be displayed in xDrip every 5 minutes. 若因距离手机过远导致数据遗漏，系统将不会补传这些缺失值。
+此操作不会实际启动任何Libre2传感器，也不会与其产生任何交互。 This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. If available, enter two blood-measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip every 5 minutes. 若因距离手机过远导致数据遗漏，系统将不会补传这些缺失值。
 
-After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. 激活后，您可检测血糖并进行新的初始校准。
+After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. You may check your blood glucose after activation and make a new initial calibration.
 
 ### Configure AAPS (for looping only)
 
