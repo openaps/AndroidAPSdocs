@@ -32,7 +32,7 @@
 
 #### 在不造成永久性损害的情况下，能多快降低我的糖化血红蛋白（HbA1c）水平？
 
-一项包含76名患者的回顾性[研究](https://pubmed.ncbi.nlm.nih.gov/1464975/)报告指出，如果在6个月内糖化血红蛋白（HbA1C）分别下降1%、2%或3%，则视网膜病变进展的风险将分别增加1.6倍、2.4倍和3.8倍。他们建议，“在任何6个月期间，糖化血红蛋白（HbA1c）的降低幅度应限制在2%以内，以防止视网膜病变的进展......在血糖控制开始时降低过快可能导致视网膜病变的进展严重或暂时加剧。”
+One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the HbA1c dropped 1%, 2% or 3% respectively over a 6 month period. 他们建议，“在任何6个月期间，糖化血红蛋白（HbA1c）的降低幅度应限制在2%以内，以防止视网膜病变的进展......在血糖控制开始时降低过快可能导致视网膜病变的进展严重或暂时加剧。”
 
 请注意 If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for an HbA1c calculator tool.
 
@@ -123,7 +123,7 @@ How you save the keystore depends on your build method:
 
 
 
-#### [去哪里寻求帮助](../UsefulLinks/BackgroundReading.md)？
+#### [Where to go for help](../GettingHelp/WhereCanIGetHelp.md)?
 
 本节旨在为新用户提供资源链接，以便他们能够获得帮助，包括访问由新用户和经验丰富的用户组成的社区支持。这些用户可以帮助解答问题，并解决在使用AAPS时通常会遇到的陷阱或难题。
 
@@ -167,26 +167,26 @@ In order to fully take advantage of **AAPS**, you need to set up a Nightscout se
 
 以下是一个大致的时间框架：
 
-| 任务                                            |    预估时间    |
-| --------------------------------------------- |:----------:|
-| 初步阅读文档                                        |   1-2 天    |
-| Configuring GitHub to allow the browser build | 1-4 hours  |
-| 设置报告服务器                                       |    1 小时    |
-| Installing a CGM app (xDrip, BYODA, …)        |    1 小时    |
-| Configuring CGM → xDrip → APPS initially      |    1 小时    |
-| 初步配置AAPS→泵                                    |    1 小时    |
-| 配置AAPS→Nightscout/Tidepool（仅用于报告）             |    1 小时    |
-| 可选：配置NightScout ↔**AAPS**&NSFollowers的互联。     |    1 小时    |
-| 目标1：设置可视化和监控                                  |    1 小时    |
-| 目标2：学习如何控制AAPS                                |    2 小时    |
-| 目标3：证明您的知识                                    |   最多14天    |
-| 目标4：开始开环操作                                    |    至少7天    |
-| 目标5：理解您的开环操作                                  |    7 天     |
-| 目标6：开始闭环操作（低血糖暂停）                             | 至少5天，最多14天 |
-| 目标7：调整闭环设置                                    | 至少1天，最多7天  |
-| 目标8：调整基础率和比例，启用Autosens（自动敏感度调节）              | 至少7天，最多14天 |
-| 目标9：启用超级微小大剂量（SMB）                            |   最少28天    |
-| 目标10：自动化                                      |   最少28天    |
+| 任务                                                        |    预估时间    |
+| --------------------------------------------------------- |:----------:|
+| 初步阅读文档                                                    |   1-2 天    |
+| Configuring GitHub to allow the browser build             | 1-4 hours  |
+| 设置报告服务器                                                   |    1 小时    |
+| Installing a CGM app (xDrip, BYODA, …)                    |    1 小时    |
+| Configuring CGM → xDrip → AAPS initially                  |    1 小时    |
+| 初步配置AAPS→泵                                                |    1 小时    |
+| 配置AAPS→Nightscout/Tidepool（仅用于报告）                         |    1 小时    |
+| Optional: Configuring Nightscout ↔ **AAPS** & NSFollowers |    1 小时    |
+| 目标1：设置可视化和监控                                              |    1 小时    |
+| 目标2：学习如何控制AAPS                                            |  2 hours   |
+| 目标3：证明您的知识                                                |   最多14天    |
+| 目标4：开始开环操作                                                |    至少7天    |
+| 目标5：理解您的开环操作                                              |    7 天     |
+| 目标6：开始闭环操作（低血糖暂停）                                         | 至少5天，最多14天 |
+| 目标7：调整闭环设置                                                | 至少1天，最多7天  |
+| 目标8：调整基础率和比例，启用Autosens（自动敏感度调节）                          | 至少7天，最多14天 |
+| 目标9：启用超级微小大剂量（SMB）                                        |   最少28天    |
+| 目标10：自动化                                                  |   最少28天    |
 
 一旦您全面使用**AAPS**系统，您仍然需要定期微调您的设置，以改善您的整体糖尿病管理。
 
