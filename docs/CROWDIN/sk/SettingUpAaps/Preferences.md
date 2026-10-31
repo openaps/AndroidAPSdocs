@@ -1,16 +1,16 @@
-# Settings (Preferences)
+# Nastavenia (Preferences)
 
-In **AAPS** v4 the preferences are found on the **Settings** screen. There are three routes to reach them — see [Making changes to your AAPS' configuration](../SettingUpAaps/ChangeAapsConfiguration.md) for details:
+V **AAPS** v4 nájdete nastavenia na obrazovke **Nastavenia**. Dostanete sa k nim tromi spôsobmi – podrobnosti nájdete na stránke [Vykonávanie zmien v konfigurácii vášho AAPS](../SettingUpAaps/ChangeAapsConfiguration.md):
 
-1. Tap the **Settings** (gear) icon in the top-right corner of the main screen: all settings, grouped into expandable sections.
-2. In **Configuration**, tap "**Settings**" underneath an active plugin: only that plugin's settings.
-3. Use the **search bar** on top of the main screen: just start typing part of the text you are looking for. This finds individual settings (even those not visible in the Settings screen), dialogs and documentation.
+1. Ťuknite na ikonu **Nastavenia** (ozubené koliesko) v pravom hornom rohu hlavnej obrazovky: všetky nastavenia, zoskupené do rozbaľovacích sekcií.
+2. V **Konfigurácii** ťuknite na „**Nastavenia**“ pod aktívnym pluginom: iba nastavenia tohto pluginu.
+3. Použite **vyhľadávací riadok** v hornej časti hlavnej obrazovky: stačí začať písať časť textu, ktorý hľadáte. Nájde jednotlivé nastavenia (aj tie, ktoré na obrazovke Nastavenia nie sú vidieť), dialógy a dokumentáciu.
 
-![Search results for "target"](../images/preferences/settings_search.png)
+![Výsledky vyhľadávania pre "target"](../images/preferences/settings_search.png)
 
-- **Sections** are opened and closed by tapping them. The sections you see depend on the plugins you have enabled and on [Simple mode](#preferences-simple-mode).
+- **Sekcie** otvoríte a zatvoríte ťuknutím. Sekcie, ktoré vidíte, závisia od zapnutých pluginov a od [jednoduchého módu](#preferences-simple-mode).
 
-![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
+![Obrazovka Nastavenia s rozbaľovacími časťami](../images/v4/Configuration/settings_overview.png)
 
 ```{contents}
 :backlinks: entry
@@ -20,11 +20,11 @@ In **AAPS** v4 the preferences are found on the **Settings** screen. There are t
 (Preferences-general)=
 ## Všeobecne
 
-![Settings > General](../images/preferences/settings_general.png)
+![Nastavenia > Všeobecné](../images/preferences/settings_general.png)
 
-**Jednotky**
+**Jednotky glykémie**
 
-- Set units to mmol/L or mg/dL depending on your preferences.
+- Nastavte jednotky mmol/l alebo mg/dl podľa toho, čo používate.
 
 **Jazyk**
 
@@ -32,58 +32,58 @@ In **AAPS** v4 the preferences are found on the **Settings** screen. There are t
 
 - Ak chcete **AAPS** v inom jazyku, ako je váš štandardný jazyk telefónu, môžete si vybrať zo širokej ponuky.
 
-- When you change the language, the texts of **AAPS** switch to the new language straight away. If some texts still show the old language, restart **AAPS**.
-- Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
+- Keď zmeníte jazyk, texty **AAPS** sa hneď prepnú do nového jazyka. Ak sa niektoré texty stále zobrazujú v starom jazyku, reštartujte **AAPS**.
+- Nastavenie je skryté v [jednoduchom móde](#preferences-simple-mode).
 
-(preferences-simple-mode)= **Simple mode**
+(preferences-simple-mode)= **Jednoduchý mód**
 
-**Jednoduchý režim**je predvolene aktivovaný pri prvej inštalácii **AAPS**. V **jednoduchom režime** je značné množstvo nastavení skryté a nastavenia sú nahradené preddefinovanými hodnotami. Jednoduchý režim by ste mali vypnúť hneď, ako sa oboznámite s používateľským rozhraním a nastaveniami **AAPS**.
+**Jednoduchý mód** je predvolene zapnutý pri prvej inštalácii **AAPS**. V **jednoduchom móde** je veľká časť nastavení skrytá a nahradená preddefinovanými hodnotami. Jednoduchý mód by ste mali vypnúť hneď, ako sa oboznámite s používateľským rozhraním a nastaveniami **AAPS**.
 
-**Insulin concentration support**
+**Podpora koncentrácie inzulínu**
 
-- Enables support for different insulin concentrations (U50, U200, ...). Only enable this if you really use a concentration other than U100, and read the warnings carefully.
-- Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
+- Zapne podporu rôznych koncentrácií inzulínu (U50, U200, ...). Zapnite to, len ak naozaj používate inú koncentráciu ako U100, a pozorne si prečítajte varovania.
+- Nastavenie je skryté v [jednoduchom móde](#preferences-simple-mode).
 
 **Nechať obrazovku zapnutú**
 
-- Forces Android to keep the screen on at all times. Toto je užitočné pri prezentáciách atď. Ale spotrebuje veľa energie batérie. Preto sa odporúča pripojiť smartfón k nabíjačke.
+- Android bude obrazovku stále nechávať zapnutú. Toto je užitočné pri prezentáciách atď. Ale spotrebuje veľa energie batérie. Preto sa odporúča pripojiť smartfón k nabíjačke.
 
-**Instance name**
+**Názov inštancie**
 
-- The name of the person using this phone. It tells this **AAPS** instance apart in reports and synchronization, for example if two children with type 1 diabetes in your family use **AAPS**.
-- Used in the names of exported settings files.
+- Meno osoby, ktorá používa tento telefón. Odlíši túto inštanciu **AAPS** v reportoch a pri synchronizácii, napríklad ak vo vašej rodine používajú **AAPS** dve deti s diabetom 1. typu.
+- Používa sa v názvoch súborov s exportovanými nastaveniami.
 - Zobrazuje sa v [dvojitom ciferníku](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
-### Vzhľad
+### Skin (téma vzhľadu)
 
-The skin selection from **AAPS** 3.x (Original, Low resolution, Large display...) no longer exists in **AAPS** 4. The new interface adapts to your screen automatically, and the color scheme can be changed in [Appearance](#preferences-appearance).
+Výber vzhľadu (skin) z **AAPS** 3.x (Original, Low resolution, Large display...) v **AAPS** 4 už neexistuje. Nové rozhranie sa automaticky prispôsobí vašej obrazovke a farebnú schému môžete zmeniť vo [Vzhľade](#preferences-appearance).
 
 (preferences-appearance)=
-## Appearance
+## Vzhľad
 
-![Settings > Appearance](../images/preferences/settings_appearance.png)
+![Nastavenia > Vzhľad](../images/preferences/settings_appearance.png)
 
 (Preferences-range-for-visualization)=
 ### Rozsah pre zobrazenie
 
-Choose the high and low marks for the BG-graph on **AAPS** main screen and smartwatch. Je to len vizualizácia, nie cieľový rozsah vašej glykémie. Example: 70 - 180 mg/dL or 3.9 - 10 mmol/L
+Zvoľte hornú a dolnú hranicu pre graf glykémie na hlavnej obrazovke **AAPS** a na inteligentných hodinkách. Je to len vizualizácia, nie cieľový rozsah vašej glykémie. Príklad: 70–180 mg/dl alebo 3,9–10 mmol/l
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### Show notes in dialogs
+### Zobraziť poznámky v dialogových oknách
 
 Ponúka možnosť pridať k ošetreniam krátke textové poznámky (kalkulačka, sacharidy, inzulín...)
 
-Nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
+Nastavenie je skryté v [jednoduchom móde](#preferences-simple-mode).
 
-### App Color Scheme
+### Farebná schéma
 
-Choose between the light theme, the dark theme, or following the phone's system setting.
+Vyberte svetlú tému, tmavú tému alebo nastavenie systému telefónu.
 
 (Preferences-protection)=
 ## Ochrana
 
-![Settings > Protection](../images/preferences/settings_protection.png)
+![Nastavenia > Ochrana](../images/preferences/settings_protection.png)
 
 (Preferences-master-password)=
 ### Hlavné heslo
@@ -97,17 +97,17 @@ Povinné pre možnosť [exportovať nastavenia](../Maintenance/ExportImportSetti
 (Preferences-settings-protection)=
 ### Ochrana nastavení
 
-- Chráňte svoje nastavenia heslom alebo biometrickým overením telefónu (napr. [ak dieťa používa **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Settings related view.
+- Chráňte svoje nastavenia heslom alebo biometrickým overením telefónu (napr. [ak dieťa používa **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). Ak túto funkciu zapnete, pri každom otvorení akejkoľvek obrazovky s nastaveniami sa od vás bude vyžadovať overenie.
 
-- The management screens (**Profile**, **Insulin settings**, **Temp Target**, **QuickWizard**) then open **read-only**. You can still activate or use an entry, but adding, editing, cloning and deleting are hidden until you unlock your settings. See [Settings protection now also locks the management screens](#v4changes-read-only-management).
+- Obrazovky správy (**Profil**, **Nastavenia inzulínu**, **Dočasný cieľ**, **Rýchly sprievodca**) sa potom otvoria **iba na čítanie**. Položku môžete stále aktivovať alebo použiť, ale pridávanie, úpravy, klonovanie a mazanie sú skryté, kým nastavenia neodomknete. Pozrite si [Ochrana nastavení teraz zamyká aj obrazovky správy](#v4changes-read-only-management).
 
-- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md), and use a different one for editing the settings.
+- Vlastné heslo použite, ak chcete hlavné heslo používať len na zabezpečenie [exportovaných nastavení](../Maintenance/ExportImportSettings.md) a na úpravu nastavení chcete iné heslo.
 
-- Ak používate vlastné heslo, kliknite na riadok „Nastavenia hesla“ a nastavte heslo podľa postupu [vyššie](#Preferences-master-password).
+- Ak používate vlastné heslo, kliknite na riadok „Heslo pre nastavenia“ a nastavte heslo podľa postupu [vyššie](#Preferences-master-password).
 
 ### Ochrana aplikácie
 
-If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**, and again when you come back to it after the [protection timeout](#Preferences-password-and-pin-retention).
+Ak je aplikácia chránená, musíte na otvorenie **AAPS** zadať heslo alebo použiť biometrické overenie telefónu, a to znova, keď sa do nej vrátite po uplynutí [časového limitu ochrany](#Preferences-password-and-pin-retention).
 
 **AAPS** sa okamžite vypne, ak zadáte nesprávne heslo, ale bude stále bežať na pozadí, ak bol predtým úspešne spustený.
 
@@ -115,98 +115,98 @@ If the app is protected, you must enter the password or use the phone's biometri
 
 - Ochrana bolusu môže byť užitočná, ak **AAPS** používa malé dieťa a vy [podávate bolus cez SMS](../RemoteFeatures/SMSCommands.md).
 
-- **Bolus protection** can only be selected once **Settings protection** (Level 2) is set.
+- **Ochranu bolusu** môžete vybrať, až keď je nastavená **Ochrana nastavení** (úroveň 2).
 
-- In the example below, bolus protection uses the **Master password**: **AAPS** asks for it before opening a treatment dialog such as **Insulin**. With **Biometric**, if biometric authentication does not work, you can enter the master password instead.
+- V príklade nižšie používa ochrana bolusu **Hlavné heslo**: **AAPS** si ho vyžiada pred otvorením dialógu ošetrenia, napríklad **Inzulín**. Pri voľbe **Biometria** môžete, ak biometrické overenie nefunguje, zadať namiesto neho hlavné heslo.
 
-![Authentication required prompt asking for the master password](../images/preferences/bolus_protection_prompt.png)
+![Výzva „Vyžaduje sa autentifikácia“ so žiadosťou o hlavné heslo](../images/preferences/bolus_protection_prompt.png)
 
 (Preferences-password-and-pin-retention)=
 ### Uchovanie hesla a PIN
 
-**Protection timeout** defines how long (in seconds) the settings or bolus functionalities remain unlocked after you successfully enter the password.
+**Časový limit ochrany** určuje, ako dlho (v sekundách) zostanú nastavenia alebo funkcie bolusu odomknuté po úspešnom zadaní hesla.
 
 ## Bezpečnosť ošetrení
 
-![Settings > Safety](../images/preferences/settings_safety.png)
+![Nastavenia > Bezpečnosť](../images/preferences/settings_safety.png)
 
 (preferences-patient-type)=
-### Patient age
+### Vek pacienta
 
 - Bezpečnostné limity sú nastavené na základe veku, ktorý vyberiete v tomto nastavení.
 - Ak začnete narážať na tieto pevné limity (ako napríklad maximálny bolus), je čas posunúť sa o krok vyššie.
-- Neodporúčame zadať vyšší vek ako je skutočný pretože to môže viesť k predávkovaniu inzulínom (napríklad vynechaním desatinnej bodky).
+- Nie je dobrý nápad zadať vyšší vek, ako je skutočný, pretože pri zadaní chybnej hodnoty v dialógu inzulínu (napríklad vynechaním desatinnej čiarky) to môže viesť k predávkovaniu.
 - Ak vás zaujímajú aké presné hodnoty majú tieto bezpečnostné limity, prejdite na [stránku](../DailyLifeWithAaps/KeyAapsFeatures.md) k funkcii algoritmu, ktorý používate.
 
 (Preferences-maximum-bolus)=
-### Maximum bolus
+### Maximálny bolus
 
 - Definuje maximálne množstvo bolusového inzulínu v inzulínových jednotkách, ktoré môže systém **AAPS** podať naraz.
-- Je to bezpečnostné nastavenie aby sa predišlo podaniu príliš velkého bolusu v prípade, že omylom zadáte chybné množstvo sacharidov a pod.
+- Toto nastavenie je bezpečnostný limit, ktorý zabráni podaniu príliš veľkého bolusu pri náhodnom zadaní alebo chybe používateľa.
 - Odporúča sa ho nastaviť na takú hodnotu, ktorá zhruba zodpovedá maximálnemu bolusu, ktorý budete potrebovať pri jedle alebo korekcii.
 - Toto obmedzenie sa vzťahuje aj na výsledky bolusovej kalkulačky.
 
-### Maximum carbs allowed
+### Maximálne povolené sacharidy
 
 - Definuje maximálne množstvo sacharidov v gramoch, ktoré môže bolusová kalkulačka **AAPS** použiť pre výpočet.
-- Je to bezpečnostné nastavenie aby sa predišlo podaniu príliš velkého bolusu v prípade, že omylom zadáte chybné množstvo sacharidov a pod.
+- Toto nastavenie je bezpečnostný limit, ktorý zabráni podaniu príliš veľkého bolusu pri náhodnom zadaní alebo chybe používateľa.
 - Odporúča sa ho nastaviť na takú hodnotu, ktorá zhruba zodpovedá maximálnemu množstvu sacharidov, ktoré prijmete v jednom jedle.
 
-## BG source
+## Zdroj glykémie
 
-The settings of your selected [BG source](#Config-Builder-bg-source) appear as their own section. For example with **xDrip+ BG**:
+Nastavenia vybraného [zdroja glykémie](#Config-Builder-bg-source) sa zobrazujú ako samostatná sekcia. Napríklad pri **xDrip+ glykémia**:
 
-![Settings > xDrip+ BG](../images/preferences/settings_xdrip.png)
+![Nastavenia > xDrip+ glykémia](../images/preferences/settings_xdrip.png)
 
-- **Upload BG data to NS**: let **AAPS** upload the received BG values to Nightscout. Only enable this if the CGM app itself is not already uploading them.
-- **Log sensor change**: create a sensor change therapy event automatically when the sensor is inserted.
+- **Nahrávať glykémie do NS**: **AAPS** bude prijaté hodnoty glykémie nahrávať do Nightscoutu. Zapnite to, len ak ich už nenahráva samotná aplikácia CGM.
+- **Zaznamenať výmenu senzora**: pri zavedení senzora sa automaticky vytvorí udalosť výmeny senzora.
 
-## The main screen
+## Hlavná obrazovka
 
-In **AAPS** 3.x these settings were grouped in an "Overview" section. In **AAPS** 4 they are configured directly from the main screen elements they belong to.
+V **AAPS** 3.x boli tieto nastavenia zoskupené v sekcii „Prehľad“ (Overview). V **AAPS** 4 sa nastavujú priamo z prvkov hlavnej obrazovky, ku ktorým patria.
 
 (Preferences-buttons)=
-### QuickLaunch buttons
+### Tlačidlá Rýchleho spustenia
 
-Define which action buttons are visible on the main screen: tap the small **gear** at the bottom center of the main screen ("Configure QuickLaunch") and **Add** the actions you want quick access to (treatments, CGM actions, careportal entries...).
+Určte, ktoré akčné tlačidlá budú na hlavnej obrazovke vidieť: ťuknite na malé **ozubené koliesko** dole v strede hlavnej obrazovky („Konfigurácia Rýchleho spustenia“) a **Pridajte** akcie, ku ktorým chcete mať rýchly prístup (ošetrenia, akcie CGM, záznamy v Starostlivosti...).
 
-![Configure QuickLaunch](../images/preferences/quicklaunch_config.png)
+![Konfigurácia Rýchleho spustenia](../images/preferences/quicklaunch_config.png)
 
 (Preferences-quick-wizard)=
 ### Sprievodca rýchlym bolusom
 
-Create customized buttons for certain standard meals or snacks which will be displayed on the main screen. Užitočné pre jedlá, ktoré často konzumujete.
+Vytvorte si vlastné tlačidlá pre niektoré bežné jedlá alebo desiaty, ktoré sa zobrazia na hlavnej obrazovke. Užitočné pre jedlá, ktoré často konzumujete.
 
-Pre každé tlačidlo definujete sacharidy a spôsob výpočtu bolusu. Then, you define during which time period the button will be visible on your main screen - just one button per period. Tlačidlo nebude viditeľné, ak je časový rozsah mimo zadaného rozsahu alebo ak máte dostatok IOB na pokrytie sacharidov definovaných v tlačidle rýhleho bolusu. If different times are specified for the different meals you will always have the appropriate standard meal button on the main screen, depending on the time of day.
+Pre každé tlačidlo definujete sacharidy a spôsob výpočtu bolusu. Potom určíte, v akom časovom období bude tlačidlo na hlavnej obrazovke vidieť – v jednom období len jedno tlačidlo. Tlačidlo nebude viditeľné mimo zadaného časového rozsahu alebo ak máte dostatok IOB na pokrytie sacharidov definovaných v tlačidle Rýchleho sprievodcu. Ak pre rôzne jedlá zadáte rôzne časy, budete mať na hlavnej obrazovke vždy tlačidlo pre jedlo, ktoré sa hodí k dennej dobe.
 
-To manage your Quick Wizard presets, type "QuickWizard" in the main screen search bar and open **QuickWizard - Manage quick wizard presets**.
+Ak chcete spravovať predvoľby Rýchleho sprievodcu, zadajte do vyhľadávacieho riadku na hlavnej obrazovke „Rýchly sprievodca“ a otvorte **Rýchly sprievodca - Spravovať nastavenia rýchleho sprievodcu**.
 
-Ak kliknete na tlačidlo rýchleho bolusu, systém **AAPS** vypočíta a navrhne bolus pre tieto sacharidy na základe vašich aktuálnych pomerov (s prihliadnutím na hodnotu glukózy v krvi alebo IOB, ak je nastavený).
+Ak kliknete na tlačidlo Rýchleho sprievodcu, **AAPS** vypočíta a navrhne bolus pre tieto sacharidy na základe vašich aktuálnych pomerov (s prihliadnutím na glykémiu alebo aktívny inzulín, ak je to nastavené).
 
 Návrh musí byť potvrdený pred podaním inzulínu.
 
 (Preferences-default-temp-targets)=
 ### Predvolené dočasné ciele
 
-[Dočasné ciele (TT)](../DailyLifeWithAaps/TempTargets.md) vám umožňujú zmeniť cieľovú hodnotu glukózy v krvi na určité časové obdobie. Pri nastavovaní predvoleného TT môžete jednoducho zmeniť cieľ aktivity, pred jedlom atď.
+[Dočasné ciele (TT)](../DailyLifeWithAaps/TempTargets.md) vám umožňujú zmeniť cieľovú glykémiu na určité časové obdobie. Pri nastavovaní predvoleného TT môžete jednoducho zmeniť cieľ aktivity, pred jedlom atď.
 
-Tap the **target range** on the main screen to open the **Temp Target** screen. Swipe through the preset cards (Eating Soon, Activity, Hypo) and change the target and the duration of each preset under **Preset Settings**. Prednastavené hodnoty sú:
+Ťuknutím na **cieľový rozsah** na hlavnej obrazovke otvoríte obrazovku **Dočasný cieľ**. Prechádzajte kartami predvolieb (Pred jedlom, Aktivita, Hypoglykémia) a v časti **Predvolené nastavenia** zmeňte cieľ a trvanie každej predvoľby. Prednastavené hodnoty sú:
 
-* Eating soon: target 90 mg/dL / 5.0 mmol/L, duration 45 min
-* Activity: target 140 mg/dL / 7.8 mmol/L, duration 90 min
-* Hypo: target 160 mg/dL / 8.9 mmol/L, duration 60 min
+* Pred jedlom: cieľ 90 mg/dl / 5,0 mmol/l, trvanie 45 min
+* Aktivita: cieľ 140 mg/dl / 7,8 mmol/l, trvanie 90 min
+* Hypoglykémia: cieľ 160 mg/dl / 8,9 mmol/l, trvanie 60 min
 
-![Temp Target presets](../images/preferences/temp_target_presets.png)
+![Predvoľby dočasných cieľov](../images/preferences/temp_target_presets.png)
 
-[Tu](#TempTargets-where-can-i-select-a-temp-target) si môžte pozrieť ako aktivovať dočasné ciele.
+[Tu](#TempTargets-where-can-i-select-a-temp-target) si môžete pozrieť, ako aktivovať dočasné ciele.
 
-### Štandardné množstvo inzulínu pre Plnenie/Doplňovanie
+### Štandardné množstvá inzulínu pre plnenie/doplňovanie
 
-If you want to fill the tube or prime the cannula through **AAPS** you can do this with the **Prime/Fill** buttons in the expanded status panel of the main screen.
+Ak chcete cez **AAPS** naplniť hadičku alebo kanylu, môžete to urobiť tlačidlami **Plnenie/doplňovanie** v rozbalenom stavovom paneli hlavnej obrazovky.
 
-The default amounts of the three fill buttons can be defined in the **Prime/Fill** settings, depending on the length of your catheter. Type "prime" in the main screen search bar to open them.
+Predvolené množstvá pre tri tlačidlá plnenia môžete nastaviť v nastaveniach **Plnenie/doplňovanie** podľa dĺžky vášho katétra. Otvoríte ich tak, že do vyhľadávacieho riadku na hlavnej obrazovke zadáte „plnenie“.
 
-![Prime/Fill standard amounts](../images/preferences/settings_prime_fill.png)
+![Štandardné množstvá pre plnenie/doplňovanie](../images/preferences/settings_prime_fill.png)
 
 (Preferences-status-lights)=
 ### Indikátory stavu
@@ -215,316 +215,268 @@ Indikátory stavu zobrazujú vizuálne varovanie pre tieto možnosti:
 
 - Vek senzora
 - Vek inzulínu (dni používania zásobníka)
-- Hladina inzulínu v zásobníku (units)
+- Stav zásobníka (jednotky)
 - Vek kanyly
 - Vek batérie v pumpe
 - Úroveň nabitia batérie pumpy (%)
 
 Ak je prekročená prahová hodnota varovania, hodnoty sa zobrazia žltou farbou. Ak je prekročená kritická hodnota, hodnoty sa zobrazia červenou farbou.
 
-To change the thresholds, expand the status panel on the main screen (chevron on the right of the status row) and tap the small **Settings** icon next to "Status":
+Ak chcete zmeniť prahové hodnoty, rozbaľte stavový panel na hlavnej obrazovke (šípka vpravo v riadku stavu) a ťuknite na malú ikonu **Nastavenia** vedľa „Stav“:
 
 ![Indikátory stavu](../images/preferences/status_lights.png)
 
-Tap an item (**Cannula**, **Insulin**, **Sensor** or **Pump battery**) to open its warning and critical thresholds:
+Ťuknutím na položku (**Kanyla**, **Inzulín**, **Senzor** alebo **Batéria pumpy**) otvoríte jej varovnú a kritickú prahovú hodnotu:
 
-![Status lights thresholds for the cannula](../images/preferences/status_lights_cannula.png)
+![Prahové hodnoty indikátorov stavu pre kanylu](../images/preferences/status_lights_cannula.png)
 
 Posledná možnosť vám umožňuje importovať tieto nastavenia z Nightscoutu, ak sú tam definované. Viac informácií nájdete v [dokumentácii k Nightscoutu](https://nightscout.github.io/nightscout/setup_variables/#age-pills).
 
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
-### Bolus wizard settings
+### Nastavenia bolusovej kalkulačky
 
-Type "bolus" in the main screen search bar to open the **Bolus wizard** settings:
+Ak chcete otvoriť nastavenia **Bolusovej kalkulačky**, zadajte do vyhľadávacieho riadku na hlavnej obrazovke „bolus“:
 
-![Bolus wizard settings](../images/preferences/settings_bolus_wizard.png)
+![Nastavenia bolusovej kalkulačky](../images/preferences/settings_bolus_wizard.png)
 
-**Bolus percentage** sets the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
+**Percento bolusu** nastavuje [predvolené percento](#AapsScreens-section-j) z bolusu vypočítaného bolusovou kalkulačkou.
 
 Predvolená hodnota je 100 %: žiadna korekcia. Aj keď tu nastavujete inú hodnotu, stále ju môžete zmeniť pri každom použití bolusovej kalkulačky. Ak je toto nastavenie 75 % a museli ste podať bolus 10 jednotiek, kalkulačka navrhne bolus k jedlu iba 7,5 jednotiek.
 
 Pri používaní systému [SMB](#objectives-objective9) si veľa ľudí nepodáva 100 % potrebného inzulínu v podobe bolusu k jedlu, ale iba jeho časť (napr. 75 %) a zvyšok nechávajú na systém SMB s funkciou UAM (Unattended Meal Detection). Použitie hodnoty nižšej ako 100 % tu môže byť dosť nápomocné:
 * Pre ľudí s pomalým trávením: odoslanie celého bolusu naraz môže spôsobiť hypoglykémiu, pretože účinok inzulínu je rýchlejší ako trávenie.
-* aby sa **AAPS** mohol sám vysporiadať so **zvýšenou hladinou glukózy v krvi**. V oboch prípadoch systém **AAPS** kompenzuje chýbajúcu časť bolusu pomocou SMB, ak/keď sa to bude považovať za dostatočné.
+* aby sa **AAPS** mohol sám vysporiadať so **vzostupom glykémie**. V oboch prípadoch **AAPS** doplní chýbajúcu časť bolusu pomocou SMB, ak/keď to bude považovať za vhodné.
 
-**Use bolus advisor**
+**Povoliť bolusového poradcu**
 
-When enabled, if you use the bolus wizard while you are in hyperglycemia, you will get a warning, prompting you if you wish to pre-bolus and eat later, when your **BG** gets back in range.
+Ak je to zapnuté a bolusovú kalkulačku použijete pri hyperglykémii, dostanete varovanie s otázkou, či chcete podať bolus vopred a jesť neskôr, keď sa **glykémia** vráti do rozsahu.
 
 (Preferences-advanced-settings-overview)=
 ### Superbolus
 
-The Superbolus option of **AAPS** 3.x is not available as a setting in **AAPS** 4.
+Možnosť Superbolus z **AAPS** 3.x nie je v **AAPS** 4 dostupná ako nastavenie.
 
-## Uzavretý okruh
+## Okruh
 
-See [AAPS screens > The main screen > Loop status](#AapsScreens-loop-status) to change loop mode now.
+Ako teraz zmeniť režim okruhu, nájdete v časti [Obrazovky AAPS > Hlavná obrazovka > Stav okruhu](#AapsScreens-loop-status).
 
 (Preferences-minimal-request-change)=
-### Open mode minimum change
+### Minimálna zmena v otvorenom okruhu
 
-Pri používaní **Otvorenej slučky** budete dostávať upozornenia vždy, keď systém **AAPS** odporučí úpravu bazálnej dávky. To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the "**Open mode minimum change**" setting. Tým nastavíte aká veľká zmena je potrebná aby sa zobrazilo upozornenie.
+Pri používaní **Otvoreného okruhu** budete dostávať upozornenia vždy, keď **AAPS** odporučí úpravu bazálnej dávky. Ak chcete znížiť počet upozornení, môžete použiť [širší cieľový rozsah glykémie](#profile-glucose-targets) alebo zvýšiť percento v nastavení „**Minimálna zmena v otvorenom okruhu**“. Tým nastavíte, aká veľká relatívna zmena je potrebná, aby sa zobrazilo upozornenie.
 
-![Settings > Loop](../images/preferences/settings_loop.png)
+![Nastavenia > Okruh](../images/preferences/settings_loop.png)
 
-## Rozšírený asistent jedla (AMA) alebo super mikro bolus (SMB)
+## Rozšírený asistent jedla (AMA) alebo Super Micro Bolus (SMB)
 
-Depending on your settings in [Configuration > APS](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
+Podľa nastavenia v [Konfigurácia > APS](../SettingUpAaps/ConfigBuilder.md) si môžete vybrať z dvoch algoritmov:
 
 - [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) – stav algoritmu v roku 2017
 - [Super micro bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) – najnovší algoritmus odporúčaný pre začiatočníkov
 
-Od
-**AAPS** verzie 3.3 bola funkcia [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) presunutá ako súčasť OpenAPS SMB.</p> 
-
-
+Od [**AAPS** verzie 3.3](#version3300) je funkcia [Dynamická ISF](../DailyLifeWithAaps/DynamicISF.md) súčasťou OpenAPS SMB.
 
 ### OpenAPS AMA
 
-Všetky nastavenia pre OpenAPS AMA sú popísané v časti [Kľúčové funkcie AAPS – Pokročilý asistent pri jedle (AMA)](#Open-APS-features-advanced-meal-assist-ama).
+Všetky nastavenia pre OpenAPS AMA sú popísané v samostatnej časti [Kľúčové funkcie AAPS > Rozšírený asistent jedla (AMA)](#Open-APS-features-advanced-meal-assist-ama).
 
 (Preferences-openaps-smb-settings)=
-
-
 ### OpenAPS SMB
 
-Všetky nastavenia pre OpenAPS SMB sú popísané v časti [Kľúčové funkcie AAPS – Super mikrobolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
+Všetky nastavenia pre OpenAPS SMB sú popísané v samostatnej časti [Kľúčové funkcie AAPS > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-The list of settings you see depends on your progress in the [Objectives](../SettingUpAaps/CompletingTheObjectives.md) and on [Simple mode](#preferences-simple-mode). On a new installation only **Use dynamic sensitivity** is shown. Once the objectives are completed, the section looks like this:
+Zoznam nastavení, ktoré vidíte, závisí od vášho pokroku v [Cieľoch](../SettingUpAaps/CompletingTheObjectives.md) a od [jednoduchého módu](#preferences-simple-mode). Pri novej inštalácii sa zobrazuje iba **Použiť dynamickú citlivosť**. Po splnení cieľov sekcia vyzerá takto:
 
-![Settings > OpenAPS SMB, first part](../images/preferences/settings_openaps_smb_1.png)
+![Nastavenia > OpenAPS SMB, prvá časť](../images/preferences/settings_openaps_smb_1.png)
 
-![Settings > OpenAPS SMB, SMB options](../images/preferences/settings_openaps_smb_2.png)
+![Nastavenia > OpenAPS SMB, možnosti SMB](../images/preferences/settings_openaps_smb_2.png)
 
-![Settings > OpenAPS SMB, UAM and carbs required](../images/preferences/settings_openaps_smb_3.png)
+![Nastavenia > OpenAPS SMB, UAM a potrebné sacharidy](../images/preferences/settings_openaps_smb_3.png)
 
-**Advanced Settings** at the bottom of the section holds values that you normally do not have to change:
+**Rozšírené nastavenia** na konci sekcie obsahujú hodnoty, ktoré bežne nemusíte meniť:
 
-![Settings > OpenAPS SMB > Advanced Settings](../images/preferences/settings_openaps_smb_advanced.png)
+![Nastavenia > OpenAPS SMB > Rozšírené nastavenia](../images/preferences/settings_openaps_smb_advanced.png)
 
-![Settings > OpenAPS SMB > Advanced Settings, continued](../images/preferences/settings_openaps_smb_advanced_2.png)
-
-
+![Nastavenia > OpenAPS SMB > Rozšírené nastavenia, pokračovanie](../images/preferences/settings_openaps_smb_advanced_2.png)
 
 ## Nastavenie vstrebávania sacharidov
 
-![Settings > Absorption settings](../images/preferences/settings_absorption.png)
+![Nastavenia > Nastavenie vstrebávania sacharidov](../images/preferences/settings_absorption.png)
 
 (Preferences-min_5m_carbimpact)=
+### SMB min 5m dopad sacharidov (min_5m_carbimpact)
 
+Toto nastavenie je skryté v [Jednoduchom móde](#preferences-simple-mode).
 
-### SMB min 5m carbs impact (min_5m_carbimpact)
+Algoritmus používa BGI (vplyv na glykémiu) na určenie, kedy sa [sacharidy vstrebávajú](../DailyLifeWithAaps/CobCalculation.md).
 
-Toto nastavenie je skryté v [jednoduchom režime](#preferences-simple-mode).
+V prípadoch, keď absorpciu sacharidov nie je možné dynamicky vypočítať na základe reakcií vašej glykémie, **AAPS** vloží do vašich sacharidov predvolený rozklad. V podstate je to niečo ako poistka. Táto hodnota sa používa iba počas chýbajúcich údajov **CGM** alebo keď fyzická aktivita „spotrebuje“ všetok nárast glykémie, ktorý by inak spôsobil rozklad COB pomocou **AAPS**.
 
-Algoritmus používa BGI (vplyv glukózy v krvi) na určenie, kedy sa [sacharidy vstrebávajú](../DailyLifeWithAaps/CobCalculation.md).
+Jednoducho povedané: Algoritmus „vie“, ako by sa vaše glykémie *mali* správať, keď sú ovplyvnené aktuálnou dávkou inzulínu atď. Vždy keď nastane kladná odchýlka od očakávaného priebehu, časť sacharidov sa považuje za vstrebanú/rozloženú. Veľká zmena = veľa sacharidov atď.
 
-V prípadoch, keď absorpciu sacharidov nie je možné dynamicky vypočítať na základe reakcií vašej glykémie, **AAPS** vloží do vašich sacharidov predvolený rozklad. V podstate je to niečo ako poistka. Táto hodnota sa používa iba počas chýbajúcich údajov **CGM** alebo keď fyzická aktivita „spotrebuje“ všetok nárast hladiny glukózy v krvi, ktorý by inak spôsobil rozklad COB pomocou **AAPS**.
+Parameter min_5m_carbimpact definuje predvolený vplyv absorpcie sacharidov za 5 minút. Úplný popis parametra nájdete v [dokumentácii OpenAPS o nastaveniach a bezpečnostných nastaveniach](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
-Jednoducho povedané: Algoritmus „*vie*“, ako by sa vaše glykémie mali správať, keď sú ovplyvnené aktuálnou dávkou inzulínu atď. Whenever there is a positive deviation from the expected behavior, some carbs are absorbed/decayed. Veľká zmena = veľa sacharidov atď.
+Štandardná hodnota pre AMA je 3, pre SMB je to 8.
 
-Parameter min_5m_carbimpact definuje predvolený vplyv absorpcie sacharidov za 5 minút. For the full parameter reference see [OpenAPS's preferences and safety settings documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
-
-Standard value for AMA is 3, for SMB it's 8.
-
-The COB graph on the main screen indicates when min_5m_carbimpact is being used by putting orange dots along the top of the COB curve.
+Graf COB na hlavnej obrazovke ukazuje, kedy sa používa min_5m_carbimpact: na hornom okraji krivky COB sa zobrazia oranžové bodky.
 
 ![Graf COB](../images/main/cob_graph_min_5m_carbimpact.png)
 
+### Hraničný čas absorpcie (vstrebávania)
 
+Čas, po ktorom sa každé jedlo považuje za vstrebané; zostávajúce sacharidy sa odrežú. Ak často jedávate jedlá s vysokým obsahom tuku alebo bielkovín, budete musieť nastaviť dlhší čas vstrebávania jedla.
 
-### Absorption cutoff
+### Rozšírené nastavenia – pomer Autosens
 
-Time at which any meal is considered absorbed; remaining carbs will be cut off. Ak často jedávate jedlá s vysokým obsahom tuku alebo bielkovín, budete musieť nastaviť dlhší čas vstrebávania jedla.
+![Rozšírené nastavenia vstrebávania](../images/preferences/settings_absorption_advanced.png)
 
-
-
-### Rozšírené nastavenia – pomer autosens
-
-![Absorption advanced settings](../images/preferences/settings_absorption_advanced.png)
-
-- Definujte min. a max. pomer [automatickej citlivosti](#Open-APS-features-autosens).
+- Definujte min. a max. pomer [Autosens](#Open-APS-features-autosens).
 - Štandardné hodnoty (max. 1,2 a min. 0,7) by sa normálne nemali meniť.
-
-
 
 ## Pumpa
 
-![Settings > Pump](../images/preferences/settings_pump.png)
-
-
+![Nastavenia > Pumpa](../images/preferences/settings_pump.png)
 
 ### Strážny pes BT
 
-V prípade potreby aktivujte BT watchdog (napr. pre pumpy Dana). It switches off Bluetooth for one second if no connection to the pump is possible. This may help on some phones where the Bluetooth stack freezes.
-
-
+V prípade potreby aktivujte BT watchdog (napr. pre pumpy Dana). Ak nie je možné pripojiť sa k pumpe, vypne Bluetooth na jednu sekundu. Môže to pomôcť na niektorých telefónoch, na ktorých Bluetooth zamŕza.
 
 ## Nastavenia pumpy
 
-The options here will vary depending on which pump driver you have selected in [Configuration > Pump](#Config-Builder-pump). Pair and set up your pump according to the [pump-related instructions](../Getting-Started/CompatiblePumps.md).
+Možnosti sa líšia podľa ovládača pumpy, ktorý ste vybrali v [Konfigurácia > Pumpa](#Config-Builder-pump). Spárujte a nastavte pumpu podľa [pokynov pre vašu pumpu](../Getting-Started/CompatiblePumps.md).
 
-For example with the **Virtual Pump**, the section is called **Virtual pump settings**. You choose the **Pump type** the virtual pump imitates, and whether its status is uploaded to Nightscout:
+Napríklad pri **Virtuálnej pumpe** sa sekcia volá **Nastavenie virtuálnej pumpy**. Vyberiete **Typ pumpy**, ktorý virtuálna pumpa napodobňuje, a či sa jej stav nahráva do Nightscoutu:
 
-![Settings > Virtual pump settings](../images/preferences/settings_virtual_pump.png)
-
-
+![Nastavenia > Nastavenie virtuálnej pumpy](../images/preferences/settings_virtual_pump.png)
 
 ## Tidepool
 
 Viac informácií nájdete na stránke [Tidepool](../SettingUpAaps/Tidepool.md).
 
 (Preferences-nsclient)=
+## NSClient
 
+![Nastavenia > NSClientV3](../images/preferences/settings_nsclient.png)
 
-## Interný NSClient
-
-![Settings > NSClientV3](../images/preferences/settings_nsclient.png)
-
-The NSClient plugin (shown as **NSClientV3** in the configuration menu) synchronizes your data with Nightscout. It uses the Nightscout API v3.
-
-
+Plugin NSClient (v menu konfigurácie sa zobrazuje ako **NSClientV3**) synchronizuje vaše údaje s Nightscoutom. Používa Nightscout API v3.
 
 ```{admonition} Data uploaders
 :class: warning
 
-When using NSClientV3, all uploaders must use the Nightscout API v3. If another uploader (for example your CGM app) is not API v3 compliant, **let **AAPS** upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
+Pri používaní NSClientV3 musia všetky nástroje na nahrávanie dát používať Nightscout API v3. Ak iný nástroj na nahrávanie (napríklad vaša aplikácia CGM) nepodporuje API v3, **nechajte **AAPS** nahrávať všetky údaje** (glykémie, ošetrenia, ...) do Nightscoutu a ten nástroj vypnite.
 ```
 
-
-- Nastavte si *URL adresu Nightscout* (napr. <https://yoursitename.yourplaform.dom>).
+- Do poľa *Adresa Nightscoutu* zadajte adresu svojej stránky (napr. <https://yoursitename.yourplaform.dom>).
 - **Uistite sa, že adresa URL je BEZ /api/v1/ na konci.**
-- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **Nightscout access token** (not your API Secret!). On **AAPSClient** you can scan the main phone's QR code instead, which sets up a token of the client's own. A client paired with the PIN gets its own token from the main phone after pairing. See [The client's own Nightscout token](#client-master-control-own-token).
+- V Nightscoute vytvorte *[token s rolou Admin](https://nightscout.github.io/nightscout/security/#create-a-token)* (na použitie V3 API je potrebný [Nightscout 15](https://nightscout.github.io/update/update/)) a zadajte ho do poľa **Nightscout prístupový token** (nie váš API Secret!). V **AAPSClient** môžete namiesto toho naskenovať QR kód hlavného telefónu, čím sa nastaví vlastný token klienta. Klient spárovaný pomocou PIN dostane po spárovaní vlastný token z hlavného telefónu. Pozrite si [Vlastný Nightscout token klienta](#client-master-control-own-token).
 - To vám umožní čítanie a zápis údajov medzi webovou stránkou Nightscout a **AAPS**.
 - Ak ste sa zasekli pri Cieli 1, prekontrolujte si zadané údaje.
-- Leave "Use websockets" enabled (recommended).
+- Nechajte zapnuté „Použiť websockety“ (odporúčané).
 
 (Preferences-nsclient-synchronization)=
-
-
 ### Synchronizácia
 
-![Synchronization options](../images/preferences/settings_nsclient_sync.png)
+![Možnosti synchronizácie](../images/preferences/settings_nsclient_sync.png)
 
 Možnosti synchronizácie budú závisieť od spôsobu, akým chcete používať **AAPS**.
 
 Môžete si vybrať, ktoré údaje chcete [nahrať a stiahnuť do alebo z Nightscoutu](#Nightscout-aaps-settings).
 
-While client control is on (always in Simple Mode), these settings are hidden: **AAPS** is then in [hardened mode](#client-master-control-hardened-mode), takes no changes made directly in Nightscout and uploads all its data.
-
-
+Kým je zapnuté ovládanie z klienta (v jednoduchom móde vždy), tieto nastavenia sú skryté: **AAPS** je vtedy v [režime zvýšeného zabezpečenia](#client-master-control-hardened-mode), neprijíma zmeny urobené priamo v Nightscoute a nahráva všetky svoje údaje.
 
 ### Nastavenie alarmov
 
 ![Nastavenie alarmov](../images/preferences/settings_nsclient_alarms.png)
 
-- Možnosti alarmov vám umožňujú vybrať si, ktoré alarmy Nightscout chcete používať prostredníctvom aplikácie. **AAPS** potom spustí alarm, keď sa spustí alarm Nightscout.
+- Nastavenie alarmov vám umožňuje vybrať, ktoré alarmy Nightscoutu chcete v aplikácii používať. **AAPS** potom spustí alarm, keď sa spustí alarm Nightscout.
 - Aby sa spustili alarmy, musíte nastaviť hodnoty alarmov Urgent High (Veľmi vysoká), High (Vysoká), Low (Nízka) a Urgent Low (Veľmi nízka) v [nastaveniach Nightscoutu](https://nightscout.github.io/nightscout/setup_variables/#alarms).
-- They will only work while you have a connection to Nightscout and are intended for parent/caregivers.
-- If you have the **CGM** source on your phone (i.e. xDrip or BYODA) then use those alarms instead of Nightscout Alarms.
-- NS announcements will echo Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) in the **AAPS** notifications.
+- Fungujú len vtedy, keď máte pripojenie k Nightscoutu, a sú určené pre rodičov/opatrovateľov.
+- Ak máte zdroj **CGM** v telefóne (napr. xDrip alebo BYODA), použite radšej jeho alarmy namiesto alarmov Nightscoutu.
+- NS oznámenia zobrazia [oznámenia](https://nightscout.github.io/nightscout/discover/#announcement) z Nightscoutu v upozorneniach **AAPS**.
 - Môžete zmeniť prah alarmov zastaraných údajov a urgentných zastaraných údajov, keď sa z Nightscoutu po určitom čase neprijmú žiadne údaje.
-
-
 
 ### Vzdialené ovládanie
 
-The switch "**Allow client control**" is no longer in these settings: it is at the top of **Manage → Authorized clients**, where the paired clients are managed. See the dedicated [Client / Master control](../RemoteFeatures/ClientMasterControl.md) page, including [hardened mode](#client-master-control-hardened-mode), which this switch turns on.
-
-
+Prepínač „**Povoliť ovládanie klientom**“ už v týchto nastaveniach nie je: nájdete ho hore na obrazovke **Spravovať → Autorizovaní klienti**, kde sa spravujú spárovaní klienti. Pozrite si samostatnú stránku [Ovládanie Master ↔ Client](../RemoteFeatures/ClientMasterControl.md) vrátane [režimu zvýšeného zabezpečenia](#client-master-control-hardened-mode), ktorý tento prepínač zapína.
 
 ### Nastavenie pripojenia
 
 ![Nastavenie pripojenia NSClient](../images/preferences/settings_nsclient_connection.png)
 
-- Nastavenia pripojenia definujú, kedy sa AAPS bude pripájať k Nightscoutu.
-- Môžete nastaviť aby AAPS posielal dáta do Nightscoutu len vtedy keď ste pripojený na Wi-Fi alebo len na konkrétnu Wi-Fi sieť, ktorú si zvolíte.
+- Nastavenie pripojenia určuje, kedy bude pripojenie k Nightscoutu povolené.
+- Odosielanie do Nightscoutu môžete obmedziť len na Wi-Fi alebo dokonca len na určité siete Wi-Fi (SSID).
 - Ak chcete používať iba konkrétnu sieť Wi-Fi, môžete zadať jej SSID.
 - Viaceré SSID je možné oddeliť bodkočiarkou.
-- Ak chcete odstrániť všetky SSID, zadajte do poľa prázdne miesto(medzeru).
+- Ak chcete odstrániť všetky SSID, zadajte do poľa medzeru.
 
 (Preferences-advanced-settings-nsclient)=
-
-
 ### Rozšírené nastavenia (NSClient)
 
-![NSClient advanced settings](../images/preferences/settings_nsclient_advanced.png)
+![Rozšírené nastavenia NSClient](../images/preferences/settings_nsclient_advanced.png)
 
 Možnosti v rozšírených nastaveniach sú samovysvetľujúce.
-
-
 
 ## SMS komunikátor
 
 Viac informácií nájdete na stránke [SMS príkazy](../RemoteFeatures/SMSCommands.md).
 
 (preferences-wear)=
-
-
 ## Wear
 
-This section is shown when the **Wear** plugin is enabled in [Configuration > Communication](#Config-Builder-wear). More information on the dedicated [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md) and [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md) pages.
+Táto sekcia sa zobrazí, keď je v [Konfigurácia > Komunikácia](#Config-Builder-wear) zapnutý plugin **Wear**. Viac informácií nájdete na stránkach [Nastavenie AAPS na hodinkách s Wear OS](../WearOS/WearOsSmartwatch.md) a [Ovládanie AAPS pomocou inteligentných hodiniek s Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
 
-![Settings > Wear](../images/preferences/settings_wear.png)
+![Nastavenia > Wear](../images/preferences/settings_wear.png)
 
-- **Wear control**: allow treatments and other actions to be sent from the watch. Without it, the watch only displays data: the phone refuses any command from the watch, and tapping a complication that would open a control screen opens the **AAPS** menu on the watch instead.
+- **Ovládanie cez Wear**: povolí posielanie ošetrení a iných akcií z hodiniek. Bez neho hodinky iba zobrazujú údaje: telefón odmietne každý príkaz z hodiniek a ťuknutie na komplikáciu, ktorá by otvorila ovládaciu obrazovku, namiesto toho otvorí na hodinkách menu **AAPS**.
 
-**Wear Wizard Settings** defines which calculations are included in the result of the bolus wizard on the watch. On the watch you only enter the carbs; these switches replace the choices you would make in the bolus wizard on the phone:
+**Nastavenie sprievodcu na hodinkách** určuje, ktoré výpočty sú zahrnuté vo výsledku bolusovej kalkulačky na hodinkách. Na hodinkách zadávate iba sacharidy; tieto prepínače nahrádzajú voľby, ktoré by ste robili v bolusovej kalkulačke v telefóne:
 
-- **Include BG in wizard**: add a correction for the difference between your current glucose and your target.
-- **Include temp target in wizard**: use the running temp target instead of the profile target for this correction.
-- **Include trend in wizard**: take the current glucose trend into account.
-- **Include COB in wizard**: add insulin for the carbs that are still on board.
-- **Include IOB in wizard**: subtract the insulin that is still on board.
+- **Zahrnúť glykémiu v kalkulačke**: pridá korekciu na rozdiel medzi vašou aktuálnou glykémiou a cieľom.
+- **Zahrnúť dočasný cieľ v kalkulačke**: pre túto korekciu použije bežiaci dočasný cieľ namiesto cieľa z profilu.
+- **Zahrnúť trend v kalkulačke**: zohľadní aktuálny trend glykémie.
+- **Zahrnúť COB v kalkulačke**: pridá inzulín na sacharidy, ktoré ešte nie sú vstrebané.
+- **Zahrnúť IOB v kalkulačke**: odpočíta inzulín, ktorý je ešte aktívny.
 
-![Settings > Wear > Wear Wizard Settings](../images/preferences/settings_wear_wear_wizard.png)
+![Nastavenia > Wear > Nastavenie sprievodcu na hodinkách](../images/preferences/settings_wear_wear_wizard.png)
 
-**Custom Watchface Settings** contains **Authorize custom watchfaces**. A custom watchface file can include values for some watch settings. When this switch is on, loading such a watchface is allowed to change those settings on the watch; when it is off, the watchface is loaded but the settings stay as they are:
+**Nastavenie vlastného ciferníka** obsahuje **Autorizovať vlastné ciferníky**. Súbor vlastného ciferníka môže obsahovať hodnoty pre niektoré nastavenia hodiniek. Keď je tento prepínač zapnutý, načítanie takého ciferníka môže tieto nastavenia na hodinkách zmeniť; keď je vypnutý, ciferník sa načíta, ale nastavenia zostanú bez zmeny:
 
-![Settings > Wear > Custom Watchface Settings](../images/preferences/settings_wear_custom_watchface.png)
+![Nastavenia > Wear > Nastavenie vlastného ciferníka](../images/preferences/settings_wear_custom_watchface.png)
 
-**General Settings** contains **Notify on SMB**, to get a notification on the watch each time an SMB is delivered:
+**Všeobecné nastavenia** obsahujú **Upozorniť na SMB**, aby ste na hodinkách dostali upozornenie pri každom podaní SMB:
 
-![Settings > Wear > General Settings](../images/preferences/settings_wear_general.png)
-
-
+![Nastavenia > Wear > Všeobecné nastavenia](../images/preferences/settings_wear_general.png)
 
 ## Autotune
 
-This section is shown when the **Autotune** plugin is enabled in [Configuration > General](#Config-Builder-autotune). The settings are described on the dedicated [Autotune](../AdvancedOptions/Autotune.md) page.
+Táto sekcia sa zobrazí, keď je v [Konfigurácia > Všeobecné](#Config-Builder-autotune) zapnutý plugin **Autotune**. Nastavenia sú popísané na samostatnej stránke [Autotune](../AdvancedOptions/Autotune.md).
 
-![Settings > Autotune](../images/preferences/settings_autotune.png)
-
-
+![Nastavenia > Autotune](../images/preferences/settings_autotune.png)
 
 ## Automatizácia
 
-![Settings > Automation](../images/preferences/settings_automation.png)
+![Nastavenia > Automatizácia](../images/preferences/settings_automation.png)
 
 Vyberte, ktorá lokalizačná služba sa má použiť:
 
 - Použiť pasívnu polohu: **AAPS** zaznamenáva polohu iba v prípade, že o ňu požadujú iné aplikácie
-- Použiť sieťovú polohu: Poloha vašej siete Wi-Fi
-- Použiť GPS polohu (Pozor! Môže spôsobiť nadmerné vybitie batérie!)
-
-
+- Použiť polohu zo siete: poloha vašej siete Wi-Fi
+- Použiť polohu z GPS (Pozor! Môže spôsobiť nadmerné vybitie batérie!)
 
 ## Lokálne výstrahy
 
-![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
+![Nastavenia > Lokálne výstrahy](../images/preferences/settings_local_alerts.png)
 
 Nastavenia by mali byť samovysvetľujúce.
 
 (preferences-maintenance-settings)=
-
-
 ## Nastavenia údržby
 
-![Settings > Maintenance](../images/preferences/settings_maintenance.png)
+![Nastavenia > Údržba](../images/preferences/settings_maintenance.png)
 
-**Príjemca e-mailu**: Informácie o chode aplikácie sa štandardne posielajú na  <logs@aaps.app>.
+**Príjemca e-mailu**: Štandardný príjemca logov je <logs@aaps.app>.
 
-**Number of logs to send**: how many of the most recent log files are attached when you send logs.
+**Počet protokolov na odoslanie**: koľko najnovších log súborov sa priloží, keď posielate logy.
 
 **Možnosti dát**
 
@@ -532,87 +484,78 @@ Nastavenia by mali byť samovysvetľujúce.
 
 Môžete pomôcť vývojárom **AAPS** zasielaním hlásení o chybách aplikácie.
 
-**automatický export nastavení**<br/> Povolením tejto funkcie umožníte **AAPS** export nastavení bez zásahu používateľa. Pri ďalšom manuálnom exporte sa hlavné heslo bezpečne uloží len do vášho telefónu. Uložené heslo bude platné až 4 týždne. Po 4 týždňoch budete upozornení, že platnosť hesla čoskoro vyprší. Počas týždňa od posledného exportu si môžete heslo obnoviť manuálnym exportom nastavení z menu údržby.
+**Automatický export nastavení**<br/> Povolením tejto funkcie umožníte **AAPS** exportovať nastavenia bez zásahu používateľa. Na tento účel sa hlavné heslo pri ďalšom manuálnom exporte bezpečne uloží (iba) vo vašom telefóne. Uložené heslo bude platné až 4 týždne. Po 4 týždňoch budete upozornení, že platnosť hesla čoskoro vyprší. Počas 1-týždňovej lehoty potom môžete heslo obnoviť manuálnym exportom nastavení z menu Údržba.
 
-Po uplynutí 1 týždňa uložené heslo vyprší a akýkoľvek automatický export nastavení sa preruší, pričom sa používateľovi zobrazí upozornenie s otázkou [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) will be logged to the **AAPS** 'Careportal' and 'User entry' lists under Treatments.
+Po uplynutí 1-týždňovej lehoty uložené heslo vyprší a každý automatický export nastavení sa preruší. Používateľ dostane upozornenie s výzvou, aby heslo zadal znova. [(**Automatické exporty nastavení**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) sa budú zaznamenávať do zoznamov „Starostlivosť“ a „Záznam používateľa“ v **AAPS** v časti Ošetrenia.
 
 Po povolení tejto možnosti nezabudnite na manuálny export nastavení, kde sa od vás bude vyžadovať heslo, aby ho **AAPS** mohol uložiť.
 
+### Log súbory
 
+AAPS ukladá logy na riešenie problémov.
 
-### Log files
+Túto funkciu nevypínajte: pomôže zistiť príčinu, ak sa niečo pokazí.
 
-AAPS will save logs for troubleshooting.
+Ak potrebujete poslať logy vývojárom, v e-maile presne popíšte problém. Logy je lepšie posielať, až keď vás o to niekto požiada, a to na základe [hlásenia problému na GitHube](https://github.com/nightscout/AndroidAPS/issues).
 
-Do not disable this feature: it will help understanding the reasons if something goes wrong.
+Logy AAPS nájdete v pamäti telefónu -> Android -> data -> info.nightscout.androidaps -> files.
 
-If you need to send the logs to the developers, make sure you accurately describe the issue in the email. It is preferable to send logs only after being requested to do so, following an [issue report in GitHub](https://github.com/nightscout/AndroidAPS/issues).
+Práca s logmi (nastavenie logovania, odosielanie a mazanie logov) a správa súborov sú na obrazovke **Údržba**, ktorú otvoríte z **menu** (☰) v ľavom hornom rohu hlavnej obrazovky:
 
-You can find AAPS logs in your phone memory -> Android -> data -> info.nightscout.androidaps -> files.
-
-Log handling (log settings, sending and deleting logs) and file management are found on the **Maintenance** screen, opened from the **menu** (☰) in the top-left corner of the main screen:
-
-![Maintenance screen](../images/preferences/maintenance_file_management.png)
+![Obrazovka Údržba](../images/preferences/maintenance_file_management.png)
 
 (preferences-maintenance-logdirectory)=
 
+### Nastavenie lokálneho priečinka AAPS
 
+Obrazovka **Údržba** obsahuje aj **AAPS priečinok**. Toto nastavenie umožňuje používateľovi vybrať si adresár v telefóne, kam bude **AAPS** ukladať nastavenia, protokoly a ďalšie súbory. Keď priečinok vyberiete, jeho cesta (napríklad `Documents/AAPS`) sa zobrazí pod **AAPS priečinok**, takže vždy vidíte, kam sa vaše súbory ukladajú.
 
-### Setting the local AAPS directory
+Dôrazne odporúčame použiť priečinok priamo v hlavnom adresári pamäte telefónu. Predvolený je AAPS.
 
-The **Maintenance** screen also includes the **AAPS directory**. Toto nastavenie umožňuje používateľovi vybrať si adresár v telefóne, kam bude **AAPS** ukladať nastavenia, protokoly a ďalšie súbory. Once a directory is chosen, its path (for example `Documents/AAPS`) is shown below **AAPS directory**, so you can always see where your files are saved.
+![Umiestnenie lokálneho priečinka](../images/preferences/maintenance_settings_directory.png)
 
-It is strongly recommended to use a directory directly in the main entry of your phone memory. Default is AAPS.
+Ak vyberiete podpriečinok priečinka AAPS, zobrazí sa chybové hlásenie. Ťuknite na „OK“ a skúste to znova, tentoraz vyberte správny priečinok (o úroveň vyššie). Nevyberajte „DISMISS“, ak presne neviete, čo robíte.
 
-![Local directory location](../images/preferences/maintenance_settings_directory.png)
+![Umiestnenie lokálneho priečinka](../images/preferences/maintenance_settings_wrongdirectory.png)
 
-If you select a subdirectory of AAPS, you will see an error message. Tap "OK" and retry, selecting the correct directory (one above). Do not select "DISMISS" unless you clearly know what you are doing.
-
-![Local directory location](../images/preferences/maintenance_settings_wrongdirectory.png)
-
-Android can silently take the directory permission away, for example after you reinstall **AAPS** or clear its storage. When that happens, **AAPS** shows a persistent **Access to the AAPS directory was lost** notification and local settings export stops working until you come back here and select the directory again. Do this promptly, otherwise your backups on the phone are no longer refreshed.
+Android môže povolenie k priečinku bez upozornenia odobrať, napríklad keď **AAPS** preinštalujete alebo vymažete jeho úložisko. Keď sa to stane, **AAPS** zobrazí trvalé upozornenie **Prístup do priečinka AAPS bol stratený** a lokálny export nastavení prestane fungovať, kým sa sem nevrátite a priečinok znova nevyberiete. Urobte to čo najskôr, inak sa vaše zálohy v telefóne prestanú aktualizovať.
 
 (preferences-maintenance-cloud)=
 
+### Nastavenie cloudového adresára
 
+Nastavenia, logy a údaje CSV môžete exportovať do cloudovej služby.
 
-### Setting a cloud directory
+1. Otvorte **menu** (☰), vyberte **Údržba** a ťuknite na **Cloudový adresár** (v časti **Správa súborov**).
 
-You can export your settings, logs and CSV data to a cloud service.
+   ![Cloudový adresár v menu Údržba](../images/preferences/maintenance_settings_cloud.png)
 
-1. Open the **menu** (☰), select **Maintenance** and tap **Cloud Directory** (under **File management**).
-   
-   ![Cloud Directory in the Maintenance menu](../images/preferences/maintenance_settings_cloud.png)
+2. V okne **Vyberte typ úložiska** vyberte **Disk Google**.
 
-2. In **Select Storage Type**, select **Google Drive**.
-   
-   ![Select Storage Type dialog](../images/preferences/maintenance_cloud_select_storage.png)
+   ![Dialóg Vyberte typ úložiska](../images/preferences/maintenance_cloud_select_storage.png)
 
-3. A Google sign-in page opens. Choose the Google account that will hold your backups (you can use a [dedicated Google account](../UsefulLinks/DedicatedGoogleAccountForAaps.md)).
-   
-   ![Google sign-in page: choose an account](../images/preferences/maintenance_cloud_google_account.png)
+3. Otvorí sa prihlasovacia stránka Google. Vyberte účet Google, v ktorom budú uložené vaše zálohy (môžete použiť [samostatný účet Google](../UsefulLinks/DedicatedGoogleAccountForAaps.md)).
 
-4. Check that the account is the right one and tap **Continue** to give **AAPS** access. If you set up the cloud directory before, the page says that **AAPS** already has some access.
-   
-   ![Google page asking to give AAPS access, with the Continue button](../images/preferences/maintenance_cloud_google_access.png)
+   ![Prihlasovacia stránka Google: výber účtu](../images/preferences/maintenance_cloud_google_account.png)
 
-5. Back in **AAPS**, the message **Cloud storage authentication successful** appears at the bottom of the main screen:
-   
-   ![Cloud storage authentication successful message](../images/preferences/maintenance_cloud_auth_success.png)
-   
-   In the **Maintenance** menu, **Cloud Directory** now has a green dot, and the **Cloud** buttons next to **Send logs**, **Export settings**, **Import settings** and **Export User Entries to Excel (csv)** are available.
-   
-   ![Maintenance menu with cloud storage set up: Cloud buttons available and the clear icon on Cloud Directory](../images/preferences/maintenance_settings_cloud_ready.png)
+4. Skontrolujte, či je to správny účet, a ťuknite na **Pokračovať** (Continue), aby ste **AAPS** povolili prístup. Ak ste cloudový adresár nastavovali už predtým, stránka uvedie, že **AAPS** už má určitý prístup.
 
-To stop exporting to the cloud, tap the **✕** (**Clear Settings**) icon at the end of the **Cloud Directory** row in the **Maintenance** menu (it is shown once a cloud service is set up) and confirm **Clear Cloud Settings**. This switches back to local storage and clears the authorization.
+   ![Stránka Google so žiadosťou o povolenie prístupu pre AAPS s tlačidlom Pokračovať (Continue)](../images/preferences/maintenance_cloud_google_access.png)
 
+5. Po návrate do **AAPS** sa v dolnej časti hlavnej obrazovky zobrazí správa **Overenie cloudového úložiska prebehlo úspešne**:
 
+   ![Správa Overenie cloudového úložiska prebehlo úspešne](../images/preferences/maintenance_cloud_auth_success.png)
+
+   V menu **Údržba** má teraz **Cloudový adresár** zelenú bodku a tlačidlá **Cloud** vedľa položiek **Odoslať protokoly**, **Exportovať nastavenia**, **Importovať nastavenia** a **Exportovať používateľské záznamy do Excelu (csv)** sú dostupné.
+
+   ![Menu Údržba s nastaveným cloudovým úložiskom: dostupné tlačidlá Cloud a ikona vymazania pri Cloudovom adresári](../images/preferences/maintenance_settings_cloud_ready.png)
+
+Ak chcete export do cloudu ukončiť, ťuknite na ikonu **✕** (**Vymazať nastavenia**) na konci riadku **Cloudový adresár** v menu **Údržba** (zobrazí sa, keď je cloudová služba nastavená) a potvrďte **Vymazať nastavenia cloudu**. Tým sa prepnete späť na lokálne úložisko a autorizácia sa vymaže.
 
 ## Open Humans
 
 Môžete pomôcť komunite zdielaním svojich údajov na výskumné projekty! Podrobnosti sú popísané na [stránke Open Humans](../SupportingAaps/OpenHumans.md).
 
-In **Settings → Open Humans**, you can define when data shall be uploaded
-
+V **Nastavenia → Open Humans** môžete určiť, kedy sa majú údaje nahrávať
 - iba ak ste pripojený k Wi-Fi
 - len pri nabíjaní
