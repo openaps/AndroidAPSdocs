@@ -110,7 +110,7 @@ V rámci **Cieľa 5** začnete chápať, ako vznikajú odporúčania dočasného
 
 Odhadovaný čas na splnenie tohto cieľa: **7 dní**.
 
-Tento **Cieľ** vyžaduje, aby ste určili a nastavili hodnotu „Max. U/h, na ktoré môže byť nastavený dočasný bazál“ (max-basal), ako je opísané v časti [Funkcie OpenAPS](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). Túto hodnotu môžete nastaviť v [Nastavenia → OpenAPS SMB](#Preferences-openaps-smb-settings). V [Jednoduchom móde](#preferences-simple-mode) nastaví **AAPS** túto hodnotu automaticky a nemusíte ju meniť. Ak ešte používate virtuálnu pumpu, uistite sa, že toto bezpečnostné nastavenie je nastavené v **AAPS** aj vo vašej inzulínovej pumpe.
+This **Objective** requires you to determine and set your “Maximum basal rate” (max-basal) value as described in [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). Túto hodnotu môžete nastaviť v [Nastavenia → OpenAPS SMB](#Preferences-openaps-smb-settings). V [Jednoduchom móde](#preferences-simple-mode) nastaví **AAPS** túto hodnotu automaticky a nemusíte ju meniť. Ak ešte používate virtuálnu pumpu, uistite sa, že toto bezpečnostné nastavenie je nastavené v **AAPS** aj vo vašej inzulínovej pumpe.
 
 Možno budete chcieť nastaviť [cieľovú glykémiu v **Profile**](#profile-glucose-targets) vyššie ako zvyčajne, kým si nezvyknete na výpočty a nastavenia **AAPS**. Môžete skúsiť nastaviť **cieľovú glykémiu** vo svojom **Profile** v užšom rozsahu (napríklad široký 1 mmol/l alebo menej [20 mg/dl alebo menej]) a sledovať, ako sa systém správa.
 
