@@ -1,6 +1,6 @@
 # Vytváření a obnova záloh
 
-Když si AAPS nainstalujete do telefonu, stane se z něj „zdravotnický prostředek“, na který se každý den spoléháte. Velmi doporučujeme mít připravený nouzový záložní plán pro případ, že se telefon porouchá, bude ukraden nebo ho ztratíte. Proto je nutné se připravit a zeptat se sami sebe: „Co když?“
+Když si AAPS nainstalujete do telefonu, stane se z něj „zdravotnický prostředek“, na který se každý den spoléháte. Velmi doporučujeme mít připravený nouzový záložní plán pro případ, že se telefon porouchá, bude ukraden nebo ho ztratíte. Therefore, it is essential to prepare by asking yourself: "What if?"
 
 Abyste mohli obnovit své nastavení AAPS na stávajícím nebo novém telefonu, je důležité mít následující položky uložené na bezpečném místě (tedy ne v telefonu). Nejlepší je mít alespoň dvě samostatné zálohy: na místním pevném disku, USB disku a (nejlépe) v cloudovém úložišti, jako je Disk Google nebo Microsoft 365 OneDrive. Když zálohy uložíte do cloudu, budete mít vždy vše potřebné dostupné z telefonu a můžete své nastavení obnovit kdekoli a kdykoli.
 
@@ -104,7 +104,7 @@ Pro automatický export nastavení [(**viz Automatizace**)](../DailyLifeWithAaps
 
 Nyní můžete nastavit [automatizaci](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export), která bude exportovat nastavení buď pravidelně (_např._ každý týden), nebo po výměně podu.
 
-_**Poznámka:** Při importu nastavení musí uživatel vždy zadat heslo AAPS!_
+_**Note:** On importing settings, the user always needs to enter the AAPS master password!_
 
 ![Nastavení > Údržba > Bezobslužný export nastavení s přepínačem Povolit automatický export nastavení](../images/Maintenance/settings_unattended_export.png)
 
@@ -147,7 +147,7 @@ Import ve výchozím stavu nastavení pumpy nemění: pumpa vybraná v **Konfigu
 
 3. Ukončete Průvodce nastavením. Všechna potřebná nastavení naimportujeme ze záložní kopie **Nastavení**
 
-4. Na hlavní obrazovce **AAPS** vyberte Požadavek a povolte všechna oprávnění uvedená červeně nahoře
+4. From the **AAPS** main screen press **Grant** and allow all permissions listed in the **Permissions Required** panel on the top
 
 5. Na hlavní obrazovce **AAPS** nastavte v [Nastavení > Ochrana](#Preferences-master-password) hlavní heslo na stejné heslo, jaké jste použili pro zálohy.
 
