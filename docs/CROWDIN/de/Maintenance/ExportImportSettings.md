@@ -1,6 +1,6 @@
 # Erstellen und Wiederherstellen von Backups
 
-Sobald Du AAPS auf Deinem Smartphone installierst, wird es zu einem "medizinischen Gerät" auf das Du Dich jeden Tag verlässt. Es wird dringend empfohlen, für den Fall, dass Dein Smartphone defekt, gestohlen oder verloren geht, einen Notfall-Plan zu haben. Daher ist es wichtig, Dich darauf vorzubereiten, indem Du Dich fragst "Was passiert, wenn?"
+Sobald Du AAPS auf Deinem Smartphone installierst, wird es zu einem "medizinischen Gerät" auf das Du Dich jeden Tag verlässt. Es wird dringend empfohlen, für den Fall, dass Dein Smartphone defekt, gestohlen oder verloren geht, einen Notfall-Plan zu haben. Therefore, it is essential to prepare by asking yourself: "What if?"
 
 Um Deine AAPS-Konfiguration auf einem bestehenden oder neuen Smartphone wiederherzustellen, ist es wichtig, die folgenden Elemente an einem sicheren Ort zu behalten (nicht auf Deinem Smartphone). Es hat sich bewährt, mindestens zwei separate Sicherungen zu haben: auf einer lokalen Festplatte, einem USB-Stick und (bevorzugt) im Cloud-Speicher (z. B.Google Drive oder Microsoft 365 OneDrive). Indem Du Deine Backups in der Cloud speicherst, hast Du von Deinem Smartphone aus alles, was zum Wiederherstellen Deiner Konfiguration benötigt wird, immer und überall verfügbar.
 
@@ -104,7 +104,7 @@ For doing automating settings exports [(**see Automation**)](../DailyLifeWithAap
 
 Du kannst [Automatisierungen](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) so konfigurieren, dass die Einstellungen auitomatisch exportiert werden, entweder regelmäßig (_z. B._ wöchentlich) oder nach einem Pod-Wechsel.
 
-_**Hinweis:** Beim Importieren der Einstellungen musst Du immer das AAPS-Passwort eingegeben!_
+_**Note:** On importing settings, the user always needs to enter the AAPS master password!_
 
 ![Settings > Maintenance > Unattended Settings Export with the Enable automated settings export switch](../images/Maintenance/settings_unattended_export.png)
 
@@ -147,7 +147,7 @@ By default, an import leaves your pump settings alone: the pump selected in **Co
 
 3. Beende den Einrichtungs-Assistenten. We will be importing all the necessary settings from the back-up copy of **Settings**
 
-4. From the **AAPS** main screen select Request and allow on all permissions listed in red on the top
+4. From the **AAPS** main screen press **Grant** and allow all permissions listed in the **Permissions Required** panel on the top
 
 5. From the **AAPS** main screen, set the master password in [Settings > Protection](#Preferences-master-password) to the same password as you used with your back-ups.
 
