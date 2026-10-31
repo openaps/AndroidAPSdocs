@@ -2,9 +2,9 @@
 
 # Ανίχνευση ευαισθησίας
 
-## Sensitivity algorithm
+## Αλγόριθμος ευαισθησίας
 
-**AAPS** currently offers 3 sensitivity detection models:
+Το **AAPS** προσφέρει σήμερα 3 μοντέλα ανίχνευσης ευαισθησίας:
 
 * Ευαισθησία AAPS
 * Ευαισθησία WeightedAverage
@@ -12,23 +12,23 @@
 
 ### Ευαισθησία AAPS
 
-Sensitivity is calculated the same way as in Oref1, but you can specify the time range to look back on. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences.
+Η ευαισθησία υπολογίζεται με τον ίδιο τρόπο όπως στο Oref1, αλλά μπορείτε να ορίσετε πόσο χρόνο πίσω θα εξετάζει. Η ελάχιστη απορρόφηση υδατανθράκων υπολογίζεται από τον μέγιστο χρόνο απορρόφησης υδατανθράκων που έχει οριστεί στις ρυθμίσεις.
 
 ### Ευαισθησία WeightedAverage
 
-Sensitivity is calculated as a weighted average of the deviations. You can specify the time range to look back on. Newer deviations have a higher weight. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences. This algorithm is the fastest in following sensitivity changes.
+Η ευαισθησία υπολογίζεται ως σταθμισμένος μέσος όρος των αποκλίσεων. Μπορείτε να ορίσετε πόσο χρόνο πίσω θα εξετάζει. Οι νεότερες αποκλίσεις έχουν μεγαλύτερο βάρος. Η ελάχιστη απορρόφηση υδατανθράκων υπολογίζεται από τον μέγιστο χρόνο απορρόφησης υδατανθράκων που έχει οριστεί στις ρυθμίσεις. Αυτός ο αλγόριθμος ακολουθεί πιο γρήγορα από όλους τις αλλαγές στην ευαισθησία.
 
 (SensitivityDetectionAndCob-sensitivity-oref1)=
 
 ### Ευαισθησία Oref1
 
-Sensitivity is calculated from the last 8 hours of data, or from the last site change if it is less than 8 hours ago. Carbs (if not absorbed) are cut after the time specified in the preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from the sensitivity calculation. So if you are using SMB with UAM, you have to choose the Oref1 algorithm for it to work properly. For more information about UAM, see the [Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb) section.
+Η ευαισθησία υπολογίζεται από τα δεδομένα των τελευταίων 8 ωρών, ή από την τελευταία αλλαγή σημείου έγχυσης, αν έγινε πριν από λιγότερο από 8 ώρες. Οι υδατάνθρακες (αν δεν έχουν απορροφηθεί) διακόπτονται μετά τον χρόνο που έχει οριστεί στις ρυθμίσεις. Μόνο ο αλγόριθμος Oref1 υποστηρίζει γεύματα χωρίς ανακοίνωση (UAM). Αυτό σημαίνει ότι οι χρόνοι με ανιχνευμένο UAM εξαιρούνται από τον υπολογισμό της ευαισθησίας. Άρα, αν χρησιμοποιείτε SMB με UAM, πρέπει να επιλέξετε τον αλγόριθμο Oref1 για να λειτουργεί σωστά. Για περισσότερες πληροφορίες σχετικά με το UAM, δείτε την ενότητα [Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-Oref1 is the recommended option: it is the only one that can detect UAM and work with [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), the more recent algorithm.
+Το Oref1 είναι η προτεινόμενη επιλογή: είναι το μόνο που μπορεί να ανιχνεύσει UAM και να λειτουργήσει με το [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), τον πιο πρόσφατο αλγόριθμο.
 
 ## Ταυτόχρονοι υδατάνθρακες
 
-There is a significant difference between the Sensitivity AAPS and WeightedAverage algorithms on one side, and Oref1 on the other, when several meals overlap.
+Υπάρχει σημαντική διαφορά ανάμεσα στους αλγορίθμους Ευαισθησία AAPS και WeightedAverage από τη μία πλευρά και στο Oref1 από την άλλη, όταν πολλά γεύματα επικαλύπτονται.
 
-* Oref1 expects only one meal decaying at a time: the second meal starts decaying after the first meal is completely decayed.
-* Sensitivity AAPS and WeightedAverage start decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to the meal size and the max absorption time. The minimum absorption will accordingly be higher in comparison to Oref1.
+* Το Oref1 περιμένει ότι απορροφάται μόνο ένα γεύμα κάθε φορά: η απορρόφηση του δεύτερου γεύματος ξεκινά αφού απορροφηθεί πλήρως το πρώτο γεύμα.
+* Στους αλγορίθμους Ευαισθησία AAPS και WeightedAverage η απορρόφηση ξεκινά αμέσως μόλις καταχωρίσετε τους υδατάνθρακες. Αν υπάρχουν περισσότερα από ένα γεύματα ενεργά, η ελάχιστη απορρόφηση υδατανθράκων προσαρμόζεται ανάλογα με το μέγεθος του γεύματος και τον μέγιστο χρόνο απορρόφησης. Γι' αυτό η ελάχιστη απορρόφηση θα είναι μεγαλύτερη σε σύγκριση με το Oref1.
