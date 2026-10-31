@@ -93,7 +93,7 @@ Prejdite priamo na [návod na aktualizáciu](../Maintenance/UpdateToNewVersion.m
 
 V tomto návode nájdete _ukážkové_ snímky obrazovky zo zostavenia súboru apk **AAPS**. Keďže **Android Studio** – softvér, ktorým zostavujeme apk **AAPS** – sa pravidelne aktualizuje, tieto snímky obrazovky sa nemusia presne zhodovať s vašou inštaláciou, ale stále by ste podľa nich mali vedieť postupovať.
 
-Keďže **Android Studio** beží na platformách Windows, Mac OS X a Linux, môžu existovať menšie rozdiely v krokoch pre rôzne platformy.
+Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
 
 (install-git-if-you-dont-have-it)=
 ### Inštalácia Gitu
@@ -102,7 +102,7 @@ Keďže **Android Studio** beží na platformách Windows, Mac OS X a Linux, mô
 :class: dropdown
 
 Git je známy ako „_Versioning Control System_“ (VCS).\
-Git je program, ktorý vám umožňuje sledovať zmeny v kóde a spolupracovať s ostatnými. Git použijete na vytvorenie kópie zdrojového kódu **AAPS** z webovej stránky GitHub do vášho lokálneho počítača. Potom použijete Git vo svojom počítači na zostavenie aplikácie **AAPS** (apk). 
+Git je program, ktorý vám umožňuje sledovať zmeny v kóde a spolupracovať s ostatnými. Git použijete na vytvorenie kópie zdrojového kódu **AAPS** z webovej stránky GitHub do vášho lokálneho počítača. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
@@ -141,7 +141,7 @@ Jednou z najdôležitejších vecí pri inštalácii Android Studia je **byť tr
 
 ```{admonition} Different UI
 :class: warning
-Dôležitá poznámka: Android Studio v posledných vydaniach zmenilo svoje používateľské rozhranie. Tento návod ukazuje kroky v *novom používateľskom rozhraní*. Snímky obrazovky sú z verzie „Ladybug“, takže novšie verzie môžu vyzerať trochu inak. Ak stále používate staršie používateľské rozhranie, možno budete chcieť najprv prepnúť Android Studio na nové rozhranie podľa [tohto návodu](#computerbuild-NewUI).
+Important note: Android Studio changed its UI during the last releases. Tento návod ukazuje kroky v *novom používateľskom rozhraní*. Snímky obrazovky sú z verzie „Ladybug“, takže novšie verzie môžu vyzerať trochu inak. Ak stále používate staršie používateľské rozhranie, možno budete chcieť najprv prepnúť Android Studio na nové rozhranie podľa [tohto návodu](#computerbuild-NewUI).
 ```
 
 Verzia Android Studia je veľmi dôležitá. Ak chcete vybrať správnu verziu Android Studia, pozrite si [pokyny vyššie](#Building-APK-recommended-specification-of-computer-for-building-apk-file).
@@ -156,7 +156,7 @@ Nainštalujte Android Studio klikaním na „Next“, ako je znázornené na nas
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-Ak chcete ušetriť miesto na disku, môžete zrušiť začiarknutie položky Android Virtual Device: na zostavenie **AAPS** sa nepoužíva.
+If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
@@ -314,7 +314,7 @@ Ak je automatické nastavenie úspešné, vedľa cesty sa zobrazí vaša aktuál
 
 Ak sa **git.exe** nenájde automaticky alebo ak kliknutie na „Test“ skončí chybou, môžete buď
 * ručne zadajte cestu, ktorú ste uložili [skôr](#BuildingAaps-steps-for-installing-git), alebo
-* kliknite na ikonu priečinka (1) a manuálne prejdite do adresára, kde bol [skôr](#BuildingAaps-steps-for-installing-git) nainštalovaný **git.exe**
+* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
 * Overte svoje nastavenia pomocou tlačidla **Test**!
 
   ![Git sa nenašiel](../images/Building-the-App/039_GitTestError.png)
@@ -356,7 +356,7 @@ Kliknite na „Create new...“ (2) a začnite vytvárať úložisko kľúčov.
 ```{admonition} INFORMATION!
 :class: note
 Úložisko kľúčov stačí vytvoriť iba raz.
-Ak ste už AAPS niekedy zostavili, NEVYTVÁRAJTE nové úložisko kľúčov, ale vyberte existujúce a zadajte jeho heslá!
+If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
 ```
 
 **_Poznámka:_** Úložisko kľúčov je súbor, v ktorom sú uložené informácie na podpísanie aplikácie. Je zašifrované a informácie sú chránené heslami.
