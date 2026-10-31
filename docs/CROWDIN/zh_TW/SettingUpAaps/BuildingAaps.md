@@ -12,7 +12,7 @@
 
 ### 使用瀏覽器建置（建議）
 
-You can build the app with your smartphone using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
+您可以使用智慧型手機透過 GitHub Actions 建置 App。使用 Android 手機時，[AAPS Builder](#aaps-builder) 設定頁面會逐步引導您完成設定，且每次建置都由您自行啟動。使用電腦或 iPhone 時，也可以透過 fork 建置 App，並將 App 儲存至 Google 雲端硬碟。
 
 **[請按照這些指示進行操作。](./BrowserBuild.md)**
 
@@ -35,16 +35,16 @@ You can build the app with your smartphone using GitHub Actions. From an Android
 ----
 
 (building-aaps-troubleshooting)=
-## If the build fails
+## 建置失敗時
 
-Each build method has its own troubleshooting section:
+每種建置方式都有各自的疑難排解章節：
 
-* **AAPS Builder**: [AAPS Builder troubleshooting](#aaps-builder-troubleshooting)
-* **Browser build** from a computer or an iPhone: [Browser build troubleshooting](#aaps-ci-troubleshooting)
-* **Android Studio**: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+* **AAPS Builder**：[AAPS Builder 疑難排解](#aaps-builder-troubleshooting)
+* **瀏覽器建置**（使用電腦或 iPhone）：[瀏覽器建置疑難排解](#aaps-ci-troubleshooting)
+* **Android Studio**：[Android Studio 疑難排解](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Lost your keystore or its password? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+遺失金鑰庫或其密碼了嗎？請參閱[使用新金鑰庫重新安裝 AAPS](#reinstall-aaps)。
 
-If the app is built but does not install on your phone, see [Transferring and installing AAPS](TransferringAndInstallingAaps.md).
+如果 App 已建置完成，但無法安裝到手機上，請參閱[傳輸及安裝 AAPS](TransferringAndInstallingAaps.md)。
 
-If your problem is not listed, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+如果清單中沒有列出您的問題，請參閱[如何取得協助](../GettingHelp/WhereCanIGetHelp.md)。
