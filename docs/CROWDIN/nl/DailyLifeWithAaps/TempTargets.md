@@ -191,11 +191,11 @@ Met **Tijdelijk streefdoel Hypo** kan **AAPS** een lage bloedglucose bij de gebr
 
 Soms stijgt de **BG** van de gebruiker snel na het eten van koolhydraten tegen een hypo. **AAPS** corrigeert dan de snel stijgende **BG** door **SMB's** te geven.
 
-Sommige gebruikers willen geen **SMB's** krijgen tijdens een **Tijdelijk streefdoel Hypo**. Dit doe je door *'Gebruik SMB met een hoog tijdelijk streefdoel'* uit te zetten in **Instellingen** → **OpenAPS SMB** (zie verder hieronder):
+Sommige gebruikers willen geen **SMB's** krijgen tijdens een **Tijdelijk streefdoel Hypo**. Dit doe je door *'SMB toestaan bij hoog tijdelijk streefdoel'* uit te zetten in **Instellingen** → **OpenAPS SMB** (zie verder hieronder):
 
 - In (Gevorderd, doel 9): de gebruiker kan *“Hoog tijdelijk streefdoel verhoogt gevoeligheid”* aanzetten voor **tijdelijke streefdoelen** van 100 mg/dl (5,6 mmol/l) of hoger in OpenAPS SMB. **AAPS** is dan gevoeliger.
 
-- In (Gevorderd, doel 9): de gebruiker kan *“Gebruik SMB met een hoog tijdelijk streefdoel”* uitzetten. Dan geeft **AAPS** geen SMB's zolang een hoog tijdelijk streefdoel actief is, ook als **AAPS** COB > 0 heeft, “Gebruik SMB met een laag tijdelijk streefdoel” of “Activeer SMB altijd” aan staat en OpenAPS SMB actief is.
+- In (Gevorderd, doel 9): de gebruiker kan *“SMB toestaan bij hoog tijdelijk streefdoel”* uitzetten. Dan geeft **AAPS** geen SMB's zolang een hoog tijdelijk streefdoel actief is, ook als **AAPS** COB > 0 heeft, “SMB toestaan bij laag tijdelijk streefdoel” of “SMB altijd toestaan” aan staat en OpenAPS SMB actief is.
 
 Let op: als je het **venster Koolhydraten** opent terwijl je bloedglucose lager is dan 72 mg/dl of 4 mmol/l, kiest **AAPS** de schakelaar **Start Hypo TT** automatisch.
 
@@ -213,7 +213,7 @@ Sommige gebruikers zetten ook liever een **Profiel wissel** aan (een profielverl
 
 Gevorderd, doel 9: gebruikers kunnen *'Hoog tijdelijk streefdoel verhoogt gevoeligheid'* aanzetten voor **tijdelijke streefdoelen** van 100 mg/dl (5,6 mmol/l) of hoger in OpenAPS **SMB**. Een streefdoel van 99 mg/dl (5,5 mmol/l) is een normaal streefdoel, niet hoog en niet laag. Dan is **AAPS** gevoeliger.
 
-Als *'Gebruik SMB met een hoog tijdelijk streefdoel'* uit staat, geeft **AAPS** bovendien geen **SMB's**, ook niet als COB > 0 is, *'Gebruik SMB met een laag tijdelijk streefdoel'* of *'Activeer SMB altijd'* aan staat en OpenAPS **SMB** actief is.
+Als *'SMB toestaan bij hoog tijdelijk streefdoel'* uit staat, geeft **AAPS** bovendien geen **SMB's**, ook niet als COB > 0 is, *'SMB toestaan bij laag tijdelijk streefdoel'* of *'SMB altijd toestaan'* aan staat en OpenAPS **SMB** actief is.
 
 (TempTargets-eating-soon-temp-target)=
 
@@ -229,8 +229,8 @@ Gevorderd, [doel 9](#objectives-objective9): als je OpenAPS SMB gebruikt en *'La
 
 ## Hoe zet ik SMB uit tijdens een tijdelijk streefdoel?
 
-Open hiervoor **Instellingen** → **OpenAPS SMB** en zet *'Gebruik SMB met een hoog tijdelijk streefdoel'* uit.
+Open hiervoor **Instellingen** → **OpenAPS SMB** en zet *'SMB toestaan bij hoog tijdelijk streefdoel'* uit.
 
-![Instelling Gebruik SMB met een hoog tijdelijk streefdoel](../images/TempTargetSMB.png)
+![Instelling SMB toestaan bij hoog tijdelijk streefdoel](../images/TempTargetSMB.png)
 
-Zo geeft **AAPS** geen **SMB's**, ook niet als COB > 0 is, *'Gebruik SMB met een laag tijdelijk streefdoel'* of *'Activeer SMB altijd'* aan staat en OpenAPS SMB actief is.
+Zo geeft **AAPS** geen **SMB's**, ook niet als COB > 0 is, *'SMB toestaan bij laag tijdelijk streefdoel'* of *'SMB altijd toestaan'* aan staat en OpenAPS SMB actief is.
