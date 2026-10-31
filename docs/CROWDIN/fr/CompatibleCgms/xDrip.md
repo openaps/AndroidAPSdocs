@@ -24,7 +24,7 @@ Appuyez sur `Extra Options`(8)
 
     {admonition} Avertissement de sécurité
     :class: warning
-    Vous devez désactiver « Upload treatments » dans xDrip. Sinon, les traitements peuvent être comptés deux fois dans AAPS, ce qui donne des GA et des IA faux.
+    Vous devez désactiver « Upload treatments » dans xDrip. Sinon, les traitements peuvent être comptés deux fois dans AAPS, ce qui donne des GA et des IA faux.
 
 Désactivez `Upload treatments`(9) et assurez-vous de **NE PAS** utiliser `Back-fill data` (11).
 
@@ -46,7 +46,7 @@ Activez Compatible Broadcast (6).
 
 Si vous avez aussi activé `Accept treatments` dans xDrip et `Activer les diffusions vers xDrip+` dans le plugin xDrip d'AAPS, alors xDrip recevra d'AAPS les informations sur l'insuline, les glucides et le débit basal.
 
-Si vous activez `Accept Calibrations`, xDrip utilisera les étalonnages d'AAPS. Soyez prudent si vous utilisez cette fonction avec des capteurs Dexcom : lisez d'abord [ceci](https://navid200.github.io/xDrip/docs/Calibrate-G6.html).
+Si vous activez `Accept Calibrations`, xDrip utilisera les étalonnages d'AAPS. Soyez prudent si vous utilisez cette fonction avec des capteurs Dexcom : lisez d'abord [ceci](https://navid200.github.io/xDrip/docs/Calibrate-G6.html).
 
 Pensez à désactiver Import Sounds pour éviter que xDrip fasse sonner une sonnerie chaque fois qu'AAPS envoie un changement de débit basal ou de profil.
 
@@ -57,7 +57,7 @@ Pensez à désactiver Import Sounds pour éviter que xDrip fasse sonner une sonn
 #### Identifier le récepteur
 
 - Si vous avez des problèmes avec la diffusion locale (AAPS ne reçoit pas les valeurs de glycémie de xDrip), allez dans → Menu hamburger (1) Settings (2) → Inter-app settings (3) → Identify receiver (7) et saisissez `info.nightscout.androidaps` pour la version AAPS (si vous utilisez la version PumpControl, saisissez plutôt `info.nightscout.aapspumpcontrol` !!).
-- Attention : la correction automatique a parfois tendance à changer le i en majuscule. Vous **devez utiliser uniquement des lettres minuscules** en tapant `info.nightscout.androidaps` (ou `info.nightscout.aapspumpcontrol` pour PumpControl). Un I majuscule empêcherait l'application de recevoir les valeurs de glycémie de xDrip.
+- Attention : la correction automatique a parfois tendance à changer le i en majuscule. Vous **devez utiliser uniquement des lettres minuscules** en tapant `info.nightscout.androidaps` (ou `info.nightscout.aapspumpcontrol` pour PumpControl). Un I majuscule empêcherait l'application de recevoir les valeurs de glycémie de xDrip.
     
     ![xDrip Paramètres inter-applications de base Identify receiver](../images/xDrip_InterApp_NS.png)
 
@@ -68,26 +68,26 @@ Pensez à désactiver Import Sounds pour éviter que xDrip fasse sonner une sonn
 
 ## Capteurs Dexcom
 
-Tout ce qui concerne le capteur et le transmetteur Dexcom eux-mêmes (démarrage, arrêt, remplacement, étalonnage, dépannage) est décrit et tenu à jour dans la [documentation Dexcom de xDrip](https://navid200.github.io/xDrip/docs/Dexcom_page.html). Suivez ces instructions pour le capteur ; les paramètres qui connectent xDrip à **AAPS** (décrits plus haut sur cette page) sont la seule partie propre à AAPS.
+Tout ce qui concerne le capteur et le transmetteur Dexcom eux-mêmes (démarrage, arrêt, remplacement, étalonnage, dépannage) est décrit et tenu à jour dans la [documentation Dexcom de xDrip](https://navid200.github.io/xDrip/docs/Dexcom_page.html). Suivez ces instructions pour le capteur ; les paramètres qui connectent xDrip à **AAPS** (décrits plus haut sur cette page) sont la seule partie propre à AAPS.
 
 ### Dexcom G6 et ONE
 
 - Configurez xDrip en suivant les [paramètres recommandés](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html).
 - Les transmetteurs Dexcom G6 et ONE peuvent être connectés en même temps au récepteur Dexcom (ou à la pompe t:slim) et à une application sur votre téléphone.
-- Si vous utilisez xDrip comme récepteur, désinstallez d'abord l'application Dexcom. **Vous ne pouvez pas connecter xDrip et l'application Dexcom au transmetteur en même temps !**
+- Si vous utilisez xDrip comme récepteur, désinstallez d'abord l'application Dexcom. **Vous ne pouvez pas connecter xDrip et l'application Dexcom au transmetteur en même temps !**
 - Si vous avez besoin de Clarity et voulez profiter des fonctions de xDrip, utilisez l'application [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) avec la diffusion locale vers xDrip, ou utilisez xDrip en application compagnon qui reçoit les notifications de l'application Dexcom officielle (avec un retard possible des valeurs de glycémie).
 
 #### Redémarrages du capteur
 
-- Avec les transmetteurs actuels, xDrip utilise toujours l'[algorithme natif](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) du transmetteur ; il n'y a aucune raison de le désactiver.
+- Avec les transmetteurs actuels, xDrip utilise toujours l'[algorithme natif](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) du transmetteur ; il n'y a aucune raison de le désactiver.
 - Les [redémarrages préventifs](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) fonctionnent seulement avec les anciens transmetteurs (firmware 1.6.5.25 ou plus ancien). Sur ceux-ci, ils sont nécessaires pour éviter que le capteur s'arrête après 10 jours. Les transmetteurs récents (Firefly) les ignorent.
-- Pour redémarrer un capteur avec un transmetteur Firefly, il faut [retirer le transmetteur](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), et les valeurs peuvent être très fausses après le redémarrage, ce qui est dangereux en boucle : lisez entièrement [Restart a sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) (redémarrer un capteur) et [étalonnez avec soin](https://navid200.github.io/xDrip/docs/Calibrate-after-G6Restart.html).
+- Pour redémarrer un capteur avec un transmetteur Firefly, il faut [retirer le transmetteur](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), et les valeurs peuvent être très fausses après le redémarrage, ce qui est dangereux en boucle : lisez entièrement [Restart a sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) (redémarrer un capteur) et [étalonnez avec soin](https://navid200.github.io/xDrip/docs/Calibrate-after-G6Restart.html).
 
 (xdrip-connect-g6-transmitter-for-the-first-time)=
 
 #### Démarrer, arrêter et remplacer les capteurs
 
-Suivez les instructions :
+Suivez les instructions :
 
 - [Démarrer un transmetteur G6 ou ONE](https://navid200.github.io/xDrip/docs/Starting-G6.html)
 - [Arrêter et démarrer un capteur G6 ou ONE](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html)
@@ -115,7 +115,7 @@ Suivez les instructions :
 - [Dépannage de la connexion G6/ONE](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html)
 - [Dépannage G7/ONE+/Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7_Troubleshooting.html)
 - [Problème au démarrage d'un nouveau capteur](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html)
-- Liste complète : voir **Troubleshooting** sur la [page Dexcom de xDrip](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
+- Liste complète : voir **Troubleshooting** sur la [page Dexcom de xDrip](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
 ## Libre 1
 
@@ -125,7 +125,7 @@ Suivez les instructions :
 
 - Dans Bluetooth Settings, cochez les cases exactement comme sur les captures d'écran ci-dessous (5)
     
-    - Désactivez les watchdogs (chiens de garde) : ils réinitialisent le Bluetooth du téléphone et coupent la connexion avec votre pompe.
+    - Désactivez les watchdogs (chiens de garde) : ils réinitialisent le Bluetooth du téléphone et coupent la connexion avec votre pompe.
     
     ![Paramètres Bluetooth Libre xDrip 1](../images/xDrip_Libre_BTSettings1.png)
 
@@ -150,7 +150,7 @@ Suivez les instructions :
 
 ### Connecter le transmetteur Libre & démarrer le capteur
 
-- Si votre capteur en a besoin (Libre 2 UE et Libre 1 US), installez la dernière version de l'algorithme « out of process ».
+- Si votre capteur en a besoin (Libre 2 UE et Libre 1 US), installez la dernière version de l'algorithme « out of process ».
 
 - Votre capteur doit déjà être démarré avec l'application du fabricant ou le lecteur (xDrip ne peut pas démarrer ni arrêter les capteurs Libre).
 
@@ -172,9 +172,9 @@ Suivez les instructions :
     
         {admonition} Avertissement de sécurité
         :class: warning
-        N'utilisez pas les données du capteur avant la fin de la période de préchauffage d'une heure : les valeurs peuvent être extrêmement élevées et entraîner de mauvaises décisions dans AAPS.
+        N'utilisez pas les données du capteur avant la fin de la période de préchauffage d'une heure : les valeurs peuvent être extrêmement élevées et entraîner de mauvaises décisions dans AAPS.
     
-    → Menu hamburger (1) → Start sensor (2) → Start sensor (3) → Indiquez l'heure exacte à laquelle vous l'avez démarré avec le lecteur ou l'application du fabricant. Si vous ne l'avez pas démarré aujourd'hui, répondez « Not Today » (4).
+    → Menu hamburger (1) → Start sensor (2) → Start sensor (3) → Indiquez l'heure exacte à laquelle vous l'avez démarré avec le lecteur ou l'application du fabricant. Si vous ne l'avez pas démarré aujourd'hui, répondez « Not Today » (4).
 
 ![xDrip Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
 
