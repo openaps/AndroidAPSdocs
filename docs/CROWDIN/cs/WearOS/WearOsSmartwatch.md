@@ -1,341 +1,341 @@
-# Set up AAPS on your Wear OS watch
+# Nastavení AAPS na hodinkách s Wear OS
 
-The instructions below apply to the **AAPS Wear** apk that you need to build. If you haven’t built it yet, see the linked guide [here](../WearOS/BuildingAapsWearOS.md). When building, make sure to use the same keystore file that you used for the phone **AAPS** apk.
+Níže uvedený návod platí pro apk **AAPS Wear**, které si musíte sestavit. Pokud jste ho ještě nesestavili, podívejte se na návod [zde](../WearOS/BuildingAapsWearOS.md). Při sestavení použijte stejný soubor úložiště klíčů, jaký jste použili pro apk **AAPS** do telefonu.
 
-You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk. Each **Wear** app will communicate with it's matching phone app. For example: the **AAPSClient Wear** app can be used to display **AAPSClient** data and not **AAPS** data. When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles carry a small header in that flavor's accent colour so you can tell them apart while swiping.
+Některé informace můžete použít i pro apk **Wear** pro **AAPSClient** a **PumpControl**. Každá aplikace **Wear** komunikuje s odpovídající aplikací v telefonu. Například: aplikace **AAPSClient Wear** slouží k zobrazení dat z **AAPSClient**, ne dat z **AAPS**. Když je vedle sebe nainstalováno několik variant klienta (**AAPSClient**, **AAPSClient2**, **AAPSClient3**), mají dlaždice každé z nich malé záhlaví v barvě dané varianty, takže je při přejíždění snadno rozlišíte.
 
-## Wear OS Versions and compatibility
+## Verze Wear OS a kompatibilita
 
 (wearos-watchface-changes)=
 
-### Wear OS watch face changes (impact on AAPS watchfaces)
+### Změny ciferníků ve Wear OS (dopad na ciferníky AAPS)
 
 ```{admonition} Why newer Wear OS watches break AAPS watchfaces
 :class: warning
 
-In June 2025 Google [announced changes](https://android-developers.googleblog.com/2025/06/upcoming-changes-to-wear-os-watch-faces.html) that phase out the legacy watch face engine (the AndroidX / Wearable Support Library, or "WSL", engine) in favour of the newer declarative **Watch Face Format**. The **AAPS** custom watchfaces are built on the legacy engine, so the newer the Wear OS version, the more likely an AAPS watchface is to misbehave or stop working.
+V červnu 2025 Google [oznámil změny](https://android-developers.googleblog.com/2025/06/upcoming-changes-to-wear-os-watch-faces.html), které postupně ukončují starý engine ciferníků (AndroidX / Wearable Support Library, neboli „WSL“) a nahrazují ho novějším deklarativním formátem **Watch Face Format**. Vlastní ciferníky **AAPS** jsou postavené na starém enginu, takže čím novější verze Wear OS, tím je pravděpodobnější, že ciferník AAPS bude fungovat špatně nebo přestane fungovat úplně.
 
-This affects the **watchfaces** specifically — AAPS **complications**, tiles and remote-control functions are not impacted. It is also why **a firmware/system update on a Wear OS watch can break AAPS watchfaces**, and a watch cannot be rolled back to an older Wear OS version afterwards. If your AAPS watchface currently works, **disable automatic watch updates**.
+Týká se to jen **ciferníků** – **komplikace** AAPS, dlaždice a funkce vzdáleného ovládání to neovlivňuje. Proto také **aktualizace firmwaru/systému hodinek s Wear OS může ciferníky AAPS rozbít** a hodinky pak nelze vrátit na starší verzi Wear OS. Pokud vám ciferník AAPS teď funguje, **vypněte automatické aktualizace hodinek**.
 ```
 
-The table below summarises how Google's change affects the AAPS (legacy-engine) watchfaces by Wear OS version:
+Tabulka níže shrnuje, jak změna od Googlu ovlivňuje ciferníky AAPS (se starým enginem) podle verze Wear OS:
 
-| Wear OS version         | Base Android | API level | Impact on AAPS (legacy) watchfaces                                                                                                                                                          |
-| ----------------------- | ------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Wear OS 6               | Android 16   | 36        | **Legacy watchfaces no longer available** — AAPS installs a [Watch Face Format watchface](#wearos-aaps-v4-watchface) instead: your custom watchface, or the AAPS V4 complications watchface |
-| Wear OS 5               | Android 14   | 34        | **Severe** — active (interactive) mode often fails, complications freeze, animations stop                                                                                                   |
-| Wear OS 4               | Android 13   | 33        | **Moderate** — throttling, missed updates, partial failures                                                                                                                                 |
-| Wear OS 3.0 / 3.2 / 3.5 | Android 11   | 30        | **Low** — legacy engine still supported                                                                                                                                                     |
+| Verze Wear OS           | Základní Android | Úroveň API | Dopad na ciferníky AAPS (starý engine)                                                                                                                                                             |
+| ----------------------- | ---------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Wear OS 6               | Android 16       | 36         | **Staré ciferníky už nejsou k dispozici** – AAPS místo nich nainstaluje [ciferník ve formátu Watch Face Format](#wearos-aaps-v4-watchface): váš vlastní ciferník, nebo ciferník komplikací AAPS V4 |
+| Wear OS 5               | Android 14       | 34         | **Závažný** – aktivní (interaktivní) režim často selhává, komplikace zamrzají, animace se zastaví                                                                                                  |
+| Wear OS 4               | Android 13       | 33         | **Střední** – omezování, vynechané aktualizace, částečná selhání                                                                                                                                   |
+| Wear OS 3.0 / 3.2 / 3.5 | Android 11       | 30         | **Nízký** – starý engine je stále podporován                                                                                                                                                       |
 
-If your watch runs a version where AAPS watchfaces are unreliable, you can instead display AAPS data through **complications** on a compatible watchface, or use [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication, fed by the [External Companion Apps](#external-companion-apps) plugin of **AAPS**. On **Wear OS 6 and newer**, AAPS installs a replacement watchface built in the new format — see below.
+Pokud vaše hodinky mají verzi, na které ciferníky AAPS nefungují spolehlivě, můžete data AAPS místo toho zobrazit pomocí **komplikací** na kompatibilním ciferníku, nebo použít [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) s komplikací, který dostává data z pluginu [Externí aplikace](#external-companion-apps) v **AAPS**. Na **Wear OS 6 a novějších** AAPS nainstaluje náhradní ciferník v novém formátu – viz níže.
 
 (wearos-aaps-v4-watchface)=
 
-### Wear OS 6 and newer — the watchface AAPS installs
+### Wear OS 6 a novější – ciferník, který AAPS nainstaluje
 
-Watches running **Wear OS 6 or newer** cannot run the classic AAPS watchfaces as watchfaces. For these watches the AAPS watch app brings two watchfaces built in Google's new **Watch Face Format**. Wear OS lets an app install only **one** watchface, so you choose which of the two is on the watch:
+Hodinky s **Wear OS 6 nebo novějším** nemohou klasické ciferníky AAPS používat jako ciferníky. Pro tyto hodinky přináší aplikace AAPS pro hodinky dva ciferníky v novém formátu Googlu **Watch Face Format**. Wear OS dovolí aplikaci nainstalovat jen **jeden** ciferník, proto si vyberete, který z obou bude na hodinkách:
 
-- **Custom watchface** (default): shows the custom watchface you loaded from the phone with **Load Watchface** (see [Changing to an AAPS Watchface](#WearOS_changing-to-AAPS-watchface)). The watch draws your design as a picture, so every existing custom watchface works. The complication slots a custom watchface may define are **not available** in this picture, because Wear OS only delivers complication data to a real watchface. Long-press the face to reach its one setting: whether the always-on display shows a plain clock or your own design, dimmed.
-- **Complications watchface** (the **AAPS V4** watchface): its **seven complication slots** come **preconfigured with AAPS data**: BG value, IOB, COB, the [BG Graph complication](#Watchfaces-complications), basal rate / temp target, and the **Running Mode** icon in the top-left slot (tap it to change the loop mode from the watch). Tap the time at the top to open the watch's alarm app. You can change what each slot shows in the watch face editor.
+- **Vlastní ciferník** (výchozí): zobrazuje vlastní ciferník, který jste z telefonu nahráli tlačítkem **Nahrát ciferník** (viz [Přepnutí na ciferník AAPS](#WearOS_changing-to-AAPS-watchface)). Hodinky vykreslí váš návrh jako obrázek, takže funguje každý existující vlastní ciferník. Pozice komplikací, které vlastní ciferník může definovat, v tomto obrázku **nejsou k dispozici**, protože Wear OS posílá data komplikací jen skutečnému ciferníku. Dlouhým stisknutím ciferníku se dostanete k jeho jedinému nastavení: zda trvale zapnutý displej ukazuje obyčejné hodiny, nebo váš vlastní ztlumený návrh.
+- **Ciferník komplikací** (ciferník **AAPS V4**): jeho **sedm pozic pro komplikace** je **předem nastaveno s daty AAPS**: hodnota glykémie, IOB, COB, [komplikace Graf glykémie](#Watchfaces-complications), bazální dávka / dočasný cíl a ikona **Režim smyčky** v pozici vlevo nahoře (klepnutím na ni změníte režim smyčky z hodinek). Klepnutím na čas nahoře otevřete aplikaci budíku v hodinkách. Co jednotlivé pozice zobrazují, můžete změnit v editoru ciferníku.
 
-You choose on the phone: open the **Wear** plugin and, under **Watchface installed on watch**, select one of the two. This card is only shown while a Wear OS 6 or newer watch is connected. **AAPS** asks you to confirm, because the watch replaces its face immediately. Switching away from the **Complications watchface** also resets the complications you changed in the watch face editor back to the defaults, and the confirmation says so. While the **Complications watchface** is selected, the custom watchface buttons are hidden and a preview of the face is shown instead. If you load a custom watchface while the **Complications watchface** is selected, **AAPS** reminds you to switch to **Custom watchface** to see it on the watch.
+Výběr provedete v telefonu: otevřete plugin **Wear** a v části **Ciferník nainstalován na hodinkách** vyberte jeden z obou. Tato karta se zobrazuje jen tehdy, když jsou připojené hodinky s Wear OS 6 nebo novějším. **AAPS** vás požádá o potvrzení, protože hodinky ciferník okamžitě vymění. Přepnutím z **Ciferníku komplikací** na jiný ciferník se také komplikace, které jste změnili v editoru ciferníku, vrátí na výchozí hodnoty; potvrzení vás na to upozorní. Když je vybraný **Ciferník komplikací**, tlačítka pro vlastní ciferník jsou skrytá a místo nich se zobrazí náhled ciferníku. Pokud nahrajete vlastní ciferník, když je vybraný **Ciferník komplikací**, **AAPS** vám připomene, že ho na hodinkách uvidíte, až přepnete na **Vlastní ciferník**.
 
-- The selected watchface is **installed and activated automatically** the first time the AAPS watch app runs on such a watch, and it is **updated automatically** together with the watch app.
-- If you removed the watchface, an **Install watchface** entry appears at the bottom of the watch's AAPS **main menu** — tap it to reinstall.
+- Vybraný ciferník se **nainstaluje a aktivuje automaticky** při prvním spuštění aplikace AAPS na takových hodinkách a **aktualizuje se automaticky** spolu s aplikací pro hodinky.
+- Pokud jste ciferník odstranili, objeví se dole v **hlavní nabídce** aplikace AAPS na hodinkách položka **Nainstalovat ciferník** – klepnutím na ni ho znovu nainstalujete.
 
-While a watch running Wear OS 5 or older is connected, the **Watchface installed on watch** card is not shown at all (the mechanism it relies on requires Wear OS 6); the classic watchfaces run there as before.
+Když jsou připojené hodinky s Wear OS 5 nebo starším, karta **Ciferník nainstalován na hodinkách** se vůbec nezobrazuje (mechanismus, na kterém závisí, vyžaduje Wear OS 6); klasické ciferníky tam fungují jako dřív.
 
 (wearos-complications-watchface-setup)=
 
-### Complications watchface — recommended setup
+### Ciferník komplikací – doporučené nastavení
 
-The **Complications watchface** has seven complication slots. Long-press the watchface, tap **Customize**, and pick a data source for each slot. The slots are numbered as in the watch face editor: **1** left, **2** centre, **3** right, **4** the graph, **5** bottom, **6** top-left and **7** top-right.
+**Ciferník komplikací** má sedm pozic pro komplikace. Dlouze stiskněte ciferník, klepněte na **Přizpůsobit** a pro každou pozici vyberte zdroj dat. Pozice jsou očíslované stejně jako v editoru ciferníku: **1** vlevo, **2** uprostřed, **3** vpravo, **4** graf, **5** dole, **6** vlevo nahoře a **7** vpravo nahoře.
 
-| Default setup                                                                                   | Alternative setup                                                                                       |
-| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| ![Complications watchface, default setup](../images/wearos/complications_watchface_default.png) | ![Complications watchface, alternative setup](../images/wearos/complications_watchface_alternative.png) |
+| Výchozí nastavení                                                                               | Alternativní nastavení                                                                                   |
+| ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| ![Ciferník komplikací, výchozí nastavení](../images/wearos/complications_watchface_default.png) | ![Ciferník komplikací, alternativní nastavení](../images/wearos/complications_watchface_alternative.png) |
 
-| Slot | Pozice    | Default                                                             | Alternative                           |
-| ---- | --------- | ------------------------------------------------------------------- | ------------------------------------- |
-| 1    | Left      | IoB Icon                                                            | CoB & IoB                             |
-| 2    | Centre    | Blood Glucose                                                       | Blood Glucose                         |
-| 3    | Right     | CoB Icon                                                            | BR & Target                           |
-| 4    | Graph     | BG Graph                                                            | BG Graph                              |
-| 5    | Bottom    | BR & Target                                                         | Uploader/Phone Battery                |
-| 6    | Top-left  | Režim smyčky                                                        | Režim smyčky                          |
-| 7    | Top-right | Uploader/Phone Battery, or an app shortcut to **AAPS Snooze Alert** | App shortcut to **AAPS Snooze Alert** |
+| Pozice | Pozice        | Výchozí                                                                       | Alternativa                                  |
+| ------ | ------------- | ----------------------------------------------------------------------------- | -------------------------------------------- |
+| 1      | Vlevo         | Ikona IOB                                                                     | COB & IOB                                    |
+| 2      | Uprostřed     | Glykémie                                                                      | Glykémie                                     |
+| 3      | Vpravo        | Ikona COB                                                                     | Bazál a cíl                                  |
+| 4      | Graf          | Graf glykémie                                                                 | Graf glykémie                                |
+| 5      | Dole          | Bazál a cíl                                                                   | Baterie telefonu/uploaderu                   |
+| 6      | Vlevo nahoře  | Režim smyčky                                                                  | Režim smyčky                                 |
+| 7      | Vpravo nahoře | Baterie telefonu/uploaderu, nebo zkratka aplikace **AAPS Potvrzení výstrahy** | Zkratka aplikace **AAPS Potvrzení výstrahy** |
 
-The **AAPS Snooze Alert** shortcut is picked from the watch's own **App shortcut** complications. Tapping it snoozes the alarm that is sounding on the phone.
+Zkratka **AAPS Potvrzení výstrahy** se vybírá z vestavěných komplikací hodinek typu **Zkratka aplikace**. Klepnutím na ni odložíte alarm, který právě zní v telefonu.
 
 ```{tip}
-Turn on **Always-on display** on the watch (**Settings** > **Display**). The watchface then keeps showing your glucose when the wrist is down, instead of a blank or a plain clock.
+Na hodinkách zapněte **Vždy zapnutý displej** (**Nastavení** > **Displej**). Ciferník pak ukazuje vaši glykémii i se svěšenou rukou, místo prázdné obrazovky nebo obyčejných hodin.
 ```
 
 ```{admonition} No complication data while the watch is locked
 :class: note
-If a **Lock type** is set under **Settings** > **Security and privacy**, the watch hides complication data while it is locked, and the watchface shows empty slots until you unlock it. To keep the data visible, turn off **Hide information** in the same menu.
+Pokud je v **Nastavení** > **Zabezpečení a ochrana soukromí** nastaven **Typ zámku**, hodinky při zamčení skryjí data komplikací a ciferník ukazuje prázdné pozice, dokud hodinky neodemknete. Aby data zůstala viditelná, vypněte ve stejné nabídce **Skrýt informace**.
 ```
 
 ### Wear OS 3
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (described below) or ADB.  
-No limitation in **AAPS Wear** operations.
+Apk **AAPS Wear** nainstalujte pomocí [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (popsáno níže) nebo ADB.  
+Funkce **AAPS Wear** nejsou nijak omezené.
 
 (BuildingAapsWearOs-WearOS5)=
 
-### Wear OS 4 and Wear OS 5
+### Wear OS 4 a Wear OS 5
 
-Example: Galaxy Watch 4, 5, 6, 7 and Ultra or Pixel Watch that have **not** been updated to Wear OS 6 yet. Check the version under **Settings** > **About watch** > **Software**.
+Příklad: Galaxy Watch 4, 5, 6, 7 a Ultra nebo Pixel Watch, které **ještě nebyly** aktualizovány na Wear OS 6. Verzi zjistíte v **Nastavení** > **O hodinkách** > **Software**.
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) (for Wear OS 5 follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk)). All **AAPS Wear** functions work, but the classic **AAPS** watchfaces are limited as described in the table above: throttled on Wear OS 4, often failing on Wear OS 5.
+Apk **AAPS Wear** nainstalujte pomocí [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) (pro Wear OS 5 postupujte podle [tohoto videa](https://www.youtube.com/watch?v=yef_qGvcCnk)). Všechny funkce **AAPS Wear** fungují, ale klasické ciferníky **AAPS** jsou omezené, jak popisuje tabulka výše: na Wear OS 4 jsou zpomalené, na Wear OS 5 často selhávají.
 
 ```{admonition} Wear OS 5
 :class: warning
-On Wear OS 5 the AAPS watchface has to be selected with Wear Installer 2 right after installing the Wear app: the installer offers the **AAPS (Custom)** watchface at the end of the installation. If you accidentally switch to another watchface, repeat the installation. Changing the watchface settings (Dark, Watchdivider, etc.) may not be possible.
+Na Wear OS 5 se musí ciferník AAPS vybrat pomocí Wear Installer 2 hned po instalaci aplikace Wear: instalátor na konci instalace nabídne ciferník **AAPS (vlastní)**. Pokud omylem přepnete na jiný ciferník, zopakujte instalaci. Změna nastavení ciferníku (Tmavý, oddělovač atd.) nemusí být možná.
 
-If the classic watchface currently works for you, **disable automatic watch updates**: the next firmware update is likely to break it. If you update to Wear OS 6 anyway, read the section above: **AAPS** then installs its own watchface in the new format.
+Pokud vám klasický ciferník teď funguje, **vypněte automatické aktualizace hodinek**: příští aktualizace firmwaru ho pravděpodobně rozbije. Pokud přesto aktualizujete na Wear OS 6, přečtěte si část výše: **AAPS** pak nainstaluje vlastní ciferník v novém formátu.
 ```
 
-If the watchface is too unreliable, consider [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication instead. It needs the [External Companion Apps](#external-companion-apps) plugin enabled in **AAPS**.
+Pokud je ciferník příliš nespolehlivý, zvažte místo něj [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) s komplikací. Vyžaduje v **AAPS** povolený plugin [Externí aplikace](#external-companion-apps).
 
-### Wear OS 6 and newer
+### Wear OS 6 a novější
 
-Example: Galaxy Watch 4 and newer with One UI 8 Watch, Pixel Watch after the 2025 update. Most Galaxy and Pixel watches have received this update.
+Příklad: Galaxy Watch 4 a novější s One UI 8 Watch, Pixel Watch po aktualizaci z roku 2025. Většina hodinek Galaxy a Pixel tuto aktualizaci již dostala.
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). The classic watchfaces are not available; **AAPS** installs the watchface selected on the phone automatically, see [the watchface AAPS installs](#wearos-aaps-v4-watchface). No limitation in **AAPS Wear** operations.
+Apk **AAPS Wear** nainstalujte pomocí [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). Klasické ciferníky nejsou k dispozici; **AAPS** automaticky nainstaluje ciferník vybraný v telefonu, viz [ciferník, který AAPS nainstaluje](#wearos-aaps-v4-watchface). Funkce **AAPS Wear** nejsou nijak omezené.
 
-## How to set up a Samsung Galaxy 4 smartwatch with **AAPS**
+## Jak nastavit chytré hodinky Samsung Galaxy 4 s **AAPS**
 
-This section assumes you are totally new to Smartwatches, and gives you basic orientation of a popular watch, the **Galaxy Watch 4**, followed by a step-by-step guide to setup **AAPS** on the watch.
+Tato část předpokládá, že s chytrými hodinkami nemáte žádné zkušenosti. Nejprve vás seznámí se základy oblíbených hodinek **Galaxy Watch 4** a pak vás krok za krokem provede nastavením **AAPS** na hodinkách.
 
-_This guide was written for a Galaxy Watch running Wear OS 3._ On Wear OS 4 and later the watch asks for a **pairing code** when a phone or computer connects over ADB. Wear Installer 2 and the terminal procedure [below](#BuildingAapsWearOs-WearOS5-TShoot) both support it.
+_Tento návod byl napsán pro hodinky Galaxy Watch s Wear OS 3._ Na Wear OS 4 a novějších hodinky při připojení telefonu nebo počítače přes ADB požadují **párovací kód**. Wear Installer 2 i postup v terminálu [níže](#BuildingAapsWearOs-WearOS5-TShoot) to podporují.
 
-Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
+Zde jsou základní návody pro nastavení [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) a [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
 
-## Basic smartwatch familiarity
+## Základní obeznámení s chytrými hodinkami
 
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable" “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
+Po základním nastavení hodinek podle videa výše otevřete v telefonu Obchod Play a stáhněte tyto aplikace: „Galaxy Wearable“, „Samsung“ a buď „Easy Fire tools“, nebo „Wear Installer 2“.
 
-There are plenty of 3rd party YouTube videos which will help you with getting familiar with your new smartwatch, for example:
+Existuje spousta YouTube videí třetích stran, které vám pomohou seznámit se s vašimi novými chytrými hodinkami, například:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-The app “Galaxy Wearable” also has an instruction manual section in it. Open galaxy wearable on the phone, search for the watch, attempt to pair the watch with the phone. Depending on your version, this may prompt you to install a further 3rd app “galaxy watch 4 plugin” from the playstore (takes a while to download). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Go through a series of menus and tick various preferences.
+Aplikace „Galaxy Wearable“ obsahuje také část s návodem k použití. Otevřete aplikaci Galaxy wearable na telefonu, vyhledejte hodinky a pokuste se spárovat hodinky s telefonem. V závislosti na verzi vás aplikace může vyzvat k instalaci další aplikace „galaxy watch 4 plugin“ z Obchodu Play (stahování chvíli trvá). Nainstalujte aplikaci do telefonu a pak se pokuste znovu spárovat hodinky a telefon v aplikaci Galaxy wearable. Přejděte přes řadu nabídek a zaškrtněte potřebné předvolby.
 
-## Setting up a Samsung account
+## Nastavení účtu Samsung
 
-You need to make sure that the email account you use to set up the Samsung account has a date-of-birth such that the user is age 13+, as otherwise the Samsung permissions are really difficult to approve. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 363 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account.
+Musíte se ujistit, že e-mailový účet, který používáte pro nastavení účtu Samsung, má nastavené takové datum narození, že uživatel je ve věku 13+, jinak bude problém se schválením oprávnění Samsung. Pokud jste dítěti mladšímu 13 let založili účet Gmail a používáte tuto e-mailovou adresu, nemůžete účet jednoduše změnit na účet dospělého. Jedním ze způsobů, jak to obejít, je změnit datum narození tak, aby byl současný věk 12 let a 363 dní. Následující den bude účet převeden na účet pro dospělé a můžete pokračovat v nastavení účtu Samsung.
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
-## Transferring the **AAPS** Wear app onto your **AAPS** phone
+## Přenos aplikace **AAPS** Wear do telefonu s **AAPS**
 
-Loading the Wear.apk from Android Studio to your phone can be done either by:
+Soubor Wear.apk z Android Studia dostanete do telefonu buď:
 
-a)  using a USB cable to put the **AAPS** wear apk file onto the phone, and then “side-load” it to the watch. Transfer Wear.apk to the phone via USB into the downloads folder; or
+a) pomocí USB kabelu nahrajte soubor apk **AAPS** Wear do telefonu a pak ho ručně nainstalujte („side-load“) do hodinek. Přeneste Wear.apk přes USB do telefonu do složky Stažené soubory; nebo
 
-b)  cut and paste Wear.apk from Android Studio onto your Gdrive.
+b) vyjměte a vložte Wear.apk z Android Studia na svůj Disk Google.
 
 
-To side-load AAPS onto the watch You can use either: 1) Wear Installer 2 2) Easy Fire tools 3) Android Debug Bridge (ADB) Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained. If Wear Installer 2 does not work for you, try Easy Fire Tools or ADB, both described below.
+K ruční instalaci AAPS do hodinek můžete použít: 1) Wear Installer 2 2) Easy Fire tools 3) Android Debug Bridge (ADB) Doporučujeme Wear Installer 2, protože návod a postup ve videu jsou velmi jasné a dobře vysvětlené. Pokud vám Wear Installer 2 nefunguje, zkuste Easy Fire Tools nebo ADB, oba postupy jsou popsány níže.
 
-### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
+### Použití Wear Installer 2 k nahrání **AAPS** Wear z telefonu do hodinek
 
- ![Wear Installer 2 app icon](../images/wearos/wear_installer2_icon.png)
+ ![Ikona aplikace Wear Installer 2](../images/wearos/wear_installer2_icon.png)
 
-Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
+Aplikaci Wear Installer 2, kterou vyvinul [Malcolm Bryant](https://www.youtube.com/@Freepoc), si můžete stáhnout z Google Play do telefonu a použít ji k ruční instalaci (side-load) aplikace AAPS Wear do hodinek. Aplikace obsahuje praktické [video](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) „how to sideload“ (jak aplikaci nainstalovat).
 
 ```{tip}
-For Wear OS 5 watches follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk).
-See troubleshooting tips [below](#BuildingAapsWearOs-WearOS5-TShoot).
+Pro hodinky s Wear OS 5 postupujte podle [tohoto videa](https://www.youtube.com/watch?v=yef_qGvcCnk).
+Tipy pro řešení problémů najdete [níže](#BuildingAapsWearOs-WearOS5-TShoot).
 ```
 
-This provides all the necessary detail (best to open the video on a separate device so you can watch it while setting up the phone).
+Video obsahuje všechny potřebné podrobnosti (nejlépe ho pusťte na jiném zařízení, abyste ho mohli sledovat během nastavování telefonu).
 
-As mentioned in the video, once complete, switch ADB debugging off on the watch, to avoid draining the smartwatch battery.
+Jak se uvádí ve videu, po dokončení vypněte na hodinkách ladění ADB, aby se zbytečně nevybíjela baterie hodinek.
 
-Alternatively, but not for Wear OS 5, you can:
+Případně, ale ne pro Wear OS 5, můžete:
 
-### Use Easy Fire tools to side-load the **AAPS** wear on the watch
+### Ruční instalace **AAPS** Wear do hodinek pomocí Easy Fire tools
 
-1)   Download _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_ from the Play Store onto phone
+1) Stáhněte do telefonu _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_ z Obchodu Play
 
-![image](../images/wearos/easyfire01.png)
+![obrázek](../images/wearos/easyfire01.png)
 
-2)  Make yourself a developer in the watch (once set up and connected to phone):
+2) Nastavte se v hodinkách jako vývojář (jakmile skončíte s nastavením a připojíte se k telefonu):
 
-Go to **Settings** > **System** > **About** > **Versions** (the menu names vary between watch brands — on some watches it is **About watch** > **Software info** > **Software version**).
+Přejděte do **Nastavení** > **Systém** > **Informace** > **Verze** (názvy nabídek se u různých značek hodinek liší – u některých hodinek je to **O hodinkách** > **Informace o softwaru** > **Verze softwaru**).
 
-![image](../images/wearos/easyfire02.png)
+![obrázek](../images/wearos/easyfire02.png)
 
-Rapidly tap on **Build number** (or **Software version**) several times until a message tells you that you are now a developer.
+Rychle několikrát klepněte na **Číslo sestavení** (nebo **Verze softwaru**), dokud se nezobrazí zpráva, že jste nyní vývojář.
 
-![image](../images/wearos/easyfire03.png)
+![obrázek](../images/wearos/easyfire03.png)
 
-Go back to **Settings** > **System**: a new **Developer options** menu is now shown.
+Vraťte se do **Nastavení** > **Systém**: nyní se zobrazí nová nabídka **Možnosti vývojáře**.
 
-In **Developer options**, turn on **ADB debugging** and **Wireless debugging**, and confirm the prompts. Wireless debugging then shows the watch's **IP address & Port**, something like: **192.168.1.214** : 5555. You only need the IP address (here **192.168.1.214**), not the port number after the colon. Note that the IP address can change, for example every time you change to a new phone handset for AAPS.
+V **Možnostech vývojáře** zapněte **Ladění ADB** a **Bezdrátové ladění** a potvrďte dotazy. Bezdrátové ladění pak zobrazí **IP adresu a port** hodinek, například: **192.168.1.214** : 5555. Potřebujete jen IP adresu (zde **192.168.1.214**), ne číslo portu za dvojtečkou. IP adresa se může změnit, například pokaždé, když přejdete na nový telefon pro AAPS.
 
-![image](../images/wearos/easyfire04.png)
+![obrázek](../images/wearos/easyfire04.png)
 
-STEP 3)     Enter IP address _e.g._ **192.168.1.214** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address).
+KROK 3) Zadejte IP adresu, _např._ **192.168.1.214**, do aplikace Easy Fire tools v telefonu (otevřete nabídku vlevo (☰), nastavení a zadejte IP adresu).
 
-![image](../images/wearos/easyfire05.png)
+![obrázek](../images/wearos/easyfire05.png)
 
-Then click the plug socket icon on the top right. It will turn green when connected.
+Pak klepněte na ikonu zásuvky vpravo nahoře. Po připojení se zbarví zeleně.
 
-![image](../images/wearos/easyfire06.png)
-
-
-STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  aaps-wear.apk onto the smartwatch using Easy Fire tools
+![obrázek](../images/wearos/easyfire06.png)
 
 
-![image](../images/wearos/easyfire07.png)
+KROK 4) Podle návodu [zde](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) ručně nainstalujte (tj. přeneste) aaps-wear.apk do chytrých hodinek pomocí Easy Fire tools
+
+
+![obrázek](../images/wearos/easyfire07.png)
 
 
 (BuildingAapsWearOs-WearOS5-TShoot)=
 
-### Using the terminal
-Connect your smartwatch and computer to the same Wi-Fi network.
+### Použití terminálu
+Připojte chytré hodinky a počítač ke stejné síti Wi-Fi.
 
-- To install ADB download it from: https://developer.android.com/tools/releases/platform-tools
-- Open a terminal.
-- For Windows, create a new folder named `adb` under your disk `C:`. Open the `platform-tools-latest-windows.zip` file you downloaded above. Copy all files inside `platform-tools` to `C:\adb` and open this folder with a command prompt (right click and Open in Terminal). Type the command below to set the path to the folder where ADB is located: `setx PATH "%PATH%;C:\adb"`
-- For Mac instead of installing manually you can use homebrew: `brew install android-platform-tools`
+- ADB si stáhněte zde: https://developer.android.com/tools/releases/platform-tools
+- Otevřete terminál.
+- Ve Windows vytvořte na disku `C:` novou složku s názvem `adb`. Otevřete soubor `platform-tools-latest-windows.zip`, který jste stáhli výše. Zkopírujte všechny soubory ze složky `platform-tools` do `C:\adb` a otevřete tuto složku v příkazovém řádku (klikněte pravým tlačítkem a zvolte Open in Terminal / Otevřít v terminálu). Zadejte níže uvedený příkaz, kterým nastavíte cestu ke složce s ADB: `setx PATH "%PATH%;C:\adb"`
+- Na Macu můžete místo ruční instalace použít homebrew: `brew install android-platform-tools`
 
-On the watch:
-- Go to Settings → About watch → **Software Information**
-- Tap Software version 7 times until you see Developer mode enabled.
-- Go to Settings → Developer options. Enable **ADB debugging**
-- Go to Settings → Developer options → Wireless debugging → **Pair new device**
+Na hodinkách:
+- Přejděte do Nastavení → O hodinkách → **Informace o softwaru**
+- Klepněte 7krát na Verze softwaru, dokud se nezobrazí, že je zapnutý režim vývojáře.
+- Přejděte do Nastavení → Možnosti vývojáře. Zapněte **Ladění ADB**
+- Přejděte do Nastavení → Možnosti vývojáře → Bezdrátové ladění → **Spárovat nové zařízení**
 
-You will see a Wi-Fi pairing code and IP address and port appearing:
+Zobrazí se párovací kód Wi-Fi a IP adresa s portem:
 
-![Watch screen showing the Wi-Fi pairing code and IP address and port](../images/wearos/ADB03.png)
+![Obrazovka hodinek s párovacím kódem Wi-Fi, IP adresou a portem](../images/wearos/ADB03.png)
 
-- In the terminal: `adb pair ipaddress:port` E.g. `adb pair 10.10.1.125:36299`
-- You will be asked for the pairing code. Enter it.
-- You will see a response:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
-- In the terminal type: <br>`adb devices`.<br> You should see something like:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
+- V terminálu: `adb pair ipaddress:port` Např. `adb pair 10.10.1.125:36299`
+- Budete požádáni o párovací kód. Zadejte ho.
+- Uvidíte odpověď:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
+- V terminálu napište: <br>`adb devices`.<br> Měli byste vidět něco jako:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 
-- Now go to the folder on your computer where the Wear apk is and type<br> `adb install wear-full.apk` <br>with wear.apk replaced by the name of your apk file.
-- You will see:<br> `Performing Streamed Install`<br> `Success`
+- Nyní přejděte do složky v počítači, kde je apk Wear, a napište<br> `adb install wear-full.apk` <br>kde wear.apk nahraďte názvem vašeho souboru apk.
+- Uvidíte:<br> `Performing Streamed Install`<br> `Success`
 
 
 (wear-os-5-troubleshooting)=
 
-### General troubleshooting recommendations for Wear OS 5
+### Obecná doporučení pro řešení problémů s Wear OS 5
 
-- Do not use Wi-Fi Tethering. That won't work.
-- You do not need to enable adb debugging on the phone (only on the watch). Disable adb debugging on the Phone.
-- Make sure you are connecting to your local network where phone and watch can see each other (do not use your Wi-Fi guest network to connect).
-- Make sure both watch and phone are on the same network and Wi-Fi device. Especially Wi-Fi repeaters or access points may create problems.
-- Make sure to be near your main router, then restart both phone and watch.
+- Nepoužívejte sdílení připojení přes Wi-Fi (tethering). To nebude fungovat.
+- Ladění ADB nemusíte zapínat v telefonu (jen v hodinkách). Vypněte ladění ADB v telefonu.
+- Ujistěte se, že se připojujete k místní síti, ve které se telefon a hodinky navzájem vidí (nepřipojujte se k síti Wi-Fi pro hosty).
+- Ujistěte se, že hodinky i telefon jsou ve stejné síti a připojené ke stejnému zařízení Wi-Fi. Problémy mohou způsobovat hlavně opakovače Wi-Fi nebo přístupové body.
+- Buďte blízko hlavního routeru a pak restartujte telefon i hodinky.
 
-**Pairing :**
+**Párování:**
 
-- Watch: Wireless Debugging: note the IP address.
-- Wear Installer: Enter the IP on the in Wear Installer app.
-- Select Pair new, note the pairing code and port number displayed.
-- Wear Installer: enter the pairing code + space + port number.
-- Wear installer should report pairing was successful. If it does not, exit the Wear Installer, then try again.
+- Hodinky: Bezdrátové ladění: poznamenejte si IP adresu.
+- Wear Installer: zadejte IP adresu v aplikaci Wear Installer.
+- Vyberte Spárovat nové zařízení a poznamenejte si zobrazený párovací kód a číslo portu.
+- Wear Installer: zadejte párovací kód + mezeru + číslo portu.
+- Wear Installer by měl oznámit, že párování proběhlo úspěšně. Pokud ne, ukončete Wear Installer a zkuste to znovu.
 
-Once paired you should be able to install the AAPS wear apk:
+Po spárování byste měli být schopni nainstalovat apk AAPS Wear:
 
-- Exit/close, then restart Wear Installer.
-- On wireless debug, note the IP and Port number and make sure you check/enter the IP and port number in Wear Installer.
-- Note: the port number is different from the one used for pairing!
+- Ukončete/zavřete Wear Installer a znovu ho spusťte.
+- V bezdrátovém ladění si poznamenejte IP adresu a číslo portu a zkontrolujte/zadejte je ve Wear Installer.
+- Poznámka: číslo portu je jiné než to, které se použilo pro párování!
 
-## Setting up the connection between the watch and the phone from **AAPS**
+## Nastavení propojení mezi hodinkami a telefonem z **AAPS**
 
-The final step is to configure **AAPS** on the phone to interact with **Wear.apk** on the watch. To do this, enable the Wear plugin:
+Posledním krokem je nastavit **AAPS** v telefonu tak, aby spolupracoval s **Wear.apk** v hodinkách. K tomu povolte plugin Wear:
 
-* Go to the **AAPS** app on the phone
+* Otevřete aplikaci **AAPS** v telefonu
 
-* Open the **menu** (☰) in the top-left corner and go to **Configuration** > **Communication**
+* Otevřete **nabídku** (☰) v levém horním rohu a přejděte do **Konfigurace** > **Komunikace**
 
-* Tick the **Wear** box
+* Zaškrtněte políčko **Wear**
 
 ![Konfigurace > Komunikace s povoleným Wear](../images/v4/Configuration/configuration_communication_wear.png)
 
-To bolus or take other actions from the watch, also turn on **Wear control** in [Settings > Wear](#preferences-wear).
+Chcete-li z hodinek dávat bolus nebo provádět jiné akce, zapněte také **Ovládání přes Wear** v [Nastavení > Wear](#preferences-wear).
 
-To change to a different **AAPS**  watchface, press on the home screen of the watch and it will come to “customise”. Then swipe right until you get to all the **AAPS**  faces.
+Pokud chcete přepnout na jiný ciferník **AAPS**, stiskněte domovskou obrazovku hodinek a zobrazí se „Přizpůsobit“. Přejetím vpravo si postupně zobrazíte všechny ciferníky **AAPS**.
 
-If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, it will look like this:
-
-
-![Wear plugin showing the connected Galaxy Watch, and the AAPS app on the watch](../images/wearos/wear_apk_installed.png)
+Pokud byl soubor **AAPS** Wear.apk úspěšně nainstalován do chytrých hodinek, bude to vypadat takto:
 
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use **Wear.apk** & **AAPS** remotely via Wi-Fi.
+![Plugin Wear s připojenými hodinkami Galaxy Watch a aplikace AAPS na hodinkách](../images/wearos/wear_apk_installed.png)
 
-![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
+
+U některých chytrých hodinek, například Samsung Galaxy, musí být v Pokročilých funkcích Samsung Galaxy **zapnuté** „Vzdálené připojení“, abyste mohli **Wear.apk** a **AAPS** používat na dálku přes Wi-Fi.
+
+![Galaxy Wearable, Pokročilé funkce, Vzdálené připojení zapnuté](../images/wearos/galaxy_wearable_remote_connection.png)
 
 (wear-os-watch-phone-communication)=
 
-### Troubleshooting the **AAPS** watch- **AAPS** phone communication
+### Řešení problémů s komunikací mezi **AAPS** na hodinkách a **AAPS** v telefonu
 
-1.  If EasyFire tools does not connect or if you are receiving ‘authorisation failed’ > check IP address has been correctly entered.
-2.  Check that the smartwatch is connected to the internet (and not just connected to the phone via Bluetooth).
-3.  Check that the **AAPS** Phone and smartwatch are paired or linked in Samsung app.
-4.  It may also help to do a hard restart of Phone and smartwatch (meaning turning phone on and off)
-5.  Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have side-loaded the correct **AAPS** Wear apk onto the watch: the watch app of a browser build is the `aaps-wear-….apk` file, see [Building the Wear app](../WearOS/BuildingAapsWearOS.md). If the file you installed is any of the following: a) an **AAPSClient** Wear apk (while the phone runs **AAPS**); b) a `.aab` file; or c) a file with the word ‘debug’ in its name, you have not selected the correct Wear OS apk during the build.
-6.  Check that your router is not isolating the devices from one another.
+1.  Pokud se Easy Fire Tools nepřipojí nebo se zobrazí „authorisation failed“ (autorizace selhala) > zkontrolujte, zda je IP adresa zadaná správně.
+2.  Zkontrolujte, že jsou chytré hodinky připojené k internetu a ne pouze k telefonu prostřednictvím Bluetooth.
+3.  Zkontrolujte, že jsou telefon s **AAPS** a chytré hodinky spárované nebo propojené v aplikaci Samsung.
+4.  Může také pomoci tvrdý restart telefonu a chytrých hodinek (tedy telefon vypnout a znovu zapnout)
+5.  Pokud se vám podařilo stáhnout Wear.apk do telefonu, ale nedostáváte žádná data glykémie, _zkontrolujte_, zda jste do hodinek nainstalovali správný apk **AAPS** Wear: aplikace pro hodinky ze sestavení v prohlížeči je soubor `aaps-wear-….apk`, viz [Sestavení aplikace AAPS pro hodinky Wear OS](../WearOS/BuildingAapsWearOS.md). Pokud je soubor, který jste nainstalovali, některý z těchto: a) apk Wear pro **AAPSClient** (zatímco v telefonu běží **AAPS**); b) soubor `.aab`; nebo c) soubor se slovem ‚debug‘ v názvu, nevybrali jste při sestavení správný apk pro Wear OS.
+6.  Zkontrolujte, že váš router od sebe neizoluje jednotlivá zařízení.
 
-More troubleshooting tips can be found [here](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
+Další tipy pro řešení problémů naleznete [zde](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
 
 (WearOS_changing-to-AAPS-watchface)=
 
-## Changing to an AAPS Watchface on your WearOS watch
+## Přepnutí na ciferník AAPS na hodinkách s Wear OS
 
-There are a number of watchfaces available in the standard build of the AAPS Wear OS APK build. Once you have installed the AAPS Wear APK on your watch, they will be available. Here are the steps for selecting one:
+Ve standardním sestavení AAPS Wear OS APK je k dispozici několik ciferníků. Budou dostupné, jakmile do hodinek nainstalujete AAPS Wear APK. Jeden z nich vyberete takto:
 
-1. On your watch (assuming WearOS), long press on your current watchface to bring up the watchface selector screen and scroll all the way to the right until you see the "Add Watch Face" button and select it
+1. Na hodinkách (předpokládáme Wear OS) dlouze stiskněte aktuální ciferník, tím otevřete výběr ciferníků. Posuňte se úplně doprava, až uvidíte tlačítko „Přidat ciferník“ (Add Watch Face), a vyberte ho
 
-![Watchface selector with the Add watch face button](../images/wearos/watchface_add.png)
+![Výběr ciferníků s tlačítkem Přidat ciferník](../images/wearos/watchface_add.png)
 
-2. Scroll through the list until you find "AAPS (Custom)" (depending on the watch, the watch faces of installed apps are listed under a "Downloaded" section or grouped by app) and click the middle of the image to add it to your shortlist of current watchfaces. Don't worry about the current appearance of the "AAPS (Custom)" watchface, we will select your preferred skin in the next step.
+2. Projděte seznam, až najdete „AAPS (vlastní)“ (podle hodinek jsou ciferníky nainstalovaných aplikací uvedené v části „Staženo“ nebo seskupené podle aplikace), a klepnutím doprostřed obrázku ho přidejte do seznamu svých aktuálních ciferníků. Nevadí, jak ciferník „AAPS (vlastní)“ teď vypadá, vzhled si vyberete v dalším kroku.
 
-![List of AAPS watchfaces, with AAPS (Custom)](../images/wearos/watchface_list_aaps.png)
+![Seznam ciferníků AAPS s AAPS (vlastní)](../images/wearos/watchface_list_aaps.png)
 
-3. Now open AAPS on your phone and open the Wear plugin: **Configuration** > **Communication** > **Wear** > **Open plugin** (tick **Wear** first if it is not enabled).
+3. Nyní v telefonu otevřete AAPS a otevřete plugin Wear: **Konfigurace** > **Komunikace** > **Wear** > **Otevřít plugin** (pokud plugin **Wear** není povolený, nejprve ho zaškrtněte).
 
-![Wear plugin with the Custom Watchface card](../images/wearos/wear_plugin_custom_watchface.png)
+![Plugin Wear s kartou Vlastní ciferník](../images/wearos/wear_plugin_custom_watchface.png)
 
-4. Click on the "Load Watchface" button and select the watchface that you like
+4. Klepněte na tlačítko „Nahrát ciferník“ a vyberte ciferník, který se vám líbí
 
-![Select Custom Watchface list](../images/wearos/select_custom_watchface.png)
+![Seznam Vyberte vlastní ciferník](../images/wearos/select_custom_watchface.png)
 
-5. Check your watch, the "AAPS (Custom)" watchface should now be displaying the skin that you have selected. Give it a few seconds to refresh. The **Wear** screen on the phone now shows the name of the loaded watchface and a preview of it. **Infos Watchface** lists its details and the fields it contains, and **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) where you can download other custom watchfaces. You may now customize the complications, etc. by long pressing the watchface and then pressing the "Customize" button on the watchface image.
+5. Podívejte se na hodinky: ciferník „AAPS (vlastní)“ by teď měl zobrazovat vzhled, který jste vybrali. Obnovení může trvat několik sekund. Obrazovka **Wear** v telefonu teď ukazuje název nahraného ciferníku a jeho náhled. **Informace o ciferníku** zobrazí jeho podrobnosti a pole, která obsahuje, a **Další ciferníky** otevře [stránku pro vlastní ciferníky](../ExchangeSiteCustomWatchfaces/index.md), kde si můžete stáhnout další vlastní ciferníky. Nyní můžete upravit komplikace a další prvky: dlouze stiskněte ciferník a pak na obrázku ciferníku stiskněte tlačítko „Přizpůsobit“.
 
 ```{admonition} Complications on a custom watchface
 :class: note
-Custom watchfaces made with version 3.0 or newer of the custom watchface format can contain up to five complication slots, with their position and size defined by the watchface (**Complication layout**). On the watch, long-press the watchface, tap **Customize** and tap **Complication 1** to **Complication 5** to choose the data source shown in each slot. The same rows are listed in the watch's AAPS app under **Settings** > **AAPS(Custom)**; tapping one there opens the same picker. **Complication type priority** decides whether a slot prefers a value or gauge, text, or an icon when the data source offers several. A changed priority only applies the next time you pick a data source for that slot.
+Vlastní ciferníky vytvořené ve verzi 3.0 nebo novější formátu vlastních ciferníků mohou obsahovat až pět pozic pro komplikace, jejichž umístění a velikost určuje ciferník (**Rozvržení komplikace**). Na hodinkách dlouze stiskněte ciferník, klepněte na **Přizpůsobit** a klepnutím na **Komplikace 1** až **Komplikace 5** vyberte zdroj dat zobrazený v jednotlivých pozicích. Stejné řádky najdete v aplikaci AAPS na hodinkách v **Nastavení** > **AAPS (vlastní)**; klepnutím na některý z nich se otevře stejný výběr. **Priorita typu komplikace** určuje, zda pozice dává přednost hodnotě nebo ukazateli, textu, nebo ikoně, když zdroj dat nabízí více možností. Změněná priorita platí až při dalším výběru zdroje dat pro danou pozici.
 
-These slots only work on watches running **Wear OS 5 or older**, where the custom watchface runs as a real watchface. On **Wear OS 6 and newer**, the custom watchface is shown as a picture without its complication slots, and steps 1 and 2 above are not needed: make sure **Custom watchface** is selected under **Watchface installed on watch** in the phone's **Wear** plugin (see [the watchface AAPS installs](#wearos-aaps-v4-watchface)).
+Tyto pozice fungují jen na hodinkách s **Wear OS 5 nebo starším**, kde vlastní ciferník běží jako skutečný ciferník. Na **Wear OS 6 a novějších** se vlastní ciferník zobrazuje jako obrázek bez pozic pro komplikace a kroky 1 a 2 výše nejsou potřeba: ujistěte se, že je v pluginu **Wear** v telefonu v části **Ciferník nainstalován na hodinkách** vybraný **Vlastní ciferník** (viz [ciferník, který AAPS nainstaluje](#wearos-aaps-v4-watchface)).
 ```
 
-## AAPSv2 watchface - Legend
+## Ciferník AAPSv2 – Popis
 
-![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
+![Popis ciferníku AAPSv2](../images/Watchface_Legend.png)
 
-A - time since last loop run
+A - čas od posledního spuštění smyčky
 
-B - CGM reading
+B - hodnota glykémie
 
-C - minutes since last CGM reading
+C - minuty od posledního čtení hodnoty glykémie
 
-D - change compared to last CGM reading (in mmol or mg/dL)
+D - změna oproti poslední hodnotě glykémie (v mmol nebo mg/dl)
 
-E - average change CGM reading last 15 minutes
+E - průměrná změna hodnoty glykémie za posledních 15 minut
 
-F - phone battery
+F - stav baterie telefonu
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - hodnota bazální dávky (zobrazená v U/h, pokud je zvolena standardní hodnota, nebo v %, pokud je aktivní dočasný bazál)
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H - BGI (blood glucose interaction, vliv inzulínu na glykémii) -> jak moc by glykémie „měla“ stoupat nebo klesat jen na základě aktivity inzulínu.
 
-I - carbs (carbs on board | e-carbs in the future)
+I - sacharidy (aktivní sacharidy | eSacharidy v budoucnosti)
 
-J - insulin on board (from bolus | from basal)
+J - aktivní inzulín (z bolusu | z bazálu)
