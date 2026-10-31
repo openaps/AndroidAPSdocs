@@ -260,7 +260,7 @@ d) Technische ondersteuning krijg je van de OS-AID-gemeenschap via GitHub, Disco
 
 e) Je kunt bij afspraken in de kliniek **informatie over zowel CGM als insuline uit de loop/pomp** laten zien als gecombineerde rapporten (via Nightscout of Tidepool), op papier of op een scherm (als je een laptop of tablet meeneemt). Doordat CGM- en insulinegegevens samen beschikbaar zijn, kan je behandelaar zijn tijd beter gebruiken om je rapporten te bekijken, en helpt het bij het bespreken van je voortgang.
 
-f) Als je team nog steeds sterke bezwaren heeft, geef je behandelaar dan afdrukken van de artikelen waarnaar in deze tekst wordt verwezen, en geef de link naar het deel van **AAPS** voor behandelaars: [Voor behandelaars – Een algemene introductie en gids voor **AAPS**](../UsefulLinks/ClinicianGuideToAaps.md)
+f) Als je team nog steeds sterke bezwaren heeft, geef je behandelaar dan afdrukken van de artikelen waarnaar in deze tekst wordt verwezen, en geef de link naar het deel van **AAPS** voor behandelaars: [Voor zorgverleners – Een algemene introductie en handleiding voor **AAPS**](../UsefulLinks/ClinicianGuideToAaps.md)
 
 #### Steun voor loopen met OS-AID door andere behandelaars
 
