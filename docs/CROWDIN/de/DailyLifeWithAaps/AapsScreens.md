@@ -97,7 +97,7 @@ Loop pausiert – die verbleibende Zeit wird neben dem Symbol angezeigt:
 
 ![Main screen with the loop suspended](../images/main/main_screen_loop_suspended.png)
 
-Pumpe getrennt – die verbleibende Zeit wird neben dem Symbol angezeigt. Die Knöpfe für Behandlungen bleiben in der QuickLaunch-Leiste. So kannst Du weiterhin mit einem Pen gegebenes Insulin oder Kohlenhydrate eintragen:
+Pumpe getrennt – die verbleibende Zeit wird neben dem Symbol angezeigt. Die Knöpfe für Behandlungen bleiben in der Schnellstart-Leiste. So kannst Du weiterhin mit einem Pen gegebenes Insulin oder Kohlenhydrate eintragen:
 
 ![Main screen with the pump disconnected](../images/main/main_screen_pump_disconnected.png)
 
@@ -487,11 +487,11 @@ Diese Linie zeigt den Grad an, in dem der Glukosewert nur aufgrund der Insulinak
 
 Es ergibt eine gute Kombination diese Linie zusammen mit den Balken für Abweichungen anzuzeigen. Beide haben die gleiche Skala, die für die anderen optionalen Daten eine andere ist. Daher sollten sie, wie unten dargestellt, in einem separaten Diagramm gezeigt werden. Die Linie der Blutzuckerwirkung (BGI) mit den Balken der Abweichungen zu vergleichen, ist ein weiterer Weg zu verstehen, wie und warum **Glukosewerte** schwanken. Hier, zum Zeitpunkt **1**, liegen die Balken der Abweichung deutlich über der BGI-Linie: Der BZ steigt stärker, als sich allein durch die Insulinaktivität erklären lässt (zum Beispiel nach Kohlenhydraten). Zum Zeitpunkt **2** liegen die Balken der Abweichung unter null (rot): Der BZ ist niedriger, als der Algorithmus erwartet hat.
 
-### Abschnitt F - QuickLaunch-Leiste
+### Abschnitt F - Schnellstart-Leiste
 
 ![QuickLaunch toolbar](../images/Home2020_Buttons.png)
 
-Die schwebende Leiste unten auf dem Bildschirm enthält Deine **[QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)**-Aktionen. Das kleine **Zahnrad** öffnet die QuickLaunch-Konfiguration. Dort wählst Du, welche Knöpfe angezeigt werden (Behandlungen, Careportal-Einträge, CGM-Aktionen, die Bildschirme aus dem Fenster **Bearbeiten**, [QuickWizard](../DailyLifeWithAaps/QuickWizards.md)-Knöpfe, [Szenen](../DailyLifeWithAaps/Scenes.md) und mehr).
+Die schwebende Leiste unten auf dem Bildschirm enthält Deine **[Schnellstart](../DailyLifeWithAaps/QuickLaunch.md)**-Aktionen. Das kleine **Zahnrad** öffnet die Schnellstart-Konfiguration. Dort wählst Du, welche Knöpfe angezeigt werden (Behandlungen, Careportal-Einträge, CGM-Aktionen, die Bildschirme aus dem Fenster **Bearbeiten**, [QuickWizard](../DailyLifeWithAaps/QuickWizards.md)-Knöpfe, [Szenen](../DailyLifeWithAaps/Scenes.md) und mehr).
 
 Oben ist eine typische Konfiguration zu sehen: **Insulin**, **Kohlenhydrate** und der **Bolus-Rechner**.
 
@@ -549,7 +549,7 @@ Die untere Navigationsleiste führt zu:
 
 * **Szenen** – nur sichtbar, wenn Du mindestens eine [Szene](../DailyLifeWithAaps/Scenes.md) oder eine **Automatisierung**sregel hast, die als **Benutzeraktion** markiert ist. Es öffnet ein Fenster, aus dem Du sie starten kannst. Eine Markierung zeigt, wie viele Du gerade starten kannst. Der **Stift** oben im Fenster öffnet **Bearbeiten → Szenen**.
 
-* **Bearbeiten** – die zentrale Stelle für alles, was Du in **AAPS** verwaltest: Profil, Insulineinstellungen, Temporäres Ziel, QuickWizard, Szenen, Automatisierung, Essen, Wechsel der Setzstellen, Pumpe und Autorisierte Clients. Darunter stehen Aktionen für Geräte und Basal wie Sensor gesetzt und Temporäre Basalrate. Manche Einträge erscheinen nur, wenn sie zu Deiner Ausstattung passen – zum Beispiel hängen Nadelwechsel/Füllen und Batteriewechsel von Deiner Pumpe ab, und Temporäre Basalrate, Verzögerter Bolus und die Careportal-Einträge sind im [Einfachen Modus](#preferences-simple-mode) ausgeblendet:
+* **Bearbeiten** – die zentrale Stelle für alles, was Du in **AAPS** verwaltest: Profil, Insulineinstellungen, Temporäres Ziel, QuickWizard, Szenen, Automatisierung, Lebensmittel, Wechsel der Setzstellen, Pumpe und Autorisierte Clients. Darunter stehen Aktionen für Geräte und Basal wie Sensor gesetzt und Temporäre Basalrate. Manche Einträge erscheinen nur, wenn sie zu Deiner Ausstattung passen – zum Beispiel hängen Nadelwechsel/Füllen und Batteriewechsel von Deiner Pumpe ab, und Temporäre Basalrate, Verzögerter Bolus und die Careportal-Einträge sind im [Einfachen Modus](#preferences-simple-mode) ausgeblendet:
     
     ![Manage sheet](../images/v4/Screens/manage_sheet.png)
 
@@ -645,7 +645,7 @@ Wenn Du nach Verwendung des Bolus-Rechners, die oben gezeigte Warnung siehst, ha
 
 Für mehr Details, schaue bitte in den Hinweisen auf der Seite [Berechnung der aktiven Kohlenhydrate (COB)](#CobCalculation-detection-of-wrong-cob-values) nach.
 
-Du suchst den Reiter **Aktionen** aus **AAPS** 3.x? Seine Funktionen sind auf den Startbildschirm, in das Fenster **Bearbeiten** und in die QuickLaunch-Leiste umgezogen: siehe [Wo ist der Reiter Aktionen geblieben?](#screens-action-tab).
+Du suchst den Reiter **Aktionen** aus **AAPS** 3.x? Seine Funktionen sind auf den Startbildschirm, in das Fenster **Bearbeiten** und in die Schnellstart-Leiste umgezogen: siehe [Wo ist der Reiter Aktionen geblieben?](#screens-action-tab).
 
 (aaps-screens-careportal)=
 
@@ -653,7 +653,7 @@ Du suchst den Reiter **Aktionen** aus **AAPS** 3.x? Seine Funktionen sind auf de
 
 Die Alter und Füllstände in der [Statuszeile](#screens-sensor-level-battery) (Sensor, Insulin, Kanüle, Pumpenbatterie) beruhen auf Careportal-Einträgen: **Nadelwechsel/Füllen** (erfasst Wechsel von Setzstelle und Insulinpatrone), **Sensor gesetzt** und **Pumpenbatterie-Wechsel**.
 
-Du kannst sie im aufgeklappten Statusbereich auf dem Startbildschirm, im Fenster **Bearbeiten** oder mit [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)-Knöpfen eintragen.
+Du kannst sie im aufgeklappten Statusbereich auf dem Startbildschirm, im Fenster **Bearbeiten** oder mit [Schnellstart](../DailyLifeWithAaps/QuickLaunch.md)-Knöpfen eintragen.
 
 **Nadelwechsel/Füllen** erfasst einen Wechsel der Setzstelle und/oder der Insulinpatrone und kann eine Füllmenge abgeben:
 
