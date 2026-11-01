@@ -4,7 +4,7 @@
 
 ## Voraussetzungen
 
-**AAPS** verwendet eine Android Auto-Funktion, mit der Nachrichten von Smartphone-Apps an den Bildschirm im Auto geschickt werden können.
+**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
 
 Das bedeutet:
 
@@ -37,7 +37,7 @@ Prüfe bitte jetzt, ob Du die Status-Benachrichtigung von **AAPS** auf dem Smart
 
 Da **AAPS** keine offizielle Android Auto App ist, müssen die Benachrichtigungen einmalig manuell aktiviert werden. Die Aktivierung erfolgt über den Entwicklermodus auf Deinem Smartphone. Was dazuzutun ist, wird nun erklärt.
 
-Als Erstes verbinde Dein Smartphone mit dem Infotainment-System Deines Autos.
+Go to your car and connect your mobile with the car's audio system.
 
 Der Bildschirm sollte nun ungefähr so aussehen:
 

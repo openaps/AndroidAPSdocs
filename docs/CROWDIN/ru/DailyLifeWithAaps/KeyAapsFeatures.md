@@ -125,7 +125,7 @@ See also [OpenAPS's oref1/SMB documentation](https://openaps.readthedocs.io/en/l
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
-### Maximum total IOB OpenAPS can’t go over
+### Max IOB for SMB
 
 Это значение определяет максимальное количество **активного инсулина IOB (базального и болюсного), при котором **AAPS** будет работать в режиме замкнутого цикла. Оно также именуется **maxIOB**.</p> 
 
@@ -229,7 +229,7 @@ If this setting is enabled, SMB is enabled when a temp target is set (eating soo
 
 #### SMB interval
 
-Этот параметр ограничивает частоту микроболюсов. Его значение определяет минимальное время между микроболюсами. Напоминаем, что цикл запускается каждый раз, когда алгоритм получает данные гликемии (обычно каждые 5 минут). Отсюда отнимите 2 минуты для выполнения цикла. То есть, если требуется чтобы SMB работали при каждом запуске цикла, установите это значение на 3 минуты.
+Этот параметр ограничивает частоту микроболюсов. Его значение определяет минимальное время между микроболюсами. Напоминаем, что цикл запускается каждый раз, когда алгоритм получает данные гликемии (обычно каждые 5 минут). Subtract 2 minutes to give loop additional time to complete. То есть, если требуется чтобы SMB работали при каждом запуске цикла, установите это значение на 3 минуты.
 
 Значение по умолчанию: 3 мин.
 
@@ -251,7 +251,7 @@ This setting allows you to adjust the strength of SMB during UAM, when there are
 
 Default value : the same as **Max minutes of basal to limit SMB**.
 
-Этот параметр виден только если включены опции "Включить SMB" и "Включить UAM".
+This setting is only visible if "Enable SMB" and "Enable UAM" are switched on.
 
 (enable-uam)=
 
@@ -277,7 +277,7 @@ In any case, the required carbs will be displayed in the COB section on your mai
 
 For the full parameter reference (including settings not covered here), see [OpenAPS's preferences and safety settings documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
 
-**Всегда использовать укороченное среднее приращение вместо простого ** Если включить эту функцию, **AAPS** использует среднюю дельту/приращение ГК за последние 15 минут, которая обычно представляет собой среднее из трех последних значений. This helps **AAPS** to be steadier with noisy data sources like xDrip and Libre.
+**Always use short average delta instead of simple delta** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps **AAPS** to be steadier with noisy data sources like xDrip and Libre.
 
 **Максимальный ежедневный множитель безопасности** Это важный ограничитель безопасности. Настройка по умолчанию (которая вряд ли потребует корректировки) равна 3. Это означает, что **AAPS** никогда сможет устанавливать временную базальную скорость, которая более чем в 3 раза превышает максимальный часовой базал, запрограммированный в помпе и/или профиле пользователя. Пример: если ваша максимальная базальная скорость составляет 1,0 Ед/ч, а максимальный коэффициент суточной безопасности равен 3, то **AAPS** может установить максимальную временную базальную скорость в 3,0 Ед/ч (= 3 х 1,0 Ед/ч).
 
@@ -308,7 +308,7 @@ After selecting it, its **Settings** contain the OpenAPS SMB settings plus an **
   - while glucose is **above target**, ISF is strengthened;
   - a **post-prandial** weight and a **duration** weight act after meals and when glucose stays high for a long time.
 - **SMB delivery ratio** (with a minimum, a maximum and a BG range): what share of the insulin required can be delivered as SMB.
-- **SMB max range extension**: by what factor the usual SMB size limit ([max minutes of basal](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), normally 120 minutes) may be exceeded. The default value 1 changes nothing; up to 5 is possible. Increase this experimental value slowly and with caution.
+- **SMB max range extension**: by what factor the usual SMB size limit ([max minutes of basal](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), 30 minutes by default) may be exceeded. The default value 1 changes nothing; up to 5 is possible. Increase this experimental value slowly and with caution.
 - **IOB threshold percent**: the percentage of max IOB above which SMBs are disabled.
 
     {admonition} Only for experienced users
@@ -339,11 +339,11 @@ AMA, сокращение от "advanced meal assist", усовершенств�
 
 *См. также [обзор программно закодированных жестких пределов](#Open-APS-features-overview-of-hard-coded-limits).*
 
-### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
+### Max IOB for AMA
 
-Этот параметр ограничивает максимальную величину активного базального инсулина IOB, при которой работает алгоритм **AAPS**. Если активный инсулин IOB выше, то алгоритм AAPS перестает подавать дополнительный базальный инсулин до тех пор, пока базальный IOB не окажется в заданных пределах.
+This parameter limits the maximum of basal IOB where **AAPS** still works. Если активный инсулин IOB выше, то алгоритм AAPS перестает подавать дополнительный базальный инсулин до тех пор, пока базальный IOB не окажется в заданных пределах.
 
-Значение по умолчанию 2, но можно постепенно поднять этот параметр, чтобы посмотреть, как он влияет на вас и какое значение лучше. Эта величина для каждого своя, а также зависит от средней общей суточной дозы (TDD). По соображениям безопасности, существует предел, который зависит от возраста пациента . "Жесткий предел" максимального активного инсулина maxIOB в алгоритме помощника болюса AMA ниже, чем в алгоритме SMB.
+The default value is 2, but you should raise this parameter slowly to see how much it affects you and which value fits best. It is different for everyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age. "Жесткий предел" максимального активного инсулина maxIOB в алгоритме помощника болюса AMA ниже, чем в алгоритме SMB.
 
 - Ребенок: 3
 - Подросток: 5
@@ -366,7 +366,7 @@ AMA, сокращение от "advanced meal assist", усовершенств�
 - Normally you do not have to change the settings in this dialog!
 - If you want to change them anyway, make sure you understand what you are doing — see the full parameter reference in [OpenAPS's preferences and safety settings documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
 
-**Всегда использовать укороченное среднее приращение вместо простого ** Если включить эту функцию, **AAPS** использует среднюю дельту/приращение ГК за последние 15 минут, которая обычно представляет собой среднее из трех последних значений. This helps **AAPS** to work more steady with noisy data sources like xDrip and Libre.
+**Always use short average delta instead of simple delta** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps **AAPS** to work more steady with noisy data sources like xDrip and Libre.
 
 **Максимальный ежедневный множитель безопасности** Это важный ограничитель безопасности. Настройка по умолчанию (которая вряд ли потребует корректировки) равна 3. Это означает, что алгоритму **AAPS** ни при каких условиях не будет разрешено устанавливать временный базал, который более чем в 3 раза выше самого высокого почасового базала, запрограммированного в помпе. Пример: если ваша максимальная базальная скорость составляет 1,0 Ед/ч, а максимальный коэффициент суточной безопасности равен 3, то **AAPS** может установить максимальную временную базальную скорость в 3,0 Ед/ч (= 3 х 1,0 Ед/ч).
 

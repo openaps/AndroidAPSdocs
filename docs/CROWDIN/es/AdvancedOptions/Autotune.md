@@ -78,7 +78,7 @@ Toca **Abrir complemento** en la tarjeta **Autotune** para abrir la pantalla de 
 
 - Si confías en los resultados (bajo porcentaje de variación entre el perfil de entrada y el de salida), puedes pulsar el botón «Activar perfil» y luego pulsar OK para confirmar.
 
-  - Activar el perfil ajustado crea automáticamente un nuevo perfil «Ajustado» en tu lista de perfiles (**Administrar → Perfil**).
+  - "Activate profile" will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
   - Si ya tienes un perfil llamado «Ajustado» en **Administrar → Perfil**, este perfil se actualizará con el perfil calculado por Autotune antes de activarse
 
   ![Autotune: activar perfil](../images/Autotune/Autotune_6.png)
@@ -123,7 +123,7 @@ La función **Cambio automático de perfil** solo está disponible en el modo De
 - **Cambio automático de perfil** (por defecto desactivado): consulta [Ejecutar Autotune con una regla de automatización](#autotune-run-autotune-with-an-automation-rule) más abajo. Si activas este ajuste, el perfil de entrada se actualizará automáticamente con el perfil ajustado y se activará.
   - **Ten cuidado: después de actualizar y activar el perfil ajustado sin cambios, debes confiar y comprobar durante los días siguientes que mejora tu lazo**
 
-- **Categorizar UAM como basal** (por defecto desactivado): este ajuste es para quienes usan AndroidAPS sin introducir carbohidratos (Full UAM). Cuando está desactivado, evita que UAM se clasifique como basal.
+- **Categorize UAM as basal** (default Off): This setting is for the users using AAPS without any carbs entered (Full UAM). Cuando está desactivado, evita que UAM se clasifique como basal.
   - Nota: si durante un día se detecta al menos una hora de absorción de carbohidratos, todos los datos clasificados como «UAM» se clasificarán como basal, sea cual sea este ajuste (activado o desactivado)
 - **Días predeterminados de ajuste** (por defecto 5): con este ajuste puedes definir el valor por defecto. Cada vez que eliges un nuevo perfil en el complemento Autotune, el **Número de días de datos** se sustituye por este valor por defecto
 - **Usar ratios IC/ISF basados en el ritmo circadiano** (por defecto desactivado): consulta [Perfil de IC o ISF circadiano](#autotune-circadian-ic-or-isf-profile) más abajo.
@@ -188,7 +188,7 @@ Nota: para más información sobre cómo crear una regla de automatización, con
 
   ![Pantalla por defecto de Autotune](../images/Autotune/Autotune_17.png)
 
-- Después puedes elegir la acción **Perfil de Autotune** (en el grupo **Lazo e insulina**)
+- Then you can select the **Run Autotune** action (in the **Loop & insulin** group)
 
   ![Pantalla por defecto de Autotune](../images/Autotune/Autotune_18.png)
 
@@ -212,7 +212,7 @@ Autotune trabaja con la información que hay en tu base de datos. Si acabas de i
 
 Autotune es solo una ayuda. Es importante comprobar con regularidad si estás de acuerdo con el perfil calculado. Si tienes alguna duda, cambia los ajustes de Autotune (por ejemplo, el número de días) o copia los resultados en un perfil local y ajusta el perfil antes de usarlo.
 
-Usa siempre Autotune manualmente durante varios días para comprobar los resultados antes de aplicarlos. Y solo cuando confíes por completo en los resultados de Autotune, y cuando la variación entre el perfil anterior y el perfil calculado sea muy pequeña, empieza a usar la automatización (nunca antes)
+Usa siempre Autotune manualmente durante varios días para comprobar los resultados antes de aplicarlos. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile then you start to use Automation (Never before)
 
 - Autotune puede funcionar muy bien para algunas personas y no para otras, así que **si no confías en el resultado de Autotune, no lo uses**
 

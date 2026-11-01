@@ -19,7 +19,7 @@ Regels van Automatisering maak en wijzig je in het scherm **Automatisering** (**
 
 - Een of meer acties die worden uitgevoerd.
 
-    Zoals een alarm, het instellen van een profiel percentage of het exporteren van de instellingen van AAPS bij een Pod-wissel.
+    Such as an alarm or setting a profile percentage or exporting the AAPS settings on Pod change.
 
 
 Er zijn veel opties voor Automatisering. Bekijk ze goed in de AAPS-app, in het onderdeel Automatisering. Je kunt ook in de AAPS-gebruikersgroepen op [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) en [**Discord**](https://discord.gg/4fQUWHZ4Mw) zoeken naar voorbeelden van Automatisering van andere gebruikers.
@@ -38,11 +38,11 @@ Het voorbeeld hieronder laat zien hoe een **Automatisering** stappen overbodig k
 
 Een gebruiker sport elke ochtend om 6:00 uur: hij moet eraan denken om om 5:00 uur, voor het sporten, zelf een "Tijdelijk streefdoel-Activiteit" in AAPS in te stellen.
 
-![Alt-tekst](../images/Automations/automation_concept_manual.png)
+![Manual actions without automation](../images/Automations/automation_concept_manual.png)
 
 De gebruiker heeft een **Automatisering** ingesteld die om 5:00 uur een ‘Tijdelijk streefdoel-Activiteit’ start. Zo zijn de **BG** en **IOB** goed als voorbereiding op het sporten om 6:00 uur:
 
-![Alt-tekst](../images/Automations/automation_concept_automated.png)
+![Actions done by an automation](../images/Automations/automation_concept_automated.png)
 
 ## Belangrijke punten voordat je met Automatisering begint
 
@@ -91,12 +91,12 @@ Om een **Automatisering** in te stellen, druk je op de knop **+** in het scherm 
 
 Om een regel van **Automatisering** uit te schakelen, haal je het vinkje weg links van de naam van de **Automatisering**. Het voorbeeld hieronder toont een **Automatisering** die ingeschakeld (‘aangevinkt’) of uitgeschakeld (‘niet aangevinkt’) is:
 
-![Alt-tekst](../images/Automations/automation_rule_activated_deactivated.png)
+![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
 
 
 Als je een **Automatisering** instelt, kun je die eerst testen door de optie ‘Notificatie’ onder "Acties" te kiezen. Hierdoor toont **AAPS** eerst een notificatie, in plaats van de actie echt uit te voeren. Als je zeker weet dat de notificatie op de juiste tijd en bij de juiste voorwaarden verschijnt, kun je de regel van **Automatisering** aanpassen en de ‘Notificatie’ vervangen door een ‘Actie’.
 
-![Alt-tekst](../images/Automations/automation_alert_actions.png)
+![Alert actions](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
@@ -115,7 +115,7 @@ Er zijn veiligheidsgrenzen voor **Automatisering**:
 
 * Een **Tijdelijk streefdoel** dat door een **Automatisering** wordt ingesteld, moet tussen 72 en 180 mg/dl (of 4 en 10 mmol/l) liggen.
 * Het **Profiel percentage** moet tussen 50% en 130% liggen.
-* Tussen twee keer uitvoeren van **Automatisering** (en voor de eerste keer) zit minstens 5 minuten.
+* There is a 5 minute time limit between executions of **Automation** (and first execution).
 
 ## Negatieve waarden goed gebruiken
 
@@ -127,7 +127,7 @@ Wees voorzichtig als je een negatieve waarde kiest in **Automatisering**
 
 Wees voorzichtig als je een ‘negatieve waarde’ kiest in een ‘Voorwaarde’ zoals "is minder dan" in **Automatisering**. Bijvoorbeeld:
 
-![Alt-tekst](../images/Automations/automation_comparison_operators.png)
+![Comparison operators](../images/Automations/automation_comparison_operators.png)
 
 **Voorbeeld 1:** Een Voorwaarde **"is minder dan"** "-0,1 mmol/l" (of "-2 mg/dl") zal:
 
@@ -242,7 +242,7 @@ geen
 
 ![De gebeurtenissen van de actie Notitie](../images/Automations/automation_action_careportal_events.png) ![De actie Notitie ingesteld op Infuus wissel](../images/Automations/automation_action_careportal_site_change.png)
 
-**Acties:** **SMS verzenden naar alle nummers** (in de groep **Waarschuwingen**)
+**Actions:** **Send SMS to all numbers** (in the **Alerts** group)
 
 **Opties:**
 
@@ -260,7 +260,7 @@ geen
 
 * kies **Aan** of **Uit**. Dit verandert de instelling **SMB toestaan** van OpenAPS SMB, precies alsof je die in **Instellingen** had veranderd. Dit blijft zo tot jij of een andere regel het terugzet.
 
-**Acties:** **Autotune uitvoeren** (in de groep **Loop & insuline**)
+**Actions:** **Run Autotune** (in the **Loop & insulin** group)
 
 **Opties:**
 
@@ -280,39 +280,39 @@ geen
 
 Als de ‘Actie’ is toegevoegd, moet je de standaardwaarden veranderen in de gewenste waarde door erop te klikken en ze aan te passen.
 
-![Alt-tekst](../images/Automations/automation_action_temp_target_values.png)
+![Temp target action values](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## De volgorde van de **automatiseringen** in de lijst is belangrijk
- **AAPS** voert de regels uit in volgorde van voorkeur, te beginnen bovenaan de lijst van **Automatisering**. Voorbeeld: als de **Automatisering** ‘Laag’ de belangrijkste **Automatisering** is, boven alle andere regels, dan moet deze **Automatisering** bovenaan de lijst van **Automatisering** van de gebruiker staan, zoals hieronder:
+ **AAPS** voert de regels uit in volgorde van voorkeur, te beginnen bovenaan de lijst van **Automatisering**. For example, if the ‘Low’ **Automation** is the most important **Automation**, above all other rules, then this **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
 
 
-![Alt-tekst](../images/Automations/automation_rule_list.png)
+![List of automation rules](../images/Automations/automation_rule_list.png)
 
-Om de volgorde van de regels van **Automatisering** te veranderen, houd je de greep **=** rechts van de regel ingedrukt en schuif je de regel. Verander de volgorde van de **automatiseringen** door de regels omhoog of omlaag te schuiven.
+Om de volgorde van de regels van **Automatisering** te veranderen, houd je de greep **=** rechts van de regel ingedrukt en schuif je de regel. Reorder the **Automations** by moving the rules up or down.
 
-![Alt-tekst](../images/Automations/automation_rule_reorder.png)
+![Reorder automation rules](../images/Automations/automation_rule_reorder.png)
 
 ## Regels van Automatisering verwijderen
 
 Om een regel van **Automatisering** te verwijderen, klik je op het prullenbakpictogram.
 
-![Alt-tekst](../images/Automations/automation_rule_delete.png)
+![Delete automation rules](../images/Automations/automation_rule_delete.png)
 
 ## Voorbeelden van Automatisering
 
-Hieronder staan voorbeelden van **automatiseringen**. Meer over **Automatisering** en hoe gebruikers hun **Automatisering** persoonlijk hebben ingesteld, vind je in discussiegroepen op Facebook of op Discord. Neem de voorbeelden hieronder niet over als je niet goed begrijpt hoe de **Automatisering** werkt.
+Hieronder staan voorbeelden van **automatiseringen**. Further discussion on **Automations** and how users have individualised their **Automation** can be found in Facebook discussions groups or on Discord. Neem de voorbeelden hieronder niet over als je niet goed begrijpt hoe de **Automatisering** werkt.
 
 (automations-low-glucose-temp-target)=
 ### Lage glucose tijdelijk streefdoel
 
 Deze **Automatisering** start automatisch een **Tijdelijk streefdoel** als de **BG** onder een bepaalde grens komt — hier wordt, als de glucose lager is dan 70 mg/dl, een streefdoel van 110 mg/dl gestart voor 30 minuten:
 
-![Alt-tekst](../images/Automations/automation_example_low_glucose_rule.png)
+![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
 
 ### Tijdelijk streefdoel voor de lunch (met ‘Locatie’)
 
-![Alt-tekst](../images/Automations/automation_example_lunch_rule.png)
+![Example: lunch rule](../images/Automations/automation_example_lunch_rule.png)
 
 Deze **Automatisering** is gemaakt voor een gebruiker die elke werkdag rond dezelfde tijd op het werk luncht. Ze start alleen als de gebruiker op een ingestelde ‘locatie’ is.  Als de gebruiker op een dag niet op het werk is, wordt deze **Automatisering** dus niet gestart.
 
@@ -320,7 +320,7 @@ Deze **Automatisering** stelt om 13:00 uur een laag **Tijdelijk streefdoel** (Ee
 
 De trigger ‘Locatie’ heeft een naam, een positie (tik op **Kies op kaart** of gebruik je huidige locatie) en een straal in meters. Hij start als je binnen (of buiten) dat gebied bent:
 
-![Alt-tekst](../images/Automations/automation_example_lunch_location_condition.png)
+![Example: lunch rule with location condition](../images/Automations/automation_example_lunch_location_condition.png)
 
 Door de ‘En’-koppeling wordt de **Automatisering** alleen uitgevoerd tijdens de ‘gekozen tijd’ en als de gebruiker op de gekozen locatie is.
 
@@ -330,11 +330,11 @@ De **Automatisering** start niet op andere tijden op deze locatie, en ook niet o
 
 Een wifi-SSID is een goede keuze om een **Automatisering** te starten als je in het bereik van een bepaald wifi-netwerk bent (in vergelijking met GPS): het is vrij precies, gebruikt minder batterij en werkt ook binnen, waar GPS en andere locatieservices misschien niet beschikbaar zijn.
 
-Hier is nog een voorbeeld: een **Tijdelijk streefdoel** alleen op werkdagen, voor het ontbijt(1).
+Here is another example of setting up a **Temp Target** for work days only before breakfast (1).
 
 
-De **Automatisering** start alleen op maandag t/m vrijdag om 05:30 uur (2)  
-en als de telefoon met het wifi-netwerk thuis is verbonden (3).
+The **Automation** will trigger at 05:30am only on Monday-Friday (2)  
+and while being connected to a home Wi-Fi network (3).
 
 
 Daarna stelt ze een **Tijdelijk streefdoel** in van 75 mg/dl voor 30 minuten (4). Een voordeel van de locatie in de regel is dat de regel bijvoorbeeld niet start als de gebruiker op vakantie is.
@@ -350,7 +350,7 @@ Hier is de schermafbeelding met de triggers van de **Automatisering**:
 1) Onder de hoofdkoppeling “EN” (aan beide voorwaarden moet worden voldaan om te starten) 1) Herhaal tijd = ma, di, wo, do, vr om 5:30  
 1) Wi-Fi SSID = My_Home_WiFi_Name
 
-![Alt-tekst](../images/Automations/automation_example_wifi_condition.png)
+![Example: WiFi condition](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
@@ -395,7 +395,7 @@ In het voorbeeld hieronder is de regel **Low glucose temp target** (1) (zie [Lag
 
 Controleer of het vakje links van de naam van de **Automatisering** is ‘aangevinkt’, zodat de regel is ingeschakeld:
 
-![Alt-tekst](../images/Automations/automation_rule_activated_deactivated.png)
+![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
 
 * Probleem: __Mijn automatiseringen worden in de verkeerde volgorde gestart.__
 

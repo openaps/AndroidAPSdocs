@@ -3,7 +3,7 @@
 # Επιλογή 1 – Δημιουργία νέου keystore
 
 ```{note}
-Αυτό είναι μέρος του [Βήματος 2 – Δημιουργία του keystore υπογραφής σας](BrowserBuildKeystore.md) της [Δημιουργίας μέσω browser](BrowserBuild.md). Βεβαιωθείτε ότι έχετε διαβάσει την [απόφαση Επιλογή 1 ή Επιλογή 2](#aaps-ci-preparation) και ότι έχετε κατεβάσει το αρχείο προετοιμασίας.
+Αυτό είναι μέρος του [Βήματος 2 – Δημιουργία του keystore υπογραφής σας](BrowserBuildKeystore.md) της [Δημιουργίας μέσω browser](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
 ```
 
 Η Επιλογή 1 δημιουργεί για εσάς ένα εντελώς νέο keystore υπογραφής. Είναι κατάλληλη για όσους το κάνουν για πρώτη φορά, για όσους δεν έχουν JKS ή για όσους έχουν ξεχάσει τον κωδικό ή το alias.

@@ -51,9 +51,9 @@ Všeobecne sa uznáva, že ľudia s _novo_ diagnostikovaným diabetom 1. typu (k
 :class: danger
 Inhibítory SGLT-2, nazývané aj gliflozíny, inhibujú reabsorpciu glukózy v obličkách. Gliflozíny znižujú hladinu cukru v krvi nepredvídateľne, a preto ich NESMIETE užívať počas používania systému s uzavretým okruhom, ako je AAPS! Hrozí značné riziko ketoacidózy a/alebo hypoglykémie! Kombinácia tohto lieku so systémom, ktorý znižuje bazálne dávky s cieľom zvýšiť glykémiu, je obzvlášť nebezpečná. 
 
-Stručne povedané:
-- **Príklad 1: riziko hypoglykémie**
->Pri obede si v **AAPS** podáte bolus na 45 g glukózy, ktoré zjete. Problém je v tom, že inhibítory spôsobia, že telo časť sacharidov vylúči, a AAPS o tom nevie. V tele potom zostane príliš veľa inzulínu v porovnaní so vstrebanými sacharidmi a dôjde k hypoglykémii.
+In a nutshell:
+- **Example 1: risk of Hypo**
+>During lunch, you use **AAPS** to bolus based on consuming 45 g of carbs. Problém je v tom, že inhibítory spôsobia, že telo časť sacharidov vylúči, a AAPS o tom nevie. V tele potom zostane príliš veľa inzulínu v porovnaní so vstrebanými sacharidmi a dôjde k hypoglykémii.
 
 - **Príklad 2: riziko ketoacidózy**
 >Inhibítory na pozadí vylučujú časť sacharidov, a tým znižujú vašu glykémiu. **AAPS** automaticky povie pumpe, aby podávala menej inzulínu, vrátane bazálu. Postupne môže vaša glykémia zostávať pod cieľovou hodnotou tak dlho, až telo nemá dosť bazálneho inzulínu na spracovanie sacharidov, a dôjde ku ketoacidóze. Ketoacidóza u ľudí s diabetom 1. typu zvyčajne vzniká pre poruchu pumpy. To by spustilo upozornenia v telefóne a bolo by to vidieť na vysokej glykémii. Pri gliflozínoch je však nebezpečné to, že AAPS nezobrazí žiadne upozornenie, pretože pumpa ďalej funguje a glykémia môže zostať v cieľovom rozsahu.
@@ -80,7 +80,7 @@ Systém **AAPS** je kompatibilný iba s určitými typmi inzulínových púmp, s
 
 #### Čas na zostavenie aplikácie a cesta k plnému používaniu okruhu
 
-Čas potrebný na zostavenie aplikácie **AAPS** závisí od vašich znalostí a technických schopností. Pre neskúsených používateľov môže zostavenie **AAPS** trvať zvyčajne pol dňa alebo celý deň (s pomocou komunity). Proces sa pri novších verziách **AAPS** výrazne zrýchli, keď budete skúsenejší.
+The time to build the **AAPS** app depends on your level of expertise and technical ability. Pre neskúsených používateľov môže zostavenie **AAPS** trvať zvyčajne pol dňa alebo celý deň (s pomocou komunity). Proces sa pri novších verziách **AAPS** výrazne zrýchli, keď budete skúsenejší.
 
 So zostavením vám pomôžu tieto časti dokumentácie:
 

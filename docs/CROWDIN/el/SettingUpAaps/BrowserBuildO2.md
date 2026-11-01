@@ -3,7 +3,7 @@
 # Επιλογή 2 – Ανέβασμα του υπάρχοντος keystore σας
 
 ```{note}
-Αυτό είναι μέρος του [Βήματος 2 – Δημιουργία του keystore υπογραφής σας](BrowserBuildKeystore.md) της [Δημιουργίας μέσω browser](BrowserBuild.md). Βεβαιωθείτε ότι έχετε διαβάσει την [απόφαση Επιλογή 1 ή Επιλογή 2](#aaps-ci-preparation) και ότι έχετε κατεβάσει το αρχείο προετοιμασίας.
+Αυτό είναι μέρος του [Βήματος 2 – Δημιουργία του keystore υπογραφής σας](BrowserBuildKeystore.md) της [Δημιουργίας μέσω browser](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
 ```
 
 Η Επιλογή 2 χρησιμοποιεί ξανά το JKS που έχετε ήδη δημιουργήσει σε προηγούμενο build του AAPS από υπολογιστή με το Android Studio. Είναι κατάλληλη για χρήστες που έχουν ήδη ένα JKS και ξέρουν τον κωδικό και το alias του JKS.

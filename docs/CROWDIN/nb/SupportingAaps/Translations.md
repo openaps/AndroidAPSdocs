@@ -87,7 +87,7 @@ Godkjenningen er et manuelt steg. Som ideell organisasjon gir vi ingen garantier
     
     
 
-Du oversetter teksten som vises som lenke. Du må passe på at du **ikke** fjerner lenken, som vises som et par `<0></0>`-tagger, eller med andre tall hvis det er flere lenker i samme avsnitt.
+Du oversetter teksten som vises som lenke. Pass på at du **ikke** fjerner lenken, som vises som et par `<0></0>`-tagger (eller andre tall hvis det er flere lenker i samme avsnitt).
 
 Det er korrekturleserens jobb å se ekstra nøye på dette!
 

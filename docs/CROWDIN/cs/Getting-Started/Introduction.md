@@ -42,7 +42,7 @@ Na trh bylo uvedeno také několik komerčních systémů hybridní uzavřené s
 
 **Obrázek 1**. Základní schéma Android APS, AAPS.
 
-Android APS (**AAPS**) je systém hybridní uzavřené smyčky nebo také systém umělé slinivky (APS). Výpočty dávek inzulínu provádí pomocí ověřených algoritmů [OpenAPS](https://openaps.org/) (souboru pravidel), které vyvinula komunita T1D #WeAreNotWaiting.
+Android APS (**AAPS**) is a hybrid closed loop system, or Artificial Pancreas System (APS). Výpočty dávek inzulínu provádí pomocí ověřených algoritmů [OpenAPS](https://openaps.org/) (souboru pravidel), které vyvinula komunita T1D #WeAreNotWaiting.
 
 Protože OpenAPS funguje jen s některými staršími inzulínovými pumpami, vznikl v roce 2016 **AAPS** (který lze použít s více typy inzulínových pump) pro člena rodiny s diabetem 1. typu. Od těchto prvních dnů byl **AAPS** neustále vyvíjen a vylepšován týmem dobrovolných aplikačních vývojářů a dalšími nadšenci, kteří jsou ve spojení se světem diabetu I. typu. Dnes **AAPS** používá mnoho tisíc lidí po celém světě. Je to velmi přizpůsobitelný a všestranný systém. Protože je open-source, snadno spolupracuje i s mnoha dalšími open-source programy a platformami pro diabetes. Základní komponenty současné verze **AAPS** systému jsou znázorněny na **obrázku 1** výše.
 
@@ -54,7 +54,7 @@ Protože OpenAPS funguje jen s některými staršími inzulínovými pumpami, vz
 
 Kromě **AAPS** budete do vašeho **chytrého telefonu s Androidem** muset také nainstalovat další aplikaci. Tato [další aplikace](../Getting-Started/CompatiblesCgms.md) přijímá data o glykémii ze senzoru (**2**) přes Bluetooth a pak je v telefonu předává **aplikaci AAPS**.
 
-**AAPS aplikace** využívá rozhodovací proces (**algoritmus**) z OpenAPS. Nováčci začínají se základním **oref0**  algoritmem, ale jak postupují s AAPS, mohou přepnout na novější algoritmus  **oref1**. Jestli budete využívat algoritmus oref0 nebo oref1 závisí na tom, který bude nejlépe vyhovovat vaší situaci.  V obou případech vezme algoritmus do úvahy množství faktorů a provede rychlé kalkulace pokaždé, když přijdou nová měření ze senzoru. Algoritmus pak přes Bluetooth posílá inzulínové pumpě (**3**) pokyny, kolik inzulínu má podat. Všechny informace lze posílat přes mobilní data nebo Wi-Fi na internet (**4**). Pokud je to třeba, mohou být tyto informace sdíleny se sledujícími uživateli a/nebo shromažďovány k analýze. Volitelně můžete s telefonem spárovat také [chytré hodinky](../Getting-Started/Watches.md) (**5**). Na nich rychle uvidíte svá data a s některými hodinkami můžete do **AAPS** posílat i základní příkazy.
+**AAPS aplikace** využívá rozhodovací proces (**algoritmus**) z OpenAPS. Beginners start out using the basic **oref0** algorithm, but it is possible to switch to using the newer **oref1** algorithm as you progress with AAPS. Jestli budete využívat algoritmus oref0 nebo oref1 závisí na tom, který bude nejlépe vyhovovat vaší situaci.  V obou případech vezme algoritmus do úvahy množství faktorů a provede rychlé kalkulace pokaždé, když přijdou nová měření ze senzoru. Algoritmus pak přes Bluetooth posílá inzulínové pumpě (**3**) pokyny, kolik inzulínu má podat. Všechny informace lze posílat přes mobilní data nebo Wi-Fi na internet (**4**). Pokud je to třeba, mohou být tyto informace sdíleny se sledujícími uživateli a/nebo shromažďovány k analýze. Volitelně můžete s telefonem spárovat také [chytré hodinky](../Getting-Started/Watches.md) (**5**). Na nich rychle uvidíte svá data a s některými hodinkami můžete do **AAPS** posílat i základní příkazy.
 
 ## Jaké má systém AAPS výhody?
 
@@ -98,13 +98,13 @@ Uživatelé mohou snadno přidat nebo odebrat moduly nebo funkce. **AAPS** můž
 
  a) Můžete nastavit nižší cílovou **glykémii** 30 minut před jídlem; cíl lze nastavit až na 4,0 mmol/l (72 mg/dl).
 
- b) Pokud vám resistence na inzulín způsobuje vysokou hladinu cukru v krvi, **AAPS** vám umožní nastavit **automatizační** pravidlo, které při překročení glykémie 8 mmol/L (144 mg/dL) přepne na (například) 120% profil (výsledkem je 20% nárůst bazálních dávek a posílení dalších faktorů oproti parametrům vašeho obvyklého **profilu**). Automatizační pravidlo se po nastaveném čase vypne. Pravidlo automatizace může být nastaveno ke spuštění pouze v některé dny v týdnu, v určitou denní dobu nebo dokonce na určitých místech.
+ b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in a 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). Automatizační pravidlo se po nastaveném čase vypne. Pravidlo automatizace může být nastaveno ke spuštění pouze v některé dny v týdnu, v určitou denní dobu nebo dokonce na určitých místech.
 
- c) Pokud vaše dítě začne bez předchozího upozornění skákat na trampolíně, **AAPS** vám umožní zastavit dávkování inzulínu na určitou dobu přímo přes telefon.
+ c) If your child is on a trampoline with no advance notice, **AAPS** allows insulin suspension for a set time period, directly via the phone.
 
- d) Po opětovném připojení inzulínové pumpy, která byla odpojena kvůli plavání, **AAPS** spočítá množství bazálního inzulínu vynechané v průběhu odpojení a opatrně ho s ohledem na vaši aktuální glykémii dopošle. Jakýkoliv nepotřebný inzulín může být přepsán pouhým zrušením zmeškaného bazálu.
+ d) After reconnecting a tubed pump which has been disconnected for swimming, **AAPS** will calculate the basal insulin you have missed while disconnected and deliver it carefully, according to your current BG. Jakýkoliv nepotřebný inzulín může být přepsán pouhým zrušením zmeškaného bazálu.
 
- e) **AAPS** je vybaven možností nastavení odlišných profilů pro různé situace, se snadným přepínáním mezi jednotlivými profily. Například funkce, které umožňují algoritmu rychleji snížit zvýšenou glykémii (jako jsou super mikro bolusy („**SMB**“), neoznámená jídla („**UAM**“)), mohou být nastavené tak, aby fungovaly pouze přes den, pokud se obáváte nočních hypoglykémií.
+ e) **AAPS** je vybaven možností nastavení odlišných profilů pro různé situace, se snadným přepínáním mezi jednotlivými profily. For example, features which make the algorithm quicker to bring down elevated BG (like supermicro boluses (“**SMB**”) and unannounced meals (“**UAM**”)) can be set to only work during the daytime, if you are worried about night-time hypos.
 
 To vše jsou příklady, celá škála funkcí poskytuje velkou flexibilitu pro každodenní život, včetně sportu, nemoci, hormonálních cyklů _atd._. Konečně, je to jen na uživateli aby se rozhodl, jak chce tuto volnost využít a proto neexistuje jediná automatizace pro všechny.
 
@@ -295,9 +295,9 @@ Lékaři (alespoň ve Spojeném království) nemají zakázáno předepisovat n
 3. DIY „bionická slinivka“ mění léčbu diabetu - co bude dál? [_Nature_ (2023), _620_, 940-941](https://doi.org/10.1038/d41586-023-02648-9)
 4. Předepisování neschválených zdravotnických prostředků? Případ DIY systému umělé slinivky [_Medical law international_, (2021), _21_, 42-68](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
 5. [Prohlášení Berlínského institutu pro zdravotnictví, 2022](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
-6. Do-It-Yourself automatické dávkování inzulínu: Uživatelský manuál pro zdravotníky (Diabetes Canada position and guide) [_Canadian Journal of Diabetes_, (2023)_47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
+6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (Diabetes Canada position and guide) [_Canadian Journal of Diabetes_ (2023), _47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
 7.  Nizozemsko (EN/NL) - pro lékaře - [jak pomáhat lidem na open source systémech automatizovaného dávkování inzulínu](https://www.diabetotech.com/blog/how-to-help-people-on-open-source-automated-insulin-delivery-systems)
-8. První použití Open-source automatizovaného dávkování inzulínu AndroidAPS ve scénáři Plně uzavřené smyčky: Pancreas4ALLRandomized Pilot Study [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
+8. First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALL Randomized Pilot Study [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
 9. Děti předškolního a školního věku využívají přechod z pumpy propojené se senzorem na hybridní uzavřenou smyčku AndroidAPS: retrospektivní analýza [_Pediatr. Diabetes_ 2021, _22_, 594-604. 2021](https://onlinelibrary.wiley.com/doi/epdf/10.1111/pedi.13190)
 10. Výsledky projektu OPEN financovaného Evropskou unií – Outcomes of Patient’s Evidence with Novel, Do-it-Yourself Artificial Pancreas Technology (https://www.open-diabetes.eu/publications)
 
@@ -379,7 +379,7 @@ nebo:
 
 2) Stiskněte klávesu Windows a do vyhledávacího pole zadejte „Ovládací panel“, otevřete stisknutím Enter. Otevře se okno "Všechny položky ovládacího panelu".
 
-Stisknutím písmene C se dostanete do "Centra usnadnění přístupu", otevřete stisknutím Enter.
+Press the letter E to get to “Ease of Access Centre”, open with Enter.
 
 Pak otevřete „Použít počítač bez obrazovky“.
 

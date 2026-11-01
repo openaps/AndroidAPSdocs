@@ -78,7 +78,7 @@ Volgende stap: installeer de Wear-apk op het horloge, zie [AAPS instellen op je 
 
 Tijdens het bouwen van de volledige **AAPS**-app (en eigenlijk elke ondertekende app) maakt Android Studio een .json-bestand in dezelfde map. Dit geeft dan fouten met [niet-gecommitte wijzigingen](#troubleshooting_androidstudio-uncommitted-changes) als je de volgende ondertekende app probeert te bouwen, zoals de **AAPS** Wear-app. De snelste oplossing is om naar de map te gaan waarin de volledige AAPS-app gebouwd is. Je map ziet er waarschijnlijk ongeveer zo uit:
 
-`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\aapsclient\release.`
+`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\full\release.`
 
 Verwijder het overbodige .json-bestand, of verplaats het uit de map. Probeer daarna de **AAPS** Wear-app opnieuw te bouwen. Werkt dat niet, dan helpt de uitgebreidere [handleiding voor probleemoplossing](../GettingHelp/TroubleshootingAndroidStudio.md) je om het bestand te vinden dat het probleem veroorzaakt. Dat kan ook je keystore-bestand zijn.
 

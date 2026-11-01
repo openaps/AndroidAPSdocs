@@ -76,7 +76,7 @@ Le driver Insight ajuste automatiquement l'heure de la pompe à l'heure du tél�
 
 Les changements de fuseau horaire gardent l'historique intact, seule la DTQ peut être touchée. Changer l'heure du téléphone à la main peut créer des problèmes avec l'historique et l'**IA**. Si vous changez l'heure à la main, vérifiez bien l'**IA**.
 
-Quand le fuseau horaire ou l'heure change, les **DBT** en cours sont arrêtés.
+When the time zone or time changes running **TBRs** are stopped.
 
 (time-adjustment-daylight-savings-time-dst)=
 
@@ -108,8 +108,8 @@ Si vous faites un bolus avec la calculatrice d'**AAPS**, n'utilisez pas les donn
 
 ### Heure d'été pour l'Omnipod Dash
 
-* Soit vous laissez **AAPS** utiliser temporairement le débit basal de fond après le changement d'heure, comme expliqué plus haut.
-* Soit, si vous ne voulez pas qu'**AAPS** utilise temporairement le débit basal de fond pendant la nuit, vous pouvez changer de fuseau horaire la veille du changement d'heure pour éviter une perturbation pendant la nuit. ATTENTION : CETTE OPTION PEUT FAIRE EXPIRER VOTRE POD PLUS TÔT. AYEZ DU MATÉRIEL AVEC VOUS SI VOUS CHOISISSEZ LA FONCTION CI-DESSOUS.
+* Either allow **AAPS** to temporarily default to background basal after DST has taken place as explained above.
+* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day before DST is due to take place to avoid overnight disruption. ATTENTION : CETTE OPTION PEUT FAIRE EXPIRER VOTRE POD PLUS TÔT. AYEZ DU MATÉRIEL AVEC VOUS SI VOUS CHOISISSEZ LA FONCTION CI-DESSOUS.
 
 #### Actions à faire avant le changement d'heure
 
@@ -129,6 +129,6 @@ Si vous faites un bolus avec la calculatrice d'**AAPS**, n'utilisez pas les donn
 
 3. Dans **AAPS**, actualisez votre pompe et passez au **Profil** souhaité.
 
-4. Vérifiez l'**IA** et les **GA** dans **AAPS**. S'ils sont faux, désactivez la **Boucle** pendant au moins une DAI ou le temps max d'absorption des glucides, selon le plus long des deux.
+4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA or the maximum carb absorption time (**Absorption max time**), whichever is longer.
 
 5. Actions à faire après le changement d'heure. Un bon moment pour revenir au fuseau horaire local est quand l'**IA** est faible. Par exemple, une heure avant un repas comme le petit-déjeuner. Idéalement, vos **GA** et votre **IA** doivent être tous les deux proches de zéro.

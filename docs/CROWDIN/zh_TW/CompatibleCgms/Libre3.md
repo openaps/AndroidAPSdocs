@@ -22,7 +22,7 @@ Freestyle Libre 3 (FSL3) 需要特殊設定才能將血糖值接收至 AAPS。�
 ### 步驟 1：設定 Juggluco
 從[此處](https://www.juggluco.nl/Juggluco/download.html)下載並安裝 Juggluco 應用程式。按照[此處](https://www.juggluco.nl/Juggluco/libre3/)的指示操作。
 
-請確認有將血糖值傳送至 xDrip：您可以在 Juggluco 的設定中，設定將血糖值傳送至其他 App。 Juggluco 可以傳送三種這類廣播訊息：**修改版 Libre 廣播**最初是由修改版 LibreLink App 使用，也可用來將血糖值傳送至 xDrip
+請確認有將血糖值傳送至 xDrip：您可以在 Juggluco 的設定中，設定將血糖值傳送至其他 App。 Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip.
 
 ### 步驟 2：設定 xDrip
 
@@ -69,7 +69,7 @@ Freestyle Libre 3 (FSL3) 需要特殊設定才能將血糖值接收至 AAPS。�
 
 ![終止傳感器](../images/libre3/step_14.jpg)
 
-注意：當兩個感測器都在使用中時，Juggluco 會將其中一個感測器的最新讀取值傳送至 xDrip。如果感測器尚未校正，且讀取到的血糖值相近，xDrip 收到的血糖值可能會出現跳動。如果你終止了錯誤的傳感器，可以透過掃描傳感器重新啟用他。
+注意：當兩個感測器都在使用中時，Juggluco 會將其中一個感測器的最新讀取值傳送至 xDrip。 If the sensors are not calibrated to read BG similarly, this may result in jumpy BG values being reported to xDrip. 如果你終止了錯誤的傳感器，可以透過掃描傳感器重新啟用他。
 
 ## 在 Libre 3 和 Juggluco 應用程式之間切換傳感器
 
@@ -99,4 +99,4 @@ Freestyle Libre 3 (FSL3) 需要特殊設定才能將血糖值接收至 AAPS。�
 
 原始說明：[jkaltes 網站](https://www.juggluco.nl/Juggluco/libre3/)
 
-其他 Github 倉庫：[Github 連結](https://github.com/maheini/FreeStyle-Libre-3-patch)
+Additional GitHub repo: [GitHub link](https://github.com/maheini/FreeStyle-Libre-3-patch)

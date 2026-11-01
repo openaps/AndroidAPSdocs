@@ -7,7 +7,7 @@ Si vous ne voulez pas créer de compte Gmail dédié à **AAPS**, vous pouvez pa
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Avec un espace Google Drive dédié, vous ne risquez pas de remplir la limite de votre Google Drive personnel avec **Exporter les paramètres**.
+- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
 - Chaque version d'**AAPS** (et des applications associées comme xDrip, BYODA, etc.) sera stockée dans un seul endroit, indépendant de votre ordinateur. Si votre PC ou votre téléphone est volé, perdu ou cassé, vous aurez toujours accès à vos données.
 - Avec une configuration identique, l'aide en ligne est plus simple entre utilisateurs qui ont la même structure de dossiers.
 - Selon la configuration (voir ci-dessous), vous aurez une identité séparée (un alias) pour communiquer dans la communauté. Cela peut protéger votre vie privée. 
@@ -45,13 +45,13 @@ Cliquez [ici](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF
  Voici les étapes montrées dans la vidéo :
 
 Dans cet exemple : 
-- Votre compte Google existant « _de tous les jours_ » est <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
+- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
 - Votre nouveau compte Gmail « _AAPS_ » sera : <donald.muck42.aaps@gmail.com> ; ![](../images/Building-the-App/building_0003.png)
 
 
-### Allez sur <https://account.google.com> 
+### Go to <https://myaccount.google.com> 
 
- Si vous êtes déjà connecté à Google, vous arriverez sur la page **Mon compte** de votre compte « de tous les jours ». (1) Cliquez en haut à droite de la page sur votre photo de profil (ici, un simple ![](../images/Building-the-App/building_0002.png) (2) choisissez « _Ajouter un autre compte_ ».
+ Si vous êtes déjà connecté à Google, vous arriverez sur la page **Mon compte** de votre compte « de tous les jours ». (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
 
 ![](../images/Building-the-App/building_0005.png)
 
@@ -87,7 +87,7 @@ Gmail affiche le nom du compte. Google vous demandera d'accepter les conditions 
 
 ### Personnaliser l'affichage du nouveau profil
 
-Vous devriez maintenant être sur la page « Mon compte » de Gmail, avec votre nouveau compte e-mail dédié à **AAPS**. Par défaut, la photo de profil est la première lettre de votre nom. Changez-la pour une image unique, pour éviter les confusions… Dans cet exemple, Donald.Muck.AAPS a remplacé ![](../images/Building-the-App/building_0002.png) par ![](../images/Building-the-App/building_0003.png)
+Vous devriez maintenant être sur la page « Mon compte » de Gmail, avec votre nouveau compte e-mail dédié à **AAPS**. Par défaut, la photo de profil est la première lettre de votre nom. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
@@ -101,7 +101,7 @@ Cette partie peut être un peu déroutante, car vous devrez passer d'un compte �
 2. Faites un clic droit sur l'icône de votre navigateur dans la barre des tâches
 3. Dans le menu, choisissez « Nouvelle fenêtre »... et réglez-la pour qu'elle prenne seulement la moitié basse de l'écran.
 
-Ouvrez <https://gmail.com> dans chaque fenêtre du navigateur. Vérifiez que votre compte personnel est en haut et que le nouveau compte dédié à **AAPS** est en bas. Vous le reconnaissez facilement à la photo de profil en haut à droite. (si besoin, vous pouvez toujours changer de compte en cliquant sur la photo de profil et en choisissant le bon compte.
+Ouvrez <https://gmail.com> dans chaque fenêtre du navigateur. Vérifiez que votre compte personnel est en haut et que le nouveau compte dédié à **AAPS** est en bas. Vous le reconnaissez facilement à la photo de profil en haut à droite. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
 
 ![](../images/Building-the-App/building_0009.png)
 

@@ -54,7 +54,7 @@ As estatísticas do tempo no alvo apertado (TITR), 70–140 mg/dl ou 3,9–7,8 m
 
 **Fale sobre os alvos com o seu endocrinologista**
 
-A sua diabetes pode ser diferente. Qualquer alvo sugerido deve ser discutido com o seu endocrinologista ou com a sua equipa médica. Se forem usadas corretamente, as estatísticas do AAPS podem ser uma ferramenta eficaz para seguir as tendências da __glicose__ e acompanhar o progresso.
+A sua diabetes pode ser diferente. Qualquer alvo sugerido deve ser discutido com o seu endocrinologista ou com a sua equipa médica. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress.
 
 ![Estatísticas](../images/Maintenance/statistics3.png)
 
@@ -117,7 +117,7 @@ No fim de cada linha, pequenos ícones mostram de onde vêm os dados ou para ond
 ![Hidratos e bólus](../images/TreatmentsView1.png)
 
 Neste separador pode ver o registo de bólus e de hidratos de carbono. Cada bólus (linha **1**) mostra a IA associada que ainda resta ao lado da quantidade de insulina. A origem do bólus pode ser:
-* Refeição (introduzido manualmente com os botões Insulina, Assistente Rápido ou Assistente de Bólus)
+* Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
 * SMB, quando usa a funcionalidade SMB
 
 Os registos de hidratos de carbono (linha **2**) aparecem com a quantidade em gramas.
@@ -147,9 +147,9 @@ As **basais temporárias** aplicadas pelo loop aparecem aqui. Quando um registo 
 * IA positiva, se a basal temporária foi mais alta do que a definida no Perfil
 * IA negativa, para uma basal temporária de zero (como na linha **1**) ou se a basal temporária foi mais baixa do que a definida no Perfil
 
-Apagar os registos só afeta os seus relatórios no Nightscout e provavelmente vai falsear a sua IA real - não é recomendado.
+Deleting the entries only affects your reports in Nightscout and will probably distort your real IOB - it is not recommended.
 
-À esquerda de uma linha, um S vermelho significa «Suspender»: acontece quando a basal não está a ser administrada nesse momento. É uma situação normal, por exemplo, durante a mudança de um Pod.
+On the left of a line, a red S means “Suspend”: it happens when basal is not currently delivered. É uma situação normal, por exemplo, durante a mudança de um Pod.
 
 ### Alvo Temporário
 
@@ -178,7 +178,7 @@ Este separador mostra todas as notas e registos do careportal gravados no Nights
 
 ![Modo de funcionamento](../images/TreatmentsView6.png)
 
-Este separador mostra o histórico das mudanças do [estado do loop](#AapsScreens-loop-status): aberto, fechado, SGB, suspenso, desligado.
+This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
 
 ### Entrada de Utilizador
 

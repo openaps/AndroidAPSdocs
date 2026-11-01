@@ -19,7 +19,7 @@ Automation rules are created and modified from the **Automation** screen (**Mana
 
 - 需执行的一个或多个操作。
 
-    例如：触发警报；调整基础率百分比；Pod更换时导出AAPS设置。
+    Such as an alarm or setting a profile percentage or exporting the AAPS settings on Pod change.
 
 
 有多种自动化选项可供选择，建议用户在AAPS应用的自动化部分中详细研究这些选项。 You can also search the AAPS user groups on [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and [**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users.
@@ -38,11 +38,11 @@ Automation rules are created and modified from the **Automation** screen (**Mana
 
 用户每天早上6点锻炼：他需要在锻炼前，即早上5点，手动在AAPS中设置“TT-活动”。
 
-![Alt text](../images/Automations/automation_concept_manual.png)
+![Manual actions without automation](../images/Automations/automation_concept_manual.png)
 
 用户设置了一个**自动操作**，在早上5点触发“TT-活动”，以确保他们的**血糖**和**IOB**在准备6点锻炼时处于最佳状态：
 
-![Alt text](../images/Automations/automation_concept_automated.png)
+![Actions done by an automation](../images/Automations/automation_concept_automated.png)
 
 ## 开始使用自动操作前的关键考虑
 
@@ -91,12 +91,12 @@ To set up an **Automation**, press the **+** button on the Automation screen to 
 
 要停用**自动操作**规则，请取消勾选规则名称左侧的框。 The example below shows an **Automation** as either activated (‘ticked') or deactivated (‘unticked’):
 
-![Alt text](../images/Automations/automation_rule_activated_deactivated.png)
+![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
 
 
 在设置**自动化**时，您可以首先通过激活“操作”下的“通知”选项来测试它。这会触发**AAPS**首先显示通知，而不是实际自动化操作。当您确认通知已在正确的时间/条件下触发后，可以更新**自动化**规则，将“通知”替换为“操作”。
 
-![Alt text](../images/Automations/automation_alert_actions.png)
+![Alert actions](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
@@ -114,7 +114,7 @@ To set up an **Automation**, press the **+** button on the Automation screen to 
 
 * A **Temp Target** set by an **Automation** has to be between 72 and 180 mg/dL (or 4 and 10 mmol/L).
 * The **Profile Percentage** has to be between 50% and 130%.
-* **自动操作**执行（及首次执行）之间有5分钟的时间限制。
+* There is a 5 minute time limit between executions of **Automation** (and first execution).
 
 ## 正确使用负值
 
@@ -125,7 +125,7 @@ To set up an **Automation**, press the **+** button on the Automation screen to 
 
 在选择“条件”中的负值（如“小于”）时需要谨慎。例如：
 
-![Alt text](../images/Automations/automation_comparison_operators.png)
+![Comparison operators](../images/Automations/automation_comparison_operators.png)
 
 **Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/L" (or "-2mg/dL") will:
 
@@ -240,7 +240,7 @@ Scroll down to see the rest of the list:
 
 ![The events of the Note action](../images/Automations/automation_action_careportal_events.png) ![The Note action set to Pump Site Change](../images/Automations/automation_action_careportal_site_change.png)
 
-**Actions:** **Send SMS** (in the **Alerts** group)
+**Actions:** **Send SMS to all numbers** (in the **Alerts** group)
 
 **选项：**
 
@@ -258,7 +258,7 @@ Scroll down to see the rest of the list:
 
 * choose **On** or **Off**. This changes the **Enable SMB** setting of OpenAPS SMB, exactly as if you had changed it in **Settings**, and stays until you or another rule change it back.
 
-**Actions:** **Autotune profile** (in the **Loop & insulin** group)
+**Actions:** **Run Autotune** (in the **Loop & insulin** group)
 
 **选项：**
 
@@ -278,39 +278,39 @@ Scroll down to see the rest of the list:
 
 添加“操作”后，必须点击并调整默认值以更改为所需的数字。
 
-![Alt text](../images/Automations/automation_action_temp_target_values.png)
+![Temp target action values](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## **自动操作**列表中的顺序很重要
- **AAPS**将按照偏好顺序自动执行创建的规则，从**自动操作**列表的顶部开始。例如，如果“低血糖”**自动操作**是所有规则中最重要的，那么它应该出现在用户**自动操作**列表的顶部，如下所示：
+ **AAPS**将按照偏好顺序自动执行创建的规则，从**自动操作**列表的顶部开始。 For example, if the ‘Low’ **Automation** is the most important **Automation**, above all other rules, then this **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
 
 
-![Alt text](../images/Automations/automation_rule_list.png)
+![List of automation rules](../images/Automations/automation_rule_list.png)
 
-To reprioritize the **Automation** rules, touch and hold the **=** handle on the right side of the rule. 通过上下移动规则来重新排列**自动化**的顺序。
+To reprioritize the **Automation** rules, touch and hold the **=** handle on the right side of the rule. Reorder the **Automations** by moving the rules up or down.
 
-![Alt text](../images/Automations/automation_rule_reorder.png)
+![Reorder automation rules](../images/Automations/automation_rule_reorder.png)
 
 ## 如何删除自动操作规则
 
 要删除一个**自动化**规则，请点击垃圾桶图标。
 
-![Alt text](../images/Automations/automation_rule_delete.png)
+![Delete automation rules](../images/Automations/automation_rule_delete.png)
 
 ## 自动化示例
 
-以下是**自动操作**的示例。关于**自动操作**以及用户如何个性化**自动操作**的进一步讨论，可以在Facebook讨论组或Discord上找到。下面的示例不应在用户未充分理解**自动操作**将如何工作的情况下复制。
+以下是**自动操作**的示例。 Further discussion on **Automations** and how users have individualised their **Automation** can be found in Facebook discussions groups or on Discord. 下面的示例不应在用户未充分理解**自动操作**将如何工作的情况下复制。
 
 (automations-low-glucose-temp-target)=
 ### 低血糖临时目标
 
 This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is lesser than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
 
-![Alt text](../images/Automations/automation_example_low_glucose_rule.png)
+![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
 
 ### 午餐时间临时目标（带“位置”）
 
-![Alt text](../images/Automations/automation_example_lunch_rule.png)
+![Example: lunch rule](../images/Automations/automation_example_lunch_rule.png)
 
 此**自动操作**为在工作日中午左右吃午餐的用户创建，但仅在用户位于设定“位置”时才触发。  So if the user is not at work one day, this **Automation** will not activate.
 
@@ -318,7 +318,7 @@ This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to dri
 
 The ‘Trigger’ location has a name, a position (tap **Pick from map**, or use your current location) and a radius in metres, and fires when you are inside (or outside) the area:
 
-![Alt text](../images/Automations/automation_example_lunch_location_condition.png)
+![Example: lunch rule with location condition](../images/Automations/automation_example_lunch_location_condition.png)
 
 由于“和”连接，**自动操作**仅在“选定时间”且用户在选定位置时才发生。
 
@@ -328,10 +328,10 @@ The **Automation** will not be triggered on any other time at this location or a
 
 Using a Wi-Fi SSID is a good option to trigger an **Automation** while within range of a specific Wi-Fi network (compared with GPS): it is fairly precise, uses less battery, and works in enclosed spaces where GPS and other location services might not be available.
 
-下面是另一个示例，设置工作日前早餐前的**临时目标**（1）。
+Here is another example of setting up a **Temp Target** for work days only before breakfast (1).
 
 
-The **Automation** will trigger at 05:30am only on Monday-Friday(2)  
+The **Automation** will trigger at 05:30am only on Monday-Friday (2)  
 and while being connected to a home Wi-Fi network (3).
 
 
@@ -348,7 +348,7 @@ Scroll down to see the action: a **Temp Target** of 75 mg/dL for 30 minutes (4).
 1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
 1) Wi-Fi SSID = My_Home_WiFi_Name
 
-![Alt text](../images/Automations/automation_example_wifi_condition.png)
+![Example: WiFi condition](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
@@ -393,7 +393,7 @@ In the example below, the **Low glucose temp target** rule (1) (see [Low Glucose
 
 Check that the box left of the **Automation** name is ‘ticked’ to ensure the rule is activated:
 
-![Alt text](../images/Automations/automation_rule_activated_deactivated.png)
+![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
 
 * 问题：__我的自动化触发顺序不正确。__
 

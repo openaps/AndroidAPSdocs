@@ -6,7 +6,7 @@
 Αυτό είναι το **Βήμα 1** της [Δημιουργίας μέσω browser](BrowserBuild.md).
 ```
 
-Θα χρειαστεί να αποθηκεύσετε με ασφάλεια (ως secret) στο GitHub το προσωπικό σας κλειδί Android Java και τα στοιχεία του Google Drive σας (θα εξηγήσουμε πώς αργότερα).
+You will need to store your personal Android Java Key and Google Drive information as secrets in GitHub (later in the process, we will explain how).
 
 Αυτό δεν γίνεται μέσα στο δημόσιο αποθετήριο του AndroidAPS, γι' αυτό πρέπει να φτιάξετε το δικό σας αντίγραφο του πηγαίου κώδικα (που λέγεται fork).
 
@@ -29,16 +29,16 @@
 
 ![fork_aaps_confirm](../images/Building-the-App/CI/ForkAAPS2.png)
 
-*Σημείωση: μπορείτε να **αποεπιλέξετε** το "Copy the master branch only" (αντιγραφή μόνο του κλάδου master), αν θέλετε να δημιουργείτε εκδόσεις για προγραμματιστές ή δικές σας παραλλαγές.*
+*Note: you can **unselect** "Copy the master branch only" if you will want to build developer versions or customizations.*
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
 ```{note}
-Δεν μπορείτε να κάνετε fork και βλέπετε αυτό;</br></br>
-**`No available destinations to fork this repository.`**</br></br>
-![Already forked](../images/Building-the-App/CI/ForkAAPS3b.png)</br></br>
-Αυτό σημαίνει ότι έχετε ήδη ένα fork του AndroidAPS.</br>
-Βεβαιωθείτε ότι είναι ενημερωμένο και συνεχίστε με τα βήματα προετοιμασίας.
+You cannot fork and you see this?<br/><br/>
+**`No available destinations to fork this repository.`**<br/><br/>
+![Already forked](../images/Building-the-App/CI/ForkAAPS3b.png)<br/><br/>
+This means you already have an existing fork of AndroidAPS.<br/>
+Make sure it's up to date and continue to Preparation Steps.
 ```
 
 ```{warning}

@@ -70,8 +70,8 @@
 
 Στον επεξεργαστή ινσουλίνης μπορείτε:
 
-* να δώσετε στο προφίλ ένα **Ψευδώνυμο ινσουλίνης**, ώστε να το αναγνωρίζετε εύκολα,
-* να ορίσετε την **Κορυφή** (χρόνος μέχρι τη μέγιστη δράση της ινσουλίνης, σε λεπτά) και τη **DIA** (διάρκεια δράσης της ινσουλίνης, σε ώρες), είτε γράφοντας την τιμή είτε με τα κουμπιά **–** / **+**,
+* give the insulin an **Insulin nickname** so it is easy to recognise,
+* set the **Peak** (time to maximum insulin activity, in minutes) and the **DIA** (Duration of Insulin Action, in hours), either by typing the value or using the **–** / **+** buttons,
 * να πατήσετε ένα κουμπί προεπιλογής **Φόρτωση κορυφής από** — **Novorapid** (75 λεπ.), **Fiasp** (55 λεπ.) ή **Lyumjev** (45 λεπ.) — για να συμπληρώσετε με μία κίνηση τον τυπικό χρόνο κορυφής αυτής της ινσουλίνης.
 
 Τα επιτρεπόμενα εύρη είναι τα ίδια, όποια ινσουλίνη κι αν χρησιμοποιείτε:
@@ -225,17 +225,48 @@
     - **Χωρίς βαθμονόμηση**: οι τιμές του αισθητήρα χρησιμοποιούνται όπως είναι. Χρησιμοποιήστε το όταν ο αισθητήρας είναι ήδη βαθμονομημένος από το εργοστάσιο και ακριβής. Αυτή είναι η προεπιλογή.
     - **Γραμμική βαθμονόμηση**: το **AAPS** διορθώνει τις τιμές του αισθητήρα με μια κλίση και μια μετατόπιση που υπολογίζει από τις μετρήσεις σας από το δάχτυλο.
     
-    Πώς λειτουργεί η **Γραμμική βαθμονόμηση**:
+    How to use **Linear calibration**:
     
-    - Χρειάζεται να έχει καταγραφεί **αλλαγή αισθητήρα**, ώστε να ξέρει πότε ξεκίνησε η χρήση του αισθητήρα. Οι πρώτες 2 ώρες μετά την αλλαγή παραλείπονται ως προθέρμανση.
-    - Χρειάζεται τουλάχιστον **2 μετρήσεις από το δάχτυλο**. Οι πρόσφατες μετρήσεις μετράνε περισσότερο από τις παλιές.
-    - Η διόρθωση εφαρμόζεται μόνο όταν το αποτέλεσμα είναι σε ασφαλές εύρος. Αν οι μετρήσεις σας είναι πολύ κοντά μεταξύ τους, διορθώνεται μόνο η μετατόπιση.
-    - Το **Άνοιγμα πρόσθετου** δείχνει την κατάσταση της βαθμονόμησης, την κλίση και τη διόρθωση που χρησιμοποιούνται, και τη λίστα με τις μετρήσεις από το δάχτυλο. Μπορείτε να προσθέσετε μια μέτρηση με **Προσθήκη βαθμονόμησης** και να αφαιρέσετε μια λάθος μέτρηση.
+    1. Select **Linear calibration** in the **Calibration** category.
+    2. When you insert a new sensor, log the sensor change: use **Log sensor change** on the calibration screen, or enter a CGM sensor insert in the Careportal. This tells **AAPS** when the sensor session started. If **AAPS** notices a gap of more than 30 minutes in the readings, it may ask you to mark a sensor change; this prompt appears on the master only, not on a client.
+    3. Open the plugin and tap **Add calibration**. Enter your fingerstick value. **AAPS** pairs it with the sensor value from the last 10 minutes.
     
-    ```{admonition} Βαθμονομήστε προσεκτικά
+    A calibration is accepted only when:
+    
+    - a sensor change is logged and at least **2 hours** have passed since then (warm-up),
+    - your glucose is stable. If it changes too fast, the dialog tells you and shows the limit,
+    - there is a CGM reading from the last 10 minutes,
+    - it is for the current moment. You cannot enter older fingerstick values.
+    
+    How the correction works:
+    
+    - **AAPS** draws a straight line through the pairs of the current sensor: `corrected value = slope × sensor value + offset`.
+    - Newer pairs count more than older ones: a pair that is 2 days old counts about 37 %, a 4-day-old pair about 14 %. The line therefore follows your sensor as it drifts.
+    - At least **2 pairs** are needed.
+    - If the pairs are close together (less than 54 mg/dL / 3 mmol/L apart), only the values are shifted (offset, no slope).
+    - The slope is kept between 0.55 and 1.6. A slope outside this range is limited to the nearest value.
+    - Safety limit: if the correction at 100 mg/dL (5.5 mmol/L) would be more than ±30 mg/dL (1.7 mmol/L), no correction is applied. This protects you from a wrong entry.
+    
+    What it changes:
+    
+    - The corrected value is used everywhere: the BG on the main screen, the graph and the loop. The sensor readings themselves are not changed. The correction is applied on top, also to the earlier readings of the current sensor.
+    - A new sensor change starts from zero. Pairs from earlier sensors no longer count.
+    - On the graph, a calibration is shown as a marker at the fingerstick value.
+    - Calibrations are synchronized through Nightscout, so your clients show the same corrected values.
+    
+    Check and remove entries:
+    
+    - **Open plugin** shows the status (for example *Slope 0.85, mid-range correction -0.4*), a chart of your pairs with the line, and the list of entries.
+    - If an entry is wrong (for example, you had sugar on your finger), tap the bin icon next to it. The line is calculated again at once.
+    
+    ```{admonition} Using xDrip+ as BG source?
+    :class: note
+    xDrip+ has its own calibration. Calibrate in one place only, so that the sensor values are not corrected twice.
+    
+
+    {admonition} Calibrate with care
     :class: warning
-    Μια λάθος τιμή από το δάχτυλο οδηγεί σε λάθος τιμές γλυκόζης και άρα σε λάθος δόσεις ινσουλίνης. Πλύνετε τα χέρια σας πριν από τη μέτρηση και μη βαθμονομείτε όταν η γλυκόζη σας αλλάζει γρήγορα.
-    
+    A wrong fingerstick value leads to wrong glucose values and therefore to wrong insulin dosing. Πλύνετε τα χέρια σας πριν από τη μέτρηση και μη βαθμονομείτε όταν η γλυκόζη σας αλλάζει γρήγορα.
 
 ![Διαμόρφωση > Βαθμονόμηση](../images/v4/Configuration/configuration_calibration.png)
 
@@ -274,7 +305,7 @@
 * [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 * [Carelevo](../CompatiblePumps/CareLevo.md)
 * Εικονική αντλία: ανοιχτό κύκλωμα - μόνο προτάσεις του **AAPS** 
-  * όταν κάνετε τα πρώτα σας βήματα με το **AAPS**, κατά τα πρώτα [Βήματα](../SettingUpAaps/CompletingTheObjectives.md)
+  * as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
   * για αντλία που δεν έχει ακόμα οδηγό (driver)
 
 (config-builder-wrong-pump-data)=
@@ -295,7 +326,7 @@
 
 Επιλέξτε τον τύπο ανίχνευσης ευαισθησίας. Για περισσότερες λεπτομέρειες για τους διάφορους τύπους, [διαβάστε εδώ](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Αναλύει τα ιστορικά δεδομένα σε πραγματικό χρόνο και κάνει προσαρμογές, αν αναγνωρίσει ότι αντιδράτε στην ινσουλίνη πιο ευαίσθητα (ή αντίθετα, με μεγαλύτερη αντίσταση) από το συνηθισμένο. Περισσότερες λεπτομέρειες για το πώς υπολογίζεται ο ίδιος ο λόγος ευαισθησίας θα βρείτε στο [Βασικά χαρακτηριστικά του AAPS > Autosens](#Open-APS-features-autosens).
 
-Μπορείτε να δείτε την ευαισθησία σας στην κύρια οθόνη σε ένα [πρόσθετο γράφημα](#AapsScreens-section-g-additional-graphs), αν επιλέξετε SEN και κοιτάξετε τη λευκή γραμμή. Σημείωση: πρέπει να βρίσκεστε στο [Βήμα 8](#objectives-objective8), ώστε η Ανίχνευση ευαισθησίας/το [Autosens](#Open-APS-features-autosens) να προσαρμόζει αυτόματα την ποσότητα ινσουλίνης που χορηγείται. Πριν φτάσετε σε αυτό το βήμα, το ποσοστό Autosens / η γραμμή στο γράφημά σας εμφανίζεται μόνο για πληροφόρηση.
+You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs), by selecting SENS% and watching the white line. Σημείωση: πρέπει να βρίσκεστε στο [Βήμα 8](#objectives-objective8), ώστε η Ανίχνευση ευαισθησίας/το [Autosens](#Open-APS-features-autosens) να προσαρμόζει αυτόματα την ποσότητα ινσουλίνης που χορηγείται. Πριν φτάσετε σε αυτό το βήμα, το ποσοστό Autosens / η γραμμή στο γράφημά σας εμφανίζεται μόνο για πληροφόρηση.
 
 ### Ρύθμιση απορρόφησης
 

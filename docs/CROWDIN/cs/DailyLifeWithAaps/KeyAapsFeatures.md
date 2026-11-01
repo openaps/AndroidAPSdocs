@@ -125,7 +125,7 @@ Například: pokud je nejvyšší bazální dávka ve vašem profilu 0,5 U/h, po
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
-### Maximální celkový IOB, který OpenAPS nepřekročí
+### Max IOB for SMB
 
 Tato hodnota určuje maximální **aktivní inzulín** (IOB z bazálu i bolusu), pod kterým **AAPS** zůstane, když běží v režimu uzavřené smyčky. Je také známá jako **maxIOB**.
 
@@ -229,7 +229,7 @@ Toto nastavení není vidět, pokud je zapnuté „Povolit SMB vždy“.
 
 #### Interval SMB
 
-Tato funkce omezuje četnost SMB. Tato hodnota určuje minimální čas mezi SMB. Smyčka se spouští pokaždé, když přijde hodnota glykémie (obvykle každých 5 minut). Odečtěte 2 minuty, aby měla smyčka čas na dokončení. Např. pokud chcete, aby se SMB podávalo při každém běhu smyčky, nastavte 3 minuty.
+Tato funkce omezuje četnost SMB. Tato hodnota určuje minimální čas mezi SMB. Smyčka se spouští pokaždé, když přijde hodnota glykémie (obvykle každých 5 minut). Subtract 2 minutes to give loop additional time to complete. Např. pokud chcete, aby se SMB podávalo při každém běhu smyčky, nastavte 3 minuty.
 
 Výchozí hodnota: 3 min.
 
@@ -251,7 +251,7 @@ Toto nastavení umožňuje upravit sílu SMB během UAM, když už nejsou žádn
 
 Výchozí hodnota: stejná jako **Max minut bazálu pro omezení SMB**.
 
-Toto nastavení je vidět, jen pokud je zapnuté „Povolit SMB“ a „Povolit UAM“.
+This setting is only visible if "Enable SMB" and "Enable UAM" are switched on.
 
 (enable-uam)=
 
@@ -277,7 +277,7 @@ V každém případě se požadované sacharidy zobrazí v sekci COB na hlavní 
 
 Úplný přehled parametrů (včetně nastavení, která zde nejsou popsána) najdete v [dokumentaci OpenAPS k předvolbám a bezpečnostním nastavením](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
 
-**Vždy používat krátkou průměrnou deltu místo jednoduchých dat** Pokud tuto funkci zapnete, **AAPS** použije krátkou průměrnou deltu/glykémii z posledních 15 minut, což je obvykle průměr posledních tří hodnot. Díky tomu je **AAPS** stabilnější u zašuměných zdrojů dat, jako jsou xDrip a Libre.
+**Always use short average delta instead of simple delta** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. Díky tomu je **AAPS** stabilnější u zašuměných zdrojů dat, jako jsou xDrip a Libre.
 
 **Maximální denní bezpečnostní násobitel** Toto je důležité bezpečnostní omezení. Výchozí nastavení (které pravděpodobně nebude potřeba upravovat) je 3. To znamená, že **AAPS** nikdy nesmí nastavit dočasný bazál vyšší než trojnásobek nejvyšší hodinové bazální dávky naprogramované v pumpě a/nebo profilu uživatele. Příklad: pokud je vaše nejvyšší bazální dávka 1,0 U/h a maximální denní bezpečnostní násobitel je 3, může **AAPS** nastavit dočasný bazál nejvýše 3,0 U/h (= 3 x 1,0 U/h).
 
@@ -308,7 +308,7 @@ Po jejím výběru obsahují její **Nastavení** nastavení OpenAPS SMB a naví
   - když je glykémie **nad cílem**, ISF se zesílí;
   - váha **po jídle** (post-prandial) a váha **trvání** působí po jídle a když glykémie zůstává dlouho vysoká.
 - **Poměr podávání SMB** (s minimem, maximem a rozsahem glykémie): jaký podíl potřebného inzulínu lze podat jako SMB.
-- **SMB max rozšíření rozsahu**: kolikrát smí být překročen obvyklý limit velikosti SMB ([max minut bazálu](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), obvykle 120 minut). Výchozí hodnota 1 nic nemění; možné je až 5. Tuto experimentální hodnotu zvyšujte pomalu a opatrně.
+- **SMB max range extension**: by what factor the usual SMB size limit ([max minutes of basal](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), 30 minutes by default) may be exceeded. Výchozí hodnota 1 nic nemění; možné je až 5. Tuto experimentální hodnotu zvyšujte pomalu a opatrně.
 - **Procento prahu IOB**: procento max IOB, nad kterým se SMB vypnou.
 
     {admonition} Jen pro zkušené uživatele
@@ -339,11 +339,11 @@ Pevně nastavené parametry v **AAPS** jsou:
 
 *Viz také [přehled pevně naprogramovaných limitů](#Open-APS-features-overview-of-hard-coded-limits).*
 
-### Maximální bazální IOB, který OpenAPS může podat \[U\] (OpenAPS „max-iob“)
+### Max IOB for AMA
 
-Tento parametr omezuje maximální bazální IOB, při kterém **AAPS** ještě pracuje. Pokud je IOB vyšší, přestane se podávat další bazální inzulín, dokud bazální IOB neklesne pod limit.
+This parameter limits the maximum of basal IOB where **AAPS** still works. Pokud je IOB vyšší, přestane se podávat další bazální inzulín, dokud bazální IOB neklesne pod limit.
 
-Výchozí hodnota je 2, ale tento parametr byste měli zvyšovat pomalu, abyste viděli, jak moc na vás působí a která hodnota vám nejlépe vyhovuje. Hodnota je pro každého jiná a závisí také na průměrné celkové denní dávce (CDD). Z bezpečnostních důvodů jsou nastaveny limity vycházející z věku pacientů. „Pevný limit“ pro maxIOB je u AMA nižší než u SMB.
+The default value is 2, but you should raise this parameter slowly to see how much it affects you and which value fits best. It is different for everyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age. „Pevný limit“ pro maxIOB je u AMA nižší než u SMB.
 
 - Dítě: 3
 - Dospívající: 5
@@ -366,7 +366,7 @@ Pokud je tato možnost zapnutá, může Autosens upravovat také cíle (vedle ba
 - Za normálních okolností nemusíte nastavení v tomto dialogu měnit!
 - Pokud je přesto chcete změnit, ujistěte se, že rozumíte tomu, co děláte – úplný přehled parametrů najdete v [dokumentaci OpenAPS k předvolbám a bezpečnostním nastavením](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
 
-**Vždy používat krátkou průměrnou deltu místo jednoduchých dat** Pokud tuto funkci zapnete, **AAPS** použije krátkou průměrnou deltu/glykémii z posledních 15 minut, což je obvykle průměr posledních tří hodnot. Díky tomu pracuje **AAPS** stabilněji u zašuměných zdrojů dat, jako jsou xDrip a Libre.
+**Always use short average delta instead of simple delta** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. Díky tomu pracuje **AAPS** stabilněji u zašuměných zdrojů dat, jako jsou xDrip a Libre.
 
 **Maximální denní bezpečnostní násobitel** Toto je důležité bezpečnostní omezení. Výchozí nastavení (které pravděpodobně nebude potřeba upravovat) je 3. To znamená, že **AAPS** nikdy nesmí nastavit dočasný bazál vyšší než trojnásobek nejvyšší hodinové bazální dávky naprogramované v pumpě uživatele. Příklad: pokud je vaše nejvyšší bazální dávka 1,0 U/h a maximální denní bezpečnostní násobitel je 3, může **AAPS** nastavit dočasný bazál nejvýše 3,0 U/h (= 3 x 1,0 U/h).
 

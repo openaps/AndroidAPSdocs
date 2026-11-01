@@ -36,8 +36,8 @@ These steps are the same for every build method. Verifique nas [Notas de versão
 
 Depois de instalar o novo apk:
 
-- você pode verificar a versão do **AAPS** no seu telefone abrindo o **menu** (☰) no canto superior esquerdo e depois **Sobre** (como na captura de tela abaixo). A versão atual do **AAPS** pode ser vista;
-- verifique se a importação das configurações foi feita; e
-- verifique as configurações do **AAPS** em **Configurações** e confirme que elas continuam corretas.
+- you can check the **AAPS** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). The current **AAPS** version can be viewed;
+- make sure you have imported your settings; and
+- please check your **AAPS** settings under **Settings** and ensure these remain accurate.
 
 ![Diálogo Sobre com a versão do AAPS instalada](../images/about_dialog_version.png)

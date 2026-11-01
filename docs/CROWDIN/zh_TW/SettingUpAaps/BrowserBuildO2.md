@@ -3,7 +3,7 @@
 # 選項 2 – 上傳現有的金鑰庫
 
 ```{note}
-這是[瀏覽器建置](BrowserBuild.md)的[步驟 2 – 建立簽署用金鑰庫](BrowserBuildKeystore.md)的一部分。請確認您已閱讀[選項 1 或選項 2 的選擇說明](#aaps-ci-preparation)，並已下載準備檔案。
+這是[瀏覽器建置](BrowserBuild.md)的[步驟 2 – 建立簽署用金鑰庫](BrowserBuildKeystore.md)的一部分。 Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
 ```
 
 選項 2 會沿用您先前使用電腦上的 Android Studio 建置 AAPS 時所建立的 JKS。適合已有 JKS，且知道 JKS 密碼和別名的使用者。

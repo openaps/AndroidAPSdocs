@@ -59,11 +59,11 @@ Eksport ustawień AAPS do pliku pozwala przywrócić konfigurację z określoneg
 
 * Zawsze, gdy planujesz większe zmiany w konfiguracji (zmiana ustawień SMB, zmiana rodzaju insuliny, zmiana pompy, zmiany w automatyzacjach), zrób kopię zapasową **Ustawień** przed zmianami i po nich. Dzięki temu masz najnowsze ustawienia oraz kopię ustawień sprzed zmian, gdybyś musiał do nich wrócić.
 
-* Tylko dla użytkowników pomp bezdrenowych (np. Omnipod i Medtrum): plik **Ustawień** zawiera dane połączenia z obecnym podem i pozwala przywrócić połączenie z tym podem na nowym telefonie. Jeśli nie masz kopii ustawień wyeksportowanej po uruchomieniu obecnego poda, to przy wymianie telefonu musisz uruchomić nowy pod.
+* Tubeless pumps (Such as Omnipod and Medtrum) users only: the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. Jeśli nie masz kopii ustawień wyeksportowanej po uruchomieniu obecnego poda, to przy wymianie telefonu musisz uruchomić nowy pod.
 
 **Jak zrobić kopię ręcznie:**
 
-1. Jeśli importujesz lub eksportujesz **Ustawienia** po raz pierwszy, musisz ustawić hasło główne w [Ustawienia > Ochrona aplikacji](#Preferences-master-password). Ustaw hasło i zapisz je w bezpiecznym miejscu. _Bez tego hasła nie będziesz mieć dostępu do kopii zapasowych **Ustawień**._
+1. If this is your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). Ustaw hasło i zapisz je w bezpiecznym miejscu. _Bez tego hasła nie będziesz mieć dostępu do kopii zapasowych **Ustawień**._
 
 2. Na ekranie głównym **AAPS** otwórz **menu** (☰) > **Konserwacja**. Wybierz, gdzie zapisać plik, elementami **Lokalnie** i **Chmura** obok **Eksport ustawień** (patrz **Eksport lub import ustawień** poniżej), a potem dotknij **Eksport ustawień**. **AAPS** pokazuje, gdzie trafi plik: nazwę pliku dla opcji **Lokalnie**, **Dysk Google** dla opcji **Chmura**. Dotknij **OK**.
 
@@ -105,7 +105,7 @@ Aby wyeksportować lub zaimportować ustawienia, otwórz **menu** (☰) i wybier
 (ExportImportSettings-Automating-Settings-Export)=
 ### Automatyczny eksport ustawień
 
-Aby włączyć automatyczny eksport ustawień [(**patrz Automatyzacja**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export), otwórz [**Ustawienia** > **Konserwacja**](#preferences-maintenance-settings), rozwiń **Automatyczny Eksport Ustawień** i włącz **Włącz automatyczny eksport ustawień**.
+To automate settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
 
 Możesz teraz ustawić [Automatyzację](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export), aby eksportowała ustawienia regularnie (_np._ co tydzień) albo po wymianie poda.
 
@@ -176,7 +176,7 @@ Domyślnie import nie zmienia ustawień pompy: pompa wybrana w **Konfiguracji**,
 
 12. **AAPS** pyta **Zastosować zaimportowane ustawienia?** i podaje, ile ustawień się zmieni oraz, jeśli pole pozostało niezaznaczone, ile ustawień pompy zostanie zachowanych. Nic nie zostało jeszcze zapisane, więc **Anuluj** pozostawia telefon dokładnie w takim stanie, w jakim był. Dotknij **OK**, aby zastosować.
 
-    ![Zastosować zaimportowane ustawienia? okno dialogowe](../images/Maintenance/import_settings_apply.png)
+    ![Apply imported settings dialog](../images/Maintenance/import_settings_apply.png)
 
 13. **AAPS** od razu stosuje zaimportowane ustawienia, bez ponownego uruchamiania. Ponownie uruchamiane są tylko wtyczki, których ustawienia się zmieniły. W tym czasie **AAPS** pokazuje **Stosowanie ustawień…**; jeśli pompa jest zajęta, pokazuje **Oczekiwanie na pompę…** i stosuje ustawienia, gdy pompa będzie wolna. Jeśli pompa po minucie nadal jest zajęta, **AAPS** proponuje ponowną próbę. Komunikat **Ustawienia zastosowane** potwierdza, że zaimportowane ustawienia są w użyciu. Każde leczenie, które było w kolejce w czasie importu, zostaje usunięte, a **AAPS** informuje Cię, że zostało anulowane, więc nic nie zostanie wysłane do pompy dwa razy.
 

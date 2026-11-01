@@ -287,7 +287,7 @@
     | --- | --- | --- | --- | --- | --- |
     | ![治療對話框，胰島素頁面](../images/wearos/dialogs/dialog_treatment.png) | ![胰島素對話框](../images/wearos/dialogs/dialog_insulin.png) | ![碳水化合物對話框](../images/wearos/dialogs/dialog_carbs.png) | ![eCarbs 對話框](../images/wearos/dialogs/dialog_ecarbs.png) | ![臨時目標對話框，持續時間頁面](../images/wearos/dialogs/dialog_temp_target.png) | ![切換設定檔對話框](../images/wearos/dialogs/dialog_profile_switch.png) |
     
-    [1] 在手錶的 **設定** > **介面** 中，開啟 **計算器百分比**，即可在注射計算器中顯示百分比輸入欄位。預設百分比取自手機上的設定：「[傳送此百分比的注射嚮導結果](#Preferences-deliver-this-part-of-bolus-wizard-result)」。其他計算器設定則使用手機上 **設定** > **注射嚮導設定** 中的設定。
+    [1] 在手錶的 **設定** > **介面** 中，開啟 **計算器百分比**，即可在注射計算器中顯示百分比輸入欄位。 The default percentage comes from the phone's ["Bolus percentage"](#Preferences-deliver-this-part-of-bolus-wizard-result). 其他計算器設定則使用手機上 **設定** > **注射嚮導設定** 中的設定。
     
     [2] 在手錶的 **設定** > **介面** 中，開啟 **計算器餐點類型**，即可顯示 **餐點類型** 頁面。您可以選擇 **麵包**、**蛋糕** 或 **披薩**，將消化較慢的餐點所含碳水化合物分成現在攝取的碳水化合物和稍後攝取的 eCarbs。請參閱[選擇餐點類型](#WearOsSmartwatch-wizard-meal-type)。
     
@@ -357,7 +357,7 @@
     
     數位風格和自訂錶面可使用簡化 UI 模式。簡化 UI 為選用功能，可透過錶面設定進行設定（長按錶面，再點選「編輯」或齒輪圖示）。選取「簡化 UI」設定，並設為「充電時」或「永遠顯示並充電」。
     
-    Android 開發者選項允許你的手錶在充電期間保持喚醒狀態。如需啟用開發人員選項，請參閱[官方說明文件](https://developer.android.com/training/wearables/get-started/debugging)。在開發者選項中，將“充電時保持喚醒”設置為“開啟”。
+    Android 開發者選項允許你的手錶在充電期間保持喚醒狀態。如需啟用開發人員選項，請參閱[官方說明文件](https://developer.android.com/training/wearables/get-started/debugging)。 Set the “Stay awake when charging” to “on” in the developer options.
     
     注意：並非所有螢幕都能很好地處理永遠開啟功能。這可能會導致螢幕燒灼，特別是在較舊的 OLED 螢幕上。手錶通常會調暗螢幕以防止燒灼；請查閱你的使用手冊、製造商或網路上的建議。
     
@@ -385,7 +385,7 @@
     
     ## 延後鬧鐘捷徑
     
-    手錶會自行[顯示鬧鐘](#WearOsSmartwatch-phone-alarms)；此捷徑則提供另一種靜音方式，只要按一下即可。可以建立一個捷徑來暫停 AAPS 的警報/鬧鐘。透過手錶靜音更方便且比拿手機快。注意：你仍然需要檢查手機上的警報訊息並相應處理，但可以稍後再檢查。如果您的手錶有兩個按鈕，可以將其中一個按鈕指定給 `AAPS Snooze Alert` 程式。
+    手錶會自行[顯示鬧鐘](#WearOsSmartwatch-phone-alarms)；此捷徑則提供另一種靜音方式，只要按一下即可。可以建立一個捷徑來暫停 AAPS 的警報/鬧鐘。透過手錶靜音更方便且比拿手機快。 Note: you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. 如果您的手錶有兩個按鈕，可以將其中一個按鈕指定給 `AAPS Snooze Alert` 程式。
     
     若要連結 Samsung Watch 4 上的按鈕，請前往 `設定 > 進階功能 > 自訂按鈕 > 按兩下 > AAPS 延遲警示`
     
@@ -435,7 +435,7 @@
     
     如果您想建立自己的錶盤，請參閱[此處的指南](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md)。
     
-    建立自訂錶盤後，您可以與他人分享自己的 **AAPS** 自訂錶盤。您可以透過 GitHub 的 Pull Request，將 ZIP 檔案上傳至「ExchangeSiteCustomWatchfaces」資料夾。在合併 Pull Request 時，文件團隊會提取 CustomWatchface.png 檔案，並在檔名前加上 Zip 檔案名稱作為前綴。
+    Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into GitHub. 在合併 Pull Request 時，文件團隊會提取 CustomWatchface.png 檔案，並在檔名前加上 Zip 檔案名稱作為前綴。
     
     (WearOsSmartwatch-complications-watchface-download)=
     

@@ -201,18 +201,18 @@ The *Auth* column in the tables below, indicates whether such a strong authentic
 
 ### Dane CGM
 
-| Polecenie  | Auth | Funkcja i *odpowiedź*                                                                                                                                                                   |
-| ---------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BG         | Nie  | Zwraca: ostatnią BG, deltę, IOB (bolus i baza), COB<br/>*Ostatnia BG: 5,6 4 min temu, Delta: -0,2 mmol, IOB: 0,20U (Bolus: 0,10U Baza: 0,10U)*                                    |
-| CAL 5.6/90 | Tak  | Kalibruje CGM wartością 5,6/90<br/>(użyj wartości w Twoich jednostkach glukozy)<br/>Działa tylko, jeśli jest poprawnie ustawione w **AAPS**.<br/>*Kalibracja wysłana* |
+| Polecenie  | Auth | Funkcja i *odpowiedź*                                                                                                                                                                                                             |
+| ---------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BG         | Nie  | Zwraca: ostatnią BG, deltę, IOB (bolus i baza), COB<br/>*Ostatnia BG: 5,6 4 min temu, Delta: -0,2 mmol, IOB: 0,20U (Bolus: 0,10U Baza: 0,10U)*                                                                              |
+| CAL 5.6/90 | Tak  | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent. Receiving must be enabled in xDrip+.* |
 
 ### Pompa
 
-| Polecenie            | Auth | Funkcja i *odpowiedź*                                                                                 |
-| -------------------- | ---- | ----------------------------------------------------------------------------------------------------- |
-| POMPA                | Nie  | Last conn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
-| PUMP DISCONNECT *30* | Tak  | Odłącza pompę na *30* minut                                                                           |
-| PUMP CONNECT         | Tak  | Pompa ponownie podłączona                                                                             |
+| Polecenie            | Auth | Funkcja i *odpowiedź*                                                                                |
+| -------------------- | ---- | ---------------------------------------------------------------------------------------------------- |
+| POMPA                | Nie  | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP DISCONNECT *30* | Tak  | Odłącza pompę na *30* minut                                                                          |
+| PUMP CONNECT         | Tak  | Pompa ponownie podłączona                                                                            |
 
 ### Baza
 
@@ -229,14 +229,14 @@ Some pumps take a temp basal only in percent, others only in U/h. If you use the
 
 ### Pętla
 
-| Polecenie         | Auth | Funkcja i *odpowiedź*                                                                                                                                                                                                                                                                |
-| ----------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| LOOP STATUS       | Nie  | Odpowiedź zależy od aktualnego stanu:<br/> - *Pętla jest wyłączona*, jeśli pętla jest wyłączona lub w trybie LGS<br/> - *Pętla (Loop) jest włączona*, jeśli pętla jest zamknięta lub otwarta<br/> - *Wstrzymana (10 m)*, jeśli pętla jest odłączona lub wstrzymana |
-| LOOP STOP/DISABLE | Tak  | Pompa wróci do zaprogramowanej dawki bazowej.<br/>*Pętla (Loop) została wyłączona*                                                                                                                                                                                             |
-| LOOP SUSPEND 20   | Tak  | *Pętla wstrzymana na 20 minut*                                                                                                                                                                                                                                                       |
-| LOOP RESUME       | Tak  | *Pętla wznowiona*                                                                                                                                                                                                                                                                    |
-| LOOP CLOSED       | Tak  | *Bieżący tryb pracy: Zamknięta pętla*                                                                                                                                                                                                                                                |
-| LOOP LGS          | Tak  | *Bieżący tryb pracy: Zawieszenie przy niskiej glikemii*                                                                                                                                                                                                                              |
+| Polecenie         | Auth | Funkcja i *odpowiedź*                                                                                                                                                                                                                                                              |
+| ----------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LOOP STATUS       | Nie  | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled<br/> - *Loop is enabled* if the loop is closed, open or LGS<br/> - *Pump disconnected* if the pump is disconnected<br/> - *Suspended (10 m)* if the loop is suspended |
+| LOOP STOP/DISABLE | Tak  | Pompa wróci do zaprogramowanej dawki bazowej.<br/>*Pętla (Loop) została wyłączona*                                                                                                                                                                                           |
+| LOOP SUSPEND 20   | Tak  | *Loop suspended*                                                                                                                                                                                                                                                                   |
+| LOOP RESUME       | Tak  | *Pętla wznowiona*                                                                                                                                                                                                                                                                  |
+| LOOP CLOSED       | Tak  | *Current running mode: Closed Loop*                                                                                                                                                                                                                                                |
+| LOOP LGS          | Tak  | *Current running mode: Low Glucose Suspend*                                                                                                                                                                                                                                        |
 
 ### Bolus
 
@@ -348,6 +348,6 @@ If the other app is installed on multiple phones make sure to deactivate upload 
 (sms-commands-too-many-messages)=
 ### Dostaję o wiele za dużo SMS-ów z poleceń SMS. Czy mogę je ograniczyć albo wyłączyć?
 
-Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include Whatsapp, Lime, Telegram, and Facebook Messenger.
+Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include WhatsApp, LINE, Telegram, and Facebook Messenger.
 
-It is possible to disable the "Profile changed" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly**  `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+It is possible to disable the "Basal profile in pump updated" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly** `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.

@@ -57,7 +57,7 @@ Deoarece nu primiți insulină în timp ce pompa este deconectată, trebuie să 
 (pumps-cannulas-announce-insulin)=
 ## Pentru a anunța insulina administrată fără a bolusa propriu-zis
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only**. A **Time** row (set to **Now**) then lets you record the actual time of the injection: you can ignore it if the injection was given recently. If the bolus was given some time ago, use **-** to move the time back (_e.g._ -30 min), or open the row with the chevron to pick the exact date and time. **AAPS** will then take into account the duration of insulin action and calculate the remaining insulin still in the system accordingly.
+To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. A **Time** row (set to **Now**) then lets you record the actual time of the injection: you can ignore it if the injection was given recently. If the bolus was given some time ago, use **-** to move the time back (_e.g._ -30 min), or open the row with the chevron to pick the exact date and time. **AAPS** will then take into account the duration of insulin action and calculate the remaining insulin still in the system accordingly.
 
 If you are using **AAPS** as a caregiver, you can remotely disconnect (and reconnect) the pump very easily by [SMS command](../RemoteFeatures/SMSCommands.md) using commands such as "pump disconnect 120" and "pump connect 120". Intervalul de timp pentru deconectarea de la distanță este de 1 - 120 de minute (în acest exemplu este de 120 de minute). This is very useful if the **AAPS** handset is inconvenient for you to access, buried in a pump belt on a kid who is running off towards the swimming complex, or being closely guarded (or in use) by a teenager.
 
@@ -92,7 +92,7 @@ Ce strategie preferați este foarte personal, și se determină cel mai bine pri
 
 ![User profile for site rotation dialog](../images/SiteRotation/Type.png)
 
-*Note: this setting will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"*
+*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
 
 - For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
 
@@ -100,7 +100,7 @@ Edit Mode allows you to select Location, Arrow, and Note associated to selected 
 
 - The entry being edited is shown below the body images, with its type icon (cannula or sensor)
 - Front and back views are shown side by side: tap the area where you placed it
-- Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the past 45 days in this site
+- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
 
 ![Edit Mode](../images/SiteRotation/EditMode.png)
 

@@ -135,9 +135,9 @@ An diesen Beispielen kannst Du erkennen, dass _kleinerer_ **ISF**-Werte geringer
 
 ### Auswirkung
 
-Eine **niedrigerer / stärkerer ISF** (z. B. 40 statt 50) bedeutet, dass das Insulin Deinen **Glukosewert** mit einer Einheit weniger stark senkt. Dies führt dazu, dass der Loop mit **mehr Insulin** aggressiver / stärker korrigiert. Ist Dein **ISF** zu stark (kleiner Wert), kann das zu niedrigen **Glukosewerten** führen.
+A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. Dies führt dazu, dass der Loop mit **mehr Insulin** aggressiver / stärker korrigiert. Ist Dein **ISF** zu stark (kleiner Wert), kann das zu niedrigen **Glukosewerten** führen.
 
-Ein **höherer / schwächerer ISF** (z. B. 45 statt 35) bedeutet, dass das Insulin Deinen **Glukosewert** mit einer Einheit stärker senkt. Dies führt zu einer weniger aggressiven / schwächeren Korrektur des Loops mit **weniger Insulin**. Ist Dein **ISF** zu schwach (großer Wert), kann dies zu hohen **Glukosewerten** führen.
+A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. Dies führt zu einer weniger aggressiven / schwächeren Korrektur des Loops mit **weniger Insulin**. Ist Dein **ISF** zu schwach (großer Wert), kann dies zu hohen **Glukosewerten** führen.
 
 **Beispiel:**
 * **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
@@ -201,7 +201,7 @@ Aufgrund von Hormonen und sportlichen Aktivitäten ist es normal, über den Tag 
 > 
 > BE-Faktor 2,4 IE / 12 g   ===>   IC = 12 g / 2,4 IE = 5,0 g/IE
 > 
-> Umrechnungstabellen finden sich online z.B. [hier](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Auswirkung
 
@@ -300,7 +300,7 @@ Profil-Helfer bietet Datensätze von zwei verschiedenen Kinderkrankenhäusern an
 4. Change to the **Profile 2** tab.
 5. Tippe auf **Profil-Typ** und wähle das „DPV-Standard-Profil“ aus.
 6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, TDD Total and percentage of basal. Note that the DPV data set provides **basal rates** only, so IC and ISF are shown as zero for this profile.
-7. Open the **Comparation** tab. Ein Vergleich der beiden angepassten Profile wird angezeigt (siehe Screenshot unten).
+7. Open the **Comparison** tab. Ein Vergleich der beiden angepassten Profile wird angezeigt (siehe Screenshot unten).
 8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button at the bottom of the comparison.
 
 ![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
@@ -350,6 +350,6 @@ You can also use the [Profile Helper](#aaps-screens-profile-helper) (menu ☰ �
 4. Change to the **Profile 2** tab.
 5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profile Switches**.
 6. Wähle das **Profilwechsel** aus, gegen den Du vergleichen möchtest.
-7. Open the **Comparation** tab. Comparison of the two profiles will be displayed (see screenshot below).
+7. Open the **Comparison** tab. Comparison of the two profiles will be displayed (see screenshot below).
 
 ![Profile Helper 2](../images/ProfileHelper2.png)

@@ -122,9 +122,9 @@
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. Στο Android 12 πατήστε `Battery` (Μπαταρία), στο Android 13+ πατήστε `App battery usage` (Χρήση μπαταρίας εφαρμογής),
+   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
 
-   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
+   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
 5. Στο Android 12+ επιλέξτε `Unrestricted` (Χωρίς περιορισμούς). Στο Android 15+ πρέπει να ανοίξετε τη ρύθμιση `Allow background usage` (Να επιτρέπεται η χρήση στο παρασκήνιο): πατήστε την περιοχή με το κόκκινο πλαίσιο και μετά ακολουθήστε το βήμα 6 για να ολοκληρώσετε.
 
@@ -454,7 +454,7 @@
 
 ![Επιβεβαίωση κατά την επιλογή πραγματικής αντλίας](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-Αν η αντλία που επιλέγετε επικοινωνεί μέσω Bluetooth, το **AAPS** ζητά άδεια για σύνδεση με κοντινές συσκευές όταν τελειώσετε τον Οδηγό (δείτε [Άδεια Bluetooth](#bluetooth-permission)).
+If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#setup-wizard-bluetooth-permission)).
 
 Αν έχετε ήδη ρυθμίσει το προφίλ σας και ξέρετε πώς να συνδέσετε την αντλία σας, μπορείτε να τη συνδέσετε τώρα. Αλλιώς αφήστε την **Εικονική Αντλία** προς το παρόν — μπορείτε να την αλλάξετε οποιαδήποτε στιγμή. Ή βγείτε από τον Οδηγό εγκατάστασης με το βέλος πάνω αριστερά και αφήστε το **AAPS** να σας δείξει πρώτα κάποιες τιμές γλυκόζης αίματος.
 
@@ -505,7 +505,7 @@
 
 Εδώ ξεκινάμε το 1ο Βήμα, παρόλο που αυτή τη στιγμή η εγκατάστασή μας δεν είναι ακόμα πλήρως έτοιμη για να ολοκληρώσουμε με επιτυχία αυτό το Βήμα. Αλλά αυτή είναι η αρχή.
 
-Πατήστε το κουμπί «**Έναρξη**» δίπλα στο «**1. Βήμα**»:
+Press the "**Start**" button of **Objective 1**:
 
 ![Λίστα Βημάτων](../images/setup-wizard/Wizard-Objectives-List.png)
 
@@ -521,6 +521,7 @@
 
 Αν κατά λάθος βγείτε από τον Οδηγό εγκατάστασης σε οποιοδήποτε σημείο, μπορείτε απλώς να ξεκινήσετε ξανά τον Οδηγό ή να αλλάξετε χειροκίνητα τη [διαμόρφωση του κυκλώματος AAPS](../SettingUpAaps/ChangeAapsConfiguration.md).
 
+(setup-wizard-bluetooth-permission)=
 ## Άδεια Bluetooth
 
 Αν επιλέξετε αντλία που συνδέεται μέσω Bluetooth (για παράδειγμα **Omnipod Dash**), ένα μήνυμα σας θυμίζει ότι το **AAPS** χρειάζεται άδεια Bluetooth. Μπορείτε να πατήσετε «**Παράβλεψη**» προς το παρόν — η άδεια δίνεται αφού τελειώσετε τον Οδηγό:

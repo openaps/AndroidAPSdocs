@@ -134,7 +134,7 @@ A administração de insulina parou. Aja agora:
 * **Insulina baixa**: restam menos de 10 U. Desative o patch e troque-o.
 * **Patch expirado**: o patch chegou ao fim da sua vida útil. Desative o patch e troque-o.
 * **Bateria fraca**: descarte o patch e troque-o.
-* **Temperatura alta/baixa**: vá para um local com temperatura adequada, entre 40 ℉ e 99 ℉ (5 ℃ e 37 ℃).
+* **High/Low Temperature**: move to a suitable temperature, between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
 * **Desligamento automático**: o patch parou porque o alerta de desligamento automático foi ignorado. Toque em **Iniciar insulina** para reiniciar a administração da basal.
 * **Tempo limite de aplicação do patch**, **Falha no autodiagnóstico**, **Erro do patch**, **Oclusão** e **Erro na inserção da agulha**: desative o patch e troque-o.
 
@@ -145,7 +145,7 @@ A administração de insulina continua, mas algo precisa da sua atenção:
 * **Insulina baixa**: o reservatório chegou à quantidade definida em **Configuração de notificação de insulina baixa**. Prepare-se para trocar o patch.
 * **O patch expirará em breve** e **Vida útil do patch expirada**: troque o patch.
 * **Bateria fraca**: prepare-se para trocar o patch.
-* **Temperatura alta/baixa**: a administração fica pausada até o patch voltar a ficar entre 40 ℉ e 99 ℉.
+* **High/Low Temperature**: delivery is paused until the patch is back between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
 * **Desligamento automático**: toque em **OK**. Se for ignorado, o alerta passa a ser um alarme crítico e a administração para.
 * **Ativação do patch incompleta**: toque em **OK** para concluir a ativação.
 * **Iniciar insulina**: a pausa que você definiu terminou. Toque em **Iniciar insulina** para retomar a administração.

@@ -3,7 +3,7 @@
 # Alternativ 2 – Last opp keystore-filen du har fra før
 
 ```{note}
-Dette er en del av [Steg 2 – Lag keystore-filen for signering](BrowserBuildKeystore.md) i [Nettleserbygg](BrowserBuild.md). Sørg for at du har lest [valget mellom alternativ 1 og alternativ 2](#aaps-ci-preparation) og lastet ned forberedelsesfilen.
+Dette er en del av [Steg 2 – Lag keystore-filen for signering](BrowserBuildKeystore.md) i [Nettleserbygg](BrowserBuild.md). Sørg for at du har lest [valget mellom alternativ 1 og alternativ 2](#aaps-ci-preparation).
 ```
 
 Alternativ 2 bruker JKS-filen du allerede laget på et tidligere AAPS-bygg fra en datamaskin i Android Studio. Det passer for brukere som allerede har en JKS og kan JKS-passordet og aliaset.

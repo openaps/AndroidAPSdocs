@@ -73,7 +73,7 @@ Toque num resultado para ir diretamente para ele:
 - **Preferência** → abre a definição **no sítio** (salta para ela dentro do seu ecrã).
 - **Documentação** → abre a página no seu navegador.
 
-Abrir definições e ações protegidas continua a respeitar a sua **[proteção](../SettingUpAaps/ConfigBuilder.md)** (PIN/senha), exatamente como se tivesse navegado até lá à mão. Depois de usar um resultado, pode premir **Voltar** para regressar aos resultados da pesquisa.
+Opening settings and protected actions still respects your **[protection](#Preferences-protection)** (PIN/password), exactly as it would if you had navigated there by hand. Depois de usar um resultado, pode premir **Voltar** para regressar aos resultados da pesquisa.
 
 ---
 

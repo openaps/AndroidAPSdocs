@@ -134,7 +134,7 @@ Podawanie insuliny zostało zatrzymane. Działaj od razu:
 * **Mało insuliny**: zostało mniej niż 10 U. Dezaktywuj patch i wymień go.
 * **Patch wygasł**: patch osiągnął koniec okresu używania. Dezaktywuj patch i wymień go.
 * **Niski poziom baterii**: odrzuć patch i wymień go.
-* **Temperatura za wysoka/za niska**: przejdź w miejsce o odpowiedniej temperaturze, od 40 ℉ do 99 ℉ (od 5 ℃ do 37 ℃).
+* **High/Low Temperature**: move to a suitable temperature, between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
 * **Auto-wyłączenie**: patch zatrzymał się, ponieważ ostrzeżenie o automatycznym wyłączeniu zostało zignorowane. Naciśnij **Wznów podawanie insuliny**, aby ponownie uruchomić podawanie bazy.
 * **Upłynął czas aplikacji Patcha**, **Autodiagnostyka nieudana**, **Błąd Patcha**, **Zatkanie** i **Błąd wkłucia igły**: dezaktywuj patch i wymień go.
 
@@ -145,7 +145,7 @@ Podawanie insuliny trwa, ale coś wymaga Twojej uwagi:
 * **Niski poziom insuliny**: ilość w zbiorniku spadła do wartości ustawionej w **Ustawienie powiadomienia o niskim poziomie insuliny**. Przygotuj się do wymiany patcha.
 * **Patch wkrótce straci ważność** i **Minął okres eksploatacji Patcha**: wymień patch.
 * **Niski poziom baterii**: przygotuj się do wymiany patcha.
-* **Wysoka/niska temperatura**: podawanie jest wstrzymane, dopóki temperatura patcha nie wróci do zakresu od 40 ℉ do 99 ℉.
+* **High/Low Temperature**: delivery is paused until the patch is back between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
 * **Automatyczne wyłączenie**: dotknij **OK**. Jeśli je zignorujesz, ostrzeżenie zmieni się w alarm krytyczny i podawanie zostanie zatrzymane.
 * **Niekompletna aktywacja Patcha**: dotknij **OK**, aby dokończyć aktywację.
 * **Wznów podawanie insuliny**: ustawiona przerwa się skończyła. Dotknij **Wznów podawanie insuliny**, aby wznowić podawanie.

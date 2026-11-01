@@ -1,6 +1,6 @@
 # 未來（可能）的幫浦驅動程式
 
-這是一份目前市面上一些幫浦的清單，包含他們在任何閉環系統中的支援狀態，以及在 AAPS 中的狀態。最後有一些關於幫浦成為“可閉環”的需求資訊。
+This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
 
     {contents} 目錄
     :depth: 1
@@ -42,7 +42,7 @@ Tandem：t:Mobi（[官方網站](https://www.tandemdiabetes.com/)）
 
 ### Willcare 胰島素幫浦 ([官網](http://shinmyungmedi.com/en/))
 
-**閉環狀態：** 目前尚未是閉環候選者，但他們的員工已與我們聯繫，表示有興趣將幫浦擴展為可閉環（目前我認為他只缺少設定/取得設定檔的指令）。
+**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
 
 **AAPS 硬體需求：**無。看起來已啟用藍牙 (BT)。
 

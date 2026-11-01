@@ -1,6 +1,6 @@
-# ¿Dónde puedo obtener ayuda?
+# Where can I get help?
 
-## Estoy atascado/a. ¿Qué hago? ¿A quién puedo preguntar?
+## I'm stuck; what should I do? ¿A quién puedo preguntar?
 
 Este proyecto se basa en trabajo voluntario. Hay algunas reglas para cualquier petición de ayuda, para no hacer perder tiempo a las personas que ayudan de forma desinteresada:
 

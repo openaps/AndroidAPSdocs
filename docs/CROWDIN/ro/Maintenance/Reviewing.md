@@ -54,7 +54,7 @@ Time In Tight Range (TITR) 70-140 mg/dL or 3.9-7.8 mmol/L statistics are availab
 
 **Discuss targets with your endo**
 
-Your diabetes may vary. Any suggested targets should be discussed with your endocrinologist or supporting medical team. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress .
+Your diabetes may vary. Any suggested targets should be discussed with your endocrinologist or supporting medical team. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress.
 
 ![Statistici](../images/Maintenance/statistics3.png)
 
@@ -117,7 +117,7 @@ At the end of each line, small icons show where the data comes from or has been 
 ![Carbs & bolus](../images/TreatmentsView1.png)
 
 On this tab you can view the bolus and carbs log. Each bolus (line **1**) shows the remaining associated IOB next to the insulin amount. The origin of the bolus can be either :
-* Meal (manually entered though the Insulin, Quick Wizard or Bolus Wizard buttons)
+* Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
 * SMB, when using the SMB Functionality
 
 The carbs entries (line **2**) are shown with their amount in grams.
@@ -147,9 +147,9 @@ The **temp basals** applied by the loop are shown here. When there is still an i
 * Positive IOB if the temp basal was higher than the one set in the Profile
 * Negative IOB for a zero-temp (as on line **1**) or if the temp basal was lower than the one set in the Profile
 
-Deleting the entries only affects your reports in Nightscout and will probably tamper your real IOB - it is not recommended.
+Deleting the entries only affects your reports in Nightscout and will probably distort your real IOB - it is not recommended.
 
-On the left of a line, a red S means “Suspend” : it happens when basal is not currently delivered. This is a normal situation when in the process of changing a pod, for example.
+On the left of a line, a red S means “Suspend”: it happens when basal is not currently delivered. This is a normal situation when in the process of changing a pod, for example.
 
 ### Țintă temporară
 
@@ -178,7 +178,7 @@ This tab shows all notes and careportal entries recorded in Nightscout.
 
 ![Mod de rulare](../images/TreatmentsView6.png)
 
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, LGS, suspend, disconnect.
+This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
 
 ### User entry
 

@@ -49,7 +49,7 @@ Klone den Quellcode noch einmal so wie es in der Dokumentation beschrieben ist u
 
   * Im Terminal sollte ein Hinweis erscheinen, der zeigt welche Git-Version installiert ist (siehe Screenshot oben). In diesem Fall, mache mit [Schritt 2](#troubleshooting-android-studio-check-for-uncommitted-changes) weiter.
 
-  * Falls du einen Hinweis wie diesen bekommst
+  * In case you get a message saying
     ```
     Git: command not found
     ```
@@ -59,13 +59,13 @@ Klone den Quellcode noch einmal so wie es in der Dokumentation beschrieben ist u
 
   * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
 
-  * If Git is installed, you have restarted (if on windows), and Git still cannot be found:
+  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
 
   * Suche auf deinem Computer nach einer Datei "git.exe".
 
     Notiere Dir, in welchem Verzeichnis es gespeichert ist.
 
-  * Gehe zu den Umgebungsvariablen auf Windows, wähle die Variable "PATH" und klicke bearbeiten. Füge den zuvor notierten Pfad deiner Git-Installation hinzu.
+  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Füge den zuvor notierten Pfad deiner Git-Installation hinzu.
 
   * Speichern und schließen.
 
@@ -139,7 +139,7 @@ Oder:
 Cause: error: invalid source release: 21
 ```
 
-Wenn Du die folgende Fehlermeldung erhältst, musst Du, bevor Du es noch einmal probieren kannst, eine korrekte JVM-Version herunterladen:
+If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
 
 1.  Prüfe in der [Anforderungstabelle](#Building-APK-recommended-specification-of-computer-for-building-apk-file), welche JVM-Version Du für die **AAPS** Version, die Du erstellen möchtest, benötigst und notiere sie.
 
@@ -252,7 +252,7 @@ Deine App wurde erfolgreich gebaut und kann auf das Smartphone übertragen werde
 
 ## APK installiert, aber weiter die alte Version auf dem Smartphone
 
-Wenn Du die App erfolgreich erstellt, sie auf Dein Smartphone übertragen und dort erfolgreich installiert hast, jedoch weiter die alte Versionsnummer angezeigt wird, hast Du wahrscheinlich versäumt, Deine [lokale Kopie zu aktualisieren](#Update-to-new-version-update-your-local-copy).
+If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
 
 ## Keiner der oben genannten Löungsvorschläge funktioniert
 

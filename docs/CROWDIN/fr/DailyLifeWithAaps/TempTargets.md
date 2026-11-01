@@ -19,7 +19,7 @@ Les utilisateurs doivent avoir des attentes réalistes sur les résultats possib
 
 Une **cible temporaire** peut avoir besoin d'environ 30 minutes ou plus pour atteindre une cible de **glycémie** voulue. **AAPS** ne peut pas atteindre une cible de **glycémie** avec un effet immédiat. Les utilisateurs doivent en tenir compte quand ils choisissent une **cible temporaire**.
 
-Les sections ci-dessous résument les fonctions de la **cible temporaire Activité**, de la **cible temporaire Repas imminent** et de la **cible temporaire Hypo**. Les valeurs affichées sont les valeurs par défaut à l'installation — vous pouvez [ajuster chaque préréglage](#TempTargets-change-preset-defaults) selon vos besoins.
+The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. Les valeurs affichées sont les valeurs par défaut à l'installation — vous pouvez [ajuster chaque préréglage](#TempTargets-change-preset-defaults) selon vos besoins.
 
 ### CT - Activité
 
@@ -193,9 +193,9 @@ Parfois, après la prise de glucides pour traiter une hypo, la **glycémie** de 
 
 Certains utilisateurs veulent éviter que des **SMB** soient donnés pendant une **cible temporaire Hypo**. Pour cela, désactivez *« Activer les SMB avec Cibles Temp hautes »* dans **Paramètres** → **OpenAPS SMB** (voir plus bas) :
 
-- (Avancé, objectif 9) : l'utilisateur peut activer *« Cible Temp haute augmente la sensibilité »* pour les **cibles temporaires** de 100 mg/dl (5,6 mmol/l) ou plus dans OpenAPS SMB, et **AAPS** sera plus sensible.
+- Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
 
-- (Avancé, objectif 9) : l'utilisateur peut désactiver *« Activer les SMB avec Cibles Temp hautes »*. Ainsi, même si **AAPS** a des GA > 0, que « Activer les SMB avec Cibles Temp basses » ou « Activer en permanence les SMB » est activé et qu'OpenAPS SMB est actif, **AAPS** ne donnera pas de SMB pendant que des cibles temporaires hautes sont actives.
+- Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
 
 Remarque : si vous ouvrez la **boîte de dialogue Glucides** pendant que votre glycémie est sous 72 mg/dl ou 4 mmol/l, **AAPS** active automatiquement d'avance l'interrupteur **Début Traitement Hypo**.
 
@@ -219,9 +219,9 @@ De plus, si *« Activer les SMB avec Cibles Temp hautes »* est désactivé, *
 
 ## Cible temporaire Repas imminent
 
-La **cible temporaire - Repas imminent** peut aider à faire baisser doucement la **glycémie** et à avoir assez d'**IA** avant de manger.
+**Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
 
-Cela peut être un outil important pour les utilisateurs qui ne font pas de pré-bolus. Cependant, l'efficacité de la **cible temporaire - Repas imminent** dépend de plusieurs facteurs, notamment : les réglages de l'utilisateur, s'il suit une alimentation pauvre en glucides et s'il utilise une insuline rapide (comme Fiasp ou Lyumjev) pour ne plus avoir besoin de pré-bolus. En général, tant qu'ils n'ont pas d'expérience avec **AAPS**, les utilisateurs doivent prévoir un pré-bolus quand ils utilisent la **cible temporaire - Repas imminent**, surtout avec une alimentation riche en glucides.
+This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
 
 Vous pouvez en savoir plus sur le « mode Repas imminent » dans l'article [« How to do “eating soon” mode »](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) (en anglais) ou [ici](https://diyps.org/tag/eating-soon-mode/).
 

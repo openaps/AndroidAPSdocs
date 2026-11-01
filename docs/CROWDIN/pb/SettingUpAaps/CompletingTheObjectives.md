@@ -10,7 +10,7 @@ Quando o **AAPS** é instalado pela primeira vez, cada objetivo deve ser conclu�
 
 Os **Objetivos 1 a 8** guiam você desde a configuração do **AAPS** no seu smartphone até o loop fechado híbrido “básico”. This will take about 6 weeks to complete. Você pode avançar até o **Objetivo 5** usando uma bomba virtual (e usando outro método de administração de insulina enquanto isso). Os **Objetivos 9 e 10** foram feitos para testar recursos mais avançados do **AAPS**, com o objetivo de controlar melhor o seu diabetes, e levam até 3 meses para concluir, talvez mais. Mais detalhes sobre uma estimativa do tempo de cada parte estão aqui: [Quanto tempo vai levar?](#preparing-how-long-will-it-take)
 
-Além de avançar nos **Objetivos**, se necessário, você também pode remover o seu progresso e [voltar a um objetivo anterior](#go-back-in-objectives).
+As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#CompletingTheObjectives-go-back-in-objectives).
 
 ## Backup your settings
 
@@ -39,7 +39,7 @@ O **Objetivo 1** pede que o usuário faça a configuração técnica básica no 
 - If using Tidepool:
   - Siga as instruções da página [Tidepool](../SettingUpAaps/Tidepool.md) para garantir que o **Tidepool** possa receber e mostrar os dados do **AAPS**.
 
-Observação - *Talvez você precise esperar a próxima leitura de glicose do sensor chegar antes que o **AAPS** a reconheça.*
+Note: *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
 
 (objectives-objective2)=
 ## Objetivo 2: Aprenda como controlar o AAPS
@@ -51,7 +51,7 @@ O **Objetivo 2** pede que várias ‘tarefas’ sejam feitas, como mostra a capt
 As tarefas para concluir o **Objetivo 2** são:
 - Defina o seu **Perfil** como 90% por 10 min.
   - _Dica_: toque no nome do seu perfil na tela principal para abrir a tela **Perfil**, depois use o botão **Ativar** (▶) e defina a porcentagem e a duração. Mais informações em [Troca de perfil e porcentagem do perfil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-  - _Observação_: o **AAPS** não aceita taxas basais abaixo de 0,05 U/h. Se o seu **Perfil** tiver taxas de 0,06 U/h ou menos, você vai precisar criar um **Perfil** temporário com taxas basais mais altas antes de concluir esta tarefa. Volte ao seu **Perfil** normal depois de concluir esta tarefa.
+  - _Observação_: o **AAPS** não aceita taxas basais abaixo de 0,05 U/h. If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Volte ao seu **Perfil** normal depois de concluir esta tarefa.
 - Simule "tomar um banho" [desconectando a sua bomba](#AapsScreens-loop-status) no **AAPS** por 1 h.
   - _Dica_: toque no ícone do loop na tela principal para abrir o diálogo do Loop e escolha uma duração em **Desconectar bomba**.
 - End "taking a shower" by reconnecting your pump.
@@ -94,7 +94,7 @@ Tempo mínimo para concluir este objetivo: **7 dias**. This is a mandatory wait 
 - Use [**Alvos temporários**](../DailyLifeWithAaps/TempTargets.md) quando necessário. After treating a hypo, use the predefined "hypo temp target" to prevent the system from overcorrecting upon the bounce back.
 - Se você ainda estiver no [Modo simples](#preferences-simple-mode) neste ponto, agora provavelmente é um bom momento para desativá-lo.
 
-Para reduzir o número de alterações da taxa basal propostas no loop aberto, você ainda pode usar as dicas descritas no [**Objetivo 3**](#objective-3-prove-your-knowledge). Além disso, você pode alterar a porcentagem mínima das alterações recomendadas da taxa basal com a configuração "**Alteração mínima no modo aberto**" em **Configurações → Loop**. The higher the value, the fewer change notifications you will receive.
+To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Além disso, você pode alterar a porcentagem mínima das alterações recomendadas da taxa basal com a configuração "**Alteração mínima no modo aberto**" em **Configurações → Loop**. The higher the value, the fewer change notifications you will receive.
 
 ![Alteração mínima solicitada no loop aberto](../images/OpenLoop_MinimalRequestChange2.png)
 
@@ -119,7 +119,7 @@ Talvez você queira definir o [alvo de glicose do seu **Perfil**](#profile-gluco
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-Se você está usando o loop aberto com uma bomba virtual, **pare aqui**. Só clique em verificar no fim deste **Objetivo** quando já estiver usando uma bomba "real", que administra insulina.
+Se você está usando o loop aberto com uma bomba virtual, **pare aqui**. Only tap **Verify** at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
 
 ```
 
@@ -167,14 +167,14 @@ Tempo mínimo para concluir este objetivo: **1 dia**. This is a mandatory wait t
 
 - Selecione **Loop Fechado** tocando no [ícone do Loop](#AapsScreens-loop-status) na tela principal e escolhendo **Loop Fechado** como modo de operação. Fique em **Loop Fechado** por um período de 1 dia.
 
-- Slowly raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
+- Slowly raise your 'Max IOB for SMB' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
 
 A recomendação padrão para esta configuração é “**bólus médio de refeição + 3x a basal diária máxima**”, em que “basal diária máxima” é o maior valor por hora em qualquer período do dia.
 
 ![basal diária máxima](../images/MaxDailyBasal2.png)
 
 This recommendation should be seen as a starting point. If you use this rule but are experiencing AAPS delivering too much insulin as glucose levels rise, you may need to :
-* lower the "Maximum total IOB OpenAPS can’t go over" value;
+* lower the "Max IOB for SMB" value;
 * revise as configurações do seu **Perfil**, fazendo apenas um ajuste de cada vez.
 
 Ou, se você for muito resistente à insulina, aumente o valor de **maxIOB** com muito cuidado.
@@ -202,7 +202,7 @@ No **Objetivo 9**, você vai conhecer e usar o **"Super Micro Bólus (SMB)"** co
 Tempo mínimo para concluir este objetivo: **28 dias**. This is a mandatory wait time. You can’t proceed to the next Objective before this time is up.
 
 - A [seção sobre SMB nesta documentação](#Open-APS-features-super-micro-bolus-smb) e a [explicação do oref1 na documentação do openAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) são leitura obrigatória para entender o **SMB** e o conceito de **basal temporária zero** (zero-temping).
-- Depois disso, você pode [aumentar o maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) para que os **SMBs** funcionem melhor. O maxIOB agora inclui todo o **IOB**, não só a basal acumulada. Esse limite pausa os **SMBs** até o IOB cair abaixo desse valor (_por exemplo_, o **maxIOB** está definido como 7 U e um bólus de 8 U é dado para cobrir uma refeição: os SMBs ficam pausados e não são dados, a não ser que o **IOB** caia abaixo de 7 U). Um bom começo é definir **maxIOB** = **bólus médio de refeição + 3x a basal diária máxima**, em que "basal diária máxima" é o maior valor por hora em qualquer período do dia. Veja o [objetivo 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) como referência.
+- Depois disso, você pode [aumentar o maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) para que os **SMBs** funcionem melhor. O maxIOB agora inclui todo o **IOB**, não só a basal acumulada. Esse limite pausa os **SMBs** até o IOB cair abaixo desse valor (_por exemplo_, o **maxIOB** está definido como 7 U e um bólus de 8 U é dado para cobrir uma refeição: os SMBs ficam pausados e não são dados, a não ser que o **IOB** caia abaixo de 7 U). Um bom começo é definir **maxIOB** = **bólus médio de refeição + 3x a basal diária máxima**, em que "basal diária máxima" é o maior valor por hora em qualquer período do dia. See [objective 7](#objectives-objective7) as reference.
 - Avalie a velocidade de absorção dos seus carboidratos e considere alterar o parâmetro “min_5m_carbimpact” em [Configurações → Configurações de absorção → min_5m_carbimpact](#Preferences-min_5m_carbimpact) se achar que ela está lenta ou rápida demais.
 
 (objectives-objective10)=

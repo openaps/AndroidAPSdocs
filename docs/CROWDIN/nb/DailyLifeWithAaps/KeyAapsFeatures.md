@@ -125,7 +125,7 @@ Hvis for eksempel den høyeste basaldosen i profilen din er 0,5 E/t, kan du gang
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
-### Maksimal total IOB som OpenAPS ikke kan gå over
+### Maks IOB for SMB
 
 Denne verdien bestemmer den høyeste mengden **aktivt insulin** (basal- og bolus-IOB) som **AAPS** holder seg under når den kjører i lukket loop. Den kalles også **maxIOB**.
 
@@ -308,7 +308,7 @@ Når du har valgt den, inneholder **Innstillinger** for den OpenAPS SMB-innstill
   - mens glukosen er **over målet**, gjøres ISF sterkere;
   - en vekt for **postprandial** (etter måltid) og en vekt for **varighet** virker etter måltider og når glukosen holder seg høy lenge.
 - **SMB leveringsratio** (med et minimum, et maksimum og et BS-område): hvor stor andel av insulinet som trengs, som kan gis som SMB.
-- **SMB maks rekkeviddeforlengelse**: med hvilken faktor den vanlige grensen for SMB-størrelse ([maks antall minutter med basal](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), normalt 120 minutter) kan overskrides. Standardverdien 1 endrer ingenting; opptil 5 er mulig. Øk denne eksperimentelle verdien sakte og med forsiktighet.
+- **SMB maks rekkeviddeforlengelse**: med hvilken faktor den vanlige grensen for SMB-størrelse ([maks antall minutter med basal](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), 30 minutter som standard) kan overskrides. Standardverdien 1 endrer ingenting; opptil 5 er mulig. Øk denne eksperimentelle verdien sakte og med forsiktighet.
 - **IOB-terskelprosent**: prosentandelen av maks IOB som SMB-er deaktiveres over.
 
     {admonition} Bare for erfarne brukere
@@ -339,7 +339,7 @@ De hardkodede parameterne i **AAPS** er:
 
 *Se også [oversikt over hardkodede begrensninger](#Open-APS-features-overview-of-hard-coded-limits).*
 
-### Maksimal basal-IOB OpenAPS kan levere \[E\] (OpenAPS «max-iob»)
+### Maks IOB for AMA
 
 Denne parameteren setter grensen for hvor høy basal-IOB kan være mens **AAPS** fortsatt jobber. Hvis IOB er høyere, slutter den å gi ekstra basalinsulin til basal-IOB er under grensen.
 

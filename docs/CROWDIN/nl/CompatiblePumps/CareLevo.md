@@ -134,7 +134,7 @@ De insulinetoediening is gestopt. Doe nu iets:
 * **Insuline bijna op**: er is minder dan 10 E over. Deactiveer de patch en vervang hem.
 * **Patch verlopen**: de patch is aan het einde van zijn gebruiksduur. Deactiveer de patch en vervang hem.
 * **Batterij bijna leeg**: gooi de patch weg en vervang hem.
-* **Hoge/lage temperatuur**: ga naar een plek met een geschikte temperatuur, tussen 40 ℉ en 99 ℉ (5 ℃ en 37 ℃).
+* **High/Low Temperature**: move to a suitable temperature, between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
 * **Automatisch uit**: de patch is gestopt omdat de melding Automatisch uit is genegeerd. Druk op **Insuline starten** om de basale toediening opnieuw te starten.
 * **Tijd voor aanbrengen patch verstreken**, **Zelfdiagnose mislukt**, **Patchfout**, **Verstopping** en **Fout bij inbrengen naald**: deactiveer de patch en vervang hem.
 
@@ -145,7 +145,7 @@ De insulinetoediening gaat door, maar iets vraagt je aandacht:
 * **Insuline bijna op**: het reservoir heeft de hoeveelheid bereikt die is ingesteld in **Melding laag insulineniveau**. Bereid je voor op het vervangen van de patch.
 * **Patch verloopt binnenkort** en **Gebruiksduur patch verlopen**: vervang de patch.
 * **Batterij bijna leeg**: bereid je voor op het vervangen van de patch.
-* **Hoge/lage temperatuur**: de toediening is gepauzeerd tot de patch weer tussen 40 ℉ en 99 ℉ is.
+* **High/Low Temperature**: delivery is paused until the patch is back between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
 * **Automatisch uit**: tik op **OK**. Als je de melding negeert, wordt het een kritiek alarm en stopt de toediening.
 * **Activering patch niet voltooid**: tik op **OK** om de activering te voltooien.
 * **Insuline starten**: de pauze die je hebt ingesteld is voorbij. Tik op **Insuline starten** om de toediening te hervatten.

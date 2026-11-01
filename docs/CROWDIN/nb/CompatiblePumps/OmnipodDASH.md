@@ -43,7 +43,7 @@ Viktige egenskaper ved **Omnipod DASH** («DASH»):
       **AAPS** oppretter automatisk en ny Bluetooth-tilkobling til poden hver gang den må sende en kommando (for eksempel en bolus), og rett etter at kommandoen er sendt, kobles Bluetooth-tilkoblingen fra.
        - **MERK:**
          - Bluetooth-tilkoblingen kan bli avbrutt/forstyrret av andre Bluetooth-enheter som er koblet til telefonen som kjører **AAPS**, for eksempel ørepropper osv. Slike enheter kan gi tilkoblingsfeil eller problemer med pod-aktivering på noen telefonmodeller. Det er lurt å se gjennom listen over [testede maskinvareoppsett](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) for å finne konfigurasjoner som er kjent for å virke, når du velger telefon til et Omnipod DASH-oppsett.
-         - Det finnes en rekke kjente problemer med Bluetooth som kan gi problemer med pod-aktivering (se [Feilsøking](#troubleshooting) for råd om andre Bluetooth-problemer), særlig avsnittet [Bluetooth-relaterte problemer](#omnipod-dash-bluetooth-related-issues).
+         - Det finnes en rekke kjente problemer med Bluetooth som kan gi problemer med pod-aktivering (se [Feilsøking](#omnipod-dash-troubleshooting) for råd om andre Bluetooth-problemer), særlig avsnittet [Bluetooth-relaterte problemer](#omnipod-dash-bluetooth-related-issues).
     - Telefonen må kjøre **Android 12 eller nyere**, med **AAPS** bygd og installert etter instruksjonene i [**Bygge AAPS**](../SettingUpAaps/BuildingAaps.md). Kjør alltid den nyeste utgitte versjonen.
 - En støttet [**kontinuerlig glukosemåler (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
@@ -611,7 +611,7 @@ En pod som har sviktet, kan ikke brukes igjen. Kontroller blodsukkeret ditt, og 
 ---
 ### Forebygge feil 49-podfeil
 
-Denne feilen henger sammen med at poden er i feil tilstand for en kommando, eller med en feil under en kommando for insulinlevering. Det vil si at driveren og poden er uenige om den faktiske tilstanden. Poden reagerer da (som en innebygd sikkerhetsmekanisme) med den uopprettelige feilkoden 49 (0x31), og du ender opp med det som kalles en «screamer»: det lange, irriterende pipet som bare kan stoppes ved å stikke hull på riktig sted på baksiden av poden. Den nøyaktige årsaken til en «49-podfeil» er ofte vanskelig å spore. I situasjoner der det er grunn til å tro at denne feilen kan oppstå (for eksempel når appen krasjer, når du kjører en utviklingsversjon eller ved ny installasjon).
+Denne feilen henger sammen med at poden er i feil tilstand for en kommando, eller med en feil under en kommando for insulinlevering. Det vil si at driveren og poden er uenige om den faktiske tilstanden. Poden reagerer da (som en innebygd sikkerhetsmekanisme) med den uopprettelige feilkoden 49 (0x31), og du ender opp med det som kalles en «screamer»: det lange, irriterende pipet som bare kan stoppes ved å stikke hull på riktig sted på baksiden av poden. Den nøyaktige årsaken til en «49-podfeil» er ofte vanskelig å spore. Det kan for eksempel skje etter at appen har krasjet, når du kjører en utviklingsversjon eller etter en ny installasjon.
 
 ---
 
@@ -690,7 +690,7 @@ Nedenfor finner du en oversikt over de viktigste varslene du kan møte:
 - *Pod-feil: XXX NAVN*, etterfulgt av *Ref: ...*: poden har sviktet og sluttet å levere insulin. Bytt poden. Se [Pod-feil](#omnipod-dash-pod-failures).
 - *Ingen aktiv Pod*: ingen pod-økt ble funnet. Denne varslingen kommer tilbake til du aktiverer en ny pod. Når en pod er aktivert, forsvinner den automatisk.
 - *Insulinlevering er pauset*: poden har pauset insulinleveringen. Se [Gjenoppta insulinleveringen](#omnipod-dash-resuming-insulin-delivery).
-- *Endring av basalprofil kan ha feilet. Insulinlevering kan bli pauset! Vennligst velg Oppdater Pod fra Omnipod-fanen og velg gjenoppta levering hvis nødvendig.* Det kan hende at det mislyktes å sette basal-**profilen** på poden. Trykk på **Oppdater** på DASH-pumpeskjermen (meldingen sier fortsatt «Omnipod-fanen»), og trykk på **Gjenoppta levering** hvis den vises.
+- *Endring av basalprofil kan ha feilet. Insulinlevering kan bli pauset! Oppdater Pod-status manuelt på pumpeskjermen, og gjenoppta leveringen hvis nødvendig.* Det kan hende at det mislyktes å sette basal-**profilen** på poden. Trykk på **Oppdater** på DASH-pumpeskjermen, og trykk på **Gjenoppta levering** hvis den vises.
 - *Kunne ikke bekrefte om SMB (X E) ble utført. Oppdater pod-statusen for å bekrefte om kommandoen ble utført eller avvist.* **AAPS** kunne ikke bekrefte at **SMB-en** ble levert. Trykk på **Oppdater** på DASH-pumpeskjermen, og kontroller feltet **Siste bolus**.
 - *Status for levering av bolus er usikker. Oppdater podstatus for å bekrefte eller avkrefte.* Det samme gjelder en vanlig bolus: trykk på **Oppdater** på DASH-pumpeskjermen.
 - *Tidssone på pod er forskjellig fra tidssonen på telefon. Basaldoser er feil. Bytt profil for å korrigere* Se merknaden om sommertid og tidssoner i [Kjente begrensninger/problemer med Omnipod DASH i AAPS](#omnipod-dash-constraints).
@@ -703,7 +703,7 @@ Alt utviklingsarbeid for DASH gjøres av fellesskapet på **frivillig** basis; h
 
 -  **Nivå 0:** Les den aktuelle delen av denne dokumentasjonen, slik at du forstår hvordan funksjonen du har problemer med, er ment å virke.
 -  **Nivå 1:** Hvis du fortsatt har problemer som du ikke klarer å løse ved hjelp av dette dokumentet, gå til kanalen *#AAPS* på **Discord** ved å bruke [denne invitasjonslenken](https://discord.gg/4fQUWHZ4Mw). Det finnes også mange Facebook-grupper og andre grupper du kan spørre i (se [**Hvor kan jeg få hjelp**](../GettingHelp/WhereCanIGetHelp.md))
--  **Nivå 2:** Søk i eksisterende saker for å se om problemet ditt allerede er rapportert under [Issues](https://github.com/nightscout/AndroidAPS/issues) hvis det finnes, bekreft/kommenter/legg til informasjon om problemet ditt. Hvis ikke, opprett en [ny sak](https://github.com/nightscout/AndroidAPS/issues) og legg ved [loggfilene dine](../GettingHelp/AccessingLogFiles.md).
+-  **Nivå 2:** Søk i eksisterende saker for å se om problemet ditt allerede er rapportert under [Issues](https://github.com/nightscout/AndroidAPS/issues). Hvis det finnes, kan du bekrefte, kommentere eller legge til informasjon om problemet ditt. Hvis ikke, opprett en [ny sak](https://github.com/nightscout/AndroidAPS/issues) og legg ved [loggfilene dine](../GettingHelp/AccessingLogFiles.md).
 -  **Vær tålmodig – de fleste i fellesskapet vårt er velvillige frivillige, og det tar ofte tid og tålmodighet fra både brukere og utviklere å løse problemer.**
 
 Når du ber om hjelp, bør du ha følgende informasjon klar, slik at de i fellesskapet kan hjelpe deg med dine konkrete spørsmål og problemer:

@@ -91,7 +91,7 @@ Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQq
 
 ```{admonition} Wear OS 5
 :class: warning
-On Wear OS 5 the AAPS watchface has to be selected with Wear Installer 2 right after installing the Wear app: the installer offers the **AAPS (Custom)** watchface at the end of the installation. If you accidentally switch to another watchface, repeat the installation. Changing the watchface settings (Dark, Watchdivider, etc.) may not be possible.
+On Wear OS 5 the AAPS watchface has to be selected with Wear Installer 2 right after installing the Wear app: the installer offers the **AAPS (Custom)** watchface at the end of the installation. If you accidentally switch to another watchface, repeat the installation. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
 
 If the classic watchface currently works for you, **disable automatic watch updates**: the next firmware update is likely to break it. If you update to Wear OS 6 anyway, read the section above: **AAPS** then installs its own watchface in the new format.
 ```
@@ -114,13 +114,13 @@ _This guide was written for a Galaxy Watch running Wear OS 3._ On Wear OS 4 and 
 
 ## 智能手表基本操作
 
-在根据上面的视频完成手表的基本设置后，请转到手机上的Play商店并下载以下应用：“Galaxy Wearable”、“Samsung”以及“Easy Fire tools”或“Wear Installer 2”。
+After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
 
 YouTube上有许多第三方视频可以帮助您熟悉新智能手表，例如：
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-“Galaxy Wearable”应用中也包含有说明手册部分。在手机上打开Galaxy Wearable，搜索手表，尝试将手表与手机配对。根据您的版本，这可能会提示您从Play商店安装进一步的第三方应用“galaxy watch 4 plugin”（下载需要一些时间）。在手机上安装此应用，然后再次尝试在Wearable应用中配对手表和手机。完成一系列菜单并勾选各种偏好设置。
+“Galaxy Wearable”应用中也包含有说明手册部分。在手机上打开Galaxy Wearable，搜索手表，尝试将手表与手机配对。 Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). 在手机上安装此应用，然后再次尝试在Wearable应用中配对手表和手机。完成一系列菜单并勾选各种偏好设置。
 
 ## 设置Samsung账户
 
@@ -259,7 +259,7 @@ The final step is to configure **AAPS** on the phone to interact with **Wear.apk
 
 To bolus or take other actions from the watch, also turn on **Wear control** in [Settings > Wear](#preferences-wear).
 
-要更改为不同的**AAPS**表盘，请按手表的主屏幕，它将转到“自定义”。然后向右滑动，直到您看到所有**AAPS**表盘。
+To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. 然后向右滑动，直到您看到所有**AAPS**表盘。
 
 如果已成功将**AAPS** Wear.apk侧载到智能手表上，它将如下所示：
 
@@ -333,7 +333,7 @@ F - 手机电量
 
 G - 基础率（标准速率期间以U/h显示，临时基础率（TBR）期间以%显示）
 
-H - 血糖互动（BGI）-> 仅基于胰岛素活性，血糖“应该”上升或下降的程度。
+H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
 I - 碳水化合物（活性碳水化合物|未来的e-carbs）
 

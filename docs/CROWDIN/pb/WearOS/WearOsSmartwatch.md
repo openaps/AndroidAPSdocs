@@ -91,7 +91,7 @@ Instale o apk do **AAPS Wear** usando o [Wear Installer 2](https://youtu.be/abgN
 
 ```{admonition} Wear OS 5
 :class: warning
-No Wear OS 5, o mostrador do AAPS precisa ser selecionado com o Wear Installer 2 logo depois de instalar o app Wear: o instalador oferece o mostrador **AAPS (Custom)** no fim da instalação. Se você mudar para outro mostrador sem querer, repita a instalação. Talvez não seja possível mudar as configurações do mostrador (Escuro, Watchdivider etc.).
+No Wear OS 5, o mostrador do AAPS precisa ser selecionado com o Wear Installer 2 logo depois de instalar o app Wear: o instalador oferece o mostrador **AAPS (Custom)** no fim da instalação. Se você mudar para outro mostrador sem querer, repita a instalação. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
 
 Se o mostrador clássico funciona para você agora, **desative as atualizações automáticas do relógio**: a próxima atualização de firmware provavelmente vai quebrá-lo. Se mesmo assim você atualizar para o Wear OS 6, leia a seção acima: o **AAPS** então instala o seu próprio mostrador no novo formato.
 ```
@@ -114,13 +114,13 @@ Aqui estão guias básicos de configuração para o [Galaxy Watch 5](https://www
 
 ## Primeiros passos com o smartwatch
 
-Depois da configuração básica do seu relógio, como no vídeo acima, abra a Play Store no telefone e baixe os seguintes apps: "Galaxy Wearable", “Samsung” e “Easy Fire tools” ou "Wear Installer 2".
+After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
 
 Há muitos vídeos de terceiros no YouTube que ajudam você a conhecer o seu novo smartwatch, por exemplo:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-O app “Galaxy Wearable” também tem uma seção com o manual de instruções. Abra o Galaxy Wearable no telefone, procure o relógio e tente parear o relógio com o telefone. Dependendo da sua versão, ele pode pedir para você instalar mais um app, o “galaxy watch 4 plugin”, da Play Store (o download demora um pouco). Instale-o no telefone e depois tente parear o relógio e o telefone de novo no app Wearable. Passe por uma série de menus e marque várias preferências.
+O app “Galaxy Wearable” também tem uma seção com o manual de instruções. Abra o Galaxy Wearable no telefone, procure o relógio e tente parear o relógio com o telefone. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Instale-o no telefone e depois tente parear o relógio e o telefone de novo no app Wearable. Passe por uma série de menus e marque várias preferências.
 
 ## Configurar uma conta Samsung
 
@@ -260,7 +260,7 @@ O último passo é configurar o **AAPS** no telefone para interagir com o **Wear
 
 Para dar bólus ou fazer outras ações pelo relógio, ative também **Controle do Wear** em [Configurações > Wear](#preferences-wear).
 
-Para mudar para outro mostrador do **AAPS**, toque e segure na tela inicial do relógio e ele vai abrir “customise” (personalizar). Depois deslize para a direita até chegar a todos os mostradores do **AAPS**.
+To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Depois deslize para a direita até chegar a todos os mostradores do **AAPS**.
 
 Se o Wear.apk do **AAPS** foi instalado com sucesso no smartwatch por side-load, ele vai ficar assim:
 
@@ -334,7 +334,7 @@ F - bateria do telefone
 
 G - taxa basal (mostrada em U/h com a taxa padrão e em % durante uma TBR)
 
-H - BGI (blood glucose interaction, impacto na glicose) -> o quanto a glicose "deveria" estar subindo ou caindo com base apenas na atividade da insulina.
+H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
 I - carboidratos (carboidratos ativos | e-carbs no futuro)
 

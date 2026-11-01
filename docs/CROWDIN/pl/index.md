@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- 31 October 2026 : Version 4.0.0 is out. Sprawdź w [informacjach o wersji](#latestrelease), co nowego, i zaktualizuj AAPS według [instrukcji aktualizacji](./Maintenance/UpdateToNewVersion.md).
+31 October 2026: Version 4.0.0 is out. Sprawdź w [informacjach o wersji](#latestrelease), co nowego, i zaktualizuj AAPS według [instrukcji aktualizacji](./Maintenance/UpdateToNewVersion.md).
 
 ```
 
@@ -17,7 +17,7 @@ Ta dokumentacja wyjaśnia, jak skonfigurować i używać **AAPS**. Po dokumentac
 
 W rozdziale **1) Pierwsze kroki** strona [Wprowadzenie do APS i AAPS](Getting-Started/Introduction.md) wyjaśnia ogólną ideę: do czego służy system sztucznej trzustki (APS). Przedstawia ogólne podstawy działania systemów pętli, wyjaśnia, dlaczego powstał **AAPS**, porównuje **AAPS** z innymi systemami i omawia kwestie bezpieczeństwa. Podpowiada, jak rozmawiać o **AAPS** z zespołem diabetologicznym, wyjaśnia, dlaczego musisz samodzielnie zbudować aplikację **AAPS**, zamiast po prostu ją pobrać, i pokazuje typowe połączenia w systemie **AAPS**. Omawia też dostępność oraz to, kto najprawdopodobniej skorzysta na używaniu **AAPS**.
 
-Strona [Przygotowanie do rozpoczęcia pracy z AAPS](./Getting-Started/PreparingForAaps.md) podaje więcej szczegółów o bezpieczeństwie oraz o telefonach, systemach CGM (ciągłego monitorowania glikemii) i pompach insulinowych, które są kompatybilne z **AAPS**. Przedstawia przegląd całego procesu, przez który przejdziesz, i podaje przybliżony czas potrzebny, aby korzystać ze wszystkich funkcji **AAPS**. Ten rozdział przygotuje cię technicznie do jak najszybszego i najsprawniejszego złożenia twojego systemu **AAPS**. Podrozdział [Kompatybilne systemy CGM](./Getting-Started/CompatiblesCgms.md) wyjaśnia, jak najlepiej skonfigurować CGM i które opcje wygładzania są najlepsze.
+Strona [Przygotowanie do rozpoczęcia pracy z AAPS](./Getting-Started/PreparingForAaps.md) podaje więcej szczegółów o bezpieczeństwie oraz o telefonach, systemach CGM (ciągłego monitorowania glikemii) i pompach insulinowych, które są kompatybilne z **AAPS**. Przedstawia przegląd całego procesu, przez który przejdziesz, i podaje przybliżony czas potrzebny, aby korzystać ze wszystkich funkcji **AAPS**. Ten rozdział przygotuje cię technicznie do jak najszybszego i najsprawniejszego złożenia twojego systemu **AAPS**. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
 
 Gdy solidnie zrozumiesz proces, możesz rozpocząć tworzenie swojej pętli **AAPS**.
 
@@ -40,7 +40,7 @@ Rozdział **9) [Pomoc i rozwiązywanie problemów](GettingHelp/WhereCanIGetHelp.
 
 Rozdział **10)** opisuje **[Zaawansowane opcje AAPS](./AdvancedOptions/FullClosedLoop.md)**, np. jak przejść od używania **AAPS** w hybrydowej zamkniętej pętli (bolusy do posiłków _itd._) do w pełni zamkniętej pętli (bez bolusów), jak [dostroić profil](./GettingHelp/ProfileTuning.md) i używać Autotune, a także opisuje wersję rozwojową (dev) i Tryb Inżynierski. Większość użytkowników dobrze radzi sobie z główną wersją **AAPS** („master”) i nie potrzebuje tych opcji. Ten rozdział jest dla użytkowników, którzy mają już dobrą kontrolę i chcą jeszcze ulepszyć swoją konfigurację.
 
-W rozdziale **11) [Jak wspierać AAPS](SupportingAaps/HowToEditTheDocs.md)** podajemy informacje, jak możesz wspierać ten projekt. Możesz przekazać pieniądze, sprzęt lub podzielić się swoją specjalistyczną wiedzą. Możesz samodzielnie proponować lub wprowadzać zmiany w dokumentacji, pomóc w [tłumaczeniu dokumentacji](SupportingAaps/Translations) i udostępniać swoje dane w projekcie Open Humans.
+In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provide information so that you can support this project. Możesz przekazać pieniądze, sprzęt lub podzielić się swoją specjalistyczną wiedzą. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations.md) and provide your data through the Open Humans project.
 
 Rozdział **12) Zasoby** zawiera zarchiwizowaną lub dodatkową dokumentację, w tym podrozdział dla [lekarzy](UsefulLinks/ClinicianGuideToAaps.md), którzy interesują się technologią sztucznej trzustki open source, taką jak **AAPS**, oraz dla pacjentów, którzy chcą przekazać takie informacje swoim lekarzom; ten temat jest omawiany także we wprowadzeniu. Ten rozdział zawiera też więcej materiałów o cukrzycy i systemach pętli. Zawiera [Słowniczek pojęć](./UsefulLinks/Glossary.md) – listę skrótów (lub krótkich nazw) używanych w **AAPS**. Tutaj sprawdzisz na przykład, co oznaczają skróty ISF lub TT.
 

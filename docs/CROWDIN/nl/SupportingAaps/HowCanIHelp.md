@@ -23,7 +23,7 @@ Als je voor de eerste keer iets vertaalt, begin dan met het vertalen van de stri
 
 Je bent ook welkom om tegelijk of later te beginnen als vertaler van de documentatie.
 
-Je kunt de stand van de vertalingen van de app en de documentatie per taal [hier](#StateOfTranslations) bekijken.
+You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
 
 * Als je **de app** naar andere talen wilt vertalen (dank je wel), gebruik dan [crowdin](https://crowdin.com/project/androidaps).
 * Als je **de documentatie** naar andere talen wilt vertalen (dank je wel), gebruik dan [crowdin](https://crowdin.com/project/androidapsdocs). 

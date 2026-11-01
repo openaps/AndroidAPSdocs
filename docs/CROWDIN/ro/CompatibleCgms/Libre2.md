@@ -40,7 +40,7 @@ After a sensor change xDrip will automatically detect the new sensor and will de
 
 ![Configuration > BG Source with xDrip+ BG selected](../images/v4/Configuration/configuration_bg_source.png)
 
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip settings page](#xdrip-identify-receiver).
+-   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as described on [xDrip settings page](#xdrip-identify-receiver).
 
 ## 2. Use xDrip direct connection
 
@@ -67,7 +67,7 @@ Technically, the current blood sugar value is transmitted to xDrip every minute.
 
 Acest lucru este obligatoriu pentru buclă. Curbele sunt uniformizate și rezultatele buclei sunt grozave. Valorile brute pe care se bazează alarmele oscilează puțin mai mult, dar corespund valorilor pe care le afișează și cititorul oficial. In addition, the raw values can be displayed in the xDrip graph in order to be able to react in time to rapid changes. Vă rugăm să porniți Setări mai puțin obișnuite \> Setări Avansate pentru Libre2 \> "Arătați valori brute" și "Arătați informațiile senzorului". Apoi valorile brute sunt afișate suplimentar ca puncte mici albe și informațiile suplimentare despre senzori sunt disponibile în meniul sistemului.
 
-Valorile brute sunt foarte utile atunci când glicemia din sânge variază rapid. Chiar dacă valorile oscilează mai mult, ați detecta tendința mult mai bine dacă ați folosi linia netezită pentru a lua decizii terapeutice adecvate.
+Valorile brute sunt foarte utile atunci când glicemia din sânge variază rapid. Even if the dots are jumpier you would detect the tendency much better than using the smoothed line to make proper therapy decisions.
 
 → Meniu Hamburger → Setări → Setări mai puțin frecvente → Setări avansate pentru Libre 2
 
@@ -77,7 +77,7 @@ Valorile brute sunt foarte utile atunci când glicemia din sânge variază rapid
 
 #### Calibrare
 
-You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2,2 mmol/L to +1,1 mmol/L\]** (intercept). Panta nu poate fi schimbată. Vă rugăm să verificați printr-o înțepătură în deget (prin glicemie capilară) după activarea unui senzor nou, și să rețineți că acesta ar putea să nu fie precis în primele 12 ore de la inserare. Deoarece pot exista diferențe mari față de măsurătorile sângelui, verificați la fiecare 24 de ore și calibrați dacă este necesar. Dacă senzorul oferă citiri eronate după câteva zile, atunci ar trebui să fie înlocuit.
+You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2.2 mmol/L to +1.1 mmol/L\]** (intercept). Panta nu poate fi schimbată. Vă rugăm să verificați printr-o înțepătură în deget (prin glicemie capilară) după activarea unui senzor nou, și să rețineți că acesta ar putea să nu fie precis în primele 12 ore de la inserare. Deoarece pot exista diferențe mari față de măsurătorile sângelui, verificați la fiecare 24 de ore și calibrați dacă este necesar. Dacă senzorul oferă citiri eronate după câteva zile, atunci ar trebui să fie înlocuit.
 
 ## 3. Utilizare Diabox
 

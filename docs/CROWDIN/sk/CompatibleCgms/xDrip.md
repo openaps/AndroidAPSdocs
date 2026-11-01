@@ -10,7 +10,7 @@ Pre aplikáciu xDrip vypnite optimalizáciu batérie a povoľte činnosť na poz
 
 Nedovoľte žiadnej inej aplikácii nahrávať dáta (glykémiu a ošetrenia) do Nightscoutu.
 
-→ Ponuka ☰ (1) → Settings (2) → Cloud Upload (3) -> Nightscout Sync (REST-API)(4) → prepnite `Enabled` na **OFF** (5)
+→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Switch **OFF** `Enabled` (5)
 
 ![xDrip základné nastavenia 1](../images/xDrip_Basic1.png)
 
@@ -34,7 +34,7 @@ Aj možnosť `Alert on failures` by mala byť vypnutá (10). Inak dostanete alar
 
 ### **Inter-app Settings** (vysielanie)
 
-Ak budete používať AAPS a dáta sa majú posielať napr. do AAPS, musíte v xDrip v Inter-App settings zapnúť vysielanie.
+If you use AAPS, you must activate broadcasting in xDrip's Inter-App settings so the data is forwarded to AAPS.
 
 → Ponuka ☰ (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
 

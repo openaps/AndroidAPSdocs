@@ -22,7 +22,7 @@ Este método usa Juggluco para recibir del sensor datos sin procesar cada minuto
 ### Paso 1: Configurar Juggluco
 Descarga e instala la aplicación Juggluco desde [aquí](https://www.juggluco.nl/Juggluco/download.html). Sigue las instrucciones [aquí](https://www.juggluco.nl/Juggluco/libre3/)
 
-Asegúrate de enviar los valores de glucosa a xDrip: en los ajustes de Juggluco puedes configurar Juggluco para que envíe sus valores de glucosa a otras apps. Juggluco puede enviar tres tipos de estos broadcasts: el **Patched Libre broadcast** lo usaba al principio la app Librelink parcheada y se puede usar para enviar valores de glucosa a xDrip
+Asegúrate de enviar los valores de glucosa a xDrip: en los ajustes de Juggluco puedes configurar Juggluco para que envíe sus valores de glucosa a otras apps. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip.
 
 ### Paso 2: Configurar xDrip+
 
@@ -69,7 +69,7 @@ Después de un cambio de sensor, xDrip detectará el nuevo sensor automáticamen
 
 ![Terminate sensor](../images/libre3/step_14.jpg)
 
-Nota: Cuando hay dos sensores activos, Juggluco enviará el valor más reciente de cualquiera de los dos sensores a xDrip. Si los sensores no están calibrados y no miden la glucosa de forma parecida, xDrip puede recibir valores de glucosa con saltos. Si terminas el sensor incorrecto, puedes reactivarlo simplemente escaneándolo de nuevo.
+Nota: Cuando hay dos sensores activos, Juggluco enviará el valor más reciente de cualquiera de los dos sensores a xDrip. If the sensors are not calibrated to read BG similarly, this may result in jumpy BG values being reported to xDrip. Si terminas el sensor incorrecto, puedes reactivarlo simplemente escaneándolo de nuevo.
 
 ## Cambiar el sensor entre la aplicación Libre 3 y Juggluco
 
@@ -99,4 +99,4 @@ Para cambiar de la aplicación Libre 3 a Juggluco, necesitas forzar la detenció
 
 Instrucciones originales: [Sitio web de jkaltes](https://www.juggluco.nl/Juggluco/libre3/)
 
-Repositorio adicional en Github: [Enlace a Github](https://github.com/maheini/FreeStyle-Libre-3-patch)
+Additional GitHub repo: [GitHub link](https://github.com/maheini/FreeStyle-Libre-3-patch)

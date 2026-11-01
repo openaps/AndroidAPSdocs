@@ -57,7 +57,7 @@ Como no estás recibiendo insulina mientras la bomba está desconectada, deberí
 (pumps-cannulas-announce-insulin)=
 ## Para registrar insulina administrada sin poner realmente un bolo
 
-Para registrar insulina administrada desde la bomba mientras **AAPS** estaba desconectado, o con inyecciones de pluma: abre el [diálogo Insulina](#aaps-screens-buttons-insulin) (**Tratamientos** en la navegación inferior, o un botón de Lanzamiento rápido), escribe la cantidad en unidades y activa **El bolo sólo se anotará**. Entonces aparece una fila **Tiempo** (con el valor **Ahora**) para registrar la hora real de la inyección: puedes ignorarla si la inyección fue hace poco. Si el bolo se puso hace un rato, usa **-** para mover la hora hacia atrás (_p. ej._ -30 min), o abre la fila con la flecha para elegir la fecha y la hora exactas. Entonces **AAPS** tiene en cuenta la duración de la acción de la insulina y calcula según eso la insulina que queda en el cuerpo.
+To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. Entonces aparece una fila **Tiempo** (con el valor **Ahora**) para registrar la hora real de la inyección: puedes ignorarla si la inyección fue hace poco. Si el bolo se puso hace un rato, usa **-** para mover la hora hacia atrás (_p. ej._ -30 min), o abre la fila con la flecha para elegir la fecha y la hora exactas. Entonces **AAPS** tiene en cuenta la duración de la acción de la insulina y calcula según eso la insulina que queda en el cuerpo.
 
 Si usas **AAPS** como cuidador, puedes desconectar (y reconectar) la bomba a distancia muy fácilmente con un [comando SMS](../RemoteFeatures/SMSCommands.md), con comandos como "pump disconnect 120" y "pump connect 120". El rango de duración para la desconexión remota es de 1 a 120 min, (en este ejemplo son 120 minutos). Esto es muy útil si no te es fácil acceder al teléfono con **AAPS**: por ejemplo, está metido en un cinturón para la bomba de un niño que corre hacia la piscina, o lo tiene (o lo usa) un adolescente que no lo suelta.
 
@@ -92,7 +92,7 @@ Qué estrategia prefieres es algo muy personal, y la mejor forma de encontrarla 
 
 ![Diálogo Perfil de usuario para rotación de sitios](../images/SiteRotation/Type.png)
 
-*Nota: este ajuste decide si el diálogo de rotación del sitio (modo Editar) se abre o no de forma automática cuando se crea una nueva entrada con el botón «Cebar/Llenar» o con el botón «Inserción de sensor»*
+*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
 
 - Para un cambio de zona hecho directamente en la bomba, tienes que abrir el modo Ver y editar la nueva entrada para elegir la ubicación y la flecha
 
@@ -100,7 +100,7 @@ El modo Editar te permite elegir la ubicación, la flecha y la nota de la entrad
 
 - La entrada que se edita aparece debajo de las imágenes del cuerpo, con el icono de su tipo (cánula o sensor)
 - Las vistas de delante y de detrás se muestran una al lado de la otra: toca la zona donde lo pusiste
-- Cuando eliges una zona (resaltada en verde), en la lista de abajo ves todas las entradas hechas en esta zona en los últimos 45 días
+- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
 
 ![Modo Editar](../images/SiteRotation/EditMode.png)
 

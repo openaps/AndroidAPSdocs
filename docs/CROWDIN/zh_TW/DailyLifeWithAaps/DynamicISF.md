@@ -16,14 +16,14 @@
 
 使用 **Dynamic ISF** 時，**AAPS'** 資料庫需要至少 7 天的使用者 **AAPS** 資料。
 
-## Dynamic ISF 的功能是什麼？
+## What does Dynamic ISF do?
 
 **Dynamic ISF** 根據使用者的以下因素動態調整胰島素敏感度因子（**ISF**）：
 
 - 每日胰島素總量（**TDD**）；以及
 - 目前和預測的血糖值。
 
-使用 **Dynamic ISF** 時，**設定檔** 中輸入的 **ISF** 值不再使用，除非在 **AAPS** 資料庫中沒有足夠的 TDD 資料作為後備（例如 *即* 應用的全新重新安裝）。
+When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are not used at all anymore, except as a fallback if there is not enough TDD data in **AAPS** database (*i.e.* fresh reinstallation of the app).
 
 **SMB/AMA** - 使用者的 **設定檔** 示例，其中的靜態 **ISF** 由使用者設置，並由 **SMB** 和 **AMA** 使用。
 
@@ -37,7 +37,7 @@
 
 **DynISF** 數值也可以顯示在圖表中：點選主畫面圖表下方的 **新增圖表**，然後選取 **VSENS**（可變敏感度）。它會以白線顯示（如上方圖片底部所示）。
 
-## Dynamic ISF 是如何計算的？
+## How is Dynamic ISF calculated?
 
 **Dynamic ISF** 使用 Chris Wilson 的模型來確定**ISF**，而不是使用者在**設定檔** 中設定的靜態**ISF** 值。詳細解釋可以在此找到： [Chris Wilson 談論 Loop 和 Learn 的胰島素敏感度（修正因子），2022 年 2 月 6 日](https://www.youtube.com/watch?v=oL49FhOts3c)。
 
@@ -70,9 +70,8 @@ TDD 將使用以下數值的組合：
 
 **未來 ISF** 使用與上面描述的相同公式，不同的是，它可能使用 **最低預測血糖** 來替代 **目前血糖**。**最低預測血糖** 是 [在 oref1 中計算](#aaps-screens-how-predictions-become-a-dosing-decision)的數值，代表整段預測期間中血糖可能降到的最低值。
 
-* 如果目前 **血糖** 高於目標<br/> **且** 如果 **血糖** 水平穩定，在 +/- 3 mg/dL 內：<br/>血糖在公式中的使用如下：`平均值（預測最低血糖，當前血糖）`。
-* 如果最終 **血糖** 高於目標，且葡萄糖水平正在上升，<br/>  
-  **或** 最終 **血糖** 高於目前 **血糖**：<br/>血糖在公式中的使用如下：`目前血糖`。
+* If the current **BG** is above target<br/> **and** if **BG** levels are flat, within +/- 3 mg/dL:<br/>BG is used in the formula as follows: `average(minimum predicted BG, current BG)`.
+* If eventual **BG** is above target and glucose levels are increasing,<br/> **or** eventual **BG** is above current **BG**:<br/>BG is used in the formula as follows: `current BG`.
 * 否則：<br/>血糖在公式中的使用如下：`最低預測血糖`。
 
 想要更簡單的解釋，請參見下面的截圖，該截圖說明了上述情況。橙色點使用 **預測血糖**，紫色點使用 **平均值（預測血糖，目前血糖）**，藍色點使用 **目前血糖**。
@@ -112,7 +111,7 @@ TDD 將使用以下數值的組合：
 
 當啟用 [**百分比設定檔切換**](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) 時，**調整因子** 也會改變。較低的 **設定檔百分比** 將降低 **調整因子**，反之亦然，較高的 **設定檔百分比** 則會提高 **調整因子**。
 
-例如，如果你的 **調整因子** 是 80%，並且 **設定檔切換** 到 80% 被啟動，則最終 **調整因子** 將為 `0.8*0.8=0.64`。
+For example, if your **Adjustment Factor** is 80%, and **Profile Switch** to 80% is actioned, the resulting **Adjustment Factor** will be `0.8*0.8=0.64`.
 
 這意味著，當使用 **動態 ISF** 時，你可以使用 **設定檔百分比** 來手動暫時微調你的敏感性。這對於體能活動（較低百分比）、感冒（較高百分比）等情況將會很有用。
 

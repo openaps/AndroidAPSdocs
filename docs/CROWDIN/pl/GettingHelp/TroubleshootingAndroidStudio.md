@@ -49,7 +49,7 @@ Sklonuj źródła ponownie, jak opisano w dokumentacji, i nie zezwalaj na aktual
 
   * Musisz dostać komunikat z zainstalowaną wersją Git, tak jak na zrzucie ekranu powyżej. W takim przypadku przejdź do [Kroku 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * Jeśli dostaniesz komunikat
+  * In case you get a message saying
     ```
     Git: command not found
     ```
@@ -59,13 +59,13 @@ Sklonuj źródła ponownie, jak opisano w dokumentacji, i nie zezwalaj na aktual
 
   * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
 
-  * If Git is installed, you have restarted (if on windows), and Git still cannot be found:
+  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
 
   * Wyszukaj na komputerze plik „git.exe”.
 
     Zanotuj sobie, w jakim katalogu jest zapisany.
 
-  * Przejdź do zmiennych środowiskowych w Windows, wybierz zmienną „PATH” i kliknij Edytuj. Dodaj katalog, w którym znalazłeś swoją instalację Git.
+  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Dodaj katalog, w którym znalazłeś swoją instalację Git.
 
   * Zapisz i zamknij.
 
@@ -139,7 +139,7 @@ Lub:
 Cause: error: invalid source release: 21
 ```
 
-Jeśli widzisz powyższy komunikat o błędzie, musisz pobrać właściwą wersję JVM, zanim spróbujesz zbudować ponownie:
+If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
 
 1.  Sprawdź w [tabeli wymagań](#Building-APK-recommended-specification-of-computer-for-building-apk-file), której wersji JVM potrzebujesz dla budowanej wersji **AAPS**, i zanotuj ją.
 
@@ -252,7 +252,7 @@ Twój apk został zbudowany poprawnie i możesz go przenieść na telefon!
 
 ## Apk zainstalowany, ale stara wersja
 
-Jeśli aplikacja zbudowała się poprawnie, przeniosłeś ją na telefon i zainstalowałeś bez błędów, ale numer wersji się nie zmienił, to być może nie wykonałeś kroku [aktualizacji lokalnej kopii](#Update-to-new-version-update-your-local-copy)
+If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
 
 ## Nic z powyższych nie pomogło
 

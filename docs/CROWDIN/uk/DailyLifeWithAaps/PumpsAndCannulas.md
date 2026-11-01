@@ -57,7 +57,7 @@ As you are not getting any insulin while the pump is disconnected, you should re
 (pumps-cannulas-announce-insulin)=
 ## To announce delivered insulin without actually bolusing
 
-Щоб записати інсулін, введений з помпи, поки **AAPS** було від’єднано, або ін’єкції шприц-ручкою: відкрийте [діалог «Інсулін»](#aaps-screens-buttons-insulin) (**Терапія** в нижній навігації або кнопка швидкого запуску), введіть кількість в одиницях і ввімкніть **Болюс буде лише записаний (не подається помпою)**. Потім рядок **Час** (зі значенням **Зараз**) дає змогу записати фактичний час ін’єкції; якщо ін’єкцію зроблено нещодавно, його можна не змінювати. Якщо болюс було введено деякий час тому, натисніть **-**, щоб перенести час назад (_напр._ -30 хв), або відкрийте рядок стрілкою, щоб вибрати точну дату й час. Тоді **AAPS** врахує тривалість дії інсуліну й відповідно розрахує інсулін, що ще залишився в організмі.
+To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. Потім рядок **Час** (зі значенням **Зараз**) дає змогу записати фактичний час ін’єкції; якщо ін’єкцію зроблено нещодавно, його можна не змінювати. Якщо болюс було введено деякий час тому, натисніть **-**, щоб перенести час назад (_напр._ -30 хв), або відкрийте рядок стрілкою, щоб вибрати точну дату й час. Тоді **AAPS** врахує тривалість дії інсуліну й відповідно розрахує інсулін, що ще залишився в організмі.
 
 Якщо ви користуєтеся **AAPS** як доглядач, ви можете дуже легко віддалено від’єднати (і знову під’єднати) помпу за допомогою [SMS-команди](../RemoteFeatures/SMSCommands.md), наприклад «pump disconnect 120» і «pump connect 120». The range of duration for remote disconnect is from 1 - 120 min, (in this example it is 120 minutes). Це дуже зручно, якщо вам важко дістати телефон з **AAPS**: наприклад, він схований у поясі для помпи в дитини, яка біжить до басейну, або його пильно охороняє (чи використовує) підліток.
 
@@ -92,7 +92,7 @@ Which strategy you prefer is highly personal, and is best determined by trial an
 
 ![Діалог профілю користувача для заміни місць введення](../images/SiteRotation/Type.png)
 
-*Примітка: це налаштування визначає, чи автоматично відкривати діалог чергування місць введення (режим редагування), коли новий запис створено кнопкою «Підготовка/Заповнення» або «Встановлення сенсора»*
+*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
 
 - Якщо заміну місця зроблено прямо на помпі, відкрийте режим перегляду й відредагуйте новий запис, щоб вибрати розташування та стрілку
 
@@ -100,7 +100,7 @@ Which strategy you prefer is highly personal, and is best determined by trial an
 
 - Запис, який редагується, показано під зображеннями тіла разом зі значком його типу (канюля або сенсор)
 - Вигляд спереду та ззаду показано поруч: натисніть на ділянку, куди ви його встановили
-- Коли ділянку вибрано (виділено зеленим), у списку нижче ви побачите всі записи за останні 45 днів у цій ділянці
+- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
 
 ![Режим редагування](../images/SiteRotation/EditMode.png)
 

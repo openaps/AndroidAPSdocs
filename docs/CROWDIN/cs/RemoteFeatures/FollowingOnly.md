@@ -114,7 +114,7 @@ Pokud vaším zdrojem dat pro **AAPS** není xDrip, ale xDrip umí zobrazit data
 
 ![obrázek](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift vznikl převedením původní aplikace xDrip na iOS a vyvinul se v „xDrip for iOS“, psaný **xDrip4iOS** .
+xDripSwift was created from porting the original xDrip app to iOS and evolved into "xDrip for iOS", written as **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
@@ -150,7 +150,7 @@ Pokud chcete, můžete se pak stát „releaserem“ a [sdílet osobní Testflig
 * Apple iPad (vyžaduje verzi systému 13.0 nebo novější)
 * Google Android (webovou aplikaci si uložte na domovskou obrazovku)
 
-Uživatelé Sugarmate uvádějí, že v USA ji lze používat s Apple CarPlay a během řízení zobrazovat hodnoty glykémie. Zatím není známo, zda je to možné i v jiných zemích než v USA. Pokud o tom víte víc, doplňte prosím podrobnosti sem do dokumentace pomocí pull requestu (odkaz), je to rychlé a snadné.
+Uživatelé Sugarmate uvádějí, že v USA ji lze používat s Apple CarPlay a během řízení zobrazovat hodnoty glykémie. Zatím není známo, zda je to možné i v jiných zemích než v USA. If you know more about this, please add details in here to the documentation by completing a [pull request](../SupportingAaps/HowToEditTheDocs.md), which is quick and easy to do.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
@@ -173,13 +173,13 @@ Viz [zde](../Getting-Started/Watches.md).
 :local: true
 ```
 
-### M5 stack
+### M5Stack
 
 ![obrázek](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
 
 M5Stack je malá krabička, kterou lze naprogramovat pro mnoho použití. Martinův projekt [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) zobrazuje hodnoty glukózy ze senzoru a trendy, IOB a COB. Je v plastové krabičce a má barevný displej, slot na kartu micro SD, 3 tlačítka, reproduktor a vnitřní baterii. Je to skvělý monitor glykémie a jeho nastavení je poměrně snadné, pokud máte účet Nightscout. Uživatelé ho obvykle provozují na domácí Wi-Fi, ale někteří ho používají i jako displej při jízdě na motorce, připojený k Wi-Fi hotspotu z telefonu.
 
-### Sugarpixel
+### SugarPixel
 
 SugarPixel je zařízení, které slouží jako druhý displej a systém výstrah pro kontinuální monitorování glukózy. Připojuje se k aplikaci Dexcom nebo k Nightscoutu v telefonu uživatele. Zařízení zobrazuje hodnoty glykémie v reálném čase. Tento hardwarový monitor CGM nabízí zvukové výstrahy s náhodně generovanými tóny (jsou neuvěřitelně hlasité), vibrační výstrahy pro sluchově postižené, nastavitelné možnosti zobrazení a vestavěné sledování více uživatelů.
 

@@ -1,6 +1,6 @@
 # Framtidige (mulige) pumpedrivere
 
-Dette er en liste over noen pumper som finnes der ute, status for støtte i noen av loop-systemene og deretter status i AAPS. Til slutt står det litt om hva som kreves for at en pumpe skal være «loop-klar».
+Dette er en liste over noen pumper på markedet, status for støtte i andre loop-systemer og status i AAPS. Til slutt står det litt om hva en pumpe trenger for å være «loop-klar».
 
     {contents} Innhold
     :depth: 1
@@ -42,7 +42,7 @@ Tandem: t:Mobi ([Hjemmeside](https://www.tandemdiabetes.com/))
 
 ### Willcare insulinpumpe ([Hjemmeside](http://shinmyungmedi.com/en/))
 
-**Loopstatus:** For øyeblikket er den ikke en loop-kandidat, men vi ble kontaktet av folk fra selskapet, og de er interessert i å utvide pumpen så den kan loopes (for øyeblikket tror jeg den bare mangler kommandoer for å hente/angi profil).
+**Loopstatus:** For øyeblikket er den ikke en loop-kandidat, men folk fra selskapet kontaktet oss, og de er interessert i å gjøre pumpen loop-klar (den ser ut til bare å mangle kommandoer for å hente/angi profil).
 
 **Maskinvarekrav for AAPS:** Ingen. Den ser ut til å ha Bluetooth (BT).
 

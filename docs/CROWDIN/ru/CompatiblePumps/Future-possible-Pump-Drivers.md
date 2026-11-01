@@ -1,6 +1,6 @@
 # Вероятные будущие драйверы для помп
 
-Это список некоторых помп и состояние их поддержки в системах ИПЖ, а затем статус в AAPS. В конце есть перечень того, что требуется, чтобы помпа стала совместимой с системами ИПЖ
+This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
 
     {contents} Table of contents
     :depth: 1
@@ -42,7 +42,7 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Инсулиновая помпа Willсare ([ Домашняя страница ](http://shinmyungmedi.com/en/))
 
-**Статус реализации:** В настоящий момент не является кандидатом, но их сотрудники связывались с нами, и они заинтересованы в том, чтобы сделать помпу пригодной для ИПЖ (на данный момент в помпе отсутствуют команды get/set profile).
+**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
 
 **Требования к оборудованию для AAPS:** Никаких. It seems to be BT enabled.
 

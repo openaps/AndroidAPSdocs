@@ -136,7 +136,7 @@
 
 - 安全限制是根據你在此設置中選擇的年齡設定的。
 - 如果你開始觸及這些嚴格的限制（如最大注射量），那麼是時候提升一步了。
-- 選擇高於實際年齡是一個不好的主意，因為這可能會因在胰島素對話框中輸入錯誤的數值（例如，跳過小數點）而導致過量。
+- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
 - 如果你想知道這些硬編碼的安全限制的實際數字，請滾動到你在[這個頁面](../DailyLifeWithAaps/KeyAapsFeatures.md)上使用的算法功能。
 
 (preferences-maximum-bolus)=
@@ -275,7 +275,7 @@
 - [進階餐前注射助手（OpenAPS AMA）](#Open-APS-features-advanced-meal-assist-ama) - 2017年的算法狀態
 - [超微量注射（OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - 最推薦給初學者的最新算法
 
-自[**AAPS**版本 3.3](#version3300)起，[動態 ISF](../DailyLifeWithAaps/DynamicISF.md)功能已移至 OpenAPS 微量注射的一部分。
+As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -489,7 +489,7 @@ NSClient 外掛（在組態選單中顯示為 **NSClientV3**）會與 Nightscout
 
 你可以通過向開發者發送崩潰報告來幫助進一步開發**AAPS**。
 
-**自動設定匯出**<br/>啟用此功能後，你允許**AAPS**自動執行設定匯出，而無需用戶介入。為此，主密碼 安全地存儲在你的手機中（僅限於下次手動匯出時）。存儲的密碼將在最多 4 週內有效。 4 週後，你將收到通知，提示密碼即將過期。在為期 1 週的寬限期內，可以透過 從維護選單手動匯出設定來刷新密碼。
+**自動設定匯出**<br/>啟用此功能後，你允許**AAPS**自動執行設定匯出，而無需用戶介入。 For this the master password is securely stored on your phone (only) at the next manual export. 存儲的密碼將在最多 4 週內有效。 4 週後，你將收到通知，提示密碼即將過期。在為期 1 週的寬限期內，可以透過 從維護選單手動匯出設定來刷新密碼。
 
 在寬限期過期的 1 週後，存儲的密碼將過期，任何自動化設定匯出將中止，同時通知用戶，要求 重新輸入密碼。[（**自動匯出設定**）](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)會記錄在 **AAPS**「照護入口」和「使用者輸入」清單的「治療」頁面中。
 

@@ -54,7 +54,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Мітка [посеред нікуди](#sandbox1-in-the-middle-of-nowhere) А це мітка до [](#sandbox1-this-is-another-test), і вона має показати свою назву
 
-Посилання з якорем:
+Links with anchor:
 - [скільки часу це займе?](#preparing-how-long-will-it-take)
 - [Налаштування NSClient у розділі «Налаштування»](#Preferences-nsclient).
 - [лінії прогнозу на екрані ОГЛЯД AAPS](#aaps-screens-prediction-lines) до заголовка рівня 4

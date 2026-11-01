@@ -1,4 +1,4 @@
-# Deine AAPS-Konfiguration anpassen
+# Making changes to your AAPS configuration
 
 Wenn Du die Einstellung mit dem **[Einrichtungsassistent](../SettingUpAaps/SetupWizard.md)**en abgeschlossen hast, und nur Teile Deiner **AAPS**-Konfiguration ändern möchtest, musst Du ihn nicht noch einmal vollständig durchlaufen.
 

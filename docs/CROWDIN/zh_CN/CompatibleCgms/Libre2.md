@@ -40,7 +40,7 @@ After a sensor change xDrip will automatically detect the new sensor and will de
 
 ![Configuration > BG Source with xDrip+ BG selected](../images/v4/Configuration/configuration_bg_source.png)
 
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip settings page](#xdrip-identify-receiver).
+-   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as described on [xDrip settings page](#xdrip-identify-receiver).
 
 ## 2. Use xDrip direct connection
 
@@ -67,7 +67,7 @@ Technically, the current blood sugar value is transmitted to xDrip every minute.
 
 这对于闭环是强制性的。曲线看起来平滑，闭环结果非常好。触发警报的原始数值波动稍大，但与读取器显示数值完全一致。 In addition, the raw values can be displayed in the xDrip graph in order to be able to react in time to rapid changes. 请启用"较少使用设置 > Libre2高级设置"中的"显示原始数值"与"显示传感器信息"选项。此时原始数值将额外显示为白色小点，且系统菜单中可查看更多传感器信息。
 
-当血糖快速波动时，原始数值极具参考价值。即便数据点波动较大，但相较于平滑曲线，原始数据点能更准确地反映变化趋势，从而帮助制定更精准的治疗方案。
+当血糖快速波动时，原始数值极具参考价值。 Even if the dots are jumpier you would detect the tendency much better than using the smoothed line to make proper therapy decisions.
 
 → 汉堡菜单 → 设置 → 较不常见的设置 → Libre 2 的高级设置
 
@@ -77,7 +77,7 @@ Technically, the current blood sugar value is transmitted to xDrip every minute.
 
 #### 校准
 
-You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2,2 mmol/L to +1,1 mmol/L\]** (intercept). 斜率参数不可调整。设置新传感器后，请通过指尖采血验证读数，需注意植入后最初12小时数据可能不准确。由于可能存在与血液测量值的显著差异，请每24小时进行验证，必要时重新校准。若传感器在数日后仍存在显著偏差，则应予以更换。
+You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2.2 mmol/L to +1.1 mmol/L\]** (intercept). 斜率参数不可调整。设置新传感器后，请通过指尖采血验证读数，需注意植入后最初12小时数据可能不准确。由于可能存在与血液测量值的显著差异，请每24小时进行验证，必要时重新校准。若传感器在数日后仍存在显著偏差，则应予以更换。
 
 ## 3. 使用 Diabox
 

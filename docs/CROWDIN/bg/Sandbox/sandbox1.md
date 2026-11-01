@@ -54,7 +54,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Етикет по средата на [нищото](#sandbox1-in-the-middle-of-nowhere) Това пък е етикетът към [](#sandbox1-this-is-another-test) и трябва да показва името си
 
-Връзки с котва:
+Links with anchor:
 - [колко време ще отнеме?](#preparing-how-long-will-it-take)
 - [Настройки на NSClient в Опции](#Preferences-nsclient).
 - [Линии на прогнозата в ОБЩ ПРЕГЛЕД на AAPS](#aaps-screens-prediction-lines) към заглавие от ниво 4

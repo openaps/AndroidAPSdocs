@@ -26,7 +26,7 @@ Les eGlucides sur l'écran principal : le nombre entre parenthèses dans le cha
 
 Dans l'[Assistant Bolus](#aaps-screens-bolus-wizard), trois boutons sous le champ **Glucides** vous permettent de choisir la vitesse d'absorption de votre repas. Choisissez-en un avant de confirmer. Selon le type, **AAPS** prend une partie des glucides saisis comme glucides normaux, et ajoute plus tard des [glucides étendus (« eGlucides »)](#Extended-Carbs-extended-carbs-ecarbs) pour les repas lents et riches. Appuyez sur l'icône **(i)** à côté des boutons pour voir les aliments typiques du type choisi et son effet sur vos glucides.
 
-| Type                  | Aliments typiques (comme listés dans l'application)                                                                                  | Glucides maintenant, utilisés pour le bolus | eGlucides ajoutés                                      |
+| Type                  | Typical foods (examples from the app)                                                                                                | Glucides maintenant, utilisés pour le bolus | eGlucides ajoutés                                      |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------- | ------------------------------------------------------ |
 | **Pain** (par défaut) | Pain, viennoiseries salées, yaourts, fruits, pommes de terre, riz, flocons d'avoine, légumes                                         | 100 %                                       | Aucun                                                  |
 | **Gâteau**            | Raviolis, pâtes, plats asiatiques riches en glucides et en graisses, pâtisseries sucrées et viennoiseries, céréales, miel, confiture | 90 %                                        | 20 %, début 60 minutes plus tard, réparti sur 2 heures |
@@ -60,7 +60,7 @@ Pour démarrer plus vite, l'*Assistant Bolus* peut ajouter des eGlucides pour vo
 **Remarques importantes :** Vous devrez essayer et voir quelles sont les valeurs qui marchent pour vous bien sûr. Vous pouvez aussi ajuster avec prudence le paramètre *Max. minutes de basal pour limiter le SMB* pour rendre l'algorithme plus ou moins agressif. Avec des repas faibles en glucides et riches en graisses/protéines, il peut être suffisant d'utiliser uniquement des eGlucides sans bolus manuels (voir le blog ci-dessus). Lorsque des eGlucides sont générés, une note Careportal est également créée pour pouvoir documenter toutes les entrées, et faciliter les itérations et l'amélioration des entrées.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## Bolus étendu et pourquoi ils ne fonctionneront pas dans une boucle fermée ?
+## Extended boluses and why they don't work in a closed-loop environment
 
 Comme mentionné ci-dessus, les bolus étendus ou mixtes ne fonctionnent pas vraiment dans un environnement en boucle fermée. [Voir ci-dessous](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) pour plus de détails
 

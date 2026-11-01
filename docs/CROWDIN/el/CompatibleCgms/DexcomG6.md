@@ -40,7 +40,7 @@
 -   Εγκαταστήστε το apk που κατεβάσατε
 -   Εισαγάγετε τον κωδικό του αισθητήρα και τον σειριακό αριθμό του πομπού στην τροποποιημένη εφαρμογή.
 -   Στις ρυθμίσεις του τηλεφώνου πηγαίνετε στο apps > Dexcom G6 > permissions > additional permissions και πατήστε 'Access Dexcom app'.
--   Μετά από λίγο, το BYODA θα πρέπει να λάβει το σήμα του πομπού.
+-   After a short time BYODA should pick up the transmitter signal.
 
 ### Ρυθμίσεις στο AAPS
 

@@ -131,7 +131,7 @@ Une confirmation est demandée après chaque choix.
 
 Vous devez savoir pourquoi vous avez des Gly dupliquées :
 
-* Est-ce que la connexion avec Dexcom (Dexcom Bridge) est activée sur votre instance Nightscout ? Désactivez cette connexion en allant dans l'interface d'administration de votre instance Nightscout, éditez la variable "ENABLED" et retirez la partie "bridge" à cet endroit. (Pour heroku, [vous trouverez les détails ici](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* Est-ce que la connexion avec Dexcom (Dexcom Bridge) est activée sur votre instance Nightscout ? Désactivez cette connexion en allant dans l'interface d'administration de votre instance Nightscout, éditez la variable "ENABLED" et retirez la partie "bridge" à cet endroit. (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * Y a-t-il plusieurs sources qui envoient votre glycémie vers Nightscout ? Si vous utilisez l'application BYODA, activez l'envoi dans **AAPS**, mais ne l'activez pas dans xDrip, si vous l'utilisez.
 * Avez-vous des suiveurs qui pourraient recevoir votre glycémie mais aussi la renvoyer vers votre site Nightscout ?
 * En dernier recours : dans les [paramètres NSClient](#Preferences-nsclient), choisissez les paramètres de synchronisation et désactivez l'option « Recevoir les données MGC depuis NS ».
@@ -342,7 +342,7 @@ Quand **PRÉD** est activé, AAPS dessine ses prédictions en **lignes pointill�
 
 Quand deux prédictions donnent les mêmes valeurs, leurs points se superposent et vous ne voyez qu'une des couleurs (par exemple, RNS par-dessus IA quand la glycémie est stable).
 
-* Ligne **GA** (orange) : [glucides actifs](CobCalculation) (l'orange est utilisé partout dans AAPS pour les GA et les glucides)
+* **COB** line (orange): [carbs on board](CobCalculation.md) (orange is used throughout AAPS for COB and carbs)
     
     Cette ligne de prédiction montre comment votre glycémie (et pas les GA eux-mêmes) devrait évoluer sur la base de votre **Profil** actuel, en supposant que les déviations liées à l'absorption des glucides restent constantes. Cette ligne n'apparaît que s'il y a des GA connus.
 
@@ -364,7 +364,7 @@ Quand deux prédictions donnent les mêmes valeurs, leurs points se superposent 
 
 * Ligne **aCOB** (orange pâle et transparent) : absorption accélérée des glucides
     
-    Comme GA, mais avec une vitesse d'absorption des glucides fixe de 10 mg/dl/5m (-0,555 mmol/l/5m). Obsolète et d'une utilité limitée.
+    Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. Obsolète et d'une utilité limitée.
     
     *Cette ligne n'apparaît que lorsque l'ancien algorithme [AMA](#Config-Builder-aps) est utilisé.*
 
@@ -485,7 +485,7 @@ Cette ligne montre à quel point la glycémie devrait augmenter ou diminuer en p
 
 ![Déviations et impact glycémique](../images/main/graph_dev_bgi.png)
 
-Cette ligne forme une bonne combinaison à afficher avec les barres de déviation. Elles partagent la même échelle, mais c'est une échelle différente de celle des autres données additionnelles, c'est donc une bonne idée de les afficher sur un graphique séparé, comme montré ci-dessus. Comparer la ligne d'IG et les barres de déviation est une autre façon de comprendre comment la **glycémie** fluctue. Ici, au moment marqué **1**, les barres de déviation sont bien au-dessus de la ligne d'impact glycémique : la glycémie monte plus que ce que l'activité de l'insuline seule explique (par exemple après des glucides). Au moment marqué **2**, les barres de déviation sont sous zéro (rouges) : la glycémie est plus basse que ce qu'attendait l'algorithme.
+Cette ligne forme une bonne combinaison à afficher avec les barres de déviation. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparer la ligne d'IG et les barres de déviation est une autre façon de comprendre comment la **glycémie** fluctue. Ici, au moment marqué **1**, les barres de déviation sont bien au-dessus de la ligne d'impact glycémique : la glycémie monte plus que ce que l'activité de l'insuline seule explique (par exemple après des glucides). Au moment marqué **2**, les barres de déviation sont sous zéro (rouges) : la glycémie est plus basse que ce qu'attendait l'algorithme.
 
 ### Section F - Barre QuickLaunch
 
@@ -507,13 +507,13 @@ Pour injecter une quantité d'insuline donnée sans utiliser l'[assistant bolus]
 
 En activant **Début Repas Imminent**, vous pouvez démarrer automatiquement votre [cible temporaire Repas imminent](#TempTargets-eating-soon-temp-target).
 
-Si vous ne voulez pas faire le bolus avec la pompe, mais enregistrer une quantité d'insuline (par exemple de l'insuline injectée avec un stylo), activez « **Les bolus seront seulement enregistrés** ». Une ligne **Heure** en plus, réglée sur **Maintenant**, vous permet d'enregistrer une injection d'insuline faite dans le passé : utilisez **-** / **+** pour la changer, ou appuyez sur le chevron pour taper les minutes ou choisir une date et une heure.
+If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only (not delivered by pump)**". Une ligne **Heure** en plus, réglée sur **Maintenant**, vous permet d'enregistrer une injection d'insuline faite dans le passé : utilisez **-** / **+** pour la changer, ou appuyez sur le chevron pour taper les minutes ou choisir une date et une heure.
 
 ![La ligne Heure, repliée](../images/v4/Screens/insulin_dialog_record_only_time.png) ![La ligne Heure, ouverte avec le chevron](../images/v4/Screens/insulin_dialog_time_open.png)
 
 Vous pouvez utiliser les boutons **+0.5 / +1.0 / +2.0** pour augmenter rapidement la quantité d'insuline. Les valeurs d'incrément peuvent être changées dans les [paramètres de l'assistant bolus](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-La boîte de dialogue Insuline peut aussi être utilisée quand la pompe est suspendue ou déconnectée, par exemple pour enregistrer de l'insuline injectée avec un stylo. Dans ce cas, « **Les bolus seront seulement enregistrés** » est forcé (affiché en rouge) et des champs en plus apparaissent pour choisir le type d'insuline et un décalage d'**Heure** pour une injection faite dans le passé :
+La boîte de dialogue Insuline peut aussi être utilisée quand la pompe est suspendue ou déconnectée, par exemple pour enregistrer de l'insuline injectée avec un stylo. In this case, "**Bolus will be recorded only (not delivered by pump)**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
 
 ![Boîte de dialogue Insuline avec la pompe déconnectée](../images/main/insulin_dialog_pump_disconnected.png)
 
@@ -527,7 +527,7 @@ Certaines [cibles temporaires prédéfinies](#TempTargets-hypo-temp-target) (Hyp
 
 **Heure des glucides** : quand allez-vous manger / avez-vous mangé les glucides.
 
-**Durée** : à utiliser pour les [« glucides étendus »](ExtendedCarbs). Cette ligne est repliée, pour que vous n'y tapiez pas les grammes par erreur : utilisez **-** / **+** pour la changer, ou appuyez sur le chevron pour l'ouvrir et taper une valeur.
+**Duration**: To be used for ["extended carbs"](ExtendedCarbs.md). Cette ligne est repliée, pour que vous n'y tapiez pas les grammes par erreur : utilisez **-** / **+** pour la changer, ou appuyez sur le chevron pour l'ouvrir et taper une valeur.
 
 Vous pouvez utiliser les boutons **+5 / +10 / +20** pour augmenter rapidement la quantité de glucides.
 
@@ -632,7 +632,7 @@ Le bouton de résultat en bas affiche le bolus proposé ; quand vous appuyez de
 Bon à savoir :
 
 * Si le bolus calculé est plus élevé que votre **[Bolus maximum](#Preferences-maximum-bolus)**, il est réduit au bolus maximum, et la confirmation affiche l'avertissement « Contrainte de Bolus appliquée ». Un [Assistant Rapide](../DailyLifeWithAaps/QuickWizards.md) est refusé à la place.
-* Quand le bolus est seulement enregistré (par exemple quand la pompe est déconnectée), l'avertissement « **Les bolus seront seulement enregistrés** » reste en haut de la boîte de dialogue, même quand vous faites défiler.
+* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only (not delivered by pump)**" warning stays at the top of the dialog, also when you scroll.
 * Un bolus que vous donnez vous-même est prioritaire sur un [SMB](#Open-APS-features-super-micro-bolus-smb) qui attend d'être injecté : le SMB est annulé et la boucle refait le calcul. Si un SMB est en cours d'injection à ce moment, votre bolus est refusé avec le message « Un SMB est actuellement en cours d'injection. Réessayez quand il sera terminé. » Aucune insuline n'est injectée, et les glucides saisis avec ce bolus ne sont pas enregistrés : attendez un moment et saisissez-les à nouveau.
 
 (AapsScreens-wrong-cob-detection)=

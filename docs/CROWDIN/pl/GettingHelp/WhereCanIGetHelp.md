@@ -1,6 +1,6 @@
-# Gdzie mogę uzyskać pomoc?
+# Where can I get help?
 
-## Utknąłem. Co mam zrobić? Kogo mogę zapytać?
+## I'm stuck; what should I do? Kogo mogę zapytać?
 
 Ten projekt opiera się na pracy wolontariuszy. Dlatego prośby o pomoc podlegają kilku zasadom, aby nie marnować czasu osób, które bezinteresownie pomagają innym:
 

@@ -7,7 +7,7 @@
 
 -   X1-sensor starten
 
-- Selecteer **Syai/Ottai** in [Configuratie, BG bron](#Config-Builder-bg-source).
+- Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
 Zet broadcast aan in de Syai-app:
 

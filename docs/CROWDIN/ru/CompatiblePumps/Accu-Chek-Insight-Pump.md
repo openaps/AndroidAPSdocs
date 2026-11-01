@@ -88,7 +88,7 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
     
     In the Insight settings in **AAPS** you can enable the following options:
     
-    * **Log reservoir changes**: automatically records an insulin cartridge change when you run the "fill cannula" program on the pump.
+    * **Log reservoir changes**: automatically records an insulin cartridge change when you change the cartridge in the pump.
     
     * **Log tube changes**: adds a note to the **AAPS** database when you run the "tube filling" program on the pump.
     
@@ -162,7 +162,7 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
 
 ## Замена батареи
 
-Срок службы батареи для Insight в замкнутом цикле составляет от 10 до 14 дней, максимум 20 дней. Пользователи, сообщающие об этом, используют литиевые батареи Energizer.
+Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days. Пользователи, сообщающие об этом, используют литиевые батареи Energizer.
 
 В помпе Insight есть небольшой внутренний аккумулятор для поддержания таких важных функций, как часы, которые продолжают работать при замене батарей помпы. Если смена батареи занимает слишком много времени, то в этой внутренней батарее может кончиться заряд, время на часах будет сброшено, и вам будет предложено ввести новое время и дату после установки новой батарейки. Если это произойдет, все записи в AAPS до замены батареи больше не будут включены в расчеты, так как правильное время не может быть определено.
 

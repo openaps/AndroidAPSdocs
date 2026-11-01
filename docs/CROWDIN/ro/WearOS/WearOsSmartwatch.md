@@ -91,7 +91,7 @@ Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQq
 
 ```{admonition} Wear OS 5
 :class: warning
-On Wear OS 5 the AAPS watchface has to be selected with Wear Installer 2 right after installing the Wear app: the installer offers the **AAPS (Custom)** watchface at the end of the installation. If you accidentally switch to another watchface, repeat the installation. Changing the watchface settings (Dark, Watchdivider, etc.) may not be possible.
+On Wear OS 5 the AAPS watchface has to be selected with Wear Installer 2 right after installing the Wear app: the installer offers the **AAPS (Custom)** watchface at the end of the installation. If you accidentally switch to another watchface, repeat the installation. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
 
 If the classic watchface currently works for you, **disable automatic watch updates**: the next firmware update is likely to break it. If you update to Wear OS 6 anyway, read the section above: **AAPS** then installs its own watchface in the new format.
 ```
@@ -114,13 +114,13 @@ Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/wat
 
 ## Basic smartwatch familiarity
 
-După configurarea de bază a ceasului conform videoclipului de mai sus, mergeți la Playstore de pe telefon și descărcați următoarele aplicații: "Galaxy Wearable" "Samsung" și "instrumente Easy Fire" sau "Wear Installer 2".
+After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
 
 There are plenty of 3rd party YouTube videos which will help you with getting familiar with your new smartwatch, for example:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-The app “Galaxy Wearable” also has an instruction manual section in it. Open galaxy wearable on the phone, search for the watch, attempt to pair the watch with the phone. Depending on your version, this may prompt you to install a further 3rd app “galaxy watch 4 plugin” from the playstore (takes a while to download). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Go through a series of menus and tick various preferences.
+The app “Galaxy Wearable” also has an instruction manual section in it. Open galaxy wearable on the phone, search for the watch, attempt to pair the watch with the phone. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Go through a series of menus and tick various preferences.
 
 ## Setting up a Samsung account
 
@@ -260,7 +260,7 @@ The final step is to configure **AAPS** on the phone to interact with **Wear.apk
 
 To bolus or take other actions from the watch, also turn on **Wear control** in [Settings > Wear](#preferences-wear).
 
-To change to a different **AAPS**  watchface, press on the home screen of the watch and it will come to “customise”. Then swipe right until you get to all the **AAPS**  faces.
+To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Then swipe right until you get to all the **AAPS**  faces.
 
 If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, it will look like this:
 
@@ -334,7 +334,7 @@ F - bateria telefonului
 
 G - rata bazală (indicată în U/h în timpul ratei standard și în % în timpul RBT)
 
-H-BGI (interacțiunea glicemiei) -> nivelul la care glicemia "ar trebui" să fie în creștere sau scădere în funcție doar de activitatea insulinei.
+H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
 I - carbohidrați (carbohidrați la bord | carbohidrați extinși din viitor)
 

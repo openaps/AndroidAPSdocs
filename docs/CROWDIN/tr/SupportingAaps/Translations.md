@@ -72,7 +72,7 @@ Onay manuel bir adımdır. Kâr amacı gütmeyen kuruluş olarak SLA'lar sağlam
     
         1. çeviri redaksiyonu
     
-         1. Crowdin ve Github arasındaki senkronizasyon (saatte bir) tamamlanır ve bu da Github için bir PR (çekme isteği) oluşturur.
+         1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
     
         1. Github'daki PR onaylanır.
     
@@ -83,11 +83,11 @@ Onay manuel bir adımdır. Kâr amacı gütmeyen kuruluş olarak SLA'lar sağlam
     ```{admonition} Bağlantılar artık çevrilmiyor
     :class: not
     
-    Bağlantılar artık çevrilmiyor. Geçmişte burada bir başlığımız vardı ama bu, Markdown'a ve myst_parser'a geçiş yoluyla gitti, biz açıkça ingilizce metinde etiketler oluşturuyoruz ve bu etiketleri başlık altında dillere yayıyoruz.
+    Bağlantılar artık çevrilmiyor. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
     
     
 
-Bağlantıyı temsil eden metni çeviriyorsunuz. Please you have to be careful **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
+Bağlantıyı temsil eden metni çeviriyorsunuz. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
 
 Bu bağlantılar ve karakter çiftleri için dokümanı kontrol edip göz atmak redaktörlerin işidir!
 

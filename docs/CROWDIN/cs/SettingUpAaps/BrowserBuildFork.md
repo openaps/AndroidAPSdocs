@@ -6,7 +6,7 @@
 Toto je **krok 1** návodu [Sestavení v prohlížeči](BrowserBuild.md).
 ```
 
-Svůj osobní klíč pro Android (Java Key) a údaje pro Disk Google budete muset bezpečně uložit na GitHubu jako tajné údaje (později vysvětlíme jak).
+You will need to store your personal Android Java Key and Google Drive information as secrets in GitHub (later in the process, we will explain how).
 
 To nelze udělat ve veřejném repozitáři AndroidAPS, proto si musíte vytvořit osobní kopii zdrojového kódu (tzv. fork).
 
@@ -29,16 +29,16 @@ Na další obrazovce se posuňte dolů a klepněte na **Create Fork**.
 
 ![fork_aaps_confirm](../images/Building-the-App/CI/ForkAAPS2.png)
 
-*Poznámka: pokud budete chtít sestavovat vývojářské verze nebo vlastní úpravy, **zrušte zaškrtnutí** „Copy the master branch only“.*
+*Note: you can **unselect** "Copy the master branch only" if you will want to build developer versions or customizations.*
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
 ```{note}
-Fork nejde vytvořit a vidíte toto?</br></br>
-**`No available destinations to fork this repository.`**</br></br>
-![Fork už existuje](../images/Building-the-App/CI/ForkAAPS3b.png)</br></br>
-To znamená, že už máte existující fork AndroidAPS.</br>
-Ujistěte se, že je aktuální, a pokračujte přípravnými kroky.
+You cannot fork and you see this?<br/><br/>
+**`No available destinations to fork this repository.`**<br/><br/>
+![Already forked](../images/Building-the-App/CI/ForkAAPS3b.png)<br/><br/>
+This means you already have an existing fork of AndroidAPS.<br/>
+Make sure it's up to date and continue to Preparation Steps.
 ```
 
 ```{warning}

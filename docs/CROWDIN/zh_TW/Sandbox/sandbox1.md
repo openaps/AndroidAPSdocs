@@ -54,7 +54,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 位於[偏遠地區](#sandbox1-in-the-middle-of-nowhere)的標籤 這是指向[](#sandbox1-this-is-another-test)的標籤，應顯示其名稱
 
-帶有錨點的連結：
+Links with anchor:
 - [這會花多久時間？](#preparing-how-long-will-it-take)
 - [偏好設定中的 NSClient 設定](#Preferences-nsclient)。
 - [AAPS 首頁總覽中的預測線](#aaps-screens-prediction-lines)，標題層級 4

@@ -15,7 +15,7 @@ Przeczytaj zalecenia dotyczące [metody wygładzania](../CompatibleCgms/Smoothin
 - Postępuj według instrukcji tutaj: [xDrip G7, ONE+ i Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). Potrzebna jest nowa wersja xDrip – minimalną wersję znajdziesz na podanej stronie.
 - Wybierz xDrip w [**Konfiguracja → Źródło BG**](#Config-Builder-bg-source).
 
-- Dostosuj ustawienia xDrip według opisu na stronie [Ustawienia xDrip](../CompatibleCgms/xDrip.md)
+- Dostosuj ustawienia xDrip według opisu na stronie [Ustawienia xDrip](../CompatibleCgms/xDrip.md).
 
 ## 2. Build Your Own Dexcom App (tylko G7)
 
@@ -30,7 +30,7 @@ Dexcom BYODA to teraz bardzo stara wersja aplikacji i nie można jej zaktualizow
 -   Odinstaluj oryginalną aplikację Dexcom
 -   Zainstaluj pobrany plik apk
 -   Wpisz kod sensora w zmodyfikowanej aplikacji
--   Po krótkim czasie BYODA powinna odebrać sygnał z nadajnika
+-   After a short time BYODA should pick up the sensor signal.
 
 (DexcomG7-xdrip-companion-app)=
 

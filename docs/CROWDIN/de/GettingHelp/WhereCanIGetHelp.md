@@ -1,6 +1,6 @@
-# Wo kann ich Hilfe erhalten?
+# Where can I get help?
 
-## I'm stuck; What should I do? Wen kann ich fragen?
+## I'm stuck; what should I do? Wen kann ich fragen?
 
 This project is based on volunteer work and a few rules apply to any requests for help to avoid unnecessary time being wasted by those who kindly pay it forward:
 

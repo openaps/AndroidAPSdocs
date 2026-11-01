@@ -59,11 +59,11 @@ Durch den Export der AAPS-Einstellungen in die Datei kannst Du die Konfiguration
 
 * Immer dann, wenn Du größere Änderungen an der Konfiguration vornimmst (SMB-Einstellungen änderst, Insulintyp änderst, Pumpe änderst, Änderungen an Automatisierungen vornimmst), solltest Du sowohl vor als auch nach der Änderung die **Einstellungen** sichern. Auf diese Weise hast Du für den Fall eines "Rollback" sowohl die aktuellen Einstellungen als auch eine Kopie des Zustands vor den Änderungen.
 
-* Nur für Nutzende schlauchloser Pumpen (Omnipod und Medtrum): Die Datei mit den **Einstellungen** enthält auch Verbindungsdetails zu Deinem aktuellen Pod und kann genutzt werden, um die Verbindung zu diesem Pod mit einem neuen Smartphone wiederherzustellen. Solltest Du Deine Einstellungen nicht nach dem Start des aktuellen Pods exportiert und gesichert haben, wirst Du im Fall eines Smartphone-Austauschs einen neuen Pod starten müssen.
+* Tubeless pumps (Such as Omnipod and Medtrum) users only: the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. Solltest Du Deine Einstellungen nicht nach dem Start des aktuellen Pods exportiert und gesichert haben, wirst Du im Fall eines Smartphone-Austauschs einen neuen Pod starten müssen.
 
 **Wie Du manuell sicherst:**
 
-1. Wenn Du zum ersten Mal **Einstellungen** importierst oder exportierst, musst Du unter [Einstellungen > Zugriffsschutz](#Preferences-master-password) ein Master-Passwort festlegen. Lege ein Passwort fest und notiere es an einem sicheren Ort. _Ohne dieses Passwort wirst Du nicht auf die Backups Deiner **Einstellungen** zugreifen können._
+1. If this is your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). Lege ein Passwort fest und notiere es an einem sicheren Ort. _Ohne dieses Passwort wirst Du nicht auf die Backups Deiner **Einstellungen** zugreifen können._
 
 2. Öffne auf dem **AAPS**-Startbildschirm das **Menü** (☰) > **Wartung**. Wähle mit den Auswahlfeldern **Lokal** und **Cloud** neben **Einstellungen exportieren**, wo die Datei gespeichert wird (siehe **Exportieren oder Importieren der Einstellungen** unten), und tippe dann auf **Einstellungen exportieren**. **AAPS** zeigt an, wohin die Datei geht: den Dateinamen bei **Lokal**, **Google Drive** bei **Cloud**. Tippe auf **OK**.
 
@@ -105,7 +105,7 @@ Um Einstellungen zu exportieren oder zu importieren, öffne das **Menü** (☰) 
 (ExportImportSettings-Automating-Settings-Export)=
 ### Automatisierter Export der Einstellungen
 
-Um Einstellungen automatisch zu exportieren [(**siehe Automatisierung**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export), öffne [**Einstellungen** > **Wartung**](#preferences-maintenance-settings), klappe **Automatischer Einstellungsexport** auf und schalte **Automatischen Einstellungsexport aktivieren** ein.
+To automate settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
 
 Du kannst [Automatisierungen](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) so konfigurieren, dass die Einstellungen auitomatisch exportiert werden, entweder regelmäßig (_z. B._ wöchentlich) oder nach einem Pod-Wechsel.
 
@@ -176,7 +176,7 @@ Standardmäßig lässt ein Import Deine Pumpeneinstellungen unverändert: Die in
 
 12. **AAPS** fragt **Importierte Einstellungen übernehmen?** und sagt Dir, wie viele Einstellungen sich ändern und, wenn Du das Kästchen leer gelassen hast, wie viele Pumpeneinstellungen erhalten bleiben. Bis dahin wurde noch nichts geschrieben, **Abbrechen** lässt Dein Smartphone also genau so, wie es war. Tippe zum Übernehmen auf **OK**.
 
-    ![Importierte Einstellungen übernehmen? Dialog](../images/Maintenance/import_settings_apply.png)
+    ![Apply imported settings dialog](../images/Maintenance/import_settings_apply.png)
 
 13. **AAPS** übernimmt die importierten Einstellungen sofort, ohne Neustart. Nur die Module, deren Einstellungen sich geändert haben, werden neu gestartet. Währenddessen zeigt **AAPS** **Einstellungen werden angewendet…**; ist die Pumpe beschäftigt, zeigt es **Warte auf Pumpe…** und übernimmt die Einstellungen, sobald die Pumpe frei ist. Ist die Pumpe nach einer Minute immer noch beschäftigt, bietet **AAPS** an, es erneut zu versuchen. Die Meldung **Einstellungen übernommen** bestätigt, dass die importierten Einstellungen verwendet werden. Eine Behandlung, die während des Imports in der Warteschlange stand, wird verworfen, und **AAPS** teilt Dir mit, dass sie abgebrochen wurde, damit nichts doppelt an die Pumpe gesendet wird.
 

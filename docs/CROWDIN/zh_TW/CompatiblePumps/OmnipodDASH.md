@@ -38,16 +38,16 @@
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
-- **一支相容的 Android 手機**且具備低功耗藍牙（BLE）（更多資訊請見[Phones](../Getting-Started/Phones.md)），另外，下列資訊可協助您在相容手機上順利註冊與使用 DASH 時的其他關鍵注意事項：
+- **A Compatible Android phone** with Bluetooth Low Energy (BLE) (see [Phones](../Getting-Started/Phones.md) for more info). In addition, the following information will help guide you on other key considerations around successfully activating and using the DASH on a compatible phone:
     -  **AAPS** 的 Omnipod Dash 驅動程式會透過藍牙與 DASH Pod 連線。  
       **AAPS** 會在每次需要傳送指令（例如注射）時，自動與 Pod 建立新的藍牙連線；在傳送完成後，會立即中斷連線。
        - **注意：**
          - 在執行 **AAPS** 的手機上，其他已連結的藍牙裝置（例如耳機等）可能會干擾或中斷藍牙連線。這類裝置在某些手機型號上可能導致連線錯誤或 Pod 註冊問題。選擇用於 Omnipod DASH 設定的手機時，建議查看[已測試的硬體設定](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)清單，確認哪些設定已知可正常運作。
-         - 有多項已知的藍牙問題可能導致 Pod 註冊異常（其他藍牙問題的建議請見 [問題排除](#troubleshooting)），特別是[藍牙相關問題](#omnipod-dash-bluetooth-related-issues)章節。
+         - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#omnipod-dash-troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
     - 手機必須執行 **Android 12 或更新版本**，並依照[**建置 APK**](../SettingUpAaps/BuildingAaps.md)的說明建置並安裝 **AAPS**。請務必使用最新發布版本。
 - 一個受支援的[**連續式血糖監測（CGM）**](../Getting-Started/CompatiblesCgms.md)
 
-以下說明如何使用 **AAPS** 註冊新的 Pod 工作階段。建議等目前的 Pod 接近到期時再進行，因為您需要使用 **AAPS** 註冊新的 Pod。 Pod 一旦停用後便無法重複使用或再次註冊，此動作為最終狀態。
+以下說明如何使用 **AAPS** 註冊新的 Pod 工作階段。 You should wait for your current Pod to be close to expiry, as you will need to activate a new Pod with **AAPS**. Pod 一旦停用後便無法重複使用或再次註冊，此動作為最終狀態。
 
 ## 開始之前
 
@@ -611,7 +611,7 @@ Pod 故障時會停止輸送胰島素，並持續發出嗶聲。 **AAPS** 會在
 ---
 ### 防止 49 號錯誤 Pod 故障
 
-此故障與指令的 Pod 狀態不正確或胰島素輸送指令中的錯誤有關。這是當驅動程式和 Pod 對實際狀態存在分歧時發生的情況。 Pod（出於內建安全措施）隨後對不可恢復的錯誤代碼 49（0x31）作出反應，最終產生所謂的「尖叫聲」：那聲長且令人惱怒的嗶聲，只有在在 Pod 背面適當位置打個洞才能停止。 「49 Pod 故障」的確切原因通常難以追溯。在某些情況下，這種故障可能發生（例如應用程式崩潰、運作開發版本或重新安裝）。
+此故障與指令的 Pod 狀態不正確或胰島素輸送指令中的錯誤有關。這是當驅動程式和 Pod 對實際狀態存在分歧時發生的情況。 Pod（出於內建安全措施）隨後對不可恢復的錯誤代碼 49（0x31）作出反應，最終產生所謂的「尖叫聲」：那聲長且令人惱怒的嗶聲，只有在在 Pod 背面適當位置打個洞才能停止。 「49 Pod 故障」的確切原因通常難以追溯。 It can happen, for example, after application crashes, when running a development version or after a re-installation.
 
 ---
 
@@ -690,7 +690,7 @@ Omnipod Dash 驅動程式會在**主畫面**顯示各種專屬警示。大多數
 - *Pod 故障：XXX NAME*，後面接著 *參考：...*：Pod 已故障並停止輸送胰島素。請更換 Pod。請參閱[Pod 故障](#omnipod-dash-pod-failures)。
 - *沒有啟用中的 Pod*：找不到 Pod 工作階段。此通知會持續再次出現，直到您啟用新的 Pod 為止。啟用 Pod 後，通知就會自動消失。
 - *胰島素輸送已暫停*：Pod 已暫停輸送胰島素。請參閱[恢復胰島素輸注](#omnipod-dash-resuming-insulin-delivery)。
-- *設定基礎胰島素設定檔可能失敗。注射可能已暫停！請前往 Omnipod 分頁，手動重新整理 Pod 狀態；如有需要，請恢復胰島素輸送。* 在 Pod 上設定基礎胰島素**設定檔**可能失敗。請在 DASH 幫浦畫面中按下**重新整理**（訊息中仍會顯示「Omnipod 分頁」），如果有顯示**恢復輸送**，也請按下該選項。
+- *設定基礎胰島素設定檔可能失敗。注射可能已暫停！ Please manually refresh the Pod status on the pump screen and resume delivery if needed.* Setting the basal **Profile** on the pod may have failed. Press **Refresh** on the DASH pump screen, and press **Resume Delivery** if it is shown.
 - *無法確認 SMB（X U）是否成功。請重新整理 Pod 狀態，以確認此指令是否成功。* **AAPS** 無法確認是否已輸送**SMB**。請在 DASH 幫浦畫面中按下**重新整理**，並查看**上次注射**欄位。
 - *無法確定注射是否成功。請重新整理 Pod 狀態以確認是否成功。* 一般注射也是如此：請在 DASH 幫浦畫面中按下**重新整理**。
 - *Pod 上的時區與手機上的時區不同。基礎胰島素速率不正確。切換設定檔以修正* 請參閱[Omnipod DASH 已知的 AAPS 限制／問題](#omnipod-dash-constraints)中的日光節約時間與時區說明。
@@ -703,7 +703,7 @@ Omnipod Dash 驅動程式會在**主畫面**顯示各種專屬警示。大多數
 
 -  **等級 0：** 閱讀此文件的相關部分，以確保你了解遇到困難的功能應如何工作。
 -  **等級 1：** 如果你仍然遇到無法解決的問題，請使用[此邀請鏈接](https://discord.gg/4fQUWHZ4Mw)進入**Discord**的*#AAPS* 頻道。也有許多 Facebook 與其他社群可供提問（請參閱 [**Getting Help**](../GettingHelp/WhereCanIGetHelp.md)）。
--  **等級 2：** 搜尋現有問題，以查看你的問題是否已被報告，請在[問題](https://github.com/nightscout/AndroidAPS/issues)中確認/評論/添加有關你的問題的訊息。如果沒有，請建立一個[新問題](https://github.com/nightscout/AndroidAPS/issues)並附上[你的日誌文件](../GettingHelp/AccessingLogFiles.md)。
+-  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues). If it exists, please confirm/comment/add information on your problem. 如果沒有，請建立一個[新問題](https://github.com/nightscout/AndroidAPS/issues)並附上[你的日誌文件](../GettingHelp/AccessingLogFiles.md)。
 -  **保持耐心——我們社群中的大多數成員都是善良的志願者，解決問題通常需要使用者和開發者雙方的時間和耐心。**
 
 當您尋求協助時，請先準備以下資訊，以便社群成員更有效地協助解決您的問題與疑問：

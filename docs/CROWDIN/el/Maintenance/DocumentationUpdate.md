@@ -48,7 +48,7 @@
 
 - DiaKEM: οι νέες εγκαταστάσεις δεν λειτουργούν μετά την αναβάθμιση των διακομιστών @psonnera
 - Αφαιρέθηκε η τροποποιημένη εφαρμογή για το Libre 2 (παρωχημένη): δεν λειτουργεί με τους νέους αισθητήρες @psonnera
-- Νέα μορφή της σελίδας Omnipod Dash @XiTatiON
+- Reworked Omnipod DASH page @XiTatiON
 
 ## Αύγουστος 2025
 
@@ -97,7 +97,7 @@
 - [Σήμα προειδοποίησης για την ποιότητα της BG](#aaps-screens-bg-warning-sign) @tanja
 - [Ενημέρωση για την αντλία Medtronic](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
 - [Απαραίτητοι έλεγχοι μετά την ενημέρωση στο AAPS 3.0](Update3_0.md) @tanja
-- [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
+- [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
 - Ενημέρωση της τεκμηρίωσης για το AAPS 3.0 (εν μέρει) @xJoe
 - [Wear OS για το AAPS 3.0](../WearOS/WearOsSmartwatch.md) @peterleimbach
 
@@ -112,7 +112,7 @@
 
 ## Νοέμβριος 2021
 
-- Καλές πρακτικές για τη βαθμονόμηση ενός αισθητήρα libre 2
+- Best practices for calibrating a Libre 2 sensor
 - [ISF](../UsefulLinks/FAQ.md) - νέα διατύπωση για την επίδραση
 - Ενημέρωση της σελίδας [Αντιμετώπιση προβλημάτων του Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - Αφαιρέθηκε η τροποποιημένη εφαρμογή [Dexcom](../CompatibleCgms/DexcomG6.md), επειδή είναι πλέον παρωχημένη
@@ -212,7 +212,7 @@
 
 ## Δεκέμβριος 2019
 
-- [Android auto](../RemoteFeatures/AndroidAuto.md) - ρύθμιση με στιγμιότυπα οθόνης
+- [Android Auto](../RemoteFeatures/AndroidAuto.md) - setup with screenshots
 - [Accu-Chek Insight και Autotune](#Accu-Chek-Insight-Pump-settings-in-aaps) - λύση για τη χρήση
 - [Glimp](#Config-Builder-bg-source) - υποστηρίζεται η έκδοση 4.15.57 και νεότερες
 - [Watchfaces](../WearOS/WearOsSmartwatch.md) - μεγάλη ενημέρωση, πολύ περισσότερες λεπτομέρειες
@@ -238,7 +238,7 @@
 ## Οκτώβριος 2019
 
 - [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
-- [AccuChek Insight - επιλογές καταγραφής](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- [Accu-Chek Insight - log options](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [Ο υπολογισμός COB σε ξεχωριστή σελίδα](../DailyLifeWithAaps/CobCalculation.md)
 - [COB - εντοπισμός λάθος τιμής COB](#CobCalculation-detection-of-wrong-cob-values)
 - [Αντιμετώπιση προβλημάτων ειδικά για το Dexcom G6](#DexcomG6-troubleshooting-g6)

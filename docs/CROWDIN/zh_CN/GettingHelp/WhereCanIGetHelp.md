@@ -1,6 +1,6 @@
-# 我在哪里可以获得帮助？
+# Where can I get help?
 
-## I'm stuck; What should I do? 该问谁？
+## I'm stuck; what should I do? 该问谁？
 
 This project is based on volunteer work and a few rules apply to any requests for help to avoid unnecessary time being wasted by those who kindly pay it forward:
 

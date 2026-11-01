@@ -72,7 +72,7 @@
     
         1. η μετάφραση έχει περάσει επιμέλεια
     
-        1. τελειώσει ο συγχρονισμός μεταξύ Crowdin και GitHub (μία φορά την ώρα), που δημιουργεί ένα PR στο GitHub.
+        1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
     
         1. εγκριθεί το PR στο GitHub.
     
@@ -83,11 +83,11 @@
     ```{admonition} Οι σύνδεσμοι δεν μεταφράζονται πια
     :class: note
     
-    Οι σύνδεσμοι δεν μεταφράζονται πια. Παλιότερα υπήρχε εδώ μια ενότητα για αυτό. Δεν χρειάζεται πια: με τη μετάβαση στο Markdown και στο myst_parser δημιουργούμε ρητά ετικέτες (labels) στο αγγλικό κείμενο και αυτές περνούν αυτόματα στις άλλες γλώσσες.
+    Οι σύνδεσμοι δεν μεταφράζονται πια. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
     
     
 
-Μεταφράζετε το κείμενο που εμφανίζεται ως σύνδεσμος. Προσέξτε **να μη** διαγράψετε τον σύνδεσμο, που φαίνεται ως ένα ζευγάρι ετικετών `<0></0>` ή, αν υπάρχουν περισσότεροι σε μία παράγραφο, με άλλους αριθμούς.
+Μεταφράζετε το κείμενο που εμφανίζεται ως σύνδεσμος. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
 
 Οι επιμελητές πρέπει να το ελέγχουν αυτό με ιδιαίτερη προσοχή!
 

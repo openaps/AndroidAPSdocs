@@ -43,7 +43,7 @@ Nightscout是开源软件。任何人都可以使用免费或付费服务来创�
 Tidepool has been available in **AAPS** since version 3.2 which was released in late 2023.
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
-:class: danger  
+:class: danger
 As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool is not suitable for sharing real-time information with caregivers.  
 另一方面，如果Nightscout不是一个被接受的解决方案，Tidepool可以是一个与患者内分泌科医生共享报告的好选择。  
 ```

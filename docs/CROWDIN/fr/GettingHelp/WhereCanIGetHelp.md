@@ -1,6 +1,6 @@
-# Où puis-je obtenir de l'aide ?
+# Where can I get help?
 
-## Je suis bloqué ; que dois-je faire ? À qui puis-je demander ?
+## I'm stuck; what should I do? À qui puis-je demander ?
 
 Ce projet repose sur le travail de bénévoles. Quelques règles s'appliquent à toute demande d'aide, pour ne pas faire perdre de temps inutilement à ceux qui aident gentiment les autres :
 

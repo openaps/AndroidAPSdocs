@@ -1,4 +1,4 @@
-# Modifier la configuration d'AAPS
+# Making changes to your AAPS configuration
 
 Après avoir terminé l'**[Assistant de configuration](../SettingUpAaps/SetupWizard.md)**, vous n'avez pas besoin de relancer tout l'assistant si vous voulez seulement modifier une partie de la configuration d'**AAPS**.
 

@@ -38,6 +38,6 @@ Ak sa **AAPS** pripojí k Nightscoutu správne, ale glykémia sa zobrazuje ako N
 
 * Ak máte stále problém...
 
-Skontrolujte veľkosť svojej databázy v MongoDB (alebo cez plugin database size v Nightscoute). Ak používate bezplatnú verziu (free tier) MongoDB, 496 MB znamená, že je plná a treba ju vyčistiť. [Podľa týchto pokynov Nightscoutu skontrolujte veľkosť databázy a vymažte dáta](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
+Skontrolujte veľkosť svojej databázy v MongoDB (alebo cez plugin database size v Nightscoute). Ak používate bezplatnú verziu (free tier) MongoDB, 496 MB znamená, že je plná a treba ju vyčistiť. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
 Skôr než vymažete dáta z databázy, a ak ste to ešte nenastavili, zvážte darovanie svojich dát AAPS projektu Open Humans (na výskum). Pokyny nájdete na [stránke nastavenia OpenHumans](../SupportingAaps/OpenHumans.md).

@@ -88,12 +88,12 @@ Uvedené sa bude líšiť podľa komponentov vášho systému **AAPS** a vášho
 
 ### Glykemický index a účinok na glykémiu
 
-Náročnosť pre režim **UAM** stúpa s rastúcim „účinkom na glykémiu“ (Effect on Blood Glucose, „EBG“)
+The challenge for the **UAM** mode rises with rising 'Effect on Blood Glucose' ('EBG')
 
 - Začnite mierne/nízko a vylaďte nastavenia svojho **profilu**. Až potom „testujte“ jedlá s vysokým **EBG**.
 - Pri jedle s veľmi vysokým **EBG** zvážte úvodný bolus < 50 %.
 
-1) **Žiadny EBG**: napr. čerstvé mäso, ryby, vajcia, slanina, oleje, syr. 2) **Nízky EBG**: napr. čerstvá zelenina a bobuľové ovocie, huby, orechy, mlieko, jogurt, tvaroh. 3) **Stredný EBG**: napr. celozrnný chlieb/cestoviny, zemiaky, divoká ryža, ovos, sušené ovocie. 4) **Vysoký EBG**: napr. pšeničný chlieb, bageta, toast, wafle, sušienky, zemiaková kaša, cestoviny, ryža. 5) **Veľmi vysoký EBG**: napr. cukor, sladené nápoje, ovocné džúsy, kukuričné lupienky, cukríky, sladkosti, zemiakové lupienky, slané tyčinky.
+1) **Žiadny EBG**: napr. čerstvé mäso, ryby, vajcia, slanina, oleje, syr. 2) **Nízky EBG**: napr. čerstvá zelenina a bobuľové ovocie, huby, orechy, mlieko, jogurt, tvaroh. 3) **Stredný EBG**: napr. celozrnný chlieb/cestoviny, zemiaky, divoká ryža, ovos, sušené ovocie. 4) **High EBG**: e.g. wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **Veľmi vysoký EBG**: napr. cukor, sladené nápoje, ovocné džúsy, kukuričné lupienky, cukríky, sladkosti, zemiakové lupienky, slané tyčinky.
 
 ![Glykemický index a účinok na glykémiu](../images/fullClosedLoop01.png)
 
@@ -108,7 +108,7 @@ Pri cvičení alebo aktivite sa pri pumpe alebo hybridnom uzavretom okruhu odpor
 
 Pri **FCL** je algoritmus vyladený tak, aby rozpoznal **UAM** a automaticky podal inzulín proti nárastu **glykémie**.  Vysoký **Dočasný cieľ** a nižšie **Percento profilu** (účinné už okolo začiatku jedla) by sa mali nastaviť dostatočne dlho pred akoukoľvek aktivitou.
 
-Nezvyčajná alebo nepravidelná úroveň pohybu prináša pre **FCL** ťažkosti. Pohyb treba plánovať vopred (najmä ak chcete znížiť potrebu záchranných sacharidov/jedla pri poklesoch počas športu). Po aktívnom dni sa odporúča nastaviť na noc, keď je večera úplne strávená, nižšie **percento profilu**: v **automatizáciách** nastavte zvýšený (>100 mg/dl) cieľ **glykémie** a v **Nastaveniach** **AAPS** zvoľte „žiadne **SMB** pri zvýšenom cieli“.
+Nezvyčajná alebo nepravidelná úroveň pohybu prináša pre **FCL** ťažkosti. Pohyb treba plánovať vopred (najmä ak chcete znížiť potrebu záchranných sacharidov/jedla pri poklesoch počas športu). After an active day it is recommended that a lower  **Percentage Profile** is set for overnight after the evening meal is fully digested: set in **Automations** an elevated (>100 mg/dL) **BG**  target, with **Enable SMB with high temp target** switched off in **AAPS** **Settings**.
 
 ## Prekážky pre deti
 
@@ -151,7 +151,7 @@ Pre úspešný **FCL** je kľúčovým parametrom ladenia **ISF**. Pri použití
 
 **AAPS** Master allows up to 130% temporary **Profile** in **HCL** mode. Zosilnenie **ISF** prebieha v 3 krokoch:
 
-- Krok 1 – skontrolujte **ISF** platný pre túto hodinu jedla v **profile** a pozrite sa, či napr. Autosens navrhuje úpravu, ktorá zohľadňuje aktuálnu citlivosť tela na inzulín (za posledných pár hodín).
+- Step 1 -  review the **ISF** applicable for this meal time hour within the **Profile**, and see whether e.g. Autosens suggest a modification that takes care of the current (last few hours’) insulin sensitivity status of the body.
 - Krok 2 – použite faktor (1/percento profilu, ako je nastavené v **automatizácii**) na zosilnenie **ISF**.
 - Krok 3 – skontrolujte, či navrhovaný **ISF** spadá do nastavených bezpečnostných limitov.
 
@@ -169,9 +169,9 @@ Nasledujúca časť radí, ako spájať podmienky **automatizácií** a ako rie�
 
 ### Automatické veľké SMB pri náraste glykémie
 
-The key to successful **FCL** **at the beginning of BG increases from meals, very large automatic SMBs must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in **HCL**!)
+The key to successful **FCL**: **at the beginning of BG increases from meals, very large automatic SMBs must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in **HCL**!)
 
-Na to treba analyzovať dáta z vášho **HCL** a určiť, ktoré **delty** nemusia súvisieť s jedlom a ktoré delty súvisieť môžu.
+To achieve this, data from your **HCL** should be analyzed to determine which **deltas** might not be meal-related and which might be.
 
 - Keďže **automatizáciu** môžete definovať v rámci vopred určeného časového okna, stačí analyzovať iba toto okno.
 - Ak jete veľmi odlišné druhy jedál (napr. raňajky s dosť veľa sacharidmi, ale obed s málo sacharidmi), môžete pre každý časový úsek vytvoriť dve rôzne (sady) **automatizácií**.
@@ -218,7 +218,7 @@ Rozumné **prahy IOB**, pri ktorých by ste mali znížiť agresivitu okruhu, ne
 
 Pri výnimočných jedlách, alebo ak potom nasleduje šport a chcete ho znížiť, sa dá prah **IOB** vo vašej **automatizácii** rýchlo nastaviť inak.
 
-Automatizácia (#3) „iobTH dosiahnutý => **SMB** vypnuté“ je určená na ukončenie (alebo pozastavenie, kým nepríde ďalšia vlna nárastu zo sacharidov) agresívneho zosilňovania **SMB**.
+Automation (#3), "iobTH reached => **SMBs** off”, is defined to end (or pause, until another wave of carb-related rise hits) the aggressive **SMB** boosting.
 
 ![Automatizácia #3: IOB 5,5 alebo viac bez bežiaceho dočasného cieľa spustí dočasný cieľ 111 mg/dl](../images/fullClosedLoop04.png)
 
@@ -233,7 +233,7 @@ Hovorí okruhu, že nad nastaveným **prahom IOB** je lepšie už nepoužívať 
 **Pozor: Automatizácia #3 funguje, iba ak nie je aktívny žiadny DC.** Ak ste teda použili DC Pred jedlom, musí byť do tej doby ukončený, čo by zvyčajne malo byť 30–40 minút po začiatku jedla.
 
 Jeden spôsob je nastaviť podmienku **automatizácie**, ktorá ukončí prípadne bežiaci DC Pred jedlom pri podmienke **IOB**>65 % * iobTH.
-> Ako pracovať s DC Pred jedlom Niektorí používatelia okruhu nastavia (stlačením tlačidla DC, alebo automaticky pomocou zníženého cieľa **glykémie** v **profile**, ak sú časy jedál dosť pevné) DC Pred jedlom zhruba hodinu alebo viac pred začiatkom jedla, len aby zaistili nízku **glykémiu** na začiatku a mierne zvýšené  **IOB**. Ak však predpokladáme, že **FCL** je vždy na ceste k cieľu, nemusí to veľa priniesť a možno radšej definujete **automatizáciu**, ktorá nastaví DC Pred jedlom pri rozpoznaní začiatku jedla (delta glykémie alebo zrýchlenie = delta > priem. delta). Nízky **DC** je v tejto fáze dôležitý, pretože každý **SMB** váš okruh vypočíta pomocou (predpovedaná glykémia mínus DC)/sens, takže malý DC zväčší výsledný insulinReq.
+> Ako pracovať s DC Pred jedlom Niektorí používatelia okruhu nastavia (stlačením tlačidla DC, alebo automaticky pomocou zníženého cieľa **glykémie** v **profile**, ak sú časy jedál dosť pevné) DC Pred jedlom zhruba hodinu alebo viac pred začiatkom jedla, len aby zaistili nízku **glykémiu** na začiatku a mierne zvýšené  **IOB**. But, assuming the **FCL** is always en route towards target, this might not yield much and you may prefer to define an **Automation** that sets an EatingSoonTT at recognition of meal start (glucose delta, or acceleration = delta > avg delta). Nízky **DC** je v tejto fáze dôležitý, pretože každý **SMB** váš okruh vypočíta pomocou (predpovedaná glykémia mínus DC)/sens, takže malý DC zväčší výsledný insulinReq.
 
 Po podaní prvých zosilnených **SMB** by váš nastavený iobTH a **automatizácia** #3 mali nájsť dobrú rovnováhu: obmedziť vrchol glykémie, ale po jedle nespôsobiť hypoglykémiu.
 
@@ -332,7 +332,7 @@ Napríklad je úplne možné, bez akýchkoľvek ďalších krokov po zadefinovan
 - Problémy s „chvostom“ inzulínu po jedle
     - Možno budete musieť zjesť malé jedlo (keď vidíte predpoveď hypoglykémie) alebo glukózové tablety (ak ste už v hypoglykémii). Pamätajte však, že potrebné sacharidy, ktoré vám okruh v určitej chvíli môže ukázať, sú veľmi pravdepodobne prehnané, pretože okruh nemá absolútne žiadnu informáciu o tom, koľko sacharidov ste zjedli a koľko z nich ešte čaká na vstrebanie (vy to možno dokážete odhadnúť, vrátane tukov a bielkovín).
     - Cenná by bola informácia, či problém vzniká väčšinou už vo fáze nárastu glykémie. Potom môže byť jednoduchým riešením nastaviť nižší iobTH.
-    - Ak potreba ďalších sacharidov nastáva často, zapíšte si, koľko gramov bolo treba (nepočítajte to, čo ste nakoniec zjedli navyše a čo si opäť vyžiadalo ďalší inzulín).  Potom pomocou hodnoty IC z profilu odhadnite, o koľko menej inzulínu mal **SMB** podať, a s touto informáciou pokračujte v ladení (pokiaľ ide o **percento profilu** v **automatizáciách**, alebo možno aj o nastavený iobTH). This may relate to the **SMBs** given when glucose was high, or also extending regarding also the **SMBs** during the **BG** rise.
+    - Ak potreba ďalších sacharidov nastáva často, zapíšte si, koľko gramov bolo treba (nepočítajte to, čo ste nakoniec zjedli navyše a čo si opäť vyžiadalo ďalší inzulín).  Potom pomocou hodnoty IC z profilu odhadnite, o koľko menej inzulínu mal **SMB** podať, a s touto informáciou pokračujte v ladení (pokiaľ ide o **percento profilu** v **automatizáciách**, alebo možno aj o nastavený iobTH). This may relate to the **SMBs** given when glucose was high, or also to the **SMBs** during the **BG** rise.
     - Je dosť možné, že budete musieť jednoducho prijať vyššie vrcholy **glykémie**, aby ste neklesli nízko. Or change diet to something with lower amounts of carbs, and higher amount of protein and fats.
 
 

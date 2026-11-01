@@ -35,7 +35,7 @@ The [Omnipod System](https://www.omnipod.com/current-podders/resources/omnipod-s
 
 - ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **Dispozitiv de administrare insulină**
 
-> Componenta care va interpreta comenzile primite de la dispozitivul de comunicare cu pompa care provine de la telefonul ce rulează AAPS.
+> Component that will interpret commands received from the Pod communication device originating from your AAPS enabled phone.
 > 
 > > - O nouă pompă Omnipod (generația Eros - **NU DASH**)
 
@@ -47,7 +47,7 @@ In this page, **RileyLink** means any of the pod communication devices listed ab
 
 **SIGURANȚA MAI ÎNTÂI** - nu încercați acest proces într-un mediu în care nu vă puteți reveni după o eroare (pompe suplimentare, insulină, RileyLink încărcat și dispozitive de telefonie mobilă sunt obligatorii).
 
-**Telecomanda dumneavoastră Omnipod nu va mai funcționa după ce driverul AAPS pentru Omnipod activează pompa**. Anterior, ați folosit telecomanda Omnipod pentru a trimite comenzi la pompa Omnipod Eros. O pompă Omnipod Eros permite unui singur dispozitiv să comunice cu ea. Dispozitivul care activează cu succes pompa este singurul dispozitiv care are permisiunea de a comunica cu ea de atunci încolo. Aceasta înseamnă că odată ce activați o pompă Omnipod Eros cu RileyLink prin intermediul driverului AAPS pentru Omnipod, **nu veți mai putea folosi telecomanda cu pompa**. Driverul AAPS Omnipod cu RileyLink este acum telecomanda dumneavoastră în vigoare. *Acest lucru nu înseamnă că ar trebui să aruncați telecomanda, este recomandat să o păstrați în caz de rezervă, și pentru urgențele când AAPS nu funcționează corect.*
+**Telecomanda dumneavoastră Omnipod nu va mai funcționa după ce driverul AAPS pentru Omnipod activează pompa**. Anterior, ați folosit telecomanda Omnipod pentru a trimite comenzi la pompa Omnipod Eros. O pompă Omnipod Eros permite unui singur dispozitiv să comunice cu ea. Dispozitivul care activează cu succes pompa este singurul dispozitiv care are permisiunea de a comunica cu ea de atunci încolo. Aceasta înseamnă că odată ce activați o pompă Omnipod Eros cu RileyLink prin intermediul driverului AAPS pentru Omnipod, **nu veți mai putea folosi telecomanda cu pompa**. Driverul AAPS Omnipod cu RileyLink este acum telecomanda dumneavoastră în vigoare. *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies when AAPS is not working correctly.*
 
 **Only one RileyLink at a time can communicate with a pod.** **AAPS** remembers one paired RileyLink. If you pair a different one, it replaces the previous one.
 
@@ -281,7 +281,7 @@ Pentru a dezactiva o pompă (fie de la expirare, fie de la o defecțiune de pomp
 
 The process below shows you how to suspend and resume insulin delivery.
 
-*NOTE - if you do not see a **Suspend** button*, it is hidden by default. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+*NOTE - if you do not see a **Suspend** button*, it is hidden by default. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Suspendarea administrării insulinei
 
@@ -591,7 +591,7 @@ The buttons at the bottom of the pump screen change depending on the situation. 
   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this is a text button named **Set time** on the Omnipod pump screen.
   ```
 
-- **Suspend:** Suspends insulin delivery on the active pod. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
+- **Suspend:** Suspends insulin delivery on the active pod. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
 
   ![suspendați](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Oferă notificări AAPS și alerte sonore de telefon atunci când nu este sigur 
 
 Oferă setări avansate pentru a ajuta depanarea.
 
-- **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button on the Omnipod pump screen.
+- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
 - **Show Pulse Log button in Pod Management menu:** This setting is still listed, but the current version of the pump screen has no **Pulse Log** button.
 
 - **Show RileyLink Stats button in Pod Management menu:** Hide or display the **RileyLink Stats** button on the Omnipod pump screen.
@@ -896,7 +896,7 @@ Nicio sesiune activă de pompă detectată. Această alertă poate fi dezactivat
 
 Alertă informațională că pompa a fost suspendată.
 
-#### Setarea profilului bazalei a eșuat. Administrarea insulinei poate fi suspendată! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed.
+#### Setarea profilului bazalei a eșuat. Administrarea insulinei poate fi suspendată! Please manually refresh the Pod status on the pump screen and resume delivery if needed.
 
 Informational alert that the Pod basal profile setting has failed. Open the Omnipod pump screen and press **Refresh**, then **Resume Delivery** if needed.
 

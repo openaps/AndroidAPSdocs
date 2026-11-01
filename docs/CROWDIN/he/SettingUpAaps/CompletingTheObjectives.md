@@ -10,7 +10,7 @@ When **AAPS** is installed for the first time, each objective must be completed 
 
 **Objectives 1 to 8** will guide you from configuring **AAPS** on your smartphone to “basic” hybrid closed looping. This will take about 6 weeks to complete. You can proceed up to **Objective 5** using a virtual pump (and using some other method of insulin delivery in the meantime). **Objectives 9 and 10** are designed to test more advanced **AAPS** features with the aim of better control of your diabetes, and will take up to 3 months to complete, possibly longer. Further details on an estimated breakdown of time can be obtained here: [How long will it take?](#preparing-how-long-will-it-take)
 
-As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#go-back-in-objectives).
+As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#CompletingTheObjectives-go-back-in-objectives).
 
 ## Backup your settings
 
@@ -39,7 +39,7 @@ The **Objectives** will need to be restarted from the beginning should you fail 
 - If using Tidepool:
   - Follow instructions in [Tidepool](../SettingUpAaps/Tidepool.md) page to ensure **Tidepool** can receive and display **AAPS** data.
 
-Note - *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
+Note: *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
 
 (objectives-objective2)=
 ## משימה 2: לימדו כיצד לשלוט בממשק AndoridAPS
@@ -51,7 +51,7 @@ Note - *You may need to wait for the next sensor glucose reading to arrive befor
 Tasks to complete **Objective 2** are:
 - Set your **Profile** to 90% for a duration of 10 min.
   - _Hint_: Tap your Profile name on the main screen to open the **Profile** screen, then use the **Activate** (▶) button and set percentage and duration. More information in [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-  - _Note_: **AAPS** does not accept basal rates below 0.05U/hr. If your **Profile** includes rates 0.06U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Switch back to your normal **Profile** after completing this task.
+  - _Note_: **AAPS** does not accept basal rates below 0.05U/hr. If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Switch back to your normal **Profile** after completing this task.
 - Simulate "taking a shower" by [disconnecting your pump](#AapsScreens-loop-status) in **AAPS** for a duration of 1h.
   - _Hint_: press the loop icon on the main screen to open the Loop dialog, then choose a duration under **Disconnect pump**.
 - End "taking a shower" by reconnecting your pump.
@@ -94,7 +94,7 @@ The minimal time to complete this objective: **7 days**. חובה להמתין �
 - Use [**Temp Targets**](../DailyLifeWithAaps/TempTargets.md) when necessary. After treating a hypo, use the predefined "hypo temp target" to prevent the system from overcorrecting upon the bounce back.
 - If you are still in [Simple Mode](#preferences-simple-mode) at this point, now is probably a good time to switch it off.
 
-To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objective-3-prove-your-knowledge). Additionally, you can change the minimum percentage for recommended basal rate changes with the "**Open mode minimum change**" setting in **Settings → Loop**. The higher the value, the fewer change notifications you will receive.
+To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Additionally, you can change the minimum percentage for recommended basal rate changes with the "**Open mode minimum change**" setting in **Settings → Loop**. The higher the value, the fewer change notifications you will receive.
 
 ![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
 
@@ -119,7 +119,7 @@ You might wish to set your [**Profile** BG target](#profile-glucose-targets) hig
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-If you are open looping with a virtual pump **stop here**. Only click verify at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
+If you are open looping with a virtual pump **stop here**. Only tap **Verify** at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
 
 ```
 
@@ -167,14 +167,14 @@ Minimal time to complete this objective: **1 day**. חובה להמתין את �
 
 - Select **Closed Loop** by pressing the [Loop icon](#AapsScreens-loop-status) on the main screen and choosing **Closed Loop** as running mode. Stay in **Closed Loop** over a period of 1 day.
 
-- Slowly raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
+- Slowly raise your 'Max IOB for SMB' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
 
 The default recommendation for this setting is “**average meal bolus + 3x max daily basal**”, where “max daily basal” is the maximum hourly value in any time segment of the day.
 
 ![max daily basal](../images/MaxDailyBasal2.png)
 
 המלצה זו היא נקודת התחלה. If you use this rule but are experiencing AAPS delivering too much insulin as glucose levels rise, you may need to :
-* lower the "Maximum total IOB OpenAPS can’t go over" value;
+* lower the "Max IOB for SMB" value;
 * review your **Profile** settings, only making one adjustment at a time.
 
 Alternatively, if you are very insulin resistant, raise the **maxIOB** value very cautiously.
@@ -202,7 +202,7 @@ In **Objective 9**, you will tackle and use **"Super Micro Bolus (SMB)"** as one
 Minimal time to complete this objective: **28 days**. חובה להמתין את זמן זה. You can’t proceed to the next Objective before this time is up.
 
 - The [SMB section in this documentation](#Open-APS-features-super-micro-bolus-smb) and [oref1 coverage in the openAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand **SMB** and the concept of **zero-temping**.
-- Once done, you can [raise maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) to get **SMBs** working more effectively. maxIOB now includes all **IOB**, not just accumulated basal. This threshold pauses **SMBs** until IOB drops below this value (_e.g._ **maxIOB** is set to 7U and a bolus of 8U is given to cover a meal: SMBs will be paused and not given unless **IOB** drops below 7U). A good start is setting **maxIOB** = **average meal bolus + 3x max daily basal** where "max daily basal" is the maximum hourly value in any time segment of the day. See [objective 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) as reference.
+- Once done, you can [raise maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) to get **SMBs** working more effectively. maxIOB now includes all **IOB**, not just accumulated basal. This threshold pauses **SMBs** until IOB drops below this value (_e.g._ **maxIOB** is set to 7U and a bolus of 8U is given to cover a meal: SMBs will be paused and not given unless **IOB** drops below 7U). A good start is setting **maxIOB** = **average meal bolus + 3x max daily basal** where "max daily basal" is the maximum hourly value in any time segment of the day. See [objective 7](#objectives-objective7) as reference.
 - Evaluate your carb absorption rate and consider changing the “min_5m_carbimpact”-parameter in [Settings → Absorption settings → min_5m_carbimpact](#Preferences-min_5m_carbimpact) if you find it too slow or too fast.
 
 (objectives-objective10)=

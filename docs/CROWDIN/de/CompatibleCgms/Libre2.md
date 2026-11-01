@@ -40,7 +40,7 @@ After a sensor change xDrip will automatically detect the new sensor and will de
 
 ![Configuration > BG Source with xDrip+ BG selected](../images/v4/Configuration/configuration_bg_source.png)
 
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip settings page](#xdrip-identify-receiver).
+-   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as described on [xDrip settings page](#xdrip-identify-receiver).
 
 ## 2. Use xDrip direct connection
 
@@ -67,7 +67,7 @@ Technically, the current blood sugar value is transmitted to xDrip every minute.
 
 Dies ist zwingend erforderlich um damit zu loopen. Die Kurven sehen glatt aus und die Loopergebnisse sind prima. Die Rohwerte, die den Alarmen zugrunde liegen, schwanken ein wenig mehr, entsprechen aber den Werten, die auch der Reader anzeigt. In addition, the raw values can be displayed in the xDrip graph in order to be able to react in time to rapid changes. Dazu bitte Less Common Settings->Advanced Settings for Libre2->show Raw values anschalten". Dann werden zusätzlich Rohwerte als kleine weiße Punkte angezeigt und zusätzliche Sensorinformationen sind im Systemmenü verfügbar.
 
-Die Rohwerte sind sehr hilfreich, wenn sich der Blutzuckerwert schnell ändert. Auch wenn die einzelnen Punkte viel mehr springen, wirst Du die Tendenz deutlich besser erkennen als bei der geglätteten Linie und kannst so bessere Therapieentscheidungen treffen.
+Die Rohwerte sind sehr hilfreich, wenn sich der Blutzuckerwert schnell ändert. Even if the dots are jumpier you would detect the tendency much better than using the smoothed line to make proper therapy decisions.
 
 → Hamburger-Menü → Einstellungen → Erweiterte Einstellungen → Erweiterte Einstellungen für Libre 2
 
@@ -77,7 +77,7 @@ Die Rohwerte sind sehr hilfreich, wenn sich der Blutzuckerwert schnell ändert. 
 
 #### Kalibrierung
 
-You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2,2 mmol/L to +1,1 mmol/L\]** (intercept). Die Neigung (slope) kann nicht geändert. Bitte überprüfe die Werte mit einem Fingerpiks nach dem Setzen eines neuen Sensors. Bitte berücksichtige, dass die Werte in den ersten 12 Stunden nach dem Setzen möglicherweise noch nicht genau sind. Da es große Unterschiede bei den blutigen Messungen geben kann, prüfe den Wert alle 24 Stunden und kalibriere bei Bedarf. Wenn der Sensor nach ein paar Tagen völlig daneben liegt, sollte er ersetzt werden.
+You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2.2 mmol/L to +1.1 mmol/L\]** (intercept). Die Neigung (slope) kann nicht geändert. Bitte überprüfe die Werte mit einem Fingerpiks nach dem Setzen eines neuen Sensors. Bitte berücksichtige, dass die Werte in den ersten 12 Stunden nach dem Setzen möglicherweise noch nicht genau sind. Da es große Unterschiede bei den blutigen Messungen geben kann, prüfe den Wert alle 24 Stunden und kalibriere bei Bedarf. Wenn der Sensor nach ein paar Tagen völlig daneben liegt, sollte er ersetzt werden.
 
 ## 3. Diabox nutzen
 

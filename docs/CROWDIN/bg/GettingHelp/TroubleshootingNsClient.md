@@ -38,6 +38,6 @@ Android може да постави телефона ви в режим на з
 
 * Ако все още получавате грешка...
 
-Проверете размера на базата данни в MongoDB (или чрез плъгина за размер на базата данни в Nightscout). Ако използвате безплатния план на MongoDB, 496 MB означава, че базата е пълна и трябва да се изчисти. [Следвайте тези указания на Nightscout, за да проверите размера на базата данни и да изчистите данни](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
+Проверете размера на базата данни в MongoDB (или чрез плъгина за размер на базата данни в Nightscout). Ако използвате безплатния план на MongoDB, 496 MB означава, че базата е пълна и трябва да се изчисти. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
 Преди да изчистите данни от базата и ако още не сте го направили, обмислете да дарите данните си от AAPS на проекта Open Humans (за научни изследвания). Указанията са на [страницата за настройка на OpenHumans](../SupportingAaps/OpenHumans.md).

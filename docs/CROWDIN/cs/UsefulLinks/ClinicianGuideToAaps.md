@@ -22,7 +22,7 @@ Pacient bez systému uzavřené smyčky získává data ze své pumpy a CGM a po
 
 S automatickým podáváním inzulínu systém provede totéž: shromažďuje data z pumpy, CGM a veškerých dalších zdrojů, kde mohou být informace zaznamenány (například Nightscout), na základě těchto informací provede výpočty a rozhodne, o kolik více či méně inzulínu je zapotřebí (vzhledem k aktuálně nastavenému bazálu) a použije dočasný bazál nezbytný k tomu, aby udržel glykémii v cílovém rozmezí nebo ji do tohoto rozmezí případně vrátil.
 
-Pokud se zařízení s AAPS porouchá nebo se dostane mimo dosah pumpy, pak po skončení posledního dočasného bazálu pumpa pracuje dál jako standardní pumpa s předem naprogramovanými bazálními dávkami.
+If the device running AAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basal rates running.
 
 ## Jak se získávají data:
 
@@ -39,7 +39,7 @@ Systém také bude shromažďovat veškeré informace o bolusech, zkonzumovanýc
 
 ## Jak aplikace ví, co má dělat?
 
-Tento open source software je navržen tak, aby zařízení dokázalo dělat to, co pacienti musejí dělat ručně (v manuálním režimu), aby si spočítali potřebné množství inzulínu. V prvé řadě shromažďuje údaje ze všech pomocných zařízení a z cloudu, připravuje údaje a provádí výpočty, provádí predikce různých scénářů, jak se bude glykémie vyvíjet v následujících hodinách, a vypočte potřebné úpravy, aby se glykémie udržela v cílovém rozmezí nebo se do něho po určité době vrátila. Následně odešle nezbytná nastavení do pumpy. Poté znovu přečte a zpracuje veškerá dostupná data a celý proces se opakuje znovu a znovu.
+Tento open source software je navržen tak, aby zařízení dokázalo dělat to, co pacienti musejí dělat ručně (v manuálním režimu), aby si spočítali potřebné množství inzulínu. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of what BG levels are expected to do during the next hours in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. Následně odešle nezbytná nastavení do pumpy. Poté znovu přečte a zpracuje veškerá dostupná data a celý proces se opakuje znovu a znovu.
 
 Vzhledem k tomu, že nejdůležitějším vstupním parametrem je hodnota glykémie z CGM, je zásadní mít kvalitní a spolehlivá CGM data.
 
@@ -71,7 +71,7 @@ V tomto příkladu je předpovídáno, že v krátkodobém horizontu bude glykem
 
 ### Scénář 3 – Je třeba zvýšit množství inzulínu
 
-V tomto případě ukazuje krátkodobá předpověď pokles pod cílovou hodnotu. Předpokládá se však, že nebude pod bezpečnostním limitem. Hodnota konečné glykémie je nad cílovou hodnotou. Proto AAPS nepřidá žádný inzulín, který by přispěl ke krátkodobé nízké glykémii (tedy inzulín, kvůli kterému by predikce klesla pod limit). Následně – až to bude bezpečné – podle nejnižší předpovídané hodnoty výsledné glykémie posoudí, zda bude nutné přidat inzulín, aby se výsledná předpovídaná glykémie dostala zpět na cílovou hodnotu. *(V závislosti na nastavení, potřebném množství inzulínu a jeho časování může být tento přídavek inzulínu dodán v podobě dočasných bazálů nebo SMB (super mikro bolusů)).*
+V tomto případě ukazuje krátkodobá předpověď pokles pod cílovou hodnotu. Předpokládá se však, že nebude pod bezpečnostním limitem. Hodnota konečné glykémie je nad cílovou hodnotou. Therefore, AAPS will refrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). Následně – až to bude bezpečné – podle nejnižší předpovídané hodnoty výsledné glykémie posoudí, zda bude nutné přidat inzulín, aby se výsledná předpovídaná glykémie dostala zpět na cílovou hodnotu. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMBs (super micro boluses)).*
 
 ![Příklad dávkování 3](../images/Dosing_scenario_3.jpg)
 
@@ -87,13 +87,13 @@ Jako lékař, který možná nemá zkušenosti s AAPS nebo s DIY uzavřenými sm
 
 Pacienti musejí dbát na to, aby neprováděli více změn najednou, ale aby provedli pouze jednu změnu a po dobu 2–3 dní pozorovali, jaký bude mít efekt. Teprve potom by měli změnit nebo upravit jiné nastavení (pokud není zjevné, že změna byla špatná a situaci zhoršuje, v takovém případě by se měli okamžitě vrátit k předchozímu nastavení). Lidé mají tendenci použít všechny ovládací prvky a měnit všechno najednou; pokud to však někdo udělá, může to skončit ještě horším nastavením, které značně zkomplikuje návrat zpět k funkčnímu stavu.
 
-Jedním z nejmocnějších nástrojů pro provádění změn nastavení je nástroj pro automatizovaný výpočet bazálních dávek, citlivosti a inzulínosacharidového poměru. Tomu se říká „[Autotune](#autotune-how-autotune-calculates-adjustments)“. Je navržen tak, aby se spouštěl nezávisle/ručně a umožňuje, abyste vy nebo pacient sám prováděli drobné postupné změny v nastavení. Komunita obvykle postupuje tak, že nejdříve spustí (nebo zkontroluje) výsledky nástroje Autotune předtím, než přistoupí k manuálním zásahům do nastavení. Autotune je v AAPS zabudován jako plugin (**Konfigurace** → **Obecné** → **Autotune**); viz [Autotune](../AdvancedOptions/Autotune.md). Lze ho spustit na vyžádání nebo automaticky. Tyto parametry jsou nutné jak pro podávání inzulínu standardní pumpou, tak pro podávání inzulínu v uzavřené smyčce. Proto je diskuse o výsledcích Autotune a úprava těchto parametrů přirozeným tématem pro spolupráci s lékařem.
+Jedním z nejmocnějších nástrojů pro provádění změn nastavení je nástroj pro automatizovaný výpočet bazálních dávek, citlivosti a inzulínosacharidového poměru. Tomu se říká „[Autotune](#autotune-how-autotune-calculates-adjustments)“. It is designed to allow the data to guide you or your patient in making incremental changes to settings. Komunita obvykle postupuje tak, že nejdříve spustí (nebo zkontroluje) výsledky nástroje Autotune předtím, než přistoupí k manuálním zásahům do nastavení. Autotune je v AAPS zabudován jako plugin (**Konfigurace** → **Obecné** → **Autotune**); viz [Autotune](../AdvancedOptions/Autotune.md). Lze ho spustit na vyžádání nebo automaticky. Tyto parametry jsou nutné jak pro podávání inzulínu standardní pumpou, tak pro podávání inzulínu v uzavřené smyčce. Proto je diskuse o výsledcích Autotune a úprava těchto parametrů přirozeným tématem pro spolupráci s lékařem.
 
 Navíc návyky pacientů (získané při ruční kompenzaci diabetu) mají často vliv na výsledky, dokonce i s DIY uzavřenou smyčkou. Například pokud se předpovídá pokles glykémie a AAPS cestou dolů sníží inzulín, může k vzestupu glykémie ze 70 mg/dl (3,9 mmol/l) stačit jen malé množství sacharidů (např. 3–4 g sacharidů). V mnoha případech se však pacient rozhodne řešit nízkou glykémii větším množstvím sacharidů (např. dodržuje pravidlo 15), což v důsledku povede k výraznějšímu vzestupu glykémie jednak kvůli většímu množství přijaté glukózy, jednak kvůli již snížené dávce inzulínu s ohledem na předpovídaný pokles glykémie.
 
 ## OpenAPS
 
-**Tato příručka byla převzata z [Příručky k OpenAPS pro lékaře](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS je systém vyvinutý tak, aby běžel na malém přenosném počítači (který se obecně označuje jako „rig“). AAPS používá mnoho technik zavedených v OpenAPS a sdílí s ním velkou část logiky a algoritmů. Proto je tento průvodce velmi podobný původnímu průvodci. Mnoho informací o OpenAPS lze snadno použít i pro AAPS. Hlavní rozdíl je v hardwarové platformě, na které daný software běží.
+**This guide was adapted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AAPS používá mnoho technik zavedených v OpenAPS a sdílí s ním velkou část logiky a algoritmů. Proto je tento průvodce velmi podobný původnímu průvodci. Mnoho informací o OpenAPS lze snadno použít i pro AAPS. Hlavní rozdíl je v hardwarové platformě, na které daný software běží.
 
 ## Shrnutí
 

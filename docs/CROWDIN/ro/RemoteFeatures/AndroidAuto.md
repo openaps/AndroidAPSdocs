@@ -4,7 +4,7 @@
 
 ## Cerințe
 
-**AAPS** utilizează o caracteristică a Android Auto care permite ca mesajele de la aplicațiile de pe mobil să fie direcționate către afișarea Auto Audio în mașină.
+**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
 
 Aceasta înseamnă că:
 
@@ -37,7 +37,7 @@ Please check now that you see the **AAPS** status notification on the phone befo
 
 Deoarece **AAPS** nu este o aplicație Android oficială, notificările trebuie să fie activate pentru "surse necunoscute" în Android Auto. Acest lucru se face prin utilizarea modului de dezvoltator pe care vi-l vom arăta aici.
 
-Mergeți la mașină și conectați-vă telefonul mobil cu sistemul audio pentru mașini.
+Go to your car and connect your mobile with the car's audio system.
 
 Ar trebui să vedeți acum un ecran similar cu acest ecran.
 

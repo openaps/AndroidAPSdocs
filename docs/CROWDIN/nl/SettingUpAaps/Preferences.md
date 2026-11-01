@@ -136,7 +136,7 @@ Als de app beveiligd is, moet je het wachtwoord invoeren of de biometrische veri
 
 - Veiligheidslimieten worden ingesteld op basis van de leeftijd die je in deze instelling selecteert.
 - Als je deze harde limieten (zoals max bolus) vaak bereikt, is het tijd om één stap hoger te kiezen.
-- Het is een slecht idee om een hogere leeftijd te kiezen dan de echte leeftijd. Dat kan leiden tot een overdosis als je een verkeerde waarde invoert in het insulinedialoog (bijvoorbeeld als je de decimale punt vergeet).
+- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
 - Wil je de echte getallen van deze vaste veiligheidslimieten weten? Scroll dan op [deze pagina](../DailyLifeWithAaps/KeyAapsFeatures.md) naar de algoritmefunctie die je gebruikt.
 
 (Preferences-maximum-bolus)=
@@ -275,7 +275,7 @@ Afhankelijk van je instellingen in [Configuratie > APS](../SettingUpAaps/ConfigB
 - [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - stand van het algoritme in 2017
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - het nieuwste algoritme, aanbevolen voor beginners
 
-Vanaf [**AAPS** versie 3.3](#version3300) is de functie [Dynamische ISF](../DailyLifeWithAaps/DynamicISF.md) verplaatst naar OpenAPS SMB.
+As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -489,7 +489,7 @@ When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays
 
 Je kunt helpen **AAPS** verder te ontwikkelen door crashrapporten naar de ontwikkelaars te sturen.
 
-**Automatisch instellingen exporteren**<br/> Als je deze functie aanzet, mag **AAPS** instellingen exporteren zonder dat jij iets hoeft te doen. Hiervoor wordt het hoofdwachtwoord bij de volgende handmatige export veilig opgeslagen op je telefoon (alleen daar). Het opgeslagen wachtwoord wordt maximaal 4 weken gebruikt. Na 4 weken krijg je een melding dat het wachtwoord bijna verloopt. Tijdens een extra periode van 1 week kun je het wachtwoord dan vernieuwen door handmatig instellingen te exporteren vanuit het menu Onderhoud.
+**Automatisch instellingen exporteren**<br/> Als je deze functie aanzet, mag **AAPS** instellingen exporteren zonder dat jij iets hoeft te doen. For this the master password is securely stored on your phone (only) at the next manual export. Het opgeslagen wachtwoord wordt maximaal 4 weken gebruikt. Na 4 weken krijg je een melding dat het wachtwoord bijna verloopt. Tijdens een extra periode van 1 week kun je het wachtwoord dan vernieuwen door handmatig instellingen te exporteren vanuit het menu Onderhoud.
 
 Als deze extra periode van 1 week voorbij is, verloopt het opgeslagen wachtwoord. Elke automatische export van instellingen stopt dan en je krijgt een melding met de vraag om het wachtwoord opnieuw in te voeren. [(**Automatische exports van instellingen**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) worden vastgelegd in de lijsten 'Careportal' en 'Gebruikersinvoer' van **AAPS** onder Behandelingen.
 

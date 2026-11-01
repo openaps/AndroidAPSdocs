@@ -7,7 +7,7 @@
 
 -   Start sensor
 
-- Selecione **Syai/Ottai** em [Configuração, Fonte de BG](#Config-Builder-bg-source).
+- Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
 Ative a transmissão (broadcast) no app Ottai:
 

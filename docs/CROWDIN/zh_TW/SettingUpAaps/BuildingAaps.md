@@ -12,7 +12,7 @@
 
 ### 使用瀏覽器建置（建議）
 
-您可以使用智慧型手機透過 GitHub Actions 建置 App。使用 Android 手機時，[AAPS Builder](#aaps-builder) 設定頁面會逐步引導您完成設定，且每次建置都由您自行啟動。使用電腦或 iPhone 時，也可以透過 fork 建置 App，並將 App 儲存至 Google 雲端硬碟。
+You can build the app in a web browser using GitHub Actions. 使用 Android 手機時，[AAPS Builder](#aaps-builder) 設定頁面會逐步引導您完成設定，且每次建置都由您自行啟動。使用電腦或 iPhone 時，也可以透過 fork 建置 App，並將 App 儲存至 Google 雲端硬碟。
 
 **[請按照這些指示進行操作。](./BrowserBuild.md)**
 

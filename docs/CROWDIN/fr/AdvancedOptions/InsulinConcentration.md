@@ -30,7 +30,7 @@ L'insuline existe en différentes concentrations, définies par le nombre d'unit
 Utiliser une concentration avec un appareil qui ne lui correspond pas est extrêmement dangereux et peut causer un grave surdosage ou sous-dosage. **Vérifiez toujours trois fois que la concentration de l'insuline correspond aux caractéristiques de la seringue, du stylo ou de la pompe.**
 ```
 
-## Quand utiliser une concentration non standard ?
+## When is a non-standard concentration used?
 
 Les pompes à insuline sont conçues pour de l'insuline U100, mais certaines situations médicales particulières demandent des concentrations non standard. Ces situations demandent une extrême prudence et une gestion très rigoureuse.
 

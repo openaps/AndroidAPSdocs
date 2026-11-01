@@ -5,7 +5,7 @@
 Το **AAPS** δεν είναι διαθέσιμο για λήψη, λόγω των κανονισμών για τις ιατρικές συσκευές. Είναι νόμιμο να κάνετε build της εφαρμογής για δική σας χρήση, αλλά δεν πρέπει να δίνετε αντίγραφο σε άλλους! Δείτε τη σελίδα [Συχνές Ερωτήσεις](../UsefulLinks/FAQ.md) για λεπτομέρειες.
 
 ```{note}
-Αν θέλετε να κάνετε build του **AAPS** σε νέο υπολογιστή: αντιγράψτε το αντίγραφο ασφαλείας του αρχείου keystore στον νέο υπολογιστή. Μετά ακολουθήστε τη [διαδικασία πρώτου build του **AAPS**](../SettingUpAaps/BuildingAaps.md) αντί για αυτόν τον οδηγό. Η μόνη διαφορά είναι ότι, αντί να δημιουργήσετε νέο keystore, μπορείτε να επιλέξετε αυτό που αντιγράψατε στον νέο υπολογιστή.
+In case you want to build **AAPS** on a new computer: copy your back-up keystore file to the new computer. Μετά ακολουθήστε τη [διαδικασία πρώτου build του **AAPS**](../SettingUpAaps/BuildingAaps.md) αντί για αυτόν τον οδηγό. Η μόνη διαφορά είναι ότι, αντί να δημιουργήσετε νέο keystore, μπορείτε να επιλέξετε αυτό που αντιγράψατε στον νέο υπολογιστή.
 ```
 
 ## Επισκόπηση της ενημέρωσης σε νέα έκδοση του AAPS με το Android Studio
@@ -95,6 +95,6 @@
 
 Πάρτε μια ανάσα!
 
-Μετά δείτε την ξεχωριστή σελίδα [Αντιμετώπιση προβλημάτων του Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md), για να δείτε αν το πρόβλημά σας είναι ήδη καταγεγραμμένο!
+Then check if your problem is already documented on the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 Αν χρειάζεστε περισσότερη βοήθεια, επικοινωνήστε με άλλους χρήστες του **AAPS** στο [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) ή στο [Discord](https://discord.gg/4fQUWHZ4Mw).

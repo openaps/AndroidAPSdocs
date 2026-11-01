@@ -35,7 +35,7 @@ Te instrukcje dotyczą konfiguracji pompy Omnipod generacji Eros (**NIE Omnipod 
 
 - ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **Urządzenie podające insulinę**
 
-> Element, który wykonuje polecenia odebrane z urządzenia komunikacyjnego Poda, wysłane z telefonu z AAPS.
+> Component that will interpret commands received from the Pod communication device originating from your AAPS enabled phone.
 > 
 > > - Nowy Pod Omnipod (generacja Eros - **NIE DASH**)
 
@@ -47,7 +47,7 @@ Na tej stronie **RileyLink** oznacza każde z wymienionych wyżej urządzeń kom
 
 **BEZPIECZEŃSTWO PRZEDE WSZYSTKIM** - nie wykonuj tego procesu w miejscu, w którym nie możesz naprawić błędu (zapasowe Pody, insulina, naładowany RileyLink i telefon są konieczne).
 
-**Twój PDM Omnipod przestanie działać, gdy sterownik Omnipod w AAPS aktywuje Twojego Poda**. Wcześniej do wysyłania poleceń do Poda Omnipod Eros używałeś PDM Omnipod. Pod Omnipod Eros umożliwia komunikację tylko z jednym urządzeniem. Urządzenie, które aktywuje Poda, jest od tej chwili jedynym urządzeniem, które może się z nim komunikować. Oznacza to, że gdy aktywujesz Poda Omnipod Eros za pomocą RileyLink przez sterownik Omnipod w AAPS, **nie będziesz już mógł używać PDM z tym Podem**. Sterownik Omnipod w AAPS razem z RileyLink jest teraz Twoim PDM. *To NIE znaczy, że masz wyrzucić PDM. Zalecamy zachować go jako zapas i na wypadek, gdy AAPS nie działa poprawnie.*
+**Twój PDM Omnipod przestanie działać, gdy sterownik Omnipod w AAPS aktywuje Twojego Poda**. Wcześniej do wysyłania poleceń do Poda Omnipod Eros używałeś PDM Omnipod. Pod Omnipod Eros umożliwia komunikację tylko z jednym urządzeniem. Urządzenie, które aktywuje Poda, jest od tej chwili jedynym urządzeniem, które może się z nim komunikować. Oznacza to, że gdy aktywujesz Poda Omnipod Eros za pomocą RileyLink przez sterownik Omnipod w AAPS, **nie będziesz już mógł używać PDM z tym Podem**. Sterownik Omnipod w AAPS razem z RileyLink jest teraz Twoim PDM. *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies when AAPS is not working correctly.*
 
 **Z Podem może się komunikować tylko jeden RileyLink naraz.** **AAPS** pamięta jeden sparowany RileyLink. Jeśli sparujesz inny, zastąpi on poprzedni.
 
@@ -281,7 +281,7 @@ Aby dezaktywować Poda (po utracie ważności albo po awarii Poda):
 
 Poniżej opisujemy, jak wstrzymać i wznowić podawanie insuliny.
 
-*UWAGA - jeśli nie widzisz przycisku **Wstrzymaj***, to jest on domyślnie ukryty. Włącz **Pokaż przycisk wstrzymania podawania w zakładce Omnipod** w [ustawieniach Omnipod](#OmnipodEros-omnipod-settings) w grupie **Inne**.
+*UWAGA - jeśli nie widzisz przycisku **Wstrzymaj***, to jest on domyślnie ukryty. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Wstrzymywanie podawania insuliny
 
@@ -591,7 +591,7 @@ Przyciski na dole ekranu pompy zmieniają się zależnie od sytuacji. Przyciski,
   Zrzut ekranu powyżej pochodzi z wcześniejszej wersji **AAPS**. W **AAPS** 4 jest to przycisk tekstowy **Ustaw czas** na ekranie pompy Omnipod.
   ```
 
-- **Wstrzymaj:** wstrzymuje podawanie insuliny przez aktywnego Poda. Widoczny tylko, gdy jest włączony w ustawieniach (**Pokaż przycisk wstrzymania podawania w zakładce Omnipod**).
+- **Wstrzymaj:** wstrzymuje podawanie insuliny przez aktywnego Poda. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Pokazuje powiadomienia AAPS i sygnały dźwiękowe w telefonie, gdy nie wiadomo,
 
 Ustawienia zaawansowane pomocne przy szukaniu błędów.
 
-- **Pokaż przycisk wstrzymania podawania w zakładce Omnipod:** ukrywa lub pokazuje przycisk **Wstrzymaj** na ekranie pompy Omnipod.
+- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
 - **Pokaż przycisk Pulse Log w menu zarządzania Podem:** to ustawienie nadal jest na liście, ale obecna wersja ekranu pompy nie ma przycisku **Pulse Log**.
 
 - **Pokaż przycisk Statystyki RileyLink w menu zarządzania Podem:** ukrywa lub pokazuje przycisk **Statystyki RileyLink** na ekranie pompy Omnipod.
@@ -896,7 +896,7 @@ Nie wykryto aktywnej sesji Poda. Ten alert możesz chwilowo odłożyć, naciskaj
 
 Alert informacyjny, że Pod został wstrzymany.
 
-#### Ustawienie profilu bazy nie powiodło się. Podawanie mogło zostać zawieszone! W razie potrzeby proszę ręcznie odświeżyć status Poda na karcie Omnipod i wznowić podawanie.
+#### Ustawienie profilu bazy nie powiodło się. Podawanie mogło zostać zawieszone! Please manually refresh the Pod status on the pump screen and resume delivery if needed.
 
 Alert informacyjny, że ustawienie profilu bazowego w Podzie się nie udało. Otwórz ekran pompy Omnipod i naciśnij **Odśwież**, a potem w razie potrzeby **Wznów podawanie**.
 

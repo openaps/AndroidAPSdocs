@@ -7,7 +7,7 @@
 
 -   Έναρξη του αισθητήρα X1
 
-- Επιλέξτε **Syai/Ottai** στη [Διαμόρφωση, Πηγή BG](#Config-Builder-bg-source).
+- Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
 Ενεργοποιήστε την αποστολή δεδομένων (broadcast) στην εφαρμογή Syai:
 

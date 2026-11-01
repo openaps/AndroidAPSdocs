@@ -113,7 +113,7 @@ If your **AAPS** data source is not xDrip but you can display BG data from the C
 
 ![image](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift是从将原始xDrip应用程序移植到iOS发展而来的，后来演变为“xDrip for iOS”，即**xDrip4iOS**。
+xDripSwift was created from porting the original xDrip app to iOS and evolved into "xDrip for iOS", written as **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
@@ -147,7 +147,7 @@ xDripSwift是从将原始xDrip应用程序移植到iOS发展而来的，后来�
 * Apple iPad（需要软件版本13.0或更高版本）
 * Google Android（将Web应用程序保存到主屏幕）
 
-据Sugarmate用户报告，它可以在美国与Apple CarPlay一起使用，在驾驶时显示血糖读数。目前尚不清楚在美国以外的国家是否可能实现这一点。如果您了解更多信息，请通过完成拉取请求（链接）将此信息添加到文档中，这既快速又简单。
+据Sugarmate用户报告，它可以在美国与Apple CarPlay一起使用，在驾驶时显示血糖读数。目前尚不清楚在美国以外的国家是否可能实现这一点。 If you know more about this, please add details in here to the documentation by completing a [pull request](../SupportingAaps/HowToEditTheDocs.md), which is quick and easy to do.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
@@ -170,13 +170,13 @@ Spike可以用作主接收器或跟踪器应用程序，提供血糖、警报和
 :local: true
 ```
 
-### M5 stack
+### M5Stack
 
 ![image](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
 
 M5Stack是一个小盒子，可用于多种应用程序编程。 Martin的项目[M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki)可以显示传感器血糖值和趋势、IOB和COB。它装在一个塑料盒子里，配备彩色显示屏、micro SD卡插槽、3个按钮、扬声器和内置电池。它是一个很棒的血糖监测器，如果您有Nightscout帐户，设置起来也相对容易。用户通常在家中的Wi-Fi上运行它，但一些用户报告说，通过运行手机Wi-Fi热点，可以在骑摩托车时使用它作为显示屏。
 
-### Sugarpixel
+### SugarPixel
 
 SugarPixel是一种用于连续血糖监测的备选葡萄糖显示警报系统的设备，可与Dexcom应用程序或Nightscout应用程序连接在用户的智能手机上。该设备实时显示血糖读数。 This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customizable display options and native multi-user following.
 

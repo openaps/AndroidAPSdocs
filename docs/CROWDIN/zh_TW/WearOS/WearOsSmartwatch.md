@@ -91,7 +91,7 @@ Google 於 2025 年 6 月[宣布變更](https://android-developers.googleblog.co
 
 ```{admonition} Wear OS 5
 :class: warning
-在 Wear OS 5 上，安裝 Wear app 後，必須立即使用 Wear Installer 2 選取 AAPS 錶盤：安裝程式會在安裝程序結束時提供 **AAPS (Custom)** 錶盤。如果不小心切換到其他錶盤，請重新安裝。錶盤設定（深色、錶面分隔線等）可能無法變更。
+在 Wear OS 5 上，安裝 Wear app 後，必須立即使用 Wear Installer 2 選取 AAPS 錶盤：安裝程式會在安裝程序結束時提供 **AAPS (Custom)** 錶盤。如果不小心切換到其他錶盤，請重新安裝。 Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
 
 如果目前使用的經典錶盤運作正常，請**停用自動更新手錶**：下一次韌體更新很可能會導致錶盤無法使用。如果仍要更新至 Wear OS 6，請參閱上方的說明：**AAPS** 會以新格式安裝自己的錶盤。
 ```
@@ -114,13 +114,13 @@ _本指南適用於搭載 Wear OS 3 的 Galaxy Watch。_在 Wear OS 4 及更新�
 
 ## 智慧型手錶的基本熟悉指南
 
-根據上方影片進行手錶的基本設置後，前往手機上的 Play 商店並下載以下應用程式：“Galaxy Wearable”、“Samsung”和“Easy Fire tools”或“Wear Installer 2”。
+After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
 
 有許多第三方 YouTube 影片可幫助你熟悉新手錶，例如：
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-“Galaxy Wearable”應用程式內也有一個使用手冊部分。在手機上打開 Galaxy Wearable，搜尋手錶，嘗試將手錶與手機配對。根據你的版本，這可能會提示你從 Play 商店安裝第三個應用程式“Galaxy Watch 4 外掛”（下載需要一些時間）。在手機上安裝此應用程式，然後再次在 Galaxy Wearable 應用程式中嘗試將手錶與手機配對。透過一系列選單並勾選各種偏好設定。
+“Galaxy Wearable”應用程式內也有一個使用手冊部分。在手機上打開 Galaxy Wearable，搜尋手錶，嘗試將手錶與手機配對。 Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). 在手機上安裝此應用程式，然後再次在 Galaxy Wearable 應用程式中嘗試將手錶與手機配對。透過一系列選單並勾選各種偏好設定。
 
 ## 設置 Samsung 帳號
 
@@ -259,7 +259,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 若要透過手錶注射或執行其他操作，請一併前往[設定 > Wear](#preferences-wear)，開啟**Wear 控制**。
 
-要更改 **AAPS** 手錶錶盤，請按下手錶的主畫面，他將進入“自訂”模式。然後向右滑動，直到看到所有 **AAPS** 錶盤。
+To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. 然後向右滑動，直到看到所有 **AAPS** 錶盤。
 
 如果 **AAPS** Wear.apk 已成功側載到智慧型手錶上，他將顯示如下：
 
@@ -340,7 +340,7 @@ F - 手機電池
 
 G - 基礎率（標準率顯示為U/h，臨時基礎率（TBR）顯示為百分比）
 
-H - BGI（血糖互動） -> 基於胰島素活動時，血糖“應該”上升或下降的程度。
+H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
 H - BGI（血糖影響） -> 基於胰島素活性，血糖「應該」上升或下降的程度。
 

@@ -7,7 +7,7 @@ Ak si nechcete založiť samostatný účet Gmail pre **AAPS**, môžete prejsť
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Samostatné miesto na Disku Google znamená, že pri použití **Exportovať nastavenia** nehrozí zaplnenie limitu vášho osobného Disku Google.
+- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
 - Každá verzia **AAPS** (a podporných aplikácií ako xDrip, BYODA atď.) bude uložená na jednom mieste, ktoré nezávisí od hardvéru vášho počítača. Ak vám ukradnú, stratíte alebo pokazíte počítač či telefón, stále budete mať k údajom prístup.
 - Jednotné nastavenie s podobnou štruktúrou priečinkov u rôznych používateľov zjednoduší pomoc online.
 - Podľa nastavenia (pozrite nižšie) budete mať samostatnú identitu ako prezývku na komunikáciu v komunite, čo môže chrániť vaše súkromie. 
@@ -45,13 +45,13 @@ Kliknite [sem](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQB
  Toto sú kroky, ktoré ukazuje video:
 
 V tomto príklade: 
-- Váš existujúci „_bežný_“ účet Google je <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
+- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
 - Váš nový účet Gmail pre „_AAPS_“ bude: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-### Prejdite na <https://account.google.com> 
+### Go to <https://myaccount.google.com> 
 
- Ak už ste prihlásení do Googlu, otvorí sa vaša „bežná“ stránka **My Account** (Môj účet). (1) Kliknite vpravo hore na stránke na svoju profilovú fotku (v tomto prípade jednoduché ![](../images/Building-the-App/building_0002.png) (2) vyberte „_add another account_“ (pridať ďalší účet).
+ Ak už ste prihlásení do Googlu, otvorí sa vaša „bežná“ stránka **My Account** (Môj účet). (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
 
 ![](../images/Building-the-App/building_0005.png)
 
@@ -87,7 +87,7 @@ Gmail zobrazí názov účtu. Budete požiadaní o súhlas s podmienkami Gmailu 
 
 ### Prispôsobte zobrazenie nového profilu
 
-Teraz by ste mali byť na stránke MyAccount v Gmaile, kde sa zobrazuje váš nový samostatný e-mailový účet pre **AAPS**. Profilová fotka bude predvolene nastavená na prvé písmeno vášho mena. Zmeňte ju na niečo jedinečné, aby nedošlo k zámene… v tomto príklade Donald.Muck.AAPS nahradil ![](../images/Building-the-App/building_0002.png) týmto obrázkom: ![](../images/Building-the-App/building_0003.png)
+Teraz by ste mali byť na stránke MyAccount v Gmaile, kde sa zobrazuje váš nový samostatný e-mailový účet pre **AAPS**. Profilová fotka bude predvolene nastavená na prvé písmeno vášho mena. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
@@ -101,7 +101,7 @@ Táto časť môže byť trochu mätúca, pretože sa budete musieť prepínať 
 2. Kliknite pravým tlačidlom myši na ikonu prehliadača na paneli úloh
 3. V ponuke vyberte „New Window“ (Nové okno)… a upravte ho tak, aby zaberalo iba dolnú polovicu obrazovky.
 
-V každom okne prehliadača otvorte <https://gmail.com>. Uistite sa, že váš osobný účet je hore a nový samostatný účet pre **AAPS** je dole a dá sa ľahko rozpoznať podľa profilovej fotky v pravom hornom rohu. (ak treba, môžete kedykoľvek prepnúť účet kliknutím na profilovú fotku a výberom správneho účtu.
+V každom okne prehliadača otvorte <https://gmail.com>. Uistite sa, že váš osobný účet je hore a nový samostatný účet pre **AAPS** je dole a dá sa ľahko rozpoznať podľa profilovej fotky v pravom hornom rohu. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
 
 ![](../images/Building-the-App/building_0009.png)
 

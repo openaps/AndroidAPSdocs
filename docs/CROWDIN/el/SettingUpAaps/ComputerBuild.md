@@ -108,12 +108,12 @@
 (BuildingAaps-steps-for-installing-git)=
 #### Βήματα για την εγκατάσταση του Git
 
-1.  Ελέγξτε αν έχετε ήδη εγκατεστημένο το **Git**. Μπορείτε να το κάνετε αν γράψετε «git» στη γραμμή αναζήτησης των Windows. Αν δείτε το **“Git bash”** ή κάποια άλλη μορφή του Git, είναι ήδη εγκατεστημένο και μπορείτε να πάτε κατευθείαν στην [εγκατάσταση του Android Studio](#install-android-studio):
+1.  Ελέγξτε αν έχετε ήδη εγκατεστημένο το **Git**. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. Αν δεν έχετε εγκατεστημένο το Git, κατεβάστε και εγκαταστήστε την τελευταία έκδοση για το σύστημά σας από την ενότητα "Download" [**εδώ**](https://git-scm.com/downloads). Κάθε πρόσφατη έκδοση του Git πρέπει να δουλεύει. Επιλέξτε τη σωστή έκδοση για το σύστημά σας: Mac, Windows ή Linux.
+2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Κάθε πρόσφατη έκδοση του Git πρέπει να δουλεύει. Επιλέξτε τη σωστή έκδοση για το σύστημά σας: Mac, Windows ή Linux.
 
 **Σημείωση για χρήστες Mac:** η σελίδα του Git θα σας ζητήσει επίσης να εγκαταστήσετε ένα επιπλέον πρόγραμμα, το "homebrew", που βοηθά στην εγκατάσταση. Αν εγκαταστήσετε το Git μέσω homebrew, δεν χρειάζεται να αλλάξετε καμία ρύθμιση.
 
@@ -170,7 +170,7 @@
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-Στο τελευταίο βήμα, κάντε κλικ στο "Finished" για να ξεκινήσετε το Android Studio για πρώτη φορά.
+In the last step, click on "Finish" to start Android Studio for the first time.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
@@ -302,7 +302,7 @@
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-Ελέγξτε αν το **Android Studio** μπορεί να βρει αυτόματα τη σωστή διαδρομή **Path to Git executable**, κάνοντας κλικ στο κουμπί "Test" (1):
+Check if **Android Studio** can automatically locate the correct **Path to Git executable** by clicking the button "Test" (1):
 
 ![Git Executable](../images/Building-the-App/039_GitTest.png)
 
@@ -369,7 +369,7 @@
 
 ```{admonition} WARNING!
 :class: warning
-Σημειώστε κάπου πού είναι αποθηκευμένο το keystore σας. Θα το χρειαστείτε όταν δημιουργήσετε την επόμενη ενημέρωση του AndroidAPS!
+Σημειώστε κάπου πού είναι αποθηκευμένο το keystore σας. You will need it when you build the next AAPS update!
 ```
 
 * Τώρα επιλέξτε έναν απλό κωδικό πρόσβασης (και σημειώστε τον), γράψτε τον στο πεδίο κωδικού (2) και επιβεβαιώστε τον (2).

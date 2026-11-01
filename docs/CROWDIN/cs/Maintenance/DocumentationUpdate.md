@@ -48,7 +48,7 @@
 
 - DiaKEM: nové instalace po upgradu serverů nefungují @psonnera
 - Odstraněna upravená aplikace pro Libre 2 (zastaralá): nefunguje s novými senzory @psonnera
-- Přepracována stránka Omnipod Dash @XiTatiON
+- Reworked Omnipod DASH page @XiTatiON
 
 ## Srpen 2025
 
@@ -97,7 +97,7 @@ Dokumentace AAPS 3.1 je k dispozici [zde](https://androidaps.readthedocs.io/en/3
 - [Varovná značka kvality glykémie](#aaps-screens-bg-warning-sign) @tanja
 - [Aktualizace pumpy Medtronic](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
 - [Nutné kontroly po aktualizaci na AAPS 3.0](Update3_0.md) @tanja
-- [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
+- [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
 - Aktualizace dokumentace pro AAPS 3.0 (částečně) @xJoe
 - [Wear OS pro AAPS 3.0](../WearOS/WearOsSmartwatch.md) @peterleimbach
 
@@ -112,7 +112,7 @@ Dokumentace AAPS 3.1 je k dispozici [zde](https://androidaps.readthedocs.io/en/3
 
 ## Listopad 2021
 
-- Doporučený postup kalibrace senzoru Libre 2
+- Best practices for calibrating a Libre 2 sensor
 - [ISF](../UsefulLinks/FAQ.md) – nové vysvětlení vlivu
 - Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - Odstraněna upravená aplikace [Dexcom](../CompatibleCgms/DexcomG6.md), protože je zastaralá
@@ -212,7 +212,7 @@ Dokumentace AAPS 3.1 je k dispozici [zde](https://androidaps.readthedocs.io/en/3
 
 ## Prosinec 2019
 
-- [Android Auto](../RemoteFeatures/AndroidAuto.md) – nastavení se snímky obrazovky
+- [Android Auto](../RemoteFeatures/AndroidAuto.md) - setup with screenshots
 - [Accu-Chek Insight a Autotune](#Accu-Chek-Insight-Pump-settings-in-aaps) – jak je přesto používat
 - [Glimp](#Config-Builder-bg-source) – podporována verze 4.15.57 a novější
 - [Ciferníky](../WearOS/WearOsSmartwatch.md) – velká aktualizace, mnohem více podrobností
@@ -238,7 +238,7 @@ Dokumentace AAPS 3.1 je k dispozici [zde](https://androidaps.readthedocs.io/en/3
 ## Říjen 2019
 
 - [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
-- [AccuChek Insight – možnosti záznamů](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- [Accu-Chek Insight - log options](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [Kalkulace COB na samostatné stránce](../DailyLifeWithAaps/CobCalculation.md)
 - [COB – detekce chybné hodnoty COB](#CobCalculation-detection-of-wrong-cob-values)
 - [Řešení problémů specifických pro Dexcom G6](#DexcomG6-troubleshooting-g6)

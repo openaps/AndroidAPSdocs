@@ -22,7 +22,7 @@ Sem um sistema de loop fechado, a pessoa com diabetes recolhe os dados da bomba 
 
 Com a administração automática de insulina, o sistema faz o mesmo: recolhe os dados da bomba, do CGM e de qualquer outro sítio onde haja informação registada (como o Nightscout), usa esta informação para fazer os cálculos e decidir quanto mais ou menos insulina é necessária (acima ou abaixo da taxa basal programada) e usa taxas basais temporárias para fazer os ajustes necessários, de forma a manter a glicose no intervalo alvo ou a trazê-la de volta para esse intervalo.
 
-Se o dispositivo que executa o AAPS avariar ou ficar fora do alcance da bomba, quando a última taxa basal temporária terminar, a bomba volta a funcionar como uma bomba normal, com as taxas basais pré-programadas.
+If the device running AAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basal rates running.
 
 ## Como são recolhidos os dados:
 
@@ -39,7 +39,7 @@ Recolhe também qualquer informação sobre bólus, ingestão de hidratos de car
 
 ## Como sabe o que fazer?
 
-O software de código aberto foi concebido para que o dispositivo faça facilmente o trabalho que as pessoas faziam antes (em modo manual) para calcular como ajustar a administração de insulina. Primeiro recolhe os dados de todos os dispositivos de apoio e da nuvem, prepara os dados e faz os cálculos, faz previsões dos níveis de glicose esperados nas horas seguintes em diferentes cenários e calcula os ajustes necessários para manter a glicose no intervalo alvo ou trazê-la de volta para esse intervalo. A seguir, envia à bomba os ajustes necessários. Depois lê novamente os dados, e repete o processo continuamente.
+O software de código aberto foi concebido para que o dispositivo faça facilmente o trabalho que as pessoas faziam antes (em modo manual) para calcular como ajustar a administração de insulina. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of what BG levels are expected to do during the next hours in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. A seguir, envia à bomba os ajustes necessários. Depois lê novamente os dados, e repete o processo continuamente.
 
 Como o parâmetro de entrada mais importante é o nível de glicose que vem do CGM, é importante ter dados do CGM de alta qualidade.
 
@@ -71,7 +71,7 @@ Neste exemplo, prevê-se que a glicose fique baixa no curto prazo, mas que acabe
 
 ### Cenário 3 - É necessária mais insulina
 
-Neste exemplo, uma previsão de curto prazo mostra uma descida abaixo do alvo. No entanto, não se prevê que fique abaixo do limiar de segurança. A glicose final prevista está acima do alvo. Por isso, o AAPS não adiciona insulina que possa contribuir para uma hipoglicemia de curto prazo (ou seja, insulina que faria a previsão descer abaixo do limiar). Depois avalia se pode adicionar insulina para trazer o nível mais baixo da glicose final prevista até ao alvo, quando for seguro fazê-lo. *(Conforme as definições e a quantidade e o momento da insulina necessária, esta insulina pode ser administrada através de basais temporárias ou de SMB (super micro bólus).)*
+Neste exemplo, uma previsão de curto prazo mostra uma descida abaixo do alvo. No entanto, não se prevê que fique abaixo do limiar de segurança. A glicose final prevista está acima do alvo. Therefore, AAPS will refrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). Depois avalia se pode adicionar insulina para trazer o nível mais baixo da glicose final prevista até ao alvo, quando for seguro fazê-lo. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMBs (super micro boluses)).*
 
 ![Cenário de dosagem 3](../images/Dosing_scenario_3.jpg)
 
@@ -87,13 +87,13 @@ Como médico, talvez sem experiência com o AAPS ou com loops fechados DIY, pode
 
 O mais importante para os doentes é fazer uma alteração de cada vez e observar o efeito durante 2–3 dias antes de decidir alterar outra definição (a não ser que seja claramente uma má alteração que piora a situação; nesse caso, devem voltar de imediato à definição anterior). A tendência humana é mexer em todos os botões e mudar tudo ao mesmo tempo; mas, se o fizerem, podem acabar com definições ainda menos adequadas no futuro e ter dificuldade em voltar a um estado que se sabe ser bom.
 
-Uma das ferramentas mais úteis para alterar definições é uma ferramenta de cálculo automático para as taxas basais, o FSI e o IHC. Chama-se «[Autotune](#autotune-how-autotune-calculates-adjustments)» (Autoajuste). Foi concebida para ser executada de forma independente/manual e para deixar que os dados orientem o médico ou o doente a fazer alterações graduais às definições. Na comunidade, a boa prática é executar (ou rever) primeiro os relatórios do Autoajuste (Autotune), antes de tentar fazer ajustes manuais às definições. O Autoajuste (Autotune) está integrado no AAPS como plugin (**Configuração** → **Geral** → **Autoajuste**); ver [Autoajuste (Autotune)](../AdvancedOptions/Autotune.md). Pode ser executado a pedido ou automaticamente. Como estes parâmetros são um pré-requisito tanto para a administração de insulina com bomba convencional como para a administração em loop fechado, a discussão dos resultados do Autoajuste e o ajuste destes parâmetros são o ponto natural de ligação com o médico.
+Uma das ferramentas mais úteis para alterar definições é uma ferramenta de cálculo automático para as taxas basais, o FSI e o IHC. Chama-se «[Autotune](#autotune-how-autotune-calculates-adjustments)» (Autoajuste). It is designed to allow the data to guide you or your patient in making incremental changes to settings. Na comunidade, a boa prática é executar (ou rever) primeiro os relatórios do Autoajuste (Autotune), antes de tentar fazer ajustes manuais às definições. O Autoajuste (Autotune) está integrado no AAPS como plugin (**Configuração** → **Geral** → **Autoajuste**); ver [Autoajuste (Autotune)](../AdvancedOptions/Autotune.md). Pode ser executado a pedido ou automaticamente. Como estes parâmetros são um pré-requisito tanto para a administração de insulina com bomba convencional como para a administração em loop fechado, a discussão dos resultados do Autoajuste e o ajuste destes parâmetros são o ponto natural de ligação com o médico.
 
 Além disso, o comportamento humano (aprendido no tratamento manual da diabetes) influencia muitas vezes os resultados, mesmo com um loop fechado DIY. Por exemplo, se se prevê que a glicose desça e o AAPS reduz a insulina durante a descida, pode ser necessária apenas uma pequena quantidade de hidratos de carbono (por exemplo, 3–4 g) para subir a glicose de 70 mg/dl (3,9 mmol/l). No entanto, em muitos casos, a pessoa pode tratar com muito mais hidratos de carbono (por exemplo, seguindo a regra dos 15), o que causa um pico mais rápido, tanto pela glicose a mais como porque a insulina foi reduzida no período que antecedeu a hipoglicemia.
 
 ## OpenAPS
 
-**Este guia foi adaptado de [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html) (guia do OpenAPS para médicos).** O OpenAPS é um sistema desenvolvido para funcionar num pequeno computador portátil (em geral chamado «rig»). O AAPS usa muitas das técnicas implementadas no OpenAPS e partilha grande parte da lógica e dos algoritmos; por isso, este guia é muito semelhante ao guia original. Grande parte da informação sobre o OpenAPS pode ser facilmente adaptada ao AAPS; a principal diferença é a plataforma de hardware onde cada software é executado.
+**This guide was adapted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). O AAPS usa muitas das técnicas implementadas no OpenAPS e partilha grande parte da lógica e dos algoritmos; por isso, este guia é muito semelhante ao guia original. Grande parte da informação sobre o OpenAPS pode ser facilmente adaptada ao AAPS; a principal diferença é a plataforma de hardware onde cada software é executado.
 
 ## Resumo
 

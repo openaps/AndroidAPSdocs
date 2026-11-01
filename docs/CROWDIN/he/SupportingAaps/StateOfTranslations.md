@@ -1,9 +1,9 @@
-# סטטוס תרגום האפליקציה והתיעוד
+# State of translation for the app and the documentation
 
 מצב התרגום מעודכן פעם בשעה ומשקף את מצב התרגום ב-Crowdin.
 
 ```{tip}
-Be careful the percentage of proofreading must be lower than the percentage of translations but they decided to show it on top of the translations.
+Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
 It's better to look only at the percentage level of translations to see if work is to be done.
 ```
 

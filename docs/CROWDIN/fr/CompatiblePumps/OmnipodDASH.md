@@ -38,16 +38,16 @@ Caractéristiques principales de l'**Omnipod DASH** (« DASH ») :
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
-- **Un téléphone Android compatible** avec le Bluetooth Low Energy (BLE) (voir [Téléphones](../Getting-Started/Phones.md) pour plus d'infos). Les informations suivantes vous aideront aussi pour d'autres points importants pour bien activer et utiliser le DASH sur un téléphone compatible :
+- **A Compatible Android phone** with Bluetooth Low Energy (BLE) (see [Phones](../Getting-Started/Phones.md) for more info). In addition, the following information will help guide you on other key considerations around successfully activating and using the DASH on a compatible phone:
     -  Le pilote Omnipod Dash d'**AAPS** se connecte au Pod DASH par Bluetooth.  
       **AAPS** établit automatiquement une nouvelle connexion Bluetooth avec le Pod à chaque fois qu'il doit envoyer une commande (par ex. un Bolus). Après l'envoi de la commande, la connexion Bluetooth est tout de suite coupée.
        - **REMARQUE :**
          - La connexion Bluetooth peut être interrompue ou perturbée par d'autres appareils Bluetooth reliés au téléphone qui fait tourner **AAPS**, comme des écouteurs, etc. Ces appareils peuvent causer des erreurs de connexion ou des problèmes d'activation du pod sur certains modèles de téléphones. Il est conseillé de consulter la liste des [configurations matérielles testées](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) pour connaître les configurations qui fonctionnent, quand vous choisissez le téléphone pour l'Omnipod DASH.
-         - Il existe plusieurs problèmes connus avec le Bluetooth qui peuvent causer des problèmes d'activation du pod (voir [Dépannage](#troubleshooting) pour des conseils sur d'autres problèmes Bluetooth), en particulier la section [Problèmes liés au Bluetooth](#omnipod-dash-bluetooth-related-issues).
+         - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#omnipod-dash-troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
     - Le téléphone doit avoir **Android 12 ou plus récent**, avec **AAPS** compilé et installé selon les instructions [**Compilation d'AAPS**](../SettingUpAaps/BuildingAaps.md). Utilisez toujours la dernière version publiée.
 - Un [**système de mesure du glucose en continu (MGC)**](../Getting-Started/CompatiblesCgms.md) compatible
 
-Les instructions ci-dessous expliquent comment activer une nouvelle session de pod avec **AAPS**. Vous devriez attendre que votre Pod actuel soit proche de l'expiration, car vous devrez activer un nouveau Pod avec **AAPS**. Une fois qu'un pod est désactivé, il ne peut pas être réutilisé ni réactivé : la désactivation est définitive.
+Les instructions ci-dessous expliquent comment activer une nouvelle session de pod avec **AAPS**. You should wait for your current Pod to be close to expiry, as you will need to activate a new Pod with **AAPS**. Une fois qu'un pod est désactivé, il ne peut pas être réutilisé ni réactivé : la désactivation est définitive.
 
 ## Avant de commencer
 
@@ -611,7 +611,7 @@ Un pod en panne ne peut pas être réutilisé. Vérifiez votre glycémie, puis [
 ---
 ### Éviter les pannes de pod avec l'erreur 49
 
-Cet échec est lié à un état du pod incorrect pour une commande ou à une erreur lors d'une commande d'injection d'insuline. Cela arrive quand le pilote et le Pod ne sont pas d'accord sur l'état réel. Le Pod (par mesure de sécurité intégrée) réagit alors avec un code d'erreur irrécupérable 49 (0x31) et devient ce que l'on appelle un « screamer » : le long bip agaçant qui ne peut être arrêté qu'en perçant un trou à l'endroit prévu au dos du Pod. L'origine exacte d'une « panne de pod 49 » est souvent difficile à trouver. Dans les situations où l'on soupçonne que cette panne peut arriver (par exemple lors de plantages de l'application, avec une version de développement ou lors d'une réinstallation).
+Cet échec est lié à un état du pod incorrect pour une commande ou à une erreur lors d'une commande d'injection d'insuline. Cela arrive quand le pilote et le Pod ne sont pas d'accord sur l'état réel. Le Pod (par mesure de sécurité intégrée) réagit alors avec un code d'erreur irrécupérable 49 (0x31) et devient ce que l'on appelle un « screamer » : le long bip agaçant qui ne peut être arrêté qu'en perçant un trou à l'endroit prévu au dos du Pod. L'origine exacte d'une « panne de pod 49 » est souvent difficile à trouver. It can happen, for example, after application crashes, when running a development version or after a re-installation.
 
 ---
 
@@ -690,7 +690,7 @@ Voici un résumé des principales alertes que vous pouvez rencontrer :
 - *Défaut du Pod : XXX NOM*, suivi de *Ref : ...* : le pod est en panne et a arrêté d'injecter de l'insuline. Changez le pod. Voir [Pannes du Pod](#omnipod-dash-pod-failures).
 - *Pas de Pod actif* : aucune session de pod n'a été trouvée. Cette notification revient tant que vous n'avez pas activé un nouveau pod. Une fois un pod activé, elle disparaît automatiquement.
 - *Injection d'insuline suspendue* : le pod a suspendu l'injection d'insuline. Voir [Reprendre l'injection d'insuline](#omnipod-dash-resuming-insulin-delivery).
-- *Le paramétrage du profil de basal a peut-être échoué. L'injection peut être suspendue ! Actualisez manuellement l'état du Pod à partir de l'onglet Omnipod et reprenez l'injection si nécessaire.* La définition du **Profil** basal sur le pod a peut-être échoué. Appuyez sur **Actualiser** sur l'écran de la pompe DASH (le message parle toujours de « l'onglet Omnipod »), et appuyez sur **Reprendre l'injection** s'il est affiché.
+- *Le paramétrage du profil de basal a peut-être échoué. L'injection peut être suspendue ! Please manually refresh the Pod status on the pump screen and resume delivery if needed.* Setting the basal **Profile** on the pod may have failed. Press **Refresh** on the DASH pump screen, and press **Resume Delivery** if it is shown.
 - *Impossible de vérifier si le SMB (X U) a réussi. Actualisez l'état du pod pour confirmer ou refuser cette commande.* **AAPS** n'a pas pu confirmer que le **SMB** a été injecté. Appuyez sur **Actualiser** sur l'écran de la pompe DASH et vérifiez le champ **Dernier bolus**.
 - *Statut de l'injection du bolus incertain. Rafraîchir le statut du pod pour confirmer ou refuser.* C'est la même chose pour un bolus normal : appuyez sur **Actualiser** sur l'écran de la pompe DASH.
 - *L'heure du pod est différente de l'heure du téléphone. Changez de profil pour corriger le débit de basal.* Voir la remarque sur l'heure d'été et les fuseaux horaires dans [Omnipod DASH : restrictions et problèmes connus dans AAPS](#omnipod-dash-constraints).
@@ -703,7 +703,7 @@ Tout le développement pour le DASH est fait par la communauté de manière **b�
 
 -  **Niveau 0 :** Lisez la section correspondante de cette documentation pour vous assurer que vous comprenez comment la fonctionnalité avec laquelle vous avez des difficultés est censée fonctionner.
 -  **Niveau 1 :** Si vous rencontrez encore des problèmes que vous ne pouvez pas résoudre avec ce document, allez sur le canal *#AAPS* de **Discord** avec [ce lien d'invitation](https://discord.gg/4fQUWHZ4Mw). Il existe aussi de nombreux groupes Facebook et autres où vous pouvez poser vos questions (voir [**Où puis-je obtenir de l'aide ?**](../GettingHelp/WhereCanIGetHelp.md))
--  **Niveau 2 :** Cherchez dans les problèmes existants si votre problème a déjà été signalé dans [Issues](https://github.com/nightscout/AndroidAPS/issues) s'il existe, merci de le confirmer, de le commenter ou d'ajouter des informations sur votre problème. Sinon, créez un [nouveau problème (issue)](https://github.com/nightscout/AndroidAPS/issues) et joignez [vos fichiers log](../GettingHelp/AccessingLogFiles.md).
+-  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues). If it exists, please confirm/comment/add information on your problem. Sinon, créez un [nouveau problème (issue)](https://github.com/nightscout/AndroidAPS/issues) et joignez [vos fichiers log](../GettingHelp/AccessingLogFiles.md).
 -  **Soyez patient - la plupart des membres de notre communauté sont des bénévoles de bonne nature, et résoudre les problèmes nécessite souvent du temps et de la patience de la part des utilisateurs et des développeurs.**
 
 Quand vous demandez de l'aide, préparez les informations suivantes pour aider la communauté avec vos questions et problèmes précis :

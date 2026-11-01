@@ -108,12 +108,12 @@ Git este un program care vă permite să urmăriți modificările din cod și s�
 (BuildingAaps-steps-for-installing-git)=
 #### Pași pentru instalarea Git
 
-1.  Verificați dacă nu aveți deja **Git** instalat. Puteți face acest lucru tastând "git" în bara de căutare Windows - dacă vedeți **"Git bash"** sau o altă formă de Git, este deja instalat și puteți merge direct la [instalare Android Studio](#install-android-studio):
+1.  Verificați dacă nu aveți deja **Git** instalat. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. Dacă nu aveți Git instalat, descărcați și instalați cea mai recentă versiune pentru sistemul dumneavoastră din secțiunea "Descărcări" de [**aici**](https://git-scm.com/downloads). Orice versiune Git recentă ar trebui să funcționeze, selectați versiunea corectă în funcție de sistemul dumneavoastră, fie Mac, Windows sau Linux.
+2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Orice versiune Git recentă ar trebui să funcționeze, selectați versiunea corectă în funcție de sistemul dumneavoastră, fie Mac, Windows sau Linux.
 
 **Notă pentru utilizatorii Mac:** pagina web Git vă va ghida, de asemenea, să instalați un program suplimentar numit "homebrew" pentru a facilita instalarea. Dacă instalați Git via homebrew, nu este nevoie să schimbați preferințele.
 
@@ -170,7 +170,7 @@ Odată terminat, apăsați pe "Următorul"
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-În ultimul pas, apăsați pe "Finalizat" pentru a începe Android Studio pentru prima dată.
+In the last step, click on "Finish" to start Android Studio for the first time.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
@@ -302,7 +302,7 @@ In the top left corner of **Android Studio**, open the hamburger menu and naviga
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-Check if **Android Studio** can automatically locate the correct **Path to Git executable** automatically by clicking the button "Test" (1):
+Check if **Android Studio** can automatically locate the correct **Path to Git executable** by clicking the button "Test" (1):
 
 ![Git Executable](../images/Building-the-App/039_GitTest.png)
 
@@ -369,7 +369,7 @@ If you have built AAPS before, do NOT create a new keystore but select your exis
 
 ```{admonition} WARNING!
 :class: warning
-Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AndroidAPS update!
+Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AAPS update!
 ```
 
 * Acum alegeți o parolă simplă (și notați-o), introduceți-o în caseta cu parolă (2), și confirmați (2).

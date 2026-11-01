@@ -84,11 +84,11 @@ Roche 正退出胰島素幫浦市場，將糖尿病產品組合的重心轉向 A
     
     在 **組態設定工具** > **幫浦**中的 **Accu-Chek Insight** 卡片上點選**設定**，或點選幫浦畫面右上角的齒輪圖示，即可開啟設定。
     
-    ![Accu-Chek Insight 驅動程式設定](../images/v4/Pumps/accu_chek_insight_settings.png)
+    ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
     
-    在 **AAPS** 的 Insight 設定中，你可以啟用以下選項：
+    In the Insight settings in **AAPS** you can enable the following options:
     
-    * **記錄藥筒更換**：在幫浦上執行「填充導管」程序時，自動記錄胰島素藥筒更換。
+    * **Log reservoir changes**: automatically records an insulin cartridge change when you change the cartridge in the pump.
     
     * **記錄導管更換**：在幫浦上執行「填充導管」程序時，將備註新增至 **AAPS** 資料庫。
     
@@ -162,7 +162,7 @@ Roche 正退出胰島素幫浦市場，將糖尿病產品組合的重心轉向 A
 
 ## 電池更換
 
-Insight 在循環使用期間的電池壽命範圍為 10 到 14 天，最大 20 天。報告此電池壽命的用戶使用的是 Energizer 鋰電池。
+Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days. 報告此電池壽命的用戶使用的是 Energizer 鋰電池。
 
 Insight 幫浦有一個小型內部電池，可在更換可拆卸電池時維持時鐘等重要功能的運作。如果更換電池的時間過長，內部電池可能會耗盡電力，時鐘將重置，並且在插入新電池後你需要重新設置時間和日期。如果發生這種情況，更換電池前在 AAPS 中的所有紀錄將不再包括在計算中，因為無法正確識別正確的時間。
 

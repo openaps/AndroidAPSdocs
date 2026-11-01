@@ -3,7 +3,7 @@
 # Optie 2 – Je bestaande keystore uploaden
 
 ```{note}
-Dit hoort bij [Stap 2 – Je keystore voor ondertekening maken](BrowserBuildKeystore.md) van [Bouwen in de browser](BrowserBuild.md). Zorg dat je de [keuze tussen Optie 1 en Optie 2](#aaps-ci-preparation) hebt gelezen en het voorbereidingsbestand hebt gedownload.
+Dit hoort bij [Stap 2 – Je keystore voor ondertekening maken](BrowserBuildKeystore.md) van [Bouwen in de browser](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
 ```
 
 Bij optie 2 gebruik je opnieuw de JKS die je al hebt gemaakt toen je AAPS eerder op een computer bouwde in Android Studio. Deze optie is geschikt als je al een JKS hebt en het JKS-wachtwoord en de alias kent.

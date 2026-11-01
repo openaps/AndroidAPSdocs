@@ -135,9 +135,9 @@
 
 ### 影響
 
-較**低/較強的ISF**（即40而不是50）意味著每單位胰島素對你的**血糖**的下降程度較少。這導致循環更為積極/強效，使用了**更多胰島素**進行修正。如果你的**ISF**過強（小值），可能導致血糖過低。
+A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. 這導致循環更為積極/強效，使用了**更多胰島素**進行修正。如果你的**ISF**過強（小值），可能導致血糖過低。
 
-較**高/較弱的ISF**（即45而不是35）意味著每單位胰島素對你的血糖的降低程度較多。這將導致循環進行較不積極/較弱修正，使用**較少胰島素**。如果你的**ISF**過弱（大值），可能導致血糖過高。
+A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. 這將導致循環進行較不積極/較弱修正，使用**較少胰島素**。如果你的**ISF**過弱（大值），可能導致血糖過高。
 
 **範例：**
 * **血糖**為 190 mg/dL（10.5 mmol/L），目標值為 100 mg/dL（5.6 mmol/L）。
@@ -201,7 +201,7 @@
 > 
 > BU因子2.4 U / 12g   ===>   IC = 12g / 2.4 U = 5.0 g/U
 > 
-> 線上可找到轉換表，例如[此處](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf)。
+> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### 影響
 
@@ -300,7 +300,7 @@
 4. 切換至**設定檔 2**分頁。
 5. 按下 **設定檔類型** 並選擇「DPV 預設設定檔」。
 6. 輸入兒童年齡、TDD 總量及基礎胰島素百分比，以調整 DPV 預設設定檔（此設定檔是根據另一組醫院資料建立）。請注意，DPV 資料集只提供**基礎率**，因此此設定檔中的 IC 和 ISF 都會顯示為零。
-7. 開啟**比較**分頁。將顯示兩個調整後的設定檔的比較（請參見下方截圖）。
+7. Open the **Comparison** tab. 將顯示兩個調整後的設定檔的比較（請參見下方截圖）。
 8. 如果您想根據其中一項建議開始調整設定檔，請使用比較畫面底部的**複製**按鈕。
 
 ![設定檔助手兒童 2](../images/ProfileHelperKids2.png)
@@ -350,6 +350,6 @@
 4. 切換至**設定檔 2**分頁。
 5. 在**設定檔類型**中，選取「設定檔切換」，即可從所有**設定檔切換**的歷史紀錄中選擇。
 6. 選擇你希望比較的 **設定檔切換**。
-7. 開啟**比較**分頁。畫面會顯示兩個設定檔的比較結果（請參閱下方的螢幕截圖）。
+7. Open the **Comparison** tab. 畫面會顯示兩個設定檔的比較結果（請參閱下方的螢幕截圖）。
 
 ![設定檔助手 2](../images/ProfileHelper2.png)

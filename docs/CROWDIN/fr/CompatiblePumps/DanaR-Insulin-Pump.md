@@ -15,7 +15,7 @@
 ![Pompe DanaR](../images/danar1.png)
 
 * Allez dans Main Menu > Setting > Discovery
-* Dans les paramètres du téléphone, allez dans Bluetooth, recherchez les appareils à proximité, choisissez le numéro de série de votre DanaR et saisissez votre mot de passe (le mot de passe d'appairage est 0000). Si la DanaR n'apparaît pas dans la recherche, redémarrez le téléphone, retirez la pile de la DanaR, remettez-la et refaites ces deux étapes.
+* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). Si la DanaR n'apparaît pas dans la recherche, redémarrez le téléphone, retirez la pile de la DanaR, remettez-la et refaites ces deux étapes.
 
 * Dans **AAPS**, ouvrez le **menu** (☰) en haut à gauche, allez dans **Configuration** > **Pompe** et choisissez votre type de DanaR (**DanaR**, **DanaR Coréenne** ou **DanaRv2**).
   

@@ -38,6 +38,6 @@ If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSC
 
 * Если все еще приходят сообщения об ошибке...
 
-Проверьте размер вашей базы данных в MongoDB (или через плагин размера базы данных в NS). Если вы используете бесплатный платежный план в MongoDB, то 496MB означает, что база заполнена и ее следует очистить. [Следуйте этим инструкциям Nightscout для проверки размера вашей базы данных и удаления данных](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
+Проверьте размер вашей базы данных в MongoDB (или через плагин размера базы данных в NS). Если вы используете бесплатный платежный план в MongoDB, то 496MB означает, что база заполнена и ее следует очистить. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
 Перед очисткой данных из базы данных и подумайте о передаче своих данных AAPS в проект Open Humans (для исследований). Инструкции находятся на странице конфигурации [OpenHumans](../SupportingAaps/OpenHumans.md).

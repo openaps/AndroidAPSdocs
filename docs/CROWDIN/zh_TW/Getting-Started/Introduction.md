@@ -42,7 +42,7 @@
 
 **圖1**。 Android APS (人工胰臟系統，AAPS) 的基本架構。
 
-Android APS（**AAPS**）是一個混合閉環系統，或稱人工胰臟系統（APS）。它使用由 #WeAreNotWaiting 1 型糖尿病社群開發、經過驗證的 [OpenAPS](https://openaps.org/) 演算法（一套規則）來計算胰島素劑量。
+Android APS (**AAPS**) is a hybrid closed loop system, or Artificial Pancreas System (APS). 它使用由 #WeAreNotWaiting 1 型糖尿病社群開發、經過驗證的 [OpenAPS](https://openaps.org/) 演算法（一套規則）來計算胰島素劑量。
 
 由於 OpenAPS 僅相容於某些較舊型號的胰島素幫浦，因此 **AAPS**（可搭配更多種類的胰島素幫浦使用）於 2016 年首次開發，供一位患有 1 型糖尿病的家人使用。自那時以來，**AAPS**一直由一群志願電腦開發者和對1型糖尿病有關聯的愛好者持續發展和改進。如今，全球已有數千人使用 **AAPS**。這是一個高度可自訂且多功能的系統，因為它是開源的，也與許多其他開源糖尿病軟體和平台相容。目前**AAPS**系統的基本組成部分如上圖**圖1**所示。
 
@@ -54,7 +54,7 @@ AAPS 的“核心”是一個你自己建置的**應用程式**。這裡有詳�
 
 **安卓智慧型手機**也需要安裝另一個應用程式，以及 **AAPS**。這個[額外應用程式](../Getting-Started/CompatiblesCgms.md)會透過藍牙從感測器（**2**）接收血糖資料，再透過手機將資料傳送給 **AAPS 應用程式**。
 
-**AAPS 應用程式**使用來自 OpenAPS 的決策過程（**演算法**）。初學者開始使用基本的 **oref0** 演算法，但隨著你在AAPS上的目標進度，可以切換到使用較新的 **oref1** 演算法。你使用哪個演算法（oref0或oref1），取決於哪個最適合你的特定情況。在兩種情況下，演算法考慮多個因素，每次從傳感器傳入新讀取值時進行快速計算。接著，演算法會透過藍牙向胰島素幫浦（**3**）傳送指令，控制胰島素輸送量。所有資訊都可以透過行動資料或 Wi-Fi 傳送到網際網路（**4**）。如果需要，這些資料也可以與追蹤者分享，並且/或收集用於分析。你也可以選擇將[智慧型手錶](../Getting-Started/Watches.md)（**5**）與手機配對，快速查看資料；部分手錶也能用來向 **AAPS** 傳送基本指令。
+**AAPS 應用程式**使用來自 OpenAPS 的決策過程（**演算法**）。 Beginners start out using the basic **oref0** algorithm, but it is possible to switch to using the newer **oref1** algorithm as you progress with AAPS. 你使用哪個演算法（oref0或oref1），取決於哪個最適合你的特定情況。在兩種情況下，演算法考慮多個因素，每次從傳感器傳入新讀取值時進行快速計算。接著，演算法會透過藍牙向胰島素幫浦（**3**）傳送指令，控制胰島素輸送量。所有資訊都可以透過行動資料或 Wi-Fi 傳送到網際網路（**4**）。如果需要，這些資料也可以與追蹤者分享，並且/或收集用於分析。你也可以選擇將[智慧型手錶](../Getting-Started/Watches.md)（**5**）與手機配對，快速查看資料；部分手錶也能用來向 **AAPS** 傳送基本指令。
 
 ## AAPS系統的優勢是什麼？
 
@@ -98,13 +98,13 @@ AAPS 的“核心”是一個你自己建置的**應用程式**。這裡有詳�
 
  a）可以在用餐前 30 分鐘設定較低的**血糖**目標；目標最低可設為 72 mg/dL（4.0 mmol/L）。
 
- b) 如果你對胰島素有抗藥性，導致血糖偏高，**AAPS** 允許你設置一個 **自動化** 規則，當血糖升高至 8 mmol/L (144 mg/dL) 時啟動，切換到（例如）120% 的配置文件（與你正常 **設定檔** 相比，相當於基礎增加20%，並加強其他因素）。自動化將根據你設定的時間持續生效。此類自動化還可以設定為僅在特定星期幾、特定時間或甚至在特定位置啟動。
+ b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in a 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). 自動化將根據你設定的時間持續生效。此類自動化還可以設定為僅在特定星期幾、特定時間或甚至在特定位置啟動。
 
- c) 如果你的孩子突然在蹦床上玩耍，**AAPS** 允許你直接透過手機暫停胰島素輸送，並設定特定的時間段。
+ c) If your child is on a trampoline with no advance notice, **AAPS** allows insulin suspension for a set time period, directly via the phone.
 
- d) 當你因游泳而中斷幫浦再次重新連線時，**AAPS** 會根據目前血糖計算你在中斷連線期間缺少的基礎胰島素，並且小心地補充。不需要的胰島素可以透過“取消”缺少的基礎率來忽略。
+ d) After reconnecting a tubed pump which has been disconnected for swimming, **AAPS** will calculate the basal insulin you have missed while disconnected and deliver it carefully, according to your current BG. 不需要的胰島素可以透過“取消”缺少的基礎率來忽略。
 
- e) **AAPS** 提供設置不同情境下的不同設定檔的功能，並且能夠輕鬆切換。例如，可以更快速降低高血糖的功能（如超微量注射（**SMB**）、未預先宣布的餐前注射（**UAM**））設置為僅在白天啟用，以避免夜間低血糖的風險。
+ e) **AAPS** 提供設置不同情境下的不同設定檔的功能，並且能夠輕鬆切換。 For example, features which make the algorithm quicker to bring down elevated BG (like supermicro boluses (“**SMB**”) and unannounced meals (“**UAM**”)) can be set to only work during the daytime, if you are worried about night-time hypos.
 
 這些都是一些範例，完整的功能範圍提供了極大的靈活性來應對日常生活中的各種狀況，包括運動、疾病、荷爾蒙周期、_其他_等。最後，這些彈性功能該怎麼用，全看使用者自己決定，因為沒有一套通用的自動化規則適合每個人。
 
@@ -295,9 +295,9 @@ Ultimately it is up to the patient to weigh up these factors, along with any non
 3. DIY‘仿生胰臟’正在改變糖尿病護理——接下來會發生什麼？ [_Nature_ (2023), _620_, 940-941](https://doi.org/10.1038/d41586-023-02648-9)
 4. 處方未經批准的醫療設備？ DIY人工胰臟系統案例 [_國際醫療法_, (2021), _21_, 42-68](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
 5. [柏林健康研究所立場聲明，2022年](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
-6. DIY自動胰島素輸送：醫護人員使用者指南（加拿大糖尿病協會立場和指南）[_糖尿病加拿大的立場和指南_, (2023)_47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
+6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (Diabetes Canada position and guide) [_Canadian Journal of Diabetes_ (2023), _47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
 7.  荷蘭（EN/NL）- 致醫護人員 - [如何幫助使用開源自動胰島素輸送系統的人](https://www.diabetotech.com/blog/how-to-help-people-on-open-source-automated-insulin-delivery-systems)
-8. 首次使用開源自動胰島素傳遞 AndroidAPS 在全封閉循環情況下: Pancreas4ALL 隨機化試點研究 [_糖尿病科技. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
+8. First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALL Randomized Pilot Study [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
 9. 從傳感器輔助幫浦切換到AndroidAPS混合閉環的學齡前和學齡兒童的益處：回顧性分析 [_兒科. 糖尿病_ 2021, _22_, 594-604. 2021](https://onlinelibrary.wiley.com/doi/epdf/10.1111/pedi.13190)
 10. OPEN專案的成果，這是一項歐盟資助的研究，主要在探索患者使用新型DIY人工胰臟技術的證據（https://www.open-diabetes.eu/publications）
 
@@ -379,9 +379,9 @@ AAPS 可以由盲人使用。在Android設備上，操作系統有一個名為Ta
 
 2）按下Windows鍵並在搜索欄中輸入“控制面板”，然後按Enter鍵打開。打開：“所有控制面板項目”。
 
-按下字母C以進入“輕鬆存取中心”，然後按Enter鍵打開。
+Press the letter E to get to “Ease of Access Centre”, open with Enter.
 
-接著按Enter鍵打開“在無螢幕的情況下使用電腦”。
+然後按Enter鍵打開“在無顯示器的情況下使用電腦”。
 
 在底部，你會找到“啟用Java Access Bridge”選項框，選擇他。
 

@@ -59,11 +59,11 @@ The **Settings** file is used to customize the AAPS application to fit your spec
 
 * 每当您计划对配置进行重大更改时（更改SMB设置、更改胰岛素类型、更换泵、更改自动化设置），应在更改前后备份您的**偏好设置**。这样，您既拥有最新的设置，也拥有更改前的副本，以防需要恢复。
 
-* 仅适用于无管泵（Omnipod和Medtrum）用户：**偏好设置**文件包含当前药盒的连接详细信息，可用于在新手机上恢复与该pod的连接。如果您在开始使用当前pod后没有导出偏好设置的副本，那么在需要更换当前手机时，您将需要启动新pod。
+* Tubeless pumps (Such as Omnipod and Medtrum) users only: the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. 如果您在开始使用当前pod后没有导出偏好设置的副本，那么在需要更换当前手机时，您将需要启动新pod。
 
 **如何手动备份：**
 
-1. If this your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). 设置密码并记录在安全的地方。_没有此密码，您将无法访问您的**偏好设置**备份。 _
+1. If this is your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). 设置密码并记录在安全的地方。_没有此密码，您将无法访问您的**偏好设置**备份。 _
 
 2. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance**. Choose where to save the file with the **Local** and **Cloud** chips next to **Export settings** (see **Exporting or Importing Settings** below), then tap **Export settings**. **AAPS** shows where the file will go: the file name for **Local**, **Google Drive** for **Cloud**. Tap **OK**.
 
@@ -105,7 +105,7 @@ To export or import settings, open the **menu** (☰) and select **Maintenance**
 (ExportImportSettings-Automating-Settings-Export)=
 ### 自动化设置导出
 
-For doing automating settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
+To automate settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
 
 此后可通过[自动化](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)功能配置定期（_如_每周）或pod更换后的设置导出。
 
@@ -176,7 +176,7 @@ By default, an import leaves your pump settings alone: the pump selected in **Co
 
 12. **AAPS** asks **Apply imported settings?** and tells you how many settings will change and, if you left the box unticked, how many pump settings are kept. Nothing has been written yet, so **Cancel** leaves your phone exactly as it was. Tap **OK** to apply.
 
-    ![Apply imported settings? dialog](../images/Maintenance/import_settings_apply.png)
+    ![Apply imported settings dialog](../images/Maintenance/import_settings_apply.png)
 
 13. **AAPS** applies the imported settings straight away, without restarting. Only the plugins whose settings changed are restarted. While this runs, **AAPS** shows **Applying settings…**; if the pump is busy, it shows **Waiting for pump…** and applies the settings once the pump is idle. If the pump is still busy after one minute, **AAPS** offers to try again. A **Settings applied** message confirms that the imported settings are in use. Any treatment you had queued while the import ran is dropped and **AAPS** tells you that it was cancelled, so nothing is sent to the pump twice.
 

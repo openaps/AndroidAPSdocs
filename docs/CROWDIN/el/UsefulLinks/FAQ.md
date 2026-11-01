@@ -175,7 +175,7 @@
 
 Με το κύκλωμα θα πρέπει να δοκιμάσετε τα εξής βήματα:
 
-* Κάντε μια [αλλαγή προφίλ](#ProfileSwitch-change-percentage) < 100%: πατήστε το όνομα του προφίλ στην κύρια οθόνη, πατήστε το στρογγυλό κουμπί **▶** και μετά ορίστε **Ποσοστό** και **Διάρκεια**.
+* Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
 * Ορίστε έναν [προσωρινό στόχο άσκησης](#TempTargets-activity-temp-target) πάνω από τον συνηθισμένο σας στόχο. Με ποσοστό κάτω από 100 % και μια διάρκεια, η ίδια οθόνη **Ενεργοποίηση** προσφέρει έναν διακόπτη **Προσωρινός στόχος / Άσκηση** που ξεκινά και τα δύο μαζί.
 * Αν χρησιμοποιείτε SMB, βεβαιωθείτε ότι οι επιλογές [«Ενεργοποίηση SMB με υψηλό προσωρινό στόχο»](#Open-APS-features-enable-smb-with-high-temp-targets) και [«Ενεργοποίηση SMB πάντα»](#Open-APS-features-enable-smb-always) είναι απενεργοποιημένες.
 
@@ -194,7 +194,7 @@
 Το αλκοολούχο ποτό είναι επικίνδυνο σε λειτουργία κλειστού κυκλώματος, καθώς ο αλγόριθμος δεν μπορεί να προβλέψει σωστά το BG που επηρεάζεται από το αλκοόλ. Πρέπει να βρείτε τη δική σας μέθοδο αντιμετώπισης χρησιμοποιώντας τις παρακάτω λειτουργίες του AAPS:
 
 * Απενεργοποίηση λειτουργίας κλειστού κυκλώματος και θεραπεία του διαβήτη χειροκίνητα ή
-* θέτοντας υψηλούς προσωρινούς στόχους και απενεργοποιώντας το UAM, ώστε το κύκλωμα να μην αυξάνει το IOB λόγω ενός γεύματος που δεν έχει καταχωρηθεί ή
+* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
 * κάντε [αλλαγή προφίλ](#ProfileSwitch-change-percentage) σε αισθητά λιγότερο από 100% 
 
 Το πρότυπο [σεναρίου](#scenes) *Αλκοόλ* είναι ένα σημείο εκκίνησης που μπορείτε να προσαρμόσετε στη δική σας μέθοδο.
@@ -363,9 +363,9 @@
 
 #### Η συσκευή Link/αντλία/pod δεν αποκρίνεται (RL/OL/EmaLink…)
 
-Σε ορισμένα τηλέφωνα η σύνδεση Bluetooth με τις συσκευές Link (RL/OL/EmaL...) διακόπτεται.
+With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
 
-Σε κάποια άλλα οι συσκευές Link δεν αποκρίνονται (το AAPS λέει ότι είναι συνδεδεμένες, αλλά οι συσκευές Link δεν μπορούν να φτάσουν ή να δώσουν εντολές στην αντλία.)
+Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
 
 Δοκιμάστε πρώτα το κουμπί **Επαναφορά RileyLink** στην οθόνη της αντλίας (δείτε τη σελίδα της αντλίας σας: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). Αν αυτό δεν βοηθήσει, ο πιο εύκολος τρόπος για να λειτουργήσουν ξανά όλα αυτά μαζί είναι:
 
@@ -419,5 +419,5 @@
 
 Διαβάστε πρώτα αυτές τις ενότητες:
 
-* [Εξαγωγή και εισαγωγή ρυθμίσεων](#omnipod-dash-export-import) στη σελίδα του Omnipod DASH και [Αντλίες χωρίς σωληνάκι](#ExportImportSettings-tubeless-pumps): στο νέο τηλέφωνο, επιλέξτε **Αντικατάσταση και των ρυθμίσεων αντλίας** και χρησιμοποιήστε ένα αρχείο που εξήχθη κατά τη διάρκεια του Pod που φοράτε τώρα,
+* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
 * [Απόρριψη ενός pod](#omnipod-dash-discard-pod), για να αφαιρέσετε μετά το Pod από το παλιό τηλέφωνο. Κρατήστε το παλιό τηλέφωνο σε λειτουργία πτήσης μέχρι να απορριφθεί το Pod, ώστε τα δύο τηλέφωνα να μην επικοινωνούν ποτέ με το Pod την ίδια ώρα.

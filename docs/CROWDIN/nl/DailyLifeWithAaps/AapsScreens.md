@@ -131,7 +131,7 @@ Na elke keuze is een bevestiging nodig.
 
 Je moet uitzoeken waarom je dubbele BG-waarden krijgt:
 
-* Staat de Dexcom bridge aan op je Nightscout-site? Zet de bridge uit in het beheerpaneel van je Nightscout-installatie: pas de variabele "enable" aan en haal daar het deel "bridge" weg. (Voor heroku zijn [hier details te vinden](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* Staat de Dexcom bridge aan op je Nightscout-site? Zet de bridge uit in het beheerpaneel van je Nightscout-installatie: pas de variabele "enable" aan en haal daar het deel "bridge" weg. (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * Uploaden meerdere bronnen je BG naar Nightscout? Als je de BYODA-app gebruikt, zet de upload dan aan in **AAPS**, maar niet in xDrip (als je dat gebruikt).
 * Heb je volgers die je BG ontvangen, maar die ook weer naar je Nightscout-site uploaden?
 * Laatste redmiddel: kies in de [NSClient-instellingen](#Preferences-nsclient) de instellingen voor Synchronisatie en zet de optie "Ontvang CGM gegevens van NS" uit.
@@ -342,7 +342,7 @@ Als **PRED** aan staat, tekent AAPS de voorspellingen als **stippellijnen** rech
 
 Als twee voorspellingen dezelfde waarden geven, liggen hun stippen over elkaar en zie je maar één van de kleuren (bijvoorbeeld UAM over IOB als de BG vlak is).
 
-* **COB**-lijn (oranje): [koolhydraten aan boord](CobCalculation) (oranje wordt overal in AAPS gebruikt voor COB en koolhydraten)
+* **COB** line (orange): [carbs on board](CobCalculation.md) (orange is used throughout AAPS for COB and carbs)
     
     Deze voorspellingslijn toont waar je BG (niet de COB zelf!) naartoe gaat op basis van de huidige instellingen van het **Profiel**, als de afwijkingen door koolhydraatopname gelijk blijven. Deze lijn wordt alleen getoond als je COB hebt.
 
@@ -364,7 +364,7 @@ Als twee voorspellingen dezelfde waarden geven, liggen hun stippen over elkaar e
 
 * **aCOB**-lijn (licht, doorzichtig oranje): versnelde koolhydraatopname
     
-    Net als COB, maar uitgaande van een vaste koolhydraatopname van 10 mg/dl/5m (-0,555 mmol/l/5m). Verouderd en beperkt nuttig.
+    Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. Verouderd en beperkt nuttig.
     
     *Deze lijn verschijnt alleen als het oudere [AMA](#Config-Builder-aps)-algoritme wordt gebruikt.*
 
@@ -485,7 +485,7 @@ Deze lijn toont hoeveel de BG zou ‘moeten’ stijgen of dalen door alleen de i
 
 ![Afwijkingen en BGI](../images/main/graph_dev_bgi.png)
 
-Het is een goede combinatie om deze lijn samen met de afwijkingsbalken te tonen. Ze hebben dezelfde schaal, maar die is anders dan bij de andere optionele gegevens. Daarom is het een goed idee om ze in een aparte grafiek te tonen, zoals hierboven. De BGI-lijn vergelijken met de afwijkingsbalken is nog een manier om te begrijpen hoe de **BG** schommelt. Hier liggen op het moment dat met **1** is gemarkeerd de afwijkingsbalken ruim boven de BGI-lijn: de BG stijgt meer dan alleen de insulineactiviteit kan verklaren (bijvoorbeeld na koolhydraten). Op het moment dat met **2** is gemarkeerd liggen de afwijkingsbalken onder nul (rood): de BG is lager dan het algoritme verwachtte.
+Het is een goede combinatie om deze lijn samen met de afwijkingsbalken te tonen. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. De BGI-lijn vergelijken met de afwijkingsbalken is nog een manier om te begrijpen hoe de **BG** schommelt. Hier liggen op het moment dat met **1** is gemarkeerd de afwijkingsbalken ruim boven de BGI-lijn: de BG stijgt meer dan alleen de insulineactiviteit kan verklaren (bijvoorbeeld na koolhydraten). Op het moment dat met **2** is gemarkeerd liggen de afwijkingsbalken onder nul (rood): de BG is lager dan het algoritme verwachtte.
 
 ### Sectie F - QuickLaunch-werkbalk
 
@@ -507,13 +507,13 @@ Om een bepaalde hoeveelheid insuline te geven zonder de [bolus calculator](#aaps
 
 Als je **Start binnenkort eten TT** aanzet, kun je automatisch je [tijdelijk streefdoel voor binnenkort eten](#TempTargets-eating-soon-temp-target) starten.
 
-Als je geen bolus via de pomp wilt geven, maar een hoeveelheid insuline wilt registreren (bijv. insuline gegeven met een pen), zet dan "**Bolus wordt alleen geregistreerd**" aan. Met een extra rij **Tijd**, ingesteld op **Nu**, kun je een insuline-injectie uit het verleden registreren: gebruik **-** / **+** om de tijd te wijzigen, of tik op het pijltje om de minuten te typen of een datum en tijd te kiezen.
+If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only (not delivered by pump)**". Met een extra rij **Tijd**, ingesteld op **Nu**, kun je een insuline-injectie uit het verleden registreren: gebruik **-** / **+** om de tijd te wijzigen, of tik op het pijltje om de minuten te typen of een datum en tijd te kiezen.
 
 ![De rij Tijd, ingeklapt](../images/v4/Screens/insulin_dialog_record_only_time.png) ![De rij Tijd, geopend met het pijltje](../images/v4/Screens/insulin_dialog_time_open.png)
 
 Met de knoppen **+0,5 / +1,0 / +2,0** kun je de hoeveelheid insuline snel verhogen. De stapwaarden kun je wijzigen in de [instellingen van de Bolus wizard](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-Het dialoogvenster Insuline kun je ook gebruiken als de pomp onderbroken of ontkoppeld is, bijv. om insuline te registreren die met een pen is gespoten. In dat geval staat "**Bolus wordt alleen geregistreerd**" verplicht aan (rood getoond), en verschijnen er extra velden om het insulinetype en een **Tijd**-verschuiving te kiezen voor een injectie uit het verleden:
+Het dialoogvenster Insuline kun je ook gebruiken als de pomp onderbroken of ontkoppeld is, bijv. om insuline te registreren die met een pen is gespoten. In this case, "**Bolus will be recorded only (not delivered by pump)**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
 
 ![Dialoogvenster Insuline met ontkoppelde pomp](../images/main/insulin_dialog_pump_disconnected.png)
 
@@ -527,7 +527,7 @@ Bepaalde [vooraf ingestelde tijdelijke streefdoelen](#TempTargets-hypo-temp-targ
 
 **Koolhydraattijd**: wanneer ga je de koolhydraten eten, of wanneer heb je ze gegeten.
 
-**Tijdsduur**: te gebruiken voor ["vertraagde koolhydraten"](ExtendedCarbs). Deze rij is ingeklapt, zodat je er niet per ongeluk de grammen in typt: gebruik **-** / **+** om de waarde te wijzigen, of tik op het pijltje om de rij te openen en een waarde te typen.
+**Duration**: To be used for ["extended carbs"](ExtendedCarbs.md). Deze rij is ingeklapt, zodat je er niet per ongeluk de grammen in typt: gebruik **-** / **+** om de waarde te wijzigen, of tik op het pijltje om de rij te openen en een waarde te typen.
 
 Met de knoppen **+5 / +10 / +20** kun je de hoeveelheid koolhydraten snel verhogen.
 
@@ -632,7 +632,7 @@ De resultaatknop onderaan toont de voorgestelde bolus. Als je erop drukt, wordt 
 Goed om te weten:
 
 * Als de berekende bolus hoger is dan je **[Maximum bolus](#Preferences-maximum-bolus)**, wordt hij verlaagd tot de maximale bolus, en toont de bevestiging de waarschuwing "Bolusbeperking toegepast". Een [QuickWizard](../DailyLifeWithAaps/QuickWizards.md) wordt in dat geval geweigerd.
-* Als de bolus alleen wordt geregistreerd (bijvoorbeeld als de pomp ontkoppeld is), blijft de waarschuwing "**Bolus wordt alleen geregistreerd**" bovenaan het dialoogvenster staan, ook als je scrolt.
+* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only (not delivered by pump)**" warning stays at the top of the dialog, also when you scroll.
 * Een bolus die je zelf geeft, gaat voor op een [SMB](#Open-APS-features-super-micro-bolus-smb) die nog moet worden gegeven: de SMB vervalt en de loop rekent opnieuw. Als er op dat moment een SMB wordt gegeven, wordt je bolus geweigerd met de melding "Er wordt nu een SMB toegediend. Probeer het opnieuw wanneer die klaar is." Er wordt geen insuline gegeven, en koolhydraten die je met die bolus hebt ingevoerd worden niet opgeslagen: wacht even en voer ze opnieuw in.
 
 (AapsScreens-wrong-cob-detection)=

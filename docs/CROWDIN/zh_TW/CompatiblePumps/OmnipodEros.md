@@ -35,7 +35,7 @@
 
 - ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **胰島素輸送裝置**
 
-> 將從 Pod 通訊裝置接收到的指令進行解釋的組件，該指令來自於你的 AAPS 啟用手機。
+> Component that will interpret commands received from the Pod communication device originating from your AAPS enabled phone.
 > 
 > > - 新的 Omnipod pod（Eros 世代 - **不包括 DASH**）
 
@@ -47,7 +47,7 @@
 
 **安全第一** - 不要在無法從錯誤中恢復的環境中嘗試此過程（必備項包括額外的 pod、胰島素、已充電的 RileyLink 和手機設備）。
 
-**當 AAPS Omnipod 驅動程式啟用你的 pod 後，你的 Omnipod PDM 將無法再運作**。以往你使用 Omnipod PDM 向 Omnipod Eros pod 發送指令。 Omnipod Eros pod 只允許單一裝置向其發送通訊。從那時起，成功啟動 Pod 的裝置將是唯一能夠與其通訊的裝置。這意味著你透過 AAPS Omnipod 驅動程式和 RileyLink 啟用了 Omnipod Eros pod，**你將無法再使用你的 PDM 與 pod 通訊**。 AAPS Omnipod 驅動程式與 RileyLink 現在替代你的  PDM。*這並不意味著你應該丟掉你的 PDM，建議保留他作為備用並在 AAPS 運作不正常時使用。*
+**當 AAPS Omnipod 驅動程式啟用你的 pod 後，你的 Omnipod PDM 將無法再運作**。以往你使用 Omnipod PDM 向 Omnipod Eros pod 發送指令。 Omnipod Eros pod 只允許單一裝置向其發送通訊。從那時起，成功啟動 Pod 的裝置將是唯一能夠與其通訊的裝置。這意味著你透過 AAPS Omnipod 驅動程式和 RileyLink 啟用了 Omnipod Eros pod，**你將無法再使用你的 PDM 與 pod 通訊**。 AAPS Omnipod 驅動程式與 RileyLink 現在替代你的  PDM。 *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies when AAPS is not working correctly.*
 
 **一次只能有一台 RileyLink 與 Pod 通訊。****AAPS**會記住一台已配對的 RileyLink。如果您配對另一台裝置，先前配對的裝置就會被取代。
 
@@ -281,7 +281,7 @@
 
 以下步驟說明如何暫停及恢復胰島素輸注。
 
-*注意：如果您沒有看到**暫停**按鈕*，這是因為按鈕預設為隱藏。請在[Omnipod 設定](#OmnipodEros-omnipod-settings)的**其他**中，啟用**在 Omnipod 分頁中顯示「暫停輸注」按鈕**。
+*注意：如果您沒有看到**暫停**按鈕*，這是因為按鈕預設為隱藏。 Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### 暫停胰島素投放
 
@@ -591,7 +591,7 @@
   上方的螢幕截圖來自較早版本的 **AAPS**。在 **AAPS** 4 中，Omnipod 幫浦畫面上有一個名為 **設定時間** 的文字按鈕。
   ```
 
-- **暫停：**暫停目前啟用中藥量的胰島素輸送。只有在設定中啟用**在 Omnipod 分頁顯示暫停輸送按鈕**時才會顯示。
+- **暫停：**暫停目前啟用中藥量的胰島素輸送。 Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Pod 通訊裝置的設定。請在幫浦畫面上按下 **配對 RileyLink** 按
 
 提供進階設定以協助除錯。
 
-- **在 Omnipod 分頁顯示暫停輸注按鈕：**在 Omnipod 幫浦畫面上隱藏或顯示**暫停**按鈕。
+- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
 - **在 Pod 管理選單顯示脈衝記錄按鈕：**雖然仍列出此設定，但目前版本的幫浦畫面沒有**脈衝記錄**按鈕。
 
 - **在 Pod 管理選單顯示 RileyLink 統計資料按鈕：**在 Omnipod 幫浦畫面上隱藏或顯示**RileyLink 統計資料**按鈕。
@@ -896,7 +896,7 @@ Pod 會因多種問題偶爾發生故障，包括 Pod 本身的硬體問題。�
 
 此訊息警告幫浦已暫停。
 
-#### 設置基礎率失敗。注射可能已暫停！請在 Omnipod 分頁手動重新整理 Pod 狀態，並視需要恢復輸注。
+#### 設置基礎率失敗。注射可能已暫停！ Please manually refresh the Pod status on the pump screen and resume delivery if needed.
 
 此資訊提示表示 Pod 的基礎率設定失敗。開啟 Omnipod 幫浦畫面並按下 **重新整理**；如有需要，接著按下 **恢復輸注**。
 

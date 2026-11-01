@@ -402,5 +402,5 @@
 
 -  **Рівень 0:** Прочитайте відповідний розділ цієї документації, щоб зрозуміти, як має працювати функція, з якою у вас проблеми.
 -  **Рівень 1:** Якщо у вас і далі є проблеми, які не вдається вирішити за допомогою цього документа, перейдіть на канал *#Medtrum* у **Discord** за [цим запрошенням](https://discord.gg/4fQUWHZ4Mw).
--  **Рівень 2:** Пошукайте серед наявних звернень, чи про вашу проблему вже повідомлено: [Issues](https://github.com/nightscout/AAPS/issues) якщо так, підтвердьте її, прокоментуйте або додайте інформацію про свою проблему. Якщо ні, створіть [нове звернення](https://github.com/nightscout/AndroidAPS/issues) і додайте [ваші файли журналів](../GettingHelp/AccessingLogFiles.md).
+-  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues). If it exists, please confirm/comment/add information on your problem. Якщо ні, створіть [нове звернення](https://github.com/nightscout/AndroidAPS/issues) і додайте [ваші файли журналів](../GettingHelp/AccessingLogFiles.md).
 -  **Будьте терплячі: більшість учасників нашої спільноти — доброзичливі волонтери, і розв’язання проблем часто потребує часу й терпіння як від користувачів, так і від розробників.**

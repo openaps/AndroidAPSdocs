@@ -54,7 +54,7 @@ Statistiky času v úzkém cíli (TITR) 70–140 mg/dl nebo 3,9–7,8 mmol/l jso
 
 **Cíle proberte se svým diabetologem**
 
-Váš diabetes se může lišit. Všechny navržené cíle je třeba probrat s vaším diabetologem nebo lékařským týmem. Při správném použití mohou být statistiky AAPS účinným nástrojem pro sledování trendů __glykémie__ a vašeho pokroku.
+Váš diabetes se může lišit. Všechny navržené cíle je třeba probrat s vaším diabetologem nebo lékařským týmem. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress.
 
 ![Statistiky](../images/Maintenance/statistics3.png)
 
@@ -117,7 +117,7 @@ Na konci každého řádku malé ikony ukazují, odkud data pocházejí nebo kam
 ![Sacharidy a bolusy](../images/TreatmentsView1.png)
 
 Na této kartě můžete prohlížet záznamy bolusů a sacharidů. U každého bolusu (řádek **1**) je vedle množství inzulínu zobrazen zbývající IOB, který k němu patří. Původ bolusu může být:
-* Jídlo (zadané ručně tlačítky Inzulín, Rychlý bolus nebo Bolusová kalkulačka)
+* Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
 * SMB, když používáte funkci SMB
 
 Záznamy sacharidů (řádek **2**) jsou zobrazeny s množstvím v gramech.
@@ -147,9 +147,9 @@ Zde se zobrazují **dočasné bazály** nastavené smyčkou. Pokud má záznam s
 * Kladný IOB, pokud byl dočasný bazál vyšší než bazál nastavený v profilu
 * Záporný IOB u nulového dočasného bazálu (jako na řádku **1**) nebo pokud byl dočasný bazál nižší než bazál nastavený v profilu
 
-Smazání záznamů ovlivní jen vaše reporty v Nightscoutu a pravděpodobně zkreslí váš skutečný IOB – nedoporučuje se to.
+Deleting the entries only affects your reports in Nightscout and will probably distort your real IOB - it is not recommended.
 
-Červené S na levé straně řádku znamená „Pozastavení“ (Suspend): nastane, když se bazál právě nepodává. To je normální situace například při výměně podu.
+On the left of a line, a red S means “Suspend”: it happens when basal is not currently delivered. To je normální situace například při výměně podu.
 
 ### Dočasný cíl
 
@@ -178,7 +178,7 @@ Tato karta ukazuje všechny poznámky a záznamy péče zaznamenané v Nightscou
 
 ![Režim smyčky](../images/TreatmentsView6.png)
 
-Tato karta ukazuje historii změn [stavu smyčky](#AapsScreens-loop-status): otevřená, uzavřená, LGS, pozastavení, odpojení.
+This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
 
 ### Uživatelský záznam
 

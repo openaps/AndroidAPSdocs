@@ -76,7 +76,7 @@ El controlador ajusta automáticamente la hora de la bomba a la hora del teléfo
 
 Los cambios de zona horaria mantienen el historial intacto; solo la TDD (dosis diaria total) puede verse afectada. Cambiar la hora del teléfono a mano puede causar problemas con el historial y con la **IOB**. Si cambias la hora a mano, revisa bien la **IOB**.
 
-Cuando cambia la zona horaria o la hora, se detienen las **TBR** (basales temporales) en curso.
+When the time zone or time changes running **TBRs** are stopped.
 
 (time-adjustment-daylight-savings-time-dst)=
 
@@ -108,8 +108,8 @@ Si usas la calculadora de **AAPS** para el bolo, no uses los datos de **COB** e 
 
 ### Horario de verano (DST) con Omnipod Dash
 
-* Puedes dejar que **AAPS** use temporalmente la basal de fondo después del cambio de hora, como se explica arriba.
-* Si no quieres que **AAPS** use temporalmente la basal de fondo durante la noche, puedes cambiar la zona horaria el día antes del cambio de hora para evitar problemas por la noche. ATENCIÓN: ESTA OPCIÓN PUEDE HACER QUE TU POD CADUQUE ANTES DE TIEMPO. LLEVA MATERIAL DE RECAMBIO CONTIGO SI ELIGES LA OPCIÓN DE ABAJO.
+* Either allow **AAPS** to temporarily default to background basal after DST has taken place as explained above.
+* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day before DST is due to take place to avoid overnight disruption. ATENCIÓN: ESTA OPCIÓN PUEDE HACER QUE TU POD CADUQUE ANTES DE TIEMPO. LLEVA MATERIAL DE RECAMBIO CONTIGO SI ELIGES LA OPCIÓN DE ABAJO.
 
 #### Qué hacer antes del cambio de hora
 
@@ -129,6 +129,6 @@ Si usas la calculadora de **AAPS** para el bolo, no uses los datos de **COB** e 
 
 3. En **AAPS**, actualiza la bomba y cambia al **Perfil** que quieras.
 
-4. Revisa la **IOB** y los **COB** de **AAPS**. Si no son correctos, desactiva el **Lazo** durante al menos una DIA o el Max-Carb-Time, lo que sea más largo.
+4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA or the maximum carb absorption time (**Absorption max time**), whichever is longer.
 
 5. Qué hacer después del cambio de hora. Un buen momento para volver a la zona horaria local es cuando la **IOB** es baja. Por ejemplo, una hora antes de una comida como el desayuno. Lo ideal es que los **COB** y la **IOB** estén cerca de cero.

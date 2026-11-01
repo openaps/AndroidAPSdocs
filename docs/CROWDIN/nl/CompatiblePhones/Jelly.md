@@ -14,7 +14,7 @@
 
 **Nadelen**
 
-* Alleen aanbevolen voor ervaren loopers (sommige instellingen zijn niet goed te herkennen; je moet uit ervaring met een grote Android-telefoon met AAPS weten hoe en waar alles zit. Sommige AAPS-knoppen zijn met wat gevoel goed te raken, maar niet met dikke vingers.)
+* Recommended only for experienced loopers. Some settings are not easy to recognize: you have to know from experience with a big Android AAPS phone how and where things are located. Some AAPS buttons are small and hard to tap: you need a precise touch, not stubby fingers.
 * Kan alleen worden gebruikt als extra telefoon om mee te loopen. Het is beter om een andere smartphone bij je te hebben voor dagelijks telefoon/internetgebruik. 
 
 ### Batterijduur optimaliseren
@@ -43,6 +43,6 @@ Vergeet niet om Google Play Protect uit te schakelen.
 
 ### Remote Connection voor de Wear-apk
 
-Bij sommige smartwatches, zoals de Samsung Galaxy, moet 'Remote Connection' onder Advanced Features van de Samsung Galaxy **aan** staan om de Jelly, **Wear.apk** & **AAPS** op afstand via wifi te gebruiken.
+For certain smart watches, like the Samsung Galaxy, 'Remote connection' under Advanced features in the Galaxy Wearable app must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
 
 ![Galaxy Wearable, Geavanceerde functies, Verbinding op afstand aangezet](../images/wearos/galaxy_wearable_remote_connection.png)

@@ -7,7 +7,7 @@
 
 -   Стартиране на сензора
 
-- Изберете **Syai/Ottai** в [Конфигурация, Източник на КЗ](#Config-Builder-bg-source).
+- Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
 Включете излъчването (broadcast) в приложението Ottai:
 

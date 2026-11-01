@@ -29,7 +29,7 @@ Nightscout – це сервер звітів і моніторингу для *
 
 #### Не синхронізувати з Nightscout
 
-Якщо всі параметри «Отримувати ... з NS» вимкнені, AAPS не використовуватиме жодних змін з Nightscout:
+Keeping all the "Receive … from NS" options disabled makes sure no Nightscout change will be used by AAPS:
 
 ![Nightscout лише для вивантаження](../images/preferences/settings_nsclient_sync.png)
 

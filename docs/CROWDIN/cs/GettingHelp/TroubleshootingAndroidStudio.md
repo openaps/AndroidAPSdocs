@@ -49,7 +49,7 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * Musí se zobrazit zpráva s nainstalovanou verzí Gitu, jak vidíte na snímku obrazovky výše. V takovém případě přejděte na [Krok 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * Pokud se zobrazí zpráva
+  * In case you get a message saying
     ```
     Git: command not found
     ```
@@ -59,13 +59,13 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
 
-  * If Git is installed, you have restarted (if on windows), and Git still cannot be found:
+  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
 
   * Vyhledejte v počítači soubor „git.exe“.
 
     Poznamenejte si, ve kterém adresáři je uložený.
 
-  * Ve Windows otevřete Proměnné prostředí (Environment variables), vyberte proměnnou „PATH“ a klikněte na Upravit (edit). Přidejte adresář, ve kterém jste našli instalaci Gitu.
+  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Přidejte adresář, ve kterém jste našli instalaci Gitu.
 
   * Uložte a zavřete.
 
@@ -139,7 +139,7 @@ Nebo:
 Cause: error: invalid source release: 21
 ```
 
-Pokud se zobrazí výše uvedená chybová zpráva, musíte před novým pokusem o sestavení stáhnout správnou verzi JVM:
+If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
 
 1.  V [tabulce požadavků](#Building-APK-recommended-specification-of-computer-for-building-apk-file) zjistěte, jakou verzi JVM potřebujete pro verzi **AAPS**, kterou sestavujete, a poznamenejte si ji.
 
@@ -252,7 +252,7 @@ Vaše apk bylo úspěšně sestaveno a můžete ho přenést do telefonu!
 
 ## Apk je nainstalováno, ale ve staré verzi
 
-Pokud jste aplikaci úspěšně sestavili, přenesli do telefonu a úspěšně nainstalovali, ale číslo verze zůstává stejné, pravděpodobně jste zapomněli [aktualizovat svou místní kopii](#Update-to-new-version-update-your-local-copy)
+If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
 
 ## Nic z výše uvedeného nepomohlo
 

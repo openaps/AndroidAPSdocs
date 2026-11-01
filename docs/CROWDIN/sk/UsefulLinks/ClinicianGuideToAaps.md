@@ -22,7 +22,7 @@ Bez uzavretého okruhu človek s diabetom zbiera údaje z pumpy a CGM, rozhodne,
 
 Pri automatizovanom podávaní inzulínu systém robí to isté: zbiera údaje z pumpy, z CGM a z ďalších miest, kde sa zaznamenávajú informácie (napríklad z Nightscoutu), z týchto informácií vypočíta a rozhodne, o koľko viac alebo menej inzulínu je potrebné (nad alebo pod nastavenou bazálnou dávkou), a pomocou dočasných bazálnych dávok urobí potrebné úpravy, aby glykémiu udržal v cieľovom rozsahu alebo ju do neho postupne vrátil.
 
-Ak sa zariadenie s AAPS pokazí alebo sa dostane mimo dosah pumpy, po skončení posledného dočasného bazálu sa pumpa vráti do bežného režimu a podáva vopred naprogramované bazálne dávky.
+If the device running AAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basal rates running.
 
 ## Ako sa zbierajú údaje:
 
@@ -39,7 +39,7 @@ Z pumpy alebo z Nightscoutu tiež zbiera všetky informácie o bolusoch, zjeden�
 
 ## Ako systém vie, čo má urobiť?
 
-Softvér s otvoreným zdrojovým kódom je navrhnutý tak, aby zariadenie ľahko urobilo prácu, ktorú ľudia predtým robili sami (v manuálnom režime), keď počítali, ako upraviť podávanie inzulínu. Najprv zozbiera údaje zo všetkých podporných zariadení a z cloudu, pripraví údaje a spustí výpočty, predpovie, ako sa bude glykémia v nasledujúcich hodinách vyvíjať v rôznych situáciách, a vypočíta potrebné úpravy, aby glykémiu udržal v cieľovom rozsahu alebo ju do neho vrátil. Ďalej pošle pumpe všetky potrebné úpravy. Potom údaje znova načíta a celé to opakuje stále dookola.
+Softvér s otvoreným zdrojovým kódom je navrhnutý tak, aby zariadenie ľahko urobilo prácu, ktorú ľudia predtým robili sami (v manuálnom režime), keď počítali, ako upraviť podávanie inzulínu. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of what BG levels are expected to do during the next hours in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. Ďalej pošle pumpe všetky potrebné úpravy. Potom údaje znova načíta a celé to opakuje stále dookola.
 
 Keďže najdôležitejším vstupným údajom je glykémia z CGM, je dôležité mať kvalitné údaje z CGM.
 
@@ -71,7 +71,7 @@ V tomto príklade sa predpovedá, že glykémia v krátkom horizonte klesne níz
 
 ### Scenár 3 – je potrebné viac inzulínu
 
-V tomto príklade krátkodobá predpoveď ukazuje pokles pod cieľ. Nepredpovedá sa však pokles pod bezpečnostný prah. Konečná glykémia je nad cieľom. Preto sa AAPS zdrží pridania inzulínu, ktorý by prispel ku krátkodobej nízkej glykémii (teda inzulínu, po ktorom by predpoveď klesla pod prah). Potom zváži pridanie inzulínu, aby najnižšiu predpovedanú konečnú glykémiu znížil na cieľ, keď to bude bezpečné. *(Podľa nastavení a podľa množstva a načasovania potrebného inzulínu sa tento inzulín môže podať pomocou dočasných bazálov alebo SMB (super micro bolusov)).*
+V tomto príklade krátkodobá predpoveď ukazuje pokles pod cieľ. Nepredpovedá sa však pokles pod bezpečnostný prah. Konečná glykémia je nad cieľom. Therefore, AAPS will refrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). Potom zváži pridanie inzulínu, aby najnižšiu predpovedanú konečnú glykémiu znížil na cieľ, keď to bude bezpečné. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMBs (super micro boluses)).*
 
 ![Scenár dávkovania 3](../images/Dosing_scenario_3.jpg)
 
@@ -87,13 +87,13 @@ Ako lekár, ktorý možno nemá skúsenosti s AAPS ani s vlastnoručne zostaven�
 
 Pre pacientov je najdôležitejšie meniť vždy iba jednu vec naraz a 2–3 dni sledovať jej vplyv, než sa rozhodnú zmeniť alebo upraviť ďalšie nastavenie (okrem prípadu, keď je zmena zjavne zlá a situáciu zhoršuje – vtedy sa majú okamžite vrátiť k predchádzajúcemu nastaveniu). Ľudia majú sklon otočiť všetkými gombíkmi a zmeniť všetko naraz. Kto to však urobí, môže skončiť s ešte horšími nastaveniami a bude ťažké vrátiť sa k známemu dobrému stavu.
 
-Jedným z najsilnejších nástrojov na zmenu nastavení je nástroj na automatický výpočet bazálnych dávok, ISF a sacharidového pomeru. Nazýva sa to „[Autotune](#autotune-how-autotune-calculates-adjustments)“. Je navrhnutý tak, aby sa spúšťal samostatne/ručne a aby údaje viedli vás alebo vášho pacienta pri postupných malých zmenách nastavení. V komunite je osvedčené najprv spustiť (alebo si pozrieť) reporty z Autotune a až potom skúšať ručne meniť nastavenia. Autotune je súčasťou AAPS ako plugin (**Konfigurácia** → **Všeobecné** → **Autotune**), pozrite [Autotune](../AdvancedOptions/Autotune.md). Dá sa spustiť na požiadanie alebo automaticky. Keďže tieto parametre sú predpokladom pre podávanie inzulínu bežnou pumpou aj v uzavretom okruhu, diskusia o výsledkoch Autotune a úprava týchto parametrov sú prirodzeným bodom spolupráce s lekárom.
+Jedným z najsilnejších nástrojov na zmenu nastavení je nástroj na automatický výpočet bazálnych dávok, ISF a sacharidového pomeru. Nazýva sa to „[Autotune](#autotune-how-autotune-calculates-adjustments)“. It is designed to allow the data to guide you or your patient in making incremental changes to settings. V komunite je osvedčené najprv spustiť (alebo si pozrieť) reporty z Autotune a až potom skúšať ručne meniť nastavenia. Autotune je súčasťou AAPS ako plugin (**Konfigurácia** → **Všeobecné** → **Autotune**), pozrite [Autotune](../AdvancedOptions/Autotune.md). Dá sa spustiť na požiadanie alebo automaticky. Keďže tieto parametre sú predpokladom pre podávanie inzulínu bežnou pumpou aj v uzavretom okruhu, diskusia o výsledkoch Autotune a úprava týchto parametrov sú prirodzeným bodom spolupráce s lekárom.
 
 Okrem toho výsledky často ovplyvňuje aj ľudské správanie (naučené pri manuálnej liečbe diabetu), a to aj pri vlastnoručne zostavenom (DIY) uzavretom okruhu. Napríklad ak sa predpovedá pokles glykémie a AAPS pri poklese zníži inzulín, na zvýšenie glykémie zo 70 mg/dl (3,9 mmol/l) môže stačiť iba malé množstvo sacharidov (napr. 3–4 g). V mnohých prípadoch sa však človek môže rozhodnúť liečiť hypoglykémiu oveľa väčším množstvom sacharidov (napr. podľa „pravidla 15“), čo spôsobí rýchlejší vzostup glykémie, a to kvôli glukóze navyše aj preto, že inzulín bol v čase pred nízkou glykémiou znížený.
 
 ## OpenAPS
 
-**Táto príručka bola prevzatá z [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html) (príručka OpenAPS pre lekárov).** OpenAPS je systém vyvinutý tak, aby bežal na malom prenosnom počítači (ktorý sa zvyčajne nazýva „rig“). AAPS používa mnoho techník z OpenAPS a má s ním spoločnú veľkú časť logiky a algoritmov, preto je táto príručka veľmi podobná pôvodnej príručke. Mnohé informácie o OpenAPS sa dajú ľahko použiť aj pre AAPS. Hlavný rozdiel je v hardvéri, na ktorom jednotlivé časti softvéru bežia.
+**This guide was adapted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AAPS používa mnoho techník z OpenAPS a má s ním spoločnú veľkú časť logiky a algoritmov, preto je táto príručka veľmi podobná pôvodnej príručke. Mnohé informácie o OpenAPS sa dajú ľahko použiť aj pre AAPS. Hlavný rozdiel je v hardvéri, na ktorom jednotlivé časti softvéru bežia.
 
 ## Zhrnutie
 

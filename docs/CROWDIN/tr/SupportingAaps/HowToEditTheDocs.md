@@ -2,7 +2,7 @@
 
 **Bu açıklama yalnızca İngilizce belgeleri düzenlemek içindir. Tüm yeni bilgiler önce İngilizce olarak eklenmelidir. Diğer dillere çeviri yapmak istiyorsanız (teşekkür ederim), lütfen [crowdin](https://crowdin.com/project/androidapsdocs) kullanın.**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#code-syntax) section of this page.
+For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
 
 ## General
 
@@ -34,11 +34,11 @@ Or click the pencil icon that appears in the top bar of the page contents to be 
 
 3. Adım 2'deki seçeneklerden biri veya diğeri, düzenlemelerinizin kaydedileceği deponuzda yeni bir dal oluşturacaktır. Bu dosyada düzenlemelerinizi yapabilirsiniz.
 
-We are using markdown for the docs pages. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#code-syntax).
+We are using markdown for the docs pages. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
 
 ![Edit branch](../images/PR3.png)
 
-4. "<>Dosyayı düzenle" sekmesinde çalışıyorsunuz. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typos sic.). Gerekli bir iyileştirme görürseniz, daha fazla iyileştirme yapmak için düzenleme sekmesine geri dönün. 
+4. "<>Dosyayı düzenle" sekmesinde çalışıyorsunuz. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Gerekli bir iyileştirme görürseniz, daha fazla iyileştirme yapmak için düzenleme sekmesine geri dönün. 
 
 ![preview mode](../images/PR5.png)
 
@@ -54,7 +54,7 @@ We are using markdown for the docs pages. The files have the suffix ".md". The M
 
 ![PR tracking](../images/PR7.png)
 
-Not: Çatalınız (fork) ve şubeniz (branch) hala kendi kişisel GitHub hesabınızda kalıyor olacak. PR'nizin birleştiğine dair bir bildirim aldıktan sonra, işiniz bittiyse şubenizi silebilirsiniz (Adım 8'in bildirim alanı, kapatıldığında veya birleştiğinde şubeyi silmek için bir bağlantı sağlayacaktır). Gelecekteki düzenlemeler için, bu prosedürü izlerseniz, düzenlemeler her zaman AndroidAPSdocs depolarının güncellenmiş bir sürümüyle başlayacaktır. Bir PR isteği başlatmak için başka bir yöntem kullanmayı seçerseniz (örneğin, başlangıç noktası olarak çatallı deponuzun ana dalından başlayarak düzenleme), önce bir "karşılaştırma" gerçekleştirerek ve çatalınızı en son güncellemenizden bu yana gerçekleşen tüm güncellemeleri birleştirerek deponuzun güncel olduğundan emin olmanız gerekir. İnsanlar depolarını güncellemeyi unutmaya meyilli olduğundan, "karşılaştırma" yapmaya alışana kadar yukarıda özetlenen PR sürecini kullanmanızı öneririz.
+Not: Çatalınız (fork) ve şubeniz (branch) hala kendi kişisel GitHub hesabınızda kalıyor olacak. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Gelecekteki düzenlemeler için, bu prosedürü izlerseniz, düzenlemeler her zaman AndroidAPSdocs depolarının güncellenmiş bir sürümüyle başlayacaktır. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. İnsanlar depolarını güncellemeyi unutmaya meyilli olduğundan, "karşılaştırma" yapmaya alışana kadar yukarıda özetlenen PR sürecini kullanmanızı öneririz.
 
 (edit-the-docs-code-syntax)=
 
@@ -69,7 +69,7 @@ The writer only e.g. marks a headline as level 1 headline and the markdown proce
 The idea behind this is that
 
 - the writer should think about the text and not the formatting first,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Windows and
+- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
 - you can generate several output formats from one markdown file.
 
 Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard, to
@@ -219,7 +219,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
     This is a warning.
     
 
-    ```{admonition} Warning headline 
+    ```{admonition} Warning headline
     :class: warning
     This is a warning.
     ```
@@ -244,7 +244,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 ## Tables
 
-Avoid using tables with long texts as the contents is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
 
 ## Style Guide
 
@@ -262,9 +262,9 @@ Avoid using tables with long texts as the contents is difficult to set in Markdo
 
 Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?"*
+Instead of: *“What causes high postprandial BG peaks in closed loop?”*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
+Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
 
 ##### Use plain words that everyone can understand
 
@@ -296,7 +296,7 @@ Particularly if you record video or screenshots, make sure not to disclose your 
 
 Commands are the fastest way to give instructions, but writers sometimes fear giving commands, writing “you should do this” instead of just “do this”. Perhaps people worry that commands sound too harsh. You can often solve this by putting the word 'please' in front. However, if something must be done, it is best not to say ‘please’ as it gives the reader the option to refuse.
 
-Instead of: *“You should just think of it as a complete statement."*
+Instead of: *“You should just think of it as a complete statement.”*
 
 Use: *“Think of it as a complete statement.”*
 
@@ -310,7 +310,7 @@ Example of an **active verb**:
 
 Example of a **passive verb**:
 
-- *“The insulin (subject) is delivered (verb) by the pump (object)”*
+- *“The insulin (subject) is delivered (verb) by the pump (object).”*
 
 *“delivered”* is a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
 
@@ -453,7 +453,7 @@ A how-to guide’s purpose is to help the already-competent user perform a parti
 
 - HOW-to
 
-- narrator directly talks to the reader: In this tutorial **you** will
+- narrator directly talks to the reader: In this guide **you** will
 
 - Future Tense -> to show the final target
 

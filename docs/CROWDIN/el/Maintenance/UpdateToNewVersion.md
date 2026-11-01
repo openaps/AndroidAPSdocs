@@ -36,8 +36,8 @@ These steps are the same for every build method. Ελέγξτε στις [Σημ
 
 Αφού εγκαταστήσετε το νέο apk:
 
-- μπορείτε να ελέγξετε την έκδοση του **AAPS** στο τηλέφωνό σας: ανοίξτε το **μενού** (☰) πάνω αριστερά και μετά **Σχετικά** (όπως στην παρακάτω εικόνα). Μπορείτε να δείτε την τρέχουσα έκδοση του **AAPS**·
-- βεβαιωθείτε ότι έχει γίνει η εισαγωγή των ρυθμίσεων· και
-- ελέγξτε τις ρυθμίσεις του **AAPS** στις **Ρυθμίσεις** και βεβαιωθείτε ότι είναι ακόμα σωστές.
+- you can check the **AAPS** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). The current **AAPS** version can be viewed;
+- make sure you have imported your settings; and
+- please check your **AAPS** settings under **Settings** and ensure these remain accurate.
 
 ![Παράθυρο «Σχετικά» με την εγκατεστημένη έκδοση του AAPS](../images/about_dialog_version.png)

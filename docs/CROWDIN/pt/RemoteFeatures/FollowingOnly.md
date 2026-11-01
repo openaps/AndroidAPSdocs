@@ -114,7 +114,7 @@ Se a fonte de dados do **AAPS** não for o xDrip, mas puder mostrar os dados da 
 
 ![imagem](../images/remote_control_and_following/xdrip4ios.jpg)
 
-O xDripSwift foi criado ao adaptar a app original xDrip para iOS e evoluiu para "xDrip for iOS", escrito **xDrip4iOS** .
+xDripSwift was created from porting the original xDrip app to iOS and evolved into "xDrip for iOS", written as **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
@@ -150,7 +150,7 @@ O [Sugarmate](https://sugarmate.io/) pode ser descarregado para iPhones a partir
 * Apple iPad (precisa da versão de software 13.0 ou superior)
 * Google Android (guarde a app web no ecrã inicial)
 
-Utilizadores do Sugarmate dizem que pode ser usado com o Apple CarPlay nos EUA para mostrar as leituras da glicose durante a condução. Ainda não se sabe se isto é possível noutros países fora dos EUA. Se souber mais sobre isto, adicione os detalhes aqui na documentação com um pull request (link), o que é rápido e fácil.
+Utilizadores do Sugarmate dizem que pode ser usado com o Apple CarPlay nos EUA para mostrar as leituras da glicose durante a condução. Ainda não se sabe se isto é possível noutros países fora dos EUA. If you know more about this, please add details in here to the documentation by completing a [pull request](../SupportingAaps/HowToEditTheDocs.md), which is quick and easy to do.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
@@ -173,13 +173,13 @@ Veja [aqui](../Getting-Started/Watches.md).
 :local: true
 ```
 
-### M5 stack
+### M5Stack
 
 ![imagem](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
 
 O M5Stack é uma pequena caixa que pode ser programada para muitas aplicações. O projeto do Martin, [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki), mostra os valores e as tendências da glicose do sensor, a IA e os HCA. Está numa caixa de plástico, com ecrã a cores, ranhura para cartão micro SD, 3 botões, altifalante e bateria interna. É um ótimo monitor da glicose e é relativamente fácil de configurar se tiver uma conta Nightscout. Normalmente, os utilizadores usam-no na rede Wi-Fi de casa, mas alguns dizem que o usam como ecrã quando andam de mota, ligado a um hotspot Wi-Fi do telefone.
 
-### Sugarpixel
+### SugarPixel
 
 O SugarPixel é um dispositivo secundário de visualização e alerta da glicose para a monitorização contínua da glicose. Liga-se à app da Dexcom ou à app do Nightscout no smartphone do utilizador. O dispositivo mostra as leituras da glicose em tempo real. Este monitor de CGM tem alertas sonoros com tons aleatórios (que são muito altos), alertas por vibração para pessoas com problemas de audição, opções de ecrã personalizáveis e seguimento nativo por vários utilizadores.
 

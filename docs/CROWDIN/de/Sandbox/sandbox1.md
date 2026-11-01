@@ -54,7 +54,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Label im [Nichts](#sandbox1-in-the-middle-of-nowhere) Dies ist stattdessen die Bezeichnung für [](#sandbox1-this-is-another-test) und sollte den Namen anzeigen
 
-Links mit Anker:
+Links with anchor:
 - [wie lange wird das dauern?](#preparing-how-long-will-it-take)
 - [NSClient settings in Preferences](#Preferences-nsclient).
 - [prediction lines in AAPS OVERVIEW](#aaps-screens-prediction-lines) to header level 4

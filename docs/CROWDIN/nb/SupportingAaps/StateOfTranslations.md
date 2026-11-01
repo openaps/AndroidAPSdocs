@@ -3,7 +3,7 @@
 Statusen oppdateres én gang i timen og viser bare statusen i Crowdin.
 
 ```{tip}
-Vær oppmerksom på at prosenten for korrekturlesing må være lavere enn prosenten for oversettelse, men Crowdin har valgt å vise den oppå oversettelsene.
+Vær oppmerksom på at prosenten for korrekturlesing alltid er lavere enn eller lik prosenten for oversettelse, men Crowdin viser den oppå oversettelsene.
 Det er best å bare se på prosenten for oversettelse for å se om det er arbeid å gjøre.
 ```
 

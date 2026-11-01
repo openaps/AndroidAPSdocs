@@ -12,13 +12,13 @@ Když uživatel zadá sacharidy jako součást jídla nebo jako korekční sacha
 
 Vliv na **profil** uživatele:
 
-- _zvýšení_ **IC** – zvýší množství sacharidů vstřebaných každých 5 minut, a tím zkrátí celkovou dobu vstřebávání;
+- _increase_ **IC** - by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
 
 - _zvýšení_ **ISF** – sníží množství sacharidů vstřebaných každých 5 minut, a tím prodlouží celkovou dobu vstřebávání; a
 
-- _změna_ **procenta profilu** – zvýší/sníží obě hodnoty, a proto nemá na dobu vstřebávání sacharidů žádný vliv.
+- _change_ **Profile Percentage** - increase/decrease both values thus has no impact on carbs absorption time.
 
-Pokud má například uživatel v **profilu** **ISF** 100 a **I:C** 5, jeho faktor citlivosti na sacharidy bude 20. Za každých 20 mg/dl, o které **glykémie** uživatele stoupne, **AAPS** započítá 1 g sacharidů jako vstřebaný. Výpočet **COB** ovlivňuje také kladný **IOB**. Pokud tedy **AAPS** předpovídá, že **glykémie** uživatele kvůli **IOB** klesne o 20 mg/dl, a místo toho zůstane stabilní, **AAPS** také započítá 1 g sacharidů jako vstřebaný.
+For example, if the user’s **Profile** **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. Za každých 20 mg/dl, o které **glykémie** uživatele stoupne, **AAPS** započítá 1 g sacharidů jako vstřebaný. Výpočet **COB** ovlivňuje také kladný **IOB**. Pokud tedy **AAPS** předpovídá, že **glykémie** uživatele kvůli **IOB** klesne o 20 mg/dl, a místo toho zůstane stabilní, **AAPS** také započítá 1 g sacharidů jako vstřebaný.
 
 Sacharidy se budou vstřebávat také způsoby popsanými níže, podle toho, jaký algoritmus citlivosti si uživatel v **AAPS** vybral.
 
@@ -47,7 +47,7 @@ Pokud se místo hodnoty vypočtené z odchylek **glykémie** použije minimáln�
 (CobCalculation-detection-of-wrong-cob-values)=
 ## Zjišťování nesprávných hodnot COB
 
-Pokud algoritmus vyhodnotí aktuální výpočet **COB** jako nesprávný, **AAPS** uživatele upozorní, když se chystá podat bolus s **COB** z předchozího jídla. V takovém případě uživateli po použití bolusové kalkulačky zobrazí na potvrzovací obrazovce další nápovědu.
+**AAPS** will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. V takovém případě uživateli po použití bolusové kalkulačky zobrazí na potvrzovací obrazovce další nápovědu.
 
 ### Jak AAPS zjišťuje nesprávné hodnoty COB?
 
@@ -62,7 +62,7 @@ Na snímku obrazovky výše se 66 % času počítalo vstřebávání sacharidů 
 - Zvažte zrušení ošetření – stiskněte „Zrušit“ místo OK.
 - Spočítejte nadcházející jídlo znovu v bolusové kalkulačce a nechte **COB** nezaškrtnuté.
 - Pokud potřebujete korekční bolus, zadejte ho ručně.
-- Dávejte pozor, abyste nepodali příliš mnoho inzulínu a aby se inzulín nehromadil (insulin stacking)!
+- Be careful not to overdose or stack insulin!
 
 
 ### Proč algoritmus nedetekuje COB správně?

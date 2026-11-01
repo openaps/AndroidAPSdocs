@@ -2,7 +2,7 @@
 
 ## 捐獻你的資料以促進科學研究
 
-你可以透過捐贈你的資料來協助研究項目，幫助社群！這有助於科學家回饋社會，發展新的科學想法，並拓寬開放源代碼封閉環系統的開放思維。 AAPS 已準備好與 [Open Humans](https://www.openhumans.org) 平台同步資料，該平台允許你上傳、連線和存儲你的個人資料，例如基因、活動和健康資料。
+你可以透過捐贈你的資料來協助研究項目，幫助社群！ This helps scientists to pay it forward, develop new scientific ideas and make open source closed loop systems better known. AAPS 已準備好與 [Open Humans](https://www.openhumans.org) 平台同步資料，該平台允許你上傳、連線和存儲你的個人資料，例如基因、活動和健康資料。
 
 你完全掌控你的資料，並可選擇你希望支援的研究項目，決定授予他們查看資料的權限。根據你加入的項目，資料將以不同的方式和範圍被他們評估和使用。
 
@@ -76,7 +76,7 @@
 
 「OPEN」項目匯集了來自國際間各領域的患者創新者、臨床醫生、社會科學家、計算機科學家和患者倡導組織，以研究越來越多糖尿病患者使用的 DIY 人工胰臟系統（DIY APS）的各個方面。更多詳情請參閱他們的[網站](https://www.open-diabetes.eu/)。
 
-2020 年 9 月，「OPEN」項目啟動了一項[調查](https://survey.open-diabetes.eu/)，包括捐贈你上傳至 Open Humans 的資料選項。一個[教程](https://open-diabetes.eu/en/open-survey/survey-tutorials/)，介紹如何將你的資料捐贈給「OPEN」項目，該教程可在其網站及調查中找到。
+In September 2020 the 'OPEN' project launched a [survey](https://survey.open-diabetes.eu/) including the option to donate data you uploaded to Open Humans. 一個[教程](https://open-diabetes.eu/en/open-survey/survey-tutorials/)，介紹如何將你的資料捐贈給「OPEN」項目，該教程可在其網站及調查中找到。
 
 ### [OpenAPS 資料公用](https://www.openhumans.org/activity/openaps-data-commons/)
 

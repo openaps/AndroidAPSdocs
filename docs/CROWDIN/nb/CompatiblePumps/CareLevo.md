@@ -134,7 +134,7 @@ Insulinleveringen har stoppet. Gjør noe nå:
 * **Lite insulin**: mindre enn 10 E igjen. Deaktiver patchen og bytt den.
 * **Patch utløpt**: patchen har nådd slutten av levetiden sin. Deaktiver patchen og bytt den.
 * **Lavt batteri**: forkast patchen og bytt den.
-* **For høy/lav temperatur**: flytt deg til et sted med egnet temperatur, mellom 5 ℃ og 37 ℃ (40 ℉ og 99 ℉).
+* **For høy/lav temperatur**: flytt deg til et sted med egnet temperatur, mellom 4.4 ℃ og 37.2 ℃ (40 ℉ og 99 ℉).
 * **Automatisk avslåing**: patchen stoppet fordi varselet om automatisk avslåing ble ignorert. Trykk på **Start insulin** for å starte basalleveringen igjen.
 * **Tidsavbrudd for patchpåføring**, **Selvtest mislyktes**, **Patchfeil**, **Okklusjon** og **Feil ved nåleinnsetting**: deaktiver patchen og bytt den.
 
@@ -145,7 +145,7 @@ Insulinleveringen fortsetter, men noe trenger oppmerksomheten din:
 * **Lite insulin**: reservoaret har nådd mengden som er satt i **Varsel-innstilling for lavt insulin**. Gjør deg klar til å bytte patchen.
 * **Patch utløper snart** og **Patch sin brukstid er utløpt**: bytt patchen.
 * **Lavt batteri**: gjør deg klar til å bytte patchen.
-* **For høy/lav temperatur**: leveringen er pauset til patchen igjen er mellom 5 ℃ og 37 ℃ (40 ℉ og 99 ℉).
+* **For høy/lav temperatur**: leveringen er pauset til patchen igjen er mellom 40 ℉ og 99 ℉ (4,4 ℃ og 37,2 ℃).
 * **Automatisk avslåing**: trykk på **OK**. Hvis varselet ignoreres, eskalerer det til en kritisk alarm, og leveringen stopper.
 * **Patchaktivering ikke fullført**: trykk på **OK** for å fullføre aktiveringen.
 * **Start insulin**: pausen du satte, er over. Trykk på **Start insulin** for å gjenoppta leveringen.

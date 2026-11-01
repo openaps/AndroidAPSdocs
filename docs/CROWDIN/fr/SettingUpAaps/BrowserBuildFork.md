@@ -6,7 +6,7 @@
 Ceci est l'**Étape 1** de la [Compilation dans le navigateur](BrowserBuild.md).
 ```
 
-Vous devrez enregistrer en secret dans GitHub votre clé Java Android personnelle et les informations de votre Google Drive (nous expliquerons comment plus loin).
+You will need to store your personal Android Java Key and Google Drive information as secrets in GitHub (later in the process, we will explain how).
 
 Comme cela n'est pas possible dans le dépôt public d'AndroidAPS, vous devez créer votre copie personnelle du code source (appelée un fork).
 
@@ -29,16 +29,16 @@ Faites défiler l'écran suivant vers le bas et appuyez sur **Create Fork**.
 
 ![fork_aaps_confirm](../images/Building-the-App/CI/ForkAAPS2.png)
 
-*Remarque : vous pouvez **décocher** « Copy the master branch only » (copier uniquement la branche master) si vous voulez compiler des versions de développement ou des versions personnalisées.*
+*Note: you can **unselect** "Copy the master branch only" if you will want to build developer versions or customizations.*
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
 ```{note}
-Vous ne pouvez pas créer de fork et vous voyez ceci ?</br></br>
-**`No available destinations to fork this repository.`**</br></br>
-![Déjà forké](../images/Building-the-App/CI/ForkAAPS3b.png)</br></br>
-Cela signifie que vous avez déjà un fork d'AndroidAPS.</br>
-Vérifiez qu'il est à jour et passez aux étapes de préparation.
+You cannot fork and you see this?<br/><br/>
+**`No available destinations to fork this repository.`**<br/><br/>
+![Already forked](../images/Building-the-App/CI/ForkAAPS3b.png)<br/><br/>
+This means you already have an existing fork of AndroidAPS.<br/>
+Make sure it's up to date and continue to Preparation Steps.
 ```
 
 ```{warning}

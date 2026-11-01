@@ -95,6 +95,6 @@ Hvis noe går galt, ikke få panikk.
 
 Pust rolig!
 
-Se så den egne siden om [Feilsøking av Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) hvis problemet ditt allerede er beskrevet der!
+Sjekk så om problemet ditt allerede er beskrevet på den egne siden [Feilsøking av Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 Hvis du trenger mer hjelp, ta kontakt med andre **AAPS**-brukere på [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) eller [Discord](https://discord.gg/4fQUWHZ4Mw).

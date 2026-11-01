@@ -91,7 +91,7 @@ Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQq
 
 ```{admonition} Wear OS 5
 :class: warning
-On Wear OS 5 the AAPS watchface has to be selected with Wear Installer 2 right after installing the Wear app: the installer offers the **AAPS (Custom)** watchface at the end of the installation. If you accidentally switch to another watchface, repeat the installation. Changing the watchface settings (Dark, Watchdivider, etc.) may not be possible.
+On Wear OS 5 the AAPS watchface has to be selected with Wear Installer 2 right after installing the Wear app: the installer offers the **AAPS (Custom)** watchface at the end of the installation. If you accidentally switch to another watchface, repeat the installation. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
 
 If the classic watchface currently works for you, **disable automatic watch updates**: the next firmware update is likely to break it. If you update to Wear OS 6 anyway, read the section above: **AAPS** then installs its own watchface in the new format.
 ```
@@ -114,13 +114,13 @@ Hier sind die Anleitungen zur Einrichtung der [Galaxy Watch 5](https://www.youtu
 
 ## Mit der Smartwatch vertraut machen
 
-Nach den im Video gezeigten Grundeinstellungen Deiner Smartwatch, gehe in den Play Store Deines Smartphones und lade "Galaxy Wearable", “Samsung” und entweder “Easy Fire Tools” oder "Wear Installer 2" herunter.
+After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
 
 Es gibt eine Reihe von YouTube-Videos von Drittanbietern, die Dir helfen werden, Dich mit Deiner neuen Smartwatch vertraut zu machen, zum Beispiel:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-Die App „Galaxy Wearable“ enthält auch ein Benutzerhandbuch. Öffne die Galaxy Wearable App auf Deinem Smartphone, suche unter dem Punkt "Neues Gerät hinzufügen" nach Deiner Smartwatch und versuche diese mir dem Smartphone zu koppeln. In Abhängigkeit von der Version, kann es sein, dass Du dazu aufgefordert wirst eine weitere Drittanbieter App "Galaxy Watch 4 Plugin" aus dem Play Store zu installieren. Der Download ein wenig. Installiere diese auf Deinem Smartphone und versuche danach die beiden Geräte in der Galaxy Wearable App zu koppeln. Gehe durch die verschiedenen Menüs und wähle Deine persönlichen Voreinstellungen aus.
+Die App „Galaxy Wearable“ enthält auch ein Benutzerhandbuch. Öffne die Galaxy Wearable App auf Deinem Smartphone, suche unter dem Punkt "Neues Gerät hinzufügen" nach Deiner Smartwatch und versuche diese mir dem Smartphone zu koppeln. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Installiere diese auf Deinem Smartphone und versuche danach die beiden Geräte in der Galaxy Wearable App zu koppeln. Gehe durch die verschiedenen Menüs und wähle Deine persönlichen Voreinstellungen aus.
 
 ## Samsung-Konto einrichten
 
@@ -260,7 +260,7 @@ Der letzte Schritt ist es, **AAPS** auf dem Smartphone so einzurichten, so dass 
 
 To bolus or take other actions from the watch, also turn on **Wear control** in [Settings > Wear](#preferences-wear).
 
-Um zu einem anderen **AAPS**-Zifferblatt zu wechseln, drücke lange auf den Startbildschirm der Smartwatch und es wird die Option Anpassen“ erscheinen. Wische dann nach rechts, bis Du die **AAPS**-Zifferblätter erreicht hast.
+To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Wische dann nach rechts, bis Du die **AAPS**-Zifferblätter erreicht hast.
 
 Wenn das Sideloading der **AAPS** Wear.apk auf die Smartwatch erfolgreich war, sieht es ungefähr so aus:
 
@@ -334,7 +334,7 @@ F - Batteriestatus des Smartphones
 
 G - Basalrate (Anzeige in IE/Std. bei Standard-BR und in % während einer TBR)
 
-H - BGI (blood glucose interaction; dt. Blutzuckerwirkung) -> erwartete Glukosewert-Änderung nur auf Basis des aktiven Insulins.
+H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
 I - Kohlenhydrate (carbs on board | e-carbs in der Zukunft)
 

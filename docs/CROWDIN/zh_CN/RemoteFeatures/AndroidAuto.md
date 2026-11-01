@@ -4,7 +4,7 @@
 
 ## 要求
 
-**AAPS**使用Android Auto的一项功能，该功能允许将手机上的应用程序消息路由到Auto Audio的汽车显示屏上。
+**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
 
 这意味着：
 
@@ -37,7 +37,7 @@ Please check now that you see the **AAPS** status notification on the phone befo
 
 由于**AAPS**不是Android Auto的官方应用程序，因此必须在Android Auto中为“未知来源”激活通知。我们将通过开发者模式向您展示如何操作。
 
-上车并将手机与汽车音响系统连接。
+Go to your car and connect your mobile with the car's audio system.
 
 您现在应该会看到一个与此屏幕类似的屏幕。
 

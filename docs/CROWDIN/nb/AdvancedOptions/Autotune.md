@@ -78,7 +78,7 @@ Trykk på **Åpne plugin** på **Autotune**-kortet for å åpne Autotune-skjerme
 
 - Hvis du stoler på resultatene (lav prosentvis endring mellom inngangsprofilen og resultatprofilen), kan du trykke på knappen «Aktiver profil» og deretter på OK for å bekrefte.
 
-  - Aktiver profil (den justerte profilen) oppretter automatisk en ny profil «Justert» i profillisten din (**Administrer → Profil**).
+  - «Aktiver profil» oppretter automatisk en ny profil «Justert» i profillisten din (**Administrer → Profil**).
   - Hvis du allerede har en profil med navnet «Justert» i **Administrer → Profil**, oppdateres denne profilen med den beregnede Autotune-profilen før aktiveringen
 
   ![Autotune Aktiver profil](../images/Autotune/Autotune_6.png)
@@ -188,7 +188,7 @@ Merk: Du finner mer informasjon om hvordan du setter opp en automasjonsregel [he
 
   ![Standardskjermen i Autotune](../images/Autotune/Autotune_17.png)
 
-- Deretter kan du velge handlingen **Autotune-profil** (i gruppen **Loop & insulin**)
+- Deretter kan du velge handlingen **Kjør Autotune** (i gruppen **Loop & insulin**)
 
   ![Standardskjermen i Autotune](../images/Autotune/Autotune_18.png)
 

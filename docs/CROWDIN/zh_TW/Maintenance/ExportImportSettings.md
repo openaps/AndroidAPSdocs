@@ -59,11 +59,11 @@ Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and
 
 * 每當你計畫對你的設定進行重大更改（更改 SMB 設定、更改胰島素類型、更改幫浦、對自動化進行更改）時，應在進行更改之前和之後備份你的**設定**。這樣你就可以保留最新的設定副本以及變更前的設定副本，萬一需要回滾時可以使用。
 
-* 無幫浦用戶（如 Omnipod 和 Medtrum）僅適用：**設定**檔案包含你當前 pod 的連線細節，可用於使用新手機恢復與該 pod 的連線。如果你在開始使用目前幫浦後未匯出偏好設定的副本，當需要更換手機時，將需要重新啟動一個新的幫浦。
+* Tubeless pumps (Such as Omnipod and Medtrum) users only: the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. 如果你在開始使用目前幫浦後未匯出偏好設定的副本，當需要更換手機時，將需要重新啟動一個新的幫浦。
 
 **如何手動備份：**
 
-1. 如果這是您第一次匯入或匯出**設定**，您需要先在[設定 > 防護](#Preferences-master-password)中設定主密碼。設置密碼並將其紀錄在安全的地方。_若沒有此密碼，你將無法訪問你的**設定**備份。_
+1. If this is your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). 設置密碼並將其紀錄在安全的地方。_若沒有此密碼，你將無法訪問你的**設定**備份。_
 
 2. 在 **AAPS** 主畫面開啟**選單**（☰） > **維護**。在**匯出設定**旁點選**本機**和**雲端**選項，以選擇檔案的儲存位置（請參閱下方的**匯出或匯入設定**），然後點選**匯出設定**。 **AAPS** 會顯示檔案的儲存位置：選擇**本機**時會顯示檔名；選擇**雲端**時則會顯示 **Google 雲端硬碟**。點選**確定**。
 
@@ -105,7 +105,7 @@ Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and
 (ExportImportSettings-Automating-Settings-Export)=
 ### 自動設定匯出
 
-若要自動匯出設定，請開啟[（**請參閱自動化**）](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)[**設定** > **維護**](#preferences-maintenance-settings)，展開**無人值守設定匯出**，並開啟**啟用自動匯出設定**。
+To automate settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
 
 你現在可以將[自動化](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)配置為定期匯出設定（_例如_每週），或在pod變更後進行匯出。
 
@@ -176,7 +176,7 @@ _如果你在使用相同金鑰庫生成的APK更新**AAPS**，則無需遵循�
 
 12. **AAPS**會詢問**要套用匯入的設定嗎？**，並告知將變更多少項設定；如果您未勾選該選項，也會告知會保留多少項幫浦設定。目前尚未寫入任何設定，因此點選**取消**，手機就會維持原狀。點選**確定**以套用設定。
 
-    ![要套用匯入的設定嗎？對話視窗](../images/Maintenance/import_settings_apply.png)
+    ![Apply imported settings dialog](../images/Maintenance/import_settings_apply.png)
 
 13. **AAPS**會立即套用匯入的設定，不需要重新啟動。只有設定已變更的外掛會重新啟動。執行期間，**AAPS**會顯示**正在套用設定…**；如果幫浦正在忙碌，則會顯示**正在等待幫浦…**，並在幫浦閒置後套用設定。如果幫浦忙碌超過一分鐘，**AAPS**會詢問您是否要重試。出現**設定已套用**訊息，即表示匯入的設定已開始使用。匯入期間排入佇列的任何治療項目都會被取消。**AAPS**會通知您該項目已取消，因此不會重複傳送到幫浦。
 

@@ -30,7 +30,7 @@ Documentul este doar pentru citire. With CTRL-F, you can search in the text of t
 
 Pentru a vă înregistra testul unei configurații hardware, vă rugăm să completați acest [formular](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). After you fill in the form data, the sheet is updated automatically every 5 minutes.
 
-Dacă aveți probleme cu foaia de calcul, vă rugăm să contactați administratorul acesteia, *@theodoor5137*, pe Discord sau să consultați secțiunea [Unde pot primi ajutor? pagină](../GettingHelp/WhereCanIGetHelp.md).
+Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
 
 ## Nu mi-am găsit telefonul
 

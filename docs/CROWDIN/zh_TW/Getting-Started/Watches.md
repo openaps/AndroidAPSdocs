@@ -17,7 +17,7 @@
 
 ## 父母/照護者使用 **AAPS** 的具體優勢
 
-對於孩子來說，如果他們的 **AAPS** 手機在附近，照護者可以使用智慧型手錶進行監控或修改，而無需使用 **AAPS** 手機。例如，當 **AAPS** 手機藏在幫浦腰帶中時，這會很有用。
+For a child - if their **AAPS** phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS** phone. 例如，當 **AAPS** 手機藏在幫浦腰帶中時，這會很有用。
 
 智慧型手錶可以作為[僅關注](../RemoteFeatures/FollowingOnly.md)的選擇，或作為{em x-id="4">額外</em>的手機遠端控制選項。
 
@@ -49,19 +49,19 @@
 
 ## 完整簽章
 
-這聽起來像是一個很有吸引力的選項，對嗎？然而，目前只有少數愛好者正在嘗試在獨立手錶上運作 **AAPS**。只有少數智慧型手錶具備合適的介面，且能與獨立使用的 **AAPS** 和 CGM 應用程式良好搭配。常見機型包括 LEMFO LEM 15 Pro 和 16。你需要在手錶上載入 **AAPS** 的“完整” apk（通常安裝在智慧型手機上的 apk），而不是 **AAPS** 的“wear” apk。
+這聽起來像是一個很有吸引力的選項，對嗎？ However, at present, only a few enthusiasts are experimenting with **AAPS** on a stand-alone watch. 只有少數智慧型手錶具備合適的介面，且能與獨立使用的 **AAPS** 和 CGM 應用程式良好搭配。常見機型包括 LEMFO LEM 15 Pro 和 16。你需要在手錶上載入 **AAPS** 的“完整” apk（通常安裝在智慧型手機上的 apk），而不是 **AAPS** 的“wear” apk。
 
 雖然目前沒有明確的規範告訴你哪款手錶適合獨立使用 **AAPS**，但以下參數會有所幫助：
 
 1)  Android 12 或更新版本。 2)  能夠將錶盤從“方形”模式移除，以使文本更大、更易讀。 3)  非常好的電池續航能力。 4) 良好的藍牙範圍。
 
-大多數在獨立手錶上運作 **AAPS** 的挫折來自於與小螢幕的互動，並且目前 **AAPS** 完整應用程式的界面並非為手錶設計。由於螢幕大小受限，你可能會更願意使用觸控筆來編輯 **AAPS** 設定，並且某些 **AAPS** 按鈕可能無法在手錶螢幕上顯示。
+大多數在獨立手錶上運作 **AAPS** 的挫折來自於與小螢幕的互動，並且目前 **AAPS** 完整應用程式的界面並非為手錶設計。 You may prefer to use a stylus to edit **AAPS** settings on the watch, due to the restricted screen size, and some AAPS buttons may not be visible on the watch screen.
 
 額外的挑戰包括很難獲得足夠的電池續航能力，並且擁有足夠電池容量的手錶通常體積龐大且厚重。用戶反映，他們在使用手錶時遇到以下問題：需要花很多功夫調整作業系統和省電設定、啟動傳感器困難、藍牙範圍不足（難以同時維持與傳感器及幫浦的連線），以及防水性能令人存疑。示例顯示在下面的照片中。
 
 ![圖像](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
 
-如果你有興趣設置獨立手錶，請閱讀 **AAPS** Facebook 群組中的帖子和評論（好的搜尋詞是“standalone”和“Lemfo”）以及 Discord 獲取更多資訊。
+If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
 ## Wear OS
 
@@ -175,7 +175,7 @@ WatchDrip+ 的重新整理按鈕對 **AAPS** 沒有作用：每次讀取到新�
 ![圖像](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
-Pebble 手錶（[現已停產](https://en.wikipedia.org/wiki/Pebble_(watch))）從 2013 年到 2016 年一般出售，可能仍有二手產品可供購買。 Fitbit 接管了 Pebble 的資產。 Pebble 用戶可以使用 Urchin 表盤查看 Nightscout 資料。顯示的資料選項包括 IOB、目前的臨時基礎速率和預測值。如果使用開放循環，你可以使用 IFTTT 建立一個應用程式，如果收到來自**AAPS**的通知，則發送 SMS 或 pushover 通知。
+Pebble 手錶（[現已停產](https://en.wikipedia.org/wiki/Pebble_(watch))）從 2013 年到 2016 年一般出售，可能仍有二手產品可供購買。 Fitbit 接管了 Pebble 的資產。 Pebble 用戶可以使用 Urchin 表盤查看 Nightscout 資料。顯示的資料選項包括 IOB、目前的臨時基礎速率和預測值。 If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.
 
 ### [Bluejay 手錶](https://bluejay.website/)
 

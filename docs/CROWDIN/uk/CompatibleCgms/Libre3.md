@@ -22,7 +22,7 @@ Freestyle Libre 3 (FSL3) потребує особливого налаштув�
 ### Крок 1: Налаштуйте Juggluco
 Завантажте і встановіть застосунок Juggluco [звідси](https://www.juggluco.nl/Juggluco/download.html). Виконайте інструкції [тут](https://www.juggluco.nl/Juggluco/libre3/)
 
-Переконайтеся, що ви надсилаєте значення глюкози в xDrip: у налаштуваннях Juggluco можна налаштувати надсилання значень глюкози в інші застосунки. Juggluco може надсилати три типи таких трансляцій: **Patched Libre broadcast** спочатку використовував пропатчений застосунок Librelink; ним можна надсилати значення глюкози в xDrip
+Переконайтеся, що ви надсилаєте значення глюкози в xDrip: у налаштуваннях Juggluco можна налаштувати надсилання значень глюкози в інші застосунки. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip.
 
 ### Крок 2: Налаштуйте xDrip
 
@@ -69,7 +69,7 @@ Freestyle Libre 3 (FSL3) потребує особливого налаштув�
 
 ![Завершити сенсор (Terminate sensor)](../images/libre3/step_14.jpg)
 
-Примітка: коли активні два сенсори, Juggluco надсилає в xDrip найновіше значення з будь-якого з них. Якщо сенсори не відкалібровані і показують ГК по-різному, це може призвести до стрибків значень ГК в xDrip. Якщо ви завершили не той сенсор, його можна знову активувати, просто відсканувавши сенсор.
+Примітка: коли активні два сенсори, Juggluco надсилає в xDrip найновіше значення з будь-якого з них. If the sensors are not calibrated to read BG similarly, this may result in jumpy BG values being reported to xDrip. Якщо ви завершили не той сенсор, його можна знову активувати, просто відсканувавши сенсор.
 
 ## Перемикання сенсора між застосунками Libre 3 і Juggluco
 
@@ -99,4 +99,4 @@ Freestyle Libre 3 (FSL3) потребує особливого налаштув�
 
 Оригінальна інструкція: [сайт jkaltes](https://www.juggluco.nl/Juggluco/libre3/)
 
-Додатковий репозиторій на GitHub: [посилання на GitHub](https://github.com/maheini/FreeStyle-Libre-3-patch)
+Additional GitHub repo: [GitHub link](https://github.com/maheini/FreeStyle-Libre-3-patch)

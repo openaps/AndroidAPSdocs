@@ -8,7 +8,7 @@ __AAPS__ oferuje kilka funkcji do zdalnego monitorowania dzieci z cukrzycą typu
 
 - Pompa dziecka jest sterowana przez telefon dziecka za pomocą __AAPS__.
 - Opiekunowie mogą zdalnie obserwować wszystkie ważne dane, takie jak poziom glukozy, aktywne węglowodany, aktywna insulina itp., za pomocą **AAPSClient apk** na swoim telefonie z Androidem (wersja **AAPSClient** na iPhone jest w przygotowaniu, zobacz [AAPSClient](AapsClient.md)). Ustawienia zmienione w __AAPS__ synchronizują się z __AAPSClient__ i odwrotnie.
-- Opiekunowie mogą otrzymywać alarmy za pomocą **aplikacji xDrip w trybie obserwującego (follower)** na swoim telefonie z Androidem, jeśli skonfigurowano tryb companion w xDrip.
+- Caregivers can be alarmed by using **xDrip app in follower mode** on their Android phone if xDrip companion mode is set up.
 - Zdalne sterowanie __AAPS__ za pomocą [poleceń SMS](../RemoteFeatures/SMSCommands.md) jest zabezpieczone uwierzytelnianiem dwuskładnikowym.
 - Zdalne sterowanie przez __AAPSClient__ używa podpisanego kanału poleceń, wprowadzonego w **AAPS** 4: urządzenie opiekuna (client) musi najpierw zostać **sparowane** z urządzeniem pacjenta (master) za pomocą kodu QR lub PIN-u, a każde polecenie jest potwierdzane i wykonywane przez urządzenie pacjenta. Telefon każdego opiekuna może dostać własną [rolę](#client-master-control-roles), od samego odczytu do pełnej kontroli — zobacz [Sterowanie Master ↔ Client](#client-master-control).
 

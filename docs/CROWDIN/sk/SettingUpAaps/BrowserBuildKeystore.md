@@ -6,7 +6,7 @@
 Toto je **krok 2** návodu [Zostavenie v prehliadači](BrowserBuild.md). Najprv dokončite [krok 1 – Vytvorte si fork na GitHube](BrowserBuildFork.md).
 ```
 
-AndroidAPS musí byť podpísaný súkromnými kľúčmi uloženými v **úložisku kľúčov Java KeyStore (JKS)**. Toto je najdôležitejšie rozhodnutie celého postupu, pretože určuje, či budete môcť AAPS neskôr **aktualizovať** bez preinštalovania.
+AAPS must be signed with private keys stored in a **Java KeyStore (JKS)**. Toto je najdôležitejšie rozhodnutie celého postupu, pretože určuje, či budete môcť AAPS neskôr **aktualizovať** bez preinštalovania.
 
 ```{note}
 V ďalších krokoch uložíte súkromné údaje (úložisko kľúčov a neskôr prístup k Disku Google) na GitHube ako **secrets** (tajné hodnoty). Secret je jednoducho zašifrovaná hodnota, ktorú môže čítať iba vaše vlastné zostavenie – nikto iný ju nevidí, ani ľudia, ktorí si prezerajú váš fork. Vďaka tomu vaše zostavenie zostáva iba vaše.
@@ -74,7 +74,7 @@ Pred použitím tohto exportu sa uistite, že máte dokončené nastavenie úlo�
 
 2. **Spustite workflow exportu:**
    - Vo svojom repozitári prejdite na kartu **Actions**
-   - Vyberte položku **CI KeyStore Export**
+   - Select **CI Keystore Export**
    - Kliknite na **Run workflow**
    - Exportovaný súbor ZIP s úložiskom kľúčov sa uloží na váš Disk Google
 

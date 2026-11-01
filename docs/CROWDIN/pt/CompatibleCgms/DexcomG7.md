@@ -15,7 +15,7 @@ Leia as sugestões em [Suavizar os dados da glicose](../CompatibleCgms/Smoothing
 - Siga as instruções aqui: [xDrip G7, ONE+ e Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). É necessária uma versão recente do xDrip — veja a versão mínima na página indicada.
 - Selecione xDrip em [**Configuração → Fonte da Glicose**](#Config-Builder-bg-source).
 
-- Ajuste as definições do xDrip de acordo com as explicações da página [Definições do xDrip](../CompatibleCgms/xDrip.md)
+- Ajuste as definições do xDrip de acordo com as explicações da página [Definições do xDrip](../CompatibleCgms/xDrip.md).
 
 ## 2. Build Your Own Dexcom App (só G7)
 
@@ -30,7 +30,7 @@ A Dexcom BYODA é agora uma versão muito antiga da app e não pode ser atualiza
 -   Desinstale a app original da Dexcom
 -   Instale o apk transferido
 -   Introduza o código do sensor na app modificada (patched)
--   Após pouco tempo, a BYODA deve captar o sinal do transmissor
+-   After a short time BYODA should pick up the sensor signal.
 
 (DexcomG7-xdrip-companion-app)=
 

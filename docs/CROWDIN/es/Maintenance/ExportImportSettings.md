@@ -59,11 +59,11 @@ Exportar los ajustes de AAPS a un archivo te permite restaurar su configuración
 
 * Siempre que vayas a hacer cambios importantes en tu configuración (cambiar los ajustes de SMB, cambiar el tipo de insulina, cambiar de bomba, cambiar automatizaciones), debes hacer una copia de seguridad de tus **Ajustes** antes y después de los cambios. Así tienes tus ajustes más recientes y también una copia de cómo eran antes de los cambios, por si necesitas volver a ellos.
 
-* Solo para usuarios de bombas sin tubo (como Omnipod y Medtrum): el archivo de **Ajustes** contiene los datos de conexión de tu pod actual y se puede usar para restaurar la conexión con ese pod en un teléfono nuevo. Si no tienes una copia de tus preferencias exportada después de empezar tu pod actual, tendrás que empezar un pod nuevo si necesitas cambiar tu teléfono actual.
+* Tubeless pumps (Such as Omnipod and Medtrum) users only: the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. Si no tienes una copia de tus preferencias exportada después de empezar tu pod actual, tendrás que empezar un pod nuevo si necesitas cambiar tu teléfono actual.
 
 **Cómo hacer la copia de seguridad a mano:**
 
-1. Si es la primera vez que importas o exportas **Ajustes**, tienes que poner una contraseña maestra en [Ajustes > Protección](#Preferences-master-password). Pon una contraseña y anótala en un lugar seguro. _Sin esta contraseña no podrás acceder a las copias de seguridad de tus **Ajustes**._
+1. If this is your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). Pon una contraseña y anótala en un lugar seguro. _Sin esta contraseña no podrás acceder a las copias de seguridad de tus **Ajustes**._
 
 2. En la pantalla principal de **AAPS**, abre el **menú** (☰) > **Mantenimiento**. Elige dónde guardar el archivo con los chips **Local** y **Nube** junto a **Exportar ajustes** (ver **Exportar o importar ajustes** abajo) y después toca **Exportar ajustes**. **AAPS** muestra dónde se guardará el archivo: el nombre del archivo para **Local** y **Google Drive** para **Nube**. Toca **Ok**.
 
@@ -105,7 +105,7 @@ Para exportar o importar ajustes, abre el **menú** (☰) y elige **Mantenimient
 (ExportImportSettings-Automating-Settings-Export)=
 ### Automatizar la exportación de ajustes
 
-Para exportar los ajustes de forma automática [(**ver Automatización**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export), abre [**Ajustes** > **Mantenimiento**](#preferences-maintenance-settings), despliega **Exportación de ajustes desatendida** y activa **Habilitar exportación automática de ajustes**.
+To automate settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
 
 Puedes configurar una [Automatización](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) para exportar los ajustes con regularidad (_p. ej._ cada semana) o después de cambiar el pod.
 
@@ -176,7 +176,7 @@ Por defecto, una importación no cambia los ajustes de tu bomba: la bomba elegid
 
 12. **AAPS** pregunta **¿Aplicar la configuración importada?** y te dice cuántos ajustes van a cambiar y, si dejaste la casilla sin marcar, cuántos ajustes de la bomba se mantienen. Todavía no se ha escrito nada, así que **Cancelar** deja tu teléfono exactamente como estaba. Toca **Ok** para aplicar.
 
-    ![¿Aplicar la configuración importada? diálogo](../images/Maintenance/import_settings_apply.png)
+    ![Apply imported settings dialog](../images/Maintenance/import_settings_apply.png)
 
 13. **AAPS** aplica los ajustes importados en el momento, sin reiniciarse. Solo se reinician los complementos cuyos ajustes han cambiado. Mientras tanto, **AAPS** muestra **Aplicando configuraciones...**; si la bomba está ocupada, muestra **Esperando a la bomba…** y aplica los ajustes cuando la bomba queda libre. Si la bomba sigue ocupada después de un minuto, **AAPS** ofrece volver a intentarlo. El mensaje **Configuración aplicada** confirma que los ajustes importados ya están en uso. Cualquier tratamiento que estuviera en cola durante la importación se descarta y **AAPS** te avisa de que se canceló, para que nada se envíe dos veces a la bomba.
 

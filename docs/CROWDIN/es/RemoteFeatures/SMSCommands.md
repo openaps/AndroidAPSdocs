@@ -201,18 +201,18 @@ La columna *Aut.* de las tablas de abajo indica si cada comando necesita esta au
 
 ### Datos del MCG
 
-| Comando    | Aut. | Función y *respuesta*                                                                                                                                                                              |
-| ---------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BG         | No   | Devuelve: última glucosa, delta, IOB (bolo y basal), COB<br/>*Última glucemia: 5,6 hace 4 min, Delta: -0,2 mmol, IOB: 0,20U (Bolo: 0,10U Basal: 0,10U)*                                      |
-| CAL 5.6/90 | Sí   | Calibra el MCG con un valor de 5.6/90<br/>(usa el valor adecuado para tus unidades de glucosa)<br/>Solo funciona si está bien configurado en **AAPS**.<br/>*Calibración enviada* |
+| Comando    | Aut. | Función y *respuesta*                                                                                                                                                                                                             |
+| ---------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BG         | No   | Devuelve: última glucosa, delta, IOB (bolo y basal), COB<br/>*Última glucemia: 5,6 hace 4 min, Delta: -0,2 mmol, IOB: 0,20U (Bolo: 0,10U Basal: 0,10U)*                                                                     |
+| CAL 5.6/90 | Sí   | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent. Receiving must be enabled in xDrip+.* |
 
 ### Bomba
 
-| Comando              | Aut. | Función y *respuesta*                                                                                 |
-| -------------------- | ---- | ----------------------------------------------------------------------------------------------------- |
-| BOMBA                | No   | Last conn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
-| PUMP DISCONNECT *30* | Sí   | Para desconectar la bomba durante *30* minutos                                                        |
-| PUMP CONNECT         | Sí   | Bomba reconectada                                                                                     |
+| Comando              | Aut. | Función y *respuesta*                                                                                |
+| -------------------- | ---- | ---------------------------------------------------------------------------------------------------- |
+| BOMBA                | No   | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP DISCONNECT *30* | Sí   | Para desconectar la bomba durante *30* minutos                                                       |
+| PUMP CONNECT         | Sí   | Bomba reconectada                                                                                    |
 
 ### Basal
 
@@ -229,14 +229,14 @@ Algunas bombas aceptan una basal temporal solo en porcentaje, otras solo en U/h.
 
 ### Lazo
 
-| Comando           | Aut. | Función y *respuesta*                                                                                                                                                                                                                                                  |
-| ----------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LOOP STATUS       | No   | La respuesta depende del estado real:<br/> - *El lazo está desactivado* si el lazo está desactivado o en LGS<br/> - *El lazo está activado* si el lazo está cerrado o abierto<br/> - *Suspendido (10 min)* si el lazo está desconectado o suspendido |
-| LOOP STOP/DISABLE | Sí   | La bomba vuelve a la dosis basal programada.<br/>*El lazo se ha desactivado*                                                                                                                                                                                     |
-| LOOP SUSPEND 20   | Sí   | *Lazo suspendido durante 20 minutos*                                                                                                                                                                                                                                   |
-| LOOP RESUME       | Sí   | *Lazo reanudado*                                                                                                                                                                                                                                                       |
-| LOOP CLOSED       | Sí   | *Modo de funcionamiento actual: Lazo cerrado*                                                                                                                                                                                                                          |
-| LOOP LGS          | Sí   | *Modo de funcionamiento actual: Suspensión por glucosa baja (LGS)*                                                                                                                                                                                                     |
+| Comando           | Aut. | Función y *respuesta*                                                                                                                                                                                                                                                              |
+| ----------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LOOP STATUS       | No   | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled<br/> - *Loop is enabled* if the loop is closed, open or LGS<br/> - *Pump disconnected* if the pump is disconnected<br/> - *Suspended (10 m)* if the loop is suspended |
+| LOOP STOP/DISABLE | Sí   | La bomba vuelve a la dosis basal programada.<br/>*El lazo se ha desactivado*                                                                                                                                                                                                 |
+| LOOP SUSPEND 20   | Sí   | *Loop suspended*                                                                                                                                                                                                                                                                   |
+| LOOP RESUME       | Sí   | *Lazo reanudado*                                                                                                                                                                                                                                                                   |
+| LOOP CLOSED       | Sí   | *Current running mode: Closed Loop*                                                                                                                                                                                                                                                |
+| LOOP LGS          | Sí   | *Current running mode: Low Glucose Suspend*                                                                                                                                                                                                                                        |
 
 ### Bolo
 
@@ -348,6 +348,6 @@ Si la otra aplicación está instalada en varios teléfonos, asegúrate de desac
 (sms-commands-too-many-messages)=
 ### Recibo demasiados mensajes de texto de los comandos SMS. ¿Puedo reducir la frecuencia o hacer que paren?
 
-Usar comandos SMS puede generar muchos mensajes automáticos del teléfono con **AAPS** al teléfono del cuidador. También recibirás mensajes, por ejemplo «Perfil basal actualizado en la bomba», si tienes automatizaciones configuradas en **AAPS**. Puede ser útil tener SMS ilimitados en el plan del teléfono con **AAPS** (y en el de cada teléfono de cuidador) si se van a enviar muchos SMS, y desactivar las notificaciones, alarmas o vibraciones de SMS en todos los teléfonos. No es posible usar comandos SMS sin recibir estas actualizaciones. Por eso, quizá quieras otra forma de comunicarte directamente con tu hijo (si tiene edad suficiente) en lugar de SMS. Las apps de comunicación alternativas que más usan los cuidadores de **AAPS** son WhatsApp, LINE, Telegram y Facebook Messenger.
+Usar comandos SMS puede generar muchos mensajes automáticos del teléfono con **AAPS** al teléfono del cuidador. También recibirás mensajes, por ejemplo «Perfil basal actualizado en la bomba», si tienes automatizaciones configuradas en **AAPS**. Puede ser útil tener SMS ilimitados en el plan del teléfono con **AAPS** (y en el de cada teléfono de cuidador) si se van a enviar muchos SMS, y desactivar las notificaciones, alarmas o vibraciones de SMS en todos los teléfonos. No es posible usar comandos SMS sin recibir estas actualizaciones. Por eso, quizá quieras otra forma de comunicarte directamente con tu hijo (si tiene edad suficiente) en lugar de SMS. Common alternative communication apps used by **AAPS** caregivers include WhatsApp, LINE, Telegram, and Facebook Messenger.
 
-Es posible desactivar el SMS «Perfil cambiado» cuando el cambio de perfil viene de Nightscout. Para hacerlo, crea un archivo llamado **exactamente**  `do_not_send_sms_on_profile_change` en la carpeta `extra` de tu directorio de AAPS.
+It is possible to disable the "Basal profile in pump updated" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly** `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.

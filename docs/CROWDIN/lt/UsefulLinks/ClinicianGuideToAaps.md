@@ -22,7 +22,7 @@ Be uždaro ciklo sistemos, pacientas, sergantis cukriniu diabetu, gauna duomenis
 
 Sistema daro tą patį: renka duomenis iš pompos, NGJ ir kitos registruojamos informacijos (pvz., per Nightscout). Ji naudojasi šia informacija apskačiuodama, kiek daugiau ar mažiau reikia insulino (nei užprogramuota bazės profilyje). Sistema nustato laikiną bazę, kuri padeda išlaikyti glikemiją stabilią arba grąžina ją į tikslinę zoną.
 
-If the device running AAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basals rates running.
+If the device running AAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basal rates running.
 
 ## How data is gathered:
 
@@ -39,7 +39,7 @@ Kai tik įrenginys surenka duomenis, algoritmas juos analizuoja ir priima sprend
 
 ## How does it know what to do?
 
-Atvirojo kodo programinė įranga buvo sukurta siekiant perimti užduotis, kurias anksčiau sergantys cukriniu diabetu atlikdavo rankiniu būdu, ir apskaičiuoti, kiek tiksliai reikia suleisti insulino. Pirmiausia sistema renka duomenis iš visų prijungtų įrenginių ir iš debesies, juos parengia ir atlieka reikalingus skaičiavimus. Remiantis įvairiais scenarijais, prognozuojama artimiausių valandų tikėtina glikemija ir apskaičiuojami būtini insulino dozės patikslinimai, kad glikemija išliktų tikslinėje zonoje arba grąžintų ją ten. Tada ji išsiunčia pompai reikiamus nustatymus. Tada ji vėl nuskaito duomenis iš pompos ir skaičiavimai vėl pradedami iš naujo.
+Atvirojo kodo programinė įranga buvo sukurta siekiant perimti užduotis, kurias anksčiau sergantys cukriniu diabetu atlikdavo rankiniu būdu, ir apskaičiuoti, kiek tiksliai reikia suleisti insulino. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of what BG levels are expected to do during the next hours in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. Tada ji išsiunčia pompai reikiamus nustatymus. Tada ji vėl nuskaito duomenis iš pompos ir skaičiavimai vėl pradedami iš naujo.
 
 Svarbu turėti aukštos kokybės NGJ duomenis, nes glikemijos duomenys yra svarbiausi įvesties parametrai.
 
@@ -71,7 +71,7 @@ Tikimasi, kad šiame pavyzdyje glikemija greitai nukris žemiau saugios ribos, t
 
 ### Scenario 3 - More insulin needed
 
-Šiame pavyzdyje prognozuojama, kad artimiausiu metu glikemija nukris žemiau tikslinės zonos. Tačiau nesitikima, kad ši vertė nukris žemiau saugios ribos. Ilgalaikė tikėtina glikemija yra didesnė už tikslinę. Therefore, AAPS will restrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). AndroidAPS ir toliau stebi glikemijos lygį ir kuo greičiau suleis insulino (nerizikuodama hipoglikemija), kad numatytą aukštą glikemiją grąžintų į tikslinę zoną. *(Priklausomai nuo nustatymo, reikiamo insulino kiekio ir laiko, šis insulinas gali būti leidžiamas kaip laikina bazė arba SMB (Super Mikro Bolusas) ). *
+Šiame pavyzdyje prognozuojama, kad artimiausiu metu glikemija nukris žemiau tikslinės zonos. Tačiau nesitikima, kad ši vertė nukris žemiau saugios ribos. Ilgalaikė tikėtina glikemija yra didesnė už tikslinę. Therefore, AAPS will refrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). AndroidAPS ir toliau stebi glikemijos lygį ir kuo greičiau suleis insulino (nerizikuodama hipoglikemija), kad numatytą aukštą glikemiją grąžintų į tikslinę zoną. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMBs (super micro boluses)).*
 
 ![Dozavimo 3 scenarijus](../images/Dosing_scenario_3.jpg)
 
@@ -87,13 +87,13 @@ As a clinician who may not have experience with AAPS or DIY closed loops, you ma
 
 Svarbiausia užduotis pacientui yra padaryti tik vieną pakeitimą vienu metu ir stebėti jo poveikį 2–3 dienas prieš nusprendžiant pakeisti kitą parametrą. Žinoma, tai netaikoma, jei akivaizdžiai „blogas pritaikymas“ pablogina situaciją. Tokiu atveju jis turėtų nedelsdamas grįžti prie ankstesnio nustatymo. Mes, žmonės, linkę viską pakeisti iškart. Bet jei tai padarysite, tai gali sukelti neoptimalų pakeitimą, kurį sunku sugrąžinti į gerą būklę.
 
-Vienas galingiausių nustatymų yra automatinis valandinės bazės, insulino jautrumo faktoriaus bei insulino ir angliavandenių santykio skaičiavimo įrankis. This is called “[Autotune](#autotune-how-autotune-calculates-adjustments)”. Jis skirtas paleisti nepriklausomai / rankiniu būdu, o duomenys padės jums ar jūsų pacientui laipsniškai keisti parametrus. Geriausia praktika, prieš pradedant rankiniu būdu koreguoti nustatymus, pirmiausia peržiūrėti Autotune ataskaitas. Autotune is built into AAPS as a plugin (**Configuration** → **General** → **Autotune**); see [Autotune](../AdvancedOptions/Autotune.md). It can be run on demand or automatically. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adjustment of these parameters would be the natural link to the clinician.
+Vienas galingiausių nustatymų yra automatinis valandinės bazės, insulino jautrumo faktoriaus bei insulino ir angliavandenių santykio skaičiavimo įrankis. This is called “[Autotune](#autotune-how-autotune-calculates-adjustments)”. It is designed to allow the data to guide you or your patient in making incremental changes to settings. Geriausia praktika, prieš pradedant rankiniu būdu koreguoti nustatymus, pirmiausia peržiūrėti Autotune ataskaitas. Autotune is built into AAPS as a plugin (**Configuration** → **General** → **Autotune**); see [Autotune](../AdvancedOptions/Autotune.md). It can be run on demand or automatically. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adjustment of these parameters would be the natural link to the clinician.
 
 Be to, žmogaus elgesys, išmoktas valdant diabetą rankiniu būdų, dažnai daro įtaką rezultatams - net ir naudojant „pasidaryk pats“ uždarą ciklą. For example, if BG is predicted to go low and AAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dL (3.9 mmol/L). Tačiau daugeliu atvejų pacientas, remdamasis savo ankstesne patirtimi, nusprendžia suvartoti žymiai daugiau angliavandenių. Tai lemia spartesnį padidėjimą tiek dėl papildomos gliukozės, tiek dėl iš anksto sumažintos AndroidAPS insulino dozės.
 
 ## OpenAPS
 
-**Šis vadovas paimtas ir pritaikytas iš [OpenAPS Medicinos vadovas](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html). **OpenAPS yra sistema, kuri sukurta veikti mažame nešiojamame kompiuteryje (paprastai vadinama „rig“). AAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AAPS, with the main difference being the hardware platform where each piece of software is run.
+**This guide was adapted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AAPS, with the main difference being the hardware platform where each piece of software is run.
 
 ## Summary
 

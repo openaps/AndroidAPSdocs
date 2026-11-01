@@ -35,7 +35,7 @@ El [sistema Omnipod](https://www.omnipod.com/current-podders/resources/omnipod-s
 
 - ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **Dispositivo de administración de insulina**
 
-> Componente que interpreta los comandos que recibe del dispositivo de comunicación con el pod y que vienen de tu teléfono con AAPS.
+> Component that will interpret commands received from the Pod communication device originating from your AAPS enabled phone.
 > 
 > > - Un pod Omnipod nuevo (generación Eros - **NO DASH**)
 
@@ -47,7 +47,7 @@ En esta página, **RileyLink** significa cualquiera de los dispositivos de comun
 
 **LA SEGURIDAD ES LO PRIMERO** - no hagas este proceso en un lugar donde no puedas solucionar un error (pods de reserva, insulina, RileyLink cargado y teléfono son imprescindibles).
 
-**Tu PDM de Omnipod dejará de funcionar después de que el controlador Omnipod de AAPS active tu pod**. Antes usabas tu PDM de Omnipod para enviar comandos a tu pod Omnipod Eros. Un pod Omnipod Eros solo permite que un único dispositivo se comunique con él. El dispositivo que activa el pod con éxito es, desde ese momento, el único dispositivo que puede comunicarse con él. Esto significa que, cuando activas un pod Omnipod Eros con tu RileyLink a través del controlador Omnipod de AAPS, **ya no podrás usar tu PDM con ese pod**. El controlador Omnipod de AAPS con el RileyLink es ahora tu PDM. *Esto NO significa que debas tirar tu PDM. Te recomendamos guardarlo como reserva y para emergencias, cuando AAPS no funcione bien.*
+**Tu PDM de Omnipod dejará de funcionar después de que el controlador Omnipod de AAPS active tu pod**. Antes usabas tu PDM de Omnipod para enviar comandos a tu pod Omnipod Eros. Un pod Omnipod Eros solo permite que un único dispositivo se comunique con él. El dispositivo que activa el pod con éxito es, desde ese momento, el único dispositivo que puede comunicarse con él. Esto significa que, cuando activas un pod Omnipod Eros con tu RileyLink a través del controlador Omnipod de AAPS, **ya no podrás usar tu PDM con ese pod**. El controlador Omnipod de AAPS con el RileyLink es ahora tu PDM. *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies when AAPS is not working correctly.*
 
 **Solo un RileyLink a la vez puede comunicarse con un pod.** **AAPS** recuerda un RileyLink emparejado. Si emparejas otro distinto, sustituye al anterior.
 
@@ -281,7 +281,7 @@ Para desactivar un pod (porque ha caducado o porque ha fallado):
 
 El proceso de abajo te muestra cómo suspender y reanudar la administración de insulina.
 
-*NOTA - si no ves el botón **Suspender***, es porque está oculto por defecto. Activa **Mostrar el botón Suspender Entrega en la pestaña Omnipod** en los [ajustes de Omnipod](#OmnipodEros-omnipod-settings), en **Otros**.
+*NOTA - si no ves el botón **Suspender***, es porque está oculto por defecto. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Suspender la administración de insulina
 
@@ -591,7 +591,7 @@ Los botones de la parte de abajo de la pantalla de la bomba cambian según la si
   La captura de pantalla de arriba es de una versión anterior de **AAPS**. En **AAPS** 4 es un botón de texto llamado **Ajustar la hora** en la pantalla de la bomba Omnipod.
   ```
 
-- **Suspender:** suspende la administración de insulina en el pod activo. Solo aparece si está activado en los ajustes (**Mostrar el botón Suspender Entrega en la pestaña Omnipod**).
+- **Suspender:** suspende la administración de insulina en el pod activo. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ AAPS muestra notificaciones y alertas sonoras en el teléfono cuando no es segur
 
 Ajustes avanzados para ayudar a depurar errores.
 
-- **Mostrar el botón Suspender Entrega en la pestaña Omnipod:** oculta o muestra el botón **Suspender** en la pantalla de la bomba Omnipod.
+- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
 - **Mostrar botón de registro de pulsos en el menú de gestión del Pod:** este ajuste todavía aparece en la lista, pero la versión actual de la pantalla de la bomba no tiene botón **Registro de pulsos**.
 
 - **Mostrar botón de estadísticas de RileyLink en el menú de gestión del Pod:** oculta o muestra el botón **Estadísticas de RileyLink** en la pantalla de la bomba Omnipod.
@@ -896,7 +896,7 @@ No se ha detectado ninguna sesión de pod activa. Puedes descartar esta alerta u
 
 Alerta informativa de que el pod está suspendido.
 
-#### Error al establecer el perfil basal. ¡La administración puede estar suspendida! Actualiza manualmente el estado del pod desde la pestaña Omnipod y reanuda la administración si hace falta.
+#### Error al establecer el perfil basal. ¡La administración puede estar suspendida! Please manually refresh the Pod status on the pump screen and resume delivery if needed.
 
 Alerta informativa de que ha fallado la configuración del perfil basal del pod. Abre la pantalla de la bomba Omnipod y pulsa **Actualizar** y, si hace falta, **Reanudar la entrega**.
 

@@ -49,7 +49,7 @@ I dette eksempelet: 
 - Den nye «_AAPS_»-Gmail-kontoen din blir: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-### Gå til <https://account.google.com> 
+### Gå til <https://myaccount.google.com> 
 
  Hvis du allerede er logget inn på Google, sendes du til siden **Min konto** for «hverdags»-kontoen din. (1) Klikk på profilbildet ditt øverst til høyre på siden (i dette tilfellet et enkelt ![](../images/Building-the-App/building_0002.png) (2) velg «_legg til en annen konto_».
 
@@ -87,7 +87,7 @@ Gmail viser kontonavnet. Du blir bedt om å godta Gmails vilkår og bekrefte inn
 
 ### Tilpass visningen av den nye profilen
 
-Nå bør du være på Gmails Min konto-side, som viser den nye e-postkontoen din for **AAPS**. Profilbildet settes som standard til den første bokstaven i navnet ditt. Endre det til noe unikt for å unngå forvirring … i dette eksempelet har Donald.Muck.AAPS erstattet ![](../images/Building-the-App/building_0002.png) med ![](../images/Building-the-App/building_0003.png)
+Nå bør du være på Gmails Min konto-side, som viser den nye e-postkontoen din for **AAPS**. Profilbildet settes som standard til den første bokstaven i navnet ditt. Endre det til noe unikt for å unngå forvirring … i dette eksempelet har Donald.Muck.AAPS erstattet ![](../images/Building-the-App/building_0002.png) med ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)

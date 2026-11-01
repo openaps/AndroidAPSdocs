@@ -12,13 +12,13 @@ Formelen som **AAPS** bruker, er:
 
 Effekten på **profilen** din blir:
 
-- _økt_ **IC** – flere karbohydrater tas opp hvert 5. minutt, og dermed blir den totale opptakstiden kortere;
+- _øke_ **IK** – øker mengden karbohydrater som tas opp hvert 5. minutt, og forkorter dermed den totale absorpsjonstiden;
 
 - _økt_ **ISF** – færre karbohydrater tas opp hvert 5. minutt, og dermed blir den totale opptakstiden lengre; og
 
-- _endret_ **profilprosent** – øker/reduserer begge verdiene, og påvirker derfor ikke opptakstiden for karbohydrater.
+- _endre_ **profilprosent** – øker/senker begge verdiene, og påvirker derfor ikke absorpsjonstiden for karbohydrater.
 
-Hvis for eksempel **ISF** i **profilen** din er 100 og **I:C** er 5, blir karbohydratsensitivitetsfaktoren din 20. For hver 20 mg/dL **BS**-verdien din stiger, regner **AAPS** 1 g karbohydrater som tatt opp. Positiv **IOB** påvirker også **COB**-beregningen. Så hvis **AAPS** forventer at **BS**-verdien din skal falle 20 mg/dL på grunn av **IOB**, men den i stedet holder seg flat, regner **AAPS** også 1 g karbohydrater som tatt opp.
+Hvis for eksempel **ISF** i **profilen** din er 100 og **IK** er 5, blir karbohydratsensitivitetsfaktoren din 20. For hver 20 mg/dL **BS**-verdien din stiger, regner **AAPS** 1 g karbohydrater som tatt opp. Positiv **IOB** påvirker også **COB**-beregningen. Så hvis **AAPS** forventer at **BS**-verdien din skal falle 20 mg/dL på grunn av **IOB**, men den i stedet holder seg flat, regner **AAPS** også 1 g karbohydrater som tatt opp.
 
 Karbohydrater tas også opp etter metodene beskrevet nedenfor, avhengig av hvilken sensitivitetsalgoritme som er valgt i **AAPS**.
 
@@ -47,7 +47,7 @@ Hvis minimalt karbohydratopptak (min_5m_carbimpact) brukes i stedet for verdien 
 (CobCalculation-detection-of-wrong-cob-values)=
 ## Oppdaging av feil COB-verdier
 
-**AAPS** advarer deg hvis du er i ferd med å gi bolus med **COB** fra et tidligere måltid, og algoritmen oppdager at den gjeldende **COB**-beregningen er feil. I så fall får du et ekstra hint på bekreftelsesskjermen etter at du har brukt boluskalkulatoren.
+**AAPS** varsler deg hvis du er i ferd med å gi bolus med **COB** fra et tidligere måltid, dersom algoritmen oppdager at den gjeldende **COB**-beregningen er feil. I så fall får du et ekstra hint på bekreftelsesskjermen etter at du har brukt boluskalkulatoren.
 
 ### Hvordan oppdager AAPS feil COB-verdier?
 
@@ -62,7 +62,7 @@ I skjermbildet ovenfor ble karbohydratopptaket 66 % av tiden beregnet med min_5m
 - Vurder å avbryte behandlingen – trykk på «Avbryt» i stedet for OK.
 - Beregn det kommende måltidet på nytt med boluskalkulatoren, uten hake ved **COB**.
 - Hvis du trenger en korreksjonsbolus, registrerer du den manuelt.
-- Vær forsiktig så du ikke overdoserer eller stabler insulin!
+- Vær forsiktig så du ikke gir for mye insulin eller stabler insulin!
 
 
 ### Hvorfor beregner ikke algoritmen COB riktig?

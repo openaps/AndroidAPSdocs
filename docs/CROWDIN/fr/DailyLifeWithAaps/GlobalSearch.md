@@ -73,7 +73,7 @@ Appuyez sur un résultat pour y aller directement :
 - **Préférence** → ouvre le paramètre **à sa place** (va directement à lui dans son écran).
 - **Documentation** → ouvre la page dans votre navigateur.
 
-L'ouverture des paramètres et des actions protégées respecte toujours votre **[protection](../SettingUpAaps/ConfigBuilder.md)** (PIN/mot de passe), exactement comme si vous y étiez allé à la main. Après avoir agi sur un résultat, vous pouvez appuyer sur **Retour** pour revenir à vos résultats de recherche.
+Opening settings and protected actions still respects your **[protection](#Preferences-protection)** (PIN/password), exactly as it would if you had navigated there by hand. Après avoir agi sur un résultat, vous pouvez appuyer sur **Retour** pour revenir à vos résultats de recherche.
 
 ---
 

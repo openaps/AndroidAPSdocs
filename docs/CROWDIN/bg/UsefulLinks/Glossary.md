@@ -18,7 +18,7 @@
 
 **APK** = Android application Package (пакет на приложение за Android). Инсталационен файл на софтуер. Повече информация → [Wiki - „Компилиране на APK“](../SettingUpAaps/BuildingAaps.md).
 
-**Autosens** = изчисляване на чувствителността към инсулин за период от 24 и 8 часа и др. Повече информация → [DIABETTECH - **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
+**Autosens** = calculation of sensitivity to insulin over a 24-hour and an 8-hour window etc. Повече информация → [DIABETTECH - **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
 **Azure** = cloud computing platform to host **Nightscout** web app → see also **Nightscout**.
 
@@ -42,7 +42,7 @@
 
 **CGM** = Continuous Glucose Monitor (система за продължително наблюдение на глюкозата) → вижте също **FGM**.
 
-**Затворен кръг** (Closed Loop) = система, която автоматично променя подаването на базален инсулин въз основа на алгоритъма на **AAPS** и настройките в **профила** на потребителя, без да е нужно одобрение от потребителя. Повече информация → Wiki - „затворен кръг“ и вижте също **HCL** / **FCL**.
+**Closed Loop** = a closed loop system which makes automatic adjustments to the user’s basal delivery based on an **AAPS’s** algorithm and the user’s **Profile** settings without requiring the user’s approval. Further info → [Wiki - 'closed loop'](#KeyAapsFeatures-ClosedLoop) and see also **HCL** / **FCL**.
 
 **COB** = Carbs On Board (активни въглехидрати). Това е количеството въглехидрати, които в момента още предстои да бъдат усвоени от организма на потребителя → вижте също IOB.
 
@@ -50,19 +50,19 @@
 
 **DIA** = Duration of Insulin Action (време на действие на инсулина). Повече информация → [Wiki - „DIA“](#Config-Builder-insulin-dia) и вижте също → [DIABETTECH - „DIA“](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/).
 
-**DST** = Daylight Savings Time (лятно часово време). Вижте [Wiki - Смяна на часовата зона и лятно часово време](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
+**DST** = Daylight Saving Time. Вижте [Wiki - Смяна на часовата зона и лятно часово време](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
 
 **Динамично ISF (Dynamic ISF или DynISF)** = функция в **AAPS**, която динамично променя инсулиновата чувствителност (**ISF**) въз основа на **TDD** и **КЗ** на потребителя.
 
 **eCarbs** = extended Carbs (удължени въглехидрати). Carbs split up over several hours (e.g. to cover fat/protein), which lets **AAPS** spread the insulin like an extended bolus. Повече информация → [Wiki - „Удължени въглехидрати“](../DailyLifeWithAaps/ExtendedCarbs.md)
 
-**FCL** = Full Closed Loop (напълно затворен кръг). Кръг, при който потребителят не въвежда нищо за храненията: без броене на въглехидрати и без болус за хранене. Повече информация → Wiki - „напълно затворен кръг“ и вижте също **HCL**.
+**FCL** = Full Closed Loop (напълно затворен кръг). Кръг, при който потребителят не въвежда нищо за храненията: без броене на въглехидрати и без болус за хранене. Further info → [Wiki - 'full closed loop'](../AdvancedOptions/FullClosedLoop.md) and see also **HCL**.
 
-**FGM** = Flash Glucose Monitor such as the Abbott Freestyle Libre. Повече информация → Wiki - „Източник на КЗ“ и вижте също „CGM“.
+**FGM** = Flash Glucose Monitor such as the Abbott Freestyle Libre. Further info → [Wiki - 'BG source'](#Config-Builder-bg-source) and see also 'CGM'.
 
-**git** = инструмент, който се използва за съхраняване и изтегляне на изходния код на **AAPS**.
+**git** = a tool used to store and download the **AAPS’** source code.
 
-**GitHub** = a web-based service that hosts the **AAPS** source code and its version control (tracking changes in files and coordinating work on them, especially for teams), and can also build the app. It is also necessary for **APK** updates. Повече информация → Wiki - „актуализиране на APK“.
+**GitHub** = a web-based service that hosts the **AAPS** source code and its version control (tracking changes in files and coordinating work on them, especially for teams), and can also build the app. It is also necessary for **APK** updates. Further info → [Wiki - 'update APK'](../Maintenance/UpdateToNewVersion.md).
 
 **Glimp** = an app to collect values from Freestyle Libre.
 
@@ -84,7 +84,7 @@
 
 **maxIOB** = максимален общ IOB. Това е функция за безопасност. Тя не позволява на **AAPS** да подава повече инсулин, отколкото позволяват настройките на потребителя. Повече информация → [Wiki - „Максимален общ IOB, над който OpenAPS не може да премине“](#Open-APS-features-maximum-total-iob-openaps-cant-go-over).
 
-**min_5m_carbimpact** = функция за безопасност: изчисляване на стандартното усвояване на въглехидрати, когато усвояването им не може да се определи по реакцията на кръвната захар на потребителя. Повече информация → [Wiki - „Опции“](#Preferences-min_5m_carbimpact).
+**min_5m_carbimpact** = функция за безопасност: изчисляване на стандартното усвояване на въглехидрати, когато усвояването им не може да се определи по реакцията на кръвната захар на потребителя. Further info → [Wiki - 'min_5m_carbimpact'](#Preferences-min_5m_carbimpact).
 
 **Nightscout** = проект с отворен код за достъп до данните от **CGM** и за отчети за тях. The central data hub for the user’s **AAPS** data and can generate reports to view the user’s historical **Nightscout** data, such as expected HbA1c, time in range or search for patterns in the data via percentile chart etc.
 
@@ -98,7 +98,7 @@
 
 **Отворен кръг** (Open Loop system) = функция на **AAPS**, която препоръчва промени, но потребителят трябва да ги извърши ръчно в **AAPS**. Повече информация → [Wiki - „Отворен кръг“](#KeyAapsFeatures-OpenLoop).
 
-**Oref0 / Oref1** = определяне на чувствителност и „reference design implementation version 0/1“ (референтна реализация, версия 0/1). Това е основният алгоритъм на OpenAPS. Wiki - определяне на чувствителност.
+**Oref0 / Oref1** = определяне на чувствителност и „reference design implementation version 0/1“ (референтна реализация, версия 0/1). It is the key algorithm behind OpenAPS. Further info → [Wiki - 'sensitivity detection'](../DailyLifeWithAaps/SensitivityDetectionAndCob.md).
 
 **OS-AID** = Open-Source Automated Insulin Delivery (автоматизирано подаване на инсулин с отворен код). Система **AID**, изградена от софтуер с отворен код, например **AAPS**, **OpenAPS**, Loop или Trio. Тези системи не са официално одобрени от здравните органи (FDA, NHS и др.) → вижте също **AID**.
 
@@ -132,15 +132,15 @@
 
 **TBB** = total base basal (общ базален инсулин – сумата от базалната доза за 24 часа) → вижте също **TBR** / **TDD**.
 
-**TBR** = temporary basal rate (временен базал) → вижте също **TBB** / **TDD**.
+**TBR** = temporary basal rate → see also **TBB** / **TDD**.
 
 **TDD** = total daily dose (обща дневна доза – болус + базал за един ден) → вижте също **TBB** / **TBR**.
 
-**TT** = temporary target (временна цел) – временно повишаване или понижаване на целевата **КЗ** (диапазон) на потребителя, например за хранене или спорт. Повече информация → [Wiki - „Временни цели“](../DailyLifeWithAaps/TempTargets.md).
+**TT** = temporary target: temporary increase/decrease of the user’s **BG** target (range) e.g. for eating or sport activities. Повече информация → [Wiki - „Временни цели“](../DailyLifeWithAaps/TempTargets.md).
 
 **UAM** = unannounced meals (необявени хранения). Откриване на значително повишаване на **КЗ** заради хранене, адреналин или други влияния и опит то да бъде коригирано. Повече информация → [Wiki - „UAM“](#enable-uam) и вижте също **SMB**.
 
-**Виртуална помпа** (Virtual pump) = функция на **AAPS**, с която потребителят може да изпробва функциите на **AAPS**. Използва се и от хора с диабет (PWD), чийто модел помпа няма драйвер в **AAPS** за затворен кръг → вижте също **Отворен кръг**.
+**Virtual pump** = an **AAPS** feature which allows the user to try **AAPS’** functions, or lets PWD whose pump model has no **AAPS** driver use **AAPS** as an open loop → see also **Open Loop**.
 
 **Тапет** (Wallpaper) = фоново изображение на **AAPS**, вижте страницата „Телефони“.
 

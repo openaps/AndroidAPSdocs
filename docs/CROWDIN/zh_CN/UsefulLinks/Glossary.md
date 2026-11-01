@@ -18,7 +18,7 @@
 
 **APK** = Android 应用程序包。一个软件安装文件。 Further info → [Wiki - 'Building APK'](../SettingUpAaps/BuildingAaps.md).
 
-**Autosens** = 计算 24 小时到 8 小时窗口之间的胰岛素敏感性等。 Further info → [DIABETTECH - **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
+**Autosens** = calculation of sensitivity to insulin over a 24-hour and an 8-hour window etc. Further info → [DIABETTECH - **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
 **Azure** = cloud computing platform to host **Nightscout** web app → see also **Nightscout**.
 
@@ -42,7 +42,7 @@
 
 **CGM** = 连续血糖监测器 → 参见 **FGM**。
 
-**闭环** = 一个闭环系统，根据 **AAPS** 的算法和用户的 **配置文件** 设置，自动调整用户的基础胰岛素输送，无需用户批准。 Further info → Wiki - 'closed loop' and see also **HCL** / **FCL**.
+**Closed Loop** = a closed loop system which makes automatic adjustments to the user’s basal delivery based on an **AAPS’s** algorithm and the user’s **Profile** settings without requiring the user’s approval. Further info → [Wiki - 'closed loop'](#KeyAapsFeatures-ClosedLoop) and see also **HCL** / **FCL**.
 
 **COB** = 活性碳水化合物量。这是用户当前可供消化的碳水化合物量 → 参见 IOB。
 
@@ -50,19 +50,19 @@
 
 **DIA** = 胰岛素作用持续时间 Further info → [Wiki - 'DIA'](#Config-Builder-insulin-dia) and see also → [DIABETTECH - 'DIA'](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/).
 
-**DST** = Daylight Savings Time. See [Wiki - Timezone Change and Daylight Saving](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
+**DST** = Daylight Saving Time. See [Wiki - Timezone Change and Daylight Saving](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
 
 **Dynamic ISF (or DynISF)** = a feature within **AAPS** that adapts the insulin sensitivity factor (**ISF**) dynamically based on the user’s **TDD** and **BG**.
 
 **缓释碳水化合物(eCarbs)** = 延时释放的碳水化合物(extended Carbs)。 Carbs split up over several hours (e.g. to cover fat/protein), which lets **AAPS** spread the insulin like an extended bolus. Further info → [Wiki - 'Extended Carbs'](../DailyLifeWithAaps/ExtendedCarbs.md)
 
-**FCL** = Full Closed Loop. A loop which needs no mealtime input from the user: no carb counting and no meal bolus. Further info → Wiki - 'full closed loop' and see also **HCL**.
+**FCL** = Full Closed Loop. A loop which needs no mealtime input from the user: no carb counting and no meal bolus. Further info → [Wiki - 'full closed loop'](../AdvancedOptions/FullClosedLoop.md) and see also **HCL**.
 
-**FGM** = Flash Glucose Monitor such as the Abbott Freestyle Libre. 更多信息 → 维基 - 'BG 来源'，另见 'CGM'。
+**FGM** = Flash Glucose Monitor such as the Abbott Freestyle Libre. Further info → [Wiki - 'BG source'](#Config-Builder-bg-source) and see also 'CGM'.
 
-**git** = 一种用于存储和下载 **AAPS** 源代码的工具。
+**git** = a tool used to store and download the **AAPS’** source code.
 
-**GitHub** = a web-based service that hosts the **AAPS** source code and its version control (tracking changes in files and coordinating work on them, especially for teams), and can also build the app. It is also necessary for **APK** updates. 更多信息 → 维基 - '更新 APK'。
+**GitHub** = a web-based service that hosts the **AAPS** source code and its version control (tracking changes in files and coordinating work on them, especially for teams), and can also build the app. It is also necessary for **APK** updates. Further info → [Wiki - 'update APK'](../Maintenance/UpdateToNewVersion.md).
 
 **Glimp** = an app to collect values from Freestyle Libre.
 
@@ -84,7 +84,7 @@
 
 **maxIOB** = 活性胰岛素总量上限。这是一项安全功能，可防止**AAPS**超出用户设定值输送胰岛素。 Further info → [Wiki - 'Maximum total IOB OpenAPS can’t go over'](#Open-APS-features-maximum-total-iob-openaps-cant-go-over).
 
-**min_5m_carbimpact** = 安全功能参数，当系统无法根据使用者的血糖反应确定碳水化合物吸收率时，该参数将作为默认碳水化合物衰减率的计算基准。 Further info → [Wiki - 'Preferences'](#Preferences-min_5m_carbimpact).
+**min_5m_carbimpact** = 安全功能参数，当系统无法根据使用者的血糖反应确定碳水化合物吸收率时，该参数将作为默认碳水化合物衰减率的计算基准。 Further info → [Wiki - 'min_5m_carbimpact'](#Preferences-min_5m_carbimpact).
 
 **Nightscout** = 开源项目，用于访问和报告 **CGM** 数据。 The central data hub for the user’s **AAPS** data and can generate reports to view the user’s historical **Nightscout** data, such as expected HbA1c, time in range or search for patterns in the data via percentile chart etc.
 
@@ -98,7 +98,7 @@
 
 **开环系统** = **AAPS**的一项功能，它会推荐调整方案，但需要用户在**AAPS**上手动执行这些调整。 Further info → [Wiki - 'Open Loop'](#KeyAapsFeatures-OpenLoop).
 
-**Oref0 / Oref1** = 敏感性检测及"参考设计实现版本0/1"。它是 OpenAPS 背后的关键算法 维基 - 敏感性检测
+**Oref0 / Oref1** = 敏感性检测及"参考设计实现版本0/1"。 It is the key algorithm behind OpenAPS. Further info → [Wiki - 'sensitivity detection'](../DailyLifeWithAaps/SensitivityDetectionAndCob.md).
 
 **OS-AID** = Open-Source Automated Insulin Delivery. An **AID** system built from open-source software, such as **AAPS**, **OpenAPS**, Loop or Trio. These systems are not formally approved by health bodies (FDA, NHS etc.) → see also **AID**.
 
@@ -132,15 +132,15 @@
 
 **TBB** = 总基础胰岛素（24小时基础率总和） → 参见**TBR** / **TDD**。
 
-**TBR** = 暂时基础率 → 参见**TBB** / **TDD**。
+**TBR** = temporary basal rate → see also **TBB** / **TDD**.
 
 **TDD** = 每日总剂量（每日餐前胰岛素+基础胰岛素） → 参见**TBB** / **TBR**。
 
-**TT** = 暂时目标，暂时增加/减少用户的**BG**目标（范围），例如用于进食或运动。 Further info → [Wiki - 'temp targets'](../DailyLifeWithAaps/TempTargets.md).
+**TT** = temporary target: temporary increase/decrease of the user’s **BG** target (range) e.g. for eating or sport activities. Further info → [Wiki - 'temp targets'](../DailyLifeWithAaps/TempTargets.md).
 
 **UAM** = 未报告的进食。检测因饮食、肾上腺素或其他因素导致的**血糖**水平显著升高，并尝试对此进行调整。 Further info → [Wiki - 'UAM'](#enable-uam) and see also **SMB**.
 
-**Virtual pump，虚拟泵** = **AAPS**的一项功能，允许用户试用**AAPS**的功能，或供使用无**AAPS**闭环驱动泵型的糖尿病患者使用 → 另见**开环系统**。
+**Virtual pump** = an **AAPS** feature which allows the user to try **AAPS’** functions, or lets PWD whose pump model has no **AAPS** driver use **AAPS** as an open loop → see also **Open Loop**.
 
 **Wallpaper** = **AAPS**背景图片，参见手机页面。
 

@@ -51,9 +51,9 @@ En general se reconoce que las personas con diabetes tipo 1 _recién_ diagnostic
 :class: danger
 Los inhibidores de SGLT-2, también llamados gliflozinas, impiden la reabsorción de glucosa en el riñón. Las gliflozinas bajan la glucosa de forma imposible de calcular, así que NO DEBES tomarlas mientras usas un sistema de lazo cerrado como AAPS. ¡Habría un riesgo importante de cetoacidosis y/o hipoglucemia! La combinación de este medicamento con un sistema que baja las tasas basales para subir la glucosa es especialmente peligrosa. 
 
-En resumen:
-- **Ejemplo 1: riesgo de hipoglucemia**
->En la comida usas **AAPS** para poner un bolo para 45 g de glucosa. El problema es que, sin que AAPS lo sepa, los inhibidores hacen que el cuerpo elimine parte de los carbohidratos. Así queda en tu cuerpo demasiada insulina para los carbohidratos absorbidos, y se produce una hipoglucemia.
+In a nutshell:
+- **Example 1: risk of Hypo**
+>During lunch, you use **AAPS** to bolus based on consuming 45 g of carbs. El problema es que, sin que AAPS lo sepa, los inhibidores hacen que el cuerpo elimine parte de los carbohidratos. Así queda en tu cuerpo demasiada insulina para los carbohidratos absorbidos, y se produce una hipoglucemia.
 
 - **Ejemplo 2: riesgo de cetoacidosis**
 >Los inhibidores eliminan parte de los carbohidratos en segundo plano, lo que baja tu glucosa. **AAPS** ordenará automáticamente a la bomba que reduzca la insulina, también la basal. Con el tiempo, tu glucosa puede quedarse por debajo del objetivo, hasta el punto de que el cuerpo no tenga suficiente insulina de fondo para absorber los carbohidratos, y se produce una cetoacidosis. Normalmente, en las personas con diabetes tipo 1 la cetoacidosis aparece porque falla la bomba, lo que activaría alertas en su teléfono y se notaría por una glucosa alta. Sin embargo, el peligro de las gliflozinas es que no habría alertas de AAPS, porque la bomba sigue funcionando y la glucosa puede seguir dentro del objetivo.
@@ -80,7 +80,7 @@ En las primeras etapas con **AAPS**, puede ser difícil conseguir que todos los 
 
 #### Tiempo para compilar la app y avanzar hasta el lazo completo
 
-El tiempo para compilar la app **AAPS** depende de tu nivel de experiencia y de tu capacidad técnica. Para usuarios sin experiencia, compilar **AAPS** puede llevar normalmente hasta medio día o un día entero (con ayuda de la comunidad). El proceso será mucho más rápido en las versiones nuevas de **AAPS**, a medida que ganes experiencia.
+The time to build the **AAPS** app depends on your level of expertise and technical ability. Para usuarios sin experiencia, compilar **AAPS** puede llevar normalmente hasta medio día o un día entero (con ayuda de la comunidad). El proceso será mucho más rápido en las versiones nuevas de **AAPS**, a medida que ganes experiencia.
 
 Varias partes de esta documentación te ayudan en el proceso de compilación:
 

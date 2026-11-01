@@ -114,7 +114,7 @@ If your **AAPS** data source is not xDrip but you can display BG data from the C
 
 ![imagine](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift was created from porting the original xDrip app to iOS and evolved to "xDrip for iOS" written **xDrip4iOS** .
+xDripSwift was created from porting the original xDrip app to iOS and evolved into "xDrip for iOS", written as **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
@@ -150,7 +150,7 @@ Grupul de Facebook [xDrip4iOS](https://www.facebook.com/groups/853994615056838/a
 * Apple iPad (Necesită software versiunea 13.0 sau mai târziu)
 * Google Android (salvați aplicația web pe ecranul de pornire)
 
-S-a raportat de către utilizatorii Sugarmate că poate fi folosit cu Apple CarPlay în SUA pentru a afișa citirile de glucoză în timpul conducerii. Încă nu s-a stabilit dacă acest lucru este posibil în țările din afara SUA. Dacă știți mai multe despre asta, vă rugăm să adăugați aici detalii la documentație completând o cerere de tragere (link) care este rapidă și ușor de făcut.
+S-a raportat de către utilizatorii Sugarmate că poate fi folosit cu Apple CarPlay în SUA pentru a afișa citirile de glucoză în timpul conducerii. Încă nu s-a stabilit dacă acest lucru este posibil în țările din afara SUA. If you know more about this, please add details in here to the documentation by completing a [pull request](../SupportingAaps/HowToEditTheDocs.md), which is quick and easy to do.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
@@ -173,13 +173,13 @@ Vedeți [aici](../Getting-Started/Watches.md).
 :local: true
 ```
 
-### Stivă M5
+### M5Stack
 
 ![imagine](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
 
 M5Stack este o cutie mică care poate fi programată pentru multe aplicații. Proiectul lui Martin [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) afișează valori și tendințe ale glicemiei senzorilor, IOB și COB. Este într-o cutie de plastic, dotată cu un ecran de culoare, slotul cardului microSD, 3 butoane, difuzor și baterie internă. Este un foarte bun monitor pentru glicemia și este relativ ușor de stabilit dacă ai un cont Nightscout. Utilizatorii îl rulează de obicei pe Wi-Fi-ul lor, dar unii utilizatori raportează că îl utilizează ca afișaj la motocicletă, printr-un hotspot Wi-Fi al telefonului.
 
-### Sugarpixel
+### SugarPixel
 
 SugarPixel este un dispozitiv pentru un sistem secundar de alertă pentru afișarea glicemiei pentru monitorizarea continuă a glucozei, care se conectează cu aplicația Dexcom sau cu aplicația Nightscout pe telefonul inteligent al utilizatorului. Dispozitivul afișează valorile glicemiei în timp real. This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customizable display options and native multi-user following.
 

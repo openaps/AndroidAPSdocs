@@ -23,7 +23,7 @@ Si vous traduisez pour la première fois, veuillez commencer par traduire les ch
 
 Vous pouvez commencer en tant que traducteur pour la documentation en parallèle ou plus tard.
 
-Vous pouvez voir l'état des traductions de l'application et de la documentation [ici](#StateOfTranslations).
+You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
 
 * Si vous voulez traduire **l'application** dans d'autres langues (merci), utilisez [crowdin](https://crowdin.com/project/androidaps).
 * Si vous voulez traduire la **documentation** dans d'autres langues (merci), utilisez [crowdin](https://crowdin.com/project/androidapsdocs). 

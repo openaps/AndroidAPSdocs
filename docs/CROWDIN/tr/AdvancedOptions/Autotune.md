@@ -78,7 +78,7 @@ Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
 
 - Sonuçlara güveniyorsanız, (giriş profili ile çıktı profili arasında düşük yüzdeli farklılık) "Profili etkinleştir" düğmesine tıklayabilir ve ardından doğrulamak için Tamam'a tıklayabilirsiniz.
 
-  - Activate Tuned profile will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
+  - "Activate profile" will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
   - If you already have a profile named "Tuned" in **Manage → Profile**, then this profile will be updated with calculated Autotune profile before the activation
 
   ![Otoayar profil etkinleştirme](../images/Autotune/Autotune_6.png)
@@ -123,7 +123,7 @@ The **Auto switch profile** feature is only available in Dev/Engineering mode.
 - **Auto switch profile** (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. Bu ayarı Açık olarak değiştirirseniz, giriş profili Ayarlanmış profil tarafından otomatik olarak güncellenecek ve etkinleştirilecektir.
   - **Be Careful, you must trust and verify during several following days, that after an update and activation of Tuned profile without modification, it improves your loop**
 
-- **Categorize UAM as basal** (default Off): This setting is for the users using AndroidAPS without any carbs entered (Full UAM). (Kapalı olduğunda) UAM'ın bazal olarak kategorize edilmesini önleyecektir.
+- **Categorize UAM as basal** (default Off): This setting is for the users using AAPS without any carbs entered (Full UAM). (Kapalı olduğunda) UAM'ın bazal olarak kategorize edilmesini önleyecektir.
   - Not: Bir gün boyunca tespit edilen en az bir saatlik karbonhidrat emiliminiz varsa, bu ayar ne olursa olsun (Açık veya Kapalı) "UAM" olarak sınıflandırılan tüm veriler bazal olarak kategorize edilir.
 - **Default tune days** (default 5): You can define the default value with this setting. Each time you select a new profile in the Autotune plugin, the **Number of days of data** will be replaced by this default value
 - **Use circadian IC/ISF** (default Off): see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
@@ -188,7 +188,7 @@ Note: for more information on how to set an automation rule, see [here](../Daily
 
   ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_17.png)
 
-- Then you can select the **Autotune profile** action (in the **Loop & insulin** group)
+- Then you can select the **Run Autotune** action (in the **Loop & insulin** group)
 
   ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_18.png)
 
@@ -212,7 +212,7 @@ Otoayar, veritabanınızda bulunan bilgilerle çalışır, bu nedenle AAPS yeni 
 
 Otoayar sadece bir yardımdır, hesaplanan profille hemfikir olup olmadığınızı düzenli olarak kontrol etmek önemlidir. Herhangi bir şüpheniz varsa, Otoayar (örneğin gün sayısını) ayarlarını değiştirin veya yerel profildeki sonuçları kopyalayın ve kullanmadan önce profili ayarlayın.
 
-Always use Autotune several days manually to check results before applying them. Ve yalnızca, Otoayar sonuçlarına tam olarak güvendiğinizde ve önceki profil ile hesaplanan profil arasında değerler, otomasyonu kullanmaya başladığınızdan bu yana küçükse kullanın. (Daha önce değil)
+Always use Autotune several days manually to check results before applying them. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile then you start to use Automation (Never before)
 
 - Otoayar, bazı kullanıcılar için çok iyi çalışabilir ve bazıları için çalışmaz, bu nedenle ** Otoayara güvenmiyorsanız, kullanmayın **
 

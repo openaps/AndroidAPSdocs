@@ -30,7 +30,7 @@ Insuline bestaat in verschillende sterktes, uitgedrukt in het aantal eenheden pe
 Een concentratie gebruiken met een apparaat dat er niet bij past is extreem gevaarlijk en kan een ernstige overdosis of onderdosis veroorzaken. **Controleer altijd drie keer of de insulineconcentratie past bij de specificaties van de spuit, pen of pomp.**
 ```
 
-## Wanneer gebruik je een niet-standaard concentratie?
+## When is a non-standard concentration used?
 
 Insulinepompen zijn gemaakt voor U100-insuline, maar sommige medische situaties vragen om een niet-standaard concentratie. Deze situaties vragen extreme voorzichtigheid en een zeer zorgvuldige aanpak.
 

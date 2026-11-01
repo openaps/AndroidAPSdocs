@@ -10,7 +10,7 @@ Når **AAPS** installeres for første gang, må hvert opplæringsmål fullføres
 
 **Opplæringsmål 1 til 8** leder deg fra oppsett av **AAPS** på telefonen din til «enkel» hybrid lukket loop. Dette tar omtrent 6 uker å fullføre. Du kan gå fram til og med **Opplæringsmål 5** med en virtuell pumpe (og bruke en annen metode for insulintilførsel i mellomtiden). **Opplæringsmål 9 og 10** er laget for å teste mer avanserte funksjoner i **AAPS**, med mål om bedre kontroll over diabetesen din. De tar opptil 3 måneder å fullføre, kanskje lenger. Mer om anslått tidsbruk finner du her: [Hvor lang tid tar det?](#preparing-how-long-will-it-take)
 
-I tillegg til å gå framover i **Opplæringsmål** kan du også, om nødvendig, fjerne fremdriften din og [gå tilbake til et tidligere opplæringsmål](#go-back-in-objectives).
+I tillegg til å gå framover i **Opplæringsmål** kan du også, om nødvendig, fjerne fremdriften din og [gå tilbake til et tidligere opplæringsmål](#CompletingTheObjectives-go-back-in-objectives).
 
 ## Sikkerhetskopier innstillingene dine
 
@@ -51,7 +51,7 @@ Merk – *Du må kanskje vente på neste sensormåling før **AAPS** gjenkjenner
 Oppgavene for å fullføre **Opplæringsmål 2** er:
 - Sett **Profilen** din til 90 % med en varighet på 10 min.
   - _Hint_: Trykk på profilnavnet på hovedskjermen for å åpne **Profil**-skjermen, bruk så **Aktiver**-knappen (▶) og sett prosent og varighet. Mer informasjon i [Profilbytte og profilprosent](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-  - _Merk_: **AAPS** godtar ikke basaldoser under 0,05 E/t. Hvis **Profilen** din har doser på 0,06 E/t eller lavere, må du lage en midlertidig **Profil** med høyere basaldoser før du fullfører denne oppgaven. Bytt tilbake til den vanlige **Profilen** din etter at du har fullført denne oppgaven.
+  - _Merk_: **AAPS** godtar ikke basaldoser under 0,05 E/t. Hvis **Profilen** din har doser på 0,05 E/t eller lavere, må du lage en midlertidig **Profil** med høyere basaldoser før du fullfører denne oppgaven. Bytt tilbake til den vanlige **Profilen** din etter at du har fullført denne oppgaven.
 - Simuler «å ta en dusj» ved å [koble fra pumpen](#AapsScreens-loop-status) i **AAPS** i 1 time.
   - _Hint_: trykk på loop-ikonet på hovedskjermen for å åpne Loop-dialogen, og velg så en varighet under **Koble fra pumpen**.
 - Avslutt «å ta en dusj» ved å koble til pumpen igjen.
@@ -94,7 +94,7 @@ Minste tid for å fullføre dette opplæringsmålet: **7 dager**. Dette er en ob
 - Bruk [**Midlertidige mål**](../DailyLifeWithAaps/TempTargets.md) når det trengs. Etter at du har behandlet en føling, bruk det forhåndsinnstilte midlertidige målet «Hypo» for å hindre at systemet overkorrigerer når blodsukkeret stiger igjen.
 - Hvis du fortsatt er i [Enkelmodus](#preferences-simple-mode) nå, er dette sannsynligvis et godt tidspunkt for å slå den av.
 
-For å redusere antallet foreslåtte basalendringer i åpen loop kan du fortsatt bruke tipsene i [**Opplæringsmål 3**](#objective-3-prove-your-knowledge). I tillegg kan du endre minste prosent for anbefalte basalendringer med innstillingen «**Minimumsendring i åpen loop**» under **Innstillinger → Loop**. Jo høyere verdien er, desto færre varsler om endringer får du.
+For å redusere antallet foreslåtte basalendringer i åpen loop kan du fortsatt bruke tipsene i [**Opplæringsmål 3**](#objectives-objective3). I tillegg kan du endre minste prosent for anbefalte basalendringer med innstillingen «**Minimumsendring i åpen loop**» under **Innstillinger → Loop**. Jo høyere verdien er, desto færre varsler om endringer får du.
 
 ![Minimumsendring i åpen loop](../images/OpenLoop_MinimalRequestChange2.png)
 
@@ -119,7 +119,7 @@ Du kan vurdere å sette [BS-målet i **Profilen**](#profile-glucose-targets) din
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-Hvis du kjører åpen loop med en virtuell pumpe, **stopp her**. Trykk på Kontroller på slutten av dette **Opplæringsmålet** først når du har gått over til en «ekte» pumpe som gir insulin.
+Hvis du kjører åpen loop med en virtuell pumpe, **stopp her**. Trykk på **Kontroller** på slutten av dette **Opplæringsmålet** først når du har gått over til en «ekte» pumpe som gir insulin.
 
 ```
 
@@ -167,14 +167,14 @@ Minste tid for å fullføre dette opplæringsmålet: **1 dag**. Dette er en obli
 
 - Velg **Lukket Loop** ved å trykke på [Loop-ikonet](#AapsScreens-loop-status) på hovedskjermen og velge **Lukket Loop** som kjøremodus. Bli i **Lukket loop** i 1 dag.
 
-- Øk sakte «Maksimal total IOB som OpenAPS ikke kan gå over» (i OpenAPS kalt «max-iob») over 0, til du finner innstillingene som fungerer best for deg.
+- Øk sakte «Maks IOB for SMB» (i OpenAPS kalt «max-iob») over 0, til du finner innstillingene som fungerer best for deg.
 
 Standardanbefalingen for denne innstillingen er «**gjennomsnittlig måltidsbolus + 3x max daglig basaldose**», der «max daglig basaldose» er den høyeste timeverdien i noe tidsrom av døgnet.
 
 ![max daglig basaldose](../images/MaxDailyBasal2.png)
 
 Denne anbefalingen bør ses på som et utgangspunkt. Hvis du bruker denne regelen, men opplever at AAPS gir for mye insulin når blodsukkeret stiger, må du kanskje:
-* senke verdien «Maksimal total IOB som OpenAPS ikke kan gå over»;
+* senke verdien «Maks IOB for SMB»;
 * gå gjennom **Profil**-innstillingene dine, og gjør bare én justering om gangen.
 
 Hvis du er svært insulinresistent, kan du alternativt øke **maxIOB**-verdien svært forsiktig.
@@ -202,7 +202,7 @@ I **Opplæringsmål 9** tar du for deg og bruker **«Super Micro Bolus (SMB)»**
 Minste tid for å fullføre dette opplæringsmålet: **28 dager**. Dette er en obligatorisk ventetid. Du kan ikke gå videre til neste opplæringsmål før denne tiden er ute.
 
 - [SMB-delen i denne dokumentasjonen](#Open-APS-features-super-micro-bolus-smb) og [omtalen av oref1 i openAPS-dokumentasjonen](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) må leses for å forstå **SMB** og begrepet **null-basal (zero-temping)**.
-- Når det er gjort, kan du [øke maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) for at **SMB-er** skal virke bedre. maxIOB omfatter nå all **IOB**, ikke bare oppsamlet basal. Denne grensen setter **SMB-er** på pause til IOB faller under verdien (_f.eks._ **maxIOB** er satt til 7 E, og en bolus på 8 E gis til et måltid: SMB-er settes på pause og gis ikke før **IOB** faller under 7 E). Et godt utgangspunkt er å sette **maxIOB** = **gjennomsnittlig måltidsbolus + 3x max daglig basaldose**, der «max daglig basaldose» er den høyeste timeverdien i noe tidsrom av døgnet. Se [opplæringsmål 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) som referanse.
+- Når det er gjort, kan du [øke maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) for at **SMB-er** skal virke bedre. maxIOB omfatter nå all **IOB**, ikke bare oppsamlet basal. Denne grensen setter **SMB-er** på pause til IOB faller under verdien (_f.eks._ **maxIOB** er satt til 7 E, og en bolus på 8 E gis til et måltid: SMB-er settes på pause og gis ikke før **IOB** faller under 7 E). Et godt utgangspunkt er å sette **maxIOB** = **gjennomsnittlig måltidsbolus + 3x max daglig basaldose**, der «max daglig basaldose» er den høyeste timeverdien i noe tidsrom av døgnet. Se [opplæringsmål 7](#objectives-objective7) som referanse.
 - Vurder karbohydratopptaket ditt, og vurder å endre parameteren «min_5m_carbimpact» under [Innstillinger → Absorpsjonsinnstillinger → min_5m_carbimpact](#Preferences-min_5m_carbimpact) hvis du synes det er for sakte eller for raskt.
 
 (objectives-objective10)=

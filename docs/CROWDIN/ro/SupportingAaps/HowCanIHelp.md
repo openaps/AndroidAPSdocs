@@ -23,7 +23,7 @@ Dacă traduceți ceva pentru prima dată, vă rugăm să începeți cu traducere
 
 Sunteți bineveniți să începeți ca traducător pentru documentație în paralel sau mai târziu.
 
-Puteți verifica starea traducerilor în diferite limbi pentru aplicație și documentație [aici](#StateOfTranslations).
+You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
 
 * Dacă doriți să traduceți **aplicația** în alte limbi (mulțumesc), vă rugăm să folosiți [crowdin](https://crowdin.com/project/androidaps).
 * Dacă doriți să traduceți **documentația** în alte limbi (mulțumesc), vă rugăm să folosiți [crowdin](https://crowdin.com/project/androidapsdocs). 

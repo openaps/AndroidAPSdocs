@@ -19,7 +19,7 @@ Miej realistyczne oczekiwania co do wyników, które można osiągnąć, gdy wyb
 
 Osiągnięcie żądanego celu **BG** po ustawieniu **celu tymczasowego** może trwać około 30 minut lub dłużej. **AAPS** nie może osiągnąć celu **BG** natychmiast. Pamiętaj o tym, gdy wybierasz **cel tymczasowy**.
 
-Poniższe sekcje opisują funkcje **celu tymczasowego Ćwiczenia**, **celu tymczasowego Wkrótce posiłek** i **celu tymczasowego Hipo**. Pokazane wartości to ustawienia domyślne — możesz [dostosować każdy preset](#TempTargets-change-preset-defaults) do swoich potrzeb.
+The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. Pokazane wartości to ustawienia domyślne — możesz [dostosować każdy preset](#TempTargets-change-preset-defaults) do swoich potrzeb.
 
 ### TT - Ćwiczenia
 
@@ -193,9 +193,9 @@ Czasem po zjedzeniu węglowodanów na leczenie hipoglikemii **BG** może szybko 
 
 Niektórzy użytkownicy chcą uniknąć podawania **SMB** w czasie **celu tymczasowego Hipo**. Robisz to, wyłączając *'Włącz SMB z wysokim tymczasowym poziomem docelowym'* w **Ustawienia** → **OpenAPS SMB** (zobacz niżej):
 
-- Dla zaawansowanych (zadanie 9): możesz włączyć *„Wysoki cel tymczasowy zwiększa wrażliwość”* dla **celów tymczasowych** od 100 mg/dl (5,6 mmol/l) wzwyż w OpenAPS SMB — wtedy **AAPS** będzie bardziej wrażliwy.
+- Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
 
-- Dla zaawansowanych (zadanie 9): możesz wyłączyć *„Włącz SMB z wysokim tymczasowym poziomem docelowym”*. Wtedy **AAPS** nie poda SMB, gdy działa wysoki cel tymczasowy, nawet jeśli **AAPS** ma COB > 0, włączone jest „Włącz SMB z niskim tymczasowym poziomem docelowym” lub „Zawsze włącz SMB” i OpenAPS SMB jest aktywny.
+- Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
 
 Uwaga: jeśli otworzysz **okno Węglowodany**, gdy Twoja glukoza jest niższa niż 72 mg/dl lub 4 mmol/l, **AAPS** sam zaznaczy przełącznik **Rozpocznij TT Hipo**.
 
@@ -219,9 +219,9 @@ Dodatkowo, jeśli *'Włącz SMB z wysokim tymczasowym poziomem docelowym'* jest 
 
 ## Cel tymczasowy Wkrótce posiłek
 
-**Cel tymczasowy Wkrótce posiłek** może pomóc łagodnie obniżyć **BG** i zapewnić odpowiednią ilość **IOB** przed jedzeniem.
+**Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target -Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Zwykle, dopóki nie masz doświadczenia z **AAPS**, musisz liczyć się z podawaniem bolusa przed posiłkiem także przy **celu tymczasowym Wkrótce posiłek**. Dotyczy to szczególnie diety z dużą ilością węglowodanów.
+This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
 
 Więcej o „trybie Eating soon” możesz przeczytać w artykule ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) lub [tutaj](https://diyps.org/tag/eating-soon-mode/).
 

@@ -201,18 +201,18 @@ The *Auth* column in the tables below, indicates whether such a strong authentic
 
 ### CGM数据
 
-| 指令         | 身份验证 | 功能与*回复*                                                                                                                                    |
-| ---------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| BG         | 否    | 回复: last BG, delta, IOB (bolus and basal), COB<br/>*Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)* |
-| CAL 5.6/90 | 是    | 将CGM校准为5.6/90的值<br/>（使用适合您的葡萄糖单位的值）<br/>仅在**AAPS**中 的<br/>*已发送校准*正确设置后才有效。                                               |
+| 指令         | 身份验证 | 功能与*回复*                                                                                                                                                                                                                           |
+| ---------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BG         | 否    | 回复: last BG, delta, IOB (bolus and basal), COB<br/>*Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)*                                                                                        |
+| CAL 5.6/90 | 是    | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent. Receiving must be enabled in xDrip+.* |
 
 ### 胰岛素泵
 
-| 指令                   | 身份验证 | 功能与*回复*                                                                                                                           |
-| -------------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------- |
-| 泵                    | 否    | 命令为：PUMP （这里是翻译工具的bug，而且还没找到怎么改）<br> 最后连接：1分钟前<br/>临时基础率：0.00U/h @11:38 5/30分钟<br/>体内胰岛素活性：0.5U 剩余量：34U 电池：100% |
-| PUMP DISCONNECT *30* | 是    | 断开泵连接*30*分钟                                                                                                                       |
-| PUMP CONNECT         | 是    | 重新连接泵                                                                                                                             |
+| 指令                   | 身份验证 | 功能与*回复*                                                                                              |
+| -------------------- | ---- | ---------------------------------------------------------------------------------------------------- |
+| 泵                    | 否    | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP DISCONNECT *30* | 是    | 断开泵连接*30*分钟                                                                                          |
+| PUMP CONNECT         | 是    | 重新连接泵                                                                                                |
 
 ### 基础率
 
@@ -229,14 +229,14 @@ Some pumps take a temp basal only in percent, others only in U/h. If you use the
 
 ### 闭环（Loop）
 
-| 指令                | 身份验证 | 功能与*回复*                                                                                                              |
-| ----------------- | ---- | -------------------------------------------------------------------------------------------------------------------- |
-| LOOP STATUS       | 否    | 响应取决于实际状态：<br/> - *闭环已禁用* 如果循环被禁用或LGS（低血糖暂停）<br/>- *循环已启用* 如果循环是闭环或开环<br/>- *已暂停（10分钟）* 如果循环已断开或暂停 |
-| LOOP STOP/DISABLE | 是    | 泵将恢复到预编程的基础率。 <br/>*闭环已被禁用*                                                                                    |
-| LOOP SUSPEND 20   | 是    | *闭环将暂停20分钟*                                                                                                          |
-| LOOP RESUME       | 是    | *闭环已恢复*                                                                                                              |
-| LOOP CLOSED       | 是    | *当前闭环模式：闭环*                                                                                                          |
-| LOOP LGS          | 是    | *当前循环模式：低血糖暂停*                                                                                                       |
+| 指令                | 身份验证 | 功能与*回复*                                                                                                                                                                                                                                                                            |
+| ----------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LOOP STATUS       | 否    | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled<br/> - *Loop is enabled* if the loop is closed, open or LGS<br/> - *Pump disconnected* if the pump is disconnected<br/> - *Suspended (10 m)* if the loop is suspended |
+| LOOP STOP/DISABLE | 是    | 泵将恢复到预编程的基础率。 <br/>*闭环已被禁用*                                                                                                                                                                                                                                                  |
+| LOOP SUSPEND 20   | 是    | *Loop suspended*                                                                                                                                                                                                                                                                   |
+| LOOP RESUME       | 是    | *闭环已恢复*                                                                                                                                                                                                                                                                            |
+| LOOP CLOSED       | 是    | *Current running mode: Closed Loop*                                                                                                                                                                                                                                                |
+| LOOP LGS          | 是    | *Current running mode: Low Glucose Suspend*                                                                                                                                                                                                                                        |
 
 ### 大剂量
 
@@ -348,6 +348,6 @@ If the other app is installed on multiple phones make sure to deactivate upload 
 (sms-commands-too-many-messages)=
 ### 我从SMS命令中收到了太多短信。我可以减少频率或让它们停止吗？
 
-Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include Whatsapp, Lime, Telegram, and Facebook Messenger.
+Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include WhatsApp, LINE, Telegram, and Facebook Messenger.
 
-It is possible to disable the "Profile changed" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly**  `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+It is possible to disable the "Basal profile in pump updated" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly** `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.

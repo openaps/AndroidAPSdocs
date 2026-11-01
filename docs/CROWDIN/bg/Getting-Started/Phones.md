@@ -30,7 +30,7 @@
 
 За да запишете своя тест на дадена хардуерна конфигурация, моля, попълнете този [формуляр](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). След като попълните данните във формуляра, таблицата се обновява автоматично на всеки 5 минути.
 
-При проблеми с таблицата се свържете с човека, който я поддържа, *@theodoor5137*, в Discord или вижте страницата [Къде мога да получа помощ? ](../GettingHelp/WhereCanIGetHelp.md).
+Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
 
 ## Не намерих моя телефон
 

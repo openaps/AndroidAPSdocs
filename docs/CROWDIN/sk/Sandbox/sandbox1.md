@@ -54,7 +54,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Štítok uprostred [ničoho](#sandbox1-in-the-middle-of-nowhere) Toto je naopak štítok k [](#sandbox1-this-is-another-test) a mal by zobraziť svoj názov
 
-Odkazy s kotvou:
+Links with anchor:
 - [ako dlho to bude trvať?](#preparing-how-long-will-it-take)
 - [Nastavenia NSClient v Nastaveniach](#Preferences-nsclient).
 - [predikčné čiary v PREHĽADE AAPS](#aaps-screens-prediction-lines) na nadpis 4. úrovne

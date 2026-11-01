@@ -15,7 +15,7 @@
 ![Bomba DanaR](../images/danar1.png)
 
 * Na bomba, vá para Main Menu > Setting > Discovery
-* Nas configurações do telefone, vá para Bluetooth, procure dispositivos próximos, selecione o número de série do seu DanaR e digite a sua senha (a senha de pareamento é 0000). Se o DanaR não aparecer na busca, reinicie o telefone, retire a bateria do DanaR, coloque-a de volta e repita estes dois passos.
+* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). Se o DanaR não aparecer na busca, reinicie o telefone, retire a bateria do DanaR, coloque-a de volta e repita estes dois passos.
 
 * No **AAPS**, abra o **menu** (☰) no canto superior esquerdo, vá para **Configuração** > **Bomba** e selecione o tipo de DanaR que você tem (**DanaR**, **DanaR Coreana** ou **DanaRv2**).
   

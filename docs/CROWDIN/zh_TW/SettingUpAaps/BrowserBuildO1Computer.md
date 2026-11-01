@@ -17,21 +17,21 @@
 
 打開網頁 [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
 
-安裝 Simple Web Server</br> 如果您使用 Windows 或 Mac，可以從 Microsoft Store 或 Mac App Store 安裝。</br> 如果瀏覽器詢問您是否要開啟商店應用程式，請允許。</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)</br>
+Install Simple Web Server<br/> If you are a Windows or Mac user, you can install it from the Microsoft Store or the Mac App Store.<br/> If your browser asks whether to open the store app, allow it.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/>
 
 在 Mac 上的範例：
 
-- 取得 → 安裝 → 開啟</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)</br></br>
+- 取得 → 安裝 → 開啟<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)<br/><br/>
 
-- 按一下 「Get Started」鈕</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)</br></br>
+- 按一下 「Get Started」鈕<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)<br/><br/>
 
-- 點選 New Server</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)</br></br>
+- 點選 New Server<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)<br/><br/>
 
-- 在文件夾路徑中，選擇包含 aaps-ci-preparation.html 的資料夾，然後按一下「Create Server」鈕。</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)</br></br>
+- 在文件夾路徑中，選擇包含 aaps-ci-preparation.html 的資料夾，然後按一下「Create Server」鈕。<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)<br/><br/>
 
-- 看到這個畫面表示伺服器已啟動。</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)</br></br>
+- 看到這個畫面表示伺服器已啟動。<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)<br/><br/>
 
-- 請勿關閉 Simple Web Server。請切換到您的瀏覽器並打開</br> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)</br></br>
+- 請勿關閉 Simple Web Server。 Please switch to your browser and open<br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
 
 - 後續步驟請參考下方影片，從 1 分 37 秒開始。
 

@@ -30,7 +30,7 @@ Inzulín sa vyrába v rôznych silách, ktoré sú určené počtom jednotiek na
 Použitie koncentrácie so zariadením, ktoré pre ňu nie je určené, je mimoriadne nebezpečné a môže spôsobiť vážne predávkovanie alebo poddávkovanie. **Vždy trikrát skontrolujte, či koncentrácia inzulínu zodpovedá špecifikácii striekačky, pera alebo pumpy.**
 ```
 
-## Kedy použiť neštandardnú koncentráciu?
+## When is a non-standard concentration used?
 
 Hoci sú inzulínové pumpy určené pre inzulín U100, niektoré špecifické zdravotné situácie vyžadujú neštandardné koncentrácie. Tieto prípady si vyžadujú mimoriadnu opatrnosť a veľmi starostlivé riadenie.
 

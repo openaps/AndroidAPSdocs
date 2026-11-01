@@ -88,12 +88,12 @@ IEEE 控制系統雜誌，ResearchGate [人工胰臟與餐點控制：1型糖尿
 
 ### 血糖指數與血糖影響
 
-對於 **UAM** 模式而言，隨著“血糖影響”（'EBG'）的上升，挑戰也隨之增加。
+The challenge for the **UAM** mode rises with rising 'Effect on Blood Glucose' ('EBG')
 
 - 從適中/低開始，調整您的 **設定檔** 設定。只有這樣，"測試" 用高 **EBG** 的餐點。
 - 如消費非常高的 **EBG**，可考慮進行低於 50% 的初始注射。
 
-1) **無 EBG**：例如新鮮肉類、魚類、蛋、培根、油、起司。 2) **低 EBG**：例如新鮮蔬菜和漿果、蘑菇、堅果、牛奶、優格、嫩起司。 3) **適中 EBG**：例如全穀麵包/麵條、馬鈴薯、野生米、燕麥、乾果。 4) **高 EBG**：例如小麥麵包、法棍、吐司、鬆餅、餅乾、馬鈴薯泥、麵條、米飯。 5) **非常高 EBG**：例如糖、甜飲料、水果汁、玉米片、糖果、零食、鹹扭結餅。
+1) **無 EBG**：例如新鮮肉類、魚類、蛋、培根、油、起司。 2) **低 EBG**：例如新鮮蔬菜和漿果、蘑菇、堅果、牛奶、優格、嫩起司。 3) **適中 EBG**：例如全穀麵包/麵條、馬鈴薯、野生米、燕麥、乾果。 4) **High EBG**: e.g. wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **非常高 EBG**：例如糖、甜飲料、水果汁、玉米片、糖果、零食、鹹扭結餅。
 
 ![血糖指數與血糖影響](../images/fullClosedLoop01.png)
 
@@ -108,7 +108,7 @@ IEEE 控制系統雜誌，ResearchGate [人工胰臟與餐點控制：1型糖尿
 
 透過 **全閉環(FCL)**，演算法已調整以檢測 **UAM**並自動釋放胰島素以抵消 **血糖** 的上升。高**臨時目標** 和較低**設定檔比例**（在用餐開始時已生效）應在任何活動之前提前設定。
 
-不尋常或不穩定的運動活動水平對 **全閉環(FCL)** 造成困難。在運動前做好計畫是必要的（尤其是如果您想降低在運動期間需要急救碳水化合物/零食的需求）。活動量較大的一天結束後，建議等晚餐完全消化，再為夜間設定較低的 **百分比設定檔**：在 **自動化** 中設定較高的（>100 mg/dL）**血糖** 目標，並在 **AAPS** **設定** 中選取「目標值較高時不給予 **SMB**」。
+不尋常或不穩定的運動活動水平對 **全閉環(FCL)** 造成困難。在運動前做好計畫是必要的（尤其是如果您想降低在運動期間需要急救碳水化合物/零食的需求）。 After an active day it is recommended that a lower  **Percentage Profile** is set for overnight after the evening meal is fully digested: set in **Automations** an elevated (>100 mg/dL) **BG**  target, with **Enable SMB with high temp target** switched off in **AAPS** **Settings**.
 
 ## 兒童的挑戰
 
@@ -151,7 +151,7 @@ IEEE 控制系統雜誌，ResearchGate [人工胰臟與餐點控制：1型糖尿
 
 **AAPS** Master 版本在 **HCL** 模式下，允許設定最高 130% 的臨時 **設定檔**。提升**ISF**可以分為三個步驟：
 
-- 步驟 1 - 檢查**預設**中適用於此餐飲時間的**ISF**，查看例如Autosens是否建議進行修改，以照顧當前（過去幾小時）的胰島素敏感度狀況。
+- Step 1 -  review the **ISF** applicable for this meal time hour within the **Profile**, and see whether e.g. Autosens suggest a modification that takes care of the current (last few hours’) insulin sensitivity status of the body.
 - 步驟 2 - 應用一個因子（1/預設%, 如在**Automation**中設置）來提升**ISF**。
 - 步驟 3 - 確認建議的**ISF**是否在設定的安全限制內。
 
@@ -169,9 +169,9 @@ IEEE 控制系統雜誌，ResearchGate [人工胰臟與餐點控制：1型糖尿
 
 ### 當血糖上升時自動執行大劑量的 SMB
 
-成功使用 **FCL** 的關鍵在於：**用餐造成血糖開始上升時，循環必須盡快給予非常大的自動 SMB 注射**，才能「追上」所需的 **IOB**（請與你在 **HCL** 下針對類似餐點通常自行注射的劑量比較！）
+The key to successful **FCL**: **at the beginning of BG increases from meals, very large automatic SMBs must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in **HCL**!)
 
-要做到這一點，應分析你使用 **HCL** 時的資料，判斷哪些 **delta** 可能與用餐無關，哪些 delta 則可能與用餐有關。
+To achieve this, data from your **HCL** should be analyzed to determine which **deltas** might not be meal-related and which might be.
 
 - 由於你可以將 **自動化** 設定在預先定義的時間範圍內，因此只需要分析該時段的資料。
 - 如果您進食的餐點種類非常不同（例如：相當高碳水化合物的早餐，但低碳水化合物的午餐），您可以選擇為每個時段設置兩組不同的**Automations**。
@@ -218,7 +218,7 @@ IEEE 控制系統雜誌，ResearchGate [人工胰臟與餐點控制：1型糖尿
 
 對於特殊餐點，或者如果隨後進行運動，可以迅速在您的**Automation**中設定不同的**iob**門檻。
 
-Automation(#3)，“iobTH 達到 => **SMBs** 關閉”，這定義了結束（或暫停，直至另一波與碳水化合物相關的上升來襲）強烈的**SMB**增強。
+Automation (#3), "iobTH reached => **SMBs** off”, is defined to end (or pause, until another wave of carb-related rise hits) the aggressive **SMB** boosting.
 
 ![自動化 #3：IOB 達 5.5 以上，且目前沒有執行臨時目標時，設定臨時目標為 111 mg/dL。](../images/fullClosedLoop04.png)
 
@@ -233,7 +233,7 @@ Automation(#3)，“iobTH 達到 => **SMBs** 關閉”，這定義了結束（�
 **注意：自動化 #3 僅在沒有啟動 TT 時有效。** 因此，如果你使用了即將用餐 TT，必須在那段時間結束，通常應在餐後 30-40 分鐘結束。
 
 完成這一點的方法之一是設置一個 **自動化** 條件，以結束即將運行的「即將開始用餐(臨時目標)」，條件是 **iob** > 65% * iobTH。
-> 運用「即將開始用餐(臨時目標)」的方法 一些循環使用者通過按下臨時目標按鈕，或者在用餐時間段相對固定的情況下自動降低 **個人設置** **血糖** 目標，大約在餐點開始前一小時或更早時設置「即將開始用餐(臨時目標)」，以確保低的起始 **血糖** 和稍微增加的 **iob**。但假設 **全閉環(FCL)** 的目標始終朝著預設值移動，這可能不會產生太多效果，而你可能更喜歡定義一個 **自動化**，在認識到用餐開始時（葡萄糖增量，或加速 = 增量 > 平均增量）設置「即將開始用餐(臨時目標)」。在這一階段，較低的**臨時目標**是重要的，因為任何 **SMB** 都是通過你的循環系統使用（預測葡萄糖減去臨時目標）/敏感度計算出來的，因此小的臨時目標使得所需的胰島素需求變得更大。
+> 運用「即將開始用餐(臨時目標)」的方法 一些循環使用者通過按下臨時目標按鈕，或者在用餐時間段相對固定的情況下自動降低 **個人設置** **血糖** 目標，大約在餐點開始前一小時或更早時設置「即將開始用餐(臨時目標)」，以確保低的起始 **血糖** 和稍微增加的 **iob**。 But, assuming the **FCL** is always en route towards target, this might not yield much and you may prefer to define an **Automation** that sets an EatingSoonTT at recognition of meal start (glucose delta, or acceleration = delta > avg delta). 在這一階段，較低的**臨時目標**是重要的，因為任何 **SMB** 都是通過你的循環系統使用（預測葡萄糖減去臨時目標）/敏感度計算出來的，因此小的臨時目標使得所需的胰島素需求變得更大。
 
 給予第一批提高劑量的 **SMB** 後，你設定的 iobTH 和 **自動化** #3 應能取得良好平衡，在限制血糖峰值的同時，也避免餐後低血糖。
 
@@ -332,7 +332,7 @@ Automation(#3)，“iobTH 達到 => **SMBs** 關閉”，這定義了結束（�
 - 餐後胰島素「尾部」問題
     - 你可能需要吃零食（如果預測低血糖）或服用葡萄糖片（如果已經處於低血糖區域）。但請注意，循環系統告訴你的所需碳水化合物量很可能被誇大，因為循環系統完全不知道你攝入了多少碳水化合物（而你可能能夠猜測還有多少碳水化合物，來自脂肪和蛋白質，仍在等待吸收）。
     - 一個有價值的信息是問題是否主要源於血糖上升階段。此時，設定一個較低的活性胰島素門檻值可能是一個簡單的解決方案。
-    - 如果經常需要額外的碳水化合物，記下所需的碳水化合物克數（不包括你最終攝入過多的部分，因為這需要額外的胰島素）。然後使用你的設定檔 IC 值來估算 **SMB** 應該交付多少的胰島素，然後基於此資訊進行調整（關於 **百分比設定檔** 在 **Automations** 中，或可能還有你的設定 iobTH）。這可能與血糖偏高時給予的**SMB**有關，也可能與**血糖**上升期間增加的**SMB**有關。
+    - 如果經常需要額外的碳水化合物，記下所需的碳水化合物克數（不包括你最終攝入過多的部分，因為這需要額外的胰島素）。然後使用你的設定檔 IC 值來估算 **SMB** 應該交付多少的胰島素，然後基於此資訊進行調整（關於 **百分比設定檔** 在 **Automations** 中，或可能還有你的設定 iobTH）。 This may relate to the **SMBs** given when glucose was high, or also to the **SMBs** during the **BG** rise.
     - 很可能你不得不接受更高的**血糖**峰值，而不是降低。也可以調整飲食，選擇碳水化合物較少、蛋白質和脂肪較多的食物。
 
 

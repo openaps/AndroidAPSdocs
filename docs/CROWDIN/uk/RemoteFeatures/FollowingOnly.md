@@ -114,7 +114,7 @@ xDrip можна використовувати як послідовника.
 
 ![зображення](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift створено перенесенням оригінального застосунку xDrip на iOS. Потім він розвинувся в «xDrip for iOS», що пишеться **xDrip4iOS** .
+xDripSwift was created from porting the original xDrip app to iOS and evolved into "xDrip for iOS", written as **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
@@ -150,7 +150,7 @@ xDripSwift створено перенесенням оригінального 
 * Apple iPad (потрібна версія системи 13.0 або новіша)
 * Google Android (збережіть вебзастосунок на головний екран)
 
-Користувачі Sugarmate повідомляють, що у США його можна використовувати з Apple CarPlay, щоб бачити показники глюкози під час водіння. Поки невідомо, чи це можливо в інших країнах. Якщо ви знаєте більше, будь ласка, додайте подробиці сюди в документацію через pull request (посилання). Це швидко і просто.
+Користувачі Sugarmate повідомляють, що у США його можна використовувати з Apple CarPlay, щоб бачити показники глюкози під час водіння. Поки невідомо, чи це можливо в інших країнах. If you know more about this, please add details in here to the documentation by completing a [pull request](../SupportingAaps/HowToEditTheDocs.md), which is quick and easy to do.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
@@ -173,13 +173,13 @@ Spike можна використовувати як основний прийм
 :local: true
 ```
 
-### M5 stack
+### M5Stack
 
 ![зображення](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
 
 M5Stack — це маленька коробка, яку можна запрограмувати для багатьох задач. Проєкт Мартіна [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) показує значення глюкози сенсора і тренди, IOB і COB. Це пластикова коробка з кольоровим дисплеєм, слотом для карти micro SD, 3 кнопками, динаміком і вбудованим акумулятором. Це чудовий монітор цукру в крові, і його відносно легко налаштувати, якщо у вас є обліковий запис Nightscout. Зазвичай його використовують через домашній Wi-Fi, але деякі користувачі показують на ньому дані під час їзди на мотоциклі, підключивши його до точки доступу Wi-Fi телефону.
 
-### Sugarpixel
+### SugarPixel
 
 SugarPixel — це пристрій для додаткового показу глюкози і сповіщень при безперервному моніторингу глюкози. Він підключається до застосунку Dexcom або Nightscout на смартфоні користувача. Пристрій показує рівень цукру в крові в реальному часі. Цей апаратний монітор CGM має звукові сигнали з випадковими тонами (дуже гучні), вібросигнали для людей з порушенням слуху, налаштовуваний вигляд і вбудоване стеження для кількох користувачів.
 

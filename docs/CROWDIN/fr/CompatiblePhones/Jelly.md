@@ -14,7 +14,7 @@
 
 **Inconvénients**
 
-* Recommandé uniquement pour des boucleurs expérimentés (certains paramètres ne sont pas reconnaissables, vous devez savoir par l'expérience acquise avec un smartphone android AAPS, comment et où ces paramètres sont situés. Certains boutons AAPS sont difficiles à toucher : il faut un doigt précis, cela ne marche pas avec de gros doigts.)
+* Recommended only for experienced loopers. Some settings are not easy to recognize: you have to know from experience with a big Android AAPS phone how and where things are located. Some AAPS buttons are small and hard to tap: you need a precise touch, not stubby fingers.
 * Peut uniquement être utilisé comme "téléphone de boucle". Il est préférable d'avoir un smartphone normal dans votre poche. 
 
 ### Optimisation de l'autonomie de la batterie
@@ -43,6 +43,6 @@ N'oubliez pas de désactiver Google Play Protect.
 
 ### Connexion à distance pour l'apk Wear
 
-Pour certaines montres connectées, comme la Samsung Galaxy, l'option « Remote Connection » (connexion à distance) dans les fonctions avancées de la Samsung Galaxy doit être **activée** pour utiliser le Jelly, **Wear.apk** & **AAPS** à distance via le Wi-Fi.
+For certain smart watches, like the Samsung Galaxy, 'Remote connection' under Advanced features in the Galaxy Wearable app must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
 
 ![Galaxy Wearable, Fonctions avancées, Connexion à distance activée](../images/wearos/galaxy_wearable_remote_connection.png)

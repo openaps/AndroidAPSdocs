@@ -26,7 +26,7 @@ The eCarbs on the main screen: the number in brackets in the **COB** field shows
 
 In the [Bolus wizard](#aaps-screens-bolus-wizard), three buttons below the **Carbs** field let you choose how fast your meal is absorbed. Pick one before you confirm. Depending on the type, **AAPS** takes a part of the carbs you typed as normal carbs, and adds [extended carbs ("eCarbs")](#Extended-Carbs-extended-carbs-ecarbs) later for slow, rich meals. Press the **(i)** icon next to the buttons to see the typical foods for the selected type and what it does to your carbs.
 
-| Type                | Typical foods (as listed in the app)                                                                 | Carbs now, used for the bolus | eCarbs added                                         |
+| Type                | Typical foods (examples from the app)                                                                | Carbs now, used for the bolus | eCarbs added                                         |
 | ------------------- | ---------------------------------------------------------------------------------------------------- | ----------------------------- | ---------------------------------------------------- |
 | **Bread** (default) | Bread, savory pastries, yogurt, fruit, potatoes, rice, oatmeal, vegetables                           | 100 %                         | 无                                                    |
 | **Cake**            | Dumplings, pasta, Asian dishes rich in carbs and fats, sweet and yeast pastries, cereals, honey, jam | 90 %                          | 20 %, starting 60 minutes later, spread over 2 hours |
@@ -60,7 +60,7 @@ For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carb
 **重要注意事项**：当然，您需要尝试并确定哪些具体值对您有效。您可能还需要仔细调整*“限制SMB的基础分钟数”*设置，以使算法更激进或更保守。对于低碳水化合物、高脂肪/蛋白质的餐食，可能只使用eCarbs而无需手动输注就足够了（请参阅上面的博客文章）。当生成eCarbs时，还会创建一个Careportal备注来记录所有输入，以便更容易地迭代和改进输入。
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## 扩展大剂量及其在闭环环境中为何不起作用？
+## Extended boluses and why they don't work in a closed-loop environment
 
 如上所述，扩展大剂量或多波大剂量在闭环环境中实际上并不起作用。 [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 

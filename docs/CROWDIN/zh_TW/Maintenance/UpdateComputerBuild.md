@@ -5,7 +5,7 @@
 **AAPS** 無法下載，因為這涉及醫療設備的法規。自行建置應用程式以供個人使用是合法的，但你不得將副本提供給他人！詳細資訊請參閱 [FAQ 頁面](../UsefulLinks/FAQ.md)。
 
 ```{note}
-如果你想在新電腦上建立 **AAPS**：請將你的備份金鑰存檔複製到新電腦上。然後按照 [初始建置 **AAPS** 程序](../SettingUpAaps/BuildingAaps.md) 的步驟，而不是這個指導。唯一的不同之處在於，你可以選擇你在新電腦上複製的金鑰存檔，而不必建立新的金鑰存檔。
+In case you want to build **AAPS** on a new computer: copy your back-up keystore file to the new computer. 然後按照 [初始建置 **AAPS** 程序](../SettingUpAaps/BuildingAaps.md) 的步驟，而不是這個指導。唯一的不同之處在於，你可以選擇你在新電腦上複製的金鑰存檔，而不必建立新的金鑰存檔。
 ```
 
 ## 使用 Android Studio 將 AAPS 更新至新版本的總覽
@@ -94,6 +94,6 @@ Update-to-new-version-build-the-signed-apk)=
 
 先深呼吸！
 
-然後查看專門頁面[問題排除 Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)，看看你的問題是否已經紀錄在案！
+Then check if your problem is already documented on the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 如果你需要進一步幫助，請聯繫其他**AAPS**使用者，透過[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)。

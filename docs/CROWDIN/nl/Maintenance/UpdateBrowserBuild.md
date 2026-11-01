@@ -9,7 +9,7 @@ Heb je AAPS gebouwd met **AAPS Builder**? Dan heb je deze pagina niet nodig: zie
 **AAPS** kun je niet downloaden, vanwege de regels voor medische hulpmiddelen. Je mag de app legaal bouwen voor eigen gebruik, maar je mag geen kopie aan anderen geven! Zie de [FAQ-pagina](../UsefulLinks/FAQ.md) voor meer informatie.
 
 ```{note}
-Wil je **AAPS** voor het eerst met een browser bijwerken? Kopieer dan je back-up van het keystore-bestand naar je Google Drive. Volg daarna de [procedure om **AAPS** in de browser te bouwen](../SettingUpAaps/BrowserBuild.md) in plaats van deze handleiding. Maak geen nieuwe keystore, maar kies de keystore die je van je computer hebt gekopieerd.
+In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Volg daarna de [procedure om **AAPS** in de browser te bouwen](../SettingUpAaps/BrowserBuild.md) in plaats van deze handleiding. Maak geen nieuwe keystore, maar kies de keystore die je van je computer hebt gekopieerd.
 Dit hoeft alleen de eerste keer. Voor de volgende updates kun je deze handleiding volgen.
 ```
 
@@ -57,7 +57,7 @@ Let op: als je je kopie van AndroidAPS per ongeluk hebt gewijzigd, zie je dit sc
 
 ![Ongewenste wijzigingen weggooien](../images/update/CI/GitHubUpdate4.png)
 
-Je hebt nu je eigen kopie gesynchroniseerd (bijgewerkt) met de nieuwste release van Android APS. Goed gedaan.
+You have now synchronized (updated) your own copy with the latest release of **AAPS**. Goed gedaan.
 
 ![Repo gesynchroniseerd](../images/update/CI/GitHubUpdate5.png)
 
@@ -83,7 +83,7 @@ Je hebt nu je eigen kopie gesynchroniseerd (bijgewerkt) met de nieuwste release 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. Je ziet de melding Workflow run was successfully requested. Vernieuw de pagina in je browser. Dan kun je de voortgang van het bouwen volgen. Als de actie klaar is, toont de AAPS CI-actie een groen vinkje. Je hebt de bijgewerkte versie van Android APS gebouwd. Dit betekent dat de Master- en Wear-apk nu direct in je Google Drive worden opgeslagen (zie hieronder). De AAPSClient apk kun je downloaden via Github > nightscout > AndroidAPS [hier](https://github.com/nightscout/AndroidAPS/releases)
+6. Je ziet de melding Workflow run was successfully requested. Vernieuw de pagina in je browser. Dan kun je de voortgang van het bouwen volgen. Als de actie klaar is, toont de AAPS CI-actie een groen vinkje. You have successfully built the updated version of **AAPS**. Dit betekent dat de Master- en Wear-apk nu direct in je Google Drive worden opgeslagen (zie hieronder). De AAPSClient apk kun je downloaden via Github > nightscout > AndroidAPS [hier](https://github.com/nightscout/AndroidAPS/releases)
 
 
 ![Workflow volgen](../images/update/CI/GitHubActions4.png)

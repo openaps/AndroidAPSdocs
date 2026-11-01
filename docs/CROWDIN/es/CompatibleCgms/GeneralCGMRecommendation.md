@@ -9,7 +9,7 @@ Uses el sistema MCG que uses, si vas a calibrar con sangre, debes seguir unas re
 -   Evita calibrar cuando la glucosa está subiendo o bajando.
 -   Haz calibraciones «suficientes»: en las apps oficiales, se te pedirá una o dos comprobaciones al día. En los sistemas DIY puede que no se te pida, y debes tener cuidado si sigues sin calibrar.
 -   Con sensores que no necesitan o no permiten calibración, comprueba al menos una vez al día tu glucosa real en sangre. AAPS será tan seguro como fiables sean las lecturas de tu sensor.
--   Si es posible, calibra con algunas lecturas en un rango más bajo (4–5 mmol/l o 72–90 mg/dl) y otras en un nivel algo más alto (7–9 mmol/l o 126–160 mg/dl), porque así se obtiene un mejor rango para la calibración de punto/pendiente.
+-   If at all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
 
 ## Configurando el sensor (G6)
 
@@ -38,4 +38,4 @@ Puedes probar a cambiar los ajustes de bloqueo de ruido en xDrip (Settings - Int
 
 ![Edad del sensor en la fila Sensor del panel de estado ampliado](../images/main/main_status_row_expanded.png)
 
-La edad del sensor se muestra en la fila **Sensor** del panel de estado de la pantalla principal (pulsa la flecha para ampliarlo). Una edad negativa aparece si hay una [entrada del portal de cuidados](#aaps-screens-careportal) «Inserción de sensor» doble o una inserción de sensor con una fecha incorrecta. Abre **Historial de tratamientos** (menú ☰), selecciona la pestaña **Portal de cuidados** y borra la entrada incorrecta.
+La edad del sensor se muestra en la fila **Sensor** del panel de estado de la pantalla principal (pulsa la flecha para ampliarlo). A negative age occurs if there is either a double "Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Abre **Historial de tratamientos** (menú ☰), selecciona la pestaña **Portal de cuidados** y borra la entrada incorrecta.

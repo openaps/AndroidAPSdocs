@@ -54,7 +54,7 @@ Poniżej są dostępne statystyki czasu w wąskim zakresie (TITR) 70–140 mg/dl
 
 **Omów cele ze swoim diabetologiem**
 
-Twoja cukrzyca może być inna. Wszystkie proponowane cele omów ze swoim diabetologiem lub zespołem diabetologicznym. Dobrze używane statystyki AAPS mogą być skutecznym narzędziem do śledzenia trendów __BG__ i postępów.
+Twoja cukrzyca może być inna. Wszystkie proponowane cele omów ze swoim diabetologiem lub zespołem diabetologicznym. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress.
 
 ![Statystyki](../images/Maintenance/statistics3.png)
 
@@ -117,7 +117,7 @@ Na końcu każdego wiersza małe ikony pokazują, skąd pochodzą dane lub doką
 ![Węglowodany i bolus](../images/TreatmentsView1.png)
 
 Na tej karcie widzisz dziennik bolusów i węglowodanów. Przy każdym bolusie (wiersz **1**) obok ilości insuliny widać pozostałą związaną z nim IOB. Bolus może pochodzić z:
-* Posiłku (wpisany ręcznie przyciskami Insulina, Szybki kalkulator lub Kalkulator bolusa)
+* Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
 * SMB, gdy używasz funkcji SMB
 
 Wpisy węglowodanów (wiersz **2**) są pokazane z ilością w gramach.
@@ -147,9 +147,9 @@ Tutaj widać **bazy tymczasowe** ustawione przez pętlę. Gdy wpis nadal wpływa
 * Dodatnia IOB, jeśli baza tymczasowa była wyższa niż ustawiona w profilu
 * Ujemna IOB przy zerowej bazie tymczasowej (jak w wierszu **1**) albo jeśli baza tymczasowa była niższa niż ustawiona w profilu
 
-Usunięcie wpisów zmienia tylko Twoje raporty w Nightscout i prawdopodobnie zafałszuje Twoją rzeczywistą IOB – nie jest to zalecane.
+Deleting the entries only affects your reports in Nightscout and will probably distort your real IOB - it is not recommended.
 
-Czerwona litera S po lewej stronie wiersza oznacza „Wstrzymanie”: pojawia się, gdy baza nie jest teraz podawana. To normalna sytuacja, na przykład podczas wymiany poda.
+On the left of a line, a red S means “Suspend”: it happens when basal is not currently delivered. To normalna sytuacja, na przykład podczas wymiany poda.
 
 ### Cel tymczasowy (TT)
 
@@ -178,7 +178,7 @@ Ta karta pokazuje wszystkie notatki i wpisy portalu opieki zapisane w Nightscout
 
 ![Tryb pracy](../images/TreatmentsView6.png)
 
-Ta karta pokazuje historię zmian [stanu pętli](#AapsScreens-loop-status): otwarta, zamknięta, LGS, wstrzymanie, rozłączenie.
+This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
 
 ### Wpis użytkownika
 

@@ -5,7 +5,7 @@
 **AAPS** kun je niet downloaden, vanwege de regels voor medische hulpmiddelen. Je mag de app legaal bouwen voor eigen gebruik, maar je mag geen kopie aan anderen geven! Zie de [FAQ-pagina](../UsefulLinks/FAQ.md) voor meer informatie.
 
 ```{note}
-Wil je **AAPS** op een nieuwe computer bouwen? Kopieer dan je back-up van het keystore-bestand naar de nieuwe computer. Volg daarna de [procedure om **AAPS** voor het eerst te bouwen](../SettingUpAaps/BuildingAaps.md) in plaats van deze handleiding. Het enige verschil: in plaats van een nieuwe keystore te maken, kun je de keystore kiezen die je naar de nieuwe computer hebt gekopieerd.
+In case you want to build **AAPS** on a new computer: copy your back-up keystore file to the new computer. Volg daarna de [procedure om **AAPS** voor het eerst te bouwen](../SettingUpAaps/BuildingAaps.md) in plaats van deze handleiding. Het enige verschil: in plaats van een nieuwe keystore te maken, kun je de keystore kiezen die je naar de nieuwe computer hebt gekopieerd.
 ```
 
 ## Overzicht: bijwerken naar een nieuwe versie van AAPS met Android Studio
@@ -95,6 +95,6 @@ Gaat er iets mis? Geen paniek.
 
 Haal even diep adem!
 
-Kijk daarna op de aparte pagina [Problemen met Android Studio oplossen](../GettingHelp/TroubleshootingAndroidStudio.md) of je probleem daar al beschreven is!
+Then check if your problem is already documented on the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 Heb je meer hulp nodig? Vraag het dan aan andere **AAPS**-gebruikers op [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) of [Discord](https://discord.gg/4fQUWHZ4Mw).

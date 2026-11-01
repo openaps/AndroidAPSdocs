@@ -29,7 +29,7 @@ Gegevens uit Nightscout accepteren (profielwijzigingen, behandelingen, ...) is o
 
 #### Niet synchroniseren vanuit Nightscout
 
-Als je alle opties "Ontvang ... van NS" uitgeschakeld laat, gebruikt AAPS geen enkele wijziging uit Nightscout:
+Keeping all the "Receive … from NS" options disabled makes sure no Nightscout change will be used by AAPS:
 
 ![Alleen uploaden naar Nightscout](../images/preferences/settings_nsclient_sync.png)
 

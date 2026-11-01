@@ -76,7 +76,7 @@ Ovladač automaticky upravuje čas v pumpě podle času v telefonu.
 
 Změny časového pásma ponechají historii neporušenou, ovlivněna může být jen CDD. Ruční změna času v telefonu může způsobit problémy s historií a **IOB**. Pokud měníte čas ručně, **IOB** důkladně zkontrolujte.
 
-Při změně časového pásma nebo času se běžící **dočasné bazály (TBR)** ukončí.
+When the time zone or time changes running **TBRs** are stopped.
 
 (time-adjustment-daylight-savings-time-dst)=
 
@@ -108,8 +108,8 @@ Pokud dáváte bolus pomocí kalkulačky **AAPS**, nepoužívejte prosím údaje
 
 ### Letní čas u Omnipod Dash
 
-* Buď nechte **AAPS** po přechodu na letní čas dočasně přejít na výchozí bazál, jak je popsáno výše.
-* Nebo, pokud nechcete, aby **AAPS** přes noc dočasně přešel na výchozí bazál, můžete časové pásmo změnit den před přechodem na letní čas a vyhnout se tak nočnímu výpadku. POZOR, TATO MOŽNOST MŮŽE ZPŮSOBIT PŘEDČASNÉ VYPRŠENÍ PODU. POKUD ZVOLÍTE NÍŽE POPSANOU MOŽNOST, MĚJTE S SEBOU NÁHRADNÍ POMŮCKY.
+* Either allow **AAPS** to temporarily default to background basal after DST has taken place as explained above.
+* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day before DST is due to take place to avoid overnight disruption. POZOR, TATO MOŽNOST MŮŽE ZPŮSOBIT PŘEDČASNÉ VYPRŠENÍ PODU. POKUD ZVOLÍTE NÍŽE POPSANOU MOŽNOST, MĚJTE S SEBOU NÁHRADNÍ POMŮCKY.
 
 #### Co udělat před změnou času
 
@@ -129,6 +129,6 @@ Pokud dáváte bolus pomocí kalkulačky **AAPS**, nepoužívejte prosím údaje
 
 3. V **AAPS** obnovte pumpu a přepněte na požadovaný **Profil**.
 
-4. Zkontrolujte **IOB** a **COB** v **AAPS**, a pokud jsou nepřesné, zakažte **Smyčku** alespoň na dobu jedné DIA nebo maximální doby vstřebávání sacharidů – podle toho, která je delší.
+4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA or the maximum carb absorption time (**Absorption max time**), whichever is longer.
 
 5. Co udělat po změně času. Vhodná chvíle pro návrat k místnímu časovému pásmu je při nízkém **IOB**. Např. hodinu před jídlem, jako je snídaně. Ideálně by **COB** i **IOB** měly být blízko nuly.

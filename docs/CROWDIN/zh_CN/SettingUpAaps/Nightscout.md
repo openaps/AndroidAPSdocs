@@ -29,7 +29,7 @@ Accepting data from Nightscout (profile changes, treatments, ...) is optional an
 
 #### 不要从Nightscout同步
 
-Keeping all the "Receive ... from NS" options disabled makes sure no Nightscout change will be used by AAPS:
+Keeping all the "Receive … from NS" options disabled makes sure no Nightscout change will be used by AAPS:
 
 ![Nightscout仅上传](../images/preferences/settings_nsclient_sync.png)
 

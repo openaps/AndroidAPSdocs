@@ -5,7 +5,7 @@
 **AAPS** nie jest dostępny do pobrania ze względu na przepisy dotyczące wyrobów medycznych. Zbudowanie aplikacji na własny użytek jest legalne, ale NIE WOLNO Ci przekazywać jej kopii innym osobom! Szczegóły znajdziesz na stronie [FAQ](../UsefulLinks/FAQ.md).
 
 ```{note}
-Jeśli chcesz zbudować **AAPS** na nowym komputerze: skopiuj kopię zapasową pliku magazynu kluczy (keystore) na nowy komputer. Następnie zamiast tej instrukcji postępuj zgodnie z [procedurą pierwszego budowania **AAPS**](../SettingUpAaps/BuildingAaps.md). Jedyna różnica: zamiast tworzyć nowy magazyn kluczy, możesz wybrać ten, który skopiowano na nowy komputer.
+In case you want to build **AAPS** on a new computer: copy your back-up keystore file to the new computer. Następnie zamiast tej instrukcji postępuj zgodnie z [procedurą pierwszego budowania **AAPS**](../SettingUpAaps/BuildingAaps.md). Jedyna różnica: zamiast tworzyć nowy magazyn kluczy, możesz wybrać ten, który skopiowano na nowy komputer.
 ```
 
 ## Przegląd aktualizacji AAPS do nowej wersji w Android Studio
@@ -95,6 +95,6 @@ Jeśli coś pójdzie nie tak, nie panikuj.
 
 Weź głęboki oddech!
 
-Następnie sprawdź na osobnej stronie [Rozwiązywanie problemów z Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md), czy Twój problem jest już opisany!
+Then check if your problem is already documented on the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 Jeśli potrzebujesz dalszej pomocy, zwróć się do innych użytkowników **AAPS** na [Facebooku](https://www.facebook.com/groups/AndroidAPSUsers) lub [Discordzie](https://discord.gg/4fQUWHZ4Mw).

@@ -107,8 +107,8 @@ Appuyez sur **Re-run jobs**. Vous pouvez aussi lancer une nouvelle compilation a
   - [Mettez à jour le secret `GDRIVE_OAUTH2`](#aaps-ci-update-secret) dans votre dépôt GitHub avec le nouveau jeton, puis [relancez la compilation](#aaps-ci-rerun).
 
 (aaps-ci-disable-software)=
-### Désactiver les logiciels qui peuvent gêner la vérification OAUTH
-  - Désactivez tout VPN ou application de sécurité (pare-feu, antimalware, ...) sur le téléphone avant d'essayer d'obtenir la clé OAUTH.
+### Disable Software That May Interfere With OAuth Verification
+  - Disable any VPN or security app (firewall, antimalware,...) on the phone before trying to get the OAuth key.
 
 (aaps-ci-actions-permission)=
 ### Vérifier les paramètres d'autorisation de GitHub Actions

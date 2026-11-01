@@ -6,7 +6,7 @@
 這是<a href="BrowserBuild.md">瀏覽器建置</a>的**步驟 1**。
 ```
 
-你需要儲存你的個人 Android Java 金鑰和 Google 雲端硬碟資訊於 GitHub 中的 Secrets（稍後會說明如何操作）。
+You will need to store your personal Android Java Key and Google Drive information as secrets in GitHub (later in the process, we will explain how).
 
 由於這無法在 AndroidAPS 的公開倉庫中完成，你需要製作自己的原始碼副本（稱為分支）。
 
@@ -29,16 +29,16 @@
 
 ![fork_aaps_confirm](../images/Building-the-App/CI/ForkAAPS2.png)
 
-*注意：如果您之後想建置開發人員版本或自訂版本，可以**取消勾選**「只複製 master 分支」。*
+*Note: you can **unselect** "Copy the master branch only" if you will want to build developer versions or customizations.*
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
 ```{note}
-無法複刻，而且看到這個畫面？</br></br>
-**`No available destinations to fork this repository.`**</br></br>
-![已經複刻](../images/Building-the-App/CI/ForkAAPS3b.png)</br></br>
-這表示您已經有 AndroidAPS 的複刻版本。</br>
-請確認該版本已更新至最新狀態，然後繼續進行準備步驟。
+You cannot fork and you see this?<br/><br/>
+**`No available destinations to fork this repository.`**<br/><br/>
+![Already forked](../images/Building-the-App/CI/ForkAAPS3b.png)<br/><br/>
+This means you already have an existing fork of AndroidAPS.<br/>
+Make sure it's up to date and continue to Preparation Steps.
 ```
 
 ```{warning}

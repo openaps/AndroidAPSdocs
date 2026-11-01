@@ -15,7 +15,7 @@
 ![Инсулиновая помпа DanaR](../images/danar1.png)
 
 * Перейдите в главное меню > параметры > обнаружение
-* В настройках телефона перейдите в Bluetooth, сканируйте ближайшие устройства, выберите серийный номер DanaR и введите ваш пароль (Пароль для соединения- 0000). Если DanaR не отображается при сканировании, перезапустите телефон, выньте батарею DanaR, замените ее и повторите эти два шага.
+* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). Если DanaR не отображается при сканировании, перезапустите телефон, выньте батарею DanaR, замените ее и повторите эти два шага.
 
 * In **AAPS**, open the **menu** (☰) in the top-left corner, go to **Configuration** > **Pump** and select the type of DanaR you have (**DanaR**, **DanaR Korean** or **DanaRv2**).
   

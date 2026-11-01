@@ -2,7 +2,7 @@
 
 ## Doner dataene dine til forskning
 
-Du kan hjelpe fellesskapet ved å donere dataene dine til forskningsprosjekter! Det hjelper forskere med å gi noe tilbake, utvikle nye vitenskapelige ideer og øke åpenheten rundt lukkede loop-systemer med åpen kildekode. AAPS kan synkronisere dataene dine med [Open Humans](https://www.openhumans.org), en plattform der du kan laste opp, koble sammen og lagre personlige data – som genetikk, aktivitet og helsedata.
+Du kan hjelpe fellesskapet ved å donere dataene dine til forskningsprosjekter! Det hjelper forskere med å gi noe tilbake, utvikle nye vitenskapelige ideer og gjøre lukkede loop-systemer med åpen kildekode bedre kjent. AAPS kan synkronisere dataene dine med [Open Humans](https://www.openhumans.org), en plattform der du kan laste opp, koble sammen og lagre personlige data – som genetikk, aktivitet og helsedata.
 
 Du beholder full kontroll over hva som skjer med dataene dine, og hvilke prosjekter du vil støtte ved å gi dem tilgang til dataene dine. Avhengig av hvilket prosjekt du har blitt med i, blir dataene vurdert og brukt av dem på ulike måter og i ulikt omfang.
 

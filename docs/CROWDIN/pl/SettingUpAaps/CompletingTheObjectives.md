@@ -10,7 +10,7 @@ Gdy instalujesz **AAPS** po raz pierwszy, musisz ukończyć każde zadanie, zani
 
 **Zadania 1 do 8** prowadzą Cię od konfiguracji **AAPS** w smartfonie do „podstawowej” hybrydowej zamkniętej pętli. Ukończenie tego zajmie około 6 tygodni. Do **Zadania 5** możesz dojść, używając wirtualnej pompy (a w tym czasie podawać insulinę w inny sposób). **Zadania 9 i 10** sprawdzają bardziej zaawansowane funkcje **AAPS**, które mają poprawić kontrolę cukrzycy. Ich ukończenie zajmie do 3 miesięcy, a może dłużej. Więcej szczegółów o szacowanym czasie znajdziesz tutaj: [Ile to potrwa?](#preparing-how-long-will-it-take)
 
-Oprócz przechodzenia przez kolejne **Zadania** możesz też, w razie potrzeby, usunąć swoje postępy i [wrócić do wcześniejszego zadania](#go-back-in-objectives).
+As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#CompletingTheObjectives-go-back-in-objectives).
 
 ## Zrób kopię zapasową ustawień
 
@@ -39,7 +39,7 @@ W **Zadaniu 1** ustawiasz podstawową konfigurację techniczną w **AAPS**. Dop�
 - Jeśli używasz Tidepool:
   - Wykonaj instrukcje ze strony [Tidepool](../SettingUpAaps/Tidepool.md), aby **Tidepool** mógł odbierać i wyświetlać dane z **AAPS**.
 
-Uwaga – *może być konieczne odczekanie na następny odczyt glukozy z sensora, zanim **AAPS** go rozpozna.*
+Note: *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
 
 (objectives-objective2)=
 ## Zadanie 2: Dowiedz się, jak kontrolować AAPS
@@ -51,7 +51,7 @@ Uwaga – *może być konieczne odczekanie na następny odczyt glukozy z sensora
 Kroki do ukończenia **Zadania 2**:
 - Ustaw **Profil** na 90% na 10 min.
   - _Podpowiedź_: dotknij nazwy profilu na ekranie głównym, aby otworzyć ekran **Profil**. Potem użyj przycisku **Aktywuj** (▶) i ustaw procent i czas trwania. Więcej informacji w [Zmiana profilu i procent profilu](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-  - _Uwaga_: **AAPS** nie akceptuje dawek bazowych poniżej 0,05 U/godz. Jeśli Twój **Profil** zawiera dawki 0,06 U/godz. lub niższe, przed wykonaniem tego kroku musisz utworzyć tymczasowy **Profil** z wyższymi dawkami bazowymi. Po wykonaniu tego kroku wróć do swojego zwykłego **Profilu**.
+  - _Uwaga_: **AAPS** nie akceptuje dawek bazowych poniżej 0,05 U/godz. If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Po wykonaniu tego kroku wróć do swojego zwykłego **Profilu**.
 - Zasymuluj „branie prysznica”, [odłączając pompę](#AapsScreens-loop-status) w **AAPS** na 1 godz.
   - _Podpowiedź_: naciśnij ikonę pętli na ekranie głównym, aby otworzyć okno pętli, a potem wybierz czas w sekcji **Odłącz pompę**.
 - Zakończ „branie prysznica”, podłączając ponownie pompę.
@@ -94,7 +94,7 @@ Minimalny czas ukończenia tego zadania: **7 dni**. To obowiązkowy czas oczekiw
 - W razie potrzeby używaj [**Celów tymczasowych**](../DailyLifeWithAaps/TempTargets.md). Po leczeniu hipoglikemii użyj gotowego celu tymczasowego „Hipo”, aby system nie korygował za mocno, gdy glikemia odbija.
 - Jeśli w tym momencie nadal używasz [Trybu uproszczonego](#preferences-simple-mode), to prawdopodobnie dobry czas, aby go wyłączyć.
 
-Aby zmniejszyć liczbę proponowanych zmian dawki bazowej w otwartej pętli, możesz nadal korzystać ze wskazówek opisanych w [**Zadaniu 3**](#objective-3-prove-your-knowledge). Możesz też zmienić minimalny procent zalecanych zmian bazy ustawieniem „**Minimalna zmiana w trybie otwartej pętli**” w **Ustawienia → Pętla**. Im wyższa wartość, tym mniej powiadomień o zmianach dostaniesz.
+To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Możesz też zmienić minimalny procent zalecanych zmian bazy ustawieniem „**Minimalna zmiana w trybie otwartej pętli**” w **Ustawienia → Pętla**. Im wyższa wartość, tym mniej powiadomień o zmianach dostaniesz.
 
 ![Minimalna zmiana w trybie otwartej pętli](../images/OpenLoop_MinimalRequestChange2.png)
 
@@ -119,7 +119,7 @@ Możesz ustawić [cel BG w **Profilu**](#profile-glucose-targets) wyżej niż zw
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-Jeśli używasz otwartej pętli z wirtualną pompą, **zatrzymaj się tutaj**. Kliknij „Zweryfikuj” na końcu tego **Zadania** dopiero wtedy, gdy przejdziesz na „prawdziwą” pompę, która podaje insulinę.
+Jeśli używasz otwartej pętli z wirtualną pompą, **zatrzymaj się tutaj**. Only tap **Verify** at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
 
 ```
 
@@ -167,14 +167,14 @@ Minimalny czas ukończenia tego zadania: **1 dzień**. To obowiązkowy czas ocze
 
 - Wybierz **Zamknięta pętla**: naciśnij [ikonę pętli](#AapsScreens-loop-status) na ekranie głównym i wybierz **Zamknięta pętla** jako tryb pracy. Pozostań w trybie **Zamknięta pętla** przez 1 dzień.
 
-- Powoli podnoś „Maksymalne całkowite IOB, którego OpenAPS nie może przekroczyć” (w OpenAPS nazywane 'max-iob') powyżej 0, aż znajdziesz ustawienia, które najlepiej do Ciebie pasują.
+- Slowly raise your 'Max IOB for SMB' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
 
 Domyślnie zalecana wartość tego ustawienia to „**średni bolus do posiłku + 3x maks. dzienna baza**”, gdzie „maks. dzienna baza” to najwyższa wartość godzinowa w dowolnym przedziale czasu w ciągu dnia.
 
 ![maks. dzienna baza](../images/MaxDailyBasal2.png)
 
 To zalecenie traktuj jako punkt wyjścia. Jeśli używasz tej reguły, ale AAPS podaje za dużo insuliny, gdy poziom glukozy rośnie, możliwe, że musisz:
-* obniżyć wartość „Maksymalne całkowite IOB, którego OpenAPS nie może przekroczyć”;
+* lower the "Max IOB for SMB" value;
 * przejrzyj ustawienia **Profilu** i zmieniaj tylko jedną rzecz naraz.
 
 Jeśli masz dużą insulinooporność, możesz też bardzo ostrożnie podnieść wartość **maxIOB**.
@@ -202,7 +202,7 @@ W **Zadaniu 9** poznasz i zaczniesz używać **„Super Mikro Bolusów (SMB)”*
 Minimalny czas ukończenia tego zadania: **28 dni**. To obowiązkowy czas oczekiwania. Nie możesz przejść do następnego zadania, zanim ten czas nie minie.
 
 - [Sekcja SMB w tej dokumentacji](#Open-APS-features-super-micro-bolus-smb) i [opis oref1 w dokumentacji openAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to obowiązkowa lektura, aby zrozumieć **SMB** i pojęcie **zero-temping** (baza tymczasowa 0%).
-- Potem możesz [podnieść maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over), aby **SMB** działały skuteczniej. maxIOB obejmuje teraz całe **IOB**, a nie tylko zgromadzoną bazę. Ten próg wstrzymuje **SMB**, dopóki IOB nie spadnie poniżej tej wartości (_np._ **maxIOB** wynosi 7 U i podajesz bolus 8 U do posiłku: SMB zostaną wstrzymane i nie będą podawane, dopóki **IOB** nie spadnie poniżej 7 U). Dobrym początkiem jest ustawienie **maxIOB** = **średni bolus do posiłku + 3x maks. dzienna baza**, gdzie „maks. dzienna baza” to najwyższa wartość godzinowa w dowolnym przedziale czasu w ciągu dnia. Zobacz [zadanie 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets).
+- Potem możesz [podnieść maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over), aby **SMB** działały skuteczniej. maxIOB obejmuje teraz całe **IOB**, a nie tylko zgromadzoną bazę. Ten próg wstrzymuje **SMB**, dopóki IOB nie spadnie poniżej tej wartości (_np._ **maxIOB** wynosi 7 U i podajesz bolus 8 U do posiłku: SMB zostaną wstrzymane i nie będą podawane, dopóki **IOB** nie spadnie poniżej 7 U). Dobrym początkiem jest ustawienie **maxIOB** = **średni bolus do posiłku + 3x maks. dzienna baza**, gdzie „maks. dzienna baza” to najwyższa wartość godzinowa w dowolnym przedziale czasu w ciągu dnia. See [objective 7](#objectives-objective7) as reference.
 - Oceń szybkość wchłaniania węglowodanów i rozważ zmianę parametru „min_5m_carbimpact” w [Ustawienia → Ustawienia wchłaniania → min_5m_carbimpact](#Preferences-min_5m_carbimpact), jeśli jest dla Ciebie za wolna lub za szybka.
 
 (objectives-objective10)=

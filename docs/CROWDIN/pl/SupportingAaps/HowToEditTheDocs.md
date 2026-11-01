@@ -2,7 +2,7 @@
 
 **Ten opis dotyczy tylko edycji angielskiej dokumentacji. Wszystkie nowe informacje trzeba najpierw dodać po angielsku. Jeśli chcesz tłumaczyć na inne języki (dziękujemy!), użyj [Crowdin](https://crowdin.com/project/androidapsdocs).**
 
-Wskazówki, jak formatować tekst (nagłówki, pogrubienie...) i dodawać linki, znajdziesz w części [„Składnia kodu”](#code-syntax) na tej stronie.
+For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
 
 ## Ogólne
 
@@ -34,11 +34,11 @@ Albo kliknij ikonę ołówka, która pojawia się na górnym pasku edytowanej st
 
 3. Każda z opcji w kroku 2 utworzy nową gałąź w TWOIM repozytorium, w której zostaną zapisane Twoje zmiany. Wprowadź zmiany w pliku.
 
-Strony dokumentacji piszemy w Markdown. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Uważaj, aby używać poprawnej składni, jak [opisano poniżej](#code-syntax).
+Strony dokumentacji piszemy w Markdown. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
 
 ![Gałąź edycji](../images/PR3.png)
 
-4. Pracowałeś na karcie „<>Edit file”. Wybierz kartę „Preview changes”, aby spojrzeć na zmiany świeżym okiem i upewnić się, że wszystko wygląda tak, jak chciałeś (literówki!). Jeśli widzisz, że coś trzeba jeszcze poprawić, wróć na kartę edycji i wprowadź kolejne poprawki. 
+4. Pracowałeś na karcie „<>Edit file”. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Jeśli widzisz, że coś trzeba jeszcze poprawić, wróć na kartę edycji i wprowadź kolejne poprawki. 
 
 ![tryb podglądu](../images/PR5.png)
 
@@ -54,7 +54,7 @@ Strony dokumentacji piszemy w Markdown. The files have the suffix ".md". The Mar
 
 ![Śledzenie PR](../images/PR7.png)
 
-PS: Twój fork i gałąź nadal zostają na Twoim osobistym koncie GitHub. Gdy dostaniesz powiadomienie, że Twój PR został scalony, możesz usunąć swoją gałąź, jeśli już jej nie potrzebujesz (w obszarze powiadomień z kroku 8 pojawi się link do usunięcia gałęzi, gdy PR zostanie zamknięty lub scalony). Jeśli przy kolejnych zmianach użyjesz tej samej procedury, Twoje zmiany zawsze zaczną się od aktualnej wersji repozytoriów AndroidAPSdocs. Jeśli wybierzesz inną metodę rozpoczęcia PR (np. edycję zaczynając od gałęzi master w Twoim forku), musisz najpierw upewnić się, że Twoje repozytorium jest aktualne: wykonaj „compare” i scal wszystkie zmiany, które pojawiły się od ostatniej aktualizacji Twojego forka. Ludzie często zapominają aktualizować swoje repozytoria, dlatego zalecamy używanie opisanego wyżej procesu PR, dopóki nie nauczysz się wykonywać „compare”.
+PS: Twój fork i gałąź nadal zostają na Twoim osobistym koncie GitHub. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Jeśli przy kolejnych zmianach użyjesz tej samej procedury, Twoje zmiany zawsze zaczną się od aktualnej wersji repozytoriów AndroidAPSdocs. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Ludzie często zapominają aktualizować swoje repozytoria, dlatego zalecamy używanie opisanego wyżej procesu PR, dopóki nie nauczysz się wykonywać „compare”.
 
 (edit-the-docs-code-syntax)=
 
@@ -69,7 +69,7 @@ Autor tylko oznacza np. nagłówek jako nagłówek poziomu 1, a procesor Markdow
 Chodzi o to, że
 
 - autor powinien najpierw myśleć o tekście, a nie o formatowaniu,
-- tekst Markdown można przenosić między różnymi narzędziami Markdown, zamiast używać np. zamkniętych narzędzi, takich jak Microsoft Windows, oraz
+- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
 - z jednego pliku Markdown można wygenerować kilka formatów wyjściowych.
 
 Markdown nie jest w 100% ustalonym standardem. Staramy się trzymać jak najbliżej standardu, aby
@@ -219,9 +219,9 @@ Furthermore you can add collapsing notes for detailed information, so that users
     To jest ostrzeżenie.
     
 
-    ```{admonition} Nagłówek ostrzeżenia
+    ```{admonition} Warning headline
     :class: warning
-    To jest ostrzeżenie.
+    This is a warning.
     ```
     
     #### Zwijane uwagi
@@ -244,7 +244,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 ## Tabele
 
-Unikaj tabel z długimi tekstami: ich zawartość trudno ustawić w Markdown, zwykle nie mieszczą się na szerokość ekranu telefonu i po tłumaczeniu pewnie nie będą wyglądać tak samo.
+Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
 
 ## Przewodnik stylu
 
@@ -262,9 +262,9 @@ Unikaj tabel z długimi tekstami: ich zawartość trudno ustawić w Markdown, zw
 
 Pisz prostym angielskim, gdzie tylko się da. To pomaga czytelnikom, dla których angielski nie jest językiem ojczystym, i ułatwia tłumaczenie dokumentacji AAPS na inne języki. Pisz tak, jakbyś rozmawiał z użytkownikiem. Wyobraź sobie, że siedzisz przy biurku naprzeciwko osoby, dla której piszesz. Pamiętaj: większość użytkowników AAPS nie umie programować. Cukrzyca też ma dużo żargonu i skrótów. Pamiętaj, że niektórzy ludzie mogli niedawno dostać diagnozę, mogą mieć mniej doświadczenia z cukrzycą niż Ty albo mogli przejść inne szkolenie z cukrzycy. Jeśli używasz skrótu, za pierwszym razem napisz pełną nazwę, a skrót podaj zaraz po niej w nawiasie, np. „super micro bolus (SMB)”. Dodaj też link do słowniczka pojęć. Pojęcia techniczne, których czytelnik może nie znać, możesz też dodać w nawiasie.
 
-Zamiast: *„What causes high postprandial BG peaks in closed loop?”*
+Instead of: *“What causes high postprandial BG peaks in closed loop?”*
 
-Użyj: *„What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
+Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
 
 ##### Używaj prostych słów, które każdy rozumie
 
@@ -296,7 +296,7 @@ Zwłaszcza gdy nagrywasz film lub robisz zrzuty ekranu, uważaj, aby nie pokaza�
 
 Polecenia to najszybszy sposób przekazania instrukcji, ale autorzy czasem boją się ich używać i piszą „powinieneś to zrobić” zamiast po prostu „zrób to”. Może ludzie się boją, że polecenia brzmią zbyt ostro. Często możesz to rozwiązać, dodając na początku słowo „proszę”. Ale jeśli coś trzeba zrobić koniecznie, lepiej nie pisać „proszę”, bo to daje czytelnikowi możliwość odmowy.
 
-Zamiast: *„You should just think of it as a complete statement.”*
+Instead of: *“You should just think of it as a complete statement.”*
 
 Użyj: *„Think of it as a complete statement.”*
 
@@ -310,7 +310,7 @@ Przykład **strony czynnej**:
 
 Przykład **strony biernej**:
 
-- *„The insulin (podmiot) is delivered (czasownik) by the pump (dopełnienie)”*
+- *“The insulin (subject) is delivered (verb) by the pump (object).”*
 
 *“delivered”* is a passive verb here. Podmiot i dopełnienie zamieniły się miejscami w porównaniu ze zdaniem w stronie czynnej. Zdanie stało się dłuższe, bo musieliśmy dodać „is” i „by the”. Rozważ też zaczynanie od czasownika w stronie czynnej.
 
@@ -453,7 +453,7 @@ Celem poradnika jest pomóc użytkownikowi, który już ma podstawowe umiejętno
 
 - JAK to zrobić
 
-- narrator mówi bezpośrednio do czytelnika: W tym samouczku **zrobisz**
+- narrator directly talks to the reader: In this guide **you** will
 
 - Czas przyszły -> aby pokazać cel końcowy
 

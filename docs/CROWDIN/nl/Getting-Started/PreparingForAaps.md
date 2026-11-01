@@ -51,9 +51,9 @@ Over het algemeen wordt aangenomen dat mensen met _pas_ vastgestelde diabetes ty
 :class: danger
 SGLT-2-remmers, ook gliflozines genoemd, remmen de terugopname van glucose in de nieren. Gliflozines verlagen de bloedsuiker op een manier die niet te berekenen is. Daarom MAG je ze NIET gebruiken als je een gesloten loop-systeem zoals AAPS gebruikt! Er is dan een groot risico op ketoacidose en/of hypoglykemie! De combinatie van dit medicijn met een systeem dat de basaalstanden verlaagt om de BG te verhogen is extra gevaarlijk. 
 
-Kort samengevat:
-- **Voorbeeld 1: risico op een hypo**
->Bij de lunch gebruik je **AAPS** voor een bolus voor 45 g glucose. Het probleem is dat de remmers ervoor zorgen dat het lichaam een deel van de koolhydraten afvoert, zonder dat AAPS dit weet. Daardoor heeft je lichaam te veel insuline ten opzichte van de opgenomen koolhydraten, en krijg je een hypoglykemie.
+In a nutshell:
+- **Example 1: risk of Hypo**
+>During lunch, you use **AAPS** to bolus based on consuming 45 g of carbs. Het probleem is dat de remmers ervoor zorgen dat het lichaam een deel van de koolhydraten afvoert, zonder dat AAPS dit weet. Daardoor heeft je lichaam te veel insuline ten opzichte van de opgenomen koolhydraten, en krijg je een hypoglykemie.
 
 - **Voorbeeld 2: risico op ketoacidose**
 >De remmers voeren op de achtergrond een deel van de koolhydraten af, waardoor je BG daalt. **AAPS** geeft de pomp dan automatisch opdracht om minder insuline te geven, ook minder basaal. Na verloop van tijd kan je BG daardoor onder de streefwaarde blijven, tot het lichaam niet genoeg achtergrondinsuline heeft om koolhydraten op te nemen. Dat leidt tot ketoacidose. Normaal ontstaat ketoacidose bij mensen met diabetes type 1 doordat hun pomp faalt. Dat geeft dan alarmen op hun telefoon en is te zien aan een hoge BG-waarde. Het gevaar van gliflozines is echter dat AAPS dan geen alarmen geeft, omdat de pomp blijft werken en de BG mogelijk binnen de streefwaarde blijft.
@@ -80,7 +80,7 @@ In het begin met **AAPS** kan het lastig zijn om alle onderdelen van de loop goe
 
 #### Tijd om de app te bouwen en om volledig te loopen
 
-Hoeveel tijd het bouwen van de **AAPS**-app kost, hangt af van je ervaring en technische kennis. Voor gebruikers zonder ervaring kan het bouwen van **AAPS** meestal een halve tot een hele dag duren (met hulp van de community). Bij nieuwere versies van **AAPS** gaat het veel sneller, omdat je dan meer ervaring hebt.
+The time to build the **AAPS** app depends on your level of expertise and technical ability. Voor gebruikers zonder ervaring kan het bouwen van **AAPS** meestal een halve tot een hele dag duren (met hulp van de community). Bij nieuwere versies van **AAPS** gaat het veel sneller, omdat je dan meer ervaring hebt.
 
 Verschillende delen van deze documentatie helpen je bij het bouwen:
 

@@ -22,7 +22,7 @@ Tento spôsob používa Juggluco na prijímanie surových dát zo senzora v 1-mi
 ### Krok 1: Nastavenie Juggluco
 Aplikáciu Juggluco si stiahnite a nainštalujte [odtiaľto](https://www.juggluco.nl/Juggluco/download.html). Postupujte podľa návodu [tu](https://www.juggluco.nl/Juggluco/libre3/)
 
-Uistite sa, že posielate hodnoty glykémie do xDrip: v nastaveniach Juggluco môžete nastaviť, aby Juggluco posielal hodnoty glykémie iným aplikáciám. Juggluco môže posielať tri typy takéhoto vysielania: **Patched Libre broadcast** pôvodne používala upravená aplikácia Librelink a dá sa použiť na posielanie hodnôt glykémie do xDrip
+Uistite sa, že posielate hodnoty glykémie do xDrip: v nastaveniach Juggluco môžete nastaviť, aby Juggluco posielal hodnoty glykémie iným aplikáciám. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip.
 
 ### Krok 2: Nastavenie xDrip
 
@@ -69,7 +69,7 @@ Po výmene senzora xDrip automaticky rozpozná nový senzor a vymaže všetky ka
 
 ![Ukončenie senzora](../images/libre3/step_14.jpg)
 
-Poznámka: Keď sú aktívne dva senzory, Juggluco posiela do xDrip najnovšiu hodnotu z ktoréhokoľvek z nich. Ak senzory nie sú nakalibrované a nemerajú glykémiu podobne, môže to spôsobiť, že do xDrip budú prichádzať skákajúce hodnoty glykémie. Ak ukončíte nesprávny senzor, môžete ho znova aktivovať jednoduchým naskenovaním senzora.
+Poznámka: Keď sú aktívne dva senzory, Juggluco posiela do xDrip najnovšiu hodnotu z ktoréhokoľvek z nich. If the sensors are not calibrated to read BG similarly, this may result in jumpy BG values being reported to xDrip. Ak ukončíte nesprávny senzor, môžete ho znova aktivovať jednoduchým naskenovaním senzora.
 
 ## Prepínanie senzora medzi aplikáciou Libre 3 a Juggluco
 
@@ -99,4 +99,4 @@ Ak chcete prejsť z aplikácie Libre 3 na Juggluco, musíte aplikáciu Libre 3 v
 
 Pôvodný návod: [webová stránka jkaltes](https://www.juggluco.nl/Juggluco/libre3/)
 
-Ďalší repozitár na GitHube: [odkaz na GitHub](https://github.com/maheini/FreeStyle-Libre-3-patch)
+Additional GitHub repo: [GitHub link](https://github.com/maheini/FreeStyle-Libre-3-patch)

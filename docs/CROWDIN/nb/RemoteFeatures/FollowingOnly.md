@@ -114,7 +114,7 @@ Hvis BS-kilden i **AAPS** ikke er xDrip, men du kan vise BS-data fra datakilden 
 
 ![bilde](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift ble laget ved å portere den opprinnelige xDrip-appen til iOS, og utviklet seg til «xDrip for iOS», skrevet **xDrip4iOS**.
+xDripSwift ble laget ved å portere den opprinnelige xDrip-appen til iOS, og utviklet seg til «xDrip for iOS», skrevet som **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
@@ -150,7 +150,7 @@ Hvis du vil, kan du deretter bli en «releaser» og [dele en personlig TestFligh
 * Apple iPad (krever programvareversjon 13.0 eller nyere)
 * Google Android (lagre web-appen på startskjermen)
 
-Brukere av Sugarmate har rapportert at den kan brukes med Apple CarPlay i USA for å vise glukoseverdier mens du kjører. Det er ennå ikke avklart om dette er mulig i land utenfor USA. Hvis du vet mer om dette, kan du legge til detaljer her i dokumentasjonen ved å lage en pull-request (lenke), noe som er raskt og enkelt å gjøre.
+Brukere av Sugarmate har rapportert at den kan brukes med Apple CarPlay i USA for å vise glukoseverdier mens du kjører. Det er ennå ikke avklart om dette er mulig i land utenfor USA. Hvis du vet mer om dette, kan du legge til detaljer her i dokumentasjonen ved å lage en [pull request](../SupportingAaps/HowToEditTheDocs.md), noe som er raskt og enkelt å gjøre.
 
 
 ### [Spike](https://spike-app.com/) (iOS)

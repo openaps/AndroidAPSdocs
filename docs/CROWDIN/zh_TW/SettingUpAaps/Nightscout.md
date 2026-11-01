@@ -29,7 +29,7 @@ Nightscout 的 `API_SECRET` 是你網站的主要密碼：切勿公開分享他�
 
 #### 不要從 Nightscout 同步
 
-將所有「接收……從 NS」選項保持停用，可確保 AAPS 不會使用 Nightscout 的任何變更：
+Keeping all the "Receive … from NS" options disabled makes sure no Nightscout change will be used by AAPS:
 
 ![僅限 Nightscout 上傳](../images/preferences/settings_nsclient_sync.png)
 

@@ -38,11 +38,11 @@ Eksempelet nedenfor viser hvordan en **automasjon** kan fjerne manuelle steg.
 
 Brukeren trener hver morgen kl. 06: han må huske å sette et «Midlertidig mål – Aktivitet» manuelt i AAPS kl. 05, før treningen.
 
-![Alt text](../images/Automations/automation_concept_manual.png)
+![Manuelle handlinger uten automasjon](../images/Automations/automation_concept_manual.png)
 
 Brukeren har satt opp en **automasjon** som utløser «Midlertidig mål – Aktivitet» kl. 05, slik at **BS** og **IOB** er optimale før treningen kl. 06:
 
-![Alt text](../images/Automations/automation_concept_automated.png)
+![Handlinger utført av en automasjon](../images/Automations/automation_concept_automated.png)
 
 ## Viktig å tenke på før du starter med automasjoner
 
@@ -91,12 +91,12 @@ For å sette opp en **automasjon** trykker du på **+**-knappen på Automasjon-s
 
 For å deaktivere en **automasjonsregel** fjerner du haken i boksen til venstre for navnet på **automasjonen**. Eksempelet nedenfor viser en **automasjon** som enten er aktivert («hake») eller deaktivert («ingen hake»):
 
-![Alt text](../images/Automations/automation_rule_activated_deactivated.png)
+![Automasjonsregler slått på og av](../images/Automations/automation_rule_activated_deactivated.png)
 
 
 Når du setter opp en **automasjon**, kan du først teste den ved å velge handlingen «Varsling» under «Handlinger». Da viser **AAPS** først en varsling i stedet for å utføre en handling automatisk. Når du er trygg på at varslingen blir utløst på riktig tidspunkt og under riktige betingelser, kan du oppdatere **automasjonsregelen** og bytte ut «Varsling» med en «Handling».
 
-![Alt text](../images/Automations/automation_alert_actions.png)
+![Handlinger for varsler](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
@@ -127,7 +127,7 @@ Vær forsiktig når du velger en negativ verdi i en **automasjon**
 
 Vær forsiktig når du velger en «negativ verdi» i en «Betingelse» som «mindre enn» i **automasjoner**. For eksempel:
 
-![Alt text](../images/Automations/automation_comparison_operators.png)
+![Sammenligningsoperatorer](../images/Automations/automation_comparison_operators.png)
 
 **Eksempel 1:** En betingelse **«er mindre enn»** «-0,1 mmol/L» (eller «-2 mg/dL») vil:
 
@@ -242,7 +242,7 @@ ingen
 
 ![Hendelsene i handlingen Merknad](../images/Automations/automation_action_careportal_events.png) ![Handlingen Merknad satt til Bytte av pumpested](../images/Automations/automation_action_careportal_site_change.png)
 
-**Handlinger:** **Send SMS** (i gruppen **Varsler**)
+**Handlinger:** **Send SMS til alle numre** (i gruppen **Varsler**)
 
 **Alternativer:**
 
@@ -260,7 +260,7 @@ ingen
 
 * velg **PÅ** eller **AV**. Dette endrer innstillingen **Aktiver SMB** i OpenAPS SMB, akkurat som om du hadde endret den i **Innstillinger**, og den blir stående til du eller en annen regel endrer den tilbake.
 
-**Handlinger:** **Autotune-profil** (i gruppen **Loop & insulin**)
+**Handlinger:** **Kjør Autotune** (i gruppen **Loop & insulin**)
 
 **Alternativer:**
 
@@ -280,39 +280,39 @@ ingen
 
 Når «Handlingen» er lagt til, må du endre standardverdiene til det tallet du ønsker, ved å trykke på dem og justere.
 
-![Alt text](../images/Automations/automation_action_temp_target_values.png)
+![Verdier for handlingen midlertidig mål](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## Rekkefølgen på **automasjonene** i listen har betydning
- **AAPS** kjører reglene i prioritert rekkefølge, fra toppen av **automasjonslisten**. Hvis for eksempel «Lav»-**automasjonen** er den viktigste **automasjonen**, viktigere enn alle andre regler, bør denne **automasjonen** ligge øverst i brukerens **automasjonsliste**, som vist nedenfor:
+ **AAPS** kjører reglene i prioritert rekkefølge, fra toppen av **automasjonslisten**. Hvis for eksempel **automasjonen** «Lavt» er den viktigste **automasjonen**, viktigere enn alle andre regler, bør denne **automasjonen** stå øverst i **automasjonslisten** din, som vist nedenfor:
 
 
-![Alt text](../images/Automations/automation_rule_list.png)
+![Liste over automasjonsregler](../images/Automations/automation_rule_list.png)
 
 For å endre prioriteten på **automasjonsreglene** trykker og holder du på **=**-håndtaket på høyre side av regelen. Endre rekkefølgen på **automasjonene** ved å flytte reglene opp eller ned.
 
-![Alt text](../images/Automations/automation_rule_reorder.png)
+![Endre rekkefølgen på automasjonsregler](../images/Automations/automation_rule_reorder.png)
 
 ## Slik sletter du automasjonsregler
 
 For å slette en **automasjonsregel** trykker du på søppelbøtte-ikonet.
 
-![Alt text](../images/Automations/automation_rule_delete.png)
+![Slett automasjonsregler](../images/Automations/automation_rule_delete.png)
 
 ## Eksempler på automasjoner
 
-Nedenfor er noen eksempler på **automasjoner**. Mer diskusjon om **automasjoner** og hvordan brukere har tilpasset sine egne **automasjoner**, finner du i diskusjonsgrupper på Facebook eller på Discord. Du bør ikke kopiere eksemplene nedenfor uten å forstå godt hvordan **automasjonen** vil virke.
+Nedenfor er noen eksempler på **automasjoner**. Mer diskusjon om **automasjoner**, og om hvordan brukere har tilpasset sine egne **automasjoner**, finner du i diskusjonsgruppene på Facebook eller på Discord. Du bør ikke kopiere eksemplene nedenfor uten å forstå godt hvordan **automasjonen** vil virke.
 
 (automations-low-glucose-temp-target)=
 ### Midlertidig mål ved lavt blodsukker
 
 Denne **automasjonen** starter automatisk et **midlertidig mål** når **BS** faller under en bestemt grense – her startes et mål på 110 mg/dL i 30 minutter når blodsukkeret er mindre enn 70 mg/dL:
 
-![Alt text](../images/Automations/automation_example_low_glucose_rule.png)
+![Eksempel: regel ved lavt blodsukker](../images/Automations/automation_example_low_glucose_rule.png)
 
 ### Midlertidig mål til lunsj (med «Plassering»)
 
-![Alt text](../images/Automations/automation_example_lunch_rule.png)
+![Eksempel: lunsjregel](../images/Automations/automation_example_lunch_rule.png)
 
 Denne **automasjonen** er laget for en bruker som spiser lunsj på jobb omtrent til samme tid hver ukedag, men den utløses bare hvis brukeren befinner seg innenfor en bestemt «plassering».  Så hvis brukeren ikke er på jobb en dag, vil denne **automasjonen** ikke bli aktivert.
 
@@ -320,7 +320,7 @@ Denne **automasjonen** setter et lavt **midlertidig mål** (Spise snart) kl. 13:
 
 «Utløseren» plassering har et navn, en posisjon (trykk på **Velg fra kart**, eller bruk posisjonen din akkurat nå) og en radius i meter, og slår til når du er innenfor (eller utenfor) området:
 
-![Alt text](../images/Automations/automation_example_lunch_location_condition.png)
+![Eksempel: lunsjregel med betingelse for plassering](../images/Automations/automation_example_lunch_location_condition.png)
 
 På grunn av «Og»-koblingen skjer **automasjonen** bare på det «valgte tidspunktet» og bare hvis brukeren er på det valgte stedet.
 
@@ -330,11 +330,11 @@ På grunn av «Og»-koblingen skjer **automasjonen** bare på det «valgte tidsp
 
 Å bruke en Wi-Fi SSID er et godt valg for å utløse en **automasjon** når du er innenfor rekkevidden til et bestemt Wi-Fi-nettverk (sammenlignet med GPS): det er ganske presist, bruker mindre batteri og virker innendørs der GPS og andre posisjonstjenester kanskje ikke er tilgjengelige.
 
-Her er et annet eksempel på et **midlertidig mål** som bare settes på arbeidsdager, før frokost (1).
+Her er et annet eksempel på å sette opp et **midlertidig mål** bare på arbeidsdager, før frokost (1).
 
 
 **Automasjonen** utløses kl. 05:30 bare mandag–fredag (2)  
-og bare når telefonen er koblet til hjemmenettverket på Wi-Fi (3).
+og bare når telefonen er koblet til Wi-Fi-nettverket hjemme (3).
 
 
 Den setter da et **midlertidig mål** på 75 mg/dL i 30 minutter (4). En av fordelene med å ta med plasseringen er at den ikke utløses hvis brukeren for eksempel er på ferie.
@@ -350,7 +350,7 @@ Her er skjermbildet som viser utløserne for **automasjonen**:
 1) Under hoved-«OG» (begge betingelsene må være oppfylt for å utløse) 1) Gjentakende tidspunkt = M,T,O,T,F kl. 05:30  
 1) Wi-Fi SSID = My_Home_WiFi_Name
 
-![Alt text](../images/Automations/automation_example_wifi_condition.png)
+![Eksempel: Wi-Fi-betingelse](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
@@ -395,7 +395,7 @@ I eksempelet nedenfor er regelen **Low glucose temp target** (1) (se [Midlertidi
 
 Sjekk at det er «hake» i boksen til venstre for navnet på **automasjonen**, slik at regelen er aktivert:
 
-![Alt text](../images/Automations/automation_rule_activated_deactivated.png)
+![Automasjonsregler slått på og av](../images/Automations/automation_rule_activated_deactivated.png)
 
 * Problem: __Automasjonene mine blir utløst i feil rekkefølge.__
 

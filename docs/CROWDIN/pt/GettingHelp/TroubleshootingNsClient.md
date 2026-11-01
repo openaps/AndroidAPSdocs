@@ -38,6 +38,6 @@ Se o **AAPS** se liga corretamente ao Nightscout mas a glicose aparece como N/A:
 
 * Se continuar a ter um erro...
 
-Verifique o tamanho da sua base de dados no MongoDB (ou através do plugin de tamanho da base de dados no Nightscout). Se usa o plano gratuito do MongoDB, 496MB significa que está cheia e tem de ser limpa. [Siga estas instruções do Nightscout para verificar o tamanho da sua base de dados e apagar dados](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
+Verifique o tamanho da sua base de dados no MongoDB (ou através do plugin de tamanho da base de dados no Nightscout). Se usa o plano gratuito do MongoDB, 496MB significa que está cheia e tem de ser limpa. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
 Antes de apagar dados da sua base de dados, e se ainda não o fez, considere doar os seus dados do AAPS ao projeto Open Humans (para investigação). As instruções estão na [página de configuração do Open Humans](../SupportingAaps/OpenHumans.md).

@@ -22,7 +22,7 @@ Ta metoda używa Juggluco do odbierania surowych danych z sensora co 1 minutę. 
 ### Krok 1: Konfiguracja Juggluco
 Pobierz i zainstaluj aplikację Juggluco [stąd](https://www.juggluco.nl/Juggluco/download.html). Postępuj zgodnie z instrukcjami [tutaj](https://www.juggluco.nl/Juggluco/libre3/)
 
-Upewnij się, że wysyłasz wartości glukozy do xDrip: w ustawieniach Juggluco możesz ustawić wysyłanie wartości glukozy do innych aplikacji. Juggluco może wysyłać trzy rodzaje takich danych (broadcast): **Patched Libre broadcast** był pierwotnie używany przez zmodyfikowaną aplikację Librelink i może służyć do wysyłania wartości glukozy do xDrip
+Upewnij się, że wysyłasz wartości glukozy do xDrip: w ustawieniach Juggluco możesz ustawić wysyłanie wartości glukozy do innych aplikacji. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip.
 
 ### Krok 2: Konfiguracja xDrip
 
@@ -69,7 +69,7 @@ Po wymianie sensora xDrip automatycznie wykryje nowy sensor i usunie wszystkie d
 
 ![Terminate sensor (zakończ sensor)](../images/libre3/step_14.jpg)
 
-Uwaga: gdy aktywne są dwa sensory, Juggluco wyśle do xDrip najnowszą wartość z dowolnego z nich. Jeśli sensory nie są skalibrowane i nie pokazują podobnych wartości BG, wartości BG wysyłane do xDrip mogą skakać. Jeśli zakończysz niewłaściwy sensor, możesz go ponownie włączyć, po prostu skanując sensor.
+Uwaga: gdy aktywne są dwa sensory, Juggluco wyśle do xDrip najnowszą wartość z dowolnego z nich. If the sensors are not calibrated to read BG similarly, this may result in jumpy BG values being reported to xDrip. Jeśli zakończysz niewłaściwy sensor, możesz go ponownie włączyć, po prostu skanując sensor.
 
 ## Przełączanie sensora między aplikacją Libre 3 a Juggluco
 
@@ -99,4 +99,4 @@ Aby przełączyć się z aplikacji Libre 3 na Juggluco, musisz wymusić zatrzyma
 
 Oryginalna instrukcja: [strona jkaltes](https://www.juggluco.nl/Juggluco/libre3/)
 
-Dodatkowe repozytorium GitHub: [link do GitHub](https://github.com/maheini/FreeStyle-Libre-3-patch)
+Additional GitHub repo: [GitHub link](https://github.com/maheini/FreeStyle-Libre-3-patch)

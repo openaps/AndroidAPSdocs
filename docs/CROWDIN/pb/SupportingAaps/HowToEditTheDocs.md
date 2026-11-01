@@ -2,7 +2,7 @@
 
 **Esta descrição serve apenas para editar a documentação em inglês. Todas as informações novas devem ser adicionadas primeiro em inglês. Se você quer traduzir para outras línguas (obrigado), use o [Crowdin](https://crowdin.com/project/androidapsdocs).**
 
-Para dicas sobre como formatar texto (título, negrito...) e criar links, veja a seção ["sintaxe do código"](#code-syntax) desta página.
+For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
 
 ## Geral
 
@@ -34,11 +34,11 @@ Ou clique no ícone de lápis que aparece na barra superior do conteúdo da pág
 
 3. Qualquer uma das opções da Etapa 2 vai criar um novo branch no SEU repositório, onde as suas edições serão salvas. Faça as suas edições no arquivo.
 
-Usamos markdown para as páginas da documentação. Os arquivos têm o sufixo ".md". A especificação do Markdown não é fixa, e no momento usamos o myst_parser para os nossos arquivos markdown. Use a sintaxe correta, como [descrito abaixo](#code-syntax).
+Usamos markdown para as páginas da documentação. Os arquivos têm o sufixo ".md". A especificação do Markdown não é fixa, e no momento usamos o myst_parser para os nossos arquivos markdown. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
 
 ![Editar o branch](../images/PR3.png)
 
-4. Você estava trabalhando na aba "<>Edit file". Selecione a aba "Preview changes" para olhar de novo e garantir que tudo o que você mudou ficou como você queria (erros de digitação etc.). Se você vir algo que precisa melhorar, volte para a aba de edição para fazer mais melhorias. 
+4. Você estava trabalhando na aba "<>Edit file". Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Se você vir algo que precisa melhorar, volte para a aba de edição para fazer mais melhorias. 
 
 ![modo de visualização](../images/PR5.png)
 
@@ -54,7 +54,7 @@ Usamos markdown para as páginas da documentação. Os arquivos têm o sufixo ".
 
 ![Acompanhamento do PR](../images/PR7.png)
 
-PS: O seu fork e o seu branch continuam na sua conta pessoal do GitHub. Depois de receber uma notificação de que o seu PR recebeu merge, você pode apagar o seu branch se não precisar mais dele (a área de notificações da Etapa 8 vai mostrar um link para apagar o branch quando ele for fechado ou receber merge). Para edições futuras, se você seguir este procedimento, as edições sempre vão começar com uma versão atualizada dos repositórios AndroidAPSdocs. Se você escolher outro método para iniciar um PR (por exemplo, começar a editar a partir do branch master do seu repositório com fork), você precisa garantir que o seu repositório esteja atualizado, fazendo primeiro um "compare" e fazendo o merge de todas as atualizações que aconteceram desde a última vez que você atualizou o seu fork. Como as pessoas costumam esquecer de atualizar os seus repositórios, recomendamos usar o processo de PR descrito acima até você se acostumar a fazer "compares".
+PS: O seu fork e o seu branch continuam na sua conta pessoal do GitHub. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Para edições futuras, se você seguir este procedimento, as edições sempre vão começar com uma versão atualizada dos repositórios AndroidAPSdocs. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Como as pessoas costumam esquecer de atualizar os seus repositórios, recomendamos usar o processo de PR descrito acima até você se acostumar a fazer "compares".
 
 (edit-the-docs-code-syntax)=
 
@@ -69,7 +69,7 @@ O autor apenas marca, por exemplo, um título como título de nível 1, e o proc
 A ideia por trás disso é que
 
 - o autor deve pensar primeiro no texto e não na formatação,
-- o texto markdown pode ser trocado entre diferentes ferramentas de markdown, em vez de, por exemplo, ferramentas proprietárias como o Microsoft Windows, e
+- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
 - você pode gerar vários formatos de saída a partir de um arquivo markdown.
 
 O markdown não é um padrão 100% fixo e tentamos ficar o mais perto possível do padrão, para
@@ -219,7 +219,7 @@ Além disso, você pode adicionar notas recolhíveis para informações detalhad
     This is a warning.
     
 
-    ```{admonition} Warning headline 
+    ```{admonition} Warning headline
     :class: warning
     This is a warning.
     ```
@@ -244,7 +244,7 @@ Além disso, você pode adicionar notas recolhíveis para informações detalhad
 
 ## Tabelas
 
-Evite tabelas com textos longos, porque o conteúdo é difícil de formatar em Markdown, elas normalmente não cabem na largura da tela de um celular e provavelmente não vão aparecer do mesmo jeito depois da tradução.
+Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
 
 ## Guia de estilo
 
@@ -262,9 +262,9 @@ Evite tabelas com textos longos, porque o conteúdo é difícil de formatar em M
 
 Use inglês simples sempre que possível. Isso ajuda quem não é nativo e também facilita a tradução dos documentos do AAPS para outras línguas. Escreva como numa conversa com o usuário; imagine que você está sentado do outro lado da mesa, na frente da pessoa para quem você escreve. Lembre-se: a maioria dos usuários do AAPS não tem formação em programação. O diabetes também tem muito jargão e muitas abreviações. Lembre-se de que algumas pessoas podem ter recebido o diagnóstico há pouco tempo, podem ter menos experiência com diabetes do que você ou podem ter recebido um treinamento diferente sobre diabetes. Se você usar uma forma curta ou uma abreviação, escreva-a por extenso na primeira vez que usar, com a abreviação logo depois entre parênteses, como “super micro bolus (SMB)”. Coloque também um link para o glossário. Termos técnicos que talvez o leitor não conheça também podem ser explicados entre parênteses.
 
-Em vez de: *“What causes high postprandial BG peaks in closed loop?"*
+Instead of: *“What causes high postprandial BG peaks in closed loop?”*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
+Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
 
 ##### Use palavras simples que todos entendem
 
@@ -296,7 +296,7 @@ Principalmente se você gravar vídeos ou capturas de tela, tome cuidado para n�
 
 Ordens são a forma mais rápida de dar instruções, mas às vezes os autores têm medo de dar ordens e escrevem “you should do this” em vez de simplesmente “do this”. Talvez as pessoas tenham medo de que as ordens pareçam duras demais. Muitas vezes, você resolve isso colocando a palavra 'please' na frente. Mas, se algo precisa ser feito, é melhor não dizer ‘please’, porque isso dá ao leitor a opção de recusar.
 
-Em vez de: *“You should just think of it as a complete statement."*
+Instead of: *“You should just think of it as a complete statement.”*
 
 Use: *“Think of it as a complete statement.”*
 
@@ -310,7 +310,7 @@ Exemplo de **voz ativa**:
 
 Exemplo de **voz passiva**:
 
-- *“The insulin (sujeito) is delivered (verbo) by the pump (objeto)”*
+- *“The insulin (subject) is delivered (verb) by the pump (object).”*
 
 *“delivered”* está na voz passiva aqui. O sujeito e o objeto trocam de lugar, em comparação com a frase na voz ativa. Tivemos que deixar a frase mais longa, acrescentando “is” e “by the”. Considere também começar com o verbo na voz ativa.
 
@@ -453,7 +453,7 @@ O objetivo de um guia prático é ajudar o usuário que já tem competência a f
 
 - COMO FAZER
 
-- o narrador fala diretamente com o leitor: In this tutorial **you** will
+- narrator directly talks to the reader: In this guide **you** will
 
 - Futuro -> para mostrar o objetivo final
 

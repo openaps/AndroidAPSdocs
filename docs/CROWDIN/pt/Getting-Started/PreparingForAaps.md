@@ -51,9 +51,9 @@ Um [comentário](https://academic.oup.com/brain/article/138/1/2/340563) a este t
 :class: danger
 Os inibidores SGLT-2, também chamados gliflozinas, inibem a reabsorção da glicose no rim. As gliflozinas baixam a glicose de forma impossível de calcular, por isso NÃO PODE tomá-las enquanto usa um sistema de loop fechado como o AAPS! Haveria um risco significativo de cetoacidose e/ou hipoglicemia! A combinação deste medicamento com um sistema que baixa as taxas basais para subir a glicose é especialmente perigosa. 
 
-Em resumo:
-- **Exemplo 1: risco de hipoglicemia**
->Ao almoço, usa o **AAPS** para dar um bólus para 45 g de glicose ingerida. O problema é que, sem o AAPS saber, os inibidores fazem o corpo eliminar parte dos hidratos de carbono. Isto deixa o seu corpo com demasiada insulina em relação aos hidratos absorvidos, o que provoca hipoglicemia.
+In a nutshell:
+- **Example 1: risk of Hypo**
+>During lunch, you use **AAPS** to bolus based on consuming 45 g of carbs. O problema é que, sem o AAPS saber, os inibidores fazem o corpo eliminar parte dos hidratos de carbono. Isto deixa o seu corpo com demasiada insulina em relação aos hidratos absorvidos, o que provoca hipoglicemia.
 
 - **Exemplo 2: risco de cetoacidose**
 >Os inibidores eliminam parte dos hidratos de carbono em segundo plano, o que faz descer a sua glicose. O **AAPS** vai dar automaticamente instruções à bomba para reduzir a insulina, incluindo a basal. Com o tempo, a sua glicose pode ficar abaixo do valor alvo, ao ponto de o corpo não ter insulina de fundo suficiente para absorver os hidratos de carbono, o que provoca cetoacidose. Normalmente, a cetoacidose surge em doentes com DT1 porque a bomba falha, o que faria disparar alertas no telefone e seria notado por causa de um valor de glicose alto. No entanto, o perigo das gliflozinas é que não haveria alertas do AAPS, porque a bomba continua a funcionar e a glicose pode manter-se dentro do alvo.
@@ -80,7 +80,7 @@ O **AAPS** só é compatível com certos tipos de bombas de insulina, CGM e tele
 
 #### Tempo para compilar a app e progredir até ao loop completo
 
-O tempo para compilar a app **AAPS** depende do seu nível de conhecimento e da sua capacidade técnica. Normalmente, para utilizadores sem experiência, pode demorar até meio dia ou um dia inteiro (com ajuda da comunidade) a compilar o **AAPS**. O processo fica muito mais rápido nas versões mais novas do **AAPS**, à medida que ganha experiência.
+The time to build the **AAPS** app depends on your level of expertise and technical ability. Normalmente, para utilizadores sem experiência, pode demorar até meio dia ou um dia inteiro (com ajuda da comunidade) a compilar o **AAPS**. O processo fica muito mais rápido nas versões mais novas do **AAPS**, à medida que ganha experiência.
 
 Várias partes desta documentação ajudam-no no processo de compilação:
 

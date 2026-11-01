@@ -48,7 +48,7 @@ Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
 
   * 若显示 Git 版本号（如上图），请继续[步骤 2](#troubleshooting-android-studio-check-for-uncommitted-changes)
 
-  * 若提示：
+  * In case you get a message saying
     ```
     Git: command not found
     ```
@@ -58,13 +58,13 @@ Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
 
   * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
 
-  * If Git is installed, you have restarted (if on windows), and Git still cannot be found:
+  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
 
   * 在计算机中搜索"git.exe"文件
 
     记录所在目录路径
 
-  * 转到Windows中的环境变量，选择变量“PATH”并点击编辑。添加 Git 所在目录
+  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. 添加 Git 所在目录
 
   * 保存并关闭
 
@@ -138,7 +138,7 @@ git config --global user.email 您的邮箱@example.com
 原因：错误：无效的源版本：21
 ```
 
-出现此类错误时，需下载正确的 JVM 版本：
+If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
 
 1.  查看[要求表](#Building-APK-recommended-specification-of-computer-for-building-apk-file)确认当前构建的 **AAPS** 版本所需的 JVM 版本
 
@@ -251,7 +251,7 @@ APK 已成功生成，可传输至手机安装。
 
 ## 安装成功但版本未更新
 
-若成功构建并安装，但版本号未变，可能未[更新本地代码库](#Update-to-new-version-update-your-local-copy)
+If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
 
 ## 以上方法均无效
 

@@ -26,7 +26,7 @@ eSacharidy na hlavní obrazovce: číslo v závorce v poli **COB** ukazuje sacha
 
 V [bolusové kalkulačce](#aaps-screens-bolus-wizard) můžete třemi tlačítky pod polem **Sacharidy** zvolit, jak rychle se vaše jídlo vstřebává. Jedno vyberte před potvrzením. Podle typu vezme **AAPS** část zadaných sacharidů jako běžné sacharidy a u pomalých, vydatných jídel přidá později [rozložené sacharidy („eSacharidy“)](#Extended-Carbs-extended-carbs-ecarbs). Klepnutím na ikonu **(i)** vedle tlačítek zobrazíte typická jídla pro vybraný typ a to, co typ s vašimi sacharidy udělá.
 
-| Typ                 | Typická jídla (jak je uvádí aplikace)                                                                           | Sacharidy hned, použité pro bolus | Přidané eSacharidy                                       |
+| Typ                 | Typical foods (examples from the app)                                                                           | Sacharidy hned, použité pro bolus | Přidané eSacharidy                                       |
 | ------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------- | -------------------------------------------------------- |
 | **Chléb** (výchozí) | Chléb, slané pečivo, jogurt, ovoce, brambory, rýže, ovesné vločky, zelenina                                     | 100 %                             | Žádný                                                    |
 | **Koláč**           | Knedlíky, těstoviny, asijská jídla bohatá na sacharidy a tuky, sladké a kynuté pečivo, cereálie, med, marmeláda | 90 %                              | 20 %, začínají o 60 minut později, rozložené na 2 hodiny |
@@ -60,7 +60,7 @@ Pro rychlejší začátek může eSacharidy přidat *bolusová kalkulačka*: pod
 **Důležité poznámky:** Samozřejmě budete muset vyzkoušet, jaké konkrétní hodnoty vám vyhovují. Pro agresivnější nebo méně agresivní chování algoritmu můžete také opatrně upravit nastavení *Max minut bazálu pro omezení SMB*. Pro jídla s nízkým obsahem sacharidů a s vysokým obsahem tuků/bílkovin může být dostačující použít jenom eSacharidy bez ručních bolusů (viz blogový příspěvek výše). Když se eSacharidy vytvoří, vytvoří se také poznámka v Péči, která zaznamená všechny zadané údaje, aby bylo snazší je postupně upravovat a zlepšovat.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## Prodloužený bolus a proč nebude fungovat v uzavřené smyčce?
+## Extended boluses and why they don't work in a closed-loop environment
 
 Jak bylo uvedeno výše, prodloužené nebo vícevlnné bolusy v uzavřené smyčce ve skutečnosti nefungují. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 

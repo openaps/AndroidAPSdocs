@@ -10,7 +10,7 @@
 
 Не позволявайте на друго приложение да качва данни (кръвна захар и лечения) в Nightscout.
 
-→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Изключете **OFF** `Enabled` (5)
+→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Switch **OFF** `Enabled` (5)
 
 ![Основни настройки на xDrip 1](../images/xDrip_Basic1.png)
 
@@ -34,7 +34,7 @@
 
 ### **Inter-app Settings** (Broadcast)
 
-Ако ще използвате AAPS и данните трябва да се препращат например към AAPS, трябва да включите излъчването (broadcasting) в xDrip в Inter-App settings.
+If you use AAPS, you must activate broadcasting in xDrip's Inter-App settings so the data is forwarded to AAPS.
 
 → Hamburger Menu (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
 

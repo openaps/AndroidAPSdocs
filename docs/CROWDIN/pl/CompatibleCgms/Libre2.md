@@ -40,7 +40,7 @@ Po zmianie sensora xDrip automatycznie wykryje nowy sensor i usunie wszystkie da
 
 ![Konfiguracja > Źródło BG z wybranym xDrip+ BG](../images/v4/Configuration/configuration_bg_source.png)
 
--   Jeśli AAPS nie otrzymuje wartości BG, gdy telefon jest w trybie samolotowym, użyj „Identify receiver”, jak opisano na [stronie ustawień xDrip](#xdrip-identify-receiver).
+-   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as described on [xDrip settings page](#xdrip-identify-receiver).
 
 ## 2. Użyj bezpośredniego połączenia xDrip
 
@@ -67,7 +67,7 @@ Technicznie aktualna wartość glukozy jest wysyłana do xDrip co minutę. Domy�
 
 Jest to konieczne do używania pętli. Krzywe są gładkie, a wyniki pętli są bardzo dobre. Wartości surowe, na których opierają się alarmy, skaczą trochę bardziej, ale odpowiadają wartościom, które pokazuje też czytnik. Dodatkowo wartości surowe można pokazać na wykresie xDrip, aby na czas reagować na szybkie zmiany. Włącz Less Common Settings \> Advanced Settings for Libre2 \> „show Raw values” i „show Sensors Infos”. Wtedy wartości surowe są dodatkowo pokazywane jako małe białe kropki, a dodatkowe informacje o sensorze są dostępne w menu systemowym.
 
-Wartości surowe są bardzo pomocne, gdy poziom glukozy szybko się zmienia. Nawet jeśli kropki bardziej skaczą, zobaczysz trend dużo lepiej niż na wygładzonej linii i podejmiesz właściwe decyzje dotyczące leczenia.
+Wartości surowe są bardzo pomocne, gdy poziom glukozy szybko się zmienia. Even if the dots are jumpier you would detect the tendency much better than using the smoothed line to make proper therapy decisions.
 
 → Menu (☰) → Settings → Less common settings → Advanced settings for Libre 2
 
@@ -77,7 +77,7 @@ Wartości surowe są bardzo pomocne, gdy poziom glukozy szybko się zmienia. Naw
 
 #### Kalibracja
 
-Możesz kalibrować Libre2 **z przesunięciem od -40 mg/dl do +20 mg/dl \[-2,2 mmol/l do +1,1 mmol/l\]** (intercept). Nachylenia (slope) nie można zmienić. Po założeniu nowego sensora sprawdź wartości pomiarem z palca. Pamiętaj, że w pierwszych 12 godzinach po założeniu sensor może być niedokładny. Ponieważ różnice względem pomiarów z krwi mogą być duże, sprawdzaj co 24 godziny i w razie potrzeby kalibruj. Jeśli po kilku dniach sensor pokazuje zupełnie złe wartości, należy go wymienić.
+You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2.2 mmol/L to +1.1 mmol/L\]** (intercept). Nachylenia (slope) nie można zmienić. Po założeniu nowego sensora sprawdź wartości pomiarem z palca. Pamiętaj, że w pierwszych 12 godzinach po założeniu sensor może być niedokładny. Ponieważ różnice względem pomiarów z krwi mogą być duże, sprawdzaj co 24 godziny i w razie potrzeby kalibruj. Jeśli po kilku dniach sensor pokazuje zupełnie złe wartości, należy go wymienić.
 
 ## 3. Użyj Diabox
 

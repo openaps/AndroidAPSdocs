@@ -15,7 +15,7 @@
 - 請依照[這裡的說明](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)操作：[xDrip G7、ONE+ 和 Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)。需使用近期版本的 xDrip — 最低版本需求請參閱連結頁面。
 - 在 [**組態設定 → 血糖來源**](#Config-Builder-bg-source)中選擇 xDrip。
 
-- 請參照 xDrip 設定頁面的說明調整 xDrip 設定：[xDrip 設定](../CompatibleCgms/xDrip.md)
+- 請參照 xDrip 設定頁面的說明調整 xDrip 設定：[xDrip 設定](../CompatibleCgms/xDrip.md)。
 
 ## 2. 自行建置 Dexcom App（僅適用於 G7）
 
@@ -30,7 +30,7 @@ Dexcom BYODA 現在是非常舊的應用程式版本，且無法更新。不適�
 -   解除安裝原版 Dexcom 應用程式
 -   安裝下載的 apk
 -   在修改版應用程式中輸入傳感器代碼
--   短時間後 BYODA 應會接收到發射器訊號
+-   After a short time BYODA should pick up the sensor signal.
 
 (DexcomG7-xdrip-companion-app)=
 

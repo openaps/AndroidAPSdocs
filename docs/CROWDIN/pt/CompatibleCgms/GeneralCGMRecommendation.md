@@ -9,7 +9,7 @@ Seja qual for o sistema CGM que usa, se for usar calibração com sangue, há al
 -   Evite calibrar quando os níveis de glicose estão a subir ou a descer.
 -   Faça calibrações «suficientes» – nas apps oficiais, será pedido para verificar uma ou duas vezes por dia. Nos sistemas DIY pode não ser pedido, e deve ter cuidado ao continuar sem calibrações.
 -   Com sensores que não precisam de calibração ou não a permitem, verifique pelo menos uma vez por dia a glicose real no sangue. O AAPS só é tão seguro quanto as leituras do seu sensor são fiáveis.
--   Se possível, calibre com algumas leituras numa faixa mais baixa (4–5 mmol/l ou 72–90 mg/dl) e algumas num nível um pouco mais alto (7–9 mmol/l ou 126–160 mg/dl), porque isto dá uma faixa melhor para a calibração do ponto/declive.
+-   If at all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
 
 ## Colocar o sensor (G6)
 
@@ -38,4 +38,4 @@ Pode tentar alterar as definições de bloqueio de ruído no xDrip (Settings - I
 
 ![Idade do sensor na linha Sensor do painel de estado expandido](../images/main/main_status_row_expanded.png)
 
-A idade do sensor é mostrada na linha **Sensor** do painel de estado no ecrã principal (toque na seta para o expandir). Uma idade negativa ocorre se houver uma entrada [Careportal](#aaps-screens-careportal) «Inserção do sensor» em duplicado ou uma inserção de sensor com a data errada. Abra o **Histórico de tratamentos** (menu ☰), selecione o separador **Careportal** e apague a entrada errada.
+A idade do sensor é mostrada na linha **Sensor** do painel de estado no ecrã principal (toque na seta para o expandir). A negative age occurs if there is either a double "Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Abra o **Histórico de tratamentos** (menu ☰), selecione o separador **Careportal** e apague a entrada errada.

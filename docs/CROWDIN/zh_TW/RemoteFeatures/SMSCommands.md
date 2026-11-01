@@ -201,18 +201,18 @@ PIN 碼要求如下：
 
 ### CGM 資料
 
-| 指令         | 驗證 | 功能 & *回應*                                                                                    |
-| ---------- | -- | -------------------------------------------------------------------------------------------- |
-| BG         | 否  | 返回：最後血糖、變化、IOB（注射和基礎）、COB<br/>*最後血糖：5.6 4分前，變化：-0.2 mmol，IOB：0.20U（注射：0.10U 基礎：0.10U）* |
-| CAL 5.6/90 | 是  | 將 CGM 確認值設為 5.6/90<br/>(使用適合你血糖單位的值)<br/>僅在**AAPS**設定正確的情況下工作。<br/>*已發送標定* |
+| 指令         | 驗證 | 功能 & *回應*                                                                                                                                                                                                                         |
+| ---------- | -- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BG         | 否  | 返回：最後血糖、變化、IOB（注射和基礎）、COB<br/>*最後血糖：5.6 4分前，變化：-0.2 mmol，IOB：0.20U（注射：0.10U 基礎：0.10U）*                                                                                                                                      |
+| CAL 5.6/90 | 是  | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent. Receiving must be enabled in xDrip+.* |
 
 ### 幫浦
 
-| 指令                   | 驗證 | 功能 & *回應*                                                                      |
-| -------------------- | -- | ------------------------------------------------------------------------------ |
-| 幫浦                   | 否  | 最後連線：1 分鐘前<br/>暫時：0.00U/h @11:38 5/30分鐘<br/>IOB：0.5U 遺留：34U 電池：100 |
-| PUMP DISCONNECT *30* | 是  | 在 *30* 分鐘內中斷幫浦                                                                 |
-| PUMP CONNECT         | 是  | 幫浦已重新連線                                                                        |
+| 指令                   | 驗證 | 功能 & *回應*                                                                                            |
+| -------------------- | -- | ---------------------------------------------------------------------------------------------------- |
+| 幫浦                   | 否  | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP DISCONNECT *30* | 是  | 在 *30* 分鐘內中斷幫浦                                                                                       |
+| PUMP CONNECT         | 是  | 幫浦已重新連線                                                                                              |
 
 ### 基礎率
 
@@ -229,14 +229,14 @@ PIN 碼要求如下：
 
 ### 循環
 
-| 指令                | 驗證 | 功能 & *回應*                                                                                                     |
-| ----------------- | -- | ------------------------------------------------------------------------------------------------------------- |
-| LOOP STATUS       | 否  | 反應依賴於實際狀態：<br/> - *當循環關閉時，循環已停用*或 LGS<br/> - *當循環開啟或閉合時，循環已啟用*<br/> - *暫停 (10 分鐘)*當循環被中斷或暫停 |
-| LOOP STOP/DISABLE | 是  | 幫浦將恢復到預設的基礎注射速率。<br/>*循環已被停用*                                                                           |
-| LOOP SUSPEND 20   | 是  | *循環暫停 20 分鐘*                                                                                                  |
-| LOOP RESUME       | 是  | *循環已恢復*                                                                                                       |
-| LOOP CLOSED       | 是  | *當前循環模式：閉合循環*                                                                                                 |
-| LOOP LGS          | 是  | *當前循環模式：低血糖暫停*                                                                                                |
+| 指令                | 驗證 | 功能 & *回應*                                                                                                                                                                                                                                                                          |
+| ----------------- | -- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LOOP STATUS       | 否  | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled<br/> - *Loop is enabled* if the loop is closed, open or LGS<br/> - *Pump disconnected* if the pump is disconnected<br/> - *Suspended (10 m)* if the loop is suspended |
+| LOOP STOP/DISABLE | 是  | 幫浦將恢復到預設的基礎注射速率。<br/>*循環已被停用*                                                                                                                                                                                                                                                |
+| LOOP SUSPEND 20   | 是  | *Loop suspended*                                                                                                                                                                                                                                                                   |
+| LOOP RESUME       | 是  | *循環已恢復*                                                                                                                                                                                                                                                                            |
+| LOOP CLOSED       | 是  | *Current running mode: Closed Loop*                                                                                                                                                                                                                                                |
+| LOOP LGS          | 是  | *Current running mode: Low Glucose Suspend*                                                                                                                                                                                                                                        |
 
 ### 注射
 
@@ -348,6 +348,6 @@ PIN 碼要求如下：
 (sms-commands-too-many-messages)=
 ### 我收到的 SMS 命令過多。我可以減少頻率或停止這些簡訊嗎？
 
-使用 SMS 命令可能會產生大量來自 **AAPS** 手機發送到看護者手機的自動訊息。例如，如果你在 **AAPS** 中設置了自動化，你也會收到“幫浦中的基礎率設定已更新”這類訊息。如果要發送大量 SMS，擁有不限次數的 SMS 配額可能會很有用，並且對所有手機停用 SMS 通知、警報或震動。使用 SMS 指令時，無法避免接收到這些更新。因此，你可能需要另一種與孩子直接溝通的方式（如果他們年齡夠大），而不是使用 SMS。常見的 **AAPS** 照護者會使用的替代通訊應用程式包括 Whatsapp、Lime、Telegram 和 Facebook Messenger。
+使用 SMS 命令可能會產生大量來自 **AAPS** 手機發送到看護者手機的自動訊息。例如，如果你在 **AAPS** 中設置了自動化，你也會收到“幫浦中的基礎率設定已更新”這類訊息。如果要發送大量 SMS，擁有不限次數的 SMS 配額可能會很有用，並且對所有手機停用 SMS 通知、警報或震動。使用 SMS 指令時，無法避免接收到這些更新。因此，你可能需要另一種與孩子直接溝通的方式（如果他們年齡夠大），而不是使用 SMS。 Common alternative communication apps used by **AAPS** caregivers include WhatsApp, LINE, Telegram, and Facebook Messenger.
 
-如果個人設定檔變更是由 Nightscout 發起，您可以停用「個人設定檔已變更」簡訊。要做到這一點，請在 AAPS 目錄的`extra`目錄中創建名為**exactly** `do_not_send_sms_on_profile_change`的檔案。
+It is possible to disable the "Basal profile in pump updated" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly** `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.

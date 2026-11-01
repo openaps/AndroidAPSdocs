@@ -175,7 +175,7 @@ AAPS се използва за управление на помпата и за
 
 Когато използвате затворен кръг, опитайте следните стъпки:
 
-* Направете [смяна на профил](#ProfileSwitch-change-percentage) < 100 %: докоснете името на профила на главния екран, докоснете кръглия бутон **▶** и задайте **Процент** и **Продължителност**.
+* Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
 * Задайте [временна цел за физическа активност](#TempTargets-activity-temp-target) над стандартната си цел. При процент под 100 % и зададена продължителност същият екран **Активиране** предлага превключвател **Временна цел / Физ. активност**, който стартира и двете едновременно.
 * Ако използвате SMB, уверете се, че [„Използвай SMB с високи цели“](#Open-APS-features-enable-smb-with-high-temp-targets) и [„Винаги използвай SMB“](#Open-APS-features-enable-smb-always) са изключени.
 
@@ -194,7 +194,7 @@ AAPS се използва за управление на помпата и за
 Пиенето на алкохол е рисковано в режим Затворен кръг, защото алгоритъмът не може да предвиди правилно КЗ под влиянието на алкохола. Трябва сами да намерите свой начин за справяне с това, като използвате следните функции в AAPS:
 
 * Да изключите режима Затворен кръг и да лекувате диабета ръчно или
-* да зададете високи временни цели и да изключите UAM, за да не може кръгът да увеличи IOB заради хранене, което не сте въвели, или
+* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
 * направете [смяна на профил](#ProfileSwitch-change-percentage) на стойност, значително по-ниска от 100 % 
 
 Шаблонът за [сценарий](#scenes) *Алкохол* е отправна точка, която можете да промените според своя начин.
@@ -363,9 +363,9 @@ AAPS се използва за управление на помпата и за
 
 #### Моят Link/помпа/пач не реагира (RL/OL/EmaLink…)
 
-При някои телефони Bluetooth връзката с устройствата Link (RL/OL/EmaL...) прекъсва.
+With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
 
-При някои телефони устройствата Link спират да реагират (AAPS показва, че са свързани, но устройствата Link не могат да достигнат помпата или да ѝ подават команди).
+Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
 
 Първо опитайте бутона **Ресет на RileyLink** на екрана на помпата (вижте страницата на вашата помпа: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). Ако това не помогне, най-лесният начин всички тези части отново да работят заедно е:
 
@@ -419,5 +419,5 @@ AAPS се използва за управление на помпата и за
 
 Първо прочетете тези раздели:
 
-* [Експорт и импорт на настройки](#omnipod-dash-export-import) на страницата за Omnipod DASH и [Помпи без маркуч](#ExportImportSettings-tubeless-pumps): на новия телефон отметнете **Замени и настройките на помпата** и използвайте файл, експортиран по време на пача, който носите в момента,
+* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
 * [Изхвърляне на пач](#omnipod-dash-discard-pod), за да премахнете след това пача от стария телефон. Keep the old phone in airplane mode until the Pod is discarded, so that the two phones never talk to the Pod at the same time.

@@ -10,7 +10,7 @@
 
 - людей, работающих по сменам - сдвиг по времени в ** Профиле**, изменяя **Профиль** в зависимости от того, насколько позже / раньше пользователь ложится спать или просыпается.
 
-Зачем использовать ** Процентное содержание профиля **, а не корректировку при помощи временной базальной скорости? Для повышения эффективности ** Процентное содержание профиля** пропорционально уменьшается или увеличивается по базалу, ISF и I:C. Это гарантирует, что при назначении дозы инсулина **AAPS** обеспечит сбалансированный подход. За счет уменьшения базальной скорости в **Профиле** можно добиться незначительных результатов, если алгоритм **AAPS** сохраняет прежние соотношения ISF и I:C.
+Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. Это гарантирует, что при назначении дозы инсулина **AAPS** обеспечит сбалансированный подход. За счет уменьшения базальной скорости в **Профиле** можно добиться незначительных результатов, если алгоритм **AAPS** сохраняет прежние соотношения ISF и I:C.
 
 (ProfileSwitch-change-percentage)=
 
@@ -78,7 +78,7 @@ Select a profile and tap **▶ Activate**. The **Activate** screen lets you tail
 
 ![The Activate screen — percentage, duration, time shift, time](../images/v4/Profiles/profile_activate.png)
 
-- **Percentage** (30–250 %, starts at 100 % every time) — scale the whole profile. 100 % uses it as-is; for example 70 % reduces basal and the calculated insulin dose (both meal boluses and corrections) by 30 %. It does not change your glucose targets or carb absorption. See [Profile Percentage](#profile-percentage) for the full effect.
+- **Percentage** (30–250 %, starts at 100 % every time) — scale the whole profile. 100 % uses it as-is; for example 70 % reduces basal and the calculated insulin dose (both meal boluses and corrections) by 30 %. It does not change your glucose targets or carb absorption. See [Profile Percentage](#ProfileSwitch-profile-percentage) for the full effect.
 - **Duration** (0–10080 minutes, that is up to 7 days) — how long the switch lasts. **0 = indefinite** (until you switch again); a non-zero value reverts to the previous profile when it ends.
 - **Temporary target / Activity** — appears only when you set a **Duration** and a **Percentage** below 100 %. Switch it on to also start an [Activity temp target](#TempTargets-activity-temp-target) for the same duration, as you would before exercise.
 - **Time shift** — shows *0h*; tap **Change** to move the schedule forward or back by up to 23 hours (useful for shift work or travel). See [Time shift](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
@@ -107,6 +107,8 @@ If the pump reports a basal that is far from your **Profile**, **AAPS** keeps th
 
 A profile switch is not limited to this screen. The same switch can also be triggered from a **Wear OS watch**, a paired **client** (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)), a **[scene](Scenes.md)**, or an **Automation** rule.
 
+(ProfileSwitch-profile-percentage)=
+
 ## Процент профиля
 
 Важно, чтобы пользователь понимал основные характеристики ** процентного содержания профилей**. При применении процентного увеличения или уменьшения при Смене профиля **** пропорционально увеличиваются или уменьшаются значения настроек пользователя, которые установлены в ** Профиле**.
@@ -125,23 +127,23 @@ A profile switch is not limited to this screen. The same switch can also be trig
 
 | Смена Профиля   
 Процент |    Эффект    |     I:C  
-g/U     | пример  
-15г |          ISF  
+g/U     | Example  
+15 g |          ISF  
 mmol/L/U  
 mg/dL/U          | U to lower  
 2mmol/L  
 40mg/dL |
-|:------------------------:|:------------:|:-----------------:|:------------:|:------------------------------------------:|:------------------------------:|
+|:------------------------:|:------------:|:-----------------:|:--------------:|:------------------------------------------:|:------------------------------:|
 |           90%            |    Слабее    | 5/0.9  
-=**5.55** |    2.7 U     | 2.2/0.9  
+=**5.55** |     2.7 U      | 2.2/0.9  
 =**2.4**  
   
 40/0.9  
 =**44.4** |             0.8 U              |
-|         **100%**         | **Стандарт** |       **5**       |   **3 U**    |                **2.2  
+|         **100%**         | **Стандарт** |       **5**       |    **3 U**     |                **2.2  
 40**                |           **0.9** U            |
 |           130%           |   Сильнее    | 5/1.3  
-=**3.85** |    3.9 U     | 2.2/1.3  
+=**3.85** |     3.9 U      | 2.2/1.3  
 =**2.4**  
   
 40/1.3  
@@ -153,7 +155,7 @@ mg/dL/U          | U to lower
 
 Функция "сдвиг по времени" в **Профиле ** переместит настройки ** Профиля ** пользователя в соответствии с суточным (циркадным) часовым ритмом на введенное количество часов. Это полезно для:
 
-- ** людей, работающих по сменам**: работая в ночную смену сдвиньте время в зависимости от того, насколько позже / раньше будете ложиться спать или просыпаться чем в **Профиле**; 
+- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
 - **пользователей, меняющих часовые пояса во время путешествия**; или
 - **Детей с диабетом 1 типа**: у которых есть установленный режим отхода ко сну и резистентность к инсулину, указанные в **Профиле**. Если по какой-либо причине ребенку назначено более позднее время отхода ко сну, лицо, осуществляющее уход, может применить "сдвиг во времени" к **Профилю** ребенка, чтобы позволить **AAPS** реагировать на резистентность к инсулину в период времени, установленный врачом.
 
@@ -169,7 +171,7 @@ mg/dL/U          | U to lower
 
 ![Инструкции по смене профиля и часового пояса](../images/ProfileSwitch_PlusMinus2.png)
 
-Этот механизм создания моментальных снимков **Профиля ** позволяет точнее рассчитать прошлое и отследить изменения **Профиля **.
+This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
 
 (ProfileSwitch-keep-for-later)=
 

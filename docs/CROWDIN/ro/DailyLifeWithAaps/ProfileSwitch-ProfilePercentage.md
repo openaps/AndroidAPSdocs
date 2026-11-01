@@ -78,7 +78,7 @@ Select a profile and tap **▶ Activate**. The **Activate** screen lets you tail
 
 ![The Activate screen — percentage, duration, time shift, time](../images/v4/Profiles/profile_activate.png)
 
-- **Percentage** (30–250 %, starts at 100 % every time) — scale the whole profile. 100 % uses it as-is; for example 70 % reduces basal and the calculated insulin dose (both meal boluses and corrections) by 30 %. It does not change your glucose targets or carb absorption. See [Profile Percentage](#profile-percentage) for the full effect.
+- **Percentage** (30–250 %, starts at 100 % every time) — scale the whole profile. 100 % uses it as-is; for example 70 % reduces basal and the calculated insulin dose (both meal boluses and corrections) by 30 %. It does not change your glucose targets or carb absorption. See [Profile Percentage](#ProfileSwitch-profile-percentage) for the full effect.
 - **Duration** (0–10080 minutes, that is up to 7 days) — how long the switch lasts. **0 = indefinite** (until you switch again); a non-zero value reverts to the previous profile when it ends.
 - **Temporary target / Activity** — appears only when you set a **Duration** and a **Percentage** below 100 %. Switch it on to also start an [Activity temp target](#TempTargets-activity-temp-target) for the same duration, as you would before exercise.
 - **Time shift** — shows *0h*; tap **Change** to move the schedule forward or back by up to 23 hours (useful for shift work or travel). See [Time shift](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
@@ -107,6 +107,8 @@ If the pump reports a basal that is far from your **Profile**, **AAPS** keeps th
 
 A profile switch is not limited to this screen. The same switch can also be triggered from a **Wear OS watch**, a paired **client** (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)), a **[scene](Scenes.md)**, or an **Automation** rule.
 
+(ProfileSwitch-profile-percentage)=
+
 ## Profile Percentage
 
 It is important that a user understands the essential features of a **Profile Percentage**. By applying a percentage increase or decrease to a **Profile Switch** this will apply in the same percentage to either raise or lower the user’s settings parameters as set within the **Profile**.
@@ -125,23 +127,23 @@ The effect of a **Profile** Percentage is summarized in the table below:
 
 | Profile Switch  
 Percentage |    Effect    |     I:C  
-g/U     | example  
-15g |          ISF  
+g/U     | Example  
+15 g |          ISF  
 mmol/L/U  
 mg/dL/U          | U to lower  
 2mmol/L  
 40mg/dL |
-|:---------------------------:|:------------:|:-----------------:|:-------------:|:------------------------------------------:|:------------------------------:|
+|:---------------------------:|:------------:|:-----------------:|:--------------:|:------------------------------------------:|:------------------------------:|
 |             90%             |    Weaker    | 5/0.9  
-=**5.55** |     2.7 U     | 2.2/0.9  
+=**5.55** |     2.7 U      | 2.2/0.9  
 =**2.4**  
   
 40/0.9  
 =**44.4** |             0.8 U              |
-|          **100%**           | **Standard** |       **5**       |    **3 U**    |                **2.2  
+|          **100%**           | **Standard** |       **5**       |    **3 U**     |                **2.2  
 40**                |           **0.9** U            |
 |            130%             |   Stronger   | 5/1.3  
-=**3.85** |     3.9 U     | 2.2/1.3  
+=**3.85** |     3.9 U      | 2.2/1.3  
 =**1.7**  
   
 40/1.3  
@@ -153,7 +155,7 @@ mg/dL/U          | U to lower
 
 A ‘time shift’ within a user’s **Profile** feature will move the user’s **Profile’s** settings around the day-to-day clock (‘circadian’) to the desired number of hours entered. This can be helpful for:
 
-- **lucrători în schimburi de noapte sau cu program variabil**: gestionează schimburile de noapte prin modificarea numărului de ore (cu cât mai târziu sau mai devreme) față de ora de culcare sau de trezire setată în **Profil**; 
+- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
 - **users changing time zones during travelling**; or
 - **users who are type 1 children**: and have a set bedtime routine and insulin resistance catered for within their **Profile**. If for whatever reason, there is a predicted later bedtime for the child, the caregiver can apply a ‘time shift’ to the child’s **Profile** to allow **AAPS** to react to insulin resistance at a desired time period as set by the user.
 
@@ -169,7 +171,7 @@ It is always a question of which hour’s **Profile’s** settings should replac
 
 ![Sensul decalării orare a profilului](../images/ProfileSwitch_PlusMinus2.png)
 
-Acest mecanism de a face imagini ale **profilului** permite o calculare mult mai precisă a trecutului și posibilitatea de a urmări modificările din **profil**.
+This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
 
 (ProfileSwitch-keep-for-later)=
 

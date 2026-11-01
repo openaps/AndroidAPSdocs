@@ -175,7 +175,7 @@ Vous auriez donc plus de glucides actifs, mais en même temps la boucle les comp
 
 Lors de la boucle, vous devriez essayer ces étapes :
 
-* Faites un [changement de profil](#ProfileSwitch-change-percentage) < 100 % : appuyez sur le nom du profil sur l'écran principal, appuyez sur le bouton rond **▶**, puis réglez **Pourcentage** et **Durée**.
+* Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
 * Réglez une [cible temporaire d'activité](#TempTargets-activity-temp-target) au-dessus de votre cible habituelle. Avec un pourcentage inférieur à 100 % et une durée, le même écran **Activer** propose un interrupteur **Cible Temp / Activité** qui lance les deux en même temps.
 * Si vous utilisez les SMB, vérifiez que [« Activer les SMB avec Cibles Temp hautes »](#Open-APS-features-enable-smb-with-high-temp-targets) et [« Activer en permanence les SMB »](#Open-APS-features-enable-smb-always) sont désactivés.
 
@@ -194,7 +194,7 @@ Vous pouvez retirer la pompe pour être « libre », mais vous devez l'indique
 La consommation d'alcool est dangereuse en mode boucle fermée, car l'algorithme ne peut pas prévoir correctement l'effet de l'alcool sur la glycémie. Vous devez trouver votre propre méthode pour gérer cela avec les fonctions suivantes d'AAPS :
 
 * désactivation de la boucle fermée et traitement du diabète manuellement ou
-* réglage d'une cible temporaire élevée et désactivation des RNS pour éviter que la boucle n'augmente l'IA à cause d'un repas non signalé, ou
+* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
 * faire un [changement de profil](#ProfileSwitch-change-percentage) nettement inférieur à 100 % 
 
 Le modèle de [scénario](#scenes) *Alcool* est un point de départ que vous pouvez adapter à votre propre méthode.
@@ -363,9 +363,9 @@ Vous pouvez aussi changer le moment où l'alerte est déclenchée : appuyez sur
 
 #### Mon Link/ma pompe/mon pod ne répond pas (RL/OL/EmaLink…)
 
-Avec certains téléphones, la connexion Bluetooth avec les Links (RL/OL/EmaL...) se coupe.
+With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
 
-Parfois, les Links ne répondent plus (AAPS indique qu'ils sont connectés, mais les Links ne peuvent pas joindre ou commander la pompe.)
+Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
 
 Essayez d'abord le bouton **Réinitialiser le RileyLink** sur l'écran de la pompe (voir la page de votre pompe : [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). Si cela n'aide pas, le moyen le plus simple pour que tous ces éléments fonctionnent de nouveau ensemble est :
 
@@ -419,5 +419,5 @@ L'état du Pod est inclus dans les paramètres exportés : un Pod actif peut do
 
 Lisez d'abord ces sections :
 
-* [Exporter et importer les paramètres](#omnipod-dash-export-import) sur la page Omnipod DASH, et [Pompes sans tubulure](#ExportImportSettings-tubeless-pumps) : sur le nouveau téléphone, cochez **Remplacer aussi les paramètres de pompe** et utilisez un fichier exporté pendant le Pod que vous portez actuellement,
+* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
 * [Jeter un pod](#omnipod-dash-discard-pod), pour retirer ensuite le Pod de l'ancien téléphone. Gardez l'ancien téléphone en mode avion jusqu'à ce que le Pod soit jeté, pour que les deux téléphones ne communiquent jamais avec le Pod en même temps.

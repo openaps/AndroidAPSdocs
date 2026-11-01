@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- 31 October 2026 : Version 4.0.0 is out. V [poznámkách k vydání](#latestrelease) zjistíte, co je nového. Pro aktualizaci postupujte podle [návodu k aktualizaci](./Maintenance/UpdateToNewVersion.md).
+31 October 2026: Version 4.0.0 is out. V [poznámkách k vydání](#latestrelease) zjistíte, co je nového. Pro aktualizaci postupujte podle [návodu k aktualizaci](./Maintenance/UpdateToNewVersion.md).
 
 ```
 
@@ -17,7 +17,7 @@ Tato dokumentace vysvětluje, jak **AAPS** nastavit a používat. V dokumentaci 
 
 Část **1) Začínáme**: stránka [Úvod do APS a AAPS](Getting-Started/Introduction.md) vysvětluje obecný princip a k čemu slouží systém umělé slinivky (APS). Popisuje obecné základy smyčky, proč vznikl **AAPS**, porovnává **AAPS** s jinými systémy a zabývá se bezpečností. Radí, jak o **AAPS** mluvit s lékařským týmem, vysvětluje, proč si aplikaci **AAPS** musíte sestavit sami a nemůžete ji jen stáhnout, a dává přehled o typickém propojení systému **AAPS**. Zabývá se také dostupností a tím, komu **AAPS** pravděpodobně pomůže.
 
-[Příprava na začátek s AAPS](./Getting-Started/PreparingForAaps.md) podrobněji popisuje bezpečnostní hlediska a telefony, CGM (systémy kontinuální monitorace glukózy) a inzulínové pumpy, které jsou s **AAPS** kompatibilní. Dává přehled o postupu, kterým projdete, a uvádí přibližný časový plán, za jak dlouho získáte plnou funkčnost **AAPS**. Tato část vás technicky připraví, abyste svůj systém **AAPS** sestavili co nejrychleji a nejefektivněji. Podčást [Kompatibilní CGM](./Getting-Started/CompatiblesCgms.md) vysvětluje, jak optimalizovat nastavení CGM a které možnosti vyhlazování jsou nejlepší.
+[Příprava na začátek s AAPS](./Getting-Started/PreparingForAaps.md) podrobněji popisuje bezpečnostní hlediska a telefony, CGM (systémy kontinuální monitorace glukózy) a inzulínové pumpy, které jsou s **AAPS** kompatibilní. Dává přehled o postupu, kterým projdete, a uvádí přibližný časový plán, za jak dlouho získáte plnou funkčnost **AAPS**. Tato část vás technicky připraví, abyste svůj systém **AAPS** sestavili co nejrychleji a nejefektivněji. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
 
 Teď, když dobře rozumíte celému postupu, můžete začít sestavovat svou smyčku **AAPS**.
 
@@ -40,7 +40,7 @@ Teď, když dobře rozumíte celému postupu, můžete začít sestavovat svou s
 
 Část **10)** popisuje **[Pokročilé možnosti AAPS](./AdvancedOptions/FullClosedLoop.md)**, například jak přejít od používání **AAPS** jako hybridní uzavřené smyčky (bolusy na jídlo _atd._) k plně uzavřené smyčce (bez bolusů), jak [ladit profil](./GettingHelp/ProfileTuning.md) a používat Autotune. Podrobně popisuje také vývojový a inženýrský režim. Většina uživatelů si plně vystačí s hlavní („Master“) verzí **AAPS** a tyto možnosti nepotřebuje. Tato část je pro uživatele, kteří už mají dobrou kompenzaci a chtějí své nastavení dále zlepšit.
 
-V části **11) [Jak podpořit AAPS](SupportingAaps/HowToEditTheDocs.md)** najdete informace o tom, jak můžete tento projekt podpořit. Můžete darovat peníze, vybavení nebo odborné znalosti. Můžete sami navrhovat a dělat změny v dokumentaci, pomoci s [překladem dokumentace](SupportingAaps/Translations) a poskytnout svá data přes projekt Open Humans.
+In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provide information so that you can support this project. Můžete darovat peníze, vybavení nebo odborné znalosti. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations.md) and provide your data through the Open Humans project.
 
 Část **12) Zdroje** obsahuje archivní nebo doplňkovou dokumentaci, včetně podčásti pro [lékaře](UsefulLinks/ClinicianGuideToAaps.md), kteří se zajímají o open source technologii umělé slinivky, jako je **AAPS**, nebo pro pacienty, kteří chtějí tyto informace sdílet se svými lékaři. Tomuto tématu se věnuje i úvod. V této části najdete také další odkazy a zdroje o diabetu a smyčce. Obsahuje [Slovníček](./UsefulLinks/Glossary.md), seznam zkratek (neboli krátkých názvů) používaných v **AAPS**. Zde zjistíte například, co znamenají zkratky ISF nebo TT.
 

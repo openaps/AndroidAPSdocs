@@ -3,7 +3,7 @@
 # Option 1 – Générer un nouveau keystore
 
 ```{note}
-Cette page fait partie de l'[Étape 2 – Créer votre keystore de signature](BrowserBuildKeystore.md) de la [Compilation dans le navigateur](BrowserBuild.md). Vérifiez que vous avez lu le [choix entre l'Option 1 et l'Option 2](#aaps-ci-preparation) et téléchargé le fichier de préparation.
+Cette page fait partie de l'[Étape 2 – Créer votre keystore de signature](BrowserBuildKeystore.md) de la [Compilation dans le navigateur](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
 ```
 
 L'Option 1 génère pour vous un tout nouveau keystore de signature. Elle convient aux nouveaux utilisateurs, aux personnes qui n'ont pas de JKS, ou à celles qui ont oublié le mot de passe ou l'alias.

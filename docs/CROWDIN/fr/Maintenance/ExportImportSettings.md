@@ -59,11 +59,11 @@ Exporter les paramètres d'AAPS dans un fichier vous permet de restaurer sa conf
 
 * Chaque fois que vous prévoyez des changements importants de votre configuration (changer les réglages SMB, changer de type d'insuline, changer de pompe, modifier des automatisations), sauvegardez vos **Paramètres** avant et après les changements. Ainsi, vous avez vos paramètres les plus récents et une copie des paramètres d'avant les changements, au cas où vous devriez revenir en arrière.
 
-* Utilisateurs de pompes sans tubulure (comme Omnipod et Medtrum) uniquement : le fichier **Paramètres** contient les détails de connexion de votre pod actuel et peut servir à rétablir la connexion à ce pod avec un nouveau téléphone. Si vous n'avez pas de copie de vos préférences exportée après le démarrage de votre pod actuel, vous devrez démarrer un nouveau pod si vous devez remplacer votre téléphone actuel.
+* Tubeless pumps (Such as Omnipod and Medtrum) users only: the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. Si vous n'avez pas de copie de vos préférences exportée après le démarrage de votre pod actuel, vous devrez démarrer un nouveau pod si vous devez remplacer votre téléphone actuel.
 
 **Comment sauvegarder manuellement :**
 
-1. Si c'est la première fois que vous importez ou exportez des **Paramètres**, vous devez définir un mot de passe principal dans [Paramètres > Protection](#Preferences-master-password). Choisissez un mot de passe et notez-le dans un endroit sûr. _Sans ce mot de passe, vous ne pourrez pas accéder à vos sauvegardes de **Paramètres**._
+1. If this is your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). Choisissez un mot de passe et notez-le dans un endroit sûr. _Sans ce mot de passe, vous ne pourrez pas accéder à vos sauvegardes de **Paramètres**._
 
 2. Depuis l'écran principal d'**AAPS**, ouvrez le **menu** (☰) > **Maintenance**. Choisissez où enregistrer le fichier avec les puces **Local** et **Cloud** à côté de **Exporter les paramètres** (voir **Exporter ou importer les paramètres** ci-dessous), puis appuyez sur **Exporter les paramètres**. **AAPS** indique où ira le fichier : le nom du fichier pour **Local**, **Google Drive** pour **Cloud**. Appuyez sur **OK**.
 
@@ -105,7 +105,7 @@ Pour exporter ou importer les paramètres, ouvrez le **menu** (☰) et choisisse
 (ExportImportSettings-Automating-Settings-Export)=
 ### Automatiser l'export des paramètres
 
-Pour automatiser l'export des paramètres [(**voir Automatisation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export), ouvrez [**Paramètres** > **Maintenance**](#preferences-maintenance-settings), dépliez **Export des paramètres sans surveillance** et activez **Activer l'export automatique des paramètres**.
+To automate settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
 
 Vous pouvez maintenant configurer l'[Automatisation](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) pour exporter les paramètres, soit régulièrement (_par ex._ chaque semaine), soit après un changement de pod.
 
@@ -176,7 +176,7 @@ Par défaut, un import ne touche pas aux paramètres de votre pompe : la pompe 
 
 12. **AAPS** demande **Appliquer les paramètres importés ?** et indique combien de paramètres vont changer et, si vous avez laissé la case décochée, combien de paramètres de la pompe sont conservés. Rien n'a encore été écrit, donc **Annuler** laisse votre téléphone exactement comme il était. Appuyez sur **OK** pour appliquer.
 
-    ![Appliquer les paramètres importés ? dialogue](../images/Maintenance/import_settings_apply.png)
+    ![Apply imported settings dialog](../images/Maintenance/import_settings_apply.png)
 
 13. **AAPS** applique les paramètres importés tout de suite, sans redémarrer. Seuls les plugins dont les paramètres ont changé sont redémarrés. Pendant ce temps, **AAPS** affiche **Application des paramètres…** ; si la pompe est occupée, il affiche **En attente de la pompe…** et applique les paramètres dès que la pompe est libre. Si la pompe est toujours occupée après une minute, **AAPS** propose de réessayer. Un message **Paramètres appliqués** confirme que les paramètres importés sont utilisés. Tout traitement mis en file d'attente pendant l'import est abandonné et **AAPS** vous indique qu'il a été annulé, afin que rien ne soit envoyé deux fois à la pompe.
 

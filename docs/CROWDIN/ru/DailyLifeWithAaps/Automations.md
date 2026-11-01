@@ -19,7 +19,7 @@ Automation rules are created and modified from the **Automation** screen (**Mana
 
 - One or more actions to perform.
 
-    Such as an alarm or settings a profile percentage or exporting the AAPS settings on Pod change.
+    Such as an alarm or setting a profile percentage or exporting the AAPS settings on Pod change.
 
 
 There are a wide range of Automation options, and users are encouraged to study these within the AAPS app, in the Automation section. You can also search the AAPS user groups on [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and [**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users.
@@ -38,11 +38,11 @@ There are a wide range of Automation options, and users are encouraged to study 
 
 Пользователь упражняется каждое утро в 6 утра: ему необходимо каждый раз помнить об установке за час до этого временной цели для активности.
 
-![Альтернативный текст (alt text)](../images/Automations/automation_concept_manual.png)
+![Manual actions without automation](../images/Automations/automation_concept_manual.png)
 
 Пользователь настроил **автоматизацию**, чтобы в 5 утра включать временную цель для активности, чтобы убедиться в том, что его **СК** и активный инсулин **(IOB)** оптимальны для упражнений в 6 часов утра:
 
-![Альтернативный текст (alt text)](../images/Automations/automation_concept_automated.png)
+![Actions done by an automation](../images/Automations/automation_concept_automated.png)
 
 ## Основные соображения перед началом применения автоматизации
 
@@ -91,12 +91,12 @@ To set up an **Automation**, press the **+** button on the Automation screen to 
 
 Чтобы отключить правило **Automation**, снимите галочку с поля слева от названия правила **Automation**. The example below shows an **Automation** as either activated (‘ticked') or deactivated (‘unticked’):
 
-![Альтернативный текст (alt text)](../images/Automations/automation_rule_activated_deactivated.png)
+![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
 
 
 При настройке **автоматизации**, вы можете cначала проверить ее, используя действие "уведомление" внутри нее. Это заставляет**AAPS** сначала вывести уведомление, а не автоматизировать действие. Когда вы убедитесь, что уведомление запущено в правильное время/ при правильных условиях, правило **Автоматизации** может быть обновлено, с заменой "Уведомления" на ‘Действие’.
 
-![Альтернативный текст (alt text)](../images/Automations/automation_alert_actions.png)
+![Alert actions](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
@@ -115,7 +115,7 @@ To set up an **Automation**, press the **+** button on the Automation screen to 
 
 * A **Temp Target** set by an **Automation** has to be between 72 and 180 mg/dL (or 4 and 10 mmol/L).
 * The **Profile Percentage** has to be between 50% and 130%.
-* Существует 5-минутный промежуток времени между выполнениями **Автоматизации** (и ее первым выполнением).
+* There is a 5 minute time limit between executions of **Automation** (and first execution).
 
 ## Правильное использование отрицательных значений
 
@@ -127,7 +127,7 @@ To set up an **Automation**, press the **+** button on the Automation screen to 
 
 Необходимо соблюдать осторожность при выборе «отрицательного значения» в «Условиях», как например «менее чем» в **Automations**. Например:
 
-![Альтернативный текст (alt text)](../images/Automations/automation_comparison_operators.png)
+![Comparison operators](../images/Automations/automation_comparison_operators.png)
 
 **Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/L" (or "-2mg/dL") will:
 
@@ -242,7 +242,7 @@ Scroll down to see the rest of the list:
 
 ![The events of the Note action](../images/Automations/automation_action_careportal_events.png) ![The Note action set to Pump Site Change](../images/Automations/automation_action_careportal_site_change.png)
 
-**Actions:** **Send SMS** (in the **Alerts** group)
+**Actions:** **Send SMS to all numbers** (in the **Alerts** group)
 
 **Варианты:**
 
@@ -260,7 +260,7 @@ Scroll down to see the rest of the list:
 
 * choose **On** or **Off**. This changes the **Enable SMB** setting of OpenAPS SMB, exactly as if you had changed it in **Settings**, and stays until you or another rule change it back.
 
-**Actions:** **Autotune profile** (in the **Loop & insulin** group)
+**Actions:** **Run Autotune** (in the **Loop & insulin** group)
 
 **Варианты:**
 
@@ -280,39 +280,39 @@ Scroll down to see the rest of the list:
 
 После добавления «Действия» значения по умолчанию должны быть изменены на желаемую величину путем нажатия и изменения значения по умолчанию.
 
-![Альтернативный текст (alt text)](../images/Automations/automation_action_temp_target_values.png)
+![Temp target action values](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## Порядок **автоматизаций** в списке играет роль
- <**AAPS** автоматизирует правила в порядке предпочтения, начиная с верхней части списка **Автоматизация**. Например, если **автоматизация** "Low" - самая важная, стоящая выше всех правил, то эта **автоматизация** должна находиться в самом верху списка **автоматизаций**, как показано ниже:
+ <**AAPS** автоматизирует правила в порядке предпочтения, начиная с верхней части списка **Автоматизация**. For example, if the ‘Low’ **Automation** is the most important **Automation**, above all other rules, then this **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
 
 
-![Альтернативный текст (alt text)](../images/Automations/automation_rule_list.png)
+![List of automation rules](../images/Automations/automation_rule_list.png)
 
-To reprioritize the **Automation** rules, touch and hold the **=** handle on the right side of the rule. Меняйте порядок  **Автоматизаций**, перемещая правила вверх или вниз.
+To reprioritize the **Automation** rules, touch and hold the **=** handle on the right side of the rule. Reorder the **Automations** by moving the rules up or down.
 
-![Альтернативный текст (alt text)](../images/Automations/automation_rule_reorder.png)
+![Reorder automation rules](../images/Automations/automation_rule_reorder.png)
 
 ## Как удалить правила автоматизации
 
 Для удаления правила **автоматизации** нажмите на значок корзины.
 
-![Альтернативный текст (alt text)](../images/Automations/automation_rule_delete.png)
+![Delete automation rules](../images/Automations/automation_rule_delete.png)
 
 ## Examples of Automations
 
-Ниже приведены примеры **Автоматизаций**. Обсуждение **Автоматизаций** и того, как пользователи индивидуализировали свою  **Automation** можно найти в группах Facebook или в Discord. Приведенные ниже примеры не следует воспроизводить без хорошего понимания пользователем того, как будет работать **Автоматизация**.
+Ниже приведены примеры **Автоматизаций**. Further discussion on **Automations** and how users have individualised their **Automation** can be found in Facebook discussions groups or on Discord. Приведенные ниже примеры не следует воспроизводить без хорошего понимания пользователем того, как будет работать **Автоматизация**.
 
 (automations-low-glucose-temp-target)=
 ### Временная Цель Низкая ГК
 
 This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is lesser than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
 
-![Альтернативный текст (alt text)](../images/Automations/automation_example_low_glucose_rule.png)
+![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
 
 ### Временная цель Обеденный перерыв (с "Локацией")
 
-![Альтернативный текст (alt text)](../images/Automations/automation_example_lunch_rule.png)
+![Example: lunch rule](../images/Automations/automation_example_lunch_rule.png)
 
 Эта **Автоматизация** была создана для пользователя, который обедает на работе примерно в одно и то же время каждый будний день, но запускается только в том случае, если пользователь находится в пределах заданного ‘местоположения’.  So if the user is not at work one day, this **Automation** will not activate.
 
@@ -320,7 +320,7 @@ This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to dri
 
 The ‘Trigger’ location has a name, a position (tap **Pick from map**, or use your current location) and a radius in metres, and fires when you are inside (or outside) the area:
 
-![Альтернативный текст (alt text)](../images/Automations/automation_example_lunch_location_condition.png)
+![Example: lunch rule with location condition](../images/Automations/automation_example_lunch_location_condition.png)
 
 Из-за союза "И" **Автоматизация** происходит только в "выбранное" время при нахождении пользователя на предопределенном месте.
 
@@ -330,10 +330,10 @@ The **Automation** will not be triggered on any other time at this location or a
 
 Using a Wi-Fi SSID is a good option to trigger an **Automation** while within range of a specific Wi-Fi network (compared with GPS): it is fairly precise, uses less battery, and works in enclosed spaces where GPS and other location services might not be available.
 
-Еще один пример установки **Временной Цели** на рабочие дни только перед завтраком (1).
+Here is another example of setting up a **Temp Target** for work days only before breakfast (1).
 
 
-The **Automation** will trigger at 05:30am only on Monday-Friday(2)  
+The **Automation** will trigger at 05:30am only on Monday-Friday (2)  
 and while being connected to a home Wi-Fi network (3).
 
 
@@ -350,7 +350,7 @@ Scroll down to see the action: a **Temp Target** of 75 mg/dL for 30 minutes (4).
 1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
 1) Wi-Fi SSID = My_Home_WiFi_Name
 
-![Альтернативный текст (alt text)](../images/Automations/automation_example_wifi_condition.png)
+![Example: WiFi condition](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
@@ -395,7 +395,7 @@ In the example below, the **Low glucose temp target** rule (1) (see [Low Glucose
 
 Check that the box left of the **Automation** name is ‘ticked’ to ensure the rule is activated:
 
-![Альтернативный текст (alt text)](../images/Automations/automation_rule_activated_deactivated.png)
+![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
 
 * Проблема: __ Мои автоматизации запускаются в неправильном порядке.__
 

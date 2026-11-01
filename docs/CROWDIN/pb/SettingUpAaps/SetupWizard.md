@@ -122,9 +122,9 @@ Siga estes passos no Android 16; em outras versões, as telas serão um pouco di
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. No Android 12, clique em `Battery` (Bateria); no Android 13 ou mais recente, clique em `App battery usage` (Uso da bateria pelo app),
+   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
 
-   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
+   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
 5. No Android 12 ou mais recente, selecione a opção `Unrestricted` (Sem restrições); no Android 15 ou mais recente, você precisa expandir a configuração `Allow background usage` (Permitir uso em segundo plano): clique na área destacada em vermelho para fazer isso e depois siga o passo 6 para concluir.
 
@@ -454,7 +454,7 @@ Quando você seleciona uma bomba real, o **AAPS** pede uma confirmação, porque
 
 ![Confirmação ao selecionar uma bomba física](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-Se a bomba que você seleciona se comunica por Bluetooth, o **AAPS** pede permissão para se conectar a dispositivos próximos quando você terminar o assistente (veja [Permissão de Bluetooth](#bluetooth-permission)).
+If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#setup-wizard-bluetooth-permission)).
 
 Se você já configurou o seu perfil e sabe como conectar a sua bomba, fique à vontade para conectá-la agora. Caso contrário, deixe na **Bomba virtual** por enquanto — você pode mudar a qualquer momento, ou sair do Assistente de Configuração pela seta no canto superior esquerdo e deixar o **AAPS** mostrar primeiro alguns valores de glicose.
 
@@ -505,7 +505,7 @@ Toque em "**Abrir objetivos**":
 
 Here we start Objective 1, even if at the moment our setup is not completely ready to successfully complete this Objective. But this is the start.
 
-Toque no botão "**Iniciar**" ao lado de "**1. Objetivo**":
+Press the "**Start**" button of **Objective 1**:
 
 ![Lista de objetivos](../images/setup-wizard/Wizard-Objectives-List.png)
 
@@ -521,6 +521,7 @@ Depois de tocar em "**Finalizar Configuração**", você chega à tela principal
 
 Se você sair do Assistente de Configuração sem querer em algum momento, você pode simplesmente iniciar o assistente de novo ou mudar a [configuração do loop do AAPS](../SettingUpAaps/ChangeAapsConfiguration.md) manualmente.
 
+(setup-wizard-bluetooth-permission)=
 ## Permissão de Bluetooth
 
 Se você selecionar uma bomba que se conecta por Bluetooth (por exemplo **Omnipod Dash**), um aviso lembra que o **AAPS** precisa da permissão de Bluetooth. Por enquanto, você pode tocar em "**Dispensar**" — a permissão é concedida depois que você terminar o assistente:

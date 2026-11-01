@@ -3,7 +3,7 @@
 # Opción 2 – Subir tu almacén de claves existente
 
 ```{note}
-Esta página es parte del [Paso 2 – Crear tu almacén de claves de firma](BrowserBuildKeystore.md) de la [Compilación en el navegador](BrowserBuild.md). Asegúrate de que has leído la [decisión entre la Opción 1 y la Opción 2](#aaps-ci-preparation) y de que has descargado el archivo de preparación.
+Esta página es parte del [Paso 2 – Crear tu almacén de claves de firma](BrowserBuildKeystore.md) de la [Compilación en el navegador](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
 ```
 
 La Opción 2 reutiliza el JKS que ya creaste en una compilación anterior de AAPS desde un ordenador en Android Studio. Es adecuada para usuarios que ya tienen un JKS y conocen la contraseña y el alias del JKS.

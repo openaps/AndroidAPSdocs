@@ -88,12 +88,12 @@ However, Fiasp or Lyumjev can result in frequent pump occlusions, even after opt
 
 ### 升糖指数与血糖影响
 
-**UAM**模式的挑战随着"对血糖影响（EBG）"增加而增加：
+The challenge for the **UAM** mode rises with rising 'Effect on Blood Glucose' ('EBG')
 
 - 从中/低EBG开始，调校**配置文件**设置。然后"测试"高**EBG**餐食。
 - 如果摄入极高**EBG**，考虑初始推注量<50%。
 
-1) **无EBG**：如新鲜肉类、鱼类、鸡蛋、培根、油类、奶酪。 2) **低EBG**：如新鲜蔬菜和浆果、蘑菇、坚果、牛奶、酸奶、奶酪。 3) **中EBG**：如全麦面包/面条、土豆、野米、燕麦、干果。 4) **高EBG**：如小麦面包、法棍、吐司、华夫饼、饼干、土豆泥、面条、米饭。 5) **极高EBG**：如糖、甜饮、果汁、玉米片、糖果、薯片、咸脆棒。
+1) **无EBG**：如新鲜肉类、鱼类、鸡蛋、培根、油类、奶酪。 2) **低EBG**：如新鲜蔬菜和浆果、蘑菇、坚果、牛奶、酸奶、奶酪。 3) **中EBG**：如全麦面包/面条、土豆、野米、燕麦、干果。 4) **High EBG**: e.g. wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **极高EBG**：如糖、甜饮、果汁、玉米片、糖果、薯片、咸脆棒。
 
 ![升糖指数与血糖影响](../images/fullClosedLoop01.png)
 
@@ -108,7 +108,7 @@ However, Fiasp or Lyumjev can result in frequent pump occlusions, even after opt
 
 在**FCL**中，算法被调校为检测**UAM**并自动输送胰岛素对抗**血糖**上升。应在任何活动开始前尽早设置较高的**临时目标**和较低的**配置文件百分比**（在用餐开始时左右已生效）。
 
-异常或不定期的运动水平会给**FCL**带来困难。锻炼需要提前计划（特别是如果您想减少运动期间低血糖时对急救碳水化合物/零食的需求）。 After an active day it is recommended that a lower  **Percentage Profile** is set for overnight after the evening meal is fully digested: set in **Automations** an elevated (>100 mg/dL) **BG**  target, with “no **SMBs** at elevated target” selected in **AAPS** **Settings**.
+异常或不定期的运动水平会给**FCL**带来困难。锻炼需要提前计划（特别是如果您想减少运动期间低血糖时对急救碳水化合物/零食的需求）。 After an active day it is recommended that a lower  **Percentage Profile** is set for overnight after the evening meal is fully digested: set in **Automations** an elevated (>100 mg/dL) **BG**  target, with **Enable SMB with high temp target** switched off in **AAPS** **Settings**.
 
 ## Hurdles for kids
 
@@ -151,7 +151,7 @@ Carefully observe/analyze the **SMB** sizes shortly after your meal commences. �
 
 **AAPS** Master allows up to 130% temporary **Profile** in **HCL** mode. 提升 **ISF** 分 3 个步骤完成：
 
-- 第1步 - 查看**配置文件**中当前餐时适用的**ISF**，例如Autosens是否建议考虑身体当前（过去几小时）胰岛素敏感性状态的调整。
+- Step 1 -  review the **ISF** applicable for this meal time hour within the **Profile**, and see whether e.g. Autosens suggest a modification that takes care of the current (last few hours’) insulin sensitivity status of the body.
 - 第2步 - 应用系数（1/配置文件%，在**自动化规则**中设置）增强**ISF**。
 - 步骤 3 - 检查建议的 **ISF** 是否在设定的安全限制范围内。
 
@@ -169,9 +169,9 @@ This feature can be useful for certain situations like “foot to floor” syndr
 
 ### Automated big SMBs at bg rise
 
-The key to successful **FCL** **at the beginning of BG increases from meals, very large automatic SMBs must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in **HCL**!)
+The key to successful **FCL**: **at the beginning of BG increases from meals, very large automatic SMBs must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in **HCL**!)
 
-To achieve this, data from your **HCL** should be analyzed to determine which **deltas** might be not meal –related and those delta which might be.
+To achieve this, data from your **HCL** should be analyzed to determine which **deltas** might not be meal-related and which might be.
 
 - As you can define the **Automation** within a pre-defined time-window, you need only to analyze there.
 - 如果餐型差异大（如高碳早餐、低碳午餐），可为不同时段设置不同**规则集**。
@@ -218,7 +218,7 @@ To achieve this, data from your **HCL** should be analyzed to determine which **
 
 对于特殊膳食，或者如果随后进行运动则降低该值，可以在您的**自动化**中快速设置不同的 **iob** 阈值。
 
-规则(#3)"达到IOB阈值=>关闭SMB"用于终止（或暂停）积极**SMB**增强，直到新一波碳水相关上升出现。
+Automation (#3), "iobTH reached => **SMBs** off”, is defined to end (or pause, until another wave of carb-related rise hits) the aggressive **SMB** boosting.
 
 ![Automation #3: IOB of 5.5 or more with no temp target running starts a temp target of 111 mg/dL](../images/fullClosedLoop04.png)
 
@@ -233,7 +233,7 @@ To achieve this, data from your **HCL** should be analyzed to determine which **
 **注意：规则#3仅在无活动TT时有效**。 例如，如果您使用EatingSoonTT，必须在该时间结束（通常餐后30-40分钟）。
 
 可通过设置**自动化规则**条件（如IOB>65%*IOB阈值）来终止可能运行的EatingSoonTT。
-> 使用 EatingSoonTT 的方法 一些闭环使用者会在用餐开始前大约一小时或更长时间设置 EatingSoonTT（通过按下 TT 按钮，或者如果用餐时间段相当固定，则通过降低的**配置文件****BG** 目标自动设置），只是为了保证较低的起始 **BG** 和略微增加的 **iob**。但是，假设 **FCL** 始终朝着目标前进，这可能不会产生太多效果，您可能更愿意定义一个**自动化**，在识别到用餐开始时（葡萄糖增量，或加速度 = 增量 > 平均增量）设置 EatingSoonTT。在此阶段，较低的**临时目标（TT）**至关重要，因为闭环系统会通过（预测血糖值减去TT）/胰岛素敏感系数来计算每个**超级微剂量（SMB）**，因此较小的TT值会使最终所需的胰岛素剂量（insulinReq）增大。
+> 使用 EatingSoonTT 的方法 一些闭环使用者会在用餐开始前大约一小时或更长时间设置 EatingSoonTT（通过按下 TT 按钮，或者如果用餐时间段相当固定，则通过降低的**配置文件****BG** 目标自动设置），只是为了保证较低的起始 **BG** 和略微增加的 **iob**。 But, assuming the **FCL** is always en route towards target, this might not yield much and you may prefer to define an **Automation** that sets an EatingSoonTT at recognition of meal start (glucose delta, or acceleration = delta > avg delta). 在此阶段，较低的**临时目标（TT）**至关重要，因为闭环系统会通过（预测血糖值减去TT）/胰岛素敏感系数来计算每个**超级微剂量（SMB）**，因此较小的TT值会使最终所需的胰岛素剂量（insulinReq）增大。
 
 After the first boosted **SMB**s were given, your set iobTH and **Automation** #3 should strike a good balance of limiting the glucose peak, but also not leading to a hypo after the meal.
 
@@ -332,7 +332,7 @@ For instance, it is perfectly possible, without any extra steps after **Automati
 - 餐后胰岛素“拖尾”问题
     - 您可能需要吃点零食（看到低血糖预测）或葡萄糖片（如果已经处于低血糖区）。但需注意：闭环系统在某个时间点提示您所需的碳水化合物量很可能被高估，因为系统完全无法获取您的实际碳水摄入数据（尽管您可能自行估算包括脂肪和蛋白质在内的待吸收营养总量）。
     - 关键信息在于：问题是否主要源于血糖上升阶段初期。那么，将胰岛素活性阈值（iobTH）设低可能是个简单的解决方案。
-    - 若频繁需要额外补充碳水化合物，请记录所需克数（不包括因过量摄入而需再次追加胰岛素的部分）。随后，根据您的胰岛素敏感系数（IC值）估算**超级微剂量（SMB）**应减少的胰岛素量，并将该数据用于参数调整（涉及**自动化**中的**百分比配置文件**，或可能包括您设定的胰岛素活性阈值iobTH）。 This may relate to the **SMBs** given when glucose was high, or also extending regarding also the **SMBs** during the **BG** rise.
+    - 若频繁需要额外补充碳水化合物，请记录所需克数（不包括因过量摄入而需再次追加胰岛素的部分）。随后，根据您的胰岛素敏感系数（IC值）估算**超级微剂量（SMB）**应减少的胰岛素量，并将该数据用于参数调整（涉及**自动化**中的**百分比配置文件**，或可能包括您设定的胰岛素活性阈值iobTH）。 This may relate to the **SMBs** given when glucose was high, or also to the **SMBs** during the **BG** rise.
     - 这可能意味着您需要接受更高的**血糖**峰值以避免低血糖。 Or change diet to something with lower amounts of carbs, and higher amount of protein and fats.
 
 

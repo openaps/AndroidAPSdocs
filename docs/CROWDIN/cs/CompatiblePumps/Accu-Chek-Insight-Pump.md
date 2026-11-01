@@ -84,11 +84,11 @@ Firma Roche odchází z trhu s inzulínovými pumpami, aby se v oblasti diabetu 
     
     Nastavení otevřete tlačítkem **Nastavení** na kartě **Accu-Chek Insight** v **Konfigurace** > **Pumpa**, nebo ikonou ozubeného kola v pravém horním rohu obrazovky pumpy.
     
-    ![Nastavení ovladače Accu-Chek Insight](../images/v4/Pumps/accu_chek_insight_settings.png)
+    ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
     
-    V nastavení Insight v **AAPS** můžete zapnout tyto možnosti:
+    In the Insight settings in **AAPS** you can enable the following options:
     
-    * **Zaznamenat výměnu zásobníku**: automaticky zaznamená výměnu inzulínové kazety, když na pumpě spustíte program „fill cannula“.
+    * **Log reservoir changes**: automatically records an insulin cartridge change when you change the cartridge in the pump.
     
     * **Zaznamenat výměnu hadičky**: přidá poznámku do databáze **AAPS**, když na pumpě spustíte program „tube filling“.
     
@@ -162,7 +162,7 @@ Verzi firmwaru lze nalézt v menu.
 
 ## Výměna baterie
 
-Výdrž baterie u pumpy Insight se při využívání smyčky pohybuje od 10 do 14 dnů, max. 20 dnů. Uživatel, který to uvádí, používá lithiové baterie Energizer.
+Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days. Uživatel, který to uvádí, používá lithiové baterie Energizer.
 
 Pumpa Insight má malou interní baterii udržující základní funkce, jako jsou vnitřní hodiny, zatímco vyměňujete hlavní baterii. Pokud výměna baterie trvá příliš dlouho, tato interní baterie se může vybít, hodiny se resetují a vy budete vyzváni, abyste po vložení nové baterie opětovně nastavili čas. Pokud se to stane, všechny záznamy v AAPS před výměnou baterie nebudou zahrnuty do kalkulací, protože nelze určit jejich správný čas.
 
