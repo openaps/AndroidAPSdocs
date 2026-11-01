@@ -175,7 +175,7 @@ Dann hast Du zwar mehr Kohlenhydrate gegessen, gleichzeitig steuert der Loop abe
 
 Beim Loopen solltest Du diese drei Schritte ausprobieren:
 
-* Make a [profile switch](#ProfileSwitch-change-percentage) < 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
+* Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
 * Setze ein [temporäres Ziel für Aktivität](#TempTargets-activity-temp-target), das oberhalb Deines Standardziels liegt. With a percentage below 100 % and a duration, the same **Activate** screen offers a **Temporary target / Activity** switch that starts both at once.
 * Wenn Du SMBs nutzt, achte darauf, dass ["Aktiviere SMB bei temporären Zielen oberhalb des regulären Ziels"](#Open-APS-features-enable-smb-with-high-temp-targets) und ["SMB immer aktivieren"](#Open-APS-features-enable-smb-always) deaktiviert sind.
 
@@ -194,7 +194,7 @@ Du kannst die Pumpe ablegen, um "frei" zu sein, aber Du solltest das Trennen in 
 Alkoholkonsum ist im Closed Loop riskant, weil der Algorithmus einen von Alkohol beeinflussten BZ nicht richtig vorhersagen kann. Du musst Deinen eigenen Weg finden damit umzugehen, kannst aber folgende AAPS-Funktionen nutzen:
 
 * Deaktivierung des Closed Loop Modus und manuelle Behandlung des Diabetes oder
-* hohe temporäre Ziele setzen und UAM deaktivieren, um zu vermeiden, dass der Loop das IOB erhöht, weil er eine nicht eingegebene Mahlzeit vermutet
+* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
 * do a [profile switch](#ProfileSwitch-change-percentage) to noticeably less than 100% 
 
 The *Alcohol* [scene](#scenes) template is a starting point you can adapt to your own method.
@@ -363,9 +363,9 @@ You can also change when the alert is raised: press the **Settings** (gear) icon
 
 #### Mein Link/Pumpe/Pod reagiert nicht (RL/OL/EmaLink…)
 
-Bei manchen Smartphones treten Bluetooth-Verbindungsprobleme mit den Kommunikationsgeräten (RL/OL/EmaLink...) auf.
+With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
 
-Einige haben auch nicht reagierende Verbindugnen zu ihren Geräten (AAPS sagt, dass sie verbunden sind, aber die Geräte können die Pumpe nicht erreichen oder Kommandos senden.)
+Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
 
 First try the **Reset RileyLink** button on the pump screen (see your pump's page: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). If this does not help, the easiest way to get all these parts working together is:
 
@@ -419,5 +419,5 @@ The Pod state is included in the exported settings, so an active Pod can be move
 
 Read these sections first:
 
-* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported during the Pod you are wearing now,
+* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
 * [Discarding a pod](#omnipod-dash-discard-pod), to remove the Pod from the old phone afterwards. Keep the old phone in airplane mode until the Pod is discarded, so that the two phones never talk to the Pod at the same time.
