@@ -2,33 +2,33 @@
 orphan: true
 - - -
 
-# internal sandbox file 1 for testing our sprint
+# intern sandkassefil 1 for å teste sprinten vår
 
 ```{admonition} no need to translate this
 :class: note
 
-No need to translate this.
+Det er ikke nødvendig å oversette dette.
 ```
 
 ```{danger}
-Here is danger on the road.
+Her er det fare på veien.
 ```
 
-Test for Setup
+Test for oppsett
 
-"The number 42 is, in The Hitchhiker's Guide to the Galaxy by Douglas Adams, the "Answer to the Ultimate Question of Life, the Universe, and Everything," calculated by an enormous supercomputer named Deep Thought over a period of 7.5 million years." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
+"Tallet 42 er, i Haikerens guide til galaksen av Douglas Adams, «svaret på det ultimate spørsmålet om livet, universet og alt», beregnet av en enorm superdatamaskin ved navn Deep Thought over en periode på 7,5 millioner år." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
 
-This is an internal sandbox file for the documentation team to test
+Dette er en intern sandkassefil der dokumentasjonsteamet kan teste
 
-1. markdown syntax and
+1. markdown-syntaks og
 
-1. background process for
-    1. CROWDIN translation and
-    2. Read The Docs deployment.
+1. bakgrunnsprosessen for
+    1. CROWDIN-oversettelse og
+    2. utrulling på Read The Docs.
 
-You can directly jump from here to the second label in this file - ["Jump"](#this-is-another-test) or [tag jump](#sandbox1-this-is-another-test).
+Du kan hoppe direkte herfra til den andre etiketten i denne filen - [«Hopp»](#this-is-another-test) eller [hopp via etikett](#sandbox1-this-is-another-test).
 
-And you can jump to the first label too - ["Jump"](#this-is-a-test) or [tag jump](#sandbox1-this-is-a-test).
+Og du kan hoppe til den første etiketten også - [«Hopp»](#this-is-a-test) eller [hopp via etikett](#sandbox1-this-is-a-test).
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
@@ -39,27 +39,27 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 (sandbox1-this-is-a-test)=
-## This is a test
+## Dette er en test
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 (sandbox1-this-is-another-test)=
-## This is another test
+## Dette er en annen test
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-Label in the middle of [nowhere](#sandbox1-in-the-middle-of-nowhere) This instead is the label to [](#sandbox1-this-is-another-test) and it should display its name
+Etikett midt i [ingenting](#sandbox1-in-the-middle-of-nowhere) Dette er derimot etiketten til [](#sandbox1-this-is-another-test), og den skal vise navnet sitt
 
-Links with anchor :
-- [how long will it take?](#preparing-how-long-will-it-take)
-- [NSClient settings in Preferences](#Preferences-nsclient).
-- [prediction lines in AAPS OVERVIEW](#aaps-screens-prediction-lines) to header level 4
-- [Screenshots](../DailyLifeWithAaps/AapsScreens.md)
-- [Screenshot main graph](#aaps-screens-main-graph) to header level 3
-- [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)
-- [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)
-- [SMB section in this documentation](#Open-APS-features-super-micro-bolus-smb)
+Lenker med anker:
+- [hvor lang tid tar det?](#preparing-how-long-will-it-take)
+- [NSClient-innstillingene under Innstillinger](#Preferences-nsclient).
+- [prediksjonslinjer i AAPS-OVERSIKTEN](#aaps-screens-prediction-lines) til overskrift på nivå 4
+- [AAPS-skjermbilder](../DailyLifeWithAaps/AapsScreens.md)
+- [Skjermbilde av hovedgrafen](#aaps-screens-main-graph) til overskrift på nivå 3
+- [OpenAPS-funksjoner](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)
+- [maks IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)
+- [SMB-delen i denne dokumentasjonen](#Open-APS-features-super-micro-bolus-smb)
