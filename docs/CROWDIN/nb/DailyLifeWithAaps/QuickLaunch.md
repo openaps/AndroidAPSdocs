@@ -1,154 +1,154 @@
 (quicklaunch)=
-# QuickLaunch (overview quick-action toolbar)
+# Hurtigstart (QuickLaunch, verktøylinjen med hurtigstartsknapper i oversikten)
 
-**QuickLaunch** is the small **quick-action toolbar** that floats at the bottom of the **AAPS** overview, just above the bottom navigation. It is a customizable row of one-tap buttons: you decide which actions live there, in which order, so the things you do most often are always one tap away on the main screen.
+**Hurtigstart** (QuickLaunch) er den lille **verktøylinjen med hurtigstartsknapper** som ligger nederst i **AAPS**-oversikten, rett over navigasjonslinjen nederst. Det er en rad med knapper som du selv setter sammen: du bestemmer hvilke handlinger som skal ligge der, og i hvilken rekkefølge, slik at det du gjør oftest alltid er ett trykk unna på hovedskjermen.
 
 ```{contents} Table of contents
 :depth: 2
 :local: true
 ```
 
-![The QuickLaunch toolbar on the overview](../images/v4/QuickLaunch/quicklaunch_toolbar.png)
+![Hurtigstart-verktøylinjen i oversikten](../images/v4/QuickLaunch/quicklaunch_toolbar.png)
 
 ---
 
-## Using the toolbar
+## Bruke verktøylinjen
 
-The toolbar sits on the **overview**, between the graphs and the bottom navigation:
+Verktøylinjen ligger i **oversikten**, mellom grafene og navigasjonslinjen nederst:
 
-![The QuickLaunch toolbar in place on the overview](../images/v4/QuickLaunch/quicklaunch_overview.png)
+![Hurtigstart-verktøylinjen på plass i oversikten](../images/v4/QuickLaunch/quicklaunch_overview.png)
 
-- **Tap** an icon to run its action — exactly as if you had opened it from its normal screen (a bolus or treatment still shows its usual confirmation first).
-- **Long-press** an icon to see a **tooltip** with the action's name and a short description.
-- If you add **more buttons than fit** on screen, the extra ones move into an **overflow menu** (the **⋮** button at the end of the toolbar).
-- Each icon keeps its action's **color** (e.g. insulin, carbs, temp target), so it is recognizable at a glance.
+- **Trykk** på et ikon for å kjøre handlingen — akkurat som om du hadde åpnet den fra det vanlige skjermbildet (en bolus eller behandling viser fortsatt den vanlige bekreftelsen først).
+- **Trykk og hold** på et ikon for å se et **verktøytips** med navnet på handlingen og en kort beskrivelse.
+- Hvis du legger til **flere knapper enn det er plass til** på skjermen, flyttes de ekstra knappene til en **meny for flere knapper** (**⋮**-knappen i enden av verktøylinjen).
+- Hvert ikon beholder **fargen** til handlingen sin (for eksempel insulin, karbohydrater, midlertidig mål), så du kjenner det igjen med ett blikk.
 
 ```{admonition} The toolbar is always there
 :class: note
-The last button is always **Configure QuickLaunch** (the **⚙️** gear). It cannot be removed, so you can always reach the configuration screen straight from the toolbar. By default the toolbar contains just two buttons — the **Bolus wizard** and this gear.
+Den siste knappen er alltid **Konfigurer Hurtigstart** (tannhjulet **⚙️**). Den kan ikke fjernes, så du kan alltid nå konfigurasjonsskjermen rett fra verktøylinjen. Som standard har verktøylinjen bare to knapper — **Boluskalkulator** og dette tannhjulet.
 ```
 
 ---
 
-## Configuring QuickLaunch
+## Konfigurere Hurtigstart
 
-Tap the **⚙️** gear on the toolbar (or open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → … → Configure QuickLaunch**) to open the **Configure QuickLaunch** screen (*“Customize quick-action buttons on overview”*).
+Trykk på tannhjulet **⚙️** på verktøylinjen (eller åpne **[Konfigurasjon](../SettingUpAaps/ConfigBuilder.md) → … → Konfigurer Hurtigstart**) for å åpne skjermen **Konfigurer Hurtigstart** (*«Tilpass hurtigstartsknapper i oversikten»*).
 
-![Configure QuickLaunch — Selected actions, then the catalog of actions to add](../images/v4/QuickLaunch/quicklaunch_config.png)
+![Konfigurer Hurtigstart — Valgte handlinger, deretter katalogen over handlinger du kan legge til](../images/v4/QuickLaunch/quicklaunch_config.png)
 
-The screen has two parts:
+Skjermen har to deler:
 
-- **Selected actions** (at the top) — the buttons currently on your toolbar, in toolbar order.
-- A **catalog** below it — every action you can add, grouped by category. Each catalog entry has a **➕** button to add it.
+- **Valgte handlinger** (øverst) — knappene som nå ligger på verktøylinjen din, i samme rekkefølge som på verktøylinjen.
+- En **katalog** under — alle handlinger du kan legge til, gruppert etter kategori. Hver oppføring i katalogen har en **➕**-knapp for å legge den til.
 
-### Selected actions — reorder, edit, remove
+### Valgte handlinger — endre rekkefølge, redigere, fjerne
 
-Each selected action has:
+Hver valgt handling har:
 
-- a **⠿ drag handle** — press and drag to **reorder** the buttons (the order here is the order on the toolbar),
-- a **−** button — **remove** it from the toolbar,
-- and, for a **Profile** shortcut only, a **✏️** button to edit its percentage/duration (see [Profile shortcuts](#profile-shortcuts)).
+- et **⠿ dra-håndtak** — trykk og dra for å **endre rekkefølgen** på knappene (rekkefølgen her er rekkefølgen på verktøylinjen),
+- en **−**-knapp — **fjern** den fra verktøylinjen,
+- og, bare for en **Profil**-snarvei, en **✏️**-knapp for å redigere prosent og varighet (se [Profilsnarveier](#profile-shortcuts)).
 
-Changes take effect **immediately** — there is no separate *Save*. Adding an action drops it at the end of the toolbar; reorder it from there.
+Endringer gjelder **med en gang** — det finnes ingen egen *Lagre*-knapp. Når du legger til en handling, havner den sist på verktøylinjen; flytt den derfra.
 
 ---
 
-## The action categories
+## Kategoriene av handlinger
 
-The catalog groups everything you can add into the following categories, in this order. Categories that have nothing to offer (e.g. you have no scenes) are simply not shown.
+Katalogen grupperer alt du kan legge til i kategoriene nedenfor, i denne rekkefølgen. Kategorier som ikke har noe å tilby (for eksempel hvis du ikke har noen scener), vises rett og slett ikke.
 
-### Treatment
+### Behandling
 
-The everyday treatment and CGM dialogs:
+De daglige dialogene for behandling og CGM:
 
-- **Insulin** — deliver a bolus manually.
-- **Carbs** — record carbs without insulin.
-- **Bolus wizard** — open the bolus calculator.
-- **Treatment** — record insulin and carbs together.
-- **CGM** — open your CGM app (e.g. xDrip).
-- **Calibration** — calibrate the CGM sensor.
+- **Insulin** — gi en bolus manuelt.
+- **Karbo** — registrer karbohydrater uten insulin.
+- **Boluskalkulator** — åpne boluskalkulatoren.
+- **Behandling** — registrer insulin og karbohydrater sammen.
+- **CGM** — åpne CGM-appen din (for eksempel xDrip).
+- **Kalibrering** — kalibrer CGM-sensoren.
 
-### Care Portal
+### Helseportal
 
-The care-portal events and device-maintenance records:
+Hendelsene i helseportalen og registreringer av vedlikehold på utstyret:
 
-- **BG Check**, **Note**, **Exercise**, **Question**, **Announcement**,
-- **Sensor Insert**, **Pump Battery Change**, **Pump Site Change**, **Prime/Fill**, **Site Rotation**.
+- **BS-kontroll**, **Merknad**, **Trening**, **Spørsmål**, **Melding**,
+- **Sensorbytte**, **Bytte pumpebatteri**, **Bytte av pumpested**, **Prime/fylling**, **Rotasjon av sted**.
 
-**Prime/Fill** and **Pump Battery Change** are only offered when your pump uses them. Patch pumps, for example, fill and change the battery in their own activation steps, so these entries are not shown for them (as in the **Manage** sheet).
+**Prime/fylling** og **Bytte pumpebatteri** tilbys bare når pumpen din bruker dem. Patch-pumper, for eksempel, fyller og bytter batteri i sine egne aktiveringssteg, så disse oppføringene vises ikke for dem (som i arket **Administrer**).
 
-![The Care Portal category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
+![Kategorien Helseportal i katalogen](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
 
-These are the same entries you would otherwise reach through the **[Treatments](#v4changes-treatments)** and **[Manage](#v4changes-manage)** sheets — QuickLaunch just puts the ones you use on the overview.
+Dette er de samme oppføringene som du ellers når via arkene **[Behandlinger](#v4changes-treatments)** og **[Administrer](#v4changes-manage)** — Hurtigstart legger bare dem du bruker i oversikten.
 
-### Manage
+### Administrer
 
-The screens of the **[Manage](#v4changes-manage)** sheet, in the same order, so you can open the one you use most from the toolbar:
+Skjermene i arket **[Administrer](#v4changes-manage)**, i samme rekkefølge, slik at du kan åpne den du bruker mest fra verktøylinjen:
 
-- **Profile**, **Insulin settings** (manage and activate insulin configurations — named differently from **Insulin** on purpose, because that button delivers a bolus), **Temp Target**, **QuickWizard**, **Scenes**, **Automation**, **Food**,
-- **Running mode** — close or open the loop, suspend it, or disconnect the pump,
-- **Authorized clients** — only on a master or a paired client.
+- **Profil**, **Insulininnstillinger** (administrer og aktiver insulinoppsett — med vilje kalt noe annet enn **Insulin**, fordi den knappen gir en bolus), **Midlertidig mål**, **Hurtigknapp**, **Scener**, **Automasjon**, **Mat**,
+- **Kjøremodus** — lukk eller åpne loopen, sett den på pause, eller koble fra pumpen,
+- **Autoriserte klienter** — bare på en hovedenhet eller en paret klient.
 
-These buttons open the screen; they do not start anything by themselves. To start a scene or a QuickWizard in one tap, add it from the **Scenes** or **Quick Wizard** category below.
+Disse knappene åpner skjermen; de starter ikke noe selv. For å starte en scene eller en hurtigknapp med ett trykk, legg den til fra kategorien **Scener** eller **Hurtigknapp** nedenfor.
 
-![The Manage category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![The Manage category, continued](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
+![Kategorien Administrer i katalogen](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![Kategorien Administrer, fortsettelse](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
 
 ### Quick Wizard
 
-Each of your **[QuickWizard](QuickWizards.md)** presets can be added as a button, so a recurring meal is one tap from the overview. The button carries the preset's name and shows the carbs/insulin amount; tapping it runs the QuickWizard with its usual confirmation.
+Hver av dine forhåndsinnstilte **[hurtigknapper](QuickWizards.md)** kan legges til som en knapp, slik at et måltid du spiser ofte er ett trykk unna i oversikten. Knappen viser navnet på forhåndsinnstillingen og mengden karbohydrater/insulin; når du trykker på den, kjøres hurtigknappen med den vanlige bekreftelsen.
 
-QuickWizards set to show on the watch only are not offered. A QuickWizard button on the toolbar follows the same rules as in the **Treatments** sheet: it is hidden outside its [valid time range](#quickwizard_validity) and for a short time after use. It stays in your toolbar configuration and comes back when the QuickWizard can be used again.
+Hurtigknapper som er satt til å vises bare på klokken, tilbys ikke. En hurtigknapp på verktøylinjen følger de samme reglene som i arket **Behandlinger**: den skjules utenfor sitt [gyldige tidsrom](#quickwizard_validity) og en kort stund etter bruk. Den blir værende i verktøylinje-oppsettet ditt og kommer tilbake når hurtigknappen kan brukes igjen.
 
 ### Scenes
 
-Each enabled **[scene](Scenes.md)** can be added as a button. Tapping it asks for confirmation, then activates the scene (the same bundle of actions you would get from the Scenes screen). This category appears only if you have at least one scene.
+Hver aktiverte **[scene](Scenes.md)** kan legges til som en knapp. Når du trykker på den, ber den om bekreftelse og aktiverer så scenen (den samme pakken med handlinger som du får fra skjermen Scener). Denne kategorien vises bare hvis du har minst én scene.
 
-The tooltip and the catalog show the same summary as **Manage → Scenes**, for example *"3 actions, 2 h → Cooldown"*, where the name after the arrow is the follow-up scene.
+Verktøytipset og katalogen viser det samme sammendraget som **Administrer → Scener**, for eksempel *«3 handlinger, 2 t → Nedkjøling»*, der navnet etter pilen er oppfølgingsscenen.
 
-### Automation
+### Automasjon
 
-Your **user-action** automation rules (the ones you trigger by hand) can be added as buttons. Tapping one asks for confirmation, then runs that rule's actions.
+Automasjonsreglene dine av typen **brukerhandling** (de du utløser manuelt) kan legges til som knapper. Når du trykker på en, ber den om bekreftelse og kjører så handlingene i regelen.
 
 ```{admonition} Automation buttons run on the master
 :class: note
-Automation executes on the **master**, so automation shortcuts are offered and run only on the master. They are not available on a paired **[client](../RemoteFeatures/ClientMasterControl.md)**.
+Automasjon kjører på **hovedenheten**, så automasjonssnarveier tilbys og kjøres bare på hovedenheten. De er ikke tilgjengelige på en paret **[klient](../RemoteFeatures/ClientMasterControl.md)**.
 ```
 
-### Temp Target Presets
+### Forhåndsinnstilte midlertidig mål
 
-Each of your **[Temp Target](TempTargets.md)** presets can be added as a button (its name, its target and its duration are shown, for example *"Eating soon — 5.0 mmol/L, 45 min"*). Tapping it asks for confirmation, then starts that temp target.
+Hver av dine forhåndsinnstilte **[midlertidige mål](TempTargets.md)** kan legges til som en knapp (navnet, målet og varigheten vises, for eksempel *«Spise snart — 5,0 mmol/L, 45 min»*). Når du trykker på den, ber den om bekreftelse og starter så det midlertidige målet.
 
-![The dynamic categories — Quick Wizard and Temp Target Presets (Scenes and Automation appear when you have some)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
+![De dynamiske kategoriene — Hurtigknapp og Forhåndsinnstilte midlertidig mål (Scener og Automasjon vises når du har noen)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
 
 (profile-shortcuts)=
-### Profile
+### Profil
 
-Every **[profile](ProfileSwitch-ProfilePercentage.md)** can be added as a **shortcut** that performs a **profile switch** in one tap. Unlike most shortcuts, a Profile shortcut carries its own **percentage** and **duration**, which you set after adding it with the **✏️** button:
+Hver **[profil](ProfileSwitch-ProfilePercentage.md)** kan legges til som en **snarvei** som gjør et **profilbytte** med ett trykk. I motsetning til de fleste snarveier har en profilsnarvei sin egen **prosent** og **varighet**, som du setter etter at du har lagt den til, med **✏️**-knappen:
 
-- **Percentage** (30–250 %, in steps of 5 %) — scale the profile when it is applied. 100 % uses it as-is.
-- **Duration** (0–10080 min, that is up to 7 days, in steps of 10 min) — how long the switch lasts. **0 = Permanent** (until you switch again).
+- **Prosent** (30–250 %, i steg på 5 %) — skalerer profilen når den brukes. 100 % bruker den som den er.
+- **Varighet** (0–10080 min, det vil si opptil 7 dager, i steg på 10 min) — hvor lenge byttet varer. **0 = Permanent** (til du bytter igjen).
 
-![Profile shortcuts and plugin categories in the catalog](../images/v4/QuickLaunch/quicklaunch_categories.png)
+![Profilsnarveier og plugin-kategorier i katalogen](../images/v4/QuickLaunch/quicklaunch_categories.png)
 
-This lets you keep several buttons for the **same** profile at different strengths — for example *“Profile 100 %”* and *“Profile 70 % for 2 h”* — and apply either with a single tap. (You can add the same profile more than once with different settings.)
+Slik kan du ha flere knapper for den **samme** profilen med ulik styrke — for eksempel *«Profil 100 %»* og *«Profil 70 % i 2 t»* — og bruke hver av dem med ett enkelt trykk. (Du kan legge til den samme profilen flere ganger med ulike innstillinger.)
 
 ### Plugins
 
-![Plugin shortcuts in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
+![Plugin-snarveier i katalogen](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
 
-Finally, any **enabled plugin** that has its own screen can be added as a shortcut to open it directly. These are grouped by plugin type — **Pump**, **BG Source**, **APS**, **Loop**, **Sensitivity detection**, **Smoothing**, **Calibration**, **Constraints**, **Communication** and **General** — so you can, for instance, jump straight to your pump or loop screen from the overview.
+Til slutt kan alle **aktiverte plugins** som har sin egen skjerm, legges til som en snarvei som åpner den direkte. De er gruppert etter plugin-type — **Pumpe**, **BS-kilde**, **APS**, **Loop**, **Sensitivitetsdeteksjon**, **Utjevning**, **Kalibrering**, **Begrensninger**, **Kommunikasjon** og **Generelt** — så du kan for eksempel hoppe rett til pumpe- eller loop-skjermen fra oversikten.
 
 ---
 
-## QuickLaunch and Master/Client
+## Hurtigstart og hovedenhet/klient
 
-Unlike most of your settings, the **QuickLaunch toolbar is configured per device** — it is stored **locally and is not synced** between your master and paired clients, so each device keeps its own set of buttons. (It *is* included in a settings **backup/export**, so a restore brings it back on the same device.)
+I motsetning til de fleste andre innstillinger er **Hurtigstart-verktøylinjen satt opp per enhet** — den lagres **lokalt og synkroniseres ikke** mellom hovedenheten og parede klienter, så hver enhet har sitt eget sett med knapper. (Den *er* med i en **sikkerhetskopi/eksport** av innstillingene, så en gjenoppretting henter den tilbake på den samme enheten.)
 
-What each device can put on its toolbar still depends on what it has: QuickWizards, scenes, temp-target presets and profiles all sync, so a client's catalog offers the same items — you simply choose them per device. A few details to know:
+Hva hver enhet kan legge på verktøylinjen sin, avhenger fortsatt av hva den har: hurtigknapper, scener, forhåndsinnstilte midlertidige mål og profiler synkroniseres alle, så katalogen på en klient tilbyr de samme elementene — du velger dem bare per enhet. Noen detaljer det er greit å vite:
 
-- Buttons whose target no longer exists (a deleted QuickWizard, scene or preset, a disabled rule) are **skipped automatically**.
-- **Automation** shortcuts are offered and run only on the **master** (automation executes on the master). Scene, QuickWizard, temp-target and profile buttons are available on a client.
-- When you tap a button on a client that must run on the master (a bolus, temp target, profile switch or scene), the **master** carries it out and authors the confirmation. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md).
+- Knapper der målet ikke finnes lenger (en slettet hurtigknapp, scene eller forhåndsinnstilling, en deaktivert regel) **hoppes over automatisk**.
+- **Automasjon**-snarveier tilbys og kjøres bare på **hovedenheten** (automasjon kjører på hovedenheten). Knapper for scene, hurtigknapp, midlertidig mål og profil er tilgjengelige på en klient.
+- Når du trykker på en knapp på en klient som må kjøres på hovedenheten (en bolus, et midlertidig mål, et profilbytte eller en scene), utfører **hovedenheten** den og lager bekreftelsen. Se [Hovedenhet ↔ klientstyring](../RemoteFeatures/ClientMasterControl.md).
 
 ---
 
