@@ -30,7 +30,7 @@ Insulina ma różne stężenia, określone liczbą jednostek na mililitr (ml).
 Używanie insuliny o stężeniu niepasującym do urządzenia jest skrajnie niebezpieczne i może spowodować ciężkie przedawkowanie lub zbyt małą dawkę. **Zawsze sprawdź trzy razy, czy stężenie insuliny pasuje do strzykawki, pena lub pompy.**
 ```
 
-## Kiedy używa się niestandardowego stężenia?
+## When is a non-standard concentration used?
 
 Pompy insulinowe są przeznaczone do insuliny U100, ale w niektórych szczególnych sytuacjach medycznych potrzebne są niestandardowe stężenia. Takie sytuacje wymagają ogromnej ostrożności i bardzo starannego prowadzenia terapii.
 
