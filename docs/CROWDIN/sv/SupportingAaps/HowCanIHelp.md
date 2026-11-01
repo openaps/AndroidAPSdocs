@@ -23,7 +23,7 @@ If you are translating something for the first time, please start with translati
 
 You are welcome to start as a translator for the documentation in parallel or later.
 
-You can check the state of translations for the languages app and documentation [here](#StateOfTranslations).
+You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
 
 * If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
 * If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
