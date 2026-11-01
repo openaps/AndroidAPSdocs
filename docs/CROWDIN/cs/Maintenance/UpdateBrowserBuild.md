@@ -9,7 +9,7 @@ Sestavili jste AAPS pomocí **AAPS Builder**? Tuto stránku nepotřebujete: viz 
 **AAPS** nelze stáhnout kvůli předpisům pro zdravotnické prostředky. Sestavit si aplikaci pro vlastní použití je legální, ale nesmíte dávat kopii jiným! Podrobnosti najdete na stránce [Nejčastější otázky uživatelů APS](../UsefulLinks/FAQ.md).
 
 ```{note}
-Pokud chcete **AAPS** aktualizovat v prohlížeči poprvé: zkopírujte záložní soubor úložiště klíčů na svůj Disk Google. Potom místo tohoto návodu postupujte podle [postupu Sestavení **AAPS** v prohlížeči](../SettingUpAaps/BrowserBuild.md). Místo vytvoření nového úložiště klíčů musíte vybrat to, které jste zkopírovali ze svého počítače.
+In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Potom místo tohoto návodu postupujte podle [postupu Sestavení **AAPS** v prohlížeči](../SettingUpAaps/BrowserBuild.md). Místo vytvoření nového úložiště klíčů musíte vybrat to, které jste zkopírovali ze svého počítače.
 Tento krok je povinný jen poprvé, při dalších aktualizacích pak budete moci postupovat podle tohoto návodu.
 ```
 
@@ -57,7 +57,7 @@ Poznámka: pokud jste svou kopii AndroidAPS omylem upravili, uvidíte tuto obraz
 
 ![Zahození nechtěných úprav](../images/update/CI/GitHubUpdate4.png)
 
-Nyní jste synchronizovali (aktualizovali) svou vlastní kopii s nejnovějším vydáním Android APS. Výborně.
+You have now synchronized (updated) your own copy with the latest release of **AAPS**. Výborně.
 
 ![Repozitář je synchronizovaný](../images/update/CI/GitHubUpdate5.png)
 
@@ -83,7 +83,7 @@ Nyní jste synchronizovali (aktualizovali) svou vlastní kopii s nejnovějším 
 
 ![Run workflow](../images/update/CI/GitHubActions3.png)
 
-6. Zobrazí se zpráva „Workflow run was successfully requested.“ Obnovte stránku v prohlížeči a budete moci sledovat průběh sestavení. Když akce skončí, zobrazí se u akce AAPS CI zelená značka zaškrtnutí. Úspěšně jste sestavili aktualizovanou verzi Android APS. To znamená, že APK pro hlavní telefon (Master) a pro Wear se nyní ukládají přímo na váš Disk Google (viz níže). APK AAPSClient si můžete stáhnout z Github > nightscout > AndroidAPS [zde](https://github.com/nightscout/AndroidAPS/releases)
+6. Zobrazí se zpráva „Workflow run was successfully requested.“ Obnovte stránku v prohlížeči a budete moci sledovat průběh sestavení. Když akce skončí, zobrazí se u akce AAPS CI zelená značka zaškrtnutí. You have successfully built the updated version of **AAPS**. To znamená, že APK pro hlavní telefon (Master) a pro Wear se nyní ukládají přímo na váš Disk Google (viz níže). APK AAPSClient si můžete stáhnout z Github > nightscout > AndroidAPS [zde](https://github.com/nightscout/AndroidAPS/releases)
 
 
 ![Sledování workflow](../images/update/CI/GitHubActions4.png)
