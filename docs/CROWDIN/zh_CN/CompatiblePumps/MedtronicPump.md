@@ -75,13 +75,13 @@ While setting up AAPS to work with your medtronic pump you need to set the follo
 
 - **泵序列号**：显示在泵背面，以SN开头。只需输入显示的6位数字，无需输入任何字母字符（例如123456）。
 - **泵型号**：您正在使用的泵型号（例如522）。 
-- **泵频率**：根据泵的原始销售地区有两种选项。 Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select): 
+- **泵频率**：根据泵的原始销售地区有两种选项。 Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select: 
     - for US & Canada, frequency used is 916 MHz
     - for Worldwide, frequency used is 868 MHz
 - **泵上最大基础率（单位/小时）**：必须与泵上的设置保持一致（参见上文泵配置部分）。此设置必须谨慎选择，因为它将决定AAPS能通过基础率输送多少胰岛素。这将实际设定临时基础率的最大值。例如，将此值设为标准最大基础率的四倍，将允许400%的临时基础率。泵允许的最大值为每小时34.9单位。
 - **泵上最大单次剂量（单位）**（每小时）：必须与泵上的设置保持一致（参见上文泵配置部分）。此设置需慎重考虑，因为它决定了AAPS能设置的单次剂量上限。
 - **单次剂量开始前延迟（秒）**：发出单次剂量指令后，实际发送至泵前的等待秒数。这段延迟时间允许用户在错误发送单次剂量指令时取消操作。已通过AAPS启动的单次剂量无法取消。取消已启动单次剂量的唯一方法是手动暂停泵，然后恢复运行。
-- **美敦力编码**：决定是否执行美敦力编码。首选选择硬件编码（即由Rileylink兼容设备执行），这样可减少数据传输量。若出现频繁断开连接的情况，选择软件编码（即由AAPS执行）可能有所帮助。如果您在Rileylink设备上使用0.x版本固件，此设置将被忽略。
+- **Medtronic Encoding**: Determines where the Medtronic encoding is carried out (hardware or software). 首选选择硬件编码（即由Rileylink兼容设备执行），这样可减少数据传输量。若出现频繁断开连接的情况，选择软件编码（即由AAPS执行）可能有所帮助。如果您在Rileylink设备上使用0.x版本固件，此设置将被忽略。
 - **电池类型（电量显示）**：为准确判断剩余电量，请选择当前使用的AAA电池类型。当选择非简易视图时，AAPS将显示计算得出的剩余电量百分比及电压值。可选选项如下：
     
     - 未选择 (简单视图)
