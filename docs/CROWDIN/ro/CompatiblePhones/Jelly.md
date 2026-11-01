@@ -14,7 +14,7 @@
 
 **Dezavantaje**
 
-* Recomandat numai pentru utilizatori de buclă experimentați (unele setări nu sunt recunoscute, trebuie să le știți din experiența cu un telefon Android mai mare folosit la AAPS, cum și unde se află. Unele butoane AAPS sunt greu de atins și necesită mult pipăit, dar nu cu degete butucănoase.)
+* Recommended only for experienced loopers. Some settings are not easy to recognize: you have to know from experience with a big Android AAPS phone how and where things are located. Some AAPS buttons are small and hard to tap: you need a precise touch, not stubby fingers.
 * Poate fi folosit numai ca telefon special pentru buclă. E mai bine să aveți un telefon inteligent normal în buzunar. 
 
 ### Optimizarea vieții bateriei
@@ -43,6 +43,6 @@ Nu uitați să dezactivați Google Play Protect.
 
 ### Remote Connection for Wear apk
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
+For certain smart watches, like the Samsung Galaxy, 'Remote connection' under Advanced features in the Galaxy Wearable app must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
 
 ![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
