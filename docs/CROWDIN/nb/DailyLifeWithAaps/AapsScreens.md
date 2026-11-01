@@ -247,7 +247,7 @@ Hvis grensen for advarsel er overskredet, vises verdiene i gult.
 
 Hvis grensen for kritisk er overskredet, vises verdiene i rødt.
 
-The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
+Alderen vises alltid i kortform, uansett skjermstørrelse: *4t* den første dagen, *3d4t* senere.
 
 Grensene kan endres via det lille **Innstillinger**-ikonet som vises når statusraden er **utvidet** (pilen til høyre) — se [Statuslys](#Preferences-status-lights).
 
@@ -308,11 +308,11 @@ Dette virker på samme måte på de [ekstra grafene](#aaps-screens-additional-gr
 
 (aaps-screens-graph-clock-change)=
 
-#### Clock changes
+#### Endringer av klokken
 
-When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
+Når klokken på telefonen har hoppet, ved overgang til eller fra sommertid eller i en ny tidssone, markerer en stiplet loddrett linje dette tidspunktet i BS-grafen, med et lite klokkeikon nederst. Den samme stiplede linjen går gjennom de [ekstra grafene](#aaps-screens-additional-graphs) nedenfor.
 
-![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
+![Markøren for en endring av klokken: en stiplet linje med et klokkeikon, ved siden av linjen for nåtid](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
@@ -469,7 +469,7 @@ Viser sensitiviteten slik [Dynamisk ISF (DynISF)](../DailyLifeWithAaps/DynamicIS
 
 Disse dataene kan være tilgjengelige når du bruker en [Wear OS-smartklokke](../WearOS/WearOsSmartwatch.md). Aktiver dem i **AAPS** Wear-appen og gi tillatelse til helsedata.
 
-Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
+Skritt tegnes som stolper, og pulsen som en buet linje som brytes der klokken ikke sendte data.
 
 #### Avvik (DEV)
 
@@ -619,15 +619,15 @@ Feltet **Karbotid** er for forhåndsbolus, slik at du kan fortelle systemet at d
 
 ![Sett alarm for karbohydrater fram i tid](../images/Home2021_BolusWizard_EatingReminder.png)
 
-The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
+Påminnelsen starter når bolusen er gitt. Mens den kjører, viser hovedskjermen et felt **Tid for å spise** som teller ned, med **Stopp** og **+5 min**. **+5 min** flytter slutten på ventetiden fem minutter senere, og feltet viser den totale ventetiden. Når tiden er inne, ringer påminnelsen med sin egen lyd, en myk kjøkkentimer. I tillegg til **Demp alarm** (skjermen forblir åpen) og **Demp og lukk** har alarmskjermen **+5 min**, som starter en ny ventetid på fem minutter. Når den har ringt, viser feltet *Tiden er ute* med **+5 min** og **Forkast**; **Demp og lukk** fjerner også feltet. Feltet og alarmen vises også på **AAPSClient** og på [klokken](#WearOsSmartwatch-wizard-carb-time). Påminnelsen lager ikke en timer i klokkeappen på telefonen. Hvis Android ikke lar **AAPS** sette alarmer, ber kalkulatoren deg om å tillate *Alarmer og påminnelser* for **AAPS** i Android-innstillingene. Bjellen tilbys ikke for en karbotid som allerede har passert.
 
-![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
+![Feltet Tid for å spise på hovedskjermen, med +5 min og Stopp](../images/main/main_eat_reminder_bar.png)
 
-![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
+![Alarmskjermen Tid for å spise: +5 min, Demp alarm, Demp og lukk](../images/main/eat_reminder_alarm.png)
 
-Feltet **BS** er vanligvis allerede fylt ut med den siste målingen fra CGM-en din. Hvis du ikke har en CGM som virker, er feltet tomt. Når målingen er fersk, forblir raden **BS** sammenfoldet. The field follows new readings while the wizard is open, until you change it yourself.
+Feltet **BS** er vanligvis allerede fylt ut med den siste målingen fra CGM-en din. Hvis du ikke har en CGM som virker, er feltet tomt. Når målingen er fersk, forblir raden **BS** sammenfoldet. Feltet følger nye målinger mens kalkulatoren er åpen, helt til du endrer det selv.
 
-Resultatknappen nederst viser den foreslåtte bolusen; når du trykker på den, ber den om bekreftelse før noe insulin gis. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
+Resultatknappen nederst viser den foreslåtte bolusen; når du trykker på den, ber den om bekreftelse før noe insulin gis. Mens bekreftelsen venter, gir loopen ingen SMB, så bolusen du bekrefter, er fortsatt riktig. Hvis en SMB leveres akkurat da, venter **OK** til den er ferdig.
 
 Greit å vite:
 
