@@ -4,7 +4,7 @@
 
 ## Requisitos
 
-**AAPS** usa una función de Android Auto que permite enviar los mensajes de las apps del móvil a la pantalla del sistema de audio del coche.
+**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
 
 Eso significa que:
 
@@ -37,7 +37,7 @@ Desplázate hacia abajo y asegúrate de que **Estado continuo** está activado: 
 
 Como **AAPS** no es una app oficial de Android Auto, hay que activar las notificaciones para «fuentes desconocidas» en Android Auto. Esto se hace con el modo desarrollador, que te mostramos aquí.
 
-Ve a tu coche y conecta tu móvil al sistema de audio del coche.
+Go to your car and connect your mobile with the car's audio system.
 
 Ahora deberías ver una pantalla parecida a esta.
 
