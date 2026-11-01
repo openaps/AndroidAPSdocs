@@ -57,7 +57,7 @@ In less obvious cases of insulin delivery problems _e.g._ leakages, occlusions o
 (pumps-cannulas-announce-insulin)=
 ## 在不实际输送胰岛素的情况下宣布已输送胰岛素
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only**. A **Time** row (set to **Now**) then lets you record the actual time of the injection: you can ignore it if the injection was given recently. If the bolus was given some time ago, use **-** to move the time back (_e.g._ -30 min), or open the row with the chevron to pick the exact date and time. 然后，**AAPS**将考虑胰岛素作用持续时间，并相应地计算系统中剩余的胰岛素量。
+To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. A **Time** row (set to **Now**) then lets you record the actual time of the injection: you can ignore it if the injection was given recently. If the bolus was given some time ago, use **-** to move the time back (_e.g._ -30 min), or open the row with the chevron to pick the exact date and time. 然后，**AAPS**将考虑胰岛素作用持续时间，并相应地计算系统中剩余的胰岛素量。
 
 If you are using **AAPS** as a caregiver, you can remotely disconnect (and reconnect) the pump very easily by [SMS command](../RemoteFeatures/SMSCommands.md) using commands such as "pump disconnect 120" and "pump connect 120". 远程断开的持续时间范围为1-120分钟（在此示例中为120分钟）。如果**AAPS**手机对您来说不方便访问（例如，被埋在正在跑向游泳综合体的孩子的泵带中，或被青少年紧密守护或正在使用），这将非常有用。
 
@@ -92,7 +92,7 @@ b) If you want to be more aggressive (for example, you are heading for hyperglyc
 
 ![User profile for site rotation dialog](../images/SiteRotation/Type.png)
 
-*Note: this setting will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"*
+*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
 
 - For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
 
@@ -100,7 +100,7 @@ Edit Mode allows you to select Location, Arrow, and Note associated to selected 
 
 - The entry being edited is shown below the body images, with its type icon (cannula or sensor)
 - Front and back views are shown side by side: tap the area where you placed it
-- Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the past 45 days in this site
+- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
 
 ![Edit Mode](../images/SiteRotation/EditMode.png)
 
