@@ -88,12 +88,12 @@ Cele de mai sus vor depinde de componentele sistemului dumneavoastră **AAPS** �
 
 ### Indexul glicemic și efectul asupra glicemiei
 
-Provocările pentru modul **UAM** cresc o dată cu creșterea 'Efectului asupra glicemiei ('EBG')
+The challenge for the **UAM** mode rises with rising 'Effect on Blood Glucose' ('EBG')
 
 - Porniți moderat/scăzut și reglați setările **Profilului** dumneavoastră. Numai atunci, "testați" mesele cu **EBG** mare.
 - Luați în considerare un bolus inițial < 50% dacă consumați ceva cu **EBG foarte mare**.
 
-1) **Fără EBG**: de exemplu, carne proaspătă, pește, ouă, șuncă, uleiuri, brânză. 2) **EBG scăzut**: de exemplu legume proaspete și fructe, ciuperci, fructe, lapte, iaurt, brânză proaspătă de vacă. 3) **EBG moderat**: de exemplu pâine integrală/tăieței, cartofi, orez sălbatic, ovăz și fructe uscate. 4) **EBG ridicat**: spre exemplu pâine de grâu, baghetă, toast, vafe, prăjituri, cartofi piure, tăieței, orez. 5) **EBG foarte mare**: spre exemplu zahăr, băuturi dulci, sucuri de fructe, fulgi de porumb, bomboane, dulciuri, chipsuri de cartofi, sticksuri.
+1) **Fără EBG**: de exemplu, carne proaspătă, pește, ouă, șuncă, uleiuri, brânză. 2) **EBG scăzut**: de exemplu legume proaspete și fructe, ciuperci, fructe, lapte, iaurt, brânză proaspătă de vacă. 3) **EBG moderat**: de exemplu pâine integrală/tăieței, cartofi, orez sălbatic, ovăz și fructe uscate. 4) **High EBG**: e.g. wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **EBG foarte mare**: spre exemplu zahăr, băuturi dulci, sucuri de fructe, fulgi de porumb, bomboane, dulciuri, chipsuri de cartofi, sticksuri.
 
 ![Indexul glicemic și efectul asupra glicemiei](../images/fullClosedLoop01.png)
 
@@ -108,7 +108,7 @@ Atunci când se efectuează exerciții fizice sau sunteți activ, cu o pompă sa
 
 Cu **FCL**, algoritmul este reglat pentru a detecta **UAM** și pentru a livra automat insulină pentru a contoriza creșteri **glicemice**.  O **țintă temporară** mare și un **procentaj al profilului** mai mic (activat deja în jurul începerii mesei) ar trebui setate cu mult timp înainte de orice activitate.
 
-Nivelurile neobișnuite sau neregulate ale activității fizice prezintă dificultăți pentru **FCL**. Planificarea este necesară pentru exerciții fizice (în special dacă doriți să reduceți nevoia de carbohidrați de salvare/gustări în timpul unei hipoglicemii cauzate de sport). After an active day it is recommended that a lower  **Percentage Profile** is set for overnight after the evening meal is fully digested: set in **Automations** an elevated (>100 mg/dL) **BG**  target, with “no **SMBs** at elevated target” selected in **AAPS** **Settings**.
+Nivelurile neobișnuite sau neregulate ale activității fizice prezintă dificultăți pentru **FCL**. Planificarea este necesară pentru exerciții fizice (în special dacă doriți să reduceți nevoia de carbohidrați de salvare/gustări în timpul unei hipoglicemii cauzate de sport). After an active day it is recommended that a lower  **Percentage Profile** is set for overnight after the evening meal is fully digested: set in **Automations** an elevated (>100 mg/dL) **BG**  target, with **Enable SMB with high temp target** switched off in **AAPS** **Settings**.
 
 ## Dificultăți pentru copii
 
@@ -151,7 +151,7 @@ Pentru succesul **FCL**, **ISF** este parametrul cheie de ajustare. Când se uti
 
 **AAPS** Master allows up to 130% temporary **Profile** in **HCL** mode. Amplificarea **ISF** se face în 3 pași:
 
-- Pasul 1 - revizuiește **ISF-ul** care este aplicabil pentru această oră de masă în cadrul **Profilulului**, și vedeți dacă spre exemplu Autosens sugerează o modificare care ia în considerare starea curentă (ultimele câteva ore) de sensibilitate la insulină a organismului.
+- Step 1 -  review the **ISF** applicable for this meal time hour within the **Profile**, and see whether e.g. Autosens suggest a modification that takes care of the current (last few hours’) insulin sensitivity status of the body.
 - Pasul 2 - aplică un factor (1/Profile%, așa cum este setat în **Automatizări**) pentru a crește **ISF**.
 - Pasul 3 - verifică dacă **ISF** sugerat se încadrează în limitele de siguranță stabilite.
 
@@ -169,9 +169,9 @@ Secțiunea de mai jos oferă îndrumări despre modul de grupare al **Automatiz�
 
 ### SMB automatizate la creștere glicemiei
 
-The key to successful **FCL** **at the beginning of BG increases from meals, very large automatic SMBs must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in **HCL**!)
+The key to successful **FCL**: **at the beginning of BG increases from meals, very large automatic SMBs must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in **HCL**!)
 
-To achieve this, data from your **HCL** should be analyzed to determine which **deltas** might be not meal –related and those delta which might be.
+To achieve this, data from your **HCL** should be analyzed to determine which **deltas** might not be meal-related and which might be.
 
 - As you can define the **Automation** within a pre-defined time-window, you need only to analyze there.
 - Dacă aveți mese foarte diferite (de exemplu un mic dejun bogat în carbohidrați; dar la prânz cu carbohidrați mai puțini) puteți alege să aveți două (seturi) diferite de **Automatizări** pentru fiecare interval orar.
@@ -218,7 +218,7 @@ Praguri IOB de bun-simț la care ați reduce agresivitatea buclei dumneavoastră
 
 Pentru mese excepționale, sau pentru o diminuare a acesteia în cazul în care urmează sportul, pragul **IOB** poate fi stabilit rapid în mod diferit în **Automatizare**.
 
-Automatizarea(#3),"iobTH atins => **SMB** off", este definită pentru a termina (sau pauza, până când un alt val de creșteri cauzate de carbohidrați va lovi), o amplificarea agresivă a **SMB**.
+Automation (#3), "iobTH reached => **SMBs** off”, is defined to end (or pause, until another wave of carb-related rise hits) the aggressive **SMB** boosting.
 
 ![Automation #3: IOB of 5.5 or more with no temp target running starts a temp target of 111 mg/dL](../images/fullClosedLoop04.png)
 
@@ -233,7 +233,7 @@ Aceasta îi spune algoritmului că peste **pragul IOB** stabilit este mai bine s
 **Atenție: Automatizarea #3 funcționează numai atunci când nu există o țintă temporară activă.** Deci, în cazul în care ați lucrat cu ținta temporară mănânc în curând, trebuie să se încheie până atunci, care de obicei ar trebui să se întâmple în jur de 30-40 de minute după începerea mesei.
 
 O modalitate de a face acest lucru este de a crea o condiție **Automatizare** care încheie în cele din urmă o țintă temporară mănânc în curând în baza Condiției **iob**>65% * iobTH.
-> Modalități de a lucra cu o țintă temporară mănânc în curând Utilizatori de buclă setează (apăsând butonul țintă temporară, sau automatizat prin intermediul unei ținte scăzute în **profilul** **glicemic** în cazul în care intervalele orare sunt relativ fixate), o țintă temporară mănânc în curând cu aproximativ o oră sau mai mult înainte de începerea mesei, doar pentru a garanta o valoare mai scăzută a **glicemiei** și o ușoară creștere a **IOB**. Dar, să presupunem că **FCL** este întotdeauna pe drum spre țintă, s-ar putea ca aceasta să nu facă mare lucru și puteți prefera definirea unei **Automatizări** care stabilește o țintă temporară mănânc în curând la momentul recunoașterii mesei (delta glicemiei; sau accelerația = delta > delta medie). O țintă temporară **scăzută** este importantă în această etapă, deoarece orice **SMB** este calculat de bucla dumneavoastră folosind (glicemie minus TT)/sens, astfel încât o TT mică face ca insulinaReq rezultată să fie mai mare.
+> Modalități de a lucra cu o țintă temporară mănânc în curând Utilizatori de buclă setează (apăsând butonul țintă temporară, sau automatizat prin intermediul unei ținte scăzute în **profilul** **glicemic** în cazul în care intervalele orare sunt relativ fixate), o țintă temporară mănânc în curând cu aproximativ o oră sau mai mult înainte de începerea mesei, doar pentru a garanta o valoare mai scăzută a **glicemiei** și o ușoară creștere a **IOB**. But, assuming the **FCL** is always en route towards target, this might not yield much and you may prefer to define an **Automation** that sets an EatingSoonTT at recognition of meal start (glucose delta, or acceleration = delta > avg delta). O țintă temporară **scăzută** este importantă în această etapă, deoarece orice **SMB** este calculat de bucla dumneavoastră folosind (glicemie minus TT)/sens, astfel încât o TT mică face ca insulinaReq rezultată să fie mai mare.
 
 After the first boosted **SMB**s were given, your set iobTH and **Automation** #3 should strike a good balance of limiting the glucose peak, but also not leading to a hypo after the meal.
 
@@ -332,7 +332,7 @@ For instance, it is perfectly possible, without any extra steps after **Automati
 - Probleme cu "coada" de insulină după mese
     - Este posibil să fie necesar să luați o gustare (a se vedea predicția hipoglicemică) sau comprimate de glucoză (dacă sunt sunteți în zona de hipoglicemie). Dar țineți cont că carbohidrații necesari, de care v-ar spune bucla la un moment dat, sunt foarte probabil exagerați, deoarece bucla nu are absolut nicio informație despre cantitatea de carbohidrați (în timp ce dumneavoastră puteți ghici câți ar mai fi, inclusiv din grăsimi și proteine) care încă așteaptă să fie absorbită.
     - O informație valoroasă ar fi dacă problema își are originea în cea mai mare parte încă din faza de creștere a glicemiei. Atunci stabilirea unui iobTH mai mic ar putea fi un remediu facil.
-    - Dacă nevoia de carbohidrați suplimentari se întâmplă des, notați câte grame sunt necesare (fără să numărați din nou ceea ce ați luat în cele din urma prea mult și a necesitat insulină suplimentară).  Apoi folosiți valoarea din profil a IC pentru a estima câtă insulină, mai puțin **SMB**, ar fi trebuit administrată, și mergeți cu această informație în reglajul dumneavoastră (referitor la **Procentajul Profilului** în **Automatizări**, sau poate și iobTH setat). This may relate to the **SMBs** given when glucose was high, or also extending regarding also the **SMBs** during the **BG** rise.
+    - Dacă nevoia de carbohidrați suplimentari se întâmplă des, notați câte grame sunt necesare (fără să numărați din nou ceea ce ați luat în cele din urma prea mult și a necesitat insulină suplimentară).  Apoi folosiți valoarea din profil a IC pentru a estima câtă insulină, mai puțin **SMB**, ar fi trebuit administrată, și mergeți cu această informație în reglajul dumneavoastră (referitor la **Procentajul Profilului** în **Automatizări**, sau poate și iobTH setat). This may relate to the **SMBs** given when glucose was high, or also to the **SMBs** during the **BG** rise.
     - S-ar putea să trebuiască pur și simplu să acceptați vârfuri mai mari de **glicemie** pentru a nu face hipoglicemie. Or change diet to something with lower amounts of carbs, and higher amount of protein and fats.
 
 
