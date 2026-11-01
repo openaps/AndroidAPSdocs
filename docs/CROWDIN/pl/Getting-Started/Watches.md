@@ -17,7 +17,7 @@ Połączenie smartwatcha z **AAPS** może być przydatne w wielu sytuacjach, np.
 
 ## Szczególne zalety dla rodziców/opiekunów używających **AAPS**
 
-Jeśli telefon **AAPS** dziecka jest w pobliżu, opiekun może używać smartwatcha do monitorowania lub wprowadzania zmian bez używania telefonu **AAPS**. Może to być przydatne na przykład wtedy, gdy telefon **AAPS** jest schowany w pasku na pompę.
+For a child - if their **AAPS** phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS** phone. Może to być przydatne na przykład wtedy, gdy telefon **AAPS** jest schowany w pasku na pompę.
 
 Smartwatcha można używać _obok_ opcji opartych na TELEFONIE albo _zamiast_ nich, zarówno do zdalnego sterowania, jak i do [samego obserwowania](../RemoteFeatures/FollowingOnly.md).
 
@@ -49,19 +49,19 @@ Najlepszy sposób na wybór smartwatcha to wyszukanie postów o zegarkach („wa
 
 ## Pełny Android
 
-Brzmi atrakcyjnie, prawda? Jednak obecnie tylko nieliczni entuzjaści eksperymentują z **AAPS** na samodzielnym zegarku. Jest niewiele smartwatchy z rozsądnym interfejsem, które dobrze działają z samodzielnym **AAPS** i Twoją aplikacją CGM. Popularne modele to m.in. LEMFO LEM 15 Pro i 16. Na zegarku musisz zainstalować plik apk **AAPS** „full” (ten, który zwykle instaluje się na smartfonie), a nie plik apk **AAPS** „wear”.
+Brzmi atrakcyjnie, prawda? However, at present, only a few enthusiasts are experimenting with **AAPS** on a stand-alone watch. Jest niewiele smartwatchy z rozsądnym interfejsem, które dobrze działają z samodzielnym **AAPS** i Twoją aplikacją CGM. Popularne modele to m.in. LEMFO LEM 15 Pro i 16. Na zegarku musisz zainstalować plik apk **AAPS** „full” (ten, który zwykle instaluje się na smartfonie), a nie plik apk **AAPS** „wear”.
 
 Nie ma jasnej specyfikacji, która mówi, czy zegarek będzie dobrze działał z samodzielnym **AAPS**, ale pomogą te parametry:
 
 1)  Android 12 lub nowszy. 2)  Możliwość wyłączenia trybu „kwadratowego” tarczy zegarka, aby tekst był większy i łatwiejszy do czytania. 3)  Bardzo dobry czas pracy na baterii. 4)  Dobry zasięg Bluetooth.
 
-Większość frustracji z samodzielnymi zegarkami **AAPS** wynika z obsługi bardzo małego ekranu i z tego, że obecny interfejs pełnej aplikacji AAPS nie był projektowany dla zegarka. Z powodu małego ekranu możesz woleć używać rysika do zmiany ustawień **AAPS** na zegarku. Niektóre przyciski AAPS mogą nie być widoczne na ekranie zegarka.
+Większość frustracji z samodzielnymi zegarkami **AAPS** wynika z obsługi bardzo małego ekranu i z tego, że obecny interfejs pełnej aplikacji AAPS nie był projektowany dla zegarka. You may prefer to use a stylus to edit **AAPS** settings on the watch, due to the restricted screen size, and some AAPS buttons may not be visible on the watch screen.
 
 Kolejne trudności: trudno uzyskać wystarczający czas pracy na baterii, a zegarki z wystarczającą baterią są często duże i grube. Użytkownicy zgłaszają walkę z systemem i ustawieniami oszczędzania energii, trudności z uruchamianiem sensorów na zegarku, słaby zasięg Bluetooth (potrzebny do utrzymania połączenia z sensorem i pompą) oraz wątpliwą wodoodporność. Przykłady pokazują poniższe zdjęcia.
 
 ![image](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
 
-Jeśli chcesz skonfigurować samodzielny zegarek, przeczytaj posty i komentarze w grupie **AAPS** na Facebooku (dobre słowa do wyszukiwania to „standalone” i „Lemfo”) oraz na Discordzie.
+If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
 ## Wear OS
 
@@ -175,7 +175,7 @@ Więcej o nich, w tym o tym, jak je skonfigurować, przeczytasz na [stronie Watc
 ![image](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
-Zegarki Pebble ([już nieprodukowane](https://en.wikipedia.org/wiki/Pebble_(watch))) były w sprzedaży od 2013 do 2016 roku i nadal można je kupić z drugiej ręki. Fitbit przejął majątek firmy Pebble. Użytkownicy Pebble mogą oglądać dane z Nightscout na tarczy Urchin. Wyświetlane dane to m.in. IOB, aktualna baza tymczasowa i prognozy. Przy otwartej pętli możesz użyć IFTTT, aby utworzyć aplet, który po otrzymaniu powiadomienia z **AAPS** wyśle SMS lub powiadomienie pushover.
+Zegarki Pebble ([już nieprodukowane](https://en.wikipedia.org/wiki/Pebble_(watch))) były w sprzedaży od 2013 do 2016 roku i nadal można je kupić z drugiej ręki. Fitbit przejął majątek firmy Pebble. Użytkownicy Pebble mogą oglądać dane z Nightscout na tarczy Urchin. Wyświetlane dane to m.in. IOB, aktualna baza tymczasowa i prognozy. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.
 
 ### [Zegarki Bluejay](https://bluejay.website/)
 
