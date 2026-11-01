@@ -4,7 +4,7 @@
 
 ## Вимоги
 
-**AAPS** використовує функцію Android Auto, яка дозволяє передавати повідомлення від застосунків на телефоні на дисплей аудіосистеми автомобіля.
+**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
 
 Це означає, що:
 
@@ -37,7 +37,7 @@
 
 **AAPS** не є офіційним застосунком Android Auto, тому в Android Auto потрібно увімкнути сповіщення з «unknown sources» (невідомих джерел). Це робиться через режим розробника, який ми тут покажемо.
 
-Сядьте в автомобіль і підключіть телефон до аудіосистеми автомобіля.
+Go to your car and connect your mobile with the car's audio system.
 
 Тепер ви маєте побачити екран, схожий на цей.
 
