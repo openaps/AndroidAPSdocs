@@ -10,7 +10,7 @@ Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist **AAPS** nicht als
 - Sobald eine neue Version verfügbar ist, wird Dir in der **AAPS**-App ein Hinweis darüber angezeigt.
 - Wenn eine neue Version verfügbar ist, wird darüber auch auf Facebook informiert.
 - Nach der Veröffentlichung lies bitte die [Versionshinweise](ReleaseNotes.md) (Release Notes) genau durch, und kläre mögliche Fragen in der Community auf Facebook oder Discord, bevor Du mit dem Update weiter machst.
-- Updating from **AAPS** 3.x? Read [What changed in AAPS v4](V4Changes.md) first: it lists the features that moved, were renamed or were removed.
+- Aktualisieren von **AAPS** 3.x? Read [What changed in AAPS v4](V4Changes.md) first: it lists the features that moved, were renamed or were removed.
 - Do not forget to [export your settings](ExportImportSettings.md). When you import them again after the update, you choose whether the pump settings are replaced too.
 
 ## AAPS mit Browser-Build aktualisieren
@@ -30,7 +30,7 @@ Durchlaufe die [gleichen Schritte](../SettingUpAaps/CLIBuild.md) wie Du es zuvor
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-## After the update
+## Nach dem Update
 
 These steps are the same for every build method. Schaue in den [Release Notes](../Maintenance/ReleaseNotes.md) nach, ob es nach dem Update besondere Dinge zu beachten gibt.
 
