@@ -72,7 +72,7 @@
     
         1. 翻譯已校對
     
-        1. Crowdin 和 Github 之間的同步運作已完成（每小時一次），這會為 Github 建立 PR。
+        1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
     
         1. 該 PR 在 Github 中獲得批准。
     
@@ -81,11 +81,11 @@
     ### 翻譯鏈接
     
     ```{admonition} 鏈接不再翻譯
-    :class: note鏈接不再翻譯。過去我們在這裡有一個主題，但由於遷移到 Markdown 和 myst_parser，我們在英文文本中顯式建立標籤，並在底層將這些標籤傳播到其他語系。
+    :class: note鏈接不再翻譯。 In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
     
     
 
-你正在翻譯代表鏈接的文本。請務必小心**不要**刪除由一對`<0></0>`標籤表示的連結，或者如果在同一段落中有多個標籤，還有其他編號。
+你正在翻譯代表鏈接的文本。 Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
 
 這是校對者需要特別注意的事項！
 
