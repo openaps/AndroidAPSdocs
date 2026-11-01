@@ -174,7 +174,7 @@ Useful links to known issues and steps to resolve for Phones
 
 (generaltroubleshooting-remote-control)=
 
-## Remote control
+## Fjernstyring
 
 * [AAPSClient and remote control (pairing, commands not received)](#client-master-control-troubleshooting)
 * ['Nightscout access token' issues](#remotecontrol-nightscout-access-token)
