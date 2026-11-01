@@ -38,6 +38,6 @@ If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSC
 
 * Hala hata alıyorsanız...
 
-Veritabanınızın boyutunu MongoDB'de (veya nightcout'taki veritabanı boyutu eklentisi aracılığıyla) kontrol edin. MongoDB'de ücretsiz katmanı kullanıyorsanız, 496MB'ın dolu olduğu ve temizlenmesi gerektiği anlamına gelir. [Veritabanınızın boyutunu kontrol etmek ve verileri temizlemek için bu Nightscout talimatlarını izleyin](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
+Veritabanınızın boyutunu MongoDB'de (veya nightcout'taki veritabanı boyutu eklentisi aracılığıyla) kontrol edin. MongoDB'de ücretsiz katmanı kullanıyorsanız, 496MB'ın dolu olduğu ve temizlenmesi gerektiği anlamına gelir. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
 Veritabanınızdaki verileri temizlemeden önce, henüz kurmadıysanız, AAPS verilerinizi Open Humans projesine (araştırma için) bağışlamayı düşünebilirsiniz. The instructions are on the [OpenHumans configuration page](../SupportingAaps/OpenHumans.md).
