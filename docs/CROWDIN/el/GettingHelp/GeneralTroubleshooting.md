@@ -39,6 +39,7 @@
 * [Προφίλ: «Ο βασικός ρυθμός δεν είναι συμβατός με την τρέχουσα αντλία»](#your-aaps-profile-basal-not-compatible)
 * [Αντλία: «Τα δεδομένα προέρχονται από διαφορετική αντλία»](#config-builder-wrong-pump-data)
 * [Nightscout Client](TroubleshootingNsClient.md)
+* **"AAPS settings cannot be read"** at start: the settings are encrypted with a key that Android keeps for **AAPS**, and that key does not open them any more, for example after the key store of the phone was reset. While this screen is shown, **AAPS** is not running and does not control the pump. Tap **Retry**: it closes and restarts **AAPS**. If that does not help, restart the phone. Use **Start fresh** only when nothing else helps: it sets the unreadable settings file aside (it is renamed and kept) and starts **AAPS** with empty settings. Then import your last [settings export](../Maintenance/ExportImportSettings.md).
 
 ### Χρήση
 
