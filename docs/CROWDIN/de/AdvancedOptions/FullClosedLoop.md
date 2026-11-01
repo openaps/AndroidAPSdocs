@@ -86,7 +86,7 @@ Das oben Genannte hängt von den jeweiligen Komponenten Deines **AAPS**-Systems 
 
 - Fette oder proteinreiche Ernährung oder langsame Verdauung/Gastroparese machen die Dinge eher einfacher als schwieriger für den **FCL**, weil späte Kohlenhydrate schön die unvermeidlichen „späten Wirkenden“ (tails), die durch die zur Spitzenabdeckung benötigten Boli abdecken.
 
-### Glykämischer Index und Wirkung auf den Blutzucker
+### Glycemic index and effect on blood glucose
 
 Die Herausforderung für den **UAM**-Modus steigt mit steigendem „Effekt auf Blutzucker“ („EBG“)
 
@@ -95,7 +95,7 @@ Die Herausforderung für den **UAM**-Modus steigt mit steigendem „Effekt auf B
 
 1) **Kein EBG**: z. B. frisches Fleisch, Fisch, Eier, Speck, Öle, Käse. 2) **Geringer EBG**: z. B. frisches Gemüse und Beeren, Pilze, Nüsse, Milch, Joghurt, Hüttenkäse. 3) **Mäßiger EBG**: z. B. Vollkornbrot/Nudeln, Kartoffeln, Wildreis, Hafer, getrocknete Früchte. 4) **Hoher EBG**: z. B. Weizenbrot, Baguette, Toast, Waffeln, Kekse, Kartoffeln, Nudeln, Reis. 5) **Sehr hoher EBG**: z. B. gezuckerte Getränke, Fruchtsäfte, Cornflakes, Süßigkeiten, Kartoffelchips, Salzstangen.
 
-![Glykämischer Index und Wirkung auf den Blutzucker](../images/fullClosedLoop01.png)
+![Glycemic index and effect on blood glucose](../images/fullClosedLoop01.png)
 
 Die schwierigsten Mahlzeiten für den **FCL** sind diejenigen mit ausschließlich sehr hohen und hohen **EBG**-Komponenten („Effect on blood glucose“) (rot im Bild): Es steigt nicht nur der **Glukosespiegel** schnell an, sondern es gibt auch nur wenig Fett-/Protein-/Ballaststoffkomponenten, die das unvermeidliche „späte Wirkende“ (tail) der Insulinaktivität, das durch den Versuch einen hohen Glukosespiegel frühzeitig abzufangen entsteht, ausgleichen.
 
