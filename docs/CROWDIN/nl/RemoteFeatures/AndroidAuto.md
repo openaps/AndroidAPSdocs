@@ -4,7 +4,7 @@
 
 ## Vereisten
 
-**AAPS** gebruikt een functie van Android Auto die berichten van apps op de telefoon naar het scherm van Android Auto in de auto stuurt.
+**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
 
 Dat betekent dat:
 
@@ -37,7 +37,7 @@ Controleer nu eerst of je de statusmelding van **AAPS** op de telefoon ziet, voo
 
 **AAPS** is geen officiële Android Auto-app. Daarom moeten meldingen voor "onbekende bronnen" aangezet worden in Android Auto. Dit doe je met de ontwikkelaarsmodus. Hieronder laten we zien hoe.
 
-Ga naar je auto en verbind je telefoon met het audiosysteem van de auto.
+Go to your car and connect your mobile with the car's audio system.
 
 Je ziet nu een scherm dat lijkt op dit scherm.
 
