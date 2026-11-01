@@ -136,7 +136,7 @@ If the app is protected, you must enter the password or use the phone's biometri
 
 - 安全限制是根据你在这里选择的年龄来设置的。
 - 如果你开始触及这些硬性限制（比如最大剂量），那就是时候更进一步了。
-- 选择高于实际年龄是不明智的，因为如果在胰岛素对话框中输错数值（例如跳过小数点）可能会导致用药过量。
+- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
 - 要了解这些硬性安全限制的具体数值，请在[此页面](../DailyLifeWithAaps/KeyAapsFeatures.md)上按您正在使用的算法来找。
 
 (Preferences-maximum-bolus)=
@@ -275,7 +275,7 @@ Depending on your settings in [Configuration > APS](../SettingUpAaps/ConfigBuild
 - [高级膳食助手（OpenAPS AMA）](#Open-APS-features-advanced-meal-assist-ama) - 发布于2017年的算法
 - [超级微小大剂量（OpenAPS SMB）](#Open-APS-features-super-micro-bolus-smb) - 推荐给初学者的最新算法
 
-自[**AAPS** 3.3版本起](#version3300)，[动态ISF](../DailyLifeWithAaps/DynamicISF.md)功能已作为OpenAPS SMB的组成部分整合。
+As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
 
 ### OpenAPS AMA（高级膳食助手）
 
@@ -489,7 +489,7 @@ When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays
 
 您可以通过向开发者发送崩溃报告来帮助**AAPS**进一步发展。
 
-**无人值守设置导出**<br/> 启用此功能后，您将允许**AAPS**自动执行设置导出操作，无需用户手动干预。为此，主密码将在下次手动导出时安全地存储在您的手机上（仅限于此）。存储的密码将有效期长达4周。 4周后，您将收到密码即将到期的通知。在为期1周的宽限期内，您可以通过从维护菜单手动导出设置来刷新密码。
+**无人值守设置导出**<br/> 启用此功能后，您将允许**AAPS**自动执行设置导出操作，无需用户手动干预。 For this the master password is securely stored on your phone (only) at the next manual export. 存储的密码将有效期长达4周。 4周后，您将收到密码即将到期的通知。在为期1周的宽限期内，您可以通过从维护菜单手动导出设置来刷新密码。
 
 1周的宽限期过后，存储的密码将过期，任何自动化设置导出都将中止，并通知用户重新输入密码。 [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) will be logged to the **AAPS** 'Careportal' and 'User entry' lists under Treatments.
 
