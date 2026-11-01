@@ -247,6 +247,8 @@ Als de drempelwaarde voor waarschuwing wordt overschreden, worden de waarden in 
 
 Als de drempelwaarde voor alarm wordt overschreden, worden de waarden in rood weergegeven.
 
+The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
+
 De drempelwaarden kun je wijzigen via het kleine pictogram **Instellingen** dat verschijnt als de statusrij is **uitgeklapt** (pijltje rechts). Zie [Statusindicatoren](#Preferences-status-lights).
 
 Het uitgeklapte statuspaneel heeft aan het eind van sommige rijen ook een knop om een wissel te registreren. Die zet de bijbehorende leeftijd terug: **Toevoegen** op de rij **Sensor** registreert het plaatsen van een sensor. Als je pomp het ondersteunt, verschijnt **Prime/Vul** op de rijen **Canule** (of **Patchpomp**) en **Insuline**, en **Toevoegen** op de rij **Pomp batterij**.
@@ -303,6 +305,14 @@ Houd je vinger op het scherm en beweeg hem naar links of rechts om van de ene wa
 Dit werkt op dezelfde manier bij de [extra grafieken](#aaps-screens-additional-graphs) onder de BG-grafiek (IOB, COB...): houd er een ingedrukt.
 
 ![BG-grafiek ingedrukt houden: de pop-up toont tijd, BG, IOB en basaal](../images/main/graph_press_and_hold.png)
+
+(aaps-screens-graph-clock-change)=
+
+#### Clock changes
+
+When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
+
+![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
@@ -459,6 +469,8 @@ Toont de gevoeligheid zoals berekend door [DynamicISF](../DailyLifeWithAaps/Dyna
 
 Deze gegevens kunnen beschikbaar zijn als je een [Wear-smartwatch](../WearOS/WearOsSmartwatch.md) gebruikt. Zet ze aan in de **AAPS** Wear-app en geef toestemming voor gezondheidsgegevens.
 
+Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
+
 #### Afwijkingen (DEV)
 
 * **Grijze** balken tonen een afwijking door koolhydraten.
@@ -607,11 +619,15 @@ Het veld **Koolhydraattijd** is voor een bolus vooraf: zo vertel je het systeem 
 
 ![Alarm instellen voor toekomstige koolhydraten](../images/Home2021_BolusWizard_EatingReminder.png)
 
-De herinnering gaat af als een alarm van **AAPS**. Er wordt geen timer gemaakt in de klok-app van je telefoon, en het werkt ook als de bolus is ingevoerd vanuit **AAPSClient** terwijl **AAPS** op de achtergrond draaide.
+The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
 
-Het veld **BG** is meestal al ingevuld met de laatste waarde van je CGM. Wanneer jouw CGM het niet doet, dan is dit veld leeg. Als de waarde recent is, blijft de rij **BG** ingeklapt.
+![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
 
-De resultaatknop onderaan toont de voorgestelde bolus. Als je erop drukt, wordt om bevestiging gevraagd voordat er insuline wordt gegeven.
+![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
+
+Het veld **BG** is meestal al ingevuld met de laatste waarde van je CGM. Wanneer jouw CGM het niet doet, dan is dit veld leeg. Als de waarde recent is, blijft de rij **BG** ingeklapt. The field follows new readings while the wizard is open, until you change it yourself.
+
+De resultaatknop onderaan toont de voorgestelde bolus. Als je erop drukt, wordt om bevestiging gevraagd voordat er insuline wordt gegeven. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
 
 Goed om te weten:
 
