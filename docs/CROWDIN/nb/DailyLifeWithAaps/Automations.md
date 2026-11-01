@@ -1,4 +1,4 @@
-# Automation
+# Automasjon
 
 ```{contents} In this page
 :backlinks: entry
@@ -144,7 +144,7 @@ Det er viktig å tenke nøye gjennom hva du egentlig vil oppnå med **automasjon
 
 ![Utløsere for automasjon](../images/Automations/automation_triggers.png)
 
-Scroll down to see the rest of the list:
+Bla ned for å se resten av listen:
 
 ![Utløsere for automasjon, fortsettelse](../images/Automations/automation_trigger_picker_2.png)
 
@@ -178,7 +178,7 @@ Flere betingelser kan kobles sammen med
 
 * Bruk passiv posisjon: **AAPS** henter bare posisjonen når andre apper ber om den.
 * Bruk nettverksposisjon: Posisjonen til Wi-Fi-nettverket ditt.
-* Use GPS location (Attention! Dette kan bruke svært mye batteri!)
+* Bruk GPS-posisjon (Obs! Dette kan bruke svært mye batteri!)
 
 **Utløsere**: pumpe- og sensordata
 
@@ -198,7 +198,7 @@ Merk at for alle alder-utløserne vil sammenligningen «er lik» sjelden slå ti
 
 ![Handlinger for automasjon](../images/Automations/automation_actions.png)
 
-Scroll down to see the rest of the list:
+Bla ned for å se resten av listen:
 
 ![Handlinger for automasjon, fortsettelse](../images/Automations/automation_action_picker_2.png)
 
@@ -387,7 +387,7 @@ I eksempelet nedenfor er regelen **Low glucose temp target** (1) (se [Midlertidi
 
 (automations-troubleshooting)=
 
-## Troubleshooting
+## Feilsøking
 
 * Problem: __Automasjonene mine blir ikke utløst av AAPS?__
 
