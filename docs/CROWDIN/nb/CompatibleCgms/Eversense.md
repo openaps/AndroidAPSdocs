@@ -63,7 +63,7 @@ xDrip can read notifications from the vendor app, like ESEL does. No backfilling
 - Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
 - Enable [Exponential Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md) in AAPS.
 
-## Notification Reader
+## Varslingsleser
 
 **AAPS** can read the glucose values directly from the notifications posted by the official Eversense app, without any other app in between. No backfilling available.
 
