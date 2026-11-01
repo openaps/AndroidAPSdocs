@@ -1,6 +1,6 @@
 # Mogelijk toekomstige insulinepompen
 
-Dit is een lijst van insulinepompen die in omloop zijn, met de status van hun ondersteuning in loopsystemen en de status in AAPS. Op het einde van deze pagina staat algemene info over welke software-mogelijkheden een pomp moet beschikken om überhaupt "loopbaar" te kunnen zijn.
+This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
 
     {contents} Inhoudsopgave
     :depth: 1
@@ -42,7 +42,7 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Willcare insulinepomp ([Homepage](http://shinmyungmedi.com/en/))
 
-**Loopstatus:** Op dit moment niet geschikt om mee te loopen, maar hun medewerkers hebben contact met ons opgenomen en ze willen hun pomp loopbaar maken (op dit moment ontbreken volgens mij alleen de commando's om het profiel uit te lezen/in te stellen).
+**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
 
 **Hardware-eisen voor AAPS:** Geen. Het lijkt erop dat hij Bluetooth gebruikt.
 
