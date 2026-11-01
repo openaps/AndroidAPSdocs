@@ -12,13 +12,13 @@
 
 При этом на ** Профиль ** пользователя происходит следующее воздействие:
 
-- _повышение _ **IC ** -увеличение усваивамых каждые 5 минут углеводов тем самым уменьшает общее время усвоения;
+- _increase_ **IC** - by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
 
 - _повышение _ **ISF**- уменьшение усваиваемых каждые 5 минут углеводов тем самым продлевает общее время усвоения
 
-- _изменение_ ** процента Профиля** - увеличение/уменьшение обеих величин таким образом не влияет на время усвоения углеводов.
+- _change_ **Profile Percentage** - increase/decrease both values thus has no impact on carbs absorption time.
 
-Например, если в **Профиле** пользователя **ISF** равен 100, а углеводный коэффициент **I:C** равен 5, Rоэффициент чувствительности пользователя к углеводам будет равен 20. For every 20 mg/dL the user’s **BG** goes up, 1 g of carbs will be calculated as absorbed by **AAPS**. Положительное значение активного инсулина **IOB** также влияет на расчет **COB**. So, if **AAPS** predicts the user’s **BG** to go down by 20 mg/dL because of **IOB** and it instead stayed flat, **AAPS** would also calculate 1 g of carbs as absorbed.
+For example, if the user’s **Profile** **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. For every 20 mg/dL the user’s **BG** goes up, 1 g of carbs will be calculated as absorbed by **AAPS**. Положительное значение активного инсулина **IOB** также влияет на расчет **COB**. So, if **AAPS** predicts the user’s **BG** to go down by 20 mg/dL because of **IOB** and it instead stayed flat, **AAPS** would also calculate 1 g of carbs as absorbed.
 
 Усвоение углеводов также будет рассчитываться с помощью методов, описанных ниже, в зависимости от выбора алгоритма чувствительности в настройках **AAPS**.
 
@@ -47,7 +47,7 @@ The screenshot above is from an earlier **AAPS** version — in **AAPS** 4 the g
 (CobCalculation-detection-of-wrong-cob-values)=
 ## Обнаружение неправильного значения COB
 
-**AAPS** предупредит пользователя о неверном подсчете углеводов **COB** перед подачей болюса, если  от предыдущего приема пищи остаются активные углеводы **COB**,. В этом случае пользователь получит дополнительную подсказку на экране подтверждения калькулятора болюса.
+**AAPS** will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. В этом случае пользователь получит дополнительную подсказку на экране подтверждения калькулятора болюса.
 
 ### Как AndroidAPS обнаруживает неправильные значения активных углеводов COB?
 
@@ -62,7 +62,7 @@ In the screenshot above, 66% of time the carb absorption was calculated by the m
 - Подумайте об отмене терапевтического действия - нажмите «Отмена» вместо ОК.
 - -Заново рассчитайте свой предстоящий прием пищи с помощью калькулятора болюса, сняв галочку с активных углеводов **COB**.
 - Если требуется болюс на коррекцию, введите его вручную.
-- Будьте осторожны, не допустиеь передозировки или переизбытка инсулина!
+- Be careful not to overdose or stack insulin!
 
 
 ### Почему алгоритм неправильно распознает активные углеводы COB?
