@@ -10,7 +10,7 @@ Keď je **AAPS** nainštalovaný prvýkrát, musíte splniť každý cieľ, až 
 
 **Ciele 1 až 8** vás prevedú od nastavenia **AAPS** v smartfóne až po „základný“ hybridný uzavretý okruh. Ich splnenie trvá približne 6 týždňov. Až po **Cieľ 5** môžete postupovať s virtuálnou pumpou (a medzitým podávať inzulín iným spôsobom). **Ciele 9 a 10** sú určené na vyskúšanie pokročilejších funkcií **AAPS**, ktoré majú zlepšiť kontrolu vášho diabetu. Ich splnenie bude trvať až 3 mesiace, možno aj dlhšie. Podrobnejší odhad potrebného času nájdete tu: [Ako dlho to bude trvať?](#preparing-how-long-will-it-take)
 
-Okrem postupu cez **Ciele** môžete v prípade potreby svoj postup aj vymazať a [vrátiť sa k skoršiemu cieľu](#go-back-in-objectives).
+As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#CompletingTheObjectives-go-back-in-objectives).
 
 ## Zálohujte si nastavenia
 
@@ -39,7 +39,7 @@ Ak nemáte zálohu nastavení a so smartfónom s **AAPS** sa niečo stane, budet
 - Ak používate Tidepool:
   - Postupujte podľa pokynov na stránke [Tidepool](../SettingUpAaps/Tidepool.md), aby **Tidepool** mohol prijímať a zobrazovať údaje z **AAPS**.
 
-Poznámka – *Možno budete musieť počkať na ďalšiu hodnotu glykémie zo senzora, kým ju **AAPS** rozpozná.*
+Note: *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
 
 (objectives-objective2)=
 ## Cieľ 2: Naučte sa, ako ovládať AAPS
@@ -51,7 +51,7 @@ Poznámka – *Možno budete musieť počkať na ďalšiu hodnotu glykémie zo s
 Úlohy na splnenie **Cieľa 2** sú:
 - Nastavte **Profil** na 90 % na dobu 10 minút.
   - _Nápoveda_: Ťuknite na názov profilu na hlavnej obrazovke, otvorí sa obrazovka **Profil**. Potom použite tlačidlo **Aktivovať** (▶) a nastavte percento a trvanie. Viac informácií nájdete v časti [Prepnutie profilu a percento profilu](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-  - _Poznámka_: **AAPS** neprijíma bazálne dávky nižšie ako 0,05 U/h. Ak váš **Profil** obsahuje dávky 0,06 U/h alebo nižšie, musíte si pred splnením tejto úlohy vytvoriť dočasný **Profil** s vyššími bazálnymi dávkami. Po splnení tejto úlohy sa prepnite späť na svoj bežný **Profil**.
+  - _Poznámka_: **AAPS** neprijíma bazálne dávky nižšie ako 0,05 U/h. If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Po splnení tejto úlohy sa prepnite späť na svoj bežný **Profil**.
 - Simulujte „sprchovanie“ tak, že v **AAPS** na 1 hodinu [odpojíte pumpu](#AapsScreens-loop-status).
   - _Nápoveda_: stlačte ikonu okruhu na hlavnej obrazovke, otvorí sa dialóg okruhu. Potom vyberte trvanie v časti **Odpojiť pumpu**.
 - „Sprchovanie“ ukončite opätovným pripojením pumpy.
@@ -94,7 +94,7 @@ Minimálny čas na splnenie tohto cieľa: **7 dní**. Je to povinná čakacia do
 - Keď je to potrebné, používajte [**Dočasné ciele**](../DailyLifeWithAaps/TempTargets.md). Po liečbe hypoglykémie použite preddefinovaný „dočasný cieľ Hypo“, aby systém pri opätovnom vzostupe glykémie nekorigoval príliš.
 - Ak ste v tejto chvíli ešte v [Jednoduchom móde](#preferences-simple-mode), teraz je asi vhodný čas ho vypnúť.
 
-Aby ste v otvorenom okruhu znížili počet navrhovaných zmien bazálnej dávky, môžete stále použiť tipy opísané v [**Cieli 3**](#objective-3-prove-your-knowledge). Okrem toho môžete zmeniť minimálne percento odporúčaných zmien bazálnej dávky pomocou nastavenia „**Minimálna zmena v otvorenom okruhu**“ v **Nastavenia → Okruh**. Čím vyššia hodnota, tým menej upozornení na zmenu dostanete.
+To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Okrem toho môžete zmeniť minimálne percento odporúčaných zmien bazálnej dávky pomocou nastavenia „**Minimálna zmena v otvorenom okruhu**“ v **Nastavenia → Okruh**. Čím vyššia hodnota, tým menej upozornení na zmenu dostanete.
 
 ![Minimálna zmena požiadavky v otvorenom okruhu](../images/OpenLoop_MinimalRequestChange2.png)
 
@@ -119,7 +119,7 @@ Možno budete chcieť nastaviť [cieľovú glykémiu v **Profile**](#profile-glu
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-Ak používate otvorený okruh s virtuálnou pumpou, **tu sa zastavte**. Na konci tohto **Cieľa** kliknite na overenie až vtedy, keď prejdete na „skutočnú“ pumpu, ktorá podáva inzulín.
+Ak používate otvorený okruh s virtuálnou pumpou, **tu sa zastavte**. Only tap **Verify** at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
 
 ```
 
@@ -167,14 +167,14 @@ Minimálny čas na splnenie tohto cieľa: **1 deň**. Je to povinná čakacia do
 
 - **Uzavretý okruh** vyberiete tak, že stlačíte [ikonu okruhu](#AapsScreens-loop-status) na hlavnej obrazovke a ako režim prevádzky zvolíte **Uzavretý okruh**. Zostaňte v režime **Uzavretý okruh** počas 1 dňa.
 
-- Pomaly zvyšujte hodnotu „Maximálny celkový IOB, ktorý OpenAPS nemôže prekročiť“ (v OpenAPS sa volá 'max-iob') nad 0, kým nenájdete nastavenia, ktoré vám najlepšie vyhovujú.
+- Slowly raise your 'Max IOB for SMB' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
 
 Predvolené odporúčanie pre toto nastavenie je „**priemerný bolus k jedlu + 3x maximálny denný bazál**“, kde „maximálny denný bazál“ je najvyššia hodinová hodnota v ktoromkoľvek časovom úseku dňa.
 
 ![maximálny denný bazál](../images/MaxDailyBasal2.png)
 
 Toto odporúčanie berte ako východiskový bod. Ak toto pravidlo používate, ale pri stúpajúcej glykémii vám AAPS podáva príliš veľa inzulínu, možno budete musieť:
-* znížiť hodnotu „Maximálny celkový IOB, ktorý OpenAPS nemôže prekročiť“;
+* lower the "Max IOB for SMB" value;
 * skontrolujte nastavenia svojho **Profilu** a robte vždy len jednu zmenu naraz.
 
 Ak ste veľmi rezistentní na inzulín, môžete prípadne veľmi opatrne zvýšiť hodnotu **maxIOB**.
@@ -202,7 +202,7 @@ V **Cieli 9** sa naučíte používať **„Super Micro Bolus (SMB)“** ako jed
 Minimálny čas na splnenie tohto cieľa: **28 dní**. Je to povinná čakacia doba. Na ďalší Cieľ nemôžete prejsť, kým tento čas neuplynie.
 
 - [Časť o SMB v tejto dokumentácii](#Open-APS-features-super-micro-bolus-smb) a [popis oref1 v dokumentácii openAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) si musíte prečítať, aby ste porozumeli **SMB** a princípu **nulového dočasného bazálu (zero-temping)**.
-- Potom môžete [zvýšiť maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over), aby **SMB** fungovali účinnejšie. maxIOB teraz zahŕňa celé **IOB**, nielen nahromadený bazál. Tento limit pozastaví **SMB**, kým IOB neklesne pod túto hodnotu (_napr._ **maxIOB** je nastavené na 7 U a na pokrytie jedla podáte bolus 8 U: SMB sa pozastavia a nebudú sa podávať, kým **IOB** neklesne pod 7 U). Dobrý začiatok je nastaviť **maxIOB** = **priemerný bolus k jedlu + 3x maximálny denný bazál**, kde „maximálny denný bazál“ je najvyššia hodinová hodnota v ktoromkoľvek časovom úseku dňa. Pozrite si [cieľ 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets).
+- Potom môžete [zvýšiť maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over), aby **SMB** fungovali účinnejšie. maxIOB teraz zahŕňa celé **IOB**, nielen nahromadený bazál. Tento limit pozastaví **SMB**, kým IOB neklesne pod túto hodnotu (_napr._ **maxIOB** je nastavené na 7 U a na pokrytie jedla podáte bolus 8 U: SMB sa pozastavia a nebudú sa podávať, kým **IOB** neklesne pod 7 U). Dobrý začiatok je nastaviť **maxIOB** = **priemerný bolus k jedlu + 3x maximálny denný bazál**, kde „maximálny denný bazál“ je najvyššia hodinová hodnota v ktoromkoľvek časovom úseku dňa. See [objective 7](#objectives-objective7) as reference.
 - Vyhodnoťte rýchlosť vstrebávania sacharidov a ak je podľa vás príliš pomalá alebo príliš rýchla, zvážte zmenu parametra „min_5m_carbimpact“ v [Nastavenia → Nastavenie vstrebávania sacharidov → min_5m_carbimpact](#Preferences-min_5m_carbimpact).
 
 (objectives-objective10)=
