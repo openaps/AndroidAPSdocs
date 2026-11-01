@@ -11,7 +11,7 @@
 (bluetoothtroubleshooting-cannot-start-omnipod-with-android-16)=
 
 ## 無法在 Android 16 上啟動 Omnipod
-- 在 Android 16 上，Omnipod DASH 要能正常運作至少需要 **AAPS** 版本 3.3.2.1，因為該版本加入了修正，專門處理 Android 16 導致 Omnipod 的已知問題。
+- Android 16 needs at a minimum **AAPS** version 3.3.2.1 for the Omnipod DASH to work correctly, as this version has fixes added to specifically address known problems introduced in Android 16 for Omnipod.
 
 ---
 
@@ -48,11 +48,11 @@ Android 透過權限模型讓你控制每個應用程式在手機上能做什麼
 
 - **myBMW** MyBMW 會干擾 Medtrum Nano 與 Omnipod DASH。 MyBMW App 對「尋找附近裝置」權限只會提示一次；即使不授權，仍可正常運作。
 
-- **Amazon Alexa** 對部分人而言，移除 Alexa 應用程式的「Nearby devices」權限可解決問題，但會使配對 Matter IoT 裝置的功能失效
+- **Amazon Alexa**  Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IoT devices
 
 - **MINI App** 看起來是以 myBMW App 為基礎，因此可能會有類似的行為。
 
-- **BM2** 太陽能電池監測應用程式，常用於部分露營車與露營太陽能架設；當該 App 執行時，會阻止新 Pod 的註冊。在註冊新 Pod 時強制停止該 App，是解決此問題的權宜之計。之後再執行該 App，似乎不會干擾 Dash 的功能（在執行 Android 16 的 Pixel 8 Pro 上）。
+- **BM2** Solar Battery Monitoring app, used in some camper van and camping solar setups: when the app was running, it prevented activation of a new Pod. Force Stopping the app while activating a new pod is a workaround to the issue. 之後再執行該 App，似乎不會干擾 Dash 的功能（在執行 Android 16 的 Pixel 8 Pro 上）。
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
@@ -62,7 +62,7 @@ Android 透過權限模型讓你控制每個應用程式在手機上能做什麼
 請按照以下步驟，撤銷所有 App 的「附近裝置」權限，但保留 **AAPS** 的權限：
 
 ```{admonition} Menus and settings
-:class: note${NEW_LINE>本指南中的螢幕擷取畫面與說明，來自 Google Pixel 8 Pro 的原生 Android 16 安裝。其他品牌與裝置的選單與設定描述可能不完全相同，請依你的裝置調整步驟；若卡關，請參閱 [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) 章節，了解如何向社群尋求支援。
+:class: note${NEW_LINE>本指南中的螢幕擷取畫面與說明，來自 Google Pixel 8 Pro 的原生 Android 16 安裝。 Other manufacturers and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.
 ```
 
 1. 打開手機上的 Android 設定，向下捲動並點選**安全與隱私 (1)**。
@@ -102,7 +102,7 @@ Android 透過權限模型讓你控制每個應用程式在手機上能做什麼
 
 ### 如何為系統應用程式與其他應用程式重新啟用「Nearby device」權限：
 
-1. 如有需要，請參閱 **「How to revoke "Nearby device" permissions for other apps」** 章節以瞭解如何前往應用程式的隱私設定，進入 **Nearby device** 設定後請繼續第 2 步。
+1. If required Reference the **"How to revoke 'Nearby device' permissions for other apps"** section on how to get to the app privacy settings, then once in the **Nearby device** configuration proceed to 2.
 
 2. 瀏覽應用程式清單，點選您希望允許 **Nearby devices** 權限的應用程式。
 
@@ -121,7 +121,7 @@ Android 透過權限模型讓你控制每個應用程式在手機上能做什麼
 
    ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png)
 
-5. 請反向依照 **「How to revoke "Nearby device" permissions for other apps」** 的指引，為各個應用程式重新啟用權限。
+5. Follow the guidance in **"How to revoke 'Nearby device' permissions for other apps"** in reverse to re-enable permissions for each app.
 
 ---
 
