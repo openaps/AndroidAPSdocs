@@ -16,14 +16,14 @@ Als je **Dynamische ISF** gebruikt, schakel dan elke tijdelijke **Profiel**-wijz
 
 Om **Dynamische ISF** te gebruiken, heeft de database van **AAPS** minstens 7 dagen aan **AAPS**-gegevens van de gebruiker nodig.
 
-## Wat doet Dynamische ISF?
+## What does Dynamic ISF do?
 
 **Dynamische ISF** past de insulinegevoeligheidsfactor (**ISF**) steeds aan op basis van de volgende gegevens van de gebruiker:
 
 - de totale dagelijkse dosis insuline (**TDD**); en
 - de huidige en voorspelde bloedglucosewaarden.
 
-Als je **Dynamische ISF** gebruikt, worden de **ISF**-waarden uit het **Profiel** helemaal niet meer gebruikt, behalve als reserve wanneer er niet genoeg TDD-gegevens in de database van **AAPS** zijn (*bijv.* na een nieuwe installatie van de app).
+When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are not used at all anymore, except as a fallback if there is not enough TDD data in **AAPS** database (*i.e.* fresh reinstallation of the app).
 
 **SMB/AMA** - een voorbeeld van een **Profiel** met een vaste **ISF**, zoals ingesteld door de gebruiker en gebruikt door **SMB** en **AMA**.
 
@@ -37,7 +37,7 @@ Het rood omcirkelde deel toont: `profile ISF` -> `ISF as calculated by DynISF`. 
 
 De **DynISF**-waarde kan ook in een grafiek worden getoond: tik op **Grafiek toevoegen** onder de grafieken op het hoofdscherm en kies **VSENS** (variabele gevoeligheid). Die wordt getoond als een witte lijn (onderaan de afbeelding hierboven).
 
-## Hoe wordt Dynamische ISF berekend?
+## How is Dynamic ISF calculated?
 
 **Dynamische ISF** gebruikt het model van Chris Wilson om de **ISF** te bepalen, in plaats van de vaste **ISF**-waarde die de gebruiker in het **Profiel** heeft ingesteld. Een uitgebreide uitleg vind je hier: [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c) (Engels).
 
@@ -70,9 +70,8 @@ Dit voorkomt dat er te veel insuline wordt gegeven als de **BG** laag is of naar
 
 **Toekomstige ISF** gebruikt dezelfde formule als hierboven, maar kan de **minimaal voorspelde BG** gebruiken in plaats van de **huidige BG**. **Minimaal voorspelde BG**, [zoals berekend in oref1](#aaps-screens-how-predictions-become-a-dosing-decision), is de laagste waarde die je BG volgens de voorspellingen bereikt in de hele voorspelde periode.
 
-* Als de huidige **BG** boven de streefwaarde ligt <br/> **en** de **BG** stabiel is, binnen +/- 3 mg/dl:<br/>dan wordt de BG zo in de formule gebruikt: `average(minimum predicted BG, current BG)`.
-* Als de uiteindelijke **BG** boven de streefwaarde ligt en de glucose stijgt,<br/>  
-  **of** de uiteindelijke **BG** hoger is dan de huidige **BG**:<br/>dan wordt de BG zo in de formule gebruikt: `current BG`.
+* If the current **BG** is above target<br/> **and** if **BG** levels are flat, within +/- 3 mg/dL:<br/>BG is used in the formula as follows: `average(minimum predicted BG, current BG)`.
+* If eventual **BG** is above target and glucose levels are increasing,<br/> **or** eventual **BG** is above current **BG**:<br/>BG is used in the formula as follows: `current BG`.
 * In alle andere gevallen:<br/>wordt de BG zo in de formule gebruikt: `minimum predicted BG`.
 
 Voor een eenvoudige uitleg, zie de schermafbeelding hieronder. Die laat de situatie hierboven zien. Oranje stippen gebruiken de **voorspelde BG**, paarse stippen gebruiken het **gemiddelde (voorspelde BG, huidige BG)** en blauwe stippen gebruiken de **huidige BG**.
@@ -112,7 +111,7 @@ De **Aanpassingsfactor** is een waarde tussen 1% en 300%. Deze wordt vermenigvul
 
 De **Aanpassingsfactor** verandert ook als je een [**Profiel wissel** met percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) uitvoert. Een lager **Profiel percentage** verlaagt de **Aanpassingsfactor**, en een hoger **Profiel percentage** verhoogt deze.
 
-Voorbeeld: als je **Aanpassingsfactor** 80% is en je voert een **Profiel wissel** naar 80% uit, dan wordt de **Aanpassingsfactor** `0.8*0.8=0.64`.
+For example, if your **Adjustment Factor** is 80%, and **Profile Switch** to 80% is actioned, the resulting **Adjustment Factor** will be `0.8*0.8=0.64`.
 
 Als je **DynISF** gebruikt, kun je dus met het **Profiel percentage** je gevoeligheid tijdelijk zelf fijn afstellen. Dit kan handig zijn bij lichamelijke activiteit (lager percentage), ziekte (hoger percentage), enz.
 
