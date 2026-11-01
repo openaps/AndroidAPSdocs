@@ -74,7 +74,7 @@
 - **偏好設定** → 直接開啟該設定所在的畫面，並跳至該設定。
 - **說明文件** → 在瀏覽器中開啟該頁面。
 
-開啟設定或執行受保護的操作時，仍須遵守**[防護](../SettingUpAaps/ConfigBuilder.md)**要求（PIN 碼／密碼），與您手動前往該處時相同。執行搜尋結果中的操作後，您可以按**返回**回到搜尋結果。
+Opening settings and protected actions still respects your **[protection](#Preferences-protection)** (PIN/password), exactly as it would if you had navigated there by hand. 執行搜尋結果中的操作後，您可以按**返回**回到搜尋結果。
 
 ---
 
