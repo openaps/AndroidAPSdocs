@@ -1,126 +1,126 @@
 (aaps-ci-troubleshooting)=
 
-# Browser build: troubleshooting
+# Nettleserbygg: feilsøking
 
 ```{note}
-This page collects troubleshooting tips for the [Browser build](../SettingUpAaps/BrowserBuild.md).
+Denne siden samler feilsøkingstips for [Nettleserbygg](../SettingUpAaps/BrowserBuild.md).
 
-Using **AAPS Builder**? Start with its own [troubleshooting section](#aaps-builder-troubleshooting). The Google Drive sections below also apply to it.
+Bruker du **AAPS Builder**? Start med det egne [feilsøkingsavsnittet](#aaps-builder-troubleshooting) for den. Avsnittene om Google Drive nedenfor gjelder også for den.
 ```
 
-## AAPS-CI Troubleshooting
+## Feilsøking av AAPS-CI
 
 (aaps-ci-read-the-logs)=
-### First: find out what went wrong
+### Først: finn ut hva som gikk galt
 
-When a build fails, GitHub keeps a log of every step. The log tells you which step failed and why. Read it before you try anything else: the error message is what you look for on this page, and what helpers will ask for.
+Når et bygg mislykkes, beholder GitHub en logg over hvert steg. Loggen forteller deg hvilket steg som mislyktes, og hvorfor. Les den før du prøver noe annet: feilmeldingen er det du skal lete etter på denne siden, og det de som hjelper deg, vil spørre om.
 
-1. In your GitHub copy of AndroidAPS, open **Actions**. A failed build has a red cross. Tap its name.
+1. I GitHub-kopien din av AndroidAPS åpner du **Actions**. Et mislykket bygg har et rødt kryss. Trykk på navnet.
 
-   ![Failed run in the Actions list](../images/Building-the-App/CI/aaps_ci_logs_1_runs.png)
+   ![Mislykket kjøring i Actions-listen](../images/Building-the-App/CI/aaps_ci_logs_1_runs.png)
 
-2. The run summary shows **Failure** and, below, the job that failed (**Build AAPS**, with a red cross).
+2. Sammendraget av kjøringen viser **Failure**, og under det jobben som mislyktes (**Build AAPS**, med et rødt kryss).
 
-   ![Run summary](../images/Building-the-App/CI/aaps_ci_logs_2_summary.png)
+   ![Sammendrag av kjøringen](../images/Building-the-App/CI/aaps_ci_logs_2_summary.png)
 
-3. Scroll down to **Annotations** and tap the red **Build AAPS** line.
+3. Bla ned til **Annotations** og trykk på den røde linjen **Build AAPS**.
 
    ![Annotations](../images/Building-the-App/CI/aaps_ci_logs_3_annotations.png)
 
-4. The job opens. Steps with a grey tick worked. The step with the red cross is the one that failed: GitHub opens it for you. The steps after it were skipped (grey circle).
+4. Jobben åpnes. Steg med en grå hake gikk bra. Steget med det røde krysset er det som mislyktes: GitHub åpner det for deg. Stegene etter det ble hoppet over (grå sirkel).
 
-   ![Job steps](../images/Building-the-App/CI/aaps_ci_logs_4_job.png)
+   ![Stegene i jobben](../images/Building-the-App/CI/aaps_ci_logs_4_job.png)
 
-5. Read the lines just above `Error: Process completed with exit code 1.`: they explain the problem. In this example, the step **Retrieving Google Drive access token** failed with `invalid_grant` and `Token has been expired or revoked.`, see [Google Refresh Token Expired](#aaps-ci-google-token-expired).
+5. Les linjene rett over `Error: Process completed with exit code 1.`: de forklarer problemet. I dette eksempelet mislyktes steget **Retrieving Google Drive access token** med `invalid_grant` og `Token has been expired or revoked.`, se [Google refresh token er utløpt](#aaps-ci-google-token-expired).
 
-   ![Error in the log](../images/Building-the-App/CI/aaps_ci_logs_5_error.png)
+   ![Feil i loggen](../images/Building-the-App/CI/aaps_ci_logs_5_error.png)
 
 ```{tip}
-Asking for help? Share the name of the failed step and the error lines (a screenshot like the one above is fine). Never share the content of your secrets.
+Skal du be om hjelp? Del navnet på steget som mislyktes, og feillinjene (et skjermbilde som det ovenfor er greit). Del aldri innholdet i hemmelighetene dine.
 ```
 
 (aaps-ci-update-secret)=
-#### Update a secret
+#### Oppdatere en hemmelighet
 
-Many fixes mean replacing the value of a secret. In your GitHub copy of AndroidAPS, go to **Settings** → **Secrets and variables** → **Actions** and tap the pencil next to the secret.
+Mange løsninger går ut på å bytte ut verdien til en hemmelighet. I GitHub-kopien din av AndroidAPS går du til **Settings** → **Secrets and variables** → **Actions** og trykker på blyanten ved siden av hemmeligheten.
 
-![Secrets list](../images/Building-the-App/CI/aaps_ci_secret_update_1.png)
+![Listen over hemmeligheter](../images/Building-the-App/CI/aaps_ci_secret_update_1.png)
 
-Enter or paste the new value and tap **Update secret**. GitHub never shows the old value: the field is always empty.
+Skriv inn eller lim inn den nye verdien, og trykk på **Update secret**. GitHub viser aldri den gamle verdien: feltet er alltid tomt.
 
 ![Update secret](../images/Building-the-App/CI/aaps_ci_secret_update_2.png)
 
 (aaps-ci-rerun)=
-#### Run the build again after a fix
+#### Kjør bygget på nytt etter en rettelse
 
-Once you have fixed the cause, you do not need to start from scratch: open the failed run, tap **...** (top right), then **Re-run failed jobs**.
+Når du har rettet årsaken, trenger du ikke starte fra begynnelsen: åpne den mislykkede kjøringen, trykk på **...** (øverst til høyre), og deretter på **Re-run failed jobs**.
 
-![Re-run menu](../images/Building-the-App/CI/aaps_ci_rerun_1.png)
+![Re-run-menyen](../images/Building-the-App/CI/aaps_ci_rerun_1.png)
 
-Tap **Re-run jobs**. You can also start a new build from **Run workflow** as usual.
+Trykk på **Re-run jobs**. Du kan også starte et nytt bygg fra **Run workflow** som vanlig.
 
-![Re-run dialog](../images/Building-the-App/CI/aaps_ci_rerun_2.png)
+![Re-run-dialogen](../images/Building-the-App/CI/aaps_ci_rerun_2.png)
 
 (aaps-ci-preparation-web)=
-### aaps-ci-preparation web page
-  - The preparation page is displayed by a temporary local server (for example Simple Web Server on a computer), which also receives the Google refresh token.
-  - If you see the screen below, the local server has stopped or is not reachable.
-  - Close the preparation page, check that the local server is running, then reopen aaps-ci-preparation.html the same way as in Step 2 and complete the remaining steps. This is needed in particular when creating the initial Google connection during setup.
+### Nettsiden aaps-ci-preparation
+  - Forberedelsessiden vises av en midlertidig lokal server (for eksempel Simple Web Server på en datamaskin), som også tar imot Google refresh token.
+  - Hvis du ser skjermbildet nedenfor, har den lokale serveren stoppet, eller den kan ikke nås.
+  - Lukk forberedelsessiden, kontroller at den lokale serveren kjører, åpne så aaps-ci-preparation.html på nytt på samme måte som i steg 2, og fullfør de gjenstående stegene. Dette trengs særlig når du oppretter den første Google-tilkoblingen under oppsettet.
 
   ![aaps_ci_html_not_found](../images/Building-the-App/CI/aaps_ci_html_not_found.png)
 
 (aaps-ci-google-token-expired)=
-### Google Refresh Token Expired
-  - Google OAuth2 refresh tokens will expire if not used for 6 months, and may also become invalid under other conditions (e.g., you have changed your Google account password, or manually revoked access). For more details, see the [Google OAuth2 documentation](https://developers.google.com/identity/protocols/oauth2).
-  - In the [build log](#aaps-ci-read-the-logs), the step **Retrieving Google Drive access token** fails with `invalid_grant` and `Token has been expired or revoked.`:
+### Google refresh token er utløpt
+  - Et Google OAuth2 refresh token (oppdateringstoken) utløper hvis det ikke brukes på 6 måneder, og kan også bli ugyldig av andre grunner (for eksempel hvis du har endret passordet til Google-kontoen din, eller fjernet tilgangen manuelt). Flere detaljer finner du i [Google OAuth2-dokumentasjonen](https://developers.google.com/identity/protocols/oauth2).
+  - I [byggeloggen](#aaps-ci-read-the-logs) mislykkes steget **Retrieving Google Drive access token** med `invalid_grant` og `Token has been expired or revoked.`:
 
   ![aaps_ci_token_expired](../images/Building-the-App/CI/aaps_ci_token_expired.png)
 
-  - If your build fails due to an expired or revoked Google refresh token, you will need to redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps to obtain a new `GDRIVE_OAUTH2` token, [update the secret](#aaps-ci-update-secret) in your GitHub repository, then [re-run the build](#aaps-ci-rerun).
-  - If the authorization fails again, or Google does not ask for your consent anymore, remove the existing AAPS access from your Google Account first, see [below](#aaps-ci-google-remove-access).
+  - Hvis bygget mislykkes fordi Google refresh token er utløpt eller trukket tilbake, må du gjøre stegene under [Google Drive Auth](#aaps-ci-google-drive-auth) på nytt for å få et nytt `GDRIVE_OAUTH2`-token, [oppdatere hemmeligheten](#aaps-ci-update-secret) i GitHub-repositoryet ditt, og deretter [kjøre bygget på nytt](#aaps-ci-rerun).
+  - Hvis autorisasjonen mislykkes igjen, eller Google ikke lenger ber om samtykket ditt, fjerner du først den eksisterende AAPS-tilgangen fra Google-kontoen din, se [nedenfor](#aaps-ci-google-remove-access).
 
 (aaps-ci-google-remove-access)=
-### Remove AAPS Access From Your Google Account And Restart The Authorization
-  - If the Google Drive authorization keeps failing, or you want to start again from a clean state, first remove the access you previously gave to AAPS, then redo the authorization.
-  - On your phone, open [https://myaccount.google.com](https://myaccount.google.com), tap **Security**, scroll down to **Your connections to third-party apps & services** and open the list of linked apps. You can also go directly to [https://myaccount.google.com/connections](https://myaccount.google.com/connections).
-  - Tap **AAPS** in the list.
+### Fjern AAPS-tilgangen fra Google-kontoen din og start autorisasjonen på nytt
+  - Hvis Google Drive-autorisasjonen fortsetter å mislykkes, eller du vil starte helt på nytt, fjerner du først tilgangen du tidligere ga til AAPS, og gjør deretter autorisasjonen på nytt.
+  - På telefonen åpner du [https://myaccount.google.com](https://myaccount.google.com), trykker på **Security** (Sikkerhet), blar ned til **Your connections to third-party apps & services** (Dine tilkoblinger til tredjepartsapper og -tjenester) og åpner listen over tilkoblede apper. Du kan også gå rett til [https://myaccount.google.com/connections](https://myaccount.google.com/connections).
+  - Trykk på **AAPS** i listen.
 
   ![aaps_ci_google_access_1](../images/Building-the-App/CI/aaps_ci_google_access_1.png)
 
-  - The page shows the access you gave to AAPS (the Google Drive files used with the app). Tap **Delete all** to remove the connection, or tap **See details** to review it first.
+  - Siden viser tilgangen du ga til AAPS (Google Drive-filene som brukes med appen). Trykk på **Delete all** (Slett alle) for å fjerne tilkoblingen, eller trykk på **See details** (Se detaljer) for å se gjennom den først.
 
   ![aaps_ci_google_access_2](../images/Building-the-App/CI/aaps_ci_google_access_2.png)
 
-  - On the details page, tap **Remove all access**.
+  - På detaljsiden trykker du på **Remove all access** (Fjern all tilgang).
 
   ![aaps_ci_google_access_3](../images/Building-the-App/CI/aaps_ci_google_access_3.png)
 
-  - Tap **Confirm**.
+  - Trykk på **Confirm** (Bekreft).
 
   ![aaps_ci_google_access_4](../images/Building-the-App/CI/aaps_ci_google_access_4_confirm.png)
 
-  - Google confirms that AAPS no longer has access. AAPS no longer appears in the list of linked apps.
+  - Google bekrefter at AAPS ikke lenger har tilgang. AAPS vises ikke lenger i listen over tilkoblede apper.
 
   ![aaps_ci_google_access_5](../images/Building-the-App/CI/aaps_ci_google_access_5_removed.png)
 
-  - Now restart the authorization cleanly: close **both** the preparation page and the file manager app, reopen aaps-ci-preparation.html from the file manager and redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps. Google will ask you to grant access again and the page will provide a new `GDRIVE_OAUTH2` token.
-  - [Update the `GDRIVE_OAUTH2` secret](#aaps-ci-update-secret) in your GitHub repository with the new token, then [re-run the build](#aaps-ci-rerun).
+  - Start nå autorisasjonen på nytt fra bunnen av: lukk **både** forberedelsessiden og filbehandler-appen, åpne aaps-ci-preparation.html på nytt fra filbehandleren, og gjør stegene under [Google Drive Auth](#aaps-ci-google-drive-auth) på nytt. Google ber deg gi tilgang på nytt, og siden gir deg et nytt `GDRIVE_OAUTH2`-token.
+  - [Oppdater hemmeligheten `GDRIVE_OAUTH2`](#aaps-ci-update-secret) i GitHub-repositoryet ditt med det nye tokenet, og [kjør deretter bygget på nytt](#aaps-ci-rerun).
 
 (aaps-ci-disable-software)=
-### Disable Software That May Interfere With OAUTH Verification
-  - Disable any VPN or security app (firewall, antimalware,...) on the phone before trying to get the OAUTH key.
+### Slå av programvare som kan forstyrre OAUTH-verifiseringen
+  - Slå av alle VPN- og sikkerhetsapper (brannmur, antivirus …) på telefonen før du prøver å hente OAUTH-nøkkelen.
 
 (aaps-ci-actions-permission)=
-### Check GitHub Actions Permission Settings
-  - Make sure GitHub Actions policies are set to “Allow all actions and reusable workflows” (Settings → Actions → General). If you change it, press **Save** below the options.
+### Kontroller tillatelsesinnstillingene for GitHub Actions
+  - Pass på at reglene for GitHub Actions er satt til «Allow all actions and reusable workflows» (Settings → Actions → General). Hvis du endrer det, trykker du på **Save** under alternativene.
 
   ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.png)
 
 `actions/checkout@v4` and `actions/setup-java@v4` are not allowed to be used in `xxxxx/AndroidAPS`. Actions in this workflow must be: within a repository owned by `xxxxx`
 
 (aaps-ci-workflow-permissions)=
-### Check GitHub Workflow Permissions Settings
-  - If the build fails immediately with an "Invalid workflow file" error similar to the one below, the default workflow permissions of your repository are too restrictive:
+### Kontroller tillatelsesinnstillingene for GitHub-arbeidsflyter
+  - Hvis bygget mislykkes med en gang med en feil av typen «Invalid workflow file» (ugyldig arbeidsflytfil) som ligner på den nedenfor, er standardtillatelsene for arbeidsflyter i repositoryet ditt for strenge:
 
 ```
 Invalid workflow file
@@ -129,19 +129,19 @@ Error calling workflow 'xxxxx/AndroidAPS/.github/workflows/cleanup-workflow-runs
 The nested job 'cleanup' is requesting 'actions: write', but is only allowed 'actions: none'.
 ```
 
-  - Make sure Workflow permissions are set to “Read and write permissions” (Settings → Actions → General → Workflow permissions), then save and re-run the build workflow.
+  - Pass på at Workflow permissions er satt til «Read and write permissions» (Settings → Actions → General → Workflow permissions). Lagre, og kjør deretter byggearbeidsflyten på nytt.
 
   ![aaps_ci_workflow_permissions](../images/Building-the-App/CI/aaps-ci-workflow-permissions.jpg)
 
 (aaps-ci-password-special-characters)=
-### Build Fails Checking The Keystore Password
-  - In the [build log](#aaps-ci-read-the-logs), the step **Validating keystore, alias and password** fails with `Either KEYSTORE_BASE64, KEYSTORE_PASSWORD, KEY_PASSWORD, or KEY_ALIAS is incorrect`, followed by `Keystore was tampered with, or password was incorrect`. The build stops there: the keystore and passwords are checked before AAPS is built.
+### Bygget mislykkes ved kontroll av keystore-passordet
+  - I [byggeloggen](#aaps-ci-read-the-logs) mislykkes steget **Validating keystore, alias and password** med `Either KEYSTORE_BASE64, KEYSTORE_PASSWORD, KEY_PASSWORD, or KEY_ALIAS is incorrect`, etterfulgt av `Keystore was tampered with, or password was incorrect`. Bygget stopper der: keystore-filen og passordene kontrolleres før AAPS bygges.
 
-  ![Wrong keystore password in the build log](../images/Building-the-App/CI/aaps_ci_password_wrong.png)
+  ![Feil keystore-passord i byggeloggen](../images/Building-the-App/CI/aaps_ci_password_wrong.png)
 
-  - The build workflow keeps every character of your passwords intact. Enter `KEYSTORE_PASSWORD` and `KEY_PASSWORD` exactly as they are, without adding a backslash or any other escape character. If you added backslashes, [update the secrets](#aaps-ci-update-secret) with the password exactly as it is. The example below is wrong: the password is `Example2026`, the backslash was added.
+  - Byggearbeidsflyten beholder hvert tegn i passordene dine uendret. Skriv inn `KEYSTORE_PASSWORD` og `KEY_PASSWORD` nøyaktig som de er, uten å legge til en omvendt skråstrek eller noe annet escape-tegn. Hvis du har lagt til omvendte skråstreker, [oppdaterer du hemmelighetene](#aaps-ci-update-secret) med passordet nøyaktig som det er. Eksempelet nedenfor er feil: passordet er `Example2026`, den omvendte skråstreken er lagt til.
 
-  ![Password entered with an added backslash](../images/Building-the-App/CI/aaps_ci_password_escaped.png)
+  ![Passord skrevet inn med en ekstra omvendt skråstrek](../images/Building-the-App/CI/aaps_ci_password_escaped.png)
 
-  - If the build still fails when signing the APK although your password is correct, and the password contains `$`, a backtick, `"` or `\`, the workflow file in your fork is older than September 2026 and still parses these characters. [Sync your fork](#Update-to-new-version-update-your-repo) with the latest dev, then re-run the build workflow.
-  - The vertical bar `|` is a special case. The preparation page of [Option 1](#aaps-ci-option1) combines the keystore, passwords and alias into one `KEYSTORE_SET` secret separated by `|`, and the workflow splits it on that character. The password generated by the preparation page contains only letters and digits, so this cannot happen with Option 1. It can only happen if you assembled a `KEYSTORE_SET` secret yourself from a password containing `|`. In that case, delete `KEYSTORE_SET` and enter the separate secrets of [Option 2](#aaps-ci-option2) instead.
+  - Hvis bygget fortsatt mislykkes ved signering av APK-filen selv om passordet ditt er riktig, og passordet inneholder `$`, et backtick-tegn, `"` eller `\`, er arbeidsflytfilen i forken din eldre enn september 2026 og tolker fortsatt disse tegnene. [Synkroniser forken din](#Update-to-new-version-update-your-repo) med nyeste dev, og kjør deretter byggearbeidsflyten på nytt.
+  - Den loddrette streken `|` er et spesialtilfelle. Forberedelsessiden i [alternativ 1](#aaps-ci-option1) slår sammen keystore-filen, passordene og aliaset til én hemmelighet, `KEYSTORE_SET`, med `|` som skilletegn, og arbeidsflyten deler den opp ved det tegnet. Passordet som forberedelsessiden lager, inneholder bare bokstaver og sifre, så dette kan ikke skje med alternativ 1. Det kan bare skje hvis du selv har satt sammen en `KEYSTORE_SET`-hemmelighet fra et passord som inneholder `|`. I så fall sletter du `KEYSTORE_SET` og legger inn de separate hemmelighetene fra [alternativ 2](#aaps-ci-option2) i stedet.
