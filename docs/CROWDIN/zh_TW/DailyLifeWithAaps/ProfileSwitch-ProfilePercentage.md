@@ -54,7 +54,9 @@
 
 在 **AAPS** v4 中，請從**管理**畫面（底部導覽列）→ **設定檔**（*「管理及啟用設定檔」*）管理及啟用設定檔。
 
-設定檔畫面會以**可滑動的卡片輪播**顯示你的設定檔。目前執行中的設定檔卡片會標示為**作用中**，並顯示每日基礎胰島素總量（例如 *∑ 30.15 U*）。在選取的卡片下方，你可以查看該設定檔的詳細資料，包括**單位**、**胰島素**類型，以及**IC**、**ISF**、**基礎率**和**目標**時程表與圖表。
+設定檔畫面會以**可滑動的卡片輪播**顯示你的設定檔。目前執行中的設定檔卡片會標示為**作用中**，並顯示每日基礎胰島素總量（例如 *∑ 30.15 U*）。 Below the selected card you see that profile's details — the **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+
+When a temporary switch is running, the **ACTIVE** card shows its percentage and time shift with the time left, for example *110% +2 h · 2 h 40 min*, above a progress bar. Both are refreshed every 30 seconds. The details below then have two columns: the values of the profile in blue, and the values in use with the percentage in red.
 
 ![設定檔畫面 — 設定檔輪播、詳細資料和操作列](../images/v4/Profiles/profile_manage.png)
 
