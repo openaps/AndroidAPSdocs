@@ -13,9 +13,9 @@ Citiți [metoda de filtrare](../CompatibleCgms/SmoothingBloodGlucoseData.md) sug
 
 - xDrip connects to the sensor itself: uninstall the Dexcom app, as only one app can connect to the sensor. To keep the Dexcom app, use [xDrip Companion App](#DexcomG7-xdrip-companion-app) instead.
 - Follow the instructions here: [xDrip G7, ONE+ and Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). A recent xDrip release is required — see the linked page for the minimum version.
-- Select  xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
-- Adjust the xDrip settings according to the explanations on the xDrip settings page  [xDrip settings](../CompatibleCgms/xDrip.md)
+- Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
 
 ## 2. Build Your Own Dexcom App (G7 only)
 
@@ -30,7 +30,7 @@ Dexcom BYODA este acum o versiune foarte veche a aplicației și nu poate fi act
 -   Dezinstalați aplicația Dexcom originală
 -   Instalați apk-ul descărcat
 -   Introduceți codul senzorului în aplicația modificată
--   După o scurtă perioadă de timp, aplicația ar trebui să recepționeze semnalul de la transmițător
+-   After a short time BYODA should pick up the sensor signal.
 
 (DexcomG7-xdrip-companion-app)=
 
