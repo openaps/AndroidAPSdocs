@@ -55,7 +55,7 @@ The **Complications watchface** has seven complication slots. Long-press the wat
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | ![Complications watchface, default setup](../images/wearos/complications_watchface_default.png) | ![Complications watchface, alternative setup](../images/wearos/complications_watchface_alternative.png) |
 
-| Slot | Position  | Default                                                             | Alternative                           |
+| Slot | Posisjon  | Default                                                             | Alternative                           |
 | ---- | --------- | ------------------------------------------------------------------- | ------------------------------------- |
 | 1    | Left      | IoB Icon                                                            | CoB & IoB                             |
 | 2    | Centre    | Blood Glucose                                                       | Blood Glucose                         |
@@ -256,7 +256,7 @@ The final step is to configure **AAPS** on the phone to interact with **Wear.apk
 
 * Tick the **Wear** box
 
-![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
+![Konfigurasjon > Kommunikasjon med Klokke aktivert](../images/v4/Configuration/configuration_communication_wear.png)
 
 To bolus or take other actions from the watch, also turn on **Wear control** in [Settings > Wear](#preferences-wear).
 
