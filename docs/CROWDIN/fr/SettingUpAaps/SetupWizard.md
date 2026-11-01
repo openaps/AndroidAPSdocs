@@ -122,9 +122,9 @@ Suivez ces étapes sur Android 16 ; sur les autres versions, les écrans sont u
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. Sur Android 12, appuyez sur `Battery` (Batterie), sur Android 13 et plus, appuyez sur `App battery usage` (Utilisation de la batterie par l'appli),
+   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
 
-   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
+   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
 5. Sur Android 12 et plus, choisissez l'option `Unrestricted` (Non restreinte). Sur Android 15 et plus, vous devez d'abord ouvrir le réglage `Allow background usage` (Autoriser l'utilisation en arrière-plan) : appuyez sur la zone entourée en rouge, puis suivez l'étape 6 pour terminer.
 
@@ -454,7 +454,7 @@ Quand vous choisissez une vraie pompe, **AAPS** demande une confirmation, car il
 
 ![Confirmation lors du choix d'une pompe physique](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-Si la pompe choisie communique par Bluetooth, **AAPS** demande l'autorisation de se connecter aux appareils à proximité une fois l'assistant terminé (voir [Autorisation Bluetooth](#bluetooth-permission)).
+If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#setup-wizard-bluetooth-permission)).
 
 Si vous avez déjà configuré votre profil et savez comment connecter votre pompe, vous pouvez la connecter maintenant. Sinon, laissez la **Pompe virtuelle** pour le moment. Vous pouvez la changer à tout moment, ou quitter l'Assistant de configuration avec la flèche en haut à gauche et laisser d'abord **AAPS** vous montrer quelques valeurs de glycémie.
 
@@ -505,7 +505,7 @@ Appuyez sur « **Ouvrir les objectifs** » :
 
 Ici, nous commençons l'objectif 1, même si pour le moment notre configuration n'est pas complètement terminée et ne permet pas de valider cet objectif. Nous n'en sommes qu'au début.
 
-Appuyez sur le bouton « **Départ** » à côté de « **1. Objectif** » :
+Press the "**Start**" button of **Objective 1**:
 
 ![Liste des objectifs](../images/setup-wizard/Wizard-Objectives-List.png)
 
@@ -521,6 +521,7 @@ Après avoir appuyé sur « **TERMINER** », vous arrivez sur l'écran princip
 
 Si vous quittez l'Assistant de configuration par erreur, vous pouvez simplement le relancer, ou modifier la [configuration de la boucle AAPS](../SettingUpAaps/ChangeAapsConfiguration.md) à la main.
 
+(setup-wizard-bluetooth-permission)=
 ## Autorisation Bluetooth
 
 Si vous choisissez une pompe qui se connecte par Bluetooth (par exemple **Omnipod Dash**), une bannière vous rappelle qu'**AAPS** a besoin de l'autorisation Bluetooth. Vous pouvez appuyer sur « **Fermer** » pour l'instant : l'autorisation est accordée après la fin de l'assistant :
