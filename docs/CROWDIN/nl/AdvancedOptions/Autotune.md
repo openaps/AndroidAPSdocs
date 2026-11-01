@@ -78,7 +78,7 @@ Tik op **Plug-in openen** op de kaart **Autotune** om het Autotune scherm te ope
 
 - Vertrouw je de resultaten (klein percentage verschil tussen invoerprofiel en uitvoerprofiel), dan kun je op de knop "Activeer profiel" klikken en daarna op OK klikken om te bevestigen.
 
-  - Het activeren van het afgestemde profiel maakt automatisch een nieuw profiel "Tuned" in je profielenlijst (**Beheren → Profiel**).
+  - "Activate profile" will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
   - Heb je al een profiel met de naam "Tuned" in **Beheren → Profiel**, dan wordt dat profiel vóór het activeren bijgewerkt met het berekende Autotune profiel
 
   ![Autotune Activeer profiel](../images/Autotune/Autotune_6.png)
@@ -123,7 +123,7 @@ De functie **Automatisch wisselen van profiel** is alleen beschikbaar in Dev/Eng
 - **Automatisch wisselen van profiel** (standaard Uit): zie [Autotune uitvoeren met een automatiseringsregel](#autotune-run-autotune-with-an-automation-rule) hieronder. Als je deze instelling op Aan zet, wordt het invoerprofiel automatisch bijgewerkt met het afgestemde profiel ("Tuned"), en wordt het geactiveerd.
   - **Wees voorzichtig: na het bijwerken en activeren van het afgestemde profiel zonder wijzigingen moet je de volgende dagen controleren dat het je loop echt verbetert, voordat je erop vertrouwt**
 
-- **UAM als basaal aanmerken** (standaard Uit): deze instelling is voor gebruikers die AndroidAPS gebruiken zonder koolhydraten in te voeren (volledig UAM). Als deze instelling Uit staat, wordt UAM niet als basaal ingedeeld.
+- **Categorize UAM as basal** (default Off): This setting is for the users using AAPS without any carbs entered (Full UAM). Als deze instelling Uit staat, wordt UAM niet als basaal ingedeeld.
   - Let op: als er op een dag minstens één uur opname van koolhydraten is gemeten, worden alle gegevens die als "UAM" zijn ingedeeld als basaal ingedeeld, wat deze instelling ook is (Aan of Uit)
 - **Standaardperiode** (standaard 5): met deze instelling bepaal je de standaardwaarde. Elke keer dat je een nieuw profiel kiest in de Autotune plugin, wordt het **Aantal dagen data** vervangen door deze standaardwaarde
 - **Circadiane IC/ISF gebruiken** (standaard Uit): zie [Circadiaan IC- of ISF-profiel](#autotune-circadian-ic-or-isf-profile) hieronder.
@@ -188,7 +188,7 @@ Let op: zie [hier](../DailyLifeWithAaps/Automations.md) voor meer informatie ove
 
   ![Autotune standaardscherm](../images/Autotune/Autotune_17.png)
 
-- Daarna kun je de actie **Autotune profiel** kiezen (in de groep **Loop & insuline**)
+- Then you can select the **Run Autotune** action (in the **Loop & insulin** group)
 
   ![Autotune standaardscherm](../images/Autotune/Autotune_18.png)
 
@@ -212,7 +212,7 @@ Autotune werkt met de gegevens in je database. Heb je AAPS net op een nieuwe tel
 
 Autotune is alleen een hulpmiddel. Controleer regelmatig of je het eens bent met het berekende profiel. Twijfel je, verander dan de Autotune instellingen (bijvoorbeeld het aantal dagen), of kopieer de resultaten naar een lokaal profiel en pas het profiel aan voordat je het gebruikt.
 
-Gebruik Autotune altijd eerst een aantal dagen handmatig om de resultaten te controleren voordat je ze toepast. Gebruik de automatisering pas als je de Autotune resultaten volledig vertrouwt en het verschil tussen het vorige profiel en het berekende profiel heel klein is geworden (nooit eerder)
+Gebruik Autotune altijd eerst een aantal dagen handmatig om de resultaten te controleren voordat je ze toepast. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile then you start to use Automation (Never before)
 
 - Autotune kan voor sommige gebruikers heel goed werken en voor anderen niet. Dus: **vertrouw je het Autotune resultaat niet, gebruik het dan niet**
 
