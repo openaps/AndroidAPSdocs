@@ -1,7 +1,7 @@
 (global-search)=
-# Global search
+# Globalt søk
 
-**AAPS** v4 has a **global search** box at the top of the main screen. Type a word and it looks across the whole app at once — plugins, dialogs, settings screens, individual preferences — and, if you are online, the **AndroidAPS documentation** too. It is the fastest way to jump to a setting or screen without remembering where it lives.
+**AAPS** v4 har et **globalt søkefelt** øverst på hovedskjermen. Skriv inn et ord, så søker det i hele appen på én gang — plugins, dialoger, innstillingsskjermer, enkeltinnstillinger — og, hvis du er på nett, også i **AndroidAPS-dokumentasjonen**. Det er den raskeste måten å hoppe til en innstilling eller skjerm på, uten å måtte huske hvor den ligger.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,85 +10,85 @@
 
 ---
 
-## Opening search
+## Åpne søk
 
-Tap the **🔍 Search** field at the top of the **Overview** (next to the ☰ menu). Start typing and results appear as you type (after a short pause), grouped by category:
+Trykk på feltet **🔍 Søk** øverst i **oversikten** (ved siden av ☰-menyen). Begynn å skrive, så vises resultatene mens du skriver (etter en kort pause), gruppert etter kategori:
 
-![Global search results, grouped by category](../images/v4/Search/search_results.png)
+![Resultater fra globalt søk, gruppert etter kategori](../images/v4/Search/search_results.png)
 
-Clear the box with the **✕**, or close search with the device **Back** button.
-
----
-
-## Search in English *or* your own language
-
-This is the part worth knowing: search matches against **both** the text in your **selected language** **and** the original **English** text.
-
-- If your app is in, say, German or Czech, you can type the **localized** word **or** the **English** word — either finds the setting.
-- A match on the **localized** title ranks highest, then the **English** title, then the localized and English **descriptions**.
-- Matching ignores **accents/diacritics** (so *ů* matches *u*, *é* matches *e*) and is **case-insensitive**.
-
-This means a guide or forum post written in English still leads you to the right setting even when your phone shows everything translated.
+Tøm feltet med **✕**, eller lukk søket med enhetens **Tilbake**-knapp.
 
 ---
 
-## What search covers
+## Søk på engelsk *eller* på ditt eget språk
 
-Results are grouped into these categories:
+Dette er verdt å vite: søket sammenligner med **både** teksten på det **språket du har valgt** **og** den opprinnelige **engelske** teksten.
 
-- **Plugins** — every plugin visible in your build (the same ones listed under [Configuration](../SettingUpAaps/ConfigBuilder.md)). Each plugin row carries its **enable switch**, so you can enable or disable a plugin right from the results — tapping the row of a disabled (toggleable) plugin enables it.
-- **Dialogs** — the treatment/action and management screens (Bolus wizard, Insulin, Extended bolus, Calibration, Temp Target, Profile, …). Screens that don't apply to your build are left out (for example *Pair with master* on a master, *Authorized clients* on a client).
-- **Preference categories** — the settings **screens** and sub-screens, both built-in (General, Appearance, Protection, Alerts, Maintenance, …) and from plugins, plus the small settings groups reached from dialogs (Fill buttons, Insulin/Carbs button steps, status-light thresholds, wizard settings, …).
-- **Preferences** — every **individual setting** that has a title. These are filtered to your build/mode, so you only see settings that actually apply (APS / NSClient / pump-control).
-- **Documentation** — pages from the online **AndroidAPS docs** (see below).
+- Hvis appen din for eksempel er på tysk eller tsjekkisk, kan du skrive det **oversatte** ordet **eller** det **engelske** ordet — begge finner innstillingen.
+- Et treff på den **oversatte** tittelen rangeres høyest, deretter den **engelske** tittelen, og så de oversatte og engelske **beskrivelsene**.
+- Søket ignorerer **aksenter/diakritiske tegn** (så *ů* matcher *u*, *é* matcher *e*) og **skiller ikke mellom store og små bokstaver**.
+
+Det betyr at en veiledning eller et foruminnlegg skrevet på engelsk fortsatt leder deg til riktig innstilling, selv om telefonen din viser alt oversatt.
+
+---
+
+## Hva søket dekker
+
+Resultatene grupperes i disse kategoriene:
+
+- **Plugins** — alle plugins som er synlige i ditt bygg (de samme som er listet under [Konfigurasjon](../SettingUpAaps/ConfigBuilder.md)). Hver plugin-rad har sin **aktiveringsbryter**, så du kan aktivere eller deaktivere en plugin rett fra resultatene — trykker du på raden til en deaktivert plugin (som kan slås av og på), aktiveres den.
+- **Dialoger** — skjermene for behandling/handling og administrasjon (Boluskalkulator, Insulin, Forlenget bolus, Kalibrering, Midlertidig mål, Profil, …). Skjermer som ikke gjelder for ditt bygg, utelates (for eksempel *Koble til hovedenhet* på en hovedenhet, *Autoriserte klienter* på en klient).
+- **Innstillingskategorier** — innstillings**skjermene** og underskjermene, både de innebygde (Generelt, Utseende, Beskyttelse, Varsler, Vedlikehold, …) og de fra plugins, pluss de små innstillingsgruppene du når fra dialoger (Fyll-knapper, steg for Insulin/Karbo-knapper, terskler for statuslys, kalkulatorinnstillinger, …).
+- **Innstillinger** — hver **enkeltinnstilling** som har en tittel. Disse filtreres etter ditt bygg/din modus, så du ser bare innstillinger som faktisk gjelder (APS / NSClient / pumpestyring).
+- **Dokumentasjon** — sider fra **AndroidAPS-dokumentasjonen** på nett (se nedenfor).
 
 ```{admonition} Settings that belong to a disabled plugin
 :class: note
-A preference whose plugin is currently **disabled** still shows up — **greyed out** and not tappable — with a *“Plugin … disabled”* note, so you can tell the setting exists and which plugin to enable to reach it.
+En innstilling der tilhørende plugin er **deaktivert**, vises fortsatt — **nedtonet** og ikke trykkbar — med merknaden *«Plugin … deaktivert»*, så du kan se at innstillingen finnes og hvilken plugin du må aktivere for å nå den.
 
-![A greyed-out setting from a disabled plugin](../images/v4/Search/search_disabled_plugin.png)
+![En nedtonet innstilling fra en deaktivert plugin](../images/v4/Search/search_disabled_plugin.png)
 ```
 
 ---
 
-## Documentation results (online)
+## Dokumentasjonsresultater (på nett)
 
-While the local search runs, **AAPS** also queries the official **AndroidAPS documentation** (hosted on ReadTheDocs) in parallel. Matching pages appear in a **Documentation** group at the bottom, each with a 📖 icon, the section title and a short snippet:
+Mens det lokale søket kjører, søker **AAPS** samtidig i den offisielle **AndroidAPS-dokumentasjonen** (som ligger på ReadTheDocs). Sider som matcher, vises i en **Dokumentasjon**-gruppe nederst, hver med et 📖-ikon, tittelen på avsnittet og et kort utdrag:
 
-![Documentation (wiki) results with snippets](../images/v4/Search/search_documentation.png)
+![Dokumentasjonsresultater (wiki) med utdrag](../images/v4/Search/search_documentation.png)
 
-- If the documentation is translated into your app language, **AAPS** searches the translated pages and the English pages at the same time. Pages in your language come first, then the English pages that were not already found.
-- Tapping a documentation result opens that page in your **browser**.
-- Documentation search needs **internet** — when you are offline you get a *“Documentation search requires internet connection”* note instead, and the local (in-app) results still work normally.
-
----
-
-## Opening a result
-
-Tap a result to go straight to it:
-
-- **Plugin** → opens that plugin.
-- **Dialog** → opens that screen or dialog.
-- **Preference category** → opens that settings screen.
-- **Preference** → opens the setting **in place** (jumps to it within its screen).
-- **Documentation** → opens the page in your browser.
-
-Opening settings and protected actions still respects your **[protection](../SettingUpAaps/ConfigBuilder.md)** (PIN/password), exactly as it would if you had navigated there by hand. After you act on a result you can press **Back** to return to your search results.
+- Hvis dokumentasjonen er oversatt til appspråket ditt, søker **AAPS** i de oversatte sidene og de engelske sidene samtidig. Sider på ditt språk kommer først, deretter de engelske sidene som ikke allerede ble funnet.
+- Trykker du på et dokumentasjonsresultat, åpnes siden i **nettleseren** din.
+- Dokumentasjonssøk krever **internett** — når du er frakoblet, får du i stedet merknaden *«Søk etter dokumentasjon krever internettforbindelse»*, og de lokale resultatene (i appen) fungerer fortsatt som normalt.
 
 ---
 
-## Power-user shortcuts
+## Åpne et resultat
 
-Two special queries list a whole category at once:
+Trykk på et resultat for å gå rett til det:
 
-- `%PLUGINS%` — list **all** plugins.
-- `%DIALOGS%` — list **all** dialogs/action screens.
+- **Plugin** → åpner den pluginen.
+- **Dialog** → åpner den skjermen eller dialogen.
+- **Innstillingskategori** → åpner den innstillingsskjermen.
+- **Innstilling** → åpner innstillingen **der den ligger** (hopper til den inne på skjermen dens).
+- **Dokumentasjon** → åpner siden i nettleseren din.
+
+Når du åpner innstillinger og beskyttede handlinger, gjelder fortsatt **[beskyttelsen](../SettingUpAaps/ConfigBuilder.md)** din (PIN/passord), akkurat som om du hadde navigert dit selv. Etter at du har gjort noe med et resultat, kan du trykke på **Tilbake** for å gå tilbake til søkeresultatene.
+
+---
+
+## Snarveier for avanserte brukere
+
+To spesielle søkeord lister en hel kategori på én gang:
+
+- `%PLUGINS%` — lister **alle** plugins.
+- `%DIALOGS%` — lister **alle** dialoger/handlingsskjermer.
 
 ---
 
 ```{admonition} The index stays current
 :class: note
-The search index is built the first time you search and kept ready after that. It is rebuilt automatically when you **enable/disable a plugin** or **change the app language**, so results always reflect your current setup.
+Søkeindeksen bygges første gang du søker, og holdes klar etter det. Den bygges automatisk på nytt når du **aktiverer/deaktiverer en plugin** eller **bytter appspråk**, så resultatene alltid gjenspeiler oppsettet ditt.
 ```
 
 ---
