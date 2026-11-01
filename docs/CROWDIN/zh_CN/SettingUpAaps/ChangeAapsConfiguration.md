@@ -1,4 +1,4 @@
-# 修改AAPS配置
+# Making changes to your AAPS configuration
 
 在完成**[设置向导](../SettingUpAaps/SetupWizard.md)**后，如果您只想更改**AAPS**配置的某些部分，则无需再次运行整个向导。
 
