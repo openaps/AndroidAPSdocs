@@ -22,7 +22,7 @@ This method uses Juggluco to receive raw, 1-minute interval data from the sensor
 ### Step 1: Setup Juggluco
 Download and install the Juggluco app from [here](https://www.juggluco.nl/Juggluco/download.html). Follow the instructions [here](https://www.juggluco.nl/Juggluco/libre3/)
 
-Make sure you send the glucose values to xDrip: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip
+Make sure you send the glucose values to xDrip: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip.
 
 ### Step 2: Setup xDrip
 
@@ -69,7 +69,7 @@ After a sensor change xDrip will automatically detect the new sensor and will de
 
 ![Terminate sensor](../images/libre3/step_14.jpg)
 
-Note: When two sensors are active Juggluco will send the most recent value from either sensor to xDrip. If the sensors are not calibrated and reading BG similarly, this may result in jumpy BG values being reported to xDrip. If you terminate the wrong sensor, you can reactivate it by simply scanning the sensor.
+Note: When two sensors are active Juggluco will send the most recent value from either sensor to xDrip. If the sensors are not calibrated to read BG similarly, this may result in jumpy BG values being reported to xDrip. If you terminate the wrong sensor, you can reactivate it by simply scanning the sensor.
 
 ## Switch sensor between Libre 3 and Juggluco app
 
@@ -99,4 +99,4 @@ In order to switch from the Libre 3 app to Juggluco, you need to force-stop Libr
 
 Original instructions: [jkaltes website](https://www.juggluco.nl/Juggluco/libre3/)
 
-Ek Github deposu: [Github bağlantısı](https://github.com/maheini/FreeStyle-Libre-3-patch)
+Additional GitHub repo: [GitHub link](https://github.com/maheini/FreeStyle-Libre-3-patch)
