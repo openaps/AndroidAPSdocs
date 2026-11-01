@@ -16,13 +16,13 @@ Cinq widgets sont disponibles. Ils se trouvent sous **AAPS** dans le sélecteur 
 
 ![Widgets AAPS dans le sélecteur de widgets d'Android](../images/widgets/widget_picker_aaps.png)
 
-| Widget                           | Taille par défaut | Ce qu'il affiche                                                                                                                                                                  |
-| -------------------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Widget AAPS**                  | 5 × 2             | Le bloc d'état de l'écran principal : glycémie avec tendance et delta, mode de la boucle, profil, cible, sensibilité, IA et GA.                                                   |
-| **Cercle de glycémie AAPS**      | 2 × 2             | Le cercle de glycémie de l'écran principal : un anneau de la couleur de la glycémie, l'arc de tendance, le delta, la valeur de la glycémie et le temps depuis la dernière mesure. |
-| **AAPS petit**                   | 2 × 2             | Nom du profil, glycémie avec flèche de tendance, temps depuis la dernière mesure, delta, IA et GA.                                                                                |
-| **AAPS Gly + IA + GA (compact)** | 4 × 1             | Une ligne avec la glycémie et la flèche de tendance, l'IA et les GA.                                                                                                              |
-| **Graphique Gly. AAPS**          | 3 × 1             | La valeur de la glycémie avec un petit graphique des dernières mesures.                                                                                                           |
+| Widget                           | Taille par défaut | Ce qu'il affiche                                                                                                                                                                                                                                           |
+| -------------------------------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Widget AAPS**                  | 5 × 2             | The status block of the main screen: BG with trend and delta, the loop mode as an icon beside the profile name, target, sensitivity (shown as on the main screen), IOB and COB. The texts shrink to fit the size you give the widget instead of being cut. |
+| **Cercle de glycémie AAPS**      | 2 × 2             | Le cercle de glycémie de l'écran principal : un anneau de la couleur de la glycémie, l'arc de tendance, le delta, la valeur de la glycémie et le temps depuis la dernière mesure.                                                                          |
+| **AAPS petit**                   | 2 × 2             | Nom du profil, glycémie avec flèche de tendance, temps depuis la dernière mesure, delta, IA et GA.                                                                                                                                                         |
+| **AAPS Gly + IA + GA (compact)** | 4 × 1             | Une ligne avec la glycémie et la flèche de tendance, l'IA et les GA.                                                                                                                                                                                       |
+| **Graphique Gly. AAPS**          | 3 × 1             | La valeur de la glycémie avec un petit graphique des dernières mesures.                                                                                                                                                                                    |
 
 Le **Widget AAPS**, le **Cercle de glycémie** et le widget **petit** sur un écran d'accueil :
 
