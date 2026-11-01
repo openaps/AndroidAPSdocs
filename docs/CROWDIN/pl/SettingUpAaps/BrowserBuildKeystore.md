@@ -6,7 +6,7 @@
 To jest **Krok 2** [budowania w przeglądarce](BrowserBuild.md). Najpierw wykonaj [Krok 1 – Utwórz swój fork na GitHub](BrowserBuildFork.md).
 ```
 
-AndroidAPS musi być podpisany kluczami prywatnymi zapisanymi w **magazynie kluczy Java (Java KeyStore, JKS)**. To najważniejsza decyzja w całym procesie, bo od niej zależy, czy później będziesz mógł **zaktualizować** AAPS bez ponownej instalacji.
+AAPS must be signed with private keys stored in a **Java KeyStore (JKS)**. To najważniejsza decyzja w całym procesie, bo od niej zależy, czy później będziesz mógł **zaktualizować** AAPS bez ponownej instalacji.
 
 ```{note}
 W kolejnych krokach zapiszesz prywatne dane (Twój magazyn kluczy, a później dostęp do Dysku Google) w GitHub jako **sekrety**. Sekret to po prostu zaszyfrowana wartość, którą może odczytać tylko Twoje własne budowanie – nikt inny, nawet osoby, które oglądają Twój fork, nie może jej zobaczyć. Dzięki temu Twoje budowanie należy tylko do Ciebie.
@@ -74,7 +74,7 @@ Zanim użyjesz tej metody eksportu, upewnij się, że ustawienia magazynu kluczy
 
 2. **Uruchom workflow eksportu:**
    - Przejdź do karty **Actions** w swoim repozytorium
-   - Wybierz **CI KeyStore Export**
+   - Select **CI Keystore Export**
    - Kliknij **Run workflow**
    - Wyeksportowany plik ZIP z magazynem kluczy zostanie zapisany na Twoim Dysku Google
 
