@@ -11,7 +11,7 @@ Niektoré z týchto problémov sa pravdepodobne týkajú aj iných inzulínovýc
 (bluetoothtroubleshooting-cannot-start-omnipod-with-android-16)=
 
 ## Omnipod sa s Androidom 16 nedá spustiť
-- Android 16 potrebuje na správne fungovanie Omnipod DASH aspoň verziu **AAPS** 3.3.2.1, pretože táto verzia obsahuje opravy priamo pre známe problémy s Omnipodom, ktoré priniesol Android 16.
+- Android 16 needs at a minimum **AAPS** version 3.3.2.1 for the Omnipod DASH to work correctly, as this version has fixes added to specifically address known problems introduced in Android 16 for Omnipod.
 
 ---
 
@@ -48,11 +48,11 @@ Ak chcete navrhnúť aplikácie na doplnenie do tohto zoznamu, napíšte @XiTati
 
 - **myBMW** MyBMW rušila Medtrum Nano a Omnipod DASH. Aplikácia MyBMW sa na povolenie „vyhľadávať zariadenia v okolí“ pýta iba raz. Ak ho neudelíte, funguje stále úplne v poriadku
 
-- **Amazon Alexa**  Odobratie povolenia „Zariadenia v okolí“ aplikácii Alexa niektorým ľuďom problém vyriešilo, ale potom nebude možné párovať zariadenia IoT so štandardom Matter
+- **Amazon Alexa**  Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IoT devices
 
 - **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
 
-- **BM2** Aplikácia na sledovanie solárnej batérie, ktorá sa používa v niektorých obytných dodávkach a solárnych zostavách na kempovanie. Keď bola aplikácia spustená, zabránila aktivácii nového Podu. Problém sa dá obísť tak, že aplikáciu počas aktivácie nového Podu vynútene zastavíte. Keď bola aplikácia potom znova spustená, fungovanie Dash zrejme nerušila (na Pixel 8 Pro s Androidom 16).
+- **BM2** Solar Battery Monitoring app, used in some camper van and camping solar setups: when the app was running, it prevented activation of a new Pod. Force Stopping the app while activating a new pod is a workaround to the issue. Keď bola aplikácia potom znova spustená, fungovanie Dash zrejme nerušila (na Pixel 8 Pro s Androidom 16).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
@@ -63,7 +63,7 @@ Follow this procedure to revoke the "Nearby device" permission for all apps exce
 
 ```{admonition} Menus and settings
 :class: note
-Snímky obrazovky a pokyny v tomto návode pochádzajú z čistého Androidu 16 (Vanilla) na Google Pixel 8 Pro. Ponuky a nastavenia u iných výrobcov a zariadení sa pravdepodobne nebudú presne zhodovať s týmto popisom. Prispôsobte kroky svojmu zariadeniu. Ak si neviete rady, v časti [Kde získať pomoc pre Dash](#omnipod-dash-where-to-get-help-for-dash) nájdete, ako požiadať komunitu o podporu.
+Snímky obrazovky a pokyny v tomto návode pochádzajú z čistého Androidu 16 (Vanilla) na Google Pixel 8 Pro. Other manufacturers and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.
 ```
 
 1. Otvorte v telefóne nastavenia Androidu, posuňte sa nadol a ťuknite na **Zabezpečenie a ochrana súkromia (Security and privacy) (1)**.
@@ -103,7 +103,7 @@ Ak neviete, ktorá aplikácia vám spôsobuje problém, vypnite povolenie všetk
 
 ### Ako znova povoliť povolenie „Zariadenia v okolí“ systémovým a ďalším aplikáciám:
 
-1. Ak je to potrebné, pozrite si v časti **„Ako odobrať povolenie ‚Zariadenia v okolí‘ iným aplikáciám“**, ako sa dostať do nastavení ochrany súkromia aplikácií. Keď ste v nastavení **Zariadenia v okolí**, pokračujte krokom 2.
+1. If required Reference the **"How to revoke 'Nearby device' permissions for other apps"** section on how to get to the app privacy settings, then once in the **Nearby device** configuration proceed to 2.
 
 2. Prejdite zoznam aplikácií a ťuknite na aplikáciu, ktorej chcete povoliť **Zariadenia v okolí**.
 
@@ -122,7 +122,7 @@ Ak má aplikácia povolenie odobraté, musíte sa posunúť nadol, kým neuvidí
 
    ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png)
 
-5. Ak chcete povolenie každej aplikácii znova povoliť, postupujte podľa časti **„Ako odobrať povolenie ‚Zariadenia v okolí‘ iným aplikáciám“** v opačnom poradí.
+5. Follow the guidance in **"How to revoke 'Nearby device' permissions for other apps"** in reverse to re-enable permissions for each app.
 
 ---
 
