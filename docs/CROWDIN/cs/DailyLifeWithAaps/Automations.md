@@ -222,13 +222,15 @@ nic
 * **Profil** musí být mezi 50 % a 130 %
 * funguje jen tehdy, když předchozí procento je 100 %
 
-**Akce:** **Změnit vyhlazování**
+**Actions:** **Change smoothing** (in the **Loop & insulin** group)
 
 **Možnosti:**
 
-* vyberte [metodu vyhlazování](../CompatibleCgms/SmoothingBloodGlucoseData.md), na kterou se má přepnout
+* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
 * provede se jen tehdy, když tato metoda vyhlazování ještě není aktivní – **AAPS** to do pravidla přidá automaticky jako řádek „**Nutné podmínky: Vyhlazování … není aktivní**“. Když je zvolené vyhlazování už aktivní, pravidlo se tiše přeskočí.
-* Příklad: v kombinaci se spouštěčem **Stáří senzoru** přepněte během prvního dne nového senzoru na **Průměrovací vyhlazování** a potom zpět na **Žádné vyhlazování**.
+* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
+  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
+  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
 
 **Akce:** **Poznámka** (ve skupině **Výstrahy** v seznamu)
 
@@ -268,7 +270,7 @@ nic
 
 **Možnosti:**
 
-* žádné. Když se provede pravidlo s touto akcí, **AAPS** při tomto běhu už nekontroluje pravidla pod ním v seznamu. Přidejte ji do pravidla, které musí mít přednost před pravidly pod ním (viz [pořadí automatizací](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* žádné. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Přidejte ji do pravidla, které musí mít přednost před pravidly pod ním (viz [pořadí automatizací](#Automations-the-order-of-the-automations-in-the-list-matters)).
 
 **Akce:** **Spustit scénu**, **Povolit scénu**, **Zakázat scénu** (ve skupině **Scény**)
 
