@@ -60,7 +60,7 @@ Dette skriptet eksporterer keystore-informasjonen du har satt opp tidligere (fra
 Før du bruker denne eksportmetoden, må du sørge for at keystore-filen og Google Drive-innstillingene er ferdig satt opp.
 ```
 
-### Steps:
+### Steg:
 
 1. **Legg til en secret med ZIP-passord:**
    - Gå til **Settings** → **Secrets and variables** → **Actions** i repositoryet ditt
