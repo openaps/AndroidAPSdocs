@@ -128,7 +128,7 @@ En smartklokke kan være et svært nyttig verktøy for å hjelpe til med å styr
 (RemoteControl_nightscout)=
 ## 3) Nightscout
 
-I tillegg til at Nightscout er en server i «skyen», finnes det også en egen **Nightscout**-app som du kan laste ned direkte fra App Store på iPhonen din. Hvis du har en Android-følgertelefon, finnes det ingen egen Nightscout-app. Da er det bedre å bruke [**AAPSClient**](#2-aapsclient), eller, hvis du bare vil følge og ikke sende behandlinger, kan du laste ned og installere appen [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) fra Play-butikken.
+I tillegg til at Nightscout er en server i «skyen», finnes det også en egen **Nightscout**-app som du kan laste ned direkte fra App Store på iPhonen din. Hvis du har en Android-følgertelefon, finnes det ingen egen Nightscout-app. Da er det bedre å bruke [**AAPSClient**](#RemoteControl_aapsclient), eller, hvis du bare vil følge og ikke sende behandlinger, kan du laste ned og installere appen [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) fra Play-butikken.
 
 Når du har installert **Nightscout**-appen på iPhonen din, åpner du appen og følger oppsettstegene. Skriv inn Nightscout-adressen din (se nedenfor, til venstre). Hvordan denne ser ut, kan variere etter hvor Nightscout-siden din er hostet. (_f.eks._ http://youraddresshere.herokuapp.com). Skriv deretter inn API-nøkkelen (API secret) for Nightscout (se nedenfor, til høyre). Hvis du ikke blir bedt om API-passordet, må du skrive det inn ved å trykke på hengelåsen øverst i appen:
 
@@ -202,7 +202,7 @@ Trykk på «refresh» nederst på siden for å lukke popup-vinduet.
 (RemoteControl_nightscout-treatments)=
 ### Sende behandlinger gjennom Nightscout-appen til AAPS
 
-I **AAPS** 4 er den støttede måten å fjernstyre **AAPS** på en **sammenkoblet AAPSClient**, se [Hovedenhet ↔ klientstyring](#client-master-control): hver klient har en [rolle](#client-master-control-roles) som begrenser hva den kan gjøre, og hver kommando signeres, kontrolleres og bekreftes av **AAPS**-telefonen. Mens klientstyring er på, er **AAPS**-telefonen i [herdet modus](#client-master-control-hardened-mode): behandlinger, midlertidige mål og profilbytter som registreres på Nightscout-nettstedet eller i Nightscout-appen, blir **ikke** brukt. Nightscout-appen er da bare et verktøy for å følge.
+I **AAPS** 4 er den støttede måten å fjernstyre **AAPS** på en **sammenkoblet AAPSClient**, se [Hovedenhet ↔ klientstyring](#client-master-control): hver klient har en [rolle](#client-master-control-roles) som begrenser hva den kan gjøre, og hver kommando signeres av klienten, og deretter kontrolleres og bekreftes av **AAPS**-telefonen. Mens klientstyring er på, er **AAPS**-telefonen i [herdet modus](#client-master-control-hardened-mode): behandlinger, midlertidige mål og profilbytter som registreres på Nightscout-nettstedet eller i Nightscout-appen, blir **ikke** brukt. Nightscout-appen er da bare et verktøy for å følge.
 
 ```{admonition} Only when client control is off
 :class: warning
