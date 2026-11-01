@@ -201,18 +201,18 @@ The *Auth* column in the tables below, indicates whether such a strong authentic
 
 ### Данни от CGM
 
-| Команда    | Код | Функция и *отговор*                                                                                                                                                                                     |
-| ---------- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BG         | Не  | Връща: последна КЗ, изменение (делта), IOB (болус и базал), COB<br/>*Последна КЗ: 5.6 преди 4 мин, Делта: -0,2 mmol, IOB: 0.20 Ед. (Болус: 0.10 Ед. Базал: 0.10 Ед.)*                             |
-| CAL 5.6/90 | Да  | Калибрира CGM със стойност 5.6/90<br/>(използвайте стойността, подходяща за вашите единици за КЗ)<br/>Работи само ако е правилно настроено в **AAPS**.<br/>*Калибрацията е изпратена* |
+| Команда    | Код | Функция и *отговор*                                                                                                                                                                                                               |
+| ---------- | --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BG         | Не  | Връща: последна КЗ, изменение (делта), IOB (болус и базал), COB<br/>*Последна КЗ: 5.6 преди 4 мин, Делта: -0,2 mmol, IOB: 0.20 Ед. (Болус: 0.10 Ед. Базал: 0.10 Ед.)*                                                       |
+| CAL 5.6/90 | Да  | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent. Receiving must be enabled in xDrip+.* |
 
 ### Помпа
 
-| Команда              | Код | Функция и *отговор*                                                                                   |
-| -------------------- | --- | ----------------------------------------------------------------------------------------------------- |
-| ПОМПА                | Не  | Last conn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
-| PUMP DISCONNECT *30* | Да  | Разкачва помпата за *30* минути                                                                       |
-| PUMP CONNECT         | Да  | Помпата е свързана отново                                                                             |
+| Команда              | Код | Функция и *отговор*                                                                                  |
+| -------------------- | --- | ---------------------------------------------------------------------------------------------------- |
+| ПОМПА                | Не  | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP DISCONNECT *30* | Да  | Разкачва помпата за *30* минути                                                                      |
+| PUMP CONNECT         | Да  | Помпата е свързана отново                                                                            |
 
 ### Базал
 
@@ -229,14 +229,14 @@ Some pumps take a temp basal only in percent, others only in U/h. If you use the
 
 ### Кръг
 
-| Команда           | Код | Функция и *отговор*                                                                                                                                                                                                                          |
-| ----------------- | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LOOP STATUS       | Не  | Отговорът зависи от текущия статус:<br/> - *APS е изключен*, ако кръгът е изключен или е в режим LGS<br/> - *APS е включен*, ако кръгът е затворен или отворен<br/> - *Изключен (10 мин)*, ако кръгът е разкачен или спрян |
-| LOOP STOP/DISABLE | Да  | Помпата се връща към предварително програмираната базална доза.<br/>*APS е деактивиран*                                                                                                                                                |
-| LOOP SUSPEND 20   | Да  | *Кръгът е изключен за 20 минути*                                                                                                                                                                                                             |
-| LOOP RESUME       | Да  | *Кръгът е включен*                                                                                                                                                                                                                           |
-| LOOP CLOSED       | Да  | *Текущ режим: Затворен кръг*                                                                                                                                                                                                                 |
-| LOOP LGS          | Да  | *Текущ режим: Спиране на базал при ниска КЗ*                                                                                                                                                                                                 |
+| Команда           | Код | Функция и *отговор*                                                                                                                                                                                                                                                                |
+| ----------------- | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LOOP STATUS       | Не  | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled<br/> - *Loop is enabled* if the loop is closed, open or LGS<br/> - *Pump disconnected* if the pump is disconnected<br/> - *Suspended (10 m)* if the loop is suspended |
+| LOOP STOP/DISABLE | Да  | Помпата се връща към предварително програмираната базална доза.<br/>*APS е деактивиран*                                                                                                                                                                                      |
+| LOOP SUSPEND 20   | Да  | *Loop suspended*                                                                                                                                                                                                                                                                   |
+| LOOP RESUME       | Да  | *Кръгът е включен*                                                                                                                                                                                                                                                                 |
+| LOOP CLOSED       | Да  | *Current running mode: Closed Loop*                                                                                                                                                                                                                                                |
+| LOOP LGS          | Да  | *Current running mode: Low Glucose Suspend*                                                                                                                                                                                                                                        |
 
 ### Болус
 
@@ -348,6 +348,6 @@ If the other app is installed on multiple phones make sure to deactivate upload 
 (sms-commands-too-many-messages)=
 ### Получавам твърде много текстови съобщения от SMS командите. Мога ли да намаля честотата им или да ги спра?
 
-Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include Whatsapp, Lime, Telegram, and Facebook Messenger.
+Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include WhatsApp, LINE, Telegram, and Facebook Messenger.
 
-It is possible to disable the "Profile changed" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly**  `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+It is possible to disable the "Basal profile in pump updated" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly** `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
