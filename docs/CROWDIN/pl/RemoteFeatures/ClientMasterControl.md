@@ -107,7 +107,7 @@ Każdy, kto zobaczy kod QR, może odczytać Twój Nightscout, a kod, który paru
 
 #### PIN-em
 
-Dotknij **OK**: urządzenie pacjenta pokazuje 8-cyfrowy **PIN parowania** w dwóch grupach po cztery cyfry (na przykład `1234 5678`). Ten PIN jest **jednorazowy** i **wygasa po około dwóch minutach**.
+Dotknij **OK**: urządzenie pacjenta pokazuje 8-cyfrowy **PIN parowania** w dwóch grupach po cztery cyfry (na przykład `1234 5678`). Ten PIN jest **jednorazowy** i **wygasa po około dwóch minutach**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
 
 ![Ekran parowania na urządzeniu pacjenta z jednorazowym PIN-em (pokazany tu PIN już wygasł)](../images/v4/ClientMaster/pairing_pin_master.png)
 
