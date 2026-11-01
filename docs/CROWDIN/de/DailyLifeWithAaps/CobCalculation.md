@@ -12,13 +12,13 @@ Die in **AAPS** genutzte Formel ist:
 
 Der Effekt auf das **Profil** ist:
 
-- _Erhöhung_ **IC** - Durch das Erhöhen des Wertes der in 5 Minuten aufgenommen Kohlenhydrate verkürzt sich die Gesamtzeit der KH-Absorption;
+- _increase_ **IC** - by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
 
 - _Erhöhung_ **ISF** - Durch das Reduzieren des Wertes der in 5 Minuten aufgenommenen Kohlenhydrate verlängert sich die Gesamtzeit der KH-Absorption; und
 
-- _Prozentuale Änderung_ des **Profils** -  Erhöhen/reduzieren beider Werte hat keinen Einfluss auf die Gesamtzeit der KH-Absorption.
+- _change_ **Profile Percentage** - increase/decrease both values thus has no impact on carbs absorption time.
 
-Wenn der **ISF** im **Profil**  beispielsweise 100 und der **IC** 5 ist, wäre der Faktor der Kohlenhydrat-Empfindlichkeit (CSF) 20. For every 20 mg/dL the user’s **BG** goes up, 1 g of carbs will be calculated as absorbed by **AAPS**. Eine positiver **IOB**-Wert beinflusst damit auch die **COB**-Berechnung. So, if **AAPS** predicts the user’s **BG** to go down by 20 mg/dL because of **IOB** and it instead stayed flat, **AAPS** would also calculate 1 g of carbs as absorbed.
+For example, if the user’s **Profile** **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. For every 20 mg/dL the user’s **BG** goes up, 1 g of carbs will be calculated as absorbed by **AAPS**. Eine positiver **IOB**-Wert beinflusst damit auch die **COB**-Berechnung. So, if **AAPS** predicts the user’s **BG** to go down by 20 mg/dL because of **IOB** and it instead stayed flat, **AAPS** would also calculate 1 g of carbs as absorbed.
 
 In Abhängigkeit vom von Dir in **AAPS** gewählten Empfindlichkeits-Algorithmus, werden auch Kohlenhydrate nach dem unten beschriebenen Verfahren aufgenommen (absorbiert).
 
@@ -47,7 +47,7 @@ In der **COB**-Kurve wird ein orangener Punkt angezeigt, wenn die minimale Kohle
 (CobCalculation-detection-of-wrong-cob-values)=
 ## Erkennung Fehlerhafter COB-Werte
 
-**AAPS** wird Dich warnen, wenn Du dabei bist einen Bolus abzugeben bei dem **COB**-Werte einer vorherigen Mahlzeit berücksichtigt werden, der Algorithmus aber erkennt, dass die  aktuelle **COB**-Berechnung nicht korrekt ist. In dieser Situation gibt es beim Nutzen des Bolus-Rechners einen zusätzlichen Hinweis im Bestätigungsfenster.
+**AAPS** will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In dieser Situation gibt es beim Nutzen des Bolus-Rechners einen zusätzlichen Hinweis im Bestätigungsfenster.
 
 ### Wie erkennt AAPS falsche COB-Werte?
 
@@ -62,7 +62,7 @@ In the screenshot above, 66% of time the carb absorption was calculated by the m
 - Denke darüber nach die Insulinabgabe abzubrechen - drücke 'Abbrechen' statt OK.
 - Berechne die Mahlzeit mit dem Bolus-Rechner erneut, nimm aber den Haken bei **COB** heraus.
 - Solltest Du einen Korrekturbolus brauchen, gib ihn manuell ein.
-- Vermeide Überdosierung und sog. Insulin Stacking (Überlagerung einzelner Bolus-Wirkkurven)!
+- Be careful not to overdose or stack insulin!
 
 
 ### Warum erkennt der Algorithmus COB nicht richtig?
