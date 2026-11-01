@@ -7,7 +7,7 @@ Jeśli nie chcesz zakładać osobnego konta Gmail dla **AAPS**, przejdź od razu
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Osobne miejsce na Dysku Google oznacza, że nie zapełnisz limitu swojego prywatnego Dysku Google plikami z **Eksport ustawień**.
+- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
 - Każda wersja **AAPS** (i aplikacji pomocniczych, takich jak xDrip, BYODA itp.) będzie przechowywana w jednym miejscu, niezależnym od Twojego komputera. Jeśli Twój komputer lub telefon zostanie skradziony, zgubiony lub zepsuty, nadal będziesz mieć dostęp do danych.
 - Podobna konfiguracja i podobna struktura folderów u różnych użytkowników ułatwiają pomoc online.
 - W zależności od konfiguracji (patrz niżej) będziesz mieć osobną tożsamość (alias) do kontaktu ze społecznością, co może chronić Twoją prywatność. 
@@ -45,13 +45,13 @@ Kliknij [tutaj](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQ
  Oto kroki pokazane w filmie:
 
 W tym przykładzie: 
-- Twoje obecne „_codzienne_” konto Google to <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
+- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
 - Twoje nowe konto Gmail dla „_AAPS_” to: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-### Przejdź na <https://account.google.com> 
+### Go to <https://myaccount.google.com> 
 
- Jeśli jesteś już zalogowany w Google, zobaczysz stronę **Moje konto** Twojego „codziennego” konta. (1) Kliknij swoje zdjęcie profilowe w prawym górnym rogu strony (w tym przypadku zwykłe ![](../images/Building-the-App/building_0002.png) (2) wybierz „_Dodaj kolejne konto_”.
+ Jeśli jesteś już zalogowany w Google, zobaczysz stronę **Moje konto** Twojego „codziennego” konta. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
 
 ![](../images/Building-the-App/building_0005.png)
 
@@ -87,7 +87,7 @@ Gmail wyświetli nazwę konta. Google poprosi Cię o zaakceptowanie warunków ko
 
 ### Dostosuj wygląd nowego profilu
 
-Teraz powinna być widoczna strona Moje konto Google z Twoim nowym kontem e-mail dla **AAPS**. Zdjęcie profilowe będzie domyślnie ustawione na pierwszą literę Twojego imienia. Zmień je na coś niepowtarzalnego, aby nie mylić kont… w tym przykładzie Donald.Muck.AAPS zastąpił ![](../images/Building-the-App/building_0002.png) obrazkiem ![](../images/Building-the-App/building_0003.png)
+Teraz powinna być widoczna strona Moje konto Google z Twoim nowym kontem e-mail dla **AAPS**. Zdjęcie profilowe będzie domyślnie ustawione na pierwszą literę Twojego imienia. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
@@ -101,7 +101,7 @@ Ta część może być trochę myląca, bo trzeba przełączać się między obo
 2. Kliknij prawym przyciskiem myszy ikonę przeglądarki na pasku zadań
 3. Z menu wybierz „Nowe okno” (New Window)... i ustaw je tak, aby zajmowało tylko dolną połowę ekranu.
 
-Otwórz <https://gmail.com> w każdym oknie przeglądarki. Upewnij się, że Twoje prywatne konto jest w górnym oknie, a nowe konto dla **AAPS** w dolnym. Konta łatwo rozpoznasz po zdjęciu profilowym w prawym górnym rogu. (w razie potrzeby zawsze możesz przełączyć konto, klikając zdjęcie profilowe i wybierając właściwe.
+Otwórz <https://gmail.com> w każdym oknie przeglądarki. Upewnij się, że Twoje prywatne konto jest w górnym oknie, a nowe konto dla **AAPS** w dolnym. Konta łatwo rozpoznasz po zdjęciu profilowym w prawym górnym rogu. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
 
 ![](../images/Building-the-App/building_0009.png)
 
