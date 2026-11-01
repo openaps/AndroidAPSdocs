@@ -18,7 +18,7 @@ I **AAPS** v4 finner du innstillingene på skjermen **Innstillinger**. Det er tr
 ```
 
 (Preferences-general)=
-## General
+## Generelt
 
 ![Innstillinger > Generelt](../images/preferences/settings_general.png)
 
@@ -160,7 +160,7 @@ Innstillingene for den valgte [BS-kilden](#Config-Builder-bg-source) vises som e
 ![Innstillinger > xDrip+ BS](../images/preferences/settings_xdrip.png)
 
 - **Last opp BS-data til NS**: la **AAPS** laste opp de mottatte BS-verdiene til Nightscout. Slå dette på bare hvis CGM-appen ikke allerede laster dem opp selv.
-- **Logg sensorskifte**: opprett automatisk en behandlingshendelse for sensorbytte når sensoren settes inn.
+- **Logg sensorbytte**: opprett automatisk en behandlingshendelse for sensorbytte når sensoren settes inn.
 
 ## Hovedskjermen
 
@@ -275,7 +275,7 @@ Avhengig av innstillingene dine i [Konfigurasjon > APS](../SettingUpAaps/ConfigB
 - [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) – algoritmens tilstand i 2017
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) – nyeste algoritme, anbefalt for nybegynnere
 
-Fra [**AAPS** versjon 3.3](#version3300) er funksjonen [Dynamisk ISF](../DailyLifeWithAaps/DynamicISF.md) flyttet inn som en del av OpenAPS SMB.
+Fra [**AAPS** versjon 3.3](#version3300) er funksjonen [Dynamisk ISF (DynISF)](../DailyLifeWithAaps/DynamicISF.md) flyttet inn som en del av OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -300,9 +300,9 @@ Hvilke innstillinger du ser, avhenger av hvor langt du har kommet i [opplærings
 
 ![Innstillinger > OpenAPS SMB > Avanserte innstillinger, fortsettelse](../images/preferences/settings_openaps_smb_advanced_2.png)
 
-## Absorberingsinnstillinger
+## Absorpsjonsinnstillinger
 
-![Innstillinger > Absorberingsinnstillinger](../images/preferences/settings_absorption.png)
+![Innstillinger > Absorpsjonsinnstillinger](../images/preferences/settings_absorption.png)
 
 (Preferences-min_5m_carbimpact)=
 ### SMB min 5 min karboabsorpsjonsvirkning (min_5m_carbimpact)
@@ -334,7 +334,7 @@ Tidspunktet da et måltid regnes som absorbert; gjenværende karbohydrater kutte
 - Angi min. og maks. [autosens](#Open-APS-features-autosens)-forhold.
 - Normalt bør standardverdiene (maks. 1,2 og min. 0,7) ikke endres.
 
-## Pump
+## Pumpe
 
 ![Innstillinger > Pumpe](../images/preferences/settings_pump.png)
 
@@ -369,7 +369,7 @@ Når du bruker NSClientV3, må alle opplastere bruke Nightscout API v3. Hvis en 
 
 - Angi *Nightscout URL* (f.eks. <https://yoursitename.yourplatform.dom>).
 - **Pass på at URL-en er UTEN /api/v1/ på slutten.**
-- I Nightscout oppretter du et *[Admin-token](https://nightscout.github.io/nightscout/security/#create-a-token)* (krever [Nightscout 15](https://nightscout.github.io/update/update/) for å bruke V3-API-et) og skriver det inn i **Nightscout tilgangstoken** (ikke API Secret!). På **AAPSClient** kan du i stedet skanne QR-koden fra hovedtelefonen, som setter opp et eget token for klienten. En klient som er paret med PIN, får sitt eget token fra hovedtelefonen etter paringen. Se [Klientens eget Nightscout-token](#client-master-control-own-token).
+- I Nightscout oppretter du et *[Admin-token](https://nightscout.github.io/nightscout/security/#create-a-token)* (krever [Nightscout 15](https://nightscout.github.io/update/update/) for å bruke V3-API-et) og skriver det inn i **Nightscout tilgangstoken** (ikke API Secret!). På **AAPSClient** kan du i stedet skanne QR-koden fra hovedtelefonen, som setter opp et eget token for klienten. En klient som er sammenkoblet med PIN, får sitt eget token fra hovedtelefonen etter sammenkoblingen. Se [Klientens eget Nightscout-token](#client-master-control-own-token).
 - Dette gjør at data kan leses og skrives mellom Nightscout-nettstedet og **AAPS**.
 - Dobbeltsjekk for skrivefeil her hvis du står fast i opplæringsmål 1.
 - La «Bruk websockets» være på (anbefalt).
@@ -398,7 +398,7 @@ Mens klientstyring er på (alltid i Enkelmodus), er disse innstillingene skjult:
 
 ### Fjernstyring
 
-Bryteren «**Tillat klientstyring**» finnes ikke lenger i disse innstillingene: den ligger øverst i **Administrer → Autoriserte klienter**, der de parede klientene administreres. Se den egne siden [Hovedenhet ↔ klientstyring](../RemoteFeatures/ClientMasterControl.md), inkludert [herdet modus](#client-master-control-hardened-mode), som denne bryteren slår på.
+Bryteren «**Tillat klientstyring**» finnes ikke lenger i disse innstillingene: den ligger øverst i **Administrer → Autoriserte klienter**, der de sammenkoblede klientene administreres. Se den egne siden [Hovedenhet ↔ klientstyring](../RemoteFeatures/ClientMasterControl.md), inkludert [herdet modus](#client-master-control-hardened-mode), som denne bryteren slår på.
 
 ### Tilkoblingsinnstillinger
 
@@ -559,7 +559,7 @@ For å slutte å eksportere til skyen trykker du på **✕**-ikonet (**Tøm inns
 
 ## Open Humans
 
-You can help the community by donating your data to research projects! Detaljene er beskrevet på [Open Humans-siden](../SupportingAaps/OpenHumans.md).
+Du kan hjelpe fellesskapet ved å donere dataene dine til forskningsprosjekter! Detaljene er beskrevet på [Open Humans-siden](../SupportingAaps/OpenHumans.md).
 
 I **Innstillinger → Open Humans** kan du angi når data skal lastes opp
 - bare ved Wi-Fi-tilkobling
