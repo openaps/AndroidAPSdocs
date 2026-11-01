@@ -1,6 +1,6 @@
-# Waar kan ik hulp krijgen?
+# Where can I get help?
 
-## Ik kom niet verder. Wat moet ik doen? Aan wie kan ik het vragen?
+## I'm stuck; what should I do? Aan wie kan ik het vragen?
 
 Dit project draait op vrijwilligers. Daarom gelden een paar regels voor elke vraag om hulp. Zo verspillen de mensen die je vriendelijk helpen geen onnodige tijd:
 
