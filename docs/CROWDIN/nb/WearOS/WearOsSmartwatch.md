@@ -62,7 +62,7 @@ Mens en klokke med Wear OS 5 eller eldre er tilkoblet, vises kortet **Urskive in
 | 3     | Høyre              | COB                                                                    | Basaldose & Mål/TT                    |
 | 4     | Graf               | BS-graf                                                                | BS-graf                               |
 | 5     | Nederst            | Basaldose & Mål/TT                                                     | Opplaster/mobilbatteri                |
-| 6     | Øverst til venstre | Running mode                                                           | Running mode                          |
+| 6     | Øverst til venstre | Kjøremodus                                                             | Kjøremodus                            |
 | 7     | Øverst til høyre   | Opplaster/mobilbatteri, eller en appsnarvei til **AAPS slumre-varsel** | Appsnarvei til **AAPS slumre-varsel** |
 
 Snarveien **AAPS slumre-varsel** velges blant klokkens egne **Appsnarvei**-komplikasjoner. Når du trykker på den, slumrer du alarmen som går på telefonen.
@@ -91,7 +91,7 @@ Installer **AAPS Wear**-apk-en med [Wear Installer 2](https://youtu.be/abgN4jQqH
 
 ```{admonition} Wear OS 5
 :class: warning
-På Wear OS 5 må AAPS-urskiven velges med Wear Installer 2 rett etter at Wear-appen er installert: installasjonsprogrammet tilbyr urskiven **AAPS(Tilpasset)** på slutten av installasjonen. Hvis du ved et uhell bytter til en annen urskive, gjenta installasjonen. Det er ikke sikkert det går an å endre innstillingene for urskiven (Mørkt, Watchdivider osv.).
+På Wear OS 5 må AAPS-urskiven velges med Wear Installer 2 rett etter at Wear-appen er installert: installasjonsprogrammet tilbyr urskiven **AAPS(Egendefinert)** på slutten av installasjonen. Hvis du ved et uhell bytter til en annen urskive, gjenta installasjonen. Det er ikke sikkert det går an å endre innstillingene for urskiven (Mørkt, Watchdivider osv.).
 
 Hvis den klassiske urskiven virker for deg nå, **slå av automatiske oppdateringer på klokken**: neste fastvareoppdatering vil sannsynligvis ødelegge den. Hvis du likevel oppdaterer til Wear OS 6, les delen ovenfor: **AAPS** installerer da sin egen urskive i det nye formatet.
 ```
@@ -160,37 +160,37 @@ Alternativt, men ikke for Wear OS 5, kan du:
 
 1)   Last ned _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_ fra Play-butikken til telefonen
 
-![image](../images/wearos/easyfire01.png)
+![bilde](../images/wearos/easyfire01.png)
 
 2)  Gjør deg selv til utvikler på klokken (når den er satt opp og koblet til telefonen):
 
 Gå til **Innstillinger** > **System** > **Om** > **Versjoner** (menynavnene varierer mellom klokkemerker — på noen klokker er det **Om klokken** > **Programvareinformasjon** > **Programvareversjon**).
 
-![image](../images/wearos/easyfire02.png)
+![bilde](../images/wearos/easyfire02.png)
 
 Trykk raskt på **Delenummer** (eller **Programvareversjon**) flere ganger til en melding sier at du nå er utvikler.
 
-![image](../images/wearos/easyfire03.png)
+![bilde](../images/wearos/easyfire03.png)
 
 Gå tilbake til **Innstillinger** > **System**: en ny meny, **Utvikleralternativer**, vises nå.
 
 I **Utvikleralternativer**: slå på **ADB-feilsøking** og **Trådløs feilsøking**, og bekreft spørsmålene. Trådløs feilsøking viser da klokkens **IP-adresse & port**, noe som: **192.168.1.214** : 5555. Du trenger bare IP-adressen (her **192.168.1.214**), ikke portnummeret etter kolonet. Merk at IP-adressen kan endre seg, for eksempel hver gang du bytter til en ny telefon for AAPS.
 
-![image](../images/wearos/easyfire04.png)
+![bilde](../images/wearos/easyfire04.png)
 
 STEG 3)     Skriv inn IP-adressen, _f.eks._ **192.168.1.214**, i Easy Fire tools på telefonen (åpne menyen (☰) til venstre, gå til innstillinger og skriv inn IP-adressen).
 
-![image](../images/wearos/easyfire05.png)
+![bilde](../images/wearos/easyfire05.png)
 
 Trykk så på ikonet med stikkontakten øverst til høyre. Den blir grønn når den er tilkoblet.
 
-![image](../images/wearos/easyfire06.png)
+![bilde](../images/wearos/easyfire06.png)
 
 
 STEG 4) Følg instruksjonene [her](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) for å installere (det vil si overføre) aaps-wear.apk direkte på smartklokken med Easy Fire tools
 
 
-![image](../images/wearos/easyfire07.png)
+![bilde](../images/wearos/easyfire07.png)
 
 
 (BuildingAapsWearOs-WearOS5-TShoot)=
@@ -295,9 +295,9 @@ Det finnes flere urskiver i standardbygget av AAPS Wear OS-APK-en. Når du har i
 
 ![Urskivevelgeren med knappen Legg til urskive](../images/wearos/watchface_add.png)
 
-2. Bla gjennom listen til du finner «AAPS(Tilpasset)» (avhengig av klokken ligger urskivene til installerte apper under en «Nedlastet»-del eller gruppert etter app), og trykk midt på bildet for å legge den til i utvalget ditt av gjeldende urskiver. Ikke bry deg om hvordan urskiven «AAPS(Tilpasset)» ser ut nå. Vi velger utseendet du vil ha i neste steg.
+2. Bla gjennom listen til du finner «AAPS(Egendefinert)» (avhengig av klokken ligger urskivene til installerte apper under en «Nedlastet»-del eller gruppert etter app), og trykk midt på bildet for å legge den til i utvalget ditt av gjeldende urskiver. Ikke bry deg om hvordan urskiven «AAPS(Egendefinert)» ser ut nå. Vi velger utseendet du vil ha i neste steg.
 
-![Liste over AAPS-urskiver, med AAPS(Tilpasset)](../images/wearos/watchface_list_aaps.png)
+![Liste over AAPS-urskiver, med AAPS(Egendefinert)](../images/wearos/watchface_list_aaps.png)
 
 3. Åpne nå AAPS på telefonen, og åpne Klokke-pluginen: **Konfigurasjon** > **Kommunikasjon** > **Klokke** > **Åpne plugin** (huk av for **Klokke** først hvis den ikke er aktivert).
 
@@ -307,11 +307,11 @@ Det finnes flere urskiver i standardbygget av AAPS Wear OS-APK-en. Når du har i
 
 ![Listen Velg egendefinert urskive](../images/wearos/select_custom_watchface.png)
 
-5. Sjekk klokken: urskiven «AAPS(Tilpasset)» skal nå vise utseendet du valgte. Gi den noen sekunder på å oppdatere seg. **Klokke**-skjermen på telefonen viser nå navnet på den innlastede urskiven og en forhåndsvisning av den. **Info urskive** viser detaljene om den og feltene den inneholder, og **Flere urskiver** åpner [utvekslingssiden](../ExchangeSiteCustomWatchfaces/index.md) der du kan laste ned andre egendefinerte urskiver. Nå kan du tilpasse komplikasjonene osv. ved å trykke og holde på urskiven og så trykke på knappen «Tilpass» på bildet av urskiven.
+5. Sjekk klokken: urskiven «AAPS(Egendefinert)» skal nå vise utseendet du valgte. Gi den noen sekunder på å oppdatere seg. **Klokke**-skjermen på telefonen viser nå navnet på den innlastede urskiven og en forhåndsvisning av den. **Info urskive** viser detaljene om den og feltene den inneholder, og **Flere urskiver** åpner [utvekslingssiden](../ExchangeSiteCustomWatchfaces/index.md) der du kan laste ned andre egendefinerte urskiver. Nå kan du tilpasse komplikasjonene osv. ved å trykke og holde på urskiven og så trykke på knappen «Tilpass» på bildet av urskiven.
 
 ```{admonition} Complications on a custom watchface
 :class: note
-Egendefinerte urskiver laget med versjon 3.0 eller nyere av formatet for egendefinerte urskiver kan ha opptil fem komplikasjonsplasser, der plassering og størrelse er definert av urskiven (**Komplikasjonslayout**). På klokken: trykk og hold på urskiven, trykk på **Tilpass**, og trykk på **Komplikasjon 1** til **Komplikasjon 5** for å velge datakilden som vises i hver plass. De samme radene finnes i AAPS-appen på klokken under **Innstillinger** > **AAPS(Tilpasset)**; trykker du på en der, åpnes den samme velgeren. **Prioritet for komplikasjonstype** avgjør om en plass foretrekker en verdi eller måler, tekst, eller et ikon når datakilden tilbyr flere. En endret prioritet gjelder først neste gang du velger en datakilde for den plassen.
+Egendefinerte urskiver laget med versjon 3.0 eller nyere av formatet for egendefinerte urskiver kan ha opptil fem komplikasjonsplasser, der plassering og størrelse er definert av urskiven (**Komplikasjonslayout**). På klokken: trykk og hold på urskiven, trykk på **Tilpass**, og trykk på **Komplikasjon 1** til **Komplikasjon 5** for å velge datakilden som vises i hver plass. De samme radene finnes i AAPS-appen på klokken under **Innstillinger** > **AAPS(Egendefinert)**; trykker du på en der, åpnes den samme velgeren. **Prioritet for komplikasjonstype** avgjør om en plass foretrekker en verdi eller måler, tekst, eller et ikon når datakilden tilbyr flere. En endret prioritet gjelder først neste gang du velger en datakilde for den plassen.
 
 Disse plassene virker bare på klokker med **Wear OS 5 eller eldre**, der den egendefinerte urskiven kjører som en ekte urskive. På **Wear OS 6 og nyere** vises den egendefinerte urskiven som et bilde uten komplikasjonsplassene, og steg 1 og 2 ovenfor trengs ikke: pass på at **Egendefinert urskive** er valgt under **Urskive installert på klokken** i **Klokke**-pluginen på telefonen (se [urskiven AAPS installerer](#wearos-aaps-v4-watchface)).
 ```
