@@ -21,7 +21,7 @@ Als je **SMS Commando's** in **AAPS** inschakelt, bedenk dan dat de telefoon die
 
 Daarnaast wordt aangeraden om een [tweede telefoonnummer](#SMSCommands-authorized-phone-numbers) toe te staan voor SMS-commando's. Zo kun je met het tweede nummer de SMS-commando's [uitschakelen](#SMSCommands-other) als je belangrijkste telefoon voor bediening op afstand in verkeerde handen komt.
 
-De standaard minimale tijd tussen bolus-commando's is 15 minuten. Om veiligheidsredenen moet je minstens twee geautoriseerde telefoonnummers toevoegen om deze tijd korter te maken. Als je binnen 15 minuten na de vorige bolus opnieuw een bolus op afstand probeert, krijg je het antwoord “Bolus op afstand niet beschikbaar. Probeer het later opnieuw”
+The default minimum time delay between bolus commands is 15 minutes, counted from the moment the pump accepts a bolus. Om veiligheidsredenen moet je minstens twee geautoriseerde telefoonnummers toevoegen om deze tijd korter te maken. Als je binnen 15 minuten na de vorige bolus opnieuw een bolus op afstand probeert, krijg je het antwoord “Bolus op afstand niet beschikbaar. Probeer het later opnieuw”
 
 AAPS laat je ook per SMS weten of je commando's op afstand, zoals een bolus of een profielwijziging, zijn uitgevoerd. Het wordt aangeraden om ten minste 2 telefoonnummers te koppelen in de SMS communicator instellingen. Mocht één van de gekoppelde telefoons worden gestolen, dan zul je deze bevestigings-SMS'jes evengoed nog op het tweede telefoonnummer binnenkrijgen.
 
