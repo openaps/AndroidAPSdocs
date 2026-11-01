@@ -1,43 +1,43 @@
-# Making changes to your AAPS' configuration
+# Endre AAPS-konfigurasjonen din
 
-After you have completed the **[Setup Wizard](../SettingUpAaps/SetupWizard.md)**, you don't need to run the entire Wizard again if you want to only change parts of your **AAPS**' configuration.
+Når du har fullført **[Oppsettveiviseren](../SettingUpAaps/SetupWizard.md)**, trenger du ikke kjøre hele veiviseren på nytt hvis du bare vil endre deler av **AAPS**-konfigurasjonen din.
 
-There are three routes to change **AAPS**' configuration. As to which route you take, it is simply a matter of convenience or personal preference, as each route leads to the same settings.
+Det er tre veier til å endre konfigurasjonen i **AAPS**. Hvilken vei du velger, er bare et spørsmål om hva som er praktisk eller hva du foretrekker, siden alle veiene fører til de samme innstillingene.
 
 These are as follows:
 
-1. The **Configuration** screen,
-2. The **Settings** screen or
-3. A plugin's **Settings**, opened from its category in **Configuration**.
+1. Skjermen **Konfigurasjon**,
+2. Skjermen **Innstillinger** eller
+3. En plugins **Innstillinger**, åpnet fra kategorien dens i **Konfigurasjon**.
 
 Here we explain which option is most convenient for each situation:
 
 ## Configuration
 
-Open the **menu** (☰) in the top-left corner of the main screen and choose **Configuration**:
+Åpne **menyen** (☰) øverst til venstre på hovedskjermen og velg **Konfigurasjon**:
 
-![Open Configuration from the top-left menu](../images/v4/Configuration/configuration_menu.png)
+![Åpne Konfigurasjon fra menyen øverst til venstre](../images/v4/Configuration/configuration_menu.png)
 
-**Configuration** is used to **choose which plugins are active** — your CGM, pump, APS algorithm, sensitivity detection, synchronization and more, grouped by category. It is the same screen the Setup Wizard configured for you.
+**Konfigurasjon** brukes til å **velge hvilke plugins som er aktive** – CGM, pumpe, APS-algoritme, sensitivitetsdeteksjon, synkronisering og mer, gruppert etter kategori. Det er den samme skjermen som Oppsettveiviseren satte opp for deg.
 
-The documentation of the Configuration screen is available [here](../SettingUpAaps/ConfigBuilder.md).
+Dokumentasjonen for skjermen Konfigurasjon finner du [her](../SettingUpAaps/ConfigBuilder.md).
 
-## Settings
+## Innstillinger
 
-Tap the **Settings** (gear) icon in the top-right corner of the main screen. This opens the settings of **all enabled plugins in a single place**, grouped into expandable sections:
+Trykk på **Innstillinger**-ikonet (tannhjulet) øverst til høyre på hovedskjermen. Dette åpner innstillingene for **alle aktiverte plugins på ett sted**, gruppert i deler som kan utvides:
 
-![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
+![Skjermen Innstillinger med delene som kan utvides](../images/v4/Configuration/settings_overview.png)
 
-This is a good route if you are not really sure where to look for a configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
+Dette er en god vei hvis du ikke er helt sikker på hvor du skal lete etter et konfigurasjonsvalg, men den kan være litt tungvint hvis du vet at du bare vil endre konfigurasjonen for én bestemt plugin.
 
-The documentation of the settings is available [here](../SettingUpAaps/Preferences.md).
+Dokumentasjonen for innstillingene finner du [her](../SettingUpAaps/Preferences.md).
 
-## A plugin's Settings
+## En plugins innstillinger
 
-Inside **Configuration**, open a category and tap "**Settings**" underneath the active plugin. You are taken directly to the settings of **that plugin only**:
+Inne i **Konfigurasjon** åpner du en kategori og trykker på «**Innstillinger**» under den aktive pluginen. Du kommer rett til innstillingene for **bare den pluginen**:
 
-![Settings and Open plugin underneath the active plugin](../images/v4/Configuration/configuration_open_plugin.png)
+![Innstillinger og Åpne plugin under den aktive pluginen](../images/v4/Configuration/configuration_open_plugin.png)
 
-For example, this is a good route if you know that you want to change the configuration for your pump: open **Configuration → Pump**, then tap "**Settings**" under the selected pump.
+Dette er for eksempel en god vei hvis du vet at du vil endre konfigurasjonen for pumpen din: åpne **Konfigurasjon → Pumpe**, og trykk så på «**Innstillinger**» under den valgte pumpen.
 
-This is a "shortcut" to the same settings shown on the general **Settings** screen.
+Dette er en «snarvei» til de samme innstillingene som vises på den generelle skjermen **Innstillinger**.
