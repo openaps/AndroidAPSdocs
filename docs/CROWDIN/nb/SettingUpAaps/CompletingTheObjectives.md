@@ -42,7 +42,7 @@ The **Objectives** will need to be restarted from the beginning should you fail 
 Note - *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
 
 (objectives-objective2)=
-## Objective 2: Learn how to control AAPS
+## Opplæringsmål 2: Lær hvordan du kontrollerer AAPS
 
 **Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below. Each task shows its status (**1**): the orange "**Not completed yet**" turns into "**Completed, well done!**" as soon as **AAPS** has registered the action. Tap **Hint** (**2**) underneath a task to open the related documentation, in case you are not familiar with a specific action yet.
 
@@ -64,7 +64,7 @@ Tasks to complete **Objective 2** are:
 
 
 (objectives-objective3)=
-## Objective 3: Prove your knowledge
+## Opplæringsmål 3: Bevis kunnskapen din
 
 **Objective 3** requires the user to pass a multiple-choice exam which is designed to test your **AAPS** knowledge.
 
@@ -83,7 +83,7 @@ For each question, there may be more than one answer that is correct! If an inco
 From time to time, new features are added to **AAPS** which may require a new question to be added to the **Objectives**, particularly **Objective 3**. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other **Objectives** remain completed.
 ```
 
-## Objective 4: Starting on an open loop
+## Opplæringsmål 4: Starter med åpen loop
 
 The purpose of **Objective 4** is to recognize how often **AAPS** will evaluate the user's basal rate against glucose levels, and recommend temporary basal rate adjustments. As part of this **Objective**, you will activate open looping for the first time, and will accept 20 proposed temporary basal rate changes, and if required, apply these manually on your pump. You will also observe the impact of [**Temporary Targets**](../DailyLifeWithAaps/TempTargets.md). If you are not familiar with setting a temporary basal rate change in **AAPS** yet, see the pump actions in the **Manage** sheet ([Where did the Actions tab go?](#screens-action-tab)).
 
@@ -206,7 +206,7 @@ Minimal time to complete this objective: **28 days**. This is a mandatory wait t
 - Evaluate your carb absorption rate and consider changing the “min_5m_carbimpact”-parameter in [Settings → Absorption settings → min_5m_carbimpact](#Preferences-min_5m_carbimpact) if you find it too slow or too fast.
 
 (objectives-objective10)=
-## Objective 10: Automation
+## Opplæringsmål 10: Automasjon
 
 **Automations** become available when **Objective 10** is started.
 
