@@ -1,9 +1,9 @@
-# Κατάσταση μετάφρασης της εφαρμογής και της τεκμηρίωσης
+# State of translation for the app and the documentation
 
 Η κατάσταση ενημερώνεται μία φορά την ώρα και δείχνει μόνο την κατάσταση στο Crowdin.
 
 ```{tip}
-Προσοχή: το ποσοστό επιμέλειας είναι πάντα μικρότερο από το ποσοστό μετάφρασης, αλλά εμφανίζεται πάνω από το ποσοστό μετάφρασης.
+Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
 Είναι καλύτερο να κοιτάτε μόνο το ποσοστό μετάφρασης, για να δείτε αν υπάρχει δουλειά να γίνει.
 ```
 
