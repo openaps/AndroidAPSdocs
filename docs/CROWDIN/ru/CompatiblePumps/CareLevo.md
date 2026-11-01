@@ -134,7 +134,7 @@ Insulin delivery has stopped. Act now:
 * **Low Insulin**: less than 10 U remain. Deactivate the patch and change it.
 * **Patch Expired**: the patch reached the end of its life. Deactivate the patch and change it.
 * **Low Battery**: discard the patch and change it.
-* **High/Low Temperature**: move to a suitable temperature, between 40 ℉ and 99 ℉ (5 ℃ and 37 ℃).
+* **High/Low Temperature**: move to a suitable temperature, between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
 * **Auto-Off**: the patch stopped because the Auto-Off alert was ignored. Press **Start Insulin** to restart basal delivery.
 * **Patch Application Timeout**, **Self-Diagnosis Failed**, **Patch Error**, **Occlusion** and **Needle Insertion Error**: deactivate the patch and change it.
 
@@ -145,7 +145,7 @@ Insulin delivery continues, but something needs your attention:
 * **Low Insulin**: the reservoir reached the amount set in **Low Insulin Notification Setting**. Prepare to change the patch.
 * **Patch Will Expire Soon** and **Patch Operating Life Expired**: change the patch.
 * **Low Battery**: prepare to change the patch.
-* **High/Low Temperature**: delivery is paused until the patch is back between 40 ℉ and 99 ℉.
+* **High/Low Temperature**: delivery is paused until the patch is back between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
 * **Auto-Off**: tap **OK**. If ignored, the alert escalates to a critical alarm and delivery stops.
 * **Patch Activation Incomplete**: tap **OK** to complete the activation.
 * **Start Insulin**: the pause you set has ended. Tap **Start Insulin** to resume delivery.
