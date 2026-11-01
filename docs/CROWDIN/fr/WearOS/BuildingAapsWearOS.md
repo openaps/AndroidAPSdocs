@@ -78,7 +78,7 @@ Ensuite : installez l'apk Wear sur la montre, voir [Configurer AAPS sur votre m
 
 Pendant la compilation de l'application **AAPS** complète (et en fait de toute application signée), Android Studio génère un fichier .json dans le même dossier. Cela provoque ensuite des erreurs de [modifications non validées (uncommitted changes)](#troubleshooting_androidstudio-uncommitted-changes) quand vous essayez de compiler l'application signée suivante, comme l'application Wear d'**AAPS**. Le moyen le plus rapide de résoudre ce problème est d'aller dans le dossier où l'application AAPS complète a été compilée. Votre dossier ressemble probablement à :
 
-`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\aapsclient\release.`
+`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\full\release.`
 
 Supprimez le fichier .json inutile, ou déplacez-le hors du dossier. Essayez ensuite de compiler à nouveau l'application Wear d'**AAPS**. Si cela ne fonctionne pas, le [guide de dépannage](../GettingHelp/TroubleshootingAndroidStudio.md) plus détaillé vous aidera à trouver le fichier qui pose problème, qui peut aussi être votre fichier keystore.
 
