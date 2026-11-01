@@ -18,7 +18,7 @@ Schaue im Abschnitt [Was sich mit AAPS Version geändert hat](V4Changes.md) nach
 
 Wenn eine neue Version verfügbar wird, wirst Du mit einer Meldung, wie dieser, benachrichtigt:
 
-![Update-Info](../images/AAPS_LoopDisable90days.png)
+![Update info](../images/AAPS_LoopDisable90days.png)
 
 Solltest Du bis zum Fälligkeitsdatum das Update nicht durchgeführt haben, wird **AAPS** in den „Open Loop“ wechseln.
 
