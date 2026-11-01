@@ -131,7 +131,7 @@ Nach jeder Auswahl ist eine Bestätigung nötig.
 
 Du musst herausfinden, warum Du doppelte Glukosewert-Daten erhältst:
 
-* Ist die Dexcom-Bridge auf Deiner Nightscout-Seite aktiviert? Deaktiviere die Bridge, indem Du in das Administrations-Menü Deiner Nightscout-Instanz gehst, bearbeite die „enable“-Variable und entferne dort den „bridge“-Teil. (Für Heroku [findest Du hier Details](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* Ist die Dexcom-Bridge auf Deiner Nightscout-Seite aktiviert? Deaktiviere die Bridge, indem Du in das Administrations-Menü Deiner Nightscout-Instanz gehst, bearbeite die „enable“-Variable und entferne dort den „bridge“-Teil. (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * Laden mehrere Quellen Deine Glukosewerte zu Nightscout hoch? Wenn Du die BYODA-App verwendest, aktiviere den Upload in **AAPS**, aber nicht in xDrip+, falls Du xDrip+ nutzt.
 * Hast Du Follower, die Deine Glukosewerte erhalten und sie erneut auf Deine Nightscout-Seite hochladen?
 * Letzter Ausweg: Wähle in den [NSClient-Einstellungen](#Preferences-nsclient) die Synchronisierungseinstellungen und schalte die Option „CGM Daten von NS empfangen“ aus.
@@ -342,7 +342,7 @@ Ist **PRED** eingeschaltet, zeichnet AAPS seine Vorhersagen als **gepunktete Lin
 
 Ergeben zwei Vorhersagen dieselben Werte, überlagern sich ihre Punkte, und Du siehst nur eine der Farben (zum Beispiel UAM über IOB, wenn der BZ flach ist).
 
-* **COB**-Linie (orange): [Kohlenhydrate an Bord](CobCalculation) (orange steht in AAPS durchgehend für COB und Kohlenhydrate)
+* **COB** line (orange): [carbs on board](CobCalculation.md) (orange is used throughout AAPS for COB and carbs)
     
     Die Prognosekurve zeigt, wohin sich der Glukosewert (nicht die COB selbst!) auf der Grundlage der aktuellen **Profil**-Einstellungen und unter der Annahme, dass die Abweichungen aufgrund der Kohlenhydratresorption konstant bleiben, entwickeln wird. Diese Linie erscheint nur, wenn es bekannte COB gibt.
 
@@ -364,7 +364,7 @@ Ergeben zwei Vorhersagen dieselben Werte, überlagern sich ihre Punkte, und Du s
 
 * **aCOB**-Linie (blasses, durchscheinendes Orange): beschleunigte Kohlenhydrat-Resorption
     
-    Ähnlich wie COB, aber unter Annahme einer festen Kohlenhydrat-Resorptionsrate von 10 mg/dl/5 min (-0,555 mmol/l/5 min). Veraltet und nur begrenzt nützlich.
+    Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. Veraltet und nur begrenzt nützlich.
     
     *Diese Linie ist nur sichtbar, wenn der ältere [AMA](#Config-Builder-aps)-Algorithmus genutzt wird.*
 
@@ -485,7 +485,7 @@ Diese Linie zeigt den Grad an, in dem der Glukosewert nur aufgrund der Insulinak
 
 ![Deviations and BGI](../images/main/graph_dev_bgi.png)
 
-Es ergibt eine gute Kombination diese Linie zusammen mit den Balken für Abweichungen anzuzeigen. Beide haben die gleiche Skala, die für die anderen optionalen Daten eine andere ist. Daher sollten sie, wie unten dargestellt, in einem separaten Diagramm gezeigt werden. Die Linie der Blutzuckerwirkung (BGI) mit den Balken der Abweichungen zu vergleichen, ist ein weiterer Weg zu verstehen, wie und warum **Glukosewerte** schwanken. Hier, zum Zeitpunkt **1**, liegen die Balken der Abweichung deutlich über der BGI-Linie: Der BZ steigt stärker, als sich allein durch die Insulinaktivität erklären lässt (zum Beispiel nach Kohlenhydraten). Zum Zeitpunkt **2** liegen die Balken der Abweichung unter null (rot): Der BZ ist niedriger, als der Algorithmus erwartet hat.
+Es ergibt eine gute Kombination diese Linie zusammen mit den Balken für Abweichungen anzuzeigen. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Die Linie der Blutzuckerwirkung (BGI) mit den Balken der Abweichungen zu vergleichen, ist ein weiterer Weg zu verstehen, wie und warum **Glukosewerte** schwanken. Hier, zum Zeitpunkt **1**, liegen die Balken der Abweichung deutlich über der BGI-Linie: Der BZ steigt stärker, als sich allein durch die Insulinaktivität erklären lässt (zum Beispiel nach Kohlenhydraten). Zum Zeitpunkt **2** liegen die Balken der Abweichung unter null (rot): Der BZ ist niedriger, als der Algorithmus erwartet hat.
 
 ### Abschnitt F - Schnellstart-Leiste
 
@@ -507,13 +507,13 @@ Um einen Bolus abzugeben, ohne den [Bolus-Rechner](#aaps-screens-bolus-wizard) z
 
 Mit **Starte Essens-TT** kannst Du automatisch Dein [temporäres Ziel „Bald essen“](#TempTargets-eating-soon-temp-target) starten.
 
-Wenn Du keinen Bolus über die Pumpe abgeben, sondern nur eine Insulinmenge eintragen willst (z. B. mit dem Pen gegebenes Insulin), schalte „**Bolus wird nur aufgezeichnet**“ ein. Eine zusätzliche Zeile **Zeit**, eingestellt auf **Jetzt**, erlaubt es, eine frühere Insulingabe einzutragen: Ändere sie mit **-** / **+** oder tippe auf den Pfeil, um die Minuten einzutippen oder Datum und Uhrzeit auszuwählen.
+If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only (not delivered by pump)**". Eine zusätzliche Zeile **Zeit**, eingestellt auf **Jetzt**, erlaubt es, eine frühere Insulingabe einzutragen: Ändere sie mit **-** / **+** oder tippe auf den Pfeil, um die Minuten einzutippen oder Datum und Uhrzeit auszuwählen.
 
 ![The Time row, folded](../images/v4/Screens/insulin_dialog_record_only_time.png) ![The Time row, opened with the chevron](../images/v4/Screens/insulin_dialog_time_open.png)
 
 Mit den Knöpfen **+0.5 / +1.0 / +2.0** kannst Du die Insulinmenge schnell erhöhen. Die Schritte lassen sich in den [Einstellungen des Bolus-Rechners](#Preferences-deliver-this-part-of-bolus-wizard-result) ändern.
 
-Der Insulin-Dialog kann auch verwendet werden, wenn die Pumpe pausiert oder getrennt ist, z. B. um mit einem Pen gespritztes Insulin einzutragen. In diesem Fall ist „**Bolus wird nur aufgezeichnet**“ fest eingeschaltet (rot angezeigt), und es erscheinen zusätzliche Felder, um den Insulintyp und einen zeitlichen Versatz (**Zeit**) für eine frühere Gabe auszuwählen:
+Der Insulin-Dialog kann auch verwendet werden, wenn die Pumpe pausiert oder getrennt ist, z. B. um mit einem Pen gespritztes Insulin einzutragen. In this case, "**Bolus will be recorded only (not delivered by pump)**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
 
 ![Insulin dialog with pump disconnected](../images/main/insulin_dialog_pump_disconnected.png)
 
@@ -527,7 +527,7 @@ Bestimmte [vordefinierte temporäre Ziele](#TempTargets-hypo-temp-target) (Hypo,
 
 **Kohlenhydrat Zeit**: Wann wirst Du die Kohlenhydrate essen bzw. wann hast Du sie gegessen.
 
-**Dauer**: Wird für [„eCarbs“](ExtendedCarbs) (dt. verzögerte Kohlenhydrate) genutzt. Diese Zeile ist eingeklappt, damit Du nicht versehentlich die Gramm hier eintippst: Ändere sie mit **-** / **+** oder tippe auf den Pfeil, um sie zu öffnen und einen Wert einzutippen.
+**Duration**: To be used for ["extended carbs"](ExtendedCarbs.md). Diese Zeile ist eingeklappt, damit Du nicht versehentlich die Gramm hier eintippst: Ändere sie mit **-** / **+** oder tippe auf den Pfeil, um sie zu öffnen und einen Wert einzutippen.
 
 Mit den Knöpfen **+5 / +10 / +20** kannst Du die Kohlenhydratmenge schnell erhöhen.
 
@@ -632,7 +632,7 @@ Der Ergebnis-Knopf unten zeigt den vorgeschlagenen Bolus. Tippst Du darauf, wirs
 Good to know:
 
 * Liegt der berechnete Bolus über Deinem **[maximalen Bolus](#Preferences-maximum-bolus)**, wird er auf den maximalen Bolus verringert, und die Bestätigung zeigt die Warnung „Bolus Einschränkung angewendet“. Ein [QuickWizard](../DailyLifeWithAaps/QuickWizards.md) wird stattdessen abgelehnt.
-* Wird der Bolus nur aufgezeichnet (zum Beispiel, während die Pumpe getrennt ist), bleibt die Warnung „**Bolus wird nur aufgezeichnet**“ oben im Dialog stehen, auch wenn Du scrollst.
+* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only (not delivered by pump)**" warning stays at the top of the dialog, also when you scroll.
 * Ein Bolus, den Du selbst abgibst, hat Vorrang vor einem [SMB](#Open-APS-features-super-micro-bolus-smb), der noch auf die Abgabe wartet: Der SMB wird verworfen, und der Loop rechnet neu. Wird gerade ein SMB abgegeben, wird Dein Bolus mit der Meldung „Ein SMB wird gerade abgegeben. Versuche es erneut, sobald die Abgabe abgeschlossen ist.“ abgelehnt. Es wird kein Insulin abgegeben, und mit diesem Bolus eingegebene Kohlenhydrate werden nicht gespeichert: Warte einen Moment und gib sie erneut ein.
 
 (AapsScreens-wrong-cob-detection)=
