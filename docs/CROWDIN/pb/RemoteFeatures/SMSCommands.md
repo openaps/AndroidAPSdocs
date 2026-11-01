@@ -21,7 +21,7 @@ Se você ativar o **Comunicador SMS** no **AAPS**, lembre-se de que o telefone c
 
 Além disso, é recomendado permitir um [segundo número de telefone](#SMSCommands-authorized-phone-numbers) para os comandos SMS. Assim, você pode usar o segundo número para [desativar](#SMSCommands-other) o Comunicador SMS, caso o seu telefone remoto principal fique comprometido.
 
-O intervalo mínimo padrão entre comandos de bólus é de 15 minutos. Por motivos de segurança, você precisa adicionar pelo menos dois números de telefone autorizados para mudar isso para um intervalo menor. Se você tentar aplicar outro bólus remoto dentro de 15 minutos após o bólus anterior, vai receber a resposta “O bólus remoto não está disponível. Tente novamente mais tarde.”
+The default minimum time delay between bolus commands is 15 minutes, counted from the moment the pump accepts a bolus. Por motivos de segurança, você precisa adicionar pelo menos dois números de telefone autorizados para mudar isso para um intervalo menor. Se você tentar aplicar outro bólus remoto dentro de 15 minutos após o bólus anterior, vai receber a resposta “O bólus remoto não está disponível. Tente novamente mais tarde.”
 
 O AAPS também vai informar você por mensagem de texto se os seus comandos remotos, como um bólus ou uma troca de perfil, foram executados. É recomendável configurar tudo de forma que as mensagens de confirmação sejam enviadas para pelo menos dois números de telefone diferentes, para o caso de um dos telefones que as recebem ser roubado.
 
