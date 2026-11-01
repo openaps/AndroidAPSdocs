@@ -23,7 +23,7 @@
 
 你也可以同時或稍後開始翻譯文件。
 
-你可以在[這裡](#StateOfTranslations)檢查應用程式和文件的翻譯狀態。
+You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
 
 * 如果你想將**應用程式**翻譯成其他語系（感謝你的幫助），請使用 [Crowdin](https://crowdin.com/project/androidaps)。
 * 如果你想將**文件**翻譯成其他語系（感謝你的幫助），請使用 [Crowdin](https://crowdin.com/project/androidapsdocs)。 
