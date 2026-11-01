@@ -70,8 +70,8 @@
 
 胰島素編輯器可讓您進行以下設定：
 
-* 為設定檔設定容易辨識的**胰島素暱稱**，
-* 設定**峰值**（胰島素活性達到最高點所需的時間，單位為分鐘）和 **DIA**（胰島素作用時間，單位為小時）；您可以輸入數值，或使用**–**／**+**按鈕調整，
+* give the insulin an **Insulin nickname** so it is easy to recognise,
+* set the **Peak** (time to maximum insulin activity, in minutes) and the **DIA** (Duration of Insulin Action, in hours), either by typing the value or using the **–** / **+** buttons,
 * 點選**從預設值載入峰值**按鈕，選擇 **Novorapid**（75 分鐘）、**Fiasp**（55 分鐘）或 **Lyumjev**（45 分鐘），即可一次填入該胰島素的標準峰值時間。
 
 無論使用哪種胰島素，允許的數值範圍都相同：
@@ -225,17 +225,48 @@ AAPS 會使用數學公式來模擬胰島素作用的時間軸，並以**DIA**�
     - **不校正**：直接使用傳感器的數值。傳感器已在出廠時完成校正，且數值準確時，請使用此選項。此為預設選項。
     - **線性校正**：**AAPS** 會根據指尖採血紀錄計算斜率和偏移量，並用來修正感測器數值。
     
-    **線性校正**的運作方式：
+    How to use **Linear calibration**:
     
-    - 必須記錄一次**更換感測器**，讓系統知道感測器使用期間何時開始。每次使用感測器的前 2 小時會略過，作為暖機時間。
-    - 至少需要 **2 筆指尖採血紀錄**。較近期的紀錄會比舊紀錄有更大的影響。
-    - 只有在結果落於安全範圍內時，才會套用修正。如果輸入紀錄的時間間隔太短，系統只會修正偏移量。
-    - **開啟外掛**可查看校正狀態、目前使用的斜率和修正值，以及指尖採血紀錄清單。您可以使用 **新增校正**新增紀錄，也可以移除錯誤的紀錄。
+    1. Select **Linear calibration** in the **Calibration** category.
+    2. When you insert a new sensor, log the sensor change: use **Log sensor change** on the calibration screen, or enter a CGM sensor insert in the Careportal. This tells **AAPS** when the sensor session started. If **AAPS** notices a gap of more than 30 minutes in the readings, it may ask you to mark a sensor change; this prompt appears on the master only, not on a client.
+    3. Open the plugin and tap **Add calibration**. Enter your fingerstick value. **AAPS** pairs it with the sensor value from the last 10 minutes.
     
-    ```{admonition} 請謹慎校正
+    A calibration is accepted only when:
+    
+    - a sensor change is logged and at least **2 hours** have passed since then (warm-up),
+    - your glucose is stable. If it changes too fast, the dialog tells you and shows the limit,
+    - there is a CGM reading from the last 10 minutes,
+    - it is for the current moment. You cannot enter older fingerstick values.
+    
+    How the correction works:
+    
+    - **AAPS** draws a straight line through the pairs of the current sensor: `corrected value = slope × sensor value + offset`.
+    - Newer pairs count more than older ones: a pair that is 2 days old counts about 37 %, a 4-day-old pair about 14 %. The line therefore follows your sensor as it drifts.
+    - At least **2 pairs** are needed.
+    - If the pairs are close together (less than 54 mg/dL / 3 mmol/L apart), only the values are shifted (offset, no slope).
+    - The slope is kept between 0.55 and 1.6. A slope outside this range is limited to the nearest value.
+    - Safety limit: if the correction at 100 mg/dL (5.5 mmol/L) would be more than ±30 mg/dL (1.7 mmol/L), no correction is applied. This protects you from a wrong entry.
+    
+    What it changes:
+    
+    - The corrected value is used everywhere: the BG on the main screen, the graph and the loop. The sensor readings themselves are not changed. The correction is applied on top, also to the earlier readings of the current sensor.
+    - A new sensor change starts from zero. Pairs from earlier sensors no longer count.
+    - On the graph, a calibration is shown as a marker at the fingerstick value.
+    - Calibrations are synchronized through Nightscout, so your clients show the same corrected values.
+    
+    Check and remove entries:
+    
+    - **Open plugin** shows the status (for example *Slope 0.85, mid-range correction -0.4*), a chart of your pairs with the line, and the list of entries.
+    - If an entry is wrong (for example, you had sugar on your finger), tap the bin icon next to it. The line is calculated again at once.
+    
+    ```{admonition} Using xDrip+ as BG source?
+    :class: note
+    xDrip+ has its own calibration. Calibrate in one place only, so that the sensor values are not corrected twice.
+    
+
+    {admonition} Calibrate with care
     :class: warning
-    錯誤的指尖採血血糖值會導致血糖數值錯誤，進而造成胰島素劑量錯誤。測量前請先洗手，血糖快速變化時請勿進行校正。
-    
+    A wrong fingerstick value leads to wrong glucose values and therefore to wrong insulin dosing. 測量前請先洗手，血糖快速變化時請勿進行校正。
 
 ![設定 &gt; 校正](../images/v4/Configuration/configuration_calibration.png)
 
@@ -274,7 +305,7 @@ AAPS 會使用數學公式來模擬胰島素作用的時間軸，並以**DIA**�
 * [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 * [Carelevo](../CompatiblePumps/CareLevo.md)
 * 虛擬幫浦：開放循環 - 僅限**AAPS**建議 
-  * 當你開始使用**AAPS**時，在首次[完成目標](../SettingUpAaps/CompletingTheObjectives.md)的過程中
+  * as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
   * 針對尚未擁有驅動程式的幫浦
 
 (config-builder-wrong-pump-data)=
@@ -295,7 +326,7 @@ AAPS 會使用數學公式來模擬胰島素作用的時間軸，並以**DIA**�
 
 選擇你正在使用的敏感性偵測類型。欲了解不同設計的更多詳細資訊，請[在這裡閱讀](../DailyLifeWithAaps/SensitivityDetectionAndCob.md)。此功能會即時分析歷史資料，並在你對胰島素的反應比平常更敏感（或相反，更具抗性）時進行調整。如需了解敏感度比率的計算方式，請參閱 [AAPS 主要功能 &gt; 自動敏感度調整](#Open-APS-features-autosens)。
 
-您可以在主畫面的[額外圖表](#AapsScreens-section-g-additional-graphs)中查看敏感度：選取 SEN 並查看白色線條。請注意，你需要在[目標 8](#objectives-objective8)中，以便讓敏感度檢測/[自動敏感調整](#Open-APS-features-autosens)所提供的胰島素量。在達到該目標之前，Autosens 的百分比/圖表中的線僅供參考。
+You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs), by selecting SENS% and watching the white line. 請注意，你需要在[目標 8](#objectives-objective8)中，以便讓敏感度檢測/[自動敏感調整](#Open-APS-features-autosens)所提供的胰島素量。在達到該目標之前，Autosens 的百分比/圖表中的線僅供參考。
 
 ### 吸收設定
 
