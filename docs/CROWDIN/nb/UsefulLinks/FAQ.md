@@ -181,7 +181,7 @@ Når du looper, bør du prøve disse stegene:
 
 For- og etterarbeid med disse innstillingene er viktig. Gjør endringene i god tid før trening, og ta hensyn til effekten av at musklene fyller opp lagrene sine etterpå.
 
-Malene for [scenene](#scenes) *Trening* og *Natt etter trening* samler disse innstillingene, så du kan starte dem med ett trykk. Hvis du trener regelmessig på samme tid (for eksempel en treningstime på treningssenteret), kan du vurdere å bruke [automasjon](../DailyLifeWithAaps/Automations.md) til å starte profilbyttet og det midlertidige målet, eller scenen. Stedsbasert automasjon kan også være en idé, men gjør forarbeidet vanskeligere.
+Malene for [scenene](#scenes) *Trening* og *Natt etter trening* samler disse innstillingene, så du kan starte dem med ett trykk. Hvis du trener regelmessig på samme tid (for eksempel en treningstime på treningssenteret), kan du vurdere å bruke [Automasjoner](../DailyLifeWithAaps/Automations.md) til å starte profilbyttet og det midlertidige målet, eller scenen. Stedsbasert automasjon kan også være en idé, men gjør forarbeidet vanskeligere.
 
 Prosenten for profilbyttet, verdien for midlertidig mål for aktivitet og det beste tidspunktet for endringene er individuelt. Start på den sikre siden når du leter etter riktig verdi for deg (start med lavere prosent og høyere midlertidig mål).
 
