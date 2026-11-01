@@ -35,7 +35,7 @@ The [Omnipod System](https://www.omnipod.com/current-podders/resources/omnipod-s
 
 - ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **胰岛素输注设备**
 
-> 该组件负责解析来自AAPS手机端通过储药器通信设备传输的控制指令。
+> Component that will interpret commands received from the Pod communication device originating from your AAPS enabled phone.
 > 
 > > - 全新Omnipod储药器（Eros系列 - **非DASH型号**）
 
@@ -47,7 +47,7 @@ In this page, **RileyLink** means any of the pod communication devices listed ab
 
 **安全第一** - 请勿在无法处理突发故障的环境中操作（必须备有备用储药器、胰岛素、电量充足的RileyLink及手机设备）。
 
-**AAPS Omnipod驱动激活储药器后，您的Omnipod PDM将无法继续使用**。此前您通过Omnipod PDM向Eros储药器发送指令。 Eros储药器仅允许单一设备与其建立通信连接。成功激活储药器的设备将成为此后唯一获准与其通信的设备。这意味着当您通过AAPS Omnipod驱动使用RileyLink激活Eros储药器后，**PDM将无法再控制该储药器**。配备RileyLink的AAPS Omnipod驱动现已成为您的实际控制设备。*这并不意味着您应该丢弃PDM，建议将其保留作为备用设备，以防AAPS运行异常时应急使用。*
+**AAPS Omnipod驱动激活储药器后，您的Omnipod PDM将无法继续使用**。此前您通过Omnipod PDM向Eros储药器发送指令。 Eros储药器仅允许单一设备与其建立通信连接。成功激活储药器的设备将成为此后唯一获准与其通信的设备。这意味着当您通过AAPS Omnipod驱动使用RileyLink激活Eros储药器后，**PDM将无法再控制该储药器**。配备RileyLink的AAPS Omnipod驱动现已成为您的实际控制设备。 *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies when AAPS is not working correctly.*
 
 **Only one RileyLink at a time can communicate with a pod.** **AAPS** remembers one paired RileyLink. If you pair a different one, it replaces the previous one.
 
@@ -281,7 +281,7 @@ If activation was interrupted after priming (for example the app was closed), pr
 
 The process below shows you how to suspend and resume insulin delivery.
 
-*NOTE - if you do not see a **Suspend** button*, it is hidden by default. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+*NOTE - if you do not see a **Suspend** button*, it is hidden by default. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### 暂停胰岛素输注
 
@@ -591,7 +591,7 @@ The buttons at the bottom of the pump screen change depending on the situation. 
   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this is a text button named **Set time** on the Omnipod pump screen.
   ```
 
-- **Suspend:** Suspends insulin delivery on the active pod. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
+- **Suspend:** Suspends insulin delivery on the active pod. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
 
   ![暂停](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Settings for the pod communication device. You pair the device itself with the *
 
 提供高级设置以协助调试。
 
-- **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button on the Omnipod pump screen.
+- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
 - **Show Pulse Log button in Pod Management menu:** This setting is still listed, but the current version of the pump screen has no **Pulse Log** button.
 
 - **Show RileyLink Stats button in Pod Management menu:** Hide or display the **RileyLink Stats** button on the Omnipod pump screen.
@@ -896,7 +896,7 @@ Please note that the Omnipod driver presents a variety of unique alerts on the *
 
 提示性警报：Pod已暂停。
 
-#### 基础率配置文件设置失败。输注可能已暂停！ Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed.
+#### 基础率配置文件设置失败。输注可能已暂停！ Please manually refresh the Pod status on the pump screen and resume delivery if needed.
 
 Informational alert that the Pod basal profile setting has failed. Open the Omnipod pump screen and press **Refresh**, then **Resume Delivery** if needed.
 
