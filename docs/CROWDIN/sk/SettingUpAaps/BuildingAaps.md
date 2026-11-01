@@ -12,7 +12,7 @@ Aplikáciu AAPS môžete zostaviť tromi spôsobmi:
 
 ### Zostavenie v prehliadači (odporúčané)
 
-Aplikáciu môžete zostaviť zo smartfónu pomocou GitHub Actions. Z telefónu s Androidom vás celým postupom prevedie stránka nastavenia [AAPS Builder](#aaps-builder) a každé zostavenie spúšťate sami. Z počítača alebo z iPhonu môžete zostavovať aj pomocou forku a aplikáciu uložiť na svoj Disk Google.
+You can build the app in a web browser using GitHub Actions. Z telefónu s Androidom vás celým postupom prevedie stránka nastavenia [AAPS Builder](#aaps-builder) a každé zostavenie spúšťate sami. Z počítača alebo z iPhonu môžete zostavovať aj pomocou forku a aplikáciu uložiť na svoj Disk Google.
 
 **[Postupujte podľa týchto pokynov.](./BrowserBuild.md)**
 
