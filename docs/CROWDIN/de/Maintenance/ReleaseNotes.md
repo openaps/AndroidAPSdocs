@@ -69,7 +69,7 @@ Erscheinungsdatum: 31.10.2026
 - Kotlin Multiplattform-Migration, Client für Windows, Mac, Linux-Desktop und iOS @MilosKozak
 - [Szenen](../DailyLifeWithAaps/Scenes.md): Speichere eine Aktionen-Abfolge und führe diese gemeinsam aus @MilosKozak
 - [Master ↔ Client Steuerung](../RemoteFeatures/ClientMasterControl.md): Sende Befehle vom Client-Smartphone an den Master @MilosKozak
-  - [Client-Rollen](#client-master-control-roles): Nur Lesen, Mahlzeiten, Betreuer oder Admin für jeden Client @MilosKozak
+  - [Client-Rollen](#client-master-control-roles): Schreibgeschützt, Mahlzeiten, Betreuer oder Administrator für jeden Client @MilosKozak
   - [Gehärteter Modus](#client-master-control-hardened-mode): Mit aktivierter Client-Steuerung übernimmt der Master nur Änderungen von gekoppelten Clients @MilosKozak
   - Koppeln mit einem QR-Code, der auch Nightscout auf dem Client einrichtet, oder mit einer PIN; das Koppelungs-Secret wird direkt nach dem Pairing ersetzt @MilosKozak
   - [Eigenes Nightscout-Token](#client-master-control-own-token) für jeden Client, nur mit den vom Client benötigten Rechten @MilosKozak
