@@ -1,12 +1,12 @@
-# Useful resources to read before you start
+# Nyttige ressurser å lese før du starter
 
-Before you build your rig, you're going to have to do a lot of reading in order to understand how everything works and to get the best out of it. We've put together a list of places you can go to get you started and hopefully answer a lot of your questions.
+Før du bygger systemet ditt, må du lese mye for å forstå hvordan alt fungerer og for å få mest mulig ut av det. Vi har satt sammen en liste over steder du kan gå til for å komme i gang, og som forhåpentligvis svarer på mange av spørsmålene dine.
 
-## Further reading
+## Mer å lese
 
 [OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
 
-[OpenAPS documentation - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
+[OpenAPS-dokumentasjonen - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
 
 [Loop Docs - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
@@ -26,13 +26,13 @@ Before you build your rig, you're going to have to do a lot of reading in order 
 
 [https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
-[“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown
+[“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) av Adam Brown
 
-[“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner
+[“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) av Gary Scheiner
 
-["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts
+["Pumping insulin"](https://amzn.eu/d/iaCsFa2) av John Walsh & Ruth Roberts
 
-## Background reading and articles about DIY closed looping
+## Bakgrunnslesing og artikler om DIY lukket loop
 
 <https://hackaday.com/2016/12/19/closing-the-loop-on-an-artificial-pancreas/>
 
@@ -40,7 +40,7 @@ Before you build your rig, you're going to have to do a lot of reading in order 
 
 <https://btvnovinite.bg/video/bulgaria/dnes-e-svetovnijat-den-za-borba-s-diabeta.html>
 
-## Stuff on YouTube
+## På YouTube
 
 [Tim Omer: Empowered Citizen "Health Hackers" - We Are Not Waiting! - https://www.youtube.com/watch?v=RjhkRmL1wOI](https://www.youtube.com/watch?v=RjhkRmL1wOI)
 
