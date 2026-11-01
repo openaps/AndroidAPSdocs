@@ -88,12 +88,12 @@ Het bovenstaande verschilt per **AAPS**-systeem en per levensstijl.
 
 ### Glykemische index en effect op de bloedglucose
 
-De uitdaging voor de **UAM**-modus wordt groter naarmate het 'effect op de bloedglucose' ('EBG') groter wordt
+The challenge for the **UAM** mode rises with rising 'Effect on Blood Glucose' ('EBG')
 
 - Begin gematigd/laag, en stem de instellingen van je **Profiel** af. Pas daarna "test" je maaltijden met een hoog **EBG**.
 - Overweeg een eerste bolus van < 50% als je eten met een zeer hoog **EBG** eet.
 
-1) **Geen EBG**: bijv. vers vlees, vis, eieren, spek, oliën, kaas. 2) **Laag EBG**: bijv. verse groenten en bessen, paddenstoelen, noten, melk, yoghurt, hüttenkäse. 3) **Gemiddeld EBG**: bijv. volkorenbrood/-noedels, aardappelen, wilde rijst, haver, gedroogd fruit. 4) **Hoog EBG**: bijv. tarwebrood, stokbrood, toast, wafels, koekjes, aardappelpuree, noedels, rijst. 5) **Zeer hoog EBG**: bijv. suiker, zoete dranken, vruchtensappen, cornflakes, snoep, zoetigheid, chips, zoute pretzelstengels.
+1) **Geen EBG**: bijv. vers vlees, vis, eieren, spek, oliën, kaas. 2) **Laag EBG**: bijv. verse groenten en bessen, paddenstoelen, noten, melk, yoghurt, hüttenkäse. 3) **Gemiddeld EBG**: bijv. volkorenbrood/-noedels, aardappelen, wilde rijst, haver, gedroogd fruit. 4) **High EBG**: e.g. wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **Zeer hoog EBG**: bijv. suiker, zoete dranken, vruchtensappen, cornflakes, snoep, zoetigheid, chips, zoute pretzelstengels.
 
 ![Glykemische index en effect op de bloedglucose](../images/fullClosedLoop01.png)
 
@@ -108,7 +108,7 @@ Bij sport of beweging met een pomp of hybride gesloten loop wordt aangeraden dat
 
 Bij **FCL** is het algoritme afgestemd om **UAM** te herkennen en automatisch insuline te geven tegen stijgingen van de **BG**.  Een hoog **Tijdelijk streefdoel** en een lager **Profiel percentage** (al actief rond het begin van de maaltijd) moeten ruim vóór elke activiteit worden ingesteld.
 
-Ongewone of onregelmatige sportactiviteit is moeilijk voor **FCL**. Voor sport moet je vooruit plannen (vooral als je minder noodkoolhydraten/snacks wilt nodig hebben bij een lage waarde tijdens het sporten). Na een actieve dag wordt aangeraden om voor de nacht, als het avondeten helemaal verteerd is, een lager **Profiel percentage** in te stellen: stel in de **Automatiseringen** een verhoogde (>100 mg/dl) **BG**-streefwaarde in, en kies in de **Instellingen** van **AAPS** “geen **SMB's** bij een verhoogde streefwaarde”.
+Ongewone of onregelmatige sportactiviteit is moeilijk voor **FCL**. Voor sport moet je vooruit plannen (vooral als je minder noodkoolhydraten/snacks wilt nodig hebben bij een lage waarde tijdens het sporten). After an active day it is recommended that a lower  **Percentage Profile** is set for overnight after the evening meal is fully digested: set in **Automations** an elevated (>100 mg/dL) **BG**  target, with **Enable SMB with high temp target** switched off in **AAPS** **Settings**.
 
 ## Hindernissen bij kinderen
 
@@ -151,7 +151,7 @@ Voor een succesvolle **FCL** is de **ISF** de belangrijkste instelling om af te 
 
 **AAPS** Master staat in **HCL**-modus een tijdelijk **Profiel** tot 130% toe. De **ISF** versterken gaat in 3 stappen:
 
-- Stap 1 - bekijk de **ISF** die in het **Profiel** geldt voor het uur van deze maaltijd, en kijk of bijv. Autosens een aanpassing voorstelt die rekening houdt met de huidige insulinegevoeligheid van het lichaam (van de laatste paar uur).
+- Step 1 -  review the **ISF** applicable for this meal time hour within the **Profile**, and see whether e.g. Autosens suggest a modification that takes care of the current (last few hours’) insulin sensitivity status of the body.
 - Stap 2 - pas een factor toe (1/Profiel%, zoals ingesteld in de **Automatisering**) om de **ISF** te versterken.
 - Stap 3 - controleer of de voorgestelde **ISF** binnen de ingestelde veiligheidsgrenzen valt.
 
@@ -169,9 +169,9 @@ Het deel hieronder legt uit hoe je de Voorwaarden van **Automatiseringen** combi
 
 ### Automatisch grote SMB's bij stijgende bg
 
-De sleutel tot een succesvolle **FCL**: **aan het begin van een stijging van de BG door een maaltijd moet de loop zo snel mogelijk zeer grote automatische SMB's geven** om de benodigde **IOB** “in te halen” (vergelijk met de bolus die je in **HCL** meestal geeft voor een vergelijkbare maaltijd!)
+The key to successful **FCL**: **at the beginning of BG increases from meals, very large automatic SMBs must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in **HCL**!)
 
-Daarvoor moet je de gegevens van je **HCL** analyseren om te bepalen welke **delta's** waarschijnlijk niet met een maaltijd te maken hebben, en welke delta's wel.
+To achieve this, data from your **HCL** should be analyzed to determine which **deltas** might not be meal-related and which might be.
 
 - Omdat je de **Automatisering** binnen een vooraf bepaald tijdvak kunt instellen, hoef je alleen dat tijdvak te analyseren.
 - Als je heel verschillende maaltijden eet (bijv. een vrij koolhydraatrijk ontbijt maar een koolhydraatarme lunch), kun je twee verschillende (sets) **Automatiseringen** maken, een voor elk tijdvak.
@@ -218,7 +218,7 @@ Zinvolle **iob-drempels** waarbij je je loop minder agressief moet maken, zijn m
 
 Voor bijzondere maaltijden, of om de drempel te verlagen als je daarna gaat sporten, kun je de **iob**-drempel snel anders instellen in je **Automatisering**.
 
-Automatisering (#3), ”iobTH bereikt => **SMB's** uit”, is bedoeld om de agressieve **SMB**-boost te beëindigen (of te pauzeren, tot een volgende golf van stijging door koolhydraten komt).
+Automation (#3), "iobTH reached => **SMBs** off”, is defined to end (or pause, until another wave of carb-related rise hits) the aggressive **SMB** boosting.
 
 ![Automatisering #3: IOB van 5,5 of meer zonder actief tijdelijk streefdoel start een tijdelijk streefdoel van 111 mg/dl](../images/fullClosedLoop04.png)
 
@@ -233,7 +233,7 @@ Deze vertelt de loop dat het boven je ingestelde **iob-drempel** beter is om gee
 **Let op: Automatisering #3 werkt alleen als er geen actief TT is.** Als je met een EatingSoonTT werkte, moet die dus op dat moment beëindigd zijn. Dat is meestal 30–40 minuten na het begin van de maaltijd.
 
 Een manier om dit te doen is een **Automatisering**-voorwaarde maken die een eventueel lopend EatingSoonTT beëindigt bij de Voorwaarde **iob**>65% * iobTH.
-> Werken met EatingSoonTT Sommige loopers stellen ongeveer een uur of langer vóór het begin van de maaltijd een EatingSoonTT in (met de TT-knop, of automatisch via een lagere **BG**-streefwaarde in het **Profiel** als de eettijden vrij vast zijn), alleen om zeker te zijn van een lage **BG** bij de start en een iets hogere  **iob**. Maar als de **FCL** altijd al op weg is naar de streefwaarde, levert dit misschien weinig op. Je kunt dan liever een **Automatisering** maken die een EatingSoonTT instelt zodra het begin van een maaltijd wordt herkend (glucosedelta, of versnelling = delta > avg delta). Een laag **TT** is in deze fase belangrijk, omdat je loop elke **SMB** berekent met (voorspelde glucose min TT)/sens. Een laag TT maakt de resulterende insulinReq dus groter.
+> Werken met EatingSoonTT Sommige loopers stellen ongeveer een uur of langer vóór het begin van de maaltijd een EatingSoonTT in (met de TT-knop, of automatisch via een lagere **BG**-streefwaarde in het **Profiel** als de eettijden vrij vast zijn), alleen om zeker te zijn van een lage **BG** bij de start en een iets hogere  **iob**. But, assuming the **FCL** is always en route towards target, this might not yield much and you may prefer to define an **Automation** that sets an EatingSoonTT at recognition of meal start (glucose delta, or acceleration = delta > avg delta). Een laag **TT** is in deze fase belangrijk, omdat je loop elke **SMB** berekent met (voorspelde glucose min TT)/sens. Een laag TT maakt de resulterende insulinReq dus groter.
 
 Nadat de eerste versterkte **SMB**'s zijn gegeven, moeten je ingestelde iobTH en **Automatisering** #3 een goed evenwicht vinden: de glucosepiek beperken, maar na de maaltijd ook niet tot een hypo leiden.
 
@@ -332,7 +332,7 @@ Het is bijvoorbeeld heel goed mogelijk, zonder extra stappen nadat de **Automati
 - Problemen met de insuline-“staart” na maaltijden
     - Misschien moet je een snack nemen (als je een hypovoorspelling ziet) of druivensuikertabletten (als je al in de hypozone bent). Maar let op: de benodigde koolhydraten die de loop je op een gegeven moment meldt, zijn heel waarschijnlijk overdreven. De loop heeft namelijk helemaal geen informatie over hoeveel koolhydraten je hebt gegeten en hoeveel daarvan nog moet worden opgenomen (terwijl jij misschien kunt schatten hoeveel er nog komt, ook uit vetten en eiwitten).
     - Het is nuttig om te weten of het probleem vooral al in de stijgfase van de bg ontstaat. Dan kan een lagere iobTH een eenvoudige oplossing zijn.
-    - Als je vaak extra koolhydraten nodig hebt, noteer dan hoeveel gram nodig was (tel niet mee wat je uiteindelijk te veel nam en waarvoor weer extra insuline nodig was).  Gebruik dan de IC-waarde uit je profiel om te schatten hoeveel insuline de **SMB** minder had moeten geven, en gebruik deze informatie bij je afstemming (van het **Profiel percentage** in de **Automatiseringen**, of misschien ook je ingestelde iobTH). Dit kan te maken hebben met de **SMB's** die werden gegeven toen de glucose hoog was, of ook met de **SMB's** tijdens de stijging van de **BG**.
+    - Als je vaak extra koolhydraten nodig hebt, noteer dan hoeveel gram nodig was (tel niet mee wat je uiteindelijk te veel nam en waarvoor weer extra insuline nodig was).  Gebruik dan de IC-waarde uit je profiel om te schatten hoeveel insuline de **SMB** minder had moeten geven, en gebruik deze informatie bij je afstemming (van het **Profiel percentage** in de **Automatiseringen**, of misschien ook je ingestelde iobTH). This may relate to the **SMBs** given when glucose was high, or also to the **SMBs** during the **BG** rise.
     - Het kan goed zijn dat je gewoon hogere **BG**-pieken moet accepteren om niet te laag te gaan. Of verander je eten naar iets met minder koolhydraten en meer eiwit en vet.
 
 
