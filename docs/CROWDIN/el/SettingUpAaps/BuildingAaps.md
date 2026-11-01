@@ -12,7 +12,7 @@
 
 ### Δημιουργία μέσω browser (συνιστάται)
 
-Μπορείτε να δημιουργήσετε την εφαρμογή από το smartphone σας με το GitHub Actions. Από τηλέφωνο Android, η σελίδα ρύθμισης του [AAPS Builder](#aaps-builder) σας καθοδηγεί βήμα βήμα, και ξεκινάτε κάθε build μόνοι σας. Από υπολογιστή ή iPhone, μπορείτε επίσης να κάνετε build με ένα fork και να αποθηκεύσετε την εφαρμογή στο Google Drive σας.
+You can build the app in a web browser using GitHub Actions. Από τηλέφωνο Android, η σελίδα ρύθμισης του [AAPS Builder](#aaps-builder) σας καθοδηγεί βήμα βήμα, και ξεκινάτε κάθε build μόνοι σας. Από υπολογιστή ή iPhone, μπορείτε επίσης να κάνετε build με ένα fork και να αποθηκεύσετε την εφαρμογή στο Google Drive σας.
 
 **[Ακολουθήστε αυτές τις οδηγίες.](./BrowserBuild.md)**
 
