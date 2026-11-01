@@ -99,6 +99,8 @@
 
 ![Το φύλλο Σενάρια της κάτω γραμμής πλοήγησης](../images/v4/Scenes/scenes_sheet.png)
 
+If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+
 Πριν εφαρμοστεί οτιδήποτε, βλέπετε μια **επιβεβαίωση** που δείχνει ακριβώς τι θα κάνει το σενάριο, για να το ελέγξετε:
 
 ![Επιβεβαίωση ενεργοποίησης σεναρίου, με τη λίστα των ενεργειών](../images/v4/Scenes/scene_confirmation.png)
