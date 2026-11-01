@@ -2,7 +2,7 @@
 
 ## 为科研捐献您的数据
 
-您可通过向研究项目捐献数据来助力科研社区！此举能助力科学家持续推动科研发展、孕育新科学理念，并拓展开源闭环系统的开放思维。 AAPS已支持与[Open Humans](https://www.openhumans.org)平台同步数据，该平台允许您上传、关联并存储个人数据（包括基因、活动及健康数据等）。
+您可通过向研究项目捐献数据来助力科研社区！ This helps scientists to pay it forward, develop new scientific ideas and make open source closed loop systems better known. AAPS已支持与[Open Humans](https://www.openhumans.org)平台同步数据，该平台允许您上传、关联并存储个人数据（包括基因、活动及健康数据等）。
 
 您始终拥有数据的完全控制权，可自主决定支持哪些研究项目并授予其数据访问权限。根据您参与的具体项目，数据会以不同方式和程度被分析使用。
 
@@ -76,7 +76,7 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the conf
 
 "OPEN" 项目汇集了患者创新者、临床医生、社会科学家、计算机科学家和患者倡导组织的国际跨部门联盟，旨在研究越来越多糖尿病患者使用的 DIY 人工胰腺系统（DIY APS）的各个方面。详情请见其[网站](https://www.open-diabetes.eu/)。
 
-2020 年 9 月，"OPEN" 项目启动了包含数据捐赠选项的[调查](https://survey.open-diabetes.eu/)。其网站和调查内提供了如何向"OPEN" 项目捐赠数据的[教程](https://open-diabetes.eu/en/open-survey/survey-tutorials/)。
+In September 2020 the 'OPEN' project launched a [survey](https://survey.open-diabetes.eu/) including the option to donate data you uploaded to Open Humans. 其网站和调查内提供了如何向"OPEN" 项目捐赠数据的[教程](https://open-diabetes.eu/en/open-survey/survey-tutorials/)。
 
 ### [OpenAPS 数据共享库](https://www.openhumans.org/activity/openaps-data-commons/)
 
