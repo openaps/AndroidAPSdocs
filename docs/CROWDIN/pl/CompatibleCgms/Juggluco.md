@@ -36,6 +36,6 @@ Juggluco może wysyłać glikemię do xDrip, który potem przesyła ją do AAPS.
 
 Włącz w Juggluco Patched Libre (nie włączaj xDrip broadcast), potwierdź i zapisz informacje o pakiecie dexdrip. Wybierz w AAPS źródło danych BG xDrip.
 
-W razie potrzeby ustaw w AAPS odpowiednie [wygładzanie](./SmoothingBloodGlucoseData.md). Przy sensorze Libre 2/2+/3/3+ xDrip uśrednia odczyty co minutę do odczytów co 5 minut i [dodatkowo je wygładza](#libre2-value-smoothing-raw-values).
+Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary. When using a Libre 2/2+/3/3+ sensor, xDrip will average the minute-by-minute readings to 5-minute readings and [also smooth](#libre2-value-smoothing-raw-values) them.
 
 ![Juggluco do xDrip](../images/juggluco/Juggluco-xDrip+.png)
