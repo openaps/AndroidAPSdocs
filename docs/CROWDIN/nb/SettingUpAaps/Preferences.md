@@ -396,7 +396,7 @@ While client control is on (always in Simple Mode), these settings are hidden: *
 - NS announcements will echo Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) in the **AAPS** notifications.
 - You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
 
-### Remote control
+### Fjernstyring
 
 The switch "**Allow client control**" is no longer in these settings: it is at the top of **Manage → Authorized clients**, where the paired clients are managed. See the dedicated [Client / Master control](../RemoteFeatures/ClientMasterControl.md) page, including [hardened mode](#client-master-control-hardened-mode), which this switch turns on.
 
