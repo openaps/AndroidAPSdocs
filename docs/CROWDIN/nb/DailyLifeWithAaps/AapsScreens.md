@@ -120,7 +120,7 @@ Du må bekrefte etter hvert valg.
     
       ![Dupliserte BS-data: LGS-loop-ikon og BS-kildesnarveien med et rødt varselmerke](../images/bg_warn_red.png)
     
-    Trykk på loop-ikonet: kortet **Begrensninger** øverst forteller deg hvorfor: «BgQualityCheck: Stopp ved lavt BS-modus på grunn av doble verdier fra BS-kilden».
+    Trykk på loop-ikonet: kortet **Begrensninger** øverst forteller deg hvorfor: «BgQualityCheck: LGS-modus på grunn av doble verdier fra BS-kilden».
     
       ![Kjøremodus-dialog: LGS på grunn av doble verdier](../images/main/bg_doubled_constraint.png)
     
@@ -208,7 +208,7 @@ Hvis **AAPS** oppdager resistens eller sensitivitet, endres målet fra det som e
     * Trykk på brikken for å se fordelingen mellom bolus- og basalinsulin (første dialog på bildet — her med negativ IOB etter en periode med redusert basal)
 2. **Korn**: [aktive karbohydrater (COB)](../DailyLifeWithAaps/CobCalculation.md) - karbohydrater du har spist som ennå ikke er tatt opp
 3. Den blågrønne knappen til høyre viser **gjeldende basallevering**: en flat linje når profilbasalen kjører, et endret ikon mens en midlertidig basal er aktiv
-4. **Prosentraden** viser gjeldende sensitivitet ([Autosens](#Open-APS-features-autosens) / [Dynamisk ISF](../DailyLifeWithAaps/DynamicISF.md)). Når loopen endrer ISF-en din, viser raden også profil-ISF, en pil og den ISF-en loopen bruker nå, for eksempel «80 % 2,0 ↗ 2,5». Trykk på den for å se Autosens-verdien og den effektive ISF-en (andre dialog på bildet). Hvis loopen bruker en annen verdi enn det siste Autosens-resultatet (for eksempel fordi et midlertidig mål endrer sensitiviteten din), viser dialogen også den verdien som **Algoritmens sensitivitet**. Når Autosens er av, beholder loopen profil-ISF-en din, og ingen effektiv ISF vises.
+4. **Prosentraden** viser gjeldende sensitivitet ([Autosens](#Open-APS-features-autosens) / [Dynamisk ISF (DynISF)](../DailyLifeWithAaps/DynamicISF.md)). Når loopen endrer ISF-en din, viser raden også profil-ISF, en pil og den ISF-en loopen bruker nå, for eksempel «80 % 2,0 ↗ 2,5». Trykk på den for å se Autosens-verdien og den effektive ISF-en (andre dialog på bildet). Hvis loopen bruker en annen verdi enn det siste Autosens-resultatet (for eksempel fordi et midlertidig mål endrer sensitiviteten din), viser dialogen også den verdien som **Algoritmens sensitivitet**. Når Autosens er av, beholder loopen profil-ISF-en din, og ingen effektiv ISF vises.
 
 IOB-dialogen, som åpnes ved å trykke på IOB-brikken:
 
@@ -445,13 +445,13 @@ Hvis det oppdages høyere karbohydratopptak enn forventet, gis det insulin, og d
 
 Viser sensitiviteten som [Autosens](#Open-APS-features-autosens) har oppdaget.
 
-Sensitivitet er en beregning av insulinfølsomheten som følge av trening, hormoner osv.
+Sensitivitet er en beregning av insulinsensitiviteten som følge av trening, hormoner osv.
 
 Merk: du må ha kommet til [opplæringsmål 8](#objectives-objective8) for at Sensitivitetsdeteksjon/[Autosens](#Open-APS-features-autosens) skal kunne justere insulinmengden automatisk. Før du har nådd det opplæringsmålet, vises linjen i grafen din bare til informasjon.
 
 ### Dynamisk ISF (DISF)
 
-Viser sensitiviteten slik [Dynamisk ISF](../DailyLifeWithAaps/DynamicISF.md) beregner den. Fylles bare ut hvis du bruker denne funksjonen.
+Viser sensitiviteten slik [Dynamisk ISF (DynISF)](../DailyLifeWithAaps/DynamicISF.md) beregner den. Fylles bare ut hvis du bruker denne funksjonen.
 
 (screen-heart-rate-steps)=
 
@@ -679,7 +679,7 @@ I alle disse dialogene (**Prime/fylling**, **Sensorbytte**, **Bytte pumpebatteri
 
 **Administrer → Insulininnstillinger** viser og administrerer insulinoppsettene dine. Hvert oppsett vises på et kort med **topptid** og **[DIA](#Config-Builder-insulin-dia)**; det som er i bruk, er merket **AKTIV**. Under kortet ser du aktivitetskurven. Du kan redigere kallenavn, topp og DIA for alle oppsett unntatt det aktive: for å bytte insulinet du bruker, [legg til et nytt oppsett og aktiver det](#Config-Builder-insulin-change-active).
 
-Se [Insulinets virketid](#Config-Builder-insulin-dia) for å lære mer om hva det er og hvordan du setter det.
+Se [Insulinets virkningstid](#Config-Builder-insulin-dia) for å lære mer om hva det er og hvordan du setter det.
 
 ## Pumpestatus
 
@@ -746,9 +746,9 @@ Lar deg bla tilbake i **AAPS**-historikken. Se den egne siden [Gjennomgang av da
 
 (aaps-screens-statistics)=
 
-## Statistics
+## Statistikk
 
-![Statistics](../images/v4/Screens/statistics.png)
+![Statistikk](../images/v4/Screens/statistics.png)
 
 Åpne **menyen** (☰) og velg **Statistikk**.
 
@@ -756,7 +756,7 @@ Gir deg statistikk om total daglig dose, tid i målområdet, glukoseprofilen din
 
 (aaps-screens-profile-helper)=
 
-## Profile Helper
+## Profilhjelper
 
 Åpne **menyen** (☰) og velg **Profilhjelper**.
 
