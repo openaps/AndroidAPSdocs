@@ -247,6 +247,8 @@
 
 Якщо перевищено критичний поріг, значення показуються червоним.
 
+The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
+
 Пороги можна змінити через маленький значок **Налаштування**, який видно, коли рядок статусу **розгорнуто** (шеврон справа) — дивіться [Покажчики статусу](#Preferences-status-lights).
 
 У розгорнутій панелі статусу в кінці деяких рядків також є кнопка, щоб записати заміну, яка скидає відповідний вік: **Додати** в рядку **Сенсор** записує встановлення сенсора. Якщо ваша помпа це підтримує, **Підготовка/Заповнення** з’являється в рядках **Канюля** (або **Patch-помпа**) та **Інсулін**, а **Додати** — в рядку **Батарея помпи**.
@@ -303,6 +305,14 @@
 Так само це працює на [додаткових графіках](#aaps-screens-additional-graphs) під графіком ГК (IOB, COB...): натисніть і утримуйте будь-який з них.
 
 ![Натискання і утримання графіка ГК: спливне вікно показує час, ГК, IOB і базал](../images/main/graph_press_and_hold.png)
+
+(aaps-screens-graph-clock-change)=
+
+#### Clock changes
+
+When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
+
+![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
@@ -459,6 +469,8 @@ IOB може бути від’ємним, якщо у вас немає зал�
 
 Ці дані можуть бути доступні, якщо ви використовуєте [смарт-годинник Wear](../WearOS/WearOsSmartwatch.md). Увімкніть їх у застосунку **AAPS** Wear і надайте дозвіл на дані про здоров’я.
 
+Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
+
 #### Відхилення (ВІДХ)
 
 * **Сірі** стовпчики показують відхилення через вуглеводи.
@@ -607,11 +619,15 @@ IOB може бути від’ємним, якщо у вас немає зал�
 
 ![Нагадування для майбутніх вуглеводів](../images/Home2021_BolusWizard_EatingReminder.png)
 
-Нагадування звучить як тривога **AAPS**. Воно не створює таймер у застосунку годинника на вашому телефоні і також працює, коли болюс введено з **AAPSClient**, а **AAPS** працював у фоновому режимі.
+The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
 
-Поле **ГК** зазвичай уже заповнене останнім значенням з вашого CGM. Якщо у вас немає працюючого CGM, поле буде порожнім. Коли значення свіже, рядок **ГК** залишається згорнутим.
+![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
 
-Кнопка результату внизу показує запропонований болюс; після її натискання потрібне підтвердження, перш ніж буде введено будь-який інсулін.
+![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
+
+Поле **ГК** зазвичай уже заповнене останнім значенням з вашого CGM. Якщо у вас немає працюючого CGM, поле буде порожнім. Коли значення свіже, рядок **ГК** залишається згорнутим. The field follows new readings while the wizard is open, until you change it yourself.
+
+Кнопка результату внизу показує запропонований болюс; після її натискання потрібне підтвердження, перш ніж буде введено будь-який інсулін. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
 
 Корисно знати:
 
