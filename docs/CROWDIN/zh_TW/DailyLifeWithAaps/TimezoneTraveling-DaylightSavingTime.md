@@ -76,7 +76,7 @@ Insight 也會紀錄更改時間的歷史項目，紀錄時間從哪個（舊）
 
 時區變更會保持歷史紀錄不變，只有 **TDD** 可能受影響。手動更改手機時間可能會導致歷史紀錄與 **IOB** 出現問題。如果你手動更改時間，請再次確認 **IOB**。
 
-當時區或時間變更時，正在執行的 **臨時基礎率** 會被停止。
+When the time zone or time changes running **TBRs** are stopped.
 
 (time-adjustment-daylight-savings-time-dst)=
 
@@ -108,8 +108,8 @@ Insight 也會紀錄更改時間的歷史項目，紀錄時間從哪個（舊）
 
 ### Omnipod Dash 的 DST
 
-* 如上所述，可讓 **AAPS** 在 DST 完成後暫時將背景基礎率作為預設。
-* 否則，若你不想讓 **AAPS** 在夜間暫時改為背景基礎率，你可以在 DST 預定發生的前一天變更時區，以避免夜間中斷。注意：此選項可能導致你的 Pod 提早到期。若選擇下列功能，請務必隨身攜帶耗材。
+* Either allow **AAPS** to temporarily default to background basal after DST has taken place as explained above.
+* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day before DST is due to take place to avoid overnight disruption. 注意：此選項可能導致你的 Pod 提早到期。若選擇下列功能，請務必隨身攜帶耗材。
 
 #### 更改時鐘前的操作
 
@@ -129,6 +129,6 @@ Insight 也會紀錄更改時間的歷史項目，紀錄時間從哪個（舊）
 
 3. 在 **AAPS** 中重新整理幫浦，並切換至所需的 **設定檔**。
 
-4. 請檢查 **AAPS** 的 **IOB** 和 **COB**；如果數值不準確，請停用**循環**至少一個 DIA 和 Max-Carb-Time 的時間，以較長者為準。
+4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA or the maximum carb absorption time (**Absorption max time**), whichever is longer.
 
 5. 更改時鐘後的操作. 在 IOB 較低時，是切回當地時區的好時機。例如，在早餐等餐點前一小時。理想情況下，你的 **COB** 與 **IOB** 都應接近 0。
