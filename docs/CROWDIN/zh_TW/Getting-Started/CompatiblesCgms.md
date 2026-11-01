@@ -66,14 +66,14 @@
 
 可信任的資料來源，允許**SMB**可以啟動。
 
-| 傳感器              |                                       CGM 應用程式                                        |
-| ---------------- |:-------------------------------------------------------------------------------------:|
-| Dexcom G6        |                                BYODA、xDrip（**直接、原生**）                                 |
-| Dexcom G7        |             BYODA、xDrip（**直接、原生**）、</br>Juggluco（**xDrip 廣播**，不需安裝 xDrip）             |
-| Dexcom ONE+      |                xDrip（**直接、原生**）、</br>Juggluco（**xDrip 廣播**，不需安裝 xDrip）                |
-| Dexcom ONE/Stelo |                                   xDrip（**直接、原生**）                                    |
-| Libre 2/2+ (歐盟)  | xDrip（OOP2 **不需校正**）、</br>Juggluco（**xDrip 廣播**，不需安裝 xDrip；或搭配 xDrip 使用**修補版 Libre**） |
-| Libre 2/2+/3/3+  |              Juggluco（**xDrip 廣播**，不需安裝 xDrip；或搭配 xDrip 使用**修補版 Libre**）              |
-| Syai             |                                       Syai App                                        |
+| 傳感器              |                                                         CGM 應用程式                                                          |
+| ---------------- |:-------------------------------------------------------------------------------------------------------------------------:|
+| Dexcom G6        |                                                  BYODA、xDrip（**直接、原生**）                                                   |
+| Dexcom G7        |                BYODA, xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip)                 |
+| Dexcom ONE+      |                    xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip)                    |
+| Dexcom ONE/Stelo |                                                     xDrip（**直接、原生**）                                                      |
+| Libre 2/2+ (歐盟)  | xDrip (OOP2 **no calibration**), <br/>Juggluco (**xDrip broadcast** without xDrip, or **Patched Libre** with xDrip) |
+| Libre 2/2+/3/3+  |                                Juggluco（**xDrip 廣播**，不需安裝 xDrip；或搭配 xDrip 使用**修補版 Libre**）                                |
+| Syai             |                                                         Syai App                                                          |
 
 **注意：xDrip Companion App 和追蹤者模式（包含 640G/Eversense）並非可信任的資料來源。**
