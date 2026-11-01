@@ -1,86 +1,86 @@
 # Android Auto
 
-**AAPS** is capable of sending you information about your current status as a message, directly into Android Auto in your car.
+**AAPS** kan sende deg informasjon om din nåværende status som en melding, rett inn i Android Auto i bilen.
 
-## Requirements
+## Krav
 
-**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of Auto Audio in the car.
+**AAPS** bruker en funksjon i Android Auto som lar meldinger fra apper på mobilen sendes videre til skjermen i bilens lydanlegg.
 
-That means that:
+Det betyr at:
 
-* Android must allow **AAPS** to show notifications and
-* As **AAPS** is an unofficial App, allow the use of "unknown sources" with Android Auto.
+* Android må tillate at **AAPS** viser varsler, og
+* Siden **AAPS** er en uoffisiell app, må du tillate bruk av «ukjente kilder» i Android Auto.
 
-![AAPS CGM data on Android Auto](../images/android_auto_01.png)
+![CGM-data fra AAPS i Android Auto](../images/android_auto_01.png)
 
 (androidauto-check-that-aaps-can-show-notifications)=
 
-## Check that AAPS can show notifications
+## Sjekk at AAPS kan vise varsler
 
-**AAPS** always shows a status notification with your current glucose, IOB and COB. This is the notification that Android Auto displays in the car. There is nothing to switch on in **AAPS**, but Android must allow **AAPS** to show notifications.
+**AAPS** viser alltid et statusvarsel med gjeldende blodsukker, IOB og COB. Dette er varselet Android Auto viser i bilen. Det er ingenting å slå på i **AAPS**, men Android må tillate at **AAPS** viser varsler.
 
-On your phone, open **Settings** > **Apps** > **AAPS** > **Notifications** and make sure **All AAPS notifications** is on.
+På telefonen åpner du **Innstillinger** > **Apper** > **AAPS** > **Varsler** og sjekker at **Alle AAPS-varsler** er på.
 
-![All AAPS notifications switched on](../images/android_auto_notifications_all.png)
+![Alle AAPS-varsler slått på](../images/android_auto_notifications_all.png)
 
-Scroll down and make sure **Ongoing status** is on: this is the channel of the status notification.
+Bla ned og sjekk at **Pågående status** er på: dette er kanalen for statusvarselet.
 
-![Ongoing status notification channel switched on](../images/android_auto_ongoing_channel.png)
+![Varslingskanalen Pågående status slått på](../images/android_auto_ongoing_channel.png)
 
-Please check now that you see the **AAPS** status notification on the phone before you walk to your car!
+Sjekk nå at du ser statusvarselet fra **AAPS** på telefonen før du går til bilen!
 
-![AAPS notification on the phone](../images/android_auto_04.png)
+![AAPS-varsel på telefonen](../images/android_auto_04.png)
 
 (androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
-## Allow the use of "unknown sources" with Android Auto.
+## Tillat bruk av «ukjente kilder» i Android Auto.
 
-As **AAPS** is not an official Android Auto app, notifications have to be activated for "unknown sources" in Android Auto. This is done through the use of the developer mode which we will show you here.
+Siden **AAPS** ikke er en offisiell Android Auto-app, må varsler slås på for «ukjente kilder» i Android Auto. Dette gjøres ved hjelp av utviklermodus, som vi viser deg her.
 
-Go to your car and connect your mobile with the cars audio system.
+Gå til bilen og koble mobilen til bilens lydanlegg.
 
-You should now see a screen similar to this screen.
+Du bør nå se en skjerm som ligner på denne.
 
-![Enable developer mode](../images/android_auto_05.png)
+![Slå på utviklermodus](../images/android_auto_05.png)
 
-Press on the **setting** icon to start the configuration.
+Trykk på **innstillinger**-ikonet for å starte konfigurasjonen.
 
-Scroll down to the end of the page and select **see more in the phone**.
+Bla ned til slutten av siden og velg **se mer på telefonen**.
 
-![Enable developer mode](../images/android_auto_06.png)
+![Slå på utviklermodus](../images/android_auto_06.png)
 
-Now on the mobile we will activate the developer mode.
+Nå skal vi slå på utviklermodus på mobilen.
 
-The first screen looks like this. Scroll down to the end of the page.
+Den første skjermen ser slik ut. Bla ned til slutten av siden.
 
-![Enable developer mode](../images/android_auto_07.png)
+![Slå på utviklermodus](../images/android_auto_07.png)
 
-There you see the version of Android Auto listed. Tap 10 times (in word ten) on the version of Android Auto. With this hidden combination you have now enabled developer mode.
+Der ser du versjonen av Android Auto. Trykk 10 ganger (ti) på versjonsnummeret til Android Auto. Med denne skjulte kombinasjonen har du nå slått på utviklermodus.
 
-![Enable developer mode](../images/android_auto_08.png)
+![Slå på utviklermodus](../images/android_auto_08.png)
 
-Confirm that you want to enable the developer mode in the modal dialog "Allow development settings?".
+Bekreft at du vil slå på utviklermodus i dialogen «Tillate utviklerinnstillinger?».
 
-![Enable developer mode](../images/android_auto_09.png)
+![Slå på utviklermodus](../images/android_auto_09.png)
 
-In the **developer settings** enable the "Unknown sources".
+I **utviklerinnstillingene** slår du på «Ukjente kilder».
 
-![Enable developer mode](../images/android_auto_10.png)
+![Slå på utviklermodus](../images/android_auto_10.png)
 
-Now you can quit developer mode if you want. Tap three dots menu on the top right to do so.
+Nå kan du gå ut av utviklermodus hvis du vil. Trykk på menyen med tre prikker øverst til høyre for å gjøre det.
 
-## Show notifications in car
+## Vise varsler i bilen
 
-Tap the **number icon** on the lower right side in Android Auto in your car.
+Trykk på **tallikonet** nederst til høyre i Android Auto i bilen.
 
-![number icon - Android Auto in car](../images/android_auto_11.png)
+![tallikonet – Android Auto i bilen](../images/android_auto_11.png)
 
-Your CGM data will be shown as follows:
+CGM-dataene dine vises slik:
 
-![AAPS CGM data on Android Auto](../images/android_auto_01.png)
+![CGM-data fra AAPS i Android Auto](../images/android_auto_01.png)
 
 (android-auto-troubleshooting)=
 
-## Troubleshooting:
+## Feilsøking:
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#androidauto-check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
+* Hvis du ikke ser varselet, sjekk om du har [tillatt at AAPS viser varsler](#androidauto-check-that-aaps-can-show-notifications) i Android, og om [Android Auto har tilgang til varsler](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
