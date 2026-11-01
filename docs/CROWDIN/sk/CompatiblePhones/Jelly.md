@@ -14,7 +14,7 @@
 
 **Nevýhody**
 
-* Odporúča sa iba skúseným používateľom okruhu (niektoré nastavenia sa nedajú rozpoznať, musíte zo skúseností s veľkým telefónom s Androidom a AAPS vedieť, čo sa kde nachádza. Niektoré tlačidlá AAPS sa dajú ťuknúť iba s veľkým citom, s hrubými prstami nie.)
+* Recommended only for experienced loopers. Some settings are not easy to recognize: you have to know from experience with a big Android AAPS phone how and where things are located. Some AAPS buttons are small and hard to tap: you need a precise touch, not stubby fingers.
 * Dá sa používať iba ako telefón pre okruh (LooperPhone). Je lepšie mať vo vrecku aj bežný smartfón. 
 
 ### Optimalizácia výdrže batérie
@@ -43,6 +43,6 @@ Nezabudnite vypnúť Google Play Protect.
 
 ### Vzdialené pripojenie pre Wear apk
 
-Pri niektorých inteligentných hodinkách, napríklad Samsung Galaxy, musí byť „Vzdialené pripojenie“ (Remote Connection) v Pokročilých funkciách (Advanced Features) Samsung Galaxy **zapnuté**, aby ste mohli Jelly, **Wear.apk** a **AAPS** používať na diaľku cez Wi-Fi.
+For certain smart watches, like the Samsung Galaxy, 'Remote connection' under Advanced features in the Galaxy Wearable app must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
 
 ![Galaxy Wearable, Rozšírené funkcie, Vzdialené pripojenie zapnuté](../images/wearos/galaxy_wearable_remote_connection.png)
