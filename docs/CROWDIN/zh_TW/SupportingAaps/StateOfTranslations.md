@@ -1,9 +1,10 @@
-# 應用程式與文件的翻譯狀態
+# State of translation for the app and the documentation
 
 狀態每小時更新一次，僅反應 Crowdin 上的狀態。
 
 ```{tip}
-請注意，校對完成率必須低於翻譯完成率，但他們卻決定將校對完成率顯示在翻譯完成率上方。最好只查看翻譯百分比來判斷是否還有工作需要完成。
+Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
+最好只查看翻譯百分比來判斷是否還有工作需要完成。
 ```
 
 ```{admonition} needed time for final publication
