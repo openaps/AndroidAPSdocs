@@ -1,6 +1,6 @@
-# Kde mohu získat pomoc?
+# Where can I get help?
 
-## Zasekl(a) jsem se. Co mám dělat? Koho se mám zeptat?
+## I'm stuck; what should I do? Koho se mám zeptat?
 
 Tento projekt stojí na dobrovolné práci. Pro všechny žádosti o pomoc proto platí několik pravidel, aby lidé, kteří vám ochotně pomáhají, zbytečně neztráceli čas:
 
