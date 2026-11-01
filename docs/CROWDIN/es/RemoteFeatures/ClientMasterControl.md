@@ -107,7 +107,7 @@ Cualquiera que vea el código QR puede leer tu Nightscout, y un código que empa
 
 #### Con un PIN
 
-Toca **OK**: el máster muestra un **PIN de emparejamiento** de 8 dígitos, en dos grupos de cuatro (por ejemplo `1234 5678`). Este PIN es **de un solo uso** y **caduca a los dos minutos aproximadamente**.
+Toca **OK**: el máster muestra un **PIN de emparejamiento** de 8 dígitos, en dos grupos de cuatro (por ejemplo `1234 5678`). Este PIN es **de un solo uso** y **caduca a los dos minutos aproximadamente**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
 
 ![Pantalla de emparejamiento del máster con el PIN de un solo uso (el PIN que se ve aquí ha caducado)](../images/v4/ClientMaster/pairing_pin_master.png)
 
