@@ -222,13 +222,15 @@ brak
 * **Profil** musi wynosić od 50% do 130%
 * działa tylko wtedy, gdy poprzedni procent wynosi 100%
 
-**Akcje:** **Zmień wygładzanie**
+**Actions:** **Change smoothing** (in the **Loop & insulin** group)
 
 **Opcje:**
 
-* wybierz [metodę wygładzania](../CompatibleCgms/SmoothingBloodGlucoseData.md), na którą chcesz przełączyć
+* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
 * działa tylko wtedy, gdy ta metoda wygładzania nie jest już aktywna — **AAPS** sam dodaje do reguły linię „**Warunki wstępne: Wygładzanie … nie jest aktywne**”. Gdy wybrane wygładzanie jest już aktywne, reguła jest po cichu pomijana.
-* Przykład: razem z wyzwalaczem **Wiek sensora** przełącz na **Wygładzanie uśredniające** w pierwszym dniu nowego sensora, a potem z powrotem na **Bez wygładzania**.
+* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
+  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
+  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
 
 **Akcje:** **Notatka** (w grupie **Alarmy** na liście)
 
@@ -268,7 +270,7 @@ brak
 
 **Opcje:**
 
-* brak. Gdy wykona się reguła z tą akcją, **AAPS** w tym przebiegu nie sprawdza reguł znajdujących się niżej na liście. Dodaj ją do reguły, która musi mieć pierwszeństwo przed regułami poniżej (zobacz [kolejność Automatyzacji](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* brak. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Dodaj ją do reguły, która musi mieć pierwszeństwo przed regułami poniżej (zobacz [kolejność Automatyzacji](#Automations-the-order-of-the-automations-in-the-list-matters)).
 
 **Akcje:** **Uruchom scenę**, **Włącz scenę**, **Wyłącz scenę** (w grupie **Sceny**)
 
