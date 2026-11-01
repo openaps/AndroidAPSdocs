@@ -57,7 +57,7 @@ Keďže počas odpojenia pumpy nedostávate žiadny inzulín, mali by ste sa pri
 (pumps-cannulas-announce-insulin)=
 ## Oznámenie podaného inzulínu bez skutočného podania bolusu
 
-Ak chcete oznámiť inzulín podaný z pumpy, kým bol **AAPS** odpojený, alebo inzulín z injekcií perom: otvorte [dialóg Inzulín](#aaps-screens-buttons-insulin) (**Ošetrenia** v dolnej navigácii alebo tlačidlo Rýchleho spustenia), zadajte množstvo v jednotkách a zapnite **Bolus bude iba zaznamenaný (nie pumpou vydaný)**. Potom sa zobrazí riadok **Čas** (nastavený na **Teraz**), v ktorom môžete zaznamenať skutočný čas injekcie: ak bola injekcia podaná nedávno, môžete ho ignorovať. Ak bol bolus podaný pred nejakým časom, posuňte čas späť pomocou **-** (_napr._ -30 min) alebo riadok otvorte šípkou a vyberte presný dátum a čas. **AAPS** potom zohľadní dobu pôsobenia inzulínu a podľa toho vypočíta zostávajúci inzulín v tele.
+To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. Potom sa zobrazí riadok **Čas** (nastavený na **Teraz**), v ktorom môžete zaznamenať skutočný čas injekcie: ak bola injekcia podaná nedávno, môžete ho ignorovať. Ak bol bolus podaný pred nejakým časom, posuňte čas späť pomocou **-** (_napr._ -30 min) alebo riadok otvorte šípkou a vyberte presný dátum a čas. **AAPS** potom zohľadní dobu pôsobenia inzulínu a podľa toho vypočíta zostávajúci inzulín v tele.
 
 Ak používate **AAPS** ako opatrovateľ, môžete pumpu na diaľku veľmi jednoducho odpojiť (a znova pripojiť) pomocou [SMS príkazu](../RemoteFeatures/SMSCommands.md), napríklad príkazmi „pump disconnect 120“ a „pump connect 120“. Doba vzdialeného odpojenia môže byť od 1 do 120 min (v tomto príklade je to 120 minút). Je to veľmi užitočné, ak sa k telefónu s **AAPS** neviete ľahko dostať – napríklad je schovaný v páse na pumpu u dieťaťa, ktoré uteká k bazénu, alebo ho starostlivo stráži (či používa) tínedžer.
 
@@ -92,7 +92,7 @@ Ktorý postup uprednostníte, je veľmi individuálne a najlepšie to zistíte s
 
 ![Dialóg Používateľský profil pre rotáciu miest](../images/SiteRotation/Type.png)
 
-*Poznámka: toto nastavenie určuje, či sa dialóg Striedanie miest (režim úprav) automaticky otvorí, keď sa nový záznam vytvorí tlačidlom „Plnenie/doplňovanie“ alebo tlačidlom „Zavedenie senzora“ pre CGM*
+*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
 
 - Pri výmene setu urobenej priamo na pumpe musíte otvoriť režim zobrazenia a nový záznam upraviť, aby ste vybrali miesto a šípku
 
@@ -100,7 +100,7 @@ Režim úprav vám umožňuje vybrať miesto, šípku a poznámku k vybranému z
 
 - Upravovaný záznam sa zobrazuje pod obrázkami tela spolu s ikonou svojho typu (kanyla alebo senzor)
 - Pohľad spredu a zozadu sa zobrazujú vedľa seba: ťuknite na oblasť, kde ste ho umiestnili
-- Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the past 45 days in this site
+- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
 
 ![Režim úprav](../images/SiteRotation/EditMode.png)
 
