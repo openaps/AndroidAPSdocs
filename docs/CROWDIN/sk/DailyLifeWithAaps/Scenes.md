@@ -99,6 +99,8 @@ Scénu aktivujete zo zoznamu **Scény** (tlačidlo **▶**) alebo z položky **S
 
 ![Panel Scény na spodnej navigačnej lište](../images/v4/Scenes/scenes_sheet.png)
 
+If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+
 Pred použitím čohokoľvek sa zobrazí **potvrdenie**, ktoré presne vypíše, čo scéna urobí, aby ste to mohli skontrolovať:
 
 ![Potvrdenie aktivácie scény so zoznamom akcií](../images/v4/Scenes/scene_confirmation.png)
