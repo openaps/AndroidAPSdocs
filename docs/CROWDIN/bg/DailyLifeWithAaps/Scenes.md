@@ -99,6 +99,8 @@
 
 ![Листът „Сценарии“ в долната навигация](../images/v4/Scenes/scenes_sheet.png)
 
+If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+
 Преди да се приложи каквото и да е, получавате **потвърждение**, което показва точно какво ще направи сценарият, за да можете да го прегледате:
 
 ![Потвърждение за активиране на сценарий със списък на действията в него](../images/v4/Scenes/scene_confirmation.png)
