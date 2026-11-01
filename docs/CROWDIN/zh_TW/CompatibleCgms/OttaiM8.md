@@ -7,7 +7,7 @@
 
 -   啟動傳感器
 
-- 請在[組態建置工具的「血糖來源」](#Config-Builder-bg-source)中選取 **Syai/Ottai**。
+- Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
 在 Ottai 應用程式中啟用廣播：
 
