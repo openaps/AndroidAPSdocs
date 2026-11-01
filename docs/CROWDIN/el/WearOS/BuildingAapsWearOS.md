@@ -41,7 +41,7 @@
 
 Πού θα βρείτε το Wear apk:
 
-- **AAPS Builder**: στη σελίδα του build, κάντε κύλιση προς τα κάτω στο **Artifacts** και κατεβάστε το `aaps-wear-….apk` δίπλα στην εφαρμογή του τηλεφώνου, όπως φαίνεται στο [Βήμα 6 – Εγκατάσταση στο τηλέφωνό σας](#aaps-builder-step6). Κατεβάστε το στο τηλέφωνο που εκτελεί το **AAPS**, αν εγκαθιστάτε την εφαρμογή του ρολογιού από το τηλέφωνο (Wear Installer 2 ή Easy Fire Tools), ή στον υπολογιστή σας, αν χρησιμοποιείτε ADB.
+- **AAPS Builder**: on the build page, scroll down to **Artifacts** and download `aaps-wear-….apk` next to the phone app, as shown in [Step 5 – Install the app on your phone](#aaps-builder-step5). Κατεβάστε το στο τηλέφωνο που εκτελεί το **AAPS**, αν εγκαθιστάτε την εφαρμογή του ρολογιού από το τηλέφωνο (Wear Installer 2 ή Easy Fire Tools), ή στον υπολογιστή σας, αν χρησιμοποιείτε ADB.
 
   ![Artifacts με τις εφαρμογές για τηλέφωνο και ρολόι](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 
