@@ -42,7 +42,7 @@ Aby łatwo odróżnić aplikacje, niektóre elementy mają inny kolor: żółty 
 
 **AAPSClient** możesz zainstalować na jednym lub kilku telefonach opiekunów (np. na telefonie rodzica 1 i telefonie rodzica 2), aby obaj opiekunowie mieli dostęp i mogli zdalnie sterować telefonem pacjenta z **AAPS**.
 
-Aby pobrać **AAPSClient**, przejdź do [repozytorium GitHub](https://github.com/nightscout/AndroidAPS/releases/) i kliknij plik **„app-AAPSClient-release_x.x.x.x”** (może to być nowsza wersja niż na zrzucie ekranu poniżej):
+To download **AAPSClient**, navigate to the [GitHub repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
 
 ![image](../images/remote_control_and_following/AAPSClient_download_02.png)
 
@@ -56,7 +56,7 @@ Plik apk **AAPSClient** może teraz zostać:
 
 przeniesiony kablem USB na telefon opiekuna lub przeciągnięty do folderu na Dysku Google, a potem dodany na telefonie opiekuna przez dotknięcie pliku „app-AAPSClient-release”.
 
-Jeśli potrzebujesz **AAPS** dla siebie i **AAPSClient** do monitorowania innej osoby, musisz sam zbudować **AAPSClient** zamiast pobierać go z repozytorium GitHub, jak opisano powyżej. Powodem jest to, że na jednym telefonie nie możesz zainstalować **AAPS** i **AAPSClient** podpisanych różnymi kluczami. <br/> Aby samodzielnie zbudować **AAPSClient**, postępuj tak samo jak przy [zwykłym budowaniu AAPS](../SettingUpAaps/BuildingAaps.md). Na stronie **Generate signed App Bundle or APK** wybierz **aapsclientRelease** zamiast **fullRelease**.
+Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the GitHub repository as described above. Powodem jest to, że na jednym telefonie nie możesz zainstalować **AAPS** i **AAPSClient** podpisanych różnymi kluczami. <br/> Aby samodzielnie zbudować **AAPSClient**, postępuj tak samo jak przy [zwykłym budowaniu AAPS](../SettingUpAaps/BuildingAaps.md). Na stronie **Generate signed App Bundle or APK** wybierz **aapsclientRelease** zamiast **fullRelease**.
 
 Ta sama zasada obowiązuje, gdy instalujesz kilka aplikacji opiekuna (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) na jednym telefonie opiekuna: wszystkie muszą być podpisane **tym samym kluczem**. W przeciwnym razie Android nie zainstaluje drugiej z nich (błąd `INSTALL_FAILED_DUPLICATE_PERMISSION`).
 
@@ -128,7 +128,7 @@ Smartwatch może bardzo pomóc w zarządzaniu **AAPS** u dzieci. Możliwych jest
 (RemoteControl_nightscout)=
 ## 3) Nightscout
 
-Nightscout to serwer w „chmurze”, ale jest też osobna aplikacja **Nightscout**, którą możesz pobrać bezpośrednio z App Store na iPhone'a. Jeśli telefon opiekuna ma Androida, nie ma osobnej aplikacji Nightscout. Lepiej wtedy użyć [**AAPSClient**](#2-aapsclient), a jeśli chcesz tylko obserwować bez wysyłania leczenia, możesz pobrać i zainstalować aplikację [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) ze sklepu Google Play.
+Nightscout to serwer w „chmurze”, ale jest też osobna aplikacja **Nightscout**, którą możesz pobrać bezpośrednio z App Store na iPhone'a. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](#RemoteControl_aapsclient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) app from the Playstore.
 
 Po zainstalowaniu aplikacji **Nightscout** na iPhonie otwórz ją i postępuj zgodnie z poleceniami konfiguracji. Wpisz adres swojej strony Nightscout (patrz poniżej, po lewej). Format adresu może się różnić w zależności od tego, gdzie jest hostowany Twój Nightscout. (_np._ http://youraddresshere.herokuapp.com). Następnie wpisz swój API secret Nightscout (patrz poniżej, po prawej). Jeśli aplikacja nie poprosi o hasło API, wpisz je, dotykając kłódki u góry aplikacji:
 
@@ -177,7 +177,7 @@ Bardziej szczegółowy opis menu w lewym górnym rogu aplikacji Nightscout:
 3. Hamburger – do ustawiania preferencji
 4. Careportal – zapis leczenia (zobacz [poniżej](#RemoteControl_nightscout-treatments), kiedy **AAPS** je stosuje)
 
-![górny pasek nightscout](../images/remote-control-29.png)
+![Nightscout top bar](../images/remote-control-29.png)
 
 Na tym ekranie, w szarych zakładkach, jest bardzo dużo informacji o stanie systemu **AAPS** (a jeszcze więcej po dotknięciu zakładki):
 
@@ -202,7 +202,7 @@ Dotknij „refresh” (odśwież) na dole strony, aby zamknąć okienko.
 (RemoteControl_nightscout-treatments)=
 ### Wysyłanie leczenia przez aplikację Nightscout do AAPS
 
-W **AAPS** 4 wspieranym sposobem zdalnego sterowania **AAPS** jest **sparowany AAPSClient**, zobacz [Sterowanie Master ↔ Client](#client-master-control): każdy opiekun ma [rolę](#client-master-control-roles), która ogranicza, co może robić, a każde polecenie jest podpisane, sprawdzone i potwierdzone przez telefon z **AAPS**. Gdy sterowanie z urządzenia opiekuna jest włączone, telefon z **AAPS** jest w [trybie silniejszych zabezpieczeń](#client-master-control-hardened-mode): leczenie, cele tymczasowe i zmiany profilu wpisane na stronie Nightscout lub w aplikacji Nightscout **nie** są stosowane. Aplikacja Nightscout służy wtedy tylko do obserwowania.
+In **AAPS** 4 the supported way to control **AAPS** remotely is a **paired AAPSClient**, see [Master ↔ Client control](#client-master-control): each client has a [role](#client-master-control-roles) that limits what it may do, and every command is signed by the client, then checked and confirmed by the **AAPS** phone. Gdy sterowanie z urządzenia opiekuna jest włączone, telefon z **AAPS** jest w [trybie silniejszych zabezpieczeń](#client-master-control-hardened-mode): leczenie, cele tymczasowe i zmiany profilu wpisane na stronie Nightscout lub w aplikacji Nightscout **nie** są stosowane. Aplikacja Nightscout służy wtedy tylko do obserwowania.
 
 ```{admonition} Only when client control is off
 :class: warning
@@ -277,7 +277,7 @@ a)  polecenia **AAPSClient** lub **SMS** nie mogą działać; lub
 
 b)  użytkownik nie chce wpisywać kodu uwierzytelniającego (wymaganego przy poleceniach SMS).
 
-Smartwatch potrzebuje **Wear OS 3 lub nowszego**, aby móc sterować **AAPS**. Sprawdź specyfikację techniczną zegarka i zobacz stronę [Smartwatche i AAPS](../Getting-Started/Watches.md). Jeśli nie masz pewności, poszukaj informacji lub zapytaj w grupach **AAPS**  na Facebooku/Discordzie.
+Smartwatch potrzebuje **Wear OS 3 lub nowszego**, aby móc sterować **AAPS**. Sprawdź specyfikację techniczną zegarka i zobacz stronę [Smartwatche i AAPS](../Getting-Started/Watches.md). Search, or ask in the **AAPS** Facebook/Discord groups if unsure.
 
 Specific How-to guides for setting up **AAPS** on the popular Samsung Galaxy Watch 4 (40mm) are given below. Popularnym wyborem jest też zegarek [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0). Jeśli masz doświadczenie z konfiguracją innego smartwatcha i uważasz, że przyda się innym, dodaj je do tych stron ([edytuj dokumentację](../SupportingAaps/HowToEditTheDocs.md)), aby podzielić się wiedzą z całą społecznością **AAPS**.
 
@@ -285,7 +285,7 @@ Specific How-to guides for setting up **AAPS** on the popular Samsung Galaxy Wat
 
 ![Zdalne sterowanie Wear 2](../images/Wear_Remote2.png)
 
-Oprogramowanie na zegarek, **AAPSClient** Wear apk, możesz pobrać bezpośrednio z [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
+The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
 
 Aby pobrać oprogramowanie, kliknij aplikację na zegarek, która pasuje do aplikacji opiekuna na telefonie: **wear-aapsclient-release_**_wersja_ pasuje do **AAPSClient**, **wear-aapsclient2-release_**_wersja_ pasuje do **AAPSClient2** (zobacz [O AAPSClient, AAPSClient2 i AAPSClient3](#remotecontrol-aapsclient-versions)):
 
