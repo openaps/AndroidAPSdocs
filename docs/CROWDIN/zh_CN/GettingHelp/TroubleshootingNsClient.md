@@ -38,6 +38,6 @@ If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSC
 
 * 如果仍然出现错误...
 
-检查MongoDB数据库大小（或通过Nightscout的数据库大小插件）。如果使用MongoDB免费版，496MB表示数据库已满需要清理。[遵循Nightscout说明检查数据库大小并清理数据](https://nightscout.github.io/troubleshoot/troublehoot/#database-full)。
+检查MongoDB数据库大小（或通过Nightscout的数据库大小插件）。如果使用MongoDB免费版，496MB表示数据库已满需要清理。 [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
 清理数据库前，如果尚未配置，建议将AAPS数据捐赠给Open Humans项目（用于研究）。配置说明参见[OpenHumans配置页面](../SupportingAaps/OpenHumans.md)。
