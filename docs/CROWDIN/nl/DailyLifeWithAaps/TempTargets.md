@@ -19,7 +19,7 @@ Gebruikers moeten realistische verwachtingen hebben van wat ze kunnen bereiken m
 
 Het kan ongeveer 30 minuten of langer duren voordat een **tijdelijk streefdoel** het gewenste **BG**-streefdoel bereikt. **AAPS** kan een **BG**-streefdoel nooit direct bereiken. Houd hier rekening mee als je een **tijdelijk streefdoel** kiest.
 
-De onderdelen hieronder geven een overzicht van **Tijdelijk streefdoel - Activiteit**, **Tijdelijk streefdoel - Eet binnenkort** en **Tijdelijk streefdoel - Hypo**. De getoonde waarden zijn de standaardwaarden bij installatie — je kunt [elke voorinstelling aanpassen](#TempTargets-change-preset-defaults) aan je eigen wensen.
+The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. De getoonde waarden zijn de standaardwaarden bij installatie — je kunt [elke voorinstelling aanpassen](#TempTargets-change-preset-defaults) aan je eigen wensen.
 
 ### TT - Activiteit
 
@@ -193,9 +193,9 @@ Soms stijgt de **BG** van de gebruiker snel na het eten van koolhydraten tegen e
 
 Sommige gebruikers willen geen **SMB's** krijgen tijdens een **Tijdelijk streefdoel Hypo**. Dit doe je door *'SMB toestaan bij hoog tijdelijk streefdoel'* uit te zetten in **Instellingen** → **OpenAPS SMB** (zie verder hieronder):
 
-- In (Gevorderd, doel 9): de gebruiker kan *“Hoog tijdelijk streefdoel verhoogt gevoeligheid”* aanzetten voor **tijdelijke streefdoelen** van 100 mg/dl (5,6 mmol/l) of hoger in OpenAPS SMB. **AAPS** is dan gevoeliger.
+- Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
 
-- In (Gevorderd, doel 9): de gebruiker kan *“SMB toestaan bij hoog tijdelijk streefdoel”* uitzetten. Dan geeft **AAPS** geen SMB's zolang een hoog tijdelijk streefdoel actief is, ook als **AAPS** COB > 0 heeft, “SMB toestaan bij laag tijdelijk streefdoel” of “SMB altijd toestaan” aan staat en OpenAPS SMB actief is.
+- Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
 
 Let op: als je het **venster Koolhydraten** opent terwijl je bloedglucose lager is dan 72 mg/dl of 4 mmol/l, kiest **AAPS** de schakelaar **Start Hypo TT** automatisch.
 
@@ -219,9 +219,9 @@ Als *'SMB toestaan bij hoog tijdelijk streefdoel'* uit staat, geeft **AAPS** bov
 
 ## Eet binnenkort Tijdelijk streefdoel
 
-**Tijdelijk streefdoel - Eet binnenkort** kan helpen om de **BG** rustig te laten dalen en zorgt voor genoeg **IOB** voor het eten.
+**Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
 
-Dit kan een belangrijk hulpmiddel zijn voor gebruikers die geen pre-bolus geven. Hoe goed **Tijdelijk streefdoel - Eet binnenkort** werkt, hangt wel af van een aantal factoren, zoals: de instellingen van de gebruiker, of ze weinig koolhydraten eten, en of ze een snelwerkende insuline gebruiken (zoals Fiasp of Lyumjev) zodat een pre-bolus niet nodig is. Totdat gebruikers ervaring hebben met **AAPS**, moeten ze er meestal op rekenen dat ze een pre-bolus geven als ze **Tijdelijk streefdoel - Eet binnenkort** gebruiken. Dit geldt vooral als ze veel koolhydraten eten.
+This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
 
 Je kunt meer lezen over de “Eet binnenkort-modus” in het artikel ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) (Engels) of [hier](https://diyps.org/tag/eating-soon-mode/).
 
