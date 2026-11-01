@@ -21,7 +21,7 @@ Most remote adjustments (temp targets, carbs, profile switches and, once the cli
 
 此外，建议允许[第二个电话号码](#SMSCommands-authorized-phone-numbers)用于短信指令。这样，如果您的主远程手机被盗，您可以使用第二个号码[禁用](#SMSCommands-other)短信通信器。
 
-默认的两次大剂量注射之间的最小时间间隔为15分钟。出于安全考虑，您必须至少添加两个授权电话号码才能将此时间间隔缩短。如果您在上次大剂量注射后的15分钟内再次尝试远程大剂量注射，您将收到响应“远程大剂量注射不可用。请稍后再试”。
+The default minimum time delay between bolus commands is 15 minutes, counted from the moment the pump accepts a bolus. 出于安全考虑，您必须至少添加两个授权电话号码才能将此时间间隔缩短。如果您在上次大剂量注射后的15分钟内再次尝试远程大剂量注射，您将收到响应“远程大剂量注射不可用。请稍后再试”。
 
 AAPS还会通过短信通知您，远程指令（如大剂量注射或配置切换）是否已执行。建议至少设置两个不同的电话号码来接收确认短信，以防其中一个接收手机被盗。
 
