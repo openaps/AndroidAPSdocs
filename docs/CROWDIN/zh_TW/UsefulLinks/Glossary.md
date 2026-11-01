@@ -18,7 +18,7 @@
 
 **APK** = Android 應用程式包。是一個軟體安裝文件。一個軟體安裝檔案。更多資訊 → [Wiki－「建置 APK」](../SettingUpAaps/BuildingAaps.md)。
 
-**Autosens** = 在24小時和8小時的時間範圍內計算胰島素敏感性的變化。更多資訊 → [DIABETTECH－**自動敏感度調整**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)。
+**Autosens** = calculation of sensitivity to insulin over a 24-hour and an 8-hour window etc. 更多資訊 → [DIABETTECH－**自動敏感度調整**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)。
 
 **Azure** = 用來代管 **Nightscout** 網頁 App 的雲端運算平台 → 另請參閱 **Nightscout**。
 
@@ -42,7 +42,7 @@
 
 **CGM** = 連續血糖監測儀 → 另見 **FGM**。
 
-**Closed Loop** = 一種閉環系統，根據 **AAPS** 的演算法和用戶的 **Profile** 設定，自動調整用戶的基礎胰島素輸送，無需用戶批准。更多資訊 → Wiki－「閉環」，另請參閱 **HCL**／**FCL**。
+**Closed Loop** = a closed loop system which makes automatic adjustments to the user’s basal delivery based on an **AAPS’s** algorithm and the user’s **Profile** settings without requiring the user’s approval. Further info → [Wiki - 'closed loop'](#KeyAapsFeatures-ClosedLoop) and see also **HCL** / **FCL**.
 
 **COB** = 活性碳水化合物。這是目前可供用戶消化的碳水化合物量 → 另見 IOB。
 
@@ -50,19 +50,19 @@
 
 **DIA** = 胰島素作用時間。更多資訊 → [Wiki -「DIA」](#Config-Builder-insulin-dia)，另請參閱 → [DIABETTECH -「DIA」](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)。
 
-**DST** = 日光節約時間。請參閱 [Wiki - 時區變更與日光節約時間](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md)。
+**DST** = Daylight Saving Time. 請參閱 [Wiki - 時區變更與日光節約時間](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md)。
 
 **Dynamic ISF（或 DynISF）** = **AAPS** 的一項功能，會根據使用者的 **TDD** 和 **血糖**，動態調整胰島素敏感係數（**ISF**）。
 
 **eCarbs** = 延長碳水化合物。將碳水化合物分散在數小時內攝取（例如用來涵蓋脂肪／蛋白質的影響），讓 **AAPS** 能像延長注射一樣分配胰島素。更多資訊 → [Wiki -「延長碳水化合物」](../DailyLifeWithAaps/ExtendedCarbs.md)
 
-**FCL** = 全閉環。這種循環系統不需要使用者在用餐時輸入資料：不必計算碳水化合物，也不必進行餐前注射。更多資訊 → Wiki -「全閉環」，另請參閱 **HCL**。
+**FCL** = 全閉環。這種循環系統不需要使用者在用餐時輸入資料：不必計算碳水化合物，也不必進行餐前注射。 Further info → [Wiki - 'full closed loop'](../AdvancedOptions/FullClosedLoop.md) and see also **HCL**.
 
-**FGM** = 閃光式血糖監測器，例如 Abbott Freestyle Libre。進一步資訊 → Wiki - 「BG source」，另見「CGM」。
+**FGM** = 閃光式血糖監測器，例如 Abbott Freestyle Libre。 Further info → [Wiki - 'BG source'](#Config-Builder-bg-source) and see also 'CGM'.
 
-**git** = 一種版本管理工具，用於儲存和下載 **AAPS** 的程式碼。
+**git** = a tool used to store and download the **AAPS’** source code.
 
-**GitHub** = 一種網頁服務，用來託管 **AAPS** 原始碼並進行版本控制（追蹤檔案變更並協調相關工作，尤其適用於團隊），也能用來建置應用程式。 更新 **APK** 也需要使用這項服務。進一步資訊 → Wiki - 「update APK」。
+**GitHub** = 一種網頁服務，用來託管 **AAPS** 原始碼並進行版本控制（追蹤檔案變更並協調相關工作，尤其適用於團隊），也能用來建置應用程式。 更新 **APK** 也需要使用這項服務。 Further info → [Wiki - 'update APK'](../Maintenance/UpdateToNewVersion.md).
 
 **Glimp** = 用來收集 Freestyle Libre 讀取值的應用程式。
 
@@ -84,7 +84,7 @@
 
 **maxIOB** = 最大活性胰島素。這是一項安全措施，可防止 `**AAPS**` 提供超過用戶設定的胰島素量。更多資訊 → [Wiki -「OpenAPS 的總胰島素作用中量上限」](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)。
 
-**min_5m_carbimpact** = 一種安全功能，用於計算當無法根據用戶血液反應確定碳水化合物吸收時，預設的碳水化合物衰減。更多資訊 → [Wiki -「偏好設定」](#Preferences-min_5m_carbimpact)。
+**min_5m_carbimpact** = 一種安全功能，用於計算當無法根據用戶血液反應確定碳水化合物吸收時，預設的碳水化合物衰減。 Further info → [Wiki - 'min_5m_carbimpact'](#Preferences-min_5m_carbimpact).
 
 **Nightscout** = 一個開放原始碼的項目，用於存取和報告 **CGM** 資料。這是使用者 **AAPS** 資料的中央資料中心，可產生報告，供使用者查看歷史 **Nightscout** 資料，例如預估 HbA1c、目標範圍內時間，或透過百分位數圖表等方式搜尋資料中的模式。
 
@@ -98,7 +98,7 @@
 
 **Open Loop system** = **AAPS** 的一項功能，將建議調整，必須由用戶在 **AAPS** 上手動執行。更多資訊 → [Wiki -「開環」](#KeyAapsFeatures-OpenLoop)。
 
-**Oref0 / Oref1** = 敏感性偵測和 "參考設計實現版本 0/1"。這是 OpenAPS 背後的關鍵演算法。Wiki - 敏感性偵測。
+**Oref0 / Oref1** = 敏感性偵測和 "參考設計實現版本 0/1"。 It is the key algorithm behind OpenAPS. Further info → [Wiki - 'sensitivity detection'](../DailyLifeWithAaps/SensitivityDetectionAndCob.md).
 
 **OS-AID** = 開放原始碼自動胰島素輸注。使用開放原始碼軟體打造的 **AID** 系統，例如 **AAPS**、**OpenAPS**、Loop 或 Trio。這些系統未經衛生主管機關（FDA、NHS 等）正式核准 → 另請參閱 **AID**。
 
@@ -132,15 +132,15 @@
 
 **TBB** = 總基礎胰島素(total base basal)（24小時內的基礎速率總和）→ 另見 **TBR** / **TDD**。
 
-**TBR** = 臨時基礎速率(temporary basal rate)→ 另見 **TBB** / **TDD**。
+**TBR** = temporary basal rate → see also **TBB** / **TDD**.
 
 **TDD** = 每日總劑量 (total daily dose)（每日的注射+基礎胰島素）→ 另見 **TBB** / **TBR**。
 
-**TT** = 臨時目標(temporary target)。用戶血糖目標（範圍）的臨時增加/減少，例如用於用餐或運動活動。更多資訊 → [Wiki -「臨時目標」](../DailyLifeWithAaps/TempTargets.md)。
+**TT** = temporary target: temporary increase/decrease of the user’s **BG** target (range) e.g. for eating or sport activities. 更多資訊 → [Wiki -「臨時目標」](../DailyLifeWithAaps/TempTargets.md)。
 
 **UAM** = 未事先報備的用餐(unannounced meals)。偵測因餐飲、腎上腺素或其他因素引起的**血糖**水平顯著上升並嘗試進行調整。更多資訊 → [Wiki -「UAM」](#enable-uam)，另請參閱 **SMB**。
 
-**虛擬幫浦(Virtual pump)** = **AAPS** 的一項功能，允許用戶嘗試 **AAPS** 的功能，或供使用沒有 **AAPS** 驅動程式的幫浦型號進行閉環使用的糖尿病患者使用。→ 另見 **Open Loop**。
+**Virtual pump** = an **AAPS** feature which allows the user to try **AAPS’** functions, or lets PWD whose pump model has no **AAPS** driver use **AAPS** as an open loop → see also **Open Loop**.
 
 **Wallpaper** = **AAPS** 的背景圖像。參見手機頁面。
 
