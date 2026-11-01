@@ -1,6 +1,6 @@
-# Wie man das Autotune-Plugin benutzt
+# How to use Autotune plugin
 
-Das Autotune-Plugin ist die Umsetzung des OpenAPS Autotune-Algorithmus in AAPS. It analyzes your recent AAPS history to suggest adjustments to your basal rates, ISF and carb ratio.
+Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS. It analyzes your recent AAPS history to suggest adjustments to your basal rates, ISF and carb ratio.
 
 Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
 
@@ -23,7 +23,7 @@ Autotune can be run three ways: manually as a one-off from within the plugin (as
 
 *For the underlying oref0 algorithm in full mathematical detail, see [OpenAPS's Autotune documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).*
 
-## Das Autotune-Plugin sichtbar machen
+## Show the Autotune plugin
 
 Erstelle im Unterordner `extra` Deines [AAPS-Ordners](#preferences-maintenance-settings) auf Deinem Smartphone eine leere Datei mit dem Namen `enable_autotune`.
 
@@ -52,7 +52,7 @@ Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
   - Hinweis: 'Autotune' wird nur Deinen KH-Faktor (Einzelwert), den Korrekturfaktor (Einzelwert) und Deine Basalrate (zirkadian verteilt) korrigieren bzw. anpassen. Units and target will remain unchanged in output profile.
 
 - "Run Autotune" will launch Autotune calculation with selected profile and the selected number of days of data
-  - Hinweis: Die Autotune-Berechnung kann einige Zeit in Anspruch nehmen. Sobald 'Autotune' gestartet wurde, kannst zu anderen Ansichten (Startbildschirm, ...) wechseln und später zum Autotune-Plugin zurückkehren, um die Ergebnisse zu prüfen
+  - Hinweis: Die Autotune-Berechnung kann einige Zeit in Anspruch nehmen. Once launched, you can switch to another view (home, ...) and come back later in Autotune plugin to see results
 
   ![Autotune-Berechnung starten](../images/Autotune/Autotune_2b.png)
 
