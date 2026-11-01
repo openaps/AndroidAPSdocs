@@ -54,7 +54,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Etiqueta en medio de la [nada](#sandbox1-in-the-middle-of-nowhere) Esta, en cambio, es la etiqueta hacia [](#sandbox1-this-is-another-test) y debería mostrar su nombre
 
-Enlaces con ancla:
+Links with anchor:
 - [¿cuánto tiempo llevará?](#preparing-how-long-will-it-take)
 - [Ajustes de NSClient en Preferencias](#Preferences-nsclient).
 - [líneas de predicción en la pantalla principal de AAPS](#aaps-screens-prediction-lines) a nivel de encabezado 4
