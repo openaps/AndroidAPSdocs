@@ -16,13 +16,13 @@ Er zijn vijf widgets. Ze staan onder **AAPS** in de widgetkiezer van Android:
 
 ![AAPS-widgets in de widgetkiezer van Android](../images/widgets/widget_picker_aaps.png)
 
-| Widget                            | Standaardgrootte | Wat hij toont                                                                                                                              |
-| --------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| **AAPS widget**                   | 5 × 2            | Het statusblok van het hoofdscherm: BG met trend en delta, loopmodus, profiel, streefdoel, gevoeligheid, IOB en COB.                       |
-| **AAPS glucosecirkel**            | 2 × 2            | De BG-cirkel van het hoofdscherm: een ring in de kleur van de BG, de trendboog, de delta, de BG-waarde en de tijd sinds de laatste meting. |
-| **AAPS Klein**                    | 2 × 2            | Profielnaam, BG met trendpijl, tijd sinds de laatste meting, delta, IOB en COB.                                                            |
-| **AAPS BG + IOB + COB (compact)** | 4 × 1            | Eén regel met BG en trendpijl, IOB en COB.                                                                                                 |
-| **AAPS BG-grafiek**               | 3 × 1            | De BG-waarde met een kleine grafiek van de laatste metingen.                                                                               |
+| Widget                            | Standaardgrootte | Wat hij toont                                                                                                                                                                                                                                              |
+| --------------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AAPS widget**                   | 5 × 2            | The status block of the main screen: BG with trend and delta, the loop mode as an icon beside the profile name, target, sensitivity (shown as on the main screen), IOB and COB. The texts shrink to fit the size you give the widget instead of being cut. |
+| **AAPS glucosecirkel**            | 2 × 2            | De BG-cirkel van het hoofdscherm: een ring in de kleur van de BG, de trendboog, de delta, de BG-waarde en de tijd sinds de laatste meting.                                                                                                                 |
+| **AAPS Klein**                    | 2 × 2            | Profielnaam, BG met trendpijl, tijd sinds de laatste meting, delta, IOB en COB.                                                                                                                                                                            |
+| **AAPS BG + IOB + COB (compact)** | 4 × 1            | Eén regel met BG en trendpijl, IOB en COB.                                                                                                                                                                                                                 |
+| **AAPS BG-grafiek**               | 3 × 1            | De BG-waarde met een kleine grafiek van de laatste metingen.                                                                                                                                                                                               |
 
 De **AAPS widget**, de **glucosecirkel** en de widget **Klein** op een startscherm:
 
