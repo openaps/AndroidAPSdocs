@@ -21,7 +21,7 @@ Si activas el **Comunicador por SMS** en **AAPS**, ten en cuenta que el teléfon
 
 Además, se recomienda permitir un [segundo número de teléfono](#SMSCommands-authorized-phone-numbers) para los comandos SMS. Así puedes usar el segundo número para [desactivar](#SMSCommands-other) el comunicador por SMS si tu teléfono remoto principal queda comprometido.
 
-El tiempo mínimo por defecto entre comandos de bolo es de 15 minutos. Por seguridad, tienes que añadir al menos dos números de teléfono autorizados para poder bajarlo a un tiempo más corto. Si intentas poner otro bolo remoto en los 15 minutos siguientes al bolo anterior, recibirás la respuesta «Bolo remoto no disponible. Inténtalo de nuevo más tarde»
+The default minimum time delay between bolus commands is 15 minutes, counted from the moment the pump accepts a bolus. Por seguridad, tienes que añadir al menos dos números de teléfono autorizados para poder bajarlo a un tiempo más corto. Si intentas poner otro bolo remoto en los 15 minutos siguientes al bolo anterior, recibirás la respuesta «Bolo remoto no disponible. Inténtalo de nuevo más tarde»
 
 AAPS también te avisará por mensaje de texto si tus comandos remotos, como un bolo o un cambio de perfil, se han ejecutado. Es aconsejable, por seguridad, configurar esta función para que los textos de confirmación se envíen al menos a dos números de teléfono diferentes, así si falla (o ha sido robado) uno, quedará el otro.
 
