@@ -78,7 +78,7 @@ Wear APK 和手機 APK 一樣建置，但需另外進行一次簽章建置。請
 
 建置完整的 **AAPS** 應用程式時（事實上，建置任何已簽章的應用程式時也一樣），Android Studio 都會在同一個資料夾中產生一個 .json 檔案。這會在你嘗試建置下一個已簽章的應用程式（如 **AAPS** wear 應用程式）時，導致[未提交的變更](#troubleshooting_androidstudio-uncommitted-changes)錯誤。解決此問題的最快方法是導航到建置完整 AAPS 應用程式的資料夾，你的資料夾可能類似於：
 
-`C:\Users\你的名稱\AndroidStudioProjects\AndroidAPS\app\aapsclient\release。`
+`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\full\release.`
 
 將不需要的 .json 檔案刪除或移出該資料夾。然後再次嘗試建置 **AAPS** wear 應用程式。如果這不起作用，請參閱[更詳細的問題排除指南](../GettingHelp/TroubleshootingAndroidStudio.md)，以幫助你識別導致問題的具體檔案，也可能是你的密鑰庫檔案。
 
