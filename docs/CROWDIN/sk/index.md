@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- 31 October 2026 : Version 4.0.0 is out. Čo je nové, nájdete v [poznámkach k vydaniu](#latestrelease). Pri aktualizácii postupujte podľa [návodu na aktualizáciu](./Maintenance/UpdateToNewVersion.md).
+31 October 2026: Version 4.0.0 is out. Čo je nové, nájdete v [poznámkach k vydaniu](#latestrelease). Pri aktualizácii postupujte podľa [návodu na aktualizáciu](./Maintenance/UpdateToNewVersion.md).
 
 ```
 
@@ -17,7 +17,7 @@ Táto dokumentácia vysvetľuje, ako **AAPS** nastaviť a používať. V dokumen
 
 V sekcii **1) Začíname** stránka [Úvod](Getting-Started/Introduction.md) vysvetľuje základnú myšlienku, na čo slúži systém umelého pankreasu (APS). Opisuje všeobecné pozadie používania okruhu, prečo vzniklo **AAPS**, porovnáva **AAPS** s inými systémami a venuje sa bezpečnosti. Radí, ako sa o **AAPS** rozprávať s vaším lekárskym tímom, vysvetľuje, prečo si aplikáciu **AAPS** musíte zostaviť sami a nemôžete si ju iba stiahnuť, a dáva prehľad o typickom prepojení zariadení v systéme **AAPS**. Venuje sa aj prístupnosti a tomu, komu môže **AAPS** pomôcť.
 
-Stránka [Príprava na štart s AAPS](./Getting-Started/PreparingForAaps.md) podrobnejšie opisuje bezpečnostné hľadiská a telefóny, CGM (senzory na kontinuálne monitorovanie glykémie) a inzulínové pumpy, ktoré sú s **AAPS** kompatibilné. Dáva prehľad o celom postupe, ktorým prejdete, a uvádza približný časový plán, kým budete môcť využívať všetky funkcie **AAPS**. Táto sekcia vás technicky pripraví, aby ste svoj systém **AAPS** zostavili čo najrýchlejšie a najefektívnejšie. Podsekcia [Kompatibilné CGM](./Getting-Started/CompatiblesCgms.md) vysvetľuje, ako optimálne nastaviť CGM a ktoré možnosti vyhladzovania sú najlepšie.
+Stránka [Príprava na štart s AAPS](./Getting-Started/PreparingForAaps.md) podrobnejšie opisuje bezpečnostné hľadiská a telefóny, CGM (senzory na kontinuálne monitorovanie glykémie) a inzulínové pumpy, ktoré sú s **AAPS** kompatibilné. Dáva prehľad o celom postupe, ktorým prejdete, a uvádza približný časový plán, kým budete môcť využívať všetky funkcie **AAPS**. Táto sekcia vás technicky pripraví, aby ste svoj systém **AAPS** zostavili čo najrýchlejšie a najefektívnejšie. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
 
 Teraz, keď dobre rozumiete celému postupu, môžete začať zostavovať svoj okruh **AAPS**.
 
@@ -40,7 +40,7 @@ Sekcia **9) [Pomoc a riešenie problémov](GettingHelp/WhereCanIGetHelp.md)** v�
 
 Sekcia **10)** sa venuje **[pokročilým možnostiam AAPS](./AdvancedOptions/FullClosedLoop.md)**, napríklad ako prejsť od používania **AAPS** ako hybridného uzavretého okruhu (s bolusmi k jedlu _atď._) k plne uzavretému okruhu (bez bolusov), ako [vyladiť profil](./GettingHelp/ProfileTuning.md) a používať Autotune, a opisuje vývojársky a engineering režim. Väčšina používateľov si úplne vystačí s hlavnou verziou **AAPS** („Master“) a tieto možnosti nepotrebuje. Táto sekcia je pre používateľov, ktorí už majú dobrú kontrolu a chcú svoj systém ešte zlepšiť.
 
-V sekcii **11) [Ako podporiť AAPS](SupportingAaps/HowToEditTheDocs.md)** nájdete informácie, ako môžete tento projekt podporiť. Môžete prispieť peniazmi, vybavením alebo svojimi znalosťami. Môžete sami navrhovať alebo robiť zmeny v dokumentácii, pomôcť s [prekladom dokumentácie](SupportingAaps/Translations) a poskytnúť svoje údaje cez projekt Open Humans.
+In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provide information so that you can support this project. Môžete prispieť peniazmi, vybavením alebo svojimi znalosťami. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations.md) and provide your data through the Open Humans project.
 
 Sekcia **12) Zdroje** obsahuje archívnu alebo doplňujúcu dokumentáciu, vrátane podsekcie pre [lekárov](UsefulLinks/ClinicianGuideToAaps.md), ktorí sa zaujímajú o technológiu umelého pankreasu s otvoreným zdrojovým kódom, ako je **AAPS**, alebo pre pacientov, ktorí chcú tieto informácie zdieľať so svojimi lekármi. Táto téma je opísaná aj v úvode. V tejto sekcii nájdete aj ďalšie odkazy a zdroje o diabete a používaní okruhu. Obsahuje [Slovník](./UsefulLinks/Glossary.md), zoznam skratiek (alebo krátkych názvov), ktoré sa v **AAPS** používajú. Tu napríklad zistíte, čo znamenajú skratky ISF alebo TT.
 
