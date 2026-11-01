@@ -201,18 +201,18 @@ De kolom *Verificatie* in de tabellen hieronder geeft aan of zo'n sterke verific
 
 ### CGM-gegevens
 
-| Commando   | Verificatie | Functie & *Antwoord*                                                                                                                                                                                     |
-| ---------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BG         | Nee         | Geeft terug: laatste BG, delta, IOB (bolus en basaal), COB<br/>*Laatste BG: 5,6 4min geleden, Verschil: -0,2 mmol, IOB: 0,20E (Bolus: 0,10E Basaal: 0,10E)*                                        |
-| CAL 5.6/90 | Ja          | Kalibreert de CGM met een waarde van 5,6/90<br/>(gebruik de waarde die past bij je glucose-eenheid)<br/>Werkt alleen als dit goed is ingesteld in **AAPS**.<br/>*Kalibratie verzonden* |
+| Commando   | Verificatie | Functie & *Antwoord*                                                                                                                                                                                                              |
+| ---------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BG         | Nee         | Geeft terug: laatste BG, delta, IOB (bolus en basaal), COB<br/>*Laatste BG: 5,6 4min geleden, Verschil: -0,2 mmol, IOB: 0,20E (Bolus: 0,10E Basaal: 0,10E)*                                                                 |
+| CAL 5.6/90 | Ja          | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent. Receiving must be enabled in xDrip+.* |
 
 ### Pomp
 
-| Commando             | Verificatie | Functie & *Antwoord*                                                                                                   |
-| -------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------- |
-| POMP                 | Nee         | Laatste connectie: 1 min geleden<br/>Tijdelijk: 0,00E/u @11:38 5/30min<br/>IOB: 0,5E Reserv: 34E Batt: 100 |
-| PUMP DISCONNECT *30* | Ja          | Om de pomp *30* minuten los te koppelen                                                                                |
-| PUMP CONNECT         | Ja          | Pomp opnieuw verbonden                                                                                                 |
+| Commando             | Verificatie | Functie & *Antwoord*                                                                                 |
+| -------------------- | ----------- | ---------------------------------------------------------------------------------------------------- |
+| POMP                 | Nee         | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP DISCONNECT *30* | Ja          | Om de pomp *30* minuten los te koppelen                                                              |
+| PUMP CONNECT         | Ja          | Pomp opnieuw verbonden                                                                               |
 
 ### Basaal
 
@@ -229,14 +229,14 @@ Sommige pompen accepteren een tijdelijk basaal alleen in procenten, andere allee
 
 ### Loop
 
-| Commando          | Verificatie | Functie & *Antwoord*                                                                                                                                                                                                                                                          |
-| ----------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LOOP STATUS       | Nee         | Het antwoord hangt af van de actuele status:<br/> - *Loop is uitgeschakeld* als de loop is uitgeschakeld of in LGS staat<br/> - *Loop is ingeschakeld* als de loop gesloten of open is<br/> - *Gepauzeerd (10 m)* als de loop is losgekoppeld of gepauzeerd |
-| LOOP STOP/DISABLE | Ja          | De pomp gaat terug naar de vooraf ingestelde basaalstand.<br/>*Loop is uitgeschakeld*                                                                                                                                                                                   |
-| LOOP SUSPEND 20   | Ja          | *Loop 20 minuten gepauzeerd*                                                                                                                                                                                                                                                  |
-| LOOP RESUME       | Ja          | *Loop hervat*                                                                                                                                                                                                                                                                 |
-| LOOP CLOSED       | Ja          | *Huidige loopmodus: Closed loop*                                                                                                                                                                                                                                              |
-| LOOP LGS          | Ja          | *Huidige loopmodus: Stop bij laag (LGS)*                                                                                                                                                                                                                                      |
+| Commando          | Verificatie | Functie & *Antwoord*                                                                                                                                                                                                                                                               |
+| ----------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LOOP STATUS       | Nee         | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled<br/> - *Loop is enabled* if the loop is closed, open or LGS<br/> - *Pump disconnected* if the pump is disconnected<br/> - *Suspended (10 m)* if the loop is suspended |
+| LOOP STOP/DISABLE | Ja          | De pomp gaat terug naar de vooraf ingestelde basaalstand.<br/>*Loop is uitgeschakeld*                                                                                                                                                                                        |
+| LOOP SUSPEND 20   | Ja          | *Loop suspended*                                                                                                                                                                                                                                                                   |
+| LOOP RESUME       | Ja          | *Loop hervat*                                                                                                                                                                                                                                                                      |
+| LOOP CLOSED       | Ja          | *Current running mode: Closed Loop*                                                                                                                                                                                                                                                |
+| LOOP LGS          | Ja          | *Current running mode: Low Glucose Suspend*                                                                                                                                                                                                                                        |
 
 ### Bolus
 
@@ -348,6 +348,6 @@ Als de andere app op meerdere telefoons is geïnstalleerd, zorg er dan voor dat 
 (sms-commands-too-many-messages)=
 ### Ik krijg veel te veel sms-berichten van SMS-commando's. Kan ik minder berichten krijgen, of ze stoppen?
 
-SMS-commando's kunnen veel automatische berichten geven van de **AAPS**-telefoon naar de telefoon van de verzorger. Je krijgt ook berichten, bijvoorbeeld “Basaal profiel in pomp bijgewerkt”, als je automatiseringen hebt ingesteld in **AAPS**. Het kan handig zijn om onbeperkt sms'en in het abonnement van je **AAPS**-telefoon te hebben (en voor elke gebruikte telefoon van een verzorger) als er veel sms-berichten worden verstuurd. Zet ook sms-meldingen, alarmen of trillen uit op alle telefoons. Je kunt geen SMS-commando's gebruiken zonder deze berichten te krijgen. Daarom wil je misschien een andere manier om direct met je kind te communiceren (als het oud genoeg is), in plaats van SMS. Veel gebruikte andere communicatie-apps bij verzorgers van **AAPS**-gebruikers zijn Whatsapp, Lime, Telegram en Facebook Messenger.
+SMS-commando's kunnen veel automatische berichten geven van de **AAPS**-telefoon naar de telefoon van de verzorger. Je krijgt ook berichten, bijvoorbeeld “Basaal profiel in pomp bijgewerkt”, als je automatiseringen hebt ingesteld in **AAPS**. Het kan handig zijn om onbeperkt sms'en in het abonnement van je **AAPS**-telefoon te hebben (en voor elke gebruikte telefoon van een verzorger) als er veel sms-berichten worden verstuurd. Zet ook sms-meldingen, alarmen of trillen uit op alle telefoons. Je kunt geen SMS-commando's gebruiken zonder deze berichten te krijgen. Daarom wil je misschien een andere manier om direct met je kind te communiceren (als het oud genoeg is), in plaats van SMS. Common alternative communication apps used by **AAPS** caregivers include WhatsApp, LINE, Telegram, and Facebook Messenger.
 
-Je kunt de SMS "Profile changed" uitschakelen als de profielwijziging uit Nightscout kwam. Maak hiervoor een bestand met **precies** de naam  `do_not_send_sms_on_profile_change` in de map `extra` van je AAPS map.
+It is possible to disable the "Basal profile in pump updated" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly** `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
