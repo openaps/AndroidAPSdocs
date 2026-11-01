@@ -54,7 +54,9 @@ Du trenger minst én lagret **profil**. En **profilprosent** brukes alltid gjenn
 
 I **AAPS** v4 administreres og aktiveres profiler fra skjermen **Administrer** (navigasjonslinjen nederst) → **Profil** (*«Administrer og aktiver profiler»*).
 
-Profilskjermen viser profilene dine som en **karusell med kort du kan sveipe**. Kortet til profilen som kjører, er merket **AKTIV** og viser total daglig basal (f.eks. *∑ 30,15 E*). Under det valgte kortet ser du detaljene for den profilen — **Enheter**, **Insulin**-type, og tidsplanene for **IK**, **ISF**, **basal** og **mål** med grafer.
+Profilskjermen viser profilene dine som en **karusell med kort du kan sveipe**. Kortet til profilen som kjører, er merket **AKTIV** og viser total daglig basal (f.eks. *∑ 30,15 E*). Below the selected card you see that profile's details — the **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+
+When a temporary switch is running, the **ACTIVE** card shows its percentage and time shift with the time left, for example *110% +2 h · 2 h 40 min*, above a progress bar. Both are refreshed every 30 seconds. The details below then have two columns: the values of the profile in blue, and the values in use with the percentage in red.
 
 ![Profilskjermen — profilkarusell, detaljer og handlingslinje](../images/v4/Profiles/profile_manage.png)
 
