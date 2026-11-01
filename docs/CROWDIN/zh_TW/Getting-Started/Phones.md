@@ -30,7 +30,7 @@
 
 若要記錄你的硬體設置測試，請填寫這個[表單](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform)。填寫表單資料後，該表格會自動每 5 分鐘更新一次.
 
-對於試算表的任何問題，請聯繫其維護者*@theodoor5137*，在 Discord 聯絡，或請參閱[我可以在哪裡獲得幫助? 頁面](../GettingHelp/WhereCanIGetHelp.md)。
+Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
 
 ## 我找不到我的手機
 
