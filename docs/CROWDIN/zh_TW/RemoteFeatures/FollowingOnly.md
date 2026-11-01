@@ -114,7 +114,7 @@
 
 ![圖像](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift 是從最初的 xDrip 應用程式移植到 iOS 並發展成"xDrip for iOS"，稱為**xDrip4iOS**。
+xDripSwift was created from porting the original xDrip app to iOS and evolved into "xDrip for iOS", written as **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
@@ -149,7 +149,7 @@ xDripSwift 是從最初的 xDrip 應用程式移植到 iOS 並發展成"xDrip fo
 * Apple iPad（需要軟體版本 13.0 或更高）
 * Google Android（將網頁應用儲存到主畫面）
 
-據 Sugarmate 用戶報告，他可以在美國與 Apple CarPlay 一起使用，當駕駛時顯示血糖讀取值。目前尚未確定這在美國以外的國家是否可行。如果你知道更多有關此功能的資訊，請透過提交 pull-request（鏈接）將詳細資料添加到文件中，這過程快速且簡單。
+據 Sugarmate 用戶報告，他可以在美國與 Apple CarPlay 一起使用，當駕駛時顯示血糖讀取值。目前尚未確定這在美國以外的國家是否可行。 If you know more about this, please add details in here to the documentation by completing a [pull request](../SupportingAaps/HowToEditTheDocs.md), which is quick and easy to do.
 
 
 ### [Spike](https://spike-app.com/)（iOS）
@@ -172,13 +172,13 @@ Spike 可用作主要接收器或追蹤者應用程式，提供血糖、警報�
 :local: true
 ```
 
-### M5 stack
+### M5Stack
 
 ![圖像](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
 
 M5Stack 是一個小盒子，可以用來進行多種程式開發，Martin 的項目 [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) 顯示傳感器血糖值和趨勢、IOB 和 COB。他是一個塑膠盒，配備了彩色顯示屏、micro SD 卡槽、3 個按鈕、揚聲器和內置電池。它是一款優秀的血糖監測器，如果你有 Nightscout 帳號，設置相對簡單。用戶通常在家中的 Wi-Fi 下運行它，但有些用戶報告在摩托車駕駛時通過手機 Wi-Fi 熱點使用它作為顯示器。
 
-### Sugarpixel
+### SugarPixel
 
 SugarPixel 是一個連線 Dexcom 應用程式或 Nightscout 應用程式的次級血糖顯示警報系統，用於持續血糖監測。該設備顯示實時的血糖讀取值。這款 CGM 硬體監測器提供隨機音調的音檔警示（音量非常大）、為聽力受損者設計的震動警示、可自訂的顯示選項，以及原生多使用者追蹤功能。
 
