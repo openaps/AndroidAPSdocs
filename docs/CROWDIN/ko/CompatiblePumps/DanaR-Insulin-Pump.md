@@ -15,7 +15,7 @@
 ![다나R 펌프](../images/danar1.png)
 
 * Menu > Setting > Discovery 으로 이동하세요.
-* 스마트폰 환경설정에서 블루투스로 이동하고, 주변 디바이스를 검색한 다음, DanaR 시리얼 번호를 선택하고 암호를 입력합니다(암호는 0000). 만약 검색을 해도 DanaR이 표시되지 않으면 스마트폰을 재시작한다음, DanaR펌프 배터리를 꺼내고 교체한 후 이 두 단계를 다시 시작합니다.
+* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). 만약 검색을 해도 DanaR이 표시되지 않으면 스마트폰을 재시작한다음, DanaR펌프 배터리를 꺼내고 교체한 후 이 두 단계를 다시 시작합니다.
 
 * In **AAPS**, open the **menu** (☰) in the top-left corner, go to **Configuration** > **Pump** and select the type of DanaR you have (**DanaR**, **DanaR Korean** or **DanaRv2**).
   
