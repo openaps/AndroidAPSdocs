@@ -42,7 +42,7 @@
 
 **Фигура 1**. Основна схема на Android APS (Artificial Pancreas System – система за изкуствен панкреас), AAPS.
 
-Android APS (**AAPS**) е система с хибриден затворен кръг, или система за изкуствен панкреас (APS). Тя изчислява дозите инсулин с утвърдените алгоритми на [OpenAPS](https://openaps.org/) (набор от правила), разработени от общността на хората с диабет тип 1 #WeAreNotWaiting.
+Android APS (**AAPS**) is a hybrid closed loop system, or Artificial Pancreas System (APS). Тя изчислява дозите инсулин с утвърдените алгоритми на [OpenAPS](https://openaps.org/) (набор от правила), разработени от общността на хората с диабет тип 1 #WeAreNotWaiting.
 
 Тъй като OpenAPS е съвместима само с някои по-стари инсулинови помпи, **AAPS** (която може да се използва с повече видове инсулинови помпи) първоначално е разработена през 2016 г. за член на семейство с диабет тип 1. От тези ранни дни насам **AAPS** непрекъснато се развива и подобрява от екип от доброволци – програмисти и други ентусиасти, които имат връзка със света на диабет тип 1. Днес **AAPS** се използва от много хиляди хора по целия свят. Това е силно настройваема и гъвкава система и тъй като е с отворен код, тя лесно се съчетава с много други програми и платформи с отворен код за диабет. Основните компоненти на сегашната система **AAPS** са показани на **Фигура 1** по-горе.
 
@@ -54,7 +54,7 @@ Android APS (**AAPS**) е система с хибриден затворен к
 
 Освен **AAPS**, на **смартфона с Android** трябва да бъде инсталирано и още едно приложение. Това [допълнително приложение](../Getting-Started/CompatiblesCgms.md) получава данните за глюкозата от сензора (**2**) чрез Bluetooth и след това ги изпраща вътре в телефона към **приложението AAPS**.
 
-**Приложението AAPS** използва процес за вземане на решения (**алгоритъм**) от OpenAPS. Начинаещите започват с основния алгоритъм **oref0**, но с напредването ви в AAPS можете да преминете към по-новия алгоритъм **oref1**. Кой алгоритъм ще използвате (oref0 или oref1), зависи от това кой е най-подходящ за вашата конкретна ситуация.  И в двата случая алгоритъмът взема предвид много фактори и прави бързи изчисления всеки път, когато от сензора дойде нова стойност. След това алгоритъмът изпраща чрез Bluetooth инструкции към инсулиновата помпа (**3**) колко инсулин да подаде. Цялата информация може да се изпраща в интернет (**4**) чрез мобилни данни или Wi-Fi. При желание тези данни могат да се споделят и с последователи и/или да се събират за анализ. По желание можете да сдвоите с телефона и [смарт часовник](../Getting-Started/Watches.md) (**5**), за да виждате данните си с един поглед, а с някои часовници – и да изпращате основни команди към **AAPS**.
+**Приложението AAPS** използва процес за вземане на решения (**алгоритъм**) от OpenAPS. Beginners start out using the basic **oref0** algorithm, but it is possible to switch to using the newer **oref1** algorithm as you progress with AAPS. Кой алгоритъм ще използвате (oref0 или oref1), зависи от това кой е най-подходящ за вашата конкретна ситуация.  И в двата случая алгоритъмът взема предвид много фактори и прави бързи изчисления всеки път, когато от сензора дойде нова стойност. След това алгоритъмът изпраща чрез Bluetooth инструкции към инсулиновата помпа (**3**) колко инсулин да подаде. Цялата информация може да се изпраща в интернет (**4**) чрез мобилни данни или Wi-Fi. При желание тези данни могат да се споделят и с последователи и/или да се събират за анализ. По желание можете да сдвоите с телефона и [смарт часовник](../Getting-Started/Watches.md) (**5**), за да виждате данните си с един поглед, а с някои часовници – и да изпращате основни команди към **AAPS**.
 
 ## Какви са предимствата на системата AAPS?
 
@@ -98,13 +98,13 @@ Android APS (**AAPS**) е система с хибриден затворен к
 
  а) Възможност да зададете по-ниска цел за **КЗ** 30 мин преди хранене; можете да зададете цел дори 72 mg/dl (4,0 mmol/l).
 
- б) Ако имате инсулинова резистентност, която води до висока кръвна захар, **AAPS** ви позволява да зададете правило за **автоматизация**, което се активира, когато КЗ се покачи над 8 mmol/l (144 mg/dl), и превключва (например) към профил 120 % (това води до 20 % повече базал и засилване и на другите фактори в сравнение с обичайната настройка на вашия **профил**). Автоматизацията ще действа според времето, което сте задали. Такава автоматизация може да се настрои да е активна само в определени дни от седмицата, в определени часове от деня и дори на определени места.
+ b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in a 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). Автоматизацията ще действа според времето, което сте задали. Такава автоматизация може да се настрои да е активна само в определени дни от седмицата, в определени часове от деня и дори на определени места.
 
- в) Ако детето ви внезапно отиде да скача на батут, **AAPS** позволява да спрете подаването на инсулин за определено време директно от телефона.
+ c) If your child is on a trampoline with no advance notice, **AAPS** allows insulin suspension for a set time period, directly via the phone.
 
- г) След като свържете отново помпа с маркуч, която е била откачена за плуване, **AAPS** ще изчисли базалния инсулин, който сте пропуснали, докато помпата е била откачена, и ще го подаде внимателно според текущата ви КЗ. Ако този инсулин не е нужен, можете просто да „отмените“ пропуснатия базал.
+ d) After reconnecting a tubed pump which has been disconnected for swimming, **AAPS** will calculate the basal insulin you have missed while disconnected and deliver it carefully, according to your current BG. Ако този инсулин не е нужен, можете просто да „отмените“ пропуснатия базал.
 
- д) **AAPS** ви позволява да зададете различни профили за различни ситуации и лесно да превключвате между тях. Например функциите, с които алгоритъмът сваля по-бързо високата КЗ (като супер микро болуси („**SMB**“) и необявени хранения („**UAM**“)), могат да се настроят да работят само през деня, ако се притеснявате от нощни хипогликемии.
+ д) **AAPS** ви позволява да зададете различни профили за различни ситуации и лесно да превключвате между тях. For example, features which make the algorithm quicker to bring down elevated BG (like supermicro boluses (“**SMB**”) and unannounced meals (“**UAM**”)) can be set to only work during the daytime, if you are worried about night-time hypos.
 
 Всичко това са примери – пълният набор от функции дава голяма гъвкавост в ежедневието, включително при спорт, болест, хормонални цикли _и т.н._ В крайна сметка потребителят решава как да използва тази гъвкавост и няма автоматизация, която да е подходяща за всички.
 
@@ -295,9 +295,9 @@ The paper published in the [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.
 3. A DIY ‘bionic pancreas’ is changing diabetes care — what's next? [_Nature_ (2023), _620_, 940-941](https://doi.org/10.1038/d41586-023-02648-9)
 4. Prescribing unapproved medical devices? The case of DIY artificial pancreas systems [_Medical law international_, (2021), _21_, 42-68](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
 5. [Становище на Berlin Institute of Health, 2022](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
-6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (становище и ръководство на Diabetes Canada) [_Canadian Journal of Diabetes_, (2023)_47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
+6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (Diabetes Canada position and guide) [_Canadian Journal of Diabetes_ (2023), _47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
 7.  Нидерландия (EN/NL) – за лекари – [как да помагате на хора, които използват системи с отворен код за автоматизирано подаване на инсулин](https://www.diabetotech.com/blog/how-to-help-people-on-open-source-automated-insulin-delivery-systems)
-8. First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALLRandomized Pilot Study [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
+8. First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALL Randomized Pilot Study [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
 9. Pre-school and school-aged children benefit from the switch from a sensor-augmented pump to an AndroidAPS hybrid closed loop: A retrospective analysis [_Pediatr. Diabetes_ 2021, _22_, 594-604. 2021](https://onlinelibrary.wiley.com/doi/epdf/10.1111/pedi.13190)
 10. Резултати от проекта OPEN – финансиран от ЕС проект за резултатите от опита на пациентите с нова технология за изкуствен панкреас „направи си сам“ (Outcomes of Patient’s Evidence with Novel, Do-it-Yourself Artificial Pancreas Technology) (https://www.open-diabetes.eu/publications)
 
@@ -379,9 +379,9 @@ AAPS може да се използва от незрящи хора. На ус
 
 2) Натиснете клавиша Windows, въведете „Control Panel“ (Контролен панел) в полето за търсене и отворете с Enter. Отваря се: „All Control Panel Items“ (Всички елементи на контролния панел).
 
-Натиснете буквата C, за да стигнете до „Center for Ease of Use“ (Център за улеснен достъп), и отворете с Enter.
+Press the letter E to get to “Ease of Access Centre”, open with Enter.
 
-След това отворете „Use computer without a screen“ (Използване на компютъра без екран) с Enter.
+След това отворете „Use computer without a display“ (Използване на компютъра без дисплей) с Enter.
 
 Там, най-долу, ще намерите отметката „Enable Java Access Bridge“ – изберете я.
 
