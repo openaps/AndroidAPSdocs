@@ -7,7 +7,7 @@
 * Kommuniserer med **AAPS** over telefonens innebygde Bluetooth, uten en ekstra kommunikasjonsenhet.
 * Tidssonebytte og sommertid krever ingen spesielle tiltak, siden pumpen ikke bruker sin egen historikk.
 
-## Setup
+## Oppsett
 
 * På pumpen går du til Main Menu > Setting > User Option
 * Slå på «8. Extended Bolus»
@@ -25,7 +25,7 @@
 
 * Trykk på **Sammenkobling**. På sammenkoblingsskjermen: 
   * Skriv inn pumpepassordet ditt under **Pumpepassord** (standardpassordet er 1234).
-  * Under **Velg paret enhet** trykker du på serienummeret til din DanaR. Hvis listen er tom, trykker du på **Åpne Bluetooth-innstillinger** og kobler pumpen sammen med telefonen først (se steget ovenfor). Når du kommer tilbake til **AAPS**, vises pumpen i listen. Hvis den ikke gjør det, trykker du på oppdater-ikonet.
+  * Under **Velg sammenkoblet enhet** trykker du på serienummeret til din DanaR. Hvis listen er tom, trykker du på **Åpne Bluetooth-innstillinger** og kobler pumpen sammen med telefonen først (se steget ovenfor). Når du kommer tilbake til **AAPS**, vises pumpen i listen. Hvis den ikke gjør det, trykker du på oppdater-ikonet.
   * Trykk på **Sammenkobling**. **AAPS** kobler til pumpen og kontrollerer passordet.
 * For å endre driverinnstillingene trykker du på **Innstillinger** på DanaR-kortet i **Konfigurasjon** > **Pumpe**: 
   * **Bolushastighet** (DanaR og DanaRv2): endre standard bolushastighet (12 s/E, 30 s/E eller 60 s/E).
