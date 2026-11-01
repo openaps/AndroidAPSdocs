@@ -1,225 +1,225 @@
-# Your AAPS profile
+# Din AAPS-profil
 
-Your **AAPS Profile** is a set of four key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. These are the main parameters **AAPS** is built upon. As you progress through the **Objectives**, you will unlock additional modifiable parameters (like SMB settings), but the performance of these features rely on your underlying **Profile** being correct. The **Profile** incorporates:
-* [glucose targets](#profile-glucose-targets),
-* [basal rates](#your-aaps-profile-basal-rates) (BR),
-* [insulin sensitivity factors](#your-aaps-profile-insulin-sensitivity-factor) (ISF) and
-* [insulin-to-carb ratios](#your-aaps-profile-insulin-to-carbs-ratio) (IC or ICR).
+**AAPS-profilen** din er et sett med fire nøkkelparametere som bestemmer hvordan **AAPS** skal gi insulin som svar på sensorverdiene dine. Dette er hovedparameterne som **AAPS** bygger på. Etter hvert som du går gjennom **Opplæringsmål**, låser du opp flere parametere du kan endre (som SMB-innstillinger), men hvor godt disse funksjonene virker, avhenger av at **Profil**-grunnlaget ditt er riktig. **Profilen** består av:
+* [BS-mål](#profile-glucose-targets),
+* [basaldoser](#your-aaps-profile-basal-rates) (BR),
+* [insulinfølsomhetsfaktorer](#your-aaps-profile-insulin-sensitivity-factor) (ISF) og
+* [insulin/karbohydrat-forhold](#your-aaps-profile-insulin-to-carbs-ratio) (IK, på engelsk IC eller ICR).
 
 ```{admonition} Where did DIA go?
 :class: note
-The **duration of insulin action (DIA)** is no longer part of your **Profile**. It is set per insulin instead — see [Manage → Insulin settings](#Config-Builder-insulin-dia).
+**Insulinets virketid (DIA)** er ikke lenger en del av **Profilen** din. Den settes per insulin i stedet – se [Administrer → Insulininnstillinger](#Config-Builder-insulin-dia).
 ```
 
-As part of **AAPS**’ management, users should continually assess and scrutinize the accuracy of their **Profile** settings. It is recommended to take the settings in the order they are presented here. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. Don't forget to activate the new profile after each change. Regularly [back up your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your settings.
+Som en del av å bruke **AAPS** bør du hele tiden vurdere og granske hvor nøyaktige **Profil**-innstillingene dine er. Vi anbefaler at du tar innstillingene i den rekkefølgen de står her. Prøv å få én innstilling riktig før du endrer en annen. Arbeid i små steg i stedet for å gjøre store endringer på en gang. Ikke glem å aktivere den nye profilen etter hver endring. [Sikkerhetskopier **Profil**-innstillingene](#YourAapsProfile_Profile-backup) dine jevnlig ved å eksportere innstillingene.
 
-Your **Profile** settings interact with one another - you can have 'wrong' settings that work well together in certain circumstances but do not in others. For instance, if a too-high basal happens to be at the same time as a too-high **CR**. This means that you need to consider the settings individually and check they work harmoniously together in a variety of circumstances.
+**Profil**-innstillingene dine påvirker hverandre – du kan ha «feil» innstillinger som virker godt sammen i noen situasjoner, men ikke i andre. For eksempel hvis en for høy basaldose faller sammen med en for høy **IK**. Det betyr at du må vurdere innstillingene hver for seg og sjekke at de virker godt sammen i ulike situasjoner.
 
-You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances.
+Du kan bruke [Autotune](https://autotuneweb.azurewebsites.net/) som en hjelp til å tenke, men du bør ikke følge den blindt: den virker kanskje ikke godt for deg eller i alle situasjoner.
 
 ```{admonition} Your diabetes may vary
 :class: note
-**Profiles** vary significantly from person-to-person.
+**Profiler** varierer mye fra person til person.
 
-For basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+For basaldoser (BR), insulinfølsomhetsfaktorer (ISF) og insulin/karbohydrat-forhold (IK, på engelsk IC eller ICR) varierer både de absolutte verdiene og mønstrene i insulinbehovet mye fra person til person. Det avhenger av biologien din, kjønn, alder, form osv., og av mer kortvarige faktorer som sykdom og nylig trening. Vil du ha mer veiledning om dette, er boken [«Bright Spots and Landmines»](https://diatribe.org/bright-spots-and-landmines/) av Adam Brown svært god å lese.
 
 ```
 
-The four last parameters (glucose targets, basal rates, insulin sensitivity factors and insulin-to-carb ratios) can be set to different values, changing hourly if required, over a 24-hour period.
+De fire siste parameterne (BS-mål, basaldoser, insulinfølsomhetsfaktorer og insulin/karbohydrat-forhold) kan settes til ulike verdier gjennom døgnet, time for time om nødvendig.
 
-![Hourly change of basal](../images/MaxDailyBasal2.png)
+![Basal som endres time for time](../images/MaxDailyBasal2.png)
 
-Screenshots from **AAPS** of an _example_ profile are shown below. Please note, this sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
+Skjermbilder fra **AAPS** av en _eksempel_-profil vises nedenfor. Merk at eksempelprofilen nedenfor har mange tidspunkter. Når du starter med **AAPS**, er profilen din sannsynligvis mye enklere.
 
-![Example active profile](../images/Profile-Example-Active.png)
+![Eksempel på aktiv profil](../images/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
 ## Glucose targets
 
-### Description
+### Beskrivelse
 
-Your **BG target** is a core value and all of **AAPS** calculations are based on it. It is different from the target range which you usually aim to keep your blood glucose values in. The target is used in **AAPS** calculations: if **AAPS** predicts that your **BG** will land outside the target range, then it will take action to take you back in said range.
+**BS-målet** ditt er en kjerneverdi, og alle beregninger i **AAPS** bygger på det. Det er ikke det samme som målområdet du vanligvis prøver å holde blodsukkeret innenfor. Målet brukes i beregningene til **AAPS**: hvis **AAPS** predikerer at **BS** vil havne utenfor målområdet, gjør den noe for å få deg tilbake i området.
 
 The targets can be defined within those boundaries :
 
-|          | _Low_ target           | _High_ target            |
-| -------- | ---------------------- | ------------------------ |
-| Minimum  | 4.4 mmol/L or 80 mg/dL | 5 mmol/L or 90 mg/dL     |
-| Maksimum | 10 mmol/L or 180 mg/dL | 11.1 mmol/L or 200 mg/dL |
+|          | _Lavt_ mål                | _Høyt_ mål                  |
+| -------- | ------------------------- | --------------------------- |
+| Minimum  | 4,4 mmol/L eller 80 mg/dL | 5 mmol/L eller 90 mg/dL     |
+| Maksimum | 10 mmol/L eller 180 mg/dL | 11,1 mmol/L eller 200 mg/dL |
 
-### Impact
+### Virkning
 
-If the target in your **Profile** is very wide (say, 3 or more mmol/L [50 mg/dL or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate are unlikely to be actioned by **AAPS**.
+Hvis målet i **Profilen** din er svært bredt (si 3 mmol/L [50 mg/dL] eller mer), vil du ofte se at **AAPS** gjør lite. Det er fordi **BS**-nivået blir predikert til å ligge et sted i dette brede området, og da er det lite sannsynlig at **AAPS** setter i gang en midlertidig basal.
 
-### How to set it
+### Slik setter du den
 
-The **figure below** shows an example of how the target can be set in an **AAPS** profile.
+**Figuren nedenfor** viser et eksempel på hvordan målet kan settes i en **AAPS**-profil.
 
-![Target](../images/Profile_Target.png)
+![Mål](../images/Profile_Target.png)
 
-**BG** targets are set according to your personal preferences and requirements. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117 mg/dL (6.5 mmol/L) from 9 pm - 7am. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
+**BS**-mål settes etter dine egne ønsker og behov. Hvis du for eksempel er bekymret for føling om natten, kan du sette målet litt høyere, til 117 mg/dL (6,5 mmol/L), fra kl. 21:00 til 07:00. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
 
-When In [Open Loop](#KeyAapsFeatures-OpenLoop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/> When In [Closed Loop](#KeyAapsFeatures-ClosedLoop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
+I [åpen loop](#KeyAapsFeatures-OpenLoop), særlig mens du går gjennom [de første opplæringsmålene](../SettingUpAaps/CompletingTheObjectives.md), kan et bredt målområde være et godt valg mens du lærer hvordan **AAPS** oppfører seg og justerer **Profilen** din.<br/> I [lukket loop](#KeyAapsFeatures-ClosedLoop) (fra **[opplæringsmål 6](#objectives-objective6)**) anbefales det å gjøre området smalere til du har ett enkelt mål for hver tid av døgnet (_Lavt_ mål = _Høyt_ mål), slik at **AAPS** reagerer raskt på svingninger i **BS**.
 
 (your-aaps-profile-basal-rates)=
 
 ## Basal rates
 
-### Description
+### Beskrivelse
 
 Your basal rate of insulin (Units/hour) provides background insulin, keeping your glucose levels stable in the absence of food or exercise.
 
-The insulin pump delivers small amounts of rapid acting insulin every few minutes, to keep the liver from releasing too much glucose, and to move glucose into body cells. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. For more information, chapter 6 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner is very useful.
+The insulin pump delivers small amounts of rapid acting insulin every few minutes, to keep the liver from releasing too much glucose, and to move glucose into body cells. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. Vil du vite mer, er kapittel 6 i [«Think like a Pancreas»](https://amzn.eu/d/iVU0RGe) av Gary Scheiner svært nyttig.
 
-Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimize your ISF and ICR.
+De fleste diabetesveiledere (og personer med diabetes type 1!) er enige om at du bør få basaldosene dine riktige før du prøver å finjustere ISF og IK.
 
-### Impact
+### Virkning
 
 Accurate basal rates enable you to wake up in range, and to skip meals - or eat - earlier or later in the day, without going high or low.
 
-Too high basal rate can lead to low BGs. And vice versa.
+For høy basaldose kan gi lavt BS. Og omvendt.
 
-**AAPS** ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to **AAPS** giving more subsequent corrections than it should to bring IOB ultimately to zero.
+**AAPS** bruker standard basaldose som «grunnlinje». Hvis basaldosen er for høy, vil en null midlertidig basal («zero-temp») telle som en større negativ IOB enn den burde. Det fører til at **AAPS** senere gir flere korreksjoner enn den burde for å få IOB ned til null.
 
-So, a basal rate too high will create low **BGs** both with the default rate, but also some hours hence as **AAPS** corrects to target.
+En for høy basaldose gir derfor lavt **BS** både med standarddosen, men også noen timer senere når **AAPS** korrigerer mot målet.
 
-Conversely, a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+Omvendt kan en for lav basaldose gi høyt BS, og loopen klarer ikke å få nivået ned til målet.
 
-### How to set it
+### Slik setter du den
 
-The **figure below** shows an example of how the basal rates can be set in an **AAPS** profile.
+**Figuren nedenfor** viser et eksempel på hvordan basaldosene kan settes i en **AAPS**-profil.
 
 ![Basal rates](../images/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetes team.
+Å sette basaldosene riktig gjøres ved prøving og feiling, og bør gjøres i samråd med diabetesteamet ditt.
 
-There are basal testing methods which usually entails observing your basal rates and insulin needs during an <u>intermittent</u> fasting over a 24-hour period. Although you need to test your basal rates for the whole day, it is not recommended to fast during 24h straight. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast over 3 different days for a period of 8 hours.
+Det finnes metoder for basaltesting som vanligvis går ut på å observere basaldosene og insulinbehovet ditt under <u>periodisk</u> faste gjennom et døgn. Selv om du må teste basaldosene dine for hele døgnet, anbefales det ikke å faste i 24 timer i strekk. Det er fordi kroppen setter i gang mekanismer, som hormoner, for å kompensere. En anbefalt måte er å faste i 8 timer på 3 ulike dager.
 
-The recommended method is to suspend the loop (for safety you can set AAPS to [**LGS**](#KeyAapsFeatures-LGS) to avoid lows, as done for achieving [objective 6](#objectives-objective6)), which will revert to your default background basal rate. Observe how your **BG** changes: if it is dropping, basal rate is too high. And vice versa.<br/> An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If **IOB** is negative, your basal rate is too high. And vice versa. Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/> Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyze overnight BG lines in order to optimize your basal rates.
+Den anbefalte metoden er å sette loopen på pause (for sikkerhets skyld kan du sette AAPS til [**LGS**](#KeyAapsFeatures-LGS) for å unngå lavt BS, slik du gjorde for å fullføre [opplæringsmål 6](#objectives-objective6)). Da går pumpen tilbake til standard basaldose. Se hvordan **BS** endrer seg: hvis det faller, er basaldosen for høy. Og omvendt.<br/> En annen metode (kan være vanskeligere) er å la loopen kjøre og se hvordan **IOB** endrer seg. Hvis **IOB** er negativ, er basaldosen din for høy. Og omvendt. Vær klar over at denne metoden er avhengig av at **ISF** korrigerer **BS**, og dermed av at andre verdier er rimelig godt satt for at den skal lykkes.<br/> En annen måte å justere basaldosene på er å følge med på hva loopen gjør om natten, når alle COB er brukt opp. Denne metoden er særlig nyttig for barn, der faste er vanskelig eller insulinbehovet endrer seg ofte. [Dr. Saleh Adi fra Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) viser nyttige måter å analysere BS-kurvene om natten på for å finjustere basaldosene dine.
 
-See [here](../GettingHelp/ProfileTuning.md) how to tweak your basal profile, analyzing patterns in closed loop.
+Se [her](../GettingHelp/ProfileTuning.md) hvordan du justerer basalprofilen din ved å analysere mønstre i lukket loop.
 
-When taking action on the result of your basal testing, changes in the **Profile** should be done 1 to 2 hours (depends on your insulin type) before the rise/drop. Repeat the test as necessary until you are comfortable with your **basal rates** settings.
+Når du gjør endringer etter en basaltest, bør endringene i **Profilen** gjøres 1 til 2 timer (avhengig av insulintypen din) før stigningen/fallet. Gjenta testen så ofte som nødvendig til du er trygg på **basaldose**-innstillingene dine.
 
 (your-aaps-profile-basal-not-compatible)=
-#### Message: "Basal rate is not compatible with the current pump"
+#### Melding: «Basaldose er ikke kompatibel med gjeldende pumpe»
 
-Each pump has limits: a lowest and a highest basal rate it can deliver and, for some pumps (for example Dana, Accu-Chek Combo, Medtronic and Diaconn G8), basal rates that can only change on the full hour. **AAPS** checks your profile against the pump you use, **after** applying the percentage you choose.
+Hver pumpe har grenser: en laveste og en høyeste basaldose den kan gi, og for noen pumper (for eksempel Dana, Accu-Chek Combo, Medtronic og Diaconn G8) kan basaldosen bare endres på hel time. **AAPS** sjekker profilen din mot pumpen du bruker, **etter** at prosenten du velger er brukt.
 
-If a basal rate is outside these limits, the **Activate** screen shows this message and the **Activate** button stays grey:
+Hvis en basaldose er utenfor disse grensene, viser **Aktiver**-skjermen denne meldingen, og **Aktiver**-knappen forblir grå:
 
-![Activate screen with the message "Basal rate is not compatible with the current pump"](../images/v4/Profiles/profile_activate_pump_incompatible.png)
+![Aktiver-skjermen med meldingen "Basaldose er ikke kompatibel med gjeldende pumpe"](../images/v4/Profiles/profile_activate_pump_incompatible.png)
 
-For example, with a basal rate of 0.10 U/h in the night and a profile percentage of 35 %, **AAPS** would have to deliver 0.035 U/h. This is less than a Dana pump can deliver (0.04 U/h).
+For eksempel: med en basaldose på 0,10 E/t om natten og en profilprosent på 35 % måtte **AAPS** gi 0,035 E/t. Det er mindre enn en Dana-pumpe kan gi (0,04 E/t).
 
-To solve it, either:
+For å løse det kan du enten:
 
-* choose another percentage: a **higher** one if a basal rate becomes too low, a **lower** one if a basal rate becomes too high, or
-* [edit the profile](#your-aaps-profile-create-and-edit-profiles) and change the basal rate.
+* velge en annen prosent: en **høyere** hvis en basaldose blir for lav, en **lavere** hvis en basaldose blir for høy, eller
+* [redigere profilen](#your-aaps-profile-create-and-edit-profiles) og endre basaldosen.
 
-The profile editor only lets you start basal rates on a full hour. A basal rate starting at e.g. 06:30 can only come from an older profile, for example after you change to a pump that does not support it.
+Profileditoren lar deg bare starte basaldoser på hel time. En basaldose som starter f.eks. kl. 06:30 kan bare komme fra en eldre profil, for eksempel etter at du bytter til en pumpe som ikke støtter det.
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 
 ## Insulin sensitivity factor (ISF)
 
-### Description
+### Beskrivelse
 
 The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin.
 
-**In mg/dL units:** If you have an **ISF** of 40, each unit of insulin will reduce your blood glucose by approx. 40 mg/dL (for example, your blood glucose will fall from 140 mg/dL to 100 mg/dL).
+**I mg/dL:** Hvis du har en **ISF** på 40, vil hver enhet insulin senke blodsukkeret ditt med omtrent 40 mg/dL (for eksempel faller blodsukkeret fra 140 mg/dL til 100 mg/dL).
 
-**In mmol/L units:** If you have an **ISF** of 1.5, each unit of insulin will reduce your blood glucose by approx. 1.5 mmol/L (for example from 8 mmol/L to 6.5 mmol/L).
+**I mmol/L:** Hvis du har en **ISF** på 1,5, vil hver enhet insulin senke blodsukkeret ditt med omtrent 1,5 mmol/L (for eksempel fra 8 mmol/L til 6,5 mmol/L).
 
-From these examples you can see that the _smaller_ the **ISF** value, the less sensitive you are to insulin. So if you reduce your ISF from 40 to 35 (mg/dL) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
+Av disse eksemplene ser du at jo _lavere_ **ISF**-verdien er, jo mindre følsom er du for insulin. Så hvis du senker ISF fra 40 til 35 (mg/dL) eller fra 1,5 til 1,3 (mmol/L), kalles det ofte å gjøre **ISF** sterkere. Omvendt: å øke **ISF**-verdien fra 40 til 45 (mg/dL) eller fra 1,5 til 1,8 (mmol/L) gjør **ISF** svakere.
 
-### Impact
+### Virkning
 
-A **lower / stronger ISF** (i.e. 40 instead of 50) means insulin drops your **BG** less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If your **ISF** is too strong (small value), this can lead to low **BG**.
+En **lavere / sterkere ISF** (f.eks. 40 i stedet for 50) betyr at insulin senker **BS** mindre per enhet. Det gir en mer aggressiv / sterkere korreksjon fra loopen med **mer insulin**. Hvis **ISF** er for sterk (lav verdi), kan det gi lavt **BS**.
 
-A **higher / weaker ISF** (i.e. 45 instead of 35) means insulin drops your **BG** more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If your **ISF** is too weak (large value), this can lead to high **BG**.
+En **høyere / svakere ISF** (f.eks. 45 i stedet for 35) betyr at insulin senker **BS** mer per enhet. Det gir en mindre aggressiv / svakere korreksjon fra loopen med **mindre insulin**. Hvis **ISF** er for svak (høy verdi), kan det gi høyt **BS**.
 
 **Example:**
-* **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
-* So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
-* If `ISF = 30` -> `90 / 30 = 3` or `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 units of insulin
-* If `ISF = 45` -> `90 / 45 = 2` or `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 units of insulin
+* **BS** er 190 mg/dL (10,5 mmol/L) og målet er 100 mg/dL (5,6 mmol/L).
+* Du ønsker altså en korreksjon på `190 - 100 = 90 mg/dL` eller `10.5 - 5.6 = 4.9 mmol/L`
+* Hvis `ISF = 30` -> `90 / 30 = 3` eller `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 enheter insulin
+* Hvis `ISF = 45` -> `90 / 45 = 2` eller `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 enheter insulin
 
-An **ISF** that is too low (and therefore more aggressive, not uncommon) can result in ‘over corrections’, because **AAPS** calculates that the user needs more insulin to correct a high **BG** than actually required. This can lead to ‘roller coaster’ BG levels (esp. when fasting), as shown on the image below. In this circumstance, the **ISF** value should be increased in order to make **AAPS** less aggressive. This will ensure **AAPS** delivers smaller correction doses, and avoid over-correcting a high **BG** resulting in a low **BG**.
+En **ISF** som er for lav (og dermed mer aggressiv, noe som ikke er uvanlig) kan føre til «overkorreksjoner», fordi **AAPS** regner ut at brukeren trenger mer insulin for å korrigere et høyt **BS** enn det som egentlig trengs. Det kan gi «berg-og-dal-bane» i BS-nivået (særlig når du faster), som vist på bildet nedenfor. I så fall bør **ISF**-verdien økes for å gjøre **AAPS** mindre aggressiv. Da gir **AAPS** mindre korreksjonsdoser, og du unngår at et høyt **BS** blir overkorrigert og ender i et lavt **BS**.
 
-![ISF too low](../images/isf.jpg)
+![ISF for lav](../images/isf.jpg)
 
-Conversely, an **ISF** set too high can result in under-corrections, meaning your **BG** remains above target – particularly noticeable overnight.
+Omvendt kan en **ISF** som er satt for høyt, føre til underkorreksjoner, slik at **BS** blir liggende over målet – særlig merkbart om natten.
 
-### How to set it
+### Slik setter du den
 
-See the **figure below** for an example of how ISF values could be set in an **AAPS** profile.
+Se **figuren nedenfor** for et eksempel på hvordan ISF-verdier kan settes i en **AAPS**-profil.
 
-![Profile ISF](../images/Profile_ISF.png)
+![Profil-ISF](../images/Profile_ISF.png)
 
-A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
+A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. Du finner mer om dette i kapittel 7 i [«Think like a Pancreas»](https://amzn.eu/d/iVU0RGe) av Gary Scheiner.
 
-| 1700 (if measuring in mg/dL) or 94 (mmol/L)/ TDD = approx ISF.<br/><br/>Example: TDD = 40 U<br/>Approx ISF (mg/dL) = 1700/40 = 43<br/>Approx ISF (mmol/L) = 94/40 = 2.4 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                                                                                                                                                                                                 |
+| 1700 (hvis du måler i mg/dL) eller 94 (mmol/L) / TDD = omtrentlig ISF.<br/><br/>Eksempel: TDD = 40 E<br/>Omtrentlig ISF (mg/dL) = 1700/40 = 43<br/>Omtrentlig ISF (mmol/L) = 94/40 = 2,4 |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                                  |
 
-Assuming your basal levels are correct, you can test this by suspending the loop, checking **IOB** is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
+Hvis basaldosene dine er riktige, kan du teste dette ved å sette loopen på pause, sjekke at **IOB** er null, og ta noen druesukkertabletter for å komme opp på et stabilt «høyt» nivå.
 
-Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
+Ta så en beregnet mengde insulin (etter gjeldende 1/ISF) for å komme ned til BS-målet ditt.
 
-Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
+Vær forsiktig, for denne verdien er ganske ofte satt for lavt. For lav betyr at 1 E senker BS raskere enn ventet.
 
 (your-aaps-profile-insulin-to-carbs-ratio)=
 
 ## Insulin to Carb ratio (ICR)
 
-### Description
+### Beskrivelse
 
-The **ICR** is a measure of how many grams of carbohydrate are covered by one unit of insulin.
+**IK** er et mål på hvor mange gram karbohydrater som dekkes av én enhet insulin.
 
-Some people also use **I:C** as an abbreviation instead of **ICR**, or talk about carb ratio : **CR**.
+Noen bruker også **I:C** som forkortelse i stedet for **ICR**, eller snakker om karboforhold: **CR** (i AAPS heter det IK).
 
 For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of insulin for every 10 grams of carbs eaten. A meal of 25g carbs would need 2.5U of insulin.
 
-If your **ICR** is weaker (higher value), perhaps 1:20, you would only need 0.5U of insulin to cover 10 g of carbs. A meal of 25g of carbs would need 25/20 = 1.25U of insulin.
+Hvis **IK** er svakere (høyere verdi), kanskje 1:20, trenger du bare 0,5 E insulin for å dekke 10 g karbohydrater. A meal of 25g of carbs would need 25/20 = 1.25U of insulin.
 
-It is common to have different **ICR** at different times of day due to hormone levels and physical activity. Many people find they have their lowest/strongest **ICR** around breakfast time because they tend to be more insulin resistant. So, for example, one adult user's **ICR** could be 1:8 for breakfast, 1:10 for lunch and 1:10 for dinner, but these patterns are not universal, and some people are more insulin resistant at dinner time, and require a stronger/smaller **ICR** then.
+Det er vanlig å ha ulik **IK** til ulike tider av døgnet på grunn av hormonnivåer og fysisk aktivitet. Mange opplever at de har sin laveste/sterkeste **IK** rundt frokost, fordi de da er mer insulinresistente. En voksen bruker kan for eksempel ha **IK** 1:8 til frokost, 1:10 til lunsj og 1:10 til middag, men disse mønstrene gjelder ikke alle. Noen er mer insulinresistente ved middagstid og trenger en sterkere/lavere **IK** da.
 
-> **NOTE:**
+> **MERK:**
 > 
-> In some European countries bread units were used for determination of how much insulin is needed for food. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
+> I noen europeiske land ble brødenheter brukt for å finne ut hvor mye insulin som trengs til mat. I starten var 1 brødenhet lik 12 g karbohydrater, senere gikk noen over til 10 g karbohydrater.
 > 
-> In this model the amount of carbs was fixed and the amount of insulin was variable. ("How much insulin is needed to cover one bread unit?")
+> I denne modellen var mengden karbohydrater fast og mengden insulin variabel. («Hvor mye insulin trengs for å dekke én brødenhet?»)
 > 
-> When using **ICR** the amount of insulin is fixed and the amount of carbs is variable. ("How many g of carbs can be covered by one unit of insulin?")
+> Når du bruker **IK**, er mengden insulin fast og mengden karbohydrater variabel. («Hvor mange gram karbohydrater kan dekkes av én enhet insulin?»)
 > 
 > Example:
 > 
-> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
+> Brødenhetsfaktor (BU = 12 g karbohydrater): 2,4 E/BU -> Du trenger 2,4 enheter insulin når du spiser én brødenhet.
 > 
-> Corresponding **ICR**: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
+> Tilsvarende **IK**: 12 g / 2,4 E = 5,0 g/E -> 5,0 g karbohydrater kan dekkes av én enhet insulin.
 > 
-> BU factor 2,4 U / 12g   ===>   IC = 12g / 2,4 U = 5,0 g/U
+> BU-faktor 2,4 E / 12 g   ===>   IK = 12 g / 2,4 E = 5,0 g/E
 > 
-> Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Omregningstabeller finnes på nett, f.eks. [her](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
-### Impact
+### Virkning
 
-A **lower / stronger ICR** means less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’. If your IC is too strong, you are getting too much insulin, this can lead to low **BGs**.
+En **lavere / sterkere IK** betyr mindre mat per enhet, altså får du mer insulin for en fast mengde karbohydrater. Kan også kalles «mer aggressiv». Hvis IK er for sterk, får du for mye insulin, og det kan gi lavt **BS**.
 
-A **higher / weaker ICR** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’. If your IC is too weak, you are getting less insulin than you need, this can lead to high **BGs**.
+En **høyere / svakere IK** = mer mat per enhet, altså får du mindre insulin for en fast mengde karbohydrater. Kan også kalles «mindre aggressiv». Hvis IK er for svak, får du mindre insulin enn du trenger, og det kan gi høyt **BS**.
 
-### How to set it
+### Slik setter du den
 
-The **figure below** shows an example of a user's **ICR** and how it can be set in an **AAPS Profile**. When entering these values, we enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
+**Figuren nedenfor** viser et eksempel på en brukers **IK** og hvordan den kan settes i en **AAPS-profil**. Når du legger inn disse verdiene, skriver du bare siste del av forholdet, så et insulin/karbohydrat-forhold på 1:3,5 legges inn som «3,5».
 
-![Profile ICR](../images/Profile_ICR.png)
+![Profil-IK](../images/Profile_ICR.png)
 
-If after a meal has been digested and the **IOB** has returned to zero, your **BG** remains higher than before food, chances are your **ICR** is too weak (_i.e._ the number is too high and should be gradually lowered). Conversely, if your **BG** is lower than before food, **ICR** is too strong (_i.e._ the number is too small and should be gradually increased).
+Hvis **BS** fortsatt er høyere enn før måltidet etter at maten er fordøyd og **IOB** er tilbake på null, er **IK** sannsynligvis for svak (_dvs._ tallet er for høyt og bør senkes gradvis). Omvendt: hvis **BS** er lavere enn før måltidet, er **IK** for sterk (_dvs._ tallet er for lavt og bør økes gradvis).
 
-Assuming your basal rates are correct, you can test by checking if **IOB** is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food you normally eat at that time of day and count its carbs precisely.
+Hvis basaldosene dine er riktige, kan du teste ved å sjekke at **IOB** er null og at du er i målområdet, spise en nøyaktig kjent mengde karbohydrater, og ta en beregnet mengde insulin basert på gjeldende insulin/karbohydrat-forhold. Best er det å spise mat du vanligvis spiser på den tiden av døgnet, og telle karbohydratene nøyaktig.
 
-## Common questions related to the Profile
+## Vanlige spørsmål om profilen
 
 ```{contents} Common questions related to the Profile
 :depth: 1
@@ -228,128 +228,128 @@ Assuming your basal rates are correct, you can test by checking if **IOB** is ze
 
 ### About the importance of getting your profile right
 
-**Why should I try to get my profile settings right? Can’t the loop just take care of it?**
+**Hvorfor bør jeg prøve å få profilinnstillingene mine riktige? Kan ikke loopen bare ta seg av det?**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimize poor glycemic control that results from having incorrect **Profile** values. It can do this, for example, by withholding insulin delivery if you are going to hypo. However, you can achieve much better glycemic control if your **Profile** settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
+En hybrid lukket loop _kan_ prøve å justere insulintilførselen for å dempe dårlig blodsukkerkontroll som skyldes feil verdier i **Profilen**. It can do this, for example, by withholding insulin delivery if you are going to hypo. Men du kan få mye bedre blodsukkerkontroll hvis **Profil**-innstillingene dine allerede er så nær som mulig det kroppen din trenger. Dette er en av grunnene til at **AAPS** bruker trinnvise opplæringsmål for å gå fra åpen loop til hybrid lukket loop. I tillegg vil det være tider da du må åpne loopen (oppvarming av sensor, sensorfeil _osv._), noen ganger midt på natten, og da vil du ha riktige innstillinger for disse situasjonene.
 
-If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (**BR**), insulin sensitivity factors (**ISF**) and insulin-to-carb ratios (**ICR**).
+Hvis du starter med **AAPS** etter å ha brukt et annet system med åpen eller lukket loop, har du allerede en rimelig god idé om hvilke verdier du skal bruke for basaldoser (**BR**), insulinfølsomhetsfaktorer (**ISF**) og insulin/karbohydrat-forhold (**IK**).
 
-If you are moving from injections (MDI) to **AAPS**, then it is a good idea to read up on how to make the transfer from MDI to pump first, and plan and make the move carefully in consultation with your diabetes team. ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts and [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner are very useful.
+Hvis du går fra injeksjoner (MDI) til **AAPS**, er det lurt å lese om hvordan du går fra MDI til pumpe først, og planlegge og gjennomføre overgangen nøye i samråd med diabetesteamet ditt. [«Pumping insulin»](https://amzn.eu/d/iaCsFa2) av John Walsh og Ruth Roberts og [«Think like a Pancreas»](https://amzn.eu/d/iVU0RGe) av Gary Scheiner er svært nyttige.
 
-### What causes high postprandial peaks in closed loop?
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your **BG** is falling to reach your target after carbs are fully absorbed, try to set an 'eating soon' temp target in **AAPS** some time before the meal or think about an appropriate pre-bolus time with your endocrinologist. <br/> If your **BG** is too high after the meal and still too high after carbs are fully absorbed, consider decreasing your **ICR** with your endocrinologist. If your **BG** is too high while **COB** and too low after carbs are fully absorbed, think about increasing your **ICR** and an appropriate pre-bolus time with your endocrinologist.
+### Hva gir høye topper etter måltid i lukket loop?
+Sjekk først basaldosen din og gjør en basaltest uten karbohydrater. Hvis den er riktig og **BS** faller mot målet etter at karbohydratene er helt tatt opp, kan du prøve å sette et midlertidig mål «Spise snart» i **AAPS** en stund før måltidet, eller snakke med endokrinologen din om et passende tidspunkt for forhåndsbolus. <br/> Hvis **BS** er for høyt etter måltidet og fortsatt for høyt etter at karbohydratene er helt tatt opp, bør du vurdere å senke **IK** sammen med endokrinologen din. Hvis **BS** er for høyt mens du har **COB** og for lavt etter at karbohydratene er helt tatt opp, bør du vurdere å øke **IK** og finne et passende tidspunkt for forhåndsbolus sammen med endokrinologen din.
 
-### I'm stuck high and the loop does not bring me down
-The possible reasons for **AAPS** not giving enough insulin are:
-* **ISF** is not strong enough
-* Basal rate might not be strong enough
-* A security setting might kick in, such as **maxIOB**. Or **SMB** is disabled at this time, depending on your settings.
-* Automation has been set up and has overridden **AAPS**.
+### Jeg ligger høyt og loopen får meg ikke ned
+Mulige grunner til at **AAPS** ikke gir nok insulin er:
+* **ISF** er ikke sterk nok
+* Basaldosen er kanskje ikke sterk nok
+* En sikkerhetsinnstilling kan slå inn, for eksempel **maxIOB**. Eller **SMB** er slått av på dette tidspunktet, avhengig av innstillingene dine.
+* Automasjon er satt opp og har overstyrt **AAPS**.
 
-See also [Tweaking the AAPS Profile](../GettingHelp/ProfileTuning.md).
+Se også [Justering av AAPS-profilen](../GettingHelp/ProfileTuning.md).
 
-### I have negative IOB, is this an issue ?
-Negative **IOB** means the amount of absolute insulin (basal + bolus) in your body is less than the basal. It will cause **AAPS** to send more insulin as soon as the **BG** starts to rise, because it considers that insulin is missing, which can result in low **BG** later.
+### Jeg har negativ IOB, er det et problem?
+Negativ **IOB** betyr at den samlede mengden insulin (basal + bolus) i kroppen din er mindre enn basalen. Det fører til at **AAPS** gir mer insulin så snart **BS** begynner å stige, fordi den regner med at det mangler insulin, og det kan gi lavt **BS** senere.
 
-Here are some reasons why you may have negative IOB, and what action to take:
-* a too strong basal: tweak your **Profile**
-* too much bolus at the previous meal: tweak your **Profile** or check if you are bolusing at the right time.
-* DIA set too short on your insulin type, resulting in insulin stacking: tweak it in [Manage → Insulin settings](#Config-Builder-insulin-dia)
-* physical activity: next time, consider using a lower [Profile percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) during activity to account for increased sensitivity.
+Her er noen grunner til at du kan ha negativ IOB, og hva du kan gjøre:
+* for sterk basal: juster **Profilen** din
+* for mye bolus til forrige måltid: juster **Profilen** din, eller sjekk om du tar bolus til riktig tid.
+* DIA er satt for kort på insulintypen din, slik at insulin hoper seg opp («stacking»): juster den under [Administrer → Insulininnstillinger](#Config-Builder-insulin-dia)
+* fysisk aktivitet: neste gang kan du vurdere en lavere [profilprosent](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) under aktiviteten for å ta høyde for økt følsomhet.
 
-## Manage your Profiles
+## Administrer profilene dine
 
 ```{contents} Operations that you can perform on your **Profiles** in **AAPS**
 :depth: 1
 :local: true
 ```
 (your-aaps-profile-create-and-edit-profiles)=
-### Create and edit Profiles
+### Opprette og redigere profiler
 
-In **AAPS** v4 your profiles live on the **Manage** screen (bottom navigation) → **Profile**, shown as a swipeable card carousel with an action bar (**➕ Add**, **✏️ Edit**, **⧉ Clone**, **🗑️ Delete**, **▶ Activate**). For managing and activating a profile, see [Managing and activating profiles](#ProfileSwitch-manage-v4). Coming from **AAPS** v3, where profiles had their own tab? See [What changed in AAPS v4](#v4changes-manage).
+I **AAPS** v4 ligger profilene dine på skjermen **Administrer** (navigasjonslinjen nederst) → **Profil**, vist som en karusell av kort du kan sveipe, med en handlingslinje (**➕ Legg til**, **✏️ Rediger**, **⧉ Dupliser**, **🗑️ Slett**, **▶ Aktiver**). Hvordan du administrerer og aktiverer en profil, se [Administrere og aktivere profiler](#ProfileSwitch-manage-v4). Kommer du fra **AAPS** v3, der profilene hadde sin egen fane? Se [Hva er endret i AAPS v4](#v4changes-manage).
 
-Tapping **✏️ Edit** opens the editor. Set the profile **name** and **units**, then fill in the four schedules using the tabs:
+Trykk på **✏️ Rediger** for å åpne editoren. Sett profilens **navn** og **enheter**, og fyll så ut de fire tidsplanene i fanene:
 
-- **IC** — insulin-to-carb ratio (g/U)
-- **ISF** — insulin sensitivity factor
-- **BAS** — basal rates
-- **TARG** — target range
+- **IK** – insulin/karbohydrat-forhold (g/E)
+- **ISF** – insulinfølsomhetsfaktor
+- **BAS** – basaldoser
+- **MÅL** – målområde
 
-![The profile editor — IC / ISF / BAS / TARG tabs](../images/setup-wizard/Wizard-Profile-IC.png)
+![Profileditoren – fanene IK / ISF / BAS / MÅL](../images/setup-wizard/Wizard-Profile-IC.png)
 
-Each schedule is a list of **time blocks**: add a block, set its start time and value, then **Save**.
+Hver tidsplan er en liste med **tidsblokker**: legg til en blokk, sett starttid og verdi, og trykk så **Lagre**.
 
-If you make any changes to your **Profile**, make sure you are editing the correct **Profile**: the card of the profile in use is marked **ACTIVE**, but the card selected on screen may be another one.
+Hvis du gjør endringer i **Profilen** din, pass på at du redigerer riktig **Profil**: kortet til profilen som er i bruk, er merket **AKTIV**, men kortet som er valgt på skjermen kan være et annet.
 
 (your-aaps-profile-profile-from-scratch-for-a-kid)=
-### Build a Profile from scratch for a kid
+### Lage en profil fra bunnen av for et barn
 
-The [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) may help you to create a profile for a child (up to 18 years).
+[Profilhjelper](#aaps-screens-profile-helper) (meny ☰ → **Profilhjelper**) kan hjelpe deg med å lage en profil for et barn (opp til 18 år).
 
-**Important note:**
+**Viktig:**
 
-**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
+**Profilhjelper er ment som en hjelp til å finne en startprofil for barnet ditt. Selv om den bygger på datasett fra to ulike sykehus, må du alltid snakke med behandlingsteamet ditt før du bruker en ny profil!**
 
-Profile helper offers data sets from two different hospitals for children to find initial profile for your kid up to 18 years.
+Profilhjelper tilbyr datasett fra to ulike sykehus for barn, for å finne en startprofil for barnet ditt opp til 18 år.
 
-![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
+![Profilhjelper barn 1](../images/ProfileHelperKids1.png)
 
-1. Make sure you are on the **Profile 1** tab.
-2. In **Profile type**, make sure you have "Default profile" selected.
-3. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
-4. Change to the **Profile 2** tab.
-5. Press **Profile type** and select "DPV Default profile".
-6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, TDD Total and percentage of basal. Note that the DPV data set provides **basal rates** only, so IC and ISF are shown as zero for this profile.
-7. Open the **Comparation** tab. Comparison of the two adjusted profiles will be displayed (see screenshot below).
-8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button at the bottom of the comparison.
+1. Pass på at du er på fanen **Profil 1**.
+2. Under **Profiltype**, pass på at «Standard profil» er valgt.
+3. Juster Standard profil (basert på sykehusets datasett) ved å legge inn barnets alder og enten total TDD **eller** vekt.
+4. Bytt til fanen **Profil 2**.
+5. Trykk på **Profiltype** og velg «DPV standardprofil».
+6. Juster DPV standardprofil (basert på et annet sykehus sitt datasett) ved å legge inn barnets alder, total TDD og prosent basal. Merk at DPV-datasettet bare gir **basaldoser**, så IK og ISF vises som null for denne profilen.
+7. Åpne fanen **Sammenligning**. En sammenligning av de to justerte profilene vises (se skjermbildet nedenfor).
+8. Hvis du vil begynne å justere profilen din ut fra ett av disse forslagene, bruk **Dupliser**-knappen nederst i sammenligningen.
 
-![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
+![Profilhjelper barn 2](../images/ProfileHelperKids2.png)
 
-### Switch Profile
+### Bytte profil
 
-See [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Se [Profilbytte og profilprosent](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
 (your-aaps-profile-clone-profile-switch)=
-### Clone a Profile switch to a new Profile
+### Dupliser et profilbytte til en ny profil
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Profilbytte](../images/TreatmentsView4.png)
 
-The [Treatments history](#aaps-screens-treatments) shows all past **Profile Switches**. When going to the **Profile switch** tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **2**.
+[Behandlingshistorikk](#aaps-screens-treatments) viser alle tidligere **Profilbytter**. Når du går til fanen **Profilbytte**, kan du bruke et tidligere **Profilbytte** som grunnlag for å lage en ny **Profil**. I så fall blir tidsforskyving og prosent brukt på den nye lokale profilen. Bruk **Dupliser**-knappen som vises på linje **2**.
 
-You can now go to the [Profile screen](#your-aaps-profile-create-and-edit-profiles) (**Manage → Profile**) to edit the newly created Profile.
+Nå kan du gå til [Profil-skjermen](#your-aaps-profile-create-and-edit-profiles) (**Administrer → Profil**) for å redigere den nye profilen.
 
 (YourAapsProfile_Profile-backup)=
-### Profile backup
+### Sikkerhetskopi av profilen
 
-Being a core setting of your looping system, your **Profiles** are highly sensitive and something you really don't want to lose.
+**Profilene** dine er en kjerneinnstilling i loopsystemet ditt. De er svært viktige og noe du virkelig ikke vil miste.
 
-* Your **Profiles** are stored in the **AAPS** database.
-* When **NSClientV3** is set up (see [Synchronization](#SetupWizard-synchronization-with-the-reporting-server-and-more)), your **Profiles** are also uploaded to Nightscout automatically.
-* They are also part of [exported settings](../Maintenance/ExportImportSettings.md). So make sure to have a backup in a safe place.
+* **Profilene** dine lagres i **AAPS**-databasen.
+* Når **NSClientV3** er satt opp (se [Synkronisering](#SetupWizard-synchronization-with-the-reporting-server-and-more)), lastes **Profilene** dine også automatisk opp til Nightscout.
+* De er også en del av [eksporterte innstillinger](../Maintenance/ExportImportSettings.md). Så sørg for å ha en sikkerhetskopi på et trygt sted.
 
-### Editing Profiles from Nightscout
+### Redigere profiler fra Nightscout
 
-If enabled, **Profile** changes made directly in Nightscout can be received in **AAPS**. The setting is called "**Receive profile store from NS**" and is part of the **Nightscout data acceptance** options (accepting data from Nightscout is turned off by default, see the [Client control step of the Setup Wizard](../SettingUpAaps/SetupWizard.md)); you can find it quickly with the **search bar** on the main screen. While client control is on, the setting is hidden and **AAPS** takes no profile changes from Nightscout ([hardened mode](#client-master-control-hardened-mode)); edit the profile on a paired client instead, or load it once with **Full sync**.
+Hvis det er slått på, kan **Profil**-endringer gjort direkte i Nightscout mottas i **AAPS**. Innstillingen heter «**Motta profiler fra NS**» og er en del av valgene under **Mottak av Nightscout-data** (mottak av data fra Nightscout er slått av som standard, se [steget Klientstyring i Oppsettveiviseren](../SettingUpAaps/SetupWizard.md)); du finner den raskt med **søkefeltet** på hovedskjermen. Mens klientstyring er på, er innstillingen skjult, og **AAPS** tar ikke imot profilendringer fra Nightscout ([herdet modus](#client-master-control-hardened-mode)); rediger profilen på en paret klient i stedet, eller hent den inn én gang med **Full synkronisering**.
 
-This can be helpful when about to make major changes to a more extensive **Profile**. They can be entered more easily via the web interface, _e.g._ to manually copy data from a spreadsheet.
+Det kan være nyttig når du skal gjøre større endringer i en mer omfattende **Profil**. De kan legges inn enklere via nettgrensesnittet, _f.eks._ for å kopiere data manuelt fra et regneark.
 
-To do this, however, it is important to clone the whole **database record** consisting of several profiles in the Nightscout editor (blue arrow on the screenshot below). The new database records then carries the current date. After saving, the changed/new **Profile** can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+For å gjøre dette er det viktig å duplisere hele **databaseposten**, som består av flere profiler, i Nightscout-editoren (blå pil på skjermbildet nedenfor). De nye databasepostene får da dagens dato. Etter lagring kan den endrede/nye **Profilen** aktiveres i **AAPS** med et vanlig [profilbytte](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-![Clone database records](../images/Nightscout_Profile_Editor.PNG)
+![Dupliser databaseposter](../images/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
-### Compare two Profiles
+### Sammenligne to profiler
 
-You can also use the [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) to compare two different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
+Du kan også bruke [Profilhjelper](#aaps-screens-profile-helper) (meny ☰ → **Profilhjelper**) til å sammenligne to ulike profiler eller profilbytter (prosent av en av profilene dine som er brukt i et [profilbytte](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) tidligere).
 
-![Profile Helper 1](../images/ProfileHelper1.png)
+![Profilhjelper 1](../images/ProfileHelper1.png)
 
-1. Make sure you are on the **Profile 1** tab.
-2. In **Profile type**, select "Available profile" to choose between all stored **Profiles**.
-3. Choose the **Profile** you want to compare from.
-4. Change to the **Profile 2** tab.
-5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profile Switches**.
-6. Choose the **Profile Switch** you want to compare to.
-7. Open the **Comparation** tab. Comparison of the two profiles will be displayed (see screenshot below).
+1. Pass på at du er på fanen **Profil 1**.
+2. Under **Profiltype**, velg «Tilgjengelige profiler» for å velge blant alle lagrede **Profiler**.
+3. Velg **Profilen** du vil sammenligne fra.
+4. Bytt til fanen **Profil 2**.
+5. Under **Profiltype**, velg «Profilbytte» for å velge i historikken over alle **Profilbyttene** dine.
+6. Velg **Profilbyttet** du vil sammenligne med.
+7. Åpne fanen **Sammenligning**. En sammenligning av de to profilene vises (se skjermbildet nedenfor).
 
-![Profile Helper 2](../images/ProfileHelper2.png)
+![Profilhjelper 2](../images/ProfileHelper2.png)
