@@ -402,5 +402,5 @@ If the activation is interrupted, for example by an empty phone battery or a pho
 
 -  **第0级：**查阅本文档相关章节，确保您已理解遇到问题的功能模块的正确运作方式。
 -  **第一级：**若您遇到的问题无法通过本文档解决，请通过[此邀请链接](https://discord.gg/4fQUWHZ4Mw)加入**Discord**平台的*#Medtrum*频道寻求帮助。
--  **第二级：**请在[问题追踪](https://github.com/nightscout/AAPS/issues)中搜索现有问题，查看您的问题是否已被上报。若存在相关记录，请确认/评论/补充您的问题信息。如果没有，请创建一个[新问题](https://github.com/nightscout/AndroidAPS/issues)并附上[您的日志文件](../GettingHelp/AccessingLogFiles.md)。
+-  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues). If it exists, please confirm/comment/add information on your problem. 如果没有，请创建一个[新问题](https://github.com/nightscout/AndroidAPS/issues)并附上[您的日志文件](../GettingHelp/AccessingLogFiles.md)。
 -  **请保持耐心——我们社区成员多为热心志愿者，问题的解决往往需要用户和开发者双方投入时间与耐心。**
