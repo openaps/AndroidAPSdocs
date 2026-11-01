@@ -6,7 +6,7 @@
 This is **Step 2** of the [Browser build](BrowserBuild.md). First complete [Step 1 – Create your GitHub fork](BrowserBuildFork.md).
 ```
 
-AndroidAPS must be signed with private keys stored in a **Java KeyStore (JKS)**. This is the most important decision of the whole process, because it determines whether you will be able to **upgrade** AAPS later without reinstalling.
+AAPS must be signed with private keys stored in a **Java KeyStore (JKS)**. This is the most important decision of the whole process, because it determines whether you will be able to **upgrade** AAPS later without reinstalling.
 
 ```{note}
 In the next steps you will store private information (your keystore, and later your Google Drive access) inside GitHub as **secrets**. A secret is simply an encrypted value that only your own build can read – nobody else, not even people looking at your fork, can see it. This is what keeps your build yours.
@@ -74,7 +74,7 @@ Before using this export method, make sure your keystore and Google Drive settin
 
 2. **Run Export Workflow:**
    - Go to the **Actions** tab in your repository
-   - Select **CI KeyStore Export**
+   - Select **CI Keystore Export**
    - Click **Run workflow**
    - The exported keystore ZIP file will be saved to your Google Drive
 
