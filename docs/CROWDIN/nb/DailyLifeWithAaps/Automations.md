@@ -222,15 +222,15 @@ ingen
 * **Profil** må være mellom 50 % og 130 %
 * virker bare hvis den forrige prosenten er 100 %
 
-**Actions:** **Change smoothing** (in the **Loop & insulin** group)
+**Handlinger:** **Endre utjevning** (i gruppen **Loop & insulin**)
 
 **Alternativer:**
 
-* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
+* velg [utjevningsmetoden](../CompatibleCgms/SmoothingBloodGlucoseData.md) det skal byttes til. Listen er den samme som under **Konfigurasjon** > **Utjevning**, og handlingen gjør nøyaktig det samme som en endring der: den nye metoden lagres, synkroniseres til parede klienter, og BS-dataene utjevnes på nytt med en gang.
 * kjører bare hvis den utjevningsmetoden ikke allerede er aktiv – **AAPS** legger automatisk til linjen «**Forutsetninger: Utjevning … er ikke aktiv**» i regelen. Når den valgte utjevningen er aktiv, hoppes regelen over uten melding.
-* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
-  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
-  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
+* Eksempel: en ny sensor gir ofte mye støy den første dagen. To regler med utløseren **Sensoralder** gir sterkere filtrering mens sensoren stabiliserer seg, og utjevning uten forsinkelse etterpå:
+  * **Sensoralder** mindre enn 24 t: **Endre utjevning** til **Unscented Kalman-filter**
+  * **Sensoralder** mer enn 24 t: **Endre utjevning** til **Gjennomsnittlig utjevning**
 
 **Handlinger:** **Merknad** (i gruppen **Varsler** i listen)
 
@@ -270,7 +270,7 @@ ingen
 
 **Alternativer:**
 
-* ingen. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Legg den til i en regel som skal ha prioritet over reglene under seg (se [rekkefølgen på automasjonene](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* ingen. Så lenge betingelsene i en regel med denne handlingen er sanne, sjekker **AAPS** ikke reglene under den i listen. Så snart betingelsene er usanne igjen, sjekkes reglene under som vanlig. Legg den til i en regel som skal ha prioritet over reglene under seg (se [rekkefølgen på automasjonene](#Automations-the-order-of-the-automations-in-the-list-matters)).
 
 **Handlinger:** **Kjør scene**, **Aktiver scene**, **Deaktiver scene** (i gruppen **Scener**)
 
