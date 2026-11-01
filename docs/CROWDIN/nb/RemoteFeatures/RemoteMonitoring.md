@@ -1,35 +1,35 @@
-# Remote monitoring
+# Fjernovervåking
 
-![Monitoring children](../images/KidsMonitoring.png)
+![Overvåking av barn](../images/KidsMonitoring.png)
 
-__AAPS__ offers several features for remote monitoring of type 1 diabetic children, and also facilitates remote commands which send instructions to __AAPS__ remotely. Similarly, __AAPSClient__ can also be used for remote monitoring to follow your partner's or friend's __AAPS__.
+__AAPS__ har flere funksjoner for fjernovervåking av barn med type 1-diabetes, og gjør det også mulig å sende instruksjoner til __AAPS__ som fjernkommandoer. På samme måte kan __AAPSClient__ også brukes til fjernovervåking for å følge __AAPS__ hos partneren eller vennen din.
 
-## Functions
+## Funksjoner
 
-- Kid's pump is controlled by kid's phone using __AAPS__.
-- Caregivers can remotely follow viewing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **AAPSClient apk** on their Android phone (an iPhone version of **AAPSClient** is in development, see [AAPSClient](AapsClient.md)). Settings amended in __AAPS__ will synchronize with __AAPSClient__ and vice versa.
-- Caregivers can be alarmed by using **xDrip app in follower mode** on their Android phone if xdrip companion mode is set up.
-- Remote control of __AAPS__ using [SMS Commands](../RemoteFeatures/SMSCommands.md) is secured by two-factor authentication.
-- Remote control through __AAPSClient__ uses the signed command channel introduced in **AAPS** 4: the client must first be **paired** with the master (with a QR code or a PIN), and every command is confirmed and executed by the master. Each caregiver's phone can get its own [role](#client-master-control-roles), from read-only to full control — see [Master ↔ Client control](#client-master-control).
+- Barnets pumpe styres av barnets telefon med __AAPS__.
+- Omsorgspersoner kan følge med på alle relevante data, som blodsukkerverdier, aktive karbohydrater, aktivt insulin osv., med **AAPSClient-apk-en** på Android-telefonen sin (en iPhone-versjon av **AAPSClient** er under utvikling, se [AAPSClient](AapsClient.md)). Innstillinger som endres i __AAPS__, synkroniseres med __AAPSClient__, og omvendt.
+- Omsorgspersoner kan få alarmer ved å bruke **xDrip-appen i følgermodus** på Android-telefonen sin, hvis xDrip er satt opp som hjelpeapp.
+- Fjernstyring av __AAPS__ med [SMS-kommandoer](../RemoteFeatures/SMSCommands.md) er sikret med tofaktorautentisering.
+- Fjernstyring gjennom __AAPSClient__ bruker den signerte kommandokanalen som kom i **AAPS** 4: klienten må først **pares** med hovedenheten (med en QR-kode eller en PIN-kode), og hver kommando bekreftes og utføres av hovedenheten. Hver omsorgspersons telefon kan få sin egen [rolle](#client-master-control-roles), fra kun lesing til full styring — se [Hovedenhet ↔ klientstyring](#client-master-control).
 
-## Tools and apps for remote monitoring
+## Verktøy og apper for fjernovervåking
 
-- [Nightscout](https://nightscout.github.io/) in web browser (mainly data display).
-- [__AAPSClient__](AapsClient.md) is a stripped down version of __AAPS__ capable of following the master __AAPS__ and, once **paired**, sending remote commands: carbs, __Temp Targets__, __Profile Switches__ and even boluses (see [Master ↔ Client control](#client-master-control)). There are 3 apps: [AAPSClient, AAPSClient2 & AAPSClient3 to download](https://github.com/nightscout/AndroidAPS/releases/), so a caregiver can follow up to three different persons from the same phone (e.g. two children with type 1, each with their own Nightscout account and master __AAPS__).
-- Dexcom follow if you are using original Dexcom app (BG values only).
-- [xDrip](../CompatibleCgms/xDrip.md) in follower mode (mainly BG values and **alarms**).
-- [Sugarmate](https://sugarmate.io/) or [Spike](https://spike-app.com/) on iOS (mainly BG values and **alarms**).
-- Some users find a full remote access tool like [TeamViewer](https://www.teamviewer.com/) to be helpful for advanced remote troubleshooting.
+- [Nightscout](https://nightscout.github.io/) i nettleser (hovedsakelig visning av data).
+- [__AAPSClient__](AapsClient.md) er en nedstrippet versjon av __AAPS__ som kan følge hovedenhetens __AAPS__ og, når den er **sammenkoblet**, sende fjernkommandoer: karbohydrater, __midlertidige mål__, __profilbytter__ og til og med boluser (se [Hovedenhet ↔ klientstyring](#client-master-control)). Det finnes 3 apper: [AAPSClient, AAPSClient2 & AAPSClient3 til nedlasting](https://github.com/nightscout/AndroidAPS/releases/), så en omsorgsperson kan følge opptil tre ulike personer fra den samme telefonen (for eksempel to barn med type 1, hver med sin egen Nightscout-konto og sin egen __AAPS__-hovedenhet).
+- Dexcom Follow hvis du bruker den originale Dexcom-appen (bare BS-verdier).
+- [xDrip](../CompatibleCgms/xDrip.md) i følgermodus (hovedsakelig BS-verdier og **alarmer**).
+- [Sugarmate](https://sugarmate.io/) eller [Spike](https://spike-app.com/) på iOS (hovedsakelig BS-verdier og **alarmer**).
+- Noen brukere synes et fullt fjerntilgangsverktøy som [TeamViewer](https://www.teamviewer.com/) er nyttig til avansert feilsøking på avstand.
 
-## Smartwatch options
+## Smartklokke-alternativer
 
-A smartwatch can be a very useful tool in helping manage __AAPS__ with T1D kids. A couple of different options are possible:
+En smartklokke kan være et svært nyttig verktøy for å håndtere __AAPS__ hos barn med type 1-diabetes. Det finnes et par ulike alternativer:
 
-- Option 1 - If __AAPSClient__ is installed on the caregiver's phone, the [AAPSClient WearOS app](https://github.com/nightscout/AndroidAPS/releases/) can be installed on a compatible smartwatch connected to the caregiver's phone. This will show current __BG__, loop status and bolus history, and allow carb entry, __Temp Targets__ and __Profile__ changes. If the client is **paired** with the master, the watch can also start a **bolus**: the command is relayed through the client to the master, which confirms and delivers it (see [Master ↔ Client control](#client-master-control)).
-- Option 2 - The [AAPS WearOS app](../WearOS/WearOsSmartwatch.md) can also be built and installed on a compatible smartwatch, connected to the kid's phone but worn by the caregiver. This includes all the functions listed above as well as the ability to bolus insulin directly, without the need to remove the kid's phone from their person.
-- Option 3 - Display only: a watch that **AAPS** does not support directly (Xiaomi, Amazfit, or a Wear OS watch showing a complication) can display glucose, IOB, COB and loop status through a companion app such as WatchDrip+ or GlucoDataHandler, fed by the **External Companion Apps** plugin of the **AAPS** or **AAPSClient** phone it is connected to. See [External Companion Apps](#watches-external-companion-apps).
+- Alternativ 1 – Hvis __AAPSClient__ er installert på omsorgspersonens telefon, kan [AAPSClient WearOS-appen](https://github.com/nightscout/AndroidAPS/releases/) installeres på en kompatibel smartklokke som er koblet til omsorgspersonens telefon. Den viser gjeldende __BS__, loop-status og bolushistorikk, og lar deg registrere karbohydrater, __midlertidige mål__ og __profil__-endringer. Hvis klienten er **sammenkoblet** med hovedenheten, kan klokken også starte en **bolus**: kommandoen sendes videre gjennom klienten til hovedenheten, som bekrefter og gir den (se [Hovedenhet ↔ klientstyring](#client-master-control)).
+- Alternativ 2 – [AAPS WearOS-appen](../WearOS/WearOsSmartwatch.md) kan også bygges og installeres på en kompatibel smartklokke som er koblet til barnets telefon, men som omsorgspersonen har på seg. Dette gir alle funksjonene som er nevnt ovenfor, i tillegg til muligheten til å gi insulinbolus direkte, uten å måtte ta telefonen fra barnet.
+- Alternativ 3 – Bare visning: en klokke som **AAPS** ikke støtter direkte (Xiaomi, Amazfit eller en Wear OS-klokke som viser en komplikasjon), kan vise blodsukker, IOB, COB og loop-status gjennom en hjelpeapp som WatchDrip+ eller GlucoDataHandler, matet av pluginen **Eksterne hjelpeapper** på **AAPS**- eller **AAPSClient**-telefonen den er koblet til. Se [Eksterne hjelpeapper](#watches-external-companion-apps).
 
-## Things to consider
+## Ting å tenke på
 
-- Consider time gap between master and follower due to time for up and download as well as the fact that __AAPS__ master phone will only upload after loop run.
-- What is your emergency plan for when remote control does not work (_e.g._ network problems or lost Bluetooth connection)? Always consider what will happen with **AAPS** if you suddenly can’t send a new command. **AAPS** overwrites the pump basal, ISF and ICR with the current profile values. Only use temporary profile switches (_i.e._ with a set time duration) if switching to a stronger insulin profile, in case your remote connection is disrupted. Then the pump will revert to the original profile when the time expires.
+- Ta høyde for tidsforsinkelsen mellom hovedenhet og følger på grunn av tiden det tar å laste opp og ned, og at __AAPS__-hovedtelefonen bare laster opp etter at loopen har kjørt.
+- Hva er beredskapsplanen din hvis fjernstyringen ikke virker (_for eksempel_ nettverksproblemer eller tapt Bluetooth-forbindelse)? Tenk alltid over hva som skjer med **AAPS** hvis du plutselig ikke kan sende en ny kommando. **AAPS** overskriver pumpens basal, ISF og IK med verdiene fra den gjeldende profilen. Bruk bare midlertidige profilbytter (_det vil si_ med en fast varighet) hvis du bytter til en sterkere insulinprofil, i tilfelle fjernforbindelsen din blir brutt. Da går pumpen tilbake til den opprinnelige profilen når tiden er ute.
