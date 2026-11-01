@@ -21,7 +21,7 @@ Hvis du aktiverer **SMS-kommunikasjon** i **AAPS**, må du tenke på at telefone
 
 I tillegg anbefales det å tillate [et telefonnummer til](#SMSCommands-authorized-phone-numbers) for SMS-kommandoer. På den måten kan du bruke det andre nummeret til å [deaktivere](#SMSCommands-other) SMS-kommunikasjon hvis den vanlige fjernstyringstelefonen din blir kompromittert.
 
-Standard minste ventetid mellom boluskommandoer er 15 minutter. Av sikkerhetsgrunner må du legge til minst to autoriserte telefonnumre for å kunne endre dette til en kortere ventetid. Hvis du prøver å gi en ny fjernbolus innen 15 minutter etter forrige bolus, får du svaret «Fjernbolus ikke tilgjengelig. Prøv igjen senere»
+Den minste ventetiden mellom boluskommandoer er som standard 15 minutter, regnet fra det øyeblikket pumpen godtar en bolus. Av sikkerhetsgrunner må du legge til minst to autoriserte telefonnumre for å kunne endre dette til en kortere ventetid. Hvis du prøver å gi en ny fjernbolus innen 15 minutter etter forrige bolus, får du svaret «Fjernbolus ikke tilgjengelig. Prøv igjen senere»
 
 AAPS vil også fortelle deg med en tekstmelding om fjernkommandoene dine, for eksempel en bolus eller et profilbytte, er utført. Det er lurt å sette dette opp slik at bekreftelsesmeldinger sendes til minst to ulike telefonnumre, i tilfelle en av mottakertelefonene blir stjålet.
 
