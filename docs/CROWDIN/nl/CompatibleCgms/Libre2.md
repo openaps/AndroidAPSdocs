@@ -40,7 +40,7 @@ Na een sensorwissel herkent xDrip de nieuwe sensor automatisch en wist alle kali
 
 ![Configuratie > BG bron met xDrip+ BG geselecteerd](../images/v4/Configuration/configuration_bg_source.png)
 
--   Krijgt AAPS geen BG-waarden als de telefoon in de vliegtuigmodus staat, gebruik dan 'Identify receiver' zoals beschreven op de [pagina met xDrip-instellingen](#xdrip-identify-receiver).
+-   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as described on [xDrip settings page](#xdrip-identify-receiver).
 
 ## 2. Directe verbinding met xDrip gebruiken
 
@@ -67,7 +67,7 @@ Technisch gezien wordt de actuele bloedglucosewaarde elke minuut naar xDrip gest
 
 Dit is verplicht om te loopen. De grafieken zien er vloeiend uit en de loop-resultaten zijn goed. De ruwe waarden waarop de alarmen zijn gebaseerd schommelen iets meer, maar komen overeen met de waarden die de reader ook toont. Daarnaast kunnen de ruwe waarden getoond worden in de grafiek van xDrip, zodat je op tijd kunt reageren op snelle veranderingen. Zet in xDrip Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" en "show Sensors Infos" aan. Dan worden de ruwe waarden ook getoond als kleine witte stippen en is extra sensorinformatie beschikbaar in het systeemmenu.
 
-De ruwe waarden zijn erg nuttig als de bloedglucose snel verandert. Ook als de stippen meer springen, zie je de trend veel beter dan met de afgevlakte lijn. Zo kun je goede beslissingen nemen over je behandeling.
+De ruwe waarden zijn erg nuttig als de bloedglucose snel verandert. Even if the dots are jumpier you would detect the tendency much better than using the smoothed line to make proper therapy decisions.
 
 → Hamburgermenu → Settings → Less common settings → Advanced settings for Libre 2
 
@@ -77,7 +77,7 @@ De ruwe waarden zijn erg nuttig als de bloedglucose snel verandert. Ook als de s
 
 #### Kalibratie
 
-Je kunt de Libre2 kalibreren **met een offset van -40 mg/dl tot +20 mg/dl \[-2,2 mmol/l tot +1,1 mmol/l\]** (intercept). De helling (slope) kun je niet wijzigen. Controleer dit met een vingerprik na het plaatsen van een nieuwe sensor. Let op: de sensor kan de eerste 12 uur na het plaatsen onnauwkeurig zijn. Er kunnen grote verschillen zijn met de bloedmetingen. Controleer daarom elke 24 uur en kalibreer als dat nodig is. Als de sensor na een paar dagen helemaal niet klopt, moet je hem vervangen.
+You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2.2 mmol/L to +1.1 mmol/L\]** (intercept). De helling (slope) kun je niet wijzigen. Controleer dit met een vingerprik na het plaatsen van een nieuwe sensor. Let op: de sensor kan de eerste 12 uur na het plaatsen onnauwkeurig zijn. Er kunnen grote verschillen zijn met de bloedmetingen. Controleer daarom elke 24 uur en kalibreer als dat nodig is. Als de sensor na een paar dagen helemaal niet klopt, moet je hem vervangen.
 
 ## 3. Diabox gebruiken
 
