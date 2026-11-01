@@ -222,13 +222,15 @@
 * **Профилът** трябва да е между 50 % и 130 %
 * работи само ако предишният процент е 100 %
 
-**Действия:** **Смени изглаждане**
+**Actions:** **Change smoothing** (in the **Loop & insulin** group)
 
 **Опции:**
 
-* изберете [метода за изглаждане](../CompatibleCgms/SmoothingBloodGlucoseData.md), към който да превключите
+* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
 * изпълнява се само ако този метод за изглаждане още не е активен – **AAPS** автоматично добавя към правилото ред „**Предварителни условия: Изглаждане … е неактивно**“. Щом избраното изглаждане е активно, правилото се пропуска без съобщение.
-* Пример: в комбинация с тригера **Сензор на** (възраст на сензора) превключете на **Средно изглаждане** през първия ден на нов сензор и след това обратно на **Без изглаждане**.
+* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
+  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
+  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
 
 **Действия:** **Бележка** (в групата **Аларми** на списъка)
 
@@ -268,7 +270,7 @@
 
 **Опции:**
 
-* няма. Когато се изпълни правило с това действие, **AAPS** не проверява правилата под него в списъка по време на тази проверка. Добавете го към правило, което трябва да има предимство пред правилата под него (вижте [реда на автоматизациите](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* няма. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Добавете го към правило, което трябва да има предимство пред правилата под него (вижте [реда на автоматизациите](#Automations-the-order-of-the-automations-in-the-list-matters)).
 
 **Действия:** **Стартирай сценарий**, **Разреши сценарий**, **Забрани сценарий** (в групата **Сценарии**)
 
