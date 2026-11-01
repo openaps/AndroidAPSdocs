@@ -2,49 +2,49 @@
 
 # Feilsøking
 
-**Start here when something is not working.** Troubleshooting information lives on many pages across the documentation. This page brings it together: it is a single collection of links, sorted by topic, to help you solve the most common problems.
+**Start her når noe ikke virker.** Informasjon om feilsøking finnes på mange sider i dokumentasjonen. Denne siden samler den: det er én samling av lenker, sortert etter emne, som hjelper deg å løse de vanligste problemene.
 
-If you do not find your answer below, also check:
+Hvis du ikke finner svaret nedenfor, sjekk også:
 
-* the [FAQ](../UsefulLinks/FAQ.md) for answers to frequent questions, and
-* the [Profile tuning guide](ProfileTuning.md) if your loop runs but your glucose control needs improving.
+* [FAQ](../UsefulLinks/FAQ.md) for svar på vanlige spørsmål, og
+* [veiledningen for justering av profilen](ProfileTuning.md) hvis loopen din kjører, men blodsukkerkontrollen bør bli bedre.
 
 ```{admonition} Still stuck?
 :class: tip
-If none of the links solve your problem, see [Where can I get help](WhereCanIGetHelp.md) to ask the community (Facebook, Discord), or send your [log files](AccessingLogFiles.md) to the developers.
+Hvis ingen av lenkene løser problemet ditt, se [Hvor kan jeg få hjelp](WhereCanIGetHelp.md) for å spørre fellesskapet (Facebook, Discord), eller send [loggfilene](AccessingLogFiles.md) dine til utviklerne.
 ```
 
 ---
 
 (generaltroubleshooting-aaps-app)=
 
-## AAPS app
+## AAPS-appen
 
-### Building & updating
+### Bygging og oppdatering
 
-* If the build fails, see [If the build fails](#building-aaps-troubleshooting): it lists the troubleshooting section for each build method:
+* Hvis bygget feiler, se [Hvis bygget feiler](#building-aaps-troubleshooting): der står feilsøkingsdelen for hver byggemetode:
   * [AAPS Builder](#aaps-builder-troubleshooting)
   * [Nettleserbygg](#aaps-ci-troubleshooting)
   * [Android Studio](TroubleshootingAndroidStudio.md)
-* Lost keystore, or new keystore: [Reinstalling AAPS](#reinstall-aaps)
-* Updating **AAPS**: [with AAPS Builder](#aaps-builder-updates), [with a browser build (fork)](#update-browser-build-troubleshooting), [with Android Studio](#update-computer-build-troubleshooting)
+* Mistet keystore-fil, eller ny keystore-fil: [Installere AAPS på nytt](#reinstall-aaps)
+* Oppdatere **AAPS**: [med AAPS Builder](#aaps-builder-updates), [med et nettleserbygg (fork)](#update-browser-build-troubleshooting), [med Android Studio](#update-computer-build-troubleshooting)
 
-### Installing
+### Installering
 
-* [Google Play Protect warning](#transferring-installing-play-protect-warning): the app is reported as unsafe.
-* Installation **blocked** with a message about an unverified developer: see [Android developer verification](#android-developer-verification) for the free installation methods.
+* [Advarsel fra Google Play Protect](#transferring-installing-play-protect-warning): appen rapporteres som usikker.
+* Installasjonen er **blokkert** med en melding om en uverifisert utvikler: se [Android-utviklerverifisering](#android-developer-verification) for de gratis installasjonsmetodene.
 
 ### Innstillinger
 
-* [Profile: "Basal rate is not compatible with the current pump"](#your-aaps-profile-basal-not-compatible)
-* [Pump: "Data is coming from different pump"](#config-builder-wrong-pump-data)
-* [Nightscout Client](TroubleshootingNsClient.md)
+* [Profil: «Basaldosen er ikke kompatibel med den aktuelle pumpen»](#your-aaps-profile-basal-not-compatible)
+* [Pumpe: «Data kommer fra en annen pumpe»](#config-builder-wrong-pump-data)
+* [Nightscout-klient (NSClient)](TroubleshootingNsClient.md)
 
-### Usage
+### Bruk
 
-* [Wrong carb values (slow carbs absorption)](#CobCalculation-detection-of-wrong-cob-values)
-* [Automations](#automations-troubleshooting)
-* [Full closed loop](#full-closed-loop-troubleshooting)
+* [Feil karboverdier (langsom absorpsjon av karbohydrater)](#CobCalculation-detection-of-wrong-cob-values)
+* [Automasjoner](#automations-troubleshooting)
+* [Full lukket loop](#full-closed-loop-troubleshooting)
 
 ---
 
@@ -59,93 +59,93 @@ For kjente problemer med Bluetooth-tilkoblinger, frafall av pumpe/pods, eller pr
 
 (generaltroubleshooting-android-related-issues)=
 
-## Android Related Issues
+## Android-relaterte problemer
 
-### Battery optimization
+### Batterioptimalisering
 
-**AAPS** can help you find the right settings for your phone: open the **menu** (☰) > **About** and tap **Don't kill my app?**. It opens the instructions for your phone brand on [Don't kill my app](https://dontkillmyapp.com/). The [setup wizard](#setup-wizard-bluetooth-battery-optimisation) also asks you to turn off battery optimization for **AAPS** and Bluetooth.
+**AAPS** kan hjelpe deg å finne de riktige innstillingene for telefonen din: åpne **menyen** (☰) > **Om** og trykk på **Ikke steng appen min?**. Den åpner veiledningen for telefonmerket ditt på [Don't kill my app](https://dontkillmyapp.com/). [Oppsettveiviseren](#setup-wizard-bluetooth-battery-optimisation) ber deg også slå av batterioptimalisering for **AAPS** og Bluetooth.
 
-Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
+Android har innebygde innstillinger for batterisparing som er slått på som standard. Disse innstillingene setter automatisk apper som systemet ikke trenger for å fungere, på pause. Det sparer batteri for apper som ikke alltid trenger å kjøre.
 
-When this is enabled, it will very likely cause issue for **AAPS** and other supporting apps like **xDrip**.
+Når dette er slått på, vil det svært sannsynlig gi problemer for **AAPS** og andre støtteapper som **xDrip**.
 
-It's important to ensure that you have disabled Battery Optimization to ensure **AAPS** and other supporting apps remain active all the time.
+Det er viktig at du slår av batterioptimalisering, slik at **AAPS** og andre støtteapper alltid er aktive.
 
-Depending on your phone model and make there may be more than one location and setting which needs to have this disabled.
+Avhengig av telefonmodell og merke kan det finnes mer enn ett sted og én innstilling som må slås av.
 
-***NOTE:** Follow the steps below to Disable Battery Optimization for the Bluetooth service if your phone has this option, the same steps can be used to disable for **AAPS** and other apps, however the screenshots will only show how to do this for the Bluetooth service.*
+***MERK:** Følg stegene nedenfor for å slå av batterioptimalisering for Bluetooth-tjenesten hvis telefonen din har dette valget. De samme stegene kan brukes for å slå det av for **AAPS** og andre apper, men skjermbildene viser bare hvordan du gjør det for Bluetooth-tjenesten.*
 
-#### Pixel phones (stock Android)
+#### Pixel-telefoner (standard Android)
 
-* Go to the Android settings, select "Apps".
+* Gå til Android-innstillingene og velg «Apper».
 
-  ![Android Settings¦Apps](../images/troubleshooting/pixel/01_androidsettings.png)
+  ![Android-innstillinger¦Apper](../images/troubleshooting/pixel/01_androidsettings.png)
 
-* Select "See all apps"
+* Velg «Se alle apper»
 
-  ![See all apps](../images/troubleshooting/pixel/02_apps.png)
+  ![Se alle apper](../images/troubleshooting/pixel/02_apps.png)
 
-* On the menu on the right, select "Show system" apps.
+* I menyen til høyre velger du «Vis system»-apper.
 
-  ![Show system apps](../images/troubleshooting/pixel/03_allapps.png)
+  ![Vis systemapper](../images/troubleshooting/pixel/03_allapps.png)
 
-* Now search and select the app "Bluetooth".
+* Søk nå etter appen «Bluetooth» og velg den.
 
-  ![Bluetooth app](../images/troubleshooting/pixel/03_bluetooth.png)
+  ![Bluetooth-appen](../images/troubleshooting/pixel/03_bluetooth.png)
 
-* Click the "App battery usage" and select "Unrestricted" (called "Not optimized" on some older Android versions).
+* Trykk på «Appens batteribruk» og velg «Ubegrenset» (kalt «Ikke optimalisert» på noen eldre Android-versjoner).
 
-  ![BT Battery optimization](../images/troubleshooting/pixel/04_btunrestricted.png)
+  ![Batterioptimalisering for Bluetooth](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-#### Samsung phones
+#### Samsung-telefoner
 
-* Go to the android settings, select "Apps"
+* Gå til Android-innstillingene og velg «Apper»
 
-* On the icon that supposedly changes the sorting algorithm (1), select "Show system apps" (2).
+* På ikonet som visstnok endrer sorteringen (1), velger du «Vis systemapper» (2).
 
-  ![App Filter](../images/troubleshooting/samsung/Samsung01_Apps.png)
+  ![Appfilter](../images/troubleshooting/samsung/Samsung01_Apps.png)
 
-  ![Show system apps](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+  ![Vis systemapper](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
 
-* Now search the Bluetooth app and select it to see its settings.
+* Søk nå etter Bluetooth-appen og velg den for å se innstillingene.
 
-  ![Bluetooth App](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+  ![Bluetooth-appen](../images/troubleshooting/samsung/Samsung03_BtApp.png)
 
-* Select "battery".
+* Velg «Batteri».
 
-  ![Battery](../images/troubleshooting/samsung/Samsung04_Battery.png)
+  ![Batteri](../images/troubleshooting/samsung/Samsung04_Battery.png)
 
-* Set it to "Unrestricted" (called "Not optimized" on some older Android versions).
+* Sett den til «Ubegrenset» (kalt «Ikke optimalisert» på noen eldre Android-versjoner).
 
-  ![Unrestricted](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
+  ![Ubegrenset](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
-#### Huawei phones
+#### Huawei-telefoner
 
-See this guide for [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+Se denne veiledningen for [Huawei Bluetooth og batterioptimalisering](../CompatiblePhones/Huawei.md)
 
 ---
 
 (generaltroubleshooting-cgm)=
 
-## Continuous Glucose Monitor (CGM)
+## Kontinuerlig glukosemåler (CGM)
 
-Useful links to known issues and steps to resolve for CGMs.
+Nyttige lenker til kjente problemer og løsninger for CGM-er.
 
-* [General](#general-cgm-troubleshooting)
+* [Generelt](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
-* [Libre 2 with Minimal Looper](#minimallooper-troubleshooting)
+* [Libre 2 med Minimal Looper](#minimallooper-troubleshooting)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
-* [xDrip - no CGM data](#xdrip-identify-receiver)
-* [xDrip - Dexcom troubleshooting](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
+* [xDrip – ingen CGM-data](#xdrip-identify-receiver)
+* [xDrip – feilsøking av Dexcom](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
 ---
 
 (generaltroubleshooting-pumps)=
 
-## Pumps
+## Pumper
 
-Useful links to known issues and steps to resolve for Pumps
+Nyttige lenker til kjente problemer og løsninger for pumper
 
 * [Accu-Chek Combo](#combov2-tips-for-basic-usage)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
@@ -162,13 +162,13 @@ Useful links to known issues and steps to resolve for Pumps
 
 (generaltroubleshooting-phones)=
 
-## Phones
+## Telefoner
 
-Useful links to known issues and steps to resolve for Phones
+Nyttige lenker til kjente problemer og løsninger for telefoner
 
-* [List of tested phone and device setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
+* [Liste over testede telefoner og enhetsoppsett](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
 * [Jelly](../CompatiblePhones/Jelly.md)
-* [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+* [Huawei Bluetooth og batterioptimalisering](../CompatiblePhones/Huawei.md)
 
 ---
 
@@ -176,20 +176,20 @@ Useful links to known issues and steps to resolve for Phones
 
 ## Fjernstyring
 
-* [AAPSClient and remote control (pairing, commands not received)](#client-master-control-troubleshooting)
-* ['Nightscout access token' issues](#remotecontrol-nightscout-access-token)
-* [SMS commands](#SMSCommands-troubleshooting)
+* [AAPSClient og fjernstyring (sammenkobling, kommandoer kommer ikke fram)](#client-master-control-troubleshooting)
+* [Problemer med «Nightscout tilgangstoken»](#remotecontrol-nightscout-access-token)
+* [SMS-kommandoer](#SMSCommands-troubleshooting)
 * [Android Auto](#android-auto-troubleshooting)
 
 ---
 
 (generaltroubleshooting-smartwatches)=
 
-## Smartwatches
+## Smartklokker
 
-Useful links to known issues and steps to resolve for Smartwatches
+Nyttige lenker til kjente problemer og løsninger for smartklokker
 
-* [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
-* [Watch and phone do not communicate](#wear-os-watch-phone-communication)
+* [Feilsøking av Wear-appen](#Watchfaces-troubleshooting-the-wear-app)
+* [Klokken og telefonen kommuniserer ikke](#wear-os-watch-phone-communication)
 * [Wear OS 5](#wear-os-5-troubleshooting)
-* [Building the Wear app](#building-aaps-wear-os-troubleshooting)
+* [Bygge AAPS Wear-appen](#building-aaps-wear-os-troubleshooting)
