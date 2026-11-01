@@ -1,15 +1,15 @@
 (Accessing-logfiles-accessing-logfiles)=
 
-# Accessing logfiles
+# Tilgang til loggfiler
 
-* Connect phone to a computer in file transfer mode
-* Locate the log files in the AAPS data directory, in `Android\data\info.nightscout.androidaps\files`.  
-    The naming of the root storage folder may vary a little depending on the phone.
-* The location is `Android\data\info.nightscout.aapsclient\files` for [AAPSClient](#RemoteControl_aapsclient).
-* Note : log location has changed in **AAPS 3.3**. See the previous versions' documentation if needed.
+* Koble telefonen til en datamaskin i filoverføringsmodus
+* Finn loggfilene i AAPS-datamappen, i `Android\data\info.nightscout.androidaps\files`.  
+    Navnet på rotmappen for lagring kan variere litt fra telefon til telefon.
+* For [AAPSClient](#RemoteControl_aapsclient) er plasseringen `Android\data\info.nightscout.aapsclient\files`.
+* Merk: Plasseringen av loggene ble endret i **AAPS 3.3**. Se dokumentasjonen for tidligere versjoner om nødvendig.
 
 ![logs](../images/aapslog.png)
 
-* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) within Android Studio, any Log Viewer android app, or simply as plain text. 
-* Previous log files are zipped and stored in folders in date/time order. 
-* If you are sharing your log file in [discord](https://discord.gg/4fQUWHZ4Mw) to talk about a potential bug, please unzip and upload the file dated before the error occurred.
+* Den gjeldende loggen er en .log-fil som kan vises på flere måter, for eksempel med [LogCat](https://developer.android.com/studio/debug/am-logcat.html) i Android Studio, med en hvilken som helst Android-app for visning av logger, eller rett og slett som ren tekst. 
+* Eldre loggfiler er pakket som zip-filer og lagret i mapper sortert etter dato og klokkeslett. 
+* Hvis du deler loggfilen din på [Discord](https://discord.gg/4fQUWHZ4Mw) for å snakke om en mulig feil, må du pakke ut og laste opp filen som er datert før feilen oppsto.
