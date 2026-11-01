@@ -66,14 +66,14 @@ Aby **AAPS** mógł je poprawnie rozpoznać, aplikacja, która wysyła odczyty *
 
 Zaufane źródła danych pozwalają na podawanie **SMB** przez cały czas.
 
-| Sensor           |                                                Aplikacja CGM                                                 |
-| ---------------- |:------------------------------------------------------------------------------------------------------------:|
-| Dexcom G6        |                                      BYODA, xDrip (**Direct, Native**)                                       |
-| Dexcom G7        |               BYODA, xDrip (**Direct, Native**), </br>Juggluco (**xDrip broadcast** bez xDrip)               |
-| Dexcom ONE+      |                  xDrip (**Direct, Native**), </br>Juggluco (**xDrip broadcast** bez xDrip)                   |
-| Dexcom ONE/Stelo |                                          xDrip (**Direct, Native**)                                          |
-| Libre 2/2+ (EU)  | xDrip (OOP2 **no calibration**), </br>Juggluco (**xDrip broadcast** bez xDrip lub **Patched Libre** z xDrip) |
-| Libre 2/2+/3/3+  |                    Juggluco (**xDrip broadcast** bez xDrip lub **Patched Libre** z xDrip)                    |
-| Syai             |                                                Aplikacja Syai                                                |
+| Sensor           |                                                       Aplikacja CGM                                                       |
+| ---------------- |:-------------------------------------------------------------------------------------------------------------------------:|
+| Dexcom G6        |                                             BYODA, xDrip (**Direct, Native**)                                             |
+| Dexcom G7        |                BYODA, xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip)                 |
+| Dexcom ONE+      |                    xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip)                    |
+| Dexcom ONE/Stelo |                                                xDrip (**Direct, Native**)                                                 |
+| Libre 2/2+ (EU)  | xDrip (OOP2 **no calibration**), <br/>Juggluco (**xDrip broadcast** without xDrip, or **Patched Libre** with xDrip) |
+| Libre 2/2+/3/3+  |                          Juggluco (**xDrip broadcast** bez xDrip lub **Patched Libre** z xDrip)                           |
+| Syai             |                                                      Aplikacja Syai                                                       |
 
 **Uwaga: aplikacje xDrip Companion i tryby obserwującego (Follower, także 640G/Eversense) nie są zaufanymi źródłami danych.**
