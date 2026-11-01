@@ -7,7 +7,7 @@ Pokud nechcete zakládat samostatný účet Gmail pro **AAPS**, můžete přejí
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Samostatné místo na Disku Google znamená, že nebudete riskovat zaplnění limitu svého osobního Disku Google soubory z funkce **Exportovat nastavení**.
+- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
 - Každá verze **AAPS** (a podpůrných aplikací jako xDrip, BYODA atd.) bude uložena na jednom místě, které nezávisí na hardwaru vašeho počítače. Pokud přijdete o váš počítač nebo telefon kvůli krádeži, ztrátě nebo poruše, budete mít k souborům stále přístup.
 - Když mají uživatelé podobné nastavení a podobnou strukturu složek, je online podpora jednodušší.
 - Podle nastavení (viz níže) budete mít pro komunikaci v komunitě samostatnou identitu (přezdívku), která může chránit vaše soukromí. 
@@ -45,13 +45,13 @@ Klikněte [sem](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQ
  Toto jsou kroky nastíněné ve videu:
 
 V tomto příkladu: 
-- Váš stávající „_každodenní_“ účet Google je <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
+- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
 - Váš nový účet Gmail „_AAPS_“ bude: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-### Přejděte na <https://account.google.com> 
+### Go to <https://myaccount.google.com> 
 
- Pokud jste už přihlášeni ke Googlu, dostanete se na stránku **Můj účet** svého „každodenního“ účtu. (1) Klikněte vpravo nahoře na stránce na svůj profilový obrázek (v tomto případě jednoduché ![](../images/Building-the-App/building_0002.png) (2) vyberte „_Přidat další účet_“.
+ Pokud jste už přihlášeni ke Googlu, dostanete se na stránku **Můj účet** svého „každodenního“ účtu. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
 
 ![](../images/Building-the-App/building_0005.png)
 
@@ -87,7 +87,7 @@ Gmail zobrazí název účtu. Budete požádáni o souhlas se smluvními podmín
 
 ### Přizpůsobte zobrazení nového profilu
 
-Nyní byste měli být na stránce Můj účet v Gmailu s vaším novým e-mailovým účtem pro **AAPS**. Profilový obrázek bude ve výchozím nastavení zobrazovat první písmeno vašeho jména. Změňte ho na něco jedinečného, abyste účty nezaměnili… v tomto příkladu Donald.Muck.AAPS nahradil ![](../images/Building-the-App/building_0002.png) tímto obrázkem ![](../images/Building-the-App/building_0003.png)
+Nyní byste měli být na stránce Můj účet v Gmailu s vaším novým e-mailovým účtem pro **AAPS**. Profilový obrázek bude ve výchozím nastavení zobrazovat první písmeno vašeho jména. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
@@ -101,7 +101,7 @@ Tato část může být trochu matoucí, protože budete muset přepínat mezi o
 2. Klikněte pravým tlačítkem myši na ikonu prohlížeče na hlavním panelu
 3. V nabídce vyberte „Nové okno“... a upravte ho tak, aby zabíralo jen dolní polovinu obrazovky.
 
-Otevřete <https://gmail.com> v každém okně prohlížeče. Osobní účet dejte nahoru a nový účet pro **AAPS** dolů. Účet snadno poznáte podle profilového obrázku v pravém horním rohu. Pokud je to potřeba, můžete vždy přepnout účty kliknutím na profilový obrázek a výběrem správného.
+Otevřete <https://gmail.com> v každém okně prohlížeče. Osobní účet dejte nahoru a nový účet pro **AAPS** dolů. Účet snadno poznáte podle profilového obrázku v pravém horním rohu. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
 
 ![](../images/Building-the-App/building_0009.png)
 
