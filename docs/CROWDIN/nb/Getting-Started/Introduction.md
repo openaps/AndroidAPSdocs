@@ -21,7 +21,7 @@ En kunstig bukspyttkjertel kan ses på som en [«autopilot for diabetesen din»]
 
 I et fly gjør ikke autopiloten hele jobben til piloten; piloten kan ikke sove gjennom hele flyturen. Autopiloten hjelper piloten i arbeidet. Den tar bort byrden med å styre flyet hele tiden, slik at piloten kan konsentrere seg om å overvåke helheten. Autopiloten mottar signaler fra ulike sensorer, en datamaskin vurderer dataene sammen med pilotens spesifikasjoner og gjør så de nødvendige justeringene, og varsler piloten om noe trenger oppmerksomhet. Piloten slipper å ta avgjørelser hele tiden, og denne sammenligningen kan brukes på **AAPS**.
 
-![image](../images/autopilot.png)
+![bilde](../images/autopilot.png)
 
 (Introduction-what-does-hybrid-closed-loop-mean)=
 ## Hva betyr hybrid lukket loop?
@@ -38,7 +38,7 @@ Flere kommersielle hybrid lukket loop-systemer er også lansert. Disse er svært
 
 ## Hva er Android APS (AAPS)?
 
-![image](../images/basic-outline-of-AAPS.png)
+![bilde](../images/basic-outline-of-AAPS.png)
 
 **Figur 1**. Enkel oversikt over Android APS (Artificial Pancreas System), AAPS.
 
