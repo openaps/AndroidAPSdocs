@@ -403,7 +403,7 @@
 
 - Αγνοήστε επιλογές/εναλλακτικές/…. Καμία ασάφεια
 
-- Μεταβάσεις βημάτων: τελειώστε ένα βήμα με μια πρόταση που οδηγεί λογικά στο επόμενο βήμα. Παράδειγμα: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- Μεταβάσεις βημάτων: τελειώστε ένα βήμα με μια πρόταση που οδηγεί λογικά στο επόμενο βήμα. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
 
 - Τίτλος **Tutorial** (επικεφαλίδα επιπέδου 1)
 

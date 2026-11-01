@@ -93,7 +93,7 @@ Below the AGP, the **Glucose Pentagon (CGP)** card draws five measures of your l
 At least 56 days of data (2 cycles) are needed. With less data, the card shows **Not enough data (need at least 56 days for 2 cycles)**. The pattern is calculated only when you open the **Cycle** tab, because it reads 168 days of data.
 
 (aaps-screens-treatments)=
-## Treatments history
+## Behandlungsverlauf
 
 Open the **menu** (☰) in the top-left corner of the main screen and select **Treatments history**. In this view, you can view and alter the history of the following treatments, each on its own tab (swipe the tab row to see all of them):
 

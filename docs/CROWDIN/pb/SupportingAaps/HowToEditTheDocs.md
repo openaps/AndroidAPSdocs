@@ -403,7 +403,7 @@ Um tutorial ajuda o aluno a adquirir uma competência básica. O usuário vai **
 
 - Ignore opções/alternativas/…. Sem ambiguidade
 
-- Transições entre passos: termine um passo com uma frase que leve ao passo seguinte, como uma sequência lógica. Exemplo: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- Transições entre passos: termine um passo com uma frase que leve ao passo seguinte, como uma sequência lógica. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
 
 - **Tutorial** Título (título de nível 1)
 

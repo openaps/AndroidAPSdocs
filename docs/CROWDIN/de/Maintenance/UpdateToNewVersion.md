@@ -10,15 +10,15 @@ Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist **AAPS** nicht als
 - Sobald eine neue Version verfügbar ist, wird Dir in der **AAPS**-App ein Hinweis darüber angezeigt.
 - Wenn eine neue Version verfügbar ist, wird darüber auch auf Facebook informiert.
 - Nach der Veröffentlichung lies bitte die [Versionshinweise](ReleaseNotes.md) (Release Notes) genau durch, und kläre mögliche Fragen in der Community auf Facebook oder Discord, bevor Du mit dem Update weiter machst.
-- Updating from **AAPS** 3.x? Read [What changed in AAPS v4](V4Changes.md) first: it lists the features that moved, were renamed or were removed.
-- Do not forget to [export your settings](ExportImportSettings.md). When you import them again after the update, you choose whether the pump settings are replaced too.
+- Aktualisieren von **AAPS** 3.x? Lies zuerst [Änderungen mit AAPS Version 4](V4Changes.md): Dort steht, welche Funktionen verschoben, umbenannt oder entfernt wurden.
+- Vergiss nicht, [Deine Einstellungen zu exportieren](ExportImportSettings.md). Wenn Du sie nach dem Update wieder importierst, entscheidest Du, ob auch die Pumpeneinstellungen ersetzt werden.
 
 ## AAPS mit Browser-Build aktualisieren
 
 Du hast Deine AAPS-App bereits im Browser erstellt? Folge der Anleitung für die Methode, die Du genutzt hast:
 
-- **AAPS Builder**: you build from the **Build AAPS** page of your private repository (usually named `my-aaps`) and download the app from GitHub. Follow [Updating AAPS with AAPS Builder](#aaps-builder-updates). Es gibt keinen Fork, der synchronisiert werden muss.
-- **Fork and preparation file**: you run the **AAPS-CI** workflow in your own copy (fork) of AndroidAPS, a repository named `AndroidAPS` in your GitHub account, and the app lands in your Google Drive. Follow [Update with a browser (fork)](./UpdateBrowserBuild.md).
+- **AAPS Builder**: Du erstellst die App auf der Seite **Build AAPS** Deines privaten Repositorys (meist `my-aaps` genannt) und lädst sie von GitHub herunter. Folge der Anleitung [AAPS mit dem AAPS Builder aktualisieren](#aaps-builder-updates). Es gibt keinen Fork, der synchronisiert werden muss.
+- **Fork und Vorbereitungsdatei**: Du startest den Workflow **AAPS-CI** in Deiner eigenen Kopie (Fork) von AndroidAPS, einem Repository namens `AndroidAPS` in Deinem GitHub-Konto, und die App landet in Deinem Google Drive. Folge der Anleitung [Browser-Update (Fork)](./UpdateBrowserBuild.md).
 
 ## AAPS mit Android Studio aktualisieren
 
@@ -30,9 +30,9 @@ Durchlaufe die [gleichen Schritte](../SettingUpAaps/CLIBuild.md) wie Du es zuvor
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-## After the update
+## Nach dem Update
 
-These steps are the same for every build method. Schaue in den [Release Notes](../Maintenance/ReleaseNotes.md) nach, ob es nach dem Update besondere Dinge zu beachten gibt.
+Diese Schritte sind bei jeder Methode zum Erstellen gleich. Schaue in den [Release Notes](../Maintenance/ReleaseNotes.md) nach, ob es nach dem Update besondere Dinge zu beachten gibt.
 
 Nach der Installation der neuen APK:
 

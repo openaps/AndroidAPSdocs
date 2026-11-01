@@ -132,7 +132,7 @@ Szenene <./DailyLifeWithAaps/Scenes.md>
 Automatisierungen <./DailyLifeWithAaps/Automations.md>
 Schnellstartleiste <./DailyLifeWithAaps/QuickLaunch.md>
 Startbildbildschirm-Widgets <./DailyLifeWithAaps/Widgets.md>
-Food database <./DailyLifeWithAaps/Food.md>
+Lebensmittel-Datenbank <./DailyLifeWithAaps/Food.md>
 Übergreifende Suche <./DailyLifeWithAaps/GlobalSearch.md>
 Überprüfen Deiner Daten <./Maintenance/Reviewing.md>
 AAPS für Kinden <./DailyLifeWithAaps/AapsForChildren.md>

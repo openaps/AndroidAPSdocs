@@ -1,7 +1,7 @@
 (Open-APS-features-DynamicISF)=
 # Dynamischer ISF (DynISF)
 
-Bisher, mit **AMA** und **SMB**, wurde der **ISF** im **Profil** definiert und war für jeden definierten Zeitraum am Tag statisch. But in reality, a person’s **ISF** is not that static and varies depending on their **BG** level: when at a high BG level, the user will need more insulin to bring their **BG** down 50 mg/dL / 3 mmol/L than they would at a lower **BG**. [Autosens](#Open-APS-features-autosens) war der erste Algorithmus, der versuchte dieses Problem durch Anpassung des **ISF** außerhalb der Mahlzeiten zu lösen.
+Bisher, mit **AMA** und **SMB**, wurde der **ISF** im **Profil** definiert und war für jeden definierten Zeitraum am Tag statisch. In Wirklichkeit ist der **ISF** eines Menschen aber nicht so statisch, sondern hängt vom **BZ** ab: Bei einem hohen BZ braucht man mehr Insulin, um den **BZ** um 50 mg/dl bzw. 3 mmol/l zu senken, als bei einem niedrigeren **BZ**. [Autosens](#Open-APS-features-autosens) war der erste Algorithmus, der versuchte dieses Problem durch Anpassung des **ISF** außerhalb der Mahlzeiten zu lösen.
 
 **Dynamischer ISF** (auch **DynISF** genannt) verfolgt das gleiche Ziel, ist aber weiter entwickelt, da es über den ganzen Tag (auch während der Mahlzeiten-Phasen) genutzt werden kann. Es wird nur erfahrenen Loopern, die sich gut mit der **AAPS**-Steuerungen und -Überwachung auskennen, empfohlen. Lies den Abschnitt [Dinge, die bei der Aktivierung des dynamischen ISF zu beachten sind](#dyn-isf-things-to-consider-when-activating-dynamicisf), bevor Du es ausprobierst.
 
@@ -33,9 +33,9 @@ Wenn der **dynamische ISF** genutzt wird, werden die im **Profil** hinterlegten 
 
 ![Dyn ISF](../images/DynamicISF/DynISF2.png)
 
-Der rot eingekreiste Bereich zeigt: `Profil-ISF` -> `ISF wie er von DynISF` berechnet wurde. <br/> Tapping on this section shows a dialog with additional information, such as the **ISF** used for the calculator and carbs absorption (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
+Der rot eingekreiste Bereich zeigt: `Profil-ISF` -> `ISF wie er von DynISF` berechnet wurde. <br/> Tippst Du auf diesen Bereich, öffnet sich ein Dialog mit weiteren Informationen, zum Beispiel dem **ISF**, der für den Rechner und die Kohlenhydrat-Resorption verwendet wird (siehe [Weitere Verwendungen des ISF](#dynisf-other-usages-of-isf) unten).
 
-The **DynISF** value can also be shown in a graph: tap **Add graph** below the graphs on the main screen and select **VSENS** (variable sensitivity). It shows as a white line (bottom of the image above).
+Der **DynISF**-Wert kann auch in einem Diagramm angezeigt werden: Tippe unter den Diagrammen auf dem Startbildschirm auf **Diagramm hinzufügen** und wähle **VSENS** (variable Empfindlichkeit). Er erscheint als weiße Linie (unten im Bild oben).
 
 ## Wie wird der dynamische ISF berechnet?
 
@@ -57,7 +57,7 @@ Die in der obigen Gleichung verwendete **TDD** wird mit einem Drittel in den obi
 
 ### Dynamischer ISF Anpassungsfaktor
 
-This is set within the user’s **Settings** and is used to make **Dynamic ISF** more or less aggressive. Vgl. hierzu den Abschnitt [Einstellungen](#dyn-isf-preferences) unten.
+Er wird in den **Einstellungen** festgelegt und macht den **dynamischen ISF** mehr oder weniger aggressiv. Vgl. hierzu den Abschnitt [Einstellungen](#dyn-isf-preferences) unten.
 
 ### Insulin-Divisor
 Der Insulin-Divisor ist vom Wirkmaximum des genutzten Insulins abhängig und ist umgekehrt proportional zum Wirkmaximum. Für Lyumjev ist dieser Wert 75, für Fiasp 65, und übliches schnell wirkendes Insulin 55.
@@ -68,7 +68,7 @@ Die dynamische Empfindlichkeit wird mit dem **aktuellen Glukosewert** berechnet 
 
 Dies wird getan, um zu hohe Insulinabgaben zu verhindern, wenn der **Glukosewert** niedrig ist oder voraussichtlich niedrig sein wird.
 
-**Future ISF** (dt. zukünftiger ISF) nutzt die gleiche Formel, so wie sie oben beschrieben ist, mit der Ausnahme, dass es den **minimum predicted BG** (dt. niedrigste vorhergesagte Glukosewert) anstelle des **current BG** (dt. aktuellen Glukosewerts) verwenden kann. **Minimum predicted BG**, [as calculated in oref1](#aaps-screens-how-predictions-become-a-dosing-decision), is the minimum value your BG is predicted to go during all the course of the predictions.
+**Future ISF** (dt. zukünftiger ISF) nutzt die gleiche Formel, so wie sie oben beschrieben ist, mit der Ausnahme, dass es den **minimum predicted BG** (dt. niedrigste vorhergesagte Glukosewert) anstelle des **current BG** (dt. aktuellen Glukosewerts) verwenden kann. Der **minimale vorhergesagte BZ**, [wie ihn oref1 berechnet](#aaps-screens-how-predictions-become-a-dosing-decision), ist der niedrigste Wert, den Dein BZ laut den Vorhersagen im gesamten Vorhersagezeitraum erreicht.
 
 * Wenn der aktuelle **Glukosewert** über dem Ziel ist  <br/> **und** die **Glukosewerte** sich nur um +/- 3 mg/dl ändern:  <br/>Wird der Glukosewert in der Formel wie folgt genutzt:  `average(minimum predicted BG, current BG)`. Anm.: Das ist der Durchschnittswert der beiden Werte.
 * Wenn der mögliche **Glukosewert** (engl. eventual BG) über dem Ziel liegt und die Glukosewerte steigen,<br/>  
@@ -97,7 +97,7 @@ Bei aktiviertem **dynamischen ISF**, ist der hier genutzte **ISF** der Durchschn
 (dyn-isf-preferences)=
 ## Einstellungen
 
-Check **Use dynamic sensitivity** in [Settings > OpenAPS SMB](#Preferences-openaps-smb-settings) to activate. Mit der Aktivierung werden neue Einstellungsoptionen verfügbar.
+Hake zum Aktivieren **Dynamische Empfindlichkeit verwenden** in den [Einstellungen > OpenAPS SMB](#Preferences-openaps-smb-settings) an. Mit der Aktivierung werden neue Einstellungsoptionen verfügbar.
 
 ![Dynamic ISF settings](../images/preferences/settings_dynamic_isf.png)
 
@@ -118,11 +118,11 @@ Das bedeutet, dass Du bei aktiviertem **dynamischen ISF**, einen **prozentualen 
 
 ### LGS threshold
 
-**BG** value below which insulin is suspended (low glucose suspend). Der Standardwert verwendet das Standard-Ziel-Modell. A user can set this value between 60 mg/dL (3.3 mmol/L) and 100 mg/dL (5.5 mmol/L). Werte unterhalb von 65 bzw. 3,6 führen dazu, dass das Standard-Modell genutzt wird.
+**BZ**-Wert, unter dem die Insulinabgabe ausgesetzt wird (Unterbrechung bei niedrigem BZ). Der Standardwert verwendet das Standard-Ziel-Modell. Dieser Wert kann zwischen 60 mg/dl (3,3 mmol/l) und 100 mg/dl (5,5 mmol/l) eingestellt werden. Werte unterhalb von 65 bzw. 3,6 führen dazu, dass das Standard-Modell genutzt wird.
 
 ### DynamicISF adjust sensitivity
 
-This setting (*"Adjust sensitivity calculations when using DynamicISF"*) replaces Autosens, and uses the last 24h **TDD**/7D **TDD** as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. Dieser berechnete Wert wird auch verwendet, um das Ziel anzupassen, wenn die Optionen "Empfindlichkeit und Glukosewert anpassen" aktiviert ist. Im Gegensatz zu Autosens wird durch diese Option der **ISF**-Werte nicht angepasst.
+Diese Einstellung (*„Berechnung der Insulinempfindlichkeit bei Verwendung von DynamicISF anpassen“*) ersetzt Autosens und verwendet das Verhältnis der **TDD** der letzten 24 h zur **TDD** der letzten 7 Tage als Grundlage, um die Basalrate zu erhöhen oder zu senken, genau wie das normale Autosens. Dieser berechnete Wert wird auch verwendet, um das Ziel anzupassen, wenn die Optionen "Empfindlichkeit und Glukosewert anpassen" aktiviert ist. Im Gegensatz zu Autosens wird durch diese Option der **ISF**-Werte nicht angepasst.
 
 (dyn-isf-things-to-consider-when-activating-dynamicisf)=
 ## Dinge, die bei der Aktivierung des dynamischen ISF zu beachten sind
@@ -134,4 +134,4 @@ This setting (*"Adjust sensitivity calculations when using DynamicISF"*) replace
   * Variabler Lebensstil (unregelmäßiges Essen oder unregelmäßige körperliche Aktivitäten)
   * Starke Unterschiede im Gesamtinsulinbedarf des Tages (TDD) oder hohe Schwankungen in der täglichen Insulin-Empfindlichkeit.
 * Es gibt keine genaue Anleitung, wie der Wert des **Anpassungsfaktors** erstmalig gesetzt werden sollte. Als Ausgangspunkt: Unter der Annahme, dass Deine **Profil**werte korrekt sind, Du im Zielbereich bist und der **Glukosewert**-Verlauf stabil ist, entspricht der **DynISF**-Wert ungefähr dem Wert, den Du vorher in Deinem **Profil** hattest.<br/>Wenn Du erkennst, dass der **dynamische ISF** zu aggressiv ist, senke den **Anpassungsfaktor** und umgekehrt.
-* Auch wenn **DynISF** nicht den **Profil-ISF** verwendet, solltest Du, sofern Du erkennst, dass sich Deine Empfindlichkeit stark von dem unterscheidet, was zuvor in Deinem **Profil** gespeichert wurde, Dein Profil mit den geänderten Werten aktualisieren und aktuell halten. This may be useful in case you lose your **AAPS** data (_e.g._ new phone, new **AAPS** version…), as your **Profile ISF** will be used as fallback for the next 7 days.
+* Auch wenn **DynISF** nicht den **Profil-ISF** verwendet, solltest Du, sofern Du erkennst, dass sich Deine Empfindlichkeit stark von dem unterscheidet, was zuvor in Deinem **Profil** gespeichert wurde, Dein Profil mit den geänderten Werten aktualisieren und aktuell halten. Das kann hilfreich sein, wenn Deine **AAPS**-Daten verloren gehen (_z. B._ neues Smartphone, neue **AAPS**-Version …), denn dann wird für die nächsten 7 Tage der **ISF des Profils** als Ersatz verwendet.

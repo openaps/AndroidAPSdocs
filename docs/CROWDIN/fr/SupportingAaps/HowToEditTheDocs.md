@@ -403,7 +403,7 @@ Un tutoriel aide l'élève à acquérir les compétences de base. L'utilisateur 
 
 - Ignorez les options/alternatives/…. Pas d'ambiguïté
 
-- Transitions entre étapes : terminez une étape par une phrase qui mène à l'étape suivante, dans une suite logique. Exemple : *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- Transitions entre étapes : terminez une étape par une phrase qui mène à l'étape suivante, dans une suite logique. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
 
 - Titre du **tutoriel** (titre de niveau 1)
 

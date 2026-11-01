@@ -8,7 +8,7 @@
 - [AAPS web installer](#web-installer): now a documentation page, translated like the others. The old address still works @psonnera
 - [Browser build with AAPS Builder](#aaps-builder): build workflow version 3 adds the `aapsclient3Release` variant (**AAPSClient3**, AAPS 4.0 and later). To build it, replace your `.github/workflows/build.yml` as explained in [Updating AAPS](#aaps-builder-updates) @psonnera
 - [Dexcom G7](../CompatibleCgms/DexcomG7.md): removed the patched Dexcom G7 app (DiaKEM), which no longer works for new installs @psonnera
-- [Browser build with AAPS Builder](#aaps-builder): build workflow version 2. Automatic weekly builds are removed (no schedule, no `AUTO_BUILD` / `AUTO_VARIANT` variables, no `built/…` tags): every build is started by you, with the version and variant you choose, and the workflow only has read access to your repository. If your `.github/workflows/build.yml` says version 1, replace it as explained in [Updating AAPS](#aaps-builder-updates). Added screenshots for every step @psonnera
+- [Browser-Build mit dem AAPS Builder](#aaps-builder): Build-Workflow Version 2. Automatic weekly builds are removed (no schedule, no `AUTO_BUILD` / `AUTO_VARIANT` variables, no `built/…` tags): every build is started by you, with the version and variant you choose, and the workflow only has read access to your repository. If your `.github/workflows/build.yml` says version 1, replace it as explained in [Updating AAPS](#aaps-builder-updates). Added screenshots for every step @psonnera
 - [Browser build with AAPS Builder](#aaps-builder): the build workflow is now part of this documentation. No template repository: you create an empty private repository and add the workflow from the setup page (new step 2). The workflow no longer checks an outside repository for updates. If you created your repository from the earlier template, replace `.github/workflows/build.yml` with the workflow from the setup page as explained in [Updating AAPS](#aaps-builder-updates) @psonnera
 - New page [Browser build with AAPS Builder](#aaps-builder): build AAPS from an Android phone with a setup page hosted on this site, with automatic weekly builds and no preparation file. It replaces the Android instructions of the browser build (File Manager Plus pages removed). AAPS Builder created by @dio99, docs @psonnera
 
@@ -34,7 +34,7 @@
 
 ## Januar 2025
 
-- [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
+- [3.4](#version3400) Veröffentlichung und Dokumentation aktualisiert Roll-up (Einrichtungsasssistent, Computer Build-Versionen, Konfiguration)
 - Update der CGM-Liste. Dexcom G5, Tomato, Glimp entfernt.
 - [Oberfläche für Setzstellen-Wechsel](#Aapsscreens-site-rotation)
 - [Betriebsmodus](#AapsScreens-running-mode)
@@ -77,7 +77,7 @@
 ## Oktober 2024
 
 - Aktualisierung mehrerer Seiten:
-  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../Getting-Started/ComponentOverview.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [Wie lange wird es dauern, alles einzurichten?](#preparing-how-long-will-it-take), [Übersicht der Komponenten](../Getting-Started/ComponentOverview.md), [Abschließen der Ziele (Objectives)](../SettingUpAaps/CompletingTheObjectives.md), [Dein AAPS-Profil](../SettingUpAaps/YourAapsProfile.md), [Konfiguration](../SettingUpAaps/ConfigBuilder.md) & [Einstellungen](../SettingUpAaps/Preferences.md), [AAPS-Bildschirme](../DailyLifeWithAaps/AapsScreens.md) @emilise
   - [COB-Berechnung](../DailyLifeWithAaps/CobCalculation.md), [Dynamischer ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Bauanleitung für Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
 - Technical work (deployment process for the documentation, files organization...) @psonnera & @emilise
@@ -103,7 +103,7 @@ AAPS 3.1 Dokumentation ist [hier](https://androidaps.readthedocs.io/en/3.1/index
 
 ## Januar 2022
 
-- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) - update @tanja
+- [Fehlerbehebung für Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) - update @tanja
 
 ## Dezember 2021
 
@@ -114,7 +114,7 @@ AAPS 3.1 Dokumentation ist [hier](https://androidaps.readthedocs.io/en/3.1/index
 
 - Best Practices für die Kalibrierung eines Libre 2 Sensors
 - [ISF](../UsefulLinks/FAQ.md) Neuformulierung der Wirkweise
-- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+- Aktualisierung [Fehlerbehebung für Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - Gepatchte [Dexcom](../CompatibleCgms/DexcomG6.md)-App entfernt, da nicht mehr erforderlich
 
 ## Oktober 2021
@@ -140,7 +140,7 @@ AAPS 3.1 Dokumentation ist [hier](https://androidaps.readthedocs.io/en/3.1/index
 
 ## Februar 2021
 
-- New navigation bar and [language switch](../NavigateDoc/ChangeLanguageVersion.md)
+- Neue Navigationsleiste und [Sprache ändern](../NavigateDoc/ChangeLanguageVersion.md)
 
 ## Januar 2021
 
@@ -148,7 +148,7 @@ AAPS 3.1 Dokumentation ist [hier](https://androidaps.readthedocs.io/en/3.1/index
 - Dexcom G6 mit [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
 - Libre Smart Reader [Akkustand](#screens-sensor-level-battery)
 - [Ziele](#objectives-objective3) - Neue Fragen
-- Other [new AAPS 2.8.0 functions](#Releasenotes-version-2-8-0)
+- Weitere [neue AAPS 2.8.0 Funktionen](#Releasenotes-version-2-8-0)
 
 ## Dezember 2020
 
@@ -202,7 +202,7 @@ AAPS 3.1 Dokumentation ist [hier](https://androidaps.readthedocs.io/en/3.1/index
 - Funktionalität [Verzögerter Bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) - Closed Loop wird deaktiviert
 - Neues Modul [Lokales Profil](../SettingUpAaps/ConfigBuilder.md)
 - Beispiel-Setup - Update Dexcom G6
-- [Version 2.6.0](#Releasenotes-version-2-6-0) - major new features
+- [Version 2.6.0](#Releasenotes-version-2-6-0) - Wesentliche neue Funktionen
 - [Wear OS-Komplikationen](../WearOS/WearOsSmartwatch.md)
 
 ## Januar 2020
@@ -237,7 +237,7 @@ AAPS 3.1 Dokumentation ist [hier](https://androidaps.readthedocs.io/en/3.1/index
 
 ## Oktober 2019
 
-- [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
+- [AAPS Version 2.5](#Releasenotes-version-2-5-0) Updates (besonders auf [Update-Seite](../Maintenance/UpdateToNewVersion.md))
 - [AccuChek Insight-Log-Optionen](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [COB-Berechnung auf separate Seite ausgelagert](../DailyLifeWithAaps/CobCalculation.md)
 - [Aktiven Kohlenhydrate (COB) - Fehlerhafte Ermittlung](#CobCalculation-detection-of-wrong-cob-values)

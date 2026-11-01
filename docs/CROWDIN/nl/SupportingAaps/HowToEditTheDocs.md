@@ -310,7 +310,7 @@ Voorbeeld van een **actief werkwoord**:
 
 Voorbeeld van een **passief werkwoord**:
 
-- *“The insulin (onderwerp) is delivered (werkwoord) by the pump (voorwerp)”*
+- *“The insulin (subject) is delivered (verb) by the pump (object)”*
 
 *“delivered”* is hier een passief werkwoord. Onderwerp en voorwerp zijn omgedraaid, vergeleken met de zin met het actieve werkwoord. We moesten de zin langer maken door “is” en “by the” toe te voegen. Overweeg ook om met het actieve werkwoord te beginnen.
 

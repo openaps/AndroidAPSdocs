@@ -20,7 +20,7 @@ The screenshots below come from an older EMUI version. The settings are the same
 4. Select **AAPS** and choose **Don't allow**. Huawei won't optimize apps in this list anymore.
 5. Repeat for your CGM app.
 
-![Huawei - Batterieoptimierung ignorieren](../images/Huawei_BatteryOptimization.png)
+![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
 
 ## App launch: allow running in the background
 
@@ -32,7 +32,7 @@ The screenshots below come from an older EMUI version. The settings are the same
     - **Run in background**
 4. Repeat for your CGM app.
 
-![Huawei - Batterieoptionen](../images/Huawei_BatteryOptions.png)
+![Huawei - battery options](../images/Huawei_BatteryOptions.png)
 
 ## Lock AAPS in the recent apps
 
@@ -42,7 +42,7 @@ Locked apps are not closed when you clear the recent apps list.
 2. Swipe down on the **AAPS** card. A lock symbol appears on the card.
 3. Do the same for your CGM app.
 
-![Huawei - App sperren](../images/Huawei_LockApp.png)
+![Huawei - lock app](../images/Huawei_LockApp.png)
 
 ## Power saving mode
 

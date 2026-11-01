@@ -1,4 +1,4 @@
-# Glättung der Blut-Glukose-Daten
+# Glukosewerte
 
 Wenn die **Glukosewerte** Sprünge haben oder verrauscht sind, kann es dazu kommen, dass **AAPS** das Insulin falsch dosiert. Das kann zu Unter- und Überzuckerungen führen. If you observe errors or experience jumpy data with your CGM it is important to disable the loop until the problem is resolved. Abhängig vom verwendeten Sensor können die Probleme in der CGM-Konfiguration in **AAPS** (wie unten beschrieben) liegen oder auf ein Problem mit der Sensorsetzstelle (so dass er eventuell ersetzt werden muss) hindeuten.
 
