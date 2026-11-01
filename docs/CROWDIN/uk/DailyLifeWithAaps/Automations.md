@@ -222,13 +222,15 @@
 * **Профіль** має бути від 50 % до 130 %
 * працює, лише якщо попередній відсоток 100 %
 
-**Дії:** **Змінити згладжування**
+**Actions:** **Change smoothing** (in the **Loop & insulin** group)
 
 **Варіанти:**
 
-* виберіть [метод згладжування](../CompatibleCgms/SmoothingBloodGlucoseData.md), на який потрібно перемкнутися
+* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
 * виконується, лише якщо цей метод згладжування ще не активний — **AAPS** автоматично додає до правила рядок «**Передумови: Згладжування … не активне**». Якщо вибране згладжування вже активне, правило мовчки пропускається.
-* Приклад: разом з тригером **Вік сенсора** перемикайтеся на **Згладжування середнім** у перший день нового сенсора, а потім назад на **Без згладжування**.
+* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
+  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
+  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
 
 **Дії:** **Примітка** (у групі **Сповіщення** у списку)
 
@@ -268,7 +270,7 @@
 
 **Варіанти:**
 
-* немає. Коли виконується правило з цією дією, **AAPS** під час цього запуску не перевіряє правила, які стоять нижче в списку. Додайте її до правила, яке має мати перевагу над правилами нижче (див. [порядок правил автоматизації](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* немає. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Додайте її до правила, яке має мати перевагу над правилами нижче (див. [порядок правил автоматизації](#Automations-the-order-of-the-automations-in-the-list-matters)).
 
 **Дії:** **Запустити сцену**, **Увімкнути сцену**, **Вимкнути сцену** (у групі **Сцени**)
 
