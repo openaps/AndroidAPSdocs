@@ -35,7 +35,7 @@ The [Omnipod System](https://www.omnipod.com/current-podders/resources/omnipod-s
 
 - ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **İnsülin İletim Cihazı**
 
-> AAPS kurulu telefonunuz tarafından Pod iletişim cihazına gönderilen komutları yorumlayacak bileşen.
+> Component that will interpret commands received from the Pod communication device originating from your AAPS enabled phone.
 > 
 > > - Yeni bir Omnipod podu (Eros - **DASH DEĞİL**)
 
@@ -47,7 +47,7 @@ In this page, **RileyLink** means any of the pod communication devices listed ab
 
 **ÖNCE GÜVENLİK** - bir hatadan kurtulamayacağınız bir ortamda bu işlemi denemeyin (ekstra pod, insülin ve telefon cihazları olmazsa olmazdır).
 
-**Omnipod PDM'niz, AAPS Omnipod sürücüsü podunuzu etkinleştirdikten sonra artık çalışmayacaktır**. Önceden Omnipod Eros Podunuz'a komutlar göndermek için Omnipod PDM'nizi kullanıyordunuz. Bir Omnipod Eros podu, yalnızca tek bir cihazın kendisine iletişim göndermesine izin verir. The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. Bu AAPS Omnipod sürücüsü aracılığıyla RileyLink'inizle bir Omnipod Eros podunu etkinleştirdiğinizde, ** artık PDM'niz ile podunuzu kullanamayacağınız anlamına gelir**. RileyLink'li AAPS Omnipod sürücüsü artık bir nevi yeni PDM'niz olur. *Bu, PDM'nizi çöpe atmanız gerektiği anlamına GELMEZ, yedek olarak saklamanız şiddetle önerilir ve AAPS düzgün çalışmadığı acil durumlar için gereklidir.*
+**Omnipod PDM'niz, AAPS Omnipod sürücüsü podunuzu etkinleştirdikten sonra artık çalışmayacaktır**. Önceden Omnipod Eros Podunuz'a komutlar göndermek için Omnipod PDM'nizi kullanıyordunuz. Bir Omnipod Eros podu, yalnızca tek bir cihazın kendisine iletişim göndermesine izin verir. The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. Bu AAPS Omnipod sürücüsü aracılığıyla RileyLink'inizle bir Omnipod Eros podunu etkinleştirdiğinizde, ** artık PDM'niz ile podunuzu kullanamayacağınız anlamına gelir**. RileyLink'li AAPS Omnipod sürücüsü artık bir nevi yeni PDM'niz olur. *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies when AAPS is not working correctly.*
 
 **Only one RileyLink at a time can communicate with a pod.** **AAPS** remembers one paired RileyLink. If you pair a different one, it replaces the previous one.
 
@@ -281,7 +281,7 @@ To deactivate a pod (either from expiration or from a pod failure):
 
 The process below shows you how to suspend and resume insulin delivery.
 
-*NOTE - if you do not see a **Suspend** button*, it is hidden by default. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+*NOTE - if you do not see a **Suspend** button*, it is hidden by default. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### İnsülin İletiminin Askıya Alınması
 
@@ -591,7 +591,7 @@ The buttons at the bottom of the pump screen change depending on the situation. 
   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this is a text button named **Set time** on the Omnipod pump screen.
   ```
 
-- **Suspend:** Suspends insulin delivery on the active pod. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
+- **Suspend:** Suspends insulin delivery on the active pod. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
 
   ![askıya al](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ GBO, SMB veya bolus olaylarının başarılı olup olmadığı yani belirsiz old
 
 Hata ayıklamaya yardımcı olmak için gelişmiş ayarlar sağlar.
 
-- **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button on the Omnipod pump screen.
+- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
 - **Show Pulse Log button in Pod Management menu:** This setting is still listed, but the current version of the pump screen has no **Pulse Log** button.
 
 - **Show RileyLink Stats button in Pod Management menu:** Hide or display the **RileyLink Stats** button on the Omnipod pump screen.
@@ -896,7 +896,7 @@ Aktif bir Pod oturumu algılanamadı. Bu uyarı, **ERTELE**'ye basılarak geçic
 
 Pod'un askıya alındığına dair bilgi uyarısı.
 
-#### Bazal profil ayarlanamadı. İletim durdurulmuş olabilir! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed.
+#### Bazal profil ayarlanamadı. İletim durdurulmuş olabilir! Please manually refresh the Pod status on the pump screen and resume delivery if needed.
 
 Informational alert that the Pod basal profile setting has failed. Open the Omnipod pump screen and press **Refresh**, then **Resume Delivery** if needed.
 
