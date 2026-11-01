@@ -91,7 +91,7 @@ Installez l'apk **AAPS Wear** avec [Wear Installer 2](https://youtu.be/abgN4jQqH
 
 ```{admonition} Wear OS 5
 :class: warning
-Sous Wear OS 5, le cadran AAPS doit être sélectionné avec Wear Installer 2 juste après l'installation de l'application Wear : à la fin de l'installation, l'installateur propose le cadran **AAPS (perso)**. Si vous passez par erreur à un autre cadran, refaites l'installation. Il peut être impossible de modifier les réglages du cadran (Sombre, Watchdivider, etc.).
+Sous Wear OS 5, le cadran AAPS doit être sélectionné avec Wear Installer 2 juste après l'installation de l'application Wear : à la fin de l'installation, l'installateur propose le cadran **AAPS (perso)**. Si vous passez par erreur à un autre cadran, refaites l'installation. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
 
 Si le cadran classique fonctionne pour vous, **désactivez les mises à jour automatiques de la montre** : la prochaine mise à jour du firmware risque de le casser. Si vous passez quand même à Wear OS 6, lisez la section ci-dessus : **AAPS** installe alors son propre cadran au nouveau format.
 ```
@@ -114,13 +114,13 @@ Voici des guides de configuration de base pour la [Galaxy Watch 5](https://www.y
 
 ## Se familiariser avec la montre connectée
 
-Après la configuration de base de votre montre selon la vidéo ci-dessus, allez sur le Play Store du téléphone et téléchargez les applications suivantes : « Galaxy Wearable », « Samsung » et soit « Easy Fire tools », soit « Wear Installer 2 ».
+After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
 
 De nombreuses vidéos YouTube de tiers vous aideront à prendre en main votre nouvelle montre connectée, par exemple :
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-L'application « Galaxy Wearable » contient aussi un manuel d'utilisation. Ouvrez Galaxy Wearable sur le téléphone, recherchez la montre et essayez d'appairer la montre avec le téléphone. Selon votre version, il peut vous être demandé d'installer une autre application, « galaxy watch 4 plugin », depuis le Play Store (le téléchargement prend un certain temps). Installez-la sur le téléphone, puis essayez à nouveau d'appairer la montre et le téléphone dans l'application Wearable. Parcourez une série de menus et cochez les préférences voulues.
+L'application « Galaxy Wearable » contient aussi un manuel d'utilisation. Ouvrez Galaxy Wearable sur le téléphone, recherchez la montre et essayez d'appairer la montre avec le téléphone. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Installez-la sur le téléphone, puis essayez à nouveau d'appairer la montre et le téléphone dans l'application Wearable. Parcourez une série de menus et cochez les préférences voulues.
 
 ## Configurer un compte Samsung
 
@@ -260,7 +260,7 @@ La dernière étape consiste à configurer **AAPS** sur le téléphone pour qu'i
 
 Pour faire un bolus ou d'autres actions depuis la montre, activez aussi **Contrôle Montre** dans [Paramètres > Montre](#preferences-wear).
 
-Pour passer à un autre cadran **AAPS**, appuyez longuement sur l'écran d'accueil de la montre : l'écran « Personnaliser » apparaît. Faites ensuite glisser vers la droite jusqu'à voir tous les cadrans **AAPS**.
+To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Faites ensuite glisser vers la droite jusqu'à voir tous les cadrans **AAPS**.
 
 Si le fichier Wear.apk **AAPS** a bien été installé sur la montre, cela ressemble à ceci :
 
@@ -334,7 +334,7 @@ F - niveau de batterie du téléphone
 
 G - débits de basal (en U/h ou en % pendant un DBT)
 
-H - BGI (interaction de la glycémie, en anglais blood glucose interaction) -> à quel point la glycémie « devrait » monter ou baisser selon la seule activité de l'insuline.
+H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
 I - glucides (glucides actifs | e-glucides à venir)
 
