@@ -74,7 +74,7 @@ Example (for Samsung S23): **Settings > General management > Date and time**: ma
 
 Some options may be greyed out, due to needing admin via a family account if the phone has been set up as a child account. This date and time setting is called “set automatically” on a caregiver/parent iPhone. If you are not sure if you have synched the handsets, don’t worry, you can set up the SMS commands and troubleshoot afterward if it seems to be causing problems (ask for help if needed).
 
-### AAPS settings
+### AAPS-innstillinger
 
 Now that the phone settings have been checked, in the **AAPS** app itself, go to [**Configuration** → **Communication**](../SettingUpAaps/ConfigBuilder.md) and enable the **SMS Communicator** plugin.
 
@@ -251,7 +251,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 | EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only). |
 | EXTENDED STOP/CANCEL | Yes  | To stop extended bolus                                                                                                                                            |
 
-### Profile
+### Profil
 
 | Command        | Auth | Function & *Response*                                                                                                                                        |
 | -------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
