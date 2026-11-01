@@ -24,7 +24,7 @@ Det er noen gode grunner til å bruke en Bluetooth-sender:
 
 Merk: Senderen kan brukes parallelt med LibreLink-appen uten å forstyrre den.
 
-### Start sensor
+### Start sensoren
 
 - → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Svar «Not Today» (4).
 
