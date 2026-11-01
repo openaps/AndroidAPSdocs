@@ -10,7 +10,7 @@ Disable battery optimization and allow background activity for the xDrip app.
 
 You shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
 
-→ Hamburger Menü (1) → Einstellungen (2) → Cloud Upload (3) → API Upload (REST)(4) → Switch **AUS** `ausgewählt` (5)
+→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Switch **OFF** `Enabled` (5)
 
 ![xDrip Basic Settings 1](../images/xDrip_Basic1.png)
 
@@ -34,7 +34,7 @@ Option `Alert on failures` should also be deactivated (10). Otherwise you will g
 
 ### **Inter-App Einstellungen** (Broadcast)
 
-If you are going to use AAPS and the data should be forwarded to i.e. AAPS you have to activate broadcasting in xDrip in Inter-App settings.
+If you use AAPS, you must activate broadcasting in xDrip's Inter-App settings so the data is forwarded to AAPS.
 
 → Hamburger Menu (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
 
