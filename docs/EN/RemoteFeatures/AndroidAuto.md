@@ -5,7 +5,7 @@
 
 ## Requirements
 
-**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of Auto Audio in the car.
+**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
 
 That means that:
 
@@ -38,7 +38,7 @@ Please check now that you see the **AAPS** status notification on the phone befo
 
 As **AAPS** is not an official Android Auto app, notifications have to be activated for "unknown sources" in Android Auto. This is done through the use of the developer mode which we will show you here.
 
-Go to your car and connect your mobile with the cars audio system.
+Go to your car and connect your mobile with the car's audio system.
 
 You should now see a screen similar to this screen.
 
