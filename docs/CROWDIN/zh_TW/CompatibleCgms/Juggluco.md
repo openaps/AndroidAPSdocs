@@ -36,6 +36,6 @@ Juggluco 可以將血糖資料傳送至 xDrip，再由 xDrip 傳送至 AAPS。
 
 在 Juggluco 中啟用 Patched Libre（不啟用 xDrip 廣播），確認並儲存 dexdrip 套件資訊。在 AAPS 中選取 xDrip 血糖資料來源。
 
-使用 Libre 2/2+/3/3+ 傳感器時，如有需要，請在 AAPS 中套用足夠的[平滑處理](./SmoothingBloodGlucoseData.md)。xDrip 會將每分鐘的讀取值平均為每 5 分鐘一筆，並[進一步進行平滑處理](#libre2-value-smoothing-raw-values)。
+Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary. When using a Libre 2/2+/3/3+ sensor, xDrip will average the minute-by-minute readings to 5-minute readings and [also smooth](#libre2-value-smoothing-raw-values) them.
 
 ![Juggluco 到 xDrip](../images/juggluco/Juggluco-xDrip+.png)
