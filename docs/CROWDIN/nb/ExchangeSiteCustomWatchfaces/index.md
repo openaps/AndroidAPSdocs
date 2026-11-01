@@ -1,10 +1,10 @@
-# Exchange site for custom watchfaces
+# Utvekslingsside for egendefinerte urskiver
 
-Here you can download Zip-Files with custom watchfaces users have prepared and want to share with you.
+Her kan du laste ned zip-filer med egendefinerte urskiver som andre brukere har laget og vil dele med deg.
 
-The Zip-Files can be uploaded in the folder "**[_static/ExchangeSiteCustomWatchfaces](https://github.com/openaps/AndroidAPSdocs/tree/master/docs/_static/ExchangeSiteCustomWatchfaces)**" via a Pull Request into GitHub as usual.
+Zip-filene kan lastes opp i mappen «**[_static/ExchangeSiteCustomWatchfaces](https://github.com/openaps/AndroidAPSdocs/tree/master/docs/_static/ExchangeSiteCustomWatchfaces)**» via en pull request på GitHub, som vanlig.
 
-During merge of the pull request the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file, and add it to the list below.
+Når pull requesten merges, henter dokumentasjonsteamet ut filen CustomWatchface.png, setter navnet på zip-filen foran filnavnet og legger den til i listen nedenfor.
 
 
 
@@ -18,5 +18,5 @@ During merge of the pull request the documentation team will extract the CustomW
 |    [![Robby watchface](../images/ExchangeSiteCustomWatchfaces/Robby_watchface-CustomWatchface.png) <br>**Robby watchface**](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/Robby_watchface.zip)    |        [![SimpleDigital](../images/ExchangeSiteCustomWatchfaces/SimpleDigital_v1.3-CustomWatchface.png) <br>**SimpleDigital**](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/SimpleDigital_v1.3.zip)         |            [![SteamPunk](../images/ExchangeSiteCustomWatchfaces/SteamPunk-CustomWatchface.png) <br>**AAPS (SteamPunk)**](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/SteamPunk.zip)            |
 |               [![SteamPunk](../images/ExchangeSiteCustomWatchfaces/Blue_Ring-CustomWatchface.jpg) <br/>**Blue Ring**](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/Blue_Ring.zip)                | [![AAPSV2 TT DarkOnly](../images/ExchangeSiteCustomWatchfaces/AAPSV2_TT_DarkOnly-CustomWatchface.png) <br/>**AAPSV2 + TT DarkOnly** *](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/AAPSV2_TT_DarkOnly.zip) |                                                                                                                                                                                                                                                                    |
 
-*Requires Custom WatchFace V2 or above installed within Wear Watch (AAPS V3.3.0 or above)
+*Krever egendefinert urskive versjon 2 (Custom WatchFace V2) eller nyere installert på Wear OS-klokken (AAPS V3.3.0 eller nyere)
 
