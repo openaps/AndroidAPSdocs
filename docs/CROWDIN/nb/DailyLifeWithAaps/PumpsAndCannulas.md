@@ -75,7 +75,7 @@ Which strategy you prefer is highly personal, and is best determined by trial an
 
 
 (Aapsscreens-site-rotation)=
-## Site Rotation
+## Rotasjon av sted
 
 **Administrer → Rotasjon av sted** åpner dialogen Rotasjon av sted i visningsmodus:
 
@@ -88,7 +88,7 @@ Which strategy you prefer is highly personal, and is best determined by trial an
 
 - **Tannhjul**-ikonet (øverst til høyre) åpner innstillingene: **Brukerprofil for stedsrotasjon** åpner en dialog der du velger **Mann**, **Kvinne** eller **Barn**, og bryterne **Administrer pumpe-stedsrotasjon** og **Administrer sensor-stedsrotasjon** velger hvilke steder du administrerer.
 
-![Settings](../images/SiteRotation/Settings.png)
+![Innstillinger](../images/SiteRotation/Settings.png)
 
 ![Dialogen Brukerprofil for stedsrotasjon](../images/SiteRotation/Type.png)
 
