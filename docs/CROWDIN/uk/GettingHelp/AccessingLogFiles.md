@@ -6,10 +6,10 @@
 * Файли журналу знаходяться в папці даних AAPS: `Android\data\info.nightscout.androidaps\files`.  
     Назва кореневої папки сховища може трохи відрізнятися залежно від телефону.
 * Для [AAPSClient](#RemoteControl_aapsclient) це місце: `Android\data\info.nightscout.aapsclient\files`.
-* Примітка: місце збереження журналів змінилося в **AAPS 3.3**. За потреби дивіться документацію попередніх версій.
+* Note: log location has changed in **AAPS 3.3**. За потреби дивіться документацію попередніх версій.
 
 ![журнали](../images/aapslog.png)
 
-* Поточний журнал – це файл .log. Його можна переглянути різними способами: через [LogCat](https://developer.android.com/studio/debug/am-logcat.html) в Android Studio, у будь-якому застосунку Android для перегляду журналів або просто як звичайний текст. 
+* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) within Android Studio, any log viewer Android app, or simply as plain text. 
 * Попередні файли журналу стиснуті в zip і зберігаються в папках за датою та часом. 
 * Якщо ви ділитеся файлом журналу в [discord](https://discord.gg/4fQUWHZ4Mw), щоб обговорити можливу помилку, розпакуйте та вивантажте файл з датою до того, як сталася помилка.
