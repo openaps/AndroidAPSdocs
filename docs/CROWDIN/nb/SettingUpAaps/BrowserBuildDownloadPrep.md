@@ -14,8 +14,7 @@ Eller gå til siden for den siste utgivelsen:
 https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
-2.Sikkerhetskopi lagret på dette nettstedet:
-
+2. Sikkerhetskopi som ligger på denne siden:
  - Hvis den eksterne lenken heller ikke er tilgjengelig, kan du laste ned denne sikkerhetskopien.
 <!--crowdin:disable-->
 
