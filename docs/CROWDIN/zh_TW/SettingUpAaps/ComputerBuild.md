@@ -29,7 +29,7 @@
 | [3.3.2](#version3300)                                                    | Meerkat (2024.3.1)                       | 已測試至 Quail 4                             | 8.11.1 | 21  |
 | [3.3.2.1](#version3321)                                                  | Narwhal (2025.1.2)                       | 已測試至 Quail 4                             | 8.13   | 21  |
 | [3.4.2.6](#version3426)                                                  | Panda 2 (2025.3.2)                       | 已測試至 Quail 4                             | 9      | 21  |
-| [4.0.0](#version400)                                                     | Rabbit 2 (2026.2.2)                      | Latest                                   | 9.8    | 21  |
+| [4.0.0](#version400)                                                     | Rabbit 2（2026.2.2）                       | 最新版本                                     | 9.8    | 21  |
 
 "首選版本"已打包與適當的JVM版本。首選版本也是你可以用來建立**AAPS**的最小版本。你**無法**在比"首選"版本更舊的版本上建立。如果使用不同的版本，你可能會遇到與JVM版本相關的問題。請參閱 [Android Studio 問題排除](#troubleshooting_androidstudio-uncommitted-changes) 頁面以協助解決這些問題。如果你當前的 Android Studio 版本未在表格中列出，你必須先更新它。
 
@@ -41,27 +41,27 @@ Gradle版本與源代碼相連結，下載/更新源代碼時，你將始終獲�
 <tbody>
   <tr>
     <th class="tg-baqh">作業系統（僅限64位）</th>
-    <td class="tg-baqh">Windows 10 or higher</td>
-    <td class="tg-baqh">macOS 12 or higher</td>
-    <td class="tg-baqh">Any Linux distribution that supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 or later</td>
+    <td class="tg-baqh">Windows 10 或更新版本</td>
+    <td class="tg-baqh">macOS 12 或更新版本</td>
+    <td class="tg-baqh">支援 Gnome、KDE 或 Unity DE 的任何 Linux 發行版；GNU C Library（glibc）2.31 或更新版本</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">CPU（僅限64位）</th>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">virtualization support</a> (Intel VT-x or AMD-V) enabled in the BIOS</td>
-    <td class="tg-baqh">Apple Silicon (M1 or newer), or 6th generation Intel Core or newer (support for Intel Macs is being phased out)</td>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with virtualization support (Intel VT-x or AMD-V) enabled in the BIOS</td>
+    <td class="tg-baqh">2017 年或更新的 x86_64 CPU（Intel 第 8 代 Core i5、AMD Ryzen 或更新款），並在 BIOS 中啟用<a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">虛擬化支援</a>（Intel VT-x 或 AMD-V）</td>
+    <td class="tg-baqh">Apple Silicon（M1 或更新款），或第 6 代或更新款 Intel Core（Intel Mac 的支援正逐步取消）</td>
+    <td class="tg-baqh">2017 年或更新的 x86_64 CPU（Intel 第 8 代 Core i5、AMD Ryzen 或更新款），並在 BIOS 中啟用虛擬化支援（Intel VT-x 或 AMD-V）</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">記憶體</th>
-    <td class="tg-baqh" colspan="3"><p align="center">16GB or more (8GB is the strict minimum for Android Studio alone, 32GB is recommended)</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16 GB 或以上（Android Studio 單獨執行時的最低需求為 8 GB，建議使用 32 GB）</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">硬碟</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 32GB free space. 建議使用SSD。</td>
+    <td class="tg-baqh" colspan="3"><p align="center">至少 32 GB 可用空間。建議使用SSD。</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">解析度</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 minimum (1920 x 1080 recommended)<br></td>
+    <td class="tg-baqh" colspan="3"><p align="center">最低需求為 1280 x 800（建議使用 1920 x 1080）<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">網際網路</th>
