@@ -2,7 +2,7 @@
 
 O plugin Autoajuste é uma implementação no AAPS do algoritmo autotune do OpenAPS. Analisa o seu histórico recente do AAPS para sugerir ajustes às suas taxas basais, ao FSI e ao rácio de hidratos de carbono (IHC).
 
-Autotune Plugin is available in AAPS releases since [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) but is hidden by default.
+Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
 
 (autotune-how-autotune-calculates-adjustments)=
 ## Como o Autoajuste calcula os ajustes
