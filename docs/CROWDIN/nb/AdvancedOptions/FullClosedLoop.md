@@ -287,7 +287,7 @@ Also it is very easy and quick to adjust any conditions or actions at any time, 
 
 (full-closed-loop-troubleshooting)=
 
-## Troubleshooting
+## Feilsøking
 
 ### How to get back into Hybrid Closed Loop
 
