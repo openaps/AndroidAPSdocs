@@ -68,7 +68,7 @@ All of your existing automation rules and food entries are kept; only the way yo
 
 **AAPS** 3.x had an "Actions" tab. In **AAPS** 4 its functions live in other places:
 
-* **Profile switch** and **Profile Percentage**: tap the [profile name](#aaps-screens-profile--target) on the main screen, or **Manage → Profile**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+* **Profile switch** and **Profile Percentage**: tap the [profile name](#aaps-screens-profile--target) on the main screen, or **Manage → Profile**. Se [Endre profilprosenten](#ProfileSwitch-change-percentage).
 * **Temporary target**: press the [target](#aaps-screens-profile--target) on the main screen, or **Manage → Temp Target**.
 * **Prime/Fill**, **Sensor Insert**, **BG check** and the other careportal entries: in the expanded [status panel](#aaps-screens-careportal), in **Manage**, or as [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
 * **History browser**, **Statistics** (TDD): in the **menu** (☰).
