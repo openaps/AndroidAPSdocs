@@ -49,7 +49,7 @@ På denne siden betyr **RileyLink** en hvilken som helst av pod-kommunikasjonsen
 
 **Omnipod PDM-en din vil ikke lenger virke etter at Omnipod-driveren i AAPS har aktivert poden din**. Tidligere brukte du Omnipod PDM-en til å sende kommandoer til Omnipod Eros-poden din. En Omnipod Eros-pod tillater bare at én enhet kommuniserer med den. Enheten som aktiverer poden, er den eneste enheten som får kommunisere med den fra da av. Det betyr at når du har aktivert en Omnipod Eros-pod med RileyLink gjennom Omnipod-driveren i AAPS, **kan du ikke lenger bruke PDM-en med poden din**. Omnipod-driveren i AAPS sammen med RileyLink er nå din PDM. *Det betyr IKKE at du skal kaste PDM-en. Vi anbefaler at du beholder den som reserve og til nødstilfeller der AAPS ikke virker som det skal.*
 
-**Bare én RileyLink om gangen kan kommunisere med en pod.** **AAPS** husker én paret RileyLink. Hvis du parer en annen, erstatter den den forrige.
+**Bare én RileyLink om gangen kan kommunisere med en pod.** **AAPS** husker én sammenkoblet RileyLink. Hvis du parer en annen, erstatter den den forrige.
 
 **Poden slår seg ikke av når RileyLink er utenfor rekkevidde.** Når RileyLink er utenfor rekkevidde, eller signalet til den aktive poden er blokkert, fortsetter poden å levere basalinsulin. Når du aktiverer en pod, blir basalprofilen som er definert i AAPS, programmert inn i den nye poden. Hvis du mister kontakten med poden, går den tilbake til denne basalprofilen. Du kan ikke sende nye kommandoer før RileyLink er innenfor rekkevidde igjen og har gjenopprettet forbindelsen.
 
@@ -83,13 +83,13 @@ Når den er valgt, viser kortet **Omnipod Eros** to knapper, **Innstillinger** o
 
 ![Innstillinger for Omnipod-driveren](../images/v4/Pumps/omnipod_settings.png)
 
-**Åpne plugin** åpner Omnipod-pumpeskjermen. Du kan også åpne den når som helst fra hovedskjermen med **Administrer** > **Pumpe**. På denne siden kalles den **Omnipod-pumpeskjermen**. Før en RileyLink er paret og en pod er aktivert, ser den slik ut:
+**Åpne plugin** åpner Omnipod-pumpeskjermen. Du kan også åpne den når som helst fra hovedskjermen med **Administrer** > **Pumpe**. På denne siden kalles den **Omnipod-pumpeskjermen**. Før en RileyLink er sammenkoblet og en pod er aktivert, ser den slik ut:
 
-![Omnipod-pumpeskjermen før paring](../images/v4/Pumps/omnipod_pump_screen.png)
+![Omnipod-pumpeskjermen før sammenkobling](../images/v4/Pumps/omnipod_pump_screen.png)
 
 ### Kontroll av at Omnipod-driveren er valgt
 
-For å kontrollere at du har aktivert Omnipod-driveren, åpne **Administrer** > **Pumpe** fra hovedskjermen. Du skal nå se pumpeskjermen for **Omnipod Eros** som vist ovenfor. Hvis du ikke har paret en RileyLink ennå, viser **RileyLink-status** **Ikke startet**, og **Podstatus** viser **Ingen aktiv Pod**.
+For å kontrollere at du har aktivert Omnipod-driveren, åpne **Administrer** > **Pumpe** fra hovedskjermen. Du skal nå se pumpeskjermen for **Omnipod Eros** som vist ovenfor. Hvis du ikke har sammenkoblet en RileyLink ennå, viser **RileyLink-status** **Ikke startet**, og **Podstatus** viser **Ingen aktiv Pod**.
 
 ## Omnipod-konfigurasjon
 
@@ -108,7 +108,7 @@ Skjermbildene ovenfor er fra en eldre **AAPS**-versjon. I **AAPS** 4 finnes det 
 
 ### RileyLink-oppsett
 
-Hvis du allerede har paret RileyLink, fortsett til delen [Aktivere en pod](#OmnipodEros-activating-a-pod) nedenfor.
+Hvis du allerede har sammenkoblet RileyLink, fortsett til delen [Aktivere en pod](#OmnipodEros-activating-a-pod) nedenfor.
 
 *Merk: Et godt synlig tegn på at RileyLink ikke er tilkoblet, er at behandlingsknappene (Hurtigstart-verktøylinjen) på hovedskjermen mangler. Dette skjer også i omtrent de første 30 sekundene etter at AAPS starter, fordi appen da holder på å koble til RileyLink.*
 
@@ -140,16 +140,16 @@ De seks skjermbildene ovenfor (etter steg 6) er fra en eldre **AAPS**-versjon. I
 ```
 
 ```{note}
-For å bytte til en annen RileyLink (for eksempel en reserveenhet), trykk på **Par RileyLink** igjen og velg den nye enheten. Den erstatter den som var paret før. Du trenger ikke å fjerne den gamle enheten først.
+For å bytte til en annen RileyLink (for eksempel en reserveenhet), trykk på **Par RileyLink** igjen og velg den nye enheten. Den erstatter den som var sammenkoblet før. Du trenger ikke å fjerne den gamle enheten først.
 ```
 
 (OmnipodEros-activating-a-pod)=
 
 ### Aktivere en pod
 
-Før du kan aktivere en pod, må du sørge for at RileyLink er paret og at **RileyLink-status** viser **Tilkoblet**. Knappen **Aktiver Pod** er deaktivert til RileyLink er klar.
+Før du kan aktivere en pod, må du sørge for at RileyLink er sammenkoblet og at **RileyLink-status** viser **Tilkoblet**. Knappen **Aktiver Pod** er deaktivert til RileyLink er klar.
 
-*HUSK: Av sikkerhetsgrunner skjer pod-kommunikasjonen med begrenset rekkevidde under paringen ved pod-aktivering. Før paringen er radiosignalet fra poden svakere, men etter paringen sender den med full signalstyrke. Under disse prosedyrene må du sørge for at poden er* [nær](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) *(ca. 30 cm eller mindre), men ikke oppå eller helt inntil RileyLink.*
+*HUSK: Av sikkerhetsgrunner skjer pod-kommunikasjonen med begrenset rekkevidde under sammenkoblingen ved pod-aktivering. Før sammenkoblingen er radiosignalet fra poden svakere, men etter sammenkoblingen sender den med full signalstyrke. Under disse prosedyrene må du sørge for at poden er* [nær](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) *(ca. 30 cm eller mindre), men ikke oppå eller helt inntil RileyLink.*
 
 01. Åpne Omnipod-pumpeskjermen (**Administrer** > **Pumpe**) og trykk på **Aktiver Pod**.
 
@@ -434,9 +434,9 @@ Skjermbildene ovenfor er fra en eldre **AAPS**-versjon. I **AAPS** 4 kobler du t
 
 #### Innstillinger for pod-kommunikasjonsenheten og den aktive poden
 
-Denne skjermen viser informasjon og status for både den parede pod-kommunikasjonsenheten og den aktive Omnipod Eros-poden. Informasjonen oppdateres automatisk.
+Denne skjermen viser informasjon og status for både den sammenkoblede pod-kommunikasjonsenheten og den aktive Omnipod Eros-poden. Informasjonen oppdateres automatisk.
 
-1. Åpne Omnipod-pumpeskjermen (**Administrer** > **Pumpe**) og trykk på **RileyLink-statistikk**. Fanen **Innstillinger** viser din parede **RileyLink** og den aktive poden (**Enhet**).
+1. Åpne Omnipod-pumpeskjermen (**Administrer** > **Pumpe**) og trykk på **RileyLink-statistikk**. Fanen **Innstillinger** viser din sammenkoblede **RileyLink** og den aktive poden (**Enhet**).
 
    > ![RileyLink_Statistics_Settings_1](../images/omnipod/RileyLink_Statistics_Settings_1.png) ![RileyLink_Statistics_Settings_2](../images/omnipod/RileyLink_Statistics_Settings_2.png) 
    > 
@@ -449,8 +449,8 @@ Denne skjermen viser informasjon og status for både den parede pod-kommunikasjo
 
 ##### RileyLink-felt
 
-> - **Adresse:** MAC-adressen til den parede pod-kommunikasjonsenheten.
-> - **Navn:** Bluetooth-navnet til den parede pod-kommunikasjonsenheten.
+> - **Adresse:** MAC-adressen til den sammenkoblede pod-kommunikasjonsenheten.
+> - **Navn:** Bluetooth-navnet til den sammenkoblede pod-kommunikasjonsenheten.
 > - **Batterinivå:** Gjeldende batterinivå for den tilkoblede pod-kommunikasjonsenheten. Vises bare når **Vis batterinivå rapportert av OrangeLink/EmaLink/DiaLink** er aktivert.
 > - **Tilkoblingsstatus**: Gjeldende status for Bluetooth-forbindelsen mellom pod-kommunikasjonsenheten og telefonen som kjører AAPS.
 > - **Tilkoblingsfeil:** Hvis det er en feil med Bluetooth-forbindelsen til pod-kommunikasjonsenheten, vises detaljene her.
@@ -513,7 +513,7 @@ Skjermbildet ovenfor er fra en eldre **AAPS**-versjon, der denne skjermen var **
 
 - **RileyLink-status:** Viser gjeldende tilkoblingsstatus for RileyLink. Feil vises i rødt.
 
-- *Ikke startet* – ingen RileyLink er paret ennå, eller tilkoblingen har ikke startet.
+- *Ikke startet* – ingen RileyLink er sammenkoblet ennå, eller tilkoblingen har ikke startet.
 - *RileyLink utilgjengelig* – pod-kommunikasjonsenheten er enten utenfor Bluetooth-rekkevidde av telefonen, slått av eller har en feil som hindrer Bluetooth-kommunikasjon.
 - *RileyLink er klar* – pod-kommunikasjonsenheten er slått på og holder på å sette opp Bluetooth-forbindelsen.
 - *Tilkoblet* – pod-kommunikasjonsenheten er slått på, tilkoblet og kan kommunisere via Bluetooth.
@@ -627,7 +627,7 @@ Skjermbildet ovenfor er fra en tidligere **AAPS**-versjon. I **AAPS** 4 finnes d
   Skjermbildet ovenfor er fra en eldre **AAPS**-versjon. I **AAPS** 4 er **Aktiver Pod** en knapp på Omnipod-pumpeskjermen i stedet for i Pod-administrasjonsmenyen.
   ```
 
-- **Deaktiver Pod:** Deaktiverer den aktive poden. Vises så snart en pod er paret, også når en aktivering stoppet underveis (for eksempel fordi poden feilet under aktiveringen). Den er bare aktiv når RileyLink er tilkoblet. **AAPS** ber deg bekrefte før den deaktiverer poden.
+- **Deaktiver Pod:** Deaktiverer den aktive poden. Vises så snart en pod er sammenkoblet, også når en aktivering stoppet underveis (for eksempel fordi poden feilet under aktiveringen). Den er bare aktiv når RileyLink er tilkoblet. **AAPS** ber deg bekrefte før den deaktiverer poden.
 
 - Bruk denne kommandoen for å deaktivere en pod med vedvarende alarm («screaming pod», feil 49).
 - Hvis deaktiveringen mislykkes, tilbyr deaktiveringsveiviseren valget **Forkast Pod**.
@@ -639,7 +639,7 @@ Skjermbildet ovenfor er fra en tidligere **AAPS**-versjon. I **AAPS** 4 finnes d
   Skjermbildet ovenfor er fra en eldre **AAPS**-versjon. I **AAPS** 4 er **Deaktiver Pod** en knapp på Omnipod-pumpeskjermen i stedet for i Pod-administrasjonsmenyen.
   ```
 
-- **Spill av testlyd:** Spiller av ett testpip på poden når du trykker på den. Vises når en pod er paret.
+- **Spill av testlyd:** Spiller av ett testpip på poden når du trykker på den. Vises når en pod er sammenkoblet.
 
   ![play_test_beep](../images/omnipod/ICONS/omnipod_overview_pod_management_play_test_beep.png)
 
@@ -686,9 +686,9 @@ Skjermbildet ovenfor er fra en tidligere **AAPS**-versjon. I **AAPS** 4 finnes d
   Skjermbildet ovenfor er fra en eldre **AAPS**-versjon. I **AAPS** 4 heter denne knappen **Tilbakestill RileyLink**, og den er på Omnipod-pumpeskjermen.
   ```
 
-- **Forkast Pod:** Forkaster pod-tilstanden til en pod som ikke svarer, etter en bekreftelse. Vises bare når en pod er startet, men ikke ferdig paret, siden vanlig deaktivering da ikke lenger er mulig:
+- **Forkast Pod:** Forkaster pod-tilstanden til en pod som ikke svarer, etter en bekreftelse. Vises bare når en pod er startet, men ikke ferdig sammenkoblet, siden vanlig deaktivering da ikke lenger er mulig:
 
-- En **pod er ikke ferdig paret** og ignorerer derfor deaktiveringskommandoer.
+- En **pod er ikke ferdig sammenkoblet** og ignorerer derfor deaktiveringskommandoer.
 - En **pod sitter fast** mellom stegene i paringsprosessen.
 - En **pod lar seg rett og slett ikke pare.**
   > 
@@ -778,7 +778,7 @@ Gir AAPS-varsler og lydvarsler på telefonen når det er usikkert om en midlerti
 - **\*Lydvarsel for ubekreftet SMB:** Slå av eller på et lydvarsel og et synlig varsel når AAPS er usikker på om en SMB ble levert.
 - **\*Lydvarsel for ubekreftet bolus:** Slå av eller på et lydvarsel og et synlig varsel når AAPS er usikker på om en bolus ble levert.
 
-### Other
+### Annet
 
 Gir avanserte innstillinger som hjelper til med feilsøking.
 
@@ -792,7 +792,7 @@ Gir avanserte innstillinger som hjelper til med feilsøking.
 
 Siden det finnes mange alternativer til den originale RileyLink (som OrangeLink eller EmaLink), eller fordi du trenger flere eller en reserve av samme pod-kommunikasjonsenhet, kan det hende du må bytte til en annen enhet.
 
-For å bytte, åpne Omnipod-pumpeskjermen (**Administrer** > **Pumpe**), trykk på **Par RileyLink** og velg den nye enheten, som beskrevet i [RileyLink-oppsett](#OmnipodEros-rileylink-setup). Den nye enheten erstatter den som var paret før.
+For å bytte, åpne Omnipod-pumpeskjermen (**Administrer** > **Pumpe**), trykk på **Par RileyLink** og velg den nye enheten, som beskrevet i [RileyLink-oppsett](#OmnipodEros-rileylink-setup). Den nye enheten erstatter den som var sammenkoblet før.
 
 ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
@@ -807,7 +807,7 @@ For å bytte, åpne Omnipod-pumpeskjermen (**Administrer** > **Pumpe**), trykk p
 Skjermbildene ovenfor er fra en eldre **AAPS**-versjon. I **AAPS** 4 legger du til en enhet med **Par RileyLink** på Omnipod-pumpeskjermen i stedet for **RileyLink-konfigurasjon** i Omnipod-innstillingene, og søket starter automatisk.
 ```
 
-Det finnes ingen egen knapp for å fjerne en paret enhet. Hvis du slutter å bruke en RileyLink, parer du bare den nye når du trenger den.
+Det finnes ingen egen knapp for å fjerne en sammenkoblet enhet. Hvis du slutter å bruke en RileyLink, parer du bare den nye når du trenger den.
 
 ![RileyLink_Setup_Remove_1](../images/omnipod/RileyLink_Setup_Remove_1.png)
 
@@ -819,7 +819,7 @@ Det finnes ingen egen knapp for å fjerne en paret enhet. Hvis du slutter å bru
 
 ```{admonition} Older screenshot
 :class: note
-Skjermbildene ovenfor er fra en eldre **AAPS**-versjon. I **AAPS** 4 finnes det ingen **Fjern**-knapp: paring av en ny RileyLink erstatter den forrige.
+Skjermbildene ovenfor er fra en eldre **AAPS**-versjon. I **AAPS** 4 finnes det ingen **Fjern**-knapp: sammenkobling av en ny RileyLink erstatter den forrige.
 ```
 
 ## Statusraden og helseportalen
