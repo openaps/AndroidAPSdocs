@@ -355,7 +355,7 @@ Standardverdien er 2, men du bør øke denne parameteren sakte for å se hvor my
 
 ### Bruk Autosens (AMA)
 
-Her kan du velge om du vil bruke [sensitivitetsdeteksjonen](../DailyLifeWithAaps/SensitivityDetectionAndCob.md) Autosens eller ikke.
+Her kan du velge om du vil bruke [Sensitivitetsdeteksjon](../DailyLifeWithAaps/SensitivityDetectionAndCob.md) Autosens eller ikke.
 
 ### Autosens justerer mål
 
