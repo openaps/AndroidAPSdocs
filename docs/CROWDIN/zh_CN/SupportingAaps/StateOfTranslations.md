@@ -1,9 +1,9 @@
-# 应用程序及文档的翻译状态
+# State of translation for the app and the documentation
 
 该状态每小时更新一次，且仅反映Crowdin平台中的翻译进度。
 
 ```{tip}
-Be careful the percentage of proofreading must be lower than the percentage of translations but they decided to show it on top of the translations.
+Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
 建议仅关注翻译进度百分比来判断剩余工作量。
 ```
 
