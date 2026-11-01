@@ -403,7 +403,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 - Пропускайте опциите/алтернативите/…. Без двусмислие
 
-- Преходи между стъпките: завършвайте всяка стъпка с изречение, което води към следващата стъпка като логично продължение. Пример: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- Преходи между стъпките: завършвайте всяка стъпка с изречение, което води към следващата стъпка като логично продължение. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
 
 - Заглавие на **урок** (заглавие от ниво 1)
 
