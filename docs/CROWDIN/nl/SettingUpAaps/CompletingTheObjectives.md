@@ -10,7 +10,7 @@ Als **AAPS** voor de eerste keer is geïnstalleerd, moet je elk doel voltooien v
 
 **Doelen 1 tot 8** begeleiden je van het instellen van **AAPS** op je smartphone tot een “eenvoudige” hybride gesloten loop. Dit duurt ongeveer 6 weken. Je kunt tot en met **Doel 5** werken met een virtuele pomp (en in de tussentijd op een andere manier insuline toedienen). **Doelen 9 en 10** testen meer geavanceerde functies van **AAPS**, met als doel een betere controle van je diabetes. Het duurt tot 3 maanden om ze te voltooien, misschien langer. Meer informatie over hoeveel tijd elk deel ongeveer kost vind je hier: [Hoe lang duurt het?](#preparing-how-long-will-it-take)
 
-Naast verder gaan met de **Doelen** kun je, als dat nodig is, ook je voortgang wissen en [teruggaan naar een eerder doel](#go-back-in-objectives).
+As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#CompletingTheObjectives-go-back-in-objectives).
 
 ## Maak een back-up van je instellingen
 
@@ -39,7 +39,7 @@ Bij **Doel 1** stel je de technische basis van **AAPS** in. Je kunt pas verder a
 - Als je Tidepool gebruikt:
   - Volg de instructies op de pagina [Tidepool](../SettingUpAaps/Tidepool.md), zodat **Tidepool** de gegevens van **AAPS** kan ontvangen en tonen.
 
-Let op - *Misschien moet je wachten tot de volgende sensorwaarde binnenkomt voordat **AAPS** deze herkent.*
+Note: *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
 
 (objectives-objective2)=
 ## Doel 2: Leer hoe AAPS te gebruiken
@@ -51,7 +51,7 @@ Voor **Doel 2** moet je verschillende ‘taken’ uitvoeren, zoals te zien is in
 Taken om **Doel 2** te voltooien:
 - Zet je **Profiel** op 90% voor een duur van 10 min.
   - _Tip_: tik op de naam van je profiel in het hoofdscherm om het scherm **Profiel** te openen. Gebruik daarna de knop **Activeer** (▶) en stel het percentage en de duur in. Meer informatie in [Profiel wissel & Profiel percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-  - _Let op_: **AAPS** accepteert geen basaalstanden lager dan 0,05 E/u. Als je **Profiel** standen van 0,06 E/u of lager heeft, moet je eerst een tijdelijk **Profiel** met hogere basaalstanden maken voordat je deze taak doet. Ga na het voltooien van deze taak terug naar je normale **Profiel**.
+  - _Let op_: **AAPS** accepteert geen basaalstanden lager dan 0,05 E/u. If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Ga na het voltooien van deze taak terug naar je normale **Profiel**.
 - Doe alsof je "gaat douchen" door in **AAPS** [de verbinding met je pomp te verbreken](#AapsScreens-loop-status) voor een duur van 1 uur.
   - _Tip_: druk op het loop-pictogram in het hoofdscherm om het Loop-venster te openen. Kies dan een duur onder **Verbreek verbinding met de pomp**.
 - Beëindig "douchen" door je pomp weer aan te sluiten.
@@ -94,7 +94,7 @@ De minimale tijd om dit doel te voltooien: **7 dagen**. Dit is een verplichte wa
 - Gebruik [**Tijdelijke streefdoelen**](../DailyLifeWithAaps/TempTargets.md) als dat nodig is. Gebruik na het behandelen van een hypo het vooraf ingestelde "tijdelijk streefdoel Hypo", zodat het systeem bij het terugveren niet te veel corrigeert.
 - Als je nu nog in [Eenvoudige modus](#preferences-simple-mode) staat, is dit waarschijnlijk een goed moment om die uit te zetten.
 
-Om het aantal voorgestelde wijzigingen van de basaal in open loop te beperken, kun je nog steeds de tips uit [**Doel 3**](#objective-3-prove-your-knowledge) gebruiken. Daarnaast kun je met de instelling "**Minimum wijziging open loop**" in **Instellingen → Loop** het minimale percentage voor voorgestelde wijzigingen van de basaal aanpassen. Hoe hoger de waarde, hoe minder meldingen over wijzigingen je krijgt.
+To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Daarnaast kun je met de instelling "**Minimum wijziging open loop**" in **Instellingen → Loop** het minimale percentage voor voorgestelde wijzigingen van de basaal aanpassen. Hoe hoger de waarde, hoe minder meldingen over wijzigingen je krijgt.
 
 ![Minimum wijziging open loop](../images/OpenLoop_MinimalRequestChange2.png)
 
@@ -119,7 +119,7 @@ Je kunt de [BG-streefwaarde in je **Profiel**](#profile-glucose-targets) hoger z
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-Als je een open loop gebruikt met een virtuele pomp, **stop dan hier**. Klik pas aan het eind van dit **Doel** op Verifieer als je bent overgestapt op een "echte" pomp die insuline toedient.
+Als je een open loop gebruikt met een virtuele pomp, **stop dan hier**. Only tap **Verify** at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
 
 ```
 
@@ -167,14 +167,14 @@ Minimale tijd om dit doel te voltooien: **1 dag**. Dit is een verplichte wachtti
 
 - Kies **Closed loop** door op het [Loop-pictogram](#AapsScreens-loop-status) in het hoofdscherm te drukken en **Closed loop** als bedrijfsmodus te kiezen. Blijf 1 dag lang in **Closed loop**.
 
-- Verhoog je 'Maximale totale IOB waar OpenAPS niet boven mag komen' (in OpenAPS 'max-iob' genoemd) langzaam boven 0, tot je de instellingen vindt die het beste voor je werken.
+- Slowly raise your 'Max IOB for SMB' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
 
 Het standaardadvies voor deze instelling is “**gemiddelde maaltijdbolus + 3x max dagelijkse basaal**”. Hierbij is “max dagelijkse basaal” de hoogste uurwaarde in welk tijdsblok van de dag dan ook.
 
 ![max dagelijkse basaal](../images/MaxDailyBasal2.png)
 
 Deze aanbeveling moet als uitgangspunt worden beschouwd. Gebruik je deze regel, maar geeft AAPS te veel insuline als de glucose stijgt? Dan moet je misschien:
-* de waarde "Maximale totale IOB waar OpenAPS niet boven mag komen" verlagen;
+* lower the "Max IOB for SMB" value;
 * bekijk de instellingen van je **Profiel** opnieuw en pas maar één ding tegelijk aan.
 
 Of, als je erg insulineresistent bent, verhoog de waarde **maxIOB** dan heel voorzichtig.
@@ -202,7 +202,7 @@ In **Doel 9** ga je **"Super Micro Bolus (SMB)"** gebruiken als een van de kernf
 Minimale tijd om dit doel te voltooien: **28 dagen**. Dit is een verplichte wachttijd. Je kunt pas naar het volgende Doel als deze tijd voorbij is.
 
 - Het [deel over SMB in deze documentatie](#Open-APS-features-super-micro-bolus-smb) en [de uitleg over oref1 in de documentatie van openAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) moet je echt lezen om **SMB** en het idee van **zero-temping** (tijdelijke basaal op nul) te begrijpen.
-- Daarna kun je [maxIOB verhogen](#Open-APS-features-maximum-total-iob-openaps-cant-go-over), zodat **SMB's** beter werken. maxIOB omvat nu alle **IOB**, niet alleen de opgebouwde basaal. Deze grens pauzeert **SMB's** totdat de IOB onder deze waarde zakt (_bijv._ **maxIOB** staat op 7 E en je geeft een bolus van 8 E voor een maaltijd: SMB's worden gepauzeerd en pas weer gegeven als de **IOB** onder 7 E zakt). Een goed begin is **maxIOB** = **gemiddelde maaltijdbolus + 3x max dagelijkse basaal**. Hierbij is "max dagelijkse basaal" de hoogste uurwaarde in welk tijdsblok van de dag dan ook. Zie [doel 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) als referentie.
+- Daarna kun je [maxIOB verhogen](#Open-APS-features-maximum-total-iob-openaps-cant-go-over), zodat **SMB's** beter werken. maxIOB omvat nu alle **IOB**, niet alleen de opgebouwde basaal. Deze grens pauzeert **SMB's** totdat de IOB onder deze waarde zakt (_bijv._ **maxIOB** staat op 7 E en je geeft een bolus van 8 E voor een maaltijd: SMB's worden gepauzeerd en pas weer gegeven als de **IOB** onder 7 E zakt). Een goed begin is **maxIOB** = **gemiddelde maaltijdbolus + 3x max dagelijkse basaal**. Hierbij is "max dagelijkse basaal" de hoogste uurwaarde in welk tijdsblok van de dag dan ook. See [objective 7](#objectives-objective7) as reference.
 - Beoordeel hoe snel je koolhydraten worden opgenomen. Overweeg de parameter “min_5m_carbimpact” te wijzigen in [Instellingen → Opname instellingen → min_5m_carbimpact](#Preferences-min_5m_carbimpact) als je die te langzaam of te snel vindt.
 
 (objectives-objective10)=
