@@ -135,9 +135,9 @@ Por esses exemplos, você vê que quanto _menor_ o valor do **ISF**, menos sens�
 
 ### Impacto
 
-Um **ISF menor / mais forte** (por exemplo, 40 em vez de 50) significa que a insulina baixa menos a sua **glicose** por unidade. Isto leva a uma correção mais agressiva / mais forte do loop com **mais insulina**. Se o seu **ISF** for forte demais (valor pequeno), isso pode causar **glicose** baixa.
+A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. Isto leva a uma correção mais agressiva / mais forte do loop com **mais insulina**. Se o seu **ISF** for forte demais (valor pequeno), isso pode causar **glicose** baixa.
 
-Um **ISF maior / mais fraco** (por exemplo, 45 em vez de 35) significa que a insulina baixa mais a sua **glicose** por unidade. Isto leva a uma correção menos agressiva / mais fraca do loop com **menos insulina**. Se o seu **ISF** for fraco demais (valor grande), isso pode causar **glicose** alta.
+A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. Isto leva a uma correção menos agressiva / mais fraca do loop com **menos insulina**. Se o seu **ISF** for fraco demais (valor grande), isso pode causar **glicose** alta.
 
 **Exemplo:**
 * A **glicose** está em 190 mg/dl (10,5 mmol/l) e o alvo é 100 mg/dl (5,6 mmol/l).
@@ -201,7 +201,7 @@ Se o seu **ICR** for mais fraco (valor maior), talvez 1:20, você precisaria de 
 > 
 > Fator BU 2,4 U / 12g   ===>   IC = 12g / 2,4 U = 5,0 g/U
 > 
-> Tabelas de conversão estão disponíveis on-line [aqui](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Impacto
 
@@ -300,7 +300,7 @@ O Assistente de perfil oferece conjuntos de dados de dois hospitais diferentes p
 4. Mude para a aba **Perfil 2**.
 5. Toque em **Tipo de perfil** e selecione "Perfil padrão DPV".
 6. Ajuste o Perfil padrão DPV (baseado no conjunto de dados de outro hospital) informando a idade da criança, o DDT Total e a porcentagem da basal. Observe que o conjunto de dados DPV fornece apenas **taxas basais**, por isso IC e ISF aparecem como zero neste perfil.
-7. Abra a aba **Comparação**. A comparação dos dois perfis ajustados será mostrada (veja a captura de tela abaixo).
+7. Open the **Comparison** tab. A comparação dos dois perfis ajustados será mostrada (veja a captura de tela abaixo).
 8. Se você quiser começar a ajustar o seu perfil com base em uma dessas sugestões, use o botão **Clonar** na parte de baixo da comparação.
 
 ![Assistente de perfil para crianças 2](../images/ProfileHelperKids2.png)
@@ -350,6 +350,6 @@ Você também pode usar o [Assistente de perfil](#aaps-screens-profile-helper) (
 4. Mude para a aba **Perfil 2**.
 5. Em **Tipo de perfil**, selecione "Troca de Perfil" para escolher no histórico de todas as suas **Trocas de Perfil**.
 6. Escolha a **Troca de Perfil** com a qual você quer comparar.
-7. Abra a aba **Comparação**. A comparação dos dois perfis será mostrada (veja a captura de tela abaixo).
+7. Open the **Comparison** tab. A comparação dos dois perfis será mostrada (veja a captura de tela abaixo).
 
 ![Assistente de perfil 2](../images/ProfileHelper2.png)
