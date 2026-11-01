@@ -41,7 +41,7 @@ Wear apk файлът следва [варианта](#browserbuild-variant), к
 
 Къде да намерите Wear apk файла:
 
-- **AAPS Builder**: на страницата на компилацията превъртете надолу до **Artifacts** (артефакти) и изтеглете `aaps-wear-….apk` до приложението за телефона, както е показано в [Стъпка 6 – Инсталирайте приложението на телефона си](#aaps-builder-step6). Изтеглете го на телефона, на който работи **AAPS**, ако инсталирате приложението за часовника от телефона (Wear Installer 2 или Easy Fire Tools), или на компютъра си, ако използвате ADB.
+- **AAPS Builder**: on the build page, scroll down to **Artifacts** and download `aaps-wear-….apk` next to the phone app, as shown in [Step 5 – Install the app on your phone](#aaps-builder-step5). Изтеглете го на телефона, на който работи **AAPS**, ако инсталирате приложението за часовника от телефона (Wear Installer 2 или Easy Fire Tools), или на компютъра си, ако използвате ADB.
 
   ![Artifacts с приложенията за телефона и за часовника](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 
