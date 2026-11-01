@@ -375,7 +375,7 @@ Monitor and control **AAPS** from a Wear OS watch. Setting up the watch is expla
 
 (external-companion-apps)=
 
-### External Companion Apps
+### Eksterne hjelpeapper
 
 Broadcasts **AAPS** status data on the phone so that other apps installed on it can display it — for example watch or widget companion apps. The broadcast includes glucose and trend, IOB, COB, basal and temp basal, profile name, loop status, phone and pump battery, reservoir level and bolus progress. Enable it only if a companion app you use asks for this data.
 
