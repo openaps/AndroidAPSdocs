@@ -71,12 +71,12 @@ I **AAPS** 4 er insulin ikke lenger en plugin som velges i **Konfigurasjon**. Å
 I insulineditoren kan du:
 
 * gi profilen et **Kallenavn for insulin**, så den er lett å kjenne igjen,
-* sette **Topp** (tid til maksimal insulinaktivitet, i minutter) og **DIA** (insulinets virketid, i timer), enten ved å skrive inn verdien eller med knappene **–** / **+**,
+* sette **Topp** (tid til maksimal insulinaktivitet, i minutter) og **DIA** (insulinets virkningstid, i timer), enten ved å skrive inn verdien eller med knappene **–** / **+**,
 * trykke på en forhåndsinnstillingsknapp under **Last topp fra** – **Novorapid** (75 min), **Fiasp** (55 min) eller **Lyumjev** (45 min) – for å fylle inn standard topptid for det insulinet i ett steg.
 
 De tillatte områdene er de samme uansett hvilket insulin du bruker:
 
-* **DIA**: 5 til 9 timer (5 til 10 timer hvis pasienttypen er satt til **Graviditet**). Se [Insulinets virketid (DIA) og topp](#Config-Builder-insulin-dia) for å velge en verdi.
+* **DIA**: 5 til 9 timer (5 til 10 timer hvis pasienttypen er satt til **Graviditet**). Se [Insulinets virkningstid (DIA) og topp](#Config-Builder-insulin-dia) for å velge en verdi.
 * **Topp**: 35 til 120 minutter.
 
 Kurvene for **IOB** (aktivt insulin) og **Aktivitet** nederst i editoren oppdateres når du endrer verdiene, så du ser med en gang hvordan innstillingene dine former insulinvirkningen.
@@ -134,7 +134,7 @@ Slik endrer du DIA eller topp som du bruker:
     * En egendefinert topp er nyttig hvis du bruker et insulin som ikke er i listen, eller en blanding av ulike insuliner.
     
     (Config-Builder-insulin-dia)=
-    ### Insulinets virketid (DIA) og topp
+    ### Insulinets virkningstid (DIA) og topp
     
     ```{warning}
     Ved looping vil lavere DIA eller topp alltid øke mengden insulin som gis. DIA fungerer annerledes i AAPS enn i kommersielle AID-systemer, og uforsiktige endringer i disse innstillingene kan endre insulindoseringen mye mer eller mye mindre enn du venter.
@@ -241,7 +241,7 @@ Til slutt en sammenligning der DIA og topp justeres parallelt. Logikken her er a
 
 (Config-Builder-pump)=
 
-## Pump
+## Pumpe
 
 Velg pumpen du bruker. Se siden [Kompatible pumper](../Getting-Started/CompatiblePumps.md) for mer informasjon om oppsett.
 
@@ -293,11 +293,11 @@ For å bruke den nye pumpen bytter du pumpedriver: velg **Virtuell pumpe**, bekr
 
 ![Konfigurasjon > Sensitivitetsdeteksjon](../images/v4/Configuration/configuration_sensitivity_detection.png)
 
-Velg type sensitivitetsdeteksjon. Mer informasjon om de ulike variantene finner du [her](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Dette analyserer historiske data fortløpende og justerer hvis det ser at du reagerer mer følsomt (eller motsatt, mer resistent) på insulin enn vanlig. Mer om hvordan selve sensitivitetsforholdet beregnes finner du i [Viktige AAPS-funksjoner > Autosens](#Open-APS-features-autosens).
+Velg type sensitivitetsdeteksjon. Mer informasjon om de ulike variantene finner du [her](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Dette analyserer historiske data fortløpende og justerer hvis det ser at du reagerer mer følsomt (eller motsatt, mer resistent) på insulin enn vanlig. Mer om hvordan selve sensitivitetsforholdet beregnes finner du i [Viktige funksjoner i AAPS > Autosens](#Open-APS-features-autosens).
 
 Du kan se sensitiviteten din på hovedskjermen i en [ekstra graf](#AapsScreens-section-g-additional-graphs), ved å velge SEN og følge med på den hvite linjen. Merk: du må ha kommet til [opplæringsmål 8](#objectives-objective8) for at Sensitivitetsdeteksjon/[Autosens](#Open-APS-features-autosens) skal kunne justere insulinmengden automatisk. Før du når dette opplæringsmålet, vises Autosens-prosenten / linjen i grafen bare til informasjon.
 
-### Absorberingsinnstillinger
+### Absorpsjonsinnstillinger
 
 Hvis du bruker Oref1 med **SMB**, må du endre **min_5m_carbimpact** til 8. Verdien brukes bare når det er hull i **CGM**-målingene, eller når fysisk aktivitet «bruker opp» hele den stigningen i blodsukkeret som ellers ville fått **AAPS** til å bryte ned COB. Når [karbohydratabsorpsjonen](../DailyLifeWithAaps/CobCalculation.md) ikke kan beregnes dynamisk ut fra hvordan blodsukkeret ditt reagerer, legger den inn en standard nedbrytning av karbohydratene dine. Det er altså en sikkerhetsmekanisme.
 
@@ -319,7 +319,7 @@ Velg APS-algoritmen du vil bruke til å justere behandlingen. Du kan se detaljen
 * [AutoISF](#Open-APS-features-auto-isf) 
   * Eksperimentell algoritme for avanserte brukere. Den vises først når alle opplæringsmålene er fullført.
 
-Hvis du bytter fra AMA- til SMB-algoritmen, må *min_5m_carbimpact* endres manuelt til **8** (standardverdi for SMB) i [Innstillinger → Absorberingsinnstillinger](#Preferences-min_5m_carbimpact).
+Hvis du bytter fra AMA- til SMB-algoritmen, må *min_5m_carbimpact* endres manuelt til **8** (standardverdi for SMB) i [Innstillinger → Absorpsjonsinnstillinger](#Preferences-min_5m_carbimpact).
 
 ## Loop
 
@@ -391,7 +391,7 @@ Tilkobling til Garmin-enhet (Fenix, Edge …)
 
 Åpne **menyen** (☰) og velg [Behandlingshistorikk](#aaps-screens-treatments) for å se behandlingene som er registrert. Hvis du vil redigere eller slette en oppføring (f.eks. du spiste mindre karbohydrater enn du trodde), velger du «Fjern» og legger inn den nye verdien (endre tidspunktet om nødvendig) via **Behandlinger → Karbo** i navigasjonslinjen nederst (se [Karbo](#screens-bolus-carbs)).
 
-## General
+## Generelt
 
 I **AAPS** 4 inneholder kategorien **Generelt** i **Konfigurasjon** bare **Autotune**. De andre funksjonene som beskrives nedenfor, er alltid tilgjengelige og trenger ikke lenger aktiveres her; hvert avsnitt sier hvor du finner dem.
 
