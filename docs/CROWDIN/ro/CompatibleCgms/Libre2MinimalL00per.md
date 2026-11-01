@@ -82,7 +82,7 @@ Este recomandat cu tărie să urmăriți acest proces cu un **senzor nou**. Deș
 
 (minimallooper-started-sensor)=
 
-### Ce se întâmplă dacă senzorul meu este deja pornit? Can I still get reading in xDrip? DA!
+### Ce se întâmplă dacă senzorul meu este deja pornit? Can I still get readings in xDrip? DA!
 
 Mulți oameni au întrebat dacă această metodă poate fi folosită cu un senzor deja activ și pot spune cu un **DA** răsunător, poți începe un senzor care rulează activ.
 
@@ -94,7 +94,7 @@ Mulți oameni au întrebat dacă această metodă poate fi folosită cu un senzo
 
 ## How to Start a FSL2 Sensor in Bluetooth Native mode using LL and xDrip
 
-*NOTĂ: Dacă există setări în capturile de ecran care nu sunt afișate cu o CĂSUȚĂ în mod specific și sunt DEBIFATE (adică dezactivate) apoi PĂSTRAȚI-LE DEZACTIVATE. Capturile de ecran reflectă o configurație funcțională pentru TOATE setările afișate. Dacă doriți să experimentați pornind sau oprind alte funcții după ce aveți un senzor de lucru, sunteți liber să faceți acest lucru pe propriul risc.*
+*NOTĂ: Dacă există setări în capturile de ecran care nu sunt afișate cu o CĂSUȚĂ în mod specific și sunt DEBIFATE (adică dezactivate) apoi PĂSTRAȚI-LE DEZACTIVATE. Capturile de ecran reflectă o configurație funcțională pentru TOATE setările afișate. If you want to experiment turning other features on/off after you have a working sensor, you are free to do so at your own risk.*
 
 (minimallooper-step1)=
 
@@ -253,7 +253,7 @@ Pe ecranul **Porniți noul senzor** apăsați **Start Senzor**. Un anunț va în
 
 ### Pasul 7: Așteptați 60 de secunde și scanați NFC senzorul din nou
 
-A second NFC scan is needed in order to **ADD** the sensor as the Bluetooth device from which xDrip will use to retrieve the readings. Odată finalizat, veți vedea o notificare care va spune **NOUL SENZOR PORNIT**.
+A second NFC scan is needed in order to **ADD** the sensor as the Bluetooth device that xDrip will use to retrieve the readings. Odată finalizat, veți vedea o notificare care va spune **NOUL SENZOR PORNIT**.
 
 ![xDrip scan](../images/minimal00per/xdripscan2.png)
 
@@ -288,7 +288,7 @@ It will change xDrip Bluetooth settings to:
 
 ### Pasul 9: Verificați că senzorul e conectat și transmite date
 
-Press the Hamburger menu in the upper left of the xDrip Overview screen and select **System Status**. Pe ecranul de Stare al Sistemului, **Dispozitivele Bluetooth** active: afișează convenția de denumire Bluetooth FSL2 de la **ABB___XXXXXXXXX**, unde XXX reprezintă numărul de serie al senzorului. Câmpul **Starea Conexiunii** afișează **Conectat** și secțiunea **Startul senzorului:** a afișat data la care senzorul a fost pornit.
+Press the Hamburger menu in the upper left of the xDrip Overview screen and select **System Status**. Pe ecranul de Stare al Sistemului, **Dispozitivele Bluetooth** active: afișează convenția de denumire Bluetooth FSL2 de la **ABB___XXXXXXXXX**, unde XXX reprezintă numărul de serie al senzorului. The **Connection Status** field displays **Connected** and the **Sensor Start:** field displays the time the sensor was started.
 
 ![xDrip scan](../images/minimal00per/xdripSSlog.png)
 
@@ -301,8 +301,8 @@ Pe ecranul **Dispozitiv Bluetooth** (glisare la stânga) puteți verifica detali
 - **Stare serviciului telefonic:** Ultima dată când telefonul a făcut o conexiune Bluetooth la senzor (ar trebui să fie mai mică de 5 minute în urmă)
 - **Dispozitiv Bluetooth:** Afișați starea curentă a conexiunii (fie **conectat** sau **deconectat**)
 - **Adresa MAC a dispozitivului**: Acesta este ID hardware al senzorului.
-- **Asociere Bluetooth**: Acesta ar trebui să fie **<u>dezactivat, apăsați pentru a activa</u>**. Aveți grijă să NU atingeți acest lucru. Dacă îl atingeți din greșeală, apăsați-l din nou până când acesta revine la dezactivat.
-- **Cea mai lentă trezire**: Puteți ignora asta. xDrip doesn't spend its time waiting for readings: it will start expecting them at after a certain time (traditionally 5 minutes). If no data arrives at that time, you'll see "Woke up early" meaning xDrip was expecting data to be ready but there's none. Cea mai lentă trezire este întârzierea cea mai mare înregistrată înainte de primirea datelor în mod normal.
+- **Bluetooth Pairing**: This should be **<u>Disabled, tap to enable</u>**. Aveți grijă să NU atingeți acest lucru. Dacă îl atingeți din greșeală, apăsați-l din nou până când acesta revine la dezactivat.
+- **Cea mai lentă trezire**: Puteți ignora asta. xDrip doesn't spend its time waiting for readings: it will start expecting them after a certain time (traditionally 5 minutes). If no data arrives at that time, you'll see "Woke up early" meaning xDrip was expecting data to be ready but there's none. Cea mai lentă trezire este întârzierea cea mai mare înregistrată înainte de primirea datelor în mod normal.
 - **Următoarea trezire**: ar trebui să spună 5 minute
 
 ![xDrip scan](../images/minimal00per/xdripSStat.png)
@@ -313,7 +313,7 @@ Pe ecranul **Dispozitiv Bluetooth** (glisare la stânga) puteți verifica detali
 
 - **Using LL NFC Scans AFTER bonding/pairing in xDrip is completed**: You can conduct NFC scans but the bonding/pairing process with xDrip needs to be completed first. Always look at xDrip and see if it is close to the 5 minute reading (i.e. 4 minutes ago), if it is near 5 min, wait for the new BT reading to come in and then conduct the NFC scan. If you catch it at the wrong time it will disturb the BT process in xDrip and not receive BT readings, which can take a while to re-bond and transmit again and sometimes a sensor BT connection can be “stolen” by LL. Cu toate acestea, între aceste citiri Bluetooth, nu am avut probleme cu executarea unei scanări NFC, urmată de dezactivarea imediată a aplicației. Nu sunt sigur dacă LibreLink trebuie să fie dezactivată de fiecare dată, dar se poate dezactiva pentru siguranță.
 
-- - **Ce se întâmplă?** Când o conexiune Bluetooth este făcută, o cheie privată partajată este necesară pentru a permite comunicarea între senzor și aplicația/dispozitivul de apelare. Este foarte probabil ca aplicația LibreLink sau cititorul să creeze o nouă cheie privată comună pentru comunicare în timpul conexiunii. This means that after bonding, xDrip is not aware of the new key and will not be able to communicate with the sensor.
+- **What is going on?** When a Bluetooth connection is made a private shared key is created that is needed to allow communication between the sensor and the calling application/device. Este foarte probabil ca aplicația LibreLink sau cititorul să creeze o nouă cheie privată comună pentru comunicare în timpul conexiunii. This means that after bonding, xDrip is not aware of the new key and will not be able to communicate with the sensor.
 
   - Several users have reported that the LL app can be restarted after successfully starting the sensor and receiving readings in xDrip. În permisiunile aplicației LibreLink Android trebuie doar să opriți setarea **Permiteți localizarea**. Once this is done you should be able to use the LL app and xDrip simultaneously. Vă recomand să nu selectați o aplicație implicită pentru scanarea NFC și să alegeți ce aplicație doriți pentru citirea senzorului printr-o scanare NFC. De asemenea, NU UITAȚI, la următoarea schimbare a senzorului să forțați închiderea aplicației LibreLink după scanarea NFC inițială pe noul senzor. After the sensor is configured and receiving readings in xDrip you can then start the LL app again.
 
@@ -399,7 +399,7 @@ Pe ecranul **Dispozitiv Bluetooth** (glisare la stânga) puteți verifica detali
 - **FSL** - FreeStyle Libre
   - **Libre 1 (FSL1)** - doar NFC. Prima versiune a senzorului
 
-  - **FSL2 (FSL2)** - Bluetooth și NFC. A doua versiune a senzorului.
+  - **Libre 2 (FSL2)** - Bluetooth and NFC. A doua versiune a senzorului.
 
   - **Libre 3 (FSL3)** - Bluetooth și NFC. Cea de-a treia versiune mai mică a senzorului. Nu este acceptată de OOP2 (vedeți Juggluco).
 
@@ -413,7 +413,7 @@ Pe ecranul **Dispozitiv Bluetooth** (glisare la stânga) puteți verifica detali
 
 - **OOP1** - Out of Process Algorithm version 1, the 3rd party app that receives raw values (delivered to xDrip from the sensor by Bluetooth or NFC scan) and then uses an algorithm (very similar to the hardware algorithm on the sensor chip) to process the raw values and returns a calibrated (by the OOP1 algorithm, not by xDrip’s native calibrations) blood sugar back to xDrip to either display or be further processed with xDrip’s calibration (with a finger pick blood calibration) if needed.
 
-- **OOP2** - Algoritmul Extern versiunea 2, aplicația terță care primește date criptate de la senzorul FSL 2 (prin Bluetooth sau scanare NFC) și apoi decriptează datele criptate. Once decrypted, the data is then sent to xDrip.
+- **OOP2** - Out of Process Algorithm version 2, the 3rd party app that receives encrypted data delivered from the FSL 2 sensor (by Bluetooth or NFC scan) and then decrypts the encrypted data. Once decrypted, the data is then sent to xDrip.
 
  
 
@@ -474,4 +474,4 @@ Faptul că vechimea senzorului nu a avansat ar putea fi, de asemenea, un semn c�
 2. xDrip menu -> System status -> Forget device
 3. Scan the sensor with xDrip NFC. Așteptați cel puțin un minut
 4. xDrip menu -> Start sensor. Așteptați cel puțin un minut
-5. Scan the sensor with xDrip NFC, a few times,  always waiting at least one minute between two scans
+5. Scan the sensor with xDrip NFC, a few times, always waiting at least one minute between two scans.
