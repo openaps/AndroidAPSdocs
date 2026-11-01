@@ -3,7 +3,7 @@
 # Možnost 1 – Vytvoření nového úložiště klíčů
 
 ```{note}
-Toto je součást [kroku 2 – Vytvořte si podpisové úložiště klíčů](BrowserBuildKeystore.md) v rámci [sestavení v prohlížeči](BrowserBuild.md). Ujistěte se, že jste si přečetli [rozhodnutí mezi možností 1 a možností 2](#aaps-ci-preparation) a stáhli přípravný soubor.
+Toto je součást [kroku 2 – Vytvořte si podpisové úložiště klíčů](BrowserBuildKeystore.md) v rámci [sestavení v prohlížeči](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
 ```
 
 Možnost 1 pro vás vytvoří zcela nové podpisové úložiště klíčů. Je vhodná pro nové uživatele, pro ty, kdo nemají soubor JKS, nebo pro ty, kdo zapomněli heslo nebo alias.
