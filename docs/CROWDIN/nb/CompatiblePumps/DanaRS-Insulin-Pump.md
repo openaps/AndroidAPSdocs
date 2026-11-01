@@ -52,9 +52,9 @@
     * For DanaRS v3 ber **AAPS** deg trykke på OK på pumpen og skrive inn de 2 sekvensene med tall og bokstaver som vises på pumpen. Hold pumpeskjermen på ved å trykke på minusknappen til du er ferdig. Trykk deretter på **Ferdig**.
     * For Dana-i og Dana-i2 vises den vanlige Android-dialogen for sammenkobling. Skriv inn det 6-sifrede tallet som vises på pumpen.
 
-* Når **Paringen er vellykket!** vises, trykker du på **Ferdig**.
+* Når **Sammenkoblingen er vellykket!** vises, trykker du på **Ferdig**.
     
-    ![Paringen er vellykket!](../images/v4/Pumps/dana_i_rs_pairing_success.png)
+    ![Sammenkoblingen er vellykket!](../images/v4/Pumps/dana_i_rs_pairing_success.png)
     
     Du er tilbake på pumpeskjermen, som nå viser statusen til pumpen din.
     
@@ -69,7 +69,7 @@
 ### Valg som bare vises for noen modeller
 
 * **Automatisk låsing**: på en Dana-i2 har skjermen **Brukerinnstillinger** (på pumpeskjermen, **Administrer** > **Pumpe**) en bryter **Automatisk låsing** for pumpens innstilling for automatisk låsing. Trykk på **Lagre valg til pumpen** etter at du har endret den.
-* **Enkel modus**: på pumpemodeller som har en enkel menymodus, viser pumpeskjermen en rad **Enkel modus** med **På** eller **Av**.
+* **Enkelmodus**: på pumpemodeller som har en enkel menymodus, viser pumpeskjermen en rad **Enkelmodus** med **På** eller **Av**.
 * Hvis en Dana-i2 avviser en bolus, viser **AAPS** årsaken, for eksempel *Pumpen er ikke primet*, *Ikke nok insulin i reservoaret* eller *Enkel søvnmodus er aktivert på pumpen*.
 
 (DanaRS-Insulin-Pump-default-password)=
@@ -154,7 +154,7 @@ Når du bytter til en ny telefon, må du gjøre disse stegene:
 ### DanaRS v3, Dana-i, Dana-i2
 
 * Start sammenkoblingen som beskrevet [ovenfor](#DanaRS-Insulin-Pump-pairing-pump).
-* Noen ganger må du først slette sammenkoblingsinformasjonen i **AAPS**. På pumpeskjermen (**Administrer** > **Pumpe**) trykker du på **Opphev paring** og bekrefter **Tilbakestill sammenkoblingsinformasjon?**. Trykk deretter på **Sammenkobling** igjen.
+* Noen ganger må du først slette sammenkoblingsinformasjonen i **AAPS**. På pumpeskjermen (**Administrer** > **Pumpe**) trykker du på **Opphev sammenkobling** og bekrefter **Tilbakestill sammenkoblingsinformasjon?**. Trykk deretter på **Sammenkobling** igjen.
 
 ## Tidssonebytte med DanaRS-, Dana-i- og Dana-i2-pumper
 
