@@ -114,7 +114,7 @@ Als xDrip niet de gegevensbron van **AAPS** is, maar je BG-gegevens kunt tonen v
 
 ![Afbeelding](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift is ontstaan door de originele xDrip-app naar iOS over te zetten. Daarna is het verder ontwikkeld tot "xDrip for iOS", geschreven als **xDrip4iOS**.
+xDripSwift was created from porting the original xDrip app to iOS and evolved into "xDrip for iOS", written as **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
@@ -150,7 +150,7 @@ De [xDrip4iOS Facebook-groep](https://www.facebook.com/groups/853994615056838/an
 * Apple iPad (softwareversie 13.0 of hoger nodig)
 * Google Android (sla de web-app op je startscherm op)
 
-Gebruikers van Sugarmate melden dat je het in de VS met Apple CarPlay kunt gebruiken om glucosewaarden te tonen tijdens het rijden. Het is nog niet bekend of dit ook in landen buiten de VS werkt. Als je hier meer over weet, voeg dan details toe aan de documentatie met een pull-request (link). Dat is snel en makkelijk.
+Gebruikers van Sugarmate melden dat je het in de VS met Apple CarPlay kunt gebruiken om glucosewaarden te tonen tijdens het rijden. Het is nog niet bekend of dit ook in landen buiten de VS werkt. If you know more about this, please add details in here to the documentation by completing a [pull request](../SupportingAaps/HowToEditTheDocs.md), which is quick and easy to do.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
@@ -173,13 +173,13 @@ Zie [hier](../Getting-Started/Watches.md).
 :local: true
 ```
 
-### M5 stack
+### M5Stack
 
 ![Afbeelding](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
 
 De M5Stack is een klein doosje dat voor veel toepassingen geprogrammeerd kan worden. Het project van Martin, [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki), toont sensorglucosewaarden en trends, IOB en COB. Het zit in een plastic doosje met een kleurenscherm, een micro-SD-kaartsleuf, 3 knoppen, een luidspreker en een interne batterij. Het is een goede bloedglucosemonitor en vrij makkelijk in te stellen als je een Nightscout-account hebt. Meestal gebruiken mensen het op hun wifi thuis, maar sommige gebruikers melden dat ze het als scherm op de motor gebruiken, via een wifi-hotspot van hun telefoon.
 
-### Sugarpixel
+### SugarPixel
 
 SugarPixel is een apparaat dat als tweede scherm met alarmen dient voor continue glucosemonitoring. Het werkt samen met de Dexcom-app of de Nightscout-app op de smartphone van de gebruiker. Het apparaat toont bloedglucosewaarden in realtime. Deze CGM-monitor heeft geluidsalarmen met willekeurige tonen (die erg luid zijn), trilalarmen voor slechthorenden, instelbare weergaveopties en volgen door meerdere gebruikers als standaardfunctie.
 
