@@ -137,7 +137,7 @@ If the app is protected, you must enter the password or use the phone's biometri
 
 - Safety limits are set based on the age you select in this setting.
 - If you start hitting these hard limits (like max bolus) it's time to move one step up.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal dot, for example).
+- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
 - If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 (Preferences-maximum-bolus)=
@@ -280,7 +280,7 @@ Depending on your settings in [Configuration > APS](../SettingUpAaps/ConfigBuild
 - [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
-As of [**AAPS** version 3.3](#version3300), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved as part of OpenAPS SMB.
+As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -496,7 +496,7 @@ You can help develop **AAPS** further by sending crash reports to the developers
 
 **Unattended Settings Export**<br/>
 By enabling this feature, you allow **AAPS** to execute settings exports without user intervention. For this the master password
-is securely stored on your phone (only) at the next manually export. The stored password will be used for up to 4 weeks.
+is securely stored on your phone (only) at the next manual export. The stored password will be used for up to 4 weeks.
 After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by
 manually exporting settings from the maintenance menu.
 

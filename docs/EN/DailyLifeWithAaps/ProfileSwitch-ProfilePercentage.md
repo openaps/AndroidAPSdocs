@@ -10,7 +10,7 @@ When first embarking on your **AAPS** journey, you will need to create a **Profi
 
 - Night or pattern shift workers - a time shift in **Profile** can be set up for pattern shift workers by altering the number of hours in the **Profile** to how much later/earlier the user will go to bed or wake up.
 
-Why use a  **Profile Percentage** rather than a temporary basal adjustment?  To be more effective in its application a  **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. This ensures a balanced approach is calculated by **AAPS** when administering the user’s insulin intake. Little benefit can be gained in a user’s **Profile** in **AAPS** by a basal reduction if the algorithm continues to deliver the same ratios for ISF and I:C.
+Why use a **Profile Percentage** rather than a temporary basal adjustment?  To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. This ensures a balanced approach is calculated by **AAPS** when administering the user’s insulin intake. Little benefit can be gained in a user’s **Profile** in **AAPS** by a basal reduction if the algorithm continues to deliver the same ratios for ISF and I:C.
 
 (ProfileSwitch-change-percentage)=
 ## Change the Profile Percentage from the main screen
@@ -80,7 +80,7 @@ Select a profile and tap **▶ Activate**. The **Activate** screen lets you tail
 
 ![The Activate screen — percentage, duration, time shift, time](../images/v4/Profiles/profile_activate.png)
 
-- **Percentage** (30–250 %, starts at 100 % every time) — scale the whole profile. 100 % uses it as-is; for example 70 % reduces basal and the calculated insulin dose (both meal boluses and corrections) by 30 %. It does not change your glucose targets or carb absorption. See [Profile Percentage](#profile-percentage) for the full effect.
+- **Percentage** (30–250 %, starts at 100 % every time) — scale the whole profile. 100 % uses it as-is; for example 70 % reduces basal and the calculated insulin dose (both meal boluses and corrections) by 30 %. It does not change your glucose targets or carb absorption. See [Profile Percentage](#ProfileSwitch-profile-percentage) for the full effect.
 - **Duration** (0–10080 minutes, that is up to 7 days) — how long the switch lasts. **0 = indefinite** (until you switch again); a non-zero value reverts to the previous profile when it ends.
 - **Temporary target / Activity** — appears only when you set a **Duration** and a **Percentage** below 100 %. Switch it on to also start an [Activity temp target](#TempTargets-activity-temp-target) for the same duration, as you would before exercise.
 - **Time shift** — shows *0h*; tap **Change** to move the schedule forward or back by up to 23 hours (useful for shift work or travel). See [Time shift](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
@@ -112,6 +112,7 @@ Rather than building many similar profiles, keep one base profile and apply it a
 
 A profile switch is not limited to this screen. The same switch can also be triggered from a **Wear OS watch**, a paired **client** (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)), a **[scene](Scenes.md)**, or an **Automation** rule.
 
+(ProfileSwitch-profile-percentage)=
 ## Profile Percentage
 
 It is important that a user understands the essential features of a **Profile Percentage**. By applying a percentage increase or decrease to a **Profile Switch** this will apply in the same percentage to either raise or lower the user’s settings parameters as set within the **Profile**.
@@ -127,7 +128,7 @@ Once selected, **AAPS** readjusts the default basal rate, and **AAPS** (open or 
 
 The effect of a **Profile** Percentage is summarized in the table below:
 
-| Profile Switch<br>Percentage |    Effect    |    I:C<br>g/U      | example<br>15g |          ISF<br>mmol/L/U<br/>mg/dL/U           | U to lower<br/>2mmol/L<br/>40mg/dL  |
+| Profile Switch<br>Percentage |    Effect    |    I:C<br>g/U      | Example<br>15 g |          ISF<br>mmol/L/U<br/>mg/dL/U           | U to lower<br/>2mmol/L<br/>40mg/dL  |
 | :--------------------------: | :----------: | :----------------: | :------------: | :--------------------------------------------: | :---------------------------------: |
 |             90%              |    Weaker    | 5/0.9<br>=**5.55** |     2.7 U      | 2.2/0.9<br>=**2.4**<br><br>40/0.9<br>=**44.4** |               0.8 U                 |
 |           **100%**           | **Standard** |       **5**        |    **3 U**     |                 **2.2<br>40**                  |             **0.9** U               |
@@ -138,7 +139,7 @@ The effect of a **Profile** Percentage is summarized in the table below:
 
 A ‘time shift’ within a user’s **Profile** feature will move the user’s **Profile’s** settings around the day-to-day clock (‘circadian’) to the desired number of hours entered. This can be helpful for:
 
-- __night shift or pattern workers__:  work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
+- __night shift or pattern workers__: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
 - __users changing time zones during travelling__; or
 - __users who are type 1 children__: and have a set bedtime routine and insulin resistance catered for within their **Profile**. If for whatever reason, there is a predicted later bedtime for the child, the caregiver can apply a ‘time shift’ to the child’s **Profile** to allow **AAPS** to react to insulin resistance at a desired time period as set by the user.
 
@@ -153,7 +154,7 @@ It is always a question of which hour’s **Profile’s** settings should replac
 
 ![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile**  changes.
+This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
 
 (ProfileSwitch-keep-for-later)=
 ## Keep a profile switch for later use

@@ -97,7 +97,7 @@ Open the settings with **Settings** on the **Accu-Chek Insight** card in **Confi
 ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
 
 In the Insight settings in **AAPS** you can enable the following options:
-* **Log reservoir changes**: automatically records an insulin cartridge change when you run the "fill cannula" program on the pump.
+* **Log reservoir changes**: automatically records an insulin cartridge change when you change the cartridge in the pump.
 
 * **Log tube changes**: adds a note to the **AAPS** database when you run the "tube filling" program on the pump.
 
@@ -168,7 +168,7 @@ Firmware version can be found in the menu.
 
 ## Battery replacement
 
-Battery life for Insight when looping range from 10 to 14 days, max. 20 days. The user reporting this is using Energizer lithium batteries.
+Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days. The user reporting this is using Energizer lithium batteries.
 
 The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
 

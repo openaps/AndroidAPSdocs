@@ -30,7 +30,7 @@ Insulin comes in different strengths, defined by the number of units per millili
 Using a concentration with a non-matching device is extremely dangerous and can cause a severe overdose or underdose. **Always triple-check that the insulin concentration matches the syringe, pen, or pump specifications.**
 ```
 
-## When using a non-standard concentration?
+## When is a non-standard concentration used?
 
 While insulin pumps are designed for U100 insulin, certain specific medical situations require non-standard concentrations. These scenarios require extreme caution and meticulous management.
 

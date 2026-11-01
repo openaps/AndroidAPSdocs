@@ -16,14 +16,14 @@ When using **Dynamic ISF**, disable any temporary **Profile** change as an **Aut
 
 To use **Dynamic ISF**, **AAPS'** database requires a minimum of 7 days of the user's **AAPS** data.
 
-## What does Dynamic ISF do ?
+## What does Dynamic ISF do?
 
 **Dynamic ISF** adapts the insulin sensitivity factor (**ISF**) dynamically based on the user's:
 
 - Total Daily Dose of insulin (**TDD**); and 
 - current and predicted blood glucose values.
 
-When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are not used at all anymore, except as a fallback if there is not enough TDD data in **AAPS** database (*i.e.* fresh reinstallation  of the app).
+When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are not used at all anymore, except as a fallback if there is not enough TDD data in **AAPS** database (*i.e.* fresh reinstallation of the app).
 
 **SMB/AMA** - an example of a user's **Profile** with static **ISF** as set by the user and utilised by **SMB** and **AMA**.
 
@@ -38,7 +38,7 @@ Tapping on this section shows a dialog with additional information, such as the 
 
 The **DynISF** value can also be shown in a graph: tap **Add graph** below the graphs on the main screen and select **VSENS** (variable sensitivity). It shows as a white line (bottom of the image above).
 
-## How is Dynamic ISF calculated ?
+## How is Dynamic ISF calculated?
 
 **Dynamic ISF** uses Chris Wilson’s model to determine **ISF** instead of the user's static **ISF** value as set within the **Profile**. A detailed explanation can be found here: [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
 
@@ -73,9 +73,9 @@ This is done to prevent dosing too much insulin when **BG** is low or predicted 
 
 **Future ISF** uses the same formula as described above, except that it may use **minimum predicted BG** instead of **current BG**. **Minimum predicted BG**, [as calculated in oref1](#aaps-screens-how-predictions-become-a-dosing-decision), is the minimum value your BG is predicted to go during all the course of the predictions.
 
-* If the current **BG** is above target  <br/> 
+* If the current **BG** is above target<br/>
   **and** if **BG** levels are flat, within +/- 3 mg/dL:<br/>BG is used in the formula as follows: `average(minimum predicted BG, current BG)`.
-* If eventual **BG** is above target and glucose levels are increasing,<br/>  
+* If eventual **BG** is above target and glucose levels are increasing,<br/>
   **or** eventual **BG** is above current **BG**:<br/>BG is used in the formula as follows: `current BG`.
 * Otherwise:<br/>BG is used in the formula as follows: `minimum predicted BG`.
 
@@ -116,7 +116,7 @@ The **Adjustment Factor** is a value between 1% and 300%. This acts as a multipl
 
 The **Adjustment Factor** is also altered when activating a [**Profile Switch** with percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). A lower **Profile Percentage** will lower the **Adjustment Factor**, and vice versa in respect of higher **Profile Percentage**.
 
-For example, if your **Adjustment Factor** is 80%, and **Profile Switch** to 80% is actioned , the resulting **Adjustment Factor** will be `0.8*0.8=0.64`.
+For example, if your **Adjustment Factor** is 80%, and **Profile Switch** to 80% is actioned, the resulting **Adjustment Factor** will be `0.8*0.8=0.64`.
 
 This means that, when using **DynISF**, you can use **Profile Percentage** to temporarily fine tune your sensitivity manually. This can be useful for physical activity (lower percentage), illness (higher percentage), etc.
 
