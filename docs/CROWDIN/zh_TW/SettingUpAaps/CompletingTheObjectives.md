@@ -10,7 +10,7 @@
 
 **目標 1 到 8**將指導你從在智慧型手機上配置**AAPS**到“基本”混合關閉循環。這將需要大約 6 週的時間來完成。你可以在使用虛擬幫浦的情況下繼續進行到**目標 5**（在此期間使用其他胰島素給藥方法）。**目標 9 和 10**旨在測試較進階的**AAPS**功能，以協助您更妥善地控制糖尿病；完成這些目標最多需要 3 個月，也可能更久。有關估計時間分解的進一步詳情可在這裡獲得：[設置所有內容需要多長時間？](#preparing-how-long-will-it-take)
 
-在進行**目標**的過程中，如果需要，你還可以刪除進度並[返回早期的目標](#go-back-in-objectives)。
+As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#CompletingTheObjectives-go-back-in-objectives).
 
 ## 備份你的設定
 
@@ -39,7 +39,7 @@
 - 如果使用 Tidepool：
   - 請遵循[Tidepool](../SettingUpAaps/Tidepool.md)頁面中的說明，以確保**Tidepool**能接收和顯示**AAPS**資料。
 
-注意：*您可能需要等到下一筆感測器血糖讀取值傳入後，**AAPS** 才會辨識到它。*
+Note: *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
 
 (objectives-objective2)=
 ## 目標 2：學習如何控制 AAPS
@@ -51,7 +51,7 @@
 完成**目標 2**的任務為：
 - 將你的**設定檔**設為90%，持續10分鐘。
   - _提示_：點選主畫面上的設定檔名稱，開啟**設定檔**畫面，接著使用**註冊**（▶）按鈕，並設定百分比和時間長度。更多資訊請參閱[設定檔切換與設定檔百分比](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)。
-  - _注意_：**AAPS**不接受低於0.05U/hr的基礎率。如果你的**設定檔**包含0.06U/hr或更低的基礎率，你需要創建一個臨時**設定檔**，其基礎率要更高，然後才能完成此任務。完成此任務後，切換回你的正常**設定檔**。
+  - _注意_：**AAPS**不接受低於0.05U/hr的基礎率。 If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. 完成此任務後，切換回你的正常**設定檔**。
 - 透過[中斷連線幫浦](#AapsScreens-loop-status)，模擬「洗澡」情境，持續1小時，並在**AAPS**中操作。
   - _提示_：按下主畫面上的循環圖示，開啟循環對話框，接著在**中斷幫浦連線**下方選擇時間長度。
 - 通過重新連接你的幫浦結束「洗澡」。
@@ -94,7 +94,7 @@
 - 在必要時使用[**臨時目標**](../DailyLifeWithAaps/TempTargets.md)。在治療低血糖後，使用預定的「低血糖臨時目標」以防止系統過度修正回升。
 - 如果你此時仍處於 [簡單模式](#preferences-simple-mode)，現在可能是關閉它的好時機。
 
-為減少在開放循環中所提出的基礎率變更數，你仍可以使用[**目標 3**](#objective-3-prove-your-knowledge)中所述的技巧。此外，您也可以在**設定 → 循環**中，透過「**開放模式最小變更量**」設定，調整建議基礎率變更的最低百分比。數值越高，你會收到的變更通知就越少。
+To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). 此外，您也可以在**設定 → 循環**中，透過「**開放模式最小變更量**」設定，調整建議基礎率變更的最低百分比。數值越高，你會收到的變更通知就越少。
 
 ![開放循環最小請求變更](../images/OpenLoop_MinimalRequestChange2.png)
 
@@ -119,7 +119,7 @@
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: 注意
 
-如果你在使用虛擬幫浦進行開放循環，**請在此停止**。只有在你更改為使用提供胰島素的「真實」幫浦後，才能在此<strong x-id="1">目標</strong>的結尾按下確認。
+如果你在使用虛擬幫浦進行開放循環，**請在此停止**。 Only tap **Verify** at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
 
 ```
 
@@ -167,14 +167,14 @@
 
 - 在主畫面按下 [循環圖示](#AapsScreens-loop-status)，選擇 **循環模式**，再選擇 **閉環** 作為運作模式。保持在**閉合循環**中至少持續1天。
 
-- 慢慢提高“**最大總 IOB OpenAPS 不能超過**” （在 OpenAPS 中稱為 'max-iob'）的值，直到你找到最適合自己的設置。
+- Slowly raise your 'Max IOB for SMB' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
 
 此設定的預設建議為“**平均餐前注射 + 3x每日最大基礎**”，其中“每日最大基礎”是一天中任何時間段的最大每小時值。
 
 ![每日最大基礎](../images/MaxDailyBasal2.png)
 
 這個建議應被視為起點。如果你使用這個規則，但在血糖數值上升時發現 AAPS 投放過多胰島素，你可能需要：
-* 降低“**最大總 IOB OpenAPS 不能超過**”的值；
+* lower the "Max IOB for SMB" value;
 * 檢查你的**設定檔**，每次僅更改一項設定。
 
 或者，如果你非常胰島素抗性，則需要格外小心地提高**最大IOB**值。
@@ -202,7 +202,7 @@
 完成此目標的最短時間為**28天**。這是一個強制的等待時間。在這段時間內你無法進入下一個目標。
 
 - 本文件中的[SMB部分](#Open-APS-features-super-micro-bolus-smb)和[openAPS文件中的oref1覆蓋](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)是理解**SMB**及**無基礎胰島素輸送**的必讀內容。
-- 一旦完成，你可以[提升最大IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)以更有效地使用**SMB**。最大IOB現在包含所有**IOB**，而不僅僅是累積的基礎。此門檻值暫停**SMB**，直到IOB降至此值以下（_例如_，**最大IOB**設為7U，而為了覆蓋一餐注射8U：在IOB降到7U以下之前，SMBs將被暫停，並不會發放）。建議的初始設定為將**maxIOB**設為**平均餐後追加劑量 + 3 倍的每日最高基礎速率**，其中「每日最高基礎速率」指一天中任意時段的每小時最大值。請參考[目標 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets)。
+- 一旦完成，你可以[提升最大IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)以更有效地使用**SMB**。最大IOB現在包含所有**IOB**，而不僅僅是累積的基礎。此門檻值暫停**SMB**，直到IOB降至此值以下（_例如_，**最大IOB**設為7U，而為了覆蓋一餐注射8U：在IOB降到7U以下之前，SMBs將被暫停，並不會發放）。建議的初始設定為將**maxIOB**設為**平均餐後追加劑量 + 3 倍的每日最高基礎速率**，其中「每日最高基礎速率」指一天中任意時段的每小時最大值。 See [objective 7](#objectives-objective7) as reference.
 - 評估碳水化合物的吸收速率；如果您覺得吸收速度太慢或太快，請考慮變更 [設定 → 吸收設定 → min_5m_carbimpact](#Preferences-min_5m_carbimpact) 中的「min_5m_carbimpact」參數。
 
 (objectives-objective10)=
