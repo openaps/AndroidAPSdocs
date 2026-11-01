@@ -49,7 +49,7 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * Vous devez recevoir un message qui indique la version de Git installée, comme dans la capture d'écran ci-dessus. Dans ce cas, allez à l'[étape 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * Dans le cas où vous recevez un message disant
+  * In case you get a message saying
     ```
     Git: command not found
     ```
@@ -59,13 +59,13 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * Si vous êtes sous Windows et que Git vient d'être installé, redémarrez votre ordinateur pour que Git soit disponible partout après l'installation
 
-  * Si Git est installé, que vous avez redémarré (sous Windows) et que Git est toujours introuvable :
+  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
 
   * Cherchez dans votre ordinateur un fichier "git.exe".
 
     Notez pour vous-même dans quel répertoire il est enregistré.
 
-  * Allez dans les variables d'environnement de Windows, sélectionnez la variable "PATH" et cliquez sur Modifier. Ajoutez le répertoire où vous avez trouvé votre installation Git.
+  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Ajoutez le répertoire où vous avez trouvé votre installation Git.
 
   * Sauver et fermer.
 
@@ -139,7 +139,7 @@ Ou :
 Cause: error: invalid source release: 21
 ```
 
-Si vous avez le message d'erreur ci-dessus, vous devez télécharger une version de JVM correcte avant d'essayer de compiler à nouveau :
+If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
 
 1.  Regardez dans le [tableau des exigences](#Building-APK-recommended-specification-of-computer-for-building-apk-file) quelle version de JVM il vous faut pour la version d'**AAPS** que vous compilez, et notez-la.
 
@@ -252,7 +252,7 @@ Votre apk a été compilé avec succès et peut être transféré sur votre tél
 
 ## Apk installé mais ancienne version
 
-Si vous avez compilé l'application, l'avez transférée sur votre téléphone et l'avez installée sans erreur, mais que le numéro de version ne change pas, vous avez peut-être oublié de [mettre à jour votre copie locale](#Update-to-new-version-update-your-local-copy)
+If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
 
 ## Rien ci-dessus n'a marché
 
