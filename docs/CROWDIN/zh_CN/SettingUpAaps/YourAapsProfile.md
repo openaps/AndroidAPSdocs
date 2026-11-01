@@ -135,9 +135,9 @@ The profile editor only lets you start basal rates on a full hour. A basal rate 
 
 ### 影响
 
-**较低/较强的ISF**（即40而不是50）意味着每单位胰岛素降低的**BG**较少。这会导致循环进行更激进/更强的纠正，**输注更多胰岛素**。如果你的ISF过强（值较小），这可能导致低血糖。
+A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. 这会导致循环进行更激进/更强的纠正，**输注更多胰岛素**。如果你的ISF过强（值较小），这可能导致低血糖。
 
-**较高/较弱的ISF**（即45而不是35）意味着每单位胰岛素降低的BG更多。这会导致循环进行不那么激进/较弱的纠正，**输注较少胰岛素**。如果你的ISF过弱（值较大），这可能导致高血糖。
+A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. 这会导致循环进行不那么激进/较弱的纠正，**输注较少胰岛素**。如果你的ISF过弱（值较大），这可能导致高血糖。
 
 **Example:**
 * **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
@@ -201,7 +201,7 @@ The profile editor only lets you start basal rates on a full hour. A basal rate 
 > 
 > BU因子 2.4 U / 12g ===> IC = 12g / 2.4 U = 5.0 g/U
 > 
-> 转换表可在网上找到，例如[此处](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf)。
+> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### 影响
 
@@ -300,7 +300,7 @@ The [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helpe
 4. Change to the **Profile 2** tab.
 5. 点击“配置文件类型”并选择“DPV Default profile”。
 6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, TDD Total and percentage of basal. Note that the DPV data set provides **basal rates** only, so IC and ISF are shown as zero for this profile.
-7. Open the **Comparation** tab. 将显示两个调整后的配置文件的比较（见下方截图）。
+7. Open the **Comparison** tab. 将显示两个调整后的配置文件的比较（见下方截图）。
 8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button at the bottom of the comparison.
 
 ![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
@@ -350,6 +350,6 @@ You can also use the [Profile Helper](#aaps-screens-profile-helper) (menu ☰ �
 4. Change to the **Profile 2** tab.
 5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profile Switches**.
 6. 选择您想要与之比较的**配置文件切换**。
-7. Open the **Comparation** tab. Comparison of the two profiles will be displayed (see screenshot below).
+7. Open the **Comparison** tab. Comparison of the two profiles will be displayed (see screenshot below).
 
 ![Profile Helper 2](../images/ProfileHelper2.png)
