@@ -12,13 +12,13 @@ De formule die **AAPS** gebruikt is:
 
 Het effect van het **Profiel** van de gebruiker:
 
-- _verhogen_ van de **IC** - verhoogt de opgenomen koolhydraten per 5 minuten en maakt de totale opnametijd dus korter;
+- _increase_ **IC** - by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
 
 - _verhogen_ van de **ISF** - verlaagt de opgenomen koolhydraten per 5 minuten en maakt de totale opnametijd dus langer; en
 
-- _wijzigen_ van het **Profiel percentage** - verhoogt/verlaagt beide waarden en heeft dus geen invloed op de opnametijd van koolhydraten.
+- _change_ **Profile Percentage** - increase/decrease both values thus has no impact on carbs absorption time.
 
-Voorbeeld: als in het **Profiel** van de gebruiker de **ISF** 100 is en de **I:C** 5, dan is de koolhydraatgevoeligheidsfactor 20. Voor elke 20 mg/dl dat de **BG** van de gebruiker stijgt, rekent **AAPS** 1 g koolhydraten als opgenomen. Positieve **IOB** heeft ook invloed op de berekening van **COB**. Dus als **AAPS** voorspelt dat de **BG** van de gebruiker door **IOB** 20 mg/dl daalt, maar de BG blijft gelijk, dan rekent **AAPS** ook 1 g koolhydraten als opgenomen.
+For example, if the user’s **Profile** **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. Voor elke 20 mg/dl dat de **BG** van de gebruiker stijgt, rekent **AAPS** 1 g koolhydraten als opgenomen. Positieve **IOB** heeft ook invloed op de berekening van **COB**. Dus als **AAPS** voorspelt dat de **BG** van de gebruiker door **IOB** 20 mg/dl daalt, maar de BG blijft gelijk, dan rekent **AAPS** ook 1 g koolhydraten als opgenomen.
 
 Koolhydraten worden ook opgenomen volgens de methodes hieronder. Welke methode geldt, hangt af van het gevoeligheidsalgoritme dat in **AAPS** van de gebruiker is gekozen.
 
@@ -47,7 +47,7 @@ Als de minimale koolhydraatopname (min_5m_carbimpact) wordt gebruikt in plaats v
 (CobCalculation-detection-of-wrong-cob-values)=
 ## Detectie van verkeerde COB-waarden
 
-**AAPS** waarschuwt de gebruiker als die een bolus wil geven met **COB** van een vorige maaltijd en het algoritme de huidige **COB**-berekening als onjuist ziet. In dat geval geeft het een extra hint op het bevestigingsscherm na gebruik van de bolus wizard.
+**AAPS** will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In dat geval geeft het een extra hint op het bevestigingsscherm na gebruik van de bolus wizard.
 
 ### Hoe detecteert AAPS verkeerde COB-waarden?
 
@@ -62,7 +62,7 @@ In de schermafbeelding hierboven werd 66% van de tijd de koolhydraatopname berek
 - Overweeg de behandeling te annuleren - druk op ‘Annuleren’ in plaats van OK.
 - Bereken je volgende maaltijd opnieuw met de bolus wizard, maar vink **COB** niet aan.
 - Als je een correctiebolus nodig hebt, voer die dan handmatig in.
-- Pas op voor een overdosis en voor het stapelen van insuline!
+- Be careful not to overdose or stack insulin!
 
 
 ### Waarom detecteert het algoritme COB niet goed?
