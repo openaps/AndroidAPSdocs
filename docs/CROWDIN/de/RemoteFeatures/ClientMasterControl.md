@@ -1,9 +1,9 @@
 (client-master-control)=
-# Master ↔ Client control (signed remote control)
+# Master ↔ Client-Steuerung (signierte Fernsteuerung)
 
-From **AAPS** version 4, a follower phone running **AAPSClient** can do much more than *announce* treatments through Nightscout: once it has been **paired** with the main phone, it can send **signed commands** that the main phone (the **master**) checks, confirms and executes — including delivering an **insulin bolus** on the master's pump.
+Ab **AAPS** Version 4 kann ein Follower-Smartphone mit **AAPSClient** viel mehr, als Behandlungen nur über Nightscout *anzukündigen*: Sobald es mit dem Haupt-Smartphone **gekoppelt** ist, kann es **signierte Befehle** senden, die das Haupt-Smartphone (der **Master**) prüft, bestätigt und ausführt. Dazu gehört auch die Abgabe eines **Insulinbolus** über die Pumpe des Masters.
 
-This page explains how it works, and how to set it up and use it.
+Diese Seite erklärt, wie das funktioniert und wie Du es einrichtest und nutzt.
 
 ```{contents} Table of contents
 :depth: 2
@@ -12,100 +12,100 @@ This page explains how it works, and how to set it up and use it.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Master** = the main **AAPS** phone that owns the pump and runs the loop (the `full` app).
-- **Client** = an **AAPSClient** phone with no pump that follows and now also *controls* the master.
-- Both phones must be connected to the **same Nightscout** site. All communication still travels through Nightscout — no direct connection between the phones is needed.
+- **Master** = das Haupt-Smartphone mit **AAPS**, das mit der Pumpe verbunden ist und den Loop ausführt (die „ganze“` App).
+- **Client** = ein Smartphone mit **AAPSClient** ohne Pumpe, das dem Master folgt und ihn jetzt auch *steuert*.
+- Beide Smartphones müssen mit **derselben Nightscout**-Seite verbunden sein. Die gesamte Kommunikation läuft weiterhin über Nightscout. Eine direkte Verbindung zwischen den Smartphones ist nicht nötig.
 ```
 
 ---
 
-## How it works
+## So funktioniert es
 
 ```{admonition} Coming from AAPS v3?
 :class: note
-In **AAPS** v3, **AAPSClient** could only write unsigned care-portal treatments to Nightscout, and could not deliver a bolus. Remote control now needs a one-time [pairing](#client_master_master_setup). See also [What changed in AAPS v4](#v4changes-remote-control).
+In **AAPS** v3 konnte **AAPSClient** nur unsignierte Careportal-Behandlungen in Nightscout schreiben und keinen Bolus abgeben. Für die Fernsteuerung ist jetzt eine einmalige [Kopplung](#client_master_master_setup) nötig. Siehe auch [Änderungen mit AAPS Version 4](#v4changes-remote-control).
 ```
 
-**AAPS** v4 uses a dedicated **Client-Control** channel. It still rides on your Nightscout site (in the `settings` collection), but every message is **cryptographically signed** with a secret that only the two phones know. The secret is handed over once, during **pairing**, and replaced by a new one right after it, so it never travels in clear text.
+**AAPS** v4 verwendet dafür einen eigenen Kanal **Client-Control**. Er läuft weiterhin über Deine Nightscout-Seite (in der Collection `settings`), aber jede Nachricht ist mit einem Secret **kryptografisch signiert**, das nur die beiden Smartphones kennen. Das Secret wird einmal bei der **Kopplung** übergeben und gleich danach durch ein neues ersetzt. So wird es nie im Klartext übertragen.
 
-The guiding principle is **the master is in charge**:
+Der Grundsatz lautet: **Der Master hat das Sagen**:
 
-1. The client sends an *intent* (“bolus 2 U”, “start the Exercise scene”, “set this temp target”…).
-2. The **master** re-computes and **caps** the action against its **own** live data (profile, IOB, COB, current temp target, pump), and **authors the exact confirmation** the user will see.
-3. The client (or watch) shows the **master's** confirmation text — it never builds its own.
-4. On confirmation the master **executes once** and reports the result back to the client.
+1. Der Client sendet eine *Absicht* („Bolus 2 IE“, „Szene Sport starten“, „dieses temporäre Ziel setzen“ …).
+2. Der **Master** berechnet die Aktion neu und **begrenzt** sie anhand seiner **eigenen** aktuellen Daten (Profil, IOB, COB, aktuelles temporäres Ziel, Pumpe). Er **formuliert die genaue Bestätigung**, die der Nutzer sieht.
+3. Der Client (oder die Smartwatch) zeigt den Bestätigungstext des **Masters** an und erstellt nie einen eigenen.
+4. Nach der Bestätigung **führt der Master die Aktion einmal aus** und meldet das Ergebnis an den Client zurück.
 
-What this means for you:
+Was das für Dich bedeutet:
 
-- **Signed commands**: only the clients you paired can send commands (per-client pairing secret and signature). Old or replayed commands are rejected.
-- **A role for each client**: you decide what each client may do, from *Read-only* to *Admin* — see [Client roles](#client-master-control-roles).
-- **Insulin bolus from a client**: the master delivers it on its pump, and the client shows the delivery progress.
-- **The master decides**: it caps every action against its own constraints and writes the confirmation shown on the client.
-- **Only paired clients change therapy**: while client control is on, the master no longer takes treatments or changes typed directly into Nightscout — see [Hardened mode](#client-master-control-hardened-mode).
-- **Each client gets its own Nightscout token** with only the rights a client needs — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Master offline**: actions are blocked with a clear message.
-- **Revoking a client** takes one tap (per client), or use the master's switch to stop all clients.
+- **Signierte Befehle**: Nur Clients, die Du gekoppelt hast, können Befehle senden (eigenes Kopplungs-Secret und eigene Signatur je Client). Alte oder wiederholt gesendete Befehle werden abgelehnt.
+- **Eine Rolle für jeden Client**: Du legst fest, was jeder Client darf, von *Schreibgeschützt* bis *Administrator*. Siehe [Client-Rollen](#client-master-control-roles).
+- **Insulinbolus vom Client**: Der Master gibt ihn über seine Pumpe ab, und der Client zeigt den Fortschritt der Abgabe an.
+- **Der Master entscheidet**: Er begrenzt jede Aktion anhand seiner eigenen Grenzwerte und formuliert die Bestätigung, die der Client anzeigt.
+- **Nur gekoppelte Clients ändern die Therapie**: Solange die Client-Steuerung eingeschaltet ist, übernimmt der Master keine Behandlungen oder Änderungen mehr, die direkt in Nightscout eingegeben werden. Siehe [Geschützter Modus](#client-master-control-hardened-mode).
+- **Jeder Client bekommt ein eigenes Nightscout-Token** mit genau den Rechten, die ein Client braucht. Siehe [Das eigene Nightscout-Token des Clients](#client-master-control-own-token).
+- **Master offline**: Aktionen werden mit einer klaren Meldung blockiert.
+- **Einen Client sperren** geht mit einem Tippen (je Client). Alternativ stoppst Du mit dem Schalter am Master alle Clients.
 
-Actions that can be triggered from a client: **bolus**, **carbs / eCarbs**, **temporary target** (set & cancel), **profile switch**, **loop / running-mode** change, **temp basal** (set & cancel), **extended bolus** (set & cancel), **insulin selection**, and **[scenes](../DailyLifeWithAaps/Scenes.md)**. A subset of bidirectional **preferences** is also kept in sync between master and clients.
+Diese Aktionen kann ein Client auslösen: **Bolus**, **Kohlenhydrate / eCarbs**, **temporäres Ziel** (setzen und abbrechen), **Profilwechsel**, Wechsel von **Loop / AAPS-Modus**, **temporäre Basalrate** (setzen und abbrechen), **verzögerter Bolus** (setzen und abbrechen), **Insulinauswahl** und **[Szenen](../DailyLifeWithAaps/Scenes.md)**. Außerdem wird ein Teil der **Einstellungen** in beide Richtungen zwischen Master und Clients abgeglichen.
 
 ---
 
-## Roles and prerequisites
+## Rollen und Voraussetzungen
 
 ```{admonition} Before you start
 :class: important
-- The **master** runs the normal `full` **AAPS** build and is connected to your pump.
-- The **master** uses **NSClientV3** with your Nightscout and is showing *connected*. Give it an **admin token** of your Nightscout: with it the master can make a token of its own for each client and show it to the client as a QR code.
-- The **client** runs **[AAPSClient](AapsClient.md)** (or **AAPSClient2** / **AAPSClient3** for further patients — see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)). It must use the **same** Nightscout. If you set it up with the master's QR code, the client gets its Nightscout address and token from the master; otherwise set up **NSClientV3** on it yourself first.
-- **Websockets** are needed on both phones: commands only reach the master over the websocket connection. While client control is on, **AAPS** keeps websockets on, on the master and on paired clients.
+- Auf dem **Master** läuft die normale `full`-Version von **AAPS**, und er ist mit Deiner Pumpe verbunden.
+- Der **Master** nutzt **NSClientV3** mit Deinem Nightscout und zeigt *verbunden* an. Gib ihm ein **Admin-Token** Deines Nightscout: Damit kann der Master für jeden Client ein eigenes Token erstellen und es dem Client als QR-Code zeigen.
+- Auf dem **Client** läuft **[AAPSClient](AapsClient.md)** (oder **AAPSClient2** / **AAPSClient3** für weitere Patienten, siehe [Über AAPSClient, AAPSClient2 und AAPSClient3](#remotecontrol-aapsclient-versions)). Er muss **dasselbe** Nightscout verwenden. Wenn Du ihn mit dem QR-Code des Masters einrichtest, bekommt der Client Nightscout-Adresse und Token vom Master. Andernfalls richte zuerst selbst **NSClientV3** auf ihm ein.
+- Auf beiden Smartphones werden **Websockets** gebraucht: Befehle erreichen den Master nur über die Websocket-Verbindung. Solange die Client-Steuerung eingeschaltet ist, lässt **AAPS** die Websockets auf dem Master und auf gekoppelten Clients eingeschaltet.
 ```
 
-Pairing and synchronization are two different things:
+Kopplung und Synchronisation sind zwei verschiedene Dinge:
 
-- **Synchronization** (data: BG, treatments, profile) is set up as before — see [Synchronization](#RemoteControl_aapsclient). The master's QR code can do it for you on the client.
-- **Pairing** (control: the signed command channel described here) is the new step below.
+- Die **Synchronisation** (Daten: BZ, Behandlungen, Profil) richtest Du wie bisher ein, siehe [Synchronisation](#RemoteControl_aapsclient). Das kann der QR-Code des Masters auf dem Client für Dich erledigen.
+- Die **Kopplung** (Steuerung: der hier beschriebene signierte Befehlskanal) ist der neue Schritt weiter unten.
 
 ---
 
-## Setting it up
+## Einrichtung
 
 (client_master_master_setup)=
-### 1. On the master — enable control and add a client
+### 1. Auf dem Master: Steuerung einschalten und Client hinzufügen
 
-On the master, open the **Manage** screen and choose **Authorized clients**.
+Öffne auf dem Master das Fenster **Bearbeiten** und wähle **Autorisierte Clients**.
 
-Turn on **Allow client control** (it is **off** by default). This is the master kill-switch: with it off, no client can send commands, but your paired clients are kept so you can turn it back on later. Turning it on also turns on [Hardened mode](#client-master-control-hardened-mode), shown as "*Hardened mode on*" with an **(i)** that explains it. In [Simple Mode](#preferences-simple-mode) client control is always on, so the switch is not shown.
+Schalte **Client-Steuerung erlauben** ein (standardmäßig ist das **aus**). Das ist der Hauptschalter des Masters: Ist er aus, kann kein Client Befehle senden. Deine gekoppelten Clients bleiben aber erhalten, sodass Du ihn später wieder einschalten kannst. Beim Einschalten wird auch der [Geschützte Modus](#client-master-control-hardened-mode) aktiviert. Er wird als „*Geschützter Modus aktiviert*“ angezeigt, mit einem **(i)**, das ihn erklärt. Im [Einfachen Modus](#preferences-simple-mode) ist die Client-Steuerung immer eingeschaltet, deshalb wird der Schalter dort nicht angezeigt.
 
 ![Authorized clients screen on the master](../images/v4/ClientMaster/authorized_clients_master.png)
 
-Tap the **+** button (bottom right) to add a client. In the **New client** dialog:
+Tippe auf den Knopf **+** (unten rechts), um einen Client hinzuzufügen. Im Dialog **Neuer Client**:
 
-1. Enter a **device name**, so you can recognize it in the list.
-2. Choose **how the phone is set up** (see the table below).
-3. Choose its **[role](#client-master-control-roles)**. Nothing is selected for you: the right role depends on who uses the phone.
+1. Gib einen **Gerätenamen** ein, damit Du den Client in der Liste wiedererkennst.
+2. Wähle, **wie das Smartphone eingerichtet wird** (siehe Tabelle unten).
+3. Wähle seine **[Rolle](#client-master-control-roles)**. Es ist nichts vorausgewählt: Welche Rolle passt, hängt davon ab, wer das Smartphone benutzt.
 
 ![New client dialog on the master: device name, how the phone is set up, and its role](../images/v4/ClientMaster/new_client_master.png)
 
-| Way                                 | What the new phone gets                                                       | Use it when                                                                                            |
-| ----------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| **QR code: Nightscout and pairing** | the Nightscout address, its own Nightscout token and the pairing, in one scan | the new phone has a camera: the quickest way, nothing to type                                          |
-| **QR code: Nightscout only**        | the Nightscout address and its own Nightscout token, no pairing               | the phone should only **show** data and never send commands                                            |
-| **PIN**                             | the pairing only; it keeps the Nightscout settings it has                     | the phone has no camera (or the master cannot make tokens); it must be connected to Nightscout already |
+| Weg                                  | Was das neue Smartphone bekommt                                                              | Verwenden, wenn                                                                                                             |
+| ------------------------------------ | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| **QR-Code: Nightscout und Kopplung** | die Nightscout-Adresse, sein eigenes Nightscout-Token und die Kopplung, alles mit einem Scan | das neue Smartphone eine Kamera hat: der schnellste Weg, nichts muss eingetippt werden                                      |
+| **QR-Code: nur Nightscout**          | die Nightscout-Adresse und sein eigenes Nightscout-Token, keine Kopplung                     | das Smartphone Daten nur **anzeigen** und nie Befehle senden soll                                                           |
+| **PIN**                              | nur die Kopplung; die vorhandenen Nightscout-Einstellungen bleiben                           | das Smartphone keine Kamera hat (oder der Master keine Token erstellen kann); es muss bereits mit Nightscout verbunden sein |
 
-The two QR code ways need an **admin token** in the master's **NSClientV3** settings, because the master makes the client's token in Nightscout. Without one, the QR code options are shown but cannot be chosen, and the dialog says why; the **PIN** always works.
+Für die beiden QR-Code-Wege braucht der Master ein **Admin-Token** in seinen **NSClientV3**-Einstellungen, weil er das Token des Clients in Nightscout erstellt. Ohne Admin-Token werden die QR-Code-Optionen zwar angezeigt, lassen sich aber nicht auswählen, und der Dialog nennt den Grund. Die **PIN** funktioniert immer.
 
-#### With a QR code
+#### Mit einem QR-Code
 
-Tap **OK**: the master makes the client's Nightscout token and shows a **QR code**. A code that also pairs works for about **two minutes**; the screen counts down and closes by itself when the client has paired. Scan it on the new phone as described in [On the client](#client_master_client_setup).
+Tippe auf **OK**: Der Master erstellt das Nightscout-Token des Clients und zeigt einen **QR-Code** an. Ein Code, der auch koppelt, gilt etwa **zwei Minuten**. Der Bildschirm zählt herunter und schließt sich von selbst, sobald der Client gekoppelt ist. Scanne ihn auf dem neuen Smartphone, wie unter [Auf dem Client](#client_master_client_setup) beschrieben.
 
 ```{admonition} The QR code is a secret
 :class: warning
-Anyone who sees the QR code can read your Nightscout, and a code that pairs also carries the pairing. Show it only to the new phone. **AAPS** blocks screenshots while the code is on screen.
+Wer den QR-Code sieht, kann Dein Nightscout lesen. Ein Code, der koppelt, enthält außerdem die Kopplung. Zeige ihn nur dem neuen Smartphone. **AAPS** blocks screenshots while the code is on screen.
 ```
 
 ![The master's QR code screen with its countdown (code blurred)](../images/v4/ClientMaster/qr_code_master.png)
 
-#### With a PIN
+#### Mit einer PIN
 
 Tap **OK**: the master displays an 8-digit **pairing PIN**, shown in two groups of four (for example `1234 5678`). This PIN is **one-time** and **expires after about two minutes**.
 
