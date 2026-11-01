@@ -1,19 +1,19 @@
 # Transferring and Installing AAPS on your smartphone
 
-In the previous section, [building **AAPS**](../SettingUpAaps/BuildingAaps.md), you built the **AAPS** app (which is an .apk file) on a computer.
+I forrige del, [bygge **AAPS**](../SettingUpAaps/BuildingAaps.md), bygde du **AAPS**-appen (som er en .apk-fil) på en datamaskin.
 
-The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip or another CGM receiver app) to your Android smartphone, and then **install** the app(s). Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](../SettingUpAaps/SetupWizard.md).
+De neste stegene er å **overføre** APK-filen til **AAPS** (og andre apper du kan trenge, som BYODA, xDrip eller en annen CGM-mottakerapp) til Android-telefonen din, og deretter **installere** appen(e). Når **AAPS** er installert på telefonen, kan du gå videre til å [**konfigurere AAPS-loopen**](../SettingUpAaps/SetupWizard.md).
 
-This page also explains [Android developer verification](#android-developer-verification), a change Google is rolling out from September 2026 that affects installing self-built apps, and the [free installation methods](#android-developer-verification-free-methods) that keep working after the change.
+Denne siden forklarer også [Android-utviklerverifisering](#android-developer-verification), en endring Google ruller ut fra september 2026 som påvirker installasjon av apper du har bygd selv, og de [gratis installasjonsmetodene](#android-developer-verification-free-methods) som fortsatt virker etter endringen.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Installing AAPS by tapping the APK file
+## Installere AAPS ved å trykke på APK-filen
 
-Today, you install **AAPS** by transferring the APK file to your phone and opening ("tapping") it. There are several ways to transfer the **AAPS** APK file from your computer to the smartphone. Here we explain two different ways:
+I dag installerer du **AAPS** ved å overføre APK-filen til telefonen og åpne («trykke på») den. Det finnes flere måter å overføre APK-filen til **AAPS** fra datamaskinen til smarttelefonen på. Here we explain two different ways:
 
 * Option 1 -  Use your Google drive (Gdrive)
 * Option 2 -  Use a USB cable
@@ -22,20 +22,20 @@ Please note that transfer by email might cause difficulties, and is discouraged.
 
 ```{admonition} Android developer verification
 :class: warning
-Google is rolling out [Android developer verification](#android-developer-verification) from September 2026 (starting in Brazil, Indonesia, Singapore and Thailand; worldwide in 2027). Where it is enforced, installing an APK by tapping the file — as described in both options below — is blocked. In that case, use one of the [free installation methods](#android-developer-verification-free-methods) further down this page.
+Google ruller ut [Android-utviklerverifisering](#android-developer-verification) fra september 2026 (først i Brasil, Indonesia, Singapore og Thailand; i hele verden i 2027). Der dette håndheves, blir installasjon av en APK ved å trykke på filen — slik det beskrives i begge alternativene nedenfor — blokkert. Bruk i så fall en av de [gratis installasjonsmetodene](#android-developer-verification-free-methods) lenger ned på denne siden.
 ```
 
 ### Option 1. Use Google drive to transfer files
 
-Open [Google.com](https://www.google.com/) in your web browser and login to your Google Account.
+Åpne [Google.com](https://www.google.com/) i nettleseren og logg inn på Google-kontoen din.
 
 On the right upper side select the Drive app in the Google menu.
 
-![Start Drive App](../images/GoogleDriveInWebbrowser.png)
+![Start Drive-appen](../images/GoogleDriveInWebbrowser.png)
 
-Click **New** at the top left (or right-click an empty area below your files and folders) and select **File upload**.
+Klikk på **Ny** øverst til venstre (eller høyreklikk på et tomt område under filene og mappene dine) og velg **Filopplasting**.
 
-![Upload apk file with Google Drive App](../images/GoogleDriveUploadFile.png)
+![Last opp apk-filen med Google Drive-appen](../images/GoogleDriveUploadFile.png)
 
 The apk file should now be uploaded on Google Drive.
 
@@ -43,232 +43,232 @@ The apk file should now be uploaded on Google Drive.
 
 Switch to your mobile and start the Google Drive app. It is a preinstalled app and can be found where the other Google apps are located or with search for the name of the app.
 
-![start the Google Drive app](../images/GoogleDriveMobileAPPLaunch.png)
+![start Google Drive-appen](../images/GoogleDriveMobileAPPLaunch.png)
 
-Launch the apk installation by tapping the filename in the Google Drive App on the mobile.
+Start installasjonen av apk-filen ved å trykke på filnavnet i Google Drive-appen på telefonen.
 
-![launch the apk installation](../images/GoogleDriveMobileUploadedAPK.png)
+![start installasjonen av apk-filen](../images/GoogleDriveMobileUploadedAPK.png)
 
-In case you get a security notice that you are not allowed to install apps from Google Drive at the moment, tap "Settings" and allow it for that short moment, then disallow it afterwards, as it is a security risk to leave it enabled all the time.
+Hvis du får en sikkerhetsmelding om at du ikke har lov til å installere apper fra Google Drive akkurat nå, trykker du på «Innstillinger» og tillater det for et kort øyeblikk. Slå det av igjen etterpå, siden det er en sikkerhetsrisiko å la det stå på hele tiden.
 
-![Security Notice Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Sikkerhetsmelding i Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Security Notice Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Sikkerhetsmelding i Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
 
-After the installation finishes, you are done with this step.
+Når installasjonen er ferdig, er du ferdig med dette steget.
 
-You should see the **AAPS** icon and be able to open the app.
+Du bør se **AAPS**-ikonet og kunne åpne appen.
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
-Did you remember to disallow the installation from Google Drive?
+**VIKTIG SIKKERHETSMELDING**
+Husket du å slå av tillatelsen til å installere fra Google Drive?
 ```
 
-Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Gå videre med å [konfigurere AAPS-loopen](../SettingUpAaps/SetupWizard.md).
 
 ### Option 2. Use a USB cable to transfer files
 
-The second way to transfer the AAPS apk file is with a [USB cable](https://support.google.com/android/answer/9064445?hl=en).
+Den andre måten å overføre apk-filen til AAPS på er med en [USB-kabel](https://support.google.com/android/answer/9064445?hl=en).
 
 Transfer the file from its location on your computer to the "downloads" folder on the phone.
 
-On your phone, you will have to allow installation from unknown sources. Explanations of how to do this can be found on the internet (_e.g._ [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+On your phone, you will have to allow installation from unknown sources. Forklaringer på hvordan du gjør dette finner du på internett (_f.eks._ [her](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) eller [her](https://www.androidcentral.com/unknown-sources)).
 
-Once you have transferred the file by dragging it across, open the "Downloads" folder on the phone and press the AAPS apk file:
+Når du har overført filen ved å dra den over, åpner du mappen «Nedlastinger» på telefonen og trykker på apk-filen til AAPS:
 
-![The apk file in the Downloads folder](../images/install/install_01_downloads_apk.png)
+![Apk-filen i mappen Nedlastinger](../images/install/install_01_downloads_apk.png)
 
-The first time, Android tells you that the phone is not allowed to install unknown apps from this source. Press "**Settings**":
+Første gang forteller Android deg at telefonen ikke har lov til å installere ukjente apper fra denne kilden. Trykk på «**Innstillinger**»:
 
-![Security notice for unknown apps](../images/install/install_02_unknown_apps_notice.png)
+![Sikkerhetsmelding for ukjente apper](../images/install/install_02_unknown_apps_notice.png)
 
-Enable "**Allow from this source**", then go back:
+Slå på «**Tillat fra denne kilden**», og gå så tilbake:
 
-![Allow from this source enabled](../images/install/install_04_unknown_apps_allowed.png)
+![Tillat fra denne kilden er slått på](../images/install/install_04_unknown_apps_allowed.png)
 
-Press the apk file again and select "**Install**":
+Trykk på apk-filen igjen og velg «**Installer**»:
 
-![Install prompt](../images/install/install_05_install_prompt.png)
+![Spørsmål om installasjon](../images/install/install_05_install_prompt.png)
 
-When the installation is finished, press "**Open**" to start **AAPS**, or "**Done**" to open it later:
+Når installasjonen er ferdig, trykker du på «**Åpne**» for å starte **AAPS**, eller «**Ferdig**» for å åpne den senere:
 
-![App installed](../images/install/install_07_app_installed.png)
+![Appen er installert](../images/install/install_07_app_installed.png)
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
-Remember to disable "Allow from this source" again after the installation, as it is a security risk to leave it enabled all the time.
+**VIKTIG SIKKERHETSMELDING**
+Husk å slå av «Tillat fra denne kilden» igjen etter installasjonen, siden det er en sikkerhetsrisiko å la det stå på hele tiden.
 ```
 
-Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Gå videre med å [konfigurere AAPS-loopen](../SettingUpAaps/SetupWizard.md).
 
 (transferring-installing-play-protect-warning)=
-## Google Play Protect warning
+## Advarsel fra Google Play Protect
 
-When you install **AAPS**, Google Play Protect may warn you that the app is unsafe, was built for an older version of Android and doesn't include the latest privacy protections.
+Når du installerer **AAPS**, kan Google Play Protect advare om at appen er utrygg, at den er bygd for en eldre versjon av Android og at den ikke har de nyeste personvernbeskyttelsene.
 
-![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+![Advarsel fra Google Play Protect](../images/troubleshooting/InstallGPP.png)
 
-This is expected for an app you built yourself. Tap **More details**, then **Install anyway**.
+Dette er som forventet for en app du har bygd selv. Trykk på **Flere detaljer** og deretter **Installer likevel**.
 
-If the installation is **blocked** with a message about an unverified developer (not just a warning), see [Android developer verification](#android-developer-verification) below.
+Hvis installasjonen blir **blokkert** med en melding om en uverifisert utvikler (ikke bare en advarsel), se [Android-utviklerverifisering](#android-developer-verification) nedenfor.
 
 (android-developer-verification)=
 
-## Android developer verification
+## Android-utviklerverifisering
 
-Google is introducing **Android developer verification**: on most Android phones, apps will only install if they were registered with Google by a verified developer. This also applies to apps installed from an APK file ("sideloading") — which is how you install the **AAPS** app you built yourself.
+Google innfører **Android-utviklerverifisering**: på de fleste Android-telefoner vil apper bare kunne installeres hvis de er registrert hos Google av en verifisert utvikler. Dette gjelder også apper som installeres fra en APK-fil («sideloading») — som er måten du installerer **AAPS**-appen du har bygd selv på.
 
-### What is changing
+### Hva som endres
 
-When you install **AAPS** on a phone with Google services (a "certified" Android device — virtually every phone sold with the Play Store), Android will check whether the app comes from a developer registered with Google. If not, the normal installation by tapping the APK file is blocked.
+Når du installerer **AAPS** på en telefon med Google-tjenester (en «sertifisert» Android-enhet — så godt som alle telefoner som selges med Play Store), vil Android sjekke om appen kommer fra en utvikler som er registrert hos Google. Hvis ikke, blir den vanlige installasjonen ved å trykke på APK-filen blokkert.
 
-**The check happens when an app is installed or updated.** It does not remove apps that are already installed and running.
+**Kontrollen skjer når en app installeres eller oppdateres.** Den fjerner ikke apper som allerede er installert og kjører.
 
-Google is rolling this out gradually:
+Google ruller dette ut gradvis:
 
-| When               | What happens                                                                                                                              |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| August 2026        | Free "limited distribution" developer accounts are open worldwide, and the "advanced flow" starts rolling out to phones                   |
-| September 30, 2026 | Verification is enforced in **Brazil, Indonesia, Singapore and Thailand**, for apps installed from Google Play and a few other app stores |
-| 2027               | Enforcement expands to the **rest of the world** and to **all installations**, including APK files                                        |
+| Når                | Hva skjer                                                                                                                                    |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| August 2026        | Gratis utviklerkontoer for «begrenset distribusjon» er åpne i hele verden, og «avansert flyt» begynner å rulles ut til telefoner             |
+| 30. september 2026 | Verifisering håndheves i **Brasil, Indonesia, Singapore og Thailand** for apper som installeres fra Google Play og noen få andre appbutikker |
+| 2027               | Håndhevingen utvides til **resten av verden** og til **alle installasjoner**, også fra APK-filer                                             |
 
-Details are published by Google on the [Android developer verification](https://developer.android.com/developer-verification) pages, including a [FAQ](https://developer.android.com/developer-verification/guides/faq). Google may still adjust dates and details; this page will be updated as the rollout progresses.
+Google publiserer detaljer på sidene om [Android-utviklerverifisering](https://developer.android.com/developer-verification), inkludert en [FAQ](https://developer.android.com/developer-verification/guides/faq). Google kan fortsatt endre datoer og detaljer; denne siden oppdateres etter hvert som utrullingen går framover.
 
-### Does this affect me?
+### Gjelder dette meg?
 
-- **Building AAPS is not affected at all.** The [browser build](#browser-build), the [Android Studio build](ComputerBuild.md) and the [CLI build](CLIBuild.md) work exactly as before, and your keystore does not change.
-- **Your current AAPS keeps running.** Verification is only checked when installing or updating an app.
-- **If you live in Brazil, Indonesia, Singapore or Thailand:** from September 30, 2026, verification is enforced for apps installed from Google Play and a few other app stores. Google states that installing an APK file directly is not covered by this first step, so **AAPS** should still install as usual. Nevertheless, prepare one of the [free installation methods](#android-developer-verification-free-methods) below now, so that you are not caught out if this changes.
-- **If you live anywhere else:** nothing changes for you before 2027, and doing nothing for now is a legitimate choice. But set up one of the [free installation methods](#android-developer-verification-free-methods) below while nothing is broken: discovering the block on the day an update is refused, with the [advanced flow's](#android-developer-verification-advanced-flow) 24-hour wait ahead of you, is the wrong moment.
-- **Old phones:** verification applies to phones running Android 7 or higher, which means every phone able to run **AAPS**.
+- **Å bygge AAPS påvirkes ikke i det hele tatt.** [Nettleserbygget](#browser-build), [Android Studio-bygget](ComputerBuild.md) og [kommandolinjebygget](CLIBuild.md) virker akkurat som før, og keystore-filen din endres ikke.
+- **Din nåværende AAPS fortsetter å kjøre.** Verifisering sjekkes bare når en app installeres eller oppdateres.
+- **Hvis du bor i Brasil, Indonesia, Singapore eller Thailand:** fra 30. september 2026 håndheves verifisering for apper som installeres fra Google Play og noen få andre appbutikker. Google sier at direkte installasjon av en APK-fil ikke omfattes av dette første steget, så **AAPS** bør fortsatt kunne installeres som vanlig. Forbered likevel en av de [gratis installasjonsmetodene](#android-developer-verification-free-methods) nedenfor nå, så du ikke blir overrasket hvis dette endrer seg.
+- **Hvis du bor et annet sted:** ingenting endres for deg før 2027, og det er helt greit å ikke gjøre noe foreløpig. Men sett opp en av de [gratis installasjonsmetodene](#android-developer-verification-free-methods) nedenfor mens ingenting er ødelagt: å oppdage blokkeringen den dagen en oppdatering blir avvist, med [den avanserte flytens](#android-developer-verification-advanced-flow) ventetid på 24 timer foran deg, er feil tidspunkt.
+- **Gamle telefoner:** verifisering gjelder telefoner med Android 7 eller nyere, altså alle telefoner som kan kjøre **AAPS**.
 
 (android-developer-verification-free-methods)=
 
-## Free ways to install AAPS
+## Gratis måter å installere AAPS på
 
-You do **not** need to pay Google anything to keep using **AAPS**. There are several free methods; pick the one that matches your situation.
+Du trenger **ikke** betale Google noe for å fortsette å bruke **AAPS**. Det finnes flere gratis metoder; velg den som passer din situasjon.
 
 ```{admonition} Which method should I use?
 :class: tip
-- You have a **computer** (whichever way you built **AAPS**): use [ADB](#android-developer-verification-adb) or, if you prefer to avoid the command line, the [web installer](#android-developer-verification-web). Both are exempt from verification, have no limits, and need no Google account.
-- You have **no computer at all**: use the [advanced flow](#android-developer-verification-advanced-flow) on your phone.
-- You prefer to register with Google so the normal "tap the APK" installation keeps working: a [free limited distribution account](#android-developer-verification-limited-account) exists, but it is untested with **AAPS**.
+- Du har en **datamaskin** (uansett hvordan du bygde **AAPS**): bruk [ADB](#android-developer-verification-adb) eller, hvis du helst vil unngå kommandolinjen, [nettinstallatøren](#android-developer-verification-web). Begge er unntatt fra verifisering, har ingen begrensninger og trenger ingen Google-konto.
+- Du har **ingen datamaskin i det hele tatt**: bruk [avansert flyt](#android-developer-verification-advanced-flow) på telefonen.
+- Du vil helst registrere deg hos Google slik at den vanlige «trykk på APK-filen»-installasjonen fortsetter å virke: det finnes en [gratis konto for begrenset distribusjon](#android-developer-verification-limited-account), men den er ikke testet med **AAPS**.
 ```
 
 (android-developer-verification-adb)=
 
-### Option 1: Install with ADB (computer needed)
+### Alternativ 1: Installere med ADB (krever datamaskin)
 
-ADB (Android Debug Bridge) is Google's official tool for installing apps from a computer onto a phone with a USB cable. Google has confirmed that **apps installed with ADB do not require verification** — there is no waiting period, no device limit and no registration.
+ADB (Android Debug Bridge) er Googles offisielle verktøy for å installere apper fra en datamaskin til en telefon med USB-kabel. Google har bekreftet at **apper som installeres med ADB ikke krever verifisering** — det er ingen ventetid, ingen grense for antall enheter og ingen registrering.
 
-One-time preparation:
+Engangsforberedelse:
 
-1. On your phone, enable the hidden developer options: go to **Settings** > **About phone** (on some phones **Software information**) and tap **Build number** seven times, until the phone confirms you are a developer.
-1. Go back to the main **Settings**, open the new **Developer options** entry and enable **USB debugging**.
-1. On your computer, make sure ADB is available:
-   - If you use **Android Studio**, ADB is already installed with it.
-   - Otherwise, download Google's free [SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools) and unzip the folder. No installation is needed; ADB is the `adb` program inside that folder.
+1. På telefonen slår du på de skjulte utvikleralternativene: gå til **Innstillinger** > **Om telefonen** (på noen telefoner **Programvareinformasjon**) og trykk sju ganger på **Delenummer**, til telefonen bekrefter at du er utvikler.
+1. Gå tilbake til hovedmenyen i **Innstillinger**, åpne det nye valget **Utvikleralternativer** og slå på **USB-feilsøking**.
+1. På datamaskinen må du sørge for at ADB er tilgjengelig:
+   - Hvis du bruker **Android Studio**, er ADB allerede installert sammen med det.
+   - Ellers laster du ned Googles gratis [SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools) og pakker ut mappen. Ingen installasjon er nødvendig; ADB er programmet `adb` inne i den mappen.
 
-Installing (and later updating) **AAPS**:
+Installere (og senere oppdatere) **AAPS**:
 
-1. Connect the phone to the computer with a USB cable. There is no need to transfer the APK file to the phone first: ADB sends it straight from the computer.
-1. On the phone, accept the **Allow USB debugging?** prompt (the first time only).
-1. On the computer, open a terminal (command prompt) in the folder containing ADB and the **AAPS** APK file, and run:
+1. Koble telefonen til datamaskinen med en USB-kabel. Du trenger ikke overføre APK-filen til telefonen først: ADB sender den rett fra datamaskinen.
+1. På telefonen godtar du spørsmålet **Tillate USB-feilsøking?** (bare første gang).
+1. På datamaskinen åpner du en terminal (ledetekst) i mappen som inneholder ADB og APK-filen til **AAPS**, og kjører:
 
    ```
    adb install -r app-full-release.apk
    ```
 
-   Replace `app-full-release.apk` with the actual name of your APK file. The `-r` option updates an already installed **AAPS** while keeping all its data and settings.
+   Bytt ut `app-full-release.apk` med det faktiske navnet på APK-filen din. Valget `-r` oppdaterer en allerede installert **AAPS** og beholder alle data og innstillinger.
 
-1. Wait for `Success` to be displayed. **AAPS** is now installed on your phone.
+1. Vent til `Success` vises. **AAPS** er nå installert på telefonen din.
 
-The same command is used for every future update. The [Wear OS pages](../WearOS/WearOsSmartwatch.md) already use ADB in the same way to install the watch app.
+Den samme kommandoen brukes for alle framtidige oppdateringer. [Wear OS-sidene](../WearOS/WearOsSmartwatch.md) bruker allerede ADB på samme måte for å installere klokkeappen.
 
-If you would rather not use a cable: on Android 11 and later, **wireless debugging** (also under **Developer options**) can do the same over Wi-Fi, after a one-time pairing with a code shown on the phone.
+Hvis du helst ikke vil bruke kabel: på Android 11 og nyere kan **trådløs feilsøking** (også under **Utvikleralternativer**) gjøre det samme over Wi-Fi, etter en engangsparing med en kode som vises på telefonen.
 
 (android-developer-verification-web)=
 
-### Option 2: Install from a web page (computer, no command line)
+### Alternativ 2: Installere fra en nettside (datamaskin, ingen kommandolinje)
 
-If the command line is not for you, a web page can do exactly what ADB does, directly from your browser. Because it talks to the phone through the same mechanism as ADB, it carries the **same exemption from verification** — but there is nothing to download, no folder to unzip and no command to type.
+Hvis kommandolinjen ikke er noe for deg, kan en nettside gjøre akkurat det samme som ADB, rett fra nettleseren din. Fordi den snakker med telefonen gjennom den samme mekanismen som ADB, har den **det samme unntaket fra verifisering** — men det er ingenting å laste ned, ingen mappe å pakke ut og ingen kommando å skrive.
 
-This is the easiest route if you used the [browser build](#browser-build) and have never opened a command line.
+Dette er den enkleste veien hvis du brukte [nettleserbygget](#browser-build) og aldri har åpnet en kommandolinje.
 
-1. Enable **USB debugging** on the phone (steps 1 and 2 of the [ADB method](#android-developer-verification-adb) above — one-time setup).
-1. Open the **[AAPS web installer](#web-installer)** in your browser.
-1. Connect the phone with a USB cable and follow the instructions on the page: connect, choose your APK file, and install.
+1. Slå på **USB-feilsøking** på telefonen (steg 1 og 2 i [ADB-metoden](#android-developer-verification-adb) ovenfor — engangsoppsett).
+1. Åpne **[AAPS nettinstallatør](#web-installer)** i nettleseren.
+1. Koble til telefonen med en USB-kabel og følg instruksjonene på siden: koble til, velg APK-filen din, og installer.
 
-Three things to know:
+Tre ting du bør vite:
 
-- It only works in **Chrome, Edge or Opera**. Firefox and Safari cannot talk to USB devices.
-- Only one program can use the phone's ADB connection at a time, so **close Android Studio** (or anything else that uses ADB) before connecting.
-- A web page connected this way gets full control of your phone. **Use only the address above**, from the **AAPS** documentation — never an installer page found through a search engine. The **AAPS** web installer runs entirely in your browser: your APK file is not uploaded anywhere.
+- Den virker bare i **Chrome, Edge eller Opera**. Firefox og Safari kan ikke snakke med USB-enheter.
+- Bare ett program kan bruke telefonens ADB-forbindelse om gangen, så **lukk Android Studio** (eller alt annet som bruker ADB) før du kobler til.
+- En nettside som er koblet til på denne måten, får full kontroll over telefonen din. **Bruk bare adressen ovenfor**, fra **AAPS**-dokumentasjonen — aldri en installasjonsside du har funnet via en søkemotor. **AAPS** nettinstallatør kjører helt og holdent i nettleseren din: APK-filen din lastes ikke opp noe sted.
 
 ```{admonition} No computer? A second phone works too
 :class: tip
-The web installer also works from **Chrome on another Android phone** with a USB-C to USB-C cable — so a parent can install **AAPS** onto a child's phone with no computer in the house.
+Nettinstallatøren virker også fra **Chrome på en annen Android-telefon** med en USB-C-til-USB-C-kabel — så en forelder kan installere **AAPS** på barnets telefon uten noen datamaskin i huset.
 ```
 
 (android-developer-verification-advanced-flow)=
 
-### Option 3: The "advanced flow" on your phone (no computer needed)
+### Alternativ 3: «Avansert flyt» på telefonen (ingen datamaskin nødvendig)
 
-Google provides an escape hatch for experienced users who understand the risks of installing unverified apps, called the **advanced flow**. Google started rolling it out to phones in August 2026, ahead of enforcement, so you can set it up now. It is a one-time setup on the phone itself, which **takes 24 hours** to complete:
+Google tilbyr en nødutvei for erfarne brukere som forstår risikoen ved å installere uverifiserte apper, kalt **avansert flyt** (advanced flow). Google begynte å rulle den ut til telefoner i august 2026, før håndhevingen starter, så du kan sette den opp nå. Det er et engangsoppsett på selve telefonen, som **tar 24 timer** å fullføre:
 
-1. Enable the hidden developer options (see step 1 of the ADB method above), then open **Settings** > **Developer options** > **Apps from unverified developers**.
-1. Turn on **Allow apps from unverified developers**. The phone asks for your screen lock to confirm it is you.
-1. The phone asks whether someone is asking you to turn on this setting, and explains that banks, government agencies or police would never ask you to do so. Read the warning and confirm that nobody is pressuring or guiding you (this is a protection against scammers).
-1. **Restart your phone.** This starts a one-time **24-hour waiting period**.
-1. After 24 hours, go back to **Settings** > **Developer options** > **Apps from unverified developers** to finish the setup.
-1. Choose whether to allow unverified apps for **7 days** or **indefinitely**. For **AAPS**, choose **indefinitely**, otherwise your next update will be blocked once the 7 days have passed.
+1. Slå på de skjulte utvikleralternativene (se steg 1 i ADB-metoden ovenfor), og åpne så **Innstillinger** > **Utvikleralternativer** > **Apper fra uverifiserte utviklere**.
+1. Slå på **Tillat apper fra uverifiserte utviklere**. Telefonen ber om skjermlåsen din for å bekrefte at det er deg.
+1. Telefonen spør om noen ber deg om å slå på denne innstillingen, og forklarer at banker, offentlige etater eller politiet aldri ville bedt deg om det. Les advarselen og bekreft at ingen presser eller veileder deg (dette er en beskyttelse mot svindlere).
+1. **Start telefonen på nytt.** Dette starter en engangs **ventetid på 24 timer**.
+1. Etter 24 timer går du tilbake til **Innstillinger** > **Utvikleralternativer** > **Apper fra uverifiserte utviklere** for å fullføre oppsettet.
+1. Velg om du vil tillate uverifiserte apper i **7 dager** eller **på ubestemt tid**. For **AAPS** velger du **på ubestemt tid**, ellers blir neste oppdatering blokkert når de 7 dagene har gått.
 
-After this setup, installing or updating the **AAPS** APK works as it does today, with one extra warning that the app is from an unverified developer — tap **Install anyway**.
+Etter dette oppsettet virker installasjon og oppdatering av **AAPS** APK-filen som i dag, med én ekstra advarsel om at appen er fra en uverifisert utvikler — trykk på **Installer likevel**.
 
-Good to know:
+Greit å vite:
 
-- You can turn **Developer options** off again afterwards: the advanced flow stays enabled. Google also does not give apps (such as banking apps) any way to detect that the advanced flow is enabled.
-- If you turn the advanced flow off, installing **or updating** **AAPS** is blocked again (your installed **AAPS** keeps running). You have a 10-minute window to turn it back on; after that, the 24-hour waiting period starts again.
-- Changing the phone's clock does not shorten the waiting period, and ADB cannot skip it.
-- Google states that your choice follows your Google account to your other devices, so a new phone should not mean another 24-hour wait.
-- If you cannot find **Apps from unverified developers** in the developer options, your phone has not received the feature yet. It is delivered by a system component called **Android Developer Verifier**, which Google is rolling out gradually through the Play Store. You can help it along by opening **Android Developer Verifier** in the Play Store.
+- Du kan slå av **Utvikleralternativer** igjen etterpå: avansert flyt forblir aktivert. Google gir heller ikke apper (for eksempel bankapper) noen mulighet til å oppdage at avansert flyt er aktivert.
+- Hvis du slår av avansert flyt, blir installasjon **eller oppdatering** av **AAPS** blokkert igjen (den installerte **AAPS**-appen din fortsetter å kjøre). Du har et vindu på 10 minutter til å slå den på igjen; etter det starter ventetiden på 24 timer på nytt.
+- Å endre klokken på telefonen forkorter ikke ventetiden, og ADB kan ikke hoppe over den.
+- Google sier at valget ditt følger Google-kontoen din til de andre enhetene dine, så en ny telefon skal ikke bety en ny ventetid på 24 timer.
+- Hvis du ikke finner **Apper fra uverifiserte utviklere** i utvikleralternativene, har ikke telefonen din fått funksjonen ennå. Den leveres av en systemkomponent kalt **Android Developer Verifier**, som Google ruller ut gradvis gjennom Play Store. Du kan hjelpe det på vei ved å åpne **Android Developer Verifier** i Play Store.
 
 ```{note}
-Google describes this as a first version and may still change the screens and steps; this section will be updated with screenshots once the final version is available.
+Google beskriver dette som en første versjon og kan fortsatt endre skjermbildene og stegene; denne delen oppdateres med skjermbilder når den endelige versjonen er tilgjengelig.
 ```
 
 (android-developer-verification-limited-account)=
 
-### Option 4: Register with Google (free limited distribution account)
+### Alternativ 4: Registrere deg hos Google (gratis konto for begrenset distribusjon)
 
-Google offers a **free** developer account type for hobbyists and personal use, called a **limited distribution account**, open to everyone since August 2026:
+Google tilbyr en **gratis** type utviklerkonto for hobbybrukere og personlig bruk, kalt **konto for begrenset distribusjon** (limited distribution account), åpen for alle siden august 2026:
 
-- **No government ID** and **no fee** (unlike the paid developer account, which is not needed for personal **AAPS** use). You do need a Google account with 2-step verification, a Google payments profile holding your legal name and address, and a contact email address.
-- You register your app's package name in Google's Android Developer Console, and authorize the phones it may be installed on, up to **20 devices**, through a handshake with a QR code or link between the phone and the console.
-- Once registered, the normal installation (tapping the APK file) works again on the authorized phones, without ADB and without the advanced flow.
-- A limited distribution account can later be upgraded to a full account, but not the other way round.
+- **Ingen offentlig ID** og **ingen avgift** (i motsetning til den betalte utviklerkontoen, som ikke trengs for personlig bruk av **AAPS**). Du trenger likevel en Google-konto med totrinnsbekreftelse, en Google-betalingsprofil med ditt juridiske navn og din adresse, og en e-postadresse for kontakt.
+- Du registrerer appens pakkenavn i Googles Android Developer Console og autoriserer telefonene den kan installeres på, opptil **20 enheter**, gjennom et håndtrykk med en QR-kode eller lenke mellom telefonen og konsollen.
+- Når den er registrert, virker den vanlige installasjonen (trykke på APK-filen) igjen på de autoriserte telefonene, uten ADB og uten avansert flyt.
+- En konto for begrenset distribusjon kan senere oppgraderes til en full konto, men ikke motsatt.
 
 ```{warning}
-Google has not explained how registration works when many people build the same open-source app: every self-built **AAPS** uses the same package name (`info.nightscout.androidaps`) with a different signing key, and Google's FAQ states that a package name already in use by others cannot be claimed outright and requires an additional review. The outcome of such a review is unknown, and the paid developer account ($25 and a government ID) does not help here: paying only removes the 20-device cap, not the package name review.
+Google har ikke forklart hvordan registrering virker når mange mennesker bygger den samme appen med åpen kildekode: hver selvbygde **AAPS** bruker det samme pakkenavnet (`info.nightscout.androidaps`) med en annen signeringsnøkkel, og Googles FAQ sier at et pakkenavn som allerede er i bruk av andre ikke kan kreves uten videre, men krever en ekstra gjennomgang. Utfallet av en slik gjennomgang er ukjent, og den betalte utviklerkontoen (25 dollar og offentlig ID) hjelper ikke her: betaling fjerner bare grensen på 20 enheter, ikke gjennomgangen av pakkenavnet.
 
-For this reason, step-by-step instructions cannot be written yet. This section will be completed once registration has been tested with **AAPS**. In the meantime, ADB, the web installer and the advanced flow above are reliable alternatives.
+Derfor kan det ikke skrives steg-for-steg-instruksjoner ennå. Denne delen fullføres når registrering er testet med **AAPS**. I mellomtiden er ADB, nettinstallatøren og avansert flyt ovenfor pålitelige alternativer.
 ```
 
-## What does not change
+## Hva som ikke endres
 
-- Building **AAPS** yourself, with any of the three [build methods](BuildingAaps.md).
-- Your GitHub account, your build repository (AAPS Builder) or fork, and your keystore.
-- Your installed **AAPS** app, your settings and your [objectives](CompletingTheObjectives.md).
-- Phones without Google services, and [ADB installations](#android-developer-verification-adb) in general.
+- Å bygge **AAPS** selv, med hvilken som helst av de tre [byggemetodene](BuildingAaps.md).
+- GitHub-kontoen din, bygg-repositoriet ditt (AAPS Builder) eller forken din, og keystore-filen din.
+- Den installerte **AAPS**-appen din, innstillingene dine og [opplæringsmålene](CompletingTheObjectives.md) dine.
+- Telefoner uten Google-tjenester, og [ADB-installasjoner](#android-developer-verification-adb) generelt.
 
-## Where to get help
+## Hvor du kan få hjelp
 
-1. **Read** Google's [developer verification FAQ](https://developer.android.com/developer-verification/guides/faq) for questions about the verification itself.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md), if an installation is blocked.
-3. When asking for help, include your phone make and model, Android version, your country, and the exact message displayed when the installation fails.
+1. **Les** Googles [FAQ om utviklerverifisering](https://developer.android.com/developer-verification/guides/faq) for spørsmål om selve verifiseringen.
+2. **Spør** på kanalen *#AAPS* på [Discord](https://discord.gg/4fQUWHZ4Mw), eller i en av de andre [fellesskapskanalene](../GettingHelp/WhereCanIGetHelp.md), hvis en installasjon blir blokkert.
+3. Når du ber om hjelp, ta med telefonens merke og modell, Android-versjon, landet ditt og den nøyaktige meldingen som vises når installasjonen mislykkes.
 
 ```{toctree}
 :hidden:
 
-AAPS web installer <WebInstaller.md>
+AAPS nettinstallatør <WebInstaller.md>
 ```
