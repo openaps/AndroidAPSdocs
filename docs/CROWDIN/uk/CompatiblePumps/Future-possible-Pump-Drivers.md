@@ -1,6 +1,6 @@
 # Майбутні (можливі) драйвери помп
 
-Це список деяких помп, які є на ринку, і стан їхньої підтримки в будь-яких системах петлі, а потім стан в AAPS. Наприкінці є інформація про те, що потрібно, щоб помпа могла працювати в петлі.
+This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
 
     {contents} Зміст
     :depth: 1
@@ -42,7 +42,7 @@ Tandem: t:Mobi ([Вебсайт](https://www.tandemdiabetes.com/))
 
 ### Інсулінова помпа Willcare ([Вебсайт](http://shinmyungmedi.com/en/))
 
-**Стан для петлі:** зараз не є кандидатом для петлі, але з нами зв'язалися працівники компанії, і вони зацікавлені доробити помпу для роботи в петлі (наскільки я знаю, зараз бракує лише команд отримання/встановлення профілю).
+**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
 
 **Апаратні вимоги для AAPS:** немає. Схоже, має Bluetooth.
 
