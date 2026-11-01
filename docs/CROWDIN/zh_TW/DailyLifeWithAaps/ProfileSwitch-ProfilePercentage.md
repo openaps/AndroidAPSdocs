@@ -10,7 +10,7 @@
 
 - 夜班或輪班工作者 - 透過更改設定檔中的小時數來調整設定檔，以符合使用者晚睡或早起的時間變化。
 
-為什麼使用**設定檔百分比**而非臨時基礎率調整？為了更有效地應用，**設定檔百分比**會對基礎率、ISF 和 I:C 進行比例減少或增加。這確保**AAPS**在調整使用者的胰島素攝入時計算出平衡的方式。如果僅僅降低基礎率，但演算法繼續應用相同的 ISF 和 I:C 比率，對使用者的**設定檔**幾乎無益。
+Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. 這確保**AAPS**在調整使用者的胰島素攝入時計算出平衡的方式。如果僅僅降低基礎率，但演算法繼續應用相同的 ISF 和 I:C 比率，對使用者的**設定檔**幾乎無益。
 
 (ProfileSwitch-change-percentage)=
 
@@ -78,7 +78,7 @@ When a temporary switch is running, the **ACTIVE** card shows its percentage and
 
 ![啟用畫面 — 百分比、持續時間、時間偏移、時間](../images/v4/Profiles/profile_activate.png)
 
-- **百分比**（30–250 %，每次都從 100 % 開始）— 調整整個設定檔的比例。 100 % 代表照原設定套用；例如，70 % 會讓基礎率和計算出的胰島素劑量（餐前注射和校正注射）都減少 30 %。這不會改變您的血糖目標或碳水化合物吸收設定。完整效果請參閱[設定檔百分比](#profile-percentage)。
+- **百分比**（30–250 %，每次都從 100 % 開始）— 調整整個設定檔的比例。 100 % 代表照原設定套用；例如，70 % 會讓基礎率和計算出的胰島素劑量（餐前注射和校正注射）都減少 30 %。這不會改變您的血糖目標或碳水化合物吸收設定。 See [Profile Percentage](#ProfileSwitch-profile-percentage) for the full effect.
 - **持續時間**（0–10080 分鐘，也就是最長 7 天）— 設定檔切換的持續時間。 **0 = 無限期**（直到您再次切換）；設定非 0 的時間，則時間結束後會切回先前的設定檔。
 - **臨時目標 / 活動** — 只有在設定了**持續時間**，且**百分比**低於 100 % 時才會顯示。開啟此選項，也會啟動持續時間相同的[活動臨時目標](#TempTargets-activity-temp-target)，就像運動前的設定一樣。
 - **時間偏移** — 顯示 *0h*；點選**變更**，即可將排程往前或往後移動最多 23 小時（適用於輪班工作或旅行）。請參閱[時間偏移](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)。
@@ -107,6 +107,8 @@ When a temporary switch is running, the **ACTIVE** card shows its percentage and
 
 設定檔切換不只限於在此畫面操作。您也可以透過 **Wear OS 手錶**、已配對的**用戶端**（請參閱[主控端 ↔ 用戶端控制](../RemoteFeatures/ClientMasterControl.md)）、**[情境](Scenes.md)**或**自動化**規則觸發相同的設定檔切換。
 
+(ProfileSwitch-profile-percentage)=
+
 ## 設定檔百分比
 
 使用者暸解**設定百分比**的重要功能是很關鍵的。透過對**設定切換**應用百分比增減，這將同樣比例地提高或降低使用者在**設定**中設定的參數。
@@ -125,23 +127,23 @@ When a temporary switch is running, the **ACTIVE** card shows its percentage and
 
 | 設定檔切換  
 百分比 |   影響   |     I:C  
-g/U     | 示例  
-15g |          ISF  
+g/U     | Example  
+15 g |          ISF  
 mmol/L/U  
 mg/dL/U          | 降低血糖  
 2 mmol/L  
 40 mg/dL 所需的胰島素量 |
-|:-----------:|:------:|:-----------------:|:--------:|:------------------------------------------:|:----------------------------------:|
+|:-----------:|:------:|:-----------------:|:--------------:|:------------------------------------------:|:----------------------------------:|
 |     90%     |   較弱   | 5/0.9  
-=**5.55** |  2.7 U   | 2.2/0.9  
+=**5.55** |     2.7 U      | 2.2/0.9  
 =**2.4**  
   
 40/0.9  
 =**44.4** |               0.8 U                |
-|  **100%**   | **標準** |       **5**       | **3 U**  |                **2.2  
+|  **100%**   | **標準** |       **5**       |    **3 U**     |                **2.2  
 40**                |             **0.9** U              |
 |    130%     |  更強大   | 5/1.3  
-=**3.85** |  3.9 U   | 2.2/1.3  
+=**3.85** |     3.9 U      | 2.2/1.3  
 =**1.7**  
   
 40/1.3  
@@ -153,7 +155,7 @@ mg/dL/U          | 降低血糖
 
 使用者的**設定**功能中的「時間調整」將把使用者的**設定**根據輸入的時數在日常作息（「日夜節律」）中移動。這對以下情況很有幫助：
 
-- **夜班或輪班工作者**：透過調整時數來改變**設定**中就寢或起床的時間； 
+- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
 - **跨時區旅行的使用者**；或
 - **1型糖尿病孩童的使用者**：他們有固定的就寢時間表及在設定內處理的胰島素抗性。如果出於任何原因預測孩童會晚睡，照護者可以對孩童的**設定**應用「時間調整」，讓**AAPS**在使用者設定的特定時間處理胰島素抗性。
 
@@ -169,7 +171,7 @@ mg/dL/U          | 降低血糖
 
 ![設定切換時間調整指引](../images/ProfileSwitch_PlusMinus2.png)
 
-透過紀錄**設定**快照的機制，能夠更精準地計算過去的資料，並追蹤**設定**變更的可能性。
+This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
 
 (ProfileSwitch-keep-for-later)=
 
