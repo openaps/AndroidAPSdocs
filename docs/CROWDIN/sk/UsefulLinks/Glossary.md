@@ -18,7 +18,7 @@
 
 **APK** = Android application Package (balík aplikácie pre Android). Inštalačný súbor softvéru. Ďalšie informácie → [Wiki – „Zostavenie AAPS“](../SettingUpAaps/BuildingAaps.md).
 
-**Autosens** = výpočet citlivosti na inzulín v okne 24 a 8 hodín atď. Ďalšie informácie → [DIABETTECH – **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
+**Autosens** = calculation of sensitivity to insulin over a 24-hour and an 8-hour window etc. Ďalšie informácie → [DIABETTECH – **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
 **Azure** = cloud computing platform to host **Nightscout** web app → see also **Nightscout**.
 
@@ -42,7 +42,7 @@
 
 **CGM** = Continuous Glucose Monitor (systém kontinuálneho monitorovania glukózy) → pozrite aj **FGM**.
 
-**Uzavretý okruh** (Closed Loop) = systém uzavretého okruhu, ktorý automaticky upravuje podávanie bazálu používateľa na základe algoritmu **AAPS** a nastavení **profilu** používateľa, bez potreby jeho schválenia. Ďalšie informácie → Wiki – „uzavretý okruh“ a pozrite aj **HCL** / **FCL**.
+**Closed Loop** = a closed loop system which makes automatic adjustments to the user’s basal delivery based on an **AAPS’s** algorithm and the user’s **Profile** settings without requiring the user’s approval. Further info → [Wiki - 'closed loop'](#KeyAapsFeatures-ClosedLoop) and see also **HCL** / **FCL**.
 
 **COB** = Carbs On Board (aktívne sacharidy). Je to množstvo sacharidov, ktoré sú práve k dispozícii na trávenie → pozrite aj IOB.
 
@@ -50,19 +50,19 @@
 
 **DIA** = Duration of Insulin Action (doba pôsobenia inzulínu). Ďalšie informácie → [Wiki – „DIA“](#Config-Builder-insulin-dia) a pozrite aj → [DIABETTECH – „DIA“](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/).
 
-**DST** = Daylight Savings Time (letný čas). Pozrite [Wiki – Zmena časového pásma a letný čas](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
+**DST** = Daylight Saving Time. Pozrite [Wiki – Zmena časového pásma a letný čas](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
 
 **Dynamická ISF (alebo DynISF)** (Dynamic ISF) = funkcia **AAPS**, ktorá dynamicky prispôsobuje citlivosť na inzulín (**ISF**) podľa **TDD** a **glykémie** používateľa.
 
 **eCarbs** = extended Carbs (predĺžené sacharidy, v aplikácii eSacharidy). Carbs split up over several hours (e.g. to cover fat/protein), which lets **AAPS** spread the insulin like an extended bolus. Ďalšie informácie → [Wiki – „Predĺžené sacharidy“](../DailyLifeWithAaps/ExtendedCarbs.md)
 
-**FCL** = Full Closed Loop (plne uzavretý okruh). Okruh, ktorý od používateľa nepotrebuje žiadne zadávanie k jedlu: žiadne počítanie sacharidov ani bolus k jedlu. Ďalšie informácie → Wiki – „plne uzavretý okruh“ a pozrite aj **HCL**.
+**FCL** = Full Closed Loop (plne uzavretý okruh). Okruh, ktorý od používateľa nepotrebuje žiadne zadávanie k jedlu: žiadne počítanie sacharidov ani bolus k jedlu. Further info → [Wiki - 'full closed loop'](../AdvancedOptions/FullClosedLoop.md) and see also **HCL**.
 
-**FGM** = Flash Glucose Monitor such as the Abbott Freestyle Libre. Ďalšie informácie → Wiki – „Zdroj glykémie“ a pozrite aj „CGM“.
+**FGM** = Flash Glucose Monitor such as the Abbott Freestyle Libre. Further info → [Wiki - 'BG source'](#Config-Builder-bg-source) and see also 'CGM'.
 
-**git** = nástroj na ukladanie a sťahovanie zdrojového kódu **AAPS**.
+**git** = a tool used to store and download the **AAPS’** source code.
 
-**GitHub** = a web-based service that hosts the **AAPS** source code and its version control (tracking changes in files and coordinating work on them, especially for teams), and can also build the app. It is also necessary for **APK** updates. Ďalšie informácie → Wiki – „aktualizácia APK“.
+**GitHub** = a web-based service that hosts the **AAPS** source code and its version control (tracking changes in files and coordinating work on them, especially for teams), and can also build the app. It is also necessary for **APK** updates. Further info → [Wiki - 'update APK'](../Maintenance/UpdateToNewVersion.md).
 
 **Glimp** = an app to collect values from Freestyle Libre.
 
@@ -84,7 +84,7 @@
 
 **maxIOB** = maximálny celkový IOB. Je to bezpečnostná funkcia, ktorá bráni **AAPS** podať viac inzulínu, než dovoľujú nastavenia používateľa. Ďalšie informácie → [Wiki – „Maximálny celkový IOB, ktorý OpenAPS nemôže prekročiť“](#Open-APS-features-maximum-total-iob-openaps-cant-go-over).
 
-**min_5m_carbimpact** = bezpečnostná funkcia, ktorá počíta predvolený úbytok sacharidov, keď sa ich vstrebávanie nedá určiť z reakcie glykémie používateľa. Ďalšie informácie → [Wiki – „Nastavenia“](#Preferences-min_5m_carbimpact).
+**min_5m_carbimpact** = bezpečnostná funkcia, ktorá počíta predvolený úbytok sacharidov, keď sa ich vstrebávanie nedá určiť z reakcie glykémie používateľa. Further info → [Wiki - 'min_5m_carbimpact'](#Preferences-min_5m_carbimpact).
 
 **Nightscout** = projekt s otvoreným zdrojovým kódom na prístup k údajom **CGM** a ich vyhodnocovanie. The central data hub for the user’s **AAPS** data and can generate reports to view the user’s historical **Nightscout** data, such as expected HbA1c, time in range or search for patterns in the data via percentile chart etc.
 
@@ -98,7 +98,7 @@
 
 **Otvorený okruh** (Open Loop system) = funkcia **AAPS**, ktorá odporúča úpravy, ktoré musí používateľ vykonať ručne v **AAPS**. Ďalšie informácie → [Wiki – „Otvorený okruh“](#KeyAapsFeatures-OpenLoop).
 
-**Oref0 / Oref1** = detekcia citlivosti a „reference design implementation version 0/1“ (referenčná implementácia, verzia 0/1). Je to kľúčový algoritmus, na ktorom stojí OpenAPS (OpenAPS Wiki – detekcia citlivosti).
+**Oref0 / Oref1** = detekcia citlivosti a „reference design implementation version 0/1“ (referenčná implementácia, verzia 0/1). It is the key algorithm behind OpenAPS. Further info → [Wiki - 'sensitivity detection'](../DailyLifeWithAaps/SensitivityDetectionAndCob.md).
 
 **OS-AID** = Open-Source Automated Insulin Delivery (automatizované podávanie inzulínu s otvoreným zdrojovým kódom). Systém **AID** zostavený zo softvéru s otvoreným zdrojovým kódom, napríklad **AAPS**, **OpenAPS**, Loop alebo Trio. Tieto systémy nie sú formálne schválené zdravotníckymi úradmi (FDA, NHS atď.) → pozrite aj **AID**.
 
@@ -132,15 +132,15 @@
 
 **TBB** = total base basal, celková základná bazálna dávka (súčet bazálnej dávky za 24 hodín) → pozrite aj **TBR** / **TDD**.
 
-**TBR** = temporary basal rate, dočasný bazál → pozrite aj **TBB** / **TDD**.
+**TBR** = temporary basal rate → see also **TBB** / **TDD**.
 
 **TDD** = total daily dose, celková denná dávka (v aplikácii CDD; bolus + bazál za deň) → pozrite aj **TBB** / **TBR**.
 
-**TT** = temporary target, dočasný cieľ (v aplikácii DC): dočasné zvýšenie alebo zníženie cieľovej **glykémie** (rozsahu) používateľa, napr. pred jedlom alebo pri športe. Ďalšie informácie → [Wiki – „Dočasné ciele“](../DailyLifeWithAaps/TempTargets.md).
+**TT** = temporary target: temporary increase/decrease of the user’s **BG** target (range) e.g. for eating or sport activities. Ďalšie informácie → [Wiki – „Dočasné ciele“](../DailyLifeWithAaps/TempTargets.md).
 
 **UAM** = unannounced meals (neohlásené jedlá). Rozpoznanie výrazného vzostupu **glykémie** vplyvom jedla, adrenalínu alebo iných vplyvov a pokus o jeho úpravu. Ďalšie informácie → [Wiki – „UAM“](#enable-uam) a pozrite aj **SMB**.
 
-**Virtuálna pumpa** (Virtual pump) = funkcia **AAPS**, ktorá umožňuje vyskúšať funkcie **AAPS**, alebo ju používajú ľudia s diabetom (PWD), ktorých model pumpy nemá v **AAPS** ovládač pre okruh → pozrite aj **Otvorený okruh**.
+**Virtual pump** = an **AAPS** feature which allows the user to try **AAPS’** functions, or lets PWD whose pump model has no **AAPS** driver use **AAPS** as an open loop → see also **Open Loop**.
 
 **Tapeta** (Wallpaper) = obrázok na pozadí **AAPS**, pozrite stránku o telefónoch.
 
