@@ -15,7 +15,7 @@
 ![Pumpa DanaR](../images/danar1.png)
 
 * Prejdite do Main Menu > Setting > Discovery
-* V Bluetooth nastaveniach telefónu dajte Vyhľadať blízke zariadenia, vyberte sériové číslo vašej pumpy DanaR a zadajte heslo (heslo pre spárovanie je 0000). Ak sa DanaR pri vyhľadávaní nezobrazí, reštartujte telefón, vyberte z pumpy DanaR batériu, vložte ju späť a tieto dva kroky zopakujte.
+* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). Ak sa DanaR pri vyhľadávaní nezobrazí, reštartujte telefón, vyberte z pumpy DanaR batériu, vložte ju späť a tieto dva kroky zopakujte.
 
 * V **AAPS** otvorte **ponuku** (☰) v ľavom hornom rohu, prejdite do **Konfigurácia** > **Pumpa** a vyberte typ svojej pumpy DanaR (**DanaR**, **Kórejská DanaR** alebo **DanaRv2**).
   
