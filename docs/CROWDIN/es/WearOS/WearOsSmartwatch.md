@@ -91,7 +91,7 @@ Instala el apk de **AAPS Wear** con [Wear Installer 2](https://youtu.be/abgN4jQq
 
 ```{admonition} Wear OS 5
 :class: warning
-En Wear OS 5, la esfera de AAPS se tiene que seleccionar con Wear Installer 2 justo después de instalar la app Wear: el instalador ofrece la esfera **AAPS (Custom)** al final de la instalación. Si cambias a otra esfera por error, repite la instalación. Puede que no sea posible cambiar los ajustes de la esfera (Tema oscuro, Watchdivider, etc.).
+En Wear OS 5, la esfera de AAPS se tiene que seleccionar con Wear Installer 2 justo después de instalar la app Wear: el instalador ofrece la esfera **AAPS (Custom)** al final de la instalación. Si cambias a otra esfera por error, repite la instalación. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
 
 Si la esfera clásica te funciona ahora, **desactiva las actualizaciones automáticas del reloj**: es probable que la próxima actualización del firmware la rompa. Si aun así actualizas a Wear OS 6, lee la sección de arriba: **AAPS** instalará entonces su propia esfera en el nuevo formato.
 ```
@@ -114,13 +114,13 @@ Aquí tienes guías básicas de configuración para el [Galaxy Watch 5](https://
 
 ## Familiarizarse con el reloj inteligente
 
-Después de la configuración básica del reloj según el vídeo de arriba, ve a Play Store en el teléfono y descarga estas apps: "Galaxy Wearable", “Samsung” y “Easy Fire tools” o "Wear Installer 2".
+After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
 
 Hay muchos vídeos de YouTube de terceros que te ayudan a familiarizarte con tu nuevo reloj inteligente, por ejemplo:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-La app “Galaxy Wearable” también tiene una sección con un manual de instrucciones. Abre Galaxy Wearable en el teléfono, busca el reloj e intenta emparejar el reloj con el teléfono. Según tu versión, puede que te pida instalar otra app, “galaxy watch 4 plugin”, desde Play Store (tarda un rato en descargarse). Instálala en el teléfono y después intenta otra vez emparejar el reloj y el teléfono en la app Wearable. Pasa por una serie de menús y marca varias preferencias.
+La app “Galaxy Wearable” también tiene una sección con un manual de instrucciones. Abre Galaxy Wearable en el teléfono, busca el reloj e intenta emparejar el reloj con el teléfono. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Instálala en el teléfono y después intenta otra vez emparejar el reloj y el teléfono en la app Wearable. Pasa por una serie de menús y marca varias preferencias.
 
 ## Configurar una cuenta de Samsung
 
@@ -260,7 +260,7 @@ El último paso es configurar **AAPS** en el teléfono para que interactúe con 
 
 Para poner bolos o hacer otras acciones desde el reloj, activa también **Control desde el reloj** en [Ajustes > Reloj](#preferences-wear).
 
-Para cambiar a otra esfera de **AAPS**, mantén pulsada la pantalla de inicio del reloj y aparecerá “personalizar”. Después desliza hacia la derecha hasta llegar a todas las esferas de **AAPS**.
+To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Después desliza hacia la derecha hasta llegar a todas las esferas de **AAPS**.
 
 Si el Wear.apk de **AAPS** se ha instalado bien por carga lateral en el reloj inteligente, se verá así:
 
@@ -334,7 +334,7 @@ F - batería del teléfono
 
 G - dosis basal (en U/h con la dosis estándar y en % durante una TBR)
 
-H - BGI (interacción de la glucosa en sangre) -> cuánto “debería” subir o bajar la glucosa solo por la actividad de la insulina.
+H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
 I - carbohidratos (carbohidratos activos | e-carbs en el futuro)
 
