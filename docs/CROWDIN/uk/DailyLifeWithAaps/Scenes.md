@@ -99,6 +99,8 @@
 
 ![Панель «Сцени» нижньої навігації](../images/v4/Scenes/scenes_sheet.png)
 
+If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+
 Перш ніж щось буде застосовано, ви отримаєте **підтвердження** з точним списком того, що зробить сцена, щоб ви могли це перевірити:
 
 ![Підтвердження активації сцени зі списком дій](../images/v4/Scenes/scene_confirmation.png)
