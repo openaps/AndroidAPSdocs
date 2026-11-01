@@ -54,7 +54,9 @@
 
 У **AAPS** v4 профілями керують і активують їх на екрані **Керувати** (нижня навігація) → **Профіль** (*«Керувати профілями й активувати їх»*).
 
-Екран профілю показує ваші профілі як **карусель карток, які можна гортати**. Картка поточного профілю позначена **АКТИВНИЙ** і показує його добовий базал (напр. *∑ 30,15 Од*). Під вибраною карткою ви бачите деталі профілю – **Одиниці**, тип (**Інсулін**), а також розклади **IC**, **ISF**, **Базал** і **Ціль** із графіками.
+Екран профілю показує ваші профілі як **карусель карток, які можна гортати**. Картка поточного профілю позначена **АКТИВНИЙ** і показує його добовий базал (напр. *∑ 30,15 Од*). Below the selected card you see that profile's details — the **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+
+When a temporary switch is running, the **ACTIVE** card shows its percentage and time shift with the time left, for example *110% +2 h · 2 h 40 min*, above a progress bar. Both are refreshed every 30 seconds. The details below then have two columns: the values of the profile in blue, and the values in use with the percentage in red.
 
 ![Екран профілю – карусель профілів, деталі та панель дій](../images/v4/Profiles/profile_manage.png)
 
