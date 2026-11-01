@@ -38,16 +38,16 @@ Belangrijkste kenmerken van de **Omnipod DASH** ('DASH'):
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
-- **Een compatibele Android-telefoon** met Bluetooth Low Energy (BLE) (zie [Telefoons](../Getting-Started/Phones.md) voor meer info). De volgende informatie helpt je ook bij andere belangrijke punten om de DASH goed te activeren en te gebruiken op een compatibele telefoon:
+- **A Compatible Android phone** with Bluetooth Low Energy (BLE) (see [Phones](../Getting-Started/Phones.md) for more info). In addition, the following information will help guide you on other key considerations around successfully activating and using the DASH on a compatible phone:
     -  De Omnipod Dash-driver van **AAPS** maakt via Bluetooth verbinding met de DASH Pod.  
       **AAPS** maakt automatisch een nieuwe Bluetooth-verbinding met de Pod elke keer dat het een opdracht moet sturen (bijv. een bolus). Na het sturen van de opdracht wordt de Bluetooth-verbinding direct verbroken.
        - **Opmerking:**
          - De Bluetooth-verbinding kan worden onderbroken of verstoord door andere Bluetooth-apparaten die gekoppeld zijn aan de telefoon waarop **AAPS** draait, zoals oordopjes enz. Zulke apparaten kunnen op sommige telefoonmodellen verbindingsfouten of problemen bij het activeren van een pod geven. Bekijk bij het kiezen van een telefoon voor Omnipod DASH de lijst met [geteste hardware-opstellingen](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true). Daar staan combinaties die bekend goed werken.
-         - Er zijn een aantal bekende problemen met Bluetooth die problemen bij het activeren van een pod kunnen geven (zie [Probleemoplossing](#troubleshooting) voor advies over andere Bluetooth-problemen), vooral het deel [Problemen met Bluetooth](#omnipod-dash-bluetooth-related-issues).
+         - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#omnipod-dash-troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
     - De telefoon moet **Android 12 of nieuwer** hebben, met **AAPS** gebouwd en geïnstalleerd volgens de instructies [**APK bouwen**](../SettingUpAaps/BuildingAaps.md). Gebruik altijd de nieuwste uitgebrachte versie.
 - Een ondersteunde [**Continue glucosemonitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
-De instructies hieronder leggen uit hoe je met **AAPS** een nieuwe pod-sessie activeert. Wacht tot je huidige Pod bijna verloopt, want je moet met **AAPS** een nieuwe Pod activeren. Als een pod is gedeactiveerd, kan hij niet opnieuw worden gebruikt of geactiveerd. Het deactiveren is definitief.
+De instructies hieronder leggen uit hoe je met **AAPS** een nieuwe pod-sessie activeert. You should wait for your current Pod to be close to expiry, as you will need to activate a new Pod with **AAPS**. Als een pod is gedeactiveerd, kan hij niet opnieuw worden gebruikt of geactiveerd. Het deactiveren is definitief.
 
 ## Voordat je begint
 
@@ -611,7 +611,7 @@ Een defecte pod kan niet opnieuw worden gebruikt. Controleer je bloedglucose, en
 ---
 ### Pod-storingen met fout 49 voorkomen
 
-Deze fout heeft te maken met een verkeerde pod-status voor een opdracht, of met een fout tijdens een opdracht voor insulinetoediening. Dit gebeurt als de driver en de Pod het niet eens zijn over de werkelijke status. De Pod reageert dan (als ingebouwde veiligheidsmaatregel) met een onherstelbare foutcode 49 (0x31). Dit eindigt in wat bekendstaat als een “screamer”: de lange, irritante pieptoon die alleen stopt als je op de juiste plek aan de achterkant van de Pod een gat prikt. De precieze oorzaak van een “49 pod-storing” is vaak moeilijk te vinden. In situaties waarin deze fout waarschijnlijk optreedt (bijvoorbeeld bij crashes van de app, bij het gebruik van een ontwikkelversie of bij een herinstallatie).
+Deze fout heeft te maken met een verkeerde pod-status voor een opdracht, of met een fout tijdens een opdracht voor insulinetoediening. Dit gebeurt als de driver en de Pod het niet eens zijn over de werkelijke status. De Pod reageert dan (als ingebouwde veiligheidsmaatregel) met een onherstelbare foutcode 49 (0x31). Dit eindigt in wat bekendstaat als een “screamer”: de lange, irritante pieptoon die alleen stopt als je op de juiste plek aan de achterkant van de Pod een gat prikt. De precieze oorzaak van een “49 pod-storing” is vaak moeilijk te vinden. It can happen, for example, after application crashes, when running a development version or after a re-installation.
 
 ---
 
@@ -690,7 +690,7 @@ Hieronder staat een overzicht van de belangrijkste waarschuwingen die je kunt te
 - *Pod foutmelding: XXX NAAM*, gevolgd door *Ref: ...*: de pod is defect en is gestopt met insuline toedienen. Vervang de pod. Zie [Pod-storingen](#omnipod-dash-pod-failures).
 - *Geen actieve Pod*: er is geen pod-sessie gevonden. Deze melding blijft terugkomen tot je een nieuwe pod activeert. Als er een pod is geactiveerd, verdwijnt de melding vanzelf.
 - *Insuline levering is opgeschort*: de pod heeft de insulinetoediening onderbroken. Zie [Insulinetoediening hervatten](#omnipod-dash-resuming-insulin-delivery).
-- *Instellen van basaal profiel is mogelijk mislukt. De insulinetoediening kan onderbroken zijn! Vernieuw de Pod status handmatig in het Omnipod tabblad en hervat de toediening indien nodig.* Het instellen van het basale **Profiel** op de pod is misschien mislukt. Druk op **Vernieuwen** op het DASH-pompscherm (de melding noemt nog het "Omnipod tabblad") en druk op **Toediening hervatten** als die knop zichtbaar is.
+- *Instellen van basaal profiel is mogelijk mislukt. De insulinetoediening kan onderbroken zijn! Please manually refresh the Pod status on the pump screen and resume delivery if needed.* Setting the basal **Profile** on the pod may have failed. Press **Refresh** on the DASH pump screen, and press **Resume Delivery** if it is shown.
 - *Kan niet verifiëren of SMB (X E) is geslaagd. Vernieuw de pod status om deze opdracht te bevestigen of te weigeren.* **AAPS** kon niet bevestigen dat de **SMB** is toegediend. Druk op **Vernieuwen** op het DASH-pompscherm en controleer het veld **Laatste bolus**.
 - *Bolus levering status onzeker. Vernieuw de Pod status om te bevestigen of te weigeren.* Hetzelfde geldt voor een normale bolus: druk op **Vernieuwen** op het DASH-pompscherm.
 - *Tijdzone op pod verschilt van de tijdzone op de telefoon. Basaalstand is onjuist. Wissel profiel om het op te lossen* Zie de opmerking over zomertijd en tijdzones in [Bekende beperkingen/problemen van Omnipod DASH in AAPS](#omnipod-dash-constraints).
@@ -703,7 +703,7 @@ Al het ontwikkelwerk voor de DASH wordt door de community gedaan op **vrijwillig
 
 -  **Niveau 0:** Lees het betreffende deel van deze documentatie, zodat je begrijpt hoe de functie waarmee je problemen hebt hoort te werken.
 -  **Niveau 1:** Als je nog steeds problemen hebt die je met dit document niet kunt oplossen, ga dan naar het kanaal *#AAPS* op **Discord** met [deze uitnodigingslink](https://discord.gg/4fQUWHZ4Mw). Er zijn ook veel Facebook- en andere groepen waar je vragen kunt stellen (zie [**Hulp krijgen**](../GettingHelp/WhereCanIGetHelp.md))
--  **Niveau 2:** Zoek in de bestaande issues of je probleem al gemeld is, op [Issues](https://github.com/nightscout/AndroidAPS/issues) als het al bestaat, bevestig het dan, reageer erop of voeg informatie over jouw probleem toe. Zo niet, maak dan een [nieuw issue](https://github.com/nightscout/AndroidAPS/issues) aan en voeg [je logbestanden](../GettingHelp/AccessingLogFiles.md) toe.
+-  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues). If it exists, please confirm/comment/add information on your problem. Zo niet, maak dan een [nieuw issue](https://github.com/nightscout/AndroidAPS/issues) aan en voeg [je logbestanden](../GettingHelp/AccessingLogFiles.md) toe.
 -  **Wees geduldig - de meeste leden van onze community zijn vriendelijke vrijwilligers, en het oplossen van problemen kost vaak tijd en geduld van zowel gebruikers als ontwikkelaars.**
 
 Als je om hulp vraagt, zorg dan dat je de volgende informatie bij de hand hebt. Zo kan de community je beter helpen met je vragen en problemen:
