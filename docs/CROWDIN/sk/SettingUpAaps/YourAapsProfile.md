@@ -135,9 +135,9 @@ Z týchto príkladov vidíte, že čím _menšia_ je hodnota **ISF**, tým menej
 
 ### Vplyv
 
-**Nižší / silnejší ISF** (napr. 40 namiesto 50) znamená, že jedna jednotka inzulínu zníži vašu **glykémiu** menej. To vedie k agresívnejšej / silnejšej korekcii okruhu s **väčším množstvom inzulínu**. Ak je váš **ISF** príliš silný (malá hodnota), môže to viesť k nízkej **glykémii**.
+A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. To vedie k agresívnejšej / silnejšej korekcii okruhu s **väčším množstvom inzulínu**. Ak je váš **ISF** príliš silný (malá hodnota), môže to viesť k nízkej **glykémii**.
 
-**Vyšší / slabší ISF** (napr. 45 namiesto 35) znamená, že jedna jednotka inzulínu zníži vašu **glykémiu** viac. To vedie k menej agresívnej / slabšej korekcii okruhu s **menším množstvom inzulínu**. Ak je váš **ISF** príliš slabý (veľká hodnota), môže to viesť k vysokej **glykémii**.
+A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. To vedie k menej agresívnej / slabšej korekcii okruhu s **menším množstvom inzulínu**. Ak je váš **ISF** príliš slabý (veľká hodnota), môže to viesť k vysokej **glykémii**.
 
 **Example:**
 * **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
@@ -201,7 +201,7 @@ Je bežné mať v rôznych častiach dňa rôzny **ICR**, a to v dôsledku hlad�
 > 
 > Faktor BU 2,4 U / 12 g   ===>   IC = 12 g / 2,4 U = 5,0 g/U
 > 
-> Prevodové tabuľky sú dostupné online, napr. [tu](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Vplyv
 
@@ -300,7 +300,7 @@ Pomocník s profilom ponúka súbory údajov pre deti z dvoch rôznych nemocníc
 4. Prepnite na kartu **Profil 2**.
 5. Ťuknite na **Typ profilu** a vyberte „Predvolený DPV profil“.
 6. Upravte predvolený DPV profil (založený na súbore údajov inej nemocnice) zadaním veku dieťaťa, CDD celkom a percenta bazálu. Súbor údajov DPV obsahuje iba **bazálne dávky**, preto sú IC a ISF pri tomto profile zobrazené ako nula.
-7. Otvorte kartu **Porovnanie**. Zobrazí sa porovnanie oboch upravených profilov (pozrite snímku obrazovky nižšie).
+7. Open the **Comparison** tab. Zobrazí sa porovnanie oboch upravených profilov (pozrite snímku obrazovky nižšie).
 8. Ak chcete začať ladiť svoj profil podľa jedného z týchto návrhov, použite tlačidlo **Klonovať** pod porovnaním.
 
 ![Pomocník s profilom pre deti 2](../images/ProfileHelperKids2.png)
@@ -350,6 +350,6 @@ Na porovnanie dvoch rôznych profilov alebo prepnutí profilu (percento jedného
 4. Prepnite na kartu **Profil 2**.
 5. V poli **Typ profilu** vyberte „Prepnutie profilu“, aby ste mohli vyberať z histórie všetkých svojich **prepnutí profilu**.
 6. Vyberte **prepnutie profilu**, s ktorým ho chcete porovnať.
-7. Otvorte kartu **Porovnanie**. Zobrazí sa porovnanie oboch profilov (pozrite snímku obrazovky nižšie).
+7. Open the **Comparison** tab. Zobrazí sa porovnanie oboch profilov (pozrite snímku obrazovky nižšie).
 
 ![Pomocník s profilom 2](../images/ProfileHelper2.png)
