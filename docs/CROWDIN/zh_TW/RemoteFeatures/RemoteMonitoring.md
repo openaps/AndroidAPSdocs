@@ -8,7 +8,7 @@ __AAPS__ 提供多項功能，可遠端監測第 1 型糖尿病兒童的狀況�
 
 - 孩子的幫浦由孩子的手機透過 __AAPS__ 控制。
 - 照護者可以在 Android 手機上使用 **AAPSClient APK**，遠端查看血糖值、活性碳水化合物、活性胰島素等相關資料（**AAPSClient** 的 iPhone 版本正在開發中，請參閱 [AAPSClient](AapsClient.md)）。在 __AAPS__ 中變更的設定會與 __AAPSClient__ 同步，反之亦然。
-- 如果已設定 xDrip 夥伴模式，照護者也可以在 Android 手機上使用**xDrip 應用程式的追蹤者模式**接收警示。
+- Caregivers can be alarmed by using **xDrip app in follower mode** on their Android phone if xDrip companion mode is set up.
 - 使用 [簡訊指令](../RemoteFeatures/SMSCommands.md) 遠端控制 __AAPS__，會以兩步驟驗證來保護安全。
 - 透過 __AAPSClient__ 進行遠端控制時，會使用 **AAPS** 4 新增的簽章指令通道：用戶端必須先與主控端**配對**（使用 QR Code 或 PIN 碼），每項指令都會由主控端確認並執行。每位照護者的手機都可以設定自己的[角色](#client-master-control-roles)，範圍從唯讀到完整控制皆可；請參閱[主控端 ↔ 用戶端控制](#client-master-control)。
 
