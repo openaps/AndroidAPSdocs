@@ -268,7 +268,7 @@ Generally, it makes no sense to keep optimizing settings for one kind of meal. S
 Um Hypos 3-5 Stunden nach einer Mahlzeit zu vermeiden, reduziere die Aggressivität, bevor zu viel aktives Insulin (IOB) aufgebaut wird. Besondere Ansätze:
 
 - Schwäche den **ISF**, so wie es in den Automatiisierungsbeispielen #1 und #2 gemacht wird, schon während des Glukoseanstiegs immer weiter ab.
-- Lege den IOB-Schwellwert, ab dem **AAPS** deutlich vorsichtiger gemacht wird (s. Automatisierung #3 oben), fest. Note this **iob** can be exceeded, by the last **SMB** before it went into effect; and then further by TBRs if the loop sees insulinReq. Carbs getting absorbed will provide a counter-movement towards lower iob.
+- Lege den IOB-Schwellwert, ab dem **AAPS** deutlich vorsichtiger gemacht wird (s. Automatisierung #3 oben), fest. Note this **iob** can be exceeded, by the last **SMB** before it went into effect; and then further by TBRs if the loop sees insulinReq. Absorbierte Kohlenhydrate werden eine Gegenbewegung in Richtung eines niedrigeren IOB bringen.
 - Der IOB-Schwellwert könnte nach Mahlzeiten differenziert werden: Durch das Klonen der Automatisierungen könnte man nach Frühstück, Mittag- und Abendessen-Zeitfenstern unterscheiden (oder sogar nach Geo-Standorten wie Firmen-Cafeteria oder Schwiegermutter usw.)
 > In diesen Zeitfenstern kann sogar weiter unterschieden werden, indem Du verschiedene TTs für Low Carb vs. schnelle Kohlenhydrate usw. setzt, und so verschiedene Mahlzeitklassen „kodierst“, die zu dieser Tageszeit auftreten können und diese mit **Automatisierungen**, die speziell auf Dich zueschnitten sind, aktivierst. Sofern Deine Ernährungsgewohnheiten nicht stark variieren, ist das vermutlich gar nicht notwendig.
 
@@ -291,11 +291,11 @@ Genauso schnell und einfach kannst Du Auslöser oder Aktionen binnen weniger Sek
 
 ### Wie man wieder in den Hybrid Closed Loop zurückkehrt
 
-You can untick the checkboxes of the **Automations** related to your **FCL**, and go back to bolusing for meals and make carb inputs again. If you had removed the **Insulin** or **Calculator** buttons from your main screen, add them back in the [QuickLaunch toolbar](#quicklaunch) configuration (they always remain available under **Treatments** in the bottom navigation). Be aware that now it is again up to you to bolus for meals.
+You can untick the checkboxes of the **Automations** related to your **FCL**, and go back to bolusing for meals and make carb inputs again. If you had removed the **Insulin** or **Calculator** buttons from your main screen, add them back in the [QuickLaunch toolbar](#quicklaunch) configuration (they always remain available under **Treatments** in the bottom navigation). Ab jetzt bist Du wieder selber für das Bolen der Mahlzeiten verantwortlich.
 
-It may be wise to do **FCL** only for meals (time slots) where **Automations** are fully defined and clicked on, and un-click only those for the other meal times when you like to do **HCL** (or have none defined yet, in your transition period).
+Es kann auch sinnvoll sein, den **FCL** nur für Mahlzeiten (Zeiträume) zu aktivieren, in denen **Automatisierungen** auch vollständig definiert sind. Wähle die Automatisierungen für die anderen Essenszeiten (oder für die Du in der Übergangsphase noch keine definiert hast) und in denen Du den **HCL** haben möchtest, ab.
 
-For instance, it is perfectly possible, without any extra steps after **Automations** for dinner time slots are defined, to do **FCL** only for dinners, while breakfast and lunch are done in a **HCL** as you are used to.
+Nachdem **Automatisierungen** für Abendessenzeiten erstellt sind, ist es beispielsweise ohne Zusatzaufwand möglich, einen **FCL** nur für das Abendessen zu haben, während zu Frühstücks- und Mittagessenzeiten wie gewohnt ein **HCL** läuft.
 
 
 
@@ -338,9 +338,9 @@ For instance, it is perfectly possible, without any extra steps after **Automati
 
 ### Weitere Informationen
 
-Make sure you stay in touch with other **FCL** users.
+Stelle sicher Dich mit anderen **Full Closed Loop [FCL]**-Benutzenden zu vernetzen und auszutauschen.
 
-Discussion Full Closed Loop using Automations:
+Diskussion Full Closed Loop mit Automatisierungen:
 
 - English:   [Discord Channel](https://discord.gg/ChXj8BaKwA)
 
