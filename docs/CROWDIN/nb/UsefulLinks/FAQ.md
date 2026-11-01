@@ -175,7 +175,7 @@ Da ville du ha mer karbohydrater i kroppen, men samtidig ville loopen motvirke d
 
 Når du looper, bør du prøve disse stegene:
 
-* Gjør et [profilbytte](#ProfileSwitch-change-percentage) < 100 %: trykk på profilnavnet på hovedskjermen, trykk på den runde **▶**-knappen, og sett så **Prosent** og **Varighet**.
+* Gjør et [profilbytte](#ProfileSwitch-change-percentage) under 100 %: trykk på profilnavnet på hovedskjermen, trykk på den runde **▶**-knappen, og sett så **Prosent** og **Varighet**.
 * Sett et [midlertidig mål for aktivitet](#TempTargets-activity-temp-target) over standardmålet ditt. Med en prosent under 100 % og en varighet viser det samme **Aktiver**-skjermbildet en bryter **Midlertidig mål / Aktivitet** som starter begge samtidig.
 * Hvis du bruker SMB, må du passe på at [«Aktiver SMB ved høyt midlertidig mål»](#Open-APS-features-enable-smb-with-high-temp-targets) og [«Aktiver SMB alltid»](#Open-APS-features-enable-smb-always) er deaktivert.
 
@@ -363,9 +363,9 @@ Du kan også endre når varselet utløses: trykk på **Innstillinger**-ikonet (t
 
 #### Link-enheten/pumpen/podden min svarer ikke (RL/OL/EmaLink…)
 
-På noen telefoner mister Link-enhetene (RL/OL/EmaL...) Bluetooth-forbindelsen.
+På noen telefoner mister Link-enhetene (RL/OL/EmaLink) Bluetooth-forbindelsen.
 
-Noen har også Link-enheter som ikke svarer (AAPS sier at de er tilkoblet, men Link-enhetene når ikke pumpen eller kan ikke styre den.)
+Noen har også Link-enheter som ikke svarer (AAPS sier at de er tilkoblet, men Link-enhetene når ikke pumpen eller kan ikke styre den).
 
 Prøv først knappen **Tilbakestill RileyLink** på pumpeskjermen (se siden for pumpen din: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). Hvis dette ikke hjelper, er den enkleste måten å få alle delene til å fungere sammen igjen slik:
 
