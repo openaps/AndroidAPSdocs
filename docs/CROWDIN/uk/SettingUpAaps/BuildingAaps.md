@@ -1,50 +1,50 @@
-# Building AAPS
+# Збірка AAPS
 
-## Build yourself instead of download
+## Зберіть самі, а не завантажуйте
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**Застосунок AAPS (файл apk) не можна завантажити готовим через правила для медичних виробів. Збирати застосунок для власного використання законно, але ви не повинні давати його копію іншим!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Докладніше див. на [сторінці FAQ](../UsefulLinks/FAQ.md).
 
 ---
 
-Three methods are available to build the AAPS app:
+Є три способи зібрати застосунок AAPS:
 
-### Build with a browser (recommended)
+### Збірка в браузері (рекомендовано)
 
-You can build the app with your smartphone using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
+Ви можете зібрати застосунок на смартфоні за допомогою GitHub Actions. На телефоні Android вас проведе через усі кроки сторінка налаштування [AAPS Builder](#aaps-builder), а кожну збірку ви запускаєте самі. З комп'ютера або iPhone ви також можете зібрати застосунок через fork і зберегти його на своєму Google Drive.
 
-**[Follow these instructions.](./BrowserBuild.md)**
-
-----
-
-### Build with Android Studio
-
-You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
-
-**[Follow these instructions.](./ComputerBuild.md)**
+**[Дотримуйтеся цих інструкцій.](./BrowserBuild.md)**
 
 ----
 
-### Build using the command-line
+### Збірка в Android Studio
 
-This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
+Ви можете зібрати застосунок на комп'ютері за допомогою Android Studio. Раніше це був єдиний спосіб збірки, зараз Android Studio переважно використовують розробники, які хочуть змінювати код.
 
-**[Follow these instructions.](./CLIBuild.md)**
+**[Дотримуйтеся цих інструкцій.](./ComputerBuild.md)**
+
+----
+
+### Збірка з командного рядка
+
+Цей спосіб для тих, хто хоче зібрати AAPS локально з командного рядка, без встановлення Android Studio.
+
+**[Дотримуйтеся цих інструкцій.](./CLIBuild.md)**
 
 ----
 
 (building-aaps-troubleshooting)=
-## If the build fails
+## Якщо збірка не вдалася
 
-Each build method has its own troubleshooting section:
+Для кожного способу збірки є свій розділ з усунення проблем:
 
-* **AAPS Builder**: [AAPS Builder troubleshooting](#aaps-builder-troubleshooting)
-* **Browser build** from a computer or an iPhone: [Browser build troubleshooting](#aaps-ci-troubleshooting)
-* **Android Studio**: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+* **AAPS Builder**: [Усунення проблем з AAPS Builder](#aaps-builder-troubleshooting)
+* **Збірка в браузері** з комп'ютера або iPhone: [Збірка в браузері: усунення проблем](#aaps-ci-troubleshooting)
+* **Android Studio**: [Усунення проблем з Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Lost your keystore or its password? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Втратили keystore або його пароль? Див. [Перевстановлення AAPS з новим keystore](#reinstall-aaps).
 
-If the app is built but does not install on your phone, see [Transferring and installing AAPS](TransferringAndInstallingAaps.md).
+Якщо застосунок зібрано, але він не встановлюється на телефон, див. [Перенесення та встановлення AAPS](TransferringAndInstallingAaps.md).
 
-If your problem is not listed, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Якщо вашої проблеми тут немає, див. [Де отримати допомогу](../GettingHelp/WhereCanIGetHelp.md).

@@ -1,77 +1,77 @@
 (browser-build)=
 
-# Browser build
+# Compilação no navegador
 
-Building AAPS with GitHub Actions.
+Compilar o AAPS com o GitHub Actions.
 
-**Minimum AAPS version supported is 3.3.2.1.**
+**A versão mínima do AAPS suportada é a 3.3.2.1.**
 
-## Build yourself instead of download
+## Compile você mesmo em vez de baixar
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**O app AAPS (um arquivo apk) não está disponível para download, por causa das regras sobre dispositivos médicos. É legal compilar o app para uso próprio, mas você não deve dar uma cópia para outras pessoas!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Veja a página [FAQ para loopers](../UsefulLinks/FAQ.md) para mais detalhes.
 
 (Building-APK-without-a-computer)=
 
-## Choose how to build
+## Escolha como compilar
 
-Pick the method that matches the device you build from:
+Escolha o método que corresponde ao dispositivo em que você compila:
 
-### On an Android phone: AAPS Builder (recommended)
+### Em um telefone Android: AAPS Builder (recomendado)
 
-A setup page walks you through creating your own private build repository in GitHub. Nothing to install, no preparation file, and you start each build yourself. You download the app directly from GitHub. Google Drive is optional.
+Uma página de configuração guia você na criação do seu próprio repositório de compilação privado no GitHub. Nada para instalar, nenhum arquivo de preparação, e você mesmo inicia cada compilação. Você baixa o app diretamente do GitHub. O Google Drive é opcional.
 
-This also works from a computer browser.
+Isso também funciona no navegador de um computador.
 
-**→ [Build with AAPS Builder](BrowserBuildAapsBuilder.md)**
+**→ [Compilar com o AAPS Builder](BrowserBuildAapsBuilder.md)**
 
-### On a computer or an iPhone / iPad: fork and preparation file
+### Em um computador ou em um iPhone / iPad: fork e arquivo de preparação
 
-You make a copy (fork) of the AAPS source code in GitHub, create your keystore with a preparation file, and the built app is saved to your Google Drive. Follow the four steps below.
+Você faz uma cópia (fork) do código-fonte do AAPS no GitHub, cria a sua keystore com um arquivo de preparação, e o app compilado é salvo no seu Google Drive. Siga as quatro etapas abaixo.
 
 ```{note}
-**Already building with a fork?** Keep updating it as described in [Update with a browser](../Maintenance/UpdateBrowserBuild.md), or switch to AAPS Builder. To switch, first get a copy of your keystore from your fork: see [Coming from the previous browser build](#aaps-builder-from-fork).
+**Você já compila com um fork?** Continue atualizando-o como descrito em [Atualizar pelo navegador (fork)](../Maintenance/UpdateBrowserBuild.md), ou mude para o AAPS Builder. Para mudar, primeiro pegue uma cópia da sua keystore do seu fork: veja [Vindo da compilação no navegador anterior](#aaps-builder-from-fork).
 ```
 
-You will need to use multiple tabs in your browser, and switch from one to the other. Example Chrome:
+Você vai precisar usar várias abas no seu navegador e trocar de uma para outra. Exemplo no Chrome:
 
 ![fork_aaps](../images/Building-the-App/CI/BrowserBuildTabs.png)
 
 ```{note}
-You will need to jump from tab to tab: start with all tabs closed to avoid losing yourself when switching from one to another.
+Você vai precisar pular de uma aba para outra: comece com todas as abas fechadas para não se perder quando trocar de uma para outra.
 ```
 
-#### What you'll need
+#### Do que você vai precisar
 
-- A **Google account**, so the built app can be saved to your Google Drive.
-- A **GitHub account** (free) – you create this in Step 1.
-- A **web browser** that can keep several tabs open at once (Chrome is assumed below).
-- A small **helper to run the preparation file**. Which one you need depends on the device you build from – there is nothing to install now, Step 2 walks you through it for your device:
-  - **Computer (Windows / Mac / Linux):** Simple Web Server.
-  - **iPhone / iPad:** no extra app – you use the built-in Files app and browser.
+- Uma **conta Google**, para que o app compilado possa ser salvo no seu Google Drive.
+- Uma **conta GitHub** (grátis) – você a cria na Etapa 1.
+- Um **navegador web** que consiga manter várias abas abertas ao mesmo tempo (abaixo usamos o Chrome).
+- Um pequeno **ajudante para executar o arquivo de preparação**. Qual você precisa depende do dispositivo em que você compila – não há nada para instalar agora, a Etapa 2 guia você para o seu dispositivo:
+  - **Computador (Windows / Mac / Linux):** Simple Web Server.
+  - **iPhone / iPad:** nenhum app extra – você usa o app Arquivos e o navegador que já vêm no aparelho.
 
-#### The steps
+#### As etapas
 
-The browser build is a series of choices. Follow these steps in order:
+A compilação no navegador é uma série de escolhas. Siga estas etapas na ordem:
 
-1. **[Create your GitHub fork](BrowserBuildFork.md)** – make your personal copy of the AAPS source code.
-2. **[Create your signing keystore](BrowserBuildKeystore.md)** – the key decision: generate a new keystore (Option 1) or upload your existing one (Option 2), then follow the page for your device.
-3. **[Authorize Google Drive](BrowserBuildGoogleDrive.md)** – let GitHub save the built app to your Google Drive.
-4. **[Build the APK](BrowserBuildAPK.md)** – run the GitHub Actions workflow and pick your version and variant.
+1. **[Crie o seu fork no GitHub](BrowserBuildFork.md)** – faça a sua cópia pessoal do código-fonte do AAPS.
+2. **[Crie a sua keystore de assinatura](BrowserBuildKeystore.md)** – a decisão principal: gerar uma nova keystore (Opção 1) ou enviar a que você já tem (Opção 2), depois seguir a página do seu dispositivo.
+3. **[Autorize o Google Drive](BrowserBuildGoogleDrive.md)** – permita que o GitHub salve o app compilado no seu Google Drive.
+4. **[Compile o APK](BrowserBuildAPK.md)** – execute o workflow do GitHub Actions e escolha a sua versão e variante.
 
-If you run into trouble, see **[Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md)**. For optional operations with a fork, see [exporting your keystore](#ci-keystore-export) or [cherry-picking a commit](#github-cherry-pick).
+Se tiver problemas, veja **[Compilação no navegador: resolução de problemas](../GettingHelp/BrowserBuildTroubleshooting.md)**. Para operações opcionais com um fork, veja [exportar a sua keystore](#ci-keystore-export) ou [fazer cherry-pick de um commit](#github-cherry-pick).
 
 ----
 
-**Start with [Step 1 – Create your GitHub fork](BrowserBuildFork.md) →**
+**Comece pela [Etapa 1 – Crie o seu fork no GitHub](BrowserBuildFork.md) →**
 
 ```{toctree}
 :hidden:
 
 AAPS Builder <BrowserBuildAapsBuilder.md>
-Step 1: Create your fork <BrowserBuildFork.md>
-Step 2: Create your keystore <BrowserBuildKeystore.md>
-Step 3: Authorize Google Drive <BrowserBuildGoogleDrive.md>
-Step 4: Build the APK <BrowserBuildAPK.md>
+Etapa 1: Crie o seu fork <BrowserBuildFork.md>
+Etapa 2: Crie a sua keystore <BrowserBuildKeystore.md>
+Etapa 3: Autorize o Google Drive <BrowserBuildGoogleDrive.md>
+Etapa 4: Compile o APK <BrowserBuildAPK.md>
 ```

@@ -828,12 +828,7 @@ V niekoľkých veciach sa Pod Omnipod líši od púmp s hadičkou, najmä po nas
 
 Vek **inzulínu** a **kanyly** v [riadku stavu](#screens-sensor-level-battery) hlavnej obrazovky sa **po každej výmene Podu** **vynuluje** na 0 dní a 0 hodín. Je to tak kvôli tomu, ako je pumpa Omnipod skonštruovaná a ako funguje. **Batéria pumpy** a **zásobník inzulínu** sú súčasťou každého Podu. Keďže Pod zavádza kanylu priamo do kože v mieste nalepenia Podu, pumpy Omnipod nepoužívajú klasickú hadičku. *Preto sa po výmene Podu vek každej z týchto hodnôt automaticky vynuluje.* **Vek batérie pumpy** sa nehlási, pretože batéria v Pode vydrží vždy dlhšie, ako je životnosť Podu (maximálne 80 hodín).
 
-![Actions_Tab](../images/omnipod/Actions_Tab.png)
-
-```{admonition} Older screenshot
-:class: note
-Snímka obrazovky vyššie pochádza zo staršej verzie **AAPS**, v ktorej sa tento vek zobrazoval v časti **Starostlivosť** na karte **Akcie (ACT)**. V **AAPS** 4 sa zobrazuje v riadku stavu hlavnej obrazovky.
-```
+![Expanded status panel of a patch pump: cannula and insulin ages at 0h after a pod change, no pump battery row](../images/omnipod/Actions_Tab.png)
 
 ### Úrovne
 

@@ -1,134 +1,134 @@
-# Timezone Change and Daylight Saving
+# Mudança de fuso horário e hora de verão
 
-When the time zone of your phone changes, **AAPS** calculates **IOB**, basal and sensitivity for the past again from scratch, about 10 seconds after the change. While this runs, the graphs and values on the main screen may take a moment to update.
+Quando o fuso horário do telefone muda, o **AAPS** volta a calcular do início a **IA**, a basal e a sensibilidade do passado, cerca de 10 segundos depois da mudança. Enquanto isto decorre, os gráficos e os valores no ecrã principal podem demorar um pouco a atualizar.
 
 (timezone-traveling-with-pumps)=
 
-## Timezone change for Omnipod Dash
+## Mudança de fuso horário com a Omnipod Dash
 
-* Refresh the pump status in **Manage → Pump**
-* Temporarily select a different **Profile** and then switch back to your original or desired **Profile**
+* Atualize o estado da bomba em **Gerir → Bomba**
+* Selecione temporariamente outro **Perfil** e depois volte ao seu **Perfil** original ou desejado
 
-## Timezone change for DanaR, Korean DanaR
+## Mudança de fuso horário com a DanaR e a DanaR coreana
 
-There is no issue with changing timezone in phone because pump doesn't use history
+Não há problema em mudar o fuso horário no telefone, porque a bomba não usa o histórico
 
 (timezone-traveling-danarv2-danars)=
 
-## Timezone change for DanaRv2, DanaRS, Dana-i
+## Mudança de fuso horário com a DanaRv2, a DanaRS e a Dana-i
 
-These pumps require special care because **AAPS** uses history from the pump but the records in pump do not have timezone stamp. **This means that if you change time zone in your phone, records will be read with different time zone and will be doubled.**
+Estas bombas precisam de cuidados especiais, porque o **AAPS** usa o histórico da bomba, mas os registos na bomba não têm o fuso horário. **Isto significa que, se mudar o fuso horário no telefone, os registos serão lidos com um fuso horário diferente e ficarão duplicados.**
 
-To avoid this there are two possibilities:
+Para evitar isto, há duas possibilidades:
 
-### Option 1: Keep home time and timeshift profile
+### Opção 1: manter a hora de casa e deslocar o perfil no tempo
 
-* Turn off 'Automatic date and time' in your phone's settings (manual time zone change).
+* Desligue «Data e hora automáticas» nas definições do telefone (mudança manual do fuso horário).
 
-* Your phone must keep your standard time as at home for the whole travel period.
+* O seu telefone tem de manter a hora normal de casa durante toda a viagem.
 
-* Time-shift your **Profile** according to time difference between home time and destination time.
+* Desloque o seu **Perfil** no tempo de acordo com a diferença entre a hora de casa e a hora do destino.
    
-   * Tap the **Profile** name on the main screen to open the [Profile screen](#ProfileSwitch-manage-v4)
-   * Select your **Profile** and tap **▶ Activate**
-   * Set '**Time shift**' according to your destination and tap **Activate**.
+   * Toque no nome do **Perfil** no ecrã principal para abrir o [ecrã do perfil](#ProfileSwitch-manage-v4)
+   * Selecione o seu **Perfil** e toque em **▶ Ativar**
+   * Defina o «**Deslocamento temporal**» de acordo com o seu destino e toque em **Ativar**.
    
-   ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
+   ![Troca de Perfil com deslocamento temporal](../images/ProfileSwitchTimeShift2.png)
    
-   * e.g. Vienna -> New York: **Profile Switch** +6 hours
-   * e.g. Vienna -> Sydney: **Profile Switch** -8 hours
+   * por exemplo, Viena -> Nova Iorque: **Troca de Perfil** +6 horas
+   * por exemplo, Viena -> Sydney: **Troca de Perfil** -8 horas
 
-### Option 2: Delete pump history
+### Opção 2: apagar o histórico da bomba
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change)
+* Desligue «Data e hora automáticas» nas definições do telefone (mudança manual do fuso horário)
 
-When you get off the plane:
+Quando sair do avião:
 
-* turn off pump
-* change timezone on phone
-* turn off phone, turn on pump
-* clear history in pump
-* change time in pump
-* turn on phone
-* let phone connect to the pump and fine-tune time
+* desligue a bomba
+* mude o fuso horário no telefone
+* desligue o telefone, ligue a bomba
+* apague o histórico na bomba
+* mude a hora na bomba
+* ligue o telefone
+* deixe o telefone ligar-se à bomba e acertar a hora
 
 (timezone-traveling-insight)=
 
-## Timezone Change for Insight
+## Mudança de fuso horário com a Insight
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+O controlador ajusta automaticamente a hora da bomba à hora do telefone.
 
-The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in **AAPS** despite the time change.
+A Insight também regista no histórico o momento em que a hora foi mudada e de que hora (antiga) para que hora (nova). Assim, a hora correta pode ser determinada no **AAPS** apesar da mudança da hora.
 
-It may cause inaccuracies in the **TDDs**. But it shouldn't be a problem.
+Pode causar imprecisões nas **TID**. Mas isto não deve ser um problema.
 
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes too long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+Por isso, o utilizador da Insight não precisa de se preocupar com mudanças de fuso horário nem de hora. Há uma exceção a esta regra: a bomba Insight tem uma pequena bateria interna que alimenta o relógio, etc. enquanto troca a bateria «real». Se a troca de bateria demorar demasiado, esta bateria interna fica sem energia, o relógio é reposto e é-lhe pedido que introduza a hora e a data depois de inserir uma nova bateria. Neste caso, todos os registos anteriores à troca de bateria são ignorados nos cálculos do AAPS, porque não é possível saber a hora correta.
 
-## Timezone Change for Accu-Chek Combo
+## Mudança de fuso horário com a Accu-Chek Combo
 
-The [Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the driver programs into the pump. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
+O [controlador da Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) ajusta automaticamente a hora da bomba à hora do telefone. A Combo não consegue guardar fusos horários, só a hora local, que é exatamente o que o controlador programa na bomba. Além disso, guarda o fuso horário nas preferências locais do AAPS, para poder converter a hora local da bomba num registo de tempo completo com o desvio do fuso horário. O utilizador não tem de fazer nada; se a hora da Combo se afastar muito da hora atual do telefone, a hora da bomba é ajustada automaticamente.
 
-Note that this takes some time, however, since it can only be done in the remote-terminal mode, which is generally slow. This is a Combo limitation that cannot be overcome.
+Note, no entanto, que isto demora algum tempo, porque só pode ser feito no modo de terminal remoto, que é geralmente lento. Esta é uma limitação da Combo que não pode ser ultrapassada.
 
-## Timezone Change for Medtrum
+## Mudança de fuso horário com a Medtrum
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+O controlador ajusta automaticamente a hora da bomba à hora do telefone.
 
-Time zone changes keep the history intact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and **IOB**. If you change time manually double check the **IOB**.
+As mudanças de fuso horário mantêm o histórico intacto; só a TID pode ser afetada. Mudar a hora do telefone manualmente pode causar problemas no histórico e na **IA**. Se mudar a hora manualmente, verifique bem a **IA**.
 
-When the time zone or time changes running **TBR's** are stopped.
+Quando o fuso horário ou a hora mudam, as **basais temporárias** em curso são paradas.
 
 (time-adjustment-daylight-savings-time-dst)=
 
-## DAYLIGHT SAVING (DST)
+## HORA DE VERÃO (DST)
 
-Time adjustment for daylight savings time.
+Acerto da hora para a hora de verão.
 
-Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctly. For some pumps it is better to make time zone adjustments while awake before DST takes place and not during the night.
+Conforme a sua bomba e o seu CGM, saltos na hora podem impedir o **AAPS** de funcionar corretamente. Com algumas bombas, é melhor ajustar o fuso horário enquanto está acordado, antes da mudança da hora de verão, e não durante a noite.
 
-### DST automatic adjustment for most pumps
+### Ajuste automático da hora de verão na maioria das bombas
 
-* However, the **Loop** will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**. This is done for safety reasons - **IOB** may be too high due to duplicated bolus prior to DST change.
-* After DST has taken place, make a **Profile Switch** to the desired **Profile** to enable the **Loop**: tap the profile name on the main screen, then the round **▶** button (see [Activating a profile](#ProfileSwitch-manage-v4)).
-* You will also receive a notification on **AAPS** main screen prior to DST change that the **Loop** has been disabled temporarily. This message will appear without beep, vibration or similar sound.
+* No entanto, o **Loop** será desativado durante 3 horas DEPOIS da mudança da hora de verão (normalmente a partir da 1 h) e o **AAPS** passa a usar a basal de fundo definida no seu **Perfil**. Isto é feito por razões de segurança – a **IA** pode estar alta demais devido a bólus duplicados antes da mudança da hora de verão.
+* Depois da mudança da hora de verão, faça uma **Troca de Perfil** para o **Perfil** desejado para ativar o **Loop**: toque no nome do perfil no ecrã principal e depois no botão redondo **▶** (ver [Ativar um perfil](#ProfileSwitch-manage-v4)).
+* Antes da mudança da hora de verão, também receberá no ecrã principal do **AAPS** uma notificação de que o **Loop** foi desativado temporariamente. Esta mensagem aparece sem bip, vibração ou som semelhante.
 
-If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** data unless you are sure this data is absolutely correct. Take caution and do not use this feature for a couple of hours after DST switch has taken place.
+Se fizer bólus com a calculadora do **AAPS**, não use os dados de **HCA** e **IA**, a não ser que tenha a certeza de que estão absolutamente corretos. Tenha cuidado e não use esta função durante algumas horas depois da mudança da hora de verão.
 
-### DST for Accu-Chek Insight
+### Hora de verão com a Accu-Chek Insight
 
-* Change to DST is done automatically. No action required.
+* A mudança para a hora de verão é feita automaticamente. Não é preciso fazer nada.
 
-### DST for Accu-Chek Combo
+### Hora de verão com a Accu-Chek Combo
 
-* Change to DST is done automatically. No action required.
+* A mudança para a hora de verão é feita automaticamente. Não é preciso fazer nada.
 
-### DST for Medtrum
+### Hora de verão com a Medtrum
 
-* Change to DST is done automatically. No action required.
+* A mudança para a hora de verão é feita automaticamente. Não é preciso fazer nada.
 
-### DST for Omnipod Dash
+### Hora de verão com a Omnipod Dash
 
-* Either allow **AAPS** to temporarily default background basal after DST has taken place as explained above.
-* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day prior DST is due to take place to avoid overnight disruption. NOTE THIS OPTION MAY CAUSE YOUR POD TO PREMATURELY EXPIRE. PLEASE HAVE SUPPLIES WITH YOU IF OPTING FOR THE FEATURE BELOW.
+* Ou deixa o **AAPS** usar temporariamente a basal de fundo depois da mudança da hora de verão, como explicado acima.
+* Ou, se não quiser que o **AAPS** use temporariamente a basal de fundo durante a noite, pode mudar o fuso horário no dia anterior à mudança da hora de verão, para evitar problemas durante a noite. ATENÇÃO: ESTA OPÇÃO PODE FAZER O SEU POD EXPIRAR ANTES DO TEMPO. SE ESCOLHER A FUNÇÃO ABAIXO, TENHA MATERIAL CONSIGO.
 
-#### Actions to take before the clock change
+#### Ações a fazer antes da mudança da hora
 
-1. Switch OFF any Phone's settings that automatically sets the Phone's time zone, so the user can change to a desired time zone that does not use DST. How to enable this will depend on your smartphone and Android version.
+1. Desligue todas as definições do telefone que acertam automaticamente o fuso horário, para poder mudar para um fuso horário à sua escolha que não use hora de verão. A forma de ativar isto depende do seu smartphone e da versão do Android.
    
-   * Some phones have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the time zone (which you must turn OFF: **Set automatically** under **Time zone** in the screenshot below).
-   * Unfortunately, some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
+   * Alguns telefones têm duas definições: uma para o acerto automático da hora (que deve, de preferência, ficar ligada) e outra para o acerto automático do fuso horário (que tem de DESLIGAR: **Definir automaticamente** em **Fuso horário** na captura de ecrã abaixo).
+   * Infelizmente, algumas versões do Android têm um único interruptor para ativar o acerto automático da hora e do fuso horário. Por agora, terá de desligar isto.
 
 ![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
 
-2. Find a timezone that has the same time as your current location but doesn't use DST.
+2. Encontre um fuso horário que tenha a mesma hora que o local onde está, mas que não use hora de verão.
    
-   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Congo). Change your phone's timezone to Congo.
+   * Uma lista destes países está disponível em [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
+   * Para a hora da Europa Central (CET), pode ser «Brazzaville» (Congo). Mude o fuso horário do telefone para o Congo.
 
 ![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
 
-3. In **AAPS** refresh your pump and switch to your desired **Profile**.
+3. No **AAPS**, atualize a bomba e mude para o **Perfil** desejado.
 
-4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA and Max-Carb-Time - whatever is bigger.
+4. Verifique a **IA** e a **HCA** no **AAPS** e, se não estiverem corretas, desative o **Loop** durante pelo menos uma DAI ou o tempo máximo de absorção dos hidratos (Max-Carb-Time) – o que for maior.
 
-5. Actions to take after the clock change. A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Ideally your **COB** and **IOB** should both be close to zero.
+5. Ações a fazer depois da mudança da hora. Um bom momento para voltar ao fuso horário local é quando a **IA** está baixa. Por exemplo, uma hora antes de uma refeição, como o pequeno-almoço. O ideal é que a **HCA** e a **IA** estejam ambas perto de zero.

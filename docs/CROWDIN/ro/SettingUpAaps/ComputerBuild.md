@@ -19,17 +19,17 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 * A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk. See table below :
 
-| Versiune AAPS               | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
-| --------------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| 2.6.2                       | 3.6.1                                                |                                                        | 5.6.4  | 11  |
-| 2.8.2.1                     | 4.1.1                                                |                                                        | 6.1.1  | 13  |
-| [3.1.0.3](#version3100)     | 2020.3.1                                             | tested up to Quail 4                                   | 7.3.3  | 17  |
-| [3.2.0.4](#version3204)     | Hedgehog (2023.1.1)                                  | tested up to Quail 4                                   | 8.2    | 17  |
-| [3.3.1.3](#version3300)     | Ladybug Feature Drop (2024.2.2)                      | tested up to Quail 4                                   | 8.10   | 21  |
-| [3.3.2](#version3300)       | Meerkat (2024.3.1)                                   | tested up to Quail 4                                   | 8.11.1 | 21  |
-| [3.3.2.1](#version3321)     | Narwhal (2025.1.2)                                   | tested up to Quail 4                                   | 8.13   | 21  |
-| [3.4.2.6](#version3426)     | Panda 2 (2025.3.2)                                   | tested up to Quail 4                                   | 9      | 21  |
-| [4.0.0-beta1](#version4000) | Rabbit 1                                             | up to latest Rabbit 1                                  | 9.8    | 21  |
+| Versiune AAPS                                                            | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
+| ------------------------------------------------------------------------ | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
+| 2.6.2                                                                    | 3.6.1                                                |                                                        | 5.6.4  | 11  |
+| 2.8.2.1                                                                  | 4.1.1                                                |                                                        | 6.1.1  | 13  |
+| [3.1.0.3](https://github.com/nightscout/AndroidAPS/releases/tag/3.1.0.3) | 2020.3.1                                             | tested up to Quail 4                                   | 7.3.3  | 17  |
+| [3.2.0.4](#version3204)                                                  | Hedgehog (2023.1.1)                                  | tested up to Quail 4                                   | 8.2    | 17  |
+| [3.3.1.3](#version3300)                                                  | Ladybug Feature Drop (2024.2.2)                      | tested up to Quail 4                                   | 8.10   | 21  |
+| [3.3.2](#version3300)                                                    | Meerkat (2024.3.1)                                   | tested up to Quail 4                                   | 8.11.1 | 21  |
+| [3.3.2.1](#version3321)                                                  | Narwhal (2025.1.2)                                   | tested up to Quail 4                                   | 8.13   | 21  |
+| [3.4.2.6](#version3426)                                                  | Panda 2 (2025.3.2)                                   | tested up to Quail 4                                   | 9      | 21  |
+| [4.0.0](#version400)                                                     | Rabbit 2 (2026.2.2)                                  | Latest                                                 | 9.8    | 21  |
 
 The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
 
@@ -41,27 +41,27 @@ The Gradle version is linked to the source code, you will always get the correct
 <tbody>
   <tr>
     <th class="tg-baqh">OS (doar 64 biți)</th>
-    <td class="tg-baqh">Windows 8 sau mai mare</td>
-    <td class="tg-baqh">Mac OS 10.14 sau mai mare</td>
-    <td class="tg-baqh">Orice Linux care acceptă Gnome, KDE, sau Unity DE;&nbsp;&nbsp;GNU C Library 2.31 sau mai recent</td>
+    <td class="tg-baqh">Windows 10 or higher</td>
+    <td class="tg-baqh">macOS 12 or higher</td>
+    <td class="tg-baqh">Any Linux distribution that supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 or later</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">CPU (doar 64 biți)</th>
-    <td class="tg-baqh">arhitectură x86_64 CPU; a doua generație Intel Core sau mai nou sau AMD CPU cu suport pentru un <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">chip-uri pe bază de ARM sau de a doua generație Intel Core sau mai noi cu suport pentru <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hipervisor.Framework</span></a></td>
-    <td class="tg-baqh">arhitectură x86_64 CPU; a doua generație Intel Core sau un procesor AMD cu suport pentru Virtualizare AMD (AMD-V) și SSSE3</td>
+    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">virtualization support</a> (Intel VT-x or AMD-V) enabled in the BIOS</td>
+    <td class="tg-baqh">Apple Silicon (M1 or newer), or 6th generation Intel Core or newer (support for Intel Macs is being phased out)</td>
+    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with virtualization support (Intel VT-x or AMD-V) enabled in the BIOS</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Memorie RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">16GB or more</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16GB or more (8GB is the strict minimum for Android Studio alone, 32GB is recommended)</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Disc</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Cel puțin 30GB spațiu liber. Se recomandă SSD.</td>
+    <td class="tg-baqh" colspan="3"><p align="center">At least 32GB free space. Se recomandă SSD.</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Rezoluție</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 minimum (1920 x 1080 recommended)<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>

@@ -1,7 +1,7 @@
 (Open-APS-features-DynamicISF)=
 # 動態 ISF (DynISF)
 
-到目前為止，使用 **AMA** 和 **SMB**，**ISF** 在 **設定檔** 中定義，並且在一天中的每個定義時間段內是靜態的。 But in reality, a person’s **ISF** is not that static and varies depending on their **BG** level: when at a high BG level, the user will need more insulin to bring their **BG** down 50 mg/dL / 3 mmol/L than they would at a lower **BG**. [Autosens](#Open-APS-features-autosens) 是第一個嘗試解決此問題的演算法，通過在用餐時間以外調整 **ISF**。
+到目前為止，使用 **AMA** 和 **SMB**，**ISF** 在 **設定檔** 中定義，並且在一天中的每個定義時間段內是靜態的。但實際上，個人的 **ISF** 並非固定不變，而是會隨血糖值而改變：血糖值偏高時，使用者需要比血糖值較低時更多的胰島素，才能讓血糖下降 50 mg/dL / 3 mmol/L。 [Autosens](#Open-APS-features-autosens) 是第一個嘗試解決此問題的演算法，通過在用餐時間以外調整 **ISF**。
 
 **Dynamic ISF**（也稱為 **DynISF**）具有相同的目的，但更為先進，因為它可以在任何時間使用。建議僅供具有良好控管和監控 **AAPS** 的進階使用者使用。在嘗試之前，請閱讀以下 [啟動 Dynamic ISF 時需考慮的事項](#dyn-isf-things-to-consider-when-activating-dynamicisf)。
 
@@ -33,9 +33,9 @@
 
 ![實作使用上述方程計算當前<strong x-id="1">ISF</strong>，並在 oref1 預測中用於<strong x-id="1">體內胰島素</strong>、<strong x-id="1">ZT</strong> 和 <strong x-id="1">UAM</strong>。](../images/DynamicISF/DynISF2.png)
 
-紅色圈起的部分顯示： `設定檔 ISF` -> `根據 DynISF 計算的 ISF`。 <br/> Tapping on this section shows a dialog with additional information, such as the **ISF** used for the calculator and carbs absorption (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
+紅色圈起的部分顯示： `設定檔 ISF` -> `根據 DynISF 計算的 ISF`。 <br/> 點選此區塊會顯示包含其他資訊的對話方塊，例如計算機使用的 **ISF** 和碳水化合物吸收情形（請參閱下方的 [ISF 的其他用途](#dynisf-other-usages-of-isf)）。
 
-The **DynISF** value can also be shown in a graph: tap **Add graph** below the graphs on the main screen and select **VSENS** (variable sensitivity). It shows as a white line (bottom of the image above).
+**DynISF** 數值也可以顯示在圖表中：點選主畫面圖表下方的 **新增圖表**，然後選取 **VSENS**（可變敏感度）。它會以白線顯示（如上方圖片底部所示）。
 
 ## Dynamic ISF 是如何計算的？
 
@@ -57,18 +57,18 @@ TDD 將使用以下數值的組合：
 
 ### 動態胰島素敏感因子調整係數
 
-This is set within the user’s **Settings** and is used to make **Dynamic ISF** more or less aggressive. 請參見下文的[偏好設定](#dyn-isf-preferences)部分。
+這項設定位於使用者的 **設定** 中，可用來調整 **Dynamic ISF** 的積極程度。請參見下文的[偏好設定](#dyn-isf-preferences)部分。
 
 ### 胰島素除數
 胰島素除數取決於所使用胰島素的峰值，且與峰值時間成反比。對於 Lyumjev，該值為 75；對於 Fiasp 為 65；對於普通速效胰島素則為 55。
 
 ### 根據預測的血糖進行劑量決策的ISF
 
-動態敏感度是根據**當前血糖** 值計算的，並顯示為您當前在**AAPS**中的**ISF**。但是在進行劑量計算時，oref1 演算法計算並使用 **未來 ISF**。
+動態敏感度是根據**當前血糖** 值計算的，並顯示為你當前在**AAPS**中的**ISF**。但是在進行劑量計算時，oref1 演算法計算並使用 **未來 ISF**。
 
 這樣做是為了防止在 **血糖** 較低或預測會下降時，劑量過多的胰島素。
 
-**未來 ISF** 使用與上面描述的相同公式，不同的是，它可能使用 **最低預測血糖** 來替代 **目前血糖**。 **Minimum predicted BG**, [as calculated in oref1](#aaps-screens-how-predictions-become-a-dosing-decision), is the minimum value your BG is predicted to go during all the course of the predictions.
+**未來 ISF** 使用與上面描述的相同公式，不同的是，它可能使用 **最低預測血糖** 來替代 **目前血糖**。**最低預測血糖** 是 [在 oref1 中計算](#aaps-screens-how-predictions-become-a-dosing-decision)的數值，代表整段預測期間中血糖可能降到的最低值。
 
 * 如果目前 **血糖** 高於目標<br/> **且** 如果 **血糖** 水平穩定，在 +/- 3 mg/dL 內：<br/>血糖在公式中的使用如下：`平均值（預測最低血糖，當前血糖）`。
 * 如果最終 **血糖** 高於目標，且葡萄糖水平正在上升，<br/>  
@@ -97,12 +97,12 @@ This is set within the user’s **Settings** and is used to make **Dynamic ISF**
 (dyn-isf-preferences)=
 ## 設定
 
-Check **Use dynamic sensitivity** in [Settings > OpenAPS SMB](#Preferences-openaps-smb-settings) to activate. 選擇後會提供新的設定。
+請前往 [設定 > OpenAPS SMB](#Preferences-openaps-smb-settings)，勾選 **使用動態敏感度**以啟用此功能。選擇後會提供新的設定。
 
 ![動態 ISF 設定](../images/preferences/settings_dynamic_isf.png)
 
 (dyn-isf-adjustment-factor)=
-### DynamicISF adjustment factor
+### DynamicISF 調整係數
 **動態 ISF** 基於一條應適用於每個人的單一規則運作，這意味著具有相同 **TDD** 的人將具有相同的敏感性。由於每個用戶都有其個人敏感性，因此 **調整因子** 允許用戶定義他們對胰島素的敏感性是比“標準”人更高還是更低。
 
 **調整因子** 是一個介於 1% 和 300% 之間的值。這作為**TDD**值的乘數。
@@ -116,13 +116,13 @@ Check **Use dynamic sensitivity** in [Settings > OpenAPS SMB](#Preferences-opena
 
 這意味著，當使用 **動態 ISF** 時，你可以使用 **設定檔百分比** 來手動暫時微調你的敏感性。這對於體能活動（較低百分比）、感冒（較高百分比）等情況將會很有用。
 
-### LGS threshold
+### LGS 臨界值
 
-**BG** value below which insulin is suspended (low glucose suspend). 預設值使用標準目標模型。 A user can set this value between 60 mg/dL (3.3 mmol/L) and 100 mg/dL (5.5 mmol/L). 低於 65/3.6 的值會使用預設模型。
+**血糖**低於此數值時，胰島素會暫停輸注（低血糖暫停）。預設值使用標準目標模型。使用者可將此數值設在 60 mg/dL（3.3 mmol/L）到 100 mg/dL（5.5 mmol/L）之間。低於 65/3.6 的值會使用預設模型。
 
-### DynamicISF adjust sensitivity
+### DynamicISF 調整敏感度
 
-This setting (*"Adjust sensitivity calculations when using DynamicISF"*) replaces Autosens, and uses the last 24h **TDD**/7D **TDD** as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. 若選項中啟用根據敏感性調整目標，則此計算值也會用來調整目標值。與 Autosens 不同，此選項不調整**ISF**值。
+此設定（*「使用 DynamicISF 時調整敏感度計算」*）會取代 Autosens，並以過去 24 小時的 **TDD**／過去 7 天的 **TDD** 為依據，增加或減少基礎率，方式與標準 Autosens 相同。若選項中啟用根據敏感性調整目標，則此計算值也會用來調整目標值。與 Autosens 不同，此選項不調整**ISF**值。
 
 (dyn-isf-things-to-consider-when-activating-dynamicisf)=
 ## 啟用動態 ISF 時需考慮的事項
@@ -134,4 +134,4 @@ This setting (*"Adjust sensitivity calculations when using DynamicISF"*) replace
   * 生活方式變化（飲食或身體活動模式不一致）
   * 每日的 TDD 或敏感性不一致。
 * 沒有準確的指導來設定 **調整因子** 的初始值。然而，作為起點：假設你的 **設定檔** 數值正確，當你處於範圍內且 **血糖** 水平穩定時，**動態 ISF** 值應該與你之前在 **設定檔** 中的值大致相同。<br/>如果你發現 **動態 ISF** 太積極，請降低 **調整因子**，反之亦然。
-* 儘管 **動態 ISF** 完全不使用 **設定檔 ISF**，如果你注意到你的敏感性與你之前存儲的 **設定檔** 上的數值相差很大，你應該考慮將其保持最新。 This may be useful in case you lose your **AAPS** data (_e.g._ new phone, new **AAPS** version…), as your **Profile ISF** will be used as fallback for the next 7 days.
+* 儘管 **動態 ISF** 完全不使用 **設定檔 ISF**，如果你注意到你的敏感性與你之前存儲的 **設定檔** 上的數值相差很大，你應該考慮將其保持最新。如果您的 **AAPS** 資料遺失（_例如_更換新手機或使用新版 **AAPS**……），這項功能可能會很有用；接下來 7 天會以您的 **設定檔 ISF** 作為備用值。

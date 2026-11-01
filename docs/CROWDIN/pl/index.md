@@ -106,14 +106,14 @@ Konfiguracja serwera raportów <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
 ```{toctree}
-:caption: 4) Konfiguracja AAPS
+:caption: 4) Configure AAPS
 
-Kreator konfiguracji AAPS <./SettingUpAaps/SetupWizard.md>
-Twój profil AAPS <./SettingUpAaps/YourAapsProfile.md>
-Zmiana konfiguracji AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Konfiguracja (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
-- Ustawienia (Preferencje) <./SettingUpAaps/Preferences.md>
-Ukończenie zadań <./SettingUpAaps/CompletingTheObjectives.md>
+Setup Wizard <./SettingUpAaps/SetupWizard.md>
+Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
+- Settings <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -165,15 +165,15 @@ Wymiana własnych tarcz zegarka <./ExchangeSiteCustomWatchfaces/index.md>
 ```
 
 ```{toctree}
-:caption: 8) Konserwacja AAPS
+:caption: 8) Maintenance of AAPS
 
-Tworzenie i przywracanie kopii zapasowych <./Maintenance/ExportImportSettings.md>
-Informacje o wersji <./Maintenance/ReleaseNotes.md>
-Co zmieniło się w AAPS v4 <./Maintenance/V4Changes.md>
-Aktualizacja do nowej wersji lub innej gałęzi <./Maintenance/UpdateToNewVersion.md>
-- Aktualizacja w przeglądarce (fork) <./Maintenance/UpdateBrowserBuild.md>
-- Aktualizacja w Android Studio <./Maintenance/UpdateComputerBuild.md>
-Koniec wsparcia <./Maintenance/EndOfLife.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
+AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+What changed in AAPS v4 <./Maintenance/V4Changes.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
+- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
+End of life <./Maintenance/EndOfLife.md>
 
 ```
 

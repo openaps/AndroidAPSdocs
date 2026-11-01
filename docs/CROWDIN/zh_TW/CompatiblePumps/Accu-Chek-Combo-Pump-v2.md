@@ -5,7 +5,7 @@
 ```{admonition} Accu-Chek Combo is being phased out
 :class: note
 
-Roche is withdrawing from the insulin pump market to refocus its diabetes portfolio on the Accu-Chek SmartGuide CGM. It has communicated the end of sales of both the Accu-Chek Combo and Accu-Chek Insight pumps; its remaining Accu-Chek Solo micropump is also being wound down (last deliveries in Germany at the end of 2025). The change is being rolled out by region, starting in Germany, with other European markets expected to follow. If you rely on this pump, plan ahead for a transition to a supported pump.
+Roche 正退出胰島素幫浦市場，並將糖尿病產品組合的重心轉向 Accu-Chek SmartGuide CGM。 Roche 已宣布 Accu-Chek Combo 和 Accu-Chek Insight 幫浦即將停售；目前仍在販售的 Accu-Chek Solo 微型幫浦也將逐步停產（德國最後一批交貨時間為 2025 年底）。這項變更將分區推行，從德國開始，預計其他歐洲市場也會跟進。如果你目前使用這款幫浦，請提前規劃轉換至受支援的幫浦。
 ```
 
 ```{contents} Table of contents
@@ -15,15 +15,15 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
 
 ## 幫浦與AAPS的功能
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Automatic DST and timezone handling.
+* 透過手機內建的藍牙與**AAPS**通訊，不需要額外的通訊裝置。
+* 自動夏令時間（DST）與時區處理.
 
 ## 硬體和軟體需求
 
 * 一台 Roche Accu-Chek Combo 幫浦（任何韌體版本均可使用）。
 * 一個 Smartpix 或 Realtyme 裝置，配合 360 設定軟體來配置幫浦。 （Roche 在客戶要求下會免費寄送 Smartpix 裝置和設定軟體。）
-* A compatible phone running Android 12 or newer. 請參閱 [發行說明](#maintenance-android-version-aaps-version) 以獲取詳細訊息。
-* The **AAPS** app installed on your phone.
+* 一支執行 Android 12 或更新版本的相容手機。請參閱 [發行說明](#maintenance-android-version-aaps-version) 以獲取詳細訊息。
+* 安裝在手機上的 **AAPS** 應用程式。
 
 根據手機的藍牙支援品質及其是否具備額外的省電邏輯，有些手機可能比其他手機運作得更好。手機列表可以在 [AAPS 手機列表](#Phones-list-of-tested-phones) 文件中找到。請注意，這不是完整的列表，只反應個人使用經驗。我們鼓勵你也分享你的經驗，這樣可以幫助其他人（這些專案是關於傳遞經驗）。
 
@@ -36,15 +36,15 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
 
 * 目前不支援擴展注射和多波注射 (你可以使用 [擴展碳水化合物](../DailyLifeWithAaps/ExtendedCarbs.md) 作為替代)。
 * 僅支援一個基礎設定檔（第一個）。
-* The lowest basal rate in your **Profile** is 0.05 U/h. **AAPS** refuses a **Profile** with a lower rate. The Combo rounds basal rates to its own steps (0.01 U/h below 1 U/h, 0.05 U/h up to 10 U/h, 0.1 U/h above). **AAPS** uses the rates the pump really gives.
-* Temporary basal rates are limited to 500% of the current basal rate. **AAPS** takes this limit into account.
-* 如果幫浦上的目前活動設定檔不是設定檔 1，則循環模式將被停用。 This continues until profile no. 1 is made the active one; when that is done, the next time AAPS connects (either on its own after a while or because you tap **Refresh** on the Accu-Chek Combo pump screen), it will notice that profile no. 1 is the current one, and enable the loop again.
+* 您的 **設定檔**中，最低的基礎率為 0.05 U/h。 **AAPS** 不接受基礎率更低的 **設定檔**。 Combo 會依照自己的步進值調整基礎率（低於 1 U/h 時為 0.01 U/h，最高至 10 U/h 時為 0.05 U/h，高於 10 U/h 時為 0.1 U/h）。 **AAPS** 使用幫浦實際輸送的基礎率。
+* 臨時基礎率的上限為目前基礎率的 500%。 **AAPS** 會將此上限納入考量。
+* 如果幫浦上的目前活動設定檔不是設定檔 1，則循環模式將被停用。這種情況會持續到將設定檔編號 1 設為啟用中的設定檔為止；完成後，AAPS 下次連線時（可能是過一段時間後自動連線，也可能是您在 Accu-Chek Combo 幫浦畫面點選 **重新整理**），就會確認目前使用的是設定檔編號 1，並重新啟用循環。
 * 如果循環請求取消正在運作的 TBR，Combo 將設置一個 90% 或 110% 的 TBR，持續 15 分鐘。這是因為實際取消 TBR 會在幫浦上觸發警報，並產生大量震動，這些震動無法停用。
-* 藍牙連線的穩定性隨不同手機而異，可能會出現「幫浦無法使用」的警報，這時幫浦無法再建立連線。 If that error occurs, make sure Bluetooth is enabled, tap **Refresh** on the pump screen (**Manage** > **Pump**) to see if this was caused by an intermittent issue and if still no connection is established, reboot the phone which should usually fix this.
-* There is another issue where a restart doesn't help but a button on the pump must be pressed (which resets the pump's Bluetooth stack), before the pump accepts connections from the phone again.
+* 藍牙連線的穩定性隨不同手機而異，可能會出現「幫浦無法使用」的警報，這時幫浦無法再建立連線。如果發生這項錯誤，請確認藍牙已啟用，並在幫浦畫面（**管理** > **幫浦**）點選 **重新整理**，確認問題是否只是暫時發生。如果仍無法建立連線，請重新啟動手機，通常就能解決問題。
+* 還有另一個問題：重新啟動無法解決問題，必須按下幫浦上的按鈕（這會重設幫浦的藍牙堆疊），幫浦才會再次接受手機的連線。
 * 避免在幫浦上設定 TBR，因為循環控制 TBR。在幫浦上偵測到新的 TBR 可能需要長達 20 分鐘，並且 TBR 的效果僅從偵測時開始計算，因此最壞情況下可能有 20 分鐘的 TBR 沒有反應在 IOB 中。
 
-The driver is currently written to support the following languages on the Combo. （這與 AAPS 的語系無關——是顯示在 Combo LCD 上的語系。）
+目前的驅動程式支援 Combo 上的下列語系。（這與 AAPS 的語系無關——是顯示在 Combo LCD 上的語系。）
 
 * 英語
 * 西班牙語
@@ -106,31 +106,31 @@ The driver is currently written to support the following languages on the Combo.
 
 ## 註冊驅動並將其與 Combo 配對
 
-* Open the **menu** (☰) in the top-left corner, go to [**Configuration** > **Pump**](../SettingUpAaps/ConfigBuilder.md) and select **Accu-Chek Combo**.
+* 開啟左上角的 **選單**（☰），前往 [**組態設定** > **幫浦**](../SettingUpAaps/ConfigBuilder.md)，然後選取 **Accu-Chek Combo**。
 
-  ![Configuration > Pump with the Accu-Chek Combo plugin](../images/v4/Configuration/configuration_pump_list_1.png)
+  ![在「組態設定」>「幫浦」中選取 Accu-Chek Combo 外掛](../images/v4/Configuration/configuration_pump_list_1.png)
 
-  Once it is selected, the **Accu-Chek Combo** card shows two buttons, **Settings** and **Open plugin**:
+  選取後，**Accu-Chek Combo** 卡片會顯示兩個按鈕：**設定**和**開啟外掛**：
 
-  ![The Accu-Chek Combo plugin selected in Configuration > Pump](../images/v4/Pumps/accu_chek_combo_enabled.png)
+  ![在「組態設定」>「幫浦」中選取 Accu-Chek Combo 外掛](../images/v4/Pumps/accu_chek_combo_enabled.png)
 
-  **Settings** opens the settings of the Accu-Chek Combo driver (see [Settings](#combov2-preferences) below):
+  **設定**會開啟 Accu-Chek Combo 驅動程式的設定（請參閱下方的[設定](#combov2-preferences)）：
 
-  ![Accu-Chek Combo driver settings](../images/v4/Pumps/accu_chek_combo_settings.png)
+  ![Accu-Chek Combo 驅動程式設定](../images/v4/Pumps/accu_chek_combo_settings.png)
 
-  **Open plugin** (or **Manage** > **Pump**) opens the Accu-Chek Combo pump screen. Before a pump is paired it shows **Not paired to a pump**:
+  **開啟外掛**（或**管理** > **幫浦**）會開啟 Accu-Chek Combo 幫浦畫面。尚未配對幫浦時，畫面會顯示**尚未與幫浦配對**：
 
-  ![Accu-Chek Combo pump screen before pairing](../images/v4/Pumps/accu_chek_combo_pump_screen.png)
+  ![配對前的 Accu-Chek Combo 幫浦畫面](../images/v4/Pumps/accu_chek_combo_pump_screen.png)
 
-* On the pump screen, tap **Pairing**. The **Pair with pump** screen opens. Follow the steps shown on screen, then tap **Start pairing**. When Android asks for permission to make the phone visible to other Bluetooth devices, tap **Allow**. Eventually, the Combo shows a 10-digit pairing PIN on its screen, and **AAPS** asks for it. Enter that PIN in the **10-digit PIN** field.
+* 在幫浦畫面上，點選**配對**。系統會開啟**與幫浦配對**畫面。依照畫面上的步驟操作，然後點選**開始配對**。 Android 詢問是否允許手機對其他藍牙裝置顯示時，請點選**允許**。稍後，Combo 會在螢幕上顯示 10 位數的配對 PIN 碼，而 **AAPS** 也會要求輸入 PIN 碼。在**10 位數 PIN 碼**欄位中輸入該 PIN 碼。
 
-  ![The Pair with pump screen with the Start pairing button](../images/combo/combov2-pairing-screen-1.png)
+  ![「與幫浦配對」畫面及「開始配對」按鈕](../images/combo/combov2-pairing-screen-1.png)
 
-  ![Android asking to make the phone visible to other Bluetooth devices](../images/combo/combov2-pairing-bt-visible-prompt.png)
+  ![Android 詢問是否允許手機對其他藍牙裝置顯示](../images/combo/combov2-pairing-bt-visible-prompt.png)
 
-  ![Combo pairing in progress, scanning for the pump](../images/combo/combov2-pairing-screen-2.png)
+  ![正在配對 Combo，並掃描幫浦](../images/combo/combov2-pairing-screen-2.png)
 
-  The next pictures are from an older **AAPS** version. The steps and texts are the same, but the screens look slightly different.
+  接下來的圖片是較舊版本的 **AAPS** 畫面。步驟和文字都相同，但畫面略有不同。
 
   ![Combo 配對 UI 3 的截圖](../images/combo/combov2-pairing-screen-3.png)
 
@@ -138,11 +138,11 @@ The driver is currently written to support the following languages on the Combo.
 
   ![Combo 配對 UI 4 的截圖](../images/combo/combov2-pairing-screen-5.png)
 
-* If the PIN is entered incorrectly, **AAPS** shows **PIN did not work. Check if there was a typo. If this keeps happening, cancel and retry pairing.**
+* 如果 PIN 碼輸入錯誤，**AAPS** 會顯示**PIN 碼無效。請確認是否有輸入錯誤。如果問題持續發生，請取消並重新嘗試配對。**
 
   ![Combo 配對 UI 3 的截圖](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
-* When **Successfully paired with Combo** is shown, tap **OK**. You return to the pump screen, which now shows the pump status (see [Accu-Chek Combo pump screen contents](#combov2-tab-contents) below). The **Pairing** button is replaced by **Unpair**.
+* 畫面顯示**已成功與 Combo 配對**時，請點選**確定**。系統會返回幫浦畫面，現在畫面會顯示幫浦狀態（請參閱下方的[Accu-Chek Combo 幫浦畫面內容](#combov2-tab-contents)）。**配對**按鈕會變成**取消配對**。
 
 * 為了驗證你的設置（幫浦與任何導管**中斷連線**以確保安全！），使用 AAPS 設置一個 500％ 的 TBR 持續 15 分鐘並發出注射指令。幫浦現在應該正在運作 TBR，並且歷史紀錄中有注射紀錄。 AAPS 也應顯示活動的 TBR 和已注射的紀錄。
 
@@ -152,54 +152,54 @@ The driver is currently written to support the following languages on the Combo.
 
 Accu-Chek Combo 是在藍牙 4.0 發佈之前開發的，僅在第一款 Android 版本發佈一年後。這就是為什麼他與其他設備配對的方式，與當今 Android 中的方式不100％ 相容。要完全克服這一點，AAPS 需要系統級別的權限，這僅適用於系統應用程式。這些應用程式由手機製造商安裝在手機中 - 用戶無法安裝系統應用程式。
 
-The consequence of this is that pairing will never be 100% without problems. 特別是，在配對過程中，Android 的藍牙 PIN 對話框可能會短暫顯示並自動消失。但有時，他會停留在螢幕上，並要求輸入 4 位數 PIN。（這與 10 位 Combo 配對 PIN 不同。）不要輸入任何東西，只需按取消即可。如果配對未繼續，請按照螢幕上的指示重試配對。
+因此，配對過程難免會遇到問題，無法保證百分之百順利。特別是，在配對過程中，Android 的藍牙 PIN 對話框可能會短暫顯示並自動消失。但有時，他會停留在螢幕上，並要求輸入 4 位數 PIN。（這與 10 位 Combo 配對 PIN 不同。）不要輸入任何東西，只需按取消即可。如果配對未繼續，請按照螢幕上的指示重試配對。
 
 (combov2-tab-contents)=
-## Accu-Chek Combo pump screen contents
+## Accu-Chek Combo 幫浦畫面內容
 
-To open the pump screen, go to **Manage** > **Pump**. Once a pump is paired, it shows the following information (items are listed from top to bottom):
+若要開啟幫浦畫面，請前往**管理** > **幫浦**。幫浦配對後，畫面會顯示以下資訊（由上而下排列）：
 
-![Screenshot of the Accu-Chek Combo pump screen with pairing (older AAPS version)](../images/combo/combov2-tab-with-pairing.png)
+![已配對的 Accu-Chek Combo 幫浦畫面截圖（較舊版本的 AAPS）](../images/combo/combov2-tab-with-pairing.png)
 
-1. **Driver state**: The driver can be in one of the following states:
-   - **Disconnected**: There is no Bluetooth connection; the driver is in this state most of the time, and only connects to the pump when needed - this saves power
-   - **Connecting**
-   - **Checking pump**: the pump is connected, but the driver is currently performing safety checks to ensure that everything is OK and up to date
-   - **Ready**: the driver is ready to accept commands from AAPS
-   - **Suspended**: the pump is suspended (shown as "stopped" in the Combo)
-   - A description of the command being executed, for example **Setting basal profile** or **Updating pump status**
-   - **Error**: an error occurred; the connection was terminated, any ongoing command was aborted
-2. **Last connection**: How many minutes ago the driver successfully connected to the Combo; if this goes beyond 30 minutes, this item is shown with a red color
-3. **Battery**: Battery level; the Combo only indicates **Full**, **Low** or **Empty**, and does not offer anything more accurate (like a percentage), so only these three levels are shown here
-4. **Reservoir**: How many IU are currently in the Combo's reservoir
-5. **Last bolus**: How many minutes ago the last bolus was delivered; if none was delivered yet after AAPS was started, this is not shown
-6. **Temp basal**: Details about the currently active temporary basal; if none is currently active, this is not shown
-7. **Base basal rate**: Currently active base basal rate ("base" means the basal rate without any active TBR influencing the basal rate factor)
-8. **Serial number**: Combo serial number as indicated by the pump (this corresponds to the serial number shown on the back of the Combo)
-9. **Bluetooth address**: The Combo's 6-byte Bluetooth address, shown in the `XX:XX:XX:XX:XX:XX` format
+1. **驅動狀態**：驅動可以處於以下狀態之一：
+   - **已中斷連線**：目前沒有藍牙連線。驅動程式大多數時間都處於此狀態，只有在需要時才會連線至幫浦，以節省電力。
+   - **連線中**
+   - **正在檢查幫浦**：幫浦已連線，但驅動程式目前正在執行安全檢查，確認一切正常且為最新狀態。
+   - **就緒**：驅動程式已準備好接收 AAPS 的指令。
+   - **已暫停**：幫浦已暫停（Combo 上會顯示為「已停止」）。
+   - 目前正在執行的指令說明，例如**設定基礎率設定檔**或**更新幫浦狀態**
+   - **錯誤**：發生錯誤，連線已中斷，任何正在執行的指令也已中止。
+2. **上次連線**：驅動程式上次成功連線至 Combo 是幾分鐘前；如果超過 30 分鐘，這個項目會以紅色顯示。
+3. **電池**：電池電量。Combo 只會顯示**充足**、**偏低**或**電量耗盡**，不會提供更精確的資訊（例如百分比），因此這裡只會顯示這三種電量狀態。
+4. **儲存庫**：Combo 儲存庫中目前有多少國際單位（IU）
+5. **上次注射**：上次注射是幾分鐘前；如果 AAPS 啟動後尚未注射，則不會顯示此項目。
+6. **臨時基礎率**：目前啟用的臨時基礎率詳細資訊；如果目前沒有啟用臨時基礎率，則不會顯示此項目。
+7. **基本基礎率**：目前活動的基礎基礎率（「基礎」意味著不受任何活動 TBR 影響的基礎率因子）
+8. **序列號**：Combo 序列號，如幫浦顯示的（這與 Combo 背面的序列號一致）
+9. **藍牙地址**：Combo 的 6 位元組藍牙地址，以 `XX:XX:XX:XX:XX:XX` 格式顯示
 
-While the driver is doing something (for example, setting a basal profile), a box below the list describes the current activity, with a thin progress bar showing the progress.
+驅動程式執行作業時（例如設定基礎率設定檔），清單下方會出現一個方框，說明目前正在進行的作業，並以細進度列顯示進度。
 
-Combo 可以在 _遠端終端_ 模式或 _指令_ 模式下透過藍牙操作。遠端終端模式對應於 Combo 計的 "遠端控制模式"，該模式模擬了幫浦的 LCD 和四個按鈕。有些指令必須由驅動在此模式下執行，因為他們在指令模式中沒有相應的功能。後一種模式要快得多，但正如所說範圍有限。 When the remote-terminal mode is active, the current remote-terminal screen is shown in the field that is located just above the Combo drawing. 然而當驅動切換到指令模式時，該欄位將保持空白。
+Combo 可以在 _遠端終端_ 模式或 _指令_ 模式下透過藍牙操作。遠端終端模式對應於 Combo 計的 "遠端控制模式"，該模式模擬了幫浦的 LCD 和四個按鈕。有些指令必須由驅動在此模式下執行，因為他們在指令模式中沒有相應的功能。後一種模式要快得多，但正如所說範圍有限。遠端終端機模式啟用時，目前的遠端終端機畫面會顯示在 Combo 圖示正上方的欄位中。然而當驅動切換到指令模式時，該欄位將保持空白。
 
-(You do not influence this; the driver fully decides on its own what mode to use. This is merely a note for you to know why sometimes you can see Combo frames in that field.)
+（您無法控制這項設定；驅動程式會自行決定要使用哪種模式。這只是說明為什麼有時會在該欄位看到 Combo 畫面的備註。）
 
-At the bottom, there are these buttons:
+畫面底部有以下按鈕：
 
-- **Refresh**: Triggers an immediate pump status update. It is also used to let AAPS know that a previously discovered error is now fixed and that AAPS can check again that everything is OK (more on that below in [the section about alerts](#combov2-alerts)). You can only tap it when the driver is disconnected, suspended or in the error state.
-- **Unpair**: Unpairs the paired Combo from **AAPS** and Android, after you confirm **Do you really want to unpair the pump?**. When no pump is paired, this button is replaced by **Pairing**.
+- **重新整理**：立即更新幫浦狀態。如果先前發現的錯誤已修正，也可以使用此按鈕通知 AAPS，讓 AAPS 再次確認一切正常（詳情請參閱[警示一節](#combov2-alerts)）。只有在驅動程式中斷連線、暫停或處於錯誤狀態時，才能點選此按鈕。
+- **取消配對**：取消已配對的 Combo 與 **AAPS** 及 Android 的配對；確認 **您確定要取消幫浦的配對嗎？** 後才會執行。尚未配對任何幫浦時，此按鈕會替換為**配對**。
 
 (combov2-preferences)=
 ## 設定
 
-These settings are available for the Combo driver (**Configuration** > **Pump** > **Accu-Chek Combo** > **Settings**, or the settings icon (cog wheel) on the pump screen). Items are listed from top to bottom:
+這些設定適用於 Combo 驅動程式（**組態設定** > **幫浦** > **Accu-Chek Combo** > **設定**，或點選幫浦畫面上的設定圖示（齒輪））。項目依照由上到下的順序列出：
 
-1. **Discovery duration (in seconds)**: When pairing, the driver makes the phone discoverable by the pump. 這控制了這種可見性持續多久。預設選擇最大值（300 秒 = 5 分鐘）。 Android 不允許可見性無限期持續，因此必須選擇一個持續時間。
-2. **Autodetect and automatically enter insulin reservoir change**: If enabled, the driver enters the "reservoir change" that you would normally enter yourself with **Manage** > **Prime/Fill**. 這在[下面進一步詳細說明](#combov2-autodetections)。
-3. **Autodetect and automatically enter battery change**: If enabled, the driver enters the "battery change" that you would normally enter yourself with **Manage** > **Pump Battery Change**. 這在[下面進一步詳細說明](#combov2-autodetections)。
-4. **Enable verbose Combo logging**: This greatly expands the amount of logging done by the driver. **注意**：除非開發人員要求，否則不要啟用此功能。 Otherwise, this can add a lot of noise to **AAPS** logs and lessen their usefulness.
+1. **搜尋持續時間（秒）**：配對時，驅動程式會讓手機可供幫浦搜尋。這控制了這種可見性持續多久。預設選擇最大值（300 秒 = 5 分鐘）。 Android 不允許可見性無限期持續，因此必須選擇一個持續時間。
+2. **自動偵測並輸入胰島素藥匣更換**：啟用後，驅動程式會自動輸入「更換藥匣」紀錄；平常您需要自行前往 **管理** > **預充／填充** 輸入。這在[下面進一步詳細說明](#combov2-autodetections)。
+3. **自動偵測並輸入電池更換**：啟用後，驅動程式會自動輸入「更換電池」紀錄；平常您需要自行前往 **管理** > **更換幫浦電池** 輸入。這在[下面進一步詳細說明](#combov2-autodetections)。
+4. **啟用詳細 Combo 日誌紀錄**：這大大擴展了驅動紀錄的日誌數量。**注意**：除非開發人員要求，否則不要啟用此功能。否則，這可能會讓 **AAPS** 紀錄中產生大量雜訊，降低紀錄的參考價值。
 
-Pairing and unpairing are done on the pump screen, not in the settings (see above).
+配對與取消配對都要在幫浦畫面上操作，而不是在設定中操作（請參閱上方說明）。
 
 (combov2-autodetections)=
 ## 自動偵測並自動輸入電池和儲存庫變更
@@ -208,26 +208,26 @@ Pairing and unpairing are done on the pump screen, not in the settings (see abov
 
 這僅當電池和儲存庫報告為低時_並且_電池和儲存庫有充分的填充時才起效。
 
-These autodetections can be turned off in the driver [settings](#combov2-preferences).
+您可以在驅動程式的[設定](#combov2-preferences)中停用這些自動偵測功能。
 
 (combov2-alerts)=
 ## 警報（警告和錯誤）以及如何處理他們
 
-Combo 以遠端終端螢幕的形式顯示警報。 Warnings are shown with a "Wx" code (x is a digit), along with a short description. 其中一個例子是“W7”，“TBR OVER”。錯誤類似，但會顯示“Ex”代碼。
+Combo 以遠端終端螢幕的形式顯示警報。警告會以「Wx」代碼顯示（x 為數字），並附上簡短說明。其中一個例子是“W7”，“TBR OVER”。錯誤類似，但會顯示“Ex”代碼。
 
 某些警告會被驅動程式自動消除。這些包括：
 
-- W1 "reservoir low" : the driver turns this into a "low reservoir" warning that is shown on the AAPS main screen
-- W2 "battery low" : the driver turns this into a "low battery" warning that is shown on the AAPS main screen
+- W1「藥匣存量偏低」：驅動程式會將此轉為「藥匣存量偏低」警告，並顯示在 AAPS 主畫面上。
+- W2「電池電量偏低」：驅動程式會將此轉為「電池電量偏低」警告，並顯示在 AAPS 主畫面上。
 - W3、W6、W7、W8：這些僅供用戶參考資訊，驅動程式會自動消除他們，因此是安全的
 
-其他警告 _不會_ 被自動消除。此外，錯誤 _絕不_ 會被自動消除。這兩者都是以相同方式處理：他們會導致驅動程式在 AAPS 介面上顯示警報對話框，並中止任何正在執行的指令。 The driver then switches to the "error" state (see [the Accu-Chek Combo pump screen contents above](#combov2-tab-contents)). 此狀態不允許任何指令執行。用戶需要在幫浦上處理錯誤；例如，阻塞錯誤可能需要更換套管。 Once the user took care of the error, normal operation can be resumed by tapping **Refresh** on the Accu-Chek Combo pump screen. 然後驅動程式會連線到 Combo 並更新其狀態，檢查畫面上是否仍顯示錯誤等。此外，驅動程式會在稍後自動重新整理幫浦狀態，因此手動按該按鈕並非必要。
+其他警告 _不會_ 被自動消除。此外，錯誤 _絕不_ 會被自動消除。這兩者都是以相同方式處理：他們會導致驅動程式在 AAPS 介面上顯示警報對話框，並中止任何正在執行的指令。接著，驅動程式會切換至「錯誤」狀態（請參閱[上方 Accu-Chek Combo 幫浦畫面的內容](#combov2-tab-contents)）。此狀態不允許任何指令執行。用戶需要在幫浦上處理錯誤；例如，阻塞錯誤可能需要更換套管。使用者處理完錯誤後，點選 Accu-Chek Combo 幫浦畫面上的**重新整理**，即可恢復正常運作。然後驅動程式會連線到 Combo 並更新其狀態，檢查畫面上是否仍顯示錯誤等。此外，驅動程式會在稍後自動重新整理幫浦狀態，因此手動按該按鈕並非必要。
 
-注射是一個特殊案例。他在 Combo 的指令模式下執行，此模式下不會在中途報告出現的警報。因此，驅動程式無法在注射期間自動消除警告。這意味著不幸的是，幫浦在注射完成之前會一直發出哔哔聲。最常見的中途警報通常是 W1“儲液槽低”。 **Don't** dismiss Combo warnings on the pump itself manually during a bolus. 這會有中斷注射的風險。注射結束後驅動程式會處理警告。
+注射是一個特殊案例。他在 Combo 的指令模式下執行，此模式下不會在中途報告出現的警報。因此，驅動程式無法在注射期間自動消除警告。這意味著不幸的是，幫浦在注射完成之前會一直發出哔哔聲。最常見的中途警報通常是 W1“儲液槽低”。**請勿**在注射期間，手動在 Combo 幫浦上解除警告。這會有中斷注射的風險。注射結束後驅動程式會處理警告。
 
-在驅動程式未與 Combo 連線期間發生的警報不會被驅動程式注意到。 Combo 無法自動將該警報推送到手機；始終需要手機發起連線。因此，該警報將持續存在，直到驅動程式連線到幫浦。 You can tap **Refresh** on the pump screen to trigger a connection and let the driver handle the alert right then and there (instead of waiting until AAPS itself decides to initiate a connection).
+在驅動程式未與 Combo 連線期間發生的警報不會被驅動程式注意到。 Combo 無法自動將該警報推送到手機；始終需要手機發起連線。因此，該警報將持續存在，直到驅動程式連線到幫浦。您可以點選幫浦畫面上的**重新整理**來觸發連線，讓驅動程式立即處理警示，不必等到 AAPS 自行決定開始連線。
 
-**重要**：如果發生錯誤或顯示非自動消除的警告，驅動程式會進入錯誤狀態。在這種狀態下，循環 **將會被阻斷** 直到幫浦狀態被重新整理！ It is unblocked after the pump status is updated (either by tapping **Refresh** or by the driver's eventual auto-update) and no error is shown anymore.
+**重要**：如果發生錯誤或顯示非自動消除的警告，驅動程式會進入錯誤狀態。在這種狀態下，循環 **將會被阻斷** 直到幫浦狀態被重新整理！幫浦狀態更新後（可透過點選**重新整理**，或等待驅動程式稍後自動更新），且不再顯示錯誤時，就會解除封鎖。
 
 ## 使用 Combo 時需注意的事項
 
@@ -247,93 +247,93 @@ Combo 以遠端終端螢幕的形式顯示警報。 Warnings are shown with a "W
 4. 如果連線嘗試仍然失敗，考慮解除配對並重新配對幫浦。
 
 (combov2-tips-for-basic-usage)=
-## Tips for basic usage
+## 基本使用提示
 
-### How to ensure smooth operations
+### 如何確保系統運作順暢
 
-* Always **carry the smartphone with you**, leave it next to your bed at night. As your pump may lay behind or under your body while you sleep, a higher position (on a shelf or board) works best.
-* Always make sure that the pump battery is as full as possible. See the battery section for tips regarding the battery.
-* Whenever possible, only operate the pump via the AAPS app. To facilitate this, activate the key lock on the pump under **PUMP SETTINGS / KEY LOCK / ON**. Only when changing the battery or the cartridge, it is necessary to use the pump's keys.
+* 始終 **隨身攜帶手機**，晚上將其放在床邊。睡覺時，幫浦可能會在您的身體下方或後方，因此放在較高的位置（例如架子或板子上）效果最好。
+* 始終確保幫浦的電池盡可能充滿。電池相關提示請參閱電池一節。
+* 請盡可能只透過 AAPS App 操作幫浦。為了方便操作，請前往幫浦的 **PUMP SETTINGS / KEY LOCK / ON**，啟用按鍵鎖定。只有在更換電池或藥匣時，才需要使用幫浦的按鍵。
 
-![Keylock](../images/combo/combo-tips-keylock.png)
+![按鍵鎖定](../images/combo/combo-tips-keylock.png)
 
-### Pump not reachable. What to do?
+### 幫浦無法連線。該怎麼辦？
 
-#### Activate pump unreachable alarm
-* In **AAPS**, tap the **Settings** (gear) icon at the top right of the main screen, go to **Local alerts**, activate **Alert if pump is unreachable** and set **Pump unreachable threshold** to **31** minutes.
-* This will give you enough time to not trigger the alarm when leaving the room while your phone is left on the desk, but informs you if the pump cannot be reached for a time that exceeds the duration of a temporary basal rate.
+#### 啟動幫浦無法連線的警報
+* 在 **AAPS** 中，點選主畫面右上角的**設定**（齒輪）圖示，前往**本機警示**，啟用**幫浦無法使用時發出警示**，並將**幫浦無法使用的門檻**設為 **31** 分鐘。
+* 這會給你足夠的時間，當你離開房間時不會觸發警報，但會在幫浦無法連線的時間超過臨時基礎率持續時間時通知你。
 
-#### Restore reachability of the pump
+#### 恢復幫浦連線
 
-* When AAPS reports a **pump unreachable** alarm, first release the keylock and **press any key on the pump** (e.g. "down" button). As soon as the pump display has turned off, tap **Refresh** on the Accu-Chek Combo pump screen (**Manage** > **Pump**). Mostly then the communication works again.
-* If that does not help, reboot your smartphone. After the restart, AAPS will be reactivated and a new connection will be established with the pump.
+* 當 AAPS 報告 **幫浦無法連線** 時，首先解除按鍵鎖定並**按下幫浦上的任意鍵**（例如 "下" 鍵）。幫浦螢幕熄滅後，請立即點選 Accu-Chek Combo 幫浦畫面上的**重新整理**（**管理** > **幫浦**）。通常這樣操作後，通訊就能恢復正常。
+* 如果這樣不行，請重新啟動你的手機。重新啟動後，AAPS 會重新註冊並與幫浦建立新連線。
 
-* The tests with different smartphones have shown that certain smartphones trigger the "pump unreachable" error more often than others. See [AAPS Phones](#Phones-list-of-tested-phones) for successfully tested smartphones.
+* 測試顯示，某些手機更容易觸發 "幫浦無法連線" 錯誤。請查看 [AAPS 手機列表](#Phones-list-of-tested-phones) 以獲得成功測試的智慧型手機。
 
-#### Root causes and consequences of frequent communication errors
-* On phones with **low memory** (or **aggressive power-saving** settings), AAPS is often shut down. You can tell by the fact that the treatment buttons (QuickLaunch toolbar) on the main screen are not shown when opening AAPS because the system is initializing. This can trigger "pump unreachable alarms" at startup. In the **Last connection** field of the pump screen (**Manage** > **Pump**), you can check when AAPS last communicated with the pump.
+#### 頻繁通訊錯誤的根本原因及後果
+* 在**記憶體不足**或啟用**積極省電**設定的手機上，AAPS 經常會被關閉。如果開啟 AAPS 時主畫面沒有顯示治療按鈕（QuickLaunch 工具列），而系統正在初始化，就表示 AAPS 已被關閉。這可能會在啟動時觸發 "幫浦無法連線" 警報。您可以在幫浦畫面（**管理** > **幫浦**）的**上次連線**欄位，查看 AAPS 上次與幫浦通訊的時間。
 
-![No connection to pump](../images/combo/combov2-tips-no-connection-to-pump.png)
+![無法連線至幫浦](../images/combo/combov2-tips-no-connection-to-pump.png)
 
-* This error can drain the pump's battery faster because the basal profile is read from the pump when the app is restarted.
-* It also increases the likelihood of causing the error that causes the pump to reject all incoming connections until a button on the pump is pressed.
+* 此錯誤會加速幫浦電池耗電，因為應用程式重新啟動時會從幫浦讀取基礎設定檔案。
+* 這也增加了幫浦拒絕所有來自外部的連線請求的錯誤機率，直到按下幫浦上的按鍵為止。
 
-### Cancellation of temporary basal rate fails
-* Occasionally, AAPS cannot automatically cancel a **TBR CANCELED** alert. Then you have to either tap **Refresh** on the Accu-Chek Combo pump screen or the alarm on the pump will need to be confirmed.
+### 無法取消臨時基礎率
+* 有時 AAPS 無法自動取消**TBR 已取消**警示。這時您必須點選 Accu-Chek Combo 幫浦畫面上的**重新整理**，或在幫浦上確認警報。
 
-### Pump battery considerations
+### 幫浦電池考量
 
-#### Changing the battery
-* After a **low battery** alarm, the battery should be changed as soon as possible to always have enough energy for a reliable Bluetooth communication with the smartphone, even if the phone is within a wider distance of the pump.
-* Even after a **low battery** alarm, the battery might be used for a significant amount of time. However, it is recommended to always have a fresh battery with you after a "low battery" alarm rang.
-* Before changing the battery, press on the **Loop** symbol on the main screen and select **Suspend loop** for 1 hour.
-* Wait for the phone to communicate with the pump and for the Bluetooth logo on the pump to fade.
+#### 更換電池
+* 在收到**低電量**警報後，應盡快更換電池，以確保即使手機與幫浦距離較遠時也能進行可靠的藍牙通訊。
+* 即使在收到**低電量**警報後，電池仍可持續使用一段時間。然而，建議在收到 "低電量" 警報後，隨身攜帶一顆新電池。
+* 更換電池前，請按主畫面上的**循環**圖示，並選取**暫停循環** 1 小時。
+* 請等候手機與幫浦通訊，直到幫浦上的藍牙圖示消失。
 
-![Bluetooth enabled](../images/combo/combo-tips-compo.png)
+![藍牙啟用](../images/combo/combo-tips-compo.png)
 
-* Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery quickly.
-* You don't need to re-set the pump's clock after the battery change: AAPS automatically updates the pump's date and time.
-* Then put the pump back in run mode and select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
-* AAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value.
+* 解除幫浦的按鍵鎖定，將幫浦設置為停止模式，確認是否取消了臨時基礎率，然後迅速更換電池。
+* 更換電池後，不需要重新設定幫浦時鐘：AAPS 會自動更新幫浦的日期和時間。
+* 接著，讓幫浦恢復運作模式，然後點選主畫面上的**循環已暫停**圖示，再選取**恢復**。
+* 當下一個血糖值到達時，AAPS 會重新設置所需的臨時基礎率。
 
-(Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
-#### Battery type and causes of short battery life
-* As intensive Bluetooth communication consumes a lot of energy, only use **high-quality batteries** like Energizer Ultimate Lithium, the "power one"s from the "large" Accu-Chek service pack, or if you are going for a rechargeable battery, use Eneloop batteries.
+(Accu-Chek-Combo-基本使用技巧-電池類型及短電池壽命的原因)=
+#### 電池類型及短電池壽命的原因
+* 由於頻繁的藍牙通訊消耗大量能量，僅使用**高品質電池**，如 Energizer Ultimate 鋰電池、"Power One" 來自大型 Accu-Chek 服務包中的電池，或者如果使用可充電電池，請使用 Eneloop 電池。
 
 ![Energizer](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
-Ranges for typical life time of the different battery types are as follows:
-* **Energizer Ultimate Lithium**: 4 to 7 weeks
-* **Power One Alkaline** (Varta) from the service pack: 2 to 4 weeks
-* **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
+不同電池類型的典型使用壽命範圍如下：
+* **Energizer Ultimate 鋰電池**：4 到 7 週
+* **Power One 碱性電池**（Varta）來自服務包：2 到 4 週
+* **Eneloop 可充電電池**（BK-3MCCE）：1 到 3 週
 
-If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
-* There are some variants of the screw-on battery cap of the Combo pump, which partially short circuit the batteries and drain them quickly. The caps without this problem can be recognized by the golden metal contacts.
-* If the pump clock does not "survive" a short battery change, it is likely that the capacitor is broken which keeps the clock running during a brief power outage. In this case, a replacement of the pump by Roche might help, which is not a problem during the warranty period.
-* The smart phone hardware and software (Android operating system and Bluetooth stack) also impact the battery lifetime of the pump, even though the exact factors are not completely known yet. If you have the opportunity, try another smartphone and compare battery lifetimes.
+如果你的電池壽命明顯短於上述範圍，請檢查以下可能的原因：
+* Combo 幫浦有一些螺旋蓋的變種，他們會部分短路電池並迅速耗盡電池電量。沒有這個問題的蓋子可以透過金色金屬接點識別。
+* 如果幫浦時鐘在短暫的電池更換後無法恢復運作，可能是用於維持時鐘運作的電容損壞。在這種情況下，Roche 公司在保修期內更換幫浦不是問題。
+* 智慧型手機的硬體與軟體（Android 作業系統和藍牙堆疊）也會影響幫浦的電池續航時間，但目前仍不完全清楚確切的影響因素。如果有機會，請嘗試使用另一台智慧型手機並比較電池壽命。
 
-### Extended bolus, multiwave bolus
-The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternatives:
-* Use **e-Carbs** when entering carbs or using the Bolus wizard by entering the carbs of the full meal and the duration you expect the carbs to arrive as glucose in your blood. The system will then calculate small carbs equally distributed over the whole duration which will cause the algorithm to provide equivalent insulin dosing while still permanently checking the overall rise/decrease of the blood glucose level. For a multiwave bolus approach, you can also combine a smaller immediate bolus with e-carbs.
-* Before eating, set a temporary **Eating Soon** target with glucose 80 for several hours (press the target on the main screen, or **Manage** > **Temp Target**). The duration should be based on the interval you would choose for an extended bolus. This will keep your target lower than usual and therefore increase the amount of insulin delivered.
-* Then use the **Bolus wizard** to enter the full carbs of the meal, but do not directly apply the values it suggests. If a multiwave-like bolus is to be delivered, correct the insulin dosage down. Depending on the meal, the algorithm now has to deliver additional SMBs or higher temporary basal rates to counteract the increase in blood sugar. Here, the safety limitation of the basal rate (Max U/h, Maximum basal IOB) should be very carefully experimented with and, if necessary, temporarily changed.
+### 延長注射，波浪注射
+OpenAPS 演算法不支援平行延長注射或波浪注射。但可以透過以下替代方案達到類似的治療效果：
+* 輸入碳水化合物或使用注射嚮導時，請使用 **e-Carbs**，輸入整份餐點的碳水化合物量，以及預計碳水化合物轉化為血糖所需的時間。接著，系統會將少量碳水化合物平均分配在整段時間內，讓演算法提供相當的胰島素劑量，同時持續監測血糖值的整體升降。對於多波注射的方法，你也可以將較小的即時注射與 e-碳水化合物結合。
+* 用餐前，請設定一個暫時的**即將用餐**目標，將血糖值設為 80，並維持數小時（點選主畫面上的目標，或前往**管理** > **臨時目標**）。持續時間應基於您所選擇的延長注射間隔。這將使你的目標低於通常值，因此增加注入的胰島素量。
+* 接著使用**注射嚮導**輸入整份餐點的碳水化合物量，但不要直接採用它建議的數值。如果要進行類似波浪注射的操作，則將胰島素劑量適當減少。根據餐點的情況，演算法將需要額外的超微量注射 (SMBs) 或較高的臨時基礎率來應付血糖上升。此時，應非常謹慎地測試基礎率的安全限制（最大 U/h、最大基礎胰島素 IOB），並視需要暫時調整。
 
-* Don't use the extended or multiwave bolus directly on the pump. The driver does not support them (see [Before you begin](#combov2-before-you-begin)); if a multiwave bolus is given on the pump anyway, **AAPS** records it from the pump history as a normal bolus plus an extended bolus, so it is counted in IOB. An extended bolus does not work in a closed loop environment (see [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details).
+* 請勿直接在幫浦上使用延長注射或多波注射。驅動程式不支援這些功能（請參閱[開始之前](#combov2-before-you-begin)）；如果仍在幫浦上進行多波注射，**AAPS** 會從幫浦紀錄中將其記錄為一般注射加上延長注射，因此會計入 IOB。延長注射不適用於閉合循環環境（詳情請參閱[此頁面](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment)）。
 
-### Alarms at bolus delivery
-* After each bolus, the driver reads the pump's bolus history. This is a safety mechanism to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump.
-* Before a bolus, if the pump history has a bolus that **AAPS** did not know about (for example, a bolus given directly on the pump), the requested bolus is **not given**, because it was calculated without that insulin. **AAPS** shows **The pump history has a bolus that AAPS did not know about. The requested bolus was not given...** Check the bolus history on the pump and your IOB. If a bolus is still needed, calculate it again. This also applies when the unknown bolus is found on a new connection.
-* If the bolus was given but the pump history also had other boluses that **AAPS** did not know about, they are recorded now and **AAPS** asks you to check IOB before the next bolus.
-* If the connection to the pump is lost **during** a bolus, **AAPS** does not record 0 U: it shows how much the pump had given by then and warns that the pump may still give the rest. **Do not bolus again.** **AAPS** reads the real amount from the pump history at the next connection.
-* If the connection is lost while **AAPS** sends the bolus, it is not known whether the pump got it. Check the bolus history on the pump before the next bolus.
-* If **AAPS** cannot confirm that a bolus was delivered, it shows **Bolus delivery failed. It appears no bolus was delivered. To be sure, please check the pump to avoid a double bolus and then bolus again.** Boluses are never retried automatically.
+### 注射時的警報
+* 每次注射後，驅動程式都會讀取幫浦的注射紀錄。這是為了正確計算活性胰島素（IOB）的安全機制，即使注射是直接從幫浦送出的，也能正確計算。
+* 注射前，如果幫浦紀錄中有一筆 **AAPS** 不知道的注射（例如直接在幫浦上進行的注射），就**不會進行**這次要求的注射，因為計算劑量時並未納入那筆胰島素。 **AAPS** 顯示 **幫浦紀錄中有一筆 AAPS 不知道的注射。未注射要求的劑量……** 請查看幫浦中的注射紀錄和您的活性胰島素。如果仍需要注射，請重新計算。即使是在新連線時發現這筆未知的注射，也適用此情況。
+* 如果已經注射，但幫浦紀錄中還有其他 **AAPS** 不知道的注射，系統現在會記錄這些注射，並在下次注射前提醒您確認活性胰島素。
+* 如果在注射**期間**與幫浦中斷連線，**AAPS** 不會記錄為 0 U，而會顯示幫浦當時已注射的劑量，並提醒您幫浦可能仍會繼續注射剩餘劑量。**請勿再次注射。** **AAPS** 會在下次連線時，從幫浦紀錄讀取實際注射劑量。
+* 如果 **AAPS** 傳送注射指令時中斷連線，就無法得知幫浦是否已收到指令。請在下次注射前，查看幫浦中的注射紀錄。
+* 如果 **AAPS** 無法確認是否已完成注射，畫面會顯示 **注射失敗。看起來沒有注射任何劑量。為確保安全，請先查看幫浦，避免重複注射，確認後再進行注射。** 系統絕不會自動重試注射。
 
 ## 如何尋求協助
 
-Development of the Combo driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Combo 驅動程式由社群成員以**志工**方式開發。尋求協助前，請先：
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **請閱讀**本文件中相關的章節，確認此功能的運作方式。
+2. 請在 [Discord](https://discord.gg/4fQUWHZ4Mw) 的 *#AAPS* 頻道，或其他[社群頻道](../GettingHelp/WhereCanIGetHelp.md)之一**提出問題**。
+3. 若要**回報錯誤**，請先搜尋[現有問題](https://github.com/nightscout/AndroidAPS/issues)；如果沒有列出您的問題，請[新增問題](https://github.com/nightscout/AndroidAPS/issues)，並附上您的[紀錄檔](../GettingHelp/AccessingLogFiles.md)。
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+尋求協助時，請提供手機廠牌與型號、Android 版本、**AAPS** 版本，以及簡明易懂的問題描述（發生了什麼變化、上次正常運作的時間）。

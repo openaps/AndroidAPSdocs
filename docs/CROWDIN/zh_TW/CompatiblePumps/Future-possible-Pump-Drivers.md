@@ -2,21 +2,21 @@
 
 這是一份目前市面上一些幫浦的清單，包含他們在任何閉環系統中的支援狀態，以及在 AAPS 中的狀態。最後有一些關於幫浦成為“可閉環”的需求資訊。
 
-    {contents} Table of contents
+    {contents} 目錄
     :depth: 1
     :local: true
 
-## Pumps in AAPS integration phase
+## 正在整合至 AAPS 的幫浦
 
-**Coming soon:** drivers for these pumps are in development and already running in test builds.
+**即將推出：**這些幫浦的驅動程式目前正在開發中，並已在測試版本中運作。
 
-Omnipod 5 ([Homepage](https://www.omnipod.com/))
+Omnipod 5（[官方網站](https://www.omnipod.com/)）
 
-![Omnipod 5 driver in development](../images/future-pumps/omnipod5-driver.png)
+![Omnipod 5 驅動程式正在開發中](../images/future-pumps/omnipod5-driver.png)
 
-Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
+Tandem：t:Mobi（[官方網站](https://www.tandemdiabetes.com/)）
 
-![Tandem t:Mobi driver in development](../images/future-pumps/tandem-mobi-driver.png)
+![Tandem t:Mobi 驅動程式正在開發中](../images/future-pumps/tandem-mobi-driver.png)
 
 ## 可進行閉環的幫浦
 
@@ -26,19 +26,19 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 **AAPS 硬體需求：**無。看起來已啟用藍牙 (BT)。
 
-### Tandem: t:slim X3 ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem：t:slim X3（[官方網站](https://www.tandemdiabetes.com/about-us/pipeline)）
 
-**Loop status:** Possible future Loop candidate. The hope is that t:slim X3 will allow full control from a phone, which would enable AAPS support, but the timeline and features are still unknown.
+**循環狀態：**可能成為未來循環系統的候選裝置。希望 t:slim X3 能讓使用者透過手機完整控制幫浦，進而支援 AAPS；但推出時程與功能目前仍不明朗。
 
-**AAPS 硬體需求：**無。 It is expected to be Bluetooth enabled.
+**AAPS 硬體需求：**無。預計將支援藍牙。
 
-**Comments:** Not yet released. t:slim X3 appears to be repeatedly deprioritized on Tandem's roadmap in favour of t:Mobi (including a tubeless version) and Sigi (their patch pump).
+**備註：**尚未推出。在 Tandem 的產品規劃中，t:slim X3 似乎一再被降低優先順序，轉而優先開發 t:Mobi（包括無導管版本）和 Sigi（他們的貼片式幫浦）。
 
-### Twiist ([Homepage](https://www.twiist.com/))
+### Twiist（[官方網站](https://www.twiist.com/)）
 
-**Loop status:** Loop candidate.
+**循環狀態：**循環系統候選裝置。
 
-**AAPS 硬體需求：**無。 It is Bluetooth enabled.
+**AAPS 硬體需求：**無。支援藍牙。
 
 ### Willcare 胰島素幫浦 ([官網](http://shinmyungmedi.com/en/))
 
@@ -48,13 +48,13 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 **評論：**由於公司對與 AAPS 整合感興趣，他們可能會自行實施該功能。
 
-### Ypsopump ([Homepage](https://www.ypsomed.com/))
+### Ypsopump（[官方網站](https://www.ypsomed.com/)）
 
-**Loop status:** Loop candidate. The pump's Bluetooth protocol has been reverse-engineered by the community, so communicating with it is possible in principle.
+**循環狀態：**循環系統候選裝置。社群已逆向分析這款幫浦的藍牙通訊協定，因此原則上可以與它通訊。
 
-**AAPS 硬體需求：**無。 It is Bluetooth enabled.
+**AAPS 硬體需求：**無。支援藍牙。
 
-**Comments:** The Ypsopump protects its Bluetooth communication with heavy third-party encryption. Working with it is technically demanding, which makes building and maintaining a reliable driver hard. There is no production-ready AAPS driver yet.
+**備註：**Ypsopump 使用高強度的第三方加密技術保護藍牙通訊。要與它配合使用在技術上相當困難，因此很難建立並維護可靠的驅動程式。目前還沒有可供正式使用的 AAPS 驅動程式。
 
 ## 已停止銷售的幫浦（公司不再運營）
 
@@ -76,7 +76,7 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Tandem: t:slim X2 ([官網](https://www.tandemdiabetes.com/))
 
-**Comments:** The Tandem Bluetooth protocol has been reverse-engineered, but on the t:slim X2 only boluses can be delivered — basal delivery cannot be controlled — so it cannot be used safely for looping. This is unlikely to change unless Tandem allows full control of the X2 from a phone, which would more probably arrive with the t:slim X3 instead.
+**備註：**Tandem 的藍牙通訊協定已經過逆向分析，但 t:slim X2 只能注射胰島素，無法控制基礎胰島素輸注，因此無法安全地用於循環系統。除非 Tandem 開放透過手機完整控制 X2，否則這種情況不太可能改變；而這項功能更可能會在 t:slim X3 上推出。
 
 ### Accu-Chek Solo
 

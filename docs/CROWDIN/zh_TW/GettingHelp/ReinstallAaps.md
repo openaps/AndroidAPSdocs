@@ -1,153 +1,153 @@
 (reinstall-aaps)=
-# Reinstalling AAPS with a new keystore
+# 使用新的金鑰庫重新安裝 AAPS
 
-Every **AAPS** apk is signed with a **keystore**. An update only installs over your current **AAPS** if it is signed with the **same keystore**: all your settings and data are then kept. That's why it is recommended to store the keystore and its password in a safe place.
+每個 **AAPS** apk 都會使用**金鑰庫**簽署。只有使用**相同金鑰庫**簽署的更新，才能安裝在目前的 **AAPS** 上；這樣就能保留所有設定和資料。因此，建議您將金鑰庫及其密碼存放在安全的地方。
 
-If you try to install an apk signed with a different keystore than before, you will get an error message explaining that the installation failed!
+如果您嘗試安裝使用不同金鑰庫簽署的 apk，系統會顯示錯誤訊息，說明安裝失敗！
 
 (reinstall-aaps-when)=
-## When do you need to reinstall?
+## 什麼時候需要重新安裝？
 
-You need to uninstall and reinstall **AAPS** when your new apk is signed with a different keystore, for example:
+如果新的 apk 使用不同的金鑰庫簽署，您就必須先解除安裝，再重新安裝 **AAPS**。例如：
 
-- You cannot find your old keystore or its password.
-- You created a new keystore, for example with [Option 1 of the browser build](../SettingUpAaps/BrowserBuildKeystore.md) or **Create a new key** in [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md).
-- You build on a new computer and did not copy your keystore to it.
+- 您找不到舊的金鑰庫或其密碼。
+- 您建立了新的金鑰庫，例如使用[瀏覽器建置方式的選項 1](../SettingUpAaps/BrowserBuildKeystore.md)，或在 [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) 中選擇**建立新金鑰**。
+- 您在新電腦上進行建置，卻沒有將金鑰庫複製到新電腦。
 
-If you still have your keystore, you don't need this page: reuse it and [update **AAPS**](../Maintenance/UpdateToNewVersion.md) in place.
+如果您還保有金鑰庫，就不需要閱讀本頁：請沿用原本的金鑰庫，並直接[更新 **AAPS**](../Maintenance/UpdateToNewVersion.md)。
 
 (reinstall-aaps-before)=
 ## 開始之前
 
-- Uninstalling **AAPS** deletes all its settings, your [objectives](../SettingUpAaps/CompletingTheObjectives.md) and the current pump connection. You get them back by importing your **settings file**, so make sure you have a recent one.
-- The settings file does not contain your treatment and glucose history. If you upload to [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), you can load it back after the reinstall (step 8).
-- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it.
-- **Omnipod and Medtrum users:** read [Tubeless pumps](#ExportImportSettings-tubeless-pumps) first. Your settings file must have been exported during the pod or patch you are wearing now.
-- If needed, [set up your CGM/BG source receiver](../Getting-Started/CompatiblesCgms.md) before you start.
+- 解除安裝 **AAPS** 會刪除所有設定、您的[目標](../SettingUpAaps/CompletingTheObjectives.md)，以及目前的幫浦連線。您可以匯入**設定檔**來還原這些內容，因此請確認您有近期的設定檔。
+- 設定檔不包含您的治療和血糖歷史記錄。如果您有上傳資料到 [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md)，重新安裝後即可將資料載回（步驟 8）。
+- 您需要[**主密碼**](#Preferences-master-password)：設定檔是使用該密碼加密的。
+- **Omnipod 和 Medtrum 使用者：**請先閱讀[無管路幫浦](#ExportImportSettings-tubeless-pumps)。您的設定檔必須是在您目前佩戴的 pod 或貼片使用期間匯出的。
+- 如有需要，請在開始前[設定 CGM/血糖來源接收器](../Getting-Started/CompatiblesCgms.md)。
 
 (reinstall-aaps-steps)=
-## Steps
+## 步數
 
-The pictures show a move from **AAPS** 3.4 (steps 1 to 3) to **AAPS** 4 (steps 6 to 8). Other versions look slightly different.
+圖片顯示從 **AAPS** 3.4（步驟 1 到 3）升級至 **AAPS** 4（步驟 6 到 8）的流程。其他版本的畫面會稍有不同。
 
 (reinstall-aaps-export)=
 ### 1. 匯出你的設定
 
-Export your settings with the **AAPS** currently installed on your phone. See [Settings Export](#ExportImportSettings-Settings-Export) for details.
+使用目前安裝在手機上的 **AAPS** 匯出設定。詳細資訊請參閱[設定匯出](#ExportImportSettings-Settings-Export)。
 
-In **AAPS** 3.4: open **Maintenance** and tap **Export options**. Under **User Settings**, tick **Local Storage** and tap **OK**.
+在 **AAPS** 3.4 中：開啟**維護**，然後點選**匯出選項**。在**使用者設定**下方，勾選**本機儲存**，然後點選**確定**。
 
-*Note: you can also use [Cloud Storage](#preferences-maintenance-cloud) to have a safety backup copy: that's a good idea, but keep Local Storage for recovering settings quickly.*
+*注意：您也可以使用[雲端儲存](#preferences-maintenance-cloud)來保留一份備份，這是個不錯的做法；但請保留本機儲存，以便快速還原設定。*
 
-![Export options with User Settings set to Local Storage](../images/ReinstallAaps/reinstall_export_options_local.png)
+![使用者設定設為本機儲存時的匯出選項](../images/ReinstallAaps/reinstall_export_options_local.png)
 
-The button now reads **Export settings (local)**. Tap it.
+按鈕現在會顯示**匯出設定（本機）**。點選該按鈕。
 
-![Maintenance with the Export settings (local) button](../images/ReinstallAaps/reinstall_export_settings_local.png)
+![顯示「匯出設定（本機）」按鈕的維護畫面](../images/ReinstallAaps/reinstall_export_settings_local.png)
 
-**AAPS** shows the name of the file it will create. Tap **OK**, type your master password and tap **OK**.
+**AAPS** 會顯示即將建立的檔案名稱。點選**確定**，輸入主密碼，再點選**確定**。
 
-![Export settings confirmation with the file name](../images/ReinstallAaps/reinstall_export_confirm.png)
+![顯示檔案名稱的匯出設定確認畫面](../images/ReinstallAaps/reinstall_export_confirm.png)
 
-In **AAPS** 4: open **Maintenance**, select the **Local** chip next to **Export settings** and tap **Export settings**.
+在 **AAPS** 4 中：開啟**維護**，選取**匯出設定**旁的**本機**標籤，然後點選**匯出設定**。
 
 (reinstall-aaps-copy)=
-### 2. Copy the settings file off your phone
+### 2. 將設定檔從手機複製出來
 
-The file is in the **preferences** folder of your [**AAPS** directory](#SetupWizard-StoragePermission), named like `2026-10-13_222735_full.json`. Copy or upload it to an external location (i.e. your computer, cloud storage service...). The file normally stays on your phone after the uninstall, but keep a copy elsewhere in case.
+檔案位於 [**AAPS** 目錄](#SetupWizard-StoragePermission)中的 **preferences** 資料夾，檔名格式如下：`2026-10-13_222735_full.json`。將檔案複製或上傳到外部位置（例如電腦或雲端儲存服務）。解除安裝後，檔案通常仍會留在手機上，但建議另外備份一份，以防萬一。
 
 (reinstall-aaps-nightscout-before)=
-### 3. Synchronize with Nightscout
+### 3. 與 Nightscout 同步
 
-This step is not mandatory but recommended if you use [DynISF](#Open-APS-features-DynamicISF): it will allow you to resume directly with the current settings instead of waiting 5 days to build necessary data for the plugin. NSClient V3 needs to be [enabled and configured](../SettingUpAaps/SettingUpTheReportingServer.md).
+這個步驟並非必要，但如果您使用 [DynISF](#Open-APS-features-DynamicISF)，建議執行此步驟：如此一來，您就能直接沿用目前的設定，不必等待 5 天來累積外掛所需的資料。 NSClient V3 必須先[啟用並完成設定](../SettingUpAaps/SettingUpTheReportingServer.md)。
 
-Make sure Nightscout has all your data before you uninstall.
+解除安裝前，請確認 Nightscout 已取得您的所有資料。
 
-Open **NSClient**, tap the **Full synchronization** button at the bottom of the screen, then **OK**.
+開啟 **NSClient**，點選螢幕底部的**完整同步**按鈕，然後點選**確定**。
 
-![NSClient screen with the Full synchronization button](../images/ReinstallAaps/reinstall_ns_fullsync_menu_before.png)
+![顯示「完整同步」按鈕的 NSClient 畫面](../images/ReinstallAaps/reinstall_ns_fullsync_menu_before.png)
 
-*Note: the time necessary depends on your Nightscout hosting service.*
+*注意：所需時間取決於您的 Nightscout 主機服務。*
 
-![Full synchronization confirmation](../images/ReinstallAaps/reinstall_ns_fullsync_confirm.png)
+![完整同步確認畫面](../images/ReinstallAaps/reinstall_ns_fullsync_confirm.png)
 
-**AAPS** then offers to clean up its database. **OK** removes data older than 3 months from the phone, which makes the synchronization much faster. **Cancel** synchronizes without cleaning up. The phone database is deleted when you uninstall anyway, so both are fine.
+接著，**AAPS** 會詢問您是否要清理資料庫。點選**確定**會從手機移除 3 個月以前的資料，讓同步速度大幅提升。點選**取消**則會在不清理資料的情況下進行同步。反正解除安裝時會刪除手機中的資料庫，因此選哪個選項都可以。
 
-![Database cleanup question](../images/ReinstallAaps/reinstall_ns_fullsync_cleanup.png)
+![資料庫清理詢問畫面](../images/ReinstallAaps/reinstall_ns_fullsync_cleanup.png)
 
-Leave **AAPS** running until the synchronization is finished.
+同步完成前，請保持 **AAPS** 開啟。
 
 (reinstall-aaps-build)=
-### 4. Build the new apk
+### 4. 建置新的 apk
 
-[Build](../SettingUpAaps/BuildingAaps.md) a new signed apk with your new keystore and transfer it to your phone.
+使用新的金鑰儲存庫[建置](../SettingUpAaps/BuildingAaps.md)已簽署的新 apk，並將它傳送到手機。
 
 (reinstall-aaps-uninstall)=
-### 5. Uninstall AAPS
+### 5. 解除安裝 AAPS
 
-In your phone's **Settings** > **Apps** > **AAPS**, tap **Uninstall** and confirm with **OK**.
+在手機的**設定** > **應用程式** > **AAPS** 中，點選**解除安裝**，再點選**確定**確認。
 
-![App info of AAPS with the Uninstall button](../images/ReinstallAaps/reinstall_uninstall_appinfo.png)
+![顯示「解除安裝」按鈕的 AAPS 應用程式資訊畫面](../images/ReinstallAaps/reinstall_uninstall_appinfo.png)
 
 (reinstall-aaps-install)=
-### 6. Install and start the new AAPS
+### 6. 安裝並啟動新的 AAPS
 
-[Install](../SettingUpAaps/TransferringAndInstallingAaps.md) the new apk and start **AAPS**. The [setup wizard](../SettingUpAaps/SetupWizard.md) asks for the permissions **AAPS** needs: tap **Grant** for each of them. This also turns [battery optimization](#setup-wizard-bluetooth-battery-optimisation) off again.
+[安裝](../SettingUpAaps/TransferringAndInstallingAaps.md)新的 apk，然後啟動 **AAPS**。[設定嚮導](../SettingUpAaps/SetupWizard.md)會要求授予 **AAPS** 所需的權限：請逐一點選**授予**。這也會再次關閉[電池最佳化](#setup-wizard-bluetooth-battery-optimisation)。
 
-![Permissions Required list of the setup wizard](../images/ReinstallAaps/reinstall_permissions.png)
+![設定嚮導的「所需權限」清單](../images/ReinstallAaps/reinstall_permissions.png)
 
-For **AAPS Directory**, select the same **AAPS** folder as before (the one with the **preferences** folder in it), tap **Use this folder** and **Allow**.
+在**AAPS 目錄**的設定中，選取先前使用的同一個 **AAPS** 資料夾（內含**preferences** 資料夾），點選**使用這個資料夾**，再點選**允許**。
 
-![Selecting the existing AAPS folder](../images/ReinstallAaps/reinstall_aaps_directory.png)
+![選取現有的 AAPS 資料夾](../images/ReinstallAaps/reinstall_aaps_directory.png)
 
-When **AAPS** finds your exported settings, the setup wizard shows a [Stored settings found](#setup-wizard-import-settings) screen where you can import them. You can also close the wizard and import from **Maintenance** as described below.
+當 **AAPS** 找到您匯出的設定時，設定嚮導會顯示「[找到已儲存的設定](#setup-wizard-import-settings)」畫面，您可以在此匯入設定。您也可以關閉嚮導，並依照下方說明，從 **維護** 匯入設定。
 
 (reinstall-aaps-import)=
-### 7. Import your settings
+### 7. 匯入你的設定。
 
-If the settings file is no longer on your phone, copy it back to the **preferences** folder of your **AAPS** directory.
+如果設定檔已不在手機上，請將檔案複製回 **AAPS** 目錄中的 **preferences** 資料夾。
 
-Open the menu (☰) > **Maintenance**, select the **Local** chip next to **Import settings** and tap **Import settings**.
+開啟選單 (☰) > **維護**，選取 **匯入設定** 旁的 **本機** 標籤，然後點選 **匯入設定**。
 
-![Maintenance with Import settings](../images/ReinstallAaps/reinstall_maintenance_import.png)
+![顯示「匯入設定」的維護畫面](../images/ReinstallAaps/reinstall_maintenance_import.png)
 
-The list shows each file with its **AAPS** version and how old it is. Choose the file you exported in step 1.
+清單會列出每個檔案的 **AAPS** 版本和檔案建立時間。選取您在步驟 1 匯出的檔案。
 
-![List of settings files to import](../images/ReinstallAaps/reinstall_import_file_list.png)
+![要匯入的設定檔案清單](../images/ReinstallAaps/reinstall_import_file_list.png)
 
-You don't need to set a master password in the new **AAPS** first. Type the master password you used for the export in **Decryption password** and tap **Decrypt**. **File was encrypted with a different password** is expected: the new **AAPS** doesn't know your password yet. The import restores it with your other settings.
+您不需要先在新的 **AAPS** 中設定主密碼。在 **解密密碼** 欄位輸入您匯出設定時使用的主密碼，然後點選 **解密**。出現「**檔案是使用不同的密碼加密**」是正常的：新的 **AAPS** 尚未取得您的密碼。匯入時，密碼會和其他設定一起還原。
 
-![Decryption password for the settings file](../images/ReinstallAaps/reinstall_import_password.png)
+![設定檔的解密密碼](../images/ReinstallAaps/reinstall_import_password.png)
 
-Tick **Also replace pump settings**: without it, your pump and its settings are not restored. Omnipod and Medtrum users: only tick it if the file was exported during your current pod or patch (see [Tubeless pumps](#ExportImportSettings-tubeless-pumps)).
+勾選 **同時取代幫浦設定**：如果未勾選，幫浦及其設定就不會還原。 Omnipod 和 Medtrum 使用者：只有在目前使用的 pod 或貼片期間匯出檔案時，才勾選此選項（請參閱 [無導管幫浦](#ExportImportSettings-tubeless-pumps)）。
 
-![Also replace pump settings ticked](../images/ReinstallAaps/reinstall_import_replace_pump.png)
+![已勾選「同時取代幫浦設定」](../images/ReinstallAaps/reinstall_import_replace_pump.png)
 
-Tap **Import**, then **OK** to apply the settings and **OK** again on **Settings applied**.
+點選 **匯入**，再點選 **確定** 套用設定，然後在「**設定已套用**」畫面再次點選 **確定**。
 
-![Apply imported settings confirmation](../images/ReinstallAaps/reinstall_import_apply.png)
+![套用匯入設定的確認畫面](../images/ReinstallAaps/reinstall_import_apply.png)
 
 (reinstall-aaps-nightscout-after)=
-### 8. Get your history back from Nightscout
+### 8. 從 Nightscout 取回歷史資料
 
-Open the menu (☰) > [**Configuration**](../SettingUpAaps/ChangeAapsConfiguration.md) > **Communication** and tap **Open plugin** under **NSClientV3**. Check that the status shows **Connected**. If it doesn't, see [Troubleshooting NSClient](TroubleshootingNsClient.md).
+開啟選單 (☰) > [**組態設定**](../SettingUpAaps/ChangeAapsConfiguration.md) > **通訊**，然後點選 **NSClientV3** 下方的 **開啟外掛**。確認狀態顯示為 **已連線**。如果不是，請參閱 [NSClient 疑難排解](TroubleshootingNsClient.md)。
 
-![Communication with the NSClientV3 Open plugin button](../images/ReinstallAaps/reinstall_ns_open_plugin.png)
+![顯示「開啟外掛」按鈕的 NSClientV3 通訊畫面](../images/ReinstallAaps/reinstall_ns_open_plugin.png)
 
-Tap the **Full synchronization** button at the bottom of the screen and **OK**. The database is new, so you can answer the cleanup question either way.
+點選螢幕底部的 **完整同步** 按鈕，然後點選 **確定**。由於這是新的資料庫，清除資料的提示您可以選擇任一選項。
 
-![NSClientV3 screen with the Full synchronization button](../images/ReinstallAaps/reinstall_ns_fullsync_menu_after.png)
+![顯示「完整同步」按鈕的 NSClientV3 畫面](../images/ReinstallAaps/reinstall_ns_fullsync_menu_after.png)
 
-**AAPS** loads your data from Nightscout. The log shows **Full sync finished** when it is done.
+**AAPS** 會從 Nightscout 載入您的資料。同步完成後，記錄中會顯示 **完整同步已完成**。
 
-![NSClientV3 log with Full sync finished](../images/ReinstallAaps/reinstall_ns_fullsync_finished.png)
+![顯示「完整同步已完成」的 NSClientV3 記錄](../images/ReinstallAaps/reinstall_ns_fullsync_finished.png)
 
 (reinstall-aaps-check)=
-### 9. Check and keep looping
+### 9. 確認設定並繼續循環
 
-Check that your pump is connected and your CGM values arrive, then keep on looping.
+確認幫浦已連線，且 CGM 讀取值正常傳入，然後繼續使用循環。
 
 (reinstall-aaps-afterwards)=
-## Afterwards
+## 後續事項
 
-Always keep using your new keystore from now on, and store it with its password somewhere safe, off your phone. See [Creating back-ups](../Maintenance/ExportImportSettings.md).
+從現在起，請務必使用新的金鑰庫，並將金鑰庫及其密碼妥善儲存在手機以外的安全位置。請參閱 [建立備份](../Maintenance/ExportImportSettings.md)。

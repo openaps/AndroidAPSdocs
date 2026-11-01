@@ -19,17 +19,17 @@ Podrobnosti najdete na stránce [Nejčastější otázky uživatelů APS](../Use
 
 * K sestavení APK může být potřeba konkrétní verze **[Android Studia](https://developer.android.com/studio/)**. Viz tabulka níže:
 
-| Verze AAPS                  | Doporučená<br/>verze<br/>Android Studia | Alternativní<br/>verze<br/>Android Studia | Gradle | JVM |
-| --------------------------- | --------------------------------------------------- | ----------------------------------------------------- | ------ |:--- |
-| 2.6.2                       | 3.6.1                                               |                                                       | 5.6.4  | 11  |
-| 2.8.2.1                     | 4.1.1                                               |                                                       | 6.1.1  | 13  |
-| [3.1.0.3](#version3100)     | 2020.3.1                                            | testováno až po Quail 4                               | 7.3.3  | 17  |
-| [3.2.0.4](#version3204)     | Hedgehog (2023.1.1)                                 | testováno až po Quail 4                               | 8.2    | 17  |
-| [3.3.1.3](#version3300)     | Ladybug Feature Drop (2024.2.2)                     | testováno až po Quail 4                               | 8.10   | 21  |
-| [3.3.2](#version3300)       | Meerkat (2024.3.1)                                  | testováno až po Quail 4                               | 8.11.1 | 21  |
-| [3.3.2.1](#version3321)     | Narwhal (2025.1.2)                                  | testováno až po Quail 4                               | 8.13   | 21  |
-| [3.4.2.6](#version3426)     | Panda 2 (2025.3.2)                                  | testováno až po Quail 4                               | 9      | 21  |
-| [4.0.0-beta1](#version4000) | Rabbit 1                                            | až po nejnovější Rabbit 1                             | 9.8    | 21  |
+| Verze AAPS                                                               | Doporučená<br/>verze<br/>Android Studia | Alternativní<br/>verze<br/>Android Studia | Gradle | JVM |
+| ------------------------------------------------------------------------ | --------------------------------------------------- | ----------------------------------------------------- | ------ |:--- |
+| 2.6.2                                                                    | 3.6.1                                               |                                                       | 5.6.4  | 11  |
+| 2.8.2.1                                                                  | 4.1.1                                               |                                                       | 6.1.1  | 13  |
+| [3.1.0.3](https://github.com/nightscout/AndroidAPS/releases/tag/3.1.0.3) | 2020.3.1                                            | testováno až po Quail 4                               | 7.3.3  | 17  |
+| [3.2.0.4](#version3204)                                                  | Hedgehog (2023.1.1)                                 | testováno až po Quail 4                               | 8.2    | 17  |
+| [3.3.1.3](#version3300)                                                  | Ladybug Feature Drop (2024.2.2)                     | testováno až po Quail 4                               | 8.10   | 21  |
+| [3.3.2](#version3300)                                                    | Meerkat (2024.3.1)                                  | testováno až po Quail 4                               | 8.11.1 | 21  |
+| [3.3.2.1](#version3321)                                                  | Narwhal (2025.1.2)                                  | testováno až po Quail 4                               | 8.13   | 21  |
+| [3.4.2.6](#version3426)                                                  | Panda 2 (2025.3.2)                                  | testováno až po Quail 4                               | 9      | 21  |
+| [4.0.0](#version400)                                                     | Rabbit 2 (2026.2.2)                                 | Latest                                                | 9.8    | 21  |
 
 „Doporučená verze“ obsahuje odpovídající verzi JVM. Doporučená verze je zároveň nejstarší verze, se kterou můžete **AAPS** sestavit. Ve verzi starší než „doporučená“ sestavení **NEPŮJDE**. Pokud použijete jinou verzi, můžete narazit na problémy s verzí JVM. Pomoc s řešením těchto problémů najdete na stránce [Řešení problémů s Android Studiem](#troubleshooting_androidstudio-uncommitted-changes). Pokud vaše současná verze Android Studia v tabulce není, musíte ho nejdříve aktualizovat.
 
@@ -41,27 +41,27 @@ Verze Gradle je svázaná se zdrojovým kódem. Při stažení nebo aktualizaci 
 <tbody>
   <tr>
     <th class="tg-baqh">OS (pouze 64bitový)</th>
-    <td class="tg-baqh">Windows 8 nebo novější</td>
-    <td class="tg-baqh">Mac OS 10.14 nebo novější</td>
-    <td class="tg-baqh">Jakýkoli Linux, který podporuje Gnome, KDE nebo Unity DE;&nbsp;&nbsp;GNU C knihovnu 2.31 nebo novější</td>
+    <td class="tg-baqh">Windows 10 or higher</td>
+    <td class="tg-baqh">macOS 12 or higher</td>
+    <td class="tg-baqh">Any Linux distribution that supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 or later</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">CPU (pouze 64bitový)</th>
-    <td class="tg-baqh">CPU s architekturou x86_64; Intel Core 2. generace nebo novější, nebo CPU AMD s podporou <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">Čipy ARM nebo Intel Core 2. generace či novější s podporou <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
-    <td class="tg-baqh">CPU s architekturou x86_64; Intel Core 2. generace nebo novější, nebo procesor AMD s podporou AMD Virtualization (AMD-V) a SSSE3</td>
+    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">virtualization support</a> (Intel VT-x or AMD-V) enabled in the BIOS</td>
+    <td class="tg-baqh">Apple Silicon (M1 or newer), or 6th generation Intel Core or newer (support for Intel Macs is being phased out)</td>
+    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with virtualization support (Intel VT-x or AMD-V) enabled in the BIOS</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">16 GB nebo více</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16GB or more (8GB is the strict minimum for Android Studio alone, 32GB is recommended)</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Pevný disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Alespoň 30 GB volného místa. Je doporučeno SSD.</td>
+    <td class="tg-baqh" colspan="3"><p align="center">At least 32GB free space. Je doporučeno SSD.</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Rozlišení</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Minimálně 1280 × 800 <br></td>
+    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 minimum (1920 x 1080 recommended)<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>

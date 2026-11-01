@@ -1,16 +1,16 @@
-# Settings (Preferences)
+# 設定
 
-In **AAPS** v4 the preferences are found on the **Settings** screen. There are three routes to reach them — see [Making changes to your AAPS' configuration](../SettingUpAaps/ChangeAapsConfiguration.md) for details:
+在 **AAPS** v4 中，您可以在 **設定**畫面找到偏好設定。有三種方式可以進入偏好設定；詳情請參閱[變更 AAPS 組態設定](../SettingUpAaps/ChangeAapsConfiguration.md)：
 
-1. Tap the **Settings** (gear) icon in the top-right corner of the main screen: all settings, grouped into expandable sections.
-2. In **Configuration**, tap "**Settings**" underneath an active plugin: only that plugin's settings.
-3. Use the **search bar** on top of the main screen: just start typing part of the text you are looking for. This finds individual settings (even those not visible in the Settings screen), dialogs and documentation.
+1. 點選主畫面右上角的 **設定**（齒輪）圖示：這裡會顯示所有設定，並依可展開的區段分類。
+2. 在 **組態設定**中，點選已啟用外掛下方的「**設定**」：只會顯示該外掛的設定。
+3. 使用主畫面上方的 **搜尋列**：輸入您要尋找的文字片段即可。搜尋結果會包含個別設定（即使該設定未顯示在設定畫面中）、對話方塊和說明文件。
 
-![Search results for "target"](../images/preferences/settings_search.png)
+![「目標」的搜尋結果](../images/preferences/settings_search.png)
 
-- **Sections** are opened and closed by tapping them. The sections you see depend on the plugins you have enabled and on [Simple mode](#preferences-simple-mode).
+- 點選**區段**即可展開或收合。您看到的區段取決於已啟用的外掛，以及[簡易模式](#preferences-simple-mode)。
 
-![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
+![含有可展開區段的設定畫面](../images/v4/Configuration/settings_overview.png)
 
 ```{contents}
 :backlinks: entry
@@ -20,70 +20,71 @@ In **AAPS** v4 the preferences are found on the **Settings** screen. There are t
 (Preferences-general)=
 ## 一般問題
 
-![Settings > General](../images/preferences/settings_general.png)
+![設定 > 一般](../images/preferences/settings_general.png)
 
 **單位**
 
-- Set units to mmol/L or mg/dL depending on your preferences.
+- 依照您的偏好，將單位設為 mmol/L 或 mg/dL。
 
 **語系**
 
-- 新增選項可使用手機的預設語系（推薦）。
+- By default **AAPS** follows the language of the phone (recommended).
 
-- 如果你希望**AAPS**使用不同於標準手機語言的語言，你可以從廣泛的選擇中選擇。
+- If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
 
-- When you change the language, the texts of **AAPS** switch to the new language straight away. If some texts still show the old language, restart **AAPS**.
+- 變更語系後，**AAPS** 的文字會立即切換為新的語系。如果部分文字仍顯示舊語系，請重新啟動 **AAPS**。
+- On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
 - 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 (preferences-simple-mode)= **簡易模式**
 
 在首次安裝**AAPS**時，將預設啟用**簡易模式**。在**簡易模式**中，大量設定將被隱藏，偏好設定將被預定義的數值取代。一旦你熟悉**AAPS**的用戶介面和設定，應該關閉簡易模式。
 
-**Insulin concentration support**
+**胰島素濃度支援**
 
-- Enables support for different insulin concentrations (U50, U200, ...). Only enable this if you really use a concentration other than U100, and read the warnings carefully.
+- 啟用對不同胰島素濃度（U50、U200 等）的支援。只有在您確實使用 U100 以外的濃度時才啟用此選項，並請仔細閱讀警告。
 - 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 **保持螢幕常亮**
 
-- Forces Android to keep the screen on at all times. 這對於演示等場合很有用。但他會消耗大量電池電量。因此，建議將智慧型手機連線到充電線。
+- 強制 Android 螢幕一直保持開啟。這對於演示等場合很有用。但他會消耗大量電池電量。因此，建議將智慧型手機連線到充電線。
 
-**Instance name**
+**執行個體名稱**
 
-- The name of the person using this phone. It tells this **AAPS** instance apart in reports and synchronization, for example if two children with type 1 diabetes in your family use **AAPS**.
-- Used in the names of exported settings files.
+- 使用這支手機的人的姓名。這個名稱可在報告和同步資料中辨識此 **AAPS** 執行個體。例如，若您家中兩位患有第一型糖尿病的孩子都使用 **AAPS**，就能藉此區分。
+- 此名稱會用於匯出設定檔的檔名。
 - 在 [雙錶面](../WearOS/WearOsSmartwatch.md) 中顯示。
 
 (Preferences-skin)=
 ### 外觀
 
-The skin selection from **AAPS** 3.x (Original, Low resolution, Large display...) no longer exists in **AAPS** 4. The new interface adapts to your screen automatically, and the color scheme can be changed in [Appearance](#preferences-appearance).
+**AAPS** 3.x 中的介面樣式選項（原始、低解析度、大型顯示等）已不再適用於 **AAPS** 4。新介面會自動配合您的螢幕調整，您也可以在[外觀](#preferences-appearance)中變更配色。
 
 (preferences-appearance)=
-## Appearance
+## 外觀
 
-![Settings > Appearance](../images/preferences/settings_appearance.png)
+![設定 > 外觀](../images/preferences/settings_appearance.png)
 
 (Preferences-range-for-visualization)=
 ### 可視化範圍
 
-Choose the high and low marks for the BG-graph on **AAPS** main screen and smartwatch. 這僅限於視覺化顯示，並非血糖的目標範圍。 Example: 70 - 180 mg/dL or 3.9 - 10 mmol/L
+選擇 **AAPS** 主畫面和智慧型手錶上血糖圖表的高、低標記值。這僅限於視覺化顯示，並非血糖的目標範圍。例如：70 - 180 mg/dL 或 3.9 - 10 mmol/L
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### Show notes in dialogs
+### 在對話視窗中顯示備註
 
 給你一個在治療（追加注射嚮導、碳水化合物、胰島素等）中添加簡短文字備註的選項。
 
 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
-### App Color Scheme
+### 應用程式色彩方案
 
-Choose between the light theme, the dark theme, or following the phone's system setting.
+選擇淺色主題、深色主題，或依照手機的系統設定顯示。
 
 (Preferences-protection)=
 ## 保護
 
-![Settings > Protection](../images/preferences/settings_protection.png)
+![設定 > 保護](../images/preferences/settings_protection.png)
 
 (Preferences-master-password)=
 ### 主密碼
@@ -97,17 +98,17 @@ Choose between the light theme, the dark theme, or following the phone's system 
 (Preferences-settings-protection)=
 ### 設定保護
 
-- 用密碼或手機的生物識別身份驗證來保護你的設定（例如：[小孩正在使用**AAPS**](../RemoteFeatures/RemoteMonitoring.md)）。 If you enable this feature, you will be prompted for authentication each time you want to access any Settings related view.
+- 用密碼或手機的生物識別身份驗證來保護你的設定（例如：[小孩正在使用**AAPS**](../RemoteFeatures/RemoteMonitoring.md)）。啟用此功能後，每次要進入任何設定相關畫面時，都必須先通過身分驗證。
 
-- The management screens (**Profile**, **Insulin settings**, **Temp Target**, **QuickWizard**) then open **read-only**. You can still activate or use an entry, but adding, editing, cloning and deleting are hidden until you unlock your settings. See [Settings protection now also locks the management screens](#v4changes-read-only-management).
+- 管理畫面（**設定檔**、**胰島素設定**、**臨時目標**、**快速嚮導**）會以**唯讀**模式開啟。您仍可啟用或使用項目，但在解除設定鎖定前，無法新增、編輯、複製或刪除項目。請參閱[設定保護現在也會鎖定管理畫面](#v4changes-read-only-management)。
 
-- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md), and use a different one for editing the settings.
+- 如果您只想使用主密碼保護[匯出的設定](../Maintenance/ExportImportSettings.md)，並使用另一組密碼編輯設定，請使用自訂密碼。
 
 - 如果你使用自定密碼，請點擊「設定密碼」來設置密碼，如上文[所述](#Preferences-master-password)。
 
 ### 應用程式保護
 
-If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**, and again when you come back to it after the [protection timeout](#Preferences-password-and-pin-retention).
+如果應用程式受到保護，您必須輸入密碼或使用手機的生物辨識驗證才能開啟 **AAPS**；超過[保護逾時](#Preferences-password-and-pin-retention)時間後重新開啟應用程式時，也必須再次驗證。
 
 **AAPS**如果輸入錯誤密碼將立即關閉，但如果先前成功打開，將仍會在背景運行。
 
@@ -115,38 +116,38 @@ If the app is protected, you must enter the password or use the phone's biometri
 
 - 如果**AAPS**被小孩使用，則注射保護可能會很有用，並且你可通過[SMS 進行注射](../RemoteFeatures/SMSCommands.md)。
 
-- **Bolus protection** can only be selected once **Settings protection** (Level 2) is set.
+- 只有在設定好**設定保護**（第 2 級）後，才能選取**注射保護**。
 
-- In the example below, bolus protection uses the **Master password**: **AAPS** asks for it before opening a treatment dialog such as **Insulin**. With **Biometric**, if biometric authentication does not work, you can enter the master password instead.
+- 在下方範例中，注射保護使用**主密碼**：開啟**胰島素**等治療對話方塊前，**AAPS** 會要求您輸入主密碼。使用**生物辨識**時，如果生物辨識驗證無法使用，您可以改為輸入主密碼。
 
-![Authentication required prompt asking for the master password](../images/preferences/bolus_protection_prompt.png)
+![要求驗證的提示畫面，會要求輸入主密碼](../images/preferences/bolus_protection_prompt.png)
 
 (Preferences-password-and-pin-retention)=
 ### 密碼和 PIN 保留
 
-**Protection timeout** defines how long (in seconds) the settings or bolus functionalities remain unlocked after you successfully enter the password.
+**保護逾時**是指成功輸入密碼後，設定或注射功能維持解除鎖定的時間（秒）。
 
 ## 治療安全
 
-![Settings > Safety](../images/preferences/settings_safety.png)
+![設定 > 安全性](../images/preferences/settings_safety.png)
 
 (preferences-patient-type)=
-### Patient age
+### 病患年齡
 
 - 安全限制是根據你在此設置中選擇的年齡設定的。
 - 如果你開始觸及這些嚴格的限制（如最大注射量），那麼是時候提升一步了。
 - 選擇高於實際年齡是一個不好的主意，因為這可能會因在胰島素對話框中輸入錯誤的數值（例如，跳過小數點）而導致過量。
 - 如果你想知道這些硬編碼的安全限制的實際數字，請滾動到你在[這個頁面](../DailyLifeWithAaps/KeyAapsFeatures.md)上使用的算法功能。
 
-(Preferences-maximum-bolus)=
-### Maximum bolus
+(preferences-maximum-bolus)=
+### 最大注射量
 
 - 定義**AAPS**一次允許輸送的最大胰島素注射量（以胰島素單位計算）。
 - 此設置作為安全限制，防止因意外輸入或用戶錯誤而導致大量注射。
 - 建議將此設置為合理的數量，大致對應於你可能在一餐或校正劑量中需要的最大注射胰島素量。
 - 這個限制也適用於注射計算機的結果。
 
-### Maximum carbs allowed
+### 允許的碳水上限
 
 - 定義**AAPS**注射計算器允許劑量的最大碳水化合物量（以克計算）。
 - 此設置作為安全限制，防止因意外輸入或用戶錯誤而導致大量注射。
@@ -154,32 +155,32 @@ If the app is protected, you must enter the password or use the phone's biometri
 
 ## 血糖資料來源
 
-The settings of your selected [BG source](#Config-Builder-bg-source) appear as their own section. For example with **xDrip+ BG**:
+您所選取的[血糖來源](#Config-Builder-bg-source)設定會顯示在專屬區段中。例如使用 **xDrip+ 血糖** 時：
 
-![Settings > xDrip+ BG](../images/preferences/settings_xdrip.png)
+![設定 > xDrip+ 血糖](../images/preferences/settings_xdrip.png)
 
-- **Upload BG data to NS**: let **AAPS** upload the received BG values to Nightscout. Only enable this if the CGM app itself is not already uploading them.
-- **Log sensor change**: create a sensor change therapy event automatically when the sensor is inserted.
+- **將血糖資料上傳至 NS**：讓 **AAPS** 將接收到的血糖值上傳至 Nightscout。只有在 CGM App 本身尚未上傳資料時，才啟用此功能。
+- **記錄感測器更換**：插入感測器時，自動建立感測器更換治療事件。
 
-## The main screen
+## 主畫面
 
-In **AAPS** 3.x these settings were grouped in an "Overview" section. In **AAPS** 4 they are configured directly from the main screen elements they belong to.
+在 **AAPS** 3.x 中，這些設定分組在「總覽」區段。在 **AAPS** 4 中，這些設定會直接從主畫面上對應的項目進行設定。
 
 (偏好設定-按鈕)=
-### QuickLaunch buttons
+### 快速啟動按鈕
 
-Define which action buttons are visible on the main screen: tap the small **gear** at the bottom center of the main screen ("Configure QuickLaunch") and **Add** the actions you want quick access to (treatments, CGM actions, careportal entries...).
+設定主畫面上要顯示哪些操作按鈕：點選主畫面底部中央的小型**齒輪**（「設定快速啟動」），然後**新增**想要快速存取的操作（治療、CGM 操作、照護入口項目等）。
 
-![Configure QuickLaunch](../images/preferences/quicklaunch_config.png)
+![設定快速啟動](../images/preferences/quicklaunch_config.png)
 
 (Preferences-quick-wizard)=
 ### 快速嚮導
 
-Create customized buttons for certain standard meals or snacks which will be displayed on the main screen. 適用於經常食用的標準餐點。
+建立自訂按鈕，用於特定的標準餐點或點心，並在主畫面上顯示。適用於經常食用的標準餐點。
 
-對於每個按鈕，你定義碳水化合物和注射的計算方式。 Then, you define during which time period the button will be visible on your main screen - just one button per period. 如果超出指定的時間範圍，或者如果你有足夠的IOB來覆蓋快速嚮導按鈕中定義的碳水化合物，則該按鈕不會顯示。 If different times are specified for the different meals you will always have the appropriate standard meal button on the main screen, depending on the time of day.
+對於每個按鈕，你定義碳水化合物和注射的計算方式。接著，設定按鈕要在什麼時段顯示於主畫面上；每個時段只能顯示一個按鈕。如果超出指定的時間範圍，或者如果你有足夠的IOB來覆蓋快速嚮導按鈕中定義的碳水化合物，則該按鈕不會顯示。如果為不同餐點設定不同時段，主畫面就會依照一天中的時間，顯示適用的標準餐點按鈕。
 
-To manage your Quick Wizard presets, type "QuickWizard" in the main screen search bar and open **QuickWizard - Manage quick wizard presets**.
+若要管理 Quick Wizard 預設值，請在主畫面的搜尋列輸入「QuickWizard」，並開啟 **QuickWizard - 管理 Quick Wizard 預設值**。
 
 如果你點擊快速嚮導按鈕**AAPS**將根據你目前的比率計算並建議對應的注射量（考慮血糖值或設定的胰島素用量）。
 
@@ -190,23 +191,23 @@ To manage your Quick Wizard presets, type "QuickWizard" in the main screen searc
 
 [臨時目標（TT）](../DailyLifeWithAaps/TempTargets.md)允許你在特定時間範圍內更改你的血糖目標。設置預設TT時，你可以輕鬆更改活動、即將用餐等的目標。
 
-Tap the **target range** on the main screen to open the **Temp Target** screen. Swipe through the preset cards (Eating Soon, Activity, Hypo) and change the target and the duration of each preset under **Preset Settings**. 預設值為：
+點選主畫面上的**目標範圍**，開啟**臨時目標**畫面。滑動瀏覽預設卡片（即將用餐、活動、低血糖），並在**預設設定**中變更各預設的目標值和持續時間。預設值為：
 
-* Eating soon: target 90 mg/dL / 5.0 mmol/L, duration 45 min
-* Activity: target 140 mg/dL / 7.8 mmol/L, duration 90 min
-* Hypo: target 160 mg/dL / 8.9 mmol/L, duration 60 min
+* 即將用餐：目標 90 mg/dL / 5.0 mmol/L，持續時間 45 分鐘
+* 活動：目標 140 mg/dL / 7.8 mmol/L，持續時間 90 分鐘
+* 低血糖：目標 160 mg/dL / 8.9 mmol/L，持續時間 60 分鐘
 
-![Temp Target presets](../images/preferences/temp_target_presets.png)
+![臨時目標預設值](../images/preferences/temp_target_presets.png)
 
 了解如何在這裡[啟用臨時目標](#TempTargets-where-can-i-select-a-temp-target)。
 
 ### 填充/啟動標準胰島素量
 
-If you want to fill the tube or prime the cannula through **AAPS** you can do this with the **Prime/Fill** buttons in the expanded status panel of the main screen.
+如果想透過 **AAPS** 填充導管或為套管排氣，可以使用主畫面展開狀態面板中的 **Prime/Fill** 按鈕。
 
-The default amounts of the three fill buttons can be defined in the **Prime/Fill** settings, depending on the length of your catheter. Type "prime" in the main screen search bar to open them.
+三個填充按鈕的預設填充量，可以在 **Prime/Fill** 設定中依照導管長度設定。在主畫面的搜尋列輸入「prime」即可開啟相關設定。
 
-![Prime/Fill standard amounts](../images/preferences/settings_prime_fill.png)
+![Prime/Fill 預設填充量](../images/preferences/settings_prime_fill.png)
 
 (Preferences-status-lights)=
 ### 狀態燈
@@ -222,24 +223,24 @@ The default amounts of the three fill buttons can be defined in the **Prime/Fill
 
 如果超出警告門檻值，數值將顯示為黃色。如果超出危急門檻值，數值將顯示為紅色。
 
-To change the thresholds, expand the status panel on the main screen (chevron on the right of the status row) and tap the small **Settings** icon next to "Status":
+若要變更閾值，請展開主畫面上的狀態面板（點選狀態列右側的 V 形箭頭），再點選「狀態」旁的小型**設定**圖示：
 
 ![狀態燈](../images/preferences/status_lights.png)
 
-Tap an item (**Cannula**, **Insulin**, **Sensor** or **Pump battery**) to open its warning and critical thresholds:
+點選項目（**套管**、**胰島素**、**感測器**或**幫浦電池**），即可開啟警告和危急閾值設定：
 
-![Status lights thresholds for the cannula](../images/preferences/status_lights_cannula.png)
+![套管狀態燈閾值](../images/preferences/status_lights_cannula.png)
 
 最後一個選項允許你從Nightscout匯入那些設定（如果在那裡定義）。詳情請參考[Nightscout文件](https://nightscout.github.io/nightscout/setup_variables/#age-pills)。
 
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
-### Bolus wizard settings
+### 注射嚮導設定
 
-Type "bolus" in the main screen search bar to open the **Bolus wizard** settings:
+在主畫面的搜尋列輸入「bolus」，即可開啟**注射嚮導**設定：
 
-![Bolus wizard settings](../images/preferences/settings_bolus_wizard.png)
+![注射嚮導設定](../images/preferences/settings_bolus_wizard.png)
 
-**Bolus percentage** sets the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
+**注射百分比**會設定使用注射嚮導計算注射量時的[預設百分比](#AapsScreens-section-j)。
 
 預設值為 100%：無需修正。即便在這裡設置不同的值，你每次使用注射嚮導時仍然可以更改。如果此設定為75%，而你必須注射10U，則注射嚮導將提出僅7.5單位的餐前注射。
 
@@ -247,29 +248,29 @@ Type "bolus" in the main screen search bar to open the **Bolus wizard** settings
 * 對於消化緩慢的人來說：一次傳送所有的注射劑量可能會引起低血糖，因為胰島素的作用速度比消化快。
 * 以便給**AAPS**留出更多空間自行處理**血糖上升**。在這兩種情況下，**AAPS**將在需要時透過SMB來補償缺失的注射部分。
 
-**Use bolus advisor**
+**使用注射建議**
 
-When enabled, if you use the bolus wizard while you are in hyperglycemia, you will get a warning, prompting you if you wish to pre-bolus and eat later, when your **BG** gets back in range.
+啟用後，若您在高血糖時使用注射嚮導，系統會顯示警告，詢問您是否要先注射、稍後再用餐，等**血糖**回到目標範圍後再進食。
 
 (Preferences-advanced-settings-overview)=
 ### 超級注射
 
-The Superbolus option of **AAPS** 3.x is not available as a setting in **AAPS** 4.
+**AAPS** 3.x 的超級注射選項，在 **AAPS** 4 中已不再提供設定。
 
 ## 循環
 
-See [AAPS screens > The main screen > Loop status](#AapsScreens-loop-status) to change loop mode now.
+如要變更循環模式，請參閱 [AAPS 畫面 > 主畫面 > 循環狀態](#AapsScreens-loop-status)。
 
 (Preferences-minimal-request-change)=
-### Open mode minimum change
+### 開放循環 最小變更幅度
 
-使用 **開放環路** 時，你將在每次**AAPS** 建議調整基礎率時收到通知。 To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the "**Open mode minimum change**" setting. 這定義了觸發通知所需的相對變更。
+使用 **開放環路** 時，你將在每次**AAPS** 建議調整基礎率時收到通知。若要減少通知數量，可以使用[較寬的血糖目標範圍](#profile-glucose-targets)，或提高「**開放模式的最小變更幅度**」設定的百分比。這定義了觸發通知所需的相對變更。
 
-![Settings > Loop](../images/preferences/settings_loop.png)
+![設定 > 循環](../images/preferences/settings_loop.png)
 
 ## 進階餐前注射助手（AMA）或超微量注射（SMB）
 
-Depending on your settings in [Configuration > APS](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
+根據您在 [組態設定工具 > APS](../SettingUpAaps/ConfigBuilder.md) 中的設定，可以選擇兩種演算法：
 
 - [進階餐前注射助手（OpenAPS AMA）](#Open-APS-features-advanced-meal-assist-ama) - 2017年的算法狀態
 - [超微量注射（OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - 最推薦給初學者的最新算法
@@ -285,26 +286,26 @@ Depending on your settings in [Configuration > APS](../SettingUpAaps/ConfigBuild
 
 所有針對OpenAPS SMB的設置都在[關鍵AAPS功能 > 超微量注射(SMB)](#Open-APS-features-super-micro-bolus-smb)中詳細描述。
 
-The list of settings you see depends on your progress in the [Objectives](../SettingUpAaps/CompletingTheObjectives.md) and on [Simple mode](#preferences-simple-mode). On a new installation only **Use dynamic sensitivity** is shown. Once the objectives are completed, the section looks like this:
+您看到的設定清單，取決於您在[目標](../SettingUpAaps/CompletingTheObjectives.md)中的進度，以及是否啟用[簡易模式](#preferences-simple-mode)。在新安裝的版本中，只會顯示**使用動態敏感度**。完成目標後，區段會如下所示：
 
-![Settings > OpenAPS SMB, first part](../images/preferences/settings_openaps_smb_1.png)
+![設定 > OpenAPS SMB，第一部分](../images/preferences/settings_openaps_smb_1.png)
 
-![Settings > OpenAPS SMB, SMB options](../images/preferences/settings_openaps_smb_2.png)
+![設定 > OpenAPS SMB，SMB 選項](../images/preferences/settings_openaps_smb_2.png)
 
-![Settings > OpenAPS SMB, UAM and carbs required](../images/preferences/settings_openaps_smb_3.png)
+![設定 > OpenAPS SMB，UAM 和碳水化合物需求](../images/preferences/settings_openaps_smb_3.png)
 
-**Advanced Settings** at the bottom of the section holds values that you normally do not have to change:
+區段底部的**進階設定**包含一些通常不需要變更的數值：
 
-![Settings > OpenAPS SMB > Advanced Settings](../images/preferences/settings_openaps_smb_advanced.png)
+![設定 > OpenAPS SMB > 進階設定](../images/preferences/settings_openaps_smb_advanced.png)
 
-![Settings > OpenAPS SMB > Advanced Settings, continued](../images/preferences/settings_openaps_smb_advanced_2.png)
+![設定 > OpenAPS SMB > 進階設定（續）](../images/preferences/settings_openaps_smb_advanced_2.png)
 
 ## 吸收設定
 
-![Settings > Absorption settings](../images/preferences/settings_absorption.png)
+![設定 > 吸收設定](../images/preferences/settings_absorption.png)
 
 (Preferences-min_5m_carbimpact)=
-### SMB min 5m carbs impact (min_5m_carbimpact)
+### SMB 最小 5 分鐘碳水化合物影響值（min_5m_carbimpact）
 
 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
@@ -312,66 +313,66 @@ The list of settings you see depends on your progress in the [Objectives](../Set
 
 在無法根據你血液反應動態計算碳水化合物吸收的時候，**AAPS** 會為你的碳水化合物插入一個預設衰減值。基本上，這是一個安全保護機制。此值僅在**CGM** 讀數出現間隙或當身體活動“消耗掉”所有本來會引起**AAPS**衰減COB的血糖上升時使用。
 
-簡單來說：演算法「知道」在目前胰島素劑量等影響下，你的血糖應該如何變化。 Whenever there is a positive deviation from the expected behavior, some carbs are absorbed/decayed. 大的變化＝許多碳水化合物等。
+簡單來說：演算法「知道」在目前胰島素劑量等影響下，你的血糖應該如何變化。每當實際狀況比預期好時，就會有部分碳水化合物被吸收或消耗。大的變化＝許多碳水化合物等。
 
-min_5m_carbimpact 定義了每 5 分鐘的預設碳水化合物吸收影響。 For the full parameter reference see [OpenAPS's preferences and safety settings documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
+min_5m_carbimpact 定義了每 5 分鐘的預設碳水化合物吸收影響。完整的參數說明請參閱 [OpenAPS 偏好設定與安全設定文件](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact)。
 
-Standard value for AMA is 3, for SMB it's 8.
+AMA 的標準值為 3，SMB 的標準值為 8。
 
-The COB graph on the main screen indicates when min_5m_carbimpact is being used by putting orange dots along the top of the COB curve.
+主畫面上的 COB 圖表會在 COB 曲線上方以橘色圓點標示正在使用 min_5m_carbimpact 的時段。
 
 ![COB 圖表](../images/main/cob_graph_min_5m_carbimpact.png)
 
-### Absorption cutoff
+### 吸收截止時間
 
-Time at which any meal is considered absorbed; remaining carbs will be cut off. 如果你經常進食高脂肪或高蛋白質餐點，你需要增加餐點吸收時間。
+任何餐點都會被視為已吸收的時間；超過此時間後，剩餘的碳水化合物將不再計入。如果你經常進食高脂肪或高蛋白質餐點，你需要增加餐點吸收時間。
 
 ### 進階設定 - autosens 比例
 
-![Absorption advanced settings](../images/preferences/settings_absorption_advanced.png)
+![吸收進階設定](../images/preferences/settings_absorption_advanced.png)
 
 - 定義最小和最大[autosens](#Open-APS-features-autosens) 比例。
 - 通常標準值（最大 1.2 和最小 0.7）不應更改。
 
 ## 幫浦
 
-![Settings > Pump](../images/preferences/settings_pump.png)
+![設定 > 幫浦](../images/preferences/settings_pump.png)
 
 ### 藍牙監控
 
-如有必要，啟用藍牙監控（例如對於Dana幫浦）。 It switches off Bluetooth for one second if no connection to the pump is possible. This may help on some phones where the Bluetooth stack freezes.
+如有必要，啟用藍牙監控（例如對於Dana幫浦）。如果無法與幫浦連線，系統會關閉藍牙 1 秒。這可能有助於解決某些手機的藍牙堆疊凍結問題。
 
 ## 幫浦設定
 
-The options here will vary depending on which pump driver you have selected in [Configuration > Pump](#Config-Builder-pump). Pair and set up your pump according to the [pump-related instructions](../Getting-Started/CompatiblePumps.md).
+此處的選項會依您在 [組態設定 > 幫浦](#Config-Builder-pump) 中選擇的幫浦驅動程式而有所不同。請依照[幫浦相關說明](../Getting-Started/CompatiblePumps.md)，配對並設定您的幫浦。
 
-For example with the **Virtual Pump**, the section is called **Virtual pump settings**. You choose the **Pump type** the virtual pump imitates, and whether its status is uploaded to Nightscout:
+例如，使用 **虛擬幫浦**時，這個區段會稱為**虛擬幫浦設定**。您可以選擇虛擬幫浦要模擬的**幫浦類型**，以及是否要將其狀態上傳至 Nightscout：
 
-![Settings > Virtual pump settings](../images/preferences/settings_virtual_pump.png)
+![設定 > 虛擬幫浦設定](../images/preferences/settings_virtual_pump.png)
 
 ## Tidepool
 
 詳細資訊請參閱專門的[Tidepool](../SettingUpAaps/Tidepool.md)頁面。
 
 (Preferences-nsclient)=
-## NSClient
+## NSClientV3
 
-![Settings > NSClientV3](../images/preferences/settings_nsclient.png)
+![設定 > NSClientV3](../images/preferences/settings_nsclient.png)
 
-The NSClient plugin (shown as **NSClientV3** in the configuration menu) synchronizes your data with Nightscout. It uses the Nightscout API v3.
+NSClient 外掛（在組態選單中顯示為 **NSClientV3**）會與 Nightscout 同步資料。它使用 Nightscout API v3。
 
 ```{admonition} Data uploaders
 :class: warning
 
-When using NSClientV3, all uploaders must use the Nightscout API v3. If another uploader (for example your CGM app) is not API v3 compliant, **let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
+使用 NSClientV3 時，所有上傳程式都必須使用 Nightscout API v3。如果其他上傳程式（例如您的 CGM 應用程式）不相容於 API v3，**請讓 AAPS 將所有資料**（血糖、治療資料等）上傳至 Nightscout，並停用該上傳程式。
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplatform.dom>).
+- 設置你的*Nightscout URL*（即 <https://yoursitename.yourplatform.dom>）。
 - **確保網址末尾沒有 /api/v1/。**
-- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **Nightscout access token** (not your API Secret!). On **AAPSClient** you can scan the main phone's QR code instead, which sets up a token of the client's own. A client paired with the PIN gets its own token from the main phone after pairing. See [The client's own Nightscout token](#client-master-control-own-token).
+- 請在 Nightscout 中建立*[管理員權杖](https://nightscout.github.io/nightscout/security/#create-a-token)*（使用 V3 API 需要 [Nightscout 15](https://nightscout.github.io/update/update/)），並將權杖輸入**Nightscout 存取權杖**欄位（請勿輸入您的 API Secret！）。在**AAPSClient**上，您也可以掃描主要手機的 QR Code，系統會為用戶端建立專屬權杖。使用 PIN 碼配對的用戶端，配對後會從主要手機取得專屬權杖。請參閱[用戶端專屬的 Nightscout 權杖](#client-master-control-own-token)。
 - 這使得資料能在Nightscout網站與**AAPS**之間讀取和寫入。
 - 如果你在目標 1 中遇到困難，請再次檢查是否有拼寫錯誤。
-- Leave "Use websockets" enabled (recommended).
+- 請保持「使用 websockets」為啟用狀態（建議設定）。
 
 (Preferences-nsclient-synchronization)=
 ### 同步選項
@@ -382,7 +383,7 @@ When using NSClientV3, all uploaders must use the Nightscout API v3. If another 
 
 你可以選擇[上傳和下載至 Nightscout 的資料](#Nightscout-aaps-settings)。
 
-While client control is on (always in Simple Mode), these settings are hidden: **AAPS** is then in [hardened mode](#client-master-control-hardened-mode), takes no changes made directly in Nightscout and uploads all its data.
+啟用用戶端控制時（簡易模式下會一律啟用），這些設定會隱藏：**AAPS** 會進入[強化模式](#client-master-control-hardened-mode)，不會套用直接在 Nightscout 中進行的變更，並會上傳所有資料。
 
 ### 警報選項
 
@@ -390,14 +391,14 @@ While client control is on (always in Simple Mode), these settings are hidden: *
 
 - 警報選項允許你選擇透過應用程式使用哪些 Nightscout 警報。 **AAPS** 將在觸發Nightscout警報時發出警告。
 - 要使警報發出聲音，你需要在[Nightscout 變數](https://nightscout.github.io/nightscout/setup_variables/#alarms)中設置緊急高、高、低和緊急低的警報值。
-- They will only work while you have a connection to Nightscout and are intended for parent/caregivers.
-- If you have the **CGM** source on your phone (i.e. xDrip or BYODA) then use those alarms instead of Nightscout Alarms.
-- NS announcements will echo Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) in the **AAPS** notifications.
+- 只有在連線至 Nightscout 時才能使用這些功能，且這些功能是提供給家長／照護者使用的。
+- 如果您的手機上有 **CGM** 資料來源（例如 xDrip 或 BYODA），請使用那些應用程式的警示，而不要使用 Nightscout 警示。
+- NS 公告會將 Nightscout 的[公告](https://nightscout.github.io/nightscout/discover/#announcement)轉傳至 **AAPS** 通知。
 - 當在一定時間內未從 Nightscout 收到資料時，你可以更改過時資料和緊急過時資料警報的門檻值。
 
 ### 遠端控制
 
-The switch "**Allow client control**" is no longer in these settings: it is at the top of **Manage → Authorized clients**, where the paired clients are managed. See the dedicated [Client / Master control](../RemoteFeatures/ClientMasterControl.md) page, including [hardened mode](#client-master-control-hardened-mode), which this switch turns on.
+「**允許用戶端控制**」開關已不在這些設定中，而是在**管理 → 已授權的用戶端**頁面頂端，您可以在此管理已配對的用戶端。請參閱專屬的[用戶端／主控端控制](../RemoteFeatures/ClientMasterControl.md)頁面，其中也包含此開關會啟用的[強化模式](#client-master-control-hardened-mode)。
 
 ### 連線設定
 
@@ -410,9 +411,9 @@ The switch "**Allow client control**" is no longer in these settings: it is at t
 - 若要刪除所有 SSID，請在該欄位中輸入空格。
 
 (Preferences-advanced-settings-nsclient)=
-### 進階設定（NSClient）
+### Advanced settings (NSClientV3)
 
-![NSClient advanced settings](../images/preferences/settings_nsclient_advanced.png)
+![NSClient 進階設定](../images/preferences/settings_nsclient_advanced.png)
 
 進階設定中的選項都非常直觀易懂。
 
@@ -423,39 +424,39 @@ The switch "**Allow client control**" is no longer in these settings: it is at t
 (preferences-wear)=
 ## Wear
 
-This section is shown when the **Wear** plugin is enabled in [Configuration > Communication](#Config-Builder-wear). More information on the dedicated [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md) and [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md) pages.
+在[組態設定 > 通訊](#Config-Builder-wear)中啟用**Wear**外掛時，才會顯示此區段。詳細資訊請參閱專屬的 [Wear OS 智慧型手錶](../WearOS/WearOsSmartwatch.md)和[透過 Wear OS 智慧型手錶操作 AAPS](../RemoteFeatures/RemoteControlWearOS.md)頁面。
 
-![Settings > Wear](../images/preferences/settings_wear.png)
+![設定 > Wear](../images/preferences/settings_wear.png)
 
-- **Wear control**: allow treatments and other actions to be sent from the watch. Without it, the watch only displays data: the phone refuses any command from the watch, and tapping a complication that would open a control screen opens the **AAPS** menu on the watch instead.
+- **Wear 控制**：允許從手錶傳送治療項目及其他操作。未啟用此功能時，手錶只會顯示資料：手機會拒絕手錶傳來的任何指令，而點選原本會開啟控制畫面的複雜功能時，手錶會改為開啟 **AAPS** 選單。
 
-**Wear Wizard Settings** defines which calculations are included in the result of the bolus wizard on the watch. On the watch you only enter the carbs; these switches replace the choices you would make in the bolus wizard on the phone:
+**Wear 嚮導設定**可設定手錶上的注射嚮導結果要包含哪些計算項目。您只需在手錶上輸入碳水化合物；這些開關可取代您在手機注射嚮導中會選擇的項目：
 
-- **Include BG in wizard**: add a correction for the difference between your current glucose and your target.
-- **Include temp target in wizard**: use the running temp target instead of the profile target for this correction.
-- **Include trend in wizard**: take the current glucose trend into account.
-- **Include COB in wizard**: add insulin for the carbs that are still on board.
-- **Include IOB in wizard**: subtract the insulin that is still on board.
+- **在嚮導中納入血糖**：根據目前血糖與目標血糖的差異，加上校正量。
+- **在嚮導中納入臨時目標**：此次校正使用目前生效的臨時目標，而非設定檔中的目標。
+- **在嚮導中納入趨勢**：將目前的血糖趨勢納入計算。
+- **在嚮導中納入活性碳水化合物**：為仍在作用中的碳水化合物增加胰島素。
+- **在嚮導中納入活性胰島素**：扣除仍在作用中的胰島素。
 
-![Settings > Wear > Wear Wizard Settings](../images/preferences/settings_wear_wear_wizard.png)
+![設定 > Wear > Wear 嚮導設定](../images/preferences/settings_wear_wear_wizard.png)
 
-**Custom Watchface Settings** contains **Authorize custom watchfaces**. A custom watchface file can include values for some watch settings. When this switch is on, loading such a watchface is allowed to change those settings on the watch; when it is off, the watchface is loaded but the settings stay as they are:
+**自訂錶盤設定**包含**授權自訂錶盤**選項。自訂錶盤檔案可能包含某些手錶設定的數值。啟用此開關後，載入這類錶盤時可以變更手錶上的相關設定；停用時，錶盤仍會載入，但設定會維持原樣：
 
-![Settings > Wear > Custom Watchface Settings](../images/preferences/settings_wear_custom_watchface.png)
+![設定 > Wear > 自訂錶盤設定](../images/preferences/settings_wear_custom_watchface.png)
 
-**General Settings** contains **Notify on SMB**, to get a notification on the watch each time an SMB is delivered:
+**一般設定**包含**SMB 注射時發出通知**，啟用後，每次執行 SMB 注射時，手錶都會收到通知：
 
-![Settings > Wear > General Settings](../images/preferences/settings_wear_general.png)
+![設定 > Wear > 一般設定](../images/preferences/settings_wear_general.png)
 
 ## 自動調整
 
-This section is shown when the **Autotune** plugin is enabled in [Configuration > General](#Config-Builder-autotune). The settings are described on the dedicated [Autotune](../AdvancedOptions/Autotune.md) page.
+在[組態設定 > 一般](#Config-Builder-autotune)中啟用**Autotune**外掛時，才會顯示此區段。設定說明請參閱專屬的 [Autotune](../AdvancedOptions/Autotune.md)頁面。
 
-![Settings > Autotune](../images/preferences/settings_autotune.png)
+![設定 > Autotune](../images/preferences/settings_autotune.png)
 
 ## 自動化
 
-![Settings > Automation](../images/preferences/settings_automation.png)
+![設定 > 自動化](../images/preferences/settings_automation.png)
 
 選擇要使用的定位服務：
 
@@ -465,18 +466,22 @@ This section is shown when the **Autotune** plugin is enabled in [Configuration 
 
 ## 本地警報
 
-![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
+![設定 > 本機提醒](../images/preferences/settings_local_alerts.png)
 
 設定應該是簡單明瞭的。
+
+**Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
+
+When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Swiping the alarm notification away in the notification tray mutes the alarm. When you open **AAPS** later, an alarm you did not answer is shown again.
 
 (preferences-maintenance-settings)=
 ## 維護設置
 
-![Settings > Maintenance](../images/preferences/settings_maintenance.png)
+![設定 > 維護](../images/preferences/settings_maintenance.png)
 
 **電子郵件收件人**：日誌的標準收件人是<logs@aaps.app>。
 
-**Number of logs to send**: how many of the most recent log files are attached when you send logs.
+**要傳送的紀錄檔數量**：傳送紀錄檔時，會附上最近幾個紀錄檔。
 
 **資料選擇**
 
@@ -486,7 +491,7 @@ This section is shown when the **Autotune** plugin is enabled in [Configuration 
 
 **自動設定匯出**<br/>啟用此功能後，你允許**AAPS**自動執行設定匯出，而無需用戶介入。為此，主密碼 安全地存儲在你的手機中（僅限於下次手動匯出時）。存儲的密碼將在最多 4 週內有效。 4 週後，你將收到通知，提示密碼即將過期。在為期 1 週的寬限期內，可以透過 從維護選單手動匯出設定來刷新密碼。
 
-在寬限期過期的 1 週後，存儲的密碼將過期，任何自動化設定匯出將中止，同時通知用戶，要求 重新輸入密碼。 [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) will be logged to the **AAPS** 'Careportal' and 'User entry' lists under Treatments.
+在寬限期過期的 1 週後，存儲的密碼將過期，任何自動化設定匯出將中止，同時通知用戶，要求 重新輸入密碼。[（**自動匯出設定**）](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)會記錄在 **AAPS**「照護入口」和「使用者輸入」清單的「治療」頁面中。
 
 啟用此選項後，請確保執行一次手動設定匯出，屆時系統會要求你輸入密碼，以便**AAPS**能夠儲存它。
 
@@ -496,19 +501,19 @@ AAPS 會儲存記錄，以利疑難排解。
 
 請勿停用此功能：若發生問題，它有助於了解原因。
 
-If you need to send the logs to the developers, make sure you accurately describe the issue in the email. 建議僅在[在 GitHub 提交問題回報](https://github.com/nightscout/AndroidAPS/issues)後，且被要求時再傳送記錄。
+如果您需要將紀錄檔寄給開發人員，請務必在電子郵件中清楚、準確地描述問題。建議僅在[在 GitHub 提交問題回報](https://github.com/nightscout/AndroidAPS/issues)後，且被要求時再傳送記錄。
 
 你可以在手機記憶體 -> Android -> data -> info.nightscout.androidaps -> files 中找到 AAPS 記錄。
 
-Log handling (log settings, sending and deleting logs) and file management are found on the **Maintenance** screen, opened from the **menu** (☰) in the top-left corner of the main screen:
+您可以在**維護**畫面管理紀錄檔（設定、傳送及刪除紀錄檔）和檔案。請點選主畫面左上角的**選單**（☰）開啟此畫面：
 
-![Maintenance screen](../images/preferences/maintenance_file_management.png)
+![維護畫面](../images/preferences/maintenance_file_management.png)
 
 (preferences-maintenance-logdirectory)=
 
 ### 設定本機 AAPS 目錄
 
-The **Maintenance** screen also includes the **AAPS directory**. 此設定允許用戶選擇電話上的一個目錄，**AAPS**將在該目錄中儲存偏好設定、日誌及其他檔案。 Once a directory is chosen, its path (for example `Documents/AAPS`) is shown below **AAPS directory**, so you can always see where your files are saved.
+**維護**畫面也包含**AAPS 目錄**。此設定允許用戶選擇電話上的一個目錄，**AAPS**將在該目錄中儲存偏好設定、日誌及其他檔案。選擇目錄後，其路徑（例如 `Documents/AAPS`）會顯示在**AAPS 目錄**下方，方便您隨時確認檔案的儲存位置。
 
 強烈建議將目錄設在手機儲存空間的主目錄下。預設為 AAPS。
 
@@ -518,7 +523,7 @@ The **Maintenance** screen also includes the **AAPS directory**. 此設定允許
 
 ![本機目錄位置](../images/preferences/maintenance_settings_wrongdirectory.png)
 
-Android can silently take the directory permission away, for example after you reinstall **AAPS** or clear its storage. When that happens, **AAPS** shows a persistent **Access to the AAPS directory was lost** notification and local settings export stops working until you come back here and select the directory again. Do this promptly, otherwise your backups on the phone are no longer refreshed.
+Android 可能會在不通知您的情況下撤銷目錄權限，例如重新安裝**AAPS**或清除其儲存空間後。發生這種情況時，**AAPS**會持續顯示**已失去存取 AAPS 目錄的權限**通知，而且本機設定匯出功能會停止運作，直到您返回此處重新選取目錄為止。請盡快重新選取目錄，否則手機上的備份將不會重新整理。
 
 (preferences-maintenance-cloud)=
 
@@ -526,36 +531,36 @@ Android can silently take the directory permission away, for example after you r
 
 你可以將設定、記錄與 CSV 資料匯出到雲端服務。
 
-1. Open the **menu** (☰), select **Maintenance** and tap **Cloud Directory** (under **File management**).
+1. 開啟**選單**（☰），選取**維護**，然後點選**雲端目錄**（位於**檔案管理**下方）。
 
-   ![Cloud Directory in the Maintenance menu](../images/preferences/maintenance_settings_cloud.png)
+   ![維護選單中的「雲端目錄」](../images/preferences/maintenance_settings_cloud.png)
 
-2. In **Select Storage Type**, select **Google Drive**.
+2. 在**選取儲存空間類型**中，選取**Google Drive**。
 
-   ![Select Storage Type dialog](../images/preferences/maintenance_cloud_select_storage.png)
+   ![「選取儲存空間類型」對話方塊](../images/preferences/maintenance_cloud_select_storage.png)
 
-3. A Google sign-in page opens. Choose the Google account that will hold your backups (you can use a [dedicated Google account](../UsefulLinks/DedicatedGoogleAccountForAaps.md)).
+3. 系統會開啟 Google 登入頁面。選擇要用來儲存備份的 Google 帳號（您可以使用[專用的 Google 帳號](../UsefulLinks/DedicatedGoogleAccountForAaps.md)）。
 
-   ![Google sign-in page: choose an account](../images/preferences/maintenance_cloud_google_account.png)
+   ![Google 登入頁面：選擇帳號](../images/preferences/maintenance_cloud_google_account.png)
 
-4. Check that the account is the right one and tap **Continue** to give **AAPS** access. If you set up the cloud directory before, the page says that **AAPS** already has some access.
+4. 確認帳號正確後，點選**繼續**，授權**AAPS**存取。如果您之前已設定雲端目錄，頁面會顯示**AAPS**已取得部分存取權限。
 
-   ![Google page asking to give AAPS access, with the Continue button](../images/preferences/maintenance_cloud_google_access.png)
+   ![Google 授權頁面，顯示授權 AAPS 存取的提示和「繼續」按鈕](../images/preferences/maintenance_cloud_google_access.png)
 
-5. Back in **AAPS**, the message **Cloud storage authentication successful** appears at the bottom of the main screen:
+5. 返回**AAPS**後，主畫面底部會顯示**雲端儲存空間驗證成功**訊息：
 
-   ![Cloud storage authentication successful message](../images/preferences/maintenance_cloud_auth_success.png)
+   ![「雲端儲存空間驗證成功」訊息](../images/preferences/maintenance_cloud_auth_success.png)
 
-   In the **Maintenance** menu, **Cloud Directory** now has a green dot, and the **Cloud** buttons next to **Send logs**, **Export settings**, **Import settings** and **Export User Entries to Excel (csv)** are available.
+   現在，**維護**選單中的**雲端目錄**旁會出現綠點，而且**傳送紀錄檔**、**匯出設定**、**匯入設定**和**將使用者輸入匯出至 Excel（csv）**旁的**雲端**按鈕都可使用。
 
-   ![Maintenance menu with cloud storage set up: Cloud buttons available and the clear icon on Cloud Directory](../images/preferences/maintenance_settings_cloud_ready.png)
+   ![已設定雲端儲存空間的維護選單：雲端按鈕可使用，且「雲端目錄」旁會顯示清除圖示](../images/preferences/maintenance_settings_cloud_ready.png)
 
-To stop exporting to the cloud, tap the **✕** (**Clear Settings**) icon at the end of the **Cloud Directory** row in the **Maintenance** menu (it is shown once a cloud service is set up) and confirm **Clear Cloud Settings**. This switches back to local storage and clears the authorization.
+若要停止匯出至雲端，請點選**維護**選單中**雲端目錄**那一列最右側的**✕**（**清除設定**）圖示（設定雲端服務後才會顯示），再確認**清除雲端設定**。這會切換回本機儲存空間，並清除授權。
 
 ## Open Humans
 
 你可以透過捐贈你的資料來協助研究項目，幫助社群！詳細資訊請參閱[Open Humans 頁面](../SupportingAaps/OpenHumans.md)。
 
-In **Settings → Open Humans**, you can define when data shall be uploaded
+在**設定 → Open Humans**中，您可以設定上傳資料的時間。
 - 僅在連接到Wi-Fi時
 - 僅在充電時

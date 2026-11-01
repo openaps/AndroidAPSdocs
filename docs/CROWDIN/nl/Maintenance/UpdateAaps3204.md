@@ -14,7 +14,7 @@ Zie de [FAQ-pagina](../UsefulLinks/FAQ.md) voor meer informatie.
 
 | AAPS versie             | Aanbevolen<br/>Android Studio<br/>versie | Andere<br/>Android Studio<br/>versie | Gradle | JVM |
 | ----------------------- | ---------------------------------------------------- | ------------------------------------------------ | ------ |:--- |
-| [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                                  | tot en met Meerkat                               | 8.2    | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                  | tot en met Meerkat                               | 8.2    | 17  |
 
 De "aanbevolen versie" heeft al de juiste JVM-versie aan boord. De aanbevolen versie is ook de laagste versie waarmee je **AAPS** kunt bouwen. Met een versie die ouder is dan de "aanbevolen" versie kun je **NIET** bouwen. Met een andere versie kun je problemen krijgen met de JVM-versie. Zie de pagina [Problemen met Android Studio oplossen](#incompatible-gradle-jvm) voor hulp bij deze problemen. Staat je huidige versie van Android Studio niet in de tabel? Werk Android Studio dan eerst bij.
 

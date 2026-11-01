@@ -1,25 +1,25 @@
-# AAPS Setup Wizard
+# Assistente de configuração do AAPS
 
 ```{contents} In this page
 :backlinks: entry
 :depth: 2
 ```
 
-When you first start **AAPS** you are guided by the "**Setup Wizard**", to quickly setup all the basic configurations of your app in one go. **Setup Wizard** guides you, in order to avoid forgetting something crucial. For example, the **permission settings** are fundamental for setting up **AAPS** correctly.
+Quando você inicia o **AAPS** pela primeira vez, você é guiado pelo "**Assistente de Configuração**", para fazer rapidamente todas as configurações básicas do seu app de uma só vez. O **Assistente de Configuração** guia você para evitar que você esqueça algo essencial. Por exemplo, as **configurações de permissões** são fundamentais para configurar o **AAPS** corretamente.
 
-However, it's not mandatory to get everything completely configured in the first run of using the **Setup Wizard** and you can easily exit the Wizard and come back to it later. There are three routes available after the **Setup Wizard** to further optimize/change the configuration. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
+No entanto, não é obrigatório deixar tudo completamente configurado na primeira vez que você usa o **Assistente de Configuração**; você pode sair facilmente do assistente e voltar a ele mais tarde. Depois do **Assistente de Configuração**, há três caminhos para otimizar ou mudar ainda mais a configuração. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
 
-During, and directly after using the **Setup Wizard** you may not notice any significant observable changes in **AAPS**. To enable your **AAPS** loop, you have to follow the **Objectives** to enable feature after feature. You will start **Objective 1** at the end of the Setup Wizard. You are the master of **AAPS**, not the other way around.
+Durante o uso do **Assistente de Configuração**, e logo depois, você pode não notar nenhuma mudança visível importante no **AAPS**. Para ativar o seu loop do **AAPS**, você precisa seguir os **Objetivos**, que liberam um recurso depois do outro. Você vai iniciar o **Objetivo 1** no final do Assistente de Configuração. Você é quem controla o **AAPS**, e não o contrário.
 
 ```{admonition} Preview Objectives
 :class: note
-If you are keen to know the structure of the objectives, please read [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md) but then come back here to run the Setup Wizard first.
+Se você quiser conhecer a estrutura dos objetivos, leia [Completar os objetivos](../SettingUpAaps/CompletingTheObjectives.md), mas depois volte aqui para executar primeiro o Assistente de Configuração.
 
 ```
 
-From previous experience, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve.
+Pela experiência anterior, sabemos que quem está começando muitas vezes se pressiona para configurar o **AAPS** o mais rápido possível, o que pode causar frustração, porque há muito para aprender.
 
-So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
+Por isso, não tenha pressa ao configurar o seu loop: os benefícios de um loop do **AAPS** funcionando bem são enormes.
 
 ```{admonition} Ask for Help
 :class: note
@@ -27,512 +27,512 @@ If there is an error in the documentation or you have a better idea for how some
 ```
 ## Welcome message
 
-When the Setup Wizard opens, it greets you with a short welcome message and immediately shows a "**Permissions Required**" panel at the bottom of the screen (see next section).
+Quando o Assistente de Configuração abre, ele mostra uma breve mensagem de boas-vindas e logo mostra um painel "**Permissões necessárias**" na parte inferior da tela (veja a próxima seção).
 
-Once you have granted the permissions, the panel closes and the welcome screen shows a "**Next**" button. Press "**NEXT**" to continue:
+Depois que você concede as permissões, o painel fecha e a tela de boas-vindas mostra um botão "**Avançar**". Toque em "**Avançar**" para continuar:
 
-![Welcome](../images/setup-wizard/Wizard-Welcome.png)
+![Bem-vindo(a)](../images/setup-wizard/Wizard-Welcome.png)
 
 ## Required permissions
 
-**AAPS** needs a few permissions to operate correctly. The Wizard groups them on a single "**Permissions Required**" panel, each with its own "**Grant**" button. Grant them one by one — the icon next to each item turns into a tick once it is done.
+O **AAPS** precisa de algumas permissões para funcionar corretamente. O assistente reúne todas elas em um único painel "**Permissões necessárias**", cada uma com o seu próprio botão "**Conceder**". Conceda as permissões uma por uma — o ícone ao lado de cada item vira um visto (✓) quando estiver feito.
 
-![Permissions](../images/setup-wizard/Wizard-Permissions.png)
+![Permissões](../images/setup-wizard/Wizard-Permissions.png)
 
-### Battery optimization
+### Otimização de bateria
 
-Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
+O consumo de bateria nos smartphones é um ponto importante, porque o desempenho das baterias ainda é bastante limitado. Por isso, o sistema operacional Android do seu smartphone é restritivo ao permitir que aplicativos funcionem e consumam tempo de CPU e, portanto, bateria.
 
-However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Therefore it must be excluded from battery optimization.
+No entanto, o **AAPS** precisa funcionar regularmente, _por exemplo_ para receber os valores de glicose a cada poucos minutos e depois aplicar o algoritmo para decidir como lidar com os seus níveis de glicose, com base nas suas configurações. Por isso, ele precisa ser excluído da otimização da bateria.
 
-Press "**Grant**" next to "**Battery Optimization**", then select "**Allow**" on the "Let app always run in background?" dialog:
+Toque em "**Conceder**" ao lado de "**Otimização da bateria**" e depois selecione "**Allow**" (Permitir) na janela "Let app always run in background?" (Permitir que o app seja sempre executado em segundo plano?):
 
-![Allow Background](../images/setup-wizard/Wizard-Permissions-Battery.png)
+![Permitir em segundo plano](../images/setup-wizard/Wizard-Permissions-Battery.png)
 
 (SetupWizard-StoragePermission)=
 
-### AAPS Directory
+### Diretório do AAPS
 
-**AAPS** needs to store its settings and log information on the permanent storage of your smartphone. Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
+O **AAPS** precisa armazenar as suas configurações e informações de log no armazenamento permanente do seu smartphone. Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
 
-Press "**Grant**" next to "**AAPS Directory**". This opens the file system on your phone and lets you choose where **AAPS** stores its information.
+Toque em "**Conceder**" ao lado de "**Diretório do AAPS**". Isso abre o sistema de arquivos do seu telefone e permite que você escolha onde o **AAPS** armazena as suas informações.
 
 ```{tip}
-Choosing the default AAPS directory is recommended.</br>
-Do **not** select a subdirectory of AAPS.
+Recomendamos escolher o diretório padrão do AAPS.</br>
+**Não** selecione um subdiretório do AAPS.
 ```
 
-The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it and choose "**USE THIS FOLDER**":
+O diretório padrão é **AAPS**, mas você pode usar qualquer diretório exclusivo que preferir. Crie o diretório se for necessário, entre nele e escolha "**USE THIS FOLDER**" (Usar esta pasta):
 
-![Select folder](../images/setup-wizard/Wizard-Permissions-Directory.png)
+![Selecionar pasta](../images/setup-wizard/Wizard-Permissions-Directory.png)
 
-Confirm with "**ALLOW**" that you wish to grant access to **AAPS** to the selected directory:
+Confirme com "**ALLOW**" (Permitir) que você quer dar ao **AAPS** acesso ao diretório selecionado:
 
-![Allow access to the folder](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
+![Permitir acesso à pasta](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
 
-### Notifications
+### Notificações
 
 Android requires special permission for apps if they want to send you notifications.
 
-While it is a good feature to disable notifications _e.g._ from social media apps, it is essential that you allow **AAPS** to send you notifications.
+Embora seja útil desativar as notificações, _por exemplo_ de apps de redes sociais, é essencial que você permita que o **AAPS** envie notificações para você.
 
-Press "**Grant**" next to "**Notifications**" and select "**Allow**" at the system prompt:
+Toque em "**Conceder**" ao lado de "**Notificações**" e selecione "**Allow**" (Permitir) no pedido do sistema:
 
-![Allow notifications](../images/setup-wizard/Wizard-Permissions-Notifications.png)
+![Permitir notificações](../images/setup-wizard/Wizard-Permissions-Notifications.png)
 
-### Alarms and reminders
+### Alarmes e lembretes
 
-On **Android 14 and newer**, **AAPS** needs the "**Alarms and reminders**" permission so that alarms can wake the screen while **AAPS** is in the background, and so that reminders (for example from an **Automation**) ring on time.
+No **Android 14 e mais recentes**, o **AAPS** precisa da permissão "**Alarmes e lembretes**" para que os alarmes possam ligar a tela enquanto o **AAPS** está em segundo plano, e para que os lembretes (por exemplo, de uma **Automação**) toquem na hora certa.
 
-This item is only shown while it is needed. Once **AAPS** is excluded from battery optimization (see above), Android grants exact alarms automatically and the item disappears. If it is still listed, press "**Grant**" next to "**Alarms and reminders**". This opens a system settings screen for **AAPS**; enable the toggle and return to **AAPS**. On Android 13 and older this item does not appear and no action is needed.
+Este item só é mostrado enquanto for necessário. Depois que o **AAPS** é excluído da otimização da bateria (veja acima), o Android concede automaticamente os alarmes exatos e o item desaparece. Se ele ainda estiver na lista, toque em "**Conceder**" ao lado de "**Alarmes e lembretes**". Isso abre uma tela de configurações do sistema para o **AAPS**; ative a chave e volte para o **AAPS**. No Android 13 e mais antigos, este item não aparece e não é preciso fazer nada.
 
-Once all the permissions show a tick (three, or four on Android 14 and newer), the "**Permissions Required**" panel closes by itself and you can press "**NEXT**" on the welcome screen to continue.
+Quando todas as permissões mostrarem um visto (três, ou quatro no Android 14 e mais recentes), o painel "**Permissões necessárias**" fecha sozinho e você pode tocar em "**Avançar**" na tela de boas-vindas para continuar.
 
 (setup-wizard-bluetooth-battery-optimisation)=
-### Bluetooth battery optimization
+### Otimização da bateria do Bluetooth
 
 ```{admonition} Extra Android setting, not part of the Wizard
 :class: note
-The following is additional Android configuration done outside of the Setup Wizard. It is not one of the "Grant" buttons above, but it is important for a reliable pump connection.
+O que segue é uma configuração extra do Android, feita fora do Assistente de Configuração. Ela não é um dos botões "Conceder" acima, mas é importante para uma conexão confiável com a bomba.
 ```
 
-Newer versions of Android have added battery optimization to the system Bluetooth application too.
+As versões mais novas do Android também colocaram otimização da bateria no app de sistema Bluetooth.
 
-As well as disabling battery optimization for **AAPS**, you will likely need to also disable this for the Bluetooth system app. Failure to do this may lead to pump connection dropouts and issues.
+Além de desativar a otimização da bateria para o **AAPS**, você provavelmente também vai precisar desativá-la para o app de sistema Bluetooth. Se você não fizer isso, podem ocorrer quedas de conexão e problemas com a bomba.
 
-***NOTE: The xDrip documentation covers how to do this here: [xDrip documentation](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
+***OBSERVAÇÃO: a documentação do xDrip explica como fazer isso aqui: [documentação do xDrip](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
 
-Follow these steps on Android 16; other versions will vary slightly from the provided screenshots:
+Siga estes passos no Android 16; em outras versões, as telas serão um pouco diferentes das capturas de tela mostradas:
 
-1. Open Android settings and search for **Apps**, and open the Apps settings.
+1. Abra as configurações do Android, pesquise **Apps** e abra as configurações de apps.
 
    ![settings_apps](../images/setup-wizard/settings_apps.png)
 
-2. You will see the App settings, however we need to expand to see all apps, click on **See all apps** to expand.
+2. Você vai ver as configurações de apps, mas é preciso expandir a lista para ver todos os apps: clique em **See all apps** (Ver todos os apps) para expandir.
 
    ![settings_apps](../images/setup-wizard/apps_not_expanded.png)
 
-3. As the Bluetooth app is a system app, it's hidden by default, so we need to show system apps. Click on the **three dots** (⋮) on the top right (1). Then click on **Show system** (2).
+3. Como o app Bluetooth é um app de sistema, ele fica oculto por padrão, então é preciso mostrar os apps de sistema. Clique nos **três pontos** (⋮) no canto superior direito (1). Depois clique em **Show system** (Mostrar sistema) (2).
 
    ![settings_apps](../images/setup-wizard/show_system.png)
 
-4. Search for the `Bluetooth` app and click on `Bluetooth` and/or `Legacy Bluetooth` if both are present ensure the procedure is followed for both.
+4. Pesquise o app `Bluetooth` e clique em `Bluetooth` e/ou `Legacy Bluetooth`; se os dois existirem, siga o procedimento para ambos.
 
-   ***NOTE: It's safe to ignore the `Bluetooth MIDI Service` this is not used by AAPS***
+   ***OBSERVAÇÃO: você pode ignorar com segurança o `Bluetooth MIDI Service`; ele não é usado pelo AAPS***
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. On Android 12 Click on `Battery`, Android 13+ Click on `App battery usage`,
+   1. No Android 12, clique em `Battery` (Bateria); no Android 13 ou mais recente, clique em `App battery usage` (Uso da bateria pelo app),
 
    ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
-5. On Android 12+ select the `Unrestricted` option, on Android 15+ you need to expand the `Allow background usage` setting, click on the section highlighted in red to do this then follow step 6 to complete.
+5. No Android 12 ou mais recente, selecione a opção `Unrestricted` (Sem restrições); no Android 15 ou mais recente, você precisa expandir a configuração `Allow background usage` (Permitir uso em segundo plano): clique na área destacada em vermelho para fazer isso e depois siga o passo 6 para concluir.
 
    ![bluetooth_settings_apps_12](../images/setup-wizard/app_bluetooth_unrestricted_12-14.png)    ![bluetooth_settings_apps_15](../images/setup-wizard/app_bluetooth_allow_background.png)
 
-6. On Android 16 Select `Unrestricted`
+6. No Android 16, selecione `Unrestricted` (Sem restrições)
 
    ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
 
 ## License agreement
 
-In the end user license agreement there is important information about the legal aspects of using **AAPS**. Please read it carefully.
+O contrato de licença do usuário final contém informações importantes sobre os aspectos legais do uso do **AAPS**. Please read it carefully.
 
-If you don't understand, or can't agree to the end user license agreement please don't use **AAPS** at all!
+Se você não entende ou não pode concordar com o contrato de licença do usuário final, não use o **AAPS** de forma alguma!
 
-If you understand and agree, please press the "**I UNDERSTAND AND AGREE**" button and follow the Setup Wizard:
+Se você entende e concorda, toque no botão "**EU ENTENDO E CONCORDO**" e siga o Assistente de Configuração:
 
 ![EULA](../images/setup-wizard/Wizard-EULA.png)
 
-A "**Next**" button appears once you have agreed. Press "**NEXT**".
+Um botão "**Avançar**" aparece depois que você concorda. Toque em "**Avançar**".
 
-The next screen, "**Permissions**", lists the permissions again. They should all show a tick, as you granted them at the start. If one is missing, press "**Grant**" next to it. Press "**NEXT**" to continue:
+A próxima tela, "**Permissões**", mostra as permissões de novo. Todas devem mostrar um visto, porque você as concedeu no início. Se faltar alguma, toque em "**Conceder**" ao lado dela. Toque em "**Avançar**" para continuar:
 
-![Permissions granted](../images/setup-wizard/Wizard-Permissions-Granted.png)
+![Permissões concedidas](../images/setup-wizard/Wizard-Permissions-Granted.png)
 
-## Master password
+## Senha mestra
 
-As the configuration of **AAPS** contains some sensitive data (_e.g._ the access token for your Nightscout server) it is encrypted by a password you set here.
+Como a configuração do **AAPS** contém alguns dados sensíveis (_por exemplo_ o token de acesso do seu servidor Nightscout), ela é criptografada com uma senha que você define aqui.
 
-The Wizard shows "**Password not set**". Press "**Set**":
+O assistente mostra "**Senha não foi definida**". Toque em "**Definir**":
 
-![Master password not set](../images/setup-wizard/Wizard-MasterPassword-NotSet.png)
+![Senha mestra não definida](../images/setup-wizard/Wizard-MasterPassword-NotSet.png)
 
-This opens the "**Protection**" screen. Press "**Master password**" (shown as "Password not set"):
+Isso abre a tela "**Proteção**". Toque em "**Senha mestra**" (mostrada como "Senha não foi definida"):
 
-![Protection](../images/setup-wizard/Wizard-Protection.png)
+![Proteção](../images/setup-wizard/Wizard-Protection.png)
 
-Enter the same password in both fields and press "**OK**":
+Digite a mesma senha nos dois campos e toque em "**OK**":
 
 ![Senha](../images/setup-wizard/Wizard-Password.png)
 
-Go back with the arrow in the top left corner. The Wizard now shows "**Password set!**":
+Volte com a seta no canto superior esquerdo. O assistente agora mostra "**Senha foi definida!**":
 
-![Master password set](../images/setup-wizard/Wizard-MasterPassword-Set.png)
+![Senha mestra definida](../images/setup-wizard/Wizard-MasterPassword-Set.png)
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-Please **DO NOT LOSE YOUR MASTER PASSWORD**. Make a note of it _e.g._ on Google Drive, which is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
+**NÃO PERCA A SUA SENHA MESTRA**. Anote-a, _por exemplo_ no Google Drive, que é um bom lugar, porque o Google faz o backup para você. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
 ```
 
-When you are done, press "**NEXT**" to go to the next screen.
+Quando terminar, toque em "**Avançar**" para ir para a próxima tela.
 
 (setup-wizard-import-settings)=
-## Import settings
+## Importar configurações
 
-This screen is only shown when **AAPS** finds settings exported earlier in the **AAPS** directory ("Stored settings found"), for example when you reinstall the app or move to a new phone.
+Esta tela só é mostrada quando o **AAPS** encontra configurações exportadas antes no diretório do **AAPS** ("Configurações encontradas"), por exemplo quando você reinstala o app ou muda para um telefone novo.
 
-- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md).
-- To start with a new configuration, press "**NEXT**" and continue with the Wizard.
+- Para restaurar a sua configuração anterior, toque em "**Importar configurações**" — veja [Criação e restauração de backups](../Maintenance/ExportImportSettings.md).
+- Para começar com uma configuração nova, toque em "**Avançar**" e continue com o assistente.
 
-![Import settings](../images/setup-wizard/Wizard-ImportSettings.png)
+![Importar configurações](../images/setup-wizard/Wizard-ImportSettings.png)
 
-## Units (mg/dL <-> mmol/L)
+## Unidades (mg/dl <-> mmol/l)
 
-Please select if your glucose values are in mg/dL or mmol/L, then press the "**NEXT**" button:
+Selecione se os seus valores de glicose estão em mg/dl ou mmol/l e depois toque no botão "**Avançar**":
 
-![Units](../images/setup-wizard/Wizard-Units.png)
+![Unidades](../images/setup-wizard/Wizard-Units.png)
 
-## Display Settings
+## Configurações de exibição
 
-Here you set the "**LOW mark**" and "**HIGH mark**" for the sensor glucose display. Glucose values between these two marks are shown as "in range". You can leave the default values (72 and 180 mg/dL) for now, and edit them later.
+Aqui você define a "**Marca BAIXA**" e a "**Marca ALTA**" para a exibição da glicose do sensor. Os valores de glicose entre essas duas marcas são mostrados como "na faixa-alvo". Por enquanto, você pode deixar os valores padrão (72 e 180 mg/dl) e editá-los mais tarde.
 
 The values you choose only affect the graphical presentation of the diagram, and nothing else.
 
-Your glucose target _e.g._ is configured separately in your profile.
+O seu alvo de glicose, _por exemplo_, é configurado separadamente no seu perfil.
 
 Your range to analyze TIR (time in range) is configured separately in your reporting server.
 
-Adjust the marks with the "−" / "+" buttons if needed, then press the "**NEXT**" button:
+Ajuste as marcas com os botões "−" / "+" se for necessário e depois toque no botão "**Avançar**":
 
-![Display Settings](../images/setup-wizard/Wizard-Display.png)
+![Configurações de exibição](../images/setup-wizard/Wizard-Display.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
-## Communication
+## Comunicação
 
-The "**Communication**" screen lists the plugins used to upload, synchronize and broadcast your data:
+A tela "**Comunicação**" mostra os plugins usados para enviar, sincronizar e transmitir os seus dados:
 
-- **SMS Communicator** – remote control of **AAPS** using SMS commands
-- **NSClientV3** – synchronizes your data with Nightscout using the v3 API
-- **Tidepool** – uploads data to Tidepool
-- **xDrip** – sends data to xDrip
-- **Open Humans** – upload and donate your diabetes data to scientific projects
-- **Wear** – monitor and control **AAPS** from a WearOS watch
-- **External Companion Apps** – data broadcasting to various external apps
-- **Garmin** – connection to a Garmin device
+- **Comunicador SMS** – controle remoto do **AAPS** por comandos SMS
+- **NSClientV3** – sincroniza os seus dados com o Nightscout usando a API v3
+- **Tidepool** – envia dados para o Tidepool
+- **xDrip** – envia dados para o xDrip
+- **Open Humans** – envie e doe os seus dados de diabetes para projetos científicos
+- **Wear** – monitore e controle o **AAPS** a partir de um relógio WearOS
+- **Apps companheiros externos** – transmissão de dados para vários apps externos
+- **Garmin** – conexão com um dispositivo Garmin
 
-![Communication](../images/setup-wizard/Wizard-Communication.png)
+![Comunicação](../images/setup-wizard/Wizard-Communication.png)
 
-Scroll down to see the rest of the list:
+Role para baixo para ver o resto da lista:
 
-![Communication more](../images/setup-wizard/Wizard-Communication-More.png)
+![Mais opções de comunicação](../images/setup-wizard/Wizard-Communication-More.png)
 
-You could configure several of these now, but for the first run we will just focus on the reporting server. If you are not able to set it up at the moment, skip it for now — you can configure it later.
+Você poderia configurar vários deles agora, mas na primeira vez vamos nos concentrar apenas no servidor de relatórios. Se você não conseguir configurá-lo agora, pule por enquanto — você pode configurá-lo mais tarde.
 
-In this example we use Nightscout as reporting server. Tick the box on the right of "**NSClientV3**" to enable it. For Tidepool it is even simpler, as you only need your personal login information.
+Neste exemplo, usamos o Nightscout como servidor de relatórios. Marque a caixa à direita de "**NSClientV3**" para ativá-lo. For Tidepool it is even simpler, as you only need your personal login information.
 
-Once enabled, press "**Settings**" below NSClientV3 to configure it:
+Depois de ativado, toque em "**Configurações**" abaixo do NSClientV3 para configurá-lo:
 
 ![NSClientV3](../images/setup-wizard/Wizard-Communication-NSClient.png)
 
-Here you configure the Nightscout reporting server. The NSClientV3 settings are shown as one scrollable page:
+Aqui você configura o servidor de relatórios Nightscout. As configurações do NSClientV3 são mostradas em uma única página com rolagem:
 
-![NSClientV3 settings](../images/setup-wizard/Wizard-NSClientV3.png)
+![Configurações do NSClientV3](../images/setup-wizard/Wizard-NSClientV3.png)
 
-Press "**Nightscout URL**" and enter your personal Nightscout server address (the URL you set up yourself, or were given by your service provider). Confirm with "**OK**".
+Toque em "**URL do Nightscout**" e digite o endereço do seu servidor Nightscout pessoal (a URL que você mesmo configurou, ou que recebeu do seu provedor de serviço). Confirme com "**OK**".
 
-Press "**Nightscout access token**" and enter the access token for your Nightscout server. Without this token, access will not work. If you don't have it yet, please check the documentation for setting up the reporting server.
+Toque em "**Token de acesso do Nightscout**" e digite o token de acesso do seu servidor Nightscout. Without this token, access will not work. Se você ainda não tem o token, consulte a documentação sobre a configuração do servidor de relatórios.
 
-Leave "**Use websockets**" enabled for real-time communication with Nightscout.
+Deixe "**Usar websockets**" ativado para a comunicação em tempo real com o Nightscout.
 
-The remaining sections can be left at their defaults for now. They are described here so you know where to find them later:
+Por enquanto, as outras seções podem ficar com os valores padrão. Elas são descritas aqui para que você saiba onde encontrá-las mais tarde:
 
-**Alarm options** — Nightscout alarms, announcements and stale-data thresholds. Leave the switches off for now; we only open them so you are aware of the options.
+**Opções de alarme** — alarmes e anúncios do Nightscout e limites para dados desatualizados. Por enquanto, deixe as chaves desativadas; nós só abrimos esta seção para que você conheça as opções.
 
-**Connection settings** — choose how data is transferred. Caregivers must enable "**Use cellular data**", otherwise the phone of the person they care for (_e.g._ a child) cannot upload outside Wi-Fi range, _e.g._ on the way to school. Other users can disable cellular transfer to save data or battery. If in doubt, leave everything enabled.
+**Configurações de conexão** — escolha como os dados são transferidos. Os cuidadores devem ativar "**Usar dados móveis**"; senão, o telefone da pessoa de quem cuidam (_por exemplo_ uma criança) não consegue enviar dados fora do alcance do Wi-Fi, _por exemplo_ no caminho para a escola. Outros usuários podem desativar a transferência por dados móveis para economizar dados ou bateria. Em caso de dúvida, deixe tudo ativado.
 
-![Connection settings](../images/setup-wizard/Wizard-NSClientV3-Connection.png)
+![Configurações de conexão](../images/setup-wizard/Wizard-NSClientV3-Connection.png)
 
-**Advanced Settings** — enable "**Log app start event**" if you want to see in Nightscout when the app restarts (useful for caregivers). Keep "**Create announcements from errors**" and "**Create announcements from carbs required**" enabled. Leave "**Use slow sync**" off; you would only use it if the Nightscout server is slow to process a large amount of data.
+**Configurações Avançadas** — ative "**Registrar evento de início do app**" se você quiser ver no Nightscout quando o app reinicia (útil para cuidadores). Mantenha "**Criar anúncios a partir de erros**" e "**Criar anúncios a partir de solicitações de carboidratos**" ativados. Deixe "**Usar sincronização lenta**" desativado; você só o usaria se o servidor Nightscout fosse lento para processar uma grande quantidade de dados.
 
-![Advanced settings](../images/setup-wizard/Wizard-NSClientV3-Advanced.png)
+![Configurações Avançadas](../images/setup-wizard/Wizard-NSClientV3-Advanced.png)
 
-Go back to the list of plugins and press "**NEXT**" to go to the next screen.
+Volte para a lista de plugins e toque em "**Avançar**" para ir para a próxima tela.
 
-## Client control
+## Controle do cliente
 
-From **AAPS** version 4, client devices running **AAPSClient** can be **paired** with this phone (the **master**) and control it with signed commands sent over Nightscout. This is the new recommended way to control **AAPS** remotely — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for the full explanation and setup.
+A partir da versão 4 do **AAPS**, dispositivos cliente com o **AAPSClient** podem ser **pareados** com este telefone (o **dispositivo principal**) e controlá-lo com comandos assinados enviados pelo Nightscout. Esta é a nova forma recomendada de controlar o **AAPS** remotamente — veja [Controle dispositivo principal ↔ cliente](../RemoteFeatures/ClientMasterControl.md) para a explicação completa e a configuração.
 
-There is nothing you have to configure on this screen now; you can pair clients at any time later from **Manage → Authorized clients**. There you add a client with a **QR code** (it sets up Nightscout on the client too) or with a **PIN**, and give it a **role**.
+Não há nada que você precise configurar nesta tela agora; você pode parear clientes a qualquer momento mais tarde em **Gerenciar → Clientes autorizados**. Lá você adiciona um cliente com um **código QR** (ele também configura o Nightscout no cliente) ou com um **PIN**, e dá a ele uma **função**.
 
-- "**Authorized clients**" — manage the paired client devices allowed to control this master.
-- "**Nightscout data acceptance**" — accepting treatments and data entered directly in Nightscout (the old, less secure way) is now turned off by default. Only open these settings if you still need it, _e.g._ to enter data through Nightscout or third-party apps.
+- "**Clientes autorizados**" — gerencie os dispositivos cliente pareados que têm permissão para controlar este dispositivo principal.
+- "**Aceitação de dados do Nightscout**" — aceitar tratamentos e dados inseridos diretamente no Nightscout (a forma antiga e menos segura) agora fica desativado por padrão. Só abra estas configurações se você ainda precisar disso, _por exemplo_ para inserir dados pelo Nightscout ou por apps de terceiros.
 
-When client control is already on — always in [Simple Mode](#preferences-simple-mode) — this phone is in [hardened mode](#client-master-control-hardened-mode): it takes changes only from paired clients, so the screen explains hardened mode instead of offering the "**Nightscout data acceptance**" settings.
+Quando o controle do cliente já está ativado — sempre no [Modo simples](#preferences-simple-mode) — este telefone está no [modo reforçado](#client-master-control-hardened-mode): ele só aceita mudanças de clientes pareados, então a tela explica o modo reforçado em vez de oferecer as configurações de "**Aceitação de dados do Nightscout**".
 
-![Client control](../images/setup-wizard/Wizard-ClientControl.png)
+![Controle do cliente](../images/setup-wizard/Wizard-ClientControl.png)
 
-"**Nightscout data acceptance**" opens the "**Synchronization**" settings, where each kind of data received from Nightscout has its own switch:
+"**Aceitação de dados do Nightscout**" abre as configurações de "**Sincronização**", onde cada tipo de dado recebido do Nightscout tem a sua própria chave:
 
-![Nightscout data acceptance settings](../images/setup-wizard/Wizard-ClientControl-Synchronization.png)
+![Configurações de aceitação de dados do Nightscout](../images/setup-wizard/Wizard-ClientControl-Synchronization.png)
 
-Press "**NEXT**" to go to the next screen.
+Toque em "**Avançar**" para ir para a próxima tela.
 
 (setup-wizard-instance-name)=
-## Who is using this phone?
+## Quem está usando este telefone?
 
-Here you enter the name of the person using this phone. It tells this **AAPS** instance apart from others in reports and when synchronizing, for example if two children in your family use **AAPS**. It is also used in the names of exported settings files and shown on the watch.
+Aqui você digita o nome da pessoa que usa este telefone. Ele diferencia esta instância do **AAPS** de outras nos relatórios e na sincronização, por exemplo se duas crianças da sua família usam o **AAPS**. Ele também é usado nos nomes dos arquivos de configurações exportados e mostrado no relógio.
 
-It can be anything. You can change it later in **Settings → General → Instance name**.
+It can be anything. Você pode mudá-lo mais tarde em **Configurações → Geral → Nome da instância**.
 
-Press "**NEXT**" to go to the next screen.
+Toque em "**Avançar**" para ir para a próxima tela.
 
-![Name](../images/setup-wizard/Wizard-Name.png)
+![Nome](../images/setup-wizard/Wizard-Name.png)
 
 ## Patient type
 
-Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. This is important for security and safety reasons.
+Aqui você seleciona o seu "Tipo de paciente", o que é importante, porque o software **AAPS** tem limites diferentes conforme a idade do paciente. This is important for security and safety reasons.
 
-Here is where you also configure the **maximum allowed bolus** for a meal. That is, the largest bolus you need to give to cover your typical meals. It's a security feature to help avoid accidentally overdosing when you are bolusing for a meal.
+Aqui você também configura o **bólus máximo permitido** para uma refeição. That is, the largest bolus you need to give to cover your typical meals. É um recurso de segurança que ajuda a evitar uma superdosagem acidental quando você dá um bólus para uma refeição.
 
 The second limit is similar in concept, but relates to the max carbohydrate intake you expect.
 
-After setting these values, press "**NEXT**" to go to the next screen:
+Depois de definir esses valores, toque em "**Avançar**" para ir para a próxima tela:
 
-![Patient](../images/setup-wizard/Wizard-PatientType.png)
+![Paciente](../images/setup-wizard/Wizard-PatientType.png)
 
-## Insulin
+## Insulina
 
-Here you configure the insulin used in your pump. New insulin profiles require a **DIA of at least 5 h**.
+Aqui você configura a insulina usada na sua bomba. Novos perfis de insulina exigem uma **DIA de pelo menos 5 h**.
 
-Press the "**Insulin**" button to open the insulin editor:
+Toque no botão "**Insulina**" para abrir o editor de insulina:
 
-![Insulin](../images/setup-wizard/Wizard-Insulin.png)
+![Insulina](../images/setup-wizard/Wizard-Insulin.png)
 
-In the editor you can give the insulin a **nickname** and set its **Peak** (in minutes) and **DIA** (in hours). The quickest way is to load a preset with "**Load peak from**" — choose **Novorapid**, **Fiasp** or **Lyumjev** — and the peak is filled in for you. The graph at the bottom previews the resulting insulin activity curve.
+No editor, você pode dar um **apelido** à insulina e definir o seu **Pico** (em minutos) e a sua **DIA** (em horas). A forma mais rápida é carregar uma predefinição com "**Carregar pico de**" — escolha **Novorapid**, **Fiasp** ou **Lyumjev** — e o pico é preenchido para você. O gráfico na parte inferior mostra uma prévia da curva de atividade da insulina resultante.
 
-![Insulin editor](../images/setup-wizard/Wizard-Insulin-Novorapid.png)
+![Editor de insulina](../images/setup-wizard/Wizard-Insulin-Novorapid.png)
 
-Pick the preset that matches your insulin, for example **Fiasp**:
+Escolha a predefinição que corresponde à sua insulina, por exemplo **Fiasp**:
 
-![Insulin Fiasp](../images/setup-wizard/Wizard-Insulin-Fiasp.png)
+![Insulina Fiasp](../images/setup-wizard/Wizard-Insulin-Fiasp.png)
 
 ```{admonition} Use your insulin brand's preset peak
 :class: danger
-Please don't change the peak unless you are an expert — usually the preset values work well for each branded insulin.
+Não mude o pico, a menos que você seja um especialista — normalmente os valores predefinidos funcionam bem para cada marca de insulina.
 ```
 
-If you are a new **AAPS** user, set **DIA** to 9 hours — see [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to understand why.
+Se você é um novo usuário do **AAPS**, defina a **DIA** em 9 horas — veja [Duração da ação da insulina (DIA) e pico](#Config-Builder-insulin-dia) para entender por quê.
 
 ```{admonition} "Insulin configuration changed" dialog
 :class: note
-If a paired client (_e.g._ another phone) has changed the insulin configuration, a dialog appears. Press **OK** to load their changes, or **Cancel** to keep editing (your next save will overwrite theirs).
+Se um cliente pareado (_por exemplo_ outro telefone) mudou a configuração de insulina, aparece uma janela. Toque em **OK** para carregar as mudanças dele, ou em **Cancelar** para continuar editando (o seu próximo salvamento vai substituir as mudanças dele).
 ```
 
-![Insulin changed](../images/setup-wizard/Wizard-Insulin-Changed.png)
+![Insulina alterada](../images/setup-wizard/Wizard-Insulin-Changed.png)
 
-Press the save icon (top right), then press "**NEXT**" to go to the next screen.
+Toque no ícone de salvar (canto superior direito) e depois toque em "**Avançar**" para ir para a próxima tela.
 
 ## Blood sugar source
 
-Here you select where **AAPS** gets its glucose data from. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
+Aqui você seleciona de onde o **AAPS** recebe os dados de glicose. Leia a documentação da sua [fonte de BG](../Getting-Started/CompatiblesCgms.md).
 
-Many sources are available — scroll through the list and select the one you use:
+Há muitas fontes disponíveis — role a lista e selecione a que você usa:
 
-![BG Source](../images/setup-wizard/Wizard-BGSource.png)
+![Fonte de BG](../images/setup-wizard/Wizard-BGSource.png)
 
-Once you select a source, its card expands and shows two buttons: "**Settings**" to adjust how the data is received, and "**Open plugin**" to open the source's own screen. In the example below, **BYODA** is selected. Some sources have nothing to configure at this stage, so you can usually go straight to the next screen:
+Quando você seleciona uma fonte, o cartão dela se expande e mostra dois botões: "**Configurações**", para ajustar como os dados são recebidos, e "**Abrir plugin**", para abrir a tela da própria fonte. No exemplo abaixo, o **BYODA** está selecionado. Algumas fontes não têm nada para configurar nesta etapa, então normalmente você pode ir direto para a próxima tela:
 
-![BG Source settings](../images/setup-wizard/Wizard-BGSource-Settings.png)
+![Configurações da Fonte de BG](../images/setup-wizard/Wizard-BGSource-Settings.png)
 
-After making your selection, press "**NEXT**" to go to the next screen.
+Depois de fazer a sua escolha, toque em "**Avançar**" para ir para a próxima tela.
 
 (setup-wizard-profile)=
-## Profile
+## Perfil
 
 Now we are entering a very important part of the Setup Wizard.
 
-Please read the documentation about [profiles](../SettingUpAaps/YourAapsProfile.md) before you try to enter your profile details on the following screen.
+Leia a documentação sobre [perfis](../SettingUpAaps/YourAapsProfile.md) antes de tentar inserir os dados do seu perfil na próxima tela.
 
 ```{admonition} Working profile required - no exceptions here !
 :class: danger
-An accurate profile is necessary to control the safe action of **AAPS**.
+Um perfil exato é necessário para controlar a ação segura do **AAPS**.
 
-It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
+É necessário que você tenha definido e discutido o seu perfil com o seu médico, e que ele tenha sido comprovado por testes bem-sucedidos de taxa basal, ISF e IC!
 
-If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
+Se um robô recebe dados de entrada errados, ele vai falhar - sempre. O **AAPS** só pode trabalhar com as informações que recebe. Se o seu perfil for forte demais, você corre risco de hipoglicemia; se for fraco demais, corre risco de hiperglicemia. 
 ```
 
-Press the "**Profile**" button to open the profile editor:
+Toque no botão "**Perfil**" para abrir o editor de perfil:
 
-![Profile](../images/setup-wizard/Wizard-Profile.png)
+![Perfil](../images/setup-wizard/Wizard-Profile.png)
 
-The editor opens empty ("No records available"). Press the "**+**" button at the bottom to create a new profile:
+O editor abre vazio ("Nenhum registro disponível"). Toque no botão "**+**" na parte inferior para criar um novo perfil:
 
-![Profile empty](../images/setup-wizard/Wizard-Profile-Empty.png)
+![Perfil vazio](../images/setup-wizard/Wizard-Profile-Empty.png)
 
 You can have several profiles in the long-term if needed. We only create one here.
 
 ```{admonition} Profile only for tutorial - not for your usage
 :class: note
-The example profile here is only to show you how to enter data.
+O perfil de exemplo aqui serve apenas para mostrar como inserir os dados.
 
-It is not intended to be an accurate profile or something very well optimized, because each person's needs are so different.
+Ele não pretende ser um perfil exato nem algo muito bem otimizado, porque as necessidades de cada pessoa são muito diferentes.
 
-Don't use it for actually looping!
+Não use isso para fazer loop de verdade!
 ```
 
-The new profile (for example "**LocalProfile1**") has four tabs: **IC**, **ISF**, **BAS** and **TARG**. Press the pencil next to the profile name to rename it. Fill in every tab — a tab stays red and shows an error message until it contains valid values:
+O novo perfil (por exemplo "**LocalProfile1**") tem quatro abas: **IC**, **ISF**, **BAS** e **ALV**. Toque no lápis ao lado do nome do perfil para renomeá-lo. Preencha todas as abas — uma aba fica vermelha e mostra uma mensagem de erro até ter valores válidos:
 
-![New profile with errors](../images/setup-wizard/Wizard-Profile-New-Error.png)
+![Novo perfil com erros](../images/setup-wizard/Wizard-Profile-New-Error.png)
 
-Press "**IC**" and enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values. Use the "**+**" button to add more time blocks:
+Toque em "**IC**" e insira os seus valores de [IC](#your-aaps-profile-insulin-to-carbs-ratio). Use o botão "**+**" para adicionar mais blocos de horário:
 
 ![IC](../images/setup-wizard/Wizard-Profile-IC.png)
 
-Press "**ISF**" and enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
+Toque em "**ISF**" e insira os seus [valores de ISF](#your-aaps-profile-insulin-sensitivity-factor):
 
 ![ISF](../images/setup-wizard/Wizard-Profile-ISF.png)
 
-Press "**BAS**" and enter your [basal values](#your-aaps-profile-basal-rates):
+Toque em "**BAS**" e insira os seus [valores de basal](#your-aaps-profile-basal-rates):
 
 ![BAS](../images/setup-wizard/Wizard-Profile-BAS.png)
 
-Press "**TARG**" and enter your blood sugar target values.
+Toque em "**ALV**" e insira os seus valores de alvo de glicose.
 
-For open looping this target can be a wider range, as otherwise **AAPS** notifies you permanently to change the temporary basal rate or another setting, which can be exhausting.
+No loop aberto, este alvo pode ser uma faixa mais ampla, porque senão o **AAPS** avisa você o tempo todo para mudar a basal temporária ou outra configuração, o que pode ser cansativo.
 
-Later, for closed looping, you will generally have only one value for top and bottom. That makes it easier for **AAPS** to hit the target and give you better overall diabetes control.
+Later, for closed looping, you will generally have only one value for top and bottom. Isso torna mais fácil para o **AAPS** atingir o alvo e dar a você um controle melhor do diabetes no geral.
 
-![TARG](../images/setup-wizard/Wizard-Profile-TARG.png)
+![ALV](../images/setup-wizard/Wizard-Profile-TARG.png)
 
-When all four tabs are valid, the **save icon** (top right) becomes active. Press it to save the profile:
+Quando as quatro abas forem válidas, o **ícone de salvar** (canto superior direito) fica ativo. Toque nele para salvar o perfil:
 
-![Save icon](../images/setup-wizard/Wizard-Profile-SaveIcon.png)
+![Ícone de salvar](../images/setup-wizard/Wizard-Profile-SaveIcon.png)
 
-Close the editor with the "**X**" in the top left corner. The profile summary then shows its name, its total daily basal (∑), the units and the IC and ISF values with their graphs:
+Feche o editor com o "**X**" no canto superior esquerdo. O resumo do perfil então mostra o nome, a basal diária total (∑), as unidades e os valores de IC e ISF com os seus gráficos:
 
-![Save](../images/setup-wizard/Wizard-Profile-Save.png)
+![Salvar](../images/setup-wizard/Wizard-Profile-Save.png)
 
 ```{admonition} Several defined but only one active profile
 :class: note
-You can have several profiles defined, but only one activated profile running at any given time.
+Você pode ter vários perfis definidos, mas só um perfil ativo funcionando de cada vez.
 ```
 
-Press the "**▶**" (activate) button at the bottom right. The "**Activate**" screen opens. As no insulin is in use yet, it first asks you to select the insulin you are using, so that the profile switch can record it. The "**Activate**" button stays greyed out until you do:
+Toque no botão "**▶**" (ativar) no canto inferior direito. A tela "**Ativar**" abre. Como ainda não há nenhuma insulina em uso, ela pede primeiro que você selecione a insulina que usa, para que a troca de perfil possa registrá-la. O botão "**Ativar**" fica cinza (inativo) até você fazer isso:
 
-![Select the insulin first](../images/setup-wizard/Wizard-Profile-Switch-NoInsulin.png)
+![Selecione primeiro a insulina](../images/setup-wizard/Wizard-Profile-Switch-NoInsulin.png)
 
-Press "**Select Insulin**" and choose the insulin you configured earlier. Leave the percentage at 100 % and press "**Activate**":
+Toque em "**Selecionar insulina**" e escolha a insulina que você configurou antes. Deixe a porcentagem em 100 % e toque em "**Ativar**":
 
-![Activate](../images/setup-wizard/Wizard-Profile-Activate.png)
+![Ativar](../images/setup-wizard/Wizard-Profile-Activate.png)
 
-A profile switch dialog appears. In this case let it stay as preset and confirm with "**OK**":
+Aparece uma janela de troca de perfil. Neste caso, deixe como está e confirme com "**OK**":
 
 ```{admonition} Profile switch dialog
 :class: note
-You will learn later how to use this general dialog to handle situations like illness or sport, where you need to change your profile to suit the circumstances.
+Mais tarde você vai aprender a usar esta janela geral para lidar com situações como doença ou esporte, em que você precisa mudar o seu perfil para se adaptar às circunstâncias.
 ```
 
-![Switch](../images/setup-wizard/Wizard-Profile-Switch.png)
+![Troca](../images/setup-wizard/Wizard-Profile-Switch.png)
 
-Your profile is now active. Press "**NEXT**" to go to the next screen.
+O seu perfil agora está ativo. Toque em "**Avançar**" para ir para a próxima tela.
 
-## Insulin pump
+## Bomba de insulina
 
-Now you select your insulin pump. Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
+Agora você seleciona a sua bomba de insulina. Leia a documentação da sua [bomba de insulina](../Getting-Started/CompatiblePumps.md).
 
-Scroll the list and select your pump. In this example we use the "**Virtual Pump**", which is useful while you are still learning and have not connected a real pump yet:
+Role a lista e selecione a sua bomba. Neste exemplo, usamos a "**Bomba virtual**", que é útil enquanto você ainda está aprendendo e ainda não conectou uma bomba real:
 
-![Pump](../images/setup-wizard/Wizard-Pump.png)
+![Bomba](../images/setup-wizard/Wizard-Pump.png)
 
-Many pumps are supported — scroll down to find yours:
+Muitas bombas são suportadas — role para baixo para encontrar a sua:
 
-![Pump more](../images/setup-wizard/Wizard-Pump-More.png)
+![Mais bombas](../images/setup-wizard/Wizard-Pump-More.png)
 
-When you select a real pump, **AAPS** asks for a confirmation, because it will copy the basal rates of your profile to the pump and overwrite the basal rates stored there. Press "**OK**" only if the basal rates in your **AAPS** profile are correct; otherwise press "**Cancel**" and switch to the pump later:
+Quando você seleciona uma bomba real, o **AAPS** pede uma confirmação, porque ele vai copiar as taxas basais do seu perfil para a bomba e substituir as taxas basais salvas nela. Toque em "**OK**" apenas se as taxas basais do seu perfil do **AAPS** estiverem corretas; caso contrário, toque em "**Cancelar**" e mude para a bomba mais tarde:
 
-![Confirmation when selecting a hardware pump](../images/setup-wizard/Wizard-Pump-Confirmation.png)
+![Confirmação ao selecionar uma bomba física](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#bluetooth-permission)).
+Se a bomba que você seleciona se comunica por Bluetooth, o **AAPS** pede permissão para se conectar a dispositivos próximos quando você terminar o assistente (veja [Permissão de Bluetooth](#bluetooth-permission)).
 
-If you have already set up your profile and know how to connect your pump, feel free to connect it now. Otherwise leave it on **Virtual Pump** for the moment — you can change it anytime, or leave the Setup Wizard using the arrow in the top left corner and let **AAPS** first show you some blood glucose values.
+Se você já configurou o seu perfil e sabe como conectar a sua bomba, fique à vontade para conectá-la agora. Caso contrário, deixe na **Bomba virtual** por enquanto — você pode mudar a qualquer momento, ou sair do Assistente de Configuração pela seta no canto superior esquerdo e deixar o **AAPS** mostrar primeiro alguns valores de glicose.
 
-Press "**NEXT**" to go to the next screen.
+Toque em "**Avançar**" para ir para a próxima tela.
 
-## APS algorithm
+## Algoritmo APS
 
-Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name, the SMB feature of the algorithm is disabled until you are familiar with AAPS and have worked through the first objectives. OpenAPS SMB is newer and generally better than OpenAPS AMA anyway.
+Use the OpenAPS SMB algorithm as your APS algorithm. Apesar do nome, o recurso SMB do algoritmo fica desativado até você conhecer bem o AAPS e ter cumprido os primeiros objetivos. De qualquer forma, o OpenAPS SMB é mais novo e, em geral, melhor que o OpenAPS AMA.
 
-SMB is disabled at the start because the SMB feature reacts faster to a blood sugar increase, using a Super Micro Bolus instead of increasing the basal rate percentage. Because your profile is generally not as good in the beginning as it is after some experience, the feature is disabled at first.
+O SMB fica desativado no início porque o recurso SMB reage mais rápido a um aumento da glicose, usando um Super Micro Bolus (SMB) em vez de aumentar a porcentagem da taxa basal. Como no início o seu perfil em geral não é tão bom quanto depois de alguma experiência, o recurso fica desativado no começo.
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: note
-OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
+O OpenAPS AMA é o algoritmo mais básico, que não suporta microbólus para corrigir valores altos. Pode haver situações em que é melhor usar este algoritmo, mas ele não é o recomendado.
 ```
 
-Select "**OpenAPS SMB**", then press "**Settings**" to see the details:
+Selecione "**SMB OpenAPS**" e depois toque em "**Configurações**" para ver os detalhes:
 
 ![APS](../images/setup-wizard/Wizard-APS.png)
 
-The only option here is "**Use dynamic sensitivity**". Leave it off and change nothing for now — just read the text.
+A única opção aqui é "**Usar sensibilidade dinâmica**". Deixe-a desativada e não mude nada por enquanto — apenas leia o texto.
 
-Due to the limitations which are imposed by the **Objectives** you can't use either "closed loop" or "SMB features" at the moment anyway.
+Por causa das limitações impostas pelos **Objetivos**, de qualquer forma você não pode usar o "loop fechado" nem os "recursos de SMB" no momento.
 
-Go back and press "**NEXT**" to go to the next screen:
+Volte e toque em "**Avançar**" para ir para a próxima tela:
 
-![APS settings](../images/setup-wizard/Wizard-APS-Settings.png)
+![Configurações do APS](../images/setup-wizard/Wizard-APS-Settings.png)
 
-## Sensitivity detection
+## Detecção de sensibilidade
 
-Leave "**Sensitivity Oref1**" selected as the standard sensitivity plugin:
+Deixe "**Sensibilidade Oref1**" selecionado como o plugin de sensibilidade padrão:
 
-![Sensitivity](../images/setup-wizard/Wizard-Sensitivity.png)
+![Sensibilidade](../images/setup-wizard/Wizard-Sensitivity.png)
 
-If you press "**Settings**" you can review the absorption settings; the defaults (_e.g._ a 6 h absorption cutoff) are fine for now.
+Se você tocar em "**Configurações**", pode revisar as configurações de absorção; os valores padrão (_por exemplo_ um limite de absorção de 6 h) estão bons por enquanto.
 
-![Sensitivity settings](../images/setup-wizard/Wizard-Sensitivity-Settings.png)
+![Configurações de sensibilidade](../images/setup-wizard/Wizard-Sensitivity-Settings.png)
 
-Press "**NEXT**" to go to the next screen.
+Toque em "**Avançar**" para ir para a próxima tela.
 
 ## Start Objective 1
 
-You are now entering the Objectives — the qualification for access to further **AAPS** features.
+Agora você está entrando nos Objetivos — a qualificação para ter acesso a mais recursos do **AAPS**.
 
-Press "**Open Objectives**":
+Toque em "**Abrir objetivos**":
 
-![Objectives](../images/setup-wizard/Wizard-Objectives.png)
+![Objetivos](../images/setup-wizard/Wizard-Objectives.png)
 
 Here we start Objective 1, even if at the moment our setup is not completely ready to successfully complete this Objective. But this is the start.
 
-Press the "**Start**" button next to "**1. Objective**":
+Toque no botão "**Iniciar**" ao lado de "**1. Objetivo**":
 
-![Objectives list](../images/setup-wizard/Wizard-Objectives-List.png)
+![Lista de objetivos](../images/setup-wizard/Wizard-Objectives-List.png)
 
-The objective expands to show its individual checks. You can see that you already made some progress, while other items are still to be done:
+O objetivo se expande e mostra as suas verificações individuais. Você pode ver que já fez algum progresso, enquanto outros itens ainda precisam ser feitos:
 
-![Objective started](../images/setup-wizard/Wizard-Objectives-Started.png)
+![Objetivo iniciado](../images/setup-wizard/Wizard-Objectives-Started.png)
 
-Go back, then press "**FINISH**" to complete the Setup Wizard:
+Volte e depois toque em "**Finalizar Configuração**" para concluir o Assistente de Configuração:
 
-![Finish](../images/setup-wizard/Wizard-Objectives-Finish.png)
+![Finalizar](../images/setup-wizard/Wizard-Objectives-Finish.png)
 
-After pressing "**FINISH**" you arrive at the main screen of **AAPS**. A "**Notification**" panel may open with information messages, for example about the profile switch you just made — press "**Dismiss**" below each message to clear it.
+Depois de tocar em "**Finalizar Configuração**", você chega à tela principal do **AAPS**. Um painel "**Notificação**" pode abrir com mensagens informativas, por exemplo sobre a troca de perfil que você acabou de fazer — toque em "**Dispensar**" abaixo de cada mensagem para removê-la.
 
-If you accidentally leave the Setup Wizard at any point, you can either simply re-start the Wizard, or change the [configuration of the AAPS loop](../SettingUpAaps/ChangeAapsConfiguration.md) manually.
+Se você sair do Assistente de Configuração sem querer em algum momento, você pode simplesmente iniciar o assistente de novo ou mudar a [configuração do loop do AAPS](../SettingUpAaps/ChangeAapsConfiguration.md) manualmente.
 
-## Bluetooth permission
+## Permissão de Bluetooth
 
-If you select a pump that connects over Bluetooth (for example **Omnipod Dash**), a banner reminds you that **AAPS** needs Bluetooth permission. You can press "**Dismiss**" for now — the permission is granted after you finish the Wizard:
+Se você selecionar uma bomba que se conecta por Bluetooth (por exemplo **Omnipod Dash**), um aviso lembra que o **AAPS** precisa da permissão de Bluetooth. Por enquanto, você pode tocar em "**Dispensar**" — a permissão é concedida depois que você terminar o assistente:
 
-![Bluetooth needed](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
+![Bluetooth necessário](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
 
-Once the Setup Wizard is finished, the **AAPS** main screen shows a "**Permissions Required**" panel. The other permissions are already granted; press "**Grant**" next to "**Bluetooth**":
+Quando o Assistente de Configuração terminar, a tela principal do **AAPS** mostra um painel "**Permissões necessárias**". As outras permissões já foram concedidas; toque em "**Conceder**" ao lado de "**Bluetooth**":
 
-![Bluetooth Grant](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
+![Conceder Bluetooth](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
 
-Select "**Allow**" so **AAPS** can find and connect to your pump:
+Selecione "**Allow**" (Permitir) para que o **AAPS** possa encontrar a sua bomba e se conectar a ela:
 
-![Bluetooth Allow](../images/setup-wizard/Wizard-Bluetooth-Allow.png)
+![Permitir Bluetooth](../images/setup-wizard/Wizard-Bluetooth-Allow.png)
 
-If your **AAPS** loop is now fully setup, please move on to the next section ["Completing the objectives"](../SettingUpAaps/CompletingTheObjectives.md).
+Se o seu loop do **AAPS** já está totalmente configurado, passe para a próxima seção ["Completar os objetivos"](../SettingUpAaps/CompletingTheObjectives.md).

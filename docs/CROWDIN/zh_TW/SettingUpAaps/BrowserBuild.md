@@ -26,7 +26,7 @@
 
 **→ [使用 AAPS Builder 建置](BrowserBuildAapsBuilder.md)**
 
-### On a computer or an iPhone / iPad: fork and preparation file
+### 在電腦或 iPhone／iPad 上：建立分支並準備檔案
 
 你會在 GitHub 將 AAPS 原始碼建立一個副本（fork），使用準備檔案建立你的 keystore，建置完成的應用程式會儲存到你的 Google 雲端硬碟。請依下列四個步驟進行。
 
@@ -44,11 +44,11 @@
 
 #### 你需要準備
 
-- A **Google account**, so the built app can be saved to your Google Drive.
+- 您需要一個**Google 帳號**，才能將建置完成的應用程式儲存到 Google 雲端硬碟。
 - GitHub 帳號（免費）— 你會在步驟 1 建立。
 - 可同時開啟多個分頁的網頁瀏覽器（以下以 Chrome 為例）。
 - 用於執行準備檔案的小型輔助工具。所需工具取決於你用來建置的裝置—現在無需安裝任何東西，步驟 2 會針對你的裝置逐步引導：
-  - **Computer (Windows / Mac / Linux):** Simple Web Server.
+  - **電腦（Windows／Mac／Linux）：**Simple Web Server。
   - **iPhone / iPad：**不需額外 App—使用內建的「檔案」App 與瀏覽器。
 
 #### 步驟
@@ -60,7 +60,7 @@
 3. **[授權 Google 雲端硬碟](BrowserBuildGoogleDrive.md)** — 讓 GitHub 將建置完成的應用程式儲存到你的 Google 雲端硬碟。
 4. **[建置 APK](BrowserBuildAPK.md)** — 執行 GitHub Actions 工作流程，並選擇你的版本與變體。
 
-若遇到問題，請參閱 **[瀏覽器建置疑難排解](../GettingHelp/BrowserBuildTroubleshooting.md)**。 For optional operations with a fork, see [exporting your keystore](#ci-keystore-export) or [cherry-picking a commit](#github-cherry-pick).
+若遇到問題，請參閱 **[瀏覽器建置疑難排解](../GettingHelp/BrowserBuildTroubleshooting.md)**。如需了解分支的選用操作，請參閱[匯出金鑰儲存庫](#ci-keystore-export)或[挑選提交內容](#github-cherry-pick)。
 
 ----
 

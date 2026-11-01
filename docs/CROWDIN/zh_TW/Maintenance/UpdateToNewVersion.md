@@ -21,7 +21,7 @@
 
 ## 使用 Android Studio 更新 AAPS
 
-Follow [these instructions](./UpdateComputerBuild.md).
+請按照[這些指示](./UpdateComputerBuild.md)進行操作。
 
 ## 使用命令列更新 AAPS
 
@@ -35,8 +35,8 @@ Follow [these instructions](./UpdateComputerBuild.md).
 
 安裝新的 apk 之後：
 
-- you can check the **AAPS'** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). 可以看到目前的 **AAPS'** 版本；
-- ensure import settings have been actioned; and
-- please check your **AAPS'** settings under **Settings** and ensure these remain accurate.
+- 您可以在手機上查看 **AAPS** 的版本：開啟左上角的**選單**（☰），再選擇**關於**（如下方螢幕截圖所示）。可以看到目前的 **AAPS'** 版本；
+- 確認已完成匯入設定；以及
+- 請前往**設定**檢查 **AAPS** 的設定，並確認內容仍正確。
 
-![About dialog with the AAPS version installed](../images/about_dialog_version.png)
+![顯示已安裝 AAPS 版本的「關於」對話方塊](../images/about_dialog_version.png)

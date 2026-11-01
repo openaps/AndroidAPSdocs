@@ -1,10 +1,10 @@
-# Other CGM uploaded to Nightscout
+# Outro CGM enviado para o Nightscout
 
-Use this option if you have any other CGM set up that can send your BG data **only** to [Nightscout](https://nightscout.github.io/).
+Use esta opção se tiver outro CGM configurado que consegue enviar os seus dados de glicose **apenas** para o [Nightscout](https://nightscout.github.io/).
 
 ```{important}
-This data source will not work when you are offline, when you experience network issues or when your Nightscout site is down. Use with caution.
+Esta fonte de dados não funciona quando está sem ligação à internet, quando há problemas de rede ou quando o seu site Nightscout está em baixo. Use com cuidado.
 ```
 
--   Set up **NSClientV3** (**Configuration → Communication**) with your Nightscout site information.
--   Select NSClient BG in [**Configuration → BG Source**](#Config-Builder-bg-source).
+-   Configure o **NSClientV3** (**Configuração → Comunicação**) com os dados do seu site Nightscout.
+-   Selecione Glicose NSClient em [**Configuração → Fonte da Glicose**](#Config-Builder-bg-source).

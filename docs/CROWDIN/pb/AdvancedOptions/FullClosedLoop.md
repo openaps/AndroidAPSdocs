@@ -287,7 +287,7 @@ Além disso, é muito fácil e rápido ajustar quaisquer condições ou ações 
 
 (full-closed-loop-troubleshooting)=
 
-## Troubleshooting
+## Resolução de problemas
 
 ### Como voltar ao loop fechado híbrido
 

@@ -1,154 +1,154 @@
 (quicklaunch)=
-# QuickLaunch (overview quick-action toolbar)
+# Acesso rápido (barra de ações rápidas da visão geral)
 
-**QuickLaunch** is the small **quick-action toolbar** that floats at the bottom of the **AAPS** overview, just above the bottom navigation. It is a customizable row of one-tap buttons: you decide which actions live there, in which order, so the things you do most often are always one tap away on the main screen.
+O **acesso rápido** é a pequena **barra de ações rápidas** que fica na parte de baixo da tela de visão geral do **AAPS**, logo acima da navegação inferior. É uma linha de botões de um toque que você pode personalizar: você decide quais ações ficam ali e em que ordem, assim o que você faz com mais frequência está sempre a um toque na tela principal.
 
 ```{contents} Table of contents
 :depth: 2
 :local: true
 ```
 
-![The QuickLaunch toolbar on the overview](../images/v4/QuickLaunch/quicklaunch_toolbar.png)
+![A barra de acesso rápido na visão geral](../images/v4/QuickLaunch/quicklaunch_toolbar.png)
 
 ---
 
-## Using the toolbar
+## Usar a barra
 
-The toolbar sits on the **overview**, between the graphs and the bottom navigation:
+A barra fica na **visão geral**, entre os gráficos e a navegação inferior:
 
-![The QuickLaunch toolbar in place on the overview](../images/v4/QuickLaunch/quicklaunch_overview.png)
+![A barra de acesso rápido no seu lugar na visão geral](../images/v4/QuickLaunch/quicklaunch_overview.png)
 
-- **Tap** an icon to run its action — exactly as if you had opened it from its normal screen (a bolus or treatment still shows its usual confirmation first).
-- **Long-press** an icon to see a **tooltip** with the action's name and a short description.
-- If you add **more buttons than fit** on screen, the extra ones move into an **overflow menu** (the **⋮** button at the end of the toolbar).
-- Each icon keeps its action's **color** (e.g. insulin, carbs, temp target), so it is recognizable at a glance.
+- **Toque** em um ícone para executar a ação, exatamente como se você a tivesse aberto na tela normal dela (um bólus ou tratamento continua mostrando a confirmação de sempre antes).
+- **Toque e segure** um ícone para ver uma **dica** com o nome da ação e uma descrição curta.
+- Se você adicionar **mais botões do que cabem** na tela, os que sobram vão para um **menu extra** (o botão **⋮** no fim da barra).
+- Cada ícone mantém a **cor** da sua ação (por exemplo insulina, carboidratos, alvo temporário), assim você o reconhece logo.
 
 ```{admonition} The toolbar is always there
 :class: note
-The last button is always **Configure QuickLaunch** (the **⚙️** gear). It cannot be removed, so you can always reach the configuration screen straight from the toolbar. By default the toolbar contains just two buttons — the **Bolus wizard** and this gear.
+O último botão é sempre **Configurar acesso rápido** (a engrenagem **⚙️**). Ele não pode ser removido, assim você sempre chega à tela de configuração direto pela barra. Por padrão, a barra tem só dois botões: o **Assistente de Bólus** e esta engrenagem.
 ```
 
 ---
 
-## Configuring QuickLaunch
+## Configurar o acesso rápido
 
-Tap the **⚙️** gear on the toolbar (or open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → … → Configure QuickLaunch**) to open the **Configure QuickLaunch** screen (*“Customize quick-action buttons on overview”*).
+Toque na engrenagem **⚙️** da barra (ou abra **[Configuração](../SettingUpAaps/ConfigBuilder.md) → … → Configurar acesso rápido**) para abrir a tela **Configurar acesso rápido** (*"Personalizar botões de ações rápidas na visão geral"*).
 
-![Configure QuickLaunch — Selected actions, then the catalog of actions to add](../images/v4/QuickLaunch/quicklaunch_config.png)
+![Configurar acesso rápido: Ações selecionadas e, abaixo, o catálogo de ações para adicionar](../images/v4/QuickLaunch/quicklaunch_config.png)
 
-The screen has two parts:
+A tela tem duas partes:
 
-- **Selected actions** (at the top) — the buttons currently on your toolbar, in toolbar order.
-- A **catalog** below it — every action you can add, grouped by category. Each catalog entry has a **➕** button to add it.
+- **Ações selecionadas** (no topo): os botões que estão agora na sua barra, na ordem da barra.
+- Um **catálogo** abaixo: todas as ações que você pode adicionar, agrupadas por categoria. Cada entrada do catálogo tem um botão **➕** para adicioná-la.
 
-### Selected actions — reorder, edit, remove
+### Ações selecionadas: reordenar, editar, remover
 
-Each selected action has:
+Cada ação selecionada tem:
 
-- a **⠿ drag handle** — press and drag to **reorder** the buttons (the order here is the order on the toolbar),
-- a **−** button — **remove** it from the toolbar,
-- and, for a **Profile** shortcut only, a **✏️** button to edit its percentage/duration (see [Profile shortcuts](#profile-shortcuts)).
+- uma **⠿ alça de arrastar**: toque, segure e arraste para **reordenar** os botões (a ordem aqui é a ordem na barra),
+- um botão **−**: **remove** a ação da barra,
+- e, só para um atalho de **Perfil**, um botão **✏️** para editar a porcentagem/duração (veja [Atalhos de perfil](#profile-shortcuts)).
 
-Changes take effect **immediately** — there is no separate *Save*. Adding an action drops it at the end of the toolbar; reorder it from there.
+As mudanças valem **imediatamente**: não há um botão *Salvar* separado. Uma ação adicionada vai para o fim da barra; reordene a partir daí.
 
 ---
 
-## The action categories
+## As categorias de ações
 
-The catalog groups everything you can add into the following categories, in this order. Categories that have nothing to offer (e.g. you have no scenes) are simply not shown.
+O catálogo agrupa tudo o que você pode adicionar nas categorias a seguir, nesta ordem. Categorias que não têm nada para oferecer (por exemplo, se você não tem cenários) simplesmente não aparecem.
 
-### Treatment
+### Tratamento
 
-The everyday treatment and CGM dialogs:
+Os diálogos de tratamento e de CGM do dia a dia:
 
-- **Insulin** — deliver a bolus manually.
-- **Carbs** — record carbs without insulin.
-- **Bolus wizard** — open the bolus calculator.
-- **Treatment** — record insulin and carbs together.
-- **CGM** — open your CGM app (e.g. xDrip).
-- **Calibration** — calibrate the CGM sensor.
+- **Insulina**: dar um bólus manualmente.
+- **Carboidratos**: registrar carboidratos sem insulina.
+- **Assistente de Bólus**: abrir a calculadora de bólus.
+- **Tratamento**: registrar insulina e carboidratos juntos.
+- **CGM**: abrir o seu app de CGM (por exemplo, xDrip).
+- **Calibração**: calibrar o sensor do CGM.
 
-### Care Portal
+### CarePortal
 
-The care-portal events and device-maintenance records:
+Os eventos do CarePortal e os registros de manutenção do dispositivo:
 
-- **BG Check**, **Note**, **Exercise**, **Question**, **Announcement**,
-- **Sensor Insert**, **Pump Battery Change**, **Pump Site Change**, **Prime/Fill**, **Site Rotation**.
+- **Verificação BG**, **Anotação**, **Exercício**, **Pergunta**, **Anúncio**,
+- **Inserção do sensor**, **Troca de Bateria da Bomba**, **Alteração do local do cateter**, **Purgar/Preencher**, **Rotação do local**.
 
-**Prime/Fill** and **Pump Battery Change** are only offered when your pump uses them. Patch pumps, for example, fill and change the battery in their own activation steps, so these entries are not shown for them (as in the **Manage** sheet).
+**Purgar/Preencher** e **Troca de Bateria da Bomba** só são oferecidos quando a sua bomba usa essas funções. Bombas de patch, por exemplo, preenchem e trocam a bateria nos seus próprios passos de ativação, por isso essas entradas não aparecem para elas (como no painel **Gerenciar**).
 
-![The Care Portal category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
+![A categoria CarePortal no catálogo](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
 
-These are the same entries you would otherwise reach through the **[Treatments](#v4changes-treatments)** and **[Manage](#v4changes-manage)** sheets — QuickLaunch just puts the ones you use on the overview.
+São as mesmas entradas que você abriria pelos painéis **[Tratamentos](#v4changes-treatments)** e **[Gerenciar](#v4changes-manage)**: o acesso rápido só coloca na visão geral as que você usa.
 
-### Manage
+### Gerenciar
 
-The screens of the **[Manage](#v4changes-manage)** sheet, in the same order, so you can open the one you use most from the toolbar:
+As telas do painel **[Gerenciar](#v4changes-manage)**, na mesma ordem, para você abrir pela barra a que mais usa:
 
-- **Profile**, **Insulin settings** (manage and activate insulin configurations — named differently from **Insulin** on purpose, because that button delivers a bolus), **Temp Target**, **QuickWizard**, **Scenes**, **Automation**, **Food**,
-- **Running mode** — close or open the loop, suspend it, or disconnect the pump,
-- **Authorized clients** — only on a master or a paired client.
+- **Perfil**, **Configurações de insulina** (gerenciar e ativar configurações de insulina; o nome é diferente de **Insulina** de propósito, porque aquele botão dá um bólus), **Alvo temporário**, **Assistente rápido**, **Cenários**, **Automação**, **Alimentos**,
+- **Modo de operação**: fechar ou abrir o loop, suspendê-lo ou desconectar a bomba,
+- **Clientes autorizados**: só no dispositivo principal ou em um cliente pareado.
 
-These buttons open the screen; they do not start anything by themselves. To start a scene or a QuickWizard in one tap, add it from the **Scenes** or **Quick Wizard** category below.
+Estes botões abrem a tela; eles não iniciam nada sozinhos. Para iniciar um cenário ou um Assistente rápido com um toque, adicione-o pela categoria **Cenários** ou **Assistente rápido** abaixo.
 
-![The Manage category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![The Manage category, continued](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
+![A categoria Gerenciar no catálogo](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![A categoria Gerenciar, continuação](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
 
-### Quick Wizard
+### Assistente rápido
 
-Each of your **[QuickWizard](QuickWizards.md)** presets can be added as a button, so a recurring meal is one tap from the overview. The button carries the preset's name and shows the carbs/insulin amount; tapping it runs the QuickWizard with its usual confirmation.
+Cada uma das suas predefinições de **[Assistente rápido](QuickWizards.md)** pode ser adicionada como botão, assim uma refeição que se repete fica a um toque na visão geral. O botão tem o nome da predefinição e mostra a quantidade de carboidratos/insulina; tocar nele executa o Assistente rápido com a confirmação de sempre.
 
-QuickWizards set to show on the watch only are not offered. A QuickWizard button on the toolbar follows the same rules as in the **Treatments** sheet: it is hidden outside its [valid time range](#quickwizard_validity) and for a short time after use. It stays in your toolbar configuration and comes back when the QuickWizard can be used again.
+Assistentes rápidos configurados para aparecer só no relógio não são oferecidos. Um botão de Assistente rápido na barra segue as mesmas regras do painel **Tratamentos**: ele fica escondido fora do seu [horário válido](#quickwizard_validity) e por pouco tempo depois do uso. Ele continua na configuração da sua barra e volta quando o Assistente rápido pode ser usado de novo.
 
-### Scenes
+### Cenários
 
-Each enabled **[scene](Scenes.md)** can be added as a button. Tapping it asks for confirmation, then activates the scene (the same bundle of actions you would get from the Scenes screen). This category appears only if you have at least one scene.
+Cada **[cenário](Scenes.md)** ativado pode ser adicionado como botão. Tocar nele pede confirmação e depois ativa o cenário (o mesmo conjunto de ações que você teria pela tela Cenários). Esta categoria só aparece se você tem pelo menos um cenário.
 
-The tooltip and the catalog show the same summary as **Manage → Scenes**, for example *"3 actions, 2 h → Cooldown"*, where the name after the arrow is the follow-up scene.
+A dica e o catálogo mostram o mesmo resumo que **Gerenciar → Cenários**, por exemplo *"3 ações, 2 h → Recuperação"*, onde o nome depois da seta é o cenário seguinte.
 
-### Automation
+### Automação
 
-Your **user-action** automation rules (the ones you trigger by hand) can be added as buttons. Tapping one asks for confirmation, then runs that rule's actions.
+As suas regras de automação de **ação do usuário** (as que você inicia manualmente) podem ser adicionadas como botões. Tocar em uma delas pede confirmação e depois executa as ações dessa regra.
 
 ```{admonition} Automation buttons run on the master
 :class: note
-Automation executes on the **master**, so automation shortcuts are offered and run only on the master. They are not available on a paired **[client](../RemoteFeatures/ClientMasterControl.md)**.
+A automação é executada no **dispositivo principal**, por isso os atalhos de automação só são oferecidos e executados no dispositivo principal. Eles não estão disponíveis em um **[cliente](../RemoteFeatures/ClientMasterControl.md)** pareado.
 ```
 
-### Temp Target Presets
+### Predefinições de alvo temporário
 
-Each of your **[Temp Target](TempTargets.md)** presets can be added as a button (its name, its target and its duration are shown, for example *"Eating soon — 5.0 mmol/L, 45 min"*). Tapping it asks for confirmation, then starts that temp target.
+Cada uma das suas predefinições de **[Alvo temporário](TempTargets.md)** pode ser adicionada como botão (aparecem o nome, o alvo e a duração, por exemplo *"Comer em breve — 5,0 mmol/l, 45 min"*). Tocar nele pede confirmação e depois inicia esse alvo temporário.
 
-![The dynamic categories — Quick Wizard and Temp Target Presets (Scenes and Automation appear when you have some)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
+![As categorias dinâmicas: Assistente rápido e Predefinições de alvo temporário (Cenários e Automação aparecem quando você tem algum)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
 
 (profile-shortcuts)=
-### Profile
+### Perfil
 
-Every **[profile](ProfileSwitch-ProfilePercentage.md)** can be added as a **shortcut** that performs a **profile switch** in one tap. Unlike most shortcuts, a Profile shortcut carries its own **percentage** and **duration**, which you set after adding it with the **✏️** button:
+Cada **[perfil](ProfileSwitch-ProfilePercentage.md)** pode ser adicionado como um **atalho** que faz uma **troca de perfil** com um toque. Diferente da maioria dos atalhos, um atalho de perfil tem a sua própria **porcentagem** e **duração**, que você define depois de adicioná-lo, com o botão **✏️**:
 
-- **Percentage** (30–250 %, in steps of 5 %) — scale the profile when it is applied. 100 % uses it as-is.
-- **Duration** (0–10080 min, that is up to 7 days, in steps of 10 min) — how long the switch lasts. **0 = Permanent** (until you switch again).
+- **Porcentagem** (30–250%, em passos de 5%): muda a escala do perfil quando ele é aplicado. 100% usa o perfil sem mudanças.
+- **Duração** (0–10080 min, ou seja, até 7 dias, em passos de 10 min): quanto tempo a troca dura. **0 = Permanente** (até você trocar de novo).
 
-![Profile shortcuts and plugin categories in the catalog](../images/v4/QuickLaunch/quicklaunch_categories.png)
+![Atalhos de perfil e categorias de plugins no catálogo](../images/v4/QuickLaunch/quicklaunch_categories.png)
 
-This lets you keep several buttons for the **same** profile at different strengths — for example *“Profile 100 %”* and *“Profile 70 % for 2 h”* — and apply either with a single tap. (You can add the same profile more than once with different settings.)
+Assim você pode ter vários botões para o **mesmo** perfil com forças diferentes, por exemplo *"Perfil 100%"* e *"Perfil 70% por 2 h"*, e aplicar qualquer um com um único toque. (Você pode adicionar o mesmo perfil mais de uma vez, com configurações diferentes.)
 
 ### Plugins
 
-![Plugin shortcuts in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
+![Atalhos de plugins no catálogo](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
 
-Finally, any **enabled plugin** that has its own screen can be added as a shortcut to open it directly. These are grouped by plugin type — **Pump**, **BG Source**, **APS**, **Loop**, **Sensitivity detection**, **Smoothing**, **Calibration**, **Constraints**, **Communication** and **General** — so you can, for instance, jump straight to your pump or loop screen from the overview.
+Por fim, qualquer **plugin ativado** que tenha a sua própria tela pode ser adicionado como atalho para abri-la diretamente. Eles são agrupados por tipo de plugin: **Bomba**, **Fonte de BG**, **APS**, **Loop**, **Detecção de sensibilidade**, **Suavização**, **Calibração**, **Restrições**, **Comunicação** e **Geral**. Assim você pode, por exemplo, ir direto da visão geral para a tela da sua bomba ou do loop.
 
 ---
 
-## QuickLaunch and Master/Client
+## Acesso rápido e dispositivo principal/cliente
 
-Unlike most of your settings, the **QuickLaunch toolbar is configured per device** — it is stored **locally and is not synced** between your master and paired clients, so each device keeps its own set of buttons. (It *is* included in a settings **backup/export**, so a restore brings it back on the same device.)
+Diferente da maioria das suas configurações, a **barra de acesso rápido é configurada em cada dispositivo**: ela é guardada **localmente e não é sincronizada** entre o seu dispositivo principal e os clientes pareados, então cada dispositivo tem o seu próprio conjunto de botões. (Ela *é* incluída no **backup/exportação** das configurações, então uma restauração a traz de volta no mesmo dispositivo.)
 
-What each device can put on its toolbar still depends on what it has: QuickWizards, scenes, temp-target presets and profiles all sync, so a client's catalog offers the same items — you simply choose them per device. A few details to know:
+O que cada dispositivo pode colocar na barra ainda depende do que ele tem: Assistentes rápidos, cenários, predefinições de alvo temporário e perfis são todos sincronizados, então o catálogo de um cliente oferece os mesmos itens; você só escolhe os botões em cada dispositivo. Alguns detalhes importantes:
 
-- Buttons whose target no longer exists (a deleted QuickWizard, scene or preset, a disabled rule) are **skipped automatically**.
-- **Automation** shortcuts are offered and run only on the **master** (automation executes on the master). Scene, QuickWizard, temp-target and profile buttons are available on a client.
-- When you tap a button on a client that must run on the master (a bolus, temp target, profile switch or scene), the **master** carries it out and authors the confirmation. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md).
+- Botões cujo destino não existe mais (um Assistente rápido, cenário ou predefinição excluído, uma regra desativada) são **ignorados automaticamente**.
+- Atalhos de **Automação** só são oferecidos e executados no **dispositivo principal** (a automação é executada no dispositivo principal). Botões de cenário, Assistente rápido, alvo temporário e perfil estão disponíveis em um cliente.
+- Quando você toca em um botão em um cliente que precisa ser executado no dispositivo principal (um bólus, alvo temporário, troca de perfil ou cenário), o **dispositivo principal** faz a ação e assina a confirmação. Veja [Controle dispositivo principal ↔ cliente](../RemoteFeatures/ClientMasterControl.md).
 
 ---
 

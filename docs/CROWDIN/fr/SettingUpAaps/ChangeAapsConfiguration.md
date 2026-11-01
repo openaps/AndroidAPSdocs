@@ -4,13 +4,13 @@ Après avoir terminé l'**[Assistant de configuration](../SettingUpAaps/SetupWiz
 
 Il y a trois voies pour modifier la configuration d'**AAPS**. Le choix de la voie est simplement une question de commodité ou de préférence personnelle, car chaque voie mène aux mêmes paramètres.
 
-Ces possibilités sont les suivantes :
+Ces possibilités sont les suivantes :
 
 1. L'écran **Configuration**,
 2. L'écran **Paramètres** ou
 3. Les **Paramètres** d'un plugin, ouverts depuis sa catégorie dans **Configuration**.
 
-Nous expliquons ci-dessous quelle option est la plus pratique pour chaque situation :
+Nous expliquons ci-dessous quelle option est la plus pratique pour chaque situation :
 
 ## Configuration
 

@@ -1,22 +1,22 @@
-# Change language and version
+# 變更語系和版本
 
-The documentation you are currently reading is available in several languages and is specific to a given version of **AAPS**. Both the language and the version can be changed from the menu at the bottom right of the screen.
+您目前閱讀的說明文件提供多種語系，並且是針對特定版本的 **AAPS** 編寫。您可以從螢幕右下角的選單變更語系和版本。
 
 ```{note}
-Click on the bar at the bottom right of the screen to open the language and version selection menu.
+按一下螢幕右下角的列，即可開啟語系和版本選擇選單。
 ```
 
 ![打開語系選單](../images/documentation_language_menu.png)
 
 ## 更改語系
 
-In the menu, select the language you want to read the documentation in.
+在選單中，選取您想用來閱讀說明文件的語系。
 
-Feel welcome to join [Crowdin](https://crowdin.com/project/androidapsdocs) translators and proofreaders to help translate the documentation into your language.
+歡迎加入 [Crowdin](https://crowdin.com/project/androidapsdocs)，成為翻譯人員或校對人員，協助將說明文件翻譯成您的語系。
 
 ## 更改版本
 
-當前版本顯示在螢幕的右下角。 To switch to a different version, click on the current version and select the version you need.
+當前版本顯示在螢幕的右下角。若要切換至其他版本，請按一下目前的版本，然後選取您需要的版本。
 
 ```{warning}
 當你更改語系和/或版本時，如果該語系或版本的頁面不存在，可能會出現 404 - 找不到頁面。這通常在切換版本時會發生，但在更改語系時不應發生：如果尚未翻譯，該頁面將顯示為英文。

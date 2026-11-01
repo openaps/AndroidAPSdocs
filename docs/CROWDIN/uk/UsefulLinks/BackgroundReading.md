@@ -1,38 +1,38 @@
-# Useful resources to read before you start
+# Корисні матеріали, які варто прочитати перед початком
 
-Before you build your rig, you're going to have to do a lot of reading in order to understand how everything works and to get the best out of it. We've put together a list of places you can go to get you started and hopefully answer a lot of your questions.
+Перш ніж збирати свою систему, вам доведеться багато прочитати, щоб зрозуміти, як усе працює, і отримати від неї найкращий результат. Ми зібрали список місць, де ви можете почати й, сподіваємося, знайти відповіді на багато своїх запитань.
 
-## Further reading
+## Додаткове читання
 
 [OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
 
-[OpenAPS documentation - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
+[Документація OpenAPS - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
 
 [Loop Docs - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
-[Fine-Tuning your settings - https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
+[Fine-Tuning your settings (точне налаштування параметрів) - https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
 [Tim Omer – Hypodiabetic Blog - https://www.hypodiabetic.co.uk/](https://www.hypodiabetic.co.uk/)
 
 [DIYPS - https://diyps.org/](https://diyps.org/)
 
-[Diabetes and Technology - Where Diabetes meets Tech - https://www.diabettech.com/](https://www.diabettech.com/)
+[Diabetes and Technology - Where Diabetes meets Tech (блог про діабет і технології) - https://www.diabettech.com/](https://www.diabettech.com/)
 
 [OpenAPS Reference Design - https://openaps.org/reference-design/](https://openaps.org/reference-design/)
 
-[Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+[Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters (чому ми часто неправильно задаємо тривалість дії інсуліну (DIA) і чому це важливо)](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-[What conclusions can we draw when investigating Insulin Sensitivity using the Autosens function within #OpenAPS?](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
+[What conclusions can we draw when investigating Insulin Sensitivity using the Autosens function within #OpenAPS? (які висновки можна зробити, досліджуючи чутливість до інсуліну за допомогою функції Autosens в #OpenAPS)](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
 
 [https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
-[“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown
+[“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) («Світлі місця та міни»), автор Adam Brown
 
-[“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner
+[“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) («Думай як підшлункова залоза»), автор Gary Scheiner
 
-["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts
+["Pumping insulin"](https://amzn.eu/d/iaCsFa2) («Інсулінова помпа»), автори John Walsh & Ruth Roberts
 
-## Background reading and articles about DIY closed looping
+## Базові матеріали та статті про саморобну (DIY) закриту петлю
 
 <https://hackaday.com/2016/12/19/closing-the-loop-on-an-artificial-pancreas/>
 
@@ -40,8 +40,8 @@ Before you build your rig, you're going to have to do a lot of reading in order 
 
 <https://btvnovinite.bg/video/bulgaria/dnes-e-svetovnijat-den-za-borba-s-diabeta.html>
 
-## Stuff on YouTube
+## Матеріали на YouTube
 
-[Tim Omer: Empowered Citizen "Health Hackers" - We Are Not Waiting! - https://www.youtube.com/watch?v=RjhkRmL1wOI](https://www.youtube.com/watch?v=RjhkRmL1wOI)
+[Tim Omer: Empowered Citizen "Health Hackers" - We Are Not Waiting! (виступ про пацієнтів, які самі створюють медичні технології) - https://www.youtube.com/watch?v=RjhkRmL1wOI](https://www.youtube.com/watch?v=RjhkRmL1wOI)
 
-[Live interview with Dana Lewis, creator of Do-It-Yourself Pancreas System - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)
+[Інтерв'ю в прямому ефірі з Dana Lewis, авторкою Do-It-Yourself Pancreas System (DIYPS) - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)

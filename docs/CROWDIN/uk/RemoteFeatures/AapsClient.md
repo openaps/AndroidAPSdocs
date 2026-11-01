@@ -1,17 +1,17 @@
 (aapsclient-app)=
-# The AAPSClient app
+# Застосунок AAPSClient
 
-**AAPSClient** is the accessory app of **AAPS**: a companion app for a second phone — typically a caregiver's — that **follows** the person using **AAPS**. From **AAPS** version 4, the caregiver can also **control** the loop remotely through signed commands. Both phones communicate through your **Nightscout** site; no direct connection between the phones is needed.
+**AAPSClient** — це допоміжний застосунок **AAPS**: застосунок для другого телефону — зазвичай телефону доглядача, — який **стежить** за людиною, що користується **AAPS**. Починаючи з **AAPS** версії 4, доглядач також може віддалено **керувати** петлею за допомогою підписаних команд. Обидва телефони обмінюються даними через ваш сайт **Nightscout**; пряме з'єднання між телефонами не потрібне.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Client** = a phone running **AAPSClient**.
-- **Master** = the main **AAPS** phone that owns the pump and runs the loop.
+- **Клієнт** = телефон, на якому працює **AAPSClient**.
+- **Основний телефон (master)** = головний телефон з **AAPS**, який керує помпою і на якому працює петля.
 ```
 
 ```{admonition} iPhone version in development
 :class: note
-**AAPSClient** currently runs on Android phones. An iPhone version of **AAPSClient** is being developed and is in early testing. It is not released yet: there is no App Store listing and nothing to download. This page will be updated when it becomes available.
+**AAPSClient** зараз працює на телефонах Android. Версія **AAPSClient** для iPhone розробляється і перебуває на ранньому етапі тестування. Вона ще не випущена: у App Store її немає, і завантажити нічого не можна. Цю сторінку буде оновлено, коли вона стане доступною.
 ```
 
 ```{contents} Table of contents
@@ -19,100 +19,100 @@
 :local: true
 ```
 
-## What AAPSClient is (and is not)
+## Що таке AAPSClient (і чим він не є)
 
-**AAPSClient** looks and feels like **AAPS**, but it has **no loop of its own**:
+**AAPSClient** виглядає і працює як **AAPS**, але **не має власної петлі**:
 
-- It contains **no APS algorithm**, no **Objectives**, and **no pump drivers** — it never doses on its own.
-- The plugins used only by the main app (**SMS Communicator**, **Tidepool**, **Open Humans**) are not included either.
-- What it *does* contain: **NSClientV3** synchronization, the BG-source plugins, **xDrip+** broadcasting, and the **Wear OS** / **Garmin** connectors — everything needed to follow and to relay commands. A **Garmin** watch connected to a client can show the data, but carbs it sends are not entered and it cannot connect or disconnect the pump: the client shows a message, and you enter them in **AAPS** instead.
+- Він не містить **алгоритму APS**, **Завдань** і **драйверів помп** — він ніколи не подає інсулін сам.
+- Плагіни, які використовує лише основний застосунок (**SMS Комунікатор**, **Tidepool**, **Open Humans**), теж не включено.
+- Що він *містить*: синхронізацію **NSClientV3**, плагіни джерела ГК, трансляцію даних у **xDrip+** і конектори для **Wear OS** / **Garmin** — усе, що потрібно, щоб стежити і передавати команди. Годинник **Garmin**, підключений до клієнта, може показувати дані, але вуглеводи, які він надсилає, не вводяться, і він не може підключити або відключити помпу: клієнт показує повідомлення, і ви вводите це в **AAPS**.
 
-Everything you trigger from **AAPSClient** is checked, capped, confirmed and **executed by the master** (the phone with the pump). The dedicated [Master ↔ Client control](ClientMasterControl.md) page explains how this works: how to pair the two phones, how the master writes the confirmation text you see, how a bolus started on the client is delivered, and what happens when the master is offline.
+Усе, що ви запускаєте з **AAPSClient**, перевіряє, обмежує, підтверджує і **виконує основний телефон** (телефон з помпою). Окрема сторінка [Керування основний телефон ↔ клієнт](ClientMasterControl.md) пояснює, як це працює: як спарувати два телефони, як основний телефон формує текст підтвердження, який ви бачите, як подається болюс, запущений на клієнті, і що відбувається, коли основний телефон не в мережі.
 
-## Versions: AAPSClient, AAPSClient2 and AAPSClient3
+## Версії: AAPSClient, AAPSClient2 і AAPSClient3
 
-Up to three client apps can be installed side by side on the same follower phone, each following a **different** person: **AAPSClient** (yellow owl icon), **AAPSClient2** (blue owl) and — new in **AAPS** version 4 — **AAPSClient3** (green owl). They are functionally identical. Only the name and the color differ (app icon, widget background and the status section on the home screen), so you can tell them apart. Each app is paired with its own master. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions) for details.
+На одному телефоні-послідовнику можна встановити поруч до трьох клієнтських застосунків, кожен стежить за **іншою** людиною: **AAPSClient** (значок жовтої сови), **AAPSClient2** (синя сова) і — нове в **AAPS** версії 4 — **AAPSClient3** (зелена сова). За функціями вони однакові. Відрізняються лише назва і колір (значок застосунку, фон віджета і розділ стану на головному екрані), щоб їх можна було розрізнити. Кожен застосунок спарений зі своїм основним телефоном. Докладніше див. [Про AAPSClient, AAPSClient2 і AAPSClient3](#remotecontrol-aapsclient-versions).
 
-## Getting the app
+## Як отримати застосунок
 
-**AAPSClient** is obtained the same way as **AAPS** — see [Download and installation of AAPSClient](#RemoteControl_aapsclient), and install it like the main app ([Transferring and installing](../SettingUpAaps/TransferringAndInstallingAaps.md)).
+**AAPSClient** отримують так само, як **AAPS**, — див. [Завантаження і встановлення AAPSClient](#RemoteControl_aapsclient), і встановлюють так само, як основний застосунок ([Перенесення та встановлення](../SettingUpAaps/TransferringAndInstallingAaps.md)).
 
-## First start: a shorter Setup Wizard
+## Перший запуск: коротший Майстер налаштування
 
-On first start **AAPSClient** runs the same **Setup Wizard** you know from **AAPS**, but with far fewer steps — there is no profile, insulin, pump, APS or objectives configuration on a follower:
+Під час першого запуску **AAPSClient** запускає той самий **Майстер налаштування**, який ви знаєте з **AAPS**, але з набагато меншою кількістю кроків — на телефоні-послідовнику немає налаштування профілю, інсуліну, помпи, APS або завдань:
 
-1. **Welcome**, **license agreement**, **permissions** and **master password** — identical to the main app, see the [AAPS Setup Wizard](../SettingUpAaps/SetupWizard.md).
-2. The client does **not** ask for **units** or the **low/high marks**: it takes them from the main phone as soon as it is connected to Nightscout. You can see them later in **Settings**, where a small **phone icon** shows that they are [synchronized with the main phone](#client-master-config-prefs). They can only be edited while the master is reachable.
-3. **Set up from the master** — on the master, open **Manage → Authorized clients**, add this phone with a **QR code** and tap **Scan the QR code** here. One scan sets up Nightscout with a token of this phone's own and, with a code that pairs, also pairs the phone. The phone also takes the name it was added with on the master as its instance name (letters with accents become plain letters, "Miloš" becomes "Milos"). **After the scan, the setup is finished**: the wizard closes, because the next steps would only show what the code did. Without a QR code, skip this step. (Android only: the scanner is not available on iOS yet.)
+1. **Ласкаво просимо**, **ліцензійна угода**, **дозволи** і **головний пароль** — так само, як в основному застосунку, див. [Майстер налаштування AAPS](../SettingUpAaps/SetupWizard.md).
+2. Клієнт **не** запитує **одиниці** або **нижню/верхню межі**: він бере їх з основного телефону, щойно підключиться до Nightscout. Пізніше ви можете побачити їх у **Налаштуваннях**, де маленький **значок телефону** показує, що вони [синхронізуються з основним телефоном](#client-master-config-prefs). Змінювати їх можна лише тоді, коли основний телефон доступний.
+3. **Налаштувати з основного телефону** — на основному телефоні відкрийте **Керувати → Авторизовані клієнти**, додайте цей телефон за допомогою **QR-коду** і тут торкніться **Сканувати QR-код**. Одне сканування налаштовує Nightscout з власним токеном цього телефону, а якщо код містить спарювання, то також спаровує телефон. Телефон також бере як назву свого екземпляра ім'я, з яким його додали на основному телефоні (літери з діакритичними знаками стають звичайними: «Miloš» стає «Milos»). **Після сканування налаштування завершено**: майстер закривається, бо наступні кроки лише показали б те, що вже зробив код. Без QR-коду пропустіть цей крок. (Лише Android: на iOS сканер ще недоступний.)
 
-   ![The Set up from the master step with the Scan the QR code button](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+   ![Крок «Налаштувати з основного телефону» з кнопкою «Сканувати QR-код»](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **Communication** — the plugin list only offers what a follower needs (NSClientV3, xDrip+, Wear, External Companion Apps, Garmin). If you did not scan a QR code, enable **NSClientV3** and enter the **same Nightscout URL** as on the main phone and an access token, with **websockets** enabled — exactly as described in [Synchronization](#RemoteControl_aapsclient).
+4. **Звʼязок** — у списку плагінів є лише те, що потрібно послідовнику (NSClientV3, xDrip+, Wear, Зовнішні супутні застосунки, Garmin). Якщо ви не сканували QR-код, увімкніть **NSClientV3** і введіть **той самий URL Nightscout**, що й на основному телефоні, і токен доступу, з увімкненими **websockets** — точно так, як описано в розділі [Синхронізація](#RemoteControl_aapsclient).
 
-   ![Communication step on the client](../images/v4/AapsClient/aapsclient_wizard_communication.png)
+   ![Крок «Звʼязок» на клієнті](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
-5. **Pair with master** — this step exists **only** on the client. It connects this device to the master over the secure command channel, with the PIN, and takes the name the phone was added with on the master, like the QR code. **After the pairing, the setup is finished.** You can also skip it and pair at any time later from **Manage → Pair with master**.
+5. **Спарувати з основним пристроєм** — цей крок є **лише** на клієнті. Він підключає цей пристрій до основного телефону через захищений канал команд за допомогою PIN-коду і бере ім'я, з яким телефон додали на основному телефоні, так само як QR-код. **Після спарювання налаштування завершено.** Ви також можете пропустити цей крок і спарувати телефон будь-коли пізніше через **Керувати → Спарувати з основним пристроєм**.
 
-   ![Pair with master step in the client wizard](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
+   ![Крок «Спарувати з основним пристроєм» у майстрі клієнта](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
 
-6. **Who is using this phone?** — only when you did not pair in the wizard: the name of the person using this phone. It tells this instance apart in reports and synchronization.
+6. **Хто користується цим телефоном?** — лише якщо ви не спарували телефон у майстрі: ім'я людини, яка користується цим телефоном. За ним цей екземпляр можна відрізнити у звітах і під час синхронізації.
 
 (aapsclient-pairing-with-the-master)=
 
-## Pairing with the master
+## Спарювання з основним телефоном
 
-On the **master**, open **Manage → Authorized clients** and add a client. There are two ways to pair:
+На **основному телефоні** відкрийте **Керувати → Авторизовані клієнти** і додайте клієнт. Спарувати можна двома способами:
 
-- **With a QR code** (the quickest, if the phone has a camera): scan the code in the wizard step "**Set up from the master**" or from **Manage → Pair with master → Scan QR code**, and confirm with "**Use**". It sets up Nightscout too.
-- **With the PIN**: on the **client**, open the wizard step above (or **Manage → Pair with master**), type the one-time PIN shown on the master and press "**Pair**". The client then shows who it is about to trust — confirm with "**Pair**":
+- **За допомогою QR-коду** (найшвидше, якщо телефон має камеру): відскануйте код на кроці майстра «**Налаштувати з основного телефону**» або через **Керувати → Спарувати з основним пристроєм → Сканувати QR-код** і підтвердьте кнопкою «**Використати**». Це також налаштовує Nightscout.
+- **За допомогою PIN-коду**: на **клієнті** відкрийте описаний вище крок майстра (або **Керувати → Спарувати з основним пристроєм**), введіть одноразовий PIN-код, показаний на основному телефоні, і натисніть «**Спарувати**». Потім клієнт показує, кому він збирається довіряти, — підтвердьте кнопкою «**Спарувати**»:
 
-![Confirmation on the client before completing the pairing](../images/v4/AapsClient/aapsclient_pair_confirm.png)
+![Підтвердження на клієнті перед завершенням спарювання](../images/v4/AapsClient/aapsclient_pair_confirm.png)
 
-From the wizard, a successful pairing finishes the setup and opens the home screen. On the master the client appears as **Active** in the [Authorized clients](#client_master_master_setup) list. Afterwards, **Manage → Pair with master** shows "*Already paired*", the phone's role and whether hardened mode is on:
+Якщо спарювання в майстрі пройшло успішно, налаштування завершується і відкривається головний екран. На основному телефоні клієнт з'являється як **Активний** у списку [Авторизовані клієнти](#client_master_master_setup). Після цього **Керувати → Спарувати з основним пристроєм** показує «*Уже спарено*», роль телефону і те, чи увімкнено захищений режим:
 
-![Manage → Pair with master on a paired client: Already paired, Role: Caregiver, Hardened mode on](../images/v4/ClientMaster/pair_with_master_client.png) The full pairing procedure, security details and troubleshooting are on [Master ↔ Client control](#client_master_client_setup).
+![Керувати → Спарувати з основним пристроєм на спареному клієнті: Уже спарено, Роль: Доглядач, Захищений режим увімкнено](../images/v4/ClientMaster/pair_with_master_client.png) Повний порядок спарювання, деталі безпеки та усунення проблем описано на сторінці [Керування основний телефон ↔ клієнт](#client_master_client_setup).
 
-After pairing, the client gets a Nightscout token of its own from the master (if the master has an admin token), with only the rights a client needs, and stops using the token you may have entered. **AAPSClient** never writes treatments or BG to Nightscout itself: everything it does is sent to the master, which writes it. See [The client's own Nightscout token](#client-master-control-own-token).
+Після спарювання клієнт отримує від основного телефону власний токен Nightscout (якщо основний телефон має токен адміністратора) лише з тими правами, які потрібні клієнту, і перестає використовувати токен, який ви, можливо, ввели. **AAPSClient** ніколи сам не записує терапію або ГК у Nightscout: усе, що він робить, надсилається основному телефону, який це записує. Див. [Власний токен Nightscout клієнта](#client-master-control-own-token).
 
-The master decides what this phone may do with its **[role](#client-master-control-roles)** (Read-only, Meals, Caregiver or Admin). **Manage → Pair with master** shows the phone's role.
+Основний телефон визначає, що може робити цей телефон, за допомогою його **[ролі](#client-master-control-roles)** (Лише читання, Їжа, Доглядач або Адмін). **Керувати → Спарувати з основним пристроєм** показує роль телефону.
 
-## The home screen
+## Головний екран
 
-The client's home screen mirrors the followed loop:
+Головний екран клієнта відображає петлю, за якою він стежить:
 
-![AAPSClient home screen](../images/v4/AapsClient/aapsclient_home.png)
+![Головний екран AAPSClient](../images/v4/AapsClient/aapsclient_home.png)
 
-- **BG, graphs, IOB/COB and profile** come from Nightscout, just as the master uploaded them.
-- The **loop status** shown is the **master's** (a client has no loop of its own). Until the client has received the master's running mode from Nightscout, the running mode chip shows a **question mark** (unknown).
-- The **status card** shows the **followed pump's** reservoir and battery and the uploader battery, taken from the Nightscout device status — a client has no pump, so there is no local pump status and no pump management anywhere in the app.
-- The bottom bar offers **Treatments**, **Scenes** and **Manage** once the client is paired (only **Manage** before pairing) — there are no pump or objectives tabs.
+- **ГК, графіки, IOB/COB і профіль** надходять з Nightscout саме в тому вигляді, у якому їх вивантажив основний телефон.
+- Показаний **стан петлі** — це стан петлі **основного телефону** (клієнт не має власної петлі). Поки клієнт не отримав з Nightscout робочий режим основного телефону, мітка робочого режиму показує **знак питання** (невідомо).
+- **Картка стану** показує резервуар і батарею **помпи, за якою стежить клієнт**, і батарею телефону, що вивантажує дані, — взяті зі стану пристрою в Nightscout. Клієнт не має помпи, тому в застосунку немає ні локального стану помпи, ні керування помпою.
+- Нижня панель містить **Терапія**, **Сцени** і **Керувати**, коли клієнт спарено (до спарювання лише **Керувати**), — вкладок помпи або завдань немає.
 
-## Treatments and actions
+## Терапія і дії
 
-Everything under **Manage** works like on the main app, with one important difference: on a client, actions that would change therapy (bolus, carbs, temp targets, scenes…) are **hidden until the device is paired**, and once paired they are **relayed to the master** for confirmation and execution — see [Using remote control](#client-master-control).
+Усе в **Керувати** працює так само, як в основному застосунку, з однією важливою відмінністю: на клієнті дії, які змінюють терапію (болюс, вуглеводи, тимчасові цілі, сцени…), **приховано, доки пристрій не спарено**, а після спарювання їх **передають основному телефону** для підтвердження і виконання — див. [Використання віддаленого керування](#client-master-control).
 
-The **Profile** entry is the exception: it is shown even on an **unpaired** client, but opens **view-only** — the client shows the profiles it receives through Nightscout (it needs them for its own calculations), without edit or activate buttons. Once the client is **paired**, the profile list is synchronized with the master and you can edit and activate profiles from the client like any other remote action.
+Виняток — пункт **Профіль**: його видно навіть на **неспареному** клієнті, але він відкривається **лише для перегляду** — клієнт показує профілі, які отримує через Nightscout (вони потрібні йому для власних розрахунків), без кнопок редагування і активації. Коли клієнт **спарено**, список профілів синхронізується з основним телефоном, і ви можете редагувати й активувати профілі з клієнта, як і будь-яку іншу віддалену дію.
 
-On an **unpaired** client, **Manage** only offers **Profile** and **Pair with master**:
+На **неспареному** клієнті **Керувати** містить лише **Профіль** і **Спарувати з основним пристроєм**:
 
-![The Manage screen on an unpaired client: only Profile and Pair with master](../images/v4/AapsClient/aapsclient_manage_unpaired.png)
+![Екран «Керувати» на неспареному клієнті: лише «Профіль» і «Спарувати з основним пристроєм»](../images/v4/AapsClient/aapsclient_manage_unpaired.png)
 
-The red banner "*Master device unreachable. Editing is disabled until the connection is restored.*" also appears on an unpaired client. This is expected: there is no master to reach yet. The banner disappears once the client is paired and the master is online.
+Червоний банер «*Основний пристрій недоступний. Редагування вимкнено, доки зʼєднання не відновиться.*» також з'являється на неспареному клієнті. Так і має бути: ще немає основного телефону, до якого можна підключитися. Банер зникає, коли клієнт спарено і основний телефон у мережі.
 
-Once the client is paired, the therapy actions appear:
+Коли клієнт спарено, з'являються дії терапії:
 
-![The Manage screen on a paired client, including the Pair with master entry](../images/v4/AapsClient/aapsclient_manage.png)
+![Екран «Керувати» на спареному клієнті, включно з пунктом «Спарувати з основним пристроєм»](../images/v4/AapsClient/aapsclient_manage.png)
 
-There is **no Pump entry** — a client has no pump.
+Пункту **Помпа немає** — клієнт не має помпи.
 
-If the master is not reachable, the same banner appears on a paired client: the therapy actions are greyed out, and anything you try is blocked before it is sent. The client notices that the master is offline when you try an action, and re-enables the actions once the master is back online.
+Якщо основний телефон недоступний, той самий банер з'являється і на спареному клієнті: дії терапії стають сірими, і все, що ви пробуєте зробити, блокується ще до надсилання. Клієнт помічає, що основний телефон не в мережі, коли ви пробуєте виконати дію, і знову вмикає дії, коли основний телефон повертається в мережу.
 
-![The Manage screen on a paired client while the master is offline: actions greyed out under the banner](../images/v4/AapsClient/aapsclient_manage_master_offline.png)
+![Екран «Керувати» на спареному клієнті, коли основний телефон не в мережі: дії під банером сірі](../images/v4/AapsClient/aapsclient_manage_master_offline.png)
 
-## Settings synchronized with the master
+## Налаштування, синхронізовані з основним телефоном
 
-The active plugin **configuration** and many **preferences** are kept in sync between the master and its paired clients; synced items are marked with a small **phone icon** and are disabled (with a "*Master device unreachable*" banner) while the master cannot be reached. This is described in [Changing configuration and preferences](#client-master-config-prefs).
+Активна **конфігурація** плагінів і багато **параметрів** синхронізуються між основним телефоном і спареними з ним клієнтами; синхронізовані пункти позначені маленьким **значком телефону** і вимкнені (з банером «*Основний пристрій недоступний*»), поки основний телефон недоступний. Це описано в розділі [Зміна конфігурації та параметрів](#client-master-config-prefs).
 
-## AAPSClient on a smartwatch
+## AAPSClient на розумному годиннику
 
-A Wear OS watch can be paired with the **client** phone; its actions are relayed through the client to the master. See [Wear OS](../WearOS/WearOsSmartwatch.md) and the [smartwatch options in Remote control](#RemoteControl_smartwatches).
+Годинник Wear OS можна спарувати з телефоном-**клієнтом**; його дії передаються через клієнт на основний телефон. Див. [Wear OS](../WearOS/WearOsSmartwatch.md) і [варіанти з розумним годинником у розділі «Віддалене керування»](#RemoteControl_smartwatches).

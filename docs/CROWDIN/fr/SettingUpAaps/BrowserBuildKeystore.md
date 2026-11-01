@@ -60,7 +60,7 @@ Ce script exporte les informations de keystore configurées auparavant (avec l'O
 Avant d'utiliser cette méthode d'export, vérifiez que la configuration de votre keystore et de Google Drive est terminée.
 ```
 
-### Étapes :
+### Étapes :
 
 1. **Ajouter le secret du mot de passe ZIP :**
    - Dans votre dépôt, allez dans **Settings** → **Secrets and variables** → **Actions**

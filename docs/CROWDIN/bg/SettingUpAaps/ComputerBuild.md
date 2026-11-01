@@ -19,17 +19,17 @@
 
 * За компилиране на apk файла може да е нужна определена версия на **[Android Studio](https://developer.android.com/studio/)**. Вижте таблицата по-долу:
 
-| Версия на AAPS              | Препоръчителна<br/>версия на<br/>Android Studio | Алтернативна<br/>версия на<br/>Android Studio | Gradle | JVM |
-| --------------------------- | ----------------------------------------------------------- | --------------------------------------------------------- | ------ |:--- |
-| 2.6.2                       | 3.6.1                                                       |                                                           | 5.6.4  | 11  |
-| 2.8.2.1                     | 4.1.1                                                       |                                                           | 6.1.1  | 13  |
-| [3.1.0.3](#version3100)     | 2020.3.1                                                    | изпробвано до Quail 4                                     | 7.3.3  | 17  |
-| [3.2.0.4](#version3204)     | Hedgehog (2023.1.1)                                         | изпробвано до Quail 4                                     | 8.2    | 17  |
-| [3.3.1.3](#version3300)     | Ladybug Feature Drop (2024.2.2)                             | изпробвано до Quail 4                                     | 8.10   | 21  |
-| [3.3.2](#version3300)       | Meerkat (2024.3.1)                                          | изпробвано до Quail 4                                     | 8.11.1 | 21  |
-| [3.3.2.1](#version3321)     | Narwhal (2025.1.2)                                          | изпробвано до Quail 4                                     | 8.13   | 21  |
-| [3.4.2.6](#version3426)     | Panda 2 (2025.3.2)                                          | изпробвано до Quail 4                                     | 9      | 21  |
-| [4.0.0-beta1](#version4000) | Rabbit 1                                                    | до последната Rabbit 1                                    | 9.8    | 21  |
+| Версия на AAPS                                                           | Препоръчителна<br/>версия на<br/>Android Studio | Алтернативна<br/>версия на<br/>Android Studio | Gradle | JVM |
+| ------------------------------------------------------------------------ | ----------------------------------------------------------- | --------------------------------------------------------- | ------ |:--- |
+| 2.6.2                                                                    | 3.6.1                                                       |                                                           | 5.6.4  | 11  |
+| 2.8.2.1                                                                  | 4.1.1                                                       |                                                           | 6.1.1  | 13  |
+| [3.1.0.3](https://github.com/nightscout/AndroidAPS/releases/tag/3.1.0.3) | 2020.3.1                                                    | изпробвано до Quail 4                                     | 7.3.3  | 17  |
+| [3.2.0.4](#version3204)                                                  | Hedgehog (2023.1.1)                                         | изпробвано до Quail 4                                     | 8.2    | 17  |
+| [3.3.1.3](#version3300)                                                  | Ladybug Feature Drop (2024.2.2)                             | изпробвано до Quail 4                                     | 8.10   | 21  |
+| [3.3.2](#version3300)                                                    | Meerkat (2024.3.1)                                          | изпробвано до Quail 4                                     | 8.11.1 | 21  |
+| [3.3.2.1](#version3321)                                                  | Narwhal (2025.1.2)                                          | изпробвано до Quail 4                                     | 8.13   | 21  |
+| [3.4.2.6](#version3426)                                                  | Panda 2 (2025.3.2)                                          | изпробвано до Quail 4                                     | 9      | 21  |
+| [4.0.0](#version400)                                                     | Rabbit 2 (2026.2.2)                                         | Latest                                                    | 9.8    | 21  |
 
 „Препоръчителната версия“ идва с подходящата версия на JVM. Препоръчителната версия е и най-ниската версия, с която можете да компилирате **AAPS**. **НЯМА** да можете да компилирате с версия, по-стара от „препоръчителната“. Ако използвате друга версия, може да срещнете проблеми, свързани с версията на JVM. Вижте страницата [Отстраняване на неизправности в Android Studio](#troubleshooting_androidstudio-uncommitted-changes) за помощ при решаването на тези проблеми. Ако текущата ви версия на Android Studio не е в таблицата, първо трябва да я актуализирате.
 
@@ -41,27 +41,27 @@
 <tbody>
   <tr>
     <th class="tg-baqh">ОС (само 64-битова)</th>
-    <td class="tg-baqh">Windows 8 или по-нова</td>
-    <td class="tg-baqh">Mac OS 10.14 или по-нова</td>
-    <td class="tg-baqh">Всеки Linux с поддръжка на Gnome, KDE или Unity DE;&nbsp;&nbsp;GNU C Library 2.31 или по-нова</td>
+    <td class="tg-baqh">Windows 10 or higher</td>
+    <td class="tg-baqh">macOS 12 or higher</td>
+    <td class="tg-baqh">Any Linux distribution that supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 or later</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Процесор (само 64-битов)</th>
-    <td class="tg-baqh">Архитектура на процесора x86_64; Intel Core 2-ро поколение или по-нов, или процесор AMD с поддръжка на <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">Чипове с ARM или Intel Core 2-ро поколение или по-нов с поддръжка на <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
-    <td class="tg-baqh">Архитектура на процесора x86_64; Intel Core 2-ро поколение или по-нов, или процесор AMD с поддръжка на AMD Virtualization (AMD-V) и SSSE3</td>
+    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">virtualization support</a> (Intel VT-x or AMD-V) enabled in the BIOS</td>
+    <td class="tg-baqh">Apple Silicon (M1 or newer), or 6th generation Intel Core or newer (support for Intel Macs is being phased out)</td>
+    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with virtualization support (Intel VT-x or AMD-V) enabled in the BIOS</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Оперативна памет (RAM)</th>
-    <td class="tg-baqh" colspan="3"><p align="center">16 GB или повече</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16GB or more (8GB is the strict minimum for Android Studio alone, 32GB is recommended)</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Диск</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Поне 30 GB свободно място. Препоръчва се SSD.</td>
+    <td class="tg-baqh" colspan="3"><p align="center">At least 32GB free space. Препоръчва се SSD.</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Резолюция</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 минимум<br></td>
+    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 minimum (1920 x 1080 recommended)<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Интернет</th>

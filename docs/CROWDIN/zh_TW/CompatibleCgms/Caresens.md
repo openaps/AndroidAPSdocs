@@ -10,14 +10,14 @@
 ## 1. xDrip
 
 1. 安裝並設定官方的 CareSens App。
-2. 在 CareSens App 中，前往 設定 -> 管理資料與連線 -> 開啟 xDrip 開關。 If preferred, turn off the data connections to CareLevo, DIA:CONN, CloudLoop, etc. in "others".
+2. 在 CareSens App 中，前往 設定 -> 管理資料與連線 -> 開啟 xDrip 開關。如果需要，可以在「其他」中關閉 CareLevo、DIA:CONN、CloudLoop 等服務的資料連線。
 
 ![CareSens App 資料連線](../images/eversenseapp-dataconnections.png)
 
 
-2. Install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip).
-3. In xDrip, go to settings -> hardware data source, select `Companion App` as data source.
-4. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+2. 安裝 xDrip：[xDrip](https://github.com/NightscoutFoundation/xDrip)。
+3. 在 xDrip 中，前往「設定」->「硬體資料來源」，並選取 `Companion App` 作為資料來源。
+4. 在 **AAPS** 中，於 [**組態設定 → 血糖來源**](#Config-Builder-bg-source)選取 xDrip。
 
 
 ## 2. Juggluco
@@ -26,4 +26,4 @@
 2. 在 Juggluco 中，打開左側選單並選擇 `Photo`
 3. 掃描傳感器包裝上的 QR Code。
 4. 在左側選單 -> 設定 -> 資料交換 中，確認已開啟 xDrip 廣播。
-5. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+5. 在 **AAPS** 中，於 [**組態設定 → 血糖來源**](#Config-Builder-bg-source)選取 xDrip。

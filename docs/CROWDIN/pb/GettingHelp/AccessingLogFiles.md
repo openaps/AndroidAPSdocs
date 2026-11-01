@@ -1,15 +1,15 @@
 (Accessing-logfiles-accessing-logfiles)=
 
-# Accessing logfiles
+# Acessando os arquivos de log
 
-* Connect phone to a computer in file transfer mode
-* Locate the log files in the AAPS data directory, in `Android\data\info.nightscout.androidaps\files`.  
-    The naming of the root storage folder may vary a little depending on the phone.
-* The location is `Android\data\info.nightscout.aapsclient\files` for [AAPSClient](#RemoteControl_aapsclient).
-* Note : log location has changed in **AAPS 3.3**. See the previous versions' documentation if needed.
+* Conecte o telefone a um computador no modo de transferência de arquivos
+* Localize os arquivos de log na pasta de dados do AAPS, em `Android\data\info.nightscout.androidaps\files`.  
+    O nome da pasta raiz do armazenamento pode variar um pouco dependendo do telefone.
+* Para o [AAPSClient](#RemoteControl_aapsclient), o local é `Android\data\info.nightscout.aapsclient\files`.
+* Observação: o local dos logs mudou no **AAPS 3.3**. Se necessário, veja a documentação das versões anteriores.
 
 ![logs](../images/aapslog.png)
 
-* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) within Android Studio, any Log Viewer android app, or simply as plain text. 
-* Previous log files are zipped and stored in folders in date/time order. 
-* If you are sharing your log file in [discord](https://discord.gg/4fQUWHZ4Mw) to talk about a potential bug, please unzip and upload the file dated before the error occurred.
+* O log atual é um arquivo .log que pode ser visto de várias formas, por exemplo com o [LogCat](https://developer.android.com/studio/debug/am-logcat.html) no Android Studio, com qualquer app Android para ver logs ou simplesmente como texto simples. 
+* Os arquivos de log anteriores são compactados (zip) e guardados em pastas por ordem de data/hora. 
+* Se você for compartilhar o seu arquivo de log no [Discord](https://discord.gg/4fQUWHZ4Mw) para falar sobre um possível erro, descompacte e envie o arquivo com data anterior ao momento em que o erro aconteceu.

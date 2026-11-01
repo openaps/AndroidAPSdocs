@@ -2,6 +2,7 @@
 
 ## Октомври 2026 г.
 
+- [Browser build with AAPS Builder](#aaps-builder): build workflow version 8, now maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository. Setting up is one step shorter: [step 1](#aaps-builder-step1) of the [setup page](#aaps-builder-setup) creates your private repository as a copy of that repository, with the build workflow already in it, so there is no workflow to add any more. From now on the build steps are updated for you: your repository runs the version released by the AAPS developers at every build, without any change on your side (and still no automatic build). The build itself does not change, and your existing repository keeps working. To get these automatic updates, replace your `.github/workflows/build.yml` once as explained in [Updating AAPS](#aaps-builder-updates). Your `KEYSTORE_SET` secret stays as it is. The optional [Google Drive step](#aaps-builder-google-drive) now works on the setup page itself, on a phone or a computer: no preparation file needed @psonnera
 - [Смарт часовници и AAPS](#watches-external-companion-apps): разделът **Samsung Tizen** става **Външни приложения за проследяване** и изброява приложенията, които четат излъчването на **AAPS** (WatchDrip+, GlucoDataHandler, G-Watch). [WatchDrip+](#watches-xiaomi-amazfit) 0.5 и по-новите версии се свързват директно с **AAPS** без xDrip+: добавени са стъпки за настройка, обобщени и в [Конфигурация](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) и [Дистанционно наблюдение](../RemoteFeatures/RemoteMonitoring.md). Часовници Bluejay: GTS е спрян от производство, актуализиран е текущият модел @psonnera
 - [Компилиране в браузъра с AAPS Builder](#aaps-builder): работен процес за компилиране (build workflow) версия 6. Стъпките на компилирането вече използват точни, проверени версии на инструментите и машината за компилиране на GitHub, а компилацията ясно обяснява, когато в секрета `KEYSTORE_SET` е поставен грешен текст. [Страницата за настройка](#aaps-builder-setup) вече е част от документацията и е преведена, проверява потребителското ви име в GitHub и има по-ясна помощ за секрета, за „Page not found“ (404) и за приложението GitHub. Ако във вашия `.github/workflows/build.yml` пише версия 5 или по-стара, заменете го, както е обяснено в [Актуализиране на AAPS](#aaps-builder-updates) @psonnera
 - [Уеб инсталатор на AAPS](#web-installer): вече е страница от документацията, преведена като другите. Старият адрес продължава да работи @psonnera
@@ -33,7 +34,7 @@
 
 ## Януари 2025 г.
 
-- Версия [3.4](#version3400) и обобщена актуализация на документацията (Съветник, версии за компилиране с компютър, Config Builder)
+- [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
 - Актуализация на списъка с CGM. Премахнати са Dexcom G5, Tomato и Glimp.
 - [Интерфейс за смяна на мястото](#Aapsscreens-site-rotation)
 - [Текущ режим](#AapsScreens-running-mode)
@@ -147,7 +148,7 @@
 - Dexcom G6 с [Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
 - [Ниво на батерията](#screens-sensor-level-battery) на Libre smart reader
 - [Цели](#objectives-objective3) – нови въпроси
-- Други [нови функции в AAPS 2.8.0](#Releasenotes-version-2-8-0)
+- Other [new AAPS 2.8.0 functions](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.0)
 
 ## Декември 2020 г.
 
@@ -166,7 +167,7 @@
 ## Септември 2020 г.
 
 - Голяма актуализация за новата версия 2.7 на AAPS
-- For details see the [release notes](#Releasenotes-version-2-7-0)
+- For details see the [release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.7.0)
 
 ## Юни 2020 г.
 
@@ -201,7 +202,7 @@
 - Функцията [Удължен болус](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) – затвореният кръг ще бъде изключен
 - Нов [плъгин Local Profile](../SettingUpAaps/ConfigBuilder.md)
 - Примерна конфигурация – актуализация за Dexcom G6
-- [Версия 2.6.0](#Releasenotes-version-2-6-0) – важни нови функции
+- [Version 2.6.0](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-260) - major new features
 - [Усложнения (complications) за часовник](../WearOS/WearOsSmartwatch.md)
 
 ## Януари 2020 г.
@@ -236,7 +237,7 @@
 
 ## Октомври 2019 г.
 
-- Актуализации за [версия 2.5 на AAPS](#Releasenotes-version-2-5-0) (особено на [страницата за актуализиране](../Maintenance/UpdateToNewVersion.md))
+- [AAPS version 2.5](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-250) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
 - [AccuChek Insight – опции за лог файловете](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [Изчисляването на COB е на отделна страница](../DailyLifeWithAaps/CobCalculation.md)
 - [COB – откриване на грешна стойност на COB](#CobCalculation-detection-of-wrong-cob-values)

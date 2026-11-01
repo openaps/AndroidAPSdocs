@@ -15,7 +15,7 @@
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+如果您遇到問題，請參見單獨的[問題排除Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)頁面。
 
 ### 匯出你的設定
 
@@ -53,7 +53,7 @@ In case you experience problems, see separate page for [troubleshooting Android 
 * 等待下載過程進行，你會在底部欄看到進度資訊。完成後，你將看到成功訊息。
 
   ```{note}
-  更新的檔案可能會有所不同！ This is not an indication of a problem.
+  更新的檔案可能會有所不同！這並不表示有問題。
   ```
 
    ![Android Studio - Pull 成功](../images/update/06_GitPullSuccess.png)
@@ -82,7 +82,7 @@ Update-to-new-version-build-the-signed-apk)=
 如果你使用相同的現有金鑰庫在 Android Studio 中完成了構建，那麼你不需要刪除手機上的現有應用。當你安裝 apk 時，按照提示安裝更新。對於其他情況，例如在 Android Studio 中為你的簽章 apk 建立新密鑰庫，你將需要刪除舊應用程式後再安裝 apk。**確保匯出你的設定！**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Where Google's [Android developer verification](#android-developer-verification) is enforced (from September 2026, depending on your country), install with [ADB](#android-developer-verification-adb) instead of tapping the APK file.
+請參閱[傳輸及安裝 AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)的操作說明。在 Google 的 [Android 開發人員驗證](#android-developer-verification)規定適用的地區（自 2026 年 9 月起，依您所在的國家／地區而定），請改用 [ADB](#android-developer-verification-adb) 安裝，不要點選 APK 檔案。
 
 繼續 [這裡](#Update-to-new-version-check-aaps-version-on-phone)。
 
@@ -94,6 +94,6 @@ See the instructions for [transferring and installing AAPS](../SettingUpAaps/Tra
 
 先深呼吸！
 
-Then see the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) if your problem is already documented!
+然後查看專門頁面[問題排除 Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)，看看你的問題是否已經紀錄在案！
 
 如果你需要進一步幫助，請聯繫其他**AAPS**使用者，透過[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)。

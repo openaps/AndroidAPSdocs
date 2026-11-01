@@ -8,7 +8,7 @@
 
 Використовуйте це лише тоді, коли розробник просить вас перевірити певну зміну (він дає вам один або кілька хешів комітів) до того, як вона увійде у випущену версію.
 
-## Before you start
+## Перш ніж почати
 
 - [Синхронізуйте свій fork](#Update-to-new-version-update-your-repo): цей workflow збирає поточний стан вашої гілки, а не версію, яку ви вибираєте зі списку.
 - Google Drive має бути авторизований ([Крок 3](../SettingUpAaps/BrowserBuildGoogleDrive.md)): зібраний застосунок зберігається там, як і при звичайній збірці.
@@ -25,4 +25,4 @@
    - **Upstream repository** (вихідний репозиторій): звідки беруться коміти. Залиште `nightscout/AndroidAPS`, якщо розробник не сказав інакше.
    - **Commit hash(es) to cherry-pick** (хеші комітів): хеш(і), які вам дали, через пробіл.
    - **Select Build Variant** (варіант збірки): див. [варіанти](#browserbuild-variant) (зазвичай `fullRelease`).
-4. Tap **Run workflow**. Коли workflow завершиться, застосунок буде у вашому Google Drive, як після [звичайної збірки](../SettingUpAaps/BrowserBuildAPK.md).
+4. Натисніть **Run workflow**. Коли workflow завершиться, застосунок буде у вашому Google Drive, як після [звичайної збірки](../SettingUpAaps/BrowserBuildAPK.md).

@@ -1,31 +1,31 @@
 (aaps-ci-option1)=
 
-# Option 1 – Generate a new keystore
+# 選項 1 – 建立新的金鑰庫
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation) and downloaded the preparation file.
+這是[瀏覽器建置](BrowserBuild.md)的[步驟 2 – 建立簽署用金鑰庫](BrowserBuildKeystore.md)的一部分。請確認您已閱讀[選項 1 或選項 2 的選擇說明](#aaps-ci-preparation)，並已下載準備檔案。
 ```
 
-Option 1 generates a brand-new signing keystore for you. It is suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
+選項 1 會為您建立全新的簽署用金鑰庫。適合首次使用者、沒有 JKS 的使用者，或忘記密碼或別名的使用者。
 
-## Choose your device
+## 選擇您的裝置
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+要使用 **Android 手機**進行建置嗎？請改用 [AAPS Builder](BrowserBuildAapsBuilder.md)：它不需要準備檔案。
 ```
 
-Follow the page that matches the device you are building from:
+請按照符合您用來進行建置之裝置的說明頁面操作：
 
-- **[Computer](BrowserBuildO1Computer.md)** – Windows, Mac or Linux.
-- **[iPhone / iPad](BrowserBuildO1iPhone.md)**.
+- **[電腦](BrowserBuildO1Computer.md)** – Windows、Mac 或 Linux。
+- **[iPhone / iPad](BrowserBuildO1iPhone.md)**。
 
 ```{tip}
-You can switch device at any time – just open the matching page.
+您可以隨時更換裝置，只要開啟相符的說明頁面即可。
 ```
 
 ```{toctree}
 :hidden:
 
-Computer <BrowserBuildO1Computer.md>
+電腦 <BrowserBuildO1Computer.md>
 iPhone / iPad <BrowserBuildO1iPhone.md>
 ```

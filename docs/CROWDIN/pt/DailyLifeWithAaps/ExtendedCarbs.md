@@ -1,102 +1,102 @@
 (Extended-Carbs-extended-carbs-ecarbs)=
-# Extended carbs / "eCarbs"
+# Hidratos de carbono prolongados / «eCarbs»
 
-## What are eCarbs and when are they useful?
+## O que são os eCarbs e quando são úteis?
 
-With a regular pump therapy, extended boluses are a good way to deal with fatty or otherwise slowly-absorbed meals which increase blood glucose longer than the insulin is in effect. In a loop context, however, extended boluses don't make as much sense (and pose technical difficulties), since they're basically a fixed high temporary basal rate, which goes against how the loop works, which is adjusting the basal rate dynamically. For details see [extended bolus](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) below.
+Na terapia normal com bomba, os bólus prolongados são uma boa forma de lidar com refeições gordas ou de absorção lenta, que fazem subir a glicose durante mais tempo do que a insulina atua. No entanto, num loop, os bólus prolongados não fazem tanto sentido (e causam dificuldades técnicas), porque são basicamente uma basal temporária alta e fixa. Isto vai contra o funcionamento do loop, que ajusta a basal de forma dinâmica. Para mais detalhes, veja [bólus prolongado](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) abaixo.
 
-The need to deal with such meals still exists though. Which is why AAPS supports so called extended carbs or eCarbs.
+Mas a necessidade de lidar com estas refeições continua a existir. É por isso que o AAPS suporta os chamados hidratos de carbono prolongados ou eCarbs.
 
-eCarbs are carbs that are split up over several hours. For standard meals with more carbohydrates than fat/protein, entering the carbs up front (and reducing the initial bolus if needed) is usually sufficient to prevent too-early insulin delivery.  But for slower-absorbing meals where full carb entry up front results in too much IOB from SMB, eCarbs can be used to more accurately simulate how the carbs (and any carb equivalents you enter for other macronutrients) are absorbed and influence the blood glucose. With this information, the loop can administer SMBs more gradually to deal with those carbs, which can be seen as a dynamic extended bolus (this should also work without SMBs, but is probably less effective).
+Os eCarbs são hidratos de carbono distribuídos ao longo de várias horas. Para refeições normais, com mais hidratos de carbono do que gordura/proteína, introduzir os hidratos de carbono logo no início (e reduzir o bólus inicial, se for preciso) costuma ser suficiente para evitar insulina administrada cedo demais.  Mas, em refeições de absorção mais lenta, em que introduzir todos os hidratos de carbono logo no início leva a demasiada IA por causa dos SMB, os eCarbs podem ser usados para simular com mais exatidão como os hidratos de carbono (e os equivalentes em hidratos que introduzir para outros macronutrientes) são absorvidos e influenciam a glicose. Com esta informação, o loop pode administrar SMB de forma mais gradual para lidar com esses hidratos de carbono. Isto pode ser visto como um bólus prolongado dinâmico (também deve funcionar sem SMB, mas provavelmente é menos eficaz).
 
-**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
+**Nota:** os eCarbs não se limitam a refeições ricas em gordura/proteína: também podem ajudar em qualquer situação em que algo faça subir a glicose, por exemplo outros medicamentos, como os corticosteroides.
 
-## Mechanics of using eCarbs
+## Como usar os eCarbs
 
-To enter eCarbs, open the **Carbs** dialog (**Treatments** → **Carbs**), enter the total carbs, set a **Duration**, and optionally shift the start with **Carb time** (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
+Para introduzir eCarbs, abra a janela **Hidratos** (**Tratamentos** → **Hidratos**), introduza o total de hidratos, defina uma **Duração** e, se quiser, adie o início com **Hora dos hidratos** (*os números abaixo são apenas exemplos; terá de experimentar os seus próprios valores até obter uma resposta da glicose satisfatória para os seus casos*):
 
-![Enter carbs](../images/eCarbs_Dialog.png)
+![Introduzir hidratos](../images/eCarbs_Dialog.png)
 
-The eCarbs on the main screen: the number in brackets in the **COB** field shows the carbs still to come, and the **COB** graph shows each future eCarbs entry as an orange marker. If you don't see a **COB** graph, add one with **Add graph** below the graphs (see [AAPS screens](../DailyLifeWithAaps/AapsScreens.md)).
+Os eCarbs no ecrã principal: o número entre parênteses no campo **HCA** mostra os hidratos que ainda vão chegar, e o gráfico **HCA** mostra cada registo futuro de eCarbs como uma marca cor de laranja. Se não vir um gráfico **HCA**, adicione um com **Adicionar gráfico** por baixo dos gráficos (ver [Ecrãs do AAPS](../DailyLifeWithAaps/AapsScreens.md)).
 
-![eCarbs in the COB field and on the COB graph](../images/eCarbs_Graph.png)
+![eCarbs no campo HCA e no gráfico HCA](../images/eCarbs_Graph.png)
 
 (AapsScreens-carbs-type)=
-## Carbs type in the Bolus wizard: bread, cake or pizza
+## Tipo de hidratos no Assistente de Bólus: pão, bolo ou pizza
 
-In the [Bolus wizard](#aaps-screens-bolus-wizard), three buttons below the **Carbs** field let you choose how fast your meal is absorbed. Pick one before you confirm. Depending on the type, **AAPS** takes a part of the carbs you typed as normal carbs, and adds [extended carbs ("eCarbs")](#Extended-Carbs-extended-carbs-ecarbs) later for slow, rich meals. Press the **(i)** icon next to the buttons to see the typical foods for the selected type and what it does to your carbs.
+No [Assistente de Bólus](#aaps-screens-bolus-wizard), três botões por baixo do campo **Hidratos** permitem escolher a rapidez com que a refeição é absorvida. Escolha um antes de confirmar. Conforme o tipo, o **AAPS** usa uma parte dos hidratos que introduziu como hidratos normais e acrescenta [hidratos de carbono prolongados («eCarbs»)](#Extended-Carbs-extended-carbs-ecarbs) mais tarde, para refeições lentas e ricas. Prima o ícone **(i)** ao lado dos botões para ver os alimentos típicos do tipo escolhido e o que ele faz aos seus hidratos.
 
-| Type                | Typical foods (as listed in the app)                                                                 | Carbs now, used for the bolus | eCarbs added                                         |
-| ------------------- | ---------------------------------------------------------------------------------------------------- | ----------------------------- | ---------------------------------------------------- |
-| **Bread** (default) | Bread, savory pastries, yogurt, fruit, potatoes, rice, oatmeal, vegetables                           | 100 %                         | None                                                 |
-| **Cake**            | Dumplings, pasta, Asian dishes rich in carbs and fats, sweet and yeast pastries, cereals, honey, jam | 90 %                          | 20 %, starting 60 minutes later, spread over 2 hours |
-| **Pizza**           | Lasagna, pizza, hamburgers, fries, baked potatoes, chips                                             | 80 %                          | 35 %, starting 60 minutes later, spread over 3 hours |
+| Tipo                  | Alimentos típicos (como indicados na app)                                                                                                 | Hidratos agora, usados para o bólus | eCarbs adicionados                                          |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | ----------------------------------------------------------- |
+| **Pão** (predefinido) | Pão, salgados, iogurte, fruta, batatas, arroz, papas de aveia, legumes                                                                    | 100 %                               | None                                                        |
+| **Bolo**              | Bolinhos de massa recheados, massa, pratos asiáticos ricos em hidratos e gorduras, bolos doces e de massa levedada, cereais, mel, compota | 90 %                                | 20 %, a começar 60 minutos depois, distribuídos por 2 horas |
+| **Pizza**             | Lasanha, piza, hambúrgueres, batatas fritas, batatas assadas, batatas fritas de pacote                                                    | 80 %                                | 35 %, a começar 60 minutos depois, distribuídos por 3 horas |
 
-**Example**: you type 100 g and choose **Pizza**. The bolus is calculated for 80 g, recorded now. 35 g of eCarbs start 1 hour later and are spread over 3 hours.
+**Exemplo**: introduz 100 g e escolhe **Pizza**. O bólus é calculado para 80 g, registados agora. 35 g de eCarbs começam 1 hora depois e são distribuídos por 3 horas.
 
-Good to know:
-* This is not a simple split: with **Cake** and **Pizza**, the carbs recorded add up to **more than you typed** (110 % and 115 %). The extra is only in the eCarbs.
-* The bolus only covers the carbs taken now. **AAPS** does not bolus up front for the eCarbs: the loop takes them into account once they start, like any other [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
-* If you set a **Carb time**, the eCarbs start 60 minutes after that time.
-* The confirmation dialog shows the eCarbs on their own line, _e.g._ "eCarbs 35g / 3h (+60min)".
-* Grams are rounded down to whole numbers.
-* The percentages, delays and durations are fixed; they can't be changed in the settings.
-* The choice is not remembered: the wizard opens on **Bread** every time.
-
-______________________________________________________________________
-
-A way to handle fat and protein with that feature is described here: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
+É bom saber:
+* Não é uma simples divisão: com **Bolo** e **Pizza**, os hidratos registados somam **mais do que introduziu** (110 % e 115 %). O excesso está apenas nos eCarbs.
+* O bólus cobre apenas os hidratos comidos agora. O **AAPS** não dá bólus antecipado para os eCarbs: o loop tem-nos em conta quando começam, como quaisquer outros [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
+* Se definir uma **Hora dos hidratos**, os eCarbs começam 60 minutos depois dessa hora.
+* A janela de confirmação mostra os eCarbs numa linha própria, _por exemplo_ «eCarbs 35 g / 3 h (+60 min)».
+* Os gramas são arredondados por defeito para números inteiros.
+* As percentagens, atrasos e durações são fixos; não podem ser alterados nas definições.
+* A escolha não é guardada: o assistente abre sempre em **Pão**.
 
 ______________________________________________________________________
 
-## Recommended setup, example scenario, and important notes
+Uma forma de lidar com gordura e proteína com esta função está descrita aqui: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
 
-The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the *Enable SMB with COB* preference being enabled.
+______________________________________________________________________
 
-A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *Bolus wizard* and then use the *Carbs* dialog to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours.
+## Configuração recomendada, exemplo e notas importantes
 
-For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carbs type](#AapsScreens-carbs-type) **Cake** or **Pizza** below the **Carbs** field (see above). The amounts and timing are fixed, so use the *Carbs* dialog instead if you want other values.
+A configuração recomendada é usar o plugin APS OpenAPS SMB, com os SMB ativados e também com a preferência *Ativar SMB com HCA* ativada.
 
-**Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. With low carb, high fat/protein meals it may be enough to only use eCarbs without manual boluses (see the blog post above). When eCarbs are generated, a Careportal note is also created to document all inputs, to make it easier to iterate and improve inputs.
+Um cenário, por exemplo para uma pizza, pode ser dar um bólus (parcial) logo no início com o *Assistente de Bólus* e depois usar a janela *Hidratos* para introduzir os restantes hidratos com uma duração de 4–6 horas, a começar após 1 ou 2 horas.
+
+Para começar mais depressa, o *Assistente de Bólus* pode adicionar os eCarbs por si: escolha o [tipo de hidratos](#AapsScreens-carbs-type) **Bolo** ou **Pizza** por baixo do campo **Hidratos** (ver acima). As quantidades e os tempos são fixos; por isso, use a janela *Hidratos* se quiser outros valores.
+
+**Notas importantes:** Claro que terá de experimentar para ver que valores concretos funcionam para si. Também pode ajustar com cuidado a definição *Máx. de minutos de basal para limitar SMB* para tornar o algoritmo mais ou menos agressivo. Com refeições com poucos hidratos e muita gordura/proteína, pode bastar usar só eCarbs, sem bólus manuais (ver o artigo do blog acima). Quando os eCarbs são criados, é também criada uma nota do Careportal com todos os valores introduzidos, para ser mais fácil repetir e melhorar os valores.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## Extended bolus and why they won't work in closed-loop environment?
+## Bólus prolongado e porque não funciona num loop fechado?
 
-As mentioned above extended or multiwave boluses do not really work in a closed loop environment. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
+Como dito acima, os bólus prolongados ou multionda não funcionam bem num loop fechado. [Veja abaixo](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) para mais detalhes
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
-### Extended bolus and switch to open loop - Dana and Insight pump only
+### Bólus prolongado e passagem para loop aberto - apenas bombas Dana e Insight
 
-Some people were asking for an option to use extended bolus in AAPS anyway as they wanted to treat special foods the way they are used to.
+Algumas pessoas pediram uma opção para usar o bólus prolongado no AAPS mesmo assim, porque queriam tratar alimentos especiais da forma a que estão habituadas.
 
-That's why **AAPS** offers an extended bolus for users of Dana and Insight pumps: open **Manage** and select **Extended Bolus**.
+É por isso que o **AAPS** oferece um bólus prolongado aos utilizadores das bombas Dana e Insight: abra **Gerir** e selecione **Bólus Prolongado**.
 
-**AAPS** first warns you that the closed loop will be stopped while the extended bolus runs. Tap **OK** to continue:
+Primeiro, o **AAPS** avisa que o loop fechado será parado enquanto o bólus prolongado estiver a decorrer. Toque em **OK** para continuar:
 
-![Warning: extended bolus stops closed loop mode](../images/extended_bolus_stops_loop.png)
+![Aviso: o bólus prolongado para o modo de loop fechado](../images/extended_bolus_stops_loop.png)
 
-Enter the **Insulin** amount and the **Duration**, then tap the confirm button at the bottom and **OK**:
+Introduza a quantidade de **Insulina** e a **Duração**, depois toque no botão de confirmar em baixo e em **OK**:
 
-![Extended bolus dialog with 2 U over 60 minutes](../images/extended_bolus_dialog.png)
+![Janela do bólus prolongado com 2 U em 60 minutos](../images/extended_bolus_dialog.png)
 
-On the Insight pump, the extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
+Na bomba Insight, o bólus prolongado *não está disponível* se for usada a [emulação da basal temporária](#Accu-Chek-Insight-Pump-settings-in-aaps).
 
-While the extended bolus is running, the loop runs in **Open Loop** mode (the loop icon on the main screen changes), and closed loop is switched on again automatically when the extended bolus ends:
+Enquanto o bólus prolongado está a decorrer, o loop funciona no modo **Loop Aberto** (o ícone do loop no ecrã principal muda), e o loop fechado volta a ser ligado automaticamente quando o bólus prolongado termina:
 
-![Open Loop icon on the main screen while an extended bolus is running](../images/extended_bolus_main_screen.png)
+![Ícone de Loop Aberto no ecrã principal enquanto um bólus prolongado está a decorrer](../images/extended_bolus_main_screen.png)
 
-The **Manage** menu shows a **Cancel** button with the rate and the elapsed / total time (for example **Cancel 2.00 U/h 1/60'**). Tap it to stop the extended bolus early:
+O menu **Gerir** mostra um botão **Cancelar** com a taxa e o tempo decorrido / total (por exemplo **Cancelar 2,00 U/h 1/60'**). Toque nele para parar o bólus prolongado mais cedo:
 
-![Cancel button of a running extended bolus in the Manage menu](../images/extended_bolus_running_manage.png)
+![Botão Cancelar de um bólus prolongado em curso no menu Gerir](../images/extended_bolus_running_manage.png)
 
 (why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
-### Why extended boluses won't work in a closed loop environment
+### Porque é que os bólus prolongados não funcionam num loop fechado
 
-1. The loop determines that now 1.55U/h is to be delivered. Whether this is delivered as an extended bolus or TBR does not matter to the algorithm. In fact, some of the pumps use the extended bolus. What should happen then? Most pump drivers then stop the extended bolus -> You didn't even need to start it.
+1. O loop decide que agora devem ser administradas 1,55 U/h. Para o algoritmo, não importa se isto é administrado como bólus prolongado ou como basal temporária. De facto, algumas bombas usam o bólus prolongado. O que deve acontecer então? A maioria dos controladores de bombas para então o bólus prolongado -> Nem precisava de o ter iniciado.
 
-2. If you had the extended bolus as input, what should happen in the model?
+2. Se o bólus prolongado fosse um valor de entrada, o que deveria acontecer no modelo?
 
-   1. Should it be considered neutral together with the BR and looped on it? Then the loop should also be able to reduce the bolus if, for example, you get too low and all the "neutral" insulin is taken away?
-   2. Should the extended bolus simply be added? So the loop should simply be allowed to continue? Even in the worst hypo? I don't think this is so good: A hypo is foreseen but it must not be prevented?
+   1. Deveria ser considerado neutro, junto com a basal, e o loop trabalharia sobre ele? Então o loop também deveria poder reduzir o bólus se, por exemplo, a glicose descer demasiado e toda a insulina «neutra» for retirada?
+   2. O bólus prolongado deveria ser simplesmente somado? Então o loop deveria simplesmente poder continuar? Mesmo na pior hipoglicemia? Não me parece muito bom: uma hipoglicemia é prevista, mas não pode ser evitada?
 
-3. The IOB that the extended bolus builds up materializes after 5 minutes at the next run. Accordingly, the loop would give less basal. So not much changes... except that the possibility of hypo avoidance is taken.
+3. A IA criada pelo bólus prolongado aparece após 5 minutos, na execução seguinte. Por isso, o loop daria menos basal. Portanto, pouco muda... exceto que se perde a possibilidade de evitar a hipoglicemia.

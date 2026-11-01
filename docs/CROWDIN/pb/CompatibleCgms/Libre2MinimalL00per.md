@@ -6,7 +6,7 @@ No fim deste documento há uma lista de definições. Se você não conhece algu
 
  
 
-## Configuration
+## Configuração
 
 ### Hardware
 
@@ -57,7 +57,7 @@ No fim deste documento há uma lista de definições. Se você não conhece algu
   - [*Passo 8: Coleta de dados entre 3 e 15 minutos*](#minimallooper-step8)
   - [*Passo 9: Verifique se o sensor está conectado e enviando dados*](#minimallooper-step9)
 
-- *[Notes](#minimallooper-notes)*
+- *[Notas](#minimallooper-notes)*
 - *[Vantagens](#minimallooper-advantages)*
 - *[Desvantagens](#minimallooper-disadvantages)*
 - <u>*\[Resolução de problemas\](#minimallooper-troubleshooting)*</u>
@@ -309,7 +309,7 @@ Na tela **BT Device** (deslize para a esquerda), você pode verificar mais detal
 
 (minimallooper-notes)=
 
-### Notes
+### Notas
 
 - **Usar escaneamentos NFC do LL DEPOIS que o vínculo/pareamento no xDrip estiver concluído**: você pode fazer escaneamentos NFC, mas o processo de vínculo/pareamento com o xDrip precisa estar concluído antes. Sempre olhe no xDrip se está perto da leitura de 5 minutos (por exemplo, há 4 minutos). Se estiver perto de 5 min, espere a nova leitura BT chegar e só então faça o escaneamento NFC. Se você fizer isso na hora errada, vai atrapalhar o processo BT no xDrip e ele não receberá leituras BT. Pode levar um tempo para refazer o vínculo e voltar a transmitir, e às vezes a conexão BT de um sensor pode ser "roubada" pelo LL. Mesmo assim, entre essas leituras BT, não tive nenhum problema ao fazer um escaneamento NFC seguido da desativação imediata do app. Não tenho certeza se o LL precisa ser desativado toda vez, mas eu o desativo por segurança.
 
@@ -419,7 +419,7 @@ Na tela **BT Device** (deslize para a esquerda), você pode verificar mais detal
 
 (minimallooper-troubleshooting)=
 
-### Troubleshooting
+### Resolução de problemas
 
 #### Falha ao escanear o sensor por NFC
 

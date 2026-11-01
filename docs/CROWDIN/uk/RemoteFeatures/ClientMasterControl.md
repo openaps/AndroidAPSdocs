@@ -1,9 +1,9 @@
 (client-master-control)=
-# Master ↔ Client control (signed remote control)
+# Керування «основний телефон ↔ клієнт» (підписане віддалене керування)
 
-From **AAPS** version 4, a follower phone running **AAPSClient** can do much more than *announce* treatments through Nightscout: once it has been **paired** with the main phone, it can send **signed commands** that the main phone (the **master**) checks, confirms and executes — including delivering an **insulin bolus** on the master's pump.
+Починаючи з версії 4 **AAPS**, телефон-послідовник з **AAPSClient** може набагато більше, ніж просто *повідомляти* про терапію через Nightscout: після **спарювання** з основним телефоном він може надсилати **підписані команди**, які основний телефон (**master**) перевіряє, підтверджує та виконує, зокрема подає **болюс інсуліну** помпою основного телефону.
 
-This page explains how it works, and how to set it up and use it.
+На цій сторінці пояснено, як це працює, як це налаштувати та як цим користуватися.
 
 ```{contents} Table of contents
 :depth: 2
@@ -12,257 +12,257 @@ This page explains how it works, and how to set it up and use it.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Master** = the main **AAPS** phone that owns the pump and runs the loop (the `full` app).
-- **Client** = an **AAPSClient** phone with no pump that follows and now also *controls* the master.
-- Both phones must be connected to the **same Nightscout** site. All communication still travels through Nightscout — no direct connection between the phones is needed.
+- **Основний телефон** (master) = головний телефон з **AAPS**, до якого підключена помпа і на якому працює петля (застосунок `full`).
+- **Клієнт** = телефон з **AAPSClient** без помпи, який стежить за основним телефоном, а тепер також *керує* ним.
+- Обидва телефони мають бути підключені до **того самого сайту Nightscout**. Увесь зв'язок і далі йде через Nightscout — пряме з'єднання між телефонами не потрібне.
 ```
 
 ---
 
-## How it works
+## Як це працює
 
 ```{admonition} Coming from AAPS v3?
 :class: note
-In **AAPS** v3, **AAPSClient** could only write unsigned care-portal treatments to Nightscout, and could not deliver a bolus. Remote control now needs a one-time [pairing](#client_master_master_setup). See also [What changed in AAPS v4](#v4changes-remote-control).
+В **AAPS** v3 **AAPSClient** міг лише записувати в Nightscout непідписані записи терапії careportal і не міг подати болюс. Тепер для віддаленого керування потрібне одноразове [спарювання](#client_master_master_setup). Див. також [Що змінилося в AAPS v4](#v4changes-remote-control).
 ```
 
-**AAPS** v4 uses a dedicated **Client-Control** channel. It still rides on your Nightscout site (in the `settings` collection), but every message is **cryptographically signed** with a secret that only the two phones know. The secret is handed over once, during **pairing**, and replaced by a new one right after it, so it never travels in clear text.
+**AAPS** v4 використовує окремий канал **Client-Control**. Він і далі працює через ваш сайт Nightscout (у колекції `settings`), але кожне повідомлення **криптографічно підписане** секретом, який знають лише ці два телефони. Секрет передається один раз, під час **спарювання**, і одразу після цього замінюється новим, тому він ніколи не передається відкритим текстом.
 
-The guiding principle is **the master is in charge**:
+Головний принцип: **рішення ухвалює основний телефон**:
 
-1. The client sends an *intent* (“bolus 2 U”, “start the Exercise scene”, “set this temp target”…).
-2. The **master** re-computes and **caps** the action against its **own** live data (profile, IOB, COB, current temp target, pump), and **authors the exact confirmation** the user will see.
-3. The client (or watch) shows the **master's** confirmation text — it never builds its own.
-4. On confirmation the master **executes once** and reports the result back to the client.
+1. Клієнт надсилає *намір* («болюс 2 Од», «запустити сцену Exercise», «встановити цю тимчасову ціль»…).
+2. **Основний телефон** перераховує дію та **обмежує** її за своїми **власними** актуальними даними (профіль, IOB, COB, поточна тимчасова ціль, помпа) і **сам складає точний текст підтвердження**, який побачить користувач.
+3. Клієнт (або годинник) показує текст підтвердження **основного телефону** — свого власного він ніколи не складає.
+4. Після підтвердження основний телефон **виконує дію один раз** і повідомляє клієнту результат.
 
-What this means for you:
+Що це означає для вас:
 
-- **Signed commands**: only the clients you paired can send commands (per-client pairing secret and signature). Old or replayed commands are rejected.
-- **A role for each client**: you decide what each client may do, from *Read-only* to *Admin* — see [Client roles](#client-master-control-roles).
-- **Insulin bolus from a client**: the master delivers it on its pump, and the client shows the delivery progress.
-- **The master decides**: it caps every action against its own constraints and writes the confirmation shown on the client.
-- **Only paired clients change therapy**: while client control is on, the master no longer takes treatments or changes typed directly into Nightscout — see [Hardened mode](#client-master-control-hardened-mode).
-- **Each client gets its own Nightscout token** with only the rights a client needs — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Master offline**: actions are blocked with a clear message.
-- **Revoking a client** takes one tap (per client), or use the master's switch to stop all clients.
+- **Підписані команди**: команди можуть надсилати лише спарені вами клієнти (окремий секрет спарювання та підпис для кожного клієнта). Старі або повторно надіслані команди відхиляються.
+- **Роль для кожного клієнта**: ви вирішуєте, що може робити кожен клієнт, від *Лише читання* до *Адмін* — див. [Ролі клієнтів](#client-master-control-roles).
+- **Болюс інсуліну з клієнта**: основний телефон подає його своєю помпою, а клієнт показує хід подачі.
+- **Рішення ухвалює основний телефон**: він обмежує кожну дію своїми власними обмеженнями і пише текст підтвердження, який показує клієнт.
+- **Терапію змінюють лише спарені клієнти**: поки керування з клієнтів увімкнене, основний телефон більше не приймає терапію чи зміни, введені прямо в Nightscout — див. [Захищений режим](#client-master-control-hardened-mode).
+- **Кожен клієнт отримує власний токен Nightscout** лише з тими правами, які потрібні клієнту — див. [Власний токен Nightscout клієнта](#client-master-control-own-token).
+- **Основний телефон не в мережі**: дії блокуються, і ви бачите зрозуміле повідомлення.
+- **Відкликати доступ клієнта** можна одним натисканням (для кожного клієнта окремо), або вимикачем на основному телефоні можна зупинити всіх клієнтів.
 
-Actions that can be triggered from a client: **bolus**, **carbs / eCarbs**, **temporary target** (set & cancel), **profile switch**, **loop / running-mode** change, **temp basal** (set & cancel), **extended bolus** (set & cancel), **insulin selection**, and **[scenes](../DailyLifeWithAaps/Scenes.md)**. A subset of bidirectional **preferences** is also kept in sync between master and clients.
+Дії, які можна запустити з клієнта: **болюс**, **вуглеводи / подовжені вуглеводи (eCarbs)**, **тимчасова ціль** (встановити й скасувати), **перемикання профілю**, зміна **петлі / робочого режиму**, **тимчасовий базал** (встановити й скасувати), **подовжений болюс** (встановити й скасувати), **вибір інсуліну** і **[сцени](../DailyLifeWithAaps/Scenes.md)**. Частина **налаштувань** також синхронізується в обидва боки між основним телефоном і клієнтами.
 
 ---
 
-## Roles and prerequisites
+## Ролі та передумови
 
 ```{admonition} Before you start
 :class: important
-- The **master** runs the normal `full` **AAPS** build and is connected to your pump.
-- The **master** uses **NSClientV3** with your Nightscout and is showing *connected*. Give it an **admin token** of your Nightscout: with it the master can make a token of its own for each client and show it to the client as a QR code.
-- The **client** runs **[AAPSClient](AapsClient.md)** (or **AAPSClient2** / **AAPSClient3** for further patients — see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)). It must use the **same** Nightscout. If you set it up with the master's QR code, the client gets its Nightscout address and token from the master; otherwise set up **NSClientV3** on it yourself first.
-- **Websockets** are needed on both phones: commands only reach the master over the websocket connection. While client control is on, **AAPS** keeps websockets on, on the master and on paired clients.
+- На **основному телефоні** працює звичайна збірка `full` **AAPS**, і він підключений до вашої помпи.
+- **Основний телефон** використовує **NSClientV3** з вашим Nightscout і показує *підключено*. Дайте йому **токен адміністратора** вашого Nightscout: з ним основний телефон може створити окремий токен для кожного клієнта і показати його клієнту як QR-код.
+- На **клієнті** працює **[AAPSClient](AapsClient.md)** (або **AAPSClient2** / **AAPSClient3** для інших пацієнтів — див. [Про AAPSClient, AAPSClient2 і AAPSClient3](#remotecontrol-aapsclient-versions)). Він має використовувати **той самий** Nightscout. Якщо ви налаштовуєте клієнт за QR-кодом основного телефону, клієнт отримує адресу Nightscout і токен від основного телефону; інакше спочатку самі налаштуйте на ньому **NSClientV3**.
+- **Websockets** потрібні на обох телефонах: команди доходять до основного телефону лише через з'єднання websocket. Поки керування з клієнтів увімкнене, **AAPS** тримає websockets увімкненими на основному телефоні та на спарених клієнтах.
 ```
 
-Pairing and synchronization are two different things:
+Спарювання і синхронізація — це дві різні речі:
 
-- **Synchronization** (data: BG, treatments, profile) is set up as before — see [Synchronization](#RemoteControl_aapsclient). The master's QR code can do it for you on the client.
-- **Pairing** (control: the signed command channel described here) is the new step below.
+- **Синхронізація** (дані: ГК, терапія, профіль) налаштовується, як і раніше — див. [Синхронізація](#RemoteControl_aapsclient). QR-код основного телефону може зробити це за вас на клієнті.
+- **Спарювання** (керування: описаний тут канал підписаних команд) — це новий крок, описаний нижче.
 
 ---
 
-## Setting it up
+## Налаштування
 
 (client_master_master_setup)=
-### 1. On the master — enable control and add a client
+### 1. На основному телефоні — увімкніть керування та додайте клієнта
 
-On the master, open the **Manage** screen and choose **Authorized clients**.
+На основному телефоні відкрийте екран **Керувати** і виберіть **Авторизовані клієнти**.
 
-Turn on **Allow client control** (it is **off** by default). This is the master kill-switch: with it off, no client can send commands, but your paired clients are kept so you can turn it back on later. Turning it on also turns on [Hardened mode](#client-master-control-hardened-mode), shown as "*Hardened mode on*" with an **(i)** that explains it. In [Simple Mode](#preferences-simple-mode) client control is always on, so the switch is not shown.
+Увімкніть **Дозволити керування з клієнтів** (типово цей параметр **вимкнено**). Це головний вимикач: коли він вимкнений, жоден клієнт не може надсилати команди, але ваші спарені клієнти зберігаються, тож пізніше ви можете знову його увімкнути. Його ввімкнення також вмикає [Захищений режим](#client-master-control-hardened-mode), що показано як «*Захищений режим увімкнено*» зі значком **(i)**, який його пояснює. У [Простому режимі](#preferences-simple-mode) керування з клієнтів завжди увімкнене, тому вимикач не показується.
 
-![Authorized clients screen on the master](../images/v4/ClientMaster/authorized_clients_master.png)
+![Екран «Авторизовані клієнти» на основному телефоні](../images/v4/ClientMaster/authorized_clients_master.png)
 
-Tap the **+** button (bottom right) to add a client. In the **New client** dialog:
+Натисніть кнопку **+** (унизу праворуч), щоб додати клієнта. У діалозі **Новий клієнт**:
 
-1. Enter a **device name**, so you can recognize it in the list.
-2. Choose **how the phone is set up** (see the table below).
-3. Choose its **[role](#client-master-control-roles)**. Nothing is selected for you: the right role depends on who uses the phone.
+1. Введіть **назву пристрою**, щоб ви могли впізнати його в списку.
+2. Виберіть, **як налаштовується телефон** (див. таблицю нижче).
+3. Виберіть його **[роль](#client-master-control-roles)**. Нічого не вибрано заздалегідь: правильна роль залежить від того, хто користується телефоном.
 
-![New client dialog on the master: device name, how the phone is set up, and its role](../images/v4/ClientMaster/new_client_master.png)
+![Діалог «Новий клієнт» на основному телефоні: назва пристрою, спосіб налаштування телефону та його роль](../images/v4/ClientMaster/new_client_master.png)
 
-| Way                                 | What the new phone gets                                                       | Use it when                                                                                            |
-| ----------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| **QR code: Nightscout and pairing** | the Nightscout address, its own Nightscout token and the pairing, in one scan | the new phone has a camera: the quickest way, nothing to type                                          |
-| **QR code: Nightscout only**        | the Nightscout address and its own Nightscout token, no pairing               | the phone should only **show** data and never send commands                                            |
-| **PIN**                             | the pairing only; it keeps the Nightscout settings it has                     | the phone has no camera (or the master cannot make tokens); it must be connected to Nightscout already |
+| Спосіб                              | Що отримує новий телефон                                                     | Коли використовувати                                                                                                   |
+| ----------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **QR-код: Nightscout і спарювання** | адресу Nightscout, власний токен Nightscout і спарювання — одним скануванням | новий телефон має камеру: найшвидший спосіб, нічого не треба вводити                                                   |
+| **QR-код: лише Nightscout**         | адресу Nightscout і власний токен Nightscout, без спарювання                 | телефон має лише **показувати** дані й ніколи не надсилати команди                                                     |
+| **PIN**                             | лише спарювання; налаштування Nightscout, які вже є на телефоні, залишаються | телефон не має камери (або основний телефон не може створювати токени); телефон уже має бути підключений до Nightscout |
 
-The two QR code ways need an **admin token** in the master's **NSClientV3** settings, because the master makes the client's token in Nightscout. Without one, the QR code options are shown but cannot be chosen, and the dialog says why; the **PIN** always works.
+Для обох способів із QR-кодом потрібен **токен адміністратора** в налаштуваннях **NSClientV3** основного телефону, бо основний телефон створює токен клієнта в Nightscout. Без нього варіанти з QR-кодом показуються, але їх не можна вибрати, і діалог пояснює чому; **PIN** працює завжди.
 
-#### With a QR code
+#### За допомогою QR-коду
 
-Tap **OK**: the master makes the client's Nightscout token and shows a **QR code**. A code that also pairs works for about **two minutes**; the screen counts down and closes by itself when the client has paired. Scan it on the new phone as described in [On the client](#client_master_client_setup).
+Натисніть **OK**: основний телефон створює токен Nightscout для клієнта і показує **QR-код**. Код, який також спарює, діє приблизно **дві хвилини**; на екрані йде зворотний відлік, і екран закривається сам, коли клієнт спарився. Відскануйте його на новому телефоні, як описано в розділі [На клієнті](#client_master_client_setup).
 
 ```{admonition} The QR code is a secret
 :class: warning
-Anyone who sees the QR code can read your Nightscout, and a code that pairs also carries the pairing. Show it only to the new phone. **AAPS** blocks screenshots while the code is on screen.
+Будь-хто, хто бачить QR-код, може читати ваш Nightscout, а код, який спарює, також містить спарювання. Показуйте його лише новому телефону. **AAPS** блокує знімки екрана, поки код на екрані.
 ```
 
-![The master's QR code screen with its countdown (code blurred)](../images/v4/ClientMaster/qr_code_master.png)
+![Екран QR-коду на основному телефоні зі зворотним відліком (код розмито)](../images/v4/ClientMaster/qr_code_master.png)
 
-#### With a PIN
+#### За допомогою PIN
 
-Tap **OK**: the master displays an 8-digit **pairing PIN**, shown in two groups of four (for example `1234 5678`). This PIN is **one-time** and **expires after about two minutes**.
+Натисніть **OK**: основний телефон показує 8-значний **PIN спарювання** у двох групах по чотири цифри (наприклад, `1234 5678`). Цей PIN **одноразовий** і **діє приблизно дві хвилини**.
 
-![Master pairing screen showing the one-time PIN (the PIN shown here is expired)](../images/v4/ClientMaster/pairing_pin_master.png)
+![Екран спарювання на основному телефоні з одноразовим PIN (показаний тут PIN уже недійсний)](../images/v4/ClientMaster/pairing_pin_master.png)
 
 ```{admonition} The pairing PIN is a secret
 :class: warning
-The PIN protects the pairing secret that is exchanged through Nightscout. Share it only with the device you are pairing, do not post it publicly, and let it expire if you do not use it. A fresh PIN can always be generated by tapping **+** again.
+PIN захищає секрет спарювання, який передається через Nightscout. Повідомляйте його лише пристрою, який ви спарюєте, не публікуйте його і дайте йому закінчитися, якщо ви ним не користуєтеся. Новий PIN завжди можна створити, знову натиснувши **+**.
 ```
 
 (client_master_client_setup)=
-### 2. On the client — pair with the master
+### 2. На клієнті — спарювання з основним телефоном
 
-#### Scanning the QR code
+#### Сканування QR-коду
 
-You can scan the master's QR code in two places:
+QR-код основного телефону можна відсканувати у двох місцях:
 
-- in the client's **Setup Wizard**, on the step "**Set up from the master**", which comes before the Nightscout step. One scan then sets up Nightscout and, with a code that pairs, also the pairing, so the setup is finished: the wizard closes and the home screen opens;
-- at any time later from **Manage → Pair with master → Scan QR code**.
+- у **Майстрі налаштування** клієнта, на кроці «**Налаштувати з основного телефону**», який іде перед кроком Nightscout. Тоді одне сканування налаштовує Nightscout, а з кодом, що спарює, також і спарювання, тож налаштування завершено: майстер закривається і відкривається головний екран;
+- будь-коли пізніше через **Керувати → Спарувати з основним пристроєм → Сканувати QR-код**.
 
-The first time, **AAPSClient** asks for the **camera** permission. If you refuse it, the screen says that the camera is needed, and you can allow it with **Try again** or pair with the PIN instead.
+Першого разу **AAPSClient** запитує дозвіл на **камеру**. Якщо ви його не дасте, на екрані буде сказано, що потрібна камера, і ви можете дозволити її кнопкою **Спробувати ще раз** або натомість спарувати за допомогою PIN.
 
-Point the camera at the code. The client shows what the code does — the Nightscout address and, for a code that pairs, the master it pairs with — and asks "**Use this code?**". Tap **Use**: the client turns on **NSClientV3**, replaces its Nightscout address and token with the ones from the code and turns on websockets. A code that pairs also pairs the phone; it says hello to the master as soon as it has connected to Nightscout.
+Наведіть камеру на код. Клієнт показує, що робить код — адресу Nightscout і, для коду, що спарює, основний телефон, з яким відбудеться спарювання, — і запитує «**Використати цей код?**». Натисніть **Використати**: клієнт вмикає **NSClientV3**, замінює свою адресу Nightscout і токен на ті, що з коду, і вмикає websockets. Код, що спарює, також спарює телефон; телефон вітається з основним телефоном, щойно підключиться до Nightscout.
 
-![The client's Set up from the master wizard step](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+![Крок майстра «Налаштувати з основного телефону» на клієнті](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
 ```{admonition} Scanning is available on Android
 :class: note
-The scanner is not available on iOS yet, and a desktop has no camera: use the PIN there.
+Сканер поки що недоступний на iOS, а комп'ютер не має камери: там використовуйте PIN.
 ```
 
-#### Entering the PIN
+#### Введення PIN
 
-On the client, open **Manage → Pair with master** (or the wizard step **Pair with master**, after the Nightscout step), **enter the 8-digit PIN** shown on the master and tap **Pair**. The client uses the PIN to securely retrieve the pairing offer through Nightscout, then asks "**Pair with this master?**" and shows the master's identifier. Tap **Pair** to confirm (see [Pairing with the master](#aapsclient-pairing-with-the-master) for a screenshot).
+На клієнті відкрийте **Керувати → Спарувати з основним пристроєм** (або крок майстра **Спарувати з основним пристроєм**, після кроку Nightscout), **введіть 8-значний PIN**, показаний на основному телефоні, і натисніть **Спарувати**. Клієнт за допомогою PIN безпечно отримує пропозицію спарювання через Nightscout, потім запитує «**Спарувати з цим основним пристроєм?**» і показує ідентифікатор основного телефону. Натисніть **Спарувати**, щоб підтвердити (знімок екрана див. у розділі [Спарювання з основним телефоном](#aapsclient-pairing-with-the-master)).
 
-![Pair-with-master screen on the client before pairing — enter the PIN here](../images/v4/ClientMaster/pair_with_master_unpaired.png)
+![Екран «Спарувати з основним пристроєм» на клієнті до спарювання — введіть тут PIN](../images/v4/ClientMaster/pair_with_master_unpaired.png)
 
-#### After pairing
+#### Після спарювання
 
-Once a client is paired it sends a **Hello** to the master and appears in the master's **Authorized clients** list as **Active**, with a *“last seen”* time. The client knows its [role](#client-master-control-roles) from the pairing, so it shows the right buttons at once. A pairing made in the Setup Wizard finishes the wizard. In the same step the two phones replace the pairing secret with a new one that never travelled (see [Security notes](#client-master-control-security)), and a client that was set up with the PIN gets its own Nightscout token (see [The client's own Nightscout token](#client-master-control-own-token)). A client can be paired with **one** master at a time; to pair with a different master, **Unpair** first.
+Щойно клієнт спарено, він надсилає основному телефону **Hello** (привітання) і з'являється в списку **Авторизовані клієнти** основного телефону як **Активний**, з часом *«Остання активність»*. Клієнт знає свою [роль](#client-master-control-roles) зі спарювання, тому одразу показує потрібні кнопки. Спарювання в Майстрі налаштування завершує роботу майстра. На цьому ж кроці два телефони замінюють секрет спарювання новим, який ніколи не передавався (див. [Примітки щодо безпеки](#client-master-control-security)), а клієнт, налаштований за допомогою PIN, отримує власний токен Nightscout (див. [Власний токен Nightscout клієнта](#client-master-control-own-token)). Клієнт може бути спарений лише з **одним** основним телефоном одночасно; щоб спарити його з іншим основним телефоном, спочатку натисніть **Розпарувати**.
 
-![Pair-with-master screen on the client (already-paired state)](../images/v4/ClientMaster/pair_with_master_client.png)
+![Екран «Спарувати з основним пристроєм» на клієнті (вже спарено)](../images/v4/ClientMaster/pair_with_master_client.png)
 
-### 3. Managing clients
+### 3. Керування клієнтами
 
-From the master's **Authorized clients** screen you can, at any time:
+На екрані **Авторизовані клієнти** основного телефону ви будь-коли можете:
 
-- **Change the role** of a client with the row of four buttons under its name. The new role takes effect at once, without pairing again.
-- **See which Nightscout token** a client writes with: "*Own Nightscout token*" is what you want. A red line "*Uses the Nightscout token …, which has more rights than a client needs*" means the client still uses a token with more rights, usually your admin token — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Revoke** a single client — tap the **trash** icon next to it. The client can no longer send commands until it is paired again. Its own Nightscout token is deleted too, so it can no longer read your Nightscout either.
-- **Stop all control** without losing the pairings — turn off **Allow client control**.
+- **Змінити роль** клієнта рядом із чотирьох кнопок під його назвою. Нова роль діє одразу, без повторного спарювання.
+- **Побачити, з яким токеном Nightscout** записує клієнт: «*Власний токен Nightscout*» — це те, що вам потрібно. Червоний рядок «*Використовує токен Nightscout …, який має більше прав, ніж потрібно клієнту*» означає, що клієнт досі використовує токен із більшими правами, зазвичай ваш токен адміністратора — див. [Власний токен Nightscout клієнта](#client-master-control-own-token).
+- **Відкликати доступ** окремого клієнта — натисніть значок **кошика** поруч із ним. Клієнт більше не може надсилати команди, доки його знову не спарять. Його власний токен Nightscout теж видаляється, тож він більше не може й читати ваш Nightscout.
+- **Зупинити все керування**, не втрачаючи спарювань, — вимкніть **Дозволити керування з клієнтів**.
 
-Phones set up with **QR code: Nightscout only** are listed below the clients, under "**Read Nightscout only**". For each of them you can show the QR code again (to set up the same phone again) or delete its token, which ends its access to your Nightscout.
+Телефони, налаштовані через **QR-код: лише Nightscout**, показано під клієнтами, у розділі «**Лише читання Nightscout**». Для кожного з них можна знову показати QR-код (щоб ще раз налаштувати той самий телефон) або видалити його токен, що закриває йому доступ до вашого Nightscout.
 
-![Authorized clients with a paired client (role buttons, own Nightscout token) and a phone under Read Nightscout only](../images/v4/ClientMaster/authorized_clients_roles.png)
+![«Авторизовані клієнти» зі спареним клієнтом (кнопки ролей, власний токен Nightscout) і телефоном у розділі «Лише читання Nightscout»](../images/v4/ClientMaster/authorized_clients_roles.png)
 
 ---
 
 (client-master-control-roles)=
-## Client roles
+## Ролі клієнтів
 
-Each paired client has a **role**. The master checks it for every command, and the client shows only what its role allows. A new role takes effect at once, without pairing again. The roles build on each other: each one can do everything the one before it can.
+Кожен спарений клієнт має **роль**. Основний телефон перевіряє її для кожної команди, а клієнт показує лише те, що дозволяє його роль. Нова роль діє одразу, без повторного спарювання. Ролі будуються одна на одній: кожна може все, що може попередня.
 
-| Role          | The client may                                                                                                                                                                                                                |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Read-only** | only show data. It stays paired, so it is ready when you give it a higher role.                                                                                                                                               |
-| **Meals**     | give a bolus, use the bolus wizard and QuickWizard, enter carbs, and stop a running bolus. Carbs entered here can make the loop give more insulin.                                                                            |
-| **Caregiver** | do everything a user does in **AAPS**: temp targets, profile and insulin switches, loop mode, temp basal, extended bolus, scenes, careportal events, calibrations and removing records. It cannot change settings or presets. |
-| **Admin**     | do everything, settings and presets included (QuickWizard, temp target presets, scenes, profiles, automation, insulin).                                                                                                       |
+| Роль             | Клієнт може                                                                                                                                                                                                                                           |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Лише читання** | лише показувати дані. Він залишається спареним, тож готовий, коли ви дасте йому вищу роль.                                                                                                                                                            |
+| **Їжа**          | подавати болюс, користуватися калькулятором болюса та Швидким майстром, вводити вуглеводи та зупиняти болюс, що триває. Вуглеводи, введені тут, можуть змусити петлю подати більше інсуліну.                                                          |
+| **Доглядач**     | робити все, що робить користувач в **AAPS**: тимчасові цілі, перемикання профілю та інсуліну, режим петлі, тимчасовий базал, подовжений болюс, сцени, події careportal, калібрування та видалення записів. Не може змінювати налаштування чи шаблони. |
+| **Адмін**        | робити все, включно з налаштуваннями та шаблонами (Швидкий майстер, шаблони тимчасових цілей, сцени, профілі, автоматизація, інсулін).                                                                                                                |
 
-The **(i)** at the top of the **Authorized clients** screen shows the same explanation. On the client, **Manage → Pair with master** shows the phone's own role.
+Значок **(i)** угорі екрана **Авторизовані клієнти** показує те саме пояснення. На клієнті **Керувати → Спарувати з основним пристроєм** показує власну роль телефону.
 
 ---
 
 (client-master-control-hardened-mode)=
-## Hardened mode
+## Захищений режим
 
-When **Allow client control** is on, the master is in **hardened mode**: it takes changes only from paired clients. It does **not** take treatments, temp targets, profile changes, running mode changes or deletes that are made directly in Nightscout, for example on the Nightscout website or in other apps.
+Коли параметр **Дозволити керування з клієнтів** увімкнено, основний телефон працює в **захищеному режимі**: він приймає зміни лише від спарених клієнтів. Він **не** приймає записи терапії, тимчасові цілі, зміни профілю, зміни робочого режиму чи видалення, зроблені прямо в Nightscout, наприклад на сайті Nightscout або в інших застосунках.
 
-- The settings for accepting data from Nightscout (**NSClientV3 → Synchronization**) are hidden while hardened mode is on; **AAPS** uses them as if they were off.
-- The master still **uploads** all its data to Nightscout, BG included, and keeps **websockets** on.
-- If the master gets its **BG from Nightscout**, it still takes BG from there.
-- To load the history on a **new** master, use **Full sync** in **NSClientV3**: it takes everything that is in Nightscout, profiles included.
-- [SMS commands](SMSCommands.md) are not affected.
+- Налаштування прийому даних із Nightscout (**NSClientV3 → Синхронізація**) приховані, поки захищений режим увімкнено; **AAPS** працює так, ніби вони вимкнені.
+- Основний телефон і далі **вивантажує** всі свої дані в Nightscout, включно з ГК, і тримає **websockets** увімкненими.
+- Якщо основний телефон отримує **ГК з Nightscout**, він і далі бере ГК звідти.
+- Щоб завантажити історію на **новий** основний телефон, використайте **Повна синхронізація** в **NSClientV3**: так він отримає все, що є в Nightscout, включно з профілями.
+- На [SMS-команди](SMSCommands.md) це не впливає.
 
-A paired client follows the master's hardened mode: it keeps websockets on, and the same Nightscout settings are hidden on it. An unpaired client keeps its own settings.
+Спарений клієнт дотримується захищеного режиму основного телефону: він тримає websockets увімкненими, і на ньому приховано ті самі налаштування Nightscout. Неспарений клієнт зберігає власні налаштування.
 
-[Simple Mode](#preferences-simple-mode) always turns hardened mode on. To turn it off, leave Simple Mode and turn off **Allow client control** on the master.
+[Простий режим](#preferences-simple-mode) завжди вмикає захищений режим. Щоб вимкнути його, вийдіть із Простого режиму та вимкніть **Дозволити керування з клієнтів** на основному телефоні.
 
 ```{admonition} Why hardened mode
 :class: note
-Everything a paired client sends is signed, checked and confirmed by the master. A treatment typed into the Nightscout website is not: anybody with write access to your Nightscout could add it. In hardened mode only signed commands can change what the master does.
+Усе, що надсилає спарений клієнт, підписане, перевірене та підтверджене основним телефоном. Запис терапії, введений на сайті Nightscout, — ні: його міг би додати будь-хто з правом запису у ваш Nightscout. У захищеному режимі змінити дії основного телефону можуть лише підписані команди.
 ```
 
 ---
 
 (client-master-control-own-token)=
-## The client's own Nightscout token
+## Власний токен Nightscout клієнта
 
-A client does not need an admin token. It only reads your Nightscout and sends its commands to the master through it; it uploads nothing itself. So the master gives each client a Nightscout token of its own, with just these rights:
+Клієнту не потрібен токен адміністратора. Він лише читає ваш Nightscout і надсилає через нього свої команди основному телефону; сам він нічого не вивантажує. Тому основний телефон дає кожному клієнту власний токен Nightscout лише з такими правами:
 
-- read everything,
-- write to the `settings` collection, the channel to the master,
-- snooze Nightscout alarms.
+- читати все,
+- записувати в колекцію `settings` — канал до основного телефону,
+- відкладати сигнали тривоги Nightscout.
 
-The token belongs to a Nightscout role named **`aaps-client`**, which the master creates the first time it needs it. You can see the role and the tokens (named `aaps-` and the client's name) in the **Admin tools** of your Nightscout site. If the role is changed there, the master sets it back the next time it makes a token or you open **Authorized clients**.
+Токен належить ролі Nightscout з назвою **`aaps-client`**, яку основний телефон створює, коли вона вперше потрібна. Роль і токени (з назвою `aaps-` і назвою клієнта) можна побачити в **Admin tools** (інструменти адміністратора) вашого сайту Nightscout. Якщо роль там змінено, основний телефон відновлює її наступного разу, коли створює токен або коли ви відкриваєте **Авторизовані клієнти**.
 
-How a client gets its token:
+Як клієнт отримує свій токен:
 
-- **Set up with a QR code**: the token is in the code.
-- **Paired with the PIN** (or paired before this existed): after pairing, the master sends the client its own token through the paired channel, encrypted. The client first checks that a login with it works, then uses it instead of the token it had. This needs an admin token on the master; without one, the client keeps its token, and its card on the master shows the red line.
+- **Налаштування за QR-кодом**: токен міститься в коді.
+- **Спарювання за допомогою PIN** (або спарювання ще до появи цієї функції): після спарювання основний телефон надсилає клієнту його власний токен через спарений канал у зашифрованому вигляді. Клієнт спочатку перевіряє, що вхід із цим токеном працює, а потім використовує його замість попереднього токена. Для цього на основному телефоні потрібен токен адміністратора; без нього клієнт залишає свій токен, а його картка на основному телефоні показує червоний рядок.
 
-**A client keeps its own token.** Once the master has seen a client write with its own token, it takes that client's commands only with that token. A command written with another token (for example an admin token typed into the client later, or another client's token) is refused, even though the client is paired, and the client says "*The master refused it: this phone writes to Nightscout with another token than its own*". Its card on the master says so in red. The client still shows as online, so you can see what is wrong. To fix it, remove the client on the master and add it again.
+**Клієнт зберігає свій власний токен.** Щойно основний телефон побачив, що клієнт записує з власним токеном, він приймає команди цього клієнта лише з цим токеном. Команду, записану з іншим токеном (наприклад, з токеном адміністратора, пізніше введеним у клієнт, або з токеном іншого клієнта), буде відхилено, хоча клієнт спарений, і клієнт покаже «*Основний телефон відхилив команду: цей телефон записує в Nightscout з іншим токеном, ніж власний*». Його картка на основному телефоні показує це червоним. Клієнт і далі показується як онлайн, тож ви бачите, що не так. Щоб це виправити, видаліть клієнта на основному телефоні та додайте його знову.
 
-The master never deletes or changes a Nightscout token it did not make (one with other roles than `aaps-client`): those are yours. It deletes a client's own token when you remove the client.
+Основний телефон ніколи не видаляє і не змінює токен Nightscout, який він не створював (з іншими ролями, ніж `aaps-client`): ці токени ваші. Власний токен клієнта він видаляє, коли ви видаляєте клієнта.
 
 ---
 
-## Using remote control
+## Використання віддаленого керування
 
-### Triggering an action from the client
+### Запуск дії з клієнта
 
-Use the client exactly as you would the phone itself: open **Carbs**, **Insulin**, **Temp Target**, **Profile**, **Scenes**, the **Manage** sheet, etc., and fill in the values.
+Користуйтеся клієнтом точно так, як самим основним телефоном: відкрийте **Вуглеводи**, **Інсулін**, **Тимчасова ціль**, **Профіль**, **Сцени**, панель **Керувати** тощо і заповніть значення.
 
-When you confirm, the client briefly shows **“Contacting master…”**, the **master** computes and caps the action, and the client then displays the **master's own confirmation** — the exact lines, values and colors the master would show on its own screen. Review them and tap **OK** to go ahead.
+Коли ви підтверджуєте, клієнт коротко показує **«Звʼязок з основним телефоном…»**, **основний телефон** розраховує та обмежує дію, а потім клієнт показує **власне підтвердження основного телефону** — ті самі рядки, значення та кольори, які основний телефон показав би на своєму екрані. Перевірте їх і натисніть **OK**, щоб продовжити.
 
-![A scene confirmation authored by the master and shown on the client](../images/v4/ClientMaster/confirmation_master_authored.png)
+![Підтвердження сцени, складене основним телефоном і показане на клієнті](../images/v4/ClientMaster/confirmation_master_authored.png)
 
-The same applies to a simple carbs entry — the amount shown for confirmation is the one the master computed:
+Те саме стосується простого введення вуглеводів — кількість, показана для підтвердження, розрахована основним телефоном:
 
-![Carbs confirmation authored by the master](../images/v4/ClientMaster/carbs_confirmation_client.png)
+![Підтвердження вуглеводів, складене основним телефоном](../images/v4/ClientMaster/carbs_confirmation_client.png)
 
-After you confirm, the master executes the action once and the result is reflected back on the client.
+Після вашого підтвердження основний телефон виконує дію один раз, і результат з'являється на клієнті.
 
-### Insulin bolus from a client
+### Болюс інсуліну з клієнта
 
-This is the main new capability in v4. A bolus started on a client is **delivered by the master on its pump**; the master caps it against its own constraints, and the client shows **live delivery progress** while it runs (and an alarm if the pump reports a failure).
+Це головна нова можливість у v4. Болюс, запущений на клієнті, **подає основний телефон своєю помпою**; основний телефон обмежує його своїми власними обмеженнями, а клієнт показує **хід подачі в реальному часі**, поки болюс триває (і сигнал тривоги, якщо помпа повідомляє про помилку).
 
 ```{admonition} Boluses are always confirmed and capped on the master
 :class: note
-A client never decides the delivered amount on its own. The master recomputes and caps it, you confirm the master-authored amount, and only then is it delivered.
+Клієнт ніколи сам не вирішує, яку кількість подати. Основний телефон перераховує й обмежує її, ви підтверджуєте кількість, складену основним телефоном, і лише тоді її буде подано.
 ```
 
 (clientmastercontrol-when-the-master-is-offline)=
-### When the master is offline
+### Коли основний телефон не в мережі
 
-If the master is not reachable (its phone is off/asleep, not connected to Nightscout, or websockets are down), control actions on the client are **blocked before anything is sent**, and you get a clear message. Nothing is half-applied.
+Якщо основний телефон недоступний (телефон вимкнений або спить, не підключений до Nightscout або websockets не працюють), дії керування на клієнті **блокуються ще до надсилання**, і ви отримуєте зрозуміле повідомлення. Нічого не виконується наполовину.
 
-![Client message when the master is offline](../images/v4/ClientMaster/master_offline_error.png)
+![Повідомлення клієнта, коли основний телефон не в мережі](../images/v4/ClientMaster/master_offline_error.png)
 
-The client re-checks reachability automatically and re-enables control once the master is back online.
+Клієнт сам повторно перевіряє зв'язок і знову вмикає керування, щойно основний телефон знову в мережі.
 
 (clientmastercontrol-wear-os-on-a-client)=
 
-### Wear OS (watch) on a client
+### Wear OS (годинник) на клієнті
 
-A watch paired to a **client** phone relays its actions through the client to the master (watch → client → master). The watch shows the **master's** confirmation lines and the real result, just like the phone. Setting up the watch is unchanged — see [Wear OS](../WearOS/WearOsSmartwatch.md).
+Годинник, спарений із телефоном-**клієнтом**, передає свої дії через клієнта на основний телефон (годинник → клієнт → основний телефон). Годинник показує рядки підтвердження **основного телефону** і справжній результат — так само, як телефон. Налаштування годинника не змінилося — див. [Wear OS](../WearOS/WearOsSmartwatch.md).
 
 
 <!-- 📷 SCREENSHOT NEEDED (optional): watch confirmation screen relayed from the master,
@@ -271,61 +271,61 @@ A watch paired to a **client** phone relays its actions through the client to th
 ---
 
 (client-master-config-prefs)=
-## Changing configuration and preferences
+## Зміна конфігурації та налаштувань
 
-Pairing does more than relay one-off actions — it also keeps the **configuration** and many **preferences** aligned between the master and its clients.
+Спарювання не лише передає окремі дії — воно також узгоджує **конфігурацію** і багато **налаштувань** між основним телефоном і його клієнтами.
 
-### Configuration (which plugins are active)
+### Конфігурація (які плагіни активні)
 
-The active **plugins** (APS algorithm, sensitivity, smoothing, …) are chosen on the **master** and **mirrored** to every paired client. On a client these selections are marked with a small **mobile icon** in the [Configuration](#configuration_sync_icon) screen — change them on the master and the clients follow automatically and vice versa.
+Активні **плагіни** (алгоритм APS, чутливість, згладжування, …) вибираються на **основному телефоні** і **віддзеркалюються** на кожен спарений клієнт. На клієнті ці вибори позначено маленьким **значком телефона** на екрані [Конфігурація](#configuration_sync_icon) — змініть їх на основному телефоні, і клієнти автоматично підлаштуються, і навпаки.
 
-On a client, the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication*:
+На клієнті значок телефона є біля *Згладжування*, *Калібрування*, *Визначення чутливості* і *APS* (синхронізуються з основним телефоном), але не біля *Звʼязок*:
 
-![Configuration list on a client — the mobile icon marks the categories synced with the master](../images/v4/ClientMaster/configuration_client.png)
+![Список конфігурації на клієнті — значок телефона позначає категорії, синхронізовані з основним телефоном](../images/v4/ClientMaster/configuration_client.png)
 
-Connection details that are unique to each device — most importantly the **NSClient Nightscout URL / access token** — are *not* synced. Each phone has its own; on a client they come from the master's QR code, or you set them yourself.
+Дані підключення, унікальні для кожного пристрою, — передусім **URL Nightscout / токен доступу NSClient** — *не* синхронізуються. Кожен телефон має власні; на клієнті вони беруться з QR-коду основного телефону, або ви задаєте їх самі.
 
-### Profiles
+### Профілі
 
-Your **profile list** is also kept in sync between the master and its paired clients. On a paired client, **Manage → Profile** shows the same profiles as the master; you can **edit** a profile or **activate** one, and — like every other command — the change is sent to the **master**, applied there, and synced back.
+Ваш **список профілів** теж синхронізується між основним телефоном і його спареними клієнтами. На спареному клієнті **Керувати → Профіль** показує ті самі профілі, що й на основному телефоні; ви можете **редагувати** профіль або **активувати** його, і — як і будь-яка інша команда — зміну буде надіслано на **основний телефон**, застосовано там і синхронізовано назад.
 
-The first time you activate a profile on a newly installed client, the client may show "*No insulin is in use yet*" and ask you to **select the insulin**. Choose the insulin that is active on the master (**Manage → Insulin settings** on the master shows it).
+Коли ви вперше активуєте профіль на щойно встановленому клієнті, клієнт може показати «*Інсулін ще не використовується*» і попросити **вибрати інсулін**. Виберіть інсулін, активний на основному телефоні (його показує **Керувати → Налаштування інсуліну** на основному телефоні).
 
-On a client that is **not paired**, the Profile screen is still available but **view-only**: the client shows the profiles it receives through Nightscout (it needs them for its own calculations), but there is no edit or activate button — there is no master to send the change to.
+На клієнті, який **не спарений**, екран «Профіль» доступний, але **лише для перегляду**: клієнт показує профілі, які отримує через Nightscout (вони потрібні йому для власних розрахунків), але кнопок редагування й активації немає — немає основного телефону, якому можна надіслати зміну.
 
-### Preferences
+### Налаштування
 
-A subset of **preferences** is **bidirectional**: you can change them on the **master or on a paired client**, and the change is synchronized to the other side. When you change such a preference on a client, it is sent to the master over the signed channel, applied there, and the authoritative value is sent back — so what you see on the client is always what the master stored. If the same preference is changed on two devices at almost the same time, the **most recent edit wins**. For a setting with a slider, the new value is sent when you lift your finger.
+Частина **налаштувань** є **двосторонньою**: їх можна змінювати на **основному телефоні або на спареному клієнті**, і зміна синхронізується на інший бік. Коли ви змінюєте таке налаштування на клієнті, його надсилають на основний телефон підписаним каналом, застосовують там, а остаточне значення надсилають назад — тож на клієнті ви завжди бачите те, що зберіг основний телефон. Якщо те саме налаштування змінено на двох пристроях майже одночасно, **перемагає остання зміна**. Для налаштування з повзунком нове значення надсилається, коли ви відпускаєте палець.
 
-Inside the settings, the same small **mobile icon** marks the individual preferences that are synced. In the example below *Absorption cutoff* is synced (mobile icon), while settings without the icon are device-local:
+Усередині налаштувань той самий маленький **значок телефона** позначає окремі налаштування, які синхронізуються. У прикладі нижче *Межа засвоєння* синхронізується (значок телефона), а налаштування без значка діють лише на цьому пристрої:
 
-![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+![Налаштування плагіна — значок телефона позначає синхронізовані налаштування](../images/v4/ClientMaster/preferences_synced_icon.png)
 
 ```{admonition} The master must be online to change synced settings from a client
 :class: note
-Because the master is the authority for the stored value, editing a master-controlled configuration item or a bidirectional preference from a client requires the master to be **reachable**. When the master is offline those controls are disabled on the client (see [When the master is offline](#clientmastercontrol-when-the-master-is-offline)).
+Основний телефон є головним джерелом збереженого значення, тому щоб змінити з клієнта елемент конфігурації, яким керує основний телефон, або двостороннє налаштування, основний телефон має бути **доступний**. Коли основний телефон не в мережі, ці елементи керування на клієнті вимкнені (див. [Коли основний телефон не в мережі](#clientmastercontrol-when-the-master-is-offline)).
 ```
 
 ---
 
 (client-master-control-security)=
-## Security notes
+## Примітки щодо безпеки
 
 ```{admonition} How the channel is protected
 :class: tip
-- **Pairing secret**: the master hands it to the client once — protected by the PIN in a Nightscout document, or inside the QR code — and both store it encrypted.
-- **A new secret right after pairing**: the client's first message after pairing starts a key exchange, and from then on both phones use a secret that never travelled. A secret that someone may have seen (a photographed QR code, a PIN offer read from Nightscout) is of no use afterwards. Phones paired before this existed do the same once after the update.
-- **Every command is signed** (HMAC). The master rejects anything whose signature does not match a paired client.
-- **Replay is prevented** by a per-client monotonic counter, and every command **expires** after a short time-to-live.
-- **Least rights in Nightscout**: each client has its [own Nightscout token](#client-master-control-own-token), which can only read and write to the client-control channel. Once it has used it, the master takes its commands only with that token. Removing the client deletes it.
-- **Only signed changes**: in [hardened mode](#client-master-control-hardened-mode) the master ignores therapy changes typed directly into Nightscout.
-- **The master signs what it shares**: the settings, the client list and the "master is alive" sign that the master puts in Nightscout for its clients carry the master's signature. A client takes them only when the signature is the master's, so another client's token cannot change them. The client learns the master's key when it pairs, or from the QR code for a phone that only reads Nightscout. A refused document shows in the NSClient log as "*✕ SETTINGS … refused*".
-- **You stay in control**: give each client the [role](#client-master-control-roles) it needs, revoke a client with one tap, or disable everything with **Allow client control**.
+- **Секрет спарювання**: основний телефон один раз передає його клієнту — захищеним PIN у документі Nightscout або всередині QR-коду — і обидва телефони зберігають його в зашифрованому вигляді.
+- **Новий секрет одразу після спарювання**: перше повідомлення клієнта після спарювання запускає обмін ключами, і відтоді обидва телефони використовують секрет, який ніколи не передавався. Секрет, який хтось міг побачити (сфотографований QR-код, пропозиція з PIN, прочитана з Nightscout), після цього нічого не дає. Телефони, спарені ще до появи цієї функції, роблять те саме один раз після оновлення.
+- **Кожна команда підписана** (HMAC). Основний телефон відхиляє все, чий підпис не відповідає спареному клієнту.
+- **Повторне надсилання команд заблоковано** монотонним лічильником для кожного клієнта, а кожна команда **закінчується** після короткого часу дії.
+- **Мінімальні права в Nightscout**: кожен клієнт має [власний токен Nightscout](#client-master-control-own-token), який може лише читати та записувати в канал керування з клієнта. Щойно клієнт його використав, основний телефон приймає його команди лише з цим токеном. Видалення клієнта видаляє й токен.
+- **Лише підписані зміни**: у [захищеному режимі](#client-master-control-hardened-mode) основний телефон ігнорує зміни терапії, введені прямо в Nightscout.
+- **Основний телефон підписує те, чим ділиться**: налаштування, список клієнтів і знак «основний телефон працює», які основний телефон записує в Nightscout для своїх клієнтів, мають підпис основного телефону. Клієнт приймає їх, лише коли підпис належить основному телефону, тому токен іншого клієнта не може їх змінити. Клієнт дізнається ключ основного телефону під час спарювання, а телефон, який лише читає Nightscout, — з QR-коду. Відхилений документ показується в журналі NSClient як «*✕ SETTINGS … refused*».
+- **Керування залишається за вами**: дайте кожному клієнту потрібну йому [роль](#client-master-control-roles), відкличте доступ клієнта одним натисканням або вимкніть усе параметром **Дозволити керування з клієнтів**.
 ```
 
 ```{admonition} After restoring a backup
 :class: warning
-If a client is restored from a backup that rolls its command counter backwards, the master will reject its next commands as replays. Simply **unpair and pair again** to recover.
+Якщо клієнт відновлено з резервної копії, у якій його лічильник команд менший, основний телефон відхилятиме його наступні команди як повторні. Щоб це виправити, просто **розпаруйте і спаруйте знову**.
 ```
 
 ---
@@ -334,27 +334,27 @@ If a client is restored from a backup that rolls its command counter backwards, 
 
 ## Усунення несправностей
 
-| Symptom                                                                                                    | What to check                                                                                                                                                                                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Client says the **master is offline**                                                                      | Master phone awake and running **AAPS**; both phones connected in **NSClientV3**; **websockets** enabled on both; same Nightscout site.                                                                                                                                                                                      |
-| Client says it is **not paired**                                                                           | Pair again from **Manage → Pair with master**. Confirm the client is **Active** in the master's **Authorized clients** list.                                                                                                                                                                                                 |
-| Command **rejected** by the master                                                                         | The master re-validates against its current state — e.g. the chosen profile no longer exists, or the pump type does not match. Re-check on the master.                                                                                                                                                                       |
-| Commands work but are **slow**                                                                             | Enable **websockets** on both phones (otherwise the apps fall back to slower polling).                                                                                                                                                                                                                                       |
-| Pairing is cancelled with *"The pairing secret could not be stored"*                                       | Nothing was changed. Start the pairing again; if it keeps failing, restart **AAPSClient** and try once more.                                                                                                                                                                                                                 |
-| Nothing happens after pairing                                                                              | Make sure **Allow client control** is ON on the master, and that the master is connected to Nightscout.                                                                                                                                                                                                                      |
-| The QR code options cannot be chosen in the **New client** dialog                                          | The dialog says why. *Not an admin token*: give the master an admin token of your Nightscout, or add the client with the **PIN**. *Not connected*: wait until the master shows *connected* in **NSClientV3**.                                                                                                                |
-| *"Nightscout has a token with this name and other rights"*                                                 | One of your own Nightscout tokens is called `aaps-` and this name. Choose another name for the client.                                                                                                                                                                                                                       |
-| *"A client with this name is in the list already"*                                                         | Choose another name, or remove that client first.                                                                                                                                                                                                                                                                            |
-| The client says *"This code is from another AAPS version"*                                                 | Master and client must run the **same** version of **AAPS**. Update the older one.                                                                                                                                                                                                                                           |
-| The client says *"This code has expired"*                                                                  | A code that pairs works for about two minutes. Add the client again on the master to get a new code.                                                                                                                                                                                                                         |
-| The client says *"This phone is paired already"*                                                           | Unpair it first (**Manage → Pair with master → Unpair**), then scan again. A **Nightscout only** code works on a paired phone too.                                                                                                                                                                                           |
-| The client says *"The master refused it: this phone writes to Nightscout with another token than its own"* | The client used its own Nightscout token before and now writes with another one, for example after a token was typed into its Nightscout settings. Remove the client on the master and add it again (see [The client's own Nightscout token](#client-master-control-own-token)).                                             |
-| The NSClient log on the client shows *"✕ SETTINGS … refused"* and its settings no longer follow the master | Somebody else wrote the master's settings document, or the master has a new key (for example after its data was cleared). A paired client takes a new key by itself the next time it connects to Nightscout. A phone that only reads Nightscout needs the master's QR code again (**Read Nightscout only → show the code**). |
-| The client's card shows *"Uses the Nightscout token …"* in red                                             | The client still writes with a token that has more rights than it needs. The master sends it its own token after pairing, but only if the master has an admin token. Check the master's token, or set the client up again with a QR code.                                                                                    |
-| A client can no longer read Nightscout                                                                     | Its token was deleted, for example because the client was removed on the master. Add it again.                                                                                                                                                                                                                               |
-| Treatments entered on the Nightscout website are not applied                                               | Expected in [hardened mode](#client-master-control-hardened-mode): enter them on a paired client instead.                                                                                                                                                                                                                    |
+| Ознака                                                                                                                    | Що перевірити                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Клієнт повідомляє, що **основний телефон не в мережі**                                                                    | Основний телефон не спить і на ньому працює **AAPS**; обидва телефони підключені в **NSClientV3**; **websockets** увімкнені на обох; той самий сайт Nightscout.                                                                                                                                                                                                    |
+| Клієнт повідомляє, що він **не спарений**                                                                                 | Спаруйте знову через **Керувати → Спарувати з основним пристроєм**. Перевірте, що клієнт має стан **Активний** у списку **Авторизовані клієнти** основного телефону.                                                                                                                                                                                               |
+| Основний телефон **відхилив** команду                                                                                     | Основний телефон повторно перевіряє команду за своїм поточним станом — наприклад, вибраного профілю вже немає або тип помпи не збігається. Перевірте на основному телефоні.                                                                                                                                                                                        |
+| Команди працюють, але **повільно**                                                                                        | Увімкніть **websockets** на обох телефонах (інакше застосунки переходять на повільніше опитування).                                                                                                                                                                                                                                                                |
+| Спарювання скасовано з повідомленням *«Не вдалося зберегти секрет спарювання»*                                            | Нічого не змінено. Почніть спарювання знову; якщо помилка повторюється, перезапустіть **AAPSClient** і спробуйте ще раз.                                                                                                                                                                                                                                           |
+| Після спарювання нічого не відбувається                                                                                   | Переконайтеся, що на основному телефоні параметр **Дозволити керування з клієнтів** УВІМКНЕНО і що основний телефон підключений до Nightscout.                                                                                                                                                                                                                     |
+| Варіанти з QR-кодом не можна вибрати в діалозі **Новий клієнт**                                                           | Діалог пояснює чому. *Не токен адміністратора*: дайте основному телефону токен адміністратора вашого Nightscout або додайте клієнта за допомогою **PIN**. *Не підключено*: зачекайте, доки основний телефон покаже *підключено* в **NSClientV3**.                                                                                                                  |
+| *«У Nightscout уже є токен із цією назвою та іншими правами»*                                                             | Один із ваших власних токенів Nightscout має назву `aaps-` плюс цю назву. Виберіть іншу назву для клієнта.                                                                                                                                                                                                                                                         |
+| *«Клієнт із такою назвою вже є в списку»*                                                                                 | Виберіть іншу назву або спочатку видаліть цього клієнта.                                                                                                                                                                                                                                                                                                           |
+| Клієнт повідомляє *«Цей код з іншої версії AAPS»*                                                                         | На основному телефоні та клієнті має працювати **однакова** версія **AAPS**. Оновіть старішу.                                                                                                                                                                                                                                                                      |
+| Клієнт повідомляє *«Термін дії цього коду минув»*                                                                         | Код, що спарює, діє приблизно дві хвилини. Додайте клієнта на основному телефоні знову, щоб отримати новий код.                                                                                                                                                                                                                                                    |
+| Клієнт повідомляє *«Цей телефон уже спарено»*                                                                             | Спочатку розпаруйте його (**Керувати → Спарувати з основним пристроєм → Розпарувати**), потім скануйте знову. Код **лише Nightscout** працює й на спареному телефоні.                                                                                                                                                                                              |
+| Клієнт повідомляє *«Основний телефон відхилив команду: цей телефон записує в Nightscout з іншим токеном, ніж власний»*    | Клієнт раніше використовував власний токен Nightscout, а тепер записує з іншим, наприклад після того, як у його налаштування Nightscout ввели токен. Видаліть клієнта на основному телефоні та додайте його знову (див. [Власний токен Nightscout клієнта](#client-master-control-own-token)).                                                                     |
+| Журнал NSClient на клієнті показує *«✕ SETTINGS … refused»*, і його налаштування більше не слідують за основним телефоном | Хтось інший записав документ налаштувань основного телефону, або основний телефон має новий ключ (наприклад, після очищення його даних). Спарений клієнт сам приймає новий ключ, коли наступного разу підключається до Nightscout. Телефону, який лише читає Nightscout, знову потрібен QR-код основного телефону (**Лише читання Nightscout → Показати QR-код**). |
+| Картка клієнта показує червоним *«Використовує токен Nightscout …»*                                                       | Клієнт досі записує з токеном, який має більше прав, ніж йому потрібно. Основний телефон надсилає йому власний токен після спарювання, але лише якщо основний телефон має токен адміністратора. Перевірте токен основного телефону або налаштуйте клієнта знову за QR-кодом.                                                                                       |
+| Клієнт більше не може читати Nightscout                                                                                   | Його токен видалено, наприклад тому, що клієнта видалили на основному телефоні. Додайте його знову.                                                                                                                                                                                                                                                                |
+| Записи терапії, введені на сайті Nightscout, не застосовуються                                                            | Так і має бути в [захищеному режимі](#client-master-control-hardened-mode): вводьте їх натомість на спареному клієнті.                                                                                                                                                                                                                                             |
 
-For Nightscout / synchronization problems first see [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+Щодо проблем із Nightscout / синхронізацією спочатку див. [Усунення проблем з NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
 ---
 

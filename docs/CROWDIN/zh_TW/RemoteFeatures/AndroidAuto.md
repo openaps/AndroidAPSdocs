@@ -8,28 +8,28 @@
 
 這意味著：
 
-* Android must allow **AAPS** to show notifications and
+* Android 必須允許 **AAPS** 顯示通知，並且
 * 由於**AAPS** 是非官方應用，需允許 Android Auto 使用「未知來源」。
 
 ![AAPS CGM 資料在 Android Auto 上的顯示](../images/android_auto_01.png)
 
 (androidauto-check-that-aaps-can-show-notifications)=
 
-## Check that AAPS can show notifications
+## 確認 AAPS 可以顯示通知
 
-**AAPS** always shows a status notification with your current glucose, IOB and COB. This is the notification that Android Auto displays in the car. There is nothing to switch on in **AAPS**, but Android must allow **AAPS** to show notifications.
+**AAPS** 一律會顯示狀態通知，其中包含目前的血糖、IOB 和活性碳水化合物。這就是 Android Auto 在車上顯示的通知。 **AAPS** 中沒有需要開啟的設定，但 Android 必須允許 **AAPS** 顯示通知。
 
-On your phone, open **Settings** > **Apps** > **AAPS** > **Notifications** and make sure **All AAPS notifications** is on.
+在手機上開啟 **設定** > **應用程式** > **AAPS** > **通知**，並確認已開啟 **所有 AAPS 通知**。
 
-![All AAPS notifications switched on](../images/android_auto_notifications_all.png)
+![已開啟所有 AAPS 通知](../images/android_auto_notifications_all.png)
 
-Scroll down and make sure **Ongoing status** is on: this is the channel of the status notification.
+向下捲動並確認已開啟 **持續通知**：這是狀態通知所使用的通知管道。
 
-![Ongoing status notification channel switched on](../images/android_auto_ongoing_channel.png)
+![已開啟持續通知管道](../images/android_auto_ongoing_channel.png)
 
-Please check now that you see the **AAPS** status notification on the phone before you walk to your car!
+現在請確認手機上看得到 **AAPS** 狀態通知，再走到車旁！
 
-![AAPS notification on the phone](../images/android_auto_04.png)
+![手機上的 AAPS 通知](../images/android_auto_04.png)
 
 (androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
@@ -83,4 +83,4 @@ Please check now that you see the **AAPS** status notification on the phone befo
 
 ## 問題排除：
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#androidauto-check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
+* 如果你沒有看到通知，請檢查你是否[允許 AAPS 顯示通知](#androidauto-check-that-aaps-can-show-notifications)，並檢查[Android Auto 是否有權限存取通知](#androidauto-allow-the-use-of-unknown-sources-with-android-auto)。

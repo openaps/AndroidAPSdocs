@@ -2,6 +2,7 @@
 
 ## Οκτώβριος 2026
 
+- [Browser build with AAPS Builder](#aaps-builder): build workflow version 8, now maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository. Setting up is one step shorter: [step 1](#aaps-builder-step1) of the [setup page](#aaps-builder-setup) creates your private repository as a copy of that repository, with the build workflow already in it, so there is no workflow to add any more. From now on the build steps are updated for you: your repository runs the version released by the AAPS developers at every build, without any change on your side (and still no automatic build). The build itself does not change, and your existing repository keeps working. To get these automatic updates, replace your `.github/workflows/build.yml` once as explained in [Updating AAPS](#aaps-builder-updates). Your `KEYSTORE_SET` secret stays as it is. The optional [Google Drive step](#aaps-builder-google-drive) now works on the setup page itself, on a phone or a computer: no preparation file needed @psonnera
 - [Έξυπνα ρολόγια και AAPS](#watches-external-companion-apps): η ενότητα **Samsung Tizen** γίνεται **External Companion Apps** (εξωτερικές συνοδευτικές εφαρμογές) και αναφέρει τις εφαρμογές που διαβάζουν το broadcast του **AAPS** (WatchDrip+, GlucoDataHandler, G-Watch). Το [WatchDrip+](#watches-xiaomi-amazfit) 0.5 και νεότερο συνδέεται απευθείας στο **AAPS** χωρίς το xDrip+: προστέθηκαν βήματα ρύθμισης, που υπάρχουν και σε σύνοψη στις σελίδες [Διαμόρφωση](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) και [Απομακρυσμένη παρακολούθηση](../RemoteFeatures/RemoteMonitoring.md). Ρολόγια Bluejay: το GTS καταργήθηκε, ενημερώθηκε το τρέχον μοντέλο @psonnera
 - [Δημιουργία μέσω browser με το AAPS Builder](#aaps-builder): έκδοση 6 του workflow δημιουργίας. Τα βήματα δημιουργίας χρησιμοποιούν τώρα ακριβείς, ελεγμένες εκδόσεις των εργαλείων του GitHub και του μηχανήματος δημιουργίας. Η δημιουργία εξηγεί επίσης καθαρά πότε επικολλήθηκε λάθος κείμενο στο secret `KEYSTORE_SET`. Η [σελίδα ρύθμισης](#aaps-builder-setup) είναι τώρα μέρος της τεκμηρίωσης και μεταφράζεται. Ελέγχει το όνομα χρήστη σας στο GitHub και έχει πιο καθαρή βοήθεια για το secret, για το "Page not found" (404) και για την εφαρμογή GitHub. Αν το `.github/workflows/build.yml` σας γράφει έκδοση 5 ή παλαιότερη, αντικαταστήστε το όπως εξηγείται στο [Ενημέρωση του AAPS](#aaps-builder-updates) @psonnera
 - [Πρόγραμμα εγκατάστασης web του AAPS](#web-installer): είναι τώρα σελίδα της τεκμηρίωσης και μεταφράζεται όπως οι άλλες. Η παλιά διεύθυνση εξακολουθεί να λειτουργεί @psonnera
@@ -33,7 +34,7 @@
 
 ## Ιανουάριος 2025
 
-- Έκδοση [3.4](#version3400) και συγκεντρωτική ενημέρωση της τεκμηρίωσης (Οδηγός, εκδόσεις για δημιουργία σε υπολογιστή, Διαμόρφωση)
+- [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
 - Ενημέρωση της λίστας CGM. Αφαιρέθηκαν τα Dexcom G5, Tomato, Glimp.
 - [Περιβάλλον για την εναλλαγή σημείων](#Aapsscreens-site-rotation)
 - [Τρόπος λειτουργίας](#AapsScreens-running-mode)
@@ -147,7 +148,7 @@
 - Dexcom G6 με [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
 - [Επίπεδο μπαταρίας](#screens-sensor-level-battery) του smart reader για Libre
 - [Βήματα](#objectives-objective3) - νέες ερωτήσεις
-- Άλλες [νέες λειτουργίες του AAPS 2.8.0](#Releasenotes-version-2-8-0)
+- Other [new AAPS 2.8.0 functions](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.0)
 
 ## Δεκέμβριος 2020
 
@@ -166,7 +167,7 @@
 ## Σεπτέμβριος 2020
 
 - Μεγάλη ενημέρωση για τη νέα έκδοση 2.7 του AAPS
-- Για λεπτομέρειες, δείτε τις [σημειώσεις έκδοσης](#Releasenotes-version-2-7-0)
+- For details see the [release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.7.0)
 
 ## Ιούνιος 2020
 
@@ -201,7 +202,7 @@
 - Λειτουργία [Εκτεταμένο bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) - το κλειστό κύκλωμα θα απενεργοποιηθεί
 - Νέο [πρόσθετο Local Profile (τοπικό προφίλ)](../SettingUpAaps/ConfigBuilder.md)
 - Παράδειγμα ρύθμισης - ενημέρωση για το Dexcom G6
-- [Έκδοση 2.6.0](#Releasenotes-version-2-6-0) - σημαντικές νέες λειτουργίες
+- [Version 2.6.0](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-260) - major new features
 - [Επιπλοκές Wear](../WearOS/WearOsSmartwatch.md)
 
 ## Ιανουάριος 2020
@@ -236,7 +237,7 @@
 
 ## Οκτώβριος 2019
 
-- Ενημερώσεις για την [έκδοση 2.5 του AAPS](#Releasenotes-version-2-5-0) (ειδικά στη [σελίδα ενημέρωσης](../Maintenance/UpdateToNewVersion.md))
+- [AAPS version 2.5](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-250) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
 - [AccuChek Insight - επιλογές καταγραφής](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [Ο υπολογισμός COB σε ξεχωριστή σελίδα](../DailyLifeWithAaps/CobCalculation.md)
 - [COB - εντοπισμός λάθος τιμής COB](#CobCalculation-detection-of-wrong-cob-values)

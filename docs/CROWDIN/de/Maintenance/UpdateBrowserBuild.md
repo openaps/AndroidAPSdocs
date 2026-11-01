@@ -24,7 +24,7 @@ Das musst Du nur beim ersten Mal machen. Für die danach folgenden Updates, kann
 :local: true
 ```
 
-In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+Wenn Probleme auftreten, findest Du Hilfe auf der eigenen Seite zur [Fehlerbehebung beim Browser-Build](../GettingHelp/BrowserBuildTroubleshooting.md).
 
 ### Exportiere Deine Einstellungen
 
@@ -106,6 +106,6 @@ Keine Panik, wenn irgendetwas schiefläuft.
 
 Tief durchatmen!
 
-Then check if your problem is already documented: see [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) if you build with **AAPS Builder**, or [Browser build troubleshooting](#aaps-ci-troubleshooting) otherwise.
+Prüfe dann, ob Dein Problem schon beschrieben ist: siehe [Fehlerbehebung beim AAPS Builder](#aaps-builder-troubleshooting), wenn Du mit dem **AAPS Builder** erstellst, sonst [Fehlerbehebung beim Browser-Build](#aaps-ci-troubleshooting).
 
 Wenn Du weitere Hilfe brauchst, kontaktiere bitte andere **AAPS**-Nutzende auf [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) oder [Discord](https://discord.gg/4fQUWHZ4Mw).

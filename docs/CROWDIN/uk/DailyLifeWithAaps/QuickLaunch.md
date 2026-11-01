@@ -1,154 +1,154 @@
 (quicklaunch)=
-# QuickLaunch (overview quick-action toolbar)
+# Швидкий запуск (панель швидких дій на екрані огляду)
 
-**QuickLaunch** is the small **quick-action toolbar** that floats at the bottom of the **AAPS** overview, just above the bottom navigation. It is a customizable row of one-tap buttons: you decide which actions live there, in which order, so the things you do most often are always one tap away on the main screen.
+**Швидкий запуск** – це невелика **панель швидких дій**, яка розташована внизу екрана огляду **AAPS**, одразу над нижньою навігацією. Це ряд кнопок, які спрацьовують одним дотиком, і його можна налаштувати: ви вирішуєте, які дії там будуть і в якому порядку. Так те, що ви робите найчастіше, завжди доступне одним дотиком на головному екрані.
 
 ```{contents} Table of contents
 :depth: 2
 :local: true
 ```
 
-![The QuickLaunch toolbar on the overview](../images/v4/QuickLaunch/quicklaunch_toolbar.png)
+![Панель швидкого запуску на екрані огляду](../images/v4/QuickLaunch/quicklaunch_toolbar.png)
 
 ---
 
-## Using the toolbar
+## Використання панелі
 
-The toolbar sits on the **overview**, between the graphs and the bottom navigation:
+Панель розташована на екрані **огляду**, між графіками та нижньою навігацією:
 
-![The QuickLaunch toolbar in place on the overview](../images/v4/QuickLaunch/quicklaunch_overview.png)
+![Панель швидкого запуску на своєму місці на екрані огляду](../images/v4/QuickLaunch/quicklaunch_overview.png)
 
-- **Tap** an icon to run its action — exactly as if you had opened it from its normal screen (a bolus or treatment still shows its usual confirmation first).
-- **Long-press** an icon to see a **tooltip** with the action's name and a short description.
-- If you add **more buttons than fit** on screen, the extra ones move into an **overflow menu** (the **⋮** button at the end of the toolbar).
-- Each icon keeps its action's **color** (e.g. insulin, carbs, temp target), so it is recognizable at a glance.
+- **Натисніть** на значок, щоб виконати його дію – так само, як якби ви відкрили її з її звичайного екрана (болюс або терапія все одно спочатку показують звичайне підтвердження).
+- **Довго натисніть** на значок, щоб побачити **підказку** з назвою дії та коротким описом.
+- Якщо ви додасте **більше кнопок, ніж поміщається** на екрані, зайві переходять у **додаткове меню** (кнопка **⋮** у кінці панелі).
+- Кожен значок має **колір** своєї дії (напр. інсулін, вуглеводи, тимчасова ціль), тому його легко впізнати з першого погляду.
 
 ```{admonition} The toolbar is always there
 :class: note
-The last button is always **Configure QuickLaunch** (the **⚙️** gear). It cannot be removed, so you can always reach the configuration screen straight from the toolbar. By default the toolbar contains just two buttons — the **Bolus wizard** and this gear.
+Остання кнопка – це завжди **Налаштувати швидкий запуск** (шестерня **⚙️**). Її не можна видалити, тому ви завжди можете перейти до екрана налаштування прямо з панелі. За замовчуванням на панелі лише дві кнопки – **Калькулятор болюса** і ця шестерня.
 ```
 
 ---
 
-## Configuring QuickLaunch
+## Налаштування швидкого запуску
 
-Tap the **⚙️** gear on the toolbar (or open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → … → Configure QuickLaunch**) to open the **Configure QuickLaunch** screen (*“Customize quick-action buttons on overview”*).
+Натисніть на шестерню **⚙️** на панелі (або відкрийте **[Конфігурація](../SettingUpAaps/ConfigBuilder.md) → … → Налаштувати швидкий запуск**), щоб відкрити екран **Налаштувати швидкий запуск** (*«Налаштуйте кнопки швидких дій на екрані огляду»*).
 
-![Configure QuickLaunch — Selected actions, then the catalog of actions to add](../images/v4/QuickLaunch/quicklaunch_config.png)
+![Налаштувати швидкий запуск – вибрані дії, а під ними каталог дій, які можна додати](../images/v4/QuickLaunch/quicklaunch_config.png)
 
-The screen has two parts:
+Екран має дві частини:
 
-- **Selected actions** (at the top) — the buttons currently on your toolbar, in toolbar order.
-- A **catalog** below it — every action you can add, grouped by category. Each catalog entry has a **➕** button to add it.
+- **Вибрані дії** (угорі) – кнопки, які зараз є на вашій панелі, у порядку панелі.
+- **Каталог** під ними – усі дії, які можна додати, згруповані за категоріями. Кожен запис каталогу має кнопку **➕**, щоб його додати.
 
-### Selected actions — reorder, edit, remove
+### Вибрані дії – зміна порядку, редагування, видалення
 
-Each selected action has:
+Кожна вибрана дія має:
 
-- a **⠿ drag handle** — press and drag to **reorder** the buttons (the order here is the order on the toolbar),
-- a **−** button — **remove** it from the toolbar,
-- and, for a **Profile** shortcut only, a **✏️** button to edit its percentage/duration (see [Profile shortcuts](#profile-shortcuts)).
+- **⠿ маркер перетягування** – натисніть і перетягніть, щоб **змінити порядок** кнопок (порядок тут – це порядок на панелі),
+- кнопку **−** – **видалити** її з панелі,
+- і лише для ярлика **Профіль** – кнопку **✏️**, щоб змінити його відсоток/тривалість (див. [Ярлики профілів](#profile-shortcuts)).
 
-Changes take effect **immediately** — there is no separate *Save*. Adding an action drops it at the end of the toolbar; reorder it from there.
+Зміни діють **одразу** – окремої кнопки *Зберегти* немає. Додана дія з’являється в кінці панелі; звідти можна змінити її порядок.
 
 ---
 
-## The action categories
+## Категорії дій
 
-The catalog groups everything you can add into the following categories, in this order. Categories that have nothing to offer (e.g. you have no scenes) are simply not shown.
+Каталог групує все, що можна додати, у такі категорії, у такому порядку. Категорії, у яких немає що запропонувати (напр. у вас немає сцен), просто не показуються.
 
-### Treatment
+### Терапія
 
-The everyday treatment and CGM dialogs:
+Щоденні діалоги терапії та CGM:
 
-- **Insulin** — deliver a bolus manually.
-- **Carbs** — record carbs without insulin.
-- **Bolus wizard** — open the bolus calculator.
-- **Treatment** — record insulin and carbs together.
-- **CGM** — open your CGM app (e.g. xDrip).
-- **Calibration** — calibrate the CGM sensor.
+- **Інсулін** – ввести болюс вручну.
+- **Вуглеводи** – записати вуглеводи без інсуліну.
+- **Калькулятор болюса** – відкрити калькулятор болюса.
+- **Терапія** – записати інсулін і вуглеводи разом.
+- **CGM** – відкрити ваш застосунок CGM (напр. xDrip).
+- **Калібрування** – калібрувати сенсор CGM.
 
-### Care Portal
+### Careportal
 
-The care-portal events and device-maintenance records:
+Події Careportal і записи про обслуговування пристроїв:
 
-- **BG Check**, **Note**, **Exercise**, **Question**, **Announcement**,
-- **Sensor Insert**, **Pump Battery Change**, **Pump Site Change**, **Prime/Fill**, **Site Rotation**.
+- **Контроль ГК**, **Примітка**, **Тренування**, **Питання**, **Оголошення**,
+- **Встановлення сенсора**, **Заміна батареї помпи**, **Заміна канюлі**, **Підготовка/Заповнення**, **Чергування місць введення**.
 
-**Prime/Fill** and **Pump Battery Change** are only offered when your pump uses them. Patch pumps, for example, fill and change the battery in their own activation steps, so these entries are not shown for them (as in the **Manage** sheet).
+**Підготовка/Заповнення** і **Заміна батареї помпи** пропонуються, лише якщо ваша помпа їх використовує. Наприклад, патч-помпи заповнюються та міняють батарею у власних кроках активації, тому для них ці записи не показуються (як і в меню **Керувати**).
 
-![The Care Portal category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
+![Категорія Careportal у каталозі](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
 
-These are the same entries you would otherwise reach through the **[Treatments](#v4changes-treatments)** and **[Manage](#v4changes-manage)** sheets — QuickLaunch just puts the ones you use on the overview.
+Це ті самі записи, до яких інакше можна дійти через меню **[Терапія](#v4changes-treatments)** і **[Керувати](#v4changes-manage)** – швидкий запуск просто виносить на екран огляду ті, якими ви користуєтеся.
 
-### Manage
+### Керувати
 
-The screens of the **[Manage](#v4changes-manage)** sheet, in the same order, so you can open the one you use most from the toolbar:
+Екрани меню **[Керувати](#v4changes-manage)** у тому самому порядку, щоб ви могли відкривати з панелі той, яким користуєтеся найчастіше:
 
-- **Profile**, **Insulin settings** (manage and activate insulin configurations — named differently from **Insulin** on purpose, because that button delivers a bolus), **Temp Target**, **QuickWizard**, **Scenes**, **Automation**, **Food**,
-- **Running mode** — close or open the loop, suspend it, or disconnect the pump,
-- **Authorized clients** — only on a master or a paired client.
+- **Профіль**, **Налаштування інсуліну** (керування налаштуваннями інсуліну та їх активація – назва навмисно відрізняється від **Інсулін**, бо та кнопка вводить болюс), **Тимчасова ціль**, **Швидкий майстер**, **Сцени**, **Автоматизація**, **Їжа**,
+- **Робочий режим** – закрити або відкрити петлю, призупинити її або від’єднати помпу,
+- **Авторизовані клієнти** – лише на основному телефоні або спареному клієнті.
 
-These buttons open the screen; they do not start anything by themselves. To start a scene or a QuickWizard in one tap, add it from the **Scenes** or **Quick Wizard** category below.
+Ці кнопки відкривають екран; самі вони нічого не запускають. Щоб запускати сцену або Швидкий майстер одним дотиком, додайте їх із категорії **Сцени** або **Швидкий майстер** нижче.
 
-![The Manage category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![The Manage category, continued](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
+![Категорія «Керувати» в каталозі](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![Категорія «Керувати», продовження](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
 
 ### Швидкий майстер
 
-Each of your **[QuickWizard](QuickWizards.md)** presets can be added as a button, so a recurring meal is one tap from the overview. The button carries the preset's name and shows the carbs/insulin amount; tapping it runs the QuickWizard with its usual confirmation.
+Кожен ваш шаблон **[Швидкий майстер](QuickWizards.md)** можна додати як кнопку, тож регулярний прийом їжі буде на відстані одного дотику від екрана огляду. Кнопка має назву шаблону й показує кількість вуглеводів/інсуліну; натискання запускає Швидкий майстер із звичайним підтвердженням.
 
-QuickWizards set to show on the watch only are not offered. A QuickWizard button on the toolbar follows the same rules as in the **Treatments** sheet: it is hidden outside its [valid time range](#quickwizard_validity) and for a short time after use. It stays in your toolbar configuration and comes back when the QuickWizard can be used again.
+Записи Швидкого майстра, які налаштовано показувати лише на годиннику, не пропонуються. Кнопка Швидкого майстра на панелі діє за тими самими правилами, що й у меню **Терапія**: вона прихована поза своїм [дійсним часовим проміжком](#quickwizard_validity) і на короткий час після використання. Вона залишається в налаштуваннях вашої панелі й з’являється знову, коли Швидкий майстер знову можна використати.
 
-### Scenes
+### Сцени
 
-Each enabled **[scene](Scenes.md)** can be added as a button. Tapping it asks for confirmation, then activates the scene (the same bundle of actions you would get from the Scenes screen). This category appears only if you have at least one scene.
+Кожну ввімкнену **[сцену](Scenes.md)** можна додати як кнопку. Після натискання з’являється запит на підтвердження, а потім сцена активується (той самий набір дій, що й з екрана «Сцени»). Ця категорія з’являється, лише якщо у вас є хоча б одна сцена.
 
-The tooltip and the catalog show the same summary as **Manage → Scenes**, for example *"3 actions, 2 h → Cooldown"*, where the name after the arrow is the follow-up scene.
+Підказка та каталог показують той самий підсумок, що й **Керувати → Сцени**, наприклад *«Дій: 3, 2 год → Cooldown»*, де назва після стрілки – це наступна сцена.
 
-### Automation
+### Автоматизація
 
-Your **user-action** automation rules (the ones you trigger by hand) can be added as buttons. Tapping one asks for confirmation, then runs that rule's actions.
+Ваші правила автоматизації типу **дія користувача** (ті, які ви запускаєте вручну) можна додати як кнопки. Після натискання з’являється запит на підтвердження, а потім виконуються дії цього правила.
 
 ```{admonition} Automation buttons run on the master
 :class: note
-Automation executes on the **master**, so automation shortcuts are offered and run only on the master. They are not available on a paired **[client](../RemoteFeatures/ClientMasterControl.md)**.
+Автоматизація виконується на **основному телефоні**, тому ярлики автоматизації пропонуються та працюють лише на основному телефоні. Вони недоступні на спареному **[клієнті](../RemoteFeatures/ClientMasterControl.md)**.
 ```
 
-### Temp Target Presets
+### Шаблони тимчасових цілей
 
-Each of your **[Temp Target](TempTargets.md)** presets can be added as a button (its name, its target and its duration are shown, for example *"Eating soon — 5.0 mmol/L, 45 min"*). Tapping it asks for confirmation, then starts that temp target.
+Кожен ваш шаблон **[Тимчасова ціль](TempTargets.md)** можна додати як кнопку (показано його назву, ціль і тривалість, наприклад *«Очікуваний прийом їжі – 5,0 ммоль/л, 45 хв»*). Після натискання з’являється запит на підтвердження, а потім запускається ця тимчасова ціль.
 
-![The dynamic categories — Quick Wizard and Temp Target Presets (Scenes and Automation appear when you have some)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
+![Динамічні категорії – Швидкий майстер і Шаблони тимчасових цілей (Сцени та Автоматизація з’являються, якщо вони у вас є)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
 
 (profile-shortcuts)=
-### Profile
+### Профіль
 
-Every **[profile](ProfileSwitch-ProfilePercentage.md)** can be added as a **shortcut** that performs a **profile switch** in one tap. Unlike most shortcuts, a Profile shortcut carries its own **percentage** and **duration**, which you set after adding it with the **✏️** button:
+Кожен **[профіль](ProfileSwitch-ProfilePercentage.md)** можна додати як **ярлик**, який виконує **перемикання профілю** одним дотиком. На відміну від більшості ярликів, ярлик профілю має власні **відсоток** і **тривалість**, які ви задаєте після додавання кнопкою **✏️**:
 
-- **Percentage** (30–250 %, in steps of 5 %) — scale the profile when it is applied. 100 % uses it as-is.
-- **Duration** (0–10080 min, that is up to 7 days, in steps of 10 min) — how long the switch lasts. **0 = Permanent** (until you switch again).
+- **Відсоток** (30–250 %, з кроком 5 %) – масштабує профіль під час застосування. 100 % використовує його без змін.
+- **Тривалість** (0–10080 хв, тобто до 7 днів, з кроком 10 хв) – скільки триває перемикання. **0 = Постійно** (доки ви не перемкнете профіль знову).
 
-![Profile shortcuts and plugin categories in the catalog](../images/v4/QuickLaunch/quicklaunch_categories.png)
+![Ярлики профілів і категорії плагінів у каталозі](../images/v4/QuickLaunch/quicklaunch_categories.png)
 
-This lets you keep several buttons for the **same** profile at different strengths — for example *“Profile 100 %”* and *“Profile 70 % for 2 h”* — and apply either with a single tap. (You can add the same profile more than once with different settings.)
+Так можна мати кілька кнопок для **того самого** профілю з різною силою – наприклад *«Профіль 100 %»* і *«Профіль 70 % на 2 год»* – і застосовувати будь-яку одним дотиком. (Той самий профіль можна додати кілька разів з різними налаштуваннями.)
 
-### Plugins
+### Плагіни
 
-![Plugin shortcuts in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
+![Ярлики плагінів у каталозі](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
 
-Finally, any **enabled plugin** that has its own screen can be added as a shortcut to open it directly. These are grouped by plugin type — **Pump**, **BG Source**, **APS**, **Loop**, **Sensitivity detection**, **Smoothing**, **Calibration**, **Constraints**, **Communication** and **General** — so you can, for instance, jump straight to your pump or loop screen from the overview.
+І нарешті, будь-який **увімкнений плагін**, що має власний екран, можна додати як ярлик, щоб відкривати його напряму. Вони згруповані за типом плагіна – **Помпа**, **Джерело ГК**, **APS**, **Петля**, **Визначення чутливості**, **Згладжування**, **Калібрування**, **Обмеження**, **Звʼязок** і **Загальне** – тож ви можете, наприклад, одразу перейти з екрана огляду на екран помпи або петлі.
 
 ---
 
-## QuickLaunch and Master/Client
+## Швидкий запуск і основний телефон/клієнт
 
-Unlike most of your settings, the **QuickLaunch toolbar is configured per device** — it is stored **locally and is not synced** between your master and paired clients, so each device keeps its own set of buttons. (It *is* included in a settings **backup/export**, so a restore brings it back on the same device.)
+На відміну від більшості ваших налаштувань, **панель швидкого запуску налаштовується окремо для кожного пристрою** – вона зберігається **локально й не синхронізується** між основним телефоном і спареними клієнтами, тому кожен пристрій має власний набір кнопок. (Але вона *входить* до **резервної копії/експорту** налаштувань, тож відновлення повертає її на тому самому пристрої.)
 
-What each device can put on its toolbar still depends on what it has: QuickWizards, scenes, temp-target presets and profiles all sync, so a client's catalog offers the same items — you simply choose them per device. A few details to know:
+Те, що кожен пристрій може розмістити на своїй панелі, все одно залежить від того, що на ньому є: Швидкий майстер, сцени, шаблони тимчасових цілей і профілі синхронізуються, тому каталог клієнта пропонує ті самі елементи – ви просто вибираєте їх для кожного пристрою окремо. Кілька деталей, які варто знати:
 
-- Buttons whose target no longer exists (a deleted QuickWizard, scene or preset, a disabled rule) are **skipped automatically**.
-- **Automation** shortcuts are offered and run only on the **master** (automation executes on the master). Scene, QuickWizard, temp-target and profile buttons are available on a client.
-- When you tap a button on a client that must run on the master (a bolus, temp target, profile switch or scene), the **master** carries it out and authors the confirmation. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md).
+- Кнопки, ціль яких більше не існує (видалений запис Швидкого майстра, сцена чи шаблон, вимкнене правило), **автоматично пропускаються**.
+- Ярлики **Автоматизація** пропонуються та працюють лише на **основному телефоні** (автоматизація виконується на основному телефоні). Кнопки сцен, Швидкого майстра, тимчасових цілей і профілів доступні на клієнті.
+- Коли ви натискаєте на клієнті кнопку, яка має виконуватися на основному телефоні (болюс, тимчасова ціль, перемикання профілю або сцена), її виконує **основний телефон** і він же формує підтвердження. Див. [Керування основний телефон ↔ клієнт](../RemoteFeatures/ClientMasterControl.md).
 
 ---
 

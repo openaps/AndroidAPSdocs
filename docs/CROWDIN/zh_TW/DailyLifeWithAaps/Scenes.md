@@ -1,7 +1,7 @@
 (scenes)=
-# Scenes (situation presets)
+# 情境（情境預設組合）
 
-A **scene** is a named preset that applies a **bundle of actions at once** — for example a *Sleep*, *Exercise* or *Sick Day* preset that switches your profile, sets a temporary target, toggles SMB and adds a care-portal note with a single tap, optionally for a set duration.
+**情境**是具名的預設組合，可**一次套用一組操作**。例如「*睡眠*」、「*運動*」或「*生病日*」預設組合，可透過點選一次來切換設定檔、設定臨時目標、切換 SMB，並新增照護入口備註；您也可以選擇設定套用時間。
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,170 +10,170 @@ A **scene** is a named preset that applies a **bundle of actions at once** — f
 
 ---
 
-## What is a scene
+## 什麼是情境
 
-Instead of changing several things by hand every time a recurring situation comes up, you set them up once as a scene and activate it with one tap. A scene can bundle any of these actions:
+每次遇到重複發生的情況時，不必手動變更好幾項設定；只要先將它們設定成一個場景，之後輕點一下即可啟動。場景可以包含以下任意動作：
 
-- **Profile switch** — switch profile and/or scale it by percentage (e.g. 70 %).
-- **Temporary target** — set a temp target (e.g. *Activity*, *Eating soon*, or a custom value).
-- **SMB on/off** — enable or disable super-micro-boluses while the scene is active.
-- **Loop mode** — change the running mode (e.g. to a more conservative mode).
-- **Care-portal note** — log an event (e.g. *Exercise*, *Sickness*) so it shows on the graph and in Nightscout.
+- **切換設定檔** — 切換設定檔及／或依百分比調整設定檔（例如 70 %）。
+- **臨時目標** — 設定臨時目標（例如 *活動*、*即將用餐*，或自訂數值）。
+- **開啟／關閉 SMB** — 在場景啟動期間，啟用或停用超微量注射。
+- **循環模式** — 變更目前的運作模式（例如切換為較保守的模式）。
+- **照護入口備註** — 記錄事件（例如 *運動*、*生病*），讓事件顯示在圖表和 Nightscout 中。
 
-A scene also has a **duration** — a fixed time (minutes/hours/days) or *Indefinite (manual end)* — and an **end action** that runs when it finishes: either a **notification**, or it can **chain** into another scene (for example *Sick Day → Exercise*).
-
----
-
-## Managing scenes
-
-Open **Manage → Scenes** to see, create, edit, enable/disable and reorder your scenes.
-
-![The Scenes management screen](../images/v4/Scenes/scenes_list.png)
-
-Each scene card shows:
-
-- a **checkbox** to enable/disable the scene,
-- an **icon** and **name**,
-- a summary — *“N actions, duration”*, and the **→ chained scene** if it chains into another one,
-- and three buttons: **▶ activate**, **✏️ edit**, **🗑️ delete**.
-
-Tap the **+** button to create a new scene.
+場景也有**持續時間** — 可設定固定時間（分鐘／小時／天），或選擇*無限期（手動結束）*；此外還有**結束動作**，會在場景結束時執行：可以是**通知**，也可以**串接**到另一個場景（例如 *生病日 → 運動*）。
 
 ---
 
-## Creating or editing a scene
+## 管理場景
 
-### Start from a template
+開啟**管理 → 場景**，即可查看、建立、編輯、啟用／停用及重新排序場景。
 
-To **create** a scene, tap the **+** button on the Scenes screen. The first step is **Start from template**: pick a ready-made scene for a common situation — *Exercise*, *Sick Day*, *Sick Day — Vomiting*, *Sleep*, *Post-exercise Night*, *Pre-meal*, *Alcohol*, *Driving*, *Bathing*, *Luteal Phase*, *Hot Weather*, *Medical Procedure* — or start from a *Blank* scene. Each template **pre-fills the recommended actions** and you can adjust everything in the following steps.
+![場景管理畫面](../images/v4/Scenes/scenes_list.png)
 
-![“Start from template” — pick a starting point](../images/v4/Scenes/templates_picker.png)
+每張場景卡片會顯示：
 
-After you pick a template, its purpose is explained — *when* and *why* to use it — before you continue:
+- 用來啟用／停用場景的**核取方塊**，
+- **圖示**和**名稱**，
+- 摘要 — *「N 個動作，持續時間」*，以及串接到其他場景時顯示的**→ 串接場景**，
+- 還有 3 個按鈕：**▶ 啟動**、**✏️ 編輯**、**🗑️ 刪除**。
 
-![A template's explanation](../images/v4/Scenes/template_explanation.png)
-
-### Step through the actions
-
-The rest of the editor is a short **step-by-step** wizard. Each step is one action type with an *“Include … in scene”* switch — turn it on only for the actions you want this scene to perform, and leave the rest off.
-
-![The scene editor — the Profile switch step](../images/v4/Scenes/scene_editor.png)
-
-Work through the steps with **Next**/**Back**: *Profile switch*, *Temporary target*, *SMB*, *Loop mode*, *Care-portal note*, then the **duration**, the **end action** (notify or chain into another scene), and finally the scene's **name and icon**. Save when you are done. (To **edit** an existing scene, tap its **✏️** button — you go straight into these steps.)
-
-Each step starts with a short explanation of what the action does. The steps look like this, here with the *Exercise* template:
-
-**Temporary target** — pick one of your temp target presets:
-
-![The Temporary target step](../images/v4/Scenes/scene_editor_step3.png)
-
-**SMB** — enable or disable SMB while the scene is active:
-
-![The SMB step](../images/v4/Scenes/scene_editor_step4.png)
-
-**Running mode** — optionally change the loop mode:
-
-![The Running mode step](../images/v4/Scenes/scene_editor_step5.png)
-
-**Careportal** — the event type and note to log:
-
-![The Careportal step](../images/v4/Scenes/scene_editor_step6.png)
-
-**Duration** — how long the scene stays active; 0 means until you end it yourself:
-
-![The Duration step](../images/v4/Scenes/scene_editor_step7.png)
-
-**Follow-up scene** — optionally the scene that starts when this one ends:
-
-![The Follow-up scene step](../images/v4/Scenes/scene_editor_followup.png)
-
-**Scene** — the name and the icon. Press **Finish** to save:
-
-![The name and icon step](../images/v4/Scenes/scene_editor_step9.png)
+輕點**+**按鈕即可建立新場景。
 
 ---
 
-## Activating a scene
+## 建立或編輯場景
 
-Activate a scene from the **Scenes** list (the **▶** button) or from the **Scenes** entry in the bottom navigation. In the **Scenes** sheet of the bottom navigation, each scene shows the same summary as in the Scenes list, and the **pencil** at the top of the sheet opens **Manage → Scenes** to create or edit your scenes.
+### 從範本開始
 
-![The Scenes sheet of the bottom navigation](../images/v4/Scenes/scenes_sheet.png)
+若要**建立**場景，請輕點「場景」畫面上的**+**按鈕。第一個步驟是**從範本開始**：選擇適用於常見情況的現成場景 — *運動*、*生病日*、*生病日 — 嘔吐*、*睡眠*、*運動後夜間*、*餐前*、*飲酒*、*開車*、*洗澡*、*黃體期*、*炎熱天氣*、*醫療處置*，或從*空白*場景開始。每個範本都會**預先填入建議的動作**，您可以在接下來的步驟中調整所有設定。
 
-Before anything is applied you get a **confirmation** that lists exactly what the scene will do, so you can review it:
+![「從範本開始」— 選擇起始範本](../images/v4/Scenes/templates_picker.png)
 
-![Scene activation confirmation, listing the bundled actions](../images/v4/Scenes/scene_confirmation.png)
+選擇範本後，繼續操作前會先說明範本的用途 — *何時*以及*為什麼*使用：
 
-If the scene chains into another one, the confirmation ends with **→** and the name of that follow-up scene, the same way it is shown in the Scenes list.
+![範本說明](../images/v4/Scenes/template_explanation.png)
 
-When you start the scene from the **Scenes** entry of the bottom navigation, the confirmation is a simpler dialog with the same list of actions. Press **OK** to activate:
+### 逐步設定動作
 
-![Scene confirmation when started from the bottom navigation](../images/v4/Scenes/scene_confirmation_from_sheet.png)
+編輯器的其餘部分是一個簡短的**逐步**設定嚮導。每個步驟都會設定一種動作，並提供「*在場景中加入……*」開關 — 只開啟您希望此場景執行的動作，其餘則保持關閉。
 
-After you confirm, the actions are applied and the **active scene** is shown at the top of the overview with an **End Scene** button. If the scene chains into another one, the banner also names that follow-up scene:
+![場景編輯器 — 切換設定檔步驟](../images/v4/Scenes/scene_editor.png)
 
-![The active-scene banner on the overview, with the End Scene button](../images/v4/Scenes/scene_active_banner.png)
+使用**下一步**／**上一步**依序完成設定：*切換設定檔*、*臨時目標*、*SMB*、*循環模式*、*照護入口備註*，接著設定**持續時間**、**結束動作**（發送通知或串接到另一個場景），最後設定場景的**名稱和圖示**。完成後請儲存。（若要**編輯**現有場景，請輕點該場景的**✏️**按鈕 — 系統會直接帶您進入這些設定步驟。）
 
-The scene's actions stay in effect until:
+每個步驟一開始都會簡短說明該動作的用途。以下以*運動*範本為例，說明各個步驟：
 
-- its **duration** ends (the **end action** runs — a notification, or it chains into the next scene), or
-- you tap **End Scene** to end it manually. If the scene chains into another one, you get two choices: **Skip to** the follow-up scene (the active scene ends and the follow-up starts now), or **End Scene** (the active scene ends and the follow-up does not start).
+**臨時目標** — 選擇其中一個臨時目標預設值：
 
-A scene without follow-up only asks you to confirm:
+![臨時目標步驟](../images/v4/Scenes/scene_editor_step3.png)
 
-![End Scene dialog](../images/v4/Scenes/scene_end_dialog.png)
+**SMB** — 設定場景啟動期間是否啟用 SMB：
 
-Ending a scene **reverts** the changes it made (for example the profile switch and temp target it started).
+![SMB 步驟](../images/v4/Scenes/scene_editor_step4.png)
 
-While a scene is active, the profile and the target on the main screen carry a small scene icon when the scene set them. The **Scenes** sheet of the bottom navigation stays available to start another scene:
+**運作模式** — 可選擇變更循環模式：
 
-![The Scenes sheet while a scene is active](../images/v4/Scenes/scenes_sheet_active.png)
+![運作模式步驟](../images/v4/Scenes/scene_editor_step5.png)
 
-When the duration runs out on its own, the changes are reverted straight away and the banner changes to **Scene ended** with a **Dismiss** button. Dismissing only clears the banner from the screen — the scene itself is already over, so automation rules and a chained scene carry on without waiting for it.
+**照護入口** — 要記錄的事件類型和備註：
+
+![照護入口步驟](../images/v4/Scenes/scene_editor_step6.png)
+
+**持續時間** — 場景保持啟動的時間；0 代表持續啟動，直到您手動結束：
+
+![持續時間步驟](../images/v4/Scenes/scene_editor_step7.png)
+
+**後續場景** — 可選擇在目前場景結束時啟動的場景：
+
+![後續場景步驟](../images/v4/Scenes/scene_editor_followup.png)
+
+**場景** — 設定名稱和圖示。按下**完成**即可儲存：
+
+![名稱和圖示步驟](../images/v4/Scenes/scene_editor_step9.png)
 
 ---
 
-## Triggering scenes from Automation
+## 啟動場景
 
-A scene does not have to be started by hand — **Automation** can run it for you. When you add an action to an automation rule (**Manage → Automation**), the action picker has a **Scenes** category:
+從 **場景**清單（**▶** 按鈕）或底部導覽列中的 **場景**項目啟動場景。在底部導覽列的 **場景**面板中，每個場景都會顯示與場景清單相同的摘要。面板頂端的 **鉛筆**圖示會開啟 **管理 → 場景**，讓您建立或編輯場景。
 
-- **Run scene** — activate a scene when the rule's triggers fire (for example at a set time, when you arrive somewhere, or when glucose crosses a threshold).
-- **Enable scene** / **Disable scene** — make a scene available (or unavailable) without activating it.
+![底部導覽列中的場景面板](../images/v4/Scenes/scenes_sheet.png)
 
-![The “Scenes” actions in the Automation action picker](../images/v4/Scenes/automation_scene_action.png)
+套用任何內容之前，系統會先顯示**確認畫面**，清楚列出場景將執行的所有動作，方便您檢查：
 
-Automation can also **react to** a scene: the trigger list includes a **Scene** trigger, so a rule can run only while a particular scene is active. Combined with a scene's **end action** (revert, notify, or chain into another scene), this lets scenes start, follow on and finish automatically.
+![場景啟動確認畫面，列出包含的動作](../images/v4/Scenes/scene_confirmation.png)
+
+如果場景會接續另一個場景，確認畫面最後會顯示 **→** 和接續場景的名稱，呈現方式與場景清單相同。
+
+從底部導覽列中的 **場景**項目啟動場景時，系統會以較簡單的對話方塊顯示相同的動作清單。按下 **確定**即可啟動：
+
+![從底部導覽列啟動場景時顯示的確認畫面](../images/v4/Scenes/scene_confirmation_from_sheet.png)
+
+確認後，系統會套用這些動作，並在總覽頂端顯示**使用中的場景**及 **結束場景**按鈕。如果場景會接續另一個場景，橫幅也會顯示接續場景的名稱：
+
+![總覽中的使用中場景橫幅，以及「結束場景」按鈕](../images/v4/Scenes/scene_active_banner.png)
+
+場景中的動作會持續生效，直到：
+
+- 場景的**持續時間**結束（系統會執行**結束動作**，例如顯示通知或接續下一個場景）；或
+- 您點選 **結束場景**，手動結束場景。如果場景會接續另一個場景，您可以選擇 **跳至**接續場景（結束目前場景並立即啟動接續場景），或選擇 **結束場景**（結束目前場景，但不啟動接續場景）。
+
+沒有接續場景的場景只會要求您確認：
+
+![「結束場景」對話方塊](../images/v4/Scenes/scene_end_dialog.png)
+
+結束場景時，系統會**還原**場景所做的變更（例如切換設定檔和啟動臨時目標）。
+
+場景啟動期間，如果場景設定了主畫面上的設定檔和目標，兩者旁邊都會顯示小型場景圖示。您仍可使用底部導覽列中的 **場景**面板來啟動其他場景：
+
+![場景啟動期間的場景面板](../images/v4/Scenes/scenes_sheet_active.png)
+
+場景持續時間自然結束時，系統會立即還原變更，並將橫幅更新為 **場景已結束**，同時顯示 **關閉**按鈕。關閉按鈕只會清除畫面上的橫幅；場景本身已經結束，因此自動化規則和接續場景會繼續執行，不必等您關閉橫幅。
 
 ---
 
-## Scenes with Master/Client and a watch
+## 從自動化觸發場景
 
-The **currently active scene is synchronized** across all of your paired devices — activate it on one phone and the others show it too.
+場景不一定要手動啟動，您也可以讓 **自動化**替您執行。在自動化規則中新增動作（**管理 → 自動化**）時，動作選擇器中會有 **場景**類別：
 
-A paired **client** (**AAPSClient**) can also activate or end a scene: the request is sent to the **master**, which authors the confirmation and applies the scene on its own state. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for how that works.
+- **執行場景** — 在規則觸發條件成立時啟動場景（例如到了指定時間、抵達某個地點，或血糖超過某個門檻）。
+- **啟用場景** / **停用場景** — 開放（或停用）場景，但不啟動場景。
+
+![自動化動作選擇器中的「場景」動作](../images/v4/Scenes/automation_scene_action.png)
+
+自動化也可以**回應**場景：觸發條件清單中包含**場景**觸發條件，因此規則可以只在特定場景啟動期間執行。搭配場景的**結束動作**（還原、通知或接續另一個場景），即可讓場景自動啟動、接續執行並結束。
+
+---
+
+## 搭配 Master／Client 和手錶使用場景
+
+所有已配對裝置上的**使用中場景會保持同步** — 在一支手機上啟動場景，其他裝置也會顯示該場景。
+
+已配對的**用戶端**（**AAPSClient**）也可以啟動或結束場景：系統會將要求傳送給**主控端**，由主控端建立確認畫面，並在主控端套用場景。運作方式請參閱 [主控端 ↔ 用戶端控制](../RemoteFeatures/ClientMasterControl.md)。
 
 (scenes-from-watch)=
-### From a Wear OS watch
+### 使用 Wear OS 手錶
 
-Scenes are available on a **Wear OS watch** as a **Scene tile**. Swipe to the **Scene** tile in the watch's tile carousel (add it from the carousel's tile list first if it isn't there yet) and tap the scene you want to start:
+您可以在 **Wear OS 手錶**上使用場景，並透過**場景資訊方塊**操作。在手錶的資訊方塊輪播中滑動至 **場景**資訊方塊，然後點選要啟動的場景（如果輪播中還沒有場景資訊方塊，請先從資訊方塊清單新增）：
 
-![The Scene tile on a Wear OS watch](../images/v4/Scenes/scene_watch_tile.png)
+![Wear OS 手錶上的場景資訊方塊](../images/v4/Scenes/scene_watch_tile.png)
 
-The tile has four slots. By default each slot fills itself **automatically** with the next of your enabled scenes, in the order they have on the phone. To choose yourself, **long-press the tile** and open its settings: for each of the four slots you can keep **Automatic**, pin a **specific scene**, or select **None** to leave the slot empty. A slot pinned to a scene that has since been deleted or disabled shows **Unavailable** — pick another scene for it.
+資訊方塊有四個位置。根據預設，每個位置都會依照場景在手機上的排列順序，**自動**填入下一個已啟用的場景。若要自行選擇，請**長按資訊方塊**並開啟設定：您可以為四個位置分別保留**自動**選項、固定**特定場景**，或選擇**無**以留空。如果固定在某個場景的位置所選的場景已遭刪除或停用，該位置會顯示**無法使用** — 請為該位置選擇其他場景。
 
-The watch then shows a confirmation — tap **✓** to activate, or swipe back to cancel:
+接著，手錶會顯示確認畫面 — 點選 **✓**即可啟動，或向後滑動以取消：
 
-![Confirming a scene on the watch](../images/v4/Scenes/scene_watch_confirm.png)
+![在手錶上確認場景](../images/v4/Scenes/scene_watch_confirm.png)
 
-Just like on a client, the **master authors the confirmation and runs the scene**; the watch only relays the request (via the client phone, if the watch is paired to a client).
+和用戶端的情況一樣，**主控端會建立確認畫面並執行場景**；手錶只會轉送要求（如果手錶與用戶端配對，則透過用戶端手機轉送）。
 
-While a scene is running — or its **Scene ended** banner is still showing on the phone — the tile shows an **End** button with the name of the scene under it. Tap it to end the active scene, or to clear the leftover banner, from your wrist.
+場景執行期間，或手機上仍顯示**場景已結束**橫幅時，資訊方塊會顯示**結束**按鈕，按鈕下方則會顯示場景名稱。點選按鈕即可從手腕上結束使用中的場景，或清除尚未關閉的橫幅。
 
-If the running scene chains into another one, the tile also shows a **Skip** button with the name of the follow-up scene under it. These are the same two choices as on the phone:
+如果目前執行的場景接續另一個場景，磁磚上也會顯示 **略過** 按鈕，下方會列出後續場景的名稱。這和手機上的兩個選項相同：
 
-- **End** — the active scene ends. The confirmation tells you that the follow-up will not start.
-- **Skip** — the active scene ends and the follow-up scene starts now. The confirmation names both scenes.
+- **結束** — 結束目前執行的場景。確認訊息會告知您後續場景不會啟動。
+- **略過** — 結束目前執行的場景，並立即啟動後續場景。確認訊息會列出這兩個場景的名稱。
 
-The watch's [Loop Status screen](#WearOsSmartwatch-loop-status) also shows the active scene, the time it has left and its follow-up.
+手錶的 [循環狀態螢幕](#WearOsSmartwatch-loop-status)也會顯示目前執行的場景、剩餘時間，以及後續場景。
 
 ---
 

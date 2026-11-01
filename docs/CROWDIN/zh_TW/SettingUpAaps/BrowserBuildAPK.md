@@ -1,48 +1,48 @@
 (github-build-apk)=
 
-# Browser build – Step 4: Build the APK
+# 瀏覽器建置－步驟 4：建置 APK
 
 ```{note}
-This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md).
+這是[瀏覽器建置](BrowserBuild.md)的**步驟 4**。請先完成[步驟 3－授權 Google Drive](BrowserBuildGoogleDrive.md)。
 ```
 
-## AAPS-CI GitHub Actions to Build the AAPS APK
- - Suitable for general users.
+## AAPS-CI GitHub Actions 以建置 AAPS APK
+ - 適合一般使用者。
 
 ```{tab-set}
 
 :::{tab-item} Wiki
-### Run the Workflow to Build the Signed APK
+### 執行工作流程以建置已簽署的 APK
 
 1. 在你的 GitHub 複製版 AndroidAPS 中，選擇操作。
 2. 擴展所有工作流程。
-3. Select AAPS-CI
+3. 選取 AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
 4. 向下滾動並點擊運行工作流程。
 
-![Run Workflow](../images/update/CI/GitHubActions2.png)
+![執行工作流程](../images/update/CI/GitHubActions2.png)
 
-5. Leave **Use workflow from** on the master branch. In **Select AAPS Version**, select the **AAPS** version you want to build (normally the newest one). Select the [variant](#browserbuild-variant) (fullRelease) and tap Run workflow.
+5. 將 **Use workflow from** 保持在 master 分支。在 **Select AAPS Version** 中，選取您要建置的 **AAPS** 版本（通常是最新版本）。選取[變體](#browserbuild-variant)（fullRelease），然後點選 Run workflow。
 
 
 
-![Run Workflow](../images/update/CI/GitHubActions3.png)
+![執行工作流程](../images/update/CI/GitHubActions3.png)
 
 6. 你將會看到工作流程運行成功請求的訊息。重新整理你的瀏覽器頁面，你將能夠監控建置進度。當操作完成時，AAPS CI 的行動將顯示綠色勾選標記。你已成功建置 AndroidAPS 的更新版本。
 
-![Monitor Workflow](../images/update/CI/GitHubActions4.png)
+![監控工作流程](../images/update/CI/GitHubActions4.png)
 
-### Install the AAPS APK
+### 安裝 AAPS APK
 
-1. Open your Google Drive
+1. 開啟 Google Drive
 2. 瀏覽到 AAPS，選擇新版本資料夾，你會找到手機版和 Android Wear 版本。
 
-![Google Drive Location](../images/update/CI/GitHubActions5.png)
+![Google Drive 位置](../images/update/CI/GitHubActions5.png)
 :::  
 
-:::{tab-item} Video
+:::{tab-item} 影片
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
   <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
     <iframe
@@ -58,37 +58,37 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 ```
 
-## Build Version selection
+## 建構版本選擇
 
-**Only AAPS versions from 3.3.2.1 and above will build with the Browser method.**
+**僅 AAPS 版本 3.3.2.1 及以上將使用瀏覽器方法繼續建構。**
 
-Tap **Select AAPS Version** and pick the version to build. The newest version is at the top of the list.
+點選**Select AAPS Version**，並選取要建置的版本。最新版本會顯示在清單最上方。
 
-![Select AAPS Version list](../images/Building-the-App/CI/BrowserBuildVariant2.png)
+![Select AAPS Version 清單](../images/Building-the-App/CI/BrowserBuildVariant2.png)
 
 (browserbuild-variant)=
 
-## Build Variants selection
+## 建構變數選擇
 
-*Note: both Android and Android Wear apps will be built automatically.*
+*注意： Android 和 Android Wear 應用程式將自動建置。*
 
-  - Select the variant you need:
-    - fullRelease: For regular pump usage with full functionality.
-    - [aapsclientRelease, aapsclient2Release, aapsclient3Release](#RemoteControl_aapsclient): For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md)). `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
-    - pumpcontrolRelease: To replace your pump app/controller
+  - 選擇您需要的變種：
+    - fullRelease: 用於正常的幫浦使用，具有完整功能。
+    - [aapsclientRelease、aapsclient2Release、aapsclient3Release](#RemoteControl_aapsclient)：供照護者使用（需要 [Nightscout](../SettingUpAaps/Nightscout.md)）。 `aapsclient3Release` 會建置 **AAPSClient3**，適用於 **AAPS** 4.0 版（請參閱 [關於 AAPSClient、AAPSClient2 和 AAPSClient3](#remotecontrol-aapsclient-versions)）。
+    - pumpcontrolRelease：替換您的幫浦應用程式/控制器
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant3.png)
 
-Variants ending with “Debug” indicate that the APK will be built in debug mode, which is useful for developers for troubleshooting.
+結尾為「Debug」的版本表示 APK 會以偵錯模式建置，方便開發人員排除問題。
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
 
 ----
 
-Once the build succeeds, the apk is saved to your Google Drive. Continue with [Transferring and Installing AAPS](TransferringAndInstallingAaps.md).
+建置成功後，APK 會儲存到您的 Google 雲端硬碟。接著請參閱[轉移並安裝 AAPS](TransferringAndInstallingAaps.md)。
 
 ```{note}
 自 2026 年 9 月起，Google 的 Android 開發者驗證可能會依你的國家／地區，阻擋透過點擊檔案安裝 APK。該頁面說明了免費的替代作法。
 ```
 
-If the build fails, first [find out what went wrong in the build log](#aaps-ci-read-the-logs), then see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md). To include a specific commit in your build, see [cherry-pick a commit](#github-cherry-pick).
+如果建置失敗，請先[查看建置記錄，找出問題所在](#aaps-ci-read-the-logs)，再參閱[瀏覽器建置疑難排解](../GettingHelp/BrowserBuildTroubleshooting.md)。若要在建置中加入特定的 commit，請參閱[挑選並套用 commit](#github-cherry-pick)。

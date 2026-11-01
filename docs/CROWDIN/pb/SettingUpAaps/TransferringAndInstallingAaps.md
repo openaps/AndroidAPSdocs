@@ -1,19 +1,19 @@
-# Transferring and Installing AAPS on your smartphone
+# Transferir e instalar o AAPS no seu smartphone
 
-In the previous section, [building **AAPS**](../SettingUpAaps/BuildingAaps.md), you built the **AAPS** app (which is an .apk file) on a computer.
+Na seção anterior, [compilar o **AAPS**](../SettingUpAaps/BuildingAaps.md), você compilou o app **AAPS** (que é um arquivo .apk) em um computador.
 
-The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip or another CGM receiver app) to your Android smartphone, and then **install** the app(s). Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](../SettingUpAaps/SetupWizard.md).
+As próximas etapas são **transferir** o arquivo APK do **AAPS** (e também outros apps de que você possa precisar, como o BYODA, o xDrip ou outro app receptor de CGM) para o seu smartphone Android e depois **instalar** o(s) app(s). Depois de instalar o **AAPS** no smartphone, você poderá passar para a [**configuração do loop do AAPS**](../SettingUpAaps/SetupWizard.md).
 
-This page also explains [Android developer verification](#android-developer-verification), a change Google is rolling out from September 2026 that affects installing self-built apps, and the [free installation methods](#android-developer-verification-free-methods) that keep working after the change.
+Esta página também explica a [verificação de desenvolvedor do Android](#android-developer-verification), uma mudança que o Google está introduzindo a partir de setembro de 2026 e que afeta a instalação de apps compilados por você mesmo, e os [métodos gratuitos de instalação](#android-developer-verification-free-methods) que continuam funcionando depois da mudança.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Installing AAPS by tapping the APK file
+## Instalar o AAPS tocando no arquivo APK
 
-Today, you install **AAPS** by transferring the APK file to your phone and opening ("tapping") it. There are several ways to transfer the **AAPS** APK file from your computer to the smartphone. Here we explain two different ways:
+Hoje, você instala o **AAPS** transferindo o arquivo APK para o seu telefone e abrindo o arquivo (tocando nele). Há várias formas de transferir o arquivo APK do **AAPS** do seu computador para o smartphone. Here we explain two different ways:
 
 * Option 1 -  Use your Google drive (Gdrive)
 * Option 2 -  Use a USB cable
@@ -22,20 +22,20 @@ Please note that transfer by email might cause difficulties, and is discouraged.
 
 ```{admonition} Android developer verification
 :class: warning
-Google is rolling out [Android developer verification](#android-developer-verification) from September 2026 (starting in Brazil, Indonesia, Singapore and Thailand; worldwide in 2027). Where it is enforced, installing an APK by tapping the file — as described in both options below — is blocked. In that case, use one of the [free installation methods](#android-developer-verification-free-methods) further down this page.
+O Google está introduzindo a [verificação de desenvolvedor do Android](#android-developer-verification) a partir de setembro de 2026 (começando no Brasil, Indonésia, Singapura e Tailândia; no mundo todo em 2027). Onde ela for aplicada, a instalação de um APK tocando no arquivo — como descrito nas duas opções abaixo — fica bloqueada. Nesse caso, use um dos [métodos gratuitos de instalação](#android-developer-verification-free-methods) mais abaixo nesta página.
 ```
 
 ### Option 1. Use Google drive to transfer files
 
-Open [Google.com](https://www.google.com/) in your web browser and login to your Google Account.
+Abra [Google.com](https://www.google.com/) no seu navegador e entre na sua Conta do Google.
 
 On the right upper side select the Drive app in the Google menu.
 
-![Start Drive App](../images/GoogleDriveInWebbrowser.png)
+![Iniciar o app Drive](../images/GoogleDriveInWebbrowser.png)
 
-Click **New** at the top left (or right-click an empty area below your files and folders) and select **File upload**.
+Clique em **New** (Novo) no canto superior esquerdo (ou clique com o botão direito em uma área vazia abaixo dos seus arquivos e pastas) e selecione **File upload** (Upload de arquivo).
 
-![Upload apk file with Google Drive App](../images/GoogleDriveUploadFile.png)
+![Enviar o arquivo apk com o app Google Drive](../images/GoogleDriveUploadFile.png)
 
 The apk file should now be uploaded on Google Drive.
 
@@ -43,232 +43,232 @@ The apk file should now be uploaded on Google Drive.
 
 Switch to your mobile and start the Google Drive app. It is a preinstalled app and can be found where the other Google apps are located or with search for the name of the app.
 
-![start the Google Drive app](../images/GoogleDriveMobileAPPLaunch.png)
+![inicie o app Google Drive](../images/GoogleDriveMobileAPPLaunch.png)
 
-Launch the apk installation by tapping the filename in the Google Drive App on the mobile.
+Inicie a instalação do apk tocando no nome do arquivo no app Google Drive do celular.
 
-![launch the apk installation](../images/GoogleDriveMobileUploadedAPK.png)
+![inicie a instalação do apk](../images/GoogleDriveMobileUploadedAPK.png)
 
-In case you get a security notice that you are not allowed to install apps from Google Drive at the moment, tap "Settings" and allow it for that short moment, then disallow it afterwards, as it is a security risk to leave it enabled all the time.
+Se você receber um aviso de segurança de que no momento não é permitido instalar apps a partir do Google Drive, toque em "Settings" (Configurações) e permita isso só por esse curto momento. Depois, proíba de novo, porque deixar isso ativado o tempo todo é um risco de segurança.
 
-![Security Notice Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Aviso de segurança do Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Security Notice Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Aviso de segurança do Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
 
-After the installation finishes, you are done with this step.
+Depois que a instalação terminar, esta etapa está concluída.
 
-You should see the **AAPS** icon and be able to open the app.
+Você deve ver o ícone do **AAPS** e conseguir abrir o app.
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
-Did you remember to disallow the installation from Google Drive?
+**AVISO DE SEGURANÇA IMPORTANTE**
+Você se lembrou de proibir de novo a instalação a partir do Google Drive?
 ```
 
-Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Continue com a [configuração do loop do AAPS](../SettingUpAaps/SetupWizard.md).
 
 ### Option 2. Use a USB cable to transfer files
 
-The second way to transfer the AAPS apk file is with a [USB cable](https://support.google.com/android/answer/9064445?hl=en).
+A segunda forma de transferir o arquivo apk do AAPS é com um [cabo USB](https://support.google.com/android/answer/9064445?hl=en).
 
 Transfer the file from its location on your computer to the "downloads" folder on the phone.
 
-On your phone, you will have to allow installation from unknown sources. Explanations of how to do this can be found on the internet (_e.g._ [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+On your phone, you will have to allow installation from unknown sources. Explicações de como fazer isso podem ser encontradas na internet (_por exemplo_ [aqui](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) ou [aqui](https://www.androidcentral.com/unknown-sources)).
 
-Once you have transferred the file by dragging it across, open the "Downloads" folder on the phone and press the AAPS apk file:
+Depois de transferir o arquivo arrastando-o, abra a pasta "Downloads" no telefone e toque no arquivo apk do AAPS:
 
-![The apk file in the Downloads folder](../images/install/install_01_downloads_apk.png)
+![O arquivo apk na pasta Downloads](../images/install/install_01_downloads_apk.png)
 
-The first time, Android tells you that the phone is not allowed to install unknown apps from this source. Press "**Settings**":
+Na primeira vez, o Android avisa que o telefone não tem permissão para instalar apps desconhecidos desta fonte. Toque em "**Settings**" (Configurações):
 
-![Security notice for unknown apps](../images/install/install_02_unknown_apps_notice.png)
+![Aviso de segurança para apps desconhecidos](../images/install/install_02_unknown_apps_notice.png)
 
-Enable "**Allow from this source**", then go back:
+Ative "**Allow from this source**" (Permitir desta fonte) e depois volte:
 
-![Allow from this source enabled](../images/install/install_04_unknown_apps_allowed.png)
+!["Permitir desta fonte" ativado](../images/install/install_04_unknown_apps_allowed.png)
 
-Press the apk file again and select "**Install**":
+Toque de novo no arquivo apk e selecione "**Install**" (Instalar):
 
-![Install prompt](../images/install/install_05_install_prompt.png)
+![Pedido de instalação](../images/install/install_05_install_prompt.png)
 
-When the installation is finished, press "**Open**" to start **AAPS**, or "**Done**" to open it later:
+Quando a instalação terminar, toque em "**Open**" (Abrir) para iniciar o **AAPS**, ou em "**Done**" (Concluído) para abri-lo mais tarde:
 
-![App installed](../images/install/install_07_app_installed.png)
+![App instalado](../images/install/install_07_app_installed.png)
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
-Remember to disable "Allow from this source" again after the installation, as it is a security risk to leave it enabled all the time.
+**AVISO DE SEGURANÇA IMPORTANTE**
+Lembre-se de desativar de novo "Allow from this source" (Permitir desta fonte) depois da instalação, porque deixar isso ativado o tempo todo é um risco de segurança.
 ```
 
-Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Continue com a [configuração do loop do AAPS](../SettingUpAaps/SetupWizard.md).
 
 (transferring-installing-play-protect-warning)=
-## Google Play Protect warning
+## Aviso do Google Play Protect
 
-When you install **AAPS**, Google Play Protect may warn you that the app is unsafe, was built for an older version of Android and doesn't include the latest privacy protections.
+Quando você instala o **AAPS**, o Google Play Protect pode avisar que o app não é seguro, que foi criado para uma versão mais antiga do Android e que não inclui as proteções de privacidade mais recentes.
 
-![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+![Aviso do Google Play Protect](../images/troubleshooting/InstallGPP.png)
 
-This is expected for an app you built yourself. Tap **More details**, then **Install anyway**.
+Isso é esperado para um app que você mesmo compilou. Toque em **More details** (Mais detalhes) e depois em **Install anyway** (Instalar mesmo assim).
 
-If the installation is **blocked** with a message about an unverified developer (not just a warning), see [Android developer verification](#android-developer-verification) below.
+Se a instalação for **bloqueada** com uma mensagem sobre um desenvolvedor não verificado (não apenas um aviso), veja [Verificação de desenvolvedor do Android](#android-developer-verification) abaixo.
 
 (android-developer-verification)=
 
-## Android developer verification
+## Verificação de desenvolvedor do Android
 
-Google is introducing **Android developer verification**: on most Android phones, apps will only install if they were registered with Google by a verified developer. This also applies to apps installed from an APK file ("sideloading") — which is how you install the **AAPS** app you built yourself.
+O Google está introduzindo a **verificação de desenvolvedor do Android**: na maioria dos telefones Android, os apps só serão instalados se tiverem sido registrados no Google por um desenvolvedor verificado. Isso também vale para apps instalados a partir de um arquivo APK ("sideloading") — que é a forma como você instala o app **AAPS** que você mesmo compilou.
 
-### What is changing
+### O que está mudando
 
-When you install **AAPS** on a phone with Google services (a "certified" Android device — virtually every phone sold with the Play Store), Android will check whether the app comes from a developer registered with Google. If not, the normal installation by tapping the APK file is blocked.
+Quando você instala o **AAPS** em um telefone com os serviços do Google (um dispositivo Android "certificado" — praticamente todo telefone vendido com a Play Store), o Android verifica se o app vem de um desenvolvedor registrado no Google. Se não vier, a instalação normal tocando no arquivo APK fica bloqueada.
 
-**The check happens when an app is installed or updated.** It does not remove apps that are already installed and running.
+**A verificação acontece quando um app é instalado ou atualizado.** Ela não remove apps que já estão instalados e funcionando.
 
-Google is rolling this out gradually:
+O Google está introduzindo isso aos poucos:
 
-| When               | What happens                                                                                                                              |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| August 2026        | Free "limited distribution" developer accounts are open worldwide, and the "advanced flow" starts rolling out to phones                   |
-| September 30, 2026 | Verification is enforced in **Brazil, Indonesia, Singapore and Thailand**, for apps installed from Google Play and a few other app stores |
-| 2027               | Enforcement expands to the **rest of the world** and to **all installations**, including APK files                                        |
+| Quando                 | O que acontece                                                                                                                                                     |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Agosto de 2026         | Contas de desenvolvedor gratuitas de "distribuição limitada" ficam abertas no mundo todo, e o "fluxo avançado" começa a chegar aos telefones                       |
+| 30 de setembro de 2026 | A verificação passa a ser aplicada no **Brasil, Indonésia, Singapura e Tailândia**, para apps instalados a partir do Google Play e de algumas outras lojas de apps |
+| 2027                   | A aplicação se estende ao **resto do mundo** e a **todas as instalações**, incluindo arquivos APK                                                                  |
 
-Details are published by Google on the [Android developer verification](https://developer.android.com/developer-verification) pages, including a [FAQ](https://developer.android.com/developer-verification/guides/faq). Google may still adjust dates and details; this page will be updated as the rollout progresses.
+Os detalhes são publicados pelo Google nas páginas de [verificação de desenvolvedor do Android](https://developer.android.com/developer-verification), incluindo um [FAQ](https://developer.android.com/developer-verification/guides/faq). O Google ainda pode ajustar datas e detalhes; esta página será atualizada conforme a introdução avançar.
 
-### Does this affect me?
+### Isso me afeta?
 
-- **Building AAPS is not affected at all.** The [browser build](#browser-build), the [Android Studio build](ComputerBuild.md) and the [CLI build](CLIBuild.md) work exactly as before, and your keystore does not change.
-- **Your current AAPS keeps running.** Verification is only checked when installing or updating an app.
-- **If you live in Brazil, Indonesia, Singapore or Thailand:** from September 30, 2026, verification is enforced for apps installed from Google Play and a few other app stores. Google states that installing an APK file directly is not covered by this first step, so **AAPS** should still install as usual. Nevertheless, prepare one of the [free installation methods](#android-developer-verification-free-methods) below now, so that you are not caught out if this changes.
-- **If you live anywhere else:** nothing changes for you before 2027, and doing nothing for now is a legitimate choice. But set up one of the [free installation methods](#android-developer-verification-free-methods) below while nothing is broken: discovering the block on the day an update is refused, with the [advanced flow's](#android-developer-verification-advanced-flow) 24-hour wait ahead of you, is the wrong moment.
-- **Old phones:** verification applies to phones running Android 7 or higher, which means every phone able to run **AAPS**.
+- **Compilar o AAPS não é afetado de forma alguma.** A [compilação no navegador](#browser-build), a [compilação com o Android Studio](ComputerBuild.md) e a [compilação pela linha de comando (CLI)](CLIBuild.md) funcionam exatamente como antes, e a sua keystore não muda.
+- **O seu AAPS atual continua funcionando.** A verificação só é feita ao instalar ou atualizar um app.
+- **Se você mora no Brasil, Indonésia, Singapura ou Tailândia:** a partir de 30 de setembro de 2026, a verificação é aplicada para apps instalados a partir do Google Play e de algumas outras lojas de apps. O Google afirma que a instalação direta de um arquivo APK não está incluída nesta primeira etapa, então o **AAPS** ainda deve ser instalado normalmente. Mesmo assim, prepare agora um dos [métodos gratuitos de instalação](#android-developer-verification-free-methods) abaixo, para não ser pego de surpresa se isso mudar.
+- **Se você mora em qualquer outro lugar:** nada muda para você antes de 2027, e não fazer nada por enquanto é uma escolha válida. Mas configure um dos [métodos gratuitos de instalação](#android-developer-verification-free-methods) abaixo enquanto nada está quebrado: descobrir o bloqueio no dia em que uma atualização é recusada, com a espera de 24 horas do [fluxo avançado](#android-developer-verification-advanced-flow) pela frente, é o momento errado.
+- **Telefones antigos:** a verificação vale para telefones com Android 7 ou mais recente, ou seja, todo telefone capaz de rodar o **AAPS**.
 
 (android-developer-verification-free-methods)=
 
-## Free ways to install AAPS
+## Formas gratuitas de instalar o AAPS
 
-You do **not** need to pay Google anything to keep using **AAPS**. There are several free methods; pick the one that matches your situation.
+Você **não** precisa pagar nada ao Google para continuar usando o **AAPS**. Há vários métodos gratuitos; escolha o que combina com a sua situação.
 
 ```{admonition} Which method should I use?
 :class: tip
-- You have a **computer** (whichever way you built **AAPS**): use [ADB](#android-developer-verification-adb) or, if you prefer to avoid the command line, the [web installer](#android-developer-verification-web). Both are exempt from verification, have no limits, and need no Google account.
-- You have **no computer at all**: use the [advanced flow](#android-developer-verification-advanced-flow) on your phone.
-- You prefer to register with Google so the normal "tap the APK" installation keeps working: a [free limited distribution account](#android-developer-verification-limited-account) exists, but it is untested with **AAPS**.
+- Você tem um **computador** (não importa como você compilou o **AAPS**): use o [ADB](#android-developer-verification-adb) ou, se preferir evitar a linha de comando, o [instalador web](#android-developer-verification-web). Os dois são isentos da verificação, não têm limites e não precisam de conta do Google.
+- Você **não tem nenhum computador**: use o [fluxo avançado](#android-developer-verification-advanced-flow) no seu telefone.
+- Você prefere se registrar no Google para que a instalação normal "tocando no APK" continue funcionando: existe uma [conta gratuita de distribuição limitada](#android-developer-verification-limited-account), mas ela não foi testada com o **AAPS**.
 ```
 
 (android-developer-verification-adb)=
 
-### Option 1: Install with ADB (computer needed)
+### Opção 1: Instalar com o ADB (precisa de um computador)
 
-ADB (Android Debug Bridge) is Google's official tool for installing apps from a computer onto a phone with a USB cable. Google has confirmed that **apps installed with ADB do not require verification** — there is no waiting period, no device limit and no registration.
+O ADB (Android Debug Bridge) é a ferramenta oficial do Google para instalar apps de um computador em um telefone com um cabo USB. O Google confirmou que **apps instalados com o ADB não precisam de verificação** — não há período de espera, nem limite de dispositivos, nem registro.
 
-One-time preparation:
+Preparação (feita uma única vez):
 
-1. On your phone, enable the hidden developer options: go to **Settings** > **About phone** (on some phones **Software information**) and tap **Build number** seven times, until the phone confirms you are a developer.
-1. Go back to the main **Settings**, open the new **Developer options** entry and enable **USB debugging**.
-1. On your computer, make sure ADB is available:
-   - If you use **Android Studio**, ADB is already installed with it.
-   - Otherwise, download Google's free [SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools) and unzip the folder. No installation is needed; ADB is the `adb` program inside that folder.
+1. No seu telefone, ative as opções de desenvolvedor ocultas: vá em **Settings** (Configurações) > **About phone** (Sobre o telefone) (em alguns telefones **Software information** (Informações do software)) e toque sete vezes em **Build number** (Número da versão), até o telefone confirmar que você é um desenvolvedor.
+1. Volte às **Settings** (Configurações) principais, abra o novo item **Developer options** (Opções do desenvolvedor) e ative **USB debugging** (Depuração USB).
+1. No seu computador, verifique se o ADB está disponível:
+   - Se você usa o **Android Studio**, o ADB já está instalado com ele.
+   - Caso contrário, baixe as [SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools) gratuitas do Google e descompacte a pasta. Não é preciso instalar nada; o ADB é o programa `adb` dentro dessa pasta.
 
-Installing (and later updating) **AAPS**:
+Instalar (e mais tarde atualizar) o **AAPS**:
 
-1. Connect the phone to the computer with a USB cable. There is no need to transfer the APK file to the phone first: ADB sends it straight from the computer.
-1. On the phone, accept the **Allow USB debugging?** prompt (the first time only).
-1. On the computer, open a terminal (command prompt) in the folder containing ADB and the **AAPS** APK file, and run:
+1. Conecte o telefone ao computador com um cabo USB. Não é preciso transferir antes o arquivo APK para o telefone: o ADB o envia direto do computador.
+1. No telefone, aceite o pedido **Allow USB debugging?** (Permitir depuração USB?) (apenas na primeira vez).
+1. No computador, abra um terminal (prompt de comando) na pasta que contém o ADB e o arquivo APK do **AAPS** e execute:
 
    ```
    adb install -r app-full-release.apk
    ```
 
-   Replace `app-full-release.apk` with the actual name of your APK file. The `-r` option updates an already installed **AAPS** while keeping all its data and settings.
+   Substitua `app-full-release.apk` pelo nome real do seu arquivo APK. A opção `-r` atualiza um **AAPS** já instalado, mantendo todos os seus dados e configurações.
 
-1. Wait for `Success` to be displayed. **AAPS** is now installed on your phone.
+1. Aguarde até aparecer `Success`. O **AAPS** agora está instalado no seu telefone.
 
-The same command is used for every future update. The [Wear OS pages](../WearOS/WearOsSmartwatch.md) already use ADB in the same way to install the watch app.
+O mesmo comando é usado para todas as próximas atualizações. As [páginas do Wear OS](../WearOS/WearOsSmartwatch.md) já usam o ADB da mesma forma para instalar o app do relógio.
 
-If you would rather not use a cable: on Android 11 and later, **wireless debugging** (also under **Developer options**) can do the same over Wi-Fi, after a one-time pairing with a code shown on the phone.
+Se você preferir não usar cabo: no Android 11 e mais recentes, a **wireless debugging** (depuração por Wi-Fi, também em **Developer options** (Opções do desenvolvedor)) pode fazer o mesmo pelo Wi-Fi, depois de um pareamento único com um código mostrado no telefone.
 
 (android-developer-verification-web)=
 
-### Option 2: Install from a web page (computer, no command line)
+### Opção 2: Instalar a partir de uma página web (computador, sem linha de comando)
 
-If the command line is not for you, a web page can do exactly what ADB does, directly from your browser. Because it talks to the phone through the same mechanism as ADB, it carries the **same exemption from verification** — but there is nothing to download, no folder to unzip and no command to type.
+Se a linha de comando não é para você, uma página web pode fazer exatamente o que o ADB faz, direto do seu navegador. Como ela se comunica com o telefone pelo mesmo mecanismo do ADB, ela tem a **mesma isenção da verificação** — mas não há nada para baixar, nenhuma pasta para descompactar e nenhum comando para digitar.
 
-This is the easiest route if you used the [browser build](#browser-build) and have never opened a command line.
+Este é o caminho mais fácil se você usou a [compilação no navegador](#browser-build) e nunca abriu uma linha de comando.
 
-1. Enable **USB debugging** on the phone (steps 1 and 2 of the [ADB method](#android-developer-verification-adb) above — one-time setup).
-1. Open the **[AAPS web installer](#web-installer)** in your browser.
-1. Connect the phone with a USB cable and follow the instructions on the page: connect, choose your APK file, and install.
+1. Ative a **USB debugging** (Depuração USB) no telefone (passos 1 e 2 do [método ADB](#android-developer-verification-adb) acima — configuração feita uma única vez).
+1. Abra o **[Instalador web do AAPS](#web-installer)** no seu navegador.
+1. Conecte o telefone com um cabo USB e siga as instruções da página: conectar, escolher o seu arquivo APK e instalar.
 
-Three things to know:
+Três coisas que você deve saber:
 
-- It only works in **Chrome, Edge or Opera**. Firefox and Safari cannot talk to USB devices.
-- Only one program can use the phone's ADB connection at a time, so **close Android Studio** (or anything else that uses ADB) before connecting.
-- A web page connected this way gets full control of your phone. **Use only the address above**, from the **AAPS** documentation — never an installer page found through a search engine. The **AAPS** web installer runs entirely in your browser: your APK file is not uploaded anywhere.
+- Funciona apenas no **Chrome, Edge ou Opera**. Firefox e Safari não conseguem se comunicar com dispositivos USB.
+- Apenas um programa por vez pode usar a conexão ADB do telefone, então **feche o Android Studio** (ou qualquer outro programa que use o ADB) antes de conectar.
+- Uma página web conectada desta forma tem controle total do seu telefone. **Use apenas o endereço acima**, a partir da documentação do **AAPS** — nunca uma página de instalação encontrada por um mecanismo de busca. O instalador web do **AAPS** funciona inteiramente no seu navegador: o seu arquivo APK não é enviado para lugar nenhum.
 
 ```{admonition} No computer? A second phone works too
 :class: tip
-The web installer also works from **Chrome on another Android phone** with a USB-C to USB-C cable — so a parent can install **AAPS** onto a child's phone with no computer in the house.
+O instalador web também funciona a partir do **Chrome em outro telefone Android** com um cabo USB-C para USB-C — assim os pais podem instalar o **AAPS** no telefone de uma criança sem ter nenhum computador em casa.
 ```
 
 (android-developer-verification-advanced-flow)=
 
-### Option 3: The "advanced flow" on your phone (no computer needed)
+### Opção 3: O "fluxo avançado" no seu telefone (sem computador)
 
-Google provides an escape hatch for experienced users who understand the risks of installing unverified apps, called the **advanced flow**. Google started rolling it out to phones in August 2026, ahead of enforcement, so you can set it up now. It is a one-time setup on the phone itself, which **takes 24 hours** to complete:
+O Google oferece uma saída para usuários experientes que entendem os riscos de instalar apps não verificados, chamada **fluxo avançado**. O Google começou a liberar o fluxo para os telefones em agosto de 2026, antes da aplicação da verificação, então você pode configurá-lo agora. É uma configuração feita uma única vez no próprio telefone, que **leva 24 horas** para ser concluída:
 
-1. Enable the hidden developer options (see step 1 of the ADB method above), then open **Settings** > **Developer options** > **Apps from unverified developers**.
-1. Turn on **Allow apps from unverified developers**. The phone asks for your screen lock to confirm it is you.
-1. The phone asks whether someone is asking you to turn on this setting, and explains that banks, government agencies or police would never ask you to do so. Read the warning and confirm that nobody is pressuring or guiding you (this is a protection against scammers).
-1. **Restart your phone.** This starts a one-time **24-hour waiting period**.
-1. After 24 hours, go back to **Settings** > **Developer options** > **Apps from unverified developers** to finish the setup.
-1. Choose whether to allow unverified apps for **7 days** or **indefinitely**. For **AAPS**, choose **indefinitely**, otherwise your next update will be blocked once the 7 days have passed.
+1. Ative as opções de desenvolvedor ocultas (veja o passo 1 do método ADB acima) e depois abra **Settings** (Configurações) > **Developer options** (Opções do desenvolvedor) > **Apps from unverified developers** (Apps de desenvolvedores não verificados).
+1. Ative **Allow apps from unverified developers** (Permitir apps de desenvolvedores não verificados). O telefone pede o seu bloqueio de tela para confirmar que é você.
+1. O telefone pergunta se alguém está pedindo que você ative esta configuração e explica que bancos, órgãos do governo ou a polícia nunca pediriam isso. Leia o aviso e confirme que ninguém está pressionando ou orientando você (isso é uma proteção contra golpistas).
+1. **Reinicie o seu telefone.** Isso inicia um **período de espera de 24 horas**, feito uma única vez.
+1. Depois de 24 horas, volte a **Settings** (Configurações) > **Developer options** (Opções do desenvolvedor) > **Apps from unverified developers** (Apps de desenvolvedores não verificados) para concluir a configuração.
+1. Escolha se quer permitir apps não verificados por **7 days** (7 dias) ou **indefinitely** (por tempo indeterminado). Para o **AAPS**, escolha **indefinitely** (por tempo indeterminado); caso contrário, a sua próxima atualização será bloqueada depois que os 7 dias passarem.
 
-After this setup, installing or updating the **AAPS** APK works as it does today, with one extra warning that the app is from an unverified developer — tap **Install anyway**.
+Depois desta configuração, instalar ou atualizar o APK do **AAPS** funciona como hoje, com um aviso a mais de que o app é de um desenvolvedor não verificado — toque em **Install anyway** (Instalar mesmo assim).
 
-Good to know:
+Bom saber:
 
-- You can turn **Developer options** off again afterwards: the advanced flow stays enabled. Google also does not give apps (such as banking apps) any way to detect that the advanced flow is enabled.
-- If you turn the advanced flow off, installing **or updating** **AAPS** is blocked again (your installed **AAPS** keeps running). You have a 10-minute window to turn it back on; after that, the 24-hour waiting period starts again.
-- Changing the phone's clock does not shorten the waiting period, and ADB cannot skip it.
-- Google states that your choice follows your Google account to your other devices, so a new phone should not mean another 24-hour wait.
-- If you cannot find **Apps from unverified developers** in the developer options, your phone has not received the feature yet. It is delivered by a system component called **Android Developer Verifier**, which Google is rolling out gradually through the Play Store. You can help it along by opening **Android Developer Verifier** in the Play Store.
+- Depois você pode desativar de novo as **Developer options** (Opções do desenvolvedor): o fluxo avançado continua ativado. O Google também não dá aos apps (como apps de bancos) nenhuma forma de detectar que o fluxo avançado está ativado.
+- Se você desativar o fluxo avançado, a instalação **ou atualização** do **AAPS** volta a ser bloqueada (o **AAPS** instalado continua funcionando). Você tem 10 minutos para ativá-lo de novo; depois disso, o período de espera de 24 horas começa outra vez.
+- Mudar o relógio do telefone não encurta o período de espera, e o ADB não consegue pulá-lo.
+- O Google afirma que a sua escolha acompanha a sua conta do Google nos seus outros dispositivos, então um telefone novo não deve significar outra espera de 24 horas.
+- Se você não encontrar **Apps from unverified developers** (Apps de desenvolvedores não verificados) nas opções de desenvolvedor, o seu telefone ainda não recebeu o recurso. Ele é entregue por um componente do sistema chamado **Android Developer Verifier**, que o Google está liberando aos poucos pela Play Store. Você pode ajudar a acelerar isso abrindo o **Android Developer Verifier** na Play Store.
 
 ```{note}
-Google describes this as a first version and may still change the screens and steps; this section will be updated with screenshots once the final version is available.
+O Google descreve isso como uma primeira versão e ainda pode mudar as telas e os passos; esta seção será atualizada com capturas de tela quando a versão final estiver disponível.
 ```
 
 (android-developer-verification-limited-account)=
 
-### Option 4: Register with Google (free limited distribution account)
+### Opção 4: Registrar-se no Google (conta gratuita de distribuição limitada)
 
-Google offers a **free** developer account type for hobbyists and personal use, called a **limited distribution account**, open to everyone since August 2026:
+O Google oferece um tipo de conta de desenvolvedor **gratuita** para hobby e uso pessoal, chamada **conta de distribuição limitada**, aberta para todos desde agosto de 2026:
 
-- **No government ID** and **no fee** (unlike the paid developer account, which is not needed for personal **AAPS** use). You do need a Google account with 2-step verification, a Google payments profile holding your legal name and address, and a contact email address.
-- You register your app's package name in Google's Android Developer Console, and authorize the phones it may be installed on, up to **20 devices**, through a handshake with a QR code or link between the phone and the console.
-- Once registered, the normal installation (tapping the APK file) works again on the authorized phones, without ADB and without the advanced flow.
-- A limited distribution account can later be upgraded to a full account, but not the other way round.
+- **Sem documento de identidade oficial** e **sem taxa** (ao contrário da conta de desenvolvedor paga, que não é necessária para o uso pessoal do **AAPS**). Você precisa de uma conta do Google com verificação em duas etapas, um perfil de pagamentos do Google com o seu nome legal e endereço, e um endereço de e-mail de contato.
+- Você registra o nome do pacote do seu app no Android Developer Console do Google e autoriza os telefones em que ele pode ser instalado, até **20 dispositivos**, por meio de uma confirmação com um código QR ou link entre o telefone e o console.
+- Depois do registro, a instalação normal (tocando no arquivo APK) volta a funcionar nos telefones autorizados, sem ADB e sem o fluxo avançado.
+- Uma conta de distribuição limitada pode depois ser transformada em uma conta completa, mas não o contrário.
 
 ```{warning}
-Google has not explained how registration works when many people build the same open-source app: every self-built **AAPS** uses the same package name (`info.nightscout.androidaps`) with a different signing key, and Google's FAQ states that a package name already in use by others cannot be claimed outright and requires an additional review. The outcome of such a review is unknown, and the paid developer account ($25 and a government ID) does not help here: paying only removes the 20-device cap, not the package name review.
+O Google não explicou como o registro funciona quando muitas pessoas compilam o mesmo app de código aberto: todo **AAPS** compilado por conta própria usa o mesmo nome de pacote (`info.nightscout.androidaps`) com uma chave de assinatura diferente, e o FAQ do Google diz que um nome de pacote que já é usado por outros não pode simplesmente ser reivindicado e exige uma análise adicional. O resultado dessa análise é desconhecido, e a conta de desenvolvedor paga (US$ 25 e um documento de identidade oficial) não ajuda aqui: pagar só remove o limite de 20 dispositivos, não a análise do nome do pacote.
 
-For this reason, step-by-step instructions cannot be written yet. This section will be completed once registration has been tested with **AAPS**. In the meantime, ADB, the web installer and the advanced flow above are reliable alternatives.
+Por esse motivo, ainda não é possível escrever instruções passo a passo. Esta seção será concluída quando o registro tiver sido testado com o **AAPS**. Enquanto isso, o ADB, o instalador web e o fluxo avançado acima são alternativas confiáveis.
 ```
 
-## What does not change
+## O que não muda
 
-- Building **AAPS** yourself, with any of the three [build methods](BuildingAaps.md).
-- Your GitHub account, your build repository (AAPS Builder) or fork, and your keystore.
-- Your installed **AAPS** app, your settings and your [objectives](CompletingTheObjectives.md).
-- Phones without Google services, and [ADB installations](#android-developer-verification-adb) in general.
+- Compilar o **AAPS** você mesmo, com qualquer um dos três [métodos de compilação](BuildingAaps.md).
+- A sua conta do GitHub, o seu repositório de compilação (AAPS Builder) ou fork, e a sua keystore.
+- O seu app **AAPS** instalado, as suas configurações e os seus [objetivos](CompletingTheObjectives.md).
+- Telefones sem os serviços do Google e, em geral, as [instalações com o ADB](#android-developer-verification-adb).
 
-## Where to get help
+## Onde obter ajuda
 
-1. **Read** Google's [developer verification FAQ](https://developer.android.com/developer-verification/guides/faq) for questions about the verification itself.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md), if an installation is blocked.
-3. When asking for help, include your phone make and model, Android version, your country, and the exact message displayed when the installation fails.
+1. **Leia** o [FAQ da verificação de desenvolvedor](https://developer.android.com/developer-verification/guides/faq) do Google para dúvidas sobre a própria verificação.
+2. **Pergunte** no canal *#AAPS* no [Discord](https://discord.gg/4fQUWHZ4Mw), ou em um dos outros [canais da comunidade](../GettingHelp/WhereCanIGetHelp.md), se uma instalação for bloqueada.
+3. Ao pedir ajuda, informe a marca e o modelo do seu telefone, a versão do Android, o seu país e a mensagem exata que aparece quando a instalação falha.
 
 ```{toctree}
 :hidden:
 
-AAPS web installer <WebInstaller.md>
+Instalador web do AAPS <WebInstaller.md>
 ```

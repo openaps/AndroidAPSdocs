@@ -1,7 +1,7 @@
 (widgets)=
-# Home screen widgets
+# Віджети головного екрана
 
-**AAPS** provides widgets that you can add to your phone's home screen. A widget shows your current data without opening the app. Tap a widget to open **AAPS**.
+**AAPS** має віджети, які можна додати на головний екран телефону. Віджет показує ваші поточні дані без відкриття застосунку. Торкніться віджета, щоб відкрити **AAPS**.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,70 +10,70 @@
 
 ---
 
-## Available widgets
+## Доступні віджети
 
-Five widgets are available. They are listed under **AAPS** in the Android widget picker:
+Доступно п'ять віджетів. Вони є в списку віджетів Android у розділі **AAPS**:
 
-![AAPS widgets in the Android widget picker](../images/widgets/widget_picker_aaps.png)
+![Віджети AAPS у списку віджетів Android](../images/widgets/widget_picker_aaps.png)
 
-| Widget                            | Default size | What it shows                                                                                                                          |
-| --------------------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| **AAPS widget**                   | 5 × 2        | The status block of the main screen: BG with trend and delta, loop mode, profile, target, sensitivity, IOB and COB.                    |
-| **AAPS glucose circle**           | 2 × 2        | The BG circle of the main screen: a ring in the BG colour, the trend arc, the delta, the BG value and the time since the last reading. |
-| **AAPS Small**                    | 2 × 2        | Profile name, BG with trend arrow, time since the last reading, delta, IOB and COB.                                                    |
-| **AAPS BG + IOB + COB (compact)** | 4 × 1        | One line with BG and trend arrow, IOB and COB.                                                                                         |
-| **AAPS BG graph**                 | 3 × 1        | The BG value with a small graph of the recent readings.                                                                                |
+| Віджет                               | Розмір за замовчуванням | Що показує                                                                                                        |
+| ------------------------------------ | ----------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| **Віджет AAPS**                      | 5 × 2                   | Блок стану з головного екрана: ГК з трендом і дельтою, режим петлі, профіль, ціль, чутливість, IOB і COB.         |
+| **Коло глюкози AAPS**                | 2 × 2                   | Коло ГК з головного екрана: кільце кольору ГК, дуга тренду, дельта, значення ГК і час від останнього вимірювання. |
+| **AAPS малий**                       | 2 × 2                   | Назва профілю, ГК зі стрілкою тренду, час від останнього вимірювання, дельта, IOB і COB.                          |
+| **AAPS ГК + IOB + COB (компактний)** | 4 × 1                   | Один рядок із ГК і стрілкою тренду, IOB і COB.                                                                    |
+| **Графік ГК AAPS**                   | 3 × 1                   | Значення ГК з невеликим графіком останніх вимірювань.                                                             |
 
-The **AAPS widget**, the **glucose circle** and the **Small** widget on a home screen:
+**Віджет AAPS**, **коло глюкози** і **малий** віджет на головному екрані:
 
-![AAPS widget, glucose circle and Small widget on the home screen](../images/widgets/home_widgets_full_circle_small.png)
+![Віджет AAPS, коло глюкози і малий віджет на головному екрані](../images/widgets/home_widgets_full_circle_small.png)
 
-The **compact** widget and the **BG graph** widget:
+**Компактний** віджет і віджет **Графік ГК**:
 
-![Compact widget and BG graph widget on the home screen](../images/widgets/home_widgets_compact_graph.png)
+![Компактний віджет і віджет графіка ГК на головному екрані](../images/widgets/home_widgets_compact_graph.png)
 
-BG values use the same colours as in **AAPS**: green in range, yellow above range, red below range.
-
----
-
-## Adding a widget
-
-The exact steps depend on your phone and its launcher. On most phones:
-
-1. Long-press an empty area of the home screen and select **Widgets**.
-
-   ![The widget picker](../images/widgets/widget_picker_list.png)
-
-2. Open **AAPS** in the list and tap the widget you want.
-3. Press **Add** (or drag the widget to the place you want).
-
-   ![The Add button below the selected widget](../images/widgets/widget_picker_add_button.png)
-
-The widget is placed on the home screen. Right after adding it, it is shown with handles: drag a handle to **resize** the widget, or drag the widget to move it. The glucose circle can be resized to any size.
-
-![A widget just added, with its resize handles and the settings button](../images/widgets/widget_glucose_circle_added.png)
-
-If the home screen page is full, the phone puts the widget on a new page.
+Значення ГК мають ті самі кольори, що й в **AAPS**: зелений у діапазоні, жовтий вище діапазону, червоний нижче діапазону.
 
 ---
 
-## Widget configuration
+## Як додати віджет
 
-Tap the **pencil** button shown on the widget just after you added it. Later, long-press the widget to get the handles and the pencil back.
+Точні кроки залежать від вашого телефону та його лаунчера. На більшості телефонів:
 
-The **Widget configuration** dialog has two settings:
+1. Довго натисніть на порожнє місце головного екрана й виберіть **Віджети**.
 
-- **Configure opacity** — how opaque the background of the widget is. A low value lets the wallpaper show through.
-- **Use black color** — use a black background instead of the default one.
+   ![Список віджетів](../images/widgets/widget_picker_list.png)
 
-![Widget configuration](../images/widgets/widget_configuration.png)
+2. Відкрийте **AAPS** у списку й торкніться потрібного віджета.
+3. Натисніть **Додати** (або перетягніть віджет у потрібне місце).
 
-Each widget has its own configuration.
+   ![Кнопка «Додати» під вибраним віджетом](../images/widgets/widget_picker_add_button.png)
+
+Віджет з'явиться на головному екрані. Одразу після додавання він показаний із маркерами: тягніть маркер, щоб **змінити розмір** віджета, або тягніть сам віджет, щоб перемістити його. Розмір кола глюкози можна змінити на будь-який.
+
+![Щойно доданий віджет із маркерами зміни розміру та кнопкою налаштувань](../images/widgets/widget_glucose_circle_added.png)
+
+Якщо сторінка головного екрана заповнена, телефон розмістить віджет на новій сторінці.
 
 ---
 
-## Good to know
+## Налаштування віджета
 
-- A widget only **displays** data. You cannot bolus or change anything from a widget.
-- The widget is refreshed by **AAPS**. If **AAPS** is not running, or if Android restricts it in the background, the widget may show old data. Check the time since the last reading, and make sure **AAPS** is excluded from [battery optimization](#SetupWizard-StoragePermission).
-- With **AAPSClient**, **AAPSClient2** and **AAPSClient3**, the widget background is yellow, blue or green, so that you can tell the apps apart. Raise the opacity in the widget configuration if the color is hard to see. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions).
+Торкніться кнопки з **олівцем**, яка видна на віджеті одразу після додавання. Пізніше довго натисніть на віджет, щоб знову побачити маркери й олівець.
+
+Діалог **Налаштування віджета** має два параметри:
+
+- **Налаштувати прозорість** — наскільки непрозорий фон віджета. Низьке значення дає змогу бачити шпалери крізь віджет.
+- **Використовувати чорний колір** — чорний фон замість стандартного.
+
+![Налаштування віджета](../images/widgets/widget_configuration.png)
+
+Кожен віджет має власні налаштування.
+
+---
+
+## Корисно знати
+
+- Віджет лише **показує** дані. З віджета не можна дати болюс чи щось змінити.
+- Віджет оновлює **AAPS**. Якщо **AAPS** не запущений або Android обмежує його роботу у фоні, віджет може показувати старі дані. Перевіряйте час від останнього вимірювання й переконайтеся, що **AAPS** вилучено з [оптимізації батареї](#SetupWizard-StoragePermission).
+- Для **AAPSClient**, **AAPSClient2** і **AAPSClient3** фон віджета жовтий, синій або зелений, щоб ці застосунки можна було розрізнити. Якщо колір погано видно, збільште непрозорість у налаштуваннях віджета. Див. [Про AAPSClient, AAPSClient2 і AAPSClient3](#remotecontrol-aapsclient-versions).

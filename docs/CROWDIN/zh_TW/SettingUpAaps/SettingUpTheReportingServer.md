@@ -12,7 +12,7 @@
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout 是一個網頁應用程式，可以記錄和顯示你的 CGM 資料以及**AAPS** 資料並生成報告。這是一個強大的平台，已經與**AAPS** 整合多年。它使使用者和照顧者能夠近乎實時地追蹤患者的糖尿病資料（如果所有相關組件之間有足夠的網路連線，資料接收與提供之間僅幾秒鐘的時間可能會過去）。 It also carries the remote commands that caregivers send to **AAPS** from **AAPSClient** (see [Master ↔ Client control](#client-master-control)).
+Nightscout 是一個網頁應用程式，可以記錄和顯示你的 CGM 資料以及**AAPS** 資料並生成報告。這是一個強大的平台，已經與**AAPS** 整合多年。它使使用者和照顧者能夠近乎實時地追蹤患者的糖尿病資料（如果所有相關組件之間有足夠的網路連線，資料接收與提供之間僅幾秒鐘的時間可能會過去）。照護者也可以透過 **AAPSClient**，向 **AAPS** 傳送遠端指令（請參閱[主端 ↔ 用戶端控制](#client-master-control)）。
 
 Nightscout是一個開源軟體。任何人都可以使用免費或付費服務建立和運作一個Nightscout伺服器。
 
@@ -44,7 +44,7 @@ Tidepool 自 **AAPS** 3.2 版（於 2023 年底發佈）起即可使用。
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger  
-As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool is not suitable for sharing real-time information with caregivers.  
+使用 **AAPS** 時，資料從接收至回報會有 3 小時的延遲，因此 Tidepool 不適合用來與照護者分享即時資訊。  
 另一方面，如果 Nightscout 不是被接受的解決方案，Tidepool 可以成為與患者內分泌科醫生共享報告的理想解決方案。  
 ```
 
@@ -59,4 +59,4 @@ Tidepool 是一個[開源](https://github.com/tidepool-org)專案。他提供在
 
 ## 下一步
 
-Once you have set up your reporting server, you can configure **AAPS** on your phone with the [Setup Wizard](./SetupWizard.md), which will also link **AAPS** to your reporting server.
+設定好回報伺服器後，您可以在手機上使用 [設定嚮導](./SetupWizard.md)設定 **AAPS**，並將 **AAPS** 連結至回報伺服器。

@@ -1,26 +1,26 @@
-# state of translation for app and the documentation
+# Стан перекладу застосунку та документації
 
-The state is once per hour updated and reflects only the state in Crowdin.
+Стан оновлюється раз на годину і показує лише стан у Crowdin.
 
 ```{tip}
-Be careful the percentage of proofreading must be lower than the percentage of translations but they decided to show it on top of the translations.
-It's better to look only at the percentage level of translations to see if work is to be done.
+Увага: відсоток вичитки не може бути вищим за відсоток перекладу, але його вирішили показувати поверх відсотка перекладу.
+Щоб зрозуміти, чи є ще робота, краще дивитися лише на відсоток перекладу.
 ```
 
 ```{admonition} needed time for final publication
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+Після перекладу в Crowdin щодня відбувається синхронізація з Github: переклади передаються в Github як pull request (PR).
 
-The acceptance of the PR is a manual task which will be done as fast as possible.
+PR приймають вручну, і це роблять якомога швидше.
 ```
 
-## state app translation
+## стан перекладу застосунку
 
-State of the **app** translations per language (country code, percentage translation, percentage proofreading).
+Стан перекладу **застосунку** за мовами (код країни, відсоток перекладу, відсоток вичитки).
 
-![state app translation](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
+![стан перекладу застосунку](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
-## state documentation translation
+## стан перекладу документації
 
-State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
+Стан перекладу **документації** за мовами (код країни, відсоток перекладу, відсоток вичитки).
 
-![state documentation translation](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
+![стан перекладу документації](https://badges.awesome-crowdin.com/translation-13588158-310610.png)

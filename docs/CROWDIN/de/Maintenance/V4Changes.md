@@ -118,52 +118,52 @@ Um den DIA oder das Wirkmaximum zu ändern, lege mit **+** ein neues Insulin an,
 ---
 
 (v4changes-remote-control)=
-## AAPSClient remote control needs pairing
+## AAPSClient remote zu steuern erfordert eine Kopplung
 
-In **AAPS** v3, **AAPSClient** controlled **AAPS** by writing care-portal treatments to Nightscout, and could not deliver a bolus.
+In **AAPS** v3 hat der **AAPSClient** **AAPS** gesteuert, indem es Careportal-Behandlungen in Nightscout geschrieben hat. Einen Bolus abgeben konnte es nicht.
 
-In **AAPS** v4, the client and the main phone are **paired** once, and every command is signed. The main phone checks and confirms each command, and a client can now also deliver a bolus.
+In **AAPS** v4 werden Client und Haupt-Smartphone (Master) einmal miteinander **gekoppelt**, und jeder Befehl wird signiert. Das Haupt-Smartphone prüft und bestätigt jeden Befehl, und ein Client kann jetzt auch einen Bolus abgeben.
 
-- Each client has a **[role](#client-master-control-roles)** that limits what it may do.
-- While client control is on, the main phone is in **[hardened mode](#client-master-control-hardened-mode)**: treatments and changes typed directly into Nightscout (the website, other apps) are no longer applied.
-- Each client gets a **[Nightscout token of its own](#client-master-control-own-token)** with only the rights it needs.
+- Jeder Client hat eine **[Rolle](#client-master-control-roles)**, die festlegt, was er darf.
+- Solange die Client-Steuerung eingeschaltet ist, läuft das Haupt-Smartphone im **[geschützten Modus](#client-master-control-hardened-mode)**: Behandlungen und Änderungen, die direkt in Nightscout eingegeben werden (auf der Website oder in anderen Apps), werden nicht mehr übernommen.
+- Jeder Client bekommt ein **[eigenes Nightscout-Token](#client-master-control-own-token)** mit genau den Rechten, die er braucht.
 
 ```{admonition} What you need to do
 :class: important
-Pair each **AAPSClient** with the main phone: see [Master ↔ Client control](#client-master-control). With an admin token on the main phone, the main phone shows a QR code that sets up and pairs the client in one scan. If you used to enter treatments on the Nightscout website, enter them on a paired client instead.
+Koppele jeden **AAPSClient** mit dem Haupt-Smartphone: siehe [Master ↔ Client-Steuerung](#client-master-control). Ist auf dem Haupt-Smartphone ein Admin-Token hinterlegt, zeigt es einen QR-Code an. Damit richtest Du den Client mit einem einzigen Scan ein und koppelst ihn. Wenn Du Behandlungen bisher auf der Nightscout-Website eingegeben hast, gib sie stattdessen auf einem gekoppelten Client ein.
 ```
 
 ---
 
-## Duplicate BG data now switches the loop to Low Glucose Suspend
+## Doppelte BZ-Werte schalten den Loop jetzt auf Unterbrechung bei niedrigem BZ (LGS)
 
-When **AAPS** receives the same BG reading twice (a red warning badge on the BG source shortcut in the bottom bar), it cannot calculate your trend reliably, so it stops giving correction insulin.
+Wenn **AAPS** denselben Glukosewert zweimal erhält (zu erkennen an einem roten Warnzeichen auf der Verknüpfung zur BZ-Quelle in der unteren Leiste), kann es Deinen Trend nicht mehr zuverlässig berechnen und gibt deshalb kein Korrekturinsulin mehr ab.
 
-In **AAPS** v3 this happened quietly in the background: your loop still showed as **Closed Loop**, even though it could no longer correct.
+In **AAPS** v3 geschah das unbemerkt im Hintergrund: Dein Loop wurde weiter als **Closed Loop** angezeigt, obwohl er nicht mehr korrigieren konnte.
 
-In **AAPS** v4 the change is visible. A closed loop is switched to **Low Glucose Suspend** mode, and the loop dialog tells you why: *"LGS mode due to doubled values in BG source"*. **AAPS** can still reduce or suspend your basal to protect you against lows.
+In **AAPS** v4 siehst Du diesen Wechsel. Ein Closed Loop wird auf **Unterbrechung bei niedrigem BZ (LGS)** umgeschaltet, und der Loop-Dialog nennt Dir den Grund: *„LGS-Modus wegen doppelter Werte in der BZ-Quelle“*. **AAPS** kann Deine Basalrate aber weiterhin senken oder aussetzen, um Dich vor Unterzuckerungen zu schützen.
 
 ```{admonition} What you need to do
 :class: important
-Find and remove the duplicate readings — see [BG warning sign](#aaps-screens-bg-warning-sign).
+Suche die doppelten Werte und entferne sie – siehe [BZ-Warnzeichen](#aaps-screens-bg-warning-sign).
 
-Once they are gone, **AAPS** stays in **Low Glucose Suspend**. It does not go back to **Closed Loop** on its own: press and hold the loop icon and select **Closed Loop** again.
+Auch wenn sie entfernt sind, bleibt **AAPS** in **Unterbrechung bei niedrigem BZ (LGS)**. Es kehrt nicht von selbst zu **Closed Loop** zurück: Drücke lange auf das Loop-Symbol und wähle wieder **Closed Loop**.
 ```
 
 ---
 
 (v4changes-tidepool)=
-## Tidepool: data now shows under the device name AAPS
+## Tidepool: Daten erscheinen jetzt unter dem Gerätenamen AAPS
 
-In **AAPS** v3, the data uploaded to [Tidepool](../SettingUpAaps/Tidepool.md) was shown in Tidepool under another device name.
+In **AAPS** v3 wurden die zu [Tidepool](../SettingUpAaps/Tidepool.md) hochgeladenen Daten dort unter einem anderen Gerätenamen angezeigt.
 
-In **AAPS** v4, the data is shown under the device name **AAPS**. After the update, **AAPS** starts a new data set in Tidepool. Your older data stays in Tidepool under the old device name.
+In **AAPS** v4 erscheinen die Daten unter dem Gerätenamen **AAPS**. Nach dem Update legt **AAPS** in Tidepool einen neuen Datensatz an. Deine älteren Daten bleiben in Tidepool unter dem alten Gerätenamen.
 
 ```{admonition} What you need to do
 :class: important
-Usually nothing: new data simply appears under **AAPS**.
+Meist nichts: Neue Daten erscheinen einfach unter **AAPS**.
 
-Do **not** run "**Full synchronization**" while the old data is still in Tidepool: the same data would then be there twice. If you want all your data under the new name, use the "**Purge all data**" button on the [Tidepool screen](#tidepool-menu) first (it also deletes the old data uploaded by **AAPS**), then run "**Full synchronization**". Only the data still stored in **AAPS** on your phone can be uploaded again.
+Starte **keine** „**Vollständige Synchronisierung**“, solange die alten Daten noch in Tidepool liegen. Sonst wären dieselben Daten dort doppelt. Wenn Du alle Daten unter dem neuen Namen haben möchtest, nutze zuerst den Knopf „**Alle Daten löschen**“ auf dem [Tidepool-Bildschirm](#tidepool-menu) (er löscht auch die alten, von **AAPS** hochgeladenen Daten) und starte dann „**Vollständige Synchronisierung**“. Hochladen lassen sich nur die Daten, die noch in **AAPS** auf Deinem Smartphone gespeichert sind.
 ```
 
 ---

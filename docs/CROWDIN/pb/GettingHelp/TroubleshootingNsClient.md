@@ -1,43 +1,43 @@
 (Troubleshooting-NSClient-troubleshooting-nsclient)=
 
-# Troubleshooting NSClient
+# Resolução de problemas do NSClient
 
-NSClient relies on stable communication with Nightscout. An unstable connection leads to synchronization errors and high data usage.
+O NSClient depende de uma comunicação estável com o Nightscout. Uma conexão instável causa erros de sincronização e alto uso de dados.
 
-If nobody is following you on Nightscout you can choose to pause NSClient to save battery life or you can choose to setup NSClient so that it only connects when on Wi-Fi and/or during charging.
+Se ninguém acompanha você no Nightscout, você pode pausar o NSClient para economizar bateria. Ou você pode configurar o NSClient para conectar somente no Wi-Fi e/ou durante o carregamento.
 
-* How to detect an unstable connection?
+* Como detectar uma conexão instável?
 
-Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. If you see many reconnections, then there is a problem.
+Abra a tela do NSClient (**Configuração** > **Comunicação** > **NSClientV3** > **Abrir plugin**) e observe o **Status** e o log. Com os websockets ativados, o status deve ficar "Conectado", quase sem mensagens de reconexão no log. Se você vê muitas reconexões, então há um problema.
 
-* Restart
+* Reiniciar
 
-As a first step, restart Nightscout and then your phone to see if the issue is permanent.
+Como primeiro passo, reinicie o Nightscout e depois o seu telefone para ver se o problema é permanente.
 
-If your Nightscout is hosted on Heroku, you can restart Nightscout by: Logging into Heroku, click on your nightscout app name, click on the 'More' menu, then 'Restart all dynos'.
+Se o seu Nightscout está hospedado no Heroku, você pode reiniciar o Nightscout assim: entre no Heroku, clique no nome do seu app do Nightscout, clique no menu 'More' e depois em 'Restart all dynos'.
 
-For other hosts, please follow your hosts guidance documentation.
+Para outros provedores, siga a documentação do seu provedor.
 
-* Phone issues
+* Problemas no telefone
 
-Android may put your phone into a sleep mode. Check if you have an exception for AAPS in your phones power options to allow it to run in the background all the time.
+O Android pode colocar o seu telefone em modo de suspensão. Verifique se você tem uma exceção para o AAPS nas opções de energia do seu telefone, para permitir que ele rode em segundo plano o tempo todo.
 
-Check the NSClient again when in strong network signal location.
+Verifique o NSClient de novo em um local com sinal de rede forte.
 
-Try another phone.
+Tente outro telefone.
 
 * Nightscout
 
-If your site is hosted on Azure, many people have found that connection issues have improved since moving to Heroku.
+Se o seu site está hospedado no Azure, muitas pessoas notaram que os problemas de conexão melhoraram depois de mudar para o Heroku.
 
-A workaround to connection issues in Azure is to set in Application settings HTTP protocol to 2.0 and Websockets to ON
+Uma solução alternativa para problemas de conexão no Azure é definir em Application settings o HTTP protocol para 2.0 e Websockets para ON
 
-* No BG reading from Nightscout
+* Nenhuma leitura de glicose do Nightscout
 
-If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSClientV3 settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**. This option is hidden while client control is on ([hardened mode](#client-master-control-hardened-mode)); in that case check that **NSClient BG** is selected in **Configuration** → **BG Source**.
+Se o **AAPS** conecta corretamente ao Nightscout, mas a glicose aparece como N/A: nas [configurações do NSClientV3](#Preferences-nsclient), abra **Sincronização** e ative **Receber dados de CGM do NS**. Esta opção fica oculta enquanto o controle do cliente está ativado ([modo reforçado](#client-master-control-hardened-mode)); nesse caso, verifique se **Glicemia via NSClient** está selecionado em **Configuração** → **Fonte de BG**.
 
-* If you still get an error...
+* Se você ainda recebe um erro...
 
-Check the size of your database in MongoDB (or via the database size plugin in nightscout). If you are using the free tier in MongoDB, 496MB means it is full and needs to be cleaned up. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
+Verifique o tamanho do seu banco de dados no MongoDB (ou pelo plugin de tamanho do banco de dados no Nightscout). Se você usa o plano gratuito do MongoDB, 496MB significa que ele está cheio e precisa ser limpo. [Siga estas instruções do Nightscout para verificar o tamanho do seu banco de dados e apagar dados](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
 
-Before clearing data from your database and if you haven't already set it up, you should consider donating your AAPS data to the Open Humans project (for research). The instructions are on the [OpenHumans configuration page](../SupportingAaps/OpenHumans.md).
+Antes de apagar dados do seu banco de dados, e se você ainda não fez isso, considere doar os seus dados do AAPS para o projeto Open Humans (para pesquisa). As instruções estão na [página de configuração do Open Humans](../SupportingAaps/OpenHumans.md).

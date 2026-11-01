@@ -7,7 +7,7 @@
 
 -   Start X1 傳感器
 
-- Select **Syai/Ottai** in [Configuration, BG Source](#Config-Builder-bg-source).
+- 請在[組態建置工具的「血糖來源」](#Config-Builder-bg-source)中選取 **Syai/Ottai**。
 
 在 Syai 應用程式中啟用廣播：
 

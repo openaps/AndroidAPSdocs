@@ -139,7 +139,7 @@ Eine **niedrigerer / stärkerer ISF** (z. B. 40 statt 50) bedeutet, dass das Ins
 
 Ein **höherer / schwächerer ISF** (z. B. 45 statt 35) bedeutet, dass das Insulin Deinen **Glukosewert** mit einer Einheit stärker senkt. Dies führt zu einer weniger aggressiven / schwächeren Korrektur des Loops mit **weniger Insulin**. Ist Dein **ISF** zu schwach (großer Wert), kann dies zu hohen **Glukosewerten** führen.
 
-**Example:**
+**Beispiel:**
 * **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
 * So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
 * Wenn `ISF = 30` -> `90 / 30 = 3` oder `ISF = 1,3` -> `4,9 / 1,63 = 3`: 3 Einheiten Insulin
@@ -193,7 +193,7 @@ Aufgrund von Hormonen und sportlichen Aktivitäten ist es normal, über den Tag 
 > 
 > Beim **ICR** hingegen ist die Insulinmenge fix und die Menge der Kohlenhydrate variiert. ("Wie viele Gramm Kohlenhydrate können mit einer Einheit Insulin abgedeckt werden?")
 > 
-> Example:
+> Beispiel:
 > 
 > BE-Faktor (BE = 12g KH): 2,4 IE/BE -> Du benötigst 2,4 Einheiten Insulin, wenn Du eine BE isst.
 > 

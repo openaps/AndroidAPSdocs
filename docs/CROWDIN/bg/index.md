@@ -106,14 +106,14 @@ Android APS (**AAPS**) е приложение с отворен код за х�
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
 ```{toctree}
-:caption: 4) Конфигуриране на AAPS
+:caption: 4) Configure AAPS
 
-Съветник за настройване на AAPS <./SettingUpAaps/SetupWizard.md>
-Вашият профил в AAPS <./SettingUpAaps/YourAapsProfile.md>
-Промени в конфигурацията на AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Конфигурация (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
-- Опции <./SettingUpAaps/Preferences.md>
-Изпълнение на целите <./SettingUpAaps/CompletingTheObjectives.md>
+Setup Wizard <./SettingUpAaps/SetupWizard.md>
+Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
+- Settings <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -165,15 +165,15 @@ SMS команди <./RemoteFeatures/SMSCommands.md>
 ```
 
 ```{toctree}
-:caption: 8) Поддръжка на AAPS
+:caption: 8) Maintenance of AAPS
 
-Създаване и възстановяване на резервни копия <./Maintenance/ExportImportSettings.md>
-Бележки към версиите <./Maintenance/ReleaseNotes.md>
-Какво се промени в AAPS v4 <./Maintenance/V4Changes.md>
-Актуализиране до нова версия или клон <./Maintenance/UpdateToNewVersion.md>
-- Актуализиране в браузъра (fork) <./Maintenance/UpdateBrowserBuild.md>
-- Актуализиране с Android Studio <./Maintenance/UpdateComputerBuild.md>
-Край на поддръжката <./Maintenance/EndOfLife.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
+AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+What changed in AAPS v4 <./Maintenance/V4Changes.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
+- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
+End of life <./Maintenance/EndOfLife.md>
 
 ```
 

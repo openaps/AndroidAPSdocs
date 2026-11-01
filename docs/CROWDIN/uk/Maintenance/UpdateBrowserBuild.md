@@ -1,111 +1,111 @@
-# Update with a browser (fork)
+# Оновлення в браузері (fork)
 
 ```{tip}
-You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+Ви зібрали AAPS за допомогою **AAPS Builder**? Ця сторінка вам не потрібна: див. [Оновлення AAPS з AAPS Builder](#aaps-builder-updates).
 ```
 
-## Build yourself instead of download
+## Зберіть самі, а не завантажуйте
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** не можна завантажити через правила для медичних виробів. Збирати застосунок для власного використання законно, але ви не повинні давати його копію іншим! Докладніше див. на [сторінці FAQ](../UsefulLinks/FAQ.md).
 
 ```{note}
-In case you want to upgrade **AAPS** with a browser for the first time : copy your back-up keystore file to your Google Drive. Then follow the [Browser Build **AAPS** procedure](../SettingUpAaps/BrowserBuild.md) instead of this guide. Instead of creating a new keystore, you must select the one you have copied from your computer.
-This operation will be mandatory only the first time, then for successive upgrades you will be able to follow this guide.
+Якщо ви хочете оновити **AAPS** у браузері вперше: скопіюйте резервну копію файлу keystore на ваш Google Drive. Потім виконайте [процедуру збірки **AAPS** в браузері](../SettingUpAaps/BrowserBuild.md), а не цю інструкцію. Замість того щоб створювати новий keystore, ви повинні вибрати той, який скопіювали зі свого комп’ютера.
+Це обов’язково лише перший раз, а для наступних оновлень ви зможете виконувати цю інструкцію.
 ```
 
 ```{tip}
-**Switching to AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) is the simpler browser build: no fork to sync, and you download the app directly from GitHub. You don't have to switch: this guide keeps working. If you switch, first get a copy of your keystore from your fork, as explained in [Coming from the previous browser build](#aaps-builder-from-fork). Otherwise the new build cannot update the AAPS on your phone.
+**Переходите на AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) — простіша збірка в браузері: не треба синхронізувати fork, а застосунок ви завантажуєте прямо з GitHub. Переходити не обов’язково: ця інструкція й далі працює. Якщо ви переходите, спочатку отримайте копію вашого keystore зі свого fork, як описано в розділі [Перехід з попередньої збірки в браузері](#aaps-builder-from-fork). Інакше нова збірка не зможе оновити AAPS на вашому телефоні.
 ```
 
-## Overview for updating to a new version of AAPS with a browser
+## Огляд оновлення до нової версії AAPS у браузері
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+Якщо виникли проблеми, див. окрему сторінку [Збірка в браузері: усунення проблем](../GettingHelp/BrowserBuildTroubleshooting.md).
 
-### Export your settings
+### Експортуйте налаштування
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Експортуйте налаштування з наявної версії **AAPS** на вашому телефоні. Можливо, вони вам не знадобляться, але краще перестрахуватися.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Якщо ви не пам’ятаєте, як це зробити, див. сторінку [Експорт та імпорт налаштувань](ExportImportSettings.md).
 
 (Update-to-new-version-update-your-repo)=
-### Update your GitHub repository
+### Оновіть ваш репозиторій GitHub
 
-[Log into GitHub](https://github.com/login).
+[Увійдіть у GitHub](https://github.com/login).
 
-1. Select Repositories.
-2. Scroll down and select your own AndroidAPS repository.
+1. Виберіть Repositories (репозиторії).
+2. Прокрутіть униз і виберіть ваш власний репозиторій AndroidAPS.
 
-![Select AndroidAPS repo](../images/update/CI/GitHubUpdate1.png)
+![Вибір репозиторію AndroidAPS](../images/update/CI/GitHubUpdate1.png)
 
-3. Verify you are using your own copy of AndroidAPS (Forked from nightscout/AndroidAPS)
-4. Tap Sync Fork to update it (the number of commits behind might differ from the picture)
+3. Переконайтеся, що ви використовуєте власну копію AndroidAPS (Forked from nightscout/AndroidAPS)
+4. Натисніть Sync fork, щоб оновити її (кількість комітів, на які копія відстає, може відрізнятися від зображення)
 
 
 
-![Sync AndroidAPS repo](../images/update/CI/GitHubUpdate2.png)
+![Синхронізація репозиторію AndroidAPS](../images/update/CI/GitHubUpdate2.png)
 
-5. Tap Update Branch
+5. Натисніть Update branch
 
-![Update AndroidAPS repo](../images/update/CI/GitHubUpdate3.png)
+![Оновлення репозиторію AndroidAPS](../images/update/CI/GitHubUpdate3.png)
 
-Note: if you have modified your copy of AndroidAPS by mistake, you will see this screen. Discard all changes (commits) to return to the released version.
+Примітка: якщо ви помилково змінили свою копію AndroidAPS, ви побачите цей екран. Відхиліть усі зміни (коміти) (Discard), щоб повернутися до випущеної версії.
 
-![Discard rogue modifications](../images/update/CI/GitHubUpdate4.png)
+![Відхилення випадкових змін](../images/update/CI/GitHubUpdate4.png)
 
-You have now synchronized (updated) your own copy with the latest release of Android APS. Good job.
+Тепер ви синхронізували (оновили) свою копію з останнім випуском AndroidAPS. Чудово.
 
-![Repo sync'ed](../images/update/CI/GitHubUpdate5.png)
+![Репозиторій синхронізовано](../images/update/CI/GitHubUpdate5.png)
 
-### Run the Workflow to Build the Signed APK
+### Запустіть робочий процес (workflow), щоб зібрати підписаний APK
 
-1. In your GitHub copy of AndroidAPS, select Actions.
-2. Expand All Workflows.
-3. Select AAPS-CI
+1. У вашій копії AndroidAPS на GitHub виберіть Actions.
+2. Розгорніть All workflows.
+3. Виберіть AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
-4. Scroll down and tap Run Workflow.
+4. Прокрутіть униз і натисніть Run workflow.
 
-![Run Workflow](../images/update/CI/GitHubActions2.png)
+![Run workflow](../images/update/CI/GitHubActions2.png)
 
-5. Keep the branch set to master, select the AAPS Version you want to build — either the latest version or a specific required version — choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
-
-
-
-![Run Workflow](../images/update/CI/GitHubActions3.png)
-
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of Android APS. This means that the Master and Wear apk is now directly saved into your Google Drive (as per below). AAPSClient apk can be downloaded from Github > nightscout > AndroidAPS [here](https://github.com/nightscout/AndroidAPS/releases)
+5. Залиште гілку master, виберіть AAPS Version (версію AAPS), яку хочете зібрати, — останню версію або конкретну потрібну версію, — виберіть [варіант](#browserbuild-variant) (fullRelease), а потім натисніть Run workflow.
 
 
-![Monitor Workflow](../images/update/CI/GitHubActions4.png)
+
+![Run workflow](../images/update/CI/GitHubActions3.png)
+
+6. Ви побачите повідомлення Workflow run was successfully requested. Оновіть сторінку в браузері, і ви зможете стежити за ходом збірки. Коли дія завершиться, біля дії AAPS CI з’явиться зелена галочка. Ви успішно зібрали оновлену версію AndroidAPS. Це означає, що apk для основного телефона (Master) і для годинника (Wear) тепер зберігаються прямо у вашому Google Drive (як показано нижче). apk AAPSClient можна завантажити з Github > nightscout > AndroidAPS [тут](https://github.com/nightscout/AndroidAPS/releases)
 
 
-### Install the AAPS APK
+![Стеження за робочим процесом](../images/update/CI/GitHubActions4.png)
 
-1. Open your Google Drive
-2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
 
-![Google Drive Location](../images/update/CI/GitHubActions5.png)
+### Встановіть APK AAPS
+
+1. Відкрийте ваш Google Drive
+2. Відкрийте папку AAPS, виберіть папку нової версії, і ви знайдете там версії для телефона і для Android Wear.
+
+![Розташування в Google Drive](../images/update/CI/GitHubActions5.png)
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+З вересня 2026 року [перевірка розробників Android](#android-developer-verification) від Google може, залежно від вашої країни, блокувати встановлення APK натисканням на файл. Безкоштовні обхідні способи описано на тій сторінці.
 ```
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone)
+Продовжуйте [тут](#Update-to-new-version-check-aaps-version-on-phone)
 
 (update-browser-build-troubleshooting)=
 
 ## Усунення несправностей
 
-If anything goes wrong, don't panic.
+Якщо щось пішло не так, не панікуйте.
 
-Take a breath!
+Зробіть вдих!
 
-Then check if your problem is already documented: see [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) if you build with **AAPS Builder**, or [Browser build troubleshooting](#aaps-ci-troubleshooting) otherwise.
+Потім перевірте, чи вашу проблему вже описано: див. [Усунення проблем з AAPS Builder](#aaps-builder-troubleshooting), якщо ви збираєте за допомогою **AAPS Builder**, або [Усунення проблем зі збіркою в браузері](#aaps-ci-troubleshooting) в іншому випадку.
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Якщо вам потрібна додаткова допомога, зверніться до інших користувачів **AAPS** у [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) або [Discord](https://discord.gg/4fQUWHZ4Mw).

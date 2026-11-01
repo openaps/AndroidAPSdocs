@@ -2,7 +2,7 @@
 
 ## Kein Download möglich - APK muss selbst erstellt werden
 
-Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist **AAPS** nicht als Download verfügbar. Es ist zulässig, die App für den eigenen Gebrauch zu erstellen, aber du darfst keine Kopie an andere weitergeben! Zu den Details schaue bitte auf die [FAQ-Seite](../UsefulLinks/FAQ.md).
+Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist **AAPS** nicht als Download verfügbar. Es ist zulässig, die App für den eigenen Gebrauch zu erstellen, aber Du darfst keine Kopie an andere weitergeben! Zu den Details schaue bitte auf die [FAQ-Seite](../UsefulLinks/FAQ.md).
 
 ```{note}
 Falls Du **AAPS** auf einem neuen Computer erstellen möchtest: Kopiere das Backup Deiner Keystore-Datei auf den neuen Computer. Folge dann dem [Prozess für die erstmalige **AAPS**-Erstellung](../SettingUpAaps/BuildingAaps.md) und nicht dieser Anleitung. Der einzige Unterschied besteht darin, dass Du anstelle einen neuen Keystore zu erstellen, den Keystore auswählst, den Du auf den neuen Computer kopiert hast.
@@ -15,7 +15,7 @@ Falls Du **AAPS** auf einem neuen Computer erstellen möchtest: Kopiere das Back
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+Falls Du damit Probleme haben solltest, findest Du einige Lösungen auf der eigenen Seite [Fehlerbehebung für Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 ### Exportiere Deine Einstellungen
 
@@ -83,7 +83,7 @@ Wenn Du beim Erstellen Deinen bestehenden „Keystore“ im Android Studio genut
 In allen anderen Fällen (z.B. wenn ein neuer 'key store' für das Signieren der APK genutzt wurde), muss die alte App gelöscht werden, bevor die neue Version installiert werden kann. **Achte darauf, Deine Einstellungen zu exportieren!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Where Google's [Android developer verification](#android-developer-verification) is enforced (from September 2026, depending on your country), install with [ADB](#android-developer-verification-adb) instead of tapping the APK file.
+Nutze die Anleitung [AAPS auf Dein Smartphone übertragen und installieren](../SettingUpAaps/TransferringAndInstallingAaps.md). Wo Google die [Entwicklerverifizierung für Android](#android-developer-verification) erfordert (ab September 2026, je nach Land), installierst Du die App mit [ADB](#android-developer-verification-adb), statt auf die APK-Datei zu tippen.
 
 [Hier](#Update-to-new-version-check-aaps-version-on-phone) geht's weiter.
 
@@ -95,6 +95,6 @@ Keine Panik, wenn irgendetwas schiefläuft.
 
 Tief durchatmen!
 
-Then see the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) if your problem is already documented!
+Danach schaue auf der Seite [Fehlerbehebung für Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) nach einer Lösung, sofern Dein Problem bereits bekannt sein sollte!
 
 Wenn Du weitere Hilfe brauchst, kontaktiere bitte andere **AAPS**-Nutzende auf [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) oder [Discord](https://discord.gg/4fQUWHZ4Mw).

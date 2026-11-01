@@ -106,14 +106,14 @@ Configurar el servidor de informes <./SettingUpAaps/SettingUpTheReportingServer.
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
 ```{toctree}
-:caption: 4) Configurar AAPS
+:caption: 4) Configure AAPS
 
-Asistente de configuración <./SettingUpAaps/SetupWizard.md>
-Tu perfil de AAPS <./SettingUpAaps/YourAapsProfile.md>
-Hacer cambios en la configuración de AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Configuración (Tabla de configuraciones) <./SettingUpAaps/ConfigBuilder.md>
-- Preferencias <./SettingUpAaps/Preferences.md>
-Completar los objetivos <./SettingUpAaps/CompletingTheObjectives.md>
+Setup Wizard <./SettingUpAaps/SetupWizard.md>
+Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
+- Settings <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -165,15 +165,15 @@ Sitio de intercambio de esferas personalizadas <./ExchangeSiteCustomWatchfaces/i
 ```
 
 ```{toctree}
-:caption: 8) Mantenimiento de AAPS
+:caption: 8) Maintenance of AAPS
 
-Crear y restaurar copias de seguridad <./Maintenance/ExportImportSettings.md>
-Notas de la versión <./Maintenance/ReleaseNotes.md>
-Qué cambió en AAPS v4 <./Maintenance/V4Changes.md>
-Actualizar a una nueva versión o rama <./Maintenance/UpdateToNewVersion.md>
-- Actualizar con un navegador (fork) <./Maintenance/UpdateBrowserBuild.md>
-- Actualizar con Android Studio <./Maintenance/UpdateComputerBuild.md>
-Fin de vida útil <./Maintenance/EndOfLife.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
+AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+What changed in AAPS v4 <./Maintenance/V4Changes.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
+- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
+End of life <./Maintenance/EndOfLife.md>
 
 ```
 

@@ -1,25 +1,25 @@
-# Search the documentation
+# Pesquisar na documentação
 
-The documentation contains a lot of information. If you are looking for a specific topic, term or setting, using the search feature is often faster than browsing through the menu.
+A documentação contém muita informação. Se procura um tema, termo ou definição específico, usar a pesquisa é muitas vezes mais rápido do que navegar pelo menu.
 
-## How to search
+## Como pesquisar
 
-The search box is located at the top of the navigation panel on the left side of the screen.
+A caixa de pesquisa está no topo do painel de navegação, no lado esquerdo do ecrã.
 
 ```{note}
-On smaller screens (such as a phone) the navigation panel is hidden. Tap the menu (☰) icon in the top left corner to open it and reveal the search box.
+Em ecrãs mais pequenos (por exemplo, num telefone), o painel de navegação está oculto. Toque no ícone do menu (☰) no canto superior esquerdo para o abrir e mostrar a caixa de pesquisa.
 ```
 
-1. Type one or more keywords into the search box.
-2. Press `Enter` or tap the search icon.
-3. A results page opens, listing every page where your keywords appear. Click a result to jump to the matching page.
+1. Escreva uma ou mais palavras-chave na caixa de pesquisa.
+2. Prima `Enter` ou toque no ícone de pesquisa.
+3. Abre-se uma página de resultados com todas as páginas onde aparecem as suas palavras-chave. Clique num resultado para ir para a página correspondente.
 
-## Tips for better results
+## Dicas para obter melhores resultados
 
-- Use specific terms (for example `temp target` or `autosens`) rather than full sentences.
-- Searching with several keywords returns the pages containing those words. Start broad and add keywords to narrow the results.
-- The search only covers the language and version of the documentation you are currently reading. If you cannot find something, try switching to the English version, which is the most complete (see [Change language and version](./ChangeLanguageVersion.md)).
+- Use termos específicos (por exemplo `temp target` ou `autosens`) em vez de frases completas.
+- Uma pesquisa com várias palavras-chave devolve as páginas que contêm essas palavras. Comece com uma pesquisa geral e adicione palavras-chave para restringir os resultados.
+- A pesquisa abrange apenas o idioma e a versão da documentação que está a ler. Se não encontrar algo, experimente mudar para a versão em inglês, que é a mais completa (consulte [Alterar o idioma e a versão](./ChangeLanguageVersion.md)).
 
 ```{note}
-The search index is built automatically. Very recently added content may take some time to become searchable.
+O índice de pesquisa é criado automaticamente. Os conteúdos adicionados muito recentemente podem demorar algum tempo até aparecerem na pesquisa.
 ```

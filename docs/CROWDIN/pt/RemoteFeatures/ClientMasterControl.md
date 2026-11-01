@@ -1,9 +1,9 @@
 (client-master-control)=
-# Master ↔ Client control (signed remote control)
+# Controlo principal ↔ cliente (controlo remoto assinado)
 
-From **AAPS** version 4, a follower phone running **AAPSClient** can do much more than *announce* treatments through Nightscout: once it has been **paired** with the main phone, it can send **signed commands** that the main phone (the **master**) checks, confirms and executes — including delivering an **insulin bolus** on the master's pump.
+A partir da versão 4 do **AAPS**, um telefone de seguidor com o **AAPSClient** pode fazer muito mais do que *anunciar* tratamentos através do Nightscout: depois de **emparelhado** com o telefone principal, pode enviar **comandos assinados** que o telefone principal (o **master**) verifica, confirma e executa — incluindo administrar um **bólus de insulina** na bomba do telefone principal.
 
-This page explains how it works, and how to set it up and use it.
+Esta página explica como funciona, como o configurar e como o usar.
 
 ```{contents} Table of contents
 :depth: 2
@@ -12,257 +12,257 @@ This page explains how it works, and how to set it up and use it.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Master** = the main **AAPS** phone that owns the pump and runs the loop (the `full` app).
-- **Client** = an **AAPSClient** phone with no pump that follows and now also *controls* the master.
-- Both phones must be connected to the **same Nightscout** site. All communication still travels through Nightscout — no direct connection between the phones is needed.
+- **Telefone principal** (master) = o telefone **AAPS** principal, que tem a bomba e faz funcionar o loop (a app `full`).
+- **Cliente** = um telefone com o **AAPSClient**, sem bomba, que segue o telefone principal e agora também o *controla*.
+- Os dois telefones têm de estar ligados ao **mesmo site Nightscout**. Toda a comunicação continua a passar pelo Nightscout — não é preciso nenhuma ligação direta entre os telefones.
 ```
 
 ---
 
-## How it works
+## Como funciona
 
 ```{admonition} Coming from AAPS v3?
 :class: note
-In **AAPS** v3, **AAPSClient** could only write unsigned care-portal treatments to Nightscout, and could not deliver a bolus. Remote control now needs a one-time [pairing](#client_master_master_setup). See also [What changed in AAPS v4](#v4changes-remote-control).
+No **AAPS** v3, o **AAPSClient** só podia escrever tratamentos do careportal não assinados no Nightscout e não podia administrar um bólus. O controlo remoto precisa agora de um [emparelhamento](#client_master_master_setup) único. Veja também [O que mudou no AAPS v4](#v4changes-remote-control).
 ```
 
-**AAPS** v4 uses a dedicated **Client-Control** channel. It still rides on your Nightscout site (in the `settings` collection), but every message is **cryptographically signed** with a secret that only the two phones know. The secret is handed over once, during **pairing**, and replaced by a new one right after it, so it never travels in clear text.
+O **AAPS** v4 usa um canal próprio de **controlo pelos clientes** (Client-Control). Este canal continua a passar pelo seu site Nightscout (na coleção `settings`), mas cada mensagem é **assinada criptograficamente** com um segredo que só os dois telefones conhecem. O segredo é entregue uma única vez, durante o **emparelhamento**, e substituído por um novo logo a seguir, por isso nunca circula em texto simples.
 
-The guiding principle is **the master is in charge**:
+O princípio base é: **quem manda é o telefone principal**:
 
-1. The client sends an *intent* (“bolus 2 U”, “start the Exercise scene”, “set this temp target”…).
-2. The **master** re-computes and **caps** the action against its **own** live data (profile, IOB, COB, current temp target, pump), and **authors the exact confirmation** the user will see.
-3. The client (or watch) shows the **master's** confirmation text — it never builds its own.
-4. On confirmation the master **executes once** and reports the result back to the client.
+1. O cliente envia uma *intenção* («bólus de 2 U», «iniciar a cena Exercício», «definir este alvo temporário»…).
+2. O **telefone principal** volta a calcular e **limita** a ação com base nos seus **próprios** dados atuais (perfil, IA, HCA, alvo temporário atual, bomba) e **escreve a confirmação exata** que o utilizador vai ver.
+3. O cliente (ou o relógio) mostra o texto de confirmação do **telefone principal** — nunca cria o seu próprio.
+4. Depois da confirmação, o telefone principal **executa uma única vez** e envia o resultado de volta ao cliente.
 
-What this means for you:
+O que isto significa para si:
 
-- **Signed commands**: only the clients you paired can send commands (per-client pairing secret and signature). Old or replayed commands are rejected.
-- **A role for each client**: you decide what each client may do, from *Read-only* to *Admin* — see [Client roles](#client-master-control-roles).
-- **Insulin bolus from a client**: the master delivers it on its pump, and the client shows the delivery progress.
-- **The master decides**: it caps every action against its own constraints and writes the confirmation shown on the client.
-- **Only paired clients change therapy**: while client control is on, the master no longer takes treatments or changes typed directly into Nightscout — see [Hardened mode](#client-master-control-hardened-mode).
-- **Each client gets its own Nightscout token** with only the rights a client needs — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Master offline**: actions are blocked with a clear message.
-- **Revoking a client** takes one tap (per client), or use the master's switch to stop all clients.
+- **Comandos assinados**: só os clientes que emparelhou podem enviar comandos (segredo de emparelhamento e assinatura próprios de cada cliente). Comandos antigos ou repetidos são rejeitados.
+- **Uma função para cada cliente**: decide o que cada cliente pode fazer, de *Só leitura* a *Admin* — veja [Funções dos clientes](#client-master-control-roles).
+- **Bólus de insulina a partir de um cliente**: o telefone principal administra-o na sua bomba e o cliente mostra o progresso da administração.
+- **Quem decide é o telefone principal**: limita cada ação de acordo com as suas próprias restrições e escreve a confirmação mostrada no cliente.
+- **Só os clientes emparelhados alteram a terapia**: enquanto o controlo pelos clientes estiver ligado, o telefone principal deixa de aceitar tratamentos ou alterações introduzidos diretamente no Nightscout — veja [Modo reforçado](#client-master-control-hardened-mode).
+- **Cada cliente recebe o seu próprio token do Nightscout**, só com os direitos de que um cliente precisa — veja [O token do Nightscout próprio do cliente](#client-master-control-own-token).
+- **Telefone principal offline**: as ações são bloqueadas com uma mensagem clara.
+- **Revogar um cliente** exige um só toque (por cliente); também pode usar o interruptor do telefone principal para parar todos os clientes.
 
-Actions that can be triggered from a client: **bolus**, **carbs / eCarbs**, **temporary target** (set & cancel), **profile switch**, **loop / running-mode** change, **temp basal** (set & cancel), **extended bolus** (set & cancel), **insulin selection**, and **[scenes](../DailyLifeWithAaps/Scenes.md)**. A subset of bidirectional **preferences** is also kept in sync between master and clients.
+Ações que podem ser iniciadas a partir de um cliente: **bólus**, **hidratos de carbono / eCarbs**, **alvo temporário** (definir e cancelar), **troca de perfil**, mudança do **loop / modo de funcionamento**, **basal temporária** (definir e cancelar), **bólus prolongado** (definir e cancelar), **seleção da insulina** e **[cenas](../DailyLifeWithAaps/Scenes.md)**. Uma parte das **preferências** bidirecionais também é mantida sincronizada entre o telefone principal e os clientes.
 
 ---
 
-## Roles and prerequisites
+## Funções e pré-requisitos
 
 ```{admonition} Before you start
 :class: important
-- The **master** runs the normal `full` **AAPS** build and is connected to your pump.
-- The **master** uses **NSClientV3** with your Nightscout and is showing *connected*. Give it an **admin token** of your Nightscout: with it the master can make a token of its own for each client and show it to the client as a QR code.
-- The **client** runs **[AAPSClient](AapsClient.md)** (or **AAPSClient2** / **AAPSClient3** for further patients — see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)). It must use the **same** Nightscout. If you set it up with the master's QR code, the client gets its Nightscout address and token from the master; otherwise set up **NSClientV3** on it yourself first.
-- **Websockets** are needed on both phones: commands only reach the master over the websocket connection. While client control is on, **AAPS** keeps websockets on, on the master and on paired clients.
+- O **telefone principal** usa a compilação `full` normal do **AAPS** e está ligado à sua bomba.
+- O **telefone principal** usa o **NSClientV3** com o seu Nightscout e mostra *Ligado*. Dê-lhe um **token de administrador** do seu Nightscout: com ele, o telefone principal pode criar um token próprio para cada cliente e mostrá-lo ao cliente como código QR.
+- O **cliente** usa o **[AAPSClient](AapsClient.md)** (ou o **AAPSClient2** / **AAPSClient3** para outros doentes — veja [Sobre o AAPSClient, o AAPSClient2 e o AAPSClient3](#remotecontrol-aapsclient-versions)). Tem de usar o **mesmo** Nightscout. Se o configurar com o código QR do telefone principal, o cliente recebe o endereço e o token do Nightscout do telefone principal; caso contrário, configure primeiro o **NSClientV3** no cliente.
+- Os **websockets** são necessários nos dois telefones: os comandos só chegam ao telefone principal pela ligação websocket. Enquanto o controlo pelos clientes estiver ligado, o **AAPS** mantém os websockets ligados, no telefone principal e nos clientes emparelhados.
 ```
 
-Pairing and synchronization are two different things:
+Emparelhamento e sincronização são duas coisas diferentes:
 
-- **Synchronization** (data: BG, treatments, profile) is set up as before — see [Synchronization](#RemoteControl_aapsclient). The master's QR code can do it for you on the client.
-- **Pairing** (control: the signed command channel described here) is the new step below.
+- A **sincronização** (dados: glicose, tratamentos, perfil) é configurada como antes — veja [Sincronização](#RemoteControl_aapsclient). O código QR do telefone principal pode fazê-la por si no cliente.
+- O **emparelhamento** (controlo: o canal de comandos assinados descrito aqui) é o novo passo abaixo.
 
 ---
 
-## Setting it up
+## Configuração
 
 (client_master_master_setup)=
-### 1. On the master — enable control and add a client
+### 1. No telefone principal — ativar o controlo e adicionar um cliente
 
-On the master, open the **Manage** screen and choose **Authorized clients**.
+No telefone principal, abra o ecrã **Gerir** e escolha **Clientes autorizados**.
 
-Turn on **Allow client control** (it is **off** by default). This is the master kill-switch: with it off, no client can send commands, but your paired clients are kept so you can turn it back on later. Turning it on also turns on [Hardened mode](#client-master-control-hardened-mode), shown as "*Hardened mode on*" with an **(i)** that explains it. In [Simple Mode](#preferences-simple-mode) client control is always on, so the switch is not shown.
+Ligue **Permitir controlo pelos clientes** (está **desligado** por predefinição). Este é o interruptor geral: desligado, nenhum cliente pode enviar comandos, mas os seus clientes emparelhados são mantidos, para que o possa voltar a ligar mais tarde. Ligá-lo também liga o [Modo reforçado](#client-master-control-hardened-mode), mostrado como "*Modo reforçado ligado*", com um **(i)** que o explica. No [Modo simples](#preferences-simple-mode), o controlo pelos clientes está sempre ligado, por isso o interruptor não é mostrado.
 
-![Authorized clients screen on the master](../images/v4/ClientMaster/authorized_clients_master.png)
+![Ecrã Clientes autorizados no telefone principal](../images/v4/ClientMaster/authorized_clients_master.png)
 
-Tap the **+** button (bottom right) to add a client. In the **New client** dialog:
+Toque no botão **+** (em baixo, à direita) para adicionar um cliente. Na caixa de diálogo **Novo cliente**:
 
-1. Enter a **device name**, so you can recognize it in the list.
-2. Choose **how the phone is set up** (see the table below).
-3. Choose its **[role](#client-master-control-roles)**. Nothing is selected for you: the right role depends on who uses the phone.
+1. Introduza um **Nome do dispositivo**, para o reconhecer na lista.
+2. Escolha **Como é configurado o telefone?** (veja a tabela abaixo).
+3. Escolha a sua **[função](#client-master-control-roles)**. Nada é selecionado por si: a função certa depende de quem usa o telefone.
 
-![New client dialog on the master: device name, how the phone is set up, and its role](../images/v4/ClientMaster/new_client_master.png)
+![Caixa de diálogo Novo cliente no telefone principal: nome do dispositivo, como é configurado o telefone e a sua função](../images/v4/ClientMaster/new_client_master.png)
 
-| Way                                 | What the new phone gets                                                       | Use it when                                                                                            |
-| ----------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| **QR code: Nightscout and pairing** | the Nightscout address, its own Nightscout token and the pairing, in one scan | the new phone has a camera: the quickest way, nothing to type                                          |
-| **QR code: Nightscout only**        | the Nightscout address and its own Nightscout token, no pairing               | the phone should only **show** data and never send commands                                            |
-| **PIN**                             | the pairing only; it keeps the Nightscout settings it has                     | the phone has no camera (or the master cannot make tokens); it must be connected to Nightscout already |
+| Forma                                      | O que o novo telefone recebe                                                                    | Use quando                                                                                                      |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| **Código QR: Nightscout e emparelhamento** | o endereço do Nightscout, o seu próprio token do Nightscout e o emparelhamento, numa só leitura | o novo telefone tem câmara: a forma mais rápida, sem nada para escrever                                         |
+| **Código QR: só Nightscout**               | o endereço do Nightscout e o seu próprio token do Nightscout, sem emparelhamento                | o telefone deve apenas **mostrar** dados e nunca enviar comandos                                                |
+| **PIN**                                    | só o emparelhamento; mantém as definições do Nightscout que já tem                              | o telefone não tem câmara (ou o telefone principal não pode criar tokens); tem de já estar ligado ao Nightscout |
 
-The two QR code ways need an **admin token** in the master's **NSClientV3** settings, because the master makes the client's token in Nightscout. Without one, the QR code options are shown but cannot be chosen, and the dialog says why; the **PIN** always works.
+As duas formas com código QR precisam de um **token de administrador** nas definições do **NSClientV3** do telefone principal, porque é o telefone principal que cria o token do cliente no Nightscout. Sem ele, as opções de código QR aparecem, mas não podem ser escolhidas, e a caixa de diálogo explica porquê; o **PIN** funciona sempre.
 
-#### With a QR code
+#### Com um código QR
 
-Tap **OK**: the master makes the client's Nightscout token and shows a **QR code**. A code that also pairs works for about **two minutes**; the screen counts down and closes by itself when the client has paired. Scan it on the new phone as described in [On the client](#client_master_client_setup).
+Toque em **OK**: o telefone principal cria o token do Nightscout do cliente e mostra um **código QR**. Um código que também emparelha funciona durante cerca de **dois minutos**; o ecrã faz a contagem decrescente e fecha-se sozinho quando o cliente tiver emparelhado. Leia-o no novo telefone, como descrito em [No cliente](#client_master_client_setup).
 
 ```{admonition} The QR code is a secret
 :class: warning
-Anyone who sees the QR code can read your Nightscout, and a code that pairs also carries the pairing. Show it only to the new phone. **AAPS** blocks screenshots while the code is on screen.
+Qualquer pessoa que veja o código QR pode ler o seu Nightscout, e um código que emparelha também contém o emparelhamento. Mostre-o apenas ao novo telefone. O **AAPS** bloqueia as capturas de ecrã enquanto o código está no ecrã.
 ```
 
-![The master's QR code screen with its countdown (code blurred)](../images/v4/ClientMaster/qr_code_master.png)
+![O ecrã do código QR do telefone principal com a contagem decrescente (código desfocado)](../images/v4/ClientMaster/qr_code_master.png)
 
-#### With a PIN
+#### Com um PIN
 
-Tap **OK**: the master displays an 8-digit **pairing PIN**, shown in two groups of four (for example `1234 5678`). This PIN is **one-time** and **expires after about two minutes**.
+Toque em **OK**: o telefone principal mostra um **PIN de emparelhamento** de 8 dígitos, em dois grupos de quatro (por exemplo `1234 5678`). Este PIN é de **utilização única** e **expira após cerca de dois minutos**.
 
-![Master pairing screen showing the one-time PIN (the PIN shown here is expired)](../images/v4/ClientMaster/pairing_pin_master.png)
+![Ecrã de emparelhamento do telefone principal com o PIN de utilização única (o PIN mostrado aqui já expirou)](../images/v4/ClientMaster/pairing_pin_master.png)
 
 ```{admonition} The pairing PIN is a secret
 :class: warning
-The PIN protects the pairing secret that is exchanged through Nightscout. Share it only with the device you are pairing, do not post it publicly, and let it expire if you do not use it. A fresh PIN can always be generated by tapping **+** again.
+O PIN protege o segredo de emparelhamento que é trocado através do Nightscout. Partilhe-o apenas com o dispositivo que está a emparelhar, não o publique e deixe-o expirar se não o usar. Pode sempre gerar um novo PIN tocando outra vez em **+**.
 ```
 
 (client_master_client_setup)=
-### 2. On the client — pair with the master
+### 2. No cliente — emparelhar com o telefone principal
 
-#### Scanning the QR code
+#### Ler o código QR
 
-You can scan the master's QR code in two places:
+Pode ler o código QR do telefone principal em dois sítios:
 
-- in the client's **Setup Wizard**, on the step "**Set up from the master**", which comes before the Nightscout step. One scan then sets up Nightscout and, with a code that pairs, also the pairing, so the setup is finished: the wizard closes and the home screen opens;
-- at any time later from **Manage → Pair with master → Scan QR code**.
+- no **Assistente de Configuração** do cliente, no passo "**Configurar a partir do telefone principal**", que vem antes do passo do Nightscout. Uma só leitura configura então o Nightscout e, com um código que emparelha, também o emparelhamento, e a configuração fica concluída: o assistente fecha-se e abre-se o ecrã principal;
+- a qualquer momento mais tarde, em **Gerir → Emparelhar com o telefone principal → Ler código QR**.
 
-The first time, **AAPSClient** asks for the **camera** permission. If you refuse it, the screen says that the camera is needed, and you can allow it with **Try again** or pair with the PIN instead.
+Na primeira vez, o **AAPSClient** pede a permissão da **câmara**. Se a recusar, o ecrã diz que a câmara é necessária, e pode permiti-la com **Tentar novamente** ou emparelhar com o PIN.
 
-Point the camera at the code. The client shows what the code does — the Nightscout address and, for a code that pairs, the master it pairs with — and asks "**Use this code?**". Tap **Use**: the client turns on **NSClientV3**, replaces its Nightscout address and token with the ones from the code and turns on websockets. A code that pairs also pairs the phone; it says hello to the master as soon as it has connected to Nightscout.
+Aponte a câmara para o código. O cliente mostra o que o código faz — o endereço do Nightscout e, num código que emparelha, o telefone principal com que emparelha — e pergunta "**Usar este código?**". Toque em **Usar**: o cliente liga o **NSClientV3**, substitui o seu endereço e token do Nightscout pelos do código e liga os websockets. Um código que emparelha também emparelha o telefone; este cumprimenta o telefone principal logo que se liga ao Nightscout.
 
-![The client's Set up from the master wizard step](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+![O passo Configurar a partir do telefone principal no assistente do cliente](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
 ```{admonition} Scanning is available on Android
 :class: note
-The scanner is not available on iOS yet, and a desktop has no camera: use the PIN there.
+O leitor ainda não está disponível no iOS, e um computador de secretária não tem câmara: aí, use o PIN.
 ```
 
-#### Entering the PIN
+#### Introduzir o PIN
 
-On the client, open **Manage → Pair with master** (or the wizard step **Pair with master**, after the Nightscout step), **enter the 8-digit PIN** shown on the master and tap **Pair**. The client uses the PIN to securely retrieve the pairing offer through Nightscout, then asks "**Pair with this master?**" and shows the master's identifier. Tap **Pair** to confirm (see [Pairing with the master](#aapsclient-pairing-with-the-master) for a screenshot).
+No cliente, abra **Gerir → Emparelhar com o telefone principal** (ou o passo do assistente **Emparelhar com o telefone principal**, depois do passo do Nightscout), **introduza o PIN de 8 dígitos** mostrado no telefone principal e toque em **Emparelhar**. O cliente usa o PIN para obter de forma segura a oferta de emparelhamento através do Nightscout, depois pergunta "**Emparelhar com este telefone principal?**" e mostra o identificador do telefone principal. Toque em **Emparelhar** para confirmar (veja [Emparelhar com o telefone principal](#aapsclient-pairing-with-the-master) para uma captura de ecrã).
 
-![Pair-with-master screen on the client before pairing — enter the PIN here](../images/v4/ClientMaster/pair_with_master_unpaired.png)
+![Ecrã Emparelhar com o telefone principal no cliente antes do emparelhamento — introduza aqui o PIN](../images/v4/ClientMaster/pair_with_master_unpaired.png)
 
-#### After pairing
+#### Depois do emparelhamento
 
-Once a client is paired it sends a **Hello** to the master and appears in the master's **Authorized clients** list as **Active**, with a *“last seen”* time. The client knows its [role](#client-master-control-roles) from the pairing, so it shows the right buttons at once. A pairing made in the Setup Wizard finishes the wizard. In the same step the two phones replace the pairing secret with a new one that never travelled (see [Security notes](#client-master-control-security)), and a client that was set up with the PIN gets its own Nightscout token (see [The client's own Nightscout token](#client-master-control-own-token)). A client can be paired with **one** master at a time; to pair with a different master, **Unpair** first.
+Depois de emparelhado, o cliente envia um **Hello** (cumprimento) ao telefone principal e aparece na lista **Clientes autorizados** do telefone principal como **Ativo**, com a hora em que foi *«Visto pela última vez»*. O cliente sabe a sua [função](#client-master-control-roles) a partir do emparelhamento, por isso mostra logo os botões certos. Um emparelhamento feito no Assistente de Configuração termina o assistente. No mesmo passo, os dois telefones substituem o segredo de emparelhamento por um novo que nunca circulou (veja [Notas de segurança](#client-master-control-security)), e um cliente configurado com o PIN recebe o seu próprio token do Nightscout (veja [O token do Nightscout próprio do cliente](#client-master-control-own-token)). Um cliente só pode estar emparelhado com **um** telefone principal de cada vez; para emparelhar com outro telefone principal, toque primeiro em **Desemparelhar**.
 
-![Pair-with-master screen on the client (already-paired state)](../images/v4/ClientMaster/pair_with_master_client.png)
+![Ecrã Emparelhar com o telefone principal no cliente (já emparelhado)](../images/v4/ClientMaster/pair_with_master_client.png)
 
-### 3. Managing clients
+### 3. Gerir os clientes
 
-From the master's **Authorized clients** screen you can, at any time:
+No ecrã **Clientes autorizados** do telefone principal pode, a qualquer momento:
 
-- **Change the role** of a client with the row of four buttons under its name. The new role takes effect at once, without pairing again.
-- **See which Nightscout token** a client writes with: "*Own Nightscout token*" is what you want. A red line "*Uses the Nightscout token …, which has more rights than a client needs*" means the client still uses a token with more rights, usually your admin token — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Revoke** a single client — tap the **trash** icon next to it. The client can no longer send commands until it is paired again. Its own Nightscout token is deleted too, so it can no longer read your Nightscout either.
-- **Stop all control** without losing the pairings — turn off **Allow client control**.
+- **Mudar a função** de um cliente com a fila de quatro botões por baixo do seu nome. A nova função tem efeito imediato, sem emparelhar outra vez.
+- **Ver com que token do Nightscout** um cliente escreve: "*Token do Nightscout próprio*" é o que quer ver. Uma linha vermelha "*Usa o token do Nightscout …, que tem mais direitos do que um cliente precisa*" significa que o cliente ainda usa um token com mais direitos, normalmente o seu token de administrador — veja [O token do Nightscout próprio do cliente](#client-master-control-own-token).
+- **Revogar** um único cliente — toque no ícone do **caixote do lixo** ao lado dele. O cliente deixa de poder enviar comandos até ser emparelhado outra vez. O seu token do Nightscout também é apagado, por isso deixa também de poder ler o seu Nightscout.
+- **Parar todo o controlo** sem perder os emparelhamentos — desligue **Permitir controlo pelos clientes**.
 
-Phones set up with **QR code: Nightscout only** are listed below the clients, under "**Read Nightscout only**". For each of them you can show the QR code again (to set up the same phone again) or delete its token, which ends its access to your Nightscout.
+Os telefones configurados com **Código QR: só Nightscout** aparecem abaixo dos clientes, em "**Só leitura do Nightscout**". Para cada um deles, pode mostrar outra vez o código QR (para configurar de novo o mesmo telefone) ou apagar o seu token, o que termina o acesso dele ao seu Nightscout.
 
-![Authorized clients with a paired client (role buttons, own Nightscout token) and a phone under Read Nightscout only](../images/v4/ClientMaster/authorized_clients_roles.png)
+![Clientes autorizados com um cliente emparelhado (botões de função, token do Nightscout próprio) e um telefone em Só leitura do Nightscout](../images/v4/ClientMaster/authorized_clients_roles.png)
 
 ---
 
 (client-master-control-roles)=
-## Client roles
+## Funções dos clientes
 
-Each paired client has a **role**. The master checks it for every command, and the client shows only what its role allows. A new role takes effect at once, without pairing again. The roles build on each other: each one can do everything the one before it can.
+Cada cliente emparelhado tem uma **função**. O telefone principal verifica-a em cada comando, e o cliente mostra apenas o que a sua função permite. Uma nova função tem efeito imediato, sem emparelhar outra vez. As funções acumulam-se: cada uma pode fazer tudo o que a anterior pode.
 
-| Role          | The client may                                                                                                                                                                                                                |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Read-only** | only show data. It stays paired, so it is ready when you give it a higher role.                                                                                                                                               |
-| **Meals**     | give a bolus, use the bolus wizard and QuickWizard, enter carbs, and stop a running bolus. Carbs entered here can make the loop give more insulin.                                                                            |
-| **Caregiver** | do everything a user does in **AAPS**: temp targets, profile and insulin switches, loop mode, temp basal, extended bolus, scenes, careportal events, calibrations and removing records. It cannot change settings or presets. |
-| **Admin**     | do everything, settings and presets included (QuickWizard, temp target presets, scenes, profiles, automation, insulin).                                                                                                       |
+| Função         | O cliente pode                                                                                                                                                                                                                                                       |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Só leitura** | apenas mostrar dados. Continua emparelhado, por isso está pronto quando lhe der uma função superior.                                                                                                                                                                 |
+| **Refeições**  | dar um bólus, usar o assistente de bólus e o Assistente Rápido, introduzir hidratos de carbono e parar um bólus em curso. Os hidratos de carbono introduzidos aqui podem fazer o loop dar mais insulina.                                                             |
+| **Cuidador**   | fazer tudo o que um utilizador faz no **AAPS**: alvos temporários, trocas de perfil e de insulina, modo do loop, basal temporária, bólus prolongado, cenas, eventos do careportal, calibrações e remoção de registos. Não pode alterar definições nem predefinições. |
+| **Admin**      | fazer tudo, incluindo definições e predefinições (Assistente Rápido, predefinições de alvos temporários, cenas, perfis, automatização, insulina).                                                                                                                    |
 
-The **(i)** at the top of the **Authorized clients** screen shows the same explanation. On the client, **Manage → Pair with master** shows the phone's own role.
+O **(i)** no topo do ecrã **Clientes autorizados** mostra a mesma explicação. No cliente, **Gerir → Emparelhar com o telefone principal** mostra a função do próprio telefone.
 
 ---
 
 (client-master-control-hardened-mode)=
-## Hardened mode
+## Modo reforçado
 
-When **Allow client control** is on, the master is in **hardened mode**: it takes changes only from paired clients. It does **not** take treatments, temp targets, profile changes, running mode changes or deletes that are made directly in Nightscout, for example on the Nightscout website or in other apps.
+Quando **Permitir controlo pelos clientes** está ligado, o telefone principal está em **modo reforçado**: só aceita alterações de clientes emparelhados. **Não** aceita tratamentos, alvos temporários, alterações de perfil, mudanças do modo de funcionamento nem eliminações feitos diretamente no Nightscout, por exemplo no site do Nightscout ou noutras apps.
 
-- The settings for accepting data from Nightscout (**NSClientV3 → Synchronization**) are hidden while hardened mode is on; **AAPS** uses them as if they were off.
-- The master still **uploads** all its data to Nightscout, BG included, and keeps **websockets** on.
-- If the master gets its **BG from Nightscout**, it still takes BG from there.
-- To load the history on a **new** master, use **Full sync** in **NSClientV3**: it takes everything that is in Nightscout, profiles included.
-- [SMS commands](SMSCommands.md) are not affected.
+- As definições para aceitar dados do Nightscout (**NSClientV3 → Sincronização**) ficam escondidas enquanto o modo reforçado está ligado; o **AAPS** trata-as como se estivessem desligadas.
+- O telefone principal continua a **enviar** todos os seus dados para o Nightscout, incluindo a glicose, e mantém os **websockets** ligados.
+- Se o telefone principal recebe a **glicose do Nightscout**, continua a recebê-la de lá.
+- Para carregar o histórico num telefone principal **novo**, use **Sincronização completa** no **NSClientV3**: recebe tudo o que está no Nightscout, incluindo os perfis.
+- Os [comandos SMS](SMSCommands.md) não são afetados.
 
-A paired client follows the master's hardened mode: it keeps websockets on, and the same Nightscout settings are hidden on it. An unpaired client keeps its own settings.
+Um cliente emparelhado segue o modo reforçado do telefone principal: mantém os websockets ligados e as mesmas definições do Nightscout ficam escondidas nele. Um cliente não emparelhado mantém as suas próprias definições.
 
-[Simple Mode](#preferences-simple-mode) always turns hardened mode on. To turn it off, leave Simple Mode and turn off **Allow client control** on the master.
+O [Modo simples](#preferences-simple-mode) liga sempre o modo reforçado. Para o desligar, saia do Modo simples e desligue **Permitir controlo pelos clientes** no telefone principal.
 
 ```{admonition} Why hardened mode
 :class: note
-Everything a paired client sends is signed, checked and confirmed by the master. A treatment typed into the Nightscout website is not: anybody with write access to your Nightscout could add it. In hardened mode only signed commands can change what the master does.
+Tudo o que um cliente emparelhado envia é assinado, verificado e confirmado pelo telefone principal. Um tratamento escrito no site do Nightscout não é: qualquer pessoa com acesso de escrita ao seu Nightscout o pode adicionar. No modo reforçado, só os comandos assinados podem alterar o que o telefone principal faz.
 ```
 
 ---
 
 (client-master-control-own-token)=
-## The client's own Nightscout token
+## O token do Nightscout próprio do cliente
 
-A client does not need an admin token. It only reads your Nightscout and sends its commands to the master through it; it uploads nothing itself. So the master gives each client a Nightscout token of its own, with just these rights:
+Um cliente não precisa de um token de administrador. Só lê o seu Nightscout e envia os seus comandos ao telefone principal através dele; não envia nada por si próprio. Por isso, o telefone principal dá a cada cliente um token do Nightscout próprio, só com estes direitos:
 
-- read everything,
-- write to the `settings` collection, the channel to the master,
-- snooze Nightscout alarms.
+- ler tudo,
+- escrever na coleção `settings`, o canal para o telefone principal,
+- silenciar os alarmes do Nightscout.
 
-The token belongs to a Nightscout role named **`aaps-client`**, which the master creates the first time it needs it. You can see the role and the tokens (named `aaps-` and the client's name) in the **Admin tools** of your Nightscout site. If the role is changed there, the master sets it back the next time it makes a token or you open **Authorized clients**.
+O token pertence a uma função (role) do Nightscout chamada **`aaps-client`**, que o telefone principal cria na primeira vez que precisa dela. Pode ver a função e os tokens (com o nome `aaps-` seguido do nome do cliente) nas **Admin tools** do seu site Nightscout. Se a função for alterada lá, o telefone principal repõe-na da próxima vez que criar um token ou que abrir **Clientes autorizados**.
 
-How a client gets its token:
+Como um cliente recebe o seu token:
 
-- **Set up with a QR code**: the token is in the code.
-- **Paired with the PIN** (or paired before this existed): after pairing, the master sends the client its own token through the paired channel, encrypted. The client first checks that a login with it works, then uses it instead of the token it had. This needs an admin token on the master; without one, the client keeps its token, and its card on the master shows the red line.
+- **Configurado com um código QR**: o token está no código.
+- **Emparelhado com o PIN** (ou emparelhado antes de isto existir): depois do emparelhamento, o telefone principal envia ao cliente o seu próprio token pelo canal emparelhado, encriptado. O cliente verifica primeiro se consegue iniciar sessão com ele e depois usa-o em vez do token que tinha. Isto precisa de um token de administrador no telefone principal; sem ele, o cliente mantém o seu token, e o seu cartão no telefone principal mostra a linha vermelha.
 
-**A client keeps its own token.** Once the master has seen a client write with its own token, it takes that client's commands only with that token. A command written with another token (for example an admin token typed into the client later, or another client's token) is refused, even though the client is paired, and the client says "*The master refused it: this phone writes to Nightscout with another token than its own*". Its card on the master says so in red. The client still shows as online, so you can see what is wrong. To fix it, remove the client on the master and add it again.
+**Um cliente mantém o seu próprio token.** Depois de o telefone principal ver um cliente escrever com o seu próprio token, só aceita os comandos desse cliente com esse token. Um comando escrito com outro token (por exemplo, um token de administrador introduzido mais tarde no cliente, ou o token de outro cliente) é recusado, mesmo que o cliente esteja emparelhado, e o cliente diz "*O telefone principal recusou-o: este telefone escreve no Nightscout com um token que não é o seu*". O seu cartão no telefone principal mostra isto a vermelho. O cliente continua a aparecer como online, para que possa ver o que está errado. Para resolver, remova o cliente no telefone principal e adicione-o outra vez.
 
-The master never deletes or changes a Nightscout token it did not make (one with other roles than `aaps-client`): those are yours. It deletes a client's own token when you remove the client.
+O telefone principal nunca apaga nem altera um token do Nightscout que não tenha criado (um com outras funções além de `aaps-client`): esses são seus. Apaga o token próprio de um cliente quando remove o cliente.
 
 ---
 
-## Using remote control
+## Usar o controlo remoto
 
-### Triggering an action from the client
+### Iniciar uma ação a partir do cliente
 
-Use the client exactly as you would the phone itself: open **Carbs**, **Insulin**, **Temp Target**, **Profile**, **Scenes**, the **Manage** sheet, etc., and fill in the values.
+Use o cliente exatamente como usaria o próprio telefone: abra **Hidratos**, **Insulina**, **Alvo temporário**, **Perfil**, **Cenas**, o painel **Gerir**, etc., e preencha os valores.
 
-When you confirm, the client briefly shows **“Contacting master…”**, the **master** computes and caps the action, and the client then displays the **master's own confirmation** — the exact lines, values and colors the master would show on its own screen. Review them and tap **OK** to go ahead.
+Quando confirma, o cliente mostra por instantes **«A contactar o telefone principal…»**, o **telefone principal** calcula e limita a ação, e o cliente mostra depois a **confirmação do próprio telefone principal** — exatamente as linhas, valores e cores que o telefone principal mostraria no seu ecrã. Reveja-as e toque em **OK** para continuar.
 
-![A scene confirmation authored by the master and shown on the client](../images/v4/ClientMaster/confirmation_master_authored.png)
+![Confirmação de uma cena escrita pelo telefone principal e mostrada no cliente](../images/v4/ClientMaster/confirmation_master_authored.png)
 
-The same applies to a simple carbs entry — the amount shown for confirmation is the one the master computed:
+O mesmo se aplica a um simples registo de hidratos de carbono — a quantidade mostrada para confirmação é a que o telefone principal calculou:
 
-![Carbs confirmation authored by the master](../images/v4/ClientMaster/carbs_confirmation_client.png)
+![Confirmação de hidratos de carbono escrita pelo telefone principal](../images/v4/ClientMaster/carbs_confirmation_client.png)
 
-After you confirm, the master executes the action once and the result is reflected back on the client.
+Depois de confirmar, o telefone principal executa a ação uma única vez e o resultado aparece no cliente.
 
-### Insulin bolus from a client
+### Bólus de insulina a partir de um cliente
 
-This is the main new capability in v4. A bolus started on a client is **delivered by the master on its pump**; the master caps it against its own constraints, and the client shows **live delivery progress** while it runs (and an alarm if the pump reports a failure).
+Esta é a principal capacidade nova da v4. Um bólus iniciado num cliente é **administrado pelo telefone principal na sua bomba**; o telefone principal limita-o de acordo com as suas próprias restrições, e o cliente mostra o **progresso da administração em tempo real** enquanto decorre (e um alarme se a bomba comunicar uma falha).
 
 ```{admonition} Boluses are always confirmed and capped on the master
 :class: note
-A client never decides the delivered amount on its own. The master recomputes and caps it, you confirm the master-authored amount, and only then is it delivered.
+Um cliente nunca decide sozinho a quantidade administrada. O telefone principal volta a calculá-la e limita-a, o utilizador confirma a quantidade escrita pelo telefone principal e só então é administrada.
 ```
 
 (clientmastercontrol-when-the-master-is-offline)=
-### When the master is offline
+### Quando o telefone principal está offline
 
-If the master is not reachable (its phone is off/asleep, not connected to Nightscout, or websockets are down), control actions on the client are **blocked before anything is sent**, and you get a clear message. Nothing is half-applied.
+Se o telefone principal não estiver acessível (o telefone está desligado/em suspensão, não está ligado ao Nightscout ou os websockets estão em baixo), as ações de controlo no cliente são **bloqueadas antes de qualquer envio** e recebe uma mensagem clara. Nada fica aplicado só a meio.
 
-![Client message when the master is offline](../images/v4/ClientMaster/master_offline_error.png)
+![Mensagem do cliente quando o telefone principal está offline](../images/v4/ClientMaster/master_offline_error.png)
 
-The client re-checks reachability automatically and re-enables control once the master is back online.
+O cliente volta a verificar automaticamente se o telefone principal está acessível e reativa o controlo logo que este volte a estar online.
 
 (clientmastercontrol-wear-os-on-a-client)=
 
-### Wear OS (watch) on a client
+### Wear OS (relógio) num cliente
 
-A watch paired to a **client** phone relays its actions through the client to the master (watch → client → master). The watch shows the **master's** confirmation lines and the real result, just like the phone. Setting up the watch is unchanged — see [Wear OS](../WearOS/WearOsSmartwatch.md).
+Um relógio emparelhado com um telefone **cliente** reencaminha as suas ações através do cliente para o telefone principal (relógio → cliente → telefone principal). O relógio mostra as linhas de confirmação do **telefone principal** e o resultado real, tal como o telefone. A configuração do relógio não mudou — veja [Wear OS](../WearOS/WearOsSmartwatch.md).
 
 
 <!-- 📷 SCREENSHOT NEEDED (optional): watch confirmation screen relayed from the master,
@@ -271,90 +271,90 @@ A watch paired to a **client** phone relays its actions through the client to th
 ---
 
 (client-master-config-prefs)=
-## Changing configuration and preferences
+## Alterar a configuração e as preferências
 
-Pairing does more than relay one-off actions — it also keeps the **configuration** and many **preferences** aligned between the master and its clients.
+O emparelhamento faz mais do que reencaminhar ações isoladas — também mantém a **configuração** e muitas **preferências** iguais entre o telefone principal e os seus clientes.
 
-### Configuration (which plugins are active)
+### Configuração (que plugins estão ativos)
 
-The active **plugins** (APS algorithm, sensitivity, smoothing, …) are chosen on the **master** and **mirrored** to every paired client. On a client these selections are marked with a small **mobile icon** in the [Configuration](#configuration_sync_icon) screen — change them on the master and the clients follow automatically and vice versa.
+Os **plugins** ativos (algoritmo APS, sensibilidade, suavização, …) são escolhidos no **telefone principal** e **copiados** para cada cliente emparelhado. Num cliente, estas seleções estão marcadas com um pequeno **ícone de telemóvel** no ecrã [Configuração](#configuration_sync_icon) — altere-as no telefone principal e os clientes seguem automaticamente, e vice-versa.
 
-On a client, the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication*:
+Num cliente, o ícone de telemóvel aparece em *Suavização*, *Calibração*, *Deteção de sensibilidade* e *APS* (sincronizados a partir do telefone principal), mas não em *Comunicação*:
 
-![Configuration list on a client — the mobile icon marks the categories synced with the master](../images/v4/ClientMaster/configuration_client.png)
+![Lista Configuração num cliente — o ícone de telemóvel marca as categorias sincronizadas com o telefone principal](../images/v4/ClientMaster/configuration_client.png)
 
-Connection details that are unique to each device — most importantly the **NSClient Nightscout URL / access token** — are *not* synced. Each phone has its own; on a client they come from the master's QR code, or you set them yourself.
+Os dados de ligação próprios de cada dispositivo — sobretudo o **URL do Nightscout / token de acesso do NSClient** — *não* são sincronizados. Cada telefone tem os seus; num cliente, vêm do código QR do telefone principal ou são definidos por si.
 
-### Profiles
+### Perfis
 
-Your **profile list** is also kept in sync between the master and its paired clients. On a paired client, **Manage → Profile** shows the same profiles as the master; you can **edit** a profile or **activate** one, and — like every other command — the change is sent to the **master**, applied there, and synced back.
+A sua **lista de perfis** também é mantida sincronizada entre o telefone principal e os seus clientes emparelhados. Num cliente emparelhado, **Gerir → Perfil** mostra os mesmos perfis que o telefone principal; pode **editar** um perfil ou **ativar** um, e — como qualquer outro comando — a alteração é enviada para o **telefone principal**, aplicada lá e sincronizada de volta.
 
-The first time you activate a profile on a newly installed client, the client may show "*No insulin is in use yet*" and ask you to **select the insulin**. Choose the insulin that is active on the master (**Manage → Insulin settings** on the master shows it).
+Na primeira vez que ativa um perfil num cliente acabado de instalar, o cliente pode mostrar "*Ainda não há nenhuma insulina em uso*" e pedir-lhe para **selecionar a insulina**. Escolha a insulina que está ativa no telefone principal (**Gerir → Definições de insulina** no telefone principal mostra-a).
 
-On a client that is **not paired**, the Profile screen is still available but **view-only**: the client shows the profiles it receives through Nightscout (it needs them for its own calculations), but there is no edit or activate button — there is no master to send the change to.
+Num cliente **não emparelhado**, o ecrã Perfil continua disponível, mas **só para consulta**: o cliente mostra os perfis que recebe através do Nightscout (precisa deles para os seus próprios cálculos), mas não há botão para editar ou ativar — não há nenhum telefone principal para onde enviar a alteração.
 
 ### Preferências
 
-A subset of **preferences** is **bidirectional**: you can change them on the **master or on a paired client**, and the change is synchronized to the other side. When you change such a preference on a client, it is sent to the master over the signed channel, applied there, and the authoritative value is sent back — so what you see on the client is always what the master stored. If the same preference is changed on two devices at almost the same time, the **most recent edit wins**. For a setting with a slider, the new value is sent when you lift your finger.
+Uma parte das **preferências** é **bidirecional**: pode alterá-las no **telefone principal ou num cliente emparelhado**, e a alteração é sincronizada para o outro lado. Quando altera uma destas preferências num cliente, ela é enviada para o telefone principal pelo canal assinado, aplicada lá, e o valor que vale é enviado de volta — por isso o que vê no cliente é sempre o que o telefone principal guardou. Se a mesma preferência for alterada em dois dispositivos quase ao mesmo tempo, **ganha a alteração mais recente**. Numa definição com controlo deslizante, o novo valor é enviado quando levanta o dedo.
 
-Inside the settings, the same small **mobile icon** marks the individual preferences that are synced. In the example below *Absorption cutoff* is synced (mobile icon), while settings without the icon are device-local:
+Dentro das definições, o mesmo pequeno **ícone de telemóvel** marca cada uma das preferências que são sincronizadas. No exemplo abaixo, *Corte da absorção* é sincronizado (ícone de telemóvel), enquanto as definições sem o ícone são locais do dispositivo:
 
-![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+![As definições de um plugin — o ícone de telemóvel marca as preferências sincronizadas](../images/v4/ClientMaster/preferences_synced_icon.png)
 
 ```{admonition} The master must be online to change synced settings from a client
 :class: note
-Because the master is the authority for the stored value, editing a master-controlled configuration item or a bidirectional preference from a client requires the master to be **reachable**. When the master is offline those controls are disabled on the client (see [When the master is offline](#clientmastercontrol-when-the-master-is-offline)).
+Como o telefone principal é quem decide o valor guardado, alterar a partir de um cliente um item de configuração controlado pelo telefone principal ou uma preferência bidirecional exige que o telefone principal esteja **acessível**. Quando o telefone principal está offline, esses controlos são desativados no cliente (veja [Quando o telefone principal está offline](#clientmastercontrol-when-the-master-is-offline)).
 ```
 
 ---
 
 (client-master-control-security)=
-## Security notes
+## Notas de segurança
 
 ```{admonition} How the channel is protected
 :class: tip
-- **Pairing secret**: the master hands it to the client once — protected by the PIN in a Nightscout document, or inside the QR code — and both store it encrypted.
-- **A new secret right after pairing**: the client's first message after pairing starts a key exchange, and from then on both phones use a secret that never travelled. A secret that someone may have seen (a photographed QR code, a PIN offer read from Nightscout) is of no use afterwards. Phones paired before this existed do the same once after the update.
-- **Every command is signed** (HMAC). The master rejects anything whose signature does not match a paired client.
-- **Replay is prevented** by a per-client monotonic counter, and every command **expires** after a short time-to-live.
-- **Least rights in Nightscout**: each client has its [own Nightscout token](#client-master-control-own-token), which can only read and write to the client-control channel. Once it has used it, the master takes its commands only with that token. Removing the client deletes it.
-- **Only signed changes**: in [hardened mode](#client-master-control-hardened-mode) the master ignores therapy changes typed directly into Nightscout.
-- **The master signs what it shares**: the settings, the client list and the "master is alive" sign that the master puts in Nightscout for its clients carry the master's signature. A client takes them only when the signature is the master's, so another client's token cannot change them. The client learns the master's key when it pairs, or from the QR code for a phone that only reads Nightscout. A refused document shows in the NSClient log as "*✕ SETTINGS … refused*".
-- **You stay in control**: give each client the [role](#client-master-control-roles) it needs, revoke a client with one tap, or disable everything with **Allow client control**.
+- **Segredo de emparelhamento**: o telefone principal entrega-o ao cliente uma única vez — protegido pelo PIN num documento do Nightscout, ou dentro do código QR — e ambos o guardam encriptado.
+- **Um novo segredo logo após o emparelhamento**: a primeira mensagem do cliente depois do emparelhamento inicia uma troca de chaves e, a partir daí, os dois telefones usam um segredo que nunca circulou. Um segredo que alguém possa ter visto (um código QR fotografado, uma oferta com PIN lida do Nightscout) deixa de ter utilidade. Os telefones emparelhados antes de isto existir fazem o mesmo uma vez depois da atualização.
+- **Cada comando é assinado** (HMAC). O telefone principal rejeita tudo aquilo cuja assinatura não corresponda a um cliente emparelhado.
+- **A repetição é impedida** por um contador crescente próprio de cada cliente, e cada comando **expira** após um curto tempo de vida.
+- **Direitos mínimos no Nightscout**: cada cliente tem o seu [próprio token do Nightscout](#client-master-control-own-token), que só pode ler e escrever no canal de controlo pelos clientes. Depois de o cliente o ter usado, o telefone principal só aceita os seus comandos com esse token. Remover o cliente apaga o token.
+- **Só alterações assinadas**: no [modo reforçado](#client-master-control-hardened-mode), o telefone principal ignora alterações da terapia escritas diretamente no Nightscout.
+- **O telefone principal assina o que partilha**: as definições, a lista de clientes e o sinal «o telefone principal está ativo» que o telefone principal coloca no Nightscout para os seus clientes levam a assinatura do telefone principal. Um cliente só os aceita quando a assinatura é a do telefone principal, por isso o token de outro cliente não os pode alterar. O cliente fica a conhecer a chave do telefone principal quando emparelha, ou pelo código QR, no caso de um telefone que só lê o Nightscout. Um documento recusado aparece no registo do NSClient como "*✕ SETTINGS … refused*".
+- **O controlo continua a ser seu**: dê a cada cliente a [função](#client-master-control-roles) de que precisa, revogue um cliente com um toque ou desative tudo com **Permitir controlo pelos clientes**.
 ```
 
 ```{admonition} After restoring a backup
 :class: warning
-If a client is restored from a backup that rolls its command counter backwards, the master will reject its next commands as replays. Simply **unpair and pair again** to recover.
+Se um cliente for restaurado a partir de uma cópia de segurança que faz recuar o seu contador de comandos, o telefone principal rejeita os seus comandos seguintes como repetições. Para resolver, basta **desemparelhar e emparelhar outra vez**.
 ```
 
 ---
 
 (client-master-control-troubleshooting)=
 
-## Troubleshooting
+## Resolução de Problemas
 
-| Symptom                                                                                                    | What to check                                                                                                                                                                                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Client says the **master is offline**                                                                      | Master phone awake and running **AAPS**; both phones connected in **NSClientV3**; **websockets** enabled on both; same Nightscout site.                                                                                                                                                                                      |
-| Client says it is **not paired**                                                                           | Pair again from **Manage → Pair with master**. Confirm the client is **Active** in the master's **Authorized clients** list.                                                                                                                                                                                                 |
-| Command **rejected** by the master                                                                         | The master re-validates against its current state — e.g. the chosen profile no longer exists, or the pump type does not match. Re-check on the master.                                                                                                                                                                       |
-| Commands work but are **slow**                                                                             | Enable **websockets** on both phones (otherwise the apps fall back to slower polling).                                                                                                                                                                                                                                       |
-| Pairing is cancelled with *"The pairing secret could not be stored"*                                       | Nothing was changed. Start the pairing again; if it keeps failing, restart **AAPSClient** and try once more.                                                                                                                                                                                                                 |
-| Nothing happens after pairing                                                                              | Make sure **Allow client control** is ON on the master, and that the master is connected to Nightscout.                                                                                                                                                                                                                      |
-| The QR code options cannot be chosen in the **New client** dialog                                          | The dialog says why. *Not an admin token*: give the master an admin token of your Nightscout, or add the client with the **PIN**. *Not connected*: wait until the master shows *connected* in **NSClientV3**.                                                                                                                |
-| *"Nightscout has a token with this name and other rights"*                                                 | One of your own Nightscout tokens is called `aaps-` and this name. Choose another name for the client.                                                                                                                                                                                                                       |
-| *"A client with this name is in the list already"*                                                         | Choose another name, or remove that client first.                                                                                                                                                                                                                                                                            |
-| The client says *"This code is from another AAPS version"*                                                 | Master and client must run the **same** version of **AAPS**. Update the older one.                                                                                                                                                                                                                                           |
-| The client says *"This code has expired"*                                                                  | A code that pairs works for about two minutes. Add the client again on the master to get a new code.                                                                                                                                                                                                                         |
-| The client says *"This phone is paired already"*                                                           | Unpair it first (**Manage → Pair with master → Unpair**), then scan again. A **Nightscout only** code works on a paired phone too.                                                                                                                                                                                           |
-| The client says *"The master refused it: this phone writes to Nightscout with another token than its own"* | The client used its own Nightscout token before and now writes with another one, for example after a token was typed into its Nightscout settings. Remove the client on the master and add it again (see [The client's own Nightscout token](#client-master-control-own-token)).                                             |
-| The NSClient log on the client shows *"✕ SETTINGS … refused"* and its settings no longer follow the master | Somebody else wrote the master's settings document, or the master has a new key (for example after its data was cleared). A paired client takes a new key by itself the next time it connects to Nightscout. A phone that only reads Nightscout needs the master's QR code again (**Read Nightscout only → show the code**). |
-| The client's card shows *"Uses the Nightscout token …"* in red                                             | The client still writes with a token that has more rights than it needs. The master sends it its own token after pairing, but only if the master has an admin token. Check the master's token, or set the client up again with a QR code.                                                                                    |
-| A client can no longer read Nightscout                                                                     | Its token was deleted, for example because the client was removed on the master. Add it again.                                                                                                                                                                                                                               |
-| Treatments entered on the Nightscout website are not applied                                               | Expected in [hardened mode](#client-master-control-hardened-mode): enter them on a paired client instead.                                                                                                                                                                                                                    |
+| Sintoma                                                                                                                     | O que verificar                                                                                                                                                                                                                                                                                                                                                                                                         |
+| --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| O cliente diz que o **telefone principal está offline**                                                                     | O telefone principal está ativo e com o **AAPS** a funcionar; os dois telefones estão ligados no **NSClientV3**; os **websockets** estão ativados nos dois; é o mesmo site Nightscout.                                                                                                                                                                                                                                  |
+| O cliente diz que **não está emparelhado**                                                                                  | Emparelhe outra vez em **Gerir → Emparelhar com o telefone principal**. Confirme que o cliente está **Ativo** na lista **Clientes autorizados** do telefone principal.                                                                                                                                                                                                                                                  |
+| Comando **rejeitado** pelo telefone principal                                                                               | O telefone principal volta a validar com base no seu estado atual — por ex., o perfil escolhido já não existe, ou o tipo de bomba não corresponde. Verifique outra vez no telefone principal.                                                                                                                                                                                                                           |
+| Os comandos funcionam, mas são **lentos**                                                                                   | Ative os **websockets** nos dois telefones (caso contrário, as apps usam uma consulta periódica mais lenta).                                                                                                                                                                                                                                                                                                            |
+| O emparelhamento é cancelado com *«Não foi possível guardar o segredo de emparelhamento»*                                   | Nada foi alterado. Inicie novamente o emparelhamento; se continuar a falhar, reinicie o **AAPSClient** e tente mais uma vez.                                                                                                                                                                                                                                                                                            |
+| Não acontece nada depois do emparelhamento                                                                                  | Verifique se **Permitir controlo pelos clientes** está LIGADO no telefone principal e se o telefone principal está ligado ao Nightscout.                                                                                                                                                                                                                                                                                |
+| As opções de código QR não podem ser escolhidas na caixa de diálogo **Novo cliente**                                        | A caixa de diálogo explica porquê. *Não é um token de administrador*: dê ao telefone principal um token de administrador do seu Nightscout ou adicione o cliente com o **PIN**. *Não ligado*: espere até o telefone principal mostrar *Ligado* no **NSClientV3**.                                                                                                                                                       |
+| *«O Nightscout tem um token com este nome e com outros direitos»*                                                           | Um dos seus próprios tokens do Nightscout chama-se `aaps-` seguido deste nome. Escolha outro nome para o cliente.                                                                                                                                                                                                                                                                                                       |
+| *«Já existe na lista um cliente com este nome»*                                                                             | Escolha outro nome ou remova primeiro esse cliente.                                                                                                                                                                                                                                                                                                                                                                     |
+| O cliente diz *«Este código é de outra versão do AAPS»*                                                                     | O telefone principal e o cliente têm de usar a **mesma** versão do **AAPS**. Atualize o mais antigo.                                                                                                                                                                                                                                                                                                                    |
+| O cliente diz *«Este código expirou»*                                                                                       | Um código que emparelha funciona durante cerca de dois minutos. Adicione outra vez o cliente no telefone principal para obter um novo código.                                                                                                                                                                                                                                                                           |
+| O cliente diz *«Este telefone já está emparelhado»*                                                                         | Desemparelhe-o primeiro (**Gerir → Emparelhar com o telefone principal → Desemparelhar**) e depois leia o código outra vez. Um código **só Nightscout** também funciona num telefone emparelhado.                                                                                                                                                                                                                       |
+| O cliente diz *«O telefone principal recusou-o: este telefone escreve no Nightscout com um token que não é o seu»*          | O cliente usava antes o seu próprio token do Nightscout e agora escreve com outro, por exemplo depois de ter sido introduzido um token nas definições do Nightscout do cliente. Remova o cliente no telefone principal e adicione-o outra vez (veja [O token do Nightscout próprio do cliente](#client-master-control-own-token)).                                                                                      |
+| O registo do NSClient no cliente mostra *"✕ SETTINGS … refused"* e as suas definições deixam de seguir o telefone principal | Outra pessoa escreveu o documento de definições do telefone principal, ou o telefone principal tem uma nova chave (por exemplo, depois de os seus dados terem sido apagados). Um cliente emparelhado recebe sozinho a nova chave da próxima vez que se ligar ao Nightscout. Um telefone que só lê o Nightscout precisa outra vez do código QR do telefone principal (**Só leitura do Nightscout → Mostrar código QR**). |
+| O cartão do cliente mostra *«Usa o token do Nightscout …»* a vermelho                                                       | O cliente ainda escreve com um token que tem mais direitos do que precisa. O telefone principal envia-lhe o seu próprio token depois do emparelhamento, mas só se o telefone principal tiver um token de administrador. Verifique o token do telefone principal ou configure outra vez o cliente com um código QR.                                                                                                      |
+| Um cliente deixou de poder ler o Nightscout                                                                                 | O seu token foi apagado, por exemplo porque o cliente foi removido no telefone principal. Adicione-o outra vez.                                                                                                                                                                                                                                                                                                         |
+| Os tratamentos introduzidos no site do Nightscout não são aplicados                                                         | É o esperado no [modo reforçado](#client-master-control-hardened-mode): introduza-os antes num cliente emparelhado.                                                                                                                                                                                                                                                                                                     |
 
-For Nightscout / synchronization problems first see [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+Para problemas do Nightscout / sincronização, veja primeiro [Resolução de problemas do NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
 ---
 

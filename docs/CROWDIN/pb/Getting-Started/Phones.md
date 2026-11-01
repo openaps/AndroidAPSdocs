@@ -1,4 +1,4 @@
-# Phones
+# Telefones
 
 <!-- List of hidden pages to avoid overcrowding the menu -->
 
@@ -9,41 +9,41 @@
 ../CompatiblePhones/Huawei.md
 ```
 
-The current version of **AAPS** (4.0) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), **Android 16 is preferred**, Android 15 is not recommended.
+A versão atual do **AAPS** (4.0) requer um smartphone Android com Google **Android 12.0 ou superior**. Se você está pensando em comprar um telefone novo (em janeiro de 2026), **o Android 16 é o preferido**; o Android 15 não é recomendado.
 
-Check [Facebook or Discord](../GettingHelp/WhereCanIGetHelp.md) for latest updates on this subject.
+Veja no [Facebook ou no Discord](../GettingHelp/WhereCanIGetHelp.md) as últimas novidades sobre este assunto.
 
-Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+Por motivos de segurança, recomendamos muito que os usuários mantenham sua compilação do **AAPS** atualizada. No entanto, para usuários que não podem usar um aparelho com Android 12.0 ou mais recente, versões anteriores do **AAPS** compatíveis com versões antigas do Android continuam disponíveis, veja: [Notas de versão](#maintenance-android-version-aaps-version).
 
-- [Jelly Pro Settings](../CompatiblePhones/Jelly.md)
-- [Huawei Settings](../CompatiblePhones/Huawei.md)
+- [Configurações do Jelly Pro](../CompatiblePhones/Jelly.md)
+- [Configurações do Huawei](../CompatiblePhones/Huawei.md)
 
 (Phones-list-of-tested-phones)=
 
-## List of tested phones
+## Lista de telefones testados
 
-We maintain a list of the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) that you can [explore with a friendly interface](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/). Contribute by filling out the [Google form](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) and adding your setup!
+Mantemos uma lista das [combinações de hardware testadas](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true), que você pode [explorar com uma interface fácil de usar](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/). Contribua preenchendo o [formulário do Google](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) e adicionando sua combinação!
 
-This list provides user feedback on the usage of a phone along with **AAPS** and a given pump and CGM. It can help you check if your phone / pump / CGM has been used successfully by other users.
+Esta lista mostra a experiência de usuários com um telefone usado junto com o **AAPS** e uma bomba e um CGM. Ela pode ajudar você a verificar se seu telefone / bomba / CGM já foi usado com sucesso por outros usuários.
 
-The document is read-only. With CTRL-F, you can search in the text of the Google sheet.
+The document is read-only. Com CTRL-F, você pode pesquisar no texto da planilha do Google.
 
-To record your test of a hardware setup, please fill in this [form](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). After you fill in the form data, the sheet is updated automatically every 5 minutes.
+Para registrar o teste da sua combinação de hardware, preencha este [formulário](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Depois que você preenche o formulário, a planilha é atualizada automaticamente a cada 5 minutos.
 
-Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the [Where can I get help? page](../GettingHelp/WhereCanIGetHelp.md).
+Se tiver problemas com a planilha, entre em contato com o responsável por ela, *@theodoor5137*, no Discord, ou veja a [página Onde posso obter ajuda? ](../GettingHelp/WhereCanIGetHelp.md).
 
-## I didn't find my phone
+## Não encontrei meu telefone
 
-If you have questions regarding a specific phone model, please search or ask in our [Facebook or Discord community](../GettingHelp/WhereCanIGetHelp.md).
+Se você tiver perguntas sobre um modelo específico de telefone, pesquise ou pergunte na nossa [comunidade no Facebook ou no Discord](../GettingHelp/WhereCanIGetHelp.md).
 
-To make a donation of smartphone or smartwatch models that still need testing, please email <donations@androidaps.org>.
+Para doar modelos de smartphone ou smartwatch que ainda precisam ser testados, envie um e-mail para <donations@androidaps.org>.
 
 (Phones-phone-wallpaper)=
 
-## Phone wallpaper
+## Papel de parede do telefone
 
-If you want to decorate your phone with more **AAPS**, you can download your background image [here](../images/bg_phone.jpg)!
+Se você quiser decorar seu telefone com mais **AAPS**, pode baixar a imagem de fundo [aqui](../images/bg_phone.jpg)!
 
-![phone background](../images/bg_phone_thump.jpg)
+![fundo de tela do telefone](../images/bg_phone_thump.jpg)
 
 Design: Thiago :)

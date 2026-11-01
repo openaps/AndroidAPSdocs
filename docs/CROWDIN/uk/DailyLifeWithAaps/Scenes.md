@@ -1,7 +1,7 @@
 (scenes)=
-# Scenes (situation presets)
+# Сцени (шаблони для ситуацій)
 
-A **scene** is a named preset that applies a **bundle of actions at once** — for example a *Sleep*, *Exercise* or *Sick Day* preset that switches your profile, sets a temporary target, toggles SMB and adds a care-portal note with a single tap, optionally for a set duration.
+**Сцена** — це шаблон з назвою, який застосовує **набір дій одночасно**. Наприклад, шаблон *Сон*, *Тренування* або *День хвороби* одним дотиком перемикає ваш профіль, задає тимчасову ціль, вмикає чи вимикає SMB і додає запис Careportal, за бажанням на заданий час.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,170 +10,170 @@ A **scene** is a named preset that applies a **bundle of actions at once** — f
 
 ---
 
-## What is a scene
+## Що таке сцена
 
-Instead of changing several things by hand every time a recurring situation comes up, you set them up once as a scene and activate it with one tap. A scene can bundle any of these actions:
+Замість того щоб щоразу змінювати кілька речей вручну, коли повторюється та сама ситуація, ви один раз налаштовуєте їх як сцену й активуєте її одним дотиком. Сцена може поєднувати будь-які з цих дій:
 
-- **Profile switch** — switch profile and/or scale it by percentage (e.g. 70 %).
-- **Temporary target** — set a temp target (e.g. *Activity*, *Eating soon*, or a custom value).
-- **SMB on/off** — enable or disable super-micro-boluses while the scene is active.
-- **Loop mode** — change the running mode (e.g. to a more conservative mode).
-- **Care-portal note** — log an event (e.g. *Exercise*, *Sickness*) so it shows on the graph and in Nightscout.
+- **Перемикання профілю** — перемкнути профіль і/або змінити його на відсоток (наприклад, 70 %).
+- **Тимчасова ціль** — задати тимчасову ціль (наприклад, *Активність*, *Очікуваний прийом їжі* або власне значення).
+- **SMB увімк./вимк.** — увімкнути або вимкнути супермікроболюси, поки сцена активна.
+- **Режим петлі** — змінити робочий режим (наприклад, на більш обережний).
+- **Запис Careportal** — записати подію (наприклад, *Тренування*, *Хвороба*), щоб її було видно на графіку та в Nightscout.
 
-A scene also has a **duration** — a fixed time (minutes/hours/days) or *Indefinite (manual end)* — and an **end action** that runs when it finishes: either a **notification**, or it can **chain** into another scene (for example *Sick Day → Exercise*).
-
----
-
-## Managing scenes
-
-Open **Manage → Scenes** to see, create, edit, enable/disable and reorder your scenes.
-
-![The Scenes management screen](../images/v4/Scenes/scenes_list.png)
-
-Each scene card shows:
-
-- a **checkbox** to enable/disable the scene,
-- an **icon** and **name**,
-- a summary — *“N actions, duration”*, and the **→ chained scene** if it chains into another one,
-- and three buttons: **▶ activate**, **✏️ edit**, **🗑️ delete**.
-
-Tap the **+** button to create a new scene.
+Сцена також має **тривалість** — фіксований час (хвилини/години/дні) або *Без обмеження (завершення вручну)* — і **дію в кінці**, яка виконується, коли сцена закінчується: або **сповіщення**, або **перехід** до іншої сцени (наприклад, *День хвороби → Тренування*).
 
 ---
 
-## Creating or editing a scene
+## Керування сценами
 
-### Start from a template
+Відкрийте **Керувати → Сцени**, щоб переглядати, створювати, змінювати, вмикати/вимикати сцени та змінювати їх порядок.
 
-To **create** a scene, tap the **+** button on the Scenes screen. The first step is **Start from template**: pick a ready-made scene for a common situation — *Exercise*, *Sick Day*, *Sick Day — Vomiting*, *Sleep*, *Post-exercise Night*, *Pre-meal*, *Alcohol*, *Driving*, *Bathing*, *Luteal Phase*, *Hot Weather*, *Medical Procedure* — or start from a *Blank* scene. Each template **pre-fills the recommended actions** and you can adjust everything in the following steps.
+![Екран керування сценами](../images/v4/Scenes/scenes_list.png)
 
-![“Start from template” — pick a starting point](../images/v4/Scenes/templates_picker.png)
+Кожна картка сцени показує:
 
-After you pick a template, its purpose is explained — *when* and *why* to use it — before you continue:
+- **прапорець**, щоб увімкнути/вимкнути сцену,
+- **значок** і **назву**,
+- короткий опис — *«Дій: N, тривалість»* — і **→ наступну сцену**, якщо після цієї сцени запускається інша,
+- і три кнопки: **▶ активувати**, **✏️ змінити**, **🗑️ видалити**.
 
-![A template's explanation](../images/v4/Scenes/template_explanation.png)
-
-### Step through the actions
-
-The rest of the editor is a short **step-by-step** wizard. Each step is one action type with an *“Include … in scene”* switch — turn it on only for the actions you want this scene to perform, and leave the rest off.
-
-![The scene editor — the Profile switch step](../images/v4/Scenes/scene_editor.png)
-
-Work through the steps with **Next**/**Back**: *Profile switch*, *Temporary target*, *SMB*, *Loop mode*, *Care-portal note*, then the **duration**, the **end action** (notify or chain into another scene), and finally the scene's **name and icon**. Save when you are done. (To **edit** an existing scene, tap its **✏️** button — you go straight into these steps.)
-
-Each step starts with a short explanation of what the action does. The steps look like this, here with the *Exercise* template:
-
-**Temporary target** — pick one of your temp target presets:
-
-![The Temporary target step](../images/v4/Scenes/scene_editor_step3.png)
-
-**SMB** — enable or disable SMB while the scene is active:
-
-![The SMB step](../images/v4/Scenes/scene_editor_step4.png)
-
-**Running mode** — optionally change the loop mode:
-
-![The Running mode step](../images/v4/Scenes/scene_editor_step5.png)
-
-**Careportal** — the event type and note to log:
-
-![The Careportal step](../images/v4/Scenes/scene_editor_step6.png)
-
-**Duration** — how long the scene stays active; 0 means until you end it yourself:
-
-![The Duration step](../images/v4/Scenes/scene_editor_step7.png)
-
-**Follow-up scene** — optionally the scene that starts when this one ends:
-
-![The Follow-up scene step](../images/v4/Scenes/scene_editor_followup.png)
-
-**Scene** — the name and the icon. Press **Finish** to save:
-
-![The name and icon step](../images/v4/Scenes/scene_editor_step9.png)
+Натисніть кнопку **+**, щоб створити нову сцену.
 
 ---
 
-## Activating a scene
+## Створення або зміна сцени
 
-Activate a scene from the **Scenes** list (the **▶** button) or from the **Scenes** entry in the bottom navigation. In the **Scenes** sheet of the bottom navigation, each scene shows the same summary as in the Scenes list, and the **pencil** at the top of the sheet opens **Manage → Scenes** to create or edit your scenes.
+### Почніть із шаблону
 
-![The Scenes sheet of the bottom navigation](../images/v4/Scenes/scenes_sheet.png)
+Щоб **створити** сцену, натисніть кнопку **+** на екрані «Сцени». Перший крок — **Почати з шаблону**: виберіть готову сцену для частої ситуації — *Тренування*, *День хвороби*, *День хвороби — блювання*, *Сон*, *Ніч після тренування*, *Перед їжею*, *Алкоголь*, *Водіння*, *Купання*, *Лютеїнова фаза*, *Спека*, *Медична процедура* — або почніть із *Порожньої* сцени. Кожен шаблон **заздалегідь заповнює рекомендовані дії**, і ви можете змінити все на наступних кроках.
 
-Before anything is applied you get a **confirmation** that lists exactly what the scene will do, so you can review it:
+![«Почати з шаблону» — виберіть основу](../images/v4/Scenes/templates_picker.png)
 
-![Scene activation confirmation, listing the bundled actions](../images/v4/Scenes/scene_confirmation.png)
+Після вибору шаблону показано його призначення — *коли* і *навіщо* його використовувати — перш ніж ви продовжите:
 
-If the scene chains into another one, the confirmation ends with **→** and the name of that follow-up scene, the same way it is shown in the Scenes list.
+![Пояснення шаблону](../images/v4/Scenes/template_explanation.png)
 
-When you start the scene from the **Scenes** entry of the bottom navigation, the confirmation is a simpler dialog with the same list of actions. Press **OK** to activate:
+### Пройдіть кроки дій
 
-![Scene confirmation when started from the bottom navigation](../images/v4/Scenes/scene_confirmation_from_sheet.png)
+Решта редактора — це короткий **покроковий** майстер. Кожен крок — це один тип дії з перемикачем *«Додати … до сцени»*. Увімкніть його лише для дій, які має виконувати ця сцена, а решту залиште вимкненими.
 
-After you confirm, the actions are applied and the **active scene** is shown at the top of the overview with an **End Scene** button. If the scene chains into another one, the banner also names that follow-up scene:
+![Редактор сцени — крок «Перемикання профілю»](../images/v4/Scenes/scene_editor.png)
 
-![The active-scene banner on the overview, with the End Scene button](../images/v4/Scenes/scene_active_banner.png)
+Проходьте кроки кнопками **Далі**/**Назад**: *Перемикання профілю*, *Тимчасова ціль*, *SMB*, *Режим петлі*, *Запис Careportal*, потім **тривалість**, **дія в кінці** (сповіщення або перехід до іншої сцени) і нарешті **назва та значок** сцени. Коли закінчите, збережіть. (Щоб **змінити** наявну сцену, натисніть її кнопку **✏️** — ви одразу перейдете до цих кроків.)
 
-The scene's actions stay in effect until:
+Кожен крок починається з короткого пояснення, що робить ця дія. Кроки виглядають так, тут із шаблоном *Тренування*:
 
-- its **duration** ends (the **end action** runs — a notification, or it chains into the next scene), or
-- you tap **End Scene** to end it manually. If the scene chains into another one, you get two choices: **Skip to** the follow-up scene (the active scene ends and the follow-up starts now), or **End Scene** (the active scene ends and the follow-up does not start).
+**Тимчасова ціль** — виберіть один із ваших шаблонів тимчасових цілей:
 
-A scene without follow-up only asks you to confirm:
+![Крок «Тимчасова ціль»](../images/v4/Scenes/scene_editor_step3.png)
 
-![End Scene dialog](../images/v4/Scenes/scene_end_dialog.png)
+**SMB** — увімкнути або вимкнути SMB, поки сцена активна:
 
-Ending a scene **reverts** the changes it made (for example the profile switch and temp target it started).
+![Крок «SMB»](../images/v4/Scenes/scene_editor_step4.png)
 
-While a scene is active, the profile and the target on the main screen carry a small scene icon when the scene set them. The **Scenes** sheet of the bottom navigation stays available to start another scene:
+**Робочий режим** — за бажанням змінити режим петлі:
 
-![The Scenes sheet while a scene is active](../images/v4/Scenes/scenes_sheet_active.png)
+![Крок «Робочий режим»](../images/v4/Scenes/scene_editor_step5.png)
 
-When the duration runs out on its own, the changes are reverted straight away and the banner changes to **Scene ended** with a **Dismiss** button. Dismissing only clears the banner from the screen — the scene itself is already over, so automation rules and a chained scene carry on without waiting for it.
+**Careportal** — тип події та примітка, які буде записано:
+
+![Крок «Careportal»](../images/v4/Scenes/scene_editor_step6.png)
+
+**Тривалість** — як довго сцена залишається активною; 0 означає, доки ви не завершите її самі:
+
+![Крок «Тривалість»](../images/v4/Scenes/scene_editor_step7.png)
+
+**Наступна сцена** — за бажанням сцена, яка запускається, коли ця закінчується:
+
+![Крок «Наступна сцена»](../images/v4/Scenes/scene_editor_followup.png)
+
+**Сцена** — назва та значок. Натисніть **Завершити**, щоб зберегти:
+
+![Крок «Назва та значок»](../images/v4/Scenes/scene_editor_step9.png)
 
 ---
 
-## Triggering scenes from Automation
+## Активація сцени
 
-A scene does not have to be started by hand — **Automation** can run it for you. When you add an action to an automation rule (**Manage → Automation**), the action picker has a **Scenes** category:
+Активуйте сцену зі списку **Сцени** (кнопка **▶**) або з пункту **Сцени** на нижній панелі навігації. На панелі **Сцени** нижньої навігації кожна сцена показує той самий короткий опис, що й у списку сцен, а **олівець** угорі панелі відкриває **Керувати → Сцени**, щоб створювати або змінювати сцени.
 
-- **Run scene** — activate a scene when the rule's triggers fire (for example at a set time, when you arrive somewhere, or when glucose crosses a threshold).
-- **Enable scene** / **Disable scene** — make a scene available (or unavailable) without activating it.
+![Панель «Сцени» нижньої навігації](../images/v4/Scenes/scenes_sheet.png)
 
-![The “Scenes” actions in the Automation action picker](../images/v4/Scenes/automation_scene_action.png)
+Перш ніж щось буде застосовано, ви отримаєте **підтвердження** з точним списком того, що зробить сцена, щоб ви могли це перевірити:
 
-Automation can also **react to** a scene: the trigger list includes a **Scene** trigger, so a rule can run only while a particular scene is active. Combined with a scene's **end action** (revert, notify, or chain into another scene), this lets scenes start, follow on and finish automatically.
+![Підтвердження активації сцени зі списком дій](../images/v4/Scenes/scene_confirmation.png)
+
+Якщо після сцени запускається інша, підтвердження закінчується знаком **→** і назвою наступної сцени — так само, як у списку сцен.
+
+Коли ви запускаєте сцену з пункту **Сцени** нижньої навігації, підтвердження — це простіший діалог з тим самим списком дій. Натисніть **OK**, щоб активувати:
+
+![Підтвердження сцени під час запуску з нижньої навігації](../images/v4/Scenes/scene_confirmation_from_sheet.png)
+
+Після підтвердження дії застосовуються, а **активна сцена** показана вгорі екрана «Огляд» з кнопкою **Завершити сцену**. Якщо після сцени запускається інша, банер також показує назву наступної сцени:
+
+![Банер активної сцени на екрані «Огляд» з кнопкою «Завершити сцену»](../images/v4/Scenes/scene_active_banner.png)
+
+Дії сцени діють, доки:
+
+- не закінчиться її **тривалість** (виконується **дія в кінці** — сповіщення або перехід до наступної сцени), або
+- ви не натиснете **Завершити сцену**, щоб завершити її вручну. Якщо після сцени запускається інша, у вас є два варіанти: **Перейти до** наступної сцени (активна сцена закінчується, а наступна починається зараз) або **Завершити сцену** (активна сцена закінчується, а наступна не починається).
+
+Сцена без наступної сцени лише просить вас підтвердити:
+
+![Діалог «Завершити сцену»](../images/v4/Scenes/scene_end_dialog.png)
+
+Завершення сцени **скасовує** зміни, які вона зробила (наприклад, перемикання профілю та тимчасову ціль, які вона запустила).
+
+Поки сцена активна, профіль і ціль на головному екрані мають маленький значок сцени, якщо їх задала сцена. Панель **Сцени** нижньої навігації залишається доступною, щоб запустити іншу сцену:
+
+![Панель «Сцени», коли сцена активна](../images/v4/Scenes/scenes_sheet_active.png)
+
+Коли тривалість закінчується сама, зміни одразу скасовуються, а банер змінюється на **Сцену завершено** з кнопкою **Закрити**. Закриття лише прибирає банер з екрана — сама сцена вже закінчилася, тому правила автоматизації та наступна сцена працюють далі й не чекають на це.
 
 ---
 
-## Scenes with Master/Client and a watch
+## Запуск сцен з автоматизації
 
-The **currently active scene is synchronized** across all of your paired devices — activate it on one phone and the others show it too.
+Сцену не обов'язково запускати вручну — **Автоматизація** може запустити її за вас. Коли ви додаєте дію до правила автоматизації (**Керувати → Автоматизація**), у виборі дій є категорія **Сцени**:
 
-A paired **client** (**AAPSClient**) can also activate or end a scene: the request is sent to the **master**, which authors the confirmation and applies the scene on its own state. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for how that works.
+- **Запустити сцену** — активувати сцену, коли спрацьовують тригери правила (наприклад, у заданий час, коли ви приходите кудись або коли глюкоза перетинає поріг).
+- **Увімкнути сцену** / **Вимкнути сцену** — зробити сцену доступною (або недоступною), не активуючи її.
+
+![Дії «Сцени» у виборі дій автоматизації](../images/v4/Scenes/automation_scene_action.png)
+
+Автоматизація також може **реагувати на** сцену: у списку тригерів є тригер **Сцена**, тож правило може працювати лише тоді, коли активна певна сцена. Разом із **дією в кінці** сцени (скасування змін, сповіщення або перехід до іншої сцени) це дозволяє сценам автоматично починатися, переходити одна в одну й завершуватися.
+
+---
+
+## Сцени з основним телефоном/клієнтом і годинником
+
+**Поточна активна сцена синхронізується** на всіх ваших спарених пристроях — активуйте її на одному телефоні, і інші теж її покажуть.
+
+Спарений **клієнт** (**AAPSClient**) також може активувати або завершити сцену: запит надсилається на **основний телефон**, який створює підтвердження й застосовує сцену до свого стану. Як це працює, див. [Керування «основний телефон ↔ клієнт»](../RemoteFeatures/ClientMasterControl.md).
 
 (scenes-from-watch)=
-### From a Wear OS watch
+### З годинника з Wear OS
 
-Scenes are available on a **Wear OS watch** as a **Scene tile**. Swipe to the **Scene** tile in the watch's tile carousel (add it from the carousel's tile list first if it isn't there yet) and tap the scene you want to start:
+Сцени доступні на **годиннику з Wear OS** як **плитка «Сцена»**. Перейдіть до плитки **Сцена** гортанням плиток на годиннику (якщо її там ще немає, спочатку додайте її зі списку плиток) і натисніть сцену, яку хочете запустити:
 
-![The Scene tile on a Wear OS watch](../images/v4/Scenes/scene_watch_tile.png)
+![Плитка «Сцена» на годиннику з Wear OS](../images/v4/Scenes/scene_watch_tile.png)
 
-The tile has four slots. By default each slot fills itself **automatically** with the next of your enabled scenes, in the order they have on the phone. To choose yourself, **long-press the tile** and open its settings: for each of the four slots you can keep **Automatic**, pin a **specific scene**, or select **None** to leave the slot empty. A slot pinned to a scene that has since been deleted or disabled shows **Unavailable** — pick another scene for it.
+Плитка має чотири місця. Типово кожне місце **автоматично** заповнюється наступною з ваших увімкнених сцен у тому порядку, який вони мають на телефоні. Щоб вибрати самостійно, **натисніть і утримуйте плитку** та відкрийте її налаштування: для кожного з чотирьох місць ви можете залишити **Автоматично**, закріпити **певну сцену** або вибрати **Немає**, щоб залишити місце порожнім. Місце, закріплене за сценою, яку потім видалили або вимкнули, показує **Недоступно** — виберіть для нього іншу сцену.
 
-The watch then shows a confirmation — tap **✓** to activate, or swipe back to cancel:
+Потім годинник показує підтвердження — натисніть **✓**, щоб активувати, або проведіть назад, щоб скасувати:
 
-![Confirming a scene on the watch](../images/v4/Scenes/scene_watch_confirm.png)
+![Підтвердження сцени на годиннику](../images/v4/Scenes/scene_watch_confirm.png)
 
-Just like on a client, the **master authors the confirmation and runs the scene**; the watch only relays the request (via the client phone, if the watch is paired to a client).
+Так само, як на клієнті, **основний телефон створює підтвердження та запускає сцену**; годинник лише передає запит (через клієнтський телефон, якщо годинник спарено з клієнтом).
 
-While a scene is running — or its **Scene ended** banner is still showing on the phone — the tile shows an **End** button with the name of the scene under it. Tap it to end the active scene, or to clear the leftover banner, from your wrist.
+Поки сцена працює — або її банер **Сцену завершено** ще видно на телефоні — плитка показує кнопку **Завершити** з назвою сцени під нею. Натисніть її, щоб завершити активну сцену або прибрати залишений банер — прямо з зап'ястя.
 
-If the running scene chains into another one, the tile also shows a **Skip** button with the name of the follow-up scene under it. These are the same two choices as on the phone:
+Якщо після поточної сцени запускається інша, плитка також показує кнопку **Пропустити** з назвою наступної сцени під нею. Це ті самі два варіанти, що й на телефоні:
 
-- **End** — the active scene ends. The confirmation tells you that the follow-up will not start.
-- **Skip** — the active scene ends and the follow-up scene starts now. The confirmation names both scenes.
+- **Завершити** — активна сцена закінчується. Підтвердження повідомляє, що наступна сцена не почнеться.
+- **Пропустити** — активна сцена закінчується, а наступна сцена починається зараз. Підтвердження називає обидві сцени.
 
-The watch's [Loop Status screen](#WearOsSmartwatch-loop-status) also shows the active scene, the time it has left and its follow-up.
+[Екран «Статус петлі»](#WearOsSmartwatch-loop-status) на годиннику також показує активну сцену, скільки часу їй залишилося і наступну сцену.
 
 ---
 

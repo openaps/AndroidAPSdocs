@@ -828,12 +828,7 @@ Certains éléments sont propres à la façon dont le pod Omnipod diffère des p
 
 Les âges de l'**insuline** et de la **canule** dans la [ligne d'état](#screens-sensor-level-battery) de l'écran principal sont **remis** à 0 jour et 0 heure **après chaque changement de pod**. C'est dû à la façon dont la pompe Omnipod est construite et opérationnelle. La **pile de la pompe** et le **réservoir d'insuline** sont intégrés à l'intérieur de chaque pod. Puisque le pod insère la canule directement dans la peau au niveau du site d'application pod, il n'y a pas de tubulure traditionnelle dans les pompes Omnipod. *Par conséquent, après un changement de pod, l'âge de chacune de ces valeurs sera automatiquement réinitialisé à zéro.* **L'âge de la pile pompe** n'est pas indiqué car la durée de vie de la pile du pod sera toujours plus grande que celle du pod (maximum 80 heures).
 
-![Actions_Tab](../images/omnipod/Actions_Tab.png)
-
-```{admonition} Older screenshot
-:class: note
-La capture d'écran ci-dessus vient d'une version plus ancienne d'**AAPS**, où ces âges étaient affichés dans la section **Careportal** de l'onglet **Actions (ACT)**. Dans **AAPS** 4, ils sont affichés dans la ligne d'état de l'écran principal.
-```
+![Expanded status panel of a patch pump: cannula and insulin ages at 0h after a pod change, no pump battery row](../images/omnipod/Actions_Tab.png)
 
 ### Niveaux
 

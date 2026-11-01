@@ -1,6 +1,6 @@
-# Compatible Pumps
+# Сумісні помпи
 
-AAPS works with a number of insulin pumps. The following list shows the currently supported devices. It indicates, in brackets, whether AAPS communicates with the pump using your phone's native Bluetooth function or whether it requires a RileyLink compatible device.
+AAPS works with a number of insulin pumps. У списку нижче наведено пристрої, які зараз підтримуються. У дужках вказано, чи AAPS зв'язується з помпою через вбудований Bluetooth вашого телефону, чи для цього потрібен пристрій, сумісний з RileyLink.
 
 <!-- List of hidden pages to avoid overcrowding the menu -->
 
@@ -22,7 +22,7 @@ AAPS works with a number of insulin pumps. The following list shows the currentl
 ../CompatiblePumps/Future-possible-Pump-Drivers.md
 ```
 
-- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; see also [Tips for basic usage](#combov2-tips-for-basic-usage))
+- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; див. також [Поради щодо базового використання](#combov2-tips-for-basic-usage))
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (Bluetooth)
 - [CareLevo](../CompatiblePumps/CareLevo.md) (Bluetooth)
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (Bluetooth)
@@ -32,27 +32,27 @@ AAPS works with a number of insulin pumps. The following list shows the currentl
 - [Diaconn G8](../CompatiblePumps/DiaconnG8.md) (Bluetooth)
 - [EOPatch2](../CompatiblePumps/EOPatch2.md) (Bluetooth)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md) (Bluetooth)
-- Certain older [Medtronic](../CompatiblePumps/MedtronicPump.md) ([additional communication device](#CompatiblePumps-additional-communication-device) needed)
+- Деякі старіші помпи [Medtronic](../CompatiblePumps/MedtronicPump.md) (потрібен [додатковий пристрій зв'язку](#CompatiblePumps-additional-communication-device))
 - [Medtrum Nano 200U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) (Bluetooth)
-- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) ([additional communication device](#CompatiblePumps-additional-communication-device) needed)
+- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) (потрібен [додатковий пристрій зв'язку](#CompatiblePumps-additional-communication-device))
 
 ## My pump is not listed
 
-Details of the status of other pumps that may have the potential to work with AAPS are listed on the [Future (possible) Pumps](../CompatiblePumps/Future-possible-Pump-Drivers.md) page.
+Стан інших помп, які потенційно можуть працювати з AAPS, описано на сторінці [Майбутні (можливі) драйвери помп](../CompatiblePumps/Future-possible-Pump-Drivers.md).
 
 (CompatiblePumps-additional-communication-device)=
 ## Additional communication device
 
-If no additional communication device is mentioned, the communication between the insulin pump and **AAPS** is based on the integrated Bluetooth stack of Android, without the need for an additional communication device to translate the communication protocol.
+Якщо додатковий пристрій зв'язку не вказано, зв'язок між інсуліновою помпою та **AAPS** працює через вбудований стек Bluetooth в Android. Додатковий пристрій для перекладу протоколу зв'язку не потрібен.
 
-For old Medtronic pumps and Omnipod Eros, an additional communication device (besides your phone) is needed to "translate" the radio signal from the pump to Bluetooth. The device must use the same radio frequency as your pump:
+Для старих помп Medtronic та Omnipod Eros потрібен додатковий пристрій зв'язку (крім вашого телефону), який «перекладає» радіосигнал помпи в Bluetooth. Пристрій повинен використовувати ту саму радіочастоту, що й ваша помпа:
 
-- **Omnipod Eros**: 433 MHz.
-- **Medtronic**: 916 MHz for pumps sold in the US and Canada, 868 MHz for pumps sold elsewhere. See [How to determine what frequency my pump uses](#MedtronicPump-faq).
+- **Omnipod Eros**: 433 МГц.
+- **Medtronic**: 916 МГц для помп, що продаються в США та Канаді, 868 МГц для помп, що продаються в інших країнах. Див. [Як визначити, яку частоту використовує моя помпа](#MedtronicPump-faq).
 
-Available communication devices:
+Доступні пристрої зв'язку:
 
 - ![OrangeLink](../images/omnipod/OrangeLink.png)  [Сайт OrangeLink](https://getrileylink.org/product/orangelink)
 - ![RileyLink](../images/omnipod/RileyLink.png) [RileyLink 433 МГц](https://getrileylink.org/product/rileylink433)

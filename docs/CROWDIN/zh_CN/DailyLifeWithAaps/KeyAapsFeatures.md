@@ -73,7 +73,7 @@ Closed Loop is only possible if you are in **[Objective 7](#objectives-objective
 
 得益于SMB，对于仅含有“慢速”碳水化合物的餐食，可能只需告知系统计划摄入的碳水化合物量，其余部分交给**AAPS**处理即可。然而，这可能会导致餐后（用餐后）血糖峰值更高，因为无法进行餐前输注。或者，如果必要的话，你可以进行餐前输注，给予一个**起始输注量**，这个输注量**仅部分**覆盖碳水化合物（例如，估计量的2/3），并让**SMB**输注剩余的胰岛素。
 
-![主图上的SMB](../images/SMBs.png)
+![SMBs on the IOB graph](../images/SMBs.png)
 
 SMBs are shown on the [IOB graph](#aaps-screens-iob) with blue triangles. [Press and hold](#aaps-screens-graph-press-and-hold) the graph at a triangle to see how much insulin was delivered, or use the [Treatments history](#aaps-screens-treatments).
 

@@ -2,6 +2,7 @@
 
 ## Październik 2026
 
+- [Browser build with AAPS Builder](#aaps-builder): build workflow version 8, now maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository. Setting up is one step shorter: [step 1](#aaps-builder-step1) of the [setup page](#aaps-builder-setup) creates your private repository as a copy of that repository, with the build workflow already in it, so there is no workflow to add any more. From now on the build steps are updated for you: your repository runs the version released by the AAPS developers at every build, without any change on your side (and still no automatic build). The build itself does not change, and your existing repository keeps working. To get these automatic updates, replace your `.github/workflows/build.yml` once as explained in [Updating AAPS](#aaps-builder-updates). Your `KEYSTORE_SET` secret stays as it is. The optional [Google Drive step](#aaps-builder-google-drive) now works on the setup page itself, on a phone or a computer: no preparation file needed @psonnera
 - [Smartwatche i AAPS](#watches-external-companion-apps): sekcja **Samsung Tizen** zmienia się w **Zewnętrzne aplikacje towarzyszące** i wymienia aplikacje, które odczytują dane rozgłaszane przez **AAPS** (WatchDrip+, GlucoDataHandler, G-Watch). [WatchDrip+](#watches-xiaomi-amazfit) 0.5 i nowsze łączą się bezpośrednio z **AAPS** bez xDrip+: dodano kroki konfiguracji, opisane też krótko w [Konfiguracji](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) i [Zdalnym monitoringu](../RemoteFeatures/RemoteMonitoring.md). Zegarki Bluejay: model GTS wycofany, zaktualizowano obecny model @psonnera
 - [Budowanie w przeglądarce z AAPS Builder](#aaps-builder): workflow budowania w wersji 6. Kroki budowania używają teraz dokładnych, sprawdzonych wersji narzędzi GitHub i maszyny budującej. Gdy do sekretu `KEYSTORE_SET` wklejono zły tekst, budowanie jasno to wyjaśnia. [Strona konfiguracji](#aaps-builder-setup) jest teraz częścią dokumentacji i jest tłumaczona. Sprawdza Twoją nazwę użytkownika GitHub i ma jaśniejszą pomoc dotyczącą sekretu, błędu „Page not found” (404) i aplikacji GitHub. Jeśli Twój plik `.github/workflows/build.yml` ma wersję 5 lub starszą, zastąp go zgodnie z opisem w [Aktualizowanie AAPS](#aaps-builder-updates) @psonnera
 - [Instalator webowy AAPS](#web-installer): teraz jest stroną dokumentacji, tłumaczoną tak jak inne. Stary adres nadal działa @psonnera
@@ -33,7 +34,7 @@
 
 ## Styczeń 2025
 
-- Wersja [3.4](#version3400) i zbiorcza aktualizacja dokumentacji (Kreator, wersje do budowania na komputerze, Konfiguracja (Config Builder))
+- [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
 - Aktualizacja listy CGM. Usunięto Dexcom G5, Tomato i Glimp.
 - [Interfejs rotacji miejsc wkłucia](#Aapsscreens-site-rotation)
 - [Tryb pracy](#AapsScreens-running-mode)
@@ -147,7 +148,7 @@ Dokumentacja AAPS 3.1 jest dostępna [tutaj](https://androidaps.readthedocs.io/e
 - Dexcom G6 z [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
 - [Poziom baterii](#screens-sensor-level-battery) czytnika Libre smart reader
 - [Zadania](#objectives-objective3) – nowe pytania
-- Inne [nowe funkcje AAPS 2.8.0](#Releasenotes-version-2-8-0)
+- Other [new AAPS 2.8.0 functions](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.0)
 
 ## Grudzień 2020
 
@@ -166,7 +167,7 @@ Dokumentacja AAPS 3.1 jest dostępna [tutaj](https://androidaps.readthedocs.io/e
 ## Wrzesień 2020
 
 - Duża aktualizacja dla nowej wersji AAPS 2.7
-- For details see the [release notes](#Releasenotes-version-2-7-0)
+- For details see the [release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.7.0)
 
 ## Czerwiec 2020
 
@@ -201,7 +202,7 @@ Dokumentacja AAPS 3.1 jest dostępna [tutaj](https://androidaps.readthedocs.io/e
 - Funkcja [Bolus Przedłużony](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) – zamknięta pętla zostanie wyłączona
 - Nowa [wtyczka Profil lokalny](../SettingUpAaps/ConfigBuilder.md)
 - Przykładowa konfiguracja – aktualizacja Dexcom G6
-- [Wersja 2.6.0](#Releasenotes-version-2-6-0) – duże nowe funkcje
+- [Version 2.6.0](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-260) - major new features
 - [Komplikacje na zegarku (Wear)](../WearOS/WearOsSmartwatch.md)
 
 ## Styczeń 2020
@@ -236,7 +237,7 @@ Dokumentacja AAPS 3.1 jest dostępna [tutaj](https://androidaps.readthedocs.io/e
 
 ## Październik 2019
 
-- Aktualizacje dla [AAPS w wersji 2.5](#Releasenotes-version-2-5-0) (szczególnie na [stronie aktualizacji](../Maintenance/UpdateToNewVersion.md))
+- [AAPS version 2.5](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-250) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
 - [AccuChek Insight – opcje logów](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [Obliczanie COB na osobnej stronie](../DailyLifeWithAaps/CobCalculation.md)
 - [COB – wykrywanie błędnej wartości COB](#CobCalculation-detection-of-wrong-cob-values)

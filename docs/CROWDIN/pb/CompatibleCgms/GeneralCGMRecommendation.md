@@ -18,7 +18,7 @@ Ao aplicar o sensor, é recomendado não apertar o aplicador com muita força, p
 Depois de aplicar o sensor, o transmissor pode ser encaixado no suporte do sensor. Cuidado! Primeiro encaixe o lado quadrado e depois pressione o lado redondo.
 
 (general-cgm-troubleshooting)=
-## Troubleshooting
+## Resolução de problemas
 
 ### Problemas de conexão
 

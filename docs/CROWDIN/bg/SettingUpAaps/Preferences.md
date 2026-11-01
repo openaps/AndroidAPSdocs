@@ -1,4 +1,4 @@
-# Настройки (Опции)
+# Настройки
 
 В **AAPS** v4 опциите се намират на екрана **Настройки**. Има три начина да стигнете до тях – подробности ще намерите в [Промени в конфигурацията на AAPS](../SettingUpAaps/ChangeAapsConfiguration.md):
 
@@ -28,11 +28,12 @@
 
 **Език**
 
-- Нова опция за използване на езика по подразбиране на телефона (препоръчително).
+- By default **AAPS** follows the language of the phone (recommended).
 
-- Ако искате **AAPS** да е на език, различен от стандартния език на телефона ви, можете да изберете от голям брой езици.
+- If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
 
 - Когато смените езика, текстовете на **AAPS** веднага преминават на новия език. Ако някои текстове все още са на стария език, рестартирайте **AAPS**.
+- On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
 - Настройката е скрита в [опростен режим](#preferences-simple-mode).
 
 (preferences-simple-mode)= **Опростен режим**
@@ -354,7 +355,7 @@ min_5m_carbimpact определя стандартното въздействи
 Повече информация ще намерите на страницата [Tidepool](../SettingUpAaps/Tidepool.md).
 
 (Preferences-nsclient)=
-## NSClient
+## NSClientV3
 
 ![Настройки > NSClientV3](../images/preferences/settings_nsclient.png)
 
@@ -410,7 +411,7 @@ min_5m_carbimpact определя стандартното въздействи
 - За да изтриете всички SSID, въведете интервал в полето.
 
 (Preferences-advanced-settings-nsclient)=
-### Разширени настройки (NSClient)
+### Advanced settings (NSClientV3)
 
 ![Разширени настройки на NSClient](../images/preferences/settings_nsclient_advanced.png)
 
@@ -468,6 +469,10 @@ min_5m_carbimpact определя стандартното въздействи
 ![Настройки > Локални аларми](../images/preferences/settings_local_alerts.png)
 
 Настройките би трябвало да са ясни сами по себе си.
+
+**Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
+
+When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Swiping the alarm notification away in the notification tray mutes the alarm. When you open **AAPS** later, an alarm you did not answer is shown again.
 
 (preferences-maintenance-settings)=
 ## Настройки за поддръжка

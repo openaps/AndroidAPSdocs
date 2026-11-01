@@ -1,26 +1,26 @@
-# state of translation for app and the documentation
+# Estado da tradução da aplicação e da documentação
 
-The state is once per hour updated and reflects only the state in Crowdin.
+O estado é atualizado uma vez por hora e mostra apenas o estado no Crowdin.
 
 ```{tip}
-Be careful the percentage of proofreading must be lower than the percentage of translations but they decided to show it on top of the translations.
-It's better to look only at the percentage level of translations to see if work is to be done.
+Atenção: a percentagem de revisão é sempre menor do que a percentagem de tradução, mas é mostrada por cima das traduções.
+É melhor olhar apenas para a percentagem de tradução para ver se ainda há trabalho a fazer.
 ```
 
 ```{admonition} needed time for final publication
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+Depois da tradução no Crowdin, está agendada todos os dias uma sincronização com o GitHub, que envia as traduções para o GitHub como pull request (PR).
 
-The acceptance of the PR is a manual task which will be done as fast as possible.
+A aceitação do PR é uma tarefa manual, que é feita o mais depressa possível.
 ```
 
-## state app translation
+## estado da tradução da aplicação
 
-State of the **app** translations per language (country code, percentage translation, percentage proofreading).
+Estado das traduções da **aplicação** por língua (código do país, percentagem de tradução, percentagem de revisão).
 
-![state app translation](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
+![estado da tradução da aplicação](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
-## state documentation translation
+## estado da tradução da documentação
 
-State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
+Estado das traduções da **documentação** por língua (código do país, percentagem de tradução, percentagem de revisão).
 
-![state documentation translation](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
+![estado da tradução da documentação](https://badges.awesome-crowdin.com/translation-13588158-310610.png)

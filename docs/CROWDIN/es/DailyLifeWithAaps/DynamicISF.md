@@ -95,7 +95,7 @@ Cuando usas el [Asistente de bolo](#aaps-screens-bolus-wizard), el **ISF** se us
 Cuando usas **ISF Dinámico**, el **ISF** usado aquí es la media de los valores de ISF dinámico de las últimas 24 h.
 
 (dyn-isf-preferences)=
-## Configuración
+## Ajustes
 
 Para activarlo, marca **Usar sensibilidad dinámica** en [Ajustes > OpenAPS SMB](#Preferences-openaps-smb-settings). Al seleccionarlo, aparecen nuevos ajustes.
 

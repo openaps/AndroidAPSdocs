@@ -6,7 +6,7 @@ This page is a high-level introduction for clinicians. It was last reviewed in J
 
 Diese Seite richtet sich an medizinischer Fachpersonal, das Interesse an der Open-Source-Technologie der künstlichen Bauchspeicheldrüse wie AAPS hat, und an Patienten, die diese Informationen mit ihren Ärzten und dem Diabetes-Team teilen möchten.
 
-Dieser Leitfaden enthält einige wichtige Informationen über DIY Closed Looping und speziell über die Funktionsweise von AAPS. Für weiterführende Informationen zu all diesen Themen, lohnt sich ein Blick auf die [ausführliche AAPS-Online-Dokumentation](../index.md). Bei Fragen wenden Sie sich bitte an Ihren Patienten bezüglich weiterer Details oder zögern Sie nicht, die Community zu kontaktieren. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@aaps.app). [Einige der neuesten Studien und ergebnisbezogenen Daten finden Sie unter diesem Link](https://openaps.org/outcomes/).
+Dieser Leitfaden enthält einige wichtige Informationen über DIY Closed Looping und speziell über die Funktionsweise von AAPS. Für weiterführende Informationen zu all diesen Themen, lohnt sich ein Blick auf die [ausführliche AAPS-Online-Dokumentation](../index.md). Bei Fragen wenden Sie sich bitte an Ihren Patienten bezüglich weiterer Details oder zögern Sie nicht, die Community zu kontaktieren. (Wenn Sie nicht auf Social Media (z. B. [Twitter](https://twitter.com/kozakmilos) oder Facebook) sind, können Sie gerne eine E-Mail an developers@aaps.app senden. [Einige der neuesten Studien und ergebnisbezogenen Daten finden Sie unter diesem Link](https://openaps.org/outcomes/).
 
 ## Die Schritte zum Aufbau eines DIY Closed Loop
 
