@@ -1,5 +1,5 @@
 
-# Release notes
+# Versjonsnotater
 
 ```{toctree}
 :hidden:
@@ -9,210 +9,210 @@ Update3_0.md
 UpdateAaps3204.md
 ```
 
-Please follow the instructions in the [update manual](UpdateToNewVersion.md) to update to a new version. The troubleshooting section also addresses the most common difficulties encountered when updating **AAPS** on the update manual page.
+Følg instruksjonene i [oppdateringsveiledningen](UpdateToNewVersion.md) for å oppdatere til en ny versjon. Feilsøkingsdelen på siden med oppdateringsveiledningen tar også for seg de vanligste problemene som oppstår når du oppdaterer **AAPS**.
 
 ```{admonition} Upgrading from AAPS v3?
 :class: tip
-See [What changed in AAPS v4](V4Changes.md) for the notable behavioral changes — features that have moved, been renamed, or been removed.
+Se [Hva er endret i AAPS v4](V4Changes.md) for de viktigste endringene i oppførsel — funksjoner som er flyttet, har fått nytt navn eller er fjernet.
 ```
 
-You will receive a notification like this when a new update is available:
+Du får et varsel som dette når en ny oppdatering er tilgjengelig:
 
-![Update info](../images/AAPS_LoopDisable90days.png)
+![Informasjon om oppdatering](../images/AAPS_LoopDisable90days.png)
 
-If you do not update until expiration date **AAPS** will switch to Open Loop.
+Hvis du ikke oppdaterer før utløpsdatoen, bytter **AAPS** til åpen loop.
 
-See [End of life](EndOfLife.md) for AAPS version end dates.
+Se [Sluttdato for AAPS-versjoner](EndOfLife.md) for når hver AAPS-versjon utløper.
 
-**Do not ignore the notification.** New versions of **AAPS** provide important safety fixes. Therefore, every **AAPS** user must update to the latest version as soon as possible. This is an effort to try to improve the safety for each **AAPS** user and the DIY community. Thank you for your understanding.
+**Ikke ignorer varselet.** Nye versjoner av **AAPS** inneholder viktige sikkerhetsrettelser. Derfor må alle som bruker **AAPS**, oppdatere til den nyeste versjonen så snart som mulig. Dette er et forsøk på å gjøre det tryggere for hver enkelt **AAPS**-bruker og for DIY-fellesskapet. Takk for forståelsen.
 
 (maintenance-android-version-aaps-version)=
 
-## Android version and AAPS version
+## Android-versjon og AAPS-versjon
 
-If your smartphone uses an Android Version older than Android 12 you will not be able to use AAPS v3.4 and up as it requires at least Android 12.
+Hvis smarttelefonen din bruker en Android-versjon som er eldre enn Android 12, kan du ikke bruke AAPS v3.4 og nyere, siden den krever minst Android 12.
 
-In order to allow users with older Android to use older version of AAPS new versions were pushed which only change version verification. No other improvements are included.
+For at brukere med eldre Android skal kunne bruke eldre versjoner av AAPS, ble det gitt ut nye versjoner som bare endrer versjonskontrollen. Ingen andre forbedringer er med.
 
-Find your Android version in the table below and use the matching **AAPS** version. The code is downloaded from <https://github.com/nightscout/AndroidAPS> using the branch shown.
+Finn Android-versjonen din i tabellen nedenfor og bruk den **AAPS**-versjonen som passer. Koden lastes ned fra <https://github.com/nightscout/AndroidAPS> med grenen som er vist.
 
-| Your Android version | AAPS version to use | Branch to download                                               |
-| -------------------- | ------------------- | ---------------------------------------------------------------- |
-| Android 12 and up    | Latest version      | [master](https://github.com/nightscout/AndroidAPS) (default)     |
-| Android 11           | **3.3.2.1**         | [3.3.2.1](https://github.com/nightscout/AndroidAPS/tree/3.3.2.1) |
-| Android 9, 10        | **3.2.0.4**         | [3.2.0.4](https://github.com/nightscout/AndroidAPS/tree/3.2.0.4) |
-| Android 8            | **2.8.2.1**         | [2.8.2.1](https://github.com/nightscout/AndroidAPS/tree/2.8.2.1) |
-| Android 7            | **2.6.2**           | [2.6.2](https://github.com/nightscout/AndroidAPS/tree/2.6.2)     |
+| Din Android-versjon | AAPS-versjon du skal bruke | Gren du skal laste ned                                           |
+| ------------------- | -------------------------- | ---------------------------------------------------------------- |
+| Android 12 og nyere | Nyeste versjon             | [master](https://github.com/nightscout/AndroidAPS) (standard)    |
+| Android 11          | **3.3.2.1**                | [3.3.2.1](https://github.com/nightscout/AndroidAPS/tree/3.3.2.1) |
+| Android 9, 10       | **3.2.0.4**                | [3.2.0.4](https://github.com/nightscout/AndroidAPS/tree/3.2.0.4) |
+| Android 8           | **2.8.2.1**                | [2.8.2.1](https://github.com/nightscout/AndroidAPS/tree/2.8.2.1) |
+| Android 7           | **2.6.2**                  | [2.6.2](https://github.com/nightscout/AndroidAPS/tree/2.6.2)     |
 
-## WearOS version
+## WearOS-versjon
 
-- AAPS requires WearOS 3.0, 3.2 or 3.5 (Android 11, API level 30) or newer. WearOS 2 watches are not supported.
+- AAPS krever WearOS 3.0, 3.2 eller 3.5 (Android 11, API-nivå 30) eller nyere. WearOS 2-klokker støttes ikke.
 
 ```{tip}
-WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS5).
+WearOS 5, API-nivå 34 (Android 14) har [begrensninger](#BuildingAapsWearOs-WearOS5).
 ```
 
-**Release notes of the latest version of each major release**. For all other versions, see the [releases on GitHub](https://github.com/nightscout/AndroidAPS/releases).
+**Versjonsnotater for den nyeste versjonen av hver hovedutgivelse**. For alle andre versjoner, se [utgivelsene på GitHub](https://github.com/nightscout/AndroidAPS/releases).
 
 (latestrelease)=
 
 (version400)=
 
-**Version 4.0.0**
+**Versjon 4.0.0**
 
-Release date: 31-10-2026
+Utgivelsesdato: 31-10-2026
 
-**New features**
+**Nye funksjoner**
 
-- New user interface: phone app rebuilt in Jetpack Compose @MilosKozak
-- [Global search](../DailyLifeWithAaps/GlobalSearch.md) @MilosKozak
-- Kotlin Multiplatform migration, client for Windows, Mac, Linux desktop and iOS @MilosKozak
-- [Scenes](../DailyLifeWithAaps/Scenes.md): save a set of actions and run them together @MilosKozak
-- [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md): send commands from a client phone to the master @MilosKozak
-  - [Client roles](#client-master-control-roles): Read-only, Meals, Caregiver or Admin for each client @MilosKozak
-  - [Hardened mode](#client-master-control-hardened-mode): with client control on, the master takes changes only from paired clients @MilosKozak
-  - Pairing with a QR code that also sets up Nightscout on the client, or with a PIN; the pairing secret is replaced right after pairing @MilosKozak
-  - [Own Nightscout token](#client-master-control-own-token) for each client, with only the rights a client needs @MilosKozak
-- [Insulin concentration](../AdvancedOptions/InsulinConcentration.md) support (U200, U500) across pumps, wizard and profiles @Philoul @MilosKozak
-- Insulin management: insulin catalogue, nicknames, selection in profile and wizard @Philoul
-- Calibration plugin @MilosKozak
-- [Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md): Unscented Kalman Filter (UKF) @piecycle
-- New [automation actions](#automations-automation-action): **Change smoothing** @olorinmaia, and **Run**, **Enable** or **Disable scene** @MilosKozak
-- [Site rotation](#Aapsscreens-site-rotation): track and rotate infusion sites @Philoul @MilosKozak
-- [Autotune](../AdvancedOptions/Autotune.md) rework @Philoul
-- New [widgets](../DailyLifeWithAaps/Widgets.md) @MilosKozak @t1dude
-- Accessibility: the phone app works with a screen reader - named controls, spoken status, graph descriptions and headings to skim @MilosKozak
-- [Settings import](../Maintenance/ExportImportSettings.md): can keep the pump settings @MilosKozak
-- Persistent notification uses Android live updates, with Samsung Now bar support and the delta @premnirmal
-- BG graph: [press and hold](#aaps-screens-graph-press-and-hold) to see the values at a reading, on every graph of the overview @t1dude @olorinmaia
-- Performance improvements @MilosKozak
-- Automatic e-carbs in Bolus wizard @MilosKozak
+- Nytt brukergrensesnitt: telefonappen er bygget på nytt i Jetpack Compose @MilosKozak
+- [Globalt søk](../DailyLifeWithAaps/GlobalSearch.md) @MilosKozak
+- Migrering til Kotlin Multiplatform, klient for Windows, Mac og Linux (datamaskin) og iOS @MilosKozak
+- [Scener](../DailyLifeWithAaps/Scenes.md): lagre et sett med handlinger og kjør dem sammen @MilosKozak
+- [Hovedenhet ↔ klientstyring](../RemoteFeatures/ClientMasterControl.md): send kommandoer fra en klienttelefon til hovedenheten @MilosKozak
+  - [Klientroller](#client-master-control-roles): Kun lesing, Måltider, Omsorgsperson eller Administrator for hver klient @MilosKozak
+  - [Herdet modus](#client-master-control-hardened-mode): når klientstyring er på, tar hovedenheten bare imot endringer fra sammenkoblede klienter @MilosKozak
+  - Sammenkobling med en QR-kode som også setter opp Nightscout på klienten, eller med en PIN; sammenkoblingsnøkkelen byttes ut rett etter sammenkoblingen @MilosKozak
+  - [Eget Nightscout-token](#client-master-control-own-token) for hver klient, med bare de rettighetene en klient trenger @MilosKozak
+- Støtte for [insulinkonsentrasjon](../AdvancedOptions/InsulinConcentration.md) (U200, U500) i pumper, kalkulatoren og profiler @Philoul @MilosKozak
+- Insulinhåndtering: insulinkatalog, kallenavn, valg i profil og kalkulator @Philoul
+- Plugin for kalibrering @MilosKozak
+- [Utjevning](../CompatibleCgms/SmoothingBloodGlucoseData.md): Unscented Kalman-filter (UKF) @piecycle
+- Nye [automasjonshandlinger](#automations-automation-action): **Endre utjevning** @olorinmaia, og **Kjør**, **Aktiver** eller **Deaktiver scene** @MilosKozak
+- [Rotasjon av sted](#Aapsscreens-site-rotation): hold oversikt over og roter infusjonsstedene @Philoul @MilosKozak
+- [Autotune](../AdvancedOptions/Autotune.md) er omarbeidet @Philoul
+- Nye [widgeter](../DailyLifeWithAaps/Widgets.md) @MilosKozak @t1dude
+- Tilgjengelighet: telefonappen virker med en skjermleser – navngitte kontroller, opplest status, beskrivelser av grafene og overskrifter du kan hoppe mellom @MilosKozak
+- [Import av innstillinger](../Maintenance/ExportImportSettings.md): kan beholde pumpeinnstillingene @MilosKozak
+- Det vedvarende varselet bruker Androids sanntidsoppdateringer (live updates), med støtte for Samsung Now bar og delta @premnirmal
+- BS-graf: [trykk og hold](#aaps-screens-graph-press-and-hold) for å se verdiene ved en måling, på alle grafene i oversikten @t1dude @olorinmaia
+- Ytelsesforbedringer @MilosKozak
+- Automatisk eKarbo i Boluskalkulator @MilosKozak
 
-**New devices**
+**Nye enheter**
 
-- **CareLevo**: new [pump driver](../CompatiblePumps/CareLevo.md) @Kisu-Choi @MilosKozak
-- **Dana-i2**: support @MilosKozak
-- **Instara**: new CGM source @leohunt
+- **CareLevo**: ny [pumpedriver](../CompatiblePumps/CareLevo.md) @Kisu-Choi @MilosKozak
+- **Dana-i2**: støtte @MilosKozak
+- **Instara**: ny CGM-kilde @leohunt
 
-**Pump Driver Improvements**
+**Forbedringer i pumpedrivere**
 
-- Pump overview screens rebuilt for Insight, Medtronic, Medtrum, Omnipod, Dana, Diaconn and Equil @MilosKozak
-- **Omnipod Dash**: PDM style Ref codes and readable fault descriptions, drift compensation always on, better bolus type reporting @nl-ruud
-- **Omnipod**: hard-end date for Dash & Eros @mcnelson
-- **DanaR, RS**: pump emulator for testing @MilosKozak
-- **Equil**: pump emulator for testing @MilosKozak
-- Many pump and loop fixes @MilosKozak and others
+- Pumpeoversiktsskjermene er bygget på nytt for Insight, Medtronic, Medtrum, Omnipod, Dana, Diaconn og Equil @MilosKozak
+- **Omnipod Dash**: Ref-koder i PDM-stil og lesbare feilbeskrivelser, driftkompensasjon alltid på, bedre rapportering av bolustype @nl-ruud
+- **Omnipod**: fast sluttdato for Dash & Eros @mcnelson
+- **DanaR, RS**: pumpeemulator for testing @MilosKozak
+- **Equil**: pumpeemulator for testing @MilosKozak
+- Mange rettelser for pumper og loop @MilosKozak og andre
 
 **Wear OS**
 
-- [Watch app](../WearOS/WearOsSmartwatch.md) rebuilt in Compose, new tiles and complications, automatic watch face install (Watch Face Push) on Wear OS 6+ @olorinmaia @Philoul
-- CustomWatchface available for WearOS 6.0 (GW7, GW8, GW9...) with a WFF dedicated watchface @Philoul @olorinmaia
-- CustomWatchface can now include 5 Complication slots you can customize (new feature only available for older watches) @Philoul
-- New [WFF watchface based on AAPS complications](#wearos-complications-watchface-setup) @olorinmaia
-- Corrections in Bolus wizard and Quick wizard result @olorinmaia
-- New BG graph and Running mode activity in main menu @olorinmaia
-- Bolus wizard: [meal type](#WearOsSmartwatch-wizard-meal-type) page that splits the carbs like the phone wizard, and [carb time](#WearOsSmartwatch-wizard-carb-time) with the *time to eat* reminder on the watch @olorinmaia
-- [Phone alarms on the watch](#WearOsSmartwatch-phone-alarms): the watch shows the alarm and offers Silence and Mute 5 min @olorinmaia
+- [Klokkeappen](../WearOS/WearOsSmartwatch.md) er bygget på nytt i Compose, nye fliser og komplikasjoner, automatisk installasjon av urskive (Watch Face Push) på Wear OS 6+ @olorinmaia @Philoul
+- CustomWatchface tilgjengelig for WearOS 6.0 (GW7, GW8, GW9 ...) med en egen WFF-urskive @Philoul @olorinmaia
+- CustomWatchface kan nå ha 5 komplikasjonsplasser som du kan tilpasse (ny funksjon, bare tilgjengelig for eldre klokker) @Philoul
+- Ny [WFF-urskive basert på AAPS-komplikasjoner](#wearos-complications-watchface-setup) @olorinmaia
+- Korrigeringer i resultatet fra Boluskalkulator og Hurtigknapp @olorinmaia
+- Ny BS-graf og Kjøremodus-aktivitet i hovedmenyen @olorinmaia
+- Boluskalkulator: side for [måltidstype](#WearOsSmartwatch-wizard-meal-type) som deler opp karbohydratene som kalkulatoren på telefonen, og [karbotid](#WearOsSmartwatch-wizard-carb-time) med påminnelsen *tid for å spise* på klokken @olorinmaia
+- [Telefonalarmer på klokken](#WearOsSmartwatch-phone-alarms): klokken viser alarmen og tilbyr Demp og Lyd av i 5 min @olorinmaia
 
-**Build**
+**Bygg**
 
-- CI workflows for tag/branch builds, JDK version mapping @Angus-repo
+- CI-arbeidsflyter for bygg fra tagger/grener, tilordning av JDK-versjon @Angus-repo
 
-**Contributors**
+**Bidragsytere**
 
 @MilosKozak @Philoul @olorinmaia @Kisu-Choi @leohunt @piecycle @Angus-repo @mcnelson @t1dude @premnirmal @nl-ruud
 
-Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.0>
+Full endringslogg: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.0>
 
 ---
 
 (version3426)=
 
-**Version 3.4.2.6**
+**Versjon 3.4.2.6**
 
-- Equil: improve stability @MilosKozak
+- Equil: bedre stabilitet @MilosKozak
 
 ---
 
 (version3321)=
 
-**Version 3.3.2.1**
+**Versjon 3.3.2.1**
 
-Release date: 13-08-2025
+Utgivelsesdato: 13-08-2025
 
-- Fixed Omnipod Bluetooth connection on Android 16
-- CI process (Browser build)
-- Fix mmol-mgdl conversion
-- Fix wrong time selection in dialogs in some timezones
-- Fix reading keys in simple mode
-- Fix missed predictions on wear
-- Improved ConfigBuilder
-- Improved NSCv3 full sync
+- Rettet Bluetooth-tilkoblingen til Omnipod på Android 16
+- CI-prosess (nettleserbygg)
+- Rettet omregning mellom mmol og mg/dl
+- Rettet feil tidsvalg i dialoger i noen tidssoner
+- Rettet lesing av nøkler i enkelmodus
+- Rettet manglende prediksjoner på klokken
+- Forbedret ConfigBuilder
+- Forbedret full synkronisering i NSCv3
 
 ---
 
 (version3300)=
 
-**Version 3.3.2.0**
+**Versjon 3.3.2.0**
 
-Release date: 27-03-2025
+Utgivelsesdato: 27-03-2025
 
-**How to upgrade**
+**Slik oppgraderer du**
 
-* [Android Studio version called "Meerkat"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already built a 3.3.x version, you need to upgrade Android Studio again.
+* [Android Studio-versjonen som heter «Meerkat»](#Building-APK-recommended-specification-of-computer-for-building-apk-file) eller nyere kreves for å bygge denne versjonen. Hvis du allerede har bygget en 3.3.x-versjon, må du oppgradere Android Studio igjen.
 
 (version-enforcement)=
 
-**Starting this version, notification and version enforcement has been simplified and softened and works following way:**
+**Fra og med denne versjonen er varslingen og håndhevingen av versjoner forenklet og gjort mildere, og den virker slik:**
 
-*  No expiration when device is offline (if no connection to the internet). It means no 60 and 90 days grace periods anymore.
-*  After expiration LGS mode is enforced
-*  You'll receive warning/notifications less often:
-   - 28+ days remaining: every 7 days
-   - 27-14 days remaining: every 3 days
-   - then once a day
-   - Notification will be generated after noon to not bother you during nights
-* There are only 2 kinds of notification
-   - New version available (has no effect on AAPS)
-   - Application is expiring on some date in the future (still no effect on AAPS) / has expired (AAPS will turn into LGS mode)
+*  Ingen utløp når enheten er frakoblet (hvis det ikke er noen tilkobling til internett). Det betyr at det ikke lenger er noen ekstraperioder på 60 og 90 dager.
+*  Etter utløp tvinges LGS-modus
+*  Du får advarsler/varsler sjeldnere:
+   - 28+ dager igjen: hver 7. dag
+   - 27–14 dager igjen: hver 3. dag
+   - deretter én gang om dagen
+   - Varselet lages etter klokken 12, slik at du ikke forstyrres om natten
+* Det finnes bare 2 typer varsler
+   - Ny versjon tilgjengelig (har ingen effekt på AAPS)
+   - Appen utløper på en dato fram i tid (fortsatt ingen effekt på AAPS) / har utløpt (AAPS går over i LGS-modus)
 
-Other changes: [release notes on GitHub](https://github.com/nightscout/AndroidAPS/releases/tag/3.3.2.0).
+Andre endringer: [versjonsnotatene på GitHub](https://github.com/nightscout/AndroidAPS/releases/tag/3.3.2.0).
 
 ---
 
 (version3204)=
 
-**[Version 3.2.0.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)**
+**[Versjon 3.2.0.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)**
 
-Release date: 27-02-2024
+Utgivelsesdato: 27-02-2024
 
-This version is the last one supporting Android 10. If you cannot upgrade to Android 11, [update AAPS to 3.2.0.4](#update-aaps-3204).
+Denne versjonen er den siste som støtter Android 10. Hvis du ikke kan oppgradere til Android 11, [oppdater AAPS til 3.2.0.4](#update-aaps-3204).
 
-**Changes**
+**Endringer**
 
-- xDrip G7 support
-- Medtrum fixes
-- Automation icon fix
-- Passing objective 1 fix
-
----
-
-**Version 2.8.2**
-
-Release date: 23-01-2021
-
-[Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2)
+- Støtte for xDrip G7
+- Rettelser for Medtrum
+- Rettet ikonet for automasjon
+- Rettet fullføring av opplæringsmål 1
 
 ---
 
-**Version 1.0**
+**Versjon 2.8.2**
+
+Utgivelsesdato: 23-01-2021
+
+[Versjonsnotater](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2)
+
+---
+
+**Versjon 1.0**
 
 ```{admonition} First version of **AAPS**
 :class: note
 
-The first test version started in 2015 and the first release was in 2016.
+Den første testversjonen kom i 2015, og den første utgivelsen var i 2016.
 
-The exact chronology of these releases is not available at the moment but as this question has been asked several times we document it here.
+Den nøyaktige rekkefølgen av disse utgivelsene er ikke tilgjengelig for øyeblikket, men siden spørsmålet har blitt stilt flere ganger, dokumenterer vi det her.
 
 ```
 ![AAPS 1.0](../images/update/AAPS1.0.png)
