@@ -1,135 +1,135 @@
-# Smartwatches and AAPS
+# Smartklokker og AAPS
 
-Various smartwatches can be used to display some of the information available in **AAPS** or perform remote actions.
+Ulike smartklokker kan brukes til å vise noe av informasjonen som finnes i **AAPS**, eller til å utføre handlinger på avstand.
 
-Having a smartwatch directly control **AAPS** (pump and sensor) is achieved using full Android watches (that are considered like small [smartphones](./Phones.md)).
+Å la en smartklokke styre **AAPS** direkte (pumpe og sensor) gjøres med fulle Android-klokker (som regnes som små [smarttelefoner](./Phones.md)).
 
-Some smartwatches can allow you to enter treatments, or more, but with the phone itself still managing **AAPS**.
+Noen smartklokker lar deg registrere behandlinger, eller mer, men det er fortsatt telefonen som styrer **AAPS**.
 
-Smartwatches are becoming increasingly used with **AAPS** _both_ for adults with diabetes and carers/parents of children with diabetes.
+Smartklokker brukes stadig mer sammen med **AAPS**, _både_ av voksne med diabetes og av omsorgspersoner/foreldre til barn med diabetes.
 
-## General advantages of using smartwatches with **AAPS**
+## Generelle fordeler med å bruke smartklokker sammen med **AAPS**
 
 
-Smartwatches - depending on the model - can be used in many different ways with **AAPS**. They can be used to fully or partly control **AAPS**, or simply to remotely check glucose levels, insulin-on-board, and other parameters.
+Smartklokker kan – avhengig av modell – brukes på mange ulike måter sammen med **AAPS**. De kan brukes til å styre **AAPS** helt eller delvis, eller bare til å sjekke glukoseverdier, aktivt insulin og andre verdier på avstand.
 
-Integrating a smartwatch with **AAPS** can be useful in many situations, including driving a car or (motor) bike and during exercise. Some people feel that looking at a watch (in a meeting, party, dinner table etc.) is more discreet than looking at a phone. From a security perspective, a smartwatch can also be beneficial while on the move, enabling the user to keep their **AAPS** phone stored out of sight (like inside a bag), while still using the smartwatch for remote control.
+Å koble en smartklokke til **AAPS** kan være nyttig i mange situasjoner, for eksempel når du kjører bil eller (motor)sykkel, og under trening. Noen synes det er mer diskret å se på en klokke (i et møte, på fest, ved middagsbordet osv.) enn å se på en telefon. Med tanke på sikkerhet kan en smartklokke også være nyttig når du er på farten: du kan ha **AAPS**-telefonen gjemt bort (for eksempel i en veske) og likevel fjernstyre med smartklokken.
 
-## Specific advantages for parents/carers using **AAPS**
+## Spesielle fordeler for foreldre/omsorgspersoner som bruker **AAPS**
 
-For a child - if their **AAPS**  phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS**  phone. This can be useful, for example, if the **AAPS** phone is hidden away in a pump belt.
+For et barn – hvis **AAPS**-telefonen er i nærheten – kan en omsorgsperson bruke en smartklokke til å følge med eller gjøre endringer uten å måtte bruke **AAPS**-telefonen. Dette kan være nyttig, for eksempel hvis **AAPS**-telefonen ligger gjemt i et pumpebelte.
 
-A smartwatch can be used either _in addition_ to, or as an _alternative_ to the PHONE-based options for remote control or [following only](../RemoteFeatures/FollowingOnly.md).
+En smartklokke kan brukes enten _i tillegg_ til, eller som et _alternativ_ til de TELEFON-baserte løsningene for fjernstyring eller [bare følging](../RemoteFeatures/FollowingOnly.md).
 
-Additionally, unlike parent/caregiver follower phones (which rely on the mobile network or Wi-Fi connection), Bluetooth connected smartwatches can be useful in remote locations, like a cave, in a boat, or half-way up a mountain. If both devices (**AAPS** phone and smartwatch) are on the same Wi-Fi network, they can also use Wi-Fi.
+I motsetning til følgertelefoner for foreldre/omsorgspersoner (som er avhengige av mobilnett eller Wi-Fi) kan smartklokker som er koblet til med Bluetooth, dessuten være nyttige på avsidesliggende steder, som i en hule, i en båt eller halvveis oppe på et fjell. Hvis begge enhetene (**AAPS**-telefonen og smartklokken) er på samme Wi-Fi-nettverk, kan de også bruke Wi-Fi.
 
-## Different types of Smartwatch-AAPS interactions
+## Ulike typer samspill mellom smartklokke og AAPS
 
-There are currently five main ways in which smartwatches are used in conjunction with **AAPS**. These are shown in the table below: 
+Det er for tiden fem hovedmåter smartklokker brukes sammen med **AAPS** på. De er vist i tabellen nedenfor: 
 
-| Watch Setup         | Features                                       | Requirements                                                                                                                                                                                                                                                                                                        |
-| ------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Standalone          | AAPS without a phone                           | Full Android smartwatch (check min Android)</br> Running **app-fullRelease**                                                                                                                                                                                                                                        |
-| Full remote control | Most AAPS functions                            | Android **Wear OS** watch (check Android/API)</br>Running **wear-fullRelease**                                                                                                                                                                                                                                      |
-| Remote control      | AAPSClient functions                           | Android **Wear OS** watch (check Android/API)</br>Running **[wear-aapsclientRelease](https://github.com/nightscout/AndroidAPS/releases)**                                                                                                                                                                           |
-| Remote control      | Some AAPSClient functions                      | Garmin watches</br>(older Samsung Tizen and Fitbit setups only, not recommended)</br>See below.                                                                                                                                                                                                                     |
-| Display             | Glucose, trend, IOB, COB, loop and pump status | Many smartwatches, through a companion app on the **AAPS** phone fed by the [External Companion Apps](#watches-external-companion-apps) broadcast: [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi, Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS), G-Watch</br>See below. |
+| Klokkeoppsett     | Funksjoner                                     | Requirements                                                                                                                                                                                                                                                                                                            |
+| ----------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Frittstående      | AAPS uten telefon                              | Full Android-smartklokke (sjekk minste Android-versjon)</br> Kjører **app-fullRelease**                                                                                                                                                                                                                                 |
+| Full fjernstyring | De fleste AAPS-funksjoner                      | Android **Wear OS**-klokke (sjekk Android/API)</br>Kjører **wear-fullRelease**                                                                                                                                                                                                                                          |
+| Fjernstyring      | AAPSClient-funksjoner                          | Android **Wear OS**-klokke (sjekk Android/API)</br>Kjører **[wear-aapsclientRelease](https://github.com/nightscout/AndroidAPS/releases)**                                                                                                                                                                               |
+| Fjernstyring      | Noen AAPSClient-funksjoner                     | Garmin-klokker</br>(bare eldre oppsett med Samsung Tizen og Fitbit, anbefales ikke)</br>Se nedenfor.                                                                                                                                                                                                                    |
+| Visning           | Glukose, trend, IOB, COB, loop- og pumpestatus | Mange smartklokker, via en hjelpeapp på **AAPS**-telefonen som får data fra kringkastingen [Eksterne hjelpeapper](#watches-external-companion-apps): [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi, Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS), G-Watch</br>Se nedenfor. |
 
-## Before you buy a smartwatch…
+## Før du kjøper en smartklokke …
 
-The exact model of smartwatch you buy depends on the desired function(s). You may find useful information on the [Phones page](#Phones-list-of-tested-phones), including a list of tested phones that also contains some smartwatches.
+Hvilken smartklokkemodell du bør kjøpe, avhenger av hva du vil bruke den til. Du kan finne nyttig informasjon på siden [Telefoner](#Phones-list-of-tested-phones), blant annet en liste over testede telefoner som også inneholder noen smartklokker.
 
-Popular watch brands include Samsung Galaxy, Garmin, Fossil and Mi band. The different options summarized in the Table above are explained in more detail below, to help you decide which smartwatch is right for your situation.
+Populære klokkemerker er Samsung Galaxy, Garmin, Fossil og Mi Band. De ulike alternativene i tabellen ovenfor forklares nærmere nedenfor, slik at du lettere kan velge den smartklokken som passer for deg.
 
-If you are integrating a smartwatch with **AAPS** on a phone with the intention to remotely interact with **AAPS**, you also need to consider if the two devices are compatible with each other, particularly if you have an older, or an unusual phone.
+Hvis du skal koble en smartklokke til **AAPS** på en telefon for å fjernstyre **AAPS**, må du også sjekke at de to enhetene er kompatible med hverandre, spesielt hvis du har en eldre eller uvanlig telefon.
 
-In general, if you only want to follow glucose numbers and not interact with **AAPS**, there are a wider range of affordable and simpler watches you can use.
+Hvis du bare vil følge glukoseverdiene og ikke styre **AAPS**, finnes det et større utvalg av rimelige og enklere klokker du kan bruke.
 
-The best way to choose a smartwatch is to search for "watch" posts on either Discord or Facebook **AAPS** groups. Have a read of others' experiences, and post any specific questions if your query isn't answered by older posts.
+Den beste måten å velge en smartklokke på er å søke etter innlegg om «watch» i **AAPS**-gruppene på Discord eller Facebook. Les om andres erfaringer, og still konkrete spørsmål hvis du ikke finner svar i eldre innlegg.
 
 ## Full Android
 
-It sounds like an attractive option, right? However, at present, only a few enthusiasts are experimenting with **AAPS**  on a stand-alone watch. There are a limited number of smartwatches with a reasonable interface which also work well with standalone use of **AAPS** and your CGM app. Popular models include the LEMFO LEM 15 Pro and 16. You will need to load the watch with the **AAPS** "full" apk (the apk which is usually installed on a smartphone) rather than the **AAPS** "wear" apk.
+Det høres ut som et fristende alternativ, ikke sant? Men foreløpig er det bare noen få entusiaster som prøver ut **AAPS** på en frittstående klokke. Det finnes et begrenset antall smartklokker med et brukbart grensesnitt som også fungerer godt for frittstående bruk av **AAPS** og CGM-appen din. Populære modeller er LEMFO LEM 15 Pro og 16. Du må installere **AAPS** «full»-apk-en (den apk-en som vanligvis installeres på en smarttelefon) på klokken, ikke **AAPS** «wear»-apk-en.
 
-While there is no clear specification which helps you to know if a watch will work well for standalone **AAPS** use, the following parameters will help:
+Det finnes ingen klar spesifikasjon som sier om en klokke vil fungere godt for frittstående bruk av **AAPS**, men disse punktene hjelper:
 
-1)  Android 12 or newer. 2)  Being able to take the watchface off “square” mode to make text larger and easier to read. 3)  Very good battery life. 4)  Good Bluetooth range.
+1)  Android 12 eller nyere. 2)  Mulighet til å ta urskiven ut av «firkantet» modus, slik at teksten blir større og lettere å lese. 3)  Svært god batteritid. 4)  God Bluetooth-rekkevidde.
 
-Most of the frustrations of standalone **AAPS** watches come from interacting with a tiny screen, and the fact that the current AAPS full app interface has not been designed for a watch. You may prefer to use a stylus to edit **AAPS**  settings on the watch, due to the restricted screen size, and some AAPS buttons may not be visible on the watch screen.
+Det meste av frustrasjonen med frittstående **AAPS**-klokker kommer av å jobbe på en bitte liten skjerm, og av at dagens fulle AAPS-app ikke er laget for en klokke. Du vil kanskje bruke en pekepenn til å endre **AAPS**-innstillinger på klokken, fordi skjermen er så liten, og noen AAPS-knapper er kanskje ikke synlige på klokkeskjermen.
 
-Additional challenges are that it is hard to get sufficient battery life, and watches with sufficient battery are often bulky and thick. Users report fighting with the OS and power-saving settings, difficulty in starting sensors on the watch, poor Bluetooth range (for maintaining connection with both the sensor and pump) and questionable water resistance. Examples are shown in the photos below.
+Andre utfordringer er at det er vanskelig å få god nok batteritid, og at klokker med nok batteri ofte er store og tykke. Brukere forteller om kamp mot operativsystemet og strømsparingsinnstillingene, problemer med å starte sensorer på klokken, dårlig Bluetooth-rekkevidde (for å holde kontakten med både sensor og pumpe) og tvilsom vanntetthet. Eksempler vises på bildene nedenfor.
 
 ![image](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
 
-If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS**  Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
+Hvis du vil sette opp en frittstående klokke, les innlegg og kommentarer i **AAPS**-gruppen på Facebook (gode søkeord er «standalone» og «Lemfo») og på Discord for mer informasjon.
 
 ## Wear OS
 
-**AAPS** code contains an app extension that can be installed on [**Wear OS** smartwatches](https://wearos.google.com/#oem-carousel).
+**AAPS**-koden inneholder en app-utvidelse som kan installeres på [**Wear OS**-smartklokker](https://wearos.google.com/#oem-carousel).
 
-![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
+![Konfigurasjon > Kommunikasjon med Klokke aktivert](../images/v4/Configuration/configuration_communication_wear.png)
 
-Verify your smartwatch satisfies **AAPS** [prerequisites](#maintenance-android-version-aaps-version).
+Kontroller at smartklokken din oppfyller [kravene](#maintenance-android-version-aaps-version) til **AAPS**.
 
-### What _is_ Wear OS?
+### Hva _er_ Wear OS?
 
-The first three smartwatch options require the smartwatch to have **Wear OS** installed.
+De tre første smartklokkealternativene krever at smartklokken har **Wear OS** installert.
 
-**Wear OS** is the operating system which runs on some modern Android smartwatches. If the description of the smartwatch indicates only _compatibility_ with Android and iOS - it does not mean it is running Wear OS. It may be some other sort of Vendor specific operating system which is not compatible with **AAPS**. To support installation and use of any version of **AAPS** or **AAPSClient**, a smartwatch must be running **Wear OS 3.0, 3.2 or 3.5** (Android 11, API level 30) **or newer**. Each Wear OS release follows the Android version it is based on: **Wear OS 3** is Android 11 (API level 30), **Wear OS 4** is Android 13 (API level 33), **Wear OS 5** is Android 14 (API level 34) and **Wear OS 6** is Android 16 (API level 36). Watches on Wear OS 2 cannot run **AAPS**.
+**Wear OS** er operativsystemet som kjører på noen moderne Android-smartklokker. Hvis beskrivelsen av smartklokken bare sier at den er _kompatibel_ med Android og iOS, betyr det ikke at den kjører Wear OS. Det kan være et annet, leverandørspesifikt operativsystem som ikke er kompatibelt med **AAPS**. For å kunne installere og bruke alle versjoner av **AAPS** eller **AAPSClient** må smartklokken kjøre **Wear OS 3.0, 3.2 eller 3.5** (Android 11, API-nivå 30) **eller nyere**. Hver Wear OS-versjon følger Android-versjonen den bygger på: **Wear OS 3** er Android 11 (API-nivå 30), **Wear OS 4** er Android 13 (API-nivå 33), **Wear OS 5** er Android 14 (API-nivå 34) og **Wear OS 6** er Android 16 (API-nivå 36). Klokker med Wear OS 2 kan ikke kjøre **AAPS**.
 
-If you install **AAPS** wear.apk on a **Wear OS** watch, there are a range of different custom **AAPS** watchfaces which can be selected. Alternatively, you can use a standard smartphone watchface, with your **AAPS** information included in small tiles known as “complications” on the face. A complication is any feature that is displayed on a watchface in addition to the time.
+Hvis du installerer **AAPS** wear.apk på en **Wear OS**-klokke, kan du velge mellom flere egne **AAPS**-urskiver. Du kan også bruke en vanlig urskive fra smartklokken, med **AAPS**-informasjonen vist i små felt på urskiven, kalt «komplikasjoner». En komplikasjon er alt som vises på en urskive i tillegg til klokkeslettet.
 
 ```{note}
-Recent **Wear OS** changes progressively break the custom **AAPS** watchfaces (the higher the Wear OS version, the more severe), although **complications** keep working. Before buying or updating a watch, read [Wear OS watch face changes](#wearos-watchface-changes).
+Nyere endringer i **Wear OS** ødelegger gradvis de egne **AAPS**-urskivene (jo høyere Wear OS-versjon, desto verre), men **komplikasjoner** fortsetter å virke. Før du kjøper eller oppdaterer en klokke, les [Endringer i urskiver på Wear OS](#wearos-watchface-changes).
 ```
 
 
-### What could my smartwatch look like?
+### Hvordan kan smartklokken min se ut?
 
-After [installing **AAPS** onto your watch](../WearOS/WearOsSmartwatch.md), you will automatically be able to select your preferred watchface from these **AAPS**-dedicated watchfaces. On most watches, you simply long-press on the home screen until the screen shrinks and swipe right to select an alternative screen:
+Etter at du har [installert **AAPS** på klokken](../WearOS/WearOsSmartwatch.md), kan du automatisk velge den urskiven du liker best blant disse egne **AAPS**-urskivene. På de fleste klokker trykker du og holder på startskjermen til skjermen krymper, og sveiper så mot høyre for å velge en annen skjerm:
 
 ![image](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
 
-These are the basic screens embedded in **AAPS**, there are [more watchfaces](#WearOS_changing-to-AAPS-watchface) and you can also use [complications](#Watchfaces-complications).
+Dette er de grunnleggende skjermene som er innebygd i **AAPS**. Det finnes [flere urskiver](#WearOS_changing-to-AAPS-watchface), og du kan også bruke [komplikasjoner](#Watchfaces-complications).
 
-### How would I operate a Wear OS watch from day-to-day?
+### Hvordan bruker jeg en Wear OS-klokke i hverdagen?
 
-Further details about the watchfaces, and day-to-day use, including how to make (and share) your own customized watchface, can be found in the section [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
+Mer om urskivene og daglig bruk, blant annet hvordan du lager (og deler) din egen tilpassede urskive, finner du i delen [Bruk av Wear AAPS på en smartklokke](../WearOS/WearOsSmartwatch.md).
 
 (Watchfaces-tizen)= (watches-external-companion-apps)=
 
-## External Companion Apps
+## Eksterne hjelpeapper
 
-**AAPS** can broadcast its status to other apps installed on the same phone: glucose and trend, IOB, COB, basal and temp basal, profile name, loop status, phone and pump battery, reservoir level and bolus progress. Several watch companion apps read this broadcast and display the data on watches that **AAPS** does not support directly. To send the data, enable **External Companion Apps** in **Configuration** > **Communication** (see [External Companion Apps](#external-companion-apps) on the Configuration page). The broadcast is sent with each new reading and cannot be requested: a refresh button in the companion app has no effect on **AAPS**.
+**AAPS** kan kringkaste statusen sin til andre apper på samme telefon: glukose og trend, IOB, COB, basal og midlertidig basal, profilnavn, loop-status, telefon- og pumpebatteri, reservoarnivå og bolusfremdrift. Flere hjelpeapper for klokker leser denne kringkastingen og viser dataene på klokker som **AAPS** ikke støtter direkte. For å sende dataene, aktiver **Eksterne hjelpeapper** i **Konfigurasjon** > **Kommunikasjon** (se [Eksterne hjelpeapper](#external-companion-apps) på siden Konfigurasjon). Kringkastingen sendes ved hver ny måling og kan ikke bes om: en oppdateringsknapp i hjelpeappen har ingen effekt på **AAPS**.
 
-![Configuration > Communication: the External Companion Apps card](../images/v4/Configuration/configuration_external_companion_apps.png)
+![Konfigurasjon > Kommunikasjon: kortet Eksterne hjelpeapper](../images/v4/Configuration/configuration_external_companion_apps.png)
 
-Companion apps known to use this broadcast:
+Hjelpeapper som er kjent for å bruke denne kringkastingen:
 
-- [WatchDrip+](https://bigdigital.home.blog/) for Xiaomi and Amazfit watches, see [Xiaomi and Amazfit watches](#watches-xiaomi-amazfit) below.
-- [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) for Wear OS watches, as a complication or a widget. It is a useful fallback on Wear OS versions where the **AAPS** watchfaces are unreliable, see [Set up AAPS on your Wear OS watch](../WearOS/WearOsSmartwatch.md). Its companion app GlucoDataAuto shows the same data in a car with Android Auto.
-- [G-Watch app](https://play.google.com/store/apps/details?id=sk.trupici.g_watch) for Samsung Tizen watches, and its later Wear OS port. In earlier **AAPS** versions the plugin was named **Samsung Tizen** after this app.
+- [WatchDrip+](https://bigdigital.home.blog/) for Xiaomi- og Amazfit-klokker, se [Xiaomi- og Amazfit-klokker](#watches-xiaomi-amazfit) nedenfor.
+- [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) for Wear OS-klokker, som komplikasjon eller widget. Den er et nyttig alternativ på Wear OS-versjoner der **AAPS**-urskivene er upålitelige, se [Sett opp AAPS på Wear OS-klokken din](../WearOS/WearOsSmartwatch.md). Søsterappen GlucoDataAuto viser de samme dataene i en bil med Android Auto.
+- [G-Watch-appen](https://play.google.com/store/apps/details?id=sk.trupici.g_watch) for Samsung Tizen-klokker, og den senere Wear OS-versjonen av den. I eldre **AAPS**-versjoner het pluginen **Samsung Tizen**, etter denne appen.
 
 ```{warning}
-The **G-Watch app** and its **Wear OS** port are no longer maintained, and Samsung has moved its smartwatches from Tizen to Wear OS. G-Watch is only relevant for existing, older setups and is not recommended for a new installation. Check the dedicated [Facebook group](https://www.facebook.com/groups/gwatchapp) for the latest news.
+**G-Watch-appen** og **Wear OS**-versjonen av den vedlikeholdes ikke lenger, og Samsung har flyttet smartklokkene sine fra Tizen til Wear OS. G-Watch er bare aktuelt for eksisterende, eldre oppsett og anbefales ikke for en ny installasjon. Se den egne [Facebook-gruppen](https://www.facebook.com/groups/gwatchapp) for siste nytt.
 ```
 
 (Watchfaces-garmin)=
 
 ## Garmin
 
-There are some watch faces for Garmin that integrate with [AAPS](https://apps.garmin.com/search?keywords=androidaps), on the Garmin ConnectIQ store.
+Det finnes noen urskiver for Garmin som kobler seg til [AAPS](https://apps.garmin.com/search?keywords=androidaps), i Garmin ConnectIQ-butikken.
 
-![Configuration > Communication: the Garmin card](../images/v4/Configuration/configuration_garmin.png)
+![Konfigurasjon > Kommunikasjon: Garmin-kortet](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integrates directly with **AAPS**. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to **AAPS**. It is available in the ConnectIQ store; enable the **Garmin** plugin in **Configuration → Communication**. ![AAPS Glucose Watch watchface with numbered fields](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) kobler seg direkte til **AAPS**. Den viser loop-status (aktivt insulin, midlertidig basal) i tillegg til glukoseverdier, og sender pulsmålinger til **AAPS**. Den er tilgjengelig i ConnectIQ-butikken; aktiver **Garmin**-pluginen i **Konfigurasjon → Kommunikasjon**. ![Urskiven AAPS Glucose Watch med nummererte felt](../images/Garmin_WF-annotated.png)
 
-1. Highest and lowest glucose values on the graph
-2. Glucose change per minute
-3. Insulin on board (IOB)
-4. Time since the last glucose reading (minutes:seconds)
-5. Temporary basal rate, as a percentage of the profile basal rate
-6. Glucose graph of the last 2 hours
+1. Høyeste og laveste glukoseverdi på grafen
+2. Glukoseendring per minutt
+3. Aktivt insulin (IOB)
+4. Tid siden siste glukosemåling (minutter:sekunder)
+5. Midlertidig basal, i prosent av profilens basal
+6. Glukosegraf for de siste 2 timene
 7. Current glucose value
 
 
@@ -137,61 +137,61 @@ There are some watch faces for Garmin that integrate with [AAPS](https://apps.ga
 ## Fitbit
 
 ```{warning}
-Google is moving Fitbit into Google Health and is removing third-party apps and watch faces from Fitbit watches in the EU. Fitbit watchfaces are therefore **no longer a recommended option**, and buying a Fitbit for use with **AAPS** is not recommended.
+Google flytter Fitbit inn i Google Health og fjerner tredjepartsapper og urskiver fra Fitbit-klokker i EU. Fitbit-urskiver er derfor **ikke lenger et anbefalt alternativ**, og det anbefales ikke å kjøpe en Fitbit for bruk med **AAPS**.
 ```
 
-For existing Fitbit watches, the [Nightscout webpages](https://nightscout.github.io/nightscout/wearable/#fitbit) list some monitoring-only options, such as [Glance](https://glancewatchface.com/). These are third-party watchfaces too, so the same EU restriction applies.
+For eksisterende Fitbit-klokker viser [Nightscout-sidene](https://nightscout.github.io/nightscout/wearable/#fitbit) noen alternativer for bare visning, for eksempel [Glance](https://glancewatchface.com/). Dette er også tredjepartsurskiver, så den samme EU-begrensningen gjelder.
 
-## Following only
+## Bare følging
 
-These smartwatches will reflect some **AAPS** information, some will require other apps.
+Disse smartklokkene viser noe **AAPS**-informasjon; noen trenger andre apper.
 
-There are a wide range of affordable smartwatches which can provide display only. If you are using Nightscout, then a good overview of all the options is [here](https://nightscout.github.io/nightscout/wearable/#)
+Det finnes mange rimelige smartklokker som bare kan vise data. Hvis du bruker Nightscout, finner du en god oversikt over alle alternativene [her](https://nightscout.github.io/nightscout/wearable/#)
 
-Here below some of the follow-only watch options popular with **AAPS** users:
+Her er noen av klokkene for bare følging som er populære blant **AAPS**-brukere:
 
 (watches-xiaomi-amazfit)=
-### Xiaomi and Amazfit watches
+### Xiaomi- og Amazfit-klokker
 
-**WatchDrip+** is a community-developed companion app that displays glucose and loop data on various smartwatch models, mostly Xiaomi (_e.g._ Mi Band) and Amazfit brands:
+**WatchDrip+** er en hjelpeapp utviklet av brukermiljøet som viser glukose- og loop-data på ulike smartklokkemodeller, for det meste Xiaomi (_f.eks._ Mi Band) og Amazfit:
 
 ![image](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
 
-Since version 0.5, **WatchDrip+** reads its data directly from **AAPS**, without xDrip+ as a relay. On the **AAPS** phone:
+Fra versjon 0.5 leser **WatchDrip+** dataene direkte fra **AAPS**, uten xDrip+ som mellomledd. På **AAPS**-telefonen:
 
-1. Enable **External Companion Apps** in **Configuration** > **Communication**, see [above](#watches-external-companion-apps). It provides the current glucose, delta, trend arrow, IOB and pump status.
-2. Enable the **xDrip** plugin in **Configuration** > **Communication** and turn on **Send status to xDrip+** in its settings. It provides the IOB/COB status line, and the glucose graph on the watch fills in after a few readings.
-3. If xDrip+ is installed on the phone, disable its **Broadcast Service API** (xDrip+ > Settings > Inter-app settings) so that the watch does not receive the data twice. If xDrip+ was only relaying data to the watch, you can uninstall it.
+1. Aktiver **Eksterne hjelpeapper** i **Konfigurasjon** > **Kommunikasjon**, se [ovenfor](#watches-external-companion-apps). Dette gir gjeldende glukose, delta, trendpil, IOB og pumpestatus.
+2. Aktiver **xDrip**-pluginen i **Konfigurasjon** > **Kommunikasjon**, og slå på **Send status til xDrip+** i innstillingene til pluginen. Dette gir statuslinjen for IOB/COB, og glukosegrafen på klokken fylles ut etter noen få målinger.
+3. Hvis xDrip+ er installert på telefonen, slå av **Broadcast Service API** der (xDrip+ > Settings > Inter-app settings), slik at klokken ikke får dataene to ganger. Hvis xDrip+ bare ble brukt til å sende data videre til klokken, kan du avinstallere den.
 
-The refresh button of WatchDrip+ has no effect with **AAPS**: the data arrives with each new reading.
+Oppdateringsknappen i WatchDrip+ har ingen effekt med **AAPS**: dataene kommer ved hver ny måling.
 
 
-You can read more about them, including how to set them up, on the [WatchDrip+ website](https://bigdigital.home.blog/). The advantage of these watches is that they are small and relatively affordable. They are a popular option especially for kids and those with smaller wrists to wear.
+Du kan lese mer om dem, blant annet hvordan du setter dem opp, på [nettsiden til WatchDrip+](https://bigdigital.home.blog/). Fordelen med disse klokkene er at de er små og relativt rimelige. De er et populært valg, spesielt for barn og andre med smale håndledd.
 
-### Pebble watch
+### Pebble-klokke
 
 ![image](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
 
 ![image](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
-Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))) were on general sale from 2013 to 2016, and may still be available second-hand. Fitbit took over Pebble’s assets. Pebble users can use the Urchin watchface to view Nightscout data. Displayed data options include IOB, currently active temp basal rate and predictions. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS**  then send either an SMS or pushover notification.
+Pebble-klokker ([produseres ikke lenger](https://en.wikipedia.org/wiki/Pebble_(watch))) ble solgt fra 2013 til 2016, og kan fortsatt finnes brukt. Fitbit overtok Pebbles eiendeler. Pebble-brukere kan bruke urskiven Urchin til å se Nightscout-data. Data som kan vises, er blant annet IOB, aktiv midlertidig basal og prognoser. Hvis du kjører åpen loop, kan du bruke IFTTT til å lage en applet som sender en SMS eller et Pushover-varsel når det kommer et varsel fra **AAPS**.
 
-### [Bluejay watches](https://bluejay.website/)
-
-
-![BlueJay U3 watch](../images/watches/bluejay_u3.png)
+### [Bluejay-klokker](https://bluejay.website/)
 
 
-These are unique pieces of technology which can receive glucose data **directly** from the Dexcom transmitter. It is not widely known that Dexcom G6/G7 transmitters actually broadcast the current glucose data on _two_ separate channels, a phone channel and a medical channel. The Bluejay watches can be set to receive glucose data on either channel, so if **AAPS** is using the phone channel, then the Bluejay watches can use the medical channel.
+![BlueJay U3-klokke](../images/watches/bluejay_u3.png)
 
-The key advantage is that the watch is independent of both the phone and the looping system. So, for example, if you disconnect the pump and the **AAPS** phone at the beach or theme park, and are out of range of the **AAPS** phone, you can still get readings from your Dexcom directly to the Bluejay watch.
 
-The original **Bluejay GTS** is discontinued and cannot read the Dexcom G7. The later models (U1, then the current **U3**, sold as early access at the time of writing) are full Android watches running xDrip, which collect from the Dexcom G6 and G7 directly. The vendor describes the watch as a research tool, not for medical use. Reported disadvantages are that it does not always pick up a reading every 5 minutes and that the battery needs frequent charging. Check the [Bluejay website](https://bluejay.website/) for the current model and availability.
+Dette er unike enheter som kan motta glukosedata **direkte** fra Dexcom-senderen. Det er ikke så kjent at Dexcom G6/G7-sendere faktisk kringkaster gjeldende glukosedata på _to_ separate kanaler, en telefonkanal og en medisinsk kanal. Bluejay-klokkene kan settes til å motta glukosedata på hvilken som helst av kanalene, så hvis **AAPS** bruker telefonkanalen, kan Bluejay-klokkene bruke den medisinske kanalen.
 
-### Apple watch
+Den store fordelen er at klokken er uavhengig av både telefonen og loop-systemet. Så hvis du for eksempel kobler fra pumpen og **AAPS**-telefonen på stranden eller i fornøyelsesparken, og er utenfor rekkevidde av **AAPS**-telefonen, kan du fortsatt få verdier fra Dexcom direkte til Bluejay-klokken.
 
-Check [Nightscout on your watch](https://nightscout.github.io/nightscout/wearable/#).
+Den opprinnelige **Bluejay GTS** produseres ikke lenger og kan ikke lese Dexcom G7. De senere modellene (U1, og nå **U3**, som selges som tidlig tilgang i skrivende stund) er fulle Android-klokker som kjører xDrip og henter data direkte fra Dexcom G6 og G7. Leverandøren beskriver klokken som et forskningsverktøy, ikke til medisinsk bruk. Rapporterte ulemper er at den ikke alltid fanger opp en måling hvert 5. minutt, og at batteriet må lades ofte. Se [Bluejay-nettsiden](https://bluejay.website/) for gjeldende modell og tilgjengelighet.
 
-The Apple watch now supports G7 direct connection and can be used simultaneously with **AAPS**.
+### Apple Watch
+
+Se [Nightscout på klokken din](https://nightscout.github.io/nightscout/wearable/#).
+
+Apple Watch støtter nå direkte tilkobling til G7 og kan brukes samtidig med **AAPS**.
 
