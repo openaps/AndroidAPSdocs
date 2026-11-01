@@ -287,7 +287,7 @@ It can be anything. You can change it later in **Settings → General → Instan
 
 Press "**NEXT**" to go to the next screen.
 
-![Name](../images/setup-wizard/Wizard-Name.png)
+![Navn](../images/setup-wizard/Wizard-Name.png)
 
 ## Patient type
 
@@ -339,7 +339,7 @@ Here you select where **AAPS** gets its glucose data from. Please read the docum
 
 Many sources are available — scroll through the list and select the one you use:
 
-![BG Source](../images/setup-wizard/Wizard-BGSource.png)
+![BS-kilde](../images/setup-wizard/Wizard-BGSource.png)
 
 Once you select a source, its card expands and shows two buttons: "**Settings**" to adjust how the data is received, and "**Open plugin**" to open the source's own screen. In the example below, **BYODA** is selected. Some sources have nothing to configure at this stage, so you can usually go straight to the next screen:
 
@@ -438,7 +438,7 @@ You will learn later how to use this general dialog to handle situations like il
 
 Your profile is now active. Press "**NEXT**" to go to the next screen.
 
-## Insulin pump
+## Insulinpumpe
 
 Now you select your insulin pump. Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
 
@@ -483,7 +483,7 @@ Go back and press "**NEXT**" to go to the next screen:
 
 ![APS settings](../images/setup-wizard/Wizard-APS-Settings.png)
 
-## Sensitivity detection
+## Sensitivitetsdeteksjon
 
 Leave "**Sensitivity Oref1**" selected as the standard sensitivity plugin:
 
