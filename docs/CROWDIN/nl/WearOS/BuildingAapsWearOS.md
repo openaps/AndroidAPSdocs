@@ -41,7 +41,7 @@ De Wear-apk volgt de [variant](#browserbuild-variant) die je voor de build gekoz
 
 Waar vind je de Wear-apk:
 
-- **AAPS Builder**: scrol op de buildpagina omlaag naar **Artifacts** en download `aaps-wear-….apk` naast de telefoon-app, zoals getoond in [Stap 6 – De app op je telefoon installeren](#aaps-builder-step6). Download hem op de telefoon waarop **AAPS** draait als je de horloge-app vanaf de telefoon installeert (Wear Installer 2 of Easy Fire Tools), of op je computer als je ADB gebruikt.
+- **AAPS Builder**: on the build page, scroll down to **Artifacts** and download `aaps-wear-….apk` next to the phone app, as shown in [Step 5 – Install the app on your phone](#aaps-builder-step5). Download hem op de telefoon waarop **AAPS** draait als je de horloge-app vanaf de telefoon installeert (Wear Installer 2 of Easy Fire Tools), of op je computer als je ADB gebruikt.
 
   ![Artifacts met de apps voor telefoon en horloge](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 
