@@ -111,7 +111,7 @@ Da kan du bruke nøyaktig den samme keystore-filen hver gang du lager en oppdate
 
 I tillegg gir **AAPS** deg mulighet til å [eksportere alle konfigurasjonsinnstillingene dine](../Maintenance/ExportImportSettings.md). Slik kan du trygt gjenopprette systemet ditt når du bytter telefon eller oppgraderer/installerer appen på nytt, med minst mulig avbrudd. 
 
-#### Troubleshooting
+#### Feilsøking
 
 Ta gjerne kontakt med AAPS-fellesskapet hvis det er noe du er usikker på – det finnes ingen dumme spørsmål! Alle brukere, uansett erfaring, oppfordres til å stille spørsmål. Svar kommer vanligvis raskt, fordi det er så mange **AAPS**-brukere.
 
