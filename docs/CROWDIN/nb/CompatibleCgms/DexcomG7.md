@@ -15,7 +15,7 @@ Les anbefalingene for [utjevningsmetode](../CompatibleCgms/SmoothingBloodGlucose
 - Følg instruksjonene her: [xDrip G7, ONE+ og Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). En ny xDrip-versjon kreves – se den lenkede siden for laveste versjon.
 - Velg xDrip i [**Konfigurasjon → BS-kilde**](#Config-Builder-bg-source).
 
-- Juster xDrip-innstillingene etter forklaringene på siden med xDrip-innstillinger: [xDrip-innstillinger](../CompatibleCgms/xDrip.md)
+- Juster xDrip-innstillingene etter forklaringene på siden med xDrip-innstillinger: [xDrip](../CompatibleCgms/xDrip.md)
 
 ## 2. Build Your Own Dexcom App (bare G7)
 
@@ -84,7 +84,7 @@ Med **Companion Bluetooth** får xDrip nøyaktig tid og trend for hver måling f
 ### Konfigurasjon i AAPS
 
 - Velg xDrip i [**Konfigurasjon → BS-kilde**](#Config-Builder-bg-source).
-- Juster xDrip-innstillingene etter forklaringene på siden med xDrip-innstillinger: [xDrip-innstillinger](../CompatibleCgms/xDrip.md).
+- Juster xDrip-innstillingene etter forklaringene på siden med xDrip-innstillinger: [xDrip](../CompatibleCgms/xDrip.md).
 
 ## 4. Juggluco (G7 og ONE+)
 
