@@ -54,7 +54,9 @@
 
 Στο **AAPS** v4 τα προφίλ τα διαχειρίζεστε και τα ενεργοποιείτε από την οθόνη **Διαχείριση** (κάτω πλοήγηση) → **Προφίλ** (*«Διαχείριση και ενεργοποίηση προφίλ»*).
 
-Η οθόνη Προφίλ δείχνει τα προφίλ σας ως **καρουζέλ καρτών που σύρετε**. Η κάρτα του προφίλ που τρέχει έχει την ένδειξη **ΕΝΕΡΓΟ** και δείχνει τον συνολικό ημερήσιο βασικό ρυθμό του (π.χ. *∑ 30,15 U*). Κάτω από την επιλεγμένη κάρτα βλέπετε τις λεπτομέρειες του προφίλ — **Μονάδες**, τύπο **Ινσουλίνης** και τα προγράμματα **IC**, **ISF**, **βασικού ρυθμού** και **στόχου** με γραφήματα.
+Η οθόνη Προφίλ δείχνει τα προφίλ σας ως **καρουζέλ καρτών που σύρετε**. Η κάρτα του προφίλ που τρέχει έχει την ένδειξη **ΕΝΕΡΓΟ** και δείχνει τον συνολικό ημερήσιο βασικό ρυθμό του (π.χ. *∑ 30,15 U*). Below the selected card you see that profile's details — the **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+
+When a temporary switch is running, the **ACTIVE** card shows its percentage and time shift with the time left, for example *110% +2 h · 2 h 40 min*, above a progress bar. Both are refreshed every 30 seconds. The details below then have two columns: the values of the profile in blue, and the values in use with the percentage in red.
 
 ![Η οθόνη Προφίλ — καρουζέλ προφίλ, λεπτομέρειες και γραμμή ενεργειών](../images/v4/Profiles/profile_manage.png)
 
