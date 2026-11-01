@@ -10,14 +10,15 @@
 - Keď je k dispozícii nové vydanie, priamo v aplikácii **AAPS** dostanete informačný banner o novej verzii.
 - Nová verzia bude v čase vydania oznámená aj na Facebooku.
 - Po vydaní si pozorne prečítajte [poznámky k vydaniu](ReleaseNotes.md) a ešte pred aktualizáciou si nejasnosti vyjasnite s komunitou na Facebooku alebo Discorde.
-- Nezabudnite exportovať nastavenia **AAPS**.
+- Updating from **AAPS** 3.x? Read [What changed in AAPS v4](V4Changes.md) first: it lists the features that moved, were renamed or were removed.
+- Do not forget to [export your settings](ExportImportSettings.md). When you import them again after the update, you choose whether the pump settings are replaced too.
 
 ## Aktualizácia AAPS zostavením v prehliadači
 
 Už ste svoju aplikáciu AAPS zostavili v prehliadači? Postupujte podľa návodu pre spôsob, ktorý ste použili:
 
-- **AAPS Builder** (váš súkromný repozitár, zvyčajne s názvom `my-aaps`): [Aktualizácia AAPS pomocou AAPS Builder](#aaps-builder-updates). Nie je tu žiadny fork, ktorý by bolo treba synchronizovať.
-- **Fork a prípravný súbor** (vaša vlastná kópia AndroidAPS): [Aktualizácia v prehliadači (fork)](./UpdateBrowserBuild.md).
+- **AAPS Builder**: you build from the **Build AAPS** page of your private repository (usually named `my-aaps`) and download the app from GitHub. Follow [Updating AAPS with AAPS Builder](#aaps-builder-updates). Nie je tu žiadny fork, ktorý by bolo treba synchronizovať.
+- **Fork and preparation file**: you run the **AAPS-CI** workflow in your own copy (fork) of AndroidAPS, a repository named `AndroidAPS` in your GitHub account, and the app lands in your Google Drive. Follow [Update with a browser (fork)](./UpdateBrowserBuild.md).
 
 ## Aktualizácia AAPS v Android Studiu
 
@@ -29,9 +30,9 @@ Použite [rovnaký návod](../SettingUpAaps/CLIBuild.md) ako pri predchádzajúc
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-### Kontrola verzie AAPS v telefóne
+## After the update
 
-V [poznámkach k vydaniu](../Maintenance/ReleaseNotes.md) si overte, či po aktualizácii netreba urobiť niečo špeciálne.
+These steps are the same for every build method. V [poznámkach k vydaniu](../Maintenance/ReleaseNotes.md) si overte, či po aktualizácii netreba urobiť niečo špeciálne.
 
 Po nainštalovaní nového APK:
 

@@ -21,7 +21,7 @@ Když v **AAPS** povolíte **SMS komunikátor**, vezměte do úvahy, že telefon
 
 Dále doporučujeme povolit pro SMS příkazy [druhé telefonní číslo](#SMSCommands-authorized-phone-numbers). Pak můžete z druhého čísla SMS komunikátor [zakázat](#SMSCommands-other), pokud by byl váš hlavní telefon pro vzdálené ovládání zneužit.
 
-Výchozí minimální prodleva mezi bolusovými příkazy je 15 minut. Z bezpečnostních důvodů musíte přidat alespoň dvě autorizovaná telefonní čísla ke zkrácení tohoto limitu. Pokud se pokusíte o další vzdálený bolus do 15 minut od předchozího bolusu, dostanete odpověď „Vzdálený bolus není k dispozici. Zkuste to později.“
+The default minimum time delay between bolus commands is 15 minutes, counted from the moment the pump accepts a bolus. Z bezpečnostních důvodů musíte přidat alespoň dvě autorizovaná telefonní čísla ke zkrácení tohoto limitu. Pokud se pokusíte o další vzdálený bolus do 15 minut od předchozího bolusu, dostanete odpověď „Vzdálený bolus není k dispozici. Zkuste to později.“
 
 AAPS vás bude textovou zprávou informovat, že byl poslaný příkaz (bolus, změna profilu apod.) úspěšně vykonán. Je proto vhodné nastavit, aby byly potvrzovací zprávy odesílány alespoň na dvě různá telefonní čísla pro případ, že by došlo ke zcizení jednoho z rodičovských telefonů.
 

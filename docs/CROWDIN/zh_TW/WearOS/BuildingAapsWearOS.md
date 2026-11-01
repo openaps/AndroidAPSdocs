@@ -41,7 +41,7 @@ Wear APK 會依照您選擇的建置[變體](#browserbuild-variant)產生：`ful
 
 Wear APK 的下載位置：
 
-- **AAPS Builder**：在建置頁面向下捲動至 **Artifacts**，並下載手機應用程式旁的 `aaps-wear-….apk`，如下方[步驟 6 – 在手機上安裝應用程式](#aaps-builder-step6)所示。如果您要透過手機安裝手錶應用程式（使用 Wear Installer 2 或 Easy Fire Tools），請將檔案下載至執行 **AAPS** 的手機；如果您使用 ADB，則請下載至電腦。
+- **AAPS Builder**: on the build page, scroll down to **Artifacts** and download `aaps-wear-….apk` next to the phone app, as shown in [Step 5 – Install the app on your phone](#aaps-builder-step5). 如果您要透過手機安裝手錶應用程式（使用 Wear Installer 2 或 Easy Fire Tools），請將檔案下載至執行 **AAPS** 的手機；如果您使用 ADB，則請下載至電腦。
 
   ![Artifacts，包含手機與手錶的應用程式](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 

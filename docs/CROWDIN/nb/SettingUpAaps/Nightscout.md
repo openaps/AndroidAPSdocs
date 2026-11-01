@@ -6,11 +6,11 @@
 
 Nightscout er rapporterings- og overvåkingsserveren til **AAPS**: **AAPS** laster opp dataene dine dit, og du eller omsorgspersonene dine ser på dem på Nightscout-nettstedet eller i følger-apper. Det inneholder de medisinske dataene dine, profilene og behandlingene dine, så det er verdt å tenke på hvordan du sikrer Nightscout-nettstedet ditt.
 
-I **AAPS** 4 går ikke fjernstyring gjennom Nightscout-nettstedet. Mens klientstyring er på ([herdet modus](#client-master-control-hardened-mode)), blir behandlinger eller mål som skrives rett inn i Nightscout, **ikke brukt** av **AAPS**. Fjernkommandoer kommer i stedet fra en paret **AAPSClient** – se [Hovedenhet ↔ klientstyring](#client-master-control).
+I **AAPS** 4 går ikke fjernstyring gjennom Nightscout-nettstedet. Mens klientstyring er på ([herdet modus](#client-master-control-hardened-mode)), blir behandlinger eller mål som skrives rett inn i Nightscout, **ikke brukt** av **AAPS**. Fjernkommandoer kommer i stedet fra en sammenkoblet **AAPSClient** – se [Hovedenhet ↔ klientstyring](#client-master-control).
 
 Vær svært forsiktig hvis du bruker Nightscout som BS-kilde for AAPS.
 
-### Nightscout settings
+### Nightscout-innstillinger
 
 Du kan nekte offentlig tilgang til Nightscout-nettstedet ditt ved å bruke [autentiseringsroller](https://nightscout.github.io/nightscout/security): pass på at du bare deler URL-en din med et `readable`-token, aldri med et `admin`-token.
 
@@ -20,7 +20,7 @@ Nightscout `API_SECRET` er hovedpassordet til nettstedet ditt: ikke del det offe
 
 ### AAPS-innstillinger
 
-Å godta data fra Nightscout (profilendringer, behandlinger, ...) er valgfritt og slått av som standard. Bryterne som beskrives under, er skjult mens klientstyring er på (herdet modus) og i [enkel modus](#preferences-simple-mode).
+Å godta data fra Nightscout (profilendringer, behandlinger, ...) er valgfritt og slått av som standard. Bryterne som beskrives under, er skjult mens klientstyring er på (herdet modus) og i [Enkelmodus](#preferences-simple-mode).
 
 * Du finner innstillingene for **Synkronisering** i NSClientV3-pluginen enten via 1) **Innstillinger** (tannhjulet på hovedskjermen) -> **NSClientV3** -> **Synkronisering**, eller 2) **Konfigurasjon** (☰-menyen) -> **Kommunikasjon** -> «**Innstillinger**» under NSClientV3.
 * Slå på «Last opp data til NS».
@@ -35,7 +35,7 @@ Hvis du lar alle «Motta ... fra NS»-valgene stå av, er du sikker på at ingen
 
 #### Godta endringer fra Nightscout
 
-Når du slår på disse valgene, kan du endre AAPS-innstillinger via Nightscout, for eksempel endre og bytte profil, sette midlertidige mål og legge til karbohydrater som AAPS tar hensyn til. De vises bare når klientstyring og enkel modus er av.  
+Når du slår på disse valgene, kan du endre AAPS-innstillinger via Nightscout, for eksempel endre og bytte profil, sette midlertidige mål og legge til karbohydrater som AAPS tar hensyn til. De vises bare når klientstyring og Enkelmodus er av.  
 Merk at insulinbehandlinger bare brukes til beregninger, som «Ikke gi bolus, bare registrer».
 
 ![Mottaksvalg for Nightscout slått på](../images/NSsafety3.png)

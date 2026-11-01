@@ -6,6 +6,11 @@ Om je AAPS-installatie terug te zetten op een bestaande of nieuwe telefoon, is h
 
 Overweeg een tweede telefoon als reserve aan te schaffen en het terugzetten van AAPS te oefenen, zodat je zeker weet dat de reservetelefoon goed werkt. Zo weet je zeker dat je noodplan werkt en dat je zonder problemen verder kunt met AAPS als je AAPS-telefoon niet meer beschikbaar is.
 
+```{admonition} Android backups and phone-transfer tools do not carry your AAPS settings
+:class: warning
+Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and they are left out of the Google backup and of the phone-to-phone transfer of a new phone. A settings export, as described on this page, is the only way to carry them over.
+```
+
 Om terug te kunnen zetten, is het belangrijk dat je de volgende dingen bij de hand hebt:
 
 - Je **Android Studio keystore-bestand** en het bijbehorende **wachtwoord**: nodig om het AAPS .APK-installatiebestand (opnieuw) te bouwen.

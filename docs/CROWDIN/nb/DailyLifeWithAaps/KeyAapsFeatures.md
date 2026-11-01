@@ -152,7 +152,7 @@ Merk: Når du bruker **SMB**, beregnes **max-IOB** annerledes enn i AMA. I **AMA
 
 ### Bruk dynamisk sensitivitet
 
-Dette er funksjonen [Dynamisk ISF](../DailyLifeWithAaps/DynamicISF.md). Når den er aktivert, blir nye innstillinger tilgjengelige. Innstillingene er forklart på siden [Dynamisk ISF](#dyn-isf-preferences).
+Dette er funksjonen [Dynamisk ISF (DynISF)](../DailyLifeWithAaps/DynamicISF.md). Når den er aktivert, blir nye innstillinger tilgjengelige. Innstillingene er forklart på siden [Dynamisk ISF](#dyn-isf-preferences).
 
 ### Bruk Autosens
 
@@ -293,7 +293,7 @@ Standardverdi: 4 (bør ikke endres med mindre du virkelig må, og vet hva du gj�
 
 ## AutoISF
 
-**AutoISF** er en **eksperimentell** algoritme for avanserte brukere. Den bygger på OpenAPS SMB og legger til regler som gjør insulinfølsomhetsfaktoren (ISF) sterkere eller svakere, avhengig av hvordan glukosen din oppfører seg.
+**AutoISF** er en **eksperimentell** algoritme for avanserte brukere. Den bygger på OpenAPS SMB og legger til regler som gjør insulinsensitivitetsfaktoren (ISF) sterkere eller svakere, avhengig av hvordan glukosen din oppfører seg.
 
 Det er en utviklingsfunksjon: Den kan bare slås på i et [dev-bygg](../AdvancedOptions/DevBranch.md) med **Engineering Mode** aktivert. I et vanlig utgivelsesbygg er den tvunget av, og vises derfor ikke i **Konfigurasjon → APS**. Å fullføre [opplæringsmålene](../SettingUpAaps/CompletingTheObjectives.md) låser den ikke opp.
 
@@ -355,7 +355,7 @@ Standardverdien er 2, men du bør øke denne parameteren sakte for å se hvor my
 
 ### Bruk Autosens (AMA)
 
-Her kan du velge om du vil bruke [sensitivitetsdeteksjonen](../DailyLifeWithAaps/SensitivityDetectionAndCob.md) Autosens eller ikke.
+Her kan du velge om du vil bruke [Sensitivitetsdeteksjon](../DailyLifeWithAaps/SensitivityDetectionAndCob.md) Autosens eller ikke.
 
 ### Autosens justerer mål
 

@@ -21,7 +21,7 @@ Jeśli włączysz **Komunikator SMS** w **AAPS**, pamiętaj, że telefon, z któ
 
 Dodatkowo zalecamy dopuszczenie [drugiego numeru telefonu](#SMSCommands-authorized-phone-numbers) do poleceń SMS. Dzięki temu możesz użyć drugiego numeru, aby [wyłączyć](#SMSCommands-other) Komunikator SMS, jeśli Twój główny telefon do zdalnego sterowania zostanie przejęty przez kogoś innego.
 
-Domyślny minimalny odstęp między poleceniami bolusa to 15 minut. Ze względów bezpieczeństwa musisz dodać co najmniej dwa autoryzowane numery telefonów, aby ustawić krótszy odstęp. Jeśli spróbujesz ponownie podać zdalny bolus w ciągu 15 minut od poprzedniego bolusa, dostaniesz odpowiedź „Bolus zdalny niedostępny. Spróbuj ponownie później.”
+The default minimum time delay between bolus commands is 15 minutes, counted from the moment the pump accepts a bolus. Ze względów bezpieczeństwa musisz dodać co najmniej dwa autoryzowane numery telefonów, aby ustawić krótszy odstęp. Jeśli spróbujesz ponownie podać zdalny bolus w ciągu 15 minut od poprzedniego bolusa, dostaniesz odpowiedź „Bolus zdalny niedostępny. Spróbuj ponownie później.”
 
 AAPS poinformuje Cię też SMS-em, czy Twoje zdalne polecenia, np. bolus lub zmiana profilu, zostały wykonane. Zaleca się takie ustawienie funkcji sterowania pompą poprzez sms, aby teksty potwierdzające były wysyłane na co najmniej dwa różne numery telefonów, w przypadku kradzieży jednego z telefonów odbierających drugi telefon odbierze informację o zmianach.
 

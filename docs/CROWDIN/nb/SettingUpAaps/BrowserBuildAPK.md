@@ -14,13 +14,13 @@ Dette er **steg 4** av [Nettleserbygg](BrowserBuild.md). Fullfør først [Steg 3
 :::{tab-item} Wiki
 ### Kjør arbeidsflyten for å bygge den signerte APK-filen
 
-1. In your GitHub copy of AndroidAPS, select Actions.
-2. Expand All Workflows.
+1. I GitHub-kopien din av AndroidAPS velger du Actions.
+2. Utvid All Workflows.
 3. Velg AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
-4. Scroll down and tap Run Workflow.
+4. Bla nedover og trykk på Run Workflow.
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
@@ -30,14 +30,14 @@ Dette er **steg 4** av [Nettleserbygg](BrowserBuild.md). Fullfør først [Steg 3
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of Android APS.
+6. Du ser meldingen Workflow run was successfully requested. Oppdater nettlesersiden, så kan du følge med på hvordan bygget går. Når handlingen er ferdig, viser AAPS CI-handlingen en grønn hake. Du har nå bygget den oppdaterte versjonen av Android APS.
 
 ![Monitor Workflow](../images/update/CI/GitHubActions4.png)
 
 ### Installer AAPS-APK-filen
 
 1. Åpne din Google Drive
-2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
+2. Gå inn i AAPS, velg mappen for den nye versjonen, og der finner du både telefon- og Android Wear-versjonen.
 
 ![Google Drive Location](../images/update/CI/GitHubActions5.png)
 :::

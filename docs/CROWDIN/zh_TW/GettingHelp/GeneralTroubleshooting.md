@@ -39,6 +39,7 @@
 * [設定檔：「基礎率與目前的幫浦不相容」](#your-aaps-profile-basal-not-compatible)
 * [幫浦：「資料來自不同的幫浦」](#config-builder-wrong-pump-data)
 * [Nightscout 用戶端](TroubleshootingNsClient.md)
+* **"AAPS settings cannot be read"** at start: the settings are encrypted with a key that Android keeps for **AAPS**, and that key does not open them any more, for example after the key store of the phone was reset. While this screen is shown, **AAPS** is not running and does not control the pump. Tap **Retry**: it closes and restarts **AAPS**. If that does not help, restart the phone. Use **Start fresh** only when nothing else helps: it sets the unreadable settings file aside (it is renamed and kept) and starts **AAPS** with empty settings. Then import your last [settings export](../Maintenance/ExportImportSettings.md).
 
 ### 使用說明
 

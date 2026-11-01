@@ -10,9 +10,9 @@ Knappene nedenfor åpner GitHub i en ny Chrome-fane. For å komme tilbake til de
 
 (aaps-builder-setup-step1)=
 
-## Steg 1 – Opprett ditt private byggerepositorium
+## Steg 1 – Opprett ditt private byggerepository
 
-Dette oppretter din egen private kopi av AAPS Builder i GitHub-kontoen din: et repositorium med byggearbeidsflyten allerede på plass. Bare du kan se det og appene det bygger. Du trenger **ikke** å forke AndroidAPS: AAPS-kildekoden lastes ned fra det offisielle AndroidAPS-repositoriet ved hvert bygg.
+Dette oppretter din egen private kopi av AAPS Builder i GitHub-kontoen din: et repository med byggearbeidsflyten allerede på plass. Bare du kan se det og appene det bygger. Du trenger **ikke** å forke AndroidAPS: AAPS-kildekoden lastes ned fra det offisielle AndroidAPS-repositoryet ved hvert bygg.
 
 <label class="aapsb-label" for="aapsb-user">Brukernavnet ditt på GitHub</label>
 <input class="aapsb-input" type="text" id="aapsb-user" autocomplete="username" spellcheck="false" placeholder="my-github-name" />
@@ -20,40 +20,40 @@ Dette oppretter din egen private kopi av AAPS Builder i GitHub-kontoen din: et r
 
 Logg først inn på github.com i denne nettleseren (ingen konto? opprett en gratis). Kom så tilbake hit. Bruk brukernavnet ditt (vist i GitHub-profilen din), ikke e-postadressen din: siden spør GitHub om dette brukernavnet finnes.
 
-<label class="aapsb-label" for="aapsb-repo">Navnet på repositoriet ditt</label>
+<label class="aapsb-label" for="aapsb-repo">Navnet på repositoryet ditt</label>
 <input class="aapsb-input" type="text" id="aapsb-repo" spellcheck="false" placeholder="my-aaps" />
 
-Behold forslaget. Har du allerede opprettet repositoriet ditt med et annet navn? Skriv inn akkurat det navnet her.
+Behold forslaget. Har du allerede opprettet repositoryet ditt med et annet navn? Skriv inn akkurat det navnet her.
 
 ```{note}
-**Har du allerede et AAPS Builder-repositorium** (laget med en tidligere versjon av denne siden)? Ikke opprett et nytt: skriv inn det nøyaktige navnet her, hopp over knappen nedenfor, og oppdater arbeidsflyten i det én gang: se **Oppdatere kopien din** på slutten av dette steget. Hemmelighetene dine blir som de er.
+**Har du allerede et AAPS Builder-repository** (laget med en tidligere versjon av denne siden)? Ikke opprett et nytt: skriv inn det nøyaktige navnet her, hopp over knappen nedenfor, og oppdater arbeidsflyten i det én gang: se **Oppdatere kopien din** på slutten av dette steget. Hemmelighetene dine blir som de er.
 
-Hvis du likevel vil ha et nytt repositorium, velger du et navn du ikke har fra før, for eksempel `my-aaps-2`, og bruker den samme keystore-filen i steg 2.
+Hvis du likevel vil ha et nytt repository, velger du et navn du ikke har fra før, for eksempel `my-aaps-2`, og bruker den samme keystore-filen i steg 2.
 
 Ikke skriv inn navnet på forken din av AndroidAPS: en fork er offentlig, og den bygger allerede med sin egen **AAPS CI**-arbeidsflyt.
 ```
 
-Repositoriet ditt:<code class="aapsb-repoUrl"></code>
+Repositoryet ditt:<code class="aapsb-repoUrl"></code>
 
 Kontroller dette navnet før du bruker knappene nedenfor: siden husker navnet fra forrige besøk.
 
-<a class="aapsb-btn" id="aapsb-createRepo" target="_blank" rel="noopener">Opprett mitt private repositorium</a>
+<a class="aapsb-btn" id="aapsb-createRepo" target="_blank" rel="noopener">Opprett mitt private repository</a>
 
-På GitHub-siden som åpnes, er alt allerede fylt ut: malen `nightscout/aaps-builder`, kontoen din som eier, navnet på repositoriet ditt, og **Private**. Ikke endre noe, og la **Include all branches** være uten hake.
+På GitHub-siden som åpnes, er alt allerede fylt ut: malen `nightscout/aaps-builder`, kontoen din som eier, navnet på repositoryet ditt, og **Private**. Ikke endre noe, og la **Include all branches** være uten hake.
 
 1. Klikk på den grønne knappen **Create repository**.
-2. GitHub viser det nye repositoriet ditt med en mappe `.github` og en fil `README.md`: byggearbeidsflyten ligger i den. Kom tilbake til denne siden for steg 2.
+2. GitHub viser det nye repositoryet ditt med en mappe `.github` og en fil `README.md`: byggearbeidsflyten ligger i den. Kom tilbake til denne siden for steg 2.
 
 ```{admonition} Your new repository is empty (no files)?
 :class: warning
 
-Det ble ikke opprettet fra malen. Slett det (**Settings** → nederst på siden → **Delete this repository**), og trykk så på **Opprett mitt private repositorium** igjen.
+Det ble ikke opprettet fra malen. Slett det (**Settings** → nederst på siden → **Delete this repository**), og trykk så på **Opprett mitt private repository** igjen.
 ```
 
 ```{admonition} Updating your copy (existing AAPS Builder repository)
 :class: dropdown
 
-Byggestegene oppdateres for deg: ved hvert bygg kjører repositoriet ditt versjonen som AAPS-utviklerne har gitt ut i nightscout/aaps-builder, og ingenting i repositoriet ditt endres. Du bytter bare ut arbeidsflytfilen din når [Oppdateringer og endringer i dokumentasjonen](../Maintenance/DocumentationUpdate.md) sier fra om det (for eksempel for en ny byggevariant), eller én gang hvis repositoriet ditt ble laget med en tidligere versjon av denne siden eller fra den gamle malen. Hemmeligheten `KEYSTORE_SET` blir som den er.
+Byggestegene oppdateres for deg: ved hvert bygg kjører repositoryet ditt versjonen som AAPS-utviklerne har gitt ut i nightscout/aaps-builder, og ingenting i repositoryet ditt endres. Du bytter bare ut arbeidsflytfilen din når [Oppdateringer og endringer i dokumentasjonen](../Maintenance/DocumentationUpdate.md) sier fra om det (for eksempel for en ny byggevariant), eller én gang hvis repositoryet ditt ble laget med en tidligere versjon av denne siden eller fra den gamle malen. Hemmeligheten `KEYSTORE_SET` blir som den er.
 
 1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Åpne den nyeste arbeidsflyten</a>
 
@@ -127,11 +127,11 @@ Du trenger alle tre hvis du noen gang bygger AAPS på en annen måte, f.eks. med
 
 `````
 (aaps-builder-setup-step3)=
-## Steg 3 – Gi nøkkelen til repositoriet ditt
+## Steg 3 – Gi nøkkelen til repositoryet ditt
 <span id="aapsb-s3wait">Fullfør steg 2 først.</span>
 
 <div id="aapsb-s3ready" hidden>
-  1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Åpne siden for hemmeligheter</a> Åpner: <code class="aapsb-repoUrl"></code> Får du «Page not found» (404)? Kontroller først at du er logget inn på github.com i denne nettleseren: GitHub viser 404 for private repositorier når du ikke er logget inn. Ellers stemmer ikke brukernavnet eller navnet på repositoriet i steg 1 med repositoriet ditt: kontroller dem på github.com og skriv dem inn i steg 1. 2. Trykk på «Kopier navn», og lim det inn i det lille feltet «Name»: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Kopier navn</button> 3. Trykk på «Kopier hemmelighet», og lim den lange koden inn i den store boksen «Secret»: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Kopier hemmelighet</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> Hemmeligheten er en svært lang kode (tusenvis av tegn), IKKE ordet KEYSTORE_SET. Kopier og lim inn navnet først, deretter den lange koden. 4. Trykk på «Add secret». Ferdig, du trenger aldri å gjøre dette igjen.
+  1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Åpne siden for hemmeligheter</a> Åpner: <code class="aapsb-repoUrl"></code> Får du «Page not found» (404)? Kontroller først at du er logget inn på github.com i denne nettleseren: GitHub viser 404 for private repositoryer når du ikke er logget inn. Ellers stemmer ikke brukernavnet eller navnet på repositoryet i steg 1 med repositoryet ditt: kontroller dem på github.com og skriv dem inn i steg 1. 2. Trykk på «Kopier navn», og lim det inn i det lille feltet «Name»: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Kopier navn</button> 3. Trykk på «Kopier hemmelighet», og lim den lange koden inn i den store boksen «Secret»: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Kopier hemmelighet</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> Hemmeligheten er en svært lang kode (tusenvis av tegn), IKKE ordet KEYSTORE_SET. Kopier og lim inn navnet først, deretter den lange koden. 4. Trykk på «Add secret». Ferdig, du trenger aldri å gjøre dette igjen.
 </div>
 (aaps-builder-setup-step4)=
 ## Steg 4 – Bygg appen
@@ -140,7 +140,7 @@ Du trenger alle tre hvis du noen gang bygger AAPS på en annen måte, f.eks. med
 
    Åpner: <code class="aapsb-repoUrl"></code>
 
-   Får du «Page not found» (404)? Kontroller først at du er logget inn på github.com i denne nettleseren: GitHub viser 404 for private repositorier når du ikke er logget inn. Ellers stemmer ikke brukernavnet eller navnet på repositoriet i steg 1 med repositoriet ditt: kontroller dem på github.com og skriv dem inn i steg 1. Åpnet GitHub-appen seg i stedet? Trykk på «RUN WORKFLOW», kontroller versjonen og varianten, og trykk på «RUN WORKFLOW» igjen. Hvis appen fortsatt viser «Nothing to see here», drar du listen nedover for å se bygget ditt.
+   Får du «Page not found» (404)? Kontroller først at du er logget inn på github.com i denne nettleseren: GitHub viser 404 for private repositoryer når du ikke er logget inn. Ellers stemmer ikke brukernavnet eller navnet på repositoryet i steg 1 med repositoryet ditt: kontroller dem på github.com og skriv dem inn i steg 1. Åpnet GitHub-appen seg i stedet? Trykk på «RUN WORKFLOW», kontroller versjonen og varianten, og trykk på «RUN WORKFLOW» igjen. Hvis appen fortsatt viser «Nothing to see here», drar du listen nedover for å se bygget ditt.
 2. Hvis du blir spurt, klikker du på den grønne knappen for å aktivere arbeidsflyter.
 Listen over arbeidsflyter viser to oppføringer: bruk «Build AAPS». Ignorer «AAPS Builder»: den inneholder byggestegene og har ingen «Run workflow»-knapp.
 3. Klikk på «Run workflow», og deretter på den grønne knappen «Run workflow». «latest» bygger den nyeste AAPS-versjonen. ***tips:*** *du kan bygge en annen versjon ved å skrive inn navnet på [taggen](https://github.com/nightscout/AndroidAPS/tags) i stedet for «latest»*
@@ -150,7 +150,7 @@ Vil du ha en e-post når bygget er ferdig? GitHub sender deg bare e-post når et
 ```{admonition} No "Build AAPS" / "Run workflow" button?
 :class: warning
 
-1. Åpne repositoriet ditt og kontroller at det har en mappe `.github` med filen `workflows/build.yml`. Hvis repositoriet er tomt, ble det ikke opprettet fra malen: slett det (**Settings** → nederst på siden → **Delete this repository**) og gjør [steg 1](#aaps-builder-setup-step1) på nytt med knappen.
+1. Åpne repositoryet ditt og kontroller at det har en mappe `.github` med filen `workflows/build.yml`. Hvis repositoryet er tomt, ble det ikke opprettet fra malen: slett det (**Settings** → nederst på siden → **Delete this repository**) og gjør [steg 1](#aaps-builder-setup-step1) på nytt med knappen.
 2. Åpne fanen Actions. Hvis det står at arbeidsflyter er deaktivert, klikker du på den grønne knappen for å aktivere dem. Klikk deretter på «Build AAPS» i listen.
 ```
 
@@ -173,7 +173,7 @@ Vil du ha en e-post når bygget er ferdig? GitHub sender deg bare e-post når et
 
    Åpnet GitHub-appen seg i stedet? Den kan ikke laste ned bygg. I appen åpner du det nyeste bygget og trykker på «Artifacts ↗», eller trykker på delingsikonet og velger Chrome (eller «Kopier link», og limer så lenken inn i adressefeltet i Chrome). Fortsett i Chrome.
 
-   Får du «Page not found» (404)? Kontroller først at du er logget inn på github.com i denne nettleseren: GitHub viser 404 for private repositorier når du ikke er logget inn. Ellers stemmer ikke brukernavnet eller navnet på repositoriet i steg 1 med repositoriet ditt: kontroller dem på github.com og skriv dem inn i steg 1.
+   Får du «Page not found» (404)? Kontroller først at du er logget inn på github.com i denne nettleseren: GitHub viser 404 for private repositoryer når du ikke er logget inn. Ellers stemmer ikke brukernavnet eller navnet på repositoryet i steg 1 med repositoryet ditt: kontroller dem på github.com og skriv dem inn i steg 1.
 
    For å hindre at GitHub-lenker åpnes i appen: Android-Innstillinger → Apper → GitHub → Åpne som standard → slå av «Åpne støttede linker».
 3. Trykk på det nyeste bygget med grønn hake ✅.
@@ -181,9 +181,9 @@ Vil du ha en e-post når bygget er ferdig? GitHub sender deg bare e-post når et
 5. Når nedlastingen er ferdig, trykker du på filen og velger Installer. Hvis du blir spurt, tillat installering av apper fra denne kilden.
 6. aaps-wear-….apk er for en smartklokke. Hopp over den hvis du ikke bruker en.
 
-APK-filen vises ikke under «Code» i repositoriet ditt, bare på byggesiden. Den ligger der i 14 dager.
+APK-filen vises ikke under «Code» i repositoryet ditt, bare på byggesiden. Den ligger der i 14 dager.
 
-Ny AAPS-versjon? Sikkerhetskopier innstillingene dine, og bygg den så med [steg 4](#aaps-builder-setup-step4). Repositoriet ditt bygger aldri noe av seg selv.
+Ny AAPS-versjon? Sikkerhetskopier innstillingene dine, og bygg den så med [steg 4](#aaps-builder-setup-step4). Repositoryet ditt bygger aldri noe av seg selv.
 
 (aaps-builder-setup-step6)=
 
@@ -205,7 +205,7 @@ Vil du at APK-filen skal dukke opp i Google Drive (og ligge der for alltid)? Leg
 
    Åpner: <code class="aapsb-repoUrl"></code>
 
-   Får du «Page not found» (404)? Kontroller først at du er logget inn på github.com i denne nettleseren: GitHub viser 404 for private repositorier når du ikke er logget inn. Ellers stemmer ikke brukernavnet eller navnet på repositoriet i steg 1 med repositoriet ditt: kontroller dem på github.com og skriv dem inn i steg 1.
+   Får du «Page not found» (404)? Kontroller først at du er logget inn på github.com i denne nettleseren: GitHub viser 404 for private repositoryer når du ikke er logget inn. Ellers stemmer ikke brukernavnet eller navnet på repositoryet i steg 1 med repositoryet ditt: kontroller dem på github.com og skriv dem inn i steg 1.
 5. Trykk på «Kopier navn», og lim det inn i det lille feltet «Name»: `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Kopier navn</button>
 6. Trykk på «Kopier hemmelighet», og lim koden inn i den store boksen «Secret»: <code id="aapsb-gdrivePreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="gdriveValue">Kopier hemmelighet</button> <span class="aapsb-msg" id="aapsb-gdriveCopyMsg"></span>
 7. Trykk på «Add secret».

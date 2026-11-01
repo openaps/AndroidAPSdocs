@@ -1,4 +1,4 @@
-# Phones
+# Telefoner
 
 <!-- List of hidden pages to avoid overcrowding the menu -->
 
@@ -26,7 +26,7 @@ Vi har en liste over [testede maskinvareoppsett](https://docs.google.com/spreads
 
 Denne listen inneholder tilbakemeldinger fra brukere om bruk av en telefon sammen med **AAPS** og en bestemt pumpe og CGM. Den kan hjelpe deg med å sjekke om telefonen/pumpen/CGM-en din er brukt med suksess av andre brukere.
 
-The document is read-only. Med CTRL-F kan du søke i teksten i Google-regnearket.
+Dokumentet er skrivebeskyttet. Med CTRL-F kan du søke i teksten i Google-regnearket.
 
 For å registrere testen din av et maskinvareoppsett, fyll ut dette [skjemaet](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Når du har fylt ut skjemaet, oppdateres regnearket automatisk hvert 5. minutt.
 

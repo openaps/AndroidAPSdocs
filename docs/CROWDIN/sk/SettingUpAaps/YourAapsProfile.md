@@ -226,11 +226,11 @@ Ak máte správne bazálne dávky, môžete to otestovať takto: skontrolujte, �
 :local: true
 ```
 
-### Prečo je správne nastavenie profilu také dôležité
+### About the importance of getting your profile right
 
 **Prečo by som sa mal snažiť o správne nastavenie profilu? Nemôže sa o to jednoducho postarať okruh?**
 
-Hybridný uzavretý okruh _sa môže_ pokúsiť upraviť podávanie inzulínu tak, aby zmiernil zlú kontrolu glykémie spôsobenú nesprávnymi hodnotami **profilu**. Môže to urobiť napríklad zastavením podávania inzulínu, ak idete do hypoglykémie. Oveľa lepšiu kontrolu glykémie však dosiahnete, ak sú nastavenia vášho **profilu** už čo najbližšie tomu, čo vaše telo potrebuje. To je jeden z dôvodov, prečo **AAPS** používa postupné ciele na prechod od liečby pumpou bez okruhu k hybridnému uzavretému okruhu. Okrem toho budú chvíle, keď budete musieť okruh otvoriť (zahrievanie senzora, porucha senzora _atď._), niekedy aj uprostred noci, a pre tieto situácie budete chcieť mať správne nastavenia.
+Hybridný uzavretý okruh _sa môže_ pokúsiť upraviť podávanie inzulínu tak, aby zmiernil zlú kontrolu glykémie spôsobenú nesprávnymi hodnotami **profilu**. It can do this, for example, by withholding insulin delivery if you are going to hypo. Oveľa lepšiu kontrolu glykémie však dosiahnete, ak sú nastavenia vášho **profilu** už čo najbližšie tomu, čo vaše telo potrebuje. To je jeden z dôvodov, prečo **AAPS** používa postupné ciele na prechod od liečby pumpou bez okruhu k hybridnému uzavretému okruhu. Okrem toho budú chvíle, keď budete musieť okruh otvoriť (zahrievanie senzora, porucha senzora _atď._), niekedy aj uprostred noci, a pre tieto situácie budete chcieť mať správne nastavenia.
 
 Ak začínate s **AAPS** po inom systéme s otvoreným alebo uzavretým okruhom, už budete mať dobrú predstavu, aké hodnoty použiť pre bazálne dávky (**BR**), faktory citlivosti na inzulín (**ISF**) a inzulínovo-sacharidové pomery (**ICR**).
 

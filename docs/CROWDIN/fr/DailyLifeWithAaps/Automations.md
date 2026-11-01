@@ -222,13 +222,15 @@ aucun
 * Le **Profil** doit être entre 50 % et 130 %
 * fonctionne seulement si le pourcentage précédent est de 100 %
 
-**Actions :** **Changer le lissage**
+**Actions:** **Change smoothing** (in the **Loop & insulin** group)
 
 **Options :**
 
-* choisissez la [méthode de lissage](../CompatibleCgms/SmoothingBloodGlucoseData.md) à activer
+* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
 * s'exécute seulement si cette méthode de lissage n'est pas déjà active. **AAPS** ajoute automatiquement à la règle la ligne « **Conditions préalables : Lissage … n'est pas actif** ». Une fois le lissage choisi actif, la règle est ignorée sans message.
-* Exemple : avec le déclencheur **Âge capteur**, passez au **Lissage moyen** pendant le premier jour d'un nouveau capteur, puis revenez à **Pas de lissage** ensuite.
+* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
+  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
+  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
 
 **Actions :** **Remarque** (dans le groupe **Alertes** de la liste)
 
@@ -268,7 +270,7 @@ aucun
 
 **Options :**
 
-* aucun. Quand une règle avec cette action s'exécute, **AAPS** ne vérifie pas les règles situées en dessous dans la liste pendant ce passage. Ajoutez-la à une règle qui doit être prioritaire sur les règles situées en dessous (voir [l'ordre des Automatisations](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* aucun. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Ajoutez-la à une règle qui doit être prioritaire sur les règles situées en dessous (voir [l'ordre des Automatisations](#Automations-the-order-of-the-automations-in-the-list-matters)).
 
 **Actions :** **Exécuter le scénario**, **Activer le scénario**, **Désactiver le scénario** (dans le groupe **Scénarii**)
 

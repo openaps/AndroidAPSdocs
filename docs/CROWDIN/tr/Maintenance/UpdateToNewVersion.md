@@ -10,14 +10,15 @@
 - When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
 - The new version will also be announced on Facebook at the time of release.
 - Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
-- Do not forget to export your **AAPS'** settings.
+- Updating from **AAPS** 3.x? Read [What changed in AAPS v4](V4Changes.md) first: it lists the features that moved, were renamed or were removed.
+- Do not forget to [export your settings](ExportImportSettings.md). When you import them again after the update, you choose whether the pump settings are replaced too.
 
 ## Update AAPS with browser build
 
 You already built your AAPS app with a browser? Follow the instructions for the method you used:
 
-- **AAPS Builder** (your private repository, usually named `my-aaps`): [Updating AAPS with AAPS Builder](#aaps-builder-updates). There is no fork to sync.
-- **Fork and preparation file** (your own copy of AndroidAPS): [Update with a browser (fork)](./UpdateBrowserBuild.md).
+- **AAPS Builder**: you build from the **Build AAPS** page of your private repository (usually named `my-aaps`) and download the app from GitHub. Follow [Updating AAPS with AAPS Builder](#aaps-builder-updates). There is no fork to sync.
+- **Fork and preparation file**: you run the **AAPS-CI** workflow in your own copy (fork) of AndroidAPS, a repository named `AndroidAPS` in your GitHub account, and the app lands in your Google Drive. Follow [Update with a browser (fork)](./UpdateBrowserBuild.md).
 
 ## Update AAPS with Android Studio
 
@@ -29,9 +30,9 @@ Use the [same instructions](../SettingUpAaps/CLIBuild.md) as when building AAPS 
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-### Telefondaki AAPS sürümünü kontrol edin
+## After the update
 
-Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
+These steps are the same for every build method. Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
 
 After you installed the new apk:
 

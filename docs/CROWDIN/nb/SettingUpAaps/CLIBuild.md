@@ -3,12 +3,12 @@
 ```{admonition} For users familiar with the command-line and git
 :class: note
 
-Det enkleste alternativet for å bygge AAPS er [nettleserbygg](./BrowserBuild.md).
+Det enkleste alternativet for å bygge AAPS er [Nettleserbygg](./BrowserBuild.md).
 ```
 
 Testet med Fedora og Debian Linux; andre systemer bør virke med små justeringer.
 
-## Requirements
+## Krav
 
 Finn minimumsversjonen av Java som kreves i [denne tabellen](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Installer den riktige OpenJDK-pakken med systemets pakkebehandler. I Debian heter pakkene for eksempel `openjdk-21-jdk`. Den skal inneholde programmene `javac` og `keytool`.
 
@@ -33,9 +33,9 @@ Du trenger keystore-filen og passordfrasen hver gang du oppdaterer AAPS.
 
 ### 2. Kompilere APK-filen til AAPS
 
-Klon [git-repositoriet](https://github.com/nightscout/AndroidAPS) hvis det ikke allerede er klonet. AAPS bruker master-grenen for den nyeste stabile versjonen; sørg for at du er på den grenen/taggen du vil bygge.
+Klon [git-repositoryet](https://github.com/nightscout/AndroidAPS) hvis det ikke allerede er klonet. AAPS bruker master-grenen for den nyeste stabile versjonen; sørg for at du er på den grenen/taggen du vil bygge.
 
-Kjør `./gradlew :app:assembleFullRelease` i repositoriet. Den laster automatisk ned Gradle og avhengigheter, og kompilerer så koden. Når byggingen lykkes, skal du ha en usignert APK i `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`. Den skal også ha installert programmet `apksigner` i `$ANDROID_HOME`. Oppdater `PATH` igjen.
+Kjør `./gradlew :app:assembleFullRelease` i repositoryet. Den laster automatisk ned Gradle og avhengigheter, og kompilerer så koden. Når byggingen lykkes, skal du ha en usignert APK i `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`. Den skal også ha installert programmet `apksigner` i `$ANDROID_HOME`. Oppdater `PATH` igjen.
 
 ### 3. Lage en signert APK-fil fra den usignerte
 

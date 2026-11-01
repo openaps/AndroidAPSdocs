@@ -1,7 +1,7 @@
 (v4-changes)=
-# What changed in AAPS v4
+# Hva er endret i AAPS v4
 
-This page collects the notable **changes in behavior** between **AAPS** v3 and v4 — things that work differently, have moved, or have been removed — so existing users know what to expect when they update. See also the [Release Notes](ReleaseNotes.md) and the [update manual](UpdateToNewVersion.md).
+Denne siden samler de viktigste **endringene i oppførsel** mellom **AAPS** v3 og v4 — ting som virker annerledes, er flyttet eller er fjernet — slik at du som allerede bruker AAPS, vet hva du kan vente deg når du oppdaterer. Se også [Versjonsnotater](ReleaseNotes.md) og [oppdateringsveiledningen](UpdateToNewVersion.md).
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,160 +10,160 @@ This page collects the notable **changes in behavior** between **AAPS** v3 and v
 
 ---
 
-## NSClient v1 has been removed
+## NSClient v1 er fjernet
 
-**AAPS** v3 shipped **two** Nightscout synchronization plugins:
+**AAPS** v3 hadde **to** plugins for synkronisering med Nightscout:
 
-- **NSClient** — the legacy client (the old Nightscout REST / socket.io API, also called *“v1”*), and
-- **NSClientV3** — the client for the newer Nightscout **API v3**.
+- **NSClient** — den gamle klienten (det gamle REST-/socket.io-API-et i Nightscout, også kalt *«v1»*), og
+- **NSClientV3** — klienten for det nyere **API v3** i Nightscout.
 
-In **AAPS** v4 the legacy **NSClient (v1)** plugin has been **removed**. Only **NSClientV3** remains for synchronizing with Nightscout.
+I **AAPS** v4 er den gamle pluginen **NSClient (v1)** **fjernet**. Bare **NSClientV3** er igjen for synkronisering med Nightscout.
 
 ```{admonition} What you need to do
 :class: important
-If you (or your **AAPSClient** follower) were still synchronizing with the old **NSClient (v1)** plugin, switch to **NSClientV3** before/after updating:
+Hvis du (eller **AAPSClient**-følgeren din) fortsatt synkroniserte med den gamle pluginen **NSClient (v1)**, bytt til **NSClientV3** før/etter oppdateringen:
 
-- Open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → Communication → NSClientV3**.
-- Enter your **Nightscout URL** and an **access token** (NSClientV3 uses an access token, *not* the old API secret — see [creating a token](https://nightscout.github.io/nightscout/security/#create-a-token)).
-- Your Nightscout site must support the **API v3** (Nightscout 15 or newer).
-- If you use **websockets**, enable or disable them on **both** the master and the follower — never on only one.
+- Åpne **[Konfigurasjon](../SettingUpAaps/ConfigBuilder.md) → Kommunikasjon → NSClientV3**.
+- Skriv inn **Nightscout-URL-en** din og et **tilgangstoken** (NSClientV3 bruker et tilgangstoken, *ikke* den gamle API-nøkkelen — se [lage et token](https://nightscout.github.io/nightscout/security/#create-a-token)).
+- Nightscout-siden din må støtte **API v3** (Nightscout 15 eller nyere).
+- Hvis du bruker **websockets**, slå dem på eller av på **både** hovedenheten og følgeren — aldri bare på én av dem.
 ```
 
-This affects only how the app talks to Nightscout; your data on Nightscout is unchanged.
+Dette påvirker bare hvordan appen snakker med Nightscout; dataene dine på Nightscout er uendret.
 
 ---
 
-## The bottom navigation: Treatments, Scenes and Manage
+## Navigasjonslinjen nederst: Behandlinger, Scener og Administrer
 
-In **AAPS** v3 you moved around the app with a row of **tabs** (Overview, Actions, Treatments, …), and several features were **plugins** you enabled in the Config Builder (**Actions**, **Automation**, **Food**, …).
+I **AAPS** v3 beveget du deg rundt i appen med en rad med **faner** (Oversikt, Handlinger, Behandlinger, …), og flere funksjoner var **plugins** som du slo på i Config Builder (**Handlinger**, **Automasjon**, **Mat**, …).
 
-In **AAPS** v4 the tabs are gone, and so is the eye checkbox in the Config Builder that showed a plugin as a tab. The main screen is the **Overview**, and a **bottom navigation** gives you three sheets. **Actions, Automation and Food are no longer plugins** — there is nothing to enable in [Configuration](../SettingUpAaps/ConfigBuilder.md) (the renamed Config Builder); their functions now live in these sheets.
+I **AAPS** v4 er fanene borte, og det samme er øye-avkrysningsboksen i Config Builder som viste en plugin som en fane. Hovedskjermen er **oversikten**, og en **navigasjonslinje nederst** gir deg tre ark. **Handlinger, Automasjon og Mat er ikke lenger plugins** — det er ingenting å slå på i [Konfigurasjon](../SettingUpAaps/ConfigBuilder.md) (det nye navnet på Config Builder); funksjonene deres ligger nå i disse arkene.
 
 (v4changes-treatments)=
-### Treatments — enter and deliver
+### Behandlinger — registrer og gi
 
-The **Treatments** sheet is where you record or deliver a treatment: **Bolus wizard**, **Insulin** (manual bolus), **Carbs**, **Treatment** (insulin + carbs together), **Calibration**, **CGM** (open your CGM app, when one is configured), and your **[QuickWizards](../DailyLifeWithAaps/QuickWizards.md)**.
+Arket **Behandlinger** er stedet der du registrerer eller gir en behandling: **Boluskalkulator**, **Insulin** (manuell bolus), **Karbo**, **Behandling** (insulin + karbohydrater sammen), **Kalibrering**, **CGM** (åpner CGM-appen din, når en er satt opp) og **[hurtigknappene](../DailyLifeWithAaps/QuickWizards.md)** dine.
 
-![The Treatments bottom sheet](../images/v4/BehavioralChanges/treatments_sheet.png)
+![Arket Behandlinger nederst på skjermen](../images/v4/BehavioralChanges/treatments_sheet.png)
 
-On a **Wear OS watch** the same treatments are entered from the watch's **AAPS menu** (Bolus wizard / Calculator, eCarbs, Treatment, …):
+På en **Wear OS-klokke** registreres de samme behandlingene fra klokkens **AAPS-meny** (Boluskalkulator / Kalkulator, eKarbo, Behandling, …):
 
-![The treatment actions in the watch's AAPS menu](../images/v4/BehavioralChanges/treatments_watch.png)
+![Behandlingshandlingene i klokkens AAPS-meny](../images/v4/BehavioralChanges/treatments_watch.png)
 
-### Scenes
+### Scener
 
-Your situation presets — see [Scenes](../DailyLifeWithAaps/Scenes.md).
+Dine forhåndsinnstilte situasjoner — se [Scener](../DailyLifeWithAaps/Scenes.md).
 
 (v4changes-manage)=
-### Manage — manage and activate
+### Administrer — administrer og aktiver
 
-The **Manage** sheet is where you manage and activate everything else: **[Profile](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **Insulin settings** (your insulin configurations), **[Temp Target](../DailyLifeWithAaps/TempTargets.md)**, **[QuickWizard](../DailyLifeWithAaps/QuickWizards.md)** presets, **[Scenes](../DailyLifeWithAaps/Scenes.md)**, **Automation**, **Food**, **Site Rotation**, **Pump**, **[Authorized clients](../RemoteFeatures/ClientMasterControl.md)** — plus the pump actions that used to be on the *Actions* tab (**Extended Bolus**, **cancel temp basal**, **Prime/Fill**, **Sensor Insert**, **Pump Battery Change**).
+**Administrer**-arket er stedet der du administrerer og aktiverer alt annet: **[Profil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **Insulininnstillinger** (insulinoppsettene dine), **[Midlertidig mål](../DailyLifeWithAaps/TempTargets.md)**, forhåndsinnstilte **[Hurtigknapper](../DailyLifeWithAaps/QuickWizards.md)**, **[Scener](../DailyLifeWithAaps/Scenes.md)**, **Automasjon**, **Mat**, **Rotasjon av sted**, **Pumpe**, **[Autoriserte klienter](../RemoteFeatures/ClientMasterControl.md)** — pluss pumpehandlingene som før lå på fanen *Handlinger* (**Forlenget bolus**, **avbryt midlertidig basal**, **Prime/fylling**, **Sensorbytte**, **Bytte pumpebatteri**).
 
-![The Manage bottom sheet](../images/v4/BehavioralChanges/manage_sheet.png)
+![Administrer-arket nederst på skjermen](../images/v4/BehavioralChanges/manage_sheet.png)
 
-All of your existing automation rules and food entries are kept; only the way you reach these features has changed.
+Alle automasjonsreglene og matoppføringene du har fra før, beholdes; det er bare måten du når disse funksjonene på som er endret.
 
 (screens-action-tab)=
-#### Where did the Actions tab go?
+#### Hvor ble det av Handlinger-fanen?
 
-**AAPS** 3.x had an "Actions" tab. In **AAPS** 4 its functions live in other places:
+**AAPS** 3.x hadde en fane «Handlinger». I **AAPS** 4 ligger funksjonene dens andre steder:
 
-* **Profile switch** and **Profile Percentage**: tap the [profile name](#aaps-screens-profile--target) on the main screen, or **Manage → Profile**. Se [Endre profilprosenten](#ProfileSwitch-change-percentage).
-* **Temporary target**: press the [target](#aaps-screens-profile--target) on the main screen, or **Manage → Temp Target**.
-* **Prime/Fill**, **Sensor Insert**, **BG check** and the other careportal entries: in the expanded [status panel](#aaps-screens-careportal), in **Manage**, or as [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
-* **History browser**, **Statistics** (TDD): in the **menu** (☰).
+* **Profilbytte** og **profilprosent**: trykk på [profilnavnet](#aaps-screens-profile--target) på hovedskjermen, eller **Administrer → Profil**. Se [Endre profilprosenten](#ProfileSwitch-change-percentage).
+* **Midlertidig mål**: trykk på [målet](#aaps-screens-profile--target) på hovedskjermen, eller **Administrer → Midlertidig mål**.
+* **Prime/fylling**, **Sensorbytte**, **BS-kontroll** og de andre helseportal-oppføringene: i det utvidede [statuspanelet](#aaps-screens-careportal), i **Administrer**, eller som [Hurtigstart](../DailyLifeWithAaps/QuickLaunch.md)-knapper.
+* **Historikkleser**, **Statistikk** (TDD): i **menyen** (☰).
 
 ```{admonition} Profile switch and profile percentage
 :class: note
-In **AAPS** v3, a long press on the profile name opened the profile switch dialog (percentage, duration, Activity temp target). In **AAPS** v4, **tap** the profile name (or **Manage → Profile**), then tap the round **▶** button at the bottom right to open the same settings. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+I **AAPS** v3 åpnet et langt trykk på profilnavnet dialogen for profilbytte (prosent, varighet, midlertidig mål for aktivitet). I **AAPS** v4 **trykker** du på profilnavnet (eller **Administrer → Profil**) og deretter på den runde **▶**-knappen nederst til høyre for å åpne de samme innstillingene. Se [Endre profilprosenten](#ProfileSwitch-change-percentage).
 ```
 
 ---
 
 (v4changes-read-only-management)=
-## Settings protection now also locks the management screens
+## Sikkerhet for innstillinger låser nå også administrasjonsskjermene
 
-In **AAPS** v3, [Settings protection](#Preferences-settings-protection) asked for your password only when you opened the settings. You could still add or edit profiles in the **Local Profile** tab without it.
+I **AAPS** v3 spurte [Sikkerhet for innstillinger](#Preferences-settings-protection) om passordet ditt bare når du åpnet innstillingene. Du kunne fortsatt legge til eller redigere profiler i fanen **Lokal profil** uten passord.
 
-In **AAPS** v4, Settings protection also covers editing on the management screens: **Profile**, **Insulin settings**, **Temp Target** and **QuickWizard**. If your settings are locked, these screens open **read-only**:
+I **AAPS** v4 dekker Sikkerhet for innstillinger også redigering på administrasjonsskjermene: **Profil**, **Insulininnstillinger**, **Midlertidig mål** og **Hurtigknapp**. Hvis innstillingene dine er låst, åpnes disse skjermene **skrivebeskyttet**:
 
-- You can browse the entries and **▶ Activate** or use them.
-- The **Add / Edit / Clone / Delete** buttons are **hidden**. Only the **✏️ pencil** in the top bar shows that you can unlock editing.
+- Du kan bla i oppføringene og trykke **▶ Aktiver** eller bruke dem.
+- Knappene **Legg til / Rediger / Dupliser / Slett** er **skjult**. Bare **✏️-blyanten** i den øverste linjen viser at du kan låse opp redigering.
 
-![The read-only Profile screen — only Activate at the bottom, pencil in the top bar](../images/v4/Profiles/profile_manage_readonly.png)
+![Den skrivebeskyttede profilskjermen — bare Aktiver nederst, blyant i den øverste linjen](../images/v4/Profiles/profile_manage_readonly.png)
 
 ```{admonition} What you need to do
 :class: important
-To add, edit, clone or delete an entry, tap the **✏️ pencil** in the top bar and enter your settings password (or use biometrics). The buttons appear.
+For å legge til, redigere, duplisere eller slette en oppføring, trykk på **✏️-blyanten** i den øverste linjen og skriv inn passordet for innstillingene (eller bruk biometri). Da vises knappene.
 
-If you don't need to protect your settings, you can turn Settings protection off in **Settings → Protection**.
+Hvis du ikke trenger å beskytte innstillingene dine, kan du slå av Sikkerhet for innstillinger i **Innstillinger → Beskyttelse**.
 ```
 
 ---
 
 (v4changes-active-insulin)=
-## The insulin in use can't be edited
+## Insulinet som er i bruk, kan ikke redigeres
 
-In **AAPS** v3, you could change the DIA of the insulin you were using at any time.
+I **AAPS** v3 kunne du når som helst endre DIA for insulinet du brukte.
 
-In **AAPS** v4, the insulin marked **ACTIVE** in **Manage → Insulin settings** is greyed out: you cannot edit or delete it.
+I **AAPS** v4 er insulinet som er merket **AKTIV** i **Administrer → Insulininnstillinger**, nedtonet: du kan ikke redigere eller slette det.
 
-When you upgrade, **AAPS** keeps the insulin and DIA that your v3 profile switches already stored. If it finds older records whose insulin is known but whose DIA is not, it uses a default DIA for them and shows a message once, for example *Older records had no insulin duration, so 9.0 hours was used for Lyumjev. Check your insulin settings — already migrated records are not updated afterwards.* Check your insulin settings when you see it.
+Når du oppgraderer, beholder **AAPS** insulinet og DIA-verdien som profilbyttene dine fra v3 allerede har lagret. Hvis den finner eldre registreringer der insulinet er kjent, men ikke DIA, bruker den en standard DIA for dem og viser en melding én gang, for eksempel *Eldre oppføringer manglet varighet for insulin, så 9,0 timer ble brukt for Lyumjev. Kontroller insulininnstillingene – oppføringer som allerede er migrert, blir ikke oppdatert i ettertid.* Kontroller insulininnstillingene dine når du ser den.
 
 ```{admonition} What you need to do
 :class: important
-To change the DIA or peak, add a new insulin with **+**, adjust it, save it and **▶ Activate** it. See [Changing the insulin in use](#Config-Builder-insulin-change-active).
+For å endre DIA eller topp, legg til et nytt insulin med **+**, juster det, lagre det og trykk **▶ Aktiver**. Se [Bytte insulinet som er i bruk](#Config-Builder-insulin-change-active).
 ```
 
 ---
 
 (v4changes-remote-control)=
-## AAPSClient remote control needs pairing
+## Fjernstyring fra AAPSClient krever sammenkobling
 
-In **AAPS** v3, **AAPSClient** controlled **AAPS** by writing care-portal treatments to Nightscout, and could not deliver a bolus.
+I **AAPS** v3 styrte **AAPSClient** **AAPS** ved å skrive helseportal-behandlinger til Nightscout, og kunne ikke gi en bolus.
 
-In **AAPS** v4, the client and the main phone are **paired** once, and every command is signed. The main phone checks and confirms each command, and a client can now also deliver a bolus.
+I **AAPS** v4 blir klienten og hovedtelefonen **sammenkoblet** én gang, og hver kommando signeres. Hovedtelefonen kontrollerer og bekrefter hver kommando, og en klient kan nå også gi en bolus.
 
-- Each client has a **[role](#client-master-control-roles)** that limits what it may do.
-- While client control is on, the main phone is in **[hardened mode](#client-master-control-hardened-mode)**: treatments and changes typed directly into Nightscout (the website, other apps) are no longer applied.
-- Each client gets a **[Nightscout token of its own](#client-master-control-own-token)** with only the rights it needs.
+- Hver klient har en **[rolle](#client-master-control-roles)** som begrenser hva den får lov til å gjøre.
+- Mens klientstyring er på, er hovedtelefonen i **[herdet modus](#client-master-control-hardened-mode)**: behandlinger og endringer som skrives rett inn i Nightscout (nettsiden, andre apper) tas ikke lenger i bruk.
+- Hver klient får et **[eget Nightscout-token](#client-master-control-own-token)** med bare de rettighetene den trenger.
 
 ```{admonition} What you need to do
 :class: important
-Pair each **AAPSClient** with the main phone: see [Master ↔ Client control](#client-master-control). With an admin token on the main phone, the main phone shows a QR code that sets up and pairs the client in one scan. If you used to enter treatments on the Nightscout website, enter them on a paired client instead.
+Par hver **AAPSClient** med hovedtelefonen: se [Hovedenhet ↔ klientstyring](#client-master-control). Med et admin-token på hovedtelefonen viser hovedtelefonen en QR-kode som setter opp og parer klienten med én skanning. Hvis du før registrerte behandlinger på Nightscout-nettsiden, registrer dem på en sammenkoblet klient i stedet.
 ```
 
 ---
 
-## Duplicate BG data now switches the loop to Low Glucose Suspend
+## Doble BS-data setter nå loopen i Stopp ved lavt BS
 
-When **AAPS** receives the same BG reading twice (a red warning badge on the BG source shortcut in the bottom bar), it cannot calculate your trend reliably, so it stops giving correction insulin.
+Når **AAPS** mottar den samme BS-målingen to ganger (en rød varselboble på BS-kilde-snarveien i linjen nederst), kan den ikke beregne trenden din pålitelig, og den slutter derfor å gi korreksjonsinsulin.
 
-In **AAPS** v3 this happened quietly in the background: your loop still showed as **Closed Loop**, even though it could no longer correct.
+I **AAPS** v3 skjedde dette stille i bakgrunnen: loopen din ble fortsatt vist som **Lukket loop**, selv om den ikke lenger kunne korrigere.
 
-In **AAPS** v4 the change is visible. A closed loop is switched to **Low Glucose Suspend** mode, and the loop dialog tells you why: *"LGS mode due to doubled values in BG source"*. **AAPS** can still reduce or suspend your basal to protect you against lows.
+I **AAPS** v4 er endringen synlig. En lukket loop settes i modusen **Stopp ved lavt BS**, og loop-dialogen forteller deg hvorfor: *«LGS-modus på grunn av doble verdier fra BS-kilden»*. **AAPS** kan fortsatt redusere eller stoppe basalen din for å beskytte deg mot lave verdier.
 
 ```{admonition} What you need to do
 :class: important
-Find and remove the duplicate readings — see [BG warning sign](#aaps-screens-bg-warning-sign).
+Finn og fjern de doble målingene — se [BS-varselsymbol](#aaps-screens-bg-warning-sign).
 
-Once they are gone, **AAPS** stays in **Low Glucose Suspend**. It does not go back to **Closed Loop** on its own: press and hold the loop icon and select **Closed Loop** again.
+Når de er borte, blir **AAPS** stående i **Stopp ved lavt BS**. Den går ikke tilbake til **Lukket loop** av seg selv: trykk og hold på loop-ikonet og velg **Lukket loop** på nytt.
 ```
 
 ---
 
 (v4changes-tidepool)=
-## Tidepool: data now shows under the device name AAPS
+## Tidepool: dataene vises nå under enhetsnavnet AAPS
 
-In **AAPS** v3, the data uploaded to [Tidepool](../SettingUpAaps/Tidepool.md) was shown in Tidepool under another device name.
+I **AAPS** v3 ble dataene som ble lastet opp til [Tidepool](../SettingUpAaps/Tidepool.md), vist i Tidepool under et annet enhetsnavn.
 
-In **AAPS** v4, the data is shown under the device name **AAPS**. After the update, **AAPS** starts a new data set in Tidepool. Your older data stays in Tidepool under the old device name.
+I **AAPS** v4 vises dataene under enhetsnavnet **AAPS**. Etter oppdateringen starter **AAPS** et nytt datasett i Tidepool. De eldre dataene dine blir liggende i Tidepool under det gamle enhetsnavnet.
 
 ```{admonition} What you need to do
 :class: important
-Usually nothing: new data simply appears under **AAPS**.
+Vanligvis ingenting: nye data vises rett og slett under **AAPS**.
 
-Do **not** run "**Full synchronization**" while the old data is still in Tidepool: the same data would then be there twice. If you want all your data under the new name, use the "**Purge all data**" button on the [Tidepool screen](#tidepool-menu) first (it also deletes the old data uploaded by **AAPS**), then run "**Full synchronization**". Only the data still stored in **AAPS** on your phone can be uploaded again.
+Kjør **ikke** «**Full synkronisering**» mens de gamle dataene fortsatt ligger i Tidepool: da ville de samme dataene ligge der to ganger. Hvis du vil ha alle dataene dine under det nye navnet, bruk først knappen «**Slett alle data**» på [Tidepool-skjermen](#tidepool-menu) (den sletter også de gamle dataene som **AAPS** har lastet opp), og kjør deretter «**Full synkronisering**». Bare dataene som fortsatt er lagret i **AAPS** på telefonen din, kan lastes opp på nytt.
 ```
 
 ---

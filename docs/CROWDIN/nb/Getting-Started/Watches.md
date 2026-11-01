@@ -27,7 +27,7 @@ I motsetning til følgertelefoner for foreldre/omsorgspersoner (som er avhengige
 
 Det er for tiden fem hovedmåter smartklokker brukes sammen med **AAPS** på. De er vist i tabellen nedenfor: 
 
-| Klokkeoppsett     | Funksjoner                                     | Requirements                                                                                                                                                                                                                                                                                                            |
+| Klokkeoppsett     | Funksjoner                                     | Krav                                                                                                                                                                                                                                                                                                                    |
 | ----------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Frittstående      | AAPS uten telefon                              | Full Android-smartklokke (sjekk minste Android-versjon)</br> Kjører **app-fullRelease**                                                                                                                                                                                                                                 |
 | Full fjernstyring | De fleste AAPS-funksjoner                      | Android **Wear OS**-klokke (sjekk Android/API)</br>Kjører **wear-fullRelease**                                                                                                                                                                                                                                          |
@@ -59,7 +59,7 @@ Det meste av frustrasjonen med frittstående **AAPS**-klokker kommer av å jobbe
 
 Andre utfordringer er at det er vanskelig å få god nok batteritid, og at klokker med nok batteri ofte er store og tykke. Brukere forteller om kamp mot operativsystemet og strømsparingsinnstillingene, problemer med å starte sensorer på klokken, dårlig Bluetooth-rekkevidde (for å holde kontakten med både sensor og pumpe) og tvilsom vanntetthet. Eksempler vises på bildene nedenfor.
 
-![image](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
+![bilde](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
 
 Hvis du vil sette opp en frittstående klokke, les innlegg og kommentarer i **AAPS**-gruppen på Facebook (gode søkeord er «standalone» og «Lemfo») og på Discord for mer informasjon.
 
@@ -88,7 +88,7 @@ Nyere endringer i **Wear OS** ødelegger gradvis de egne **AAPS**-urskivene (jo 
 
 Etter at du har [installert **AAPS** på klokken](../WearOS/WearOsSmartwatch.md), kan du automatisk velge den urskiven du liker best blant disse egne **AAPS**-urskivene. På de fleste klokker trykker du og holder på startskjermen til skjermen krymper, og sveiper så mot høyre for å velge en annen skjerm:
 
-![image](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
+![bilde](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
 
 Dette er de grunnleggende skjermene som er innebygd i **AAPS**. Det finnes [flere urskiver](#WearOS_changing-to-AAPS-watchface), og du kan også bruke [komplikasjoner](#Watchfaces-complications).
 
@@ -130,7 +130,7 @@ Det finnes noen urskiver for Garmin som kobler seg til [AAPS](https://apps.garmi
 4. Tid siden siste glukosemåling (minutter:sekunder)
 5. Midlertidig basal, i prosent av profilens basal
 6. Glukosegraf for de siste 2 timene
-7. Current glucose value
+7. Gjeldende glukoseverdi
 
 
 
@@ -155,7 +155,7 @@ Her er noen av klokkene for bare følging som er populære blant **AAPS**-bruker
 
 **WatchDrip+** er en hjelpeapp utviklet av brukermiljøet som viser glukose- og loop-data på ulike smartklokkemodeller, for det meste Xiaomi (_f.eks._ Mi Band) og Amazfit:
 
-![image](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
+![bilde](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
 
 Fra versjon 0.5 leser **WatchDrip+** dataene direkte fra **AAPS**, uten xDrip+ som mellomledd. På **AAPS**-telefonen:
 
@@ -170,9 +170,9 @@ Du kan lese mer om dem, blant annet hvordan du setter dem opp, på [nettsiden ti
 
 ### Pebble-klokke
 
-![image](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
+![bilde](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
 
-![image](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
+![bilde](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
 Pebble-klokker ([produseres ikke lenger](https://en.wikipedia.org/wiki/Pebble_(watch))) ble solgt fra 2013 til 2016, og kan fortsatt finnes brukt. Fitbit overtok Pebbles eiendeler. Pebble-brukere kan bruke urskiven Urchin til å se Nightscout-data. Data som kan vises, er blant annet IOB, aktiv midlertidig basal og prognoser. Hvis du kjører åpen loop, kan du bruke IFTTT til å lage en applet som sender en SMS eller et Pushover-varsel når det kommer et varsel fra **AAPS**.

@@ -2,7 +2,7 @@
 
 Wtyczka Autotune to implementacja algorytmu OpenAPS autotune w AAPS. Wtyczka analizuje twoją ostatnią historię AAPS i proponuje zmiany dawek bazowych, ISF i współczynnika węglowodanów (IC).
 
-Autotune Plugin is available in AAPS releases since [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) but is hidden by default.
+Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
 
 (autotune-how-autotune-calculates-adjustments)=
 ## Jak Autotune oblicza zmiany

@@ -107,7 +107,7 @@ Toute personne qui voit le QR code peut lire votre Nightscout, et un code qui ap
 
 #### Avec un PIN
 
-Appuyez sur **OK** : le maître affiche un **code PIN d'appairage** à 8 chiffres, en deux groupes de quatre (par exemple `1234 5678`). Ce PIN est à **usage unique** et **expire après environ deux minutes**.
+Appuyez sur **OK** : le maître affiche un **code PIN d'appairage** à 8 chiffres, en deux groupes de quatre (par exemple `1234 5678`). Ce PIN est à **usage unique** et **expire après environ deux minutes**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
 
 ![Écran d'appairage du maître avec le PIN à usage unique (le PIN affiché ici a expiré)](../images/v4/ClientMaster/pairing_pin_master.png)
 

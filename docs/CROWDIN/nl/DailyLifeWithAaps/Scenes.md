@@ -99,6 +99,8 @@ Activeer een scène vanuit de lijst **Scènes** (de knop **▶**) of vanuit het 
 
 ![Het scherm Scènes van de navigatie onderaan](../images/v4/Scenes/scenes_sheet.png)
 
+If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+
 Voordat er iets wordt uitgevoerd, krijg je een **bevestiging** met precies wat de scène gaat doen. Zo kun je het controleren:
 
 ![Bevestiging bij het activeren van een scène, met de acties die erin zitten](../images/v4/Scenes/scene_confirmation.png)

@@ -1,142 +1,142 @@
-# Tweaking the AAPS' Profile
+# Justering av AAPS-profilen
 
 ```{admonition} This is NOT a medical advice
 :class: warning
-Please work with your care team for support and advice on your diabetes management.</br>
-Use this guide only once you have [set up your **Profile** correctly](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md), following all **AAPS** objectives.
+Snakk med behandlingsteamet ditt for støtte og råd om diabetesbehandlingen din.</br>
+Bruk denne veiledningen bare når du har [satt opp **Profilen** din riktig](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md) og fulgt alle opplæringsmålene i **AAPS**.
 ```
 
-This guide explains the logic of the OpenAPS algorithm results with a given __Profile__, and provides information about which values in **AAPS** may be adjusted when certain situations or patterns are observed. The suggestions about basal testing below may diverge from what your care team advises.
+Denne veiledningen forklarer logikken bak resultatene fra OpenAPS-algoritmen med en gitt __Profil__, og gir informasjon om hvilke verdier i **AAPS** som kan justeres når du ser bestemte situasjoner eller mønstre. Forslagene om basaltesting nedenfor kan avvike fra det behandlingsteamet ditt anbefaler.
 
-Using **closed loop** may make basal testing easier and may significantly reduce the hypo risk if your __Profile__ basal is too strong.
+Å bruke **lukket loop** kan gjøre basaltesting enklere og kan redusere risikoen for føling betydelig hvis __Profil__-basalen din er for sterk.
 
-## Changing profile's settings, how to proceed
+## Endre profilinnstillingene – slik går du fram
 
-1. Ensure you have read and understand __AAPS’__ recommended settings and advice below. Not following this advice may make the adjusting process problematic and less likely to get a well tuned __Profile__
-2. Carefully observe and compare, **over several days**, what is happening with your __BG__ and __IOB__.
-3. Keep an eye out for patterns with **AAPS** that happen around the same time (almost) everyday.
-4. It's important to do this over several days. Poor results tend to be yielded from using data observed on a single day to make __Profile’s__ adjustment decisions.
-5. After you have observed a repeatable pattern of behavior, e.g. at 1PM you see a spike in __BG__ or a negative __IOB__ value, only then start to make small changes to your __Profile__.
-6. It's important to limit the changes you make to one thing at a time. E.g. increase your basal by 10% around 1PM.
-7. After every change, it's important to monitor the impact on your __BG__ and __IOB__ for the next few days.
-8. Repeat this pattern, observe, decide, tweak again if needed
+1. Sørg for at du har lest og forstått de anbefalte innstillingene og rådene fra __AAPS__ nedenfor. Hvis du ikke følger dette rådet, kan justeringen bli vanskelig, og det blir mindre sannsynlig at du får en godt justert __Profil__
+2. Observer og sammenlign nøye, **over flere dager**, hva som skjer med __BS__ og __IOB__.
+3. Se etter mønstre i **AAPS** som skjer rundt samme tid (nesten) hver dag.
+4. Det er viktig å gjøre dette over flere dager. Du får ofte dårlige resultater hvis du bruker data fra én enkelt dag til å bestemme justeringer av __Profilen__.
+5. Når du har sett et mønster som gjentar seg, f.eks. at du kl. 13:00 ser en topp i __BS__ eller en negativ __IOB__-verdi, først da begynner du å gjøre små endringer i __Profilen__ din.
+6. Det er viktig å bare endre én ting om gangen. F.eks. øk basaldosen med 10 % rundt kl. 13:00.
+7. Etter hver endring er det viktig å følge med på virkningen på __BS__ og __IOB__ de neste dagene.
+8. Gjenta dette mønsteret: observer, bestem deg, juster igjen om nødvendig
 
-Don't rush, go slow!
+Ikke stress, ta det rolig!
 
-## Recommended settings and advice while tweaking basal
+## Anbefalte innstillinger og råd mens du justerer basalen
 
-- Do all testing with [closed loop enabled](#AapsScreens-loop-status).
-- **Turn <u>OFF</u> all [automations](../DailyLifeWithAaps/Automations.md)**
-- **Turn <u>OFF</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)** so that they will not try to adapt your profile.
-- Do not make manual user actions (manual bolus, temp targets etc…) while testing: let the system use the **Profile** settings only.
-- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board, Carbs On Board (and Sensitivity change). On graph 2, use Deviations and Blood Glucose Impact. When asking for advice, always include those on your screenshots.
+- Gjør all testing med [lukket loop aktivert](#AapsScreens-loop-status).
+- **Slå <u>AV</u> alle [automasjoner](../DailyLifeWithAaps/Automations.md)**
+- **Slå <u>AV</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [Autosens](#Open-APS-features-autosens)**, slik at de ikke prøver å tilpasse profilen din.
+- Ikke gjør manuelle handlinger (manuell bolus, midlertidige mål osv.) mens du tester: la systemet bare bruke innstillingene i **Profilen**.
+- For [ekstra grafer](#AapsScreens-section-g-additional-graphs): på graf 1 bruker du Aktivt insulin (IOB), Karbo ombord (og Sensitivitetsendring). På graf 2 bruker du Avvik og BS-påvirkning. Når du ber om råd, ta alltid med disse på skjermbildene dine.
 - COB=0[*](#profiletuning-cob-zero)
 
-Other considerations that should ideally be avoided, as they influence the data and can lead to poor conclusions:
-- No physical activities.
-- No stress.
-- No illness.
-- No extreme weather like high or low temperatures.
-- No failed pump or CGM sessions.
-- No unannounced carbs.
+Andre ting som helst bør unngås, fordi de påvirker dataene og kan føre til feil konklusjoner:
+- Ingen fysisk aktivitet.
+- Ikke noe stress.
+- Ingen sykdom.
+- Ikke ekstremvær som høye eller lave temperaturer.
+- Ingen feil på pumpe- eller CGM-økter.
+- Ingen ikke-varslede karbohydrater.
 
-Also note:
-- If your [basal rate profile](#your-aaps-profile-basal-rates) is correct, when you are on target with COB=0[*](#profiletuning-cob-zero) and IOB=0, you will remain constantly on target whatever your **ISF** (**ISF** is only used when you are higher than your **BG** target).
-- You need to check the actual **IOB** but also the **IOB** chart, to observe how the **IOB** evolved during the past few hours.
+Merk også:
+- Hvis [basaldoseprofilen](#your-aaps-profile-basal-rates) din er riktig, vil du, når du er på målet med COB=0[*](#profiletuning-cob-zero) og IOB=0, holde deg stabilt på målet uansett **ISF** (**ISF** brukes bare når du ligger over **BS**-målet).
+- Du må sjekke den gjeldende **IOB**, men også **IOB**-grafen, for å se hvordan **IOB** har utviklet seg de siste timene.
 
 (profiletuning-cob-zero)=
 
 ***COB = 0**
 
-Meaning that the meal is digested, and there are no more carbs in your body.
+Det betyr at måltidet er fordøyd, og at det ikke er flere karbohydrater i kroppen din.
 
-**AAPS** might indicate [COB=0 while you still have carbs on board](../DailyLifeWithAaps/CobCalculation.md).
+**AAPS** kan vise [COB=0 mens du fortsatt har aktive karbohydrater](../DailyLifeWithAaps/CobCalculation.md).
 
-## [Profile](../SettingUpAaps/YourAapsProfile.md) definitions
+## Definisjoner i [Profilen](../SettingUpAaps/YourAapsProfile.md)
 
-A too **strong Profile** indicates some combination of the following:
+En for **sterk Profil** tyder på en kombinasjon av følgende:
 
-- [ISF](#your-aaps-profile-insulin-sensitivity-factor) number is too small.
-- The [basal](#your-aaps-profile-basal-rates) number is too big.
-- [I:C](#your-aaps-profile-insulin-to-carbs-ratio) number is too small.
+- [ISF](#your-aaps-profile-insulin-sensitivity-factor)-tallet er for lavt.
+- [Basal](#your-aaps-profile-basal-rates)-tallet er for høyt.
+- [IK](#your-aaps-profile-insulin-to-carbs-ratio)-tallet er for lavt.
 
-## IOB Observations
+## Observasjoner av IOB
 
-*Note: you can also use Loopalyzer IOB graph in Nightscout reports to view IOB on several days.*
+*Merk: du kan også bruke IOB-grafen i Loopalyzer i Nightscout-rapportene for å se IOB over flere dager.*
 
-If you observe the following patterns after a few days, consider the following changes:
+Hvis du ser følgende mønstre etter noen dager, bør du vurdere disse endringene:
 
-### IOB positive
+### Positiv IOB
 
-- **Profile** basal might not be strong enough (this could also be because of things like unannounced food, illness, bad site absorption, etc.)
+- **Profil**-basalen er kanskje ikke sterk nok (dette kan også skyldes ting som ikke-varslet mat, sykdom, dårlig absorpsjon på stedet osv.)
 
-![Positive IOB](../images/troubleshooting/profiletuning/PositiveInsulin.png)
+![Positiv IOB](../images/troubleshooting/profiletuning/PositiveInsulin.png)
 
-### IOB negative
+### Negativ IOB
 
-- Default basal too strong.
-- May be the effect from past exercise/physical activity.
+- Standard basal for sterk.
+- Kan være en ettervirkning av trening/fysisk aktivitet.
 
-![Negative IOB](../images/troubleshooting/profiletuning/NegativeInsulin.png)
+![Negativ IOB](../images/troubleshooting/profiletuning/NegativeInsulin.png)
 
-- Previous meal: too much bolus (which resulted in a very long zero temp basal)
+- Forrige måltid: for mye bolus (som ga en svært lang null midlertidig basal)
 
-![Negative IOB](../images/troubleshooting/profiletuning/NegativeInsulin2.png)
+![Negativ IOB](../images/troubleshooting/profiletuning/NegativeInsulin2.png)
 
-## BG Target Observations
+## Observasjoner av BS-målet
 
-### Stuck High
+### Blir liggende høyt
 
-- __ISF's__ number is high and not strong enough (calculated insulin is too weak)
+- __ISF__-tallet er høyt og ikke sterkt nok (beregnet insulin er for svakt)
 
-![Stuck High](../images/troubleshooting/profiletuning/StuckHigh.png)
+![Blir liggende høyt](../images/troubleshooting/profiletuning/StuckHigh.png)
 
-- __Profile__ basal might not be strong enough (**SMBs** do not have enough "basal stock" to use)
-- A security ([MaxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)?) might have kicked in and is limiting insulin injection. Verify in the **APS** plugin screen (**Configuration → APS → Open plugin**); see [SMB](#Open-APS-features-super-micro-bolus-smb).
-- Technical issue: site absorption, infusion set, ...
+- __Profil__-basalen er kanskje ikke sterk nok (**SMB-er** har ikke nok «basallager» å bruke)
+- En sikkerhetsinnstilling ([MaxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)?) kan ha slått inn og begrenser insulintilførselen. Kontroller i **APS**-pluginskjermen (**Konfigurasjon → APS → Åpne plugin**); se [SMB](#Open-APS-features-super-micro-bolus-smb).
+- Teknisk problem: absorpsjon på stedet, infusjonssett, ...
 
-### Stuck Low
+### Blir liggende lavt
 
-- __ISF__ too strong and the number needs to be raised higher
-- __Profile__ basal too strong (if also negative IOB)
+- __ISF__ er for sterk, og tallet må økes
+- __Profil__-basalen er for sterk (hvis IOB også er negativ)
 
-### Rollercoaster (ups and downs)
+### Berg-og-dal-bane (opp og ned)
 
-- **ISF** too strong? See your [AAPS Profile](#your-aaps-profile-insulin-sensitivity-factor)
+- **ISF** for sterk? Se [AAPS-profilen din](#your-aaps-profile-insulin-sensitivity-factor)
 
-![Rollercoaster](../images/troubleshooting/profiletuning/StrongISF.png)
+![Berg-og-dal-bane](../images/troubleshooting/profiletuning/StrongISF.png)
 
-## BG After Meals Observations
+## Observasjoner av BS etter måltider
 
-### Fast rise and BG going high
+### Rask stigning og BS går høyt
 
-- Food contains fast carbs (like fruit juice).
-- Consider doing a pre-bolus or a slightly earlier pre-bolus.
-- Bolus (IC or injected %) not strong enough.
+- Maten inneholder raske karbohydrater (som fruktjuice).
+- Vurder en forhåndsbolus, eller en litt tidligere forhåndsbolus.
+- Bolus (IK eller gitt %) ikke sterk nok.
 
-![Rise High](../images/troubleshooting/profiletuning/FastRise.png)
+![Stiger høyt](../images/troubleshooting/profiletuning/FastRise.png)
 
-### Fast rise and then BG going low
+### Rask stigning og så går BS lavt
 
-- Consider doing a pre-bolus, your **Profile** might be too aggressive (over correction of the raise)
-- Bolus too strong.
+- Vurder en forhåndsbolus; **Profilen** din kan være for aggressiv (overkorreksjon av stigningen)
+- Bolus for sterk.
 
 
 
-## [How to calculate your I:C](#your-aaps-profile-insulin-to-carbs-ratio)
+## [Slik regner du ut IK](#your-aaps-profile-insulin-to-carbs-ratio)
 
-1. First, you need the correct default basal settings in your **Profile**.
-2. Start on target, better without negative IOB.
-3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin. Very accurately measure a known portion of carbs, and record the start time and Start IOB. Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured I:C). Don't forget to eat the carbs ;)
-4. After some hours, when COB=0[*](#profiletuning-cob-zero) and you're back on target, record end time, and note down the End IOB, check the total insulin given as before and call it End insulin. *NOTE: The time frame is NOT important, as long as it is longer than your digestion*
-5. From the difference between Start and End insulin amount, subtract/add the difference end IOB - start IOB. Then subtract the basal insulin calculated from your **Profile's** settings.
-6. If __BG__ is in target, you'll have the total insulin used to “digest” your carbs. Calculate your **I:C**.
+1. Først trenger du riktige standard basalinnstillinger i **Profilen** din.
+2. Start på målet, helst uten negativ IOB.
+3. Noter totalt gitt insulin i **Administrer → Pumpe** (eller pumpehistorikken) og kall det start-insulin. Mål opp en kjent porsjon karbohydrater svært nøyaktig, og noter starttiden og start-IOB. Legg så inn karbohydrater og bolus i **AAPS** med boluskalkulatoren (med den gjeldende IK). Ikke glem å spise karbohydratene ;)
+4. Etter noen timer, når COB=0[*](#profiletuning-cob-zero) og du er tilbake på målet, noterer du sluttiden og slutt-IOB, sjekker totalt gitt insulin som før og kaller det slutt-insulin. *MERK: Tidsrommet er IKKE viktig, så lenge det er lengre enn fordøyelsen din*
+5. Fra forskjellen mellom start- og slutt-insulin trekker du fra / legger du til forskjellen slutt-IOB - start-IOB. Trekk så fra basalinsulinet beregnet fra innstillingene i **Profilen** din.
+6. Hvis __BS__ er på målet, har du nå det totale insulinet som ble brukt til å «fordøye» karbohydratene. Regn ut **IK**.
 
-### Explanations for the I:C calculations
+### Forklaring av IK-beregningene
 
-- With a **Profile** that has the correct default basal rate, during any time frame, you should stay on target and have an IOB near 0. You get your **Profile** basal only.
-- You add carbs and bolus to this mix. Wait till your body digests all the carbs and be back on **BG** target. Your insulin usage will be the sum of your basal + the insulin needed for the carbs. You calculate the insulin used for your basal (by using your **Profile**) and the surplus will be the insulin used to digest the carbs.
-- If the time frame is too short, there will be carbs undigested, thus your "insulin needed for the carbs" will be wrong.
-- If the time frame is too long, nothing bad will happen. You'll use all your carbs and you'll get more basal. At the end, you'll subtract the basal from the total insulin used, the extended time frame (with more basal use) will not affect the result.
+- Med en **Profil** som har riktig standard basaldose, bør du i ethvert tidsrom holde deg på målet og ha en IOB nær 0. Du får bare **Profil**-basalen din.
+- Så legger du til karbohydrater og bolus. Vent til kroppen har fordøyd alle karbohydratene og du er tilbake på **BS**-målet. Insulinforbruket ditt blir summen av basalen + insulinet som trengs til karbohydratene. Du regner ut insulinet som ble brukt til basal (ved hjelp av **Profilen** din), og overskuddet er insulinet som ble brukt til å fordøye karbohydratene.
+- Hvis tidsrommet er for kort, er det fortsatt karbohydrater som ikke er fordøyd, og «insulinet som trengs til karbohydratene» blir feil.
+- Hvis tidsrommet er for langt, skjer det ikke noe galt. Du bruker opp alle karbohydratene og får mer basal. Til slutt trekker du basalen fra det totale insulinforbruket; det lengre tidsrommet (med mer basal) påvirker ikke resultatet.
 
-Originally written up by @Robby (Discord) on tips and tricks to help tune your **AAPS Profile**, reviewed and edited by the community (thank you!).
+Opprinnelig skrevet av @Robby (Discord) som tips og triks for å justere **AAPS-profilen** din, gjennomgått og redigert av fellesskapet (takk!).

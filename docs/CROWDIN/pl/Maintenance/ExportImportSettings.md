@@ -6,6 +6,11 @@ Aby przywrócić konfigurację AAPS na obecnym lub nowym telefonie, ważne jest 
 
 Rozważ zakup zapasowego telefonu i przećwicz na nim przywracanie AAPS, aby mieć pewność, że działa tak, jak trzeba. Ten krok da Ci pewność, że Twój plan awaryjny działa i że możesz bez przerwy dalej używać AAPS, jeśli Twój główny telefon stanie się niedostępny.
 
+```{admonition} Android backups and phone-transfer tools do not carry your AAPS settings
+:class: warning
+Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and they are left out of the Google backup and of the phone-to-phone transfer of a new phone. A settings export, as described on this page, is the only way to carry them over.
+```
+
 Aby móc przywrócić AAPS, ważne jest, by mieć pod ręką:
 
 - **Plik magazynu kluczy (keystore) z Android Studio** i jego **hasło**: potrzebne do (ponownego) budowania pliku instalacyjnego AAPS .APK.

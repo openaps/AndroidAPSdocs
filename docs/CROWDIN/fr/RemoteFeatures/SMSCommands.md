@@ -21,7 +21,7 @@ Si vous activez le **Communicateur SMS** dans **AAPS**, réfléchissez au fait q
 
 De plus, il est recommandé d'autoriser un [deuxième numéro de téléphone](#SMSCommands-authorized-phone-numbers) pour les commandes SMS. Ainsi, vous pouvez utiliser le deuxième numéro pour [désactiver](#SMSCommands-other) le communicateur SMS si votre téléphone principal de contrôle à distance n'est plus sûr.
 
-Par défaut, le délai minimal entre deux commandes de bolus est de 15 minutes. Pour des raisons de sécurité, vous devez ajouter au moins deux numéros de téléphone autorisés pour raccourcir ce délai. Si vous essayez de refaire un bolus à distance moins de 15 minutes après le bolus précédent, vous recevrez la réponse « Bolus à distance non disponible. Réessayez plus tard. »
+The default minimum time delay between bolus commands is 15 minutes, counted from the moment the pump accepts a bolus. Pour des raisons de sécurité, vous devez ajouter au moins deux numéros de téléphone autorisés pour raccourcir ce délai. Si vous essayez de refaire un bolus à distance moins de 15 minutes après le bolus précédent, vous recevrez la réponse « Bolus à distance non disponible. Réessayez plus tard. »
 
 AAPS vous informera également par SMS si vos commandes à distance, comme un bolus ou un changement de profil, ont été effectuées. Il est conseillé de le configurer de sorte que les SMS de confirmation soient envoyés à au moins deux numéros de téléphone différents au cas où l'un des téléphones destinataires serait volé.
 

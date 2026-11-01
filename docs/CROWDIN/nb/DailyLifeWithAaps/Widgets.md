@@ -16,13 +16,13 @@ Det finnes fem widgeter. De ligger under **AAPS** i Androids widgetvelger:
 
 ![AAPS-widgeter i Androids widgetvelger](../images/widgets/widget_picker_aaps.png)
 
-| Widget                            | Standardstørrelse | Hva den viser                                                                                                 |
-| --------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------- |
-| **AAPS widget**                   | 5 × 2             | Statusblokken fra hovedskjermen: BS med trend og delta, loop-modus, profil, mål, sensitivitet, IOB og COB.    |
-| **AAPS glukosesirkel**            | 2 × 2             | BS-sirkelen fra hovedskjermen: en ring i BS-fargen, trendbuen, delta, BS-verdien og tiden siden siste måling. |
-| **AAPS liten**                    | 2 × 2             | Profilnavn, BS med trendpil, tid siden siste måling, delta, IOB og COB.                                       |
-| **AAPS BS + IOB + COB (kompakt)** | 4 × 1             | Én linje med BS og trendpil, IOB og COB.                                                                      |
-| **AAPS BS-graf**                  | 3 × 1             | BS-verdien med en liten graf over de siste målingene.                                                         |
+| Widget                            | Standardstørrelse | Hva den viser                                                                                                                                                                                                                                                |
+| --------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **AAPS widget**                   | 5 × 2             | Statusblokken fra hovedskjermen: BS med trend og delta, loopmodus som et ikon ved siden av profilnavnet, mål, sensitivitet (vist som på hovedskjermen), IOB og COB. Tekstene krymper så de passer til størrelsen du gir widgeten, i stedet for å bli kuttet. |
+| **AAPS glukosesirkel**            | 2 × 2             | BS-sirkelen fra hovedskjermen: en ring i BS-fargen, trendbuen, delta, BS-verdien og tiden siden siste måling.                                                                                                                                                |
+| **AAPS liten**                    | 2 × 2             | Profilnavn, BS med trendpil, tid siden siste måling, delta, IOB og COB.                                                                                                                                                                                      |
+| **AAPS BS + IOB + COB (kompakt)** | 4 × 1             | Én linje med BS og trendpil, IOB og COB.                                                                                                                                                                                                                     |
+| **AAPS BS-graf**                  | 3 × 1             | BS-verdien med en liten graf over de siste målingene.                                                                                                                                                                                                        |
 
 **AAPS widget**, **glukosesirkel** og widgeten **liten** på en startskjerm:
 

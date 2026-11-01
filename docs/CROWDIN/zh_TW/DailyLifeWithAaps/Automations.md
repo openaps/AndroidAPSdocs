@@ -224,13 +224,15 @@
 * **檔案**必須在 50% 和 130% 之間
 * 僅在目前設定檔百分比為100%時有效
 
-**動作：****變更平滑處理方式**
+**Actions:** **Change smoothing** (in the **Loop & insulin** group)
 
 **選項：**
 
-* 選取要切換至的[平滑處理方式](../CompatibleCgms/SmoothingBloodGlucoseData.md)
+* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
 * 只有在該平滑處理方式目前尚未啟用時才會執行；**AAPS** 會自動在規則中加入「**前提條件：平滑處理方式……尚未啟用**」這一行。選取的平滑處理方式啟用後，系統會略過此規則，不會顯示提示。
-* 範例：搭配**感測器使用時間**觸發條件，在新感測器使用的第一天切換至**平均平滑處理**，之後再切換回**不平滑處理**。
+* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
+  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
+  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
 
 **動作：****備註**（位於清單的**警示**類別中）
 
@@ -270,7 +272,7 @@
 
 **選項：**
 
-* 無平滑處理. 執行包含此動作的規則時，**AAPS** 不會在這次執行期間檢查清單中排在它後面的規則。將此動作加入必須優先於後續規則執行的規則中（請參閱[自動化規則的順序](#Automations-the-order-of-the-automations-in-the-list-matters)）。
+* 無平滑處理. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. 將此動作加入必須優先於後續規則執行的規則中（請參閱[自動化規則的順序](#Automations-the-order-of-the-automations-in-the-list-matters)）。
 
 **動作：****執行場景**、**啟用場景**、**停用場景**（位於**場景**群組）
 

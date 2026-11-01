@@ -247,6 +247,8 @@ Pri prekročení limitu sa hodnoty zobrazia žltou farbou.
 
 Ak je prekročená kritická hodnota, hodnoty sa zobrazia červenou farbou.
 
+The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
+
 Limity môžete zmeniť cez malú ikonu **Nastavenia**, ktorá sa zobrazí, keď je riadok stavu **rozbalený** (šípka vpravo) – pozrite [Indikátory stavu](#Preferences-status-lights).
 
 Rozbalený panel stavu má na konci niektorých riadkov aj tlačidlo na zaznamenanie výmeny, ktoré vynuluje príslušný vek: **Pridať** v riadku **Senzor** zaznamená zavedenie senzora. Ak to vaša pumpa podporuje, v riadkoch **Kanyla** (alebo **Náplasťová pumpa**) a **Inzulín** sa zobrazí **Plnenie/doplňovanie** a v riadku **Batéria pumpy** tlačidlo **Pridať**.
@@ -303,6 +305,14 @@ Držte prst na obrazovke a posúvaním doľava alebo doprava prechádzajte od je
 Rovnako to funguje aj v [ďalších grafoch](#aaps-screens-additional-graphs) pod grafom glykémie (IOB, COB...): stlačte a podržte ktorýkoľvek z nich.
 
 ![Stlačenie a podržanie grafu glykémie: okno zobrazuje čas, glykémiu, IOB a bazál](../images/main/graph_press_and_hold.png)
+
+(aaps-screens-graph-clock-change)=
+
+#### Clock changes
+
+When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
+
+![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
@@ -459,6 +469,8 @@ Zobrazuje citlivosť vypočítanú funkciou [DynamicISF](../DailyLifeWithAaps/Dy
 
 Tieto údaje môžu byť dostupné pri používaní [inteligentných hodiniek s Wear OS](../WearOS/WearOsSmartwatch.md). Povoľte ich v aplikácii **AAPS** Wear a udeľte povolenie na prístup k zdravotným údajom.
 
+Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
+
 #### Odchýlky (DEV)
 
 * **Sivé** stĺpce zobrazujú odchýlku spôsobenú sacharidmi.
@@ -607,11 +619,15 @@ Pole **Čas sacharidov** slúži na predbolus: systému oznámite, že sacharidy
 
 ![Nastavenie upozornenia pre budúce sacharidy](../images/Home2021_BolusWizard_EatingReminder.png)
 
-Pripomienka zazvoní ako alarm **AAPS**. Nevytvorí časovač v aplikácii hodín vo vašom telefóne a funguje aj vtedy, keď bol bolus zadaný z **AAPSClient**, kým **AAPS** bežal na pozadí.
+The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
 
-Pole **Glykémia** je zvyčajne už vyplnené poslednou hodnotou z vášho CGM. Ak nemáte funkčný CGM, pole bude prázdne. Keď je hodnota aktuálna, riadok **Glykémia** zostane zbalený.
+![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
 
-Tlačidlo s výsledkom v dolnej časti zobrazuje navrhovaný bolus; po jeho stlačení sa pred podaním inzulínu zobrazí žiadosť o potvrdenie.
+![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
+
+Pole **Glykémia** je zvyčajne už vyplnené poslednou hodnotou z vášho CGM. Ak nemáte funkčný CGM, pole bude prázdne. Keď je hodnota aktuálna, riadok **Glykémia** zostane zbalený. The field follows new readings while the wizard is open, until you change it yourself.
+
+Tlačidlo s výsledkom v dolnej časti zobrazuje navrhovaný bolus; po jeho stlačení sa pred podaním inzulínu zobrazí žiadosť o potvrdenie. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
 
 Dobré vedieť:
 

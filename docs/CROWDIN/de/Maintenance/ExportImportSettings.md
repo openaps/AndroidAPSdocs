@@ -6,6 +6,11 @@ Um Deine AAPS-Konfiguration auf einem bestehenden oder neuen Smartphone wiederhe
 
 Überlege, ob Du Dir ein zweites Backup-Smartphone zulegen möchtest und das Wiederherstellen von AAPS übst, bis Dein Backup-Smartphone wie erwartet funktioniert. Dieser Schritt gibt Dir Gewissheit darüber, dass Dein Notfallplan funktioniert und Du beim Ausfall Deines primären Smartphones AAPS problemlos weiter nutzen kannst.
 
+```{admonition} Android backups and phone-transfer tools do not carry your AAPS settings
+:class: warning
+Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and they are left out of the Google backup and of the phone-to-phone transfer of a new phone. A settings export, as described on this page, is the only way to carry them over.
+```
+
 Um wiederherstellen zu können, ist es wichtig, die folgenden Dinge zur Hand zu haben:
 
 - Deine **Android Studio Keystore-Datei** und das zugehörige **Passwort**: Wird zum (Neu-)Erstellen der AAPS.APK Installationsdatei benötigt.

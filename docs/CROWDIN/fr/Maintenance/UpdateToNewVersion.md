@@ -10,14 +10,15 @@
 - Quand une nouvelle version est disponible, vous recevez dans l'application **AAPS** un bandeau d'information sur la nouvelle version.
 - La nouvelle version est aussi annoncée sur Facebook au moment de sa publication.
 - Après la publication, lisez attentivement les [notes de version](ReleaseNotes.md) et posez vos questions à la communauté sur Facebook ou Discord avant de faire la mise à jour.
-- N'oubliez pas d'exporter les paramètres d'**AAPS**.
+- Updating from **AAPS** 3.x? Read [What changed in AAPS v4](V4Changes.md) first: it lists the features that moved, were renamed or were removed.
+- Do not forget to [export your settings](ExportImportSettings.md). When you import them again after the update, you choose whether the pump settings are replaced too.
 
 ## Mettre à jour AAPS avec la compilation dans le navigateur
 
 Vous avez déjà compilé votre application AAPS avec un navigateur ? Suivez les instructions de la méthode que vous avez utilisée :
 
-- **AAPS Builder** (votre dépôt privé, en général nommé `my-aaps`) : [Mettre à jour AAPS avec AAPS Builder](#aaps-builder-updates). Il n'y a pas de fork à synchroniser.
-- **Fork et fichier de préparation** (votre propre copie d'AndroidAPS) : [Mise à jour avec un navigateur (fork)](./UpdateBrowserBuild.md).
+- **AAPS Builder**: you build from the **Build AAPS** page of your private repository (usually named `my-aaps`) and download the app from GitHub. Follow [Updating AAPS with AAPS Builder](#aaps-builder-updates). Il n'y a pas de fork à synchroniser.
+- **Fork and preparation file**: you run the **AAPS-CI** workflow in your own copy (fork) of AndroidAPS, a repository named `AndroidAPS` in your GitHub account, and the app lands in your Google Drive. Follow [Update with a browser (fork)](./UpdateBrowserBuild.md).
 
 ## Mettre à jour AAPS avec Android Studio
 
@@ -29,9 +30,9 @@ Utilisez les [mêmes instructions](../SettingUpAaps/CLIBuild.md) que pour la com
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-### Vérifier la version d'AAPS sur le téléphone
+## After the update
 
-Regardez dans les [notes de version](../Maintenance/ReleaseNotes.md) s'il y a des instructions particulières après la mise à jour.
+These steps are the same for every build method. Regardez dans les [notes de version](../Maintenance/ReleaseNotes.md) s'il y a des instructions particulières après la mise à jour.
 
 Après avoir installé le nouvel apk :
 

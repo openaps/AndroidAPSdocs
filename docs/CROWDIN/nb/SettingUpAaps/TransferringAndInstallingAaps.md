@@ -1,4 +1,4 @@
-# Transferring and Installing AAPS on your smartphone
+# Overføre og installere AAPS på smarttelefonen din
 
 I forrige del, [bygge **AAPS**](../SettingUpAaps/BuildingAaps.md), bygde du **AAPS**-appen (som er en .apk-fil) på en datamaskin.
 
@@ -13,23 +13,23 @@ Denne siden forklarer også [Android-utviklerverifisering](#android-developer-ve
 
 ## Installere AAPS ved å trykke på APK-filen
 
-I dag installerer du **AAPS** ved å overføre APK-filen til telefonen og åpne («trykke på») den. Det finnes flere måter å overføre APK-filen til **AAPS** fra datamaskinen til smarttelefonen på. Here we explain two different ways:
+I dag installerer du **AAPS** ved å overføre APK-filen til telefonen og åpne («trykke på») den. Det finnes flere måter å overføre APK-filen til **AAPS** fra datamaskinen til smarttelefonen på. Her forklarer vi to ulike måter:
 
-* Option 1 -  Use your Google drive (Gdrive)
-* Option 2 -  Use a USB cable
+* Alternativ 1 – Bruk Google Drive (Gdrive)
+* Alternativ 2 – Bruk en USB-kabel
 
-Please note that transfer by email might cause difficulties, and is discouraged.
+Merk at overføring via e-post kan gi problemer, og frarådes.
 
 ```{admonition} Android developer verification
 :class: warning
 Google ruller ut [Android-utviklerverifisering](#android-developer-verification) fra september 2026 (først i Brasil, Indonesia, Singapore og Thailand; i hele verden i 2027). Der dette håndheves, blir installasjon av en APK ved å trykke på filen — slik det beskrives i begge alternativene nedenfor — blokkert. Bruk i så fall en av de [gratis installasjonsmetodene](#android-developer-verification-free-methods) lenger ned på denne siden.
 ```
 
-### Option 1. Use Google drive to transfer files
+### Alternativ 1. Bruk Google Drive til å overføre filer
 
 Åpne [Google.com](https://www.google.com/) i nettleseren og logg inn på Google-kontoen din.
 
-On the right upper side select the Drive app in the Google menu.
+Øverst til høyre velger du Drive-appen i Google-menyen.
 
 ![Start Drive-appen](../images/GoogleDriveInWebbrowser.png)
 
@@ -37,11 +37,11 @@ Klikk på **Ny** øverst til venstre (eller høyreklikk på et tomt område unde
 
 ![Last opp apk-filen med Google Drive-appen](../images/GoogleDriveUploadFile.png)
 
-The apk file should now be uploaded on Google Drive.
+Apk-filen skal nå være lastet opp til Google Drive.
 
-#### Use the Google Drive app to execute the apk file for installation
+#### Bruk Google Drive-appen til å kjøre apk-filen for installasjon
 
-Switch to your mobile and start the Google Drive app. It is a preinstalled app and can be found where the other Google apps are located or with search for the name of the app.
+Bytt til mobilen din og start Google Drive-appen. Det er en forhåndsinstallert app, og du finner den der de andre Google-appene ligger, eller ved å søke på navnet på appen.
 
 ![start Google Drive-appen](../images/GoogleDriveMobileAPPLaunch.png)
 
@@ -66,13 +66,13 @@ Husket du å slå av tillatelsen til å installere fra Google Drive?
 
 Gå videre med å [konfigurere AAPS-loopen](../SettingUpAaps/SetupWizard.md).
 
-### Option 2. Use a USB cable to transfer files
+### Alternativ 2. Bruk en USB-kabel til å overføre filer
 
 Den andre måten å overføre apk-filen til AAPS på er med en [USB-kabel](https://support.google.com/android/answer/9064445?hl=en).
 
-Transfer the file from its location on your computer to the "downloads" folder on the phone.
+Overfør filen fra der den ligger på datamaskinen din til mappen «Nedlastinger» på telefonen.
 
-On your phone, you will have to allow installation from unknown sources. Forklaringer på hvordan du gjør dette finner du på internett (_f.eks._ [her](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) eller [her](https://www.androidcentral.com/unknown-sources)).
+På telefonen må du tillate installasjon fra ukjente kilder. Forklaringer på hvordan du gjør dette finner du på internett (_f.eks._ [her](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) eller [her](https://www.androidcentral.com/unknown-sources)).
 
 Når du har overført filen ved å dra den over, åpner du mappen «Nedlastinger» på telefonen og trykker på apk-filen til AAPS:
 
@@ -136,7 +136,7 @@ Google publiserer detaljer på sidene om [Android-utviklerverifisering](https://
 
 ### Gjelder dette meg?
 
-- **Å bygge AAPS påvirkes ikke i det hele tatt.** [Nettleserbygget](#browser-build), [Android Studio-bygget](ComputerBuild.md) og [kommandolinjebygget](CLIBuild.md) virker akkurat som før, og keystore-filen din endres ikke.
+- **Å bygge AAPS påvirkes ikke i det hele tatt.** [Nettleserbygget](#browser-build), [Android Studio-bygg](ComputerBuild.md) og [kommandolinjebygget](CLIBuild.md) virker akkurat som før, og keystore-filen din endres ikke.
 - **Din nåværende AAPS fortsetter å kjøre.** Verifisering sjekkes bare når en app installeres eller oppdateres.
 - **Hvis du bor i Brasil, Indonesia, Singapore eller Thailand:** fra 30. september 2026 håndheves verifisering for apper som installeres fra Google Play og noen få andre appbutikker. Google sier at direkte installasjon av en APK-fil ikke omfattes av dette første steget, så **AAPS** bør fortsatt kunne installeres som vanlig. Forbered likevel en av de [gratis installasjonsmetodene](#android-developer-verification-free-methods) nedenfor nå, så du ikke blir overrasket hvis dette endrer seg.
 - **Hvis du bor et annet sted:** ingenting endres for deg før 2027, og det er helt greit å ikke gjøre noe foreløpig. Men sett opp en av de [gratis installasjonsmetodene](#android-developer-verification-free-methods) nedenfor mens ingenting er ødelagt: å oppdage blokkeringen den dagen en oppdatering blir avvist, med [den avanserte flytens](#android-developer-verification-advanced-flow) ventetid på 24 timer foran deg, er feil tidspunkt.
@@ -150,7 +150,7 @@ Du trenger **ikke** betale Google noe for å fortsette å bruke **AAPS**. Det fi
 
 ```{admonition} Which method should I use?
 :class: tip
-- Du har en **datamaskin** (uansett hvordan du bygde **AAPS**): bruk [ADB](#android-developer-verification-adb) eller, hvis du helst vil unngå kommandolinjen, [nettinstallatøren](#android-developer-verification-web). Begge er unntatt fra verifisering, har ingen begrensninger og trenger ingen Google-konto.
+- Du har en **datamaskin** (uansett hvordan du bygde **AAPS**): bruk [ADB](#android-developer-verification-adb) eller, hvis du helst vil unngå kommandolinjen, [web-installeren](#android-developer-verification-web). Begge er unntatt fra verifisering, har ingen begrensninger og trenger ingen Google-konto.
 - Du har **ingen datamaskin i det hele tatt**: bruk [avansert flyt](#android-developer-verification-advanced-flow) på telefonen.
 - Du vil helst registrere deg hos Google slik at den vanlige «trykk på APK-filen»-installasjonen fortsetter å virke: det finnes en [gratis konto for begrenset distribusjon](#android-developer-verification-limited-account), men den er ikke testet med **AAPS**.
 ```
@@ -196,14 +196,14 @@ Hvis kommandolinjen ikke er noe for deg, kan en nettside gjøre akkurat det samm
 Dette er den enkleste veien hvis du brukte [nettleserbygget](#browser-build) og aldri har åpnet en kommandolinje.
 
 1. Slå på **USB-feilsøking** på telefonen (steg 1 og 2 i [ADB-metoden](#android-developer-verification-adb) ovenfor — engangsoppsett).
-1. Åpne **[AAPS nettinstallatør](#web-installer)** i nettleseren.
+1. Åpne **[AAPS web-installer](#web-installer)** i nettleseren.
 1. Koble til telefonen med en USB-kabel og følg instruksjonene på siden: koble til, velg APK-filen din, og installer.
 
 Tre ting du bør vite:
 
 - Den virker bare i **Chrome, Edge eller Opera**. Firefox og Safari kan ikke snakke med USB-enheter.
 - Bare ett program kan bruke telefonens ADB-forbindelse om gangen, så **lukk Android Studio** (eller alt annet som bruker ADB) før du kobler til.
-- En nettside som er koblet til på denne måten, får full kontroll over telefonen din. **Bruk bare adressen ovenfor**, fra **AAPS**-dokumentasjonen — aldri en installasjonsside du har funnet via en søkemotor. **AAPS** nettinstallatør kjører helt og holdent i nettleseren din: APK-filen din lastes ikke opp noe sted.
+- En nettside som er koblet til på denne måten, får full kontroll over telefonen din. **Bruk bare adressen ovenfor**, fra **AAPS**-dokumentasjonen — aldri en installasjonsside du har funnet via en søkemotor. **AAPS** web-installer kjører helt og holdent i nettleseren din: APK-filen din lastes ikke opp noe sted.
 
 ```{admonition} No computer? A second phone works too
 :class: tip
@@ -251,13 +251,13 @@ Google tilbyr en **gratis** type utviklerkonto for hobbybrukere og personlig bru
 ```{warning}
 Google har ikke forklart hvordan registrering virker når mange mennesker bygger den samme appen med åpen kildekode: hver selvbygde **AAPS** bruker det samme pakkenavnet (`info.nightscout.androidaps`) med en annen signeringsnøkkel, og Googles FAQ sier at et pakkenavn som allerede er i bruk av andre ikke kan kreves uten videre, men krever en ekstra gjennomgang. Utfallet av en slik gjennomgang er ukjent, og den betalte utviklerkontoen (25 dollar og offentlig ID) hjelper ikke her: betaling fjerner bare grensen på 20 enheter, ikke gjennomgangen av pakkenavnet.
 
-Derfor kan det ikke skrives steg-for-steg-instruksjoner ennå. Denne delen fullføres når registrering er testet med **AAPS**. I mellomtiden er ADB, nettinstallatøren og avansert flyt ovenfor pålitelige alternativer.
+Derfor kan det ikke skrives steg-for-steg-instruksjoner ennå. Denne delen fullføres når registrering er testet med **AAPS**. I mellomtiden er ADB, web-installeren og avansert flyt ovenfor pålitelige alternativer.
 ```
 
 ## Hva som ikke endres
 
 - Å bygge **AAPS** selv, med hvilken som helst av de tre [byggemetodene](BuildingAaps.md).
-- GitHub-kontoen din, bygg-repositoriet ditt (AAPS Builder) eller forken din, og keystore-filen din.
+- GitHub-kontoen din, bygg-repositoryet ditt (AAPS Builder) eller forken din, og keystore-filen din.
 - Den installerte **AAPS**-appen din, innstillingene dine og [opplæringsmålene](CompletingTheObjectives.md) dine.
 - Telefoner uten Google-tjenester, og [ADB-installasjoner](#android-developer-verification-adb) generelt.
 
@@ -270,5 +270,5 @@ Derfor kan det ikke skrives steg-for-steg-instruksjoner ennå. Denne delen fullf
 ```{toctree}
 :hidden:
 
-AAPS nettinstallatør <WebInstaller.md>
+AAPS web-installer <WebInstaller.md>
 ```

@@ -107,7 +107,7 @@ Qualquer pessoa que veja o código QR pode ler o seu Nightscout, e um código qu
 
 #### Com um PIN
 
-Toque em **OK**: o telefone principal mostra um **PIN de emparelhamento** de 8 dígitos, em dois grupos de quatro (por exemplo `1234 5678`). Este PIN é de **utilização única** e **expira após cerca de dois minutos**.
+Toque em **OK**: o telefone principal mostra um **PIN de emparelhamento** de 8 dígitos, em dois grupos de quatro (por exemplo `1234 5678`). Este PIN é de **utilização única** e **expira após cerca de dois minutos**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
 
 ![Ecrã de emparelhamento do telefone principal com o PIN de utilização única (o PIN mostrado aqui já expirou)](../images/v4/ClientMaster/pairing_pin_master.png)
 

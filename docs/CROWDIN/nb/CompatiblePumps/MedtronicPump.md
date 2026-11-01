@@ -67,7 +67,7 @@ Disse innstillingene må være satt på pumpen for at AAPS skal kunne sende komm
     
     **Åpne plugin** (eller **Administrer** > **Pumpe**) åpner Medtronic-pumpeskjermen. Før en pumpe er sammenkoblet, ser den slik ut:
     
-    ![Medtronic-pumpeskjermen før paring](../images/v4/Pumps/medtronic_pump_screen.png)
+    ![Medtronic-pumpeskjermen før sammenkobling](../images/v4/Pumps/medtronic_pump_screen.png)
 
 Når du konfigurerer Medtronic-pumpen med oppsettveiviseren, kan det hende du ikke får fullført oppsettet på grunn av Bluetooth-problemer (for eksempel at du ikke får koblet til pumpen). Hvis det skjer, bør du velge virtuell pumpe for å fullføre konfigurasjonen, og så feilsøke videre med alternativ 2.
 

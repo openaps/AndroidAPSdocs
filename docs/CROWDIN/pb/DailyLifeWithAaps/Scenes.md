@@ -99,6 +99,8 @@ Ative um cenário na lista **Cenários** (o botão **▶**) ou no item **Cenári
 
 ![O painel Cenários da navegação inferior](../images/v4/Scenes/scenes_sheet.png)
 
+If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+
 Antes de qualquer coisa ser aplicada, você recebe uma **confirmação** que lista exatamente o que o cenário vai fazer, para que você possa conferir:
 
 ![Confirmação de ativação do cenário, com a lista das ações incluídas](../images/v4/Scenes/scene_confirmation.png)

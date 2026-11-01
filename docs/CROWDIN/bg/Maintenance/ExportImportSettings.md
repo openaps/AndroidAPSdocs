@@ -6,6 +6,11 @@
 
 Помислете дали да не си вземете втори, резервен телефон и да се упражните да възстановявате AAPS на него, за да сте сигурни, че резервният телефон работи както трябва. Тази стъпка ще ви даде увереност, че аварийният ви план работи и че можете да продължите да използвате AAPS без прекъсване, ако основният ви телефон стане недостъпен.
 
+```{admonition} Android backups and phone-transfer tools do not carry your AAPS settings
+:class: warning
+Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and they are left out of the Google backup and of the phone-to-phone transfer of a new phone. A settings export, as described on this page, is the only way to carry them over.
+```
+
 За да можете да възстановите AAPS, е важно да имате под ръка следните неща:
 
 - Вашия **файл на хранилището за ключове от Android Studio** и неговата **парола**: нужни са за (повторно) компилиране на инсталационния .APK файл на AAPS.

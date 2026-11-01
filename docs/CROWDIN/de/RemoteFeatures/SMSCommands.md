@@ -21,7 +21,7 @@ Wenn Du **SMS-Befehle** in **AAPS** freischaltest, behalte im Kopf, dass das Sma
 
 Außerdem ist es empfehlenswert, eine [zweite Telefonnummer](#SMSCommands-authorized-phone-numbers) für SMS-Kommandos einzurichten. Mit der zweiten Rufnummer hast Du, für den Fall, dass Dein eigentliches Remote-Smartphone manipuliert wurde, dann die Möglichkeit die SMS-Kommunikation zu [deaktivieren](#SMSCommands-other).
 
-Der voreingestellte Mindestabstand zwischen zwei Bolus-Befehlen beträgt 15 Minuten. Aus Sicherheitsgründen musst Du mindestens zwei berechtigte Rufnummern hinterlegt haben, um diesen Wert verändern zu können. Wenn Du versuchst innerhalb von 15 Minuten einen weiteren Bolus remote abzugeben, erhältst Du die Fehlermeldung "Bolusabgabe aus der Ferne nicht möglich. Versuch es später erneut.”
+The default minimum time delay between bolus commands is 15 minutes, counted from the moment the pump accepts a bolus. Aus Sicherheitsgründen musst Du mindestens zwei berechtigte Rufnummern hinterlegt haben, um diesen Wert verändern zu können. Wenn Du versuchst innerhalb von 15 Minuten einen weiteren Bolus remote abzugeben, erhältst Du die Fehlermeldung "Bolusabgabe aus der Ferne nicht möglich. Versuch es später erneut.”
 
 Wenn das Remote-Kommando (z.B. Bolusabgabe oder Profilwechsel) abgeschlossen ist, wird dies mit einer entsprechenden SMS von AAPS bestätigt. Es ist ratsam, dies so einzustellen, dass Bestätigungstexte an mindestens zwei verschiedene Telefonnummern gesendet werden, falls eines der Empfangstelefone gestohlen wird.
 

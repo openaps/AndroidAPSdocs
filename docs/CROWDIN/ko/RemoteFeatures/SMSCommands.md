@@ -21,7 +21,7 @@ If you enable **SMS Communicator** in **AAPS**, consider that the phone which is
 
 Additionally, it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. This way, you can use the second number to [disable](#SMSCommands-other) SMS communicator in case your main remote phone gets compromised.
 
-The default minimum time delay between bolus commands is 15 minutes. For safety reasons, you have to add at least two authorised phone numbers to change this to a shorter time delay. If you try to remotely bolus again within 15 minutes of the previous bolus, you will receive the response “Remote bolus not available. Try again later”
+The default minimum time delay between bolus commands is 15 minutes, counted from the moment the pump accepts a bolus. For safety reasons, you have to add at least two authorised phone numbers to change this to a shorter time delay. If you try to remotely bolus again within 15 minutes of the previous bolus, you will receive the response “Remote bolus not available. Try again later”
 
 AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. 수신 폰 중 하나가 도난 당할 경우를 대비하여, 적어도 2개 이상의 다른 폰에 확인 문자 메시지가 전송되도록 설정하는 것을 권장합니다.
 

@@ -18,7 +18,7 @@ For å bruke **Dynamisk ISF** må databasen i **AAPS** ha minst 7 dager med **AA
 
 ## Hva gjør Dynamisk ISF?
 
-**Dynamisk ISF** tilpasser insulinfølsomhetsfaktoren (**ISF**) dynamisk ut fra brukerens:
+**Dynamisk ISF** tilpasser insulinsensitivitetsfaktoren (**ISF**) dynamisk ut fra brukerens:
 
 - total daglig dose insulin (**TDD**); og
 - gjeldende og predikerte blodsukkerverdier.
@@ -39,7 +39,7 @@ Feltet med rød ring viser: `profile ISF` -> `ISF as calculated by DynISF`. <br/
 
 ## Hvordan beregnes Dynamisk ISF?
 
-**Dynamisk ISF** bruker Chris Wilsons modell for å bestemme **ISF**, i stedet for brukerens statiske **ISF**-verdi i **profilen**. En detaljert forklaring finner du her: [Chris Wilson om insulinfølsomhet (korreksjonsfaktor) hos Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
+**Dynamisk ISF** bruker Chris Wilsons modell for å bestemme **ISF**, i stedet for brukerens statiske **ISF**-verdi i **profilen**. En detaljert forklaring finner du her: [Chris Wilson om insulinsensitivitet (korreksjonsfaktor) hos Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
 
 Formelen for **Dynamisk ISF** som er implementert, er: `ISF = 1800 / ((TDD * DynISF Adjust Factor) * Ln (( current BG / insulin divisor) + 1 ))`
 

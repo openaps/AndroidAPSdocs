@@ -2,7 +2,7 @@
 
 Το πρόσθετο Autotune είναι μια υλοποίηση του αλγορίθμου autotune του OpenAPS μέσα στο AAPS. Αναλύει το πρόσφατο ιστορικό σας στο AAPS και προτείνει αλλαγές στους βασικούς ρυθμούς, στο ISF και στην αναλογία υδατανθράκων.
 
-Autotune Plugin is available in AAPS releases since [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) but is hidden by default.
+Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
 
 (autotune-how-autotune-calculates-adjustments)=
 ## Πώς υπολογίζει το Autotune τις αλλαγές

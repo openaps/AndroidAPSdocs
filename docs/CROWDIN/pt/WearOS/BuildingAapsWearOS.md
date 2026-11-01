@@ -41,7 +41,7 @@ O Wear apk segue a [variante](#browserbuild-variant) que escolheu para a compila
 
 Onde encontrar o Wear apk:
 
-- **AAPS Builder**: na página da compilação, desça até **Artifacts** e descarregue `aaps-wear-….apk` ao lado da app do telefone, como mostra o [Passo 6 – Instalar a app no seu telefone](#aaps-builder-step6). Descarregue-o no telefone que executa o **AAPS** se instalar a app do relógio a partir do telefone (Wear Installer 2 ou Easy Fire Tools), ou no seu computador se usar o ADB.
+- **AAPS Builder**: on the build page, scroll down to **Artifacts** and download `aaps-wear-….apk` next to the phone app, as shown in [Step 5 – Install the app on your phone](#aaps-builder-step5). Descarregue-o no telefone que executa o **AAPS** se instalar a app do relógio a partir do telefone (Wear Installer 2 ou Easy Fire Tools), ou no seu computador se usar o ADB.
 
   ![Artifacts com as apps do telefone e do relógio](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 

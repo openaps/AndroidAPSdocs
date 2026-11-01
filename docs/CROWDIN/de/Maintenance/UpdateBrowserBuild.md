@@ -73,7 +73,11 @@ Deine eigene Kopie ist jetzt synchronisiert (aktualisiert) und enthält die neue
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Lasse den „Branch“ unverändert auf „Master“, wähle die AAPS-Version aus, die Du erstellen möchtest – entweder die neueste Version oder eine bestimmte benötigte Version – wähle die [Variante](#browserbuild-variant) (Vollversion), und tippe dann auf Workflow ausführen.
+5. Keep the branch set to master. In **Select AAPS Version**, check that **4.0.0**, the newest version at the top of the list, is selected. If your fork is not up to date, the preselected version is an older one: if you run the workflow with the form as it opens, you rebuild that older version and your app is not updated. Choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
+
+   ```{note}
+   The list of versions is part of the workflow in your fork. If **4.0.0** is missing, your fork is not synchronized yet: go back to [Update your GitHub repository](#Update-to-new-version-update-your-repo).
+   ```
 
 
 

@@ -6,6 +6,11 @@ To restore your AAPS setup to an existing or new phone, it's important to keep f
 
 Consider acquiring a secondary backup phone and practicing restoring AAPS to ensure the backup phone works as expected. This step will give you confidence that your emergency plan is effective and that you can seamlessly continue using AAPS if your primary phone becomes unavailable.
 
+```{admonition} Android backups and phone-transfer tools do not carry your AAPS settings
+:class: warning
+Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and they are left out of the Google backup and of the phone-to-phone transfer of a new phone. A settings export, as described on this page, is the only way to carry them over.
+```
+
 To be able to restore, having the following items at hand is important:
 
 - Your **Android Studio keystore file** and associated **password**: Needed for (re)building the AAPS .APK installer file.

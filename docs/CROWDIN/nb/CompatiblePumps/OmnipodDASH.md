@@ -21,7 +21,7 @@ Viktige egenskaper ved **Omnipod DASH** («DASH»):
 (omnipod-dash-constraints)=
 
 ## Kjente begrensninger/problemer med Omnipod DASH i AAPS
-- Det generelle rådet er å kjøre **AAPS** på Android 14 eller 16. Android 15 har mange rapporterte [problemer](https://github.com/nightscout/AndroidAPS/issues/3471) fra fellesskapet. Hvis du likevel kjører Android 15, må du sannsynligvis slå på **Bluetooth-paring** (i delen **Avanserte innstillinger** i [Dash-innstillingene](#omnipod-dash-advanced-settings)) for å kunne aktivere og bruke pods, se [Feilsøking](../GettingHelp/GeneralTroubleshooting.md) for mer informasjon om paringsinnstillingene.
+- Det generelle rådet er å kjøre **AAPS** på Android 14 eller 16. Android 15 har mange rapporterte [problemer](https://github.com/nightscout/AndroidAPS/issues/3471) fra fellesskapet. Hvis du likevel kjører Android 15, må du sannsynligvis slå på **Bluetooth-sammenkobling** (i delen **Avanserte innstillinger** i [Dash-innstillingene](#omnipod-dash-advanced-settings)) for å kunne aktivere og bruke pods, se [Feilsøking](../GettingHelp/GeneralTroubleshooting.md) for mer informasjon om paringsinnstillingene.
 - Sommertid og tidssonebytter brukes ikke automatisk. Etter en klokkeendring må du oppdatere poden manuelt: trykk på **Oppdater** på DASH-pumpeskjermen, og trykk deretter på **Angi tid** (vises når tidssonen på poden og telefonen er ulik), eller gjør et **Profilbytte** (se [Tidssonebytte for Omnipod Dash](#timezone-traveling-with-pumps)).
 - Dash støtter bare basaldoser i steg på 0,05 E/t. Hvis du prøver å sette basal med steg på 0,01 i **AAPS-profilen** din, gir AAPS ingen advarsel, selv om poden runder dosen opp til steg på 0,05. Hvis du åpner **Pod-historikk** på DASH-pumpeskjermen, viser den at basal ble satt til 0,05. Det betyr også at den laveste basaldosen DASH tillater i **AAPS**, er 0,05 E/t.
 - Innstillingsfilen inneholder den aktive pod-økten. Eksporter innstillingene dine etter hver pod-aktivering, og se [Eksportere og importere innstillinger](#omnipod-dash-export-import) før du importerer innstillinger.
@@ -112,7 +112,7 @@ For å kontrollere at **Omnipod Dash** er valgt, åpne **Administrer** (navigasj
 
 (omnipod-dash-tab)=
 
-## The DASH pump screen
+## DASH-pumpeskjermen
 
 DASH-pumpeskjermen er der du administrerer podene dine: aktiverer og deaktiverer dem, oppdaterer podstatusen, demper varsler og ser på pod-historikken. Åpne den med **Administrer** > **Pumpe**, eller med **Åpne plugin** på kortet **Omnipod Dash** i **Konfigurasjon** > **Pumpe**.
 
@@ -192,7 +192,7 @@ Knappene nederst på pumpeskjermen endrer seg med tilstanden til poden. Bare kna
 
 - [**Aktiver Pod**](#omnipod-dash-activate-pod): Primer og aktiverer en ny pod. Vises når ingen pod er aktiv.
 
-- [**Deaktiver Pod**](#omnipod-dash-deactivate-pod): Deaktiverer den aktive poden. Vises så snart en pod er paret med **AAPS**, også når en aktivering stoppet underveis (for eksempel fordi poden sviktet under aktiveringen). **AAPS** ber deg bekrefte før den deaktiverer poden.
+- [**Deaktiver Pod**](#omnipod-dash-deactivate-pod): Deaktiverer den aktive poden. Vises så snart en pod er sammenkoblet med **AAPS**, også når en aktivering stoppet underveis (for eksempel fordi poden sviktet under aktiveringen). **AAPS** ber deg bekrefte før den deaktiverer poden.
 
 - **Spill av testlyd:** Får poden til å spille av ett enkelt testpip.
 
@@ -525,7 +525,7 @@ Velg om **AAPS** skal spille av en lyd med varslingene sine når det er usikkert
 
 ![Delen Avanserte innstillinger](../images/v4/Pumps/dash_settings_advanced.png)
 
-**Bluetooth-paring:**  Parer poden med telefonen over Bluetooth. Prøv den bare hvis poden ikke klarer å holde en stabil tilkobling, for eksempel på Android 15 (se [Kjente begrensninger/problemer med Omnipod DASH i AAPS](#omnipod-dash-constraints)). Når den er på, viser telefonen paringsforespørsler som du må godta. La den være av hvis poden kobler til som den skal. Den har ingen effekt på versjoner eldre enn Android 15. Av som standard.
+**Bluetooth-sammenkobling:**  Parer poden med telefonen over Bluetooth. Prøv den bare hvis poden ikke klarer å holde en stabil tilkobling, for eksempel på Android 15 (se [Kjente begrensninger/problemer med Omnipod DASH i AAPS](#omnipod-dash-constraints)). Når den er på, viser telefonen paringsforespørsler som du må godta. La den være av hvis poden kobler til som den skal. Den har ingen effekt på versjoner eldre enn Android 15. Av som standard.
 
 ## Alder på insulin og kanyle
 
@@ -715,6 +715,6 @@ Når du ber om hjelp, bør du ha følgende informasjon klar, slik at de i felles
    - Virket det før?
    - Når virket det, og når virket det ikke?
    - Har du gjort endringer i konfigurasjonen eller profilinnstillingene?
-   - Har du paret en ny Bluetooth-enhet?
+   - Har du sammenkoblet en ny Bluetooth-enhet?
    - Har du oppgradert eller installert en ny app?
    - Hvor lenge virket det før det sluttet å virke?

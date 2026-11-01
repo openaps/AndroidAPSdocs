@@ -1,35 +1,35 @@
-# How to help with AAPS
+# Slik kan du hjelpe til med AAPS
 
-## AAPS operates entirely on volunteer efforts and has no paid staff.
+## AAPS drives helt og holdent av frivillige og har ingen betalte ansatte.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to develop and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
+Utviklerne er foreldre, omsorgspersoner, pårørende og personer med diabetes som jobber sammen for å utvikle og forbedre en løsning på et svært vanlig behov. Utviklerne gir av fritiden sin gratis, men det er litt urettferdig å forvente at de også skal dekke ekstra kostnader for å gjøre noe så fantastisk tilgjengelig som åpen kildekode, gratis for alle.
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*For å teste et nytt oppsett fullt ut trenger utviklerne en ekstra telefon og en ekstra pumpe, siden det ikke kan brukes på et menneske før det er stabilt. Nyere modeller må testes etter hvert som de kommer. Noe av pengene som doneres, går også til å frakte dette utstyret over landegrensene til utviklerne. Noen ganger er det også fint å bidra til utviklernes kostnader når de forlater de mørke rommene sine og møter hverandre på konferanser og arrangementer, slik at de kreative og analytiske hodene deres kan utveksle ideer.*
 
-## I can write code! How do I participate?
+## Jeg kan skrive kode! Hvordan deltar jeg?
 
-Yay! Look at the issues, ask in the discord channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+Hurra! Se på sakene (issues) på GitHub, spør i Discord-kanalen, det er alltid mye å gjøre! Velg en liten oppgave først, og lag din første pull request! :)
 
-## I know the system and can write documentation!
+## Jeg kjenner systemet og kan skrive dokumentasjon!
 
-Great, this is a highly appreciated thing and a good way to pay it forward!
+Flott, dette er svært verdsatt og en god måte å gi noe tilbake på!
 
-* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../SupportingAaps/HowToEditTheDocs.md). Other languages are only translated from English and can't be edited for consistency reasons.
+* Discord-kanalen for wikien finner du her: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
+* En veiledning for hvordan du gjør commits i den engelske wikien finner du her: [Slik lager du en PR](../SupportingAaps/HowToEditTheDocs.md). Andre språk oversettes bare fra engelsk og kan ikke redigeres direkte, for å holde innholdet konsistent.
 
-## I do speak multiple languages and want to translate the app or the documentation
+## Jeg snakker flere språk og vil oversette appen eller dokumentasjonen
 
-If you are translating something for the first time, please start with translating the strings for the app, as this is easier and you will get results faster.
+Hvis du oversetter noe for første gang, start med å oversette tekstene (strings) i appen. Det er enklere, og du ser resultater raskere.
 
-You are welcome to start as a translator for the documentation in parallel or later.
+Du er velkommen til å begynne som oversetter for dokumentasjonen samtidig, eller senere.
 
-You can check the state of translations for the languages app and documentation [here](#StateOfTranslations).
+Du kan se status for oversettelsene av appen og dokumentasjonen for de ulike språkene [her](#StateOfTranslations).
 
-* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
-* If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
+* Hvis du vil oversette **appen** til andre språk (takk!), bruk [Crowdin](https://crowdin.com/project/androidaps).
+* Hvis du vil oversette **dokumentasjonen** til andre språk (takk!), bruk [Crowdin](https://crowdin.com/project/androidapsdocs). 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+Bare registrer deg på CROWDIN, klikk på språket ditt, vent på godkjenning fra en administrator, og sett i gang!
 
-## Are there other ways to help?
+## Finnes det andre måter å hjelpe på?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.
+Vi trenger blant annet grafisk design, UX-design, oversettere og wiki-redaktører – eller du kan rett og slett gi noe tilbake ved å svare på de enkle spørsmålene på Discord & Facebook, slik at utviklerne får tid og ro til å konsentrere seg om de vanskeligere tingene.

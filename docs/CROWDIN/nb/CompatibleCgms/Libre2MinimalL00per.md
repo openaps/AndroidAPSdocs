@@ -6,7 +6,7 @@ Nederst i dette dokumentet finner du en liste med definisjoner. Hvis det er ord 
 
  
 
-## Configuration
+## Konfigurasjon
 
 ### Maskinvare
 
@@ -57,7 +57,7 @@ Nederst i dette dokumentet finner du en liste med definisjoner. Hvis det er ord 
   - [*Steg 8: Datainnsamling i 3 til 15 minutter*](#minimallooper-step8)
   - [*Steg 9: Kontroller at sensoren er tilkoblet og leverer data*](#minimallooper-step9)
 
-- *[Notes](#minimallooper-notes)*
+- *[Merknader](#minimallooper-notes)*
 - *[Fordeler](#minimallooper-advantages)*
 - *[Ulemper](#minimallooper-disadvantages)*
 - <u>*\[Feilsøking\](#minimallooper-troubleshooting)*</u>
@@ -309,7 +309,7 @@ På skjermen **BT Device** (sveip til venstre) kan du se flere detaljer om tilko
 
 (minimallooper-notes)=
 
-### Notes
+### Merknader
 
 - **Bruke NFC-skanning i LL ETTER at binding/sammenkobling i xDrip er fullført**: Du kan gjøre NFC-skanninger, men bindingen/sammenkoblingen med xDrip må være fullført først. Se alltid i xDrip om det nærmer seg 5-minuttersmålingen (altså 4 minutter siden). Hvis det er nær 5 min, venter du til den nye BT-målingen har kommet inn, og gjør så NFC-skanningen. Hvis du treffer feil tidspunkt, forstyrrer det BT-prosessen i xDrip, og du får ikke BT-målinger. Det kan ta en stund før den binder seg på nytt og sender igjen, og noen ganger kan sensorens BT-tilkobling bli «stjålet» av LL. Men mellom disse BT-målingene har jeg ikke hatt problemer med å gjøre en NFC-skanning og så deaktivere appen med en gang. Jeg er ikke sikker på om LL må deaktiveres hver gang, men jeg deaktiverer den for å være på den sikre siden.
 

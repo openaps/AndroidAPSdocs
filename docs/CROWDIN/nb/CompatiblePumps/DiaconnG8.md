@@ -30,7 +30,7 @@ Når den er valgt, viser **Diaconn G8**-kortet to knapper, **Innstillinger** og 
 
 ![Pumpeskjermen for Diaconn G8 før sammenkobling](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
-![image](../images/DiaconnG8/DiaconnG8_04.jpg)
+![bilde](../images/DiaconnG8/DiaconnG8_04.jpg)
 
 ```{admonition} Older screenshot
 :class: note
@@ -47,13 +47,13 @@ Skjermbildet ovenfor er fra en tidligere **AAPS**-versjon. I **AAPS** 4 starter 
 1. De siste 5 sifrene i SN-nummeret på baksiden av pumpen.
 2. Trykk på O-knappen > Information > BLE > Last 5 digits (de siste 5 sifrene).
 
-![image](../images/DiaconnG8/DiaconnG8_06.jpg)
+![bilde](../images/DiaconnG8/DiaconnG8_06.jpg)
 
 - Når du har valgt pumpen din, vises et vindu som ber om en PIN-kode. Skriv inn PIN-koden som vises på pumpen for å fullføre tilkoblingen.
 
- ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
+ ![bilde](../images/DiaconnG8/DiaconnG8_07.jpg)
 
-- Når **Paringen er vellykket!** vises, trykker du på **OK** for å gå tilbake til pumpeskjermen.
+- Når **Sammenkoblingen er vellykket!** vises, trykker du på **OK** for å gå tilbake til pumpeskjermen.
 
 ## Kontroll av pumpestatus og synkronisering av logger
 
@@ -61,7 +61,7 @@ Skjermbildet ovenfor er fra en tidligere **AAPS**-versjon. I **AAPS** 4 starter 
 - Trykk på **Oppdater** for å koble til pumpen, oppdatere statusen og synkronisere loggene.
 - Trykk på **Pumpehistorikk** for å se historikken som er lest fra pumpen.
 
-![image](../images/DiaconnG8/DiaconnG8_08.jpg)
+![bilde](../images/DiaconnG8/DiaconnG8_08.jpg)
 
 ```{admonition} Older screenshot
 :class: note
@@ -87,17 +87,17 @@ Skjermbildet ovenfor er fra en tidligere **AAPS**-versjon. I **AAPS** 4 vises pu
 
 - Trykk og hold Bluetooth-knappen øverst i omtrent 3 sekunder.
 
-![image](../images/DiaconnG8/DiaconnG8_11.jpg)
+![bilde](../images/DiaconnG8/DiaconnG8_11.jpg)
 
 - Trykk på Setting-knappen på den sammenkoblede Diaconn G8-insulinpumpen.
 
-![image](../images/DiaconnG8/DiaconnG8_12.jpg)
+![bilde](../images/DiaconnG8/DiaconnG8_12.jpg)
 
 - Unpair (opphev sammenkoblingen).
 
-![image](../images/DiaconnG8/DiaconnG8_13.jpg)
+![bilde](../images/DiaconnG8/DiaconnG8_13.jpg)
 
-- I **AAPS** åpner du pumpeskjermen (**Administrer** > **Pumpe**), trykker på **Opphev paring** og bekrefter **Tilbakestille paringsinformasjonen?**.
+- I **AAPS** åpner du pumpeskjermen (**Administrer** > **Pumpe**), trykker på **Opphev sammenkobling** og bekrefter **Tilbakestill sammenkoblingsinformasjon?**.
 - Gjenta Bluetooth-sammenkoblingen for pumpen (se ovenfor).
 
 ## Mer informasjon

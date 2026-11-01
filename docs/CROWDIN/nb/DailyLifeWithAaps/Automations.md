@@ -125,7 +125,7 @@ Det finnes sikkerhetsgrenser for **automasjoner**:
 Vær forsiktig når du velger en negativ verdi i en **automasjon**
 ```
 
-Vær forsiktig når du velger en «negativ verdi» i en «Betingelse» som «mindre enn» i **automasjoner**. For example:
+Vær forsiktig når du velger en «negativ verdi» i en «Betingelse» som «mindre enn» i **automasjoner**. For eksempel:
 
 ![Alt text](../images/Automations/automation_comparison_operators.png)
 
@@ -222,13 +222,15 @@ ingen
 * **Profil** må være mellom 50 % og 130 %
 * virker bare hvis den forrige prosenten er 100 %
 
-**Handlinger:** **Endre utjevning**
+**Handlinger:** **Endre utjevning** (i gruppen **Loop & insulin**)
 
 **Alternativer:**
 
-* velg [utjevningsmetoden](../CompatibleCgms/SmoothingBloodGlucoseData.md) det skal byttes til
+* velg [utjevningsmetoden](../CompatibleCgms/SmoothingBloodGlucoseData.md) det skal byttes til. Listen er den samme som under **Konfigurasjon** > **Utjevning**, og handlingen gjør nøyaktig det samme som en endring der: den nye metoden lagres, synkroniseres til parede klienter, og BS-dataene utjevnes på nytt med en gang.
 * kjører bare hvis den utjevningsmetoden ikke allerede er aktiv – **AAPS** legger automatisk til linjen «**Forutsetninger: Utjevning … er ikke aktiv**» i regelen. Når den valgte utjevningen er aktiv, hoppes regelen over uten melding.
-* Eksempel: sammen med utløseren **Sensoralder** kan du bytte til **Gjennomsnittlig utjevning** den første dagen med en ny sensor, og tilbake til **Ingen utjevning** etterpå.
+* Eksempel: en ny sensor gir ofte mye støy den første dagen. To regler med utløseren **Sensoralder** gir sterkere filtrering mens sensoren stabiliserer seg, og utjevning uten forsinkelse etterpå:
+  * **Sensoralder** mindre enn 24 t: **Endre utjevning** til **Unscented Kalman-filter**
+  * **Sensoralder** mer enn 24 t: **Endre utjevning** til **Gjennomsnittlig utjevning**
 
 **Handlinger:** **Merknad** (i gruppen **Varsler** i listen)
 
@@ -268,7 +270,7 @@ ingen
 
 **Alternativer:**
 
-* ingen. Når en regel med denne handlingen kjører, sjekker **AAPS** ikke reglene under den i listen i samme kjøring. Legg den til i en regel som skal ha prioritet over reglene under seg (se [rekkefølgen på automasjonene](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* ingen. Så lenge betingelsene i en regel med denne handlingen er sanne, sjekker **AAPS** ikke reglene under den i listen. Så snart betingelsene er usanne igjen, sjekkes reglene under som vanlig. Legg den til i en regel som skal ha prioritet over reglene under seg (se [rekkefølgen på automasjonene](#Automations-the-order-of-the-automations-in-the-list-matters)).
 
 **Handlinger:** **Kjør scene**, **Aktiver scene**, **Deaktiver scene** (i gruppen **Scener**)
 

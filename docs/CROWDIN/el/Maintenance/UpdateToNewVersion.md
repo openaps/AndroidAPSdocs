@@ -10,14 +10,15 @@
 - Όταν κυκλοφορεί μια νέα έκδοση, η ίδια η εφαρμογή **AAPS** θα σας δείξει ένα μήνυμα (banner) για τη νέα έκδοση.
 - Η νέα έκδοση θα ανακοινωθεί επίσης στο Facebook τη στιγμή της κυκλοφορίας.
 - Μετά την κυκλοφορία, διαβάστε προσεκτικά τις [Σημειώσεις έκδοσης](ReleaseNotes.md) και λύστε τις απορίες σας με την κοινότητα στο Facebook ή στο Discord, πριν ξεκινήσετε την ενημέρωση.
-- Μην ξεχάσετε να εξαγάγετε τις ρυθμίσεις του **AAPS**.
+- Updating from **AAPS** 3.x? Read [What changed in AAPS v4](V4Changes.md) first: it lists the features that moved, were renamed or were removed.
+- Do not forget to [export your settings](ExportImportSettings.md). When you import them again after the update, you choose whether the pump settings are replaced too.
 
 ## Ενημέρωση του AAPS με δημιουργία μέσω browser
 
 Έχετε ήδη κάνει build της εφαρμογής AAPS μέσω browser; Ακολουθήστε τις οδηγίες για τη μέθοδο που χρησιμοποιήσατε:
 
-- **AAPS Builder** (το ιδιωτικό σας αποθετήριο, συνήθως με το όνομα `my-aaps`): [Ενημέρωση του AAPS με το AAPS Builder](#aaps-builder-updates). Δεν υπάρχει fork για συγχρονισμό.
-- **Fork και αρχείο προετοιμασίας** (το δικό σας αντίγραφο του AndroidAPS): [Ενημέρωση μέσω browser (fork)](./UpdateBrowserBuild.md).
+- **AAPS Builder**: you build from the **Build AAPS** page of your private repository (usually named `my-aaps`) and download the app from GitHub. Follow [Updating AAPS with AAPS Builder](#aaps-builder-updates). Δεν υπάρχει fork για συγχρονισμό.
+- **Fork and preparation file**: you run the **AAPS-CI** workflow in your own copy (fork) of AndroidAPS, a repository named `AndroidAPS` in your GitHub account, and the app lands in your Google Drive. Follow [Update with a browser (fork)](./UpdateBrowserBuild.md).
 
 ## Ενημέρωση του AAPS με το Android Studio
 
@@ -29,9 +30,9 @@
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-### Ελέγξτε την έκδοση AAPS στο τηλέφωνό σας
+## After the update
 
-Ελέγξτε στις [Σημειώσεις έκδοσης](../Maintenance/ReleaseNotes.md) αν υπάρχουν ειδικές οδηγίες μετά την ενημέρωση.
+These steps are the same for every build method. Ελέγξτε στις [Σημειώσεις έκδοσης](../Maintenance/ReleaseNotes.md) αν υπάρχουν ειδικές οδηγίες μετά την ενημέρωση.
 
 Αφού εγκαταστήσετε το νέο apk:
 

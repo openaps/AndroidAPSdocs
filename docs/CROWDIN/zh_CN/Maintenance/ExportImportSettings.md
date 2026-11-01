@@ -6,6 +6,11 @@
 
 考虑购买一部备用手机，并练习恢复AAPS，以确保备用手机能按预期工作。 This step will give you confidence that your emergency plan is effective and that you can seamlessly continue using AAPS if your primary phone becomes unavailable.
 
+```{admonition} Android backups and phone-transfer tools do not carry your AAPS settings
+:class: warning
+Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and they are left out of the Google backup and of the phone-to-phone transfer of a new phone. A settings export, as described on this page, is the only way to carry them over.
+```
+
 为了能够恢复，手头备有以下项目是很重要的：
 
 - 您的**Android Studio密钥库文件**和相关的**密码**：用于（重新）构建AAPS .APK安装程序文件。

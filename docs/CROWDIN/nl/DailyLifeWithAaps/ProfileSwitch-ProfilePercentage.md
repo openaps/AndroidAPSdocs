@@ -54,7 +54,9 @@ Je hebt minstens één opgeslagen **Profiel** nodig. Een **Profiel percentage** 
 
 In **AAPS** v4 beheer en activeer je profielen vanuit het scherm **Beheren** (onderste navigatie) → **Profiel** (*“Profielen beheren en activeren”*).
 
-Het Profiel-scherm toont je profielen als een **carrousel van kaarten waar je doorheen kunt vegen**. De kaart van het actieve profiel is gemarkeerd met **ACTIEF** en toont de totale basaal per dag (bijv. *∑ 30,15 E*). Onder de geselecteerde kaart zie je de details van dat profiel — **Eenheden**, type **Insuline**, en de schema's voor **KH-ratio**, **ISF**, **basaal** en **streefdoel** met grafieken.
+Het Profiel-scherm toont je profielen als een **carrousel van kaarten waar je doorheen kunt vegen**. De kaart van het actieve profiel is gemarkeerd met **ACTIEF** en toont de totale basaal per dag (bijv. *∑ 30,15 E*). Below the selected card you see that profile's details — the **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+
+When a temporary switch is running, the **ACTIVE** card shows its percentage and time shift with the time left, for example *110% +2 h · 2 h 40 min*, above a progress bar. Both are refreshed every 30 seconds. The details below then have two columns: the values of the profile in blue, and the values in use with the percentage in red.
 
 ![Het Profiel-scherm — profielcarrousel, details en actiebalk](../images/v4/Profiles/profile_manage.png)
 

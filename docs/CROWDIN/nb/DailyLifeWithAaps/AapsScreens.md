@@ -17,7 +17,7 @@ Dette er det første skjermbildet du møter når du åpner **AAPS**, og det inne
 
 * **Menyen** (☰) til venstre åpner sidemenyen med **Behandlingshistorikk**, **Historikkleser**, **Statistikk**, **Profilhjelper**, **Vedlikehold**, **Oppsettveiviser**, **Konfigurasjon** og mer.
 * **Søkefeltet** finner innstillinger, dialoger og dokumentasjon — bare begynn å skrive (se [Globalt søk](../DailyLifeWithAaps/GlobalSearch.md)).
-* Ikonet **Innstillinger** (tannhjul) til høyre åpner alle [innstillingene](../SettingUpAaps/Preferences.md).
+* Ikonet **Innstillinger** (tannhjul) til høyre åpner alle [Innstillinger](../SettingUpAaps/Preferences.md).
 
 (aaps-screens-profile--target)=
 
@@ -120,7 +120,7 @@ Du må bekrefte etter hvert valg.
     
       ![Dupliserte BS-data: LGS-loop-ikon og BS-kildesnarveien med et rødt varselmerke](../images/bg_warn_red.png)
     
-    Trykk på loop-ikonet: kortet **Begrensninger** øverst forteller deg hvorfor: «BgQualityCheck: Stopp ved lavt BS-modus på grunn av doble verdier fra BS-kilden».
+    Trykk på loop-ikonet: kortet **Begrensninger** øverst forteller deg hvorfor: «BgQualityCheck: LGS-modus på grunn av doble verdier fra BS-kilden».
     
       ![Kjøremodus-dialog: LGS på grunn av doble verdier](../images/main/bg_doubled_constraint.png)
     
@@ -208,7 +208,7 @@ Hvis **AAPS** oppdager resistens eller sensitivitet, endres målet fra det som e
     * Trykk på brikken for å se fordelingen mellom bolus- og basalinsulin (første dialog på bildet — her med negativ IOB etter en periode med redusert basal)
 2. **Korn**: [aktive karbohydrater (COB)](../DailyLifeWithAaps/CobCalculation.md) - karbohydrater du har spist som ennå ikke er tatt opp
 3. Den blågrønne knappen til høyre viser **gjeldende basallevering**: en flat linje når profilbasalen kjører, et endret ikon mens en midlertidig basal er aktiv
-4. **Prosentraden** viser gjeldende sensitivitet ([Autosens](#Open-APS-features-autosens) / [Dynamisk ISF](../DailyLifeWithAaps/DynamicISF.md)). Når loopen endrer ISF-en din, viser raden også profil-ISF, en pil og den ISF-en loopen bruker nå, for eksempel «80 % 2,0 ↗ 2,5». Trykk på den for å se Autosens-verdien og den effektive ISF-en (andre dialog på bildet). Hvis loopen bruker en annen verdi enn det siste Autosens-resultatet (for eksempel fordi et midlertidig mål endrer sensitiviteten din), viser dialogen også den verdien som **Algoritmens sensitivitet**. Når Autosens er av, beholder loopen profil-ISF-en din, og ingen effektiv ISF vises.
+4. **Prosentraden** viser gjeldende sensitivitet ([Autosens](#Open-APS-features-autosens) / [Dynamisk ISF (DynISF)](../DailyLifeWithAaps/DynamicISF.md)). Når loopen endrer ISF-en din, viser raden også profil-ISF, en pil og den ISF-en loopen bruker nå, for eksempel «80 % 2,0 ↗ 2,5». Trykk på den for å se Autosens-verdien og den effektive ISF-en (andre dialog på bildet). Hvis loopen bruker en annen verdi enn det siste Autosens-resultatet (for eksempel fordi et midlertidig mål endrer sensitiviteten din), viser dialogen også den verdien som **Algoritmens sensitivitet**. Når Autosens er av, beholder loopen profil-ISF-en din, og ingen effektiv ISF vises.
 
 IOB-dialogen, som åpnes ved å trykke på IOB-brikken:
 
@@ -246,6 +246,8 @@ Statusraden gir en visuell advarsel for
 Hvis grensen for advarsel er overskredet, vises verdiene i gult.
 
 Hvis grensen for kritisk er overskredet, vises verdiene i rødt.
+
+Alderen vises alltid i kortform, uansett skjermstørrelse: *4t* den første dagen, *3d4t* senere.
 
 Grensene kan endres via det lille **Innstillinger**-ikonet som vises når statusraden er **utvidet** (pilen til høyre) — se [Statuslys](#Preferences-status-lights).
 
@@ -303,6 +305,14 @@ Hold fingeren på skjermen og flytt den til venstre eller høyre for å gå fra 
 Dette virker på samme måte på de [ekstra grafene](#aaps-screens-additional-graphs) under BS-grafen (IOB, COB ...): trykk og hold på hvilken som helst av dem.
 
 ![Trykk og hold på BS-grafen: vinduet viser tid, BS, IOB og basal](../images/main/graph_press_and_hold.png)
+
+(aaps-screens-graph-clock-change)=
+
+#### Endringer av klokken
+
+Når klokken på telefonen har hoppet, ved overgang til eller fra sommertid eller i en ny tidssone, markerer en stiplet loddrett linje dette tidspunktet i BS-grafen, med et lite klokkeikon nederst. Den samme stiplede linjen går gjennom de [ekstra grafene](#aaps-screens-additional-graphs) nedenfor.
+
+![Markøren for en endring av klokken: en stiplet linje med et klokkeikon, ved siden av linjen for nåtid](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
@@ -445,19 +455,21 @@ Hvis det oppdages høyere karbohydratopptak enn forventet, gis det insulin, og d
 
 Viser sensitiviteten som [Autosens](#Open-APS-features-autosens) har oppdaget.
 
-Sensitivitet er en beregning av insulinfølsomheten som følge av trening, hormoner osv.
+Sensitivitet er en beregning av insulinsensitiviteten som følge av trening, hormoner osv.
 
 Merk: du må ha kommet til [opplæringsmål 8](#objectives-objective8) for at Sensitivitetsdeteksjon/[Autosens](#Open-APS-features-autosens) skal kunne justere insulinmengden automatisk. Før du har nådd det opplæringsmålet, vises linjen i grafen din bare til informasjon.
 
 ### Dynamisk ISF (DISF)
 
-Viser sensitiviteten slik [Dynamisk ISF](../DailyLifeWithAaps/DynamicISF.md) beregner den. Fylles bare ut hvis du bruker denne funksjonen.
+Viser sensitiviteten slik [Dynamisk ISF (DynISF)](../DailyLifeWithAaps/DynamicISF.md) beregner den. Fylles bare ut hvis du bruker denne funksjonen.
 
 (screen-heart-rate-steps)=
 
 #### Puls (HR) & Skritt
 
 Disse dataene kan være tilgjengelige når du bruker en [Wear OS-smartklokke](../WearOS/WearOsSmartwatch.md). Aktiver dem i **AAPS** Wear-appen og gi tillatelse til helsedata.
+
+Skritt tegnes som stolper, og pulsen som en buet linje som brytes der klokken ikke sendte data.
 
 #### Avvik (DEV)
 
@@ -607,11 +619,15 @@ Feltet **Karbotid** er for forhåndsbolus, slik at du kan fortelle systemet at d
 
 ![Sett alarm for karbohydrater fram i tid](../images/Home2021_BolusWizard_EatingReminder.png)
 
-Påminnelsen ringer som en **AAPS**-alarm. Den lager ikke et nedtellingsur i klokke-appen på telefonen, og den virker også når bolusen ble lagt inn fra **AAPSClient** mens **AAPS** kjørte i bakgrunnen.
+Påminnelsen starter når bolusen er gitt. Mens den kjører, viser hovedskjermen et felt **Tid for å spise** som teller ned, med **Stopp** og **+5 min**. **+5 min** flytter slutten på ventetiden fem minutter senere, og feltet viser den totale ventetiden. Når tiden er inne, ringer påminnelsen med sin egen lyd, en myk kjøkkentimer. I tillegg til **Demp alarm** (skjermen forblir åpen) og **Demp og lukk** har alarmskjermen **+5 min**, som starter en ny ventetid på fem minutter. Når den har ringt, viser feltet *Tiden er ute* med **+5 min** og **Forkast**; **Demp og lukk** fjerner også feltet. Feltet og alarmen vises også på **AAPSClient** og på [klokken](#WearOsSmartwatch-wizard-carb-time). Påminnelsen lager ikke en timer i klokkeappen på telefonen. Hvis Android ikke lar **AAPS** sette alarmer, ber kalkulatoren deg om å tillate *Alarmer og påminnelser* for **AAPS** i Android-innstillingene. Bjellen tilbys ikke for en karbotid som allerede har passert.
 
-Feltet **BS** er vanligvis allerede fylt ut med den siste målingen fra CGM-en din. Hvis du ikke har en CGM som virker, er feltet tomt. Når målingen er fersk, forblir raden **BS** sammenfoldet.
+![Feltet Tid for å spise på hovedskjermen, med +5 min og Stopp](../images/main/main_eat_reminder_bar.png)
 
-Resultatknappen nederst viser den foreslåtte bolusen; når du trykker på den, ber den om bekreftelse før noe insulin gis.
+![Alarmskjermen Tid for å spise: +5 min, Demp alarm, Demp og lukk](../images/main/eat_reminder_alarm.png)
+
+Feltet **BS** er vanligvis allerede fylt ut med den siste målingen fra CGM-en din. Hvis du ikke har en CGM som virker, er feltet tomt. Når målingen er fersk, forblir raden **BS** sammenfoldet. Feltet følger nye målinger mens kalkulatoren er åpen, helt til du endrer det selv.
+
+Resultatknappen nederst viser den foreslåtte bolusen; når du trykker på den, ber den om bekreftelse før noe insulin gis. Mens bekreftelsen venter, gir loopen ingen SMB, så bolusen du bekrefter, er fortsatt riktig. Hvis en SMB leveres akkurat da, venter **OK** til den er ferdig.
 
 Greit å vite:
 
@@ -679,7 +695,7 @@ I alle disse dialogene (**Prime/fylling**, **Sensorbytte**, **Bytte pumpebatteri
 
 **Administrer → Insulininnstillinger** viser og administrerer insulinoppsettene dine. Hvert oppsett vises på et kort med **topptid** og **[DIA](#Config-Builder-insulin-dia)**; det som er i bruk, er merket **AKTIV**. Under kortet ser du aktivitetskurven. Du kan redigere kallenavn, topp og DIA for alle oppsett unntatt det aktive: for å bytte insulinet du bruker, [legg til et nytt oppsett og aktiver det](#Config-Builder-insulin-change-active).
 
-Se [Insulinets virketid](#Config-Builder-insulin-dia) for å lære mer om hva det er og hvordan du setter det.
+Se [Insulinets virkningstid](#Config-Builder-insulin-dia) for å lære mer om hva det er og hvordan du setter det.
 
 ## Pumpestatus
 
@@ -746,9 +762,9 @@ Lar deg bla tilbake i **AAPS**-historikken. Se den egne siden [Gjennomgang av da
 
 (aaps-screens-statistics)=
 
-## Statistics
+## Statistikk
 
-![Statistics](../images/v4/Screens/statistics.png)
+![Statistikk](../images/v4/Screens/statistics.png)
 
 Åpne **menyen** (☰) og velg **Statistikk**.
 
@@ -756,7 +772,7 @@ Gir deg statistikk om total daglig dose, tid i målområdet, glukoseprofilen din
 
 (aaps-screens-profile-helper)=
 
-## Profile Helper
+## Profilhjelper
 
 Åpne **menyen** (☰) og velg **Profilhjelper**.
 

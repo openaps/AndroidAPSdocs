@@ -222,13 +222,15 @@ kein(e)
 * **Profile** must be between 50% and 130%
 * funktioniert nur, wenn das Profil zu dem Zeitpunkt mit 100% läuft
 
-**Actions:** **Change smoothing**
+**Actions:** **Change smoothing** (in the **Loop & insulin** group)
 
 **Optionen:**
 
-* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to
+* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
 * runs only if that smoothing method is not already active — **AAPS** adds this automatically as a "**Preconditions: Smoothing … is not active**" line to the rule. Once the selected smoothing is active, the rule is skipped silently.
-* Example: combined with the **Sensor age** trigger, switch to **Average smoothing** during the first day of a new sensor and back to **No smoothing** afterwards.
+* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
+  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
+  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
 
 **Actions:** **Note** (in the **Alerts** group of the list)
 
@@ -268,7 +270,7 @@ kein(e)
 
 **Optionen:**
 
-* none. When a rule with this action runs, **AAPS** does not check the rules below it in the list during that run. Add it to a rule that must take priority over the rules below it (see [the order of the Automations](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* none. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Add it to a rule that must take priority over the rules below it (see [the order of the Automations](#Automations-the-order-of-the-automations-in-the-list-matters)).
 
 **Actions:** **Run scene**, **Enable scene**, **Disable scene** (in the **Scenes** group)
 

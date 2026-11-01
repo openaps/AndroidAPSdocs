@@ -41,7 +41,7 @@ Wear apk zodpovedá [variantu](#browserbuild-variant), ktorý ste pre zostavenie
 
 Kde nájdete Wear apk:
 
-- **AAPS Builder**: na stránke zostavenia sa posuňte nadol na **Artifacts** a stiahnite `aaps-wear-….apk` vedľa aplikácie pre telefón, ako je ukázané v časti [Krok 6 – Nainštalujte aplikáciu do telefónu](#aaps-builder-step6). Stiahnite ho do telefónu s **AAPS**, ak aplikáciu do hodiniek inštalujete z telefónu (Wear Installer 2 alebo Easy Fire Tools), alebo do počítača, ak používate ADB.
+- **AAPS Builder**: on the build page, scroll down to **Artifacts** and download `aaps-wear-….apk` next to the phone app, as shown in [Step 5 – Install the app on your phone](#aaps-builder-step5). Stiahnite ho do telefónu s **AAPS**, ak aplikáciu do hodiniek inštalujete z telefónu (Wear Installer 2 alebo Easy Fire Tools), alebo do počítača, ak používate ADB.
 
   ![Artifacts s aplikáciou pre telefón a pre hodinky](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 

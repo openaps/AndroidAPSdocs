@@ -222,13 +222,15 @@
 * Το **Προφίλ** πρέπει να είναι μεταξύ 50% και 130%
 * λειτουργεί μόνο αν το προηγούμενο Ποσοστό είναι 100%
 
-**Ενέργειες:** **Αλλαγή εξομάλυνσης**
+**Actions:** **Change smoothing** (in the **Loop & insulin** group)
 
 **Επιλογές:**
 
-* επιλέξτε τη [μέθοδο εξομάλυνσης](../CompatibleCgms/SmoothingBloodGlucoseData.md) στην οποία θα γίνει η αλλαγή
+* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
 * εκτελείται μόνο αν αυτή η μέθοδος εξομάλυνσης δεν είναι ήδη ενεργή — το **AAPS** το προσθέτει αυτόματα στον κανόνα ως γραμμή «**Προϋποθέσεις: Η εξομάλυνση … δεν είναι ενεργή**». Όταν η επιλεγμένη εξομάλυνση είναι ήδη ενεργή, ο κανόνας παραλείπεται χωρίς μήνυμα.
-* Παράδειγμα: σε συνδυασμό με τη συνθήκη **Ηλικία αισθητήρα**, αλλάξτε σε **Μέση εξομάλυνση** την πρώτη ημέρα ενός νέου αισθητήρα και μετά πάλι σε **Χωρίς εξομάλυνση**.
+* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
+  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
+  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
 
 **Ενέργειες:** **Σημείωση** (στην ομάδα **Ειδοποιήσεις** της λίστας)
 
@@ -268,7 +270,7 @@
 
 **Επιλογές:**
 
-* καμία. Όταν εκτελείται ένας κανόνας με αυτή την ενέργεια, το **AAPS** δεν ελέγχει τους κανόνες που βρίσκονται κάτω από αυτόν στη λίστα σε αυτή την εκτέλεση. Προσθέστε την σε έναν κανόνα που πρέπει να έχει προτεραιότητα από τους κανόνες κάτω από αυτόν (δείτε [τη σειρά των Αυτοματισμών](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* καμία. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Προσθέστε την σε έναν κανόνα που πρέπει να έχει προτεραιότητα από τους κανόνες κάτω από αυτόν (δείτε [τη σειρά των Αυτοματισμών](#Automations-the-order-of-the-automations-in-the-list-matters)).
 
 **Ενέργειες:** **Εκτέλεση σεναρίου**, **Ενεργοποίηση σεναρίου**, **Απενεργοποίηση σεναρίου** (στην ομάδα **Σενάρια**)
 

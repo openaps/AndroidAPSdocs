@@ -16,13 +16,13 @@ Dostępnych jest pięć widżetów. Znajdziesz je pod nazwą **AAPS** na liście
 
 ![Widżety AAPS na liście widżetów Androida](../images/widgets/widget_picker_aaps.png)
 
-| Widżet                               | Rozmiar domyślny | Co pokazuje                                                                                                    |
-| ------------------------------------ | ---------------- | -------------------------------------------------------------------------------------------------------------- |
-| **Widżet AAPS**                      | 5 × 2            | Blok stanu z ekranu głównego: BG z trendem i deltą, tryb pętli, profil, cel, wrażliwość, IOB i COB.            |
-| **Koło glikemii AAPS**               | 2 × 2            | Koło BG z ekranu głównego: pierścień w kolorze BG, łuk trendu, delta, wartość BG i czas od ostatniego odczytu. |
-| **Mały widżet AAPS**                 | 2 × 2            | Nazwa profilu, BG ze strzałką trendu, czas od ostatniego odczytu, delta, IOB i COB.                            |
-| **AAPS BG + IOB + COB (kompaktowy)** | 4 × 1            | Jedna linia z BG i strzałką trendu, IOB i COB.                                                                 |
-| **Wykres BG AAPS**                   | 3 × 1            | Wartość BG z małym wykresem ostatnich odczytów.                                                                |
+| Widżet                               | Rozmiar domyślny | Co pokazuje                                                                                                                                                                                                                                                |
+| ------------------------------------ | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Widżet AAPS**                      | 5 × 2            | The status block of the main screen: BG with trend and delta, the loop mode as an icon beside the profile name, target, sensitivity (shown as on the main screen), IOB and COB. The texts shrink to fit the size you give the widget instead of being cut. |
+| **Koło glikemii AAPS**               | 2 × 2            | Koło BG z ekranu głównego: pierścień w kolorze BG, łuk trendu, delta, wartość BG i czas od ostatniego odczytu.                                                                                                                                             |
+| **Mały widżet AAPS**                 | 2 × 2            | Nazwa profilu, BG ze strzałką trendu, czas od ostatniego odczytu, delta, IOB i COB.                                                                                                                                                                        |
+| **AAPS BG + IOB + COB (kompaktowy)** | 4 × 1            | Jedna linia z BG i strzałką trendu, IOB i COB.                                                                                                                                                                                                             |
+| **Wykres BG AAPS**                   | 3 × 1            | Wartość BG z małym wykresem ostatnich odczytów.                                                                                                                                                                                                            |
 
 **Widżet AAPS**, **koło glikemii** i widżet **Mały** na ekranie głównym:
 

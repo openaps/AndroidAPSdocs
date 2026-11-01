@@ -21,7 +21,7 @@ Disse instruksjonene gjelder oppsett av insulinpumpen Equil.
 
 * **AAPS** bygget og installert etter instruksjonene i [Bygge AAPS](../SettingUpAaps/BuildingAaps.md)
 
-## Setup
+## Oppsett
 
 ### Velg Equil-pumpe
 
@@ -82,7 +82,7 @@ Veiviseren har disse stegene. Trykk på **Neste** for å gå videre, eller **Avb
 
    ![Steget Prime / fylling](../images/Equil/prime_fill.png)
 1. **Rotasjon av sted**: vises bare hvis **Administrer pumpe-stedsrotasjon** er slått på i innstillingene for rotasjon av sted. Trykk der du vil feste pumpen, eller trykk på **Hopp over**.
-1. **Koble til pumpen**: fest pumpen på baseplaten.
+1. **Fest pumpen**: fest pumpen på baseplaten.
 
    ![Steget Koble til pumpen](../images/Equil/attach_pump.png)
 1. **Prime kanylen**: når pumpen sitter på baseplaten, trykker du på **Tøm luft** for å fjerne luft fra kanylen. Trykk på **Neste**.

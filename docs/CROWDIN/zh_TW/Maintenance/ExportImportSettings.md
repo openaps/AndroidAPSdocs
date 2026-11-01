@@ -6,6 +6,11 @@
 
 考慮獲得一部備用手機並練習恢復 AAPS，以確保備用手機正常運作。此步驟能讓你更有信心你的緊急應變計畫有效，並且在主要手機無法使用時，仍能繼續使用 AAPS。
 
+```{admonition} Android backups and phone-transfer tools do not carry your AAPS settings
+:class: warning
+Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and they are left out of the Google backup and of the phone-to-phone transfer of a new phone. A settings export, as described on this page, is the only way to carry them over.
+```
+
 為了能夠恢復，準備以下項目是很重要的：
 
 - 你的 **Android Studio 憑證檔案** 和相關的 **密碼**：用於（重新）建立 AAPS .APK 安裝檔。

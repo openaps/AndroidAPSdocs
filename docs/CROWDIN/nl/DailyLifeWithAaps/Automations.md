@@ -222,13 +222,15 @@ geen
 * **Profiel** moet tussen 50% en 130% liggen
 * werkt alleen als het vorige percentage 100% is
 
-**Acties:** **Vloeiend maken wijzigen**
+**Actions:** **Change smoothing** (in the **Loop & insulin** group)
 
 **Opties:**
 
-* kies de [methode voor vloeiend maken](../CompatibleCgms/SmoothingBloodGlucoseData.md) waarnaar je wilt wisselen
+* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
 * werkt alleen als die methode voor vloeiend maken nog niet actief is — **AAPS** voegt dit automatisch als regel "**Voorwaarden: Vloeiend maken … is niet actief**" toe aan de regel. Als de gekozen methode voor vloeiend maken al actief is, wordt de regel zonder melding overgeslagen.
-* Voorbeeld: gebruik dit samen met de trigger **Sensor leeftijd**: wissel op de eerste dag van een nieuwe sensor naar **Gemiddeld vloeiend maken** en daarna terug naar **Niet vloeiend maken**.
+* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
+  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
+  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
 
 **Acties:** **Notitie** (in de groep **Waarschuwingen** van de lijst)
 
@@ -268,7 +270,7 @@ geen
 
 **Opties:**
 
-* geen. Als een regel met deze actie wordt uitgevoerd, controleert **AAPS** tijdens die ronde de regels eronder in de lijst niet. Voeg deze actie toe aan een regel die voorrang moet krijgen op de regels eronder (zie [de volgorde van de automatiseringen](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* geen. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Voeg deze actie toe aan een regel die voorrang moet krijgen op de regels eronder (zie [de volgorde van de automatiseringen](#Automations-the-order-of-the-automations-in-the-list-matters)).
 
 **Acties:** **Scène uitvoeren**, **Scène inschakelen**, **Scène uitschakelen** (in de groep **Scènes**)
 

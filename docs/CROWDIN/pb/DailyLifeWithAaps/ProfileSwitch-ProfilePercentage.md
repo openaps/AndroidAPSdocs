@@ -54,7 +54,9 @@ Você precisa ter pelo menos um **Perfil** salvo. Uma **Porcentagem do perfil** 
 
 No **AAPS** v4, os perfis são gerenciados e ativados na tela **Gerenciar** (navegação inferior) → **Perfil** (*"Gerenciar e ativar perfis"*).
 
-A tela Perfil mostra seus perfis como um **carrossel de cartões** que você desliza. O cartão do perfil em uso está marcado como **ATIVO** e mostra a basal diária total (por exemplo, *∑ 30,15 U*). Abaixo do cartão selecionado, você vê os detalhes desse perfil: **Unidades**, tipo de **Insulina** e os horários de **IC**, **ISF**, **basal** e **alvo**, com gráficos.
+A tela Perfil mostra seus perfis como um **carrossel de cartões** que você desliza. O cartão do perfil em uso está marcado como **ATIVO** e mostra a basal diária total (por exemplo, *∑ 30,15 U*). Below the selected card you see that profile's details — the **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+
+When a temporary switch is running, the **ACTIVE** card shows its percentage and time shift with the time left, for example *110% +2 h · 2 h 40 min*, above a progress bar. Both are refreshed every 30 seconds. The details below then have two columns: the values of the profile in blue, and the values in use with the percentage in red.
 
 ![A tela Perfil: carrossel de perfis, detalhes e barra de ações](../images/v4/Profiles/profile_manage.png)
 

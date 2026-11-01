@@ -99,6 +99,8 @@
 
 ![底部導覽列中的場景面板](../images/v4/Scenes/scenes_sheet.png)
 
+If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+
 套用任何內容之前，系統會先顯示**確認畫面**，清楚列出場景將執行的所有動作，方便您檢查：
 
 ![場景啟動確認畫面，列出包含的動作](../images/v4/Scenes/scene_confirmation.png)

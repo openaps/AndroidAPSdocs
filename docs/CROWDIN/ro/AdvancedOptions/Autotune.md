@@ -2,7 +2,7 @@
 
 Modulul Autotune este o implementare a algoritmului autotune OpenAPS în AAPS. It analyzes your recent AAPS history to suggest adjustments to your basal rates, ISF and carb ratio.
 
-Autotune Plugin is available in AAPS releases since [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) but is hidden by default.
+Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
 
 (autotune-how-autotune-calculates-adjustments)=
 ## How Autotune calculates adjustments

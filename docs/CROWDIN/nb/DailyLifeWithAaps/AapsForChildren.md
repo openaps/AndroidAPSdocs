@@ -2,7 +2,7 @@
 
 **AAPS** kan også brukes med godt resultat for barn med type 1-diabetes. Det er likevel noen ting du bør tenke på.
 
-## Things to consider
+## Ting å tenke på
 
 ### Startprofil
 

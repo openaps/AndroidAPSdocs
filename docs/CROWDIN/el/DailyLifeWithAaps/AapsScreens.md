@@ -247,6 +247,8 @@
 
 Αν ξεπεραστεί το κρίσιμο όριο, οι τιμές εμφανίζονται με κόκκινο χρώμα.
 
+The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
+
 Τα όρια αλλάζουν από το μικρό εικονίδιο **Ρυθμίσεις** που εμφανίζεται όταν η γραμμή κατάστασης είναι **ανοιγμένη** (βέλος δεξιά) — δείτε [Ενδείξεις κατάστασης](#Preferences-status-lights).
 
 Η ανοιγμένη περιοχή κατάστασης έχει επίσης ένα κουμπί στο τέλος ορισμένων γραμμών για να καταγράψετε μια αλλαγή, που μηδενίζει την αντίστοιχη ηλικία: το **Προσθήκη** στη γραμμή **Αισθητήρας** καταγράφει την τοποθέτηση αισθητήρα. Αν η αντλία σας το υποστηρίζει, το **Πλήρωση/Γέμισμα** εμφανίζεται στις γραμμές **Καθετήρας** (ή **Αυτοκόλλητη αντλία**) και **Ινσουλίνη**, και το **Προσθήκη** στη γραμμή **Μπαταρία αντλίας**.
@@ -303,6 +305,14 @@
 Αυτό λειτουργεί με τον ίδιο τρόπο και στα [πρόσθετα γραφήματα](#aaps-screens-additional-graphs) κάτω από το γράφημα BG (IOB, COB...): πατήστε παρατεταμένα οποιοδήποτε από αυτά.
 
 ![Παρατεταμένο πάτημα στο γράφημα BG: το αναδυόμενο παράθυρο δείχνει ώρα, BG, IOB και βασικό ρυθμό](../images/main/graph_press_and_hold.png)
+
+(aaps-screens-graph-clock-change)=
+
+#### Clock changes
+
+When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
+
+![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
@@ -459,6 +469,8 @@
 
 Αυτά τα δεδομένα μπορεί να είναι διαθέσιμα όταν χρησιμοποιείτε ένα [έξυπνο ρολόι Wear OS](../WearOS/WearOsSmartwatch.md). Ενεργοποιήστε τα στην εφαρμογή Wear του **AAPS** και δώστε άδεια για τα δεδομένα υγείας.
 
+Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
+
 #### Αποκλίσεις (DEV)
 
 * Οι **γκρι** μπάρες δείχνουν απόκλιση λόγω υδατανθράκων.
@@ -607,11 +619,15 @@
 
 ![Ορισμός ειδοποίησης για μελλοντικούς υδατάνθρακες](../images/Home2021_BolusWizard_EatingReminder.png)
 
-Η υπενθύμιση χτυπά ως συναγερμός του **AAPS**. Δεν δημιουργεί χρονόμετρο στην εφαρμογή ρολογιού του τηλεφώνου σας, και λειτουργεί επίσης όταν το bolus καταχωρήθηκε από το **AAPSClient** ενώ το **AAPS** έτρεχε στο παρασκήνιο.
+The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
 
-Το πεδίο **BG** είναι συνήθως ήδη συμπληρωμένο με την τελευταία μέτρηση από το CGM σας. Εάν δεν έχετε λειτουργικό CGM τότε θα είναι κενό. Όταν η μέτρηση είναι πρόσφατη, η γραμμή **BG** μένει κλειστή.
+![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
 
-Το κουμπί αποτελέσματος στο κάτω μέρος δείχνει το προτεινόμενο bolus· όταν το πατήσετε, ζητά επιβεβαίωση πριν χορηγηθεί οποιαδήποτε ινσουλίνη.
+![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
+
+Το πεδίο **BG** είναι συνήθως ήδη συμπληρωμένο με την τελευταία μέτρηση από το CGM σας. Εάν δεν έχετε λειτουργικό CGM τότε θα είναι κενό. Όταν η μέτρηση είναι πρόσφατη, η γραμμή **BG** μένει κλειστή. The field follows new readings while the wizard is open, until you change it yourself.
+
+Το κουμπί αποτελέσματος στο κάτω μέρος δείχνει το προτεινόμενο bolus· όταν το πατήσετε, ζητά επιβεβαίωση πριν χορηγηθεί οποιαδήποτε ινσουλίνη. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
 
 Καλό είναι να ξέρετε:
 

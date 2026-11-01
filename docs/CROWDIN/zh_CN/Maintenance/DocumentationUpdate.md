@@ -34,7 +34,7 @@
 
 ## 2025年1月
 
-- [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
+- [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
 - CGM list update. Dexcom G5, Tomato, Glimp removed.
 - [Site rotation UI](#Aapsscreens-site-rotation)
 - [Running mode](#AapsScreens-running-mode)
@@ -148,7 +148,7 @@ AAPS 3.1版文档[在此处](https://androidaps.readthedocs.io/en/3.1/index.html
 - Dexcom G6与[自建Dexcom应用](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
 - Libre智能阅读器的[电池电量](#screens-sensor-level-battery)
 - [目标](#objectives-objective3) - 新增问题
-- Other [new AAPS 2.8.0 functions](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.0)
+- Other [new AAPS 2.8.0 functions](#Releasenotes-version-2-8-0)
 
 ## 2020年12月
 
@@ -167,7 +167,7 @@ AAPS 3.1版文档[在此处](https://androidaps.readthedocs.io/en/3.1/index.html
 ## 2020年9月
 
 - AAPS新版本2.7的重大更新
-- For details see the [release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.7.0)
+- For details see the [release notes](#Releasenotes-version-2-7-0)
 
 ## 2020年6月
 
@@ -202,7 +202,7 @@ AAPS 3.1版文档[在此处](https://androidaps.readthedocs.io/en/3.1/index.html
 - [扩展大剂量](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)功能 - 闭环将被禁用
 - 新的[本地配置文件插件](../SettingUpAaps/ConfigBuilder.md)
 - 示例设置 - 更新Dexcom G6
-- [Version 2.6.0](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-260) - major new features
+- [Version 2.6.0](#Releasenotes-version-2-6-0) - major new features
 - [穿戴设备的小部件](../WearOS/WearOsSmartwatch.md)
 
 ## 2020年1月
@@ -237,7 +237,7 @@ AAPS 3.1版文档[在此处](https://androidaps.readthedocs.io/en/3.1/index.html
 
 ## 2019年10月
 
-- [AAPS version 2.5](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-250) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
+- [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
 - [AccuChek Insight - 日志选项](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [COB计算单独页面](../DailyLifeWithAaps/CobCalculation.md)
 - [COB - 错误COB值检测](#CobCalculation-detection-of-wrong-cob-values)

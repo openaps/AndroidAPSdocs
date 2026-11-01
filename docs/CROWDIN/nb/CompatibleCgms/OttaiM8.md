@@ -1,11 +1,11 @@
 # Ottai M8
 
 
-## Using M8 with Ottai app
+## Bruke M8 med Ottai-appen
 
 -   Last ned og installer apk-filen fra <https://play.google.com/store/apps/details?id=com.ottai.seas>. For den kinesiske versjonen av Ottai bruker du <https://ottai.com.cn/70ICjxAI4i>
 
--   Start sensor
+-   Start sensoren
 
 - Velg **Syai/Ottai** i [Konfigurasjon, BS-kilde](#Config-Builder-bg-source).
 

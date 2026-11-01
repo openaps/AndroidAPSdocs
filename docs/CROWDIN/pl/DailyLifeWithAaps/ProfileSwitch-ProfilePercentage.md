@@ -54,7 +54,9 @@ Potrzebujesz co najmniej jednego zapisanego **profilu**. **Procent profilu** zaw
 
 W **AAPS** v4 profilami zarządzasz i aktywujesz je z ekranu **Zarządzaj** (dolny pasek nawigacji) → **Profil** (*„Zarządzaj i aktywuj profile”*).
 
-Ekran Profil pokazuje Twoje profile jako **karuzelę kart, które przesuwasz palcem**. Karta działającego profilu ma oznaczenie **AKTYWNY** i pokazuje jego dzienną sumę dawki bazowej (np. *∑ 30,15 U*). Pod wybraną kartą widzisz szczegóły profilu — **Jednostki**, typ **Insuliny** oraz harmonogramy **IC**, **ISF**, **bazy** i **celu** z wykresami.
+Ekran Profil pokazuje Twoje profile jako **karuzelę kart, które przesuwasz palcem**. Karta działającego profilu ma oznaczenie **AKTYWNY** i pokazuje jego dzienną sumę dawki bazowej (np. *∑ 30,15 U*). Below the selected card you see that profile's details — the **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+
+When a temporary switch is running, the **ACTIVE** card shows its percentage and time shift with the time left, for example *110% +2 h · 2 h 40 min*, above a progress bar. Both are refreshed every 30 seconds. The details below then have two columns: the values of the profile in blue, and the values in use with the percentage in red.
 
 ![Ekran Profil — karuzela profili, szczegóły i pasek akcji](../images/v4/Profiles/profile_manage.png)
 

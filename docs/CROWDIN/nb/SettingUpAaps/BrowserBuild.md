@@ -6,11 +6,11 @@ Bygge AAPS med GitHub Actions.
 
 **Laveste AAPS-versjon som støttes, er 3.3.2.1.**
 
-## Build yourself instead of download
+## Bygg selv i stedet for å laste ned
 
-**AAPS-appen (en apk-fil) er ikke tilgjengelig for nedlasting, på grunn av regelverket for medisinsk utstyr. It is legal to build the app for your own use, but you must not give a copy to others!**
+**AAPS-appen (en apk-fil) er ikke tilgjengelig for nedlasting, på grunn av regelverket for medisinsk utstyr. Det er lovlig å bygge appen til eget bruk, men du må ikke gi en kopi til andre!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Se [FAQ-siden](../UsefulLinks/FAQ.md) for detaljer.
 
 (Building-APK-without-a-computer)=
 

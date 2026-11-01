@@ -247,6 +247,8 @@ Po przekroczeniu progu ostrzeżenia wartości są pokazane na żółto.
 
 Po przekroczeniu progu krytycznego wartości są pokazane na czerwono.
 
+The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
+
 Progi możesz zmienić małą ikoną **Ustawienia**, widoczną, gdy wiersz stanu jest **rozwinięty** (strzałka po prawej) – zobacz [Wskaźniki stanu](#Preferences-status-lights).
 
 Rozwinięty panel stanu ma też na końcu niektórych wierszy przycisk do zapisania zmiany, który zeruje odpowiedni wiek: **Dodaj** w wierszu **Sensor** zapisuje założenie sensora. Jeśli Twoja pompa to obsługuje, **Napełnij/Wypełnij** pojawia się w wierszach **Kaniula** (lub **Pompa bezdrenowa**) i **Insulina**, a **Dodaj** w wierszu **Bateria pompy**.
@@ -303,6 +305,14 @@ Trzymaj palec na ekranie i przesuwaj go w lewo lub w prawo, aby przechodzić od 
 Tak samo działa to na [dodatkowych wykresach](#aaps-screens-additional-graphs) pod wykresem BG (IOB, COB...): przytrzymaj dowolny z nich.
 
 ![Przytrzymanie wykresu BG: okienko pokazuje czas, BG, IOB i bazę](../images/main/graph_press_and_hold.png)
+
+(aaps-screens-graph-clock-change)=
+
+#### Clock changes
+
+When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
+
+![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
@@ -459,6 +469,8 @@ Pokazuje wrażliwość obliczoną przez [DynamicISF](../DailyLifeWithAaps/Dynami
 
 Te dane mogą być dostępne, gdy używasz [smartwatcha z Wear OS](../WearOS/WearOsSmartwatch.md). Włącz je w aplikacji **AAPS** Wear i daj zgodę na dostęp do danych o zdrowiu.
 
+Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
+
 #### Odchylenia (DEV)
 
 * **Szare** słupki pokazują odchylenie z powodu węglowodanów.
@@ -607,11 +619,15 @@ Pole **Czas węglowodanów** służy do bolusa z wyprzedzeniem: możesz powiedzi
 
 ![Ustaw alarm dla przyszłych węglowodanów](../images/Home2021_BolusWizard_EatingReminder.png)
 
-Przypomnienie dzwoni jako alarm **AAPS**. Nie tworzy minutnika w aplikacji zegara w telefonie i działa też wtedy, gdy bolus został wpisany z **AAPSClient**, a **AAPS** działał w tle.
+The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
 
-Pole **BG** jest zwykle już wypełnione ostatnim odczytem z CGM. Jeśli nie masz działającego CGM, to pole będzie puste. Gdy odczyt jest świeży, wiersz **BG** pozostaje zwinięty.
+![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
 
-Przycisk wyniku na dole pokazuje proponowany bolus; po jego naciśnięciu musisz potwierdzić, zanim zostanie podana jakakolwiek insulina.
+![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
+
+Pole **BG** jest zwykle już wypełnione ostatnim odczytem z CGM. Jeśli nie masz działającego CGM, to pole będzie puste. Gdy odczyt jest świeży, wiersz **BG** pozostaje zwinięty. The field follows new readings while the wizard is open, until you change it yourself.
+
+Przycisk wyniku na dole pokazuje proponowany bolus; po jego naciśnięciu musisz potwierdzić, zanim zostanie podana jakakolwiek insulina. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
 
 Warto wiedzieć:
 

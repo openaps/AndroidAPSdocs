@@ -34,7 +34,7 @@
 
 ## Януари 2025 г.
 
-- [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
+- [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
 - Актуализация на списъка с CGM. Премахнати са Dexcom G5, Tomato и Glimp.
 - [Интерфейс за смяна на мястото](#Aapsscreens-site-rotation)
 - [Текущ режим](#AapsScreens-running-mode)
@@ -148,7 +148,7 @@
 - Dexcom G6 с [Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
 - [Ниво на батерията](#screens-sensor-level-battery) на Libre smart reader
 - [Цели](#objectives-objective3) – нови въпроси
-- Other [new AAPS 2.8.0 functions](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.0)
+- Other [new AAPS 2.8.0 functions](#Releasenotes-version-2-8-0)
 
 ## Декември 2020 г.
 
@@ -167,7 +167,7 @@
 ## Септември 2020 г.
 
 - Голяма актуализация за новата версия 2.7 на AAPS
-- For details see the [release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.7.0)
+- For details see the [release notes](#Releasenotes-version-2-7-0)
 
 ## Юни 2020 г.
 
@@ -202,7 +202,7 @@
 - Функцията [Удължен болус](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) – затвореният кръг ще бъде изключен
 - Нов [плъгин Local Profile](../SettingUpAaps/ConfigBuilder.md)
 - Примерна конфигурация – актуализация за Dexcom G6
-- [Version 2.6.0](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-260) - major new features
+- [Version 2.6.0](#Releasenotes-version-2-6-0) - major new features
 - [Усложнения (complications) за часовник](../WearOS/WearOsSmartwatch.md)
 
 ## Януари 2020 г.
@@ -237,7 +237,7 @@
 
 ## Октомври 2019 г.
 
-- [AAPS version 2.5](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-250) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
+- [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
 - [AccuChek Insight – опции за лог файловете](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [Изчисляването на COB е на отделна страница](../DailyLifeWithAaps/CobCalculation.md)
 - [COB – откриване на грешна стойност на COB](#CobCalculation-detection-of-wrong-cob-values)

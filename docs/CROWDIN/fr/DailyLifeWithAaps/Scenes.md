@@ -99,6 +99,8 @@ Activez un scénario depuis la liste **Scénarii** (le bouton **▶**) ou depuis
 
 ![Le panneau Scénarii de la barre de navigation en bas](../images/v4/Scenes/scenes_sheet.png)
 
+If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+
 Avant que quoi que ce soit soit appliqué, vous recevez une **confirmation** qui liste exactement ce que le scénario va faire. Vous pouvez ainsi la vérifier :
 
 ![Confirmation d'activation du scénario, avec la liste des actions regroupées](../images/v4/Scenes/scene_confirmation.png)

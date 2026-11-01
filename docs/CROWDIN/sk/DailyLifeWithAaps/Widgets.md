@@ -16,13 +16,13 @@ K dispozícii je päť widgetov. Nájdete ich pod položkou **AAPS** v ponuke wi
 
 ![Widgety AAPS v ponuke widgetov systému Android](../images/widgets/widget_picker_aaps.png)
 
-| Widget                               | Predvolená veľkosť | Čo zobrazuje                                                                                                                                |
-| ------------------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| **AAPS widget**                      | 5 × 2              | Stavový blok hlavnej obrazovky: glykémia s trendom a rozdielom (delta), režim okruhu, profil, cieľ, citlivosť, IOB a COB.                   |
-| **Kruhové zobrazenie glykémie AAPS** | 2 × 2              | Kruh glykémie z hlavnej obrazovky: prstenec vo farbe glykémie, oblúk trendu, rozdiel (delta), hodnota glykémie a čas od posledného merania. |
-| **AAPS Malé**                        | 2 × 2              | Názov profilu, glykémia so šípkou trendu, čas od posledného merania, rozdiel (delta), IOB a COB.                                            |
-| **AAPS GLY + IOB + COB (kompaktné)** | 4 × 1              | Jeden riadok s glykémiou a šípkou trendu, IOB a COB.                                                                                        |
-| **Graf glykémie AAPS**               | 3 × 1              | Hodnota glykémie s malým grafom posledných meraní.                                                                                          |
+| Widget                               | Predvolená veľkosť | Čo zobrazuje                                                                                                                                                                                                                                               |
+| ------------------------------------ | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AAPS widget**                      | 5 × 2              | The status block of the main screen: BG with trend and delta, the loop mode as an icon beside the profile name, target, sensitivity (shown as on the main screen), IOB and COB. The texts shrink to fit the size you give the widget instead of being cut. |
+| **Kruhové zobrazenie glykémie AAPS** | 2 × 2              | Kruh glykémie z hlavnej obrazovky: prstenec vo farbe glykémie, oblúk trendu, rozdiel (delta), hodnota glykémie a čas od posledného merania.                                                                                                                |
+| **AAPS Malé**                        | 2 × 2              | Názov profilu, glykémia so šípkou trendu, čas od posledného merania, rozdiel (delta), IOB a COB.                                                                                                                                                           |
+| **AAPS GLY + IOB + COB (kompaktné)** | 4 × 1              | Jeden riadok s glykémiou a šípkou trendu, IOB a COB.                                                                                                                                                                                                       |
+| **Graf glykémie AAPS**               | 3 × 1              | Hodnota glykémie s malým grafom posledných meraní.                                                                                                                                                                                                         |
 
 Widget **AAPS widget**, **Kruhové zobrazenie glykémie** a widget **Malé** na domovskej obrazovke:
 

@@ -107,7 +107,7 @@ Kdokoli, kdo QR kód uvidí, může číst váš Nightscout, a kód, který pár
 
 #### S PINem
 
-Klepněte na **OK**: hlavní zařízení zobrazí 8místný **PIN pro párování**, rozdělený do dvou skupin po čtyřech číslicích (například `1234 5678`). Tento PIN je **jednorázový** a **vyprší asi za dvě minuty**.
+Klepněte na **OK**: hlavní zařízení zobrazí 8místný **PIN pro párování**, rozdělený do dvou skupin po čtyřech číslicích (například `1234 5678`). Tento PIN je **jednorázový** a **vyprší asi za dvě minuty**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
 
 ![Obrazovka párování na hlavním zařízení s jednorázovým PINem (zde zobrazený PIN už vypršel)](../images/v4/ClientMaster/pairing_pin_master.png)
 

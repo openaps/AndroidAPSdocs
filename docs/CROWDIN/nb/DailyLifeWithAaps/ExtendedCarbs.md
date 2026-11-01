@@ -28,7 +28,7 @@ I [Boluskalkulatoren](#aaps-screens-bolus-wizard) lar tre knapper under **Karbo*
 
 | Type                | Typiske matvarer (slik de står i appen)                                                                                                   | Karbohydrater nå, brukt til bolusen | eKarbo som legges til                                  |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | ------------------------------------------------------ |
-| **Brød** (standard) | Brød, bakverk, yoghurt, frukt, poteter, ris, havregryn, grønnsaker                                                                        | 100 %                               | None                                                   |
+| **Brød** (standard) | Brød, bakverk, yoghurt, frukt, poteter, ris, havregryn, grønnsaker                                                                        | 100 %                               | Ingen                                                  |
 | **Kake**            | Dumplings, pasta, asiatisk mat med høyt innhold av karbohydrater og fett, søte bakverk og gjærbakst, frokostblandinger, honning, syltetøy | 90 %                                | 20 %, starter 60 minutter senere, fordelt over 2 timer |
 | **Pizza**           | Lasagne, pizza, hamburgere, pommes frites, bakte poteter, chips                                                                           | 80 %                                | 35 %, starter 60 minutter senere, fordelt over 3 timer |
 

@@ -1,6 +1,6 @@
 # Bygge AAPS Wear-appen
 
-**AAPS**-appen for en Wear OS-smartklokke (**Wear-apk-en**, `aaps-wear-….apk`) er en egen installasjonsfil, adskilt fra **AAPS**-telefonappen. Du trenger begge: telefonappen kjører loopen, klokkeappen viser dataene fra den og kan sende kommandoer til den. Klokkeappen installeres fra telefonen, se [Sett opp AAPS på Wear OS-klokken din](WearOsSmartwatch.md).
+**AAPS**-appen for en Wear OS-smartklokke (**Wear-apk-en**, `aaps-wear-….apk`) er en egen installasjonsfil, adskilt fra **AAPS**-telefonappen. Du trenger begge: telefonappen kjører loopen, klokkeappen viser dataene fra den og kan sende kommandoer til den. Klokkeappen installeres fra telefonen, se [Wear OS-smartklokke](WearOsSmartwatch.md).
 
 De to appene virker bare sammen når de passer til hverandre:
 
@@ -41,17 +41,17 @@ Wear-apk-en følger [varianten](#browserbuild-variant) du valgte for bygget: `fu
 
 Her finner du Wear-apk-en:
 
-- **AAPS Builder**: på byggesiden, bla ned til **Artifacts** og last ned `aaps-wear-….apk` ved siden av telefonappen, som vist i [Steg 6 – Installer appen på telefonen din](#aaps-builder-step6). Last den ned på telefonen som kjører **AAPS** hvis du installerer klokkeappen fra telefonen (Wear Installer 2 eller Easy Fire Tools), eller på datamaskinen din hvis du bruker ADB.
+- **AAPS Builder**: på byggesiden blar du ned til **Artifacts** og laster ned `aaps-wear-….apk` ved siden av telefonappen, som vist i [Steg 5 – Installer appen på telefonen](#aaps-builder-step5). Last den ned på telefonen som kjører **AAPS** hvis du installerer klokkeappen fra telefonen (Wear Installer 2 eller Easy Fire Tools), eller på datamaskinen din hvis du bruker ADB.
 
   ![Artifacts med telefon- og klokkeappene](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 
 - **Fork med Google Drive**: åpne Google Drive, mappen `AAPS`, og så mappen for versjonen du bygget. Den inneholder telefon-apk-en og Wear-apk-en, se [Steg 4 – Bygg APK-filen](#github-build-apk).
 
-  ![Google Drive Location](../images/update/CI/GitHubActions5.png)
+  ![Plassering i Google Drive](../images/update/CI/GitHubActions5.png)
 
 Ta vare på Wear-apk-en sammen med telefon-apk-en i sikkerhetskopiene dine. Med **AAPS Builder** ligger filene på byggesiden i bare 14 dager.
 
-Neste: installer Wear-apk-en på klokken, se [Sett opp AAPS på Wear OS-klokken din](WearOsSmartwatch.md).
+Neste: installer Wear-apk-en på klokken, se [Wear OS-smartklokke](WearOsSmartwatch.md).
 
 (building-aaps-wear-os-android-studio)=
 
@@ -70,7 +70,7 @@ Velg «**fullRelease**» for å lage **AAPS** Wear-apk-filen.
 
 Hvis du vil, kan du i stedet bygge **«pumpcontrolRelease»** fra nedtrekksmenyen. Da kan du bare fjernstyre pumpen, uten looping.
 
-Neste: installer Wear-apk-en på klokken, se [Sett opp AAPS på Wear OS-klokken din](WearOsSmartwatch.md).
+Neste: installer Wear-apk-en på klokken, se [Wear OS-smartklokke](WearOsSmartwatch.md).
 
 (building-aaps-wear-os-troubleshooting)=
 
@@ -92,4 +92,4 @@ Følg [Byggeinstruksjoner for kommandolinjen](../SettingUpAaps/CLIBuild.md) og g
 ./gradlew :wear:assembleFullRelease
 ```
 
-Den usignerte Wear-apk-en skrives til `wear/build/outputs/apk/full/release/`. Signer den med `apksigner` akkurat som telefon-apk-en, og installer den så på klokken, se [Sett opp AAPS på Wear OS-klokken din](WearOsSmartwatch.md).
+Den usignerte Wear-apk-en skrives til `wear/build/outputs/apk/full/release/`. Signer den med `apksigner` akkurat som telefon-apk-en, og installer den så på klokken, se [Wear OS-smartklokke](WearOsSmartwatch.md).

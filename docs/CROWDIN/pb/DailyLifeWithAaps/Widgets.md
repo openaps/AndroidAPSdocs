@@ -16,13 +16,13 @@ Há cinco widgets disponíveis. Eles aparecem em **AAPS** no seletor de widgets 
 
 ![Widgets do AAPS no seletor de widgets do Android](../images/widgets/widget_picker_aaps.png)
 
-| Widget                                   | Tamanho padrão | O que mostra                                                                                                                                          |
-| ---------------------------------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Widget do AAPS**                       | 5 × 2          | O bloco de status da tela principal: glicose com tendência e delta, modo do loop, perfil, alvo, sensibilidade, IOB e COB.                             |
-| **Círculo de glicose do AAPS**           | 2 × 2          | O círculo de glicose da tela principal: um anel na cor da glicose, o arco de tendência, o delta, o valor de glicose e o tempo desde a última leitura. |
-| **AAPS Pequeno**                         | 2 × 2          | Nome do perfil, glicose com seta de tendência, tempo desde a última leitura, delta, IOB e COB.                                                        |
-| **AAPS glicemia + IOB + COB (compacto)** | 4 × 1          | Uma linha com a glicose e a seta de tendência, IOB e COB.                                                                                             |
-| **Gráfico de glicemia do AAPS**          | 3 × 1          | O valor de glicose com um pequeno gráfico das leituras recentes.                                                                                      |
+| Widget                                   | Tamanho padrão | O que mostra                                                                                                                                                                                                                                               |
+| ---------------------------------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Widget do AAPS**                       | 5 × 2          | The status block of the main screen: BG with trend and delta, the loop mode as an icon beside the profile name, target, sensitivity (shown as on the main screen), IOB and COB. The texts shrink to fit the size you give the widget instead of being cut. |
+| **Círculo de glicose do AAPS**           | 2 × 2          | O círculo de glicose da tela principal: um anel na cor da glicose, o arco de tendência, o delta, o valor de glicose e o tempo desde a última leitura.                                                                                                      |
+| **AAPS Pequeno**                         | 2 × 2          | Nome do perfil, glicose com seta de tendência, tempo desde a última leitura, delta, IOB e COB.                                                                                                                                                             |
+| **AAPS glicemia + IOB + COB (compacto)** | 4 × 1          | Uma linha com a glicose e a seta de tendência, IOB e COB.                                                                                                                                                                                                  |
+| **Gráfico de glicemia do AAPS**          | 3 × 1          | O valor de glicose com um pequeno gráfico das leituras recentes.                                                                                                                                                                                           |
 
 O **Widget do AAPS**, o **círculo de glicose** e o widget **Pequeno** em uma tela inicial:
 

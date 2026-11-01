@@ -6,6 +6,11 @@
 
 Σκεφτείτε να αποκτήσετε ένα δεύτερο εφεδρικό τηλέφωνο και να κάνετε δοκιμαστική επαναφορά του AAPS, ώστε να βεβαιωθείτε ότι το εφεδρικό τηλέφωνο λειτουργεί όπως περιμένετε. Αυτό το βήμα θα σας δώσει σιγουριά ότι το σχέδιο έκτακτης ανάγκης σας λειτουργεί και ότι μπορείτε να συνεχίσετε χωρίς διακοπή να χρησιμοποιείτε το AAPS, αν το κύριο τηλέφωνό σας δεν είναι διαθέσιμο.
 
+```{admonition} Android backups and phone-transfer tools do not carry your AAPS settings
+:class: warning
+Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and they are left out of the Google backup and of the phone-to-phone transfer of a new phone. A settings export, as described on this page, is the only way to carry them over.
+```
+
 Για να μπορείτε να κάνετε επαναφορά, είναι σημαντικό να έχετε διαθέσιμα τα παρακάτω:
 
 - Το **αρχείο keystore του Android Studio** και τον σχετικό **κωδικό**: Χρειάζονται για να κάνετε (ξανά) build το αρχείο εγκατάστασης .APK του AAPS.

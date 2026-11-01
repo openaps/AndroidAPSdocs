@@ -222,13 +222,15 @@ nenhuma
 * O **Perfil** tem de estar entre 50 % e 130 %
 * só funciona se a percentagem anterior for 100 %
 
-**Ações:** **Alterar suavização**
+**Actions:** **Change smoothing** (in the **Loop & insulin** group)
 
 **Opções:**
 
-* selecione o [método de suavização](../CompatibleCgms/SmoothingBloodGlucoseData.md) que quer usar
+* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
 * só é executada se esse método de suavização ainda não estiver ativo — o **AAPS** adiciona isto automaticamente à regra como uma linha «**Precondições: Suavização … não está ativa**». Quando a suavização selecionada já está ativa, a regra é ignorada sem aviso.
-* Exemplo: em conjunto com a condição **Idade do sensor**, mudar para **Suavização por média** durante o primeiro dia de um sensor novo e voltar depois a **Sem suavização**.
+* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
+  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
+  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
 
 **Ações:** **Nota** (no grupo **Alertas** da lista)
 
@@ -268,7 +270,7 @@ nenhuma
 
 **Opções:**
 
-* nenhuma. Quando uma regra com esta ação é executada, o **AAPS** não verifica as regras que estão abaixo dela na lista durante essa execução. Adicione-a a uma regra que deve ter prioridade sobre as regras abaixo dela (veja [a ordem das Automatizações](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* nenhuma. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Adicione-a a uma regra que deve ter prioridade sobre as regras abaixo dela (veja [a ordem das Automatizações](#Automations-the-order-of-the-automations-in-the-list-matters)).
 
 **Ações:** **Executar cena**, **Ativar cena**, **Desativar cena** (no grupo **Cenas**)
 

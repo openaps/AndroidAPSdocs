@@ -21,7 +21,7 @@
 
 此外，建議允許使用 [第二個手機號碼](#SMSCommands-authorized-phone-numbers) 來發送 SMS 指令。這樣，你可以使用第二個號碼來 [停用](#SMSCommands-other) SMS 通訊功能，以防主要遠端手機遭到入侵。
 
-預設的兩次注射指令之間的最短延遲時間為 15 分鐘。為了安全起見，你必須添加至少兩個授權電話號碼才能將此延遲時間縮短。如果你嘗試在前一次注射後 15 分鐘內再次遠端注射，你將收到「無法遠端注射。請稍後再試」的回覆。嘗試稍後再試
+The default minimum time delay between bolus commands is 15 minutes, counted from the moment the pump accepts a bolus. 為了安全起見，你必須添加至少兩個授權電話號碼才能將此延遲時間縮短。如果你嘗試在前一次注射後 15 分鐘內再次遠端注射，你將收到「無法遠端注射。請稍後再試」的回覆。嘗試稍後再試
 
 如果你傳送的遠端指令（如注射或更改設定檔）已執行，AAPS 也會透過簡訊通知你。建議將其設置為至少傳送到兩個不同的手機號碼，以防其中一部接收手機被盜。
 

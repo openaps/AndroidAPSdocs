@@ -12,7 +12,7 @@ Mange erfaringsbaserte detaljer i **AAPS**-dokumentasjonen gir mer mening når d
 
 (preparing-safety-first)=
 
-## Safety First
+## Sikkerhet først
 «Med stor makt følger stort ansvar …»
 
 ### Teknisk sikkerhet
@@ -190,7 +190,7 @@ Her er en omtrentlig tidsramme:
 
 Når du er helt i gang med **AAPS**, må du fortsatt finjustere innstillingene dine jevnlig for å forbedre diabetesbehandlingen din som helhet.
 
-## Requirements
+## Krav
 
 ### Medisinske hensyn
 

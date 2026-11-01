@@ -6,6 +6,11 @@ Abyste mohli obnovit své nastavení AAPS na stávajícím nebo novém telefonu,
 
 Zvažte pořízení druhého, záložního telefonu a vyzkoušejte si na něm obnovu AAPS, abyste si ověřili, že záložní telefon funguje podle očekávání. Díky tomuto kroku budete mít jistotu, že váš nouzový plán funguje a že můžete plynule pokračovat v používání AAPS, i když hlavní telefon nebude k dispozici.
 
+```{admonition} Android backups and phone-transfer tools do not carry your AAPS settings
+:class: warning
+Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and they are left out of the Google backup and of the phone-to-phone transfer of a new phone. A settings export, as described on this page, is the only way to carry them over.
+```
+
 Pro obnovu je důležité mít po ruce tyto položky:
 
 - Váš **soubor úložiště klíčů z Android Studia** a příslušné **heslo**: Jsou potřeba pro (opětovné) sestavení instalačního souboru AAPS .APK.

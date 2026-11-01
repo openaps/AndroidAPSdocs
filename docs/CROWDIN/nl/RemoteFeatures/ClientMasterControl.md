@@ -107,7 +107,7 @@ Iedereen die de QR-code ziet, kan je Nightscout lezen, en een code die koppelt b
 
 #### Met een PIN
 
-Tik op **OK**: de master toont een **koppel-PIN** van 8 cijfers, in twee groepen van vier (bijvoorbeeld `1234 5678`). Deze PIN is **eenmalig** en **verloopt na ongeveer twee minuten**.
+Tik op **OK**: de master toont een **koppel-PIN** van 8 cijfers, in twee groepen van vier (bijvoorbeeld `1234 5678`). Deze PIN is **eenmalig** en **verloopt na ongeveer twee minuten**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
 
 ![Koppelscherm op de master met de eenmalige PIN (de PIN op deze afbeelding is verlopen)](../images/v4/ClientMaster/pairing_pin_master.png)
 

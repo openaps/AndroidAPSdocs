@@ -2,7 +2,7 @@
 
 Le plugin Autotune est une implémentation de l'algorithme autotune OpenAPS dans AAPS. Il analyse votre historique AAPS récent pour proposer des ajustements de vos débits de basal, de votre SI et de votre G/I.
 
-Autotune Plugin is available in AAPS releases since [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) but is hidden by default.
+Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
 
 (autotune-how-autotune-calculates-adjustments)=
 ## Comment Autotune calcule les ajustements

@@ -1,17 +1,17 @@
 (aapsclient-app)=
-# The AAPSClient app
+# AAPSClient-appen
 
-**AAPSClient** is the accessory app of **AAPS**: a companion app for a second phone — typically a caregiver's — that **follows** the person using **AAPS**. From **AAPS** version 4, the caregiver can also **control** the loop remotely through signed commands. Both phones communicate through your **Nightscout** site; no direct connection between the phones is needed.
+**AAPSClient** er tilleggsappen til **AAPS**: en hjelpeapp for en annen telefon — vanligvis en omsorgspersons — som **følger** personen som bruker **AAPS**. Fra **AAPS** versjon 4 kan omsorgspersonen også **styre** loopen på avstand gjennom signerte kommandoer. Begge telefonene kommuniserer gjennom **Nightscout**-siden din; det trengs ingen direkte forbindelse mellom telefonene.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Client** = a phone running **AAPSClient**.
-- **Master** = the main **AAPS** phone that owns the pump and runs the loop.
+- **Klient** = en telefon som kjører **AAPSClient**.
+- **Hovedenhet** = den vanlige **AAPS**-telefonen som eier pumpen og kjører loopen.
 ```
 
 ```{admonition} iPhone version in development
 :class: note
-**AAPSClient** currently runs on Android phones. An iPhone version of **AAPSClient** is being developed and is in early testing. It is not released yet: there is no App Store listing and nothing to download. This page will be updated when it becomes available.
+**AAPSClient** kjører i dag på Android-telefoner. En iPhone-versjon av **AAPSClient** er under utvikling og er i tidlig testing. Den er ikke gitt ut ennå: det finnes ingen oppføring i App Store og ingenting å laste ned. Denne siden blir oppdatert når den blir tilgjengelig.
 ```
 
 ```{contents} Table of contents
@@ -19,100 +19,100 @@
 :local: true
 ```
 
-## What AAPSClient is (and is not)
+## Hva AAPSClient er (og ikke er)
 
-**AAPSClient** looks and feels like **AAPS**, but it has **no loop of its own**:
+**AAPSClient** ser ut og oppfører seg som **AAPS**, men den har **ingen egen loop**:
 
-- It contains **no APS algorithm**, no **Objectives**, and **no pump drivers** — it never doses on its own.
-- The plugins used only by the main app (**SMS Communicator**, **Tidepool**, **Open Humans**) are not included either.
-- What it *does* contain: **NSClientV3** synchronization, the BG-source plugins, **xDrip+** broadcasting, and the **Wear OS** / **Garmin** connectors — everything needed to follow and to relay commands. A **Garmin** watch connected to a client can show the data, but carbs it sends are not entered and it cannot connect or disconnect the pump: the client shows a message, and you enter them in **AAPS** instead.
+- Den inneholder **ingen APS-algoritme**, ingen **Opplæringsmål** og **ingen pumpedrivere** — den doserer aldri på egen hånd.
+- Pluginene som bare hovedappen bruker (**SMS-kommunikasjon**, **Tidepool**, **Open Humans**), er heller ikke med.
+- Det den *har*: **NSClientV3**-synkronisering, BS-kilde-pluginene, **xDrip+**-kringkasting og **Wear OS**- / **Garmin**-koblingene — alt som trengs for å følge og for å videresende kommandoer. En **Garmin**-klokke som er koblet til en klient, kan vise dataene, men karbohydrater den sender, blir ikke registrert, og den kan ikke koble pumpen til eller fra: klienten viser en melding, og du registrerer dem i **AAPS** i stedet.
 
-Everything you trigger from **AAPSClient** is checked, capped, confirmed and **executed by the master** (the phone with the pump). The dedicated [Master ↔ Client control](ClientMasterControl.md) page explains how this works: how to pair the two phones, how the master writes the confirmation text you see, how a bolus started on the client is delivered, and what happens when the master is offline.
+Alt du utløser fra **AAPSClient**, blir kontrollert, begrenset, bekreftet og **utført av hovedenheten** (telefonen med pumpen). Den egne siden [Hovedenhet ↔ klientstyring](ClientMasterControl.md) forklarer hvordan dette fungerer: hvordan du parer de to telefonene, hvordan hovedenheten skriver bekreftelsesteksten du ser, hvordan en bolus som startes på klienten blir gitt, og hva som skjer når hovedenheten er frakoblet.
 
-## Versions: AAPSClient, AAPSClient2 and AAPSClient3
+## Versjoner: AAPSClient, AAPSClient2 og AAPSClient3
 
-Up to three client apps can be installed side by side on the same follower phone, each following a **different** person: **AAPSClient** (yellow owl icon), **AAPSClient2** (blue owl) and — new in **AAPS** version 4 — **AAPSClient3** (green owl). They are functionally identical. Only the name and the color differ (app icon, widget background and the status section on the home screen), so you can tell them apart. Each app is paired with its own master. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions) for details.
+Opptil tre klientapper kan installeres side om side på samme følgertelefon, der hver følger en **annen** person: **AAPSClient** (gult ugleikon), **AAPSClient2** (blå ugle) og — nytt i **AAPS** versjon 4 — **AAPSClient3** (grønn ugle). De fungerer helt likt. Bare navnet og fargen er forskjellig (appikon, widget-bakgrunn og statusdelen på startskjermen), slik at du kan skille dem fra hverandre. Hver app pares med sin egen hovedenhet. Se [Om AAPSClient, AAPSClient2 og AAPSClient3](#remotecontrol-aapsclient-versions) for detaljer.
 
-## Getting the app
+## Skaffe appen
 
-**AAPSClient** is obtained the same way as **AAPS** — see [Download and installation of AAPSClient](#RemoteControl_aapsclient), and install it like the main app ([Transferring and installing](../SettingUpAaps/TransferringAndInstallingAaps.md)).
+Du får tak i **AAPSClient** på samme måte som **AAPS** — se [Nedlasting og installasjon av AAPSClient](#RemoteControl_aapsclient), og installer den som hovedappen ([Overføre og installere AAPS på smarttelefonen din](../SettingUpAaps/TransferringAndInstallingAaps.md)).
 
-## First start: a shorter Setup Wizard
+## Første start: en kortere Oppsettveiviser
 
-On first start **AAPSClient** runs the same **Setup Wizard** you know from **AAPS**, but with far fewer steps — there is no profile, insulin, pump, APS or objectives configuration on a follower:
+Ved første start kjører **AAPSClient** den samme **Oppsettveiviseren** som du kjenner fra **AAPS**, men med langt færre steg — det er ingen konfigurasjon av profil, insulin, pumpe, APS eller opplæringsmål på en følger:
 
-1. **Welcome**, **license agreement**, **permissions** and **master password** — identical to the main app, see the [AAPS Setup Wizard](../SettingUpAaps/SetupWizard.md).
-2. The client does **not** ask for **units** or the **low/high marks**: it takes them from the main phone as soon as it is connected to Nightscout. You can see them later in **Settings**, where a small **phone icon** shows that they are [synchronized with the main phone](#client-master-config-prefs). They can only be edited while the master is reachable.
-3. **Set up from the master** — on the master, open **Manage → Authorized clients**, add this phone with a **QR code** and tap **Scan the QR code** here. One scan sets up Nightscout with a token of this phone's own and, with a code that pairs, also pairs the phone. The phone also takes the name it was added with on the master as its instance name (letters with accents become plain letters, "Miloš" becomes "Milos"). **After the scan, the setup is finished**: the wizard closes, because the next steps would only show what the code did. Without a QR code, skip this step. (Android only: the scanner is not available on iOS yet.)
+1. **Velkommen**, **lisensavtale**, **tillatelser** og **hovedpassord** — identisk med hovedappen, se [Oppsettveiviseren i AAPS](../SettingUpAaps/SetupWizard.md).
+2. Klienten spør **ikke** om **enheter** eller **lav/høy verdi**: den henter dem fra hovedtelefonen så snart den er koblet til Nightscout. Du kan se dem senere i **Innstillinger**, der et lite **telefonikon** viser at de er [synkronisert med hovedtelefonen](#client-master-config-prefs). De kan bare redigeres mens hovedenheten kan nås.
+3. **Sett opp fra hovedenheten** — på hovedenheten åpner du **Administrer → Autoriserte klienter**, legger til denne telefonen med en **QR-kode** og trykker på **Skann QR-koden** her. Én skanning setter opp Nightscout med et eget token for denne telefonen, og hvis koden også parer, parer den telefonen. Telefonen tar også navnet den ble lagt til med på hovedenheten, som sitt instansnavn (bokstaver med aksenter blir vanlige bokstaver, «Miloš» blir «Milos»). **Etter skanningen er oppsettet ferdig**: veiviseren lukkes, fordi de neste stegene bare ville vise det koden allerede har gjort. Uten en QR-kode hopper du over dette steget. (Bare Android: skanneren er ikke tilgjengelig på iOS ennå.)
 
-   ![The Set up from the master step with the Scan the QR code button](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+   ![Steget Sett opp fra hovedenheten med knappen Skann QR-koden](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **Communication** — the plugin list only offers what a follower needs (NSClientV3, xDrip+, Wear, External Companion Apps, Garmin). If you did not scan a QR code, enable **NSClientV3** and enter the **same Nightscout URL** as on the main phone and an access token, with **websockets** enabled — exactly as described in [Synchronization](#RemoteControl_aapsclient).
+4. **Kommunikasjon** — plugin-listen tilbyr bare det en følger trenger (NSClientV3, xDrip+, Klokke, Eksterne hjelpeapper, Garmin). Hvis du ikke skannet en QR-kode, aktiverer du **NSClientV3** og skriver inn den **samme Nightscout URL** som på hovedtelefonen og et tilgangstoken, med **websockets** slått på — nøyaktig som beskrevet under [Synkronisering](#RemoteControl_aapsclient).
 
-   ![Communication step on the client](../images/v4/AapsClient/aapsclient_wizard_communication.png)
+   ![Kommunikasjonssteget på klienten](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
-5. **Pair with master** — this step exists **only** on the client. It connects this device to the master over the secure command channel, with the PIN, and takes the name the phone was added with on the master, like the QR code. **After the pairing, the setup is finished.** You can also skip it and pair at any time later from **Manage → Pair with master**.
+5. **Koble til hovedenhet** — dette steget finnes **bare** på klienten. Det kobler denne enheten til hovedenheten over den sikre kommandokanalen, med PIN-koden, og tar navnet telefonen ble lagt til med på hovedenheten, på samme måte som QR-koden. **Etter sammenkoblingen er oppsettet ferdig.** Du kan også hoppe over det og pare når som helst senere fra **Administrer → Koble til hovedenhet**.
 
-   ![Pair with master step in the client wizard](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
+   ![Steget Koble til hovedenhet i klientens veiviser](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
 
-6. **Who is using this phone?** — only when you did not pair in the wizard: the name of the person using this phone. It tells this instance apart in reports and synchronization.
+6. **Hvem bruker denne telefonen?** — bare når du ikke sammenkoblet i veiviseren: navnet på personen som bruker denne telefonen. Det skiller denne instansen fra andre i rapporter og synkronisering.
 
 (aapsclient-pairing-with-the-master)=
 
-## Pairing with the master
+## Pare med hovedenheten
 
-On the **master**, open **Manage → Authorized clients** and add a client. There are two ways to pair:
+På **hovedenheten** åpner du **Administrer → Autoriserte klienter** og legger til en klient. Det er to måter å pare på:
 
-- **With a QR code** (the quickest, if the phone has a camera): scan the code in the wizard step "**Set up from the master**" or from **Manage → Pair with master → Scan QR code**, and confirm with "**Use**". It sets up Nightscout too.
-- **With the PIN**: on the **client**, open the wizard step above (or **Manage → Pair with master**), type the one-time PIN shown on the master and press "**Pair**". The client then shows who it is about to trust — confirm with "**Pair**":
+- **Med en QR-kode** (den raskeste, hvis telefonen har kamera): skann koden i veiviserens steg «**Sett opp fra hovedenheten**» eller fra **Administrer → Koble til hovedenhet → Skann QR-kode**, og bekreft med «**Bruk**». Den setter også opp Nightscout.
+- **Med PIN-koden**: på **klienten** åpner du veiviser-steget ovenfor (eller **Administrer → Koble til hovedenhet**), skriver inn engangs-PIN-koden som vises på hovedenheten, og trykker på «**Koble til**». Klienten viser da hvem den er i ferd med å stole på — bekreft med «**Koble til**»:
 
-![Confirmation on the client before completing the pairing](../images/v4/AapsClient/aapsclient_pair_confirm.png)
+![Bekreftelsen på klienten før sammenkoblingen fullføres](../images/v4/AapsClient/aapsclient_pair_confirm.png)
 
-From the wizard, a successful pairing finishes the setup and opens the home screen. On the master the client appears as **Active** in the [Authorized clients](#client_master_master_setup) list. Afterwards, **Manage → Pair with master** shows "*Already paired*", the phone's role and whether hardened mode is on:
+Fra veiviseren avslutter en vellykket sammenkobling oppsettet og åpner startskjermen. På hovedenheten vises klienten som **Aktiv** i listen [Autoriserte klienter](#client_master_master_setup). Etterpå viser **Administrer → Koble til hovedenhet** «*Allerede sammenkoblet*», telefonens rolle og om herdet modus er på:
 
-![Manage → Pair with master on a paired client: Already paired, Role: Caregiver, Hardened mode on](../images/v4/ClientMaster/pair_with_master_client.png) The full pairing procedure, security details and troubleshooting are on [Master ↔ Client control](#client_master_client_setup).
+![Administrer → Koble til hovedenhet på en sammenkoblet klient: Allerede sammenkoblet, Rolle: Omsorgsperson, Herdet modus aktivert](../images/v4/ClientMaster/pair_with_master_client.png) Hele sammenkoblingsprosedyren, sikkerhetsdetaljer og feilsøking finner du på [Hovedenhet ↔ klientstyring](#client_master_client_setup).
 
-After pairing, the client gets a Nightscout token of its own from the master (if the master has an admin token), with only the rights a client needs, and stops using the token you may have entered. **AAPSClient** never writes treatments or BG to Nightscout itself: everything it does is sent to the master, which writes it. Se [Klientens eget Nightscout-token](#client-master-control-own-token).
+Etter sammenkoblingen får klienten et eget Nightscout-token fra hovedenheten (hvis hovedenheten har et admin-token), med bare de rettighetene en klient trenger, og slutter å bruke tokenet du eventuelt har skrevet inn. **AAPSClient** skriver aldri behandlinger eller BS til Nightscout selv: alt den gjør, sendes til hovedenheten, som skriver det. Se [Klientens eget Nightscout-token](#client-master-control-own-token).
 
-The master decides what this phone may do with its **[role](#client-master-control-roles)** (Read-only, Meals, Caregiver or Admin). **Manage → Pair with master** shows the phone's role.
+Hovedenheten bestemmer hva denne telefonen kan gjøre, med **[rollen](#client-master-control-roles)** dens (Kun lesing, Måltider, Omsorgsperson eller Administrator). **Administrer → Koble til hovedenhet** viser telefonens rolle.
 
-## The home screen
+## Startskjermen
 
-The client's home screen mirrors the followed loop:
+Klientens startskjerm speiler loopen den følger:
 
-![AAPSClient home screen](../images/v4/AapsClient/aapsclient_home.png)
+![AAPSClient-startskjermen](../images/v4/AapsClient/aapsclient_home.png)
 
-- **BG, graphs, IOB/COB and profile** come from Nightscout, just as the master uploaded them.
-- The **loop status** shown is the **master's** (a client has no loop of its own). Until the client has received the master's running mode from Nightscout, the running mode chip shows a **question mark** (unknown).
-- The **status card** shows the **followed pump's** reservoir and battery and the uploader battery, taken from the Nightscout device status — a client has no pump, so there is no local pump status and no pump management anywhere in the app.
-- The bottom bar offers **Treatments**, **Scenes** and **Manage** once the client is paired (only **Manage** before pairing) — there are no pump or objectives tabs.
+- **BS, grafer, IOB/COB og profil** kommer fra Nightscout, slik hovedenheten lastet dem opp.
+- **Loop-statusen** som vises, er **hovedenhetens** (en klient har ingen egen loop). Til klienten har mottatt hovedenhetens kjøremodus fra Nightscout, viser kjøremodus-brikken et **spørsmålstegn** (ukjent).
+- **Statuskortet** viser reservoaret og batteriet til **pumpen som følges** og batteriet til opplasteren, hentet fra enhetsstatusen i Nightscout — en klient har ingen pumpe, så det finnes ingen lokal pumpestatus og ingen pumpeadministrasjon noe sted i appen.
+- Linjen nederst tilbyr **Behandlinger**, **Scener** og **Administrer** når klienten er sammenkoblet (bare **Administrer** før sammenkobling) — det finnes ingen faner for pumpe eller opplæringsmål.
 
-## Treatments and actions
+## Behandlinger og handlinger
 
-Everything under **Manage** works like on the main app, with one important difference: on a client, actions that would change therapy (bolus, carbs, temp targets, scenes…) are **hidden until the device is paired**, and once paired they are **relayed to the master** for confirmation and execution — see [Using remote control](#client-master-control).
+Alt under **Administrer** fungerer som i hovedappen, med én viktig forskjell: på en klient er handlinger som ville endre behandlingen (bolus, karbohydrater, midlertidige mål, scener …) **skjult til enheten er sammenkoblet**, og når den er sammenkoblet, blir de **videresendt til hovedenheten** for bekreftelse og utføring — se [Bruke fjernstyring](#client-master-control).
 
-The **Profile** entry is the exception: it is shown even on an **unpaired** client, but opens **view-only** — the client shows the profiles it receives through Nightscout (it needs them for its own calculations), without edit or activate buttons. Once the client is **paired**, the profile list is synchronized with the master and you can edit and activate profiles from the client like any other remote action.
+Oppføringen **Profil** er unntaket: den vises også på en **ikke sammenkoblet** klient, men åpnes **skrivebeskyttet** — klienten viser profilene den mottar gjennom Nightscout (den trenger dem til sine egne beregninger), uten knapper for å redigere eller aktivere. Når klienten er **sammenkoblet**, synkroniseres profillisten med hovedenheten, og du kan redigere og aktivere profiler fra klienten som enhver annen fjernstyrt handling.
 
-On an **unpaired** client, **Manage** only offers **Profile** and **Pair with master**:
+På en **ikke sammenkoblet** klient tilbyr **Administrer** bare **Profil** og **Koble til hovedenhet**:
 
-![The Manage screen on an unpaired client: only Profile and Pair with master](../images/v4/AapsClient/aapsclient_manage_unpaired.png)
+![Administrer-skjermen på en ikke sammenkoblet klient: bare Profil og Koble til hovedenhet](../images/v4/AapsClient/aapsclient_manage_unpaired.png)
 
-The red banner "*Master device unreachable. Editing is disabled until the connection is restored.*" also appears on an unpaired client. This is expected: there is no master to reach yet. The banner disappears once the client is paired and the master is online.
+Det røde banneret «*Hovedenheten kan ikke nås. Redigering er deaktivert til forbindelsen er gjenopprettet.*» vises også på en ikke sammenkoblet klient. Dette er som forventet: det finnes ingen hovedenhet å nå ennå. Banneret forsvinner når klienten er sammenkoblet og hovedenheten er tilkoblet.
 
-Once the client is paired, the therapy actions appear:
+Når klienten er sammenkoblet, vises behandlingshandlingene:
 
-![The Manage screen on a paired client, including the Pair with master entry](../images/v4/AapsClient/aapsclient_manage.png)
+![Administrer-skjermen på en sammenkoblet klient, med oppføringen Koble til hovedenhet](../images/v4/AapsClient/aapsclient_manage.png)
 
-There is **no Pump entry** — a client has no pump.
+Det finnes **ingen Pumpe-oppføring** — en klient har ingen pumpe.
 
-If the master is not reachable, the same banner appears on a paired client: the therapy actions are greyed out, and anything you try is blocked before it is sent. The client notices that the master is offline when you try an action, and re-enables the actions once the master is back online.
+Hvis hovedenheten ikke kan nås, vises det samme banneret på en sammenkoblet klient: behandlingshandlingene er nedtonet, og alt du prøver, blir stoppet før det sendes. Klienten oppdager at hovedenheten er frakoblet når du prøver en handling, og aktiverer handlingene igjen når hovedenheten er tilbake på nett.
 
-![The Manage screen on a paired client while the master is offline: actions greyed out under the banner](../images/v4/AapsClient/aapsclient_manage_master_offline.png)
+![Administrer-skjermen på en sammenkoblet klient mens hovedenheten er frakoblet: handlingene er nedtonet under banneret](../images/v4/AapsClient/aapsclient_manage_master_offline.png)
 
-## Settings synchronized with the master
+## Innstillinger som synkroniseres med hovedenheten
 
-The active plugin **configuration** and many **preferences** are kept in sync between the master and its paired clients; synced items are marked with a small **phone icon** and are disabled (with a "*Master device unreachable*" banner) while the master cannot be reached. This is described in [Changing configuration and preferences](#client-master-config-prefs).
+Den aktive plugin-**konfigurasjonen** og mange **innstillinger** holdes synkronisert mellom hovedenheten og de sammenkoblede klientene; synkroniserte elementer er merket med et lite **telefonikon** og er deaktivert (med banneret «*Hovedenheten kan ikke nås*») mens hovedenheten ikke kan nås. Dette er beskrevet under [Endre konfigurasjon og innstillinger](#client-master-config-prefs).
 
-## AAPSClient on a smartwatch
+## AAPSClient på en smartklokke
 
-A Wear OS watch can be paired with the **client** phone; its actions are relayed through the client to the master. See [Wear OS](../WearOS/WearOsSmartwatch.md) and the [smartwatch options in Remote control](#RemoteControl_smartwatches).
+En Wear OS-klokke kan pares med **klient**-telefonen; handlingene fra klokken videresendes gjennom klienten til hovedenheten. Se [Wear OS-smartklokke](../WearOS/WearOsSmartwatch.md) og [smartklokkealternativene under Fjernstyring av AAPS](#RemoteControl_smartwatches).

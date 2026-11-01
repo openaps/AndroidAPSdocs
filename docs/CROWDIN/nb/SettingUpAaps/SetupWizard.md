@@ -1,4 +1,4 @@
-# AAPS Setup Wizard
+# Oppsettveiviseren i AAPS
 
 ```{contents} In this page
 :backlinks: entry
@@ -7,7 +7,7 @@
 
 Når du starter **AAPS** for første gang, blir du ledet gjennom «**Oppsettveiviser**», som hjelper deg med å sette opp alle de grunnleggende konfigurasjonene i appen i én omgang. **Oppsettveiviseren** leder deg gjennom stegene, slik at du ikke glemmer noe viktig. For eksempel er **tillatelsene** helt grunnleggende for å sette opp **AAPS** riktig.
 
-Du må likevel ikke få alt helt ferdig konfigurert første gang du bruker **Oppsettveiviseren**. Du kan enkelt avslutte veiviseren og komme tilbake til den senere. Etter **Oppsettveiviseren** finnes det tre veier videre for å forbedre eller endre konfigurasjonen. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
+Du må likevel ikke få alt helt ferdig konfigurert første gang du bruker **Oppsettveiviseren**. Du kan enkelt avslutte veiviseren og komme tilbake til den senere. Etter **Oppsettveiviseren** finnes det tre veier videre for å forbedre eller endre konfigurasjonen. Disse blir forklart i neste avsnitt. Så det er greit om du hopper over noen punkter i Oppsettveiviseren. Du kan enkelt konfigurere dem senere.
 
 Mens du bruker **Oppsettveiviseren**, og rett etterpå, merker du kanskje ingen store synlige endringer i **AAPS**. For å aktivere **AAPS**-loopen din må du følge **Opplæringsmålene**, som låser opp funksjon etter funksjon. Du starter **Opplæringsmål 1** på slutten av Oppsettveiviseren. Det er du som styrer **AAPS**, ikke omvendt.
 
@@ -23,9 +23,9 @@ Ta deg derfor god tid til å konfigurere loopen din. Gevinsten av en **AAPS**-lo
 
 ```{admonition} Ask for Help
 :class: note
-If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
+Hvis det er en feil i dokumentasjonen, eller du har en bedre idé om hvordan noe kan forklares, kan du be om hjelp fra fellesskapet som beskrevet under [Kom i kontakt med andre brukere](../GettingHelp/WhereCanIGetHelp.md).
 ```
-## Welcome message
+## Velkomstmelding
 
 Når Oppsettveiviseren åpnes, møter den deg med en kort velkomstmelding og viser med en gang panelet «**Tillatelser kreves**» nederst på skjermen (se neste avsnitt).
 
@@ -33,13 +33,13 @@ Når du har gitt tillatelsene, lukkes panelet, og velkomstskjermen viser en «**
 
 ![Welcome](../images/setup-wizard/Wizard-Welcome.png)
 
-## Required permissions
+## Nødvendige tillatelser
 
 **AAPS** trenger noen tillatelser for å fungere riktig. Veiviseren samler dem i ett panel, «**Tillatelser kreves**», med en egen «**Tillat**»-knapp for hver. Gi dem én etter én. Ikonet ved siden av hvert punkt blir til en hake når det er gjort.
 
 ![Tillatelser](../images/setup-wizard/Wizard-Permissions.png)
 
-### Battery optimization
+### Batterioptimalisering
 
 Batteriforbruket på smarttelefoner er noe man må ta hensyn til, siden batteriene fortsatt har ganske begrenset kapasitet. Derfor er Android-operativsystemet på telefonen din strengt med å la apper kjøre og bruke prosessortid, og dermed batteri.
 
@@ -53,7 +53,7 @@ Trykk på «**Tillat**» ved siden av «**Batterioptimalisering**», og velg der
 
 ### AAPS-mappe
 
-**AAPS** må lagre innstillingene sine og logginformasjon på det permanente lageret i telefonen din. Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
+**AAPS** må lagre innstillingene sine og logginformasjon på det permanente lageret i telefonen din. Permanent lagring betyr at det er tilgjengelig også etter at du har startet smarttelefonen på nytt. Annen informasjon går rett og slett tapt, siden den ikke lagres permanent.
 
 Trykk på «**Tillat**» ved siden av «**AAPS-mappe**». Dette åpner filsystemet på telefonen og lar deg velge hvor **AAPS** skal lagre informasjonen sin.
 
@@ -72,7 +72,7 @@ Bekreft med «**TILLAT**» at du vil gi **AAPS** tilgang til den valgte mappen:
 
 ### Varslinger
 
-Android requires special permission for apps if they want to send you notifications.
+Android krever en egen tillatelse for apper som vil sende deg varsler.
 
 Det kan være fint å slå av varsler _f.eks._ fra sosiale medier, men det er helt nødvendig at du lar **AAPS** sende deg varsler.
 
@@ -134,9 +134,9 @@ Følg disse stegene på Android 16. Andre versjoner avviker litt fra skjermbilde
 
    ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
 
-## License agreement
+## Lisensavtale
 
-Lisensavtalen for sluttbrukere inneholder viktig informasjon om de juridiske sidene ved å bruke **AAPS**. Please read it carefully.
+Lisensavtalen for sluttbrukere inneholder viktig informasjon om de juridiske sidene ved å bruke **AAPS**. Les den nøye.
 
 Hvis du ikke forstår eller ikke kan godta lisensavtalen for sluttbrukere, må du ikke bruke **AAPS** i det hele tatt!
 
@@ -172,20 +172,20 @@ Gå tilbake med pilen øverst til venstre. Veiviseren viser nå «**Passord defi
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-**IKKE MIST HOVEDPASSORDET DITT**. Noter det _f.eks._ på Google Drive, som er et godt sted fordi Google tar sikkerhetskopi for deg. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
+**IKKE MIST HOVEDPASSORDET DITT**. Noter det _f.eks._ på Google Drive, som er et godt sted fordi Google tar sikkerhetskopi for deg. Smarttelefonen eller PC-en din kan krasje, og da har du kanskje ingen kopi. Hvis du glemmer hovedpassordet ditt, kan det bli vanskelig å gjenopprette profilkonfigurasjonen og framgangen din gjennom **Opplæringsmålene** senere.
 ```
 
 Når du er ferdig, trykker du på «**NESTE**» for å gå til neste skjerm.
 
 (setup-wizard-import-settings)=
-## Import settings
+## Importer innstillinger
 
 Denne skjermen vises bare når **AAPS** finner innstillinger som er eksportert tidligere i **AAPS**-mappen («Lagrede innstillinger funnet»), for eksempel når du installerer appen på nytt eller bytter til en ny telefon.
 
 - For å gjenopprette den forrige konfigurasjonen din trykker du på «**Importer innstillinger**» – se [Eksport og import av innstillinger](../Maintenance/ExportImportSettings.md).
 - For å starte med en ny konfigurasjon trykker du på «**NESTE**» og fortsetter med veiviseren.
 
-![Import settings](../images/setup-wizard/Wizard-ImportSettings.png)
+![Importer innstillinger](../images/setup-wizard/Wizard-ImportSettings.png)
 
 ## Enheter (mg/dL <-> mmol/L)
 
@@ -197,11 +197,11 @@ Velg om blodsukkerverdiene dine er i mg/dL eller mmol/L, og trykk deretter på �
 
 Her setter du «**Lav verdi**» og «**Høy verdi**» for visningen av sensorglukose. Blodsukkerverdier mellom disse to merkene vises som «i målområdet». Du kan la standardverdiene (72 og 180 mg/dL) stå for nå, og endre dem senere.
 
-The values you choose only affect the graphical presentation of the diagram, and nothing else.
+Verdiene du velger påvirker bare den grafiske visningen av diagrammet, ikke noe annet.
 
 Blodsukkermålet ditt, _f.eks._, stilles inn for seg i profilen din.
 
-Your range to analyze TIR (time in range) is configured separately in your reporting server.
+Området du bruker for å analysere TIR (tid i målområdet) settes opp separat i rapporteringsserveren din.
 
 Juster verdiene med «−»/«+»-knappene om nødvendig, og trykk deretter på «**NESTE**»-knappen:
 
@@ -229,7 +229,7 @@ Bla ned for å se resten av listen:
 
 Du kunne satt opp flere av disse nå, men første gang konsentrerer vi oss bare om rapporteringsserveren. Hvis du ikke kan sette den opp nå, hopper du over den for denne gang – du kan konfigurere den senere.
 
-I dette eksempelet bruker vi Nightscout som rapporteringsserver. Kryss av i boksen til høyre for «**NSClientV3**» for å aktivere den. For Tidepool it is even simpler, as you only need your personal login information.
+I dette eksempelet bruker vi Nightscout som rapporteringsserver. Kryss av i boksen til høyre for «**NSClientV3**» for å aktivere den. For Tidepool er det enda enklere, siden du bare trenger din personlige påloggingsinformasjon.
 
 Når den er aktivert, trykker du på «**Innstillinger**» under NSClientV3 for å konfigurere den:
 
@@ -241,7 +241,7 @@ Her konfigurerer du rapporteringsserveren Nightscout. NSClientV3-innstillingene 
 
 Trykk på «**Nightscout URL**» og skriv inn adressen til din egen Nightscout-server (URL-en du satte opp selv, eller fikk av tjenesteleverandøren din). Bekreft med «**OK**».
 
-Trykk på «**Nightscout tilgangstoken**» og skriv inn tilgangstokenet for Nightscout-serveren din. Without this token, access will not work. Hvis du ikke har det ennå, se dokumentasjonen om å sette opp rapporteringsserveren.
+Trykk på «**Nightscout tilgangstoken**» og skriv inn tilgangstokenet for Nightscout-serveren din. Uten dette tokenet fungerer ikke tilgangen. Hvis du ikke har det ennå, se dokumentasjonen om å sette opp rapporteringsserveren.
 
 La «**Bruk websockets**» stå på for kommunikasjon med Nightscout i sanntid.
 
@@ -265,10 +265,10 @@ Fra **AAPS** versjon 4 kan klientenheter som kjører **AAPSClient**, **pares** m
 
 Du trenger ikke konfigurere noe på denne skjermen nå. Du kan pare klienter når som helst senere fra **Administrer → Autoriserte klienter**. Der legger du til en klient med en **QR-kode** (den setter også opp Nightscout på klienten) eller med en **PIN**, og gir den en **rolle**.
 
-- «**Autoriserte klienter**» – administrer de parede klientenhetene som har lov til å styre denne hovedenheten.
+- «**Autoriserte klienter**» – administrer de sammenkoblede klientenhetene som har lov til å styre denne hovedenheten.
 - «**Mottak av Nightscout-data**» – å godta behandlinger og data som er lagt inn direkte i Nightscout (den gamle, mindre sikre måten) er nå slått av som standard. Åpne disse innstillingene bare hvis du fortsatt trenger det, _f.eks._ for å legge inn data via Nightscout eller tredjepartsapper.
 
-Når klientstyring allerede er på – alltid i [Enkel modus](#preferences-simple-mode) – er denne telefonen i [herdet modus](#client-master-control-hardened-mode): den godtar bare endringer fra parede klienter, så skjermen forklarer herdet modus i stedet for å tilby innstillingene for «**Mottak av Nightscout-data**».
+Når klientstyring allerede er på – alltid i [Enkelmodus](#preferences-simple-mode) – er denne telefonen i [herdet modus](#client-master-control-hardened-mode): den godtar bare endringer fra sammenkoblede klienter, så skjermen forklarer herdet modus i stedet for å tilby innstillingene for «**Mottak av Nightscout-data**».
 
 ![Klientstyring](../images/setup-wizard/Wizard-ClientControl.png)
 
@@ -283,19 +283,19 @@ Trykk på «**NESTE**» for å gå til neste skjerm.
 
 Her skriver du inn navnet på personen som bruker denne telefonen. Det skiller denne **AAPS**-instansen fra andre i rapporter og ved synkronisering, for eksempel hvis to barn i familien din bruker **AAPS**. Det brukes også i navnene på eksporterte innstillingsfiler og vises på klokken.
 
-It can be anything. Du kan endre det senere i **Innstillinger → Generelt → Instansnavn**.
+Det kan være hva som helst. Du kan endre det senere i **Innstillinger → Generelt → Instansnavn**.
 
 Trykk på «**NESTE**» for å gå til neste skjerm.
 
 ![Navn](../images/setup-wizard/Wizard-Name.png)
 
-## Patient type
+## Pasienttype
 
-Her velger du «Pasienttype». Dette er viktig, fordi **AAPS**-programvaren har ulike grenser avhengig av pasientens alder. This is important for security and safety reasons.
+Her velger du «Pasienttype». Dette er viktig, fordi **AAPS**-programvaren har ulike grenser avhengig av pasientens alder. Dette er viktig av hensyn til sikkerheten.
 
-Her stiller du også inn **maks tillatt bolus** for et måltid. That is, the largest bolus you need to give to cover your typical meals. Det er en sikkerhetsfunksjon som hjelper deg å unngå en overdose ved et uhell når du gir bolus til et måltid.
+Her stiller du også inn **maks tillatt bolus** for et måltid. Det vil si den største bolusen du trenger å gi for å dekke et typisk måltid. Det er en sikkerhetsfunksjon som hjelper deg å unngå en overdose ved et uhell når du gir bolus til et måltid.
 
-The second limit is similar in concept, but relates to the max carbohydrate intake you expect.
+Den andre grensen er lik i prinsippet, men gjelder den største mengden karbohydrater du forventer å spise.
 
 Når du har satt disse verdiene, trykker du på «**NESTE**» for å gå til neste skjerm:
 
@@ -322,18 +322,18 @@ Velg forhåndsinnstillingen som passer insulinet ditt, for eksempel **Fiasp**:
 Ikke endre toppen med mindre du er ekspert – vanligvis fungerer de forhåndsinnstilte verdiene godt for hvert insulinmerke.
 ```
 
-Hvis du er ny **AAPS**-bruker, setter du **DIA** til 9 timer – se [Insulinets virketid (DIA) og topp](#Config-Builder-insulin-dia) for å forstå hvorfor.
+Hvis du er ny **AAPS**-bruker, setter du **DIA** til 9 timer – se [Insulinets virkningstid (DIA) og topp](#Config-Builder-insulin-dia) for å forstå hvorfor.
 
 ```{admonition} "Insulin configuration changed" dialog
 :class: note
-Hvis en paret klient (_f.eks._ en annen telefon) har endret insulinkonfigurasjonen, vises en dialog. Trykk på **OK** for å laste inn endringene deres, eller **Avbryt** for å fortsette å redigere (neste gang du lagrer, overskrives deres endringer).
+Hvis en sammenkoblet klient (_f.eks._ en annen telefon) har endret insulinkonfigurasjonen, vises en dialog. Trykk på **OK** for å laste inn endringene deres, eller **Avbryt** for å fortsette å redigere (neste gang du lagrer, overskrives deres endringer).
 ```
 
 ![Insulin endret](../images/setup-wizard/Wizard-Insulin-Changed.png)
 
 Trykk på lagre-ikonet (øverst til høyre), og trykk deretter på «**NESTE**» for å gå til neste skjerm.
 
-## Blood sugar source
+## BS-kilde
 
 Her velger du hvor **AAPS** skal hente blodsukkerdataene sine fra. Les dokumentasjonen for [BS-kilden](../Getting-Started/CompatiblesCgms.md) din.
 
@@ -350,7 +350,7 @@ Når du har gjort valget ditt, trykker du på «**NESTE**» for å gå til neste
 (setup-wizard-profile)=
 ## Profil
 
-Now we are entering a very important part of the Setup Wizard.
+Nå kommer vi til en svært viktig del av Oppsettveiviseren.
 
 Les dokumentasjonen om [profiler](../SettingUpAaps/YourAapsProfile.md) før du prøver å legge inn profilopplysningene dine på neste skjerm.
 
@@ -371,7 +371,7 @@ Redigeringen åpnes tom («Ingen registreringer tilgjengelig»). Trykk på «**+
 
 ![Tom profil](../images/setup-wizard/Wizard-Profile-Empty.png)
 
-You can have several profiles in the long-term if needed. We only create one here.
+Du kan ha flere profiler på sikt hvis du trenger det. Her lager vi bare én.
 
 ```{admonition} Profile only for tutorial - not for your usage
 :class: note
@@ -402,7 +402,7 @@ Trykk på «**MÅL**» og skriv inn målverdiene dine for blodsukker.
 
 Ved åpen loop kan dette målet være et bredere område. Ellers varsler **AAPS** deg hele tiden om å endre midlertidig basal eller en annen innstilling, og det kan bli slitsomt.
 
-Later, for closed looping, you will generally have only one value for top and bottom. Det gjør det lettere for **AAPS** å treffe målet og gir deg bedre kontroll på diabetesen totalt sett.
+Senere, ved lukket loop, har du vanligvis bare én verdi for øvre og nedre grense. Det gjør det lettere for **AAPS** å treffe målet og gir deg bedre kontroll på diabetesen totalt sett.
 
 ![MÅL](../images/setup-wizard/Wizard-Profile-TARG.png)
 
@@ -444,7 +444,7 @@ Nå velger du insulinpumpen din. Les dokumentasjonen for [insulinpumpen](../Gett
 
 Rull i listen og velg pumpen din. I dette eksempelet bruker vi «**Virtuell pumpe**», som er nyttig mens du fortsatt lærer og ikke har koblet til en ekte pumpe ennå:
 
-![Pump](../images/setup-wizard/Wizard-Pump.png)
+![Pumpe](../images/setup-wizard/Wizard-Pump.png)
 
 Mange pumper støttes – rull nedover for å finne din:
 
@@ -460,9 +460,9 @@ Hvis du allerede har satt opp profilen din og vet hvordan du kobler til pumpen, 
 
 Trykk på «**NESTE**» for å gå til neste skjerm.
 
-## APS algorithm
+## APS-algoritme
 
-Use the OpenAPS SMB algorithm as your APS algorithm. Til tross for navnet er SMB-funksjonen i algoritmen slått av til du er kjent med AAPS og har gjort de første opplæringsmålene. OpenAPS SMB er uansett nyere og generelt bedre enn OpenAPS AMA.
+Bruk OpenAPS SMB-algoritmen som APS-algoritme. Til tross for navnet er SMB-funksjonen i algoritmen slått av til du er kjent med AAPS og har gjort de første opplæringsmålene. OpenAPS SMB er uansett nyere og generelt bedre enn OpenAPS AMA.
 
 SMB er slått av i starten fordi SMB-funksjonen reagerer raskere på en stigning i blodsukkeret, med en supermikrobolus i stedet for å øke basalprosenten. Siden profilen din som regel ikke er like god i begynnelsen som etter litt erfaring, er funksjonen slått av til å begynne med.
 
@@ -495,7 +495,7 @@ Hvis du trykker på «**Innstillinger**», kan du se gjennom innstillingene for 
 
 Trykk på «**NESTE**» for å gå til neste skjerm.
 
-## Start Objective 1
+## Start Opplæringsmål 1
 
 Nå kommer du til Opplæringsmålene – kvalifiseringen som gir tilgang til flere **AAPS**-funksjoner.
 
@@ -503,7 +503,7 @@ Trykk på «**Åpne opplæringsmål**»:
 
 ![Opplæringsmål](../images/setup-wizard/Wizard-Objectives.png)
 
-Here we start Objective 1, even if at the moment our setup is not completely ready to successfully complete this Objective. But this is the start.
+Her starter vi Opplæringsmål 1, selv om oppsettet vårt ikke er helt klart til å fullføre dette opplæringsmålet ennå. Men dette er starten.
 
 Trykk på «**Start**»-knappen ved siden av «**1. Opplæringsmål**»:
 

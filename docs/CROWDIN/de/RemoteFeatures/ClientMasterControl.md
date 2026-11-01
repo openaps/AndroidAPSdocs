@@ -107,7 +107,7 @@ Wer den QR-Code sieht, kann Dein Nightscout lesen. Ein Code, der koppelt, enthä
 
 #### Mit einer PIN
 
-Tippe auf **OK**: Der Master zeigt eine 8-stellige **Kopplungs-PIN** an, in zwei Vierergruppen (zum Beispiel `1234 5678`). Diese PIN gilt **nur einmal** und **läuft nach etwa zwei Minuten ab**.
+Tippe auf **OK**: Der Master zeigt eine 8-stellige **Kopplungs-PIN** an, in zwei Vierergruppen (zum Beispiel `1234 5678`). Diese PIN gilt **nur einmal** und **läuft nach etwa zwei Minuten ab**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
 
 ![Master pairing screen showing the one-time PIN (the PIN shown here is expired)](../images/v4/ClientMaster/pairing_pin_master.png)
 

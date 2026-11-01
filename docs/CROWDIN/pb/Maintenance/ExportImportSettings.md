@@ -6,6 +6,11 @@ Para restaurar a sua configuração do AAPS em um telefone existente ou novo, é
 
 Considere ter um segundo telefone de reserva e praticar a restauração do AAPS para garantir que o telefone de reserva funcione como esperado. Este passo dará a você a confiança de que o seu plano de emergência funciona e de que você pode continuar usando o AAPS sem interrupção se o seu telefone principal ficar indisponível.
 
+```{admonition} Android backups and phone-transfer tools do not carry your AAPS settings
+:class: warning
+Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and they are left out of the Google backup and of the phone-to-phone transfer of a new phone. A settings export, as described on this page, is the only way to carry them over.
+```
+
 Para poder restaurar, é importante ter à mão os seguintes itens:
 
 - O seu **arquivo keystore do Android Studio** e a **senha** correspondente: necessários para (re)compilar o arquivo instalador .APK do AAPS.

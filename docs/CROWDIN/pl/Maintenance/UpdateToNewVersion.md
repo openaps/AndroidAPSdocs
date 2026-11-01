@@ -10,14 +10,15 @@
 - Gdy nowa wersja będzie dostępna, w samej aplikacji **AAPS** zobaczysz baner z informacją o nowej wersji.
 - Nowa wersja zostanie też ogłoszona na Facebooku w dniu wydania.
 - Po wydaniu nowej wersji dokładnie przeczytaj [Informacje o wersji](ReleaseNotes.md) i wyjaśnij wszystkie pytania ze społecznością na Facebooku lub Discordzie, zanim zaczniesz aktualizację.
-- Nie zapomnij wyeksportować ustawień **AAPS**.
+- Updating from **AAPS** 3.x? Read [What changed in AAPS v4](V4Changes.md) first: it lists the features that moved, were renamed or were removed.
+- Do not forget to [export your settings](ExportImportSettings.md). When you import them again after the update, you choose whether the pump settings are replaced too.
 
 ## Aktualizacja AAPS przez budowanie w przeglądarce
 
 Twoja aplikacja AAPS została już zbudowana w przeglądarce? Postępuj zgodnie z instrukcją dla metody, której użyto:
 
-- **AAPS Builder** (Twoje prywatne repozytorium, zwykle o nazwie `my-aaps`): [Aktualizacja AAPS za pomocą AAPS Builder](#aaps-builder-updates). Nie ma forka do synchronizacji.
-- **Fork i plik przygotowania** (Twoja własna kopia AndroidAPS): [Aktualizacja w przeglądarce (fork)](./UpdateBrowserBuild.md).
+- **AAPS Builder**: you build from the **Build AAPS** page of your private repository (usually named `my-aaps`) and download the app from GitHub. Follow [Updating AAPS with AAPS Builder](#aaps-builder-updates). Nie ma forka do synchronizacji.
+- **Fork and preparation file**: you run the **AAPS-CI** workflow in your own copy (fork) of AndroidAPS, a repository named `AndroidAPS` in your GitHub account, and the app lands in your Google Drive. Follow [Update with a browser (fork)](./UpdateBrowserBuild.md).
 
 ## Aktualizacja AAPS w Android Studio
 
@@ -29,9 +30,9 @@ Użyj [tej samej instrukcji](../SettingUpAaps/CLIBuild.md) co przy wcześniejszy
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-### Sprawdź wersję AAPS w telefonie
+## After the update
 
-Sprawdź na stronie [Informacje o wersji](../Maintenance/ReleaseNotes.md), czy po aktualizacji trzeba wykonać jakieś dodatkowe kroki.
+These steps are the same for every build method. Sprawdź na stronie [Informacje o wersji](../Maintenance/ReleaseNotes.md), czy po aktualizacji trzeba wykonać jakieś dodatkowe kroki.
 
 Po zainstalowaniu nowego pliku apk:
 

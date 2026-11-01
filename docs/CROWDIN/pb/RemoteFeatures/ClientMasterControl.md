@@ -107,7 +107,7 @@ Qualquer pessoa que vir o código QR pode ler o seu Nightscout, e um código que
 
 #### Com um PIN
 
-Toque em **OK**: o dispositivo principal mostra um **PIN de pareamento** de 8 dígitos, em dois grupos de quatro (por exemplo, `1234 5678`). Este PIN é de **uso único** e **expira depois de cerca de dois minutos**.
+Toque em **OK**: o dispositivo principal mostra um **PIN de pareamento** de 8 dígitos, em dois grupos de quatro (por exemplo, `1234 5678`). Este PIN é de **uso único** e **expira depois de cerca de dois minutos**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
 
 ![Tela de pareamento do dispositivo principal com o PIN de uso único (o PIN mostrado aqui já expirou)](../images/v4/ClientMaster/pairing_pin_master.png)
 

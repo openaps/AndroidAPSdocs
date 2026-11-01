@@ -72,7 +72,11 @@
 
 ![運行工作流程](../images/update/CI/GitHubActions2.png)
 
-5. 將分支維持為 master，選擇你想要建置的 AAPS 版本——可以是最新版本或指定的特定版本——再選擇 [variant](#browserbuild-variant)（fullRelease），然後點選 Run workflow。
+5. Keep the branch set to master. In **Select AAPS Version**, check that **4.0.0**, the newest version at the top of the list, is selected. If your fork is not up to date, the preselected version is an older one: if you run the workflow with the form as it opens, you rebuild that older version and your app is not updated. Choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
+
+   ```{note}
+   The list of versions is part of the workflow in your fork. If **4.0.0** is missing, your fork is not synchronized yet: go back to [Update your GitHub repository](#Update-to-new-version-update-your-repo).
+   ```
 
 
 

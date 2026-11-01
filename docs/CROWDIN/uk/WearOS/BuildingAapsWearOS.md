@@ -41,7 +41,7 @@ Wear apk відповідає [варіанту збірки](#browserbuild-vari
 
 Де знайти Wear apk:
 
-- **AAPS Builder**: на сторінці збірки прокрутіть вниз до **Artifacts** і завантажте `aaps-wear-….apk` поруч із застосунком для телефона, як показано в [Крок 6 – Встановіть застосунок на телефон](#aaps-builder-step6). Завантажте його на телефон, на якому працює **AAPS**, якщо встановлюєте застосунок на годинник з телефона (Wear Installer 2 або Easy Fire Tools), або на комп'ютер, якщо використовуєте ADB.
+- **AAPS Builder**: on the build page, scroll down to **Artifacts** and download `aaps-wear-….apk` next to the phone app, as shown in [Step 5 – Install the app on your phone](#aaps-builder-step5). Завантажте його на телефон, на якому працює **AAPS**, якщо встановлюєте застосунок на годинник з телефона (Wear Installer 2 або Easy Fire Tools), або на комп'ютер, якщо використовуєте ADB.
 
   ![Artifacts із застосунками для телефона і годинника](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 

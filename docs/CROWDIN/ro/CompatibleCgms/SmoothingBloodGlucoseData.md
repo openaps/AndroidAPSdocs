@@ -1,4 +1,4 @@
-# Omogenizarea datelor de glicemie
+# Smoothing blood glucose data
 
 Dacă datele **glicemice** sunt săltărețe/zgomotoase, **AAPS** poate doza incorect insulina ceea ce duce la valori mari sau mici ale glicemiei. If you observe errors or experience jumpy data with your CGM it is important to disable the loop until the problem is resolved. În funcție de CGM, astfel de probleme se pot datora configurației CGM din **AAPS** (după cum se explică mai jos); sau o problemă a locului de inserare al senzorului CGM (care poate necesita înlocuirea senzorului CGM).
 
