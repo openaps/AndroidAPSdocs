@@ -222,13 +222,15 @@ Zvyšok zoznamu uvidíte, keď posuniete obrazovku nadol:
 * **Profil** musí byť medzi 50 % a 130 %
 * funguje, iba ak je predchádzajúce percento 100 %
 
-**Akcie:** **Zmeniť vyhladzovanie**
+**Actions:** **Change smoothing** (in the **Loop & insulin** group)
 
 **Možnosti:**
 
-* zvoľte [metódu vyhladzovania](../CompatibleCgms/SmoothingBloodGlucoseData.md), na ktorú sa má prepnúť
+* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
 * vykoná sa, iba ak táto metóda vyhladzovania ešte nie je aktívna – **AAPS** to do pravidla automaticky pridá ako riadok „**Predpoklady: Vyhladzovanie … nie je aktívne**“. Keď je zvolené vyhladzovanie aktívne, pravidlo sa potichu preskočí.
-* Príklad: v kombinácii so spúšťačom **Vek senzora** prepnite počas prvého dňa nového senzora na **Priemerovacie vyhladzovanie** a potom späť na **Žiadne vyhladzovanie**.
+* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
+  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
+  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
 
 **Akcie:** **Poznámka** (v skupine **Výstrahy** v zozname)
 
@@ -268,7 +270,7 @@ Zvyšok zoznamu uvidíte, keď posuniete obrazovku nadol:
 
 **Možnosti:**
 
-* žiadne. Keď sa vykoná pravidlo s touto akciou, **AAPS** počas tohto behu nekontroluje pravidlá, ktoré sú v zozname pod ním. Pridajte ju do pravidla, ktoré musí mať prednosť pred pravidlami pod ním (pozrite [poradie automatizácií](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* žiadne. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Pridajte ju do pravidla, ktoré musí mať prednosť pred pravidlami pod ním (pozrite [poradie automatizácií](#Automations-the-order-of-the-automations-in-the-list-matters)).
 
 **Akcie:** **Spustiť scénu**, **Povoliť scénu**, **Zakázať scénu** (v skupine **Scény**)
 
