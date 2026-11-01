@@ -8,10 +8,10 @@ Et glukosemål, særlig hvis det bare er kortvarig (under 4 timer), trenger ikke
 
 Midlertidige mål kan settes innenfor disse grensene:
 
-|          | Midlertidig mål         |
-| -------- | ----------------------- |
-| Minimum  | 4 mmol/L eller 72 mg/dL |
-| Maksimum | 10 mmol/L or 180 mg/dL  |
+|          | Midlertidig mål           |
+| -------- | ------------------------- |
+| Minimum  | 4 mmol/L eller 72 mg/dL   |
+| Maksimum | 10 mmol/L eller 180 mg/dL |
 
 **AAPS** har tre innebygde forhåndsinnstilte **midlertidige mål**, laget for trening (**Aktivitet**), måltider (**Spise snart**) og forventet hypoglykemi (**Hypo**). De ligger på skjermen **Midlertidig mål** (**Administrer** → **Midlertidig mål**), som du også kan åpne ved å trykke på **målbrikken** på hovedskjermen.
 
