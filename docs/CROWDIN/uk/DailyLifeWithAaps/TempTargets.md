@@ -19,7 +19,7 @@
 
 **Тимчасовій цілі** може знадобитися приблизно 30 хвилин або більше, щоб досягти бажаної цілі **ГК**. **AAPS** не може досягти цілі **ГК** миттєво, і користувачі повинні пам'ятати про це, коли вибирають **тимчасову ціль**.
 
-Розділи нижче коротко описують функції **тимчасової цілі «Активність»**, **тимчасової цілі «Очікуваний прийом їжі»** і **тимчасової цілі «Гіпо»**. Показані значення — це стандартні значення, з якими постачається застосунок. Ви можете [змінити кожен шаблон](#TempTargets-change-preset-defaults) під свої потреби.
+The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. Показані значення — це стандартні значення, з якими постачається застосунок. Ви можете [змінити кожен шаблон](#TempTargets-change-preset-defaults) під свої потреби.
 
 ### ТЦ «Активність»
 
@@ -193,9 +193,9 @@ AAPS намагатиметься досягти 160 мг/дл або 8,9 ммо
 
 Деякі користувачі хочуть уникнути введення **SMB** під час **тимчасової цілі «Гіпо»**. Для цього вимкніть *'Увімкнути SMB з високою тимчасовою ціллю'* у **Налаштування** → **OpenAPS SMB** (див. нижче):
 
-- Для досвідчених (завдання 9): користувач може увімкнути *«Висока тимчасова ціль підвищує чутливість»* для **тимчасових цілей** 100 мг/дл (5,6 ммоль/л) або вище в OpenAPS SMB, і **AAPS** буде чутливішим.
+- Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
 
-- Для досвідчених (завдання 9): користувач може вимкнути *«Увімкнути SMB з високою тимчасовою ціллю»*, і тоді, навіть якщо **AAPS** має COB > 0, увімкнено «Увімкнути SMB з низькою тимчасовою ціллю» або «Увімкнути SMB завжди» і OpenAPS SMB активний, **AAPS** не вводитиме SMB, поки активні високі тимчасові цілі.
+- Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
 
 Примітка: якщо ви відкриваєте **діалог «Вуглеводи»**, коли ваша глюкоза крові нижча за 72 мг/дл або 4 ммоль/л, **AAPS** автоматично вибирає перемикач **Запустити ТЦ при гіпо**.
 
@@ -219,9 +219,9 @@ AAPS намагатиметься досягти 160 мг/дл або 8,9 ммо
 
 ## Тимчасова ціль «Очікуваний прийом їжі»
 
-**Тимчасова ціль «Очікуваний прийом їжі»** може допомогти м'яко знизити **ГК** і забезпечити достатньо **IOB** перед їжею.
+**Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
 
-Це може бути важливим інструментом для користувачів, які не роблять болюс заздалегідь. Але ефективність **тимчасової цілі «Очікуваний прийом їжі»** залежатиме від багатьох чинників: налаштувань користувача, чи харчується він з малою кількістю вуглеводів і чи використовує швидкий інсулін (наприклад, Fiasp або Lyumjev), щоб не робити болюс заздалегідь. Зазвичай, поки користувачі не мають досвіду з **AAPS**, їм варто робити болюс заздалегідь, коли вони використовують **тимчасову ціль «Очікуваний прийом їжі»**, особливо якщо вони їдять багато вуглеводів.
+This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
 
 Більше про режим «Eating soon» («Очікуваний прийом їжі») можна прочитати у статті ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) (англійською) або [тут](https://diyps.org/tag/eating-soon-mode/).
 
