@@ -54,7 +54,9 @@
 
 В **AAPS** v4 профилите се управляват и активират от екрана **Управление** (долната навигация) → **Профил** (*„Редакция и активация на профили“*).
 
-Екранът „Профил“ показва профилите ви като **карусел от карти, които се плъзгат**. Картата на текущия профил е маркирана с **АКТИВЕН** и показва общия му дневен базал (напр. *∑ 30,15 U*). Под избраната карта виждате подробностите за този профил — **Единици**, тип **Инсулин** и графиците за **IC**, **ISF**, **базал** и **цел** с графики.
+Екранът „Профил“ показва профилите ви като **карусел от карти, които се плъзгат**. Картата на текущия профил е маркирана с **АКТИВЕН** и показва общия му дневен базал (напр. *∑ 30,15 U*). Below the selected card you see that profile's details — the **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+
+When a temporary switch is running, the **ACTIVE** card shows its percentage and time shift with the time left, for example *110% +2 h · 2 h 40 min*, above a progress bar. Both are refreshed every 30 seconds. The details below then have two columns: the values of the profile in blue, and the values in use with the percentage in red.
 
 ![Екранът „Профил“ — карусел с профили, подробности и лента с действия](../images/v4/Profiles/profile_manage.png)
 
