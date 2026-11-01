@@ -1,4 +1,4 @@
-# Vykonávanie zmien v konfigurácii vášho AAPS
+# Making changes to your AAPS configuration
 
 Po dokončení **[Sprievodcu nastavením](../SettingUpAaps/SetupWizard.md)** nemusíte znova spúšťať celého sprievodcu, ak chcete zmeniť iba nejakú časť konfigurácie **AAPS**.
 
