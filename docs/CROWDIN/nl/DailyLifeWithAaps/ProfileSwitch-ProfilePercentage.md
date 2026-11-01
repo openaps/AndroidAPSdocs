@@ -10,7 +10,7 @@ Als je net begint met **AAPS**, moet je een **Profiel** maken, begrijpen hoe je 
 
 - Nachtdienst of ploegendienst - voor wie in ploegen werkt, kan een tijdverschuiving in het **Profiel** worden ingesteld. Je verandert het aantal uren in het **Profiel** naar hoeveel later/eerder de gebruiker gaat slapen of wakker wordt.
 
-Waarom een **Profiel percentage** gebruiken in plaats van een tijdelijke aanpassing van het basaal? Om effectiever te zijn, past een **Profiel percentage** een evenredige verlaging of verhoging toe op: basaal, ISF en I:C. Zo berekent **AAPS** een evenwichtige aanpak bij het geven van de insuline van de gebruiker. Een lager basaal in het **Profiel** van de gebruiker in **AAPS** helpt weinig als het algoritme dezelfde verhoudingen voor ISF en I:C blijft gebruiken.
+Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. Zo berekent **AAPS** een evenwichtige aanpak bij het geven van de insuline van de gebruiker. Een lager basaal in het **Profiel** van de gebruiker in **AAPS** helpt weinig als het algoritme dezelfde verhoudingen voor ISF en I:C blijft gebruiken.
 
 (ProfileSwitch-change-percentage)=
 
@@ -78,7 +78,7 @@ Kies een profiel en tik op **▶ Activeer**. In het scherm **Activeer** bepaal j
 
 ![Het scherm Activeer — percentage, tijdsduur, tijdverschuiving, tijd](../images/v4/Profiles/profile_activate.png)
 
-- **Percentage** (30–250%, begint elke keer op 100%) — schaalt het hele profiel. 100% gebruikt het zoals het is; 70% verlaagt bijvoorbeeld het basaal en de berekende insulinedosis (zowel maaltijdbolussen als correcties) met 30%. Het verandert je glucosestreefwaarden en de opname van koolhydraten niet. Zie [Profiel percentage](#profile-percentage) voor het volledige effect.
+- **Percentage** (30–250%, begint elke keer op 100%) — schaalt het hele profiel. 100% gebruikt het zoals het is; 70% verlaagt bijvoorbeeld het basaal en de berekende insulinedosis (zowel maaltijdbolussen als correcties) met 30%. Het verandert je glucosestreefwaarden en de opname van koolhydraten niet. See [Profile Percentage](#ProfileSwitch-profile-percentage) for the full effect.
 - **Tijdsduur** (0–10080 minuten, dat is tot 7 dagen) — hoe lang de wissel duurt. **0 = onbeperkt** (tot je opnieuw wisselt); bij een waarde boven 0 gaat AAPS aan het einde terug naar het vorige profiel.
 - **Tijdelijk streefdoel / Activiteit** — verschijnt alleen als je een **Tijdsduur** en een **Percentage** onder 100% instelt. Zet het aan om ook een [tijdelijk streefdoel Activiteit](#TempTargets-activity-temp-target) te starten voor dezelfde tijdsduur, zoals je voor het sporten zou doen.
 - **Tijd verschuiving** — toont *0h*; tik op **Wijzigen** om het schema tot 23 uur vooruit of terug te zetten (handig bij ploegendienst of reizen). Zie [Tijdverschuiving](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
@@ -107,6 +107,8 @@ Als de pomp een basaal meldt dat ver afwijkt van je **Profiel**, houdt **AAPS** 
 
 Een profiel wissel kan niet alleen vanuit dit scherm. Dezelfde wissel kan ook gestart worden vanaf een **Wear OS-horloge**, een gekoppelde **client** (zie [Master ↔ Client besturing](../RemoteFeatures/ClientMasterControl.md)), een **[scène](Scenes.md)**, of een regel in **Automatisering**.
 
+(ProfileSwitch-profile-percentage)=
+
 ## Profiel percentage
 
 Het is belangrijk dat een gebruiker de belangrijkste kenmerken van een **Profiel percentage** begrijpt. Als je een **Profiel wissel** doet met een hoger of lager percentage, worden de instellingen in het **Profiel** van de gebruiker met hetzelfde percentage verhoogd of verlaagd.
@@ -125,23 +127,23 @@ Het effect van een **Profiel** percentage staat in de tabel hieronder:
 
 | Profiel wissel  
 Percentage |    Effect     |     I:C  
-g/E     | voorbeeld  
-15g |          ISF  
+g/E     | Example  
+15 g |          ISF  
 mmol/l/E  
 mg/dl/E          | E om te dalen  
 2mmol/l  
 40mg/dl |
-|:---------------------------:|:-------------:|:-----------------:|:---------------:|:------------------------------------------:|:---------------------------------:|
+|:---------------------------:|:-------------:|:-----------------:|:--------------:|:------------------------------------------:|:---------------------------------:|
 |             90%             |    Zwakker    | 5/0,9  
-=**5,55** |      2,7 E      | 2,2/0,9  
+=**5,55** |     2,7 E      | 2,2/0,9  
 =**2,4**  
   
 40/0,9  
 =**44,4** |               0,8 E               |
-|          **100%**           | **Standaard** |       **5**       |     **3 E**     |                **2,2  
+|          **100%**           | **Standaard** |       **5**       |    **3 E**     |                **2,2  
 40**                |             **0,9** E             |
 |            130%             |    Sterker    | 5/1,3  
-=**3,85** |      3,9 E      | 2,2/1,3  
+=**3,85** |     3,9 E      | 2,2/1,3  
 =**1,7**  
   
 40/1,3  
@@ -153,7 +155,7 @@ mg/dl/E          | E om te dalen
 
 Een ‘tijdverschuiving’ in het **Profiel** van de gebruiker verschuift de instellingen van het **Profiel** over de klok van de dag (‘circadiaan’) met het ingevoerde aantal uren. Dit kan handig zijn voor:
 
-- **wie 's nachts of in ploegen werkt**: verander bij nachtdiensten het aantal uren in het **Profiel** naar hoeveel later/eerder de gebruiker gaat slapen of wakker wordt; 
+- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
 - **gebruikers die tijdens het reizen van tijdzone wisselen**; of
 - **kinderen met type 1**: die een vaste bedtijd hebben en bij wie de insulineresistentie al in hun **Profiel** is verwerkt. Als het kind om welke reden dan ook later naar bed gaat, kan de verzorger een ‘tijdverschuiving’ toepassen op het **Profiel** van het kind. Zo reageert **AAPS** op de insulineresistentie op het tijdstip dat de gebruiker wil.
 
@@ -169,7 +171,7 @@ Het gaat er altijd om van welk uur de instellingen van het **Profiel** de instel
 
 ![Richting van de tijdverschuiving bij een profiel wissel](../images/ProfileSwitch_PlusMinus2.png)
 
-Door zo momentopnamen van het **Profiel** te maken, kan het verleden veel nauwkeuriger worden berekend en kun je wijzigingen in het **Profiel** volgen.
+This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
 
 (ProfileSwitch-keep-for-later)=
 
