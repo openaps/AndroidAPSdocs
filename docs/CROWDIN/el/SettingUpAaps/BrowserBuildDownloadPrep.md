@@ -5,18 +5,17 @@
 ````{admonition} Note
 :class: note
 
-1. Αν ανοίξετε αυτή τη σελίδα μέσα από μια εφαρμογή (σε web view), το αρχείο HTML μπορεί να μην κατέβει. Αντιγράψτε τη διεύθυνση URL και ανοίξτε την στον browser σας:
+1. Αν ανοίξετε αυτή τη σελίδα μέσα από μια εφαρμογή (σε web view), το αρχείο HTML μπορεί να μην κατέβει. Please copy the URL and open it in your browser instead:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
-Ή επισκεφθείτε τη σελίδα της πιο νέας έκδοσης:
+Or visit the latest release page:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
-2.Εφεδρικό αντίγραφο σε αυτόν τον ιστότοπο:
-
- - Αν και ο εξωτερικός σύνδεσμος δεν είναι διαθέσιμος, μπορείτε να κατεβάσετε αυτό το εφεδρικό αρχείο.
+2. Backup copy hosted on this site:
+ - If the external link is also unavailable, you can use this backup file to download.
 <!--crowdin:disable-->
 
 ```{eval-rst}
