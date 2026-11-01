@@ -48,7 +48,7 @@
 
 - DiaKEM: новите инсталации не работят след надграждането на сървърите @psonnera
 - Премахнато е модифицираното приложение за Libre 2 (остаряло): не работи с новите сензори @psonnera
-- Преработена е страницата за Omnipod Dash @XiTatiON
+- Reworked Omnipod DASH page @XiTatiON
 
 ## Август 2025 г.
 
@@ -97,7 +97,7 @@
 - [Предупредителен знак за качеството на КЗ](#aaps-screens-bg-warning-sign) @tanja
 - [Актуализация за помпата Medtronic](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
 - [Задължителни проверки след актуализиране до AAPS 3.0](Update3_0.md) @tanja
-- [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
+- [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
 - Актуализиране на документацията за AAPS 3.0 (частично) @xJoe
 - [Wear OS за AAPS 3.0](../WearOS/WearOsSmartwatch.md) @peterleimbach
 
@@ -112,7 +112,7 @@
 
 ## Ноември 2021 г.
 
-- Добри практики за калибриране на сензор Libre 2
+- Best practices for calibrating a Libre 2 sensor
 - [ISF](../UsefulLinks/FAQ.md) – ново описание на въздействието
 - Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - Премахнато е модифицираното приложение [Dexcom](../CompatibleCgms/DexcomG6.md), защото е остаряло
@@ -212,7 +212,7 @@
 
 ## Декември 2019 г.
 
-- [Android Auto](../RemoteFeatures/AndroidAuto.md) – настройка с екранни снимки
+- [Android Auto](../RemoteFeatures/AndroidAuto.md) - setup with screenshots
 - [Accu-Chek Insight и Autotune](#Accu-Chek-Insight-Pump-settings-in-aaps) – начин за използване
 - [Glimp](#Config-Builder-bg-source) – поддържа се версия 4.15.57 и по-нова
 - [Циферблати](../WearOS/WearOsSmartwatch.md) – голяма актуализация, много повече подробности
@@ -238,7 +238,7 @@
 ## Октомври 2019 г.
 
 - [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
-- [AccuChek Insight – опции за лог файловете](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- [Accu-Chek Insight - log options](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [Изчисляването на COB е на отделна страница](../DailyLifeWithAaps/CobCalculation.md)
 - [COB – откриване на грешна стойност на COB](#CobCalculation-detection-of-wrong-cob-values)
 - [Отстраняване на неизправности, специфични за Dexcom G6](#DexcomG6-troubleshooting-g6)
