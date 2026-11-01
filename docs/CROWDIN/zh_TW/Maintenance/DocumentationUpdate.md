@@ -34,7 +34,7 @@
 
 ## 2025年1月
 
-- [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) 版本發布與文件更新總覽（嚮導、電腦建置版本、組態建置工具）
+- [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
 - CGM 清單更新。已移除 Dexcom G5、Tomato、Glimp。
 - [部位輪替介面](#Aapsscreens-site-rotation)
 - [運行模式](#AapsScreens-running-mode)
@@ -148,7 +148,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 - Dexcom G6 與[自建Dexcom應用](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
 - Libre智慧讀取器[電池電量](#screens-sensor-level-battery)
 - [目標](#objectives-objective3) - 新問題
-- 其他 [AAPS 2.8.0 新功能](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.0)
+- Other [new AAPS 2.8.0 functions](#Releasenotes-version-2-8-0)
 
 ## 2020年12月
 
@@ -167,7 +167,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 ## 2020年9月
 
 - AAPS 2.7 版的大更新
-- 詳情請參閱[版本資訊](https://github.com/nightscout/AndroidAPS/releases/tag/2.7.0)
+- For details see the [release notes](#Releasenotes-version-2-7-0)
 
 ## 2020年6月
 
@@ -202,7 +202,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 - [延長注射](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) 功能 - 將停用關閉循環
 - 新增[本機設定外掛](../SettingUpAaps/ConfigBuilder.md)
 - 範本設定 - 更新 Dexcom G6
-- [2.6.0 版本](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-260)－重大新功能
+- [Version 2.6.0](#Releasenotes-version-2-6-0) - major new features
 - [Wear OS 複雜功能](../WearOS/WearOsSmartwatch.md)
 
 ## 2020年1月
@@ -237,7 +237,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 
 ## 2019年10月
 
-- [AAPS 2.5 版本](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-250)更新（尤其是[更新頁面](../Maintenance/UpdateToNewVersion.md)）
+- [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
 - [Accu-Chek Insight - 日誌選項](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [COB 計算在單獨頁面上](../DailyLifeWithAaps/CobCalculation.md)
 - [COB - 錯誤 COB 值偵測](#CobCalculation-detection-of-wrong-cob-values)
