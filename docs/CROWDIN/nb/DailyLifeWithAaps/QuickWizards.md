@@ -1,7 +1,7 @@
 (quickwizards)=
-# QuickWizards (one-tap boluses)
+# Hurtigknapper (bolus med ett trykk)
 
-A **QuickWizard** is a saved one-tap button for a recurring meal or situation. It carries a fixed amount of **carbs** (and how to dose for them), so you can deliver a bolus — or just log carbs — with a single tap and a confirmation, instead of opening the full bolus calculator every time.
+En **hurtigknapp** (QuickWizard) er en lagret knapp for et måltid eller en situasjon som gjentar seg, og som du bruker med ett trykk. Den har en fast mengde **karbohydrater** (og en regel for hvordan de skal doseres), så du kan gi en bolus — eller bare registrere karbohydrater — med ett trykk og en bekreftelse, i stedet for å åpne hele boluskalkulatoren hver gang.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,96 +10,96 @@ A **QuickWizard** is a saved one-tap button for a recurring meal or situation. I
 
 ---
 
-## Opening QuickWizards
+## Åpne Hurtigknapper
 
-Open the **Manage** screen (bottom navigation) and choose **QuickWizard** (*“Manage quick wizard presets”*).
-
----
-
-## Managing QuickWizards
-
-Your QuickWizards are shown as a **swipeable card carousel** (each card shows the button text, carbs and valid time range). The editor below configures the **selected** one; the bottom action bar has **➕ add**, **⧉ clone**, **🗑️ delete** and a **▶** button to run the selected QuickWizard.
-
-![The QuickWizard editor — mode, carbs, carb time and valid time range](../images/v4/QuickWizard/quickwizard_editor.png)
-
-The editor's main fields are:
-
-- **Button text** — the label shown on the button.
-- **Carbs** and **Carb Time** — the carb amount and its time offset.
-- **Valid Time Range** — see [Validity](#quickwizard_validity).
-- **Calculator Options** and **Device Selection** — see below.
+Åpne skjermen **Administrer** (navigasjonslinjen nederst) og velg **Hurtigknapp** (*«Administrer forhåndsinnstillinger for hurtigknapper»*).
 
 ---
 
-## The three modes
+## Administrere hurtigknapper
 
-The selector at the top of the editor — **Wizard / Insulin / Carbs** — decides **what the button does** when tapped:
+Hurtigknappene dine vises som en **karusell av kort du kan sveipe** (hvert kort viser knappeteksten, karbohydratene og det gyldige tidsrommet). Redigeringsfeltene under gjelder den **valgte** hurtigknappen; handlingslinjen nederst har **➕ legg til**, **⧉ dupliser**, **🗑️ slett** og en **▶**-knapp som kjører den valgte hurtigknappen.
 
-- **Wizard** — runs the full **bolus calculator** for the configured carbs, using your current **BG, IOB, COB and trend** (per the *Calculator Options* below). It delivers the *calculated* bolus and records the carbs. This is the classic quick wizard.
-- **Insulin** — delivers a **fixed, preset insulin amount** that you set — no calculation.
-- **Carbs** — records the configured **carbs only**, with **no bolus**.
+![Redigering av hurtigknapp — modus, karbohydrater, karbotid og gyldig tidsperiode](../images/v4/QuickWizard/quickwizard_editor.png)
 
----
+De viktigste feltene er:
 
-## Calculator Options (Wizard mode)
-
-For a **Wizard**-mode button you choose which inputs the calculation uses:
-
-- **Use BG**, **Use COB**, **Use IOB** (with *Positive IOB only*), **Use Trend** (*All / Positive only / Negative only*), **Use Temp Target**, **Use Alarm**.
-- **Bolus percentage** — scale the calculated bolus.
-- **Add eCarbs** — also schedule extended carbs.
-
-![Calculator Options, Bolus percentage and Device Selection](../images/v4/QuickWizard/quickwizard_options.png)
+- **Knappetekst** — teksten som vises på knappen.
+- **Karbo** og **Karbotid** — mengden karbohydrater og tidsforskyvningen for dem.
+- **Gyldig tidsperiode** — se [Gyldighet](#quickwizard_validity).
+- **Kalkulatoralternativer** og **Enhetsvalg** — se nedenfor.
 
 ---
 
-## Validity — when the button appears
+## De tre modusene
 
-(quickwizard_validity)= The **Valid Time Range** (*From / To*) controls **when** a QuickWizard is shown and usable. A button set to, say, **06:00–10:00** only appears in the morning — so a *Breakfast* QuickWizard does not clutter your screen (or get tapped by mistake) at dinner. Outside its window the button is hidden from the **Treatments** sheet and from the [QuickLaunch toolbar](QuickLaunch.md). A toolbar button is not deleted: it comes back when the window opens again.
+Velgeren øverst — **Kalkulator / Insulin / Karbo** — bestemmer **hva knappen gjør** når du trykker på den:
 
-When the valid time range is shorter than 4 hours, the button is also hidden for 30 minutes after you use it, so that the same meal is not entered twice by mistake.
+- **Kalkulator** — kjører hele **boluskalkulatoren** for de innstilte karbohydratene, med gjeldende **BS, IOB, COB og trend** (etter *Kalkulatoralternativer* nedenfor). Den gir den *beregnede* bolusen og registrerer karbohydratene. Dette er den klassiske hurtigknappen.
+- **Insulin** — gir en **fast, forhåndsinnstilt insulinmengde** som du bestemmer — ingen beregning.
+- **Karbo** — registrerer **bare de innstilte karbohydratene**, **uten bolus**.
 
 ---
 
-## Invocation points — where you use it
+## Kalkulatoralternativer (Kalkulator-modus)
 
-The **Device Selection** toggles decide where each QuickWizard appears:
+For en knapp i **Kalkulator**-modus velger du hvilke verdier beregningen skal bruke:
 
-- **Show on Phone** — it appears in the **[Treatments](../Maintenance/V4Changes.md) sheet** (with the calculated dose shown right on the button). A QuickWizard shown on the phone can also be **pinned as a quick-action button on the overview**: open *Configure QuickLaunch* (the ⚙ on the [QuickLaunch](QuickLaunch.md) toolbar) and add it from the **Quick Wizard** category.
-- **Show on Watch** — it appears on the **Wear OS QuickWizard tile** (swipe to it in the watch's tile carousel, then tap a button to run it — just like the [Scene tile](#scenes-from-watch)).
+- **Bruk BS**, **Bruk COB**, **Bruk IOB** (med *Kun positiv IOB*), **Bruk trend** (*Alle / Kun positiv / Kun negativ*), **Bruk midlertidig mål**, **Bruk alarm**.
+- **Bolusprosent** — skalerer den beregnede bolusen.
+- **Legg til eKarbo** — planlegger også utvidede karbohydrater (eCarbs).
+
+![Kalkulatoralternativer, Bolusprosent og Enhetsvalg](../images/v4/QuickWizard/quickwizard_options.png)
+
+---
+
+## Gyldighet — når knappen vises
+
+(quickwizard_validity)= **Gyldig tidsperiode** (*Fra / Til*) styrer **når** en hurtigknapp vises og kan brukes. En knapp som er satt til for eksempel **06:00–10:00**, vises bare om morgenen — så en *Frokost*-hurtigknapp fyller ikke opp skjermen (eller blir trykket på ved en feil) ved middagstid. Utenfor tidsrommet sitt er knappen skjult i arket **Behandlinger** og på [Hurtigstart-verktøylinjen](QuickLaunch.md). En knapp på verktøylinjen slettes ikke: den kommer tilbake når tidsrommet åpner igjen.
+
+Når den gyldige tidsperioden er kortere enn 4 timer, skjules knappen også i 30 minutter etter at du har brukt den, slik at det samme måltidet ikke registreres to ganger ved en feil.
+
+---
+
+## Hvor du bruker den
+
+Bryterne under **Enhetsvalg** bestemmer hvor hver hurtigknapp vises:
+
+- **Vis på telefon** — den vises i arket **[Behandlinger](../Maintenance/V4Changes.md)** (med den beregnede dosen rett på knappen). En hurtigknapp som vises på telefonen, kan også **festes som en hurtigstartsknapp i oversikten**: åpne *Konfigurer Hurtigstart* (tannhjulet ⚙ på [Hurtigstart](QuickLaunch.md)-verktøylinjen) og legg den til fra kategorien **Hurtigknapp**.
+- **Vis på klokke** — den vises på **Hurtigknapp-flisen på Wear OS** (sveip til flisen i klokkens flis-karusell, og trykk så på en knapp for å kjøre den — akkurat som med [Scene-flisen](#scenes-from-watch)).
 
 ```{admonition} Don't see Device Selection?
 :class: note
-The **Device Selection** section only appears in the editor when the **Wear** plugin is enabled and its **Wear control** preference is on. Without it, every QuickWizard simply shows on the phone.
+Delen **Enhetsvalg** vises bare i redigeringen når pluginen **Klokke** er aktivert og innstillingen **Styr fra klokke** er på. Uten den vises alle hurtigknapper rett og slett på telefonen.
 ```
 
-On the phone the QuickWizards appear at the top of the **Treatments** bottom sheet:
+På telefonen vises hurtigknappene øverst i arket **Behandlinger** nederst på skjermen:
 
-![QuickWizards (top) in the open Treatments bottom sheet](../images/v4/QuickWizard/quickwizard_in_treatments.png)
+![Hurtigknapper (øverst) i det åpne arket Behandlinger](../images/v4/QuickWizard/quickwizard_in_treatments.png)
 
-…and as a quick-action button on the overview:
+… og som en hurtigstartsknapp i oversikten:
 
-![A QuickWizard quick-action button on the overview](../images/v4/QuickWizard/quickwizard_overview.png)
+![En hurtigknapp som hurtigstartsknapp i oversikten](../images/v4/QuickWizard/quickwizard_overview.png)
 
-![The QuickWizard tile on a Wear OS watch](../images/v4/QuickWizard/quickwizard_watch_tile.png)
+![Hurtigknapp-flisen på en Wear OS-klokke](../images/v4/QuickWizard/quickwizard_watch_tile.png)
 
-A paired **client** (**AAPSClient**) can also trigger a QuickWizard — the **master** computes and delivers it (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)).
+En paret **klient** (**AAPSClient**) kan også utløse en hurtigknapp — **hovedenheten** beregner og gir den (se [Hovedenhet ↔ klientstyring](../RemoteFeatures/ClientMasterControl.md)).
 
-Wherever it is triggered, tapping a QuickWizard always shows a **confirmation** (the master-authored confirmation, when triggered from a client or watch) before anything is delivered.
+Uansett hvor den utløses fra, viser et trykk på en hurtigknapp alltid en **bekreftelse** (bekreftelsen laget av hovedenheten, når den utløses fra en klient eller klokke) før noe gis.
 
-A QuickWizard is refused when its dose is above your max bolus, or when its carbs or eCarbs are above your max carbs (for example after you lowered the limit). When the carbs are above the limit, the button in the **Treatments** sheet is disabled. Edit the QuickWizard or the limit.
+En hurtigknapp avvises når dosen er over din maksimale bolus, eller når karbohydratene eller eKarbo er over din maksimale karbohydratmengde (for eksempel etter at du har senket grensen). Når karbohydratene er over grensen, er knappen i arket **Behandlinger** deaktivert. Endre hurtigknappen eller grensen.
 
 ---
 
-## Adding and removing
+## Legge til og fjerne
 
-- **➕ Add** — create a new QuickWizard.
-- **⧉ Clone** — duplicate one as a starting point.
-- **🗑️ Delete** — remove one.
+- **➕ Legg til** — lag en ny hurtigknapp.
+- **⧉ Dupliser** — kopier en som utgangspunkt.
+- **🗑️ Slett** — fjern en.
 
-With two or more QuickWizards you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+Med to eller flere hurtigknapper kan du også endre rekkefølgen i karusellen: trykk på ikonet **Endre rekkefølge** (⇅) i linjen øverst, flytt kortet i midten med **flytteknappene ◀ / ▶**, og bekreft så med **✓**. (Kontrollene ser like ut som når du [endrer rekkefølgen på profiler](ProfileSwitch-ProfilePercentage.md).)
 
-QuickWizards are part of the synced configuration, so they are shared across your master and paired clients.
+Hurtigknapper er en del av den synkroniserte konfigurasjonen, så de deles mellom hovedenheten og parede klienter.
 
 ---
 
