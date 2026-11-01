@@ -134,7 +134,7 @@ L'injection d'insuline est arrêtée. Agissez tout de suite :
 * **Insuline faible** : il reste moins de 10 U. Désactivez le patch et changez-le.
 * **Patch expiré** : le patch est arrivé en fin de vie. Désactivez le patch et changez-le.
 * **Batterie faible** : jetez le patch et changez-le.
-* **Température haute/basse** : allez dans un endroit à température adaptée, entre 40 ℉ et 99 ℉ (5 ℃ et 37 ℃).
+* **High/Low Temperature**: move to a suitable temperature, between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
 * **Arrêt automatique** : le patch s'est arrêté car l'alerte Arrêt automatique a été ignorée. Appuyez sur **Démarrer l'insuline** pour relancer l'injection basale.
 * **Délai de pose du patch dépassé**, **Échec de l'autodiagnostic**, **Erreur du patch**, **Occlusion** et **Erreur d'insertion de l'aiguille** : désactivez le patch et changez-le.
 
@@ -145,7 +145,7 @@ L'injection d'insuline continue, mais quelque chose demande votre attention :
 * **Insuline faible** : le réservoir a atteint la quantité réglée dans **Réglage de la notification d'insuline faible**. Préparez le changement du patch.
 * **Le patch va bientôt expirer** et **Durée de vie du patch expirée** : changez le patch.
 * **Batterie faible** : préparez le changement du patch.
-* **Température haute/basse** : l'injection est en pause jusqu'à ce que le patch soit de nouveau entre 40 ℉ et 99 ℉.
+* **High/Low Temperature**: delivery is paused until the patch is back between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
 * **Arrêt automatique** : touchez **OK**. Si elle est ignorée, l'alerte devient une alarme critique et l'injection s'arrête.
 * **Activation du patch incomplète** : touchez **OK** pour terminer l'activation.
 * **Démarrer l'insuline** : la pause que vous avez réglée est terminée. Touchez **Démarrer l'insuline** pour reprendre l'injection.
