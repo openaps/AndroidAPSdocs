@@ -29,7 +29,7 @@ Prijímanie údajov z Nightscoutu (zmeny profilu, ošetrenia, ...) je voliteľn�
 
 #### Nesynchronizovať z Nightscoutu
 
-Ak necháte všetky možnosti „Prijímať ... z NS“ vypnuté, AAPS nepoužije žiadnu zmenu z Nightscoutu:
+Keeping all the "Receive … from NS" options disabled makes sure no Nightscout change will be used by AAPS:
 
 ![Iba nahrávanie do Nightscoutu](../images/preferences/settings_nsclient_sync.png)
 
