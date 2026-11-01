@@ -75,13 +75,13 @@ Podczas konfiguracji AAPS do pracy z pompą Medtronic musisz ustawić następuj�
 
 - **Numer seryjny pompy**: Wyświetlany na odwrocie pompy i zaczyna się od SN. Wpisz tylko 6 pokazanych cyfr, bez liter (np. 123456).
 - **Typ pompy**: Model pompy, której używasz (np. 522). 
-- **Częstotliwość pompy**: Są dwie możliwości, w zależności od tego, gdzie twoja pompa była pierwotnie sprzedawana. Sprawdź [FAQ](#MedtronicPump-faq), jeśli nie wiesz, którą opcję wybrać): 
+- **Częstotliwość pompy**: Są dwie możliwości, w zależności od tego, gdzie twoja pompa była pierwotnie sprzedawana. Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select: 
     - for US & Canada, frequency used is 916 MHz
     - for Worldwide, frequency used is 868 MHz
 - **Max dawka bazowa w pompie (U/h)**: To ustawienie musi zgadzać się z ustawieniem w pompie (zobacz konfigurację pompy powyżej). Tę wartość też trzeba wybrać ostrożnie, bo określa, ile insuliny AAPS może podać przez dawkę bazową. W praktyce ustawia to maksymalną dawkę bazy tymczasowej. Przykład: ustawienie tej wartości na cztery razy więcej niż twoja największa standardowa dawka bazowa pozwoli na bazę tymczasową 400%. Maksymalna wartość dozwolona przez pompę to 34,9 jednostki na godzinę.
 - **Max bolus w pompie (U)** (w ciągu godziny): To ustawienie musi zgadzać się z ustawieniem na pompie (zobacz konfigurację pompy powyżej). To ustawienie powinno być starannie wybrane, ponieważ będzie ono określać jak duży bolus może dostarczyć AAPS.
 - **Opóźnienie przed rozpoczęciem bolusa(s)**: Liczba sekund od zlecenia bolusa do chwili, gdy polecenie zostanie naprawdę wysłane do pompy. Ten okres pozwala użytkownikowi na anulowanie bolusa w przypadku gdy polecenie zostało wysłane przez pomyłkę. Nie można anulować przez AAPS bolusa, który już się zaczął. Jedyny sposób, aby anulować bolus, który już się zaczął, to ręcznie zawiesić pompę, a potem ją wznowić.
-- **Kodowanie Medtronic**: Określa czy jest przeprowadzane kodowanie Medtronic. Zalecane jest kodowanie sprzętowe (czyli wykonywane przez urządzenie kompatybilne z RileyLink), bo wtedy wysyłanych jest mniej danych. Wybranie kodowania programowego (czyli wykonywanego przez AAPS) może pomóc, gdy połączenie często się zrywa. To ustawienie zostanie pominięte, jeśli urządzenie RileyLink ma oprogramowanie w wersji 0.x.
+- **Medtronic Encoding**: Determines where the Medtronic encoding is carried out (hardware or software). Zalecane jest kodowanie sprzętowe (czyli wykonywane przez urządzenie kompatybilne z RileyLink), bo wtedy wysyłanych jest mniej danych. Wybranie kodowania programowego (czyli wykonywanego przez AAPS) może pomóc, gdy połączenie często się zrywa. To ustawienie zostanie pominięte, jeśli urządzenie RileyLink ma oprogramowanie w wersji 0.x.
 - **Typ baterii (podgląd mocy)**: Aby prawidłowo określić pozostały poziom baterii, wybierz typ używanej baterii AAA. Gdy wybrana jest opcja inna niż widok prosty, AAPS wyświetli pozostały oszacowany poziom baterii i napięcie. Dostępne są poniższe opcje:
     
     - Nie wybrany (widok prosty)
