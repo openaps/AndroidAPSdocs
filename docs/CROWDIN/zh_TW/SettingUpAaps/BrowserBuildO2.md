@@ -1,43 +1,43 @@
 (aaps-ci-option2)=
 
-# Option 2 – Upload your existing keystore
+# 選項 2 – 上傳現有的金鑰庫
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation) and downloaded the preparation file.
+這是[瀏覽器建置](BrowserBuild.md)的[步驟 2 – 建立簽署用金鑰庫](BrowserBuildKeystore.md)的一部分。請確認您已閱讀[選項 1 或選項 2 的選擇說明](#aaps-ci-preparation)，並已下載準備檔案。
 ```
 
-Option 2 reuses the JKS you already created on a previous build of AAPS from a computer in Android Studio. It is suitable for users who already have a JKS and know the JKS password and alias.
+選項 2 會沿用您先前使用電腦上的 Android Studio 建置 AAPS 時所建立的 JKS。適合已有 JKS，且知道 JKS 密碼和別名的使用者。
 
-For `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`, enter your actual password and alias in GitHub – those from Android Studio, see below where you used them.
+在 GitHub 中，請於 `KEYSTORE_PASSWORD`、`KEY_ALIAS` 和 `KEY_PASSWORD` 欄位填入您實際使用的密碼和別名，也就是您在 Android Studio 中使用的內容。請參閱下方的說明。
 
 ```{warning}
-**Passwords with special characters.** Enter your passwords exactly as they are. Do not add a backslash or any other escape character: the build workflow keeps every character intact, and an added backslash becomes part of the password.
+**包含特殊字元的密碼。**請照原樣輸入密碼。請勿加入反斜線或其他跳脫字元：建置工作流程會保留每個字元，您額外加入的反斜線會成為密碼的一部分。
 
-If the build still fails at the signing step and your password contains `$`, a backtick, `"` or `\`, the workflow file in your fork is outdated. [Sync your fork](#Update-to-new-version-update-your-repo) with the latest dev and re-run the build. See [Browser build troubleshooting](#aaps-ci-password-special-characters).
+如果建置仍在簽署步驟失敗，而且您的密碼包含 `$`、反引號、`"` 或 `\`，代表您 fork 中的工作流程檔案已過時。請使用最新的 dev 更新您的 fork（[同步您的 fork](#Update-to-new-version-update-your-repo)），然後重新執行建置。請參閱[瀏覽器建置疑難排解](#aaps-ci-password-special-characters)。
 ```
 
 ```{admonition} KEY + PASSWORDS
 :class: dropdown
 
-![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+![記住密碼](../images/Building-the-App/044_RememberPwd.png)
 ```
 
-## Choose your device
+## 選擇您的裝置
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+要使用 **Android 手機**進行建置嗎？請改用 [AAPS Builder](BrowserBuildAapsBuilder.md)：它不需要準備檔案。
 ```
 
-Follow the page that matches the device you are building from:
+請按照符合您用來進行建置之裝置的說明頁面操作：
 
-- **[Computer](BrowserBuildO2Computer.md)** – Windows, Mac or Linux.
+- **[電腦](BrowserBuildO2Computer.md)** – Windows、Mac 或 Linux。
 
 ```{tip}
-You can switch device at any time – just open the matching page.
+您可以隨時更換裝置，只要開啟相符的說明頁面即可。
 ```
 
 ```{toctree}
 :hidden:
 
-Computer <BrowserBuildO2Computer.md>
+電腦 <BrowserBuildO2Computer.md>
 ```

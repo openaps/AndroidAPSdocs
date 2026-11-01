@@ -1,341 +1,341 @@
-# Set up AAPS on your Wear OS watch
+# Configurar o AAPS no seu relógio Wear OS
 
-The instructions below apply to the **AAPS Wear** apk that you need to build. If you haven’t built it yet, see the linked guide [here](../WearOS/BuildingAapsWearOS.md). When building, make sure to use the same keystore file that you used for the phone **AAPS** apk.
+As instruções abaixo valem para o apk do **AAPS Wear** que você precisa compilar. Se você ainda não o compilou, veja o guia [aqui](../WearOS/BuildingAapsWearOS.md). Na compilação, use o mesmo arquivo keystore que você usou para o apk do **AAPS** do telefone.
 
-You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk. Each **Wear** app will communicate with its matching phone app. For example: the **AAPSClient Wear** app can be used to display **AAPSClient** data and not **AAPS** data. When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles carry a small header in that flavor's accent colour so you can tell them apart while swiping.
+Você também pode usar parte destas informações para o apk **Wear** do **AAPSClient** e do **PumpControl**. Cada app **Wear** se comunica com o app do telefone correspondente. Por exemplo: o app **AAPSClient Wear** pode ser usado para mostrar os dados do **AAPSClient**, e não os dados do **AAPS**. Quando várias variantes do cliente (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) estão instaladas lado a lado, os blocos de cada uma têm um pequeno cabeçalho na cor de destaque dessa variante, para você poder diferenciá-las ao deslizar.
 
-## Wear OS Versions and compatibility
+## Versões do Wear OS e compatibilidade
 
 (wearos-watchface-changes)=
 
-### Wear OS watch face changes (impact on AAPS watchfaces)
+### Mudanças nos mostradores do Wear OS (impacto nos mostradores do AAPS)
 
 ```{admonition} Why newer Wear OS watches break AAPS watchfaces
 :class: warning
 
-In June 2025 Google [announced changes](https://android-developers.googleblog.com/2025/06/upcoming-changes-to-wear-os-watch-faces.html) that phase out the legacy watch face engine (the AndroidX / Wearable Support Library, or "WSL", engine) in favour of the newer declarative **Watch Face Format**. The **AAPS** custom watchfaces are built on the legacy engine, so the newer the Wear OS version, the more likely an AAPS watchface is to misbehave or stop working.
+Em junho de 2025, o Google [anunciou mudanças](https://android-developers.googleblog.com/2025/06/upcoming-changes-to-wear-os-watch-faces.html) que eliminam aos poucos o mecanismo antigo de mostradores (o mecanismo AndroidX / Wearable Support Library, ou "WSL") e o substituem pelo novo formato declarativo **Watch Face Format**. Os mostradores personalizados do **AAPS** são feitos com o mecanismo antigo. Por isso, quanto mais nova a versão do Wear OS, maior a chance de um mostrador do AAPS funcionar mal ou parar de funcionar.
 
-This affects the **watchfaces** specifically — AAPS **complications**, tiles and remote-control functions are not impacted. It is also why **a firmware/system update on a Wear OS watch can break AAPS watchfaces**, and a watch cannot be rolled back to an older Wear OS version afterwards. If your AAPS watchface currently works, **disable automatic watch updates**.
+Isso afeta especificamente os **mostradores** — as **complicações**, os blocos e as funções de controle remoto do AAPS não são afetados. É também por isso que **uma atualização de firmware/sistema em um relógio Wear OS pode quebrar os mostradores do AAPS**, e depois não é possível voltar o relógio para uma versão mais antiga do Wear OS. Se o seu mostrador do AAPS funciona agora, **desative as atualizações automáticas do relógio**.
 ```
 
-The table below summarises how Google's change affects the AAPS (legacy-engine) watchfaces by Wear OS version:
+A tabela abaixo resume como a mudança do Google afeta os mostradores do AAPS (mecanismo antigo) em cada versão do Wear OS:
 
-| Wear OS version         | Base Android | API level | Impact on AAPS (legacy) watchfaces                                                                                                                                                          |
-| ----------------------- | ------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Wear OS 6               | Android 16   | 36        | **Legacy watchfaces no longer available** — AAPS installs a [Watch Face Format watchface](#wearos-aaps-v4-watchface) instead: your custom watchface, or the AAPS V4 complications watchface |
-| Wear OS 5               | Android 14   | 34        | **Severe** — active (interactive) mode often fails, complications freeze, animations stop                                                                                                   |
-| Wear OS 4               | Android 13   | 33        | **Moderate** — throttling, missed updates, partial failures                                                                                                                                 |
-| Wear OS 3.0 / 3.2 / 3.5 | Android 11   | 30        | **Low** — legacy engine still supported                                                                                                                                                     |
+| Versão do Wear OS       | Android base | Nível de API | Impacto nos mostradores (antigos) do AAPS                                                                                                                                                                               |
+| ----------------------- | ------------ | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Wear OS 6               | Android 16   | 36           | **Mostradores antigos não estão mais disponíveis** — o AAPS instala no lugar deles um [mostrador no Watch Face Format](#wearos-aaps-v4-watchface): o seu mostrador personalizado ou o mostrador de complicações AAPS V4 |
+| Wear OS 5               | Android 14   | 34           | **Grave** — o modo ativo (interativo) falha com frequência, as complicações congelam, as animações param                                                                                                                |
+| Wear OS 4               | Android 13   | 33           | **Moderado** — limitação de atualizações, atualizações perdidas, falhas parciais                                                                                                                                        |
+| Wear OS 3.0 / 3.2 / 3.5 | Android 11   | 30           | **Baixo** — o mecanismo antigo ainda é compatível                                                                                                                                                                       |
 
-If your watch runs a version where AAPS watchfaces are unreliable, you can instead display AAPS data through **complications** on a compatible watchface, or use [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication, fed by the [External Companion Apps](#external-companion-apps) plugin of **AAPS**. On **Wear OS 6 and newer**, AAPS installs a replacement watchface built in the new format — see below.
+Se o seu relógio tem uma versão em que os mostradores do AAPS não são confiáveis, você pode mostrar os dados do AAPS por meio de **complicações** em um mostrador compatível, ou usar o [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) com uma complicação, alimentado pelo plugin [Apps companheiros externos](#external-companion-apps) do **AAPS**. No **Wear OS 6 e mais novo**, o AAPS instala um mostrador substituto feito no novo formato — veja abaixo.
 
 (wearos-aaps-v4-watchface)=
 
-### Wear OS 6 and newer — the watchface AAPS installs
+### Wear OS 6 e mais novo — o mostrador que o AAPS instala
 
-Watches running **Wear OS 6 or newer** cannot run the classic AAPS watchfaces as watchfaces. For these watches the AAPS watch app brings two watchfaces built in Google's new **Watch Face Format**. Wear OS lets an app install only **one** watchface, so you choose which of the two is on the watch:
+Relógios com **Wear OS 6 ou mais novo** não conseguem usar os mostradores clássicos do AAPS como mostradores. Para esses relógios, o app do AAPS no relógio traz dois mostradores feitos no novo **Watch Face Format** do Google. O Wear OS permite que um app instale apenas **um** mostrador, então você escolhe qual dos dois fica no relógio:
 
-- **Custom watchface** (default): shows the custom watchface you loaded from the phone with **Load Watchface** (see [Changing to an AAPS Watchface](#WearOS_changing-to-AAPS-watchface)). The watch draws your design as a picture, so every existing custom watchface works. The complication slots a custom watchface may define are **not available** in this picture, because Wear OS only delivers complication data to a real watchface. Long-press the face to reach its one setting: whether the always-on display shows a plain clock or your own design, dimmed.
-- **Complications watchface** (the **AAPS V4** watchface): its **seven complication slots** come **preconfigured with AAPS data**: BG value, IOB, COB, the [BG Graph complication](#Watchfaces-complications), basal rate / temp target, and the **Running Mode** icon in the top-left slot (tap it to change the loop mode from the watch). Tap the time at the top to open the watch's alarm app. You can change what each slot shows in the watch face editor.
+- **Mostrador personalizado** (padrão): mostra o mostrador personalizado que você carregou no telefone com **Carregar Watchface** (veja [Mudar para um mostrador do AAPS](#WearOS_changing-to-AAPS-watchface)). O relógio desenha o seu design como uma imagem, então todos os mostradores personalizados existentes funcionam. Os espaços de complicação que um mostrador personalizado pode definir **não estão disponíveis** nesta imagem, porque o Wear OS só entrega dados de complicações a um mostrador de verdade. Toque e segure no mostrador para abrir a sua única configuração: se a tela sempre ativa mostra um relógio simples ou o seu próprio design, escurecido.
+- **Mostrador de complicações** (o mostrador **AAPS V4**): os seus **sete espaços de complicação** já vêm **configurados com dados do AAPS**: valor de glicemia, IOB, COB, a [complicação Gráfico de BG](#Watchfaces-complications), taxa basal / alvo temporário e o ícone **Modo de operação** no espaço superior esquerdo (toque nele para mudar o modo do loop pelo relógio). Toque na hora, no alto, para abrir o app de alarmes do relógio. Você pode mudar o que cada espaço mostra no editor do mostrador.
 
-You choose on the phone: open the **Wear** plugin and, under **Watchface installed on watch**, select one of the two. This card is only shown while a Wear OS 6 or newer watch is connected. **AAPS** asks you to confirm, because the watch replaces its face immediately. Switching away from the **Complications watchface** also resets the complications you changed in the watch face editor back to the defaults, and the confirmation says so. While the **Complications watchface** is selected, the custom watchface buttons are hidden and a preview of the face is shown instead. If you load a custom watchface while the **Complications watchface** is selected, **AAPS** reminds you to switch to **Custom watchface** to see it on the watch.
+Você escolhe no telefone: abra o plugin **Wear** e, em **Mostrador instalado no relógio**, selecione um dos dois. Este cartão só aparece enquanto um relógio com Wear OS 6 ou mais novo está conectado. O **AAPS** pede que você confirme, porque o relógio troca o mostrador na hora. Ao sair do **Mostrador de complicações**, as complicações que você mudou no editor do mostrador também voltam ao padrão, e a confirmação avisa isso. Enquanto o **Mostrador de complicações** está selecionado, os botões do mostrador personalizado ficam ocultos e, no lugar deles, aparece uma prévia do mostrador. Se você carregar um mostrador personalizado enquanto o **Mostrador de complicações** está selecionado, o **AAPS** lembra você de mudar para **Mostrador personalizado** para vê-lo no relógio.
 
-- The selected watchface is **installed and activated automatically** the first time the AAPS watch app runs on such a watch, and it is **updated automatically** together with the watch app.
-- If you removed the watchface, an **Install watchface** entry appears at the bottom of the watch's AAPS **main menu** — tap it to reinstall.
+- O mostrador selecionado é **instalado e ativado automaticamente** na primeira vez que o app do AAPS roda nesse relógio, e é **atualizado automaticamente** junto com o app do relógio.
+- Se você removeu o mostrador, aparece um item **Instalar mostrador** no fim do **menu principal** do AAPS no relógio — toque nele para reinstalar.
 
-While a watch running Wear OS 5 or older is connected, the **Watchface installed on watch** card is not shown at all (the mechanism it relies on requires Wear OS 6); the classic watchfaces run there as before.
+Enquanto um relógio com Wear OS 5 ou mais antigo está conectado, o cartão **Mostrador instalado no relógio** não aparece (o mecanismo que ele usa precisa do Wear OS 6); lá os mostradores clássicos funcionam como antes.
 
 (wearos-complications-watchface-setup)=
 
-### Complications watchface — recommended setup
+### Mostrador de complicações — configuração recomendada
 
-The **Complications watchface** has seven complication slots. Long-press the watchface, tap **Customize**, and pick a data source for each slot. The slots are numbered as in the watch face editor: **1** left, **2** centre, **3** right, **4** the graph, **5** bottom, **6** top-left and **7** top-right.
+O **Mostrador de complicações** tem sete espaços de complicação. Toque e segure no mostrador, toque em **Customize** (Personalizar) e escolha uma fonte de dados para cada espaço. Os espaços são numerados como no editor do mostrador: **1** à esquerda, **2** no centro, **3** à direita, **4** o gráfico, **5** embaixo, **6** no alto à esquerda e **7** no alto à direita.
 
-| Default setup                                                                                   | Alternative setup                                                                                       |
-| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| ![Complications watchface, default setup](../images/wearos/complications_watchface_default.png) | ![Complications watchface, alternative setup](../images/wearos/complications_watchface_alternative.png) |
+| Configuração padrão                                                                                     | Configuração alternativa                                                                                         |
+| ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| ![Mostrador de complicações, configuração padrão](../images/wearos/complications_watchface_default.png) | ![Mostrador de complicações, configuração alternativa](../images/wearos/complications_watchface_alternative.png) |
 
-| Slot | Position  | Default                                                             | Alternative                           |
-| ---- | --------- | ------------------------------------------------------------------- | ------------------------------------- |
-| 1    | Left      | IoB Icon                                                            | CoB & IoB                             |
-| 2    | Centre    | Blood Glucose                                                       | Blood Glucose                         |
-| 3    | Right     | CoB Icon                                                            | BR & Target                           |
-| 4    | Graph     | BG Graph                                                            | BG Graph                              |
-| 5    | Bottom    | BR & Target                                                         | Uploader/Phone Battery                |
-| 6    | Top-left  | Running mode                                                        | Running mode                          |
-| 7    | Top-right | Uploader/Phone Battery, or an app shortcut to **AAPS Snooze Alert** | App shortcut to **AAPS Snooze Alert** |
+| Espaço | Posição           | Padrão                                                                                        | Alternativa                                  |
+| ------ | ----------------- | --------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| 1      | Esquerda          | Ícone de IOB                                                                                  | COB & IOB                                    |
+| 2      | Centro            | Glicemia                                                                                      | Glicemia                                     |
+| 3      | Direita           | Ícone de COB                                                                                  | BR & alvo                                    |
+| 4      | Gráfico           | Gráfico de BG                                                                                 | Gráfico de BG                                |
+| 5      | Inferior          | BR & alvo                                                                                     | Bateria do dispositivo de upload/telefone    |
+| 6      | Superior esquerdo | Modo de operação                                                                              | Modo de operação                             |
+| 7      | Superior direito  | Bateria do dispositivo de upload/telefone, ou um atalho de app para **Alerta de Soneca AAPS** | Atalho de app para **Alerta de Soneca AAPS** |
 
-The **AAPS Snooze Alert** shortcut is picked from the watch's own **App shortcut** complications. Tapping it snoozes the alarm that is sounding on the phone.
+O atalho **Alerta de Soneca AAPS** é escolhido nas complicações **App shortcut** (Atalho de app) do próprio relógio. Ao tocar nele, você silencia o alarme que está tocando no telefone.
 
 ```{tip}
-Turn on **Always-on display** on the watch (**Settings** > **Display**). The watchface then keeps showing your glucose when the wrist is down, instead of a blank or a plain clock.
+Ative a **Always-on display** (tela sempre ativa) no relógio (**Settings** (Configurações) > **Display** (Tela)). Assim o mostrador continua mostrando a sua glicose quando o pulso está abaixado, em vez de uma tela vazia ou de um relógio simples.
 ```
 
 ```{admonition} No complication data while the watch is locked
 :class: note
-If a **Lock type** is set under **Settings** > **Security and privacy**, the watch hides complication data while it is locked, and the watchface shows empty slots until you unlock it. To keep the data visible, turn off **Hide information** in the same menu.
+Se um **Lock type** (tipo de bloqueio) estiver definido em **Settings** (Configurações) > **Security and privacy** (Segurança e privacidade), o relógio esconde os dados das complicações enquanto está bloqueado, e o mostrador mostra espaços vazios até você desbloqueá-lo. Para manter os dados visíveis, desative **Hide information** (Ocultar informações) no mesmo menu.
 ```
 
 ### Wear OS 3
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (described below) or ADB.  
-No limitation in **AAPS Wear** operations.
+Instale o apk do **AAPS Wear** usando o [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), o Easy Fire Tools (descrito abaixo) ou o ADB.  
+Nenhuma limitação no uso do **AAPS Wear**.
 
 (BuildingAapsWearOs-WearOS5)=
 
-### Wear OS 4 and Wear OS 5
+### Wear OS 4 e Wear OS 5
 
-Example: Galaxy Watch 4, 5, 6, 7 and Ultra or Pixel Watch that have **not** been updated to Wear OS 6 yet. Check the version under **Settings** > **About watch** > **Software**.
+Exemplo: Galaxy Watch 4, 5, 6, 7 e Ultra ou Pixel Watch que **ainda não** foram atualizados para o Wear OS 6. Verifique a versão em **Settings** (Configurações) > **About watch** (Sobre o relógio) > **Software**.
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) (for Wear OS 5 follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk)). All **AAPS Wear** functions work, but the classic **AAPS** watchfaces are limited as described in the table above: throttled on Wear OS 4, often failing on Wear OS 5.
+Instale o apk do **AAPS Wear** usando o [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) (para o Wear OS 5, siga [este vídeo](https://www.youtube.com/watch?v=yef_qGvcCnk)). Todas as funções do **AAPS Wear** funcionam, mas os mostradores clássicos do **AAPS** são limitados, como descrito na tabela acima: atualizações limitadas no Wear OS 4, falhas frequentes no Wear OS 5.
 
 ```{admonition} Wear OS 5
 :class: warning
-On Wear OS 5 the AAPS watchface has to be selected with Wear Installer 2 right after installing the Wear app: the installer offers the **AAPS (Custom)** watchface at the end of the installation. If you accidentally switch to another watchface, repeat the installation. Changing the watchface settings (Dark, Watchdivider, etc.) may not be possible.
+No Wear OS 5, o mostrador do AAPS precisa ser selecionado com o Wear Installer 2 logo depois de instalar o app Wear: o instalador oferece o mostrador **AAPS (Custom)** no fim da instalação. Se você mudar para outro mostrador sem querer, repita a instalação. Talvez não seja possível mudar as configurações do mostrador (Escuro, Watchdivider etc.).
 
-If the classic watchface currently works for you, **disable automatic watch updates**: the next firmware update is likely to break it. If you update to Wear OS 6 anyway, read the section above: **AAPS** then installs its own watchface in the new format.
+Se o mostrador clássico funciona para você agora, **desative as atualizações automáticas do relógio**: a próxima atualização de firmware provavelmente vai quebrá-lo. Se mesmo assim você atualizar para o Wear OS 6, leia a seção acima: o **AAPS** então instala o seu próprio mostrador no novo formato.
 ```
 
-If the watchface is too unreliable, consider [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication instead. It needs the [External Companion Apps](#external-companion-apps) plugin enabled in **AAPS**.
+Se o mostrador não for confiável o suficiente, considere usar o [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) com uma complicação. Ele precisa do plugin [Apps companheiros externos](#external-companion-apps) ativado no **AAPS**.
 
-### Wear OS 6 and newer
+### Wear OS 6 e mais novo
 
-Example: Galaxy Watch 4 and newer with One UI 8 Watch, Pixel Watch after the 2025 update. Most Galaxy and Pixel watches have received this update.
+Exemplo: Galaxy Watch 4 e mais novos com One UI 8 Watch, Pixel Watch depois da atualização de 2025. A maioria dos relógios Galaxy e Pixel já recebeu essa atualização.
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). The classic watchfaces are not available; **AAPS** installs the watchface selected on the phone automatically, see [the watchface AAPS installs](#wearos-aaps-v4-watchface). No limitation in **AAPS Wear** operations.
+Instale o apk do **AAPS Wear** usando o [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). Os mostradores clássicos não estão disponíveis; o **AAPS** instala automaticamente o mostrador selecionado no telefone, veja [o mostrador que o AAPS instala](#wearos-aaps-v4-watchface). Nenhuma limitação no uso do **AAPS Wear**.
 
-## How to set up a Samsung Galaxy Watch 4 smartwatch with **AAPS**
+## Como configurar um smartwatch Samsung Galaxy Watch 4 com o **AAPS**
 
-This section assumes you are totally new to Smartwatches, and gives you basic orientation of a popular watch, the **Galaxy Watch 4**, followed by a step-by-step guide to setup **AAPS** on the watch.
+Esta seção é para quem nunca usou um smartwatch. Ela dá uma orientação básica sobre um relógio popular, o **Galaxy Watch 4**, e depois um guia passo a passo para configurar o **AAPS** no relógio.
 
-_This guide was written for a Galaxy Watch running Wear OS 3._ On Wear OS 4 and later the watch asks for a **pairing code** when a phone or computer connects over ADB. Wear Installer 2 and the terminal procedure [below](#BuildingAapsWearOs-WearOS5-TShoot) both support it.
+_Este guia foi escrito para um Galaxy Watch com Wear OS 3._ No Wear OS 4 e mais novos, o relógio pede um **código de pareamento** quando um telefone ou computador se conecta por ADB. O Wear Installer 2 e o procedimento pelo terminal [abaixo](#BuildingAapsWearOs-WearOS5-TShoot) suportam isso.
 
-Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
+Aqui estão guias básicos de configuração para o [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) e o [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
 
-## Basic smartwatch familiarity
+## Primeiros passos com o smartwatch
 
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable" “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
+Depois da configuração básica do seu relógio, como no vídeo acima, abra a Play Store no telefone e baixe os seguintes apps: "Galaxy Wearable", “Samsung” e “Easy Fire tools” ou "Wear Installer 2".
 
-There are plenty of 3rd party YouTube videos which will help you with getting familiar with your new smartwatch, for example:
+Há muitos vídeos de terceiros no YouTube que ajudam você a conhecer o seu novo smartwatch, por exemplo:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-The app “Galaxy Wearable” also has an instruction manual section in it. Open galaxy wearable on the phone, search for the watch, attempt to pair the watch with the phone. Depending on your version, this may prompt you to install a further 3rd app “galaxy watch 4 plugin” from the playstore (takes a while to download). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Go through a series of menus and tick various preferences.
+O app “Galaxy Wearable” também tem uma seção com o manual de instruções. Abra o Galaxy Wearable no telefone, procure o relógio e tente parear o relógio com o telefone. Dependendo da sua versão, ele pode pedir para você instalar mais um app, o “galaxy watch 4 plugin”, da Play Store (o download demora um pouco). Instale-o no telefone e depois tente parear o relógio e o telefone de novo no app Wearable. Passe por uma série de menus e marque várias preferências.
 
-## Setting up a Samsung account
+## Configurar uma conta Samsung
 
-You need to make sure that the email account you use to set up the Samsung account has a date-of-birth such that the user is age 13+, as otherwise the Samsung permissions are really difficult to approve. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 364 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account.
+A conta de e-mail que você usa para configurar a conta Samsung precisa ter uma data de nascimento em que o usuário tenha 13 anos ou mais. Se não, é muito difícil aprovar as permissões da Samsung. Se você deu ao seu filho com menos de 13 anos uma conta Gmail e usa esse endereço de e-mail, não é possível simplesmente mudá-la para uma conta de adulto. Uma forma de contornar isso é mudar a data de nascimento atual para que a idade atual seja 12 anos e 364 dias. No dia seguinte, a conta vai ser convertida em conta de adulto e você pode continuar a configuração da conta Samsung.
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
-## Transferring the **AAPS** Wear app onto your **AAPS** phone
+## Transferir o app Wear do **AAPS** para o seu telefone com o **AAPS**
 
-Loading the Wear.apk from Android Studio to your phone can be done either by:
+Você pode levar o Wear.apk do Android Studio para o seu telefone de duas formas:
 
-a)  using a USB cable to put the **AAPS** wear apk file onto the phone, and then “side-load” it to the watch. Transfer Wear.apk to the phone via USB into the downloads folder; or
+a) usando um cabo USB para colocar o arquivo apk do Wear do **AAPS** no telefone e depois instalá-lo no relógio por “side-load” (instalação manual). Transfira o Wear.apk para o telefone por USB, para a pasta de downloads; ou
 
-b)  cut and paste Wear.apk from Android Studio onto your Gdrive.
+b) recorte e cole o Wear.apk do Android Studio no seu Google Drive.
 
 
-To side-load AAPS onto the watch You can use either: 1) Wear Installer 2 2) Easy Fire tools 3) Android Debug Bridge (ADB) Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained. If Wear Installer 2 does not work for you, try Easy Fire Tools or ADB, both described below.
+Para instalar o AAPS no relógio por side-load, você pode usar: 1) Wear Installer 2 2) Easy Fire tools 3) Android Debug Bridge (ADB) Aqui recomendamos o Wear Installer 2, porque as instruções e o processo no vídeo são muito claros e bem explicados. Se o Wear Installer 2 não funcionar para você, tente o Easy Fire Tools ou o ADB, ambos descritos abaixo.
 
-### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
+### Usar o Wear Installer 2 para instalar o **AAPS** Wear do telefone no relógio por side-load
 
- ![Wear Installer 2 app icon](../images/wearos/wear_installer2_icon.png)
+ ![Ícone do app Wear Installer 2](../images/wearos/wear_installer2_icon.png)
 
-Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
+O Wear Installer 2, desenvolvido por [Malcolm Bryant](https://www.youtube.com/@Freepoc), pode ser baixado do Google Play no seu telefone e pode ser usado para instalar o app Wear do AAPS no relógio por side-load. O app tem um [vídeo](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) prático sobre ‘como fazer o side-load’.
 
 ```{tip}
-For Wear OS 5 watches follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk).
-See troubleshooting tips [below](#BuildingAapsWearOs-WearOS5-TShoot).
+Para relógios com Wear OS 5, siga [este vídeo](https://www.youtube.com/watch?v=yef_qGvcCnk).
+Veja as dicas de resolução de problemas [abaixo](#BuildingAapsWearOs-WearOS5-TShoot).
 ```
 
-This provides all the necessary detail (best to open the video on a separate device so you can watch it while setting up the phone).
+Ele dá todos os detalhes necessários (é melhor abrir o vídeo em outro dispositivo para poder assisti-lo enquanto configura o telefone).
 
-As mentioned in the video, once complete, switch ADB debugging off on the watch, to avoid draining the smartwatch battery.
+Como dito no vídeo, quando terminar, desligue o ADB debugging (depuração ADB) no relógio, para não gastar a bateria do smartwatch.
 
-Alternatively, but not for Wear OS 5, you can:
+Como alternativa, mas não para o Wear OS 5, você pode:
 
-### Use Easy Fire tools to side-load the **AAPS** wear on the watch
+### Usar o Easy Fire tools para instalar o **AAPS** Wear no relógio por side-load
 
-1)   Download _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_ from the Play Store onto phone
+1) Baixe o _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_ da Play Store no telefone
 
-![image](../images/wearos/easyfire01.png)
+![imagem](../images/wearos/easyfire01.png)
 
-2)  Make yourself a developer in the watch (once set up and connected to phone):
+2) Torne-se desenvolvedor no relógio (depois de configurá-lo e conectá-lo ao telefone):
 
-Go to **Settings** > **System** > **About** > **Versions** (the menu names vary between watch brands — on some watches it is **About watch** > **Software info** > **Software version**).
+Vá em **Settings** (Configurações) > **System** (Sistema) > **About** (Sobre) > **Versions** (Versões) (os nomes dos menus mudam conforme a marca do relógio — em alguns relógios é **About watch** (Sobre o relógio) > **Software info** (Informações do software) > **Software version** (Versão do software)).
 
-![image](../images/wearos/easyfire02.png)
+![imagem](../images/wearos/easyfire02.png)
 
-Rapidly tap on **Build number** (or **Software version**) several times until a message tells you that you are now a developer.
+Toque rapidamente várias vezes em **Build number** (Número da versão) (ou **Software version**) até uma mensagem dizer que agora você é desenvolvedor.
 
-![image](../images/wearos/easyfire03.png)
+![imagem](../images/wearos/easyfire03.png)
 
-Go back to **Settings** > **System**: a new **Developer options** menu is now shown.
+Volte para **Settings** (Configurações) > **System** (Sistema): agora aparece um novo menu **Developer options** (Opções do desenvolvedor).
 
-In **Developer options**, turn on **ADB debugging** and **Wireless debugging**, and confirm the prompts. Wireless debugging then shows the watch's **IP address & Port**, something like: **192.168.1.214** : 5555. You only need the IP address (here **192.168.1.214**), not the port number after the colon. Note that the IP address can change, for example every time you change to a new phone handset for AAPS.
+Em **Developer options**, ative **ADB debugging** (depuração ADB) e **Wireless debugging** (depuração por Wi-Fi) e confirme as perguntas. A depuração por Wi-Fi então mostra o **IP address & Port** (endereço IP e porta) do relógio, algo como: **192.168.1.214** : 5555. Você só precisa do endereço IP (aqui **192.168.1.214**), não do número da porta depois dos dois-pontos. Observe que o endereço IP pode mudar, por exemplo sempre que você trocar para um novo telefone para o AAPS.
 
-![image](../images/wearos/easyfire04.png)
+![imagem](../images/wearos/easyfire04.png)
 
-STEP 3)     Enter IP address _e.g._ **192.168.1.214** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address).
+PASSO 3) Digite o endereço IP, _por exemplo_ **192.168.1.214**, no Easy Fire tools no telefone (abra o menu hambúrguer à esquerda, as configurações e digite o endereço IP).
 
-![image](../images/wearos/easyfire05.png)
+![imagem](../images/wearos/easyfire05.png)
 
-Then click the plug socket icon on the top right. It will turn green when connected.
+Depois toque no ícone de tomada no canto superior direito. Ele fica verde quando está conectado.
 
-![image](../images/wearos/easyfire06.png)
-
-
-STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  aaps-wear.apk onto the smartwatch using Easy Fire tools
+![imagem](../images/wearos/easyfire06.png)
 
 
-![image](../images/wearos/easyfire07.png)
+PASSO 4) Siga as instruções [aqui](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) para instalar por side-load (ou seja, transferir) o aaps-wear.apk no smartwatch usando o Easy Fire tools
+
+
+![imagem](../images/wearos/easyfire07.png)
 
 
 (BuildingAapsWearOs-WearOS5-TShoot)=
 
-### Using the terminal
-Connect your smartwatch and computer to the same Wi-Fi network.
+### Usar o terminal
+Conecte o seu smartwatch e o computador à mesma rede Wi-Fi.
 
-- To install ADB download it from: https://developer.android.com/tools/releases/platform-tools
-- Open a terminal.
-- For Windows, create a new folder named `adb` under your disk `C:`. Open the `platform-tools-latest-windows.zip` file you downloaded above. Copy all files inside `platform-tools` to `C:\adb` and open this folder with a command prompt (right click and Open in Terminal). Type the command below to set the path to the folder where ADB is located: `setx PATH "%PATH%;C:\adb"`
-- For Mac instead of installing manually you can use homebrew: `brew install android-platform-tools`
+- Para instalar o ADB, baixe-o em: https://developer.android.com/tools/releases/platform-tools
+- Abra um terminal.
+- No Windows, crie uma nova pasta chamada `adb` no seu disco `C:`. Abra o arquivo `platform-tools-latest-windows.zip` que você baixou acima. Copie todos os arquivos de dentro de `platform-tools` para `C:\adb` e abra esta pasta em um prompt de comando (clique com o botão direito e escolha Open in Terminal (Abrir no Terminal)). Digite o comando abaixo para definir o caminho da pasta onde o ADB está: `setx PATH "%PATH%;C:\adb"`
+- No Mac, em vez de instalar manualmente, você pode usar o homebrew: `brew install android-platform-tools`
 
-On the watch:
-- Go to Settings → About watch → **Software Information**
-- Tap Software version 7 times until you see Developer mode enabled.
-- Go to Settings → Developer options. Enable **ADB debugging**
-- Go to Settings → Developer options → Wireless debugging → **Pair new device**
+No relógio:
+- Vá em Settings (Configurações) → About watch (Sobre o relógio) → **Software Information** (Informações do software)
+- Toque 7 vezes em Software version (Versão do software) até ver Developer mode enabled (Modo de desenvolvedor ativado).
+- Vá em Settings (Configurações) → Developer options (Opções do desenvolvedor). Ative **ADB debugging** (depuração ADB)
+- Vá em Settings (Configurações) → Developer options (Opções do desenvolvedor) → Wireless debugging (Depuração por Wi-Fi) → **Pair new device** (Parear novo dispositivo)
 
-You will see a Wi-Fi pairing code and IP address and port appearing:
+Você vai ver um código de pareamento Wi-Fi, o endereço IP e a porta:
 
-![Watch screen showing the Wi-Fi pairing code and IP address and port](../images/wearos/ADB03.png)
+![Tela do relógio mostrando o código de pareamento Wi-Fi, o endereço IP e a porta](../images/wearos/ADB03.png)
 
-- In the terminal: `adb pair ipaddress:port` E.g. `adb pair 10.10.1.125:36299`
-- You will be asked for the pairing code. Enter it.
-- You will see a response:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
-- In the terminal type: <br>`adb devices`.<br> You should see something like:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
+- No terminal: `adb pair ipaddress:port` Por exemplo: `adb pair 10.10.1.125:36299`
+- Será pedido o código de pareamento. Digite-o.
+- Você vai ver uma resposta:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
+- No terminal, digite: <br>`adb devices`.<br> Você deve ver algo como:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 
-- Now go to the folder on your computer where the Wear apk is and type<br> `adb install wear-full.apk` <br>with wear-full.apk replaced by the name of your apk file.
-- You will see:<br> `Performing Streamed Install`<br> `Success`
+- Agora vá até a pasta do seu computador onde está o apk do Wear e digite<br> `adb install wear-full.apk` <br>trocando wear-full.apk pelo nome do seu arquivo apk.
+- Você vai ver:<br> `Performing Streamed Install`<br> `Success`
 
 
 (wear-os-5-troubleshooting)=
 
-### General troubleshooting recommendations for Wear OS 5
+### Recomendações gerais de resolução de problemas para o Wear OS 5
 
-- Do not use Wi-Fi Tethering. That won't work.
-- You do not need to enable adb debugging on the phone (only on the watch). Disable adb debugging on the Phone.
-- Make sure you are connecting to your local network where phone and watch can see each other (do not use your Wi-Fi guest network to connect).
-- Make sure both watch and phone are on the same network and Wi-Fi device. Especially Wi-Fi repeaters or access points may create problems.
-- Make sure to be near your main router, then restart both phone and watch.
+- Não use o Wi-Fi Tethering (roteador Wi-Fi do telefone). Isso não vai funcionar.
+- Você não precisa ativar a depuração adb no telefone (só no relógio). Desative a depuração adb no telefone.
+- Conecte-se à sua rede local, onde o telefone e o relógio podem se ver (não use a sua rede Wi-Fi de visitantes para conectar).
+- O relógio e o telefone devem estar na mesma rede e no mesmo dispositivo Wi-Fi. Principalmente repetidores Wi-Fi ou pontos de acesso podem causar problemas.
+- Fique perto do seu roteador principal e depois reinicie o telefone e o relógio.
 
-**Pairing :**
+**Pareamento:**
 
-- Watch: Wireless Debugging: note the IP address.
-- Wear Installer: Enter the IP in the Wear Installer app.
-- Select Pair new, note the pairing code and port number displayed.
-- Wear Installer: enter the pairing code + space + port number.
-- Wear installer should report pairing was successful. If it does not, exit the Wear Installer, then try again.
+- Relógio: Wireless debugging (Depuração por Wi-Fi): anote o endereço IP.
+- Wear Installer: digite o IP no app Wear Installer.
+- Selecione Pair new (Parear novo), anote o código de pareamento e o número da porta mostrados.
+- Wear Installer: digite o código de pareamento + espaço + número da porta.
+- O Wear Installer deve informar que o pareamento deu certo. Se não informar, saia do Wear Installer e tente de novo.
 
-Once paired you should be able to install the AAPS wear apk:
+Depois de pareado, você pode instalar o apk do Wear do AAPS:
 
-- Exit/close, then restart Wear Installer.
-- On wireless debug, note the IP and Port number and make sure you check/enter the IP and port number in Wear Installer.
-- Note: the port number is different from the one used for pairing!
+- Saia/feche e depois abra o Wear Installer de novo.
+- Em Wireless debugging (Depuração por Wi-Fi), anote o IP e o número da porta e confira/digite o IP e o número da porta no Wear Installer.
+- Observação: o número da porta é diferente do usado para o pareamento!
 
-## Setting up the connection between the watch and the phone from **AAPS**
+## Configurar a conexão entre o relógio e o telefone a partir do **AAPS**
 
-The final step is to configure **AAPS** on the phone to interact with **Wear.apk** on the watch. To do this, enable the Wear plugin:
+O último passo é configurar o **AAPS** no telefone para interagir com o **Wear.apk** no relógio. Para isso, ative o plugin Wear:
 
-* Go to the **AAPS** app on the phone
+* Abra o app **AAPS** no telefone
 
-* Open the **menu** (☰) in the top-left corner and go to **Configuration** > **Communication**
+* Abra o **menu** (☰) no canto superior esquerdo e vá em **Configuração** > **Comunicação**
 
-* Tick the **Wear** box
+* Marque a caixa **Wear**
 
-![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
+![Configuração > Comunicação com o Wear ativado](../images/v4/Configuration/configuration_communication_wear.png)
 
-To bolus or take other actions from the watch, also turn on **Wear control** in [Settings > Wear](#preferences-wear).
+Para dar bólus ou fazer outras ações pelo relógio, ative também **Controle do Wear** em [Configurações > Wear](#preferences-wear).
 
-To change to a different **AAPS**  watchface, press on the home screen of the watch and it will come to “customise”. Then swipe right until you get to all the **AAPS**  faces.
+Para mudar para outro mostrador do **AAPS**, toque e segure na tela inicial do relógio e ele vai abrir “customise” (personalizar). Depois deslize para a direita até chegar a todos os mostradores do **AAPS**.
 
-If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, it will look like this:
-
-
-![Wear plugin showing the connected Galaxy Watch, and the AAPS app on the watch](../images/wearos/wear_apk_installed.png)
+Se o Wear.apk do **AAPS** foi instalado com sucesso no smartwatch por side-load, ele vai ficar assim:
 
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use **Wear.apk** & **AAPS** remotely via Wi-Fi.
+![Plugin Wear mostrando o Galaxy Watch conectado, e o app do AAPS no relógio](../images/wearos/wear_apk_installed.png)
 
-![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
+
+Em alguns smartwatches, como o Samsung Galaxy, a opção 'Remote Connection' (Conexão remota) em Advanced Features (Recursos avançados) do Samsung Galaxy precisa estar **ligada** para usar o **Wear.apk** & o **AAPS** remotamente por Wi-Fi.
+
+![Galaxy Wearable, Advanced features (Recursos avançados), Remote connection (Conexão remota) ligada](../images/wearos/galaxy_wearable_remote_connection.png)
 
 (wear-os-watch-phone-communication)=
 
-### Troubleshooting the **AAPS** watch- **AAPS** phone communication
+### Resolução de problemas da comunicação entre o relógio com o **AAPS** e o telefone com o **AAPS**
 
-1.  If EasyFire tools does not connect or if you are receiving ‘authorisation failed’ > check IP address has been correctly entered.
-2.  Check that the smartwatch is connected to the internet (and not just connected to the phone via Bluetooth).
-3.  Check that the **AAPS** Phone and smartwatch are paired or linked in Samsung app.
-4.  It may also help to do a hard restart of Phone and smartwatch (meaning turning phone on and off)
-5.  Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have side-loaded the correct **AAPS** Wear apk onto the watch: the watch app of a browser build is the `aaps-wear-….apk` file, see [Building the Wear app](../WearOS/BuildingAapsWearOS.md). If the file you installed is any of the following: a) an **AAPSClient** Wear apk (while the phone runs **AAPS**); b) a `.aab` file; or c) a file with the word ‘debug’ in its name, you have not selected the correct Wear OS apk during the build.
-6.  Check that your router is not isolating the devices from one another.
+1.  Se o EasyFire tools não conectar ou se você receber ‘authorisation failed’ (falha na autorização) > verifique se o endereço IP foi digitado corretamente.
+2.  Verifique se o smartwatch está conectado à internet (e não apenas conectado ao telefone por Bluetooth).
+3.  Verifique se o telefone com o **AAPS** e o smartwatch estão pareados ou vinculados no app Samsung.
+4.  Também pode ajudar reiniciar completamente o telefone e o smartwatch (ou seja, desligar e ligar o telefone)
+5.  Se você conseguiu baixar o Wear.apk no seu telefone, mas não está recebendo nenhum dado de glicose, _verifique_ se você instalou por side-load o apk do Wear do **AAPS** correto no relógio: o app do relógio de uma compilação no navegador é o arquivo `aaps-wear-….apk`, veja [Compilar o app AAPS para Wear](../WearOS/BuildingAapsWearOS.md). Se o arquivo que você instalou for um destes: a) um apk do Wear do **AAPSClient** (enquanto o telefone executa o **AAPS**); b) um arquivo `.aab`; ou c) um arquivo com a palavra ‘debug’ no nome, você não selecionou o apk do Wear OS correto durante a compilação.
+6.  Verifique se o seu roteador não está isolando os dispositivos uns dos outros.
 
-More troubleshooting tips can be found [here](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
+Mais dicas de resolução de problemas podem ser encontradas [aqui](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
 
 (WearOS_changing-to-AAPS-watchface)=
 
-## Changing to an AAPS Watchface on your WearOS watch
+## Mudar para um mostrador do AAPS no seu relógio Wear OS
 
-There are a number of watchfaces available in the standard build of the AAPS Wear OS APK build. Once you have installed the AAPS Wear APK on your watch, they will be available. Here are the steps for selecting one:
+Há vários mostradores disponíveis na compilação padrão do APK do AAPS para Wear OS. Depois de instalar o APK do Wear do AAPS no seu relógio, eles ficam disponíveis. Estes são os passos para selecionar um deles:
 
-1. On your watch (assuming WearOS), long press on your current watchface to bring up the watchface selector screen and scroll all the way to the right until you see the "Add Watch Face" button and select it
+1. No seu relógio (com Wear OS), toque e segure no mostrador atual para abrir a tela de seleção de mostradores, role até o fim para a direita até ver o botão "Add Watch Face" (Adicionar mostrador) e selecione-o
 
-![Watchface selector with the Add watch face button](../images/wearos/watchface_add.png)
+![Seletor de mostradores com o botão Add watch face (Adicionar mostrador)](../images/wearos/watchface_add.png)
 
-2. Scroll through the list until you find "AAPS (Custom)" (depending on the watch, the watch faces of installed apps are listed under a "Downloaded" section or grouped by app) and click the middle of the image to add it to your shortlist of current watchfaces. Don't worry about the current appearance of the "AAPS (Custom)" watchface, we will select your preferred skin in the next step.
+2. Role a lista até encontrar "AAPS (Custom)" (dependendo do relógio, os mostradores dos apps instalados aparecem em uma seção "Downloaded" (Baixados) ou agrupados por app) e toque no meio da imagem para adicioná-lo à sua lista de mostradores atuais. Não se preocupe com a aparência atual do mostrador "AAPS (Custom)"; vamos selecionar o visual que você prefere no próximo passo.
 
-![List of AAPS watchfaces, with AAPS (Custom)](../images/wearos/watchface_list_aaps.png)
+![Lista de mostradores do AAPS, com AAPS (Custom)](../images/wearos/watchface_list_aaps.png)
 
-3. Now open AAPS on your phone and open the Wear plugin: **Configuration** > **Communication** > **Wear** > **Open plugin** (tick **Wear** first if it is not enabled).
+3. Agora abra o AAPS no seu telefone e abra o plugin Wear: **Configuração** > **Comunicação** > **Wear** > **Abrir plugin** (marque **Wear** antes, se não estiver ativado).
 
-![Wear plugin with the Custom Watchface card](../images/wearos/wear_plugin_custom_watchface.png)
+![Plugin Wear com o cartão Custom Watchface](../images/wearos/wear_plugin_custom_watchface.png)
 
-4. Click on the "Load Watchface" button and select the watchface that you like
+4. Toque no botão "Carregar Watchface" e selecione o mostrador que você quer
 
-![Select Custom Watchface list](../images/wearos/select_custom_watchface.png)
+![Lista Selecionar mostrador Custom](../images/wearos/select_custom_watchface.png)
 
-5. Check your watch, the "AAPS (Custom)" watchface should now be displaying the skin that you have selected. Give it a few seconds to refresh. The **Wear** screen on the phone now shows the name of the loaded watchface and a preview of it. **Infos Watchface** lists its details and the fields it contains, and **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) where you can download other custom watchfaces. You may now customize the complications, etc. by long pressing the watchface and then pressing the "Customize" button on the watchface image.
+5. Olhe o seu relógio: o mostrador "AAPS (Custom)" agora deve mostrar o visual que você selecionou. Espere alguns segundos para ele atualizar. A tela **Wear** no telefone agora mostra o nome do mostrador carregado e uma prévia dele. **Infos Watchface** mostra os detalhes do mostrador e os campos que ele contém, e **Mais mostradores** abre o [site de troca](../ExchangeSiteCustomWatchfaces/index.md), onde você pode baixar outros mostradores personalizados. Agora você pode personalizar as complicações etc.: toque e segure no mostrador e depois toque no botão "Customize" (Personalizar) na imagem do mostrador.
 
 ```{admonition} Complications on a custom watchface
 :class: note
-Custom watchfaces made with version 3.0 or newer of the custom watchface format can contain up to five complication slots, with their position and size defined by the watchface (**Complication layout**). On the watch, long-press the watchface, tap **Customize** and tap **Complication 1** to **Complication 5** to choose the data source shown in each slot. The same rows are listed in the watch's AAPS app under **Settings** > **AAPS(Custom)**; tapping one there opens the same picker. **Complication type priority** decides whether a slot prefers a value or gauge, text, or an icon when the data source offers several. A changed priority only applies the next time you pick a data source for that slot.
+Mostradores personalizados feitos com a versão 3.0 ou mais nova do formato Custom Watchface podem ter até cinco espaços de complicação, com posição e tamanho definidos pelo mostrador (**Layout da complicação**). No relógio, toque e segure no mostrador, toque em **Customize** (Personalizar) e toque em **Complicação 1** até **Complicação 5** para escolher a fonte de dados mostrada em cada espaço. As mesmas linhas aparecem no app do AAPS no relógio, em **Configurações** > **AAPS (Personalizado)**; tocar em uma delas ali abre o mesmo seletor. **Prioridade do tipo de complicação** define se um espaço prefere um valor ou indicador, um texto ou um ícone quando a fonte de dados oferece vários. Uma prioridade alterada só vale na próxima vez que você escolher uma fonte de dados para esse espaço.
 
-These slots only work on watches running **Wear OS 5 or older**, where the custom watchface runs as a real watchface. On **Wear OS 6 and newer**, the custom watchface is shown as a picture without its complication slots, and steps 1 and 2 above are not needed: make sure **Custom watchface** is selected under **Watchface installed on watch** in the phone's **Wear** plugin (see [the watchface AAPS installs](#wearos-aaps-v4-watchface)).
+Esses espaços só funcionam em relógios com **Wear OS 5 ou mais antigo**, onde o mostrador personalizado roda como um mostrador de verdade. No **Wear OS 6 e mais novo**, o mostrador personalizado aparece como uma imagem sem os seus espaços de complicação, e os passos 1 e 2 acima não são necessários: verifique se **Mostrador personalizado** está selecionado em **Mostrador instalado no relógio** no plugin **Wear** do telefone (veja [o mostrador que o AAPS instala](#wearos-aaps-v4-watchface)).
 ```
 
-## AAPSv2 watchface - Legend
+## Mostrador AAPSv2 - Legenda
 
-![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
+![Legenda do mostrador AAPSv2](../images/Watchface_Legend.png)
 
-A - time since last loop run
+A - tempo desde a última execução do loop
 
-B - CGM reading
+B - leitura do CGM
 
-C - minutes since last CGM reading
+C - minutos desde a última leitura do CGM
 
-D - change compared to last CGM reading (in mmol or mg/dL)
+D - variação em relação à última leitura do CGM (em mmol/l ou mg/dl)
 
-E - average change CGM reading last 15 minutes
+E - variação média da leitura do CGM nos últimos 15 minutos
 
-F - phone battery
+F - bateria do telefone
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - taxa basal (mostrada em U/h com a taxa padrão e em % durante uma TBR)
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H - BGI (blood glucose interaction, impacto na glicose) -> o quanto a glicose "deveria" estar subindo ou caindo com base apenas na atividade da insulina.
 
-I - carbs (carbs on board | e-carbs in the future)
+I - carboidratos (carboidratos ativos | e-carbs no futuro)
 
-J - insulin on board (from bolus | from basal)
+J - insulina ativa (do bólus | da basal)

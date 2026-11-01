@@ -1,565 +1,565 @@
-# How to edit the docs
+# Як редагувати документацію
 
-**This description is just for editing the English documentation. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
+**Цей опис стосується лише редагування англійської документації. Усю нову інформацію спочатку потрібно додати англійською мовою. Якщо ви хочете перекладати іншими мовами (дякуємо), використовуйте [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#code-syntax) section of this page.
+Як форматувати текст (заголовки, жирний шрифт...) і додавати посилання, дивіться в розділі [«Синтаксис коду»](#code-syntax) на цій сторінці.
 
-## General
+## Загальне
 
-For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw).
+З питаннями, відгуками або новими ідеями ви можете звернутися до команди документації в [discord](https://discord.gg/4fQUWHZ4Mw).
 
-At some point it will be suggested that you make a pull request (PR), which is how your changes in the documentation are actually put onto the AAPS webpages, which are stored in GitHub. It's actually not too hard to do a PR and it is a great way to contribute. You are reading this documentation right now because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. Your changes are reviewed before they are merged into the "formal" AAPS documentation repository. You can't mess up the originals through any accidents in the process. The general process is:
+Колись вам запропонують зробити pull request (PR). Так ваші зміни в документації справді потрапляють на вебсторінки AAPS, які зберігаються на GitHub. Зробити PR насправді не дуже складно, і це чудовий спосіб зробити внесок. Ви зараз читаєте цю документацію, бо люди, як ви, робили PR. Не бійтеся помилитися або випадково відредагувати не той документ. Ваші зміни перевіряють, перш ніж їх додають в «офіційний» репозиторій документації AAPS. Ви не можете випадково зіпсувати оригінали під час цього процесу. Загальний процес такий:
 
-- Make edits and improvements to code or documentation by editing the existing content.
-- Double-check that your edits look good to you.
-- Make a few notes of what's changed so people may understand the edits.
-- Create a pull request, which asks the administrators to use your changes.
-- They will do a review and either (1)merge your changes, (2)comment back to you about your changes, or (3)start a new document with your changes.
+- Вносьте зміни та покращення в код або документацію, редагуючи наявний вміст.
+- Ще раз перевірте, що ваші зміни виглядають добре.
+- Коротко запишіть, що змінено, щоб інші люди зрозуміли ваші зміни.
+- Створіть pull request: це запит до адміністраторів прийняти ваші зміни.
+- Вони перевірять зміни і (1) приймуть (merge) їх, (2) напишуть вам коментар до змін або (3) створять новий документ з вашими змінами.
 
-(Side note: If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
+(Примітка: якщо вам легше вчитися з відео, [тут](https://youtu.be/4b6tsL0_kzg) є відео на YouTube, яке показує процес PR.)
 
-For our example we are going to make an edit to AndroidAPSdocs. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
+Як приклад ми внесемо зміну в AndroidAPSdocs. Це можна зробити на будь-якому ПК з Windows, Mac тощо. (на будь-якому комп'ютері з доступом до інтернету).
 
-1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
+1. Перейдіть на <https://github.com/openaps/AndroidAPSdocs> і натисніть Fork у верхньому правому куті, щоб створити власну копію репозиторію.
 
-![Fork repo](../images/PR0.png)
+![Fork репозиторію](../images/PR0.png)
 
-2. Go to any page and navigate to the page you want to edit. You can click on the "Edit in GitHub" link in the upper right corner. This is only possible for English pages. 
+2. Перейдіть на будь-яку сторінку, а потім на сторінку, яку хочете редагувати. Ви можете натиснути посилання "Edit in GitHub" у верхньому правому куті. Це можливо лише для англійських сторінок. 
 
-![edit doc](../images/PR1.png)
+![Редагування документа](../images/PR1.png)
 
-Or click the pencil icon that appears in the top bar of the page contents to be edited. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
+Або натисніть значок олівця, який з'являється у верхній панелі вмісту сторінки, яку треба редагувати. Для цього ви вже маєте бути увійшли у свій обліковий запис Github (якщо у вас його немає, створити його нескладно).
 
 ![RTD io](../images/PR2.png)
 
-3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
+3. Будь-який із варіантів у кроці 2 створить нову гілку у ВАШОМУ репозиторії, де будуть збережені ваші зміни. Внесіть зміни у файл.
 
-We are using markdown for the docs pages. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#code-syntax).
+Для сторінок документації ми використовуємо markdown. Файли мають розширення ".md". Специфікація Markdown не є фіксованою, і зараз для наших markdown-файлів ми використовуємо myst_parser. Уважно використовуйте правильний синтаксис, як [описано нижче](#code-syntax).
 
-![Edit branch](../images/PR3.png)
+![Гілка редагування](../images/PR3.png)
 
-4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typos sic.). If you see a needed improvement, go back to the edit tab to make more improvements. 
+4. Ви працювали на вкладці "<>Edit file". Виберіть вкладку "Preview changes" (попередній перегляд змін), щоб свіжим поглядом перевірити, що все змінене виглядає так, як ви хотіли (зокрема немає одруківок). Якщо ви бачите, що ще щось треба покращити, поверніться на вкладку редагування і внесіть ще зміни. 
 
-![preview mode](../images/PR5.png)
+![Режим попереднього перегляду](../images/PR5.png)
 
-5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
+5. Коли закінчите редагування, прокрутіть сторінку вниз. У полі внизу напишіть свої коментарі в текстовому полі з написом "Add an optional extended description..." (додайте розширений опис, необов'язково). Стандартний заголовок містить назву файлу. Спробуйте додати речення, яке пояснює **причину** зміни. Пояснення причини допомагає рецензентам зрозуміти, чого ви хочете досягти цим PR.
 
-![commit comments](../images/PR4.png)
+![Коментарі до коміту](../images/PR4.png)
 
-6. Click the green "Propose file changes" or "Commit changes" button. In the page that appears click "Create Pull Request" and again in the next page click "Create Pull Request".
+6. Натисніть зелену кнопку "Propose file changes" або "Commit changes". На сторінці, що з'явиться, натисніть "Create Pull Request", а потім на наступній сторінці знову натисніть "Create Pull Request".
 
-![create pull request](../images/PR6.png)
+![Створення pull request](../images/PR6.png)
 
-7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
+7. На цьому pull request (PR) відкрито. GitHub дає PR номер, який стоїть після заголовка і знака #. Повертайтеся на цю сторінку, щоб перевірити відгуки (або, якщо ви отримуєте сповіщення GitHub електронною поштою, вам прийдуть листи про всі дії з PR). Тепер ваша зміна є в списку PR, які команда перегляне. Команда може дати вам відгук, перш ніж зміна потрапить в основну документацію AAPS! Якщо ви хочете стежити за станом PR, натисніть значок дзвіночка у верхньому правому куті вашого облікового запису GitHub: там видно всі ваші PR.
 
-![PR tracking](../images/PR7.png)
+![Відстеження PR](../images/PR7.png)
 
-PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+P.S. Ваш fork і гілка залишаться у вашому особистому обліковому записі GitHub. Коли ви отримаєте сповіщення, що ваш PR прийнято (merged), ви можете видалити свою гілку, якщо вона вам більше не потрібна (в області сповіщень із кроку 8 буде посилання для видалення гілки, коли її закрито або прийнято). Якщо для наступних змін ви будете робити так само, ви завжди почнете з актуальної версії репозиторію AndroidAPSdocs. Якщо ви почнете PR іншим способом (наприклад, редагуєте, починаючи з гілки master у вашому fork), спочатку переконайтеся, що ваш репозиторій актуальний: зробіть "compare" (порівняння) і додайте всі зміни, що з'явилися після останнього оновлення вашого fork. Люди часто забувають оновлювати свої репозиторії, тому ми радимо робити PR так, як описано вище, доки ви не навчитеся робити "compare".
 
 (edit-the-docs-code-syntax)=
 
-## Code syntax
+## Синтаксис коду
 
-We are using markdown for the documentation pages. The files have got the suffix ".md".
+Для сторінок документації ми використовуємо markdown. Файли мають розширення ".md".
 
-Markdown is a very simple text formatting language which separates text content from text formatting.
+Markdown — дуже проста мова форматування тексту, яка відокремлює вміст тексту від його форматування.
 
-The writer only e.g. marks a headline as level 1 headline and the markdown processor generates the necessary HTML code during processing to render the heading in HTML.
+Автор лише позначає, наприклад, заголовок як заголовок 1 рівня, а обробник markdown під час обробки створює потрібний HTML-код, щоб показати заголовок в HTML.
 
-The idea behind this is that
+Ідея в тому, що
 
-- the writer should think about the text and not the formatting first,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Windows and
-- you can generate several output formats from one markdown file.
+- автор має спочатку думати про текст, а не про форматування,
+- текст markdown можна переносити між різними інструментами markdown, а не прив'язувати до закритих інструментів, наприклад Microsoft Windows, і
+- з одного markdown-файлу можна створити кілька вихідних форматів.
 
-Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard, to
+Markdown не є на 100 % фіксованим стандартом, і ми намагаємося бути якомога ближче до стандарту, щоб
 
-- stay flexible to change markdown tools as needed or forced in the further innovation of markdown tools and markdown SaaS services and
-- enable us to use translation services to translate the English language in a target language like French or German. They can work on markdown but not complex formatting codes, because they can't separate content from layout, which might be fatal.
+- можна залишатися гнучкими і змінювати інструменти markdown, коли це потрібно або коли цього вимагає розвиток інструментів і онлайн-сервісів (SaaS) для markdown, і
+- мати змогу використовувати сервіси перекладу для перекладу з англійської на іншу мову, наприклад французьку чи німецьку. Вони можуть працювати з markdown, але не зі складними кодами форматування, бо не можуть відокремити вміст від оформлення, а це може бути фатальним.
 
-### Headlines
+### Заголовки
 
-- Headline 1: `# headline`
-- Headline 2: `## headline`
-- Headline 3: `### headline`
-- Headline 4: `#### headline`
+- Заголовок 1: `# headline`
+- Заголовок 2: `## headline`
+- Заголовок 3: `### headline`
+- Заголовок 4: `#### headline`
 
-We try to avoid further levels of headlines.
+Ми намагаємося не використовувати глибші рівні заголовків.
 
-### Text format
+### Формат тексту
 
-- **bold**: `**text**`
-- *italic*: `*text*`
-- ***bold italic***: `***text***`
+- **жирний**: `**text**`
+- *курсив*: `*text*`
+- ***жирний курсив***: `***text***`
 
-### Ordered list
+### Нумерований список
 
-    1. first
-    1. second
-    1. third
+    1. перший
+    1. другий
+    1. третій
     
 
-1. first
-2. second
-3. third
+1. перший
+2. другий
+3. третій
 
-### Unordered list
+### Маркований список
 
-    - one element
-    - another element
-    - and another element
+    - один елемент
+    - інший елемент
+    - і ще один елемент
     
 
-- one element
-- another element
-- and another element
+- один елемент
+- інший елемент
+- і ще один елемент
 
-### Multi level list
+### Багаторівневий список
 
-You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
+Ви можете вставляти списки в списки: робіть відступ кожного наступного рівня на 4 пробіли більше вправо, ніж попереднього.
 
-    1. first
-    1. second
-    1. third
-      1. one element
-      1. another element
-      1. and another element
-    1. four
-    1. five
-    1. six
+    1. перший
+    1. другий
+    1. третій
+      1. один елемент
+      1. інший елемент
+      1. і ще один елемент
+    1. четвертий
+    1. п'ятий
+    1. шостий
     
 
-1. first
-2. second
-3. third 
-    1. one element
-    2. another element
-    3. and another element
-4. four
-5. five
-6. six
+1. перший
+2. другий
+3. третій 
+    1. один елемент
+    2. інший елемент
+    3. і ще один елемент
+4. четвертий
+5. п'ятий
+6. шостий
 
-### Images
+### Зображення
 
-To include images you use this markdown syntax.
+Щоб додати зображення, використовуйте такий синтаксис markdown.
 
-- images: `![alt text](../images/file.png)`
+- зображення: `![alt text](../images/file.png)`
 
-The type of image should be PNG or JPEG.
+Тип зображення має бути PNG або JPEG.
 
-Image names should conform to one of the following naming rules. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
+Назви зображень мають відповідати одному з таких правил. У прикладі я використовую розширення png. Якщо ви використовуєте JPEG, будь ласка, використовуйте розширення jpeg.
 
-- `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
-- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
+- `filename-image-xx.png`, де xx — унікальне двоцифрове число для зображень у цьому файлі.
+- `filename-image-xx.png`, де xx — змістовна назва, яку вибирає автор md-файлу.
 
-Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
+Зображення лежать у папці images для англійської мови, і Crowdin автоматично передає їх в інші мови. Вам для цього нічого не потрібно робити!
 
-We are not translating images at the moment: images should contain the **minimum possible text** to allow accessibility to non-English readers.
+Зараз ми не перекладаємо зображення: на зображеннях має бути **якомога менше тексту**, щоб вони були зрозумілі й читачам, які не знають англійської.
 
-(make-a-PR-image-size)= Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
+(make-a-PR-image-size)= Використовуйте розумний розмір зображень: їх має бути добре видно на ПК, планшеті та телефоні.
 
-- Screenshots from web pages images should be up to **1050 pixels wide**.
-- Diagrams of process flows should be up to **1050 pixels wide**.
-- Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
-- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
+- Знімки екрана з вебсторінок мають бути завширшки до **1050 пікселів**.
+- Схеми процесів мають бути завширшки до **1050 пікселів**.
+- Знімки екрана із застосунку мають бути завширшки до **500 пікселів**. Не розміщуйте їх поруч, якщо це не потрібно.
+- Знімки екрана з годинника (**Wear OS**) мають бути завширшки до **360 пікселів**. Ніколи не збільшуйте менший знімок екрана.
 
-### Links
+### Посилання
 
-#### External links
+#### Зовнішні посилання
 
-External links are links to external web sites.
+Зовнішні посилання — це посилання на зовнішні вебсайти.
 
-- external link: `[alt text](www.url.tld)`
+- зовнішнє посилання: `[alt text](www.url.tld)`
 
-#### Internal links to the start of a md file
+#### Внутрішні посилання на початок md-файлу
 
-Internal links to pages are links to the start of a md file which is hosted on our own server.
+Внутрішні посилання на сторінки — це посилання на початок md-файлу, який розміщено на нашому власному сервері.
 
-- internal link to .md page: `[alt text](../folder/file.md)`
+- внутрішнє посилання на сторінку .md: `[alt text](../folder/file.md)`
 
-#### Internal links to named inline references
+#### Внутрішні посилання на іменовані мітки в тексті
 
-Internal links to named inline references are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
+Внутрішні посилання на іменовані мітки в тексті — це посилання на будь-яке місце md-файлу на нашому власному сервері, де встановлено мітку для посилання.
 
-Add a named reference at the location in the target md file you want to jump to.
+Додайте іменоване посилання (мітку) в те місце цільового md-файлу, куди треба перейти.
 
 `(name-of-my-md-file-this-is-my-fancy-named-reference)=`
 
-The named reference must be unique in the whole AndroidAPSDocs md files and not only the own md file it resides in!
+Іменоване посилання має бути унікальним в усіх md-файлах AndroidAPSDocs, а не тільки у файлі, де воно стоїть!
 
-Therefore it is a good practice to start with the filename and then the reference name you select.
+Тому добре починати його з назви файлу, а потім додавати вибрану вами назву посилання.
 
-Use only lowercase letters and hyphenate words.
+Використовуйте лише малі літери, а слова з'єднуйте дефісом.
 
-Then link this reference in the text you are writing with the following kind of link.
+Потім додайте посилання на цю мітку в тексті, який ви пишете, таким посиланням.
 
-- Internal links to named inline references: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+- Внутрішні посилання на іменовані мітки в тексті: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
-### Notes, Warnings, Collapsing Notes
+### Примітки, попередження, згорнуті примітки
 
-You can add notes and warning boxes to documentation.
+У документацію можна додавати блоки приміток і попереджень.
 
-Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Please use these carefully as the documentation should be as easy to read as possible.
+Також можна додавати згорнуті примітки з детальною інформацією, щоб користувачів, яким не цікаві деталі, це не відштовхувало від читання тексту. Використовуйте їх обережно, бо документація має читатися якомога легше.
 
-#### Notes
+#### Примітки
 
-    ```{admonition} Note headline
+    ```{admonition} Заголовок примітки
     :class: note
-    This is a note.
+    Це примітка.
     ```
     
 
-```{admonition} Note headline :class: note This is a note.
+```{admonition} Заголовок примітки :class: note Це примітка.
 
-    <br />#### Warnings
+    <br />#### Попередження
     
     ````
-    ```{admonition} Warning
+    ```{admonition} Попередження
     :class: warning
-    This is a warning.
+    Це попередження.
     
 
-    ```{admonition} Warning headline 
+    ```{admonition} Заголовок попередження
     :class: warning
-    This is a warning.
+    Це попередження.
     ```
     
-    #### Collapsing Notes
+    #### Згорнуті примітки
     
     
 
-    {admonition} further detailed readings for interested readers
+    {admonition} детальніше для тих, кому цікаво
     :class: dropdown
     
-    This admonition has been collapsed,
-    meaning you can add longer form content here,
-    without it taking up too much space on the page.
+    Цю примітку згорнуто,
+    тобто сюди можна додати довший текст,
+    і він не займатиме багато місця на сторінці.
     
 
 ````
 
-```{admonition} further detailed readings for interested readers :class: dropdown This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page.
+```{admonition} детальніше для тих, кому цікаво :class: dropdown Цю примітку згорнуто, тобто сюди можна додати довший текст, і він не займатиме багато місця на сторінці.
 
 ```
 
-## Tables
+## Таблиці
 
-Avoid using tables with long texts as the contents is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Не використовуйте таблиці з довгими текстами: їх вміст важко оформити в Markdown, вони зазвичай не вміщаються по ширині екрана телефону і, найімовірніше, після перекладу виглядатимуть інакше.
 
-## Style Guide
+## Посібник зі стилю
 
-### Contents
+### Зміст
 
-1. English language writing tips
+1. Поради щодо письма англійською
 
-2. AAPS-specific writing notes
+2. Примітки щодо письма для AAPS
 
-3. Useful references
+3. Корисні джерела
 
-### ![Image](../images/styleguide01.png) 1\. English language writing tips
+### ![Зображення](../images/styleguide01.png) 1\. Поради щодо письма англійською
 
-#### Use language that is appropriate for the reader
+#### Пишіть мовою, яка підходить читачеві
 
-Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
+Пишіть простою англійською, де тільки можливо. Це допомагає читачам, для яких англійська не рідна, а також полегшує переклад документів AAPS іншими мовами. Пишіть так, наче розмовляєте з користувачем: уявіть, що ви сидите за столом навпроти людини, для якої пишете. Пам'ятайте: більшість користувачів AAPS не програмісти. У діабеті також багато професійних слів і скорочень. Пам'ятайте, що декому діагноз поставили нещодавно, хтось може мати менше досвіду з діабетом, ніж ви, або проходив інше навчання щодо діабету. Якщо ви використовуєте скорочення, першого разу напишіть його повністю, а скорочення дайте одразу після нього в дужках, наприклад «super micro bolus (SMB)». Також додайте посилання на глосарій. Технічні терміни, які можуть бути незнайомі читачеві, теж можна пояснити в дужках.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?"*
+Замість: *“What causes high postprandial BG peaks in closed loop?"*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
+Пишіть: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
 
-##### Use plain words that everyone can understand
+##### Використовуйте прості слова, які всі зрозуміють
 
-Find an A-Z of alternative words to make your writing easier to understand here:
+Список альтернативних слів від A до Z, які зроблять ваш текст зрозумілішим, ви знайдете тут:
 
 <https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html>
 
-#### Privacy/licensing concerns:
+#### Приватність і ліцензії:
 
-Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure YouTube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
+Особливо коли ви записуєте відео або робите знімки екрана, не розкривайте свої особисті дані (API-ключ, паролі). Переконайтеся, що вміст на YouTube не є загальнодоступним у списках і його можна переглянути лише за посиланням із документації. Не привертайте увагу до матеріалів, які порушують авторські права (BYODA тощо).
 
-#### Keep sentences short, get to the point
+#### Пишіть короткими реченнями, говоріть по суті
 
-- Clear writing should have an average sentence length of 15 to 20 words.
+- У зрозумілому тексті середня довжина речення — від 15 до 20 слів.
 
-- This does not mean making every sentence the same length. Be punchy. Vary your writing by mixing short sentences (like the last one) with longer ones (like this one).
+- Це не означає, що всі речення мають бути однакової довжини. Пишіть енергійно. Робіть текст різноманітним: поєднуйте короткі речення (як попереднє) з довшими (як це).
 
-- Stick to one main idea in a sentence, plus perhaps one other related point.
+- Тримайтеся однієї головної думки в реченні, можливо, з однією пов'язаною з нею думкою.
 
-- You may still find yourself writing the odd long sentence, especially when trying to explain a complicated point. But most long sentences can be broken up in some way.
+- Іноді ви все одно напишете довге речення, особливо коли пояснюєте щось складне. Але більшість довгих речень можна якось розділити.
 
-- Remove weak words: “you can”, “there is/are/were”, “in order to”.
+- Прибирайте слабкі слова: “you can”, “there is/are/were”, “in order to”.
 
-- Place keywords near the beginning of titles, sentences and paragraphs.
+- Ставте ключові слова ближче до початку заголовків, речень і абзаців.
 
-- Be visual! Wherever possible provide a brief diagram, screenshot or video.
+- Показуйте наочно! Де тільки можливо, додавайте коротку схему, знімок екрана або відео.
 
-#### Don't be afraid to give instructions
+#### Не бійтеся давати вказівки
 
-Commands are the fastest way to give instructions, but writers sometimes fear giving commands, writing “you should do this” instead of just “do this”. Perhaps people worry that commands sound too harsh. You can often solve this by putting the word 'please' in front. However, if something must be done, it is best not to say ‘please’ as it gives the reader the option to refuse.
+Команди — найшвидший спосіб дати вказівки, але автори іноді бояться наказувати і пишуть “you should do this” (вам слід зробити це) замість простого “do this” (зробіть це). Можливо, люди бояться, що команди звучать занадто різко. Часто це можна вирішити, якщо поставити перед командою слово 'please' (будь ласка). Але якщо щось обов'язково треба зробити, краще не писати ‘please’, бо це дає читачеві можливість відмовитися.
 
-Instead of: *“You should just think of it as a complete statement."*
+Замість: *“You should just think of it as a complete statement."*
 
-Use: *“Think of it as a complete statement.”*
+Пишіть: *“Think of it as a complete statement.”*
 
-#### Mostly use active verbs, rather than passive verbs
+#### Здебільшого використовуйте дієслова в активному стані, а не в пасивному
 
-Example of an **active verb**:
+Приклад **активного стану дієслова**:
 
 - *“The pump (subject) delivers (verb) the insulin (object).”*
 
-“delivers” is an active verb here. The sentence says what is doing the delivering before it says what is being delivered.
+“delivers” тут дієслово в активному стані. Речення спочатку каже, хто виконує дію (вводить), а потім — що саме вводиться.
 
-Example of a **passive verb**:
+Приклад **пасивного стану дієслова**:
 
 - *“The insulin (subject) is delivered (verb) by the pump (object)”*
 
-*“delivered”* is a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
+*“delivered”* тут дієслово в пасивному стані. Підмет і додаток помінялися місцями порівняно з реченням в активному стані. Речення стало довшим, бо довелося додати “is” і “by the”. Також подумайте, чи не почати речення з дієслова в активному стані.
 
-Instead of: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
+Замість: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
 
-Use: *“Connect your desired pump to the phone through the AAPS pump menu.”*
+Пишіть: *“Connect your desired pump to the phone through the AAPS pump menu.”*
 
-Passive verbs can cause problems:
+Пасивний стан може створювати проблеми:
 
-- They can be confusing.
+- Він може заплутувати.
 
-- They often make writing more long-winded.
+- Він часто робить текст довшим і багатослівним.
 
-- They make writing less lively.
+- Він робить текст менш живим.
 
-##### Good uses of passives
+##### Коли пасивний стан доречний
 
-There are times when it might be appropriate to use a passive.
+Іноді пасивний стан може бути доречним.
 
-- To make something less hostile - 'this bill has not been paid' (passive) is softer than 'you have not paid this bill' (active).
+- Щоб пом'якшити тон: 'this bill has not been paid' (пасивний стан) звучить м'якше, ніж 'you have not paid this bill' (активний стан).
 
-- To avoid taking the blame - 'a mistake was made' (passive) rather than 'You made a mistake' (active).
+- Щоб не перекладати провину: 'a mistake was made' (пасивний стан) замість 'You made a mistake' (активний стан).
 
-- When you don't know who or what the doer is - 'the England team has been picked'.
+- Коли ви не знаєте, хто або що виконує дію: 'the England team has been picked'.
 
-- If it simply sounds better.
+- Якщо так просто краще звучить.
 
-#### Avoid nominalisations
+#### Уникайте номіналізацій (віддієслівних іменників)
 
-A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalizations are formed from verbs.
+Номіналізація — це назва чогось, що не є фізичним предметом, наприклад процесу, методу чи емоції. Номіналізації утворюються від дієслів.
 
-For example:
+Наприклад:
 
-| Verb      | Nominalization |
-| --------- | -------------- |
-| complete  | completion     |
-| introduce | introduction   |
-| provide   | provision      |
-| fail      | failure        |
+| Дієслово  | Номіналізація |
+| --------- | ------------- |
+| complete  | completion    |
+| introduce | introduction  |
+| provide   | provision     |
+| fail      | failure       |
 
-They are often used **instead** of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
+Їх часто використовують **замість** дієслів, від яких вони утворені, але тоді може здаватися, що нічого насправді не відбувається. Якщо їх забагато, текст стає дуже нудним і важким для читання.
 
-Instead of: *“The implementation of the method has been done by a team.”*
+Замість: *“The implementation of the method has been done by a team.”*
 
-Use: *“A team has implemented the method.”*
+Пишіть: *“A team has implemented the method.”*
 
-#### Use lists where appropriate
+#### Використовуйте списки, де це доречно
 
-Lists are excellent for splitting information up. There are two main types of list:
+Списки чудово підходять, щоб розділити інформацію на частини. Є два основні типи списків:
 
-- A continuous sentence with several listed points picked out at the beginning, middle or end.
+- Суцільне речення, у якому кілька пунктів виділено на початку, в середині або в кінці.
 
-- Separate bullet points with an introductory statement.
+- Окремі пункти з маркерами і вступним реченням.
 
-In the bulleted list above, each point is a complete sentence so they each start with a capital letter and end with a full stop. Use bullet points rather than numbers or letters, as they draw your attention to each point without giving you extra information to take in.
+У списку з маркерами вище кожен пункт — повне речення, тому кожен починається з великої літери і закінчується крапкою. Використовуйте маркери, а не цифри чи літери: вони привертають увагу до кожного пункту і не дають читачеві зайвої інформації.
 
-#### Mythbusting
+#### Розвінчуємо міфи
 
-- You can start a sentence with **and, but, because, so or however**.
+- Речення можна починати з **and, but, because, so або however**.
 
-- You can split infinitives. So you can say **“to boldly go”**.
+- Інфінітив можна розділяти. Тож можна сказати **“to boldly go”**.
 
-- You can end a sentence with a preposition. In fact, it is something **we should stand up for**.
+- Речення можна закінчувати прийменником. Насправді це те, **we should stand up for** (за що ми маємо стояти).
 
-- And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.
+- І **ви** можете вжити те саме **слово** двічі в реченні, якщо **ви** не можете знайти краще **слово**.
 
-#### Optimizing writing style by purpose
+#### Як покращити стиль письма відповідно до мети
 
-To keep the documentation clear and short, we write different sections of the documentation in different styles.
+Щоб документація була зрозумілою і короткою, різні її розділи ми пишемо в різних стилях.
 
-An “explanation” style is used for the introduction, background and knowledge development sections.
+Стиль «пояснення» використовується для вступу, довідкової інформації та розділів, що поглиблюють знання.
 
-A “How-to-guide” style (with minimal explanation) is used for building, configuring AAPS, and some of the troubleshooting sections.
+Стиль «інструкції» (з мінімумом пояснень) використовується для збірки, налаштування AAPS і деяких розділів з усунення несправностей.
 
-A tutorial helps the pupil acquire basic competence. The user will **learn by doing**.
+Навчальний посібник допомагає учневі отримати базові навички. Користувач буде **вчитися на практиці**.
 
-![Image](../images/styleguide02.png)
+![Зображення](../images/styleguide02.png)
 
-##### ![Image](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
+##### ![Зображення](../images/styleguide03.png) Навчальні посібники (наприклад, як навчити дитину збивати яєчні білки)
 
-- narrator directly talks to the reader: In this tutorial **you** will (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
+- оповідач звертається прямо до читача: In this tutorial **you** will (У цьому посібнику ви…) (we) (ми) можна використовувати в рідкісних випадках, щоб передати думку «ми робимо це разом»
 
-- Future Tense -> to show the final target
+- Майбутній час -> щоб показати кінцеву мету
 
-- Imperative Tense -> to do the tasks -> Concrete steps - avoid abstract concepts
+- Наказовий спосіб -> щоб виконувати завдання -> конкретні кроки, без абстрактних понять
 
-- Past Tense -> to show accomplished tasks -> Quick and immediate visible results
+- Минулий час -> щоб показати виконані завдання -> швидкі й одразу видимі результати
 
-- Minimum Explanations -> strict necessary to complete the task - **what and why**
+- Мінімум пояснень -> лише те, що потрібно для виконання завдання — **що і навіщо**
 
-- Ignore options/alternatives/…. No ambiguity
+- Не згадуйте варіанти/альтернативи/…. Жодної неоднозначності
 
-- Step Transitions: finish a step with a sentence leading to the next step as a logical progression flow. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- Переходи між кроками: закінчуйте крок реченням, яке логічно веде до наступного кроку. Приклад: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
 
-- **Tutorial** Title (Level 1 heading)
+- **Навчальний посібник**: заголовок (заголовок 1 рівня)
 
-- Introduction (no heading)
+- Вступ (без заголовка)
 
-- Prerequisites (Level 2 heading)
+- Що потрібно заздалегідь (заголовок 2 рівня)
 
-- Steps:
+- Кроки:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- Крок 1 — Робимо першу дію (заголовок 2 рівня)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- Крок 2 — Робимо наступну дію (заголовок 2 рівня)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- Крок n — Робимо останню дію (заголовок 2 рівня)
 
-- Conclusion (Level 2 heading)
+- Висновок (заголовок 2 рівня)
     
-    - **The Language of Tutorials**
+    - **Мова навчальних посібників**
         
-        *In this tutorial, you will…*
+        *У цьому посібнику ви…*
         
-        Describe what the learner will accomplish (note - not: “you will learn…”).
+        Опишіть, чого досягне учень (примітка: не «ви навчитеся…»).
         
-        *First, do x. Now, do y. Now that you have done y, do z.*
+        *Спочатку зробіть x. Тепер зробіть y. Тепер, коли ви зробили y, зробіть z.*
         
-        No room for ambiguity or doubt.
+        Жодного місця для неоднозначності чи сумнівів.
         
-        *We must always do x before we do y because… (see Explanation for more details).*
+        *Ми завжди маємо зробити x перед y, тому що… (докладніше дивіться в поясненні).*
         
-        Provide minimal explanation of actions in the most basic language possible. Link to more detailed explanation.
+        Пояснюйте дії мінімально і якомога простішою мовою. Дайте посилання на докладніше пояснення.
         
-        *The output should look something like this…*
+        *Результат має виглядати приблизно так…*
         
-        Give your learner clear expectations.
+        Дайте учневі чіткі очікування.
         
-        *Notice that… Remember that…*
+        *Зверніть увагу, що… Пам'ятайте, що…*
         
-        Give your learner plenty of clues to help confirm they are on the right track and orient themselves.
+        Дайте учневі багато підказок, щоб він міг переконатися, що рухається правильно, і зорієнтуватися.
         
-        *You have built a secure, three-layer hylomorphic stasis engine…*
+        *Ви створили безпечний трирівневий гіломорфний стазис-двигун…*
         
-        Describe (and admire, in a mild way) what your learner has accomplished (note - not: “you have learned…”)
+        Опишіть (і стримано похваліть) те, чого досяг учень (примітка: не «ви навчилися…»)
 
-##### ![Image](../images/styleguide05.png) How-To Guides (e.g. a recipe)
+##### ![Зображення](../images/styleguide05.png) Інструкції (наприклад, рецепт)
 
-A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
+Мета інструкції — допомогти користувачеві, який уже має навички, правильно виконати певне завдання.
 
-- HOW-to
+- ЯК зробити
 
-- narrator directly talks to the reader: In this tutorial **you** will
+- оповідач звертається прямо до читача: In this tutorial **you** will (У цьому посібнику ви…)
 
-- Future Tense -> to show the final target
+- Майбутній час -> щоб показати кінцеву мету
 
-- Conditional Imperative Tense -> to get X do y -> Concrete steps - avoid abstract concepts
+- Умовний наказовий спосіб -> щоб отримати X, зробіть Y -> конкретні кроки, без абстрактних понять
 
-- Minimum Explanations -> strict necessary to complete the task -> **what and why**
+- Мінімум пояснень -> лише те, що потрібно для виконання завдання -> **що і навіщо**
 
-- Ignore options/alternatives/…. No ambiguity, but you can link to the reference entry or explanation entry
+- Не згадуйте варіанти/альтернативи/…. Жодної неоднозначності, але можна дати посилання на довідку або пояснення
 
-- **How-to**: Title (Level 1 heading)
+- **Інструкція**: заголовок (заголовок 1 рівня)
 
-- Introduction paragraph
+- Вступний абзац
 
-- Optional Prerequisites (paragraph or Level 2 heading if more than 1)
+- Що потрібно заздалегідь, необов'язково (абзац або заголовок 2 рівня, якщо пунктів більше одного)
 
-- Steps:
+- Кроки:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- Крок 1 — Робимо першу дію (заголовок 2 рівня)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- Крок 2 — Робимо наступну дію (заголовок 2 рівня)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- Крок n — Робимо останню дію (заголовок 2 рівня)
 
-- Conclusion paragraph
+- Підсумковий абзац
     
-    - **The Language of How-To Guides**
+    - **Мова інструкцій**
         
-        *This guide shows you how to…*
+        *Ця інструкція показує, як…*
         
-        Describe clearly the problem or task that the guide shows the user how to solve.
+        Чітко опишіть проблему або завдання, яке інструкція допомагає користувачеві вирішити.
         
-        *If you want x, do y. To achieve w, do z.*
+        *Якщо ви хочете x, зробіть y. Щоб отримати w, зробіть z.*
         
-        Use conditional imperatives.
+        Використовуйте умовний наказовий спосіб.
         
-        *Refer to the x reference guide for a full list of options.*
+        *Повний список варіантів дивіться в довіднику x.*
         
-        Don’t pollute your practical how-to guide with every possible thing the user might do related to x.
+        Не перевантажуйте практичну інструкцію всім, що користувач тільки може робити з x.
 
-##### ![Image](../images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
+##### ![Зображення](../images/styleguide07.png) Пояснення (наприклад, наукове пояснення, чому білки густішають, коли їх збивають)
 
-An explanation clarifies, deepens and broadens the reader’s understanding of a subject.
+Пояснення уточнює, поглиблює і розширює розуміння читачем певної теми.
 
-- WHY
+- ЧОМУ
 
-- Start with **About**
+- Починайте з **About** (Про…)
 
-- Provide context, link ALL relevant references
+- Дайте контекст, додайте посилання на ВСІ потрібні джерела
 
-- Discuss options/alternatives
+- Обговоріть варіанти/альтернативи
 
-- Don’t instruct or provide reference (link to them)
+- Не давайте інструкцій і довідки (дайте на них посилання)
 
-- State the unknown/moving targets etc…
+- Назвіть невідоме, цілі, що змінюються, тощо…
 
-- **About** Title (Level 1 heading)
+- **About** (Про…): заголовок (заголовок 1 рівня)
 
-- Introduction (no heading)
+- Вступ (без заголовка)
 
-- Optional Prerequisites (Level 2 heading)
+- Що потрібно заздалегідь, необов'язково (заголовок 2 рівня)
 
-- Subtopic 1 (level 2 heading)
+- Підтема 1 (заголовок 2 рівня)
 
-- Conclusion (Level 2 heading)
+- Висновок (заголовок 2 рівня)
     
-    - **The Language of Explanation**
+    - **Мова пояснень**
     
-    *The reason for x is because historically, y…*
+    *Причина x у тому, що історично y…*
     
-    Explain.
+    Пояснюйте.
     
-    *W is better than z, because…*
+    *W краще, ніж z, тому що…*
     
-    Offer judgements and even opinions where appropriate.
+    Висловлюйте оцінки і навіть думки, де це доречно.
     
-    *An x in system y is analogous to a w in system z. However…*
+    *x у системі y подібний до w у системі z. Однак…*
     
-    Provide context that helps the reader.
+    Дайте контекст, який допомагає читачеві.
     
-    *Some users prefer w (because z). This can be a good approach, but…*
+    *Деякі користувачі віддають перевагу w (тому що z). Це може бути добрим підходом, але…*
     
-    Weigh up alternatives.
+    Зважте альтернативи.
     
-    *An x interacts with a y as follows:…*
+    *x взаємодіє з y так:…*
     
-    Unfold the machinery’s internal secrets, to help understand why something does what it does.
+    Розкрийте внутрішні секрети механізму, щоб допомогти зрозуміти, чому щось працює саме так.
 
-### 2\. AAPS-specific writing/updating notes
+### 2\. Примітки щодо написання та оновлення текстів для AAPS
 
-#### Author & Editor
+#### Автор і редактор
 
-For writing/updating the AAPS documentation, consider the process as consisting of two stages. These can be carried out by the same person at different points, or more than one person.
+Написання або оновлення документації AAPS розглядайте як процес із двох етапів. Їх може виконувати одна людина в різний час або кілька людей.
 
-An **author (e.g. you!)** writes/edits a section of the documentation in a concise conversational tone, then passes it to the editor.
+**Автор (наприклад, ви!)** пише або редагує розділ документації коротко, у розмовному тоні, а потім передає його редактору.
 
-The **editor (e.g. a fellow AAPS user, or the person who receives the pull request)** reviews adherence to the style guide, edits the section for clarity and accessibility, removing as many words as possible (especially for tutorial/how-to sections). Reading the text out loud may help.
+**Редактор (наприклад, інший користувач AAPS або людина, яка отримала pull request)** перевіряє, чи дотримано посібника зі стилю, редагує розділ, щоб він був зрозумілим і доступним, і прибирає якомога більше слів (особливо в навчальних посібниках та інструкціях). Читання тексту вголос може допомогти.
 
-#### General AAPS points
+#### Загальні примітки щодо AAPS
 
-- For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible).
+- Для значень глюкози щоразу вказуйте і мг/дл, і ммоль/л (по можливості також на знімках екрана).
 
-- For consistency, use “AAPS” rather than “Android APS”.
+- Для однаковості пишіть “AAPS”, а не “Android APS”.
 
-- Clearly state the version of Android Studio/AAPS you are writing for, or that the screenshots are taken from.
+- Чітко вкажіть версію Android Studio/AAPS, для якої ви пишете або з якої зроблено знімки екрана.
 
-### 3\. Useful References
+### 3\. Корисні джерела
 
 <https://dev.readthedocs.io/en/latest/style-guide.html>
 

@@ -2,7 +2,7 @@
 
 El complemento Autotune es una implementación del algoritmo autotune de OpenAPS dentro de AAPS. Analiza tu historial reciente de AAPS para proponer ajustes de tus dosis basales, ISF y ratio de carbohidratos.
 
-El complemento Autotune está disponible en las versiones de AAPS desde la [3.4](#version3400), pero está oculto por defecto.
+Autotune Plugin is available in AAPS releases since [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) but is hidden by default.
 
 (autotune-how-autotune-calculates-adjustments)=
 ## Cómo calcula Autotune los ajustes

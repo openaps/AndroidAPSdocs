@@ -1,4 +1,4 @@
-# Smoothing blood glucose data
+# Suavização dos dados de glicose
 
 Se os dados de **BG** estiverem instáveis ou com ruído, o **AAPS** pode dosar insulina de forma errada, o que causa hiperglicemias ou hipoglicemias. Se você observar erros ou dados instáveis no seu CGM, é importante desativar o loop até o problema ser resolvido. Dependendo do seu CGM, esses problemas podem vir da configuração do CGM no **AAPS** (como explicado abaixo) ou de um problema no local do sensor do CGM (que pode exigir a troca do sensor do CGM).
 

@@ -1,100 +1,100 @@
-# Update with Android Studio
+# Atualizar com o Android Studio
 
-## Build yourself instead of download
+## Compile você mesmo em vez de baixar
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+O **AAPS** não está disponível para download por causa das regras para dispositivos médicos. É legal compilar o app para uso próprio, mas você não deve dar uma cópia para outras pessoas! Veja a página [FAQ para loopers](../UsefulLinks/FAQ.md) para mais detalhes.
 
 ```{note}
-In case you want to build **AAPS** on a new computer : copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+Se você quiser compilar o **AAPS** em um computador novo: copie o arquivo de backup da sua keystore para o computador novo. Depois siga o [procedimento de primeira compilação do **AAPS**](../SettingUpAaps/BuildingAaps.md) em vez deste guia. A única diferença é que, em vez de criar uma nova keystore, você pode selecionar a que você copiou para o computador novo.
 ```
 
-## Overview for updating to a new version of AAPS with Android Studio
+## Visão geral da atualização para uma nova versão do AAPS com o Android Studio
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+Se tiver problemas, veja a página separada [Resolução de problemas do Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
-### Export your settings
+### Exporte suas configurações
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Exporte as configurações da versão atual do **AAPS** no seu telefone. Talvez você não precise delas, mas é melhor prevenir do que remediar.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Veja a página [Criação e restauração de backups](ExportImportSettings.md) se você não lembrar como fazer isso.
 
-### Check your Android Studio version
+### Verifique a sua versão do Android Studio
 
-The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
+A versão mínima necessária está descrita nas [instruções de compilação](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Se a sua versão for mais antiga, [atualize primeiro o Android Studio](#Building-APK-install-android-studio)!
 
 (Update-to-new-version-update-your-local-copy)=
-### Update your local copy
+### Atualize sua cópia local
 
-* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
+* Abra seu projeto AAPS existente no Android Studio. Talvez você precise selecionar o seu projeto. Clique (duas vezes) no projeto AAPS.
 
-  ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
+  ![Android Studio - Select Project (selecionar o projeto)](../images/update/01_ProjectSelection.png)
 
-* In the menu bar of Android Studio, select Git -> Fetch
+* Na barra de menus do Android Studio, selecione Git -> Fetch
 
-   ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+   ![Menu do Android Studio - Git - Fetch](../images/update/02_GitFetch.png)
 
-* You will see a message in the lower right corner that Fetch was successful.
+* Você verá uma mensagem no canto inferior direito dizendo que o Fetch foi concluído com sucesso.
 
-   ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
+   ![Menu do Android Studio - Git - Fetch concluído com sucesso](../images/update/03_GitFetchSuccessful.png)
 
-* In the menu bar, now select Git -> Pull
+* Na barra de menus, selecione agora Git -> Pull
 
-   ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+   ![Menu do Android Studio - Git - Pull](../images/update/04_GitPull.png)
 
-* Leave all options as they are (origin/master) and select Pull
+* Deixe todas as opções como estão (origin/master) e selecione Pull
 
-   ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
+   ![Android Studio - Git - diálogo Pull](../images/update/05_GitPullOptions.png)
 
-* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
+* Aguarde enquanto o download está em andamento. Você verá essa informação na barra inferior. Quando terminar, você verá uma mensagem de sucesso.
 
   ```{note}
-  The files that were updated may vary! This is not an indication of a problem.
+  Os arquivos atualizados podem ser diferentes! Isso não indica um problema.
   ```
 
-   ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+   ![Android Studio - Pull concluído com sucesso](../images/update/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Wait until it is finished.
+* O Gradle Sync será executado para baixar algumas dependências. Aguarde até terminar.
 
   ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-### Check JVM version
+### Verifique a versão da JVM
 
-This check is particularly indicated if you have already built a previous version of **AAPS** on the same computer.
+Essa verificação é especialmente indicada se você já compilou uma versão anterior do **AAPS** no mesmo computador.
 
-Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required version for JVM, matching the **AAPS** version you are now building. Then follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
+Verifique nas [instruções de compilação](#Building-APK-recommended-specification-of-computer-for-building-apk-file) a versão da JVM necessária para a versão do **AAPS** que você vai compilar agora. Depois siga os passos descritos em [Incompatible Gradle JVM](#incompatible-gradle-jvm) para garantir que você está usando a versão correta.
 
 (Update-to-new-version-build-the-signed-apk)=
-### Build the Signed APK
+### Compile o APK assinado
 
-Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+Seu código-fonte agora é a versão lançada atual, e todos os pré-requisitos foram verificados. É hora de compilar o apk assinado, como descrito na [seção Gerar APK assinado](#Building-APK-generate-signed-apk).
 
 (Update-to-new-version-transfer-and-install)=
 
-### Transfer and install the apk
-You need to transfer the apk to your phone so you can install it.
+### Transfira e instale o apk
+Você precisa transferir o apk para o seu telefone para poder instalá-lo.
 
 ```{note}
-If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
-For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
+Se você compilou com a mesma keystore de antes no Android Studio, não precisa remover o app existente do seu telefone. Ao instalar o apk, siga as instruções para instalar as atualizações.
+Em outros casos, por exemplo, se você criou uma nova keystore no Android Studio para o seu apk assinado, você precisa desinstalar o app antigo antes de instalar o apk. **Não se esqueça de exportar suas configurações!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Where Google's [Android developer verification](#android-developer-verification) is enforced (from September 2026, depending on your country), install with [ADB](#android-developer-verification-adb) instead of tapping the APK file.
+Veja as instruções para [transferir e instalar o AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Onde a [verificação de desenvolvedor do Android](#android-developer-verification) do Google for obrigatória (a partir de setembro de 2026, dependendo do seu país), instale com [ADB](#android-developer-verification-adb) em vez de tocar no arquivo APK.
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
+Continue [aqui](#Update-to-new-version-check-aaps-version-on-phone).
 
 (update-computer-build-troubleshooting)=
 
-## Troubleshooting
+## Resolução de problemas
 
-If anything goes wrong, don't panic.
+Se algo der errado, não entre em pânico.
 
-Take a breath!
+Respire fundo!
 
-Then see the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) if your problem is already documented!
+Depois veja a página separada [Resolução de problemas do Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) para saber se o seu problema já está documentado!
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Se precisar de mais ajuda, entre em contato com outros usuários do **AAPS** no [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) ou no [Discord](https://discord.gg/4fQUWHZ4Mw).

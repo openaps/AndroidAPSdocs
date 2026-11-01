@@ -73,7 +73,7 @@ Uzavretý okruh je možný iba vtedy, ak ste v **[Cieli 7](#objectives-objective
 
 Vďaka SMB môže pri jedlách, ktoré obsahujú iba „pomalé“ sacharidy, stačiť, ak systému oznámite plánované množstvo sacharidov a zvyšok necháte na **AAPS**. To však môže viesť k vyšším postprandiálnym (po jedle) vrcholom, pretože predbolusovanie nie je možné. Alebo môžete podať (ak je to potrebné, aj s predstihom) **úvodný bolus**, ktorý **len čiastočne** pokryje sacharidy (napr. 2/3 odhadovaného množstva), a zvyšok inzulínu nechať podať **SMB**.
 
-![SMB na hlavnom grafe](../images/SMBs.png)
+![SMBs on the IOB graph](../images/SMBs.png)
 
 SMB sa zobrazujú na [grafe IOB](#aaps-screens-iob) ako modré trojuholníky. Ak chcete vidieť, koľko inzulínu sa podalo, [stlačte a podržte](#aaps-screens-graph-press-and-hold) graf na trojuholníku, alebo použite [Históriu ošetrení](#aaps-screens-treatments).
 

@@ -1,107 +1,107 @@
-# For Clinicians – A General Introduction and Guide to AAPS
+# Для лікарів – загальний вступ і посібник з AAPS
 
 ```{note}
-This page is a high-level introduction for clinicians. It was last reviewed in June 2026. AAPS develops continuously, so for the most accurate and up-to-date detail always refer to the [main AAPS documentation](../index.md).
+Ця сторінка - загальний вступ для лікарів. Востаннє її переглянуто в червні 2026 року. AAPS постійно розвивається, тому для найточнішої та найновішої інформації завжди звертайтеся до [основної документації AAPS](../index.md).
 ```
 
-This page is intended for clinicians who have expressed interest in open source artificial pancreas technology such as AAPS, or for patients who want to share such information with their clinicians.
+Ця сторінка призначена для лікарів, які зацікавилися технологією штучної підшлункової залози з відкритим кодом, такою як AAPS, або для пацієнтів, які хочуть поділитися цією інформацією зі своїми лікарями.
 
-This guide has some high-level information about DIY closed looping and specifically how AAPS works. For more details on all of these topics, please view the [comprehensive AAPS documentation online](../index.md). If you have questions, please ask your patient for more details, or always feel free to reach out to the community with question. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@aaps.app). [You can also find some of the latest studies & outcomes related data here](https://openaps.org/outcomes/).
+Цей посібник містить загальну інформацію про саморобну (DIY) закриту петлю і зокрема про те, як працює AAPS. Докладніше про всі ці теми читайте в [повній онлайн-документації AAPS](../index.md). Якщо у вас є запитання, попросіть пацієнта розповісти більше або завжди можете звернутися зі своїм запитанням до спільноти. (Якщо ви не користуєтеся соціальними мережами (наприклад, [Twitter](https://twitter.com/kozakmilos) або Facebook), можете написати на developers@aaps.app). [Деякі найновіші дослідження та дані про результати також можна знайти тут](https://openaps.org/outcomes/).
 
-## The steps for building a DIY Closed Loop:
+## Кроки для створення саморобної (DIY) закритої петлі:
 
-To start using AAPS, the following steps should be taken:
+Щоб почати користуватися AAPS, потрібно виконати такі кроки:
 
-* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](../Getting-Started/Phones.md), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
-* [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
+* Знайти [сумісну помпу](../Getting-Started/CompatiblePumps.md), [сумісний пристрій Android](../Getting-Started/Phones.md) і [сумісне джерело CGM](../Getting-Started/CompatiblesCgms.md).
+* [Завантажити вихідний код AAPS і зібрати програму](../SettingUpAaps/BuildingAaps.md).
+* [Налаштувати програму для зв'язку з пристроями для діабету та задати налаштування й параметри безпеки](../SettingUpAaps/SetupWizard.md).
 
-## How A DIY Closed Loop Works
+## Як працює саморобна (DIY) закрита петля
 
-Without a closed loop system, a person with diabetes gathers data from their pump and CGM, decides what to do, and takes action.
+Без системи закритої петлі людина з діабетом збирає дані зі своєї помпи та CGM, вирішує, що робити, і діє.
 
-With automated insulin delivery, the system does the same thing: it gathers data from the pump, CGM, and anywhere else information is logged (such as Nightscout), uses this information to do the maths and decide how much more or less insulin is needed (above or below the underlying basal rate), and uses temporary basal rates to make the necessary adjustments to keep or eventually bring BGs into target range.
+За автоматизованої подачі інсуліну система робить те саме: вона збирає дані з помпи, CGM та з усіх інших місць, де записується інформація (наприклад, Nightscout), використовує цю інформацію для розрахунків і вирішує, скільки інсуліну потрібно більше або менше (понад базову швидкість базалу або нижче неї), а потім за допомогою тимчасових базалів робить потрібні корекції, щоб утримати ГК у цільовому діапазоні або з часом повернути її туди.
 
-If the device running AAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basals rates running.
+Якщо пристрій з AAPS зламається або вийде з зони досяжності помпи, то після закінчення останнього тимчасового базалу помпа знову працює як звичайна помпа із запрограмованими швидкостями базалу.
 
-## How data is gathered:
+## Як збираються дані:
 
-With AAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AAPS can communicate with other devices and to the cloud via Wi-Fi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
+В AAPS пристрій Android запускає спеціальний застосунок, який виконує розрахунки, і обмінюється даними з підтримуваною помпою через Bluetooth. AAPS може обмінюватися даними з іншими пристроями та з хмарою через Wi-Fi або мобільний інтернет, щоб збирати додаткову інформацію і повідомляти пацієнтові, доглядачам і близьким, що вона робить і чому.
 
-The Android device needs to:
+Пристрій Android має:
 
-* communicate with the pump and read history - how much insulin has been delivered
-* communicate with the CGM (either directly, or via the cloud) - to see what BGs are/have been doing
+* обмінюватися даними з помпою та читати історію - скільки інсуліну було введено
+* обмінюватися даними з CGM (напряму або через хмару) - щоб бачити, якою є ГК зараз і як вона змінювалася
 
-When the device has collected this data, the algorithm runs and does the decision-making based on the settings (ISF, carb ratio, DIA, target, etc.). If required, it then issues commands to the pump to modify insulin delivery rate.
+Коли пристрій зібрав ці дані, запускається алгоритм і ухвалює рішення на основі налаштувань (ISF, вуглеводний коефіцієнт, DIA, ціль тощо). Якщо потрібно, він надсилає помпі команди змінити швидкість подачі інсуліну.
 
-It will also gather any information about boluses, carbohydrate consumption, and temporary target adjustments from the pump or from Nightscout to use it for the calculation of insulin delivery rates.
+Він також збирає з помпи або з Nightscout всю інформацію про болюси, спожиті вуглеводи та тимчасові цілі, щоб використати її для розрахунку швидкості подачі інсуліну.
 
-## How does it know what to do?
+## Як система знає, що робити?
 
-The open source software is designed to make it easy for the device to do the work people used to do (in manual mode) to calculate how insulin delivery should be adjusted. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of expected BG-levels during the next hours will be expected to do in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. Next it sends any necessary adjustments to the pump. Then it reads the data back, and does it over and over again.
+Програмне забезпечення з відкритим кодом створене так, щоб пристрій легко виконував роботу, яку люди раніше робили самі (у ручному режимі), щоб розрахувати, як змінити подачу інсуліну. Спочатку воно збирає дані з усіх допоміжних пристроїв і з хмари, готує дані та виконує розрахунки, робить прогнози рівня ГК на наступні години для різних сценаріїв і розраховує потрібні корекції, щоб утримати ГК у цільовому діапазоні або повернути її туди. Далі воно надсилає потрібні корекції на помпу. Потім воно знову читає дані і повторює це знову і знову.
 
-As the most important input parameter is the blood glucose level coming from the CGM, it is important to have high-quality CGM data.
+Оскільки найважливіший вхідний параметр - це рівень глюкози крові з CGM, важливо мати якісні дані CGM.
 
-AAPS is designed to transparently track all input data it gathers, the resulting recommendation, and any action taken. It is therefore easy to answer the question at any time, “why is it doing X?” by reviewing the logs.
+AAPS створено так, щоб прозоро записувати всі зібрані вхідні дані, отриману рекомендацію та кожну виконану дію. Тому будь-коли легко відповісти на запитання «чому система робить X?», переглянувши журнали.
 
-## Examples of AAPS algorithm decision making:
+## Приклади ухвалення рішень алгоритмом AAPS:
 
-AAPS uses the same core algorithm and feature set as OpenAPS. The algorithm makes multiple predictions (based on settings, and the situation) representing different scenarios of what might happen in the future. In Nightscout, these are displayed as “purple lines”. AAPS uses different colors to separate these [prediction lines](#aaps-screens-prediction-lines). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
+AAPS використовує той самий основний алгоритм і набір функцій, що й OpenAPS. Алгоритм робить кілька прогнозів (на основі налаштувань і ситуації), які показують різні сценарії того, що може статися в майбутньому. У Nightscout вони показані як «фіолетові лінії». AAPS використовує різні кольори, щоб розрізняти ці [лінії прогнозу](#aaps-screens-prediction-lines). У журналах описано, який із цих прогнозів і який часовий проміжок визначає потрібні дії.
 
-### Here are examples of the purple prediction lines, and how they might differ:
+### Ось приклади фіолетових ліній прогнозу і того, як вони можуть відрізнятися:
 
-![Purple prediction line examples](../images/Prediction_lines.jpg)
+![Приклади фіолетових ліній прогнозу](../images/Prediction_lines.jpg)
 
 (clinicianguide-dosing-scenarios)=
 
-### Here are examples of different time frames that influence the needed adjustments to insulin delivery:
+### Ось приклади різних часових проміжків, які впливають на потрібні зміни подачі інсуліну:
 
-### Scenario 1 - Zero Temp for safety
+### Сценарій 1 - нульовий тимчасовий базал для безпеки
 
-In this example, BG is rising in the near-term time frame; however, it is predicted to be low over a longer time frame. In fact, it is predicted to go below target *and* the safety threshold. For safety to prevent the low, AAPS will issue a zero temp (temporary basal rate at 0%), until the eventualBG (in any time frame) is above threshold.
+У цьому прикладі ГК зростає в найближчому часовому проміжку, але на довшому проміжку прогнозується низька ГК. Насправді прогнозується, що вона опуститься нижче цілі *і* нижче порогу безпеки. Для безпеки, щоб запобігти низькій ГК, AAPS встановить нульовий тимчасовий базал (тимчасовий базал 0 %), доки eventualBG (кінцева ГК) у будь-якому часовому проміжку не стане вищою за поріг.
 
-![Dosing scenario 1](../images/Dosing_scenario_1.jpg)
+![Сценарій дозування 1](../images/Dosing_scenario_1.jpg)
 
-### Scenario 2 - Zero temp for safety
+### Сценарій 2 - нульовий тимчасовий базал для безпеки
 
-In this example, BG is predicted to go low in the near-term, but is predicted to eventually be above target. However, because the near-term low is actually below the safety threshold, AAPS will issue a zero temp, until there is no longer any point of the prediction line that is below threshold.
+У цьому прикладі прогнозується, що найближчим часом ГК опуститься низько, але згодом буде вище цілі. Проте оскільки найближча низька ГК фактично нижча за поріг безпеки, AAPS встановить нульовий тимчасовий базал, доки на лінії прогнозу не залишиться жодної точки нижче порогу.
 
-![Dosing scenario 2](../images/Dosing_scenario_2.jpg)
+![Сценарій дозування 2](../images/Dosing_scenario_2.jpg)
 
-### Scenario 3 - More insulin needed
+### Сценарій 3 - потрібно більше інсуліну
 
-In this example, a near-term prediction shows a dip below target. However, it is not predicted to be below the safety threshold. The eventual BG is above target. Therefore, AAPS will restrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). It will then assess adding insulin to bring the lowest level of the eventual predicted BG down to target, once it is safe to do so. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMB's (super micro boluses) ).*
+У цьому прикладі найближчий прогноз показує короткий спад нижче цілі. Проте не прогнозується, що ГК опуститься нижче порогу безпеки. Кінцева ГК вища за ціль. Тому AAPS не додаватиме інсулін, який сприяв би найближчій низькій ГК (тобто інсулін, через який прогноз опустився б нижче порогу). Тоді система оцінить, чи можна додати інсулін, щоб знизити найнижчий рівень кінцевої прогнозованої ГК до цілі, щойно це стане безпечно. *(Залежно від налаштувань, а також кількості та часу потрібного інсуліну, цей інсулін може бути введено через тимчасові базали або SMB (супермікроболюси)).*
 
-![Dosing scenario 3](../images/Dosing_scenario_3.jpg)
+![Сценарій дозування 3](../images/Dosing_scenario_3.jpg)
 
-### Scenario 4 - Low temping for safety
+### Сценарій 4 - низький тимчасовий базал для безпеки
 
-In this example, AAPS sees that BG is spiking well above target. However, due to the timing of insulin, there is already enough insulin in the body to bring BG into range eventually. In fact, BG is predicted to eventually be below target. Therefore, AAPS will not provide extra insulin so it will not contribute to a longer-timeframe low. Although BG is high/rising, a low temporary basal rate is likely here.
+У цьому прикладі AAPS бачить, що ГК різко зростає значно вище цілі. Проте через час дії інсуліну в організмі вже достатньо інсуліну, щоб з часом повернути ГК у діапазон. Насправді прогнозується, що згодом ГК буде нижче цілі. Тому AAPS не дасть додаткового інсуліну, щоб не спричинити низьку ГК на довшому часовому проміжку. Хоча ГК висока або зростає, тут імовірний низький тимчасовий базал.
 
-![Dosing scenario 4](../images/Dosing_scenario_4.jpg)
+![Сценарій дозування 4](../images/Dosing_scenario_4.jpg)
 
-## Optimizing settings and making changes
+## Оптимізація налаштувань і внесення змін
 
-As a clinician who may not have experience with AAPS or DIY closed loops, you may find it challenging to help your patient optimize their settings or make changes to improve their outcomes. We have multiple tools and [guides](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
+Якщо ви як лікар не маєте досвіду з AAPS або саморобними (DIY) закритими петлями, вам може бути складно допомогти пацієнтові оптимізувати налаштування або внести зміни, щоб покращити результати. У спільноті є багато інструментів і [посібників](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html), які допомагають пацієнтам робити невеликі перевірені зміни, щоб покращити свої налаштування.
 
-The most important thing for patients to do is make one change at a time, and observe the impact for 2-3 days before choosing to change or modify another setting (unless it’s obviously a bad change that makes things worse, in which case they should revert immediately to the previous setting). The human tendency is to turn all the knobs and change everything at once; but if someone does so, then they may end up with further sub-optimal settings for the future, and find it hard to get back to a known good state.
+Найважливіше для пацієнтів - змінювати лише одну річ за раз і спостерігати за результатом 2–3 дні, перш ніж змінювати інше налаштування (якщо тільки зміна явно не погана і не погіршує стан - тоді треба відразу повернути попереднє налаштування). Люди схильні крутити всі ручки й змінювати все одразу; але якщо так зробити, налаштування можуть стати ще гіршими, і буде важко повернутися до відомого доброго стану.
 
-One of the most powerful tools for making settings changes is an automated calculation tool for basal rates, ISF, and carb ratio. This is called “[Autotune](#autotune-how-autotune-calculates-adjustments)”. It is designed to be run independently/manually, and allow the data to guide you or your patient in making incremental changes to settings. It is best practice in the community to run (or review) Autotune reports first, prior to attempting to make manual adjustments to settings. Autotune is built into AAPS as a plugin (**Configuration** → **General** → **Autotune**); see [Autotune](../AdvancedOptions/Autotune.md). It can be run on demand or automatically. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adjustment of these parameters would be the natural link to the clinician.
+Один із найсильніших інструментів для зміни налаштувань - автоматичний інструмент розрахунку швидкостей базалу, ISF і вуглеводного коефіцієнта. Це називається «[Autotune](#autotune-how-autotune-calculates-adjustments)». Його призначено запускати окремо/вручну, щоб дані допомагали вам або вашому пацієнтові поступово змінювати налаштування. У спільноті найкращою практикою вважається спочатку запустити (або переглянути) звіти Autotune, а вже потім пробувати змінювати налаштування вручну. Autotune вбудовано в AAPS як плагін (**Конфігурація** → **Загальне** → **Autotune**); див. [Autotune](../AdvancedOptions/Autotune.md). Його можна запускати на вимогу або автоматично. Оскільки ці параметри потрібні і для звичайної подачі інсуліну помпою, і для подачі в закритій петлі, обговорення результатів Autotune і корекція цих параметрів - природна точка взаємодії з лікарем.
 
-Additionally, human behavior (learned from manual diabetes mode) often influences outcomes, even with a DIY closed loop. For example, if BG is predicted to go low and AAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dL (3.9 mmol/L). However, in many cases, someone may choose to treat with many more carbs (e.g. sticking to the 15 rule), which will cause a resulting faster spike both from the extra glucose and because insulin had been reduced in the timeframe leading up to the low.
+Крім того, поведінка людини (вивчена під час ручного керування діабетом) часто впливає на результати, навіть із саморобною (DIY) закритою петлею. Наприклад, якщо прогнозується низька ГК і AAPS зменшує інсулін під час зниження, може знадобитися лише невелика кількість вуглеводів (наприклад, 3–4 г), щоб підняти ГК з 70 мг/дл (3,9 ммоль/л). Проте в багатьох випадках людина може вирішити лікувати гіпо значно більшою кількістю вуглеводів (наприклад, за «правилом 15»), що спричинить швидший стрибок - і через зайву глюкозу, і через те, що інсулін був зменшений у період перед низькою ГК.
 
 ## OpenAPS
 
-**This guide was adopted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AAPS, with the main difference being the hardware platform where each piece of software is run.
+**Цей посібник адаптовано з [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html) (посібник OpenAPS для лікарів).** OpenAPS - це система, створена для роботи на невеликому портативному комп'ютері (його зазвичай називають «rig»). AAPS використовує багато методів, реалізованих в OpenAPS, і має з ним багато спільної логіки та алгоритмів, тому цей посібник дуже схожий на оригінальний. Більшість інформації про OpenAPS легко застосувати до AAPS; головна відмінність - апаратна платформа, на якій працює кожна частина програмного забезпечення.
 
-## Summary
+## Підсумок
 
-This is meant to be a high-level overview of how AAPS works. For more details, ask your patient, reach out to the community, or read the full AAPS documentation available online.
+Це загальний огляд того, як працює AAPS. Щоб дізнатися більше, запитайте пацієнта, зверніться до спільноти або прочитайте повну онлайн-документацію AAPS.
 
-Additional recommended reading:
+Рекомендовано також прочитати:
 
-* The [full AAPS documentation](../index.md)
-* The [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), which explains how OpenAPS is designed for safety: https://openaps.org/reference-design/
-* The [full OpenAPS documentation](https://openaps.readthedocs.io/en/latest/index.html) 
-  * See [how AAPS turns predictions into a dosing decision](#aaps-screens-how-predictions-become-a-dosing-decision) in this documentation, or [OpenAPS's determine-basal documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic) for the underlying algorithm in full technical detail
+* [Повна документація AAPS](../index.md)
+* [OpenAPS Reference Design](https://OpenAPS.org/reference-design/) (опис базового дизайну OpenAPS), який пояснює, як OpenAPS побудовано з думкою про безпеку: https://openaps.org/reference-design/
+* [Повна документація OpenAPS](https://openaps.readthedocs.io/en/latest/index.html) 
+  * Див. [як AAPS перетворює прогнози на рішення про дозування](#aaps-screens-how-predictions-become-a-dosing-decision) у цій документації або [документацію OpenAPS про determine-basal](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic), де алгоритм описано з усіма технічними деталями

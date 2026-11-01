@@ -63,7 +63,7 @@ O xDrip pode ler as notificações do app do fabricante, como o ESEL faz. Não h
 - Ajuste as configurações do xDrip conforme as explicações da página [Configurações do xDrip](../CompatibleCgms/xDrip.md).
 - Ative a [Suavização exponencial](../CompatibleCgms/SmoothingBloodGlucoseData.md) no AAPS.
 
-## Notification Reader
+## Leitor de notificações
 
 O **AAPS** pode ler os valores de glicose diretamente das notificações do app oficial Eversense, sem nenhum outro app no meio. Não há preenchimento de dados que faltam (backfill).
 

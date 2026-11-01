@@ -1,12 +1,12 @@
 # 給臨床醫生的介紹與指南
 
 ```{note}
-This page is a high-level introduction for clinicians. It was last reviewed in June 2026. AAPS develops continuously, so for the most accurate and up-to-date detail always refer to the [main AAPS documentation](../index.md).
+本頁為臨床醫療人員提供概要介紹。本頁最後審閱日期為 2026 年 6 月。 AAPS 持續更新，因此如需最準確且最新的資訊，請一律參閱 [AAPS 主要說明文件](../index.md)。
 ```
 
 本頁面是為對開源人工胰臟技術如 AAPS 感興趣的臨床醫生或想與其臨床醫生分享此類資訊的患者設計的。
 
-本指南提供了一些有關 DIY 閉環系統的高階資訊，特別是 AAPS 的運作方式。有關這些主題的更多詳細資訊，請查看[AAPS 線上完整文件](../index.md)。如果你有疑問，請向你的患者詢問更多詳情，或隨時向社群提出問題。 (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@aaps.app). [你也可以在此找到一些最新的研究與結果相關資料](https://openaps.org/outcomes/)。
+本指南提供了一些有關 DIY 閉環系統的高階資訊，特別是 AAPS 的運作方式。有關這些主題的更多詳細資訊，請查看[AAPS 線上完整文件](../index.md)。如果你有疑問，請向你的患者詢問更多詳情，或隨時向社群提出問題。(如果您沒有使用社群媒體（例如 [Twitter](https://twitter.com/kozakmilos) 或 Facebook），歡迎寄信至 developers@aaps.app，與開發人員聯絡。)[你也可以在此找到一些最新的研究與結果相關資料](https://openaps.org/outcomes/)。
 
 ## 建立 DIY 閉環系統的步驟：
 
@@ -26,7 +26,7 @@ This page is a high-level introduction for clinicians. It was last reviewed in J
 
 ## 資料如何收集：
 
-在 AAPS 中，Android 設備運作一個特殊的應用程式來進行計算，設備透過藍牙與支援的幫浦連線。 AAPS can communicate with other devices and to the cloud via Wi-Fi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
+在 AAPS 中，Android 設備運作一個特殊的應用程式來進行計算，設備透過藍牙與支援的幫浦連線。 AAPS 可透過 Wi-Fi 或行動數據與其他裝置及雲端通訊，以取得額外資訊，並向病患、照護者及親友說明目前的運作情況及原因。
 
 Android 設備需要：
 
@@ -87,9 +87,9 @@ AAPS 使用了與 OpenAPS 相同的核心演算法和功能集。演算法會根
 
 對於患者來說，最重要的是每次只進行一項變更，並觀察 2-3 天的影響後再決定是否變更或修改另一項設定（除非該變更明顯是錯誤的，使情況變得更糟，此時他們應立即恢復到之前的設定）。人的天性是希望同時調整所有參數，但這樣做可能會使未來的設定更次優，並且難以恢復到已知的良好狀態。
 
-其中一個強大的工具是自動計算基礎速率、ISF 和碳水化合物比例的工具。 This is called “[Autotune](#autotune-how-autotune-calculates-adjustments)”. 他設計為獨立/手動運作，允許資料指導你或你的患者進行設定的漸進變更。社群中的最佳做法是在進行手動調整設定之前，先運作（或查看）Autotune 報告。 Autotune is built into AAPS as a plugin (**Configuration** → **General** → **Autotune**); see [Autotune](../AdvancedOptions/Autotune.md). It can be run on demand or automatically. 因為這些參數是標準幫浦胰島素輸送和封閉循環胰島素輸送的先決條件，討論自動調整結果及調整這些參數將自然成為與醫療人員的連結。
+其中一個強大的工具是自動計算基礎速率、ISF 和碳水化合物比例的工具。這稱為「[Autotune](#autotune-how-autotune-calculates-adjustments)」。他設計為獨立/手動運作，允許資料指導你或你的患者進行設定的漸進變更。社群中的最佳做法是在進行手動調整設定之前，先運作（或查看）Autotune 報告。 Autotune 已整合至 AAPS，做為外掛（**組態設定** → **一般** → **Autotune**）；請參閱 [Autotune](../AdvancedOptions/Autotune.md)。您可以依需求執行，也可以設定為自動執行。因為這些參數是標準幫浦胰島素輸送和封閉循環胰島素輸送的先決條件，討論自動調整結果及調整這些參數將自然成為與醫療人員的連結。
 
-此外，人的行為（從手動糖尿病模式中學習）也經常影響結果，即使在使用 DIY 閉環系統時也是如此。 For example, if BG is predicted to go low and AAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dL (3.9 mmol/L). 然而，在許多情況下，有人可能會選擇使用更多的碳水（例如堅持使用 15 克原則），這會導致由於額外的葡萄糖和時間內減少的胰島素而引發更快的血糖峰值。
+此外，人的行為（從手動糖尿病模式中學習）也經常影響結果，即使在使用 DIY 閉環系統時也是如此。例如，若預測血糖即將偏低，而 AAPS 在血糖下降時減少胰島素，可能只需要少量碳水化合物（例如 3-4 g），就能讓血糖從 70 mg/dL（3.9 mmol/L）回升。然而，在許多情況下，有人可能會選擇使用更多的碳水（例如堅持使用 15 克原則），這會導致由於額外的葡萄糖和時間內減少的胰島素而引發更快的血糖峰值。
 
 ## OpenAPS
 
@@ -104,4 +104,4 @@ AAPS 使用了與 OpenAPS 相同的核心演算法和功能集。演算法會根
 * 完整的[AAPS 文件](../index.md)
 * [OpenAPS 參考設計](https://OpenAPS.org/reference-design/)，其中解釋了 OpenAPS 如何為安全設計：https://openaps.org/reference-design/
 * [OpenAPS 完整文件](https://openaps.readthedocs.io/en/latest/index.html) 
-  * See [how AAPS turns predictions into a dosing decision](#aaps-screens-how-predictions-become-a-dosing-decision) in this documentation, or [OpenAPS's determine-basal documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic) for the underlying algorithm in full technical detail
+  * 請參閱本說明文件中的[AAPS 如何根據預測做出劑量決策](#aaps-screens-how-predictions-become-a-dosing-decision)，或參閱 [OpenAPS 的 determine-basal 說明文件](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)，以瞭解完整的底層演算法技術細節。

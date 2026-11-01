@@ -106,14 +106,14 @@
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
 ```{toctree}
-:caption: 4) Διαμόρφωση του AAPS
+:caption: 4) Configure AAPS
 
-Οδηγός εγκατάστασης του AAPS <./SettingUpAaps/SetupWizard.md>
-Το προφίλ σας στο AAPS <./SettingUpAaps/YourAapsProfile.md>
-Αλλαγές στη διαμόρφωση του AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Διαμόρφωση (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
-- Ρυθμίσεις <./SettingUpAaps/Preferences.md>
-Βήματα <./SettingUpAaps/CompletingTheObjectives.md>
+Setup Wizard <./SettingUpAaps/SetupWizard.md>
+Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
+- Settings <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -165,15 +165,15 @@ Android Auto <./RemoteFeatures/AndroidAuto.md>
 ```
 
 ```{toctree}
-:caption: 8) Συντήρηση του AAPS
+:caption: 8) Maintenance of AAPS
 
-Δημιουργία και επαναφορά αντιγράφων ασφαλείας <./Maintenance/ExportImportSettings.md>
-Σημειώσεις έκδοσης <./Maintenance/ReleaseNotes.md>
-Τι άλλαξε στο AAPS v4 <./Maintenance/V4Changes.md>
-Ενημέρωση σε νέα έκδοση ή κλάδο <./Maintenance/UpdateToNewVersion.md>
-- Ενημέρωση μέσω browser (fork) <./Maintenance/UpdateBrowserBuild.md>
-- Ενημέρωση με το Android Studio <./Maintenance/UpdateComputerBuild.md>
-Τέλος υποστήριξης <./Maintenance/EndOfLife.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
+AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+What changed in AAPS v4 <./Maintenance/V4Changes.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
+- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
+End of life <./Maintenance/EndOfLife.md>
 
 ```
 

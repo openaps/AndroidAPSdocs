@@ -106,14 +106,14 @@ De rapportageserver instellen <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
 ```{toctree}
-:caption: 4) AAPS configureren
+:caption: 4) Configure AAPS
 
-Setup Wizard van AAPS <./SettingUpAaps/SetupWizard.md>
-Je AAPS-profiel <./SettingUpAaps/YourAapsProfile.md>
-Wijzigingen maken in de configuratie van AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Configuratie (Configurator) <./SettingUpAaps/ConfigBuilder.md>
-- Instellingen (voorkeuren) <./SettingUpAaps/Preferences.md>
-De Doelen voltooien <./SettingUpAaps/CompletingTheObjectives.md>
+Setup Wizard <./SettingUpAaps/SetupWizard.md>
+Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
+- Settings <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -165,15 +165,15 @@ Uitwisselsite voor aangepaste watchfaces <./ExchangeSiteCustomWatchfaces/index.m
 ```
 
 ```{toctree}
-:caption: 8) Onderhoud van AAPS
+:caption: 8) Maintenance of AAPS
 
-Back-ups maken en terugzetten <./Maintenance/ExportImportSettings.md>
-Release notes <./Maintenance/ReleaseNotes.md>
-Wat is er veranderd in AAPS v4 <./Maintenance/V4Changes.md>
-Bijwerken naar een nieuwe versie of branch <./Maintenance/UpdateToNewVersion.md>
-- Bijwerken met een browser (fork) <./Maintenance/UpdateBrowserBuild.md>
-- Bijwerken met Android Studio <./Maintenance/UpdateComputerBuild.md>
-Einde van de ondersteuning <./Maintenance/EndOfLife.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
+AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+What changed in AAPS v4 <./Maintenance/V4Changes.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
+- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
+End of life <./Maintenance/EndOfLife.md>
 
 ```
 

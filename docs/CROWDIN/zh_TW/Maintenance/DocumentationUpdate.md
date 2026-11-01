@@ -2,29 +2,30 @@
 
 ## 2026年10月
 
-- [Smartwatches and AAPS](#watches-external-companion-apps): the **Samsung Tizen** section becomes **External Companion Apps** and lists the apps that read the **AAPS** broadcast (WatchDrip+, GlucoDataHandler, G-Watch). [WatchDrip+](#watches-xiaomi-amazfit) 0.5 and later connect directly to **AAPS** without xDrip+: setup steps added, also summarized in [Configuration](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) and [Remote monitoring](../RemoteFeatures/RemoteMonitoring.md). Bluejay watches: GTS discontinued, current model updated @psonnera
-- [使用 AAPS Builder 的瀏覽器建置](#aaps-builder)：建置工作流程第 6 版。建置步驟現在使用由審核的精確版本（GitHub 的工具與建置機器），而且當錯誤的文字被貼到 `KEYSTORE_SET` 機密時，建置流程會清楚說明問題。 The [setup page](#aaps-builder-setup) is now part of the documentation and translated, checks your GitHub username, and has clearer help for the secret, "Page not found" (404) and the GitHub app. 如果你的 `.github/workflows/build.yml` 顯示第 5 版或更早，請依 [更新 AAPS](#aaps-builder-updates) 中的說明進行替換 @psonnera
-- [AAPS web installer](#web-installer): now a documentation page, translated like the others. The old address still works @psonnera
-- [Browser build with AAPS Builder](#aaps-builder): build workflow version 3 adds the `aapsclient3Release` variant (**AAPSClient3**, AAPS 4.0 and later). To build it, replace your `.github/workflows/build.yml` as explained in [Updating AAPS](#aaps-builder-updates) @psonnera
-- [Dexcom G7](../CompatibleCgms/DexcomG7.md): removed the patched Dexcom G7 app (DiaKEM), which no longer works for new installs @psonnera
-- [Browser build with AAPS Builder](#aaps-builder): build workflow version 2. Automatic weekly builds are removed (no schedule, no `AUTO_BUILD` / `AUTO_VARIANT` variables, no `built/…` tags): every build is started by you, with the version and variant you choose, and the workflow only has read access to your repository. If your `.github/workflows/build.yml` says version 1, replace it as explained in [Updating AAPS](#aaps-builder-updates). Added screenshots for every step @psonnera
-- [Browser build with AAPS Builder](#aaps-builder): the build workflow is now part of this documentation. No template repository: you create an empty private repository and add the workflow from the setup page (new step 2). The workflow no longer checks an outside repository for updates. If you created your repository from the earlier template, replace `.github/workflows/build.yml` with the workflow from the setup page as explained in [Updating AAPS](#aaps-builder-updates) @psonnera
-- New page [Browser build with AAPS Builder](#aaps-builder): build AAPS from an Android phone with a setup page hosted on this site, with automatic weekly builds and no preparation file. It replaces the Android instructions of the browser build (File Manager Plus pages removed). AAPS Builder created by @dio99, docs @psonnera
+- [Browser build with AAPS Builder](#aaps-builder): build workflow version 8, now maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository. Setting up is one step shorter: [step 1](#aaps-builder-step1) of the [setup page](#aaps-builder-setup) creates your private repository as a copy of that repository, with the build workflow already in it, so there is no workflow to add any more. From now on the build steps are updated for you: your repository runs the version released by the AAPS developers at every build, without any change on your side (and still no automatic build). The build itself does not change, and your existing repository keeps working. To get these automatic updates, replace your `.github/workflows/build.yml` once as explained in [Updating AAPS](#aaps-builder-updates). Your `KEYSTORE_SET` secret stays as it is. The optional [Google Drive step](#aaps-builder-google-drive) now works on the setup page itself, on a phone or a computer: no preparation file needed @psonnera
+- [智慧型手錶與 AAPS](#watches-external-companion-apps)：「**Samsung Tizen**」章節已更名為「**外部伴隨應用程式**」，並列出可讀取**AAPS**廣播的應用程式（WatchDrip+、GlucoDataHandler、G-Watch）。 [WatchDrip+](#watches-xiaomi-amazfit) 0.5 及更新版本可不透過 xDrip+，直接連線至**AAPS**：新增設定步驟，並在[設定](#external-companion-apps)、[Wear OS](../WearOS/WearOsSmartwatch.md)和[遠端監控](../RemoteFeatures/RemoteMonitoring.md)中提供摘要。 Bluejay 手錶：GTS 已停產，並更新目前的機型 @psonnera
+- [使用 AAPS Builder 的瀏覽器建置](#aaps-builder)：建置工作流程第 6 版。建置步驟現在使用由審核的精確版本（GitHub 的工具與建置機器），而且當錯誤的文字被貼到 `KEYSTORE_SET` 機密時，建置流程會清楚說明問題。[設定頁面](#aaps-builder-setup)現已納入文件並完成翻譯，會檢查您的 GitHub 使用者名稱，也提供更清楚的說明，協助您處理密鑰、「找不到頁面」（404）及 GitHub 應用程式相關問題。如果你的 `.github/workflows/build.yml` 顯示第 5 版或更早，請依 [更新 AAPS](#aaps-builder-updates) 中的說明進行替換 @psonnera
+- [AAPS 網頁安裝程式](#web-installer)現已成為文件頁面，並與其他頁面一樣完成翻譯。舊網址仍可使用 @psonnera
+- [使用 AAPS Builder 在瀏覽器中建置](#aaps-builder)：建置工作流程第 3 版新增 `aapsclient3Release` 變體（**AAPSClient3**，適用於 AAPS 4.0 及更新版本）。如要建置此版本，請依照[更新 AAPS](#aaps-builder-updates)中的說明，替換您的 `.github/workflows/build.yml` @psonnera
+- [Dexcom G7](../CompatibleCgms/DexcomG7.md)：已移除修改版 Dexcom G7 應用程式（DiaKEM），此應用程式已無法用於全新安裝 @psonnera
+- [使用 AAPS Builder 的瀏覽器建置](#aaps-builder)：建置工作流程第 2 版。已移除每週自動建置功能（不再排程、不再使用 `AUTO_BUILD` / `AUTO_VARIANT` 變數，也不再使用 `built/…` 標籤）：每次建置都由您自行啟動，並選擇版本和變體；工作流程只有讀取您存放庫的權限。如果您的 `.github/workflows/build.yml` 中標示版本 1，請依照[更新 AAPS](#aaps-builder-updates)中的說明替換檔案。已為每個步驟新增螢幕截圖 @psonnera
+- [使用 AAPS Builder 在瀏覽器中建置](#aaps-builder)：建置工作流程現已納入本文件。不再提供範本存放庫：您需要建立空白的私人存放庫，並從設定頁面新增工作流程（新的步驟 2）。工作流程不再檢查外部存放庫是否有更新。如果您是使用先前的範本建立存放庫，請依照[更新 AAPS](#aaps-builder-updates)中的說明，將 `.github/workflows/build.yml` 替換為設定頁面提供的工作流程 @psonnera
+- 新增頁面：[使用 AAPS Builder 在瀏覽器中建置](#aaps-builder)。透過本網站上的設定頁面，直接使用 Android 手機建置 AAPS，不需要準備檔案。此頁面取代了瀏覽器建置的 Android 操作說明（已移除 File Manager Plus 相關頁面）。 AAPS Builder 由 @dio99 建立，文件由 @psonnera 撰寫
 
-## August 2026
+## 2026年8月
 
-- [Transferring and Installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md): merged the *Android developer verification* page into the installation guide, added the [web installer](#android-developer-verification-web) (install the APK straight from the browser, exempt from verification) and wireless ADB @psonnera
+- [傳輸及安裝 AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)：將 *Android 開發人員驗證*頁面整併至安裝指南，新增[網頁安裝程式](#android-developer-verification-web)（直接從瀏覽器安裝 APK，不需通過驗證）及無線 ADB @psonnera
 
-## July 2026
+## 2026 年 7 月
 
-- [Introduction](../Getting-Started/Introduction.md): accuracy review of the APS section. Corrected the Frontiers citation title and link, reframed it as background rather than a current market guide, updated the dual-hormone and full closed loop statements, clarified that the controller is not always a phone app, removed commercial brand names and unsourced user counts, and fixed OS-AID to *Open-Source Automated Insulin Delivery* @psonnera
-- [Glossary](../UsefulLinks/Glossary.md): added **AID**, **FCL**, **HCL** and **OS-AID** entries, cross-linked from **APS** and **Closed Loop** @psonnera
-- New page [Android developer verification](#android-developer-verification): impact of Google's upcoming verification requirement on installing self-built apps, with free installation methods (ADB, advanced flow, limited distribution account) @psonnera
+- [簡介](../Getting-Started/Introduction.md)：APS 章節的準確性審查。修正 Frontiers 引用的標題和連結，將其重新定位為背景資料，而非現行市場指南；更新雙荷爾蒙和全自動閉環的說明；釐清控制器不一定是手機 App；移除商業品牌名稱和未經來源證實的使用者人數；並修正 OS-AID 的全名為 *開源自動胰島素輸注* @psonnera
+- [詞彙表](../UsefulLinks/Glossary.md)：新增 **AID**、**FCL**、**HCL** 和 **OS-AID** 詞條，並從 **APS** 和 **閉環** 加入交叉連結 @psonnera
+- 新增頁面 [Android 開發人員驗證](#android-developer-verification)：說明 Google 即將實施的驗證要求對安裝自行建置 App 的影響，以及免費安裝方式（ADB、進階流程、有限發佈帳號）@psonnera
 
 ## 2026年6月
 
 - [瀏覽器建置](#browser-build)：已重構為決策優先的多頁流程（Fork → 金鑰庫選項 1／選項 2，且每個裝置有專屬頁面 → Google Drive → 建置 → 疑難排解）；移除了巢狀分頁，並將安裝 File Manager Plus 設為醒目的步驟 @psonnera
-- [Introduction](../Getting-Started/Introduction.md): terminology switched from *DIY* to *OS-AID* (Open-Source Automated Insulin Delivery), added Trio and Stelo, updated pump/CGM compatibility table @tmhastings
+- [簡介](../Getting-Started/Introduction.md)：將術語從 *DIY* 改為 *OS-AID*（開源自動胰島素輸注），新增 Trio 和 Stelo，並更新幫浦／CGM 相容性表格 @tmhastings
 
 ## 2026年3月
 
@@ -33,7 +34,7 @@
 
 ## 2025年1月
 
-- [3.4](#version3400) 版發佈與文件更新彙總（嚮導、電腦建置版本、組態建置工具）
+- [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
 - CGM 清單更新。已移除 Dexcom G5、Tomato、Glimp。
 - [部位輪替介面](#Aapsscreens-site-rotation)
 - [運行模式](#AapsScreens-running-mode)
@@ -71,15 +72,15 @@
 ## 2024年11月
 
 - 更新 [你的 AAPS 配置](../SettingUpAaps/YourAapsProfile.md) @emilise
-- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnera
+- 重新整理 [Wear OS 智慧型手錶](../WearOS/BuildingAapsWearOS.md)內容 @psonnera
 
 ## 2024年10月
 
 - 多個頁面的更新：
-  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../Getting-Started/ComponentOverview.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [需要多長時間](#preparing-how-long-will-it-take)、[組件總覽](../Getting-Started/ComponentOverview.md)、[完成目標](../SettingUpAaps/CompletingTheObjectives.md)、[你的 AAPS 個人檔案](../SettingUpAaps/YourAapsProfile.md)、[組態建置工具](../SettingUpAaps/ConfigBuilder.md)及[偏好設定](../SettingUpAaps/Preferences.md)、[AAPS螢幕](../DailyLifeWithAaps/AapsScreens.md) @emilise
   - [COB計算](../DailyLifeWithAaps/CobCalculation.md)、[動態ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Android Studio Ladybug的建立指導](../SettingUpAaps/BuildingAaps.md) @tanja
-- Technical work (deployment process for the documentation, files organization...) @psonnera & @emilise
+- 技術工作（文件部署流程、檔案整理等）@psonnera & @emilise
 
 ***
 
@@ -102,7 +103,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 
 ## 2022年1月
 
-- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) - update @tanja
+- [問題排除 Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) - 更新 @tanja
 
 ## 2021年12月
 
@@ -113,7 +114,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 
 - 校正 Libre 2 傳感器 的最佳方法
 - [ISF](../UsefulLinks/FAQ.md) 影響的重新表述
-- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+- 更新[Android Studio問題排除](../GettingHelp/TroubleshootingAndroidStudio.md)
 - 移除已修補的[Dexcom](../CompatibleCgms/DexcomG6.md)應用程式，因為它已過時
 
 ## 2021年10月
@@ -139,7 +140,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 
 ## 2021年2月
 
-- New navigation bar and [language switch](../NavigateDoc/ChangeLanguageVersion.md)
+- 新的導覽列和[語系切換](../NavigateDoc/ChangeLanguageVersion.md)
 
 ## 2021年1月
 
@@ -147,7 +148,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 - Dexcom G6 與[自建Dexcom應用](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
 - Libre智慧讀取器[電池電量](#screens-sensor-level-battery)
 - [目標](#objectives-objective3) - 新問題
-- 其他[AAPS 2.8.0的新功能](#Releasenotes-version-2-8-0)
+- Other [new AAPS 2.8.0 functions](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.0)
 
 ## 2020年12月
 
@@ -166,12 +167,12 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 ## 2020年9月
 
 - AAPS 2.7 版的大更新
-- For details see the [release notes](#Releasenotes-version-2-7-0)
+- For details see the [release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.7.0)
 
 ## 2020年6月
 
-- Libre 2 - more details patched Libre Link app & use of Bluetooth transmitters
-- [Time zone traveling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) with Libre 2
+- Libre 2：更多關於修改版 LibreLink App 和使用藍牙發射器的資訊
+- 搭配 Libre 2 進行[時區旅行](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md)
 
 ## 2020年5月
 
@@ -201,7 +202,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 - [延長注射](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) 功能 - 將停用關閉循環
 - 新增[本機設定外掛](../SettingUpAaps/ConfigBuilder.md)
 - 範本設定 - 更新 Dexcom G6
-- [版本 2.6.0](#Releasenotes-version-2-6-0) - 主要新功能
+- [Version 2.6.0](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-260) - major new features
 - [Wear OS 複雜功能](../WearOS/WearOsSmartwatch.md)
 
 ## 2020年1月
@@ -236,7 +237,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 
 ## 2019年10月
 
-- [AAPS 版本 2.5](#Releasenotes-version-2-5-0) 更新（特別是[更新頁面](../Maintenance/UpdateToNewVersion.md)）
+- [AAPS version 2.5](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-250) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
 - [Accu-Chek Insight - 日誌選項](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [COB 計算在單獨頁面上](../DailyLifeWithAaps/CobCalculation.md)
 - [COB - 錯誤 COB 值偵測](#CobCalculation-detection-of-wrong-cob-values)

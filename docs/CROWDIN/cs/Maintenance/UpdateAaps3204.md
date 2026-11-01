@@ -14,7 +14,7 @@ Podrobnosti najdete na stránce [Nejčastější otázky uživatelů APS](../Use
 
 | Verze AAPS              | Doporučená<br/>verze<br/>Android Studia | Alternativní<br/>verze<br/>Android Studia | Gradle | JVM |
 | ----------------------- | --------------------------------------------------- | ----------------------------------------------------- | ------ |:--- |
-| [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                                 | až po Meerkat                                         | 8.2    | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                 | až po Meerkat                                         | 8.2    | 17  |
 
 „Doporučená verze“ obsahuje odpovídající verzi JVM. Doporučená verze je zároveň nejstarší verze, se kterou můžete **AAPS** sestavit. Ve verzi starší než „doporučená“ sestavení **NEPŮJDE**. Pokud použijete jinou verzi, můžete narazit na problémy s verzí JVM. See the [Troubleshooting Android Studio](#incompatible-gradle-jvm) page to help solve these issues. Pokud vaše současná verze Android Studia v tabulce není, musíte ho nejdříve aktualizovat.
 

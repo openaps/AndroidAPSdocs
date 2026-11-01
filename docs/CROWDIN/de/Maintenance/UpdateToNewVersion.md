@@ -21,7 +21,7 @@ Du hast Deine AAPS-App bereits im Browser erstellt? Folge der Anleitung für die
 
 ## AAPS mit Android Studio aktualisieren
 
-Follow [these instructions](./UpdateComputerBuild.md).
+Nutze [diese Anleitung](./UpdateComputerBuild.md).
 
 ## AAPS über die Befehlszeile aktualisieren
 
@@ -35,8 +35,8 @@ Schaue in den [Release Notes](../Maintenance/ReleaseNotes.md) nach, ob es nach d
 
 Nach der Installation der neuen APK:
 
-- you can check the **AAPS'** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). Die aktuelle **AAPS**-Version wird angezeigt
-- ensure import settings have been actioned; and
-- please check your **AAPS'** settings under **Settings** and ensure these remain accurate.
+- Du kannst die **AAPS**-Version auf Deinem Smartphone prüfen, indem Du oben links das **Menü** (☰) öffnest und dann **Über** wählst (siehe Screenshot unten). Die aktuelle **AAPS**-Version wird angezeigt
+- prüfe, ob die Einstellungen importiert wurden, und
+- kontrolliere Deine **AAPS**-Einstellungen unter **Einstellungen** und stelle sicher, dass sie noch stimmen.
 
 ![About dialog with the AAPS version installed](../images/about_dialog_version.png)

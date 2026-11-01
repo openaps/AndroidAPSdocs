@@ -1,98 +1,98 @@
-# Cálculo COB
+# Cálculo de HCA
 
-## How does AAPS calculate the COB value?
+## Como é que o AAPS calcula o valor de HCA?
 
-When carbs are entered by the user as part of a meal entry or carb correction, **AAPS** will add this calculation to the current carbs on board (**COB**). **AAPS** then calculates the user’s carbs’ absorption based on observed deviations to the user’s **BG** values. The rate of absorption depends on the carb’s sensitivity factor (**CSF**). This is not a feature within the user’s **Profile** but is calculated by **AAPS** according to **ISF/I:C** setup, and is determined by how many mg/dL 1 g of carbs will raise the user’s **BG**.
+Quando o utilizador introduz hidratos de carbono numa refeição ou numa correção de hidratos, o **AAPS** soma-os aos hidratos de carbono ativos atuais (**HCA**). Depois, o **AAPS** calcula a absorção dos hidratos de carbono do utilizador com base nos desvios observados nos valores de **glicose** do utilizador. A velocidade de absorção depende do fator de sensibilidade aos hidratos de carbono (**CSF**). Isto não é uma definição do **Perfil** do utilizador, mas é calculado pelo **AAPS** a partir das definições de **FSI/IHC**, e indica quantos mg/dl 1 g de hidratos de carbono faz subir a **glicose** do utilizador.
 
-## Carb Sensitivity Factor
+## Fator de sensibilidade aos hidratos de carbono
 
-The formula adopted by **AAPS** is:
+A fórmula usada pelo **AAPS** é:
 
 - absorbed_carbs = deviation * ic / isf.
 
-The effect on the user’s **Profile** will:
+O efeito do **Perfil** do utilizador será:
 
-- _increase_ **IC**- by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
+- _aumentar_ o **IHC** - aumenta os hidratos de carbono absorvidos a cada 5 minutos e assim encurta o tempo total de absorção;
 
-- _increase_ **ISF** - by decreasing the carbs absorbed every 5 minutes thus prolong total time of absorption; and
+- _aumentar_ o **FSI** - diminui os hidratos de carbono absorvidos a cada 5 minutos e assim prolonga o tempo total de absorção; e
 
-- _change_ **Profile Percentage** -  increase/decrease both values thus has no impact on carbs absorption time.
+- _alterar_ a **Percentagem do Perfil** - aumenta/diminui os dois valores e assim não tem efeito no tempo de absorção dos hidratos de carbono.
 
-For example, if the user’s  **Profile**  **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. For every 20 mg/dL the user’s **BG** goes up, 1 g of carbs will be calculated as absorbed by **AAPS**. Positive **IOB** also affects the **COB** calculation. So, if **AAPS** predicts the user’s **BG** to go down by 20 mg/dL because of **IOB** and it instead stayed flat, **AAPS** would also calculate 1 g of carbs as absorbed.
+Por exemplo, se no **Perfil** do utilizador o **FSI** for 100 e o **IHC** for 5, o fator de sensibilidade aos hidratos de carbono do utilizador será 20. Por cada 20 mg/dl que a **glicose** do utilizador sobe, o **AAPS** calcula 1 g de hidratos de carbono como absorvido. A **IA** positiva também afeta o cálculo dos **HCA**. Assim, se o **AAPS** previr que a **glicose** do utilizador desça 20 mg/dl por causa da **IA** e, em vez disso, ela ficar estável, o **AAPS** também calcula 1 g de hidratos de carbono como absorvido.
 
-Carbs will also be absorbed via the methods described below based on which sensitivity algorithm has been selected within the user's **AAPS**.
+Os hidratos de carbono também serão absorvidos pelos métodos descritos abaixo, conforme o algoritmo de sensibilidade selecionado no **AAPS** do utilizador.
 
-## Carbs Sensitivity - Oref1
+## Sensibilidade aos hidratos de carbono - Oref1
 
-Unabsorbed carbs are cut off after specified time:
+Os hidratos de carbono não absorvidos são cortados após o tempo definido:
 
 ![Oref1](../images/cob_oref0_orange_II.png)
 
-![COB graph with Oref1 cut-off](../images/cob_oref0_orange_I.png)
+![Gráfico de HCA com corte do Oref1](../images/cob_oref0_orange_I.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version — in **AAPS** 4 the graphs look slightly different, but the **COB** graph carries the same information.
+A captura de ecrã acima é de uma versão anterior do **AAPS** — no **AAPS** 4 os gráficos têm um aspeto um pouco diferente, mas o gráfico de **HCA** mostra a mesma informação.
 ```
 
 
-## Carbs Sensitivity - WeightedAverage
+## Sensibilidade aos hidratos de carbono - WeightedAverage
 
-Absorption is calculated to have COB = 0 after specified time:
+A absorção é calculada para ter HCA = 0 após o tempo definido:
 
 ![AAPS, WeightedAverage](../images/cob_aaps2_orange_II.png)
 
-If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from **BG** deviations, an orange dot appears on the **COB** graph.
+Se for usada a absorção mínima de hidratos de carbono (min_5m_carbimpact) em vez do valor calculado a partir dos desvios da **glicose**, aparece um ponto cor de laranja no gráfico de **HCA**.
 
 (CobCalculation-detection-of-wrong-cob-values)=
-## Detection of wrong COB values
+## Deteção de valores de HCA errados
 
-**AAPS**  will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
+O **AAPS** avisa o utilizador se este estiver prestes a dar um bólus com **HCA** de uma refeição anterior e o algoritmo detetar que o cálculo atual dos **HCA** está incorreto. Neste caso, mostra ao utilizador uma dica adicional no ecrã de confirmação, depois de usar o assistente de bólus.
 
-### How does AAPS detect wrong COB values?
+### Como é que o AAPS deteta valores de HCA errados?
 
-Ordinarily __AAPS__ detects carb absorption through **BG** deviations. In case the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
+Normalmente, o __AAPS__ deteta a absorção dos hidratos de carbono através dos desvios da **glicose**. Se o utilizador introduziu hidratos de carbono mas o **AAPS** não consegue detetar a sua absorção estimada através dos desvios da **glicose**, usa o método [min_5m_carbimpact](#Preferences-min_5m_carbimpact) para calcular a absorção (o chamado «fallback»). Como este método calcula apenas a absorção mínima de hidratos de carbono, sem ter em conta os desvios da **glicose**, pode levar a valores de HCA incorretos.
 
-![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
+![Dica sobre um valor de HCA errado](../images/Calculator_SlowCarbAbsorption.png)
 
-In the screenshot above, 66% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. This indicates that the user may have had less **COB** than calculated by the algorithm.
+Na captura de ecrã acima, em 66 % do tempo a absorção dos hidratos de carbono foi calculada pelo min_5m_carbimpact em vez do valor detetado a partir dos desvios. Isto indica que o utilizador pode ter tido menos **HCA** do que o calculado pelo algoritmo.
 
-### How to deal with this warning?
+### Como lidar com este aviso?
 
-- Consider cancelling the treatment - press ‘Cancel’ instead of OK.
-- Calculate your upcoming meal again with bolus wizard leaving **COB** unticked.
-- If you need a correction bolus, enter it manually.
-- Be careful not to overdose or insulin stacking!
-
-
-### Why does the algorithm not detect COB correctly?
-
-This could be because:
-- Potentially the user overestimated carbs when entering them.
-- Activity / exercise after your previous meal.
-- I:C needs adjustment.
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA).
+- Pondere cancelar o tratamento - prima «Cancelar» em vez de OK.
+- Calcule novamente a próxima refeição com o assistente de bólus, sem marcar **HCA**.
+- Se precisar de um bólus de correção, introduza-o manualmente.
+- Tenha cuidado para não causar uma sobredosagem ou acumulação de insulina!
 
 
-## Manual correction of carbs entered
+### Porque é que o algoritmo não deteta corretamente os HCA?
 
-If carbs are over or underestimated this can be corrected through the **Treatments history** screen as described [here](#screens-bolus-carbs).
+Isto pode acontecer porque:
+- Talvez o utilizador tenha sobrestimado os hidratos de carbono ao introduzi-los.
+- Atividade / exercício depois da refeição anterior.
+- O IHC precisa de ser ajustado.
+- O valor de min_5m_carbimpact está errado (o recomendado é 8 com SMB e 3 com AMA).
 
 
-## Carb correction - how to delete a Carb entry from Treatments
+## Correção manual dos hidratos de carbono introduzidos
+
+Se os hidratos de carbono foram sobrestimados ou subestimados, isto pode ser corrigido no ecrã **Histórico de tratamentos**, como descrito [aqui](#screens-bolus-carbs).
 
 
-The **Treatments history** screen can be used to correct a faulty carb entry by deleting it. This may be because the user over or underestimated the carb entry:
+## Correção de hidratos de carbono - como eliminar um registo de hidratos de carbono dos Tratamentos
 
-![Deleting a carb entry from Treatments history](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
-1. Check and remember actual **COB** and **IOB** on the **AAPS** main screen.
-2. Open **Treatments history** (drawer menu → *Treatments history*), tab **Carbs and bolus**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (e.g. with Dana RS).
-3. **Long-press** the faulty carb entry — the list switches to **selection mode** with a checkbox on every line, and the entry is ticked (marked **1** above). Tick any further entries you want to remove as well.
-4. Tap the **🗑 Delete** icon in the top bar (marked **2**) and confirm — the confirmation dialog lists exactly what will be removed.
-5. Make sure carbs are removed successfully by checking **COB** on the **AAPS** main screen again.
-6. Do the same for **IOB** if there is just one line including carbs and insulin.
-7. If carbs are not removed as intended and additional carbs are added as explained in this section, the **COB** entry will be too high and this could lead to **AAPS** delivering too much insulin.
-8. Enter the correct carbs amount through the **Carbs** dialog (**Treatments** → **Carbs**) and set the correct event time.
-9. If there was just one line including carbs and insulin the user should also re-add the amount of insulin. Make sure to set the correct event time and check **IOB** on the main screen after confirming the new entry.
+O ecrã **Histórico de tratamentos** pode ser usado para corrigir um registo de hidratos de carbono errado, eliminando-o. Isto pode acontecer porque o utilizador sobrestimou ou subestimou os hidratos de carbono introduzidos:
+
+![Eliminar um registo de hidratos de carbono do Histórico de tratamentos](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+
+1. Verifique e memorize os valores atuais de **HCA** e **IA** no ecrã principal do **AAPS**.
+2. Abra o **Histórico de tratamentos** (menu lateral → *Histórico de tratamentos*), separador **Hidratos e bólus**. Dependendo da bomba, os hidratos de carbono podem aparecer junto com a insulina numa só linha ou como um registo separado (por exemplo, com a Dana RS).
+3. **Prima longamente** o registo de hidratos de carbono errado — a lista muda para o **modo de seleção**, com uma caixa de verificação em cada linha, e o registo fica marcado (assinalado com **1** acima). Marque também os outros registos que quer remover.
+4. Toque no ícone **🗑 Eliminar** na barra superior (assinalado com **2**) e confirme — a janela de confirmação mostra exatamente o que vai ser removido.
+5. Confirme que os hidratos de carbono foram removidos, verificando de novo os **HCA** no ecrã principal do **AAPS**.
+6. Faça o mesmo para a **IA** se houver apenas uma linha com hidratos de carbono e insulina.
+7. Se os hidratos de carbono não forem removidos como previsto e forem adicionados mais hidratos de carbono como explicado nesta secção, o valor de **HCA** ficará demasiado alto e isso pode levar o **AAPS** a administrar insulina a mais.
+8. Introduza a quantidade correta de hidratos de carbono na janela **Hidratos** (**Tratamentos** → **Hidratos**) e defina a hora correta do evento.
+9. Se havia apenas uma linha com hidratos de carbono e insulina, o utilizador deve também adicionar de novo a quantidade de insulina. Defina a hora correta do evento e verifique a **IA** no ecrã principal depois de confirmar o novo registo.
 

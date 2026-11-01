@@ -828,12 +828,7 @@ Er zijn een paar punten waarin de Omnipod-pod anders werkt dan pompen met een sl
 
 De leeftijden van **insuline** en **canule** in de [statusregel](#screens-sensor-level-battery) van het hoofdscherm worden **na elke podwissel** op 0 dagen en 0 uur **gezet**. Dit komt door de manier waarop de Omnipod-pomp is gebouwd en werkt. De **pompbatterij** en het **insulinereservoir** zitten in elke pod zelf. Omdat de pod de canule direct in de huid brengt op de plek waar de pod zit, gebruiken Omnipod-pompen geen gewone slang. *Daarom worden na een podwissel de leeftijden van deze onderdelen automatisch op nul gezet.* De **Pomp batterij leeftijd** wordt niet getoond, omdat de batterij in de pod altijd langer meegaat dan de pod zelf (maximaal 80 uur).
 
-![Actions_Tab](../images/omnipod/Actions_Tab.png)
-
-```{admonition} Older screenshot
-:class: note
-De schermafbeelding hierboven komt uit een eerdere versie van **AAPS**, waarin deze leeftijden in het deel **Careportal** van het tabblad **Acties (ACT)** stonden. In **AAPS** 4 staan ze in de statusregel van het hoofdscherm.
-```
+![Expanded status panel of a patch pump: cannula and insulin ages at 0h after a pod change, no pump battery row](../images/omnipod/Actions_Tab.png)
 
 ### Niveaus
 

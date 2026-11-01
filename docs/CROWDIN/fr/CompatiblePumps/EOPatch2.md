@@ -269,7 +269,7 @@ Les différents avertissements sont expliqués ci-dessous.
 
 ## Où obtenir de l'aide
 
-Le pilote EOPatch2 est développé par la communauté, de manière **bénévole**. Avant de demander de l'aide, merci de :
+Le pilote EOPatch2 est développé par la communauté, de manière **bénévole**. Avant de demander de l'aide, merci de :
 
 1. **Lisez** la section correspondante de cette documentation pour vérifier comment la fonction doit marcher.
 2. **Demandez** sur le canal *#AAPS* de [Discord](https://discord.gg/4fQUWHZ4Mw), ou dans un des autres [canaux de la communauté](../GettingHelp/WhereCanIGetHelp.md).

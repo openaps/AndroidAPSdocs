@@ -1,7 +1,7 @@
 (v4-changes)=
-# What changed in AAPS v4
+# Що змінилося в AAPS v4
 
-This page collects the notable **changes in behavior** between **AAPS** v3 and v4 — things that work differently, have moved, or have been removed — so existing users know what to expect when they update. See also the [Release Notes](ReleaseNotes.md) and the [update manual](UpdateToNewVersion.md).
+На цій сторінці зібрано важливі **зміни в поведінці** між **AAPS** v3 і v4 — те, що працює інакше, перемістилося або було видалено, — щоб наявні користувачі знали, чого чекати після оновлення. Див. також [Примітки до випуску](ReleaseNotes.md) і [посібник з оновлення](UpdateToNewVersion.md).
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,160 +10,160 @@ This page collects the notable **changes in behavior** between **AAPS** v3 and v
 
 ---
 
-## NSClient v1 has been removed
+## NSClient v1 видалено
 
-**AAPS** v3 shipped **two** Nightscout synchronization plugins:
+**AAPS** v3 мав **два** плагіни синхронізації з Nightscout:
 
-- **NSClient** — the legacy client (the old Nightscout REST / socket.io API, also called *“v1”*), and
-- **NSClientV3** — the client for the newer Nightscout **API v3**.
+- **NSClient** — старий клієнт (старий Nightscout REST / socket.io API, його також називають *«v1»*), і
+- **NSClientV3** — клієнт для новішого Nightscout **API v3**.
 
-In **AAPS** v4 the legacy **NSClient (v1)** plugin has been **removed**. Only **NSClientV3** remains for synchronizing with Nightscout.
+В **AAPS** v4 старий плагін **NSClient (v1)** **видалено**. Для синхронізації з Nightscout залишився лише **NSClientV3**.
 
 ```{admonition} What you need to do
 :class: important
-If you (or your **AAPSClient** follower) were still synchronizing with the old **NSClient (v1)** plugin, switch to **NSClientV3** before/after updating:
+Якщо ви (або ваш **AAPSClient**-послідовник) досі синхронізували дані через старий плагін **NSClient (v1)**, перейдіть на **NSClientV3** до або після оновлення:
 
-- Open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → Communication → NSClientV3**.
-- Enter your **Nightscout URL** and an **access token** (NSClientV3 uses an access token, *not* the old API secret — see [creating a token](https://nightscout.github.io/nightscout/security/#create-a-token)).
-- Your Nightscout site must support the **API v3** (Nightscout 15 or newer).
-- If you use **websockets**, enable or disable them on **both** the master and the follower — never on only one.
+- Відкрийте **[Конфігурація](../SettingUpAaps/ConfigBuilder.md) → Звʼязок → NSClientV3**.
+- Введіть **URL Nightscout** і **токен доступу** (NSClientV3 використовує токен доступу, *а не* старий API secret — див. [створення токена](https://nightscout.github.io/nightscout/security/#create-a-token)).
+- Ваш сайт Nightscout має підтримувати **API v3** (Nightscout 15 або новіший).
+- Якщо ви використовуєте **websockets**, вмикайте або вимикайте їх на **обох** пристроях, на основному і на послідовнику, — ніколи лише на одному.
 ```
 
-This affects only how the app talks to Nightscout; your data on Nightscout is unchanged.
+Це впливає лише на те, як застосунок обмінюється даними з Nightscout; ваші дані в Nightscout не змінюються.
 
 ---
 
-## The bottom navigation: Treatments, Scenes and Manage
+## Нижня панель навігації: Терапія, Сцени і Керувати
 
-In **AAPS** v3 you moved around the app with a row of **tabs** (Overview, Actions, Treatments, …), and several features were **plugins** you enabled in the Config Builder (**Actions**, **Automation**, **Food**, …).
+В **AAPS** v3 ви переходили між частинами застосунку за допомогою рядка **вкладок** (Огляд, Дії, Терапія, …), а кілька функцій були **плагінами**, які ви вмикали в Config Builder (**Дії**, **Автоматизація**, **Їжа**, …).
 
-In **AAPS** v4 the tabs are gone, and so is the eye checkbox in the Config Builder that showed a plugin as a tab. The main screen is the **Overview**, and a **bottom navigation** gives you three sheets. **Actions, Automation and Food are no longer plugins** — there is nothing to enable in [Configuration](../SettingUpAaps/ConfigBuilder.md) (the renamed Config Builder); their functions now live in these sheets.
+В **AAPS** v4 вкладок більше немає, як і прапорця з оком у Config Builder, який показував плагін як вкладку. Головний екран — це **Огляд**, а **нижня панель навігації** дає вам три панелі. **Дії, Автоматизація та Їжа більше не є плагінами** — у [Конфігурації](../SettingUpAaps/ConfigBuilder.md) (так тепер називається Config Builder) нічого не треба вмикати; їхні функції тепер знаходяться в цих панелях.
 
 (v4changes-treatments)=
-### Treatments — enter and deliver
+### Терапія — введення і подача
 
-The **Treatments** sheet is where you record or deliver a treatment: **Bolus wizard**, **Insulin** (manual bolus), **Carbs**, **Treatment** (insulin + carbs together), **Calibration**, **CGM** (open your CGM app, when one is configured), and your **[QuickWizards](../DailyLifeWithAaps/QuickWizards.md)**.
+На панелі **Терапія** ви записуєте або подаєте терапію: **Калькулятор болюса**, **Інсулін** (ручний болюс), **Вуглеводи**, **Терапія** (інсулін і вуглеводи разом), **Калібрування**, **CGM** (відкриває ваш застосунок CGM, якщо його налаштовано) і ваші **[Швидкі майстри](../DailyLifeWithAaps/QuickWizards.md)**.
 
-![The Treatments bottom sheet](../images/v4/BehavioralChanges/treatments_sheet.png)
+![Нижня панель «Терапія»](../images/v4/BehavioralChanges/treatments_sheet.png)
 
-On a **Wear OS watch** the same treatments are entered from the watch's **AAPS menu** (Bolus wizard / Calculator, eCarbs, Treatment, …):
+На **годиннику Wear OS** ту саму терапію вводять з **меню AAPS** на годиннику (Калькулятор болюса / Калькулятор, eCarbs, Терапія, …):
 
-![The treatment actions in the watch's AAPS menu](../images/v4/BehavioralChanges/treatments_watch.png)
+![Дії терапії в меню AAPS на годиннику](../images/v4/BehavioralChanges/treatments_watch.png)
 
-### Scenes
+### Сцени
 
-Your situation presets — see [Scenes](../DailyLifeWithAaps/Scenes.md).
+Ваші шаблони для різних ситуацій — див. [Сцени](../DailyLifeWithAaps/Scenes.md).
 
 (v4changes-manage)=
-### Manage — manage and activate
+### Керувати — керування і активація
 
-The **Manage** sheet is where you manage and activate everything else: **[Profile](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **Insulin settings** (your insulin configurations), **[Temp Target](../DailyLifeWithAaps/TempTargets.md)**, **[QuickWizard](../DailyLifeWithAaps/QuickWizards.md)** presets, **[Scenes](../DailyLifeWithAaps/Scenes.md)**, **Automation**, **Food**, **Site Rotation**, **Pump**, **[Authorized clients](../RemoteFeatures/ClientMasterControl.md)** — plus the pump actions that used to be on the *Actions* tab (**Extended Bolus**, **cancel temp basal**, **Prime/Fill**, **Sensor Insert**, **Pump Battery Change**).
+На панелі **Керувати** ви керуєте всім іншим і активуєте це: **[Профіль](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **Налаштування інсуліну** (ваші конфігурації інсуліну), **[Тимчасова ціль](../DailyLifeWithAaps/TempTargets.md)**, шаблони **[Швидкий майстер](../DailyLifeWithAaps/QuickWizards.md)**, **[Сцени](../DailyLifeWithAaps/Scenes.md)**, **Автоматизація**, **Їжа**, **Чергування місць введення**, **Помпа**, **[Авторизовані клієнти](../RemoteFeatures/ClientMasterControl.md)** — а також дії з помпою, які раніше були на вкладці *Дії* (**Подовжений болюс**, **Скасувати тимчасовий базал**, **Підготовка/Заповнення**, **Встановлення сенсора**, **Заміна батареї помпи**).
 
-![The Manage bottom sheet](../images/v4/BehavioralChanges/manage_sheet.png)
+![Нижня панель «Керувати»](../images/v4/BehavioralChanges/manage_sheet.png)
 
-All of your existing automation rules and food entries are kept; only the way you reach these features has changed.
+Усі ваші наявні правила автоматизації і записи їжі зберігаються; змінився лише спосіб, яким ви відкриваєте ці функції.
 
 (screens-action-tab)=
-#### Where did the Actions tab go?
+#### Куди поділася вкладка «Дії»?
 
-**AAPS** 3.x had an "Actions" tab. In **AAPS** 4 its functions live in other places:
+**AAPS** 3.x мав вкладку «Дії». В **AAPS** 4 її функції знаходяться в інших місцях:
 
-* **Profile switch** and **Profile Percentage**: tap the [profile name](#aaps-screens-profile--target) on the main screen, or **Manage → Profile**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
-* **Temporary target**: press the [target](#aaps-screens-profile--target) on the main screen, or **Manage → Temp Target**.
-* **Prime/Fill**, **Sensor Insert**, **BG check** and the other careportal entries: in the expanded [status panel](#aaps-screens-careportal), in **Manage**, or as [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
-* **History browser**, **Statistics** (TDD): in the **menu** (☰).
+* **Перемикання профілю** і **Відсоток профілю**: торкніться [назви профілю](#aaps-screens-profile--target) на головному екрані або **Керувати → Профіль**. Див. [Змінити відсоток профілю](#ProfileSwitch-change-percentage).
+* **Тимчасова ціль**: натисніть на [ціль](#aaps-screens-profile--target) на головному екрані або **Керувати → Тимчасова ціль**.
+* **Підготовка/Заповнення**, **Встановлення сенсора**, **Контроль ГК** та інші записи careportal: у розгорнутій [панелі стану](#aaps-screens-careportal), у **Керувати** або як кнопки [швидкого запуску](../DailyLifeWithAaps/QuickLaunch.md).
+* **Перегляд історії**, **Статистика** (TDD): у **меню** (☰).
 
 ```{admonition} Profile switch and profile percentage
 :class: note
-In **AAPS** v3, a long press on the profile name opened the profile switch dialog (percentage, duration, Activity temp target). In **AAPS** v4, **tap** the profile name (or **Manage → Profile**), then tap the round **▶** button at the bottom right to open the same settings. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+В **AAPS** v3 довге натискання на назву профілю відкривало діалог перемикання профілю (відсоток, тривалість, тимчасова ціль для активності). В **AAPS** v4 **торкніться** назви профілю (або **Керувати → Профіль**), потім торкніться круглої кнопки **▶** внизу праворуч, щоб відкрити ті самі налаштування. Див. [Зміна відсотка профілю](#ProfileSwitch-change-percentage).
 ```
 
 ---
 
 (v4changes-read-only-management)=
-## Settings protection now also locks the management screens
+## Захист налаштувань тепер блокує також екрани керування
 
-In **AAPS** v3, [Settings protection](#Preferences-settings-protection) asked for your password only when you opened the settings. You could still add or edit profiles in the **Local Profile** tab without it.
+В **AAPS** v3 [Захист налаштувань](#Preferences-settings-protection) запитував пароль лише тоді, коли ви відкривали налаштування. Без нього ви все одно могли додавати або редагувати профілі на вкладці **Локальний профіль**.
 
-In **AAPS** v4, Settings protection also covers editing on the management screens: **Profile**, **Insulin settings**, **Temp Target** and **QuickWizard**. If your settings are locked, these screens open **read-only**:
+В **AAPS** v4 Захист налаштувань також охоплює редагування на екранах керування: **Профіль**, **Налаштування інсуліну**, **Тимчасова ціль** і **Швидкий майстер**. Якщо ваші налаштування заблоковано, ці екрани відкриваються **лише для читання**:
 
-- You can browse the entries and **▶ Activate** or use them.
-- The **Add / Edit / Clone / Delete** buttons are **hidden**. Only the **✏️ pencil** in the top bar shows that you can unlock editing.
+- Ви можете переглядати записи і **▶ Активувати** їх або використовувати.
+- Кнопки **Додати / Редагувати / Клонувати / Видалити** **приховано**. Лише **✏️ олівець** у верхній панелі показує, що редагування можна розблокувати.
 
-![The read-only Profile screen — only Activate at the bottom, pencil in the top bar](../images/v4/Profiles/profile_manage_readonly.png)
+![Екран «Профіль» лише для читання — внизу тільки «Активувати», у верхній панелі олівець](../images/v4/Profiles/profile_manage_readonly.png)
 
 ```{admonition} What you need to do
 :class: important
-To add, edit, clone or delete an entry, tap the **✏️ pencil** in the top bar and enter your settings password (or use biometrics). The buttons appear.
+Щоб додати, редагувати, клонувати або видалити запис, торкніться **✏️ олівця** у верхній панелі і введіть пароль налаштувань (або використайте біометрію). З'являться кнопки.
 
-If you don't need to protect your settings, you can turn Settings protection off in **Settings → Protection**.
+Якщо вам не потрібно захищати налаштування, ви можете вимкнути Захист налаштувань у **Налаштування → Захист**.
 ```
 
 ---
 
 (v4changes-active-insulin)=
-## The insulin in use can't be edited
+## Інсулін, який використовується, не можна редагувати
 
-In **AAPS** v3, you could change the DIA of the insulin you were using at any time.
+В **AAPS** v3 ви могли будь-коли змінити DIA інсуліну, який використовували.
 
-In **AAPS** v4, the insulin marked **ACTIVE** in **Manage → Insulin settings** is greyed out: you cannot edit or delete it.
+В **AAPS** v4 інсулін, позначений **АКТИВНИЙ** у **Керувати → Налаштування інсуліну**, сірий: ви не можете його редагувати або видалити.
 
-When you upgrade, **AAPS** keeps the insulin and DIA that your v3 profile switches already stored. If it finds older records whose insulin is known but whose DIA is not, it uses a default DIA for them and shows a message once, for example *Older records had no insulin duration, so 9.0 hours was used for Lyumjev. Check your insulin settings — already migrated records are not updated afterwards.* Check your insulin settings when you see it.
+Під час оновлення **AAPS** зберігає інсулін і DIA, які вже записані у ваших перемиканнях профілю з v3. Якщо він знаходить старіші записи, для яких відомий інсулін, але невідома DIA, він використовує для них DIA за замовчуванням і один раз показує повідомлення, наприклад *Старі записи не мали тривалості дії інсуліну, тому для Lyumjev використано 9,0 год. Перевірте налаштування інсуліну — вже перенесені записи потім не оновлюються.* Коли ви побачите це повідомлення, перевірте налаштування інсуліну.
 
 ```{admonition} What you need to do
 :class: important
-To change the DIA or peak, add a new insulin with **+**, adjust it, save it and **▶ Activate** it. See [Changing the insulin in use](#Config-Builder-insulin-change-active).
+Щоб змінити DIA або пік, додайте новий інсулін кнопкою **+**, налаштуйте його, збережіть і **▶ Активуйте** його. Див. [Зміна інсуліну, який використовується](#Config-Builder-insulin-change-active).
 ```
 
 ---
 
 (v4changes-remote-control)=
-## AAPSClient remote control needs pairing
+## Віддалене керування з AAPSClient потребує спарювання
 
-In **AAPS** v3, **AAPSClient** controlled **AAPS** by writing care-portal treatments to Nightscout, and could not deliver a bolus.
+В **AAPS** v3 **AAPSClient** керував **AAPS**, записуючи терапію careportal у Nightscout, і не міг подати болюс.
 
-In **AAPS** v4, the client and the main phone are **paired** once, and every command is signed. The main phone checks and confirms each command, and a client can now also deliver a bolus.
+В **AAPS** v4 клієнт і основний телефон **спаровуються** один раз, і кожна команда підписується. Основний телефон перевіряє і підтверджує кожну команду, і тепер клієнт також може подати болюс.
 
-- Each client has a **[role](#client-master-control-roles)** that limits what it may do.
-- While client control is on, the main phone is in **[hardened mode](#client-master-control-hardened-mode)**: treatments and changes typed directly into Nightscout (the website, other apps) are no longer applied.
-- Each client gets a **[Nightscout token of its own](#client-master-control-own-token)** with only the rights it needs.
+- Кожен клієнт має **[роль](#client-master-control-roles)**, яка обмежує, що він може робити.
+- Поки керування з клієнта увімкнено, основний телефон працює в **[захищеному режимі](#client-master-control-hardened-mode)**: терапія і зміни, введені прямо в Nightscout (на сайті, в інших застосунках), більше не застосовуються.
+- Кожен клієнт отримує **[власний токен Nightscout](#client-master-control-own-token)** лише з тими правами, які йому потрібні.
 
 ```{admonition} What you need to do
 :class: important
-Pair each **AAPSClient** with the main phone: see [Master ↔ Client control](#client-master-control). With an admin token on the main phone, the main phone shows a QR code that sets up and pairs the client in one scan. If you used to enter treatments on the Nightscout website, enter them on a paired client instead.
+Спаруйте кожен **AAPSClient** з основним телефоном: див. [Керування основний телефон ↔ клієнт](#client-master-control). Якщо на основному телефоні є токен адміністратора, основний телефон показує QR-код, який налаштовує і спаровує клієнт одним скануванням. Якщо раніше ви вводили терапію на сайті Nightscout, тепер вводьте її на спареному клієнті.
 ```
 
 ---
 
-## Duplicate BG data now switches the loop to Low Glucose Suspend
+## Подвоєні дані ГК тепер перемикають петлю в режим «Зупинка базалу при низькому ГК»
 
-When **AAPS** receives the same BG reading twice (a red warning badge on the BG source shortcut in the bottom bar), it cannot calculate your trend reliably, so it stops giving correction insulin.
+Коли **AAPS** отримує те саме значення ГК двічі (червоний значок попередження на ярлику джерела ГК у нижній панелі), він не може надійно розрахувати тренд, тому перестає подавати коригувальний інсулін.
 
-In **AAPS** v3 this happened quietly in the background: your loop still showed as **Closed Loop**, even though it could no longer correct.
+В **AAPS** v3 це відбувалося непомітно у фоні: ваша петля все ще показувалася як **Закрита петля**, хоча вже не могла коригувати.
 
-In **AAPS** v4 the change is visible. A closed loop is switched to **Low Glucose Suspend** mode, and the loop dialog tells you why: *"LGS mode due to doubled values in BG source"*. **AAPS** can still reduce or suspend your basal to protect you against lows.
+В **AAPS** v4 цю зміну видно. Закрита петля перемикається в режим **Зупинка базалу при низькому ГК**, а діалог петлі пояснює причину: *«Режим LGS через подвоєні значення в джерелі ГК»*. **AAPS** все ще може зменшити або зупинити базал, щоб захистити вас від гіпо.
 
 ```{admonition} What you need to do
 :class: important
-Find and remove the duplicate readings — see [BG warning sign](#aaps-screens-bg-warning-sign).
+Знайдіть і видаліть подвоєні значення — див. [Знак попередження ГК](#aaps-screens-bg-warning-sign).
 
-Once they are gone, **AAPS** stays in **Low Glucose Suspend**. It does not go back to **Closed Loop** on its own: press and hold the loop icon and select **Closed Loop** again.
+Коли їх не стане, **AAPS** залишиться в режимі **Зупинка базалу при низькому ГК**. Він не повернеться до **Закрита петля** сам: натисніть і утримуйте значок петлі та знову виберіть **Закрита петля**.
 ```
 
 ---
 
 (v4changes-tidepool)=
-## Tidepool: data now shows under the device name AAPS
+## Tidepool: дані тепер показуються під назвою пристрою AAPS
 
-In **AAPS** v3, the data uploaded to [Tidepool](../SettingUpAaps/Tidepool.md) was shown in Tidepool under another device name.
+В **AAPS** v3 дані, вивантажені в [Tidepool](../SettingUpAaps/Tidepool.md), показувалися в Tidepool під іншою назвою пристрою.
 
-In **AAPS** v4, the data is shown under the device name **AAPS**. After the update, **AAPS** starts a new data set in Tidepool. Your older data stays in Tidepool under the old device name.
+В **AAPS** v4 дані показуються під назвою пристрою **AAPS**. Після оновлення **AAPS** починає в Tidepool новий набір даних. Ваші старіші дані залишаються в Tidepool під старою назвою пристрою.
 
 ```{admonition} What you need to do
 :class: important
-Usually nothing: new data simply appears under **AAPS**.
+Зазвичай нічого робити не треба: нові дані просто з'являються під **AAPS**.
 
-Do **not** run "**Full synchronization**" while the old data is still in Tidepool: the same data would then be there twice. If you want all your data under the new name, use the "**Purge all data**" button on the [Tidepool screen](#tidepool-menu) first (it also deletes the old data uploaded by **AAPS**), then run "**Full synchronization**". Only the data still stored in **AAPS** on your phone can be uploaded again.
+**Не** запускайте «**Повна синхронізація**», поки старі дані ще є в Tidepool: тоді ті самі дані будуть там двічі. Якщо ви хочете бачити всі дані під новою назвою, спочатку натисніть кнопку «**Видалити всі дані**» на [екрані Tidepool](#tidepool-menu) (вона також видаляє старі дані, вивантажені **AAPS**), потім запустіть «**Повна синхронізація**». Повторно вивантажити можна лише ті дані, які ще зберігаються в **AAPS** на вашому телефоні.
 ```
 
 ---

@@ -828,12 +828,7 @@ Jest kilka rzeczy, które wynikają z tego, że Pod Omnipod różni się od pomp
 
 Wiek **insuliny** i **kaniuli** w [wierszu stanu](#screens-sensor-level-battery) na ekranie głównym jest **zerowany** do 0 dni i 0 godzin **po każdej wymianie Poda**. Wynika to z tego, jak zbudowana jest i jak działa pompa Omnipod. **Bateria pompy** i **zbiornik insuliny** znajdują się w każdym Podzie. Pod wprowadza kaniulę bezpośrednio pod skórę w miejscu, w którym jest przyklejony, więc pompy Omnipod nie mają zwykłego drenu. *Dlatego po wymianie Poda wiek każdego z tych elementów automatycznie wraca do zera.* **Wiek baterii pompy** nie jest pokazywany, bo bateria w Podzie zawsze wystarczy na dłużej niż czas życia Poda (maksymalnie 80 godzin).
 
-![Actions_Tab](../images/omnipod/Actions_Tab.png)
-
-```{admonition} Older screenshot
-:class: note
-Zrzut ekranu powyżej pochodzi z wcześniejszej wersji **AAPS**, w której te wartości były pokazane w części **Portal opieki** zakładki **Akcje (ACT)**. W **AAPS** 4 są one pokazane w wierszu stanu na ekranie głównym.
-```
+![Expanded status panel of a patch pump: cannula and insulin ages at 0h after a pod change, no pump battery row](../images/omnipod/Actions_Tab.png)
 
 ### Poziomy
 

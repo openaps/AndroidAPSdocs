@@ -1,25 +1,25 @@
-# Search the documentation
+# Пошук у документації
 
-The documentation contains a lot of information. If you are looking for a specific topic, term or setting, using the search feature is often faster than browsing through the menu.
+Документація містить дуже багато інформації. Якщо ви шукаєте певну тему, термін або налаштування, пошук часто швидший, ніж перегляд меню.
 
-## How to search
+## Як шукати
 
-The search box is located at the top of the navigation panel on the left side of the screen.
+Поле пошуку розташоване вгорі панелі навігації в лівій частині екрана.
 
 ```{note}
-On smaller screens (such as a phone) the navigation panel is hidden. Tap the menu (☰) icon in the top left corner to open it and reveal the search box.
+На малих екранах (наприклад, на телефоні) панель навігації прихована. Торкніться значка меню (☰) у верхньому лівому куті, щоб відкрити її і побачити поле пошуку.
 ```
 
-1. Type one or more keywords into the search box.
-2. Press `Enter` or tap the search icon.
-3. A results page opens, listing every page where your keywords appear. Click a result to jump to the matching page.
+1. Введіть одне або кілька ключових слів у поле пошуку.
+2. Натисніть `Enter` або торкніться значка пошуку.
+3. Відкриється сторінка результатів зі списком усіх сторінок, де є ваші ключові слова. Натисніть на результат, щоб перейти на потрібну сторінку.
 
-## Tips for better results
+## Поради для кращих результатів
 
-- Use specific terms (for example `temp target` or `autosens`) rather than full sentences.
-- Searching with several keywords returns the pages containing those words. Start broad and add keywords to narrow the results.
-- The search only covers the language and version of the documentation you are currently reading. If you cannot find something, try switching to the English version, which is the most complete (see [Change language and version](./ChangeLanguageVersion.md)).
+- Використовуйте конкретні терміни (наприклад, `temp target` або `autosens`), а не цілі речення.
+- Пошук за кількома ключовими словами показує сторінки, які містять ці слова. Почніть із загального запиту і додавайте ключові слова, щоб звузити результати.
+- Пошук охоплює лише ту мову та версію документації, яку ви зараз читаєте. Якщо ви не можете щось знайти, спробуйте перейти на англійську версію, вона найповніша (див. [Зміна мови та версії](./ChangeLanguageVersion.md)).
 
 ```{note}
-The search index is built automatically. Very recently added content may take some time to become searchable.
+Індекс пошуку створюється автоматично. Новий вміст, доданий зовсім недавно, може з'явитися в пошуку не відразу.
 ```

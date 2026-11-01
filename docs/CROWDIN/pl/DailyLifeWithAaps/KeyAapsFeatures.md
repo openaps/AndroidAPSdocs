@@ -73,7 +73,7 @@ Zamknięta pętla jest możliwa tylko wtedy, gdy jesteś na **[Zadaniu 7](#objec
 
 Dzięki SMB przy posiłkach z samymi „wolnymi” węglowodanami może wystarczyć, że podasz systemowi planowaną ilość węglowodanów, a resztę zostawisz **AAPS**. Może to jednak prowadzić do wyższych szczytów glikemii po posiłku, bo nie da się podać bolusa przed posiłkiem. Możesz też podać (w razie potrzeby jako bolus przed posiłkiem) **bolus startowy**, który **tylko częściowo** pokrywa węglowodany (np. 2/3 szacowanej ilości), a resztę insuliny zostawić **SMB**.
 
-![SMB na głównym wykresie](../images/SMBs.png)
+![SMBs on the IOB graph](../images/SMBs.png)
 
 SMB są pokazane na [wykresie IOB](#aaps-screens-iob) jako niebieskie trójkąty. [Naciśnij i przytrzymaj](#aaps-screens-graph-press-and-hold) wykres na trójkącie, aby zobaczyć, ile insuliny podano, albo użyj [Historii leczenia](#aaps-screens-treatments).
 

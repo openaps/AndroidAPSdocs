@@ -828,12 +828,7 @@ There are a few items that are specific to how the Omnipod pod differs from tube
 
 The **insulin** and **cannula** ages in the [status row](#screens-sensor-level-battery) of the main screen are **reset** to 0 days and 0 hours **after each pod change**. 这是由于Omnipod胰岛素泵的构造和工作原理决定的。**泵电池**和**胰岛素储药器**均内置于每个储药器单元内部。由于储药器在敷贴时会直接将输注套管插入皮肤，Omnipod泵不使用传统导管。*因此更换储药器后，这些数值的使用时长会自动归零。* **泵电池使用时长**不显示报告，因为储药器内置电池的寿命始终超过储药器使用期限（最长80小时）。
 
-![Actions_Tab](../images/omnipod/Actions_Tab.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version, where these ages were shown in the **Careportal** section of the **Actions (ACT)** tab. In **AAPS** 4 they are shown in the status row of the main screen.
-```
+![Expanded status panel of a patch pump: cannula and insulin ages at 0h after a pod change, no pump battery row](../images/omnipod/Actions_Tab.png)
 
 ### 余量水平
 

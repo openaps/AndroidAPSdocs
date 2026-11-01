@@ -14,7 +14,7 @@
 
 | AAPS 版本                 | 推荐<br/>Android Studio<br/>版本 | 备选<br/>Android Studio<br/>版本 | Gradle | JVM |
 | ----------------------- | ---------------------------------------- | ---------------------------------------- | ------ |:--- |
-| [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                      | 最高支持至Meerkat版本                           | 8.2    | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                      | 最高支持至Meerkat版本                           | 8.2    | 17  |
 
 推荐版本是已内置适配的JVM版本。推荐版本同时也是构建**AAPS**的最低可用版本。若使用低于"推荐"的版本将**无法**完成构建。若选用其他版本，可能遭遇与JVM版本相关的兼容性问题。 See the [Troubleshooting Android Studio](#incompatible-gradle-jvm) page to help solve these issues. 若您当前的Android Studio版本未在下表中列出，则需先升级至支持版本。
 

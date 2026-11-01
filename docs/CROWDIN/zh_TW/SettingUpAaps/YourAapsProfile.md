@@ -1,6 +1,6 @@
 # 你的 AAPS 配置
 
-Your **AAPS Profile** is a set of four key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. 這些是 **AAPS** 的主要參數。隨著你逐步完成 **目標**，你將解鎖其他可修改的參數（如 SMB 設置），但這些功能的性能依賴於你的基礎 **配置** 是否正確。該 **配置** 包含：
+您的 **AAPS 設定檔**包含 4 項重要參數，這些參數會決定 **AAPS** 如何根據感測器的血糖值注射胰島素。這些是 **AAPS** 的主要參數。隨著你逐步完成 **目標**，你將解鎖其他可修改的參數（如 SMB 設置），但這些功能的性能依賴於你的基礎 **配置** 是否正確。該 **配置** 包含：
 * [血糖目標](#profile-glucose-targets)、
 * [基礎率](#your-aaps-profile-basal-rates)（BR）、
 * [胰島素敏感性因子](#your-aaps-profile-insulin-sensitivity-factor)（ISF）及
@@ -8,10 +8,10 @@ Your **AAPS Profile** is a set of four key parameters which define how **AAPS** 
 
 ```{admonition} Where did DIA go?
 :class: note
-The **duration of insulin action (DIA)** is no longer part of your **Profile**. It is set per insulin instead — see [Manage → Insulin settings](#Config-Builder-insulin-dia).
+**胰島素作用時間（DIA）**已不再列於您的**設定檔**中。現在要針對不同胰島素分別設定，請參閱[管理 → 胰島素設定](#Config-Builder-insulin-dia)。
 ```
 
-As part of **AAPS**’ management, users should continually assess and scrutinize the accuracy of their **Profile** settings. 建議按照此處所提供的順序進行設定。在更改另一個設置之前，請確保先調整好一個設置。逐步進行調整，而不是一次性做出大幅更改。記得在每次更改後啟用新配置。 Regularly [back up your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your settings.
+使用 **AAPS** 時，使用者應持續評估並仔細檢視**設定檔**設定是否準確。建議按照此處所提供的順序進行設定。在更改另一個設置之前，請確保先調整好一個設置。逐步進行調整，而不是一次性做出大幅更改。記得在每次更改後啟用新配置。請定期匯出設定，[備份您的**設定檔**](#YourAapsProfile_Profile-backup)設定。
 
 你的 **配置** 設置之間相互影響—你可能會有「錯誤」設置在某些情況下運作良好，但在其他情況下卻無法正常運作。例如，若基礎胰島素過高與太高的**CR**同時發生。這表示你需要針對各項設定進行個別調整，並確保它們在各種情況下能夠協調運作。
 
@@ -19,9 +19,9 @@ As part of **AAPS**’ management, users should continually assess and scrutiniz
 
 ```{admonition} Your diabetes may vary
 :class: note
-**Profiles** vary significantly from person-to-person.
+每個人的**設定檔**差異都很大。
 
-對於基礎率（BR）、胰島素敏感度因子（ISF）和胰島素與碳水化合物比率（IC或ICR），胰島素需求的絕對值和趨勢因每個人的生理性別、年齡、體能水平等而異，還有一些短期因素如疾病和近期運動。 For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+對於基礎率（BR）、胰島素敏感度因子（ISF）和胰島素與碳水化合物比率（IC或ICR），胰島素需求的絕對值和趨勢因每個人的生理性別、年齡、體能水平等而異，還有一些短期因素如疾病和近期運動。若想進一步了解，Adam Brown 所著的《[Bright Spots and Landmines](https://diatribe.org/bright-spots-and-landmines/)》是一本很值得一讀的書。
 
 ```
 
@@ -31,7 +31,7 @@ As part of **AAPS**’ management, users should continually assess and scrutiniz
 
 來自**AAPS**的設定檔範例截圖如下。請注意，下面這個範例設定檔顯示了大量的時間點。當你開始使用**AAPS**時，你的個人設定可能會簡單許多。
 
-![Example active profile](../images/Profile-Example-Active.png)
+![作用中的設定檔範例](../images/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
 ## 血糖目標
@@ -42,14 +42,14 @@ As part of **AAPS**’ management, users should continually assess and scrutiniz
 
 目標可以在這些邊界內定義：
 
-|    | _低_目標                  | _高_目標                    |
-| -- | ---------------------- | ------------------------ |
-| 最小 | 4.4 mmol/L or 80 mg/dL | 5 mmol/L or 90 mg/dL     |
-| 最大 | 10 mmol/L or 180 mg/dL | 11.1 mmol/L or 200 mg/dL |
+|    | _低_目標                 | _高_目標                   |
+| -- | --------------------- | ----------------------- |
+| 最小 | 4.4 mmol/L 或 80 mg/dL | 5 mmol/L 或 90 mg/dL     |
+| 最大 | 10 mmol/L 或 180 mg/dL | 11.1 mmol/L 或 200 mg/dL |
 
 ### 影響
 
-If the target in your **Profile** is very wide (say, 3 or more mmol/L [50 mg/dL or more] wide), you will often find little **AAPS** action. 這是因為**血糖** 水平預測會落在那個寬範圍內，因此 **AAPS** 不太可能採取臨時基礎率的行動。
+如果**設定檔**中的目標範圍很寬（例如寬度達 3 mmol/L 或以上［50 mg/dL 或以上］），您通常會發現 **AAPS** 幾乎不會採取任何動作。這是因為**血糖** 水平預測會落在那個寬範圍內，因此 **AAPS** 不太可能採取臨時基礎率的行動。
 
 ### 如何設定
 
@@ -71,7 +71,7 @@ If the target in your **Profile** is very wide (say, 3 or more mmol/L [50 mg/dL 
 
 胰島素幫浦每幾分鐘會輸送少量速效胰島素，以防止肝臟釋放過多的葡萄糖，並將葡萄糖輸送到體細胞中。基礎胰島素通常占你每日總劑量（TDD）的 40-50%，取決於你的飲食，並且通常遵循日夜節律，在 24 小時內有一個高峰和一個低谷。有關更多資訊，Gary Scheiner 所著的[“像胰臟一樣思考”](https://amzn.eu/d/iVU0RGe)第 6 章非常有用。
 
-Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimize your ISF and ICR.
+大多數第 1 型糖尿病衛教師（以及第 1 型糖尿病患者！）都認為，應先調整好基礎率，再嘗試最佳化 ISF 和 ICR。
 
 ### 影響
 
@@ -91,9 +91,9 @@ Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you
 
 ![基礎率](../images/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetes team.
+基礎率需要透過反覆嘗試來調整，並應與您的糖尿病照護團隊討論後進行。
 
-有些基礎率測試方法通常是在 24 小時期間進行<u>間歇性</u> 斷食，同時觀察你的基礎率與胰島素需求。雖然你需要測試全天的基礎率，但不建議連續禁食24小時。因為身體會啟動機制如激素來進行補償。 A recommended way is to fast over 3 different days for a period of 8 hours.
+有些基礎率測試方法通常是在 24 小時期間進行<u>間歇性</u> 斷食，同時觀察你的基礎率與胰島素需求。雖然你需要測試全天的基礎率，但不建議連續禁食24小時。因為身體會啟動機制如激素來進行補償。建議在不同的 3 天中，各進行一次為期 8 小時的禁食。
 
 建議的方法是暫停循環（為了安全，你可以將 AAPS 設為 [**LGS**](#KeyAapsFeatures-LGS) 以避免低血糖，就像達成 [目標 6](#objectives-objective6) 時所做的那樣），這會回復到你的預設基礎率。觀察你的**血糖**如何變化：如果它下降，則基礎率過高。反之亦然。<br/> 另一種替代方法（ might be more tricky）是在循環運行的情況下，查看**IOB**如何變化。如果**IOB**是負的，則你的基礎率過高。反之亦然。請注意，這種方法依賴於**ISF**來修正**血糖**，因此需要其他變數合理設置，這樣才能成功。<br/> 調整基礎率的另一種方法是觀察在夜間的循環行為，當所有 COB 已經降到為止。這種方法對於兒童特別有用，因為禁食較困難或胰島素需求經常變化。[來自 Tidepool 的 Saleh Adi 醫師](https://www.youtube.com/watch?v=-fpWnGRhLSo)提供了分析夜間血糖曲線的實用方法，以最佳化你的基礎率。
 
@@ -102,22 +102,22 @@ Setting your basal rates right is done by trial and error, and should be done in
 在根據基礎率測試結果採取行動時，應在預期升高/下降前 1 到 2 小時（視你的胰島素種類而定）先變更**設定檔**。根據需要重複測試，直到你對**基礎率**設定感到滿意。
 
 (your-aaps-profile-basal-not-compatible)=
-#### Message: "Basal rate is not compatible with the current pump"
+#### 訊息：「基礎率與目前使用的幫浦不相容」
 
-Each pump has limits: a lowest and a highest basal rate it can deliver and, for some pumps (for example Dana, Accu-Chek Combo, Medtronic and Diaconn G8), basal rates that can only change on the full hour. **AAPS** checks your profile against the pump you use, **after** applying the percentage you choose.
+每種幫浦都有可輸送的最低與最高基礎率限制。有些幫浦（例如 Dana、Accu-Chek Combo、Medtronic 和 Diaconn G8）只能在整點變更基礎率。 **AAPS** 會先套用您選擇的百分比，**再**檢查您的設定檔是否適用於目前使用的幫浦。
 
-If a basal rate is outside these limits, the **Activate** screen shows this message and the **Activate** button stays grey:
+如果基礎率超出這些限制，**啟動**畫面會顯示這則訊息，而且**啟動**按鈕會呈現灰色：
 
-![Activate screen with the message "Basal rate is not compatible with the current pump"](../images/v4/Profiles/profile_activate_pump_incompatible.png)
+![顯示「基礎率與目前使用的幫浦不相容」訊息的啟動畫面](../images/v4/Profiles/profile_activate_pump_incompatible.png)
 
-For example, with a basal rate of 0.10 U/h in the night and a profile percentage of 35 %, **AAPS** would have to deliver 0.035 U/h. This is less than a Dana pump can deliver (0.04 U/h).
+例如，夜間基礎率為 0.10 U/h，設定檔百分比為 35% 時，**AAPS** 必須輸送 0.035 U/h。這低於 Dana 幫浦可輸送的最低基礎率（0.04 U/h）。
 
-To solve it, either:
+您可以採取以下任一方式解決：
 
-* choose another percentage: a **higher** one if a basal rate becomes too low, a **lower** one if a basal rate becomes too high, or
-* [edit the profile](#your-aaps-profile-create-and-edit-profiles) and change the basal rate.
+* 選擇其他百分比：如果基礎率過低，請選擇**較高**的百分比；如果基礎率過高，請選擇**較低**的百分比；或
+* [編輯設定檔](#your-aaps-profile-create-and-edit-profiles)並調整基礎率。
 
-The profile editor only lets you start basal rates on a full hour. A basal rate starting at e.g. 06:30 can only come from an older profile, for example after you change to a pump that does not support it.
+設定檔編輯器只允許您將基礎率的開始時間設為整點。例如，從 06:30 開始的基礎率只能來自較舊的設定檔，例如您改用不支援此設定的幫浦之後。
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 
@@ -131,7 +131,7 @@ The profile editor only lets you start basal rates on a full hour. A basal rate 
 
 **以 mmol/L 單位計算：** 如果你的**ISF**為1.5，每單位胰島素將使你的血糖降低約1.5 mmol/L（例如，從8 mmol/L降至6.5 mmol/L）。
 
-從這些例子中可以看出，_ISF_值越_小_，你對胰島素的敏感度就越低。 So if you reduce your ISF from 40 to 35 (mg/dL) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
+從這些例子中可以看出，_ISF_值越_小_，你對胰島素的敏感度就越低。因此，如果您將 ISF 從 40 降至 35（mg/dL），或從 1.5 降至 1.3（mmol/L），通常稱為**提高** ISF。相反地，將**ISF** 從 40 提高至 45（mg/dL），或從 1.5 提高至 1.8（mmol/L），則稱為**降低** ISF。
 
 ### 影響
 
@@ -139,9 +139,9 @@ The profile editor only lets you start basal rates on a full hour. A basal rate 
 
 較**高/較弱的ISF**（即45而不是35）意味著每單位胰島素對你的血糖的降低程度較多。這將導致循環進行較不積極/較弱修正，使用**較少胰島素**。如果你的**ISF**過弱（大值），可能導致血糖過高。
 
-**Example:**
-* **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
-* So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
+**範例：**
+* **血糖**為 190 mg/dL（10.5 mmol/L），目標值為 100 mg/dL（5.6 mmol/L）。
+* 因此，您需要校正 `190 - 100 = 90 mg/dL` 或 `10.5 - 5.6 = 4.9 mmol/L`
 * 如果`ISF = 30` -> `90 / 30 = 3`或`ISF = 1.63` -> `4.9 / 1.63 = 3`: 3單位胰島素
 * 如果`ISF = 45` -> `90 / 45 = 2`或`ISF = 2.45` -> `4.9 / 2.45 = 2`: 2單位胰島素
 
@@ -159,9 +159,9 @@ The profile editor only lets you start basal rates on a full hour. A basal rate 
 
 確定你白天 ISF 的基本起點是基於你的每日總劑量（TDD），使用 1,700（94）規則。更多詳細內容見於 Gary Scheiner 所著的[“像胰臟一樣思考”](https://amzn.eu/d/iVU0RGe)第 7 章。
 
-| 1700 (if measuring in mg/dL) or 94 (mmol/L)/ TDD = approx ISF.<br/><br/>Example: TDD = 40 U<br/>Approx ISF (mg/dL) = 1700/40 = 43<br/>Approx ISF (mmol/L) = 94/40 = 2.4 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                                                                                                                                                                                                 |
+| 若以 mg/dL 為單位，使用 1700；若以 mmol/L 為單位，使用 94。將此數值除以 TDD，即可估算 ISF。<br/><br/>例如：TDD = 40 U<br/>估算 ISF（mg/dL）= 1700/40 = 43<br/>估算 ISF（mmol/L）= 94/40 = 2.4 |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                              |
 
 假設你的基礎胰島素水平是正確的，你可以通過暫停循環，檢查**IOB**是否為零，然後服用幾片葡萄糖藥片以達到穩定的“高”水平來進行測試。
 
@@ -193,7 +193,7 @@ The profile editor only lets you start basal rates on a full hour. A basal rate 
 > 
 > 使用**ICR**時，胰島素的數量是固定的，而碳水化合物的數量則是可變的。（“一單位胰島素能覆蓋多少克碳水化合物？”）
 > 
-> Example:
+> 範例：
 > 
 > 麵包單位因子（BU = 12克碳水化合物）：2.4 U/BU -> 當你吃一個麵包單位時，你需要2.4單位的胰島素。
 > 
@@ -211,7 +211,7 @@ The profile editor only lets you start basal rates on a full hour. A basal rate 
 
 ### 如何設定
 
-下面的**圖示**顯示了一名使用者的**ICR**範例，以及如何在**AAPS Profile**中設置。 When entering these values, we enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
+下面的**圖示**顯示了一名使用者的**ICR**範例，以及如何在**AAPS Profile**中設置。輸入這些數值時，只需輸入比例的最後一個數字，因此胰島素與碳水化合物比例 1:3.5，只要輸入「3.5」即可。
 
 ![設定檔 ICR](../images/Profile_ICR.png)
 
@@ -230,7 +230,7 @@ The profile editor only lets you start basal rates on a full hour. A basal rate 
 
 **我為什麼需要正確設置我的個人設定？循環不是可以自動處理這些嗎？**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimize poor glycemic control that results from having incorrect **Profile** values. 它可以這樣做，例如如果你將要低血糖，它會暫停胰島素的輸送。然而，如果你的**設定檔**設定已盡可能接近你身體的需求，你可以實現更好的血糖控制。這是**AAPS**使用分階目標從開放式循環推進到混合閉環的原因之一。此外，還會有需要打開循環的時候（傳感器暖機、傳感器故障_等_），有時發生在半夜，你希望在這些情況下設定是正確的。
+混合式閉環_可以_嘗試調整胰島素輸送量，以減少因**設定檔**數值不正確而造成的血糖控制不佳。它可以這樣做，例如如果你將要低血糖，它會暫停胰島素的輸送。然而，如果你的**設定檔**設定已盡可能接近你身體的需求，你可以實現更好的血糖控制。這是**AAPS**使用分階目標從開放式循環推進到混合閉環的原因之一。此外，還會有需要打開循環的時候（傳感器暖機、傳感器故障_等_），有時發生在半夜，你希望在這些情況下設定是正確的。
 
 如果你是在使用其他開放或封閉循環幫浦系統後開始使用**AAPS**，你將已經對應該使用的基礎率（**BR**）、胰島素敏感度因子（**ISF**）和胰島素與碳水化合物比率（**ICR**）有相當合理的了解。
 
@@ -242,11 +242,11 @@ A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minim
 ### 我現在的血糖很高，循環無法幫我降下來。
 導致 **AAPS** 無法提供足夠胰島素的可能原因有：
 * **ISF** 可能不夠強。
-* Basal rate might not be strong enough
+* 基礎率可能不足
 * 安全設定可能啟動，例如 **maxIOB**。或者此時 **SMB** 被停用，這取決於你的設定。
 * 自動化已經設置並覆蓋了 **AAPS**。
 
-See also [Tweaking the AAPS Profile](../GettingHelp/ProfileTuning.md).
+另請參閱[調整 AAPS 設定檔](../GettingHelp/ProfileTuning.md)。
 
 ### 我有負的 IOB，這是個問題嗎？
 負的 **IOB** 意味著你體內的絕對胰島素量（基礎 + 注射）少於基礎胰島素量。這會導致 **AAPS** 一旦血糖開始上升，就會發送更多的胰島素，因為它認為胰島素不足，這可能會導致後來的血糖偏低。
@@ -254,7 +254,7 @@ See also [Tweaking the AAPS Profile](../GettingHelp/ProfileTuning.md).
 以下是造成負 IOB 的一些原因，以及應採取的行動：
 * 基礎胰島素過強：調整你的 **設定檔**。
 * 上一次餐點注射過多：調整你的 **設定檔** 或檢查你是否在正確的時間進行注射。
-* DIA set too short on your insulin type, resulting in insulin stacking: tweak it in [Manage → Insulin settings](#Config-Builder-insulin-dia)
+* 胰島素類型的 DIA 設定太短，導致胰島素堆疊：請前往[管理 → 胰島素設定](#Config-Builder-insulin-dia)進行調整。
 * 身體活動：下次考慮在活動期間使用較低的 [設定檔百分比](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) 來因應敏感度的提高。
 
 ## 管理你的設定檔
@@ -266,25 +266,25 @@ See also [Tweaking the AAPS Profile](../GettingHelp/ProfileTuning.md).
 (your-aaps-profile-create-and-edit-profiles)=
 ### 創建和編輯設定檔
 
-In **AAPS** v4 your profiles live on the **Manage** screen (bottom navigation) → **Profile**, shown as a swipeable card carousel with an action bar (**➕ Add**, **✏️ Edit**, **⧉ Clone**, **🗑️ Delete**, **▶ Activate**). For managing and activating a profile, see [Managing and activating profiles](#ProfileSwitch-manage-v4). Coming from **AAPS** v3, where profiles had their own tab? See [What changed in AAPS v4](#v4changes-manage).
+在 **AAPS** v4 中，您的設定檔位於**管理**畫面（底部導覽列）→ **設定檔**。設定檔會以可滑動的卡片輪播方式呈現，並附有操作列（**➕ 新增**、**✏️ 編輯**、**⧉ 複製**、**🗑️ 刪除**、**▶ 啟動**）。如需管理及啟動設定檔，請參閱[管理及啟動設定檔](#ProfileSwitch-manage-v4)。您是從**設定檔有專屬分頁的 AAPS** v3 升級而來嗎？請參閱[AAPS v4 有哪些變更](#v4changes-manage)。
 
-Tapping **✏️ Edit** opens the editor. Set the profile **name** and **units**, then fill in the four schedules using the tabs:
+輕觸**✏️ 編輯**即可開啟編輯器。設定設定檔的**名稱**和**單位**，再使用下列分頁填寫四種時程：
 
-- **IC** — insulin-to-carb ratio (g/U)
-- **ISF** — insulin sensitivity factor
-- **BAS** — basal rates
-- **TARG** — target range
+- **IC** — 胰島素與碳水化合物比例（g/U）
+- **ISF** — 胰島素敏感度係數
+- **BAS** — 基礎率
+- **TARG** — 目標範圍
 
-![The profile editor — IC / ISF / BAS / TARG tabs](../images/setup-wizard/Wizard-Profile-IC.png)
+![設定檔編輯器 — IC／ISF／BAS／TARG 分頁](../images/setup-wizard/Wizard-Profile-IC.png)
 
-Each schedule is a list of **time blocks**: add a block, set its start time and value, then **Save**.
+每個時程都是由多個**時間區段**組成的清單：新增區段、設定開始時間和數值，然後**儲存**。
 
-If you make any changes to your **Profile**, make sure you are editing the correct **Profile**: the card of the profile in use is marked **ACTIVE**, but the card selected on screen may be another one.
+如果要變更**設定檔**，請確認您編輯的是正確的**設定檔**：目前使用中的設定檔卡片會標示為**使用中**，但畫面上選取的卡片可能是另一個設定檔。
 
 (your-aaps-profile-profile-from-scratch-for-a-kid)=
 ### 為孩子從零開始建立一個設定檔
 
-The [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) may help you to create a profile for a child (up to 18 years).
+[設定檔輔助工具](#aaps-screens-profile-helper)（選單 ☰ → **設定檔輔助工具**）可協助您為兒童（18 歲以下）建立設定檔。
 
 **重要說明：**
 
@@ -294,14 +294,14 @@ The [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helpe
 
 ![設定檔助手兒童 1](../images/ProfileHelperKids1.png)
 
-1. Make sure you are on the **Profile 1** tab.
+1. 請確認您位於**設定檔 1**分頁。
 2. 在 **設定檔類型** 中，請確保選擇「預設設定檔」。
 3. 根據輸入的孩子年齡及總胰島素劑量（TDD）**或**體重，調整預設設定檔（基於醫院資料集）。
-4. Change to the **Profile 2** tab.
+4. 切換至**設定檔 2**分頁。
 5. 按下 **設定檔類型** 並選擇「DPV 預設設定檔」。
-6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, TDD Total and percentage of basal. Note that the DPV data set provides **basal rates** only, so IC and ISF are shown as zero for this profile.
-7. Open the **Comparation** tab. 將顯示兩個調整後的設定檔的比較（請參見下方截圖）。
-8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button at the bottom of the comparison.
+6. 輸入兒童年齡、TDD 總量及基礎胰島素百分比，以調整 DPV 預設設定檔（此設定檔是根據另一組醫院資料建立）。請注意，DPV 資料集只提供**基礎率**，因此此設定檔中的 IC 和 ISF 都會顯示為零。
+7. 開啟**比較**分頁。將顯示兩個調整後的設定檔的比較（請參見下方截圖）。
+8. 如果您想根據其中一項建議開始調整設定檔，請使用比較畫面底部的**複製**按鈕。
 
 ![設定檔助手兒童 2](../images/ProfileHelperKids2.png)
 
@@ -314,9 +314,9 @@ The [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helpe
 
 ![設定檔切換](../images/TreatmentsView4.png)
 
-The [Treatments history](#aaps-screens-treatments) shows all past **Profile Switches**. When going to the **Profile switch** tab, you can use a past **Profile Switch** as a base to create a new **Profile**. 在這種情況下，時差和百分比將應用於新的本地設定檔。 Use the **Clone** button shown on line **2**.
+[治療紀錄](#aaps-screens-treatments)會顯示所有過去的**設定檔切換**。前往**設定檔切換**分頁時，您可以使用過去的**設定檔切換**作為基礎，建立新的**設定檔**。在這種情況下，時差和百分比將應用於新的本地設定檔。使用第 **2** 列顯示的**複製**按鈕。
 
-You can now go to the [Profile screen](#your-aaps-profile-create-and-edit-profiles) (**Manage → Profile**) to edit the newly created Profile.
+現在您可以前往[設定檔畫面](#your-aaps-profile-create-and-edit-profiles)（**管理 → 設定檔**），編輯剛建立的設定檔。
 
 (YourAapsProfile_Profile-backup)=
 ### 設定檔備份
@@ -324,12 +324,12 @@ You can now go to the [Profile screen](#your-aaps-profile-create-and-edit-profil
 作為你循環系統的核心設定，你的 **設定檔** 非常敏感，這是你不想遺失的東西。
 
 * 你的 **設定檔** 儲存在 **AAPS** 數據庫中。
-* When **NSClientV3** is set up (see [Synchronization](#SetupWizard-synchronization-with-the-reporting-server-and-more)), your **Profiles** are also uploaded to Nightscout automatically.
+* 設定好 **NSClientV3** 後（請參閱[同步](#SetupWizard-synchronization-with-the-reporting-server-and-more)），您的**設定檔**也會自動上傳至 Nightscout。
 * 它們也是[匯出設定](../Maintenance/ExportImportSettings.md)的一部分。因此，確保有一個安全的備份。
 
 ### 從 Nightscout 編輯個人設定
 
-If enabled, **Profile** changes made directly in Nightscout can be received in **AAPS**. The setting is called "**Receive profile store from NS**" and is part of the **Nightscout data acceptance** options (accepting data from Nightscout is turned off by default, see the [Client control step of the Setup Wizard](../SettingUpAaps/SetupWizard.md)); you can find it quickly with the **search bar** on the main screen. While client control is on, the setting is hidden and **AAPS** takes no profile changes from Nightscout ([hardened mode](#client-master-control-hardened-mode)); edit the profile on a paired client instead, or load it once with **Full sync**.
+如果已啟用，您可以在 Nightscout 直接變更**設定檔**，並將變更接收至 **AAPS**。此設定稱為「**從 NS 接收設定檔儲存庫**」，位於**Nightscout 資料接收**選項中（預設會關閉接收 Nightscout 資料的功能；請參閱[設定精靈的用戶端控制步驟](../SettingUpAaps/SetupWizard.md)）。您也可以使用主畫面的**搜尋列**快速找到此設定。啟用用戶端控制時，這項設定會隱藏，**AAPS** 也不會從 Nightscout 套用任何設定檔變更（[強化模式](#client-master-control-hardened-mode)）；請改在已配對的用戶端編輯設定檔，或使用 **完整同步** 載入一次。
 
 這在對更廣泛的 **設定檔** 進行重大更改之前可能會很有幫助。透過網頁介面輸入這些設定會更加方便，例如，手動從電子表格複製資料。
 
@@ -340,16 +340,16 @@ If enabled, **Profile** changes made directly in Nightscout can be received in *
 (your-aaps-profile-compare-profiles)=
 ### 比較兩個設定檔
 
-You can also use the [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) to compare two different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
+您也可以使用[設定檔輔助工具](#aaps-screens-profile-helper)（選單 ☰ → **設定檔輔助工具**），比較兩個不同的設定檔，或比較設定檔切換（先前[設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)中所使用的設定檔百分比）。
 
 ![設定檔助手 1](../images/ProfileHelper1.png)
 
-1. Make sure you are on the **Profile 1** tab.
+1. 請確認您位於**設定檔 1**分頁。
 2. 在 **設定檔類型** 中，選擇「可用設定檔」，以在所有儲存的 **設定檔** 之間進行選擇。
 3. 從中選擇你想要比較的 **設定檔**。
-4. Change to the **Profile 2** tab.
-5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profile Switches**.
+4. 切換至**設定檔 2**分頁。
+5. 在**設定檔類型**中，選取「設定檔切換」，即可從所有**設定檔切換**的歷史紀錄中選擇。
 6. 選擇你希望比較的 **設定檔切換**。
-7. Open the **Comparation** tab. Comparison of the two profiles will be displayed (see screenshot below).
+7. 開啟**比較**分頁。畫面會顯示兩個設定檔的比較結果（請參閱下方的螢幕截圖）。
 
 ![設定檔助手 2](../images/ProfileHelper2.png)

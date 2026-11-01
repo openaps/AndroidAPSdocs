@@ -4,8 +4,8 @@
 
 ## 幫浦與AAPS的功能
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Timezone and DST changes need no special action, as the pump does not use its own history.
+* 透過手機內建的藍牙與 **AAPS** 通訊，不需要額外的通訊裝置。
+* 時區和日光節約時間變更不需要特別處理，因為幫浦不會使用自身的歷史紀錄。
 
 ## 設定
 
@@ -17,21 +17,21 @@
 * 進入主選單 > 設置 > 探索
 * 在手機設置中進入藍牙，掃描附近的設備，選擇你的 DanaR 序列號，並輸入你的密碼（配對密碼為 0000）。如果 DanaR 未出現在掃描中，請重新啟動手機並將 DanaR 電池取出，重新安裝，然後再次開始這兩個步驟。
 
-* In **AAPS**, open the **menu** (☰) in the top-left corner, go to **Configuration** > **Pump** and select the type of DanaR you have (**DanaR**, **DanaR Korean** or **DanaRv2**).
+* 在 **AAPS** 中，開啟左上角的**選單**（☰），前往**組態設定工具** > **幫浦**，然後選擇你使用的 DanaR 類型（**DanaR**、**DanaR Korean** 或 **DanaRv2**）。
   
-  ![Configuration > Pump with the DanaR plugins](../images/v4/Configuration/configuration_pump_list_1.png)
+  ![組態設定工具 > 幫浦（DanaR 外掛）](../images/v4/Configuration/configuration_pump_list_1.png)
 
-* Open the pump screen: tap **Open plugin** on the DanaR card (or go to **Manage** > **Pump**).
+* 開啟幫浦畫面：點選 DanaR 卡片上的**開啟外掛**（或前往**管理** > **幫浦**）。
 
-* Tap **Pairing**. On the pairing screen: 
-  * Enter your pump password under **Pump password** (default password is 1234).
-  * Under **Select paired device**, tap your DanaR serial number. If the list is empty, tap **Open Bluetooth settings** and pair the pump with your phone first (see the step above). When you come back to **AAPS**, the pump appears in the list. If it does not, tap the refresh icon.
-  * Tap **Pairing**. **AAPS** connects to the pump and checks the password.
-* To change the driver settings, tap **Settings** on the DanaR card in **Configuration** > **Pump**: 
-  * **Bolus speed** (DanaR and DanaRv2): change the default bolus speed (12 s/U, 30 s/U or 60 s/U).
-  * **Use extended boluses for >200%** (DanaR and DanaR Korean): enable this if you want **AAPS** to allow a basal rate above 200%. Note this means you cannot loop with high TBRs while using extended boluses for food.
+* 點選**配對**。在配對畫面中： 
+  * 在**幫浦密碼**下方輸入你的幫浦密碼（預設密碼為 1234）。
+  * 在**選擇已配對裝置**下方，點選你的 DanaR 序號。如果清單是空的，請點選**開啟藍牙設定**，先將幫浦與手機配對（請參閱上方步驟）。返回 **AAPS** 後，清單中就會顯示幫浦。如果沒有顯示，請點選重新整理圖示。
+  * 點選**配對**。 **AAPS** 會連線至幫浦並確認密碼。
+* 若要變更驅動程式設定，請在**組態設定工具** > **幫浦**中的 DanaR 卡片上點選**設定**： 
+  * **注射速度**（DanaR 和 DanaRv2）：變更預設的注射速度（12 秒／U、30 秒／U 或 60 秒／U）。
+  * **使用延長注射處理 >200%**（DanaR 和 DanaR Korean）：如果希望 **AAPS** 允許基礎率高於 200%，請啟用此選項。請注意，使用延長注射處理餐點時，你就無法在高 TBR 下執行循環。
 * 將幫浦的基礎速率步進設置為 0.01 U/h
-* Set bolus step on pump to 0.1 U. **AAPS** reads the bolus step from the pump and uses it for every bolus.
+* 請將幫浦的注射步進設定為 0.1 U。 **AAPS** 會從幫浦讀取注射步進，並將其用於每次注射。
 * 啟用幫浦上的延時注射功能
 
 ## Dana R 幫浦的時區旅行
@@ -40,10 +40,10 @@
 
 ## 如何尋求協助
 
-Development of the DanaR driver is done by the community on a **volunteer** basis. Before requesting help, please:
+DanaR 驅動程式由社群成員以**志工**方式開發。尋求協助前，請先：
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **閱讀**本文件中相關的章節，確認該功能的預期運作方式。
+2. 在 [Discord](https://discord.gg/4fQUWHZ4Mw) 的 *#AAPS* 頻道，或其他[社群頻道](../GettingHelp/WhereCanIGetHelp.md)中**詢問**。
+3. 若要**回報錯誤**，請先搜尋[現有問題](https://github.com/nightscout/AndroidAPS/issues)；如果沒有找到您的問題，請[建立新問題](https://github.com/nightscout/AndroidAPS/issues)，並附上您的[記錄檔](../GettingHelp/AccessingLogFiles.md)。
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+尋求協助時，請提供手機品牌和型號、Android 版本、**AAPS** 版本，以及清楚描述問題的內容（發生了什麼變化、上次正常運作的時間）。

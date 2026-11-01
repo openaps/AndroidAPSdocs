@@ -1,104 +1,104 @@
-# How to translate strings for the AAPS app or the documentation
+# Як перекладати рядки застосунку AAPS або документації
 
-* For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
-* For the documentation please visit <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
+* Для рядків застосунку перейдіть на <https://crowdin.com/project/androidaps> і увійдіть через свій обліковий запис GitHub
+* Для документації перейдіть на <https://crowdin.com/project/androidapsdocs> і увійдіть через свій обліковий запис GitHub
 
-* Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
+* Надішліть команді документації запит на приєднання. Для цього натисніть прапорець потрібної мови, а потім кнопку "Join" (приєднатися) у верхньому правому куті наступної сторінки. Вкажіть мову, коротко розкажіть про себе і свій досвід з AAPS, а також чи хочете ви бути перекладачем чи вичитувачем (лише для людей з досвідом перекладу і досвідчених користувачів AAPS).
 
-```{admonition} Time for Approval :class: note
+```{admonition} Час на схвалення :class: note
 
-The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord.
+Схвалення виконують вручну. Ми некомерційна організація, тому не гарантуємо строків (SLA), але зазвичай запит схвалюють менше ніж за 1 день. Якщо ні, зверніться до команди документації через Facebook або Discord.
 
-    <br />* When we approve you, click the flag
-       ![When we approve you, click the flag](../images/translation_flags.png)
+    <br />* Коли ми вас схвалимо, натисніть прапорець
+       ![Коли ми вас схвалимо, натисніть прапорець](../images/translation_flags.png)
     
-    ## Translation of the app
+    ## Переклад застосунку
     
     (translations-translate-strings-for-AAPS-app)=
-    ### Translate strings for AAPS app
+    ### Переклад рядків застосунку AAPS
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
+    * Якщо вам усе одно, які рядки перекладати, просто натисніть кнопку "Translate All" (перекласти все), щоб почати. Ви побачите рядки, які потрібно перекласти.
     
-       ![Click translate all](../images/translations-click-translate-all.png)
+       ![Натисніть Translate All](../images/translations-click-translate-all.png)
     
-    * If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
+    * Якщо ви хочете перекласти окремий файл, знайдіть його через пошук або в дереві файлів і натисніть назву файлу, щоб почати перекладати рядки в цьому файлі.
     
-       ![Click strings.xml](../images/translations-click-strings.png)
+       ![Натисніть strings.xml](../images/translations-click-strings.png)
     
-    * Translate sentences on left side by adding new translated text or use & edit suggestion 
+    * Перекладайте речення зліва: додайте новий переклад або використайте і відредагуйте пропозицію
     
-       ![Translation app](../images/translations-translate.png)
-    
-    
-    ### Proofread strings for AAPS app
-    
-    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
-    
-       ![Proofreading mode app](../images/translations-proofreading-mode.png) 
+       ![Переклад застосунку](../images/translations-translate.png)
     
     
-      and approve translated texts 
+    ### Вичитка рядків застосунку AAPS
     
-       ![approve text](../images/translations-proofreading.png)
+    * Вичитувачі починають з кнопки "Proofread" (вичитати) на головному екрані мови.
     
-    When a proofreader approves a translation it will be added to the next version of AAPS.
+       ![Режим вичитки застосунку](../images/translations-proofreading-mode.png)
+    
+    
+      і схвалюють перекладені тексти
+    
+       ![схвалення тексту](../images/translations-proofreading.png)
+    
+    Коли вичитувач схвалить переклад, він потрапить у наступну версію AAPS.
     
     (translations-translation-of-the-documentation)=
-    ## Translation of the documentation
+    ## Переклад документації
     
-    * Click the name of the docs page you want to translate
+    * Натисніть назву сторінки документації, яку хочете перекласти
     
-    ![Click docs page](../images/translation_WikiPage.png)
+    ![Натисніть сторінку документації](../images/translation_WikiPage.png)
     
     
-    * Translate sentences by sentence
+    * Перекладайте речення за реченням
     
-        1. The yellow text is the text you are working at the moment.
+        1. Жовтий текст — це текст, над яким ви зараз працюєте.
     
-        1. The green text is already translated. You don't need to do this again.
+        1. Зелений текст уже перекладено. Його не потрібно перекладати знову.
     
-        1. The red text is the remaining text which have to be translated.
+        1. Червоний текст — це текст, який ще треба перекласти.
     
-        1. This is the source text you are working on at the moment
+        1. Це вихідний текст, над яким ви зараз працюєте
     
-        1. This is the translation you are preparing. You can copy the text from above or select one of the suggestions below.
+        1. Це переклад, який ви готуєте. Ви можете скопіювати текст згори або вибрати одну з пропозицій нижче.
     
-        1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
-        1. Press the "save" button to save a proposal for the translation. It will then be passed to a proofreader for final check.
+        1. Це пропозиції перекладу. Зокрема, ви бачите, наскільки Crowdin оцінює відповідність, або чи цей текст уже перекладали раніше і він повернувся лише тому, що його перемістили, а не змінили.
+        1. Натисніть кнопку "save" (зберегти), щоб зберегти свій варіант перекладу. Потім його передадуть вичитувачу для остаточної перевірки.
     
-    ![Translation docs](../images/translation_WikiTranslate.png)
+    ![Переклад документації](../images/translation_WikiTranslate.png)
     
-    * A translated page will not be published in docs before 
+    * Перекладена сторінка не з'явиться в документації, доки
     
-        1. the translation is proofread
+        1. переклад вичитано
     
-        1. the sync run between Crowdin and Github finished (once an hour) which creates an PR for Github.
+        1. завершилася синхронізація між Crowdin і Github (раз на годину), яка створює PR у Github.
     
-        1. the PR in Github was approved.
+        1. PR у Github схвалено.
     
-    In general this needs 1 - 3 days but might during holiday take a little bit longer.
+    Зазвичай це займає 1–3 дні, але у свята може тривати трохи довше.
     
-    ### Translating links
+    ### Переклад посилань
     
-    ```{admonition} Links are not translated anymore
+    ```{admonition} Посилання більше не перекладаються
     :class: note
     
-    Links are not translated anymore. In the past we had a topic here but this is gone as through migraton to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    Посилання більше не перекладаються. Раніше тут був окремий розділ, але його прибрали: після переходу на Markdown і myst_parser ми явно створюємо мітки в англійському тексті, і вони автоматично передаються в інші мови.
     
     
 
-You are translating the text which represents the link. Please you have to be careful **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
+Ви перекладаєте текст, який показує посилання. Будьте уважні: **не** видаляйте посилання, яке позначене парою тегів `<0></0>` або, якщо в абзаці їх кілька, тегами з іншими номерами.
 
-It's the proofreaders job to have a special look on this!
+Вичитувачі мають звертати на це особливу увагу!
 
-### Proofreading
+### Вичитка
 
-* Proofreaders have to switch to Proofreading mode
+* Вичитувачі мають перейти в режим вичитки
     
-    ![Proofreading mode docs](../images/translation_WikiProofreadingmode.png)
+    ![Режим вичитки документації](../images/translation_WikiProofreadingmode.png)
     
-    and approve translated texts
+    і схвалювати перекладені тексти
     
-    ![approve text](../images/translations-proofreading.png)
+    ![схвалення тексту](../images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. To speed up the process you can inform docs team about new translations.
+* Коли вичитувач схвалить переклад, він потрапить у наступну збірку документації. Збірку роблять за потреби, без сталого розкладу, але приблизно раз на тиждень, крім свят. Щоб пришвидшити процес, ви можете повідомити команду документації про нові переклади.

@@ -37,7 +37,7 @@ Ceci est l'**Étape 4** de la [Compilation dans le navigateur](BrowserBuild.md).
 ### Installer l'APK AAPS
 
 1. Ouvrez votre Google Drive
-2. Ouvrez le dossier AAPS, sélectionnez le dossier de la nouvelle version : vous y trouverez la version pour le téléphone et la version pour Android Wear.
+2. Ouvrez le dossier AAPS, sélectionnez le dossier de la nouvelle version : vous y trouverez la version pour le téléphone et la version pour Android Wear.
 
 ![Google Drive Location](../images/update/CI/GitHubActions5.png)
 :::

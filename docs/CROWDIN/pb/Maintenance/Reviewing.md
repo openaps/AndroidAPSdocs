@@ -1,195 +1,195 @@
-# Reviewing your data
+# Revisando seus dados
 
-## AAPS History Browser
+## Navegador do histórico do AAPS
 
-**AAPS** keeps all your history (**BG**, treatments, basal, targets, **Profile Switch**, …) in a local database on the phone. This database is not part of the [settings export](../Maintenance/ExportImportSettings.md). You can review it in **AAPS** itself with the **History browser** and the **Statistics** screen described below. For long-term reviews and reports, upload your data to [Nightscout](../SettingUpAaps/Nightscout.md) or [Tidepool](../SettingUpAaps/Tidepool.md).
+O **AAPS** guarda todo o seu histórico (**glicose (BG)**, tratamentos, basal, alvos, **Troca de perfil**, …) em um banco de dados local no telefone. Este banco de dados não faz parte da [exportação das configurações](../Maintenance/ExportImportSettings.md). Você pode revisá-lo no próprio **AAPS** com o **Navegador do histórico** e a tela **Estatísticas**, descritos abaixo. Para revisões e relatórios de longo prazo, envie os seus dados para o [Nightscout](../SettingUpAaps/Nightscout.md) ou o [Tidepool](../SettingUpAaps/Tidepool.md).
 
-**AAPS** history can be reviewed in the **History browser**: open the **menu** (☰) and select **History browser**.
+O histórico do **AAPS** pode ser revisado no **Navegador do histórico**: abra o **menu** (☰) e selecione **Navegador do histórico**.
 
-![History browser](../images/v4/Screens/history_browser.png)
+![Navegador do histórico](../images/v4/Screens/history_browser.png)
 
-- Tap the **date card** to pick the day you want to review.
-- The graphs open zoomed out to show the **whole selected day**. Pinch to zoom in on part of it.
-- Use the **<** and **>** arrows to move one day back or forward, and **Now** to return to the current day.
-- The graphs show the same data as the main screen graphs (BG, treatments, basal, IOB, COB, activity, deviations...).
+- Toque no **cartão da data** para escolher o dia que você quer revisar.
+- Os gráficos abrem com o zoom reduzido para mostrar o **dia selecionado inteiro**. Faça o movimento de pinça para ampliar uma parte dele.
+- Use as setas **<** e **>** para voltar ou avançar um dia, e **Agora** para voltar ao dia atual.
+- Os gráficos mostram os mesmos dados que os gráficos da tela principal (glicose, tratamentos, basal, IOB, COB, atividade, desvios...).
 
 (reviewing-statistics)=
-## AAPS Statistics
+## Estatísticas do AAPS
 
-**AAPS** provides basic monitoring statistics.
+O **AAPS** oferece estatísticas básicas de acompanhamento.
 
-Most values are referenced by ADA 2023 [recommendations](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes).
+A maioria dos valores segue as [recomendações](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes) da ADA 2023.
 
-To open them, open the **menu** (☰) and select **Statistics**.
+Para abri-las, abra o **menu** (☰) e selecione **Estatísticas**.
 
-![Menu with Statistics](../images/Maintenance/statistics.png)
+![Menu com Estatísticas](../images/Maintenance/statistics.png)
 
-The **Statistics** screen has four tabs: **Insulin**, **Time in Range**, **Glucose** and **Cycle**. Tap a tab, or swipe left or right to move between them.
+A tela **Estatísticas** tem quatro abas: **Insulina**, **Tempo no intervalo**, **Glicose** e **Ciclo**. Toque em uma aba ou deslize para a esquerda ou para a direita para passar de uma para outra.
 
 (reviewing-tdd)=
-### Insulin tab: Total Daily Dose
+### Aba Insulina: Dose diária total
 
-The **Total Daily Dose** card shows one line per day for the previous days (up to one week) for which **AAPS** has insulin data, then their **Average**, then **Today** so far. Right after installing **AAPS**, only **Today** is shown. The columns are:
+O cartão **Dose diária total** mostra uma linha por dia para os dias anteriores (até uma semana) para os quais o **AAPS** tem dados de insulina, depois a **Média** deles e depois **Hoje** até o momento. Logo após instalar o **AAPS**, somente **Hoje** é mostrado. As colunas são:
 
-- **Basal**: only basal.
-- **Bolus**: the sum of bolus treatments and SMBs.
-- **TDD Total**: the Total Daily Dose of insulin (**TDD**), the sum of bolus and basal insulin delivered during the day.
-- **Carbs**: declared carbs and eCarbs treatments.
+- **Basal**: somente basal.
+- **Bólus**: a soma dos tratamentos de bólus e dos SMBs.
+- **TDD total**: a dose diária total de insulina (**TDD**), a soma da insulina de bólus e basal administrada durante o dia.
+- **Carboidratos**: tratamentos de carboidratos informados e eCarbs.
 
-The **TDD** section is calculated when you open the page and takes a few seconds to compute. Tap **Recalculate** to compute it again.
+A seção **TDD** é calculada quando você abre a página e leva alguns segundos para ser calculada. Toque em **Recalcular** para calculá-la novamente.
 
-![Statistics: the Insulin tab with the Total Daily Dose](../images/Maintenance/statistics2.png)
+![Estatísticas: a aba Insulina com a Dose diária total](../images/Maintenance/statistics2.png)
 
-The **TDD** is your bolus plus basal insulin per day. Some doctors use - especially for new pumpers - a basal-bolus ratio of 50:50: the total base basal (**TBB**, the sum of your basal rates over 24 hours) should then be about half of the TDD. Others prefer a TBB of 32 % to 37 % of the TDD.
+A **TDD** é a sua insulina de bólus mais a basal por dia. Alguns médicos usam - especialmente para quem está começando com bomba - uma proporção basal-bólus de 50:50: a basal base total (**TBB**, a soma das suas taxas basais em 24 horas) deve então ser cerca de metade da TDD. Outros preferem uma TBB de 32% a 37% da TDD.
 
-Like most rules of thumb, this is of limited real validity. Your diabetes may vary!
+Como a maioria das regras práticas, esta tem validade real limitada. O seu diabetes pode ser diferente!
 
-### Time in Range tab
+### Aba Tempo no intervalo
 
-Time In Range (**TIR**): 70-180 mg/dL or 3.9-10 mmol/L.
+Tempo no intervalo (**TIR**): 70–180 mg/dl ou 3,9–10 mmol/l.
 
-**TIR** information is available for 7 and 30 days, depending on the amount of data available within the **AAPS** database.
+As informações de **TIR** estão disponíveis para 7 e 30 dias, conforme a quantidade de dados disponíveis no banco de dados do **AAPS**.
 
-Time In Tight Range (TITR) 70-140 mg/dL or 3.9-7.8 mmol/L statistics are available below (the screen shows this range as 70-141).
+As estatísticas de tempo no intervalo estreito (TITR), 70–140 mg/dl ou 3,9–7,8 mmol/l, estão disponíveis abaixo (a tela mostra este intervalo como 70–141).
 
-**Discuss targets with your endo**
+**Converse sobre as metas com o seu endocrinologista**
 
-Your diabetes may vary. Any suggested targets should be discussed with your endocrinologist or supporting medical team. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress .
+O seu diabetes pode ser diferente. Qualquer meta sugerida deve ser discutida com o seu endocrinologista ou com a sua equipe médica. Se usadas corretamente, as estatísticas do AAPS podem ser uma ferramenta eficaz para acompanhar as tendências de __glicose (BG)__ e monitorar o progresso.
 
-![Statistics](../images/Maintenance/statistics3.png)
+![Estatísticas](../images/Maintenance/statistics3.png)
 
-Below, the **Dexcom TIR** card shows detailed 14 days **TIR** statistics.
+Abaixo, o cartão **Dexcom TIR** mostra estatísticas detalhadas de **TIR** de 14 dias.
 
-**SD**: Standard Deviation, an [indicator](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125941/) of BG variability (the highest = the worst).
+**SD**: desvio padrão, um [indicador](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125941/) da variabilidade da glicose (quanto maior, pior).
 
-HbA1c: the estimate of the resulting glycated hemoglobin, based on the average of CGM measurements. This is an indicative value that might not match blood HbA1c tests.
+HbA1c: a estimativa da hemoglobina glicada resultante, com base na média das medições do CGM. Este é um valor indicativo, que pode não corresponder aos exames de sangue de HbA1c.
 
-![Statistics](../images/Maintenance/statistics4.png)
+![Estatísticas](../images/Maintenance/statistics4.png)
 
 (reviewing-statistics-agp)=
-### Glucose tab: Ambulatory Glucose Profile (AGP)
+### Aba Glicose: Perfil Ambulatorial de Glicose (AGP)
 
-The **Ambulatory Glucose Profile** (**AGP**) shows how your glucose usually moves over the day. Choose the period with the buttons at the top: **Today**, **24h**, **7d**, **30d** or **90d**.
+O **Perfil Ambulatorial de Glicose** (**AGP**) mostra como a sua glicose costuma variar ao longo do dia. Escolha o período com os botões no topo: **Hoje**, **24h**, **7d**, **30d** ou **90d**.
 
-- **The chart**: one day from midnight to midnight. The line is the **Median** (half of your readings at that hour were lower, half were higher). Around it, one band holds the middle half of your readings (**25–75%**) and a wider band most of them (**10–90%**). A narrow band means your glucose is similar from day to day at that hour. Dashed lines mark your **LOW mark**, 140 mg/dL (7.8 mmol/L) and your **HIGH mark**.
-- **Glycemic overview**: the time spent in your range, in the tight range (70–140 mg/dL or 3.9–7.8 mmol/L), above your range and below it, then your **Average** and **Median** glucose. Your range is the **LOW mark** and **HIGH mark** set in [Range for visualization](#Preferences-range-for-visualization).
-- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings. Like the HbA1c above, they might not match your blood HbA1c tests.
-- **SD** (standard deviation) and **CV** (coefficient of variation): how much your glucose varies. A lower value means steadier glucose.
-- **Days**: how many days of CGM data were used.
+- **O gráfico**: um dia, de meia-noite a meia-noite. A linha é a **Mediana** (metade das suas leituras naquela hora foi mais baixa, metade foi mais alta). Em volta dela, uma faixa contém a metade central das suas leituras (**25–75%**) e uma faixa mais larga contém a maioria delas (**10–90%**). Uma faixa estreita significa que a sua glicose é parecida de um dia para o outro naquela hora. Linhas tracejadas marcam a sua **Marca BAIXA**, 140 mg/dl (7,8 mmol/l) e a sua **Marca ALTA**.
+- **Visão geral glicêmica**: o tempo no seu intervalo, no intervalo estreito (70–140 mg/dl ou 3,9–7,8 mmol/l), acima do seu intervalo e abaixo dele, e depois a sua glicose **Média** e **Mediana**. O seu intervalo é definido pela **Marca BAIXA** e pela **Marca ALTA** em [Intervalo para visualização](#Preferences-range-for-visualization).
+- **eA1c** e **GMI**: duas estimativas de HbA1c calculadas a partir das suas leituras do CGM. Assim como a HbA1c acima, elas podem não corresponder aos seus exames de sangue de HbA1c.
+- **SD** (desvio padrão) e **CV** (coeficiente de variação): o quanto a sua glicose varia. Um valor menor significa uma glicose mais estável.
+- **Dias**: quantos dias de dados do CGM foram usados.
 
-![Statistics: the Glucose tab with the AGP chart](../images/Maintenance/statistics_agp.png) ![Statistics: Glycemic overview and glucose metrics](../images/Maintenance/statistics_agp2.png)
+![Estatísticas: a aba Glicose com o gráfico AGP](../images/Maintenance/statistics_agp.png) ![Estatísticas: Visão geral glicêmica e métricas de glicose](../images/Maintenance/statistics_agp2.png)
 
-Below the AGP, the **Glucose Pentagon (CGP)** card draws five measures of your last 14 days of glucose as a pentagon. A smaller pentagon means better glucose control.
+Abaixo do AGP, o cartão **Pentágono da glicose (CGP)** desenha cinco medidas dos seus últimos 14 dias de glicose como um pentágono. Um pentágono menor significa um melhor controle da glicose.
 
-![Statistics: the Glucose Pentagon](../images/Maintenance/statistics_cgp.png)
+![Estatísticas: o Pentágono da glicose](../images/Maintenance/statistics_cgp.png)
 
-### Cycle tab: TDD Cycle Pattern
+### Aba Ciclo: Padrão de ciclos da TDD
 
-**TDD Cycle Pattern** overlays your daily insulin totals in 28-day cycles, to help you spot recurring patterns. Each cycle is drawn as a line (**Individual cycles**), together with their average.
+O **Padrão de ciclos da TDD** sobrepõe os seus totais diários de insulina em ciclos de 28 dias, para ajudar você a encontrar padrões que se repetem. Cada ciclo é desenhado como uma linha (**Ciclos individuais**), junto com a média deles.
 
-- **Raw TDD** / **Cleaned TDD**: choose the total daily dose as delivered, or the TDD minus insulin for carbs.
-- **Cycle offset**: moves the start of the cycle (0 to 27 days).
+- **TDD bruto** / **TDD limpo**: escolha a dose diária total como foi administrada, ou a TDD menos a insulina dos carboidratos.
+- **Deslocamento do ciclo**: move o início do ciclo (de 0 a 27 dias).
 
-At least 56 days of data (2 cycles) are needed. With less data, the card shows **Not enough data (need at least 56 days for 2 cycles)**. The pattern is calculated only when you open the **Cycle** tab, because it reads 168 days of data.
+São necessários pelo menos 56 dias de dados (2 ciclos). Com menos dados, o cartão mostra **Dados insuficientes (são necessários pelo menos 56 dias para 2 ciclos)**. O padrão só é calculado quando você abre a aba **Ciclo**, porque ele lê 168 dias de dados.
 
 (aaps-screens-treatments)=
-## Treatments history
+## Histórico de tratamentos
 
-Open the **menu** (☰) in the top-left corner of the main screen and select **Treatments history**. In this view, you can view and alter the history of the following treatments, each on its own tab (swipe the tab row to see all of them):
+Abra o **menu** (☰) no canto superior esquerdo da tela principal e selecione **Histórico de tratamentos**. Nesta tela, você pode ver e alterar o histórico dos seguintes tratamentos, cada um na sua própria aba (deslize a linha de abas para ver todas):
 
-* Carbs and bolus
-* [Extended bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-* Temp basal
-* [Temporary target](../DailyLifeWithAaps/TempTargets.md)
-* [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-* Careportal: notes and careportal entries
-* Running mode : history of loop status
-* User entry: other notes that are not sent to Nightscout
+* Carboidratos e bólus
+* [Bólus estendido](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+* Basal temporária
+* [Alvo Temporário](../DailyLifeWithAaps/TempTargets.md)
+* [Troca de perfil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
+* CarePortal: anotações e registros do CarePortal
+* Modo de operação: histórico do status do loop
+* Entrada do usuário: outras anotações que não são enviadas ao Nightscout
 
-At the end of each line, small icons show where the data comes from or has been sent to:
-* **Nightscout** icon (the Nightscout logo): the data comes from or has been recorded to Nightscout
-* **Pump** icon: the data comes from the pump history (it has been processed by the pump)
-* **Trash can** icon: the entry has been deleted (it is shown only when you display deleted entries with the **eye** icon at the top right)
+No final de cada linha, pequenos ícones mostram de onde os dados vêm ou para onde foram enviados:
+* Ícone do **Nightscout** (o logotipo do Nightscout): os dados vêm do Nightscout ou foram registrados no Nightscout
+* Ícone da **Bomba**: os dados vêm do histórico da bomba (foram processados pela bomba)
+* Ícone da **Lixeira**: o registro foi excluído (ele só é mostrado quando você exibe os registros excluídos com o ícone do **olho** no canto superior direito)
 
 (screens-bolus-carbs)=
-### Carbs and bolus
+### Carboidratos e bólus
 
-![Carbs & bolus](../images/TreatmentsView1.png)
+![Carboidratos e bólus](../images/TreatmentsView1.png)
 
-On this tab you can view the bolus and carbs log. Each bolus (line **1**) shows the remaining associated IOB next to the insulin amount. The origin of the bolus can be either :
-* Meal (manually entered though the Insulin, Quick Wizard or Bolus Wizard buttons)
-* SMB, when using the SMB Functionality
+Nesta aba você pode ver o registro de bólus e carboidratos. Cada bólus (linha **1**) mostra a IOB restante associada ao lado da quantidade de insulina. A origem do bólus pode ser:
+* Refeição (inserido manualmente pelos botões Insulina, Assistente rápido ou Assistente de Bólus)
+* SMB, ao usar a função SMB
 
-The carbs entries (line **2**) are shown with their amount in grams.
+Os registros de carboidratos (linha **2**) são mostrados com a quantidade em gramas.
 
-If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text on the bolus line to show the details of how the bolus was calculated.
+Se você usou o [Assistente de Bólus](#aaps-screens-bolus-wizard) para calcular a dose de insulina, pode tocar no texto “Calc” na linha do bólus para ver os detalhes de como o bólus foi calculado.
 
-Depending on the pump used, insulin and carbs can be shown in one single line, or will result in multiple lines: one for the calculation detail, one for the carbs, one for the bolus itself.
+Dependendo da bomba usada, a insulina e os carboidratos podem aparecer em uma única linha ou em várias linhas: uma para os detalhes do cálculo, uma para os carboidratos e uma para o próprio bólus.
 
-The Treatments history can be used to correct faulty carb entries (_i.e._ you over- or underestimated carbs). Note that it is not possible to edit an existing entry, you need to follow the following process:
+O Histórico de tratamentos pode ser usado para corrigir registros de carboidratos errados (_por exemplo_, você superestimou ou subestimou os carboidratos). Observe que não é possível editar um registro existente; você precisa seguir este processo:
 
-1. Check and remember actual COB and IOB on the main screen.
-2. Depending on pump, carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry with the faulty carb amount: press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.
-4. Make sure carbs are removed successfully by checking COB on the main screen again.
-5. Do the same for IOB if there is just one line including carbs and insulin.
+1. Verifique e memorize os valores atuais de COB e IOB na tela principal.
+2. Dependendo da bomba, os carboidratos podem aparecer junto com a insulina em uma linha ou como um registro separado (por exemplo, com a Dana RS).
+3. Remova o registro com a quantidade errada de carboidratos: toque no ícone da lixeira, selecione as linhas a remover e depois toque no ícone da lixeira novamente para concluir.
+4. Confirme que os carboidratos foram removidos verificando novamente o COB na tela principal.
+5. Faça o mesmo para a IOB se houver apenas uma linha com carboidratos e insulina.
 
-   → If carbs are not removed as intended, and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
+   → Se os carboidratos não forem removidos como esperado e você adicionar mais carboidratos como explicado aqui (6.), o COB ficará alto demais e isso pode levar a uma administração de insulina alta demais.
 
-6. Enter the correct carb amount again (**Treatments → Carbs** in the bottom navigation, or a [QuickLaunch](#quicklaunch) **Carbs** button) and make sure to set the correct event time.
-7. If there is just one line including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on the main screen after confirming the new entry.
+6. Insira novamente a quantidade correta de carboidratos (**Tratamentos → Carboidratos** na navegação inferior, ou um botão **Carboidratos** do [acesso rápido](#quicklaunch)) e defina o horário correto do evento.
+7. Se houver apenas uma linha com carboidratos e insulina, você também precisa adicionar a quantidade de insulina. Defina o horário correto do evento e verifique a IOB na tela principal depois de confirmar o novo registro.
 
-### Temp basal
+### Basal temporária
 
-![Temp Basal](../images/TreatmentsView2.png)
+![Basal temporária](../images/TreatmentsView2.png)
 
-The **temp basals** applied by the loop are shown here. When there is still an impact on the IOB for an entry, the information is shown next to the rate (line **1**). It can be:
-* Positive IOB if the temp basal was higher than the one set in the Profile
-* Negative IOB for a zero-temp (as on line **1**) or if the temp basal was lower than the one set in the Profile
+As **basais temporárias** aplicadas pelo loop são mostradas aqui. Quando um registro ainda tem impacto na IOB, essa informação é mostrada ao lado da taxa (linha **1**). Ela pode ser:
+* IOB positiva, se a basal temporária foi maior que a definida no perfil
+* IOB negativa, para uma basal temporária zero (como na linha **1**) ou se a basal temporária foi menor que a definida no perfil
 
-Deleting the entries only affects your reports in Nightscout and will probably tamper your real IOB - it is not recommended.
+Excluir os registros só afeta os seus relatórios no Nightscout e provavelmente vai distorcer a sua IOB real - não é recomendado.
 
-On the left of a line, a red S means “Suspend” : it happens when basal is not currently delivered. This is a normal situation when in the process of changing a pod, for example.
+À esquerda de uma linha, um S vermelho significa “Suspender”: isso acontece quando a basal não está sendo administrada no momento. Esta é uma situação normal durante a troca de um Pod, por exemplo.
 
-### Temporary target
+### Alvo Temporário
 
-![Temporary target](../images/TreatmentsView3.png)
+![Alvo Temporário](../images/TreatmentsView3.png)
 
-The history of temporary targets can be seen here.
+O histórico de alvos temporários pode ser visto aqui.
 
-### Profile switch
+### Troca de perfil
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Troca de Perfil](../images/TreatmentsView4.png)
 
-The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored both in NS and Pump History, corresponds to the actual switch. Line **2**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user.
+O histórico de trocas de perfil pode ser visto aqui. Você pode ver vários registros a cada troca de perfil: a linha **1**, salva tanto no NS quanto no histórico da bomba, corresponde à troca real. A linha **2**, salva no Nightscout mas não no histórico da bomba, corresponde ao pedido de troca de perfil feito pelo usuário.
 
-Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
+Excluir os registros só afeta os seus relatórios no Nightscout e nunca altera de fato o perfil atual.
 
-You can use the **Clone** button shown on line **2** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
+Você pode usar o botão **Clonar** mostrado na linha **2** para fazer uma cópia de uma **Troca de perfil**. Veja [Seu perfil do AAPS > Gerenciar seus perfis](#your-aaps-profile-clone-profile-switch) para mais informações.
 
-### Careportal
+### CarePortal
 
-![Care portal](../images/TreatmentsView5.png)
+![CarePortal](../images/TreatmentsView5.png)
 
-This tab shows all notes and careportal entries recorded in Nightscout.
+Esta aba mostra todas as anotações e registros do CarePortal salvos no Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
-### Running mode
+### Modo de operação
 
-![Running mode](../images/TreatmentsView6.png)
+![Modo de operação](../images/TreatmentsView6.png)
 
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, LGS, suspend, disconnect.
+Esta aba mostra o histórico das mudanças de [status do loop](#AapsScreens-loop-status): aberto, fechado, LGS, suspenso, desconectado.
 
-### User entry
+### Entrada do usuário
 
-![User entry](../images/screens/treatments_user_entry.png)
+![Entrada do usuário](../images/screens/treatments_user_entry.png)
 
-This tab lists the actions made in **AAPS** by the user or by an **Automation** (loop mode changes, profile switches, treatments, settings exports...). These entries are not sent to Nightscout.
+Esta aba lista as ações feitas no **AAPS** pelo usuário ou por uma **Automação** (mudanças do modo do loop, trocas de perfil, tratamentos, exportações de configurações...). Estes registros não são enviados ao Nightscout.
 
 ------
 
-## What is the difference between Nightscout vs Tidepool?
+## Qual é a diferença entre Nightscout e Tidepool?
 
-Nightscout can facilitate the user’s storage of **AAPS’** data and offers a wide range of [reporting tools](https://nightscout.github.io/nightscout/reports/).
+O Nightscout pode facilitar o armazenamento dos dados do **AAPS** pelo usuário e oferece uma grande variedade de [ferramentas de relatórios](https://nightscout.github.io/nightscout/reports/).
 
-Whereas, Tidepool allows the user to [review their data](https://www.tidepool.org/viewing-your-data) and provides [simple sharing with your endo team](https://www.tidepool.org/providers/how-it-works#tidepool-data-platform).
+Já o Tidepool permite que o usuário [revise os seus dados](https://www.tidepool.org/viewing-your-data) e oferece [compartilhamento simples com a sua equipe médica](https://www.tidepool.org/providers/how-it-works#tidepool-data-platform).

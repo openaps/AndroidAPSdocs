@@ -73,7 +73,7 @@ Les **SMB** (abréviation de **Super Micro Bolus**) sont une fonctionnalité d'O
 
 Grâce aux SMB, pour les repas qui ne contiennent que des glucides « lents », il peut suffire d'indiquer au système la quantité de glucides prévue et de laisser faire **AAPS** pour le reste. Cependant, cela peut conduire à des pics postprandiaux (après le repas) plus élevés, car un pré-bolus n'est pas possible. Ou vous pouvez donner, si nécessaire avec un pré-bolus, un **bolus de départ** qui ne couvre **qu'une partie** des glucides (par ex. 2/3 de la quantité estimée), et laisser les **SMB** délivrer le reste de l'insuline.
 
-![SMB sur le graphique principal](../images/SMBs.png)
+![SMBs on the IOB graph](../images/SMBs.png)
 
 Les SMB sont affichés sur le [graphique IA](#aaps-screens-iob) avec des triangles bleus. Faites un [appui long](#aaps-screens-graph-press-and-hold) sur un triangle du graphique pour voir la quantité d'insuline délivrée, ou utilisez l'[Historique Traitements](#aaps-screens-treatments).
 

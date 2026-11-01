@@ -10,9 +10,9 @@ AAPS 的開發版本僅適用於能處理堆棧追蹤、查找日誌文件，甚
 
 但是，dev 分支是一個不錯的地方，可以查看正在測試的功能，並幫助解決錯誤，並反饋新功能在實際中的效果。通常人們會在舊手機和幫浦上測試 dev 分支，直到他們確信他是穩定的——使用他完全是自擔風險。在測試任何新功能時，請記住你是在選擇測試一個仍在開發中的功能。請自行承擔風險並謹慎行事以確保安全。
 
-如果你在使用 Dev 分支時發現錯誤或覺得發生了異常，請查看 [Issues 分頁](https://github.com/nightscout/AndroidAPS/issues)，確認是否已有其他人回報；若沒有，請自行新增。 The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md)). 也可以在 [Discord](https://discord.gg/4fQUWHZ4Mw) 討論新功能。
+如果你在使用 Dev 分支時發現錯誤或覺得發生了異常，請查看 [Issues 分頁](https://github.com/nightscout/AndroidAPS/issues)，確認是否已有其他人回報；若沒有，請自行新增。您在此處分享的資訊越詳細越好（別忘了您可能需要提供[記錄檔](../GettingHelp/AccessingLogFiles.md)）。也可以在 [Discord](https://discord.gg/4fQUWHZ4Mw) 討論新功能。
 
-開發版本有一個過期日期。當使用他滿意時，這似乎不便，但他有其作用。 When a single dev version is doing the rounds, it is easier to keep track of bugs that people are reporting. 開發人員不希望出現三個開發版本在外流傳，其中一些錯誤在某些版本中已經修復，而其他版本則未修復，而人們仍然繼續報告已經解決的錯誤。
+開發版本有一個過期日期。當使用他滿意時，這似乎不便，但他有其作用。當大家都在使用同一個開發版本時，比較容易追蹤使用者回報的錯誤。開發人員不希望出現三個開發版本在外流傳，其中一些錯誤在某些版本中已經修復，而其他版本則未修復，而人們仍然繼續報告已經解決的錯誤。
 
 (branch-ci-test)=
 
@@ -51,7 +51,7 @@ AAPS 的開發版本僅適用於能處理堆棧追蹤、查找日誌文件，甚
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
 
-- Target repository: the repository that contains the PR, in the format owner/repo. Leave the default **nightscout/AndroidAPS** unless you were told to use another repository (only developers should do this).
+- 目標儲存庫：包含 PR 的儲存庫，格式為 owner/repo。除非有人告訴您要使用其他儲存庫，否則請保留預設值 **nightscout/AndroidAPS**（只有開發人員才需要變更此設定）。
 
 - PR number：請輸入您想測試的 PR 編號。
 

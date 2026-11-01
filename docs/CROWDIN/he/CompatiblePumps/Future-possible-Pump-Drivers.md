@@ -97,7 +97,7 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 **For oref1(SMB) or Bolusing:**
 
-- Set Bolus
+- הגדרת בולוס
 
 **Good to have**
 

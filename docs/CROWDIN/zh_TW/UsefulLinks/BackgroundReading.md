@@ -20,13 +20,13 @@
 
 [OpenAPS 參考設計 - https://openaps.org/reference-design/](https://openaps.org/reference-design/)
 
-[Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+[為什麼我們經常無法正確估算胰島素作用時間（DIA），以及這為什麼很重要](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-[What conclusions can we draw when investigating Insulin Sensitivity using the Autosens function within #OpenAPS?](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
+[在 #OpenAPS 中使用 Autosens 功能調查胰島素敏感性時，我們能得出哪些結論？](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
 
 [https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
-[“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown
+Adam Brown 著[《Bright Spots and Landmines》](https://diatribe.org/bright-spots-and-landmines/)
 
 [《像胰臟一樣思考》](https://amzn.eu/d/iVU0RGe) 作者：Gary Scheiner
 

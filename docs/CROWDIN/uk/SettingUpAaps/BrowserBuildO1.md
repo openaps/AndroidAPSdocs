@@ -1,31 +1,31 @@
 (aaps-ci-option1)=
 
-# Option 1 – Generate a new keystore
+# Варіант 1 – Створіть новий keystore
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation) and downloaded the preparation file.
+Це частина [Кроку 2 – Створіть свій keystore для підпису](BrowserBuildKeystore.md) [Збірки в браузері](BrowserBuild.md). Переконайтеся, що ви прочитали про [вибір між Варіантом 1 і Варіантом 2](#aaps-ci-preparation) і завантажили файл підготовки.
 ```
 
-Option 1 generates a brand-new signing keystore for you. It is suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
+Варіант 1 створює для вас зовсім новий keystore для підпису. Він підходить для тих, хто збирає AAPS уперше, не має JKS або забув пароль чи псевдонім (alias).
 
-## Choose your device
+## Виберіть свій пристрій
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+Збираєте на **телефоні Android**? Тоді використайте [AAPS Builder](BrowserBuildAapsBuilder.md): йому не потрібен файл підготовки.
 ```
 
-Follow the page that matches the device you are building from:
+Відкрийте сторінку для пристрою, на якому ви збираєте:
 
-- **[Computer](BrowserBuildO1Computer.md)** – Windows, Mac or Linux.
+- **[Комп'ютер](BrowserBuildO1Computer.md)** – Windows, Mac або Linux.
 - **[iPhone / iPad](BrowserBuildO1iPhone.md)**.
 
 ```{tip}
-You can switch device at any time – just open the matching page.
+Ви можете будь-коли змінити пристрій – просто відкрийте відповідну сторінку.
 ```
 
 ```{toctree}
 :hidden:
 
-Computer <BrowserBuildO1Computer.md>
+Комп'ютер <BrowserBuildO1Computer.md>
 iPhone / iPad <BrowserBuildO1iPhone.md>
 ```

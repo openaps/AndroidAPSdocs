@@ -1,65 +1,65 @@
-# Pumps and cannulas
+# 幫浦與導管
 
 ## 更換注射組件：胰島素儲存罐和套管
 
-以下描述的程序僅適用於有管幫浦，不適用於像 Omnipod、Medtrum Nano、Accu-Chek Solo 等無管幫浦。 This procedure is sometimes referred to as a "set change", with a "full" set change including the insulin reservoir and cannula, and a "partial" set change referring to a change of cannula only.
+以下描述的程序僅適用於有管幫浦，不適用於像 Omnipod、Medtrum Nano、Accu-Chek Solo 等無管幫浦。這個程序有時稱為「更換輸注組」，其中「完整」更換輸注組包括更換胰島素儲藥槽和導管；「部分」更換輸注組則只更換導管。
 
-Patch pumps fill and prime themselves in their own activation wizard, and their cannula is already in the body. **AAPS** does not offer a prime for them: **Prime/Fill** is not shown in the **Manage** sheet or in QuickLaunch. See the page of your pump in [Compatible pumps](../Getting-Started/CompatiblePumps.md).
+貼片式幫浦會在自己的註冊嚮導中自行填充和預充，而且導管已經置入體內。 **AAPS** 不提供這類幫浦的預充功能：**預充／填充**不會顯示在**管理**面板或 QuickLaunch 中。請參閱[相容的幫浦](../Getting-Started/CompatiblePumps.md)頁面中，您所使用的幫浦相關資訊。
 
 物理藥匣/儲液罐的更換無法通過 **AAPS** 完成，必須直接在幫浦上進行。這些需要在完成後手動記錄在**AAPS**中。
 
 (pumps-cannulas-changing-reservoir-and-cannula)=
 ### 更換幫浦儲存罐和套管的指南
 
-1. In **AAPS**, disconnect the pump: press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** for 1 hour. The icon changes to a grey plug icon, indicating that the pump is disconnected.
+1. 在 **AAPS** 中中斷幫浦連線：按一下主畫面上的[循環圖示](#AapsScreens-loop-status)，然後選取**中斷幫浦連線** 1 小時。圖示會變成灰色插頭，表示幫浦已中斷連線。
 
 2. 實體更換胰島素儲存罐：從身體上中斷幫浦連線，並按照製造商的說明更換儲存罐/卡匣和套管。
 
 3. 注射/填充輸液管和套管：這可以直接在幫浦上進行。請確保消除輸液管中的所有氣泡。
 
-4. 將新的套管附著在身體上。當套管插入並移除針頭後，已附著的套管會有一個小的空氣間隙，這也需要進行注射。 To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Record pump site change** and/or **Record insulin cartridge change** as appropriate to record the change. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select **OK**. Read the summary message, and confirm to execute the priming by tapping **OK**.
+4. 將新的套管附著在身體上。當套管插入並移除針頭後，已附著的套管會有一個小的空氣間隙，這也需要進行注射。若要在 **AAPS** 中記錄此變更並為輸注部位預充：開啟 **預充／填充**（可從主畫面展開的狀態面板、**管理**頁面，或 QuickLaunch 按鈕開啟），並視需要勾選 **記錄幫浦輸注部位變更** 和／或 **記錄胰島素藥匣變更**，以記錄變更。按下預設的胰島素導管預充量（通常約為 0.3 U，但請確認此數值適用於您的導管），然後選取 **確定**。閱讀摘要訊息，然後點選 **確定**，確認執行預充。
 
-   ![Prime/Fill in the Manage sheet with a tube pump](../images/v4/Screens/manage_sheet_tube_pump.png)
+   ![使用管路式幫浦時，在「管理」頁面中開啟「預充／填充」](../images/v4/Screens/manage_sheet_tube_pump.png)
 
 
-5. Reconnect the pump in **AAPS**: press the grey plug icon and select **Reconnect pump** to continue looping.
+5. 重新連線至 **AAPS** 中的幫浦：按下灰色插頭圖示，並選取 **重新連線幫浦**，即可繼續循環。
 
 ### 有關胰島素/套管更換的有用資訊
 
-* Logging a pump site change resets Autosens to 100%. It also resets the corresponding cannula/insulin status lights and ages on the **AAPS** main screen.
+* 記錄幫浦輸注部位變更會將自動敏感度調整重設為 100%。這也會重設 **AAPS** 主畫面上相應的導管／胰島素狀態指示燈和使用時間。
 
-* You can set/adjust the default prime amounts in the **Prime/Fill** settings — type "prime" in the main screen search bar to open them (see [Preferences](../SettingUpAaps/Preferences.md)). 請參閱你的套管包裝內的使用說明書，以了解根據針頭長度和輸液管長度應注射多少單位。
+* 您可以在 **預充／填充**設定中設定或調整預設預充量——在主畫面的搜尋列輸入「預充」即可開啟設定（請參閱[偏好設定](../SettingUpAaps/Preferences.md)）。請參閱你的套管包裝內的使用說明書，以了解根據針頭長度和輸液管長度應注射多少單位。
 
-* Insulin delivered using the prime function is not taken into account by **AAPS** when calculating insulin on board (IOB), and is marked in the [Treatments history](#aaps-screens-treatments) as "Prime".
+* 使用預充功能輸送的胰島素不會納入 **AAPS** 的體內胰島素（IOB）計算，並會在[治療紀錄](#aaps-screens-treatments)中標示為「預充」。
 
-* Any insulin bolused from the pump during a pump disconnection will also not be taken into account by **AAPS**. If you happen to bolus directly from the pump while **AAPS** is disconnected, once you reconnect the pump you can announce this insulin (without bolusing it) in the **Insulin** dialog (see [To announce delivered insulin without actually bolusing](#pumps-cannulas-announce-insulin) below).
+* 幫浦中斷連線期間，從幫浦注射的任何胰島素也不會納入 **AAPS** 的計算。如果您在 **AAPS** 中斷連線時直接從幫浦注射，重新連線後，可以在**胰島素**對話框中記錄這筆胰島素（不必再次注射；請參閱下方的[如何記錄已輸送的胰島素而不實際注射](#pumps-cannulas-announce-insulin)）。
 
 ### 套管、注射部位、輸液管和/或幫浦問題
 
-If you are confident that you haven't received any insulin for a period of time, despite **AAPS** recording that you have, and you know exactly when the issue started (_e.g._ you remove the cannula and see that the cannula was kinked during the insertion process) you can correct this in **AAPS**, while being aware that the insulin may in fact have been delivered but may be slow to act for some reason.
+如果您確定自己有一段時間沒有接收到任何胰島素，儘管 **AAPS** 記錄顯示您已接收到胰島素，而且您清楚知道問題是何時開始的（_例如_拔除導管時發現導管在插入過程中折彎），您可以在 **AAPS** 中修正紀錄。但請留意，胰島素實際上可能已經輸送，只是因為某些原因延遲生效。
 
 ```{admonition} Caution - Risk of Hypoglycemia
 :class: danger
 只有在極端謹慎的情況下，才從 **AAPS** 中刪除胰島素輸送紀錄，以防實際已輸送了胰島素，並在接下來的 24 小時內密切監測血糖。
 ```
 
-To remove boluses and SMBs which you know have not been delivered, open the **menu** (☰), select [Treatments history](#aaps-screens-treatments) and, on the **Carbs and bolus** tab, conservatively delete the logged boluses starting from the point the incident happened. This will correct the "insulin on board" (IOB) value which is key for **AAPS**' calculations; if you now return to the main screen you will see that the IOB has reduced. 請注意，你無法刪除**AAPS**計算已經交付的基礎胰島素，因此這將仍然被**AAPS**納入計算。
+若要移除您確定未實際輸送的注射和微量注射（SMB），請開啟**選單**（☰），選取[治療紀錄](#aaps-screens-treatments)，然後在**碳水化合物與注射**分頁中，從事件發生的時間點開始，謹慎刪除已記錄的注射。這會修正「體內胰島素」（IOB）數值，而這是 **AAPS** 計算時的重要依據；返回主畫面後，您會看到 IOB 已降低。請注意，你無法刪除**AAPS**計算已經交付的基礎胰島素，因此這將仍然被**AAPS**納入計算。
 
-In less obvious cases of insulin delivery problems _e.g._ leakages, occlusions or tunneling where either you are not sure when the issue started, or think some of the insulin was delivered, you need to be careful. You may detect these issues either by "smelling" the insulin, seeing a wet adhesive, encountering high glucose values or by getting an alarm. As you will never know how much insulin you got into your skin (which might be starting to work after a while) it will be hard to determine the correct amount of insulin which needs to be deducted from the current "insulin on board" (IOB) value. 一種策略是解決胰島素輸送問題後暫停循環 5 小時（或你的胰島素作用時間），然後恢復循環。這將確保你在重新開始循環時，IOB 是正確的。
+如果胰島素輸送問題不明顯，_例如_滲漏、阻塞或皮下隧道形成，而且您不確定問題何時開始，或認為部分胰島素已經輸送，請務必謹慎處理。您可能會透過聞到胰島素氣味、發現黏貼處潮濕、血糖值偏高，或收到警示，察覺這些問題。由於您無法得知實際有多少胰島素進入體內（這些胰島素可能過一段時間才開始作用），因此很難判斷應從目前的「體內胰島素」（IOB）數值中扣除多少胰島素。一種策略是解決胰島素輸送問題後暫停循環 5 小時（或你的胰島素作用時間），然後恢復循環。這將確保你在重新開始循環時，IOB 是正確的。
 
 (pumps-cannulas-disconnecting)=
 ## 中斷幫浦連線來進行洗澡或活動
 
-如果你在淋浴、洗澡、游泳、接觸性運動或其他活動時取下幫浦，你必須告訴**AAPS**，以便保持 IOB 正確。 The pump can be disconnected using the [loop icon](#AapsScreens-loop-status) on the main screen: press it and select **Disconnect pump** with the duration you need. If the activity takes longer than planned, open the same dialog again and pick a new duration under **Disconnect pump**: the disconnection is extended and the new duration starts from now. You do not need to reconnect first.
+如果你在淋浴、洗澡、游泳、接觸性運動或其他活動時取下幫浦，你必須告訴**AAPS**，以便保持 IOB 正確。您可以在主畫面使用[循環圖示](#AapsScreens-loop-status)中斷幫浦連線：按下圖示，選取**中斷幫浦連線**，並設定所需的時間。如果活動時間比預期長，請再次開啟相同的對話框，並在**中斷幫浦連線**下選擇新的時間：中斷連線時間會延長，且新設定的時間會從現在開始計算。您不必先重新連線。
 
-由於幫浦中斷連線期間你無法獲得任何胰島素，應每兩小時重新連線一次，以補上缺失的基礎胰島素。你可以這樣操作：先連接設備，注射缺少的基礎胰島素量（_例如_過去兩小時的劑量），然後再斷開連接這將有助於避免嚴重缺乏胰島素，導致糖尿病酮酸中毒（DKA）。如果在活動期間重新連接幫浦不方便（導管位置被濕衣服覆蓋_等_），請考慮使用針管注射。 This manual injection can be logged in **AAPS**, and doesn't have to be logged at the time of injection (just make a note of the time of injection) since you can announce the insulin and backdate the time the insulin was actually given when you reconnect the pump.
+由於幫浦中斷連線期間你無法獲得任何胰島素，應每兩小時重新連線一次，以補上缺失的基礎胰島素。你可以這樣操作：先連接設備，注射缺少的基礎胰島素量（_例如_過去兩小時的劑量），然後再斷開連接這將有助於避免嚴重缺乏胰島素，導致糖尿病酮酸中毒（DKA）。如果在活動期間重新連接幫浦不方便（導管位置被濕衣服覆蓋_等_），請考慮使用針管注射。您可以在 **AAPS** 中記錄這次手動注射，不必在注射當下記錄（只要記下注射時間即可），因為重新連線至幫浦後，您可以記錄胰島素，並將注射時間回填為實際注射時間。
 
 (pumps-cannulas-announce-insulin)=
 ## 如何紀錄已輸送的胰島素但實際上不進行注射
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only**. A **Time** row (set to **Now**) then lets you record the actual time of the injection: you can ignore it if the injection was given recently. If the bolus was given some time ago, use **-** to move the time back (_e.g._ -30 min), or open the row with the chevron to pick the exact date and time. **AAPS** 接著會考慮胰島素的作用時間，並相應計算系統中剩餘的胰島素量。
+若要記錄 **AAPS** 中斷連線期間從幫浦輸送的胰島素，或透過注射筆注射的胰島素：開啟[胰島素對話框](#aaps-screens-buttons-insulin)（點選底部導覽列中的**治療**，或使用 QuickLaunch 按鈕），輸入胰島素單位數，並啟用**僅記錄注射，不實際注射**。接著會出現**時間**列（預設為**現在**），讓您記錄實際注射時間；如果是最近才注射，可以不用調整。如果注射已經過了一段時間，請使用 **-** 將時間往前調整（_例如_ -30 分鐘），或點選列旁的箭頭，選擇確切的日期和時間。 **AAPS** 接著會考慮胰島素的作用時間，並相應計算系統中剩餘的胰島素量。
 
-If you are using **AAPS** as a caregiver, you can remotely disconnect (and reconnect) the pump very easily by [SMS command](../RemoteFeatures/SMSCommands.md) using commands such as "pump disconnect 120" and "pump connect 120". 遠端斷線的持續時間範圍為 1 - 120 分鐘（此範例為 120 分鐘）。這在**AAPS** 手機不方便讓你進入的情況下非常有用，像是藏在快速運動的孩子身上的幫浦腰帶中，或者被青少年密切守護（或正在使用）。
+如果您以照護者身分使用 **AAPS**，可以透過[簡訊指令](../RemoteFeatures/SMSCommands.md)，輕鬆遠端中斷或重新連線幫浦，例如使用「pump disconnect 120」和「pump connect 120」指令。遠端斷線的持續時間範圍為 1 - 120 分鐘（此範例為 120 分鐘）。這在**AAPS** 手機不方便讓你進入的情況下非常有用，像是藏在快速運動的孩子身上的幫浦腰帶中，或者被青少年密切守護（或正在使用）。
 
 ## 活動後重新連線幫浦
 
@@ -69,7 +69,7 @@ a) 只需在**AAPS**中重新連接幫浦（灰色到綠色，適用於關閉環
 
 _或者_
 
-b) If you want to be more aggressive (for example, you are heading for hyperglycemia), you can open the [Bolus wizard](#aaps-screens-bolus-wizard) and bolus for zero carbs, to immediately deliver the calculated missing insulin as a bolus.
+b) 如果您想採取更積極的處理方式（例如血糖即將過高），可以開啟[注射嚮導](#aaps-screens-bolus-wizard)，輸入 0 克碳水化合物，並進行注射，讓系統立即以注射方式輸送計算出的胰島素缺額。
 
 你比較喜歡哪種策略是很看個人的選擇，最好的方法就是自己多試幾次，找到最適合的。
 
@@ -77,40 +77,40 @@ b) If you want to be more aggressive (for example, you are heading for hyperglyc
 (Aapsscreens-site-rotation)=
 ## 部位輪替
 
-**Manage → Site Rotation** opens the Site Rotation Dialog in View mode:
+**管理 → 部位輪替**會以檢視模式開啟「部位輪替」對話框：
 
-- With the two buttons at the top (cannula icon and sensor icon), you can show Cannula sites only, Sensor sites only, or both
-- All Cannula change and Sensor change events from the past 45 days are available.
-- Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
-- Tap the **pencil** icon next to an entry to open the Edit view and update its Site location, Arrow or Note
+- 使用上方的兩個按鈕（導管圖示和感測器圖示），您可以只顯示導管部位、只顯示感測器部位，或同時顯示兩者。
+- 您可以查看過去 45 天內所有導管更換和感測器更換事件。
+- 點選某個部位區域，或點選下方清單中的一筆項目，以篩選為僅顯示所選區域的項目。所選區域會以淺綠色標示。
+- 點選項目旁的**鉛筆**圖示，即可開啟編輯畫面，更新部位位置、箭頭或備註。
 
-![View Mode](../images/SiteRotation/ViewMode.png)
+![檢視模式](../images/SiteRotation/ViewMode.png)
 
-- The **cog** icon (upper right) opens the settings: **User profile for site rotation** opens a dialog where you choose **Man**, **Woman** or **Child**, and the **Manage pump site rotation** and **Manage CGM site rotation** switches select which sites you manage.
+- **齒輪**圖示（右上角）會開啟設定：**部位輪替使用者設定檔**會開啟對話框，讓您選擇**男性**、**女性**或**兒童**；**管理幫浦部位輪替**和**管理 CGM 部位輪替**開關則可選擇要管理的部位。
 
 ![設定](../images/SiteRotation/Settings.png)
 
-![User profile for site rotation dialog](../images/SiteRotation/Type.png)
+![部位輪替使用者設定檔對話框](../images/SiteRotation/Type.png)
 
-*Note: this setting will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"*
+*注意：當從「預充/填充 按鈕」或「CGM 傳感器插入 按鈕」新增條目時，是否自動開啟部位輪替對話框（編輯模式），將依此設定決定。*
 
-- For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
+- 若直接從幫浦進行部位更換，你需要開啟檢視模式並編輯新項目，以選擇位置與箭頭。
 
-Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
+編輯模式可為所選項目設定位置、箭頭與備註：
 
-- The entry being edited is shown below the body images, with its type icon (cannula or sensor)
-- Front and back views are shown side by side: tap the area where you placed it
-- Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the past 45 days in this site
+- 正在編輯的項目會顯示在身體示意圖下方，並附有類型圖示（導管或感測器）。
+- 正面和背面並排顯示：點選您放置裝置的部位。
+- 選取部位（以綠色標示）後，下方的清單會顯示過去 45 天內在此部位新增的所有項目。
 
-![Edit Mode](../images/SiteRotation/EditMode.png)
+![編輯模式](../images/SiteRotation/EditMode.png)
 
-- You can add an optional arrow by tapping the arrow icon at the right of the entry: the **Select Arrow** dialog lets you specify a sub-location or the pod orientation
+- 點選項目右側的箭頭圖示，即可選擇是否新增箭頭；在**選取箭頭**對話框中，您可以指定更細部的位置或藥艙的方向。
 
-![Position](../images/SiteRotation/EditModeSub.png)
+![位置](../images/SiteRotation/EditModeSub.png)
 
-- You can also add a **Note** about the selected site
-- Tap the **save** icon (upper right) to record the site
+- 您也可以為選取的部位新增**備註**。
+- 點選右上角的**儲存**圖示，即可記錄部位。
 
-Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
+可在圖像上直接操作進行篩選，或點擊清單中的治療事件 要移除篩選，只需在圖像上點擊任何部位區域之外的地方。
 
-![Filtering](../images/SiteRotation/Filtering.png)
+![過濾](../images/SiteRotation/Filtering.png)

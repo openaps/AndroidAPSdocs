@@ -2,49 +2,49 @@
 
 # Усунення несправностей
 
-**Start here when something is not working.** Troubleshooting information lives on many pages across the documentation. This page brings it together: it is a single collection of links, sorted by topic, to help you solve the most common problems.
+**Почніть тут, коли щось не працює.** Інформація про усунення проблем є на багатьох сторінках документації. Ця сторінка збирає її разом: це єдиний набір посилань, упорядкованих за темами, який допоможе вирішити найчастіші проблеми.
 
-If you do not find your answer below, also check:
+Якщо ви не знайшли відповідь нижче, перегляньте також:
 
-* the [FAQ](../UsefulLinks/FAQ.md) for answers to frequent questions, and
-* the [Profile tuning guide](ProfileTuning.md) if your loop runs but your glucose control needs improving.
+* [Часті запитання (FAQ)](../UsefulLinks/FAQ.md) – відповіді на часті запитання, та
+* [Посібник з налаштування профілю](ProfileTuning.md), якщо петля працює, але контроль глюкози треба покращити.
 
 ```{admonition} Still stuck?
 :class: tip
-If none of the links solve your problem, see [Where can I get help](WhereCanIGetHelp.md) to ask the community (Facebook, Discord), or send your [log files](AccessingLogFiles.md) to the developers.
+Якщо жодне посилання не вирішило вашу проблему, перегляньте сторінку [Де отримати допомогу](WhereCanIGetHelp.md), щоб запитати спільноту (Facebook, Discord), або надішліть ваші [файли журналу](AccessingLogFiles.md) розробникам.
 ```
 
 ---
 
 (generaltroubleshooting-aaps-app)=
 
-## AAPS app
+## Застосунок AAPS
 
-### Building & updating
+### Збірка та оновлення
 
-* If the build fails, see [If the build fails](#building-aaps-troubleshooting): it lists the troubleshooting section for each build method:
+* Якщо збірка не вдалася, перегляньте розділ [Якщо збірка не вдалася](#building-aaps-troubleshooting): там є розділ з усунення проблем для кожного способу збірки:
   * [AAPS Builder](#aaps-builder-troubleshooting)
-  * [Browser build](#aaps-ci-troubleshooting)
+  * [Збірка в браузері](#aaps-ci-troubleshooting)
   * [Android Studio](TroubleshootingAndroidStudio.md)
-* Lost keystore, or new keystore: [Reinstalling AAPS](#reinstall-aaps)
-* Updating **AAPS**: [with AAPS Builder](#aaps-builder-updates), [with a browser build (fork)](#update-browser-build-troubleshooting), [with Android Studio](#update-computer-build-troubleshooting)
+* Втрачений або новий keystore: [Перевстановлення AAPS](#reinstall-aaps)
+* Оновлення **AAPS**: [з AAPS Builder](#aaps-builder-updates), [зі збіркою в браузері (fork)](#update-browser-build-troubleshooting), [з Android Studio](#update-computer-build-troubleshooting)
 
-### Installing
+### Встановлення
 
-* [Google Play Protect warning](#transferring-installing-play-protect-warning): the app is reported as unsafe.
-* Installation **blocked** with a message about an unverified developer: see [Android developer verification](#android-developer-verification) for the free installation methods.
+* [Попередження Google Play Protect](#transferring-installing-play-protect-warning): застосунок позначено як небезпечний.
+* Встановлення **заблоковано** з повідомленням про неперевіреного розробника: безкоштовні способи встановлення описано в розділі [Перевірка розробників Android](#android-developer-verification).
 
 ### Налаштування
 
-* [Profile: "Basal rate is not compatible with the current pump"](#your-aaps-profile-basal-not-compatible)
-* [Pump: "Data is coming from different pump"](#config-builder-wrong-pump-data)
+* [Профіль: «Базальна швидкість несумісна з поточною помпою»](#your-aaps-profile-basal-not-compatible)
+* [Помпа: «Дані надходять з іншої помпи»](#config-builder-wrong-pump-data)
 * [Nightscout Client](TroubleshootingNsClient.md)
 
-### Usage
+### Використання
 
-* [Wrong carb values (slow carbs absorption)](#CobCalculation-detection-of-wrong-cob-values)
-* [Automations](#automations-troubleshooting)
-* [Full closed loop](#full-closed-loop-troubleshooting)
+* [Неправильні значення вуглеводів (повільне засвоєння вуглеводів)](#CobCalculation-detection-of-wrong-cob-values)
+* [Автоматизація](#automations-troubleshooting)
+* [Повністю закрита петля](#full-closed-loop-troubleshooting)
 
 ---
 
@@ -53,99 +53,99 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 
 ## Проблеми, пов’язані з Bluetooth
 
-Про відомі проблеми з Bluetooth-з’єднанням, обриви зв’язку з помпою/Pod, а також проблеми з активацією та підключенням див. [Усунення проблем з Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
+Про відомі проблеми з Bluetooth-з’єднанням, обриви зв’язку з помпою/Pod, а також проблеми з активацією та підключенням див. [Проблеми, пов’язані з Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
 (generaltroubleshooting-android-related-issues)=
 
-## Android Related Issues
+## Проблеми, пов'язані з Android
 
-### Battery optimization
+### Оптимізація батареї
 
-**AAPS** can help you find the right settings for your phone: open the **menu** (☰) > **About** and tap **Don't kill my app?**. It opens the instructions for your phone brand on [Don't kill my app](https://dontkillmyapp.com/). The [setup wizard](#setup-wizard-bluetooth-battery-optimisation) also asks you to turn off battery optimization for **AAPS** and Bluetooth.
+**AAPS** може допомогти знайти правильні налаштування для вашого телефона: відкрийте **Меню** (☰) > **Про застосунок** і натисніть **Не закривати мій застосунок?**. Відкриється інструкція для марки вашого телефона на сайті [Don't kill my app](https://dontkillmyapp.com/). [Майстер налаштування](#setup-wizard-bluetooth-battery-optimisation) також просить вимкнути оптимізацію батареї для **AAPS** і Bluetooth.
 
-Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
+В Android є налаштування економії батареї, які увімкнені за замовчуванням. Ці налаштування автоматично призупиняють застосунки, які не потрібні для роботи системи. Так вони економлять заряд батареї, який витрачають застосунки, що не мусять працювати весь час.
 
-When this is enabled, it will very likely cause issue for **AAPS** and other supporting apps like **xDrip**.
+Якщо вона увімкнена, це дуже ймовірно спричинить проблеми для **AAPS** та інших допоміжних застосунків, наприклад **xDrip**.
 
-It's important to ensure that you have disabled Battery Optimization to ensure **AAPS** and other supporting apps remain active all the time.
+Важливо вимкнути оптимізацію батареї, щоб **AAPS** та інші допоміжні застосунки весь час залишалися активними.
 
-Depending on your phone model and make there may be more than one location and setting which needs to have this disabled.
+Залежно від марки та моделі телефону, це може знадобитися вимкнути в кількох місцях і налаштуваннях.
 
-***NOTE:** Follow the steps below to Disable Battery Optimization for the Bluetooth service if your phone has this option, the same steps can be used to disable for **AAPS** and other apps, however the screenshots will only show how to do this for the Bluetooth service.*
+***ПРИМІТКА:** Виконайте кроки нижче, щоб вимкнути оптимізацію батареї для служби Bluetooth, якщо у вашому телефоні є такий параметр. Ті самі кроки підходять і для **AAPS** та інших застосунків, але знімки екрана показують це лише для служби Bluetooth.*
 
-#### Pixel phones (stock Android)
+#### Телефони Pixel (стандартний Android)
 
-* Go to the Android settings, select "Apps".
+* Відкрийте налаштування Android, виберіть «Apps» (Застосунки).
 
-  ![Android Settings¦Apps](../images/troubleshooting/pixel/01_androidsettings.png)
+  ![Налаштування Android¦Застосунки](../images/troubleshooting/pixel/01_androidsettings.png)
 
-* Select "See all apps"
+* Виберіть «See all apps» (Переглянути всі застосунки)
 
-  ![See all apps](../images/troubleshooting/pixel/02_apps.png)
+  ![Переглянути всі застосунки](../images/troubleshooting/pixel/02_apps.png)
 
-* On the menu on the right, select "Show system" apps.
+* У меню праворуч виберіть «Show system» (Показати системні застосунки).
 
-  ![Show system apps](../images/troubleshooting/pixel/03_allapps.png)
+  ![Показати системні застосунки](../images/troubleshooting/pixel/03_allapps.png)
 
-* Now search and select the app "Bluetooth".
+* Тепер знайдіть і виберіть застосунок «Bluetooth».
 
-  ![Bluetooth app](../images/troubleshooting/pixel/03_bluetooth.png)
+  ![Застосунок Bluetooth](../images/troubleshooting/pixel/03_bluetooth.png)
 
-* Click the "App battery usage" and select "Unrestricted" (called "Not optimized" on some older Android versions).
+* Натисніть «App battery usage» (Використання батареї застосунком) і виберіть «Unrestricted» (Без обмежень; у деяких старіших версіях Android – «Not optimized», Не оптимізовано).
 
-  ![BT Battery optimization](../images/troubleshooting/pixel/04_btunrestricted.png)
+  ![Оптимізація батареї для Bluetooth](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-#### Samsung phones
+#### Телефони Samsung
 
-* Go to the android settings, select "Apps"
+* Відкрийте налаштування Android, виберіть «Apps» (Застосунки)
 
-* On the icon that supposedly changes the sorting algorithm (1), select "Show system apps" (2).
+* Натисніть значок, який нібито змінює сортування (1), і виберіть «Show system apps» (Показати системні застосунки) (2).
 
-  ![App Filter](../images/troubleshooting/samsung/Samsung01_Apps.png)
+  ![Фільтр застосунків](../images/troubleshooting/samsung/Samsung01_Apps.png)
 
-  ![Show system apps](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+  ![Показати системні застосунки](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
 
-* Now search the Bluetooth app and select it to see its settings.
+* Тепер знайдіть застосунок Bluetooth і виберіть його, щоб побачити його налаштування.
 
-  ![Bluetooth App](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+  ![Застосунок Bluetooth](../images/troubleshooting/samsung/Samsung03_BtApp.png)
 
-* Select "battery".
+* Виберіть «Battery» (Батарея).
 
-  ![Battery](../images/troubleshooting/samsung/Samsung04_Battery.png)
+  ![Батарея](../images/troubleshooting/samsung/Samsung04_Battery.png)
 
-* Set it to "Unrestricted" (called "Not optimized" on some older Android versions).
+* Встановіть «Unrestricted» (Без обмежень; у деяких старіших версіях Android – «Not optimized», Не оптимізовано).
 
-  ![Unrestricted](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
+  ![Без обмежень](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
-#### Huawei phones
+#### Телефони Huawei
 
-See this guide for [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+Перегляньте цей посібник: [Bluetooth і оптимізація батареї на Huawei](../CompatiblePhones/Huawei.md)
 
 ---
 
 (generaltroubleshooting-cgm)=
 
-## Continuous Glucose Monitor (CGM)
+## Система безперервного моніторингу глюкози (CGM)
 
-Useful links to known issues and steps to resolve for CGMs.
+Корисні посилання на відомі проблеми CGM і кроки для їх усунення.
 
-* [General](#general-cgm-troubleshooting)
+* [Загальне](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
-* [Libre 2 with Minimal Looper](#minimallooper-troubleshooting)
+* [Libre 2 з Minimal Looper](#minimallooper-troubleshooting)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
-* [xDrip - no CGM data](#xdrip-identify-receiver)
-* [xDrip - Dexcom troubleshooting](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
+* [xDrip – немає даних CGM](#xdrip-identify-receiver)
+* [xDrip – усунення проблем з Dexcom](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
 ---
 
 (generaltroubleshooting-pumps)=
 
-## Pumps
+## Помпи
 
-Useful links to known issues and steps to resolve for Pumps
+Корисні посилання на відомі проблеми помп і кроки для їх усунення
 
 * [Accu-Chek Combo](#combov2-tips-for-basic-usage)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
@@ -162,34 +162,34 @@ Useful links to known issues and steps to resolve for Pumps
 
 (generaltroubleshooting-phones)=
 
-## Phones
+## Телефони
 
-Useful links to known issues and steps to resolve for Phones
+Корисні посилання на відомі проблеми телефонів і кроки для їх усунення
 
-* [List of tested phone and device setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
+* [Список перевірених телефонів і комбінацій пристроїв](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
 * [Jelly](../CompatiblePhones/Jelly.md)
-* [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+* [Bluetooth і оптимізація батареї на Huawei](../CompatiblePhones/Huawei.md)
 
 ---
 
 (generaltroubleshooting-remote-control)=
 
-## Remote control
+## Віддалене керування
 
-* [AAPSClient and remote control (pairing, commands not received)](#client-master-control-troubleshooting)
-* ['Nightscout access token' issues](#remotecontrol-nightscout-access-token)
-* [SMS commands](#SMSCommands-troubleshooting)
+* [AAPSClient і віддалене керування (спарювання, команди не надходять)](#client-master-control-troubleshooting)
+* [Проблеми з «Токен доступу Nightscout»](#remotecontrol-nightscout-access-token)
+* [SMS-команди](#SMSCommands-troubleshooting)
 * [Android Auto](#android-auto-troubleshooting)
 
 ---
 
 (generaltroubleshooting-smartwatches)=
 
-## Smartwatches
+## Розумні годинники
 
-Useful links to known issues and steps to resolve for Smartwatches
+Корисні посилання на відомі проблеми розумних годинників і кроки для їх усунення
 
-* [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
-* [Watch and phone do not communicate](#wear-os-watch-phone-communication)
+* [Усунення проблем із застосунком для годинника (Wear)](#Watchfaces-troubleshooting-the-wear-app)
+* [Годинник і телефон не обмінюються даними](#wear-os-watch-phone-communication)
 * [Wear OS 5](#wear-os-5-troubleshooting)
-* [Building the Wear app](#building-aaps-wear-os-troubleshooting)
+* [Збірка застосунку для годинника (Wear)](#building-aaps-wear-os-troubleshooting)

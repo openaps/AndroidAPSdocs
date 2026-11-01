@@ -1,7 +1,7 @@
 (global-search)=
-# Global search
+# 全域搜尋
 
-**AAPS** v4 has a **global search** box at the top of the main screen. Type a word and it looks across the whole app at once — plugins, dialogs, settings screens, individual preferences — and, if you are online, the **AndroidAPS documentation** too. It is the fastest way to jump to a setting or screen without remembering where it lives.
+**AAPS** v4 的主畫面上方有**全域搜尋**欄位。輸入關鍵字，就能一次搜尋整個應用程式中的外掛、對話方塊、設定畫面、個別偏好設定；如果目前在線上，也會搜尋**AndroidAPS 說明文件**。不用記住設定或畫面的位置，就能快速前往想找的內容。
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,85 +10,86 @@
 
 ---
 
-## Opening search
+## 開啟搜尋
 
-Tap the **🔍 Search** field at the top of the **Overview** (next to the ☰ menu). Start typing and results appear as you type (after a short pause), grouped by category:
+點選「總覽」頂端的 **🔍 搜尋** 欄位（位於 ☰ 選單旁）。開始輸入後，稍候片刻就會顯示搜尋結果，並依類別分組：
 
-![Global search results, grouped by category](../images/v4/Search/search_results.png)
+![依類別分組的全域搜尋結果](../images/v4/Search/search_results.png)
 
-Clear the box with the **✕**, or close search with the device **Back** button.
-
----
-
-## Search in English *or* your own language
-
-This is the part worth knowing: search matches against **both** the text in your **selected language** **and** the original **English** text.
-
-- If your app is in, say, German or Czech, you can type the **localized** word **or** the **English** word — either finds the setting.
-- A match on the **localized** title ranks highest, then the **English** title, then the localized and English **descriptions**.
-- Matching ignores **accents/diacritics** (so *ů* matches *u*, *é* matches *e*) and is **case-insensitive**.
-
-This means a guide or forum post written in English still leads you to the right setting even when your phone shows everything translated.
+點選 **✕** 清除搜尋欄位，或按裝置上的 **返回** 按鈕關閉搜尋。
 
 ---
 
-## What search covers
+## 使用英文*或*您的語系搜尋
 
-Results are grouped into these categories:
+這點很值得注意：搜尋會同時比對**您選取的語系**中的文字，以及原始的**英文**文字。
 
-- **Plugins** — every plugin visible in your build (the same ones listed under [Configuration](../SettingUpAaps/ConfigBuilder.md)). Each plugin row carries its **enable switch**, so you can enable or disable a plugin right from the results — tapping the row of a disabled (toggleable) plugin enables it.
-- **Dialogs** — the treatment/action and management screens (Bolus wizard, Insulin, Extended bolus, Calibration, Temp Target, Profile, …). Screens that don't apply to your build are left out (for example *Pair with master* on a master, *Authorized clients* on a client).
-- **Preference categories** — the settings **screens** and sub-screens, both built-in (General, Appearance, Protection, Alerts, Maintenance, …) and from plugins, plus the small settings groups reached from dialogs (Fill buttons, Insulin/Carbs button steps, status-light thresholds, wizard settings, …).
-- **Preferences** — every **individual setting** that has a title. These are filtered to your build/mode, so you only see settings that actually apply (APS / NSClient / pump-control).
-- **Documentation** — pages from the online **AndroidAPS docs** (see below).
+- 例如，如果您的應用程式使用德文或捷克文，您可以輸入**本地化**文字**或****英文**文字，都能找到相應的設定。
+- 比對結果的排序依序為：**本地化**標題、**英文**標題，接著是本地化與英文的**說明**。
+- 搜尋時會忽略**重音符號／附加符號**（例如 *ů* 可比對 *u*，*é* 可比對 *e*），且**不區分大小寫**。
+
+因此，即使手機上顯示的內容都已翻譯，您仍可透過英文撰寫的指南或論壇文章找到正確的設定。
+
+---
+
+## 搜尋範圍
+
+搜尋結果會分成以下類別：
+
+- **外掛** — 顯示您目前版本中所有可見的外掛（與[組態設定](../SettingUpAaps/ConfigBuilder.md)中列出的外掛相同）。每個外掛項目都會顯示**啟用開關</strong)，因此您可以直接從搜尋結果啟用或停用外掛；點選已停用且可切換的外掛項目即可啟用。</li>
+- **對話框** — 治療／操作與管理畫面（注射嚮導、胰島素、延長注射、校正、臨時目標、設定檔等）。不適用於您目前版本的畫面不會顯示（例如，主機端不會顯示*與主機配對*，用戶端則不會顯示*已授權的用戶端*）。
+- **偏好設定類別** — 各項**設定畫面**及子畫面，包含內建項目（一般、外觀、防護、警示、維護等）與外掛提供的項目；也包含從對話框開啟的小型設定群組（填充按鈕、胰島素／碳水化合物按鈕步進值、狀態燈門檻值、嚮導設定等）。
+- **偏好設定** — 所有**個別設定</strong)項目，只要有標題就會列出。搜尋結果會依照您目前的版本與模式篩選，因此只會顯示實際適用的設定（APS／NSClient／幫浦控制）。</li>
+- **說明文件** — 線上**AndroidAPS 說明文件**中的頁面（詳見下文）。</ul>
 
 ```{admonition} Settings that belong to a disabled plugin
 :class: note
-A preference whose plugin is currently **disabled** still shows up — **greyed out** and not tappable — with a *“Plugin … disabled”* note, so you can tell the setting exists and which plugin to enable to reach it.
+即使某個偏好設定所屬的外掛目前已**停用**，該設定仍會顯示，但會以**灰色**呈現且無法點選，並附上「外掛……已停用」的提示，讓您知道這項設定存在，以及需要啟用哪個外掛才能使用。
 
-![A greyed-out setting from a disabled plugin](../images/v4/Search/search_disabled_plugin.png)
+![已停用外掛中的灰色設定](../images/v4/Search/search_disabled_plugin.png)
 ```
 
 ---
 
-## Documentation results (online)
+## 說明文件搜尋結果（線上）
 
-While the local search runs, **AAPS** also queries the official **AndroidAPS documentation** (hosted on ReadTheDocs) in parallel. Matching pages appear in a **Documentation** group at the bottom, each with a 📖 icon, the section title and a short snippet:
+在搜尋應用程式內的內容時，**AAPS** 也會同時搜尋官方的**AndroidAPS 說明文件**（託管於 ReadTheDocs）。符合條件的頁面會顯示在底部的**說明文件**群組中，每筆結果都會附上 📖 圖示、章節標題和簡短摘要：
 
-![Documentation (wiki) results with snippets](../images/v4/Search/search_documentation.png)
+![說明文件（維基）搜尋結果與摘要](../images/v4/Search/search_documentation.png)
 
-- If the documentation is translated into your app language, **AAPS** searches the translated pages and the English pages at the same time. Pages in your language come first, then the English pages that were not already found.
-- Tapping a documentation result opens that page in your **browser**.
-- Documentation search needs **internet** — when you are offline you get a *“Documentation search requires internet connection”* note instead, and the local (in-app) results still work normally.
+- 如果說明文件有翻譯成您使用的語系，**AAPS** 會同時搜尋翻譯版與英文版頁面。搜尋結果會先列出您語系的頁面，再列出尚未出現在結果中的英文頁面。
+- 點選說明文件搜尋結果，即可在**瀏覽器**中開啟該頁面。
+- 搜尋說明文件需要**網際網路</strong)連線。離線時會顯示「搜尋說明文件需要網際網路連線」的提示，但應用程式內的搜尋結果仍可正常使用。</li> </ul>
+
+
+  ---
+
+## 開啟搜尋結果
+
+點選搜尋結果即可直接前往：
+
+- **外掛** → 開啟該外掛。
+- **對話框** → 開啟該畫面或對話框。
+- **偏好設定類別** → 開啟該設定畫面。
+- **偏好設定** → 直接開啟該設定所在的畫面，並跳至該設定。
+- **說明文件** → 在瀏覽器中開啟該頁面。
+
+開啟設定或執行受保護的操作時，仍須遵守**[防護](../SettingUpAaps/ConfigBuilder.md)**要求（PIN 碼／密碼），與您手動前往該處時相同。執行搜尋結果中的操作後，您可以按**返回**回到搜尋結果。
 
 ---
 
-## Opening a result
+## 進階使用者快捷方式
 
-Tap a result to go straight to it:
+使用以下兩個特殊查詢，即可一次列出整個類別：
 
-- **Plugin** → opens that plugin.
-- **Dialog** → opens that screen or dialog.
-- **Preference category** → opens that settings screen.
-- **Preference** → opens the setting **in place** (jumps to it within its screen).
-- **Documentation** → opens the page in your browser.
-
-Opening settings and protected actions still respects your **[protection](../SettingUpAaps/ConfigBuilder.md)** (PIN/password), exactly as it would if you had navigated there by hand. After you act on a result you can press **Back** to return to your search results.
-
----
-
-## Power-user shortcuts
-
-Two special queries list a whole category at once:
-
-- `%PLUGINS%` — list **all** plugins.
-- `%DIALOGS%` — list **all** dialogs/action screens.
+- `%PLUGINS%` — 列出**所有**外掛。
+- `%DIALOGS%` — 列出**所有**對話框／操作畫面。
 
 ---
 
 ```{admonition} The index stays current
 :class: note
-The search index is built the first time you search and kept ready after that. It is rebuilt automatically when you **enable/disable a plugin** or **change the app language**, so results always reflect your current setup.
+第一次搜尋時會建立搜尋索引，之後索引會保持就緒狀態。當您**啟用／停用外掛**或**變更應用程式語系**時，系統會自動重建索引，確保搜尋結果符合您目前的設定。
 ```
 
 ---

@@ -73,7 +73,7 @@ Uzavřená smyčka je možná, jen pokud jste v **[cíli 7](#objectives-objectiv
 
 Díky SMB může u jídel, která obsahují jen „pomalé“ sacharidy, stačit, když systému zadáte plánované množství sacharidů a zbytek necháte na **AAPS**. To však může vést k vyšším postprandiálním vrcholům (po jídle), protože předstihový bolus není možný. Nebo můžete podat (v případě potřeby jako předstihový bolus) **úvodní bolus**, který **jen částečně** pokryje sacharidy (např. 2/3 odhadovaného množství), a zbytek inzulínu nechat podat pomocí **SMB**.
 
-![SMB v hlavním grafu](../images/SMBs.png)
+![SMBs on the IOB graph](../images/SMBs.png)
 
 SMB se zobrazují v [grafu IOB](#aaps-screens-iob) jako modré trojúhelníky. [Podržte prst](#aaps-screens-graph-press-and-hold) na grafu u trojúhelníku, abyste viděli, kolik inzulínu bylo podáno, nebo použijte [Historii ošetření](#aaps-screens-treatments).
 

@@ -31,7 +31,7 @@ Une fois le plugin sélectionné, la carte **Equil** affiche deux boutons, **Par
 
 ![Le plugin Equil sélectionné dans Configuration > Pompe](../images/v4/Pumps/equil_enabled.png)
 
-**Ouvrir le plugin** (ou **Gestion** → **Pompe**) ouvre l'écran de la pompe Equil. Avant l'appairage d'une pompe, il ressemble à ceci :
+**Ouvrir le plugin** (ou **Gestion** → **Pompe**) ouvre l'écran de la pompe Equil. Avant l'appairage d'une pompe, il ressemble à ceci :
 
 ![Écran de la pompe Equil avant l'appairage](../images/v4/Pumps/equil_pump_screen.png)
 
@@ -122,7 +122,7 @@ Une fois la pompe appairée, l'écran de la pompe affiche ces boutons :
 
 ## Où obtenir de l'aide
 
-Le pilote Equil est développé par la communauté, de manière **bénévole**. Avant de demander de l'aide, merci de :
+Le pilote Equil est développé par la communauté, de manière **bénévole**. Avant de demander de l'aide, merci de :
 
 1. **Lisez** la section correspondante de cette documentation pour vérifier comment la fonction doit marcher.
 2. **Demandez** sur le canal *#AAPS* de [Discord](https://discord.gg/4fQUWHZ4Mw), ou dans un des autres [canaux de la communauté](../GettingHelp/WhereCanIGetHelp.md).

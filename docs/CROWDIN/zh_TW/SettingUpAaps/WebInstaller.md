@@ -1,71 +1,71 @@
 (web-installer)=
 
-# AAPS web installer
+# AAPS 網頁安裝工具
 
-Install the **AAPS** APK you built onto your Android phone, straight from this browser, over a USB cable. No command line, nothing to download. Installed this way (the ADB way), apps are **exempt from Google's Android developer verification**.
+透過 USB 傳輸線，直接在這個瀏覽器中，將您建置的 **AAPS** APK 安裝到 Android 手機。不需要使用命令列，也不需要下載任何檔案。以這種方式（ADB 方式）安裝的應用程式，**不受 Google 的 Android 開發人員驗證限制**。
 
 ```{admonition} This page runs entirely in your browser
 :class: tip
 
-Your APK file and your phone's data never leave this computer: the page cannot send data anywhere (its *Content-Security-Policy* blocks all uploads; you can check this in the browser's developer tools, Network tab). Only ever use this page at its official address, linked from [Transferring and installing AAPS](#android-developer-verification-web) in the **AAPS** documentation.
+您的 APK 檔案和手機資料絕不會離開這台電腦：此網頁無法將資料傳送到任何地方（其 *Content-Security-Policy* 會封鎖所有上傳；您可以在瀏覽器開發人員工具的「網路」分頁中確認）。請務必只在官方網址使用此網頁。官方網址連結位於 **AAPS** 文件的[傳輸並安裝 AAPS](#android-developer-verification-web) 頁面。
 ```
 
 <noscript>
 
-**JavaScript is disabled.** This page needs JavaScript to talk to your phone.
+**JavaScript 已停用。** 此網頁需要使用 JavaScript 才能與手機通訊。
 
 </noscript>
 
 <div id="aapsi-unsupported" class="aapsi-box aapsi-error" hidden>
 
-**This browser cannot talk to USB devices.** Please open this page in **Google Chrome**, **Microsoft Edge** or **Opera**, on a computer or an Android device. Firefox, Safari and all iPhone browsers do not support WebUSB.
+**此瀏覽器無法與 USB 裝置通訊。** 請在電腦或 Android 裝置上使用 **Google Chrome**、**Microsoft Edge** 或 **Opera** 開啟此網頁。 Firefox、Safari 和所有 iPhone 瀏覽器都不支援 WebUSB。
 
 </div>
 
 (web-installer-prepare)=
 
-## Step 1 – Before you start
+## 步驟 1 – 開始之前
 
-- **Enable USB debugging** on the phone (one-time setup):
-  - Go to **Settings** > **About phone** and tap **Build number** seven times, until the phone confirms you are a developer.
-  - Back in the main **Settings**, open **Developer options** and switch on **USB debugging**.
-- Connect the phone with a **data-capable USB cable** (some charging cables cannot transfer data: if the phone is never detected, try another cable).
-- **Close Android Studio** and any other program that uses ADB: only one program can talk to the phone at a time.
-- Have your **AAPS APK file** ready on this computer (for the browser build, download it from your Google Drive first).
+- **在手機上啟用 USB 偵錯**（只需設定一次）：
+  - 前往 **設定** > **關於手機**，然後連續點選 **版本號碼** 七次，直到手機確認您已成為開發人員。
+  - 回到主要的**設定**頁面，開啟**開發人員選項**，然後啟用**USB 偵錯**。
+- 使用**可傳輸資料的 USB 傳輸線**連接手機（有些充電線無法傳輸資料；如果手機一直未被偵測到，請改用其他傳輸線）。
+- **關閉 Android Studio** 和其他任何會使用 ADB 的程式：同一時間只能有一個程式與手機通訊。
+- 請先在這台電腦上備妥**AAPS APK 檔案**（如果是透過瀏覽器建置，請先從 Google 雲端硬碟下載）。
 
-No computer? This page also works from Chrome on *another Android phone*, connected with a USB-C to USB-C cable.
+沒有電腦嗎？您也可以在*另一支 Android 手機*上使用 Chrome 開啟此頁面，並以 USB-C 對 USB-C 傳輸線連接兩支手機。
 
 (web-installer-connect)=
 
-## Step 2 – Connect your phone
+## 步驟 2 – 連接手機
 
-Click the button, then pick your phone in the list the browser shows.
+按一下按鈕，然後從瀏覽器顯示的清單中選擇您的手機。
 
-<button class="aapsi-btn" type="button" id="aapsi-connect-btn">Connect phone</button> <button class="aapsi-btn aapsi-secondary" type="button" id="aapsi-disconnect-btn" hidden>Disconnect</button>
+<button class="aapsi-btn" type="button" id="aapsi-connect-btn">連接手機</button> <button class="aapsi-btn aapsi-secondary" type="button" id="aapsi-disconnect-btn" hidden>中斷連線</button>
 
 <span class="aapsi-status" id="aapsi-connect-status"></span>
 
 <div class="aapsi-box aapsi-warn" id="aapsi-authorize-hint" hidden>
 
-**Look at your phone now:** tap **Allow** on the "Allow USB debugging?" message, and tick *"Always allow from this computer"*. Don't see it? Unlock the phone's screen, or unplug and replug the cable.
+**現在請查看手機：**在「允許 USB 偵錯嗎？」訊息中點選 **允許**，並勾選 *「一律允許這台電腦」*。沒有看到訊息嗎？解鎖手機螢幕，或拔下傳輸線再重新插上。
 
 </div>
 
 <div id="aapsi-connect-help" hidden>
 
-```{admonition} The phone doesn't show up, or connecting fails?
+```{admonition} 手機沒有出現在清單中，或是連線失敗？
 :class: note
 
-- Check that **USB debugging** is on ([step 1](#web-installer-prepare)) and the cable is a data cable.
-- Close **Android Studio**, or run `adb kill-server` if you have ADB installed, then unplug and replug the phone.
-- On Windows, an OEM USB driver installed for your phone can also hold the connection: unplug other Android tools and try again.
+- 確認已啟用 **USB 偵錯**（[步驟 1](#web-installer-prepare)），且使用的是可傳輸資料的傳輸線。
+- 關閉 **Android Studio**；如果已安裝 ADB，也可以執行 `adb kill-server`，然後拔下手機的傳輸線再重新插上。
+- 在 Windows 上，為手機安裝的 OEM USB 驅動程式也可能占用連線：拔除其他 Android 工具後再試一次。
 ```
 
 </div>
 
 (web-installer-file)=
 
-## Step 3 – Choose your AAPS APK file
+## 步驟 3 – 選擇 AAPS APK 檔案
 
 <input type="file" id="aapsi-apk-input" accept=".apk" disabled />
 
@@ -73,11 +73,11 @@ Click the button, then pick your phone in the list the browser shows.
 
 (web-installer-install)=
 
-## Step 4 – Install
+## 步驟 4 – 安裝
 
-Updating an existing **AAPS**? All its settings and history are kept, exactly like `adb install -r`.
+要更新現有的 **AAPS** 嗎？所有設定和紀錄都會保留，效果與執行 `adb install -r` 完全相同。
 
-<button class="aapsi-btn" type="button" id="aapsi-install-btn" disabled>Install on phone</button>
+<button class="aapsi-btn" type="button" id="aapsi-install-btn" disabled>在手機上安裝</button>
 
 <div id="aapsi-progress-wrap" hidden>
 
@@ -88,7 +88,7 @@ Updating an existing **AAPS**? All its settings and history are kept, exactly li
 
 <div class="aapsi-box aapsi-success" id="aapsi-result-success" hidden>
 
-**AAPS is installed.** You can unplug the phone. If this was your first installation, continue with the [Setup Wizard](SetupWizard.md).
+**AAPS 已安裝。**您可以拔除手機。如果這是您第一次安裝，請繼續執行[設定嚮導](SetupWizard.md)。
 
 </div>
 
@@ -96,7 +96,7 @@ Updating an existing **AAPS**? All its settings and history are kept, exactly li
 
 <span id="aapsi-error-message"></span>
 
-Technical details:
+技術細節：
 
 <pre id="aapsi-error-details"></pre>
 
@@ -104,37 +104,37 @@ Technical details:
 
 ----
 
-Part of the **AAPS** documentation. Built on the open-source [Tango (ya-webadb)](https://github.com/yume-chan/ya-webadb) libraries (MIT license). Page source and build instructions: [openaps/AndroidAPSdocs](https://github.com/openaps/AndroidAPSdocs).
+屬於 **AAPS** 說明文件的一部分。使用開放原始碼的 [Tango (ya-webadb)](https://github.com/yume-chan/ya-webadb) 程式庫建置（MIT 授權條款）。頁面原始碼與建置說明：[openaps/AndroidAPSdocs](https://github.com/openaps/AndroidAPSdocs)。
 
-**AAPS** is a DIY system, not a commercial product: you build it, you install it, you are responsible for it. This page is provided by the community without any warranty.
+**AAPS** 是 DIY 系統，並非商業產品：由您自行建置、安裝並負責。此頁面由社群提供，不附帶任何保證。
 
 <div id="aapsi-msgs" hidden>
 
-- <span data-aapsi-msg="noDetails">(no further details)</span>
-- <span data-aapsi-msg="errSignature">This APK was built with a different signing key than the AAPS already installed on the phone. Use the same keystore as before, or export your AAPS settings and uninstall the old AAPS first (uninstalling loses all its settings and history: export first!).</span>
-- <span data-aapsi-msg="errDowngrade">The phone already has a newer version of this app. To go back to an older version, export your settings and uninstall the current app first.</span>
-- <span data-aapsi-msg="errStorage">There is not enough free storage on the phone. Free up some space and try again.</span>
-- <span data-aapsi-msg="errInvalidApk">The phone does not recognize this file as a valid APK. Check that you selected the right file and that the download completed.</span>
-- <span data-aapsi-msg="errOldSdk">The Android version on this phone is too old for this APK.</span>
-- <span data-aapsi-msg="errCanceled">The installation was declined on the phone. Watch the phone's screen and allow the installation when asked.</span>
-- <span data-aapsi-msg="errBusy">Another program is using the phone's ADB connection. Close Android Studio (or run "adb kill-server"), unplug and replug the cable, then try again.</span>
-- <span data-aapsi-msg="errLost">The connection to the phone was lost. Check the cable, then connect again.</span>
-- <span data-aapsi-msg="errGeneric">The installation failed. See the technical details below, and ask for help on the AAPS community channels if needed.</span>
-- <span data-aapsi-msg="errDisconnectedDuringInstall">The phone was disconnected during the installation. Reconnect it and try again: nothing is broken.</span>
-- <span data-aapsi-msg="waitingPick">Waiting for you to pick a device…</span>
-- <span data-aapsi-msg="noDevice">No device selected. Is USB debugging enabled, and is the cable a data cable?</span>
-- <span data-aapsi-msg="connecting">Connecting…</span>
-- <span data-aapsi-msg="phoneDisconnected">The phone was disconnected.</span>
-- <span data-aapsi-msg="androidDevice">Android device</span>
-- <span data-aapsi-msg="connectedTo">Connected to {name}.</span>
-- <span data-aapsi-msg="couldNotConnect">Could not connect.</span>
-- <span data-aapsi-msg="disconnected">Disconnected.</span>
-- <span data-aapsi-msg="notApk">"{file}" is not an .apk file. Please select the AAPS APK you built.</span>
-- <span data-aapsi-msg="emptyFile">This file is empty. Please check the download and select it again.</span>
-- <span data-aapsi-msg="notRealApk">"{file}" does not look like a real APK file. Did you select the right file?</span>
-- <span data-aapsi-msg="selected">Selected: {file} ({size})</span>
-- <span data-aapsi-msg="copying">Copying to phone… {done} of {total}</span>
-- <span data-aapsi-msg="installingOnPhone">Installing on the phone… (this can take a minute)</span>
+- <span data-aapsi-msg="noDetails">（沒有其他詳細資訊）</span>
+- <span data-aapsi-msg="errSignature">此 APK 使用的簽署金鑰與手機上已安裝的 AAPS 不同。請使用先前相同的金鑰庫，或先匯出 AAPS 設定，再解除安裝舊版 AAPS（解除安裝會清除所有設定和紀錄，請務必先匯出！）。</span>
+- <span data-aapsi-msg="errDowngrade">手機上已安裝較新版本的這個應用程式。若要回復至較舊版本，請先匯出設定並解除安裝目前的應用程式。</span>
+- <span data-aapsi-msg="errStorage">手機的可用儲存空間不足。請釋出一些空間後再試一次。</span>
+- <span data-aapsi-msg="errInvalidApk">手機無法辨識此檔案是有效的 APK。請確認選取的檔案正確，且已完成下載。</span>
+- <span data-aapsi-msg="errOldSdk">這支手機的 Android 版本太舊，無法使用此 APK。</span>
+- <span data-aapsi-msg="errCanceled">您已在手機上拒絕安裝。請查看手機螢幕，並在出現提示時允許安裝。</span>
+- <span data-aapsi-msg="errBusy">另一個程式正在使用手機的 ADB 連線。請關閉 Android Studio（或執行「adb kill-server」），拔下傳輸線再重新插上，然後再試一次。</span>
+- <span data-aapsi-msg="errLost">與手機的連線已中斷。請檢查傳輸線，然後重新連線。</span>
+- <span data-aapsi-msg="errGeneric">安裝失敗。請查看下方的技術細節，如有需要，請透過 AAPS 社群管道尋求協助。</span>
+- <span data-aapsi-msg="errDisconnectedDuringInstall">安裝期間手機已中斷連線。重新連線後再試一次即可，無須擔心。</span>
+- <span data-aapsi-msg="waitingPick">正在等待您選擇裝置…</span>
+- <span data-aapsi-msg="noDevice">尚未選擇裝置。是否已啟用 USB 偵錯？使用的傳輸線是否可傳輸資料？</span>
+- <span data-aapsi-msg="connecting">正在連線…</span>
+- <span data-aapsi-msg="phoneDisconnected">手機已中斷連線。</span>
+- <span data-aapsi-msg="androidDevice">Android 裝置</span>
+- <span data-aapsi-msg="connectedTo">已連線至 {name}。</span>
+- <span data-aapsi-msg="couldNotConnect">無法連線。</span>
+- <span data-aapsi-msg="disconnected">已中斷連線。</span>
+- <span data-aapsi-msg="notApk">「{file}」不是 .apk 檔案。請選擇您建置的 AAPS APK。</span>
+- <span data-aapsi-msg="emptyFile">此檔案是空的。請確認下載是否完整，然後重新選取檔案。</span>
+- <span data-aapsi-msg="notRealApk">「{file}」看起來不是有效的 APK 檔案。您選對檔案了嗎？</span>
+- <span data-aapsi-msg="selected">已選取：{file}（{size}）</span>
+- <span data-aapsi-msg="copying">正在複製到手機… {done} / {total}</span>
+- <span data-aapsi-msg="installingOnPhone">正在手機上安裝…（可能需要一分鐘）</span>
 - <span data-aapsi-msg="megabytes">{n} MB</span>
 
 </div>

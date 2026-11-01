@@ -1,16 +1,16 @@
-# Settings (Preferences)
+# Налаштування
 
-In **AAPS** v4 the preferences are found on the **Settings** screen. There are three routes to reach them — see [Making changes to your AAPS' configuration](../SettingUpAaps/ChangeAapsConfiguration.md) for details:
+В **AAPS** v4 параметри знаходяться на екрані **Налаштування**. Є три способи до них дістатися — подробиці див. на сторінці [Зміна конфігурації AAPS](../SettingUpAaps/ChangeAapsConfiguration.md):
 
-1. Tap the **Settings** (gear) icon in the top-right corner of the main screen: all settings, grouped into expandable sections.
-2. In **Configuration**, tap "**Settings**" underneath an active plugin: only that plugin's settings.
-3. Use the **search bar** on top of the main screen: just start typing part of the text you are looking for. This finds individual settings (even those not visible in the Settings screen), dialogs and documentation.
+1. Натисніть значок **Налаштування** (шестерня) у верхньому правому куті головного екрана: усі налаштування, згруповані в розділи, які можна розгорнути.
+2. У **Конфігурації** натисніть «**Налаштування**» під активним плагіном: лише налаштування цього плагіна.
+3. Скористайтеся **рядком пошуку** вгорі головного екрана: просто почніть вводити частину тексту, який шукаєте. Так можна знайти окремі налаштування (навіть ті, яких не видно на екрані Налаштування), діалоги та документацію.
 
-![Search results for "target"](../images/preferences/settings_search.png)
+![Результати пошуку для "target"](../images/preferences/settings_search.png)
 
-- **Sections** are opened and closed by tapping them. The sections you see depend on the plugins you have enabled and on [Simple mode](#preferences-simple-mode).
+- **Розділи** відкриваються й закриваються натисканням. Розділи, які ви бачите, залежать від увімкнених плагінів і від [простого режиму](#preferences-simple-mode).
 
-![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
+![Екран Налаштування з розгортуваними розділами](../images/v4/Configuration/settings_overview.png)
 
 ```{contents}
 :backlinks: entry
@@ -18,544 +18,549 @@ In **AAPS** v4 the preferences are found on the **Settings** screen. There are t
 ```
 
 (Preferences-general)=
-## General
+## Загальне
 
-![Settings > General](../images/preferences/settings_general.png)
+![Налаштування > Загальне](../images/preferences/settings_general.png)
 
-**Units**
+**Одиниці**
 
-- Set units to mmol/L or mg/dL depending on your preferences.
+- Виберіть одиниці ммоль/л або мг/дл, як вам зручніше.
 
-**Language**
+**Мова**
 
-- New option to use phone's default language (recommended).
+- By default **AAPS** follows the language of the phone (recommended).
 
-- In case you want **AAPS** in a different language than your standard phone language, you can choose from a broad variety.
+- If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
 
-- When you change the language, the texts of **AAPS** switch to the new language straight away. If some texts still show the old language, restart **AAPS**.
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- Коли ви змінюєте мову, тексти **AAPS** одразу переходять на нову мову. Якщо деякі тексти ще показуються старою мовою, перезапустіть **AAPS**.
+- On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
+- Це налаштування приховано в [простому режимі](#preferences-simple-mode).
 
-(preferences-simple-mode)= **Simple mode**
+(preferences-simple-mode)= **Простий режим**
 
-The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
+**Простий режим** увімкнено за замовчуванням, коли ви вперше встановлюєте **AAPS**. У **простому режимі** багато налаштувань приховано, а параметри замінено заздалегідь заданими значеннями. Вимкніть простий режим, коли освоїте інтерфейс і налаштування **AAPS**.
 
-**Insulin concentration support**
+**Підтримка концентрації інсуліну**
 
-- Enables support for different insulin concentrations (U50, U200, ...). Only enable this if you really use a concentration other than U100, and read the warnings carefully.
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- Вмикає підтримку різних концентрацій інсуліну (U50, U200, ...). Вмикайте це, лише якщо ви справді використовуєте концентрацію, відмінну від U100, і уважно прочитайте попередження.
+- Це налаштування приховано в [простому режимі](#preferences-simple-mode).
 
-**Keep screen on**
+**Не вимикати екран**
 
-- Forces Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+- Змушує Android постійно тримати екран увімкненим. Це корисно, наприклад, для презентацій. Але це сильно розряджає батарею. Тому рекомендується підключити телефон до зарядного кабелю.
 
-**Instance name**
+**Назва екземпляра**
 
-- The name of the person using this phone. It tells this **AAPS** instance apart in reports and synchronization, for example if two children with type 1 diabetes in your family use **AAPS**.
-- Used in the names of exported settings files.
-- Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
+- Ім'я людини, яка користується цим телефоном. Вона дозволяє відрізнити цей екземпляр **AAPS** у звітах і синхронізації, наприклад якщо у вашій сім'ї двоє дітей з діабетом 1 типу використовують **AAPS**.
+- Використовується в назвах файлів експортованих налаштувань.
+- Показується на [циферблаті Dual](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
-### Skin
+### Скін
 
-The skin selection from **AAPS** 3.x (Original, Low resolution, Large display...) no longer exists in **AAPS** 4. The new interface adapts to your screen automatically, and the color scheme can be changed in [Appearance](#preferences-appearance).
+Вибору скіна з **AAPS** 3.x (Original, Low resolution, Large display...) більше немає в **AAPS** 4. Новий інтерфейс автоматично підлаштовується під ваш екран, а колірну схему можна змінити в розділі [Вигляд](#preferences-appearance).
 
 (preferences-appearance)=
-## Appearance
+## Вигляд
 
-![Settings > Appearance](../images/preferences/settings_appearance.png)
+![Налаштування > Вигляд](../images/preferences/settings_appearance.png)
 
 (Preferences-range-for-visualization)=
-### Range for visualization
+### Діапазон для візуалізації
 
-Choose the high and low marks for the BG-graph on **AAPS** main screen and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dL or 3.9 - 10 mmol/L
+Виберіть верхню й нижню межі для графіка ГК на головному екрані **AAPS** і на розумному годиннику. Це лише візуалізація, а не цільовий діапазон для вашої ГК. Приклад: 70–180 мг/дл або 3,9–10 ммоль/л
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### Show notes in dialogs
+### Показувати примітки в діалогах
 
-Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
+Дає змогу додавати короткі текстові примітки до записів терапії (калькулятор болюса, вуглеводи, інсулін...)
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Це налаштування приховано в [простому режимі](#preferences-simple-mode).
 
-### App Color Scheme
+### Колірна схема застосунку
 
-Choose between the light theme, the dark theme, or following the phone's system setting.
+Виберіть світлу тему, темну тему або тему за системним налаштуванням телефону.
 
 (Preferences-protection)=
-## Protection
+## Захист
 
-![Settings > Protection](../images/preferences/settings_protection.png)
+![Налаштування > Захист](../images/preferences/settings_protection.png)
 
 (Preferences-master-password)=
-### Master password
+### Головний пароль
 
-Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
+Обов'язковий, щоб можна було [експортувати налаштування](../Maintenance/ExportImportSettings.md), бо з версії 2.7 вони шифруються.
 
-**Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
+**Біометричний захист може не працювати на телефонах OnePlus. Це відома проблема OnePlus на деяких телефонах.**
 
-![Set master password](../images/preferences/master_password_dialog.png)
+![Встановлення головного пароля](../images/preferences/master_password_dialog.png)
 
 (Preferences-settings-protection)=
-### Settings protection
+### Захист налаштувань
 
-- Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Settings related view.
+- Захистіть свої налаштування паролем або біометричною автентифікацією телефону (наприклад, якщо [дитина користується **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). Якщо ввімкнути цю функцію, вас проситимуть пройти автентифікацію щоразу, коли ви хочете відкрити будь-який екран, пов'язаний з налаштуваннями.
 
-- The management screens (**Profile**, **Insulin settings**, **Temp Target**, **QuickWizard**) then open **read-only**. You can still activate or use an entry, but adding, editing, cloning and deleting are hidden until you unlock your settings. See [Settings protection now also locks the management screens](#v4changes-read-only-management).
+- Екрани керування (**Профіль**, **Налаштування інсуліну**, **Тимчасова ціль**, **Швидкий майстер**) тоді відкриваються в режимі **лише читання**. Ви все одно можете активувати або використати запис, але додавання, редагування, клонування та видалення приховано, доки ви не розблокуєте налаштування. Див. [Захист налаштувань тепер блокує й екрани керування](#v4changes-read-only-management).
 
-- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md), and use a different one for editing the settings.
+- Власний пароль варто використовувати, якщо ви хочете застосовувати головний пароль лише для захисту [експортованих налаштувань](../Maintenance/ExportImportSettings.md), а для зміни налаштувань — інший пароль.
 
-- If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
+- Якщо ви використовуєте власний пароль, натисніть рядок «Пароль налаштувань», щоб задати пароль, як описано [вище](#Preferences-master-password).
 
-### Application protection
+### Захист застосунку
 
-If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**, and again when you come back to it after the [protection timeout](#Preferences-password-and-pin-retention).
+Якщо застосунок захищено, потрібно ввести пароль або використати біометричну автентифікацію телефону, щоб відкрити **AAPS**, і зробити це знову, коли ви повертаєтеся до нього після [тайм-ауту захисту](#Preferences-password-and-pin-retention).
 
-**AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
+**AAPS** одразу закриється, якщо ввести неправильний пароль, але й далі працюватиме у фоні, якщо раніше його вже успішно відкрили.
 
-### Bolus protection
+### Захист болюсу
 
-- Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
+- Захист болюсу може бути корисним, якщо **AAPS** користується маленька дитина, а ви [вводите болюс через SMS](../RemoteFeatures/SMSCommands.md).
 
-- **Bolus protection** can only be selected once **Settings protection** (Level 2) is set.
+- **Захист болюсу** можна вибрати лише тоді, коли задано **Захист налаштувань** (рівень 2).
 
-- In the example below, bolus protection uses the **Master password**: **AAPS** asks for it before opening a treatment dialog such as **Insulin**. With **Biometric**, if biometric authentication does not work, you can enter the master password instead.
+- У прикладі нижче захист болюсу використовує **Головний пароль**: **AAPS** запитує його перед відкриттям діалогу терапії, наприклад **Інсулін**. Якщо вибрано **Біометрія**, а біометрична автентифікація не працює, замість неї можна ввести головний пароль.
 
-![Authentication required prompt asking for the master password](../images/preferences/bolus_protection_prompt.png)
+![Запит «Потрібна автентифікація» з проханням ввести головний пароль](../images/preferences/bolus_protection_prompt.png)
 
 (Preferences-password-and-pin-retention)=
-### Password and PIN retention
+### Збереження пароля та PIN
 
-**Protection timeout** defines how long (in seconds) the settings or bolus functionalities remain unlocked after you successfully enter the password.
+**Тайм-аут захисту** визначає, як довго (у секундах) налаштування або функції болюсу залишаються розблокованими після успішного введення пароля.
 
-## Treatment safety
+## Безпека терапії
 
-![Settings > Safety](../images/preferences/settings_safety.png)
+![Налаштування > Безпека](../images/preferences/settings_safety.png)
 
 (preferences-patient-type)=
-### Patient age
+### Вік пацієнта
 
-- Safety limits are set based on the age you select in this setting.
-- If you start hitting these hard limits (like max bolus) it's time to move one step up.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal dot, for example).
-- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
+- Обмеження безпеки задаються залежно від віку, який ви виберете в цьому налаштуванні.
+- Якщо ви почали впиратися в ці жорсткі обмеження (наприклад, максимальний болюс), час перейти на крок вище.
+- Погана ідея вибирати вік, більший за справжній, бо це може призвести до передозування через введення неправильного значення в діалозі інсуліну (наприклад, якщо пропустити десяткову кому).
+- Якщо ви хочете знати точні значення цих жорстко заданих обмежень безпеки, перейдіть до функції алгоритму, яку ви використовуєте, на [цій сторінці](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 (Preferences-maximum-bolus)=
-### Maximum bolus
+### Максимальний болюс
 
-- Defines the maximum amount of bolus insulin, in insulin units, that **AAPS** is allowed to deliver at once.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose.
-- This restriction is also applied to the results of the bolus calculator.
+- Визначає найбільшу кількість болюсного інсуліну в одиницях інсуліну, яку **AAPS** може ввести за один раз.
+- Це налаштування є обмеженням безпеки. Воно не дає ввести дуже великий болюс через випадкове введення або помилку користувача.
+- Рекомендується задати тут розумне значення, яке приблизно відповідає найбільшій кількості болюсного інсуліну, яка вам може знадобитися на їжу або на корекційну дозу.
+- Це обмеження також застосовується до результатів калькулятора болюса.
 
-### Maximum carbs allowed
+### Максимально дозволені вуглеводи
 
-- Defines the maximum amount of carbs, in grams, that **AAPS** bolus calculator is allowed to dose for.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+- Визначає найбільшу кількість вуглеводів у грамах, на яку калькулятор болюса **AAPS** може розрахувати дозу.
+- Це налаштування є обмеженням безпеки. Воно не дає ввести дуже великий болюс через випадкове введення або помилку користувача.
+- Рекомендується задати тут розумне значення, яке приблизно відповідає найбільшій кількості вуглеводів, яка вам може знадобитися на один прийом їжі.
 
-## BG source
+## Джерело ГК
 
-The settings of your selected [BG source](#Config-Builder-bg-source) appear as their own section. For example with **xDrip+ BG**:
+Налаштування вибраного [джерела ГК](#Config-Builder-bg-source) показуються як окремий розділ. Наприклад, для **xDrip+ ГК**:
 
-![Settings > xDrip+ BG](../images/preferences/settings_xdrip.png)
+![Налаштування > xDrip+ ГК](../images/preferences/settings_xdrip.png)
 
-- **Upload BG data to NS**: let **AAPS** upload the received BG values to Nightscout. Only enable this if the CGM app itself is not already uploading them.
-- **Log sensor change**: create a sensor change therapy event automatically when the sensor is inserted.
+- **Вивантажувати дані ГК в NS**: **AAPS** вивантажує отримані значення ГК в Nightscout. Вмикайте це, лише якщо сам застосунок CGM ще не вивантажує їх.
+- **Записувати заміну сенсора**: автоматично створювати подію терапії «заміна сенсора», коли вставлено сенсор.
 
-## The main screen
+## Головний екран
 
-In **AAPS** 3.x these settings were grouped in an "Overview" section. In **AAPS** 4 they are configured directly from the main screen elements they belong to.
+В **AAPS** 3.x ці налаштування були зібрані в розділі «Огляд». В **AAPS** 4 їх налаштовують прямо з тих елементів головного екрана, до яких вони належать.
 
 (Preferences-buttons)=
-### QuickLaunch buttons
+### Кнопки швидкого запуску
 
-Define which action buttons are visible on the main screen: tap the small **gear** at the bottom center of the main screen ("Configure QuickLaunch") and **Add** the actions you want quick access to (treatments, CGM actions, careportal entries...).
+Визначте, які кнопки дій видно на головному екрані: натисніть маленьку **шестерню** внизу по центру головного екрана («Налаштувати швидкий запуск») і натисніть **Додати**, щоб додати дії, до яких ви хочете мати швидкий доступ (терапія, дії CGM, записи careportal...).
 
-![Configure QuickLaunch](../images/preferences/quicklaunch_config.png)
+![Налаштувати швидкий запуск](../images/preferences/quicklaunch_config.png)
 
 (Preferences-quick-wizard)=
 ### Швидкий майстер
 
-Create customized buttons for certain standard meals or snacks which will be displayed on the main screen. Useful for standard meals frequently eaten.
+Створіть власні кнопки для певних стандартних страв або перекусів. Вони показуватимуться на головному екрані. Корисно для стандартних страв, які ви часто їсте.
 
-For each button, you define the carbs and calculation method for the bolus. Then, you define during which time period the button will be visible on your main screen - just one button per period. The button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button. If different times are specified for the different meals you will always have the appropriate standard meal button on the main screen, depending on the time of day.
+Для кожної кнопки ви задаєте вуглеводи та спосіб розрахунку болюсу. Потім ви визначаєте, у який проміжок часу кнопку буде видно на головному екрані – лише одна кнопка на проміжок. Кнопку не буде видно поза заданим проміжком часу або якщо у вас достатньо IOB, щоб покрити вуглеводи, задані в кнопці Швидкого майстра. Якщо для різних страв задано різний час, на головному екрані завжди буде потрібна кнопка стандартної страви залежно від часу доби.
 
-To manage your Quick Wizard presets, type "QuickWizard" in the main screen search bar and open **QuickWizard - Manage quick wizard presets**.
+Щоб керувати шаблонами Швидкого майстра, введіть «Швидкий майстер» у рядку пошуку на головному екрані й відкрийте **Швидкий майстер - Керувати шаблонами швидкого майстра**.
 
-If you click the quick wizard button **AAPS** will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
+Якщо натиснути кнопку Швидкого майстра, **AAPS** розрахує й запропонує болюс на ці вуглеводи на основі ваших поточних коефіцієнтів (з урахуванням значення глюкози крові або активного інсуліну, якщо це налаштовано).
 
-The proposal has to be confirmed before insulin is delivered.
+Пропозицію потрібно підтвердити, перш ніж буде введено інсулін.
 
 (Preferences-default-temp-targets)=
-### Default temp targets
+### Типові тимчасові цілі
 
-[Temporary targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to change your blood glucose target for a certain time period. When setting a default TT, you can easily change your target for activity, eating soon etc.
+[Тимчасові цілі (TT)](../DailyLifeWithAaps/TempTargets.md) дозволяють змінити ціль глюкози крові на певний час. Коли задано типові TT, ви можете легко змінити ціль для активності, очікуваного прийому їжі тощо.
 
-Tap the **target range** on the main screen to open the **Temp Target** screen. Swipe through the preset cards (Eating Soon, Activity, Hypo) and change the target and the duration of each preset under **Preset Settings**. Preset values are:
+Натисніть **цільовий діапазон** на головному екрані, щоб відкрити екран **Тимчасова ціль**. Гортайте картки шаблонів (Очікуваний прийом їжі, Активність, Гіпо) і змінюйте ціль і тривалість кожного шаблону в розділі **Налаштування шаблонів**. Попередньо задані значення:
 
-* Eating soon: target 90 mg/dL / 5.0 mmol/L, duration 45 min
-* Activity: target 140 mg/dL / 7.8 mmol/L, duration 90 min
-* Hypo: target 160 mg/dL / 8.9 mmol/L, duration 60 min
+* Очікуваний прийом їжі: ціль 90 мг/дл / 5,0 ммоль/л, тривалість 45 хв
+* Активність: ціль 140 мг/дл / 7,8 ммоль/л, тривалість 90 хв
+* Гіпо: ціль 160 мг/дл / 8,9 ммоль/л, тривалість 60 хв
 
-![Temp Target presets](../images/preferences/temp_target_presets.png)
+![Шаблони тимчасових цілей](../images/preferences/temp_target_presets.png)
 
-Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
+Дізнайтеся тут, як [увімкнути тимчасові цілі](#TempTargets-where-can-i-select-a-temp-target).
 
-### Fill/Prime standard insulin amounts
+### Стандартні кількості інсуліну для заповнення/підготовки
 
-If you want to fill the tube or prime the cannula through **AAPS** you can do this with the **Prime/Fill** buttons in the expanded status panel of the main screen.
+Якщо ви хочете заповнити трубку або канюлю через **AAPS**, скористайтеся кнопками **Підготовка/Заповнення** на розгорнутій панелі статусу головного екрана.
 
-The default amounts of the three fill buttons can be defined in the **Prime/Fill** settings, depending on the length of your catheter. Type "prime" in the main screen search bar to open them.
+Типові кількості для трьох кнопок заповнення можна задати в налаштуваннях **Підготовка/Заповнення** залежно від довжини вашого катетера. Щоб відкрити їх, введіть «заповнення» в рядку пошуку на головному екрані.
 
-![Prime/Fill standard amounts](../images/preferences/settings_prime_fill.png)
+![Стандартні кількості для підготовки/заповнення](../images/preferences/settings_prime_fill.png)
 
 (Preferences-status-lights)=
-### Status lights
+### Покажчики статусу
 
-Status lights give a visual warning for:
+Покажчики статусу візуально попереджають про:
 
 - Вік сенсора
-- Insulin age (days reservoir is used)
-- Reservoir level (units)
+- Вік інсуліну (скільки днів використовується резервуар)
+- Рівень резервуара (одиниці)
 - Вік канюлі
-- Pump battery age
-- Pump battery level (%)
+- Вік батареї помпи
+- Рівень заряду батареї помпи (%)
 
-If the warning threshold is exceeded, values will be shown in yellow. If the critical threshold is exceeded, values will be shown in red.
+Якщо перевищено поріг попередження, значення показуються жовтим. Якщо перевищено критичний поріг, значення показуються червоним.
 
-To change the thresholds, expand the status panel on the main screen (chevron on the right of the status row) and tap the small **Settings** icon next to "Status":
+Щоб змінити пороги, розгорніть панель статусу на головному екрані (стрілка праворуч у рядку статусу) і натисніть маленький значок **Налаштування** біля «Статус»:
 
-![Status lights](../images/preferences/status_lights.png)
+![Покажчики статусу](../images/preferences/status_lights.png)
 
-Tap an item (**Cannula**, **Insulin**, **Sensor** or **Pump battery**) to open its warning and critical thresholds:
+Натисніть елемент (**Канюля**, **Інсулін**, **Сенсор** або **Батарея помпи**), щоб відкрити його поріг попередження та критичний поріг:
 
-![Status lights thresholds for the cannula](../images/preferences/status_lights_cannula.png)
+![Пороги покажчиків статусу для канюлі](../images/preferences/status_lights_cannula.png)
 
-The last option allows you to import those settings from Nightscout if defined there. See [Nightscout documentation](https://nightscout.github.io/nightscout/setup_variables/#age-pills) for more information.
+Остання опція дозволяє імпортувати ці налаштування з Nightscout, якщо вони там задані. Більше інформації – у [документації Nightscout](https://nightscout.github.io/nightscout/setup_variables/#age-pills).
 
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
-### Bolus wizard settings
+### Налаштування калькулятора болюса
 
-Type "bolus" in the main screen search bar to open the **Bolus wizard** settings:
+Введіть «болюс» у рядку пошуку на головному екрані, щоб відкрити налаштування **Калькулятор болюса**:
 
-![Bolus wizard settings](../images/preferences/settings_bolus_wizard.png)
+![Налаштування калькулятора болюса](../images/preferences/settings_bolus_wizard.png)
 
-**Bolus percentage** sets the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
+**Відсоток болюсу** задає [типовий відсоток](#AapsScreens-section-j) болюсу, який розраховує калькулятор болюса.
 
-Default is 100%: no correction. Even when setting a different value here, you can still change each time you use the bolus wizard. If this setting is 75 % and you had to bolus 10U, the bolus wizard will propose a meal bolus of only 7.5 units.
+За замовчуванням 100 %: без корекції. Навіть якщо ви задасте тут інше значення, ви все одно можете змінювати його щоразу, коли користуєтеся калькулятором болюса. Якщо це налаштування 75 % і вам потрібен болюс 10 Од, калькулятор болюса запропонує болюс на їжу лише 7,5 Од.
 
-When using [SMB](#objectives-objective9), many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (Unattended Meal Detection) do the rest. Using a value lower than 100% here can be useful:
-* for people with slow digestion: sending all the bolus upfront can cause hypo because the insulin action is faster than the digestion.
-* to leave more room to **AAPS** to deal by itself with **BG rise**. In both cases, **AAPS** will compensate for the missing part of the bolus with SMBs, if/when deemed adequate.
+Коли використовують [SMB](#objectives-objective9), багато людей вводять болюс на їжу не на 100 % потрібного інсуліну, а лише на частину (наприклад, 75 %), а решту роблять SMB з UAM (Unattended Meal Detection, виявлення неоголошених прийомів їжі). Значення менше 100 % тут може бути корисним:
+* для людей з повільним травленням: якщо ввести весь болюс одразу, це може спричинити гіпо, бо інсулін діє швидше, ніж перетравлюється їжа.
+* щоб залишити **AAPS** більше простору самостійно справлятися з **підвищенням ГК**. В обох випадках **AAPS** компенсує відсутню частину болюсу за допомогою SMB, якщо і коли вважатиме це доцільним.
 
-**Use bolus advisor**
+**Використовувати помічник болюсу**
 
-When enabled, if you use the bolus wizard while you are in hyperglycemia, you will get a warning, prompting you if you wish to pre-bolus and eat later, when your **BG** gets back in range.
+Якщо це ввімкнено і ви користуєтеся калькулятором болюса під час гіперглікемії, ви отримаєте попередження з пропозицією ввести болюс заздалегідь і поїсти пізніше, коли ваша **ГК** повернеться в діапазон.
 
 (Preferences-advanced-settings-overview)=
-### Superbolus
+### Суперболюс
 
-The Superbolus option of **AAPS** 3.x is not available as a setting in **AAPS** 4.
+Опція Суперболюс з **AAPS** 3.x недоступна як налаштування в **AAPS** 4.
 
-## Loop
+## Петля
 
-See [AAPS screens > The main screen > Loop status](#AapsScreens-loop-status) to change loop mode now.
+Щоб змінити режим петлі тепер, див. [Екрани AAPS > Головний екран > Статус петлі](#AapsScreens-loop-status).
 
 (Preferences-minimal-request-change)=
-### Open mode minimum change
+### Мінімальна зміна в режимі відкритої петлі
 
-When using **Open loop**, you will receive notifications every time **AAPS** recommends adjusting the basal rate. To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the "**Open mode minimum change**" setting. This defines the relative change required to trigger a notification.
+Коли ви використовуєте **Відкриту петлю**, ви отримуватимете сповіщення щоразу, коли **AAPS** рекомендує змінити базальну швидкість. Щоб зменшити кількість сповіщень, можна використати [ширший цільовий діапазон ГК](#profile-glucose-targets) або збільшити відсоток у налаштуванні «**Мінімальна зміна в режимі відкритої петлі**». Це значення задає відносну зміну, потрібну для сповіщення.
 
-![Settings > Loop](../images/preferences/settings_loop.png)
+![Налаштування > Петля](../images/preferences/settings_loop.png)
 
-## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
+## Advanced Meal Assist (AMA) або Super Micro Bolus (SMB)
 
-Depending on your settings in [Configuration > APS](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
+Залежно від налаштувань у [Конфігурація > APS](../SettingUpAaps/ConfigBuilder.md) можна вибрати один із двох алгоритмів:
 
-- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) – стан алгоритму у 2017 році
+- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) – найновіший алгоритм, рекомендований для початківців
 
-As of [**AAPS** version 3.3](#version3300), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved as part of OpenAPS SMB.
+Починаючи з [**AAPS** версії 3.3](#version3300), функцію [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) перенесено в OpenAPS SMB.
 
 ### OpenAPS AMA
 
-All the settings for OpenAPS AMA are described in the dedicated section in [Key AAPS Features > Advanced Meal Assist (AMA)](#Open-APS-features-advanced-meal-assist-ama).
+Усі налаштування OpenAPS AMA описано в окремому розділі [Основні функції AAPS > Advanced Meal Assist (AMA)](#Open-APS-features-advanced-meal-assist-ama).
 
 (Preferences-openaps-smb-settings)=
 ### OpenAPS SMB
 
-All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
+Усі налаштування OpenAPS SMB описано в окремому розділі [Основні функції AAPS > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-The list of settings you see depends on your progress in the [Objectives](../SettingUpAaps/CompletingTheObjectives.md) and on [Simple mode](#preferences-simple-mode). On a new installation only **Use dynamic sensitivity** is shown. Once the objectives are completed, the section looks like this:
+Список налаштувань, які ви бачите, залежить від вашого прогресу в [Завданнях](../SettingUpAaps/CompletingTheObjectives.md) і від [простого режиму](#preferences-simple-mode). Після нової інсталяції показано лише **Використовувати динамічну чутливість**. Коли завдання виконано, розділ виглядає так:
 
-![Settings > OpenAPS SMB, first part](../images/preferences/settings_openaps_smb_1.png)
+![Налаштування > OpenAPS SMB, перша частина](../images/preferences/settings_openaps_smb_1.png)
 
-![Settings > OpenAPS SMB, SMB options](../images/preferences/settings_openaps_smb_2.png)
+![Налаштування > OpenAPS SMB, параметри SMB](../images/preferences/settings_openaps_smb_2.png)
 
-![Settings > OpenAPS SMB, UAM and carbs required](../images/preferences/settings_openaps_smb_3.png)
+![Налаштування > OpenAPS SMB, UAM і потрібні вуглеводи](../images/preferences/settings_openaps_smb_3.png)
 
-**Advanced Settings** at the bottom of the section holds values that you normally do not have to change:
+**Додаткові налаштування** внизу розділу містять значення, які зазвичай не потрібно змінювати:
 
-![Settings > OpenAPS SMB > Advanced Settings](../images/preferences/settings_openaps_smb_advanced.png)
+![Налаштування > OpenAPS SMB > Додаткові налаштування](../images/preferences/settings_openaps_smb_advanced.png)
 
-![Settings > OpenAPS SMB > Advanced Settings, continued](../images/preferences/settings_openaps_smb_advanced_2.png)
+![Налаштування > OpenAPS SMB > Додаткові налаштування, продовження](../images/preferences/settings_openaps_smb_advanced_2.png)
 
-## Absorption settings
+## Налаштування засвоєння
 
-![Settings > Absorption settings](../images/preferences/settings_absorption.png)
+![Налаштування > Налаштування засвоєння](../images/preferences/settings_absorption.png)
 
 (Preferences-min_5m_carbimpact)=
-### SMB min 5m carbs impact (min_5m_carbimpact)
+### Мін. вплив вуглеводів за 5 хв для SMB (min_5m_carbimpact)
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Це налаштування приховано в [простому режимі](#preferences-simple-mode).
 
-The algorithm uses BGI (blood glucose impact) to determine when [carbs are absorbed](../DailyLifeWithAaps/CobCalculation.md).
+Алгоритм використовує BGI (вплив на глюкозу крові), щоб визначити, коли [вуглеводи засвоюються](../DailyLifeWithAaps/CobCalculation.md).
 
-At times when carb absorption can’t be dynamically worked out based on your blood's reactions, **AAPS** inserts a default decay to your carbs. Basically, it is a failsafe. This value is only used during gaps in **CGM** readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause **AAPS** to decay COB.
+Коли засвоєння вуглеводів не можна динамічно визначити за реакцією вашої крові, **AAPS** застосовує до вуглеводів типове згасання. По суті, це захисний механізм. Це значення використовується лише під час пропусків у показах **CGM** або коли фізична активність «з'їдає» все підвищення глюкози крові, через яке **AAPS** інакше зменшував би COB.
 
-To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. Whenever there is a positive deviation from the expected behavior, some carbs are absorbed/decayed. Big change=many carbs etc.
+Простіше кажучи: алгоритм «знає», як *має* поводитися ваша ГК під дією поточної дози інсуліну тощо. Щоразу, коли є позитивне відхилення від очікуваної поведінки, частина вуглеводів вважається засвоєною. Велика зміна = багато вуглеводів тощо.
 
-The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For the full parameter reference see [OpenAPS's preferences and safety settings documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
+min_5m_carbimpact задає типовий вплив засвоєння вуглеводів за 5 хвилин. Повний опис параметра див. у [документації OpenAPS про налаштування та параметри безпеки](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
-Standard value for AMA is 3, for SMB it's 8.
+Стандартне значення для AMA – 3, для SMB – 8.
 
-The COB graph on the main screen indicates when min_5m_carbimpact is being used by putting orange dots along the top of the COB curve.
+Графік COB на головному екрані показує, коли використовується min_5m_carbimpact: уздовж верхнього краю кривої COB з'являються помаранчеві точки.
 
-![COB graph](../images/main/cob_graph_min_5m_carbimpact.png)
+![Графік COB](../images/main/cob_graph_min_5m_carbimpact.png)
 
-### Absorption cutoff
+### Межа засвоєння
 
-Time at which any meal is considered absorbed; remaining carbs will be cut off. If you often eat high fat or protein meals you will need to increase your meal absorption time.
+Час, після якого будь-яка їжа вважається засвоєною; решта вуглеводів відкидається. Якщо ви часто їсте страви з великою кількістю жиру або білка, вам потрібно збільшити час засвоєння їжі.
 
-### Advanced settings - autosens ratio
+### Додаткові налаштування – коефіцієнт autosens
 
-![Absorption advanced settings](../images/preferences/settings_absorption_advanced.png)
+![Додаткові налаштування засвоєння](../images/preferences/settings_absorption_advanced.png)
 
-- Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
-- Normally standard values (max. 1.2 and min. 0.7) should not be changed.
+- Задайте мінімальний і максимальний коефіцієнт [autosens](#Open-APS-features-autosens).
+- Зазвичай стандартні значення (макс. 1,2 і мін. 0,7) не слід змінювати.
 
-## Pump
+## Помпа
 
-![Settings > Pump](../images/preferences/settings_pump.png)
+![Налаштування > Помпа](../images/preferences/settings_pump.png)
 
 ### BT Watchdog
 
-Activate BT watchdog if necessary (e.g. for Dana pumps). It switches off Bluetooth for one second if no connection to the pump is possible. This may help on some phones where the Bluetooth stack freezes.
+За потреби увімкніть BT Watchdog (наприклад, для помп Dana). Він вимикає Bluetooth на одну секунду, якщо підключитися до помпи неможливо. Це може допомогти на деяких телефонах, де стек Bluetooth зависає.
 
-## Pump settings
+## Налаштування помпи
 
-The options here will vary depending on which pump driver you have selected in [Configuration > Pump](#Config-Builder-pump). Pair and set up your pump according to the [pump-related instructions](../Getting-Started/CompatiblePumps.md).
+Параметри тут залежать від того, який драйвер помпи ви вибрали в [Конфігурація > Помпа](#Config-Builder-pump). Спаруйте й налаштуйте помпу згідно з [інструкціями для вашої помпи](../Getting-Started/CompatiblePumps.md).
 
-For example with the **Virtual Pump**, the section is called **Virtual pump settings**. You choose the **Pump type** the virtual pump imitates, and whether its status is uploaded to Nightscout:
+Наприклад, для **Віртуальної помпи** розділ називається **Налаштування віртуальної помпи**. Ви вибираєте **Тип помпи**, який імітує віртуальна помпа, і чи вивантажувати її статус у Nightscout:
 
-![Settings > Virtual pump settings](../images/preferences/settings_virtual_pump.png)
+![Налаштування > Налаштування віртуальної помпи](../images/preferences/settings_virtual_pump.png)
 
 ## Tidepool
 
-More information on the dedicated [Tidepool](../SettingUpAaps/Tidepool.md) page.
+Більше інформації – на окремій сторінці [Tidepool](../SettingUpAaps/Tidepool.md).
 
 (Preferences-nsclient)=
-## NSClient
+## NSClientV3
 
-![Settings > NSClientV3](../images/preferences/settings_nsclient.png)
+![Налаштування > NSClientV3](../images/preferences/settings_nsclient.png)
 
-The NSClient plugin (shown as **NSClientV3** in the configuration menu) synchronizes your data with Nightscout. It uses the Nightscout API v3.
+Плагін NSClient (у меню конфігурації він називається **NSClientV3**) синхронізує ваші дані з Nightscout. Він використовує Nightscout API v3.
 
 ```{admonition} Data uploaders
 :class: warning
 
-When using NSClientV3, all uploaders must use the Nightscout API v3. If another uploader (for example your CGM app) is not API v3 compliant, **let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
+Якщо ви використовуєте NSClientV3, усі вивантажувачі мають використовувати Nightscout API v3. Якщо інший вивантажувач (наприклад, ваш застосунок CGM) не підтримує API v3, **дозвольте AAPS вивантажувати всі дані** (ГК, записи терапії, ...) в Nightscout і вимкніть той вивантажувач.
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplatform.dom>).
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **Nightscout access token** (not your API Secret!). On **AAPSClient** you can scan the main phone's QR code instead, which sets up a token of the client's own. A client paired with the PIN gets its own token from the main phone after pairing. See [The client's own Nightscout token](#client-master-control-own-token).
-- This enables data to be read and written between both the Nightscout website and **AAPS**.
-- Double check for typos here if you are stuck in Objective 1.
-- Leave "Use websockets" enabled (recommended).
+- Задайте свою *URL Nightscout* (наприклад, <https://yoursitename.yourplatform.dom>).
+- **Переконайтеся, що URL-адреса НЕ закінчується на /api/v1/.**
+- У Nightscout створіть *[токен адміністратора (Admin token)](https://nightscout.github.io/nightscout/security/#create-a-token)* (для API V3 потрібен [Nightscout 15](https://nightscout.github.io/update/update/)) і введіть його в **Токен доступу Nightscout** (не ваш API Secret!). В **AAPSClient** замість цього можна відсканувати QR-код основного телефону. Так клієнт отримає власний токен. Клієнт, спарений за допомогою PIN, отримує власний токен від основного телефону після спарювання. Див. [Власний токен Nightscout клієнта](#client-master-control-own-token).
+- Це дозволяє читати й записувати дані між вебсайтом Nightscout і **AAPS**.
+- Якщо ви застрягли на Завданні 1, ще раз перевірте, чи немає тут помилок.
+- Залиште «Використовувати websockets» увімкненим (рекомендовано).
 
 (Preferences-nsclient-synchronization)=
-### Synchronization
+### Синхронізація
 
-![Synchronization options](../images/preferences/settings_nsclient_sync.png)
+![Параметри синхронізації](../images/preferences/settings_nsclient_sync.png)
 
-Synchronization choices will depend on the way you will want to use **AAPS**.
+Вибір синхронізації залежить від того, як ви хочете використовувати **AAPS**.
 
-You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
+Ви можете вибрати, які дані [вивантажувати в Nightscout і завантажувати з нього](#Nightscout-aaps-settings).
 
-While client control is on (always in Simple Mode), these settings are hidden: **AAPS** is then in [hardened mode](#client-master-control-hardened-mode), takes no changes made directly in Nightscout and uploads all its data.
+Поки керування з клієнтів увімкнено (у простому режимі — завжди), ці налаштування приховано: **AAPS** тоді працює в [захищеному режимі](#client-master-control-hardened-mode), не приймає змін, зроблених прямо в Nightscout, і вивантажує всі свої дані.
 
-### Alarm options
+### Параметри сповіщень
 
-![Alarm options](../images/preferences/settings_nsclient_alarms.png)
+![Параметри сповіщень](../images/preferences/settings_nsclient_alarms.png)
 
-- Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
-- For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
-- They will only work while you have a connection to Nightscout and are intended for parent/caregivers.
-- If you have the **CGM** source on your phone (i.e. xDrip or BYODA) then use those alarms instead of Nightscout Alarms.
-- NS announcements will echo Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) in the **AAPS** notifications.
-- You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
+- Параметри сповіщень дозволяють вибрати, які сповіщення Nightscout використовувати в застосунку. **AAPS** подаватиме сигнал, коли спрацьовує сповіщення Nightscout.
+- Щоб сповіщення звучали, потрібно задати значення сповіщень Urgent High, High, Low і Urgent Low у [змінних Nightscout](https://nightscout.github.io/nightscout/setup_variables/#alarms).
+- Вони працюють лише тоді, коли є підключення до Nightscout, і призначені для батьків/доглядачів.
+- Якщо джерело **CGM** є на вашому телефоні (наприклад, xDrip або BYODA), використовуйте його сповіщення замість сповіщень Nightscout.
+- Оголошення NS повторюють [оголошення](https://nightscout.github.io/nightscout/discover/#announcement) Nightscout у сповіщеннях **AAPS**.
+- Ви можете змінити поріг сповіщень про застарілі дані та термінових сповіщень про застарілі дані, коли з Nightscout певний час не надходять дані.
 
-### Remote control
+### Віддалене керування
 
-The switch "**Allow client control**" is no longer in these settings: it is at the top of **Manage → Authorized clients**, where the paired clients are managed. See the dedicated [Client / Master control](../RemoteFeatures/ClientMasterControl.md) page, including [hardened mode](#client-master-control-hardened-mode), which this switch turns on.
+Перемикача «**Дозволити керування з клієнтів**» більше немає в цих налаштуваннях: він угорі екрана **Керувати → Авторизовані клієнти**, де керують спареними клієнтами. Див. окрему сторінку [Керування «основний телефон ↔ клієнт»](../RemoteFeatures/ClientMasterControl.md), зокрема про [захищений режим](#client-master-control-hardened-mode), який вмикає цей перемикач.
 
-### Connection settings
+### Налаштування підключення
 
-![NSClient connection settings](../images/preferences/settings_nsclient_connection.png)
+![Налаштування підключення NSClient](../images/preferences/settings_nsclient_connection.png)
 
-- Connection settings define when Nightscout connection will be enabled.
-- Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
-- If you want to use only a specific Wi-Fi network you can enter its Wi-Fi SSID.
-- Multiple SSIDs can be separated by semicolon.
-- To delete all SSIDs enter a blank space in the field.
+- Налаштування підключення визначають, коли буде ввімкнено з'єднання з Nightscout.
+- Обмежте вивантаження в Nightscout лише мережею Wi-Fi або навіть певними SSID Wi-Fi.
+- Якщо ви хочете використовувати лише певну мережу Wi-Fi, введіть її SSID.
+- Кілька SSID можна розділити крапкою з комою.
+- Щоб видалити всі SSID, введіть у поле пробіл.
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClient)
+### Advanced settings (NSClientV3)
 
-![NSClient advanced settings](../images/preferences/settings_nsclient_advanced.png)
+![Додаткові налаштування NSClient](../images/preferences/settings_nsclient_advanced.png)
 
-Options in advanced settings are self-explanatory.
+Параметри в додаткових налаштуваннях зрозумілі без пояснень.
 
-## SMS Communicator
+## SMS Комунікатор
 
-More information on the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
+Більше інформації – на окремій сторінці [SMS-команди](../RemoteFeatures/SMSCommands.md).
 
 (preferences-wear)=
 ## Wear
 
-This section is shown when the **Wear** plugin is enabled in [Configuration > Communication](#Config-Builder-wear). More information on the dedicated [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md) and [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md) pages.
+Цей розділ показується, коли плагін **Wear** увімкнено в [Конфігурація > Звʼязок](#Config-Builder-wear). Більше інформації – на окремих сторінках [Налаштування AAPS на годиннику з Wear OS](../WearOS/WearOsSmartwatch.md) і [Керування AAPS за допомогою розумного годинника з Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
 
-![Settings > Wear](../images/preferences/settings_wear.png)
+![Налаштування > Wear](../images/preferences/settings_wear.png)
 
-- **Wear control**: allow treatments and other actions to be sent from the watch. Without it, the watch only displays data: the phone refuses any command from the watch, and tapping a complication that would open a control screen opens the **AAPS** menu on the watch instead.
+- **Керування з годинника**: дозволяє надсилати з годинника записи терапії та інші дії. Без нього годинник лише показує дані: телефон відхиляє будь-яку команду з годинника, а натискання віджета, який мав би відкрити екран керування, натомість відкриває меню **AAPS** на годиннику.
 
-**Wear Wizard Settings** defines which calculations are included in the result of the bolus wizard on the watch. On the watch you only enter the carbs; these switches replace the choices you would make in the bolus wizard on the phone:
+**Налаштування калькулятора Wear** визначають, які розрахунки входять у результат калькулятора болюса на годиннику. На годиннику ви вводите лише вуглеводи. Ці перемикачі замінюють вибір, який ви зробили б у калькуляторі болюса на телефоні:
 
-- **Include BG in wizard**: add a correction for the difference between your current glucose and your target.
-- **Include temp target in wizard**: use the running temp target instead of the profile target for this correction.
-- **Include trend in wizard**: take the current glucose trend into account.
-- **Include COB in wizard**: add insulin for the carbs that are still on board.
-- **Include IOB in wizard**: subtract the insulin that is still on board.
+- **Враховувати ГК у калькуляторі**: додати корекцію на різницю між поточною глюкозою та вашою ціллю.
+- **Враховувати тимчасову ціль у калькуляторі**: для цієї корекції використовувати активну тимчасову ціль замість цілі профілю.
+- **Враховувати тренд у калькуляторі**: враховувати поточний тренд глюкози.
+- **Враховувати COB у калькуляторі**: додати інсулін на вуглеводи, які ще активні.
+- **Враховувати IOB у калькуляторі**: відняти інсулін, який ще активний.
 
-![Settings > Wear > Wear Wizard Settings](../images/preferences/settings_wear_wear_wizard.png)
+![Налаштування > Wear > Налаштування калькулятора Wear](../images/preferences/settings_wear_wear_wizard.png)
 
-**Custom Watchface Settings** contains **Authorize custom watchfaces**. A custom watchface file can include values for some watch settings. When this switch is on, loading such a watchface is allowed to change those settings on the watch; when it is off, the watchface is loaded but the settings stay as they are:
+**Налаштування власного циферблата** містять **Дозволити власні циферблати**. Файл власного циферблата може містити значення деяких налаштувань годинника. Коли цей перемикач увімкнено, завантаження такого циферблата може змінити ці налаштування на годиннику. Коли він вимкнений, циферблат завантажується, але налаштування не змінюються:
 
-![Settings > Wear > Custom Watchface Settings](../images/preferences/settings_wear_custom_watchface.png)
+![Налаштування > Wear > Налаштування власного циферблата](../images/preferences/settings_wear_custom_watchface.png)
 
-**General Settings** contains **Notify on SMB**, to get a notification on the watch each time an SMB is delivered:
+**Загальні налаштування** містять **Сповіщати про SMB**, щоб отримувати сповіщення на годиннику щоразу, коли вводиться SMB:
 
-![Settings > Wear > General Settings](../images/preferences/settings_wear_general.png)
+![Налаштування > Wear > Загальні налаштування](../images/preferences/settings_wear_general.png)
 
 ## Autotune
 
-This section is shown when the **Autotune** plugin is enabled in [Configuration > General](#Config-Builder-autotune). The settings are described on the dedicated [Autotune](../AdvancedOptions/Autotune.md) page.
+Цей розділ показується, коли плагін **Autotune** увімкнено в [Конфігурація > Загальне](#Config-Builder-autotune). Налаштування описано на окремій сторінці [Autotune](../AdvancedOptions/Autotune.md).
 
-![Settings > Autotune](../images/preferences/settings_autotune.png)
+![Налаштування > Autotune](../images/preferences/settings_autotune.png)
 
-## Automation
+## Автоматизація
 
-![Settings > Automation](../images/preferences/settings_automation.png)
+![Налаштування > Автоматизація](../images/preferences/settings_automation.png)
 
-Select which location service shall be used:
+Виберіть, яку службу розташування використовувати:
 
-- Use passive location: **AAPS** only takes locations if other apps are requesting it
-- Use network location: Location of your Wi-Fi
-- Use GPS location (Attention! May cause excessive battery drain!)
+- Використовувати пасивне розташування: **AAPS** отримує розташування лише тоді, коли його запитують інші застосунки
+- Використовувати мережеве розташування: розташування вашої мережі Wi-Fi
+- Використовувати GPS-розташування (Увага! Може сильно розряджати батарею!)
 
-## Local alerts
+## Локальні сповіщення
 
-![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
+![Налаштування > Локальні сповіщення](../images/preferences/settings_local_alerts.png)
 
-Settings should be self-explanatory.
+Налаштування зрозумілі без пояснень.
+
+**Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
+
+When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Swiping the alarm notification away in the notification tray mutes the alarm. When you open **AAPS** later, an alarm you did not answer is shown again.
 
 (preferences-maintenance-settings)=
-## Maintenance settings
+## Налаштування обслуговування
 
-![Settings > Maintenance](../images/preferences/settings_maintenance.png)
+![Налаштування > Обслуговування](../images/preferences/settings_maintenance.png)
 
-**Email recipient**: Standard recipient of logs is <logs@aaps.app>.
+**Отримувач email**: стандартний отримувач журналів – <logs@aaps.app>.
 
-**Number of logs to send**: how many of the most recent log files are attached when you send logs.
+**Кількість журналів для надсилання**: скільки найновіших файлів журналів додається, коли ви надсилаєте журнали.
 
-**Data Choices**
+**Вибір даних**
 
-![Data choices](../images/preferences/settings_data_choices.png)
+![Вибір даних](../images/preferences/settings_data_choices.png)
 
-You can help develop **AAPS** further by sending crash reports to the developers.
+Ви можете допомогти розвивати **AAPS**, надсилаючи розробникам звіти про збої.
 
-**Unattended Settings Export**<br/> By enabling this feature, you allow **AAPS** to execute settings exports without user intervention. For this the master password is securely stored on your phone (only) at the next manually export. The stored password will be used for up to 4 weeks. After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by manually exporting settings from the maintenance menu.
+**Фоновий експорт налаштувань**<br/> Якщо ввімкнути цю функцію, **AAPS** зможе експортувати налаштування без участі користувача. Для цього головний пароль безпечно зберігається на вашому телефоні (лише там) під час наступного ручного експорту. Збережений пароль використовуватиметься до 4 тижнів. Через 4 тижні ви отримаєте сповіщення, що термін дії пароля скоро закінчиться. Протягом пільгового періоду в 1 тиждень пароль можна оновити, вручну експортувавши налаштування з меню обслуговування.
 
-After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking to reenter the password. [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) will be logged to the **AAPS** 'Careportal' and 'User entry' lists under Treatments.
+Після закінчення пільгового періоду в 1 тиждень збережений пароль стає недійсним, і будь-який автоматичний експорт налаштувань переривається, а користувач отримує сповіщення з проханням знову ввести пароль. [(**Автоматичний експорт налаштувань**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) буде записано у списки **AAPS** 'Careportal' і 'Введення користувача' в розділі Терапія.
 
-After enabling this option, make sure to perform a manual settings export, where you will be requested for your password, so that **AAPS** can store it.
+Після ввімкнення цієї опції обов'язково виконайте ручний експорт налаштувань. Під час нього вас попросять ввести пароль, щоб **AAPS** міг його зберегти.
 
-### Log files
+### Файли журналів
 
-AAPS will save logs for troubleshooting.
+AAPS зберігає журнали для усунення несправностей.
 
-Do not disable this feature: it will help understanding the reasons if something goes wrong.
+Не вимикайте цю функцію: вона допоможе зрозуміти причини, якщо щось піде не так.
 
-If you need to send the logs to the developers, make sure you accurately describe the issue in the email. It is preferable to send logs only after being requested to do so, following an [issue report in GitHub](https://github.com/nightscout/AndroidAPS/issues).
+Якщо вам потрібно надіслати журнали розробникам, обов'язково точно опишіть проблему в листі. Краще надсилати журнали лише тоді, коли вас про це попросять, після [звіту про проблему на GitHub](https://github.com/nightscout/AndroidAPS/issues).
 
-You can find AAPS logs in your phone memory -> Android -> data -> info.nightscout.androidaps -> files.
+Журнали AAPS можна знайти в пам'яті телефону -> Android -> data -> info.nightscout.androidaps -> files.
 
-Log handling (log settings, sending and deleting logs) and file management are found on the **Maintenance** screen, opened from the **menu** (☰) in the top-left corner of the main screen:
+Робота з журналами (налаштування журналу, надсилання та видалення журналів) і керування файлами знаходяться на екрані **Обслуговування**. Його відкривають з **меню** (☰) у верхньому лівому куті головного екрана:
 
-![Maintenance screen](../images/preferences/maintenance_file_management.png)
+![Екран обслуговування](../images/preferences/maintenance_file_management.png)
 
 (preferences-maintenance-logdirectory)=
 
-### Setting the local AAPS directory
+### Налаштування локального каталогу AAPS
 
-The **Maintenance** screen also includes the **AAPS directory**. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files. Once a directory is chosen, its path (for example `Documents/AAPS`) is shown below **AAPS directory**, so you can always see where your files are saved.
+Екран **Обслуговування** також містить **Каталог AAPS**. Це налаштування дозволяє вибрати на телефоні каталог, де **AAPS** зберігатиме налаштування, журнали та інші файли. Коли каталог вибрано, його шлях (наприклад, `Documents/AAPS`) показується під **Каталог AAPS**, тож ви завжди бачите, де зберігаються ваші файли.
 
-It is strongly recommended to use a directory directly in the main entry of your phone memory. Default is AAPS.
+Наполегливо рекомендуємо використовувати каталог безпосередньо в корені пам'яті телефону. За замовчуванням це AAPS.
 
-![Local directory location](../images/preferences/maintenance_settings_directory.png)
+![Розташування локального каталогу](../images/preferences/maintenance_settings_directory.png)
 
-If you select a subdirectory of AAPS, you will see an error message. Tap "OK" and retry, selecting the correct directory (one above). Do not select "DISMISS" unless you clearly know what you are doing.
+Якщо вибрати підкаталог AAPS, ви побачите повідомлення про помилку. Натисніть «OK» і спробуйте ще раз, вибравши правильний каталог (на рівень вище). Не натискайте «DISMISS» («Закрити»), якщо не знаєте точно, що робите.
 
-![Local directory location](../images/preferences/maintenance_settings_wrongdirectory.png)
+![Розташування локального каталогу](../images/preferences/maintenance_settings_wrongdirectory.png)
 
-Android can silently take the directory permission away, for example after you reinstall **AAPS** or clear its storage. When that happens, **AAPS** shows a persistent **Access to the AAPS directory was lost** notification and local settings export stops working until you come back here and select the directory again. Do this promptly, otherwise your backups on the phone are no longer refreshed.
+Android може непомітно забрати дозвіл на каталог, наприклад після перевстановлення **AAPS** або очищення його сховища. Коли це стається, **AAPS** показує постійне сповіщення **Доступ до каталогу AAPS втрачено**, і локальний експорт налаштувань не працює, доки ви не повернетеся сюди й не виберете каталог знову. Зробіть це якнайшвидше, інакше ваші резервні копії на телефоні більше не оновлюватимуться.
 
 (preferences-maintenance-cloud)=
 
-### Setting a cloud directory
+### Налаштування хмарного каталогу
 
-You can export your settings, logs and CSV data to a cloud service.
+Ви можете експортувати налаштування, журнали та дані CSV у хмарний сервіс.
 
-1. Open the **menu** (☰), select **Maintenance** and tap **Cloud Directory** (under **File management**).
+1. Відкрийте **меню** (☰), виберіть **Обслуговування** і натисніть **Хмарний каталог** (у розділі **Керування файлами**).
 
-   ![Cloud Directory in the Maintenance menu](../images/preferences/maintenance_settings_cloud.png)
+   ![Хмарний каталог у меню обслуговування](../images/preferences/maintenance_settings_cloud.png)
 
-2. In **Select Storage Type**, select **Google Drive**.
+2. У вікні **Вибрати тип сховища** виберіть **Google Drive**.
 
-   ![Select Storage Type dialog](../images/preferences/maintenance_cloud_select_storage.png)
+   ![Діалог «Вибрати тип сховища»](../images/preferences/maintenance_cloud_select_storage.png)
 
-3. A Google sign-in page opens. Choose the Google account that will hold your backups (you can use a [dedicated Google account](../UsefulLinks/DedicatedGoogleAccountForAaps.md)).
+3. Відкриється сторінка входу Google. Виберіть обліковий запис Google, у якому зберігатимуться ваші резервні копії (можна використати [окремий обліковий запис Google](../UsefulLinks/DedicatedGoogleAccountForAaps.md)).
 
-   ![Google sign-in page: choose an account](../images/preferences/maintenance_cloud_google_account.png)
+   ![Сторінка входу Google: вибір облікового запису](../images/preferences/maintenance_cloud_google_account.png)
 
-4. Check that the account is the right one and tap **Continue** to give **AAPS** access. If you set up the cloud directory before, the page says that **AAPS** already has some access.
+4. Перевірте, що це правильний обліковий запис, і натисніть **Continue** (Продовжити), щоб надати **AAPS** доступ. Якщо ви вже налаштовували хмарний каталог раніше, на сторінці буде сказано, що **AAPS** вже має певний доступ.
 
-   ![Google page asking to give AAPS access, with the Continue button](../images/preferences/maintenance_cloud_google_access.png)
+   ![Сторінка Google із запитом на доступ для AAPS і кнопкою Continue](../images/preferences/maintenance_cloud_google_access.png)
 
-5. Back in **AAPS**, the message **Cloud storage authentication successful** appears at the bottom of the main screen:
+5. Коли ви повернетеся в **AAPS**, внизу головного екрана з'явиться повідомлення **Автентифікація хмарного сховища успішна**:
 
-   ![Cloud storage authentication successful message](../images/preferences/maintenance_cloud_auth_success.png)
+   ![Повідомлення «Автентифікація хмарного сховища успішна»](../images/preferences/maintenance_cloud_auth_success.png)
 
-   In the **Maintenance** menu, **Cloud Directory** now has a green dot, and the **Cloud** buttons next to **Send logs**, **Export settings**, **Import settings** and **Export User Entries to Excel (csv)** are available.
+   У меню **Обслуговування** біля **Хмарний каталог** тепер є зелена точка, а кнопки **Хмара** біля **Надіслати журнали**, **Експорт налаштувань**, **Імпорт налаштувань** і **Експорт записів користувача в Excel (csv)** стали доступні.
 
-   ![Maintenance menu with cloud storage set up: Cloud buttons available and the clear icon on Cloud Directory](../images/preferences/maintenance_settings_cloud_ready.png)
+   ![Меню обслуговування з налаштованим хмарним сховищем: кнопки «Хмара» доступні, а в рядку «Хмарний каталог» є значок очищення](../images/preferences/maintenance_settings_cloud_ready.png)
 
-To stop exporting to the cloud, tap the **✕** (**Clear Settings**) icon at the end of the **Cloud Directory** row in the **Maintenance** menu (it is shown once a cloud service is set up) and confirm **Clear Cloud Settings**. This switches back to local storage and clears the authorization.
+Щоб припинити експорт у хмару, натисніть значок **✕** (**Очистити налаштування**) у кінці рядка **Хмарний каталог** у меню **Обслуговування** (він показується, коли хмарний сервіс налаштовано) і підтвердіть **Очистити хмарні налаштування**. Так AAPS повертається до локального сховища й видаляє авторизацію.
 
 ## Open Humans
 
-You can help the community by donating your data to research projects! Details are described on the [Open Humans page](../SupportingAaps/OpenHumans.md).
+Ви можете допомогти спільноті, якщо передасте свої дані дослідницьким проєктам! Подробиці описано на [сторінці Open Humans](../SupportingAaps/OpenHumans.md).
 
-In **Settings → Open Humans**, you can define when data shall be uploaded
-- only if connected to Wi-Fi
-- only if charging
+У **Налаштування → Open Humans** можна визначити, коли вивантажувати дані
+- лише при підключенні до Wi-Fi
+- лише під час заряджання

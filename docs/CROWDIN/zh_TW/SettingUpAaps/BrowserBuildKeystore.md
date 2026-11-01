@@ -1,82 +1,82 @@
 (aaps-ci-preparation)=
 
-# Browser build – Step 2: Create your signing keystore
+# 瀏覽器建置－步驟 2：建立簽署金鑰庫
 
 ```{note}
-This is **Step 2** of the [Browser build](BrowserBuild.md). First complete [Step 1 – Create your GitHub fork](BrowserBuildFork.md).
+這是<a href="BrowserBuild.md">瀏覽器建置</a>的**步驟 2**。請先完成<a href="BrowserBuildFork.md">步驟 1－建立 GitHub 複刻</a>。
 ```
 
-AndroidAPS must be signed with private keys stored in a **Java KeyStore (JKS)**. This is the most important decision of the whole process, because it determines whether you will be able to **upgrade** AAPS later without reinstalling.
+AndroidAPS 必須使用儲存在**Java 金鑰庫（JKS）**中的私密金鑰進行簽署。這是整個流程中最重要的決定，因為它會影響您之後是否能在不重新安裝的情況下**升級** AAPS。
 
 ```{note}
-In the next steps you will store private information (your keystore, and later your Google Drive access) inside GitHub as **secrets**. A secret is simply an encrypted value that only your own build can read – nobody else, not even people looking at your fork, can see it. This is what keeps your build yours.
+接下來，您會將私密資訊（金鑰庫，以及稍後的 Google 雲端硬碟存取權）以**機密**的形式儲存在 GitHub 中。機密就是經過加密的值，只有您自己的建置程序可以讀取；其他人都看不到，即使是查看您複刻版本的人也一樣。這樣就能確保您的建置版本只屬於您。
 ```
 
-## Choose your keystore strategy
+## 選擇金鑰庫策略
 
-Read both options and pick the one that matches your situation.
+請閱讀以下兩個選項，並選擇符合您情況的一項。
 
-### Option 1 – Generate a new keystore (new users)
+### 選項 1－產生新的金鑰庫（新使用者）
 
-Choose this if **any** of these is true:
+如果符合以下**任何一項**情況，請選擇這個選項：
 
-- This is your **first time** building AAPS.
-- You don't have a keystore from a previous Android Studio (computer) build.
-- You have forgotten your keystore password or alias.
+- 這是您**第一次**建置 AAPS。
+- 您沒有之前使用 Android Studio 在電腦上建置時所用的金鑰庫。
+- 您忘記了金鑰庫密碼或別名。
 
 ```{warning}
-Building AAPS with **Option 1** creates a brand-new keystore, so it **will not allow you to upgrade your existing AAPS** in place. To move to this new build you must export your settings, uninstall the old AAPS, install the new one and import your settings again. Follow the steps in [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+使用**選項 1** 建置 AAPS 時會建立全新的金鑰庫，因此**無法直接升級您目前安裝的 AAPS**。若要改用這個新的建置版本，您必須先匯出設定、解除安裝舊版 AAPS、安裝新版，再匯入設定。請按照<a href="#reinstall-aaps">使用新金鑰庫重新安裝 AAPS</a>中的步驟操作。
 ```
 
-**→ [Continue with Option 1 – Generate a new keystore](BrowserBuildO1.md)**
+**→ [繼續使用選項 1－產生新的金鑰庫](BrowserBuildO1.md)**
 
-### Option 2 – Upload your existing keystore (existing / past users)
+### 選項 2－上傳現有的金鑰庫（現有或曾經使用過的使用者）
 
-Choose this if you **already have** the `.jks` keystore you used on a previous build of AAPS from a computer in Android Studio, **and** you know its password and alias (usually `key0`).
+如果您**已經有**先前使用 Android Studio 在電腦上建置 AAPS 時所用的 `.jks` 金鑰庫，**而且**知道其密碼和別名（通常是 `key0`），請選擇這個選項。
 
-This keeps your current AAPS install upgradeable: future updates will use the same keystore.
+使用這個選項，您目前安裝的 AAPS 就能繼續升級：未來的更新會使用相同的金鑰庫。
 
-**→ [Continue with Option 2 – Upload your existing keystore](BrowserBuildO2.md)**
+**→ [繼續使用選項 2－上傳現有的金鑰庫](BrowserBuildO2.md)**
 
 ----
 
 ```{note}
-On the next page you will pick your device (computer or iPhone). Each device page then walks you through downloading and opening the preparation file the right way for that device, and creating your keystore. The built AAPS app will be saved in your Google Drive.
+下一頁會請您選擇裝置（電腦或 iPhone）。接著，各裝置的說明頁面會引導您以正確方式下載並開啟準備檔案，並建立金鑰庫。建置完成的 AAPS App 會儲存在您的 Google Drive 中。
 ```
 
-**Next: choose [Option 1](BrowserBuildO1.md) or [Option 2](BrowserBuildO2.md) above, then follow the page for your device.**
+**下一步：請選擇上方的 [選項 1](BrowserBuildO1.md) 或 [選項 2](BrowserBuildO2.md)，然後按照適用於您裝置的說明頁面操作。**
 
 ----
 
 (ci-keystore-export)=
 
-## Export your keystore (optional)
+## 匯出金鑰庫（選擇性）
 
-If you want to export your stored keystore, use this method.
+如果您想要匯出儲存的金鑰庫，請使用這個方法。
 
-This script will export your previously configured keystore information (from Option 1 or Option 2) as a password-protected ZIP file to the `/AAPS/KeyStore` directory in your Google Drive.
+這段腳本將會把您先前配置的金鑰庫資訊（來自選項 1 或選項 2）匯出為一個受密碼保護的 ZIP 檔案到你的 Google 雲端硬碟裡 `/AAPS/KeyStore` 目錄中
 
 ```{warning}
-Before using this export method, make sure your keystore and Google Drive settings have been completed.
+在使用這個匯出方法之前，請確保您的金鑰庫和 Google 雲端硬碟的設定已完成。
 ```
 
 ### 步驟：
 
-1. **Add ZIP Password Secret:**
-   - Go to your repository's **Settings** → **Secrets and variables** → **Actions**
-   - Click **New repository secret**
-   - In the **Name** field, enter: `ZIP_PASSWORD`
-   - In the **Secret** field, enter your custom ZIP encryption password
-   - Use only English letters and numbers for the password (no special symbols)
-   - Click **Add secret**
+1. **新增 ZIP 密碼：**
+   - 前往您的儲存庫的 **設定** → **密碼和變數** → **動作**
+   - 點擊 **New repository secret(新增儲存庫密碼)**
+   - 在 **Name(名稱)** 欄位中，輸入: `ZIP_PASSWORD`
+   - 在 **Secret(密碼)** 欄位中，輸入您自訂的 ZIP 加密密碼
+   - 請僅使用英文字母和數字作為密碼（不可以使用特殊符號）
+   - 點擊 **Add secret(新增密碼)**
 
    ![aaps_ci_zip_password.png](../images/Building-the-App/CI/aaps_ci_zip_password.png)
 
-2. **Run Export Workflow:**
-   - Go to the **Actions** tab in your repository
-   - Select **CI KeyStore Export**
-   - Click **Run workflow**
-   - The exported keystore ZIP file will be saved to your Google Drive
+2. **執行匯出工作流程：**
+   - 前往您的儲存庫中的 **Actions** 標籤
+   - 選擇 **CI KeyStore Export**
+   - 點擊 **執行工作流程**
+   - 匯出的金鑰庫 ZIP 檔案將會保存在您的 Google 雲端硬碟中
 
    ![aaps_ci_keystore_export.png](../images/Building-the-App/CI/aaps_ci_keystore_export.png)
 
@@ -85,6 +85,6 @@ Before using this export method, make sure your keystore and Google Drive settin
 ```{toctree}
 :hidden:
 
-Option 1 – Generate a new keystore <BrowserBuildO1.md>
-Option 2 – Upload your existing keystore <BrowserBuildO2.md>
+選項 1 – 建立新的金鑰庫 <BrowserBuildO1.md>
+選項 2 – 上傳現有的金鑰庫 <BrowserBuildO2.md>
 ```

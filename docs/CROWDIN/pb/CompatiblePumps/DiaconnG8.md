@@ -5,7 +5,7 @@
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Recursos da bomba com o AAPS
 
 * Comunica-se com o **AAPS** pelo Bluetooth do próprio celular, sem um dispositivo de comunicação adicional.
 * As mudanças de horário de verão e de fuso horário devem ser feitas manualmente.
@@ -30,11 +30,11 @@ Depois de selecionado, o cartão **Diaconn G8** mostra dois botões, **Configura
 
 ![Tela da bomba Diaconn G8 antes do pareamento](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
-![image](../images/DiaconnG8/DiaconnG8_04.jpg)
+![imagem](../images/DiaconnG8/DiaconnG8_04.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. No **AAPS** 4, o pareamento começa pelo botão **Parear** na tela da bomba; não existe a configuração **Bomba selecionada**.
+A captura de tela acima é de uma versão anterior do **AAPS**. No **AAPS** 4, o pareamento começa pelo botão **Parear** na tela da bomba; não existe a configuração **Bomba selecionada**.
 ```
 
 - Na tela da bomba, toque em **Parear**. A tela **Pareamento de bomba Diaconn** se abre e o **AAPS** procura bombas próximas.
@@ -47,11 +47,11 @@ The screenshot above is from an earlier **AAPS** version. No **AAPS** 4, o parea
 1. Os últimos 5 dígitos do número de série (SN) na parte de trás da bomba.
 2. Clique no botão O > Information > BLE > últimos 5 dígitos.
 
-![image](../images/DiaconnG8/DiaconnG8_06.jpg)
+![imagem](../images/DiaconnG8/DiaconnG8_06.jpg)
 
 - Depois de selecionar sua bomba, aparece uma janela pedindo um código PIN. Digite o número PIN mostrado na sua bomba para concluir a conexão.
 
- ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
+ ![imagem](../images/DiaconnG8/DiaconnG8_07.jpg)
 
 - Quando aparecer **Pareamento concluído!**, toque em **OK** para voltar à tela da bomba.
 
@@ -61,11 +61,11 @@ The screenshot above is from an earlier **AAPS** version. No **AAPS** 4, o parea
 - Toque em **Atualizar** para conectar à bomba, atualizar o status e sincronizar os logs.
 - Toque em **Histórico da Bomba** para ver o histórico lido da bomba.
 
-![image](../images/DiaconnG8/DiaconnG8_08.jpg)
+![imagem](../images/DiaconnG8/DiaconnG8_08.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. No **AAPS** 4, o status da bomba é mostrado na tela da bomba (**Gerenciar** > **Bomba**) e sincronizado com o botão **Atualizar**.
+A captura de tela acima é de uma versão anterior do **AAPS**. No **AAPS** 4, o status da bomba é mostrado na tela da bomba (**Gerenciar** > **Bomba**) e sincronizado com o botão **Atualizar**.
 ```
 
 (diaconn-g8-bluetooth-troubleshooting)=
@@ -87,15 +87,15 @@ The screenshot above is from an earlier **AAPS** version. No **AAPS** 4, o statu
 
 - Pressione e segure o botão Bluetooth na parte de cima por cerca de 3 segundos.
 
-![image](../images/DiaconnG8/DiaconnG8_11.jpg)
+![imagem](../images/DiaconnG8/DiaconnG8_11.jpg)
 
 - Clique no botão de configuração da bomba de insulina Diaconn G8 pareada.
 
-![image](../images/DiaconnG8/DiaconnG8_12.jpg)
+![imagem](../images/DiaconnG8/DiaconnG8_12.jpg)
 
 - Desfaça o pareamento.
 
-![image](../images/DiaconnG8/DiaconnG8_13.jpg)
+![imagem](../images/DiaconnG8/DiaconnG8_13.jpg)
 
 - No **AAPS**, abra a tela da bomba (**Gerenciar** > **Bomba**), toque em **Desfazer pareamento** e confirme **Redefinir informações de pareamento?**.
 - Repita o processo de pareamento Bluetooth da bomba (veja acima).
@@ -122,7 +122,7 @@ The screenshot above is from an earlier **AAPS** version. No **AAPS** 4, o statu
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. No **AAPS** 4, uma troca de bateria é registrada com **Gerenciar** > **Troca de Bateria da Bomba**; não existe a aba **Ações**.
+A captura de tela acima é de uma versão anterior do **AAPS**. No **AAPS** 4, uma troca de bateria é registrada com **Gerenciar** > **Troca de Bateria da Bomba**; não existe a aba **Ações**.
 ```
 
 ### Função de bólus estendido
@@ -130,9 +130,9 @@ The screenshot above is from an earlier **AAPS** version. No **AAPS** 4, uma tro
 - Se você usar o bólus estendido, o loop fechado será desativado.
 - Veja [esta página](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) para saber por que o bólus estendido não funciona em um ambiente de loop fechado.
 
-## Where to get help
+## Onde obter ajuda
 
-O desenvolvimento do driver da Diaconn G8 é feito pela comunidade de forma **voluntária**. Before requesting help, please:
+O desenvolvimento do driver da Diaconn G8 é feito pela comunidade de forma **voluntária**. Antes de pedir ajuda:
 
 1. **Leia** a seção correspondente desta documentação para confirmar como a função deve funcionar.
 2. **Pergunte** no canal *#AAPS* do [Discord](https://discord.gg/4fQUWHZ4Mw) ou em um dos outros [canais da comunidade](../GettingHelp/WhereCanIGetHelp.md).

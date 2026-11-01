@@ -73,7 +73,7 @@ El Lazo cerrado solo es posible si estás en el **[Objetivo 7](#objectives-objec
 
 Gracias a SMB, en comidas con solo carbohidratos «lentos» puede bastar con indicar al sistema la cantidad de carbohidratos prevista y dejar el resto a **AAPS**. Pero esto puede causar picos más altos después de comer, porque no es posible poner un bolo antes de la comida (prebolo). O puedes poner, si hace falta como prebolo, un **bolo inicial** que cubra **solo una parte** de los carbohidratos (por ejemplo, 2/3 de la cantidad estimada) y dejar que **SMB** administre el resto de la insulina.
 
-![SMB en el gráfico principal](../images/SMBs.png)
+![SMBs on the IOB graph](../images/SMBs.png)
 
 Los SMB se muestran en el [gráfico de IOB](#aaps-screens-iob) con triángulos azules. [Mantén pulsado](#aaps-screens-graph-press-and-hold) el gráfico sobre un triángulo para ver cuánta insulina se administró, o usa el [Historial de tratamientos](#aaps-screens-treatments).
 

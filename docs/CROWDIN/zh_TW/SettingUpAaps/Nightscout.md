@@ -4,11 +4,11 @@
 
 ## 安全性考量
 
-Nightscout is the reporting and monitoring server of **AAPS**: **AAPS** uploads your data to it, and you or your caregivers look at it on the Nightscout website or in follower apps. It holds your medical data, profiles and treatments, so it is worth thinking about securing your Nightscout website.
+Nightscout 是 **AAPS** 的報告與監控伺服器：**AAPS** 會將您的資料上傳至 Nightscout，而您或照護者可以透過 Nightscout 網站或追蹤者應用程式查看資料。 Nightscout 會儲存您的醫療資料、設定檔和治療紀錄，因此建議您留意 Nightscout 網站的安全性。
 
-In **AAPS** 4, remote control does not go through the Nightscout website. While client control is on ([hardened mode](#client-master-control-hardened-mode)), treatments or targets typed directly into Nightscout are **not applied** by **AAPS**. Remote commands come from a paired **AAPSClient** instead — see [Master ↔ Client control](#client-master-control).
+在 **AAPS** 4 中，遠端控制不會透過 Nightscout 網站進行。啟用客戶端控制時（[強化模式](#client-master-control-hardened-mode)），直接輸入 Nightscout 的治療紀錄或目標值**不會由****AAPS** 套用。遠端指令會改由已配對的 **AAPSClient** 傳送；請參閱 [主端 ↔ 客戶端控制](#client-master-control)。
 
-Exercise maximum caution if using Nightscout as your AAPS BG data source.
+如果使用 Nightscout 作為 AAPS 的血糖資料來源，請務必格外謹慎。
 
 ### Nightscout 設置
 
@@ -20,25 +20,25 @@ Nightscout 的 `API_SECRET` 是你網站的主要密碼：切勿公開分享他�
 
 ### AAPS 設置
 
-Accepting data from Nightscout (profile changes, treatments, ...) is optional and turned off by default. The switches described below are hidden while client control is on (hardened mode) and in [simple mode](#preferences-simple-mode).
+是否接受來自 Nightscout 的資料（設定檔變更、治療紀錄等）由您自行決定，且預設為關閉。啟用客戶端控制（強化模式）或[簡易模式](#preferences-simple-mode)時，下方所述的切換選項會隱藏。
 
-* Access the **Synchronization** settings of the NSClientV3 plugin with either 1) **Settings** (gear icon on the main screen) -> **NSClientV3** -> **Synchronization**, or 2) **Configuration** (☰ menu) -> **Communication** -> "**Settings**" under NSClientV3.
-* Enable "Upload data to NS".
-* "Upload BG data to NS" is in the settings of your BG source (**Configuration → BG Source → Settings**). Enable it, unless your AAPS BG data source is Nightscout: in that case **do not** enable it.
-* Do not enable "Receive CGM data from NS" unless Nightscout is your BG data source.
+* 您可以透過以下任一方式開啟 NSClientV3 外掛的**同步**設定： 1) **設定**（主畫面上的齒輪圖示）-> **NSClientV3** -> **同步**，或 2) **組態**（☰ 選單）-> **通訊** -> NSClientV3 下方的「**設定**」。
+* 啟用「上傳資料至 NS」。
+* 「將血糖資料上傳至 NS」位於血糖來源的設定中（**組態 → 血糖來源 → 設定**）。除非您的 AAPS 血糖資料來源是 Nightscout，否則請啟用此選項；如果是 Nightscout，則**不要**啟用。
+* 除非 Nightscout 是您的血糖資料來源，否則請勿啟用「從 NS 接收 CGM 資料」。
 
 #### 不要從 Nightscout 同步
 
-Keeping all the "Receive ... from NS" options disabled makes sure no Nightscout change will be used by AAPS:
+將所有「接收……從 NS」選項保持停用，可確保 AAPS 不會使用 Nightscout 的任何變更：
 
 ![僅限 Nightscout 上傳](../images/preferences/settings_nsclient_sync.png)
 
 #### 接受來自 Nightscout 的變更
 
-Enabling these options allows you to change AAPS settings through Nightscout, like profiles modifications and switch, temporary targets and adding carbs that will be taken into account by AAPS. They are only shown when client control and simple mode are off.  
-Note that insulin treatments will only be used for calculations like "Do not bolus, record only".
+啟用這些選項後，您便可透過 Nightscout 變更 AAPS 設定，例如修改或切換設定檔、設定臨時目標，以及新增會由 AAPS 納入計算的碳水化合物。只有在客戶端控制和簡易模式都關閉時，才會顯示這些選項。  
+請注意，胰島素治療紀錄只會用於「不要注射，只記錄」等計算。
 
-![Nightscout receive options enabled](../images/NSsafety3.png)
+![已啟用 Nightscout 接收選項](../images/NSsafety3.png)
 
 ### 進一步的安全設置
 
@@ -48,7 +48,7 @@ Note that insulin treatments will only be used for calculations like "Do not bol
 
 ## 手動 Nightscout 設置
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on setup. The instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 15, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
+假設您已經有 Nightscout 網站；如果還沒有，請前往 [Nightscout](http://nightscout.github.io/nightscout/new_user/) 頁面查看完整的設定說明。接著，您也需要將以下設定新增至 Nightscout 網站。您的 Nightscout 網站版本至少須為 15。請確認您使用的是[最新版本](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version)，否則 AAPS 應用程式會顯示錯誤訊息。
 
 * [編輯你的變數](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 

@@ -1,43 +1,43 @@
 (aaps-ci-option2)=
 
-# Option 2 – Upload your existing keystore
+# Варіант 2 – Вивантажте свій наявний keystore
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation) and downloaded the preparation file.
+Це частина [Кроку 2 – Створіть свій keystore для підпису](BrowserBuildKeystore.md) [Збірки в браузері](BrowserBuild.md). Переконайтеся, що ви прочитали про [вибір між Варіантом 1 і Варіантом 2](#aaps-ci-preparation) і завантажили файл підготовки.
 ```
 
-Option 2 reuses the JKS you already created on a previous build of AAPS from a computer in Android Studio. It is suitable for users who already have a JKS and know the JKS password and alias.
+Варіант 2 використовує JKS, який ви вже створили раніше, коли збирали AAPS на комп'ютері в Android Studio. Він підходить для тих, хто вже має JKS і знає його пароль і псевдонім (alias).
 
-For `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`, enter your actual password and alias in GitHub – those from Android Studio, see below where you used them.
+Для `KEYSTORE_PASSWORD`, `KEY_ALIAS` і `KEY_PASSWORD` введіть у GitHub свої справжні паролі та псевдонім – ті самі, що в Android Studio (нижче показано, де ви їх використовували).
 
 ```{warning}
-**Passwords with special characters.** Enter your passwords exactly as they are. Do not add a backslash or any other escape character: the build workflow keeps every character intact, and an added backslash becomes part of the password.
+**Паролі зі спеціальними символами.** Вводьте паролі точно такими, як вони є. Не додавайте зворотну скісну риску чи інший символ екранування: робочий процес збірки зберігає кожен символ без змін, а додана зворотна скісна риска стане частиною пароля.
 
-If the build still fails at the signing step and your password contains `$`, a backtick, `"` or `\`, the workflow file in your fork is outdated. [Sync your fork](#Update-to-new-version-update-your-repo) with the latest dev and re-run the build. See [Browser build troubleshooting](#aaps-ci-password-special-characters).
+Якщо збірка все одно не вдається на кроці підписання, а ваш пароль містить `$`, зворотний апостроф (backtick), `"` або `\`, то файл робочого процесу збірки у вашому fork застарів. [Синхронізуйте свій fork](#Update-to-new-version-update-your-repo) з останньою версією dev і запустіть збірку знову. Див. [Збірка в браузері: усунення проблем](#aaps-ci-password-special-characters).
 ```
 
 ```{admonition} KEY + PASSWORDS
 :class: dropdown
 
-![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+![Запам'ятовування паролів](../images/Building-the-App/044_RememberPwd.png)
 ```
 
-## Choose your device
+## Виберіть свій пристрій
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+Збираєте на **телефоні Android**? Тоді використайте [AAPS Builder](BrowserBuildAapsBuilder.md): йому не потрібен файл підготовки.
 ```
 
-Follow the page that matches the device you are building from:
+Відкрийте сторінку для пристрою, на якому ви збираєте:
 
-- **[Computer](BrowserBuildO2Computer.md)** – Windows, Mac or Linux.
+- **[Комп'ютер](BrowserBuildO2Computer.md)** – Windows, Mac або Linux.
 
 ```{tip}
-You can switch device at any time – just open the matching page.
+Ви можете будь-коли змінити пристрій – просто відкрийте відповідну сторінку.
 ```
 
 ```{toctree}
 :hidden:
 
-Computer <BrowserBuildO2Computer.md>
+Комп'ютер <BrowserBuildO2Computer.md>
 ```

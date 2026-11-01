@@ -1,6 +1,6 @@
 (troubleshooting_androidstudio-troubleshooting-android-studio)=
 
-# Troubleshooting Android Studio
+# Resolução de problemas do Android Studio
 
 ```{contents} List of common issues
 :depth: 2
@@ -8,27 +8,27 @@
 ```
 
 (troubleshooting_androidstudio-lost-keystore)=
-## Lost keystore
-If you lost your keystore or its password, an apk signed with a new keystore cannot update your current **AAPS**: you have to uninstall and reinstall it. See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+## Keystore perdida
+Se você perdeu a sua keystore ou a senha dela, um apk assinado com uma nova keystore não pode atualizar o seu **AAPS** atual: você precisa desinstalá-lo e reinstalá-lo. Veja [Reinstalar o AAPS com uma nova keystore](#reinstall-aaps).
 
-## Gradle Sync failed
-Gradle Sync can fail for various reasons. When you receive a message saying that 'gradle sync failed', open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
+## Falha no Gradle Sync
+O Gradle Sync pode falhar por vários motivos. Quando você receber uma mensagem dizendo 'gradle sync failed', abra a aba "Build" (1) na parte de baixo do Android Studio e veja qual mensagem de erro (2) aparece.
 
-![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
+![Falha no Gradle](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 ```{contents} Likely reasons for gradle sync failures are:
 :depth: 1
 :local: true
 ```
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
+*Importante*: Depois de seguir as instruções para o seu problema, você precisa iniciar o [gradle sync](#gradle-resync) de novo.
 
 (troubleshooting_androidstudio-uncommitted-changes)=
-### Uncommitted changes
+### Alterações não confirmadas (uncommitted changes)
 
-If you receive a failure message like this one:
+Se você receber uma mensagem de falha como esta:
 
-![Gradle Uncommitted Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+![Gradle: alterações não confirmadas](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
 ```
 Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
@@ -37,83 +37,83 @@ There are uncommitted changes.
 Clone sources again as described in wiki and do not allow gradle update
 ```
 
-#### Step 1 - Check git installation
-  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal (2).
+#### Passo 1 - Verificar a instalação do Git
+  * Abra a aba Terminal (1) na parte de baixo do Android Studio, copie o texto a seguir e cole ou digite no terminal (2).
     ```
     git --version
     ```
 
-    ![Gradle Git Version](../images/studioTroubleshooting/03_GitVersion.png)
+    ![Versão do Git no Gradle](../images/studioTroubleshooting/03_GitVersion.png)
 
-    Note: There is a space and two hyphens between Git and version!
+    Nota: há um espaço e dois hifens entre git e version!
 
-  * You must receive a message saying what Git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
+  * Você deve receber uma mensagem dizendo qual versão do Git está instalada, como você pode ver na captura de tela acima. Nesse caso, vá para o [Passo 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * In case you get an message saying
+  * Se você receber uma mensagem dizendo
     ```
     Git: command not found
     ```
-    your Git installation is not right.
+    a sua instalação do Git não está correta.
 
-  * [Check git installation](#BuildingAaps-steps-for-installing-git)
+  * [Verificar a instalação do Git](#BuildingAaps-steps-for-installing-git)
 
-  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
+  * Se você usa Windows e o Git acabou de ser instalado, reinicie o computador para que o Git fique disponível em todo o sistema depois da instalação
 
-  * If Git is installed, you have restarted (if on windows), and Git still cannot be found:
+  * Se o Git está instalado, você reiniciou o computador (se usa Windows) e o Git ainda não é encontrado:
 
-  * Search your computer for a file "git.exe".
+  * Procure no seu computador o arquivo "git.exe".
 
-    Note for yourself, which directory it is saved in.
+    Anote em qual diretório ele está salvo.
 
-  * Go to the Environment variables in windows, select the variable "PATH" and click edit. Add the directory where you have found your Git installation.
+  * Vá para as variáveis de ambiente no Windows, selecione a variável "PATH" e clique em editar. Adicione o diretório onde você encontrou a sua instalação do Git.
 
-  * Save and close.
+  * Salve e feche.
 
-  * Restart Android Studio.
+  * Reinicie o Android Studio.
 
 (troubleshooting-android-studio-check-for-uncommitted-changes)=
-#### Step 2: Check for uncommitted changes.
+#### Passo 2: Verificar se há alterações não confirmadas.
 
-  * In Android Studio, open the 'Commit' tab (1) on the left-hand side. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * You can see either "Changes" (called "Default changeset" in older Android Studio versions) (2) or "Unversioned Files" (3):
+  * No Android Studio, abra a aba 'Commit' (1) no lado esquerdo. ![Aba Commit: alterações não confirmadas](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
+  * Você pode ver "Changes" (chamado "Default changeset" em versões mais antigas do Android Studio) (2) ou "Unversioned Files" (3):
 
-    * For "Changes", you probably updated 'Gradle' or changed some of the file contents by mistake.
+    * Em "Changes", você provavelmente atualizou o 'Gradle' ou alterou o conteúdo de algum arquivo por engano.
 
-    * Right click on "Changes" and select "Rollback…" (1)
+    * Clique com o botão direito em "Changes" e selecione "Rollback…" (1)
 
-      ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
+      ![Aba Commit: desfazer as alterações (Rollback)](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-    * The files are fetched again from the Git server. If there are no other changes in the commit tab, go to [Step 3](#gradle-resync).
+    * Os arquivos são baixados de novo do servidor Git. Se não houver outras alterações na aba Commit, vá para o [Passo 3](#gradle-resync).
 
-  * If you can see "Unversioned Files", you might have stored files in your source code directory by mistake. Maybe they are important files: like your keystore file, that should be moved elsewhere. If you don't know what those files are and you have not created them yourself, you can delete them.
+  * Se você vir "Unversioned Files", talvez tenha guardado arquivos no diretório do código-fonte por engano. Talvez sejam arquivos importantes, como o arquivo da sua keystore, que devem ser movidos para outro lugar. Se você não sabe que arquivos são esses e não os criou, pode apagá-los.
 
-    * Use your regular file explorer on your computer to move or cut and paste that file to a safe place.
+    * Use o explorador de arquivos normal do seu computador para mover (ou recortar e colar) esse arquivo para um lugar seguro.
 
-    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the **AAPS** directory anymore.
+    * Volte ao Android Studio e clique no botão Refresh (4) na aba Commit para ter certeza de que o arquivo não está mais no diretório do **AAPS**.
 
-      If there are no other changes in the Commit tab, go to [Step 3](#gradle-resync).
+      Se não houver outras alterações na aba Commit, vá para o [Passo 3](#gradle-resync).
 
 
-#### Step 3: Resync Gradle (again)
+#### Passo 3: Sincronizar o Gradle (de novo)
 
-Follow the instructions at [Gradle Resync](#gradle-resync).
+Siga as instruções em [Gradle Resync](#gradle-resync).
 
 ### Git Pull Failed - Please tell me who you are
 
-If you see this message, Git needs you to identify yourself.
+Se você vir esta mensagem, o Git precisa que você se identifique.
 
-![Git identification](../images/studioTroubleshooting/164_Git_Identify.png)
+![Identificação no Git](../images/studioTroubleshooting/164_Git_Identify.png)
 
-Open the terminal and type the following two commands, one after the other.
+Abra o terminal e digite os dois comandos a seguir, um depois do outro.
 
 ```
 git config --global user.name "Your name here"
 git config --global user.email your.email@here.com
 ```
 
-Your name needs to be written between quotation marks.
+O seu nome precisa ser escrito entre aspas.
 
-![Git identification fix](../images/studioTroubleshooting/164_Git_Identify2.png)
+![Correção da identificação no Git](../images/studioTroubleshooting/164_Git_Identify2.png)
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
@@ -133,147 +133,147 @@ The minimum compatible Gradle version is 8.5.
 The maximum compatible Gradle JVM version is 19.
 ```
 
-Or:
+Ou:
 
 ```
 Cause: error: invalid source release: 21
 ```
 
-If you experience the above error message, you need to download a correct JVM version before you can try rebuild again:
+Se você receber a mensagem de erro acima, precisa baixar a versão correta da JVM antes de tentar compilar de novo:
 
-1.  Check in the [requirement table](#Building-APK-recommended-specification-of-computer-for-building-apk-file) which JVM version you need for the **AAPS** version you are building, and make a note of it.
+1.  Verifique na [tabela de requisitos](#Building-APK-recommended-specification-of-computer-for-building-apk-file) qual versão da JVM você precisa para a versão do **AAPS** que está compilando, e anote-a.
 
-2. Open the Gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
+2. Abra a visualização Gradle clicando no elefante (1) no lado direito do Android Studio, abra as configurações (2) e selecione **Gradle Settings** (3):
 
-![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
+![Abrir Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. The example below shows JVM 21 is labeled as “jbr-21”. If you find it, just select it, and you are done. If not available, then select **Download JDK** (2).
+3.  No campo **Gradle JDK**, verifique se a versão certa está selecionada (1). Se não estiver, clique no campo e veja se ela já está disponível na lista. O exemplo abaixo mostra que a JVM 21 aparece como “jbr-21”. Se você encontrá-la, basta selecioná-la e pronto. Se não estiver disponível, selecione **Download JDK** (2).
 
 
-![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
+![Selecionar Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. In Version (1), select the JDK required for your **AAPS** version (the one you made a note of when you checked the requirement table). In Vendor (2) select any Vendor. Location (3): do not change. Click **Download** (4).
+4. Em Version (1), selecione o JDK necessário para a sua versão do **AAPS** (o que você anotou quando verificou a tabela de requisitos). Em Vendor (2), selecione qualquer fornecedor. Location (3): não altere. Clique em **Download** (4).
 
-![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
+![Selecionar o JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
-5.  Close the **Settings** dialog with **OK**.
-6. You now need to restart the Gradle Sync. Follow the instructions at [Gradle Resync](#gradle-resync).
+5.  Feche o diálogo **Settings** com **OK**.
+6. Agora você precisa reiniciar o Gradle Sync. Siga as instruções em [Gradle Resync](#gradle-resync).
 
 (incompatible-version-of-android-gradle-plugin)=
-### Incompatible version of Android Gradle plugin
+### Versão incompatível do Android Gradle plugin
 
-  If you experience the following error message
+  Se você receber a seguinte mensagem de erro
 
 `The project is using an incompatible version (AGP x.x.x) of the Android Gradle plugin. Latest supported version is AGP x.x.x`
 
-  ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+  ![Versão incompatível do Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
 
-  You are using an outdated version of Android Studio. In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
+  Você está usando uma versão desatualizada do Android Studio. No menu, vá para Help > Check for updates e instale todas as atualizações encontradas do Android Studio e dos plugins dele.
 
 (troubleshooting_androidstudio-could-not-resolve-no-cached-version)=
 ### Could not resolve/No cached version
 
-  You might get this error message:
+  Você pode receber esta mensagem de erro:
 
 ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
-  * On the right side, open the Gradle tab (1).
+  * No lado direito, abra a aba Gradle (1).
 
-    Make sure the button shown at (2) is *NOT* selected.
+    Verifique se o botão mostrado em (2) *NÃO* está selecionado.
 
-    ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
+    ![Modo offline do Gradle](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * Now you need to trigger a [Gradle Resync](#gradle-resync)
+  * Agora você precisa iniciar um [Gradle Resync](#gradle-resync)
 
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
 ### Unable to start daemon process
 
-  If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately there is nothing that the **AAPS** developers can do about this!
+  Se você vir uma mensagem de erro como a abaixo, provavelmente está usando um sistema Windows 10 de 32 bits. Isso não é compatível com o Android Studio 3.5.1 e mais recentes e, infelizmente, os desenvolvedores do **AAPS** não podem fazer nada sobre isso!
 
-  There is information on the internet about how to determine whether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
+  Há informações na internet sobre como saber se o seu sistema operacional é de 32 ou de 64 bits, por exemplo [esta](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Captura de tela: Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Gradle Resync
 
-  If you can still see the message that the gradle sync failed, now select the link **Try again** (1). ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  Se você ainda vê a mensagem de que o gradle sync falhou, agora selecione o link **Try again** (1). ![Mensagem de falha do Gradle Sync](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
-  If you don't see the message anymore, you can still trigger this manually:
+  Se você não vê mais a mensagem, ainda pode iniciar isso manualmente:
 
-  * Open the Gradle tab (1) on the right border of Android Studio.
+  * Abra a aba Gradle (1) na borda direita do Android Studio.
 
     ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
-  * Right-click on AAPS (2)
+  * Clique com o botão direito em AAPS (2)
 
-  * Click on "Reload Gradle Project" (3)
+  * Clique em "Reload Gradle Project" (3)
 
-## Generate Signed APK generated successfully with 0 build variants
+## Generate Signed APK gerado com sucesso com 0 build variants
 
-When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
+Quando você gera o apk assinado, pode receber a notificação de que a geração deu certo, mas que foram geradas '0 build variants':
 
-![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
+![APK gerado com 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-This is a false warning. Check the directory for your selected "Destination folder" for generation (step [Generate Signed APK](#Building-APK-generate-signed-apk)) and you will find the generated apk there!
-
-
-## App was created with compiler/kotlin warnings
-
-If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
-
- ![Gradle finished with warnings](../images/studioTroubleshooting/13_BuildWithWarnings.png)
-
-Your apk was built successfully and can be transferred to your phone!
+Este é um aviso falso. Verifique o diretório que você selecionou como "Destination folder" na geração (passo [Gerar APK assinado](#Building-APK-generate-signed-apk)) e você vai encontrar o apk gerado lá!
 
 
-## No CGM data is received by AAPS
+## App criado com avisos do compilador/kotlin
 
-* If you are using patched Dexcom G6 app: this app is outdated. Use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
+Se a sua compilação terminou com sucesso, mas você recebeu avisos do compilador ou do kotlin (indicados por um ponto de exclamação amarelo ou azul), você pode simplesmente ignorar esses avisos.
 
-* If you are using xDrip: identify receiver as described on [xDrip settings page](#xdrip-identify-receiver).
+ ![Gradle terminou com avisos](../images/studioTroubleshooting/13_BuildWithWarnings.png)
+
+O seu apk foi compilado com sucesso e pode ser transferido para o seu telefone!
 
 
-## Apk not installed
+## O AAPS não recebe dados do CGM
 
-![phone app not installed](../images/Update_AppNotInstalled.png)
+* Se você usa o app Dexcom G6 modificado (patched): este app está desatualizado. Use o app [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) no lugar dele.
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* This error usually means the new apk is signed with a different keystore than your installed **AAPS**. If you still have your previous keystore, select it and build again. Otherwise, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
-* If "App not installed" is displayed on your phone follow these steps:
+* Se você usa o xDrip: identifique o receptor como descrito na [página de configurações do xDrip](#xdrip-identify-receiver).
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
-2. Uninstall **AAPS** on your phone.
-3. Enable airplane mode & turn off Bluetooth.
-4. Install new version (“app-full-release.apk”)
-5. [Import settings](../Maintenance/ExportImportSettings.md)
-6. Turn Bluetooth back on and disable airplane mode
 
-## Apk installed but old version
+## Apk não instalado
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](#Update-to-new-version-update-your-local-copy)
+![App do telefone não instalado](../images/Update_AppNotInstalled.png)
 
-## None of the above worked
+* Verifique se você transferiu o arquivo “app-full-release.apk” para o seu telefone.
+* Este erro normalmente significa que o novo apk foi assinado com uma keystore diferente da do **AAPS** instalado. Se você ainda tem a sua keystore anterior, selecione-a e compile de novo. Caso contrário, veja [Reinstalar o AAPS com uma nova keystore](#reinstall-aaps).
+* Se aparecer "App not installed" (App não instalado) no seu telefone, siga estes passos:
 
-If none of the above tips helped you might consider building the apk from scratch:
+1. [Exportar configurações](../Maintenance/ExportImportSettings.md) (na versão do AAPS que já está instalada no seu telefone)
+2. Desinstale o **AAPS** do seu telefone.
+3. Ative o modo avião e desligue o Bluetooth.
+4. Instale a nova versão (“app-full-release.apk”)
+5. [Importar configurações](../Maintenance/ExportImportSettings.md)
+6. Ligue o Bluetooth de novo e desative o modo avião
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
+## Apk instalado, mas com a versão antiga
 
-2. Have your key password and key store password ready.
+Se você compilou o app com sucesso, transferiu-o para o seu telefone e instalou-o com sucesso, mas o número da versão continua o mesmo, talvez você tenha esquecido de [atualizar a sua cópia local](#Update-to-new-version-update-your-local-copy)
 
-    Or you just use a new keystore.
+## Nenhuma das soluções acima funcionou
 
-3. Build the apk from scratch as described [here](#Building-APK-download-AAPS-code).
+Se nenhuma das dicas acima ajudou, você pode compilar o apk do zero:
 
-4. When you have built the apk successfully delete the existing apk on your phone, transfer the new apk to your phone and install.
-5. [Import settings](../Maintenance/ExportImportSettings.md) again to restore your objectives and settings.
-6. You should check your battery optimization options and disable them again.
+1. [Exportar configurações](../Maintenance/ExportImportSettings.md) (na versão do AAPS que já está instalada no seu telefone)
 
-## Worst case scenario
+2. Tenha em mãos a senha da chave (key password) e a senha da keystore (key store password).
 
-If the above does not solve your build issue you may wish to try to uninstall Android Studio completely and rebuild from scratch.  Some users find that this can resolve their build problem.  When deleting Android Studio, do not delete Android user settings and **Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e.
+    Ou simplesmente use uma nova keystore.
+
+3. Compile o apk do zero, como descrito [aqui](#Building-APK-download-AAPS-code).
+
+4. Depois de compilar o apk com sucesso, apague o apk que está no seu telefone, transfira o novo apk para o telefone e instale-o.
+5. [Importar configurações](../Maintenance/ExportImportSettings.md) de novo para restaurar os seus objetivos e configurações.
+6. Verifique as opções de otimização de bateria e desative-as de novo.
+
+## Pior cenário
+
+Se o que foi descrito acima não resolver o seu problema de compilação, você pode tentar desinstalar o Android Studio completamente e compilar de novo do zero.  Alguns usuários descobriram que isso pode resolver o problema de compilação.  Ao apagar o Android Studio, não apague as configurações de usuário do Android e **desinstale todos os arquivos ligados ao Android Studio.** Se você não remover completamente o Android Studio com todos os arquivos ocultos, a desinstalação pode causar novos problemas em vez de resolver os que você já tem. Manuais para a desinstalação completa podem ser encontrados na internet, por exemplo
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](#Building-APK-install-android-studio).
+Instale o Android Studio do zero, como descrito [aqui](#Building-APK-install-android-studio).

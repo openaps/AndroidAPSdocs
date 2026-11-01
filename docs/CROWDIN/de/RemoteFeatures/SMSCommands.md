@@ -99,7 +99,7 @@ Möchtest Du mehr als eine Rufnummer hinterlegen, müssen diese durch ein Semiko
 
 ![Erlaubte Telefonnummern](../images/sms_allowed_numbers.png)
 
-#### Remote bolus min distance
+#### Minimaler Abstand Remote-Bolus
 
 - You can define the minimum delay (in minutes) between two boluses issued via SMS.
 - Aus Sicherheitsgründen musst Du mindestens zwei erlaubte Telefonnummern hinzufügen, um diesen Wert zu bearbeiten.
@@ -127,50 +127,50 @@ For a safer PIN, do not use the same digit many times (_e.g._ 111111) or a seque
 
 * Under **Test One-Time-Password**, enter the one-time passcode from the authenticator app on the caregiver phone followed by your PIN in **Code to check**:
 
-Example:
+Beispiel:
 * Der von der Authenticator angezeigte Einmal-Passcode ist 457051
 * Deine zwingend erforderliche PIN ist 2401
 * Der zu testende Code ist damit: 4570512401
 
-If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. **There is no button you can press!** The process is now complete, there is no “OK” button you need to press after entering the code:
+Wenn der Eingabe richtig ist, ändert sich der rote Text „FALSCHE PIN“ automatisch in ein grünes „OK“. **Es gibt kein Bestätigungsfeld, auf das Du tippen kannstt!** Der Prozess ist nun abgeschlossen, es gibt keine "OK"-Taste, die Du nach Eingabe des Codes drücken musst:
 
 ![Test One-Time-Password and Reset Authenticators](../images/sms_authenticator_test.png)
 
-You should now be set up with SMS commands.
+Es ist nun alles für die Nutzung der SMS-Befehle eingerichtet.
 
-Use the **Reset Authenticators** button at the bottom of the **Authenticator setup** screen if you want to remove provisioned authenticators. (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again.)
+Use the **Reset Authenticators** button at the bottom of the **Authenticator setup** screen if you want to remove provisioned authenticators. (Durch das Zurücksetzen des Authentikators werden ALLE erteilten Berechtigungen ungültig. Diese müssen anschließend neu eingerichtet werden.)
 
 ## SMS-Befehle verwenden
 
 ### Erste Schritte bei der Nutzung der SMS-Befehle
 
-1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the **AAPS** phone. You should get a response similar to that shown here:
+1) Um zu überprüfen, ob alles richtig eingerichtet ist, teste die Verbindung, indem Du „bg“ als SMS-Nachricht vom Eltern-Smartphone an das **AAPS**-Smartphone schickst. Die Rückmeldung sollte in etwa so aussehen:
 
 ![grafik](../images/remote-control-06.png)
 
-If you don't receive any response, check the [Troubleshooting](#SMSCommands-troubleshooting) section below.
+Wenn Du keine Rückmeldung bekommst, schaue im Abschnitt [Problembehebung](#SMSCommands-troubleshooting) nach.
 
-2)  Now try an SMS command that requires the authenticator, _e.g._ “target hypo”. The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by the additional secret **PIN** known only by caregivers/followers (a string of twelve digits in total, assuming your PIN has 6 digits).
+2)  Probiere nun einen SMS-Befehl, _z.B._ „target hypo“, der eine Authentifzierung benötigt, aus. The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by the additional secret **PIN** known only by caregivers/followers (a string of twelve digits in total, assuming your PIN has 6 digits).
 
-When you try sending an SMS command for the first time, try it in the presence of the **AAPS** phone, to see how it works:
+Wenn Du das allererste Mal einen SMS-Befehl schicken möchtest, schaue, dass das **AAPS**-Smartphone neben Dir liegt, sodass Du auf beiden Geräten nachverfolgen kannst was passiert:
 
 ![grafik](../images/remote-control-16.png)
 
-The caregiver’s phone will receive an SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully.
+Das Eltern-/Betreuenden-Smartphone wird eine SMS von **AAPS** erhalten, die bestätigt, dass der SMS-Befehl erfolgreich remote ausgeführt wurde.
 
-If your command is successful, you will receive a reply to confirm this. If there is a problem you will receive an error message. See [Troubleshooting](#SMSCommands-troubleshooting) below for common errors.
+Wenn Dein SMS-Befehl erfolgreich ausgeführt ist, wird Dir das durch eine Antwort-SMS bestätigt. Du wirst eine Fehlermeldung erhalten, wenn ein Problem aufgetreten sein sollte. Der Abschnitt [Problembehebung und FAQ](#SMSCommands-troubleshooting) unten hilft bei Lösungen zu häufig auftretenden Fehlern weiter.
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**Hinweis**: Eine SMS-Flat auf beiden Telefonen kann nützlich sein, da u.U. viele SMS hin und her gesandt werden.
 
 ### Mahlzeitenbolus über SMS-Befehle abgegeben
 
-Remote bolusing of insulin can be done via **SMS Commands** or through a paired **AAPSClient** (see [Master ↔ Client control](#client-master-control)); it cannot be done through the Nightscout website. Carbs can be announced through SMS or **AAPSClient** as well. With SMS, it is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
+Remote bolusing of insulin can be done via **SMS Commands** or through a paired **AAPSClient** (see [Master ↔ Client control](#client-master-control)); it cannot be done through the Nightscout website. Carbs can be announced through SMS or **AAPSClient** as well. With SMS, it is not possible to send both carbs and insulin commands in one single SMS message. Diese Befehle müssen wie folgt gesendet werden:
 
-1)  Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to **Treatments** → **Insulin** in **AAPS**. 2)  Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to **Treatments** → **Carbs** in **AAPS**.
+1)  Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to **Treatments** → **Insulin** in **AAPS**. 2) Sende die Kohlenhydrate (_z. B._ “carbs 20” wird 20g Kohlenhydrate ankündigen). This is equivalent to **Treatments** → **Carbs** in **AAPS**.
 
-To avoid hypos, it is a good idea to start conservatively, by bolusing **less insulin** than would be needed according to your carb ratio, because you are not taking into account the current glucose level or glucose trend.
+Um Hypos zu vermeiden, solltest Du zu Beginn **weniger Insulin** bolen, als es Dein Mahlzeitenfaktor vorgeben würde. Das wird gemacht, da in der Regel weder der aktuelle Glukosewert noch der aktuelle Glukosetrend berücksichtigt sind.
 
-**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can combine **AAPSClient** with SMS commands: carbs entered on a paired **AAPSClient** need no authentication code and are therefore quicker than SMS commands. Carbs or other treatments entered on the Nightscout website are **not** applied while client control is on; **AAPS** is then in [hardened mode](#client-master-control-hardened-mode).
+**Die Reihenfolge, in der Du die SMS sendest, ist wichtig**. Wenn Du eine große Kohlenhydratmenge (egal auf welchem Weg) ankündigst und SMB aktiviert sind, wird **AAPS** sofort darauf mit einem (Teil)-Bolus reagieren. Wenn Du _nach_ der Ankündigung der Kohlenhydrate, dann versuchst einen Bolus abzugeben, wirst Du eine frustrierende Verzögerung erfahren und eine "Bolusabgabe läuft"-Meldung erhalten. Du wirst dann überprüfen müssen, wie viel Insulin bereits als SMB abgegeben wurde. Oder wenn Dir gar nicht auffällt, dass SMBs abgegeben wurden und Dein eigener Bolus ebenfalls durchgelaufen ist und damit insgesamt zu viel Insulin für die Mahlzeit gebolt wurde. Deshalb schicke, beim remote bolen einer Mahlzeit, den Bolus immer _vor_ der Kohlenhydratankündigung. If you prefer, you can combine **AAPSClient** with SMS commands: carbs entered on a paired **AAPSClient** need no authentication code and are therefore quicker than SMS commands. Carbs or other treatments entered on the Nightscout website are **not** applied while client control is on; **AAPS** is then in [hardened mode](#client-master-control-hardened-mode).
 
 (SMSCommands-commands)=
 ## Kommandos
@@ -180,24 +180,24 @@ To avoid hypos, it is a good idea to start conservatively, by bolusing **less in
 :local: true
 ```
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app). The commands are not case-sensitive, you can use lower or upper case.
+Kommandos müssen in Englisch gesendet werden, die Antwort erhältst Du in Deiner lokalen Sprache, wenn die Zeichenfolge bereits [übersetzt ist](#translations-translate-strings-for-AAPS-app). In den Befehlen ist die Groß- oder Kleinschreibung nicht relevant.
 
-![SMS Commands Example](../images/SMSCommands.png)
+![Beispiele für SMS-Kommandos](../images/SMSCommands.png)
 
-The **SMS Commands Tables** below show all the possible SMS commands. _Example values_ are given, to aid understanding. The commands have the same range of possible values (targets, percent profile etc.) which are allowable in the **AAPS** app itself.
+Die **Tabellen der SMS-Befehle** unten zeigen alle verfügbaren SMS-Befehle. Um die Nutzung noch verständlicher zu machen, sind auch _Beispiele_ enthalten. Die Gültigkeitsbereiche der Befehle (Zielwerte, Prozentsätze der Profile etc.) sind mit denen der **AAPS**-App identisch.
 
 (authentication-or-not)=
 ### Authentifizieren oder nicht?
 
-Some SMS commands give an immediate response, and some SMS commands require strong **authentication** through the Authenticator app. A simple enquiry like “**BG**” (which requests an update on current glucose) is quick to type, doesn't need authenticating, and returns the **AAPS** status information shown below:
+Einige SMS-Befehle führen zu einer sofortigen Reaktion, und einige SMS-Befehle erfordern eine starke **-Authentifizierung** über die Authenticator-App. Eine einfache Abfrage wie „**BG**“, die den aktuellen Glukosewert (engl. Bloodglucose) abfragt, ist schnell eingetippt und braucht nicht authentifiziert zu werden. Sie gibt die unten gezeigte **AAPS**-Statusinformation zurück:
 
 ![grafik](../images/remote-control-06.png)
 
-Commands which need more security require a code to be entered, for example:
+Befehle, die kritischer sind und daher zusätzlich abgesichert werden, benötigen einen weiteren einzugebenden Code, wie zum Beispiel:
 
 ![SMS authenticated](../images/remote-control-07.png)
 
-The *Auth* column in the tables below, indicates whether such a strong authentication is required for each command.
+Die Spalte *Auth* in den folgenden Tabellen zeigt, ob eine solch starke Authentifizierung für den jeweiligen Befehl erforderlich ist.
 
 ### CGM-Daten
 
@@ -240,16 +240,16 @@ Some pumps take a temp basal only in percent, others only in U/h. If you use the
 
 ### Bolus
 
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! In this case, the response would be *Remote bolus not available. Try again later.* This response is also sent when the pump is currently delivering a bolus.
+Ein Bolus via SMS ist innerhalb von 15 Minuten nach der letzten Bolusgabe in AAPS oder nach dem letzten SMS-Kommando nicht möglich. Den Wert kannst Du nur anpassen, wenn mind. zwei Rufnummern eingetragen sind. In diesem Fall wäre die Antwort *Bolusabgabe aus der Ferne nicht verfügbar.  Versuche es später erneut.* Diese Antwort wird auch gesendet, wenn die Pumpe gerade einen Bolus abgibt.
 
-| Befehl               | Auth | Funktion & *Antwort*                                                                                                                                              |
-| -------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BOLUS 1.2            | Ja   |                                                                                                                                                                   |
-| BOLUS 0.60 MEAL      | Ja   | Gibt den 0.60 IE Bolus ab <br/>**und** setzt das [temporäre Ziel „Bald essen“](#TempTargets-eating-soon-temp-target)                                        |
-| CARBS 5              | Ja   | Trägt 5 Gramm ein, ohne einen Bolus abzugeben                                                                                                                     |
-| CARBS 5 17:35/5:35PM | Ja   | Gibt 5 Gramm um 17:35h ein.<br/>Das akzeptiert Format hängt vom <br/> eingestellten Zeitformat (12h/24h) auf dem Smartphone ab.                       |
-| EXTENDED 2 120       | Ja   | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only). |
-| EXTENDED STOP/CANCEL | Ja   | Stoppt den erweiterten Bolus                                                                                                                                      |
+| Befehl               | Auth | Funktion & *Antwort*                                                                                                                                                            |
+| -------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BOLUS 1.2            | Ja   |                                                                                                                                                                                 |
+| BOLUS 0.60 MEAL      | Ja   | Gibt den 0.60 IE Bolus ab <br/>**und** setzt das [temporäre Ziel „Bald essen“](#TempTargets-eating-soon-temp-target)                                                      |
+| CARBS 5              | Ja   | Trägt 5 Gramm ein, ohne einen Bolus abzugeben                                                                                                                                   |
+| CARBS 5 17:35/5:35PM | Ja   | Gibt 5 Gramm um 17:35h ein.<br/>Das akzeptiert Format hängt vom <br/> eingestellten Zeitformat (12h/24h) auf dem Smartphone ab.                                     |
+| EXTENDED 2 120       | Ja   | Startet einen erweiterten Bolus von 2 IE für 120 Min.<br/>Nur für [kompatible Pumpen](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only). |
+| EXTENDED STOP/CANCEL | Ja   | Stoppt den erweiterten Bolus                                                                                                                                                    |
 
 ### Profil
 
@@ -290,27 +290,27 @@ The percentage must be between 30 and 250 %, as in the app. A value outside this
 
 ### Was kann mit SMS-Befehlen _nicht_ gemacht werden?
 
-1)  **You cannot set a _temporary_ profile switch** (so for example, setting "profile exercise" for 60 minutes), although you can permanently switch to “profile exercise”. Temporary profile switches can instead be set through **AAPSClient**.
+1) Ein **zeitlich begrenzter Profilwechsel_ (z. B. ein „Trainings-Profil“ für 60 Minuten setzen) ist _nicht über SMS-Befehle möglich**. Ein dauerhafter Profilwechsel auf ein „Trainings-Profil“ jedoch schon. Temporary profile switches can instead be set through **AAPSClient**.
 
-2)  **You cannot cancel automations** or **set user-defined targets** but there are approximate solutions: As an example, imagine the normal profile target is 5.5. You have set an automation in AAPS, to always set a high target of 7.0 between 2.30pm and 3.30pm because of a sports class in school, and a condition of the automation is that “no temp target exists”. This week, you have been told at short notice that the sports class is cancelled, and is being replaced by a pizza-eating session, but your kid is already at school with the **AAPS** phone. If the high temporary target of 7.0 is started by the automation, and you cancel it (on the **AAPS** phone, or remotely) the conditions for the automation are still met and **AAPS** will simply set the high target again, a minute later.
+2)  **Automatisierungen** können nicht abgebrochen werden oder **benutzerdefinierte Ziele** können nicht gesetzt werden. Es gibt aber andere Lösungen: Stelle Dir beispielsweise vor, dass in Deinen normalen Profil das Glukoseziel 5.5 bzw. 100 sei. Du hast in AAPS eine Automatisierung erstellt, die in der Nacht zwischen 2:30h und 3:30h wegen des Sportunterrichts ein hohes Ziel von 7.0 bzw. 126 setzt, wenn "temporäres Ziel nicht vorhanden" als Bedingung zutrifft. Dein Kind ist mit dem **AAPS**-Smartphone bereits in der Schule und in dieser Woche wird der Sportunterricht kurzfristig abgesagt und durch eine Pizza-Party ersetzt. Wenn das hohe temporäre Ziel von 7.0 bzw. 126 durch die Automatisierung gesetzt wurde und Du dieses Ziel (am **AAPS**-Smartphone oder remote) abbrichst, ist die Bedingung weiterhin erfüllt und **AAPS** wird einfach in der nächsten Minute das hohe temporäre Ziel erneut setzen.
 
-**If you did have access to the AAPS phone**, you could uncheck/modify the automation, or, if you don’t want to do that, you could simply set a new temp target of 5.6 for 60 min by pressing on the target on the main screen, or via **Manage** → **Temp Target**. This would prevent the automation from setting the high target of 7.0.
+**If you did have access to the AAPS phone**, you could uncheck/modify the automation, or, if you don’t want to do that, you could simply set a new temp target of 5.6 for 60 min by pressing on the target on the main screen, or via **Manage** → **Temp Target**. Dadurch wird die Automatisierung daran gehindert, ein hohes Ziel von 7.0 (bzw. 126 mg/dl) zu setzen.
 
-**If you don’t have access to the AAPS phone** SMS commands can be used for an approximate fix: for example, by using the command “target meal” to set a target of 5.0 for 45 mins (other default targets are 8.0 for activity or hypo, see Table). However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use **AAPSClient** to do this.
+**Wenn Du keinen Zugriff auf das AAPS-Telefon hast**, kannst Du mit SMS-Befehlen eine ähnliche Lösung erreichen: Mit dem Befehl "target meal" kannst Du beispielsweise ein Ziel von 5.0 für 45 Minuten setzen (andere voreingestellte Ziele sind Aktivität 8.0 ( bzw. 144 mg/dl) oder Hypo, siehe Tabelle). However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use **AAPSClient** to do this.
 
 ### Was passiert, wenn ich es mir nach dem Senden eines Befehls anders überlege?
 
-**AAPS** will only deliver on the most recent command. So, if you type “bolus 1.5”, and then, without authenticating, you send a new command “bolus 1”, it will ignore the earlier 1.5 command. **AAPS** will always send the caregiver's phone a response to confirm what the SMS command is before you are prompted to enter the authentication code, as well as a response following the action.
+**AAPS** führt nur den letzten (aktuellen) Befehl aus. Wenn Du also "bolus 1.5" eingibst und dann ohne Authentifizierung einen neuen Befehl „bolus 1“ hinterherschickst, wird der vorherige Befehl (bolus 1.5) ignoriert. **AAPS** sendet dem Eltern-/Betreuenden-Smartphone zunächst immer eine Antwort zur Bestätigung des auszuführenden Befehls, bevor Du dazu aufgefordert wirst, den Authentifizierungscode einzugeben. Danach wird eine Antwort zur ausgeführten Aktion geschickt.
 
 ### Warum habe ich keine Antwort auf einen SMS-Befehl erhalten?
 
-It could be for one of these reasons:
+Es könnte aus einem dieser Gründe sein:
 
-1)  The message has not got through to the phone (network issues). 2)  **AAPS** is still in the process of processing the request (_e.g._ a bolus, which can take some time to deliver depending on your bolus rate). 3)  The **AAPS** phone does not have a good Bluetooth connection to the pump when the command is received, and the command has failed (this usually creates an alarm on the **AAPS** phone).
+1) Die Nachricht hat es nicht bis zum AAPS-Smartphone geschafft (Netzwerk-Probleme). 2)  **AAPS** verarbeitet noch eine Anfrage (_z. B._ einen Bolus, der je nach Insulinmenge einige Zeit zur Abgabe benötigt). 3) Das **AAPS**-Smartphone hat beim Empfang des Befehls eine schwache Bluetooth-Verbindung zur Pumpe und das Kommando konnte nicht ausgeführt werden (dies löst normalerweise einen Alarm auf dem **AAPS**-Smartphone aus).
 
 ### Keinerlei Reaktion auf SMS-Befehle
 
-On the caregiver phone and/or **AAPS** phone, try disabling the following options :
+Versuche auf dem Eltern-/Betreuenden-Smartphone und/oder dem **AAPS**-Smartphone die folgenden Optionen deaktivieren:
 * **Als Chat-Nachricht senden** ![SMS als Chatnachricht deaktivieren](../images/SMSdisableChat.png)
 * Wenn Du die Android Messages-App oder die Google Messages-App nutzt, deaktiviere RCS-Nachrichten:
   - Öffne den entsprechenden SMS-Nachrichtenverlauf
@@ -320,7 +320,7 @@ On the caregiver phone and/or **AAPS** phone, try disabling the following option
 
 ### Fehler beim Ausführen der Befehle
 
-There are several possible reasons the command may not be successful:
+Es gibt verschiedene Gründe, warum der Befehl möglicherweise nicht erfolgreich war:
 
 * Die Einrichtung der SMS-Befehle ist nicht vollständig/korrekt
 * Der Befehl wurde im falschen Format geschickt (z.B. „disconnect pump 45" anstelle von „pump disconnect 45“)
@@ -335,19 +335,19 @@ Common errors are shown in the examples below:
 
 ### Wie kann ich einen Befehl stoppen, nachdem er bereits authentifiziert wurde?
 
-You can't. However, you can cancel a bolus sent by SMS on the **AAPS** phone itself, by simply cancelling it on the bolusing popup, if you are quick. Many SMS commands (apart from bolusing and carb announcements) can be easily reversed, or actions taken to mitigate unintended effects if a mistake is made.
+Er kann nicht gestoppt werden. Du kannst allerdings eine Bolusgabe, die per SMS geschickt wurde direkt auf dem **AAPS**-Smartphone abbrechen, indem Du im Bolus-Popup auf "Abbrechen" tippst. Dazu musst Du aber schnell sein. Viele Befehle (abgesehen von Bolus- und Kohlenhydrat-Ankündigungen) können entweder leicht rückgängig gemacht werden oder deren ungewollte Auswirkungen können abgemildert werden.
 
-For errors in bolusing and carb announcements, you can still take action. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
+Bei Fehlern beim Bolen und Kohlenydrat-Ankündigungen, kannst Du trotzdem handeln. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
 
 ### Mehrfach-SMS
 
-If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. This could be xDrip, for example. If so, please ensure that xDrip (or any other app) does not upload treatments to NightScout.
+Wenn Du Antworten mehrfach erhältst (_z. B._ auf einen Profilwechsel), hast Du möglicherweise versehentlich einen Zirkelbezug mit anderen Apps erzeugt. This could be xDrip, for example. If so, please ensure that xDrip (or any other app) does not upload treatments to NightScout.
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+Wenn die andere App auf mehreren Smartphones installiert ist, musst Du den Upload auf allen deaktivieren.
 
 (sms-commands-too-many-messages)=
 ### Ich bekomme von SMS-Befehlen zu viele SMS-Nachrichten. Kann ich die Häufigkeit reduzieren oder stoppen?
 
-Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include Whatsapp, Lime, Telegram, and Facebook Messenger.
+Die Nutzung der SMS-Befehle kann viele automatisierte Nachrichten vom **AAPS**-Smartphone auf das Smartphone der Eltern/Betreuenden auslösen. Du wirst auch Nachrichten für aktive **AAPS**-Automatisierungen (z. B. “Basal-Profil in der Pumpe aktualisiert”) erhalten. Eine SMS-Flat für den Mobilfunktvertrag des **AAPS**-Smartphones und des Eltern-/Betreuenden-Smartphones wird sehr empfohlen, wenn viele SMS verschickt werden. Es kann auch hilfreich sein, SMS-Benachrichtigungen, Alarme und Vibrationen auf allen Smartphones zu deaktivieren. SMS-Befehle können nur mit den entsprechenden bestätigenden SMS genutzt werden. Falls Du direkt mit Deinem Kind (wenn es alt genug ist) kommunizieren möchtest, solltest Du etwas anderes als SMS dazu nutzen. **AAPS**-Elterrn/Betreuende nutzen daher häufig andere Kommunikations-Apps wie WhatsApp, Lime, Telegram und den Facebook-Messenger.
 
-It is possible to disable the "Profile changed" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly**  `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+It is possible to disable the "Profile changed" SMS, when the Profile change originated from Nightscout. Um das zu erreichen, erstelle eine Datei mit **genau** dem Namen `do_not_send_sms_on_profile_change` im Verzeichnis `extra` Deines AAPS-Ordners.

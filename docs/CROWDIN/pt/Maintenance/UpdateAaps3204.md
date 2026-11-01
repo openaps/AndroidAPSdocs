@@ -1,26 +1,26 @@
-# Updating to AAPS 3.2.0.4
+# Atualizar para o AAPS 3.2.0.4
 
 (update-aaps-3204)=
 
-## Construa você em vez de fazer download
+## Compilar em vez de transferir
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**A app AAPS (um ficheiro apk) não está disponível para transferência, por causa das regras sobre dispositivos médicos. É legal compilar a app para uso próprio, mas não pode dar uma cópia a outras pessoas!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Veja a [página FAQ](../UsefulLinks/FAQ.md) para mais detalhes.
 
-## Computer and software specifications for building AAPS 3.2.0.4
+## Especificações do computador e do software para compilar o AAPS 3.2.0.4
 
-* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk.
+* Pode ser necessária uma versão específica do **[Android Studio](https://developer.android.com/studio/)** para compilar o apk.
 
-| AAPS Version            | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                                  | up to Meerkat                                          | 8.2    | 17  |
+| Versão AAPS             | Versão<br/>preferida do<br/>Android Studio | Versão<br/>alternativa do<br/>Android Studio | Gradle | JVM |
+| ----------------------- | ------------------------------------------------------ | -------------------------------------------------------- | ------ |:--- |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                    | até Meerkat                                              | 8.2    | 17  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#incompatible-gradle-jvm) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+A «versão preferida» já inclui a versão adequada da JVM. A versão preferida é também a versão mínima que pode usar para compilar o **AAPS**. **NÃO** vai conseguir compilar numa versão mais antiga do que a «preferida». Se usar outra versão, pode ter problemas relacionados com a versão da JVM. Veja a página [Resolução de problemas do Android Studio](#incompatible-gradle-jvm) para ajudar a resolver estes problemas. Se a sua versão atual do Android Studio não está na tabela, tem de a atualizar primeiro.
 
-The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
+A versão do Gradle está ligada ao código-fonte. Recebe sempre a versão correta do Gradle quando transfere / atualiza o código-fonte. Só é indicada aqui como referência. Não precisa de fazer nada com ela.
 
-* [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
+* Os [sistemas Windows de 32 bits](#troubleshooting_androidstudio-unable-to-start-daemon-process) não são suportados pelo Android Studio. Tenha em conta que **um CPU de 64 bits e um sistema operativo de 64 bits são condições obrigatórias.** Se o seu sistema NÃO cumpre esta condição, tem de mudar o hardware ou o software em causa, ou o sistema inteiro.
 
 <table class="tg">
 <tbody>
@@ -46,7 +46,7 @@ The Gradle version is linked to the source code, you will always get the correct
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Resolution</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Mínimo <br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
@@ -55,87 +55,87 @@ The Gradle version is linked to the source code, you will always get the correct
 </tbody>
 </table>
 
-**It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
+**Recomenda-se muito (não é obrigatório) usar um SSD (Solid State Disk) em vez de um HDD (Hard Disk Drive), porque a compilação do ficheiro apk do AAPS demora menos tempo.**  Pode na mesma usar um HDD para compilar o ficheiro apk do **AAPS**. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
 
-## Help and support during 3.2.0.4 building process
+## Ajuda e suporte durante a compilação da versão 3.2.0.4
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html) section, please consult that first.
+Se tiver dificuldades ao compilar a app **AAPS**, existe uma secção dedicada de [**resolução de problemas do Android Studio**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html). Consulte-a primeiro.
 
-If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
+Se achar que algo nas instruções de compilação está errado, falta ou não é claro, ou se ainda tiver dificuldades, contacte o grupo de utilizadores do **AAPS** no [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) ou no [Discord](https://discord.gg/4fQUWHZ4Mw). Se quiser mudar algo (atualizar capturas de ecrã _etc._), envie um [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
 ```{note}
-This page provides both example pictures for the **New** and old (**Classic**) Android Studio user interfaces.
+Esta página mostra imagens de exemplo para a nova interface (**New**) e para a antiga (**Classic**) do Android Studio.
 ```
 
-## Overview for updating 3.2.0.x to 3.2.0.4
+## Visão geral da atualização da 3.2.0.x para a 3.2.0.4
 
 ```{contents} Steps for updating to 3.2.0.4
 :depth: 1
 :local: true
 ```
 
-### Export your current settings
+### Exporte as suas definições atuais
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Exporte as suas definições a partir da versão do **AAPS** que já tem no telefone. Pode não precisar delas, mas é melhor prevenir do que remediar.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Veja a página [Exportar e importar definições](ExportImportSettings.md) se não se lembrar de como se faz.
 
-### Update your local AAPS copy
+### Atualize a sua cópia local do AAPS
 
-* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
+* Abra o seu projeto AAPS existente no Android Studio. Pode ter de selecionar o seu projeto. Clique (duas vezes) no projeto AAPS.
 
-![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
-
-<br>
-
-![Android Studio - Select Project](https://androidaps.readthedocs.io/en/3.1/_images/01_ProjectSelection.png)
-
-* In the menu bar of Android Studio, select Git -> Fetch
-
-![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+![Android Studio - Selecionar o projeto](../images/update/01_ProjectSelection.png)
 
 <br>
 
-![Android Studio Menu - Git - Fetch](https://androidaps.readthedocs.io/en/3.1/_images/02_GitFetch.png)
+![Android Studio - Selecionar o projeto](https://androidaps.readthedocs.io/en/3.1/_images/01_ProjectSelection.png)
 
-* You will see a message in the lower right corner that Fetch was successful.
+* Na barra de menus do Android Studio, selecione Git -> Fetch
 
-![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
-
-<br>
-
-![Android Studio Menu - Git - Fetch successful](https://androidaps.readthedocs.io/en/3.1/_images/03_GitFetchSuccessful.png)
-
-* In the menu bar, now select Git -> Pull
-
-![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+![Menu do Android Studio - Git - Fetch](../images/update/02_GitFetch.png)
 
 <br>
 
-![Android Studio Menu - Git - Pull](https://androidaps.readthedocs.io/en/3.1/_images/04_GitPull.png)
+![Menu do Android Studio - Git - Fetch](https://androidaps.readthedocs.io/en/3.1/_images/02_GitFetch.png)
 
-* Leave all options as they are (origin/master) and select Pull
+* Vai ver uma mensagem no canto inferior direito a dizer que o Fetch foi concluído com sucesso.
 
-![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
+![Menu do Android Studio - Git - Fetch concluído](../images/update/03_GitFetchSuccessful.png)
 
 <br>
 
-![Android Studio - Git - Pull dialog](https://androidaps.readthedocs.io/en/3.1/_images/05_GitPullOptions.png)
+![Menu do Android Studio - Git - Fetch concluído](https://androidaps.readthedocs.io/en/3.1/_images/03_GitFetchSuccessful.png)
 
-* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
+* Na barra de menus, selecione agora Git -> Pull
+
+![Menu do Android Studio - Git - Pull](../images/update/04_GitPull.png)
+
+<br>
+
+![Menu do Android Studio - Git - Pull](https://androidaps.readthedocs.io/en/3.1/_images/04_GitPull.png)
+
+* Deixe todas as opções como estão (origin/master) e selecione Pull
+
+![Android Studio - Git - janela Pull](../images/update/05_GitPullOptions.png)
+
+<br>
+
+![Android Studio - Git - janela Pull](https://androidaps.readthedocs.io/en/3.1/_images/05_GitPullOptions.png)
+
+* Aguarde enquanto a transferência decorre. Vai ver esta informação na barra inferior. Quando terminar, vai ver uma mensagem de sucesso.
 
   ```{note}
-  The files that were updated may vary! This is not an indication of a problem.
+  Os ficheiros atualizados podem ser diferentes! Isto não indica um problema.
   ```
 
 
-![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+![Android Studio - Pull concluído](../images/update/06_GitPullSuccess.png)
 
 <br>
 
-![Android Studio - Pull successful](https://androidaps.readthedocs.io/en/3.1/_images/06_GitPullSuccess.png)
+![Android Studio - Pull concluído](https://androidaps.readthedocs.io/en/3.1/_images/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Wait until it is finished.
+* A Gradle Sync vai ser executada para transferir algumas dependências. Aguarde até terminar.
 
 ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
@@ -143,69 +143,69 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio - Gradle Sync](https://androidaps.readthedocs.io/en/3.1/_images/40_BackgroundTasks.png)
 
-### Select JVM version 17
+### Selecione a versão 17 da JVM
 
-- Open the Gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
+- Abra a vista Gradle clicando no elefante (1) no lado direito do Android Studio, abra as definições (2) e selecione **Gradle Settings** (3):
 
-![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
-
-<br>
-
-![Open Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
-
-- In **Gradle JDK** field (1), check if the appropriate version: **jbr-17** is selected. If not, click on the field, and see if it is already available in the list. If it is not in the list (the screenshot below shows a computer where only **jbr-21** is available), select **Download JDK...** (2).
-
-![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
-
-
-
-- In Version (1), select **17**. In Vendor (2) select JetBrains Runtime or any Vendor. Location (3): do not change.
-
-![Select JDK 17](https://androidaps.readthedocs.io/en/3.2/_images/163_JDKSelection.png)
-
-- Close the **Settings** dialog with **OK**.
-
-### Select the AAPS 3.2.0.4 branch
-
-- At the bottom left, select the Git symbol, right-click on 3.2.0.4 and Checkout.
-
-![Select Download JDK](../images/studioTroubleshooting/17_Checkout.png)
+![Abrir as Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
 
 <br>
 
-![Select Download JDK](../images/studioTroubleshooting/17_CheckoutOld.png)
+![Abrir as Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
 
-### Sync project with Gradle
+- No campo **Gradle JDK** (1), verifique se a versão adequada, **jbr-17**, está selecionada. Se não estiver, clique no campo e veja se ela já está na lista. Se não estiver na lista (a captura de ecrã abaixo mostra um computador onde só existe a **jbr-21**), selecione **Download JDK...** (2).
+
+![Selecionar Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
+
+
+
+- Em Version (1), selecione **17**. Em Vendor (2), selecione JetBrains Runtime ou qualquer fornecedor. Location (3): não altere.
+
+![Selecionar o JDK 17](https://androidaps.readthedocs.io/en/3.2/_images/163_JDKSelection.png)
+
+- Feche a janela **Settings** com **OK**.
+
+### Selecione o branch AAPS 3.2.0.4
+
+- No canto inferior esquerdo, selecione o símbolo do Git, clique com o botão direito em 3.2.0.4 e depois em Checkout.
+
+![Selecionar Download JDK](../images/studioTroubleshooting/17_Checkout.png)
+
+<br>
+
+![Selecionar Download JDK](../images/studioTroubleshooting/17_CheckoutOld.png)
+
+### Sincronize o projeto com o Gradle
 
 ```{admonition} WARNING!
 :class: warning
-**Never update Gradle.** Always sync it with the project.
+**Nunca atualize o Gradle.** Sincronize-o sempre com o projeto.
 ```
 
-Use the elephant icon and Sync Project with Gradle Files (or follow [this](#gradle-resync)) for the new UI.
+Na nova interface, use o ícone do elefante e Sync Project with Gradle Files (ou siga [isto](#gradle-resync)).
 
 ![Sync Project with Gradle Files](../images/studioTroubleshooting/06_GradleResyncElephant.png)
 
-Or ([this](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html#gradle-resync)) for the classic UI.
+Ou ([isto](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html#gradle-resync)) na interface clássica.
 
 ![Sync Project with Gradle Files](../images/studioTroubleshooting/06_GradleResyncElephantOld.png)
 
-### Build the Signed 3.2.0.4 APK
+### Compile o APK 3.2.0.4 assinado
 
-Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+O seu código-fonte é agora a versão atual publicada, e todos os requisitos foram verificados. Está na altura de compilar o apk assinado, como descrito na [secção Gerar o APK assinado](#Building-APK-generate-signed-apk).
 
-### Transfer and install the 3.2.0.4 APK
+### Transfira e instale o APK 3.2.0.4
 
-You need to transfer the apk to your phone so you can install it.
+Tem de transferir o apk para o seu telefone para o poder instalar.
 
 ```{note}
-If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
-For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
+Se compilou com a mesma keystore existente no Android Studio, não precisa de remover a app existente do seu telefone. Quando instalar o apk, siga as instruções no ecrã para instalar a atualização.
+Noutros casos, por exemplo se criou uma nova keystore no Android Studio para o seu apk assinado, tem de apagar a app antiga antes de instalar o apk. **Não se esqueça de exportar as suas definições!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
+Veja as instruções para [transferir e instalar o AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
-### Check AAPS version 3.2.0.4 on phone
+### Verifique a versão 3.2.0.4 do AAPS no telefone
 
-After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
+Depois de instalar o novo apk, pode ver a versão do AAPS no seu telefone: toque no menu de três pontos no canto superior direito e depois em Sobre. Deve ver a versão atual.
 

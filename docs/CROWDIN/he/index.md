@@ -115,7 +115,7 @@ Setup Wizard <./SettingUpAaps/SetupWizard.md>
 Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
 Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
 - Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
-- Preferences <./SettingUpAaps/Preferences.md>
+- Settings <./SettingUpAaps/Preferences.md>
 Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
@@ -174,7 +174,7 @@ Export/Import Settings <./Maintenance/ExportImportSettings.md>
 AAPS Release Notes <./Maintenance/ReleaseNotes.md>
 What changed in AAPS v4 <./Maintenance/V4Changes.md>
 Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update (fork) <./Maintenance/UpdateBrowserBuild.md>
+- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
 - Android Studio Update <./Maintenance/UpdateComputerBuild.md>
 End of life <./Maintenance/EndOfLife.md>
 

@@ -23,7 +23,7 @@
 :local: true
 ```
 
-In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+如果遇到問題，請參閱[瀏覽器建置疑難排解](../GettingHelp/BrowserBuildTroubleshooting.md)專頁。
 
 ### 匯出你的設定
 
@@ -105,6 +105,6 @@ In case you experience problems, see separate page for [browser build troublesho
 
 先深呼吸！
 
-Then check if your problem is already documented: see [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) if you build with **AAPS Builder**, or [Browser build troubleshooting](#aaps-ci-troubleshooting) otherwise.
+接著，確認您的問題是否已有相關說明：如果您使用 **AAPS Builder** 建置，請參閱 [AAPS Builder 疑難排解](#aaps-builder-troubleshooting)；否則，請參閱 [瀏覽器建置疑難排解](#aaps-ci-troubleshooting)。
 
 如果你需要進一步幫助，請聯繫其他**AAPS**使用者，透過[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)。

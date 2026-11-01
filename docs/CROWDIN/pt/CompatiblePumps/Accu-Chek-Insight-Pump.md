@@ -1,197 +1,197 @@
 # Accu-Chek Insight
 
-**Este software é parte de uma solução DIY (faça você mesmo) e não é um produto, no entanto é necessário que VOCÊ leia, aprenda e compreenda o sistema, incluindo a forma de o usar. Não é algo que faz a gestão total da sua diabetes, mas permite melhorá-la, bem como a sua qualidade de vida se estiver disposto a dar-lhe o tempo necessário para isso. Não tenha demasiada pressa, permita-se ter tempo para aprender. Você é o responsável como utiliza e configura o sistema.**
+**Este software faz parte de uma solução DIY (faça você mesmo) de pâncreas artificial e não é um produto, mas exige que O UTILIZADOR leia, aprenda e compreenda o sistema, incluindo a forma de o usar. Não é algo que faz toda a gestão da sua diabetes por si, mas permite-lhe melhorar a sua diabetes e a sua qualidade de vida, se estiver disposto a dedicar-lhe o tempo necessário. Não tenha pressa, dê a si próprio tempo para aprender. Só o utilizador é responsável pelo que faz com ele.**
 
-```{admonition} Accu-Chek Insight is being phased out :class: note
+```{admonition} A Accu-Chek Insight está a ser retirada do mercado :class: note
 
-Roche is withdrawing from the insulin pump market to refocus its diabetes portfolio on the Accu-Chek SmartGuide CGM. It has communicated the end of sales of both the Accu-Chek Combo and Accu-Chek Insight pumps; its remaining Accu-Chek Solo micropump is also being wound down (last deliveries in Germany at the end of 2025). The change is being rolled out by region, starting in Germany, with other European markets expected to follow. Support for the Insight is already listed as ended (see [Pumps no longer sold](./Future-possible-Pump-Drivers.md)). If you rely on this pump, plan ahead for a transition to a supported pump.
+A Roche está a sair do mercado das bombas de insulina para concentrar a sua oferta para a diabetes no CGM Accu-Chek SmartGuide. A Roche anunciou o fim das vendas das bombas Accu-Chek Combo e Accu-Chek Insight; a sua última bomba, a microbomba Accu-Chek Solo, também está a ser descontinuada (últimas entregas na Alemanha no final de 2025). A mudança está a ser feita por região, a começar pela Alemanha; espera-se que outros mercados europeus se sigam. O suporte da Insight já está indicado como terminado (veja [Bombas que já não são vendidas](./Future-possible-Pump-Drivers.md)). Se depende desta bomba, planeie com antecedência a passagem para uma bomba suportada.
 
     <br />```{note}
-    Before **AAPS** had a native Insight driver, the Insight was controlled through the separate [SightRemote](https://github.com/TebbeUbben/SightRemote) app. SightRemote is no longer needed or maintained: if you still have it installed from those days, uninstall it and use a current version of **AAPS** instead.
+    Antes de o **AAPS** ter um controlador próprio para a Insight, a Insight era controlada pela app separada [SightRemote](https://github.com/TebbeUbben/SightRemote). A SightRemote já não é necessária nem mantida: se ainda a tem instalada desses tempos, desinstale-a e use uma versão atual do **AAPS**.
     
 
-```{contents} Table of contents :depth: 1 :local: true
+```{contents} Índice :depth: 1 :local: true
 
-    <br />## Pump capabilities with AAPS
+    <br />## Funções da bomba com o AAPS
     
-    * Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-    * Automatic DST and timezone handling.
+    * Comunica com o **AAPS** pelo Bluetooth do próprio telefone, sem um dispositivo de comunicação adicional.
+    * Mudança da hora de verão e do fuso horário automática.
     
-    ## Hardware and software requirements
+    ## Requisitos de hardware e software
     
-    * A Roche Accu-Chek Insight pump (any firmware, they all work)
+    * Uma bomba Roche Accu-Chek Insight (qualquer firmware, todos funcionam)
     
-    Note: AAPS will write data always in **first basal rate profile in the pump**.
+    Nota: o AAPS escreve os dados sempre no **primeiro perfil de basal da bomba**.
     
-    * An Android phone running Android 12 or newer (see [Phones](../Getting-Started/Phones.md))
-    * The AAPS app installed on your phone
+    * Um telefone Android com Android 12 ou mais recente (veja [Telefones](../Getting-Started/Phones.md))
+    * A app AAPS instalada no telefone
     
-    ## Setup
+    ## Configuração
     
-    * The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: **Menu** > **Settings** > **Communication** > **Remove device**.
+    * A bomba Insight só deve estar ligada a um dispositivo de cada vez. Se já usou o controlo remoto da Insight (medidor), tem de retirar o medidor da lista de dispositivos emparelhados da bomba: **Menu** > **Settings** > **Communication** > **Remove device**.
     
        ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
     
-    * In [Configuration > Pump](#Config-Builder-pump), select the **Accu-Chek Insight** card. Only one pump can be active at a time.
+    * Em [Configuração > Bomba](#Config-Builder-pump), selecione o cartão **Accu-Chek Insight**. Só pode estar ativa uma bomba de cada vez.
     
-       ![Configuration > Pump with the Accu-Chek Insight plugin](../images/v4/Configuration/configuration_pump_list_1.png)
+       ![Configuração > Bomba com o plugin Accu-Chek Insight](../images/v4/Configuration/configuration_pump_list_1.png)
     
-       Once it is selected, the **Accu-Chek Insight** card shows two buttons, **Settings** and **Open plugin**:
+       Depois de selecionado, o cartão **Accu-Chek Insight** mostra dois botões, **Definições** e **Abrir plugin**:
     
-       ![The Accu-Chek Insight plugin selected in Configuration > Pump](../images/v4/Pumps/accu_chek_insight_enabled.png)
+       ![O plugin Accu-Chek Insight selecionado em Configuração > Bomba](../images/v4/Pumps/accu_chek_insight_enabled.png)
     
-       **Settings** opens the settings of the Accu-Chek Insight driver (see [Settings in AAPS](#Accu-Chek-Insight-Pump-settings-in-aaps)).
+       **Definições** abre as definições do controlador Accu-Chek Insight (veja [Definições no AAPS](#Accu-Chek-Insight-Pump-settings-in-aaps)).
     
-       **Open plugin** (or **Manage → Pump**) opens the Accu-Chek Insight pump screen. Before a pump is paired it looks like this:
+       **Abrir plugin** (ou **Gerir → Bomba**) abre o ecrã da bomba Accu-Chek Insight. Antes de a bomba ser emparelhada, o ecrã tem este aspeto:
     
-       ![Accu-Chek Insight pump screen before pairing](../images/v4/Pumps/accu_chek_insight_pump_screen.png)
+       ![Ecrã da bomba Accu-Chek Insight antes do emparelhamento](../images/v4/Pumps/accu_chek_insight_pump_screen.png)
     
     (accu-chek-insight-pairing)=
-    ### Pairing
+    ### Emparelhamento
     
-    * On the pump screen, tap **Insight pairing**. The pairing wizard opens and searches for nearby Bluetooth devices (top of the picture below).
-    * On the Insight pump, go to **Menu** > **Settings** > **Communication** > **Add Device**. The pump shows the following screen (bottom of the picture below) with the serial number of the pump.
+    * No ecrã da bomba, toque em **Emparelhamento Insight**. Abre-se o assistente de emparelhamento, que procura dispositivos Bluetooth próximos (parte de cima da imagem abaixo).
+    * Na bomba Insight, vá a **Menu** > **Settings** > **Communication** > **Add Device**. A bomba mostra o ecrã seguinte (parte de baixo da imagem abaixo) com o número de série da bomba.
     
        ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
     
-    * Back on your phone, tap the pump serial number in the list of Bluetooth devices. If Android asks you to confirm the pairing, tap **Pair**.
+    * De volta ao telefone, toque no número de série da bomba na lista de dispositivos Bluetooth. Se o Android pedir para confirmar o emparelhamento, toque em **Emparelhar**.
     
        ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
     
-    * The pump and the phone both show a code. Check that the codes are the same on both devices. Confirm on the pump, and tap **Yes** on the phone. (Tap **No** if the codes do not match.)
+    * A bomba e o telefone mostram ambos um código. Verifique se os códigos são iguais nos dois dispositivos. Confirme na bomba e toque em **Sim** no telefone. (Toque em **Não** se os códigos não forem iguais.)
     
        ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
     
-    * The phone shows **Pairing completed**. Tap **Exit** to return to the pump screen.
+    * O telefone mostra **Emparelhamento concluído**. Toque em **Sair** para voltar ao ecrã da bomba.
     
        ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
     
-    * To check that all is well, look at the pump screen (**Manage → Pump**). Once the pump is paired, it shows information about the pump, such as **Serial number**, **Manufacturing date**, **Release software version** and **Bluetooth address**.
+    * Para verificar se está tudo bem, veja o ecrã da bomba (**Gerir → Bomba**). Depois de a bomba estar emparelhada, o ecrã mostra informações sobre a bomba, como **Número de Série**, **Data de fabrico**, **Versão do software (release)** e **Endereço Bluetooth**.
     
        ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
     
-       ```{admonition} Older screenshot
+       ```{admonition} Captura de ecrã antiga
        :class: note
-       Apart from the top of the first picture, the pairing screenshots above are from an earlier **AAPS** version and may look different in **AAPS** 4.
+       Exceto a parte de cima da primeira imagem, as capturas de ecrã do emparelhamento acima são de uma versão anterior do **AAPS** e podem ter um aspeto diferente no **AAPS** 4.
        ```
     
-    * To remove the pairing, tap **Unpair** on the pump screen and confirm **Reset pairing information?**. The **Insight pairing** button then appears again.
+    * Para remover o emparelhamento, toque em **Desemparelhar** no ecrã da bomba e confirme **Repor as informações de emparelhamento?**. Depois, o botão **Emparelhamento Insight** volta a aparecer.
     
-    Note: There is no permanent connection between the pump and the phone. **AAPS** only connects when needed (for example to set a temporary basal rate, give a bolus or read the pump history). Otherwise the batteries of the phone and the pump would drain far too fast.
+    Nota: não há uma ligação permanente entre a bomba e o telefone. O **AAPS** só se liga quando é necessário (por exemplo, para definir uma basal temporária, dar um bólus ou ler o histórico da bomba). Caso contrário, as baterias do telefone e da bomba gastavam-se demasiado depressa.
     
     (Accu-Chek-Insight-Pump-settings-in-aaps)=
-    ## Settings in AAPS
+    ## Definições no AAPS
     
-    Open the settings with **Settings** on the **Accu-Chek Insight** card in **Configuration** > **Pump**, or with the gear icon in the top-right corner of the pump screen.
+    Abra as definições com **Definições** no cartão **Accu-Chek Insight** em **Configuração** > **Bomba**, ou com o ícone da roda dentada no canto superior direito do ecrã da bomba.
     
-    ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
+    ![Definições do controlador Accu-Chek Insight](../images/v4/Pumps/accu_chek_insight_settings.png)
     
-    In the Insight settings in **AAPS** you can enable the following options:
+    Nas definições da Insight no **AAPS** pode ativar as seguintes opções:
     
-    * **Log reservoir changes**: automatically records an insulin cartridge change when you run the "fill cannula" program on the pump.
+    * **Registar mudanças de reservatório**: regista automaticamente uma troca do cartucho de insulina quando executa o programa «fill cannula» na bomba.
     
-    * **Log tube changes**: adds a note to the **AAPS** database when you run the "tube filling" program on the pump.
+    * **Registar mudanças de tubo**: adiciona uma nota à base de dados do **AAPS** quando executa o programa «tube filling» na bomba.
     
-    * **Log site changes**: adds a note to the **AAPS** database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
+    * **Registar mudanças de local**: adiciona uma nota à base de dados do **AAPS** quando executa o programa «cannula filling» na bomba. **Nota: uma mudança de local também repõe o Autosens.**
     
-    * **Log battery changes**: records a battery change when you put a new battery in the pump.
+    * **Registar mudanças de bateria**: regista uma troca de pilha quando coloca uma pilha nova na bomba.
     
-    * **Log operating mode changes**: adds a note to the **AAPS** database whenever you start, stop or pause the pump.
+    * **Registar mudanças do modo de funcionamento**: adiciona uma nota à base de dados do **AAPS** sempre que inicia, para ou pausa a bomba.
     
-    * **Log alerts**: adds a note to the **AAPS** database whenever the pump issues an alert (except reminders, bolus and TBR cancellation, which are not recorded).
+    * **Registar alertas**: adiciona uma nota à base de dados do **AAPS** sempre que a bomba emite um alerta (exceto lembretes e cancelamento de bólus e de basal temporária, que não são registados).
     
-    * **Enable TBR emulation**: the Insight pump can only set temporary basal rates (TBRs) up to 250%. To get around this limit, TBR emulation tells the pump to deliver an extended bolus for the extra insulin if a TBR of more than 250% is requested.
+    * **Ativar a emulação da basal temporária**: a bomba Insight só consegue definir basais temporárias (TBR) até 250%. Para contornar este limite, a emulação da basal temporária manda a bomba administrar um bólus prolongado com a insulina extra quando é pedida uma basal temporária acima de 250%.
     
-      **Note: Only use one extended bolus at a time. Several extended boluses at the same time might cause errors.**
+      **Nota: use apenas um bólus prolongado de cada vez. Vários bólus prolongados ao mesmo tempo podem causar erros.**
     
-    * **Disable vibrations on manual bolus delivery**: stops the Insight pump from vibrating when it delivers a manual bolus (or extended bolus). Only available with Insight firmware 3.x.
+    * **Desativar vibrações na entrega manual de bólus**: impede a bomba Insight de vibrar quando administra um bólus manual (ou um bólus prolongado). Só disponível com o firmware 3.x da Insight.
     
-    * **Disable vibrations on automated bolus delivery**: stops the Insight pump from vibrating when it delivers an automatic bolus (SMB or temp basal with TBR emulation). Only available with Insight firmware 3.x.
+    * **Desativar vibrações na entrega automática de bólus**: impede a bomba Insight de vibrar quando administra um bólus automático (SMB ou basal temporária com emulação da basal temporária). Só disponível com o firmware 3.x da Insight.
     
-    * **Min. recovery duration [s]** and **Max. recovery duration [s]**: how long **AAPS** waits before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you have connection problems, choose a longer wait time.
-        <br><br>Example for min. recovery duration = 5 and max. recovery duration = 20
-        <br><br>no connection -> wait <b>5</b> sec.
-          <br>  retry -> no connection -> wait <b>6</b> sec.
-          <br>  retry -> no connection -> wait <b>7</b> sec.
-          <br>  retry -> no connection -> wait <b>8</b> sec.
+    * **Duração mínima da recuperação [s]** e **Duração máxima da recuperação [s]**: quanto tempo o **AAPS** espera antes de tentar de novo depois de uma tentativa de ligação falhada. Pode escolher de 0 a 20 segundos. Se tiver problemas de ligação, escolha um tempo de espera mais longo.
+        <br><br>Exemplo para duração mín. da recuperação = 5 e duração máx. da recuperação = 20
+        <br><br>sem ligação -> esperar <b>5</b> s.
+          <br>  tentar de novo -> sem ligação -> esperar <b>6</b> s.
+          <br>  tentar de novo -> sem ligação -> esperar <b>7</b> s.
+          <br>  tentar de novo -> sem ligação -> esperar <b>8</b> s.
           <br>...
-          <br>retry -> no connection -> wait <b>20</b> sec.
-          <br>retry -> no connection -> wait <b>20</b> sec.
+          <br>tentar de novo -> sem ligação -> esperar <b>20</b> s.
+          <br>tentar de novo -> sem ligação -> esperar <b>20</b> s.
           <br>...
     
-    * **Disconnect delay [s]**: how long (in seconds) **AAPS** waits before disconnecting from the pump after an operation is finished. You can choose from 0 to 15 seconds. The default value is 5 seconds.
+    * **Atraso para desligar [s]**: quanto tempo (em segundos) o **AAPS** espera antes de se desligar da bomba depois de terminar uma operação. Pode escolher de 0 a 15 segundos. O valor predefinido é 5 segundos.
     
-    For periods when the pump was stopped, **AAPS** logs a temporary basal rate of 0%.
+    Nos períodos em que a bomba esteve parada, o **AAPS** regista uma basal temporária de 0%.
     
-    ### The pump screen
+    ### O ecrã da bomba
     
-    The Accu-Chek Insight pump screen (**Manage → Pump**) shows the current status of the pump, for example **Status**, **Last connected**, **Operating mode**, **Battery**, **Reservoir level**, today's total daily doses (**TDD Bolus**, **TDD Basal**), basal rates and the last bolus. Once the pump is paired, it has these buttons:
+    O ecrã da bomba Accu-Chek Insight (**Gerir → Bomba**) mostra o estado atual da bomba, por exemplo **Estado**, **Última ligação**, **Modo de funcionamento**, **Bateria**, **Nível do reservatório**, as doses diárias totais de hoje (**TID Bólus**, **TID Basal**), as taxas basais e o último bólus. Depois de a bomba estar emparelhada, o ecrã tem estes botões:
     
-    * **Refresh**: refreshes the pump status.
-    * **Enable notification of TBR end (pump setting)** / **Disable notification of TBR end (pump setting)**: a standard Insight pump sounds an alarm when a TBR finishes. This button turns that alarm on or off without the need for configuration software.
-    * **Unpair**: removes the pairing with the pump (see [Pairing](#accu-chek-insight-pairing)).
+    * **Atualizar**: atualiza o estado da bomba.
+    * **Ativar notificação do fim da basal temporária (configuração da bomba)** / **Desativar notificação do fim da basal temporária (configuração da bomba)**: uma bomba Insight normal toca um alarme quando uma basal temporária termina. Este botão liga ou desliga esse alarme sem precisar de software de configuração.
+    * **Desemparelhar**: remove o emparelhamento com a bomba (veja [Emparelhamento](#accu-chek-insight-pairing)).
     
     ![Screenshot of Insight Status](../images/Insight_Status2.png)
     
-    ```{admonition} Older screenshot
+    ```{admonition} Captura de ecrã antiga
     :class: note
-    The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen looks different and also has an **Unpair** button.
+    A captura de ecrã acima é de uma versão anterior do **AAPS**. No **AAPS** 4 o ecrã da bomba tem um aspeto diferente e tem também um botão **Desemparelhar**.
     
 
-## Configurações na bomba
+## Definições na bomba
 
-Configure alarms in the pump as follows:
+Configure os alarmes na bomba da seguinte forma:
 
 * Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound
-* Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
+* Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (retire todas as barras)
 * Menu > Modes > Signal mode > Quiet
 
-This will silence all alarms from the pump, allowing AAPS to decide if an alarm is relevant to you. If AAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
+Isto silencia todos os alarmes da bomba e deixa o AAPS decidir se um alarme é relevante para si. Se o AAPS não confirmar um alarme, o volume do alarme aumenta (primeiro bip, depois vibração).
 
 (Accu-Chek-Insight-Pump-vibration)=
 
-### Vibration
+### Vibração
 
-Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AAPS issues an SMB or TBR emulation delivers an extended bolus).
+Conforme a versão do firmware da sua bomba, a Insight vibra brevemente sempre que é administrado um bólus (por exemplo, quando o AAPS dá um SMB ou quando a emulação da basal temporária administra um bólus prolongado).
 
-* Firmware 1.x: No vibration by design.
-* Firmware 2.x: Vibration cannot be disabled.
-* Firmware 3.x: AAPS delivers bolus silently.
+* Firmware 1.x: sem vibração, por conceção.
+* Firmware 2.x: a vibração não pode ser desativada.
+* Firmware 3.x: o AAPS administra o bólus em silêncio.
 
-Firmware version can be found in the menu.
+A versão do firmware pode ser vista no menu.
 
-## Battery replacement
+## Troca da pilha
 
-Battery life for Insight when looping range from 10 to 14 days, max. 20 days. The user reporting this is using Energizer lithium batteries.
+Com o loop, a pilha da Insight dura de 10 a 14 dias, no máx. 20 dias. O utilizador que relatou isto usa pilhas de lítio Energizer.
 
-The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
+A bomba Insight tem uma pequena bateria interna que mantém as funções essenciais, como o relógio, a funcionar enquanto troca a pilha removível. Se a troca da pilha demorar muito tempo, esta bateria interna pode ficar sem carga, o relógio é reiniciado e terá de introduzir uma nova hora e data depois de colocar uma pilha nova. Se isto acontecer, todos os registos no AAPS anteriores à troca da pilha deixam de entrar nos cálculos, porque não é possível identificar a hora correta.
 
 (Accu-Chek-Insight-Pump-insight-specific-errors)=
 
-## Insight specific errors
+## Erros específicos da Insight
 
-### Bólus estendido
+### Bólus prolongado
 
-Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
+Use apenas um bólus prolongado de cada vez, porque vários bólus prolongados ao mesmo tempo podem causar erros.
 
-### Time out
+### Tempo esgotado
 
-Sometimes the Insight pump does not answer while **AAPS** sets up the connection. **AAPS** then shows the notification "Timeout during handshake - reset bluetooth".
+Por vezes a bomba Insight não responde enquanto o **AAPS** estabelece a ligação. O **AAPS** mostra então a notificação «Tempo excedido durante o handshake - reiniciar o Bluetooth».
 
-![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
+![Insight: reiniciar o Bluetooth](../images/Insight_ResetBT.png)
 
-If this happens, turn off Bluetooth on the pump AND on the phone for about 10 seconds, then turn it back on.
+Se isto acontecer, desligue o Bluetooth na bomba E no telefone durante cerca de 10 segundos e depois volte a ligá-lo.
 
-## Crossing time zones with Insight pump
+## Mudar de fuso horário com a bomba Insight
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-insight).
+Para informações sobre viagens entre fusos horários, veja a secção [Viajar entre fusos horários com bombas](#timezone-traveling-insight).
 
-## Where to get help
+## Onde obter ajuda
 
-Development of the Insight driver is done by the community on a **volunteer** basis. Before requesting help, please:
+O controlador da Insight é desenvolvido pela comunidade em regime de **voluntariado**. Antes de pedir ajuda:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Leia** a secção relevante desta documentação para confirmar como a funcionalidade deve funcionar.
+2. **Pergunte** no canal *#AAPS* do [Discord](https://discord.gg/4fQUWHZ4Mw) ou num dos outros [canais da comunidade](../GettingHelp/WhereCanIGetHelp.md).
+3. **Comunique um erro**: procure primeiro nos [problemas existentes](https://github.com/nightscout/AndroidAPS/issues); se o seu não estiver na lista, abra um [novo problema](https://github.com/nightscout/AndroidAPS/issues) e anexe os seus [ficheiros de registo](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Ao pedir ajuda, indique a marca e o modelo do telefone, a versão do Android, a versão do **AAPS** e uma descrição clara do problema (o que mudou, quando funcionou pela última vez).

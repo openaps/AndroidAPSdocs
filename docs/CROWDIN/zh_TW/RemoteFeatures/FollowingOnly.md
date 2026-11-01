@@ -26,13 +26,13 @@
 
 * 許多看護熟悉Dexcom Follow，更喜歡其清晰的界面而非更複雜的應用。
 
-* Dexcom Follow對教師/祖父母以及對糖尿病和血糖水平知之甚少的人非常有用。 It has customizable alerts (BG level, what sound to play etc.). 如果傳感器仍在穩定中且產生多次假低血糖警報，則可以完全關閉警報，這非常實用。
+* Dexcom Follow對教師/祖父母以及對糖尿病和血糖水平知之甚少的人非常有用。它提供可自訂的警示（例如血糖數值、播放的音效等）。如果傳感器仍在穩定中且產生多次假低血糖警報，則可以完全關閉警報，這非常實用。
 
 #### 設置 Dexcom Follow：操作指南
 
 如果你使用非官方的 Dexcom 應用程式 BYODA 來接收傳感器資料，你或許仍能直接在 BYODA 應用程式中發送追蹤者邀請。
 
-你無法再透過第三方應用程式寄送邀請電子郵件給 Dexcom 的追蹤者。 In xDrip the invite request will just result in the message “invite not sent”.
+你無法再透過第三方應用程式寄送邀請電子郵件給 Dexcom 的追蹤者。在 xDrip 中，邀請要求只會顯示「未傳送邀請」訊息。
 
 你必須安裝官方的 Dexcom 應用程式，發送邀請，然後卸載官方應用程式。
 
@@ -42,7 +42,7 @@
 3) 滑動瀏覽介紹選單。 4)  對於傳感器代碼，選擇“無代碼”。 5)  在發射器序號下，選擇“手動輸入”，並輸入任何有效的發射器代碼（如果你知道一個過期的發射器代碼，請使用他，這樣就不會干擾目前發射器的運作，他們遵循特定的數字和字母組合格式：“NLNNNL”，並且只使用特定的組合，因此使用你已知有效的代碼會更容易）。 6)  應用程式嘗試查找發射器和傳感器，你將能夠邀請追蹤者：選擇應用程式左上角的小三個點，然後新增追蹤者。如果你的其中一個追蹤者更換了手機，需要重新發送邀請，也可以在此處刪除他們並重新發送新的邀請郵件，供他們在新設備上使用。 7)  在追蹤者的手機上，透過 App Store（iPhone）或 Play 商店（Android）下載並安裝 Dexcom Follow。設置 Dexcom Follow 應用程式，系統會提示你打開電子郵件以找到成為跟追蹤的邀請。    
 )  現在你可以刪除官方的 Dexcom G6 應用程式。
 
-For Dexcom Follow, the sensor data is then exported from the **AAPS** phone either directly from BYODA, or from xDrip, depending on which app you are using.
+接著，感測器資料會依您使用的應用程式，透過 BYODA 或 xDrip，從**AAPS** 手機匯出。
 
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352)（iOS）
@@ -80,33 +80,33 @@ For Dexcom Follow, the sensor data is then exported from the **AAPS** phone eith
 
 * 此應用可從[Google Play](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch)下載，並實時顯示 BG 資料。
 
-* The user can be alerted with customized noisy low and high alarms set.
+* 您可以設定自訂的高血糖與低血糖警報，並選擇是否播放較大聲的警示音。
 
 * BG 資料可以以 mmol/L 或 mg/dL 形式查看。
 
 * 需要 Android 5.0 及以上版本。
 
-* It has a dark UI, large readings and buttons, designed for usage at night.
+* 它採用深色介面，並提供大型讀取值與按鈕，專為夜間使用而設計。
 
-### xDrip (Android)
+### xDrip（Android）
 
-You can use xDrip as a follower.
+您可以將 xDrip 設定為追蹤端。
 
 #### 與 Nightscout 一起使用
 
-Set xDrip as a Nightscout Follower. 你將接收血糖和治療訊息，但不會接收基礎速率資料。
+將 xDrip 設定為 Nightscout 追蹤端。你將接收血糖和治療訊息，但不會接收基礎速率資料。
 
 ![圖像](../images/remote_control_and_following/xDrip+_Nightscout_Follower.png)
 
-#### Without Nightscout - xDrip BG data source
+#### 不使用 Nightscout：xDrip 血糖資料來源
 
-If your **AAPS** data source is xDrip (or if xDrip can also receive BG from another app like BYODA, Juggluco, ...) you can use it from the master phone to share data with xDrip followers, displaying BG, treatments and basal rates.
+如果您的 **AAPS** 資料來源是 xDrip（或 xDrip 也能接收其他應用程式（例如 BYODA、Juggluco 等）的血糖資料），您可以在主控手機上使用 xDrip，將資料分享給 xDrip 追蹤端，顯示血糖、治療資料和基礎率。
 
 ![圖像](../images/remote_control_and_following/xDrip+_Master_Sync.png)
 
-#### Without Nightscout - xDrip BG companion app
+#### 不使用 Nightscout：xDrip 血糖資料伴隨應用程式
 
-If your **AAPS** data source is not xDrip but you can display BG data from the Companion App data source, you can use it from the master phone to share data with xDrip followers, displaying BG, treatments and basal rates.
+如果您的 **AAPS** 資料來源不是 xDrip，但您可以透過伴隨應用程式資料來源顯示血糖資料，就可以在主控手機上使用該來源，將資料分享給 xDrip 追蹤端，顯示血糖、治療資料和基礎率。
 
 ![圖像](../images/remote_control_and_following/xDrip+_Companion_Sync.png)
 
@@ -180,16 +180,16 @@ M5Stack 是一個小盒子，可以用來進行多種程式開發，Martin 的�
 
 ### Sugarpixel
 
-SugarPixel 是一個連線 Dexcom 應用程式或 Nightscout 應用程式的次級血糖顯示警報系統，用於持續血糖監測。該設備顯示實時的血糖讀取值。 This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customizable display options and native multi-user following.
+SugarPixel 是一個連線 Dexcom 應用程式或 Nightscout 應用程式的次級血糖顯示警報系統，用於持續血糖監測。該設備顯示實時的血糖讀取值。這款 CGM 硬體監測器提供隨機音調的音檔警示（音量非常大）、為聽力受損者設計的震動警示、可自訂的顯示選項，以及原生多使用者追蹤功能。
 
 ![圖像](../images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
 
 ![圖像](../images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
 
-* SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with color-coded glucose values.
+* SugarPixel 提供多種顯示選項，可使用 mg/dL 或 mmol/L，並以不同顏色標示血糖值，符合使用者需求。
 * 標準錶盤顯示 BG、趨勢箭頭和增量。 Delta 是與上一次讀取值的變化值（正或負）。
-* SugarPixel can be customized for use in low brightness with the BG and Time face to see the user’s BG reading and current time on the user’s nightstand.
-* SugarPixel’s color face uses the entire display to show a single color representing the BG value. 這使得用戶可以在戶外的後院、露台或游泳池旁，透過窗戶從遠處看到血糖讀取值。
+* SugarPixel 可調整為低亮度模式，並使用血糖與時間畫面，讓使用者在床頭就能查看血糖讀取值和目前時間。
+* SugarPixel 的單色畫面會使用整個顯示區域，顯示代表血糖值的單一顏色。這使得用戶可以在戶外的後院、露台或游泳池旁，透過窗戶從遠處看到血糖讀取值。
 * 大 BG 錶盤對於戴眼鏡或隱形眼鏡的床頭櫃用戶來說特別有用。
 
 ### Nightscout 錶鐘在 Ulanzi TC001 上
@@ -199,7 +199,7 @@ SugarPixel 是一個連線 Dexcom 應用程式或 Nightscout 應用程式的次�
 ![追蹤 Nightscout 錶鐘](../images/FollowingNightscoutClock.png)
 
 * 這個錶鐘支援 mmol/L 和 mg/dL 單位，並包含可聽到的警報。
-* Several displays are available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
+* 有多種顯示方式可供選擇，請參閱 [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it)，瞭解各種顯示方式。
 * 設定和配置裝置只需幾個簡單步驟。一旦設置完成，只需供電和 Wi-Fi 即可運行。
 * Ulanzi TC001 裝置的購買價格顯著低於 SugarPixel。
 * 軟體及安裝說明可以在[Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file)上找到。

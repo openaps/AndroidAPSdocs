@@ -1,8 +1,8 @@
 # EOPatch2
 
-The patch needs rapid-acting U-100 insulin, such as NovoRapid or Humalog. Use the rapid-acting insulin your doctor has prescribed for you.
+貼片需要使用 U-100 速效胰島素，例如 NovoRapid 或 Humalog。請使用醫師為您開立的速效胰島素。
 
-The smallest dose the patch can deliver is 0.05 U. Set every basal rate in your **Profile** to at least 0.05 U/hr, in steps of 0.05 U/hr. Otherwise **AAPS** rounds each rate to the nearest 0.05 U/hr (never down to 0) and uses the rates the patch really gives, so the total insulin per day differs slightly from your **Profile**. In the same way, boluses must be at least 0.05 U.
+貼片可注射的最小劑量為 0.05 U。請將**設定檔**中的每個基礎率都設為至少 0.05 U/hr，並以 0.05 U/hr 為增量。否則，**AAPS** 會將每個基礎率四捨五入至最接近的 0.05 U/hr（不會向下取整至 0），並使用貼片實際輸注的基礎率，因此每天的胰島素總量會與**設定檔**略有差異。同樣地，注射劑量也必須至少為 0.05 U。
 
 ```{contents} Table of contents
 :depth: 1
@@ -11,268 +11,268 @@ The smallest dose the patch can deliver is 0.05 U. Set every basal rate in your 
 
 ## 幫浦與AAPS的功能
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* DST and timezone changes must be handled manually.
+* 透過手機內建的藍牙與**AAPS**通訊，不需要額外的通訊裝置。
+* 夏令時間和時區變更必須手動處理。
 
-## Pump setup
+## 幫浦設定
 
-1. Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-1. In the **Pump** section, select **EOPatch2**.
-1. Press the Back key to return to the main screen.
+1. 在 **AAPS** 主畫面左上角開啟**選單**（☰），然後選取**組態設定**。
+1. 在**幫浦**區段中，選取**EOPatch2**。
+1. 按下返回鍵，回到主畫面。
 
-![The menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png) ![Configuration > Pump with the EOPatch2 plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+![包含「組態設定」項目的選單](../images/v4/Configuration/configuration_menu.png) ![「組態設定」>「幫浦」中的 EOPatch2 外掛](../images/v4/Configuration/configuration_pump_list_3.png)
 
-Once it is selected, the **EOPatch2** card shows two buttons, **Settings** and **Open plugin**:
+選取後，**EOPatch2** 卡片會顯示兩個按鈕：**設定**和**開啟外掛**：
 
-![The EOPatch2 plugin selected in Configuration > Pump](../images/v4/Pumps/eopatch2_enabled.png)
+![在「組態設定」>「幫浦」中選取的 EOPatch2 外掛](../images/v4/Pumps/eopatch2_enabled.png)
 
 ## 設定
 
-Open the EOPatch2 settings in one of two ways:
+您可以透過以下任一方式開啟 EOPatch2 設定：
 
-* press **Settings** on the **EOPatch2** card in **Configuration**, or
-* open the pump screen (**Manage** → **Pump**) and press the gear icon in the top-right corner.
+* 在**組態設定**中的 **EOPatch2** 卡片上，按下**設定**；或
+* 開啟幫浦畫面（**管理** → **幫浦**），然後按下右上角的齒輪圖示。
 
-There are three settings:
+共有三項設定：
 
-![EOPatch2 settings](../images/v4/Pumps/eopatch_settings.png)
+![EOPatch2 設定](../images/v4/Pumps/eopatch_settings.png)
 
 ### 低儲存量警報
 
-A warning appears when the insulin left in the patch drops to this amount or less. You can set it from 10 to 50 U, in steps of 5 U. The default is 10 U.
+貼片中剩餘的胰島素量降至此數值或更低時，系統會顯示警告。您可以設定為 10 到 50 U，每次增加 5 U。預設值為 10 U。
 
 ### 貼片到期提醒
 
-Reminds you how much time is left before the current patch expires. You can set it from 1 to 24 hours, in steps of 1 hour. The default is 4 hours.
+提醒您目前貼片距離效期結束還剩多少時間。您可以設定為 1 到 24 小時，每次增加 1 小時。預設值為 4 小時。
 
-### Patch buzzer Reminders
+### 貼片嗶聲提醒
 
-When this is on, the patch beeps when a bolus, extended bolus or temporary basal starts and when it ends. It has no effect on your normal basal. The default is off.
+開啟此選項後，貼片會在注射、延長注射或臨時基礎率開始及結束時發出嗶聲。此設定不會影響一般基礎率。預設為關閉。
 
-## Activating a new patch
+## 啟動新貼片
 
-### Open the activation wizard
+### 開啟啟動嚮導
 
-Open the pump screen with **Manage** → **Pump** (or press **Open plugin** on the **EOPatch2** card in **Configuration**). When no patch is active, the screen shows **Not activated** and an **Activate Patch** button at the bottom.
+透過 **管理** → **幫浦**開啟幫浦畫面（或按下**組態設定**中 **EOPatch2** 卡片上的**開啟外掛**）。沒有啟動貼片時，畫面會顯示**尚未啟動**，底部則會顯示**啟動貼片**按鈕。
 
-Press **Activate Patch** to start the wizard.
+按下**啟動貼片**即可開始嚮導。
 
-![The EOPatch2 pump screen with the Activate Patch button](../images/v4/Pumps/eopatch_pump_screen.png)
+![顯示「啟動貼片」按鈕的 EOPatch2 幫浦畫面](../images/v4/Pumps/eopatch_pump_screen.png)
 
-The wizard guides you through each step. The row of dots at the top shows how far along you are.
+嚮導會引導您完成每個步驟。頂端的圓點列會顯示目前的進度。
 
 ```{note}
-If you have never activated a **Profile** in **AAPS**, the wizard first shows a **Profile required** page. Select the profile to use and press **Activate profile**.
+如果您從未在 **AAPS** 中啟動過 **設定檔**，嚮導會先顯示 **需要設定檔**頁面。選取要使用的設定檔，然後按下 **啟用設定檔**。
 ```
 
-### Filling Insulin
+### 填充胰島素
 
-Insert the syringe needle into the insulin fill port on the patch. Slowly push the plunger to fill the patch. Once there is more than 80 U in the patch, it beeps once and starts up (boots).
+將注射器針頭插入貼片上的胰島素注入孔。慢慢推動活塞，將胰島素注入貼片。貼片內的胰島素超過 80 U 後，會嗶一聲並開始啟動（開機）。
 
-When you hear the beep, press **Start pairing**.
+聽到嗶聲時，按下 **開始配對**。
 
-![The Filling Insulin step with the Start pairing button](../images/v4/Pumps/eopatch_activate_filling.png)
+![「填充胰島素」步驟中的「開始配對」按鈕](../images/v4/Pumps/eopatch_activate_filling.png)
 
 ```{warning}
-- Do not turn the needle action lever until the wizard tells you to. Turning it too early can cause serious problems during filling or the safety check.
-- The patch holds 80 to 200 U. If you put in less than 80 U, the patch does not work.
-- Take the insulin out of the refrigerator 15 to 30 minutes before filling, so it reaches room temperature. The insulin must be at least 10°C.
+- 嚮導提示您之前，請勿轉動針頭操作桿。太早轉動可能會導致填充或安全檢查時發生嚴重問題。
+- 貼片可容納 80 至 200 U。若注入量少於 80 U，貼片將無法運作。
+- 填充前 15 至 30 分鐘，請先將胰島素從冰箱取出，讓它回到室溫。胰島素溫度必須至少達到 10°C。
 ```
 
-### Patch pairing
+### 貼片配對
 
-**AAPS** now tries to pair with the patch automatically. During pairing, two Android Bluetooth pairing requests appear. Press **OK** on the first one. Press **OK** again on the second one, which shows a passkey.
+**AAPS** 現在會嘗試自動與貼片配對。配對期間會出現兩個 Android 藍牙配對要求。在第一個配對要求中按下 **確定**。接著在第二個配對要求中再次按下 **確定**；這個要求會顯示密碼金鑰。
 
 ```{warning}
-- Keep the patch and your phone within 30 cm of each other while pairing.
-- After the patch has booted, it beeps every 3 minutes until pairing is complete.
-- You must finish activating the patch within 60 minutes of it booting. If you cannot, discard the patch.
+- 配對時，貼片與手機之間的距離請保持在 30 cm 以內。
+- 貼片啟動後，每隔 3 分鐘會嗶一聲，直到配對完成。
+- 您必須在貼片啟動後 60 分鐘內完成貼片註冊。若無法完成，請丟棄貼片。
 ```
 
-![Patch pairing step](../images/EOPatch/Bild6.png) ![First Bluetooth pairing request](../images/EOPatch/Bild7.png) ![Second Bluetooth pairing request with the passkey](../images/EOPatch/Bild8.png)
+![貼片配對步驟](../images/EOPatch/Bild6.png) ![第一個藍牙配對要求](../images/EOPatch/Bild7.png) ![第二個藍牙配對要求與密碼金鑰](../images/EOPatch/Bild8.png)
 
 ```{admonition} Older screenshot
 :class: note
-The two Bluetooth pairing screenshots are from an earlier **AAPS** version: the **AAPS** screen behind the Android pairing request looks different in **AAPS** 4.
+這兩張藍牙配對畫面截圖來自較早版本的 **AAPS**：Android 配對要求後方的 **AAPS** 畫面與 **AAPS** 4 中的畫面不同。
 ```
 
-### Select insulin
+### 選取胰島素
 
-Select the insulin you filled the patch with and press **Next**. **AAPS** applies a profile switch with this insulin after activation.
+選取您用來填充貼片的胰島素，然後按下 **下一步**。啟動後，**AAPS** 會套用使用此胰島素的設定檔切換。
 
-### Prepare for attaching the Patch
+### 準備貼片
 
-Remove the adhesive tape from the patch, then press **Next**.
+撕下貼片上的膠帶，然後按下 **下一步**。
 
-If a needle sticks out, or if the patch is wet, dirty or its adhesive tape is folded, press **Discard** instead and use a new patch.
+如果有針頭露出，或貼片潮濕、髒污，或膠帶摺起，請改按 **丟棄**，並改用新的貼片。
 
-![Prepare for attaching the Patch step](../images/EOPatch/Bild9.png)
+![「準備貼上貼片」步驟](../images/EOPatch/Bild9.png)
 
-### Site location
+### 輸注部位
 
-This step only appears if **Manage pump site rotation** is turned on in the site rotation settings. Tap the place on the body diagram where you will attach the patch and press **Next**, or press **Skip**.
+只有在「部位輪替設定」中開啟 **管理幫浦部位輪替** 時，才會顯示此步驟。在身體圖示上點選您要貼上貼片的位置，然後按下 **下一步**；或按下 **略過**。
 
-### Attaching the Patch
+### 貼上貼片
 
-Insulin should go into a spot with fatty tissue under the skin, but few nerves or blood vessels. The abdomen, arm or thigh are good choices. Clean and dry the site, then attach the patch to your skin.
+胰島素應注入皮下脂肪較多、神經或血管較少的位置。腹部、手臂或大腿都是合適的位置。清潔並擦乾部位，然後將貼片貼在外觀上。
 
-Check the infusion site, then press **Start safety check**.
+檢查輸注部位，然後按下 **開始安全檢查**。
 
 ```{warning}
-- Press down the edges of the patch tape evenly, so the whole patch sticks firmly to your skin.
-- If the patch does not stick completely, air can get between the patch and your skin. This weakens the adhesive and the water resistance of the patch.
+- 請均勻按壓貼片膠帶的邊緣，確保整片貼片都牢牢貼在外觀上。
+- 如果貼片沒有完全貼合，空氣可能會進入貼片與外觀之間。這會降低黏性和貼片的防水性。
 ```
 
-![Attaching the Patch step](../images/EOPatch/Bild10.png)
+![「貼上貼片」步驟](../images/EOPatch/Bild10.png)
 
-### Safety check
+### 安全檢查
 
-The safety check takes about 30 seconds. When it is finished, the patch beeps once. If it fails, press **Retry**.
+安全檢查約需 30 秒。檢查完成時，貼片會嗶一聲。如果檢查失敗，請按下 **重試**。
 
 ```{warning}
-For safe use, do not turn the needle action lever until the safety check is complete.
+為確保安全，請等安全檢查完成後再轉動針頭操作桿。
 ```
 
-![Attaching the Patch step with the Start safety check button](../images/EOPatch/Bild11.png) ![Safety check in progress](../images/EOPatch/Bild12.png)
+![「貼上貼片」步驟中的「開始安全檢查」按鈕](../images/EOPatch/Bild11.png) ![正在進行安全檢查](../images/EOPatch/Bild12.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots from **Prepare for attaching the Patch** to **Safety check** are from an earlier **AAPS** version and may look different in **AAPS** 4.
+從 **準備貼上貼片** 到 **安全檢查** 的畫面截圖來自較早版本的 **AAPS**，在 **AAPS** 4 中可能會有所不同。
 ```
 
 ### 插入針頭
 
-Hold the patch firmly. Turn the needle action lever upward by more than 100° to insert the needle. The patch beeps once when the needle is inserted correctly. Then keep turning the lever all the way to remove it. Press **Next**.
+請穩穩握住貼片。將針頭操作桿向上轉動超過 100°，以插入針頭。針頭正確插入時，貼片會嗶一聲。接著繼續轉動操作桿到底，將它取下。按下 **下一步**。
 
 ```{caution}
-If you go to the next step without hearing the beep, a **Needle insertion Error** appears. Check for the beep and press **Retry**. If the error remains, press **Discard** to deactivate the patch.
+如果未聽到嗶聲就進入下一個步驟，畫面會顯示 **針頭插入錯誤**。確認是否聽到嗶聲，然後按下 **重試**。如果錯誤仍然存在，請按下 **丟棄**，以停用貼片。
 ```
 
-### Patch activation completed
+### 貼片註冊完成
 
-The last page confirms that the patch is active and that it will remind you when it nears its expiration time. Press **Finish** to go back to the pump screen.
+最後一頁會確認貼片已啟用，並提醒您貼片即將到期。按下 **完成**，返回幫浦畫面。
 
 ## 丟棄貼片
 
-Replace the patch when it is low on insulin, when it expires, or if it is faulty. We recommend using each patch for no more than 84 hours after it boots.
+當貼片中的胰島素所剩不多、貼片已到期或貼片故障時，請更換貼片。建議每片貼片啟動後的使用時間不要超過 84 小時。
 
-1. Open the pump screen (**Manage** → **Pump**). While a patch is active, press **Discard Patch**.
-1. The **Discard Patch** page shows the time left and the insulin left in the patch. Press **Discard Patch**.
-1. A dialog asks you to confirm. Press **Discard Patch** again.
-1. When the patch has been deactivated, the wizard shows **Discarding the patch is completed.** Remove the patch from your body and press **Confirm**.
+1. 開啟幫浦畫面（**管理** → **幫浦**）。貼片啟動期間，請按下 **捨棄貼片**。
+1. **捨棄貼片**頁面會顯示貼片剩餘時間和剩餘胰島素量。按下 **捨棄貼片**。
+1. 系統會顯示對話方塊，請你確認。再次按下 **捨棄貼片**。
+1. 貼片停用後，嚮導會顯示 **已完成捨棄貼片。**請從身上取下貼片，然後按下 **確認**。
 
-After that, the wizard continues straight on to activating a new patch (see above). Press the back arrow if you want to stop here.
+接著，嚮導會直接繼續進行新貼片的註冊程序（請參閱上文）。如果要暫停此程序，請按下返回箭頭。
 
-While no patch is active, **AAPS** shows the pump as suspended and records a 0 U/hr temporary basal, so no basal insulin is counted in IOB until the next patch is activated.
+沒有貼片啟動時，**AAPS** 會將幫浦顯示為已暫停，並記錄 0 U/hr 的臨時基礎率。因此，在下一片貼片註冊前，不會將任何基礎胰島素計入 IOB。
 
-![The EOPatch2 pump screen with the DISCARD/CHANGE PATCH button](../images/EOPatch/Bild13.png) ![Discard Patch page](../images/EOPatch/Bild14.png) ![Discard Patch confirmation dialog](../images/EOPatch/Bild15.png) ![Discarding the patch is completed](../images/EOPatch/Bild16.png)
+![EOPatch2 幫浦畫面及「捨棄／更換貼片」按鈕](../images/EOPatch/Bild13.png) ![捨棄貼片頁面](../images/EOPatch/Bild14.png) ![捨棄貼片確認對話方塊](../images/EOPatch/Bild15.png) ![已完成捨棄貼片](../images/EOPatch/Bild16.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Discard Patch**.
+以上螢幕截圖來自較早版本的 **AAPS**。在 **AAPS** 4 中，請從 **管理** → **幫浦** 開啟幫浦畫面，畫面上的按鈕標示為 **捨棄貼片**。
 ```
 
 ```{admonition} If the patch does not respond
 :class: warning
-If **AAPS** cannot reach the patch, it may show a page about turning off the patch's alarm by hand: remove the patch from your body, peel off the adhesive tape, and use a clip to press firmly into the hole next to the insulin fill port.
+如果 **AAPS** 無法連線至貼片，可能會顯示手動關閉貼片警報的說明頁面：請從身上取下貼片，撕下黏著膠帶，然後用迴紋針用力按壓胰島素注入口旁的孔洞。
 
-The **Discard Patch** page also has a **Force Reset** button. It only clears the patch from **AAPS**, without sending any command to the patch. The patch keeps delivering insulin until its battery runs out or you turn it off by hand. Use it only if a normal discard fails, and remove the patch from your body.
+**捨棄貼片**頁面也有 **強制重設**按鈕。此按鈕只會從 **AAPS** 中清除貼片資料，不會向貼片傳送任何指令。貼片會持續輸注胰島素，直到電池耗盡或你手動將貼片關閉。只有在一般捨棄程序失敗時才使用此功能，並請從身上取下貼片。
 ```
 
-## Suspending and resuming insulin delivery
+## 暫停及恢復胰島素輸注
 
-Suspending insulin delivery also cancels any extended bolus and temporary basal. When you resume, these are **not** restarted. While insulin delivery is suspended, the patch beeps every 15 minutes.
+暫停胰島素輸注也會取消任何延長注射和臨時基礎率。恢復輸注時，這些設定**不會**重新啟動。胰島素輸注暫停期間，貼片每隔 15 分鐘會發出嗶聲。
 
 ### 暫停胰島素輸送
 
-1. Open the pump screen (**Manage** → **Pump**) and press **Suspend pump**.
-1. A dialog explains what will be suspended. Press **Confirm**.
-1. In the **Basal Suspending Time** dialog, choose how long to suspend: 30 min, 1 hr, 1 hr 30 min or 2 hr. Press **Confirm**.
+1. 開啟幫浦畫面（**管理** → **幫浦**），然後按下 **暫停幫浦**。
+1. 對話方塊會說明即將暫停的項目。按下 **確認**。
+1. 在 **基礎率暫停時間**對話方塊中，選擇暫停時間：30 分鐘、1 小時、1 小時 30 分鐘或 2 小時。按下 **確認**。
 
-Insulin delivery is suspended for the time you chose.
+胰島素輸注會暫停你選擇的時間。
 
-![The EOPatch2 pump screen with the SUSPEND button](../images/EOPatch/Bild17.png) ![Suspend confirmation dialog](../images/EOPatch/Bild18.png) ![Basal Suspending Time dialog](../images/EOPatch/Bild19.png)
+![EOPatch2 幫浦畫面及「暫停」按鈕](../images/EOPatch/Bild17.png) ![暫停確認對話方塊](../images/EOPatch/Bild18.png) ![基礎率暫停時間對話方塊](../images/EOPatch/Bild19.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Suspend pump**.
+以上螢幕截圖來自較早版本的 **AAPS**。在 **AAPS** 4 中，請從 **管理** → **幫浦** 開啟幫浦畫面，畫面上的按鈕標示為 **暫停幫浦**。
 ```
 
 ### 恢復胰島素輸送
 
-1. Open the pump screen (**Manage** → **Pump**) and press **Resume pump**.
-1. In the **Resume insulin delivery** dialog, press **Confirm**.
+1. 開啟幫浦畫面（**管理** → **幫浦**），然後按下 **恢復幫浦**。
+1. 在 **恢復胰島素輸注**對話方塊中，按下 **確認**。
 
-![The EOPatch2 pump screen with the RESUME button](../images/EOPatch/Bild20.png) ![Resume insulin delivery dialog](../images/EOPatch/Bild21.png)
+![EOPatch2 幫浦畫面及「恢復」按鈕](../images/EOPatch/Bild20.png) ![恢復胰島素輸注對話方塊](../images/EOPatch/Bild21.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Resume pump**.
+以上螢幕截圖來自較早版本的 **AAPS**。在 **AAPS** 4 中，請從 **管理** → **幫浦** 開啟幫浦畫面，畫面上的按鈕標示為 **恢復幫浦**。
 ```
 
 ```{warning}
-When the suspend time ends, **AAPS** shows an **End of insulin suspend** warning. Insulin delivery does **not** restart until you confirm it. If you do not, you could develop hyperglycemia.
+暫停時間結束時，**AAPS** 會顯示 **胰島素暫停結束**警告。除非你確認，否則胰島素輸注<strong x-id="1">不會</strong>重新啟動。如果沒有重新啟動，可能會導致高血糖。
 ```
 
 (eopatch2-alarms-and-warnings)=
 
-## Alarms and warnings
+## 警報與警告
 
 ### 警報
 
-Alarms are for urgent, top-priority situations and need your action straight away. **AAPS** sounds an alarm that keeps going until you acknowledge it, and shows the message as a notification on the **Overview** screen. An alarm means there is a problem with the patch in use. In many cases the patch has to be discarded and replaced with a new one.
+警報用於緊急且優先度最高的情況，需要你立即處理。 **AAPS** 會持續發出警報聲，直到你確認為止，並在**總覽**畫面以通知顯示訊息。警報表示目前使用的貼片有問題。在許多情況下，必須捨棄貼片並換上新貼片。
 
-When you press **Confirm** on the notification, **AAPS** handles the alarm. For most alarms, this deactivates the patch. For an **Inappropriate temperature** alarm, the button is **Retry**.
+在通知上按下 **確認**後，**AAPS** 會處理此警報。對大多數警報而言，這會停用貼片。如果是**溫度不適**警報，按鈕會顯示為**重試**。
 
-![EOPatch2 alarm](../images/EOPatch/Bild22.png) ![EOPatch2 alarm after the patch was deactivated](../images/EOPatch/Bild23.png)
+![EOPatch2 警報](../images/EOPatch/Bild22.png) ![貼片停用後出現的 EOPatch2 警報](../images/EOPatch/Bild23.png)
 
 ```{admonition} Older screenshot
 :class: note
-The alarm screenshots are from an earlier **AAPS** version and may look different in **AAPS** 4.
+警報畫面截圖來自較早版本的 **AAPS**，在 **AAPS** 4 中可能會有所不同。
 ```
 
-The different alarms are explained below.
+以下說明各種警報。
 
-| 警報     | 說明                                                                                                                                                             |
-| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 儲存量已空  | The patch has run out of insulin.                                                                                                                              |
-| 貼片到期   | The patch's usage time is over, and it cannot deliver any more insulin.                                                                                        |
-| 堵塞     | The patch's insulin path seems to be blocked.                                                                                                                  |
-| 開機自檢失敗 | The patch found an unexpected error during its self-test after booting.                                                                                        |
-| 不適當的溫度 | The patch is outside its normal operating temperature while you activate or use it. Move the patch to a place with a suitable temperature (4.4 to 37°C).       |
-| 針頭插入錯誤 | The needle was not inserted correctly during activation. Check that the needle insertion edge of the patch and the needle action lever are in a straight line. |
-| 貼片電池錯誤 | The patch's internal battery is about to run out and the patch will power off.                                                                                 |
-| 貼片啟動錯誤 | The patch was not fully activated within 60 minutes of booting.                                                                                                |
-| 貼片錯誤   | The patch found an unexpected error while being activated or used.                                                                                             |
+| 警報     | 說明                                                    |
+| ------ | ----------------------------------------------------- |
+| 儲存量已空  | 貼片中的胰島素已用完。                                           |
+| 貼片到期   | 貼片已超過使用期限，無法再輸送胰島素。                                   |
+| 堵塞     | 貼片的胰島素輸送管路似乎遭到阻塞。                                     |
+| 開機自檢失敗 | 貼片在開機後進行自我測試時發生未預期的錯誤。                                |
+| 不適當的溫度 | 註冊或使用貼片時，貼片所在位置的溫度超出正常運作範圍。請將貼片移至溫度適當的位置（4.4 至 37°C）。 |
+| 針頭插入錯誤 | 註冊貼片時，針頭未正確插入。請確認貼片的針頭插入側與針頭動作桿位於同一直線上。               |
+| 貼片電池錯誤 | 貼片的內建電池即將耗盡，貼片將會關機。                                   |
+| 貼片啟動錯誤 | 貼片開機後 60 分鐘內未完成註冊。                                    |
+| 貼片錯誤   | 註冊或使用貼片時發生未預期的錯誤。                                     |
 
 ### 警告
 
-Warnings are for medium- or low-priority situations. A warning appears as a notification on the **Overview** screen.
+警告適用於中度或低度優先情況。警告會以通知的形式顯示在**總覽**畫面上。
 
-![EOPatch2 warning shown on the Overview screen](../images/EOPatch/Bild24.png)
+![顯示在總覽畫面上的 EOPatch2 警告](../images/EOPatch/Bild24.png)
 
 ```{admonition} Older screenshot
 :class: note
-This screenshot is from an earlier **AAPS** version: in **AAPS** 4 the warning appears on the main screen, which looks different.
+此截圖來自較早版本的 **AAPS**：在 **AAPS** 4 中，警告會顯示在主畫面上，畫面外觀也有所不同。
 ```
 
-The different warnings are explained below.
+以下說明各種警告。
 
-| 警告       | 說明                                                                                                                            |
-| -------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| 胰島素暫停結束  | The suspend time you chose is over. Press **Resume pump** on the notification to restart insulin delivery.                    |
-| 儲存量過低    | The insulin left in the patch is below the amount set in **Low reservoir Alerts**.                                            |
-| 貼片使用期限到期 | The patch's usage period is over.                                                                                             |
-| 貼片即將到期   | The patch must be discarded in 1 hour.                                                                                        |
-| 貼片啟動不完整  | Patch activation was interrupted for more than 3 minutes after pairing. Open the pump screen and finish activating the patch. |
-| 貼片電池電量低  | The patch's battery is low.                                                                                                   |
+| 警告       | 說明                                     |
+| -------- | -------------------------------------- |
+| 胰島素暫停結束  | 您設定的暫停時間已結束。請點選通知上的**恢復幫浦**，重新開始輸送胰島素。 |
+| 儲存量過低    | 貼片中剩餘的胰島素量低於**儲液量偏低警示**中設定的數值。         |
+| 貼片使用期限到期 | 貼片已超過使用期限。                             |
+| 貼片即將到期   | 貼片必須在 1 小時內丟棄。                         |
+| 貼片啟動不完整  | 配對後，貼片註冊流程中斷超過 3 分鐘。請開啟幫浦畫面並完成貼片註冊。    |
+| 貼片電池電量低  | 貼片電量偏低。                                |
 
 ## 如何尋求協助
 
-Development of the EOPatch2 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+EOPatch2 驅動程式由社群成員以**志願**方式開發。尋求協助前，請先：
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **請閱讀**本文件中相關的章節，確認此功能的運作方式。
+2. 請在 [Discord](https://discord.gg/4fQUWHZ4Mw) 的 *#AAPS* 頻道，或其他[社群頻道](../GettingHelp/WhereCanIGetHelp.md)之一**提出問題**。
+3. 若要**回報錯誤**，請先搜尋[現有問題](https://github.com/nightscout/AndroidAPS/issues)；如果沒有列出您的問題，請[新增問題](https://github.com/nightscout/AndroidAPS/issues)，並附上您的[紀錄檔](../GettingHelp/AccessingLogFiles.md)。
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+尋求協助時，請提供手機廠牌與型號、Android 版本、**AAPS** 版本，以及簡明易懂的問題描述（發生了什麼變化、上次正常運作的時間）。

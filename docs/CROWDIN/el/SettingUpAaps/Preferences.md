@@ -28,11 +28,12 @@
 
 **Γλώσσα**
 
-- Νέα επιλογή για χρήση της προεπιλεγμένης γλώσσας του τηλεφώνου (συνιστάται).
+- By default **AAPS** follows the language of the phone (recommended).
 
-- Αν θέλετε το **AAPS** σε άλλη γλώσσα από τη γλώσσα του τηλεφώνου σας, μπορείτε να επιλέξετε από πολλές γλώσσες.
+- If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
 
 - Όταν αλλάζετε τη γλώσσα, τα κείμενα του **AAPS** αλλάζουν αμέσως στη νέα γλώσσα. Αν κάποια κείμενα εμφανίζονται ακόμη στην παλιά γλώσσα, επανεκκινήστε το **AAPS**.
+- On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
 - Η ρύθμιση είναι κρυμμένη στην [απλή λειτουργία](#preferences-simple-mode).
 
 (preferences-simple-mode)= **Απλή λειτουργία**
@@ -354,7 +355,7 @@
 Περισσότερες πληροφορίες στη σχετική σελίδα [Tidepool](../SettingUpAaps/Tidepool.md).
 
 (Preferences-nsclient)=
-## NSClient
+## NSClientV3
 
 ![Ρυθμίσεις > NSClientV3](../images/preferences/settings_nsclient.png)
 
@@ -410,7 +411,7 @@
 - Για να διαγράψετε όλα τα SSID, γράψτε ένα κενό διάστημα στο πεδίο.
 
 (Preferences-advanced-settings-nsclient)=
-### Ρυθμίσεις για προχωρημένους (NSClient)
+### Advanced settings (NSClientV3)
 
 ![Ρυθμίσεις για προχωρημένους του NSClient](../images/preferences/settings_nsclient_advanced.png)
 
@@ -468,6 +469,10 @@
 ![Ρυθμίσεις > Τοπικές ειδοποιήσεις](../images/preferences/settings_local_alerts.png)
 
 Οι ρυθμίσεις εξηγούνται μόνες τους.
+
+**Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
+
+When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Swiping the alarm notification away in the notification tray mutes the alarm. When you open **AAPS** later, an alarm you did not answer is shown again.
 
 (preferences-maintenance-settings)=
 ## Ρυθμίσεις συντήρησης

@@ -1,6 +1,6 @@
 (generaltroubleshooting)=
 
-# Rozwiązywanie problemów
+# Ogólne rozwiązywanie problemów
 
 **Zacznij tutaj, gdy coś nie działa.** Informacje o rozwiązywaniu problemów są na wielu stronach dokumentacji. Ta strona zbiera je w jednym miejscu: to lista linków, ułożonych według tematu, która pomaga rozwiązać najczęstsze problemy.
 

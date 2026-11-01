@@ -1,4 +1,4 @@
-# Ustawienia (Preferencje)
+# Ustawienia
 
 W **AAPS** v4 preferencje znajdziesz na ekranie **Ustawienia**. Dostać się do nich możesz na trzy sposoby – szczegóły znajdziesz na stronie [Zmiana konfiguracji AAPS](../SettingUpAaps/ChangeAapsConfiguration.md):
 
@@ -28,11 +28,12 @@ W **AAPS** v4 preferencje znajdziesz na ekranie **Ustawienia**. Dostać się do 
 
 **Język**
 
-- Nowa opcja: używaj domyślnego języka telefonu (zalecane).
+- By default **AAPS** follows the language of the phone (recommended).
 
-- Jeśli chcesz używać **AAPS** w innym języku niż język telefonu, możesz wybrać z wielu języków.
+- If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
 
 - Gdy zmienisz język, teksty **AAPS** od razu przełączą się na nowy język. Jeśli niektóre teksty są nadal w starym języku, uruchom ponownie **AAPS**.
+- On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
 - Ustawienie ukryte w [trybie uproszczonym](#preferences-simple-mode).
 
 (preferences-simple-mode)= **Tryb uproszczony**
@@ -354,7 +355,7 @@ Na przykład dla **Pompa wirtualna** sekcja nazywa się **Ustawienia pompy wirtu
 Więcej informacji na osobnej stronie [Tidepool](../SettingUpAaps/Tidepool.md).
 
 (Preferences-nsclient)=
-## NSClient
+## NSClientV3
 
 ![Ustawienia > NSClientV3](../images/preferences/settings_nsclient.png)
 
@@ -410,7 +411,7 @@ Przełącznika „**Zezwalaj na sterowanie z urządzenia opiekuna**” nie ma ju
 - Aby usunąć wszystkie SSID, wpisz w polu spację.
 
 (Preferences-advanced-settings-nsclient)=
-### Ustawienia zaawansowane (NSClient)
+### Advanced settings (NSClientV3)
 
 ![Zaawansowane ustawienia NSClient](../images/preferences/settings_nsclient_advanced.png)
 
@@ -468,6 +469,10 @@ Wybierz, której usługi lokalizacji ma używać aplikacja:
 ![Ustawienia > Lokalne alarmy](../images/preferences/settings_local_alerts.png)
 
 Ustawienia są zrozumiałe same przez się.
+
+**Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
+
+When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Swiping the alarm notification away in the notification tray mutes the alarm. When you open **AAPS** later, an alarm you did not answer is shown again.
 
 (preferences-maintenance-settings)=
 ## Ustawienia konserwacji

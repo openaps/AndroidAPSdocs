@@ -1,23 +1,23 @@
-# Change language and version
+# Зміна мови та версії
 
-The documentation you are currently reading is available in several languages and is specific to a given version of **AAPS**. Both the language and the version can be changed from the menu at the bottom right of the screen.
+Документація, яку ви зараз читаєте, доступна кількома мовами і належить до певної версії **AAPS**. І мову, і версію можна змінити в меню в нижньому правому куті екрана.
 
 ```{note}
-Click on the bar at the bottom right of the screen to open the language and version selection menu.
+Натисніть на панель у нижньому правому куті екрана, щоб відкрити меню вибору мови та версії.
 ```
 
-![Open language menu](../images/documentation_language_menu.png)
+![Відкрити меню мов](../images/documentation_language_menu.png)
 
-## Change language
+## Зміна мови
 
-In the menu, select the language you want to read the documentation in.
+У меню виберіть мову, якою ви хочете читати документацію.
 
-Feel welcome to join [Crowdin](https://crowdin.com/project/androidapsdocs) translators and proofreaders to help translate the documentation into your language.
+Запрошуємо вас приєднатися до перекладачів і коректорів на [Crowdin](https://crowdin.com/project/androidapsdocs) і допомогти перекласти документацію вашою мовою.
 
-## Change version
+## Зміна версії
 
-The current version is shown in the bottom right of the screen. To switch to a different version, click on the current version and select the version you need.
+Поточна версія показана в нижньому правому куті екрана. Щоб перейти на іншу версію, натисніть на поточну версію і виберіть потрібну.
 
 ```{warning}
-When changing language and/or version, you might get a 404 - Page not found, if the language or version page doesn't exist. This will frequently happen when switching version but should not happen when changing language: the page will show in English if not translated yet.
+Коли ви змінюєте мову та/або версію, ви можете отримати помилку 404 - Сторінку не знайдено, якщо сторінки такою мовою або для такої версії не існує. Так часто буває при зміні версії, але не повинно бути при зміні мови: якщо сторінку ще не перекладено, вона відкриється англійською.
 ```

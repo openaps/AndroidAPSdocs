@@ -2,6 +2,7 @@
 
 ## Október 2026
 
+- [Browser build with AAPS Builder](#aaps-builder): build workflow version 8, now maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository. Setting up is one step shorter: [step 1](#aaps-builder-step1) of the [setup page](#aaps-builder-setup) creates your private repository as a copy of that repository, with the build workflow already in it, so there is no workflow to add any more. From now on the build steps are updated for you: your repository runs the version released by the AAPS developers at every build, without any change on your side (and still no automatic build). The build itself does not change, and your existing repository keeps working. To get these automatic updates, replace your `.github/workflows/build.yml` once as explained in [Updating AAPS](#aaps-builder-updates). Your `KEYSTORE_SET` secret stays as it is. The optional [Google Drive step](#aaps-builder-google-drive) now works on the setup page itself, on a phone or a computer: no preparation file needed @psonnera
 - [Inteligentné hodinky a AAPS](#watches-external-companion-apps): časť **Samsung Tizen** sa mení na **Externé sprievodné (Companion) aplikácie** a uvádza aplikácie, ktoré čítajú vysielanie **AAPS** (WatchDrip+, GlucoDataHandler, G-Watch). [WatchDrip+](#watches-xiaomi-amazfit) 0.5 a novší sa pripája priamo k **AAPS** bez xDrip+: pridané kroky nastavenia, v skratke aj v častiach [Konfigurácia](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) a [Vzdialené sledovanie](../RemoteFeatures/RemoteMonitoring.md). Hodinky Bluejay: GTS sa už nevyrába, aktuálny model aktualizovaný @psonnera
 - [Zostavenie v prehliadači pomocou AAPS Builder](#aaps-builder): workflow zostavenia verzie 6. Kroky zostavenia teraz používajú presné, skontrolované verzie nástrojov GitHubu a zostavovacieho stroja. Zostavenie tiež jasne vysvetlí, keď bol do secretu `KEYSTORE_SET` vložený nesprávny text. [Stránka nastavenia](#aaps-builder-setup) je teraz súčasťou dokumentácie a je preložená. Kontroluje vaše používateľské meno na GitHube a má jasnejšiu pomoc pre secret, „Page not found“ (404) a aplikáciu GitHub. Ak je vo vašom súbore `.github/workflows/build.yml` uvedená verzia 5 alebo staršia, nahraďte ho podľa postupu v časti [Aktualizácia AAPS](#aaps-builder-updates) @psonnera
 - [Webový inštalátor AAPS](#web-installer): teraz je to stránka dokumentácie a prekladá sa ako ostatné. Stará adresa stále funguje @psonnera
@@ -33,7 +34,7 @@
 
 ## Január 2025
 
-- Vydanie [3.4](#version3400) a súhrnná aktualizácia dokumentácie (Sprievodca, verzie pre zostavenie v počítači, Config Builder)
+- [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
 - Aktualizácia zoznamu CGM. Dexcom G5, Tomato a Glimp boli odstránené.
 - [Rozhranie Striedania miest](#Aapsscreens-site-rotation)
 - [Režim prevádzky](#AapsScreens-running-mode)
@@ -147,7 +148,7 @@ Dokumentácia AAPS 3.1 je dostupná [tu](https://androidaps.readthedocs.io/en/3.
 - Dexcom G6 s aplikáciou [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
 - Libre smart reader – [úroveň batérie](#screens-sensor-level-battery)
 - [Ciele](#objectives-objective3) – nové otázky
-- Ďalšie [nové funkcie AAPS 2.8.0](#Releasenotes-version-2-8-0)
+- Other [new AAPS 2.8.0 functions](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.0)
 
 ## December 2020
 
@@ -166,7 +167,7 @@ Dokumentácia AAPS 3.1 je dostupná [tu](https://androidaps.readthedocs.io/en/3.
 ## September 2020
 
 - Veľká aktualizácia pre novú verziu AAPS 2.7
-- For details see the [release notes](#Releasenotes-version-2-7-0)
+- For details see the [release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.7.0)
 
 ## Jún 2020
 
@@ -201,7 +202,7 @@ Dokumentácia AAPS 3.1 je dostupná [tu](https://androidaps.readthedocs.io/en/3.
 - Funkcia [Predĺžený bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) – uzavretý okruh sa vypne
 - Nový [plugin Lokálny profil](../SettingUpAaps/ConfigBuilder.md)
 - Vzorové nastavenie – aktualizácia Dexcom G6
-- [Verzia 2.6.0](#Releasenotes-version-2-6-0) – hlavné nové funkcie
+- [Version 2.6.0](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-260) - major new features
 - [Komplikácie pre hodinky](../WearOS/WearOsSmartwatch.md)
 
 ## Január 2020
@@ -236,7 +237,7 @@ Dokumentácia AAPS 3.1 je dostupná [tu](https://androidaps.readthedocs.io/en/3.
 
 ## Október 2019
 
-- Aktualizácie pre [AAPS verzie 2.5](#Releasenotes-version-2-5-0) (najmä na [stránke o aktualizácii](../Maintenance/UpdateToNewVersion.md))
+- [AAPS version 2.5](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-250) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
 - [AccuChek Insight – možnosti logov](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [Výpočet COB na samostatnej stránke](../DailyLifeWithAaps/CobCalculation.md)
 - [COB – detekcia nesprávnej hodnoty COB](#CobCalculation-detection-of-wrong-cob-values)

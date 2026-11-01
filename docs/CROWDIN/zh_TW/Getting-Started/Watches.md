@@ -13,7 +13,7 @@
 
 根據不同的型號，智慧型手錶可以以多種不同的方式與 **AAPS** 結合使用。他們可以用來完全或部分控制 **AAPS**，或者只是遠端查看血糖值、胰島素剩餘量（IOB）及其他參數。
 
-在很多情況下，將智慧型手錶與 **AAPS** 整合非常有用，包括開車或騎車時，以及進行運動時。 Some people feel that looking at a watch (in a meeting, party, dinner table etc.) is more discreet than looking at a phone. From a security perspective, a smartwatch can also be beneficial while on the move, enabling the user to keep their **AAPS** phone stored out of sight (like inside a bag), while still using the smartwatch for remote control.
+在很多情況下，將智慧型手錶與 **AAPS** 整合非常有用，包括開車或騎車時，以及進行運動時。有些人覺得，在會議、派對或餐桌上看手錶，比看手機更不引人注意。從安全角度來看，外出時使用智慧型手錶也有好處：使用者可以將 **AAPS** 手機收在不顯眼的地方（例如包包裡），同時使用智慧型手錶進行遠端控制。
 
 ## 父母/照護者使用 **AAPS** 的具體優勢
 
@@ -21,35 +21,35 @@
 
 智慧型手錶可以作為[僅關注](../RemoteFeatures/FollowingOnly.md)的選擇，或作為{em x-id="4">額外</em>的手機遠端控制選項。
 
-此外，與依賴移動網路或 Wi-Fi 連線的父母/照顧者追蹤手機不同，藍牙連接的智慧型手錶在遠端地點（如洞穴、船上或山腰）也可以非常有用。 If both devices (**AAPS** phone and smartwatch) are on the same Wi-Fi network, they can also use Wi-Fi.
+此外，與依賴移動網路或 Wi-Fi 連線的父母/照顧者追蹤手機不同，藍牙連接的智慧型手錶在遠端地點（如洞穴、船上或山腰）也可以非常有用。如果兩台裝置（**AAPS** 手機和智慧型手錶）連上同一個 Wi-Fi 網路，也可以使用 Wi-Fi。
 
 ## 不同類型的智慧型手錶與 AAPS 的互動方式
 
 目前有五種主要方式可將智慧型手錶與 **AAPS** 結合使用。這些方式在下表中顯示： 
 
-| 手錶設定   | 功能                                             | 需求                                                                                                                                                                                                                                                                                                                  |
-| ------ | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 獨立運作   | 無需手機的 AAPS                                     | 完整 Android 智慧型手錶（檢查最小 Android 版本）</br>運行 **app-fullRelease**                                                                                                                                                                                                                                                        |
-| 完全遠端控制 | 大部分 AAPS 功能                                    | Android **Wear OS** 手錶（檢查 Android /API）</br>運行 **wear-fullRelease**                                                                                                                                                                                                                                                 |
-| 遠端控制   | AAPSClient 功能                                  | Android **Wear OS** 手錶（檢查 Android/API）</br>運行 **[wear-aapsclientRelease](https://github.com/nightscout/AndroidAPS/releases)**                                                                                                                                                                                       |
-| 遠端控制   | 部分 AAPSClient 功能                               | Garmin watches</br>(older Samsung Tizen and Fitbit setups only, not recommended)</br>See below.                                                                                                                                                                                                                     |
-| 顯示     | Glucose, trend, IOB, COB, loop and pump status | Many smartwatches, through a companion app on the **AAPS** phone fed by the [External Companion Apps](#watches-external-companion-apps) broadcast: [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi, Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS), G-Watch</br>See below. |
+| 手錶設定   | 功能                    | 需求                                                                                                                                                                                                                                             |
+| ------ | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 獨立運作   | 無需手機的 AAPS            | 完整 Android 智慧型手錶（檢查最小 Android 版本）</br>運行 **app-fullRelease**                                                                                                                                                                                   |
+| 完全遠端控制 | 大部分 AAPS 功能           | Android **Wear OS** 手錶（檢查 Android /API）</br>運行 **wear-fullRelease**                                                                                                                                                                            |
+| 遠端控制   | AAPSClient 功能         | Android **Wear OS** 手錶（檢查 Android/API）</br>運行 **[wear-aapsclientRelease](https://github.com/nightscout/AndroidAPS/releases)**                                                                                                                  |
+| 遠端控制   | 部分 AAPSClient 功能      | Garmin 手錶</br>（僅適用於較舊的 Samsung Tizen 和 Fitbit 設定，不建議使用）</br>請參閱下文。                                                                                                                                                                             |
+| 顯示     | 血糖、趨勢、IOB、COB、循環和幫浦狀態 | 許多智慧型手錶可透過安裝在 **AAPS** 手機上的配套應用程式，接收由[外部配套應用程式](#watches-external-companion-apps)廣播的資料：[WatchDrip+](https://bigdigital.home.blog/)（Xiaomi、Amazfit）、[GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler)（Wear OS）、G-Watch</br>請參閱下文。 |
 
 ## 在購買智慧型手錶之前……
 
-你購買的智慧型手錶具體型號取決於你所需的功能。 You may find useful information on the [Phones page](#Phones-list-of-tested-phones), including a list of tested phones that also contains some smartwatches.
+你購買的智慧型手錶具體型號取決於你所需的功能。您可以在[手機頁面](#Phones-list-of-tested-phones)找到實用資訊，包括經測試的手機清單，其中也包含部分智慧型手錶。
 
-Popular watch brands include Samsung Galaxy, Garmin, Fossil and Mi band. 上面表格中不同選項的摘要將在下面詳細說明，幫助你決定哪款智慧型手錶最適合你的情況。
+常見的手錶品牌包括 Samsung Galaxy、Garmin、Fossil 和 Mi band。上面表格中不同選項的摘要將在下面詳細說明，幫助你決定哪款智慧型手錶最適合你的情況。
 
 如果你打算將智慧型手錶與**AAPS** 手機結合使用並遠端操作**AAPS**，你還需要考慮這兩個設備是否相容，尤其是如果你的手機較舊或比較特殊。
 
 一般來說，如果你只想要追蹤血糖資料而不與**AAPS** 進行互動，有更多價格實惠且簡單的手錶可供選擇。
 
-選擇智慧型手錶的最佳方式是搜尋 Discord 或 Facebook**AAPS** 群組中的“手錶”相關帖子。 Have a read of others' experiences, and post any specific questions if your query isn't answered by older posts.
+選擇智慧型手錶的最佳方式是搜尋 Discord 或 Facebook**AAPS** 群組中的“手錶”相關帖子。請參考其他人的使用經驗；如果較舊的貼文沒有解答您的問題，也歡迎提出具體問題。
 
 ## 完整簽章
 
-這聽起來像是一個很有吸引力的選項，對嗎？然而，目前只有少數愛好者正在嘗試在獨立手錶上運作 **AAPS**。 There are a limited number of smartwatches with a reasonable interface which also work well with standalone use of **AAPS** and your CGM app. Popular models include the LEMFO LEM 15 Pro and 16. 你需要在手錶上載入 **AAPS** 的“完整” apk（通常安裝在智慧型手機上的 apk），而不是 **AAPS** 的“wear” apk。
+這聽起來像是一個很有吸引力的選項，對嗎？然而，目前只有少數愛好者正在嘗試在獨立手錶上運作 **AAPS**。只有少數智慧型手錶具備合適的介面，且能與獨立使用的 **AAPS** 和 CGM 應用程式良好搭配。常見機型包括 LEMFO LEM 15 Pro 和 16。你需要在手錶上載入 **AAPS** 的“完整” apk（通常安裝在智慧型手機上的 apk），而不是 **AAPS** 的“wear” apk。
 
 雖然目前沒有明確的規範告訴你哪款手錶適合獨立使用 **AAPS**，但以下參數會有所幫助：
 
@@ -67,7 +67,7 @@ Popular watch brands include Samsung Galaxy, Garmin, Fossil and Mi band. 上面�
 
 **AAPS** 程式碼包含一個應用外掛，可安裝在[**Wear OS** 智慧型手錶](https://wearos.google.com/#oem-carousel)上。
 
-![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
+![已在「組態 > 與 Wear 通訊」中啟用](../images/v4/Configuration/configuration_communication_wear.png)
 
 驗證你的智慧型手錶是否滿足 **AAPS** [前置條件](#maintenance-android-version-aaps-version)。
 
@@ -75,12 +75,12 @@ Popular watch brands include Samsung Galaxy, Garmin, Fossil and Mi band. 上面�
 
 前三個智慧型手錶選項要求智慧型手錶安裝 **Wear OS**。
 
-**Wear OS** 是運作在部分現代 Android 智慧型手錶上的作業系統。如果智慧型手錶的描述僅指示與 Android 和 iOS 相容，則並不意味著他運作的是 **Wear OS**。他可能運作的是其他供應商專用的作業系統，這些系統不與 **AAPS** 相容。 To support installation and use of any version of **AAPS** or **AAPSClient**, a smartwatch must be running **Wear OS 3.0, 3.2 or 3.5** (Android 11, API level 30) **or newer**. Each Wear OS release follows the Android version it is based on: **Wear OS 3** is Android 11 (API level 30), **Wear OS 4** is Android 13 (API level 33), **Wear OS 5** is Android 14 (API level 34) and **Wear OS 6** is Android 16 (API level 36). Watches on Wear OS 2 cannot run **AAPS**.
+**Wear OS** 是運作在部分現代 Android 智慧型手錶上的作業系統。如果智慧型手錶的描述僅指示與 Android 和 iOS 相容，則並不意味著他運作的是 **Wear OS**。他可能運作的是其他供應商專用的作業系統，這些系統不與 **AAPS** 相容。若要安裝並使用任何版本的 **AAPS** 或 **AAPSClient**，智慧型手錶必須執行 **Wear OS 3.0、3.2 或 3.5**（Android 11、API 等級 30）**或更新版本**。每個 Wear OS 版本都會依據其所採用的 Android 版本命名：**Wear OS 3** 是 Android 11（API 等級 30），**Wear OS 4** 是 Android 13（API 等級 33），**Wear OS 5** 是 Android 14（API 等級 34），而 **Wear OS 6** 是 Android 16（API 等級 36）。執行 Wear OS 2 的手錶無法使用 **AAPS**。
 
 如果你在 **Wear OS** 手錶上安裝 **AAPS** wear.apk，將可以選擇不同的自訂 **AAPS** 錶盤。或者，你可以使用標準的智慧型手機錶盤，並在錶盤上包含稱為“小工具”的小方塊，顯示你的 **AAPS** 資訊。複雜功能是指除了時間之外，顯示在錶盤上的任何功能。
 
 ```{note}
-Recent **Wear OS** changes progressively break the custom **AAPS** watchfaces (the higher the Wear OS version, the more severe), although **complications** keep working. Before buying or updating a watch, read [Wear OS watch face changes](#wearos-watchface-changes).
+近期 **Wear OS** 的變更逐漸影響自訂的 **AAPS** 錶盤（Wear OS 版本越高，影響越嚴重），但**錶面功能**仍可正常運作。購買或更新手錶前，請先閱讀[Wear OS 錶盤變更](#wearos-watchface-changes)。
 ```
 
 
@@ -98,38 +98,38 @@ Recent **Wear OS** changes progressively break the custom **AAPS** watchfaces (t
 
 (Watchfaces-tizen)= (watches-external-companion-apps)=
 
-## External Companion Apps
+## 外部輔助 App
 
-**AAPS** can broadcast its status to other apps installed on the same phone: glucose and trend, IOB, COB, basal and temp basal, profile name, loop status, phone and pump battery, reservoir level and bolus progress. Several watch companion apps read this broadcast and display the data on watches that **AAPS** does not support directly. To send the data, enable **External Companion Apps** in **Configuration** > **Communication** (see [External Companion Apps](#external-companion-apps) on the Configuration page). The broadcast is sent with each new reading and cannot be requested: a refresh button in the companion app has no effect on **AAPS**.
+**AAPS** 可以將狀態廣播給安裝在同一支手機上的其他應用程式：血糖和趨勢、IOB、COB、基礎率和臨時基礎率、設定檔名稱、循環狀態、手機和幫浦電量、藥量以及注射進度。有幾款手錶配套應用程式會讀取這些廣播，並在 **AAPS** 未直接支援的手錶上顯示資料。若要傳送資料，請在**組態** > **通訊**中啟用**外部配套應用程式**（請參閱組態頁面中的[外部配套應用程式](#external-companion-apps)）。每次有新的讀取值時都會傳送廣播，且無法手動要求傳送：配套應用程式中的重新整理按鈕不會影響 **AAPS**。
 
-![Configuration > Communication: the External Companion Apps card](../images/v4/Configuration/configuration_external_companion_apps.png)
+![組態 > 通訊：外部配套應用程式卡片](../images/v4/Configuration/configuration_external_companion_apps.png)
 
-Companion apps known to use this broadcast:
+已知會使用此廣播的配套應用程式：
 
-- [WatchDrip+](https://bigdigital.home.blog/) for Xiaomi and Amazfit watches, see [Xiaomi and Amazfit watches](#watches-xiaomi-amazfit) below.
-- [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) for Wear OS watches, as a complication or a widget. It is a useful fallback on Wear OS versions where the **AAPS** watchfaces are unreliable, see [Set up AAPS on your Wear OS watch](../WearOS/WearOsSmartwatch.md). Its companion app GlucoDataAuto shows the same data in a car with Android Auto.
-- [G-Watch app](https://play.google.com/store/apps/details?id=sk.trupici.g_watch) for Samsung Tizen watches, and its later Wear OS port. In earlier **AAPS** versions the plugin was named **Samsung Tizen** after this app.
+- [WatchDrip+](https://bigdigital.home.blog/) 適用於 Xiaomi 和 Amazfit 手錶，請參閱下方的[Xiaomi 和 Amazfit 手錶](#watches-xiaomi-amazfit)。
+- [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) 適用於 Wear OS 手錶，可作為錶面功能或小工具使用。在 **AAPS** 錶盤不穩定的 Wear OS 版本中，這是很實用的替代方案。請參閱[在 Wear OS 手錶上設定 AAPS](../WearOS/WearOsSmartwatch.md)。其配套應用程式 GlucoDataAuto 也能透過 Android Auto 在車內顯示相同資料。
+- [G-Watch app](https://play.google.com/store/apps/details?id=sk.trupici.g_watch) 適用於 Samsung Tizen 手錶，之後也推出了 Wear OS 版本。在較早期的 **AAPS** 版本中，此外掛以此應用程式命名為 **Samsung Tizen**。
 
 ```{warning}
-The **G-Watch app** and its **Wear OS** port are no longer maintained, and Samsung has moved its smartwatches from Tizen to Wear OS. G-Watch is only relevant for existing, older setups and is not recommended for a new installation. Check the dedicated [Facebook group](https://www.facebook.com/groups/gwatchapp) for the latest news.
+**G-Watch app** 及其 **Wear OS** 版本已停止維護，而 Samsung 也已將智慧型手錶平台從 Tizen 改為 Wear OS。 G-Watch 僅適用於現有的舊版設定，不建議在新安裝時使用。請查看專屬的 [Facebook 社團](https://www.facebook.com/groups/gwatchapp)，取得最新消息。
 ```
 
 (Watchfaces-garmin)=
 
 ## Garmin
 
-There are some watch faces for Garmin that integrate with [AAPS](https://apps.garmin.com/search?keywords=androidaps), on the Garmin ConnectIQ store.
+Garmin ConnectIQ 商店中有一些可與 [AAPS](https://apps.garmin.com/search?keywords=androidaps) 整合的 Garmin 錶盤。
 
-![Configuration > Communication: the Garmin card](../images/v4/Configuration/configuration_garmin.png)
+![組態 > 通訊：Garmin 卡片](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) 直接與 **AAPS** 整合。它除了顯示血糖數值外，還顯示循環狀態資料（體內胰島素、臨時基礎）並將心率數值傳送至 **AAPS**。 It is available in the ConnectIQ store; enable the **Garmin** plugin in **Configuration → Communication**. ![AAPS Glucose Watch watchface with numbered fields](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) 直接與 **AAPS** 整合。它除了顯示血糖數值外，還顯示循環狀態資料（體內胰島素、臨時基礎）並將心率數值傳送至 **AAPS**。您可以在 ConnectIQ 商店找到此錶盤；請在**組態 → 通訊**中啟用 **Garmin** 外掛。 ![含有編號欄位的 AAPS Glucose Watch 錶盤](../images/Garmin_WF-annotated.png)
 
-1. Highest and lowest glucose values on the graph
-2. Glucose change per minute
-3. Insulin on board (IOB)
-4. Time since the last glucose reading (minutes:seconds)
-5. Temporary basal rate, as a percentage of the profile basal rate
-6. Glucose graph of the last 2 hours
+1. 圖表上的最高與最低血糖值
+2. 每分鐘血糖變化量
+3. 活性胰島素（IOB）
+4. 距離上次讀取血糖值的時間（分：秒）
+5. 臨時基礎率，為設定檔基礎率的百分比
+6. 過去 2 小時的血糖圖表
 7. 目前血糖值
 
 
@@ -137,10 +137,10 @@ There are some watch faces for Garmin that integrate with [AAPS](https://apps.ga
 ## Fitbit
 
 ```{warning}
-Google is moving Fitbit into Google Health and is removing third-party apps and watch faces from Fitbit watches in the EU. Fitbit watchfaces are therefore **no longer a recommended option**, and buying a Fitbit for use with **AAPS** is not recommended.
+Google 正將 Fitbit 整合至 Google Health，並將從歐盟地區的 Fitbit 手錶移除第三方應用程式和錶盤。因此，Fitbit 錶盤<strong x-id="1">已不再是推薦選項</strong>，也不建議為了搭配<strong x-id="1">AAPS</strong>而購買 Fitbit。
 ```
 
-For existing Fitbit watches, the [Nightscout webpages](https://nightscout.github.io/nightscout/wearable/#fitbit) list some monitoring-only options, such as [Glance](https://glancewatchface.com/). These are third-party watchfaces too, so the same EU restriction applies.
+現有 Fitbit 手錶的使用者，可參閱[Nightscout 網頁](https://nightscout.github.io/nightscout/wearable/#fitbit)，了解一些僅供監測的選項，例如 [Glance](https://glancewatchface.com/)。這些也都是第三方錶盤，因此同樣受到歐盟限制。
 
 ## 僅跟隨
 
@@ -153,20 +153,20 @@ For existing Fitbit watches, the [Nightscout webpages](https://nightscout.github
 (watches-xiaomi-amazfit)=
 ### 小米和 Amazfit 手錶
 
-**WatchDrip+** is a community-developed companion app that displays glucose and loop data on various smartwatch models, mostly Xiaomi (_e.g._ Mi Band) and Amazfit brands:
+**WatchDrip+** 是由社群開發的伴隨應用程式，可在多款智慧型手錶上顯示血糖與循環資料，支援的品牌以小米（_例如_ Mi Band）和 Amazfit 為主：
 
 ![圖像](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
 
-Since version 0.5, **WatchDrip+** reads its data directly from **AAPS**, without xDrip+ as a relay. On the **AAPS** phone:
+從 0.5 版開始，**WatchDrip+** 會直接從 **AAPS** 讀取資料，不再透過 xDrip+ 中繼。在 **AAPS** 手機上：
 
-1. Enable **External Companion Apps** in **Configuration** > **Communication**, see [above](#watches-external-companion-apps). It provides the current glucose, delta, trend arrow, IOB and pump status.
-2. Enable the **xDrip** plugin in **Configuration** > **Communication** and turn on **Send status to xDrip+** in its settings. It provides the IOB/COB status line, and the glucose graph on the watch fills in after a few readings.
-3. If xDrip+ is installed on the phone, disable its **Broadcast Service API** (xDrip+ > Settings > Inter-app settings) so that the watch does not receive the data twice. If xDrip+ was only relaying data to the watch, you can uninstall it.
+1. 在**組態設定工具** > **通訊**中啟用**外部伴隨應用程式**，請參閱[上方說明](#watches-external-companion-apps)。它會提供目前的血糖值、變化量、趨勢箭頭、活性胰島素（IOB）和幫浦狀態。
+2. 在**組態設定工具** > **通訊**中啟用 **xDrip** 外掛，並在其設定中開啟**傳送狀態至 xDrip+**。它會提供活性胰島素／活性碳水化合物狀態列；讀取幾筆血糖值後，手錶上就會顯示血糖圖表。
+3. 如果手機已安裝 xDrip+，請停用其中的**廣播服務 API**（xDrip+ > 設定 > 應用程式間設定），避免手錶重複收到資料。如果 xDrip+ 只用來將資料中繼至手錶，您可以將它解除安裝。
 
-The refresh button of WatchDrip+ has no effect with **AAPS**: the data arrives with each new reading.
+WatchDrip+ 的重新整理按鈕對 **AAPS** 沒有作用：每次讀取到新的血糖值時，資料就會自動傳送。
 
 
-You can read more about them, including how to set them up, on the [WatchDrip+ website](https://bigdigital.home.blog/). 這些手錶的優勢在於它們小巧且相對實惠。他們是兒童和手腕較小的人們一個不錯的選擇。
+如需進一步了解，包括如何設定，請參閱 [WatchDrip+ 網站](https://bigdigital.home.blog/)。這些手錶的優勢在於它們小巧且相對實惠。他們是兒童和手腕較小的人們一個不錯的選擇。
 
 ### Pebble 手錶
 
@@ -180,14 +180,14 @@ Pebble 手錶（[現已停產](https://en.wikipedia.org/wiki/Pebble_(watch))）�
 ### [Bluejay 手錶](https://bluejay.website/)
 
 
-![BlueJay U3 watch](../images/watches/bluejay_u3.png)
+![BlueJay U3 手錶](../images/watches/bluejay_u3.png)
 
 
-這些是獨特的技術產品，可以直接從 Dexcom 發射器接收血糖資料。 It is not widely known that Dexcom G6/G7 transmitters actually broadcast the current glucose data on _two_ separate channels, a phone channel and a medical channel. The Bluejay watches can be set to receive glucose data on either channel, so if **AAPS** is using the phone channel, then the Bluejay watches can use the medical channel.
+這些是獨特的技術產品，可以直接從 Dexcom 發射器接收血糖資料。許多人可能不知道，Dexcom G6/G7 發射器其實會透過_兩_個不同的頻道，傳送目前的血糖資料：手機頻道和醫療頻道。 Bluejay 手錶可以設定為透過任一頻道接收血糖資料。因此，如果 **AAPS** 使用手機頻道，Bluejay 手錶就可以使用醫療頻道。
 
-The key advantage is that the watch is independent of both the phone and the looping system. 所以，例如，如果您在海灘或主題公園中斷掉幫浦和 **AAPS** 手機的連線，並且超出了 **AAPS** 手機的範圍，您仍然可以直接從您的 Dexcom 獲取讀數到 Bluejay 手錶。
+主要優點是手錶不依賴手機或循環系統。所以，例如，如果您在海灘或主題公園中斷掉幫浦和 **AAPS** 手機的連線，並且超出了 **AAPS** 手機的範圍，您仍然可以直接從您的 Dexcom 獲取讀數到 Bluejay 手錶。
 
-The original **Bluejay GTS** is discontinued and cannot read the Dexcom G7. The later models (U1, then the current **U3**, sold as early access at the time of writing) are full Android watches running xDrip, which collect from the Dexcom G6 and G7 directly. The vendor describes the watch as a research tool, not for medical use. Reported disadvantages are that it does not always pick up a reading every 5 minutes and that the battery needs frequent charging. Check the [Bluejay website](https://bluejay.website/) for the current model and availability.
+原版 **Bluejay GTS** 已停產，且無法讀取 Dexcom G7。後續機型（U1，以及目前的 **U3**；本文撰寫時以搶先體驗形式販售）是搭載完整 Android 系統並執行 xDrip 的手錶，可直接從 Dexcom G6 和 G7 接收資料。廠商將這款手錶定位為研究工具，不適用於醫療用途。使用者回報的缺點包括：手錶不一定每 5 分鐘都能讀取到血糖值，而且電池需要經常充電。請查看 [Bluejay 網站](https://bluejay.website/)，了解目前的機型和供應情況。
 
 ### Apple 手錶
 

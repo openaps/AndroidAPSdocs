@@ -1,37 +1,37 @@
-# SMS Commands
+# SMS-команди
 
 ```{contents} Table of contents
 :depth: 2
 ```
 
-Most remote adjustments (temp targets, carbs, profile switches and, once the client is paired, boluses) can be made with the [**AAPSClient** app](../RemoteFeatures/RemoteMonitoring.md) on an Android phone with an internet connection, see [Master ↔ Client control](#client-master-control) (an iPhone version of **AAPSClient** is in development, see [AAPSClient](AapsClient.md)). SMS commands remain an alternative that works without internet, and the only remote option if you use an iPhone as a follower and do not have **AAPSClient** yet.
+Більшість віддалених змін (тимчасові цілі, вуглеводи, перемикання профілю і, коли клієнт спарено, болюси) можна зробити в [застосунку **AAPSClient**](../RemoteFeatures/RemoteMonitoring.md) на телефоні з Android і доступом до інтернету, див. [Керування основний телефон ↔ клієнт](#client-master-control) (версія **AAPSClient** для iPhone ще в розробці, див. [AAPSClient](AapsClient.md)). SMS-команди залишаються альтернативою, яка працює без інтернету, і єдиним варіантом віддаленого керування, якщо ви як послідовник використовуєте iPhone і ще не маєте **AAPSClient**.
 
-**SMS commands are really useful:**
-1. For routine remote control
+**SMS-команди дуже корисні:**
+1. Для звичайного віддаленого керування
 
-2. If you want to remotely bolus insulin without a paired **AAPSClient**
+2. Якщо ви хочете віддалено вводити болюс інсуліну без спареного **AAPSClient**
 
-3. In a region of poor internet reception, where text messages are able to get through, but data/internet phone reception is limited. This is very useful when going to remote areas (e.g. camping, skiing).
+3. У місцевості з поганим інтернетом, де текстові повідомлення проходять, але мобільні дані / інтернет на телефоні працюють погано. Це дуже корисно, коли ви їдете у віддалені місця (наприклад, у похід з наметом чи на лижі).
 
-4. If your other method of remote control (**AAPSClient**) is temporarily not working
+4. Якщо ваш інший спосіб віддаленого керування (**AAPSClient**) тимчасово не працює
 
-## Safety First
+## Безпека понад усе
 
-If you enable **SMS Communicator** in **AAPS**, consider that the phone which is set up to give remote commands could be stolen, and/or used by someone else. Always lock your phone handset with at least a PIN. A strong password and/ or biometric lock are highly recommended, and ensure this is different from your APK Master password (the password which is required to export **AAPS** settings).
+Якщо ви вмикаєте **SMS Комунікатор** в **AAPS**, пам'ятайте, що телефон, з якого надсилають віддалені команди, можуть вкрасти та/або ним може скористатися хтось інший. Завжди блокуйте свій телефон принаймні PIN-кодом. Дуже радимо використовувати надійний пароль та/або біометричне блокування. Переконайтеся, що цей пароль відрізняється від головного пароля APK (пароля, потрібного для експорту налаштувань **AAPS**).
 
-Additionally, it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. This way, you can use the second number to [disable](#SMSCommands-other) SMS communicator in case your main remote phone gets compromised.
+Крім того, радимо дозволити для SMS-команд [другий номер телефону](#SMSCommands-authorized-phone-numbers). Так ви зможете за допомогою другого номера [вимкнути](#SMSCommands-other) SMS Комунікатор, якщо ваш основний телефон для віддаленого керування опиниться в чужих руках.
 
-The default minimum time delay between bolus commands is 15 minutes. For safety reasons, you have to add at least two authorised phone numbers to change this to a shorter time delay. If you try to remotely bolus again within 15 minutes of the previous bolus, you will receive the response “Remote bolus not available. Try again later”
+За замовчуванням мінімальний інтервал між командами болюсу становить 15 хвилин. З міркувань безпеки, щоб скоротити цей інтервал, треба додати принаймні два дозволені номери телефону. Якщо ви спробуєте знову ввести болюс віддалено раніше ніж через 15 хвилин після попереднього болюсу, ви отримаєте відповідь «Віддалений болюс недоступний. Спробуйте пізніше.»
 
-AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
+AAPS також повідомить вас текстовим повідомленням, чи виконано ваші віддалені команди, наприклад болюс або зміну профілю. Радимо налаштувати все так, щоб тексти підтвердження надходили принаймні на два різні номери телефону, на випадок якщо один із телефонів-отримувачів вкрадуть.
 
-**If you bolus through SMS Commands, you must enter carbs separately (second SMS, AAPSClient...)!** If you fail to do so, the IOB would be correct with too low COB, potentially leading to not performed correction bolus as **AAPS** assumes that you have too much active insulin.
+**Якщо ви вводите болюс через SMS-команди, вуглеводи треба ввести окремо (друге SMS, AAPSClient...)!** Якщо цього не зробити, IOB буде правильним, але COB буде занадто низьким. Тоді коригувальний болюс може не бути введено, бо **AAPS** вважає, що у вас забагато активного інсуліну.
 
-For the sensitive commands, an authenticator app with a time-based one-time password must be used to increase safety.
+Для чутливих команд, щоб підвищити безпеку, треба використовувати застосунок-автентифікатор з одноразовим паролем, що залежить від часу.
 
-If you want to remove the ability of a caregiver phone to send SMS commands, use the emergency button “[Reset Authenticators](#sms-commands-authenticator-setup)” in **AAPS** or send the SMS command “[SMS stop](#SMSCommands-other)”. By resetting authenticators you make ALL the caregivers' phones invalid. You will need to set them up again.
+Якщо ви хочете забрати в телефона доглядача можливість надсилати SMS-команди, використайте аварійну кнопку «[Скинути Authenticators](#sms-commands-authenticator-setup)» в **AAPS** або надішліть SMS-команду «[SMS stop](#SMSCommands-other)». Коли ви скидаєте автентифікатори, ВСІ телефони доглядачів перестають бути дійсними. Вам доведеться налаштувати їх знову.
 
-## Setup SMS commands
+## Налаштування SMS-команд
 
 ```{contents} The overall process is as follows
 :depth: 1
@@ -39,315 +39,315 @@ If you want to remove the ability of a caregiver phone to send SMS commands, use
 ```
 
 (sms-commands-authenticator-setup)=
-### Authenticator setup
+### Налаштування Authenticator
 
-Two-factor authentication is used to improve safety.
+Для більшої безпеки використовується двофакторна автентифікація.
 
-On the caregiver phone, download (from the App store or Google play) and install an Authenticator app. Popular free apps are:
+На телефоні доглядача завантажте (з App Store або Google Play) і встановіть застосунок-автентифікатор (Authenticator). Популярні безкоштовні застосунки:
   - [Authy](https://authy.com/download/)
   - Google Authenticator - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
   - [LastPass Authenticator](https://lastpass.com/auth/)
   - [FreeOTP Authenticator](https://freeotp.github.io/)
 
-These Authenticator apps produce a time-limited, one-time 6-digit password, similar to mobile banking or shopping. You can use an alternative Authenticator app, as long as it supports RFC 6238 TOTP tokens. The Microsoft Authenticator does not work.
+Ці застосунки створюють одноразовий 6-значний пароль з обмеженим часом дії, як у мобільному банкінгу чи під час онлайн-покупок. Можна використовувати інший застосунок-автентифікатор, якщо він підтримує токени RFC 6238 TOTP. Microsoft Authenticator не працює.
 
-### Check phone settings
+### Перевірте налаштування телефона
 
-On your phone, go to **Apps > AAPS > Permissions**. Make sure **SMS** and **Phone** are allowed.
+На телефоні перейдіть до **Apps > AAPS > Permissions** (Застосунки → AAPS → Дозволи). Переконайтеся, що дозволи **SMS** і **Phone** (Телефон) надано.
 
-![image](../images/remote-control-08.png)
+![зображення](../images/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
-Android can block the **SMS** permission for apps that were not installed from an app store, like **AAPS**. If you see this message when you grant the **SMS** permission, open the phone's **Settings > Apps > AAPS**, tap the **⋮** menu (top right) and select **Allow restricted settings**. Then grant the **SMS** permission again.
+Android може блокувати дозвіл **SMS** для застосунків, які встановлено не з магазину застосунків, як-от **AAPS**. Якщо ви бачите це повідомлення, коли надаєте дозвіл **SMS**, відкрийте на телефоні **Settings > Apps > AAPS** (Налаштування → Застосунки → AAPS), торкніться меню **⋮** (вгорі праворуч) і виберіть **Allow restricted settings** (Дозволити обмежені налаштування). Потім знову надайте дозвіл **SMS**.
 ```
 
-![App was denied access to SMS](../images/sms_permission_restricted.png)
+![Застосунку заборонено доступ до SMS](../images/sms_permission_restricted.png)
 
-### Date and time syncing
+### Синхронізація дати й часу
 
-The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
+Час на обох телефонах має бути синхронізований. Найкраще встановлювати його автоматично з мережі. Різниця в часі може спричинити проблеми з автентифікацією.
 
-On both the **AAPS** phone and the caregiver phone, check the date and time are synched. Exactly how you do this depends on your specific device, you may need to try out different settings.
+І на телефоні з **AAPS**, і на телефоні доглядача перевірте, що дата й час синхронізовані. Як саме це зробити, залежить від вашого пристрою; можливо, доведеться спробувати різні налаштування.
 
-Example (for Samsung S23): **Settings > General management > Date and time**: make sure that **Automatic date and time** is checked.
+Приклад (для Samsung S23): **Settings > General management > Date and time** (Налаштування → Загальне керування → Дата й час): переконайтеся, що **Automatic date and time** (Автоматичні дата й час) увімкнено.
 
-Some options may be greyed out, due to needing admin via a family account if the phone has been set up as a child account. This date and time setting is called “set automatically” on a caregiver/parent iPhone. If you are not sure if you have synched the handsets, don’t worry, you can set up the SMS commands and troubleshoot afterward if it seems to be causing problems (ask for help if needed).
+Деякі параметри можуть бути неактивними (сірими), бо, якщо телефон налаштовано як дитячий обліковий запис, ними керує адміністратор сімейного облікового запису. На iPhone доглядача/батьків це налаштування дати й часу називається «Set Automatically» (Автоматично). Якщо ви не впевнені, що телефони синхронізовано, не хвилюйтеся: можна налаштувати SMS-команди, а потім шукати причину, якщо здається, що через це виникають проблеми (за потреби попросіть допомоги).
 
-### AAPS settings
+### Налаштування AAPS
 
-Now that the phone settings have been checked, in the **AAPS** app itself, go to [**Configuration** → **Communication**](../SettingUpAaps/ConfigBuilder.md) and enable the **SMS Communicator** plugin.
+Тепер, коли налаштування телефона перевірено, у самому застосунку **AAPS** перейдіть до [**Конфігурація** → **Звʼязок**](../SettingUpAaps/ConfigBuilder.md) і увімкніть плагін **SMS Комунікатор**.
 
-Open the **SMS Communicator** settings.
+Відкрийте налаштування **SMS Комунікатор**.
 
-Enable **Allow remote commands via SMS**. The **Additional mandatory PIN at token end** and **Authenticator setup** options only appear once this is enabled:
+Увімкніть **Дозволити віддалені команди через SMS**. Параметри **Додатковий обов’язковий PIN у кінці токена** і **Налаштування Authenticator** з’являються лише після того, як це ввімкнено:
 
-![SMS Communicator settings](../images/sms_communicator_settings.png)
+![Налаштування SMS Комунікатор](../images/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
-#### Allowed phone numbers
+#### Дозволені номери телефонів
 
-Enter the caregiver phone number(s). Include the country code and exclude the first “0” of the phone number, as shown in these examples:
-* UK phone number: +447976304596
-* US phone number: +11234567890
-* FR phone number:  +33612344567
-* _etc._
+Введіть номер(и) телефону доглядача. Вкажіть код країни і не пишіть першу «0» номера телефону, як у цих прикладах:
+* Номер телефону у Великій Британії: +447976304596
+* Номер телефону в США: +11234567890
+* Номер телефону у Франції:  +33612344567
+* _тощо._
 
-Note that the “+” in front of the number may or may not be required based on your location. To determine this, send a sample text which will show the received format on the **SMS Communicator** plugin screen (**Configuration** → **Communication** → **SMS Communicator** → **Open plugin**).
+Зверніть увагу: знак «+» перед номером може бути потрібен або не потрібен, залежно від вашої країни. Щоб це визначити, надішліть пробне повідомлення: отриманий формат буде видно на екрані плагіна **SMS Комунікатор** (**Конфігурація** → **Звʼязок** → **SMS Комунікатор** → **Відкрити плагін**).
 
-If you have more than one phone number to add, separate them by semicolons, with **NO space between numbers** (this is critical!). Select **OK**:
+Якщо треба додати кілька номерів телефону, розділіть їх крапкою з комою, **БЕЗ пробілів між номерами** (це дуже важливо!). Виберіть **OK**:
 
-![Allowed phone numbers](../images/sms_allowed_numbers.png)
+![Дозволені номери телефонів](../images/sms_allowed_numbers.png)
 
-#### Remote bolus min distance
+#### Мін. інтервал між віддаленими болюсами
 
-- You can define the minimum delay (in minutes) between two boluses issued via SMS.
-- For safety reasons you have to add at least two authorized phone numbers to edit this value.
+- Можна задати мінімальну затримку (у хвилинах) між двома болюсами, надісланими через SMS.
+- З міркувань безпеки, щоб змінити це значення, треба додати принаймні два дозволені номери телефону.
 
-#### Additional mandatory PIN at token end
+#### Додатковий обов’язковий PIN у кінці токена
 
-For safety reasons, the reply code must be followed by a PIN. Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent.
+З міркувань безпеки після коду відповіді треба ввести PIN. Виберіть PIN, який ви (та інші доглядачі) будете додавати в кінці коду автентифікатора, коли надсилаєте SMS-команду.
 
-PIN requirements are:
+Вимоги до PIN:
 
-* at least 6 digits
-* digits only
+* щонайменше 6 цифр
+* лише цифри
 
-For a safer PIN, do not use the same digit many times (_e.g._ 111111) or a sequence (_e.g._ 123456).
+Для надійнішого PIN не використовуйте одну цифру багато разів (_наприклад_, 111111) або послідовність (_наприклад_, 123456).
 
-![Additional mandatory PIN at token end](../images/sms_pin.png)
+![Додатковий обов’язковий PIN у кінці токена](../images/sms_pin.png)
 
-#### Authenticator setup
+#### Налаштування Authenticator
 
-* Tap **Authenticator setup** and follow the step-by-step instructions on the screen.
-* Open your installed authenticator app on the _caregiver’s phone_, set up a new connection and
-* Use the caregiver phone to scan the QR code shown under **Scan code to setup AAPS OTP codes**.
+* Торкніться **Налаштування Authenticator** і виконуйте покрокові інструкції на екрані.
+* Відкрийте встановлений застосунок-автентифікатор на _телефоні доглядача_, створіть нове підключення і
+* Телефоном доглядача відскануйте QR-код, показаний під написом **Відскануйте код, щоб налаштувати OTP-коди AAPS**.
 
-![Authenticator setup with QR code](../images/sms_authenticator_setup.png)
+![Налаштування Authenticator за допомогою QR-коду](../images/sms_authenticator_setup.png)
 
-* Under **Test One-Time-Password**, enter the one-time passcode from the authenticator app on the caregiver phone followed by your PIN in **Code to check**:
+* У розділі **Перевірте одноразовий пароль** введіть у поле **Код для перевірки** одноразовий код із застосунку-автентифікатора на телефоні доглядача, а одразу після нього ваш PIN:
 
-Example:
-* The token from the authenticator app is 457051
-* Your mandatory PIN is 2401
-* Code to check: 4570512401
+Приклад:
+* Токен із застосунку-автентифікатора: 457051
+* Ваш обов’язковий PIN: 2401
+* Код для перевірки: 4570512401
 
-If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. **There is no button you can press!** The process is now complete, there is no “OK” button you need to press after entering the code:
+Якщо введено правильно, червоний текст «НЕПРАВИЛЬНИЙ PIN» автоматично зміниться на зелений «OK». **Тут немає кнопки, яку треба натиснути!** Процес завершено, після введення коду не потрібно натискати кнопку «OK»:
 
-![Test One-Time-Password and Reset Authenticators](../images/sms_authenticator_test.png)
+![Перевірка одноразового пароля і скидання Authenticators](../images/sms_authenticator_test.png)
 
-You should now be set up with SMS commands.
+Тепер SMS-команди мають бути налаштовані.
 
-Use the **Reset Authenticators** button at the bottom of the **Authenticator setup** screen if you want to remove provisioned authenticators. (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again.)
+Якщо ви хочете видалити налаштовані автентифікатори, натисніть кнопку **Скинути Authenticators** внизу екрана **Налаштування Authenticator**. (Коли ви скидаєте автентифікатори, ВСІ вже налаштовані автентифікатори перестають бути дійсними. Вам доведеться налаштувати їх знову.)
 
-## SMS commands usage
+## Використання SMS-команд
 
-### First steps using SMS commands
+### Перші кроки з SMS-командами
 
-1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the **AAPS** phone. You should get a response similar to that shown here:
+1)  Щоб перевірити, що все налаштовано правильно, перевірте зв'язок: надішліть з телефона доглядача на телефон з **AAPS** SMS з текстом «bg». Ви маєте отримати відповідь, подібну до показаної тут:
 
-![image](../images/remote-control-06.png)
+![зображення](../images/remote-control-06.png)
 
-If you don't receive any response, check the [Troubleshooting](#SMSCommands-troubleshooting) section below.
+Якщо ви не отримали жодної відповіді, див. розділ [Усунення проблем](#SMSCommands-troubleshooting) нижче.
 
-2)  Now try an SMS command that requires the authenticator, _e.g._ “target hypo”. The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by the additional secret **PIN** known only by caregivers/followers (a string of twelve digits in total, assuming your PIN has 6 digits).
+2)  Тепер спробуйте SMS-команду, яка потребує автентифікатора, _наприклад_ «target hypo». Телефон доглядача отримає відповідь із проханням ввести **шестизначний пароль** із застосунку-автентифікатора, а після нього додатковий секретний **PIN**, який знають лише доглядачі/послідовники (разом рядок із дванадцяти цифр, якщо ваш PIN має 6 цифр).
 
-When you try sending an SMS command for the first time, try it in the presence of the **AAPS** phone, to see how it works:
+Коли ви вперше надсилаєте SMS-команду, спробуйте це поруч із телефоном з **AAPS**, щоб побачити, як це працює:
 
-![image](../images/remote-control-16.png)
+![зображення](../images/remote-control-16.png)
 
-The caregiver’s phone will receive an SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully.
+Телефон доглядача отримає від **AAPS** SMS-відповідь, яка підтвердить, чи успішно виконано віддалену SMS-команду.
 
-If your command is successful, you will receive a reply to confirm this. If there is a problem you will receive an error message. See [Troubleshooting](#SMSCommands-troubleshooting) below for common errors.
+Якщо команду виконано успішно, ви отримаєте відповідь із підтвердженням. Якщо виникла проблема, ви отримаєте повідомлення про помилку. Типові помилки див. у розділі [Усунення проблем](#SMSCommands-troubleshooting) нижче.
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**Порада**: якщо ви надсилатимете багато SMS, корисно мати тариф з необмеженими SMS (для кожного телефона, який використовується).
 
-### Delivering mealtime boluses through SMS commands
+### Болюси на їжу через SMS-команди
 
-Remote bolusing of insulin can be done via **SMS Commands** or through a paired **AAPSClient** (see [Master ↔ Client control](#client-master-control)); it cannot be done through the Nightscout website. Carbs can be announced through SMS or **AAPSClient** as well. With SMS, it is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
+Віддалено ввести болюс інсуліну можна через **SMS-команди** або через спарений **AAPSClient** (див. [Керування основний телефон ↔ клієнт](#client-master-control)); через вебсайт Nightscout це зробити не можна. Вуглеводи також можна ввести через SMS або **AAPSClient**. Через SMS не можна надіслати команди для вуглеводів та інсуліну в одному повідомленні. Ці команди треба надсилати окремо, ось так:
 
-1)  Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to **Treatments** → **Insulin** in **AAPS**. 2)  Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to **Treatments** → **Carbs** in **AAPS**.
+1)  Надішліть болюс інсуліну (_наприклад_, «bolus 2» дасть команду на болюс 2 одиниці). Через SMS-команди це те саме, що **Терапія** → **Інсулін** в **AAPS**. 2)  Надішліть вуглеводи (_наприклад_, «carbs 20» вводить 20 г вуглеводів). Це те саме, що **Терапія** → **Вуглеводи** в **AAPS**.
 
-To avoid hypos, it is a good idea to start conservatively, by bolusing **less insulin** than would be needed according to your carb ratio, because you are not taking into account the current glucose level or glucose trend.
+Щоб уникнути гіпо, краще починати обережно: вводьте **менше інсуліну**, ніж потрібно за вашим вуглеводним коефіцієнтом, бо ви не враховуєте поточний рівень глюкози і тенденцію глюкози.
 
-**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can combine **AAPSClient** with SMS commands: carbs entered on a paired **AAPSClient** need no authentication code and are therefore quicker than SMS commands. Carbs or other treatments entered on the Nightscout website are **not** applied while client control is on; **AAPS** is then in [hardened mode](#client-master-control-hardened-mode).
+**Порядок, у якому ви надсилаєте ці команди, важливий**. Якщо ви будь-яким способом вводите велику кількість вуглеводів і SMB увімкнено, **AAPS** може одразу відреагувати і ввести частковий болюс інсуліну. Тому, якщо ви потім спробуєте надіслати болюс інсуліну _після_ введення вуглеводів, може бути неприємна затримка і повідомлення «болюс уже вводиться», і тоді треба перевірити, скільки було введено як SMB. Або, якщо ви не помітите, що вводиться SMB, а ваш власний наступний болюс теж буде успішним, на цю їжу загалом може бути введено забагато інсуліну. Тому, якщо ви вводите болюс на їжу віддалено, завжди надсилайте болюс інсуліну _до_ введення вуглеводів. Якщо хочете, можна поєднувати **AAPSClient** із SMS-командами: вуглеводи, введені на спареному **AAPSClient**, не потребують коду автентифікації, тому це швидше, ніж SMS-команди. Вуглеводи або інші записи терапії, введені на вебсайті Nightscout, **не** застосовуються, поки увімкнено керування з клієнта; тоді **AAPS** працює в [захищеному режимі](#client-master-control-hardened-mode).
 
 (SMSCommands-commands)=
-## Commands
+## Команди
 
 ```{contents} List of command groups
 :depth: 1
 :local: true
 ```
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app). The commands are not case-sensitive, you can use lower or upper case.
+Команди треба надсилати англійською, а відповідь буде вашою мовою, якщо текст відповіді вже [перекладено](#translations-translate-strings-for-AAPS-app). Команди не залежать від регістру: можна писати малими або великими літерами.
 
-![SMS Commands Example](../images/SMSCommands.png)
+![Приклад SMS-команд](../images/SMSCommands.png)
 
-The **SMS Commands Tables** below show all the possible SMS commands. _Example values_ are given, to aid understanding. The commands have the same range of possible values (targets, percent profile etc.) which are allowable in the **AAPS** app itself.
+**Таблиці SMS-команд** нижче показують усі можливі SMS-команди. Для кращого розуміння наведено _приклади значень_. Команди мають той самий діапазон можливих значень (цілі, відсоток профілю тощо), що й сам застосунок **AAPS**.
 
 (authentication-or-not)=
-### Authentication or not?
+### Потрібна автентифікація чи ні?
 
-Some SMS commands give an immediate response, and some SMS commands require strong **authentication** through the Authenticator app. A simple enquiry like “**BG**” (which requests an update on current glucose) is quick to type, doesn't need authenticating, and returns the **AAPS** status information shown below:
+Деякі SMS-команди дають відповідь одразу, а деякі потребують надійної **автентифікації** через застосунок-автентифікатор. Простий запит, наприклад «**BG**» (запит поточного значення глюкози), швидко набрати, він не потребує автентифікації і повертає інформацію про стан **AAPS**, як показано нижче:
 
-![image](../images/remote-control-06.png)
+![зображення](../images/remote-control-06.png)
 
-Commands which need more security require a code to be entered, for example:
+Команди, яким потрібна більша безпека, потребують введення коду, наприклад:
 
-![SMS authenticated](../images/remote-control-07.png)
+![SMS з автентифікацією](../images/remote-control-07.png)
 
-The *Auth* column in the tables below, indicates whether such a strong authentication is required for each command.
+Стовпець *Автент.* у таблицях нижче показує, чи потрібна така надійна автентифікація для кожної команди.
 
-### CGM data
+### Дані CGM
 
-| Command    | Auth | Function & *Response*                                                                                                                                                                       |
-| ---------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BG         | No   | Returns: last BG, delta, IOB (bolus and basal), COB<br/>*Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)*                                             |
-| CAL 5.6/90 | Yes  | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent* |
+| Команда    | Автент. | Функція та *відповідь*                                                                                                                                                                      |
+| ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BG         | Ні      | Повертає: останню ГК, дельту, IOB (болюс і базал), COB<br/>*Остання ГК: 5,6 4 хв тому, Дельта: -0,2 ммоль, IOB: 0,20 Од (Болюс: 0,10 Од Базал: 0,10 Од)*                              |
+| CAL 5.6/90 | Так     | Калібрує CGM значенням 5.6/90<br/>(використовуйте значення у ваших одиницях глюкози)<br/>Працює, лише якщо правильно налаштовано в **AAPS**.<br/>*Калібрування надіслано* |
 
-### Pump
+### Помпа
 
-| Command              | Auth | Function & *Response*                                                                                 |
-| -------------------- | ---- | ----------------------------------------------------------------------------------------------------- |
-| PUMP                 | No   | Last conn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
-| PUMP DISCONNECT *30* | Yes  | To disconnect pump for *30* minutes                                                                   |
-| PUMP CONNECT         | Yes  | Pump reconnected                                                                                      |
+| Команда              | Автент. | Функція та *відповідь*                                                                                |
+| -------------------- | ------- | ----------------------------------------------------------------------------------------------------- |
+| ПОМПА                | Ні      | Last conn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP DISCONNECT *30* | Так     | Від’єднати помпу на *30* хвилин                                                                       |
+| PUMP CONNECT         | Так     | Помпу знову під’єднано                                                                                |
 
-### Basal
+### Базал
 
-| Command           | Auth | Function & *Response*            |
-| ----------------- | ---- | -------------------------------- |
-| BASAL 0.3         | Yes  | To start basal 0.3U/h for 30 min |
-| BASAL 0.3 20      | Yes  | To start basal 0.3U/h for 20 min |
-| BASAL 30%         | Yes  | To start basal 30% for 30 min    |
-| BASAL 30% 50      | Yes  | To start basal 30% for 50 min    |
-| BASAL STOP/CANCEL | Yes  | To stop temp basal               |
+| Команда           | Автент. | Функція та *відповідь*              |
+| ----------------- | ------- | ----------------------------------- |
+| BASAL 0.3         | Так     | Запустити базал 0,3 Од/год на 30 хв |
+| BASAL 0.3 20      | Так     | Запустити базал 0,3 Од/год на 20 хв |
+| BASAL 30%         | Так     | Запустити базал 30 % на 30 хв       |
+| BASAL 30% 50      | Так     | Запустити базал 30 % на 50 хв       |
+| BASAL STOP/CANCEL | Так     | Зупинити тимчасовий базал           |
 
-Some pumps take a temp basal only in percent, others only in U/h. If you use the other form, **AAPS** answers *"This pump takes a temp basal only in percent, not in U/h."* (or the reverse) and sets nothing. The duration must be a multiple of your pump's temp basal duration step.
+Деякі помпи приймають тимчасовий базал лише у відсотках, інші — лише в Од/год. Якщо ви використаєте іншу форму, **AAPS** відповість *«Ця помпа приймає тимчасовий базал лише у відсотках, а не в Од/год.»* (або навпаки) і нічого не встановить. Тривалість має бути кратною кроку тривалості тимчасового базалу вашої помпи.
 
 
-### Loop
+### Петля
 
-| Command           | Auth | Function & *Response*                                                                                                                                                                                                                     |
-| ----------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LOOP STATUS       | No   | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled or LGS<br/> - *Loop is enabled* if the loop is closed or open<br/> - *Suspended (10 min)* if the loop is disconnected or suspended |
-| LOOP STOP/DISABLE | Yes  | The pump will revert to the pre-programmed basal rate.<br/>*Loop has been disabled*                                                                                                                                                 |
-| LOOP SUSPEND 20   | Yes  | *Loop suspended for 20 minutes*                                                                                                                                                                                                           |
-| LOOP RESUME       | Yes  | *Loop resumed*                                                                                                                                                                                                                            |
-| LOOP CLOSED       | Yes  | *Current loop mode: Closed Loop*                                                                                                                                                                                                          |
-| LOOP LGS          | Yes  | *Current loop mode: Low Glucose Suspend*                                                                                                                                                                                                  |
+| Команда           | Автент. | Функція та *відповідь*                                                                                                                                                                                                                       |
+| ----------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LOOP STATUS       | Ні      | Відповідь залежить від поточного стану:<br/> - *Петля вимкнена*, якщо петлю вимкнено або LGS<br/> - *Петлю увімкнено*, якщо петля закрита або відкрита<br/> - *Призупинено (10 хв)*, якщо петлю від’єднано або призупинено |
+| LOOP STOP/DISABLE | Так     | Помпа повернеться до запрограмованої базальної швидкості.<br/>*Петлю вимкнено*                                                                                                                                                         |
+| LOOP SUSPEND 20   | Так     | *Петлю призупинено на 20 хвилин*                                                                                                                                                                                                             |
+| LOOP RESUME       | Так     | *Петлю відновлено*                                                                                                                                                                                                                           |
+| LOOP CLOSED       | Так     | *Поточний робочий режим: Закрита петля*                                                                                                                                                                                                      |
+| LOOP LGS          | Так     | *Поточний робочий режим: Зупинка базалу при низькому ГК*                                                                                                                                                                                     |
 
-### Bolus
+### Болюс
 
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! In this case, the response would be *Remote bolus not available. Try again later.* This response is also sent when the pump is currently delivering a bolus.
+Віддалений болюс не дозволено протягом 15 хв (це значення можна змінити, лише якщо додано 2 номери телефону) після останньої команди болюсу або віддалених команд! У цьому випадку відповідь буде *Віддалений болюс недоступний. Спробуйте пізніше.* Таку відповідь ви також отримаєте, якщо помпа зараз вводить болюс.
 
-| Command              | Auth | Function & *Response*                                                                                                                                             |
-| -------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BOLUS 1.2            | Yes  |                                                                                                                                                                   |
-| BOLUS 0.60 MEAL      | Yes  | Delivers the specified 0.60U bolus<br/>**and** sets the [Eating Soon TempTarget](#TempTargets-eating-soon-temp-target)                                      |
-| CARBS 5              | Yes  | To enter 5g, without a bolus                                                                                                                                      |
-| CARBS 5 17:35/5:35PM | Yes  | To enter 5g at 17:35.<br/>The acceptable time format depends<br/> on the time setting (12h/24h) on the phone.                                         |
-| EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only). |
-| EXTENDED STOP/CANCEL | Yes  | To stop extended bolus                                                                                                                                            |
+| Команда              | Автент. | Функція та *відповідь*                                                                                                                                            |
+| -------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BOLUS 1.2            | Так     |                                                                                                                                                                   |
+| BOLUS 0.60 MEAL      | Так     | Вводить вказаний болюс 0,60 Од<br/>**і** встановлює [тимчасову ціль «Очікуваний прийом їжі»](#TempTargets-eating-soon-temp-target)                          |
+| CARBS 5              | Так     | Ввести 5 г без болюсу                                                                                                                                             |
+| CARBS 5 17:35/5:35PM | Так     | Ввести 5 г о 17:35.<br/>Допустимий формат часу залежить<br/> від налаштування часу (12 год/24 год) на телефоні.                                       |
+| EXTENDED 2 120       | Так     | Запустити подовжений болюс 2 Од на 120 хв.<br/>Лише для [сумісних помп](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only). |
+| EXTENDED STOP/CANCEL | Так     | Зупинити подовжений болюс                                                                                                                                         |
 
-### Profile
+### Профіль
 
-| Command        | Auth | Function & *Response*                                                                                                                                        |
-| -------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| PROFILE STATUS | No   | Current profile and percentage                                                                                                                               |
-| PROFILE LIST   | No   | The current list of profiles in **AAPS**, e.g.:<br/>1. Profile1<br/> 2. Profile2                                                                 |
-| PROFILE 1      | Yes  | To switch profile to profile 1 in the list.<br/>Use the numbers as returned by the **PROFILE LIST**,<br/>not the profile names as you saved them |
-| PROFILE 2 30   | Yes  | To switch profile to Profile2 30%                                                                                                                            |
+| Команда        | Автент. | Функція та *відповідь*                                                                                                                                                     |
+| -------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PROFILE STATUS | Ні      | Поточний профіль і відсоток                                                                                                                                                |
+| PROFILE LIST   | Ні      | Поточний список профілів в **AAPS**, наприклад:<br/>1. Profile1<br/> 2. Profile2                                                                               |
+| PROFILE 1      | Так     | Перемкнути профіль на профіль 1 зі списку.<br/>Використовуйте номери, які повертає команда **PROFILE LIST**,<br/>а не назви профілів, під якими ви їх зберегли |
+| PROFILE 2 30   | Так     | Перемкнути профіль на Profile2 30 %                                                                                                                                        |
 
-The percentage must be between 30 and 250 %, as in the app. A value outside this range is refused before you are asked for the authentication code.
+Відсоток має бути від 30 до 250 %, як у застосунку. Значення поза цим діапазоном відхиляється ще до того, як у вас попросять код автентифікації.
 
-### Temporary Targets
+### Тимчасові цілі
 
-| Command                   | Auth | Function & *Response*                     |
-| ------------------------- | ---- | ----------------------------------------- |
-| TARGET MEAL/ACTIVITY/HYPO | Yes  | To set the Temp Target MEAL/ACTIVITY/HYPO |
-| TARGET STOP/CANCEL        | Yes  | To cancel Temp Target                     |
+| Команда                   | Автент. | Функція та *відповідь*                                             |
+| ------------------------- | ------- | ------------------------------------------------------------------ |
+| TARGET MEAL/ACTIVITY/HYPO | Так     | Встановити тимчасову ціль MEAL/ACTIVITY/HYPO (їжа/активність/гіпо) |
+| TARGET STOP/CANCEL        | Так     | Скасувати тимчасову ціль                                           |
 
 
 (SMSCommands-other)=
-### Other
+### Інше
 
-| Command          | Auth | Function & *Response*                                                                                                                                                                                                                                                  |
-| ---------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| RESTART          | Yes  | Restarts AAPS. Useful if you got issues that normally is resolved with a restart.                                                                                                                                                                                      |
-| SMS DISABLE/STOP | Yes  | To disable the SMS Remote Service, reply with the code.<br/>Keep in mind that you'll be able to reactivate it directly<br/>from the **AAPS** master smartphone only.                                                                                       |
-| HELP             | No   | Returns all functions available for interrogation:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>Send further ***HELP ***FUNCTION****** command to list<br/>all options available in this section. |
-| HELP BOLUS       |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                                                                                   |
+| Команда          | Автент. | Функція та *відповідь*                                                                                                                                                                                                                                         |
+| ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RESTART          | Так     | Перезапускає AAPS. Корисно, якщо виникли проблеми, які зазвичай зникають після перезапуску.                                                                                                                                                                    |
+| SMS DISABLE/STOP | Так     | Щоб вимкнути віддалений сервіс SMS, дайте відповідь кодом.<br/>Пам'ятайте, що знову ввімкнути його можна буде<br/>лише безпосередньо на основному телефоні з **AAPS**.                                                                             |
+| HELP             | Ні      | Повертає всі функції, про які можна запитати:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>Надішліть ще команду ***HELP ***FUNCTION******, щоб побачити<br/>усі варіанти в цьому розділі. |
+| HELP BOLUS       |         | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                                                                           |
 
 (SMSCommands-troubleshooting)=
-## Troubleshooting and FAQ
+## Усунення проблем і часті запитання
 
 ```{contents} List of questions and issues
 :depth: 1
 :local: true
 ```
 
-### What _can’t_ we do with SMS commands?
+### Чого _не можна_ робити за допомогою SMS-команд?
 
-1)  **You cannot set a _temporary_ profile switch** (so for example, setting "profile exercise" for 60 minutes), although you can permanently switch to “profile exercise”. Temporary profile switches can instead be set through **AAPSClient**.
+1)  **Не можна встановити _тимчасове_ перемикання профілю** (наприклад, «profile exercise» на 60 хвилин), хоча можна назавжди перемкнутися на «profile exercise». Натомість тимчасові перемикання профілю можна встановити через **AAPSClient**.
 
-2)  **You cannot cancel automations** or **set user-defined targets** but there are approximate solutions: As an example, imagine the normal profile target is 5.5. You have set an automation in AAPS, to always set a high target of 7.0 between 2.30pm and 3.30pm because of a sports class in school, and a condition of the automation is that “no temp target exists”. This week, you have been told at short notice that the sports class is cancelled, and is being replaced by a pizza-eating session, but your kid is already at school with the **AAPS** phone. If the high temporary target of 7.0 is started by the automation, and you cancel it (on the **AAPS** phone, or remotely) the conditions for the automation are still met and **AAPS** will simply set the high target again, a minute later.
+2)  **Не можна скасувати автоматизації** або **встановити власні цілі**, але є приблизні рішення: Наприклад, уявіть, що звичайна ціль профілю – 5,5. Ви налаштували в AAPS автоматизацію, яка завжди встановлює високу ціль 7,0 з 14:30 до 15:30 через урок фізкультури в школі, а одна з умов автоматизації – «тимчасової цілі немає». Цього тижня вам в останню мить сказали, що урок фізкультури скасовано і замість нього буде піца, але ваша дитина вже в школі з телефоном з **AAPS**. Якщо автоматизація запустить високу тимчасову ціль 7,0, а ви її скасуєте (на телефоні з **AAPS** або віддалено), умови автоматизації все ще виконуються, і **AAPS** просто знову встановить високу ціль через хвилину.
 
-**If you did have access to the AAPS phone**, you could uncheck/modify the automation, or, if you don’t want to do that, you could simply set a new temp target of 5.6 for 60 min by pressing on the target on the main screen, or via **Manage** → **Temp Target**. This would prevent the automation from setting the high target of 7.0.
+**Якщо у вас є доступ до телефона з AAPS**, можна вимкнути або змінити автоматизацію. Або, якщо ви не хочете цього робити, просто встановіть нову тимчасову ціль 5,6 на 60 хв: натисніть на ціль на головному екрані або виберіть **Керувати** → **Тимчасова ціль**. Тоді автоматизація не встановить високу ціль 7,0.
 
-**If you don’t have access to the AAPS phone** SMS commands can be used for an approximate fix: for example, by using the command “target meal” to set a target of 5.0 for 45 mins (other default targets are 8.0 for activity or hypo, see Table). However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use **AAPSClient** to do this.
+**Якщо у вас немає доступу до телефона з AAPS**, SMS-команди можна використати для приблизного рішення: наприклад, командою «target meal» встановити ціль 5,0 на 45 хв (інші стандартні цілі – 8,0 для активності або гіпо, див. таблицю). Однак за допомогою SMS-команд не можна задати _конкретне_ значення цілі (наприклад, 5,6 на 60 хвилин); для цього потрібен **AAPSClient**.
 
-### What happens if I change my mind about a command I have just sent?
+### Що робити, якщо я передумав щодо команди, яку щойно надіслав?
 
-**AAPS** will only deliver on the most recent command. So, if you type “bolus 1.5”, and then, without authenticating, you send a new command “bolus 1”, it will ignore the earlier 1.5 command. **AAPS** will always send the caregiver's phone a response to confirm what the SMS command is before you are prompted to enter the authentication code, as well as a response following the action.
+**AAPS** виконає лише останню команду. Тож якщо ви наберете «bolus 1.5», а потім, без автентифікації, надішлете нову команду «bolus 1», попередню команду 1.5 буде проігноровано. **AAPS** завжди надсилає на телефон доглядача відповідь, яка підтверджує, що це за SMS-команда, перш ніж попросити ввести код автентифікації, а також відповідь після виконання дії.
 
-### Why didn't I get a response to an SMS command?
+### Чому я не отримав відповіді на SMS-команду?
 
-It could be for one of these reasons:
+Це може бути з однієї з таких причин:
 
-1)  The message has not got through to the phone (network issues). 2)  **AAPS** is still in the process of processing the request (_e.g._ a bolus, which can take some time to deliver depending on your bolus rate). 3)  The **AAPS** phone does not have a good Bluetooth connection to the pump when the command is received, and the command has failed (this usually creates an alarm on the **AAPS** phone).
+1)  Повідомлення не дійшло до телефона (проблеми з мережею). 2)  **AAPS** ще обробляє запит (_наприклад_, болюс, введення якого може тривати деякий час залежно від швидкості введення болюсу). 3)  Коли надійшла команда, телефон з **AAPS** не мав доброго з'єднання Bluetooth з помпою, і команда не виконалася (зазвичай це викликає сигнал тривоги на телефоні з **AAPS**).
 
-### No response whatsoever for SMS commands
+### Жодної відповіді на SMS-команди
 
-On the caregiver phone and/or **AAPS** phone, try disabling the following options :
-* **Send as chat message** ![Disable SMS as chat message](../images/SMSdisableChat.png)
-* If using Android Messages App or Google Messages App, disable RCS messaging:
-  - open the specific SMS conversation in Messages
-  - Select the options ellipsis in the top right corner
-  - select "Details"
-  - Activate "Only send SMS and MMS messages" ![Disable RCS as chat message](../images/SMSdisableRCS.png)
+На телефоні доглядача та/або телефоні з **AAPS** спробуйте вимкнути такі параметри:
+* **Send as chat message** (Надсилати як чат-повідомлення) ![Вимкніть надсилання SMS як чат-повідомлення](../images/SMSdisableChat.png)
+* Якщо ви користуєтеся застосунком Android Messages або Google Messages, вимкніть обмін повідомленнями RCS:
+  - відкрийте потрібну розмову SMS у застосунку «Повідомлення»
+  - Торкніться меню з трьома крапками у верхньому правому куті
+  - виберіть «Details» (Подробиці)
+  - Увімкніть «Only send SMS and MMS messages» (Надсилати лише SMS і MMS) ![Вимкніть RCS як чат-повідомлення](../images/SMSdisableRCS.png)
 
-### Errors carrying out commands
+### Помилки під час виконання команд
 
-There are several possible reasons the command may not be successful:
+Є кілька можливих причин, чому команда може не виконатися:
 
-* SMS commands setup isn’t complete/correct
-* You sent a command which had an incorrect format (like “disconnect pump 45” instead of “pump disconnect 45”)
-* You used an incorrect, or expired authenticator code (it is usually good to wait a few seconds for a fresh code, if the current one is about to expire)
-* The code+PIN was OK, but there was a delay in the SMS leaving/arriving, which led **AAPS** to calculate that the authenticator code had expired
-* The **AAPS** phone is out of range/contact with the pump
-* The system is already busy delivering a bolus
+* Налаштування SMS-команд не завершене або неправильне
+* Ви надіслали команду в неправильному форматі (наприклад, «disconnect pump 45» замість «pump disconnect 45»)
+* Ви використали неправильний або прострочений код автентифікатора (зазвичай краще зачекати кілька секунд на новий код, якщо дія поточного скоро закінчиться)
+* Код+PIN були правильні, але SMS затрималось під час надсилання/доставки, тому **AAPS** вирішив, що дія коду автентифікатора вже закінчилася
+* Телефон з **AAPS** поза зоною дії помпи / немає зв'язку з помпою
+* Система вже зайнята введенням болюсу
 
-Common errors are shown in the examples below:
+Типові помилки показано в прикладах нижче:
 
-![image](../images/remote-control-17.png)
+![зображення](../images/remote-control-17.png)
 
-### How can I stop a command once it has been authenticated?
+### Як зупинити команду, коли її вже автентифіковано?
 
-You can't. However, you can cancel a bolus sent by SMS on the **AAPS** phone itself, by simply cancelling it on the bolusing popup, if you are quick. Many SMS commands (apart from bolusing and carb announcements) can be easily reversed, or actions taken to mitigate unintended effects if a mistake is made.
+Ніяк. Однак болюс, надісланий через SMS, можна скасувати на самому телефоні з **AAPS**: просто скасуйте його у спливному вікні болюсу, якщо встигнете. Багато SMS-команд (крім болюсів і введення вуглеводів) легко скасувати, або можна вжити заходів, щоб зменшити небажані наслідки помилки.
 
-For errors in bolusing and carb announcements, you can still take action. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
+Навіть при помилках з болюсом і введенням вуглеводів ви все ще можете діяти. Наприклад, якщо ви ввели 20 г вуглеводів, а дитина з'їла лише 10 г, і ви (або доглядач поруч) не можете видалити запис терапії безпосередньо на телефоні з **AAPS**, можна встановити високу тимчасову ціль або знижений профіль, щоб **AAPS** діяв менш агресивно.
 
-### Multiple SMS
+### Кілька SMS
 
-If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. This could be xDrip, for example. If so, please ensure that xDrip (or any other app) does not upload treatments to NightScout.
+Якщо ви знову й знову отримуєте те саме повідомлення (_наприклад_, про перемикання профілю), можливо, ви випадково створили зациклення з іншими застосунками. Наприклад, це може бути xDrip. Якщо так, переконайтеся, що xDrip (або інший застосунок) не вивантажує записи терапії в Nightscout.
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+Якщо інший застосунок встановлено на кількох телефонах, вимкніть вивантаження на всіх.
 
 (sms-commands-too-many-messages)=
-### I am getting far too many text messages from SMS Commands. Can I reduce the frequency, or make them stop?
+### Я отримую надто багато текстових повідомлень від SMS-команд. Чи можна зменшити їх кількість або зовсім вимкнути?
 
-Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include Whatsapp, Lime, Telegram, and Facebook Messenger.
+SMS-команди можуть створювати багато автоматичних повідомлень з телефона з **AAPS** на телефон доглядача. Ви також отримуватимете повідомлення, наприклад «Базальний профіль помпи оновлено», якщо в **AAPS** налаштовано автоматизації. Якщо ви надсилатимете багато SMS, корисно мати необмежені SMS у тарифі телефона з **AAPS** (і для кожного телефона доглядача), а також вимкнути сповіщення, звуки та вібрацію для SMS на всіх телефонах. Не можна користуватися SMS-командами і не отримувати ці повідомлення. Тому вам, можливо, знадобиться інший спосіб спілкуватися безпосередньо з дитиною (якщо вона вже досить доросла), а не через SMS. Поширені застосунки для спілкування, якими користуються доглядачі **AAPS**: Whatsapp, Lime, Telegram і Facebook Messenger.
 
-It is possible to disable the "Profile changed" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly**  `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+Можна вимкнути SMS «Profile changed» (Профіль змінено), коли зміна профілю надійшла з Nightscout. Для цього створіть файл з назвою **точно**  `do_not_send_sms_on_profile_change` у теці `extra` вашої теки AAPS.

@@ -1,207 +1,207 @@
-# How to edit the docs
+# Como editar a documentação
 
-**This description is just for editing the English documentation. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
+**Esta descrição serve apenas para editar a documentação em inglês. Todas as informações novas devem ser adicionadas primeiro em inglês. Se você quer traduzir para outras línguas (obrigado), use o [Crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#code-syntax) section of this page.
+Para dicas sobre como formatar texto (título, negrito...) e criar links, veja a seção ["sintaxe do código"](#code-syntax) desta página.
 
-## General
+## Geral
 
-For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw).
+Para perguntas, comentários ou novas ideias, você pode entrar em contato com a equipe da documentação pelo [Discord](https://discord.gg/4fQUWHZ4Mw).
 
-At some point it will be suggested that you make a pull request (PR), which is how your changes in the documentation are actually put onto the AAPS webpages, which are stored in GitHub. It's actually not too hard to do a PR and it is a great way to contribute. You are reading this documentation right now because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. Your changes are reviewed before they are merged into the "formal" AAPS documentation repository. You can't mess up the originals through any accidents in the process. The general process is:
+Em algum momento, vão sugerir que você faça um pull request (PR), que é a forma como as suas mudanças na documentação são de fato colocadas nas páginas web do AAPS, que ficam no GitHub. Na verdade, fazer um PR não é muito difícil, e é uma ótima forma de contribuir. Você está lendo esta documentação agora porque pessoas como você fizeram PRs. Não se preocupe em cometer um erro ou editar os documentos errados. As suas mudanças são revisadas antes de receberem merge no repositório "oficial" da documentação do AAPS. Você não consegue estragar os originais por nenhum acidente no processo. O processo geral é:
 
-- Make edits and improvements to code or documentation by editing the existing content.
-- Double-check that your edits look good to you.
-- Make a few notes of what's changed so people may understand the edits.
-- Create a pull request, which asks the administrators to use your changes.
-- They will do a review and either (1)merge your changes, (2)comment back to you about your changes, or (3)start a new document with your changes.
+- Faça edições e melhorias no código ou na documentação, editando o conteúdo existente.
+- Confira se as suas edições estão boas.
+- Anote brevemente o que mudou, para que as pessoas entendam as edições.
+- Crie um pull request, que pede aos administradores que usem as suas mudanças.
+- Eles vão fazer uma revisão e (1) fazer o merge das suas mudanças, (2) responder com comentários sobre as suas mudanças ou (3) começar um novo documento com as suas mudanças.
 
-(Side note: If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
+(Observação: se você aprende melhor vendo, há um vídeo no YouTube [aqui](https://youtu.be/4b6tsL0_kzg) que mostra o fluxo de trabalho de um PR.)
 
-For our example we are going to make an edit to AndroidAPSdocs. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
+No nosso exemplo, vamos fazer uma edição no AndroidAPSdocs. Isso pode ser feito em qualquer PC com Windows, Mac etc. (qualquer computador com acesso à internet).
 
-1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
+1. Vá para <https://github.com/openaps/AndroidAPSdocs> e clique em Fork no canto superior direito para fazer a sua própria cópia do repositório.
 
-![Fork repo](../images/PR0.png)
+![Fazer fork do repositório](../images/PR0.png)
 
-2. Go to any page and navigate to the page you want to edit. You can click on the "Edit in GitHub" link in the upper right corner. This is only possible for English pages. 
+2. Vá para qualquer página e navegue até a página que você quer editar. Você pode clicar no link "Edit in GitHub" no canto superior direito. Isso só é possível nas páginas em inglês. 
 
-![edit doc](../images/PR1.png)
+![editar o documento](../images/PR1.png)
 
-Or click the pencil icon that appears in the top bar of the page contents to be edited. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
+Ou clique no ícone de lápis que aparece na barra superior do conteúdo da página a ser editada. Para isso, você já precisa estar conectado à sua conta do GitHub (se não tiver uma, é fácil criar).
 
 ![RTD io](../images/PR2.png)
 
-3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
+3. Qualquer uma das opções da Etapa 2 vai criar um novo branch no SEU repositório, onde as suas edições serão salvas. Faça as suas edições no arquivo.
 
-We are using markdown for the docs pages. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#code-syntax).
+Usamos markdown para as páginas da documentação. Os arquivos têm o sufixo ".md". A especificação do Markdown não é fixa, e no momento usamos o myst_parser para os nossos arquivos markdown. Use a sintaxe correta, como [descrito abaixo](#code-syntax).
 
-![Edit branch](../images/PR3.png)
+![Editar o branch](../images/PR3.png)
 
-4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typos sic.). If you see a needed improvement, go back to the edit tab to make more improvements. 
+4. Você estava trabalhando na aba "<>Edit file". Selecione a aba "Preview changes" para olhar de novo e garantir que tudo o que você mudou ficou como você queria (erros de digitação etc.). Se você vir algo que precisa melhorar, volte para a aba de edição para fazer mais melhorias. 
 
-![preview mode](../images/PR5.png)
+![modo de visualização](../images/PR5.png)
 
-5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
+5. Quando terminar as suas edições, role até o fim da página. Na caixa no fim da página, escreva os seus comentários no campo de texto que diz "Add an optional extended description...". O título padrão contém o nome do arquivo. Tente incluir uma frase explicando o **motivo** da mudança. Explicar o motivo ajuda os revisores a entender o que você quer fazer com o PR.
 
-![commit comments](../images/PR4.png)
+![comentários do commit](../images/PR4.png)
 
-6. Click the green "Propose file changes" or "Commit changes" button. In the page that appears click "Create Pull Request" and again in the next page click "Create Pull Request".
+6. Clique no botão verde "Propose file changes" ou "Commit changes". Na página que aparece, clique em "Create Pull Request" e, na página seguinte, clique de novo em "Create Pull Request".
 
-![create pull request](../images/PR6.png)
+![criar pull request](../images/PR6.png)
 
-7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
+7. Com isso, a abertura de um pull request (PR) está concluída. O GitHub dá um número ao PR, que fica depois do título e de um sinal #. Volte a esta página para ver se há comentários (ou, se você recebe as notificações do GitHub por e-mail, vai receber e-mails sobre qualquer atividade no PR). A edição agora estará em uma lista de PRs que a equipe vai revisar e talvez comentar, antes de fazer o commit na documentação principal do AAPS! Se quiser acompanhar o andamento do PR, você pode clicar no ícone de sino no canto superior direito da sua conta do GitHub e ver todos os seus PRs.
 
-![PR tracking](../images/PR7.png)
+![Acompanhamento do PR](../images/PR7.png)
 
-PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+PS: O seu fork e o seu branch continuam na sua conta pessoal do GitHub. Depois de receber uma notificação de que o seu PR recebeu merge, você pode apagar o seu branch se não precisar mais dele (a área de notificações da Etapa 8 vai mostrar um link para apagar o branch quando ele for fechado ou receber merge). Para edições futuras, se você seguir este procedimento, as edições sempre vão começar com uma versão atualizada dos repositórios AndroidAPSdocs. Se você escolher outro método para iniciar um PR (por exemplo, começar a editar a partir do branch master do seu repositório com fork), você precisa garantir que o seu repositório esteja atualizado, fazendo primeiro um "compare" e fazendo o merge de todas as atualizações que aconteceram desde a última vez que você atualizou o seu fork. Como as pessoas costumam esquecer de atualizar os seus repositórios, recomendamos usar o processo de PR descrito acima até você se acostumar a fazer "compares".
 
 (edit-the-docs-code-syntax)=
 
-## Code syntax
+## Sintaxe do código
 
-We are using markdown for the documentation pages. The files have got the suffix ".md".
+Usamos markdown para as páginas da documentação. Os arquivos têm o sufixo ".md".
 
-Markdown is a very simple text formatting language which separates text content from text formatting.
+Markdown é uma linguagem de formatação de texto muito simples, que separa o conteúdo do texto da sua formatação.
 
-The writer only e.g. marks a headline as level 1 headline and the markdown processor generates the necessary HTML code during processing to render the heading in HTML.
+O autor apenas marca, por exemplo, um título como título de nível 1, e o processador de markdown gera o código HTML necessário durante o processamento para mostrar o título em HTML.
 
-The idea behind this is that
+A ideia por trás disso é que
 
-- the writer should think about the text and not the formatting first,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Windows and
-- you can generate several output formats from one markdown file.
+- o autor deve pensar primeiro no texto e não na formatação,
+- o texto markdown pode ser trocado entre diferentes ferramentas de markdown, em vez de, por exemplo, ferramentas proprietárias como o Microsoft Windows, e
+- você pode gerar vários formatos de saída a partir de um arquivo markdown.
 
-Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard, to
+O markdown não é um padrão 100% fixo e tentamos ficar o mais perto possível do padrão, para
 
-- stay flexible to change markdown tools as needed or forced in the further innovation of markdown tools and markdown SaaS services and
-- enable us to use translation services to translate the English language in a target language like French or German. They can work on markdown but not complex formatting codes, because they can't separate content from layout, which might be fatal.
+- continuar flexível para trocar de ferramentas de markdown quando for necessário ou quando a evolução das ferramentas de markdown e dos serviços SaaS de markdown obrigar e
+- podermos usar serviços de tradução para traduzir do inglês para uma língua de destino, como francês ou alemão. Eles conseguem trabalhar com markdown, mas não com códigos de formatação complexos, porque não conseguem separar o conteúdo do layout, o que pode ser fatal.
 
-### Headlines
+### Títulos
 
-- Headline 1: `# headline`
-- Headline 2: `## headline`
-- Headline 3: `### headline`
-- Headline 4: `#### headline`
+- Título 1: `# headline`
+- Título 2: `## headline`
+- Título 3: `### headline`
+- Título 4: `#### headline`
 
-We try to avoid further levels of headlines.
+Tentamos evitar mais níveis de títulos.
 
-### Text format
+### Formatação de texto
 
-- **bold**: `**text**`
-- *italic*: `*text*`
-- ***bold italic***: `***text***`
+- **negrito**: `**text**`
+- *itálico*: `*text*`
+- ***negrito itálico***: `***text***`
 
-### Ordered list
+### Lista numerada
 
-    1. first
-    1. second
-    1. third
+    1. primeiro
+    1. segundo
+    1. terceiro
     
 
-1. first
-2. second
-3. third
+1. primeiro
+2. segundo
+3. terceiro
 
-### Unordered list
+### Lista não numerada
 
-    - one element
-    - another element
-    - and another element
+    - um elemento
+    - outro elemento
+    - e mais um elemento
     
 
-- one element
-- another element
-- and another element
+- um elemento
+- outro elemento
+- e mais um elemento
 
-### Multi level list
+### Lista com vários níveis
 
-You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
+Você pode colocar listas dentro de listas recuando o próximo nível 4 espaços mais à direita do que o anterior.
 
-    1. first
-    1. second
-    1. third
-      1. one element
-      1. another element
-      1. and another element
-    1. four
-    1. five
-    1. six
+    1. primeiro
+    1. segundo
+    1. terceiro
+      1. um elemento
+      1. outro elemento
+      1. e mais um elemento
+    1. quatro
+    1. cinco
+    1. seis
     
 
-1. first
-2. second
-3. third 
-    1. one element
-    2. another element
-    3. and another element
-4. four
-5. five
-6. six
+1. primeiro
+2. segundo
+3. terceiro 
+    1. um elemento
+    2. outro elemento
+    3. e mais um elemento
+4. quatro
+5. cinco
+6. seis
 
-### Images
+### Imagens
 
-To include images you use this markdown syntax.
+Para incluir imagens, use esta sintaxe markdown.
 
-- images: `![alt text](../images/file.png)`
+- imagens: `![alt text](../images/file.png)`
 
-The type of image should be PNG or JPEG.
+O tipo de imagem deve ser PNG ou JPEG.
 
-Image names should conform to one of the following naming rules. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
+Os nomes das imagens devem seguir uma das regras de nomes abaixo. No exemplo, uso png como sufixo. Se você usar JPEG, use jpeg como sufixo.
 
-- `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
-- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
+- `filename-image-xx.png`, onde xx é um número único de dois dígitos para as imagens deste arquivo.
+- `filename-image-xx.png`, onde xx é um nome com significado escolhido pelo autor do arquivo md.
 
-Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
+As imagens ficam na pasta images da língua inglesa e são passadas automaticamente para as outras línguas pelo Crowdin. Você não precisa fazer nada para isso!
 
-We are not translating images at the moment: images should contain the **minimum possible text** to allow accessibility to non-English readers.
+No momento, não traduzimos imagens: as imagens devem ter o **mínimo possível de texto**, para que sejam acessíveis a quem não lê inglês.
 
-(make-a-PR-image-size)= Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
+(make-a-PR-image-size)= Use um tamanho razoável para as imagens, que devem ser legíveis no PC, no tablet e no celular.
 
-- Screenshots from web pages images should be up to **1050 pixels wide**.
-- Diagrams of process flows should be up to **1050 pixels wide**.
-- Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
-- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
+- As capturas de tela de páginas web devem ter no máximo **1050 pixels de largura**.
+- Diagramas de fluxos de processo devem ter no máximo **1050 pixels de largura**.
+- As capturas de tela do app devem ter no máximo **500 pixels de largura**. Não as coloque lado a lado se não for necessário.
+- As capturas de tela do relógio (**Wear OS**) devem ter no máximo **360 pixels de largura**. Nunca aumente uma captura de tela menor.
 
 ### Links
 
-#### External links
+#### Links externos
 
-External links are links to external web sites.
+Links externos são links para sites externos.
 
-- external link: `[alt text](www.url.tld)`
+- link externo: `[alt text](www.url.tld)`
 
-#### Internal links to the start of a md file
+#### Links internos para o início de um arquivo md
 
-Internal links to pages are links to the start of a md file which is hosted on our own server.
+Links internos para páginas são links para o início de um arquivo md que está no nosso próprio servidor.
 
-- internal link to .md page: `[alt text](../folder/file.md)`
+- link interno para uma página .md: `[alt text](../folder/file.md)`
 
-#### Internal links to named inline references
+#### Links internos para referências com nome dentro do texto
 
-Internal links to named inline references are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
+Links internos para referências com nome são links para qualquer ponto de um arquivo md que está no nosso próprio servidor e onde uma referência foi definida para receber o link.
 
-Add a named reference at the location in the target md file you want to jump to.
+Adicione uma referência com nome no lugar do arquivo md de destino para onde você quer pular.
 
 `(name-of-my-md-file-this-is-my-fancy-named-reference)=`
 
-The named reference must be unique in the whole AndroidAPSDocs md files and not only the own md file it resides in!
+A referência com nome deve ser única em todos os arquivos md do AndroidAPSDocs, e não apenas no arquivo md em que ela está!
 
-Therefore it is a good practice to start with the filename and then the reference name you select.
+Por isso, é uma boa prática começar com o nome do arquivo e depois o nome da referência que você escolher.
 
-Use only lowercase letters and hyphenate words.
+Use apenas letras minúsculas e separe as palavras com hífens.
 
-Then link this reference in the text you are writing with the following kind of link.
+Depois, coloque um link para essa referência no texto que você está escrevendo, com o seguinte tipo de link.
 
-- Internal links to named inline references: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+- Links internos para referências com nome: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
-### Notes, Warnings, Collapsing Notes
+### Notas, avisos, notas recolhíveis
 
-You can add notes and warning boxes to documentation.
+Você pode adicionar caixas de nota e de aviso à documentação.
 
-Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Please use these carefully as the documentation should be as easy to read as possible.
+Além disso, você pode adicionar notas recolhíveis para informações detalhadas, para que os usuários que não se interessam pelos detalhes não desistam de ler o texto. Use-as com cuidado, pois a documentação deve ser o mais fácil possível de ler.
 
-#### Notes
+#### Notas
 
     ```{admonition} Note headline
     :class: note
@@ -211,7 +211,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 ```{admonition} Note headline :class: note This is a note.
 
-    <br />#### Warnings
+    <br />#### Avisos
     
     ````
     ```{admonition} Warning
@@ -224,16 +224,16 @@ Furthermore you can add collapsing notes for detailed information, so that users
     This is a warning.
     ```
     
-    #### Collapsing Notes
+    #### Notas recolhíveis
     
     
 
-    {admonition} further detailed readings for interested readers
+    {admonition} leituras mais detalhadas para leitores interessados
     :class: dropdown
     
-    This admonition has been collapsed,
-    meaning you can add longer form content here,
-    without it taking up too much space on the page.
+    Esta caixa foi recolhida,
+    o que significa que você pode adicionar conteúdo mais longo aqui,
+    sem ocupar muito espaço na página.
     
 
 ````
@@ -242,324 +242,324 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 ```
 
-## Tables
+## Tabelas
 
-Avoid using tables with long texts as the contents is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Evite tabelas com textos longos, porque o conteúdo é difícil de formatar em Markdown, elas normalmente não cabem na largura da tela de um celular e provavelmente não vão aparecer do mesmo jeito depois da tradução.
 
-## Style Guide
+## Guia de estilo
 
-### Contents
+### Conteúdo
 
-1. English language writing tips
+1. Dicas para escrever em inglês
 
-2. AAPS-specific writing notes
+2. Notas de escrita específicas do AAPS
 
-3. Useful references
+3. Referências úteis
 
-### ![Image](../images/styleguide01.png) 1\. English language writing tips
+### ![Imagem](../images/styleguide01.png) 1\. Dicas para escrever em inglês
 
-#### Use language that is appropriate for the reader
+#### Use uma linguagem adequada para o leitor
 
-Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
+Use inglês simples sempre que possível. Isso ajuda quem não é nativo e também facilita a tradução dos documentos do AAPS para outras línguas. Escreva como numa conversa com o usuário; imagine que você está sentado do outro lado da mesa, na frente da pessoa para quem você escreve. Lembre-se: a maioria dos usuários do AAPS não tem formação em programação. O diabetes também tem muito jargão e muitas abreviações. Lembre-se de que algumas pessoas podem ter recebido o diagnóstico há pouco tempo, podem ter menos experiência com diabetes do que você ou podem ter recebido um treinamento diferente sobre diabetes. Se você usar uma forma curta ou uma abreviação, escreva-a por extenso na primeira vez que usar, com a abreviação logo depois entre parênteses, como “super micro bolus (SMB)”. Coloque também um link para o glossário. Termos técnicos que talvez o leitor não conheça também podem ser explicados entre parênteses.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?"*
+Em vez de: *“What causes high postprandial BG peaks in closed loop?"*
 
 Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
 
-##### Use plain words that everyone can understand
+##### Use palavras simples que todos entendem
 
-Find an A-Z of alternative words to make your writing easier to understand here:
+Encontre aqui uma lista de A a Z de palavras alternativas para deixar o seu texto mais fácil de entender:
 
 <https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html>
 
-#### Privacy/licensing concerns:
+#### Privacidade/licenças:
 
-Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure YouTube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
+Principalmente se você gravar vídeos ou capturas de tela, tome cuidado para não mostrar os seus dados privados (chave de API, senhas). Garanta que o conteúdo do YouTube não esteja listado publicamente e que precise de um link da documentação para ser visto. Evite chamar a atenção para materiais protegidos por direitos autorais usados sem permissão (BYODA etc.).
 
-#### Keep sentences short, get to the point
+#### Escreva frases curtas, vá direto ao ponto
 
-- Clear writing should have an average sentence length of 15 to 20 words.
+- Um texto claro deve ter frases de 15 a 20 palavras, em média.
 
-- This does not mean making every sentence the same length. Be punchy. Vary your writing by mixing short sentences (like the last one) with longer ones (like this one).
+- Isso não significa que todas as frases devem ter o mesmo tamanho. Seja direto. Varie o seu texto misturando frases curtas (como a anterior) com frases mais longas (como esta).
 
-- Stick to one main idea in a sentence, plus perhaps one other related point.
+- Fique com uma ideia principal por frase, e talvez mais um ponto relacionado.
 
-- You may still find yourself writing the odd long sentence, especially when trying to explain a complicated point. But most long sentences can be broken up in some way.
+- Você ainda pode acabar escrevendo uma ou outra frase longa, principalmente quando tenta explicar algo complicado. Mas a maioria das frases longas pode ser dividida de alguma forma.
 
-- Remove weak words: “you can”, “there is/are/were”, “in order to”.
+- Tire as palavras fracas: “you can”, “there is/are/were”, “in order to”.
 
-- Place keywords near the beginning of titles, sentences and paragraphs.
+- Coloque as palavras-chave perto do começo dos títulos, das frases e dos parágrafos.
 
-- Be visual! Wherever possible provide a brief diagram, screenshot or video.
+- Seja visual! Sempre que possível, inclua um diagrama curto, uma captura de tela ou um vídeo.
 
-#### Don't be afraid to give instructions
+#### Não tenha medo de dar instruções
 
-Commands are the fastest way to give instructions, but writers sometimes fear giving commands, writing “you should do this” instead of just “do this”. Perhaps people worry that commands sound too harsh. You can often solve this by putting the word 'please' in front. However, if something must be done, it is best not to say ‘please’ as it gives the reader the option to refuse.
+Ordens são a forma mais rápida de dar instruções, mas às vezes os autores têm medo de dar ordens e escrevem “you should do this” em vez de simplesmente “do this”. Talvez as pessoas tenham medo de que as ordens pareçam duras demais. Muitas vezes, você resolve isso colocando a palavra 'please' na frente. Mas, se algo precisa ser feito, é melhor não dizer ‘please’, porque isso dá ao leitor a opção de recusar.
 
-Instead of: *“You should just think of it as a complete statement."*
+Em vez de: *“You should just think of it as a complete statement."*
 
 Use: *“Think of it as a complete statement.”*
 
-#### Mostly use active verbs, rather than passive verbs
+#### Use principalmente a voz ativa, e não a voz passiva
 
-Example of an **active verb**:
+Exemplo de **voz ativa**:
 
-- *“The pump (subject) delivers (verb) the insulin (object).”*
+- *“The pump (sujeito) delivers (verbo) the insulin (objeto).”*
 
-“delivers” is an active verb here. The sentence says what is doing the delivering before it says what is being delivered.
+“delivers” está na voz ativa aqui. A frase diz primeiro quem aplica, antes de dizer o que é aplicado.
 
-Example of a **passive verb**:
+Exemplo de **voz passiva**:
 
-- *“The insulin (subject) is delivered (verb) by the pump (object)”*
+- *“The insulin (sujeito) is delivered (verbo) by the pump (objeto)”*
 
-*“delivered”* is a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
+*“delivered”* está na voz passiva aqui. O sujeito e o objeto trocam de lugar, em comparação com a frase na voz ativa. Tivemos que deixar a frase mais longa, acrescentando “is” e “by the”. Considere também começar com o verbo na voz ativa.
 
-Instead of: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
+Em vez de: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
 
 Use: *“Connect your desired pump to the phone through the AAPS pump menu.”*
 
-Passive verbs can cause problems:
+A voz passiva pode causar problemas:
 
-- They can be confusing.
+- Ela pode confundir.
 
-- They often make writing more long-winded.
+- Ela muitas vezes deixa o texto mais longo.
 
-- They make writing less lively.
+- Ela deixa o texto menos vivo.
 
-##### Good uses of passives
+##### Bons usos da voz passiva
 
-There are times when it might be appropriate to use a passive.
+Há momentos em que a voz passiva pode ser adequada.
 
-- To make something less hostile - 'this bill has not been paid' (passive) is softer than 'you have not paid this bill' (active).
+- Para deixar algo menos hostil - 'this bill has not been paid' (passiva) é mais suave do que 'you have not paid this bill' (ativa).
 
-- To avoid taking the blame - 'a mistake was made' (passive) rather than 'You made a mistake' (active).
+- Para evitar culpar alguém - 'a mistake was made' (passiva) em vez de 'You made a mistake' (ativa).
 
-- When you don't know who or what the doer is - 'the England team has been picked'.
+- Quando você não sabe quem ou o que faz a ação - 'the England team has been picked'.
 
-- If it simply sounds better.
+- Se simplesmente soar melhor.
 
-#### Avoid nominalisations
+#### Evite nominalizações
 
-A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalizations are formed from verbs.
+Uma nominalização é o nome de algo que não é um objeto físico, como um processo, uma técnica ou uma emoção. As nominalizações são formadas a partir de verbos.
 
-For example:
+Por exemplo:
 
-| Verb      | Nominalization |
-| --------- | -------------- |
-| complete  | completion     |
-| introduce | introduction   |
-| provide   | provision      |
-| fail      | failure        |
+| Verbo     | Nominalização |
+| --------- | ------------- |
+| complete  | completion    |
+| introduce | introduction  |
+| provide   | provision     |
+| fail      | failure       |
 
-They are often used **instead** of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
+Elas muitas vezes são usadas **no lugar** dos verbos de onde vêm, mas podem dar a impressão de que nada está acontecendo de verdade. Muitas delas podem deixar o texto muito chato e pesado.
 
-Instead of: *“The implementation of the method has been done by a team.”*
+Em vez de: *“The implementation of the method has been done by a team.”*
 
 Use: *“A team has implemented the method.”*
 
-#### Use lists where appropriate
+#### Use listas quando for adequado
 
-Lists are excellent for splitting information up. There are two main types of list:
+Listas são ótimas para dividir informações. Há dois tipos principais de lista:
 
-- A continuous sentence with several listed points picked out at the beginning, middle or end.
+- Uma frase contínua com vários pontos listados destacados no começo, no meio ou no fim.
 
-- Separate bullet points with an introductory statement.
+- Pontos separados (marcadores) com uma frase de introdução.
 
-In the bulleted list above, each point is a complete sentence so they each start with a capital letter and end with a full stop. Use bullet points rather than numbers or letters, as they draw your attention to each point without giving you extra information to take in.
+Na lista com marcadores acima, cada ponto é uma frase completa, por isso cada um começa com letra maiúscula e termina com ponto final. Use marcadores em vez de números ou letras, porque eles chamam a atenção para cada ponto sem dar informação extra para processar.
 
-#### Mythbusting
+#### Derrubando mitos
 
-- You can start a sentence with **and, but, because, so or however**.
+- Você pode começar uma frase com **and, but, because, so ou however**.
 
-- You can split infinitives. So you can say **“to boldly go”**.
+- Você pode separar o infinitivo (split infinitive). Então você pode dizer **“to boldly go”**.
 
-- You can end a sentence with a preposition. In fact, it is something **we should stand up for**.
+- Você pode terminar uma frase com uma preposição. Exemplo: “In fact, it is something **we should stand up for**.”
 
-- And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.
+- Você pode usar a mesma palavra duas vezes em uma frase, se não encontrar uma palavra melhor. Exemplo: “And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.”
 
-#### Optimizing writing style by purpose
+#### Otimizar o estilo de escrita conforme o objetivo
 
-To keep the documentation clear and short, we write different sections of the documentation in different styles.
+Para manter a documentação clara e curta, escrevemos as diferentes seções da documentação em estilos diferentes.
 
-An “explanation” style is used for the introduction, background and knowledge development sections.
+Um estilo de “explicação” é usado nas seções de introdução, contexto e desenvolvimento do conhecimento.
 
-A “How-to-guide” style (with minimal explanation) is used for building, configuring AAPS, and some of the troubleshooting sections.
+Um estilo de “guia prático” (com o mínimo de explicação) é usado para compilar e configurar o AAPS e em algumas seções de resolução de problemas.
 
-A tutorial helps the pupil acquire basic competence. The user will **learn by doing**.
+Um tutorial ajuda o aluno a adquirir uma competência básica. O usuário vai **aprender fazendo**.
 
-![Image](../images/styleguide02.png)
+![Imagem](../images/styleguide02.png)
 
-##### ![Image](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
+##### ![Imagem](../images/styleguide03.png) Tutoriais (por exemplo, ensinar uma criança a bater claras em neve)
 
-- narrator directly talks to the reader: In this tutorial **you** will (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
+- o narrador fala diretamente com o leitor: In this tutorial **you** will (we) pode ser usado em alguns casos raros para transmitir a ideia de “we are in this together” (estamos juntos nisso)
 
-- Future Tense -> to show the final target
+- Futuro -> para mostrar o objetivo final
 
-- Imperative Tense -> to do the tasks -> Concrete steps - avoid abstract concepts
+- Imperativo -> para fazer as tarefas -> Passos concretos - evite conceitos abstratos
 
-- Past Tense -> to show accomplished tasks -> Quick and immediate visible results
+- Passado -> para mostrar as tarefas concluídas -> Resultados visíveis rápidos e imediatos
 
-- Minimum Explanations -> strict necessary to complete the task - **what and why**
+- Explicações mínimas -> apenas o necessário para concluir a tarefa - **o quê e por quê**
 
-- Ignore options/alternatives/…. No ambiguity
+- Ignore opções/alternativas/…. Sem ambiguidade
 
-- Step Transitions: finish a step with a sentence leading to the next step as a logical progression flow. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- Transições entre passos: termine um passo com uma frase que leve ao passo seguinte, como uma sequência lógica. Exemplo: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
 
-- **Tutorial** Title (Level 1 heading)
+- **Tutorial** Título (título de nível 1)
 
-- Introduction (no heading)
+- Introdução (sem título)
 
-- Prerequisites (Level 2 heading)
+- Pré-requisitos (título de nível 2)
 
-- Steps:
+- Passos:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- Passo 1 — Fazer a primeira coisa (título de nível 2)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- Passo 2 — Fazer a próxima coisa (título de nível 2)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- Passo n — Fazer a última coisa (título de nível 2)
 
-- Conclusion (Level 2 heading)
+- Conclusão (título de nível 2)
     
-    - **The Language of Tutorials**
+    - **A linguagem dos tutoriais**
         
         *In this tutorial, you will…*
         
-        Describe what the learner will accomplish (note - not: “you will learn…”).
+        Descreva o que o aluno vai conseguir fazer (atenção - não: “you will learn…”).
         
         *First, do x. Now, do y. Now that you have done y, do z.*
         
-        No room for ambiguity or doubt.
+        Não deixe espaço para ambiguidade ou dúvida.
         
         *We must always do x before we do y because… (see Explanation for more details).*
         
-        Provide minimal explanation of actions in the most basic language possible. Link to more detailed explanation.
+        Explique as ações o mínimo possível, com a linguagem mais simples possível. Coloque um link para uma explicação mais detalhada.
         
         *The output should look something like this…*
         
-        Give your learner clear expectations.
+        Dê ao aluno expectativas claras.
         
         *Notice that… Remember that…*
         
-        Give your learner plenty of clues to help confirm they are on the right track and orient themselves.
+        Dê ao aluno muitas pistas para ajudá-lo a confirmar que está no caminho certo e a se orientar.
         
         *You have built a secure, three-layer hylomorphic stasis engine…*
         
-        Describe (and admire, in a mild way) what your learner has accomplished (note - not: “you have learned…”)
+        Descreva (e elogie, de forma moderada) o que o aluno conseguiu fazer (atenção - não: “you have learned…”)
 
-##### ![Image](../images/styleguide05.png) How-To Guides (e.g. a recipe)
+##### ![Imagem](../images/styleguide05.png) Guias práticos (por exemplo, uma receita)
 
-A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
+O objetivo de um guia prático é ajudar o usuário que já tem competência a fazer uma tarefa específica corretamente.
 
-- HOW-to
+- COMO FAZER
 
-- narrator directly talks to the reader: In this tutorial **you** will
+- o narrador fala diretamente com o leitor: In this tutorial **you** will
 
-- Future Tense -> to show the final target
+- Futuro -> para mostrar o objetivo final
 
-- Conditional Imperative Tense -> to get X do y -> Concrete steps - avoid abstract concepts
+- Imperativo condicional -> para obter X, faça y -> Passos concretos - evite conceitos abstratos
 
-- Minimum Explanations -> strict necessary to complete the task -> **what and why**
+- Explicações mínimas -> apenas o necessário para concluir a tarefa -> **o quê e por quê**
 
-- Ignore options/alternatives/…. No ambiguity, but you can link to the reference entry or explanation entry
+- Ignore opções/alternativas/…. Sem ambiguidade, mas você pode colocar um link para a entrada de referência ou de explicação
 
-- **How-to**: Title (Level 1 heading)
+- **How-to**: Título (título de nível 1)
 
-- Introduction paragraph
+- Parágrafo de introdução
 
-- Optional Prerequisites (paragraph or Level 2 heading if more than 1)
+- Pré-requisitos opcionais (parágrafo, ou título de nível 2 se houver mais de 1)
 
-- Steps:
+- Passos:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- Passo 1 — Fazer a primeira coisa (título de nível 2)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- Passo 2 — Fazer a próxima coisa (título de nível 2)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- Passo n — Fazer a última coisa (título de nível 2)
 
-- Conclusion paragraph
+- Parágrafo de conclusão
     
-    - **The Language of How-To Guides**
+    - **A linguagem dos guias práticos**
         
         *This guide shows you how to…*
         
-        Describe clearly the problem or task that the guide shows the user how to solve.
+        Descreva claramente o problema ou a tarefa que o guia mostra ao usuário como resolver.
         
         *If you want x, do y. To achieve w, do z.*
         
-        Use conditional imperatives.
+        Use imperativos condicionais.
         
         *Refer to the x reference guide for a full list of options.*
         
-        Don’t pollute your practical how-to guide with every possible thing the user might do related to x.
+        Não encha o seu guia prático com todas as coisas possíveis que o usuário poderia fazer relacionadas a x.
 
-##### ![Image](../images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
+##### ![Imagem](../images/styleguide07.png) Explicação (por exemplo, a ciência que explica por que as claras ficam firmes quando são batidas)
 
-An explanation clarifies, deepens and broadens the reader’s understanding of a subject.
+Uma explicação esclarece, aprofunda e amplia o entendimento do leitor sobre um assunto.
 
-- WHY
+- POR QUÊ
 
-- Start with **About**
+- Comece com **About** (Sobre)
 
-- Provide context, link ALL relevant references
+- Dê o contexto e coloque links para TODAS as referências relevantes
 
-- Discuss options/alternatives
+- Discuta opções/alternativas
 
-- Don’t instruct or provide reference (link to them)
+- Não dê instruções nem referências (coloque links para elas)
 
-- State the unknown/moving targets etc…
+- Mencione o que é desconhecido, os alvos que mudam etc…
 
-- **About** Title (Level 1 heading)
+- **About** Título (título de nível 1)
 
-- Introduction (no heading)
+- Introdução (sem título)
 
-- Optional Prerequisites (Level 2 heading)
+- Pré-requisitos opcionais (título de nível 2)
 
-- Subtopic 1 (level 2 heading)
+- Subtópico 1 (título de nível 2)
 
-- Conclusion (Level 2 heading)
+- Conclusão (título de nível 2)
     
-    - **The Language of Explanation**
+    - **A linguagem das explicações**
     
     *The reason for x is because historically, y…*
     
-    Explain.
+    Explique.
     
     *W is better than z, because…*
     
-    Offer judgements and even opinions where appropriate.
+    Dê avaliações e até opiniões quando for adequado.
     
     *An x in system y is analogous to a w in system z. However…*
     
-    Provide context that helps the reader.
+    Dê um contexto que ajude o leitor.
     
     *Some users prefer w (because z). This can be a good approach, but…*
     
-    Weigh up alternatives.
+    Compare as alternativas.
     
     *An x interacts with a y as follows:…*
     
-    Unfold the machinery’s internal secrets, to help understand why something does what it does.
+    Revele os segredos internos do mecanismo, para ajudar a entender por que algo faz o que faz.
 
-### 2\. AAPS-specific writing/updating notes
+### 2\. Notas de escrita/atualização específicas do AAPS
 
-#### Author & Editor
+#### Autor e editor
 
-For writing/updating the AAPS documentation, consider the process as consisting of two stages. These can be carried out by the same person at different points, or more than one person.
+Para escrever/atualizar a documentação do AAPS, pense no processo em duas etapas. Elas podem ser feitas pela mesma pessoa em momentos diferentes, ou por mais de uma pessoa.
 
-An **author (e.g. you!)** writes/edits a section of the documentation in a concise conversational tone, then passes it to the editor.
+Um **autor (por exemplo, você!)** escreve/edita uma seção da documentação em um tom curto e de conversa e depois a passa para o editor.
 
-The **editor (e.g. a fellow AAPS user, or the person who receives the pull request)** reviews adherence to the style guide, edits the section for clarity and accessibility, removing as many words as possible (especially for tutorial/how-to sections). Reading the text out loud may help.
+O **editor (por exemplo, outro usuário do AAPS, ou a pessoa que recebe o pull request)** verifica se o guia de estilo foi seguido e edita a seção para deixá-la clara e acessível, tirando o maior número possível de palavras (principalmente nas seções de tutorial/guia prático). Ler o texto em voz alta pode ajudar.
 
-#### General AAPS points
+#### Pontos gerais do AAPS
 
-- For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible).
+- Para valores de glicose, informe sempre mg/dl e mmol/l (considere isso também nas capturas de tela, se possível).
 
-- For consistency, use “AAPS” rather than “Android APS”.
+- Para manter a consistência, use “AAPS” e não “Android APS”.
 
-- Clearly state the version of Android Studio/AAPS you are writing for, or that the screenshots are taken from.
+- Diga claramente para qual versão do Android Studio/AAPS você está escrevendo, ou de qual versão são as capturas de tela.
 
-### 3\. Useful References
+### 3\. Referências úteis
 
 <https://dev.readthedocs.io/en/latest/style-guide.html>
 

@@ -1,7 +1,7 @@
 (v4-changes)=
-# What changed in AAPS v4
+# AAPS v4 有哪些變更
 
-This page collects the notable **changes in behavior** between **AAPS** v3 and v4 — things that work differently, have moved, or have been removed — so existing users know what to expect when they update. See also the [Release Notes](ReleaseNotes.md) and the [update manual](UpdateToNewVersion.md).
+本頁整理了 **AAPS** v3 與 v4 之間值得注意的**行為變更**：包括功能運作方式不同、位置變更或已移除的項目，讓現有使用者在更新前了解預期的變化。另請參閱[版本說明](ReleaseNotes.md)和[更新手冊](UpdateToNewVersion.md)。
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,160 +10,158 @@ This page collects the notable **changes in behavior** between **AAPS** v3 and v
 
 ---
 
-## NSClient v1 has been removed
+## 已移除 NSClient v1
 
-**AAPS** v3 shipped **two** Nightscout synchronization plugins:
+**AAPS** v3 提供**兩個** Nightscout 同步外掛：
 
-- **NSClient** — the legacy client (the old Nightscout REST / socket.io API, also called *“v1”*), and
-- **NSClientV3** — the client for the newer Nightscout **API v3**.
+- **NSClient** — 舊版用戶端（舊版 Nightscout REST／socket.io API，也稱為 *「v1」*），以及
+- **NSClientV3** — 用於新版 Nightscout **API v3** 的用戶端。
 
-In **AAPS** v4 the legacy **NSClient (v1)** plugin has been **removed**. Only **NSClientV3** remains for synchronizing with Nightscout.
+在 **AAPS** v4 中，舊版 **NSClient (v1)** 外掛已**移除**。現在只保留 **NSClientV3**，用於與 Nightscout 同步。
 
 ```{admonition} What you need to do
 :class: important
-If you (or your **AAPSClient** follower) were still synchronizing with the old **NSClient (v1)** plugin, switch to **NSClientV3** before/after updating:
+如果你（或追蹤你的 **AAPSClient** 使用者）仍使用舊版 **NSClient (v1)** 外掛同步，請在更新前或更新後切換至 **NSClientV3**：
 
-- Open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → Communication → NSClientV3**.
-- Enter your **Nightscout URL** and an **access token** (NSClientV3 uses an access token, *not* the old API secret — see [creating a token](https://nightscout.github.io/nightscout/security/#create-a-token)).
-- Your Nightscout site must support the **API v3** (Nightscout 15 or newer).
-- If you use **websockets**, enable or disable them on **both** the master and the follower — never on only one.
+- 開啟 **[組態設定工具](../SettingUpAaps/ConfigBuilder.md) → 通訊 → NSClientV3**。
+- 輸入你的 **Nightscout 網址**和**存取權杖**（NSClientV3 使用存取權杖，*而非*舊版 API 密鑰；請參閱[建立權杖](https://nightscout.github.io/nightscout/security/#create-a-token)）。你的 Nightscout 網站必須支援 **API v3**（Nightscout 15 或更新版本）。如果你使用 **websocket**，請在主機和追蹤端上**同時**啟用或停用，切勿只在其中一端設定。
 ```
 
-This affects only how the app talks to Nightscout; your data on Nightscout is unchanged.
+這只會影響應用程式與 Nightscout 的通訊方式，不會變更 Nightscout 上的資料。
 
 ---
 
-## The bottom navigation: Treatments, Scenes and Manage
+## 底部導覽列：治療、情境和管理
 
-In **AAPS** v3 you moved around the app with a row of **tabs** (Overview, Actions, Treatments, …), and several features were **plugins** you enabled in the Config Builder (**Actions**, **Automation**, **Food**, …).
+在 **AAPS** v3 中，你可以透過一列**分頁**切換應用程式畫面（總覽、動作、治療等），也有一些功能是需要在組態建置工具中啟用的**外掛**（**動作**、**自動化**、**食物**等）。
 
-In **AAPS** v4 the tabs are gone, and so is the eye checkbox in the Config Builder that showed a plugin as a tab. The main screen is the **Overview**, and a **bottom navigation** gives you three sheets. **Actions, Automation and Food are no longer plugins** — there is nothing to enable in [Configuration](../SettingUpAaps/ConfigBuilder.md) (the renamed Config Builder); their functions now live in these sheets.
+在 **AAPS** v4 中，分頁已移除，組態建置工具中用來將外掛顯示為分頁的眼睛核取方塊也一併移除。主畫面是**總覽**，底部則設有**底部導覽列**，可開啟三個面板。**動作、自動化和食物不再是外掛**——你不需要在[組態設定工具](../SettingUpAaps/ConfigBuilder.md)（原組態建置工具）中啟用這些功能；現在可以在對應的面板中使用。
 
 (v4changes-treatments)=
-### Treatments — enter and deliver
+### 治療 — 輸入並執行
 
-The **Treatments** sheet is where you record or deliver a treatment: **Bolus wizard**, **Insulin** (manual bolus), **Carbs**, **Treatment** (insulin + carbs together), **Calibration**, **CGM** (open your CGM app, when one is configured), and your **[QuickWizards](../DailyLifeWithAaps/QuickWizards.md)**.
+**治療**面板可用來記錄或執行治療：**注射嚮導**、**胰島素**（手動注射）、**碳水化合物**、**治療**（同時輸入胰島素和碳水化合物）、**校正**、**CGM**（設定 CGM 應用程式時，可在此開啟），以及你的**[快速嚮導](../DailyLifeWithAaps/QuickWizards.md)**。
 
-![The Treatments bottom sheet](../images/v4/BehavioralChanges/treatments_sheet.png)
+![治療底部面板](../images/v4/BehavioralChanges/treatments_sheet.png)
 
-On a **Wear OS watch** the same treatments are entered from the watch's **AAPS menu** (Bolus wizard / Calculator, eCarbs, Treatment, …):
+使用 **Wear OS 手錶**時，也可以從手錶的 **AAPS 選單**輸入相同的治療項目（注射嚮導／計算機、eCarbs、治療等）：
 
-![The treatment actions in the watch's AAPS menu](../images/v4/BehavioralChanges/treatments_watch.png)
+![手錶 AAPS 選單中的治療操作](../images/v4/BehavioralChanges/treatments_watch.png)
 
-### Scenes
+### 情境
 
-Your situation presets — see [Scenes](../DailyLifeWithAaps/Scenes.md).
+你的情境預設值 — 請參閱[情境](../DailyLifeWithAaps/Scenes.md)。
 
 (v4changes-manage)=
-### Manage — manage and activate
+### 管理 — 管理及啟用
 
-The **Manage** sheet is where you manage and activate everything else: **[Profile](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **Insulin settings** (your insulin configurations), **[Temp Target](../DailyLifeWithAaps/TempTargets.md)**, **[QuickWizard](../DailyLifeWithAaps/QuickWizards.md)** presets, **[Scenes](../DailyLifeWithAaps/Scenes.md)**, **Automation**, **Food**, **Site Rotation**, **Pump**, **[Authorized clients](../RemoteFeatures/ClientMasterControl.md)** — plus the pump actions that used to be on the *Actions* tab (**Extended Bolus**, **cancel temp basal**, **Prime/Fill**, **Sensor Insert**, **Pump Battery Change**).
+**管理**面板可用來管理及啟用其他項目：**[設定檔](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**、**胰島素設定**（你的胰島素組態）、**[臨時目標](../DailyLifeWithAaps/TempTargets.md)**、**[快速嚮導](../DailyLifeWithAaps/QuickWizards.md)**預設值、**[情境](../DailyLifeWithAaps/Scenes.md)**、**自動化**、**食物**、**注射部位輪替**、**幫浦**、**[已授權的用戶端](../RemoteFeatures/ClientMasterControl.md)**，以及過去位於*動作*分頁的幫浦操作（**延長注射**、**取消臨時基礎率**、**預充／填充**、**插入傳感器**、**更換幫浦電池**）。
 
-![The Manage bottom sheet](../images/v4/BehavioralChanges/manage_sheet.png)
+![管理底部面板](../images/v4/BehavioralChanges/manage_sheet.png)
 
-All of your existing automation rules and food entries are kept; only the way you reach these features has changed.
+所有現有的自動化規則和食物項目都會保留；變更的只有前往這些功能的方式。
 
 (screens-action-tab)=
-#### Where did the Actions tab go?
+#### 動作分頁移到哪裡了？
 
-**AAPS** 3.x had an "Actions" tab. In **AAPS** 4 its functions live in other places:
+**AAPS** 3.x 有「動作」分頁。在 **AAPS** 4 中，這些功能已移至其他位置：
 
-* **Profile switch** and **Profile Percentage**: tap the [profile name](#aaps-screens-profile--target) on the main screen, or **Manage → Profile**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
-* **Temporary target**: press the [target](#aaps-screens-profile--target) on the main screen, or **Manage → Temp Target**.
-* **Prime/Fill**, **Sensor Insert**, **BG check** and the other careportal entries: in the expanded [status panel](#aaps-screens-careportal), in **Manage**, or as [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
-* **History browser**, **Statistics** (TDD): in the **menu** (☰).
+* **切換設定檔**和**設定檔百分比**：點選主畫面上的[設定檔名稱](#aaps-screens-profile--target)，或前往**管理 → 設定檔**。請參閱[變更設定檔百分比](#ProfileSwitch-change-percentage)。
+* **臨時目標**：點選主畫面上的[目標](#aaps-screens-profile--target)，或前往**管理 → 臨時目標**。
+* **預充／填充**、**插入傳感器**、**血糖檢查**和其他照護入口項目：可在展開的[狀態面板](#aaps-screens-careportal)、**管理**中，或透過[快速啟動](../DailyLifeWithAaps/QuickLaunch.md)按鈕使用。
+* **歷史記錄瀏覽器**、**統計資料**（TDD）：位於**選單**（☰）中。
 
 ```{admonition} Profile switch and profile percentage
 :class: note
-In **AAPS** v3, a long press on the profile name opened the profile switch dialog (percentage, duration, Activity temp target). In **AAPS** v4, **tap** the profile name (or **Manage → Profile**), then tap the round **▶** button at the bottom right to open the same settings. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+在 **AAPS** v3 中，長按設定檔名稱會開啟設定檔切換對話方塊（百分比、持續時間、活動臨時目標）。在 **AAPS** v4 中，**點選**設定檔名稱（或前往 **管理 → 設定檔**），再點選右下角的圓形 **▶** 按鈕，即可開啟相同的設定。請參閱[變更設定檔百分比](#ProfileSwitch-change-percentage)。
 ```
 
 ---
 
 (v4changes-read-only-management)=
-## Settings protection now also locks the management screens
+## 設定保護現在也會鎖定管理畫面
 
-In **AAPS** v3, [Settings protection](#Preferences-settings-protection) asked for your password only when you opened the settings. You could still add or edit profiles in the **Local Profile** tab without it.
+在 **AAPS** v3 中，只有在開啟[設定保護](#Preferences-settings-protection)時，才會要求輸入密碼。即使沒有輸入密碼，你仍可在**本機設定檔**分頁新增或編輯設定檔。
 
-In **AAPS** v4, Settings protection also covers editing on the management screens: **Profile**, **Insulin settings**, **Temp Target** and **QuickWizard**. If your settings are locked, these screens open **read-only**:
+在 **AAPS** v4 中，設定保護也會限制你在管理畫面中編輯內容：包括**設定檔**、**胰島素設定**、**臨時目標**和**快速嚮導**。如果設定已鎖定，這些畫面會以**唯讀**模式開啟：
 
-- You can browse the entries and **▶ Activate** or use them.
-- The **Add / Edit / Clone / Delete** buttons are **hidden**. Only the **✏️ pencil** in the top bar shows that you can unlock editing.
+- 你可以瀏覽項目，並點選**▶ 啟用**或使用這些項目。
+- **新增／編輯／複製／刪除**按鈕會**隱藏**。只有頂端列中的 **✏️ 鉛筆**圖示會顯示您可以解鎖編輯功能。
 
-![The read-only Profile screen — only Activate at the bottom, pencil in the top bar](../images/v4/Profiles/profile_manage_readonly.png)
+![唯讀的設定檔畫面 — 底部只有「註冊」按鈕，頂端列有鉛筆圖示](../images/v4/Profiles/profile_manage_readonly.png)
 
 ```{admonition} What you need to do
 :class: important
-To add, edit, clone or delete an entry, tap the **✏️ pencil** in the top bar and enter your settings password (or use biometrics). The buttons appear.
+若要新增、編輯、複製或刪除項目，請點選頂端列中的 **✏️ 鉛筆**圖示，並輸入設定密碼（或使用生物辨識）。按鈕隨即顯示。
 
-If you don't need to protect your settings, you can turn Settings protection off in **Settings → Protection**.
+如果您不需要保護設定，可以在 **設定 → 保護**中關閉設定保護。
 ```
 
 ---
 
 (v4changes-active-insulin)=
-## The insulin in use can't be edited
+## 使用中的胰島素無法編輯
 
-In **AAPS** v3, you could change the DIA of the insulin you were using at any time.
+在 **AAPS** v3 中，您隨時都可以變更目前使用胰島素的 DIA。
 
-In **AAPS** v4, the insulin marked **ACTIVE** in **Manage → Insulin settings** is greyed out: you cannot edit or delete it.
+在 **AAPS** v4 中，**管理 → 胰島素設定**中標示為 **啟用中**的胰島素會呈現灰色，無法編輯或刪除。
 
-When you upgrade, **AAPS** keeps the insulin and DIA that your v3 profile switches already stored. If it finds older records whose insulin is known but whose DIA is not, it uses a default DIA for them and shows a message once, for example *Older records had no insulin duration, so 9.0 hours was used for Lyumjev. Check your insulin settings — already migrated records are not updated afterwards.* Check your insulin settings when you see it.
+升級時，**AAPS** 會保留 v3 個人設定檔切換中已儲存的胰島素和 DIA。如果系統找到較舊的紀錄，其中已知胰島素種類，但沒有 DIA，便會為這些紀錄套用預設 DIA，並顯示一次訊息，例如：*較舊的紀錄未提供胰島素作用時間，因此 Lyumjev 使用了 9.0 小時。請檢查胰島素設定 — 已轉移的紀錄之後不會再更新。*看到這則訊息時，請檢查您的胰島素設定。
 
 ```{admonition} What you need to do
 :class: important
-To change the DIA or peak, add a new insulin with **+**, adjust it, save it and **▶ Activate** it. See [Changing the insulin in use](#Config-Builder-insulin-change-active).
+若要變更 DIA 或峰值，請按 **+** 新增胰島素、調整設定、儲存，然後按 **▶ 註冊**。請參閱[變更使用中的胰島素](#Config-Builder-insulin-change-active)。
 ```
 
 ---
 
 (v4changes-remote-control)=
-## AAPSClient remote control needs pairing
+## AAPSClient 遠端控制需要配對
 
-In **AAPS** v3, **AAPSClient** controlled **AAPS** by writing care-portal treatments to Nightscout, and could not deliver a bolus.
+在 **AAPS** v3 中，**AAPSClient** 會將照護入口的治療資料寫入 Nightscout，以此控制 **AAPS**，但無法注射胰島素。
 
-In **AAPS** v4, the client and the main phone are **paired** once, and every command is signed. The main phone checks and confirms each command, and a client can now also deliver a bolus.
+在 **AAPS** v4 中，Client 和主手機只需**配對**一次，之後每個指令都會經過簽章。主手機會檢查並確認每個指令，Client 現在也可以注射胰島素。
 
-- Each client has a **[role](#client-master-control-roles)** that limits what it may do.
-- While client control is on, the main phone is in **[hardened mode](#client-master-control-hardened-mode)**: treatments and changes typed directly into Nightscout (the website, other apps) are no longer applied.
-- Each client gets a **[Nightscout token of its own](#client-master-control-own-token)** with only the rights it needs.
+- 每個 Client 都有一個**[角色](#client-master-control-roles)**，用來限制它可以執行的操作。
+- 啟用 Client 控制時，主手機會進入**[強化模式](#client-master-control-hardened-mode)**：直接輸入 Nightscout（網站或其他 App）的治療資料和變更將不再套用。
+- 每個 Client 都會取得一組**[專屬的 Nightscout 權杖](#client-master-control-own-token)**，且僅具備所需的權限。
 
 ```{admonition} What you need to do
 :class: important
-Pair each **AAPSClient** with the main phone: see [Master ↔ Client control](#client-master-control). With an admin token on the main phone, the main phone shows a QR code that sets up and pairs the client in one scan. If you used to enter treatments on the Nightscout website, enter them on a paired client instead.
+請將每部 **AAPSClient** 與主手機配對：請參閱[主控端 ↔ 用戶端控制](#client-master-control)。主手機使用管理員權杖時，會顯示 QR Code；掃描一次即可設定並配對 Client。如果您過去會在 Nightscout 網站輸入治療資料，請改用已配對的 Client 輸入。
 ```
 
 ---
 
-## Duplicate BG data now switches the loop to Low Glucose Suspend
+## 血糖資料重複時，循環現在會切換至低血糖暫停模式
 
-When **AAPS** receives the same BG reading twice (a red warning badge on the BG source shortcut in the bottom bar), it cannot calculate your trend reliably, so it stops giving correction insulin.
+當 **AAPS** 收到兩筆相同的血糖讀取值時（底部列的血糖來源捷徑上會出現紅色警告徽章），系統便無法可靠地計算趨勢，因此會停止注射校正胰島素。
 
-In **AAPS** v3 this happened quietly in the background: your loop still showed as **Closed Loop**, even though it could no longer correct.
+在 **AAPS** v3 中，這個情況會在背景中悄悄發生：即使循環已無法進行校正，仍會顯示為**閉環**。
 
-In **AAPS** v4 the change is visible. A closed loop is switched to **Low Glucose Suspend** mode, and the loop dialog tells you why: *"LGS mode due to doubled values in BG source"*. **AAPS** can still reduce or suspend your basal to protect you against lows.
+在 **AAPS** v4 中，這項變化會清楚顯示。閉環會切換至**低血糖暫停**模式，循環對話框也會說明原因：*「血糖來源有重複讀取值，因此進入 LGS 模式」*。 **AAPS** 仍可降低或暫停基礎胰島素，以避免您發生低血糖。
 
 ```{admonition} What you need to do
 :class: important
-Find and remove the duplicate readings — see [BG warning sign](#aaps-screens-bg-warning-sign).
+請找出並移除重複的讀取值 — 請參閱[血糖警告標記](#aaps-screens-bg-warning-sign)。
 
-Once they are gone, **AAPS** stays in **Low Glucose Suspend**. It does not go back to **Closed Loop** on its own: press and hold the loop icon and select **Closed Loop** again.
+重複資料移除後，**AAPS** 仍會維持在**低血糖暫停**模式。系統不會自行切回**閉環**：請長按循環圖示，然後再次選取**閉環**。
 ```
 
 ---
 
 (v4changes-tidepool)=
-## Tidepool: data now shows under the device name AAPS
+## Tidepool：資料現在會顯示在裝置名稱 AAPS 下
 
-In **AAPS** v3, the data uploaded to [Tidepool](../SettingUpAaps/Tidepool.md) was shown in Tidepool under another device name.
+在 **AAPS** v3 中，上傳至 [Tidepool](../SettingUpAaps/Tidepool.md) 的資料會以另一個裝置名稱顯示。
 
-In **AAPS** v4, the data is shown under the device name **AAPS**. After the update, **AAPS** starts a new data set in Tidepool. Your older data stays in Tidepool under the old device name.
+在 **AAPS** v4 中，資料會顯示在裝置名稱 **AAPS** 下。更新後，**AAPS** 會在 Tidepool 中建立新的資料集。舊資料仍會以舊的裝置名稱保留在 Tidepool 中。
 
 ```{admonition} What you need to do
 :class: important
-Usually nothing: new data simply appears under **AAPS**.
+通常不需要採取任何動作：新資料只會顯示在 **AAPS** 下。
 
-Do **not** run "**Full synchronization**" while the old data is still in Tidepool: the same data would then be there twice. If you want all your data under the new name, use the "**Purge all data**" button on the [Tidepool screen](#tidepool-menu) first (it also deletes the old data uploaded by **AAPS**), then run "**Full synchronization**". Only the data still stored in **AAPS** on your phone can be uploaded again.
+舊資料仍在 Tidepool 中時，請**不要**執行「**完整同步**」：否則同一筆資料會出現兩次。如果您希望所有資料都顯示在新名稱下，請先按一下 [Tidepool 畫面](#tidepool-menu)上的「**清除所有資料**」按鈕（這也會刪除 **AAPS** 上傳的舊資料），然後再執行「**完整同步**」。只有仍儲存在手機 **AAPS** 中的資料才能再次上傳。
 ```
 
 ---

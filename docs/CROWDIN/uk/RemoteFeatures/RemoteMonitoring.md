@@ -1,35 +1,35 @@
-# Remote monitoring
+# Віддалений моніторинг
 
-![Monitoring children](../images/KidsMonitoring.png)
+![Моніторинг дітей](../images/KidsMonitoring.png)
 
-__AAPS__ offers several features for remote monitoring of type 1 diabetic children, and also facilitates remote commands which send instructions to __AAPS__ remotely. Similarly, __AAPSClient__ can also be used for remote monitoring to follow your partner's or friend's __AAPS__.
+__AAPS__ має кілька функцій для віддаленого моніторингу дітей з діабетом 1 типу, а також дозволяє віддалені команди, які надсилають інструкції в __AAPS__ на відстані. Так само __AAPSClient__ можна використовувати для віддаленого моніторингу, щоб стежити за __AAPS__ вашого партнера або друга.
 
-## Functions
+## Функції
 
-- Kid's pump is controlled by kid's phone using __AAPS__.
-- Caregivers can remotely follow viewing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **AAPSClient apk** on their Android phone (an iPhone version of **AAPSClient** is in development, see [AAPSClient](AapsClient.md)). Settings amended in __AAPS__ will synchronize with __AAPSClient__ and vice versa.
-- Caregivers can be alarmed by using **xDrip app in follower mode** on their Android phone if xdrip companion mode is set up.
-- Remote control of __AAPS__ using [SMS Commands](../RemoteFeatures/SMSCommands.md) is secured by two-factor authentication.
-- Remote control through __AAPSClient__ uses the signed command channel introduced in **AAPS** 4: the client must first be **paired** with the master (with a QR code or a PIN), and every command is confirmed and executed by the master. Each caregiver's phone can get its own [role](#client-master-control-roles), from read-only to full control — see [Master ↔ Client control](#client-master-control).
+- Помпою дитини керує телефон дитини з __AAPS__.
+- Доглядачі можуть віддалено стежити за всіма важливими даними, такими як рівень глюкози, активні вуглеводи, активний інсулін тощо, за допомогою **AAPSClient apk** на своєму телефоні з Android (версія **AAPSClient** для iPhone ще в розробці, див. [AAPSClient](AapsClient.md)). Налаштування, змінені в __AAPS__, синхронізуються з __AAPSClient__, і навпаки.
+- Доглядачі можуть отримувати сигнали тривоги через **застосунок xDrip у режимі послідовника** на своєму телефоні з Android, якщо налаштовано режим компаньйона xDrip.
+- Віддалене керування __AAPS__ за допомогою [SMS-команд](../RemoteFeatures/SMSCommands.md) захищене двофакторною автентифікацією.
+- Віддалене керування через __AAPSClient__ використовує підписаний канал команд, який з'явився в **AAPS** 4: спершу клієнт треба **спарувати** з основним телефоном (за допомогою QR-коду або PIN-коду), і кожну команду підтверджує та виконує основний телефон. Телефон кожного доглядача може отримати власну [роль](#client-master-control-roles), від лише перегляду до повного керування — див. [Керування основний телефон ↔ клієнт](#client-master-control).
 
-## Tools and apps for remote monitoring
+## Інструменти та застосунки для віддаленого моніторингу
 
-- [Nightscout](https://nightscout.github.io/) in web browser (mainly data display).
-- [__AAPSClient__](AapsClient.md) is a stripped down version of __AAPS__ capable of following the master __AAPS__ and, once **paired**, sending remote commands: carbs, __Temp Targets__, __Profile Switches__ and even boluses (see [Master ↔ Client control](#client-master-control)). There are 3 apps: [AAPSClient, AAPSClient2 & AAPSClient3 to download](https://github.com/nightscout/AndroidAPS/releases/), so a caregiver can follow up to three different persons from the same phone (e.g. two children with type 1, each with their own Nightscout account and master __AAPS__).
-- Dexcom follow if you are using original Dexcom app (BG values only).
-- [xDrip](../CompatibleCgms/xDrip.md) in follower mode (mainly BG values and **alarms**).
-- [Sugarmate](https://sugarmate.io/) or [Spike](https://spike-app.com/) on iOS (mainly BG values and **alarms**).
-- Some users find a full remote access tool like [TeamViewer](https://www.teamviewer.com/) to be helpful for advanced remote troubleshooting.
+- [Nightscout](https://nightscout.github.io/) у веб-браузері (переважно показ даних).
+- [__AAPSClient__](AapsClient.md) – це спрощена версія __AAPS__, яка може стежити за основним __AAPS__ і, після того як її **спарено**, надсилати віддалені команди: вуглеводи, __тимчасові цілі__, __перемикання профілю__ і навіть болюси (див. [Керування основний телефон ↔ клієнт](#client-master-control)). Є 3 застосунки: [AAPSClient, AAPSClient2 та AAPSClient3 для завантаження](https://github.com/nightscout/AndroidAPS/releases/), тож доглядач може стежити до трьох різних людей з одного телефона (наприклад, за двома дітьми з діабетом 1 типу, кожна з яких має власний обліковий запис Nightscout і основний __AAPS__).
+- Dexcom Follow, якщо ви використовуєте оригінальний застосунок Dexcom (лише значення ГК).
+- [xDrip](../CompatibleCgms/xDrip.md) у режимі послідовника (переважно значення ГК і **сигнали тривоги**).
+- [Sugarmate](https://sugarmate.io/) або [Spike](https://spike-app.com/) на iOS (переважно значення ГК і **сигнали тривоги**).
+- Деяким користувачам для складнішого віддаленого усунення проблем допомагає інструмент повного віддаленого доступу, наприклад [TeamViewer](https://www.teamviewer.com/).
 
-## Smartwatch options
+## Варіанти з розумним годинником
 
-A smartwatch can be a very useful tool in helping manage __AAPS__ with T1D kids. A couple of different options are possible:
+Розумний годинник може бути дуже корисним інструментом, щоб керувати __AAPS__ у дітей з діабетом 1 типу. Можливі кілька різних варіантів:
 
-- Option 1 - If __AAPSClient__ is installed on the caregiver's phone, the [AAPSClient WearOS app](https://github.com/nightscout/AndroidAPS/releases/) can be installed on a compatible smartwatch connected to the caregiver's phone. This will show current __BG__, loop status and bolus history, and allow carb entry, __Temp Targets__ and __Profile__ changes. If the client is **paired** with the master, the watch can also start a **bolus**: the command is relayed through the client to the master, which confirms and delivers it (see [Master ↔ Client control](#client-master-control)).
-- Option 2 - The [AAPS WearOS app](../WearOS/WearOsSmartwatch.md) can also be built and installed on a compatible smartwatch, connected to the kid's phone but worn by the caregiver. This includes all the functions listed above as well as the ability to bolus insulin directly, without the need to remove the kid's phone from their person.
-- Option 3 - Display only: a watch that **AAPS** does not support directly (Xiaomi, Amazfit, or a Wear OS watch showing a complication) can display glucose, IOB, COB and loop status through a companion app such as WatchDrip+ or GlucoDataHandler, fed by the **External Companion Apps** plugin of the **AAPS** or **AAPSClient** phone it is connected to. See [External Companion Apps](#watches-external-companion-apps).
+- Варіант 1 – якщо на телефоні доглядача встановлено __AAPSClient__, на сумісний розумний годинник, підключений до телефона доглядача, можна встановити [застосунок AAPSClient для WearOS](https://github.com/nightscout/AndroidAPS/releases/). Годинник показує поточну __ГК__, статус петлі та історію болюсів і дозволяє вводити вуглеводи, змінювати __тимчасові цілі__ та __профіль__. Якщо клієнт **спарено** з основним телефоном, годинник також може запустити **болюс**: команда йде через клієнт на основний телефон, який підтверджує та вводить болюс (див. [Керування основний телефон ↔ клієнт](#client-master-control)).
+- Варіант 2 – [застосунок AAPS для WearOS](../WearOS/WearOsSmartwatch.md) також можна зібрати та встановити на сумісний розумний годинник, підключений до телефона дитини, але який носить доглядач. Це дає всі перелічені вище функції, а також можливість вводити болюс інсуліну напряму, не забираючи телефон у дитини.
+- Варіант 3 – лише показ даних: годинник, який **AAPS** не підтримує напряму (Xiaomi, Amazfit або годинник з Wear OS, що показує віджет), може показувати глюкозу, IOB, COB і статус петлі через супутній застосунок, наприклад WatchDrip+ або GlucoDataHandler. Дані надходять від плагіна **Зовнішні супутні застосунки** на телефоні з **AAPS** або **AAPSClient**, до якого підключено годинник. Див. [Зовнішні супутні застосунки](#watches-external-companion-apps).
 
-## Things to consider
+## Що треба врахувати
 
-- Consider time gap between master and follower due to time for up and download as well as the fact that __AAPS__ master phone will only upload after loop run.
-- What is your emergency plan for when remote control does not work (_e.g._ network problems or lost Bluetooth connection)? Always consider what will happen with **AAPS** if you suddenly can’t send a new command. **AAPS** overwrites the pump basal, ISF and ICR with the current profile values. Only use temporary profile switches (_i.e._ with a set time duration) if switching to a stronger insulin profile, in case your remote connection is disrupted. Then the pump will revert to the original profile when the time expires.
+- Враховуйте затримку між основним телефоном і послідовником через час на вивантаження та завантаження даних, а також те, що основний телефон з __AAPS__ вивантажує дані лише після запуску петлі.
+- Який у вас план на випадок надзвичайної ситуації, коли віддалене керування не працює (_наприклад_, проблеми з мережею або втрачено з'єднання Bluetooth)? Завжди думайте про те, що станеться з **AAPS**, якщо ви раптом не зможете надіслати нову команду. **AAPS** перезаписує базал, ISF та ICR у помпі значеннями поточного профілю. Якщо ви перемикаєтеся на сильніший профіль інсуліну, використовуйте лише тимчасові перемикання профілю (_тобто_ із заданою тривалістю) на випадок, якщо віддалений зв'язок перерветься. Тоді помпа повернеться до початкового профілю, коли час закінчиться.
