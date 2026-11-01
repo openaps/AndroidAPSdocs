@@ -5,7 +5,7 @@
 **AAPS** nie je možné stiahnuť kvôli predpisom pre zdravotnícke pomôcky. Zostaviť si aplikáciu pre vlastné použitie je legálne, ale nesmiete jej kópiu dávať iným! Podrobnosti nájdete na stránke [Najčastejšie otázky používateľov APS](../UsefulLinks/FAQ.md).
 
 ```{note}
-Ak chcete zostaviť **AAPS** na novom počítači: skopírujte záložný súbor úložiska kľúčov do nového počítača. Potom namiesto tohto návodu postupujte podľa [postupu prvého zostavenia **AAPS**](../SettingUpAaps/BuildingAaps.md). Jediný rozdiel je v tom, že namiesto vytvorenia nového úložiska kľúčov môžete vybrať to, ktoré ste skopírovali do nového počítača.
+In case you want to build **AAPS** on a new computer: copy your back-up keystore file to the new computer. Potom namiesto tohto návodu postupujte podľa [postupu prvého zostavenia **AAPS**](../SettingUpAaps/BuildingAaps.md). Jediný rozdiel je v tom, že namiesto vytvorenia nového úložiska kľúčov môžete vybrať to, ktoré ste skopírovali do nového počítača.
 ```
 
 ## Prehľad aktualizácie na novú verziu AAPS v Android Studiu
@@ -95,6 +95,6 @@ Ak sa niečo pokazí, nepanikárte.
 
 Zhlboka sa nadýchnite!
 
-Potom si pozrite samostatnú stránku [Riešenie problémov s Android Studiom](../GettingHelp/TroubleshootingAndroidStudio.md), či už váš problém nie je popísaný!
+Then check if your problem is already documented on the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 Ak potrebujete ďalšiu pomoc, obráťte sa na ostatných používateľov **AAPS** na [Facebooku](https://www.facebook.com/groups/AndroidAPSUsers) alebo [Discorde](https://discord.gg/4fQUWHZ4Mw).
