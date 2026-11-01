@@ -48,7 +48,7 @@
 
 - DiaKEM：伺服器升級後，新安裝無法運作 @psonnera
 - 移除了 Libre 2 修補版應用程式（已淘汰）： 該版本無法與新傳感器搭配使用 @psonnera
-- Reworked Omnipod Dash page @XiTatiON
+- Reworked Omnipod DASH page @XiTatiON
 
 ## 2025年8月
 
@@ -97,7 +97,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 - [血糖質量警告標誌](#aaps-screens-bg-warning-sign) @tanja
 - [美敦力藥量更新](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
 - [更新到 AAPS 3.0 後的必要檢查](Update3_0.md) @tanja
-- [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
+- [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
 - 更新 AAPS 3.0 的文件（部分）@xJoe
 - [AAPS 3.0 的 Wear OS](../WearOS/WearOsSmartwatch.md) @peterleimbach
 
@@ -112,7 +112,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 
 ## 2021年11月
 
-- 校正 Libre 2 傳感器 的最佳方法
+- Best practices for calibrating a Libre 2 sensor
 - [ISF](../UsefulLinks/FAQ.md) 影響的重新表述
 - 更新[Android Studio問題排除](../GettingHelp/TroubleshootingAndroidStudio.md)
 - 移除已修補的[Dexcom](../CompatibleCgms/DexcomG6.md)應用程式，因為它已過時
@@ -212,7 +212,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 
 ## 2019年12月
 
-- [Android Auto](../RemoteFeatures/AndroidAuto.md) - 附上截圖的設定
+- [Android Auto](../RemoteFeatures/AndroidAuto.md) - setup with screenshots
 - [Accu-Chek Insight 與自動調整](#Accu-Chek-Insight-Pump-settings-in-aaps) - 使用的替代方案
 - [Glimp](#Config-Builder-bg-source) - 支援版本 4.15.57 及更新版本
 - [錶盤](../WearOS/WearOsSmartwatch.md) - 重大的更新，更多詳細資訊
@@ -238,7 +238,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 ## 2019年10月
 
 - [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
-- [Accu-Chek Insight - 日誌選項](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- [Accu-Chek Insight - log options](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [COB 計算在單獨頁面上](../DailyLifeWithAaps/CobCalculation.md)
 - [COB - 錯誤 COB 值偵測](#CobCalculation-detection-of-wrong-cob-values)
 - [Dexcom G6 特定問題排除](#DexcomG6-troubleshooting-g6)
