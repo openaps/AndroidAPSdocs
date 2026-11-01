@@ -28,12 +28,12 @@
 
 **語系**
 
-- By default **AAPS** follows the language of the phone (recommended).
+- 預設情況下，**AAPS** 會使用手機的語系（建議設定）。
 
-- If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
+- 如果您想讓 **AAPS** 使用不同於手機的語系，請在此選擇。在 Android 13 及更新版本中，**AAPS** 會在 Android 中註冊為獨立的應用程式語系，因此所有畫面、主畫面和小工具都會使用該語系，數字的顯示方式也會隨之變更。
 
 - 變更語系後，**AAPS** 的文字會立即切換為新的語系。如果部分文字仍顯示舊語系，請重新啟動 **AAPS**。
-- On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
+- Android 12 不會顯示這項設定：**AAPS** 一律使用手機的語系。
 - 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 (preferences-simple-mode)= **簡易模式**
@@ -411,7 +411,7 @@ NSClient 外掛（在組態選單中顯示為 **NSClientV3**）會與 Nightscout
 - 若要刪除所有 SSID，請在該欄位中輸入空格。
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClientV3)
+### 進階設定（NSClientV3）
 
 ![NSClient 進階設定](../images/preferences/settings_nsclient_advanced.png)
 
@@ -470,9 +470,9 @@ NSClient 外掛（在組態選單中顯示為 **NSClientV3**）會與 Nightscout
 
 設定應該是簡單明瞭的。
 
-**Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
+**覆寫勿擾模式**（預設開啟）：即使手機處於靜音或勿擾模式，**AAPS** 的警報仍會響起。如果您希望 **AAPS** 遵循這些模式，請將此功能關閉：警報屆時不會響起；在勿擾模式下，手機和手錶只會震動。在勿擾模式期間收到的循環建議會以靜音方式顯示。
 
-When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Swiping the alarm notification away in the notification tray mutes the alarm. When you open **AAPS** later, an alarm you did not answer is shown again.
+警報響起時，警報畫面會提供**靜音警報**（畫面會保持開啟，方便您讀取訊息）和**靜音並關閉**兩個選項。在通知列中將警報通知向旁滑掉，即可將警報靜音。稍後開啟 **AAPS** 時，未回應的警報會再次顯示。
 
 (preferences-maintenance-settings)=
 ## 維護設置
