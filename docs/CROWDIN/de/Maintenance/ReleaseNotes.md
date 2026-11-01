@@ -60,9 +60,9 @@ Versionen mit eigener Überschrift sind jeweils die letzte Version für eine And
 
 ## Version 4.0.0
 
-Release date: 31-10-2026
+Erscheinungsdatum: 31.10.2026
 
-**New features**
+**Neue Funktionen**
 
 - Neue Benutzeroberfläche: Smartphone-App neu in Jetpack Compose erstellt @MilosKozak
 - [Übergreifende Suche](../DailyLifeWithAaps/GlobalSearch.md) @MilosKozak
@@ -88,13 +88,13 @@ Release date: 31-10-2026
 - Leistungsverbesserungen @MilosKozak
 - Automatische E-Carbs im Bolus-Assistenten @MilosKozak
 
-**New devices**
+**Neue Geräte**
 
 - **CareLevo**: neue [Pumpenunterstützung](../CompatiblePumps/CareLevo.md) @Kisu-Choi @MilosKozak
 - **Dana-i2**: Unterstützung @MilosKozak
 - **Instara**: neue CGM-Quelle @leohunt
 
-**Pump Driver Improvements**
+**Verbesserungen in der Pumpenunterstützung**
 
 - Pumpenübersicht für Insight, Medtronic, Medtrum, Omnipod, Dana, Diaconn und Equil neu erstellt @MilosKozak
 - **Omnipod Dash**: PDM Referenz-Codes und lesbare Fehlerbeschreibungen, Driftkompensation immer an, besseres Bolustyp-Reporting @nl-ruud
@@ -114,15 +114,15 @@ Release date: 31-10-2026
 - Bolus-Rechner: [Mahlzeittyp](#WearOsSmartwatch-wizard-meal-type)-Seite auf der Smartwatch, die die Kohlenhydrate wie der Bolus-Rechner des Smartphones aufteilt und [KH-Zeit](#WearOsSmartwatch-wizard-carb-time) mit der *Essens*-Erinnerung auf die Smartwatch bringt @olorinmaia
 - [Smartphone-Alarme auf der Smartwatch](#WearOsSmartwatch-phone-alarms): Die Smartwatch zeigt den Smartphone-Alarm an und er kann „schlummern“ oder für 5 Min. stumm geschaltet werden @olorinmaia
 
-**Build**
+**Erstellen („Build“)**
 
 - CI-Workflows für Tag/Branch-Builds, JDK-Version Zuordnung @Angus-repo
 
-**Contributors**
+**Beitragende**
 
 @MilosKozak @Philoul @olorinmaia @Kisu-Choi @leohunt @piecycle @Angus-repo @mcnelson @t1dude @premnirmal @nl-ruud
 
-Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.0>
+Vollständiges Änderungsprotokoll: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.0>
 
 ---
 
@@ -138,7 +138,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 
 **Version 3.4.2.5**
 
-- Equil fix race condition @MilosKozak
+- Equil: Race Condition behoben @MilosKozak
 
 ---
 
@@ -146,8 +146,8 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 
 **Version 3.4.2.4**
 
-- Equil fixes @MilosKozak
-- NS profile sync fix @MilosKozak
+- Equil: Fehlerbehebungen @MilosKozak
+- NS: Profilsynchronisation korrigiert @MilosKozak
 
 ---
 
@@ -155,15 +155,15 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 
 **Version 3.4.2.3**
 
-- Dash: Drift resolution @nl-ruud
-- NSClientV3: Fix gap after reconnection @MilosKozak
-- Automation: Fix deserialization @MilosKozak
-- Equil: Fix battery report @MilosKozak
+- Dash: Drift-Problem behoben @nl-ruud
+- NSClientV3: Lücke nach Re-Connect behoben @MilosKozak
+- Automatisierung: Deserialisierungsproblem behoben @MilosKozak
+- Equil: Batterie-Report korrigiert @MilosKozak
 - Workflow aufgeräumt @vanelsberg
-- Equil: improve error recovery @MilosKozak
-- DanaRS: fix domestic pump communication @MilosKozak
-- Insight: Fix TBR sync @MilosKozak
-- Dash: Fix activation bug @nl-ruud
+- Equil: Verhalten nach Fehler verbessert @MilosKozak
+- DanaRS: Interne Pumpenkommunikation korrigiert @MilosKozak
+- Insight: TBR-Synchronisation korrigiert @MilosKozak
+- Dash: Aktivierungsproblem behoben @nl-ruud
 
 ---
 
@@ -171,8 +171,8 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 
 **Version 3.4.2.2**
 
-- Fixing issues with Equil and Medtronic
-- Improve safety of Medtrum
+- Probleme mit Equil und Medtronic behoben
+- Medtrum-Sicherheit verbessert
 
 ---
 
@@ -180,7 +180,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 
 **Version 3.4.2.1**
 
-- Equil: fix Pairing and progress dialog @MilosKozak
+- Equil: Fehler im Koppelungs- und Fortschrittsdialog behoben @MilosKozak
 
 ---
 
@@ -188,12 +188,12 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 
 **Version 3.4.2.0**
 
-Release date: 04-02-2026
+Erscheinungsdatum: 04.02.2026
 
-- Equil: Fix resistance for different models @hhfcvmars
-- Tidepool: Fix session @MilosKozak
+- Equil: Resistenzhandling für diverse Modelle korrigiert @hhfcvmars
+- Tidepool: Session-Handling korrigiert @MilosKozak
 - Medtrum: Aktivierung korrigiert, doppeltes Füllen wird verhindert @MilosKozak
-- COB: Fix COB calculation (covers dangerous edge case) @MilosKozak
+- COB: COB-Berechnung korrigiert (deckt gefährlichen Sonderfall ab) @MilosKozak
 
 ---
 
@@ -201,56 +201,56 @@ Release date: 04-02-2026
 
 **Version 3.4.1.0**
 
-Release date: 03-08-2026
+Erscheinungsdatum: 03.08.2026
 
 **Core**
 
-- Fix DST handling @MilosKozak
-- Improve and unify normal target identification (mgdl > 99, mmol > 5.5) @MilosKozak
-- SMS: protect RESTART by PIN @MilosKozak
-- Maintenance: warn if wrong directory selected @MilosKozak
+- Zeitumstellungsproblem behoben @MilosKozak
+- Vereinheitlichung und Verbesserung der normalen Ziel-Bestimmung (mgdl > 99, mmol > 5,5) @MilosKozak
+- SMS: Für RESTART jetzt PIN notwendig @MilosKozak
+- Wartung: Warnen, wenn falsches Verzeichnis ausgewählt ist @MilosKozak
 
-**Pump Driver Improvements**
+**Verbesserungen in der Pumpenunterstützung**
 
-- **Omnipod Dash**: refactor BLE driver code to omnipod/common module @jwoglom
-- **Omnipod Dash**: try to fix connection state @MilosKozak
-- **Omnipod**: validate profile before pod activation to prevent wasting pods (#4534) @brianV
-- **Medtronic**: fix same encoding type displayed in settings dialog @mifi100
-- **Medtronic**: prepare pump common classes (Tandem preparation) @andy-rozman
-- **RileyLink**: encoding fix (#4519) @mifi100
-- **Equil**: expand insulin pump compatibility by serial number prefix (#4510) @hhfcvmars
-- **Equil**: add logging @MilosKozak
-- **Diaconn G8**: fix log sync bug and add firmware 3.58+ support @miyeongkim
-- **Diaconn**: fix TBR duration unit conversion @miyeongkim
-- **Diaconn**: use commandQueue.loadEvents() for history sync @miyeongkim
-- Allow insulin delivery while loop is suspended but pump is available @cschuijt
+- **Omnipod Dash**: Bereinigung (Refactor) des BLE-Treibercodes für Omnipod/Common Module @jwoglom
+- **Omnipod Dash**: Versuch den Verbindungs-Status zu korrigieren @MilosKozak
+- **Omnipod**: Überprüfe das Profil vor der Pod-Aktivierung, um zu verhindern, dass Pods verschwendet werden (#4534) @brianV
+- **Medtronic**: Korrektur des gleichen Kodierungstyps, der im Einstellungsdialog angezeigt wird @mifi100
+- **Medtronic**: Tandem Vorbereitung - „pump common classes“ vorbereitet @andy-rozman
+- **RileyLink**: Encoding-Fehler behoben (#4519) @mifi100
+- **Equil**: Erweiterung der Insulinpumpenkompatibilität durch einen Seriennummer-Präfix (#4510) @hhfcvmars
+- **Equil**: Logging hinzugefügt @MilosKozak
+- **Diaconn G8**: Log-Sync-Fehler behoben und Unterstützung für Firmware 3.58+ ergänzt @miyeongkim
+- **Diaconn**: Einheitenumwandlung der TBR-Dauer korrigiert @miyeongkim
+- **Diaconn**: commandQueue.loadEvents() wird für den Sync des historischen Verlaufs genutzt @miyeongkim
+- Insulinabgabe bei ausgesetztem Loop aber verfügbarer Pumpe nun möglich @cschuijt
 
 **Cloud / Backup**
 
-- Add backup to Google Drive @Angus-repo
-- Notify UI on cloud storage error state change @Angus-repo
-- Allow both local and cloud storage at the same time @Angus-repo
+- Backup zu Google Drive hinzugefügt @Angus-repo
+- Benachrichtigen des UI bei Veränderungen des Cloud-Speicherfehlers @Angus-repo
+- Gleichzeitiges Speichern lokal und in der Cloud nun möglich @Angus-repo
 
 **Tidepool**
 
-- Improve Tidepool OAuth2 migration @MilosKozak
-- Fix indefinite Tidepool BLOCKED state, fix rejecting empty SSIDs @michaeln-synapse
+- Tidepool OAuth2-Migration verbessert @MilosKozak
+- Unbestimmten Tidepool BLOCKED Zustand und leere SSIDs korrigiert @michaeln-synapse
 
 **Nightscout-Client**
 
-- NSCv3: improve reconnection @MilosKozak
+- NSCv3: Wiederverbindung verbessert @MilosKozak
 
 **Wear OS**
 
-- Display New IOB in Wizard Result if IOB is used in calculations @olorinmaia
-- Fix Wear BolusProgress with Total Amount @Philoul
+- Neues IOB wird im Bolus-Rechner angezeigt, wenn IOB in der Berechnung genutzt wird @olorinmaia
+- Wear „BolusProgress“ mit Gesamtmenge korrigiert @Philoul
 
-**UI**
+**UI (Benutzeroberfläche)**
 
-- Improve ic_none icon for Site Rotation @Philoul
-- Fix site rotation manage pump setting not being used @samfundev
+- „ic_none“-Icon für „Site-Rotation“ verbessert @Philoul
+- Korrigiert: Site Rotation nicht zum Managen der Pumpeneinstellungen berücksichtigt @samfundev
 
-**Contributors**
+**Beitragende**
 
 @MilosKozak @Philoul @olorinmaia @jwoglom @mifi100 @andy-rozman @Angus-repo @brianV @cschuijt @hhfcvmars @miyeongkim @samfundev @michaeln-synapse
 
@@ -260,64 +260,64 @@ Release date: 03-08-2026
 
 **Version 3.4.0.0**
 
-Release date: 31-12-2025
+Erscheinungsdatum: 31.12.2025
 
-**Before upgrading:**
+**Vor dem Aktualisieren:**
 
-* This version requires Google Android 12.0 or above. Check your phone version before attempting to update.
-* Update to latest Android Studio or better setup using browser build.
+* Diese Version benötigt Google Android 12.0 oder höher. Prüfe vor der Aktualisierung die Smartphone-Version.
+* Aktualisiere Android Studio auf die neueste Version oder noch besser, nutze den „Browser-Build“.
 
-**New features**
+**Neue Funktionen**
 
-* Running mode @MilosKozak
-  * Show [loop status history](#AapsScreens-running-mode) in treatment tabs
-  * Show and allow changing [loop status from AAPSClient](#RemoteControl_aapsclient).<br>NB : needs the setting [NSClient > Synchronization > Receive Running mode events](#Preferences-nsclient-synchronization)
-* [New CGMs](../Getting-Started/CompatiblesCgms.md) : Glunovo, Intelligo, Sinocare
-* [Site rotation](#Aapsscreens-site-rotation) support @Philoul
-* New [automation action](#automations-automation-action) : enable or disable SMBs @MilosKozak
-* Syai CGM is [trusted source](#GettingStarted-TrustedBGSource) and supports advanced filtering @MilosKozak
+* Betriebsmodus @MilosKozak
+  * Zeige die [Lopp-Status-Historie](#AapsScreens-running-mode) bei den „Behandlungen“
+  * Anzeigen und ändern des [Loop-Status mit dem AAPSClient](#RemoteControl_aapsclient).<br>Beachte: Muss mit der Einstellung [NSClient > Synchronisation > Empfangen von Betriebsmodus-Ereignissen](#Preferences-nsclient-synchronization)
+* [Neue CGMs](../Getting-Started/CompatiblesCgms.md) : Glunovo, Intelligo, Sinocare
+* Unterstützung von [Setzstellen-Wechseln](#Aapsscreens-site-rotation) @Philoul
+* Neue [Automatisierungsaktion](#automations-automation-action) : SMBs aktivieren oder deaktivieren @MilosKozak
+* Syai CGM ist eine [vertrauenswürdige Quelle](#GettingStarted-TrustedBGSource) und unterstützt erweitertes Filtern @MilosKozak
 
-**Wear OS Improvements**
+**Wear OS Verbesserungen**
 
-* dramatically reduced battery usage @MilosKozak
-* UI improvements and fixes @olorinmaia
-* almost complete rewritten code to match current level of libs (WearOS 2 previously) @MilosKozak
-* 2 new complications for extended data @Philoul
-* Migrated to modern complication provider with DataStore @MilosKozak
+* Akkuverbrauch drastisch reduziert @MilosKozak
+* UI-Verbesserungen und -Korrekturen @olorinmaia
+* Code fast vollständig neu geschrieben, um dem aktuellen Stand der Bibliotheken (zuvor WearOS 2) zu entsprechen @MilosKozak
+* 2 neue Komplikationen für erweiterte Daten @Philoul
+* Umstellung auf modernen Komplikationsanbieter mit DataStore @MilosKozak
 
-**Memory Leak Fixes**
+**Behebung von Speicherlecks**
 
-* Fixed memory leaks in code @MilosKozak
-* Added LeakCanary memory leak reporting to Firebase Crashlytics @MilosKozak
+* Speicherlecks im Code behoben @MilosKozak
+* LeakCanary-Speicherleckberichte zu Firebase Crashlytics hinzugefügt @MilosKozak
 
-**Pump Driver Improvements**
+**Verbesserungen in der Pumpenunterstützung**
 
-* **DanaI**: fixed disconnection issues @MilosKozak
-* **RileyLink**: Speedup communication by minimizing delays @mifi100
-* **Medtrum**: Added patch activation time and age display @vanelsberg, password uppercase fix @MilosKozak
-* **Combo**: Fixed Test race conditions @MilosKozak @dv1
-* **Equil**: Optimized connectivity, reduced battery usage @MilosKozak
+* **DanaI**: Verbindungsabbrüche behoben @MilosKozak
+* **RileyLink**: Schnellere Kommunikation durch Minimierung der Verzögerungen @mifi100
+* **Medtrum**: Patch-Aktivierungszeit und Alter hinzugefügt @vanelsberg, Passwort-Großbuchstaben behoben @MilosKozak
+* **Combo**: Test Race Bedingungen korrigiert @MilosKozak @dv1
+* **Equil**: Optimierte Konnektivität, reduzierter Akkuverbrauch @MilosKozak
 
 **Nightscout Sync**
 
-* Improved deduplication on NS failure @MilosKozak
+* Verbesserte Deduplizierung bei NS-Ausfall @MilosKozak
 
-**UI/UX Improvements**
+**UI/UX Verbesserungen**
 
 * Verschiedene Verbesserungen @MilosKozak @Philoul @olorinmaia
 
 **Automatisierung**
 
-* New SMB control action - enable/disable SMB via automation @MilosKozak
+* Neue SMB-Steuerungsaktion – SMB über Automatisierung aktivieren/deaktivieren @MilosKozak
 
-**Testing**
+**Testen**
 
-* Added comprehensive unit tests for Equil, Eopatch, Dana, and Medtronic pumps @MilosKozak
-* Improved test stability and coverage across multiple modules @MilosKozak
+* Umfassende Komponententests für Equil-, Eopatch-, Dana- und Medtronic-Pumpen hinzugefügt @MilosKozak
+* Verbesserte Teststabilität und Abdeckung über mehrere Module hinweg @MilosKozak
 
 **Tidepool**
 
-* Tidepool OAUTH2 (Support for new Tidepool authentication) @MilosKozak
+* Tidepool OAUTH2 (Support für neue Tidepool-Authentifizierung) @MilosKozak
 
 ---
 
@@ -363,189 +363,189 @@ Erscheinungsdatum: 27.03.2025
    - Neue Version verfügbar (hat keine Auswirkung auf AAPS)
    - Anwendung läuft bald ab (noch keine Auswirkung auf AAPS) / ist abgelaufen (AAPS wird in den LGS-Modus umgestellt)
 
-**News**
+**Neues**
 
-* SMS RESTART command @MilosKozak
-* Watch Profile switch parameters @olorinmaia
-* Dark mode AAPS V2 watchface @olorinmaia
-* G7 data exchange improvements @olorinmaia
-* Widget configuration @MilosKozak
-* Radiobuttons UI improvements @olorinmaia
-* Automation: position choosing from map @MilosKozak
-* Version visible on main screens @MilosKozak
+* SMS RESTART Befehl @MilosKozak
+* Smartwatch Profilwechsel-Parameter @olorinmaia
+* Dark Mode AAPS V2 Zifferblatt @olorinmaia
+* Verbesserung des G7-Datenaustauschs @olorinmaia
+* Widget-Konfiguration @MilosKozak
+* Radiobuttons UI verbessert @olorinmaia
+* Automatisierung: Position aus der Karte auswählen @MilosKozak
+* Version auf der Übersicht sichtbar @MilosKozak
 * Das Erstellen mit einem vorhandenen git-System ist Pflicht (keine ZIP-Downloads)
-* Show version on main screen @MilosKozak
-* Tidepool upload improvements @ConstantinMatheis
+* Version auf der Übersicht anzeigen @MilosKozak
+* Tidepool-Upload verbessert @ConstantinMatheis
 
-**Bug fixes**
+**Behobene Fehler**
 
-* Dash unbonding fix @Andreas
-* Garmin fixes @robertbuessow @suside
-* Fix of IOB displaying in dialogs @olorinmaia
-* Objectives spelling and validation improvements @MilosKozak
-* Fixed rendering of emulated TBRs @MilosKozak
-* Fixed bypassing security @tdrkDev
+* Dash: Problem mit Entkoppelung behoben @Andreas
+* Garmin: Probleme behoben @robertbuessow @suside
+* IOB-Anzeige in Dialogen korrigiert @olorinmaia
+* Verbesserung der Rechtschreibung und der Validierungsprozesse in den Zielen (Objectives) @MilosKozak
+* Rendern der emulierten TBRs verbessert @MilosKozak
+* Umgehen der Sicherheitsmechanismen korrigiert @tdrkDev
 
 ---
 
 **Version 3.3.1.3**
 
-Release date: 21-01-2025
+Erscheinungsdatum: 21.01.2025
 
-**Bug fixes**
+**Behobene Fehler**
 
-* Dash: bonding is optional (default off) @MilosKozak
+* Dash: Bonding ist optional (standardmäßig ausgeschaltet) @MilosKozak
 * Equil: Bolus ab 10 IE korrigiert, Verbesserungen bei Alarmen @EquilHack
-* Garmin: watch improvements @swissalpine
-* Watch improvements @olorinmaia
-* Control loop status from watch @tdrkDev
-* Stability improvements
+* Garmin: Smartwatch-Verbesserungen @swissalpine
+* Smartwatch-Verbesserungen @olorinmaia
+* Loop-Status von der Smartwatch steuern @tdrkDev
+* Stabilitätsverbesserungen
 
-*  **New [setup of Authenticator](#sms-commands-authenticator-setup) may be needed.**
+*  **[Authenticator muss möglicherweise neu eingerichtet werden](#sms-commands-authenticator-setup).**
 
 ---
 
 **Version 3.3.1.2**
 
-Release date: 15-01-2025
+Erscheinungsdatum: 15.01.2025
 
 **So wird aktualisiert**
 
-* [Android Studio version called "Ladybug Feature Drop"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. **This is not the same as plain "Ladybug".** If you already built a 3.3.x version, you need to upgrade Android Studio again.
+* Um diese Version zu erstellen, benötigst Du die [Android Studio Version „Ladybug Feature Drop“](#Building-APK-recommended-specification-of-computer-for-building-apk-file) oder höher. **Dies ist eine andere Version als die Standardversion „Ladybug“.** Wenn Du schon eine AAPS 3.3.x-Version erstellt hast, musst Du Android Studio erneut aktualisieren.
 
-**Bug fixes**
+**Behobene Fehler**
 
-* Dash: use bonding on Android 15+
-* Restored Dexcom button on Overview
-* Equil: allowed remove non working pump
-* Warn when DynISF Adjustment Factor is zero
-* NSCv3: resolve websocket communication on phones with slightly different time
-* SMS Commands: fix OneTimePassword. **New [setup of Authenticator](#sms-commands-authenticator-setup) may be needed.**
-* Fix issue where some preferences could not be edited anymore.
-* Fix reset of master password with virtual pump.
-* Fixed import of large settings backup files.
+* Dash: „Bonding“ in Android 15+ verwenden
+* Dexcom-Button in der Übersicht wieder verfügbar gemacht
+* Equil: Löschen einer defekten Pumpe ermöglicht
+* Warnung, wenn der DynISF-Anpassungsfaktor Null ist, hinzugfefügt
+* NSCv3: Websocket-Kommunikation auf Smartphones mit leicht unterschiedlichen Zeiten behoben
+* SMS-Befehle: OneTimePassword behoben. **[Neueinrichtung des Authentifikators](#sms-commands-authenticator-setup) kann erforderlich sein.**
+* Fehler, bei dem einige Einstellungen nicht mehr bearbeitet werden konnten, behoben.
+* Zurücksetzen des Master-Passworts bei virtueller Pumpe behoben.
+* Import von großen Sicherungsdateien der Einstellungen.
 
 ---
 
 **Version 3.3.1.0**
 
-Release date: 06-01-2025
+Erscheinungsdatum: 06.01.2025
 
-**UI changes**
+**UI-Änderungen (Benutzeroberfläche)**
 
-* [Added colors to differentiate between AAPSClient and AAPSClient2](#RemoteControl_aapsclient) @MilosKozak
-* Improved Users actions layout and icons
+* [Farben zur Unterscheidung von AAPSClient und AAPSClient2](#RemoteControl_aapsclient) hinzugefügt @MilosKozak
+* Layout für Benutzerinteraktionen und Icons verbessert
 
-**Other functionalities**
+**Sonstige Funktionen**
 
-* New automation trigger : [steps count](#screen-heart-rate-steps) @Roman Rihter
-* Allow to receive everything on NSCv3 full sync (including data previously not synced such as TBR) @MilosKozak
-* NSClient v3 : make Announcement work (_i.e._ from AAPSClient to AAPS) @MilosKozak
+* Neuer Automatisierungsauslöser: [Schrittanzahl](#screen-heart-rate-steps) @Roman Rihter
+* NSCv3 Vollsynchronisation (einschließlich bisher nicht synchronisierter Daten wie TBR) ermöglicht @MilosKozak
+* NSClient v3 : Fehler bei „Ankündigungen“ behoben (_d. h._ vom AAPSClient zu AAPS) @MilosKozak
 
-**Technical changes & bug fixes**
+**Technische Änderungen & Fehlerkorrekturen**
 
-* Fix Insight crash @philoul
-* Fix creation of extra-numerous deviceStatus entries in Nightscout @MilosKozak
-* Fix carbs absorption @MilosKozak
-* Fixed color of RadioButtons & CheckBoxes @MilosKozak
-* Fixed bug in DynISF percentage migration @MilosKozak
-* Resolved misplaced DynISF notification @MilosKozak
-* Fixed bug in watchfaces @philoul
+* Insight-Abstürze behoben @philoul
+* Erstellen überzähliger deviceStatus-Einträge in Nightscout behoben @MilosKozak
+* Kohlenhydrat-Absorbtion korrigiert @MilosKozak
+* Farbe von Radio-Buttons & Check-Boxen korrigiert @MilosKozak
+* Fehler in der Migration des DynISF-Prozentsatzes behoben @MilosKozak
+* Position der DynISF-Benachrichtigung korrigiert @MilosKozak
+* Fehler in den Zifferblättern behoben @philoul
 
 ---
 
 **Version 3.3.0.0**
 
-Release date: 29-12-2024
+Erscheinungsdatum: 29.12.2024
 
-**Main features**
+**Wesentliche Funktionalitäten**
 
-* **[Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md)** feature is no more a dedicated plugin, but is now included as an option of [OpenAPS SMB](#Config-Builder-aps) plugin, along with some changes in its behavior:
-  * **Profile Switch** and **Profile Percentage** is now taken into account for **Dynamic ISF** in respect of dynamic sensitivity strengthness
-  * The average **ISF** of the last 24h is calculated and this value is used for bolus wizard and **COB** calculation. **Profile ISF** value is not used at all (except fallback when history data is not available)
-  * DynamicISF documentation page has been rewritten. Please read the important section [Things to consider when activating Dynamic ISF](#dyn-isf-things-to-consider-when-activating-dynamicisf).
-* [Enable “SMB always” and “SMB after carbs”](#Open-APS-features-enable-smb-always) for FreeStyle Libre 2 and Libre 3 users
-  * Note : Requires latest version of xDrip+ or Juggluco.
-* New **Automation** triggers
-* Unattended settings exports
+* Die Funktion **[Dynamischer ISF](../DailyLifeWithAaps/DynamicISF.md)** ist nun kein eigenes Modul mehr, sondern gehört jetzt als Option zum Modul [OpenAPS SMB](#Config-Builder-aps). Gleichzeitig wurde das Verhalten in einigen Punkten angepasst:
+  * **Profilwechsel** und **Profil-Prozentsatz** wird nun für die Stärke der dynamischen Empfindlichkeit des **dynamischen ISF** berücksichtigt
+  * Der durchschnittliche **ISF** der letzten 24h wird berechnet. Dieser Wert wird für die Berechnungen im Bolus-Rechner und auch bei der **COB**-Ermittlung genutzt. Der **ISF-Profilwert** wird nicht verwendet (außer im Fallback-Fall, wenn die historischen Daten nicht verfügbar sind)
+  * Die Dokumentationsseite zum dynamischen ISF wurde vollständig überarbeitet. Bitte lies den wichtigen Abschnitt [Dinge, die bei der Aktivierung des dynamischen ISF zu beachten sind](#dyn-isf-things-to-consider-when-activating-dynamicisf).
+* [„SMB immer aktivieren“ und „Aktiviere SMB während aktiver Kohlenhydrate“](#Open-APS-features-enable-smb-always) werden für Nutzende des FreeStyle Libre 2 und Libre 3 aktiviert
+  * Hinweis: Dafür wird die neueste Version von xDrip+ oder Juggluco benötigt.
+* Neue **Automatisierungs**-Auslöser
+* Export der Einstellungen im Hintergrund (unattended export)
 
 **So wird aktualisiert**
 
-* Before upgrading:
-  * **<span style="color:red">This version requires Google Android 11.0 or above</span>**. Check your phone version before attempting to update.
-  * If you use the “old” Combo driver with ruffy device, migrate to the [native Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) before update
-  * You will lose your [additional graphs](#AapsScreens-section-g-additional-graphs) on the HomeScreen during upgrade: make a manual note of your current configuration if needed, so that you can recreate them after upgrade.
-  * The [Bluetooth connectivity issues some people encounter on Android 15](../Getting-Started/Phones.md) are **NOT** solved by this release (this is an Android issue, not **AAPS**). A fix is available in 3.3.1.2.
-  * The BYODA button on the homescreen is no longer available due to Android limitations. This is fixed in 3.3.1.2.
-* Update instructions: follow the [Update to a new version](../Maintenance/UpdateToNewVersion.md) guide.
-  * [Android Studio version called "Ladybug"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already have an older version of Android Studio installed, you may need to <span style="color:red">configure the JVM version to 21</span>. See [Troubleshooting Android Studio > Incompatible Gradle JVM](#incompatible-gradle-jvm).
-  * Tip - if you do not want to lose your **AAPS** history ALWAYS do an UPDATE and NOT an UNINSTALL/INSTALL. As a precaution, back up your current **AAPS** settings and old APK to revert to an old version should anything go wrong.
-* After upgrading:
-  * Set the new [“AAPS directory” setting](#preferences-maintenance-logdirectory), in the Maintenance tab.
+* Vor dem Aktualisieren:
+  * **<span style="color:red">Diese Version benötigt Google Android 11.0 oder höher</span>**. Prüfe vor der Aktualisierung die Smartphone-Version.
+  * Wenn Du die "alte" Combo-Unterstützung mit einem Ruffy als Zusatzgerät nutzt, stelle bitte vor Aktualisierung auf die [native Combo-Unterstützung](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) um
+  * Während des Upgrades verlierst Du auf der Übersicht Deine [zusätzlichen Diagramme](#AapsScreens-section-g-additional-graphs): Wenn erforderlich, notiere Dir Deine aktuelle Konfiguration, so dass Du sie nach dem Upgrade wiederherstellen kannst.
+  * Die [Bluetooth-Verbindungsprobleme, auf die einige Leute bei Android 15](../Getting-Started/Phones.md) stoßen, sind **NICHT** durch diese Version gelöst (dies ist ein Android-Problem und kein **AAPS**-Problem). Der Fehler ist in 3.3.1.2 behoben.
+  * Die BYODA-Schaltfläche auf dem Startbildschirm ist aufgrund von Android-Einschränkungen nicht mehr verfügbar. Der Fehler ist in Version 3.3.1.2 behoben.
+* Update-Anweisungen: Folge den Schritten der Anleitung [Update auf eine neue Version](../Maintenance/UpdateToNewVersion.md).
+  * Um diese Version zu erstellen, benötigst Du die [Android Studio Version "Ladybug"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) oder höher. Solltest Du bereits eine ältere Version des Android Studios installiert haben, musst Du <span style="color:red">die JVM-Version auf Version 21 bringen</span>. Siehe [Fehlerbehebung für Android Studio > Inkompatibles Gradle JVM](#incompatible-gradle-jvm).
+  * Tipp - wenn Du Deinen **AAPS**-Verlauf (engl. history) nicht verlieren möchtest, mache ein UPDATE und KEINE DEINSTALLATION/NEUINSTALLATION. Als Vorsichtmaßnahme sichere Deine aktuellen **AAPS**-Einstellungen und die alte APK, um - falls etwas schiefgehen sollte - zu einer alten Version zurückkehren zu können.
+* Nach dem Aktualisieren:
+  * Definiere die neue Einstellung für das [“AAPS Verzeichnis”](#preferences-maintenance-logdirectory). Du findest sie auf dem Wartungs-Reiter.
 
-**Detailed changes**
+**Die Änderungen im Detail**
 
-**CGMs and Pumps**
+**CGMs und Pumpen**
 
-* [Enable “SMB always” and “SMB after carbs”](#Open-APS-features-enable-smb-always) for FreeStyle Libre 2 and Libre 3 users @MilosKozak
-* [Medtrum driver](../CompatiblePumps/MedtrumNano.md) improvements @jbr77rr
-  * Communication improvements, including new setting to workaround problems on some smartphones
-  * Show reservoir level at start of activation
-  * Fix bug where activation returns to start and user cannot finish the activation
-  * Feedback for sync status and other clarifications
-* New supported pump : [Equil 5.3](../CompatiblePumps/Equil5.3.md) @EquilHack
-* New supported CGMs : [Ottai](../CompatibleCgms/OttaiM8.md) @ottai-developer and [Syai Tag](../CompatibleCgms/SyaiTagX1.md) @syai-dev
-* Insight driver rewritten to kotlin @Philoul
-* Removed old ruffy dependent Combo driver
+* ["SMB immer aktivieren" und "Aktiviere SMB während aktiver Kohlenhydrate"](#Open-APS-features-enable-smb-always) für FreeStyle Libre 2 und Libre 3 Nutzende @MilosKozak
+* Verbesserte [Medtrum-Unterstützung](../CompatiblePumps/MedtrumNano.md) @jbr77rr
+  * Verbesserungen der Kommunikation, einschließlich neuer Einstellungen zur Problemumgehung auf einigen Smartphones
+  * Reservoir-Level beim Start der Aktivierung anzeigen
+  * Fehler behoben, bei dem die Aktivierung erneut startet und der Nutzende die Aktivierung nicht abschließen kann
+  * Rückmeldung zum Sync-Status und andere Klarstellungen
+* Neu unterstützte Pumpe: [Equil 5.3](../CompatiblePumps/Equil5.3.md) @EquilHack
+* Neu unterstütztes CGM: [Ottai](../CompatibleCgms/OttaiM8.md) @ottai-developer und [Syai Tag](../CompatibleCgms/SyaiTagX1.md) @syai-dev
+* Insight-Unterstützung auf Kotlin umgeschrieben @Philoul
+* Alte, von ruffy abhängige, Combo-Unterstützung entfernt
 
-**UI changes**
+**UI-Änderungen (Benutzeroberfläche)**
 
-* [Simple mode](#preferences-simple-mode) activated by default on fresh install @MilosKozak
-* New [QuickWizard](#Preferences-quick-wizard) options @radicalb
-  * The QuickWizard now uses the same logic for bolus calculation and display as the calculator. You can now use the “carb time” field in QuickWizard  to pre-bolus.
-* New [graph scale menu](#aaps-screens-main-graph); [additional graphs menu](#AapsScreens-activate-optional-information) UI improvements @Philoul
-* [ConfigBuilder layout improvement](../SettingUpAaps/ConfigBuilder.md) @MilosKozak
-  * Sections are now collapsed by default. Use arrow to expand.
-* Variable sensitivity visible in AAPSClient
-* BolusWizard UI improvements @kenzo44
-* Fix text display in pump tabs when using light theme @jbr77rr
+* [Einfacher Modus](#preferences-simple-mode) standardmäßig bei Neuinstallation aktiviert @MilosKozak
+* Neue [Quick Wizard](#Preferences-quick-wizard)-Optionen @radicalb
+  * Der Quick Wizard verwendet nun die gleiche Logik zur Bolus-Berechnung und -Anzeige wie der Bolus-Rechner. Für einen Vorab-Bolus kannst Du jetzt das Feld “KH-Zeit” im  Quick Wizard nutzen.
+* Neues [Diagramm-Skalen-Menü](#aaps-screens-main-graph); [zusätzliches Diagramm-Menü](#AapsScreens-activate-optional-information) UI-Verbesserungen @Philoul
+* [Layoutverbesserungen in der Konfiguration](../SettingUpAaps/ConfigBuilder.md) @MilosKozak
+  * Abschnitte sind nun standardmäßig eingeklappt. Pfeil zum Aufklappen verwenden.
+* Variable Sensitivität im AAPS-Client sichtbar
+* UI-Verbesserungen im Bolus-Rechner @kenzo44
+* Fehlerbehebung der Textdarstellung in Pumpen-Tabs bei Verwendung des hellen Designs @jbr77rr
 
-**Other functionalities**
+**Sonstige Funktionen**
 
-* [Unattended settings exports](#ExportImportSettings-Automating-Settings-Export) @vanelsberg
-* New [Automation trigger](#automations-automation-triggers) @vanelsberg
-  * Pod Activation (patch pump only)
-* New [Automation triggers](#automations-automation-triggers) @jbr77rr
-  * Cannula age, Insulin age, Battery age, Sensor age, Reservoir level, Pump battery level
-* Allowing negative carbs entry @MilosKozak
-* New Parameter [“AAPS directory”](#preferences-maintenance-settings) to choose a storage directory different from the default one.
-* Allow for [insulin records when pump suspended](#aaps-screens-buttons-insulin) @jbr77rr
-* Updated [Objective 2](#objectives-objective2) @MilosKozak
-  * Check that master password is set and known
-* Random carbs in test mode @MilosKozak
-* Fixed bug in TDD calculation @MilosKozak
-* SMS Commands : allow to [**not** send SMS for profile change](#sms-commands-too-many-messages) coming from NS @MilosKozak
+* [Automatischer Export der Einstellungen](#ExportImportSettings-Automating-Settings-Export) @vanelsberg
+* Neuer [Automatisierungs](#automations-automation-triggers)-Auslöser @vanelsberg
+  * Pod-Aktivierung (nur Patchpumpen)
+* Neue [Automatisierungs](#automations-automation-triggers)-Auslöser @jbr77rr
+  * Kanülenalter, Insulinalter, Batteriealter, Sensoralter, Reservoir-Level, Pumpen-Batteriestand
+* Eingabe negativer Kohlenhydrate zulassen @MilosKozak
+* Neuer Parameter [“AAPS Verzeichnis”](#preferences-maintenance-settings), um ein anderes Speicherverzeichnis als das Standardverzeichnis auszuwählen.
+* [Protokollierung von Insulingaben bei getrennter Pumpe](#aaps-screens-buttons-insulin) zulassen @jbr77rr
+* [Ziel 2](#objectives-objective2) aktualisiert @MilosKozak
+  * Überprüfe, ob AAPS Master-Passwort gesetzt und bekannt ist
+* Zufalls-Kohlenhydrate im Test-Modus @MilosKozak
+* Fehler in der TDD-Berechnung behoben @MilosKozak
+* SMS-Befehle: Erlaubt es, [**keine** SMS bei Profilwechseln durch NS zu senden](#sms-commands-too-many-messages) @MilosKozak
 
 **Smartwatches**
 
-* wear and watchfaces improvement @Philoul @MilosKozak @olorinmaia
-* Watch tiles from Automation actions @Philoul
-* Combined watchfaces from AAPS, AAPSClient and AAPSClient2 to monitor more patients @Philoul @MilosKozak
+* Verbesserungen für Wear und Watchfaces @Philoul @MilosKozak @olorinmaia
+* Smartwatch-Kacheln für Automations-Aktionen @Philoul
+* Kombiniertes Zifferblatt aus AAPS, AAPSClient und AAPSClient2 zur Überwachung weiterer Patienten @Philoul @MilosKozak
 * EXTRA: show\_user\_actions\_on\_watch\_only @MilosKozak
 
-**Technical changes**
+**Technische Änderungen**
 
-* [log files location change](#Accessing-logfiles-accessing-logfiles)
-* new internal modules structure @MilosKozak
-* split persistence layer from main code @MilosKozak
-* build files rewritten to kts @MilosKozak
-* algorithms rewritten to kotlin for better performance @MilosKozak
-* tons of new unit tests @MilosKozak and others
-* more code converted to kotlin @MilosKozak
-* new preferences management, xml \-\> kotlin @MilosKozak
-* new CI configuration, run CI on own servers @MilosKozak
-* libraries updated to latest version, toml @MilosKozak
-* migration to kotlin 2.0, java 21 @MilosKozak
+* [Speicherort der Protokolldateien geändert](#Accessing-logfiles-accessing-logfiles)
+* Neue interne Modulstruktur @MilosKozak
+* Persistenz-Ebene vom Hauptcode getrennt @MilosKozak
+* Build-Dateien auf kts umgescrieben @MilosKozak
+* Algorithmen zur Performanceverbesserung auf Kotlin umgeschrieben @MilosKozak
+* Tonnen neuer Unit Tests @MilosKozak and others
+* Mehr Code auf Kotlin gebracht @MilosKozak
+* Neues Management der Einstellungen, XML \-\> Kotlin @MilosKozak
+* Neue CI-Konfiguration, CI auf eigenen Servern laufen lassen @MilosKozak
+* Bibliotheken auf die neueste Version aktualisiert, toml @MilosKozak
+* Migration auf Kotlin 2.0, Java 21 @MilosKozak
 
 ---
 
@@ -568,78 +568,78 @@ Diese Version ist die letzte, die Android 10 unterstützt. Wenn Du nicht auf And
 
 (version3200)=
 
-**Version 3.2.0.0 dedicated to @Philoul**
+**Version 3.2.0.0 ist @Philoul gewidmet**
 
-Release date: 23-10-2023
+Erscheinungsdatum: 23.10.2023
 
-**Important hints**
+**Wichtige Hinweise**
 
-- NS 15 is required
-- While using websockets in NS v3 plugin treatments entered through NS UI (plus button) and other applications using v1 API are not sent to AAPS. This will be fixed in future release of NS. Always use the same client (v1 or v3) in AAPS and AAPSClient until NS fully switch to v3 internally. The same is valid for AAPS and AAPSClient itself.
-- Websockets in v3 plugin work in a similar manner as v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the opposite side it means delays in exchanging data. Please read [here](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
-- If you are using xdrip as cgm source you must select it again after update due to internal changes
-- Tidepool can be used as a replacement of NS to pass first objective
-- If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip, “xDrip+ Sync Follower” must be selected as source
-- If you want to switch to ComboV2 driver, Ruffy must be uninstalled and pump paired again to AAPS
-- In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
+- Nightscout Version 15 ist zwingend erforderlich
+- Wenn Websockets in NS v3 genutzt werden, werden Behandlungen, die über die NS Oberfläche (Plus-Button) oder andere Anwendungen, die die V1 API nutzen, eingegeben werden, nicht an AAPS gesendet. Dies wird in einer der kommenden NS-Versionen behoben werden. Verwende immer den gleichen Client (v1 oder v3) in AAPS und AAPSClient, bis NS intern auf v3 umgestellt ist. Das Gleiche gilt für AAPS und den AAPSClient selbst.
+- Websockets im v3-Modul funktionieren ähnlich wie im v1-Modul. Mit deaktivierten Websockets plant AAPS regelmäßige NS-Downloads ein. Da NS damit dann nicht mehr permanent verbunden ist, wird so der Stromverbrauch reduziert. Das bedeutet allerdings auch, dass Daten seltener ausgetauscht werden (Datenaktualität). Bitte lies [diese](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) wichtigen Kommentare des Entwicklerteams, bevor Du es nutzt!
+- Wenn xDrip als BZ-Quelle genutzt wird, muss diese nach dem Update noch einmal neu eingestellt werden (bedingt durch interne Anpassungen).
+- Um das erste Objective (Ziel) zu erreichen, kann anstelle von Nightscout nun auch Tidepool genutzt werden.
+- Wenn Daten an xDrip+ gesendet werden sollen, muss das Modul xDrip+-Synchronisierung konfiguriert werden. Um Glukosewerte von AAPS in xDrip zu erhalten, muss "xDrip+ Sync Follower" als Quelle ausgewählt sein
+- Wenn auf den ComboV2-Treiber gewechselt werden soll, muss Ruffy deinstalliert und die Pumpe erneut mit AAPS gekoppelt werden.
+- Um die Funktion "dynamischer ISF" nutzen zu können, muss das Ziel 11 gestartet worden sein. Zum Starten des Ziels 11 müssen die Ziele 1-10 abgeschlossen bzw. erreicht sein.
 
 **Änderungen**
 
-- EOPatch2 / GlucomenDay pump driver @jungsomyeonggithub @MilosKozak
-- ComboV2 pump driver (no need of Ruffy) @dv1
-- Medtrum Nano driver @jbr7rr
-- Korean DanaI support @MilosKozak
+- Pumpentreiber EOPatch2 / GlucomenDay @jungsomyeonggithub @MilosKozak
+- ComboV2 Pumpentreiber (Ruffy nicht mehr benötigt) @dv1
+- Medtrum Nano Unterstützung @jbr7rr
+- Unterstützung für Dana-i @MilosKozak
 - Glunovo CGM support @christinadamianou
-- G7 support @MilosKozak @rICTx-T1D @khskekec
+- G7-Unterstützung @MilosKozak @rICTx-T1D @khskekec
 - NSClient v3 plugin @MilosKozak
-- Tidepool support @MilosKozak
-- Smoothing plugin @MilosKozak, @justmara, Exponential smoothing @nichi (Tsunami), Average smoothing @jbr7rr
-- DynamicISF plugin @Chris Wilson, @tim2000s
-- Garmin watchface & HeartRate support @buessow
-- New logo @thiagomsoares
-- New watchface @Philoul
-- fixed tons of issues from 3.1 version
-- allow add notes on more places @Sergey Zorchenko
-- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
-- new SMS commands LOOP LGS/CLOSED @pzadroga
-- wear translations @Andries-Smit
-- xdrip communication moved to separate module @MilosKozak
-- internal changes: updated libs versions, rx3 migration, new modules structure @MilosKozak
-- Diaconn driver fixes @miyeongkim
-- more database maintenance options @MilosKozak
-- AAPSClient provides info if main phone is plugged in electricity @MilosKozak
-- Change in BolusWizard. If CGM is not available percentage is ignored (ie 100% is used)
-- migration to kts build system @MilosKozak
-- improved CI integration @MilosKozak @buessow
-- tests cleanup @ryanhaining @MilosKozak
-- new 110k+ lines of code, changed 240k lines, 6884 changed files
+- Unterstützung für Tidepool @MilosKozak
+- Glättungs-Modul @MilosKozak, @justmara, Exponentielle Glättung @nichi (Tsunami), Durchschnittliche Glättung @jbr7rr
+- Funktion "Dynamischer ISF" hinzugefügt @Chris Wilson, @tim2000s
+- Garmin Zifferblatt & Herzfrequenz-Unterstützung @buessow
+- Neues Logo @thiagomsoares
+- Neues Zifferblatt (Watchface) @Philoul
+- Tonnenweise Version 3.1-Probleme gelöst
+- Notizen an mehr Stellen zugelassen @Sergey Zorchenko
+- Fehler in der Benutzeroberfläche behoben @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
+- Neue SMS-Befehle LOOP LGS/CLOSED @pzadroga
+- Übersetzungen für Wear @Andries-Smit
+- xDrip-Kommunikation in eigenes Modul ausgelagert @MilosKozak
+- Interne Änderungen: aktualisierte Bibliotheken-Versionen, rx3-Migration, neue Modulstrukturen @MilosKozak
+- Diaconn-Treiber korrigiert @miyeongkim
+- Weitere Optionen zur Datenbank-Pflege @MilosKozak
+- AAPSClient liefert Info, ob das Loop-Smartphone geladen wird @MilosKozak
+- Änderung im Bolus-Rechner: Wenn CGM-Daten fehlen, wird der Prozentsatz ignoriert (d.h. 100% wird genutzt)
+- Umstellung auf das KTS Build System @MilosKozak
+- Verbesserung der CI-Integration @MilosKozak @buessow
+- Bereinigung der Tests @ryanhaining @MilosKozak
+- Mehr als 110.000 neue Codezeilen, 240.000 Zeilen geändert, 6.884 Dateien angepasst
 
 (Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)= **Wichtige Hinweise zur Verwendung der v3- statt der v1-API für Nightscout mit AAPS**
 
-v1 is the old protocol used for exchanging data between NS web site and NS server. It has many limitations
-- v1 sends only 2 days of data
-- v1 send all 2 days data on every reconnection
+v1 ist das alte, für den Datenaustausch zwischen NS-Website und NS-Server verwendete, Protokoll. Es hat viele Beschränkungen
+- v1 sendet nur Daten für 2 Tage
+- v1 sendet bei jedem Reconnect alle Daten der zwei Tage erneut
 - Websockets sind Pflicht = dauerhafte Verbindung, höherer Akkuverbrauch
-- during frequent disconnects to NS connection is paused for 15 minutes to prevent high data usage
+- Bei wiederholten Reconnects mit Nightscout wird die Verbindung für 15 Minuten pausiert, um eine erhöhte Datennutzung zu verhindern
 
-v3 is new protocol. More safe and efficient
-- while using tokens you can better define access rights
-- protocol is more efficient on both sides (AAPS & NS)
-- It can read up to 3 months of data from NS
+v3 ist das neue Protokoll. Es ist sicherer und effizienter
+- Mit Token lassen sich Zugriffsrechte besser definieren
+- Das Protokoll ist auf AAPS & NS-Seite Seite effizienter
+- Es kann Daten der letzten 3 Monate von NS auslesen
 - Du kannst auf jedem Gerät wählen, ob Websockets verwendet werden oder nicht (mit Websockets gibt es schnellere Aktualisierungen, ohne weniger Akkuverbrauch, aber langsamere Aktualisierungen, also im Minutenbereich)
-- NSClient is not paused on disconnections
+- Der NSClient wird bei Verbindungsabbrüchen nicht angehalten (pausiert)
 
-LIMITATIONS
-- NS 15 must be used with AAPS 3.2
-- v3 doesn't see updates done by v1 protocol (probably it will be resolved in some future version of NS)
+EINSCHRÄNKUNGEN
+- NS 15 muss mit AAPS 3.2 verwendet werden
+- V3 erkennt keine Updates, die durch das V1 Protokoll vorgenommen wurden. Das wird vermutlich in einer der kommenden Nightscout-Versionen behoben sein
 - Umgekehrt sieht v1 wegen der alten, ineffizienten Methode zum Nachverfolgen von Änderungen die Änderungen, die v3 vornimmt
-- remember NS still uses v1 internally so far thus is not possible to enter data through NS web UI if you are using v3. Wenn Du Daten aus der Ferne eingeben willst, musst Du AAPSClient oder SMS verwenden
+- Bitte habe im Kopf, dass Nighscout intern immer noch V1 nutzt, und es deswegen nicht möglich ist, Daten über die Nightscout-Weboberfläche einzugeben, sofern Du V3 verwendest. Wenn Du Daten aus der Ferne eingeben willst, musst Du AAPSClient oder SMS verwenden
 
-RECOMMENDED SETTING
-- because of all above you should choose only one method and use it on all devices (remember all other uploaders at time of writing this are using v1). If you decide to go to v3, select v3 in AAPS and all AAPSClients
-- v3 is preferred because of efficiency
-- using websockets or not using with v3 depends on your preference
-- it HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
+EMPFOHLENE EINSTELLUNGEN
+- Aus den oben beschriebenen Gründen solltest Du auf allen Deinen Geräten die gleiche Methode verwenden (Hinweis: zum Redaktionsschluss nutzen alle Uploader derzeit noch V1). Wenn Du Dich für V3 entscheidest, wähle in AAPS und allen AAPSClients V3
+- Aus Effizienzgründen wird V3 bevorzugt
+- Der Einsatz von Websockets mit V3 oder nicht ist Geschmackssache
+- Es wird DRINGEND empfohlen AAPS die Daten sammeln zu lassen und dann zentral als einziger Uploader an Nightscout übertragen lassen. Alle anderen Geräte und Anwendungen sollten Daten von Nightscout lediglich auslesen. Dadurch vermeidest Du Synchronisierungsfehler und -konflikte. Dies gilt auch für die Übermittlung der Glukosewerte an Nightscout mit dem Dexcom Share Connector o. ä. Tools
 
 ---
 
@@ -647,7 +647,7 @@ RECOMMENDED SETTING
 
 **Version 3.1.0**
 
-Release date: 19-07-2022
+Erscheinungsdatum: 19.07.2022
 
 [Release Notes](https://github.com/nightscout/AndroidAPS/releases/tag/3.1.0)
 
@@ -655,7 +655,7 @@ Release date: 19-07-2022
 
 **Version 3.0.0**
 
-Release date: 31-01-2022
+Erscheinungsdatum: 31.01.2022
 
 [Release Notes](https://github.com/nightscout/AndroidAPS/releases/tag/3.0.0)
 
@@ -665,9 +665,9 @@ Release date: 31-01-2022
 
 ## Version 2.8.2.1
 
-Release date: 05-10-2021
+Erscheinungsdatum: 05.10.2021
 
-This version is the last one supporting Android 8. [Versionshinweise](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1)
+Diese Version ist die letzte, die Android 8 unterstützt. [Versionshinweise](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1)
 
 ---
 
@@ -683,7 +683,7 @@ Erscheinungsdatum: 23.01.2021
 
 **Version 2.8.1.1**
 
-Release date: 12-01-2021
+Erscheinungsdatum: 12.01.2021
 
 [Release Notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.1.1)
 
@@ -693,7 +693,7 @@ Release date: 12-01-2021
 
 **Version 2.8.0**
 
-Release date: 01-01-2021
+Erscheinungsdatum: 01.01.2021
 
 [Release Notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.0)
 
@@ -703,7 +703,7 @@ Release date: 01-01-2021
 
 **Version 2.7.0**
 
-Release date: 24-09-2020
+Erscheinungsdatum: 24.09.2020
 
 [Release Notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.7.0)
 
@@ -713,7 +713,7 @@ Release date: 24-09-2020
 
 **Version 2.6.1.4**
 
-Release date: 04-05-2020
+Erscheinungsdatum: 04.05.2020
 
 [Release Notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2614)
 
@@ -721,7 +721,7 @@ Release date: 04-05-2020
 
 **Version 2.6.1.3**
 
-Release date: 03-05-2020
+Erscheinungsdatum: 03.05.2020
 
 [Release Notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2613)
 
@@ -729,7 +729,7 @@ Release date: 03-05-2020
 
 **Version 2.6.1.2**
 
-Release date: 19-04-2020
+Erscheinungsdatum: 19.04.2020
 
 [Release Notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2612)
 
@@ -737,7 +737,7 @@ Release date: 19-04-2020
 
 **Version 2.6.1.1**
 
-Release date: 06-04-2020
+Erscheinungsdatum: 06.04.2020
 
 [Release Notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2611)
 
@@ -745,7 +745,7 @@ Release date: 06-04-2020
 
 **Version 2.6.1**
 
-Release date: 21-03-2020
+Erscheinungsdatum: 21.03.2020
 
 [Release Notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-261)
 
@@ -755,7 +755,7 @@ Release date: 21-03-2020
 
 **Version 2.6.0**
 
-Release date: 29-02-2020
+Erscheinungsdatum: 29.02.2020
 
 [Release Notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-260)
 
@@ -763,7 +763,7 @@ Release date: 29-02-2020
 
 **Version 2.5.1**
 
-Release date: 31-10-2019
+Erscheinungsdatum: 31.10.2019
 
 [Release Notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-251)
 
@@ -773,7 +773,7 @@ Release date: 31-10-2019
 
 **Version 2.5.0**
 
-Release date: 26-10-2019
+Erscheinungsdatum: 26.10.2019
 
 [Release Notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-250)
 
@@ -781,7 +781,7 @@ Release date: 26-10-2019
 
 **Version 2.3**
 
-Release date: 25-04-2019
+Erscheinungsdatum: 25.04.2019
 
 [Release Notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-23)
 
@@ -789,7 +789,7 @@ Release date: 25-04-2019
 
 **Version 2.2.2**
 
-Release date: 07-04-2019
+Erscheinungsdatum: 07.04.2019
 
 [Release Notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-222)
 
@@ -797,7 +797,7 @@ Release date: 07-04-2019
 
 **Version 2.2**
 
-Release date: 29-03-2019
+Erscheinungsdatum: 29.03.2019
 
 [Release Notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-22)
 
@@ -805,7 +805,7 @@ Release date: 29-03-2019
 
 **Version 2.1**
 
-Release date: 03-03-2019
+Erscheinungsdatum: 03.03.2019
 
 [Release Notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-21)
 
@@ -813,7 +813,7 @@ Release date: 03-03-2019
 
 **Version 2.0**
 
-Release date: 03-11-2018
+Erscheinungsdatum: 03.11.2018
 
 [Release Notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-20)
 
