@@ -34,7 +34,7 @@ I [Boluskalkulatoren](#aaps-screens-bolus-wizard) lar tre knapper under **Karbo*
 
 **Eksempel**: du skriver inn 100 g og velger **Pizza**. Bolusen beregnes for 80 g, som registreres nå. 35 g eKarbo starter 1 time senere og fordeles over 3 timer.
 
-Good to know:
+Greit å vite:
 * Dette er ikke en enkel deling: med **Kake** og **Pizza** blir de registrerte karbohydratene til sammen **mer enn du skrev inn** (110 % og 115 %). Det ekstra ligger bare i eKarbo.
 * Bolusen dekker bare karbohydratene som tas nå. **AAPS** gir ikke bolus på forhånd for eKarbo: loopen tar hensyn til dem når de starter, som all annen [eKarbo](#Extended-Carbs-extended-carbs-ecarbs).
 * Hvis du setter en **Karbotid**, starter eKarbo 60 minutter etter det tidspunktet.
