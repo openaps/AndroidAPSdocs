@@ -23,7 +23,7 @@ Ak prekladáte prvýkrát, začnite prosím prekladom reťazcov aplikácie. Je t
 
 Prekladať dokumentáciu môžete začať súčasne alebo neskôr.
 
-Stav prekladov aplikácie a dokumentácie pre jednotlivé jazyky si môžete pozrieť [tu](#StateOfTranslations).
+You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
 
 * Ak chcete prekladať **aplikáciu** do iného jazyka (ďakujeme), prosím použite [crowdin](https://crowdin.com/project/androidaps).
 * Ak chcete prekladať **dokumentáciu** do iného jazyka (ďakujeme), prosím použite [crowdin](https://crowdin.com/project/androidapsdocs). 
