@@ -9,7 +9,7 @@ Unabhängig davon, welches CGM-System Du nutzt und egal, ob Du die offizielle Ap
 -   Vermeide die Kalibrierung, wenn der Glukoselevel steigt oder fällt.
 -   Kalibriere "ausreichend" oft. Die offiziellen Apps fordern Dich ein oder zwei Mal pro Tag zum blutigen Test auf. Bei DIY Systemen ist das evtl. nicht der Fall und Du solltest vorsichtig sein, ohne die empfohlenen Kalibrierungen zu arbeiten.
 -   Überprüfe Deinen echten Glukosewert mindestens einmal am Tag, wenn Du Sensoren nutzt, die keine Kalibrierung benötigen oder zulassen. AAPS ist nur so sicher, wie Deine Sensorwerte verlässlich sind.
--   If it all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
+-   If at all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
 
 ## Sensor setzen (Dexcom G6)
 
@@ -38,4 +38,4 @@ You might try to change settings for noise blocking in xDrip (Settings - Inter-A
 
 ![Sensor age on the Sensor row of the expanded status panel](../images/main/main_status_row_expanded.png)
 
-The sensor age is shown on the **Sensor** row of the status panel on the main screen (tap the chevron to expand it). A negative age occurs if there is either a double "CGM Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Open **Treatments history** (menu ☰), select the **Careportal** tab and delete the wrong entry.
+The sensor age is shown on the **Sensor** row of the status panel on the main screen (tap the chevron to expand it). A negative age occurs if there is either a double "Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Open **Treatments history** (menu ☰), select the **Careportal** tab and delete the wrong entry.
