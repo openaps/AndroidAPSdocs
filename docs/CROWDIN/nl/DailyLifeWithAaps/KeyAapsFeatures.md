@@ -125,7 +125,7 @@ Als de hoogste basaalstand in je profiel bijvoorbeeld 0,5 E/u is, kun je dat ver
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
-### Maximale totale IOB waar OpenAPS niet boven mag komen
+### Max IOB for SMB
 
 Deze waarde bepaalt de maximale **Insulin on Board** (IOB van basaal en bolus) waar **AAPS** onder blijft in de gesloten loop. Deze waarde wordt ook **maxIOB** genoemd.
 
@@ -229,7 +229,7 @@ Deze instelling is niet zichtbaar als "SMB altijd toestaan" aan staat.
 
 #### SMB interval
 
-Deze functie beperkt hoe vaak SMB's gegeven worden. Deze waarde bepaalt de minimale tijd tussen twee SMB's. Let op: de loop draait elke keer dat er een glucosewaarde binnenkomt (meestal elke 5 minuten). Trek er 2 minuten af, zodat de loop extra tijd heeft om klaar te zijn. Wil je bijvoorbeeld dat er bij elke loop-ronde een SMB gegeven kan worden, stel dit dan in op 3 minuten.
+Deze functie beperkt hoe vaak SMB's gegeven worden. Deze waarde bepaalt de minimale tijd tussen twee SMB's. Let op: de loop draait elke keer dat er een glucosewaarde binnenkomt (meestal elke 5 minuten). Subtract 2 minutes to give loop additional time to complete. Wil je bijvoorbeeld dat er bij elke loop-ronde een SMB gegeven kan worden, stel dit dan in op 3 minuten.
 
 Standaardwaarde: 3 min.
 
@@ -251,7 +251,7 @@ Met deze instelling kun je de sterkte van SMB aanpassen tijdens UAM, als er geen
 
 Standaardwaarde: hetzelfde als **Aantal minuten basale insuline waarop SMB’s worden begrensd**.
 
-Deze instelling is alleen zichtbaar als "SMB toestaan" en "Activeer UAM" aan staan.
+This setting is only visible if "Enable SMB" and "Enable UAM" are switched on.
 
 (enable-uam)=
 
@@ -277,7 +277,7 @@ De benodigde koolhydraten worden in elk geval getoond in het COB-gedeelte op je 
 
 Voor alle instellingen (ook die hier niet worden besproken), zie de [documentatie van OpenAPS over voorkeuren en veiligheidsinstellingen](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
 
-**Gebruik altijd korte gemiddelde delta** Als je deze functie aanzet, gebruikt **AAPS** de korte gemiddelde delta/bloedglucose van de laatste 15 minuten. Dat is meestal het gemiddelde van de laatste drie waarden. Zo werkt **AAPS** stabieler met gegevensbronnen met veel ruis, zoals xDrip en Libre.
+**Always use short average delta instead of simple delta** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. Zo werkt **AAPS** stabieler met gegevensbronnen met veel ruis, zoals xDrip en Libre.
 
 **Maximum op basis van profiel** Dit is een belangrijke veiligheidslimiet. De standaardinstelling (die je waarschijnlijk niet zult hoeven aanpassen) is 3. Dit betekent dat **AAPS** nooit een tijdelijke basaalstand mag instellen die hoger is dan 3x de hoogste basaalstand per uur in de pomp en/of het profiel van de gebruiker. Voorbeeld: als je hoogste basaalstand 1,0 E/u is en deze factor 3 is, dan kan **AAPS** een tijdelijke basaalstand van maximaal 3,0 E/u instellen (= 3 x 1,0 E/u).
 
@@ -308,7 +308,7 @@ Als je het hebt gekozen, bevatten de **Instellingen** de instellingen van OpenAP
   - als de glucose **boven het streefdoel** is, wordt de ISF sterker;
   - een factor voor **na de maaltijd** en een factor voor de **duur** werken na maaltijden en als de glucose lang hoog blijft.
 - **SMB-toedieningsratio** (met een minimum, een maximum en een BG-bereik): welk deel van de benodigde insuline als SMB gegeven mag worden.
-- **Overschrijdingsfactor maximaal SMB-bereik**: met welke factor de gewone grens voor de SMB-grootte ([maximaal aantal minuten basaal](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), normaal 120 minuten) overschreden mag worden. De standaardwaarde 1 verandert niets; tot 5 is mogelijk. Verhoog deze experimentele waarde langzaam en voorzichtig.
+- **SMB max range extension**: by what factor the usual SMB size limit ([max minutes of basal](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), 30 minutes by default) may be exceeded. De standaardwaarde 1 verandert niets; tot 5 is mogelijk. Verhoog deze experimentele waarde langzaam en voorzichtig.
 - **IOB drempelpercentage**: het percentage van de max IOB waarboven SMB's worden uitgeschakeld.
 
     {admonition} Alleen voor ervaren gebruikers
@@ -339,11 +339,11 @@ De vaste parameters in **AAPS** zijn:
 
 *Zie ook het [overzicht van harde limieten](#Open-APS-features-overview-of-hard-coded-limits).*
 
-### Maximale basale IOB die OpenAPS mag geven \[E\] (OpenAPS "max-iob")
+### Max IOB for AMA
 
-Deze instelling beperkt de maximale basale IOB waarbij **AAPS** nog werkt. Als de IOB hoger is, wordt er geen extra basale insuline meer gegeven totdat de waarde van basaal IOB weer onder de limiet ligt.
+This parameter limits the maximum of basal IOB where **AAPS** still works. Als de IOB hoger is, wordt er geen extra basale insuline meer gegeven totdat de waarde van basaal IOB weer onder de limiet ligt.
 
-De standaardwaarde is 2, maar verhoog deze instelling langzaam, zodat je ziet hoeveel effect het op je heeft en welke waarde het best past. Dat is voor iedereen anders en hangt ook af van jouw gemiddelde totale dagdosis (TDD). Om veiligheidsredenen is er ook hier een grens, die afhangt van de leeftijd van de patiënt. De 'harde limiet' voor max-IOB is lager bij AMA dan bij SMB.
+The default value is 2, but you should raise this parameter slowly to see how much it affects you and which value fits best. It is different for everyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age. De 'harde limiet' voor max-IOB is lager bij AMA dan bij SMB.
 
 - Kind: 3
 - Tiener: 5
@@ -366,7 +366,7 @@ Als deze optie aan staat, kan Autosens ook de streefdoelen aanpassen (naast basa
 - Normaal hoef je de instellingen in dit scherm niet te veranderen!
 - Wil je ze toch veranderen, zorg dan dat je begrijpt wat je doet. Zie alle instellingen in de [documentatie van OpenAPS over voorkeuren en veiligheidsinstellingen](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
 
-**Gebruik altijd korte gemiddelde delta** Als je deze functie aanzet, gebruikt **AAPS** de korte gemiddelde delta/bloedglucose van de laatste 15 minuten. Dat is meestal het gemiddelde van de laatste drie waarden. Zo werkt **AAPS** stabieler met gegevensbronnen met veel ruis, zoals xDrip en Libre.
+**Always use short average delta instead of simple delta** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. Zo werkt **AAPS** stabieler met gegevensbronnen met veel ruis, zoals xDrip en Libre.
 
 **Maximum op basis van profiel** Dit is een belangrijke veiligheidslimiet. De standaardinstelling (die je waarschijnlijk niet zult hoeven aanpassen) is 3. Dit betekent dat **AAPS** nooit een tijdelijke basaalstand mag instellen die hoger is dan 3x de hoogste basaalstand per uur in de pomp van de gebruiker. Voorbeeld: als je hoogste basaalstand 1,0 E/u is en deze factor 3 is, dan kan **AAPS** een tijdelijke basaalstand van maximaal 3,0 E/u instellen (= 3 x 1,0 E/u).
 
