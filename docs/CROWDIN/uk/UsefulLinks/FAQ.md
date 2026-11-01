@@ -175,7 +175,7 @@ AAPS керує вашою помпою та вводить інсулін. Зг
 
 Під час використання петлі спробуйте такі кроки:
 
-* Зробіть [перемикання профілю](#ProfileSwitch-change-percentage) < 100 %: торкніться назви профілю на головному екрані, торкніться круглої кнопки **▶**, потім встановіть **Відсоток** і **Тривалість**.
+* Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
 * Встановіть [тимчасову ціль „Активність“](#TempTargets-activity-temp-target) вище вашої стандартної цілі. Якщо відсоток менше 100 % і задано тривалість, той самий екран **Активувати** пропонує перемикач **Тимчасова ціль / Активність**, який запускає обидва одночасно.
 * Якщо ви використовуєте SMB, переконайтеся, що [«Увімкнути SMB з високою тимчасовою ціллю»](#Open-APS-features-enable-smb-with-high-temp-targets) і [«Увімкнути SMB завжди»](#Open-APS-features-enable-smb-always) вимкнені.
 
@@ -194,7 +194,7 @@ AAPS керує вашою помпою та вводить інсулін. Зг
 Вживання алкоголю в режимі закритої петлі ризиковане, бо алгоритм не може правильно передбачити вплив алкоголю на ГК. Вам потрібно знайти власний спосіб упоратися з цим, використовуючи такі функції AAPS:
 
 * Вимкнення режиму закритої петлі та лікування діабету вручну, або
-* встановлення високих тимчасових цілей і вимкнення UAM, щоб петля не збільшувала IOB через неоголошену їжу, або
+* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
 * зробіть [перемикання профілю](#ProfileSwitch-change-percentage) на значно менше ніж 100 % 
 
 Шаблон [сцени](#scenes) *Алкоголь* — це відправна точка, яку можна адаптувати під ваш власний спосіб.
@@ -363,9 +363,9 @@ AAPS керує вашою помпою та вводить інсулін. Зг
 
 #### Мій Link/помпа/Pod не відповідає (RL/OL/EmaLink…)
 
-На деяких телефонах Bluetooth-з’єднання з пристроями Link (RL/OL/EmaL...) розривається.
+With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
 
-Деякі також мають пристрої Link, які не відповідають (AAPS показує, що вони підключені, але Link не може зв’язатися з помпою чи керувати нею.)
+Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
 
 Спочатку спробуйте кнопку **Скинути RileyLink** на екрані помпи (див. сторінку вашої помпи: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). Якщо це не допомогло, найпростіший спосіб змусити всі ці частини працювати разом:
 
@@ -419,5 +419,5 @@ AAPS керує вашою помпою та вводить інсулін. Зг
 
 Спочатку прочитайте ці розділи:
 
-* [Експорт та імпорт налаштувань](#omnipod-dash-export-import) на сторінці Omnipod DASH і [Безтрубкові помпи](#ExportImportSettings-tubeless-pumps): на новому телефоні позначте **Також замінити налаштування помпи** і використайте файл, експортований під час носіння поточного Pod,
+* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
 * [Викидання Pod](#omnipod-dash-discard-pod), щоб потім видалити Pod зі старого телефона. Тримайте старий телефон у режимі польоту, доки Pod не буде викинуто, щоб два телефони ніколи не зв’язувалися з Pod одночасно.
