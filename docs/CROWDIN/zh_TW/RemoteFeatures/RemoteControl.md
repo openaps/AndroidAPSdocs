@@ -42,7 +42,7 @@
 
 **AAPSClient** 可以安裝在一部或多部追蹤者手機上（例如父母一的追蹤者手機和父母二的追蹤者手機），以便兩位照護者都能夠獲得權限並遠端控制患者的 **AAPS** 手機。
 
-若要下載 **AAPSClient**，前往 [Github 儲存庫](https://github.com/nightscout/AndroidAPS/releases/) 並點擊資產 **「app-AAPSClient-release_x.x.x.x」**（可能比下方截圖所示版本更新）：
+To download **AAPSClient**, navigate to the [GitHub repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
 
 ![圖像](../images/remote_control_and_following/AAPSClient_download_02.png)
 
@@ -56,7 +56,7 @@
 
 透過 USB 傳輸線傳輸到追蹤者手機；或拖放至 Google 雲端硬碟資料夾，然後透過點擊“app-AAPSClient-release”檔案將其安裝到追蹤者手機。
 
-如果你需要**AAPS**供自己使用，而需要**AAPSClient**來監控他人，則需要自行建置**AAPSClient**，而不是從上述GitHub儲存庫下載。原因是你無法在同一部手機上安裝**AAPS**和**AAPSClient**，因為它們是由不同的金鑰簽署的。 <br/> 要自行建置**AAPSClient**，請遵循[常見AAPS建置](../SettingUpAaps/BuildingAaps.md)的相同步驟。在**生成簽名的App Bundle或APK**頁面上，選擇**aapsclientRelease**，而不是**fullRelease**。
+Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the GitHub repository as described above. 原因是你無法在同一部手機上安裝**AAPS**和**AAPSClient**，因為它們是由不同的金鑰簽署的。 <br/> 要自行建置**AAPSClient**，請遵循[常見AAPS建置](../SettingUpAaps/BuildingAaps.md)的相同步驟。在**生成簽名的App Bundle或APK**頁面上，選擇**aapsclientRelease**，而不是**fullRelease**。
 
 如果您在同一支追蹤端手機上安裝多個用戶端應用程式（**AAPSClient**、**AAPSClient2**、**AAPSClient3**），也適用相同規則：所有應用程式都必須使用**相同的簽章金鑰**簽署。否則 Android 會拒絕安裝第二個應用程式（錯誤 `INSTALL_FAILED_DUPLICATE_PERMISSION`）。
 
@@ -128,7 +128,7 @@
 (RemoteControl_nightscout)=
 ## 3) Nightscout
 
-Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout** 應用程式，可以直接從 iPhone 的 App Store 下載。如果你有 Android 追蹤者手機，並沒有專用的 Nightscout 應用程式，建議使用 [**AAPSClient**](#2-aapsclient)，或者如果你只想要追蹤而不發送治療資料，你可以從 Play 商店下載並安裝 [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) 應用程式。
+Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout** 應用程式，可以直接從 iPhone 的 App Store 下載。 If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](#RemoteControl_aapsclient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) app from the Playstore.
 
 當你在 iPhone 上安裝了 **Nightscout** 應用程式，打開應用並按照設置提示進行操作，輸入你的 Nightscout 地址（見下方左側）。此地址的格式可能取決於你的 Nightscout 是如何託管的。(_例如_ http://youraddresshere.herokuapp.com)。然後輸入你的 Nightscout API 密碼（見下方右側）。如果未提示你輸入 API 密碼，請點擊應用程式頂部的鎖形圖示輸入密碼：
 
@@ -177,7 +177,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 3. 漢堡選單 - 用於設定偏好設定
 4. Careportal - 記錄治療（關於**AAPS** 何時套用這些紀錄，請參閱[下方](#RemoteControl_nightscout-treatments)）
 
-![Nightscout 頂部欄](../images/remote-control-29.png)
+![Nightscout top bar](../images/remote-control-29.png)
 
 此畫面上的灰色標籤包含大量關於 **AAPS** 系統狀態的資訊（點擊標籤可顯示更多資訊）：
 
@@ -202,7 +202,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 (RemoteControl_nightscout-treatments)=
 ### 透過 Nightscout 應用程式向 AAPS 發送治療資料
 
-在 **AAPS** 4 中，支援的遠端控制方式是使用**已配對的 AAPSClient**，請參閱[主端 ↔ 用戶端控制](#client-master-control)：每個用戶端都有一個[角色](#client-master-control-roles)，用來限制可執行的操作；每個指令都會由**AAPS** 手機簽章、檢查並確認。用戶端控制開啟時，**AAPS** 手機會進入[強化模式](#client-master-control-hardened-mode)：在 Nightscout 網站或 Nightscout 應用程式中輸入的治療紀錄、臨時目標及設定檔切換**都不會**套用。此時，Nightscout 應用程式只能用來查看資料。
+In **AAPS** 4 the supported way to control **AAPS** remotely is a **paired AAPSClient**, see [Master ↔ Client control](#client-master-control): each client has a [role](#client-master-control-roles) that limits what it may do, and every command is signed by the client, then checked and confirmed by the **AAPS** phone. 用戶端控制開啟時，**AAPS** 手機會進入[強化模式](#client-master-control-hardened-mode)：在 Nightscout 網站或 Nightscout 應用程式中輸入的治療紀錄、臨時目標及設定檔切換**都不會**套用。此時，Nightscout 應用程式只能用來查看資料。
 
 ```{admonition} Only when client control is off
 :class: warning
@@ -277,7 +277,7 @@ a)  無法使用**AAPSClient** 或**SMS** 指令；或
 
 b)  使用者不想輸入驗證碼（簡訊指令需要輸入驗證碼）。
 
-智慧型手錶必須搭載**Wear OS 3 或更新版本**，才能控制**AAPS**。請確認手錶的技術規格，並參閱[智慧型手錶頁面](../Getting-Started/Watches.md)。如果不確定，請在 **AAPS** 的 Facebook/Discord 群組中搜尋或詢問。
+智慧型手錶必須搭載**Wear OS 3 或更新版本**，才能控制**AAPS**。請確認手錶的技術規格，並參閱[智慧型手錶頁面](../Getting-Started/Watches.md)。 Search, or ask in the **AAPS** Facebook/Discord groups if unsure.
 
 以下提供在熱門的 Samsung Galaxy Watch 4（40 mm）上設定**AAPS** 的專屬操作指南。 Garmin 手錶也是一個受歡迎的選擇，請參閱[這裡](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0)。如果你有設置其他智慧型手錶的經驗，並且認為這對其他用戶有幫助，請[編輯文件](../SupportingAaps/HowToEditTheDocs.md)，將你的發現分享給更廣泛的 **AAPS** 社群。
 
@@ -285,7 +285,7 @@ b)  使用者不想輸入驗證碼（簡訊指令需要輸入驗證碼）。
 
 ![穿戴遠端 2](../images/Wear_Remote2.png)
 
-手錶軟體 **AAPSClient** Wear apk 可以直接從[Github](https://github.com/nightscout/AndroidAPS/releases/)下載。
+The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
 
 若要下載軟體，請點選與手機用戶端應用程式相符的手錶應用程式：**wear-aapsclient-release_**_version_ 對應 **AAPSClient**，**wear-aapsclient2-release_**_version_ 對應 **AAPSClient2**（請參閱 [AAPSClient、AAPSClient2 和 AAPSClient3 簡介](#remotecontrol-aapsclient-versions)）：
 
