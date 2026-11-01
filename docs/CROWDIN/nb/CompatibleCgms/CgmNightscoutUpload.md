@@ -1,10 +1,10 @@
-# Other CGM uploaded to Nightscout
+# Annen CGM som lastes opp til Nightscout
 
-Use this option if you have any other CGM set up that can send your BG data **only** to [Nightscout](https://nightscout.github.io/).
+Bruk dette valget hvis du har en annen CGM satt opp som **bare** kan sende BS-dataene dine til [Nightscout](https://nightscout.github.io/).
 
 ```{important}
-This data source will not work when you are offline, when you experience network issues or when your Nightscout site is down. Use with caution.
+Denne datakilden fungerer ikke når du er uten nett, når du har nettverksproblemer, eller når Nightscout-siden din er nede. Bruk den med forsiktighet.
 ```
 
--   Set up **NSClientV3** (**Configuration → Communication**) with your Nightscout site information.
--   Select NSClient BG in [**Configuration → BG Source**](#Config-Builder-bg-source).
+-   Sett opp **NSClientV3** (**Konfigurasjon → Kommunikasjon**) med opplysningene om Nightscout-siden din.
+-   Velg NSClient BS i [**Konfigurasjon → BS-kilde**](#Config-Builder-bg-source).
