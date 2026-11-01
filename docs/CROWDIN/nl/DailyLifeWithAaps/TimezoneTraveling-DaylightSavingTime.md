@@ -76,7 +76,7 @@ Het stuurprogramma past de tijd van de pomp automatisch aan de tijd van de telef
 
 Bij een wissel van tijdzone blijft de geschiedenis intact; alleen de TDD kan afwijken. Als je de tijd op de telefoon handmatig wijzigt, kan dat problemen geven met de geschiedenis en de **IOB**. Controleer de **IOB** goed als je de tijd handmatig wijzigt.
 
-Als de tijdzone of de tijd wijzigt, worden lopende **TBR's** gestopt.
+When the time zone or time changes running **TBRs** are stopped.
 
 (time-adjustment-daylight-savings-time-dst)=
 
@@ -108,8 +108,8 @@ Als je een bolus geeft met de calculator van **AAPS**, gebruik dan geen **COB**-
 
 ### Zomertijd bij Omnipod Dash
 
-* Je kunt **AAPS** na de overgang naar zomertijd tijdelijk laten terugvallen op de basale achtergrondstand, zoals hierboven uitgelegd.
-* Wil je niet dat **AAPS** 's nachts tijdelijk terugvalt op de basale achtergrondstand, dan kun je de tijdzone de dag vóór de overgang naar zomertijd wijzigen. Zo voorkom je verstoring in de nacht. LET OP: DEZE OPTIE KAN ERVOOR ZORGEN DAT JE POD TE VROEG VERLOOPT. NEEM ALTIJD RESERVEMATERIAAL MEE ALS JE VOOR DE FUNCTIE HIERONDER KIEST.
+* Either allow **AAPS** to temporarily default to background basal after DST has taken place as explained above.
+* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day before DST is due to take place to avoid overnight disruption. LET OP: DEZE OPTIE KAN ERVOOR ZORGEN DAT JE POD TE VROEG VERLOOPT. NEEM ALTIJD RESERVEMATERIAAL MEE ALS JE VOOR DE FUNCTIE HIERONDER KIEST.
 
 #### Acties voorafgaand aan tijdswissel
 
@@ -129,6 +129,6 @@ Als je een bolus geeft met de calculator van **AAPS**, gebruik dan geen **COB**-
 
 3. Vernieuw in **AAPS** je pomp en schakel naar je gewenste **Profiel**.
 
-4. Controleer de **IOB** en **COB** in **AAPS**. Kloppen ze niet, schakel de **Loop** dan uit voor ten minste één DIA of de maximale koolhydraattijd (Max-Carb-Time), welke van de twee langer is.
+4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA or the maximum carb absorption time (**Absorption max time**), whichever is longer.
 
 5. Acties na de tijdwissel. Een goed moment om terug te gaan naar de lokale tijdzone is als de **IOB** laag is. Bijvoorbeeld een uur voor een maaltijd, zoals het ontbijt. Het beste is als je **COB** en **IOB** allebei bijna nul zijn.
