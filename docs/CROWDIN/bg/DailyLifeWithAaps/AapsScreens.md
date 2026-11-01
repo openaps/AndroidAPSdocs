@@ -247,6 +247,8 @@
 
 Ако критичният праг е надвишен, стойностите се показват в червено.
 
+The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
+
 Праговете могат да се променят чрез малката икона **Настройки**, която се показва, когато редът за статус е **разгънат** (стрелката вдясно) – вижте [Индикатори](#Preferences-status-lights).
 
 Разгънатият панел за статус има и бутон в края на някои редове за записване на смяна, който нулира съответната възраст: **Добави** на реда **Сензор** записва поставяне на сензор. Ако помпата ви го поддържа, **Смяна/Пълнене** се появява на редовете **Игла** (или **Пач помпа**) и **Инсулин**, а **Добави** – на реда **Батерия на помпата**.
@@ -303,6 +305,14 @@
 Това работи по същия начин и на [допълнителните графики](#aaps-screens-additional-graphs) под графиката на КЗ (IOB, COB...): натиснете и задръжте която и да е от тях.
 
 ![Натиснете и задръжте графиката на КЗ: изскачащият прозорец показва време, КЗ, IOB и базал](../images/main/graph_press_and_hold.png)
+
+(aaps-screens-graph-clock-change)=
+
+#### Clock changes
+
+When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
+
+![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
@@ -459,6 +469,8 @@ IOB може да е отрицателен, ако нямате оставащ 
 
 Тези данни може да са налични, когато използвате [смарт часовник с Wear OS](../WearOS/WearOsSmartwatch.md). Включете ги в приложението **AAPS** Wear и дайте разрешение за данните за здравето.
 
+Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
+
 #### Отклонения (Откл)
 
 * **Сивите** стълбчета показват отклонение поради въглехидрати.
@@ -607,11 +619,15 @@ IOB може да е отрицателен, ако нямате оставащ 
 
 ![Напомняне за въглехидрати в бъдещето](../images/Home2021_BolusWizard_EatingReminder.png)
 
-Напомнянето звъни като аларма на **AAPS**. То не създава таймер в приложението за часовник на телефона ви и работи също, когато болусът е въведен от **AAPSClient**, докато **AAPS** работи във фонов режим.
+The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
 
-Полето **КЗ** обикновено вече е попълнено с последната стойност от вашия CGM. Ако нямате работещ CGM, полето ще е празно. Когато стойността е скорошна, редът **КЗ** остава сгънат.
+![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
 
-Бутонът с резултата долу показва предложения болус; при натискането му се иска потвърждение, преди да се подаде инсулин.
+![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
+
+Полето **КЗ** обикновено вече е попълнено с последната стойност от вашия CGM. Ако нямате работещ CGM, полето ще е празно. Когато стойността е скорошна, редът **КЗ** остава сгънат. The field follows new readings while the wizard is open, until you change it yourself.
+
+Бутонът с резултата долу показва предложения болус; при натискането му се иска потвърждение, преди да се подаде инсулин. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
 
 Добре е да знаете:
 
