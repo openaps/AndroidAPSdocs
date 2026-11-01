@@ -4,7 +4,7 @@
 
 ## 需求
 
-**AAPS** 使用了 Android Auto 的一個功能，允許來自手機應用的訊息傳輸到車載音響顯示。
+**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
 
 這意味著：
 
@@ -37,7 +37,7 @@
 
 由於**AAPS**不是官方的 Android Auto 應用，因此需要在 Android Auto 中啟用「未知來源」的通知。這是透過使用開發者模式來完成的，我們將在此為你展示。
 
-前往你的車輛並將手機連線到車載音響系統。
+Go to your car and connect your mobile with the car's audio system.
 
 你現在應該會看到類似於此螢幕的畫面。
 
