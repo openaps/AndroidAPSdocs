@@ -26,7 +26,7 @@ Los eCarbs en la pantalla principal: el número entre paréntesis en el campo **
 
 En el [Asistente de bolo](#aaps-screens-bolus-wizard), tres botones debajo del campo **Carbohidratos** te permiten elegir la rapidez con la que se absorbe tu comida. Elige uno antes de confirmar. Según el tipo, **AAPS** toma una parte de los carbohidratos que has escrito como carbohidratos normales y añade [carbohidratos extendidos («eCarbs»)](#Extended-Carbs-extended-carbs-ecarbs) más tarde para comidas lentas y copiosas. Pulsa el icono **(i)** junto a los botones para ver los alimentos típicos del tipo elegido y qué hace con tus carbohidratos.
 
-| Tipo                     | Alimentos típicos (como aparecen en la app)                                                                                           | Carbohidratos ahora, usados para el bolo | eCarbs añadidos                                            |
+| Tipo                     | Typical foods (examples from the app)                                                                                                 | Carbohidratos ahora, usados para el bolo | eCarbs añadidos                                            |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------- |
 | **Pan** (predeterminado) | Pan, pastas saladas, yogur, fruta, patatas, arroz, avena, verduras                                                                    | 100 %                                    | Ninguno                                                    |
 | **Pastel**               | Empanadillas, pasta, platos asiáticos ricos en carbohidratos y grasas, bollería dulce y de masa fermentada, cereales, miel, mermelada | 90 %                                     | 20 %, empiezan 60 minutos más tarde, repartidos en 2 horas |
@@ -60,7 +60,7 @@ Para empezar más rápido, el *Asistente de bolo* puede añadir los eCarbs por t
 **Notas importantes:** Por supuesto, tendrás que probar qué valores concretos te funcionan. También puedes ajustar con cuidado el ajuste *máximo de minutos de basal para limitar el SMB* para que el algoritmo sea más o menos agresivo. Con comidas bajas en carbohidratos, altas en grasas y proteínas, puede ser suficiente usar solo eCarbs sin bolos manuales (consulta la entrada del blog de arriba). Cuando se generan eCarbs, también se crea una nota en el Portal de cuidados que documenta todos los datos introducidos, para que sea más fácil repetirlos y mejorarlos.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## ¿Bolo extendido y por qué no funciona en un entorno de lazo cerrado?
+## Extended boluses and why they don't work in a closed-loop environment
 
 Como se ha mencionado anteriormente, los bolos extendidos o de onda múltiple no funcionan realmente en un entorno de lazo cerrado. [Más abajo](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) encontrarás los detalles
 
