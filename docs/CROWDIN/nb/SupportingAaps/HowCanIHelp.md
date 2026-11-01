@@ -23,7 +23,7 @@ Hvis du oversetter noe for første gang, start med å oversette tekstene (string
 
 Du er velkommen til å begynne som oversetter for dokumentasjonen samtidig, eller senere.
 
-Du kan se status for oversettelsene av appen og dokumentasjonen for de ulike språkene [her](#StateOfTranslations).
+Du kan se status for oversettelsene av appen og dokumentasjonen for de ulike språkene [her](StateOfTranslations.md).
 
 * Hvis du vil oversette **appen** til andre språk (takk!), bruk [Crowdin](https://crowdin.com/project/androidaps).
 * Hvis du vil oversette **dokumentasjonen** til andre språk (takk!), bruk [Crowdin](https://crowdin.com/project/androidapsdocs). 
