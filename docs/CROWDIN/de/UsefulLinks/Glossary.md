@@ -76,7 +76,7 @@
 
 **Keystore (or JKS)** = a Java Key Store which is an encrypted file where your personal developer certificates and keys will be stored required for your **AAPS'** build (and rebuild).
 
-**LGS** = Low Glucose Suspend (dt. "Abschaltung vor Niedrig"). See [Wiki - Low Glucose Suspend](#KeyAapsFeatures-LGS)
+**LGS** = Low Glucose Suspend (dt. Unterbrechung bei niedrigem BZ). See [Wiki - Low Glucose Suspend](#KeyAapsFeatures-LGS)
 
 **LineageOS** = Freies Open-Source-Betriebssystem für Smartphones usw. When using Accu-Chek Combo see [Wiki - Combo pump](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md).
 
@@ -86,7 +86,7 @@
 
 **min_5m_carbimpact** = Sicherheitsmerkmal, das eine Berechnung des Standardkohlenhydratabbaus (Verstoffwechselung) darstellt. Dieser Wert wird genutzt, wenn die Kohlenhydrat-Aufnahme nicht anhand der Reaktionen des Blutes bestimmt werden kann. Further info → [Wiki - 'Preferences'](#Preferences-min_5m_carbimpact).
 
-**Nightscout** Open Source Projekt zur Anzeige und Auswertung der CGM-Daten. The central data hub for the user’s **AAPS** data and can generate reports to view the user’s historical **Nightscout** data, such as expected HbA1c, time in range or search for patterns in the data via percentile chart etc.
+**Nightscout** = Open-Source-Projekt zur Anzeige und Auswertung der CGM-Daten. The central data hub for the user’s **AAPS** data and can generate reports to view the user’s historical **Nightscout** data, such as expected HbA1c, time in range or search for patterns in the data via percentile chart etc.
 
 **Nightscout** → siehe auch **Nightscout Reporter**. Dies ist besonders für Eltern, die das Diabetesmanagement ihres Kindes begleiten, hilfreich.
 
@@ -134,7 +134,7 @@
 
 **TBR** = Temporary Basal Rate (dt.: temporäre Basalrate) → siehe auch **TBB** / **TDD**.
 
-**TDD** = Total Daily Dose (dt.: tägliche Gesamtinsulinmenge) - Gesamtbolus + Gesamtbasal pro Tag) → siehe auch **TBB** / **TBR**.
+**TDD** = Total Daily Dose (dt. Tagesgesamtdosis: Gesamtbolus + Gesamtbasal pro Tag) → siehe auch **TBB** / **TBR**.
 
 **TT** = Temporary Target (dt. temporäres Ziel): Vorübergehendes Anheben oder Absenken des **Glukosezielwertes** bzw. -bereichs z.B. vor Mahlzeiten oder sportlichen Aktivitäten. Further info → [Wiki - 'temp targets'](../DailyLifeWithAaps/TempTargets.md).
 
@@ -142,10 +142,10 @@
 
 **Virtual pump** (dt. virtuelle Pumpe) = Eine **AAPS**-Funktion, die es ermöglicht, **AAPS**-Funktionen auszuprobieren oder den Menschen mit Diabetes, die für das Loopen kein durch **AAPS** unterstütztes Pumpenmodell nutzen, die Funktionen zu nutzen → siehe auch **Open Loop**.
 
-**Wallpaper** (dt. Hintergundbild) = **AAPS** Hintergrundbild (siehe 'Handy Hintergrundbild').
+**Wallpaper** (dt. Hintergrundbild) = **AAPS**-Hintergrundbild (siehe Seite zu Smartphones).
 
 **xDrip** = open source software to read **CGM** systems.
 
-**Zero-temp** temporäre Basalrate mit 0 % (keine Basalinsulin-Lieferung).
+**Zero-temp** = temporäre Basalrate mit 0 % (keine Abgabe von Basalinsulin).
 
 → vgl. hierzu auch die [OpenAPS Dokumentation](https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html)
