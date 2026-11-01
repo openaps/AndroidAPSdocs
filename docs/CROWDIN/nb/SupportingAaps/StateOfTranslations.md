@@ -1,26 +1,26 @@
-# state of translation for app and the documentation
+# Status for oversettelsen av appen og dokumentasjonen
 
-The state is once per hour updated and reflects only the state in Crowdin.
+Statusen oppdateres én gang i timen og viser bare statusen i Crowdin.
 
 ```{tip}
-Be careful the percentage of proofreading must be lower than the percentage of translations but they decided to show it on top of the translations.
-It's better to look only at the percentage level of translations to see if work is to be done.
+Vær oppmerksom på at prosenten for korrekturlesing må være lavere enn prosenten for oversettelse, men Crowdin har valgt å vise den oppå oversettelsene.
+Det er best å bare se på prosenten for oversettelse for å se om det er arbeid å gjøre.
 ```
 
 ```{admonition} needed time for final publication
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+Etter oversettelse i Crowdin kjøres en daglig synkronisering til GitHub, som overfører oversettelsene til GitHub som en pull request (PR).
 
-The acceptance of the PR is a manual task which will be done as fast as possible.
+Godkjenning av PR-en er en manuell oppgave som gjøres så raskt som mulig.
 ```
 
-## state app translation
+## status for oversettelsen av appen
 
-State of the **app** translations per language (country code, percentage translation, percentage proofreading).
+Status for oversettelsen av **appen** per språk (landkode, prosent oversatt, prosent korrekturlest).
 
-![state app translation](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
+![status for oversettelsen av appen](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
-## state documentation translation
+## status for oversettelsen av dokumentasjonen
 
-State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
+Status for oversettelsen av **dokumentasjonen** per språk (landkode, prosent oversatt, prosent korrekturlest).
 
-![state documentation translation](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
+![status for oversettelsen av dokumentasjonen](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
