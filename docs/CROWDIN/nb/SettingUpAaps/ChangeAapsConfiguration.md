@@ -1,18 +1,18 @@
 # Endre AAPS-konfigurasjonen din
 
-Når du har fullført **[Oppsettveiviseren](../SettingUpAaps/SetupWizard.md)**, trenger du ikke kjøre hele veiviseren på nytt hvis du bare vil endre deler av **AAPS**-konfigurasjonen din.
+Når du har fullført **[Oppsettveiviseren i AAPS](../SettingUpAaps/SetupWizard.md)**, trenger du ikke kjøre hele veiviseren på nytt hvis du bare vil endre deler av **AAPS**-konfigurasjonen din.
 
 Det er tre veier til å endre konfigurasjonen i **AAPS**. Hvilken vei du velger, er bare et spørsmål om hva som er praktisk eller hva du foretrekker, siden alle veiene fører til de samme innstillingene.
 
-These are as follows:
+De er som følger:
 
 1. Skjermen **Konfigurasjon**,
 2. Skjermen **Innstillinger** eller
 3. En plugins **Innstillinger**, åpnet fra kategorien dens i **Konfigurasjon**.
 
-Here we explain which option is most convenient for each situation:
+Her forklarer vi hvilket alternativ som er mest praktisk i hver situasjon:
 
-## Configuration
+## Konfigurasjon
 
 Åpne **menyen** (☰) øverst til venstre på hovedskjermen og velg **Konfigurasjon**:
 
