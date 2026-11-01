@@ -15,7 +15,7 @@
 - Ακολουθήστε τις οδηγίες εδώ: [xDrip G7, ONE+ και Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). Απαιτείται πρόσφατη έκδοση του xDrip. Δείτε τη συνδεδεμένη σελίδα για την ελάχιστη έκδοση.
 - Επιλέξτε xDrip στη [**Διαμόρφωση → Πηγή BG**](#Config-Builder-bg-source).
 
-- Προσαρμόστε τις ρυθμίσεις του xDrip σύμφωνα με τις εξηγήσεις στη σελίδα ρυθμίσεων του xDrip [Ρυθμίσεις xDrip](../CompatibleCgms/xDrip.md)
+- Προσαρμόστε τις ρυθμίσεις του xDrip σύμφωνα με τις εξηγήσεις στη σελίδα ρυθμίσεων του xDrip [Ρυθμίσεις xDrip](../CompatibleCgms/xDrip.md).
 
 ## 2. Build Your Own Dexcom App (μόνο G7)
 
@@ -30,7 +30,7 @@
 -   Απεγκαταστήστε την αρχική εφαρμογή Dexcom
 -   Εγκαταστήστε το apk που κατεβάσατε
 -   Εισαγάγετε τον κωδικό αισθητήρα στην τροποποιημένη εφαρμογή
--   Μετά από λίγο, το BYODA θα πρέπει να λάβει το σήμα του πομπού
+-   After a short time BYODA should pick up the sensor signal.
 
 (DexcomG7-xdrip-companion-app)=
 
