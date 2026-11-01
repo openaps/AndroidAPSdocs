@@ -76,7 +76,7 @@ O controlador ajusta automaticamente a hora da bomba à hora do telefone.
 
 As mudanças de fuso horário mantêm o histórico intacto; só a TID pode ser afetada. Mudar a hora do telefone manualmente pode causar problemas no histórico e na **IA**. Se mudar a hora manualmente, verifique bem a **IA**.
 
-Quando o fuso horário ou a hora mudam, as **basais temporárias** em curso são paradas.
+When the time zone or time changes running **TBRs** are stopped.
 
 (time-adjustment-daylight-savings-time-dst)=
 
@@ -108,8 +108,8 @@ Se fizer bólus com a calculadora do **AAPS**, não use os dados de **HCA** e **
 
 ### Hora de verão com a Omnipod Dash
 
-* Ou deixa o **AAPS** usar temporariamente a basal de fundo depois da mudança da hora de verão, como explicado acima.
-* Ou, se não quiser que o **AAPS** use temporariamente a basal de fundo durante a noite, pode mudar o fuso horário no dia anterior à mudança da hora de verão, para evitar problemas durante a noite. ATENÇÃO: ESTA OPÇÃO PODE FAZER O SEU POD EXPIRAR ANTES DO TEMPO. SE ESCOLHER A FUNÇÃO ABAIXO, TENHA MATERIAL CONSIGO.
+* Either allow **AAPS** to temporarily default to background basal after DST has taken place as explained above.
+* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day before DST is due to take place to avoid overnight disruption. ATENÇÃO: ESTA OPÇÃO PODE FAZER O SEU POD EXPIRAR ANTES DO TEMPO. SE ESCOLHER A FUNÇÃO ABAIXO, TENHA MATERIAL CONSIGO.
 
 #### Ações a fazer antes da mudança da hora
 
@@ -129,6 +129,6 @@ Se fizer bólus com a calculadora do **AAPS**, não use os dados de **HCA** e **
 
 3. No **AAPS**, atualize a bomba e mude para o **Perfil** desejado.
 
-4. Verifique a **IA** e a **HCA** no **AAPS** e, se não estiverem corretas, desative o **Loop** durante pelo menos uma DAI ou o tempo máximo de absorção dos hidratos (Max-Carb-Time) – o que for maior.
+4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA or the maximum carb absorption time (**Absorption max time**), whichever is longer.
 
 5. Ações a fazer depois da mudança da hora. Um bom momento para voltar ao fuso horário local é quando a **IA** está baixa. Por exemplo, uma hora antes de uma refeição, como o pequeno-almoço. O ideal é que a **HCA** e a **IA** estejam ambas perto de zero.
