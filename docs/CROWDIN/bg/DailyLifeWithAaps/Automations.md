@@ -19,7 +19,7 @@
 
 - Едно или повече действия, които да се изпълнят.
 
-    Например аларма, задаване на процент на профила или експорт на настройките на AAPS при смяна на под.
+    Such as an alarm or setting a profile percentage or exporting the AAPS settings on Pod change.
 
 
 Възможностите на автоматизацията са много и е добре да ги разгледате в приложението AAPS, в раздела „Автоматизация“. Можете също да потърсите примери за автоматизации от други потребители в групите на AAPS във [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) и [**Discord**](https://discord.gg/4fQUWHZ4Mw).
@@ -38,11 +38,11 @@
 
 Потребителят тренира всяка сутрин в 6:00: трябва да не забравя ръчно да зададе „Временна цел – Физ. активност“ в AAPS в 5:00, преди тренировката.
 
-![Екранна снимка](../images/Automations/automation_concept_manual.png)
+![Manual actions without automation](../images/Automations/automation_concept_manual.png)
 
 Потребителят е създал **автоматизация**, която в 5:00 стартира „Временна цел – Физ. активност“, за да са **КЗ** и **IOB** оптимални за тренировката в 6:00:
 
-![Екранна снимка](../images/Automations/automation_concept_automated.png)
+![Actions done by an automation](../images/Automations/automation_concept_automated.png)
 
 ## Важни неща преди да започнете с автоматизации
 
@@ -91,12 +91,12 @@
 
 За да деактивирате правило за **автоматизация**, махнете отметката в полето вляво от името на **автоматизацията**. Примерът по-долу показва **автоматизация**, която е активирана („отметната“) или деактивирана („без отметка“):
 
-![Екранна снимка](../images/Automations/automation_rule_activated_deactivated.png)
+![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
 
 
 Когато настройвате **автоматизация**, първо можете да я тествате, като използвате действието „Известие“ в „Действия“. Така **AAPS** първо показва известие, вместо наистина да изпълни действието автоматично. Когато сте сигурни, че известието се появява в правилното време и при правилните условия, можете да промените правилото за **автоматизация** и да замените „Известие“ с „Действие“.
 
-![Екранна снимка](../images/Automations/automation_alert_actions.png)
+![Alert actions](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
@@ -115,7 +115,7 @@
 
 * **Временна цел**, зададена от **автоматизация**, трябва да е между 72 и 180 mg/dl (или 4 и 10 mmol/l).
 * **Процентът на профила** трябва да е между 50 % и 130 %.
-* Между изпълненията на **автоматизацията** (и преди първото изпълнение) има ограничение от 5 минути.
+* There is a 5 minute time limit between executions of **Automation** (and first execution).
 
 ## Правилно използване на отрицателни стойности
 
@@ -127,7 +127,7 @@
 
 Бъдете внимателни, когато в **автоматизациите** избирате „отрицателна стойност“ в „Условие“, например „по-малко от“. Например:
 
-![Екранна снимка](../images/Automations/automation_comparison_operators.png)
+![Comparison operators](../images/Automations/automation_comparison_operators.png)
 
 **Пример 1:** Условие **„е по-малко от“** „-0,1 mmol/l“ (или „-2 mg/dl“) ще:
 
@@ -242,7 +242,7 @@
 
 ![Събитията на действието „Бележка“](../images/Automations/automation_action_careportal_events.png) ![Действието „Бележка“, настроено на „Смяна на сет“](../images/Automations/automation_action_careportal_site_change.png)
 
-**Действия:** **Изпратете SMS на всички** (в групата **Аларми**)
+**Actions:** **Send SMS to all numbers** (in the **Alerts** group)
 
 **Опции:**
 
@@ -260,7 +260,7 @@
 
 * изберете **ВКЛ** или **ИЗКЛ**. Това променя настройката **Използвай SMB** на OpenAPS SMB точно както ако я бяхте променили в **Настройки**, и тя остава така, докато вие или друго правило не я върнете.
 
-**Действия:** **Стартирай Autotune** (в групата **Кръг & инсулин**)
+**Actions:** **Run Autotune** (in the **Loop & insulin** group)
 
 **Опции:**
 
@@ -280,39 +280,39 @@
 
 След като добавите „Действие“, трябва да промените стойностите по подразбиране на желаните, като ги натиснете и коригирате.
 
-![Екранна снимка](../images/Automations/automation_action_temp_target_values.png)
+![Temp target action values](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## Редът на **автоматизациите** в списъка е важен
- **AAPS** изпълнява създадените правила по реда на приоритет, като започва от началото на списъка с **автоматизации**. Например, ако **автоматизацията** „Low“ е най-важната **автоматизация**, над всички други правила, тази **автоматизация** трябва да е най-горе в списъка с **автоматизации** на потребителя, както е показано по-долу:
+ **AAPS** изпълнява създадените правила по реда на приоритет, като започва от началото на списъка с **автоматизации**. For example, if the ‘Low’ **Automation** is the most important **Automation**, above all other rules, then this **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
 
 
-![Екранна снимка](../images/Automations/automation_rule_list.png)
+![List of automation rules](../images/Automations/automation_rule_list.png)
 
-За да промените приоритета на правилата за **автоматизация**, докоснете и задръжте дръжката **=** вдясно от правилото. Подредете **автоматизациите**, като местите правилата нагоре или надолу.
+За да промените приоритета на правилата за **автоматизация**, докоснете и задръжте дръжката **=** вдясно от правилото. Reorder the **Automations** by moving the rules up or down.
 
-![Екранна снимка](../images/Automations/automation_rule_reorder.png)
+![Reorder automation rules](../images/Automations/automation_rule_reorder.png)
 
 ## Как да изтриете правила за автоматизация
 
 За да изтриете правило за **автоматизация**, натиснете иконата с кошче.
 
-![Екранна снимка](../images/Automations/automation_rule_delete.png)
+![Delete automation rules](../images/Automations/automation_rule_delete.png)
 
 ## Примери за автоматизации
 
-По-долу има примери за **автоматизации**. Още дискусии за **автоматизациите** и за това как потребителите са настроили своите **автоматизации** ще намерите в групите във Facebook или в Discord. Не копирайте примерите по-долу, ако не разбирате добре как ще работи **автоматизацията**.
+По-долу има примери за **автоматизации**. Further discussion on **Automations** and how users have individualised their **Automation** can be found in Facebook discussions groups or on Discord. Не копирайте примерите по-долу, ако не разбирате добре как ще работи **автоматизацията**.
 
 (automations-low-glucose-temp-target)=
 ### Временна цел при ниска КЗ
 
 Тази **автоматизация** автоматично стартира **временна цел**, когато **КЗ** падне под определен праг – тук, когато глюкозата е по-ниска от 70 mg/dl, се стартира цел 110 mg/dl за 30 минути:
 
-![Екранна снимка](../images/Automations/automation_example_low_glucose_rule.png)
+![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
 
 ### Временна цел за обяд (с „Местоположение“)
 
-![Екранна снимка](../images/Automations/automation_example_lunch_rule.png)
+![Example: lunch rule](../images/Automations/automation_example_lunch_rule.png)
 
 Тази **автоматизация** е създадена за потребител, който обядва на работа приблизително по едно и също време всеки работен ден, но тя се задейства само ако потребителят се намира в зададено „местоположение“.  Така, ако потребителят един ден не е на работа, тази **автоматизация** няма да се активира.
 
@@ -320,7 +320,7 @@
 
 Тригерът „Местоположение“ има име, позиция (докоснете **Избери на карта** или използвайте текущото си местоположение) и радиус в метри. Той се задейства, когато сте вътре в зоната (или извън нея):
 
-![Екранна снимка](../images/Automations/automation_example_lunch_location_condition.png)
+![Example: lunch rule with location condition](../images/Automations/automation_example_lunch_location_condition.png)
 
 Заради връзката „И“ **автоматизацията** се изпълнява само в „избраното време“ и само ако потребителят е на избраното местоположение.
 
@@ -330,11 +330,11 @@
 
 Wi-Fi SSID е добър начин да задействате **автоматизация**, докато сте в обхвата на определена Wi-Fi мрежа (в сравнение с GPS): той е доста точен, използва по-малко батерия и работи в затворени помещения, където GPS и другите услуги за местоположение може да не са налични.
 
-Ето още един пример за настройка на **временна цел** само в работни дни преди закуска (1).
+Here is another example of setting up a **Temp Target** for work days only before breakfast (1).
 
 
-**Автоматизацията** ще се задейства в 05:30 само от понеделник до петък (2)  
-и докато телефонът е свързан към домашната Wi-Fi мрежа (3).
+The **Automation** will trigger at 05:30am only on Monday-Friday (2)  
+and while being connected to a home Wi-Fi network (3).
 
 
 След това тя ще зададе **временна цел** 75 mg/dl за 30 минути (4). Едно от предимствата да включите местоположението е, че правилото няма да се задейства, например ако потребителят е на почивка.
@@ -350,7 +350,7 @@ Wi-Fi SSID е добър начин да задействате **автомат
 1) Под основното „И“ (и двете условия трябва да са изпълнени, за да се задейства) 1) Повтарящо се време = П,В,С,Ч,П В 5:30  
 1) WiFi SSID на мрежа = My_Home_WiFi_Name
 
-![Екранна снимка](../images/Automations/automation_example_wifi_condition.png)
+![Example: WiFi condition](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
@@ -395,7 +395,7 @@ Wi-Fi SSID е добър начин да задействате **автомат
 
 Проверете дали полето вляво от името на **автоматизацията** е „отметнато“, за да сте сигурни, че правилото е активно:
 
-![Екранна снимка](../images/Automations/automation_rule_activated_deactivated.png)
+![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
 
 * Проблем: __Моите автоматизации се задействат в грешен ред.__
 
