@@ -131,7 +131,7 @@ Después de cada selección hay que confirmar.
 
 Tienes que averiguar por qué recibes datos de glucosa duplicados:
 
-* ¿Está activado Dexcom bridge en tu sitio de Nightscout? Desactiva el bridge en el panel de administración de tu instancia de Nightscout: edita la variable «enable» y quita la parte «bridge». (Para Heroku, [aquí encontrarás los detalles](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* ¿Está activado Dexcom bridge en tu sitio de Nightscout? Desactiva el bridge en el panel de administración de tu instancia de Nightscout: edita la variable «enable» y quita la parte «bridge». (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * ¿Varias fuentes suben tu glucosa a Nightscout? Si usas la app BYODA, activa la subida en **AAPS**, pero no la actives en xDrip, si lo usas.
 * ¿Tienes algún seguidor que recibe tu glucosa pero también la vuelve a subir a tu sitio de Nightscout?
 * Último recurso: en los [ajustes de NSClient](#Preferences-nsclient), elige los ajustes de Sincronización y desactiva la opción «Recibir datos de MCG desde NS».
@@ -342,7 +342,7 @@ Cuando **PRED** está activado, AAPS dibuja sus predicciones como **líneas de p
 
 Cuando dos predicciones dan los mismos valores, sus puntos se superponen y solo ves uno de los colores (por ejemplo, UAM encima de IOB cuando la glucosa está estable).
 
-* Línea **COB** (naranja): [carbohidratos activos](CobCalculation) (en AAPS se usa siempre el naranja para COB y carbohidratos)
+* **COB** line (orange): [carbs on board](CobCalculation.md) (orange is used throughout AAPS for COB and carbs)
     
     Esta línea de predicción muestra hacia dónde irá tu glucosa (¡no los COB!) según los ajustes actuales del **Perfil**, suponiendo que las desviaciones por la absorción de carbohidratos se mantienen constantes. Esta línea sólo aparece si se conocen los carbohidratos (COB).
 
@@ -364,7 +364,7 @@ Cuando dos predicciones dan los mismos valores, sus puntos se superponen y solo 
 
 * Línea **aCOB** (naranja pálido y transparente): absorción acelerada de carbohidratos
     
-    Parecida a COB, pero suponiendo una absorción fija de carbohidratos de 10 mg/dl/5m (-0,555 mmol/l/5m). Obsoleto y de utilidad limitada.
+    Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. Obsoleto y de utilidad limitada.
     
     *Esta línea solo aparece cuando se usa el antiguo algoritmo [AMA](#Config-Builder-aps).*
 
@@ -485,7 +485,7 @@ Esta línea muestra cuánto «debería» subir o bajar la glucosa solo por la ac
 
 ![Desviaciones y BGI](../images/main/graph_dev_bgi.png)
 
-Es buena idea mostrar esta línea junto con las barras de desviación. Comparten la misma escala, pero es distinta de la de los otros datos opcionales. Por eso es buena idea mostrarlas en un gráfico aparte, como se ve arriba. Comparar la línea BGI con las barras de desviación es otra forma de entender cómo varía la **glucosa**. Aquí, en el momento marcado con **1**, las barras de desviación están muy por encima de la línea BGI: la glucosa sube más de lo que explica la actividad de la insulina sola (por ejemplo, después de comer carbohidratos). En el momento marcado con **2**, las barras de desviación están por debajo de cero (rojas): la glucosa está más baja de lo que el algoritmo esperaba.
+Es buena idea mostrar esta línea junto con las barras de desviación. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparar la línea BGI con las barras de desviación es otra forma de entender cómo varía la **glucosa**. Aquí, en el momento marcado con **1**, las barras de desviación están muy por encima de la línea BGI: la glucosa sube más de lo que explica la actividad de la insulina sola (por ejemplo, después de comer carbohidratos). En el momento marcado con **2**, las barras de desviación están por debajo de cero (rojas): la glucosa está más baja de lo que el algoritmo esperaba.
 
 ### Sección F - Barra de Lanzamiento rápido
 
@@ -507,13 +507,13 @@ Para administrar una cantidad de insulina sin usar el [asistente de bolo](#aaps-
 
 Si activas **Iniciar OT Comiendo Pronto**, puedes iniciar automáticamente tu [objetivo temporal de comida pronto](#TempTargets-eating-soon-temp-target).
 
-Si no quieres poner el bolo con la bomba, sino registrar una cantidad de insulina (es decir, insulina puesta con pluma), activa «**El bolo sólo se anotará**». Una fila adicional **Tiempo**, puesta en **Ahora**, te permite registrar una inyección de insulina hecha en el pasado: usa **-** / **+** para cambiarla, o toca la flecha para escribir los minutos o elegir una fecha y una hora.
+If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only (not delivered by pump)**". Una fila adicional **Tiempo**, puesta en **Ahora**, te permite registrar una inyección de insulina hecha en el pasado: usa **-** / **+** para cambiarla, o toca la flecha para escribir los minutos o elegir una fecha y una hora.
 
 ![La fila Tiempo, plegada](../images/v4/Screens/insulin_dialog_record_only_time.png) ![La fila Tiempo, abierta con la flecha](../images/v4/Screens/insulin_dialog_time_open.png)
 
 Puedes usar los botones **+0,5 / +1,0 / +2,0** para aumentar rápidamente la cantidad de insulina. Los valores de estos incrementos se pueden cambiar en los [ajustes del asistente de bolo](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-El diálogo de insulina también se puede usar cuando la bomba está suspendida o desconectada, por ejemplo para registrar insulina inyectada con pluma. En ese caso, «**El bolo sólo se anotará**» está siempre activado (se muestra en rojo) y aparecen campos adicionales para elegir el tipo de insulina y un desplazamiento de **Tiempo** para una inyección hecha en el pasado:
+El diálogo de insulina también se puede usar cuando la bomba está suspendida o desconectada, por ejemplo para registrar insulina inyectada con pluma. In this case, "**Bolus will be recorded only (not delivered by pump)**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
 
 ![Diálogo de insulina con la bomba desconectada](../images/main/insulin_dialog_pump_disconnected.png)
 
@@ -527,7 +527,7 @@ Algunos [objetivos temporales predefinidos](#TempTargets-hypo-temp-target) (Hipo
 
 **Hora de los carbohidratos**: cuándo vas a comer o has comido los carbohidratos.
 
-**Duración**: se usa para los [«carbohidratos extendidos»](ExtendedCarbs). Esta fila está plegada para que no escribas en ella los gramos por error: usa **-** / **+** para cambiarla, o toca la flecha para abrirla y escribir un valor.
+**Duration**: To be used for ["extended carbs"](ExtendedCarbs.md). Esta fila está plegada para que no escribas en ella los gramos por error: usa **-** / **+** para cambiarla, o toca la flecha para abrirla y escribir un valor.
 
 Puedes usar los botones **+5 / +10 / +20** para aumentar rápidamente la cantidad de carbohidratos.
 
@@ -632,7 +632,7 @@ El botón de resultado de abajo muestra el bolo propuesto; al pulsarlo, pide con
 Conviene saber:
 
 * Si el bolo calculado es mayor que tu **[Bolo máximo](#Preferences-maximum-bolus)**, se reduce al bolo máximo, y la confirmación muestra el aviso «Bolus constraint applied» (restricción de bolo aplicada). En cambio, un [Asistente rápido](../DailyLifeWithAaps/QuickWizards.md) se rechaza.
-* Cuando el bolo solo se registra (por ejemplo, mientras la bomba está desconectada), el aviso «**El bolo sólo se anotará**» se queda en la parte superior del diálogo, también cuando te desplazas.
+* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only (not delivered by pump)**" warning stays at the top of the dialog, also when you scroll.
 * Un bolo que pones a mano tiene prioridad sobre un [SMB](#Open-APS-features-super-micro-bolus-smb) que espera para administrarse: el SMB se descarta y el lazo vuelve a calcular. Si en este momento se está administrando un SMB, tu bolo se rechaza con el mensaje «Se está administrando un microbolo (SMB) en este momento. Inténtalo de nuevo cuando haya finalizado». No se administra insulina, y los carbohidratos introducidos con ese bolo no se guardan: espera un momento y vuelve a introducirlos.
 
 (AapsScreens-wrong-cob-detection)=
