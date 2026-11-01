@@ -48,7 +48,7 @@
 
 - DiaKEM: new installs don't work after servers upgrade @psonnera
 - Removed Libre 2 patched app (obsolete): doesn't work with new sensors @psonnera
-- Reworked Omnipod Dash page @XiTatiON
+- Reworked Omnipod DASH page @XiTatiON
 
 ## August 2025
 
@@ -97,7 +97,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 - [BG quality warning sign](#aaps-screens-bg-warning-sign) @tanja
 - [Medtronic pump update](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
 - [Necessary checks after update to AAPS 3.0](Update3_0.md) @tanja
-- [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
+- [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
 - Update docs for AAPS 3.0 (partly) @xJoe
 - [Wear OS for AAPS 3.0](../WearOS/WearOsSmartwatch.md) @peterleimbach
 
@@ -112,7 +112,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 
 ## November 2021
 
-- Best practices for calibrating a libre 2 sensor
+- Best practices for calibrating a Libre 2 sensor
 - [ISF](../UsefulLinks/FAQ.md) reformulation of impact
 - Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - Removed patched [Dexcom](../CompatibleCgms/DexcomG6.md) app as it is obsolete
@@ -212,7 +212,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 
 ## December 2019
 
-- [Android auto](../RemoteFeatures/AndroidAuto.md) - setup with screenshots
+- [Android Auto](../RemoteFeatures/AndroidAuto.md) - setup with screenshots
 - [Accu-Chek Insight & Autotune](#Accu-Chek-Insight-Pump-settings-in-aaps) - workaround for usage
 - [Glimp](#Config-Builder-bg-source) - version 4.15.57 and newer supported
 - [Watchfaces](../WearOS/WearOsSmartwatch.md) - major update, way more details
@@ -238,7 +238,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 ## October 2019
 
 - [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
-- [AccuChek Insight - log options](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- [Accu-Chek Insight - log options](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [COB calculation on separate page](../DailyLifeWithAaps/CobCalculation.md)
 - [COB - wrong COB value detection](#CobCalculation-detection-of-wrong-cob-values)
 - [덱스콤 G6의 특이적인 문제 해결](#DexcomG6-troubleshooting-g6)
