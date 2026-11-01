@@ -122,9 +122,9 @@ Follow these steps on Android 16; other versions will vary slightly from the pro
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. On Android 12 Click on `Battery`, Android 13+ Click on `App battery usage`,
+   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
 
-   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
+   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
 5. On Android 12+ select the `Unrestricted` option, on Android 15+ you need to expand the `Allow background usage` setting, click on the section highlighted in red to do this then follow step 6 to complete.
 
@@ -454,7 +454,7 @@ When you select a real pump, **AAPS** asks for a confirmation, because it will c
 
 ![Confirmation when selecting a hardware pump](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#bluetooth-permission)).
+If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#setup-wizard-bluetooth-permission)).
 
 If you have already set up your profile and know how to connect your pump, feel free to connect it now. Otherwise leave it on **Virtual Pump** for the moment — you can change it anytime, or leave the Setup Wizard using the arrow in the top left corner and let **AAPS** first show you some blood glucose values.
 
@@ -505,7 +505,7 @@ Press "**Open Objectives**":
 
 在这里，我们开始目标1，即使目前我们的设置还没有完全准备好成功完成这个目标。但这是开始。
 
-Press the "**Start**" button next to "**1. Objective**":
+Press the "**Start**" button of **Objective 1**:
 
 ![Objectives list](../images/setup-wizard/Wizard-Objectives-List.png)
 
@@ -521,6 +521,7 @@ After pressing "**FINISH**" you arrive at the main screen of **AAPS**. A "**Noti
 
 如果您在任何时候意外退出了设置向导，您可以简单地重新启动向导，或者手动更改[AAPS闭环的配置](../SettingUpAaps/ChangeAapsConfiguration.md)。
 
+(setup-wizard-bluetooth-permission)=
 ## Bluetooth permission
 
 If you select a pump that connects over Bluetooth (for example **Omnipod Dash**), a banner reminds you that **AAPS** needs Bluetooth permission. You can press "**Dismiss**" for now — the permission is granted after you finish the Wizard:
