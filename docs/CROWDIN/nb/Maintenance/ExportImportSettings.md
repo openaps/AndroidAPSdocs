@@ -6,6 +6,11 @@ For å kunne gjenopprette AAPS-oppsettet ditt på en eksisterende eller ny telef
 
 Vurder å skaffe en ekstra reservetelefon og øv på å gjenopprette AAPS, slik at du vet at reservetelefonen fungerer som den skal. Dette gir deg trygghet for at beredskapsplanen din fungerer, og at du kan fortsette å bruke AAPS uten avbrudd hvis hovedtelefonen din blir utilgjengelig.
 
+```{admonition} Android backups and phone-transfer tools do not carry your AAPS settings
+:class: warning
+Siden **AAPS** 4.0 lagres innstillingene i et kryptert lager på telefonen, og de er ikke med i Google-sikkerhetskopien eller i overføringen fra telefon til telefon når du får en ny telefon. En eksport av innstillingene, som beskrevet på denne siden, er den eneste måten å ta dem med videre på.
+```
+
 For å kunne gjenopprette er det viktig å ha følgende for hånden:
 
 - **Keystore-filen fra Android Studio** og tilhørende **passord**: Trengs for å bygge AAPS-installasjonsfilen (.APK) (på nytt).
@@ -102,7 +107,7 @@ For å eksportere eller importere innstillinger åpner du **menyen** (☰) og ve
 
 For automatisk eksport av innstillinger [(**se Automasjon**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) åpner du [**Innstillinger** > **Vedlikehold**](#preferences-maintenance-settings), utvider **Uovervåket eksport av innstillinger** og slår på **Aktiver automatisk eksport av innstillinger**.
 
-Du kan nå sette opp [Automasjon](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) til å eksportere innstillingene, enten regelmessig (_for eksempel_ hver uke) eller etter et pod-bytte.
+Du kan nå sette opp [Automasjoner](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) til å eksportere innstillingene, enten regelmessig (_for eksempel_ hver uke) eller etter et pod-bytte.
 
 _**Merk:** Når du importerer innstillinger, må du alltid skrive inn AAPS-hovedpassordet!_
 
