@@ -1,29 +1,29 @@
 # CareSens
 
-There are different ways to use CareSens data with **AAPS**:
+Det finnes flere måter å bruke CareSens-data med **AAPS** på:
 
 - xDrip
 - Juggluco
 
-**Note:** You do not need the Sens365 follower app to connect to AAPS.
+**Merk:** Du trenger ikke følgerappen Sens365 for å koble til AAPS.
 
 ## 1. xDrip
 
-1. Install and set up the official CareSens app.
-2. In CareSens app, go to settings -> Manage Data and Connections -> turn on xDrip switch. If preferred, turn off the data connections to CareLevo, DIA:CONN, CloudLoop, etc. in "others".
+1. Installer og sett opp den offisielle CareSens-appen.
+2. I CareSens-appen går du til settings (innstillinger) -> Manage Data and Connections (administrer data og tilkoblinger) -> slå på xDrip-bryteren. Hvis du vil, kan du slå av datatilkoblingene til CareLevo, DIA:CONN, CloudLoop osv. under «others» (andre).
 
-![CareSens App Data Connections](../images/eversenseapp-dataconnections.png)
+![Datatilkoblinger i CareSens-appen](../images/eversenseapp-dataconnections.png)
 
 
-2. Install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip).
-3. In xDrip, go to settings -> hardware data source, select `Companion App` as data source.
-4. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+2. Installer xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip).
+3. I xDrip går du til settings -> hardware data source og velger `Companion App` som datakilde.
+4. I **AAPS** velger du xDrip i [**Konfigurasjon → BS-kilde**](#Config-Builder-bg-source).
 
 
 ## 2. Juggluco
 
-1. Install the Juggluco app.
-2. In Juggluco, open the left menu and select `Photo`
-3. Scan the QR code on the package of the sensor.
-4. In left menu -> settings -> exchange data make sure xDrip broadcast is turned on.
-5. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+1. Installer Juggluco-appen.
+2. I Juggluco åpner du venstremenyen og velger `Photo` (bilde)
+3. Skann QR-koden på pakken til sensoren.
+4. Under venstremenyen -> settings (innstillinger) -> exchange data (utveksle data) må du passe på at xDrip broadcast (xDrip-kringkasting) er slått på.
+5. I **AAPS** velger du xDrip i [**Konfigurasjon → BS-kilde**](#Config-Builder-bg-source).
