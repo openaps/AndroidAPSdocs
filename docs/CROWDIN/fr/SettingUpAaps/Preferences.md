@@ -136,7 +136,7 @@ Le **Délai d'attente de la protection** définit combien de temps (en secondes)
 
 - Les limites de sécurité sont établies en fonction de l'âge sélectionné dans ce paramètre.
 - Si vous commencez à atteindre ces limites restrictives (comme le Maximum Bolus), il est temps de changer d’un cran.
-- Choisir un âge plus élevé que l'âge réel est une mauvaise idée, car cela peut mener à un surdosage en cas de mauvaise saisie dans la boîte de dialogue Insuline (par exemple en oubliant la virgule décimale).
+- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
 - Si vous voulez connaître les valeurs exactes de ces limites de sécurité fixes, allez à la fonction de l'algorithme que vous utilisez sur [cette page](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 (Preferences-maximum-bolus)=
@@ -275,7 +275,7 @@ Selon vos paramètres dans [Configuration > APS](../SettingUpAaps/ConfigBuilder.
 - [Assistance Améliorée Repas (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - état de l'algorithme en 2017
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - algorithme le plus récent recommandé pour les débutants
 
-Depuis la [version 3.3 d'**AAPS**](#version3300), la fonction [SI dynamique](../DailyLifeWithAaps/DynamicISF.md) fait partie d'OpenAPS SMB.
+As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -489,7 +489,7 @@ When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays
 
 Vous pouvez aider à améliorer **AAPS** en envoyant des rapports de plantage aux développeurs.
 
-**Export des paramètres sans surveillance**<br/> Si vous activez cette fonction, vous autorisez **AAPS** à exporter les paramètres sans action de l'utilisateur. Pour cela, le mot de passe principal est enregistré de façon sécurisée sur votre téléphone (seulement) lors du prochain export manuel. Le mot de passe enregistré est utilisé pendant 4 semaines au maximum. Après 4 semaines, vous recevez une notification qui indique que le mot de passe va bientôt expirer. Pendant un délai de grâce d'1 semaine, vous pouvez alors renouveler le mot de passe en exportant manuellement les paramètres depuis le menu Maintenance.
+**Export des paramètres sans surveillance**<br/> Si vous activez cette fonction, vous autorisez **AAPS** à exporter les paramètres sans action de l'utilisateur. For this the master password is securely stored on your phone (only) at the next manual export. Le mot de passe enregistré est utilisé pendant 4 semaines au maximum. Après 4 semaines, vous recevez une notification qui indique que le mot de passe va bientôt expirer. Pendant un délai de grâce d'1 semaine, vous pouvez alors renouveler le mot de passe en exportant manuellement les paramètres depuis le menu Maintenance.
 
 Après ce délai de grâce d'1 semaine, le mot de passe enregistré expire et tout export automatique des paramètres est annulé, avec une notification qui demande de saisir à nouveau le mot de passe. [(**Exports automatiques des paramètres**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) seront enregistrés dans les listes 'Careportal' et 'Entrées utilisateur' d'**AAPS**, sous Traitements.
 
