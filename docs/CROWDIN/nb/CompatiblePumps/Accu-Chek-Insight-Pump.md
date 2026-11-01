@@ -75,7 +75,7 @@ Roche trekker seg ut av insulinpumpemarkedet for å konsentrere diabetesportefø
        Bortsett fra toppen av det første bildet er skjermbildene av sammenkoblingen ovenfor fra en eldre **AAPS**-versjon og kan se annerledes ut i **AAPS** 4.
        ```
     
-    * For å fjerne sammenkoblingen trykker du på **Opphev paring** på pumpeskjermen og bekrefter **Tilbakestille paringsinformasjonen?**. Knappen **Sammenkobling av Insight** vises da igjen.
+    * For å fjerne sammenkoblingen trykker du på **Opphev sammenkobling** på pumpeskjermen og bekrefter **Tilbakestill sammenkoblingsinformasjon?**. Knappen **Sammenkobling av Insight** vises da igjen.
     
     Merk: Det er ingen permanent forbindelse mellom pumpen og telefonen. **AAPS** kobler bare til når det trengs (for eksempel for å sette en midlertidig basal, gi en bolus eller lese pumpehistorikken). Ellers ville batteriene i telefonen og pumpen bli tømt altfor fort.
     
@@ -129,13 +129,13 @@ Roche trekker seg ut av insulinpumpemarkedet for å konsentrere diabetesportefø
     
     * **Oppdater**: oppdaterer pumpestatusen.
     * **Aktiver varsel når slutt på midlertidig basal (pumpeinnstilling)** / **Slå av varsel når slutt på midlertidig basal (pumpeinnstilling)**: en standard Insight-pumpe gir en alarm når en midlertidig basal er ferdig. Denne knappen slår den alarmen på eller av uten at du trenger konfigurasjonsprogramvare.
-    * **Opphev paring**: fjerner sammenkoblingen med pumpen (se [Sammenkobling](#accu-chek-insight-pairing)).
+    * **Opphev sammenkobling**: fjerner sammenkoblingen med pumpen (se [Sammenkobling](#accu-chek-insight-pairing)).
     
     ![Skjermbilde av Insight-status](../images/Insight_Status2.png)
     
     ```{admonition} Eldre skjermbilde
     :class: note
-    Skjermbildet ovenfor er fra en eldre **AAPS**-versjon. I **AAPS** 4 ser pumpeskjermen annerledes ut og har også en **Opphev paring**-knapp.
+    Skjermbildet ovenfor er fra en eldre **AAPS**-versjon. I **AAPS** 4 ser pumpeskjermen annerledes ut og har også en **Opphev sammenkobling**-knapp.
     
 
 ## Innstillinger i pumpen
