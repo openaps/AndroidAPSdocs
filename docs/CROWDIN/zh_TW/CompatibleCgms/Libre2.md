@@ -40,7 +40,7 @@ Libre2 的 OOP（可在[此處](#Libre2_OOP2)找到）產生的血糖讀值與�
 
 ![已選取 xDrip+ 血糖來源的組態設定 > 血糖來源畫面](../images/v4/Configuration/configuration_bg_source.png)
 
--   如果手機處於飛航 模式時 AAPS 沒有收到血糖值，請依照 [xDrip 設定頁面](#xdrip-identify-receiver)中的說明使用「識別接收器」。
+-   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as described on [xDrip settings page](#xdrip-identify-receiver).
 
 ## 2. 使用 xDrip 直接連線
 
@@ -66,7 +66,7 @@ xDrip 不支援直接連線至美國和澳洲的 Libre 2。僅支持 Libre 2 和
 
 這對循環是必要的。曲線看起來很平滑，循環結果也非常好。用來設定鬧鐘的原始值波動稍大一些，但與讀取器顯示的值相符。此外，也可以在 xDrip 圖表中顯示原始值 ，以便及時因應快速 變化。請開啟「不常見的設定」\>「Libre 2 的進階設定」\>「顯示原始值」和「顯示傳感器資訊」。然後，原始值會額外顯示為小白點，並在系統選單中提供更多傳感器資訊。
 
-當血糖快速變化時，原始值非常有幫助。即使這些點的波動較大，但與平滑線相比，你能更好地察覺趨勢，從而做出正確的治療決策。
+當血糖快速變化時，原始值非常有幫助。 Even if the dots are jumpier you would detect the tendency much better than using the smoothed line to make proper therapy decisions.
 
 → 漢堡選單 → 設定 → 不常見的設定 → Libre 2 的進階設定
 
@@ -76,7 +76,7 @@ xDrip 不支援直接連線至美國和澳洲的 Libre 2。僅支持 Libre 2 和
 
 #### 校正
 
-您可以將 Libre 2 校正**-40 mg/dL 至 +20 mg/dL \[-2,2 mmol/L 至 +1,1 mmol/L\]** 的偏移量（截距）。斜率無法更改。請在設置新傳感器後進行指血測試，並注意插入後的前 12 小時可能不太準確。由於血糖測試可能存在較大誤差，請每 24 小時驗證一次並在必要時校正。如果幾天後傳感器的讀取值完全不準確，應考慮更換傳感器。
+You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2.2 mmol/L to +1.1 mmol/L\]** (intercept). 斜率無法更改。請在設置新傳感器後進行指血測試，並注意插入後的前 12 小時可能不太準確。由於血糖測試可能存在較大誤差，請每 24 小時驗證一次並在必要時校正。如果幾天後傳感器的讀取值完全不準確，應考慮更換傳感器。
 
 ## 3. 使用 Diabox
 
