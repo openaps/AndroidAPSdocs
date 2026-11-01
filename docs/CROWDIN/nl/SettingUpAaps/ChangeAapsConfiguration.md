@@ -1,4 +1,4 @@
-# Wijzigingen maken in de configuratie van AAPS
+# Making changes to your AAPS configuration
 
 Als je de **[Setup Wizard](../SettingUpAaps/SetupWizard.md)** hebt afgerond, hoef je niet de hele Wizard opnieuw te doorlopen als je alleen een deel van de configuratie van **AAPS** wilt wijzigen.
 
