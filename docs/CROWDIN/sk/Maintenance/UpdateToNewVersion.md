@@ -36,8 +36,8 @@ These steps are the same for every build method. V [poznámkach k vydaniu](../Ma
 
 Po nainštalovaní nového APK:
 
-- verziu **AAPS** v telefóne si môžete overiť tak, že vľavo hore otvoríte **ponuku** (☰) a potom **O aplikácii** (ako na snímke obrazovky nižšie). Aktuálnu verziu **AAPS** si môžete pozrieť;
-- uistite sa, že import nastavení prebehol; a
-- skontrolujte nastavenia **AAPS** v časti **Nastavenia** a uistite sa, že sú stále správne.
+- you can check the **AAPS** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). The current **AAPS** version can be viewed;
+- make sure you have imported your settings; and
+- please check your **AAPS** settings under **Settings** and ensure these remain accurate.
 
 ![Dialóg O aplikácii s nainštalovanou verziou AAPS](../images/about_dialog_version.png)
