@@ -78,7 +78,7 @@ Autotune 有三種執行方式：在外掛中手動執行一次（如下所述�
 
 - 如果你信任結果（輸入和輸出設定檔之間的變異百分比很低），你可以點擊「啟用設定檔」按鈕，然後點擊 OK 進行確認。
 
-  - 啟用調整後的設定檔會在設定檔清單中自動建立新的「Tuned」設定檔（**管理 → 設定檔**）。
+  - "Activate profile" will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
   - 如果您已在**管理 → 設定檔**中建立名為「Tuned」的設定檔，系統會在啟用前，先以 Autotune 計算結果更新此設定檔
 
   ![Autotune 啟用設定檔。](../images/Autotune/Autotune_6.png)
@@ -123,7 +123,7 @@ Autotune 有三種執行方式：在外掛中手動執行一次（如下所述�
 - **自動切換設定檔**（預設為關閉）：請參閱下方的 [使用自動化規則執行 Autotune](#autotune-run-autotune-with-an-automation-rule)。如果你將此設定更改為開啟，則輸入設定檔將自動被調整後的設定檔更新並啟用。
   - **請小心，你必須在接下來幾天內信任並驗證，在更新和啟用未修改的調整配置後，它會改善你的循環運行**
 
-- **將 UAM 歸類為基礎胰島素**（預設為關閉）：此設定適用於使用 AndroidAPS，且未輸入任何碳水化合物資料的使用者（完整 UAM）。當關閉時，他將阻止 UAM 被分類為基礎率。
+- **Categorize UAM as basal** (default Off): This setting is for the users using AAPS without any carbs entered (Full UAM). 當關閉時，他將阻止 UAM 被分類為基礎率。
   - 注意：如果當天偵測到至少一小時的碳水化合物吸收，無論此設定（開啟或關閉），所有分類為「UAM」的資料都會被分類為基礎率。
 - **預設調整天數**（預設為 5）：您可以透過此設定定義預設值。每次在 Autotune 外掛中選取新的設定檔時，**資料天數**都會替換為此預設值
 - **使用晝夜節律 IC/ISF**（預設為關閉）：請參閱下方的 [晝夜節律 IC 或 ISF 設定檔](#autotune-circadian-ic-or-isf-profile)。
@@ -188,7 +188,7 @@ Autotune 有三種執行方式：在外掛中手動執行一次（如下所述�
 
   ![Autotune 預設畫面](../images/Autotune/Autotune_17.png)
 
-- 接著，您可以選取**Autotune 設定檔**動作（位於**循環與胰島素**群組中）
+- Then you can select the **Run Autotune** action (in the **Loop & insulin** group)
 
   ![Autotune 預設畫面](../images/Autotune/Autotune_18.png)
 
@@ -212,7 +212,7 @@ Autotune 使用現有資料庫中的資訊，因此如果你剛在新手機上�
 
 Autotune 只是輔助工具，重要的是定期檢查你是否同意計算出的設定檔。如果有任何疑問，請更改 Autotune 設定（例如天數）或將結果複製到本地設定檔，並在使用之前調整設定檔。
 
-在應用 Autotune 結果之前，請務必手動使用 Autotune 幾天來檢查結果。只有當你完全信任 Autotune 結果，並且前一個設定檔與計算出的設定檔之間的變異變得非常小時，才開始使用自動化（絕不要提前）。
+在應用 Autotune 結果之前，請務必手動使用 Autotune 幾天來檢查結果。 And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile then you start to use Automation (Never before)
 
 - Autotune 對某些使用者非常有效，但對其他人可能不適用，因此**如果你不信任 Autotune 結果，請不要使用他**
 
