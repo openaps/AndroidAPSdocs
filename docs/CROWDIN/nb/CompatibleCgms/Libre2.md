@@ -77,7 +77,7 @@ Råverdiene er svært nyttige når blodsukkeret endrer seg raskt. Selv om prikke
 
 #### Kalibrering
 
-Du kan kalibrere Libre2 **med en forskyvning på -40 mg/dL til +20 mg/dL \[-2,2 mmol/L til +1,1 mmol/L\]** (skjæringspunkt). Stigningen (slope) kan ikke endres. Kontroller med fingerstikk etter at du har satt en ny sensor, og husk at den kan være unøyaktig de første 12 timene etter innsetting. Siden det kan være store forskjeller fra blodmålingene, bør du kontrollere hver 24. time og kalibrere om nødvendig. Hvis sensoren er helt feil etter noen dager, bør den byttes.
+Du kan kalibrere Libre2 **med en forskyvning på -40 mg/dL til +20 mg/dL \[-2.2 mmol/L til +1.1 mmol/L\]** (skjæringspunkt). Stigningen (slope) kan ikke endres. Kontroller med fingerstikk etter at du har satt en ny sensor, og husk at den kan være unøyaktig de første 12 timene etter innsetting. Siden det kan være store forskjeller fra blodmålingene, bør du kontrollere hver 24. time og kalibrere om nødvendig. Hvis sensoren er helt feil etter noen dager, bør den byttes.
 
 ## 3. Bruke Diabox
 
