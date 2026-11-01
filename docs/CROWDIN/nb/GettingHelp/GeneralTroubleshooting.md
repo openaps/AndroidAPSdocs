@@ -39,6 +39,7 @@ Hvis ingen av lenkene løser problemet ditt, se [Hvor kan jeg få hjelp](WhereCa
 * [Profil: «Basaldosen er ikke kompatibel med den aktuelle pumpen»](#your-aaps-profile-basal-not-compatible)
 * [Pumpe: «Data kommer fra en annen pumpe»](#config-builder-wrong-pump-data)
 * [Nightscout-klient (NSClient)](TroubleshootingNsClient.md)
+* **«AAPS-innstillingene kan ikke leses»** ved oppstart: innstillingene er kryptert med en nøkkel som Android oppbevarer for **AAPS**, og den nøkkelen åpner dem ikke lenger, for eksempel etter at telefonens nøkkellager er blitt tilbakestilt. Mens denne skjermen vises, kjører ikke **AAPS** og styrer ikke pumpen. Trykk på **Prøv på nytt**: det lukker **AAPS** og starter appen på nytt. Hvis det ikke hjelper, starter du telefonen på nytt. Bruk **Start på nytt** bare når ingenting annet hjelper: det legger den uleselige innstillingsfilen til side (den får nytt navn og beholdes) og starter **AAPS** med tomme innstillinger. Importer deretter den siste [eksporten av innstillingene](../Maintenance/ExportImportSettings.md) dine.
 
 ### Bruk
 
