@@ -62,7 +62,7 @@ Knappene nederst virker på den **valgte** profilen: **➕ Legg til**, **✏️ 
 
 **⧉ Dupliser** bruker ikonet med to firkanter som ofte brukes for *kopier*, men det er ikke noe å lime inn: den lager kopien i ett steg. Bekreft *Dupliser profil «Normal»?*, så legges en ny profil med navnet *Normal kopi* til sist i karusellen og velges, klar for **✏️ Rediger** (der du også kan gi den nytt navn). Dette er ikke det samme som å duplisere et tidligere **profilbytte** fra behandlingshistorikken, som lager en ny profil *der prosenten og tidsforskyvingen er lagt inn*. Se [Ta vare på et profilbytte til senere bruk](#ProfileSwitch-keep-for-later).
 
-(ProfileSwitch-read-only-mode)= **Bare ▶ Aktiver-knappen?** Innstillingene dine er beskyttet, så skjermen åpnes skrivebeskyttet. Trykk på **✏️ blyanten** i linjen øverst og skriv inn passordet for innstillinger. See [Settings protection now also locks the management screens](#v4changes-read-only-management).
+(ProfileSwitch-read-only-mode)= **Bare ▶ Aktiver-knappen?** Innstillingene dine er beskyttet, så skjermen åpnes skrivebeskyttet. Trykk på **✏️ blyanten** i linjen øverst og skriv inn passordet for innstillinger. Se [Sikkerhet for innstillinger låser nå også administrasjonsskjermene](#v4changes-read-only-management).
 
 ### Endre rekkefølgen på profiler
 
