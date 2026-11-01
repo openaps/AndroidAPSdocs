@@ -107,12 +107,12 @@ Git是一個可以讓你追蹤程式碼變更並與他人協作的程式。你�
 (BuildingAaps-steps-for-installing-git)=
 #### 安裝Git的步驟
 
-1.  檢查你是否已經安裝**Git**。你可以在Windows搜尋欄中輸入“git”來檢查—如果你看到**“Git bash”**或其他形式的Git，那麼它已經安裝，並且你可以直接前往[安裝Android Studio](#install-android-studio)：
+1.  檢查你是否已經安裝**Git**。 You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. 如果你沒有安裝Git，請從[**這裡**](https://git-scm.com/downloads)的“下載”部分下載並安裝最新版本。任何最新的Git版本都應該可以使用，請根據你的系統選擇正確的版本，無論是Mac、Windows還是Linux。
+2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). 任何最新的Git版本都應該可以使用，請根據你的系統選擇正確的版本，無論是Mac、Windows還是Linux。
 
 **Mac使用者注意：**Git網頁會指導你安裝名為"homebrew"的附加程式來協助安裝。如果你透過homebrew安裝Git，則無需更改任何偏好設定。
 
@@ -169,7 +169,7 @@ Android Studio 版本非常重要。請參閱 [上面的指示](#Building-APK-re
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-在最後一步，點擊「完成」來首次啟動 Android Studio。
+In the last step, click on "Finish" to start Android Studio for the first time.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
@@ -300,7 +300,7 @@ Android Studio 可能會建議更新 gradle 系統。**切勿更新 gradle！** 
 
 ![版本控制_Git](../images/Building-the-App/038_SettingsGit.png)
 
-檢查**Android Studio** 是否能夠自動找到正確的**Git 可執行檔的路徑**，透過點擊 "測試" 按鈕（1）：
+Check if **Android Studio** can automatically locate the correct **Path to Git executable** by clicking the button "Test" (1):
 
 ![Git 可執行檔](../images/Building-the-App/039_GitTest.png)
 
@@ -366,7 +366,7 @@ Android 要求每個應用程式必須被 _簽署_，以確保它只能從同一
 
 ```{admonition} WARNING!
 :class: warning
-請務必記下一個金鑰庫的位置。當你建置下一個 AndroidAPS 更新時，將需要它！
+請務必記下一個金鑰庫的位置。 You will need it when you build the next AAPS update!
 ```
 
 * 現在選擇一個簡單的密碼（並記下來），在密碼框中輸入它（2），並確認（2）。
