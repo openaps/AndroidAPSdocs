@@ -1,23 +1,23 @@
-# Change language and version
+# Bytte språk og versjon
 
-The documentation you are currently reading is available in several languages and is specific to a given version of **AAPS**. Both the language and the version can be changed from the menu at the bottom right of the screen.
+Dokumentasjonen du leser nå, finnes på flere språk og gjelder for en bestemt versjon av **AAPS**. Både språket og versjonen kan endres fra menyen nederst til høyre på skjermen.
 
 ```{note}
-Click on the bar at the bottom right of the screen to open the language and version selection menu.
+Klikk på linjen nederst til høyre på skjermen for å åpne menyen der du velger språk og versjon.
 ```
 
-![Open language menu](../images/documentation_language_menu.png)
+![Åpne språkmenyen](../images/documentation_language_menu.png)
 
-## Change language
+## Bytte språk
 
-In the menu, select the language you want to read the documentation in.
+I menyen velger du språket du vil lese dokumentasjonen på.
 
-Feel welcome to join [Crowdin](https://crowdin.com/project/androidapsdocs) translators and proofreaders to help translate the documentation into your language.
+Du er velkommen til å bli med som oversetter eller korrekturleser på [Crowdin](https://crowdin.com/project/androidapsdocs) og hjelpe til med å oversette dokumentasjonen til språket ditt.
 
-## Change version
+## Bytte versjon
 
-The current version is shown in the bottom right of the screen. To switch to a different version, click on the current version and select the version you need.
+Gjeldende versjon vises nederst til høyre på skjermen. For å bytte til en annen versjon klikker du på gjeldende versjon og velger versjonen du trenger.
 
 ```{warning}
-When changing language and/or version, you might get a 404 - Page not found, if the language or version page doesn't exist. This will frequently happen when switching version but should not happen when changing language: the page will show in English if not translated yet.
+Når du bytter språk og/eller versjon, kan du få feilmeldingen «404 - Page not found» (siden ble ikke funnet) hvis siden ikke finnes på det språket eller i den versjonen. Dette skjer ofte når du bytter versjon, men det skal ikke skje når du bytter språk: siden vises på engelsk hvis den ikke er oversatt ennå.
 ```
