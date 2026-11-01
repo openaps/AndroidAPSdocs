@@ -403,7 +403,7 @@ Výukový materiál (tutorial) pomáha žiakovi získať základné zručnosti. 
 
 - Ignorujte možnosti/alternatívy/…. Žiadna nejednoznačnosť
 
-- Prechody medzi krokmi: krok ukončite vetou, ktorá logicky vedie k ďalšiemu kroku. Príklad: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- Prechody medzi krokmi: krok ukončite vetou, ktorá logicky vedie k ďalšiemu kroku. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
 
 - **Výukový materiál**: názov (nadpis 1. úrovne)
 
