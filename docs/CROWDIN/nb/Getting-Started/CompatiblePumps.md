@@ -1,6 +1,6 @@
-# Compatible Pumps
+# Kompatible pumper
 
-AAPS works with a number of insulin pumps. Listen nedenfor viser enhetene som støttes nå. I parentes står det om AAPS kommuniserer med pumpen via telefonens innebygde Bluetooth, eller om det trengs en RileyLink-kompatibel enhet.
+AAPS fungerer med flere insulinpumper. Listen nedenfor viser enhetene som støttes nå. I parentes står det om AAPS kommuniserer med pumpen via telefonens innebygde Bluetooth, eller om det trengs en RileyLink-kompatibel enhet.
 
 <!-- List of hidden pages to avoid overcrowding the menu -->
 
@@ -38,12 +38,12 @@ AAPS works with a number of insulin pumps. Listen nedenfor viser enhetene som st
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) (Bluetooth)
 - [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) ([ekstra kommunikasjonsenhet](#CompatiblePumps-additional-communication-device) trengs)
 
-## My pump is not listed
+## Pumpen min står ikke på listen
 
 Detaljer om status for andre pumper som kanskje kan fungere med AAPS, finner du på siden [Framtidige (mulige) pumper](../CompatiblePumps/Future-possible-Pump-Drivers.md).
 
 (CompatiblePumps-additional-communication-device)=
-## Additional communication device
+## Ekstra kommunikasjonsenhet
 
 Hvis det ikke er nevnt noen ekstra kommunikasjonsenhet, går kommunikasjonen mellom insulinpumpen og **AAPS** via den innebygde Bluetooth-stakken i Android, uten at det trengs en ekstra enhet som oversetter kommunikasjonsprotokollen.
 
