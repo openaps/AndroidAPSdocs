@@ -43,8 +43,8 @@ Quando a sua instância do Nightscout estiver a funcionar, veja a [página de co
 O Tidepool está disponível no **AAPS** desde a versão 3.2, lançada no final de 2023.
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
-:class: danger  
-Como há um atraso de três horas entre a receção e a apresentação dos dados quando se usa o **AAPS**, o Tidepool não é adequado para partilhar informação em tempo real com os cuidadores.  
+:class: danger
+As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool is not suitable for sharing real-time information with caregivers.  
 Por outro lado, o Tidepool pode ser uma ótima solução para partilhar relatórios com o endocrinologista do doente, se o Nightscout não for uma solução aceite.  
 ```
 
