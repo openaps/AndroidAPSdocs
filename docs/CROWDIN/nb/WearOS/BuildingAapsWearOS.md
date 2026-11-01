@@ -78,7 +78,7 @@ Neste: installer Wear-apk-en på klokken, se [Wear OS-smartklokke](WearOsSmartwa
 
 Når du bygger den fulle **AAPS**-appen (og faktisk alle signerte apper), lager Android Studio en .json-fil i samme mappe. Dette gir så feil med [endringer som ikke er committet](#troubleshooting_androidstudio-uncommitted-changes) når du prøver å bygge den neste signerte appen, for eksempel **AAPS** wear-appen. Den raskeste løsningen er å gå til mappen der den fulle AAPS-appen ble bygget. Mappen din er sannsynligvis noe slikt som:
 
-`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\aapsclient\release.`
+`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\full\release.`
 
 Slett .json-filen som ikke trengs, eller flytt den ut av mappen. Prøv så å bygge **AAPS** wear-appen igjen. Hvis det ikke virker, hjelper den mer detaljerte [feilsøkingsveiledningen](../GettingHelp/TroubleshootingAndroidStudio.md) deg med å finne akkurat den filen som skaper problemet. Det kan også være keystore-filen din.
 
