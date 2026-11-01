@@ -7,7 +7,7 @@ Wil je geen apart Gmail-account voor **AAPS** maken? Ga dan direct naar het volg
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Met aparte Google Drive-ruimte loop je niet het risico dat je persoonlijke Google Drive-limiet volraakt door **Exporteer instellingen**.
+- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
 - Elke versie van **AAPS** (en ondersteunende apps zoals xDrip, BYODA, enz.) wordt op één plek opgeslagen, die los staat van je computer. Als je pc of telefoon gestolen, kwijt of kapot is, heb je er nog steeds toegang toe.
 - Als iedereen het op dezelfde manier inricht, met een vergelijkbare mappenstructuur, is online hulp geven eenvoudiger.
 - Afhankelijk van hoe je het inricht (zie hieronder), heb je een aparte identiteit als alias om in de community te communiceren. Dat kan je privacy beschermen. 
@@ -45,13 +45,13 @@ Klik [hier](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/v
  Dit zijn de stappen uit de video:
 
 In dit voorbeeld: 
-- Je bestaande “_dagelijkse_” Google-account is <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
+- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
 - Je nieuwe “_AAPS_” Gmail-account wordt: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-### Ga naar <https://account.google.com> 
+### Go to <https://myaccount.google.com> 
 
- Als je al bent ingelogd bij Google, kom je zo op de pagina **My Account** (Mijn account) van je “dagelijkse” account. (1) Klik rechtsboven op de pagina op je profielfoto (in dit geval een simpele ![](../images/Building-the-App/building_0002.png) (2) kies “_add another account_” (nog een account toevoegen).
+ Als je al bent ingelogd bij Google, kom je zo op de pagina **My Account** (Mijn account) van je “dagelijkse” account. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
 
 ![](../images/Building-the-App/building_0005.png)
 
@@ -87,7 +87,7 @@ Gmail toont de accountnaam. Je moet de voorwaarden van Gmail accepteren & je ins
 
 ### De weergave van het nieuwe profiel aanpassen
 
-Je zou nu op de pagina MyAccount van Gmail moeten zijn, met je nieuwe aparte **AAPS**-e-mailaccount. De profielfoto is standaard de eerste letter van je naam. Verander het in iets unieks om verwarring te voorkomen… in dit voorbeeld heeft Donald.Muck.AAPS ![](../images/Building-the-App/building_0002.png) vervangen door ![](../images/Building-the-App/building_0003.png)
+Je zou nu op de pagina MyAccount van Gmail moeten zijn, met je nieuwe aparte **AAPS**-e-mailaccount. De profielfoto is standaard de eerste letter van je naam. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
@@ -101,7 +101,7 @@ Dit deel kan wat verwarrend zijn, omdat je steeds tussen beide accounts moet wis
 2. Klik met de rechtermuisknop op het logo van je browser in de taakbalk
 3. Kies in het menu “New Window” (Nieuw venster)… en zet het zo neer dat het alleen de onderste helft van het scherm vult.
 
-Open <https://gmail.com> in elk browservenster. Zorg dat je persoonlijke account bovenaan staat en het nieuwe aparte **AAPS**-account onderaan. Dat account herken je makkelijk aan de profielfoto rechtsboven. (zo nodig kun je altijd van account wisselen door op de profielfoto te klikken en het juiste account te kiezen.
+Open <https://gmail.com> in elk browservenster. Zorg dat je persoonlijke account bovenaan staat en het nieuwe aparte **AAPS**-account onderaan. Dat account herken je makkelijk aan de profielfoto rechtsboven. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
 
 ![](../images/Building-the-App/building_0009.png)
 
