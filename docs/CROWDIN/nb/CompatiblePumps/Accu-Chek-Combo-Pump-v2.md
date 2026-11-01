@@ -118,48 +118,48 @@ Det er svært viktig å sørge for at batterioptimalisering er slått av. AAPS o
 
   ![Innstillinger for Accu-Chek Combo-driveren](../images/v4/Pumps/accu_chek_combo_settings.png)
 
-  **Åpne plugin** (eller **Administrer** > **Pumpe**) åpner pumpeskjermen for Accu-Chek Combo. Før en pumpe er paret, viser den **Ikke sammenkoblet til en pumpe**:
+  **Åpne plugin** (eller **Administrer** > **Pumpe**) åpner pumpeskjermen for Accu-Chek Combo. Før en pumpe er sammenkoblet, viser den **Ikke sammenkoblet til en pumpe**:
 
-  ![Pumpeskjermen for Accu-Chek Combo før paring](../images/v4/Pumps/accu_chek_combo_pump_screen.png)
+  ![Pumpeskjermen for Accu-Chek Combo før sammenkobling](../images/v4/Pumps/accu_chek_combo_pump_screen.png)
 
-* Trykk på **Paring** på pumpeskjermen. Skjermen **Tilkoble pumpe** åpnes. Følg stegene som vises på skjermen, og trykk så på **Start sammenkobling**. Når Android ber om tillatelse til å gjøre telefonen synlig for andre Bluetooth-enheter, trykker du på **Tillat**. Etter hvert viser Combo en 10-sifret PIN-kode for paring på skjermen sin, og **AAPS** ber om den. Skriv inn PIN-koden i feltet **10-sifret PIN**.
+* Trykk på **Sammenkobling** på pumpeskjermen. Skjermen **Tilkoble pumpe** åpnes. Følg stegene som vises på skjermen, og trykk så på **Start sammenkobling**. Når Android ber om tillatelse til å gjøre telefonen synlig for andre Bluetooth-enheter, trykker du på **Tillat**. Etter hvert viser Combo en 10-sifret PIN-kode for sammenkobling på skjermen sin, og **AAPS** ber om den. Skriv inn PIN-koden i feltet **10-sifret PIN**.
 
   ![Skjermen Tilkoble pumpe med knappen Start sammenkobling](../images/combo/combov2-pairing-screen-1.png)
 
   ![Android ber om å gjøre telefonen synlig for andre Bluetooth-enheter](../images/combo/combov2-pairing-bt-visible-prompt.png)
 
-  ![Combo-paring pågår, søker etter pumpen](../images/combo/combov2-pairing-screen-2.png)
+  ![Combo-sammenkobling pågår, søker etter pumpen](../images/combo/combov2-pairing-screen-2.png)
 
   De neste bildene er fra en eldre **AAPS**-versjon. Stegene og tekstene er de samme, men skjermbildene ser litt annerledes ut.
 
-  ![Skjermbilde av Combo-paring 3](../images/combo/combov2-pairing-screen-3.png)
+  ![Skjermbilde av Combo-sammenkobling 3](../images/combo/combov2-pairing-screen-3.png)
 
-  ![Skjermbilde av Combo-paring 4](../images/combo/combov2-pairing-screen-4.png)
+  ![Skjermbilde av Combo-sammenkobling 4](../images/combo/combov2-pairing-screen-4.png)
 
-  ![Skjermbilde av Combo-paring 4](../images/combo/combov2-pairing-screen-5.png)
+  ![Skjermbilde av Combo-sammenkobling 4](../images/combo/combov2-pairing-screen-5.png)
 
 * Hvis PIN-koden skrives inn feil, viser **AAPS** **PIN-koden fungerte ikke. Sjekk om det var en skrivefeil. Hvis dette fortsetter å skje, avbryt og prøv å pare enhet på nytt.**
 
-  ![Skjermbilde av Combo-paring 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
+  ![Skjermbilde av Combo-sammenkobling 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
-* Når **Vellykket sammenkobling med Combo** vises, trykker du på **OK**. Du kommer tilbake til pumpeskjermen, som nå viser pumpestatusen (se [Innholdet på pumpeskjermen for Accu-Chek Combo](#combov2-tab-contents) nedenfor). Knappen **Paring** erstattes av **Opphev paring**.
+* Når **Vellykket sammenkobling med Combo** vises, trykker du på **OK**. Du kommer tilbake til pumpeskjermen, som nå viser pumpestatusen (se [Innholdet på pumpeskjermen for Accu-Chek Combo](#combov2-tab-contents) nedenfor). Knappen **Sammenkobling** erstattes av **Opphev sammenkobling**.
 
 * For å kontrollere oppsettet (med pumpen **koblet fra** alle kanyler, for sikkerhets skyld!) bruker du AAPS til å sette en TBR på 500 % i 15 min og gi en bolus. Pumpen skal nå ha en TBR i gang og bolusen i historikken. AAPS skal også vise den aktive TBR-en og den leverte bolusen.
 
 * På Combo anbefales det å slå på tastelåsen for å hindre bolus fra pumpen, spesielt hvis pumpen har vært brukt før og «hurtigbolus»-funksjonen var en vane.
 
-## Merknader om paring
+## Merknader om sammenkobling
 
 Accu-Chek Combo ble utviklet før Bluetooth 4.0 kom ut, og bare ett år etter den aller første Android-versjonen. Derfor er måten den parer seg med andre enheter på, ikke 100 % kompatibel med hvordan det gjøres i Android i dag. For å løse dette helt ville AAPS trenge tillatelser på systemnivå, og de er bare tilgjengelige for systemapper. Slike apper installeres av telefonprodusentene – brukere kan ikke installere systemapper.
 
-Konsekvensen er at paring aldri blir 100 % problemfri. Spesielt kan Androids dialog for Bluetooth-PIN dukke opp et kort øyeblikk under paringen og forsvinne av seg selv. Men noen ganger blir den værende på skjermen og ber om en 4-sifret PIN. (Dette må ikke forveksles med den 10-sifrede PIN-koden for Combo-paring.) Ikke skriv inn noe, bare trykk på avbryt. Hvis paringen ikke fortsetter, følger du instruksjonene på skjermen for å prøve paringen på nytt.
+Konsekvensen er at sammenkobling aldri blir 100 % problemfri. Spesielt kan Androids dialog for Bluetooth-PIN dukke opp et kort øyeblikk under sammenkoblingen og forsvinne av seg selv. Men noen ganger blir den værende på skjermen og ber om en 4-sifret PIN. (Dette må ikke forveksles med den 10-sifrede PIN-koden for Combo-sammenkobling.) Ikke skriv inn noe, bare trykk på avbryt. Hvis sammenkoblingen ikke fortsetter, følger du instruksjonene på skjermen for å prøve sammenkoblingen på nytt.
 
 (combov2-tab-contents)=
 ## Innholdet på pumpeskjermen for Accu-Chek Combo
 
-For å åpne pumpeskjermen går du til **Administrer** > **Pumpe**. Når en pumpe er paret, viser den denne informasjonen (punktene er listet ovenfra og ned):
+For å åpne pumpeskjermen går du til **Administrer** > **Pumpe**. Når en pumpe er sammenkoblet, viser den denne informasjonen (punktene er listet ovenfra og ned):
 
-![Skjermbilde av pumpeskjermen for Accu-Chek Combo med paring (eldre AAPS-versjon)](../images/combo/combov2-tab-with-pairing.png)
+![Skjermbilde av pumpeskjermen for Accu-Chek Combo med sammenkobling (eldre AAPS-versjon)](../images/combo/combov2-tab-with-pairing.png)
 
 1. **Driverstatus**: Driveren kan være i en av disse tilstandene:
    - **Frakoblet**: Det er ingen Bluetooth-tilkobling. Driveren er i denne tilstanden mesteparten av tiden og kobler seg bare til pumpen ved behov – det sparer strøm
@@ -187,19 +187,19 @@ Combo kan styres via Bluetooth i _fjernterminal_-modus eller i _kommando_-modus.
 Nederst finner du disse knappene:
 
 - **Oppdater**: Utløser en umiddelbar oppdatering av pumpestatusen. Den brukes også til å fortelle AAPS at en tidligere oppdaget feil nå er rettet, og at AAPS kan sjekke på nytt at alt er i orden (mer om det nedenfor i [avsnittet om varsler](#combov2-alerts)). Du kan bare trykke på den når driveren er frakoblet, pauset eller i feiltilstand.
-- **Opphev paring**: Opphever paringen av Combo med **AAPS** og Android, etter at du har bekreftet **Vil du virkelig oppheve paringen av pumpen?**. Når ingen pumpe er paret, erstattes denne knappen av **Paring**.
+- **Opphev sammenkobling**: Opphever sammenkoblingen av Combo med **AAPS** og Android, etter at du har bekreftet **Vil du virkelig oppheve sammenkoblingen av pumpen?**. Når ingen pumpe er sammenkoblet, erstattes denne knappen av **Sammenkobling**.
 
 (combov2-preferences)=
 ## Innstillinger
 
 Disse innstillingene finnes for Combo-driveren (**Konfigurasjon** > **Pumpe** > **Accu-Chek Combo** > **Innstillinger**, eller innstillingsikonet (tannhjulet) på pumpeskjermen). Punktene er listet ovenfra og ned:
 
-1. **Søkevarighet (i sekunder)**: Under paring gjør driveren telefonen synlig for pumpen. Dette styrer hvor lenge telefonen er synlig. Som standard er maksimum (300 sekunder = 5 minutter) valgt. Android tillater ikke at telefonen er synlig uten tidsgrense, så en varighet må velges.
+1. **Søkevarighet (i sekunder)**: Under sammenkobling gjør driveren telefonen synlig for pumpen. Dette styrer hvor lenge telefonen er synlig. Som standard er maksimum (300 sekunder = 5 minutter) valgt. Android tillater ikke at telefonen er synlig uten tidsgrense, så en varighet må velges.
 2. **Autodetekter og automatisk registrer bytte av insulinreservoar**: Hvis dette er på, registrerer driveren det «reservoarbyttet» som du ellers ville registrert selv med **Administrer** > **Prime/fylling**. Dette er forklart [nærmere nedenfor](#combov2-autodetections).
 3. **Autodetekter og automatisk registrer batteribytte**: Hvis dette er på, registrerer driveren det «batteribyttet» som du ellers ville registrert selv med **Administrer** > **Bytte pumpebatteri**. Dette er forklart [nærmere nedenfor](#combov2-autodetections).
 4. **Aktiver detaljert Combo logging**: Dette øker mengden logging fra driveren kraftig. **FORSIKTIG**: Ikke slå på dette med mindre en utvikler ber deg om det. Ellers kan dette gi mye støy i **AAPS**-loggene og gjøre dem mindre nyttige.
 
-Paring og oppheving av paring gjøres på pumpeskjermen, ikke i innstillingene (se ovenfor).
+Sammenkobling og oppheving av sammenkobling gjøres på pumpeskjermen, ikke i innstillingene (se ovenfor).
 
 (combov2-autodetections)=
 ## Automatisk oppdaging og registrering av batteri- og reservoarbytte
@@ -244,7 +244,7 @@ Driveren gjør sitt beste for å koble til Combo, og bruker et par triks for å 
 1. Trykk på en knapp på Combo. Noen ganger slutter Combos Bluetooth-stakk å svare og tar ikke imot tilkoblinger lenger. Når du trykker på en knapp på Combo så LCD-skjermen viser noe, nullstilles Bluetooth-stakken. Som oftest er dette det eneste steget som trengs for å løse tilkoblingsproblemene.
 2. Start telefonen på nytt. Dette kan være nødvendig hvis problemet ligger i telefonens egen Bluetooth-stakk.
 3. Hvis batterilokket på Combo er gammelt, bør du vurdere å bytte det. Gamle batterilokk kan gi problemer med strømforsyningen i Combo, og det påvirker Bluetooth.
-4. Hvis tilkoblingsforsøkene fortsatt mislykkes, kan du vurdere å oppheve paringen og pare pumpen på nytt.
+4. Hvis tilkoblingsforsøkene fortsatt mislykkes, kan du vurdere å oppheve sammenkoblingen og pare pumpen på nytt.
 
 (combov2-tips-for-basic-usage)=
 ## Tips for grunnleggende bruk
