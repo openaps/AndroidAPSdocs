@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- 2026 年 10 月 31 日：4.0.0 版已推出。請參閱 [版本公告](#latestrelease) 以瞭解最新變更，並依照 [更新手冊](./Maintenance/UpdateToNewVersion.md) 的指示進行更新。
+31 October 2026: Version 4.0.0 is out. 請參閱 [版本公告](#latestrelease) 以瞭解最新變更，並依照 [更新手冊](./Maintenance/UpdateToNewVersion.md) 的指示進行更新。
 
 ```
 
@@ -17,7 +17,7 @@ Android APS (**AAPS**) 是一款開源應用程式，專為胰島素依賴型的
 
 第**1)**節入門部分，[介紹](Getting-Started/Introduction.md)解釋了人工胰臟系統（APS）設計的基本概念。本文件概述了循環系統的背景，為何開發**AAPS** ，並比較了**AAPS** 與其他系統，同時也討論了安全性問題。他提供了如何與你的醫療團隊討論 **AAPS**的建議，解釋了為什麼你需要自行建置**AAPS** 應用程式，而不是直接下載，並概述了典型的**AAPS** 系統連接性。他還討論了無障礙設計，並指出誰最有可能從**AAPS** 中受益。
 
-[準備 AAPS](./Getting-Started/PreparingForAaps.md)章節提供了更多有關安全考量的詳細資訊，以及相容**AAPS**的手機、CGM（連續血糖監測儀）和胰島素幫浦的相關訊息。他描述了你將經歷的過程，並提供了獲得完整**AAPS** 功能的大致時間表。本節將幫助在技術上作好準備，會以最快、最有效率的方式設置你的**AAPS** 。子章節[CGM 設定](./Getting-Started/CompatiblesCgms.md)說明如何調整 CGM 設定，以及哪些平滑選項最適合您。
+[準備 AAPS](./Getting-Started/PreparingForAaps.md)章節提供了更多有關安全考量的詳細資訊，以及相容**AAPS**的手機、CGM（連續血糖監測儀）和胰島素幫浦的相關訊息。他描述了你將經歷的過程，並提供了獲得完整**AAPS** 功能的大致時間表。本節將幫助在技術上作好準備，會以最快、最有效率的方式設置你的**AAPS** 。 The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
 
 現在你已經對過程有了深入的了解，可以開始建置你的**AAPS** 循環系統了。
 
@@ -40,7 +40,7 @@ Android APS (**AAPS**) 是一款開源應用程式，專為胰島素依賴型的
 
 第 **10)** 節介紹 **[AAPS 進階選項](./AdvancedOptions/FullClosedLoop.md)**，例如如何從使用 **AAPS** 進行混合式閉環（用餐時注射 _等_）進階到全閉環（不需注射）、如何[調整設定檔](./GettingHelp/ProfileTuning.md)並使用 Autotune，以及開發和工程模式的相關資訊。大多數使用者只需使用主要或"Master" **AAPS**版本即可正常操作，無須查看這些選項；本節給那些已經控制良好並希望進一步改善其設置的使用者。
 
-第 **11) [如何支援 AAPS](SupportingAaps/HowToEditTheDocs.md)**節提供相關資訊，讓您了解如何支援這個專案。你可以捐錢、設備或專業知識。你可以建議/自行更改文件，幫助 [翻譯文件](SupportingAaps/Translations)，並透過 Open Humans 項目提供你的資料。
+In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provide information so that you can support this project. 你可以捐錢、設備或專業知識。 You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations.md) and provide your data through the Open Humans project.
 
 第**12)**節資源，包含已存檔的或附加的文件，包括[對AAPS感興趣的臨床醫生](UsefulLinks/ClinicianGuideToAaps.md)的小節，或對那些希望與其臨床醫生分享此信息的患者，此主題也在介紹中提及。本節還包含更多糖尿病和閉環的參考資料和資源。本節包含[詞彙表](./UsefulLinks/Glossary.md)，列出 **AAPS** 文件中使用的縮寫（或簡稱）。這是查找 ISF 或 TT 等術語的地方。
 
