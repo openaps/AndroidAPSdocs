@@ -68,7 +68,7 @@
     
     * A translated page will not be published in docs before 
     
-        1. перевод не будет одобрен корректором. не закончится синхронизация между Crowdin и Github (раз в час), которая создает PR (pull request) для Github.
+        1. перевод не будет одобрен корректором. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
     
         1. PR в Github не будет одобрен.
     
@@ -79,11 +79,11 @@
     ```{admonition} Ссылки больше не переводятся
     :class: note
     
-    Ссылки больше не переводятся. Раньше здесь был соответствующий раздел, однако он исчез с переходом на Markdown и myst_parser. Метки создаются на английском и распространяются автоматически на другие языки.
+    Ссылки больше не переводятся. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
     
     
 
-Вы переводите текст ссылки, отображаемый пользователю. Please you have to be careful **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
+Вы переводите текст ссылки, отображаемый пользователю. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
 
 Корректорам следует обращать особое внимание вопросу правильности ссылок!
 
