@@ -2,7 +2,7 @@
 
 **Denne beskrivelsen gjelder bare redigering av den engelske dokumentasjonen. All ny informasjon må legges inn på engelsk først. Hvis du vil oversette til andre språk (takk!), bruk [Crowdin](https://crowdin.com/project/androidapsdocs).**
 
-Tips om hvordan du formaterer tekst (overskrifter, fet skrift ...) og lager lenker finner du i avsnittet [«Kodesyntaks»](#code-syntax) på denne siden.
+Tips om hvordan du formaterer tekst (overskrifter, fet skrift ...) og lager lenker finner du i avsnittet [«Kodesyntaks»](#edit-the-docs-code-syntax) på denne siden.
 
 ## Generelt
 
@@ -34,11 +34,11 @@ Eller klikk på blyantikonet som vises i den øverste linjen på sideinnholdet d
 
 3. Uansett hvilket av alternativene i steg 2 du velger, lages det en ny gren i DITT repository, der endringene dine blir lagret. Gjør endringene dine i filen.
 
-Vi bruker Markdown for dokumentasjonssidene. Filene har endelsen «.md». Markdown-spesifikasjonen er ikke fast, og vi bruker for øyeblikket myst_parser for Markdown-filene våre. Pass på å bruke riktig syntaks, som [beskrevet nedenfor](#code-syntax).
+Vi bruker Markdown for dokumentasjonssidene. Filene har endelsen «.md». Markdown-spesifikasjonen er ikke fast, og vi bruker for øyeblikket myst_parser for Markdown-filene våre. Pass på å bruke riktig syntaks, som [beskrevet nedenfor](#edit-the-docs-code-syntax).
 
 ![Rediger gren](../images/PR3.png)
 
-4. Du har jobbet i fanen «<>Edit file». Velg fanen «Preview changes» for å se på endringene med friske øyne og sjekke at alt ser ut slik du mente (skrivefeil osv.). Hvis du ser noe som bør forbedres, gå tilbake til redigeringsfanen og gjør flere forbedringer. 
+4. Du har jobbet i fanen «<>Edit file». Velg fanen «Preview changes» for å se på endringene med friske øyne og sjekke at alt ser ut slik du mente (sjekk for skrivefeil). Hvis du ser noe som bør forbedres, gå tilbake til redigeringsfanen og gjør flere forbedringer. 
 
 ![forhåndsvisning](../images/PR5.png)
 
@@ -54,7 +54,7 @@ Vi bruker Markdown for dokumentasjonssidene. Filene har endelsen «.md». Markdo
 
 ![Følge med på PR-en](../images/PR7.png)
 
-PS: Forken og grenen din ligger fortsatt på din egen GitHub-konto. Når du får beskjed om at PR-en din er merget, kan du slette grenen hvis du er ferdig med den (varslingsområdet i steg 8 gir deg en lenke for å slette grenen når den er lukket eller merget). Hvis du følger denne framgangsmåten ved senere endringer, starter du alltid med en oppdatert versjon av AndroidAPSdocs-repositoryet. Hvis du velger en annen måte å starte en PR på (for eksempel ved å redigere med master-grenen i din egen fork som utgangspunkt), må du først sørge for at repositoryet ditt er oppdatert: gjør en «compare» først, og merge inn alle endringer som har skjedd siden du sist oppdaterte forken din. Siden folk ofte glemmer å oppdatere repositoryet sitt, anbefaler vi at du bruker PR-prosessen beskrevet ovenfor til du er fortrolig med å gjøre «compares».
+PS: Forken og grenen din ligger fortsatt på din egen GitHub-konto. Når du får beskjed om at PR-en din er merget, kan du slette grenen hvis du er ferdig med den (varslingsområdet i steg 7 gir deg en lenke for å slette grenen når den er lukket eller merget). Hvis du følger denne framgangsmåten ved senere endringer, starter du alltid med en oppdatert versjon av AndroidAPSdocs-repositoryet. Hvis du velger en annen måte å starte en PR på (for eksempel ved å redigere med master-grenen i din egen fork som utgangspunkt), må du først sørge for at repositoryet ditt er oppdatert: gjør en «compare» først, og merge inn alle endringer som har skjedd siden du sist oppdaterte forken din. Siden folk ofte glemmer å oppdatere repositoryet sitt, anbefaler vi at du bruker PR-prosessen beskrevet ovenfor til du er fortrolig med å gjøre «compares».
 
 (edit-the-docs-code-syntax)=
 
@@ -69,7 +69,7 @@ Skribenten markerer for eksempel bare en overskrift som overskrift på nivå 1, 
 Tanken bak dette er at
 
 - skribenten skal tenke på teksten først, ikke formateringen,
-- Markdown-teksten kan utveksles mellom ulike Markdown-verktøy, i stedet for å være låst til for eksempel proprietære verktøy som Microsoft Windows, og
+- Markdown-teksten kan utveksles mellom ulike Markdown-verktøy, i stedet for å være låst til for eksempel proprietære verktøy som Microsoft Word, og
 - du kan lage flere utdataformater fra én Markdown-fil.
 
 Markdown er ikke en 100 % fast standard, og vi prøver å holde oss så nær standarden som mulig for å
@@ -453,7 +453,7 @@ Formålet med en veiledning er å hjelpe en bruker som allerede har kompetansen,
 
 - HVORDAN
 
-- fortelleren snakker direkte til leseren: I denne opplæringen skal **du**
+- fortelleren snakker direkte til leseren: I denne veiledningen skal **du**
 
 - Futurum -> for å vise sluttmålet
 
