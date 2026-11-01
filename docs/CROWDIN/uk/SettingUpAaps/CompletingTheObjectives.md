@@ -10,7 +10,7 @@
 
 **Завдання 1–8** проведуть вас від налаштування **AAPS** на смартфоні до «базової» гібридної закритої петлі. This will take about 6 weeks to complete. Ви можете дійти до **Завдання 5** з віртуальною помпою (і тим часом вводити інсулін іншим способом). **Завдання 9 і 10** призначені для перевірки складніших функцій **AAPS**, щоб краще контролювати діабет. На їх виконання піде до 3 місяців, можливо, більше. Детальніше про орієнтовний розподіл часу дивіться тут: [Скільки часу це займе?](#preparing-how-long-will-it-take)
 
-Крім руху вперед по **Завданнях**, за потреби ви також можете скинути свій прогрес і [повернутися до попереднього завдання](#go-back-in-objectives).
+As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#CompletingTheObjectives-go-back-in-objectives).
 
 ## Backup your settings
 
@@ -39,7 +39,7 @@ Exporting your **AAPS** settings is recommended after completing each **Objectiv
 - If using Tidepool:
   - Виконайте інструкції на сторінці [Tidepool](../SettingUpAaps/Tidepool.md), щоб **Tidepool** міг отримувати та показувати дані **AAPS**.
 
-Примітка: *можливо, доведеться дочекатися наступного показника глюкози з сенсора, перш ніж **AAPS** його розпізнає.*
+Note: *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
 
 (objectives-objective2)=
 ## Завдання 2: Навчіться керувати AAPS
@@ -51,7 +51,7 @@ Exporting your **AAPS** settings is recommended after completing each **Objectiv
 Щоб виконати **Завдання 2**, потрібно:
 - Встановити **Профіль** на 90 % на 10 хв.
   - _Підказка_: торкніться назви профілю на головному екрані, щоб відкрити екран **Профіль**, потім натисніть кнопку **Активувати** (▶) і задайте відсоток і тривалість. Більше інформації в розділі [Перемикання профілю та відсоток профілю](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-  - _Примітка_: **AAPS** не приймає базальні швидкості нижче 0,05 Од/год. Якщо ваш **Профіль** має швидкості 0,06 Од/год або нижче, перед цим завданням вам потрібно створити тимчасовий **Профіль** з вищими базальними швидкостями. Після виконання цього завдання поверніться до свого звичайного **Профілю**.
+  - _Примітка_: **AAPS** не приймає базальні швидкості нижче 0,05 Од/год. If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Після виконання цього завдання поверніться до свого звичайного **Профілю**.
 - Імітуйте «прийняття душу»: [від'єднайте помпу](#AapsScreens-loop-status) в **AAPS** на 1 год.
   - _Підказка_: натисніть значок петлі на головному екрані, щоб відкрити діалог петлі, потім виберіть тривалість у розділі **Від’єднати помпу**.
 - End "taking a shower" by reconnecting your pump.
@@ -94,7 +94,7 @@ For each question, there may be more than one answer that is correct! If an inco
 - За потреби використовуйте [**Тимчасові цілі**](../DailyLifeWithAaps/TempTargets.md). After treating a hypo, use the predefined "hypo temp target" to prevent the system from overcorrecting upon the bounce back.
 - Якщо на цьому етапі ви ще в [простому режимі](#preferences-simple-mode), зараз, мабуть, добрий час його вимкнути.
 
-Щоб зменшити кількість запропонованих змін базалу у відкритій петлі, ви й далі можете використовувати поради з [**Завдання 3**](#objective-3-prove-your-knowledge). Крім того, мінімальний відсоток для рекомендованих змін базалу можна змінити налаштуванням «**Мінімальна зміна в режимі відкритої петлі**» в **Налаштування → Петля**. The higher the value, the fewer change notifications you will receive.
+To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Крім того, мінімальний відсоток для рекомендованих змін базалу можна змінити налаштуванням «**Мінімальна зміна в режимі відкритої петлі**» в **Налаштування → Петля**. The higher the value, the fewer change notifications you will receive.
 
 ![Мінімальна зміна для запиту у відкритій петлі](../images/OpenLoop_MinimalRequestChange2.png)
 
@@ -119,7 +119,7 @@ For each question, there may be more than one answer that is correct! If an inco
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-Якщо ви використовуєте відкриту петлю з віртуальною помпою, **зупиніться тут**. Натискайте «Перевірити» в кінці цього **Завдання** лише тоді, коли перейдете на «справжню» помпу, яка вводить інсулін.
+Якщо ви використовуєте відкриту петлю з віртуальною помпою, **зупиніться тут**. Only tap **Verify** at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
 
 ```
 
@@ -167,14 +167,14 @@ For each question, there may be more than one answer that is correct! If an inco
 
 - Виберіть **Закрита петля**: натисніть [значок петлі](#AapsScreens-loop-status) на головному екрані й виберіть **Закрита петля** як робочий режим. Залишайтеся в режимі **Закрита петля** протягом 1 дня.
 
-- Slowly raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
+- Slowly raise your 'Max IOB for SMB' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
 
 Стандартна рекомендація для цього налаштування: «**середній болюс на їжу + 3 × максимальний добовий базал**», де «максимальний добовий базал» — це найбільше погодинне значення в будь-якому часовому відрізку доби.
 
 ![максимальний добовий базал](../images/MaxDailyBasal2.png)
 
 This recommendation should be seen as a starting point. If you use this rule but are experiencing AAPS delivering too much insulin as glucose levels rise, you may need to :
-* lower the "Maximum total IOB OpenAPS can’t go over" value;
+* lower the "Max IOB for SMB" value;
 * перегляньте налаштування **Профілю**, змінюючи лише одну річ за раз.
 
 Або, якщо у вас дуже висока інсулінорезистентність, дуже обережно підвищуйте значення **maxIOB**.
@@ -202,7 +202,7 @@ This recommendation should be seen as a starting point. If you use this rule but
 Мінімальний час для виконання цього завдання: **28 днів**. This is a mandatory wait time. You can’t proceed to the next Objective before this time is up.
 
 - [Розділ про SMB у цій документації](#Open-APS-features-super-micro-bolus-smb) та [опис oref1 у документації openAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) обов'язково прочитайте, щоб зрозуміти **SMB** і поняття **нульового тимчасового базалу (zero-temping)**.
-- Після цього можна [підвищити maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over), щоб **SMB** працювали ефективніше. Тепер maxIOB включає весь **IOB**, а не лише накопичений базал. Цей поріг призупиняє **SMB**, доки IOB не опуститься нижче цього значення (_наприклад_, **maxIOB** встановлено на 7 Од, і на їжу введено болюс 8 Од: SMB будуть призупинені й не вводитимуться, доки **IOB** не опуститься нижче 7 Од). Добрий початок — встановити **maxIOB** = **середній болюс на їжу + 3 × максимальний добовий базал**, де «максимальний добовий базал» — це найбільше погодинне значення в будь-якому часовому відрізку доби. Для довідки див. [завдання 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets).
+- Після цього можна [підвищити maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over), щоб **SMB** працювали ефективніше. Тепер maxIOB включає весь **IOB**, а не лише накопичений базал. Цей поріг призупиняє **SMB**, доки IOB не опуститься нижче цього значення (_наприклад_, **maxIOB** встановлено на 7 Од, і на їжу введено болюс 8 Од: SMB будуть призупинені й не вводитимуться, доки **IOB** не опуститься нижче 7 Од). Добрий початок — встановити **maxIOB** = **середній болюс на їжу + 3 × максимальний добовий базал**, де «максимальний добовий базал» — це найбільше погодинне значення в будь-якому часовому відрізку доби. See [objective 7](#objectives-objective7) as reference.
 - Оцініть швидкість засвоєння вуглеводів і, якщо вона здається вам надто повільною або надто швидкою, змініть параметр «min_5m_carbimpact» у [Налаштування → Налаштування засвоєння → min_5m_carbimpact](#Preferences-min_5m_carbimpact).
 
 (objectives-objective10)=
