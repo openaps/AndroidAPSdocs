@@ -2,7 +2,7 @@
 
 ## Verilerinizi bilim için bağışlayın
 
-Verilerinizi araştırma projelerine bağışlayarak topluluğa yardımcı olabilirsiniz! Bu bilim insanlarının işleri ilerletmesine, yeni bilimsel fikirler üretmesine ve açık kaynaklı kapalı döngü sistemlerine açıklığı teşvik etmesine yardımcı olur. AAPS is ready to synchronize your data with [Open Humans](https://www.openhumans.org), a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data.
+Verilerinizi araştırma projelerine bağışlayarak topluluğa yardımcı olabilirsiniz! This helps scientists to pay it forward, develop new scientific ideas and make open source closed loop systems better known. AAPS is ready to synchronize your data with [Open Humans](https://www.openhumans.org), a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data.
 
 Verilerinize ne olduğu ve verilerinize erişmelerine izin vererek hangi projeleri desteklemek istediğiniz konusunda tam kontrol sizde olur. Katıldığınız projeye bağlı olarak veriler, onlar tarafından farklı şekillerde ve ölçüde değerlendirilir ve kullanılır.
 
@@ -76,7 +76,7 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the conf
 
 'OPEN' projesi, sayısı her geçen gün artan diyabetli ve çeşitli sağlık sistemleri ile insanlar üzerinde kendin yap yapay pankreas sistemlerinin (DIY APS) etkileri etrafında bir kanıt temeli oluşturmak için hasta inovasyoncuları, klinisyenleri, sosyal bilimcileri, bilgisayar bilimcileri ve hasta organizasyonlarını bir araya getiren uluslararası ve sektörler arası bir konsorsiyumdan oluşuyor. Daha fazla ayrıntı için lütfen [web sitelerine](https://www.open-diabetes.eu/) bakınız.
 
-Eylül 2020 'OPEN' projesi, Open Humans'a yüklediğiniz verileri bağışlama seçeneği de dahil olmak üzere bir [anket](https://survey.open-diabetes.eu/) başlattı. Verilerinizi 'OPEN' projesine nasıl bağışlayacağınız konusunda bir [öğretici video](https://open-diabetes.eu/en/open-survey/survey-tutorials/) kendi sitesinde ve anketin içinde mevcuttur.
+In September 2020 the 'OPEN' project launched a [survey](https://survey.open-diabetes.eu/) including the option to donate data you uploaded to Open Humans. Verilerinizi 'OPEN' projesine nasıl bağışlayacağınız konusunda bir [öğretici video](https://open-diabetes.eu/en/open-survey/survey-tutorials/) kendi sitesinde ve anketin içinde mevcuttur.
 
 ### [OpenAPS Veri Ortaklığı](https://www.openhumans.org/activity/openaps-data-commons/)
 
