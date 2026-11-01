@@ -100,7 +100,7 @@ Open the **menu** (☰) in the top-left corner of the main screen and select **T
 * Carbs and bolus
 * [Extended bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Temp basal
-* [Temporary target](../DailyLifeWithAaps/TempTargets.md)
+* [Midlertidig mål](../DailyLifeWithAaps/TempTargets.md)
 * [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 * Careportal: notes and careportal entries
 * Running mode : history of loop status
@@ -151,9 +151,9 @@ Deleting the entries only affects your reports in Nightscout and will probably t
 
 On the left of a line, a red S means “Suspend” : it happens when basal is not currently delivered. This is a normal situation when in the process of changing a pod, for example.
 
-### Temporary target
+### Midlertidig mål
 
-![Temporary target](../images/TreatmentsView3.png)
+![Midlertidig mål](../images/TreatmentsView3.png)
 
 The history of temporary targets can be seen here.
 
