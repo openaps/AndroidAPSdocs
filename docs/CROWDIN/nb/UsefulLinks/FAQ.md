@@ -377,7 +377,7 @@ First try the **Reset RileyLink** button on the pump screen (see your pump's pag
 6. Start **AAPS**.
 7. On the pump screen, tap **Pair RileyLink** and select your Link again.
 
-### Remote control
+### Fjernstyring
 
 (FAQ-aapsclient)=
 
