@@ -52,7 +52,7 @@ Die zu Deiner Android-Version passende **AAPS-Version**, findest in der folgende
 WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsWearOs-WearOS5).
 ```
 
-Versions with a heading are the latest release for each Android version (see the table above). The other releases follow in between, with their notes or a link to them on GitHub.
+Versionen mit eigener Überschrift sind jeweils die letzte Version für eine Android-Version (siehe Tabelle oben). Die übrigen Versionen folgen dazwischen, mit ihren Hinweisen oder einem Link dazu auf GitHub.
 
 (latestrelease)=
 
@@ -159,7 +159,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 - NSClientV3: Fix gap after reconnection @MilosKozak
 - Automation: Fix deserialization @MilosKozak
 - Equil: Fix battery report @MilosKozak
-- Cleanup workflow @vanelsberg
+- Workflow aufgeräumt @vanelsberg
 - Equil: improve error recovery @MilosKozak
 - DanaRS: fix domestic pump communication @MilosKozak
 - Insight: Fix TBR sync @MilosKozak
@@ -192,7 +192,7 @@ Release date: 04-02-2026
 
 - Equil: Fix resistance for different models @hhfcvmars
 - Tidepool: Fix session @MilosKozak
-- Medtrum: Fix activation path by preventing double fill @MilosKozak
+- Medtrum: Aktivierung korrigiert, doppeltes Füllen wird verhindert @MilosKozak
 - COB: Fix COB calculation (covers dangerous edge case) @MilosKozak
 
 ---
@@ -304,7 +304,7 @@ Release date: 31-12-2025
 
 **UI/UX Improvements**
 
-* various improvements @MilosKozak @Philoul @olorinmaia
+* Verschiedene Verbesserungen @MilosKozak @Philoul @olorinmaia
 
 **Automatisierung**
 
@@ -373,7 +373,7 @@ Erscheinungsdatum: 27.03.2025
 * Radiobuttons UI improvements @olorinmaia
 * Automation: position choosing from map @MilosKozak
 * Version visible on main screens @MilosKozak
-* Compilation with existing git system is enforced (no zip downloads)
+* Das Erstellen mit einem vorhandenen git-System ist Pflicht (keine ZIP-Downloads)
 * Show version on main screen @MilosKozak
 * Tidepool upload improvements @ConstantinMatheis
 
@@ -395,7 +395,7 @@ Release date: 21-01-2025
 **Bug fixes**
 
 * Dash: bonding is optional (default off) @MilosKozak
-* Equil: fixed bolus 10+U, alarm improvements @EquilHack
+* Equil: Bolus ab 10 IE korrigiert, Verbesserungen bei Alarmen @EquilHack
 * Garmin: watch improvements @swissalpine
 * Watch improvements @olorinmaia
 * Control loop status from watch @tdrkDev
@@ -614,26 +614,26 @@ Release date: 23-10-2023
 - tests cleanup @ryanhaining @MilosKozak
 - new 110k+ lines of code, changed 240k lines, 6884 changed files
 
-(Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)= **Important comments on using v3 versus v1 API for Nightscout with AAPS**
+(Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)= **Wichtige Hinweise zur Verwendung der v3- statt der v1-API für Nightscout mit AAPS**
 
 v1 is the old protocol used for exchanging data between NS web site and NS server. It has many limitations
 - v1 sends only 2 days of data
 - v1 send all 2 days data on every reconnection
-- using websockets is mandatory = permanent connection, more battery consumption
+- Websockets sind Pflicht = dauerhafte Verbindung, höherer Akkuverbrauch
 - during frequent disconnects to NS connection is paused for 15 minutes to prevent high data usage
 
 v3 is new protocol. More safe and efficient
 - while using tokens you can better define access rights
 - protocol is more efficient on both sides (AAPS & NS)
 - It can read up to 3 months of data from NS
-- you can choose to use or to not use websockets on every device (using means faster updates, not using means lower power consumption, but slower updates ie. minutes)
+- Du kannst auf jedem Gerät wählen, ob Websockets verwendet werden oder nicht (mit Websockets gibt es schnellere Aktualisierungen, ohne weniger Akkuverbrauch, aber langsamere Aktualisierungen, also im Minutenbereich)
 - NSClient is not paused on disconnections
 
 LIMITATIONS
 - NS 15 must be used with AAPS 3.2
 - v3 doesn't see updates done by v1 protocol (probably it will be resolved in some future version of NS)
-- in the opposite direction, because of the old ineffective method of tracking changes, v1 sees changes done by v3
-- remember NS still uses v1 internally so far thus is not possible to enter data through NS web UI if you are using v3. You must use AAPSClient or SMS if you want to enter data remotely
+- Umgekehrt sieht v1 wegen der alten, ineffizienten Methode zum Nachverfolgen von Änderungen die Änderungen, die v3 vornimmt
+- remember NS still uses v1 internally so far thus is not possible to enter data through NS web UI if you are using v3. Wenn Du Daten aus der Ferne eingeben willst, musst Du AAPSClient oder SMS verwenden
 
 RECOMMENDED SETTING
 - because of all above you should choose only one method and use it on all devices (remember all other uploaders at time of writing this are using v1). If you decide to go to v3, select v3 in AAPS and all AAPSClients
@@ -667,7 +667,7 @@ Release date: 31-01-2022
 
 Release date: 05-10-2021
 
-This version is the last one supporting Android 8. [Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1)
+This version is the last one supporting Android 8. [Versionshinweise](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1)
 
 ---
 
