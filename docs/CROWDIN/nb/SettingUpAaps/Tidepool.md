@@ -1,10 +1,10 @@
 # Tidepool
 
-Tidepool er et tredjepartsverktøy som samler inn data om BS, insulin og karbohydrater (og merknadene du legger til behandlingene dine), og kan brukes til å analysere og dele disse dataene med behandlingsteamet ditt. Fra AAPS versjon 3.2 kan den brukes som et alternativ til Nightscout for å oppfylle deler av Opplæringsmål 1. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with.
+Tidepool er et tredjepartsverktøy som samler inn data om BS, insulin og karbohydrater (og merknadene du legger til behandlingene dine), og kan brukes til å analysere og dele disse dataene med behandlingsteamet ditt. Fra AAPS versjon 3.2 kan den brukes som et alternativ til Nightscout for å oppfylle deler av Opplæringsmål 1. Den kan også brukes sammen med Nightscout som en alternativ rapporteringsplattform som fungerer godt i kliniske sammenhenger. Dette kan være et godt alternativ for barn som bruker AAPS og vil ha fjernovervåking og fjernstyring gjennom Nightscout, men som vil ha en rapporteringsplattform som behandlingsteamet deres er mer fortrolig med.
 
-Det er viktig å forstå at Tidepool bare er for rapportering. It is NOT a real-time follow app. Hvis du trenger følgere utover AAPS-hovedtelefonen, må du også sette opp Nightscout.
+Det er viktig å forstå at Tidepool bare er for rapportering. Det er IKKE en følgeapp i sanntid. Hvis du trenger følgere utover AAPS-hovedtelefonen, må du også sette opp Nightscout.
 
-Merk: Organisasjonen Tidepool har lansert produktet iOS Loop med FDA-godkjenning. This effort has nothing to do with their data reporting platform or AAPS.
+Merk: Organisasjonen Tidepool har lansert produktet iOS Loop med FDA-godkjenning. Dette arbeidet har ingenting å gjøre med datarapporteringsplattformen deres eller AAPS.
 
 
 ## Steg 1 – Opprett en Tidepool-konto
