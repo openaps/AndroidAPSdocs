@@ -108,12 +108,12 @@ Git je program, který umožňuje sledovat změny v kódu a spolupracovat s osta
 (BuildingAaps-steps-for-installing-git)=
 #### Postup instalace Gitu
 
-1.  Zkontrolujte, zda už nemáte **Git** nainstalovaný. Můžete to zjistit tak, že do vyhledávání ve Windows napíšete „git“ – pokud uvidíte **„Git bash“** nebo jinou podobu Gitu, je už nainstalovaný a můžete přejít rovnou na [instalaci Android Studia](#install-android-studio):
+1.  Zkontrolujte, zda už nemáte **Git** nainstalovaný. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. Pokud Git nainstalovaný nemáte, stáhněte a nainstalujte nejnovější verzi pro svůj systém z části „Download“ [**zde**](https://git-scm.com/downloads). Jakákoliv nedávná verze Gitu by měla fungovat, vyberte správnou verzi pro váš systém, ať je to Mac, Windows nebo Linux.
+2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Jakákoliv nedávná verze Gitu by měla fungovat, vyberte správnou verzi pro váš systém, ať je to Mac, Windows nebo Linux.
 
 **Poznámka pro uživatele Macu:** webová stránka Gitu vás také navede k instalaci dalšího programu s názvem „homebrew“, který s instalací pomůže. Pokud instalujete git přes homebrew, není třeba měnit žádné předvolby.
 
@@ -170,7 +170,7 @@ Po dokončení stiskněte „Next“
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-V posledním kroku klikněte na „Finished“, aby se Android Studio poprvé spustilo.
+In the last step, click on "Finish" to start Android Studio for the first time.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
@@ -302,7 +302,7 @@ V levém horním rohu **Android Studia** otevřete hamburger menu a přejděte n
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-Klikněte na tlačítko „Test“ (1) a zkontrolujte, zda **Android Studio** dokáže automaticky najít správnou cestu **Path to Git executable** (cesta ke spustitelnému souboru Git):
+Check if **Android Studio** can automatically locate the correct **Path to Git executable** by clicking the button "Test" (1):
 
 ![Spustitelný soubor Git](../images/Building-the-App/039_GitTest.png)
 
@@ -369,7 +369,7 @@ If you have built AAPS before, do NOT create a new keystore but select your exis
 
 ```{admonition} WARNING!
 :class: warning
-Poznamenejte si, kde je vaše úložiště klíčů uložené. Budete ho potřebovat, až budete sestavovat další aktualizaci AndroidAPS!
+Poznamenejte si, kde je vaše úložiště klíčů uložené. You will need it when you build the next AAPS update!
 ```
 
 * Nyní zvolte jednoduché heslo (a poznamenejte si ho), zadejte ho do pole pro heslo (2) a potvrďte ho (2).
