@@ -421,7 +421,7 @@ Active insulin including boluses **and basal**.
 
 (aaps-screens-iob)=
 
-#### Insulin on board (IOB)
+#### Aktivt insulin (IOB)
 
 Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
 
