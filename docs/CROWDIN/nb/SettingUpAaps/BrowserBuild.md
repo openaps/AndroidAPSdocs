@@ -1,77 +1,77 @@
 (browser-build)=
 
-# Browser build
+# Nettleserbygg
 
-Building AAPS with GitHub Actions.
+Bygge AAPS med GitHub Actions.
 
-**Minimum AAPS version supported is 3.3.2.1.**
+**Laveste AAPS-versjon som støttes, er 3.3.2.1.**
 
 ## Build yourself instead of download
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**AAPS-appen (en apk-fil) er ikke tilgjengelig for nedlasting, på grunn av regelverket for medisinsk utstyr. It is legal to build the app for your own use, but you must not give a copy to others!**
 
 See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 (Building-APK-without-a-computer)=
 
-## Choose how to build
+## Velg hvordan du vil bygge
 
-Pick the method that matches the device you build from:
+Velg metoden som passer enheten du bygger fra:
 
-### On an Android phone: AAPS Builder (recommended)
+### På en Android-telefon: AAPS Builder (anbefalt)
 
-A setup page walks you through creating your own private build repository in GitHub. Nothing to install, no preparation file, and you start each build yourself. You download the app directly from GitHub. Google Drive is optional.
+En oppsettside leder deg gjennom hvordan du lager ditt eget private repository for bygging i GitHub. Ingenting å installere, ingen forberedelsesfil, og du starter hvert bygg selv. Du laster ned appen direkte fra GitHub. Google Drive er valgfritt.
 
-This also works from a computer browser.
+Dette fungerer også fra en nettleser på en datamaskin.
 
-**→ [Build with AAPS Builder](BrowserBuildAapsBuilder.md)**
+**→ [Bygg med AAPS Builder](BrowserBuildAapsBuilder.md)**
 
-### On a computer or an iPhone / iPad: fork and preparation file
+### På en datamaskin eller en iPhone / iPad: fork og forberedelsesfil
 
-You make a copy (fork) of the AAPS source code in GitHub, create your keystore with a preparation file, and the built app is saved to your Google Drive. Follow the four steps below.
+Du lager en kopi (fork) av AAPS-kildekoden i GitHub, lager keystore-filen din med en forberedelsesfil, og den ferdigbygde appen lagres i din Google Drive. Følg de fire stegene nedenfor.
 
 ```{note}
-**Already building with a fork?** Keep updating it as described in [Update with a browser](../Maintenance/UpdateBrowserBuild.md), or switch to AAPS Builder. To switch, first get a copy of your keystore from your fork: see [Coming from the previous browser build](#aaps-builder-from-fork).
+**Bygger du allerede med en fork?** Fortsett å oppdatere den som beskrevet i [Oppdatere med en nettleser](../Maintenance/UpdateBrowserBuild.md), eller bytt til AAPS Builder. For å bytte må du først hente en kopi av keystore-filen din fra forken: se [Kommer du fra det forrige nettleserbygget](#aaps-builder-from-fork).
 ```
 
-You will need to use multiple tabs in your browser, and switch from one to the other. Example Chrome:
+Du må bruke flere faner i nettleseren og bytte mellom dem. Eksempel i Chrome:
 
 ![fork_aaps](../images/Building-the-App/CI/BrowserBuildTabs.png)
 
 ```{note}
-You will need to jump from tab to tab: start with all tabs closed to avoid losing yourself when switching from one to another.
+Du må hoppe fra fane til fane: start med alle faner lukket, så du ikke mister oversikten når du bytter fra den ene til den andre.
 ```
 
-#### What you'll need
+#### Dette trenger du
 
-- A **Google account**, so the built app can be saved to your Google Drive.
-- A **GitHub account** (free) – you create this in Step 1.
-- A **web browser** that can keep several tabs open at once (Chrome is assumed below).
-- A small **helper to run the preparation file**. Which one you need depends on the device you build from – there is nothing to install now, Step 2 walks you through it for your device:
-  - **Computer (Windows / Mac / Linux):** Simple Web Server.
-  - **iPhone / iPad:** no extra app – you use the built-in Files app and browser.
+- En **Google-konto**, slik at den ferdigbygde appen kan lagres i din Google Drive.
+- En **GitHub-konto** (gratis) – du lager den i steg 1.
+- En **nettleser** som kan ha flere faner åpne samtidig (nedenfor går vi ut fra Chrome).
+- En liten **hjelper for å kjøre forberedelsesfilen**. Hvilken du trenger, avhenger av enheten du bygger fra – det er ingenting å installere nå, steg 2 leder deg gjennom det for din enhet:
+  - **Datamaskin (Windows / Mac / Linux):** Simple Web Server.
+  - **iPhone / iPad:** ingen ekstra app – du bruker den innebygde Filer-appen og nettleseren.
 
-#### The steps
+#### Stegene
 
-The browser build is a series of choices. Follow these steps in order:
+Nettleserbygget er en rekke valg. Følg disse stegene i rekkefølge:
 
-1. **[Create your GitHub fork](BrowserBuildFork.md)** – make your personal copy of the AAPS source code.
-2. **[Create your signing keystore](BrowserBuildKeystore.md)** – the key decision: generate a new keystore (Option 1) or upload your existing one (Option 2), then follow the page for your device.
-3. **[Authorize Google Drive](BrowserBuildGoogleDrive.md)** – let GitHub save the built app to your Google Drive.
-4. **[Build the APK](BrowserBuildAPK.md)** – run the GitHub Actions workflow and pick your version and variant.
+1. **[Lag din GitHub-fork](BrowserBuildFork.md)** – lag din personlige kopi av AAPS-kildekoden.
+2. **[Lag keystore-filen for signering](BrowserBuildKeystore.md)** – det viktigste valget: lag en ny keystore-fil (alternativ 1) eller last opp den du har fra før (alternativ 2), og følg deretter siden for din enhet.
+3. **[Autoriser Google Drive](BrowserBuildGoogleDrive.md)** – la GitHub lagre den ferdigbygde appen i din Google Drive.
+4. **[Bygg APK-filen](BrowserBuildAPK.md)** – kjør GitHub Actions-arbeidsflyten og velg versjon og variant.
 
-If you run into trouble, see **[Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md)**. For optional operations with a fork, see [exporting your keystore](#ci-keystore-export) or [cherry-picking a commit](#github-cherry-pick).
+Hvis du får problemer, se **[Nettleserbygg: feilsøking](../GettingHelp/BrowserBuildTroubleshooting.md)**. For valgfrie operasjoner med en fork, se [eksportere keystore-filen din](#ci-keystore-export) eller [velge ut en enkelt commit (cherry-pick)](#github-cherry-pick).
 
 ----
 
-**Start with [Step 1 – Create your GitHub fork](BrowserBuildFork.md) →**
+**Start med [Steg 1 – Lag din GitHub-fork](BrowserBuildFork.md) →**
 
 ```{toctree}
 :hidden:
 
 AAPS Builder <BrowserBuildAapsBuilder.md>
-Step 1: Create your fork <BrowserBuildFork.md>
-Step 2: Create your keystore <BrowserBuildKeystore.md>
-Step 3: Authorize Google Drive <BrowserBuildGoogleDrive.md>
-Step 4: Build the APK <BrowserBuildAPK.md>
+Steg 1: Lag forken din <BrowserBuildFork.md>
+Steg 2: Lag keystore-filen din <BrowserBuildKeystore.md>
+Steg 3: Autoriser Google Drive <BrowserBuildGoogleDrive.md>
+Steg 4: Bygg APK-filen <BrowserBuildAPK.md>
 ```
