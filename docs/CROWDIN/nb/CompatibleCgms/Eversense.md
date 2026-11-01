@@ -60,7 +60,7 @@ xDrip kan lese varslinger fra leverandørens app, slik ESEL gjør. Ingen utfylli
 - Last ned og installer xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
 - Som datakilde i xDrip må «Companion App» velges.
 - Velg xDrip i [**Konfigurasjon → BS-kilde**](#Config-Builder-bg-source).
-- Juster xDrip-innstillingene etter forklaringene på siden med xDrip-innstillinger: [xDrip-innstillinger](../CompatibleCgms/xDrip.md).
+- Juster xDrip-innstillingene etter forklaringene på siden med xDrip-innstillinger: [xDrip](../CompatibleCgms/xDrip.md).
 - Slå på [Eksponentiell utjevning](../CompatibleCgms/SmoothingBloodGlucoseData.md) i AAPS.
 
 ## Varslingsleser
