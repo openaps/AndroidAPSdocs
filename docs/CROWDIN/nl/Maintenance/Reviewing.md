@@ -54,7 +54,7 @@ Hieronder staan statistieken voor Tijd binnen nauw bereik (TITR), 70-140 mg/dl o
 
 **Bespreek je streefwaarden met je endocrinoloog**
 
-Jouw diabetes kan anders zijn. Bespreek alle voorgestelde streefwaarden met je endocrinoloog of je medisch team. Als je de statistieken van AAPS goed gebruikt, zijn ze een handig hulpmiddel om trends in je __BG__ te volgen en je vooruitgang te bekijken.
+Jouw diabetes kan anders zijn. Bespreek alle voorgestelde streefwaarden met je endocrinoloog of je medisch team. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress.
 
 ![Statistieken](../images/Maintenance/statistics3.png)
 
@@ -117,7 +117,7 @@ Aan het einde van elke regel tonen kleine pictogrammen waar de gegevens vandaan 
 ![Koolhydraten & bolus](../images/TreatmentsView1.png)
 
 Op dit tabblad zie je het logboek van bolussen en koolhydraten. Bij elke bolus (regel **1**) staat de resterende IOB van die bolus naast de hoeveelheid insuline. De bolus kan komen van:
-* Maaltijd (handmatig ingevoerd via de knoppen Insuline, QuickWizard of Bolus wizard)
+* Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
 * SMB, als je de SMB-functie gebruikt
 
 De ingevoerde koolhydraten (regel **2**) worden getoond met hun hoeveelheid in grammen.
@@ -147,9 +147,9 @@ De **tijdelijke basaalstanden** die de loop heeft ingesteld, worden hier getoond
 * Positieve IOB als de tijdelijke basaal hoger was dan die in het profiel
 * Negatieve IOB bij een tijdelijke basaal van nul (zoals in regel **1**) of als de tijdelijke basaal lager was dan die in het profiel
 
-Het verwijderen van invoer verandert alleen je rapporten in Nightscout en maakt je echte IOB waarschijnlijk onjuist - dit wordt afgeraden.
+Deleting the entries only affects your reports in Nightscout and will probably distort your real IOB - it is not recommended.
 
-Links op een regel betekent een rode S "Onderbreken" (Suspend): basaal wordt op dat moment niet toegediend. Dit is normaal, bijvoorbeeld tijdens het wisselen van een pod.
+On the left of a line, a red S means “Suspend”: it happens when basal is not currently delivered. Dit is normaal, bijvoorbeeld tijdens het wisselen van een pod.
 
 ### Tijdelijk streefdoel
 
@@ -178,7 +178,7 @@ Dit tabblad toont alle notities en careportal-invoer die in Nightscout zijn opge
 
 ![Bedrijfsmodus](../images/TreatmentsView6.png)
 
-Dit tabblad toont de geschiedenis van wijzigingen in de [loop-status](#AapsScreens-loop-status): open, gesloten, LGS, onderbreken, loskoppelen.
+This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
 
 ### Gebruikersinvoer
 
