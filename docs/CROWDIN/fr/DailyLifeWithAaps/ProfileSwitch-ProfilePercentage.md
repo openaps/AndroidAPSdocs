@@ -54,7 +54,9 @@ Vous avez besoin d'au moins un **Profil** enregistré. Un **Pourcentage de profi
 
 Dans **AAPS** v4, les profils sont gérés et activés depuis l'écran **Gestion** (barre de navigation du bas) → **Profil** (*« Gérer et activer les profils »*).
 
-L'écran Profil affiche vos profils sous forme de **carrousel de cartes à faire glisser**. La carte du profil en cours est marquée **ACTIF** et affiche son basal total par jour (par ex. *∑ 30,15 U*). Sous la carte sélectionnée, vous voyez les détails de ce profil — **Unités**, type d'**Insuline**, et les programmes **G/I**, **SI**, **basal** et **cible** avec leurs graphiques.
+L'écran Profil affiche vos profils sous forme de **carrousel de cartes à faire glisser**. La carte du profil en cours est marquée **ACTIF** et affiche son basal total par jour (par ex. *∑ 30,15 U*). Below the selected card you see that profile's details — the **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+
+When a temporary switch is running, the **ACTIVE** card shows its percentage and time shift with the time left, for example *110% +2 h · 2 h 40 min*, above a progress bar. Both are refreshed every 30 seconds. The details below then have two columns: the values of the profile in blue, and the values in use with the percentage in red.
 
 ![L'écran Profil — carrousel de profils, détails et barre d'actions](../images/v4/Profiles/profile_manage.png)
 
