@@ -247,6 +247,8 @@ Si le seuil d'alerte est dépassé, les valeurs seront affichées en jaune.
 
 Si le seuil critique est dépassé, les valeurs seront affichées en rouge.
 
+The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
+
 Les seuils peuvent être changés avec la petite icône **Paramètres**, visible quand la ligne d'état est **étendue** (chevron à droite). Voir [Voyants d'état](#Preferences-status-lights).
 
 Le panneau d'état étendu a aussi un bouton au bout de certaines lignes pour enregistrer un changement, ce qui remet l'âge correspondant à zéro : **Ajouter** sur la ligne **Capteur** enregistre une insertion de capteur. Si votre pompe le permet, **Amorcer/Remplir** apparaît sur les lignes **Canule** (ou **Pompe Patch**) et **Insuline**, et **Ajouter** sur la ligne **Pile pompe**.
@@ -303,6 +305,14 @@ Gardez votre doigt sur l'écran et déplacez-le à gauche ou à droite pour pass
 Cela fonctionne de la même façon sur les [graphiques supplémentaires](#aaps-screens-additional-graphs) sous le graphique de glycémie (IA, GA...) : faites un appui long sur n'importe lequel.
 
 ![Appui long sur le graphique de glycémie : la fenêtre affiche l'heure, la glycémie, l'IA et la basale](../images/main/graph_press_and_hold.png)
+
+(aaps-screens-graph-clock-change)=
+
+#### Clock changes
+
+When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
+
+![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
@@ -459,6 +469,8 @@ Affiche la sensibilité calculée par [DynamicISF](../DailyLifeWithAaps/DynamicI
 
 Ces données peuvent être disponibles si vous utilisez une [montre connectée Wear OS](../WearOS/WearOsSmartwatch.md). Activez-les dans l'application **AAPS** Wear et donnez l'autorisation d'accès aux données de santé.
 
+Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
+
 #### Déviations (DEV)
 
 * Les barres **grises** montrent une déviation due aux glucides.
@@ -607,11 +619,15 @@ Le champ **Heure des glucides** sert au pré-bolus : vous indiquez au système 
 
 ![Régler l'alarme pour des glucides futurs](../images/Home2021_BolusWizard_EatingReminder.png)
 
-Le rappel sonne comme une alarme **AAPS**. Il ne crée pas de minuteur dans l'application Horloge de votre téléphone, et il fonctionne aussi quand le bolus a été saisi depuis **AAPSClient** alors qu'**AAPS** fonctionnait en arrière-plan.
+The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
 
-Le champ **Gly** est normalement déjà rempli avec la dernière valeur de votre MGC. Si vous n'avez pas de MGC en cours, il sera vide. Quand la valeur est récente, la ligne **Gly** reste repliée.
+![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
 
-Le bouton de résultat en bas affiche le bolus proposé ; quand vous appuyez dessus, une confirmation est demandée avant toute injection d'insuline.
+![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
+
+Le champ **Gly** est normalement déjà rempli avec la dernière valeur de votre MGC. Si vous n'avez pas de MGC en cours, il sera vide. Quand la valeur est récente, la ligne **Gly** reste repliée. The field follows new readings while the wizard is open, until you change it yourself.
+
+Le bouton de résultat en bas affiche le bolus proposé ; quand vous appuyez dessus, une confirmation est demandée avant toute injection d'insuline. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
 
 Bon à savoir :
 
