@@ -1,10 +1,10 @@
-# Building AAPS
+# Bygge AAPS
 
-## Build yourself instead of download
+## Bygg selv i stedet for å laste ned
 
-**AAPS-appen (en apk-fil) er ikke tilgjengelig for nedlasting, på grunn av regelverket for medisinsk utstyr. It is legal to build the app for your own use, but you must not give a copy to others!**
+**AAPS-appen (en apk-fil) er ikke tilgjengelig for nedlasting, på grunn av regelverket for medisinsk utstyr. Det er lovlig å bygge appen til eget bruk, men du må ikke gi en kopi til andre!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Se [FAQ-siden](../UsefulLinks/FAQ.md) for detaljer.
 
 ---
 
@@ -43,7 +43,7 @@ Hver byggemetode har sin egen del om feilsøking:
 * **Nettleserbygg** fra en datamaskin eller en iPhone: [Feilsøking av nettleserbygg](#aaps-ci-troubleshooting)
 * **Android Studio**: [Feilsøking av Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Har du mistet keystore-filen eller passordet til den? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Har du mistet keystore-filen eller passordet til den? Se [Installere AAPS på nytt med en ny keystore-fil](#reinstall-aaps).
 
 Hvis appen blir bygd, men ikke lar seg installere på telefonen, se [Overføre og installere AAPS](TransferringAndInstallingAaps.md).
 
