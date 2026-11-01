@@ -72,7 +72,7 @@ From the wizard, a successful pairing finishes the setup and opens the home scre
 
 ![Manage → Pair with master on a paired client: Already paired, Role: Caregiver, Hardened mode on](../images/v4/ClientMaster/pair_with_master_client.png) The full pairing procedure, security details and troubleshooting are on [Master ↔ Client control](#client_master_client_setup).
 
-After pairing, the client gets a Nightscout token of its own from the master (if the master has an admin token), with only the rights a client needs, and stops using the token you may have entered. **AAPSClient** never writes treatments or BG to Nightscout itself: everything it does is sent to the master, which writes it. See [The client's own Nightscout token](#client-master-control-own-token).
+After pairing, the client gets a Nightscout token of its own from the master (if the master has an admin token), with only the rights a client needs, and stops using the token you may have entered. **AAPSClient** never writes treatments or BG to Nightscout itself: everything it does is sent to the master, which writes it. Se [Klientens eget Nightscout-token](#client-master-control-own-token).
 
 The master decides what this phone may do with its **[role](#client-master-control-roles)** (Read-only, Meals, Caregiver or Admin). **Manage → Pair with master** shows the phone's role.
 
