@@ -19,7 +19,7 @@
 
 - Μία ή περισσότερες ενέργειες που θα εκτελεστούν.
 
-    Για παράδειγμα ένας συναγερμός, η ρύθμιση ενός ποσοστού προφίλ ή η εξαγωγή των ρυθμίσεων του AAPS σε αλλαγή Pod.
+    Such as an alarm or setting a profile percentage or exporting the AAPS settings on Pod change.
 
 
 Υπάρχουν πολλές επιλογές Αυτοματισμού. Σας προτείνουμε να τις μελετήσετε μέσα στην εφαρμογή AAPS, στην ενότητα Αυτοματισμός. Μπορείτε επίσης να ψάξετε στις ομάδες χρηστών του AAPS στο [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) και στο [**Discord**](https://discord.gg/4fQUWHZ4Mw) για παραδείγματα Αυτοματισμών από άλλους χρήστες.
@@ -38,11 +38,11 @@
 
 Ο χρήστης γυμνάζεται κάθε πρωί στις 6:00: πρέπει να θυμηθεί να ορίσει χειροκίνητα στις 5:00 στο AAPS έναν «Προσωρινό στόχο - Άσκηση», πριν από τη γυμναστική.
 
-![Εναλλακτικό κείμενο](../images/Automations/automation_concept_manual.png)
+![Manual actions without automation](../images/Automations/automation_concept_manual.png)
 
 Ο χρήστης έχει ορίσει έναν **Αυτοματισμό** που ενεργοποιεί στις 5:00 έναν «Προσωρινό στόχο - Άσκηση», ώστε η **BG** και το **IOB** του να είναι στο καλύτερο επίπεδο για τη γυμναστική των 6:00:
 
-![Εναλλακτικό κείμενο](../images/Automations/automation_concept_automated.png)
+![Actions done by an automation](../images/Automations/automation_concept_automated.png)
 
 ## Τι πρέπει να σκεφτείτε πριν ξεκινήσετε με τους Αυτοματισμούς
 
@@ -91,12 +91,12 @@
 
 Για να απενεργοποιήσετε έναν κανόνα **Αυτοματισμού**, βγάλτε το σημάδι από το κουτί αριστερά από το όνομα του **Αυτοματισμού**. Το παρακάτω παράδειγμα δείχνει έναν **Αυτοματισμό** ενεργοποιημένο («επιλεγμένο») ή απενεργοποιημένο («μη επιλεγμένο»):
 
-![Εναλλακτικό κείμενο](../images/Automations/automation_rule_activated_deactivated.png)
+![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
 
 
 Όταν ρυθμίζετε έναν **Αυτοματισμό**, μπορείτε πρώτα να τον δοκιμάσετε επιλέγοντας την «ειδοποίηση» στις «Ενέργειες». Έτσι το **AAPS** πρώτα εμφανίζει μια ειδοποίηση, αντί να κάνει πραγματικά την ενέργεια αυτόματα. Όταν είστε σίγουροι ότι η ειδοποίηση εμφανίζεται τη σωστή ώρα και με τις σωστές συνθήκες, μπορείτε να αλλάξετε τον κανόνα **Αυτοματισμού** και να βάλετε μια «Ενέργεια» στη θέση της «Ειδοποίησης».
 
-![Εναλλακτικό κείμενο](../images/Automations/automation_alert_actions.png)
+![Alert actions](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
@@ -115,7 +115,7 @@
 
 * Ένας **Προσωρινός στόχος** που ορίζεται από **Αυτοματισμό** πρέπει να είναι μεταξύ 72 και 180 mg/dl (ή 4 και 10 mmol/l).
 * Το **Ποσοστό προφίλ** πρέπει να είναι μεταξύ 50% και 130%.
-* Υπάρχει χρονικό όριο 5 λεπτών ανάμεσα στις εκτελέσεις ενός **Αυτοματισμού** (και πριν από την πρώτη εκτέλεση).
+* There is a 5 minute time limit between executions of **Automation** (and first execution).
 
 ## Σωστή χρήση αρνητικών τιμών
 
@@ -127,7 +127,7 @@
 
 Χρειάζεται προσοχή όταν επιλέγετε μια «αρνητική τιμή» σε μια «Συνθήκη», όπως «λιγότερο από», στους **Αυτοματισμούς**. Για παράδειγμα:
 
-![Εναλλακτικό κείμενο](../images/Automations/automation_comparison_operators.png)
+![Comparison operators](../images/Automations/automation_comparison_operators.png)
 
 **Παράδειγμα 1:** Αν δημιουργήσετε μια Συνθήκη **«είναι λιγότερο από»** «-0,1 mmol/l» (ή «-2 mg/dl»), αυτή:
 
@@ -242,7 +242,7 @@
 
 ![Τα συμβάντα της ενέργειας Σημείωση](../images/Automations/automation_action_careportal_events.png) ![Η ενέργεια Σημείωση ρυθμισμένη σε Αλλαγή σημείου αντλίας](../images/Automations/automation_action_careportal_site_change.png)
 
-**Ενέργειες:** **Στείλτε SMS** (στην ομάδα **Ειδοποιήσεις**)
+**Actions:** **Send SMS to all numbers** (in the **Alerts** group)
 
 **Επιλογές:**
 
@@ -260,7 +260,7 @@
 
 * επιλέξτε **Ενεργό** ή **Ανενεργό**. Αυτό αλλάζει τη ρύθμιση **Ενεργοποίηση SMB** του OpenAPS SMB, ακριβώς σαν να την είχατε αλλάξει στις **Ρυθμίσεις**, και μένει έτσι μέχρι να την αλλάξετε πάλι εσείς ή κάποιος άλλος κανόνας.
 
-**Ενέργειες:** **Προφίλ Autotune** (στην ομάδα **Κύκλωμα & ινσουλίνη**)
+**Actions:** **Run Autotune** (in the **Loop & insulin** group)
 
 **Επιλογές:**
 
@@ -280,39 +280,39 @@
 
 Αφού προσθέσετε την «Ενέργεια», πρέπει να αλλάξετε τις προεπιλεγμένες τιμές στον αριθμό που θέλετε, πατώντας πάνω τους και αλλάζοντάς τες.
 
-![Εναλλακτικό κείμενο](../images/Automations/automation_action_temp_target_values.png)
+![Temp target action values](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## Η σειρά των **Αυτοματισμών** στη λίστα έχει σημασία
- Το **AAPS** εκτελεί τους κανόνες με τη σειρά προτεραιότητας, ξεκινώντας από την κορυφή της λίστας **Αυτοματισμού**. Για παράδειγμα, αν ο **Αυτοματισμός** «Χαμηλή» είναι ο πιο σημαντικός **Αυτοματισμός**, πάνω από όλους τους άλλους κανόνες, τότε αυτός ο **Αυτοματισμός** πρέπει να βρίσκεται στην κορυφή της λίστας **Αυτοματισμού** του χρήστη, όπως φαίνεται παρακάτω:
+ Το **AAPS** εκτελεί τους κανόνες με τη σειρά προτεραιότητας, ξεκινώντας από την κορυφή της λίστας **Αυτοματισμού**. For example, if the ‘Low’ **Automation** is the most important **Automation**, above all other rules, then this **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
 
 
-![Εναλλακτικό κείμενο](../images/Automations/automation_rule_list.png)
+![List of automation rules](../images/Automations/automation_rule_list.png)
 
-Για να αλλάξετε την προτεραιότητα των κανόνων **Αυτοματισμού**, πατήστε παρατεταμένα τη λαβή **=** στη δεξιά πλευρά του κανόνα. Αλλάξτε τη σειρά των **Αυτοματισμών** μετακινώντας τους κανόνες πάνω ή κάτω.
+Για να αλλάξετε την προτεραιότητα των κανόνων **Αυτοματισμού**, πατήστε παρατεταμένα τη λαβή **=** στη δεξιά πλευρά του κανόνα. Reorder the **Automations** by moving the rules up or down.
 
-![Εναλλακτικό κείμενο](../images/Automations/automation_rule_reorder.png)
+![Reorder automation rules](../images/Automations/automation_rule_reorder.png)
 
 ## Πώς διαγράφετε κανόνες Αυτοματισμού
 
 Για να διαγράψετε έναν κανόνα **Αυτοματισμού**, πατήστε το εικονίδιο του κάδου.
 
-![Εναλλακτικό κείμενο](../images/Automations/automation_rule_delete.png)
+![Delete automation rules](../images/Automations/automation_rule_delete.png)
 
 ## Παραδείγματα Αυτοματισμών
 
-Παρακάτω υπάρχουν παραδείγματα **Αυτοματισμών**. Περισσότερη συζήτηση για τους **Αυτοματισμούς** και για το πώς οι χρήστες έχουν προσαρμόσει τον δικό τους **Αυτοματισμό** θα βρείτε σε ομάδες συζήτησης στο Facebook ή στο Discord. Μην αντιγράψετε τα παρακάτω παραδείγματα αν δεν καταλαβαίνετε καλά πώς θα λειτουργήσει ο **Αυτοματισμός**.
+Παρακάτω υπάρχουν παραδείγματα **Αυτοματισμών**. Further discussion on **Automations** and how users have individualised their **Automation** can be found in Facebook discussions groups or on Discord. Μην αντιγράψετε τα παρακάτω παραδείγματα αν δεν καταλαβαίνετε καλά πώς θα λειτουργήσει ο **Αυτοματισμός**.
 
 (automations-low-glucose-temp-target)=
 ### Προσωρινός Στόχος Χαμηλής Γλυκόζης
 
 Αυτός ο **Αυτοματισμός** ενεργοποιεί αυτόματα έναν **Προσωρινό στόχο** όταν η **BG** πέσει κάτω από ένα όριο — εδώ, όταν η γλυκόζη είναι λιγότερο από 70 mg/dl, ξεκινά ένας στόχος 110 mg/dl για 30 λεπτά:
 
-![Εναλλακτικό κείμενο](../images/Automations/automation_example_low_glucose_rule.png)
+![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
 
 ### Προσωρινός στόχος για το μεσημεριανό (με «Τοποθεσία»)
 
-![Εναλλακτικό κείμενο](../images/Automations/automation_example_lunch_rule.png)
+![Example: lunch rule](../images/Automations/automation_example_lunch_rule.png)
 
 Αυτός ο **Αυτοματισμός** δημιουργήθηκε για έναν χρήστη που τρώει μεσημεριανό στη δουλειά περίπου την ίδια ώρα κάθε εργάσιμη ημέρα, αλλά ενεργοποιείται μόνο αν ο χρήστης βρίσκεται σε μια ορισμένη «τοποθεσία».  Έτσι, αν ο χρήστης δεν είναι στη δουλειά μια μέρα, αυτός ο **Αυτοματισμός** δεν θα ενεργοποιηθεί.
 
@@ -320,7 +320,7 @@
 
 Η «Συνθήκη» τοποθεσίας έχει όνομα, θέση (πατήστε **Επιλογή από χάρτη** ή χρησιμοποιήστε την τρέχουσα τοποθεσία σας) και ακτίνα σε μέτρα, και ενεργοποιείται όταν είστε μέσα (ή έξω) από την περιοχή:
 
-![Εναλλακτικό κείμενο](../images/Automations/automation_example_lunch_location_condition.png)
+![Example: lunch rule with location condition](../images/Automations/automation_example_lunch_location_condition.png)
 
 Λόγω της σύνδεσης «Και», ο **Αυτοματισμός** εκτελείται μόνο στον «επιλεγμένο χρόνο» και μόνο αν ο χρήστης βρίσκεται στην επιλεγμένη τοποθεσία.
 
@@ -330,11 +330,11 @@
 
 Ένα Wi-Fi SSID είναι καλή επιλογή για να ενεργοποιείται ένας **Αυτοματισμός** όταν είστε μέσα στην εμβέλεια ενός συγκεκριμένου δικτύου Wi-Fi (σε σύγκριση με το GPS): είναι αρκετά ακριβές, καταναλώνει λιγότερη μπαταρία και λειτουργεί σε κλειστούς χώρους όπου το GPS και άλλες υπηρεσίες τοποθεσίας μπορεί να μην είναι διαθέσιμες.
 
-Εδώ είναι ένα άλλο παράδειγμα που ορίζει έναν **Προσωρινό στόχο** μόνο τις εργάσιμες ημέρες, πριν από το πρωινό (1).
+Here is another example of setting up a **Temp Target** for work days only before breakfast (1).
 
 
-Ο **Αυτοματισμός** θα ενεργοποιηθεί στις 05:30 μόνο από Δευτέρα έως Παρασκευή (2)  
-και ενώ το τηλέφωνο είναι συνδεδεμένο σε ένα οικιακό δίκτυο Wi-Fi (3).
+The **Automation** will trigger at 05:30am only on Monday-Friday (2)  
+and while being connected to a home Wi-Fi network (3).
 
 
 Μετά θα ορίσει έναν **Προσωρινό στόχο** 75 mg/dl για 30 λεπτά (4). Ένα πλεονέκτημα όταν προσθέτετε την τοποθεσία είναι ότι ο κανόνας δεν θα ενεργοποιηθεί, για παράδειγμα, αν ο χρήστης ταξιδεύει σε διακοπές.
@@ -350,7 +350,7 @@
 1) Κάτω από το κύριο «ΚΑΙ» (πρέπει να ισχύουν και οι δύο συνθήκες για να ενεργοποιηθεί) 1) Επαναλαμβανόμενος χρόνος = Δ,Τ,Τ,Π,Π στις 5:30  
 1) Wi-Fi SSID = My_Home_WiFi_Name
 
-![Εναλλακτικό κείμενο](../images/Automations/automation_example_wifi_condition.png)
+![Example: WiFi condition](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
@@ -395,7 +395,7 @@
 
 Ελέγξτε ότι το κουτί αριστερά από το όνομα του **Αυτοματισμού** είναι «επιλεγμένο», ώστε ο κανόνας να είναι ενεργοποιημένος:
 
-![Εναλλακτικό κείμενο](../images/Automations/automation_rule_activated_deactivated.png)
+![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
 
 * Πρόβλημα: __Οι αυτοματισμοί μου ενεργοποιούνται με λάθος σειρά.__
 
