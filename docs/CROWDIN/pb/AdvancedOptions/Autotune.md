@@ -78,7 +78,7 @@ Toque em **Abrir plugin** no cartão **Autotune** para abrir a tela do Autotune:
 
 - Se você confia nos resultados (pouca variação percentual entre o perfil de entrada e o perfil de saída), pode clicar no botão "Ativar perfil" e depois em OK para confirmar.
 
-  - Ativar o perfil Ajustado cria automaticamente um novo perfil "Ajustado" na sua lista de perfis (**Gerenciar → Perfil**).
+  - "Activate profile" will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
   - Se você já tem um perfil chamado "Ajustado" em **Gerenciar → Perfil**, esse perfil será atualizado com o perfil calculado pelo Autotune antes da ativação
 
   ![Autotune - Ativar perfil](../images/Autotune/Autotune_6.png)
@@ -123,7 +123,7 @@ O recurso **Trocar perfil automaticamente** só está disponível no modo Dev/En
 - **Trocar perfil automaticamente** (padrão: desligado): veja [Executar o Autotune com uma regra de automação](#autotune-run-autotune-with-an-automation-rule) abaixo. Se você ativar esta configuração (On), o perfil de entrada será atualizado automaticamente com o perfil Ajustado, e ele será ativado.
   - **Cuidado: você deve confiar e verificar, durante vários dias seguidos, que depois de atualizar e ativar o perfil Ajustado sem modificação, ele melhora seu loop**
 
-- **Categorizar UAM como basal** (padrão: desligado): esta configuração é para usuários que usam o AndroidAPS sem registrar nenhum carboidrato (Full UAM). Quando desligada (Off), ela impede que UAM seja classificado como basal.
+- **Categorize UAM as basal** (default Off): This setting is for the users using AAPS without any carbs entered (Full UAM). Quando desligada (Off), ela impede que UAM seja classificado como basal.
   - Nota: se houver pelo menos uma hora de absorção de carboidratos detectada durante um dia, todos os dados classificados como "UAM" serão classificados como basal, seja qual for esta configuração (On ou Off)
 - **Dias padrão de ajuste** (padrão: 5): com esta configuração, você define o valor padrão. Cada vez que você seleciona um novo perfil no plugin Autotune, o **Número de dias de dados** é substituído por este valor padrão
 - **Usar IC/ISF circadianos** (padrão: desligado): veja [Perfil com IC ou ISF circadiano](#autotune-circadian-ic-or-isf-profile) abaixo.
@@ -188,7 +188,7 @@ Nota: para mais informações sobre como definir uma regra de automação, veja 
 
   ![Tela padrão do Autotune](../images/Autotune/Autotune_17.png)
 
-- Depois você pode selecionar a ação **Executar Autotune** (no grupo **Loop & insulina**)
+- Then you can select the **Run Autotune** action (in the **Loop & insulin** group)
 
   ![Tela padrão do Autotune](../images/Autotune/Autotune_18.png)
 
@@ -212,7 +212,7 @@ O Autotune funciona com as informações que existem no seu banco de dados; ent�
 
 O Autotune é apenas uma ajuda; é importante verificar regularmente se você concorda com o perfil calculado. Se tiver qualquer dúvida, mude as configurações do Autotune (por exemplo, o número de dias) ou copie os resultados para o perfil local e ajuste o perfil antes de usá-lo.
 
-Sempre use o Autotune manualmente por vários dias para verificar os resultados antes de aplicá-los. E só quando você confiar totalmente nos resultados do Autotune, e quando a variação entre o perfil anterior e o perfil calculado ficar muito pequena, é que você deve começar a usar a Automação (nunca antes)
+Sempre use o Autotune manualmente por vários dias para verificar os resultados antes de aplicá-los. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile then you start to use Automation (Never before)
 
 - O Autotune pode funcionar muito bem para alguns usuários e não para outros, então **se você não confia no resultado do Autotune, não o use**
 
