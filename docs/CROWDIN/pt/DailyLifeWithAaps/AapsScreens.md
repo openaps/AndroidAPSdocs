@@ -131,7 +131,7 @@ Bomba desligada — o tempo restante é mostrado ao lado do ícone. Os botões d
 
 Tem de descobrir porque recebe valores de glicose duplicados:
 
-* A ponte Dexcom (bridge) está ativada no seu site Nightscout? Desative a ponte no painel de administração do seu Nightscout: edite a variável "enable" e remova a parte "bridge". (Para o heroku, [os detalhes estão aqui](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* A ponte Dexcom (bridge) está ativada no seu site Nightscout? Desative a ponte no painel de administração do seu Nightscout: edite a variável "enable" e remova a parte "bridge". (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * Há várias fontes a enviar a sua glicose para o Nightscout? Se usar a app BYODA, ative o envio no **AAPS**, mas não o ative no xDrip, se usar o xDrip.
 * Tem seguidores que recebem a sua glicose mas que também a voltam a enviar para o seu site Nightscout?
 * Último recurso: nas [definições do NSClient](#Preferences-nsclient), selecione as definições de Sincronização e desative a opção «Receber dados CGM do NS».
@@ -342,7 +342,7 @@ Quando **PREV** está ligado, o AAPS desenha as suas previsões como **linhas po
 
 Quando duas previsões dão os mesmos valores, os pontos sobrepõem-se e só vê uma das cores (por exemplo, RNA por cima da IA quando a glicose está estável).
 
-* Linha **HCA** (laranja): [hidratos de carbono ativos](CobCalculation) (o laranja é usado em todo o AAPS para os HCA e os hidratos de carbono)
+* **COB** line (orange): [carbs on board](CobCalculation.md) (orange is used throughout AAPS for COB and carbs)
     
     Esta linha de previsão mostra para onde vai a sua glicose (não para onde vão os HCA!) com base nas definições atuais do **Perfil**, supondo que os desvios causados pela absorção dos hidratos de carbono ficam constantes. Esta linha só aparece se houver HCA conhecidos.
 
@@ -364,7 +364,7 @@ Quando duas previsões dão os mesmos valores, os pontos sobrepõem-se e só vê
 
 * Linha **aCOB** (laranja pálido, transparente): absorção acelerada dos hidratos de carbono
     
-    Parecida com a dos HCA, mas supõe uma absorção fixa de hidratos de carbono de 10 mg/dl/5 min (-0,555 mmol/l/5 min). Obsoleto e de utilidade limitada.
+    Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. Obsoleto e de utilidade limitada.
     
     *Esta linha só aparece quando é usado o algoritmo mais antigo [AMA](#Config-Builder-aps).*
 
@@ -485,7 +485,7 @@ Esta linha mostra quanto a glicose «deveria» subir ou descer só por causa da 
 
 ![Desvios e IG](../images/main/graph_dev_bgi.png)
 
-É uma boa combinação mostrar esta linha junto com as barras dos Desvios. Têm a mesma escala, mas é diferente da dos outros dados opcionais, por isso é boa ideia mostrá-las num gráfico separado, como acima. Comparar a linha do IG com as barras dos Desvios é outra forma de perceber como a **glicose** varia. Aqui, na hora marcada com **1**, as barras dos Desvios estão bem acima da linha do IG: a glicose sobe mais do que a atividade da insulina sozinha explica (por exemplo, depois de hidratos de carbono). Na hora marcada com **2**, as barras dos Desvios estão abaixo de zero (vermelhas): a glicose está mais baixa do que o algoritmo esperava.
+É uma boa combinação mostrar esta linha junto com as barras dos Desvios. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparar a linha do IG com as barras dos Desvios é outra forma de perceber como a **glicose** varia. Aqui, na hora marcada com **1**, as barras dos Desvios estão bem acima da linha do IG: a glicose sobe mais do que a atividade da insulina sozinha explica (por exemplo, depois de hidratos de carbono). Na hora marcada com **2**, as barras dos Desvios estão abaixo de zero (vermelhas): a glicose está mais baixa do que o algoritmo esperava.
 
 ### Secção F - Barra de ferramentas QuickLaunch
 
@@ -507,13 +507,13 @@ Para dar uma certa quantidade de insulina sem usar a [calculadora de bólus](#aa
 
 Se ativar **Iniciar AT de Comer Brevemente**, pode iniciar automaticamente o seu [alvo temporário Comer Brevemente](#TempTargets-eating-soon-temp-target).
 
-Se não quiser fazer o bólus pela bomba, mas só registar uma quantidade de insulina (por exemplo, insulina dada com uma caneta), ative "**O bólus será apenas registado**". Uma linha adicional **Hora**, definida como **Agora**, permite registar uma injeção de insulina feita no passado: use **-** / **+** para a mudar, ou toque na seta para escrever os minutos ou escolher uma data e uma hora.
+If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only (not delivered by pump)**". Uma linha adicional **Hora**, definida como **Agora**, permite registar uma injeção de insulina feita no passado: use **-** / **+** para a mudar, ou toque na seta para escrever os minutos ou escolher uma data e uma hora.
 
 ![A linha Hora, recolhida](../images/v4/Screens/insulin_dialog_record_only_time.png) ![A linha Hora, aberta com a seta](../images/v4/Screens/insulin_dialog_time_open.png)
 
 Pode usar os botões **+0.5 / +1.0 / +2.0** para aumentar depressa a quantidade de insulina. Os valores dos aumentos podem ser alterados nas [definições do Assistente de Bólus](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-A janela Insulina também pode ser usada quando a bomba está suspensa ou desligada, por exemplo para registar insulina injetada com uma caneta. Neste caso, "**O bólus será apenas registado**" fica sempre ligado (mostrado a vermelho) e aparecem campos adicionais para escolher o tipo de insulina e um desvio de **Hora** para uma injeção feita no passado:
+A janela Insulina também pode ser usada quando a bomba está suspensa ou desligada, por exemplo para registar insulina injetada com uma caneta. In this case, "**Bolus will be recorded only (not delivered by pump)**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
 
 ![Janela Insulina com a bomba desligada](../images/main/insulin_dialog_pump_disconnected.png)
 
@@ -527,7 +527,7 @@ Certos [alvos temporários predefinidos](#TempTargets-hypo-temp-target) (Hipo, C
 
 **Hora dos hidratos**: quando vai comer / comeu os hidratos de carbono.
 
-**Duração**: para usar com [«hidratos de carbono prolongados»](ExtendedCarbs). Esta linha está recolhida, para não escrever nela os gramas por engano: use **-** / **+** para a mudar, ou toque na seta para a abrir e escrever um valor.
+**Duration**: To be used for ["extended carbs"](ExtendedCarbs.md). Esta linha está recolhida, para não escrever nela os gramas por engano: use **-** / **+** para a mudar, ou toque na seta para a abrir e escrever um valor.
 
 Pode usar os botões **+5 / +10 / +20** para aumentar depressa a quantidade de hidratos de carbono.
 
@@ -632,7 +632,7 @@ O botão de resultado no fundo mostra o bólus proposto; ao premi-lo, é pedida 
 É bom saber:
 
 * Se o bólus calculado for maior do que o seu **[Bólus máximo](#Preferences-maximum-bolus)**, é reduzido para o bólus máximo, e a confirmação mostra o aviso "Restrição de bólus aplicada". Um [Assistente Rápido](../DailyLifeWithAaps/QuickWizards.md) é recusado em vez disso.
-* Quando o bólus é apenas registado (por exemplo, enquanto a bomba está desligada), o aviso "**O bólus será apenas registado**" fica no topo da janela, também quando desliza o conteúdo.
+* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only (not delivered by pump)**" warning stays at the top of the dialog, also when you scroll.
 * Um bólus que dá à mão tem prioridade sobre um [SMB](#Open-APS-features-super-micro-bolus-smb) que está à espera de ser administrado: o SMB é descartado e o loop calcula de novo. Se um SMB estiver a ser administrado neste momento, o seu bólus é recusado com a mensagem "Está a ser administrado um SMB neste momento. Tente novamente quando terminar." Não é dada insulina, e os hidratos de carbono introduzidos com esse bólus não são guardados: espere um momento e introduza-os de novo.
 
 (AapsScreens-wrong-cob-detection)=
