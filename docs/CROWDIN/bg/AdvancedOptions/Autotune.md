@@ -2,7 +2,7 @@
 
 Плъгинът Autotune е реализация на алгоритъма OpenAPS autotune в AAPS. Той анализира скорошната история в AAPS и предлага промени в базалните дози, ISF и коефициента за въглехидрати.
 
-Autotune Plugin is available in AAPS releases since [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) but is hidden by default.
+Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
 
 (autotune-how-autotune-calculates-adjustments)=
 ## Как Autotune изчислява промените
