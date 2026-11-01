@@ -78,7 +78,7 @@ Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
 
 - Dacă aveți încredere în rezultate (un procentaj scăzut de variație între profilul de intrare și profilul de ieșire), atunci puteți apăsa pe butonul "Activați profil" și apoi dați pe OK pentru a valida.
 
-  - Activate Tuned profile will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
+  - "Activate profile" will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
   - If you already have a profile named "Tuned" in **Manage → Profile**, then this profile will be updated with calculated Autotune profile before the activation
 
   ![Autotune activarea profilului](../images/Autotune/Autotune_6.png)
@@ -123,7 +123,7 @@ The **Auto switch profile** feature is only available in Dev/Engineering mode.
 - **Auto switch profile** (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. Dacă schimbați această setare pe Pornit, profilul de intrare va fi actualizat automat de către profilul Ajustat și va fi activat.
   - **Fiți atenți, trebuie să aveți încredere și să verificați în următoarele zile, că după o actualizare și o activare a profilului ajustat fără modificare, se îmbunătățește sistemul de buclă**
 
-- **Categorize UAM as basal** (default Off): This setting is for the users using AndroidAPS without any carbs entered (Full UAM). Va opri (când este oprit) să catalogheze UAM ca bazală.
+- **Categorize UAM as basal** (default Off): This setting is for the users using AAPS without any carbs entered (Full UAM). Va opri (când este oprit) să catalogheze UAM ca bazală.
   - Notă: dacă aveți cel puțin o oră detectată de absorbție a carbohidraților în timpul unei zile, apoi toate datele clasificate ca "UAM" vor fi clasificate ca bazală, indiferent de această setare (pornită sau oprită)
 - **Default tune days** (default 5): You can define the default value with this setting. Each time you select a new profile in the Autotune plugin, the **Number of days of data** will be replaced by this default value
 - **Use circadian IC/ISF** (default Off): see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
@@ -188,7 +188,7 @@ Notă: pentru mai multe informații despre cum să setați o condiție de automa
 
   ![Autotune ecran implicit](../images/Autotune/Autotune_17.png)
 
-- Then you can select the **Autotune profile** action (in the **Loop & insulin** group)
+- Then you can select the **Run Autotune** action (in the **Loop & insulin** group)
 
   ![Autotune ecran implicit](../images/Autotune/Autotune_18.png)
 
@@ -212,7 +212,7 @@ Autotune funcționează cu informații existente în baza de date, deci dacă to
 
 Autotune este doar un ajutor, este important să verificați periodic dacă sunteți de acord cu profilul calculat. Dacă aveți îndoieli, schimbați setările de autoreglare (de exemplu numărul de zile) sau copiați rezultatele în profilul local și ajustați profilul înainte de a-l folosi.
 
-Utilizați întotdeauna Autotune câteva zile manual pentru a verifica rezultatele înainte de a le aplica. și doar când aveți încredere deplină în rezultatele Autotune, și atunci când variația devine mică între profilul anterior și profilul calculat apoi începeți să utilizați Automatizarea (niciodată înainte)
+Utilizați întotdeauna Autotune câteva zile manual pentru a verifica rezultatele înainte de a le aplica. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile then you start to use Automation (Never before)
 
 - Autotune poate funcționa foarte bine pentru unii utilizatori și pentru alții nu, așa că **Dacă nu aveți încredere în rezultatul Autotunei, nu îl folosiți**
 
