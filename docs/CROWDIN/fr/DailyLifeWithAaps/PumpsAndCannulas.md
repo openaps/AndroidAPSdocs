@@ -57,7 +57,7 @@ Comme vous ne recevez pas d'insuline pendant que la pompe est déconnectée, vou
 (pumps-cannulas-announce-insulin)=
 ## Déclarer de l'insuline délivrée sans faire de bolus
 
-Pour déclarer de l'insuline délivrée par la pompe pendant qu'**AAPS** était déconnecté, ou des injections au stylo : ouvrez la [boîte de dialogue Insuline](#aaps-screens-buttons-insulin) (**Traitements** dans la barre de navigation du bas, ou un bouton QuickLaunch), saisissez la quantité en unités et activez **Les bolus seront seulement enregistrés**. Une ligne **Heure** (réglée sur **Maintenant**) vous permet alors d'enregistrer l'heure réelle de l'injection : vous pouvez l'ignorer si l'injection est récente. Si le bolus a été donné il y a un certain temps, utilisez **-** pour reculer l'heure (_par ex._ -30 min), ou ouvrez la ligne avec le chevron pour choisir la date et l'heure exactes. **AAPS** tiendra alors compte de la durée d'action de l'insuline et calculera en conséquence l'insuline restante dans le corps.
+To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. Une ligne **Heure** (réglée sur **Maintenant**) vous permet alors d'enregistrer l'heure réelle de l'injection : vous pouvez l'ignorer si l'injection est récente. Si le bolus a été donné il y a un certain temps, utilisez **-** pour reculer l'heure (_par ex._ -30 min), ou ouvrez la ligne avec le chevron pour choisir la date et l'heure exactes. **AAPS** tiendra alors compte de la durée d'action de l'insuline et calculera en conséquence l'insuline restante dans le corps.
 
 Si vous utilisez **AAPS** en tant qu'aidant, vous pouvez très facilement déconnecter (et reconnecter) la pompe à distance par [commande SMS](../RemoteFeatures/SMSCommands.md), avec des commandes comme "pump disconnect 120" et "pump connect 120". La durée de la déconnexion à distance va de 1 à 120 min (dans cet exemple, elle est de 120 minutes). C'est très utile si le téléphone **AAPS** est difficile d'accès pour vous : rangé dans la ceinture de pompe d'un enfant qui court vers la piscine, ou bien gardé de près (ou utilisé) par un adolescent.
 
@@ -92,7 +92,7 @@ Le choix de la stratégie est très personnel : le mieux est d'essayer pour tro
 
 ![Boîte de dialogue Profil utilisateur pour la rotation du site](../images/SiteRotation/Type.png)
 
-*Remarque : ce paramètre décide si la boîte de dialogue Rotation du site (mode Édition) s'ouvre automatiquement ou non quand une nouvelle entrée est créée avec le bouton « Amorcer/Remplir » ou le bouton « Insertion Capteur »*
+*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
 
 - Pour un changement de site fait directement sur la pompe, vous devez ouvrir le mode Affichage et éditer la nouvelle entrée pour choisir la localisation et la flèche
 
@@ -100,7 +100,7 @@ Le mode Édition vous permet de choisir la localisation, la flèche et la remarq
 
 - L'entrée en cours d'édition est affichée sous les images du corps, avec l'icône de son type (canule ou capteur)
 - Les vues de face et de dos sont affichées côte à côte : appuyez sur la zone où vous l'avez posé
-- Une fois un site choisi (surligné en vert), la liste du dessous montre toutes les entrées faites sur ce site au cours des 45 derniers jours
+- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
 
 ![Mode Édition](../images/SiteRotation/EditMode.png)
 
