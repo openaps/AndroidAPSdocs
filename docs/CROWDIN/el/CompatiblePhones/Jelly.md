@@ -14,7 +14,7 @@
 
 **Μειονεκτήματα**
 
-* Συνιστάται μόνο για έμπειρους loopers (ορισμένες ρυθμίσεις δεν είναι αναγνωρίσιμες, πρέπει να ξέρετε από την εμπειρία με ένα μεγάλο τηλέφωνο Android AAPS, πώς και πού βρίσκεται. Ορισμένα κουμπιά του AAPS πατιούνται μόνο με πολλή προσοχή και όχι με χοντρά δάχτυλα.)
+* Recommended only for experienced loopers. Some settings are not easy to recognize: you have to know from experience with a big Android AAPS phone how and where things are located. Some AAPS buttons are small and hard to tap: you need a precise touch, not stubby fingers.
 * Μπορεί να χρησιμοποιηθεί μόνο ως κινητό για το κύκλωμα. Είναι καλύτερα να έχετε ένα κανονικό smartphone στην τσέπη σας. 
 
 ### Βελτιστοποίηση διάρκειας μπαταρίας
@@ -43,6 +43,6 @@
 
 ### Remote Connection (απομακρυσμένη σύνδεση) για το Wear apk
 
-Σε ορισμένα έξυπνα ρολόγια, όπως το Samsung Galaxy, η ρύθμιση 'Remote Connection' στις Advanced Features του Samsung Galaxy πρέπει να είναι **ενεργή**, για να χρησιμοποιείτε το Jelly, το **Wear.apk** & το **AAPS** απομακρυσμένα μέσω Wi-Fi.
+For certain smart watches, like the Samsung Galaxy, 'Remote connection' under Advanced features in the Galaxy Wearable app must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
 
 ![Galaxy Wearable, Προηγμένες λειτουργίες, Απομακρυσμένη σύνδεση ενεργοποιημένη](../images/wearos/galaxy_wearable_remote_connection.png)
