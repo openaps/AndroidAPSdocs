@@ -175,7 +175,7 @@ Takže byste sice měli více aktivních sacharidů, ale smyčka by zároveň p�
 
 Při používání smyčky byste měli vyzkoušet tyto kroky:
 
-* Proveďte [přepnutí profilu](#ProfileSwitch-change-percentage) na < 100 %: klepněte na název profilu na hlavní obrazovce, klepněte na kulaté tlačítko **▶** a pak nastavte **Procento** a **Trvání**.
+* Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
 * Nastavte [dočasný cíl Aktivita](#TempTargets-activity-temp-target) nad svým běžným cílem. Při procentu pod 100 % a zadané době trvání nabízí stejná obrazovka **Aktivovat** přepínač **Dočasný cíl / Aktivita**, který spustí obojí najednou.
 * Pokud používáte SMB, ujistěte se, že [„Povolit SMB při vysokém dočasném cíli“](#Open-APS-features-enable-smb-with-high-temp-targets) a [„Povolit SMB vždy“](#Open-APS-features-enable-smb-always) jsou vypnuté.
 
@@ -194,7 +194,7 @@ Pumpu si můžete sundat, abyste byli „volní“, ale měli byste to AAPS ozn�
 Požívání alkoholu je v režimu uzavřené smyčky poměrně riskantní, protože algoritmus uzavřené smyčky nedokáže správně předpovědět, jak bude glykémie alkoholem ovlivněna. Svůj vlastní postup musíte vyzkoušet pomocí těchto funkcí AAPS:
 
 * Vypnout režim uzavřené smyčky a provést nezbytné zásahy ručně nebo
-* nastavit vyšší dočasný cíl a vypnout funkci UAM, aby smyčka nezvyšovala váš IOB kvůli neoznámenému jídlu nebo
+* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
 * provést [přepnutí profilu](#ProfileSwitch-change-percentage) na znatelně méně než 100 % 
 
 Šablona [scény](#scenes) *Alkohol* je výchozí bod, který si můžete přizpůsobit svému postupu.
@@ -363,9 +363,9 @@ Můžete také změnit, kdy se výstraha spustí: stiskněte ikonu **Nastavení*
 
 #### Můj link/pumpa/pod nereaguje (RL/OL/EmaLink…)
 
-U některých telefonů dochází k odpojování Bluetooth od zařízení Link (RL/OL/EmaL...).
+With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
 
-U některých zařízení Link se také stává, že nereagují (AAPS hlásí, že jsou připojená, ale Link se k pumpě nedostane nebo jí nemůže posílat příkazy.)
+Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
 
 Nejdřív zkuste tlačítko **Resetovat RileyLink** na obrazovce pumpy (viz stránku vaší pumpy: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). Pokud to nepomůže, nejjednodušší způsob, jak všechny tyto části znovu zprovoznit, je:
 
@@ -419,5 +419,5 @@ Stav podu je součástí exportovaného nastavení, takže aktivní pod lze pře
 
 Nejdřív si přečtěte tyto části:
 
-* [Export a import nastavení](#omnipod-dash-export-import) na stránce Omnipod DASH a [Pumpy bez hadičky](#ExportImportSettings-tubeless-pumps): na novém telefonu zaškrtněte **Nahradit také nastavení pumpy** a použijte soubor exportovaný během podu, který máte právě nasazený,
+* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
 * [Vyřazení podu](#omnipod-dash-discard-pod), abyste pak pod odstranili ze starého telefonu. Keep the old phone in airplane mode until the Pod is discarded, so that the two phones never talk to the Pod at the same time.
