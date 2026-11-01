@@ -247,6 +247,8 @@
 
 如果超過危急門檻值警告，數值將顯示為紅色。
 
+The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
+
 狀態列**展開**時，點按右側顯示的小型**設定**圖示即可調整門檻值（請參閱[狀態燈號](#Preferences-status-lights)）。
 
 展開的狀態面板中，部分列的末端也有按鈕可記錄更換項目，並重設相應的使用時間：按下**感測器**列中的**新增**，即可記錄感測器裝設時間。如果你的幫浦支援，**導管**（或**貼片式幫浦**）和**胰島素**列會顯示**預充／填充**按鈕，而**幫浦電池**列則會顯示**新增**按鈕。
@@ -303,6 +305,14 @@
 血糖圖表下方的[其他圖表](#aaps-screens-additional-graphs)（IOB、COB 等）也能以相同方式操作：長按任一圖表即可。
 
 ![長按血糖圖表：彈出視窗會顯示時間、血糖、IOB 和基礎率](../images/main/graph_press_and_hold.png)
+
+(aaps-screens-graph-clock-change)=
+
+#### Clock changes
+
+When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
+
+![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
@@ -459,6 +469,8 @@ SMB 會以藍色三角形顯示在此圖表上，並依照與當天最大 SMB �
 
 當使用 [Wear 智慧型手錶](../WearOS/WearOsSmartwatch.md) 時，這些資料可能會可以顯示。可在**AAPS** Wear 應用程式中啟用它們並授權健康資料。
 
+Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
+
 #### 偏差（DEV）
 
 * **灰色**條顯示因碳水化合物引起的偏差。
@@ -607,11 +619,15 @@ SMB 會以藍色三角形顯示在此圖表上，並依照與當天最大 SMB �
 
 ![為未來的碳水化合物設定鬧鐘](../images/Home2021_BolusWizard_EatingReminder.png)
 
-提醒會以 **AAPS** 鬧鐘的形式響起。這不會在手機的時鐘 App 中建立計時器；即使注射是透過 **AAPSClient** 輸入，且當時 **AAPS** 正在背景執行，此功能仍可使用。
+The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
 
-**血糖**欄位通常已填入 CGM 的最新讀取值。如果你沒有使用中的 CGM，則該欄位顯示空白。如果讀取值是近期取得的，**血糖**列會保持收合。
+![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
 
-底部的結果按鈕會顯示建議的注射量；點選後會先要求您確認，才會注射胰島素。
+![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
+
+**血糖**欄位通常已填入 CGM 的最新讀取值。如果你沒有使用中的 CGM，則該欄位顯示空白。如果讀取值是近期取得的，**血糖**列會保持收合。 The field follows new readings while the wizard is open, until you change it yourself.
+
+底部的結果按鈕會顯示建議的注射量；點選後會先要求您確認，才會注射胰島素。 While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
 
 請注意：
 
