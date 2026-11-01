@@ -93,7 +93,7 @@ Disse knappene åpner skjermen; de starter ikke noe selv. For å starte en scene
 
 ![Kategorien Administrer i katalogen](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![Kategorien Administrer, fortsettelse](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
 
-### Quick Wizard
+### Hurtigknapp
 
 Hver av dine forhåndsinnstilte **[hurtigknapper](QuickWizards.md)** kan legges til som en knapp, slik at et måltid du spiser ofte er ett trykk unna i oversikten. Knappen viser navnet på forhåndsinnstillingen og mengden karbohydrater/insulin; når du trykker på den, kjøres hurtigknappen med den vanlige bekreftelsen.
 
