@@ -275,7 +275,7 @@ Avhengig av innstillingene dine i [Konfigurasjon > APS](../SettingUpAaps/ConfigB
 - [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) – algoritmens tilstand i 2017
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) – nyeste algoritme, anbefalt for nybegynnere
 
-Fra [**AAPS** versjon 3.3](#version3300) er funksjonen [Dynamisk ISF (DynISF)](../DailyLifeWithAaps/DynamicISF.md) flyttet inn som en del av OpenAPS SMB.
+Fra [**AAPS** versjon 3.3](#version3300) er funksjonen [Dynamisk ISF (DynISF)](../DailyLifeWithAaps/DynamicISF.md) flyttet inn i OpenAPS SMB.
 
 ### OpenAPS AMA
 
