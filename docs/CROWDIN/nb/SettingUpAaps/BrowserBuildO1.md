@@ -3,7 +3,7 @@
 # Alternativ 1 – Lag en ny keystore-fil
 
 ```{note}
-Dette er en del av [Steg 2 – Lag keystore-filen for signering](BrowserBuildKeystore.md) i [Nettleserbygg](BrowserBuild.md). Sørg for at du har lest [valget mellom alternativ 1 og alternativ 2](#aaps-ci-preparation) og lastet ned forberedelsesfilen.
+Dette er en del av [Steg 2 – Lag keystore-filen for signering](BrowserBuildKeystore.md) i [Nettleserbygg](BrowserBuild.md). Sørg for at du har lest [valget mellom alternativ 1 og alternativ 2](#aaps-ci-preparation).
 ```
 
 Alternativ 1 lager en helt ny keystore-fil for signering for deg. Det passer for førstegangsbrukere, for de som ikke har en JKS, eller som har glemt passordet eller aliaset.
