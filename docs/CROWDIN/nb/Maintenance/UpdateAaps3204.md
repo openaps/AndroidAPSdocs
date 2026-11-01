@@ -4,7 +4,7 @@
 
 ## Build yourself instead of download
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**AAPS-appen (en apk-fil) er ikke tilgjengelig for nedlasting, på grunn av regelverket for medisinsk utstyr. It is legal to build the app for your own use, but you must not give a copy to others!**
 
 See [FAQ page](../UsefulLinks/FAQ.md) for details.
 

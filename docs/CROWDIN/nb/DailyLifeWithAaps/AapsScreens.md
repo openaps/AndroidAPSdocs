@@ -1,4 +1,4 @@
-# AAPS screens
+# AAPS-skjermbilder
 
 ```{contents}
 :backlinks: entry
@@ -7,742 +7,742 @@
 
 (the-homescreen)= (AapsScreens-the-homescreen)=
 
-## The main screen
+## Hovedskjermen
 
-![Main screen](../images/Home_Homescreen.png)
+![Hovedskjermen](../images/Home_Homescreen.png)
 
-This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
+Dette er det første skjermbildet du møter når du åpner **AAPS**, og det inneholder det meste av informasjonen du trenger i hverdagen.
 
-### Section A - Top bar
+### Del A - Topplinjen
 
-* The **menu** (☰) on the left opens the navigation drawer with **Treatments history**, **History browser**, **Statistics**, **Profile helper**, **Maintenance**, **Setup Wizard**, **Configuration** and more.
-* The **search bar** finds settings, dialogs and documentation — just start typing (see [Global search](../DailyLifeWithAaps/GlobalSearch.md)).
-* The **Settings** (gear) icon on the right opens all [settings](../SettingUpAaps/Preferences.md).
+* **Menyen** (☰) til venstre åpner sidemenyen med **Behandlingshistorikk**, **Historikkleser**, **Statistikk**, **Profilhjelper**, **Vedlikehold**, **Oppsettveiviser**, **Konfigurasjon** og mer.
+* **Søkefeltet** finner innstillinger, dialoger og dokumentasjon — bare begynn å skrive (se [Globalt søk](../DailyLifeWithAaps/GlobalSearch.md)).
+* Ikonet **Innstillinger** (tannhjul) til høyre åpner alle [innstillingene](../SettingUpAaps/Preferences.md).
 
 (aaps-screens-profile--target)=
 
-### Section B - Status block
+### Del B - Statusblokken
 
-#### Current blood glucose
+#### Gjeldende blodsukker
 
-The latest blood glucose reading from your CGM is shown in the big circle on the left, together with the difference to the previous reading (delta) and the age of the reading.
+Den siste blodsukkermålingen fra CGM-en din vises i den store sirkelen til venstre, sammen med forskjellen fra forrige måling (delta) og hvor gammel målingen er.
 
-The color of the BG value reflects the status to the defined [range](#Preferences-range-for-visualization).
+Fargen på BS-verdien viser hvor den ligger i forhold til det definerte [målområdet](#Preferences-range-for-visualization).
 
-* green = in range
-* red = below range
-* yellow = above range
+* grønn = i målområdet
+* rød = under målområdet
+* gul = over målområdet
 
-![BG circle in range, green](../images/Home_Delta.png) ![BG circle above range, yellow](../images/Home_Delta_high.png) ![BG circle below range, red](../images/Home_Delta_low.png)
+![BS-sirkel i målområdet, grønn](../images/Home_Delta.png) ![BS-sirkel over målområdet, gul](../images/Home_Delta_high.png) ![BS-sirkel under målområdet, rød](../images/Home_Delta_low.png)
 
 (loop-status)= (AapsScreens-loop-status)=
 
-#### Loop status
+#### Loopstatus
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Loopstatus](../images/Home2020_LoopStatus.png)
 
-Next to the BG circle, an icon shows the running mode of the loop (from top to bottom in the picture):
+Ved siden av BS-sirkelen viser et ikon kjøremodusen til loopen (ovenfra og ned på bildet):
 
-1. Green circle = [closed loop](#KeyAapsFeatures-ClosedLoop), loop running
-2. Purple circle with dotted line = [low glucose suspend (LGS)](#KeyAapsFeatures-LGS)
-3. Blue circle with dotted line = [open loop](#KeyAapsFeatures-OpenLoop)
-4. Red circle with cross = loop disabled (not working permanently)
-5. Red pause icon = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown next to the icon
-6. Grey circle with plug = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown next to the icon
+1. Grønn sirkel = [lukket loop](#KeyAapsFeatures-ClosedLoop), loopen kjører
+2. Lilla sirkel med prikket linje = [stopp ved lavt BS (LGS)](#KeyAapsFeatures-LGS)
+3. Blå sirkel med prikket linje = [åpen loop](#KeyAapsFeatures-OpenLoop)
+4. Rød sirkel med kryss = loop deaktivert (virker ikke, permanent)
+5. Rødt pauseikon = loop pauset (midlertidig pause, men basalinsulin gis) - gjenværende tid vises ved siden av ikonet
+6. Grå sirkel med støpsel = pumpe frakoblet (midlertidig ingen insulindosering i det hele tatt) - gjenværende tid vises ved siden av ikonet
 
-Press the icon to open the Loop dialog. The dialog's content depends on the current state:
+Trykk på ikonet for å åpne Loop-dialogen. Innholdet i dialogen avhenger av gjeldende tilstand:
 
-* While the loop is **running** (closed, open or LGS), you can switch the running mode (Closed Loop, Low Glucose Suspend, Open Loop or Disable loop), **suspend** the loop or **disconnect** the pump for a chosen duration.
-* While the loop is **disabled**, you can re-enable it by selecting a running mode, or disconnect the pump.
-* While the loop is **suspended**, you can **resume** it, disconnect the pump, or pick a new duration under **Suspend loop** to extend the suspension.
-* While the pump is **disconnected**, you can **reconnect** the pump, or pick a new duration under **Disconnect pump** to extend the disconnection.
+* Mens loopen **kjører** (lukket, åpen eller LGS), kan du bytte kjøremodus (Lukket loop, Stopp ved lavt BS, Åpen loop eller Deaktiver loop), **pause** loopen eller **koble fra** pumpen for en valgt varighet.
+* Mens loopen er **deaktivert**, kan du aktivere den igjen ved å velge en kjøremodus, eller koble fra pumpen.
+* Mens loopen er **pauset**, kan du **gjenoppta** den, koble fra pumpen, eller velge en ny varighet under **Pause loop** for å forlenge pausen.
+* Mens pumpen er **frakoblet**, kan du **koble til** pumpen igjen, eller velge en ny varighet under **Koble fra pumpen** for å forlenge frakoblingen.
 
-When you extend a suspension or a disconnection, the new duration **starts from now**: it replaces the remaining time, it is not added to it. You do not have to resume or reconnect first.
+Når du forlenger en pause eller en frakobling, **starter den nye varigheten fra nå**: den erstatter den gjenværende tiden, den legges ikke til. Du trenger ikke å gjenoppta eller koble til igjen først.
 
-The dialog while the loop is running in closed loop:
+Dialogen mens loopen kjører i lukket loop:
 
-![Loop dialog in closed loop](../images/loop/loop_dialog_closed_loop.png)
+![Loop-dialog i lukket loop](../images/loop/loop_dialog_closed_loop.png)
 
-The dialog while the loop is suspended, with **Resume** and the durations to extend the suspension:
+Dialogen mens loopen er pauset, med **Gjenoppta** og varighetene for å forlenge pausen:
 
-![Loop dialog while the loop is suspended](../images/loop/loop_dialog_suspended.png)
+![Loop-dialog mens loopen er pauset](../images/loop/loop_dialog_suspended.png)
 
-The dialog while the pump is disconnected, with **Reconnect Pump** and the durations to extend the disconnection:
+Dialogen mens pumpen er frakoblet, med **Koble til pumpen på nytt** og varighetene for å forlenge frakoblingen:
 
-![Loop dialog while the pump is disconnected](../images/loop/loop_dialog_disconnected.png)
+![Loop-dialog mens pumpen er frakoblet](../images/loop/loop_dialog_disconnected.png)
 
-The dialog in Low Glucose Suspend, in open loop and while the loop is disabled only differs in the running modes it offers:
+Dialogen i Stopp ved lavt BS, i åpen loop og mens loopen er deaktivert, skiller seg bare i hvilke kjøremoduser den tilbyr:
 
-![Loop dialog in Low Glucose Suspend](../images/loop/loop_dialog_lgs.png)
+![Loop-dialog i Stopp ved lavt BS](../images/loop/loop_dialog_lgs.png)
 
-![Loop dialog in open loop](../images/loop/loop_dialog_open_loop.png)
+![Loop-dialog i åpen loop](../images/loop/loop_dialog_open_loop.png)
 
-![Loop dialog while the loop is disabled](../images/loop/loop_dialog_disabled.png)
+![Loop-dialog mens loopen er deaktivert](../images/loop/loop_dialog_disabled.png)
 
-This is how the main screen looks in each mode. The color band at the top of the graph changes at the time of the switch.
+Slik ser hovedskjermen ut i hver modus. Fargebåndet øverst i grafen endrer seg på tidspunktet for byttet.
 
-Low Glucose Suspend:
+Stopp ved lavt BS:
 
-![Main screen in Low Glucose Suspend](../images/main/main_screen_loop_lgs.png)
+![Hovedskjermen i Stopp ved lavt BS](../images/main/main_screen_loop_lgs.png)
 
-Open loop:
+Åpen loop:
 
-![Main screen in open loop](../images/main/main_screen_loop_open.png)
+![Hovedskjermen i åpen loop](../images/main/main_screen_loop_open.png)
 
-Loop disabled:
+Loop deaktivert:
 
-![Main screen with the loop disabled](../images/main/main_screen_loop_disabled.png)
+![Hovedskjermen med loopen deaktivert](../images/main/main_screen_loop_disabled.png)
 
-Loop suspended — the remaining time is shown next to the icon:
+Loop pauset — den gjenværende tiden vises ved siden av ikonet:
 
-![Main screen with the loop suspended](../images/main/main_screen_loop_suspended.png)
+![Hovedskjermen med loopen pauset](../images/main/main_screen_loop_suspended.png)
 
-Pump disconnected — the remaining time is shown next to the icon. The treatment buttons stay in the QuickLaunch toolbar, so you can still record insulin given with a pen or carbs:
+Pumpe frakoblet — den gjenværende tiden vises ved siden av ikonet. Behandlingsknappene blir værende på Hurtigstart-verktøylinjen, så du kan fortsatt registrere insulin gitt med penn eller karbohydrater:
 
-![Main screen with the pump disconnected](../images/main/main_screen_pump_disconnected.png)
+![Hovedskjermen med pumpen frakoblet](../images/main/main_screen_pump_disconnected.png)
 
-A validation is required after each selection.
+Du må bekrefte etter hvert valg.
 
-```{admonition} Alarm: the pump did not accept the zero temp basal :class: warning While the pump is disconnected, **AAPS** keeps a zero temporary basal on the pump and sets it again if it is missing. If this still fails after 10 minutes, **AAPS** raises an urgent alarm: *"The pump did not accept the zero temp basal. It may still be giving basal insulin. Check the pump."* The alarm repeats every 15 minutes until the zero temporary basal is set or the disconnection ends. If you see it, check your pump: it may be delivering basal insulin although **AAPS** shows it as disconnected.
+```{admonition} Alarm: pumpen godtok ikke nullbasal :class: warning Mens pumpen er frakoblet, holder **AAPS** en midlertidig nullbasal på pumpen og setter den på nytt hvis den mangler. Hvis dette fortsatt mislykkes etter 10 minutter, utløser **AAPS** en viktig alarm: *«Pumpen godtok ikke nullbasal. Den kan fortsatt levere basalinsulin. Kontroller pumpen.»* Alarmen gjentas hvert 15. minutt til nullbasalen er satt eller frakoblingen er over. Hvis du ser den, kontroller pumpen din: den kan levere basalinsulin selv om **AAPS** viser den som frakoblet.
 
-    <br />Note: the modes offered depend on your progress in the [Objectives](../SettingUpAaps/CompletingTheObjectives.md) — Closed Loop and LGS only become available as you complete them.
+    <br />Merk: hvilke moduser som tilbys, avhenger av hvor langt du har kommet i [Opplæringsmålene](../SettingUpAaps/CompletingTheObjectives.md) — Lukket loop og LGS blir først tilgjengelige etter hvert som du fullfører dem.
     
     (aaps-screens-bg-warning-sign)=
-    #### BG warning sign
+    #### BS-varselskilt
     
-    If **AAPS** detects a problem with the BG readings it receives, a shortcut to your BG source (named after it, for example **xDrip+ BG**) appears in the bottom bar of the main screen, with a red warning badge. Tap it to open the [BG source screen](#aaps-screens-bg-source).
+    Hvis **AAPS** oppdager et problem med BS-målingene den mottar, vises en snarvei til BS-kilden din (med kildens navn, for eksempel **xDrip+ BS**) i linjen nederst på hovedskjermen, med et rødt varselmerke. Trykk på den for å åpne [BS-kildeskjermen](#aaps-screens-bg-source).
     
-    ##### Duplicate BG data
+    ##### Dupliserte BS-data
     
-    The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which prevents the loop from doing its work right. **AAPS** cannot calculate your BG trend reliably from duplicated readings, so it stops correcting.
+    Det røde varselskiltet sier at du må handle med en gang: Du mottar **dupliserte BS-data**, og det hindrer loopen i å gjøre jobben sin riktig. **AAPS** kan ikke beregne BS-trenden din pålitelig fra dupliserte målinger, så den slutter å korrigere.
     
-    If your loop was closed, **AAPS** switches it to [Low Glucose Suspend (LGS)](#KeyAapsFeatures-LGS) mode: the loop icon turns purple.
+    Hvis loopen din var lukket, bytter **AAPS** den til modusen [Stopp ved lavt BS (LGS)](#KeyAapsFeatures-LGS): loop-ikonet blir lilla.
     
-      ![Duplicate BG data: LGS loop icon and the BG source shortcut with a red warning badge](../images/bg_warn_red.png)
+      ![Dupliserte BS-data: LGS-loop-ikon og BS-kildesnarveien med et rødt varselmerke](../images/bg_warn_red.png)
     
-    Press the loop icon: the **Constraints** card at the top tells you why: "BgQualityCheck: LGS mode due to doubled values in BG source".
+    Trykk på loop-ikonet: kortet **Begrensninger** øverst forteller deg hvorfor: «BgQualityCheck: Stopp ved lavt BS-modus på grunn av doble verdier fra BS-kilden».
     
-      ![Running mode dialog: LGS due to doubled values](../images/main/bg_doubled_constraint.png)
+      ![Kjøremodus-dialog: LGS på grunn av doble verdier](../images/main/bg_doubled_constraint.png)
     
-    ```{admonition} Your loop is running in Low Glucose Suspend
+    ```{admonition} Loopen din kjører i Stopp ved lavt BS
     :class: note
-    Your loop keeps running, but only to protect you against lows: **AAPS** can still reduce or suspend your basal, and it will not give any correction insulin until you solve this issue !
+    Loopen din fortsetter å kjøre, men bare for å beskytte deg mot lave verdier: **AAPS** kan fortsatt redusere eller stoppe basalen, men den gir ikke noe korreksjonsinsulin før du har løst dette problemet!
     
 
-You need to find out why you get duplicate BGs:
+Du må finne ut hvorfor du får dupliserte BS-verdier:
 
-* Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
-* Do multiple sources upload your BG to Nightscout? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip, if you use that.
-* Do you have any followers that might receive your BG but do also upload it again to your Nightscout site?
-* Last resort: In [NSClient settings](#Preferences-nsclient), select the Synchronization settings and disable the "Receive CGM data from NS" option.
+* Er Dexcom bridge aktivert på Nightscout-siden din? Deaktiver bridge ved å gå til administrasjonspanelet for Nightscout-instansen din, redigere variabelen «enable» og fjerne delen «bridge» der. (For Heroku [finner du detaljer her](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* Laster flere kilder opp BS-verdiene dine til Nightscout? Hvis du bruker BYODA-appen, aktiver opplastingen i **AAPS**, men ikke aktiver den i xDrip hvis du bruker det.
+* Har du følgere som mottar BS-verdiene dine, men som også laster dem opp igjen til Nightscout-siden din?
+* Siste utvei: I [NSClient-innstillingene](#Preferences-nsclient), velg innstillingene for Synkronisering og slå av valget «Motta BS-data fra NS».
 
-To remove the warning immediately and get your loop correcting again, delete the duplicate entries from the BG source screen: tap the shortcut in the bottom bar. The duplicate reading is highlighted in red. Long press a reading to start selecting, tick the duplicates and tap the trash icon at the top right.
+For å fjerne varselet med en gang og få loopen til å korrigere igjen, slett de dupliserte oppføringene fra BS-kildeskjermen: trykk på snarveien i linjen nederst. Den dupliserte målingen er uthevet i rødt. Trykk og hold på en måling for å begynne å velge, kryss av duplikatene og trykk på søppelbøtte-ikonet øverst til høyre.
 
-![BG source screen: duplicates selected for deletion](../images/main/bg_source_delete_duplicates.png)
+![BS-kildeskjermen: duplikater valgt for sletting](../images/main/bg_source_delete_duplicates.png)
 
-However, when there are a lot of duplicates, it might be easier to
+Men når det er mange duplikater, kan det være enklere å
 
-* [backup your settings](../Maintenance/ExportImportSettings.md),
-* reset your database in the maintenance menu and
-* [import your settings](../Maintenance/ExportImportSettings.md) again
+* [sikkerhetskopiere innstillingene dine](../Maintenance/ExportImportSettings.md),
+* tilbakestille databasen i Vedlikehold-menyen og
+* [importere innstillingene dine](../Maintenance/ExportImportSettings.md) igjen
 
-    {admonition} Switch back to Closed Loop yourself
+    {admonition} Bytt tilbake til Lukket loop selv
     :class: important
-    **AAPS** does not return to **Closed Loop** on its own once the duplicates are gone. Press the loop icon on the main screen and select **Closed Loop** again.
+    **AAPS** går ikke tilbake til **Lukket loop** av seg selv når duplikatene er borte. Trykk på loop-ikonet på hovedskjermen og velg **Lukket loop** igjen.
 
-##### Flat BG data
+##### Flate BS-data
 
-With some BG sources (Libre 1, AiDEX, Glutec, Medtronic and sources that do not report their sensor type), **AAPS** also checks for readings that do not change: if your BG has changed by less than 2 mg/dL (0.1 mmol/L) for 45 minutes, the data is considered wrong. The BG source shortcut then shows a red flat-trend badge, and the loop stops any high temporary basal and gives no correction insulin until the readings change again. Check your sensor and the app that sends the readings.
+Med noen BS-kilder (Libre 1, AiDEX, Glutec, Medtronic og kilder som ikke oppgir sensortype) sjekker **AAPS** også etter målinger som ikke endrer seg: hvis BS har endret seg mindre enn 2 mg/dL (0,1 mmol/L) på 45 minutter, regnes dataene som feil. BS-kildesnarveien viser da et rødt merke for flat trend, og loopen stopper enhver høy midlertidig basal og gir ikke noe korreksjonsinsulin før målingene endrer seg igjen. Kontroller sensoren din og appen som sender målingene.
 
-##### Irregular BG data
+##### Uregelmessige BS-data
 
-When readings arrive at irregular intervals or some are missing, **AAPS** recalculates 5-minute values from the readings it has. This happens for example after a sensor change, or with Libre sensors, whose timing slips a minute or two every few hours. The loop keeps working and you do not have to take any action. **AAPS** 4 no longer shows a yellow warning sign for this.
+Når målinger kommer med uregelmessige mellomrom eller noen mangler, beregner **AAPS** 5-minuttsverdier på nytt fra målingene den har. Dette skjer for eksempel etter et sensorbytte, eller med Libre-sensorer, der tidspunktene forskyver seg et minutt eller to med noen timers mellomrom. Loopen fortsetter å virke, og du trenger ikke å gjøre noe. **AAPS** 4 viser ikke lenger et gult varselskilt for dette.
 
-#### Current Profile
+#### Gjeldende profil
 
-The current profile is displayed next to the star icon.
+Den gjeldende profilen vises ved siden av stjerneikonet.
 
-Tap the profile name to open the [Profile screen](#aaps-screens-profile), where you can view the profile details and [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Trykk på profilnavnet for å åpne [Profil-skjermen](#aaps-screens-profile), der du kan se profildetaljene og [bytte mellom ulike profiler](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-To **change the profile percentage** (and its duration), tap the profile name, then tap the round **▶** (Activate) button at the bottom right of the Profile screen. In **AAPS** 3.x this screen opened with a long press on the profile name; in **AAPS** 4 a long press does nothing. Step by step: [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+For å **endre profilprosenten** (og varigheten), trykk på profilnavnet og deretter på den runde **▶**-knappen (Aktiver) nederst til høyre på Profil-skjermen. I **AAPS** 3.x åpnet du dette skjermbildet ved å trykke og holde på profilnavnet; i **AAPS** 4 gjør trykk og hold ingenting. Steg for steg: [Endre profilprosenten](#ProfileSwitch-change-percentage).
 
-![Profile with an active profile switch](../images/Home2020_ProfileSwitch.png)
+![Profil med et aktivt profilbytte](../images/Home2020_ProfileSwitch.png)
 
-1. Regular display with a standard profile activation.
-2. Profile switch with a specific percentage of 90% and a remaining duration of 9 minutes — the profile name turns yellow while a temporary profile switch is running.
-3. Profile switch with a time shift of 1 hour and a remaining duration of 9 minutes.
+1. Vanlig visning med en standard profilaktivering.
+2. Profilbytte med en bestemt prosent på 90 % og en gjenværende varighet på 9 minutter — profilnavnet blir gult mens et midlertidig profilbytte kjører.
+3. Profilbytte med en tidsforskyving på 1 time og en gjenværende varighet på 9 minutter.
 
-#### Target
+#### Mål
 
-![Temp target remaining duration](../images/Home2020_TT.png)
+![Gjenværende varighet for midlertidig mål](../images/Home2020_TT.png)
 
-The current target blood glucose level is displayed below the profile name.
+Det gjeldende blodsukkermålet vises under profilnavnet.
 
-Short press the target to open the **[Temporary Target](../DailyLifeWithAaps/TempTargets.md)** screen.
+Trykk kort på målet for å åpne skjermen **[Midlertidig mål](../DailyLifeWithAaps/TempTargets.md)**.
 
-1. Regular display: the target range defined in your profile.
-2. If a temp target is set, the target turns yellow/orange with the icon of the used preset, and the remaining time in minutes is shown in brackets.
+1. Vanlig visning: målområdet som er definert i profilen din.
+2. Hvis et midlertidig mål er satt, blir målet gult/oransje med ikonet til den brukte forhåndsinnstillingen, og den gjenværende tiden i minutter vises i parentes.
 
 (AapsScreens-visualization-of-dynamic-target-adjustment)=
 
-#### Visualization of Dynamic target adjustment
+#### Visning av dynamisk måljustering
 
-When using the [SMB algorithm](#Config-Builder-aps) and [Autosens](#Open-APS-features-autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity.
+Når du bruker [SMB-algoritmen](#Config-Builder-aps) og [Autosens](#Open-APS-features-autosens), kan **AAPS** justere målet ditt dynamisk ut fra sensitiviteten.
 
-Enable either one or both of the following options in [OpenAPS SMB settings](#Preferences-openaps-smb-settings):
+Aktiver ett av eller begge de følgende valgene i [OpenAPS SMB-innstillingene](#Preferences-openaps-smb-settings):
 
-* "Sensitivity raises target" and/or
-* "Resistance lowers target"
+* «Sensitivitet hever mål» og/eller
+* «Resistens senker mål»
 
-If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile, and the displayed target changes color to indicate the adjustment.
+Hvis **AAPS** oppdager resistens eller sensitivitet, endres målet fra det som er satt i profilen, og det viste målet skifter farge for å vise justeringen.
 
 (aaps-screens-iob-cob-basal-sens)=
 
-#### IOB, COB, basal and sensitivity
+#### IOB, COB, basal og sensitivitet
 
-![IOB, COB, basal and sensitivity](../images/Home2020_TBR.png)
+![IOB, COB, basal og sensitivitet](../images/Home2020_TBR.png)
 
-1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
-    The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
-    * IOB may be negative if there have recently been periods of reduced basal.
-    * Press the chip to see the split of bolus and basal insulin (first dialog in the picture — here with a negative IOB after a period of reduced basal)
-2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before
-3. The teal button on the right reflects the **current basal delivery**: a flat line when the profile basal is running, a changed icon while a temporary basal rate is active
-4. The **percentage row** shows the current sensitivity ([Autosens](#Open-APS-features-autosens) / [DynamicISF](../DailyLifeWithAaps/DynamicISF.md)). When the loop changes your ISF, the row also shows the profile ISF, an arrow and the ISF the loop uses now, for example "80% 2.0 ↗ 2.5". Press it to see the Autosens value and the effective ISF (second dialog in the picture). If the loop works with a different value than the last Autosens result (for example because a temp target changes your sensitivity), the dialog also shows that value as **Autosens in algorithm**. When Autosens is off, the loop keeps your profile ISF and no effective ISF is shown.
+1. **Sprøyte**: aktivt insulin (IOB) - mengden aktivt insulin i kroppen din  
+    Tallet for aktivt insulin ville vært null hvis bare standardbasalen din kjørte og det ikke var noe insulin igjen fra tidligere boluser. 
+    * IOB kan være negativ hvis det nylig har vært perioder med redusert basal.
+    * Trykk på brikken for å se fordelingen mellom bolus- og basalinsulin (første dialog på bildet — her med negativ IOB etter en periode med redusert basal)
+2. **Korn**: [aktive karbohydrater (COB)](../DailyLifeWithAaps/CobCalculation.md) - karbohydrater du har spist som ennå ikke er tatt opp
+3. Den blågrønne knappen til høyre viser **gjeldende basallevering**: en flat linje når profilbasalen kjører, et endret ikon mens en midlertidig basal er aktiv
+4. **Prosentraden** viser gjeldende sensitivitet ([Autosens](#Open-APS-features-autosens) / [Dynamisk ISF](../DailyLifeWithAaps/DynamicISF.md)). Når loopen endrer ISF-en din, viser raden også profil-ISF, en pil og den ISF-en loopen bruker nå, for eksempel «80 % 2,0 ↗ 2,5». Trykk på den for å se Autosens-verdien og den effektive ISF-en (andre dialog på bildet). Hvis loopen bruker en annen verdi enn det siste Autosens-resultatet (for eksempel fordi et midlertidig mål endrer sensitiviteten din), viser dialogen også den verdien som **Algoritmens sensitivitet**. Når Autosens er av, beholder loopen profil-ISF-en din, og ingen effektiv ISF vises.
 
-The IOB dialog, opened by pressing the IOB chip:
+IOB-dialogen, som åpnes ved å trykke på IOB-brikken:
 
-![IOB dialog with bolus IOB and basal IOB](../images/main/main_chip_iob.png)
+![IOB-dialog med bolus-IOB og basal-IOB](../images/main/main_chip_iob.png)
 
-Press the teal button to see the temporary basal rate that is running, when it started and how long it has been running:
+Trykk på den blågrønne knappen for å se den midlertidige basalen som kjører, når den startet og hvor lenge den har kjørt:
 
-![Temp basal dialog](../images/main/main_chip_temp_basal.png)
+![Dialog for midlertidig basal](../images/main/main_chip_temp_basal.png)
 
 (aaps-screens-carbs-required)=
 
-#### Carbs required
+#### Karbohydrater kreves
 
-![Carbs required shown in the COB chip](../images/main/main_screen_carbs_required.png)
+![Karbohydrater kreves, vist i COB-brikken](../images/main/main_screen_carbs_required.png)
 
-Carbs suggestions are given when the reference design detects that it requires carbs.
+Forslag om karbohydrater gis når algoritmen oppdager at det trengs karbohydrater.
 
-This is when the oref algorithm thinks it can't rescue you by zero-temping, and you will need carbs to fix.
+Dette skjer når oref-algoritmen mener at den ikke kan redde deg med null midlertidig basal, og du trenger karbohydrater for å rette opp.
 
-The carb notifications are much more sophisticated than the bolus calculator ones. You might see a carbs suggestion while the bolus calculator does not show missing carbs.
+Karbovarslene er mye mer avanserte enn de i boluskalkulatoren. Du kan få et forslag om karbohydrater selv om boluskalkulatoren ikke viser manglende karbohydrater.
 
-Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+Varsler om at karbohydrater kreves kan sendes til Nightscout hvis du ønsker det. Da vises og kringkastes en melding (announcement) der.
 
-### Section C - Status row
+### Del C - Statusraden
 
-![Status row](../images/Home2020_StatusLights.png)
+![Statusrad](../images/Home2020_StatusLights.png)
 
-The status row gives a visual warning for
+Statusraden gir en visuell advarsel for
 
-* Cannula age
-* Insulin age (days reservoir is used) and reservoir level (units)
-* Sensor age
-* Pump battery age and level (%)
+* Kanylealder
+* Insulinalder (dager reservoaret er brukt) og reservoarnivå (enheter)
+* Sensoralder
+* Alder og nivå for pumpebatteriet (%)
 
-If threshold warning is exceeded, values will be shown in yellow.
+Hvis grensen for advarsel er overskredet, vises verdiene i gult.
 
-If threshold critical is exceeded, values will be shown in red.
+Hvis grensen for kritisk er overskredet, vises verdiene i rødt.
 
-Thresholds can be changed via the small **Settings** icon shown when the status row is **expanded** (chevron on the right) — see [Status lights](#Preferences-status-lights).
+Grensene kan endres via det lille **Innstillinger**-ikonet som vises når statusraden er **utvidet** (pilen til høyre) — se [Statuslys](#Preferences-status-lights).
 
-The expanded status panel also has a button at the end of some rows to record a change, which resets the corresponding age: **Add** on the **Sensor** row records a sensor insertion. If your pump supports it, **Prime/Fill** appears on the **Cannula** (or **Patch pump**) and **Insulin** rows, and **Add** on the **Pump battery** row.
+Det utvidede statuspanelet har også en knapp på slutten av noen rader for å registrere et bytte, som nullstiller den tilhørende alderen: **Legg til** på raden **Sensor** registrerer et sensorbytte. Hvis pumpen din støtter det, vises **Prime/fylling** på radene **Kanyle** (eller **Patchpumpe**) og **Insulin**, og **Legg til** på raden **Pumpebatteri**.
 
-![Expanded status panel with Prime/Fill on the Cannula and Insulin rows and Add on the Sensor and Pump battery rows](../images/main/main_status_row_expanded.png)
+![Utvidet statuspanel med Prime/fylling på radene Kanyle og Insulin og Legg til på radene Sensor og Pumpebatteri](../images/main/main_status_row_expanded.png)
 
-Depending on the pump you use, you may not have all of these icons.
+Avhengig av hvilken pumpe du bruker, har du kanskje ikke alle disse ikonene.
 
 (screens-sensor-level-battery)=
 
-#### Sensor level (battery)
+#### Sensornivå (batteri)
 
-Works for CGM with an additional transmitter such as MiaoMiao 2. (Technically sensor has to send battery level information to xDrip.)
+Fungerer for CGM med en ekstra sender, for eksempel MiaoMiao 2. (Teknisk sett må sensoren sende informasjon om batterinivå til xDrip.)
 
-Thresholds can be set in [Status lights](#Preferences-status-lights).
+Grensene kan settes i [Statuslys](#Preferences-status-lights).
 
 (aaps-screens-main-graph)=
 
-### Section D - Main graph
+### Del D - Hovedgrafen
 
-![Main graph](../images/main/main_graph.png)
+![Hovedgraf](../images/main/main_graph.png)
 
-The graph shows your blood glucose (BG) as read from your glucose monitor (CGM).
+Grafen viser blodsukkeret ditt (BS) slik det leses av glukosemåleren din (CGM).
 
-Use scroll and pinch-zoom gestures on the graph to change the visible time frame.
+Bruk rulling og knip for å zoome på grafen for å endre tidsrommet som vises.
 
-The green area reflects your target range.
+Det grønne området viser målområdet ditt.
 
-This information is also shown on this graph :
+Denne informasjonen vises også på denne grafen:
 
-* Manual boluses: blue triangle just above the BG curve, pointing down at the reading of that moment, with the insulin amount
-* Carbs entries: orange triangle just below the BG curve, pointing up at the reading, with the carb amount. A meal entered with its bolus looks like one marker, split by the reading.
-* The triangles come in three sizes (small, medium, large), following the amount compared with the largest of the day. If there is no BG reading at that time (sensor gap), the triangle is drawn at the bottom of the graph.
-* BG checks and calibrations: drawn at their own measured value, so you can compare them with the sensor curve
-* Target as defined in the profile or modified by temporary target: green line
-* Profile switches: star icons at the top of the graph
-* Loop status: color band at the top of the graph when the [running mode](#AapsScreens-loop-status) is anything else than closed loop: blue = open loop, purple = LGS, red = loop disabled, yellow = loop suspended, grey = pump disconnected, orange = superbolus (in the screenshot: purple, then yellow). The history of these changes is listed in [Running mode](#AapsScreens-running-mode)
-* [SMBs](#Open-APS-features-super-micro-bolus-smb) are not drawn on the BG graph (there would be one every few minutes): they are shown on the [IOB graph](#aaps-screens-iob).
+* Manuelle boluser: blå trekant rett over BS-kurven, som peker ned mot målingen på det tidspunktet, med insulinmengden
+* Karboregistreringer: oransje trekant rett under BS-kurven, som peker opp mot målingen, med karbohydratmengden. Et måltid som er registrert sammen med bolusen, ser ut som ett merke, delt av målingen.
+* Trekantene finnes i tre størrelser (liten, middels, stor), etter mengden sammenlignet med dagens største. Hvis det ikke finnes noen BS-måling på det tidspunktet (hull i sensordata), tegnes trekanten nederst i grafen.
+* BS-kontroller og kalibreringer: tegnes ved sin egen målte verdi, så du kan sammenligne dem med sensorkurven
+* Mål slik det er definert i profilen eller endret av et midlertidig mål: grønn linje
+* Profilbytter: stjerneikoner øverst i grafen
+* Loopstatus: fargebånd øverst i grafen når [kjøremodusen](#AapsScreens-loop-status) er noe annet enn lukket loop: blå = åpen loop, lilla = LGS, rød = loop deaktivert, gul = loop pauset, grå = pumpe frakoblet, oransje = superbolus (på skjermbildet: lilla, deretter gul). Historikken over disse endringene finner du under [Kjøremodus](#AapsScreens-running-mode)
+* [SMB-er](#Open-APS-features-super-micro-bolus-smb) tegnes ikke i BS-grafen (det ville vært én med få minutters mellomrom): de vises i [IOB-grafen](#aaps-screens-iob).
 
-Tap a **BG check** in the graph to see its value, and its note if you wrote one.
+Trykk på en **BS-kontroll** i grafen for å se verdien, og merknaden hvis du skrev en.
 
 (aaps-screens-graph-press-and-hold)=
 
-#### See the values at a given time
+#### Se verdiene på et gitt tidspunkt
 
-**Press and hold** the BG graph for a moment to see the values at one reading. A dot marks the nearest reading, a dashed line is drawn at that time in all the graphs, and a pop-up at the top of the graph shows:
+**Trykk og hold** på BS-grafen et øyeblikk for å se verdiene ved én måling. En prikk markerer nærmeste måling, en stiplet linje tegnes på det tidspunktet i alle grafene, og et lite vindu øverst i grafen viser:
 
-* the time and the BG value
-* IOB, COB (only when it is above 0 g) and the basal rate at that time — the basal icon shows whether a temporary basal rate was running, as on the main screen
-* any bolus, SMB or carbs at that time, with the same triangles as in the graphs
+* tidspunktet og BS-verdien
+* IOB, COB (bare når den er over 0 g) og basaldosen på det tidspunktet — basalikonet viser om en midlertidig basal kjørte, som på hovedskjermen
+* eventuell bolus, SMB eller karbohydrater på det tidspunktet, med de samme trekantene som i grafene
 
-Keep your finger on the screen and move it left or right to go from one reading to the next. You feel a light tick at each reading, and the graph does not scroll while you do this. The pop-up stays for 2 seconds after you lift your finger.
+Hold fingeren på skjermen og flytt den til venstre eller høyre for å gå fra én måling til den neste. Du kjenner et lett tikk ved hver måling, og grafen ruller ikke mens du gjør dette. Vinduet blir stående i 2 sekunder etter at du løfter fingeren.
 
-This works the same way on the [additional graphs](#aaps-screens-additional-graphs) below the BG graph (IOB, COB...): press and hold any of them.
+Dette virker på samme måte på de [ekstra grafene](#aaps-screens-additional-graphs) under BS-grafen (IOB, COB ...): trykk og hold på hvilken som helst av dem.
 
-![Press and hold the BG graph: the pop-up shows time, BG, IOB and basal](../images/main/graph_press_and_hold.png)
+![Trykk og hold på BS-grafen: vinduet viser tid, BS, IOB og basal](../images/main/graph_press_and_hold.png)
 
 (AapsScreens-activate-optional-information)=
 
-#### Activate optional information
+#### Aktiver valgfri informasjon
 
-Press the **pencil** icon in the top-right corner of the graph to open the graph settings:
+Trykk på **blyant**-ikonet øverst til høyre i grafen for å åpne grafinnstillingene:
 
-![Main graph setting](../images/Home2020_MainGraphSetting.png)
+![Innstilling for hovedgrafen](../images/Home2020_MainGraphSetting.png)
 
-* **Graph height** adjusts how tall the graph is drawn.
-* **ACT** overlays the insulin activity curve: a solid yellow-green line <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (not to be confused with the dotted yellow UAM prediction)
-* **PRED** overlays the [prediction lines](#aaps-screens-prediction-lines) (see below)
+* **Grafhøyde** justerer hvor høy grafen tegnes.
+* **ACT** legger insulinaktivitetskurven oppå: en heltrukket gulgrønn linje <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (ikke å forveksle med den prikkede gule UAM-prediksjonen)
+* **PRED** legger [prediksjonslinjene](#aaps-screens-prediction-lines) oppå (se nedenfor)
 
 (aaps-screens-prediction-lines)=
 
-#### Prediction lines
+#### Prediksjonslinjer
 
-When **PRED** is on, AAPS draws its predictions as **dotted lines** to the right of the "now" line. Each prediction has its own color. The dark theme uses lighter shades of the same colors, and a line inside the green target range can look slightly greener.
+Når **PRED** er på, tegner AAPS prediksjonene sine som **prikkede linjer** til høyre for «nå»-linjen. Hver prediksjon har sin egen farge. Mørkt tema bruker lysere nyanser av de samme fargene, og en linje inne i det grønne målområdet kan se litt grønnere ut.
 
-| Line                   | Light theme                                                                                                                       | Dark theme                                                                                                                         | What it predicts            |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| **IOB** (blue)         | <span style="background:#FFFFFF;color:#1E88E5;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#64B5F6;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | insulin only                |
-| **COB** (orange)       | <span style="background:#FFFFFF;color:#FB8C00;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#FFB74D;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | carbs on board              |
-| **UAM** (yellow)       | <span style="background:#FFFFFF;color:#C9BD60;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#E6D39A;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | unannounced meal            |
-| **ZT** (cyan)          | <span style="background:#FFFFFF;color:#00D2D2;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#4DD4D4;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | zero-temp (insulin stopped) |
-| **aCOB** (pale orange) | <span style="background:#FFFFFF;color:rgba(251,140,0,0.5);padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span> | <span style="background:#141218;color:rgba(255,183,77,0.5);padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span> | older AMA algorithm only    |
+| Linje                   | Lyst tema                                                                                                                         | Mørkt tema                                                                                                                         | Hva den predikerer                       |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| **IOB** (blå)           | <span style="background:#FFFFFF;color:#1E88E5;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#64B5F6;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | bare insulin                             |
+| **COB** (oransje)       | <span style="background:#FFFFFF;color:#FB8C00;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#FFB74D;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | aktive karbohydrater                     |
+| **UAM** (gul)           | <span style="background:#FFFFFF;color:#C9BD60;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#E6D39A;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | ikke-varslet måltid                      |
+| **ZT** (cyan)           | <span style="background:#FFFFFF;color:#00D2D2;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#4DD4D4;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | null midlertidig basal (insulin stoppet) |
+| **aCOB** (blek oransje) | <span style="background:#FFFFFF;color:rgba(251,140,0,0.5);padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span> | <span style="background:#141218;color:rgba(255,183,77,0.5);padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span> | bare den eldre AMA-algoritmen            |
 
-When two predictions give the same values, their dots overlap and you only see one of the colors (for example, UAM on top of IOB when BG is flat).
+Når to prediksjoner gir de samme verdiene, overlapper prikkene deres, og du ser bare én av fargene (for eksempel UAM oppå IOB når BS er flatt).
 
-* **COB** line (orange): [carbs on board](CobCalculation) (orange is used throughout AAPS for COB and carbs)
+* **COB**-linje (oransje): [aktive karbohydrater](CobCalculation) (oransje brukes i hele AAPS for COB og karbohydrater)
     
-    This prediction line shows where your BG (not where COB itself!) will go based on the current **Profile** settings, assuming that the deviations due to carb absorption remain constant. This line only appears if there are known COB.
+    Denne prediksjonslinjen viser hvor BS (ikke COB selv!) vil gå, basert på de gjeldende innstillingene i **profilen**, under forutsetning av at avvikene fra karbohydratopptaket holder seg konstante. Denne linjen vises bare når det finnes kjente COB.
 
-* **IOB** line (blue): insulin on board (blue is used throughout AAPS for IOB and insulin)
+* **IOB**-linje (blå): aktivt insulin (blå brukes i hele AAPS for IOB og insulin)
     
-    This prediction line shows what would happen under the influence of insulin only. For example if you dialed in some insulin and then didn’t eat any carbs.
+    Denne prediksjonslinjen viser hva som ville skjedd med påvirkning fra insulin alene. For eksempel hvis du ga litt insulin og så ikke spiste noen karbohydrater.
 
-* **ZT** line (cyan): zero-temp (predicted BG if temporary basal rate at 0% would be set)
+* **ZT**-linje (cyan): null midlertidig basal (predikert BS hvis en midlertidig basal på 0 % ble satt)
     
-    This prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR). The line stops once it rises above your target.
+    Denne prediksjonslinjen viser hvordan BS-kurven ville endret seg hvis pumpen stoppet all insulinlevering (0 % TBR). Linjen stopper når den stiger over målet ditt.
     
-    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+    *Denne linjen vises bare når [SMB](#Config-Builder-aps)-algoritmen brukes.*
 
-* **UAM** line (yellow): [unannounced meals](#SensitivityDetectionAndCob-sensitivity-oref1)
+* **UAM**-linje (gul): [ikke-varslede måltider](#SensitivityDetectionAndCob-sensitivity-oref1)
     
-    Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the **orange COB line**, but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+    Ikke-varslede måltider betyr at det er oppdaget en betydelig økning i glukosenivået på grunn av måltider, adrenalin eller annen påvirkning. Prediksjonslinjen ligner på den **oransje COB-linjen**, men den antar at avvikene vil avta i jevnt tempo (ved å forlenge den nåværende nedgangstakten).
     
-    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used, **Enable UAM** is on in the OpenAPS SMB settings, and BG is rising more than insulin alone explains.*
+    *Denne linjen vises bare når [SMB](#Config-Builder-aps)-algoritmen brukes, **Aktiver UAM** er på i OpenAPS SMB-innstillingene, og BS stiger mer enn insulin alene kan forklare.*
 
-* **aCOB** line (pale, see-through orange): accelerated carbohydrate absorption
+* **aCOB**-linje (blek, gjennomsiktig oransje): akselerert karbohydratopptak
     
-    Similar to COB, but assuming a static 10 mg/dL/5m (-0.555 mmol/L/5m) carb absorption rate. Deprecated and of limited usefulness.
+    Ligner på COB, men antar en fast karbohydratopptakshastighet på 10 mg/dL/5 min (-0,555 mmol/L/5 min). Utdatert og av begrenset nytte.
     
-    *This line appears only when the older [AMA](#Config-Builder-aps) algorithm is used.*
+    *Denne linjen vises bare når den eldre [AMA](#Config-Builder-aps)-algoritmen brukes.*
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+Som regel havner den virkelige glukosekurven din midt mellom disse linjene, eller nær den linjen som bygger på antakelser som ligner mest på situasjonen din.
 
 (aaps-screens-how-predictions-become-a-dosing-decision)=
 
-#### How AAPS turns predictions into a dosing decision
+#### Slik gjør AAPS prediksjoner om til en doseringsbeslutning
 
-AAPS doesn't dose insulin based on your current BG alone — every loop cycle (roughly every 5 minutes) it looks at all of the prediction lines above together and works out the safest course of action.
+AAPS doserer ikke insulin ut fra det gjeldende BS alene — i hver loop-syklus (omtrent hvert 5. minutt) ser den på alle prediksjonslinjene ovenfor samlet og finner den tryggeste handlingen.
 
-The core rule is **safety first**: if *any* prediction line, in any time frame, dips below your low safety threshold, AAPS issues a zero-temp (0% temporary basal rate) and withholds further insulin, even if your current BG is high. Only once every prediction line stays above that threshold will AAPS consider giving more insulin.
+Hovedregelen er **sikkerhet først**: hvis *en eneste* prediksjonslinje, i et hvilket som helst tidsrom, faller under den nedre sikkerhetsgrensen din, setter AAPS en null midlertidig basal (0 % midlertidig basal) og holder tilbake mer insulin, selv om BS er høyt nå. Først når alle prediksjonslinjene holder seg over denne grensen, vurderer AAPS å gi mer insulin.
 
-When it is safe to give more insulin, AAPS looks at where BG is ultimately predicted to end up (the **eventual BG**) across the blended predictions, and works out how much correction is needed to bring that eventual BG back to target — delivered either as an increased temporary basal rate, or (if the oref1/[SMB](#Open-APS-features-super-micro-bolus-smb) algorithm is enabled) as a small immediate bolus. If BG is high now but is already trending down enough on its own, AAPS will hold off, or may even reduce the basal rate, rather than add insulin that would only push a later low even lower.
+Når det er trygt å gi mer insulin, ser AAPS på hvor BS til slutt er predikert å ende (**eventual BG**, sluttverdien) på tvers av de kombinerte prediksjonene, og regner ut hvor mye korreksjon som trengs for å få denne sluttverdien tilbake til målet — gitt enten som en økt midlertidig basal, eller (hvis oref1/[SMB](#Open-APS-features-super-micro-bolus-smb)-algoritmen er aktivert) som en liten bolus med en gang. Hvis BS er høyt nå, men allerede er på vei nok ned av seg selv, venter AAPS, eller reduserer kanskje til og med basaldosen, i stedet for å gi insulin som bare ville presse en senere lav verdi enda lavere.
 
-For worked examples of this decision logic with real screenshots, see the [dosing scenarios in the Clinician's guide](#clinicianguide-dosing-scenarios) — they were written for a clinician audience but apply to any AAPS user.
+For gjennomgåtte eksempler på denne beslutningslogikken med ekte skjermbilder, se [doseringsscenarioene i veiledningen for behandlere](#clinicianguide-dosing-scenarios) — de ble skrevet for behandlere, men gjelder for alle AAPS-brukere.
 
-*For the full technical treatment of how these predictions and the resulting dosing decision are calculated, see [OpenAPS's determine-basal documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html).*
+*For den fulle tekniske forklaringen av hvordan disse prediksjonene og doseringsbeslutningen beregnes, se [OpenAPS-dokumentasjonen for determine-basal](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html).*
 
-#### Basals
+#### Basaldoser
 
-A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time.
+En **heltrukket blå** linje viser basalleveringen fra pumpen din og gjenspeiler den faktiske leveringen over tid.
 
-The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
+Den **prikkede blå** linjen viser hva basaldosen ville vært uten midlertidige basaljusteringer (TBR).
 
-When the standard basal rate is given, the area under the curve is shown in dark blue. When the basal rate is temporarily adjusted (increased or decreased), the area under the curve is shown in light blue.
+Når standard basaldose gis, vises området under kurven i mørkeblått. Når basaldosen er midlertidig justert (økt eller redusert), vises området under kurven i lyseblått.
 
-#### Activity
+#### Aktivitet
 
-The **thin yellow** line shows the activity of Insulin.
+Den **tynne gule** linjen viser insulinaktiviteten.
 
-It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
+Den bygger på det forventede fallet i BS fra insulinet i kroppen din hvis ingen andre faktorer (som karbohydrater) var til stede.
 
 (AapsScreens-section-g-additional-graphs)= (aaps-screens-additional-graphs)=
 
-### Section E - Additional graphs
+### Del E - Ekstra grafer
 
-You can activate additional graphs below the main graph. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and cannot be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
+Du kan aktivere ekstra grafer under hovedgrafen. I [Enkelmodus](#preferences-simple-mode) er de ekstra grafene forhåndsinnstilt og kan ikke endres. Slå av **Enkelmodus** hvis du vil sette opp dine egne ekstra grafer.
 
-The additional graphs follow the main graph: when you scroll or zoom the BG graph, they move with it. A sideways drag on an additional graph also scrolls all the graphs. They have no time labels of their own — read the time on the BG graph.
+De ekstra grafene følger hovedgrafen: når du ruller eller zoomer i BS-grafen, flytter de seg med. Å dra sidelengs på en ekstra graf ruller også alle grafene. De har ingen egne tidsetiketter — les tiden på BS-grafen.
 
-To configure an additional graph, press the **pencil** icon in its top-right corner:
+For å sette opp en ekstra graf, trykk på **blyant**-ikonet øverst til høyre i den:
 
-![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
+![Innstillinger for ekstra grafer](../images/Home2020_AdditionalGraphSetting.png)
 
-Select the chips corresponding to the data you want to see on this graph; the **Remove** button deletes the graph.
+Velg brikkene for dataene du vil se på denne grafen; knappen **Fjern** sletter grafen.
 
-To create one more graph, press **Add graph** below the last graph and select its chips in the same way:
+For å lage enda en graf, trykk på **Legg til graf** under den siste grafen og velg brikkene på samme måte:
 
-![Add graph](../images/main/graph_add.png)
+![Legg til graf](../images/main/graph_add.png)
 
-The new graph is added below the others — here a second additional graph with **SENS%** and **DEV**:
+Den nye grafen legges til under de andre — her en andre ekstra graf med **SENS%** og **DEV**:
 
-![Main screen with a second additional graph](../images/main/main_screen_additional_graph.png)
+![Hovedskjermen med en andre ekstra graf](../images/main/main_screen_additional_graph.png)
 
-Most users find the following configuration of additional graphs to be adequate :
+De fleste brukere synes følgende oppsett av ekstra grafer er tilstrekkelig:
 
-* Graph 1 with IOB, COB, Sensitivity change
-* Graph 2 with Deviations and BGI.
+* Graf 1 med IOB, COB og Sensitivitetsendring
+* Graf 2 med Avvik og BGI.
 
-#### Absolute insulin (ABS)
+#### Absolutt insulin (ABS)
 
-Active insulin including boluses **and basal**.
+Aktivt insulin inkludert boluser **og basal**.
 
 (aaps-screens-iob)=
 
-#### Insulin on board (IOB)
+#### Aktivt insulin (IOB)
 
-Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
+Viser insulinet du har «ombord» (= aktivt insulin i kroppen din). Det omfatter insulin fra bolus og midlertidig basal (**men ikke basaldosene som er satt i profilen din**).
 
-If there were no [SMBs](#Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+Hvis det ikke var noen [SMB-er](#Open-APS-features-super-micro-bolus-smb), ingen boluser og ingen TBR i løpet av DIA-tiden, ville denne vært null.
 
-SMBs are shown on this graph as blue triangles, in three sizes following the amount compared with the largest SMB of the day.
+SMB-er vises i denne grafen som blå trekanter, i tre størrelser etter mengden sammenlignet med dagens største SMB.
 
-IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
+IOB kan være negativ hvis du ikke har noen gjenværende bolus og har hatt null/lav midlertidig basal over lengre tid.
 
-Decaying depends on your [DIA and insulin type settings](#Config-Builder-insulin-dia).
+Nedbrytingen avhenger av [innstillingene dine for DIA og insulintype](#Config-Builder-insulin-dia).
 
-#### Carbs On Board (COB)
+#### Karbo ombord (COB)
 
-Shows the carbs you have on board (= active, not yet decayed carbs in your body).
+Viser karbohydratene du har «ombord» (= aktive karbohydrater i kroppen din som ennå ikke er brutt ned).
 
-Decaying depends on the [deviations the algorithm detects](../DailyLifeWithAaps/CobCalculation.md).
+Nedbrytingen avhenger av [avvikene algoritmen oppdager](../DailyLifeWithAaps/CobCalculation.md).
 
-If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings).
+Hvis det oppdages høyere karbohydratopptak enn forventet, gis det insulin, og dette øker IOB (mer eller mindre, avhengig av sikkerhetsinnstillingene dine).
 
-#### Sensitivity change (SENS%)
+#### Sensitivitetsendring (SENS%)
 
-Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
+Viser sensitiviteten som [Autosens](#Open-APS-features-autosens) har oppdaget.
 
-Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
+Sensitivitet er en beregning av insulinfølsomheten som følge av trening, hormoner osv.
 
-Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
+Merk: du må ha kommet til [opplæringsmål 8](#objectives-objective8) for at Sensitivitetsdeteksjon/[Autosens](#Open-APS-features-autosens) skal kunne justere insulinmengden automatisk. Før du har nådd det opplæringsmålet, vises linjen i grafen din bare til informasjon.
 
-### Variable sensitivity (VSENS)
+### Dynamisk ISF (DISF)
 
-Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
+Viser sensitiviteten slik [Dynamisk ISF](../DailyLifeWithAaps/DynamicISF.md) beregner den. Fylles bare ut hvis du bruker denne funksjonen.
 
 (screen-heart-rate-steps)=
 
-#### Heart rate (HR) & Steps
+#### Puls (HR) & Skritt
 
-This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md). Enable them on **AAPS** Wear app and give permission for health data.
+Disse dataene kan være tilgjengelige når du bruker en [Wear OS-smartklokke](../WearOS/WearOsSmartwatch.md). Aktiver dem i **AAPS** Wear-appen og gi tillatelse til helsedata.
 
-#### Deviations (DEV)
+#### Avvik (DEV)
 
-* **Grey** bars show a deviation due to carbs.
-* **Green** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](#Open-APS-features-autosens).
-* **Red** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](#Open-APS-features-autosens).
-* **Yellow** bars show a deviation due to UAM.
-* **Black** bars show small deviations not taken into account for sensitivity
+* **Grå** stolper viser et avvik som skyldes karbohydrater.
+* **Grønne** stolper viser at BS er høyere enn algoritmen forventet. Grønne stolper brukes til å øke resistensen i [Autosens](#Open-APS-features-autosens).
+* **Røde** stolper viser at BS er lavere enn algoritmen forventet. Røde stolper brukes til å øke sensitiviteten i [Autosens](#Open-APS-features-autosens).
+* **Gule** stolper viser et avvik som skyldes UAM.
+* **Svarte** stolper viser små avvik som ikke tas med i sensitivitetsberegningen
 
-#### Blood Glucose Impact (-BGI)
+#### BS-påvirkning (-BGI)
 
-This line shows the degree to which BG ‘should’ rise or fall based on insulin activity alone.
+Denne linjen viser hvor mye BS «burde» stige eller falle ut fra insulinaktiviteten alene.
 
-![Deviations and BGI](../images/main/graph_dev_bgi.png)
+![Avvik og BGI](../images/main/graph_dev_bgi.png)
 
-It is a good combination to display this line along with the Deviation bars. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparing the BGI line and the Deviation bars is another way to understand how **BG** fluctuates. Here, at the time marked **1**, the Deviation bars are well above the BGI line: BG rises more than insulin activity alone explains (for example after carbs). At the time marked **2**, the Deviation bars are below zero (red): BG is lower than the algorithm expected.
+Det er en god kombinasjon å vise denne linjen sammen med avviksstolpene. De bruker samme skala, men den er en annen enn for de andre valgfrie dataene, så det er lurt å vise dem på en egen graf, som vist ovenfor. Å sammenligne BGI-linjen med avviksstolpene er en annen måte å forstå hvordan **BS** svinger på. Her, på tidspunktet merket **1**, ligger avviksstolpene godt over BGI-linjen: BS stiger mer enn insulinaktiviteten alene kan forklare (for eksempel etter karbohydrater). På tidspunktet merket **2** ligger avviksstolpene under null (røde): BS er lavere enn algoritmen forventet.
 
-### Section F - QuickLaunch toolbar
+### Del F - Hurtigstart-verktøylinjen
 
-![QuickLaunch toolbar](../images/Home2020_Buttons.png)
+![Hurtigstart-verktøylinjen](../images/Home2020_Buttons.png)
 
-The floating toolbar at the bottom of the screen holds your **[QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)** actions. The small **gear** opens the QuickLaunch configuration where you choose which buttons are shown (treatments, careportal entries, CGM actions, the screens of the **Manage** sheet, [Quick Wizard](../DailyLifeWithAaps/QuickWizards.md) buttons, [Scenes](../DailyLifeWithAaps/Scenes.md) and more).
+Den flytende verktøylinjen nederst på skjermen inneholder **[Hurtigstart](../DailyLifeWithAaps/QuickLaunch.md)**-handlingene dine. Det lille **tannhjulet** åpner Hurtigstart-konfigurasjonen, der du velger hvilke knapper som vises (behandlinger, helseportal-oppføringer, CGM-handlinger, skjermene i **Administrer**-arket, [Hurtigknapp](../DailyLifeWithAaps/QuickWizards.md)-knapper, [Scener](../DailyLifeWithAaps/Scenes.md) og mer).
 
-A typical configuration is shown above: **Insulin**, **Carbs** and the **Bolus wizard**.
+Et typisk oppsett er vist ovenfor: **Insulin**, **Karbo** og **Boluskalkulator**.
 
-While the pump is **disconnected**, the treatment buttons stay in the toolbar, for example to record insulin given with a pen (see [Insulin](#aaps-screens-buttons-insulin) below). The same actions are also available in the [Treatments sheet](#aaps-screens-treatments-sheet) of the bottom navigation.
+Mens pumpen er **frakoblet**, blir behandlingsknappene værende på verktøylinjen, for eksempel for å registrere insulin gitt med penn (se [Insulin](#aaps-screens-buttons-insulin) nedenfor). De samme handlingene finnes også i [arket Behandlinger](#aaps-screens-treatments-sheet) i navigasjonslinjen nederst.
 
 (aaps-screens-buttons-insulin)=
 
 #### Insulin
 
-![Insulin dialog](../images/Home2020_ButtonInsulin.png)
+![Insulin-dialog](../images/Home2020_ButtonInsulin.png)
 
-To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
+For å gi en bestemt mengde insulin uten å bruke [boluskalkulatoren](#aaps-screens-bolus-wizard).
 
-By enabling **Start Eating soon TT**, you can automatically start your [eating soon temp target](#TempTargets-eating-soon-temp-target).
+Ved å slå på **Start midlertidig mål Spise snart** kan du automatisk starte ditt [midlertidige mål for Spise snart](#TempTargets-eating-soon-temp-target).
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only**". An additional **Time** row, set to **Now**, lets you record an insulin injection made in the past: use **-** / **+** to change it, or tap the chevron to type the minutes or pick a date and time.
+Hvis du ikke vil gi bolus gjennom pumpen, men bare registrere en insulinmengde (for eksempel insulin gitt med penn), slå på «**Bolus vil bare bli loggført**». En ekstra rad **Tid**, satt til **Nå**, lar deg registrere en insulininjeksjon som ble gitt tidligere: bruk **-** / **+** for å endre den, eller trykk på pilen for å skrive inn minuttene eller velge dato og klokkeslett.
 
-![The Time row, folded](../images/v4/Screens/insulin_dialog_record_only_time.png) ![The Time row, opened with the chevron](../images/v4/Screens/insulin_dialog_time_open.png)
+![Tid-raden, sammenfoldet](../images/v4/Screens/insulin_dialog_record_only_time.png) ![Tid-raden, åpnet med pilen](../images/v4/Screens/insulin_dialog_time_open.png)
 
-You can use the **+0.5 / +1.0 / +2.0** buttons to quickly increase the insulin quantity. The increment values can be changed in the [Bolus wizard settings](#Preferences-deliver-this-part-of-bolus-wizard-result).
+Du kan bruke knappene **+0,5 / +1,0 / +2,0** for raskt å øke insulinmengden. Trinnverdiene kan endres i [Boluskalkulator-innstillingene](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-The insulin dialog can be used when the pump is suspended or disconnected as well, e.g. to record insulin injected with a pen. In this case, "**Bolus will be recorded only**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
+Insulin-dialogen kan også brukes når pumpen er pauset eller frakoblet, for eksempel for å registrere insulin satt med penn. I så fall er «**Bolus vil bare bli loggført**» tvunget på (vist i rødt), og det vises ekstra felt for å velge insulintype og en **Tid**-forskyvning for en injeksjon som ble gitt tidligere:
 
-![Insulin dialog with pump disconnected](../images/main/insulin_dialog_pump_disconnected.png)
+![Insulin-dialog med pumpen frakoblet](../images/main/insulin_dialog_pump_disconnected.png)
 
-#### Carbs
+#### Karbo
 
-![Carbs dialog](../images/Home2020_ButtonCarbs.png)
+![Karbo-dialog](../images/Home2020_ButtonCarbs.png)
 
-To record carbs without bolusing.
+For å registrere karbohydrater uten å gi bolus.
 
-Certain [pre-set temporary targets](#TempTargets-hypo-temp-target) (Hypo, Eating soon, Activity) can be started directly with the switches on top.
+Noen [forhåndsinnstilte midlertidige mål](#TempTargets-hypo-temp-target) (Hypo, Spise snart, Aktivitet) kan startes direkte med bryterne øverst.
 
-**Carb time**: When will you / have you been eating carbs.
+**Karbotid**: Når skal du spise / spiste du karbohydrater.
 
-**Duration**: To be used for ["extended carbs"](ExtendedCarbs). This row is folded, so that you do not type the grams into it by mistake: use **-** / **+** to change it, or tap the chevron to open it and type a value.
+**Varighet**: Brukes for [«forlengede karbohydrater»](ExtendedCarbs). Denne raden er sammenfoldet, slik at du ikke skriver grammene inn i den ved en feil: bruk **-** / **+** for å endre den, eller trykk på pilen for å åpne den og skrive inn en verdi.
 
-You can use the **+5 / +10 / +20** buttons to quickly increase the carb amount.
+Du kan bruke knappene **+5 / +10 / +20** for raskt å øke karbohydratmengden.
 
-#### Quick Wizard
+#### Hurtigknapp
 
-Easily enter amount of carbs and set calculation basics with a single pre-configured button.
+Registrer enkelt en mengde karbohydrater og sett grunnlaget for beregningen med én forhåndsinnstilt knapp.
 
-Details are set up in [Quick Wizard](../DailyLifeWithAaps/QuickWizards.md).
+Detaljene settes opp under [Hurtigknapper](../DailyLifeWithAaps/QuickWizards.md).
 
 (aaps-screens-treatments-sheet)=
 
-### Section G - Bottom navigation
+### Del G - Navigasjonslinjen nederst
 
-The bottom navigation bar gives access to:
+Navigasjonslinjen nederst gir tilgang til:
 
-* **Treatments** — a quick-actions sheet with your treatment actions:
+* **Behandlinger** — et ark med hurtighandlinger for behandlingene dine:
     
-    ![Treatments sheet](../images/v4/Screens/treatments_sheet.png)
+    ![Arket Behandlinger](../images/v4/Screens/treatments_sheet.png)
 
-* **Scenes** — shown only when you have at least one [scene](../DailyLifeWithAaps/Scenes.md) or an **Automation** rule marked as **User action**. It opens a sheet from which you can start them; a badge shows how many you can start right now. The **pencil** at the top of the sheet opens **Manage → Scenes**.
+* **Scener** — vises bare når du har minst én [scene](../DailyLifeWithAaps/Scenes.md) eller en **Automasjon**-regel merket som **Brukerhandling**. Det åpner et ark der du kan starte dem; et merke viser hvor mange du kan starte akkurat nå. **Blyanten** øverst i arket åpner **Administrer → Scener**.
 
-* **Manage** — the hub for everything you manage in **AAPS**: Profile, Insulin settings, Temp Target, QuickWizard, Scenes, Automation, Food, Site Rotation, Pump and Authorized clients. Below them are device and basal actions such as Sensor Insert and Temp Basal. Some items only appear when they apply to your setup — for example Prime/Fill and battery change depend on your pump, and Temp Basal, Extended Bolus and the Careportal entries are hidden in [Simple Mode](#preferences-simple-mode):
+* **Administrer** — samlingspunktet for alt du administrerer i **AAPS**: Profil, Insulininnstillinger, Midlertidig mål, Hurtigknapp, Scener, Automasjon, Mat, Rotasjon av sted, Pumpe og Autoriserte klienter. Under dem finner du enhets- og basalhandlinger som Sensorbytte og Midlertidig basal. Noen elementer vises bare når de gjelder for oppsettet ditt — for eksempel avhenger Prime/fylling og batteribytte av pumpen din, og Midlertidig basal, Forlenget bolus og Helseportal-oppføringene er skjult i [Enkelmodus](#preferences-simple-mode):
     
-    ![Manage sheet](../images/v4/Screens/manage_sheet.png)
+    ![Administrer-arket](../images/v4/Screens/manage_sheet.png)
 
-* **Objectives** — your progress through the [Objectives](../SettingUpAaps/CompletingTheObjectives.md); a badge shows how many are completed. This item disappears once all objectives are finished, and is not present on **AAPSClient**.
+* **Opplæringsmål** — fremdriften din gjennom [opplæringsmålene](../SettingUpAaps/CompletingTheObjectives.md); et merke viser hvor mange som er fullført. Dette elementet forsvinner når alle opplæringsmålene er fullført, og finnes ikke i **AAPSClient**.
 
 (aaps-screens-notifications)=
 
-#### Notifications
+#### Varslinger
 
-A **notification bubble** may appear above the bottom bar, on the right. It collects the active notifications of **AAPS**; the small number shows how many there are. Its color follows the most important one: red for an urgent message, green for a simple information.
+En **varslingsboble** kan vises over linjen nederst, til høyre. Den samler de aktive varslingene fra **AAPS**; det lille tallet viser hvor mange det er. Fargen følger den viktigste: rød for en viktig melding, grønn for enkel informasjon.
 
-![Main screen with the notification bubble](../images/main/main_screen_notification_bubble.png)
+![Hovedskjermen med varslingsboblen](../images/main/main_screen_notification_bubble.png)
 
-Tap the bubble to open the **Notification** panel. Each message shows the time it was raised. Press **Dismiss** below a message to remove it; some messages have another button instead, to take you to the setting that needs your attention.
+Trykk på boblen for å åpne **Varsling**-panelet. Hver melding viser tidspunktet den ble utløst. Trykk på **Forkast** under en melding for å fjerne den; noen meldinger har en annen knapp i stedet, som tar deg til innstillingen som trenger oppmerksomhet.
 
-![Notification panel with one message and its Dismiss button](../images/main/notification_panel.png)
+![Varslingspanel med én melding og Forkast-knappen](../images/main/notification_panel.png)
 
-![Notification panel](../images/main/main_notification_panel.png)
+![Varslingspanel](../images/main/main_notification_panel.png)
 
 (bolus-wizard)= (aaps-screens-bolus-wizard)=
 
-## Bolus Wizard
+## Boluskalkulator
 
-![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
+![Boluskalkulator](../images/Home2020_BolusWizard_v2.png)
 
-When you want to make a meal bolus, this is where you will normally make it from.
+Når du vil gi en måltidsbolus, er det vanligvis her du gjør det.
 
-### Section I
+### Del I
 
-The **Calculation** header shows the calculated bolus. If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+Overskriften **Beregning** viser den beregnede bolusen. Hvis mengden aktivt insulin allerede er større enn den beregnede bolusen, viser den bare hvor mange karbohydrater som fortsatt trengs.
 
-The bolus calculator can be used whatever your current **BG**, including when it is too high or too low. If **BG** is above target, a correction is added to the meal bolus. If **BG** is below target, the bolus is reduced and, if the insulin already on board is more than needed, the calculator tells you how many carbs are still required instead of proposing insulin.
+Boluskalkulatoren kan brukes uansett hva **BS** er nå, også når det er for høyt eller for lavt. Hvis **BS** er over målet, legges en korreksjon til måltidsbolusen. Hvis **BS** er under målet, reduseres bolusen, og hvis det aktive insulinet allerede er mer enn det som trengs, forteller kalkulatoren deg hvor mange karbohydrater du fortsatt trenger, i stedet for å foreslå insulin.
 
-The icon row below the header shows which inputs enter the calculation (BG, trend, IOB, temporary target, COB). Pressing an icon enables / disables this entry from the calculation; the **(i)** icon shows the detailed numbers behind the calculation.
+Ikonraden under overskriften viser hvilke verdier som inngår i beregningen (BS, trend, IOB, midlertidig mål, COB). Et trykk på et ikon tar denne verdien med i / ut av beregningen; **(i)**-ikonet viser de detaljerte tallene bak beregningen.
 
-#### Combinations of COB and IOB and what they mean
+#### Kombinasjoner av COB og IOB og hva de betyr
 
-* For safety reasons, the IOB input cannot be disabled when COB is enabled as you might run the risk of too much insulin as **AAPS** is not accounting for what’s already given.
-* If you enable COB and IOB, unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you enable IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
-* If you bolus for **additional food** shortly after a meal bolus (e.g. additional dessert) it can be helpful to **disable all inputs**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
-* For safety reasons, a **temporary target** is only included in the calculation if you enable its input manually.
+* Av sikkerhetsgrunner kan ikke IOB slås av når COB er på, siden du da risikerer for mye insulin fordi **AAPS** ikke tar hensyn til det som allerede er gitt.
+* Hvis du slår på COB og IOB, tas det hensyn til karbohydrater som ikke er tatt opp og ikke allerede er dekket med insulin + alt insulin som er gitt som TBR eller SMB.
+* Hvis du slår på IOB uten COB, tar **AAPS** hensyn til insulin som allerede er gitt, men regner det ikke opp mot karbohydrater som ennå ikke er tatt opp. Dette fører til en melding om «manglende karbohydrater».
+* Hvis du gir bolus for **mer mat** like etter en måltidsbolus (for eksempel en ekstra dessert), kan det være nyttig å **slå av alle verdiene** i beregningen. Slik legges bare de nye karbohydratene til, siden hovedmåltidet ikke nødvendigvis er tatt opp ennå, og IOB vil derfor ikke stemme nøyaktig med COB like etter en måltidsbolus.
+* Av sikkerhetsgrunner tas et **midlertidig mål** bare med i beregningen hvis du slår det på manuelt.
 
 (AapsScreens-section-j)=
 
-### Section J - Entry fields
+### Del J - Inntastingsfelt
 
-In the **Carbs** field, you add your estimate of the amount of carbs, **in grams**, that you want to bolus for; the **+** buttons below it add carbs quickly. **AAPS** only works with grams: if you count in bread units or exchanges (*e.g.* DAFNE "CHO" exchanges), convert them to grams before entering them. See the [note about bread units](#your-aaps-profile-insulin-to-carbs-ratio) on the profile page.
+I feltet **Karbo** legger du inn ditt anslag for mengden karbohydrater, **i gram**, som du vil gi bolus for; **+**-knappene under legger raskt til karbohydrater. **AAPS** jobber bare med gram: hvis du teller i brødenheter eller porsjoner (*for eksempel* DAFNE «CHO»-porsjoner), regn dem om til gram før du legger dem inn. Se [merknaden om brødenheter](#your-aaps-profile-insulin-to-carbs-ratio) på profilsiden.
 
-#### Carbs type: bread, cake or pizza
+#### Karbotype: brød, kake eller pizza
 
-Below the **Carbs** field, the **Bread**, **Cake** and **Pizza** buttons tell **AAPS** how fast the meal is absorbed. With **Cake** and **Pizza**, the bolus covers only a part of the carbs now and the rest is added later as eCarbs. See [Carbs type: bread, cake or pizza](#AapsScreens-carbs-type) on the Extended carbs page for the percentages and timing.
+Under feltet **Karbo** forteller knappene **Brød**, **Kake** og **Pizza** **AAPS** hvor raskt måltidet tas opp. Med **Kake** og **Pizza** dekker bolusen bare en del av karbohydratene nå, og resten legges til senere som eKarbo. Se [Karbotype: brød, kake eller pizza](#AapsScreens-carbs-type) på siden om forlengede karbohydrater for prosentene og tidspunktene.
 
-The **Correction** row is if you want to modify the end dosage for some reason.
+Raden **Korreksjon** er for når du av en eller annen grunn vil endre den endelige dosen.
 
-Only the **Carbs** field is always open. The other rows (**Correction**, **Carb time**, **BG** and **Use percentage**) are folded: they show their value with **-** / **+** buttons, so you can change it in small steps. Tap the chevron to open a row and type a value, and tap it again to close the row. This avoids typing grams into the **Correction** field by mistake.
+Bare feltet **Karbo** er alltid åpent. De andre radene (**Korreksjon**, **Karbotid**, **BS** og **Bruk prosent**) er sammenfoldet: de viser verdien sin med **-** / **+**-knapper, så du kan endre den i små steg. Trykk på pilen for å åpne en rad og skrive inn en verdi, og trykk på den igjen for å lukke raden. Dette hindrer at du skriver gram inn i feltet **Korreksjon** ved en feil.
 
-![Folded rows in the bolus wizard](../images/v4/Screens/bolus_wizard_bottom.png)
+![Sammenfoldede rader i boluskalkulatoren](../images/v4/Screens/bolus_wizard_bottom.png)
 
-Tap anywhere on the **Profile** row to open the list of your profiles, then tap a name to use that profile for this calculation.
+Trykk hvor som helst på raden **Profil** for å åpne listen over profilene dine, og trykk så på et navn for å bruke den profilen i denne beregningen.
 
-![The list of profiles in the bolus wizard](../images/v4/Screens/bolus_wizard_profile_list.png)
+![Listen over profiler i boluskalkulatoren](../images/v4/Screens/bolus_wizard_profile_list.png)
 
-The **Carb time** field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+Feltet **Karbotid** er for forhåndsbolus, slik at du kan fortelle systemet at det vil gå en stund før karbohydratene kommer. Du kan skrive inn et negativt tall i dette feltet hvis du gir bolus for karbohydrater du allerede har spist.
 
-**Set alarm** (eating reminder): when a carb time in the future is entered, a "**Set alarm**" switch appears so that you are reminded at the given time, when to eat the carbs you have input into **AAPS**:
+**Sett alarm** (spisepåminnelse): når du legger inn en karbotid fram i tid, vises en bryter «**Sett alarm**», slik at du på det gitte tidspunktet blir minnet på å spise karbohydratene du har lagt inn i **AAPS**:
 
-![Set alarm for future carbs](../images/Home2021_BolusWizard_EatingReminder.png)
+![Sett alarm for karbohydrater fram i tid](../images/Home2021_BolusWizard_EatingReminder.png)
 
-The reminder rings as an **AAPS** alarm. It does not create a timer in your phone's clock app, and it also works when the bolus was entered from **AAPSClient** while **AAPS** was running in the background.
+Påminnelsen ringer som en **AAPS**-alarm. Den lager ikke et nedtellingsur i klokke-appen på telefonen, og den virker også når bolusen ble lagt inn fra **AAPSClient** mens **AAPS** kjørte i bakgrunnen.
 
-The **BG** field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. When the reading is recent, the **BG** row stays folded.
+Feltet **BS** er vanligvis allerede fylt ut med den siste målingen fra CGM-en din. Hvis du ikke har en CGM som virker, er feltet tomt. Når målingen er fersk, forblir raden **BS** sammenfoldet.
 
-The result button at the bottom shows the proposed bolus; pressing it asks for confirmation before any insulin is delivered.
+Resultatknappen nederst viser den foreslåtte bolusen; når du trykker på den, ber den om bekreftelse før noe insulin gis.
 
-Good to know:
+Greit å vite:
 
-* If the calculated bolus is above your **[Maximum bolus](#Preferences-maximum-bolus)**, it is reduced to the max bolus, and the confirmation shows the warning "Bolus constraint applied". A [QuickWizard](../DailyLifeWithAaps/QuickWizards.md) is refused instead.
-* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only**" warning stays at the top of the dialog, also when you scroll.
-* A bolus you give by hand has priority over an [SMB](#Open-APS-features-super-micro-bolus-smb) that is waiting to be delivered: the SMB is dropped and the loop calculates again. If an SMB is being delivered right now, your bolus is refused with the message "An SMB is being delivered right now. Try again when it has finished." No insulin is given, and carbs entered with that bolus are not saved: wait a moment and enter them again.
+* Hvis den beregnede bolusen er høyere enn din **[Maksimal bolus](#Preferences-maximum-bolus)**, reduseres den til maks bolus, og bekreftelsen viser advarselen «Bolusbegrensning brukt». En [hurtigknapp](../DailyLifeWithAaps/QuickWizards.md) blir i stedet avvist.
+* Når bolusen bare registreres (for eksempel mens pumpen er frakoblet), blir advarselen «**Bolus vil bare bli loggført**» stående øverst i dialogen, også når du ruller.
+* En bolus du gir manuelt, har prioritet over en [SMB](#Open-APS-features-super-micro-bolus-smb) som venter på å bli gitt: SMB-en forkastes, og loopen beregner på nytt. Hvis en SMB leveres akkurat nå, avvises bolusen din med meldingen «En SMB leveres akkurat nå. Prøv igjen når den er ferdig.» Det gis ikke noe insulin, og karbohydrater som ble lagt inn sammen med den bolusen, lagres ikke: vent et øyeblikk og legg dem inn igjen.
 
 (AapsScreens-wrong-cob-detection)=
 
-#### Wrong COB detection
+#### Feil COB-deteksjon
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
+![Langsomt karbohydratopptak](../images/Calculator_SlowCarbAbsorption.png)
 
-If you see the warning above after using bolus wizard, **AAPS** has detected that the calculated COB value may be wrong. So, if you want to bolus again after a previous meal with COB, you should be aware of overdosing!
+Hvis du ser advarselen ovenfor etter å ha brukt boluskalkulatoren, har **AAPS** oppdaget at den beregnede COB-verdien kan være feil. Så hvis du vil gi bolus igjen etter et tidligere måltid med COB, må du være oppmerksom på faren for overdosering!
 
-For details, see the hints on [COB calculation page](#CobCalculation-detection-of-wrong-cob-values).
+For detaljer, se tipsene på siden [COB-beregning](#CobCalculation-detection-of-wrong-cob-values).
 
-Looking for the **Actions** tab of **AAPS** 3.x? Its functions moved to the main screen, the **Manage** sheet and the QuickLaunch toolbar: see [Where did the Actions tab go?](#screens-action-tab).
+Leter du etter fanen **Handlinger** fra **AAPS** 3.x? Funksjonene er flyttet til hovedskjermen, **Administrer**-arket og Hurtigstart-verktøylinjen: se [Hvor ble det av Handlinger-fanen?](#screens-action-tab).
 
 (aaps-screens-careportal)=
 
-## Careportal entries
+## Helseportal-oppføringer
 
-The ages and levels shown in the [status row](#screens-sensor-level-battery) (sensor, insulin, cannula, pump battery) are based on careportal entries: **Prime/Fill** (records pump site and insulin cartridge changes), **Sensor Insert** and **Pump Battery Change**.
+Aldrene og nivåene som vises i [statusraden](#screens-sensor-level-battery) (sensor, insulin, kanyle, pumpebatteri) bygger på helseportal-oppføringer: **Prime/fylling** (registrerer bytte av pumpested og insulinampulle), **Sensorbytte** og **Bytte pumpebatteri**.
 
-You can record them from the expanded status panel on the main screen, from the **Manage** sheet, or with [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
+Du kan registrere dem fra det utvidede statuspanelet på hovedskjermen, fra **Administrer**-arket, eller med [Hurtigstart](../DailyLifeWithAaps/QuickLaunch.md)-knapper.
 
-**Prime/Fill** records a pump site change and/or an insulin cartridge change, and can deliver a prime amount:
+**Prime/fylling** registrerer et bytte av pumpested og/eller insulinampulle, og kan gi en primemengde:
 
-![Prime/Fill dialog](../images/dialogs/prime_fill.png)
+![Prime/fylling-dialog](../images/dialogs/prime_fill.png)
 
-**Sensor Insert** and **Pump Battery Change** only ask for the time of the event:
+**Sensorbytte** og **Bytte pumpebatteri** spør bare om tidspunktet for hendelsen:
 
-![Sensor Insert dialog](../images/dialogs/sensor_insert.png)
+![Sensorbytte-dialog](../images/dialogs/sensor_insert.png)
 
-![Pump Battery Change dialog](../images/dialogs/pump_battery_change.png) Exercise, announcement, question and note entries reflect the Nightscout careportal and are special forms of notes.
+![Dialog for Bytte pumpebatteri](../images/dialogs/pump_battery_change.png) Oppføringene Trening, Melding, Spørsmål og Merknad gjenspeiler Nightscout-helseportalen og er spesielle former for notater.
 
-In the **Manage** sheet, scroll down and press **Careportal** to show these entries: **BG Check**, **Note**, **Exercise**, **Question** and **Announcement**.
+I **Administrer**-arket, rull ned og trykk på **Helseportal** for å vise disse oppføringene: **BS-kontroll**, **Merknad**, **Trening**, **Spørsmål** og **Melding**.
 
-![Careportal section of the Manage sheet](../images/v4/Screens/manage_sheet_careportal.png)
+![Helseportal-delen av Administrer-arket](../images/v4/Screens/manage_sheet_careportal.png)
 
-**BG Check**, **Question** and **Announcement** let you enter a glucose value (from a meter, the sensor or another source), a note and the time of the event. In **Question** and **Announcement**, the glucose row is folded and shows the meter type next to the value: if you change the value, the type changes from **Sensor** to **Meter**.
+**BS-kontroll**, **Spørsmål** og **Melding** lar deg legge inn en glukoseverdi (fra en måler, sensoren eller en annen kilde), en merknad og tidspunktet for hendelsen. I **Spørsmål** og **Melding** er glukoseraden sammenfoldet og viser målertypen ved siden av verdien: hvis du endrer verdien, endres typen fra **Sensor** til **Måler**.
 
-![Question with the folded glucose row](../images/dialogs/careportal_question.png)
+![Spørsmål med den sammenfoldede glukoseraden](../images/dialogs/careportal_question.png)
 
-![BG Check dialog](../images/dialogs/careportal_bg_check.png)
+![BS-kontroll-dialog](../images/dialogs/careportal_bg_check.png)
 
-**Note** and **Exercise** let you enter a duration (a folded row: use **-** / **+**, or tap the chevron to type it), a note and the time of the event:
+**Merknad** og **Trening** lar deg legge inn en varighet (en sammenfoldet rad: bruk **-** / **+**, eller trykk på pilen for å skrive den inn), en merknad og tidspunktet for hendelsen:
 
-![Exercise dialog](../images/dialogs/careportal_exercise.png)
+![Trening-dialog](../images/dialogs/careportal_exercise.png)
 
-In all these dialogs (**Prime/Fill**, **Sensor Insert**, **Pump Battery Change** and the careportal entries), the time of the event uses the same **Time** row as the [insulin dialog](#aaps-screens-buttons-insulin) and the bolus wizard: use **-** / **+** to move the time in 5-minute steps (up to one week back and 12 hours ahead), or tap the chevron to pick any date and time.
+I alle disse dialogene (**Prime/fylling**, **Sensorbytte**, **Bytte pumpebatteri** og helseportal-oppføringene) bruker tidspunktet for hendelsen den samme **Tid**-raden som [insulin-dialogen](#aaps-screens-buttons-insulin) og boluskalkulatoren: bruk **-** / **+** for å flytte tiden i steg på 5 minutter (opptil én uke tilbake og 12 timer fram), eller trykk på pilen for å velge en hvilken som helst dato og et klokkeslett.
 
-## Site Rotation
+## Rotasjon av sted
 
-**Manage → Site Rotation** records where each cannula and sensor was placed on a body map, so you can rotate your sites: see [Site Rotation](#Aapsscreens-site-rotation) on the Pumps and cannulas page.
+**Administrer → Rotasjon av sted** registrerer hvor hver kanyle og sensor ble plassert på et kroppskart, slik at du kan rotere stedene dine: se [Rotasjon av sted](#Aapsscreens-site-rotation) på siden Pumper og kanyler.
 
-**TDD** (total daily dose) and the basal/bolus ratio rule of thumb are explained with the [Statistics Insulin tab](#reviewing-tdd).
+**TDD** (total daglig dose) og tommelfingerregelen for forholdet basal/bolus forklares under [Insulin-fanen i Statistikk](#reviewing-tdd).
 
 (AapsScreens-insulin-profile)=
 
 ## Insulin
 
-![Insulin screen](../images/manage/insulin_profile.png)
+![Insulin-skjermen](../images/manage/insulin_profile.png)
 
-**Manage → Insulin settings** shows and manages your insulin configurations. Each configuration is shown on a card with its **peak time** and **[DIA](#Config-Builder-insulin-dia)**; the one in use is marked **ACTIVE**. Below the card you see the activity curve. You can edit the nickname, peak and DIA of any configuration except the active one: to change the insulin you are using, [add a new configuration and activate it](#Config-Builder-insulin-change-active).
+**Administrer → Insulininnstillinger** viser og administrerer insulinoppsettene dine. Hvert oppsett vises på et kort med **topptid** og **[DIA](#Config-Builder-insulin-dia)**; det som er i bruk, er merket **AKTIV**. Under kortet ser du aktivitetskurven. Du kan redigere kallenavn, topp og DIA for alle oppsett unntatt det aktive: for å bytte insulinet du bruker, [legg til et nytt oppsett og aktiver det](#Config-Builder-insulin-change-active).
 
-See [Duration of insulin action](#Config-Builder-insulin-dia) to learn more about what it is and how to set it.
+Se [Insulinets virketid](#Config-Builder-insulin-dia) for å lære mer om hva det er og hvordan du setter det.
 
-## Pump Status
+## Pumpestatus
 
-![Virtual Pump status screen](../images/v4/Pumps/virtual_pump_screen.png)
+![Statusskjermen for Virtuell pumpe](../images/v4/Pumps/virtual_pump_screen.png)
 
-**Manage → Pump** (or **Configuration → Pump → Open plugin**) shows the status of your pump: last connection, base basal rate, battery, reservoir...
+**Administrer → Pumpe** (eller **Konfigurasjon → Pumpe → Åpne plugin**) viser statusen til pumpen din: siste tilkobling, basaldose, batteri, reservoar ...
 
-* Displayed information depends on your pump model.
-* See [pumps page](../Getting-Started/CompatiblePumps.md) for details.
+* Hvilken informasjon som vises, avhenger av pumpemodellen din.
+* Se siden [Kompatible pumper](../Getting-Started/CompatiblePumps.md) for detaljer.
 
 ## Loop, AMA / SMB
 
-**Configuration → Loop → Open plugin** (and **Configuration → APS → Open plugin**) show details about the algorithm's calculations and why **AAPS** acts the way it does: last run, the resulting request, and the constraints. The **Loop** screen lists only the constraints that actually limited the delivered temp basal rate or SMB (and why closed loop is not allowed, if that is the case); the **APS** screen lists every constraint that went into the calculation.
+**Konfigurasjon → Loop → Åpne plugin** (og **Konfigurasjon → APS → Åpne plugin**) viser detaljer om algoritmens beregninger og hvorfor **AAPS** handler som den gjør: siste kjøring, den resulterende forespørselen og begrensningene. **Loop**-skjermen viser bare begrensningene som faktisk begrenset den midlertidige basalen eller SMB-en som ble gitt (og hvorfor lukket loop ikke er tillatt, hvis det er tilfelle); **APS**-skjermen viser alle begrensningene som inngikk i beregningen.
 
-Calculations are run each time the system gets a fresh reading from the CGM.
+Beregningene kjøres hver gang systemet får en ny måling fra CGM-en.
 
-For more details see the [APS section of the Configuration page](#Config-Builder-aps).
+For flere detaljer, se [APS-delen på siden Konfigurasjon](#Config-Builder-aps).
 
 (aaps-screens-profile)=
 
-## Profile
+## Profil
 
-![Profile](../images/Screenshots_Profile.png)
+![Profil](../images/Screenshots_Profile.png)
 
-**Manage → Profile** (or a tap on the profile name on the main screen) opens the Profile screen: your profiles as a swipeable card carousel, with buttons to add, edit, clone, delete and **activate** a profile.
+**Administrer → Profil** (eller et trykk på profilnavnet på hovedskjermen) åpner Profil-skjermen: profilene dine som en kortkarusell du kan sveipe i, med knapper for å legge til, redigere, duplisere, slette og **aktivere** en profil.
 
-Profile contains information on your individual diabetes settings, see the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
+Profilen inneholder informasjon om dine individuelle diabetesinnstillinger. Se den detaljerte siden **[Din AAPS-profil](../SettingUpAaps/YourAapsProfile.md)** for mer informasjon.
 
-## Automation
+## Automasjon
 
-![Automation](../images/v4/Screens/automation_overview.png)
+![Automasjon](../images/v4/Screens/automation_overview.png)
 
-**Manage → Automation** lists your automation rules. See the dedicated page [here](../DailyLifeWithAaps/Automations.md).
+**Administrer → Automasjon** viser automasjonsreglene dine. Se den egne siden [her](../DailyLifeWithAaps/Automations.md).
 
 ## NSClient
 
 ![NSClient](../images/Screenshots_NSClient.png)
 
-**Configuration → Communication → NSClientV3 → Open plugin** displays the status of the connection with your Nightscout site: URL, websocket status, queue and a log of the synchronization activity.
+**Konfigurasjon → Kommunikasjon → NSClientV3 → Åpne plugin** viser statusen for tilkoblingen til Nightscout-siden din: URL, websocket-status, kø og en logg over synkroniseringsaktiviteten.
 
-Settings can be changed in [NSClient settings](#Preferences-nsclient).
+Innstillingene kan endres i [NSClient-innstillingene](#Preferences-nsclient).
 
-For troubleshooting see this [page](../GettingHelp/TroubleshootingNsClient.md).
+For feilsøking, se denne [siden](../GettingHelp/TroubleshootingNsClient.md).
 
 (aaps-screens-bg-source)=
 
-## BG Source - xDrip, BYODA...
+## BS-kilde - xDrip, BYODA ...
 
-![BG Source screen](../images/Screenshots_BGSource.png)
+![BS-kilde-skjermen](../images/Screenshots_BGSource.png)
 
-**Configuration → BG Source → Open plugin** shows the history of CGM readings and offers the option to remove readings in case of failure (i.e. compression low) or duplicate readings.
+**Konfigurasjon → BS-kilde → Åpne plugin** viser historikken over CGM-målinger og gir mulighet til å fjerne målinger ved feil (for eksempel kompresjonslav) eller dupliserte målinger.
 
-## Treatments history
+## Behandlingshistorikk
 
-Open the **menu** (☰) and select **Treatments history** to view, check and correct everything **AAPS** has recorded: carbs and boluses, temp basals, temporary targets, profile switches, careportal entries, loop mode changes and user entries. See [Treatments history](#aaps-screens-treatments) on the Reviewing your data page.
+Åpne **menyen** (☰) og velg **Behandlingshistorikk** for å se, kontrollere og rette alt **AAPS** har registrert: karbohydrater og boluser, midlertidige basaler, midlertidige mål, profilbytter, helseportal-oppføringer, endringer av loop-modus og brukeroppføringer. Se [Behandlingshistorikk](#aaps-screens-treatments) på siden Gjennomgang av dataene dine.
 
-## History Browser
+## Historikkleser
 
-![History browser](../images/v4/Screens/history_browser.png)
+![Historikkleser](../images/v4/Screens/history_browser.png)
 
-Open the **menu** (☰) and select **History browser**.
+Åpne **menyen** (☰) og velg **Historikkleser**.
 
-Allows you to ride back in **AAPS** history. See the dedicated page [Reviewing your data > History Browser](../Maintenance/Reviewing.md).
+Lar deg bla tilbake i **AAPS**-historikken. Se den egne siden [Gjennomgang av dataene dine > Historikkleser](../Maintenance/Reviewing.md).
 
 (aaps-screens-statistics)=
 
@@ -750,24 +750,24 @@ Allows you to ride back in **AAPS** history. See the dedicated page [Reviewing y
 
 ![Statistics](../images/v4/Screens/statistics.png)
 
-Open the **menu** (☰) and select **Statistics**.
+Åpne **menyen** (☰) og velg **Statistikk**.
 
-Gives you statistics about your Total Daily Dose, Time In Range, your glucose profile over the day (AGP) and your insulin cycle pattern, on four tabs. See the dedicated page [Reviewing your data > Statistics](#reviewing-statistics).
+Gir deg statistikk om total daglig dose, tid i målområdet, glukoseprofilen din gjennom dagen (AGP) og insulinmønsteret ditt gjennom døgnet, på fire faner. Se den egne siden [Gjennomgang av dataene dine > Statistikk](#reviewing-statistics).
 
 (aaps-screens-profile-helper)=
 
 ## Profile Helper
 
-Open the **menu** (☰) and select **Profile helper**.
+Åpne **menyen** (☰) og velg **Profilhjelper**.
 
-![Profile helper](../images/screens/profile_helper.png)
+![Profilhjelper](../images/screens/profile_helper.png)
 
-The Profile helper lets you compare profiles and generate starting profiles for children. See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) — sections [Build a Profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid) and [Compare two Profiles](#your-aaps-profile-compare-profiles).
+Profilhjelperen lar deg sammenligne profiler og lage startprofiler for barn. Se [Din AAPS-profil](../SettingUpAaps/YourAapsProfile.md) — avsnittene [Lag en profil fra bunnen av for et barn](#your-aaps-profile-profile-from-scratch-for-a-kid) og [Sammenligne to profiler](#your-aaps-profile-compare-profiles).
 
 (aaps-screens-widgets)=
 
-## Home screen widgets
+## Widgeter på startskjermen
 
-**AAPS** provides five widgets that you can add to your phone's home screen, to see your data without opening the app. See the dedicated page [Home screen widgets](../DailyLifeWithAaps/Widgets.md).
+**AAPS** har fem widgeter som du kan legge til på startskjermen på telefonen, så du kan se dataene dine uten å åpne appen. Se den egne siden [Widgeter på startskjermen](../DailyLifeWithAaps/Widgets.md).
 
-![AAPS widgets on the home screen](../images/widgets/home_widgets_full_circle_small.png)
+![AAPS-widgeter på startskjermen](../images/widgets/home_widgets_full_circle_small.png)

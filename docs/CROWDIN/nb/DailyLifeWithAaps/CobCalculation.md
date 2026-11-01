@@ -1,98 +1,98 @@
-# COB calculation
+# COB-beregning
 
-## How does AAPS calculate the COB value?
+## Hvordan beregner AAPS COB-verdien?
 
-When carbs are entered by the user as part of a meal entry or carb correction, **AAPS** will add this calculation to the current carbs on board (**COB**). **AAPS** then calculates the user’s carbs’ absorption based on observed deviations to the user’s **BG** values. The rate of absorption depends on the carb’s sensitivity factor (**CSF**). This is not a feature within the user’s **Profile** but is calculated by **AAPS** according to **ISF/I:C** setup, and is determined by how many mg/dL 1 g of carbs will raise the user’s **BG**.
+Når du registrerer karbohydrater som en del av et måltid eller en karbohydratkorrigering, legger **AAPS** dem til de aktive karbohydratene (**COB**). **AAPS** beregner deretter opptaket av karbohydratene basert på observerte avvik i **BS**-verdiene dine. Opptakshastigheten avhenger av karbohydratsensitivitetsfaktoren (**CSF**). Dette er ikke en innstilling i **profilen** din, men beregnes av **AAPS** ut fra **ISF/I:C**-oppsettet. Den sier hvor mange mg/dL 1 g karbohydrater hever **BS**-verdien din.
 
-## Carb Sensitivity Factor
+## Karbohydratsensitivitetsfaktor
 
-The formula adopted by **AAPS** is:
+Formelen som **AAPS** bruker, er:
 
 - absorbed_carbs = deviation * ic / isf.
 
-The effect on the user’s **Profile** will:
+Effekten på **profilen** din blir:
 
-- _increase_ **IC**- by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
+- _økt_ **IC** – flere karbohydrater tas opp hvert 5. minutt, og dermed blir den totale opptakstiden kortere;
 
-- _increase_ **ISF** - by decreasing the carbs absorbed every 5 minutes thus prolong total time of absorption; and
+- _økt_ **ISF** – færre karbohydrater tas opp hvert 5. minutt, og dermed blir den totale opptakstiden lengre; og
 
-- _change_ **Profile Percentage** -  increase/decrease both values thus has no impact on carbs absorption time.
+- _endret_ **profilprosent** – øker/reduserer begge verdiene, og påvirker derfor ikke opptakstiden for karbohydrater.
 
-For example, if the user’s  **Profile**  **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. For every 20 mg/dL the user’s **BG** goes up, 1 g of carbs will be calculated as absorbed by **AAPS**. Positive **IOB** also affects the **COB** calculation. So, if **AAPS** predicts the user’s **BG** to go down by 20 mg/dL because of **IOB** and it instead stayed flat, **AAPS** would also calculate 1 g of carbs as absorbed.
+Hvis for eksempel **ISF** i **profilen** din er 100 og **I:C** er 5, blir karbohydratsensitivitetsfaktoren din 20. For hver 20 mg/dL **BS**-verdien din stiger, regner **AAPS** 1 g karbohydrater som tatt opp. Positiv **IOB** påvirker også **COB**-beregningen. Så hvis **AAPS** forventer at **BS**-verdien din skal falle 20 mg/dL på grunn av **IOB**, men den i stedet holder seg flat, regner **AAPS** også 1 g karbohydrater som tatt opp.
 
-Carbs will also be absorbed via the methods described below based on which sensitivity algorithm has been selected within the user's **AAPS**.
+Karbohydrater tas også opp etter metodene beskrevet nedenfor, avhengig av hvilken sensitivitetsalgoritme som er valgt i **AAPS**.
 
-## Carbs Sensitivity - Oref1
+## Karbohydratsensitivitet – Oref1
 
-Unabsorbed carbs are cut off after specified time:
+Karbohydrater som ikke er tatt opp, fjernes etter en angitt tid:
 
 ![Oref1](../images/cob_oref0_orange_II.png)
 
-![COB graph with Oref1 cut-off](../images/cob_oref0_orange_I.png)
+![COB-graf med Oref1-avkutting](../images/cob_oref0_orange_I.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version — in **AAPS** 4 the graphs look slightly different, but the **COB** graph carries the same information.
+Skjermbildet ovenfor er fra en eldre **AAPS**-versjon – i **AAPS** 4 ser grafene litt annerledes ut, men **COB**-grafen viser den samme informasjonen.
 ```
 
 
-## Carbs Sensitivity - WeightedAverage
+## Karbohydratsensitivitet – WeightedAverage
 
-Absorption is calculated to have COB = 0 after specified time:
+Opptaket beregnes slik at COB = 0 etter en angitt tid:
 
 ![AAPS, WeightedAverage](../images/cob_aaps2_orange_II.png)
 
-If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from **BG** deviations, an orange dot appears on the **COB** graph.
+Hvis minimalt karbohydratopptak (min_5m_carbimpact) brukes i stedet for verdien beregnet fra **BS**-avvik, vises en oransje prikk på **COB**-grafen.
 
 (CobCalculation-detection-of-wrong-cob-values)=
-## Detection of wrong COB values
+## Oppdaging av feil COB-verdier
 
-**AAPS**  will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
+**AAPS** advarer deg hvis du er i ferd med å gi bolus med **COB** fra et tidligere måltid, og algoritmen oppdager at den gjeldende **COB**-beregningen er feil. I så fall får du et ekstra hint på bekreftelsesskjermen etter at du har brukt boluskalkulatoren.
 
-### How does AAPS detect wrong COB values?
+### Hvordan oppdager AAPS feil COB-verdier?
 
-Ordinarily __AAPS__ detects carb absorption through **BG** deviations. In case the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
+Vanligvis oppdager __AAPS__ karbohydratopptak gjennom **BS**-avvik. Hvis du har registrert karbohydrater, men **AAPS** ikke kan se opptaket av dem gjennom **BS**-avvik, bruker det i stedet metoden [min_5m_carbimpact](#Preferences-min_5m_carbimpact) til å beregne opptaket (såkalt «fallback»). Siden denne metoden bare beregner det minimale karbohydratopptaket uten å ta hensyn til **BS**-avvik, kan den gi feil COB-verdier.
 
-![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
+![Hint om feil COB-verdi](../images/Calculator_SlowCarbAbsorption.png)
 
-In the screenshot above, 66% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. This indicates that the user may have had less **COB** than calculated by the algorithm.
+I skjermbildet ovenfor ble karbohydratopptaket 66 % av tiden beregnet med min_5m_carbimpact i stedet for verdien som ble funnet fra avvik. Dette tyder på at du kan ha hatt mindre **COB** enn algoritmen beregnet.
 
-### How to deal with this warning?
+### Hva gjør du med denne advarselen?
 
-- Consider cancelling the treatment - press ‘Cancel’ instead of OK.
-- Calculate your upcoming meal again with bolus wizard leaving **COB** unticked.
-- If you need a correction bolus, enter it manually.
-- Be careful not to overdose or insulin stacking!
-
-
-### Why does the algorithm not detect COB correctly?
-
-This could be because:
-- Potentially the user overestimated carbs when entering them.
-- Activity / exercise after your previous meal.
-- I:C needs adjustment.
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA).
+- Vurder å avbryte behandlingen – trykk på «Avbryt» i stedet for OK.
+- Beregn det kommende måltidet på nytt med boluskalkulatoren, uten hake ved **COB**.
+- Hvis du trenger en korreksjonsbolus, registrerer du den manuelt.
+- Vær forsiktig så du ikke overdoserer eller stabler insulin!
 
 
-## Manual correction of carbs entered
+### Hvorfor beregner ikke algoritmen COB riktig?
 
-If carbs are over or underestimated this can be corrected through the **Treatments history** screen as described [here](#screens-bolus-carbs).
+Dette kan skyldes:
+- Du kan ha overvurdert karbohydratene da du registrerte dem.
+- Aktivitet / trening etter forrige måltid.
+- I:C må justeres.
+- Verdien for min_5m_carbimpact er feil (anbefalt er 8 med SMB, 3 med AMA).
 
 
-## Carb correction - how to delete a Carb entry from Treatments
+## Manuell korrigering av registrerte karbohydrater
+
+Hvis karbohydratene er over- eller undervurdert, kan dette korrigeres i skjermen **Behandlingshistorikk**, som beskrevet [her](#screens-bolus-carbs).
 
 
-The **Treatments history** screen can be used to correct a faulty carb entry by deleting it. This may be because the user over or underestimated the carb entry:
+## Karbohydratkorrigering – slik sletter du en karbohydratoppføring fra Behandlinger
 
-![Deleting a carb entry from Treatments history](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
-1. Check and remember actual **COB** and **IOB** on the **AAPS** main screen.
-2. Open **Treatments history** (drawer menu → *Treatments history*), tab **Carbs and bolus**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (e.g. with Dana RS).
-3. **Long-press** the faulty carb entry — the list switches to **selection mode** with a checkbox on every line, and the entry is ticked (marked **1** above). Tick any further entries you want to remove as well.
-4. Tap the **🗑 Delete** icon in the top bar (marked **2**) and confirm — the confirmation dialog lists exactly what will be removed.
-5. Make sure carbs are removed successfully by checking **COB** on the **AAPS** main screen again.
-6. Do the same for **IOB** if there is just one line including carbs and insulin.
-7. If carbs are not removed as intended and additional carbs are added as explained in this section, the **COB** entry will be too high and this could lead to **AAPS** delivering too much insulin.
-8. Enter the correct carbs amount through the **Carbs** dialog (**Treatments** → **Carbs**) and set the correct event time.
-9. If there was just one line including carbs and insulin the user should also re-add the amount of insulin. Make sure to set the correct event time and check **IOB** on the main screen after confirming the new entry.
+Skjermen **Behandlingshistorikk** kan brukes til å korrigere en feil karbohydratoppføring ved å slette den. Dette kan skyldes at du over- eller undervurderte karbohydratene du registrerte:
+
+![Slette en karbohydratoppføring fra Behandlingshistorikk](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+
+1. Sjekk og husk gjeldende **COB** og **IOB** på hovedskjermen i **AAPS**.
+2. Åpne **Behandlingshistorikk** (sidemenyen → *Behandlingshistorikk*), fanen **Karbo og bolus**. Avhengig av pumpen kan karbohydratene vises sammen med insulin på én linje, eller som en egen oppføring (for eksempel med Dana RS).
+3. **Trykk og hold** på den feilaktige karbohydratoppføringen – listen går over i **valgmodus** med en avkrysningsboks på hver linje, og oppføringen får en hake (merket **1** ovenfor). Sett hake ved eventuelle andre oppføringer du også vil fjerne.
+4. Trykk på **🗑 Slett**-ikonet i topplinjen (merket **2**) og bekreft – bekreftelsesdialogen viser nøyaktig hva som blir fjernet.
+5. Sjekk at karbohydratene faktisk er fjernet ved å se på **COB** på hovedskjermen i **AAPS** igjen.
+6. Gjør det samme for **IOB** hvis det bare er én linje som inneholder både karbohydrater og insulin.
+7. Hvis karbohydratene ikke blir fjernet slik du ville, og du legger til nye karbohydrater som beskrevet i dette avsnittet, blir **COB** for høy, og det kan føre til at **AAPS** gir for mye insulin.
+8. Registrer riktig mengde karbohydrater via dialogen **Karbo** (**Behandlinger** → **Karbo**) og sett riktig tidspunkt for hendelsen.
+9. Hvis det bare var én linje med både karbohydrater og insulin, må du også legge inn insulinmengden på nytt. Pass på å sette riktig tidspunkt for hendelsen, og sjekk **IOB** på hovedskjermen etter at du har bekreftet den nye oppføringen.
 

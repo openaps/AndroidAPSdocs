@@ -73,7 +73,7 @@
 
 感謝 SMB，對於僅含“緩慢”碳水化合物的餐點，可能只需通知系統計畫中的碳水化合物量，並將其餘的留給**AAPS**。然而，這可能會導致餐後血糖高峰，因為無法提前注射。或者如果有必要的話，你可以進行預先注射，給予**開始注射**，此注射**僅部分**覆蓋碳水化合物（例如預估量的 2/3），並讓**SMB**提供其餘的胰島素。
 
-![SMBs on the IOB graph](../images/SMBs.png)
+![IOB 圖表上的微量注射](../images/SMBs.png)
 
 IOB 圖表上的 SMB 會以藍色三角形顯示，請參閱[IOB 圖表](#aaps-screens-iob)。在圖表的三角形處[長按](#aaps-screens-graph-press-and-hold)，即可查看已注射的胰島素量，或使用[治療紀錄](#aaps-screens-treatments)。
 

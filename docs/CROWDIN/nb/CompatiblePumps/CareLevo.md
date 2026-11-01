@@ -1,162 +1,162 @@
 # CareLevo
 
-The CareLevo is a tubeless patch pump made by CareMedi. Each patch holds up to 300 U of insulin and is worn for up to 7 days (168 hours). It communicates with **AAPS** over your phone's Bluetooth, with no additional device.
+CareLevo er en slangeløs patch-pumpe laget av CareMedi. Hver patch rommer opptil 300 E insulin og brukes i opptil 7 dager (168 timer). Den kommuniserer med **AAPS** over telefonens Bluetooth, uten ekstra enhet.
 
 ```{admonition} New driver
 :class: warning
-The CareLevo driver is new in **AAPS**. Read this whole page before you activate your first patch, and keep the pump's own instructions for use at hand.
+CareLevo-driveren er ny i **AAPS**. Les hele denne siden før du aktiverer din første patch, og ha pumpens egen bruksanvisning for hånden.
 ```
 
-The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the **Profile** to a minimum of 0.05 U/h in steps of 0.05 U/h, otherwise the insulin the **Profile** expects and the insulin the patch delivers differ slightly. **AAPS** uses the basal rates the patch accepted.
+Den minste dosen patchen kan gi, er 0,05 E. Sett basaldosene i **Profil** til minst 0,05 E/t i steg på 0,05 E/t, ellers blir det en liten forskjell mellom insulinet **Profil** forventer og insulinet patchen gir. **AAPS** bruker de basaldosene patchen godtok.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Pumpefunksjoner med AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Bolus in steps of 0.05 U.
-* Basal rates from 0.05 U/h to 15 U/h in steps of 0.05 U/h, with 30-minute basal segments.
-* Temporary basal rates set as an absolute rate, up to 12 hours.
-* Extended bolus up to 8 hours.
-* DST and timezone changes must be handled manually. The patch notifies you when the time zone changes.
+* Kommuniserer med **AAPS** over telefonens innebygde Bluetooth, uten en ekstra kommunikasjonsenhet.
+* Bolus i steg på 0,05 E.
+* Basaldoser fra 0,05 E/t til 15 E/t i steg på 0,05 E/t, med basalsegmenter på 30 minutter.
+* Midlertidige basaler settes som absolutt dose, opptil 12 timer.
+* Forlenget bolus opptil 8 timer.
+* Sommertid (DST) og tidssonebytte må håndteres manuelt. Patchen varsler deg når tidssonen endres.
 
-## Pump Setup
+## Pumpeoppsett
 
-1. Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-1. Select **Carelevo** in the Pump section.
-1. Press the Back key to return to the main screen.
+1. Åpne **menyen** (☰) øverst til venstre på hovedskjermen i **AAPS** og velg **Konfigurasjon**.
+1. Velg **Carelevo** under Pumpe.
+1. Trykk på Tilbake-knappen for å gå tilbake til hovedskjermen.
 
-![The Carelevo plugin selected in Configuration > Pump](../images/v4/Pumps/carelevo_enabled.png)
+![Carelevo-pluginen valgt under Konfigurasjon > Pumpe](../images/v4/Pumps/carelevo_enabled.png)
 
-## Settings
+## Innstillinger
 
-Open the pump screen with **Manage → Pump** (or **Configuration → Pump → Open plugin**).
+Åpne pumpeskjermen med **Administrer → Pumpe** (eller **Konfigurasjon → Pumpe → Åpne plugin**).
 
-Open the CareLevo settings by pressing the **Settings** (gear) icon in the upper right corner. Three settings are available:
+Åpne CareLevo-innstillingene ved å trykke på **Innstillinger**-ikonet (tannhjulet) øverst til høyre. Tre innstillinger er tilgjengelige:
 
-![Carelevo driver settings](../images/v4/Pumps/carelevo_settings.png)
+![Innstillinger for Carelevo-driveren](../images/v4/Pumps/carelevo_settings.png)
 
-### Low Insulin Notification Setting
+### Varsel-innstilling for lavt insulin
 
-The patch notifies you when the insulin remaining in the reservoir reaches the chosen amount. It can be set from 20 U to 50 U in 5 U steps. The default is 30 U. Independently of this setting, the patch raises a critical alarm and stops delivering insulin when less than 10 U remain.
+Patchen varsler deg når insulinet som er igjen i reservoaret, når den valgte mengden. Den kan settes fra 20 E til 50 E i steg på 5 E. Standard er 30 E. Uavhengig av denne innstillingen gir patchen en kritisk alarm og slutter å levere insulin når det er mindre enn 10 E igjen.
 
-### Patch Usage Notification Setting
+### Varsel-innstilling for patchbruk
 
-The patch notifies you when it has been worn for the chosen number of hours, so you can plan the change. It can be set from 24 to 167 hours. The default is 116 hours.
+Patchen varsler deg når den har vært brukt i det valgte antallet timer, så du kan planlegge byttet. Den kan settes fra 24 til 167 timer. Standard er 116 timer.
 
-### Patch Info Alarm
+### Patchinfo-alarm
 
-When this is on, the patch beeps when a bolus, extended bolus or temporary basal starts and when it ends. The default is off.
+Når dette er på, piper patchen når en bolus, forlenget bolus eller midlertidig basal starter, og når den slutter. Standard er av.
 
-## The pump screen
+## Pumpeskjermen
 
-![Carelevo pump screen without an active patch](../images/v4/Pumps/carelevo_pump_screen.png)
+![Carelevo-pumpeskjermen uten en aktiv patch](../images/v4/Pumps/carelevo_pump_screen.png)
 
-The pump screen shows the **Bluetooth status** (No Active Patch, Disconnected or Connected), the **Serial No.** of the patch, its **Activation Time** and **Expiration**, the current **Basal Rate** and **Temp basal rate**, the **Insulin Remaining** (remaining / filled), the **Patch Time Remaining** and the **Total insulin delivered**.
+Pumpeskjermen viser **Bluetooth-status** (Ingen aktiv patch, Frakoblet eller Tilkoblet), patchens **Serienr.**, dens **Aktiveringstid** og **Utløp**, gjeldende **Basaldose** og **Midlertidig basaldose**, **Gjenværende insulin** (igjen / fylt), **Gjenstående tid på patchen** og **Totalt levert insulin**.
 
-The buttons depend on the state of the patch:
+Knappene avhenger av patchens tilstand:
 
-* **Activate Patch**: starts the activation of a new patch, see below.
-* **Insulin Guide**: shows the twelve steps for filling a patch with insulin.
-* **Suspend Infusion** / **Resume Infusion**: pauses and restarts insulin delivery, see below.
-* **Discard Patch**: stops the current patch so a new one can be activated.
+* **Aktiver patch**: starter aktiveringen av en ny patch, se nedenfor.
+* **Insulinveiledning**: viser de tolv stegene for å fylle en patch med insulin.
+* **Pause infusjon** / **Gjenoppta infusjon**: pauser og starter insulinleveringen igjen, se nedenfor.
+* **Forkast patch**: stopper den aktive patchen så en ny kan aktiveres.
 
-## Activating a patch
+## Aktivere en patch
 
-Before you start, make sure a **Profile** is active in **AAPS** and that Bluetooth is on. The patch must be activated within a limited time once it is switched on; if the time runs out, the patch raises a **Patch Application Timeout** alarm and cannot be used.
+Før du starter, sjekk at en **Profil** er aktiv i **AAPS** og at Bluetooth er på. Patchen må aktiveres innen en begrenset tid etter at den er slått på; hvis tiden går ut, gir patchen alarmen **Tidsavbrudd for patchpåføring** og kan ikke brukes.
 
-Press **Activate Patch** on the pump screen and follow the steps. You can cancel at any time before the needle is inserted; what you have entered is discarded.
+Trykk på **Aktiver patch** på pumpeskjermen og følg stegene. Du kan avbryte når som helst før nålen er satt inn; det du har lagt inn, forkastes.
 
-### Select the insulin
+### Velg insulin
 
-Confirm the insulin you use. The patch requires rapid-acting U-100 insulin.
+Bekreft insulinet du bruker. Patchen krever hurtigvirkende U-100-insulin.
 
-### Fill the patch with insulin
+### Fyll patchen med insulin
 
-Fill the patch with 50 to 300 U, considering how long you will wear it. Press **Insulin Guide** if you need the filling instructions. Then tap the fill amount and select the amount you filled; **AAPS** uses it to show the insulin remaining.
+Fyll patchen med 50 til 300 E, ut fra hvor lenge du skal bruke den. Trykk på **Insulinveiledning** hvis du trenger fylleinstruksjonene. Trykk så på fyllmengden og velg mengden du fylte; **AAPS** bruker den til å vise gjenværende insulin.
 
-### Connect the patch
+### Koble til patchen
 
-1. Take the patch out of its blister and remove the needle cap.
-1. Press the power button of the patch for more than one second. After the beep, tap **Search Patch**.
-1. When the patch found is the right one, tap **Confirm**. Tap **Rescan** if it is not.
+1. Ta patchen ut av pakningen og fjern nålehetten.
+1. Hold inne av/på-knappen på patchen i mer enn ett sekund. Etter pipet trykker du på **Søk etter patch**.
+1. Når patchen som ble funnet, er den riktige, trykker du på **Bekreft**. Trykk på **Skann på nytt** hvis den ikke er det.
 
-### Safety check
+### Sikkerhetssjekk
 
-Once the patch is connected, press **Safety Check**. The patch tests itself and primes. Check that a droplet of insulin has formed at the needle tip. If no droplet is visible, press **Retry**. When the check is complete, press **Next**.
+Når patchen er tilkoblet, trykker du på **Sikkerhetskontroll**. Patchen tester seg selv og primer. Kontroller at det har dannet seg en dråpe insulin på nålespissen. Hvis ingen dråpe er synlig, trykker du på **Prøv igjen**. Når kontrollen er fullført, trykker du på **Neste**.
 
-### Site and patch attachment
+### Sted og festing av patchen
 
-1. Select the site where you will wear the patch.
-1. Clean the site thoroughly with an alcohol swab.
-1. Remove the backing tape and attach the patch to your skin with the marked dot facing upward.
-1. Press **Next** once the patch is attached.
+1. Velg stedet der du skal bruke patchen.
+1. Rengjør stedet grundig med en spritserviett.
+1. Fjern beskyttelsesfilmen og fest patchen på huden med det merkede punktet vendt opp.
+1. Trykk på **Neste** når patchen er festet.
 
-### Insert the needle
+### Sett inn nålen
 
-1. Turn the safety cap in the direction of the arrow and remove it.
-1. Press the applicator push button all the way down and hold it for 10 seconds. A beep sounds when the needle is inserted.
-1. Remove the applicator and press **Confirm Insertion**.
+1. Vri sikkerhetshetten i pilens retning og fjern den.
+1. Trykk applikatorknappen helt ned og hold den inne i 10 sekunder. Det høres et pip når nålen er satt inn.
+1. Fjern applikatoren og trykk på **Bekreft innsetting**.
 
-If the insertion fails, **AAPS** tells you how many attempts are left. When no attempt is left, the patch raises a **Needle Insertion Error** alarm and must be replaced.
+Hvis innsettingen mislykkes, forteller **AAPS** deg hvor mange forsøk som er igjen. Når ingen forsøk er igjen, gir patchen alarmen **Feil ved nåleinnsetting** og må byttes.
 
-Insulin delivery starts as soon as the insertion is confirmed.
+Insulinleveringen starter så snart innsettingen er bekreftet.
 
-## Bolus messages
+## Bolusmeldinger
 
-If the patch refuses a bolus, **AAPS** tells you why. For example *Bolus can't be delivered. Bolus available: 2.8 U* means the patch can deliver only that amount now.
+Hvis patchen avviser en bolus, forteller **AAPS** deg hvorfor. For eksempel betyr *Bolus kan ikke leveres. Tilgjengelig bolus: 2,8 E* at patchen bare kan gi den mengden nå.
 
-If you stop a bolus and the patch does not confirm the stop, **AAPS** waits for the bolus to end and records the amount the patch reports. If a bolus was not recorded (for example because it was stopped while it was running), **AAPS** adds it from the patch total and asks you to check IOB before you try again.
+Hvis du stopper en bolus og patchen ikke bekrefter stoppet, venter **AAPS** til bolusen er ferdig og registrerer mengden patchen rapporterer. Hvis en bolus ikke ble registrert (for eksempel fordi den ble stoppet mens den pågikk), legger **AAPS** den til fra patchens totalsum og ber deg sjekke IOB før du prøver igjen.
 
-## Suspending and resuming insulin delivery
+## Pause og gjenoppta insulinlevering
 
-Press **Suspend Infusion** on the pump screen and select how long delivery should pause: from 30 minutes to 4 hours in 30-minute steps. Delivery does not resume by itself: when the pause is over, the patch raises a **Start Insulin** alert. Press **Resume Infusion** on the pump screen, or **Start Insulin** on the alert, and confirm.
+Trykk på **Pause infusjon** på pumpeskjermen og velg hvor lenge leveringen skal pauses: fra 30 minutter til 4 timer i steg på 30 minutter. Leveringen starter ikke igjen av seg selv: når pausen er over, gir patchen varselet **Start insulin**. Trykk på **Gjenoppta infusjon** på pumpeskjermen, eller **Start insulin** på varselet, og bekreft.
 
-## Discarding a patch
+## Forkaste en patch
 
-Press **Discard Patch** on the pump screen and confirm. Insulin delivery stops and the patch can no longer be used. Remove the patch from your body and activate a new one.
+Trykk på **Forkast patch** på pumpeskjermen og bekreft. Insulinleveringen stopper, og patchen kan ikke brukes lenger. Fjern patchen fra kroppen og aktiver en ny.
 
-When a critical alarm has stopped the patch, the alarm offers **Deactivate Patch** instead. Pressing it discards the patch the same way.
+Når en kritisk alarm har stoppet patchen, tilbyr alarmen **Deaktiver patch** i stedet. Trykker du på den, forkastes patchen på samme måte.
 
 (carelevo-alarms-and-notifications)=
 
-## Alarms and notifications
+## Alarmer og varsler
 
-The patch reports three levels of events. All of them are shown as **AAPS** notifications.
+Patchen rapporterer tre nivåer av hendelser. Alle vises som varsler i **AAPS**.
 
-### Critical alarms
+### Kritiske alarmer
 
-Insulin delivery has stopped. Act now:
+Insulinleveringen har stoppet. Gjør noe nå:
 
-* **Low Insulin**: less than 10 U remain. Deactivate the patch and change it.
-* **Patch Expired**: the patch reached the end of its life. Deactivate the patch and change it.
-* **Low Battery**: discard the patch and change it.
-* **High/Low Temperature**: move to a suitable temperature, between 40 ℉ and 99 ℉ (5 ℃ and 37 ℃).
-* **Auto-Off**: the patch stopped because the Auto-Off alert was ignored. Press **Start Insulin** to restart basal delivery.
-* **Patch Application Timeout**, **Self-Diagnosis Failed**, **Patch Error**, **Occlusion** and **Needle Insertion Error**: deactivate the patch and change it.
+* **Lite insulin**: mindre enn 10 E igjen. Deaktiver patchen og bytt den.
+* **Patch utløpt**: patchen har nådd slutten av levetiden sin. Deaktiver patchen og bytt den.
+* **Lavt batteri**: forkast patchen og bytt den.
+* **For høy/lav temperatur**: flytt deg til et sted med egnet temperatur, mellom 5 ℃ og 37 ℃ (40 ℉ og 99 ℉).
+* **Automatisk avslåing**: patchen stoppet fordi varselet om automatisk avslåing ble ignorert. Trykk på **Start insulin** for å starte basalleveringen igjen.
+* **Tidsavbrudd for patchpåføring**, **Selvtest mislyktes**, **Patchfeil**, **Okklusjon** og **Feil ved nåleinnsetting**: deaktiver patchen og bytt den.
 
-### Alerts
+### Varsler
 
-Insulin delivery continues, but something needs your attention:
+Insulinleveringen fortsetter, men noe trenger oppmerksomheten din:
 
-* **Low Insulin**: the reservoir reached the amount set in **Low Insulin Notification Setting**. Prepare to change the patch.
-* **Patch Will Expire Soon** and **Patch Operating Life Expired**: change the patch.
-* **Low Battery**: prepare to change the patch.
-* **High/Low Temperature**: delivery is paused until the patch is back between 40 ℉ and 99 ℉.
-* **Auto-Off**: tap **OK**. If ignored, the alert escalates to a critical alarm and delivery stops.
-* **Patch Activation Incomplete**: tap **OK** to complete the activation.
-* **Start Insulin**: the pause you set has ended. Tap **Start Insulin** to resume delivery.
-* **Turn Bluetooth On** and **BLE Not Connected**: the phone cannot reach the patch. Turn Bluetooth on or check the patch connection.
+* **Lite insulin**: reservoaret har nådd mengden som er satt i **Varsel-innstilling for lavt insulin**. Gjør deg klar til å bytte patchen.
+* **Patch utløper snart** og **Patch sin brukstid er utløpt**: bytt patchen.
+* **Lavt batteri**: gjør deg klar til å bytte patchen.
+* **For høy/lav temperatur**: leveringen er pauset til patchen igjen er mellom 5 ℃ og 37 ℃ (40 ℉ og 99 ℉).
+* **Automatisk avslåing**: trykk på **OK**. Hvis varselet ignoreres, eskalerer det til en kritisk alarm, og leveringen stopper.
+* **Patchaktivering ikke fullført**: trykk på **OK** for å fullføre aktiveringen.
+* **Start insulin**: pausen du satte, er over. Trykk på **Start insulin** for å gjenoppta leveringen.
+* **Slå på Bluetooth** og **BLE ikke tilkoblet**: telefonen får ikke kontakt med patchen. Slå på Bluetooth eller kontroller patchtilkoblingen.
 
-### Notices
+### Meldinger
 
-For information only: **Low Insulin**, **Patch Usage Time Notification** (the time set in **Patch Usage Notification Setting** has passed), **Patch Check Notification**, **Time Zone Change** and **Check Blood Glucose** (a set time after a bolus).
+Bare til informasjon: **Lite insulin**, **Varsel om patch sin brukstid** (tiden som er satt i **Varsel-innstilling for patchbruk**, er passert), **Varsel om kontroll av patch**, **Tidssoneendring** og **Kontroller blodsukker** (en fast tid etter en bolus).
 
-The patch also reports when its own low glucose suspend (**LGS**) function starts or ends. **AAPS** does not use this function; the loop handles low glucose itself.
+Patchen rapporterer også når dens egen funksjon for stopp ved lavt blodsukker (**LGS**) starter eller slutter. **AAPS** bruker ikke denne funksjonen; loopen håndterer lavt blodsukker selv.
 
-## Where to get help
+## Hvor du kan få hjelp
 
-Report problems with the CareLevo driver on the [AAPS GitHub issues page](https://github.com/nightscout/AndroidAPS/issues) or in the AAPS community channels, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Rapporter problemer med CareLevo-driveren på [AAPS-siden for GitHub-saker](https://github.com/nightscout/AndroidAPS/issues) eller i AAPS-fellesskapets kanaler, se [Hvor kan jeg få hjelp](../GettingHelp/WhereCanIGetHelp.md).

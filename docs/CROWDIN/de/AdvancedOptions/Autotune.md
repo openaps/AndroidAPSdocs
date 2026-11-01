@@ -31,7 +31,7 @@ Erstelle im Unterordner `extra` Deines [AAPS-Ordners](#preferences-maintenance-s
 
 ![Enable Autotune](../images/Autotune/Autotune_0.png)
 
-Restart **AAPS**. Then open the **menu** (☰), select **Configuration**, then the **General** category, and tick **Autotune**. The card then shows **Settings** and **Open plugin**:
+**AAPS** neu starten. Then open the **menu** (☰), select **Configuration**, then the **General** category, and tick **Autotune**. The card then shows **Settings** and **Open plugin**:
 
 ![Autotune ticked in Configuration > General](../images/v4/Configuration/configuration_general_autotune.png)
 

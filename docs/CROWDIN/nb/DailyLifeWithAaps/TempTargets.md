@@ -1,236 +1,236 @@
-# Temp-Targets
+# Midlertidige mål
 
-## What are Temp-Targets and where can I set and configure them?
+## Hva er midlertidige mål, og hvor kan jeg sette og konfigurere dem?
 
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](#profile-glucose-targets) for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage.
+Et **midlertidig mål** (eller kort **TT**, Temp-Target) er en funksjon i **AAPS** som lar deg endre [**BS**-målområdet](#profile-glucose-targets) ditt for planlagte aktiviteter. Dette gjør **AAPS** ved å endre hvor mye insulin du får.
 
-A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
+Et glukosemål, særlig hvis det bare er kortvarig (under 4 timer), trenger ikke å være den *faktiske verdien* du venter eller ønsker at glukosen din skal nå. Det er heller en god måte å si til **AAPS** at den skal være mer eller mindre aggressiv, samtidig som glukosen din holdes i målområdet.
 
-Temporary targets can be defined within those boundaries :
+Midlertidige mål kan settes innenfor disse grensene:
 
-|         | Temporary target       |
-| ------- | ---------------------- |
-| Minimum | 4 mmol/L or 72 mg/dL   |
-| Maximum | 10 mmol/L or 180 mg/dL |
+|          | Midlertidig mål           |
+| -------- | ------------------------- |
+| Minimum  | 4 mmol/L eller 72 mg/dL   |
+| Maksimum | 10 mmol/L eller 180 mg/dL |
 
-**AAPS** provides three built-in **Temp-Target** presets suitable for exercise (**Activity**), meals (**Eating Soon**) and predicted hypoglycemia (**Hypo**). They live on the **Temp Target** screen (**Manage** → **Temp Target**), which you can also open by simply tapping the **target chip** on the main screen.
+**AAPS** har tre innebygde forhåndsinnstilte **midlertidige mål**, laget for trening (**Aktivitet**), måltider (**Spise snart**) og forventet hypoglykemi (**Hypo**). De ligger på skjermen **Midlertidig mål** (**Administrer** → **Midlertidig mål**), som du også kan åpne ved å trykke på **målbrikken** på hovedskjermen.
 
-Users should have realistic expectations on the results that can be achieved when selecting a **Temp-Target** in **AAPS**. The success of attaining a desired **BG** target will vary depending on a multiple factors ranging from: the reliability of the user’s **AAPS** settings, overall **BG** control, **IOB**, insulin sensitivity, insulin resistance, level of exertion undertaken during the exercise and so forth.
+Du bør ha realistiske forventninger til hva du kan oppnå når du velger et **midlertidig mål** i **AAPS**. Hvor godt du når ønsket **BS**-mål, avhenger av mange faktorer: hvor pålitelige **AAPS**-innstillingene dine er, den generelle **BS**-kontrollen, **IOB**, insulinfølsomhet, insulinresistens, hvor hardt du anstrenger deg under treningen, og så videre.
 
-A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**.
+Et **midlertidig mål** kan trenge omtrent 30 minutter eller mer for å nå ønsket **BS**-mål. **AAPS** kan ikke nå et **BS**-mål med én gang, og du bør huske på dette når du velger et **midlertidig mål**.
 
-The sections below summarize the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**, and **Temp-Target-Hypo**. The values shown are the shipped defaults — you can [adjust each preset](#TempTargets-change-preset-defaults) to your own needs.
+Avsnittene nedenfor oppsummerer **midlertidig mål Aktivitet**, **midlertidig mål Spise snart** og **midlertidig mål Hypo**. Verdiene som vises, er standardverdiene — du kan [tilpasse hver forhåndsinnstilling](#TempTargets-change-preset-defaults) til dine egne behov.
 
-### TT - Activity
+### TT - Aktivitet
 
-![TT Activity](../images/TempTarget2.png)
+![Midl. mål Aktivitet](../images/TempTarget2.png)
 
-**BG Target (default preset, adjustable)**
+**BS-mål (standard forhåndsinnstilling, kan endres)**
 
-AAPS will aim to reach 140 mg/dL or 7.8 mmol/L for 1 h 30 min
+AAPS vil prøve å nå 140 mg/dL eller 7,8 mmol/L i 1 t 30 min
 
-**Other considerations users may wish to factor in when selecting**:
+**Annet du kan ta hensyn til når du velger**:
 
-Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
+Avhengig av **BS**-nivået vil **AAPS** «redusere» insulinbruken for å nå **BS**-målet. Hvis **BS**-målet ikke er innenfor området (det vil si over **BS**-målet som er satt i **profilen** din), kan **AAPS** likevel holde basalen på.
 
-In closed loop mode, **SMB**:
+I lukket loop vil **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *kanskje* bli deaktivert (mer om dette nedenfor), og/eller
+- basal kan bli aktivert hvis **AAPS** har negativ **IOB**, eller <0.
 
-Users may also wish to consider:
+Du kan også vurdere:
 
-- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary person to person); and
-- *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
+- å *velge* dette **midlertidige målet** 1–2 timer før den planlagte treningen for å sikre lavere IOB (riktig tidspunkt for dette midlertidige målet varierer fra person til person), og
+- å *velge* en midlertidig profil (redusert) så lenge den planlagte aktiviteten varer, for å sikre lavere **IOB**,
+- å *sørge for* at det **midlertidige målet** er tidsinnstilt slik at det *deaktiveres* kort tid før treningen, fordi **IOB** allerede er redusert og noen brukere opplever en rask stigning i **BS** etter trening.
 
-### TT - Eating soon
+### TT - Spise snart
 
-![TT Eating soon](../images/TempTarget1.png)
+![Midl. mål Spise snart](../images/TempTarget1.png)
 
-**BG Target (default preset, adjustable)**
+**BS-mål (standard forhåndsinnstilling, kan endres)**
 
-AAPS will aim to reach 90 mg/dL or 5.0 mmol/L for 45 minutes
+AAPS vil prøve å nå 90 mg/dL eller 5,0 mmol/L i 45 minutter
 
-**Other considerations users may wish to factor in when selecting**:
+**Annet du kan ta hensyn til når du velger**:
 
-In closed loop mode, **SMB**:
+I lukket loop vil **SMB**:
 
-- will remain activated; and/or
-- basal may be also activated depending on the user's **Profile's** settings.
+- forblir aktivert, og/eller
+- basal kan også bli aktivert, avhengig av innstillingene i **profilen** din.
 
-Depending on **BG** level, **AAPS** will "increase" insulin usage within the user's **AAPS** setting parameters in order to achieve the desired **BG** target.
+Avhengig av **BS**-nivået vil **AAPS** «øke» insulinbruken, innenfor grensene i **AAPS**-innstillingene dine, for å nå ønsket **BS**-mål.
 
 ### TT - Hypo
 
-![TT Hypo](../images/TempTarget3.png)
+![Midl. mål Hypo](../images/TempTarget3.png)
 
-**BG Target (default preset, adjustable)**
+**BS-mål (standard forhåndsinnstilling, kan endres)**
 
-AAPS will aim to reach 160 mg/dL or 8.9 mmol/L for 1 hour
+AAPS vil prøve å nå 160 mg/dL eller 8,9 mmol/L i 1 time
 
-**Other considerations users may wish to factor in when selecting**:
+**Annet du kan ta hensyn til når du velger**:
 
-In closed loop mode, **SMB**:
+I lukket loop vil **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *kanskje* bli deaktivert (mer om dette nedenfor), og/eller
+- basal kan bli aktivert hvis **AAPS** har negativ **IOB**, eller <0.
 
 (TempTargets-manage-v4)=
 
-## Setting and managing temporary targets (Manage → Temp Target)
+## Sette og administrere midlertidige mål (Administrer → Midlertidig mål)
 
-In **AAPS** v4 you manage your TT **presets** and start a temporary target from the **Manage** screen (bottom navigation) → **Temp Target** (*“Manage and set temporary targets”*).
+I **AAPS** v4 administrerer du **forhåndsinnstillingene** for midlertidige mål og starter et midlertidig mål fra skjermen **Administrer** (navigasjonslinjen nederst) → **Midlertidig mål** (*«Administrer og sett midlertidige mål»*).
 
-![The Temp Target screen — preset carousel, editor and action bar](../images/v4/TempTarget/tt_management.png)
+![Skjermen Midlertidig mål — karusell med forhåndsinnstillinger, redigeringsfelt og handlingslinje](../images/v4/TempTarget/tt_management.png)
 
-The screen has three parts:
+Skjermen har tre deler:
 
-1. **Preset carousel** (top) — swipe through your TT presets. Each card shows the preset's **name**, **target** and **duration**; the currently running TT is highlighted.
-2. **Editor** (middle) — the **Temporary target** and **Duration** that will actually be applied, plus an **Activation** date/time.
-3. **Action bar** (bottom) — **➕ add**, **‘️ delete** and the **▶ activate** button.
+1. **Karusell med forhåndsinnstillinger** (øverst) — sveip gjennom forhåndsinnstillingene dine for midlertidige mål. Hvert kort viser forhåndsinnstillingens **navn**, **mål** og **varighet**; det midlertidige målet som kjører nå, er uthevet.
+2. **Redigeringsfelt** (midten) — **Midlertidig mål** og **Varighet** som faktisk vil bli brukt, pluss dato/klokkeslett for **Aktivering**.
+3. **Handlingslinje** (nederst) — **➕ legg til**, **‘️ slett** og knappen **▶ aktiver**.
 
-Selecting a preset card loads its **target** and **duration** into the editor.
+Når du velger et kort, lastes **målet** og **varigheten** inn i redigeringsfeltet.
 
-```{admonition} Built-in vs custom presets :class: note The built-in presets — **Eating Soon**, **Activity** and **Hypo** — always exist and **cannot be deleted** (you can change their values and save, though). Any presets you create yourself are **custom** and can be edited or deleted freely.
+```{admonition} Innebygde og egendefinerte forhåndsinnstillinger :class: note De innebygde forhåndsinnstillingene — **Spise snart**, **Aktivitet** og **Hypo** — finnes alltid og **kan ikke slettes** (men du kan endre verdiene deres og lagre). Forhåndsinnstillinger du lager selv, er **egendefinerte** og kan redigeres eller slettes fritt.
 
-    <br />### Activating a temporary target
+    <br />### Aktivere et midlertidig mål
     
-    Swipe to the preset you want (its values load into the editor), optionally adjust the **target**/**duration** in the editor, then tap **▶ Activate**. A confirmation shows the exact target, duration and reason before anything starts:
+    Sveip til forhåndsinnstillingen du vil bruke (verdiene lastes inn i redigeringsfeltet), juster eventuelt **målet**/**varigheten** i redigeringsfeltet, og trykk så på **▶ Aktiver**. En bekreftelse viser nøyaktig mål, varighet og årsak før noe starter:
     
-    ![Activation confirmation](../images/TempTarget8.png)
+    ![Bekreftelse av aktivering](../images/TempTarget8.png)
     
-    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
+    Når du har bekreftet, starter det midlertidige målet med en gang (eller på valgt **Aktivering**-tidspunkt) og kjører så lenge **varigheten** er satt til.
     
-    ```{admonition} Editing the numbers is a one-off — it does not change the preset
+    ```{admonition} Å endre tallene gjelder bare én gang — forhåndsinnstillingen endres ikke
     :class: important
-    The **target** and **duration** in the editor are the values **Activate** will use *right now*. If you change them, that change is **temporary**: it applies only to this activation and **does not modify the saved preset**. This lets you "tweak and activate" a one-off TT (for example activate *Activity* at a slightly different target today) without permanently altering the preset.
+    **Målet** og **varigheten** i redigeringsfeltet er verdiene **Aktiver** vil bruke *nå*. Hvis du endrer dem, er endringen **midlertidig**: den gjelder bare denne aktiveringen og **endrer ikke den lagrede forhåndsinnstillingen**. Slik kan du «justere og aktivere» et midlertidig mål én gang (for eksempel aktivere *Aktivitet* med et litt annet mål i dag) uten å endre forhåndsinnstillingen permanent.
     
 
-### Saving changes to a preset
+### Lagre endringer i en forhåndsinnstilling
 
-If you *do* want to keep an edited value, **Save** it: when the editor differs from the selected preset, a **Save** icon appears in the top toolbar. Tapping it stores the current **target** and **duration** (and name, for custom presets) back into the selected preset. For the built-in presets, a **Revert to defaults** button (↺) also appears in the action bar: it brings back the preset's default values.
+Hvis du *vil* beholde en endret verdi, må du **lagre** den: når redigeringsfeltet avviker fra den valgte forhåndsinnstillingen, vises et **Lagre**-ikon i verktøylinjen øverst. Trykker du på det, lagres gjeldende **mål** og **varighet** (og navn, for egendefinerte forhåndsinnstillinger) i den valgte forhåndsinnstillingen. For de innebygde forhåndsinnstillingene vises også knappen **Tilbakestill til standardinnstillinger** (↺) i handlingslinjen: den henter tilbake forhåndsinnstillingens standardverdier.
 
-![Temp Target screen with the Save icon and the Revert to defaults button](../images/v4/TempTarget/tt_preset_save_revert.png)
+![Skjermen Midlertidig mål med Lagre-ikonet og knappen Tilbakestill til standardinnstillinger](../images/v4/TempTarget/tt_preset_save_revert.png)
 
-So the rule of thumb is:
+Tommelfingerregelen er altså:
 
-- **Activate** → use the numbers **once** (preset unchanged).
-- **Save** → make the numbers the preset's **new defaults**.
+- **Aktiver** → bruk tallene **én gang** (forhåndsinnstillingen er uendret).
+- **Lagre** → gjør tallene til forhåndsinnstillingens **nye standardverdier**.
 
-To put a built-in preset back the way it shipped, select it and tap the **↺ Revert** button — it appears in the action bar only for a **built-in** preset whose values currently differ from its factory defaults, and it restores that preset's original **target** and **duration**.
+For å sette en innebygd forhåndsinnstilling tilbake slik den var levert, velger du den og trykker på knappen **↺ Tilbakestill** — den vises i handlingslinjen bare for en **innebygd** forhåndsinnstilling der verdiene nå avviker fra fabrikkverdiene, og den gjenoppretter forhåndsinnstillingens opprinnelige **mål** og **varighet**.
 
-### Adding and removing presets
+### Legge til og fjerne forhåndsinnstillinger
 
-- **➕ Add** — create a **new custom preset** from the current editor values. The new card appears in the carousel.
-- **‘️ Delete** — remove the selected **custom** preset. Built-in presets (*Eating Soon*, *Activity*, *Hypo*) cannot be deleted.
+- **➕ Legg til** — lag en **ny egendefinert forhåndsinnstilling** av verdiene som står i redigeringsfeltet nå. Det nye kortet vises i karusellen.
+- **‘️ Slett** — fjern den valgte **egendefinerte** forhåndsinnstillingen. Innebygde forhåndsinnstillinger (*Spise snart*, *Aktivitet*, *Hypo*) kan ikke slettes.
 
-Once you have at least two **custom** presets, you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. The built-in presets keep their places — only custom presets can be moved. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+Når du har minst to **egendefinerte** forhåndsinnstillinger, kan du også endre rekkefølgen deres i karusellen: trykk på ikonet **Endre rekkefølge** (⇅) i linjen øverst, flytt kortet i midten med **flytteknappene ◀ / ▶**, og bekreft så med **✓**. De innebygde forhåndsinnstillingene beholder plassene sine — bare egendefinerte forhåndsinnstillinger kan flyttes. (Kontrollene ser like ut som når du [endrer rekkefølgen på profiler](ProfileSwitch-ProfilePercentage.md).)
 
-Your presets are part of the synced configuration, so they are shared across your master and paired clients.
+Forhåndsinnstillingene dine er en del av den synkroniserte konfigurasjonen, så de deles mellom hovedenheten og parede klienter.
 
-### Other ways to set a temporary target
+### Andre måter å sette et midlertidig mål på
 
-A temporary target can also be set without opening this screen:
+Du kan også sette et midlertidig mål uten å åpne denne skjermen:
 
-- with the **TT toggles in the Carbs dialog** — see [below](#TempTargets-carbs-dialog),
-- with a **preset button on the [QuickLaunch toolbar](QuickLaunch.md)** — the *Temp Target Presets* category in *Configure QuickLaunch* offers a one-tap button for each of your presets,
-- from a **Wear OS watch** (the **Temp Target** menu item / tile),
-- from a paired **client** — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md),
-- as part of a **[scene](Scenes.md)** (the *Temporary target* action), or
-- from an **Automation** rule (*Start temp target* / *Stop temp target*).
+- med **bryterne for midlertidig mål i Karbo-dialogen** — se [nedenfor](#TempTargets-carbs-dialog),
+- med en **knapp for en forhåndsinnstilling på [Hurtigstart-verktøylinjen](QuickLaunch.md)** — kategorien *Forhåndsinnstilte midlertidig mål* i *Konfigurer Hurtigstart* gir en ett-trykks-knapp for hver av forhåndsinnstillingene dine,
+- fra en **Wear OS-klokke** (menyvalget/flisen **Midlertidig mål**),
+- fra en paret **klient** — se [Hovedenhet ↔ klientstyring](../RemoteFeatures/ClientMasterControl.md),
+- som en del av en **[scene](Scenes.md)** (handlingen *Midlertidig mål*), eller
+- fra en **Automasjon**-regel (*Start midlertidig mål* / *Avbryt midlertidig mål*).
 
 * * *
 
 (TempTargets-where-can-i-select-a-temp-target)=
 
-## Where can I select a Temp-Target?
+## Hvor kan jeg velge et midlertidig mål?
 
-The quickest way is to tap the **target chip** on the main screen (it shows your current target range):
+Det raskeste er å trykke på **målbrikken** på hovedskjermen (den viser målområdet ditt nå):
 
-![Target chip on the main screen](../images/TempTarget6.png)
+![Målbrikken på hovedskjermen](../images/TempTarget6.png)
 
-This opens the **Temp Target** screen described above — swipe to a preset and tap **▶ Activate**. The same screen is also reachable via **Manage** → **Temp Target**.
+Dette åpner skjermen **Midlertidig mål** som er beskrevet ovenfor — sveip til en forhåndsinnstilling og trykk på **▶ Aktiver**. Du når den samme skjermen også via **Administrer** → **Midlertidig mål**.
 
-(TempTargets-carbs-dialog)= When entering carbs, you don't need to open the **Temp Target** screen at all: the **Carbs dialog** (**Treatments** → **Carbs**) has **Start Hypo TT**, **Start Eating soon TT** and **Start Activity TT** toggles at the top. Switch one on and the corresponding preset is activated together with the carb entry:
+(TempTargets-carbs-dialog)= Når du registrerer karbohydrater, trenger du ikke å åpne skjermen **Midlertidig mål** i det hele tatt: **Karbo-dialogen** (**Behandlinger** → **Karbo**) har bryterne **Start midlertidig mål Hypo**, **Start midlertidig mål Spise snart** og **Start midlertidig mål Aktivitet** øverst. Slå på én av dem, så aktiveres den tilhørende forhåndsinnstillingen sammen med karbohydratregistreringen:
 
-![TT toggles in the Carbs dialog](../images/TempTarget5.png)
+![Brytere for midlertidig mål i Karbo-dialogen](../images/TempTarget5.png)
 
-    {admonition} Automatic Hypo TT
+    {admonition} Automatisk midlertidig mål Hypo
     :class: note
-    If you open the **Carbs dialog** while your glucose is below 72 mg/dL (4 mmol/L), **AAPS** pre-selects the **Start Hypo TT** toggle for you (unless a higher temporary target with a longer remaining duration is already running).
+    Hvis du åpner **Karbo-dialogen** mens glukosen din er under 72 mg/dL (4 mmol/L), velger **AAPS** bryteren **Start midlertidig mål Hypo** for deg på forhånd (med mindre et høyere midlertidig mål med lengre gjenstående varighet allerede kjører).
 
 (TempTargets-change-preset-defaults)=
 
-## Where can I change the default Temp-Target and override with my own preferences?
+## Hvor kan jeg endre standardverdiene for et midlertidig mål og bruke mine egne?
 
-Each preset's **target** and **duration** are edited directly on the **Temp Target** screen — there is no separate preferences entry for this anymore:
+**Målet** og **varigheten** for hver forhåndsinnstilling redigeres direkte på skjermen **Midlertidig mål** — det finnes ikke lenger noen egen innstilling for dette:
 
-1. Open the **Temp Target** screen (tap the target chip, or **Manage** → **Temp Target**).
-2. Swipe to the preset you want to change.
-3. Adjust **Temporary target** and/or **Duration** in the editor.
-4. Tap the **Save** icon that appears in the top toolbar.
+1. Åpne skjermen **Midlertidig mål** (trykk på målbrikken, eller **Administrer** → **Midlertidig mål**).
+2. Sveip til forhåndsinnstillingen du vil endre.
+3. Juster **Midlertidig mål** og/eller **Varighet** i redigeringsfeltet.
+4. Trykk på **Lagre**-ikonet som vises i verktøylinjen øverst.
 
-![Editing a preset — Save icon in the toolbar, Revert in the action bar](../images/TempTarget7.png)
+![Redigere en forhåndsinnstilling — Lagre-ikonet i verktøylinjen, Tilbakestill i handlingslinjen](../images/TempTarget7.png)
 
-While the editor differs from a built-in preset's factory values, a **↺ Revert** button also appears in the action bar — tap it to restore the preset's original target and duration.
+Så lenge redigeringsfeltet avviker fra fabrikkverdiene til en innebygd forhåndsinnstilling, vises også knappen **↺ Tilbakestill** i handlingslinjen — trykk på den for å gjenopprette forhåndsinnstillingens opprinnelige mål og varighet.
 
-## How do I cancel a Temp-Target?
+## Hvordan avbryter jeg et midlertidig mål?
 
-While a temporary target is running, the target chip on the main screen shows the target and its remaining time. Tap it — on the **Temp Target** screen the running preset is highlighted as **ACTIVE**, and a red **✗ Cancel** button appears at the end of the toolbar at the bottom, just left of the **▶ Activate** button. Tap it and confirm:
+Mens et midlertidig mål kjører, viser målbrikken på hovedskjermen målet og gjenstående tid. Trykk på den — på skjermen **Midlertidig mål** er forhåndsinnstillingen som kjører, uthevet som **AKTIV**, og en rød **✗ Avbryt**-knapp vises i enden av verktøylinjen nederst, rett til venstre for knappen **▶ Aktiver**. Trykk på den og bekreft:
 
-![Cancelling a running temp target](../images/TempTarget9.png)
+![Avbryte et midlertidig mål som kjører](../images/TempTarget9.png)
 
-A running temporary target can also be stopped from a **Wear OS watch**, from a paired **client**, or by an **Automation** rule (*Stop temp target*).
+Et midlertidig mål som kjører, kan også stoppes fra en **Wear OS-klokke**, fra en paret **klient** eller av en **Automasjon**-regel (*Avbryt midlertidig mål*).
 
 (TempTargets-hypo-temp-target)=
 
-## Hypo Temp-Target
+## Midlertidig mål Hypo
 
-**Temp-Target Hypo** enables **AAPS** to prevent the user from experiencing low blood sugar by reducing insulin intake. If the user predicts their **BG** will go low: usually, **AAPS** should handle it, but much will depend on the stability of the user’s **AAPS'** settings. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
+**Midlertidig mål Hypo** lar **AAPS** hindre at du får lavt blodsukker, ved å redusere insulinet. Hvis du tror **BS** vil bli lav: vanligvis bør **AAPS** håndtere det, men mye avhenger av hvor stabile **AAPS**-innstillingene dine er. Et **midlertidig mål Hypo** lar deg komme i forkant av det forventede fallet og få **AAPS** til å redusere insulinet.
 
-Sometimes when hypo-treated carbs are eaten, the user's **BG** can rapidly rise, and **AAPS** will correct against the fast rising **BG** by enabling **SMBs**.
+Noen ganger stiger **BS** raskt når du har spist karbohydrater mot føling, og **AAPS** vil korrigere den raskt stigende **BS** ved å gi **SMB-er**.
 
-Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. This is achieved by deactivating *'Enable SMB with high temp target'* in **Settings** → **OpenAPS SMB** (see further below):
+Noen brukere vil unngå at det gis **SMB-er** mens **midlertidig mål Hypo** er aktivt. Dette gjør du ved å slå av *«Aktiver SMB ved høyt midlertidig mål»* i **Innstillinger** → **OpenAPS SMB** (se lenger ned):
 
-- In (Advanced, objective 9): the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- I (Avansert, opplæringsmål 9): du kan slå på *«Høyt midlertidig mål øker sensitivitet»* for **midlertidige mål** på 100 mg/dL (5,6 mmol/L) eller høyere i OpenAPS SMB, så blir **AAPS** mer sensitiv.
 
-- In (Advanced, objective 9): the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- I (Avansert, opplæringsmål 9): du kan slå av *«Aktiver SMB ved høyt midlertidig mål»*, slik at **AAPS** ikke gir SMB-er mens høye midlertidige mål er aktive, selv om **AAPS** har COB > 0, «Aktiver SMB ved lavt midlertidig mål» eller «Aktiver SMB alltid» er på og OpenAPS SMB er aktiv.
 
-Note: if you open the **Carbs dialog** while your blood glucose is less than 72 mg/dL or 4 mmol/L, **AAPS** pre-selects the **Start Hypo TT** toggle automatically.
+Merk: hvis du åpner **Karbo-dialogen** mens blodsukkeret ditt er under 72 mg/dL eller 4 mmol/L, velger **AAPS** bryteren **Start midlertidig mål Hypo** automatisk på forhånd.
 
 (TempTargets-activity-temp-target)=
 
-## Activity Temp-Target
+## Midlertidig mål Aktivitet
 
-Before and during exercise, the user may require a higher target to prevent hypoglycemia during the activity.
+Før og under trening kan du trenge et høyere mål for å unngå hypoglykemi under aktiviteten.
 
-To simplify **Temp-Target Activity**, the user can configure a default **Temp-Target - Activity** to raise **BG** levels by reducing insulin usage in order to slow down **BG** fall and avoid hypoglycemia.
+For å gjøre **midlertidig mål Aktivitet** enkelt kan du sette opp et standard **midlertidig mål Aktivitet** som hever **BS**-nivået ved å bruke mindre insulin, slik at **BS** faller saktere og du unngår hypoglykemi.
 
-New users to **AAPS** may need to experiment and personalize their **Temp-Target Activity** default settings in order to optimize this feature to work best for them. Everyone is different when it comes to attaining stable BG control during exercise. See also the [sports section in FAQ](#FAQ-sports).
+Nye **AAPS**-brukere må kanskje prøve seg fram og tilpasse standardinnstillingene for **midlertidig mål Aktivitet** for at funksjonen skal virke best mulig for dem. Alle er forskjellige når det gjelder å holde stabil BS-kontroll under trening. Se også [avsnittet om sport i FAQ](#FAQ-sports).
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. You can start both in one step: tap the profile name on the main screen, tap the round **▶** button, set a **Percentage** below 100 % and a **Duration**, then switch on **Temporary target / Activity**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+Noen brukere foretrekker også å aktivere et **profilbytte** (en redusert profil < 100 % så **AAPS** gir mindre insulin) før og mens **midlertidig mål Aktivitet** er på. Du kan starte begge i ett steg: trykk på profilnavnet på hovedskjermen, trykk på den runde **▶**-knappen, sett en **Prosent** under 100 % og en **Varighet**, og slå så på **Midlertidig mål / Aktivitet**. Se [Endre profilprosenten](#ProfileSwitch-change-percentage).
 
-Advanced, objective 9: users can enable *'High temp target raises sensitivity'* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS **SMB**. A target of 99 mg/dL (5.5 mmol/L) is a normal target, neither high nor low. Then **AAPS** is more sensitive.
+Avansert, opplæringsmål 9: du kan slå på *«Høyt midlertidig mål øker sensitivitet»* for **midlertidige mål** på 100 mg/dL (5,6 mmol/L) eller høyere i OpenAPS **SMB**. Et mål på 99 mg/dL (5,5 mmol/L) er et normalt mål, verken høyt eller lavt. Da er **AAPS** mer sensitiv.
 
-Additionally, if *'Enable SMB with high temp target'* is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS **SMB** active.
+I tillegg: hvis *«Aktiver SMB ved høyt midlertidig mål»* er slått av, gir **AAPS** ikke **SMB-er**, selv om COB > 0, *«Aktiver SMB ved lavt midlertidig mål»* eller *«Aktiver SMB alltid»* er på og OpenAPS **SMB** er aktiv.
 
 (TempTargets-eating-soon-temp-target)=
 
-## Eating soon Temp-Target
+## Midlertidig mål Spise snart
 
-**Temp-Target -Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
+**Midlertidig mål Spise snart** kan hjelpe til med å senke **BS** forsiktig og sørge for at det er nok **IOB** før du spiser.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target -Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target -Eating soon** and this is particularly so, if eating a high carb diet.
+Dette kan være et viktig verktøy for brukere som ikke gir bolus på forhånd, men hvor godt **midlertidig mål Spise snart** virker, avhenger av flere faktorer, blant annet innstillingene dine, om du spiser lite karbohydrater, og om du bruker et hurtigvirkende insulin (som Fiasp eller Lyumjev) for å slippe å gi bolus på forhånd. Til du har fått erfaring med **AAPS**, bør du som regel regne med å gi bolus på forhånd når du bruker **midlertidig mål Spise snart**, særlig hvis du spiser mye karbohydrater.
 
-You can read more about the “Eating soon mode” in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
+Du kan lese mer om «Eating soon mode» i artikkelen ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) (engelsk) eller [her](https://diyps.org/tag/eating-soon-mode/).
 
-Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have *'Low temp target lowers sensitivity'*, **AAPS** works a little bit more aggressively. For this option there is a requirement for **Temp-Target** to be 98 mg/dL (5.4 mmol/L) or lower.
+Avansert, [opplæringsmål 9](#objectives-objective9): Hvis du bruker OpenAPS SMB og har på *«Lavt midlertidig mål senker sensitivitet»*, jobber **AAPS** litt mer aggressivt. For dette valget må det **midlertidige målet** være 98 mg/dL (5,4 mmol/L) eller lavere.
 
-## How do I turn off SMB during Temp-Targets?
+## Hvordan slår jeg av SMB under midlertidige mål?
 
-To action this open **Settings** → **OpenAPS SMB** and deactivate *'Enable SMB with high temp target'*.
+For å gjøre dette åpner du **Innstillinger** → **OpenAPS SMB** og slår av *«Aktiver SMB ved høyt midlertidig mål»*.
 
-![Enable SMB with high temp target preference](../images/TempTargetSMB.png)
+![Innstillingen Aktiver SMB ved høyt midlertidig mål](../images/TempTargetSMB.png)
 
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS SMB active.
+Dette sikrer at **AAPS** ikke gir **SMB-er**, selv om COB > 0, *«Aktiver SMB ved lavt midlertidig mål»* eller *«Aktiver SMB alltid»* er på og OpenAPS SMB er aktiv.

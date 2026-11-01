@@ -1,6 +1,6 @@
 (generaltroubleshooting)=
 
-# Troubleshooting
+# Feilsøking
 
 **Start here when something is not working.** Troubleshooting information lives on many pages across the documentation. This page brings it together: it is a single collection of links, sorted by topic, to help you solve the most common problems.
 
@@ -24,7 +24,7 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 
 * If the build fails, see [If the build fails](#building-aaps-troubleshooting): it lists the troubleshooting section for each build method:
   * [AAPS Builder](#aaps-builder-troubleshooting)
-  * [Browser build](#aaps-ci-troubleshooting)
+  * [Nettleserbygg](#aaps-ci-troubleshooting)
   * [Android Studio](TroubleshootingAndroidStudio.md)
 * Lost keystore, or new keystore: [Reinstalling AAPS](#reinstall-aaps)
 * Updating **AAPS**: [with AAPS Builder](#aaps-builder-updates), [with a browser build (fork)](#update-browser-build-troubleshooting), [with Android Studio](#update-computer-build-troubleshooting)
@@ -34,7 +34,7 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 * [Google Play Protect warning](#transferring-installing-play-protect-warning): the app is reported as unsafe.
 * Installation **blocked** with a message about an unverified developer: see [Android developer verification](#android-developer-verification) for the free installation methods.
 
-### Settings
+### Innstillinger
 
 * [Profile: "Basal rate is not compatible with the current pump"](#your-aaps-profile-basal-not-compatible)
 * [Pump: "Data is coming from different pump"](#config-builder-wrong-pump-data)
@@ -51,9 +51,9 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 (generaltroubleshooting-bluetooth-related-issues)=
 
 
-## Bluetooth related issues
+## Bluetooth-relaterte problemer
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+For kjente problemer med Bluetooth-tilkoblinger, frafall av pumpe/pods, eller problemer med aktivering og tilkobling: [Feilsøking av Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
@@ -174,7 +174,7 @@ Useful links to known issues and steps to resolve for Phones
 
 (generaltroubleshooting-remote-control)=
 
-## Remote control
+## Fjernstyring
 
 * [AAPSClient and remote control (pairing, commands not received)](#client-master-control-troubleshooting)
 * ['Nightscout access token' issues](#remotecontrol-nightscout-access-token)

@@ -12,7 +12,7 @@
 
 ## 步驟 1 – 建立你的私人建置儲存庫
 
-This creates your own private copy of AAPS Builder in your GitHub account: a repository with the build workflow already in it. 只有你能看到它，以及由它建置的應用程式。你**不**需要對 AndroidAPS 進行派生：每次建置都會從官方的 AndroidAPS 儲存庫下載 AAPS 原始碼。
+這會在您的 GitHub 帳號中建立一份專屬的 AAPS Builder 副本：一個已包含建置工作流程的儲存庫。只有你能看到它，以及由它建置的應用程式。你**不**需要對 AndroidAPS 進行派生：每次建置都會從官方的 AndroidAPS 儲存庫下載 AAPS 原始碼。
 
 <label class="aapsb-label" for="aapsb-user">你的 GitHub 使用者名稱</label>
 <input class="aapsb-input" type="text" id="aapsb-user" autocomplete="username" spellcheck="false" placeholder="my-github-name" />
@@ -26,47 +26,47 @@ This creates your own private copy of AAPS Builder in your GitHub account: a rep
 請沿用建議名稱。已用其他名稱建立過儲存庫？請在此輸入完全相同的名稱。
 
 ```{note}
-**Already have an AAPS Builder repository** (made with an earlier version of this page)? Do not create a new one: type its exact name here, skip the button below, and update its workflow once: see **Updating your copy** at the end of this step. Your secrets stay as they are.
+**已經有 AAPS Builder 儲存庫**（使用本頁較早版本建立）？請勿建立新的儲存庫：在此輸入現有儲存庫的完整名稱，略過下方按鈕，並更新一次工作流程；請參閱本步驟底部的**更新您的副本**。你的機密資料會維持原樣。
 
-If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 2.
+如果你還是想建立新的儲存庫，請選擇尚未使用過的名稱，例如 `my-aaps-2`，並在步驟 2 使用相同的金鑰庫。
 
-Do not type the name of your fork of AndroidAPS: a fork is public, and it already builds with its own **AAPS CI** workflow.
+請勿輸入 AndroidAPS 複刻儲存庫的名稱：複刻儲存庫是公開的，而且已使用自己的 **AAPS CI** 工作流程進行建置。
 ```
 
 你的儲存庫：<code class="aapsb-repoUrl"></code>
 
-Check this name before you use the buttons below: the page remembers the name from your last visit.
+使用下方按鈕前，請先確認這個名稱：此頁面會記住您上次造訪時使用的名稱。
 
 <a class="aapsb-btn" id="aapsb-createRepo" target="_blank" rel="noopener">建立我的私人儲存庫</a>
 
-On the GitHub page that opens, everything is already filled in: the template `nightscout/aaps-builder`, your account as owner, the name of your repository, and **Private**. Do not change anything, and leave **Include all branches** unticked.
+開啟的 GitHub 頁面上，所有欄位都已填妥：範本 `nightscout/aaps-builder`、您的帳號（擁有者）、儲存庫名稱，以及**私人**。請勿變更任何內容，也不要勾選**包含所有分支**。
 
 1. 點選綠色的 Create repository 按鈕。
-2. GitHub shows your new repository with a folder `.github` and a file `README.md`: the build workflow is in it. 回到此頁進行步驟 2。
+2. GitHub 會顯示您的新儲存庫，其中包含資料夾 `.github` 和檔案 `README.md`：建置工作流程就在這裡。回到此頁進行步驟 2。
 
 ```{admonition} Your new repository is empty (no files)?
 :class: warning
 
-It was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** again.
+這個儲存庫不是從範本建立的。請刪除這個儲存庫（**設定** → 頁面底部 → **刪除這個儲存庫**），然後再點選一次 **建立我的私人儲存庫**。
 ```
 
 ```{admonition} Updating your copy (existing AAPS Builder repository)
 :class: dropdown
 
-The build steps are updated for you: at every build, your repository runs the version released by the AAPS developers in nightscout/aaps-builder, and nothing in your repository changes. You only replace your workflow file when [Docs updates & changes](../Maintenance/DocumentationUpdate.md) announces it (for example for a new build variant), or once if your repository was made with an earlier version of this page or from the old template. Your `KEYSTORE_SET` secret stays as it is.
+建置步驟已為您更新：每次建置時，您的儲存庫都會執行 AAPS 開發者在 nightscout/aaps-builder 發佈的版本，而您的儲存庫內容不會有任何變更。只有在[文件更新與變更](../Maintenance/DocumentationUpdate.md)公告需要更新時（例如推出新的建置版本），才需要替換工作流程檔案；如果您的儲存庫是使用本頁較舊的版本或舊範本建立的，也只需替換一次。您的 `KEYSTORE_SET` 密鑰維持不變。
 
-1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow</a>
+1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">開啟最新版工作流程</a>
 
-   On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">plain-text version</a> instead, press and hold the text → **Select all** → **Copy**.
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
+   使用電腦時，請點選檔案右上方的**複製圖示**（「複製原始檔」）。使用手機時，請改為開啟<a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">純文字版本</a>，長按文字 → **全選** → **複製**。
+2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">開啟我的工作流程檔案</a>
 
-   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code> for editing.
-3. Replace the whole text with the copied workflow (on a phone: press and hold → **Select all** → **Paste**), then click **Commit changes…** twice. The first line of the file shows its version.
+   這會開啟 <code class="aapsb-repoUrl"></code> 中的 `.github/workflows/build.yml`，供您編輯。
+3. 將整份內容替換為已複製的工作流程（使用手機時：長按 → **全選** → **貼上**），然後連續點選兩次 **提交變更…**。檔案的第一行會顯示版本。
 ```
 
 (aaps-builder-setup-step2)=
 
-## Step 2 – Your signing key
+## 步驟 2 – 簽署金鑰
 
 應用程式必須使用你自己的金鑰簽章。請一律使用相同的金鑰，否則更新時必須先解除安裝 AAPS（並且會遺失其設定）。請在兩個分頁籤中擇一。
 
@@ -127,22 +127,22 @@ The build steps are updated for you: at every build, your repository runs the ve
 
 `````
 (aaps-builder-setup-step3)=
-## Step 3 – Give the key to your repository
-<span id="aapsb-s3wait">Finish step 2 first.</span>
+## 步驟 3 – 將金鑰提供給你的儲存庫
+<span id="aapsb-s3wait">請先完成步驟 2。</span>
 
 <div id="aapsb-s3ready" hidden>
   1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">開啟 Secrets 頁面</a> 開啟：<code class="aapsb-repoUrl"></code> 出現「找不到頁面」（404）？請先確認你已在此瀏覽器登入 github.com：未登入時，GitHub 對私人儲存庫會顯示 404。否則就是你在步驟 1 輸入的使用者名稱或儲存庫名稱與實際的儲存庫不相符：請到 github.com 檢查，並在步驟 1 重新輸入正確資訊。 2. 點選「複製名稱」，然後將它貼到較小的「Name」欄位中：`KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">複製名稱</button> 3. 點選「複製機密」，然後把長長的代碼貼到較大的「Secret」欄位中：<code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">複製機密</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> 這個機密是一段非常長的代碼（數千個字元），不是單字 KEYSTORE_SET。先複製並貼上名稱，再貼上那段長代碼。 4. 點選「Add secret」。完成。這一步之後就不需要再做了。
 </div>
 (aaps-builder-setup-step4)=
-## Step 4 – Build the app
+## 步驟 4 – 建置應用程式
 
 1. <a class="aapsb-btn" id="aapsb-openActions" target="_blank" rel="noopener">開啟建置頁面</a>
 
    開啟：<code class="aapsb-repoUrl"></code>
 
    出現「找不到頁面」（404）？請先確認你已在此瀏覽器登入 github.com：未登入時，GitHub 對私人儲存庫會顯示 404。否則就是你在步驟 1 輸入的使用者名稱或儲存庫名稱與實際的儲存庫不相符：請到 github.com 檢查，並在步驟 1 重新輸入正確資訊。 是否改由 GitHub App 開啟？點選「RUN WORKFLOW」，確認版本與變體，然後再點選一次「RUN WORKFLOW」。如果 App 仍顯示「Nothing to see here」，請下拉清單以查看你的建置。
-2. If asked, click the green button to enable workflows.
-The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder": it holds the build steps and has no "Run workflow" button.
+2. 如果系統詢問，請點選綠色按鈕以啟用工作流程。
+工作流程清單中會顯示兩個項目：請使用「Build AAPS」。請忽略「AAPS Builder」：它包含建置步驟，沒有「Run workflow」按鈕。
 3. 點選「Run workflow」，再點選綠色的「Run workflow」按鈕。 「latest」會建置最新的 AAPS 版本。***提示：*** *輸入其他版本的[標籤](https://github.com/nightscout/AndroidAPS/tags)名稱，即可建置該版本，而不必輸入「latest」*
 4. 請等待約 15–30 分鐘。綠色勾勾代表已完成。
 想在建置完成時收到電子郵件通知嗎？ GitHub 只會在建置失敗時寄送郵件給你。若也想在成功時收到通知：前往 github.com，開啟你的個人頭像 → Settings → Notifications → System → Actions，並取消勾選「Only notify for failed workflows」。
@@ -150,13 +150,13 @@ The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder"
 ```{admonition} No "Build AAPS" / "Run workflow" button?
 :class: warning
 
-1. Open your repository and check that it has a folder `.github` with the file `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-setup-step1) again with the button.
+1. 開啟您的儲存庫，確認其中有資料夾 `.github`，且裡面有檔案 `workflows/build.yml`。如果儲存庫是空的，表示它不是從範本建立的：請刪除這個儲存庫（**設定** → 頁面底部 → **刪除這個儲存庫**），然後使用按鈕重新執行[步驟 1](#aaps-builder-setup-step1)。
 2. 開啟 Actions 分頁。若顯示工作流程已停用，請點選綠色按鈕以啟用。接著在清單中點選「Build AAPS」。
 ```
 
 (aaps-builder-setup-step5)=
 
-## Step 5 – Install on your phone
+## 步驟 5 – 在手機上安裝
 
 ```{admonition} Before every update: back up your settings!
 :class: warning
@@ -183,31 +183,31 @@ The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder"
 
 APK 不會出現在你的儲存庫「Code」頁籤裡，只會在建置頁面上顯示。它會保留 14 天。
 
-有新的 AAPS 版本？ Back up your settings, then build it with [step 4](#aaps-builder-setup-step4). 你的儲存庫不會自行進行任何建置。
+有新的 AAPS 版本？請先備份設定，再依照[步驟 4](#aaps-builder-setup-step4)進行建置。你的儲存庫不會自行進行任何建置。
 
 (aaps-builder-setup-step6)=
 
-## Step 6 – Optional: get the app in Google Drive
+## 步驟 6 – 選用：將應用程式存到 Google 雲端硬碟
 
-想讓 APK 出現在你的 Google Drive（永久保存）嗎？ Add one more secret, GDRIVE_OAUTH2. This page gets it from Google for you. AAPS can then only see and change the files it creates in your Google Drive, nothing else.
+想讓 APK 出現在你的 Google Drive（永久保存）嗎？再新增一個密鑰：GDRIVE_OAUTH2。此頁面會為您向 Google 取得這項資料。如此一來，AAPS 只能查看及變更它在 Google 雲端硬碟中建立的檔案，無法存取其他內容。
 
-1. <a class="aapsb-btn" id="aapsb-googleAuth" target="_blank" rel="noopener">Connect Google Drive</a>
+1. <a class="aapsb-btn" id="aapsb-googleAuth" target="_blank" rel="noopener">連線至 Google 雲端硬碟</a>
 
-   Google opens in a new tab. Choose your Google account and allow AAPS to see and change its own files. If Google says the app is not verified, tap "Advanced", then "Go to …".
-2. Then the new tab shows an error like **"This site can't be reached"** or **"127.0.0.1 refused to connect"**. **This is expected.** Google's answer is in the address of that tab.
+   Google 會在新分頁中開啟。選擇您的 Google 帳號，並允許 AAPS 查看及變更它建立的檔案。如果 Google 顯示應用程式尚未通過驗證，請點選「進階」，再點選「前往……」。
+2. 接著，新分頁會顯示類似**「無法連上這個網站」**或**「127.0.0.1 拒絕連線」**的錯誤訊息。**這是正常情況。**Google 傳回的資料會出現在該分頁的網址中。
 
-   Tap the address bar of that tab, select all of the address and copy it. It starts with `http://127.0.0.1:47913/`. Come back to this page within a few minutes: the answer is only valid for a short time.
-3. <label class="aapsb-label" for="aapsb-googleUrl">Paste the copied address here</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
+   點選該分頁的網址列，全選網址並複製。網址會以 `http://127.0.0.1:47913/` 開頭。請在幾分鐘內返回此頁面：這項資料只有短時間有效。
+3. <label class="aapsb-label" for="aapsb-googleUrl">在此貼上複製的網址</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">取得 GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
 
 <div id="aapsb-gdriveReady" hidden>
 
-4. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets2" target="_blank" rel="noopener">Open the secrets page</a>
+4. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets2" target="_blank" rel="noopener">開啟密鑰頁面</a>
 
-   Opens: <code class="aapsb-repoUrl"></code>
+   開啟：<code class="aapsb-repoUrl"></code>
 
-   Getting "Page not found" (404)? 請先確認你已在此瀏覽器登入 github.com：未登入時，GitHub 對私人儲存庫會顯示 404。否則就是你在步驟 1 輸入的使用者名稱或儲存庫名稱與實際的儲存庫不相符：請到 github.com 檢查，並在步驟 1 重新輸入正確資訊。
-5. Tap "Copy name", then paste it into the small "Name" field: `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Copy name</button>
-6. Tap "Copy secret", then paste the code into the big "Secret" box: <code id="aapsb-gdrivePreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="gdriveValue">Copy secret</button> <span class="aapsb-msg" id="aapsb-gdriveCopyMsg"></span>
+   顯示「找不到頁面」（404）？請先確認你已在此瀏覽器登入 github.com：未登入時，GitHub 對私人儲存庫會顯示 404。否則就是你在步驟 1 輸入的使用者名稱或儲存庫名稱與實際的儲存庫不相符：請到 github.com 檢查，並在步驟 1 重新輸入正確資訊。
+5. 點選「複製名稱」，再將名稱貼到小型的「名稱」欄位：`GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">複製名稱</button>
+6. 點選「複製密鑰」，再將代碼貼到大型的「密鑰」欄位：<code id="aapsb-gdrivePreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="gdriveValue">複製密鑰</button> <span class="aapsb-msg" id="aapsb-gdriveCopyMsg"></span>
 7. 點選「Add secret」。
 
 </div>
@@ -215,7 +215,7 @@ APK 不會出現在你的儲存庫「Code」頁籤裡，只會在建置頁面上
 ```{admonition} Already have a GDRIVE_OAUTH2 value?
 :class: dropdown
 
-A value from the AAPS preparation page of the other browser build works too: open the secrets page, add the name `GDRIVE_OAUTH2` and paste your value. See [Save the builds in Google Drive](#aaps-builder-google-drive).
+使用另一個瀏覽器建置版本的 AAPS 準備頁面所提供的值也可以：開啟密鑰頁面，新增名稱 `GDRIVE_OAUTH2`，並貼上您的值。請參閱[將建置檔案儲存到 Google 雲端硬碟](#aaps-builder-google-drive)。
 ```
 
 下次建置時，APK 也會儲存在 Google Drive 的資料夾 AAPS/&lt;version&gt; 中。
@@ -224,39 +224,39 @@ A value from the AAPS preparation page of the other browser build works too: ope
 
 ----
 
-本頁所有操作都在你的瀏覽器中執行。你的金鑰與密碼絕不會被送往任何地方，除非是你自行貼上的目的地。僅會將你的 GitHub 使用者名稱送到 GitHub，以檢查該帳號是否存在。 In step 6, the Google answer is sent only to Google, to get GDRIVE_OAUTH2. The build workflow is maintained by the AAPS developers in [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder), based on AAPS Builder (AGPL-3.0).
+本頁所有操作都在你的瀏覽器中執行。你的金鑰與密碼絕不會被送往任何地方，除非是你自行貼上的目的地。僅會將你的 GitHub 使用者名稱送到 GitHub，以檢查該帳號是否存在。在步驟 6 中，Google 傳回的資料只會傳送給 Google，用來取得 GDRIVE_OAUTH2。建置工作流程由 AAPS 開發者維護於 [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder)，並以 AAPS Builder（AGPL-3.0）為基礎。
 
 <div id="aapsb-msgs" hidden>
 
 - <span data-aapsb-msg="copied">已複製長碼：請貼到較大的「Secret」欄位，然後點選「Add secret」。</span>
 - <span data-aapsb-msg="copiedName">已複製名稱：請貼到較小的「Name」欄位。</span>
 - <span data-aapsb-msg="userOk">✓ 找到 GitHub 使用者。</span>
-- <span data-aapsb-msg="userBad">✗ 沒有此名稱的 GitHub 使用者。 Use your username (shown in your GitHub profile), not your e-mail.</span>
-- <span data-aapsb-msg="copiedShort">Copied ✓</span>
-- <span data-aapsb-msg="needUser">Enter your GitHub username in step 1 first.</span>
-- <span data-aapsb-msg="errPipe">Passwords and alias cannot contain the character |</span>
-- <span data-aapsb-msg="errNoFile">Choose your keystore file.</span>
-- <span data-aapsb-msg="errEmpty">Fill in password and alias.</span>
-- <span data-aapsb-msg="errPass">Wrong keystore password.</span>
-- <span data-aapsb-msg="errKeyPass">Wrong key password.</span>
-- <span data-aapsb-msg="errAlias">Alias not found in the keystore. 可用：{aliases}</span>
+- <span data-aapsb-msg="userBad">✗ 沒有此名稱的 GitHub 使用者。請使用您的使用者名稱（顯示於 GitHub 個人檔案中），而非電子郵件地址。</span>
+- <span data-aapsb-msg="copiedShort">已複製 ✓</span>
+- <span data-aapsb-msg="needUser">請先在步驟 1 輸入您的 GitHub 使用者名稱。</span>
+- <span data-aapsb-msg="errPipe">密碼和別名不能包含字元 |</span>
+- <span data-aapsb-msg="errNoFile">請選擇您的金鑰儲存庫檔案。</span>
+- <span data-aapsb-msg="errEmpty">請填寫密碼和別名。</span>
+- <span data-aapsb-msg="errPass">金鑰儲存庫密碼錯誤。</span>
+- <span data-aapsb-msg="errKeyPass">金鑰密碼錯誤。</span>
+- <span data-aapsb-msg="errAlias">在金鑰儲存庫中找不到此別名。</span>可用：{aliases}</span>
 - <span data-aapsb-msg="errFormat">這看起來不像是金鑰庫檔案。</span>
-- <span data-aapsb-msg="okHave">金鑰庫正常！ Continue with step 3.</span>
-- <span data-aapsb-msg="okHaveUnchecked">Keystore read. 在建置時會檢查該密碼。 Continue with step 3.</span>
-- <span data-aapsb-msg="errShort">The password must be at least 8 characters.</span>
-- <span data-aapsb-msg="errAscii">Use only a–z, A–Z, 0–9 and symbols such as ! ? # － 不可有空白、重音字母，亦不可包含 |</span>
+- <span data-aapsb-msg="okHave">金鑰庫正常！請繼續進行步驟 3。</span>
+- <span data-aapsb-msg="okHaveUnchecked">已讀取金鑰儲存庫。在建置時會檢查該密碼。請繼續進行步驟 3。</span>
+- <span data-aapsb-msg="errShort">密碼至少須有 8 個字元。</span>
+- <span data-aapsb-msg="errAscii">請只使用 a–z、A–Z、0–9 和符號（例如 ! ? # － 不可有空白、重音字母，亦不可包含 |</span>
 - <span data-aapsb-msg="errMatch">兩次輸入的密碼不相符。</span>
 - <span data-aapsb-msg="working">正在建立金鑰…</span>
-- <span data-aapsb-msg="okNew">已建立金鑰。 Download the backup below, then continue with step 3.</span>
-- <span data-aapsb-msg="gNoUrl">Paste the whole address of the Google tab first.</span>
-- <span data-aapsb-msg="gNoCode">This address has no answer from Google. Copy the whole address of the tab that shows the error, starting with http://127.0.0.1:47913/</span>
-- <span data-aapsb-msg="gDenied">Google access was not allowed. Tap "Connect Google Drive" again and allow access.</span>
-- <span data-aapsb-msg="gOldUrl">This address belongs to an older attempt. Tap "Connect Google Drive" again and use the new address.</span>
-- <span data-aapsb-msg="gWorking">Asking Google…</span>
-- <span data-aapsb-msg="gFailed">Google did not accept it ({error}). The answer is valid only for a few minutes and only once: tap "Connect Google Drive" again.</span>
-- <span data-aapsb-msg="gNoRefresh">Google sent no long-term access. Tap "Connect Google Drive" again.</span>
-- <span data-aapsb-msg="gOk">GDRIVE_OAUTH2 is ready. Add it as a secret below.</span>
-- <span data-aapsb-msg="gCopied">Code copied: paste it in the big "Secret" box, then tap "Add secret".</span>
+- <span data-aapsb-msg="okNew">已建立金鑰。請下載下方的備份，然後繼續進行步驟 3。</span>
+- <span data-aapsb-msg="gNoUrl">請先貼上 Google 分頁的完整網址。</span>
+- <span data-aapsb-msg="gNoCode">此網址不含 Google 傳回的資料。請複製顯示錯誤訊息的分頁完整網址，網址開頭應為 http://127.0.0.1:47913/</span>
+- <span data-aapsb-msg="gDenied">未允許存取 Google。請再次點選「連線至 Google 雲端硬碟」，並允許存取。</span>
+- <span data-aapsb-msg="gOldUrl">此網址屬於較早的嘗試。請再次點選「連線至 Google 雲端硬碟」，並使用新的網址。</span>
+- <span data-aapsb-msg="gWorking">正在向 Google 取得資料…</span>
+- <span data-aapsb-msg="gFailed">Google 未接受此資料（{error}）。這項資料只有幾分鐘的有效期限，而且只能使用一次：請再次點選「連線至 Google 雲端硬碟」。</span>
+- <span data-aapsb-msg="gNoRefresh">Google 未提供長期存取權。請再次點選「連線至 Google 雲端硬碟」。</span>
+- <span data-aapsb-msg="gOk">GDRIVE_OAUTH2 已準備就緒。請在下方將它新增為密鑰。</span>
+- <span data-aapsb-msg="gCopied">已複製代碼：請將它貼到大型的「密鑰」欄位，再點選「新增密鑰」。</span>
 
 </div>
 

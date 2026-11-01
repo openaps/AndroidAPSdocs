@@ -74,7 +74,7 @@ A small scene icon next to a running mode, a temporary target or a profile switc
 
 Open **Calculator** from the **AAPS** main menu, from the [Actions tile](#WearOsSmartwatch-wear-os-tiles) or from a complication set to open the wizard. It walks through a few pages, swipe from right to left to go on:
 
-| Carbs                                                           | Request                                                             | Result                                                            | Calculation                                                                       | Confirm                                                             |
+| Karbo                                                           | Request                                                             | Result                                                            | Calculation                                                                       | Confirm                                                             |
 | --------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | ![Carbs page](../images/wearos/calculator/calculator_carbs.png) | ![Request page](../images/wearos/calculator/calculator_request.png) | ![Result page](../images/wearos/calculator/calculator_result.png) | ![Calculation details](../images/wearos/calculator/calculator_result_details.png) | ![Confirm page](../images/wearos/calculator/calculator_confirm.png) |
 
@@ -89,7 +89,7 @@ Open **Calculator** from the **AAPS** main menu, from the [Actions tile](#WearOs
 
 Three watch settings each add a page after **Carbs**. They are off by default. Open the **AAPS** main menu, then **Settings** > **Interface**, and turn on the ones you want; when more than one is on, the pages come in the order **Meal type**, **Carb time**, **Percentage**. The dots at the bottom of the calculator show how many pages it has.
 
-| Settings                                                                                 | Meal type                                                               | Carb time                                                               | Percentage                                                                |
+| Innstillinger                                                                            | Meal type                                                               | Carb time                                                               | Percentage                                                                |
 | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | ![Calculator settings on the watch](../images/wearos/calculator/calculator_settings.png) | ![Meal type page](../images/wearos/calculator/calculator_meal_type.png) | ![Carb time page](../images/wearos/calculator/calculator_carb_time.png) | ![Percentage page](../images/wearos/calculator/calculator_percentage.png) |
 

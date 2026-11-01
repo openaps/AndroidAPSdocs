@@ -2,49 +2,49 @@
 
 ## Build yourself instead of download
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**AAPS-appen (en apk-fil) er ikke tilgjengelig for nedlasting, på grunn av regelverket for medisinsk utstyr. It is legal to build the app for your own use, but you must not give a copy to others!**
 
 See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 ---
 
-Three methods are available to build the AAPS app:
+Det finnes tre metoder for å bygge AAPS-appen:
 
-### Build with a browser (recommended)
+### Bygge med en nettleser (anbefalt)
 
-You can build the app with your smartphone using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
+Du kan bygge appen med smarttelefonen din ved hjelp av GitHub Actions. Fra en Android-telefon leder oppsettsiden for [AAPS Builder](#aaps-builder) deg gjennom det, og du starter hvert bygg selv. Fra en datamaskin eller en iPhone kan du også bygge med en fork og lagre appen i Google Drive.
 
-**[Follow these instructions.](./BrowserBuild.md)**
-
-----
-
-### Build with Android Studio
-
-You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
-
-**[Follow these instructions.](./ComputerBuild.md)**
+**[Følg disse instruksjonene.](./BrowserBuild.md)**
 
 ----
 
-### Build using the command-line
+### Bygge med Android Studio
 
-This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
+Du kan bygge appen på datamaskinen din med Android Studio. Dette var tidligere det eneste alternativet for bygging, i dag brukes Android Studio mest av utviklere som vurderer å gjøre endringer i koden.
 
-**[Follow these instructions.](./CLIBuild.md)**
+**[Følg disse instruksjonene.](./ComputerBuild.md)**
+
+----
+
+### Bygge med kommandolinjen
+
+Dette alternativet er ment for dem som foretrekker å bygge AAPS lokalt på kommandolinjen, uten å installere Android Studio.
+
+**[Følg disse instruksjonene.](./CLIBuild.md)**
 
 ----
 
 (building-aaps-troubleshooting)=
-## If the build fails
+## Hvis byggingen mislykkes
 
-Each build method has its own troubleshooting section:
+Hver byggemetode har sin egen del om feilsøking:
 
-* **AAPS Builder**: [AAPS Builder troubleshooting](#aaps-builder-troubleshooting)
-* **Browser build** from a computer or an iPhone: [Browser build troubleshooting](#aaps-ci-troubleshooting)
-* **Android Studio**: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+* **AAPS Builder**: [Feilsøking av AAPS Builder](#aaps-builder-troubleshooting)
+* **Nettleserbygg** fra en datamaskin eller en iPhone: [Feilsøking av nettleserbygg](#aaps-ci-troubleshooting)
+* **Android Studio**: [Feilsøking av Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Lost your keystore or its password? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Har du mistet keystore-filen eller passordet til den? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 
-If the app is built but does not install on your phone, see [Transferring and installing AAPS](TransferringAndInstallingAaps.md).
+Hvis appen blir bygd, men ikke lar seg installere på telefonen, se [Overføre og installere AAPS](TransferringAndInstallingAaps.md).
 
-If your problem is not listed, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Hvis problemet ditt ikke står på listen, se [Hvor kan jeg få hjelp](../GettingHelp/WhereCanIGetHelp.md).

@@ -1,57 +1,57 @@
-# How to configure a Huawei phone
+# Slik setter du opp en Huawei-telefon
 
-**Which phones this page covers:** Huawei phones running **EMUI 12 to EMUI 15**. All of these are based on Android 12, the minimum for the current version of **AAPS**. On a phone with an older EMUI version, you can only use an [older AAPS version](#maintenance-android-version-aaps-version).
+**Hvilke telefoner denne siden dekker:** Huawei-telefoner med **EMUI 12 til EMUI 15**. Alle disse er basert på Android 12, som er minstekravet for den gjeldende versjonen av **AAPS**. På en telefon med en eldre EMUI-versjon kan du bare bruke en [eldre AAPS-versjon](#maintenance-android-version-aaps-version).
 
-```{admonition} HarmonyOS NEXT / HarmonyOS 5 phones :class: warning
+```{admonition} Telefoner med HarmonyOS NEXT / HarmonyOS 5 :class: warning
 
-Recent Huawei phones sold in China run HarmonyOS NEXT (HarmonyOS 5 and above). This system is not Android anymore and cannot run **AAPS**. ```
+Nyere Huawei-telefoner som selges i Kina, kjører HarmonyOS NEXT (HarmonyOS 5 og nyere). Dette systemet er ikke lenger Android og kan ikke kjøre **AAPS**. ```
 
-Huawei phones close apps running in the background very aggressively. Apply all the settings below to **AAPS** and to your CGM app (for example xDrip+ or Juggluco), otherwise the loop and glucose readings may stop when the screen is off.
+Huawei-telefoner lukker apper som kjører i bakgrunnen, svært aggressivt. Bruk alle innstillingene nedenfor på **AAPS** og på CGM-appen din (for eksempel xDrip+ eller Juggluco). Ellers kan loopen og glukosemålingene stoppe når skjermen er av.
 
-Menu names can differ slightly between models. If you can't find a setting, type its name in the search bar at the top of **Settings**.
+Menynavnene kan variere litt mellom modeller. Hvis du ikke finner en innstilling, skriv navnet på den i søkefeltet øverst i **Innstillinger**.
 
-The screenshots below come from an older EMUI version. The settings are the same on EMUI 12 to 15.
+Skjermbildene nedenfor er fra en eldre EMUI-versjon. Innstillingene er de samme på EMUI 12 til 15.
 
-## Ignore battery optimization
+## Ignorer batterioptimalisering
 
-1. Open **Settings > Apps > Apps**.
-2. Tap the menu **⋮** in the top right corner and select **Special access > Battery optimization**.
-3. Tap the arrow at the top of the list and select **All apps**.
-4. Select **AAPS** and choose **Don't allow**. Huawei won't optimize apps in this list anymore.
-5. Repeat for your CGM app.
+1. Åpne **Innstillinger > Apper > Apper**.
+2. Trykk på menyen **⋮** øverst til høyre, og velg **Spesialtilgang > Batterioptimalisering**.
+3. Trykk på pilen øverst i listen, og velg **Alle apper**.
+4. Velg **AAPS**, og velg **Ikke tillat**. Huawei vil ikke lenger optimalisere appene i denne listen.
+5. Gjenta for CGM-appen din.
 
-![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
+![Huawei – ignorer batterioptimalisering](../images/Huawei_BatteryOptimization.png)
 
-## App launch: allow running in the background
+## Appstart: tillat kjøring i bakgrunnen
 
-1. Open **Settings > Battery > App launch** (or **Settings > Apps > Apps >** select the app **> Battery > App launch**).
-2. Find **AAPS** and turn off **Manage automatically**.
-3. In the **Manage manually** window, turn on all three options: 
-    - **Auto-launch**
-    - **Secondary launch** (can be launched by other apps)
-    - **Run in background**
-4. Repeat for your CGM app.
+1. Åpne **Innstillinger > Batteri > Appstart** (eller **Innstillinger > Apper > Apper >** velg appen **> Batteri > Appstart**).
+2. Finn **AAPS**, og slå av **Administrer automatisk**.
+3. I vinduet **Administrer manuelt**, slå på alle tre valgene: 
+    - **Automatisk start**
+    - **Sekundær start** (kan startes av andre apper)
+    - **Kjør i bakgrunnen**
+4. Gjenta for CGM-appen din.
 
-![Huawei - battery options](../images/Huawei_BatteryOptions.png)
+![Huawei – batterialternativer](../images/Huawei_BatteryOptions.png)
 
-## Lock AAPS in the recent apps
+## Lås AAPS i listen over nylige apper
 
-Locked apps are not closed when you clear the recent apps list.
+Låste apper lukkes ikke når du tømmer listen over nylige apper.
 
-1. Open the recent apps list.
-2. Swipe down on the **AAPS** card. A lock symbol appears on the card.
-3. Do the same for your CGM app.
+1. Åpne listen over nylige apper.
+2. Sveip ned på **AAPS**-kortet. Et låsesymbol vises på kortet.
+3. Gjør det samme for CGM-appen din.
 
-![Huawei - lock app](../images/Huawei_LockApp.png)
+![Huawei – lås app](../images/Huawei_LockApp.png)
 
-## Power saving mode
+## Strømsparingsmodus
 
-Keep **Power saving mode** and **Ultra power saving** turned off (**Settings > Battery**). They close background apps regardless of the settings above.
+La **Strømsparingsmodus** og **Ultra strømsparing** være slått av (**Innstillinger > Batteri**). De lukker bakgrunnsapper uansett innstillingene ovenfor.
 
-## If AAPS still stops in the background
+## Hvis AAPS fortsatt stopper i bakgrunnen
 
-See [Don't kill my app](https://dontkillmyapp.com/huawei) for more Huawei-specific solutions.
+Se [Don't kill my app](https://dontkillmyapp.com/huawei) for flere løsninger som gjelder Huawei.
 
-## Honor phones
+## Honor-telefoner
 
-Honor is a separate brand now and its phones run MagicOS instead of EMUI. The background settings are very similar: look for **App launch** in the app's battery settings, turn off **Manage automatically** and allow all three options, then remove the app from battery optimization.
+Honor er nå et eget merke, og telefonene deres kjører MagicOS i stedet for EMUI. Bakgrunnsinnstillingene er svært like: se etter **Appstart** i batteriinnstillingene til appen, slå av **Administrer automatisk** og tillat alle tre valgene, og fjern så appen fra batterioptimalisering.

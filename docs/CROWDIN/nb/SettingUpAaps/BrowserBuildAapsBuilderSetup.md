@@ -1,262 +1,262 @@
 (aaps-builder-setup)=
 
-# AAPS Builder setup page
+# Oppsettsiden for AAPS Builder
 
-Build your own **AAPS** app in GitHub. No programs to install, no terminal. Takes about 10 minutes the first time, then you start each build yourself.
+Bygg din egen **AAPS**-app i GitHub. Ingen programmer å installere, ingen terminal. Tar omtrent 10 minutter første gang, deretter starter du hvert bygg selv.
 
-Each step is explained in more detail, with screenshots, in [Browser build with AAPS Builder](#aaps-builder). Keep that page open in another tab.
+Hvert steg er forklart mer i detalj, med skjermbilder, i [Nettleserbygg med AAPS Builder](#aaps-builder). Hold den siden åpen i en annen fane.
 
-The buttons below open GitHub in a new Chrome tab. To come back to this page, tap the tab button next to Chrome's address bar (the square with a number) and choose this page.
+Knappene nedenfor åpner GitHub i en ny Chrome-fane. For å komme tilbake til denne siden trykker du på faneknappen ved siden av adressefeltet i Chrome (firkanten med et tall) og velger denne siden.
 
 (aaps-builder-setup-step1)=
 
-## Step 1 – Create your private build repository
+## Steg 1 – Opprett ditt private byggerepositorium
 
-This creates your own private copy of AAPS Builder in your GitHub account: a repository with the build workflow already in it. Only you can see it and the apps it builds. You do **not** need to fork AndroidAPS: the AAPS source code is downloaded from the official AndroidAPS repository at every build.
+Dette oppretter din egen private kopi av AAPS Builder i GitHub-kontoen din: et repositorium med byggearbeidsflyten allerede på plass. Bare du kan se det og appene det bygger. Du trenger **ikke** å forke AndroidAPS: AAPS-kildekoden lastes ned fra det offisielle AndroidAPS-repositoriet ved hvert bygg.
 
-<label class="aapsb-label" for="aapsb-user">Your GitHub username</label>
+<label class="aapsb-label" for="aapsb-user">Brukernavnet ditt på GitHub</label>
 <input class="aapsb-input" type="text" id="aapsb-user" autocomplete="username" spellcheck="false" placeholder="my-github-name" />
 <span class="aapsb-msg" id="aapsb-userMsg"></span>
 
-First log in to github.com in this browser (no account? create one for free). Then come back here. Use your username (shown in your GitHub profile), not your e-mail: the page asks GitHub whether this username exists.
+Logg først inn på github.com i denne nettleseren (ingen konto? opprett en gratis). Kom så tilbake hit. Bruk brukernavnet ditt (vist i GitHub-profilen din), ikke e-postadressen din: siden spør GitHub om dette brukernavnet finnes.
 
-<label class="aapsb-label" for="aapsb-repo">Name of your repository</label>
+<label class="aapsb-label" for="aapsb-repo">Navnet på repositoriet ditt</label>
 <input class="aapsb-input" type="text" id="aapsb-repo" spellcheck="false" placeholder="my-aaps" />
 
-Keep the suggestion. Already created your repository with another name? Type that exact name here.
+Behold forslaget. Har du allerede opprettet repositoriet ditt med et annet navn? Skriv inn akkurat det navnet her.
 
 ```{note}
-**Already have an AAPS Builder repository** (made with an earlier version of this page)? Do not create a new one: type its exact name here, skip the button below, and update its workflow once: see **Updating your copy** at the end of this step. Your secrets stay as they are.
+**Har du allerede et AAPS Builder-repositorium** (laget med en tidligere versjon av denne siden)? Ikke opprett et nytt: skriv inn det nøyaktige navnet her, hopp over knappen nedenfor, og oppdater arbeidsflyten i det én gang: se **Oppdatere kopien din** på slutten av dette steget. Hemmelighetene dine blir som de er.
 
-If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 2.
+Hvis du likevel vil ha et nytt repositorium, velger du et navn du ikke har fra før, for eksempel `my-aaps-2`, og bruker den samme keystore-filen i steg 2.
 
-Do not type the name of your fork of AndroidAPS: a fork is public, and it already builds with its own **AAPS CI** workflow.
+Ikke skriv inn navnet på forken din av AndroidAPS: en fork er offentlig, og den bygger allerede med sin egen **AAPS CI**-arbeidsflyt.
 ```
 
-Your repository: <code class="aapsb-repoUrl"></code>
+Repositoriet ditt:<code class="aapsb-repoUrl"></code>
 
-Check this name before you use the buttons below: the page remembers the name from your last visit.
+Kontroller dette navnet før du bruker knappene nedenfor: siden husker navnet fra forrige besøk.
 
-<a class="aapsb-btn" id="aapsb-createRepo" target="_blank" rel="noopener">Create my private repository</a>
+<a class="aapsb-btn" id="aapsb-createRepo" target="_blank" rel="noopener">Opprett mitt private repositorium</a>
 
-On the GitHub page that opens, everything is already filled in: the template `nightscout/aaps-builder`, your account as owner, the name of your repository, and **Private**. Do not change anything, and leave **Include all branches** unticked.
+På GitHub-siden som åpnes, er alt allerede fylt ut: malen `nightscout/aaps-builder`, kontoen din som eier, navnet på repositoriet ditt, og **Private**. Ikke endre noe, og la **Include all branches** være uten hake.
 
-1. Click the green **Create repository** button.
-2. GitHub shows your new repository with a folder `.github` and a file `README.md`: the build workflow is in it. Come back to this page for step 2.
+1. Klikk på den grønne knappen **Create repository**.
+2. GitHub viser det nye repositoriet ditt med en mappe `.github` og en fil `README.md`: byggearbeidsflyten ligger i den. Kom tilbake til denne siden for steg 2.
 
 ```{admonition} Your new repository is empty (no files)?
 :class: warning
 
-It was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** again.
+Det ble ikke opprettet fra malen. Slett det (**Settings** → nederst på siden → **Delete this repository**), og trykk så på **Opprett mitt private repositorium** igjen.
 ```
 
 ```{admonition} Updating your copy (existing AAPS Builder repository)
 :class: dropdown
 
-The build steps are updated for you: at every build, your repository runs the version released by the AAPS developers in nightscout/aaps-builder, and nothing in your repository changes. You only replace your workflow file when [Docs updates & changes](../Maintenance/DocumentationUpdate.md) announces it (for example for a new build variant), or once if your repository was made with an earlier version of this page or from the old template. Your `KEYSTORE_SET` secret stays as it is.
+Byggestegene oppdateres for deg: ved hvert bygg kjører repositoriet ditt versjonen som AAPS-utviklerne har gitt ut i nightscout/aaps-builder, og ingenting i repositoriet ditt endres. Du bytter bare ut arbeidsflytfilen din når [Oppdateringer og endringer i dokumentasjonen](../Maintenance/DocumentationUpdate.md) sier fra om det (for eksempel for en ny byggevariant), eller én gang hvis repositoriet ditt ble laget med en tidligere versjon av denne siden eller fra den gamle malen. Hemmeligheten `KEYSTORE_SET` blir som den er.
 
-1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow</a>
+1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Åpne den nyeste arbeidsflyten</a>
 
-   On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">plain-text version</a> instead, press and hold the text → **Select all** → **Copy**.
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
+   På en datamaskin klikker du på **kopieringsikonet** («Copy raw file») øverst til høyre i filen. På en telefon åpner du i stedet <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">ren tekst-versjonen</a>, trykker og holder på teksten → **Merk alt** → **Kopier**.
+2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Åpne arbeidsflytfilen min</a>
 
-   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code> for editing.
-3. Replace the whole text with the copied workflow (on a phone: press and hold → **Select all** → **Paste**), then click **Commit changes…** twice. The first line of the file shows its version.
+   Åpner `.github/workflows/build.yml` i <code class="aapsb-repoUrl"></code> for redigering.
+3. Erstatt hele teksten med den kopierte arbeidsflyten (på en telefon: trykk og hold → **Merk alt** → **Lim inn**), og klikk så på **Commit changes…** to ganger. Den første linjen i filen viser versjonen av den.
 ```
 
 (aaps-builder-setup-step2)=
 
-## Step 2 – Your signing key
+## Steg 2 – Signeringsnøkkelen din
 
-The app must be signed with your own key. Always use the same key, otherwise you have to uninstall AAPS (and lose its settings) to update. Choose one of the two tabs.
+Appen må signeres med din egen nøkkel. Bruk alltid den samme nøkkelen, ellers må du avinstallere AAPS (og miste innstillingene) for å oppdatere. Velg én av de to fanene.
 
 `````{tab-set}
 
-````{tab-item} I already have a keystore
-For example from Android Studio (.jks).
+````{tab-item} Jeg har allerede en keystore-fil
+For eksempel fra Android Studio (.jks).
 
-<label class="aapsb-label" for="aapsb-ksFile">Keystore file</label>
+<label class="aapsb-label" for="aapsb-ksFile">Keystore-fil</label>
 <input type="file" id="aapsb-ksFile" accept=".jks,.keystore,.p12,.pfx,application/octet-stream">
 
-<label class="aapsb-label" for="aapsb-ksPass">Keystore password</label>
+<label class="aapsb-label" for="aapsb-ksPass">Keystore-passord</label>
 <input class="aapsb-input" type="password" id="aapsb-ksPass" autocomplete="off">
 
-<label class="aapsb-label" for="aapsb-ksAlias">Key alias</label>
+<label class="aapsb-label" for="aapsb-ksAlias">Nøkkelalias</label>
 <select class="aapsb-input" id="aapsb-ksAliasSel" hidden></select>
 <input class="aapsb-input" type="text" id="aapsb-ksAlias" autocomplete="off" spellcheck="false" placeholder="key0">
 
-<label class="aapsb-check"><input type="checkbox" id="aapsb-samePass" checked> Key password is the same as the keystore password</label>
+<label class="aapsb-check"><input type="checkbox" id="aapsb-samePass" checked> Nøkkelpassordet er det samme som keystore-passordet</label>
 
 <div id="aapsb-keyPassWrap" hidden>
 
-<label class="aapsb-label" for="aapsb-keyPass">Key password</label>
+<label class="aapsb-label" for="aapsb-keyPass">Nøkkelpassord</label>
 <input class="aapsb-input" type="password" id="aapsb-keyPass" autocomplete="off">
 
 </div>
 
-<button class="aapsb-btn" type="button" id="aapsb-haveGo">Check and continue</button> <span class="aapsb-msg" id="aapsb-haveMsg"></span>
+<button class="aapsb-btn" type="button" id="aapsb-haveGo">Kontroller og fortsett</button> <span class="aapsb-msg" id="aapsb-haveMsg"></span>
 ````
 
-````{tab-item} Create a new key
-First time building AAPS? A new key is created here in your browser. Nothing is sent anywhere.
+````{tab-item} Opprett en ny nøkkel
+Bygger du AAPS for første gang? En ny nøkkel opprettes her i nettleseren din. Ingenting sendes noe sted.
 
-<label class="aapsb-label" for="aapsb-newPass">Choose a password (at least 8 characters, no accented letters)</label>
+<label class="aapsb-label" for="aapsb-newPass">Velg et passord (minst 8 tegn, ingen bokstaver med aksent eller æ, ø, å)</label>
 <input class="aapsb-input" type="password" id="aapsb-newPass" autocomplete="new-password">
 
-<label class="aapsb-label" for="aapsb-newPass2">Repeat the password</label>
+<label class="aapsb-label" for="aapsb-newPass2">Gjenta passordet</label>
 <input class="aapsb-input" type="password" id="aapsb-newPass2" autocomplete="new-password">
 
-<button class="aapsb-btn" type="button" id="aapsb-newGo">Create key</button> <span class="aapsb-msg" id="aapsb-newMsg"></span>
+<button class="aapsb-btn" type="button" id="aapsb-newGo">Opprett nøkkel</button> <span class="aapsb-msg" id="aapsb-newMsg"></span>
 
 <div class="aapsb-box" id="aapsb-backupBox" hidden>
 
-**Save a backup of your key!**
+**Lagre en sikkerhetskopi av nøkkelen din!**
 
-Download the file. Keep these three together, somewhere safe off your phone (e.g. your own cloud storage):
+Last ned filen. Oppbevar disse tre sammen, på et trygt sted bort fra telefonen (f.eks. din egen skylagring):
 
-- the file `aaps-keystore.jks`
-- your password
-- the alias of the key: **`key0`**
+- filen `aaps-keystore.jks`
+- passordet ditt
+- aliaset til nøkkelen: **`key0`**
 
-You will need all three if you ever build AAPS another way, e.g. with Android Studio.
+Du trenger alle tre hvis du noen gang bygger AAPS på en annen måte, f.eks. med Android Studio.
 
-<button class="aapsb-btn" type="button" id="aapsb-downloadKs">Download backup (aaps-keystore.jks)</button>
+<button class="aapsb-btn" type="button" id="aapsb-downloadKs">Last ned sikkerhetskopi (aaps-keystore.jks)</button>
 
 </div>
 ````
 
 `````
 (aaps-builder-setup-step3)=
-## Step 3 – Give the key to your repository
-<span id="aapsb-s3wait">Finish step 2 first.</span>
+## Steg 3 – Gi nøkkelen til repositoriet ditt
+<span id="aapsb-s3wait">Fullfør steg 2 først.</span>
 
 <div id="aapsb-s3ready" hidden>
-  1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Open the secrets page</a> Opens: <code class="aapsb-repoUrl"></code> Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1. 2. Tap "Copy name", then paste it into the small "Name" field: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Copy name</button> 3. Tap "Copy secret", then paste the long code into the big "Secret" box: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Copy secret</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> The secret is a very long code (thousands of characters), NOT the word KEYSTORE_SET. Copy and paste the name first, then the long code. 4. Tap "Add secret". Done, you never need to do this again.
+  1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Åpne siden for hemmeligheter</a> Åpner: <code class="aapsb-repoUrl"></code> Får du «Page not found» (404)? Kontroller først at du er logget inn på github.com i denne nettleseren: GitHub viser 404 for private repositorier når du ikke er logget inn. Ellers stemmer ikke brukernavnet eller navnet på repositoriet i steg 1 med repositoriet ditt: kontroller dem på github.com og skriv dem inn i steg 1. 2. Trykk på «Kopier navn», og lim det inn i det lille feltet «Name»: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Kopier navn</button> 3. Trykk på «Kopier hemmelighet», og lim den lange koden inn i den store boksen «Secret»: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Kopier hemmelighet</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> Hemmeligheten er en svært lang kode (tusenvis av tegn), IKKE ordet KEYSTORE_SET. Kopier og lim inn navnet først, deretter den lange koden. 4. Trykk på «Add secret». Ferdig, du trenger aldri å gjøre dette igjen.
 </div>
 (aaps-builder-setup-step4)=
-## Step 4 – Build the app
+## Steg 4 – Bygg appen
 
-1. <a class="aapsb-btn" id="aapsb-openActions" target="_blank" rel="noopener">Open the build page</a>
+1. <a class="aapsb-btn" id="aapsb-openActions" target="_blank" rel="noopener">Åpne byggesiden</a>
 
-   Opens: <code class="aapsb-repoUrl"></code>
+   Åpner: <code class="aapsb-repoUrl"></code>
 
-   Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1. The GitHub app opened instead? Tap "RUN WORKFLOW", check the version and variant, and tap "RUN WORKFLOW" again. If the app still shows "Nothing to see here", pull the list down to see your build.
-2. If asked, click the green button to enable workflows.
-The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder": it holds the build steps and has no "Run workflow" button.
-3. Click "Run workflow", then the green "Run workflow" button. "latest" builds the newest AAPS version. ***tip:*** *you can build another version by typing its [tag](https://github.com/nightscout/AndroidAPS/tags) name instead of "latest"*
-4. Wait about 15–30 minutes. A green check means it is done.
-Want an e-mail when the build is done? GitHub only e-mails you when a build fails. To also get one when it succeeds: on github.com, open your profile picture → Settings → Notifications → System → Actions, and untick "Only notify for failed workflows".
+   Får du «Page not found» (404)? Kontroller først at du er logget inn på github.com i denne nettleseren: GitHub viser 404 for private repositorier når du ikke er logget inn. Ellers stemmer ikke brukernavnet eller navnet på repositoriet i steg 1 med repositoriet ditt: kontroller dem på github.com og skriv dem inn i steg 1. Åpnet GitHub-appen seg i stedet? Trykk på «RUN WORKFLOW», kontroller versjonen og varianten, og trykk på «RUN WORKFLOW» igjen. Hvis appen fortsatt viser «Nothing to see here», drar du listen nedover for å se bygget ditt.
+2. Hvis du blir spurt, klikker du på den grønne knappen for å aktivere arbeidsflyter.
+Listen over arbeidsflyter viser to oppføringer: bruk «Build AAPS». Ignorer «AAPS Builder»: den inneholder byggestegene og har ingen «Run workflow»-knapp.
+3. Klikk på «Run workflow», og deretter på den grønne knappen «Run workflow». «latest» bygger den nyeste AAPS-versjonen. ***tips:*** *du kan bygge en annen versjon ved å skrive inn navnet på [taggen](https://github.com/nightscout/AndroidAPS/tags) i stedet for «latest»*
+4. Vent omtrent 15–30 minutter. En grønn hake betyr at det er ferdig.
+Vil du ha en e-post når bygget er ferdig? GitHub sender deg bare e-post når et bygg mislykkes. For også å få en når det lykkes: på github.com åpner du profilbildet ditt → Settings → Notifications → System → Actions, og fjerner haken ved «Only notify for failed workflows».
 
 ```{admonition} No "Build AAPS" / "Run workflow" button?
 :class: warning
 
-1. Open your repository and check that it has a folder `.github` with the file `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-setup-step1) again with the button.
-2. Open the Actions tab. If it says workflows are disabled, click the green button to enable them. Then click "Build AAPS" in the list.
+1. Åpne repositoriet ditt og kontroller at det har en mappe `.github` med filen `workflows/build.yml`. Hvis repositoriet er tomt, ble det ikke opprettet fra malen: slett det (**Settings** → nederst på siden → **Delete this repository**) og gjør [steg 1](#aaps-builder-setup-step1) på nytt med knappen.
+2. Åpne fanen Actions. Hvis det står at arbeidsflyter er deaktivert, klikker du på den grønne knappen for å aktivere dem. Klikk deretter på «Build AAPS» i listen.
 ```
 
 (aaps-builder-setup-step5)=
 
-## Step 5 – Install on your phone
+## Steg 5 – Installer på telefonen
 
 ```{admonition} Before every update: back up your settings!
 :class: warning
 
-1. In AAPS: Maintenance → Export settings. (Do this regularly anyway, e.g. after a profile change or once a month.)
-2. Copy the exported file OFF the phone, e.g. to Google Drive or Dropbox. A backup that only lives on the phone is lost together with the phone.
-3. Keep the APK files and several older exports there too. Then you can always go back.
+1. I AAPS: Vedlikehold → Eksporter innstillinger. (Gjør dette jevnlig uansett, f.eks. etter en profilendring eller én gang i måneden.)
+2. Kopier den eksporterte filen BORT fra telefonen, f.eks. til Google Drive eller Dropbox. En sikkerhetskopi som bare ligger på telefonen, går tapt sammen med telefonen.
+3. Oppbevar APK-filene og flere eldre eksporter der også. Da kan du alltid gå tilbake.
 
-[How to export settings](#ExportImportSettings-Settings-Export) · [AAPS FAQ: how to organize backups](#FAQ-organize-backups)
+[Slik eksporterer du innstillinger](#ExportImportSettings-Settings-Export) · [AAPS FAQ: slik organiserer du sikkerhetskopier](#FAQ-organize-backups)
 ```
 
-1. Open this page on your phone, in the web browser (Chrome). Log in to github.com if asked.
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openRuns" target="_blank" rel="noopener">Open my builds</a>
+1. Åpne denne siden på telefonen, i nettleseren (Chrome). Logg inn på github.com hvis du blir bedt om det.
+2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openRuns" target="_blank" rel="noopener">Åpne byggene mine</a>
 
-   The GitHub app opened instead? It cannot download builds. In the app, open the newest build and tap "Artifacts ↗", or tap the share icon and choose Chrome (or "Copy link", then paste the link in Chrome's address bar). Continue in Chrome.
+   Åpnet GitHub-appen seg i stedet? Den kan ikke laste ned bygg. I appen åpner du det nyeste bygget og trykker på «Artifacts ↗», eller trykker på delingsikonet og velger Chrome (eller «Kopier link», og limer så lenken inn i adressefeltet i Chrome). Fortsett i Chrome.
 
-   Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1.
+   Får du «Page not found» (404)? Kontroller først at du er logget inn på github.com i denne nettleseren: GitHub viser 404 for private repositorier når du ikke er logget inn. Ellers stemmer ikke brukernavnet eller navnet på repositoriet i steg 1 med repositoriet ditt: kontroller dem på github.com og skriv dem inn i steg 1.
 
-   To stop GitHub links opening in the app: Android Settings → Apps → GitHub → Open by default → turn off "Open supported links".
-3. Tap the newest build with a green check ✅.
-4. Scroll down to the build summary and tap the big link "📱 Download AAPS …" (or scroll further down to "Artifacts" and tap aaps-….apk). Scroll with your finger on the text, not on the diagram of the build steps.
-5. When the download is done, tap the file and choose Install. If asked, allow installing apps from this source.
-6. aaps-wear-….apk is for a smartwatch. Skip it if you do not use one.
+   For å hindre at GitHub-lenker åpnes i appen: Android-Innstillinger → Apper → GitHub → Åpne som standard → slå av «Åpne støttede linker».
+3. Trykk på det nyeste bygget med grønn hake ✅.
+4. Bla ned til byggesammendraget og trykk på den store lenken «📱 Download AAPS …» (eller bla lenger ned til «Artifacts» og trykk på aaps-….apk). Bla med fingeren på teksten, ikke på diagrammet over byggestegene.
+5. Når nedlastingen er ferdig, trykker du på filen og velger Installer. Hvis du blir spurt, tillat installering av apper fra denne kilden.
+6. aaps-wear-….apk er for en smartklokke. Hopp over den hvis du ikke bruker en.
 
-The APK is not shown under "Code" in your repository, only on the build page. It is kept for 14 days.
+APK-filen vises ikke under «Code» i repositoriet ditt, bare på byggesiden. Den ligger der i 14 dager.
 
-New AAPS version? Back up your settings, then build it with [step 4](#aaps-builder-setup-step4). Your repository never builds anything by itself.
+Ny AAPS-versjon? Sikkerhetskopier innstillingene dine, og bygg den så med [steg 4](#aaps-builder-setup-step4). Repositoriet ditt bygger aldri noe av seg selv.
 
 (aaps-builder-setup-step6)=
 
-## Step 6 – Optional: get the app in Google Drive
+## Steg 6 – Valgfritt: få appen i Google Drive
 
-Want the APK to show up in your Google Drive (kept forever)? Add one more secret, GDRIVE_OAUTH2. This page gets it from Google for you. AAPS can then only see and change the files it creates in your Google Drive, nothing else.
+Vil du at APK-filen skal dukke opp i Google Drive (og ligge der for alltid)? Legg til én hemmelighet til, GDRIVE_OAUTH2. Denne siden henter den fra Google for deg. AAPS kan da bare se og endre filene den selv lager i Google Drive, ingenting annet.
 
-1. <a class="aapsb-btn" id="aapsb-googleAuth" target="_blank" rel="noopener">Connect Google Drive</a>
+1. <a class="aapsb-btn" id="aapsb-googleAuth" target="_blank" rel="noopener">Koble til Google Drive</a>
 
-   Google opens in a new tab. Choose your Google account and allow AAPS to see and change its own files. If Google says the app is not verified, tap "Advanced", then "Go to …".
-2. Then the new tab shows an error like **"This site can't be reached"** or **"127.0.0.1 refused to connect"**. **This is expected.** Google's answer is in the address of that tab.
+   Google åpnes i en ny fane. Velg Google-kontoen din og gi AAPS lov til å se og endre sine egne filer. Hvis Google sier at appen ikke er verifisert, trykker du på «Avansert» og deretter på «Gå til …».
+2. Da viser den nye fanen en feil som **«Får ikke tilgang til dette nettstedet»** eller **«127.0.0.1 avviste tilkoblingen»**. **Dette er som forventet.** Svaret fra Google ligger i adressen til den fanen.
 
-   Tap the address bar of that tab, select all of the address and copy it. It starts with `http://127.0.0.1:47913/`. Come back to this page within a few minutes: the answer is only valid for a short time.
-3. <label class="aapsb-label" for="aapsb-googleUrl">Paste the copied address here</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
+   Trykk på adressefeltet i den fanen, merk hele adressen og kopier den. Den begynner med `http://127.0.0.1:47913/`. Kom tilbake til denne siden innen noen få minutter: svaret er bare gyldig en kort stund.
+3. <label class="aapsb-label" for="aapsb-googleUrl">Lim inn den kopierte adressen her</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Hent GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
 
 <div id="aapsb-gdriveReady" hidden>
 
-4. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets2" target="_blank" rel="noopener">Open the secrets page</a>
+4. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets2" target="_blank" rel="noopener">Åpne siden for hemmeligheter</a>
 
-   Opens: <code class="aapsb-repoUrl"></code>
+   Åpner: <code class="aapsb-repoUrl"></code>
 
-   Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1.
-5. Tap "Copy name", then paste it into the small "Name" field: `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Copy name</button>
-6. Tap "Copy secret", then paste the code into the big "Secret" box: <code id="aapsb-gdrivePreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="gdriveValue">Copy secret</button> <span class="aapsb-msg" id="aapsb-gdriveCopyMsg"></span>
-7. Tap "Add secret".
+   Får du «Page not found» (404)? Kontroller først at du er logget inn på github.com i denne nettleseren: GitHub viser 404 for private repositorier når du ikke er logget inn. Ellers stemmer ikke brukernavnet eller navnet på repositoriet i steg 1 med repositoriet ditt: kontroller dem på github.com og skriv dem inn i steg 1.
+5. Trykk på «Kopier navn», og lim det inn i det lille feltet «Name»: `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Kopier navn</button>
+6. Trykk på «Kopier hemmelighet», og lim koden inn i den store boksen «Secret»: <code id="aapsb-gdrivePreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="gdriveValue">Kopier hemmelighet</button> <span class="aapsb-msg" id="aapsb-gdriveCopyMsg"></span>
+7. Trykk på «Add secret».
 
 </div>
 
 ```{admonition} Already have a GDRIVE_OAUTH2 value?
 :class: dropdown
 
-A value from the AAPS preparation page of the other browser build works too: open the secrets page, add the name `GDRIVE_OAUTH2` and paste your value. See [Save the builds in Google Drive](#aaps-builder-google-drive).
+En verdi fra AAPS-forberedelsessiden til det andre nettleserbygget fungerer også: åpne siden for hemmeligheter, legg til navnet `GDRIVE_OAUTH2` og lim inn verdien din. Se [Lagre byggene i Google Drive](#aaps-builder-google-drive).
 ```
 
-Next build, the APKs are also saved in Google Drive in the folder AAPS/&lt;version&gt;.
+Fra neste bygg lagres APK-filene også i Google Drive, i mappen AAPS/&lt;versjon&gt;.
 
-If you do not build for 6 months, or change your Google password, Google stops the access. The build then says so: redo this step.
+Hvis du ikke bygger på 6 måneder, eller endrer Google-passordet ditt, stopper Google tilgangen. Bygget sier da fra om det: gjør dette steget på nytt.
 
 ----
 
-Everything on this page runs in your browser. Your key and passwords are never sent anywhere except where you paste them yourself. Only your GitHub username is sent to GitHub, to check that it exists. In step 6, the Google answer is sent only to Google, to get GDRIVE_OAUTH2. The build workflow is maintained by the AAPS developers in [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder), based on AAPS Builder (AGPL-3.0).
+Alt på denne siden kjører i nettleseren din. Nøkkelen og passordene dine sendes aldri noe sted, bortsett fra dit du selv limer dem inn. Bare GitHub-brukernavnet ditt sendes til GitHub, for å kontrollere at det finnes. I steg 6 sendes Google-svaret bare til Google, for å hente GDRIVE_OAUTH2. Byggearbeidsflyten vedlikeholdes av AAPS-utviklerne i [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder), basert på AAPS Builder (AGPL-3.0).
 
 <div id="aapsb-msgs" hidden>
 
-- <span data-aapsb-msg="copied">Long code copied: paste it in the big "Secret" box, then tap "Add secret".</span>
-- <span data-aapsb-msg="copiedName">Name copied: paste it in the small "Name" field.</span>
-- <span data-aapsb-msg="userOk">✓ GitHub user found.</span>
-- <span data-aapsb-msg="userBad">✗ No GitHub user with this name. Use your username (shown in your GitHub profile), not your e-mail.</span>
-- <span data-aapsb-msg="copiedShort">Copied ✓</span>
-- <span data-aapsb-msg="needUser">Enter your GitHub username in step 1 first.</span>
-- <span data-aapsb-msg="errPipe">Passwords and alias cannot contain the character |</span>
-- <span data-aapsb-msg="errNoFile">Choose your keystore file.</span>
-- <span data-aapsb-msg="errEmpty">Fill in password and alias.</span>
-- <span data-aapsb-msg="errPass">Wrong keystore password.</span>
-- <span data-aapsb-msg="errKeyPass">Wrong key password.</span>
-- <span data-aapsb-msg="errAlias">Alias not found in the keystore. Available: {aliases}</span>
-- <span data-aapsb-msg="errFormat">This does not look like a keystore file.</span>
-- <span data-aapsb-msg="okHave">Keystore OK! Continue with step 3.</span>
-- <span data-aapsb-msg="okHaveUnchecked">Keystore read. The password will be checked when you build. Continue with step 3.</span>
-- <span data-aapsb-msg="errShort">The password must be at least 8 characters.</span>
-- <span data-aapsb-msg="errAscii">Use only a–z, A–Z, 0–9 and symbols such as ! ? # – no spaces, no accented letters and not |</span>
-- <span data-aapsb-msg="errMatch">The passwords do not match.</span>
-- <span data-aapsb-msg="working">Creating key…</span>
-- <span data-aapsb-msg="okNew">Key created. Download the backup below, then continue with step 3.</span>
-- <span data-aapsb-msg="gNoUrl">Paste the whole address of the Google tab first.</span>
-- <span data-aapsb-msg="gNoCode">This address has no answer from Google. Copy the whole address of the tab that shows the error, starting with http://127.0.0.1:47913/</span>
-- <span data-aapsb-msg="gDenied">Google access was not allowed. Tap "Connect Google Drive" again and allow access.</span>
-- <span data-aapsb-msg="gOldUrl">This address belongs to an older attempt. Tap "Connect Google Drive" again and use the new address.</span>
-- <span data-aapsb-msg="gWorking">Asking Google…</span>
-- <span data-aapsb-msg="gFailed">Google did not accept it ({error}). The answer is valid only for a few minutes and only once: tap "Connect Google Drive" again.</span>
-- <span data-aapsb-msg="gNoRefresh">Google sent no long-term access. Tap "Connect Google Drive" again.</span>
-- <span data-aapsb-msg="gOk">GDRIVE_OAUTH2 is ready. Add it as a secret below.</span>
-- <span data-aapsb-msg="gCopied">Code copied: paste it in the big "Secret" box, then tap "Add secret".</span>
+- <span data-aapsb-msg="copied">Lang kode kopiert: lim den inn i den store boksen «Secret», og trykk så på «Add secret».</span>
+- <span data-aapsb-msg="copiedName">Navn kopiert: lim det inn i det lille feltet «Name».</span>
+- <span data-aapsb-msg="userOk">✓ GitHub-bruker funnet.</span>
+- <span data-aapsb-msg="userBad">✗ Ingen GitHub-bruker med dette navnet. Bruk brukernavnet ditt (vist i GitHub-profilen din), ikke e-postadressen din.</span>
+- <span data-aapsb-msg="copiedShort">Kopiert ✓</span>
+- <span data-aapsb-msg="needUser">Skriv inn GitHub-brukernavnet ditt i steg 1 først.</span>
+- <span data-aapsb-msg="errPipe">Passord og alias kan ikke inneholde tegnet |</span>
+- <span data-aapsb-msg="errNoFile">Velg keystore-filen din.</span>
+- <span data-aapsb-msg="errEmpty">Fyll inn passord og alias.</span>
+- <span data-aapsb-msg="errPass">Feil keystore-passord.</span>
+- <span data-aapsb-msg="errKeyPass">Feil nøkkelpassord.</span>
+- <span data-aapsb-msg="errAlias">Aliaset ble ikke funnet i keystore-filen. Tilgjengelig: {aliases}</span>
+- <span data-aapsb-msg="errFormat">Dette ser ikke ut som en keystore-fil.</span>
+- <span data-aapsb-msg="okHave">Keystore OK! Fortsett med steg 3.</span>
+- <span data-aapsb-msg="okHaveUnchecked">Keystore-fil lest. Passordet blir kontrollert når du bygger. Fortsett med steg 3.</span>
+- <span data-aapsb-msg="errShort">Passordet må ha minst 8 tegn.</span>
+- <span data-aapsb-msg="errAscii">Bruk bare a–z, A–Z, 0–9 og symboler som ! ? # – ingen mellomrom, ingen bokstaver med aksent eller æ, ø, å, og ikke |</span>
+- <span data-aapsb-msg="errMatch">Passordene er ikke like.</span>
+- <span data-aapsb-msg="working">Oppretter nøkkel…</span>
+- <span data-aapsb-msg="okNew">Nøkkel opprettet. Last ned sikkerhetskopien nedenfor, og fortsett så med steg 3.</span>
+- <span data-aapsb-msg="gNoUrl">Lim inn hele adressen til Google-fanen først.</span>
+- <span data-aapsb-msg="gNoCode">Denne adressen har ikke noe svar fra Google. Kopier hele adressen til fanen som viser feilen, den begynner med http://127.0.0.1:47913/</span>
+- <span data-aapsb-msg="gDenied">Google-tilgang ble ikke gitt. Trykk på «Koble til Google Drive» igjen og gi tilgang.</span>
+- <span data-aapsb-msg="gOldUrl">Denne adressen hører til et eldre forsøk. Trykk på «Koble til Google Drive» igjen og bruk den nye adressen.</span>
+- <span data-aapsb-msg="gWorking">Spør Google…</span>
+- <span data-aapsb-msg="gFailed">Google godtok det ikke ({error}). Svaret er bare gyldig i noen få minutter og bare én gang: trykk på «Koble til Google Drive» igjen.</span>
+- <span data-aapsb-msg="gNoRefresh">Google sendte ingen langvarig tilgang. Trykk på «Koble til Google Drive» igjen.</span>
+- <span data-aapsb-msg="gOk">GDRIVE_OAUTH2 er klar. Legg den til som en hemmelighet nedenfor.</span>
+- <span data-aapsb-msg="gCopied">Kode kopiert: lim den inn i den store boksen «Secret», og trykk så på «Add secret».</span>
 
 </div>
 

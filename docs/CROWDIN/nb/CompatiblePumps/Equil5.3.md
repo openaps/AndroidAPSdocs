@@ -1,131 +1,131 @@
 # Equil
 
-These instructions are for configuring the Equil insulin pump.
+Disse instruksjonene gjelder oppsett av insulinpumpen Equil.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Pumpefunksjoner med AAPS
 
-* Tubeless patch pump that communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights, and **Prime/Fill** and **Pump battery change** are not offered. Filling, priming and changing the battery are done in the pump wizards.
-* While the pump is suspended or stopped, **AAPS** records a 0 U/h temporary basal, so no basal insulin is counted in IOB.
-* DST and timezone changes must be handled manually.
+* Slangeløs patch-pumpe som kommuniserer med **AAPS** over telefonens innebygde Bluetooth, uten en ekstra kommunikasjonsenhet.
+* **AAPS** behandler Equil som en patch-pumpe med et reservoar på 200 E: hovedskjermen viser statuslysene for patch-pumpe, og **Prime/fylling** og **Bytte pumpebatteri** tilbys ikke. Fylling, priming og batteribytte gjøres i pumpeveiviserne.
+* Mens pumpen er pauset eller stoppet, registrerer **AAPS** en midlertidig basal på 0 E/t, så ingen basalinsulin telles med i IOB.
+* Sommertid (DST) og tidssonebytte må håndteres manuelt.
 
-## Hardware and software requirements
-* **Compatible Equil hardware**
+## Krav til maskinvare og programvare
+* **Kompatibel Equil-maskinvare**
 
-  Currently Equil 5.3 and 5.4 are supported.
+  For øyeblikket støttes Equil 5.3 og 5.4.
 
-* **AAPS** built and installed using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions
+* **AAPS** bygget og installert etter instruksjonene i [Bygge AAPS](../SettingUpAaps/BuildingAaps.md)
 
 ## Setup
 
-### Select Equil pump
+### Velg Equil-pumpe
 
-Open the **menu** (☰) in the top-left corner, choose **[Configuration](#Config-Builder-pump)**, and under **Pump** select **Equil**.
+Åpne **menyen** (☰) øverst til venstre, velg **[Konfigurasjon](#Config-Builder-pump)**, og under **Pumpe** velger du **Equil**.
 
-Once it is selected, the **Equil** card shows two buttons, **Settings** and **Open plugin**:
+Når den er valgt, viser **Equil**-kortet to knapper, **Innstillinger** og **Åpne plugin**:
 
-![The Equil plugin selected in Configuration > Pump](../images/v4/Pumps/equil_enabled.png)
+![Pluginen Equil valgt i Konfigurasjon > Pumpe](../images/v4/Pumps/equil_enabled.png)
 
-**Open plugin** (or **Manage** → **Pump**) opens the Equil pump screen. Before a pump is paired it looks like this:
+**Åpne plugin** (eller **Administrer** → **Pumpe**) åpner pumpeskjermen for Equil. Før en pumpe er sammenkoblet, ser den slik ut:
 
-![Equil pump screen before pairing](../images/v4/Pumps/equil_pump_screen.png)
+![Pumpeskjermen for Equil før sammenkobling](../images/v4/Pumps/equil_pump_screen.png)
 
-### Settings
+### Innstillinger
 
-Open the Equil settings with **Settings** on the **Equil** card, or with the gear icon in the top-right corner of the pump screen.
+Åpne Equil-innstillingene med **Innstillinger** på **Equil**-kortet, eller med tannhjulikonet øverst til høyre på pumpeskjermen.
 
-![Equil driver settings](../images/v4/Pumps/equil_settings.png)
+![Innstillinger for Equil-driveren](../images/v4/Pumps/equil_settings.png)
 
-* **Low battery alarm**: warns you when the pump battery is low.
-* **Low drug storage alarm**: warns you when the insulin in the reservoir is low.
-* **Alert tone**: how the pump alerts you: **Mute**, **Vibrate only**, **Tone only** or **Vibrate and tone**.
-* **Bolus speed**: how fast a bolus is given: **1.5 U/min (standard)**, **3 U/min**, **6 U/min** or **12 U/min**. A faster bolus may give more occlusion alarms.
+* **Alarm for lavt batteri**: varsler deg når pumpebatteriet er lavt.
+* **Alarm for lavt legemiddellager**: varsler deg når det er lite insulin igjen i reservoaret.
+* **Varseltone**: hvordan pumpen varsler deg: **Demp lyd**, **Kun vibrering**, **Kun lyd** eller **Vibrering og lyd**.
+* **Bolushastighet**: hvor raskt en bolus gis: **1,5 E/min (standard)**, **3 E/min**, **6 E/min** eller **12 E/min**. En raskere bolus kan gi flere okklusjonsalarmer.
 
-![The Bolus speed choices in the Equil settings](../images/v4/Pumps/equil_bolus_speed.png)
+![Valgene for bolushastighet i Equil-innstillingene](../images/v4/Pumps/equil_bolus_speed.png)
 
 ```{admonition} Max basal and max bolus on the patch
 :class: note
-The patch itself refuses any basal rate above a maximum that **AAPS** programs into it. **AAPS** takes the higher of your **max basal** [setting](../SettingUpAaps/Preferences.md) and the highest hourly basal rate in your **Profile**, so the patch always accepts your profile and the temp basals the loop asks for. **AAPS** also sends your maximum allowed bolus to the patch.
+Selve patchen avviser enhver basaldose over et maksimum som **AAPS** programmerer inn i den. **AAPS** bruker den høyeste av [innstillingen](../SettingUpAaps/Preferences.md) **maks basal** og den høyeste basaldosen per time i din **Profil**, så patchen godtar alltid profilen din og de midlertidige basalene som loopen ber om. **AAPS** sender også din maksimalt tillatte bolus til patchen.
 
-When you change your **max basal** or **max bolus**, **AAPS** sends the new values to the patch automatically. They are also sent with every profile switch. There is nothing to set on the patch itself.
+Når du endrer **maks basal** eller **maks bolus**, sender **AAPS** de nye verdiene til patchen automatisk. De sendes også ved hvert profilbytte. Det er ingenting å stille inn på selve patchen.
 ```
 
-### Pair the pump
+### Koble sammen pumpen
 
-On the pump screen, press **Pair**. A wizard guides you through each step. The row of dots at the top shows how far along you are.
+På pumpeskjermen trykker du på **Koble sammen**. En veiviser leder deg gjennom hvert steg. Raden med prikker øverst viser hvor langt du har kommet.
 
-If Android asks whether **AAPS** may find and connect to nearby devices, press **Allow**. **AAPS** needs this to find the pump.
+Hvis Android spør om **AAPS** kan finne og koble til enheter i nærheten, trykker du på **Tillat**. **AAPS** trenger dette for å finne pumpen.
 
-![Android asking for permission to find nearby devices](../images/Equil/activate1.png)
+![Android ber om tillatelse til å finne enheter i nærheten](../images/Equil/activate1.png)
 
-The wizard has these steps. Press **Next** to move on, or **Cancel** to leave the wizard.
+Veiviseren har disse stegene. Trykk på **Neste** for å gå videre, eller **Avbryt** for å avslutte veiviseren.
 
-1. **Profile required**: only shown if you have never activated a **Profile** in **AAPS**. Select the profile to use and press **Activate profile**.
-1. **Assemble pump**: put together the pump, the filled reservoir and the charged battery.
+1. **Profil kreves**: vises bare hvis du aldri har aktivert en **Profil** i **AAPS**. Velg profilen du vil bruke, og trykk på **Aktiver profil**.
+1. **Monter pumpen**: sett sammen pumpen, det fylte reservoaret og det ladede batteriet.
 
-   ![Assemble pump step](../images/Equil/activate2.png)
+   ![Steget Monter pumpen](../images/Equil/activate2.png)
 
-1. **Find Pump**: **AAPS** scans for nearby Equil pumps. Select your pump from the list.
+1. **Finn pumpe**: **AAPS** søker etter Equil-pumper i nærheten. Velg pumpen din fra listen.
 
-   ![Find Pump step with an Equil pump in the list](../images/Equil/find_pump.png)
-1. **Pair device**: you can enter a pairing password in **Set pair password**. It must be 4 characters long, chosen from `ABCDEF0123456789`. Press **Pair**.
+   ![Steget Finn pumpe med en Equil-pumpe i listen](../images/Equil/find_pump.png)
+1. **Koble sammen enheten**: du kan skrive inn et sammenkoblingspassord i **Sett sammenkoblingspassord**. Det må være 4 tegn langt, valgt fra `ABCDEF0123456789`. Trykk på **Koble sammen**.
 
-   ![Pair device step with the pairing password](../images/Equil/activate3.png)
+   ![Steget Koble sammen enheten med sammenkoblingspassordet](../images/Equil/activate3.png)
 
-1. **Select Insulin**: only shown if you have more than one insulin set up. Select the insulin in the reservoir.
-1. **Prime / Fill**: the pump must **not** be on its base plate. Press **Prime/Fill** and prime the reservoir until there is a drop of insulin on the needle tip. Press **Next**.
+1. **Velg insulin**: vises bare hvis du har satt opp mer enn ett insulin. Velg insulinet som er i reservoaret.
+1. **Prime / fylling**: pumpen må **ikke** sitte på baseplaten. Trykk på **Prime/fylling** og prime reservoaret til det kommer en dråpe insulin på nålespissen. Trykk på **Neste**.
 
-   ![Prime / Fill step](../images/Equil/prime_fill.png)
-1. **Site Rotation**: only shown if **Manage pump site rotation** is turned on in the site rotation settings. Tap where you will attach the pump, or press **Skip**.
-1. **Attach pump**: attach the pump to its base plate.
+   ![Steget Prime / fylling](../images/Equil/prime_fill.png)
+1. **Rotasjon av sted**: vises bare hvis **Administrer pumpe-stedsrotasjon** er slått på i innstillingene for rotasjon av sted. Trykk der du vil feste pumpen, eller trykk på **Hopp over**.
+1. **Koble til pumpen**: fest pumpen på baseplaten.
 
-   ![Attach pump step](../images/Equil/attach_pump.png)
-1. **Prime cannula**: once the pump is on the base plate, press **Purge air** to remove air from the cannula. Press **Next**.
+   ![Steget Koble til pumpen](../images/Equil/attach_pump.png)
+1. **Prime kanylen**: når pumpen sitter på baseplaten, trykker du på **Tøm luft** for å fjerne luft fra kanylen. Trykk på **Neste**.
 
-   ![Prime cannula step with the Purge air button](../images/Equil/prime_cannula.png)
+   ![Steget Prime kanylen med knappen Tøm luft](../images/Equil/prime_cannula.png)
 
-1. **Confirm**: put the pump on your body and press **Finish**.
+1. **Bekreft**: sett pumpen på kroppen og trykk på **Fullfør**.
 
-   ![Confirm step with the Finish button](../images/Equil/confirm.png)
+   ![Steget Bekreft med knappen Fullfør](../images/Equil/confirm.png)
 
 ```{warning}
-If you set your own pairing password (recommended for your safety), store it somewhere safe. The password is saved in the pump. The pump asks for it at every new pairing until you unpair it properly in **AAPS**. Until then, the pump also cannot be used with the original handheld controller (PDA).
+Hvis du setter ditt eget sammenkoblingspassord (anbefalt for din sikkerhet), oppbevar det på et trygt sted. Passordet lagres i pumpen. Pumpen spør etter det ved hver ny sammenkobling til du opphever sammenkoblingen på riktig måte i **AAPS**. Før det kan pumpen heller ikke brukes med den opprinnelige håndholdte kontrolleren (PDA).
 ```
 
-### Pump screen after pairing
+### Pumpeskjermen etter sammenkobling
 
-Once the pump is paired, the pump screen shows these buttons:
+Når pumpen er sammenkoblet, viser pumpeskjermen disse knappene:
 
-* **Refresh**: reads the state and the history of the pump now.
-* **Suspend** / **Resume delivery**: stop or restart insulin delivery.
-* **Change reservoir**: guides you through detaching the pump, fitting a new reservoir (and, if needed, a new battery), priming and attaching it again. The first step asks *Will you also put on a new infusion set (base plate and cannula)?*
-  * **Yes, new infusion set**: you choose the site, the cannula is primed, and **AAPS** records an insulin change and a cannula change.
-  * **No, only reservoir or battery**: the cannula is not primed and **AAPS** records only an insulin change.
+* **Oppdater**: leser pumpens tilstand og historikk nå.
+* **Pause** / **Gjenoppta tilførselen**: stopp eller start insulintilførselen igjen.
+* **Bytt reservoar**: leder deg gjennom å ta av pumpen, sette inn et nytt reservoar (og, om nødvendig, et nytt batteri), prime og feste den igjen. Det første steget spør *Vil du også sette på et nytt infusjonssett (baseplate og kanyle)?*
+  * **Ja, nytt infusjonssett**: du velger stedet, kanylen primes, og **AAPS** registrerer et insulinbytte og et kanylebytte.
+  * **Nei, bare reservoar eller batteri**: kanylen primes ikke, og **AAPS** registrerer bare et insulinbytte.
 
-  After a reservoir change the battery level shows **-** until **AAPS** reads it again from the pump.
+  Etter et reservoarbytte viser batterinivået **-** til **AAPS** leser det igjen fra pumpen.
 
-  ![The first step of Change reservoir asks about a new infusion set](../images/Equil/change_reservoir_question.png)
+  ![Det første steget i Bytt reservoar spør om et nytt infusjonssett](../images/Equil/change_reservoir_question.png)
 
-* **History**: shows the events recorded by the pump.
-* **Unpair device**: guides you through detaching the pump and unpairing it from **AAPS**. This stops insulin delivery, moves the pump plunger back to the bottom, and deletes the pairing.
+* **Historikk**: viser hendelsene som pumpen har registrert.
+* **Koble fra enhet**: leder deg gjennom å ta av pumpen og oppheve sammenkoblingen med **AAPS**. Dette stopper insulintilførselen, flytter pumpestempelet tilbake til bunnen og sletter sammenkoblingen.
 
-### Alarms
+### Alarmer
 
-* The low insulin alarm sounds once at each level (10 U, 5 U and 2 U) and when the reservoir is empty. The low battery alarm sounds once at 10% and once at 5%. Each level alarms only once until the next reservoir change.
-* Pump alarms and stops are also recorded as announcements in the treatments, at the time the pump logged them, so you can see later when and why the pump stopped.
-* If the reservoir runs empty during a bolus, **AAPS** records only the insulin given until then and tells you both amounts.
+* Alarmen for lite insulin lyder én gang på hvert nivå (10 E, 5 E og 2 E) og når reservoaret er tomt. Alarmen for lavt batteri lyder én gang ved 10 % og én gang ved 5 %. Hvert nivå varsler bare én gang fram til neste reservoarbytte.
+* Pumpealarmer og stopp registreres også som meldinger i behandlingene, på tidspunktet pumpen logget dem, så du kan se senere når og hvorfor pumpen stoppet.
+* Hvis reservoaret går tomt under en bolus, registrerer **AAPS** bare insulinet som ble gitt fram til da, og forteller deg begge mengdene.
 
-## Where to get help
+## Hvor du kan få hjelp
 
-Development of the Equil driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Utviklingen av Equil-driveren gjøres av fellesskapet på **frivillig** basis. Før du ber om hjelp, bør du:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Lese** det aktuelle avsnittet i denne dokumentasjonen for å se hvordan funksjonen skal fungere.
+2. **Spørre** på kanalen *#AAPS* på [Discord](https://discord.gg/4fQUWHZ4Mw), eller i en av de andre [fellesskapskanalene](../GettingHelp/WhereCanIGetHelp.md).
+3. **Rapportere en feil** ved å søke i [eksisterende saker](https://github.com/nightscout/AndroidAPS/issues); hvis din ikke er der, åpner du en [ny sak](https://github.com/nightscout/AndroidAPS/issues) og legger ved [loggfilene](../GettingHelp/AccessingLogFiles.md) dine.
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Når du ber om hjelp, oppgi telefonens merke og modell, Android-versjon, **AAPS**-versjon og en enkel beskrivelse av problemet (hva som ble endret, når det sist virket).

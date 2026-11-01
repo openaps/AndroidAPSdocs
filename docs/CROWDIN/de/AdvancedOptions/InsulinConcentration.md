@@ -108,7 +108,7 @@ The core principle is a clear separation between the app's logic and the pump's 
 
 ### Benefits and remaining risks
 
-**Benefits:**
+**Vorteile:**
 
 - Eliminates the need for a modified profile and its associated mental conversion errors.
 - Users can always "think" in Real IU.

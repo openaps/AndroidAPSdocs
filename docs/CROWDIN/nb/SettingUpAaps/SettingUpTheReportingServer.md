@@ -1,28 +1,28 @@
 # Setting up the Reporting Server
 
-There are currently two reporting servers available for use with **AAPS**:
+For øyeblikket finnes det to rapporteringsservere som kan brukes med **AAPS**:
 
 - [Nightscout](https://nightscout.github.io/)
 - [Tidepool](https://www.tidepool.org/)
 
-![Reporting Servers](../images/Building-the-App/ReportingServer.png)
+![Rapporteringsservere](../images/Building-the-App/ReportingServer.png)
 
 We recommend using Nightscout.
 
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout is a web application that can log and display your CGM data and **AAPS** data and creates reports. It is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). It also carries the remote commands that caregivers send to **AAPS** from **AAPSClient** (see [Master ↔ Client control](#client-master-control)).
+Nightscout er en nettapplikasjon som kan logge og vise CGM-dataene og **AAPS**-dataene dine, og som lager rapporter. Det er en kraftig plattform som har vært integrert i **AAPS** i mange år. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). Den bærer også fjernkommandoene som omsorgspersoner sender til **AAPS** fra **AAPSClient** (se [Hovedenhet ↔ klientstyring](#client-master-control)).
 
 Nightscout is provided as open-source software. Anyone can create and operate a Nightscout server, using either free or paid-for services.
 
-You can find more information on the [website of the Nightscout project](http://nightscout.github.io/).
+Du finner mer informasjon på [nettsiden til Nightscout-prosjektet](http://nightscout.github.io/).
 
 ### Option 1 - Set up your Nightscout server yourself
 
 Creating your Nightscout reporting server can require one or more web-based applications that will require maintenance. In order to have a completely free service, you may need to migrate your Nightscout site and data, if and when providers remove the free tier.
 
-A description of how you can set up Nightscout with the advantages and disadvantages of the various operating options, including an estimate of the costs, can be found [here](https://nightscout.github.io/nightscout/new_user/#free-diy).
+En beskrivelse av hvordan du kan sette opp Nightscout, med fordeler og ulemper ved de ulike driftsalternativene og et anslag over kostnadene, finner du [her](https://nightscout.github.io/nightscout/new_user/#free-diy).
 
 ### Option 2 - Pay for a hosted Nightscout service
 
@@ -31,32 +31,32 @@ There are also options from different service providers who host Nightscout for 
 
 Existing Nightscout users can reconsider where and how their Nightscout server is hosted from time to time, and change to a different option if it becomes more suitable.
 
-Some Nightscout hosted services are listed [here](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
+Noen leverandører av Nightscout-hosting er listet opp [her](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
 
 ### Further configuration of Nightscout
 
-Once you have your Nightscout instance up and running, see [Nightscout configuration page](../SettingUpAaps/Nightscout.md) for additional considerations.
+Når du har fått Nightscout-instansen din opp og gå, se [siden om Nightscout-konfigurasjon](../SettingUpAaps/Nightscout.md) for flere ting å tenke på.
 
 (SettingUpTheReportingServer-tidepool)=
 ## Tidepool
 
-Tidepool has been available in **AAPS** since version 3.2 which was released in late 2023.
+Tidepool har vært tilgjengelig i **AAPS** siden versjon 3.2, som ble gitt ut sent i 2023.
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger  
-As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool is not suitable for sharing real-time information with caregivers.  
-On the other hand, Tidepool can be a great solution for sharing reports with a patient's endocrinologist if Nightscout is not an accepted solution.  
+Siden det er en forsinkelse på tre timer fra data kommer inn til de rapporteres når du bruker **AAPS**, egner Tidepool seg ikke til å dele sanntidsinformasjon med omsorgspersoner.  
+På den andre siden kan Tidepool være en god løsning for å dele rapporter med pasientens endokrinolog hvis Nightscout ikke er en godkjent løsning.  
 ```
 
-Tidepool is an [open source](https://github.com/tidepool-org) project. It offers to run an account free of charge on the Tidepool servers.
+Tidepool er et prosjekt med [åpen kildekode](https://github.com/tidepool-org). It offers to run an account free of charge on the Tidepool servers.
 
-More information about setting up Tidepool with AAPS [here](../SettingUpAaps/Tidepool.md).
+Mer informasjon om hvordan du setter opp Tidepool med AAPS finner du [her](../SettingUpAaps/Tidepool.md).
 
 ```{admonition} **AAPS** has the uploader for Tidepool integrated
 :class: note
-You do **not** need to use the uploader app to Tidepool: **AAPS** will upload blood glucose, treatments and basal for you. You only need a personal account with Tidepool. Do not upload your data with the separate Tidepool uploader tool as it will lead to duplicate values.  
+Du trenger **ikke** bruke opplastingsappen til Tidepool: **AAPS** laster opp blodsukker, behandlinger og basal for deg. Du trenger bare en personlig konto hos Tidepool. Ikke last opp dataene dine med det separate opplastingsverktøyet til Tidepool, siden det fører til doble verdier.  
 ```
 
 ## Next step
 
-Once you have set up your reporting server, you can configure **AAPS** on your phone with the [Setup Wizard](./SetupWizard.md), which will also link **AAPS** to your reporting server.
+Når du har satt opp rapporteringsserveren din, kan du konfigurere **AAPS** på telefonen din med [Oppsettveiviseren](./SetupWizard.md), som også kobler **AAPS** til rapporteringsserveren din.

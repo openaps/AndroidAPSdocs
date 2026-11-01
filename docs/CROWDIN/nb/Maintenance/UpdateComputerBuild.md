@@ -89,7 +89,7 @@ Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
 
 (update-computer-build-troubleshooting)=
 
-## Troubleshooting
+## Feilsøking
 
 If anything goes wrong, don't panic.
 

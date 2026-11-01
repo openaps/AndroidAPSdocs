@@ -1,7 +1,7 @@
 (food)=
-# Food (your food database)
+# Mat (matdatabasen din)
 
-The **Food** database is your personal list of saved foods. Each entry stores a food's **carbs** (and, optionally, its fat, protein, energy and a category), so you can keep the things you eat often in one place and start a bolus from a saved food with its carbs already filled in.
+**Mat**-databasen er din personlige liste over lagrede matvarer. Hver oppføring lagrer **karbohydratene** til en matvare (og eventuelt fett, protein, energi og en kategori), slik at du kan holde det du spiser ofte på ett sted og starte en bolus fra en lagret matvare med karbohydratene allerede fylt inn.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,80 +10,80 @@ The **Food** database is your personal list of saved foods. Each entry stores a 
 
 ---
 
-## Opening the food database
+## Åpne matdatabasen
 
-Open the **Manage** screen (bottom navigation) and choose **Food** (*“Manage food database entries”*). In **AAPS** v4 Food is **no longer a plugin** — there is nothing to enable; it is a standalone screen reached from the [Manage sheet](#v4changes-manage).
-
----
-
-## The food list
-
-Your foods are shown as a scrollable list. Each row shows the food's **name**, its **portion / unit / category**, and its **carbs**:
-
-![The food database list, with search and the add button](../images/v4/Food/food_list.png)
-
-- **🔍 Search** (top) — filter the list by **name** (case-insensitive).
-- **Category filter** — chips let you narrow the list to a **category**; once a category is picked, **subcategory** chips appear for it. (Tap a selected chip again to clear it.)
-- **➕** (bottom-right) — add a new food (see below).
-- Tap a row to **edit** that food.
-
-If the list (or the current filter) has no entries, the screen shows **No data**.
+Åpne skjermen **Administrer** (navigasjonslinjen nederst) og velg **Mat** (*«Administrer oppføringer i matdatabasen»*). I **AAPS** v4 er Mat **ikke lenger en plugin** — det er ingenting å aktivere; det er en egen skjerm som du når fra [Administrer-arket](#v4changes-manage).
 
 ---
 
-## Adding and editing a food
+## Matlisten
 
-Tap **➕** to add, or tap an existing row to edit. An editor opens as a bottom sheet (**Add Food** / **Edit Food**):
+Matvarene dine vises som en rullbar liste. Hver rad viser matvarens **navn**, **porsjon / enhet / kategori** og **karbohydrater**:
 
-![The food editor — name, category, portion, carbs and macros](../images/v4/Food/food_editor.png)
+![Listen i matdatabasen, med søk og legg til-knappen](../images/v4/Food/food_list.png)
 
-The fields are:
+- **🔍 Søk** (øverst) — filtrer listen etter **navn** (skiller ikke mellom store og små bokstaver).
+- **Kategorifilter** — med brikker kan du begrense listen til en **kategori**; når en kategori er valgt, vises brikker for **underkategori** for den. (Trykk på en valgt brikke igjen for å fjerne valget.)
+- **➕** (nederst til høyre) — legg til en ny matvare (se nedenfor).
+- Trykk på en rad for å **redigere** den matvaren.
 
-- **Name** — required (you can't save without it).
-- **Category** and **Subcategory** — optional, used to group/filter foods.
-- **Portion** and **Unit** — the typical serving size; **Unit** defaults to **g**.
-- **Carbs (g)** — the carbohydrate amount for the food.
-- **Fat (g)**, **Protein (g)**, **Energy (kJ)** — optional nutrition values.
+Hvis listen (eller det gjeldende filteret) ikke har noen oppføringer, viser skjermen **Ingen data**.
 
-Tap **Save** to store it, or **Cancel** to discard. When editing an existing food the editor also has a **Delete** button.
+---
+
+## Legge til og redigere en matvare
+
+Trykk på **➕** for å legge til, eller trykk på en eksisterende rad for å redigere. Et redigeringsvindu åpnes som et ark nederst (**Legg til mat** / **Rediger mat**):
+
+![Redigering av matvare — navn, kategori, porsjon, karbohydrater og makronæringsstoffer](../images/v4/Food/food_editor.png)
+
+Feltene er:
+
+- **Navn** — obligatorisk (du kan ikke lagre uten).
+- **Kategori** og **Underkategori** — valgfrie, brukes til å gruppere/filtrere matvarer.
+- **Porsjon** og **Enhet** — den vanlige porsjonsstørrelsen; **Enhet** er **g** som standard.
+- **Karbo (g)** — mengden karbohydrater i matvaren.
+- **Fett (g)**, **Protein (g)**, **Energi (kJ)** — valgfrie næringsverdier.
+
+Trykk på **Lagre** for å lagre, eller **Avbryt** for å forkaste. Når du redigerer en eksisterende matvare, har redigeringsvinduet også en **Slett**-knapp.
 
 ```{admonition} Deleting is undoable
 :class: note
-Deleting a food shows a **“Food deleted”** message with an **Undo** action, so an accidental delete is easy to reverse.
+Når du sletter en matvare, vises meldingen **«Mat slettet»** med en **Angre**-handling, så en sletting ved et uhell er lett å gjøre om.
 ```
 
 ---
 
-## Using a food for a bolus
+## Bruke en matvare til en bolus
 
-Each food row has a **calculator** button. Tapping it opens the **bolus wizard** with that food's **carbs** already filled in and the food's **name** added as the treatment note — so you confirm and deliver without re-typing the carbs.
+Hver matrad har en **kalkulator**-knapp. Trykker du på den, åpnes **boluskalkulatoren** med matvarens **karbohydrater** allerede fylt inn og matvarens **navn** lagt til som merknad på behandlingen — så du bekrefter og gir bolusen uten å skrive inn karbohydratene på nytt.
 
 ```{admonition} The carbs value is used as-is
 :class: note
-The food's stored **carbs** number is passed straight to the wizard — **AAPS** does not multiply it by the portion or by how much you ate. If you have a different amount, adjust the carbs in the wizard before confirming. (There is no food picker *inside* the bolus wizard or the carbs dialog; you start from the food row here.)
+Matvarens lagrede **karbohydrat**-tall sendes rett til kalkulatoren — **AAPS** ganger det ikke med porsjonen eller med hvor mye du spiste. Hvis du har en annen mengde, justerer du karbohydratene i kalkulatoren før du bekrefter. (Det finnes ingen matvelger *inne i* boluskalkulatoren eller Karbo-dialogen; du starter fra matraden her.)
 ```
 
 ---
 
-## Where foods come from (Nightscout sync)
+## Hvor matvarene kommer fra (Nightscout-synkronisering)
 
-The food database is shared through **Nightscout**, but **in one direction only**:
+Matdatabasen deles via **Nightscout**, men **bare én vei**:
 
-- **Download:** **AAPS** **reads** foods from your Nightscout site's **food database** and keeps the local list in sync with it. This runs as part of NSClient syncing, so a paired **client/follower** ends up with the same foods too.
-- **Upload:** **AAPS** does **not** push foods **to** Nightscout — NSClient does not support uploading food entries. Foods you create or edit **inside AAPS** therefore stay **on that device** and are not propagated to Nightscout or to your other devices.
+- **Nedlasting:** **AAPS** **leser** matvarer fra **matdatabasen** på Nightscout-siden din og holder den lokale listen synkronisert med den. Dette kjører som en del av NSClient-synkroniseringen, så en paret **klient/følger** ender også opp med de samme matvarene.
+- **Opplasting:** **AAPS** sender **ikke** matvarer **til** Nightscout — NSClient støtter ikke opplasting av matoppføringer. Matvarer du lager eller redigerer **i AAPS**, blir derfor værende **på den enheten** og sendes ikke videre til Nightscout eller til de andre enhetene dine.
 
 ```{admonition} Maintain your shared list in Nightscout
 :class: important
-Because food is **download-only**, the way to share one food list across your phone, your follower/[client](../RemoteFeatures/ClientMasterControl.md) and the rest of your setup is to maintain it in **Nightscout** (its built-in food editor). **AAPS** will pull those entries down. A food added only in **AAPS** is local to that device — and stays put: a download matches Nightscout entries by their Nightscout ID, so it adds and updates those but never overwrites or removes a food you created locally (a food is only removed when its Nightscout copy is deleted in Nightscout).
+Siden mat er **bare nedlasting**, er måten å dele én matliste på mellom telefonen din, følgeren/[klienten](../RemoteFeatures/ClientMasterControl.md) din og resten av oppsettet ditt å vedlikeholde den i **Nightscout** (den innebygde matredigeringen der). **AAPS** henter ned disse oppføringene. En matvare som bare er lagt til i **AAPS**, er lokal på den enheten — og blir værende: en nedlasting matcher Nightscout-oppføringer på Nightscout-ID-en deres, så den legger til og oppdaterer dem, men overskriver eller fjerner aldri en matvare du har laget lokalt (en matvare fjernes bare når Nightscout-kopien slettes i Nightscout).
 
-Note that the food database is **not** part of the master ↔ client signed control channel either — it travels purely as Nightscout data.
+Merk at matdatabasen heller **ikke** er en del av den signerte styringskanalen mellom hovedenhet ↔ klient — den reiser kun som Nightscout-data.
 ```
 
 ---
 
-## Not on the watch
+## Ikke på klokken
 
-The food database is a **phone** feature — there is no food browser, tile or menu on a **Wear OS watch**.
+Matdatabasen er en **telefon**-funksjon — det finnes ingen matliste, flis eller meny på en **Wear OS-klokke**.
 
 ---
 

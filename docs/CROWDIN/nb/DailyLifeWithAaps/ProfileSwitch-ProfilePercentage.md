@@ -1,178 +1,178 @@
-# Profile switch & Profile Percentage
+# Profilbytte og profilprosent
 
-This section will explain what is a **Profile Switch** and **Profile Percentage**. You can learn how to create a **Profile** in [Your AAPS Profile](#your-aaps-profile-create-and-edit-profiles).
+Dette avsnittet forklarer hva et **profilbytte** og en **profilprosent** er. Hvordan du oppretter en **profil**, kan du lese i [Din AAPS-profil](#your-aaps-profile-create-and-edit-profiles).
 
-When first embarking on your **AAPS** journey, you will need to create a **Profile**, understand how to action a **Profile Switch** and learn the impact of a **Profile Percentage** within **AAPS**. The features of a **Profile Switch** or **Profile Percentage** can be particularly beneficial for:
+Når du begynner med **AAPS**, må du opprette en **profil**, forstå hvordan du gjør et **profilbytte**, og lære hvordan en **profilprosent** virker i **AAPS**. Funksjonene **profilbytte** og **profilprosent** kan være spesielt nyttige ved:
 
-- the Menstrual Cycle - a percentage adjustment within a **Profile** can be set up in **Automations** in order to allow **AAPS** to accommodate for different stages of the hormone cycle and with predicted insulin resistance.
+- menstruasjonssyklusen – en prosentjustering av **profilen** kan settes opp i **Automasjon**, slik at **AAPS** kan ta hensyn til de ulike fasene i hormonsyklusen og forventet insulinresistens.
 
-- Exercise - a percentage adjustment within a **Profile** can be set up in **Automations** for exercise in order to reduce basal intake.
+- trening – en prosentjustering av **profilen** kan settes opp i **Automasjon** for trening, for å redusere basalen.
 
-- Night or pattern shift workers - a time shift in **Profile** can be set up for pattern shift workers by altering the number of hours in the **Profile** to how much later/earlier the user will go to bed or wake up.
+- natt- eller skiftarbeidere – en tidsforskyving i **profilen** kan settes opp for skiftarbeidere ved å endre antall timer i **profilen** etter hvor mye senere/tidligere du legger deg eller står opp.
 
-Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. This ensures a balanced approach is calculated by **AAPS** when administering the user’s insulin intake. Little benefit can be gained in a user’s **Profile** in **AAPS** by a basal reduction if the algorithm continues to deliver the same ratios for ISF and I:C.
+Hvorfor bruke en **profilprosent** i stedet for en midlertidig basaljustering? For å virke bedre bruker en **profilprosent** en forholdsmessig reduksjon eller økning på alt: basal, ISF og IK (insulin/karbohydrat-forholdet, I:C). Dette sikrer at **AAPS** beregner en balansert tilnærming når insulinet ditt doseres. En basalreduksjon alene i **profilen** din i **AAPS** gir liten gevinst hvis algoritmen fortsetter å bruke de samme forholdene for ISF og IK.
 
 (ProfileSwitch-change-percentage)=
 
-## Change the Profile Percentage from the main screen
+## Endre profilprosenten fra hovedskjermen
 
-You need at least one saved **Profile**. A **Profile Percentage** is always applied through a **Profile Switch**: you activate a **Profile** again, this time with a percentage.
+Du trenger minst én lagret **profil**. En **profilprosent** brukes alltid gjennom et **profilbytte**: du aktiverer en **profil** på nytt, denne gangen med en prosent.
 
-```{admonition} Coming from AAPS 3? :class: note A long press on the profile name no longer opens the profile switch dialog. **Tap** the profile name, then tap the round **▶** button at the bottom right: it opens the same settings (percentage, duration, Activity temp target).
+```{admonition} Kommer du fra AAPS 3? :class: note Et langt trykk på profilnavnet åpner ikke lenger dialogen for profilbytte. **Trykk** på profilnavnet, og trykk så på den runde **▶**-knappen nederst til høyre: den åpner de samme innstillingene (prosent, varighet, midlertidig mål Aktivitet).
 
-    <br />1. On the main screen, **tap the profile name** (next to the star icon). The [Profile screen](#ProfileSwitch-manage-v4) opens on the card of the running **Profile**, marked **ACTIVE**.
+    <br />1. På hovedskjermen, **trykk på profilnavnet** (ved siden av stjerneikonet). [Profilskjermen](#ProfileSwitch-manage-v4) åpnes på kortet til **profilen** som kjører, merket **AKTIV**.
     
-       ![Tap the profile name on the main screen to open the Profile screen](../images/ProfileSwitch2.png)
+       ![Trykk på profilnavnet på hovedskjermen for å åpne profilskjermen](../images/ProfileSwitch2.png)
     
-    2. To keep the same **Profile**, leave the **ACTIVE** card selected. To change **Profile** at the same time, swipe to another card.
-    3. Tap the round **▶** button (**Activate**) at the bottom right. The **Activate** screen opens.
-    4. Set the **Percentage** with **−** / **+** (steps of 5 %), or type it in (30 to 250 %). The field always starts at **100 %**: it does not show the percentage that is running now. For example, enter **80** for 20 % less insulin, or **120** for 20 % more.
-    5. Set the **Duration** in minutes:
-       * **0** keeps the new percentage until you make another **Profile Switch**;
-       * any other value ends the switch after that time, and **AAPS** goes back to the **Profile** that was running before.
+    2. For å beholde den samme **profilen**, la **AKTIV**-kortet være valgt. For å bytte **profil** samtidig, sveip til et annet kort.
+    3. Trykk på den runde **▶**-knappen (**Aktiver**) nederst til høyre. Skjermen **Aktiver** åpnes.
+    4. Sett **Prosent** med **−** / **+** (steg på 5 %), eller skriv den inn (30 til 250 %). Feltet starter alltid på **100 %**: det viser ikke prosenten som kjører nå. Skriv for eksempel **80** for 20 % mindre insulin, eller **120** for 20 % mer.
+    5. Sett **Varighet** i minutter:
+       * **0** beholder den nye prosenten til du gjør et nytt **profilbytte**,
+       * alle andre verdier avslutter byttet etter den tiden, og **AAPS** går tilbake til **profilen** som kjørte før.
     
-       ![The Activate screen set to 80 % for 60 minutes](../images/v4/Profiles/profile_activate_percentage.png)
+       ![Skjermen Aktiver satt til 80 % i 60 minutter](../images/v4/Profiles/profile_activate_percentage.png)
     
-    6. Tap **▶ Activate** at the bottom of the screen. Check the summary in the **Profile switch** dialog and tap **OK**.
+    6. Trykk på **▶ Aktiver** nederst på skjermen. Sjekk sammendraget i dialogen **Profilbytte** og trykk på **OK**.
     
-       ![The confirmation dialog — profile, percentage and duration](../images/v4/Profiles/profile_activate_confirm.png)
+       ![Bekreftelsesdialogen — profil, prosent og varighet](../images/v4/Profiles/profile_activate_confirm.png)
     
-    Back on the main screen, the profile name shows the percentage and the remaining time, for example *Normal (80%) (59')*, and turns yellow while a switch with a duration is running. A star marks the switch on the glucose graph. See [the main screen](#aaps-screens-profile--target).
+    Tilbake på hovedskjermen viser profilnavnet prosenten og gjenstående tid, for eksempel *Normal (80%) (59')*, og blir gult mens et bytte med varighet kjører. En stjerne markerer byttet på glukosegrafen. Se [hovedskjermen](#aaps-screens-profile--target).
     
-    ![The main screen while an 80 % profile switch is running](../images/v4/Profiles/profile_switch_running.png)
+    ![Hovedskjermen mens et profilbytte på 80 % kjører](../images/v4/Profiles/profile_switch_running.png)
     
-    To **go back to 100 %** before the end, repeat the steps and keep **Percentage** at 100 and **Duration** at 0.
+    For å **gå tilbake til 100 %** før tiden er ute, gjentar du stegene og lar **Prosent** stå på 100 og **Varighet** på 0.
     
-    ```{admonition} One-tap percentages
+    ```{admonition} Prosent med ett trykk
     :class: tip
-    If you often use the same percentage (sport, illness), add a [Profile shortcut](#profile-shortcuts) to the Quick Launch bar, or create a [scene](Scenes.md). Both apply a profile with a preset percentage and duration in one tap.
+    Hvis du ofte bruker den samme prosenten (sport, sykdom), kan du legge til en [profilsnarvei](#profile-shortcuts) på Hurtigstart-verktøylinjen, eller lage en [scene](Scenes.md). Begge bruker en profil med forhåndsinnstilt prosent og varighet med ett trykk.
     
 
 (ProfileSwitch-manage-v4)=
 
-## Managing and activating profiles (Manage → Profile)
+## Administrere og aktivere profiler (Administrer → Profil)
 
-In **AAPS** v4 profiles are managed and activated from the **Manage** screen (bottom navigation) → **Profile** (*“Manage and activate profiles”*).
+I **AAPS** v4 administreres og aktiveres profiler fra skjermen **Administrer** (navigasjonslinjen nederst) → **Profil** (*«Administrer og aktiver profiler»*).
 
-The Profile screen shows your profiles as a **swipeable card carousel**. The card of the running profile is marked **ACTIVE** and shows its total daily basal (e.g. *∑ 30.15 U*). Below the selected card you see that profile's details — **Units**, **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+Profilskjermen viser profilene dine som en **karusell med kort du kan sveipe**. Kortet til profilen som kjører, er merket **AKTIV** og viser total daglig basal (f.eks. *∑ 30,15 E*). Under det valgte kortet ser du detaljene for den profilen — **Enheter**, **Insulin**-type, og tidsplanene for **IK**, **ISF**, **basal** og **mål** med grafer.
 
-![The Profile screen — profile carousel, details and action bar](../images/v4/Profiles/profile_manage.png)
+![Profilskjermen — profilkarusell, detaljer og handlingslinje](../images/v4/Profiles/profile_manage.png)
 
-The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **‘️ Delete**, and the round **▶ Activate** button on the right. For how to fill in the four schedules in the editor (IC / ISF / BAS / TARG), see [Create and edit Profiles](#your-aaps-profile-create-and-edit-profiles).
+Knappene nederst virker på den **valgte** profilen: **➕ Legg til**, **✏️ Rediger**, **⧉ Dupliser** og **‘️ Slett**, og den runde **▶ Aktiver**-knappen til høyre. Hvordan du fyller ut de fire tidsplanene i redigeringsvinduet (IK / ISF / BAS / MÅL), se [Opprette og redigere profiler](#your-aaps-profile-create-and-edit-profiles).
 
-**⧉ Clone** uses the two-squares icon often used for *copy*, but there is nothing to paste: it makes the duplicate in one step. Confirm *Clone profile "Normal"?* and a new profile named *Normal copy* is added at the end of the carousel and selected, ready for **✏️ Edit** (where you can also rename it). This is not the same as cloning a past **Profile Switch** from the Treatments history, which creates a new profile *with the percentage and time shift applied*. See [Keep a profile switch for later use](#ProfileSwitch-keep-for-later).
+**⧉ Dupliser** bruker ikonet med to firkanter som ofte brukes for *kopier*, men det er ikke noe å lime inn: den lager kopien i ett steg. Bekreft *Dupliser profil «Normal»?*, så legges en ny profil med navnet *Normal kopi* til sist i karusellen og velges, klar for **✏️ Rediger** (der du også kan gi den nytt navn). Dette er ikke det samme som å duplisere et tidligere **profilbytte** fra behandlingshistorikken, som lager en ny profil *der prosenten og tidsforskyvingen er lagt inn*. Se [Ta vare på et profilbytte til senere bruk](#ProfileSwitch-keep-for-later).
 
-(ProfileSwitch-read-only-mode)= **Only the ▶ Activate button?** Your settings are protected, so the screen opens read-only. Tap the **✏️ pencil** in the top bar and enter your settings password. See [Settings protection now also locks the management screens](#v4changes-read-only-management).
+(ProfileSwitch-read-only-mode)= **Bare ▶ Aktiver-knappen?** Innstillingene dine er beskyttet, så skjermen åpnes skrivebeskyttet. Trykk på **✏️ blyanten** i linjen øverst og skriv inn passordet for innstillinger. Se [Sikkerhet for innstillinger låser nå også administrasjonsskjermene](#v4changes-read-only-management).
 
-### Reordering profiles
+### Endre rekkefølgen på profiler
 
-If you have more than one profile you can choose their order in the carousel: tap the **Reorder** icon (⇅, two arrows pointing up and down) in the top bar. The page indicator is replaced by **◀ / ▶ move buttons** with a *position / total* readout — step the centred card earlier or later, then confirm with **✓** (or discard with **✕**). The new order is saved once, when you confirm.
+Hvis du har mer enn én profil, kan du velge rekkefølgen deres i karusellen: trykk på ikonet **Endre rekkefølge** (⇅, to piler som peker opp og ned) i linjen øverst. Sideindikatoren erstattes av **flytteknappene ◀ / ▶** med en *posisjon / totalt*-visning — flytt kortet i midten tidligere eller senere, og bekreft så med **✓** (eller forkast med **✕**). Den nye rekkefølgen lagres én gang, når du bekrefter.
 
-![Reorder mode — move buttons and position readout](../images/v4/Profiles/profile_reorder.png)
+![Modus for å endre rekkefølge — flytteknapper og posisjonsvisning](../images/v4/Profiles/profile_reorder.png)
 
-### Activating a profile
+### Aktivere en profil
 
-Select a profile and tap **▶ Activate**. The **Activate** screen lets you tailor how the **Profile Switch** is applied:
+Velg en profil og trykk på **▶ Aktiver**. Skjermen **Aktiver** lar deg tilpasse hvordan **profilbyttet** brukes:
 
-![The Activate screen — percentage, duration, time shift, time](../images/v4/Profiles/profile_activate.png)
+![Skjermen Aktiver — prosent, varighet, tidsforskyving, tid](../images/v4/Profiles/profile_activate.png)
 
-- **Percentage** (30–250 %, starts at 100 % every time) — scale the whole profile. 100 % uses it as-is; for example 70 % reduces basal and the calculated insulin dose (both meal boluses and corrections) by 30 %. It does not change your glucose targets or carb absorption. See [Profile Percentage](#profile-percentage) for the full effect.
-- **Duration** (0–10080 minutes, that is up to 7 days) — how long the switch lasts. **0 = indefinite** (until you switch again); a non-zero value reverts to the previous profile when it ends.
-- **Temporary target / Activity** — appears only when you set a **Duration** and a **Percentage** below 100 %. Switch it on to also start an [Activity temp target](#TempTargets-activity-temp-target) for the same duration, as you would before exercise.
-- **Time shift** — shows *0h*; tap **Change** to move the schedule forward or back by up to 23 hours (useful for shift work or travel). See [Time shift](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
-- **Reuse** — appears when the running switch has a percentage other than 100 % or a time shift, for example **Reuse 80% 0h**. Tap it to fill in the same percentage and time shift, for instance to prolong a switch that is about to end.
+- **Prosent** (30–250 %, starter på 100 % hver gang) — skalerer hele profilen. 100 % bruker den som den er; for eksempel reduserer 70 % basalen og den beregnede insulindosen (både måltidsboluser og korrigeringer) med 30 %. Den endrer ikke glukosemålene dine eller karbohydratabsorpsjonen. Se [Profilprosent](#profile-percentage) for hele effekten.
+- **Varighet** (0–10080 minutter, det vil si opptil 7 dager) — hvor lenge byttet varer. **0 = ubegrenset** (til du bytter igjen); en verdi over null går tilbake til forrige profil når tiden er ute.
+- **Midlertidig mål / Aktivitet** — vises bare når du setter en **Varighet** og en **Prosent** under 100 %. Slå den på for også å starte et [midlertidig mål Aktivitet](#TempTargets-activity-temp-target) med samme varighet, slik du ville gjort før trening.
+- **Tidsforskyving** — viser *0t*; trykk på **Endre** for å flytte tidsplanen fram eller tilbake med opptil 23 timer (nyttig ved skiftarbeid eller reise). Se [Tidsforskyving](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
+- **Gjenbruk** — vises når byttet som kjører har en annen prosent enn 100 % eller en tidsforskyving, for eksempel **Gjenbruk 80% 0t**. Trykk på den for å fylle inn den samme prosenten og tidsforskyvingen, for eksempel for å forlenge et bytte som snart er over.
     
-    ![The Reuse button while an 80 % switch is running](../images/v4/Profiles/profile_activate_reuse.png)
+    ![Gjenbruk-knappen mens et bytte på 80 % kjører](../images/v4/Profiles/profile_activate_reuse.png)
 
-- **Time** — *Now* by default. You can pick another time, up to 24 hours before or after now. A switch set in the future starts at that time; an Activity temp target set with it then also starts at that time.
+- **Tid** — *Nå* som standard. Du kan velge et annet tidspunkt, opptil 24 timer før eller etter nå. Et bytte som er satt fram i tid, starter på det tidspunktet; et midlertidig mål Aktivitet som er satt sammen med det, starter da også på det tidspunktet.
     
-    ![Choosing the time of a profile switch](../images/v4/Profiles/profile_activate_time_picker.png)
+    ![Velge tidspunkt for et profilbytte](../images/v4/Profiles/profile_activate_time_picker.png)
 
-- **Notes** — only shown if [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs) is on.
+- **Merknader** — vises bare hvis [Vis merknadsfelt i dialoger](#Preferences-show-notes-field-in-treatments-dialogs) er på.
 
-If the basal rates at the chosen percentage are not compatible with your pump, a warning appears at the top and **▶ Activate** stays disabled: choose another percentage.
+Hvis basaldosene ved den valgte prosenten ikke passer med pumpen din, vises en advarsel øverst, og **▶ Aktiver** forblir deaktivert: velg en annen prosent.
 
-Tap **▶ Activate**, then **OK** in the confirmation dialog. The running profile then carries the **ACTIVE** badge on its card.
+Trykk på **▶ Aktiver**, og så på **OK** i bekreftelsesdialogen. Profilen som kjører, har da merket **AKTIV** på kortet sitt.
 
-```{admonition} Your pump may round the basal rates :class: note Each pump can only give basal rates in its own steps (for example 0.05 U/h), so it rounds the rates of your **Profile**. **AAPS** then uses the basal the pump really gives, so IOB and TDD stay correct. If the pump gives a little more or less insulin per day than your **Profile**, the notice *"Basal profile in pump updated"* tells you how much, for example *"it gives 10.00 U per day instead of 10.12 U"*.
+```{admonition} Pumpen din kan avrunde basaldosene :class: note Hver pumpe kan bare gi basaldoser i sine egne steg (for eksempel 0,05 E/t), så den avrunder dosene i **profilen** din. **AAPS** bruker da basalen pumpen faktisk gir, slik at IOB og TDD forblir riktige. Hvis pumpen gir litt mer eller mindre insulin per dag enn **profilen** din, forteller meldingen *«Basalprofil i pumpen er oppdatert»* deg hvor mye, for eksempel *«den gir 10,00 E per dag i stedet for 10,12 E»*.
 
-If the pump reports a basal that is far from your **Profile**, **AAPS** keeps the **Profile** basal and asks you to check the basal rates in the pump.
+Hvis pumpen rapporterer en basal som er langt fra **profilen** din, beholder **AAPS** basalen fra **profilen** og ber deg sjekke basaldosene i pumpen.
 
-    <br />```{admonition} Percentage and time shift make one profile go a long way
+    <br />```{admonition} Prosent og tidsforskyving gjør at én profil rekker langt
     :class: note
-    Rather than building many similar profiles, keep one base profile and apply it at a different **percentage** or **time shift** for recurring situations (illness, exercise, travel). This is exactly what [scenes](Scenes.md) automate.
+    I stedet for å lage mange like profiler kan du beholde én grunnprofil og bruke den med en annen **prosent** eller **tidsforskyving** i situasjoner som gjentar seg (sykdom, trening, reise). Dette er nøyaktig det [scener](Scenes.md) automatiserer.
     
 
-A profile switch is not limited to this screen. The same switch can also be triggered from a **Wear OS watch**, a paired **client** (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)), a **[scene](Scenes.md)**, or an **Automation** rule.
+Et profilbytte er ikke begrenset til denne skjermen. Det samme byttet kan også utløses fra en **Wear OS-klokke**, en paret **klient** (se [Hovedenhet ↔ klientstyring](../RemoteFeatures/ClientMasterControl.md)), en **[scene](Scenes.md)** eller en **Automasjon**-regel.
 
-## Profile Percentage
+## Profilprosent
 
-It is important that a user understands the essential features of a **Profile Percentage**. By applying a percentage increase or decrease to a **Profile Switch** this will apply in the same percentage to either raise or lower the user’s settings parameters as set within the **Profile**.
+Det er viktig at du forstår de grunnleggende egenskapene til en **profilprosent**. Når du legger en prosentøkning eller -reduksjon på et **profilbytte**, brukes den samme prosenten til å heve eller senke innstillingene dine slik de er satt i **profilen**.
 
-For example: a **Profile Switch** to 130% (means the user is 30% more insulin resistant) will instruct **AAPS** to
+For eksempel: et **profilbytte** til 130 % (som betyr at du er 30 % mer insulinresistent) ber **AAPS** om å
 
-- **increase** the basal rate by 30%; 
-- **lower** the **ISF**: by dividing by 1.3;
-- **lower** the **I:C** by dividing by 1.3.
+- **øke** basaldosen med 30 %, 
+- **senke** **ISF**: ved å dele på 1,3,
+- **senke** **IK** ved å dele på 1,3.
 
-Remember lowering the **ISF** or **I:C** means a stronger ratio and more insulin being administered. This fact can be easily overlooked by new users to **AAPS**.
+Husk at lavere **ISF** eller **IK** betyr et sterkere forhold og at det gis mer insulin. Dette er lett å overse for nye **AAPS**-brukere.
 
-Once selected, **AAPS** readjusts the default basal rate, and **AAPS** (open or closed) will continue to work on top of the selected percentage **Profile**.
+Når den er valgt, justerer **AAPS** standard basaldose, og **AAPS** (åpen eller lukket loop) fortsetter å jobbe oppå den valgte prosent-**profilen**.
 
-The effect of a **Profile** Percentage is summarized in the table below:
+Effekten av en **profil**-prosent er oppsummert i tabellen nedenfor:
 
-| Profile Switch  
-Percentage |    Effect    |     I:C  
-g/U     | example  
-15g |          ISF  
-mmol/L/U  
-mg/dL/U          | U to lower  
-2mmol/L  
-40mg/dL |
-|:---------------------------:|:------------:|:-----------------:|:-------------:|:------------------------------------------:|:------------------------------:|
-|             90%             |    Weaker    | 5/0.9  
-=**5.55** |     2.7 U     | 2.2/0.9  
-=**2.4**  
+| Profilbytte  
+Prosent |    Effekt    |     IK  
+g/E      | eksempel  
+15 g |          ISF  
+mmol/L/E  
+mg/dL/E          | E for å senke  
+2 mmol/L  
+40 mg/dL |
+|:---------------------:|:------------:|:-----------------:|:---------------:|:------------------------------------------:|:-----------------------------------:|
+|         90 %          |   Svakere    | 5/0,9  
+=**5,55** |      2,7 E      | 2,2/0,9  
+=**2,4**  
   
-40/0.9  
-=**44.4** |             0.8 U              |
-|          **100%**           | **Standard** |       **5**       |    **3 U**    |                **2.2  
-40**                |           **0.9** U            |
-|            130%             |   Stronger   | 5/1.3  
-=**3.85** |     3.9 U     | 2.2/1.3  
-=**1.7**  
+40/0,9  
+=**44,4** |                0,8 E                |
+|       **100 %**       | **Standard** |       **5**       |     **3 E**     |                **2,2  
+40**                |              **0,9** E              |
+|         130 %         |   Sterkere   | 5/1,3  
+=**3,85** |      3,9 E      | 2,2/1,3  
+=**1,7**  
   
-40/1.3  
-=**30.8** |             1.2 U              |
+40/1,3  
+=**30,8** |                1,2 E                |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
-## Time shift of the Circadian Percentage Profile
+## Tidsforskyving av den døgnbaserte prosentprofilen
 
-A ‘time shift’ within a user’s **Profile** feature will move the user’s **Profile’s** settings around the day-to-day clock (‘circadian’) to the desired number of hours entered. This can be helpful for:
+En «tidsforskyving» i **profil**-funksjonen flytter innstillingene i **profilen** din rundt døgnklokken («circadian», døgnrytme) med det antallet timer du skriver inn. Dette kan være nyttig for:
 
-- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
-- **users changing time zones during travelling**; or
-- **users who are type 1 children**: and have a set bedtime routine and insulin resistance catered for within their **Profile**. If for whatever reason, there is a predicted later bedtime for the child, the caregiver can apply a ‘time shift’ to the child’s **Profile** to allow **AAPS** to react to insulin resistance at a desired time period as set by the user.
+- **nattskift- eller skiftarbeidere**: jobb nattskift ved å endre antall timer i **profilen** etter hvor mye senere/tidligere du legger deg eller står opp, 
+- **brukere som bytter tidssone på reise**, eller
+- **barn med type 1**: som har en fast leggerutine og insulinresistens som det er tatt hensyn til i **profilen**. Hvis barnet av en eller annen grunn ventes å legge seg senere, kan omsorgspersonen bruke en «tidsforskyving» på barnets **profil**, slik at **AAPS** reagerer på insulinresistensen i det tidsrommet brukeren ønsker.
 
-It is always a question of which hour’s **Profile’s** settings should replace the settings of the current time. This time must be shifted by x hours. So please be mindful of the directions as described in the following example:
+Spørsmålet er alltid hvilken times innstillinger i **profilen** som skal erstatte innstillingene for tiden nå. Denne tiden må forskyves med x timer. Vær derfor oppmerksom på retningene, som beskrevet i dette eksempelet:
 
-- Current time: 12:00
-- **Positive** time shift 
-    - 2:00 **+10 h** -> 12:00
-    - Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
-- **Negative** time shift 
-    - 22:00 **-10 h** -> 12:00
-    - Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
+- Klokken nå: 12:00
+- **Positiv** tidsforskyving 
+    - 2:00 **+10 t** -> 12:00
+    - Innstillingene fra 2:00 brukes i stedet for innstillingene som normalt brukes klokken 12:00, på grunn av den positive tidsforskyvingen.
+- **Negativ** tidsforskyving 
+    - 22:00 **-10 t** -> 12:00
+    - Innstillingene fra 22:00 brukes i stedet for innstillingene som normalt brukes klokken 12:00, på grunn av den negative tidsforskyvingen.
 
-![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
+![Retninger for tidsforskyving ved profilbytte](../images/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
+Denne måten å ta øyeblikksbilder av **profilen** på gir en mye mer nøyaktig beregning av fortiden og mulighet til å følge **profil**-endringer.
 
 (ProfileSwitch-keep-for-later)=
 
-## Keep a profile switch for later use
+## Ta vare på et profilbytte til senere bruk
 
-Once you have performed a profile switch with percentage and/or timeshift, you can make a copy of this temporary profile into a new profile.
+Når du har gjort et profilbytte med prosent og/eller tidsforskyving, kan du kopiere denne midlertidige profilen til en ny profil.
 
-To do this, open the menu (☰) → **Treatments** and go to the **Profile switch** tab, see [Clone a Profile switch to a new Profile](#your-aaps-profile-clone-profile-switch).
+For å gjøre dette åpner du menyen (☰) → **Behandlinger** og går til fanen **Profilbytte**, se [Dupliser et profilbytte til en ny profil](#your-aaps-profile-clone-profile-switch).
