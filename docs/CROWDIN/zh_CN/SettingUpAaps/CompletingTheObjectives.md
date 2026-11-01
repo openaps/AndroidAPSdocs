@@ -10,7 +10,7 @@
 
 **目标1至8** 将引导你从在智能手机上配置 **AAPS** 开始，直至实现“基础”混合闭环操作。这将需要大约6周的时间来完成。你可以使用一个虚拟泵（同时采用其他胰岛素输送方式）来完成至 **目标5**。 **Objectives 9 and 10** are designed to test more advanced **AAPS** features with the aim of better control of your diabetes, and will take up to 3 months to complete, possibly longer. 关于预计时间分配的更多详细信息，可在此处获取：[需要多长时间？ ](#preparing-how-long-will-it-take)
 
-在逐步完成目标的同时，如果你需要，也可以移除你的进度并[回到早期的目标](#go-back-in-objectives)。
+As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#CompletingTheObjectives-go-back-in-objectives).
 
 ## 备份你的设置
 
@@ -39,7 +39,7 @@
 - 如果使用Tidepool:
   - 按照[Tidepool](../SettingUpAaps/Tidepool.md)页面上的说明进行操作，以确保**Tidepool**能够接收并显示**AAPS**的数据。
 
-Note - *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
+Note: *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
 
 (objectives-objective2)=
 ## 目标2：学习如何控制AAPS
@@ -51,7 +51,7 @@ Note - *You may need to wait for the next sensor glucose reading to arrive befor
 完成**目标2**的任务包括：
 - 将你的**配置文件**设置为90%，持续时间为10分钟。
   - _Hint_: Tap your Profile name on the main screen to open the **Profile** screen, then use the **Activate** (▶) button and set percentage and duration. 更多信息请参阅[配置文件切换&配置文件百分比](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)。
-  - _注意_：**AAPS** 不接受低于0.05U/hr的基础率。如果你的**配置文件**包含0.06U/hr或更低的基础率，你需要在完成此任务之前创建一个临时**配置文件**，其中包含更高的基础率。在完成任务后切换回你的正常**配置文件**。
+  - _注意_：**AAPS** 不接受低于0.05U/hr的基础率。 If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. 在完成任务后切换回你的正常**配置文件**。
 - Simulate "taking a shower" by [disconnecting your pump](#AapsScreens-loop-status) in **AAPS** for a duration of 1h.
   - _Hint_: press the loop icon on the main screen to open the Loop dialog, then choose a duration under **Disconnect pump**.
 - 通过重新连接你的胰岛素泵来结束“淋浴”状态。
@@ -94,7 +94,7 @@ The purpose of **Objective 4** is to recognize how often **AAPS** will evaluate 
 - 必要时使用[**临时目标**](../DailyLifeWithAaps/TempTargets.md)。在治疗低血糖后，使用预定义的“低血糖临时目标”来防止系统在血糖回升时出现过度校正。
 - 若您此刻仍处于[简易模式](#preferences-simple-mode)，现在可能是关闭该模式的最佳时机。
 
-为了减少在开环模式下提出的基础率更改建议的数量，您仍然可以使用 **目标3** 中描述的技巧。 Additionally, you can change the minimum percentage for recommended basal rate changes with the "**Open mode minimum change**" setting in **Settings → Loop**. 值越高，你收到的更改通知就越少。
+To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Additionally, you can change the minimum percentage for recommended basal rate changes with the "**Open mode minimum change**" setting in **Settings → Loop**. 值越高，你收到的更改通知就越少。
 
 ![开环最小请求更改](../images/OpenLoop_MinimalRequestChange2.png)
 
@@ -118,7 +118,7 @@ This **Objective** requires you to determine and set your “Maximum basal rate�
 
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: 注意
-如果您正在使用虚拟泵进行开环操作，请**在此处停止**。只有在切换到使用实际胰岛素泵（用于输送胰岛素）后，才能在完成此 **目标** 时点击验证。
+如果您正在使用虚拟泵进行开环操作，请**在此处停止**。 Only tap **Verify** at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
 
 ```
 
@@ -166,14 +166,14 @@ You will still need to correct high BG values by yourself (manually with correct
 
 - Select **Closed Loop** by pressing the [Loop icon](#AapsScreens-loop-status) on the main screen and choosing **Closed Loop** as running mode. 在闭环模式下保持1天。
 
-- 慢慢地将你的“OpenAPS不能超过的最大总胰岛素在板量”（在OpenAPS中称为“max-iob”）提高到0以上，直到你找到最适合自己的设置。
+- Slowly raise your 'Max IOB for SMB' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
 
 此设置的默认建议是“**平均餐时大剂量 + 3 倍最大每日基础率**”，其中“最大每日基础率”是每天任何时间段内的最大每小时值。
 
 ![最大每日基础率](../images/MaxDailyBasal2.png)
 
 这个建议应该被视为一个起点。如果你遵循这个规则，但发现AAPS在血糖水平上升时输送了过多的胰岛素，你可能需要：
-* 降低“OpenAPS不能超过的最大IOB”的值；
+* lower the "Max IOB for SMB" value;
 * 逐一检查您的**配置文件**，并每次只进行一项调整。
 
 另外，如果您非常胰岛素抵抗，请非常谨慎地提高 **maxIOB** 值。
@@ -201,7 +201,7 @@ Additionally, you can use [Autotune](#autotune-how-autotune-calculates-adjustmen
 完成此目标的最短时间**：28天**。这是一个强制性的等待时间。在达到这个时间之前，你不能继续下一个目标。
 
 - 本文档中的[SMB部分](#Open-APS-features-super-micro-bolus-smb)和[openAPS文档中的oref1介绍](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)是理解**SMB**和**零临时基础率**概念的必读内容。
-- 完成后，您可以提高 [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) 以使 **SMB** 更有效地工作。现在，maxIOB 包括了所有 **IOB**，而不仅仅是累积的基础量。此阈值将在 IOB 降至此值以下时暂停 **SMB**（_例如_，如果 **maxIOB** 设置为 7U，并且给予 8U 的推注来覆盖一餐：除非 **IOB** 降至 7U 以下，否则将暂停SMB）。一个良好的起点是将**maxIOB（最大胰岛素在板量）**设置为**平均餐时大剂量 + 3倍最大日基础率**，其中“最大日基础率”是指一天中任何时间段内的最大每小时值。请参阅 [目标7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) 作为参考。
+- 完成后，您可以提高 [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) 以使 **SMB** 更有效地工作。现在，maxIOB 包括了所有 **IOB**，而不仅仅是累积的基础量。此阈值将在 IOB 降至此值以下时暂停 **SMB**（_例如_，如果 **maxIOB** 设置为 7U，并且给予 8U 的推注来覆盖一餐：除非 **IOB** 降至 7U 以下，否则将暂停SMB）。一个良好的起点是将**maxIOB（最大胰岛素在板量）**设置为**平均餐时大剂量 + 3倍最大日基础率**，其中“最大日基础率”是指一天中任何时间段内的最大每小时值。 See [objective 7](#objectives-objective7) as reference.
 - Evaluate your carb absorption rate and consider changing the “min_5m_carbimpact”-parameter in [Settings → Absorption settings → min_5m_carbimpact](#Preferences-min_5m_carbimpact) if you find it too slow or too fast.
 
 (objectives-objective10)=
