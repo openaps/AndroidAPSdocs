@@ -19,7 +19,7 @@
 
 一個**臨時目標**可能需要大約30分鐘甚至更長時間才能達到預期的**血糖**目標。 **AAPS** 無法立即達到**血糖**目標，因此使用者在選擇**臨時目標**時應注意這一點。
 
-以下各節將說明 **活動臨時目標**、**即將用餐臨時目標**和 **低血糖臨時目標** 的功能。以下顯示的數值是隨附的預設值，你可以[調整各預設值](#TempTargets-change-preset-defaults)以符合自己的需求。
+The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. 以下顯示的數值是隨附的預設值，你可以[調整各預設值](#TempTargets-change-preset-defaults)以符合自己的需求。
 
 ### 臨時目標 - 活動
 
@@ -193,9 +193,9 @@ AAPS 會以 160 mg/dL 或 8.9 mmol/L 為目標，持續 1 小時。
 
 一些使用者希望在**臨時目標-低血糖**期間避免**SMB**的給藥。若要達成此效果，請在**設定** → **OpenAPS SMB** 中停用「*啟用高臨時目標時使用 SMB*」（詳情請見下文）：
 
-- 在「進階」第 9 個目標中：使用者可以在 OpenAPS SMB 中，為 100 mg/dL（5.6 mmol/L）或更高的**臨時目標**啟用「*高臨時目標會提高敏感度*」，讓 **AAPS** 提高敏感度。
+- Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
 
-- 在「進階」第 9 個目標中：使用者可以停用「*啟用高臨時目標時使用 SMB*」。如此一來，即使 **AAPS** 的活性碳水化合物大於 0、「啟用低臨時目標時使用 SMB」或「一律啟用 SMB」已開啟，且 OpenAPS SMB 正在運作，**AAPS** 在高臨時目標啟用期間仍不會給予 SMB。
+- Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
 
 注意：如果您在血糖低於 72 mg/dL 或 4 mmol/L 時開啟**碳水化合物**對話方塊，**AAPS** 會自動預先選取「**開始低血糖 TT**」切換開關。
 
@@ -219,9 +219,9 @@ AAPS 會以 160 mg/dL 或 8.9 mmol/L 為目標，持續 1 小時。
 
 ## 即將用餐臨時目標
 
-**臨時目標-即將用餐**可以幫助實現緩和的血糖下降，並確保在用餐前有充足的**胰島素庫存量**。
+**Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
 
-對於不會預先注射胰島素的使用者，這可能是很重要的工具。不過，**臨時目標－即將用餐**的效果會受到多項因素影響，包括使用者的設定、飲食是否為低碳水化合物，以及是否使用速效胰島素（例如 Fiasp 或 Lyumjev），以免需要預先注射胰島素。通常，除非使用者對**AAPS**有一定的經驗，否則在使用**臨時目標-即將用餐**時應該預期進行餐前注射，特別是在進食高碳水化合物飲食時。
+This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
 
 你可以在文章[「如何啟用‘即將用餐模式’」](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/)或[這裡](https://diyps.org/tag/eating-soon-mode/)了解更多關於「即將用餐模式」的訊息。
 
