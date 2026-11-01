@@ -9,7 +9,7 @@
 -   避免在血糖水平上升或下降时进行校准。
 -   请进行"充分"校准——在官方应用程序中，系统会提示您每天检查一至两次。对于DIY系统可能无校准提示，需谨慎对待长期未校准的情况。
 -   对于无需或无法校准的传感器，请至少每日检测一次真实血糖值。 AAPS系统的安全性与您传感器读数的可靠性直接相关。
--   If it all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
+-   If at all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
 
 ## 设置传感器 (G6)
 
@@ -38,4 +38,4 @@ You might try to change settings for noise blocking in xDrip (Settings - Inter-A
 
 ![Sensor age on the Sensor row of the expanded status panel](../images/main/main_status_row_expanded.png)
 
-The sensor age is shown on the **Sensor** row of the status panel on the main screen (tap the chevron to expand it). A negative age occurs if there is either a double "CGM Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Open **Treatments history** (menu ☰), select the **Careportal** tab and delete the wrong entry.
+The sensor age is shown on the **Sensor** row of the status panel on the main screen (tap the chevron to expand it). A negative age occurs if there is either a double "Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Open **Treatments history** (menu ☰), select the **Careportal** tab and delete the wrong entry.
