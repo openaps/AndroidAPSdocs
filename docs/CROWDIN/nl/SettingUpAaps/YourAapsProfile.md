@@ -135,9 +135,9 @@ Uit deze voorbeelden zie je: hoe _kleiner_ de **ISF**-waarde, hoe minder gevoeli
 
 ### Effect
 
-Een **lagere / sterkere ISF** (bijv. 40 in plaats van 50) betekent dat insuline je **BG** minder laat dalen per eenheid. Dit leidt tot een agressievere / sterkere correctie door de loop met **meer insuline**. Als je **ISF** te sterk is (kleine waarde), kan dit leiden tot een lage **BG**.
+A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. Dit leidt tot een agressievere / sterkere correctie door de loop met **meer insuline**. Als je **ISF** te sterk is (kleine waarde), kan dit leiden tot een lage **BG**.
 
-Een **hogere / zwakkere ISF** (bijv. 45 in plaats van 35) betekent dat insuline je **BG** meer laat dalen per eenheid. Dit leidt tot een minder agressieve / zwakkere correctie van de loop met **minder insuline**. Als je **ISF** te zwak is (grote waarde), kan dit leiden tot een hoge **BG**.
+A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. Dit leidt tot een minder agressieve / zwakkere correctie van de loop met **minder insuline**. Als je **ISF** te zwak is (grote waarde), kan dit leiden tot een hoge **BG**.
 
 **Voorbeeld:**
 * De **BG** is 190 mg/dl (10,5 mmol/l) en de streefwaarde is 100 mg/dl (5,6 mmol/l).
@@ -201,7 +201,7 @@ Het is normaal om op verschillende momenten van de dag een andere **ICR** te heb
 > 
 > BE-factor 2,4 E / 12 g   ===>   IC = 12 g / 2,4 E = 5,0 g/E
 > 
-> Omrekentabellen zijn online te vinden, bijv. [hier](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Effect
 
@@ -300,7 +300,7 @@ Profielhulp biedt gegevens van twee verschillende ziekenhuizen voor kinderen om 
 4. Ga naar het tabblad **Profiel 2**.
 5. Tik op **Profieltype** en kies "DPV Basis profiel".
 6. Pas het DPV Basis profiel (gebaseerd op de gegevens van een ander ziekenhuis) aan door de leeftijd van je kind, de TDD Totaal en het percentage basaal in te vullen. Let op: de DPV-gegevens geven alleen **basaalstanden**. Daarom worden IC en ISF voor dit profiel als nul getoond.
-7. Open het tabblad **Vergelijken**. Er wordt een vergelijking van de twee aangepaste profielen getoond (zie screenshot hieronder).
+7. Open the **Comparison** tab. Er wordt een vergelijking van de twee aangepaste profielen getoond (zie screenshot hieronder).
 8. Als je je profiel wilt gaan bijstellen op basis van een van deze voorstellen, gebruik dan de knop **Dupliceren** onderaan de vergelijking.
 
 ![Profielhulp kinderen 2](../images/ProfileHelperKids2.png)
@@ -350,6 +350,6 @@ Je kunt ook de [Profielhulp](#aaps-screens-profile-helper) (menu ☰ → **Profi
 4. Ga naar het tabblad **Profiel 2**.
 5. Kies bij **Profieltype** "Profiel wissel" om te kiezen uit de geschiedenis van al je **Profiel wisselingen**.
 6. Kies de **Profiel wissel** waarmee je wilt vergelijken.
-7. Open het tabblad **Vergelijken**. Er wordt een vergelijking van de twee profielen getoond (zie screenshot hieronder).
+7. Open the **Comparison** tab. Er wordt een vergelijking van de twee profielen getoond (zie screenshot hieronder).
 
 ![Profielhulp 2](../images/ProfileHelper2.png)
