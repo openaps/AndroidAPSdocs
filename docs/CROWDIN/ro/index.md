@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- 31 October 2026 : Version 4.0.0 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
+31 October 2026: Version 4.0.0 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
 
 ```
 
@@ -17,7 +17,7 @@ This documentation explains how to set up and use **AAPS**. You can navigate thr
 
 Section **1) Getting Started**, the [Introduction](Getting-Started/Introduction.md) explains the general concept of what an artificial pancreas system (APS) is designed to do. Acesta subliniază informațiile generale ale sistemului de tip buclă închisă, de ce **AAPS** a fost dezvoltat, compară **AAPS** cu alte sisteme, și adresează problematica de siguranță. Vă dă sugestii despre cum să vorbiți cu medicul curant despre **AAPS**, explică de ce trebuie să construiți aplicația **AAPS** singur/ă în loc să o descărcați pur și simplu, și oferă o privire de ansamblu despre conectivitatea tipică a sistemului **AAPS**. De asemenea abordează tematica accesibilității și discută despre cine ar putea să beneficieze de pe urma **AAPS**.
 
-[Pregătirea pentru AAPS](./Getting-Started/PreparingForAaps.md) oferă mai multe detalii despre elementele ce țin de siguranță, și despre telefoanele, senzorii de monitorizare continuă a glicemiei (CGM) și pompele de insulină compatibile cu **AAPS**. Oferă o privire de ansamblu despre procesul prin care veți trece, și oferă o cronologie aproximativă pentru obținerea unei funcționalități complete **AAPS**. Această secțiune vă pregătește din punct de vedere tehnic să vă puneți la punct configurarea **AAPS** cât mai repede și eficient posibil. The subsection [CGM Configuration](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
+[Pregătirea pentru AAPS](./Getting-Started/PreparingForAaps.md) oferă mai multe detalii despre elementele ce țin de siguranță, și despre telefoanele, senzorii de monitorizare continuă a glicemiei (CGM) și pompele de insulină compatibile cu **AAPS**. Oferă o privire de ansamblu despre procesul prin care veți trece, și oferă o cronologie aproximativă pentru obținerea unei funcționalități complete **AAPS**. Această secțiune vă pregătește din punct de vedere tehnic să vă puneți la punct configurarea **AAPS** cât mai repede și eficient posibil. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
 
 Acum că aveți o înțelegere solidă a procesului, puteți începe să faceți sistemul de buclă închisă **AAPS**.
 
@@ -40,7 +40,7 @@ Section **9) [Help & Troubleshooting](GettingHelp/WhereCanIGetHelp.md)** should 
 
 Section **10)** covers **[Advanced AAPS options](./AdvancedOptions/FullClosedLoop.md)** such as how to progress from using **AAPS** for hybrid-closed looping (bolusing for meals _etc._) to full closed looping (no bolusing), how to [tune your profile](./GettingHelp/ProfileTuning.md) and use Autotune, and details development and engineering modes. Majoritatea utilizatorilor se descurcă bine cu versiunea principală sau "Master" de **AAPS** fără să se mai uite la aceste opțiuni, această secțiune este pentru utilizatorii care au deja un control bun și caută să își îmbunătățească în continuare configurarea.
 
-In section **11) [How to support AAPS](SupportingAaps/HowToEditTheDocs.md)** we provide information so that you can support this project. Poți dona bani, echipamente sau expertiză. Poți sugera/face modificări chiar tu în documentație, ajuta cu [traducerea documentației](SupportingAaps/Translations) și să îți furnizezi datele în cadrul proiectului Open Humans.
+In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provide information so that you can support this project. Poți dona bani, echipamente sau expertiză. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations.md) and provide your data through the Open Humans project.
 
 Section **12) Resources**, contains archived or additional documentation, including a subsection for [clinicians](UsefulLinks/ClinicianGuideToAaps.md) who have expressed interest in open source artificial pancreas technology such as **AAPS**, or for patients who want to share such information with their clinicians, this topic is also addressed in the introduction. Mai multe referințe și resurse pentru diabet și sisteme buclă închisă sunt conținute, de asemenea, în această secțiune. It includes the [Glossary](./UsefulLinks/Glossary.md), a list of the acronyms (or short-term names) used throughout **AAPS**. Aici trebuie venit pentru a afla ce înseamnă termenii ISF sau TT, spre exemplu.
 
