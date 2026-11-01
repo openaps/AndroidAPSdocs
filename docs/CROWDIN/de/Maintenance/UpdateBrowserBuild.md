@@ -9,7 +9,7 @@ Du hast AAPS mit dem **AAPS Builder** erstellt? Dann brauchst Du diese Seite nic
 Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist **AAPS** nicht als Download verfügbar. Es ist zulässig, die App für den eigenen Gebrauch zu erstellen, aber du darfst keine Kopie an andere weitergeben! Zu den Details schaue bitte auf die [FAQ-Seite](../UsefulLinks/FAQ.md).
 
 ```{note}
-Falls Du **AAPS** zum ersten Mal mit einem Browser aktualisieren möchtest: Kopiere Deine gesicherte Keystore-Datei auf Dein Google Drive. Folge dann dem [Prozess für den **AAPS**-Browser Build](../SettingUpAaps/BrowserBuild.md) und nicht dieser Anleitung. Anstatt einen neuen Keystore zu erstellen, wählst Du den Keystore aus, den Du von Deinem Computer kopiert hast.
+In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Folge dann dem [Prozess für den **AAPS**-Browser Build](../SettingUpAaps/BrowserBuild.md) und nicht dieser Anleitung. Anstatt einen neuen Keystore zu erstellen, wählst Du den Keystore aus, den Du von Deinem Computer kopiert hast.
 Das musst Du nur beim ersten Mal machen. Für die danach folgenden Updates, kannst Du dann dieser Anleitung folgen.
 ```
 
@@ -57,7 +57,7 @@ Hinweis: Falls Du aus Versehen Deine AndroidAPS-Kopie geändert hast, siehst Du 
 
 ![Discard rogue modifications](../images/update/CI/GitHubUpdate4.png)
 
-Deine eigene Kopie ist jetzt synchronisiert (aktualisiert) und enthält die neueste freigegebene AAPS-Version. Gut gemacht.
+You have now synchronized (updated) your own copy with the latest release of **AAPS**. Gut gemacht.
 
 ![Repo sync'ed](../images/update/CI/GitHubUpdate5.png)
 
@@ -83,7 +83,7 @@ Deine eigene Kopie ist jetzt synchronisiert (aktualisiert) und enthält die neue
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. Es erscheint die Nachricht „Workflow run was successfully requested“. Mit dem Aktualisieren der Browser-Seite kannst Du den Build-Fortschritt mitverfolgen. Eine grünes Häkchen zeigt an, dass die Aktion „AAPS CI“ abgeschlossen ist. Du hast damit die aktualisierte AAPS-Version erfolgreich erstellt. Das bedeutet, dass Master und Wear apk nun direkt in Deinem Google Drive (wie unten beschrieben) gespeichert wurden. Die AAPSClient Apk kann in Github > nightscout > AndroidAPS [hier](https://github.com/nightscout/AndroidAPS/releases) heruntergeladen werden
+6. Es erscheint die Nachricht „Workflow run was successfully requested“. Mit dem Aktualisieren der Browser-Seite kannst Du den Build-Fortschritt mitverfolgen. Eine grünes Häkchen zeigt an, dass die Aktion „AAPS CI“ abgeschlossen ist. You have successfully built the updated version of **AAPS**. Das bedeutet, dass Master und Wear apk nun direkt in Deinem Google Drive (wie unten beschrieben) gespeichert wurden. Die AAPSClient Apk kann in Github > nightscout > AndroidAPS [hier](https://github.com/nightscout/AndroidAPS/releases) heruntergeladen werden
 
 
 ![Monitor Workflow](../images/update/CI/GitHubActions4.png)
