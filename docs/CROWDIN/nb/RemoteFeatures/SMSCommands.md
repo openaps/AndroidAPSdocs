@@ -201,10 +201,10 @@ Kolonnen *Aut.* i tabellene nedenfor viser om slik sterk autentisering kreves fo
 
 ### CGM-data
 
-| Kommando   | Aut. | Funksjon og *svar*                                                                                                                                                                            |
-| ---------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BG         | Nei  | Gir: siste BS, delta, IOB (bolus og basal), COB<br/>*Siste BS: 5,6 4min siden, Delta: -0,2 mmol, IOB: 0,20E (Bolus: 0,10E Basal: 0,10E)*                                                |
-| CAL 5.6/90 | Ja   | Kalibrerer CGM-en med verdien 5.6/90<br/>(bruk verdien som passer for glukoseenheten din)<br/>Fungerer bare hvis det er riktig satt opp i **AAPS**.<br/>*Kalibrering sendt* |
+| Kommando   | Aut. | Funksjon og *svar*                                                                                                                                                                                                               |
+| ---------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BG         | Nei  | Gir: siste BS, delta, IOB (bolus og basal), COB<br/>*Siste BS: 5,6 4min siden, Delta: -0,2 mmol, IOB: 0,20E (Bolus: 0,10E Basal: 0,10E)*                                                                                   |
+| CAL 5.6/90 | Ja   | Kalibrerer CGM-en med verdien 5.6/90<br/>(bruk verdien som passer for glukoseenheten din)<br/>Fungerer bare hvis det er riktig satt opp i **AAPS**.<br/>*Kalibrering sendt. Mottak må være aktivert i xDrip+.* |
 
 ### Pumpe
 
@@ -229,14 +229,14 @@ Noen pumper tar midlertidig basal bare i prosent, andre bare i E/t. Hvis du bruk
 
 ### Loop
 
-| Kommando          | Aut. | Funksjon og *svar*                                                                                                                                                                                                                               |
-| ----------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| LOOP STATUS       | Nei  | Svaret avhenger av gjeldende status:<br/> - *Loop er deaktivert* hvis loopen er deaktivert eller i LGS<br/> - *Loop er aktivert* hvis loopen er lukket eller åpen<br/> - *Pauset (10 m)* hvis loopen er frakoblet eller pauset |
-| LOOP STOP/DISABLE | Ja   | Pumpen går tilbake til den forhåndsprogrammerte basaldosen.<br/>*Loop har blitt deaktivert*                                                                                                                                                |
-| LOOP SUSPEND 20   | Ja   | *Loop pauset i 20 minutter*                                                                                                                                                                                                                      |
-| LOOP RESUME       | Ja   | *Loop gjenopptatt*                                                                                                                                                                                                                               |
-| LOOP CLOSED       | Ja   | *Nåværende kjøremodus: Lukket Loop*                                                                                                                                                                                                              |
-| LOOP LGS          | Ja   | *Nåværende kjøremodus: Stopp ved lavt BS*                                                                                                                                                                                                        |
+| Kommando          | Aut. | Funksjon og *svar*                                                                                                                                                                                                                                                                  |
+| ----------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LOOP STATUS       | Nei  | Svaret avhenger av gjeldende status:<br/> - *Loop er deaktivert* hvis loopen er deaktivert<br/> - *Loop er aktivert* hvis loopen er lukket, åpen eller i LGS<br/> - *Pumpe frakoblet* hvis pumpen er frakoblet<br/> - *Pauset (10 m)* hvis loopen er pauset |
+| LOOP STOP/DISABLE | Ja   | Pumpen går tilbake til den forhåndsprogrammerte basaldosen.<br/>*Loop har blitt deaktivert*                                                                                                                                                                                   |
+| LOOP SUSPEND 20   | Ja   | *Loop er pauset*                                                                                                                                                                                                                                                                    |
+| LOOP RESUME       | Ja   | *Loop gjenopptatt*                                                                                                                                                                                                                                                                  |
+| LOOP CLOSED       | Ja   | *Nåværende kjøremodus: Lukket Loop*                                                                                                                                                                                                                                                 |
+| LOOP LGS          | Ja   | *Nåværende kjøremodus: Stopp ved lavt BS*                                                                                                                                                                                                                                           |
 
 ### Bolus
 
@@ -348,6 +348,6 @@ Hvis den andre appen er installert på flere telefoner, må du slå av opplastin
 (sms-commands-too-many-messages)=
 ### Jeg får altfor mange tekstmeldinger fra SMS-kommandoer. Kan jeg redusere hyppigheten, eller få dem til å stoppe?
 
-Bruk av SMS-kommandoer kan gi mange automatiske meldinger fra **AAPS**-telefonen til omsorgspersonens telefon. Du får også meldinger som for eksempel «basalprofil i pumpen oppdatert» hvis du har satt opp automasjoner i **AAPS**. Det kan være nyttig å ha ubegrenset SMS i mobilabonnementet til **AAPS**-telefonen (og for hver omsorgspersontelefon som brukes) hvis det skal sendes mange SMS-er, og å slå av SMS-varsler, -alarmer og -vibrasjon på alle telefonene. Det er ikke mulig å bruke SMS-kommandoer uten å få disse oppdateringene. Derfor kan det hende du vil ha en annen måte å kommunisere direkte med barnet ditt på (hvis det er gammelt nok), i stedet for SMS. Vanlige alternative kommunikasjonsapper som omsorgspersoner med **AAPS** bruker, er WhatsApp, Lime, Telegram og Facebook Messenger.
+Bruk av SMS-kommandoer kan gi mange automatiske meldinger fra **AAPS**-telefonen til omsorgspersonens telefon. Du får også meldinger som for eksempel «basalprofil i pumpen oppdatert» hvis du har satt opp automasjoner i **AAPS**. Det kan være nyttig å ha ubegrenset SMS i mobilabonnementet til **AAPS**-telefonen (og for hver omsorgspersontelefon som brukes) hvis det skal sendes mange SMS-er, og å slå av SMS-varsler, -alarmer og -vibrasjon på alle telefonene. Det er ikke mulig å bruke SMS-kommandoer uten å få disse oppdateringene. Derfor kan det hende du vil ha en annen måte å kommunisere direkte med barnet ditt på (hvis det er gammelt nok), i stedet for SMS. Vanlige alternative kommunikasjonsapper som omsorgspersoner med **AAPS** bruker, er WhatsApp, LINE, Telegram og Facebook Messenger.
 
-Det er mulig å slå av SMS-en «Profil endret» når profilbyttet kommer fra Nightscout. For å gjøre dette lager du en fil med **nøyaktig** navnet  `do_not_send_sms_on_profile_change` i mappen `extra` i AAPS-mappen din.
+Det er mulig å slå av SMS-en «Basalprofil i pumpen er oppdatert» når profilbyttet kommer fra Nightscout. For å gjøre dette lager du en fil med **nøyaktig** navnet  `do_not_send_sms_on_profile_change` i mappen `extra` i AAPS-mappen din.
