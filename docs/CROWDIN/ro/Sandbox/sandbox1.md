@@ -54,7 +54,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Eticheta în mijlocul lui [nicăieri](#sandbox1-in-the-middle-of-nowhere) În schimb aceasta este eticheta de la [](#sandbox1-this-is-another-test) și ar trebui să afișeze numele său
 
-Links with anchor :
+Links with anchor:
 - [how long will it take?](#preparing-how-long-will-it-take)
 - [NSClient settings in Preferences](#Preferences-nsclient).
 - [prediction lines in AAPS OVERVIEW](#aaps-screens-prediction-lines) to header level 4
