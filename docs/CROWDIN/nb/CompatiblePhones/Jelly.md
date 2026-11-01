@@ -2,7 +2,7 @@
 
 ## Jelly Star Mini
 
-**Features**
+**Funksjoner**
 
 * Android 13
 * 8 GB RAM
