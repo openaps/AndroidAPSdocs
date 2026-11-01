@@ -12,13 +12,13 @@
 
 使用者的**設定檔**帶來的影響是：
 
-- _增加_ **IC** —透過增加「每5分鐘碳水化合物的吸收」，來縮短總吸收時間；
+- _increase_ **IC** - by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
 
 - _增加_ **ISF** —透過減少「每5分鐘吸收的碳水化合物」，來延長總吸收時間；以及
 
-- _更改_ **設定檔百分比** —將會同時增加/減少IC、ISF這兩個值，所以對碳水化合物吸收時間沒有影響。
+- _change_ **Profile Percentage** - increase/decrease both values thus has no impact on carbs absorption time.
 
-例如，如果使用者**設定檔**的**ISF** 是100，**I:C** 是5，則使用者的碳水化合物敏感性因子將為20。使用者的**血糖**每上升 20 mg/dL，**AAPS** 就會計算有 1 g 碳水化合物已被吸收。正向的**IOB** 也會影響**COB** 的計算。因此，如果 **AAPS** 預測使用者的**血糖**會因為**活性胰島素**而下降 20 mg/dL，但實際上血糖維持不變，**AAPS** 也會計算有 1 g 碳水化合物已被吸收。
+For example, if the user’s **Profile** **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. 使用者的**血糖**每上升 20 mg/dL，**AAPS** 就會計算有 1 g 碳水化合物已被吸收。正向的**IOB** 也會影響**COB** 的計算。因此，如果 **AAPS** 預測使用者的**血糖**會因為**活性胰島素**而下降 20 mg/dL，但實際上血糖維持不變，**AAPS** 也會計算有 1 g 碳水化合物已被吸收。
 
 碳水化合物也將通過下述方法進行吸收，具體方式取決於使用者的**AAPS** 中選擇的敏感性演算法。
 
@@ -47,7 +47,7 @@
 (CobCalculation-detection-of-wrong-cob-values)=
 ## 偵測錯誤的 COB 值
 
-假如演算法偵測到目前的 **COB** 計算不正確，**AAPS**  會在使用者準備進行注射時發出警告，這裡的 **COB** 是指之前吃東西輸入的碳水。在這種情況下，系統會在使用者使用注射嚮導後，於確認畫面上出現額外的提示
+**AAPS** will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. 在這種情況下，系統會在使用者使用注射嚮導後，於確認畫面上出現額外的提示
 
 ### AAPS 如何偵測錯誤的 COB 值？
 
@@ -62,7 +62,7 @@
 - 考慮取消這次治療—按「取消」而不是「確認」。
 - 用注射嚮導重新計算你即將吃的餐點，並且不要勾選 **COB**。
 - 如果需要修正注射，請手動輸入劑量。
-- 小心不要打太多，或者胰島素累積過多！
+- Be careful not to overdose or stack insulin!
 
 
 ### 為什麼演算法無法正確偵測 COB？
