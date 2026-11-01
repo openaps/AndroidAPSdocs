@@ -16,14 +16,14 @@ Wenn Du den **dynamischen ISF** einsetzt, deaktiviere alle **Automatisierungsreg
 
 Um den **dynamischen ISF** nutzen zu können, müssen in der **AAPS**-Datenbank mindestens **AAPS**-Daten der letzten 7 Tage vorliegen.
 
-## Was macht der dynamische ISF?
+## What does Dynamic ISF do?
 
 **Dynamischer ISF** passt den Faktor für die Insulinempfindlichkeit **ISF** dynamisch an und berücksichtigt dabei:
 
 - Den Tages-Gesamtinsulinbedarf (**TDD**); und
 - den aktuellen und die prognostizierten Glukosewerte.
 
-Wenn der **dynamische ISF** genutzt wird, werden die im **Profil** hinterlegten **ISF**-Werte im Regelfall nicht mehr genutzt. Für den Fall, dass nicht genügend TDD-Daten in der **AAPS**-Datenbank zur Verfügung stehen (*z. B.* wegen der Neuinstallation der App) wird jedoch auf die Profilwerte als Fallback zurückgegriffen.
+When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are not used at all anymore, except as a fallback if there is not enough TDD data in **AAPS** database (*i.e.* fresh reinstallation of the app).
 
 **SMB/AMA** - ein echtes Beispiel eines **Profils** mit statischem **ISF**, so wie es in der Praxis vorkommt und durch **SMB** und **AMA** genutzt wird.
 
@@ -37,7 +37,7 @@ Der rot eingekreiste Bereich zeigt: `Profil-ISF` -> `ISF wie er von DynISF` bere
 
 Der **DynISF**-Wert kann auch in einem Diagramm angezeigt werden: Tippe unter den Diagrammen auf dem Startbildschirm auf **Diagramm hinzufügen** und wähle **VSENS** (variable Empfindlichkeit). Er erscheint als weiße Linie (unten im Bild oben).
 
-## Wie wird der dynamische ISF berechnet?
+## How is Dynamic ISF calculated?
 
 **Dynamic ISF** verwendet das Modell von Chris Wilson, um **ISF** anstelle des statischen **ISF**-Wertes zu ermitteln, der im **Profil** festgelegt wurde. Weitergehende Erklärungen findest Du (in englischer Sprache) hier: [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
 
@@ -70,9 +70,8 @@ Dies wird getan, um zu hohe Insulinabgaben zu verhindern, wenn der **Glukosewert
 
 **Future ISF** (dt. zukünftiger ISF) nutzt die gleiche Formel, so wie sie oben beschrieben ist, mit der Ausnahme, dass es den **minimum predicted BG** (dt. niedrigste vorhergesagte Glukosewert) anstelle des **current BG** (dt. aktuellen Glukosewerts) verwenden kann. Der **minimale vorhergesagte BZ**, [wie ihn oref1 berechnet](#aaps-screens-how-predictions-become-a-dosing-decision), ist der niedrigste Wert, den Dein BZ laut den Vorhersagen im gesamten Vorhersagezeitraum erreicht.
 
-* Wenn der aktuelle **Glukosewert** über dem Ziel ist  <br/> **und** die **Glukosewerte** sich nur um +/- 3 mg/dl ändern:  <br/>Wird der Glukosewert in der Formel wie folgt genutzt:  `average(minimum predicted BG, current BG)`. Anm.: Das ist der Durchschnittswert der beiden Werte.
-* Wenn der mögliche **Glukosewert** (engl. eventual BG) über dem Ziel liegt und die Glukosewerte steigen,<br/>  
-  **oder** der mögliche **Glukosewert** liegt oberhalb des aktuellen **Glukosewerts**:<br/>Es wird als Glukosewert in der Formel der folgende Wert verwendet: aktueller Glukosewert (`current BG`).
+* If the current **BG** is above target<br/> **and** if **BG** levels are flat, within +/- 3 mg/dL:<br/>BG is used in the formula as follows: `average(minimum predicted BG, current BG)`.
+* If eventual **BG** is above target and glucose levels are increasing,<br/> **or** eventual **BG** is above current **BG**:<br/>BG is used in the formula as follows: `current BG`.
 * In allen anderen Fällen wird in der Formel als <br/>Glukosewert der niedrigste vorhergesagte Glukosewert (`minimum predicted BG`) genutzt.
 
 Die Screenshots unten geben eine vereinfachte Erklärung der oben beschriebenen Szenarien. Orange Punkte werden für **predicted BG**, lila-farbene Punkte für **average(predicted BG, current BG)** und blaue Punkte für **current BG** verwendet.
@@ -112,7 +111,7 @@ Der **Anpassungsfaktor** kann zwischen 1% und 300% liegen. Er wirkt als Multipli
 
 Der **Anpassungsfaktor** wird auch bei der Aktivierung eines [**prozentualen Profilwechsels**](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) verändert. Ein niedrigerer **Profil-Prozentsatz** senkt den **Anpassungsfaktor** und ein höherer **Profil-Prozentsatz** hebt in.
 
-Wenn beispielsweise der **Anpassungsfaktor** 80% ist, und es wird ein **Profilwechsel** auf 80% ausgelöst, dann ist der dann entstehende **Anpassungsfaktor** `0,8*0,8=0,64`.
+For example, if your **Adjustment Factor** is 80%, and **Profile Switch** to 80% is actioned, the resulting **Adjustment Factor** will be `0.8*0.8=0.64`.
 
 Das bedeutet, dass Du bei aktiviertem **dynamischen ISF**, einen **prozentualen Profilwechsel** nutzen kannst, um Deine Empfindlichkeit manuell zu „finetunen“. Dies kann für körperliche Aktivität (niedrigerer Prozentwert), Krankheit (höherer Prozentwert), etc. sehr helfen.
 
