@@ -108,12 +108,12 @@ Git ist ein Programm, das es Dir erlaubt Änderungen im Code zu verfolgen und mi
 (BuildingAaps-steps-for-installing-git)=
 #### Schritte zur Installation von Git
 
-1.  Überprüfe, ob Du **Git** nicht bereits installiert hast. Du überprüfst es, indem Du „git“ in die Windows-Suchleiste eingibst. Wenn **„Git bash“** oder eine andere Form von Git gefunden wird, ist es bereits installiert und Du kannst direkt zur [Installation von Android Studio](#install-android-studio) weitergehen:
+1.  Überprüfe, ob Du **Git** nicht bereits installiert hast. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. Sollte Git noch nicht installiert sein, lade die neueste Version für Dein System aus dem „Download“-Bereich [**hier**](https://git-scm.com/downloads) herunter und installiere sie. Jede aktuelle Git-Version sollte funktionieren, wähle die richtige Version nach deinem System, entweder Mac, Windows oder Linux.
+2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Jede aktuelle Git-Version sollte funktionieren, wähle die richtige Version nach deinem System, entweder Mac, Windows oder Linux.
 
 **Hinweis für Mac-Benutzer:** Die Git-Webseite schlägt vor, ein zusätzliches Programm namens "Homebrew" zu installieren, um die Installation zu unterstützen. Wenn Du git über homebrew installierst, musst Du keine Einstellungen ändern.
 
@@ -170,7 +170,7 @@ Sobald die Installation abgeschlossen ist, klicke auf "Next"
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-Im letzten Schritt klicke auf "Finished" (dt. Fertig), um Android Studio erstmalig zu starten.
+In the last step, click on "Finish" to start Android Studio for the first time.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
@@ -302,7 +302,7 @@ Sage Android Studio nun, wo Git, das Du [vorher](#install-git-if-you-dont-have-i
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-Klicke auf den Button „Test“ (1), um zu prüfen, ob **Android Studio** den **Pfad zur ausführbaren Datei git.exe** automatisch ermitteln kann:
+Check if **Android Studio** can automatically locate the correct **Path to Git executable** by clicking the button "Test" (1):
 
 ![Git Executable](../images/Building-the-App/039_GitTest.png)
 
@@ -369,7 +369,7 @@ If you have built AAPS before, do NOT create a new keystore but select your exis
 
 ```{admonition} WARNING!
 :class: warning
-Schreib Dir auf, wo Dein Keystore gespeichert wird. Du wirst es für Dein nächstes AndroidAPS-Update brauchen!
+Schreib Dir auf, wo Dein Keystore gespeichert wird. You will need it when you build the next AAPS update!
 ```
 
 * Wähle jetzt ein einfaches Passwort (und notiere es Dir), gib es in das Passwortfeld (2) ein und bestätige es (2).
