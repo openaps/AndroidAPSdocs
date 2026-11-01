@@ -39,7 +39,7 @@ Disse instruksjonene gjelder oppsett av Medtrum-insulinpumpen.
 
 En midlertidig null basal kan du få gjennom funksjonen «Koble fra pumpen» eller gjennom en kombinasjon av Deaktiver loop/midlertidig basal eller Pause loop/midlertidig basal.
 
-## Setup
+## Oppsett
 
 ```{caution}
 Når du aktiverer en patch med **AAPS**, **MÅ** du slå av alle andre enheter som kan snakke med Medtrum-pumpebasen, for eksempel en aktiv PDM eller Medtrum-appen.
@@ -69,7 +69,7 @@ Når den er valgt, viser kortet **Medtrum** to knapper, **Innstillinger** og **�
 
 **Åpne plugin** (eller **Administrer → Pumpe**) åpner Medtrum-pumpeskjermen. Du bruker den til å bytte patch og se pumpestatus. Før en patch er aktivert, ser den slik ut:
 
-![Medtrum-pumpeskjermen før paring](../images/v4/Pumps/medtrum_pump_screen.png)
+![Medtrum-pumpeskjermen før sammenkobling](../images/v4/Pumps/medtrum_pump_screen.png)
 
 (medtrum-step-2)=
 ### Steg 2: Endre Medtrum-innstillinger
@@ -79,7 +79,7 @@ Trykk på **Innstillinger** på kortet **Medtrum** i **Konfigurasjon** > **Pumpe
 ![Innstillinger for Medtrum-driveren](../images/v4/Pumps/medtrum_settings.png)
 
 ```{note}
-Det finnes ikke lenger noen innstilling for **Serienummer**. **AAPS** finner pumpebasen din med et Bluetooth-søk første gang du aktiverer en patch (se [Steg 3](#medtrum-activate-patch)), og husker serienummeret. For å bruke en annen pumpebase, se [Opphev paring](#medtrum-unpair).
+Det finnes ikke lenger noen innstilling for **Serienummer**. **AAPS** finner pumpebasen din med et Bluetooth-søk første gang du aktiverer en patch (se [Steg 3](#medtrum-activate-patch)), og husker serienummeret. For å bruke en annen pumpebase, se [Opphev sammenkobling](#medtrum-unpair).
 ```
 
 #### Alarminnstillinger
@@ -105,7 +105,7 @@ Denne innstillingen endrer hvordan **AAPS** viser varslinger for pumpeadvarsler 
 Vi anbefaler å la denne være aktivert når pumpealarmene er satt til **Stille**. I begge tilfeller vises disse advarslene også på Medtrum-pumpeskjermen under [Aktive alarmer](#medtrum-active-alarms).
 
 (medtrum-patch-expiration)=
-#### Patch utløpsdato
+#### Patch-utløp
 
 ***Standard: Aktivert.***
 
@@ -117,7 +117,7 @@ Hvis denne innstillingen er slått av, varsler ikke patchen deg før den stopper
 
 ***Standard: 72 timer.***
 
-Denne innstillingen endrer tidspunktet for utløpsvarselet. Når [Patch utløpsdato](#medtrum-patch-expiration) er aktivert, viser **AAPS** en varsling så mange timer etter aktiveringen.
+Denne innstillingen endrer tidspunktet for utløpsvarselet. Når [Patch-utløp](#medtrum-patch-expiration) er aktivert, viser **AAPS** en varsling så mange timer etter aktiveringen.
 
 #### Maks insulin per time [Enheter]
 
@@ -189,7 +189,7 @@ Du kan endre denne innstillingen når du bruker Medtrum-pumpen, men av sikkerhet
 
 #### Start aktiveringen
 
-Åpne [Medtrum-pumpeskjermen](#nano-overview) (**Administrer → Pumpe**) og trykk på **Bytte Patch**. Hvis du har satt opp [beskyttelse av innstillinger](#Preferences-protection), må du først skrive inn passordet eller PIN-koden din.
+Åpne [Medtrum-pumpeskjermen](#nano-overview) (**Administrer → Pumpe**) og trykk på **Bytt patch**. Hvis du har satt opp [beskyttelse av innstillinger](#Preferences-protection), må du først skrive inn passordet eller PIN-koden din.
 
 Hvis en patch allerede er aktiv, blir du bedt om å deaktivere den først, se [Deaktivere patch](#nano-deactivate-patch).
 
@@ -202,7 +202,7 @@ Sett patchen på kroppen og før inn kanylen bare når veiviseren sier det (ette
 De første stegene du ser, avhenger av oppsettet ditt:
 
 1. **Profil kreves**: bare hvis ingen profil er aktiv. Velg profilen som skal brukes, og fortsett.
-2. **Finn pumpe**: bare første gang, eller etter at du har brukt [Opphev paring](#medtrum-unpair). Koble pumpebasen til en ny patch for å slå den på. **AAPS** skanner etter Medtrum-pumpebaser i nærheten (navnene begynner med `MT`). Trykk på din i listen. **AAPS** lagrer serienummeret og går rett videre til fylling av patchen.
+2. **Finn pumpe**: bare første gang, eller etter at du har brukt [Opphev sammenkobling](#medtrum-unpair). Koble pumpebasen til en ny patch for å slå den på. **AAPS** skanner etter Medtrum-pumpebaser i nærheten (navnene begynner med `MT`). Trykk på din i listen. **AAPS** lagrer serienummeret og går rett videre til fylling av patchen.
 
    ![Steget Finn pumpe skanner etter en Medtrum-pumpebase](../images/medtrum/activation/FindPump.png)
 
@@ -271,7 +271,7 @@ Etter en ny aktivering bør du [eksportere innstillingene dine](../Maintenance/E
 
 ### Deaktivere patch
 
-For å deaktivere den aktive patchen, åpne [Medtrum-pumpeskjermen](#nano-overview) (**Administrer → Pumpe**) og trykk på **Bytte Patch**.
+For å deaktivere den aktive patchen, åpne [Medtrum-pumpeskjermen](#nano-overview) (**Administrer → Pumpe**) og trykk på **Bytt patch**.
 
 ![Deaktivere patch](../images/medtrum/activation/DeactivatePatch.png)
 
@@ -289,7 +289,7 @@ Når deaktiveringen er fullført, trekk nålen tilbake og ta patchen av kroppen.
 
 ### Gjenoppta avbrutt aktivering
 
-Hvis en patch-aktivering blir avbrutt, for eksempel fordi telefonbatteriet går tomt, kan du gjenoppta den. Åpne [Medtrum-pumpeskjermen](#nano-overview) (**Administrer → Pumpe**) og trykk på **Bytte Patch**.
+Hvis en patch-aktivering blir avbrutt, for eksempel fordi telefonbatteriet går tomt, kan du gjenoppta den. Åpne [Medtrum-pumpeskjermen](#nano-overview) (**Administrer → Pumpe**) og trykk på **Bytt patch**.
 
 ![Gjenoppta avbrutt aktivering](../images/medtrum/activation/ActivationInProgress.png)
 
@@ -328,7 +328,7 @@ Skjermen kan vise disse radene. Noen rader vises bare når de har en verdi.
 - **FW versjon**: firmwareversjonen til pumpebasen.
 - **Patch nr**: løpenummeret til den aktiverte patchen. Det øker med én hver gang du aktiverer en ny patch.
 - **Aktivering**: dato og klokkeslett da patchen ble aktivert, og hvor lenge siden det var.
-- **Patch utløper**: dato og klokkeslett når patchen utløper. Viser **Ikke aktivert** hvis [Patch utløpsdato](#medtrum-patch-expiration) er av.
+- **Patch utløper**: dato og klokkeslett når patchen utløper. Viser **Ikke aktivert** hvis [Patch-utløp](#medtrum-patch-expiration) er av.
 
 (medtrum-active-alarms)=
 ### Aktive alarmer
@@ -339,12 +339,12 @@ Denne raden viser alarmer som er aktive akkurat nå, for eksempel lavt reservoar
 
 Denne knappen oppdaterer statusen til patchen. Den er bare tilgjengelig når en patch er aktiv og **AAPS** ikke er koblet til pumpen i øyeblikket.
 
-### Bytte Patch
+### Bytt patch
 
 Denne knappen starter veiviseren for å bytte patch. Se [Aktiver patch](#medtrum-activate-patch) for mer informasjon.
 
 (medtrum-unpair)=
-### Opphev paring
+### Opphev sammenkobling
 
 Denne knappen vises bare når **AAPS** kjenner en pumpebase. Den sletter det lagrede serienummeret til pumpebasen og kobler fra. Neste gang du aktiverer en patch, skanner **AAPS** etter en pumpebase igjen (steget **Finn pumpe**). Bruk denne hvis du bytter til en annen pumpebase. Gjør dette bare når ingen patch er aktiv.
 
@@ -388,7 +388,7 @@ For kjente problemer med Bluetooth-tilkoblinger, frafall av pumpe/pods, eller pr
 
 ### Aktivering avbrutt
 
-Hvis aktiveringen blir avbrutt, for eksempel fordi telefonbatteriet er tomt eller telefonen krasjer, kan du gjenoppta den. Trykk på **Bytte Patch** på pumpeskjermen og følg stegene i [Gjenoppta avbrutt aktivering](#nano-resume-interrupted-activation).
+Hvis aktiveringen blir avbrutt, for eksempel fordi telefonbatteriet er tomt eller telefonen krasjer, kan du gjenoppta den. Trykk på **Bytt patch** på pumpeskjermen og følg stegene i [Gjenoppta avbrutt aktivering](#nano-resume-interrupted-activation).
 
 ### Forebygge patch-feil
 
