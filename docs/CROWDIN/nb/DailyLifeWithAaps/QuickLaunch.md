@@ -99,7 +99,7 @@ Hver av dine forhåndsinnstilte **[hurtigknapper](QuickWizards.md)** kan legges 
 
 Hurtigknapper som er satt til å vises bare på klokken, tilbys ikke. En hurtigknapp på verktøylinjen følger de samme reglene som i arket **Behandlinger**: den skjules utenfor sitt [gyldige tidsrom](#quickwizard_validity) og en kort stund etter bruk. Den blir værende i verktøylinje-oppsettet ditt og kommer tilbake når hurtigknappen kan brukes igjen.
 
-### Scenes
+### Scener
 
 Hver aktiverte **[scene](Scenes.md)** kan legges til som en knapp. Når du trykker på den, ber den om bekreftelse og aktiverer så scenen (den samme pakken med handlinger som du får fra skjermen Scener). Denne kategorien vises bare hvis du har minst én scene.
 
