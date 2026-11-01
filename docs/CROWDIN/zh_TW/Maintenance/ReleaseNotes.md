@@ -52,7 +52,7 @@ UpdateAaps3204.md
 WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 ```
 
-**Release notes of the latest version of each major release**. For all other versions, see the [releases on GitHub](https://github.com/nightscout/AndroidAPS/releases).
+**各主要版本最新版本的版本資訊**。其他版本請參閱 [GitHub 上的版本發布資訊](https://github.com/nightscout/AndroidAPS/releases)。
 
 (latestrelease)=
 
@@ -77,7 +77,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 - 胰島素管理：胰島素目錄、暱稱，以及在設定檔和嚮導中選擇胰島素 @Philoul
 - 校正外掛 @MilosKozak
 - [平滑處理](../CompatibleCgms/SmoothingBloodGlucoseData.md)：無跡卡爾曼濾波器（UKF）@piecycle
-- New [automation actions](#automations-automation-action): **Change smoothing** @olorinmaia, and **Run**, **Enable** or **Disable scene** @MilosKozak
+- 新增[自動化動作](#automations-automation-action)：**變更平滑處理** @olorinmaia，以及**執行**、**啟用**或**停用場景** @MilosKozak
 - [注射部位輪替](#Aapsscreens-site-rotation)：追蹤並輪替輸注部位 @Philoul @MilosKozak
 - [Autotune](../AdvancedOptions/Autotune.md) 改版 @Philoul
 - 新增[小工具](../DailyLifeWithAaps/Widgets.md) @MilosKozak @t1dude
@@ -176,7 +176,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
    - 新版本可用（對 AAPS 沒有影響）
    - 應用程式在未來的某個日期到期（對 AAPS 仍然沒有影響）/ 已經過期（AAPS 會轉為 LGS 模式）
 
-Other changes: [release notes on GitHub](https://github.com/nightscout/AndroidAPS/releases/tag/3.3.2.0).
+其他變更：[GitHub 上的版本資訊](https://github.com/nightscout/AndroidAPS/releases/tag/3.3.2.0)。
 
 ---
 
