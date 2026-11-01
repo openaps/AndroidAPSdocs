@@ -15,7 +15,7 @@
 ![DanaR 幫浦](../images/danar1.png)
 
 * 進入主選單 > 設置 > 探索
-* 在手機設置中進入藍牙，掃描附近的設備，選擇你的 DanaR 序列號，並輸入你的密碼（配對密碼為 0000）。如果 DanaR 未出現在掃描中，請重新啟動手機並將 DanaR 電池取出，重新安裝，然後再次開始這兩個步驟。
+* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). 如果 DanaR 未出現在掃描中，請重新啟動手機並將 DanaR 電池取出，重新安裝，然後再次開始這兩個步驟。
 
 * 在 **AAPS** 中，開啟左上角的**選單**（☰），前往**組態設定工具** > **幫浦**，然後選擇你使用的 DanaR 類型（**DanaR**、**DanaR Korean** 或 **DanaRv2**）。
   
