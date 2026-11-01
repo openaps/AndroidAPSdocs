@@ -6,7 +6,7 @@
 這是<a href="BrowserBuild.md">瀏覽器建置</a>的**步驟 2**。請先完成<a href="BrowserBuildFork.md">步驟 1－建立 GitHub 複刻</a>。
 ```
 
-AndroidAPS 必須使用儲存在**Java 金鑰庫（JKS）**中的私密金鑰進行簽署。這是整個流程中最重要的決定，因為它會影響您之後是否能在不重新安裝的情況下**升級** AAPS。
+AAPS must be signed with private keys stored in a **Java KeyStore (JKS)**. 這是整個流程中最重要的決定，因為它會影響您之後是否能在不重新安裝的情況下**升級** AAPS。
 
 ```{note}
 接下來，您會將私密資訊（金鑰庫，以及稍後的 Google 雲端硬碟存取權）以**機密**的形式儲存在 GitHub 中。機密就是經過加密的值，只有您自己的建置程序可以讀取；其他人都看不到，即使是查看您複刻版本的人也一樣。這樣就能確保您的建置版本只屬於您。
@@ -74,7 +74,7 @@ AndroidAPS 必須使用儲存在**Java 金鑰庫（JKS）**中的私密金鑰進
 
 2. **執行匯出工作流程：**
    - 前往您的儲存庫中的 **Actions** 標籤
-   - 選擇 **CI KeyStore Export**
+   - Select **CI Keystore Export**
    - 點擊 **執行工作流程**
    - 匯出的金鑰庫 ZIP 檔案將會保存在您的 Google 雲端硬碟中
 
