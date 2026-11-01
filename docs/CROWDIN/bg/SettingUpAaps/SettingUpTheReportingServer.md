@@ -43,8 +43,8 @@ Nightscout се предоставя като софтуер с отворен �
 Tidepool е достъпен в **AAPS** от версия 3.2, която излезе в края на 2023 г.
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
-:class: danger  
-Тъй като при използване на **AAPS** има закъснение от три часа между получаването на данните и показването им в отчетите, Tidepool не е подходящ за споделяне на информация в реално време с болногледачите.  
+:class: danger
+As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool is not suitable for sharing real-time information with caregivers.  
 От друга страна, Tidepool може да бъде отлично решение за споделяне на отчети с ендокринолога на пациента, ако Nightscout не е приемливо решение.  
 ```
 
