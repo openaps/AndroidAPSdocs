@@ -57,7 +57,7 @@ As you are not getting any insulin while the pump is disconnected, you should re
 (pumps-cannulas-announce-insulin)=
 ## To announce delivered insulin without actually bolusing
 
-Para informar insulina dada pela bomba enquanto o **AAPS** estava desconectado, ou injeções com caneta: abra o [diálogo Insulina](#aaps-screens-buttons-insulin) (**Tratamentos** na navegação inferior, ou um botão do acesso rápido), digite a quantidade em unidades e ative **Bólus será apenas registrado (não administrado pela bomba)**. Uma linha **Hora** (definida como **Agora**) permite então registrar a hora real da injeção: você pode ignorá-la se a injeção foi dada há pouco tempo. Se o bólus foi dado há algum tempo, use **-** para voltar a hora (_por exemplo,_ -30 min), ou abra a linha com a seta para escolher a data e a hora exatas. O **AAPS** então considera a duração da ação da insulina e calcula a insulina que ainda resta no corpo.
+To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. Uma linha **Hora** (definida como **Agora**) permite então registrar a hora real da injeção: você pode ignorá-la se a injeção foi dada há pouco tempo. Se o bólus foi dado há algum tempo, use **-** para voltar a hora (_por exemplo,_ -30 min), ou abra a linha com a seta para escolher a data e a hora exatas. O **AAPS** então considera a duração da ação da insulina e calcula a insulina que ainda resta no corpo.
 
 Se você usa o **AAPS** como cuidador, pode desconectar (e reconectar) a bomba à distância muito facilmente por [comando SMS](../RemoteFeatures/SMSCommands.md), com comandos como "pump disconnect 120" e "pump connect 120". The range of duration for remote disconnect is from 1 - 120 min, (in this example it is 120 minutes). Isso é muito útil quando é difícil acessar o telefone com o **AAPS**: guardado na cintura de uma criança que está correndo para a piscina, ou bem guardado (ou em uso) por um adolescente.
 
@@ -92,7 +92,7 @@ Which strategy you prefer is highly personal, and is best determined by trial an
 
 ![Diálogo Perfil do usuário para rotação do local](../images/SiteRotation/Type.png)
 
-*Observação: esta configuração define se o diálogo Rotação do local (modo de edição) abre automaticamente ou não quando uma nova entrada é feita pelo botão "Purgar/Preencher" ou pelo botão "Inserção do sensor" do CGM*
+*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
 
 - Para uma troca de local feita diretamente na bomba, você precisa abrir o modo de visualização e editar a nova entrada para escolher o local e a seta
 
@@ -100,7 +100,7 @@ O modo de edição permite escolher o local, a seta e a nota da entrada selecion
 
 - A entrada em edição aparece abaixo das imagens do corpo, com o ícone do tipo (cânula ou sensor)
 - As vistas da frente e de trás aparecem lado a lado: toque na área onde você colocou a cânula ou o sensor
-- Depois de selecionar um local (destacado em verde), você vê na lista abaixo todas as entradas feitas neste local nos últimos 45 dias
+- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
 
 ![Modo de edição](../images/SiteRotation/EditMode.png)
 
