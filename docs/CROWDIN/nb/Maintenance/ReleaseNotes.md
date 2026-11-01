@@ -188,7 +188,7 @@ Full endringslogg: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4
 
 **Versjon 3.4.2.0**
 
-Utgivelsesdato: 04-02-2026
+Utgivelsesdato: 02-04-2026
 
 - Equil: rettet motstand for ulike modeller @hhfcvmars
 - Tidepool: rettet økt @MilosKozak
@@ -201,7 +201,7 @@ Utgivelsesdato: 04-02-2026
 
 **Versjon 3.4.1.0**
 
-Utgivelsesdato: 03-08-2026
+Utgivelsesdato: 08-03-2026
 
 **Kjerne**
 
@@ -212,8 +212,8 @@ Utgivelsesdato: 03-08-2026
 
 **Forbedringer i pumpedrivere**
 
-- **Omnipod Dash**: BLE-driverkoden er flyttet til modulen omnipod/common @jwoglom
-- **Omnipod Dash**: forsøk på å rette tilkoblingsstatus @MilosKozak
+- **Omnipod DASH**: BLE-driverkoden flyttet til modulen omnipod/common (refaktorering) @jwoglom
+- **Omnipod DASH**: forsøk på å rette tilkoblingsstatus @MilosKozak
 - **Omnipod**: validerer profilen før pod-aktivering for å unngå at pods kastes bort (#4534) @brianV
 - **Medtronic**: rettet at samme kodingstype ble vist i innstillingsdialogen @mifi100
 - **Medtronic**: forberedt felles pumpeklasser (forberedelse for Tandem) @andy-rozman
@@ -502,7 +502,7 @@ Utgivelsesdato: 29-12-2024
 
 * [Enkelmodus](#preferences-simple-mode) er aktivert som standard ved ny installasjon @MilosKozak
 * Nye valg for [Hurtigknapp](#Preferences-quick-wizard) @radicalb
-  * Hurtigknapp bruker nå samme logikk for bolusberegning og visning som kalkulatoren. Du kan nå bruke feltet «karbotid» i Hurtigknapp til forhåndsbolus.
+  * Hurtigknapp bruker nå samme logikk for bolusberegning og visning som kalkulatoren. Du kan nå bruke feltet «Karbotid» i Hurtigknapp til å gi forhåndsbolus.
 * Ny [meny for grafskala](#aaps-screens-main-graph); forbedringer i brukergrensesnittet for [menyen for ekstra grafer](#AapsScreens-activate-optional-information) @Philoul
 * [Bedre layout i ConfigBuilder](../SettingUpAaps/ConfigBuilder.md) @MilosKozak
   * Seksjonene er nå skjult som standard. Bruk pilen for å utvide.
@@ -618,7 +618,7 @@ Utgivelsesdato: 23-10-2023
 
 v1 er den gamle protokollen for utveksling av data mellom NS-nettsiden og NS-serveren. Den har mange begrensninger
 - v1 sender bare 2 dager med data
-- v1 sender alle 2 dagene med data ved hver ny tilkobling
+- v1 sender alle data for 2 dager ved hver ny tilkobling
 - websockets må brukes = permanent tilkobling, høyere batteriforbruk
 - ved hyppige frakoblinger fra NS settes tilkoblingen på pause i 15 minutter for å hindre høyt dataforbruk
 
@@ -639,7 +639,7 @@ ANBEFALT INNSTILLING
 - på grunn av alt dette bør du velge bare én metode og bruke den på alle enheter (husk at alle andre opplastere bruker v1 når dette skrives). Hvis du velger v3, velg v3 i AAPS og i alle AAPSClient-apper
 - v3 foretrekkes fordi den er mer effektiv
 - om du bruker websockets med v3 eller ikke, er opp til deg
-- det anbefales STERKT å la AAPS samle alle data og så laste dem opp til NS som eneste opplaster. Alle andre enheter/apper bør bare lese fra NS. Slik unngår du konflikter og synkroniseringsfeil. Dette gjelder også når BS-data sendes til NS via Dexcom Share-kobling og lignende
+- det anbefales STERKT å la AAPS samle inn alle data og deretter laste dem opp til NS som eneste opplaster. Alle andre enheter/apper bør bare lese fra NS. Slik unngår du konflikter og synkroniseringsfeil. Dette gjelder også når BS-data sendes til NS via Dexcom Share-kobling og lignende
 
 ---
 
