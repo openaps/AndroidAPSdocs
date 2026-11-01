@@ -49,7 +49,7 @@ There are uncommitted changes.
 
   * Πρέπει να δείτε ένα μήνυμα που λέει ποια έκδοση του Git είναι εγκατεστημένη, όπως φαίνεται στο παραπάνω στιγμιότυπο. Σε αυτή την περίπτωση, πηγαίνετε στο [Βήμα 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * Αν δείτε ένα μήνυμα που λέει
+  * In case you get a message saying
     ```
     Git: command not found
     ```
@@ -59,13 +59,13 @@ There are uncommitted changes.
 
   * Αν έχετε Windows και μόλις εγκαταστήσατε το Git, πρέπει να επανεκκινήσετε τον υπολογιστή σας, ώστε το Git να είναι διαθέσιμο παντού μετά την εγκατάσταση
 
-  * Αν το Git είναι εγκατεστημένο, έχετε κάνει επανεκκίνηση (σε Windows) και το Git ακόμη δεν βρίσκεται:
+  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
 
   * Αναζητήστε στον υπολογιστή σας ένα αρχείο "git.exe".
 
     Σημειώστε σε ποιον φάκελο είναι αποθηκευμένο.
 
-  * Μεταβείτε στις μεταβλητές περιβάλλοντος (Environment variables) των Windows, επιλέξτε τη μεταβλητή "PATH" και πατήστε edit (επεξεργασία). Προσθέστε τον φάκελο όπου βρήκατε την εγκατάσταση του Git.
+  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Προσθέστε τον φάκελο όπου βρήκατε την εγκατάσταση του Git.
 
   * Αποθηκεύστε και κλείστε.
 
@@ -139,7 +139,7 @@ The maximum compatible Gradle JVM version is 19.
 Cause: error: invalid source release: 21
 ```
 
-Αν δείτε το παραπάνω μήνυμα σφάλματος, πρέπει να κατεβάσετε μια σωστή έκδοση JVM πριν δοκιμάσετε ξανά το build:
+If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
 
 1.  Ελέγξτε στον [πίνακα απαιτήσεων](#Building-APK-recommended-specification-of-computer-for-building-apk-file) ποια έκδοση JVM χρειάζεστε για την έκδοση του **AAPS** που δημιουργείτε, και σημειώστε την.
 
@@ -252,7 +252,7 @@ Cause: error: invalid source release: 21
 
 ## Το apk εγκαταστάθηκε, αλλά με την παλιά έκδοση
 
-Αν δημιουργήσατε την εφαρμογή με επιτυχία, τη μεταφέρατε στο τηλέφωνό σας και την εγκαταστήσατε με επιτυχία, αλλά ο αριθμός έκδοσης έμεινε ίδιος, τότε ίσως ξεχάσατε να [ενημερώσετε το τοπικό σας αντίγραφο](#Update-to-new-version-update-your-local-copy)
+If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
 
 ## Τίποτα από τα παραπάνω δεν βοήθησε
 
