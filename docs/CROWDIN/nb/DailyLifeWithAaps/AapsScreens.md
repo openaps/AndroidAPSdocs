@@ -17,7 +17,7 @@ Dette er det første skjermbildet du møter når du åpner **AAPS**, og det inne
 
 * **Menyen** (☰) til venstre åpner sidemenyen med **Behandlingshistorikk**, **Historikkleser**, **Statistikk**, **Profilhjelper**, **Vedlikehold**, **Oppsettveiviser**, **Konfigurasjon** og mer.
 * **Søkefeltet** finner innstillinger, dialoger og dokumentasjon — bare begynn å skrive (se [Globalt søk](../DailyLifeWithAaps/GlobalSearch.md)).
-* Ikonet **Innstillinger** (tannhjul) til høyre åpner alle [innstillingene](../SettingUpAaps/Preferences.md).
+* Ikonet **Innstillinger** (tannhjul) til høyre åpner alle [Innstillinger](../SettingUpAaps/Preferences.md).
 
 (aaps-screens-profile--target)=
 
@@ -247,6 +247,8 @@ Hvis grensen for advarsel er overskredet, vises verdiene i gult.
 
 Hvis grensen for kritisk er overskredet, vises verdiene i rødt.
 
+The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
+
 Grensene kan endres via det lille **Innstillinger**-ikonet som vises når statusraden er **utvidet** (pilen til høyre) — se [Statuslys](#Preferences-status-lights).
 
 Det utvidede statuspanelet har også en knapp på slutten av noen rader for å registrere et bytte, som nullstiller den tilhørende alderen: **Legg til** på raden **Sensor** registrerer et sensorbytte. Hvis pumpen din støtter det, vises **Prime/fylling** på radene **Kanyle** (eller **Patchpumpe**) og **Insulin**, og **Legg til** på raden **Pumpebatteri**.
@@ -303,6 +305,14 @@ Hold fingeren på skjermen og flytt den til venstre eller høyre for å gå fra 
 Dette virker på samme måte på de [ekstra grafene](#aaps-screens-additional-graphs) under BS-grafen (IOB, COB ...): trykk og hold på hvilken som helst av dem.
 
 ![Trykk og hold på BS-grafen: vinduet viser tid, BS, IOB og basal](../images/main/graph_press_and_hold.png)
+
+(aaps-screens-graph-clock-change)=
+
+#### Clock changes
+
+When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
+
+![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
@@ -459,6 +469,8 @@ Viser sensitiviteten slik [Dynamisk ISF (DynISF)](../DailyLifeWithAaps/DynamicIS
 
 Disse dataene kan være tilgjengelige når du bruker en [Wear OS-smartklokke](../WearOS/WearOsSmartwatch.md). Aktiver dem i **AAPS** Wear-appen og gi tillatelse til helsedata.
 
+Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
+
 #### Avvik (DEV)
 
 * **Grå** stolper viser et avvik som skyldes karbohydrater.
@@ -607,11 +619,15 @@ Feltet **Karbotid** er for forhåndsbolus, slik at du kan fortelle systemet at d
 
 ![Sett alarm for karbohydrater fram i tid](../images/Home2021_BolusWizard_EatingReminder.png)
 
-Påminnelsen ringer som en **AAPS**-alarm. Den lager ikke et nedtellingsur i klokke-appen på telefonen, og den virker også når bolusen ble lagt inn fra **AAPSClient** mens **AAPS** kjørte i bakgrunnen.
+The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
 
-Feltet **BS** er vanligvis allerede fylt ut med den siste målingen fra CGM-en din. Hvis du ikke har en CGM som virker, er feltet tomt. Når målingen er fersk, forblir raden **BS** sammenfoldet.
+![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
 
-Resultatknappen nederst viser den foreslåtte bolusen; når du trykker på den, ber den om bekreftelse før noe insulin gis.
+![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
+
+Feltet **BS** er vanligvis allerede fylt ut med den siste målingen fra CGM-en din. Hvis du ikke har en CGM som virker, er feltet tomt. Når målingen er fersk, forblir raden **BS** sammenfoldet. The field follows new readings while the wizard is open, until you change it yourself.
+
+Resultatknappen nederst viser den foreslåtte bolusen; når du trykker på den, ber den om bekreftelse før noe insulin gis. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
 
 Greit å vite:
 
