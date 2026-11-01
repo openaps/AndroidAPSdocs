@@ -12,7 +12,7 @@ Aplikację AAPS możesz zbudować na trzy sposoby:
 
 ### Budowanie w przeglądarce (zalecane)
 
-Możesz zbudować aplikację na smartfonie za pomocą GitHub Actions. Na telefonie z Androidem przeprowadzi Cię przez to strona konfiguracji [AAPS Builder](#aaps-builder), a każde budowanie uruchamiasz sam. Na komputerze albo iPhonie możesz też budować z forkiem i zapisać aplikację na swoim Dysku Google.
+You can build the app in a web browser using GitHub Actions. Na telefonie z Androidem przeprowadzi Cię przez to strona konfiguracji [AAPS Builder](#aaps-builder), a każde budowanie uruchamiasz sam. Na komputerze albo iPhonie możesz też budować z forkiem i zapisać aplikację na swoim Dysku Google.
 
 **[Postępuj zgodnie z tymi instrukcjami.](./BrowserBuild.md)**
 
