@@ -29,7 +29,7 @@ Přijímání dat z Nightscoutu (změny profilu, ošetření, ...) je volitelné
 
 #### Nesynchronizujte z Nightscoutu
 
-Pokud necháte všechny volby „Přijímat ... z NS“ vypnuté, AAPS nepoužije žádnou změnu z Nightscoutu:
+Keeping all the "Receive … from NS" options disabled makes sure no Nightscout change will be used by AAPS:
 
 ![Nightscout pouze nahrávání](../images/preferences/settings_nsclient_sync.png)
 
