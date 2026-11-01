@@ -2,7 +2,7 @@
 
 **Deze beschrijving is alleen voor het bewerken van de Engelse documentatie. Alle nieuwe informatie moet eerst in het Engels worden toegevoegd. Als je de wiki naar andere talen wilt vertalen (waarvoor dank!), dan gebruik je [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-Tips over het opmaken van tekst (kop, vet...) en het maken van links vind je in het deel ["Codesyntax"](#code-syntax) op deze pagina.
+For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
 
 ## Algemeen
 
@@ -34,11 +34,11 @@ Of klik op het potloodicoon dat in de bovenste balk van de te bewerken pagina ve
 
 3. Met een van de opties in stap 2 wordt een nieuwe branch gemaakt in JOUW repository. Daar worden je wijzigingen opgeslagen. Maak je wijzigingen in het bestand.
 
-We gebruiken markdown voor de pagina's van de docs. De bestanden hebben de extensie ".md". De Markdown-specificatie ligt niet vast. We gebruiken op dit moment de myst_parser voor onze markdown-bestanden. Let op dat je de juiste syntax gebruikt, zoals [hieronder beschreven](#code-syntax).
+We gebruiken markdown voor de pagina's van de docs. De bestanden hebben de extensie ".md". De Markdown-specificatie ligt niet vast. We gebruiken op dit moment de myst_parser voor onze markdown-bestanden. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
 
 ![Branch bewerken](../images/PR3.png)
 
-4. Je hebt gewerkt in het tabblad "<>Edit file". Kies het tabblad "Preview changes" om met een frisse blik te controleren of alles wat je veranderd hebt eruitziet zoals je bedoelde (typfouten enz.). Zie je nog iets dat beter kan, ga dan terug naar het tabblad om te bewerken en maak meer verbeteringen. 
+4. Je hebt gewerkt in het tabblad "<>Edit file". Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Zie je nog iets dat beter kan, ga dan terug naar het tabblad om te bewerken en maak meer verbeteringen. 
 
 ![voorbeeldweergave](../images/PR5.png)
 
@@ -54,7 +54,7 @@ We gebruiken markdown voor de pagina's van de docs. De bestanden hebben de exten
 
 ![PR volgen](../images/PR7.png)
 
-PS: Je fork en branch blijven gewoon in je eigen GitHub-account staan. Als je een melding krijgt dat je PR is samengevoegd (merged), kun je je branch verwijderen als je er klaar mee bent (de meldingen uit stap 8 geven een link om de branch te verwijderen zodra die gesloten of samengevoegd is). Volg je bij volgende wijzigingen deze werkwijze, dan begin je altijd met een bijgewerkte versie van de AndroidAPSdocs repositories. Kies je een andere manier om een PR te starten (bijvoorbeeld bewerken vanaf de master branch van je eigen fork), dan moet je zorgen dat je repo bijgewerkt is. Doe dan eerst een "compare" en voeg alle updates samen die er zijn sinds je je fork voor het laatst hebt bijgewerkt. Mensen vergeten vaak hun repo bij te werken. Daarom raden we aan om de PR-werkwijze hierboven te gebruiken, tot je gewend bent aan het doen van een "compare".
+PS: Je fork en branch blijven gewoon in je eigen GitHub-account staan. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Volg je bij volgende wijzigingen deze werkwijze, dan begin je altijd met een bijgewerkte versie van de AndroidAPSdocs repositories. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Mensen vergeten vaak hun repo bij te werken. Daarom raden we aan om de PR-werkwijze hierboven te gebruiken, tot je gewend bent aan het doen van een "compare".
 
 (edit-the-docs-code-syntax)=
 
@@ -69,7 +69,7 @@ De schrijver geeft bijvoorbeeld alleen aan dat een kop een kop van niveau 1 is. 
 Het idee hierachter is dat
 
 - de schrijver eerst aan de tekst denkt en niet aan de opmaak,
-- de markdown-tekst uitwisselbaar is tussen verschillende markdown-tools, in plaats van bijvoorbeeld gesloten tools zoals Microsoft Windows, en
+- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
 - je meerdere uitvoerformaten kunt maken uit één markdown-bestand.
 
 Markdown is geen 100% vaste standaard, en we proberen zo dicht mogelijk bij de standaard te blijven, om
@@ -219,9 +219,9 @@ Je kunt ook inklapbare notities toevoegen voor gedetailleerde informatie, zodat 
     Dit is een waarschuwing.
     
 
-    ```{admonition} Kop van de waarschuwing
+    ```{admonition} Warning headline
     :class: warning
-    Dit is een waarschuwing.
+    This is a warning.
     ```
     
     #### Inklapbare notities
@@ -244,7 +244,7 @@ Je kunt ook inklapbare notities toevoegen voor gedetailleerde informatie, zodat 
 
 ## Tabellen
 
-Vermijd tabellen met lange teksten. De inhoud is lastig op te maken in Markdown, ze passen meestal niet op de breedte van een telefoonscherm, en na vertaling zien ze er waarschijnlijk anders uit.
+Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
 
 ## Stijlgids
 
@@ -262,9 +262,9 @@ Vermijd tabellen met lange teksten. De inhoud is lastig op te maken in Markdown,
 
 Gebruik waar mogelijk eenvoudig Engels. Dat helpt lezers die geen moedertaalspreker zijn, en het maakt het vertalen van AAPS-documenten naar andere talen makkelijker. Schrijf alsof je een gesprek voert met de gebruiker. Stel je voor dat je aan een bureau zit tegenover de persoon voor wie je schrijft. Onthoud: de meeste AAPS-gebruikers hebben geen achtergrond in programmeren. Ook diabetes zelf heeft veel vakjargon en afkortingen. Denk eraan dat sommige mensen pas de diagnose hebben gekregen, minder ervaring hebben met diabetes dan jij, of een andere diabetesopleiding hebben gehad. Gebruik je een verkorte vorm of afkorting, schrijf die dan de eerste keer voluit, met de afkorting direct erna tussen haakjes, zoals “super micro bolus (SMB)”. Link ook naar de woordenlijst. Technische termen die de lezer misschien niet kent, kun je ook tussen haakjes toevoegen.
 
-In plaats van: *“What causes high postprandial BG peaks in closed loop?"*
+Instead of: *“What causes high postprandial BG peaks in closed loop?”*
 
-Gebruik: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
+Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
 
 ##### Gebruik eenvoudige woorden die iedereen begrijpt
 
@@ -296,7 +296,7 @@ Vooral als je video of schermafbeeldingen opneemt: zorg dat je je privégegevens
 
 Opdrachten zijn de snelste manier om instructies te geven. Maar schrijvers zijn soms bang om opdrachten te geven en schrijven “you should do this” in plaats van gewoon “do this”. Misschien zijn mensen bang dat opdrachten te streng klinken. Dat los je vaak op door het woord 'please' ervoor te zetten. Maar als iets echt moet gebeuren, zeg je beter geen ‘please’, omdat de lezer dan de keuze krijgt om te weigeren.
 
-In plaats van: *“You should just think of it as a complete statement."*
+Instead of: *“You should just think of it as a complete statement.”*
 
 Gebruik: *“Think of it as a complete statement.”*
 
@@ -310,7 +310,7 @@ Voorbeeld van een **actief werkwoord**:
 
 Voorbeeld van een **passief werkwoord**:
 
-- *“The insulin (subject) is delivered (verb) by the pump (object)”*
+- *“The insulin (subject) is delivered (verb) by the pump (object).”*
 
 *“delivered”* is hier een passief werkwoord. Onderwerp en voorwerp zijn omgedraaid, vergeleken met de zin met het actieve werkwoord. We moesten de zin langer maken door “is” en “by the” toe te voegen. Overweeg ook om met het actieve werkwoord te beginnen.
 
@@ -453,7 +453,7 @@ Een handleiding is bedoeld om een gebruiker die het al kan te helpen een bepaald
 
 - HOE
 
-- de verteller spreekt de lezer direct aan: In deze tutorial ga **je**
+- narrator directly talks to the reader: In this guide **you** will
 
 - Toekomende tijd -> om het einddoel te laten zien
 
