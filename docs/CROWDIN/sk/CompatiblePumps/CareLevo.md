@@ -134,7 +134,7 @@ Podávanie inzulínu sa zastavilo. Konajte hneď:
 * **Nízka hladina inzulínu**: zostáva menej ako 10 U. Deaktivujte náplasťovú pumpu a vymeňte ju.
 * **Náplasťová pumpa expirovala**: náplasťová pumpa dosiahla koniec svojej životnosti. Deaktivujte náplasťovú pumpu a vymeňte ju.
 * **Nízky stav batérie**: zahoďte náplasťovú pumpu a vymeňte ju.
-* **Vysoká/Nízka teplota**: presuňte sa na miesto s vhodnou teplotou, medzi 40 ℉ a 99 ℉ (5 ℃ a 37 ℃).
+* **High/Low Temperature**: move to a suitable temperature, between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
 * **Automatické vypnutie**: náplasťová pumpa sa zastavila, pretože výstraha Automatické vypnutie bola ignorovaná. Bazálne podávanie znova spustíte stlačením **Spustiť inzulín**.
 * **Časový limit na aplikáciu náplasťovej pumpy**, **Samodiagnostika zlyhala**, **Chyba náplasťovej pumpy**, **Oklúzia** a **Chyba vloženia ihly**: deaktivujte náplasťovú pumpu a vymeňte ju.
 
@@ -145,7 +145,7 @@ Podávanie inzulínu pokračuje, ale niečo si vyžaduje vašu pozornosť:
 * **Nízka hladina inzulínu**: zásobník dosiahol množstvo nastavené v **Nastavenie upozornenia na nízku hladinu inzulínu**. Pripravte sa na výmenu náplasťovej pumpy.
 * **Náplasťová pumpa čoskoro exspiruje** a **Životnosť náplasťovej pumpy vypršala**: vymeňte náplasťovú pumpu.
 * **Nízky stav batérie**: pripravte sa na výmenu náplasťovej pumpy.
-* **Vysoká/Nízka teplota**: podávanie je pozastavené, kým nie je náplasťová pumpa opäť v rozsahu 40 ℉ až 99 ℉.
+* **High/Low Temperature**: delivery is paused until the patch is back between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
 * **Automatické vypnutie**: ťuknite na **OK**. Ak výstrahu ignorujete, zmení sa na kritický alarm a podávanie sa zastaví.
 * **Aktivácia náplasťovej pumpy nebola dokončená**: ťuknite na **OK** a dokončite aktiváciu.
 * **Spustite inzulín**: pozastavenie, ktoré ste nastavili, skončilo. Podávanie obnovíte ťuknutím na **Spustiť inzulín**.
