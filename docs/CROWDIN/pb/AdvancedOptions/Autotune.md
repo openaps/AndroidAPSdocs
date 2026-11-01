@@ -2,7 +2,7 @@
 
 O plugin Autotune é uma implementação do algoritmo autotune do OpenAPS dentro do AAPS. Ele analisa seu histórico recente do AAPS para sugerir ajustes nas suas taxas basais, no ISF e na relação de carboidratos (IC).
 
-Autotune Plugin is available in AAPS releases since [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) but is hidden by default.
+Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
 
 (autotune-how-autotune-calculates-adjustments)=
 ## Como o Autotune calcula os ajustes
