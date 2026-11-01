@@ -57,7 +57,7 @@ Merk: hvis du ved en feil har endret kopien din av AndroidAPS, ser du dette skje
 
 ![Forkast uønskede endringer](../images/update/CI/GitHubUpdate4.png)
 
-Du har nå synkronisert (oppdatert) din egen kopi med den nyeste utgivelsen av Android APS. Bra jobba.
+Du har nå synkronisert (oppdatert) din egen kopi med den nyeste utgivelsen av **AAPS**. Bra jobba.
 
 ![Repositoryet er synkronisert](../images/update/CI/GitHubUpdate5.png)
 
@@ -83,7 +83,7 @@ Du har nå synkronisert (oppdatert) din egen kopi med den nyeste utgivelsen av A
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. Du ser meldingen Workflow run was successfully requested. Oppdater nettlesersiden, så kan du følge med på hvordan bygget går. Når handlingen er ferdig, viser AAPS CI-handlingen en grønn hake. Du har nå bygget den oppdaterte versjonen av Android APS. Det betyr at APK-filene for hovedenheten og klokken nå lagres direkte i Google Drive (som vist nedenfor). APK-filen for AAPSClient kan lastes ned fra Github > nightscout > AndroidAPS [her](https://github.com/nightscout/AndroidAPS/releases)
+6. Du ser meldingen Workflow run was successfully requested. Oppdater nettlesersiden, så kan du følge med på hvordan bygget går. Når handlingen er ferdig, viser AAPS CI-handlingen en grønn hake. Du har nå bygget den oppdaterte versjonen av **AAPS**. Det betyr at APK-filene for hovedenheten og klokken nå lagres direkte i Google Drive (som vist nedenfor). APK-filen for AAPSClient kan lastes ned fra Github > nightscout > AndroidAPS [her](https://github.com/nightscout/AndroidAPS/releases)
 
 
 ![Følg med på arbeidsflyten](../images/update/CI/GitHubActions4.png)
