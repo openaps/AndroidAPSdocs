@@ -57,7 +57,7 @@
 (pumps-cannulas-announce-insulin)=
 ## 如何紀錄已輸送的胰島素但實際上不進行注射
 
-若要記錄 **AAPS** 中斷連線期間從幫浦輸送的胰島素，或透過注射筆注射的胰島素：開啟[胰島素對話框](#aaps-screens-buttons-insulin)（點選底部導覽列中的**治療**，或使用 QuickLaunch 按鈕），輸入胰島素單位數，並啟用**僅記錄注射，不實際注射**。接著會出現**時間**列（預設為**現在**），讓您記錄實際注射時間；如果是最近才注射，可以不用調整。如果注射已經過了一段時間，請使用 **-** 將時間往前調整（_例如_ -30 分鐘），或點選列旁的箭頭，選擇確切的日期和時間。 **AAPS** 接著會考慮胰島素的作用時間，並相應計算系統中剩餘的胰島素量。
+To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. 接著會出現**時間**列（預設為**現在**），讓您記錄實際注射時間；如果是最近才注射，可以不用調整。如果注射已經過了一段時間，請使用 **-** 將時間往前調整（_例如_ -30 分鐘），或點選列旁的箭頭，選擇確切的日期和時間。 **AAPS** 接著會考慮胰島素的作用時間，並相應計算系統中剩餘的胰島素量。
 
 如果您以照護者身分使用 **AAPS**，可以透過[簡訊指令](../RemoteFeatures/SMSCommands.md)，輕鬆遠端中斷或重新連線幫浦，例如使用「pump disconnect 120」和「pump connect 120」指令。遠端斷線的持續時間範圍為 1 - 120 分鐘（此範例為 120 分鐘）。這在**AAPS** 手機不方便讓你進入的情況下非常有用，像是藏在快速運動的孩子身上的幫浦腰帶中，或者被青少年密切守護（或正在使用）。
 
@@ -92,7 +92,7 @@ b) 如果您想採取更積極的處理方式（例如血糖即將過高），�
 
 ![部位輪替使用者設定檔對話框](../images/SiteRotation/Type.png)
 
-*注意：當從「預充/填充 按鈕」或「CGM 傳感器插入 按鈕」新增條目時，是否自動開啟部位輪替對話框（編輯模式），將依此設定決定。*
+*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
 
 - 若直接從幫浦進行部位更換，你需要開啟檢視模式並編輯新項目，以選擇位置與箭頭。
 
@@ -100,7 +100,7 @@ b) 如果您想採取更積極的處理方式（例如血糖即將過高），�
 
 - 正在編輯的項目會顯示在身體示意圖下方，並附有類型圖示（導管或感測器）。
 - 正面和背面並排顯示：點選您放置裝置的部位。
-- 選取部位（以綠色標示）後，下方的清單會顯示過去 45 天內在此部位新增的所有項目。
+- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
 
 ![編輯模式](../images/SiteRotation/EditMode.png)
 
