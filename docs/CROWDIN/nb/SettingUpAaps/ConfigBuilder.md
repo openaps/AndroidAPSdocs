@@ -349,7 +349,7 @@ Bla ned for å se resten av listen:
 
 ### NSClientV3
 
-Kan brukes som [rapporteringsserver](../SettingUpAaps/SettingUpTheReportingServer.md) og/eller til [fjernovervåking](../RemoteFeatures/RemoteMonitoring.md) og [fjernstyring](../RemoteFeatures/RemoteControl.md).
+Kan brukes som [rapporteringsserver](../SettingUpAaps/SettingUpTheReportingServer.md) og/eller til [Fjernovervåking](../RemoteFeatures/RemoteMonitoring.md) og [fjernstyring](../RemoteFeatures/RemoteControl.md).
 
 Se [Synkronisering med rapporteringsserveren](#SetupWizard-synchronization-with-the-reporting-server-and-more) for å sette opp NSClientV3-synkronisering.
 
