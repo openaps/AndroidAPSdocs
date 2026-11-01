@@ -82,7 +82,7 @@
 
 (minimallooper-started-sensor)=
 
-### 如果我的傳感器已經啟動怎麼辦? 我還能在 xDrip 中取得讀取值嗎？是的！
+### 如果我的傳感器已經啟動怎麼辦? Can I still get readings in xDrip? 是的！
 
 許多人詢問此方法是否可以與已經啟動的傳感器一起使用，我可以明確地說**是的**，您可以啟動正在運行的傳感器。
 
@@ -94,7 +94,7 @@
 
 ## 如何使用 LL 和 xDrip，以藍牙原生模式啟動 FSL2 傳感器
 
-*注意：如果截圖中有設定沒有用框框特別標註且為未勾選（例如，停用），那麼請保持這些設定為停用狀態。這些截圖反映了所有顯示設定的工作配置。如果您想在傳感器正常工作後嘗試開啟或關閉其他功能，會有一些風險，請自行承擔。*
+*注意：如果截圖中有設定沒有用框框特別標註且為未勾選（例如，停用），那麼請保持這些設定為停用狀態。這些截圖反映了所有顯示設定的工作配置。 If you want to experiment turning other features on/off after you have a working sensor, you are free to do so at your own risk.*
 
 (minimallooper-step1)=
 
@@ -253,7 +253,7 @@
 
 ### 步驟 7：等待 60 秒，再次對傳感器進行 NFC 掃描
 
-您需要再進行一次 NFC 掃描，才能將傳感器**加入**為藍牙裝置，讓 xDrip 從該裝置取得讀取值。完成後，您將看到一個通知，顯示 **新傳感器已啟動**。
+A second NFC scan is needed in order to **ADD** the sensor as the Bluetooth device that xDrip will use to retrieve the readings. 完成後，您將看到一個通知，顯示 **新傳感器已啟動**。
 
 ![xDrip 掃描](../images/minimal00per/xdripscan2.png)
 
@@ -288,7 +288,7 @@
 
 ### 步驟 9：驗證傳感器已連線並傳送資料
 
-按下 xDrip 總覽畫面左上角的漢堡選單，然後選擇**系統狀態**。在系統狀態螢幕上，活動中的 **藍牙設備：** 欄位顯示 FSL2 藍牙命名慣例 **ABB___XXXXXXXXXXX**，其中 XXX 代表傳感器序號。在 **連線狀態** 欄位顯示 **已連線**，而 **傳感器啟動：** 欄位顯示傳感器啟動的時間。
+按下 xDrip 總覽畫面左上角的漢堡選單，然後選擇**系統狀態**。在系統狀態螢幕上，活動中的 **藍牙設備：** 欄位顯示 FSL2 藍牙命名慣例 **ABB___XXXXXXXXXXX**，其中 XXX 代表傳感器序號。 The **Connection Status** field displays **Connected** and the **Sensor Start:** field displays the time the sensor was started.
 
 ![xDrip 掃描](../images/minimal00per/xdripSSlog.png)
 
@@ -301,8 +301,8 @@
 - **手機服務狀態：** 最後一次手機與傳感器建立藍牙連線的時間（應該在 5 分鐘以內）。
 - **藍牙設備：** 顯示連線的當前狀態（**已連線** 或 **已中斷連線**）
 - **裝置 Mac 位址**: 這是傳感器的硬體識別碼。
-- **藍牙配對**：這應該顯示為 **<u>停用，點選以啟用</u>**。請小心不要點選這個。如果不小心點選了，請再次點選它直到返回停用狀態。
-- **最慢喚醒**：您可以忽略這個。 xDrip 不會一直等待讀取值，而是會在特定時間後開始等待（通常是 5 分鐘）。如果到了該時間仍未收到資料，您會看到「提早喚醒」，表示 xDrip 預期資料已準備好，但實際上尚未收到資料。最慢喚醒是收到正常資料之前遇到的最大延遲。
+- **Bluetooth Pairing**: This should be **<u>Disabled, tap to enable</u>**. 請小心不要點選這個。如果不小心點選了，請再次點選它直到返回停用狀態。
+- **最慢喚醒**：您可以忽略這個。 xDrip doesn't spend its time waiting for readings: it will start expecting them after a certain time (traditionally 5 minutes). 如果到了該時間仍未收到資料，您會看到「提早喚醒」，表示 xDrip 預期資料已準備好，但實際上尚未收到資料。最慢喚醒是收到正常資料之前遇到的最大延遲。
 - **下一次喚醒**：應該顯示為 5 分鐘。
 
 ![xDrip 掃描](../images/minimal00per/xdripSStat.png)
@@ -313,7 +313,7 @@
 
 - **在 xDrip 完成配對後使用 LL NFC 掃描**：您可以進行 NFC 掃描，但必須先完成與 xDrip 的配對程序。請隨時查看 xDrip，確認距離預計取得讀取值的時間是否接近（例如，距離上次讀取已過 4 分鐘）。如果快到 5 分鐘，請等候新的藍牙讀取值傳入，再進行 NFC 掃描。如果掃描時間不對，就會干擾 xDrip 的藍牙程序，導致無法收到藍牙讀取值。重新配對並再次傳輸可能需要一段時間，有時 LL 也可能會「搶走」傳感器的藍牙連線。然而，在這些藍牙讀取值之間，我運行 NFC 掃描後立即停用應用程式並沒有遇到任何問題。我不確定是否每次都需要停用 LL，但我為了安全起見會停用它。
 
-- - **發生了什麼事情?** 當藍牙連線建立時，會創建一個私有共享密鑰，這是允許傳感器與呼叫應用程式/裝置之間進行通信所需的。 LL 應用程式或讀取器在連接期間高機率會創建一個新的私有共享密鑰來進行通信。這表示配對後，xDrip 不會取得新的金鑰，因此無法與傳感器通訊。
+- **What is going on?** When a Bluetooth connection is made a private shared key is created that is needed to allow communication between the sensor and the calling application/device. LL 應用程式或讀取器在連接期間高機率會創建一個新的私有共享密鑰來進行通信。這表示配對後，xDrip 不會取得新的金鑰，因此無法與傳感器通訊。
 
   - 有幾位使用者回報，在傳感器成功啟動並透過 xDrip 收到讀取值後，可以重新啟動 LL app。在 LL 應用程式的 Android 權限中，您只需關閉**允許定位**設定。完成這些步驟後，您應該就能同時使用 LL app 和 xDrip。我建議您不要為 NFC 掃描選擇預設應用程式，而是選擇您想要用於掃描傳感器的應用程式。另外，別忘了，在下一次更換傳感器時，請在新的傳感器初始的暖機 NFC 掃描後強制關閉 LL 應用程式。傳感器設定完成並透過 xDrip 收到讀取值後，就可以重新啟動 LL app。
 
@@ -399,7 +399,7 @@
 - **FSL** - FreeStyle Libre
   - **Libre 1 (FSL1)** - 僅支援 NFC。第一版的傳感器
 
-  - **FSL2 (FSL2)** - 藍牙和NFC。第二版的傳感器。
+  - **Libre 2 (FSL2)** - Bluetooth and NFC. 第二版的傳感器。
 
   - **Libre 3 (FSL3)** - 藍牙和NFC。第三個更小的版本的傳感器。不支援OOP2（請參閱Juggluco）。
 
@@ -413,7 +413,7 @@
 
 - **OOP1** - Out of Process Algorithm 第 1 版，是一款第三方 App，可接收原始數值（由傳感器透過藍牙或 NFC 掃描傳送至 xDrip），再使用演算法（與傳感器晶片上的硬體演算法非常相似）處理這些原始數值，並將校準後的血糖值傳回 xDrip。這裡的校準是由 OOP1 演算法執行，而非使用 xDrip 內建的校準功能。之後，xDrip 可顯示此血糖值；如有需要，也可再使用 xDrip 的校準功能（以指尖採血的血糖值進行校準）進一步處理。
 
-- **OOP2** - 外部程式演算法 2，第三方應用程序接收從FSL 2傳感器（透過藍牙或NFC掃描）傳送的加密資料，然後解密這些加密的資料。解密後，資料就會傳送至 xDrip。
+- **OOP2** - Out of Process Algorithm version 2, the 3rd party app that receives encrypted data delivered from the FSL 2 sensor (by Bluetooth or NFC scan) and then decrypts the encrypted data. 解密後，資料就會傳送至 xDrip。
 
  
 
@@ -474,4 +474,4 @@
 2. xDrip 選單 -> 系統狀態 -> 忘記裝置
 3. 使用 xDrip 的 NFC 功能掃描傳感器。等待至少一分鐘
 4. xDrip 選單 -> 啟動傳感器。等待至少一分鐘
-5. 使用 xDrip 的 NFC 功能掃描傳感器數次，每次掃描之間至少等待一分鐘。
+5. Scan the sensor with xDrip NFC, a few times, always waiting at least one minute between two scans.
