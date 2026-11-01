@@ -54,7 +54,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Label midden in het [niets](#sandbox1-in-the-middle-of-nowhere) Dit is daarentegen het label naar [](#sandbox1-this-is-another-test) en het zou zijn naam moeten tonen
 
-Links met anker:
+Links with anchor:
 - [hoe lang gaat het duren?](#preparing-how-long-will-it-take)
 - [NSClient-instellingen in Instellingen](#Preferences-nsclient).
 - [voorspellingslijnen in het AAPS OVERZICHT](#aaps-screens-prediction-lines) naar kopniveau 4
