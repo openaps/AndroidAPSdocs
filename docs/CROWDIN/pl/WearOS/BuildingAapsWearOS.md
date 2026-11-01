@@ -78,7 +78,7 @@ Dalej: zainstaluj Wear apk na zegarku, zobacz [Smartwatch z Wear OS](WearOsSmart
 
 Podczas budowania pełnej aplikacji **AAPS** (i w zasadzie każdej podpisanej aplikacji) Android Studio tworzy plik .json w tym samym folderze. Powoduje to potem błędy [niezatwierdzonych zmian (uncommitted changes)](#troubleshooting_androidstudio-uncommitted-changes), gdy próbujesz zbudować następną podpisaną aplikację, np. aplikację **AAPS** na zegarek. Najszybciej rozwiążesz ten problem, gdy przejdziesz do folderu, w którym zbudowano pełną aplikację AAPS. Twój folder to prawdopodobnie coś takiego:
 
-`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\aapsclient\release.`
+`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\full\release.`
 
 Usuń niepotrzebny plik .json albo przenieś go poza ten folder. Potem spróbuj ponownie zbudować aplikację **AAPS** na zegarek. Jeśli to nie pomoże, bardziej szczegółowy [poradnik rozwiązywania problemów](../GettingHelp/TroubleshootingAndroidStudio.md) pomoże Ci znaleźć plik, który powoduje problem. Może to być też plik Twojego magazynu kluczy.
 
