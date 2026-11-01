@@ -3,7 +3,7 @@
 # Opção 2 – Envie a sua keystore existente
 
 ```{note}
-Esta página faz parte da [Etapa 2 – Crie a sua keystore de assinatura](BrowserBuildKeystore.md) da [Compilação no navegador](BrowserBuild.md). Verifique se você leu a [decisão entre a Opção 1 e a Opção 2](#aaps-ci-preparation) e baixou o arquivo de preparação.
+Esta página faz parte da [Etapa 2 – Crie a sua keystore de assinatura](BrowserBuildKeystore.md) da [Compilação no navegador](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
 ```
 
 A Opção 2 reutiliza a JKS que você já criou em uma compilação anterior do AAPS no computador, com o Android Studio. Ela é indicada para quem já tem uma JKS e sabe a senha e o alias da JKS.
