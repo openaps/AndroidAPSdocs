@@ -57,7 +57,7 @@ As you are not getting any insulin while the pump is disconnected, you should re
 (pumps-cannulas-announce-insulin)=
 ## To announce delivered insulin without actually bolusing
 
-Para registar a insulina administrada pela bomba enquanto o **AAPS** estava desligado, ou por injeções com caneta: abra a [janela Insulina](#aaps-screens-buttons-insulin) (**Tratamentos** na navegação inferior, ou um botão QuickLaunch), introduza a quantidade em unidades e ative **O bólus será apenas registado**. Aparece então uma linha **Hora** (definida como **Agora**) que permite registar a hora real da injeção: pode ignorá-la se a injeção foi dada há pouco tempo. Se o bólus foi dado há algum tempo, use **-** para recuar a hora (_p. ex._ -30 min), ou abra a linha com a seta para escolher a data e a hora exatas. O **AAPS** tem então em conta a duração da ação da insulina e calcula a insulina que ainda resta no corpo.
+To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. Aparece então uma linha **Hora** (definida como **Agora**) que permite registar a hora real da injeção: pode ignorá-la se a injeção foi dada há pouco tempo. Se o bólus foi dado há algum tempo, use **-** para recuar a hora (_p. ex._ -30 min), ou abra a linha com a seta para escolher a data e a hora exatas. O **AAPS** tem então em conta a duração da ação da insulina e calcula a insulina que ainda resta no corpo.
 
 Se usa o **AAPS** como cuidador, pode desligar (e voltar a ligar) a bomba à distância com muita facilidade por [comando SMS](../RemoteFeatures/SMSCommands.md), com comandos como "pump disconnect 120" e "pump connect 120". The range of duration for remote disconnect is from 1 - 120 min, (in this example it is 120 minutes). Isto é muito útil quando o telefone do **AAPS** não está à mão, por exemplo enterrado numa bolsa de cintura de uma criança que corre para a piscina, ou bem guardado (ou em uso) por um adolescente.
 
@@ -92,7 +92,7 @@ Which strategy you prefer is highly personal, and is best determined by trial an
 
 ![Janela Perfil do utilizador para a rotação dos locais](../images/SiteRotation/Type.png)
 
-*Nota: esta definição decide se a janela Rotação dos locais (modo de edição) abre automaticamente quando é criado um novo registo com o botão "Purgar/Preencher" ou com o botão "Inserção do sensor"*
+*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
 
 - Para uma mudança de local feita diretamente na bomba, tem de abrir o modo de visualização e editar o novo registo para escolher o Local de inserção e a Seta
 
@@ -100,7 +100,7 @@ O modo de edição permite escolher o Local de inserção, a Seta e a Nota do re
 
 - O registo em edição aparece por baixo das imagens do corpo, com o ícone do seu tipo (cânula ou sensor)
 - As vistas de frente e de trás aparecem lado a lado: toque na zona onde o colocou
-- Depois de selecionar um local (destacado a verde), vê na lista abaixo todos os registos feitos nesse local nos últimos 45 dias
+- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
 
 ![Modo de edição](../images/SiteRotation/EditMode.png)
 
