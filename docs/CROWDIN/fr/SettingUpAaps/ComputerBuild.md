@@ -19,17 +19,17 @@ Consultez la [Foire Aux Questions (FAQ)](../UsefulLinks/FAQ.md) pour plus de dé
 
 * Une version précise d'**[Android Studio](https://developer.android.com/studio/)** peut être nécessaire pour compiler l'apk. Voir le tableau ci-dessous :
 
-| Version AAPS                                                             | Version<br/>Android Studio<br/>préférée | Version<br/>Android Studio<br/>alternative | Gradle | JVM |
-| ------------------------------------------------------------------------ | --------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| 2.6.2                                                                    | 3.6.1                                               |                                                        | 5.6.4  | 11  |
-| 2.8.2.1                                                                  | 4.1.1                                               |                                                        | 6.1.1  | 13  |
-| [3.1.0.3](https://github.com/nightscout/AndroidAPS/releases/tag/3.1.0.3) | 2020.3.1                                            | testé jusqu'à Quail 4                                  | 7.3.3  | 17  |
-| [3.2.0.4](#version3204)                                                  | Hedgehog (2023.1.1)                                 | testé jusqu'à Quail 4                                  | 8.2    | 17  |
-| [3.3.1.3](#version3300)                                                  | Ladybug Feature Drop (2024.2.2)                     | testé jusqu'à Quail 4                                  | 8.10   | 21  |
-| [3.3.2](#version3300)                                                    | Meerkat (2024.3.1)                                  | testé jusqu'à Quail 4                                  | 8.11.1 | 21  |
-| [3.3.2.1](#version3321)                                                  | Narwhal (2025.1.2)                                  | testé jusqu'à Quail 4                                  | 8.13   | 21  |
-| [3.4.2.6](#version3426)                                                  | Panda 2 (2025.3.2)                                  | testé jusqu'à Quail 4                                  | 9      | 21  |
-| [4.0.0](#version400)                                                     | Rabbit 2 (2026.2.2)                                 | Latest                                                 | 9.8    | 21  |
+| Version AAPS            | Version<br/>Android Studio<br/>préférée | Version<br/>Android Studio<br/>alternative | Gradle | JVM |
+| ----------------------- | --------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
+| 2.6.2                   | 3.6.1                                               |                                                        | 5.6.4  | 11  |
+| 2.8.2.1                 | 4.1.1                                               |                                                        | 6.1.1  | 13  |
+| [3.1.0.3](#version3100) | 2020.3.1                                            | testé jusqu'à Quail 4                                  | 7.3.3  | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                 | testé jusqu'à Quail 4                                  | 8.2    | 17  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                     | testé jusqu'à Quail 4                                  | 8.10   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                  | testé jusqu'à Quail 4                                  | 8.11.1 | 21  |
+| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                  | testé jusqu'à Quail 4                                  | 8.13   | 21  |
+| [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                  | testé jusqu'à Quail 4                                  | 9      | 21  |
+| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                 | Latest                                                 | 9.8    | 21  |
 
 La « version préférée » est fournie avec la bonne version de JVM. La version préférée est aussi la version minimale que vous pouvez utiliser pour compiler **AAPS**. Vous ne pourrez **PAS** compiler avec une version plus ancienne que la version « préférée ». Si vous utilisez une autre version, vous pouvez rencontrer des problèmes liés à la version de JVM. Voir la page [Dépannage d'Android Studio](#troubleshooting_androidstudio-uncommitted-changes) pour vous aider à résoudre ces problèmes. Si votre version actuelle d'Android Studio n'est pas dans le tableau, vous devez d'abord la mettre à jour.
 
