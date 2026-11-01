@@ -99,6 +99,8 @@ Aktiver en scene fra listen **Scener** (**▶**-knappen) eller fra **Scener** i 
 
 ![Arket Scener i navigasjonslinjen nederst](../images/v4/Scenes/scenes_sheet.png)
 
+Hvis [sikkerhet for bolus](#Preferences-protection) er slått på, ber **AAPS** om den før en scene starter eller avsluttes. For å endre en scene trengs i stedet [sikkerhet for innstillinger](#Preferences-settings-protection).
+
 Før noe utføres, får du en **bekreftelse** som viser nøyaktig hva scenen vil gjøre, slik at du kan se over det:
 
 ![Bekreftelse ved aktivering av scene, med listen over handlinger i pakken](../images/v4/Scenes/scene_confirmation.png)
