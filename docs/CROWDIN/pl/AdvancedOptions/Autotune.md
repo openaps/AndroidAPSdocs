@@ -78,7 +78,7 @@ Dotknij **Otwórz wtyczkę** na karcie **Autotune**, aby otworzyć ekran Autotun
 
 - Jeśli ufasz wynikom (mała procentowa zmiana między profilem wejściowym a wyjściowym), możesz kliknąć przycisk „Aktywuj profil”, a następnie kliknąć OK, aby potwierdzić.
 
-  - Aktywacja dostrojonego profilu automatycznie utworzy nowy profil „Dostrojono” na twojej liście profili (**Zarządzaj → Profil**).
+  - "Activate profile" will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
   - Jeśli masz już profil o nazwie „Dostrojono” w **Zarządzaj → Profil**, ten profil zostanie przed aktywacją zaktualizowany profilem obliczonym przez Autotune
 
   ![Autotune: Aktywuj profil](../images/Autotune/Autotune_6.png)
@@ -123,7 +123,7 @@ Funkcja **Automatyczna zmiana profilu** jest dostępna tylko w trybie Dev/Inżyn
 - **Automatyczna zmiana profilu** (domyślnie wył.): zobacz [Uruchamianie Autotune regułą automatyzacji](#autotune-run-autotune-with-an-automation-rule) poniżej. Jeśli włączysz to ustawienie, profil wejściowy zostanie automatycznie zaktualizowany dostrojonym profilem i aktywowany.
   - **Uważaj: po aktualizacji i aktywacji dostrojonego profilu bez zmian musisz przez kilka kolejnych dni sprawdzać i upewnić się, że poprawia to działanie twojej pętli**
 
-- **Kategoryzuj UAM jako bazę** (domyślnie wył.): to ustawienie jest dla użytkowników, którzy używają AndroidAPS bez wpisywania żadnych węglowodanów (pełny UAM). Gdy jest wyłączone, UAM nie będzie kwalifikowany jako baza.
+- **Categorize UAM as basal** (default Off): This setting is for the users using AAPS without any carbs entered (Full UAM). Gdy jest wyłączone, UAM nie będzie kwalifikowany jako baza.
   - Uwaga: jeśli w ciągu jednego dnia wykryto co najmniej godzinę wchłaniania węglowodanów, wszystkie dane zakwalifikowane jako „UAM” zostaną zakwalifikowane jako baza, niezależnie od tego ustawienia (wł. lub wył.)
 - **Domyślna liczba dni Autotune** (domyślnie 5): tym ustawieniem określasz wartość domyślną. Za każdym razem, gdy wybierzesz nowy profil we wtyczce Autotune, **Liczba uwzględnianych dni danych** zostanie zastąpiona tą wartością domyślną
 - **Użyj IC/ISF w rytmie dobowym** (domyślnie wył.): zobacz [Profil z dobową zmiennością IC lub ISF](#autotune-circadian-ic-or-isf-profile) poniżej.
@@ -188,7 +188,7 @@ Uwaga: więcej informacji o ustawianiu reguły automatyzacji znajdziesz [tutaj](
 
   ![Domyślny ekran Autotune](../images/Autotune/Autotune_17.png)
 
-- Następnie możesz wybrać akcję **Profil Autotune** (w grupie **Pętla i insulina**)
+- Then you can select the **Run Autotune** action (in the **Loop & insulin** group)
 
   ![Domyślny ekran Autotune](../images/Autotune/Autotune_18.png)
 
@@ -212,7 +212,7 @@ Autotune działa na danych zapisanych w twojej bazie danych. Jeśli dopiero zain
 
 Autotune to tylko pomoc. Ważne jest, aby regularnie sprawdzać, czy zgadzasz się z obliczonym profilem. Jeśli masz jakiekolwiek wątpliwości, zmień ustawienia Autotune (na przykład liczbę dni) lub skopiuj wyniki do profilu lokalnego i popraw profil, zanim go użyjesz.
 
-Zawsze uruchamiaj Autotune ręcznie przez kilka dni i sprawdzaj wyniki, zanim je zastosujesz. Automatyzacji zacznij używać dopiero wtedy, gdy w pełni ufasz wynikom Autotune, a zmiany między poprzednim a obliczonym profilem są bardzo małe (nigdy wcześniej)
+Zawsze uruchamiaj Autotune ręcznie przez kilka dni i sprawdzaj wyniki, zanim je zastosujesz. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile then you start to use Automation (Never before)
 
 - Autotune może działać bardzo dobrze u niektórych użytkowników, a u innych nie, więc: **jeśli nie ufasz wynikowi Autotune, nie używaj go**
 
