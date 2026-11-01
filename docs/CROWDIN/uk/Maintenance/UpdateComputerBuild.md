@@ -5,7 +5,7 @@
 **AAPS** не можна завантажити через правила для медичних виробів. Збирати застосунок для власного використання законно, але ви не повинні давати його копію іншим! Докладніше див. на [сторінці FAQ](../UsefulLinks/FAQ.md).
 
 ```{note}
-Якщо ви хочете зібрати **AAPS** на новому комп’ютері: скопіюйте резервну копію файлу keystore на новий комп’ютер. Потім виконайте [процедуру першої збірки **AAPS**](../SettingUpAaps/BuildingAaps.md), а не цю інструкцію. Єдина різниця: замість того щоб створювати новий keystore, ви можете вибрати той, який скопіювали на новий комп’ютер.
+In case you want to build **AAPS** on a new computer: copy your back-up keystore file to the new computer. Потім виконайте [процедуру першої збірки **AAPS**](../SettingUpAaps/BuildingAaps.md), а не цю інструкцію. Єдина різниця: замість того щоб створювати новий keystore, ви можете вибрати той, який скопіювали на новий комп’ютер.
 ```
 
 ## Огляд оновлення до нової версії AAPS з Android Studio
@@ -95,6 +95,6 @@
 
 Зробіть вдих!
 
-Потім подивіться окрему сторінку [Усунення проблем з Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md): можливо, вашу проблему вже описано!
+Then check if your problem is already documented on the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 Якщо вам потрібна додаткова допомога, зверніться до інших користувачів **AAPS** у [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) або [Discord](https://discord.gg/4fQUWHZ4Mw).
