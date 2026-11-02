@@ -59,11 +59,11 @@ Durch den Export der AAPS-Einstellungen in die Datei kannst Du die Konfiguration
 
 * Immer dann, wenn Du größere Änderungen an der Konfiguration vornimmst (SMB-Einstellungen änderst, Insulintyp änderst, Pumpe änderst, Änderungen an Automatisierungen vornimmst), solltest Du sowohl vor als auch nach der Änderung die **Einstellungen** sichern. Auf diese Weise hast Du für den Fall eines "Rollback" sowohl die aktuellen Einstellungen als auch eine Kopie des Zustands vor den Änderungen.
 
-* Tubeless pumps (Such as Omnipod and Medtrum) users only: the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. Solltest Du Deine Einstellungen nicht nach dem Start des aktuellen Pods exportiert und gesichert haben, wirst Du im Fall eines Smartphone-Austauschs einen neuen Pod starten müssen.
+* Nur für Nutzer schlauchloser Pumpen (z. B. Omnipod und Medtrum): Die Datei mit den **Einstellungen** enthält Verbindungsdetails zu Deinem aktuellen Pod und kann genutzt werden, um die Verbindung zu diesem Pod mit einem neuen Smartphone wiederherzustellen. Solltest Du Deine Einstellungen nicht nach dem Start des aktuellen Pods exportiert und gesichert haben, wirst Du im Fall eines Smartphone-Austauschs einen neuen Pod starten müssen.
 
 **Wie Du manuell sicherst:**
 
-1. If this is your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). Lege ein Passwort fest und notiere es an einem sicheren Ort. _Ohne dieses Passwort wirst Du nicht auf die Backups Deiner **Einstellungen** zugreifen können._
+1. Wenn Du zum ersten Mal **Einstellungen** importierst oder exportierst, musst Du unter [Einstellungen > Zugriffsschutz](#Preferences-master-password) ein Master-Passwort festlegen. Lege ein Passwort fest und notiere es an einem sicheren Ort. _Ohne dieses Passwort wirst Du nicht auf die Backups Deiner **Einstellungen** zugreifen können._
 
 2. Öffne auf dem **AAPS**-Startbildschirm das **Menü** (☰) > **Wartung**. Wähle mit den Auswahlfeldern **Lokal** und **Cloud** neben **Einstellungen exportieren**, wo die Datei gespeichert wird (siehe **Exportieren oder Importieren der Einstellungen** unten), und tippe dann auf **Einstellungen exportieren**. **AAPS** zeigt an, wohin die Datei geht: den Dateinamen bei **Lokal**, **Google Drive** bei **Cloud**. Tippe auf **OK**.
 
@@ -105,7 +105,7 @@ Um Einstellungen zu exportieren oder zu importieren, öffne das **Menü** (☰) 
 (ExportImportSettings-Automating-Settings-Export)=
 ### Automatisierter Export der Einstellungen
 
-To automate settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
+Um Einstellungen automatisch zu exportieren [(**siehe Automatisierung**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export), öffne [**Einstellungen** > **Wartung**](#preferences-maintenance-settings), klappe **Automatischer Einstellungsexport** auf und schalte **Automatischen Einstellungsexport aktivieren** ein.
 
 Du kannst [Automatisierungen](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) so konfigurieren, dass die Einstellungen auitomatisch exportiert werden, entweder regelmäßig (_z. B._ wöchentlich) oder nach einem Pod-Wechsel.
 
