@@ -7,8 +7,8 @@
 
 Υπάρχουν τέσσερα πολύ αποτελεσματικά εργαλεία για την απομακρυσμένη διαχείριση του **AAPS**:
 
-1) [Εντολές SMS](#RemoteControl_SMS-Commands) (το τηλέφωνο του ακόλουθου μπορεί να είναι Android ή iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (το τηλέφωνο του ακόλουθου είναι Android· μια έκδοση για iPhone είναι υπό ανάπτυξη) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS ή άλλος υπολογιστής/συσκευή), κυρίως για παρακολούθηση: δείτε τη σημείωση για τον [έλεγχο από πελάτη](#client-master-control) σε εκείνη την ενότητα.  
-4) [Έξυπνα ρολόγια](#RemoteControl_smartwatches) (Android)
+1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower device is an Android phone or tablet, or a Windows, Mac or Linux computer; on an iPhone you [build the app yourself](#aapsclient-iphone)) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device), mainly for following: see the note on [client control](#client-master-control) in that section.  
+4) [Smartwatches](#RemoteControl_smartwatches) (Android)
 
 Τα τρία πρώτα ταιριάζουν κυρίως σε φροντιστές/γονείς, αλλά τα έξυπνα ρολόγια είναι πολύ χρήσιμα για φροντιστές/γονείς **και** για τους ίδιους τους ενήλικες με διαβήτη.
 
