@@ -31,7 +31,7 @@ Accepting data from Nightscout (profile changes, treatments, ...) is optional an
 
 Keeping all the "Receive … from NS" options disabled makes sure no Nightscout change will be used by AAPS:
 
-![Nightscout nur Daten hochladen](../images/preferences/settings_nsclient_sync.png)
+![Nightscout upload only](../images/preferences/settings_nsclient_sync.png)
 
 #### Accept changes from Nightscout (Änderungen von Nightscout übernehmen)
 
