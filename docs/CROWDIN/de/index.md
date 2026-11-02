@@ -124,18 +124,18 @@ AAPS-Funktionen <./DailyLifeWithAaps/KeyAapsFeatures.md>
 COB-Berechnung <./DailyLifeWithAaps/CobCalculation.md>
 Empfindlichkeitserkennung <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
 Dynamischer ISF (DynISF) <./DailyLifeWithAaps/DynamicISF.md>
-Profilwechsel & & prozentuale Profilanpassung <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
+Profilwechsel & Prozentuale Profilanpassung <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
 Temporäre Ziele <./DailyLifeWithAaps/TempTargets.md>
 Verzögerte Kohlenhydrate <./DailyLifeWithAaps/ExtendedCarbs.md>
 QuickWizards <./DailyLifeWithAaps/QuickWizards.md>
-Szenene <./DailyLifeWithAaps/Scenes.md>
+Szenen <./DailyLifeWithAaps/Scenes.md>
 Automatisierungen <./DailyLifeWithAaps/Automations.md>
-Schnellstartleiste <./DailyLifeWithAaps/QuickLaunch.md>
-Startbildbildschirm-Widgets <./DailyLifeWithAaps/Widgets.md>
-Lebensmittel-Datenbank <./DailyLifeWithAaps/Food.md>
+Schnellstart-Leiste <./DailyLifeWithAaps/QuickLaunch.md>
+Startbildschirm-Widgets <./DailyLifeWithAaps/Widgets.md>
+Lebensmitteldatenbank <./DailyLifeWithAaps/Food.md>
 Übergreifende Suche <./DailyLifeWithAaps/GlobalSearch.md>
 Überprüfen Deiner Daten <./Maintenance/Reviewing.md>
-AAPS für Kinden <./DailyLifeWithAaps/AapsForChildren.md>
+AAPS für Kinder <./DailyLifeWithAaps/AapsForChildren.md>
 Pumpen und Kanülen <./DailyLifeWithAaps/PumpsAndCannulas.md>
 Über Zeitzonen hinweg reisen & Sommerzeit-Umstellung <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
 
