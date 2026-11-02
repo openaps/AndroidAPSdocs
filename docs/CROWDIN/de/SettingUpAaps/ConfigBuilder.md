@@ -368,13 +368,13 @@ This module cannot be disabled as it is a core part of **AAPS**.
 
 Weitere Informationen findest Du auf der Seite [Ziele (Objectives)](../SettingUpAaps/CompletingTheObjectives.md).
 
-## Communication
+## Kommunikation
 
 In this category (called **Synchronization** in **AAPS** v3), you choose if/where you want **AAPS** to send your data to.
 
 ![Configuration > Communication](../images/v4/Configuration/configuration_communication.png)
 
-Scroll down to see the rest of the list:
+Scrolle nach unten, um den Rest der Liste zu sehen:
 
 ![Configuration > Communication, continued](../images/v4/Configuration/configuration_communication_2.png)
 
