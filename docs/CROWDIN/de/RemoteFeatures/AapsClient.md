@@ -1,17 +1,17 @@
 (aapsclient-app)=
-# The AAPSClient app
+# Die AAPSClient-App
 
-**AAPSClient** is the accessory app of **AAPS**: a companion app for a second phone — typically a caregiver's — that **follows** the person using **AAPS**. From **AAPS** version 4, the caregiver can also **control** the loop remotely through signed commands. Both phones communicate through your **Nightscout** site; no direct connection between the phones is needed.
+**AAPSClient** ist die Begleit-App zu **AAPS**: eine App für ein zweites Smartphone – meist das eines Betreuers –, das der Person, die **AAPS** nutzt, **folgt**. From **AAPS** version 4, the caregiver can also **control** the loop remotely through signed commands. Beide Smartphones kommunizieren über Deine **Nightscout**-Seite. Eine direkte Verbindung zwischen den Smartphones ist nicht nötig.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Client** = a phone running **AAPSClient**.
-- **Master** = the main **AAPS** phone that owns the pump and runs the loop.
+- **Client** = ein Smartphone mit **AAPSClient**.
+- **Master** = das Haupt-Smartphone mit **AAPS**, das mit der Pumpe verbunden ist und den Loop ausführt.
 ```
 
 ```{admonition} iPhone version in development
 :class: note
-**AAPSClient** currently runs on Android phones. An iPhone version of **AAPSClient** is being developed and is in early testing. It is not released yet: there is no App Store listing and nothing to download. This page will be updated when it becomes available.
+**AAPSClient** läuft derzeit auf Android-Smartphones. Eine iPhone-Version von **AAPSClient** wird entwickelt und befindet sich in einer frühen Testphase. Sie ist noch nicht veröffentlicht: Es gibt keinen Eintrag im App Store und nichts zum Herunterladen. Diese Seite wird aktualisiert, sobald sie verfügbar ist.
 ```
 
 ```{contents} Table of contents
@@ -19,43 +19,43 @@
 :local: true
 ```
 
-## What AAPSClient is (and is not)
+## Was AAPSClient ist (und was nicht)
 
-**AAPSClient** looks and feels like **AAPS**, but it has **no loop of its own**:
+**AAPSClient** sieht aus wie **AAPS** und bedient sich auch so, hat aber **keinen eigenen Loop**:
 
-- It contains **no APS algorithm**, no **Objectives**, and **no pump drivers** — it never doses on its own.
-- The plugins used only by the main app (**SMS Communicator**, **Tidepool**, **Open Humans**) are not included either.
-- What it *does* contain: **NSClientV3** synchronization, the BG-source plugins, **xDrip+** broadcasting, and the **Wear OS** / **Garmin** connectors — everything needed to follow and to relay commands. A **Garmin** watch connected to a client can show the data, but carbs it sends are not entered and it cannot connect or disconnect the pump: the client shows a message, and you enter them in **AAPS** instead.
+- Die App enthält **keinen APS-Algorithmus**, keine **Ziele** und **keine Pumpentreiber** – sie gibt nie selbst Insulin ab.
+- Die Module, die nur die Haupt-App verwendet (**SMS-Kommunikator**, **Tidepool**, **Open Humans**), sind ebenfalls nicht enthalten.
+- Was sie *enthält*: die Synchronisation über **NSClientV3**, die BZ-Quellen-Module, das Senden an **xDrip+** und die Anbindung von **Wear OS** / **Garmin** – also alles, was nötig ist, um zu folgen und Befehle weiterzuleiten. Eine **Garmin**-Smartwatch an einem Client kann die Daten anzeigen. Von ihr gesendete Kohlenhydrate werden aber nicht eingetragen, und sie kann die Pumpe nicht verbinden oder trennen: Der Client zeigt eine Meldung an, und Du gibst sie stattdessen in **AAPS** ein.
 
-Everything you trigger from **AAPSClient** is checked, capped, confirmed and **executed by the master** (the phone with the pump). The dedicated [Master ↔ Client control](ClientMasterControl.md) page explains how this works: how to pair the two phones, how the master writes the confirmation text you see, how a bolus started on the client is delivered, and what happens when the master is offline.
+Alles, was Du in **AAPSClient** auslöst, wird vom Master (dem Smartphone mit der Pumpe) geprüft, begrenzt, bestätigt und **ausgeführt**. Wie das funktioniert, erklärt die eigene Seite [Master ↔ Client-Steuerung](ClientMasterControl.md): wie Du die beiden Smartphones koppelst, wie der Master den Bestätigungstext schreibt, den Du siehst, wie ein auf dem Client gestarteter Bolus abgegeben wird und was passiert, wenn der Master offline ist.
 
-## Versions: AAPSClient, AAPSClient2 and AAPSClient3
+## Versionen: AAPSClient, AAPSClient2 und AAPSClient3
 
-Up to three client apps can be installed side by side on the same follower phone, each following a **different** person: **AAPSClient** (yellow owl icon), **AAPSClient2** (blue owl) and — new in **AAPS** version 4 — **AAPSClient3** (green owl). They are functionally identical. Only the name and the color differ (app icon, widget background and the status section on the home screen), so you can tell them apart. Each app is paired with its own master. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions) for details.
+Auf demselben Follower-Smartphone können bis zu drei Client-Apps nebeneinander installiert werden, die jeweils einer **anderen** Person folgen: **AAPSClient** (gelbe Eule), **AAPSClient2** (blaue Eule) und – neu in **AAPS** Version 4 – **AAPSClient3** (grüne Eule). Sie können alle dasselbe. Nur Name und Farbe unterscheiden sich (App-Symbol, Hintergrund des Widgets und Statusbereich auf dem Startbildschirm), damit Du sie auseinanderhalten kannst. Jede App wird mit ihrem eigenen Master gekoppelt. Details findest Du unter [Über AAPSClient, AAPSClient2 und AAPSClient3](#remotecontrol-aapsclient-versions).
 
-## Getting the app
+## Die App bekommen
 
-**AAPSClient** is obtained the same way as **AAPS** — see [Download and installation of AAPSClient](#RemoteControl_aapsclient), and install it like the main app ([Transferring and installing](../SettingUpAaps/TransferringAndInstallingAaps.md)).
+**AAPSClient** bekommst Du auf dieselbe Weise wie **AAPS** – siehe [Herunterladen und Installieren](#RemoteControl_aapsclient) – und installierst sie wie die Haupt-App ([AAPS auf Dein Smartphone übertragen und installieren](../SettingUpAaps/TransferringAndInstallingAaps.md)).
 
-## First start: a shorter Setup Wizard
+## Erster Start: ein kürzerer Einrichtungsassistent
 
-On first start **AAPSClient** runs the same **Setup Wizard** you know from **AAPS**, but with far fewer steps — there is no profile, insulin, pump, APS or objectives configuration on a follower:
+Beim ersten Start führt **AAPSClient** denselben **Einrichtungsassistenten** aus, den Du von **AAPS** kennst, aber mit viel weniger Schritten. Auf einem Follower werden kein Profil, kein Insulin, keine Pumpe, kein APS und keine Ziele eingerichtet:
 
-1. **Welcome**, **license agreement**, **permissions** and **master password** — identical to the main app, see the [AAPS Setup Wizard](../SettingUpAaps/SetupWizard.md).
-2. The client does **not** ask for **units** or the **low/high marks**: it takes them from the main phone as soon as it is connected to Nightscout. You can see them later in **Settings**, where a small **phone icon** shows that they are [synchronized with the main phone](#client-master-config-prefs). They can only be edited while the master is reachable.
-3. **Vom Master aus einrichten** – öffne auf dem Master **Bearbeiten → Autorisierte Clients**, füge dieses Smartphone mit einem **QR-Code** hinzu und tippe hier auf **QR-Code scannen**. One scan sets up Nightscout with a token of this phone's own and, with a code that pairs, also pairs the phone. The phone also takes the name it was added with on the master as its instance name (letters with accents become plain letters, "Miloš" becomes "Milos"). **After the scan, the setup is finished**: the wizard closes, because the next steps would only show what the code did. Without a QR code, skip this step. (Android only: the scanner is not available on iOS yet.)
+1. **Willkommen**, **Lizenzvereinbarung**, **Berechtigungen** und **Master-Passwort** – genau wie in der Haupt-App, siehe [AAPS Einrichtungsassistent](../SettingUpAaps/SetupWizard.md).
+2. Der Client fragt **nicht** nach den **Einheiten** oder den **unteren/oberen Grenzen**: Er übernimmt sie vom Haupt-Smartphone, sobald er mit Nightscout verbunden ist. Du siehst sie später in den **Einstellungen**. Dort zeigt ein kleines **Smartphone-Symbol**, dass sie [mit dem Haupt-Smartphone abgeglichen](#client-master-config-prefs) werden. Ändern kannst Du sie nur, wenn der Master erreichbar ist.
+3. **Vom Master aus einrichten** – öffne auf dem Master **Bearbeiten → Autorisierte Clients**, füge dieses Smartphone mit einem **QR-Code** hinzu und tippe hier auf **QR-Code scannen**. Ein einziger Scan richtet Nightscout mit einem eigenen Token für dieses Smartphone ein und koppelt es auch gleich, wenn es ein Code zum Koppeln ist. Das Smartphone übernimmt außerdem den Namen, mit dem es auf dem Master hinzugefügt wurde, als Namen dieser Instanz (Buchstaben mit Akzent werden zu einfachen Buchstaben, aus „Miloš“ wird „Milos“). **Nach dem Scan ist die Einrichtung abgeschlossen**: Der Assistent schließt sich, weil die nächsten Schritte nur noch zeigen würden, was der Code schon erledigt hat. Ohne QR-Code überspringst Du diesen Schritt. (Nur Android: Unter iOS gibt es den Scanner noch nicht.)
 
    ![The Set up from the master step with the Scan the QR code button](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **Communication** — the plugin list only offers what a follower needs (NSClientV3, xDrip+, Wear, External Companion Apps, Garmin). If you did not scan a QR code, enable **NSClientV3** and enter the **same Nightscout URL** as on the main phone and an access token, with **websockets** enabled — exactly as described in [Synchronization](#RemoteControl_aapsclient).
+4. **Kommunikation** – die Liste bietet nur die Module an, die ein Follower braucht (NSClientV3, xDrip+, Wear, External Companion Apps, Garmin). Wenn Du keinen QR-Code gescannt hast, aktiviere **NSClientV3** und trage **dieselbe Nightscout-URL** wie auf dem Haupt-Smartphone sowie ein Zugriffstoken ein, mit eingeschalteten **Websockets** – genau wie unter [Synchronisation](#RemoteControl_aapsclient) beschrieben.
 
    ![Communication step on the client](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
-5. **Pair with master** — this step exists **only** on the client. It connects this device to the master over the secure command channel, with the PIN, and takes the name the phone was added with on the master, like the QR code. **After the pairing, the setup is finished.** You can also skip it and pair at any time later from **Manage → Pair with master**.
+5. **Mit Master koppeln** – diesen Schritt gibt es **nur** auf dem Client. Er verbindet dieses Gerät mit der PIN über den sicheren Befehlskanal mit dem Master und übernimmt, wie der QR-Code, den Namen, mit dem das Smartphone auf dem Master hinzugefügt wurde. **Nach der Kopplung ist die Einrichtung abgeschlossen.** Du kannst den Schritt auch überspringen und jederzeit später über **Bearbeiten → Mit Master koppeln** koppeln.
 
    ![Pair with master step in the client wizard](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
 
-6. **Who is using this phone?** — only when you did not pair in the wizard: the name of the person using this phone. It tells this instance apart in reports and synchronization.
+6. **Wer nutzt dieses Smartphone?** – nur, wenn Du im Assistenten nicht gekoppelt hast: der Name der Person, die dieses Smartphone nutzt. Daran wird diese Instanz in Berichten und bei der Synchronisation erkannt.
 
 (aapsclient-pairing-with-the-master)=
 
