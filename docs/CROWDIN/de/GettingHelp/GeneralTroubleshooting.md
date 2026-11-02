@@ -62,7 +62,7 @@ Bei bekannten Problemen mit Bluetooth-Verbindungen, Pumpen/Pods oder Aktivierung
 
 ## Android Related Issues
 
-### Battery optimization
+### Akku-Optimierung
 
 **AAPS** can help you find the right settings for your phone: open the **menu** (☰) > **About** and tap **Don't kill my app?**. It opens the instructions for your phone brand on [Don't kill my app](https://dontkillmyapp.com/). The [setup wizard](#setup-wizard-bluetooth-battery-optimisation) also asks you to turn off battery optimization for **AAPS** and Bluetooth.
 

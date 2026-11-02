@@ -144,7 +144,7 @@ Bei der Auswahl Deiner **Automatisierung** und der Wahl der Bedingungen und Wert
 
 ![Automatisierungsauslöser](../images/Automations/automation_triggers.png)
 
-Scroll down to see the rest of the list:
+Scrolle nach unten, um den Rest der Liste zu sehen:
 
 ![Automation Triggers, continued](../images/Automations/automation_trigger_picker_2.png)
 
@@ -198,7 +198,7 @@ Beachte, dass für alle altersbezogenen Bedingungen der Vergleich auf Gleichheit
 
 ![Automation Actions](../images/Automations/automation_actions.png)
 
-Scroll down to see the rest of the list:
+Scrolle nach unten, um den Rest der Liste zu sehen:
 
 ![Automation Actions, continued](../images/Automations/automation_action_picker_2.png)
 
@@ -362,7 +362,7 @@ Screenshots, die die Auslöser für diese Automatisierung im Detail zeigen:
 
 1) Bedingung: Wiederholungszeit = Mo, Di, Mi, Do, Fr um 8:00 Uhr 1) Aktion: Einstellungen exportieren (Für „Text in Behandlungen“ gib „Täglich“ ein)
 
-![Geplante Exporte](../images/Automations/automation_settings_export_daily.png)
+![Scheduled exports](../images/Automations/automation_settings_export_daily.png)
 
 Hinweis: Der Export wird im Careportal protokolliert
 
@@ -372,7 +372,7 @@ Screenshots, die die Auslöser für diese Automatisierung im Detail zeigen:
 
 1) Bedingung: Pod-Aktivierung 1) Aktion: Export der Einstellungen (Als „Text in Behandlungen" gib "Pod-Aktivierung: Einstellungen exportieren" ein)
 
-![Bei Pod-Aktivierung exportieren](../images/Automations/automation_settings_export_pod_activation.png)
+![Export on Pod activation](../images/Automations/automation_settings_export_pod_activation.png)
 
 Hinweis: Der Export wird im Careportal protokolliert. Hinweis: Automatisierungen werden **nur dann** ausgeführt, wenn Du vorher einen manuellen Export der Einstellungen gemacht hast. See [Settings → Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
 
