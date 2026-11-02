@@ -31,7 +31,7 @@ When the Setup Wizard opens, it greets you with a short welcome message and imme
 
 Once you have granted the permissions, the panel closes and the welcome screen shows a "**Next**" button. Press "**NEXT**" to continue:
 
-![Willkommen](../images/setup-wizard/Wizard-Welcome.png)
+![Welcome](../images/setup-wizard/Wizard-Welcome.png)
 
 ## Erforderliche Berechtigungen
 
@@ -412,7 +412,7 @@ When all four tabs are valid, the **save icon** (top right) becomes active. Pres
 
 Close the editor with the "**X**" in the top left corner. The profile summary then shows its name, its total daily basal (∑), the units and the IC and ISF values with their graphs:
 
-![Speichern](../images/setup-wizard/Wizard-Profile-Save.png)
+![Save](../images/setup-wizard/Wizard-Profile-Save.png)
 
 ```{admonition} Several defined but only one active profile
 :class: note
@@ -487,7 +487,7 @@ Go back and press "**NEXT**" to go to the next screen:
 
 Leave "**Sensitivity Oref1**" selected as the standard sensitivity plugin:
 
-![Sensitivität](../images/setup-wizard/Wizard-Sensitivity.png)
+![Sensitivity](../images/setup-wizard/Wizard-Sensitivity.png)
 
 If you press "**Settings**" you can review the absorption settings; the defaults (_e.g._ a 6 h absorption cutoff) are fine for now.
 
