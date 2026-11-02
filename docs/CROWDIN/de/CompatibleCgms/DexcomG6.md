@@ -17,7 +17,7 @@ Mehr dazu findest Du in dem, von Tim Street auf der Seite [www.diabettech.com](h
 ## If using G6 or ONE with xDrip
 
 - If not already set up, download [xDrip](https://github.com/NightscoutFoundation/xDrip) and adjust its settings following the [xDrip settings page](../CompatibleCgms/xDrip.md).
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Wähle xDrip unter [**Konfiguration → BZ-Quelle**](#Config-Builder-bg-source).
 - Der Dexcom G6- und ONE-Transmitter können gleichzeitig mit einem Dexcom-Empfänger (oder alternativ mit der t:slim-Pumpe) und einer App auf dem Smartphone verbunden werden.
 - When using xDrip as receiver uninstall the Dexcom app first. **You cannot connect xDrip and Dexcom app with the transmitter at the same time!**
 - If you need Clarity and want to profit from xDrip alarms use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip.
