@@ -30,7 +30,7 @@
 
 Android 會為每個系統版本指定一個 **API 等級**，這是應用程式使用的數字。例如，API 等級 30 對應 Android 11。下列表格使用來自 AAPS 版本資料的 API 等級。每一列中的 AAPS 版本，是該列所示 API 等級所對應的數值。這不是你可安裝版本的完整清單。
 
-要為你的手機選擇 AAPS 版本，請參考[發行說明中的 Android 版本指引](#maintenance-android-version-aaps-version)。若某個 API 等級未列出 AAPS 版本，表格會顯示「未列出」。
+To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version).
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
@@ -67,19 +67,35 @@ document.addEventListener('DOMContentLoaded', async () => {
       typeof entry.endDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(entry.endDate)
     ).sort((a, b) => b.version.localeCompare(a.version, undefined, { numeric: true }));
     const android = data.filter(entry =>
-      entry && Number.isInteger(entry.minAndroid) && Number.isInteger(entry.maxAndroid)
+      entry && Number.isInteger(entry.minAndroid) && Number.isInteger(entry.maxAndroid) &&
+      typeof entry.supported === 'string' && entry.supported
     ).sort((a, b) => b.minAndroid - a.minAndroid);
     if (!versions.length && !android.length) throw new Error('No version data');
 
-    showRows('aaps-eol-versions', versions.map(entry => [entry.version, entry.endDate]));
+    // Merge neighbouring versions that share an end date and the same x.y.z prefix
+    // (for example 3.2.0.0 to 3.2.0.3) into a single row.
+    const groups = [];
+    for (const entry of versions.slice().reverse()) {
+      const prefix = entry.version.split('.').slice(0, 3).join('.');
+      const last = groups[groups.length - 1];
+      if (last && last.endDate === entry.endDate && last.prefix === prefix) {
+        last.versions.push(entry.version);
+      } else {
+        groups.push({ prefix, endDate: entry.endDate, versions: [entry.version] });
+      }
+    }
+    const label = list => list.length === 1 ? list[0]
+      : list.length === 2 ? `${list[0]} and ${list[1]}`
+      : `${list[0]} to ${list[list.length - 1]}`;
+    showRows('aaps-eol-versions', groups.reverse().map(g => [label(g.versions), g.endDate]));
     showRows('aaps-eol-android', android.map(entry => [
       entry.minAndroid === entry.maxAndroid
         ? String(entry.minAndroid) : `${entry.minAndroid}–${entry.maxAndroid}`,
-      typeof entry.supported === 'string' && entry.supported ? entry.supported : '未列出'
+      entry.supported
     ]));
     status.remove();
   } catch {
-    status.textContent = '無法載入 AAPS 版本資料。請稍後再試。';
+    status.textContent = 'Could not load AAPS version data. 請稍後再試。';
   }
 });
 </script>
