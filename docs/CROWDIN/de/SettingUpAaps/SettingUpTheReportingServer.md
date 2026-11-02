@@ -5,7 +5,7 @@ Derzeit können zwei Berichtsserver mit **AAPS** genutzt werden:
 - [Nightscout](https://nightscout.github.io/)
 - [Tidepool](https://www.tidepool.org/)
 
-![Berichtsserver](../images/Building-the-App/ReportingServer.png)
+![Reporting Servers](../images/Building-the-App/ReportingServer.png)
 
 Wir empfehlen Nightscout zu nutzen.
 
