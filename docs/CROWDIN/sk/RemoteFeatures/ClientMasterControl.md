@@ -134,7 +134,7 @@ Nasmerujte kameru na kód. Klient ukáže, čo kód robí — adresu Nightscoutu
 
 ```{admonition} Scanning is available on Android
 :class: note
-Skener zatiaľ nie je dostupný v iOS a počítač nemá kameru: tam použite PIN kód.
+A computer without camera: use the PIN there.
 ```
 
 #### Zadanie PIN kódu
