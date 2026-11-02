@@ -70,11 +70,12 @@ Nepoužívajte **AAPS**, ak užívate SGLT-2 inhibítory (gliflozíny), pretože
 ## Obsah dokumentácie AAPS
 
 ```{toctree}
-:caption: Používanie tejto dokumentácie
+:caption: Using this documentation
+:titlesonly:
 
-Zmena jazyka a verzie <./NavigateDoc/ChangeLanguageVersion.md>
-Vyhľadávanie v dokumentácii <./NavigateDoc/SearchDoc.md>
-Aktualizácie a zmeny dokumentácie <./Maintenance/DocumentationUpdate.md>
+Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
+Search the documentation <./NavigateDoc/SearchDoc.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
 :caption: 1) Začíname
