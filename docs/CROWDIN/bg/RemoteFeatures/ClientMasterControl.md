@@ -134,7 +134,7 @@ PIN кодът защитава тайния ключ за свързване, �
 
 ```{admonition} Scanning is available on Android
 :class: note
-Скенерът все още не е наличен за iOS, а настолният компютър няма камера: там използвайте PIN.
+A computer without camera: use the PIN there.
 ```
 
 #### Въвеждане на PIN
