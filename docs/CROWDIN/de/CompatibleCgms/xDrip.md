@@ -1,46 +1,46 @@
-# xDrip settings
+# xDrip-Einstellungen
 
-If not already set up, download and install the latest xDrip release from the [xDrip releases page](https://github.com/NightscoutFoundation/xDrip/releases).
+Falls noch nicht geschehen, lade die neueste xDrip-Version von der [xDrip-Releases-Seite](https://github.com/NightscoutFoundation/xDrip/releases) herunter und installiere sie.
 
-Disable battery optimization and allow background activity for the xDrip app.
+Deaktiviere die Akku-Optimierung und erlaube die Hintergrundaktivität für die xDrip-App.
 
 ## Grundsätzliche Einstellungen für alle CGM & FGM-Systeme
 
 ### Nightscout Upload ausschalten
 
-You shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+Neben AAPS sollte keine andere App Daten (Glukosewerte und Behandlungen) zu Nightscout hochladen.
 
-→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Switch **OFF** `Enabled` (5)
+→ Hamburger Menü (1) → Einstellungen (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Schalte `Aktiviert` (5) **AUS**
 
 ![xDrip Basic Settings 1](../images/xDrip_Basic1.png)
 
 #### Automatische Kalibrierung und Behandlungen ausschalten
 
-Make sure `Automatic Calibration` (7) is deactivated. If the checkbox for `Automatic Calibration` is checked, activate `Download treatments` (6) once, then remove the checkbox for `Automatic Calibration` and deactivate `Download treatments` again.
+Stelle sicher, dass `Automatische Kalibrierung` (7) deaktiviert ist. Ist das Kontrollkästchen `Automatische Kalibrierung` aktiviert, aktiviere einmal `Behandlungen herunterladen` (6), entferne dann den Haken bei `Automatische Kalibrierung` und deaktiviere `Behandlungen herunterladen` wieder.
 
 ![xDrip Basic Settings 2](../images/xDrip_Basic2.png)
 
-Tap `Extra Options`(8)
+Tippe auf `Zusätzliche Optionen` (8)
 
-    {admonition} Safety warning
+    {admonition} Sicherheitshinweis
     :class: warning
-    You must deactivate "Upload treatments" from xDrip, otherwise treatments can be doubled in AAPS leading to false COB and IOB.
+    Du musst „Behandlungen hochladen“ in xDrip deaktivieren, da Behandlungen sonst in AAPS doppelt erscheinen können, was zu falschen COB- und IOB-Werten führt.
 
-Deactivate `Upload treatments`(9) and make sure you will **NOT** use `Back-fill data` (11).
+Deaktiviere `Behandlungen hochladen` (9) und nutze **auf keinen Fall** die Funktion `Back-fill Daten` (11).
 
-Option `Alert on failures` should also be deactivated (10). Otherwise you will get an alarm every 5 minutes in case Wi-Fi/mobile network issues or if the server is not available.
+Die Option `Alarm bei Fehlern` sollte ebenfalls deaktiviert sein (10). Bei WLAN bzw. Mobilfunk-Problemen oder wenn der Server nicht erreichbar ist, erhältst Du sonst alle 5 Minuten einen Alarm.
 
 ![xDrip Basic Settings 3](../images/xDrip_Basic3.png)
 
 ### **Inter-App Einstellungen** (Broadcast)
 
-If you use AAPS, you must activate broadcasting in xDrip's Inter-App settings so the data is forwarded to AAPS.
+Wenn Du AAPS nutzt, musst Du in den Inter-App Einstellungen von xDrip den Broadcast aktivieren, damit die Daten an AAPS weitergeleitet werden.
 
-→ Hamburger Menu (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
+→ Hamburger Menü (1) → Einstellungen (2) → Inter-App Einstellunge (3) → Lokaler Broadcast **AN** (4)
 
-In order for the values to be identical in AAPS with respect to xDrip, you should activate `Send the displayed glucose value` (5).
+Damit die Werte in AAPS und in xDrip übereinstimmen, solltest Du `Sende den angezeigten Glukosewert` (5) aktivieren.
 
-Enable Compatible Broadcast (6).
+Aktiviere „Kompatible Broadcasts“ (6).
 
 ![xDrip Basic Settings 4](../images/xDrip_Basic4.png)
 
@@ -105,21 +105,21 @@ Follow the instructions:
 
 ### Dexcom G7, ONE+ und Stelo
 
-- Follow the [G7, ONE+ and Stelo instructions](https://navid200.github.io/xDrip/docs/Dexcom/G7.html) (a recent xDrip release is required — see the linked page).
-- See also the [Dexcom G7, ONE+ and Stelo page](../CompatibleCgms/DexcomG7.md) for the available setups with **AAPS**.
+- Folge der [Anleitung für G7, ONE+ und Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html) (eine aktuelle xDrip-Version ist nötig, siehe verlinkte Seite).
+- Auf der Seite [Dexcom G7, ONE+ und Stelo](../CompatibleCgms/DexcomG7.md) findest Du außerdem die möglichen Konfigurationen mit **AAPS**.
 
 (xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)=
 
-### Troubleshooting Dexcom and xDrip
+### Fehlerbehebung Dexcom und xDrip
 
-- [G6/ONE connectivity troubleshooting](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html)
-- [G7/ONE+/Stelo troubleshooting](https://navid200.github.io/xDrip/docs/Dexcom/G7_Troubleshooting.html)
-- [Problem when starting a new sensor](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html)
-- Full list: see **Troubleshooting** on the [xDrip Dexcom page](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
+- [Fehlerbehebung bei Verbindungsproblemen G6/ONE](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html)
+- [Fehlerbehebung G7/ONE+/Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7_Troubleshooting.html)
+- [Probleme beim Starten eines neuen Sensors](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html)
+- Die vollständige Liste findest Du unter **Troubleshooting** auf der [xDrip-Dexcom-Seite](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
 ## Libre 1
 
-- Setup your NFC to Bluetooth bridge in xDrip
+- Einrichten der NFC zu Bluetooth Bridge in xDrip
     
     → Hamburger Menü (1) → Einstellungen (2) → Erweiterte Einstellungen (3) → Bluetootheinstellungen (4)
 
@@ -152,7 +152,7 @@ Follow the instructions:
 
 - Wenn Dein Sensor (Libre 2 EU und Libre 1 US) es erfordert, installiere den neuesten Verarbeitungsalgorithmus.
 
-- Your sensor must be already started using the vendor app or the reader (xDrip cannot start or stop Libre sensors).
+- Dein Sensor muss bereits mit der Hersteller-App oder dem Lesegerät gestartet worden sein (xDrip kann Libre-Sensoren nicht starten oder stoppen).
 
 - Wähle Libre Bluetooth als Datenquelle.
     
@@ -164,7 +164,7 @@ Follow the instructions:
     
     → Hamburger Menü (1) → Bluetooth scannen (2) → Scannen (3)
     
-    - If xDrip can't find the bridge, make sure it's not connected to the vendor app. Put it in charge and reset it.
+    - Wenn xDrip die Bridge nicht findet, stelle sicher, dass sie nicht mit der Hersteller-App verbunden ist. Lade sie auf und setze sie zurück.
     
     ![xDrip Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
 
