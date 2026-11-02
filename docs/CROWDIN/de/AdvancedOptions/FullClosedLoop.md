@@ -108,7 +108,7 @@ Wenn Du mit einer Pumpe oder einem hybriden Closed Loop trainierst oder aktiv bi
 
 Mit **FCL** ist der Algorithmus so eingestellt, dass er **UAM** erkennt und bei steigenden **Glukosewerten** automatisch Insulin abgibt.  Ein hohes **temporäres Ziel** und ein niedriger **Prozentsatz des Profils** (bereits rund um den Beginn der Mahlzeit wirksam) sollten rechtzeitig vor jeder Aktivität gesetzt werden.
 
-Ungewöhnliche oder fehlerhafte Aktivität sind für den **FCL** problematisch. Für sportliche Aktivitäten ist es nötig im Voraus zu planen (insbesondere, wenn der Bedarf an Notfall-KH/Snacks während einer Sport-Hypo reduziert werden soll). Nach einem aktiven Tag empfiehlt es sich, für die Nacht einen niedrigeren **Prozentsatz des Profils** einzustellen, sobald das Abendessen vollständig verdaut ist: Setze in den **Automatisierungen** ein erhöhtes **Glukoseziel** (>100 mg/dL) und schalte in den **AAPS**-**Einstellungen** **SMB bei hohen temporären Zielen aktivieren** aus.
+Ungewöhnliche oder fehlerhafte Aktivität sind für den **FCL** problematisch. Für sportliche Aktivitäten ist es nötig im Voraus zu planen (insbesondere, wenn der Bedarf an Notfall-KH/Snacks während einer Sport-Hypo reduziert werden soll). Nach einem aktiven Tag empfiehlt es sich, für die Nacht einen niedrigeren **Prozentsatz des Profils** einzustellen, sobald das Abendessen vollständig verdaut ist: Setze in den **Automatisierungen** ein erhöhtes **Glukoseziel** (>100 mg/dl) und schalte in den **AAPS**-**Einstellungen** **SMB bei hohen temporären Zielen aktivieren** aus.
 
 ## Hindernisse für Kinder
 
@@ -220,7 +220,7 @@ Der **IOB**-Schwellenwert kann in Deiner **Automatisierung** schnell angepasst w
 
 Automation (#3), "iobTH reached => **SMBs** off”, is defined to end (or pause, until another wave of carb-related rise hits) the aggressive **SMB** boosting.
 
-![Automation #3: IOB of 5.5 or more with no temp target running starts a temp target of 111 mg/dL](../images/fullClosedLoop04.png)
+![Automation #3: IOB of 5.5 or more with no temp target running starts a temp target of 111 mg/dl](../images/fullClosedLoop04.png)
 
 Automatisierung #3
 
@@ -243,11 +243,11 @@ Falls sich beispielsweise Dein Frühstück kohlenhydratmäßig vollständig von 
 
 Falls nach einer „reichhaltigen“ Mahlzeit ein lang anhaltender **hoher Glukosespiegel** auftritt, hilft die **Automatisierung** #4 (unten), „Hoch nach dem Essen“ mit der Fettsäureresistenz umzugehen: Nach mehrgängigen Mahlzeiten, einer großen fettigen Pizza oder einem Raclette-Abend könen sich in der Glukosekurve zwei Höcker oder sehr oft auch ein längeres hohes Plateau zeigen.
 
-![Automation #4: glucose above 160 mg/dL and Autosens below 120% starts profile 120% for 15 min](../images/fullClosedLoop05.png)
+![Automation #4: glucose above 160 mg/dl and Autosens below 120% starts profile 120% for 15 min](../images/fullClosedLoop05.png)
 
 Automation #4
 
-![Automation #5: profile at 120% and glucose below 150 mg/dL switches back to the normal profile](../images/fullClosedLoop06.png)
+![Automation #5: profile at 120% and glucose below 150 mg/dl switches back to the normal profile](../images/fullClosedLoop06.png)
 
 Automation #5
 
