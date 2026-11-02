@@ -3,15 +3,15 @@
 ![image](./images/basic-outline-of-AAPS.png)
 
 ```{admonition} Latest Release
-:class: note
+:class:注意：
 
-31 October 2026: Version 4.0.0 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
+4.0.0版本已于2026年十月31日发布。请查看发布说明](#latestrelease)了解新内容，并按照更新手册(./Maintenance/UpdateToNewVersion.md)中的说明进行升级。
 
 ```
 
-Android APS (**AAPS**) 是一个开放源码的安卓应用程序，适用于糖尿病依赖型（I型）糖尿病患者。是一款可以在安卓智能手机上运行的人工胰腺控制软件。其主要功能是通过运用OpenAPS算法来模拟正常的胰腺功能：通过自动胰岛素输注（Automated Insulin Dosing，AID）将血糖水平保持在正常限度内。 To use **AAPS** you need **three** compatible devices: **(1)** an Android phone, **(2)** a continuous glucose monitor (CGM), and **(3)** an FDA/CE approved insulin pump. You can also add **(4)** cloud services to remotely control **AAPS**, share your data, and store it on a reporting server, and **(5)** a smartwatch.
+Android APS (**AAPS**) 是一个开放源码的安卓应用程序，适用于糖尿病依赖型（I型）糖尿病患者。是一款可以在安卓智能手机上运行的人工胰腺控制软件。其主要功能是通过运用OpenAPS算法来模拟正常的胰腺功能：通过自动胰岛素输注（Automated Insulin Dosing，AID）将血糖水平保持在正常限度内。 **AAPS**的使用需要 **三台**兼容设备：: **（1）**一部安卓手机， **（2）**一个连续血糖监测仪（CGM）以及 **（3）**一款经FDA/CE认证的胰岛素泵。您还可以添加 **（4）** 云服务，用于远程控制 **AAPS**,共享数据,存储数据以及**（5）** 智能手表。
 
-This documentation explains how to set up and use **AAPS**. You can navigate through the **AAPS** documentation either through the menu on the left (and the handy **Search docs** function), or by using the [index](#index-aaps-documentation-index) at the bottom of this page.
+本文档会告诉您如何设置和使用 **AAPS**。浏览 **AAPS** 文档您可以通过左侧的菜单（以及便捷的“ **搜索文档**”功能）或本页[底部](#index-aaps-documentation-index)的索引来进行。
 
 ## AAPS 文档概述(“说明书”)
 
