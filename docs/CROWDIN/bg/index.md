@@ -70,11 +70,12 @@ In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provi
 ## Индекс на документацията на AAPS
 
 ```{toctree}
-:caption: Използване на тази документация
+:caption: Using this documentation
+:titlesonly:
 
-Смяна на езика и версията <./NavigateDoc/ChangeLanguageVersion.md>
-Търсене в документацията <./NavigateDoc/SearchDoc.md>
-Актуализации и промени в документацията <./Maintenance/DocumentationUpdate.md>
+Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
+Search the documentation <./NavigateDoc/SearchDoc.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
 :caption: 1) Първи стъпки
