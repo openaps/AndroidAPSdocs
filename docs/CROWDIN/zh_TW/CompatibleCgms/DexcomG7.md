@@ -30,7 +30,7 @@ Dexcom BYODA 現在是非常舊的應用程式版本，且無法更新。不適�
 -   解除安裝原版 Dexcom 應用程式
 -   安裝下載的 apk
 -   在修改版應用程式中輸入傳感器代碼
--   After a short time BYODA should pick up the sensor signal.
+-   稍等片刻後，BYODA 應該就會接收到感測器訊號。
 
 (DexcomG7-xdrip-companion-app)=
 
