@@ -762,9 +762,9 @@ Zeigt die **AAPS**-Historie (d. h. die historischen Verläufe) an. Siehe dazu au
 
 (aaps-screens-statistics)=
 
-## Statistiken
+## Statistics
 
-![Statistiken](../images/v4/Screens/statistics.png)
+![Statistics](../images/v4/Screens/statistics.png)
 
 Öffne das **Menü** (☰) und wähle **Statistiken**.
 
