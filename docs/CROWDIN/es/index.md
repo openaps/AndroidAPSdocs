@@ -70,11 +70,12 @@ No uses **AAPS** si tomas inhibidores de SGLT-2 (gliflozinas), porque bajan los 
 ## Índice de la documentación de AAPS
 
 ```{toctree}
-:caption: Usar esta documentación
+:caption: Using this documentation
+:titlesonly:
 
-Cambiar idioma y versión <./NavigateDoc/ChangeLanguageVersion.md>
-Buscar en la documentación <./NavigateDoc/SearchDoc.md>
-Actualizaciones y cambios de la documentación <./Maintenance/DocumentationUpdate.md>
+Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
+Search the documentation <./NavigateDoc/SearchDoc.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
 :caption: 1) Primeros pasos
