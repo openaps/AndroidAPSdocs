@@ -2,18 +2,18 @@
 
 Im vorherigen Abschnitt [**AAPS** erstellen](../SettingUpAaps/BuildingAaps.md), hast Du die **AAPS**-App (eine .apk-Datei) auf einem Computer erstellt (gebaut).
 
-The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip or another CGM receiver app) to your Android smartphone, and then **install** the app(s). Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](../SettingUpAaps/SetupWizard.md).
+Die nächsten Schritte sind, die **AAPS**-APK-Datei (sowie andere Apps, die Du eventuell benötigst, wie BYODA, xDrip oder eine andere CGM-App) auf Dein Android-Smartphone zu **übertragen** und sie dann zu **installieren**. Nachdem Du **AAPS** auf dem Smartphone installiert hast, können wir dann mit der [**Konfiguration des AAPS-Loop**](../SettingUpAaps/SetupWizard.md) weiter machen.
 
-This page also explains [Android developer verification](#android-developer-verification), a change Google is rolling out from September 2026 that affects installing self-built apps, and the [free installation methods](#android-developer-verification-free-methods) that keep working after the change.
+Diese Seite erklärt außerdem die [Android-Entwicklerverifizierung](#android-developer-verification), eine Änderung, die Google ab September 2026 einführt und die das Installieren selbst erstellter Apps betrifft, sowie die [kostenlosen Installationswege](#android-developer-verification-free-methods), die auch nach der Änderung funktionieren.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Installing AAPS by tapping the APK file
+## AAPS durch Tippen auf die APK-Datei installieren
 
-Today, you install **AAPS** by transferring the APK file to your phone and opening ("tapping") it. Es gibt mehrere Möglichkeiten, **AAPS**-APK-Datei von Deinem Computer auf das Smartphone zu übertragen. Hier erklären wir zwei davon:
+Heute installierst Du **AAPS**, indem Du die APK-Datei auf Dein Smartphone überträgst und sie dort öffnest (darauf „tippst“). Es gibt mehrere Möglichkeiten, **AAPS**-APK-Datei von Deinem Computer auf das Smartphone zu übertragen. Hier erklären wir zwei davon:
 
 * Option 1 -  Google-Laufwerk (Goggle Drive) verwenden
 * Option 2 - USB-Kabel verwenden
@@ -22,7 +22,7 @@ Bitte beachte, dass die Übertragung per E-Mail zu Schwierigkeiten führen kann 
 
 ```{admonition} Android developer verification
 :class: warning
-Google is rolling out [Android developer verification](#android-developer-verification) from September 2026 (starting in Brazil, Indonesia, Singapore and Thailand; worldwide in 2027). Where it is enforced, installing an APK by tapping the file — as described in both options below — is blocked. In that case, use one of the [free installation methods](#android-developer-verification-free-methods) further down this page.
+Google führt die [Android-Entwicklerverifizierung](#android-developer-verification) ab September 2026 ein (zuerst in Brasilien, Indonesien, Singapur und Thailand, weltweit 2027). Wo sie gilt, wird die Installation einer APK durch Tippen auf die Datei – wie bei beiden Optionen unten beschrieben – blockiert. Verwende in diesem Fall einen der [kostenlosen Installationswege](#android-developer-verification-free-methods) weiter unten auf dieser Seite.
 ```
 
 ### Option 1. Google-Laufwerk zum Übertragen von Dateien verwenden
@@ -33,31 +33,31 @@ Wähle in der rechten oberen Ecke im Google-Menü die Drive-App aus.
 
 ![Start Drive App](../images/GoogleDriveInWebbrowser.png)
 
-Click **New** at the top left (or right-click an empty area below your files and folders) and select **File upload**.
+Klicke oben links auf **Neu** (oder klicke mit der rechten Maustaste in einen leeren Bereich unter Deinen Dateien und Ordnern) und wähle **Datei hochladen**.
 
 ![Upload apk file with Google Drive App](../images/GoogleDriveUploadFile.png)
 
 Die APK-Datei sollte jetzt auf Google Drive hochgeladen werden.
 
-#### Use the Google Drive app to execute the apk file for installation
+#### Nutze die Google Drive-App, um die APK-Datei für die Installation auszuführen
 
 Wechsel zu Deinem Mobilgerät und starte dort die Google Drive-App. Es handelt sich um eine vorinstallierte App und Du findest sie dort wo auch die anderen Google-Apps sind oder Du suchst mit dem App-Namen danach.
 
 ![start the Google Drive app](../images/GoogleDriveMobileAPPLaunch.png)
 
-Launch the apk installation by tapping the filename in the Google Drive App on the mobile.
+Starte die APK-Installation durch Tippen auf den Dateinamen in der Google Drive App des Smartphones.
 
 ![launch the apk installation](../images/GoogleDriveMobileUploadedAPK.png)
 
-In case you get a security notice that you are not allowed to install apps from Google Drive at the moment, tap "Settings" and allow it for that short moment, then disallow it afterwards, as it is a security risk to leave it enabled all the time.
+Falls Du eine Sicherheitswarnung bekommst, dass Du im Moment keine Apps aus Google Drive installieren darfst, tippe auf „Einstellungen“ und erteile die Erlaubnis für diesen kurzen Moment. Entziehe sie anschließend wieder, da es ein Sicherheitsrisiko darstellt, sie dauerhaft aktiviert zu lassen.
 
 ![Security Notice Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
 
 ![Security Notice Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
 
-After the installation finishes, you are done with this step.
+Nach Abschluss der Installation bist Du mit diesem Schritt fertig.
 
-You should see the **AAPS** icon and be able to open the app.
+Du solltest das **AAPS**-Icon nun sehen und die App öffnen können.
 
 ```{warning}
 **WICHTIGER SICHERHEITSHINWEIS**
@@ -68,13 +68,13 @@ Bitte mache jetzt mit der [Konfiguration des AAPS-Loop](../SettingUpAaps/SetupWi
 
 ### Option 2. USB-Kabel zum Übertragen von Dateien verwenden
 
-The second way to transfer the AAPS apk file is with a [USB cable](https://support.google.com/android/answer/9064445?hl=en).
+Die zweite Möglichkeit, die AAPS-APK-Datei zu übertragen, ist ein [USB-Kabel](https://support.google.com/android/answer/9064445?hl=en).
 
-Übertrage die Datei von Deinem Computer in den "Downloads"-Ordner auf dem Smartphone.
+Übertrage die Datei von Deinem Computer in den „Downloads“-Ordner auf dem Smartphone.
 
 Auf dem Smartphone musst Du die Installation aus unbekannten Quellen zulassen. Erläuterungen dazu findest Du im Internet (_z.B._ [hier](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) oder [hier](https://www.androidcentral.com/unknown-sources)).
 
-Once you have transferred the file by dragging it across, open the "Downloads" folder on the phone and press the AAPS apk file:
+Wenn Du die Datei per Drag & Drop übertragen hast, öffne auf dem Smartphone den Ordner „Downloads“ und tippe auf die AAPS-APK-Datei:
 
 ![The apk file in the Downloads folder](../images/install/install_01_downloads_apk.png)
 
