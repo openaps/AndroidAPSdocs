@@ -30,7 +30,7 @@ Insulin gibt es in verschiedenen Stärken. Sie werden in Einheiten pro Millilite
 Eine Konzentration mit einem Gerät zu verwenden, das nicht dazu passt, ist äußerst gefährlich und kann zu einer schweren Über- oder Unterdosierung führen. **Prüfe immer dreifach, ob die Insulinkonzentration zur Spritze, zum Pen oder zur Pumpe passt.**
 ```
 
-## When is a non-standard concentration used?
+## Wann wird eine andere Konzentration als U100 verwendet?
 
 Insulinpumpen sind zwar für U100-Insulin ausgelegt, in bestimmten medizinischen Situationen sind aber andere Konzentrationen nötig. In diesen Fällen ist äußerste Vorsicht und eine sehr sorgfältige Handhabung nötig.
 
