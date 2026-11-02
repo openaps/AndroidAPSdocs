@@ -70,6 +70,7 @@ Section **12) Resources**, contains archived or additional documentation, includ
 
 ```{toctree}
 :caption: Using this documentation
+:titlesonly:
 
 Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
 Search the documentation <./NavigateDoc/SearchDoc.md>
