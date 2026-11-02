@@ -70,11 +70,12 @@ Gebruik **AAPS** niet als je SGLT-2-remmers (gliflozines) gebruikt, omdat deze d
 ## Index van de AAPS-documentatie
 
 ```{toctree}
-:caption: Deze documentatie gebruiken
+:caption: Using this documentation
+:titlesonly:
 
-Taal en versie aanpassen <./NavigateDoc/ChangeLanguageVersion.md>
-Zoeken in de documentatie <./NavigateDoc/SearchDoc.md>
-Updates & wijzigingen in de documentatie <./Maintenance/DocumentationUpdate.md>
+Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
+Search the documentation <./NavigateDoc/SearchDoc.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
 :caption: 1) Aan de slag
