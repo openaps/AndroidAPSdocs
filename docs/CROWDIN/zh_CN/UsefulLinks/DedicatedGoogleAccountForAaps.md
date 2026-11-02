@@ -7,7 +7,7 @@
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-专用的Google drive空间意味着你不会因“导出偏好设置”而占用你的个人Google drive限额。
+- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
 - Each version of **AAPS** (and supporting apps like xDrip, BYODA, etc) will be stored in one single place which is independent of your computer hardware. 如果你的电脑或手机被盗/丢失/损坏，你仍然可以访问。
 -通过统一设置，它将简化具有相似文件夹结构的用户之间的在线支持。
 - 根据设置（见下文），您将在社区内拥有一个作为别名的独立身份进行通信，这可以保护您的隐私。 
@@ -45,13 +45,13 @@ Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/
  视频中概述的步骤如下：
 
 在此示例中： 
-- 你的现有“日常”谷歌账户是<donald.muck42@gmail.com>； ![](../images/Building-the-App/building_0002.png)
+- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
 - 你的新“_AAPS_”Gmail账户将是：<donald.muck42.aaps@gmail.com>； ![](../images/Building-the-App/building_0003.png)
 
 
-### 转到<https://account.google.com> 
+### Go to <https://myaccount.google.com> 
 
- 如果你已经登录了谷歌，这将直接带你到你的“日常”**我的账户**页面。 （1）点击页面右上角的你的头像（在此例中，为一个简单的![](../images/Building-the-App/building_0002.png)）（2）选择“_添加另一个账户_”。
+ 如果你已经登录了谷歌，这将直接带你到你的“日常”**我的账户**页面。 (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
 
 ![](../images/Building-the-App/building_0005.png)
 
@@ -87,7 +87,7 @@ Gmail将显示账户名称。它将要求你接受Gmail的条款和条件并确�
 
 ### 自定义新个人资料显示
 
-此时，你应该在Gmail的我的账户页面上，显示你的新AAPS专用电子邮件账户。个人资料图片将默认设置为您的名字的首字母。为避免混淆，请将其更改为独特的内容……在此例中，Donald.Muck.AAPS已将![](../images/Building-the-App/building_0002.png)替换为 ![](../images/Building-the-App/building_0003.png)
+此时，你应该在Gmail的我的账户页面上，显示你的新AAPS专用电子邮件账户。个人资料图片将默认设置为您的名字的首字母。 Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
@@ -101,7 +101,7 @@ Gmail将显示账户名称。它将要求你接受Gmail的条款和条件并确�
 2. 在任务栏中的浏览器图标上右键单击
 3. 从菜单中选择“新窗口”……并调整其大小，使其只占屏幕底部的一半。
 
-在两个浏览器窗口中打开<https://gmail.com>。确保你的个人账户在上面，新的专用**AAPS**账户在下面，并且可以通过右上角的个人资料图片轻松识别。（如果需要，您可以通过点击个人资料图片并选择正确的帐户来随时切换帐户。
+在两个浏览器窗口中打开<https://gmail.com>。确保你的个人账户在上面，新的专用**AAPS**账户在下面，并且可以通过右上角的个人资料图片轻松识别。 If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
 
 ![](../images/Building-the-App/building_0009.png)
 

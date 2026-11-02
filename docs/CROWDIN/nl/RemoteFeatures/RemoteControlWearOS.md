@@ -287,7 +287,7 @@ Als **AAPS** de dosis moest beperken, bijvoorbeeld omdat de berekende bolus bove
     | --- | --- | --- | --- | --- | --- |
     | ![Venster Behandeling, pagina insuline](../images/wearos/dialogs/dialog_treatment.png) | ![Venster Insuline](../images/wearos/dialogs/dialog_insulin.png) | ![Venster Koolhydraten](../images/wearos/dialogs/dialog_carbs.png) | ![Venster eCarbs](../images/wearos/dialogs/dialog_ecarbs.png) | ![Venster Tijdelijk streefdoel, pagina duur](../images/wearos/dialogs/dialog_temp_target.png) | ![Venster Profiel wissel](../images/wearos/dialogs/dialog_profile_switch.png) |
     
-    [1] Zet in **Instellingen** > **Interface** op het horloge **Calculator percentage** aan om de invoer van het percentage in de boluscalculator te tonen. Het standaardpercentage komt uit ["Geef dit deel van het resultaat van de bolus wizard %"](#Preferences-deliver-this-part-of-bolus-wizard-result) op de telefoon. De andere instellingen van de calculator zijn die van de telefoon onder **Instellingen** > **Instellingen bolus wizard**.
+    [1] Zet in **Instellingen** > **Interface** op het horloge **Calculator percentage** aan om de invoer van het percentage in de boluscalculator te tonen. The default percentage comes from the phone's ["Bolus percentage"](#Preferences-deliver-this-part-of-bolus-wizard-result). De andere instellingen van de calculator zijn die van de telefoon onder **Instellingen** > **Instellingen bolus wizard**.
     
     [2] Zet in **Instellingen** > **Interface** op het horloge **Rekenmachine Maaltijd Type** aan om de pagina **Type maaltijd** te tonen. Daar kies je **Brood**, **Cake** of **Pizza** om de koolhydraten van een langzame maaltijd te verdelen in koolhydraten nu en eCarbs later. Zie [Het type maaltijd kiezen](#WearOsSmartwatch-wizard-meal-type).
     
@@ -357,7 +357,7 @@ Als **AAPS** de dosis moest beperken, bijvoorbeeld omdat de berekende bolus bove
     
     De vereenvoudigde interface is beschikbaar voor de watchfaces Digital Style en Custom. De vereenvoudigde interface is optioneel en stel je in via de instellingen van de watchface (druk lang op de watchface en tik op “bewerken” of het tandwielpictogram). Kies de instelling “Versimpel interface” en zet die op “Tijdens Opladen” of “Altijd Aan en Opladen”.
     
-    Met de Android-ontwikkelaarsopties blijft je horloge wakker tijdens het opladen. Zie de [officiële documentatie](https://developer.android.com/training/wearables/get-started/debugging) om de ontwikkelaarsopties beschikbaar te maken. Zet “Stay awake when charging” (wakker blijven tijdens opladen) op “aan” in de ontwikkelaarsopties.
+    Met de Android-ontwikkelaarsopties blijft je horloge wakker tijdens het opladen. Zie de [officiële documentatie](https://developer.android.com/training/wearables/get-started/debugging) om de ontwikkelaarsopties beschikbaar te maken. Set the “Stay awake when charging” to “on” in the developer options.
     
     Let op: niet alle schermen kunnen goed tegen altijd aan. Het kan inbranden van het scherm veroorzaken, vooral bij oudere OLED-schermen. Horloges dimmen het scherm meestal om inbranden te voorkomen; kijk voor advies in je handleiding, bij de fabrikant of op internet.
     
@@ -385,7 +385,7 @@ Als **AAPS** de dosis moest beperken, bijvoorbeeld omdat de berekende bolus bove
     
     ## Snelkoppeling AAPS Sluimer Alarm
     
-    Het horloge [toont het alarm](#WearOsSmartwatch-phone-alarms) zelf; de snelkoppeling is een tweede manier om het met één druk stil te maken. Je kunt een snelkoppeling maken om de waarschuwingen/alarmen van AAPS te laten sluimeren. Het geluid via je horloge dempen is handig en sneller, zonder dat je je telefoon hoeft te pakken. Let op: je moet de alarmmelding op je telefoon nog steeds bekijken en er iets mee doen, maar dat kan later. Als je horloge twee knoppen heeft, kun je een knop koppelen aan het programma `AAPS Sluimer Alarm`.
+    Het horloge [toont het alarm](#WearOsSmartwatch-phone-alarms) zelf; de snelkoppeling is een tweede manier om het met één druk stil te maken. Je kunt een snelkoppeling maken om de waarschuwingen/alarmen van AAPS te laten sluimeren. Het geluid via je horloge dempen is handig en sneller, zonder dat je je telefoon hoeft te pakken. Note: you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. Als je horloge twee knoppen heeft, kun je een knop koppelen aan het programma `AAPS Sluimer Alarm`.
     
     Om de knop op de Samsung Watch 4 te koppelen, ga je naar `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
     
@@ -435,7 +435,7 @@ Als **AAPS** de dosis moest beperken, bijvoorbeeld omdat de berekende bolus bove
     
     Als je je eigen watchface wilt maken, volg dan de [handleiding hier](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
     
-    Als je een aangepaste watchface hebt gemaakt, kun je je eigen aangepaste **AAPS**-watchface met anderen delen: het zip-bestand kan met een Pull Request op GitHub worden geüpload naar de map "ExchangeSiteCustomWatchfaces". Bij het samenvoegen van de pull request haalt het documentatieteam het bestand CustomWatchface.png uit het zip-bestand en zet de bestandsnaam van het zip-bestand ervoor.
+    Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into GitHub. Bij het samenvoegen van de pull request haalt het documentatieteam het bestand CustomWatchface.png uit het zip-bestand en zet de bestandsnaam van het zip-bestand ervoor.
     
     (WearOsSmartwatch-complications-watchface-download)=
     

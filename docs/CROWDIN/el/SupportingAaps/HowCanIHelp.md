@@ -23,7 +23,7 @@
 
 Μπορείτε να μεταφράζετε και την τεκμηρίωση, παράλληλα ή αργότερα.
 
-Μπορείτε να δείτε την κατάσταση των μεταφράσεων για την εφαρμογή και την τεκμηρίωση σε κάθε γλώσσα [εδώ](#StateOfTranslations).
+You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
 
 * Αν θέλετε να μεταφράσετε **την εφαρμογή** σε άλλες γλώσσες (σας ευχαριστούμε), χρησιμοποιήστε το [crowdin](https://crowdin.com/project/androidaps).
 * Αν θέλετε να μεταφράσετε **την τεκμηρίωση** σε άλλες γλώσσες (σας ευχαριστούμε), χρησιμοποιήστε το [crowdin](https://crowdin.com/project/androidapsdocs). 

@@ -131,7 +131,7 @@ Po każdym wyborze trzeba potwierdzić.
 
 Musisz sprawdzić, skąd biorą się zduplikowane BG:
 
-* Czy w Twojej stronie Nightscout jest włączony Dexcom bridge? Wyłącz bridge: przejdź do panelu administracyjnego Twojej instancji Nightscout, edytuj zmienną "enable" i usuń z niej część "bridge". (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* Czy w Twojej stronie Nightscout jest włączony Dexcom bridge? Wyłącz bridge: przejdź do panelu administracyjnego Twojej instancji Nightscout, edytuj zmienną "enable" i usuń z niej część "bridge". (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * Czy kilka źródeł wysyła Twoje BG do Nightscout? Jeśli używasz aplikacji BYODA, włącz wysyłanie w **AAPS**, ale nie włączaj go w xDrip, jeśli go używasz.
 * Czy masz obserwujących, którzy odbierają Twoje BG, ale też wysyłają je ponownie do Twojej strony Nightscout?
 * Ostatnia możliwość: w [ustawieniach NSClient](#Preferences-nsclient) wybierz ustawienia synchronizacji i wyłącz opcję "Odbieraj dane CGM z NS".
@@ -342,7 +342,7 @@ Gdy **PRED** jest włączone, AAPS rysuje swoje prognozy jako **kropkowane linie
 
 Gdy dwie prognozy dają te same wartości, ich kropki nakładają się i widzisz tylko jeden kolor (np. UAM na IOB, gdy BG jest płaska).
 
-* Linia **COB** (pomarańczowa): [węglowodany aktywne](CobCalculation) (w całym AAPS pomarańczowy oznacza COB i węglowodany)
+* **COB** line (orange): [carbs on board](CobCalculation.md) (orange is used throughout AAPS for COB and carbs)
     
     Ta linia prognozy pokazuje, dokąd pójdzie Twoja BG (nie samo COB!) przy obecnych ustawieniach **profilu**, przy założeniu, że odchylenia z powodu wchłaniania węglowodanów pozostaną stałe. Ta linia pojawia się tylko wtedy, gdy są znane COB.
 
@@ -364,7 +364,7 @@ Gdy dwie prognozy dają te same wartości, ich kropki nakładają się i widzisz
 
 * Linia **aCOB** (jasna, półprzezroczysta pomarańczowa): przyspieszone wchłanianie węglowodanów
     
-    Podobna do COB, ale zakłada stałe tempo wchłaniania węglowodanów 10 mg/dl/5 min (-0,555 mmol/l/5 min). Przestarzałe i mało przydatne.
+    Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. Przestarzałe i mało przydatne.
     
     *Ta linia pojawia się tylko wtedy, gdy używasz starszego algorytmu [AMA](#Config-Builder-aps).*
 
@@ -485,7 +485,7 @@ Ta linia pokazuje, o ile BG „powinna” wzrosnąć lub spaść tylko z powodu 
 
 ![Odchylenia i BGI](../images/main/graph_dev_bgi.png)
 
-Dobrze jest pokazywać tę linię razem ze słupkami odchyleń. Mają tę samą skalę, ale inną niż pozostałe dodatkowe dane, więc dobrze jest pokazać je na osobnym wykresie, jak wyżej. Porównanie linii BGI i słupków odchyleń to kolejny sposób, by zrozumieć, jak zmienia się **BG**. Tutaj, w czasie oznaczonym **1**, słupki odchyleń są wyraźnie nad linią BGI: BG rośnie bardziej, niż wyjaśnia to sama aktywność insuliny (np. po węglowodanach). W czasie oznaczonym **2** słupki odchyleń są poniżej zera (czerwone): BG jest niższa, niż oczekiwał algorytm.
+Dobrze jest pokazywać tę linię razem ze słupkami odchyleń. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Porównanie linii BGI i słupków odchyleń to kolejny sposób, by zrozumieć, jak zmienia się **BG**. Tutaj, w czasie oznaczonym **1**, słupki odchyleń są wyraźnie nad linią BGI: BG rośnie bardziej, niż wyjaśnia to sama aktywność insuliny (np. po węglowodanach). W czasie oznaczonym **2** słupki odchyleń są poniżej zera (czerwone): BG jest niższa, niż oczekiwał algorytm.
 
 ### Sekcja F – Pasek QuickLaunch
 
@@ -507,13 +507,13 @@ Aby podać określoną ilość insuliny bez użycia [kalkulatora bolusa](#aaps-s
 
 Włączając **Rozpocznij TT WkrótcePosiłek**, możesz automatycznie uruchomić [cel tymczasowy „Wkrótce posiłek”](#TempTargets-eating-soon-temp-target).
 
-Jeśli nie chcesz podawać bolusa przez pompę, tylko zapisać ilość insuliny (np. insulinę podaną penem), włącz "**Bolus zostanie jedynie odnotowany**". Dodatkowy wiersz **Czas**, ustawiony na **Teraz**, pozwala zapisać wstrzyknięcie insuliny z przeszłości: użyj **-** / **+**, aby go zmienić, albo dotknij strzałki, aby wpisać minuty lub wybrać datę i godzinę.
+If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only (not delivered by pump)**". Dodatkowy wiersz **Czas**, ustawiony na **Teraz**, pozwala zapisać wstrzyknięcie insuliny z przeszłości: użyj **-** / **+**, aby go zmienić, albo dotknij strzałki, aby wpisać minuty lub wybrać datę i godzinę.
 
 ![Wiersz Czas, zwinięty](../images/v4/Screens/insulin_dialog_record_only_time.png) ![Wiersz Czas, otwarty strzałką](../images/v4/Screens/insulin_dialog_time_open.png)
 
 Przyciskami **+0.5 / +1.0 / +2.0** możesz szybko zwiększyć ilość insuliny. Wartości przyrostu możesz zmienić w [ustawieniach kalkulatora bolusa](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-Okna insuliny możesz też używać, gdy pompa jest wstrzymana lub odłączona, np. aby zapisać insulinę wstrzykniętą penem. W takim przypadku "**Bolus zostanie jedynie odnotowany**" jest wymuszone (pokazane na czerwono) i pojawiają się dodatkowe pola do wyboru typu insuliny oraz przesunięcia **Czas** dla wstrzyknięcia z przeszłości:
+Okna insuliny możesz też używać, gdy pompa jest wstrzymana lub odłączona, np. aby zapisać insulinę wstrzykniętą penem. In this case, "**Bolus will be recorded only (not delivered by pump)**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
 
 ![Okno insuliny z odłączoną pompą](../images/main/insulin_dialog_pump_disconnected.png)
 
@@ -527,7 +527,7 @@ Niektóre [ustawione z góry cele tymczasowe](#TempTargets-hypo-temp-target) (Hi
 
 **Czas węglowodanów**: kiedy będziesz jeść lub jadłeś węglowodany.
 
-**Czas trwania**: używany dla [„przedłużonych węglowodanów”](ExtendedCarbs). Ten wiersz jest zwinięty, abyś nie wpisał do niego gramów przez pomyłkę: użyj **-** / **+**, aby go zmienić, albo dotknij strzałki, aby go otworzyć i wpisać wartość.
+**Duration**: To be used for ["extended carbs"](ExtendedCarbs.md). Ten wiersz jest zwinięty, abyś nie wpisał do niego gramów przez pomyłkę: użyj **-** / **+**, aby go zmienić, albo dotknij strzałki, aby go otworzyć i wpisać wartość.
 
 Przyciskami **+5 / +10 / +20** możesz szybko zwiększyć ilość węglowodanów.
 
@@ -632,7 +632,7 @@ Przycisk wyniku na dole pokazuje proponowany bolus; po jego naciśnięciu musisz
 Warto wiedzieć:
 
 * Jeśli obliczony bolus jest większy niż Twój **[Maksymalny bolus](#Preferences-maximum-bolus)**, zostaje zmniejszony do maksymalnego bolusa, a potwierdzenie pokazuje ostrzeżenie "Zastosowano ograniczenie bolusa". [Szybki kalkulator](../DailyLifeWithAaps/QuickWizards.md) jest w takim przypadku odrzucany.
-* Gdy bolus jest tylko zapisywany (np. gdy pompa jest odłączona), ostrzeżenie "**Bolus zostanie jedynie odnotowany**" zostaje na górze okna, także podczas przewijania.
+* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only (not delivered by pump)**" warning stays at the top of the dialog, also when you scroll.
 * Bolus, który podajesz ręcznie, ma pierwszeństwo przed [SMB](#Open-APS-features-super-micro-bolus-smb), który czeka na podanie: SMB jest anulowany, a pętla oblicza ponownie. Jeśli SMB jest właśnie podawany, Twój bolus jest odrzucany z komunikatem "SMB jest właśnie podawany. Spróbuj ponownie, gdy zakończy się podawanie." Insulina nie jest podawana, a węglowodany wpisane z tym bolusem nie są zapisywane: poczekaj chwilę i wpisz je ponownie.
 
 (AapsScreens-wrong-cob-detection)=

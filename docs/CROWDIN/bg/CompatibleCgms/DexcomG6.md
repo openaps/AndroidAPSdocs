@@ -40,7 +40,7 @@ Dexcom BYODA вече е много стара версия на приложе�
 -   Инсталирайте изтегления apk
 -   Въведете кода на сензора и серийния номер на трансмитера в модифицираното приложение.
 -   В настройките на телефона отидете в Приложения (apps) > Dexcom G6 > Разрешения (permissions) > Допълнителни разрешения (additional permissions) и натиснете „Access Dexcom app“.
--   След кратко време BYODA трябва да улови сигнала на трансмитера.
+-   After a short time BYODA should pick up the transmitter signal.
 
 ### Настройки за AAPS
 

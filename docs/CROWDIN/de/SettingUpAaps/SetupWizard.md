@@ -31,7 +31,7 @@ When the Setup Wizard opens, it greets you with a short welcome message and imme
 
 Once you have granted the permissions, the panel closes and the welcome screen shows a "**Next**" button. Press "**NEXT**" to continue:
 
-![Willkommen](../images/setup-wizard/Wizard-Welcome.png)
+![Welcome](../images/setup-wizard/Wizard-Welcome.png)
 
 ## Erforderliche Berechtigungen
 
@@ -122,9 +122,9 @@ Follow these steps on Android 16; other versions will vary slightly from the pro
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. Bei Android 12 tippe auf `Akku`, Android 13+ tippe auf `Akkuverbrauch`,
+   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
 
-   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
+   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
 5. Bei Android 12+ wähle `Nicht eingeschränkt` als Option aus, auf Android 15+ musst Du `Hintergrundnutzung zulassen` konfigurieren. Um das zu tun, tippe auf den rot hervorgehobenen Bereich. Zum Abschließen befolge den Schritt 6.
 
@@ -412,7 +412,7 @@ When all four tabs are valid, the **save icon** (top right) becomes active. Pres
 
 Close the editor with the "**X**" in the top left corner. The profile summary then shows its name, its total daily basal (∑), the units and the IC and ISF values with their graphs:
 
-![Speichern](../images/setup-wizard/Wizard-Profile-Save.png)
+![Save](../images/setup-wizard/Wizard-Profile-Save.png)
 
 ```{admonition} Several defined but only one active profile
 :class: note
@@ -454,7 +454,7 @@ When you select a real pump, **AAPS** asks for a confirmation, because it will c
 
 ![Confirmation when selecting a hardware pump](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#bluetooth-permission)).
+If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#setup-wizard-bluetooth-permission)).
 
 If you have already set up your profile and know how to connect your pump, feel free to connect it now. Otherwise leave it on **Virtual Pump** for the moment — you can change it anytime, or leave the Setup Wizard using the arrow in the top left corner and let **AAPS** first show you some blood glucose values.
 
@@ -487,7 +487,7 @@ Go back and press "**NEXT**" to go to the next screen:
 
 Leave "**Sensitivity Oref1**" selected as the standard sensitivity plugin:
 
-![Sensitivität](../images/setup-wizard/Wizard-Sensitivity.png)
+![Sensitivity](../images/setup-wizard/Wizard-Sensitivity.png)
 
 If you press "**Settings**" you can review the absorption settings; the defaults (_e.g._ a 6 h absorption cutoff) are fine for now.
 
@@ -505,7 +505,7 @@ Press "**Open Objectives**":
 
 Hier beginnen wir jetzt mit dem ersten Ziel (Objective 1), auch wenn unser Setup im Moment noch nicht vollständig ist, um dieses Ziel erfolgreich abzuschließen. Aber das ist der Beginn.
 
-Press the "**Start**" button next to "**1. Objective**":
+Press the "**Start**" button of **Objective 1**:
 
 ![Objectives list](../images/setup-wizard/Wizard-Objectives-List.png)
 
@@ -521,6 +521,7 @@ After pressing "**FINISH**" you arrive at the main screen of **AAPS**. A "**Noti
 
 Solltest Du versehentlich den Einrichtungsassistenten verlassen haben, kannst Du ihn entweder einfach neu starten oder die [Konfiguration des AAPS Loop](../SettingUpAaps/ChangeAapsConfiguration.md) manuell vornehmen.
 
+(setup-wizard-bluetooth-permission)=
 ## Bluetooth permission
 
 If you select a pump that connects over Bluetooth (for example **Omnipod Dash**), a banner reminds you that **AAPS** needs Bluetooth permission. You can press "**Dismiss**" for now — the permission is granted after you finish the Wizard:

@@ -38,6 +38,6 @@ Hvis **AAPS** kobler riktig til Nightscout, men BS vises som N/A: åpne **Synkro
 
 * Hvis du fortsatt får en feil ...
 
-Sjekk størrelsen på databasen din i MongoDB (eller via pluginen for databasestørrelse i nightscout). Hvis du bruker gratisnivået i MongoDB, betyr 496 MB at den er full og må ryddes opp i. [Følg disse instruksjonene fra Nightscout for å sjekke størrelsen på databasen og rydde ut data](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
+Sjekk størrelsen på databasen din i MongoDB (eller via pluginen for databasestørrelse i nightscout). Hvis du bruker gratisnivået i MongoDB, betyr 496 MB at den er full og må ryddes opp i. [Følg disse instruksjonene fra Nightscout for å sjekke størrelsen på databasen og rydde ut data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
 Før du rydder data ut av databasen, og hvis du ikke allerede har satt det opp, bør du vurdere å donere AAPS-dataene dine til Open Humans-prosjektet (til forskning). Instruksjonene finner du på [siden om oppsett av Open Humans](../SupportingAaps/OpenHumans.md).

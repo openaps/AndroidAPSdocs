@@ -36,6 +36,6 @@
 
 Ενεργοποιήστε το Patched Libre στο Juggluco (μην ενεργοποιήσετε το xDrip broadcast), επιβεβαιώστε και αποθηκεύστε τις πληροφορίες πακέτου του dexdrip. Επιλέξτε την πηγή δεδομένων BG xDrip στο AAPS.
 
-Αν χρειάζεται, εφαρμόστε επαρκή [εξομάλυνση](./SmoothingBloodGlucoseData.md) στο AAPS. Με αισθητήρα Libre 2/2+/3/3+, το xDrip κάνει μέσο όρο των μετρήσεων κάθε λεπτού σε μετρήσεις ανά 5 λεπτά και [επίσης τις εξομαλύνει](#libre2-value-smoothing-raw-values).
+Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary. When using a Libre 2/2+/3/3+ sensor, xDrip will average the minute-by-minute readings to 5-minute readings and [also smooth](#libre2-value-smoothing-raw-values) them.
 
 ![Juggluco προς xDrip](../images/juggluco/Juggluco-xDrip+.png)

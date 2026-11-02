@@ -51,9 +51,9 @@ Il est généralement admis que les diabétiques de type 1 _nouvellement_ diagno
 :class: danger
 Les inhibiteurs SGLT-2, aussi appelés gliflozines, empêchent la réabsorption du glucose dans le rein. Comme il est impossible de calculer la façon dont ils font baisser la glycémie, vous NE DEVEZ PAS les prendre en utilisant un système de boucle fermée comme AAPS ! Vous vous mettriez en grave danger d'acidocétose et/ou d'hypoglycémie ! L'utilisation combinée de ce médicament et d'un système qui diminue les taux de basale pour augmenter la glycémie est particulièrement dangereuse. 
 
-En résumé :
-- **Exemple 1 : risque d'hypoglycémie**
->Au déjeuner, vous utilisez **AAPS** pour faire un bolus pour 45 g de glucose consommés. Le problème est que, sans qu'AAPS le sache, les inhibiteurs font éliminer par le corps une partie des glucides. Votre corps a alors trop d'insuline par rapport aux glucides absorbés, ce qui provoque une hypoglycémie.
+In a nutshell:
+- **Example 1: risk of Hypo**
+>During lunch, you use **AAPS** to bolus based on consuming 45 g of carbs. Le problème est que, sans qu'AAPS le sache, les inhibiteurs font éliminer par le corps une partie des glucides. Votre corps a alors trop d'insuline par rapport aux glucides absorbés, ce qui provoque une hypoglycémie.
 
 - **Exemple 2 : risque d'acidocétose**
 >Les inhibiteurs éliminent en arrière-plan une partie des glucides, ce qui fait baisser votre glycémie. **AAPS** va automatiquement demander à la pompe de diminuer l'apport d'insuline, y compris la basale. Avec le temps, votre glycémie peut rester sous la valeur cible, au point que le corps n'a plus assez d'insuline de fond pour absorber des glucides, ce qui provoque une acidocétose. Normalement, chez les patients DT1, l'acidocétose apparaît parce que leur pompe tombe en panne, ce qui déclenche des alertes sur leur téléphone et se voit par une glycémie élevée. Cependant, le danger avec les gliflozines est qu'il n'y aurait aucune alerte d'AAPS, car la pompe continue de fonctionner et la glycémie peut rester dans la cible.
@@ -80,7 +80,7 @@ Dans les premiers temps du démarrage avec **AAPS**, vous pouvez rencontrer des 
 
 #### Temps pour compiler l'application et progression vers la boucle complète
 
-Le temps nécessaire à la compilation d'**AAPS** dépend de votre niveau de connaissance et de vos compétences techniques. Généralement pour les utilisateurs inexpérimentés, le temps nécessaire pour compiler **AAPS** peut aller jusqu'à une demi-journée ou une journée complète (avec l'aide de la communauté). Le processus sera considérablement plus rapide pour les prochaines versions **AAPS**, à mesure que vous acquérez de l'expérience.
+The time to build the **AAPS** app depends on your level of expertise and technical ability. Généralement pour les utilisateurs inexpérimentés, le temps nécessaire pour compiler **AAPS** peut aller jusqu'à une demi-journée ou une journée complète (avec l'aide de la communauté). Le processus sera considérablement plus rapide pour les prochaines versions **AAPS**, à mesure que vous acquérez de l'expérience.
 
 Plusieurs parties de cette documentation vous aident pendant la compilation :
 

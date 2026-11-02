@@ -10,7 +10,7 @@ Když **AAPS** instalujete poprvé, musíte každý cíl splnit dříve, než p�
 
 **Cíle 1 až 8** vás provedou od nastavení **AAPS** ve vašem chytrém telefonu až k „základní“ hybridní uzavřené smyčce. Splnění zabere asi 6 týdnů. Až do **Cíle 5** můžete postupovat s virtuální pumpou (a inzulín si mezitím podávat jiným způsobem). **Cíle 9 a 10** slouží k vyzkoušení pokročilejších funkcí **AAPS**, abyste měli diabetes lépe pod kontrolou. Jejich splnění trvá až 3 měsíce, možná i déle. Podrobnější odhad, kolik času jednotlivé kroky zaberou, najdete zde: [Jak dlouho to bude trvat?](#preparing-how-long-will-it-take)
 
-Kromě postupu v **Cílech** můžete v případě potřeby svůj pokrok také smazat a [vrátit se k dřívějšímu cíli](#go-back-in-objectives).
+As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#CompletingTheObjectives-go-back-in-objectives).
 
 ## Zálohujte svá nastavení
 
@@ -39,7 +39,7 @@ Pokud nemáte zálohu nastavení a s vaším telefonem s **AAPS** se něco stane
 - Pokud používáte Tidepool:
   - Postupujte podle pokynů na stránce [Tidepool](../SettingUpAaps/Tidepool.md), aby **Tidepool** mohl přijímat a zobrazovat data z **AAPS**.
 
-Poznámka – *Možná budete muset počkat na další hodnotu glykémie ze senzoru, než ji **AAPS** rozpozná.*
+Note: *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
 
 (objectives-objective2)=
 ## Cíl 2: Naučte se, jak ovládat AAPS
@@ -51,7 +51,7 @@ Poznámka – *Možná budete muset počkat na další hodnotu glykémie ze senz
 Úkoly ke splnění **Cíle 2** jsou:
 - Nastavte svůj **Profil** na 90 % na dobu 10 min.
   - _Nápověda_: Klepnutím na název profilu na hlavní obrazovce otevřete obrazovku **Profil**, potom použijte tlačítko **Aktivovat** (▶) a nastavte procento a dobu trvání. Více informací najdete v části [Přepnutí profilu a procento profilu](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-  - _Poznámka_: **AAPS** nepřijímá bazální dávky nižší než 0,05 U/h. Pokud váš **Profil** obsahuje dávky 0,06 U/h nebo nižší, musíte před splněním tohoto úkolu vytvořit dočasný **Profil** s vyššími bazálními dávkami. Po splnění tohoto úkolu přepněte zpět na svůj běžný **Profil**.
+  - _Poznámka_: **AAPS** nepřijímá bazální dávky nižší než 0,05 U/h. If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Po splnění tohoto úkolu přepněte zpět na svůj běžný **Profil**.
 - Simulujte „sprchování“ tím, že v **AAPS** na 1 h [odpojíte pumpu](#AapsScreens-loop-status).
   - _Nápověda_: stiskněte ikonu smyčky na hlavní obrazovce, otevře se dialog Smyčka. Potom vyberte dobu v části **Odpojit pumpu**.
 - Ukončete „sprchování“ tím, že pumpu znovu připojíte.
@@ -94,7 +94,7 @@ Minimální doba pro splnění tohoto cíle: **7 dní**. To je povinná čekací
 - V případě potřeby použijte [**Dočasné cíle**](../DailyLifeWithAaps/TempTargets.md). Po léčbě hypoglykémie použijte předdefinovaný dočasný cíl „Hypoglykémie“, aby systém při následném vzestupu glykémie nepodal příliš mnoho inzulínu.
 - Pokud stále používáte [Zjednodušený režim](#preferences-simple-mode), je teď pravděpodobně vhodná doba ho vypnout.
 
-Abyste v otevřené smyčce snížili počet navržených změn bazální dávky, můžete stále použít tipy popsané v [**Cíli 3**](#objective-3-prove-your-knowledge). Navíc můžete změnit minimální procento pro doporučené změny bazální dávky pomocí nastavení „**Minimální změna v otevřené smyčce**“ v **Nastavení → Smyčka**. Čím vyšší hodnota, tím méně oznámení o změnách dostanete.
+To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Navíc můžete změnit minimální procento pro doporučené změny bazální dávky pomocí nastavení „**Minimální změna v otevřené smyčce**“ v **Nastavení → Smyčka**. Čím vyšší hodnota, tím méně oznámení o změnách dostanete.
 
 ![Minimální změna v otevřené smyčce](../images/OpenLoop_MinimalRequestChange2.png)
 
@@ -119,7 +119,7 @@ Dokud si nezvyknete na výpočty a nastavení **AAPS**, můžete si nastavit [c�
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-Pokud používáte otevřenou smyčku s virtuální pumpou, **zde se zastavte**. Na konci tohoto **Cíle** klikněte na ověření až poté, co přejdete na „skutečnou“ pumpu, která podává inzulín.
+Pokud používáte otevřenou smyčku s virtuální pumpou, **zde se zastavte**. Only tap **Verify** at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
 
 ```
 
@@ -167,14 +167,14 @@ Minimální doba pro splnění tohoto cíle: **1 den**. To je povinná čekací 
 
 - **Uzavřenou smyčku** zapnete stisknutím [ikony smyčky](#AapsScreens-loop-status) na hlavní obrazovce a výběrem režimu smyčky **Uzavřená smyčka**. Zůstaňte v režimu **Uzavřená smyčka** po dobu 1 dne.
 
-- Pomalu zvyšujte hodnotu „Maximální celkové IOB, které OpenAPS nesmí překročit“ (v OpenAPS se nazývá „max-iob“) nad 0, dokud nenajdete nastavení, které vám nejlépe vyhovuje.
+- Slowly raise your 'Max IOB for SMB' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
 
 Výchozí doporučení pro toto nastavení je „**průměrný bolus na jídlo + 3× maximální denní bazální dávka**“, kde „maximální denní bazální dávka“ je nejvyšší hodinová hodnota v kterémkoli časovém úseku dne.
 
 ![maximální denní bazální dávka](../images/MaxDailyBasal2.png)
 
 Toto doporučení by mělo být považováno za výchozí bod. Pokud toto pravidlo používáte, ale AAPS vám při stoupající glykémii podává příliš mnoho inzulínu, možná budete muset:
-* snížit hodnotu „Maximální celkové IOB, které OpenAPS nesmí překročit“;
+* lower the "Max IOB for SMB" value;
 * zkontrolujte nastavení svého **Profilu** a upravujte vždy jen jednu věc najednou.
 
 Pokud jste velmi rezistentní na inzulín, můžete také velmi opatrně zvýšit hodnotu **maxIOB**.
@@ -202,7 +202,7 @@ V **Cíli 9** se seznámíte s **„Super Micro Bolus (SMB)“** jako jednou z h
 Minimální doba pro splnění tohoto cíle: **28 dní**. To je povinná čekací doba. K dalšímu Cíli nemůžete přejít, dokud tato doba neuplyne.
 
 - [Část o SMB v této dokumentaci](#Open-APS-features-super-micro-bolus-smb) a [popis oref1 v dokumentaci openAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) si musíte přečíst, abyste porozuměli **SMB** a principu **zero-temping** (dočasný bazál s nulovou dávkou).
-- Potom můžete [zvýšit maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over), aby **SMB** fungovaly účinněji. maxIOB nyní zahrnuje veškerý **IOB**, nejen nahromaděný bazál. Tato hranice pozastaví **SMB**, dokud IOB neklesne pod tuto hodnotu (_např._ **maxIOB** je nastaveno na 7 U a na jídlo podáte bolus 8 U: SMB budou pozastaveny a nebudou podány, dokud **IOB** neklesne pod 7 U). Dobrý začátek je nastavit **maxIOB** = **průměrný bolus na jídlo + 3× maximální denní bazální dávka**, kde „maximální denní bazální dávka“ je nejvyšší hodinová hodnota v kterémkoli časovém úseku dne. Pro srovnání viz [cíl 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets).
+- Potom můžete [zvýšit maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over), aby **SMB** fungovaly účinněji. maxIOB nyní zahrnuje veškerý **IOB**, nejen nahromaděný bazál. Tato hranice pozastaví **SMB**, dokud IOB neklesne pod tuto hodnotu (_např._ **maxIOB** je nastaveno na 7 U a na jídlo podáte bolus 8 U: SMB budou pozastaveny a nebudou podány, dokud **IOB** neklesne pod 7 U). Dobrý začátek je nastavit **maxIOB** = **průměrný bolus na jídlo + 3× maximální denní bazální dávka**, kde „maximální denní bazální dávka“ je nejvyšší hodinová hodnota v kterémkoli časovém úseku dne. See [objective 7](#objectives-objective7) as reference.
 - Vyhodnoťte rychlost absorpce sacharidů a pokud je podle vás příliš pomalá nebo příliš rychlá, zvažte změnu parametru „min_5m_carbimpact“ v [Nastavení → Nastavení absorpce sacharidů → min_5m_carbimpact](#Preferences-min_5m_carbimpact).
 
 (objectives-objective10)=

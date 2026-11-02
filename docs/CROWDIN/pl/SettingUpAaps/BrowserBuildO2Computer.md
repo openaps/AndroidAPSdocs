@@ -28,23 +28,23 @@ Użyj komputera (Windows/Mac/Linux)
   </div>
 </div>
 
-Zainstaluj Simple Web Server</br></br> Jeśli używasz Windows albo Maca, możesz go zainstalować ze sklepu Microsoft Store albo Mac App Store. Jeśli przeglądarka zapyta, czy otworzyć aplikację sklepu, zezwól na to.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)</br></br>
+Install Simple Web Server<br/><br/> If you are a Windows or Mac user, you can install it from the Microsoft Store or the Mac App Store. Jeśli przeglądarka zapyta, czy otworzyć aplikację sklepu, zezwól na to.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/><br/>
 
 Przykład na Macu:
 
-- pobierz → zainstaluj → otwórz</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)</br></br>
+- pobierz → zainstaluj → otwórz<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)<br/><br/>
 
-- Kliknij Get Started</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)</br></br>
+- Kliknij Get Started<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)<br/><br/>
 
-- Kliknij New Server</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)</br></br>
+- Kliknij New Server<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)<br/><br/>
 
-- W polu Folder Path wybierz folder, w którym jest plik aaps-ci-preparation.html, a potem kliknij Create Server.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)</br></br>
+- W polu Folder Path wybierz folder, w którym jest plik aaps-ci-preparation.html, a potem kliknij Create Server.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)<br/><br/>
 
-- Jeśli widzisz ten ekran, serwer jest uruchomiony.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)</br></br>
+- Jeśli widzisz ten ekran, serwer jest uruchomiony.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)<br/><br/>
 
-- Nie zamykaj Simple Web Server. Przełącz się do przeglądarki i otwórz</br></br> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)</br></br>
+- Nie zamykaj Simple Web Server. Please switch to your browser and open<br/><br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
 
-- Kolejne kroki pokazuje poniższe wideo, od 2 minuty 18 sekund.</br></br>
+- For the subsequent steps, please refer to the video below, starting from 2 minutes 18 seconds.<br/><br/>
   <!--crowdin: exclude-->
   <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
     <div style="position: relative; width: 100%; aspect-ratio: 9/16;">

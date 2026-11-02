@@ -18,7 +18,7 @@
 
 **APK** = Android Application Package (pakiet aplikacji Android). Plik instalacyjny oprogramowania. Więcej informacji → [Wiki - „Budowanie AAPS”](../SettingUpAaps/BuildingAaps.md).
 
-**Autosens** = obliczanie wrażliwości na insulinę w oknie czasowym od 8 do 24 godzin itp. Więcej informacji → [DIABETTECH - **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
+**Autosens** = calculation of sensitivity to insulin over a 24-hour and an 8-hour window etc. Więcej informacji → [DIABETTECH - **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
 **Azure** = cloud computing platform to host **Nightscout** web app → see also **Nightscout**.
 
@@ -42,7 +42,7 @@
 
 **CGM** = Continuous Glucose Monitor (system ciągłego monitorowania glikemii) → zobacz też **FGM**.
 
-**Zamknięta pętla** (Closed Loop) = system, który automatycznie dostosowuje podawanie bazy na podstawie algorytmu **AAPS** i ustawień **profilu** użytkownika, bez potrzeby zatwierdzania zmian przez użytkownika. Więcej informacji → Wiki - „zamknięta pętla” i zobacz też **HCL** / **FCL**.
+**Closed Loop** = a closed loop system which makes automatic adjustments to the user’s basal delivery based on an **AAPS’s** algorithm and the user’s **Profile** settings without requiring the user’s approval. Further info → [Wiki - 'closed loop'](#KeyAapsFeatures-ClosedLoop) and see also **HCL** / **FCL**.
 
 **COB** = Carbs On Board (aktywne węglowodany). To ilość węglowodanów, które organizm użytkownika jeszcze trawi i wchłania → zobacz też IOB.
 
@@ -50,19 +50,19 @@
 
 **DIA** = Duration of Insulin Action (czas działania insuliny). Więcej informacji → [Wiki - „DIA”](#Config-Builder-insulin-dia) i zobacz też → [DIABETTECH - „DIA”](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/).
 
-**DST** = Daylight Savings Time (czas letni). Zobacz [Wiki - Zmiana strefy czasowej i czas letni](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
+**DST** = Daylight Saving Time. Zobacz [Wiki - Zmiana strefy czasowej i czas letni](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
 
 **Dynamiczny ISF (lub DynISF)** = funkcja **AAPS**, która dynamicznie dostosowuje współczynnik wrażliwości na insulinę (**ISF**) na podstawie **TDD** i **BG** użytkownika.
 
 **eCarbs** = extended Carbs (przedłużone węglowodany). Carbs split up over several hours (e.g. to cover fat/protein), which lets **AAPS** spread the insulin like an extended bolus. Więcej informacji → [Wiki - „Przedłużone węglowodany”](../DailyLifeWithAaps/ExtendedCarbs.md)
 
-**FCL** = Full Closed Loop (w pełni zamknięta pętla). Pętla, która nie wymaga od użytkownika żadnych danych o posiłkach: bez liczenia węglowodanów i bez bolusa posiłkowego. Więcej informacji → Wiki - „W pełni zamknięta pętla” i zobacz też **HCL**.
+**FCL** = Full Closed Loop (w pełni zamknięta pętla). Pętla, która nie wymaga od użytkownika żadnych danych o posiłkach: bez liczenia węglowodanów i bez bolusa posiłkowego. Further info → [Wiki - 'full closed loop'](../AdvancedOptions/FullClosedLoop.md) and see also **HCL**.
 
-**FGM** = Flash Glucose Monitor such as the Abbott Freestyle Libre. Więcej informacji → Wiki - „Źródło BG” i zobacz też „CGM”.
+**FGM** = Flash Glucose Monitor such as the Abbott Freestyle Libre. Further info → [Wiki - 'BG source'](#Config-Builder-bg-source) and see also 'CGM'.
 
-**git** = narzędzie do przechowywania i pobierania kodu źródłowego **AAPS**.
+**git** = a tool used to store and download the **AAPS’** source code.
 
-**GitHub** = a web-based service that hosts the **AAPS** source code and its version control (tracking changes in files and coordinating work on them, especially for teams), and can also build the app. It is also necessary for **APK** updates. Więcej informacji → Wiki - „aktualizacja APK”.
+**GitHub** = a web-based service that hosts the **AAPS** source code and its version control (tracking changes in files and coordinating work on them, especially for teams), and can also build the app. It is also necessary for **APK** updates. Further info → [Wiki - 'update APK'](../Maintenance/UpdateToNewVersion.md).
 
 **Glimp** = an app to collect values from Freestyle Libre.
 
@@ -84,7 +84,7 @@
 
 **maxIOB** = maksymalna całkowita aktywna insulina (IOB). To funkcja bezpieczeństwa. Nie pozwala **AAPS** podać więcej insuliny, niż pozwalają ustawienia użytkownika. Więcej informacji → [Wiki - „Maksymalna całkowita IOB, której OpenAPS nie może przekroczyć”](#Open-APS-features-maximum-total-iob-openaps-cant-go-over).
 
-**min_5m_carbimpact** = funkcja bezpieczeństwa: domyślne tempo wchłaniania węglowodanów, którego AAPS używa, gdy nie da się go ustalić na podstawie reakcji glikemii użytkownika. Więcej informacji → [Wiki - „Ustawienia (Preferencje)”](#Preferences-min_5m_carbimpact).
+**min_5m_carbimpact** = funkcja bezpieczeństwa: domyślne tempo wchłaniania węglowodanów, którego AAPS używa, gdy nie da się go ustalić na podstawie reakcji glikemii użytkownika. Further info → [Wiki - 'min_5m_carbimpact'](#Preferences-min_5m_carbimpact).
 
 **Nightscout** = projekt open source do odczytu i raportowania danych z **CGM**. The central data hub for the user’s **AAPS** data and can generate reports to view the user’s historical **Nightscout** data, such as expected HbA1c, time in range or search for patterns in the data via percentile chart etc.
 
@@ -98,7 +98,7 @@
 
 **Otwarta pętla** (Open Loop system) = funkcja **AAPS**, która proponuje zmiany, ale użytkownik musi je wykonać ręcznie w **AAPS**. Więcej informacji → [Wiki - „Otwarta pętla”](#KeyAapsFeatures-OpenLoop).
 
-**Oref0 / Oref1** = wykrywanie wrażliwości i „reference design implementation version 0/1” (wersja 0/1 implementacji referencyjnej). To kluczowy algorytm OpenAPS (Wiki OpenAPS - wykrywanie wrażliwości).
+**Oref0 / Oref1** = wykrywanie wrażliwości i „reference design implementation version 0/1” (wersja 0/1 implementacji referencyjnej). It is the key algorithm behind OpenAPS. Further info → [Wiki - 'sensitivity detection'](../DailyLifeWithAaps/SensitivityDetectionAndCob.md).
 
 **OS-AID** = Open-Source Automated Insulin Delivery (automatyczne podawanie insuliny z otwartym kodem źródłowym). System **AID** zbudowany z oprogramowania open source, np. **AAPS**, **OpenAPS**, Loop lub Trio. Te systemy nie są formalnie zatwierdzone przez instytucje ochrony zdrowia (FDA, NHS itp.) → zobacz też **AID**.
 
@@ -132,15 +132,15 @@
 
 **TBB** = total base basal (całkowita baza, czyli suma dawek bazowych w ciągu 24 godzin) → zobacz też **TBR** / **TDD**.
 
-**TBR** = temporary basal rate (baza tymczasowa) → zobacz też **TBB** / **TDD**.
+**TBR** = temporary basal rate → see also **TBB** / **TDD**.
 
 **TDD** = total daily dose (całkowita dawka dobowa: bolus + baza na dzień) → zobacz też **TBB** / **TBR**.
 
-**TT** = temporary target (cel tymczasowy), tymczasowe podniesienie lub obniżenie celu (zakresu) **BG** użytkownika, np. przed jedzeniem lub sportem. Więcej informacji → [Wiki - „Cele tymczasowe”](../DailyLifeWithAaps/TempTargets.md).
+**TT** = temporary target: temporary increase/decrease of the user’s **BG** target (range) e.g. for eating or sport activities. Więcej informacji → [Wiki - „Cele tymczasowe”](../DailyLifeWithAaps/TempTargets.md).
 
 **UAM** = unannounced meals (nieogłoszone posiłki). Wykrywanie znacznego wzrostu **BG** spowodowanego posiłkiem, adrenaliną lub innymi czynnikami i próba jego skorygowania. Więcej informacji → [Wiki - „UAM”](#enable-uam) i zobacz też **SMB**.
 
-**Wirtualna pompa** (Virtual pump) = funkcja **AAPS**, która pozwala wypróbować funkcje **AAPS**. Służy też osobom z cukrzycą (PWD), które używają modelu pompy bez sterownika **AAPS** do pętli → zobacz też **Otwarta pętla**.
+**Virtual pump** = an **AAPS** feature which allows the user to try **AAPS’** functions, or lets PWD whose pump model has no **AAPS** driver use **AAPS** as an open loop → see also **Open Loop**.
 
 **Tapeta** (Wallpaper) = obraz tła **AAPS**, zobacz stronę Telefony.
 

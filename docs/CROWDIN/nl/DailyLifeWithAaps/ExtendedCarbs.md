@@ -26,7 +26,7 @@ De eCarbs op het hoofdscherm: het getal tussen haakjes in het veld **COB** toont
 
 In de [Bolus wizard](#aaps-screens-bolus-wizard) kun je met drie knoppen onder het veld **Koolhydraten** kiezen hoe snel je maaltijd wordt opgenomen. Kies er een voordat je bevestigt. Afhankelijk van het type neemt **AAPS** een deel van de ingevoerde koolhydraten als normale koolhydraten, en voegt het later [vertraagde koolhydraten ("eCarbs")](#Extended-Carbs-extended-carbs-ecarbs) toe voor trage, rijke maaltijden. Druk op het pictogram **(i)** naast de knoppen om de typische voedingsmiddelen voor het gekozen type te zien en wat het met je koolhydraten doet.
 
-| Type                  | Typische voedingsmiddelen (zoals in de app)                                                                                      | Koolhydraten nu, gebruikt voor de bolus | Toegevoegde eCarbs                               |
+| Type                  | Typical foods (examples from the app)                                                                                            | Koolhydraten nu, gebruikt voor de bolus | Toegevoegde eCarbs                               |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ------------------------------------------------ |
 | **Brood** (standaard) | Brood, hartige deegwaren, yoghurt, fruit, aardappelen, rijst, havermout, groenten                                                | 100%                                    | Geen                                             |
 | **Cake**              | Dumplings, pasta, Aziatische gerechten rijk aan koolhydraten en vetten, zoete deegwaren en gistgebak, ontbijtgranen, honing, jam | 90%                                     | 20%, start 60 minuten later, verdeeld over 2 uur |
@@ -60,7 +60,7 @@ Sneller gaat het als de *Bolus wizard* de eCarbs voor je toevoegt: kies het [typ
 **Belangrijke opmerkingen:** Je moet natuurlijk zelf uitproberen welke waarden voor jou werken. Je kunt ook voorzichtig de instelling *Aantal minuten basale insuline waarop SMB’s worden begrensd* aanpassen om het algoritme meer of minder agressief te maken. Voor maaltijden met nauwelijks koolhydraten en een hoog vet/eiwitgehalte kan het genoeg zijn om alleen eCarbs te gebruiken en geen bolus (zie de blogpost hierboven). Iedere keer dat je eCarbs invoert, wordt er in jouw Careportal automatisch een opmerking toegevoegd. Hierdoor kun je de eerdere keren gemakkelijk terugvinden, zodat je jouw aanpak kunt evalueren en verbeteren voor de volgende keer. Of gewoon herhalen wat je eerder deed, als dat voor jou goed werkte.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## Vertraagde bolus: waarom werkt die niet in een gesloten loop?
+## Extended boluses and why they don't work in a closed-loop environment
 
 Zoals hierboven vermeld, werken vertraagde of multiwave bolussen niet echt in een gesloten loop. [Zie hieronder](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) voor details
 

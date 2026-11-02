@@ -37,7 +37,7 @@ Disse stegene er de samme for alle byggemetoder. Sjekk i [Versjonsnotater](../Ma
 Etter at du har installert den nye APK-filen:
 
 - du kan kontrollere versjonen av **AAPS** på telefonen ved å åpne **menyen** (☰) øverst til venstre og deretter **Om** (som på skjermbildet nedenfor). Du kan se hvilken versjon av **AAPS** du har;
-- pass på at innstillingene er importert; og
+- sørg for at du har importert innstillingene dine; og
 - sjekk innstillingene i **AAPS** under **Innstillinger** og pass på at de fortsatt er riktige.
 
 ![Om-dialogen med den installerte AAPS-versjonen](../images/about_dialog_version.png)

@@ -29,7 +29,7 @@
 
 #### Χωρίς συγχρονισμό από το Nightscout
 
-Αν κρατάτε απενεργοποιημένες όλες τις επιλογές «Λήψη ... από το NS», είστε σίγουροι ότι το AAPS δεν θα χρησιμοποιήσει καμία αλλαγή από το Nightscout:
+Keeping all the "Receive … from NS" options disabled makes sure no Nightscout change will be used by AAPS:
 
 ![Μόνο αποστολή στο Nightscout](../images/preferences/settings_nsclient_sync.png)
 

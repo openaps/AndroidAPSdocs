@@ -7,7 +7,7 @@
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Με ξεχωριστό χώρο στο Google Drive δεν κινδυνεύετε να γεμίσει το όριο του προσωπικού σας Google Drive με την **Εξαγωγή ρυθμίσεων**.
+- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
 - Κάθε έκδοση του **AAPS** (και βοηθητικών εφαρμογών όπως xDrip, BYODA κ.λπ.) θα αποθηκεύεται σε ένα μόνο σημείο, ανεξάρτητα από τον υπολογιστή σας. Αν ο υπολογιστής ή το τηλέφωνό σας κλαπεί, χαθεί ή χαλάσει, θα έχετε ακόμη πρόσβαση.
 - Όταν όλοι έχουν την ίδια ρύθμιση, με παρόμοια δομή φακέλων, η βοήθεια μέσω διαδικτύου γίνεται πιο απλή.
 - Ανάλογα με τη ρύθμιση (δείτε παρακάτω), θα έχετε μια ξεχωριστή ταυτότητα (ψευδώνυμο) για να επικοινωνείτε στην κοινότητα, κάτι που μπορεί να προστατεύσει την ιδιωτικότητά σας. 
@@ -45,13 +45,13 @@
  Αυτά είναι τα βήματα που δείχνει το βίντεο:
 
 Σε αυτό το παράδειγμα: 
-- Ο υπάρχων «_καθημερινός_» σας λογαριασμός Google είναι ο <donald.muck42@gmail.com> · ![](../images/Building-the-App/building_0002.png)
+- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
 - Ο νέος σας λογαριασμός Gmail για το «_AAPS_» θα είναι: <donald.muck42.aaps@gmail.com>· ![](../images/Building-the-App/building_0003.png)
 
 
-### Μεταβείτε στο <https://account.google.com> 
+### Go to <https://myaccount.google.com> 
 
- Αν είστε ήδη συνδεδεμένοι στη Google, θα μεταφερθείτε στη σελίδα **My Account** του «καθημερινού» σας λογαριασμού. (1) Κάντε κλικ πάνω δεξιά στη σελίδα, στην εικόνα προφίλ σας (εδώ, ένα απλό ![](../images/Building-the-App/building_0002.png) (2) επιλέξτε «_add another account_» (προσθήκη άλλου λογαριασμού).
+ Αν είστε ήδη συνδεδεμένοι στη Google, θα μεταφερθείτε στη σελίδα **My Account** του «καθημερινού» σας λογαριασμού. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
 
 ![](../images/Building-the-App/building_0005.png)
 
@@ -87,7 +87,7 @@
 
 ### Προσαρμόστε την εμφάνιση του νέου προφίλ
 
-Τώρα θα πρέπει να βρίσκεστε στη σελίδα MyAccount του Gmail, όπου φαίνεται ο νέος σας λογαριασμός email για το **AAPS**. Η εικόνα προφίλ θα είναι από προεπιλογή το πρώτο γράμμα του ονόματός σας. Αλλάξτε την σε κάτι μοναδικό για να μην μπερδεύεστε… σε αυτό το παράδειγμα, το Donald.Muck.AAPS αντικατέστησε το ![](../images/Building-the-App/building_0002.png) με ![](../images/Building-the-App/building_0003.png)
+Τώρα θα πρέπει να βρίσκεστε στη σελίδα MyAccount του Gmail, όπου φαίνεται ο νέος σας λογαριασμός email για το **AAPS**. Η εικόνα προφίλ θα είναι από προεπιλογή το πρώτο γράμμα του ονόματός σας. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
@@ -101,7 +101,7 @@
 2. Κάντε δεξί κλικ στο εικονίδιο του browser στη γραμμή εργασιών
 3. Από το μενού επιλέξτε «New Window» (Νέο παράθυρο)... και ρυθμίστε το ώστε να πιάνει μόνο το κάτω μισό της οθόνης.
 
-Ανοίξτε το <https://gmail.com> σε κάθε παράθυρο του browser. Βεβαιωθείτε ότι ο προσωπικός σας λογαριασμός είναι στο πάνω παράθυρο και ο νέος λογαριασμός **AAPS** στο κάτω, και ότι τον αναγνωρίζετε εύκολα από την εικόνα προφίλ πάνω δεξιά. (αν χρειαστεί, μπορείτε πάντα να αλλάξετε λογαριασμό πατώντας στην εικόνα προφίλ και επιλέγοντας τον σωστό.
+Ανοίξτε το <https://gmail.com> σε κάθε παράθυρο του browser. Βεβαιωθείτε ότι ο προσωπικός σας λογαριασμός είναι στο πάνω παράθυρο και ο νέος λογαριασμός **AAPS** στο κάτω, και ότι τον αναγνωρίζετε εύκολα από την εικόνα προφίλ πάνω δεξιά. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
 
 ![](../images/Building-the-App/building_0009.png)
 

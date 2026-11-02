@@ -78,7 +78,7 @@ Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
 
 - 若优化结果可信（输入与输出配置文件间变化百分比偏低），您可依次点击"激活配置文件"按钮，再点击"确认"完成参数生效验证。
 
-  - Activate Tuned profile will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
+  - "Activate profile" will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
   - If you already have a profile named "Tuned" in **Manage → Profile**, then this profile will be updated with calculated Autotune profile before the activation
 
   ![Autotune Activate profile ](../images/Autotune/Autotune_6.png)
@@ -123,7 +123,7 @@ The **Auto switch profile** feature is only available in Dev/Engineering mode.
 - **Auto switch profile** (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. 若将此设置切换为"开启"状态，系统将自动使用优化配置文件（Tuned profile）更新输入配置文件，并自动激活更新后的配置。
   - **警告：在随后数日内，您必须对未经修改即更新激活的优化配置文件（Tuned profile）进行持续验证，确保其确实能提升闭环系统运行效果。**
 
-- **Categorize UAM as basal** (default Off): This setting is for the users using AndroidAPS without any carbs entered (Full UAM). 当设置为"关闭"时，系统将禁止将未标记餐食（UAM）归类为基础率。
+- **Categorize UAM as basal** (default Off): This setting is for the users using AAPS without any carbs entered (Full UAM). 当设置为"关闭"时，系统将禁止将未标记餐食（UAM）归类为基础率。
   - 注意：若系统在一天内检测到至少1小时的碳水化合物吸收活动，则无论当前设置为"开启"或"关闭"，所有标记为"未标记餐食（UAM）"的数据都将被归类为基础率。
 - **Default tune days** (default 5): You can define the default value with this setting. Each time you select a new profile in the Autotune plugin, the **Number of days of data** will be replaced by this default value
 - **Use circadian IC/ISF** (default Off): see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
@@ -188,7 +188,7 @@ The **Auto switch profile** feature is only available in Dev/Engineering mode.
 
   ![Autotune default screen ](../images/Autotune/Autotune_17.png)
 
-- Then you can select the **Autotune profile** action (in the **Loop & insulin** group)
+- Then you can select the **Run Autotune** action (in the **Loop & insulin** group)
 
   ![Autotune default screen ](../images/Autotune/Autotune_18.png)
 
@@ -212,7 +212,7 @@ Autotune算法依赖数据库中的历史数据进行计算，因此若您在新
 
 Autotune仅作为辅助工具，使用者需定期核验计算生成的配置文件是否符合临床预期。若存在任何疑问，请修改Autotune设置（如调整计算天数等参数），或者将计算结果复制至本地配置文件，或者使用前手动调整配置文件参数。
 
-务必手动运行Autotune多日以验证结果可靠性后，方可应用调校方案。​ 仅当您完全信任Autotune计算结果，且新旧配置文件间差异微小时，方可启用自动化功能（此前绝对不可启用）。​
+务必手动运行Autotune多日以验证结果可靠性后，方可应用调校方案。​ And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile then you start to use Automation (Never before)
 
 - Autotune的适配性因人而异——**若对计算结果存疑，请停止使用**​
 

@@ -1,9 +1,9 @@
-# Status van de vertaling van de app en de documentatie
+# State of translation for the app and the documentation
 
 De status wordt eens per uur bijgewerkt en toont alleen de status in Crowdin.
 
 ```{tip}
-Let op: het percentage proeflezen moet lager zijn dan het percentage vertaling, maar het wordt boven op de vertalingen getoond.
+Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
 Kijk liever alleen naar het percentage vertaling om te zien of er nog werk te doen is.
 ```
 

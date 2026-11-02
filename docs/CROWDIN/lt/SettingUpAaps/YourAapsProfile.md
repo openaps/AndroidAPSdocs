@@ -135,9 +135,9 @@ From these examples you can see that the _smaller_ the **ISF** value, the less s
 
 ### Impact
 
-A **lower / stronger ISF** (i.e. 40 instead of 50) means insulin drops your **BG** less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If your **ISF** is too strong (small value), this can lead to low **BG**.
+A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If your **ISF** is too strong (small value), this can lead to low **BG**.
 
-A **higher / weaker ISF** (i.e. 45 instead of 35) means insulin drops your **BG** more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If your **ISF** is too weak (large value), this can lead to high **BG**.
+A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If your **ISF** is too weak (large value), this can lead to high **BG**.
 
 **Example:**
 * **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
@@ -201,7 +201,7 @@ It is common to have different **ICR** at different times of day due to hormone 
 > 
 > BU factor 2,4 U / 12g   ===>   IC = 12g / 2,4 U = 5,0 g/U
 > 
-> Perskaičiavimo lentelės yra prieinamos internete, pvz., [čia](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Impact
 
@@ -300,7 +300,7 @@ Profilio pagalbininkas siūlo dviejų skirtingų vaikų ligoninių duomenų rink
 4. Change to the **Profile 2** tab.
 5. Press **Profile type** and select "DPV Default profile".
 6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, TDD Total and percentage of basal. Note that the DPV data set provides **basal rates** only, so IC and ISF are shown as zero for this profile.
-7. Open the **Comparation** tab. Comparison of the two adjusted profiles will be displayed (see screenshot below).
+7. Open the **Comparison** tab. Comparison of the two adjusted profiles will be displayed (see screenshot below).
 8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button at the bottom of the comparison.
 
 ![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
@@ -350,6 +350,6 @@ You can also use the [Profile Helper](#aaps-screens-profile-helper) (menu ☰ �
 4. Change to the **Profile 2** tab.
 5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profile Switches**.
 6. Choose the **Profile Switch** you want to compare to.
-7. Open the **Comparation** tab. Comparison of the two profiles will be displayed (see screenshot below).
+7. Open the **Comparison** tab. Comparison of the two profiles will be displayed (see screenshot below).
 
 ![Profile Helper 2](../images/ProfileHelper2.png)

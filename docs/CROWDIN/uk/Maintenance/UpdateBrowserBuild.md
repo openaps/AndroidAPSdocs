@@ -9,7 +9,7 @@
 **AAPS** не можна завантажити через правила для медичних виробів. Збирати застосунок для власного використання законно, але ви не повинні давати його копію іншим! Докладніше див. на [сторінці FAQ](../UsefulLinks/FAQ.md).
 
 ```{note}
-Якщо ви хочете оновити **AAPS** у браузері вперше: скопіюйте резервну копію файлу keystore на ваш Google Drive. Потім виконайте [процедуру збірки **AAPS** в браузері](../SettingUpAaps/BrowserBuild.md), а не цю інструкцію. Замість того щоб створювати новий keystore, ви повинні вибрати той, який скопіювали зі свого комп’ютера.
+In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Потім виконайте [процедуру збірки **AAPS** в браузері](../SettingUpAaps/BrowserBuild.md), а не цю інструкцію. Замість того щоб створювати новий keystore, ви повинні вибрати той, який скопіювали зі свого комп’ютера.
 Це обов’язково лише перший раз, а для наступних оновлень ви зможете виконувати цю інструкцію.
 ```
 
@@ -57,7 +57,7 @@
 
 ![Відхилення випадкових змін](../images/update/CI/GitHubUpdate4.png)
 
-Тепер ви синхронізували (оновили) свою копію з останнім випуском AndroidAPS. Чудово.
+You have now synchronized (updated) your own copy with the latest release of **AAPS**. Чудово.
 
 ![Репозиторій синхронізовано](../images/update/CI/GitHubUpdate5.png)
 
@@ -83,7 +83,7 @@
 
 ![Run workflow](../images/update/CI/GitHubActions3.png)
 
-6. Ви побачите повідомлення Workflow run was successfully requested. Оновіть сторінку в браузері, і ви зможете стежити за ходом збірки. Коли дія завершиться, біля дії AAPS CI з’явиться зелена галочка. Ви успішно зібрали оновлену версію AndroidAPS. Це означає, що apk для основного телефона (Master) і для годинника (Wear) тепер зберігаються прямо у вашому Google Drive (як показано нижче). apk AAPSClient можна завантажити з Github > nightscout > AndroidAPS [тут](https://github.com/nightscout/AndroidAPS/releases)
+6. Ви побачите повідомлення Workflow run was successfully requested. Оновіть сторінку в браузері, і ви зможете стежити за ходом збірки. Коли дія завершиться, біля дії AAPS CI з’явиться зелена галочка. You have successfully built the updated version of **AAPS**. Це означає, що apk для основного телефона (Master) і для годинника (Wear) тепер зберігаються прямо у вашому Google Drive (як показано нижче). apk AAPSClient можна завантажити з Github > nightscout > AndroidAPS [тут](https://github.com/nightscout/AndroidAPS/releases)
 
 
 ![Стеження за робочим процесом](../images/update/CI/GitHubActions4.png)

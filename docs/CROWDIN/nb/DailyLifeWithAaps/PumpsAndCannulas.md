@@ -57,7 +57,7 @@ Siden du ikke får insulin mens pumpen er frakoblet, bør du koble til igjen hve
 (pumps-cannulas-announce-insulin)=
 ## Registrere levert insulin uten å faktisk gi en bolus
 
-For å registrere insulin som er gitt fra pumpen mens **AAPS** var frakoblet, eller med penn: åpne [Insulin-dialogen](#aaps-screens-buttons-insulin) (**Behandlinger** i navigasjonslinjen nederst, eller en Hurtigstart-knapp), skriv inn mengden i enheter og slå på **Bolus vil bare bli loggført**. En rad **Tid** (satt til **Nå**) lar deg så registrere det faktiske tidspunktet for injeksjonen: du kan ignorere den hvis injeksjonen ble gitt nylig. Hvis bolusen ble gitt for en stund siden, bruker du **-** for å flytte tiden bakover (_f.eks._ -30 min), eller åpner raden med pilen for å velge nøyaktig dato og klokkeslett. **AAPS** tar da hensyn til insulinets virkningstid og beregner hvor mye insulin som fortsatt er igjen i kroppen.
+For å registrere insulin som er gitt fra pumpen mens **AAPS** var frakoblet, eller med penn: åpne [Insulin-dialogen](#aaps-screens-buttons-insulin) (**Behandlinger** i navigasjonslinjen nederst, eller en Hurtigstart-knapp), skriv inn mengden i enheter og slå på **Bolus vil bare bli loggført (ikke levert av pumpe)**. En rad **Tid** (satt til **Nå**) lar deg så registrere det faktiske tidspunktet for injeksjonen: du kan ignorere den hvis injeksjonen ble gitt nylig. Hvis bolusen ble gitt for en stund siden, bruker du **-** for å flytte tiden bakover (_f.eks._ -30 min), eller åpner raden med pilen for å velge nøyaktig dato og klokkeslett. **AAPS** tar da hensyn til insulinets virkningstid og beregner hvor mye insulin som fortsatt er igjen i kroppen.
 
 Hvis du bruker **AAPS** som omsorgsperson, kan du enkelt koble fra (og koble til) pumpen på avstand med en [SMS-kommando](../RemoteFeatures/SMSCommands.md), for eksempel «pump disconnect 120» og «pump connect 120». Varigheten for fjernstyrt frakobling kan være fra 1 til 120 min (i dette eksempelet er det 120 minutter). Dette er svært nyttig hvis **AAPS**-telefonen er vanskelig for deg å få tak i, for eksempel fordi den ligger i et pumpebelte på et barn som løper mot svømmehallen, eller blir nøye voktet (eller brukt) av en tenåring.
 
@@ -92,7 +92,7 @@ Hvilken strategi du foretrekker, er svært personlig, og du finner den best ved 
 
 ![Dialogen Brukerprofil for stedsrotasjon](../images/SiteRotation/Type.png)
 
-*Merk: denne innstillingen bestemmer om dialogen Rotasjon av sted (redigeringsmodus) skal åpnes automatisk eller ikke når en ny oppføring lages fra knappen «Prime/fylling» eller knappen «Sensorbytte»*
+*Merk: denne innstillingen bestemmer om dialogen Rotasjon av sted (redigeringsmodus) skal åpnes automatisk når en ny oppføring lages med knappen «Prime/fylling» eller knappen «Sensorbytte».*
 
 - For et stedsbytte gjort direkte på pumpen må du åpne visningsmodus og redigere den nye oppføringen for å velge sted og pil
 
@@ -100,7 +100,7 @@ I redigeringsmodus kan du velge sted, pil og merknad for den valgte oppføringen
 
 - Oppføringen du redigerer, vises under kroppsbildene, med typeikonet sitt (kanyle eller sensor)
 - Forside og bakside vises side om side: trykk på området der du plasserte den
-- Når et sted er valgt (markert i grønt), ser du i listen nedenfor alle oppføringer som er gjort på dette stedet de siste 45 dagene
+- Når et sted er valgt (markert i grønt), viser listen nedenfor alle oppføringer som er gjort på dette stedet de siste 45 dagene.
 
 ![Redigeringsmodus](../images/SiteRotation/EditMode.png)
 

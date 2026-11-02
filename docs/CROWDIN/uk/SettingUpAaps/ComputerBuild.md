@@ -108,12 +108,12 @@ Git — це програма, яка дозволяє відстежувати 
 (BuildingAaps-steps-for-installing-git)=
 #### Steps for Installing Git
 
-1.  Перевірте, чи **Git** у вас уже не встановлено. Для цього введіть «git» у рядку пошуку Windows. Якщо ви бачите **“Git bash”** або іншу форму Git, він уже встановлений, і можна одразу перейти до [встановлення Android Studio](#install-android-studio):
+1.  Перевірте, чи **Git** у вас уже не встановлено. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. Якщо Git не встановлено, завантажте й установіть останню версію для вашої системи з розділу "Download" [**тут**](https://git-scm.com/downloads). Any recent Git version should work, select the correct version according to your system, either Mac, Windows and Linux.
+2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Any recent Git version should work, select the correct version according to your system, either Mac, Windows and Linux.
 
 **Примітка для користувачів Mac:** сайт Git також підкаже вам установити додаткову програму "homebrew", яка допомагає з установленням. If you install Git via homebrew, there is no need to change any preferences.
 
@@ -170,7 +170,7 @@ Once it's completed, press "Next"
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-In the last step, click on "Finished" to start Android Studio for the first time.
+In the last step, click on "Finish" to start Android Studio for the first time.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
@@ -302,7 +302,7 @@ You can leave the gradle sync running and follow the next steps already.
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-Перевірте, чи **Android Studio** може автоматично знайти правильний **Path to Git executable** (шлях до виконуваного файлу Git): натисніть кнопку "Test" (1):
+Check if **Android Studio** can automatically locate the correct **Path to Git executable** by clicking the button "Test" (1):
 
 ![Виконуваний файл Git](../images/Building-the-App/039_GitTest.png)
 
@@ -369,7 +369,7 @@ Keystore потрібно створити лише один раз.
 
 ```{admonition} WARNING!
 :class: warning
-Обов'язково запишіть собі, де зберігається ваш keystore. Він знадобиться вам, коли ви збиратимете наступне оновлення AndroidAPS!
+Обов'язково запишіть собі, де зберігається ваш keystore. You will need it when you build the next AAPS update!
 ```
 
 * Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).

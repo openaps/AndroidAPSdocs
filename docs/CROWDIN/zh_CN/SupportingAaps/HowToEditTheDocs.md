@@ -2,7 +2,7 @@
 
 **本说明仅适用于英文文档的编辑工作。​ 所有新增内容须优先以英文版本提交。​ 如需翻译为其他语言（感谢您的贡献），请使用[Crowdin](https://crowdin.com/project/androidapsdocs)平台。**
 
-关于文本格式（标题、加粗等）及链接设置的提示，请参阅本页[“代码语法”](#code-syntax)部分。​
+For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
 
 ## 常规
 
@@ -34,11 +34,11 @@
 
 3. 执行步骤2中的任一操作，都将在您的代码库中创建一个新分支，用于保存您的编辑内容。对文件进行编辑修改。
 
-我们的文档页面使用Markdown格式。 The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. 请注意使用[下文所述](#code-syntax)的正确语法格式。
+我们的文档页面使用Markdown格式。 The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
 
 ![Edit branch](../images/PR3.png)
 
-4. 您当前处于「编辑文件」标签页中进行操作。请选择「预览更改」标签页进行最终检查，确保所有修改内容符合预期（包括检查拼写错误）。若发现需要改进之处，请返回编辑标签页继续完善。 
+4. 您当前处于「编辑文件」标签页中进行操作。 Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). 若发现需要改进之处，请返回编辑标签页继续完善。 
 
 ![preview mode](../images/PR5.png)
 
@@ -54,7 +54,7 @@
 
 ![PR tracking](../images/PR7.png)
 
-注：您的fork仓库和分支仍会保留在您个人的GitHub账户中。当收到PR已合并的通知后，如已完成操作，您可以删除分支（步骤8的通知区域会在分支关闭或合并后提供删除链接）。今后编辑时，只要遵循此流程，您的修改将始终基于最新版的AndroidAPSdocs代码库开始。若选择其他方式发起PR请求（例如：从您fork仓库的master分支开始编辑），需先执行「compare」操作确保代码库最新，并合并fork后所有更新内容。鉴于用户常忘记更新代码库，我们建议先采用上述PR流程，待熟悉「compare」操作后再调整。
+注：您的fork仓库和分支仍会保留在您个人的GitHub账户中。 After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). 今后编辑时，只要遵循此流程，您的修改将始终基于最新版的AndroidAPSdocs代码库开始。 If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. 鉴于用户常忘记更新代码库，我们建议先采用上述PR流程，待熟悉「compare」操作后再调整。
 
 (edit-the-docs-code-syntax)=
 
@@ -69,7 +69,7 @@ Markdown是一种非常简单的文本格式化语言，它能将文本内容与
 其核心理念在于
 
 - 作者应优先考虑文本内容，而非格式设置。
-- Markdown文本可在不同工具间自由交换，无需依赖Microsoft Word等专有软件。
+- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
 - 单个Markdown文件可生成多种输出格式。
 
 Markdown并非完全固化的标准规范，我们力求最大程度遵循该标准，以便：
@@ -220,9 +220,9 @@ Furthermore you can add collapsing notes for detailed information, so that users
     这是一个警告。
     
 
-    ```{admonition} 警告标题
+    ```{admonition} Warning headline
     :class: warning
-    这是一个警告。
+    This is a warning.
     ```
     
     #### 可折叠注释
@@ -245,7 +245,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 ## 表格
 
-请避免使用包含长文本的表格，因为Markdown格式难以精确控制表格内容排版，通常无法适配手机屏幕宽度，翻译后可能出现显示异常。
+Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
 
 ## 风格指南
 
@@ -263,9 +263,9 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 尽可能使用简明英语. 这既有助于非英语母语读者理解，也方便将AAPS文档翻译成其他语言。请采用与用户对话式的写作风格，想象您正面对面为您要服务的对象撰写内容。请注意：大多数AAPS用户并不具备编程背景。糖尿病领域本身也存在大量专业术语和缩写。请谨记：部分读者可能是刚确诊的患者，糖尿病经验可能不如您丰富，或接受过不同的糖尿病培训方案。若使用简称或缩写，首次出现时应完整拼写，并在括号内直接标注缩写形式，例如："超微大剂量（Super Micro Bolus，SMB）"。同时，请附上术语表链接。对于读者可能不熟悉的技术术语，也可在括号内补充说明。
 
-避免的说法：*"闭环系统中餐后血糖峰值升高的原因是什么？"*
+Instead of: *“What causes high postprandial BG peaks in closed loop?”*
 
-建议的说法：*"闭环系统中**午餐后**（postprandial）出现高血糖峰值的原因是什么？"*
+Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
 
 ##### 使用通俗易懂的词汇，确保所有人都能理解。
 
@@ -297,7 +297,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 命令式是最快捷的指令表达方式，但撰写者往往顾虑使用命令语气，常以"您应执行此操作"替代简洁的"执行此操作"。​ 或许人们担心命令式语气显得过于生硬。​ 通常只需在句首添加"请"字即可解决此问题。​ 但若某项操作必须执行，则不宜使用"请"字，以免让读者误以为可选择拒绝。​
 
-避免的说法：*"应将其视为完整声明。"*
+Instead of: *“You should just think of it as a complete statement.”*
 
 请使用：*"将其视为完整声明。"*
 
@@ -311,7 +311,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 **被动语态动词**示例：
 
-- *"胰岛素（主语）由泵（宾语）输送（动词）"*
+- *“The insulin (subject) is delivered (verb) by the pump (object).”*
 
 *“delivered”* is a passive verb here. 与主动语态句子相比，主语和宾语的位置互换了。我们不得不通过添加"is"和"by the"使句子变长。​ 亦可考虑以主动语态动词开头。​
 
@@ -454,7 +454,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 - 如何操作（HOW-to）
 
-- 叙述者直接与读者对话：在本教程中，**您**将
+- narrator directly talks to the reader: In this guide **you** will
 
 - 将来时态 → 用于表示最终目标
 

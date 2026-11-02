@@ -10,7 +10,7 @@ Cuando instalas **AAPS** por primera vez, debes completar cada objetivo antes de
 
 Los **Objetivos 1 a 8** te guían desde la configuración de **AAPS** en tu teléfono hasta el lazo cerrado híbrido «básico». Esto tardará unas 6 semanas en completarse. Puedes avanzar hasta el **Objetivo 5** con una bomba virtual (y mientras tanto usar otro método para administrar la insulina). Los **Objetivos 9 y 10** sirven para probar funciones más avanzadas de **AAPS** con el fin de controlar mejor tu diabetes. Tardarás hasta 3 meses en completarlos, quizá más. Puedes ver más detalles sobre el tiempo estimado aquí: [¿Cuánto tiempo llevará?](#preparing-how-long-will-it-take)
 
-Además de avanzar en los **Objetivos**, si lo necesitas, también puedes borrar tu progreso y [volver a un objetivo anterior](#go-back-in-objectives).
+As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#CompletingTheObjectives-go-back-in-objectives).
 
 ## Haz una copia de seguridad de tus ajustes
 
@@ -39,7 +39,7 @@ El **Objetivo 1** pide al usuario hacer la configuración técnica básica en **
 - Si usas Tidepool:
   - Sigue las instrucciones de la página [Tidepool](../SettingUpAaps/Tidepool.md) para que **Tidepool** pueda recibir y mostrar los datos de **AAPS**.
 
-Nota: *puede que tengas que esperar a la siguiente lectura de glucosa del sensor antes de que **AAPS** la reconozca.*
+Note: *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
 
 (objectives-objective2)=
 ## Objetivo 2: Aprender a controlar AAPS
@@ -51,7 +51,7 @@ El **Objetivo 2** pide hacer varias «tareas», como se ve en la captura de pant
 Las tareas para completar el **Objetivo 2** son:
 - Pon tu **Perfil** al 90 % durante 10 min.
   - _Pista_: toca el nombre de tu perfil en la pantalla principal para abrir la pantalla **Perfil**. Luego usa el botón **Activar** (▶) y pon el porcentaje y la duración. Más información en [Cambio de perfil y porcentaje del perfil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-  - _Nota_: **AAPS** no acepta dosis basales menores de 0,05 U/h. Si tu **Perfil** tiene dosis de 0,06 U/h o menos, tendrás que crear un **Perfil** temporal con dosis basales más altas antes de completar esta tarea. Vuelve a tu **Perfil** normal después de completar esta tarea.
+  - _Nota_: **AAPS** no acepta dosis basales menores de 0,05 U/h. If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Vuelve a tu **Perfil** normal después de completar esta tarea.
 - Simula «darte una ducha» [desconectando tu bomba](#AapsScreens-loop-status) en **AAPS** durante 1 h.
   - _Pista_: pulsa el icono del lazo en la pantalla principal para abrir el diálogo del lazo y luego elige una duración en **Desconectar bomba**.
 - Termina «la ducha» volviendo a conectar tu bomba.
@@ -94,7 +94,7 @@ Tiempo mínimo para completar este objetivo: **7 días**. Es un tiempo de espera
 - Usa [**Objetivos temporales**](../DailyLifeWithAaps/TempTargets.md) cuando sea necesario. Después de tratar una hipoglucemia, usa el «Objetivo temporal ante Hipoglucemia» predefinido para evitar que el sistema corrija de más en el rebote.
 - Si en este punto todavía usas el [Modo sencillo](#preferences-simple-mode), probablemente es un buen momento para desactivarlo.
 
-Para reducir el número de cambios propuestos de la dosis basal en lazo abierto, también puedes usar los consejos del [**Objetivo 3**](#objective-3-prove-your-knowledge). Además, puedes cambiar el porcentaje mínimo de los cambios recomendados de la dosis basal con el ajuste «**Cambio mínimo en modo abierto**» en **Ajustes → Lazo**. Cuanto más alto sea el valor, menos notificaciones de cambio recibirás.
+To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Además, puedes cambiar el porcentaje mínimo de los cambios recomendados de la dosis basal con el ajuste «**Cambio mínimo en modo abierto**» en **Ajustes → Lazo**. Cuanto más alto sea el valor, menos notificaciones de cambio recibirás.
 
 ![Cambio mínimo de solicitud en lazo abierto](../images/OpenLoop_MinimalRequestChange2.png)
 
@@ -119,7 +119,7 @@ Puedes poner el [objetivo de glucosa de tu **Perfil**](#profile-glucose-targets)
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-Si usas el lazo abierto con una bomba virtual, **detente aquí**. Pulsa verificar al final de este **Objetivo** solo cuando ya uses una bomba «real» que administra insulina.
+Si usas el lazo abierto con una bomba virtual, **detente aquí**. Only tap **Verify** at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
 
 ```
 
@@ -167,14 +167,14 @@ Tiempo mínimo para completar este objetivo: **1 día**. Es un tiempo de espera 
 
 - Selecciona **Lazo cerrado** pulsando el [icono del lazo](#AapsScreens-loop-status) en la pantalla principal y eligiendo **Lazo cerrado** como modo de funcionamiento. Quédate en **Lazo cerrado** durante 1 día.
 
-- Sube poco a poco tu «IOB total máxima que OpenAPS no puede superar» (en OpenAPS se llama «max-iob») por encima de 0, hasta encontrar los ajustes que mejor funcionan para ti.
+- Slowly raise your 'Max IOB for SMB' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
 
 La recomendación por defecto para este ajuste es «**bolo medio de una comida + 3 veces la basal diaria máxima**», donde «basal diaria máxima» es el valor máximo por hora en cualquier franja horaria del día.
 
 ![basal diaria máxima](../images/MaxDailyBasal2.png)
 
 Esta recomendación debe considerarse como un punto de partida. Si usas esta regla pero ves que AAPS da demasiada insulina cuando sube la glucosa, quizás necesites:
-* bajar el valor «IOB total máxima que OpenAPS no puede superar»;
+* lower the "Max IOB for SMB" value;
 * revisa los ajustes de tu **Perfil**, con un solo cambio cada vez.
 
 Si eres muy resistente a la insulina, también puedes subir el valor de **maxIOB** con mucho cuidado.
@@ -202,7 +202,7 @@ En el **Objetivo 9** empezarás a usar **«Super Micro Bolo (SMB)»** como una f
 Tiempo mínimo para completar este objetivo: **28 días**. Es un tiempo de espera obligatorio. No puedes pasar al siguiente objetivo hasta que termine este tiempo.
 
 - La [sección SMB de esta documentación](#Open-APS-features-super-micro-bolus-smb) y la [explicación de oref1 en la documentación de OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) son lecturas obligatorias para entender los **SMB** y la idea de la **basal temporal a cero**.
-- Cuando lo hayas hecho, puedes [subir maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) para que los **SMB** funcionen mejor. Ahora maxIOB incluye toda la **IOB**, no solo la basal acumulada. Este límite pausa los **SMB** hasta que la IOB baje por debajo de este valor (_p. ej._, si **maxIOB** está en 7 U y se da un bolo de 8 U para una comida, los SMB se pausan y no se dan hasta que la **IOB** baje de 7 U). Un buen comienzo es poner **maxIOB** = **bolo medio de una comida + 3 veces la basal diaria máxima**, donde «basal diaria máxima» es el valor máximo por hora en cualquier franja horaria del día. Consulta el [objetivo 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) como referencia.
+- Cuando lo hayas hecho, puedes [subir maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) para que los **SMB** funcionen mejor. Ahora maxIOB incluye toda la **IOB**, no solo la basal acumulada. Este límite pausa los **SMB** hasta que la IOB baje por debajo de este valor (_p. ej._, si **maxIOB** está en 7 U y se da un bolo de 8 U para una comida, los SMB se pausan y no se dan hasta que la **IOB** baje de 7 U). Un buen comienzo es poner **maxIOB** = **bolo medio de una comida + 3 veces la basal diaria máxima**, donde «basal diaria máxima» es el valor máximo por hora en cualquier franja horaria del día. See [objective 7](#objectives-objective7) as reference.
 - Evalúa la velocidad de absorción de tus carbohidratos y considera cambiar el parámetro «min_5m_carbimpact» en [Ajustes → Ajustes de absorción → min_5m_carbimpact](#Preferences-min_5m_carbimpact) si te parece demasiado lenta o demasiado rápida.
 
 (objectives-objective10)=

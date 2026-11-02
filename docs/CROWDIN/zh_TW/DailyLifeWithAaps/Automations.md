@@ -19,7 +19,7 @@
 
 - 一個或多個要執行的動作。
 
-    例如鬧鐘、設定設定檔百分比或在 Pod 變更時匯出 AAPS 設定。
+    例如，Pod 變更時觸發警示、設定設定檔百分比，或匯出 AAPS 設定。
 
 
 有各種各樣的自動化選項，鼓勵用戶在 AAPS 應用中的自動化進行研究。你也可以在 [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) 與 [**Discord**](https://discord.gg/4fQUWHZ4Mw) 上的 AAPS 用戶社團搜尋其他使用者的自動化範例。
@@ -40,11 +40,11 @@
 
 用戶每天早上六點鍛鍊：他需要在早上五點在 AAPS 中手動設置 “臨時目標-活動”。
 
-![替代文字](../images/Automations/automation_concept_manual.png)
+![未使用自動化的手動操作](../images/Automations/automation_concept_manual.png)
 
 用戶已設置一個**自動化**，以在早上五點觸發“臨時目標-活動”，確保他們的**血糖**和**體內胰島素**處於最佳狀態，以備下午六點的鍛鍊：
 
-![替代文字](../images/Automations/automation_concept_automated.png)
+![由自動化執行的操作](../images/Automations/automation_concept_automated.png)
 
 ## 開始使用自動化前的關鍵考慮因素
 
@@ -93,12 +93,12 @@
 
 要停用**自動化**規則，請取消勾選**自動化**名稱左側的框。以下範例顯示已啟用（「已勾選」）或已停用（「未勾選」）的**自動化**：
 
-![替代文字](../images/Automations/automation_rule_activated_deactivated.png)
+![開啟或關閉自動化規則](../images/Automations/automation_rule_activated_deactivated.png)
 
 
 在設置 **自動化** 時，你可以先透過在「動作」裡的啟用「通知」選項進行測試。這會觸發**AAPS**顯示通知，而不是自動執行動作。當你確認通知在正確的時間/條件下觸發時，可以更新**自動化**規則，將「通知」替換為「動作」。
 
-![替代文字](../images/Automations/automation_alert_actions.png)
+![警示操作](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
@@ -117,7 +117,7 @@
 
 * 透過**自動化**設定的**臨時目標</strong)，必須介於 72 至 180 mg/dL（或 4 至 10 mmol/L）之間。</li>
 * **設定檔百分比** 必須在 50% 和 130% 之間。
-* 自動化執行間隔必須至少 5 分鐘（包括首次執行）。</ul>
+* 每次執行**自動化**之間（包括首次執行），至少須間隔 5 分鐘。</ul>
 
 ## 正確使用負值
 
@@ -129,7 +129,7 @@
 
 在**自動化**中的「條件」選擇‘小於’這類負值時，請務必謹慎。例如：
 
-![替代文字](../images/Automations/automation_comparison_operators.png)
+![比較運算子](../images/Automations/automation_comparison_operators.png)
 
 **範例 1：**建立條件「**小於**」「-0.1 mmol/L」（或「-2 mg/dL」）會：
 
@@ -224,15 +224,15 @@
 * **檔案**必須在 50% 和 130% 之間
 * 僅在目前設定檔百分比為100%時有效
 
-**Actions:** **Change smoothing** (in the **Loop & insulin** group)
+**操作：****變更平滑處理**（位於**循環與胰島素**群組）
 
 **選項：**
 
-* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
+* 選取要切換至的[平滑處理方式](../CompatibleCgms/SmoothingBloodGlucoseData.md). 清單內容與**組態** > **平滑處理**中的選項相同。此操作的效果也完全相同：儲存新的方法、同步至已配對的用戶端，並立即重新平滑處理血糖資料。
 * 只有在該平滑處理方式目前尚未啟用時才會執行；**AAPS** 會自動在規則中加入「**前提條件：平滑處理方式……尚未啟用**」這一行。選取的平滑處理方式啟用後，系統會略過此規則，不會顯示提示。
-* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
-  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
-  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
+* 例如：新感測器在使用的第一天，讀取值通常會比較不穩定。設定兩條以**感測器使用時間**為觸發條件的規則，可在感測器讀取值穩定前加強篩選，之後則採用無延遲的平滑處理：
+  * **感測器使用時間**少於 24 小時：將**平滑處理方式**變更為**無跡卡爾曼濾波器**
+  * **感測器使用時間**超過 24 小時：將**平滑處理方式**變更為**平均平滑處理**
 
 **動作：****備註**（位於清單的**警示**類別中）
 
@@ -244,7 +244,7 @@
 
 ![「記事」動作的事件](../images/Automations/automation_action_careportal_events.png) ![「記事」動作設定為「更換幫浦部位」](../images/Automations/automation_action_careportal_site_change.png)
 
-**動作：****傳送 SMS**（位於**警示**群組）
+**操作：****傳送簡訊給所有號碼**（位於**警示**群組）
 
 **選項：**
 
@@ -262,7 +262,7 @@
 
 * 選擇**開啟**或**關閉**。這會變更 OpenAPS SMB 的**啟用 SMB**設定，效果與您在**設定**中變更設定相同；在您或其他規則將設定改回之前，這項設定都會維持不變。
 
-**動作：****自動調整設定檔**（位於**循環與胰島素**群組）
+**操作：****執行 Autotune**（位於**循環與胰島素**群組）
 
 **選項：**
 
@@ -272,7 +272,7 @@
 
 **選項：**
 
-* 無平滑處理. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. 將此動作加入必須優先於後續規則執行的規則中（請參閱[自動化規則的順序](#Automations-the-order-of-the-automations-in-the-list-matters)）。
+* 無平滑處理. 使用此操作的規則條件成立時，**AAPS** 不會檢查清單中位於該規則下方的規則。條件一旦再次不成立，就會照常檢查下方的規則。將此動作加入必須優先於後續規則執行的規則中（請參閱[自動化規則的順序](#Automations-the-order-of-the-automations-in-the-list-matters)）。
 
 **動作：****執行場景**、**啟用場景**、**停用場景**（位於**場景**群組）
 
@@ -282,39 +282,39 @@
 
 添加了「動作」後，應透過點擊並調整預設值，將預設數值更改為所需的數字。
 
-![替代文字](../images/Automations/automation_action_temp_target_values.png)
+![臨時目標操作的數值](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## 列表中**自動化**的順序非常重要
- **AAPS**將根據偏好的順序，由**自動化**列表由上往下開始執行規則。例如，如果‘低血糖’ **自動化** 是最重要的**自動化**，高於所有其他規則，那麼這**自動化**應該在用戶的**自動化**列表中出現在最上方，如下所示：
+ **AAPS**將根據偏好的順序，由**自動化**列表由上往下開始執行規則。例如，如果「低血糖」**自動化**是最重要的**自動化**，優先順序高於所有其他規則，那麼此**自動化**應該出現在使用者的**自動化**清單最上方，如下所示：
 
 
-![替代文字](../images/Automations/automation_rule_list.png)
+![自動化規則清單](../images/Automations/automation_rule_list.png)
 
-若要調整**自動化**規則的優先順序，請長按規則右側的**=**控制柄。透過移動規則上下來重新排序**自動化**。
+若要調整**自動化**規則的優先順序，請長按規則右側的**=**控制柄。上下移動規則，重新排列**自動化**的順序。
 
-![替代文字](../images/Automations/automation_rule_reorder.png)
+![重新排列自動化規則](../images/Automations/automation_rule_reorder.png)
 
 ## 如何刪除自動化規則
 
 要刪除**自動化**規則，請點擊垃圾桶圖示。
 
-![替代文字](../images/Automations/automation_rule_delete.png)
+![刪除自動化規則](../images/Automations/automation_rule_delete.png)
 
 ## 自動化範例
 
-以下是**自動化**範例。在 Facebook 討論群組或 Discord 上，可以找到更多有關**自動化**的討論，以及用戶如何個性化他們的**自動化**。以下範例不應被複製，除非使用者對**自動化**的運作方式有充分暸解。
+以下是**自動化**範例。你可以在 Facebook 討論社團或 Discord 上，找到更多關於**自動化**及使用者如何自訂**自動化**的討論。以下範例不應被複製，除非使用者對**自動化**的運作方式有充分暸解。
 
 (automations-low-glucose-temp-target)=
 ### 低血糖臨時目標
 
 此**自動化**會在**臨時目標**低於特定門檻時自動啟動；例如，當血糖低於 70 mg/dL 時，啟動 110 mg/dL 的目標並持續 30 分鐘：
 
-![替代文字](../images/Automations/automation_example_low_glucose_rule.png)
+![範例：低血糖規則](../images/Automations/automation_example_low_glucose_rule.png)
 
 ### 午餐時間臨時目標（包含「位置」）
 
-![替代文字](../images/Automations/automation_example_lunch_rule.png)
+![範例：午餐規則](../images/Automations/automation_example_lunch_rule.png)
 
 這個**自動化**是為一名每天在工作時於相同時間吃午餐的用戶設置的，僅僅在用戶位於設定的‘位置’時才觸發。因此，如果使用者某天沒有上班，此**自動化**就不會啟動。
 
@@ -322,7 +322,7 @@
 
 「觸發」位置包含名稱、位置（點選**從地圖選取**，或使用您目前的位置）和半徑（公尺）；當您進入（或離開）該範圍時，就會觸發：
 
-![替代文字](../images/Automations/automation_example_lunch_location_condition.png)
+![範例：含地點條件的午餐規則](../images/Automations/automation_example_lunch_location_condition.png)
 
 由於‘和’連線，只有在‘選擇的時間’並且使用者位於設定位置時，**自動化**才會發生。
 
@@ -332,11 +332,11 @@
 
 使用 Wi-Fi SSID 是在特定 Wi-Fi 網路範圍內觸發**自動化**的好方法（相較於 GPS）：定位相當精確、較省電，而且在 GPS 和其他定位服務可能無法使用的室內空間也能運作。
 
-這裡有另一個範例，設定工作日早餐前的**臨時目標**。
+以下是另一個範例：只在工作日早餐前設定**臨時目標** (1)。
 
 
-此**自動化**只會在星期一至星期五的上午 05:30 觸發 (2)  
-並且必須連線至家中的 Wi-Fi 網路 (3)。
+**自動化**只會在星期一至星期五的上午 05:30 觸發 (2)  
+且需連線至家中的 Wi-Fi 網路 (3)。
 
 
 接著會設定 75 mg/dL 的**臨時目標**，持續 30 分鐘 (4)。加入位置資訊的優點之一是，例如使用者外出度假時，就不會觸發此自動化。
@@ -352,7 +352,7 @@
 1) 在主要的「AND」條件下（必須同時符合兩個條件才會觸發） 1) 重複時間 = 週一、週二、週三、週四、週五，上午 5:30  
 1) Wi-Fi SSID = My_Home_WiFi_Name
 
-![替代文字](../images/Automations/automation_example_wifi_condition.png)
+![範例：Wi-Fi 條件](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
@@ -397,7 +397,7 @@
 
 請確認**自動化**名稱左側的方框已勾選，確保規則已啟用：
 
-![替代文字](../images/Automations/automation_rule_activated_deactivated.png)
+![開啟或關閉自動化規則](../images/Automations/automation_rule_activated_deactivated.png)
 
 * 問題：__我的自動化順序不正確的觸發。__
 

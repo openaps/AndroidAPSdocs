@@ -175,7 +175,7 @@ W ten sposób miałbyś więcej aktywnych węglowodanów, ale jednocześnie pęt
 
 Korzystając z pętli, wypróbuj te kroki:
 
-* Wykonaj [zmianę profilu](#ProfileSwitch-change-percentage) < 100%: dotknij nazwy profilu na ekranie głównym, dotknij okrągłego przycisku **▶**, a następnie ustaw **Procent** i **Czas trwania**.
+* Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
 * Ustaw [cel tymczasowy Ćwiczenia](#TempTargets-activity-temp-target) powyżej Twojego zwykłego celu. Przy procencie poniżej 100% i ustawionym czasie trwania ten sam ekran **Aktywuj** pokazuje przełącznik **Cel tymczasowy (TT) / Aktywność**, który uruchamia obie rzeczy jednocześnie.
 * Jeśli używasz SMB, upewnij się, że opcje [„Włącz SMB z wysokim tymczasowym poziomem docelowym”](#Open-APS-features-enable-smb-with-high-temp-targets) i [„Zawsze włącz SMB”](#Open-APS-features-enable-smb-always) są wyłączone.
 
@@ -194,7 +194,7 @@ Możesz zdjąć pompę, aby być „wolnym”, ale musisz powiedzieć o tym AAPS
 Picie alkoholu w trybie zamkniętej pętli jest ryzykowne, ponieważ algorytm nie potrafi poprawnie przewidzieć glikemii pod wpływem alkoholu. Musisz wypracować własny sposób postępowania, korzystając z następujących funkcji AAPS:
 
 * Wyłączenie trybu zamkniętej pętli i ręczne leczenie cukrzycy albo
-* ustawienie wysokich celów tymczasowych i wyłączenie UAM, aby pętla nie zwiększała IOB z powodu nieogłoszonego posiłku, albo
+* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
 * wykonaj [zmianę profilu](#ProfileSwitch-change-percentage) na wyraźnie mniej niż 100% 
 
 Szablon [sceny](#scenes) *Alkohol* to punkt wyjścia, który możesz dopasować do własnego sposobu postępowania.
@@ -363,9 +363,9 @@ Możesz też zmienić, kiedy pojawia się alarm: naciśnij ikonę **Ustawienia**
 
 #### Moje urządzenie Link/pompa/pod nie odpowiada (RL/OL/EmaLink…)
 
-W niektórych telefonach połączenie Bluetooth z urządzeniami Link (RL/OL/EmaL...) zrywa się.
+With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
 
-W niektórych urządzenia Link nie odpowiadają (AAPS pokazuje, że są połączone, ale Link nie może połączyć się z pompą ani wysyłać do niej poleceń).
+Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
 
 Najpierw spróbuj przycisku **Resetuj RileyLink** na ekranie pompy (zobacz stronę swojej pompy: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). Jeśli to nie pomoże, najprostszy sposób, aby wszystkie te elementy znowu działały razem:
 
@@ -419,5 +419,5 @@ Stan poda jest zapisywany w eksportowanych ustawieniach, więc aktywny pod możn
 
 Najpierw przeczytaj te części:
 
-* [Eksport i import ustawień](#omnipod-dash-export-import) na stronie Omnipod DASH oraz [Pompy bez drenu](#ExportImportSettings-tubeless-pumps): na nowym telefonie zaznacz **Także zastąp ustawienia pompy** i użyj pliku wyeksportowanego w czasie noszenia obecnego poda,
+* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
 * [Odrzucanie poda](#omnipod-dash-discard-pod), aby potem usunąć pod ze starego telefonu. Keep the old phone in airplane mode until the Pod is discarded, so that the two phones never talk to the Pod at the same time.

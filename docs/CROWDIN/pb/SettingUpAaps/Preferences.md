@@ -136,7 +136,7 @@ O **Tempo limite de proteção** define por quanto tempo (em segundos) as config
 
 - Os limites de segurança são definidos com base na idade que você seleciona nesta configuração.
 - Se você começar a atingir esses limites rígidos (como o bólus máximo), é hora de subir um nível.
-- É uma má ideia selecionar uma idade maior que a real, porque isso pode levar a uma superdosagem ao digitar um valor errado no diálogo de insulina (por exemplo, esquecendo a vírgula decimal).
+- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
 - Se você quiser saber os números reais desses limites de segurança fixos no código, role até o recurso do algoritmo que você usa [nesta página](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 (Preferences-maximum-bolus)=
@@ -275,7 +275,7 @@ Dependendo das suas configurações em [Configuração > APS](../SettingUpAaps/C
 - [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - o estado do algoritmo em 2017
 - [Super Micro Bólus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - o algoritmo mais recente, recomendado para iniciantes
 
-A partir da [versão 3.3 do **AAPS**](#version3300), o recurso [ISF dinâmico](../DailyLifeWithAaps/DynamicISF.md) passou a fazer parte do OpenAPS SMB.
+As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -489,7 +489,7 @@ When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays
 
 Você pode ajudar a desenvolver o **AAPS** enviando relatórios de falhas para os desenvolvedores.
 
-**Exportação automática de configurações**<br/> Ao ativar este recurso, você permite que o **AAPS** faça exportações de configurações sem a intervenção do usuário. Para isso, a senha mestra é guardada com segurança no seu telefone (somente nele) na próxima exportação manual. A senha guardada será usada por até 4 semanas. Depois de 4 semanas, você será avisado de que a senha está para expirar. Durante um período de tolerância de 1 semana, a senha pode ser renovada exportando as configurações manualmente pelo menu de manutenção.
+**Exportação automática de configurações**<br/> Ao ativar este recurso, você permite que o **AAPS** faça exportações de configurações sem a intervenção do usuário. For this the master password is securely stored on your phone (only) at the next manual export. A senha guardada será usada por até 4 semanas. Depois de 4 semanas, você será avisado de que a senha está para expirar. Durante um período de tolerância de 1 semana, a senha pode ser renovada exportando as configurações manualmente pelo menu de manutenção.
 
 Depois que o período de tolerância de 1 semana passar, a senha guardada expira e qualquer exportação automática de configurações é cancelada, com uma notificação ao usuário pedindo para digitar a senha de novo. [(**Exportações automáticas de configurações**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) serão registradas nas listas 'CarePortal' e 'Entrada do usuário' do **AAPS**, em Tratamentos.
 

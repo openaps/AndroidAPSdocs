@@ -75,13 +75,13 @@ Při nastavení AAPS pro práci s vaší pumpou Medtronic musíte v **Nastavení
 
 - **Sériové číslo pumpy**: Je uvedeno na zadní straně pumpy a začíná písmeny SN. Zadejte jen 6 zobrazených číslic bez písmen (např. 123456).
 - **Typ pumpy**: Model pumpy, který používáte (např. 522). 
-- **Frekvence pumpy**: Jsou dvě možnosti podle toho, kde byla vaše pumpa původně prodána. Pokud si nejste jistí, kterou možnost vybrat, podívejte se do [Nejčastějších dotazů](#MedtronicPump-faq)): 
+- **Frekvence pumpy**: Jsou dvě možnosti podle toho, kde byla vaše pumpa původně prodána. Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select: 
     - for US & Canada, frequency used is 916 MHz
     - for Worldwide, frequency used is 868 MHz
 - **Max. bazál na pumpě (U/h)**: Musí odpovídat nastavení ve vaší pumpě (viz Nastavení pumpy výše). I toto nastavení vybírejte pečlivě, protože určuje, kolik inzulínu může AAPS podat přes bazální dávku. Tím se ve skutečnosti nastaví nejvyšší dočasný bazál. Pokud například nastavíte tuto hodnotu na čtyřnásobek své nejvyšší běžné bazální dávky, umožní to dočasný bazál 400 %. Nejvyšší hodnota, kterou pumpa dovolí, je 34,9 jednotek za hodinu.
 - **Max. bolus na pumpě (U)** (za hodinu): Musí odpovídat nastavení ve vaší pumpě (viz Nastavení pumpy výše). Toto nastavení pečlivě zvažte, protože určuje, jak velký bolus může AAPS vůbec nastavit.
 - **Prodleva před spuštěním bolusu (s)**: Počet sekund od zadání bolusu do chvíle, kdy se příkaz skutečně odešle do pumpy. Během této doby může uživatel bolus zrušit, pokud byl příkaz k bolusu odeslán omylem. Bolus, který byl spuštěn přes AAPS, nelze zrušit. Bolus, který už začal, lze zrušit jen tak, že pumpu ručně pozastavíte a potom znovu spustíte.
-- **Kódování Medtronic**: Určuje, kde se provádí kódování Medtronic. Doporučuje se hardwarové kódování (tj. provádí ho zařízení kompatibilní s Rileylink), protože se tak odesílá méně dat. Softwarové kódování (tj. provádí ho AAPS) může pomoci, pokud dochází k častému odpojování. Pokud máte na zařízení Rileylink firmware verze 0.x, toto nastavení se ignoruje.
+- **Medtronic Encoding**: Determines where the Medtronic encoding is carried out (hardware or software). Doporučuje se hardwarové kódování (tj. provádí ho zařízení kompatibilní s Rileylink), protože se tak odesílá méně dat. Softwarové kódování (tj. provádí ho AAPS) může pomoci, pokud dochází k častému odpojování. Pokud máte na zařízení Rileylink firmware verze 0.x, toto nastavení se ignoruje.
 - **Typ baterie (Zobrazení napájení)**: Aby bylo možné správně určit zbývající kapacitu baterie, vyberte typ používané baterie AAA. Pokud vyberete jinou hodnotu než jednoduché zobrazení, AAPS zobrazí zbývající vypočtenou úroveň baterie v procentech a ve voltech. K dispozici jsou tyto možnosti:
     
     - Nevybráno (Jednoduché)

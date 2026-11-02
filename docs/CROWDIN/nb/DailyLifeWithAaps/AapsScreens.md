@@ -342,7 +342,7 @@ Når **PRED** er på, tegner AAPS prediksjonene sine som **prikkede linjer** til
 
 Når to prediksjoner gir de samme verdiene, overlapper prikkene deres, og du ser bare én av fargene (for eksempel UAM oppå IOB når BS er flatt).
 
-* **COB**-linje (oransje): [aktive karbohydrater](CobCalculation) (oransje brukes i hele AAPS for COB og karbohydrater)
+* **COB**-linje (oransje): [aktive karbohydrater](CobCalculation.md) (oransje brukes i hele AAPS for COB og karbohydrater)
     
     Denne prediksjonslinjen viser hvor BS (ikke COB selv!) vil gå, basert på de gjeldende innstillingene i **profilen**, under forutsetning av at avvikene fra karbohydratopptaket holder seg konstante. Denne linjen vises bare når det finnes kjente COB.
 
@@ -507,13 +507,13 @@ For å gi en bestemt mengde insulin uten å bruke [boluskalkulatoren](#aaps-scre
 
 Ved å slå på **Start midlertidig mål Spise snart** kan du automatisk starte ditt [midlertidige mål for Spise snart](#TempTargets-eating-soon-temp-target).
 
-Hvis du ikke vil gi bolus gjennom pumpen, men bare registrere en insulinmengde (for eksempel insulin gitt med penn), slå på «**Bolus vil bare bli loggført**». En ekstra rad **Tid**, satt til **Nå**, lar deg registrere en insulininjeksjon som ble gitt tidligere: bruk **-** / **+** for å endre den, eller trykk på pilen for å skrive inn minuttene eller velge dato og klokkeslett.
+Hvis du ikke vil gi bolus gjennom pumpen, men bare registrere en insulinmengde (for eksempel insulin gitt med penn), slå på «**Bolus vil bare bli loggført (ikke levert av pumpe)**». En ekstra rad **Tid**, satt til **Nå**, lar deg registrere en insulininjeksjon som ble gitt tidligere: bruk **-** / **+** for å endre den, eller trykk på pilen for å skrive inn minuttene eller velge dato og klokkeslett.
 
 ![Tid-raden, sammenfoldet](../images/v4/Screens/insulin_dialog_record_only_time.png) ![Tid-raden, åpnet med pilen](../images/v4/Screens/insulin_dialog_time_open.png)
 
 Du kan bruke knappene **+0,5 / +1,0 / +2,0** for raskt å øke insulinmengden. Trinnverdiene kan endres i [Boluskalkulator-innstillingene](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-Insulin-dialogen kan også brukes når pumpen er pauset eller frakoblet, for eksempel for å registrere insulin satt med penn. I så fall er «**Bolus vil bare bli loggført**» tvunget på (vist i rødt), og det vises ekstra felt for å velge insulintype og en **Tid**-forskyvning for en injeksjon som ble gitt tidligere:
+Insulin-dialogen kan også brukes når pumpen er pauset eller frakoblet, for eksempel for å registrere insulin satt med penn. I så fall er «**Bolus vil bare bli loggført (ikke levert av pumpe)**» tvunget på (vist i rødt), og det vises ekstra felt for å velge insulintype og en **Tid**-forskyvning for en injeksjon som ble gitt tidligere:
 
 ![Insulin-dialog med pumpen frakoblet](../images/main/insulin_dialog_pump_disconnected.png)
 
@@ -527,7 +527,7 @@ Noen [forhåndsinnstilte midlertidige mål](#TempTargets-hypo-temp-target) (Hypo
 
 **Karbotid**: Når skal du spise / spiste du karbohydrater.
 
-**Varighet**: Brukes for [«forlengede karbohydrater»](ExtendedCarbs). Denne raden er sammenfoldet, slik at du ikke skriver grammene inn i den ved en feil: bruk **-** / **+** for å endre den, eller trykk på pilen for å åpne den og skrive inn en verdi.
+**Varighet**: Brukes for [«forlengede karbohydrater»](ExtendedCarbs.md). Denne raden er sammenfoldet, slik at du ikke skriver grammene inn i den ved en feil: bruk **-** / **+** for å endre den, eller trykk på pilen for å åpne den og skrive inn en verdi.
 
 Du kan bruke knappene **+5 / +10 / +20** for raskt å øke karbohydratmengden.
 
@@ -632,7 +632,7 @@ Resultatknappen nederst viser den foreslåtte bolusen; når du trykker på den, 
 Greit å vite:
 
 * Hvis den beregnede bolusen er høyere enn din **[Maksimal bolus](#Preferences-maximum-bolus)**, reduseres den til maks bolus, og bekreftelsen viser advarselen «Bolusbegrensning brukt». En [hurtigknapp](../DailyLifeWithAaps/QuickWizards.md) blir i stedet avvist.
-* Når bolusen bare registreres (for eksempel mens pumpen er frakoblet), blir advarselen «**Bolus vil bare bli loggført**» stående øverst i dialogen, også når du ruller.
+* Når bolusen bare registreres (for eksempel mens pumpen er frakoblet), blir advarselen «**Bolus vil bare bli loggført (ikke levert av pumpe)**» stående øverst i dialogen, også når du ruller.
 * En bolus du gir manuelt, har prioritet over en [SMB](#Open-APS-features-super-micro-bolus-smb) som venter på å bli gitt: SMB-en forkastes, og loopen beregner på nytt. Hvis en SMB leveres akkurat nå, avvises bolusen din med meldingen «En SMB leveres akkurat nå. Prøv igjen når den er ferdig.» Det gis ikke noe insulin, og karbohydrater som ble lagt inn sammen med den bolusen, lagres ikke: vent et øyeblikk og legg dem inn igjen.
 
 (AapsScreens-wrong-cob-detection)=

@@ -15,7 +15,7 @@
 ![Pompa DanaR](../images/danar1.png)
 
 * Przejdź do Main Menu > Setting > Discovery
-* W ustawieniach telefonu przejdź do Bluetooth, wyszukaj urządzenia w pobliżu, wybierz numer seryjny swojej DanaR i wpisz hasło (hasło parowania to 0000). Jeśli DanaR nie pojawia się w wyszukiwaniu, uruchom ponownie telefon, wyjmij baterię z DanaR, włóż ją z powrotem i powtórz te dwa kroki.
+* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). Jeśli DanaR nie pojawia się w wyszukiwaniu, uruchom ponownie telefon, wyjmij baterię z DanaR, włóż ją z powrotem i powtórz te dwa kroki.
 
 * W **AAPS** otwórz **menu** (☰) w lewym górnym rogu, przejdź do **Konfiguracja** > **Pompa** i wybierz swój typ DanaR (**DanaR**, **DanaR wersja Koreańska** lub **DanaRv2**).
   

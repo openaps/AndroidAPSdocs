@@ -10,7 +10,7 @@ Quando começar a usar o **AAPS**, vai precisar de criar um **Perfil**, perceber
 
 - Trabalhadores noturnos ou por turnos - pode configurar um deslocamento temporal no **Perfil** para trabalhadores por turnos, alterando o número de horas no **Perfil** conforme o utilizador se deita ou acorda mais tarde/mais cedo.
 
-Porque usar uma **Percentagem do Perfil** em vez de um ajuste basal temporário? Para ser mais eficaz, uma **Percentagem do Perfil** aplica uma redução ou um aumento proporcional a: basal, FSI e IHC. Assim, o **AAPS** faz um cálculo equilibrado ao administrar a insulina do utilizador. Uma redução da basal no **Perfil** do utilizador no **AAPS** traz pouco benefício se o algoritmo continuar a usar os mesmos valores de FSI e IHC.
+Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. Assim, o **AAPS** faz um cálculo equilibrado ao administrar a insulina do utilizador. Uma redução da basal no **Perfil** do utilizador no **AAPS** traz pouco benefício se o algoritmo continuar a usar os mesmos valores de FSI e IHC.
 
 (ProfileSwitch-change-percentage)=
 
@@ -78,7 +78,7 @@ Selecione um perfil e toque em **▶ Ativar**. O ecrã **Ativar** permite ajusta
 
 ![O ecrã Ativar — percentagem, duração, deslocamento temporal, hora](../images/v4/Profiles/profile_activate.png)
 
-- **Percentagem** (30–250 %, começa sempre em 100 %) — ajusta todo o perfil. 100 % usa o perfil tal como está; por exemplo, 70 % reduz a basal e a dose de insulina calculada (bólus das refeições e correções) em 30 %. Não altera os seus alvos de glicose nem a absorção dos hidratos de carbono. Ver [Percentagem do Perfil](#profile-percentage) para o efeito completo.
+- **Percentagem** (30–250 %, começa sempre em 100 %) — ajusta todo o perfil. 100 % usa o perfil tal como está; por exemplo, 70 % reduz a basal e a dose de insulina calculada (bólus das refeições e correções) em 30 %. Não altera os seus alvos de glicose nem a absorção dos hidratos de carbono. See [Profile Percentage](#ProfileSwitch-profile-percentage) for the full effect.
 - **Duração** (0–10080 minutos, ou seja, até 7 dias) — quanto tempo dura a troca. **0 = sem fim** (até fazer outra troca); um valor diferente de zero volta ao perfil anterior quando termina.
 - **Alvo Temporário / Atividade** — só aparece quando define uma **Duração** e uma **Percentagem** abaixo de 100 %. Ative-o para iniciar também um [alvo temporário de Atividade](#TempTargets-activity-temp-target) com a mesma duração, como faria antes do exercício.
 - **Deslocamento temporal** — mostra *0h*; toque em **Alterar** para mover o horário para a frente ou para trás até 23 horas (útil para trabalho por turnos ou viagens). Ver [Deslocamento temporal](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
@@ -107,6 +107,8 @@ Se a bomba indicar uma basal muito diferente do seu **Perfil**, o **AAPS** mant�
 
 Uma troca de perfil não está limitada a este ecrã. A mesma troca também pode ser feita a partir de um **relógio Wear OS**, de um **cliente** emparelhado (ver [Controlo principal ↔ cliente](../RemoteFeatures/ClientMasterControl.md)), de uma **[cena](Scenes.md)** ou de uma regra de **Automatização**.
 
+(ProfileSwitch-profile-percentage)=
+
 ## Percentagem do Perfil
 
 É importante que o utilizador compreenda as características essenciais de uma **Percentagem do Perfil**. Um aumento ou uma redução da percentagem numa **Troca de Perfil** sobe ou desce, na mesma percentagem, os parâmetros definidos no **Perfil** do utilizador.
@@ -125,7 +127,7 @@ O efeito de uma Percentagem do **Perfil** está resumido na tabela abaixo:
 
 | Percentagem da  
 Troca de Perfil |   Efeito   |     IHC  
-g/U     | exemplo  
+g/U     | Example  
 15 g |          FSI  
 mmol/l/U  
 mg/dl/U          | U para baixar  
@@ -153,7 +155,7 @@ mg/dl/U          | U para baixar
 
 Um «deslocamento temporal» no **Perfil** do utilizador move as definições do **Perfil** ao longo do relógio diário («circadiano») pelo número de horas introduzido. Isto pode ser útil para:
 
-- **trabalhadores noturnos ou por turnos**: trabalhar em turnos noturnos, alterando no **Perfil** o número de horas conforme o utilizador se deita ou acorda mais tarde/mais cedo; 
+- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
 - **utilizadores que mudam de fuso horário em viagem**; ou
 - **crianças com diabetes tipo 1**: que têm uma rotina fixa para a hora de dormir e a resistência à insulina prevista no seu **Perfil**. Se, por qualquer razão, a criança for dormir mais tarde do que o habitual, o cuidador pode aplicar um «deslocamento temporal» ao **Perfil** da criança, para que o **AAPS** reaja à resistência à insulina no período de tempo pretendido.
 
@@ -169,7 +171,7 @@ A questão é sempre esta: as definições de que hora do **Perfil** devem subst
 
 ![Direções do deslocamento temporal na troca de perfil](../images/ProfileSwitch_PlusMinus2.png)
 
-Este mecanismo de guardar instantâneos do **Perfil** permite um cálculo muito mais preciso do passado e a possibilidade de acompanhar as alterações do **Perfil**.
+This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
 
 (ProfileSwitch-keep-for-later)=
 

@@ -17,7 +17,7 @@ Integrace chytrých hodinek s **AAPS** může být užitečná v mnoha situacíc
 
 ## Specifické výhody pro rodiče/pečovatele používající **AAPS**
 
-Pro dítě - pokud je jejich **AAPS** telefon poblíž - může pečovatel využít chytré hodinky k dohledu a úpravám bez nutnosti použít přímo **AAPS** telefon. To může být užitečné, například pokud je **AAPS** telefon uložený v páse pumpy.
+For a child - if their **AAPS** phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS** phone. To může být užitečné, například pokud je **AAPS** telefon uložený v páse pumpy.
 
 Chytré hodinky lze použít _navíc_ k možnostem založeným na TELEFONU pro vzdálené ovládání nebo [pouze sledování](../RemoteFeatures/FollowingOnly.md), nebo jako jejich _alternativu_.
 
@@ -49,19 +49,19 @@ Nejlepší způsob, jak vybrat chytré hodinky, je hledat v příspěvcích "hod
 
 ## Plnohodnotné hodinky s Androidem
 
-Zní to jako atraktivní možnost, že? V současné době však pouze několik nadšenců experimentuje s **AAPS** na hodinkách samostatně. Chytrých hodinek s rozumným rozhraním, které dobře fungují i pro samostatné použití **AAPS** a vaší aplikace pro CGM, je jen omezený počet. Mezi oblíbené modely patří LEMFO LEM 15 Pro a 16. Do hodinek budete muset nahrát „full“ apk **AAPS** (apk, která se obvykle instaluje do chytrého telefonu), a ne „wear“ apk **AAPS**.
+Zní to jako atraktivní možnost, že? However, at present, only a few enthusiasts are experimenting with **AAPS** on a stand-alone watch. Chytrých hodinek s rozumným rozhraním, které dobře fungují i pro samostatné použití **AAPS** a vaší aplikace pro CGM, je jen omezený počet. Mezi oblíbené modely patří LEMFO LEM 15 Pro a 16. Do hodinek budete muset nahrát „full“ apk **AAPS** (apk, která se obvykle instaluje do chytrého telefonu), a ne „wear“ apk **AAPS**.
 
 Protože neexistuje specifikace, podle které by šlo určit, které hodinky jsou vhodné pro samostatný provoz **AAPS**, tyto parametry mohou pomoct:
 
 1) Android 12 nebo novější. 2) Možnost přepnout ciferník z režimu „čtverec“, aby byl text větší a snadněji čitelný. 3) Velmi dobrá životnost baterie. 4) Dobrý dosah Bluetooth.
 
-Většina frustrace ze samostatného provozu **AAPS** na hodinkách pramení z práce s maličkou obrazovkou a z faktu, že plná AAPS aplikace nebyla navržena pro zobrazení na hodinkách. Práce s nastavením **AAPS** na hodinkách může být kvůli malé obrazovce pohodlnější se stylusem. Některá tlačítka AAPS také nemusí být na obrazovce hodinek vidět.
+Většina frustrace ze samostatného provozu **AAPS** na hodinkách pramení z práce s maličkou obrazovkou a z faktu, že plná AAPS aplikace nebyla navržena pro zobrazení na hodinkách. You may prefer to use a stylus to edit **AAPS** settings on the watch, due to the restricted screen size, and some AAPS buttons may not be visible on the watch screen.
 
 Další výzvy spočívají v tom, že je těžké mít dostatečnou kapacitu baterie, a hodinky s dostatečnou baterií jsou často objemné a tlusté. Uživatelé hlásí boj s operačním systémem a nastavením úspory energie, potíže se spuštěním senzorů na hodinkách, slabý dosah Bluetooth (pro udržení spojení se senzorem i pumpou) a sporou voděodolnost. Příklady jsou na fotografiích níže.
 
 ![obrázek](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
 
-Pokud máte zájem o nastavení samostatných hodinek, přečtěte si příspěvky ve Facebookové **AAPS** skupině (je dobré vyhledat výrazy "standalone" a "Lemfo") a na Discordu.
+If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
 ## Wear OS
 
@@ -175,7 +175,7 @@ Více o nich, včetně jejich nastavení, se dočtete na [webu WatchDrip+](https
 ![obrázek](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
-Hodinky Pebble ([dnes už se nevyrábí](https://en.wikipedia.org/wiki/Pebble_(watch))) se běžně prodávaly v letech 2013 až 2016 a stále mohou být k dostání z druhé ruky. Majetek firmy Pebble převzal Fitbit. Uživatelé Pebble mohou k zobrazení dat z Nightscoutu použít ciferník Urchin. Zobrazit lze například IOB, právě aktivní dočasný bazál a predikce. Při otevřené smyčce můžete pomocí IFTTT vytvořit applet, který při přijetí oznámení z **AAPS** pošle SMS nebo oznámení přes Pushover.
+Hodinky Pebble ([dnes už se nevyrábí](https://en.wikipedia.org/wiki/Pebble_(watch))) se běžně prodávaly v letech 2013 až 2016 a stále mohou být k dostání z druhé ruky. Majetek firmy Pebble převzal Fitbit. Uživatelé Pebble mohou k zobrazení dat z Nightscoutu použít ciferník Urchin. Zobrazit lze například IOB, právě aktivní dočasný bazál a predikce. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.
 
 ### [Hodinky Bluejay](https://bluejay.website/)
 

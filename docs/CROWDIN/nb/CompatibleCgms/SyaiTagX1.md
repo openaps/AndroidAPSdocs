@@ -7,7 +7,7 @@
 
 -   Start X1-sensoren
 
-- Velg **Syai/Ottai** i [Konfigurasjon, BS-kilde](#Config-Builder-bg-source).
+- Velg **Syai/Ottai** i [**Konfigurasjon → BS-kilde**](#Config-Builder-bg-source).
 
 Slå på kringkasting i Syai-appen:
 

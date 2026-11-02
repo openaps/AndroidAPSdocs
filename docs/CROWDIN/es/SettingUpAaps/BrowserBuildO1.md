@@ -3,7 +3,7 @@
 # Opción 1 – Generar un nuevo almacén de claves
 
 ```{note}
-Esta página es parte del [Paso 2 – Crear tu almacén de claves de firma](BrowserBuildKeystore.md) de la [Compilación en el navegador](BrowserBuild.md). Asegúrate de que has leído la [decisión entre la Opción 1 y la Opción 2](#aaps-ci-preparation) y de que has descargado el archivo de preparación.
+Esta página es parte del [Paso 2 – Crear tu almacén de claves de firma](BrowserBuildKeystore.md) de la [Compilación en el navegador](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
 ```
 
 La Opción 1 genera para ti un almacén de claves de firma totalmente nuevo. Es adecuada para usuarios que compilan por primera vez, para quienes no tienen un JKS o para quienes han olvidado la contraseña o el alias.

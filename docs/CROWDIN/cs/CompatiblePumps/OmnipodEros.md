@@ -35,7 +35,7 @@ Tento návod popisuje nastavení pumpy Omnipod generace Eros (**NE Omnipod Dash*
 
 - ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **Zařízení pro podávání inzulínu**
 
-> Součást, která zpracovává příkazy přijaté z komunikačního zařízení pro pod. Tyto příkazy pocházejí z vašeho telefonu s AAPS.
+> Component that will interpret commands received from the Pod communication device originating from your AAPS enabled phone.
 > 
 > > - Nový pod Omnipod (generace Eros - **NE DASH**)
 
@@ -47,7 +47,7 @@ Na této stránce **RileyLink** znamená kterékoli z komunikačních zařízen�
 
 **BEZPEČNOST PŘEDEVŠÍM** - nepokoušejte se používat zařízení v prostředí, ve kterém nedokážete snadno opravit případné chyby (dodatečné pody, inzulín, musíte mít k dispozici možnost nabití RileyLink a telefonu).
 
-**Váš Omnipod PDM přestane fungovat, jakmile ovladač Omnipod v AAPS aktivuje váš pod**. Dříve jste používali Omnipod PDM k odesílání příkazů do pumpy Omnipod Eros. Ale Omnipod Eros umožňuje připojení pouze jediného zařízení, se kterým komunikuje. Zařízení, které pod úspěšně aktivuje, je od té chvíle jediné, které s ním smí komunikovat. To znamená, že jakmile aktivujete pod Omnipod Eros pomocí RileyLinku přes ovladač Omnipod v AAPS, **už nebudete moci se svým podem používat PDM**. AAPS s ovladačem pro pumpu Omnipod a RileyLink představuje váš nový PDM. *To NEZNAMENÁ, že máte PDM vyhodit. Doporučujeme si ho nechat jako zálohu a pro nouzové situace, kdy AAPS nefunguje správně.*
+**Váš Omnipod PDM přestane fungovat, jakmile ovladač Omnipod v AAPS aktivuje váš pod**. Dříve jste používali Omnipod PDM k odesílání příkazů do pumpy Omnipod Eros. Ale Omnipod Eros umožňuje připojení pouze jediného zařízení, se kterým komunikuje. Zařízení, které pod úspěšně aktivuje, je od té chvíle jediné, které s ním smí komunikovat. To znamená, že jakmile aktivujete pod Omnipod Eros pomocí RileyLinku přes ovladač Omnipod v AAPS, **už nebudete moci se svým podem používat PDM**. AAPS s ovladačem pro pumpu Omnipod a RileyLink představuje váš nový PDM. *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies when AAPS is not working correctly.*
 
 **S podem může v jednu chvíli komunikovat jen jeden RileyLink.** **AAPS** si pamatuje jeden spárovaný RileyLink. Pokud spárujete jiný, nahradí ten předchozí.
 
@@ -281,7 +281,7 @@ Deaktivace podu (po vypršení platnosti nebo při selhání podu):
 
 Níže je popsán postup, jak pozastavit a obnovit podávání inzulínu.
 
-*POZNÁMKA – pokud nevidíte tlačítko **Pozastavit***, je ve výchozím stavu skryté. Povolte **Zobrazit tlačítko „Pozastavit dodávku“ na záložce Omnipod** v [nastavení Omnipodu](#OmnipodEros-omnipod-settings) v části **Jiné**.
+*POZNÁMKA – pokud nevidíte tlačítko **Pozastavit***, je ve výchozím stavu skryté. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Pozastavení podávání inzulínu
 
@@ -591,7 +591,7 @@ Tlačítka ve spodní části obrazovky pumpy se mění podle situace. Tlačítk
   Snímek obrazovky výše pochází ze starší verze **AAPS**. V **AAPS** 4 je to textové tlačítko **Nastavit čas** na obrazovce pumpy Omnipod.
   ```
 
-- **Pozastavit:** Pozastaví podávání inzulínu na aktivním podu. Zobrazí se jen tehdy, když je povoleno v nastavení (**Zobrazit tlačítko „Pozastavit dodávku“ na záložce Omnipod**).
+- **Pozastavit:** Pozastaví podávání inzulínu na aktivním podu. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
 
   ![pozastavit](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Poskytuje oznámení v AAPS a zvukové výstrahy telefonu, když není jisté, z
 
 Poskytuje pokročilá nastavení, která pomáhají při ladění chyb.
 
-- **Zobrazit tlačítko „Pozastavit dodávku“ na záložce Omnipod:** Skryje nebo zobrazí tlačítko **Pozastavit** na obrazovce pumpy Omnipod.
+- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
 - **Zobrazit tlačítko Pulzní log v menu Správa Podu:** Toto nastavení je stále v seznamu, ale aktuální verze obrazovky pumpy tlačítko **Protokol pulzů** nemá.
 
 - **Zobrazit tlačítko Statistika RileyLinku v nabídce Správa Podu:** Skryje nebo zobrazí tlačítko **Statistika RileyLink** na obrazovce pumpy Omnipod.
@@ -896,7 +896,7 @@ Nebyla zjištěna žádná aktivní relace podu. Tuto výstrahu můžete dočasn
 
 Informační výstraha, že pod byl pozastaven.
 
-#### Nastavení bazálního profilu selhalo. Výdej může být pozastaven! Prosím ručně obnovte stav podu na kartě Omnipod a v případě potřeby obnovte výdej.
+#### Nastavení bazálního profilu selhalo. Výdej může být pozastaven! Please manually refresh the Pod status on the pump screen and resume delivery if needed.
 
 Informační výstraha, že nastavení bazálního profilu podu selhalo. Otevřete obrazovku pumpy Omnipod a stiskněte **Obnovit**, pak v případě potřeby **Obnovit dodávání inzulínu**.
 

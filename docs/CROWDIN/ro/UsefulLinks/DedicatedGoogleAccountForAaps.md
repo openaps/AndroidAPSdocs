@@ -7,7 +7,7 @@ If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Dedicated Google drive space means you will not risk filling up your personal Google drive limit with **Export Preferences**.
+- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
 - Each version of **AAPS** (and supporting apps like xDrip, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
 - By harmonizing the setup, it will make online support simpler across users with similar folder structure.
 - Depending on the setup (see below), you will have a separate identity as an alias to communicate within the community which can protect your privacy. 
@@ -45,13 +45,13 @@ Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/
  Aceștia sunt pașii evidențiați în videoclip:
 
 In this example: 
-- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
+- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
 - Your new “_AAPS_” Gmail account will be: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-### Go to <https://account.google.com> 
+### Go to <https://myaccount.google.com> 
 
- If you are already logged into Google, this will direct you to your “Everyday” **My Account** page. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png) (2) select “_add another account_”.
+ If you are already logged into Google, this will direct you to your “Everyday” **My Account** page. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
 
 ![](../images/Building-the-App/building_0005.png)
 
@@ -87,7 +87,7 @@ Gmail va afișa numele contului. It will ask you to accept Gmail’s terms and c
 
 ### Personalizați afișarea noului profil
 
-At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. Imaginea de profil va fi setată în mod implicit la prima literă a numelui dumneavoastră. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png)
+At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. Imaginea de profil va fi setată în mod implicit la prima literă a numelui dumneavoastră. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
@@ -101,7 +101,7 @@ This part can be a bit confusing, since you will have to switch back and forth b
 2. Right click on your Browser logo in your taskbar
 3. From the menu select “New Window”... and adjust it so it only takes the bottom half of the screen.
 
-Open <https://gmail.com> in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. (dacă este necesar, puteți schimba întotdeauna conturile prin apăsarea pe imaginea de profil și selectarea celui corect.
+Open <https://gmail.com> in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
 
 ![](../images/Building-the-App/building_0009.png)
 

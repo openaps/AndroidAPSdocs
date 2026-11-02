@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- 31 de outubro de 2026: foi lançada a versão 4.0.0. Veja as [Notas das Versões](#latestrelease) para saber o que há de novo e siga as instruções do [manual de atualização](./Maintenance/UpdateToNewVersion.md) para atualizar.
+31 October 2026: Version 4.0.0 is out. Veja as [Notas das Versões](#latestrelease) para saber o que há de novo e siga as instruções do [manual de atualização](./Maintenance/UpdateToNewVersion.md) para atualizar.
 
 ```
 
@@ -17,7 +17,7 @@ Esta documentação explica como configurar e usar o **AAPS**. Pode navegar na d
 
 Na secção **1) Primeiros passos**, a [Introdução ao APS e ao AAPS](Getting-Started/Introduction.md) explica o conceito geral e o que um sistema de pâncreas artificial (APS) deve fazer. Descreve o contexto do loop em geral, explica porque é que o **AAPS** foi desenvolvido, compara o **AAPS** com outros sistemas e trata da segurança. Dá sugestões sobre como falar do **AAPS** com a sua equipa clínica, explica porque precisa de compilar a aplicação **AAPS** por si próprio em vez de apenas a descarregar e dá uma visão geral das ligações típicas de um sistema **AAPS**. Também trata da acessibilidade e de quem pode beneficiar do **AAPS**.
 
-[Preparar-se para começar com o AAPS](./Getting-Started/PreparingForAaps.md) dá mais detalhes sobre questões de segurança e sobre os telefones, CGM (monitores contínuos de glicose) e bombas de insulina compatíveis com o **AAPS**. Dá uma visão geral do processo que vai seguir e indica um calendário aproximado até ter todas as funções do **AAPS**. Esta secção prepara-o tecnicamente para montar o seu sistema **AAPS** da forma mais rápida e eficiente possível. A subsecção [CGM compatíveis](./Getting-Started/CompatiblesCgms.md) explica como otimizar a configuração do seu CGM e quais as opções de suavização mais adequadas.
+[Preparar-se para começar com o AAPS](./Getting-Started/PreparingForAaps.md) dá mais detalhes sobre questões de segurança e sobre os telefones, CGM (monitores contínuos de glicose) e bombas de insulina compatíveis com o **AAPS**. Dá uma visão geral do processo que vai seguir e indica um calendário aproximado até ter todas as funções do **AAPS**. Esta secção prepara-o tecnicamente para montar o seu sistema **AAPS** da forma mais rápida e eficiente possível. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
 
 Agora que compreende bem o processo, pode começar a montar o seu loop **AAPS**.
 
@@ -40,7 +40,7 @@ A secção **9) [Ajuda e resolução de problemas](GettingHelp/WhereCanIGetHelp.
 
 A secção **10)** trata das **[opções avançadas do AAPS](./AdvancedOptions/FullClosedLoop.md)**, por exemplo como passar do loop híbrido fechado com o **AAPS** (bólus para as refeições _etc._) para o loop totalmente fechado (sem bólus), como [ajustar o seu perfil](./GettingHelp/ProfileTuning.md) e usar o Autoajuste, e descreve os modos de desenvolvimento e de engenharia. A maioria dos utilizadores dá-se muito bem com a versão principal («Master») do **AAPS** sem usar estas opções. Esta secção é para utilizadores que já têm um bom controlo e querem melhorar ainda mais o seu sistema.
 
-Na secção **11) [Como apoiar o AAPS](SupportingAaps/HowToEditTheDocs.md)** damos informações para que possa apoiar este projeto. Pode doar dinheiro, equipamento ou conhecimentos. Pode sugerir ou fazer alterações à documentação, ajudar na [tradução da documentação](SupportingAaps/Translations) e fornecer os seus dados através do projeto Open Humans.
+In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provide information so that you can support this project. Pode doar dinheiro, equipamento ou conhecimentos. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations.md) and provide your data through the Open Humans project.
 
 A secção **12) Recursos** contém documentação arquivada ou adicional, incluindo uma subsecção para [médicos](UsefulLinks/ClinicianGuideToAaps.md) interessados em tecnologias de pâncreas artificial de código aberto, como o **AAPS**, ou para doentes que querem partilhar essa informação com os seus médicos; este tema também é tratado na introdução. Esta secção também contém mais referências e recursos sobre diabetes e loop. Inclui o [Glossário](./UsefulLinks/Glossary.md), uma lista das siglas (ou nomes abreviados) usadas em todo o **AAPS**. É aqui que pode saber, por exemplo, o que significam termos como FSI ou AT.
 

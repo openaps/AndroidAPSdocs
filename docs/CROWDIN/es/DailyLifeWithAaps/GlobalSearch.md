@@ -73,7 +73,7 @@ Toca un resultado para ir directamente a él:
 - **Preferencia** → abre el ajuste **en su sitio** (salta a él dentro de su pantalla).
 - **Documentación** → abre la página en tu navegador.
 
-Abrir ajustes y acciones protegidas sigue respetando tu **[protección](../SettingUpAaps/ConfigBuilder.md)** (PIN/contraseña), igual que si hubieras llegado allí a mano. Después de usar un resultado, puedes pulsar **Atrás** para volver a los resultados de la búsqueda.
+Opening settings and protected actions still respects your **[protection](#Preferences-protection)** (PIN/password), exactly as it would if you had navigated there by hand. Después de usar un resultado, puedes pulsar **Atrás** para volver a los resultados de la búsqueda.
 
 ---
 

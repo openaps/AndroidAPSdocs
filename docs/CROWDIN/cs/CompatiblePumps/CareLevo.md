@@ -134,7 +134,7 @@ Výdej inzulínu se zastavil. Jednejte hned:
 * **Málo inzulínu**: zbývá méně než 10 U. Deaktivujte patch a vyměňte ho.
 * **Platnost patche vypršela**: patch dosáhl konce své životnosti. Deaktivujte patch a vyměňte ho.
 * **Slabá baterie**: zahoďte patch a vyměňte ho.
-* **Vysoká/nízká teplota**: přesuňte se na místo s vhodnou teplotou, mezi 40 ℉ a 99 ℉ (5 ℃ a 37 ℃).
+* **High/Low Temperature**: move to a suitable temperature, between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
 * **Automatické vypnutí**: patch se zastavil, protože výstraha Automatické vypnutí byla ignorována. Stisknutím **Spustit inzulín** znovu spustíte výdej bazálu.
 * **Vypršel čas na aplikaci patche**, **Autodiagnostika selhala**, **Chyba patche**, **Okluze** a **Chyba zavedení jehly**: deaktivujte patch a vyměňte ho.
 
@@ -145,7 +145,7 @@ Výdej inzulínu pokračuje, ale něco vyžaduje vaši pozornost:
 * **Málo inzulínu**: zásobník dosáhl množství nastaveného v **Nastavení upozornění na málo inzulínu**. Připravte se na výměnu patche.
 * **Patch brzy vyprší** a **Doba provozu patche skončila**: vyměňte patch.
 * **Slabá baterie**: připravte se na výměnu patche.
-* **Vysoká/nízká teplota**: výdej je pozastaven, dokud patch není znovu v rozmezí 40 ℉ až 99 ℉.
+* **High/Low Temperature**: delivery is paused until the patch is back between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
 * **Automatické vypnutí**: klepněte na **OK**. Pokud výstrahu ignorujete, změní se na kritický alarm a výdej se zastaví.
 * **Aktivace patche nedokončena**: klepněte na **OK** a dokončete aktivaci.
 * **Spustit inzulín**: pauza, kterou jste nastavili, skončila. Klepnutím na **Spustit inzulín** obnovíte výdej.

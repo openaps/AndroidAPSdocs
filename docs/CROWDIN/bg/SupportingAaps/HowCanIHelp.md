@@ -23,7 +23,7 @@ Developers are parents, caregivers, loved ones and people with diabetes working 
 
 Можете да започнете като преводач на документацията паралелно или по-късно.
 
-Можете да проверите състоянието на преводите на приложението и документацията за различните езици [тук](#StateOfTranslations).
+You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
 
 * Ако искате да преведете **приложението** на други езици (благодарим ви), моля, използвайте [crowdin](https://crowdin.com/project/androidaps).
 * Ако искате да преведете **документацията** на други езици (благодарим ви), моля, използвайте [crowdin](https://crowdin.com/project/androidapsdocs). 

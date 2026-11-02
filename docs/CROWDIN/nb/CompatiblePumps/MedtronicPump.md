@@ -75,13 +75,13 @@ Når du setter opp AAPS for Medtronic-pumpen din, må du sette disse punktene i 
 
 - **Pumpens serienummer**: Står på baksiden av pumpen og begynner med SN. Du skal bare skrive inn de 6 tallene som vises, uten bokstaver (f.eks. 123456).
 - **Pumpens modellnummer**: Pumpemodellen du bruker (f.eks. 522). 
-- **Pumpens frekvens**: Det er to alternativer, avhengig av hvor pumpen opprinnelig ble solgt. Se [FAQ](#MedtronicPump-faq) hvis du er usikker på hvilket alternativ du skal velge): 
+- **Pumpens frekvens**: Det er to alternativer, avhengig av hvor pumpen opprinnelig ble solgt. Se [FAQ](#MedtronicPump-faq) hvis du er usikker på hvilket alternativ du skal velge: 
     - for US & Canada er frekvensen 916 MHz
     - for Worldwide (globalt) er frekvensen 868 MHz
 - **Maks Basal på pumpen (Enheter/time)**: Denne må stemme med innstillingen på pumpen (se Konfigurasjon av pumpen ovenfor). Også denne innstillingen må velges med omhu, fordi den bestemmer hvor mye AAPS kan tilføre via basaldosen din. Dette setter i praksis den høyeste midlertidige basaldosen. Hvis du for eksempel setter denne verdien til fire ganger din høyeste vanlige basaldose, kan du få en midlertidig basal på 400 %. Den høyeste verdien pumpen tillater, er 34,9 enheter per time.
 - **Maks Bolus dose på pumpen (Enheter)** (på én time): Denne må stemme med innstillingen på pumpen (se Konfigurasjon av pumpen ovenfor). Denne innstillingen bør vurderes nøye, fordi den bestemmer hvor stor bolus AAPS noen gang kan sette.
 - **Forsinkelse før Bolus dose startes (sek)**: Antall sekunder fra en bolus bestilles til kommandoen faktisk sendes til pumpen. I dette tidsrommet kan brukeren avbryte bolusen hvis en boluskommando ble sendt ved en feil. Det er ikke mulig å avbryte en bolus som har startet, via AAPS. Den eneste måten å avbryte en bolus som allerede har startet, er å pause pumpen manuelt og så gjenoppta den.
-- **Medtronic-koding**: Bestemmer hvordan Medtronic-kodingen utføres. Maskinvarekoding (det vil si at den RileyLink-kompatible enheten gjør kodingen) er å foretrekke, fordi det gir mindre data som må sendes. Programvarekoding (det vil si at AAPS gjør kodingen) kan hjelpe hvis du opplever hyppige frakoblinger. Denne innstillingen ignoreres hvis du har firmwareversjon 0.x på RileyLink-enheter.
+- **Medtronic-koding**: Bestemmer hvor Medtronic-kodingen utføres (maskinvare eller programvare). Maskinvarekoding (det vil si at den RileyLink-kompatible enheten gjør kodingen) er å foretrekke, fordi det gir mindre data som må sendes. Programvarekoding (det vil si at AAPS gjør kodingen) kan hjelpe hvis du opplever hyppige frakoblinger. Denne innstillingen ignoreres hvis du har firmwareversjon 0.x på RileyLink-enheter.
 - **Batteritype (Strømvisning)**: For å beregne gjenværende batterinivå riktig bør du velge hvilken type AAA-batteri du bruker. Når du velger noe annet enn enkel visning, viser AAPS beregnet gjenværende batterinivå i prosent og volt. Disse alternativene finnes:
     
     - Ikke valgt (Enkel visning)

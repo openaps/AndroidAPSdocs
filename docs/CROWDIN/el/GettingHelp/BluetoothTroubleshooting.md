@@ -11,7 +11,7 @@
 (bluetoothtroubleshooting-cannot-start-omnipod-with-android-16)=
 
 ## Δεν μπορώ να ξεκινήσω το Omnipod με Android 16
-- Το Android 16 χρειάζεται τουλάχιστον την έκδοση 3.3.2.1 του **AAPS** για να λειτουργεί σωστά το Omnipod DASH, γιατί αυτή η έκδοση έχει διορθώσεις ειδικά για γνωστά προβλήματα που έφερε το Android 16 στο Omnipod.
+- Android 16 needs at a minimum **AAPS** version 3.3.2.1 for the Omnipod DASH to work correctly, as this version has fixes added to specifically address known problems introduced in Android 16 for Omnipod.
 
 ---
 
@@ -48,11 +48,11 @@
 
 - **myBMW** Το MyBMW διέκοψε τη σύνδεση του Medtrum Nano και του Omnipod DASH. Η εφαρμογή MyBMW ζητά την άδεια "find nearby devices" μόνο μία φορά. Αν δεν τη δώσετε, η εφαρμογή λειτουργεί κανονικά
 
-- **Amazon Alexa**  Η αφαίρεση της άδειας «Συσκευές σε κοντινή απόσταση» από την εφαρμογή Alexa έλυσε το πρόβλημα για μερικούς χρήστες, αλλά τότε δεν μπορείτε να κάνετε σύζευξη συσκευών Matter IOT
+- **Amazon Alexa**  Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IoT devices
 
 - **MINI app**  Φαίνεται ότι η εφαρμογή βασίζεται στην εφαρμογή myBMW και ίσως έχει την ίδια συμπεριφορά
 
-- **BM2** Εφαρμογή παρακολούθησης ηλιακής μπαταρίας, που χρησιμοποιείται σε μερικά τροχόσπιτα και ηλιακά συστήματα κάμπινγκ. Όταν η εφαρμογή έτρεχε, εμπόδιζε την ενεργοποίηση νέου Pod. Μια λύση είναι να κάνετε αναγκαστική διακοπή της εφαρμογής όσο ενεργοποιείτε ένα νέο pod. Όταν η εφαρμογή έτρεξε μετά από αυτό, δεν φάνηκε να επηρεάζει τη λειτουργία του Dash (σε Pixel 8 Pro με A16).
+- **BM2** Solar Battery Monitoring app, used in some camper van and camping solar setups: when the app was running, it prevented activation of a new Pod. Force Stopping the app while activating a new pod is a workaround to the issue. Όταν η εφαρμογή έτρεξε μετά από αυτό, δεν φάνηκε να επηρεάζει τη λειτουργία του Dash (σε Pixel 8 Pro με A16).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
@@ -63,7 +63,7 @@
 
 ```{admonition} Menus and settings
 :class: note
-Οι εικόνες και οι οδηγίες σε αυτόν τον οδηγό είναι από καθαρή εγκατάσταση Android 16 (Vanilla) σε Google Pixel 8 Pro. Σε άλλους κατασκευαστές και συσκευές τα μενού και οι ρυθμίσεις μάλλον δεν θα είναι ακριβώς ίδια. Προσαρμόστε τα βήματα στη συσκευή σας. Αν κολλήσετε, δείτε την ενότητα [Πού θα βρείτε βοήθεια για το Dash](#omnipod-dash-where-to-get-help-for-dash) για το πώς να ζητήσετε υποστήριξη από την κοινότητα.
+Οι εικόνες και οι οδηγίες σε αυτόν τον οδηγό είναι από καθαρή εγκατάσταση Android 16 (Vanilla) σε Google Pixel 8 Pro. Other manufacturers and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.
 ```
 
 1. Ανοίξτε τις ρυθμίσεις Android στο τηλέφωνό σας, κάντε κύλιση προς τα κάτω και πατήστε **Ασφάλεια και απόρρητο (1)**.
@@ -103,7 +103,7 @@
 
 ### Πώς να ενεργοποιήσετε ξανά την άδεια «Συσκευές σε κοντινή απόσταση» για εφαρμογές συστήματος και άλλες εφαρμογές:
 
-1. Αν χρειάζεται, δείτε την ενότητα **«Πώς να αφαιρέσετε την άδεια "Συσκευές σε κοντινή απόσταση" από άλλες εφαρμογές»** για το πώς θα φτάσετε στις ρυθμίσεις απορρήτου των εφαρμογών. Όταν είστε στη ρύθμιση **Συσκευές σε κοντινή απόσταση**, συνεχίστε στο 2.
+1. If required Reference the **"How to revoke 'Nearby device' permissions for other apps"** section on how to get to the app privacy settings, then once in the **Nearby device** configuration proceed to 2.
 
 2. Δείτε τη λίστα εφαρμογών και πατήστε την εφαρμογή στην οποία θέλετε να επιτρέψετε την άδεια **Συσκευές σε κοντινή απόσταση**.
 
@@ -122,7 +122,7 @@
 
    ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png)
 
-5. Ακολουθήστε τις οδηγίες της ενότητας **«Πώς να αφαιρέσετε την άδεια "Συσκευές σε κοντινή απόσταση" από άλλες εφαρμογές»** με αντίστροφη σειρά, για να ενεργοποιήσετε ξανά την άδεια σε κάθε εφαρμογή.
+5. Follow the guidance in **"How to revoke 'Nearby device' permissions for other apps"** in reverse to re-enable permissions for each app.
 
 ---
 

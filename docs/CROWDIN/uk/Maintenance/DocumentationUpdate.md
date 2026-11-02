@@ -48,7 +48,7 @@
 
 - DiaKEM: нові встановлення не працюють після оновлення серверів @psonnera
 - Видалено пропатчений застосунок Libre 2 (застарів): він не працює з новими сенсорами @psonnera
-- Перероблено сторінку Omnipod Dash @XiTatiON
+- Reworked Omnipod DASH page @XiTatiON
 
 ## Серпень 2025
 
@@ -97,7 +97,7 @@
 - [Знак попередження про якість ГК](#aaps-screens-bg-warning-sign) @tanja
 - [Оновлення щодо помп Medtronic](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
 - [Необхідні перевірки після оновлення до AAPS 3.0](Update3_0.md) @tanja
-- [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
+- [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
 - Оновлення документації для AAPS 3.0 (частково) @xJoe
 - [Wear OS для AAPS 3.0](../WearOS/WearOsSmartwatch.md) @peterleimbach
 
@@ -112,7 +112,7 @@
 
 ## Листопад 2021
 
-- Найкращі практики калібрування сенсора Libre 2
+- Best practices for calibrating a Libre 2 sensor
 - [ISF](../UsefulLinks/FAQ.md) — нове формулювання впливу
 - Оновлення сторінки [Усунення проблем з Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - Видалено пропатчений застосунок [Dexcom](../CompatibleCgms/DexcomG6.md), бо він застарів
@@ -212,7 +212,7 @@
 
 ## Грудень 2019
 
-- [Android auto](../RemoteFeatures/AndroidAuto.md) — налаштування зі знімками екрана
+- [Android Auto](../RemoteFeatures/AndroidAuto.md) - setup with screenshots
 - [Accu-Chek Insight і Autotune](#Accu-Chek-Insight-Pump-settings-in-aaps) — обхідний шлях для використання
 - [Glimp](#Config-Builder-bg-source) — підтримуються версії 4.15.57 і новіші
 - [Циферблати](../WearOS/WearOsSmartwatch.md) — велике оновлення, набагато більше деталей
@@ -238,7 +238,7 @@
 ## Жовтень 2019
 
 - [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
-- [AccuChek Insight — параметри журналу](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- [Accu-Chek Insight - log options](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [Розрахунок COB на окремій сторінці](../DailyLifeWithAaps/CobCalculation.md)
 - [COB — виявлення неправильного значення COB](#CobCalculation-detection-of-wrong-cob-values)
 - [Усунення проблем, специфічних для Dexcom G6](#DexcomG6-troubleshooting-g6)

@@ -7,7 +7,7 @@
 
 -   Start X1 sensor
 
-- Виберіть **Syai/Ottai** у [Конфігурація, Джерело ГК](#Config-Builder-bg-source).
+- Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
 Увімкніть трансляцію (broadcast) у застосунку Syai:
 

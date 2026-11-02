@@ -14,7 +14,7 @@
 
 **Недостатъци**
 
-* Препоръчва се само за опитни потребители на затворен кръг (някои настройки трудно се разпознават – трябва от опит с голям телефон с Android и AAPS да знаете как и къде се намира всичко. Някои бутони в AAPS се натискат трудно – става с много внимание, но не и с дебели пръсти.)
+* Recommended only for experienced loopers. Some settings are not easy to recognize: you have to know from experience with a big Android AAPS phone how and where things are located. Some AAPS buttons are small and hard to tap: you need a precise touch, not stubby fingers.
 * Може да се използва само като телефон за затворения кръг (LooperPhone). По-добре е да имате и нормален смартфон в джоба си. 
 
 ### Оптимизация на живота на батерията
@@ -43,6 +43,6 @@ To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be di
 
 ### Remote Connection (отдалечена връзка) за Wear apk
 
-При някои смарт часовници, например Samsung Galaxy, „Отдалечена връзка“ (Remote Connection) в „Разширени функции“ (Advanced Features) на Samsung Galaxy трябва да е **включена**, за да използвате Jelly, **Wear.apk** и **AAPS** дистанционно през Wi-Fi.
+For certain smart watches, like the Samsung Galaxy, 'Remote connection' under Advanced features in the Galaxy Wearable app must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
 
 ![Galaxy Wearable, Разширени функции, Отдалечена връзка – включено](../images/wearos/galaxy_wearable_remote_connection.png)

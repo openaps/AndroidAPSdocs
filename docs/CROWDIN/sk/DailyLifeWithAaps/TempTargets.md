@@ -19,7 +19,7 @@ Pri výbere **dočasného cieľa** v **AAPS** by ste mali mať reálne očakáva
 
 Dosiahnutie požadovanej cieľovej **glykémie** s **dočasným cieľom** môže trvať približne 30 minút alebo aj dlhšie. **AAPS** nemôže dosiahnuť cieľovú **glykémiu** okamžite. Myslite na to pri výbere **dočasného cieľa**.
 
-Nasledujúce časti zhŕňajú vlastnosti **dočasného cieľa Aktivita**, **dočasného cieľa Pred jedlom** a **dočasného cieľa Hypoglykémia**. Uvedené hodnoty sú predvolené hodnoty z výroby – [každú predvoľbu si môžete upraviť](#TempTargets-change-preset-defaults) podľa svojich potrieb.
+The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. Uvedené hodnoty sú predvolené hodnoty z výroby – [každú predvoľbu si môžete upraviť](#TempTargets-change-preset-defaults) podľa svojich potrieb.
 
 ### DC – Aktivita
 
@@ -193,9 +193,9 @@ Niekedy po zjedení sacharidov na liečbu hypoglykémie môže **glykémia** rý
 
 Niektorí používatelia nechcú, aby sa počas **dočasného cieľa Hypoglykémia** podávali **SMB**. Dosiahnete to vypnutím možnosti *„Povoliť SMB s vysokými dočasnými cieľmi“* v **Nastavenia** → **OpenAPS SMB** (pozrite nižšie):
 
-- (Pokročilé, cieľ 9): v OpenAPS SMB môžete zapnúť *„Vysoký dočasný cieľ zvyšuje citlivosť“* pre **dočasné ciele** 100 mg/dl (5,6 mmol/l) alebo vyššie, potom bude **AAPS** citlivejší.
+- Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
 
-- (Pokročilé, cieľ 9): môžete vypnúť *„Povoliť SMB s vysokými dočasnými cieľmi“*. Potom **AAPS** nepodá SMB, kým sú aktívne vysoké dočasné ciele, aj keď má **AAPS** COB > 0, je zapnuté „Povoliť SMB s nízkymi dočasnými cieľmi“ alebo „Vždy povoliť SMB“ a OpenAPS SMB je aktívny.
+- Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
 
 Poznámka: ak otvoríte **dialóg Sacharidy**, keď je vaša glykémia nižšia ako 72 mg/dl alebo 4 mmol/l, **AAPS** automaticky vopred zapne prepínač **Spustiť dočasný cieľ Hypo**.
 
@@ -219,9 +219,9 @@ Ak je navyše vypnuté *„Povoliť SMB s vysokými dočasnými cieľmi“*, **A
 
 ## Dočasný cieľ Pred jedlom
 
-**Dočasný cieľ Pred jedlom** môže pomôcť jemne znížiť **glykémiu** a zabezpečiť dostatok **IOB** pred jedlom.
+**Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target -Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Kým nemáte s **AAPS** skúsenosti, počítajte s tým, že aj pri **dočasnom cieli Pred jedlom** si budete dávať bolus vopred. Platí to najmä vtedy, ak jete stravu s vysokým obsahom sacharidov.
+This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
 
 Viac o „režime Pred jedlom“ (eating soon mode) si môžete prečítať v článku [„How to do ‚eating soon‘ mode“](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) (v angličtine) alebo [tu](https://diyps.org/tag/eating-soon-mode/).
 

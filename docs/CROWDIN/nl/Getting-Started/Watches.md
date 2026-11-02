@@ -17,7 +17,7 @@ Een smartwatch koppelen aan **AAPS** kan in veel situaties handig zijn, bijvoorb
 
 ## Specifieke voordelen voor ouders/verzorgers die **AAPS** gebruiken
 
-Bij een kind kan een verzorger - als de **AAPS**-telefoon in de buurt is - met een smartwatch meekijken of iets aanpassen, zonder de **AAPS**-telefoon te gebruiken. Dit is bijvoorbeeld handig als de **AAPS**-telefoon goed weggestopt zit in een pompband.
+For a child - if their **AAPS** phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS** phone. Dit is bijvoorbeeld handig als de **AAPS**-telefoon goed weggestopt zit in een pompband.
 
 Een smartwatch kun je _naast_ of _in plaats van_ de TELEFOON-opties gebruiken voor bediening op afstand of [alleen volgen](../RemoteFeatures/FollowingOnly.md).
 
@@ -49,19 +49,19 @@ De beste manier om een smartwatch te kiezen is zoeken naar berichten over "watch
 
 ## Volledig Android
 
-Dat klinkt aantrekkelijk, toch? Maar op dit moment experimenteren maar een paar enthousiastelingen met **AAPS** op een zelfstandig horloge. Er zijn maar weinig smartwatches met een redelijke bediening die ook goed werken voor zelfstandig gebruik van **AAPS** en je CGM-app. Populaire modellen zijn de LEMFO LEM 15 Pro en 16. Je moet de **AAPS** "full" apk op het horloge zetten (de apk die je normaal op een smartphone installeert) en niet de **AAPS** "wear" apk.
+Dat klinkt aantrekkelijk, toch? However, at present, only a few enthusiasts are experimenting with **AAPS** on a stand-alone watch. Er zijn maar weinig smartwatches met een redelijke bediening die ook goed werken voor zelfstandig gebruik van **AAPS** en je CGM-app. Populaire modellen zijn de LEMFO LEM 15 Pro en 16. Je moet de **AAPS** "full" apk op het horloge zetten (de apk die je normaal op een smartphone installeert) en niet de **AAPS** "wear" apk.
 
 Er is geen duidelijke specificatie die vertelt of een horloge goed werkt voor zelfstandig gebruik van **AAPS**, maar deze punten helpen:
 
 1)  Android 12 of nieuwer. 2)  De watchface uit de "vierkante" modus kunnen halen, zodat tekst groter en beter leesbaar is. 3)  Een zeer goede batterijduur. 4)  Een goed Bluetooth-bereik.
 
-De meeste frustraties met zelfstandige **AAPS**-horloges komen door het kleine scherm, en doordat de huidige AAPS full app niet voor een horloge is ontworpen. Door het kleine scherm wil je misschien een stylus gebruiken om **AAPS**-instellingen op het horloge te wijzigen. Sommige AAPS-knoppen zijn op het horlogescherm misschien niet zichtbaar.
+De meeste frustraties met zelfstandige **AAPS**-horloges komen door het kleine scherm, en doordat de huidige AAPS full app niet voor een horloge is ontworpen. You may prefer to use a stylus to edit **AAPS** settings on the watch, due to the restricted screen size, and some AAPS buttons may not be visible on the watch screen.
 
 Andere problemen: het is moeilijk om een goede batterijduur te krijgen, en horloges met een goede batterij zijn vaak groot en dik. Gebruikers melden problemen met het besturingssysteem en de energiebesparingsinstellingen, moeite met het starten van sensoren op het horloge, een slecht Bluetooth-bereik (voor de verbinding met zowel de sensor als de pomp) en twijfelachtige waterdichtheid. Voorbeelden staan op de foto's hieronder.
 
 ![Afbeelding](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
 
-Wil je een zelfstandig horloge instellen? Lees dan de berichten en reacties in de **AAPS** Facebook-groep (goede zoekwoorden zijn "standalone" en "Lemfo") en op Discord voor meer informatie.
+If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
 ## Wear OS
 
@@ -175,7 +175,7 @@ Meer informatie, ook over het instellen, vind je op de [website van WatchDrip+](
 ![Afbeelding](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
-Pebble-horloges ([nu niet meer gemaakt](https://en.wikipedia.org/wiki/Pebble_(watch))) waren van 2013 tot 2016 te koop, en zijn misschien nog tweedehands te vinden. Fitbit heeft de bezittingen van Pebble overgenomen. Pebble-gebruikers kunnen de Urchin-watchface gebruiken om Nightscout-gegevens te bekijken. Je kunt onder andere IOB, het actieve tijdelijk basaal en voorspellingen tonen. Bij een open loop kun je met IFTTT een applet maken: als er een notificatie van **AAPS** binnenkomt, stuur dan een sms of een pushover-melding.
+Pebble-horloges ([nu niet meer gemaakt](https://en.wikipedia.org/wiki/Pebble_(watch))) waren van 2013 tot 2016 te koop, en zijn misschien nog tweedehands te vinden. Fitbit heeft de bezittingen van Pebble overgenomen. Pebble-gebruikers kunnen de Urchin-watchface gebruiken om Nightscout-gegevens te bekijken. Je kunt onder andere IOB, het actieve tijdelijk basaal en voorspellingen tonen. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.
 
 ### [Bluejay-horloges](https://bluejay.website/)
 

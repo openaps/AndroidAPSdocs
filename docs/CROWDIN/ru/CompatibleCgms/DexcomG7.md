@@ -13,9 +13,9 @@ Noteworthy is the fact that the G7, ONE+ and Stelo systems, compared to the G6, 
 
 - xDrip connects to the sensor itself: uninstall the Dexcom app, as only one app can connect to the sensor. To keep the Dexcom app, use [xDrip Companion App](#DexcomG7-xdrip-companion-app) instead.
 - Follow the instructions here: [xDrip G7, ONE+ and Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). A recent xDrip release is required — see the linked page for the minimum version.
-- Select  xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
-- Adjust the xDrip settings according to the explanations on the xDrip settings page  [xDrip settings](../CompatibleCgms/xDrip.md)
+- Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
 
 ## 2. Build Your Own Dexcom App (G7 only)
 
@@ -30,7 +30,7 @@ Dexcom BYODA is now a very old version of the app and cannot be updated. Not ava
 -   Uninstall the original Dexcom app
 -   Установите загруженное приложение
 -   Enter sensor code in patched app
--   After short time BYODA should pick-up transmitter signal
+-   After a short time BYODA should pick up the sensor signal.
 
 (DexcomG7-xdrip-companion-app)=
 

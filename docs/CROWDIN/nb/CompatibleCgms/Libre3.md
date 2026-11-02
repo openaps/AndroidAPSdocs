@@ -22,7 +22,7 @@ Denne metoden bruker Juggluco til å motta rådata med 1-minutts intervall fra s
 ### Steg 1: Sett opp Juggluco
 Last ned og installer Juggluco-appen [her](https://www.juggluco.nl/Juggluco/download.html). Følg instruksjonene [her](https://www.juggluco.nl/Juggluco/libre3/)
 
-Pass på at du sender glukoseverdiene til xDrip: I innstillingene i Juggluco kan du sette opp Juggluco til å sende glukoseverdien sin til andre apper. Juggluco kan sende tre typer slike kringkastinger: **Patched Libre broadcast** ble opprinnelig brukt av den modifiserte LibreLink-appen og kan brukes til å sende glukoseverdier til xDrip
+Pass på at du sender glukoseverdiene til xDrip: I innstillingene i Juggluco kan du sette opp Juggluco til å sende glukoseverdien sin til andre apper. Juggluco kan sende tre typer slike kringkastinger: **Patched Libre broadcast** ble opprinnelig brukt av den modifiserte LibreLink-appen og kan brukes til å sende glukoseverdier til xDrip.
 
 ### Steg 2: Sett opp xDrip
 
@@ -69,7 +69,7 @@ Etter et sensorbytte oppdager xDrip automatisk den nye sensoren og sletter alle 
 
 ![Avslutte sensor](../images/libre3/step_14.jpg)
 
-Merk: Når to sensorer er aktive, sender Juggluco den nyeste verdien fra en av sensorene til xDrip. Hvis sensorene ikke er kalibrert og ikke måler BS noenlunde likt, kan det føre til at hoppende BS-verdier rapporteres til xDrip. Hvis du avslutter feil sensor, kan du aktivere den igjen ved å skanne sensoren.
+Merk: Når to sensorer er aktive, sender Juggluco den nyeste verdien fra en av sensorene til xDrip. Hvis sensorene ikke er kalibrert slik at de måler BS noenlunde likt, kan det føre til at hoppende BS-verdier rapporteres til xDrip. Hvis du avslutter feil sensor, kan du aktivere den igjen ved å skanne sensoren.
 
 ## Bytte sensor mellom Libre 3-appen og Juggluco
 

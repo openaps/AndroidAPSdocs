@@ -30,7 +30,7 @@ The document is read-only. Com CTRL-F, você pode pesquisar no texto da planilha
 
 Para registrar o teste da sua combinação de hardware, preencha este [formulário](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Depois que você preenche o formulário, a planilha é atualizada automaticamente a cada 5 minutos.
 
-Se tiver problemas com a planilha, entre em contato com o responsável por ela, *@theodoor5137*, no Discord, ou veja a [página Onde posso obter ajuda? ](../GettingHelp/WhereCanIGetHelp.md).
+Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
 
 ## Não encontrei meu telefone
 

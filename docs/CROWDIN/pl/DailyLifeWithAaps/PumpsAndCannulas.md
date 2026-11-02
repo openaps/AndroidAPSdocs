@@ -57,7 +57,7 @@ Gdy pompa jest odłączona, nie dostajesz insuliny, więc co dwie godziny podł�
 (pumps-cannulas-announce-insulin)=
 ## Zapisanie podanej insuliny bez podawania bolusa
 
-Aby zapisać insulinę podaną z pompy, gdy **AAPS** był odłączony, albo insulinę z pena: otwórz [okno Insulina](#aaps-screens-buttons-insulin) (**Leczenie** na dolnym pasku nawigacji albo przycisk QuickLaunch), wpisz ilość w jednostkach i włącz **Bolus zostanie jedynie odnotowany**. Wtedy pojawi się wiersz **Czas** (ustawiony na **Teraz**), w którym możesz zapisać prawdziwy czas wstrzyknięcia; jeśli wstrzyknięcie było niedawno, możesz go pominąć. Jeśli bolus podano jakiś czas temu, cofnij czas przyciskiem **-** (_np._ -30 min) albo rozwiń wiersz strzałką i wybierz dokładną datę i godzinę. **AAPS** uwzględni wtedy czas działania insuliny i odpowiednio obliczy insulinę, która nadal działa w organizmie.
+To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. Wtedy pojawi się wiersz **Czas** (ustawiony na **Teraz**), w którym możesz zapisać prawdziwy czas wstrzyknięcia; jeśli wstrzyknięcie było niedawno, możesz go pominąć. Jeśli bolus podano jakiś czas temu, cofnij czas przyciskiem **-** (_np._ -30 min) albo rozwiń wiersz strzałką i wybierz dokładną datę i godzinę. **AAPS** uwzględni wtedy czas działania insuliny i odpowiednio obliczy insulinę, która nadal działa w organizmie.
 
 Jeśli używasz **AAPS** jako opiekun, możesz bardzo łatwo zdalnie odłączyć (i podłączyć) pompę [poleceniem SMS](../RemoteFeatures/SMSCommands.md), np. "pump disconnect 120" i "pump connect 120". Czas zdalnego odłączenia można ustawić od 1 do 120 min (w tym przykładzie 120 minut). Jest to bardzo przydatne, gdy trudno Ci sięgnąć po telefon z **AAPS**, bo jest schowany w pasie na pompę u dziecka, które biegnie na basen, albo pilnie strzeże go (lub używa) nastolatek.
 
@@ -92,7 +92,7 @@ Wybór strategii jest bardzo indywidualny. Najlepiej ustalić go metodą prób i
 
 ![Okno Profil ciała do rotacji miejsc wkłucia](../images/SiteRotation/Type.png)
 
-*Uwaga: to ustawienie decyduje, czy okno zmiany miejsca (tryb edycji) otworzy się automatycznie, gdy nowy wpis powstanie z przycisku „Napełnij/Wypełnij” lub „Założenie sensora”*
+*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
 
 - Jeśli wymieniasz wkłucie bezpośrednio na pompie, musisz otworzyć tryb podglądu i edytować nowy wpis, aby wybrać lokalizację i strzałkę
 
@@ -100,7 +100,7 @@ Tryb edycji pozwala wybrać lokalizację, strzałkę i notatkę dla wybranego wp
 
 - Edytowany wpis jest pokazany pod obrazkami ciała, z ikoną swojego typu (kaniula lub sensor)
 - Widok z przodu i z tyłu są pokazane obok siebie: dotknij obszaru, w którym umieszczono wkłucie
-- Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the past 45 days in this site
+- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
 
 ![Tryb edycji](../images/SiteRotation/EditMode.png)
 

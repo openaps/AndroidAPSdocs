@@ -51,9 +51,9 @@ Obecně se uznává, že lidé s _nově_ zjištěným diabetem 1. typu (kteří 
 :class: danger
 SGLT-2 inhibitory, nazývané také glifloziny, brání zpětnému vstřebávání glukózy v ledvinách. Glifloziny snižují glykémii nepředvídatelně, a proto je při používání systému uzavřené smyčky, jako je AAPS, NESMÍTE užívat! Znamenalo by to značné riziko ketoacidózy nebo hypoglykémie! Kombinace těchto léků se systémem, který snižuje bazální dávky, aby glykémii zvýšil, je obzvlášť nebezpečná. 
 
-Stručně řečeno:
-- **Příklad 1: riziko hypoglykémie**
->Při obědě si v **AAPS** pošlete bolus na 45 g glukózy, které sníte. Problém je v tom, že inhibitory způsobí, že tělo část sacharidů vyloučí, a AAPS o tom neví. V těle je pak příliš mnoho inzulínu ve srovnání se vstřebanými sacharidy a dojde k hypoglykémii.
+In a nutshell:
+- **Example 1: risk of Hypo**
+>During lunch, you use **AAPS** to bolus based on consuming 45 g of carbs. Problém je v tom, že inhibitory způsobí, že tělo část sacharidů vyloučí, a AAPS o tom neví. V těle je pak příliš mnoho inzulínu ve srovnání se vstřebanými sacharidy a dojde k hypoglykémii.
 
 - **Příklad 2: riziko ketoacidózy**
 >Inhibitory na pozadí vylučují část sacharidů, a tím snižují vaši glykémii. **AAPS** automaticky řekne pumpě, aby podávala méně inzulínu, včetně bazálu. Postupem času může vaše glykémie zůstávat pod cílovou hodnotou tak dlouho, až tělo nemá dost bazálního inzulínu na zpracování sacharidů, a dojde ke ketoacidóze. Ketoacidóza u lidí s diabetem 1. typu obvykle vzniká kvůli poruše pumpy. To by spustilo upozornění v telefonu a bylo by to vidět na vysoké glykémii. U gliflozinů je ale nebezpečné to, že AAPS žádné upozornění nezobrazí, protože pumpa dál funguje a glykémie může zůstat v cílovém rozmezí.
@@ -80,7 +80,7 @@ V počátečních fázích zahájení provozu **AAPS** může docházet k potí�
 
 #### Čas potřebný k sestavení aplikace a postup k plné smyčce
 
-Čas potřebný na sestavení aplikace **AAPS** závisí na vašich znalostech a technických schopnostech. Nezkušenému uživateli může sestavení **AAPS** trvat (s pomocí komunity) půl dne až celý den. Jak budete v průběhu času získávat více zkušeností, postup sestavení nových verzí **AAPS** se výrazně urychlí.
+The time to build the **AAPS** app depends on your level of expertise and technical ability. Nezkušenému uživateli může sestavení **AAPS** trvat (s pomocí komunity) půl dne až celý den. Jak budete v průběhu času získávat více zkušeností, postup sestavení nových verzí **AAPS** se výrazně urychlí.
 
 Se sestavením vám pomohou tyto části dokumentace:
 

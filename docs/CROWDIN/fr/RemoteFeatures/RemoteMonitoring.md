@@ -8,7 +8,7 @@ __AAPS__ offre plusieurs fonctions pour la surveillance à distance des enfants 
 
 - La pompe de l'enfant est contrôlée par le téléphone de l'enfant avec __AAPS__.
 - Les aidants peuvent suivre à distance toutes les données utiles, comme la glycémie, les glucides actifs, l'insuline active, etc., avec l'**apk AAPSClient** sur leur téléphone Android (une version iPhone d'**AAPSClient** est en développement, voir [AAPSClient](AapsClient.md)). Les paramètres modifiés dans __AAPS__ se synchronisent avec __AAPSClient__ et inversement.
-- Les aidants peuvent recevoir des alarmes avec l'**application xDrip en mode suiveur** sur leur téléphone Android, si le mode compagnon de xDrip est configuré.
+- Caregivers can be alarmed by using **xDrip app in follower mode** on their Android phone if xDrip companion mode is set up.
 - Le contrôle à distance d'__AAPS__ par [Commandes SMS](../RemoteFeatures/SMSCommands.md) est sécurisé par une authentification à deux facteurs.
 - Le contrôle à distance par __AAPSClient__ utilise le canal de commandes signées introduit dans **AAPS** 4 : le client doit d'abord être **associé** au maître (avec un QR code ou un code PIN), et chaque commande est confirmée et exécutée par le maître. Chaque téléphone d'aidant peut avoir son propre [rôle](#client-master-control-roles), de la lecture seule au contrôle complet – voir [Contrôle maître ↔ client](#client-master-control).
 

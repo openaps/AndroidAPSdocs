@@ -136,7 +136,7 @@ Pokud zadáte špatné heslo, **AAPS** se okamžitě ukončí – ale dál pobě
 
 - Bezpečnostní limity jsou nastaveny na základě věku, který jste zvolili v tomto nastavení.
 - Pokud začnete narážet na pevně nastavené limity (jako například na maximální bolus), je čas posunout se o stupeň výš.
-- Vybrat vyšší než skutečný věk je špatný nápad, protože to může vést k předávkování při zadání chybné hodnoty v dialogu inzulínu (například když vynecháte desetinnou čárku).
+- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
 - Chcete-li znát přesné hodnoty těchto pevně nastavených bezpečnostních limitů, najděte funkci algoritmu, kterou používáte, [na této stránce](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 (Preferences-maximum-bolus)=
@@ -275,7 +275,7 @@ Podle nastavení v [Konfigurace > APS](../SettingUpAaps/ConfigBuilder.md) si mů
 - [Vylepšený asistent pro jídlo (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - stav algoritmu v roce 2017
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - nejnovější algoritmus, doporučený pro začátečníky
 
-Od [**AAPS** verze 3.3](#version3300) je funkce [Dynamická ISF](../DailyLifeWithAaps/DynamicISF.md) přesunuta do OpenAPS SMB.
+As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -489,7 +489,7 @@ When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays
 
 Můžete pomoci s dalším vývojem **AAPS** tím, že budete vývojářům posílat hlášení o pádech.
 
-**Bezobslužný export nastavení**<br/> Zapnutím této funkce dovolíte **AAPS** provádět export nastavení bez zásahu uživatele. K tomu se při příštím ručním exportu hlavní heslo bezpečně uloží ve vašem telefonu (a jen tam). Uložené heslo se bude používat nejvýše 4 týdny. Po 4 týdnech dostanete upozornění, že platnost hesla brzy skončí. Během 1týdenní lhůty pak můžete heslo obnovit tím, že ručně exportujete nastavení z nabídky Údržba.
+**Bezobslužný export nastavení**<br/> Zapnutím této funkce dovolíte **AAPS** provádět export nastavení bez zásahu uživatele. For this the master password is securely stored on your phone (only) at the next manual export. Uložené heslo se bude používat nejvýše 4 týdny. Po 4 týdnech dostanete upozornění, že platnost hesla brzy skončí. Během 1týdenní lhůty pak můžete heslo obnovit tím, že ručně exportujete nastavení z nabídky Údržba.
 
 Po uplynutí 1týdenní lhůty platnost uloženého hesla skončí a každý automatický export nastavení se přeruší a upozorní uživatele, aby znovu zadal heslo. [(**Automatické exporty nastavení**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) se zaznamenají do seznamů **AAPS** „Péče“ a „Uživatelský záznam“ v Ošetřeních.
 

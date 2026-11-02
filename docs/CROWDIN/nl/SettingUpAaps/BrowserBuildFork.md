@@ -6,7 +6,7 @@
 Dit is **Stap 1** van [Bouwen in de browser](BrowserBuild.md).
 ```
 
-Je moet je persoonlijke Android Java-sleutel en je Google Drive-gegevens geheim opslaan in GitHub (verderop leggen we uit hoe).
+You will need to store your personal Android Java Key and Google Drive information as secrets in GitHub (later in the process, we will explain how).
 
 Dat kan niet in de openbare repository van AndroidAPS. Daarom moet je een persoonlijke kopie van de broncode maken (een fork).
 
@@ -29,16 +29,16 @@ Scrol op het volgende scherm omlaag en tik op **Create Fork**.
 
 ![fork_aaps_confirm](../images/Building-the-App/CI/ForkAAPS2.png)
 
-*Let op: je kunt het vinkje bij "Copy the master branch only" **weghalen** als je ontwikkelversies of aangepaste versies wilt bouwen.*
+*Note: you can **unselect** "Copy the master branch only" if you will want to build developer versions or customizations.*
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
 ```{note}
-Kun je niet forken en zie je dit?</br></br>
-**`No available destinations to fork this repository.`**</br></br>
-![Already forked](../images/Building-the-App/CI/ForkAAPS3b.png)</br></br>
-Dan heb je al een fork van AndroidAPS.</br>
-Zorg dat die bijgewerkt is en ga verder met de voorbereidende stappen.
+You cannot fork and you see this?<br/><br/>
+**`No available destinations to fork this repository.`**<br/><br/>
+![Already forked](../images/Building-the-App/CI/ForkAAPS3b.png)<br/><br/>
+This means you already have an existing fork of AndroidAPS.<br/>
+Make sure it's up to date and continue to Preparation Steps.
 ```
 
 ```{warning}

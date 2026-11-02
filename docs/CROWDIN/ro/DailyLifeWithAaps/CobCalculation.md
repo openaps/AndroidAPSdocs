@@ -12,13 +12,13 @@ The formula adopted by **AAPS** is:
 
 The effect on the user’s **Profile** will:
 
-- _increase_ **IC**- by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
+- _increase_ **IC** - by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
 
 - _increase_ **ISF** - by decreasing the carbs absorbed every 5 minutes thus prolong total time of absorption; and
 
-- _change_ **Profile Percentage** -  increase/decrease both values thus has no impact on carbs absorption time.
+- _change_ **Profile Percentage** - increase/decrease both values thus has no impact on carbs absorption time.
 
-For example, if the user’s  **Profile**  **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. For every 20 mg/dL the user’s **BG** goes up, 1 g of carbs will be calculated as absorbed by **AAPS**. Positive **IOB** also affects the **COB** calculation. So, if **AAPS** predicts the user’s **BG** to go down by 20 mg/dL because of **IOB** and it instead stayed flat, **AAPS** would also calculate 1 g of carbs as absorbed.
+For example, if the user’s **Profile** **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. For every 20 mg/dL the user’s **BG** goes up, 1 g of carbs will be calculated as absorbed by **AAPS**. Positive **IOB** also affects the **COB** calculation. So, if **AAPS** predicts the user’s **BG** to go down by 20 mg/dL because of **IOB** and it instead stayed flat, **AAPS** would also calculate 1 g of carbs as absorbed.
 
 Carbs will also be absorbed via the methods described below based on which sensitivity algorithm has been selected within the user's **AAPS**.
 
@@ -47,7 +47,7 @@ If minimal carbs absorption (min_5m_carbimpact) is used instead of value calcula
 (CobCalculation-detection-of-wrong-cob-values)=
 ## Detectarea unor valori COB greșite
 
-**AAPS**  will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
+**AAPS** will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
 
 ### How does AAPS detect wrong COB values?
 
@@ -62,7 +62,7 @@ In the screenshot above, 66% of time the carb absorption was calculated by the m
 - Consider cancelling the treatment - press ‘Cancel’ instead of OK.
 - Calculate your upcoming meal again with bolus wizard leaving **COB** unticked.
 - If you need a correction bolus, enter it manually.
-- Be careful not to overdose or insulin stacking!
+- Be careful not to overdose or stack insulin!
 
 
 ### De ce algoritmul nu detectează corect COB?

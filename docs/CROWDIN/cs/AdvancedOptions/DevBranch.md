@@ -6,7 +6,7 @@ Vývojová větev (dev) slouží pouze k dalšímu vývoji AAPS. Měla by se pou
 
 Nejstabilnější verze AAPS k používání je ta ve [větvi Master](https://github.com/nightscout/AndroidAPS/tree/master). Pro skutečné používání smyčky se doporučuje zůstat u větve Master.
 
-Vývojová verze AAPS je pouze pro vývojáře a testery, kteří si poradí s výpisy zásobníku (stacktrace), procházením log souborů a případně spuštěním debuggeru, aby vytvořili hlášení o chybách užitečná pro vývojáře (zkrátka: pro lidi, kteří vědí, co dělají, a nepotřebují pomoc!). Proto je mnoho nedokončených funkcí vypnutých. K zapnutí těchto funkcí přejděte do **inženýrského režimu** vytvořením souboru s názvem `engineering_mode` v adresáři /AAPS/extra . Zapnutí inženýrského režimu může smyčku úplně rozbít.
+Vývojová verze AAPS je pouze pro vývojáře a testery, kteří si poradí s výpisy zásobníku (stacktrace), procházením log souborů a případně spuštěním debuggeru, aby vytvořili hlášení o chybách užitečná pro vývojáře (zkrátka: pro lidi, kteří vědí, co dělají, a nepotřebují pomoc!). Proto je mnoho nedokončených funkcí vypnutých. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in the directory /AAPS/extra. Zapnutí inženýrského režimu může smyčku úplně rozbít.
 
 Vývojová větev je však dobré místo, kde můžete vidět, jaké funkce se testují, pomoci odstranit chyby a dát zpětnou vazbu, jak nové funkce fungují v praxi. Lidé často testují vývojovou větev na starém telefonu a pumpě, dokud si nejsou jistí, že je stabilní – jakékoli použití je na vaše vlastní riziko. Při testování nových funkcí pamatujte, že se sami rozhodujete testovat funkci, která je stále ve vývoji. Dělejte to na vlastní riziko a s náležitou pečlivostí, abyste zůstali v bezpečí.
 

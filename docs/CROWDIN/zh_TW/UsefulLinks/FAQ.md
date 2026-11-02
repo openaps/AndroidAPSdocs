@@ -176,7 +176,7 @@ AAPS 用來控制你的幫浦並提供胰島素。根據歐洲現行法規，所
     
     進行循環時，你應該嘗試以下步驟：
     
-    * 將[設定檔切換](#ProfileSwitch-change-percentage)設為低於 100%：在主畫面點選設定檔名稱，再點選圓形的 **▶** 按鈕，然後設定**百分比**和**持續時間**。
+    * 若要將個人設定檔切換設為低於 100%，請在主畫面點選個人設定檔名稱，再點選圓形的 **▶** 按鈕，然後設定 **百分比** 和 **持續時間**。
     * 設置一個[活動臨時目標](#TempTargets-activity-temp-target)高於你的標準目標。若百分比低於 100%，且設定了持續時間，同一個**啟動**畫面會顯示**臨時目標／活動**切換選項，可同時啟動兩者。
     * 如果你正在使用 SMB，請確保[“啟用高臨時目標的 SMB”](#Open-APS-features-enable-smb-with-high-temp-targets)和[“始終啟用 SMB”](#Open-APS-features-enable-smb-always)已停用。
     
@@ -195,7 +195,7 @@ AAPS 用來控制你的幫浦並提供胰島素。根據歐洲現行法規，所
     在閉環模式下飲酒是有風險的，因為演算法無法正確預測受酒精影響的血糖。你需要檢查自己的方法，並使用 AAPS 中的以下功能來進行處理：
     
     * 停用閉環模式，並手動處理糖尿病或
-    * 設置高臨時目標並停用 UAM 以避免由於未注意到的餐食而增加 IOB 或
+    * 設定較高的臨時目標並停用 UAM，避免循環因未告知的餐點而增加活性胰島素，或
     * 將[設定檔切換](#ProfileSwitch-change-percentage)設為明顯低於 100%。 
     
     *飲酒*的[場景](#scenes)範本可作為起點，您可以依照自己的方式調整。
@@ -364,9 +364,9 @@ AAPS 用來控制你的幫浦並提供胰島素。根據歐洲現行法規，所
     
     #### 我的 Link/幫浦/Pod 沒有反應（RL/OL/EmaLink...）
     
-    某些手機與連線設備（RL/OL/EmaL…）之間會出現藍牙斷線的情況。
+    部分手機會與 Links（RL/OL/EmaLink）中斷藍牙連線。
     
-    有些連線設備無法回應（AAPS 顯示已連線，但連線設備無法到達或指令幫浦）。
+    有些手機上的 Links 也會沒有回應（AAPS 顯示已連線，但 Links 無法連接幫浦或下達指令）。
     
     請先嘗試在幫浦畫面點選**重設 RileyLink** 按鈕（請參閱幫浦的說明頁面：[Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)、[Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)）。如果沒有幫助，讓這些裝置重新正常運作的最簡單方法如下：
     
@@ -420,5 +420,5 @@ AAPS 用來控制你的幫浦並提供胰島素。根據歐洲現行法規，所
     
     請先閱讀以下章節：
     
-    * [匯出與匯入設定](#omnipod-dash-export-import)（位於 Omnipod DASH 頁面），以及[無導管幫浦](#ExportImportSettings-tubeless-pumps)：在新手機上，勾選 **同時取代幫浦設定**，並使用目前佩戴的 Pod 使用期間匯出的檔案，
+    * 在 Omnipod DASH 頁面[匯出和匯入設定](#omnipod-dash-export-import)，以及在[無管路幫浦](#ExportImportSettings-tubeless-pumps)頁面：在新手機上勾選 **同時取代幫浦設定**，並使用佩戴目前 Pod 時匯出的檔案，
     * 之後請參閱[棄置 Pod](#omnipod-dash-discard-pod)，從舊手機移除 Pod。在棄置 Pod 之前，請讓舊手機保持飛航模式，避免兩支手機同時與 Pod 通訊。

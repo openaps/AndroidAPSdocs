@@ -70,7 +70,7 @@
     
         1. 翻译已校对
     
-        1. Crowdin 和 Github 之间的同步运行完成（每小时一次），这会为 Github 创建一个 PR。
+        1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
     
         1. 该GitHub上的PR（拉取请求）已获批准。
     
@@ -81,11 +81,11 @@
     ```{admonition} 链接不再进行翻译
     :class: note
     
-    链接不再进行翻译。过去我们曾在此处有相关说明，但迁移至Markdown格式和使用myst_parser解析器后，我们直接在英文文本中创建标签，并通过后台机制将这些标签传播至各语言版本。
+    链接不再进行翻译。 In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
     
     
 
-您正在翻译的是链接的显示文本。请务必注意**不要**删除由`<0></0>`标签对表示的链接，若同一段落中存在多个链接，其他数字标签也需保留。
+您正在翻译的是链接的显示文本。 Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
 
 校对人员需对此进行专项检查！
 

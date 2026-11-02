@@ -107,8 +107,8 @@
   - [Ενημερώστε το secret `GDRIVE_OAUTH2`](#aaps-ci-update-secret) στο αποθετήριό σας στο GitHub με το νέο token και μετά [τρέξτε ξανά το build](#aaps-ci-rerun).
 
 (aaps-ci-disable-software)=
-### Απενεργοποιήστε λογισμικό που μπορεί να εμποδίζει την επαλήθευση OAUTH
-  - Απενεργοποιήστε κάθε VPN ή εφαρμογή ασφαλείας (τείχος προστασίας, antimalware,...) στο τηλέφωνο πριν προσπαθήσετε να πάρετε το κλειδί OAUTH.
+### Disable Software That May Interfere With OAuth Verification
+  - Disable any VPN or security app (firewall, antimalware,...) on the phone before trying to get the OAuth key.
 
 (aaps-ci-actions-permission)=
 ### Ελέγξτε τις ρυθμίσεις αδειών του GitHub Actions

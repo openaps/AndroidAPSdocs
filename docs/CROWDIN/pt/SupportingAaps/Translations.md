@@ -72,7 +72,7 @@ A aprovação é um passo manual. Como organização sem fins lucrativos, não o
     
         1. a tradução ser revista
     
-        1. a sincronização entre o Crowdin e o GitHub terminar (uma vez por hora), o que cria um PR no GitHub.
+        1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
     
         1. o PR no GitHub ser aprovado.
     
@@ -83,11 +83,11 @@ A aprovação é um passo manual. Como organização sem fins lucrativos, não o
     ```{admonition} As ligações já não são traduzidas
     :class: note
     
-    As ligações já não são traduzidas. Antes havia aqui um tópico sobre isto, mas deixou de ser necessário: com a migração para Markdown e o myst_parser, criamos etiquetas explícitas no texto inglês e estas etiquetas passam automaticamente para as outras línguas.
+    As ligações já não são traduzidas. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
     
     
 
-Está a traduzir o texto que representa a ligação. Tenha cuidado para **não** remover a ligação, que é representada por um par de etiquetas `<0></0>` (ou, se houver várias no mesmo parágrafo, por outros números).
+Está a traduzir o texto que representa a ligação. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
 
 Os revisores devem prestar especial atenção a isto!
 

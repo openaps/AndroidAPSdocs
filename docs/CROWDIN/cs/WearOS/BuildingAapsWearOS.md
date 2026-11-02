@@ -78,7 +78,7 @@ Další krok: nainstalujte Wear apk do hodinek, viz [Nastavení AAPS na hodinká
 
 Při sestavování plné aplikace **AAPS** (a vlastně každé podepsané aplikace) vytvoří Android Studio ve stejné složce soubor .json. To pak při pokusu sestavit další podepsanou aplikaci, například aplikaci **AAPS** pro hodinky, způsobí chybu [uncommitted changes](#troubleshooting_androidstudio-uncommitted-changes). Nejrychlejší způsob, jak to vyřešit, je přejít do složky, kde byla sestavena plná aplikace AAPS. Vaše složka je pravděpodobně na adrese:
 
-`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\aapsclient\release.`
+`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\full\release.`
 
 Buď odstraňte nebo přesuňte nepotřebný .json soubor z této složky. Potom zkuste znovu vytvořit **AAPS** wear aplikaci. Pokud to nepomůže, podrobnější [návod na řešení problémů](../GettingHelp/TroubleshootingAndroidStudio.md) vám pomůže najít konkrétní soubor, který problém způsobuje; může to být i váš soubor úložiště klíčů.
 

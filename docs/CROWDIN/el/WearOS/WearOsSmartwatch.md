@@ -91,7 +91,7 @@
 
 ```{admonition} Wear OS 5
 :class: warning
-Στο Wear OS 5 το watchface του AAPS πρέπει να επιλεγεί με το Wear Installer 2 αμέσως μετά την εγκατάσταση της εφαρμογής Wear: στο τέλος της εγκατάστασης το πρόγραμμα εγκατάστασης προτείνει το watchface **AAPS(Προσαρμοσμένο)**. Αν κατά λάθος αλλάξετε σε άλλο watchface, επαναλάβετε την εγκατάσταση. Η αλλαγή των ρυθμίσεων του watchface (Σκούρο, Watchdivider κ.λπ.) μπορεί να μην είναι δυνατή.
+Στο Wear OS 5 το watchface του AAPS πρέπει να επιλεγεί με το Wear Installer 2 αμέσως μετά την εγκατάσταση της εφαρμογής Wear: στο τέλος της εγκατάστασης το πρόγραμμα εγκατάστασης προτείνει το watchface **AAPS(Προσαρμοσμένο)**. Αν κατά λάθος αλλάξετε σε άλλο watchface, επαναλάβετε την εγκατάσταση. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
 
 Αν το κλασικό watchface λειτουργεί τώρα για εσάς, **απενεργοποιήστε τις αυτόματες ενημερώσεις του ρολογιού**: η επόμενη ενημέρωση υλικολογισμικού πιθανότατα θα το χαλάσει. Αν παρόλα αυτά ενημερώσετε σε Wear OS 6, διαβάστε την παραπάνω ενότητα: τότε το **AAPS** εγκαθιστά το δικό του watchface στη νέα μορφή.
 ```
@@ -114,13 +114,13 @@ _Αυτός ο οδηγός γράφτηκε για Galaxy Watch με Wear OS 3.
 
 ## Βασική εξοικείωση με το έξυπνο ρολόι
 
-Μετά τη βασική ρύθμιση του ρολογιού σας σύμφωνα με το παραπάνω βίντεο, ανοίξτε το Play Store στο τηλέφωνο και κατεβάστε τις εξής εφαρμογές: «Galaxy Wearable», «Samsung» και είτε «Easy Fire tools» είτε «Wear Installer 2».
+After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
 
 Υπάρχουν πολλά βίντεο τρίτων στο YouTube που θα σας βοηθήσουν να εξοικειωθείτε με το νέο σας έξυπνο ρολόι, για παράδειγμα:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-Η εφαρμογή «Galaxy Wearable» έχει επίσης μια ενότητα με εγχειρίδιο οδηγιών. Ανοίξτε το Galaxy Wearable στο τηλέφωνο, αναζητήστε το ρολόι και προσπαθήστε να κάνετε σύζευξη του ρολογιού με το τηλέφωνο. Ανάλογα με την έκδοσή σας, μπορεί να σας ζητηθεί να εγκαταστήσετε και μια τρίτη εφαρμογή, το «galaxy watch 4 plugin», από το Play Store (η λήψη διαρκεί λίγη ώρα). Εγκαταστήστε το στο τηλέφωνο και μετά προσπαθήστε ξανά να κάνετε σύζευξη ρολογιού και τηλεφώνου στην εφαρμογή Wearable. Περάστε από μια σειρά μενού και επιλέξτε διάφορες προτιμήσεις.
+Η εφαρμογή «Galaxy Wearable» έχει επίσης μια ενότητα με εγχειρίδιο οδηγιών. Ανοίξτε το Galaxy Wearable στο τηλέφωνο, αναζητήστε το ρολόι και προσπαθήστε να κάνετε σύζευξη του ρολογιού με το τηλέφωνο. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Εγκαταστήστε το στο τηλέφωνο και μετά προσπαθήστε ξανά να κάνετε σύζευξη ρολογιού και τηλεφώνου στην εφαρμογή Wearable. Περάστε από μια σειρά μενού και επιλέξτε διάφορες προτιμήσεις.
 
 ## Δημιουργία λογαριασμού Samsung
 
@@ -260,7 +260,7 @@ _Αυτός ο οδηγός γράφτηκε για Galaxy Watch με Wear OS 3.
 
 Για να κάνετε bolus ή άλλες ενέργειες από το ρολόι, ενεργοποιήστε επίσης το **Έλεγχος από ρολόι** στις [Ρυθμίσεις > Wear](#preferences-wear).
 
-Για να αλλάξετε σε άλλο watchface του **AAPS**, πατήστε στην αρχική οθόνη του ρολογιού και θα εμφανιστεί η επιλογή «customise» (προσαρμογή). Μετά σύρετε προς τα δεξιά μέχρι να φτάσετε σε όλα τα watchface του **AAPS**.
+To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Μετά σύρετε προς τα δεξιά μέχρι να φτάσετε σε όλα τα watchface του **AAPS**.
 
 Αν το **AAPS** Wear.apk έχει εγκατασταθεί σωστά στο έξυπνο ρολόι, θα μοιάζει έτσι:
 
@@ -334,7 +334,7 @@ F - μπαταρία τηλεφώνου
 
 G - βασικός ρυθμός (εμφανίζεται σε U/h με τον κανονικό ρυθμό και σε % κατά τη διάρκεια του TBR)
 
-H - BGI (blood glucose interaction, επίδραση στη γλυκόζη αίματος) -> πόσο «θα έπρεπε» να ανεβαίνει ή να πέφτει η γλυκόζη αίματος (BG) μόνο με βάση τη δράση της ινσουλίνης.
+H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
 I - υδατάνθρακες (ενεργοί υδατάνθρακες | e-carbs στο μέλλον)
 

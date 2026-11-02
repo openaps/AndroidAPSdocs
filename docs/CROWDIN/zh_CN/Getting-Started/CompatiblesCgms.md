@@ -66,14 +66,14 @@
 
 可信数据源支持**SMB**全天候输注。
 
-| 传感器              |                                                       CGM 应用                                                        |
-| ---------------- |:-------------------------------------------------------------------------------------------------------------------:|
-| Dexcom G6        |                                          BYODA, xDrip (**Direct, Native**)                                          |
-| 德康 G7            |                BYODA, xDrip (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip)                 |
-| Dexcom ONE+      |                    xDrip (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip)                    |
-| Dexcom ONE/Stelo |                                             xDrip (**Direct, Native**)                                              |
-| Libre 2/2+ (EU)  | xDrip (OOP2 **no calibration**), </br>Juggluco (**xDrip broadcast** without xDrip, or **Patched Libre** with xDrip) |
-| Libre 2/2+/3/3+  |                    Juggluco (**xDrip broadcast** without xDrip, or **Patched Libre** with xDrip)                    |
-| Syai             |                                                      Syai App                                                       |
+| 传感器              |                                                          CGM 应用                                                           |
+| ---------------- |:-------------------------------------------------------------------------------------------------------------------------:|
+| Dexcom G6        |                                             BYODA, xDrip (**Direct, Native**)                                             |
+| 德康 G7            |                BYODA, xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip)                 |
+| Dexcom ONE+      |                    xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip)                    |
+| Dexcom ONE/Stelo |                                                xDrip (**Direct, Native**)                                                 |
+| Libre 2/2+ (EU)  | xDrip (OOP2 **no calibration**), <br/>Juggluco (**xDrip broadcast** without xDrip, or **Patched Libre** with xDrip) |
+| Libre 2/2+/3/3+  |                       Juggluco (**xDrip broadcast** without xDrip, or **Patched Libre** with xDrip)                       |
+| Syai             |                                                         Syai App                                                          |
 
 **Note: xDrip Companion apps and Follower modes (includes 640G/Eversense) are not trusted data sources.**

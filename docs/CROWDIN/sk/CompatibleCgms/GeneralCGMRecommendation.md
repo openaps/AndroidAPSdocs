@@ -9,7 +9,7 @@ Bez ohľadu na to, aký systém CGM používate, ak budete kalibrovať pomocou k
 -   Nekalibrujte, keď glykémia stúpa alebo klesá.
 -   Robte „dostatok“ kalibrácií – oficiálne aplikácie vás vyzvú na kontrolu raz alebo dvakrát denne. DIY systémy vás vyzvať nemusia a mali by ste byť opatrní, ak pokračujete bez kalibrácií.
 -   Pri senzoroch, ktoré kalibráciu nevyžadujú alebo ju nedovoľujú, si aspoň raz denne skontrolujte skutočnú glykémiu z krvi. AAPS bude len taký bezpečný, aké spoľahlivé sú hodnoty z vášho senzora.
--   Ak je to možné, kalibrujte niektorými hodnotami v nižšom rozsahu (4–5 mmol/l alebo 72–90 mg/dl) a niektorými na mierne vyššej úrovni (7–9 mmol/l alebo 126–160 mg/dl), pretože to poskytne lepší rozsah pre kalibráciu bodu a sklonu.
+-   If at all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
 
 ## Zavedenie senzora (G6)
 
@@ -38,4 +38,4 @@ Môžete skúsiť zmeniť nastavenia blokovania šumu v xDrip (Settings - Inter-
 
 ![Vek senzora v riadku Senzor v rozbalenom paneli stavu](../images/main/main_status_row_expanded.png)
 
-Vek senzora sa zobrazuje v riadku **Senzor** v paneli stavu na hlavnej obrazovke (rozbalíte ho ťuknutím na šípku). Záporný vek vznikne, ak je buď dvojitý [záznam v Starostlivosti](#aaps-screens-careportal) „Zavedenie senzora“, alebo zavedenie senzora s nesprávnym dátumom. Otvorte **História ošetrení** (ponuka ☰), vyberte kartu **Starostlivosť** a odstráňte nesprávny záznam.
+Vek senzora sa zobrazuje v riadku **Senzor** v paneli stavu na hlavnej obrazovke (rozbalíte ho ťuknutím na šípku). A negative age occurs if there is either a double "Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Otvorte **História ošetrení** (ponuka ☰), vyberte kartu **Starostlivosť** a odstráňte nesprávny záznam.

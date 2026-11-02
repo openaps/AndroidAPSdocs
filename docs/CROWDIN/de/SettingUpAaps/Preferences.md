@@ -93,7 +93,7 @@ Da ab Version 2.7 die Einstellungen verschlüsselt sind, wird ein Passwort benö
 
 **Biometrischer Schutz funktioniert unter Umständen nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus auf einigen Telefonen.**
 
-![Master-Passwort festlegen](../images/preferences/master_password_dialog.png)
+![Set master password](../images/preferences/master_password_dialog.png)
 
 (Preferences-settings-protection)=
 ### Schutz der Einstellungen
@@ -136,7 +136,7 @@ If the app is protected, you must enter the password or use the phone's biometri
 
 - Sicherheitsgrenzwerte werden auf der Grundlage des Alters festgelegt, das Du in dieser Einstellung auswählst.
 - Wenn du an diese festen Grenzen (z.B. Maximal-Bolus) kommst, ist es an der Zeit, einen Schritt weiter zu gehen.
-- Es ist keine gute Idee, ein höheres Alter als das echte Alter. Dies kann zu einer Überdosierung aufgrund von Falscheingaben (z.B. das Weglassen des Dezimalpunktes) im Bolus-Dialog führen.
+- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
 - Wenn Du die Werte für diese fest eingestellten Sicherheitsgrenzen wissen möchtest, scrolle auf [dieser Seite](../DailyLifeWithAaps/KeyAapsFeatures.md) zu der Algorithmenfunktion, die Du verwendest.
 
 (Preferences-maximum-bolus)=
@@ -275,7 +275,7 @@ Depending on your settings in [Configuration > APS](../SettingUpAaps/ConfigBuild
 - [Advanced Meal Assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - Stand des Algorithmus in 2017
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - der neueste für Anfänger empfohlene Algorithmus
 
-Ab [**AAPS** Version 3.3](#version3300) wurde [Dynamischer ISF](../DailyLifeWithAaps/DynamicISF.md) in den Abschnitt OpenAPS SMB verschoben.
+As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -321,7 +321,7 @@ Standard value for AMA is 3, for SMB it's 8.
 
 The COB graph on the main screen indicates when min_5m_carbimpact is being used by putting orange dots along the top of the COB curve.
 
-![COB-Diagramm](../images/main/cob_graph_min_5m_carbimpact.png)
+![COB graph](../images/main/cob_graph_min_5m_carbimpact.png)
 
 ### Absorption cutoff
 
@@ -402,7 +402,7 @@ The switch "**Allow client control**" is no longer in these settings: it is at t
 
 ### Verbindungseinstellungen
 
-![NSClient Verbindungseinstellungen](../images/preferences/settings_nsclient_connection.png)
+![NSClient connection settings](../images/preferences/settings_nsclient_connection.png)
 
 - Verbindungseinstellungen legen fest auf welchem Weg (z.B. WLAN oder Mobilfunknetz) eine Nightscout-Verbindung aufgebaut werden darf.
 - Beschränken den Nightscout-Upload auf WLAN-Verbindungen oder sogar auf bestimmte WLAN-SSIDs.
@@ -485,11 +485,11 @@ When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays
 
 **Datenübermittlung**
 
-![Datenübermittlung](../images/preferences/settings_data_choices.png)
+![Data choices](../images/preferences/settings_data_choices.png)
 
 Du kannst bei der Weiterentwicklung von **AAPS** unterstützen, indem Du Absturzberichte an die Entwickler sendest.
 
-**Automatischer Export der Einstellungen**<br/> Durch Aktivieren dieser Funktion lässt Du zu, dass **AAPS** Deine Einstellungen ohne manuellen Eingriff exportiert. Dazu wird das Master-Passwort beim nächsten manuellen Export sicher auf Deinem Smartphone (und nur dort) gespeichert. Das gespeicherte Passwort wird für bis zu 4 Wochen verwendet. Nach 4 Wochen erhältst Du eine Information, dass das Passwort bald ablaufen wird. Während einer einwöchigen Übergangsfrist kann das Passwort dann aktualisiert werden, indem die Einstellungen manuell über das Wartungsmenü exportiert werden.
+**Automatischer Export der Einstellungen**<br/> Durch Aktivieren dieser Funktion lässt Du zu, dass **AAPS** Deine Einstellungen ohne manuellen Eingriff exportiert. For this the master password is securely stored on your phone (only) at the next manual export. Das gespeicherte Passwort wird für bis zu 4 Wochen verwendet. Nach 4 Wochen erhältst Du eine Information, dass das Passwort bald ablaufen wird. Während einer einwöchigen Übergangsfrist kann das Passwort dann aktualisiert werden, indem die Einstellungen manuell über das Wartungsmenü exportiert werden.
 
 Nach Ablauf der einwöchigen Übergangsfrist, läuft das gespeicherte Passwort ab und alle automatisierten Exporte der Einstellungen werden gestoppt. Du wirst darüber informiert und aufgefordert das Passwort erneut einzugeben. [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) will be logged to the **AAPS** 'Careportal' and 'User entry' lists under Treatments.
 

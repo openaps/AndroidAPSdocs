@@ -7,7 +7,7 @@
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Отделното пространство в Google Drive означава, че няма опасност да запълните личния си лимит в Google Drive с **Експорт настройки**.
+- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
 - Всяка версия на **AAPS** (и на помощни приложения като xDrip, BYODA и др.) ще се съхранява на едно място, което не зависи от хардуера на компютъра ви. Ако компютърът или телефонът ви бъде откраднат, изгубен или повреден, пак ще имате достъп.
 - Еднаквата настройка с подобна структура на папките улеснява онлайн помощта между потребителите.
 - В зависимост от настройката (вижте по-долу) ще имате отделна самоличност (псевдоним) за общуване в общността, което може да защити личните ви данни. 
@@ -45,13 +45,13 @@
  Ето стъпките, показани във видеото:
 
 В този пример: 
-- Вашият съществуващ „_ежедневен_“ профил в Google е <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
+- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
 - Новият ви профил в Gmail за „_AAPS_“ ще бъде: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-### Отидете на <https://account.google.com> 
+### Go to <https://myaccount.google.com> 
 
- Ако вече сте влезли в Google, това ще ви отведе към страницата **Моят профил** (My Account) на „ежедневния“ ви профил. (1) Натиснете снимката на профила горе вдясно на страницата (в този случай просто ![](../images/Building-the-App/building_0002.png) (2) изберете „_Добавяне на друг профил_“ (add another account).
+ Ако вече сте влезли в Google, това ще ви отведе към страницата **Моят профил** (My Account) на „ежедневния“ ви профил. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
 
 ![](../images/Building-the-App/building_0005.png)
 
@@ -87,7 +87,7 @@ Gmail ще покаже името на профила. Ще бъдете пом
 
 ### Персонализирайте как се показва новият профил
 
-В този момент трябва да сте на страницата MyAccount на Gmail, където се вижда новият ви отделен имейл профил за **AAPS**. Снимката на профила по подразбиране ще бъде първата буква от името ви. Сменете я с нещо уникално, за да няма объркване… в този пример Donald.Muck.AAPS е заменил ![](../images/Building-the-App/building_0002.png) с ![](../images/Building-the-App/building_0003.png)
+В този момент трябва да сте на страницата MyAccount на Gmail, където се вижда новият ви отделен имейл профил за **AAPS**. Снимката на профила по подразбиране ще бъде първата буква от името ви. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
@@ -101,7 +101,7 @@ Gmail ще покаже името на профила. Ще бъдете пом
 2. Щракнете с десния бутон на мишката върху логото на браузъра в лентата на задачите
 3. От менюто изберете „Нов прозорец“ (New Window)... и го нагласете така, че да заема само долната половина на екрана.
 
-Отворете <https://gmail.com> във всеки от прозорците на браузъра. Уверете се, че личният ви профил е отгоре, а новият отделен профил за **AAPS** е отдолу и лесно се разпознава по снимката на профила в горния десен ъгъл. (ако е нужно, винаги можете да смените профила, като щракнете върху снимката на профила и изберете правилния.
+Отворете <https://gmail.com> във всеки от прозорците на браузъра. Уверете се, че личният ви профил е отгоре, а новият отделен профил за **AAPS** е отдолу и лесно се разпознава по снимката на профила в горния десен ъгъл. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
 
 ![](../images/Building-the-App/building_0009.png)
 

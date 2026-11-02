@@ -75,13 +75,13 @@ While setting up AAPS to work with your medtronic pump you need to set the follo
 
 - **Pompa Seri Numarası**: Pompanızın arkasında yer alır ve SN ile başlar. You should only enter the 6 numbers shown without any alphabetic characters (e.g. 123456).
 - **Pompa Tipi**: Kullandığınız pompa modeli (ör. 522). 
-- **Pompa Frekansı**: Pompanızın ilk dağıtıldığı yere bağlı olarak iki seçenek vardır. Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select): 
+- **Pompa Frekansı**: Pompanızın ilk dağıtıldığı yere bağlı olarak iki seçenek vardır. Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select: 
     - for US & Canada, frequency used is 916 MHz
     - for Worldwide, frequency used is 868 MHz
 - **Pompadaki Maks Bazal (Ü/s)**: Bunun, pompanızda ayarlanan değerle eşleşmesi gerekir (yukarıdaki pompa konfigürasyonuna bakın). Again this setting must be carefully selected as it will determine how much AAPS can deliver via your basal rate. Bu değer maksimum geçici bazal oranını etkin bir şekilde ayarlayacaktır. Örnek olarak, bu değeri maksimum standart bazal oranınızın dört katına ayarlamak %400 Geçici Bazal Oranına izin verir. Pompa tarafından izin verilen maksimum değer saatte 34,9 ünitedir.
 - **Pompadaki Maks Bolus (Ü)** (bir saat içinde): Bunun, pompanızda ayarlanan değerle eşleşmesi gerekir (yukarıdaki pompa konfigürasyonuna bakın). This setting should be carefully considered as it determines how large a bolus AAPS can ever set.
 - **Bolus göndermeden önceki bekleme süresi (sn)**: Bolus verildikten sonra, komut gerçekten pompaya gönderilmeden önce geçen saniye sayısı. Bu süre, bir bolus komutunun yanlışlıkla gönderilmesi durumunda kullanıcının bolusu iptal etmesine olanak tanır. It is not possible to cancel a bolus that has started via AAPS. Halihazırda başlamış bir bolusu iptal etmenin tek yolu, pompayı manuel olarak askıya almak ve ardından devam ettirmektir.
-- **Medtronic Kodlama**: Medtronic kodlamasının gerçekleştirilip gerçekleştirilmediğini belirler. Donanım kodlamasının seçilmesi (Rileylink uyumlu cihaz tarafından gerçekleştirilir) tercih edilir çünkü bu daha az veri gönderilmesine neden olur. Selecting Software encoding (i.e. carried out by AAPS) can help in the event frequent disconnects are seen. Rileylink cihazlarında yazılım sürümü 0.x ise bu ayar yok sayılır.
+- **Medtronic Encoding**: Determines where the Medtronic encoding is carried out (hardware or software). Donanım kodlamasının seçilmesi (Rileylink uyumlu cihaz tarafından gerçekleştirilir) tercih edilir çünkü bu daha az veri gönderilmesine neden olur. Selecting Software encoding (i.e. carried out by AAPS) can help in the event frequent disconnects are seen. Rileylink cihazlarında yazılım sürümü 0.x ise bu ayar yok sayılır.
 - **Pil Türü (Güç Görünümü)**: Kalan pil gücü seviyesini doğru bir şekilde belirlemek için kullanımda olan AAA pil tipini seçmelisiniz. When a value other than simple view is selected AAPS will display the remaining calculated battery percentage level and volts. Aşağıdaki seçenekler mevcuttur:
     
     - Seçilmedi (Basit görünüm)

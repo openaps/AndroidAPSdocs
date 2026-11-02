@@ -29,7 +29,7 @@ Accepter des données venant de Nightscout (changements de profil, traitements, 
 
 #### Ne pas synchroniser depuis Nightscout
 
-Garder toutes les options « Recevoir ... depuis NS » désactivées garantit qu'AAPS n'utilisera aucune modification venant de Nightscout :
+Keeping all the "Receive … from NS" options disabled makes sure no Nightscout change will be used by AAPS:
 
 ![Envoi vers Nightscout uniquement](../images/preferences/settings_nsclient_sync.png)
 

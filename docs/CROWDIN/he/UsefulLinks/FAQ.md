@@ -175,7 +175,7 @@ Many of the situations below can be prepared once as a [scene](#scenes): a prese
 
 בעת שימוש בלופ, נסו את הפעולות הבאות:
 
-* Make a [profile switch](#ProfileSwitch-change-percentage) < 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
+* Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
 * Set an [activity temp target](#TempTargets-activity-temp-target) above your standard target. With a percentage below 100 % and a duration, the same **Activate** screen offers a **Temporary target / Activity** switch that starts both at once.
 * If you are using SMB make sure ["Enable SMB with high temp targets"](#Open-APS-features-enable-smb-with-high-temp-targets) and ["Enable SMB always"](#Open-APS-features-enable-smb-always) are disabled.
 
@@ -194,7 +194,7 @@ The *Exercise* and *Post-exercise Night* [scene](#scenes) templates bundle these
 שתיית אלכוהול עשויה להיות מסוכנת בשימוש בלולאה סגורה כיוון שהאלגוריתם לא יכול לחזות נכונה את השפעת האלכוהול על הסוכר בדם. נסו את השיטות הבאות כדי להבין איזו מהן עדיפה לכם:
 
 * השביתו את הלופ הסגור וטפלו בסוכרת בלעדיו או
-* הגדירו ערכי מטרה גבוהים, כבו את UMA כדי למנוע מהלופ להעלות את האינסולין הפעיל עקב ארוחה או
+* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
 * do a [profile switch](#ProfileSwitch-change-percentage) to noticeably less than 100% 
 
 The *Alcohol* [scene](#scenes) template is a starting point you can adapt to your own method.
@@ -363,9 +363,9 @@ You can also change when the alert is raised: press the **Settings** (gear) icon
 
 #### My link/pump/pod is unresponsive (RL/OL/EmaLink…)
 
-בטלפונים מסוימים, יש ניתוק בלוטות' ממכשירי הקישור (RL/AOL/Email...).
+With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
 
-לחלקם יש גם קישורים שאינם מגיבים (AAPS אומר שהם מחוברים אבל מכשירי הקישור לא יכולים להגיע למשאבה או לפקד עליה)
+Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
 
 First try the **Reset RileyLink** button on the pump screen (see your pump's page: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). If this does not help, the easiest way to get all these parts working together is:
 
@@ -419,5 +419,5 @@ The Pod state is included in the exported settings, so an active Pod can be move
 
 Read these sections first:
 
-* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported during the Pod you are wearing now,
+* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
 * [Discarding a pod](#omnipod-dash-discard-pod), to remove the Pod from the old phone afterwards. Keep the old phone in airplane mode until the Pod is discarded, so that the two phones never talk to the Pod at the same time.

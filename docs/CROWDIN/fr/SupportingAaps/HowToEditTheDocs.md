@@ -2,7 +2,7 @@
 
 **Cette description est juste pour l'édition de la documentation en anglais. Toutes les nouvelles informations doivent être ajoutées d'abord en Anglais. Si vous voulez traduire la documentation dans d'autres langues (merci), utilisez [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-Pour savoir comment mettre en forme le texte (titre, gras...) et créer des liens, voir la section [« Syntaxe du code »](#code-syntax) de cette page.
+For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
 
 ## Généralités
 
@@ -34,11 +34,11 @@ Ou cliquez sur l'icône de crayon qui s'affiche dans la barre du haut du contenu
 
 3. L'une ou l'autre des options de l'étape 2 créera une nouvelle branche dans VOTRE repository Github où vos modifications seront enregistrées. Effectuez vos modifications dans le fichier.
 
-Nous utilisons markdown pour les pages de documentation. Les fichiers ont l'extension « .md ». La spécification Markdown n'est pas fixe. Pour le moment, nous utilisons myst_parser pour nos fichiers markdown. Faites attention à utiliser la bonne syntaxe, comme [décrit ci-dessous](#code-syntax).
+Nous utilisons markdown pour les pages de documentation. Les fichiers ont l'extension « .md ». La spécification Markdown n'est pas fixe. Pour le moment, nous utilisons myst_parser pour nos fichiers markdown. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
 
 ![Éditer la branche](../images/PR3.png)
 
-4. Vous avez travaillé dans l'onglet "<>Edit file". Choisissez l'onglet "Preview changes" pour avoir un regard neuf et vérifier que tout ce que vous avez modifié ressemble à ce que vous vouliez (fautes de frappe comprises). Si vous voyez que c'est perfectible, revenez à l'onglet d'édition pour faire vos améliorations. 
+4. Vous avez travaillé dans l'onglet "<>Edit file". Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Si vous voyez que c'est perfectible, revenez à l'onglet d'édition pour faire vos améliorations. 
 
 ![mode de prévisualisation](../images/PR5.png)
 
@@ -54,7 +54,7 @@ Nous utilisons markdown pour les pages de documentation. Les fichiers ont l'exte
 
 ![Suivi des PR](../images/PR7.png)
 
-PS : Votre fork et votre branche seront toujours dans votre propre compte GitHub. Après avoir reçu une notification indiquant que votre PR avait été fusionné, vous pouvez supprimer votre branche si vous en avez terminé (la zone de notification de l'étape 8 fournira un lien pour supprimer la branche une fois qu'elle a été fermée ou fusionnée). Pour les modifications ultérieures, si vous suivez cette procédure, les éditions débuteront toujours par une version mise à jour des documents AndroidAPSdocs. Si vous choisissez une autre méthode pour démarrer une PR (par ex. en partant de la branche master de votre fork comme point de départ), vous devez vérifier que votre dépôt est à jour : faites d'abord une « comparaison » (compare), puis fusionnez toutes les mises à jour faites depuis la dernière mise à jour de votre fork. Comme les gens ont tendance à oublier de mettre à jour leur fork, nous recommandons d'utiliser la procédure décrite ci-dessus pour faire vos PR jusqu'à ce que vous vous familiarisiez avec les exécutions des "comparaisons".
+PS : Votre fork et votre branche seront toujours dans votre propre compte GitHub. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Pour les modifications ultérieures, si vous suivez cette procédure, les éditions débuteront toujours par une version mise à jour des documents AndroidAPSdocs. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Comme les gens ont tendance à oublier de mettre à jour leur fork, nous recommandons d'utiliser la procédure décrite ci-dessus pour faire vos PR jusqu'à ce que vous vous familiarisiez avec les exécutions des "comparaisons".
 
 (edit-the-docs-code-syntax)=
 
@@ -69,7 +69,7 @@ L'auteur marque seulement, par exemple, un titre comme titre de niveau 1, et le 
 L'idée derrière est que
 
 - l'auteur doit d'abord penser au texte, et pas à la mise en forme,
-- le texte markdown peut être échangé entre différents outils markdown, au lieu d'utiliser par ex. des outils propriétaires comme Microsoft Windows et
+- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
 - vous pouvez générer plusieurs formats de sortie à partir d'un fichier markdown.
 
 Markdown n'est pas un standard fixé à 100 % et nous essayons de rester aussi proches que possible du standard, pour
@@ -219,9 +219,9 @@ Vous pouvez aussi ajouter des notes repliables pour les informations détaillée
     Ceci est un avertissement.
     
 
-    ```{admonition} Titre de l'avertissement
+    ```{admonition} Warning headline
     :class: warning
-    Ceci est un avertissement.
+    This is a warning.
     ```
     
     #### Notes repliables
@@ -244,7 +244,7 @@ Vous pouvez aussi ajouter des notes repliables pour les informations détaillée
 
 ## Tableaux
 
-Évitez les tableaux avec des textes longs : leur contenu est difficile à mettre en forme en Markdown, ils ne tiennent souvent pas dans la largeur d'un écran de téléphone, et ils ne s'afficheront probablement pas de la même façon après traduction.
+Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
 
 ## Guide de style
 
@@ -262,9 +262,9 @@ Vous pouvez aussi ajouter des notes repliables pour les informations détaillée
 
 Utilisez un anglais simple (plain English) quand c'est possible. Cela aide les lecteurs dont l'anglais n'est pas la langue maternelle et facilite aussi la traduction des documents AAPS dans d'autres langues. Écrivez comme si vous parliez avec l'utilisateur : imaginez que vous êtes assis en face de la personne pour qui vous écrivez. N'oubliez pas : la plupart des utilisateurs d'AAPS n'ont pas de connaissances en programmation. Le diabète lui-même a aussi beaucoup de jargon et d'abréviations. Pensez que certaines personnes ont peut-être été diagnostiquées récemment, ont peut-être moins d'expérience que vous avec le diabète, ou ont peut-être reçu une autre éducation sur le diabète. Si vous utilisez une abréviation, écrivez-la en entier la première fois, avec l'abréviation juste après entre parenthèses, comme “super micro bolus (SMB)”. Ajoutez aussi un lien vers le glossaire. Les termes techniques que le lecteur ne connaît peut-être pas peuvent aussi être expliqués entre parenthèses.
 
-Au lieu de : *“What causes high postprandial BG peaks in closed loop?"*
+Instead of: *“What causes high postprandial BG peaks in closed loop?”*
 
-Utilisez : *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
+Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
 
 ##### Utilisez des mots simples que tout le monde peut comprendre
 
@@ -296,7 +296,7 @@ En particulier si vous enregistrez une vidéo ou des captures d'écran, veillez 
 
 Les ordres sont la façon la plus rapide de donner des instructions, mais les auteurs ont parfois peur de donner des ordres et écrivent “you should do this” au lieu de simplement “do this”. Les gens ont peut-être peur que les ordres paraissent trop durs. Vous pouvez souvent résoudre ce problème en ajoutant le mot 'please' devant. Mais si quelque chose doit être fait, il vaut mieux ne pas écrire ‘please’, car cela donne au lecteur la possibilité de refuser.
 
-Au lieu de : *“You should just think of it as a complete statement."*
+Instead of: *“You should just think of it as a complete statement.”*
 
 Utilisez : *“Think of it as a complete statement.”*
 
@@ -310,7 +310,7 @@ Ici, “delivers” est un verbe à la voix active. La phrase dit d'abord qui d�
 
 Exemple de **verbe à la voix passive** :
 
-- *“The insulin (subject) is delivered (verb) by the pump (object)”*
+- *“The insulin (subject) is delivered (verb) by the pump (object).”*
 
 Ici, *“delivered”* est un verbe à la voix passive. Le sujet et l'objet sont inversés par rapport à la phrase à la voix active. Nous avons dû rendre la phrase plus longue en ajoutant “is” et “by the”. Pensez aussi à commencer par le verbe à la voix active.
 
@@ -453,7 +453,7 @@ Le but d'un guide pratique est d'aider un utilisateur déjà compétent à réal
 
 - COMMENT faire
 
-- le narrateur s'adresse directement au lecteur : In this tutorial **you** will
+- narrator directly talks to the reader: In this guide **you** will
 
 - Futur -> pour montrer le but final
 

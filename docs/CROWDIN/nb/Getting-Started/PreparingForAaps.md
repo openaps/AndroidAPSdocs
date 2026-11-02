@@ -52,8 +52,8 @@ Det er allment kjent at _nylig_ diagnostiserte med type 1-diabetes (som ofte har
 SGLT-2-hemmere, også kalt glifloziner, hemmer reopptaket av glukose i nyrene. Glifloziner senker blodsukkeret på en måte som ikke kan beregnes, og derfor MÅ du IKKE ta dem mens du bruker et lukket loop-system som AAPS! Det ville gi en betydelig risiko for ketoacidose og/eller hypoglykemi! Kombinasjonen av dette legemidlet og et system som senker basaldosene for å øke BS, er spesielt farlig. 
 
 Kort fortalt:
-- **Eksempel 1: risiko for hypo**
->Til lunsj bruker du **AAPS** til å gi en bolus basert på at du spiser 45 g glukose. Problemet er at hemmerne, uten at AAPS vet det, får kroppen til å kvitte seg med noen av karbohydratene. Da har kroppen din for mye insulin i forhold til karbohydratene som er tatt opp, og resultatet er hypoglykemi.
+- **Eksempel 1: risiko for hypoglykemi**
+>Til lunsj bruker du **AAPS** til å gi bolus for 45 g karbohydrater. Problemet er at hemmerne, uten at AAPS vet det, får kroppen til å kvitte seg med noen av karbohydratene. Da har kroppen din for mye insulin i forhold til karbohydratene som er tatt opp, og resultatet er hypoglykemi.
 
 - **Eksempel 2: risiko for ketoacidose**
 >Hemmerne fjerner noen av karbohydratene i bakgrunnen, slik at BS synker. **AAPS** vil automatisk be pumpen om å redusere insulintilførselen, også basalen. Over tid kan dette føre til at BS holder seg under målverdien, helt til kroppen ikke har nok bakgrunnsinsulin til å ta opp karbohydrater i det hele tatt, og resultatet er ketoacidose. Vanligvis utvikler ketoacidose seg hos pasienter med type 1-diabetes fordi pumpen svikter, noe som ville utløst varsler på telefonen og vært merkbart på grunn av en høy BS-verdi. Faren med glifloziner er derimot at det ikke kommer noen varsler fra AAPS, siden pumpen fortsatt fungerer og BS kanskje holder seg innenfor målet.
@@ -80,7 +80,7 @@ I den første fasen av oppstarten med **AAPS** kan du oppleve at det er vanskeli
 
 #### Tid for å bygge appen og veien til full looping
 
-Hvor lang tid det tar å bygge **AAPS**-appen, avhenger av hvor erfaren og teknisk kyndig du er. For uerfarne brukere kan det typisk ta en halv dag eller en hel dag (med hjelp fra fellesskapet) å bygge **AAPS**. Prosessen går mye raskere for nyere versjoner av **AAPS**, etter hvert som du får mer erfaring.
+Hvor lang tid det tar å bygge **AAPS**-appen, avhenger av hvor mye erfaring og tekniske ferdigheter du har. For uerfarne brukere kan det typisk ta en halv dag eller en hel dag (med hjelp fra fellesskapet) å bygge **AAPS**. Prosessen går mye raskere for nyere versjoner av **AAPS**, etter hvert som du får mer erfaring.
 
 Flere deler av denne dokumentasjonen skal hjelpe deg gjennom byggeprosessen:
 

@@ -125,7 +125,7 @@ Na przykład, jeśli najwyższa dawka bazowa w twoim profilu to 0,5 U/h, możesz
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
-### Maksymalne całkowite IOB, którego OpenAPS nie może przekroczyć
+### Max IOB for SMB
 
 Ta wartość określa maksymalną **aktywną insulinę** (IOB z bazy i bolusów), poniżej której **AAPS** pozostaje podczas pracy w trybie zamkniętej pętli. Nazywa się ją też **maxIOB**.
 
@@ -229,7 +229,7 @@ To ustawienie nie jest widoczne, jeśli włączona jest opcja „Zawsze włącz 
 
 #### Interwał SMB
 
-Ta funkcja ogranicza częstotliwość SMB. Ta wartość określa minimalny czas między SMB. Pamiętaj, że pętla działa za każdym razem, gdy przychodzi nowa wartość glukozy (zwykle co 5 minut). Odejmij 2 minuty, aby pętla miała dodatkowy czas na zakończenie. Np. jeśli chcesz, aby SMB był podawany przy każdym uruchomieniu pętli, ustaw 3 minuty.
+Ta funkcja ogranicza częstotliwość SMB. Ta wartość określa minimalny czas między SMB. Pamiętaj, że pętla działa za każdym razem, gdy przychodzi nowa wartość glukozy (zwykle co 5 minut). Subtract 2 minutes to give loop additional time to complete. Np. jeśli chcesz, aby SMB był podawany przy każdym uruchomieniu pętli, ustaw 3 minuty.
 
 Wartość domyślna: 3 min.
 
@@ -251,7 +251,7 @@ To ustawienie pozwala zmienić siłę SMB podczas UAM, gdy nie ma już węglowod
 
 Wartość domyślna: taka sama jak **Maks. minut bazy dostarczone jako SMB**.
 
-To ustawienie jest widoczne tylko wtedy, gdy włączone są opcje „Włącz SMB” i „Włącz UAM”.
+This setting is only visible if "Enable SMB" and "Enable UAM" are switched on.
 
 (enable-uam)=
 
@@ -277,7 +277,7 @@ W każdym przypadku wymagane węglowodany będą pokazane w sekcji COB na ekrani
 
 Pełny opis wszystkich parametrów (także tych, których tu nie opisano) znajdziesz w [dokumentacji OpenAPS o preferencjach i ustawieniach bezpieczeństwa](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
 
-**Zawsze używaj krótkiej średniej delty zamiast prostych danych** Jeśli włączysz tę funkcję, **AAPS** używa krótkiej średniej delty/glikemii z ostatnich 15 minut, czyli zwykle średniej z trzech ostatnich wartości. Dzięki temu **AAPS** działa stabilniej przy zaszumionych źródłach danych, takich jak xDrip i Libre.
+**Always use short average delta instead of simple delta** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. Dzięki temu **AAPS** działa stabilniej przy zaszumionych źródłach danych, takich jak xDrip i Libre.
 
 **Maks. dzienny mnożnik bezpieczeństwa** To ważny limit bezpieczeństwa. Wartość domyślna (której raczej nie trzeba zmieniać) to 3. Oznacza to, że **AAPS** nigdy nie ustawi bazy tymczasowej większej niż 3x najwyższa godzinowa dawka bazowa zaprogramowana w pompie i/lub profilu. Przykład: jeśli twoja najwyższa dawka bazowa to 1,0 U/h, a maks. dzienny mnożnik bezpieczeństwa wynosi 3, to **AAPS** może ustawić bazę tymczasową najwyżej 3,0 U/h (= 3 x 1,0 U/h).
 
@@ -308,7 +308,7 @@ Po jej wybraniu jej **Ustawienia** zawierają ustawienia OpenAPS SMB oraz grupę
   - gdy glukoza jest **powyżej celu**, ISF jest wzmacniany;
   - waga **poposiłkowa** i waga **czasu trwania** działają po posiłkach i gdy glukoza długo pozostaje wysoka.
 - **Współczynnik dostarczania SMB** (z minimum, maksimum i zakresem BG): jaka część wymaganej insuliny może zostać podana jako SMB.
-- **Rozszerzenie maks. zakresu SMB**: o jaki mnożnik można przekroczyć zwykły limit wielkości SMB ([maks. minut bazy](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), zwykle 120 minut). Wartość domyślna 1 niczego nie zmienia; możliwe jest do 5. Zwiększaj tę eksperymentalną wartość powoli i ostrożnie.
+- **SMB max range extension**: by what factor the usual SMB size limit ([max minutes of basal](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), 30 minutes by default) may be exceeded. Wartość domyślna 1 niczego nie zmienia; możliwe jest do 5. Zwiększaj tę eksperymentalną wartość powoli i ostrożnie.
 - **Procent progu IOB**: procent max IOB, powyżej którego SMB są wyłączone.
 
     {admonition} Tylko dla doświadczonych użytkowników
@@ -339,11 +339,11 @@ Parametry ustalone na stałe w **AAPS** to:
 
 *Zobacz też [przegląd ustalonych na stałe ograniczeń](#Open-APS-features-overview-of-hard-coded-limits).*
 
-### Maksymalne IOB z bazy, jakie OpenAPS może podać \[U\] (OpenAPS "max-iob")
+### Max IOB for AMA
 
-Ten parametr ogranicza maksymalne IOB z bazy, przy którym **AAPS** nadal działa. Jeśli IOB jest wyższe, AAPS przestaje podawać dodatkową insulinę bazową, aż IOB z bazy spadnie poniżej limitu.
+This parameter limits the maximum of basal IOB where **AAPS** still works. Jeśli IOB jest wyższe, AAPS przestaje podawać dodatkową insulinę bazową, aż IOB z bazy spadnie poniżej limitu.
 
-Wartość domyślna to 2, ale zwiększaj ten parametr powoli, aby zobaczyć, jak na ciebie wpływa i jaka wartość pasuje najlepiej. Jest inna dla każdego i zależy też od średniej całkowitej dawki dobowej (TDD). Dla bezpieczeństwa istnieje limit, który zależy od wieku pacjenta. 'Twarde ograniczenie' dla maxIOB jest w AMA niższe niż w SMB.
+The default value is 2, but you should raise this parameter slowly to see how much it affects you and which value fits best. It is different for everyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age. 'Twarde ograniczenie' dla maxIOB jest w AMA niższe niż w SMB.
 
 - Dziecko: 3
 - Nastolatek: 5
@@ -366,7 +366,7 @@ Jeśli ta opcja jest włączona, autosens może też dostosować cele (oprócz b
 - Zwykle nie musisz zmieniać ustawień w tym oknie!
 - Jeśli jednak chcesz je zmienić, upewnij się, że rozumiesz, co robisz — zobacz pełny opis parametrów w [dokumentacji OpenAPS o preferencjach i ustawieniach bezpieczeństwa](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
 
-**Zawsze używaj krótkiej średniej delty zamiast prostych danych** Jeśli włączysz tę funkcję, **AAPS** używa krótkiej średniej delty/glikemii z ostatnich 15 minut, czyli zwykle średniej z trzech ostatnich wartości. Dzięki temu **AAPS** działa stabilniej przy zaszumionych źródłach danych, takich jak xDrip i Libre.
+**Always use short average delta instead of simple delta** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. Dzięki temu **AAPS** działa stabilniej przy zaszumionych źródłach danych, takich jak xDrip i Libre.
 
 **Maks. dzienny mnożnik bezpieczeństwa** To ważny limit bezpieczeństwa. Wartość domyślna (której raczej nie trzeba zmieniać) to 3. Oznacza to, że **AAPS** nigdy nie ustawi bazy tymczasowej większej niż 3x najwyższa godzinowa dawka bazowa zaprogramowana w pompie. Przykład: jeśli twoja najwyższa dawka bazowa to 1,0 U/h, a maks. dzienny mnożnik bezpieczeństwa wynosi 3, to **AAPS** może ustawić bazę tymczasową najwyżej 3,0 U/h (= 3 x 1,0 U/h).
 

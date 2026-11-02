@@ -54,9 +54,9 @@ Time In Tight Range (TITR) 70-140 mg/dL or 3.9-7.8 mmol/L statistics are availab
 
 **Besprich den Zielbereich mit Deinem Diabetes-Team.**
 
-Dein Diabetes kann anders aussehen. Du solltest alle vorgeschlagenen Zielbereiche mit Deinem Endokrinologen oder Deinem Diabetes-Team besprechen. Bei richtiger Verwendung können AAPS-Statistiken ein effektives Mittel sein, um __Glukokosewert__-Trends und deren Entwicklung im Auge zu behalten.
+Dein Diabetes kann anders aussehen. Du solltest alle vorgeschlagenen Zielbereiche mit Deinem Endokrinologen oder Deinem Diabetes-Team besprechen. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress.
 
-![Statistiken](../images/Maintenance/statistics3.png)
+![Statistics](../images/Maintenance/statistics3.png)
 
 Below, the **Dexcom TIR** card shows detailed 14 days **TIR** statistics.
 
@@ -64,7 +64,7 @@ Below, the **Dexcom TIR** card shows detailed 14 days **TIR** statistics.
 
 HbA1c: die Schätzung des sich ergebenden glykierten Hämoglobins („Langzeit-Blutzucker“), basierend auf dem Durchschnitt der CGM-Messungen. Dies ist ein indikativer Wert, der möglicherweise nicht mit dem im Blut gemessenen HbA1c übereinstimmt.
 
-![Statistiken](../images/Maintenance/statistics4.png)
+![Statistics](../images/Maintenance/statistics4.png)
 
 (reviewing-statistics-agp)=
 ### Glucose tab: Ambulatory Glucose Profile (AGP)
@@ -114,10 +114,10 @@ At the end of each line, small icons show where the data comes from or has been 
 (screens-bolus-carbs)=
 ### Kohlenhydrate & Bolus
 
-![Kohlenhydrate & Bolus](../images/TreatmentsView1.png)
+![Carbs & bolus](../images/TreatmentsView1.png)
 
 Auf diesem Reiter kannst Du die Bolus- und Kohlenhydrateingaben einsehen. Each bolus (line **1**) shows the remaining associated IOB next to the insulin amount. Der Ursprung des Bolus kann entweder sein:
-* Mahlzeit (manuell über die Schaltflächen Insulin, Schnellassistent oder Bolus-Rechner eingegeben)
+* Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
 * SMB, when using the SMB Functionality
 
 The carbs entries (line **2**) are shown with their amount in grams.
@@ -141,15 +141,15 @@ The Treatments history can be used to correct faulty carb entries (_i.e._ you ov
 
 ### Temporäre Basalrate
 
-![Temporäre Basalrate](../images/TreatmentsView2.png)
+![Temp Basal](../images/TreatmentsView2.png)
 
 Die durch den Loop gesetzten **temporäre Basalraten** werden hier angezeigt. When there is still an impact on the IOB for an entry, the information is shown next to the rate (line **1**). Das können sein:
 * Positive IOB if the temp basal was higher than the one set in the Profile
 * Negative IOB for a zero-temp (as on line **1**) or if the temp basal was lower than the one set in the Profile
 
-Deleting the entries only affects your reports in Nightscout and will probably tamper your real IOB - it is not recommended.
+Deleting the entries only affects your reports in Nightscout and will probably distort your real IOB - it is not recommended.
 
-Links von einer Zeile bedeutet ein rotes S „Suspend“: Das wird angezeigt, wenn aktuell kein Basal abgegeben wird. Dies ist eine ganz normale Situation, wenn beispielsweise ein Pod gewechselt wird.
+On the left of a line, a red S means “Suspend”: it happens when basal is not currently delivered. Dies ist eine ganz normale Situation, wenn beispielsweise ein Pod gewechselt wird.
 
 ### Temporäres Ziel
 
@@ -159,7 +159,7 @@ Hier kann die Historie der temporären Ziele eingesehen werden.
 
 ### Profilwechsel
 
-![Profilwechsel](../images/TreatmentsView4.png)
+![Profile Switch](../images/TreatmentsView4.png)
 
 Die Historie der Profilwechsel ist hier zu sehen. You may see multiple entries each time you switch profile : line **1**, stored both in NS and Pump History, corresponds to the actual switch. Line **2**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user.
 
@@ -169,7 +169,7 @@ You can use the **Clone** button shown on line **2** to make a copy of a **Profi
 
 ### Careportal
 
-![Careportal (Behandlungen)](../images/TreatmentsView5.png)
+![Care portal](../images/TreatmentsView5.png)
 
 This tab shows all notes and careportal entries recorded in Nightscout.
 
@@ -178,7 +178,7 @@ This tab shows all notes and careportal entries recorded in Nightscout.
 
 ![Betriebsmodus](../images/TreatmentsView6.png)
 
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, LGS, suspend, disconnect.
+This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
 
 ### Benutzereingabe
 

@@ -4,7 +4,7 @@
 
 ## Požiadavky
 
-**AAPS** využíva funkciu Android Auto, ktorá umožňuje presmerovať správy z aplikácií v mobile na displej Android Auto v aute.
+**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
 
 To znamená, že:
 
@@ -37,7 +37,7 @@ Pred cestou k autu teraz skontrolujte, či v telefóne vidíte notifikáciu stav
 
 Keďže **AAPS** nie je oficiálna aplikácia pre Android Auto, notifikácie je potrebné v Android Auto povoliť pre „neznáme zdroje“ (unknown sources). Robí sa to pomocou režimu vývojára, ktorý vám tu ukážeme.
 
-Choďte k autu a pripojte mobil k audiosystému auta.
+Go to your car and connect your mobile with the car's audio system.
 
 Teraz by ste mali vidieť obrazovku podobnú tejto.
 

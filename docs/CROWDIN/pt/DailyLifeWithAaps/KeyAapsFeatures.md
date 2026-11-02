@@ -125,7 +125,7 @@ O **AAPS** limita este valor com um «limite rígido» conforme [Definições > 
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
-### IA total máxima que o OpenAPS não pode ultrapassar
+### Max IOB for SMB
 
 Este valor determina a **insulina ativa** (IA da basal e do bólus) máxima abaixo da qual o **AAPS** se mantém quando funciona em loop fechado. Também é conhecida como **maxIOB**.
 
@@ -229,7 +229,7 @@ Esta definição não é visível se «Ativar SMB sempre» estiver ligada.
 
 #### Intervalo de SMB
 
-Esta funcionalidade limita a frequência dos SMB. Este valor determina o tempo mínimo entre SMB. Note que o loop corre sempre que chega um valor de glicose (normalmente a cada 5 minutos). Subtraia 2 minutos para dar ao loop tempo extra para terminar. Por exemplo, se quiser que seja dado um SMB em cada execução do loop, defina 3 minutos.
+Esta funcionalidade limita a frequência dos SMB. Este valor determina o tempo mínimo entre SMB. Note que o loop corre sempre que chega um valor de glicose (normalmente a cada 5 minutos). Subtract 2 minutes to give loop additional time to complete. Por exemplo, se quiser que seja dado um SMB em cada execução do loop, defina 3 minutos.
 
 Valor predefinido: 3 min.
 
@@ -251,7 +251,7 @@ Esta definição permite ajustar a força do SMB durante a RNA, quando já não 
 
 Valor predefinido: o mesmo que **Máx. de minutos de basal para limitar SMB**.
 
-Esta definição só é visível se «Ativar SMB» e «Ativar RNA» estiverem ligadas.
+This setting is only visible if "Enable SMB" and "Enable UAM" are switched on.
 
 (enable-uam)=
 
@@ -277,7 +277,7 @@ Em qualquer caso, os hidratos de carbono necessários são mostrados na secção
 
 Para a referência completa dos parâmetros (incluindo definições não explicadas aqui), veja a [documentação do OpenAPS sobre preferências e definições de segurança](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
 
-**Usar sempre o delta médio curto** Se ativar esta funcionalidade, o **AAPS** usa o delta médio curto da glicose dos últimos 15 minutos, que normalmente é a média dos três últimos valores, em vez do delta simples. Isto ajuda o **AAPS** a ser mais estável com fontes de dados com ruído, como o xDrip e o Libre.
+**Always use short average delta instead of simple delta** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. Isto ajuda o **AAPS** a ser mais estável com fontes de dados com ruído, como o xDrip e o Libre.
 
 **Multiplicador de segurança diário máx.** Este é um limite de segurança importante. O valor predefinido (que muito provavelmente não precisa de ser alterado) é 3. Isto significa que o **AAPS** nunca pode definir uma basal temporária mais de 3x maior do que a taxa basal horária mais alta programada na bomba e/ou no perfil do utilizador. Exemplo: se a sua taxa basal mais alta for 1,0 U/h e o multiplicador de segurança diário máx. for 3, o **AAPS** pode definir uma basal temporária máxima de 3,0 U/h (= 3 x 1,0 U/h).
 
@@ -308,7 +308,7 @@ Depois de o selecionar, as suas **Definições** contêm as definições do Open
   - enquanto a glicose está **acima do alvo**, o FSI fica mais forte;
   - um peso **pós-prandial** e um peso de **duração** atuam depois das refeições e quando a glicose fica alta durante muito tempo.
 - **Rácio de administração SMB** (com um mínimo, um máximo e um intervalo de glicose): que parte da insulina necessária pode ser administrada como SMB.
-- **Extensão máx. do intervalo SMB**: por que fator o limite habitual do tamanho do SMB ([máx. de minutos de basal](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), normalmente 120 minutos) pode ser ultrapassado. O valor predefinido 1 não altera nada; é possível até 5. Aumente este valor experimental devagar e com cuidado.
+- **SMB max range extension**: by what factor the usual SMB size limit ([max minutes of basal](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), 30 minutes by default) may be exceeded. O valor predefinido 1 não altera nada; é possível até 5. Aumente este valor experimental devagar e com cuidado.
 - **Percentagem limite da IA**: a percentagem da IA máxima acima da qual os SMB são desativados.
 
     {admonition} Só para utilizadores experientes
@@ -339,11 +339,11 @@ Os parâmetros fixos no **AAPS** são:
 
 *Veja também a [visão geral dos limites fixos](#Open-APS-features-overview-of-hard-coded-limits).*
 
-### IA basal máxima que o OpenAPS pode administrar \[U\] (OpenAPS "max-iob")
+### Max IOB for AMA
 
-Este parâmetro limita a IA basal máxima com a qual o **AAPS** ainda funciona. Se a IA for mais alta, deixa de dar insulina basal adicional até a IA basal ficar abaixo do limite.
+This parameter limits the maximum of basal IOB where **AAPS** still works. Se a IA for mais alta, deixa de dar insulina basal adicional até a IA basal ficar abaixo do limite.
 
-O valor predefinido é 2, mas deve subir este parâmetro devagar para ver quanto o afeta e qual o valor mais adequado. É diferente para cada pessoa e também depende da dose diária total média (TID). Por razões de segurança, existe um limite que depende da idade do paciente. O «limite rígido» da maxIOB é mais baixo no AMA do que no SMB.
+The default value is 2, but you should raise this parameter slowly to see how much it affects you and which value fits best. It is different for everyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age. O «limite rígido» da maxIOB é mais baixo no AMA do que no SMB.
 
 - Criança: 3
 - Adolescente: 5
@@ -366,7 +366,7 @@ Se tiver esta opção ativada, o Autosens também pode ajustar os alvos (além d
 - Normalmente não precisa de alterar as definições desta janela!
 - Se mesmo assim quiser alterá-las, certifique-se de que entende o que está a fazer — veja a referência completa dos parâmetros na [documentação do OpenAPS sobre preferências e definições de segurança](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
 
-**Usar sempre o delta médio curto** Se ativar esta funcionalidade, o **AAPS** usa o delta médio curto da glicose dos últimos 15 minutos, que normalmente é a média dos três últimos valores, em vez do delta simples. Isto ajuda o **AAPS** a funcionar de forma mais estável com fontes de dados com ruído, como o xDrip e o Libre.
+**Always use short average delta instead of simple delta** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. Isto ajuda o **AAPS** a funcionar de forma mais estável com fontes de dados com ruído, como o xDrip e o Libre.
 
 **Multiplicador de segurança diário máx.** Este é um limite de segurança importante. O valor predefinido (que muito provavelmente não precisa de ser alterado) é 3. Isto significa que o **AAPS** nunca pode definir uma basal temporária mais de 3x maior do que a taxa basal horária mais alta programada na bomba do utilizador. Exemplo: se a sua taxa basal mais alta for 1,0 U/h e o multiplicador de segurança diário máx. for 3, o **AAPS** pode definir uma basal temporária máxima de 3,0 U/h (= 3 x 1,0 U/h).
 

@@ -14,7 +14,7 @@
 
 **Desventajas**
 
-* Recomendado sólo para los loopers experimentados (algunos ajustes no son reconocibles, tienes que tener la experiencia de un teléfono grande Android AAPS, cómo y dónde se encuentra cada cosa. Algunos botones de AAPS son difíciles de tocar: se puede con mucho cuidado, pero no con dedos gruesos.)
+* Recommended only for experienced loopers. Some settings are not easy to recognize: you have to know from experience with a big Android AAPS phone how and where things are located. Some AAPS buttons are small and hard to tap: you need a precise touch, not stubby fingers.
 * Sólo se puede utilizar como LooperPhone. Es mejor tener un smartphone normal en tu bolsillo. 
 
 ### Optimización de la duración de la batería
@@ -43,6 +43,6 @@ Recuerda desactivar Google Play Protect.
 
 ### Conexión remota para la apk Wear
 
-Para algunos relojes inteligentes, como el Samsung Galaxy, la opción «Remote Connection» (Conexión remota) en las funciones avanzadas del Samsung Galaxy debe estar **activada** para usar el Jelly, **Wear.apk** y **AAPS** de forma remota por Wi-Fi.
+For certain smart watches, like the Samsung Galaxy, 'Remote connection' under Advanced features in the Galaxy Wearable app must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
 
 ![Galaxy Wearable, Funciones avanzadas, Conexión remota activada](../images/wearos/galaxy_wearable_remote_connection.png)

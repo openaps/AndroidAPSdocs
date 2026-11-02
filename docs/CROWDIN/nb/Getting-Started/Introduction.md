@@ -42,7 +42,7 @@ Flere kommersielle hybrid lukket loop-systemer er også lansert. Disse er svært
 
 **Figur 1**. Enkel oversikt over Android APS (Artificial Pancreas System), AAPS.
 
-Android APS (**AAPS**) er et hybrid lukket loop-system, eller Artificial Pancreas System (APS). Beregningene av insulindoser gjøres med etablerte [OpenAPS](https://openaps.org/)-algoritmer (et sett med regler) utviklet av T1D-miljøet #WeAreNotWaiting.
+Android APS (**AAPS**) er et hybrid lukket loop-system, også kalt et kunstig bukspyttkjertel-system (Artificial Pancreas System, APS). Beregningene av insulindoser gjøres med etablerte [OpenAPS](https://openaps.org/)-algoritmer (et sett med regler) utviklet av T1D-miljøet #WeAreNotWaiting.
 
 Siden OpenAPS bare virker med visse eldre insulinpumper, ble **AAPS** (som kan brukes med et bredere utvalg av insulinpumper) først utviklet i 2016 for et familiemedlem med type 1-diabetes. Siden den første tiden har **AAPS** blitt utviklet og forbedret kontinuerlig av et team av frivillige utviklere og andre entusiaster med tilknytning til type 1-diabetes. I dag brukes **AAPS** av mange tusen mennesker over hele verden. Det er et svært tilpassbart og allsidig system, og fordi det har åpen kildekode, virker det også lett sammen med mye annen diabetesprogramvare og andre plattformer med åpen kildekode. De grunnleggende delene av dagens **AAPS**-system er vist i **Figur 1** ovenfor.
 
@@ -98,13 +98,13 @@ Brukere kan enkelt legge til eller fjerne moduler og funksjoner, og **AAPS** kan
 
  a) Mulighet til å sette et lavere **BS**-mål 30 min før du spiser; du kan sette målet så lavt som 72 mg/dL (4,0 mmol/L).
 
- b) Hvis du er insulinresistent og derfor får høyt blodsukker, lar **AAPS** deg sette opp en regel for **automasjon** som slår inn når BS stiger over 8 mmol/L (144 mg/dL), og som bytter til (for eksempel) en 120 %-profil (som gir 20 % mer basal og også styrker andre faktorer, sammenlignet med den vanlige **profil**-innstillingen din). Automasjonen varer så lenge som den planlagte tiden du har satt. En slik automasjon kan settes til å være aktiv bare på bestemte ukedager, til bestemte tider på døgnet, og til og med på bestemte steder.
+ b) Hvis du er insulinresistent og derfor får høyt blodsukker, lar **AAPS** deg sette opp en **automasjonsregel** som aktiveres når BS stiger over 8 mmol/L (144 mg/dL), og bytter til (for eksempel) en 120 %-profil (som gir 20 % høyere basal og også forsterker de andre faktorene, sammenlignet med den normale **profilen** din). Automasjonen varer så lenge som den planlagte tiden du har satt. En slik automasjon kan settes til å være aktiv bare på bestemte ukedager, til bestemte tider på døgnet, og til og med på bestemte steder.
 
- c) Hvis barnet ditt hopper på trampoline uten forvarsel, lar **AAPS** deg stoppe insulintilførselen i et bestemt tidsrom, direkte fra telefonen.
+ c) Hvis barnet ditt hopper på trampoline uten forvarsel, lar **AAPS** deg pause insulinet i en bestemt tid, direkte fra telefonen.
 
- d) Når du kobler til igjen en slangepumpe som har vært frakoblet under svømming, beregner **AAPS** basalinsulinet du har gått glipp av mens pumpen var frakoblet, og gir det forsiktig, ut fra ditt nåværende BS. Insulin som ikke trengs, kan du overstyre ved bare å «avbryte» den tapte basalen.
+ d) Når du kobler til igjen en slangepumpe som har vært frakoblet mens du svømte, beregner **AAPS** basalinsulinet du har gått glipp av mens pumpen var frakoblet, og gir det forsiktig, ut fra ditt nåværende BS. Insulin som ikke trengs, kan du overstyre ved bare å «avbryte» den tapte basalen.
 
- e) I **AAPS** kan du sette opp ulike profiler for ulike situasjoner og enkelt bytte mellom dem. For eksempel kan funksjoner som gjør at algoritmen får ned høyt BS raskere (som supermikroboluser («**SMB**») og ikke-varslede måltider («**UAM**»)), settes til bare å virke på dagtid, hvis du er bekymret for nattlige følinger.
+ e) I **AAPS** kan du sette opp ulike profiler for ulike situasjoner og enkelt bytte mellom dem. For eksempel kan funksjoner som gjør at algoritmen senker høyt BS raskere (som supermikroboluser («**SMB**») og ikke-varslede måltider («**UAM**»)) settes til bare å virke på dagtid, hvis du er bekymret for følinger om natten.
 
 Dette er bare eksempler; hele spekteret av funksjoner gir stor fleksibilitet i hverdagen, inkludert ved sport, sykdom, hormonsykluser _osv_. Til syvende og sist er det brukeren som bestemmer hvordan denne fleksibiliteten skal brukes, og det finnes ingen automasjon som passer for alle.
 
@@ -295,9 +295,9 @@ Leger (i hvert fall i Storbritannia) har ikke forbud mot å forskrive ikke-godkj
 3. A DIY ‘bionic pancreas’ is changing diabetes care — what's next? [_Nature_ (2023), _620_, 940-941](https://doi.org/10.1038/d41586-023-02648-9)
 4. Prescribing unapproved medical devices? The case of DIY artificial pancreas systems [_Medical law international_, (2021), _21_, 42-68](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
 5. [Posisjonsdokument fra Berlin Institute of Health, 2022](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
-6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (posisjonsdokument og veileder fra Diabetes Canada) [_Canadian Journal of Diabetes_, (2023)_47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
+6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (posisjonsdokument og veiledning fra Diabetes Canada) [_Canadian Journal of Diabetes_ (2023), _47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
 7.  Nederland (EN/NL) – for behandlere – [slik hjelper du personer som bruker automatisk insulintilførsel med åpen kildekode](https://www.diabetotech.com/blog/how-to-help-people-on-open-source-automated-insulin-delivery-systems)
-8. First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALLRandomized Pilot Study [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
+8. First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALL Randomized Pilot Study [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
 9. Pre-school and school-aged children benefit from the switch from a sensor-augmented pump to an AndroidAPS hybrid closed loop: A retrospective analysis [_Pediatr. Diabetes_ 2021, _22_, 594-604. 2021](https://onlinelibrary.wiley.com/doi/epdf/10.1111/pedi.13190)
 10. Resultater fra OPEN-prosjektet, et EU-finansiert prosjekt om Outcomes of Patient’s Evidence with Novel, Do-it-Yourself Artificial Pancreas Technology (https://www.open-diabetes.eu/publications)
 
@@ -379,7 +379,7 @@ eller:
 
 2) Trykk på Windows-tasten og skriv «Kontrollpanel» i søkefeltet, og åpne med Enter. Da åpnes «Alle elementer i Kontrollpanel».
 
-Trykk på første bokstav i navnet (C på engelsk, H på norsk) for å komme til «Hjelpemiddelsenter» (Center for Ease of Use), og åpne med Enter.
+Trykk på bokstaven E for å komme til «Hjelpemiddelsenter» (Ease of Access Centre), og åpne med Enter.
 
 Åpne deretter «Bruk datamaskinen uten skjerm» med Enter.
 

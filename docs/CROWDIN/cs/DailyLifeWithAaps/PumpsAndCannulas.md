@@ -57,7 +57,7 @@ Protože během odpojení pumpy nedostáváte žádný inzulín, měli byste se 
 (pumps-cannulas-announce-insulin)=
 ## Zadání dodaného inzulínu bez skutečného podání dávky
 
-Oznámení inzulínu vydaného z pumpy, když byl **AAPS** odpojený, nebo z injekcí perem: otevřete [dialog Inzulín](#aaps-screens-buttons-insulin) (**Ošetření** ve spodní navigaci nebo tlačítko Rychlého spuštění), zadejte množství v jednotkách a zapněte **Bolus nebude pumpou vydán, pouze zaznamenán**. Pak se objeví řádek **Čas** (nastavený na **Nyní**), kde můžete zadat skutečný čas injekce. Pokud byla injekce podána nedávno, můžete ho ignorovat. Pokud byl bolus podán před nějakou dobou, posuňte čas zpět pomocí **-** (_např._ -30 min), nebo řádek rozbalte šipkou a vyberte přesné datum a čas. **AAPS** pak vezme v úvahu dobu působení inzulínu a podle toho vypočítá zbývající aktivní inzulín.
+To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. Pak se objeví řádek **Čas** (nastavený na **Nyní**), kde můžete zadat skutečný čas injekce. Pokud byla injekce podána nedávno, můžete ho ignorovat. Pokud byl bolus podán před nějakou dobou, posuňte čas zpět pomocí **-** (_např._ -30 min), nebo řádek rozbalte šipkou a vyberte přesné datum a čas. **AAPS** pak vezme v úvahu dobu působení inzulínu a podle toho vypočítá zbývající aktivní inzulín.
 
 Pokud používáte **AAPS** jako pečovatel, můžete pumpu na dálku velmi snadno odpojit (a znovu připojit) pomocí [SMS příkazu](../RemoteFeatures/SMSCommands.md), například příkazy „pump disconnect 120“ a „pump connect 120“. Doba trvání vzdáleného odpojení je od 1 do 120 minut (v tomto příkladu je 120 minut). To je velmi užitečné, pokud je pro vás telefon s **AAPS** špatně dostupný, například je schovaný v pásu na pumpu u dítěte, které utíká k bazénu, nebo ho pečlivě hlídá (či používá) teenager.
 
@@ -92,7 +92,7 @@ Kterou strategii upřednostníte je na vašem osobním rozhodnutí a nejlépe se
 
 ![Dialog Uživatelský profil pro střídání míst](../images/SiteRotation/Type.png)
 
-*Poznámka: toto nastavení určuje, zda se dialog Rotace míst aplikace (režim úprav) automaticky otevře, když se vytvoří nový záznam tlačítkem „Plnění/doplňování“ nebo „Výměna senzoru“*
+*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
 
 - U výměny setu provedené přímo na pumpě musíte otevřít režim zobrazení a upravit nový záznam, abyste vybrali umístění a šipku
 
@@ -100,7 +100,7 @@ Režim úprav vám umožní vybrat umístění, šipku a poznámku k vybranému 
 
 - Upravovaný záznam se zobrazuje pod obrázky těla, s ikonou svého typu (kanyla nebo senzor)
 - Přední a zadní pohled jsou zobrazeny vedle sebe: klepněte na oblast, kam jste ho umístili
-- Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the past 45 days in this site
+- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
 
 ![Režim úprav](../images/SiteRotation/EditMode.png)
 

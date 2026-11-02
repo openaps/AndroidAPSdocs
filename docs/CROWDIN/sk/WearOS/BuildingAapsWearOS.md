@@ -78,7 +78,7 @@ Ak chcete, môžete v rozbaľovacej ponuke namiesto toho zostaviť **„pumpcont
 
 Pri zostavovaní plnej aplikácie **AAPS** (a v skutočnosti akejkoľvek podpísanej aplikácie) Android Studio vytvorí v rovnakom priečinku súbor .json. To potom spôsobí chyby s [necommitnutými zmenami](#troubleshooting_androidstudio-uncommitted-changes), keď sa pokúsite zostaviť ďalšiu podpísanú aplikáciu, napríklad aplikáciu **AAPS** Wear. Najrýchlejšie to vyriešite tak, že prejdete do priečinka, v ktorom bola zostavená plná aplikácia AAPS. Váš priečinok je pravdepodobne niečo ako:
 
-`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\aapsclient\release.`
+`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\full\release.`
 
 Nepotrebný súbor .json buď odstráňte, alebo ho presuňte z priečinka. Potom skúste aplikáciu **AAPS** Wear zostaviť znova. Ak to nepomôže, podrobnejší [návod na riešenie problémov](../GettingHelp/TroubleshootingAndroidStudio.md) vám pomôže nájsť konkrétny súbor, ktorý problém spôsobuje. Môže to byť aj váš súbor úložiska kľúčov.
 

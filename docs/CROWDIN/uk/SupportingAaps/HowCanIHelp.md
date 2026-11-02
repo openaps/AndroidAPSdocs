@@ -23,7 +23,7 @@
 
 Перекладати документацію ви можете почати паралельно або пізніше.
 
-Стан перекладу застосунку та документації для різних мов можна перевірити [тут](#StateOfTranslations).
+You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
 
 * Якщо ви хочете перекласти **застосунок** іншими мовами (дякуємо), використовуйте [crowdin](https://crowdin.com/project/androidaps).
 * Якщо ви хочете перекласти **документацію** іншими мовами (дякуємо), використовуйте [crowdin](https://crowdin.com/project/androidapsdocs). 

@@ -97,7 +97,7 @@ Release date: 31-10-2026
 **Pump Driver Improvements**
 
 - Telas de visão geral das bombas refeitas para Insight, Medtronic, Medtrum, Omnipod, Dana, Diaconn e Equil @MilosKozak
-- **Omnipod Dash**: códigos Ref no estilo do PDM e descrições de falhas fáceis de ler, compensação de desvio (drift) sempre ligada, melhor registro do tipo de bólus @nl-ruud
+- **Omnipod DASH**: PDM style Ref codes and readable fault descriptions, drift compensation always on, better bolus type reporting @nl-ruud
 - **Omnipod**: data final fixa para Dash e Eros @mcnelson
 - **DanaR, RS**: emulador de bomba para testes @MilosKozak
 - **Equil**: emulador de bomba para testes @MilosKozak
@@ -188,7 +188,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 
 **Version 3.4.2.0**
 
-Release date: 04-02-2026
+Release date: 02-04-2026
 
 - Equil: Fix resistance for different models @hhfcvmars
 - Tidepool: Fix session @MilosKozak
@@ -201,7 +201,7 @@ Release date: 04-02-2026
 
 **Version 3.4.1.0**
 
-Release date: 03-08-2026
+Release date: 08-03-2026
 
 **Core**
 
@@ -212,8 +212,8 @@ Release date: 03-08-2026
 
 **Pump Driver Improvements**
 
-- **Omnipod Dash**: refactor BLE driver code to omnipod/common module @jwoglom
-- **Omnipod Dash**: try to fix connection state @MilosKozak
+- **Omnipod DASH**: refactor BLE driver code to omnipod/common module @jwoglom
+- **Omnipod DASH**: try to fix connection state @MilosKozak
 - **Omnipod**: validate profile before pod activation to prevent wasting pods (#4534) @brianV
 - **Medtronic**: fix same encoding type displayed in settings dialog @mifi100
 - **Medtronic**: prepare pump common classes (Tandem preparation) @andy-rozman
@@ -350,7 +350,7 @@ Data de lançamento: 27-03-2025
 
 (version-enforcement)=
 
-**A partir desta versão, as notificações e a obrigatoriedade de versão foram simplificadas e suavizadas e funcionam assim:**
+**Starting this version, notification and version enforcement has been simplified and softened and works the following way:**
 
 *  Sem expiração quando o dispositivo está offline (sem conexão com a internet). Isso significa que não há mais os períodos de tolerância de 60 e 90 dias.
 *  Após a expiração, o modo LGS é imposto
@@ -502,7 +502,7 @@ Release date: 29-12-2024
 
 * [Simple mode](#preferences-simple-mode) activated by default on fresh install @MilosKozak
 * New [QuickWizard](#Preferences-quick-wizard) options @radicalb
-  * The QuickWizard now uses the same logic for bolus calculation and display as the calculator. You can now use the “carb time” field in QuickWizard  to pre-bolus.
+  * The QuickWizard now uses the same logic for bolus calculation and display as the calculator. You can now use the “carb time” field in QuickWizard to pre-bolus.
 * New [graph scale menu](#aaps-screens-main-graph); [additional graphs menu](#AapsScreens-activate-optional-information) UI improvements @Philoul
 * [ConfigBuilder layout improvement](../SettingUpAaps/ConfigBuilder.md) @MilosKozak
   * Sections are now collapsed by default. Use arrow to expand.
@@ -618,7 +618,7 @@ Release date: 23-10-2023
 
 v1 is the old protocol used for exchanging data between NS web site and NS server. It has many limitations
 - v1 sends only 2 days of data
-- v1 send all 2 days data on every reconnection
+- v1 sends all 2 days of data on every reconnection
 - using websockets is mandatory = permanent connection, more battery consumption
 - during frequent disconnects to NS connection is paused for 15 minutes to prevent high data usage
 
@@ -639,7 +639,7 @@ RECOMMENDED SETTING
 - because of all above you should choose only one method and use it on all devices (remember all other uploaders at time of writing this are using v1). If you decide to go to v3, select v3 in AAPS and all AAPSClients
 - v3 is preferred because of efficiency
 - using websockets or not using with v3 depends on your preference
-- it HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
+- it is HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
 
 ---
 

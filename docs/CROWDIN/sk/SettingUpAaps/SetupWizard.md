@@ -122,9 +122,9 @@ V Androide 16 postupujte podľa týchto krokov; v iných verziách sa obrazovky 
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. V Androide 12 kliknite na `Batéria` (Battery), v Androide 13 a novšom kliknite na `Využitie batérie aplikáciou` (App battery usage),
+   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
 
-   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
+   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
 5. V Androide 12 a novšom vyberte možnosť `Bez obmedzení` (Unrestricted). V Androide 15 a novšom musíte rozbaliť nastavenie `Povoliť používanie na pozadí` (Allow background usage) – kliknite na časť zvýraznenú červenou a potom dokončite postup krokom 6.
 
@@ -454,7 +454,7 @@ Keď vyberiete skutočnú pumpu, **AAPS** si vyžiada potvrdenie, pretože skop�
 
 ![Potvrdenie pri výbere skutočnej pumpy](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-Ak vybraná pumpa komunikuje cez Bluetooth, **AAPS** po dokončení Sprievodcu požiada o povolenie pripájať sa k zariadeniam v okolí (pozrite [Povolenie pre Bluetooth](#bluetooth-permission)).
+If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#setup-wizard-bluetooth-permission)).
 
 Ak už máte nastavený profil a viete, ako pripojiť pumpu, môžete ju pripojiť hneď. Inak zatiaľ nechajte **Virtuálna pumpa** – zmeniť to môžete kedykoľvek, alebo môžete Sprievodcu nastavením opustiť šípkou v ľavom hornom rohu a nechať **AAPS** najprv zobraziť nejaké hodnoty glykémie.
 
@@ -505,7 +505,7 @@ Stlačte „**Otvoriť Ciele**“:
 
 Tu spúšťame Cieľ 1, aj keď naše nastavenie v tejto chvíli ešte nie je úplne pripravené na úspešné splnenie tohto Cieľa. Ale je to začiatok.
 
-Stlačte tlačidlo „**Štart**“ vedľa „**1. cieľ**“:
+Press the "**Start**" button of **Objective 1**:
 
 ![Zoznam cieľov](../images/setup-wizard/Wizard-Objectives-List.png)
 
@@ -521,6 +521,7 @@ Po stlačení „**DOKONČIŤ**“ sa dostanete na hlavnú obrazovku **AAPS**. M
 
 Ak v ktoromkoľvek bode omylom opustíte Sprievodcu nastavením, môžete ho jednoducho spustiť znova alebo zmeniť [konfiguráciu okruhu AAPS](../SettingUpAaps/ChangeAapsConfiguration.md) ručne.
 
+(setup-wizard-bluetooth-permission)=
 ## Povolenie pre Bluetooth
 
 Ak vyberiete pumpu, ktorá sa pripája cez Bluetooth (napríklad **Omnipod Dash**), banner vám pripomenie, že **AAPS** potrebuje povolenie pre Bluetooth. Zatiaľ môžete stlačiť „**Zatvoriť**“ – povolenie udelíte po dokončení Sprievodcu:

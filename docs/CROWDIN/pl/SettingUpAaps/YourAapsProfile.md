@@ -135,9 +135,9 @@ Z tych przykładów widać, że im _mniejsza_ wartość **ISF**, tym mniej jeste
 
 ### Wpływ
 
-**Niższy / silniejszy ISF** (np. 40 zamiast 50) oznacza, że jedna jednostka insuliny obniża **BG** mniej. To prowadzi do bardziej agresywnej / silniejszej korekty przez pętlę, z **większą ilością insuliny**. Jeśli Twój **ISF** jest za silny (mała wartość), może to prowadzić do niskiej **BG**.
+A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. To prowadzi do bardziej agresywnej / silniejszej korekty przez pętlę, z **większą ilością insuliny**. Jeśli Twój **ISF** jest za silny (mała wartość), może to prowadzić do niskiej **BG**.
 
-**Wyższy / słabszy ISF** (np. 45 zamiast 35) oznacza, że jedna jednostka insuliny obniża **BG** bardziej. To prowadzi do mniej agresywnej / słabszej korekty przez pętlę, z **mniejszą ilością insuliny**. Jeśli Twój **ISF** jest za słaby (duża wartość), może to prowadzić do wysokiej **BG**.
+A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. To prowadzi do mniej agresywnej / słabszej korekty przez pętlę, z **mniejszą ilością insuliny**. Jeśli Twój **ISF** jest za słaby (duża wartość), może to prowadzić do wysokiej **BG**.
 
 **Example:**
 * **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
@@ -201,7 +201,7 @@ Często **ICR** jest różny o różnych porach dnia, z powodu poziomu hormonów
 > 
 > Przelicznik WW 2,4 U / 12g   ===>   IC = 12g / 2,4 U = 5,0 g/U
 > 
-> Tabele przeliczeniowe są dostępne w internecie, np. [tutaj](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Wpływ
 
@@ -300,7 +300,7 @@ Pomocnik profilu oferuje dane dzieci z dwóch różnych szpitali, aby znaleźć 
 4. Przejdź do zakładki **Profil 2**.
 5. Naciśnij **Typ profilu** i wybierz „Domyślny profil DPV”.
 6. Dostosuj Domyślny profil DPV (oparty na danych innego szpitala), wpisując wiek dziecka, TDD Całkowita i procent bazy. Pamiętaj, że dane DPV podają tylko **dawki bazowe**, więc IC i ISF są dla tego profilu pokazane jako zero.
-7. Otwórz zakładkę **Porównanie**. Wyświetli się porównanie dwóch dostosowanych profili (zobacz zrzut ekranu poniżej).
+7. Open the **Comparison** tab. Wyświetli się porównanie dwóch dostosowanych profili (zobacz zrzut ekranu poniżej).
 8. Jeśli chcesz zacząć dostrajać profil na podstawie jednej z tych propozycji, użyj przycisku **Sklonuj** na dole porównania.
 
 ![Pomocnik profilu – dzieci 2](../images/ProfileHelperKids2.png)
@@ -350,6 +350,6 @@ Możesz też użyć [Pomocnika profilu](#aaps-screens-profile-helper) (menu ☰ 
 4. Przejdź do zakładki **Profil 2**.
 5. W **Typ profilu** wybierz „Zmiana profilu”, aby wybierać z historii wszystkich **Zmian profilu**.
 6. Wybierz **Zmianę profilu**, z którą chcesz porównać.
-7. Otwórz zakładkę **Porównanie**. Wyświetli się porównanie dwóch profili (zobacz zrzut ekranu poniżej).
+7. Open the **Comparison** tab. Wyświetli się porównanie dwóch profili (zobacz zrzut ekranu poniżej).
 
 ![Pomocnik profilu 2](../images/ProfileHelper2.png)

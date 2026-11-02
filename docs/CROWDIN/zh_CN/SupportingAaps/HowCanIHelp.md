@@ -23,7 +23,7 @@ Developers are parents, caregivers, loved ones and people with diabetes working 
 
 您也可以同时或后续参与文档翻译工作，我们非常欢迎！​
 
-You can check the state of translations for the languages app and documentation [here](#StateOfTranslations).
+You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
 
 * 如需将**应用程序**翻译为其他语言（感谢您的贡献），请使用[Crowdin](https://crowdin.com/project/androidaps)平台。​
 * 如需将**文档**翻译为其他语言（感谢您的贡献），请使用[Crowdin](https://crowdin.com/project/androidapsdocs)平台。​ 

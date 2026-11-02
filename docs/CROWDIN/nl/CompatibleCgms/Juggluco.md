@@ -36,6 +36,6 @@ Juggluco kan bloedglucose naar xDrip sturen, en xDrip stuurt die dan naar AAPS.
 
 Zet in Juggluco 'Patched Libre' aan (zet 'xDrip broadcast' niet aan), bevestig en sla de pakketinformatie van dexdrip op. Selecteer in AAPS de BG-bron xDrip.
 
-Zorg in AAPS zo nodig dat de waarden voldoende [vloeiend gemaakt](./SmoothingBloodGlucoseData.md) worden. Bij een Libre 2/2+/3/3+ sensor maakt xDrip van de metingen per minuut een gemiddelde per 5 minuten en maakt ze [ook vloeiend](#libre2-value-smoothing-raw-values).
+Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary. When using a Libre 2/2+/3/3+ sensor, xDrip will average the minute-by-minute readings to 5-minute readings and [also smooth](#libre2-value-smoothing-raw-values) them.
 
 ![Juggluco naar xDrip](../images/juggluco/Juggluco-xDrip+.png)

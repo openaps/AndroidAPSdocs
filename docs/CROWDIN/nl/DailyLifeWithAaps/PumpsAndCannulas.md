@@ -57,7 +57,7 @@ Je krijgt geen insuline zolang de pomp is afgekoppeld. Koppel de pomp daarom elk
 (pumps-cannulas-announce-insulin)=
 ## Gegeven insuline vastleggen zonder echt een bolus te geven
 
-Om insuline vast te leggen die je met de pomp gaf terwijl **AAPS** was afgekoppeld, of met een pen: open het [venster Insuline](#aaps-screens-buttons-insulin) (**Behandelingen** in de onderste navigatie, of een QuickLaunch-knop), vul de hoeveelheid in eenheden in en zet **Bolus wordt alleen geregistreerd** aan. Een rij **Tijd** (ingesteld op **Nu**) laat je dan de echte tijd van de injectie vastleggen: je kunt deze negeren als de injectie net is gegeven. Is de bolus al een tijdje geleden gegeven, gebruik dan **-** om de tijd terug te zetten (_bijv._ -30 min), of open de rij met het pijltje om de precieze datum en tijd te kiezen. **AAPS** houdt dan rekening met de werkingsduur van de insuline en berekent hoeveel insuline er nog in het lichaam actief is.
+To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. Een rij **Tijd** (ingesteld op **Nu**) laat je dan de echte tijd van de injectie vastleggen: je kunt deze negeren als de injectie net is gegeven. Is de bolus al een tijdje geleden gegeven, gebruik dan **-** om de tijd terug te zetten (_bijv._ -30 min), of open de rij met het pijltje om de precieze datum en tijd te kiezen. **AAPS** houdt dan rekening met de werkingsduur van de insuline en berekent hoeveel insuline er nog in het lichaam actief is.
 
 Als je **AAPS** als verzorger gebruikt, kun je de pomp heel gemakkelijk op afstand afkoppelen (en weer aankoppelen) met een [SMS-commando](../RemoteFeatures/SMSCommands.md), bijvoorbeeld "pump disconnect 120" en "pump connect 120". De tijdsduur voor afkoppelen op afstand is 1–120 min (in dit voorbeeld 120 minuten). Dit is erg handig als je moeilijk bij de **AAPS**-telefoon kunt, bijvoorbeeld als hij in een pompriem zit van een kind dat naar het zwembad rent, of als een tiener hem goed bewaakt (of gebruikt).
 
@@ -92,7 +92,7 @@ Welke strategie je kiest, is heel persoonlijk. Je vindt het beste uit wat bij je
 
 ![Venster Gebruikersprofiel voor plaatsingslocaties](../images/SiteRotation/Type.png)
 
-*Let op: deze instelling bepaalt of het venster Site rotatie (bewerkmodus) automatisch opent als er een nieuwe regel wordt gemaakt met de knop "Prime/Vul" of de CGM-knop "Sensor ingebracht"*
+*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
 
 - Heb je de canule direct op de pomp gewisseld, open dan de weergavemodus en bewerk de nieuwe regel om de locatie en pijl te kiezen
 
@@ -100,7 +100,7 @@ In de bewerkmodus kies je de locatie, pijl en notitie voor de gekozen regel:
 
 - De regel die je bewerkt, staat onder de afbeeldingen van het lichaam, met het pictogram van het type (canule of sensor)
 - Voorkant en achterkant staan naast elkaar: tik op het gebied waar je hem hebt geplaatst
-- Als een gebied is gekozen (groen gemarkeerd), zie je in de lijst hieronder alle regels van de afgelopen 45 dagen op deze plek
+- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
 
 ![Bewerkmodus](../images/SiteRotation/EditMode.png)
 

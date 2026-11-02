@@ -49,7 +49,7 @@ Naklonujte zdrojový kód znova podľa návodu vo wiki a nepovoľte aktualizáci
 
   * Musíte dostať správu o tom, aká verzia Gitu je nainštalovaná, ako vidíte na snímke obrazovky vyššie. V tomto prípade prejdite na [krok 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * Ak dostanete správu
+  * In case you get a message saying
     ```
     Git: command not found
     ```
@@ -59,13 +59,13 @@ Naklonujte zdrojový kód znova podľa návodu vo wiki a nepovoľte aktualizáci
 
   * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
 
-  * If Git is installed, you have restarted (if on windows), and Git still cannot be found:
+  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
 
   * Vyhľadajte vo svojom počítači súbor „git.exe“.
 
     Poznačte si, v ktorom priečinku je uložený.
 
-  * Vo Windows otvorte premenné prostredia (Environment variables), vyberte premennú „PATH“ a kliknite na Upraviť (Edit). Pridajte priečinok, v ktorom ste našli svoju inštaláciu Gitu.
+  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Pridajte priečinok, v ktorom ste našli svoju inštaláciu Gitu.
 
   * Uložte a zatvorte.
 
@@ -139,7 +139,7 @@ Alebo:
 Cause: error: invalid source release: 21
 ```
 
-Ak dostanete chybovú správu vyššie, musíte si stiahnuť správnu verziu JVM a až potom môžete skúsiť zostavenie znova:
+If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
 
 1.  V [tabuľke požiadaviek](#Building-APK-recommended-specification-of-computer-for-building-apk-file) si overte, ktorú verziu JVM potrebujete pre verziu **AAPS**, ktorú zostavujete, a poznačte si ju.
 
@@ -252,7 +252,7 @@ Vaše APK sa úspešne zostavilo a môžete ho preniesť do telefónu!
 
 ## APK je nainštalované, ale verzia je stará
 
-Ak ste aplikáciu úspešne zostavili, preniesli do telefónu a úspešne nainštalovali, ale číslo verzie sa nezmenilo, možno ste zabudli [aktualizovať svoju lokálnu kópiu](#Update-to-new-version-update-your-local-copy)
+If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
 
 ## Nič z uvedeného nepomohlo
 

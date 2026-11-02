@@ -72,7 +72,7 @@ Aprobarea este un pas manual. Ca organizație non-profit, nu oferim SLA dar, în
     
         1. the translation is proofread
     
-        1. the sync run between Crowdin and Github finished (once an hour) which creates an PR for Github.
+        1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
     
         1. the PR in Github was approved.
     
@@ -83,11 +83,11 @@ Aprobarea este un pas manual. Ca organizație non-profit, nu oferim SLA dar, în
     ```{admonition} Links are not translated anymore
     :class: note
     
-    Links are not translated anymore. In the past we had a topic here but this is gone as through migraton to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    Links are not translated anymore. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
     
     
 
-You are translating the text which represents the link. Please you have to be careful **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
+You are translating the text which represents the link. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
 
 It's the proofreaders job to have a special look on this!
 

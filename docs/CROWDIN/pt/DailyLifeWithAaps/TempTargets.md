@@ -19,7 +19,7 @@ Os utilizadores devem ter expectativas realistas sobre os resultados que podem s
 
 Um **alvo temporário** pode demorar cerca de 30 minutos ou mais a atingir o alvo de **glicose** pretendido. É impossível o **AAPS** atingir um alvo de **glicose** com efeito imediato, e os utilizadores devem ter isto em conta ao selecionar um **alvo temporário**.
 
-As secções abaixo resumem as funcionalidades do **alvo temporário Atividade**, do **alvo temporário Comer Brevemente** e do **alvo temporário Hipo**. Os valores mostrados são os predefinidos de origem — pode [ajustar cada predefinição](#TempTargets-change-preset-defaults) às suas necessidades.
+The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. Os valores mostrados são os predefinidos de origem — pode [ajustar cada predefinição](#TempTargets-change-preset-defaults) às suas necessidades.
 
 ### AT - Atividade
 
@@ -193,9 +193,9 @@ Por vezes, quando são ingeridos hidratos de carbono para tratar uma hipoglicemi
 
 Alguns utilizadores preferem evitar que sejam administrados **SMB** durante um **alvo temporário Hipo**. Isto é feito ao desativar *«Ativar SMB com alvo temporário alto»* em **Definições** → **OpenAPS SMB** (ver mais abaixo):
 
-- Em (Avançado, objetivo 9): o utilizador pode ativar *«Alvo temporário alto aumenta a sensibilidade»* para **alvos temporários** de 100 mg/dl (5,6 mmol/l) ou mais no OpenAPS SMB; o **AAPS** fica mais sensível.
+- Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
 
-- Em (Avançado, objetivo 9): o utilizador pode desativar *«Ativar SMB com alvo temporário alto»*, para que, mesmo que o **AAPS** tenha HCA > 0, «Ativar SMB com alvo temporário baixo» ou «Ativar SMB sempre» ativado e o OpenAPS SMB ativo, o **AAPS** não administre SMB enquanto houver alvos temporários altos ativos.
+- Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
 
 Nota: se abrir a **janela Hidratos** quando a sua glicose está abaixo de 72 mg/dl ou 4 mmol/l, o **AAPS** pré-seleciona automaticamente o interruptor **Iniciar AT de Hipo**.
 
@@ -219,9 +219,9 @@ Além disso, se *«Ativar SMB com alvo temporário alto»* estiver desativado, o
 
 ## Alvo temporário Comer Brevemente
 
-O **alvo temporário Comer Brevemente** pode ajudar a baixar suavemente a **glicose** e a garantir que há **IA** suficiente antes de comer.
+**Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
 
-Esta pode ser uma ferramenta importante para os utilizadores que não fazem pré-bólus. No entanto, a eficácia do **alvo temporário Comer Brevemente** depende de vários fatores, incluindo: as definições do utilizador, se fazem uma alimentação pobre em hidratos de carbono e se usam uma insulina de ação rápida (como Fiasp ou Lyumjev) para eliminar a necessidade de pré-bólus. Normalmente, até ganharem experiência com o **AAPS**, os utilizadores devem contar com fazer um pré-bólus quando usam o **alvo temporário Comer Brevemente**, sobretudo se fizerem uma alimentação rica em hidratos de carbono.
+This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
 
 Pode ler mais sobre o «modo Eating soon» (comer brevemente) no artigo ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) ou [aqui](https://diyps.org/tag/eating-soon-mode/).
 

@@ -84,11 +84,11 @@ Roche se retira del mercado de bombas de insulina para centrar su oferta para la
     
     Abre los ajustes con **Ajustes** en la tarjeta **Accu-Chek Insight** en **Configuración** > **Bomba**, o con el icono del engranaje en la esquina superior derecha de la pantalla de la bomba.
     
-    ![Ajustes del controlador de Accu-Chek Insight](../images/v4/Pumps/accu_chek_insight_settings.png)
+    ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
     
-    En los ajustes de la Insight en **AAPS** puedes activar estas opciones:
+    In the Insight settings in **AAPS** you can enable the following options:
     
-    * **Registrar cambios de cartucho**: registra automáticamente un cambio de cartucho de insulina cuando ejecutas el programa "fill cannula" (llenar la cánula) en la bomba.
+    * **Log reservoir changes**: automatically records an insulin cartridge change when you change the cartridge in the pump.
     
     * **Registrar cambios de tubo**: añade una nota a la base de datos de **AAPS** cuando ejecutas el programa "tube filling" (llenado del tubo) en la bomba.
     
@@ -162,7 +162,7 @@ La versión de firmware se puede encontrar en el menú.
 
 ## Reemplazo de la batería
 
-Con el lazo, la batería de la Insight dura entre 10 y 14 días, máx. 20 días. El usuario que informa de esto está utilizando las baterías de litio de Energizer.
+Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days. El usuario que informa de esto está utilizando las baterías de litio de Energizer.
 
 La bomba Insight tiene una pequeña batería interna que mantiene funciones esenciales, como el reloj, mientras cambias la batería extraíble. Si el cambio de batería tarda demasiado, esta batería interna se puede quedar sin carga, el reloj se reinicia y, después de poner una batería nueva, tendrás que introducir de nuevo la hora y la fecha. Si esto pasa, todas las entradas de AAPS anteriores al cambio de batería dejan de usarse en los cálculos, porque no se puede saber la hora correcta.
 

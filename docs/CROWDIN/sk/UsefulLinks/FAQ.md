@@ -175,7 +175,7 @@ Budete teda mať viac aktívnych sacharidov, ale okruh bude zároveň pôsobiť 
 
 Pri používaní okruhu skúste tieto kroky:
 
-* Urobte [prepnutie profilu](#ProfileSwitch-change-percentage) < 100 %: ťuknite na názov profilu na hlavnej obrazovke, ťuknite na okrúhle tlačidlo **▶** a potom nastavte **Percento** a **Trvanie**.
+* Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
 * Nastavte [dočasný cieľ Aktivita](#TempTargets-activity-temp-target) nad váš štandardný cieľ. Pri percente pod 100 % a zadanom trvaní ponúka tá istá obrazovka **Aktivovať** prepínač **Dočasný cieľ / Aktivita**, ktorý spustí oboje naraz.
 * Ak používate SMB, uistite sa, že [„Povoliť SMB s vysokými dočasnými cieľmi“](#Open-APS-features-enable-smb-with-high-temp-targets) a [„Vždy povoliť SMB“](#Open-APS-features-enable-smb-always) sú vypnuté.
 
@@ -194,7 +194,7 @@ Pumpu si môžete odpojiť, aby ste boli „voľní“, ale mali by ste to ozná
 Pitie alkoholu je v režime uzavretého okruhu riskantné, pretože algoritmus nedokáže správne predpovedať glykémiu ovplyvnenú alkoholom. Musíte si vyskúšať vlastný spôsob, ako to riešiť, pomocou týchto funkcií v AAPS:
 
 * Vypnúť uzavretý okruh a liečiť diabetes ručne alebo
-* nastaviť vysoké dočasné ciele a vypnúť UAM, aby okruh nezvyšoval IOB kvôli neohlásenému jedlu, alebo
+* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
 * urobte [prepnutie profilu](#ProfileSwitch-change-percentage) na výrazne menej ako 100 % 
 
 Šablóna [scény](#scenes) *Alkohol* je východiskový bod, ktorý si môžete prispôsobiť vlastnému postupu.
@@ -363,9 +363,9 @@ Môžete tiež zmeniť, kedy sa výstraha spustí: stlačte ikonu **Nastavenia**
 
 #### Moje zariadenie Link/pumpa/pod nereaguje (RL/OL/EmaLink…)
 
-Pri niektorých telefónoch sa Bluetooth odpája od zariadení Link (RL/OL/EmaL...).
+With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
 
-Niektoré majú aj nereagujúce zariadenia Link (AAPS hlási, že sú pripojené, ale Link nedokáže pumpu zastihnúť ani ovládať.)
+Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
 
 Najprv skúste tlačidlo **Resetovať RileyLink** na obrazovke pumpy (pozrite stránku vašej pumpy: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). Ak to nepomôže, najjednoduchší spôsob, ako všetky tieto časti znova uviesť do spoločnej činnosti, je:
 
@@ -419,5 +419,5 @@ Stav Podu je súčasťou exportovaných nastavení, takže aktívny Pod môžete
 
 Najprv si prečítajte tieto časti:
 
-* [Export a import nastavení](#omnipod-dash-export-import) na stránke Omnipod DASH a [Pumpy bez hadičky](#ExportImportSettings-tubeless-pumps): na novom telefóne zaškrtnite **Nahradiť aj nastavenia pumpy** a použite súbor exportovaný počas Podu, ktorý máte práve nasadený,
+* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
 * [Vyradenie podu](#omnipod-dash-discard-pod), aby ste potom Pod odstránili zo starého telefónu. Keep the old phone in airplane mode until the Pod is discarded, so that the two phones never talk to the Pod at the same time.

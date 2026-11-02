@@ -42,7 +42,7 @@ Several commercial hybrid closed loop systems have also been launched. These are
 
 **Рисунок 1**. Принципиальная схема Android APS (Artificial Pancreas System), AAPS.
 
-Android APS (AAPS) — это гибридная система замкнутого цикла или система искусственной поджелудочной железы (APS). It makes its insulin dosing calculations using established [OpenAPS](https://openaps.org/) algorithms (a set of rules) developed by the #WeAreNotWaiting T1D community.
+Android APS (**AAPS**) is a hybrid closed loop system, or Artificial Pancreas System (APS). It makes its insulin dosing calculations using established [OpenAPS](https://openaps.org/) algorithms (a set of rules) developed by the #WeAreNotWaiting T1D community.
 
 Since OpenAPS is only compatible with certain older insulin pumps, **AAPS** (which can be used with a wider range of insulin pumps) was first developed in 2016 for a family member with type 1 diabetes. С тех пор **AAPS** постоянно развивается и усовершенствуется командой добровольцев компьютерных разработчиков и других энтузиастов, которые имеют связь с миром сахарного диабета первого типа. Today, **AAPS** is used by many thousands of people worldwide. It is a highly customisable and versatile system, and because it is open-source, it is also readily compatible with many other open-source diabetes software and platforms. Основные компоненты нынешней системы **AAPS** представлены на **рисунке 1** выше.
 
@@ -54,7 +54,7 @@ Since OpenAPS is only compatible with certain older insulin pumps, **AAPS** (whi
 
 0>Телефон на Android</strong> должен иметь еще одно приложение наряду с **AAPS**. This [additional app](../Getting-Started/CompatiblesCgms.md) receives glucose data from a sensor (**2**) by Bluetooth, and then sends the data internally on the phone to the **AAPS app**.
 
-Приложение **AAPS** использует процесс принятия решений (**алгоритм**), созданный на базе OpenAPS. Новички начинают использовать базовый алгоритм **oref0**, но при работе с AAPS можно переключиться на более новый алгоритм **oref1**. Выбор алгоритма (ореф1 или ореф), зависит от того, что вам лучше подходит.  В обоих случаях алгоритм учитывает множество факторов и выполняет быстрые вычисления каждый раз, когда поступает новые данные с сенсора. The algorithm then sends instructions to the insulin pump (**3**) on how much insulin to deliver by Bluetooth. All the information can be sent by mobile data or Wi-Fi to the internet (**4**). По желанию эти данные могут также передаваться наблюдателям(фоллоуерам) и/или собираться для анализа. Optionally, you can also pair a [smartwatch](../Getting-Started/Watches.md) (**5**) with the phone to see your data at a glance and, with some watches, send basic commands to **AAPS**.
+Приложение **AAPS** использует процесс принятия решений (**алгоритм**), созданный на базе OpenAPS. Beginners start out using the basic **oref0** algorithm, but it is possible to switch to using the newer **oref1** algorithm as you progress with AAPS. Выбор алгоритма (ореф1 или ореф), зависит от того, что вам лучше подходит.  В обоих случаях алгоритм учитывает множество факторов и выполняет быстрые вычисления каждый раз, когда поступает новые данные с сенсора. The algorithm then sends instructions to the insulin pump (**3**) on how much insulin to deliver by Bluetooth. All the information can be sent by mobile data or Wi-Fi to the internet (**4**). По желанию эти данные могут также передаваться наблюдателям(фоллоуерам) и/или собираться для анализа. Optionally, you can also pair a [smartwatch](../Getting-Started/Watches.md) (**5**) with the phone to see your data at a glance and, with some watches, send basic commands to **AAPS**.
 
 ## Преимущества системы AAPS
 
@@ -98,13 +98,13 @@ Some of the reported advantages of using **AAPS** are extensive fine-tunable opt
 
  a) The ability to set a lower **BG** target 30 min before eating; you can set the target as low as 72 mg/dL (4.0 mmol/L).
 
- b) если у вас резистентность к инсулину, приводящая к высоким сахарам, **AAPS** позволяет установить правило **автоматизации**: если ГК поднимается выше 8 ммоль/л (144 мг/дл), происходит переход на 120% профиля (что приводит к увеличению базала на 20% и других параметров, в сравнении с обычной настройкой **профиля**). Автоматизация продлится согласно запланированному вами времени. Такая автоматизация может срабатывать в определенные дни недели, в определенное время суток, и даже в определенных местах.
+ b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in a 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). Автоматизация продлится согласно запланированному вами времени. Такая автоматизация может срабатывать в определенные дни недели, в определенное время суток, и даже в определенных местах.
 
- c) если Ваш ребенок неожиданно оказался на батуте, **AAPS** позволит приостановить подачу инсулина на заданный период времени непосредственно по телефону.
+ c) If your child is on a trampoline with no advance notice, **AAPS** allows insulin suspension for a set time period, directly via the phone.
 
- d) после повторного подключения помпы которая была отключена перед купанием, AAPS будет рассчитывать базальный инсулин, который вы пропустили при отключении и осторожно введет его, согласно вашей текущей ГК. Любой лишний инсулин может быть переопределен простой "отменой" пропущенной базы.
+ d) After reconnecting a tubed pump which has been disconnected for swimming, **AAPS** will calculate the basal insulin you have missed while disconnected and deliver it carefully, according to your current BG. Любой лишний инсулин может быть переопределен простой "отменой" пропущенной базы.
 
- f) **AAPS** дает возможность настраивать различные профили для различных ситуаций и легко переключаться между ними. Функции, которые делают алгоритм более быстрым для снижения высокой ГК (например, супермикроболюсы («SMB»), неожиданный прием пищи, (“**UAM**”) могут быть настроены на работу только в дневное время, если вы боитесь ночных гипогликемий.
+ f) **AAPS** дает возможность настраивать различные профили для различных ситуаций и легко переключаться между ними. For example, features which make the algorithm quicker to bring down elevated BG (like supermicro boluses (“**SMB**”) and unannounced meals (“**UAM**”)) can be set to only work during the daytime, if you are worried about night-time hypos.
 
 Это все лишь примеры, полный спектр характеристик дает большую гибкость в повседневной жизни, включая спорт, болезнь, гормональные циклы и т. д. В конечном счете, пользователь сам должен решить, как использовать эти возможности, универсальной автоматизации для всех не существует.
 
@@ -295,9 +295,9 @@ If a doctor discovers in a clinic that their patient is looping with an OS-AID s
 3. «Бионическая поджелудочная железа», сделанная своими руками, меняет подход к лечению диабета — что дальше? [_Nature_ (2023), _620_, 940-941](https://doi.org/10.1038/d41586-023-02648-9)
 4. Назначают несертифицированные медицинские устройства? Рассмотрение дела о системе искусственной поджелудочной железы [_Medical law internationa_, (2021), _21_, 42-68](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
 5. [Берлинский институт здравоохранения -заявление о позиции, 2022год](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
-6. Автоматизированная подача инсулина своими руками: Руководство для практикующего врача (положение и руководство Diabetes Canada) [_Canadian Journal of Diabetes_, (2023)_47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
+6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (Diabetes Canada position and guide) [_Canadian Journal of Diabetes_ (2023), _47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
 7.  Нидерланды (EN/NL) - для медработников [как помочь людям с автоматизированной системой подачи инсулина](https://www.diabetotech.com/blog/how-to-help-people-on-open-source-automated-insulin-delivery-systems)
-8. Первое использование автоматизированной подачи инсулина с открытым исходным кодом AndroidAPS в сценарии полного замкнутого цикла: рандомизированное пилотное исследование Pancreas4ALL [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
+8. First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALL Randomized Pilot Study [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
 9. Дети дошкольного и школьного возраста получают пользу от перехода от помпы с сенсорным управлением к гибридной замкнутой системе AndroidAPS: ретроспективный анализ [_Pediatr. Diabetes_ 2021, _22_, 594-604. 2021](https://onlinelibrary.wiley.com/doi/epdf/10.1111/pedi.13190)
 10. Результаты ОТКРЫТОГО проекта, финансируемого ЕС по исследованиям пациентов с использованием новой технологии искусственной поджелудочной железы «Сделай сам» (https://www.open-diabetes.eu/publications)
 
@@ -379,7 +379,7 @@ Under **Hear text read aloud**, select **turn on narrator** and **turn on audio 
 
 2) В меню Windows Start введите «Панель управления» в поле поиска, откройте, нажав на Enter. Откроются: «Все элементы панели управления».
 
-Нажмите на букву C, чтобы добраться до «Специальных возможностей», которые откроете нажав Enter.
+Press the letter E to get to “Ease of Access Centre”, open with Enter.
 
 Затем откройте "Использовать компьютер без дисплея", нажмите Enter.
 

@@ -49,7 +49,7 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * Трябва да получите съобщение, което показва коя версия на Git е инсталирана, както виждате на снимката на екрана по-горе. В този случай отидете на [Стъпка 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * Ако получите съобщение, което казва
+  * In case you get a message saying
     ```
     Git: command not found
     ```
@@ -59,13 +59,13 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
 
-  * If Git is installed, you have restarted (if on windows), and Git still cannot be found:
+  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
 
   * Потърсете на компютъра си файл „git.exe“.
 
     Запишете си в коя папка е запазен.
 
-  * В Windows отидете в Environment variables (променливи на средата), изберете променливата „PATH“ и натиснете Edit. Добавете папката, в която сте намерили инсталацията на Git.
+  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Добавете папката, в която сте намерили инсталацията на Git.
 
   * Запишете и затворете.
 
@@ -139,7 +139,7 @@ The maximum compatible Gradle JVM version is 19.
 Cause: error: invalid source release: 21
 ```
 
-Ако получите горното съобщение за грешка, трябва да изтеглите правилната версия на JVM, преди да опитате да компилирате отново:
+If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
 
 1.  Проверете в [таблицата с изисквания](#Building-APK-recommended-specification-of-computer-for-building-apk-file) коя версия на JVM ви трябва за версията на **AAPS**, която компилирате, и си я запишете.
 
@@ -252,7 +252,7 @@ When you generate the signed apk, you might get the notification that generation
 
 ## Apk е инсталиран, но версията е стара
 
-Ако сте компилирали приложението успешно, прехвърлили сте го на телефона си и сте го инсталирали успешно, но номерът на версията остава същият, може да сте пропуснали да [обновите локалното си копие](#Update-to-new-version-update-your-local-copy)
+If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
 
 ## Нищо от горното не помогна
 

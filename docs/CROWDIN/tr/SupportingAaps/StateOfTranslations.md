@@ -1,9 +1,9 @@
-# uygulama ve dokümantasyonun çeviri durumu
+# State of translation for the app and the documentation
 
 Durum saatte bir güncellenir ve yalnızca Crowdin'deki durumu yansıtır.
 
 ```{tip}
-Be careful the percentage of proofreading must be lower than the percentage of translations but they decided to show it on top of the translations.
+Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
 İşin ne kadar yapıldığını görmek için yalnızca çevirilerin yüzde düzeyine bakmak daha iyi olacaktır.
 ```
 

@@ -88,7 +88,7 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
     
     In the Insight settings in **AAPS** you can enable the following options:
     
-    * **Log reservoir changes**: automatically records an insulin cartridge change when you run the "fill cannula" program on the pump.
+    * **Log reservoir changes**: automatically records an insulin cartridge change when you change the cartridge in the pump.
     
     * **Log tube changes**: adds a note to the **AAPS** database when you run the "tube filling" program on the pump.
     
@@ -162,7 +162,7 @@ Die Firmware-Version kann im Menü der Pumpe nachgesehen werden.
 
 ## Batteriewechsel
 
-Die Batterielebensdauer bei der Insight im Loop liegt zwischen 10 und 14 Tagen, maximal wurden 20 Tage erreicht. Diese Angaben wurden mit Energizer Lithium Batterien ermittelt.
+Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days. Diese Angaben wurden mit Energizer Lithium Batterien ermittelt.
 
 Die Innenpumpe hat eine kleine interne Batterie, um wichtige Funktionen wie die Uhr am Laufen zu halten, während Du die herausnehmbare Batterie wechselst. Wenn der Batteriewechsel zu lange dauert, kann diese interne Batterie leer werden, die Uhr wird zurückgesetzt und Du wirst gebeten, Zeit und Datum nach dem Einlegen der neuen Batterie neu einzugeben. In diesem Fall werden alle Einträge in AAPS, die vor dem Batteriewechsel liegen, nicht mehr in die Berechnungen aufgenommen, da die richtige Zeit nicht korrekt erkannt werden kann.
 

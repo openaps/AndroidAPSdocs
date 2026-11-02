@@ -12,7 +12,7 @@ Die AAPS-App kann auf drei Wegen erstellt werden:
 
 ### Mit einem Browser erstellen (empfohlen)
 
-You can build the app with your smartphone using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
+You can build the app in a web browser using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
 
 **[Nutze diese Anleitung.](./BrowserBuild.md)**
 

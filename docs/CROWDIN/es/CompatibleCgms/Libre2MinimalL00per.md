@@ -82,7 +82,7 @@ Te recomendamos mucho seguir este proceso con un **sensor nuevo**. Aunque se ha 
 
 (minimallooper-started-sensor)=
 
-### ¿Y si mi sensor ya está iniciado? ¿Puedo recibir lecturas en xDrip igualmente? ¡SÍ!
+### ¿Y si mi sensor ya está iniciado? Can I still get readings in xDrip? ¡SÍ!
 
 Mucha gente ha preguntado si este método se puede usar con un sensor que ya está activo, y puedo decir con un claro **SÍ**: puedes iniciar un sensor que ya está funcionando.
 
@@ -94,7 +94,7 @@ Mucha gente ha preguntado si este método se puede usar con un sensor que ya est
 
 ## Cómo iniciar un sensor FSL2 en modo Bluetooth directo con LL y xDrip
 
-*NOTA: si en las capturas de pantalla hay ajustes que no están marcados con un RECUADRO y están DESMARCADOS (es decir, desactivados), MANTENLOS DESACTIVADOS. Las capturas de pantalla muestran una configuración que funciona para TODOS los ajustes que aparecen. Si quieres probar a activar o desactivar otras funciones cuando ya tengas un sensor que funciona, puedes hacerlo bajo tu propio riesgo.*
+*NOTA: si en las capturas de pantalla hay ajustes que no están marcados con un RECUADRO y están DESMARCADOS (es decir, desactivados), MANTENLOS DESACTIVADOS. Las capturas de pantalla muestran una configuración que funciona para TODOS los ajustes que aparecen. If you want to experiment turning other features on/off after you have a working sensor, you are free to do so at your own risk.*
 
 (minimallooper-step1)=
 
@@ -253,7 +253,7 @@ En la pantalla **Start New Sensor**, pulsa **Start Sensor**. Aparecerá la pregu
 
 ### Paso 7: esperar 60 segundos y escanear el sensor de nuevo por NFC
 
-Hace falta un segundo escaneo NFC para **AÑADIR** el sensor como el dispositivo Bluetooth del que xDrip obtendrá las lecturas. Al terminar, verás una notificación que dice **NEW SENSOR STARTED**.
+A second NFC scan is needed in order to **ADD** the sensor as the Bluetooth device that xDrip will use to retrieve the readings. Al terminar, verás una notificación que dice **NEW SENSOR STARTED**.
 
 ![Escaneo de xDrip](../images/minimal00per/xdripscan2.png)
 
@@ -288,7 +288,7 @@ Cambiará los ajustes Bluetooth de xDrip a:
 
 ### Paso 9: comprobar que el sensor está conectado y envía datos
 
-Pulsa el menú hamburguesa en la parte superior izquierda de la pantalla principal de xDrip y selecciona **System Status**. En la pantalla System Status, el campo activo **Bluetooth Device:** muestra el nombre Bluetooth del FSL2 con el formato **ABB___XXXXXXXXXXX**, donde las X son el número de serie del sensor. El campo **Connection Status** muestra **Connected** y el campo **Sensor Start:** muestra la hora en que se inició el sensor.
+Pulsa el menú hamburguesa en la parte superior izquierda de la pantalla principal de xDrip y selecciona **System Status**. En la pantalla System Status, el campo activo **Bluetooth Device:** muestra el nombre Bluetooth del FSL2 con el formato **ABB___XXXXXXXXXXX**, donde las X son el número de serie del sensor. The **Connection Status** field displays **Connected** and the **Sensor Start:** field displays the time the sensor was started.
 
 ![Escaneo de xDrip](../images/minimal00per/xdripSSlog.png)
 
@@ -301,8 +301,8 @@ En la pantalla **BT Device** (desliza a la izquierda) puedes ver más detalles d
 - **Phone Service State:** la última vez que el teléfono hizo una conexión BT con el sensor (debe ser hace menos de 5 minutos)
 - **Bluetooth Device:** muestra el estado actual de la conexión (**Connected** o **Disconnected**)
 - **Device Mac Address**: es el ID de hardware del sensor
-- **Bluetooth Pairing**: debe decir **<u>Disabled, tap to enable</u>**. Ten cuidado de NO tocarlo. Si lo tocas por error, tócalo de nuevo hasta que vuelva a desactivado.
-- **Slowest wake up**: puedes ignorarlo. xDrip no pasa el tiempo esperando lecturas: empieza a esperarlas después de un tiempo determinado (normalmente 5 minutos). Si en ese momento no llegan datos, verás "Woke up early", que significa que xDrip esperaba que hubiera datos, pero no hay ninguno. Slowest wake up es el mayor retraso que hubo antes de recibir datos con normalidad.
+- **Bluetooth Pairing**: This should be **<u>Disabled, tap to enable</u>**. Ten cuidado de NO tocarlo. Si lo tocas por error, tócalo de nuevo hasta que vuelva a desactivado.
+- **Slowest wake up**: puedes ignorarlo. xDrip doesn't spend its time waiting for readings: it will start expecting them after a certain time (traditionally 5 minutes). Si en ese momento no llegan datos, verás "Woke up early", que significa que xDrip esperaba que hubiera datos, pero no hay ninguno. Slowest wake up es el mayor retraso que hubo antes de recibir datos con normalidad.
 - **Next Wake up**: debe decir 5 minutos
 
 ![Escaneo de xDrip](../images/minimal00per/xdripSStat.png)
@@ -313,7 +313,7 @@ En la pantalla **BT Device** (desliza a la izquierda) puedes ver más detalles d
 
 - **Usar escaneos NFC de LL DESPUÉS de completar la vinculación/emparejamiento en xDrip**: puedes hacer escaneos NFC, pero primero tiene que terminar el proceso de vinculación/emparejamiento con xDrip. Mira siempre xDrip y comprueba si está cerca de la lectura de 5 minutos (por ejemplo, hace 4 minutos). Si está cerca de 5 min, espera a que llegue la nueva lectura BT y después haz el escaneo NFC. Si lo haces en mal momento, alterarás el proceso BT de xDrip y no recibirás lecturas BT. Puede tardar un rato en volver a vincularse y transmitir, y a veces LL puede «robar» la conexión BT del sensor. Sin embargo, entre estas lecturas por BT no he tenido problemas al hacer un escaneo NFC y desactivar la app justo después. No sé si hay que desactivar LL cada vez, pero yo la desactivo para ir sobre seguro.
 
-- - **¿Qué está pasando?** Cuando se hace una conexión Bluetooth, se crea una clave privada compartida que se necesita para la comunicación entre el sensor y la aplicación o dispositivo que lo llama. Es muy probable que la app LL o el lector creen una nueva clave privada compartida para la comunicación durante la conexión. Esto significa que, después de la vinculación, xDrip no conoce la nueva clave y no podrá comunicarse con el sensor.
+- **What is going on?** When a Bluetooth connection is made a private shared key is created that is needed to allow communication between the sensor and the calling application/device. Es muy probable que la app LL o el lector creen una nueva clave privada compartida para la comunicación durante la conexión. Esto significa que, después de la vinculación, xDrip no conoce la nueva clave y no podrá comunicarse con el sensor.
 
   - Varios usuarios han informado de que la app LL se puede volver a iniciar después de iniciar bien el sensor y recibir lecturas en xDrip. En los permisos de Android de la app LL, solo tienes que desactivar el ajuste **Allow Location** (permitir ubicación). Cuando esté hecho, deberías poder usar la app LL y xDrip a la vez. Te recomiendo no elegir una app predeterminada para el escaneo NFC, sino elegir en cada escaneo NFC qué app quieres que lea el sensor. Además, NO OLVIDES forzar el cierre de la app LL en el próximo cambio de sensor, después del escaneo NFC inicial de calentamiento del sensor nuevo. Cuando el sensor esté configurado y recibiendo lecturas en xDrip, puedes volver a iniciar la app LL.
 
@@ -399,7 +399,7 @@ En la pantalla **BT Device** (desliza a la izquierda) puedes ver más detalles d
 - **FSL** - FreeStyle Libre
   - **Libre 1 (FSL1)** - Solo NFC. Primera versión del sensor
 
-  - **FSL2 (FSL2)** - Bluetooth y NFC. Segunda versión del sensor.
+  - **Libre 2 (FSL2)** - Bluetooth and NFC. Segunda versión del sensor.
 
   - **Libre 3 (FSL3)** - Bluetooth y NFC. Tercera versión del sensor, más pequeña. OOP2 no es compatible con él (mira Juggluco).
 
@@ -413,7 +413,7 @@ En la pantalla **BT Device** (desliza a la izquierda) puedes ver más detalles d
 
 - **OOP1** - Out of Process Algorithm versión 1 (algoritmo externo), la app de terceros que recibe los valores en bruto (enviados por el sensor a xDrip por Bluetooth o escaneo NFC) y después usa un algoritmo (muy parecido al algoritmo de hardware del chip del sensor) para procesar los valores en bruto. Devuelve a xDrip un valor de glucosa calibrado (por el algoritmo OOP1, no por las calibraciones propias de xDrip), para mostrarlo o, si hace falta, procesarlo más con la calibración de xDrip (con una medición capilar).
 
-- **OOP2** - Out of Process Algorithm versión 2 (algoritmo externo), la app de terceros que recibe los datos cifrados que envía el sensor FSL 2 (por Bluetooth o escaneo NFC) y después descifra esos datos. Una vez descifrados, los datos se envían a xDrip.
+- **OOP2** - Out of Process Algorithm version 2, the 3rd party app that receives encrypted data delivered from the FSL 2 sensor (by Bluetooth or NFC scan) and then decrypts the encrypted data. Una vez descifrados, los datos se envían a xDrip.
 
  
 
@@ -474,4 +474,4 @@ Si la edad del sensor no avanza, también puede ser señal de que tu sensor tien
 2. Menú de xDrip -> System status -> Forget device
 3. Escanea el sensor con el NFC de xDrip. Espera al menos un minuto
 4. Menú de xDrip -> Start sensor. Espera al menos un minuto
-5. Escanea el sensor con el NFC de xDrip varias veces, esperando siempre al menos un minuto entre dos escaneos
+5. Scan the sensor with xDrip NFC, a few times, always waiting at least one minute between two scans.

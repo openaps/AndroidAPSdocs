@@ -1,6 +1,6 @@
 # Μελλοντικοί (πιθανοί) οδηγοί αντλιών
 
-Αυτή είναι μια λίστα με κάποιες αντλίες που κυκλοφορούν, με την κατάσταση υποστήριξής τους σε οποιοδήποτε σύστημα κυκλώματος και μετά την κατάσταση στο AAPS. Στο τέλος υπάρχουν κάποιες πληροφορίες, τι απαιτείται για να είναι μια αντλία "ικανή για κύκλωμα".
+This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
 
     {contents} Περιεχόμενα
     :depth: 1
@@ -42,7 +42,7 @@ Tandem: t:Mobi ([Αρχική σελίδα](https://www.tandemdiabetes.com/))
 
 ### Αντλία ινσουλίνης Willcare ([Αρχική σελίδα](http://shinmyungmedi.com/en/))
 
-**Κατάσταση κυκλώματος:** Προς το παρόν δεν είναι υποψήφια για κύκλωμα, αλλά μας επικοινώνησε το προσωπικό της εταιρείας και ενδιαφέρονται να επεκτείνουν την αντλία τους ώστε να μπορεί να χρησιμοποιηθεί σε κύκλωμα (προς το παρόν νομίζω ότι λείπουν μόνο οι εντολές λήψης/ορισμού προφίλ).
+**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
 
 **Απαιτήσεις υλικού για το AAPS:** Καμία. Φαίνεται ότι έχει Bluetooth.
 

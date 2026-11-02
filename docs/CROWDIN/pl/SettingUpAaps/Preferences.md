@@ -136,7 +136,7 @@ Po wpisaniu złego hasła **AAPS** od razu się zamknie – ale nadal będzie dz
 
 - Limity bezpieczeństwa są ustawiane na podstawie wieku, który wybierzesz w tym ustawieniu.
 - Jeśli zaczynasz dochodzić do tych twardych limitów (np. maksymalny bolus), czas przejść o jeden krok wyżej.
-- Wybór wieku wyższego niż prawdziwy to zły pomysł, bo może prowadzić do przedawkowania przy wpisaniu złej wartości w oknie insuliny (np. gdy pominiesz przecinek dziesiętny).
+- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
 - Jeśli chcesz poznać dokładne wartości tych stałych limitów bezpieczeństwa, przewiń do funkcji algorytmu, której używasz, na [tej stronie](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 (Preferences-maximum-bolus)=
@@ -275,7 +275,7 @@ Zależnie od ustawień w [Konfiguracja > APS](../SettingUpAaps/ConfigBuilder.md)
 - [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) – stan algorytmu z 2017 roku
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) – najnowszy algorytm, zalecany dla początkujących
 
-Od [**AAPS** w wersji 3.3](#version3300) funkcja [Dynamiczny ISF](../DailyLifeWithAaps/DynamicISF.md) jest częścią OpenAPS SMB.
+As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -489,7 +489,7 @@ When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays
 
 Możesz pomóc w dalszym rozwoju **AAPS**, wysyłając raporty o awariach do programistów.
 
-**Automatyczny Eksport Ustawień**<br/> Gdy włączysz tę funkcję, pozwalasz **AAPS** eksportować ustawienia bez twojego udziału. W tym celu hasło główne zostanie bezpiecznie zapisane (tylko) w twoim telefonie przy następnym ręcznym eksporcie. Zapisane hasło będzie używane przez maksymalnie 4 tygodnie. Po 4 tygodniach dostaniesz powiadomienie, że hasło wkrótce wygaśnie. W okresie przejściowym 1 tygodnia możesz wtedy odświeżyć hasło, eksportując ręcznie ustawienia z menu Konserwacja.
+**Automatyczny Eksport Ustawień**<br/> Gdy włączysz tę funkcję, pozwalasz **AAPS** eksportować ustawienia bez twojego udziału. For this the master password is securely stored on your phone (only) at the next manual export. Zapisane hasło będzie używane przez maksymalnie 4 tygodnie. Po 4 tygodniach dostaniesz powiadomienie, że hasło wkrótce wygaśnie. W okresie przejściowym 1 tygodnia możesz wtedy odświeżyć hasło, eksportując ręcznie ustawienia z menu Konserwacja.
 
 Po upływie okresu przejściowego 1 tygodnia zapisane hasło wygasa, a każdy automatyczny eksport ustawień zostanie przerwany i pojawi się powiadomienie z prośbą o ponowne wpisanie hasła. [(**Automatyczne eksporty ustawień**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) będą zapisywane na listach „Portal opieki” i „Wpis użytkownika” w **AAPS**, w sekcji Leczenie.
 

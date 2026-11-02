@@ -30,7 +30,7 @@ A insulina existe em várias concentrações, definidas pelo número de unidades
 Usar uma concentração com um dispositivo que não lhe corresponde é extremamente perigoso e pode causar uma sobredosagem ou subdosagem grave. **Verifique sempre três vezes se a concentração da insulina corresponde às especificações da seringa, da caneta ou da bomba.**
 ```
 
-## Quando usar uma concentração não padrão?
+## When is a non-standard concentration used?
 
 Embora as bombas de insulina sejam feitas para insulina U100, certas situações médicas específicas exigem concentrações não padrão. Estes casos exigem extremo cuidado e uma gestão muito rigorosa.
 

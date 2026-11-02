@@ -136,7 +136,7 @@ El **Tiempo de espera de protección** define cuánto tiempo (en segundos) sigue
 
 - Los límites de seguridad se fijan según la edad que eliges en este ajuste.
 - Si empiezas a alcanzar estos límites fijos (como el bolo máximo), es el momento de subir un nivel.
-- Es mala idea elegir una edad mayor que la real, porque puede llevar a una sobredosis si se introduce un valor incorrecto en el diálogo de insulina (por ejemplo, si se olvida la coma decimal).
+- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
 - Si quieres saber los números concretos de estos límites de seguridad fijos, busca la función del algoritmo que usas en [esta página](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 (Preferences-maximum-bolus)=
@@ -275,7 +275,7 @@ Según tus ajustes en [Configuración > APS](../SettingUpAaps/ConfigBuilder.md),
 - [Advanced Meal Assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama): estado del algoritmo en 2017
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb): el algoritmo más reciente, recomendado para principiantes
 
-Desde la [versión 3.3 de **AAPS**](#version3300), la función [ISF Dinámico](../DailyLifeWithAaps/DynamicISF.md) forma parte de OpenAPS SMB.
+As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -489,7 +489,7 @@ When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays
 
 Puedes ayudar a mejorar **AAPS** enviando informes de errores (crash reports) a los desarrolladores.
 
-**Exportación de ajustes desatendida**<br/> Si activas esta función, permites que **AAPS** exporte los ajustes sin que tengas que intervenir. Para ello, la contraseña maestra se guarda de forma segura (solo) en tu teléfono en la siguiente exportación manual. La contraseña guardada se usará durante un máximo de 4 semanas. Pasadas 4 semanas, recibirás un aviso de que la contraseña está a punto de caducar. Durante un periodo de gracia de 1 semana, puedes renovar la contraseña exportando los ajustes de forma manual desde el menú de mantenimiento.
+**Exportación de ajustes desatendida**<br/> Si activas esta función, permites que **AAPS** exporte los ajustes sin que tengas que intervenir. For this the master password is securely stored on your phone (only) at the next manual export. La contraseña guardada se usará durante un máximo de 4 semanas. Pasadas 4 semanas, recibirás un aviso de que la contraseña está a punto de caducar. Durante un periodo de gracia de 1 semana, puedes renovar la contraseña exportando los ajustes de forma manual desde el menú de mantenimiento.
 
 Cuando termina el periodo de gracia de 1 semana, la contraseña guardada caduca y cualquier exportación automática de ajustes se cancela con un aviso al usuario, que le pide volver a introducir la contraseña. Las [(**exportaciones automáticas de ajustes**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) se registrarán en las listas 'Portal de cuidados' y 'Entrada de usuario' de **AAPS**, en Tratamientos.
 

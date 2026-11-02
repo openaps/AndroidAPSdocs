@@ -78,7 +78,7 @@ Siguiente paso: instala el APK de Wear en el reloj, consulta [Configurar AAPS en
 
 Al compilar la app completa de **AAPS** (y de hecho cualquier app firmada), Android Studio genera un archivo .json en la misma carpeta. Esto causa errores de [cambios sin confirmar (uncommitted changes)](#troubleshooting_androidstudio-uncommitted-changes) cuando intentas compilar la siguiente app firmada, como la app de Wear de **AAPS**. La forma más rápida de resolverlo es ir a la carpeta donde se compiló la app completa de AAPS; tu carpeta será probablemente algo como:
 
-`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\aapsclient\release.`
+`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\full\release.`
 
 Borra el archivo .json que no necesitas o muévelo fuera de la carpeta. Después intenta compilar de nuevo la app de Wear de **AAPS**. Si eso no funciona, la [guía de solución de problemas](../GettingHelp/TroubleshootingAndroidStudio.md) más detallada te ayudará a encontrar el archivo que causa el problema, que también podría ser tu archivo de almacén de claves (keystore).
 

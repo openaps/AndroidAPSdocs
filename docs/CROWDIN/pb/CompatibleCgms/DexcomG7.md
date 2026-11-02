@@ -15,7 +15,7 @@ Leia as sugestões de [Método de suavização](../CompatibleCgms/SmoothingBlood
 - Siga as instruções aqui: [xDrip G7, ONE+ e Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). É necessária uma versão recente do xDrip — veja a versão mínima na página do link.
 - Selecione xDrip em [**Configuração → Fonte de BG**](#Config-Builder-bg-source).
 
-- Ajuste as configurações do xDrip conforme as explicações da página [Configurações do xDrip](../CompatibleCgms/xDrip.md)
+- Ajuste as configurações do xDrip conforme as explicações da página [Configurações do xDrip](../CompatibleCgms/xDrip.md).
 
 ## 2. Build Your Own Dexcom App (só G7)
 
@@ -30,7 +30,7 @@ O Dexcom BYODA é agora uma versão muito antiga do app e não pode ser atualiza
 -   Desinstale o app original da Dexcom
 -   Instale o apk baixado
 -   Digite o código do sensor no app modificado
--   Após pouco tempo, o BYODA deve captar o sinal do transmissor
+-   After a short time BYODA should pick up the sensor signal.
 
 (DexcomG7-xdrip-companion-app)=
 

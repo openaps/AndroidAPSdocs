@@ -76,7 +76,7 @@ Ovládač automaticky nastavuje čas na pumpe podľa času na telefóne.
 
 Pri zmene časového pásma zostáva história neporušená, ovplyvnená môže byť iba TDD. Ručná zmena času v telefóne môže spôsobiť problémy s históriou a **IOB**. Ak čas zmeníte ručne, dôkladne skontrolujte **IOB**.
 
-Pri zmene časového pásma alebo času sa bežiace **dočasné bazály (TBR)** zastavia.
+When the time zone or time changes running **TBRs** are stopped.
 
 (time-adjustment-daylight-savings-time-dst)=
 
@@ -108,8 +108,8 @@ Ak podávate bolus pomocou kalkulačky **AAPS**, nepoužívajte údaje **COB** a
 
 ### Letný čas pri Omnipod Dash
 
-* Buď nechajte **AAPS**, aby po prechode na letný čas dočasne prešiel na bazálny inzulín, ako je vysvetlené vyššie.
-* Alebo, ak nechcete, aby **AAPS** v noci dočasne prešiel na bazálny inzulín, môžete zmeniť časové pásmo deň pred prechodom na letný čas a vyhnúť sa tak nočnému prerušeniu. UPOZORNENIE: TÁTO MOŽNOSŤ MÔŽE SPÔSOBIŤ PREDČASNÉ UKONČENIE ŽIVOTNOSTI PODU. AK SI ZVOLÍTE NASLEDUJÚCU MOŽNOSŤ, MAJTE PRI SEBE NÁHRADNÝ MATERIÁL.
+* Either allow **AAPS** to temporarily default to background basal after DST has taken place as explained above.
+* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day before DST is due to take place to avoid overnight disruption. UPOZORNENIE: TÁTO MOŽNOSŤ MÔŽE SPÔSOBIŤ PREDČASNÉ UKONČENIE ŽIVOTNOSTI PODU. AK SI ZVOLÍTE NASLEDUJÚCU MOŽNOSŤ, MAJTE PRI SEBE NÁHRADNÝ MATERIÁL.
 
 #### Čo treba urobiť pred zmenou času
 
@@ -129,6 +129,6 @@ Ak podávate bolus pomocou kalkulačky **AAPS**, nepoužívajte údaje **COB** a
 
 3. V **AAPS** obnovte stav pumpy a prepnite sa na požadovaný **profil**.
 
-4. Skontrolujte **IOB** a **COB** v **AAPS** a ak nie sú presné, vypnite **okruh** aspoň na jednu dobu pôsobenia inzulínu (DIA) alebo maximálny čas absorpcie sacharidov – podľa toho, čo je dlhšie.
+4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA or the maximum carb absorption time (**Absorption max time**), whichever is longer.
 
 5. Čo treba spraviť po zmene času. Na návrat k miestnemu časovému pásmu je vhodný čas s nízkym **IOB**. Napr. hodinu pred jedlom, napríklad pred raňajkami. Ideálne by mali byť **COB** aj **IOB** blízko nuly.

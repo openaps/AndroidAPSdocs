@@ -9,7 +9,7 @@ Seja qual for o sistema de CGM que você usa, se você for fazer calibração co
 -   Evite calibrar quando os níveis de glicose estão subindo ou descendo.
 -   Faça calibrações "suficientes" – nos apps oficiais, você será solicitado a fazer verificações uma ou duas vezes por dia. Em sistemas DIY isso pode não acontecer, e você deve ter cuidado ao continuar sem calibrações.
 -   Para sensores que não precisam ou não permitem calibração, verifique a glicemia real (no sangue) pelo menos uma vez por dia. O AAPS será tão seguro quanto as leituras do seu sensor forem confiáveis.
--   Se possível, calibre com algumas leituras numa faixa mais baixa (4–5 mmol/l ou 72–90 mg/dl) e algumas num nível um pouco mais alto (7–9 mmol/l ou 126–160 mg/dl), pois isso dá uma faixa melhor para a calibração de ponto/inclinação.
+-   If at all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
 
 ## Aplicação do sensor (G6)
 
@@ -38,4 +38,4 @@ Você pode tentar mudar as configurações de bloqueio de ruído no xDrip (Setti
 
 ![Idade do sensor na linha Sensor do painel de status expandido](../images/main/main_status_row_expanded.png)
 
-A idade do sensor é mostrada na linha **Sensor** do painel de status na tela principal (toque na seta para expandir). Uma idade negativa ocorre se houver um registro "Inserção do sensor" de CGM duplicado no [CarePortal](#aaps-screens-careportal) ou um registro de inserção do sensor com data errada. Abra **Histórico de tratamentos** (menu ☰), selecione a aba **CarePortal** e apague o registro errado.
+A idade do sensor é mostrada na linha **Sensor** do painel de status na tela principal (toque na seta para expandir). A negative age occurs if there is either a double "Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Abra **Histórico de tratamentos** (menu ☰), selecione a aba **CarePortal** e apague o registro errado.

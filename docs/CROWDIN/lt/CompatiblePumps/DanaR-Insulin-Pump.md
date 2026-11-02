@@ -15,7 +15,7 @@
 ![DanaR pompa](../images/danar1.png)
 
 * Eikite Main Menu > Setting > Discovery
-* Telefone eikite į Bluetooth nustatymus, nuskaitykite aptinkamus prietaisus, pasirinkite savo DanaR pompos serijos numerį ir įveskite slaptažodį (sujungimo slaptažodis yra 0000). Jei telefonas neaptinka pompos, paleiskite telefoną iš naujo, išimkite DanaR bateriją, pakeiskite ją nauja ir pakartokite šiuos du žingsnius.
+* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). Jei telefonas neaptinka pompos, paleiskite telefoną iš naujo, išimkite DanaR bateriją, pakeiskite ją nauja ir pakartokite šiuos du žingsnius.
 
 * In **AAPS**, open the **menu** (☰) in the top-left corner, go to **Configuration** > **Pump** and select the type of DanaR you have (**DanaR**, **DanaR Korean** or **DanaRv2**).
   

@@ -19,7 +19,7 @@ Du bør ha realistiske forventninger til hva du kan oppnå når du velger et **m
 
 Et **midlertidig mål** kan trenge omtrent 30 minutter eller mer for å nå ønsket **BS**-mål. **AAPS** kan ikke nå et **BS**-mål med én gang, og du bør huske på dette når du velger et **midlertidig mål**.
 
-Avsnittene nedenfor oppsummerer **midlertidig mål Aktivitet**, **midlertidig mål Spise snart** og **midlertidig mål Hypo**. Verdiene som vises, er standardverdiene — du kan [tilpasse hver forhåndsinnstilling](#TempTargets-change-preset-defaults) til dine egne behov.
+Avsnittene nedenfor oppsummerer funksjonene i **midlertidig mål Aktivitet**, **midlertidig mål Spise snart** og **midlertidig mål Hypo**. Verdiene som vises, er standardverdiene — du kan [tilpasse hver forhåndsinnstilling](#TempTargets-change-preset-defaults) til dine egne behov.
 
 ### TT - Aktivitet
 
@@ -193,9 +193,9 @@ Noen ganger stiger **BS** raskt når du har spist karbohydrater mot føling, og 
 
 Noen brukere vil unngå at det gis **SMB-er** mens **midlertidig mål Hypo** er aktivt. Dette gjør du ved å slå av *«Aktiver SMB ved høyt midlertidig mål»* i **Innstillinger** → **OpenAPS SMB** (se lenger ned):
 
-- I (Avansert, opplæringsmål 9): du kan slå på *«Høyt midlertidig mål øker sensitivitet»* for **midlertidige mål** på 100 mg/dL (5,6 mmol/L) eller høyere i OpenAPS SMB, så blir **AAPS** mer sensitiv.
+- Avansert, opplæringsmål 9: du kan slå på *«Høyt midlertidig mål øker sensitivitet»* for **midlertidige mål** på 100 mg/dL (5,6 mmol/L) eller høyere i OpenAPS SMB, så blir **AAPS** mer sensitiv.
 
-- I (Avansert, opplæringsmål 9): du kan slå av *«Aktiver SMB ved høyt midlertidig mål»*, slik at **AAPS** ikke gir SMB-er mens høye midlertidige mål er aktive, selv om **AAPS** har COB > 0, «Aktiver SMB ved lavt midlertidig mål» eller «Aktiver SMB alltid» er på og OpenAPS SMB er aktiv.
+- Avansert, opplæringsmål 9: du kan slå av *«Aktiver SMB ved høyt midlertidig mål»*, slik at **AAPS** ikke gir SMB-er mens høye midlertidige mål er aktive, selv om **AAPS** har COB > 0, «Aktiver SMB ved lavt midlertidig mål» eller «Aktiver SMB alltid» er på, og OpenAPS SMB er aktiv.
 
 Merk: hvis du åpner **Karbo-dialogen** mens blodsukkeret ditt er under 72 mg/dL eller 4 mmol/L, velger **AAPS** bryteren **Start midlertidig mål Hypo** automatisk på forhånd.
 
@@ -221,7 +221,7 @@ I tillegg: hvis *«Aktiver SMB ved høyt midlertidig mål»* er slått av, gir *
 
 **Midlertidig mål Spise snart** kan hjelpe til med å senke **BS** forsiktig og sørge for at det er nok **IOB** før du spiser.
 
-Dette kan være et viktig verktøy for brukere som ikke gir bolus på forhånd, men hvor godt **midlertidig mål Spise snart** virker, avhenger av flere faktorer, blant annet innstillingene dine, om du spiser lite karbohydrater, og om du bruker et hurtigvirkende insulin (som Fiasp eller Lyumjev) for å slippe å gi bolus på forhånd. Til du har fått erfaring med **AAPS**, bør du som regel regne med å gi bolus på forhånd når du bruker **midlertidig mål Spise snart**, særlig hvis du spiser mye karbohydrater.
+Dette kan være et viktig verktøy for brukere som ikke gir forhåndsbolus, men effekten av **midlertidig mål Spise snart** avhenger av flere faktorer, blant annet innstillingene dine, om du spiser lavkarbo, og om du bruker et hurtigvirkende insulin (som Fiasp eller Lyumjev) for å slippe å gi forhåndsbolus. Normalt bør du regne med å gi forhåndsbolus når du bruker **midlertidig mål Spise snart**, til du har fått erfaring med **AAPS**. Dette gjelder særlig hvis du spiser mye karbohydrater.
 
 Du kan lese mer om «Eating soon mode» i artikkelen ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) (engelsk) eller [her](https://diyps.org/tag/eating-soon-mode/).
 

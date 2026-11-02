@@ -1,6 +1,6 @@
 # Posibles (futuros) drivers para Bombas
 
-Esta es una lista de algunas bombas que existen, con el estado de su soporte en los distintos sistemas de lazo y luego su estado en AAPS. Al final hay alguna información, de lo que se requiere para que una bomba pueda ser utilizada para "Lazos Cerrados".
+This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
 
     {contents} Índice
     :depth: 1
@@ -42,7 +42,7 @@ Tandem: t:Mobi ([página web](https://www.tandemdiabetes.com/))
 
 ### Bomba de insulina Willcare ([página web](http://shinmyungmedi.com/en/))
 
-**Estado del lazo:** Por ahora no es candidata para el lazo, pero su personal nos ha contactado y están interesados en ampliar su bomba para que funcione con el lazo (por ahora creo que solo le faltan los comandos para leer y establecer el perfil).
+**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
 
 **Requisitos de hardware para AAPS:** ninguno. Parece estar habilitado para BT.
 

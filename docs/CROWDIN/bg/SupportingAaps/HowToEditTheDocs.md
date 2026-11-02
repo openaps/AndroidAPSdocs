@@ -2,7 +2,7 @@
 
 **Това описание е само за редактиране на документацията на английски език. Цялата нова информация трябва първо да се добави на английски език. Ако искате да превеждате на други езици (благодарим ви), моля, използвайте [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-За съвети как да форматирате текст (заглавие, удебелен шрифт...) и да добавяте връзки, вижте раздела [„Синтаксис на кода“](#code-syntax) на тази страница.
+For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
 
 ## Общи
 
@@ -34,11 +34,11 @@
 
 3. Всеки от двата варианта в стъпка 2 ще създаде нов клон във ВАШЕТО хранилище (repository), където ще се запазят промените ви. Направете промените си във файла.
 
-За страниците на документацията използваме Markdown. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Внимавайте да използвате правилния синтаксис, както е [описано по-долу](#code-syntax).
+За страниците на документацията използваме Markdown. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
 
 ![Клон за редактиране](../images/PR3.png)
 
-4. Вие работите в раздела „<>Edit file“. Изберете раздела „Preview changes“, за да погледнете промените отново и да се уверите, че всичко изглежда така, както сте искали (проверете и за правописни грешки). Ако видите, че нещо трябва да се подобри, върнете се в раздела за редактиране и направете още подобрения. 
+4. Вие работите в раздела „<>Edit file“. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Ако видите, че нещо трябва да се подобри, върнете се в раздела за редактиране и направете още подобрения. 
 
 ![Режим на преглед](../images/PR5.png)
 
@@ -54,7 +54,7 @@
 
 ![Проследяване на PR](../images/PR7.png)
 
-П.П.: Вашият fork и клон ще останат във вашия личен профил в GitHub. След като получите известие, че вашият PR е слят, можете да изтриете клона си, ако вече не ви трябва (зоната за известия от стъпка 8 ще ви даде връзка за изтриване на клона, след като PR бъде затворен или слят). При бъдещи промени, ако следвате тази процедура, промените винаги ще започват от актуална версия на хранилищата на AndroidAPSdocs. Ако изберете друг начин да започнете PR (например като редактирате, започвайки от клона master на вашето fork хранилище), първо трябва да се уверите, че хранилището ви е актуално, като направите „compare“ и слеете всички промени, направени след последното обновяване на вашия fork. Тъй като хората често забравят да обновяват хранилищата си, препоръчваме да използвате описания по-горе процес за PR, докато свикнете да правите „compare“.
+П.П.: Вашият fork и клон ще останат във вашия личен профил в GitHub. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). При бъдещи промени, ако следвате тази процедура, промените винаги ще започват от актуална версия на хранилищата на AndroidAPSdocs. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Тъй като хората често забравят да обновяват хранилищата си, препоръчваме да използвате описания по-горе процес за PR, докато свикнете да правите „compare“.
 
 (edit-the-docs-code-syntax)=
 
@@ -69,7 +69,7 @@ Markdown е много прост език за форматиране на те
 Идеята е, че
 
 - авторът трябва първо да мисли за текста, а не за форматирането,
-- текстът в Markdown може да се използва с различни инструменти за Markdown, вместо например със собственически инструменти като Microsoft Windows, и
+- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
 - можете да създавате няколко изходни формата от един файл в Markdown.
 
 Markdown не е 100 % фиксиран стандарт и се опитваме да сме възможно най-близо до стандарта, за да
@@ -219,9 +219,9 @@ Furthermore you can add collapsing notes for detailed information, so that users
     Това е предупреждение.
     
 
-    ```{admonition} Заглавие на предупреждението
+    ```{admonition} Warning headline
     :class: warning
-    Това е предупреждение.
+    This is a warning.
     ```
     
     #### Сгъваеми бележки
@@ -244,7 +244,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 ## Таблици
 
-Избягвайте таблици с дълги текстове, защото съдържанието им е трудно за оформяне в Markdown, обикновено не се побират в ширината на екрана на мобилен телефон и вероятно няма да изглеждат по същия начин след превод.
+Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
 
 ## Ръководство за стил
 
@@ -262,9 +262,9 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 Използвайте прост английски език навсякъде, където е възможно. Това помага на читателите, за които английският не е роден език, и улеснява превода на документите на AAPS на други езици. Пишете като в разговор с потребителя – представете си, че седите на бюрото срещу човека, за когото пишете. Запомнете – повечето потребители на AAPS нямат опит в програмирането. Самият диабет също има много специфични термини и съкращения. Имайте предвид, че някои хора може да са диагностицирани наскоро, може да нямат вашия опит с диабета или да са получили различно обучение за диабета. Ако използвате съкращение, изпишете го изцяло първия път, когато го използвате, и поставете съкращението веднага след него в скоби, например „super micro bolus (SMB)“. Също така добавете връзка към речника. Технически термини, които може да не са познати на читателя, също могат да се добавят в скоби.
 
-Вместо: *“What causes high postprandial BG peaks in closed loop?"*
+Instead of: *“What causes high postprandial BG peaks in closed loop?”*
 
-Използвайте: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
+Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
 
 ##### Използвайте прости думи, които всеки може да разбере
 
@@ -296,7 +296,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 Командите са най-бързият начин да дадете инструкции, но авторите понякога се страхуват да дават команди и пишат „you should do this“ вместо просто „do this“. Може би хората се притесняват, че командите звучат твърде грубо. Често можете да решите това, като поставите думата „please“ (моля) отпред. Ако обаче нещо задължително трябва да се направи, по-добре е да не казвате „please“, защото това дава на читателя възможност да откаже.
 
-Вместо: *“You should just think of it as a complete statement."*
+Instead of: *“You should just think of it as a complete statement.”*
 
 Използвайте: *“Think of it as a complete statement.”*
 
@@ -310,7 +310,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 Пример за **глагол в страдателен залог**:
 
-- *“The insulin (subject) is delivered (verb) by the pump (object)”*
+- *“The insulin (subject) is delivered (verb) by the pump (object).”*
 
 *“delivered”* is a passive verb here. Подлогът и допълнението са разменени в сравнение с изречението с деятелен залог. Трябваше да направим изречението по-дълго, като добавихме „is“ и „by the“. Помислете също дали да не започнете с глагола в деятелен залог.
 
@@ -453,7 +453,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 - КАК да (HOW-to)
 
-- разказвачът говори директно на читателя: In this tutorial **you** will
+- narrator directly talks to the reader: In this guide **you** will
 
 - Бъдеще време -> за да покажете крайната цел
 

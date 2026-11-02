@@ -26,7 +26,7 @@ Os eCarbs na tela principal: o número entre parênteses no campo **COB** mostra
 
 No [Assistente de Bólus](#aaps-screens-bolus-wizard), três botões abaixo do campo **Carboidratos** permitem escolher a velocidade de absorção da sua refeição. Escolha um antes de confirmar. Dependendo do tipo, o **AAPS** usa uma parte dos carboidratos que você digitou como carboidratos normais e adiciona [carboidratos estendidos ("eCarbs")](#Extended-Carbs-extended-carbs-ecarbs) mais tarde para refeições lentas e pesadas. Toque no ícone **(i)** ao lado dos botões para ver os alimentos típicos do tipo selecionado e o que ele faz com os seus carboidratos.
 
-| Tipo             | Alimentos típicos (como listados no app)                                                                              | Carboidratos agora, usados para o bólus | eCarbs adicionados                                        |
+| Tipo             | Typical foods (examples from the app)                                                                                 | Carboidratos agora, usados para o bólus | eCarbs adicionados                                        |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | --------------------------------------------------------- |
 | **Pão** (padrão) | Pão, salgados, iogurte, frutas, batatas, arroz, aveia, legumes                                                        | 100%                                    | None                                                      |
 | **Bolo**         | Bolinhos, massas, pratos asiáticos ricos em carboidratos e gorduras, doces e massas fermentadas, cereais, mel, geleia | 90%                                     | 20%, começando 60 minutos depois, distribuídos em 2 horas |
@@ -60,7 +60,7 @@ Para começar mais rápido, o *Assistente de Bólus* pode adicionar eCarbs para 
 **Notas importantes:** Claro que você vai precisar testar e ver quais valores concretos funcionam para você. Você também pode ajustar com cuidado a configuração *Máximo de minutos de basal para limitar o SMB* para deixar o algoritmo mais ou menos agressivo. Em refeições com pouco carboidrato e muita gordura/proteína, pode bastar usar apenas eCarbs, sem bólus manuais (veja o post do blog acima). Quando os eCarbs são gerados, uma anotação do Careportal também é criada para registrar todas as entradas. Isso facilita repetir e melhorar as entradas.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## Bólus estendido e por que ele não funciona em um loop fechado?
+## Extended boluses and why they don't work in a closed-loop environment
 
 Como dito acima, os bólus estendidos ou de onda múltipla não funcionam bem em um loop fechado. [Veja abaixo](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) para mais detalhes
 

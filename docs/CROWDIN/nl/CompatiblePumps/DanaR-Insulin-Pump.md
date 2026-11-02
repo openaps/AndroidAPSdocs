@@ -15,7 +15,7 @@
 ![DanaR pomp](../images/danar1.png)
 
 * Ga naar Main Menu > Setting > Discovery
-* Ga in de instellingen van je telefoon naar Bluetooth, zoek naar apparaten in de buurt, selecteer het serienummer van je DanaR en voer je wachtwoord in (het koppelwachtwoord is 0000). Als jouw telefoon de DanaR niet laat zien bij het scannen, herstart dan je telefoon en haal de DanaR batterij eruit, stop hem er weer in en herhaal deze twee stappen.
+* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). Als jouw telefoon de DanaR niet laat zien bij het scannen, herstart dan je telefoon en haal de DanaR batterij eruit, stop hem er weer in en herhaal deze twee stappen.
 
 * Open in **AAPS** het **menu** (☰) linksboven, ga naar **Configuratie** > **Pomp** en selecteer het type DanaR dat je hebt (**DanaR**, **DanaR Koreaans** of **DanaRv2**).
   

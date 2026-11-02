@@ -9,7 +9,7 @@ Quel que soit le système MGC que vous utilisez, si vous souhaitez faire un cali
 -   Évitez de calibrer lorsque la glycémie monte ou descend.
 -   Faites « assez » de calibrations : dans les applications officielles, une vérification une ou deux fois par jour vous sera demandée. Sur les systèmes DIY, vous pouvez ne pas être sollicités pour calibrer, mais soyez prudents si vous continuez sans calibration.
 -   Pour les capteurs qui ne demandent pas ou ne permettent pas de calibration, vérifiez votre vraie glycémie au moins une fois par jour. AAPS sera aussi sûr que les valeurs de votre capteur sont fiables.
--   Si possible, calibrez avec certaines valeurs dans une plage basse (4–5 mmol/l ou 72–90 mg/dl) et d'autres à un niveau un peu plus haut (7–9 mmol/l ou 126–160 mg/dl), car cela donne une meilleure plage pour la calibration point/pente.
+-   If at all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
 
 ## Réglage du capteur (G6)
 
@@ -38,4 +38,4 @@ Vous pouvez essayer de changer les paramètres de blocage du bruit dans xDrip (S
 
 ![Âge du capteur sur la ligne Capteur du panneau d'état développé](../images/main/main_status_row_expanded.png)
 
-L'âge du capteur est affiché sur la ligne **Capteur** du panneau d'état de l'écran principal (appuyez sur le chevron pour le développer). Un âge négatif apparaît s'il y a soit une double [saisie Careportal](#aaps-screens-careportal) « Insertion Capteur », soit une insertion de capteur avec une mauvaise date. Ouvrez **Historique Traitements** (menu ☰), sélectionnez l'onglet **Careportal** et supprimez la mauvaise saisie.
+L'âge du capteur est affiché sur la ligne **Capteur** du panneau d'état de l'écran principal (appuyez sur le chevron pour le développer). A negative age occurs if there is either a double "Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Ouvrez **Historique Traitements** (menu ☰), sélectionnez l'onglet **Careportal** et supprimez la mauvaise saisie.

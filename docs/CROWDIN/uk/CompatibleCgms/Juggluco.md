@@ -36,6 +36,6 @@ Juggluco може надсилати значення глюкози крові 
 
 Увімкніть Patched Libre у Juggluco (не вмикайте xDrip broadcast), підтвердьте та збережіть інформацію про пакет dexdrip. Виберіть в AAPS джерело даних ГК xDrip.
 
-Застосуйте достатнє [згладжування](./SmoothingBloodGlucoseData.md) в AAPS, якщо потрібно. З сенсором Libre 2/2+/3/3+ xDrip усереднює щохвилинні значення до 5-хвилинних і [також згладжує](#libre2-value-smoothing-raw-values) їх.
+Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary. When using a Libre 2/2+/3/3+ sensor, xDrip will average the minute-by-minute readings to 5-minute readings and [also smooth](#libre2-value-smoothing-raw-values) them.
 
 ![Juggluco → xDrip](../images/juggluco/Juggluco-xDrip+.png)

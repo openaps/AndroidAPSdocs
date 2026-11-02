@@ -70,8 +70,8 @@ Dans **AAPS** 4, l'insuline n'est plus un plugin à sélectionner dans **Configu
 
 L'éditeur d'insuline vous permet de :
 
-* donner au profil un **Nom de l'insuline** facile à reconnaître,
-* régler le **Pic** (délai jusqu'à l'activité maximale de l'insuline, en minutes) et la **DAI** (durée d'action de l'insuline, en heures), en tapant la valeur ou avec les boutons **–** / **+**,
+* give the insulin an **Insulin nickname** so it is easy to recognise,
+* set the **Peak** (time to maximum insulin activity, in minutes) and the **DIA** (Duration of Insulin Action, in hours), either by typing the value or using the **–** / **+** buttons,
 * toucher un bouton prédéfini **Charger le pic depuis** (**Novorapid** (75 min), **Fiasp** (55 min) ou **Lyumjev** (45 min)) pour remplir en une seule étape le délai du pic standard de cette insuline.
 
 Les plages autorisées sont les mêmes quelle que soit l'insuline utilisée :
@@ -225,17 +225,48 @@ Enfin, une comparaison où la DAI et le pic sont ajustés en même temps. L'idé
     - **Absence d'étalonnage** : les valeurs du capteur sont utilisées telles quelles. Utilisez cette option quand le capteur est déjà étalonné en usine et précis. C'est le réglage par défaut.
     - **Étalonnage linéaire** : **AAPS** corrige les valeurs du capteur avec une pente et un décalage qu'il calcule à partir de vos mesures au doigt.
     
-    Comment fonctionne l'**Étalonnage linéaire** :
+    How to use **Linear calibration**:
     
-    - Il faut qu'un **changement de capteur** soit enregistré, pour savoir quand la session du capteur a commencé. Les 2 premières heures d'une session sont ignorées (temps de chauffe).
-    - Il faut au moins **2 mesures au doigt**. Les mesures récentes comptent plus que les anciennes.
-    - La correction n'est appliquée que si le résultat est dans une plage sûre. Si vos mesures sont trop proches les unes des autres, seul le décalage est corrigé.
-    - **Ouvrir le plugin** affiche l'état de l'étalonnage, la pente et la correction utilisées, et la liste des mesures au doigt. Vous pouvez ajouter une mesure avec **Ajouter une calibration** et supprimer une mesure fausse.
+    1. Select **Linear calibration** in the **Calibration** category.
+    2. When you insert a new sensor, log the sensor change: use **Log sensor change** on the calibration screen, or enter a CGM sensor insert in the Careportal. This tells **AAPS** when the sensor session started. If **AAPS** notices a gap of more than 30 minutes in the readings, it may ask you to mark a sensor change; this prompt appears on the master only, not on a client.
+    3. Open the plugin and tap **Add calibration**. Enter your fingerstick value. **AAPS** pairs it with the sensor value from the last 10 minutes.
     
-    ```{admonition} Étalonnez avec prudence
+    A calibration is accepted only when:
+    
+    - a sensor change is logged and at least **2 hours** have passed since then (warm-up),
+    - your glucose is stable. If it changes too fast, the dialog tells you and shows the limit,
+    - there is a CGM reading from the last 10 minutes,
+    - it is for the current moment. You cannot enter older fingerstick values.
+    
+    How the correction works:
+    
+    - **AAPS** draws a straight line through the pairs of the current sensor: `corrected value = slope × sensor value + offset`.
+    - Newer pairs count more than older ones: a pair that is 2 days old counts about 37 %, a 4-day-old pair about 14 %. The line therefore follows your sensor as it drifts.
+    - At least **2 pairs** are needed.
+    - If the pairs are close together (less than 54 mg/dL / 3 mmol/L apart), only the values are shifted (offset, no slope).
+    - The slope is kept between 0.55 and 1.6. A slope outside this range is limited to the nearest value.
+    - Safety limit: if the correction at 100 mg/dL (5.5 mmol/L) would be more than ±30 mg/dL (1.7 mmol/L), no correction is applied. This protects you from a wrong entry.
+    
+    What it changes:
+    
+    - The corrected value is used everywhere: the BG on the main screen, the graph and the loop. The sensor readings themselves are not changed. The correction is applied on top, also to the earlier readings of the current sensor.
+    - A new sensor change starts from zero. Pairs from earlier sensors no longer count.
+    - On the graph, a calibration is shown as a marker at the fingerstick value.
+    - Calibrations are synchronized through Nightscout, so your clients show the same corrected values.
+    
+    Check and remove entries:
+    
+    - **Open plugin** shows the status (for example *Slope 0.85, mid-range correction -0.4*), a chart of your pairs with the line, and the list of entries.
+    - If an entry is wrong (for example, you had sugar on your finger), tap the bin icon next to it. The line is calculated again at once.
+    
+    ```{admonition} Using xDrip+ as BG source?
+    :class: note
+    xDrip+ has its own calibration. Calibrate in one place only, so that the sensor values are not corrected twice.
+    
+
+    {admonition} Calibrate with care
     :class: warning
-    Une valeur fausse au doigt donne des valeurs de glycémie fausses, et donc des doses d'insuline fausses. Lavez-vous les mains avant la mesure, et n'étalonnez pas quand votre glycémie change vite.
-    
+    A wrong fingerstick value leads to wrong glucose values and therefore to wrong insulin dosing. Lavez-vous les mains avant la mesure, et n'étalonnez pas quand votre glycémie change vite.
 
 ![Configuration > Calibration](../images/v4/Configuration/configuration_calibration.png)
 
@@ -274,7 +305,7 @@ Quand vous sélectionnez une autre pompe, **AAPS** vous demande de confirmer le 
 * [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 * [Carelevo](../CompatiblePumps/CareLevo.md)
 * Pompe virtuelle : boucle ouverte - suggestions d'**AAPS** uniquement 
-  * quand vous faites vos premiers pas avec **AAPS**, pendant les premiers [objectifs](../SettingUpAaps/CompletingTheObjectives.md)
+  * as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
   * pour une pompe qui n'a pas encore de pilote
 
 (config-builder-wrong-pump-data)=
@@ -295,7 +326,7 @@ Pour utiliser la nouvelle pompe, changez de pilote de pompe : sélectionnez **P
 
 Sélectionnez le type de calcul de sensibilité. Pour plus de détails sur les différentes méthodes, [lisez cette page](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Cette fonction analyse les données historiques en continu et fait des ajustements si elle détecte que vous êtes plus sensible (ou au contraire plus résistant) à l'insuline que d'habitude. Vous trouverez plus de détails sur le calcul du ratio de sensibilité lui-même dans [Fonctionnalités clés d'AAPS > Autosens](#Open-APS-features-autosens).
 
-Vous pouvez voir votre sensibilité sur l'écran principal dans un [graphique supplémentaire](#AapsScreens-section-g-additional-graphs), en sélectionnant SEN et en regardant la ligne blanche. Remarque : vous devez être à l'[Objectif 8](#objectives-objective8) pour que le calcul de sensibilité/[Autosens](#Open-APS-features-autosens) puisse ajuster automatiquement la quantité d'insuline délivrée. Avant d'atteindre cet objectif, le pourcentage Autosens et la ligne dans votre graphique sont affichés uniquement pour information.
+You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs), by selecting SENS% and watching the white line. Remarque : vous devez être à l'[Objectif 8](#objectives-objective8) pour que le calcul de sensibilité/[Autosens](#Open-APS-features-autosens) puisse ajuster automatiquement la quantité d'insuline délivrée. Avant d'atteindre cet objectif, le pourcentage Autosens et la ligne dans votre graphique sont affichés uniquement pour information.
 
 ### Paramètres d’absorption
 

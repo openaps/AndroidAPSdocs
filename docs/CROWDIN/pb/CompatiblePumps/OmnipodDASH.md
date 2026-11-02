@@ -38,16 +38,16 @@ Principais características do **Omnipod DASH** ('DASH'):
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
-- **Um telefone Android compatível** com Bluetooth Low Energy (BLE) (veja [Telefones](../Getting-Started/Phones.md) para mais informações); além disso, as informações abaixo vão ajudar você com outros pontos importantes para ativar e usar o DASH com sucesso em um telefone compatível:
+- **A Compatible Android phone** with Bluetooth Low Energy (BLE) (see [Phones](../Getting-Started/Phones.md) for more info). In addition, the following information will help guide you on other key considerations around successfully activating and using the DASH on a compatible phone:
     -  O driver Omnipod Dash do **AAPS** se conecta ao Pod DASH por Bluetooth.  
       O **AAPS** estabelece automaticamente uma nova conexão Bluetooth com o Pod toda vez que precisa enviar um comando (por exemplo, um bólus); depois de enviar o comando, a conexão Bluetooth é desconectada imediatamente.
        - **NOTA:**
          - A conexão Bluetooth pode ser interrompida/perturbada por outros dispositivos Bluetooth ligados ao telefone que executa o **AAPS**, como fones de ouvido etc. Dispositivos como esses podem causar erros de conexão ou problemas na ativação do pod em alguns modelos de telefone. É uma boa ideia ver a lista de [configurações de hardware testadas](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) para conhecer configurações que funcionam ao escolher o telefone para usar com o Omnipod DASH.
-         - Existem vários problemas conhecidos com o Bluetooth que podem causar problemas na ativação do pod (veja [Resolução de problemas](#troubleshooting) para conselhos sobre outros problemas de Bluetooth), especialmente a seção [Problemas relacionados ao Bluetooth](#omnipod-dash-bluetooth-related-issues).
+         - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#omnipod-dash-troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
     - O telefone precisa ter **Android 12 ou mais novo**, com o **AAPS** compilado e instalado seguindo as instruções de [**Compilar o APK**](../SettingUpAaps/BuildingAaps.md). Use sempre a versão mais recente lançada.
 - Um [**Monitor Contínuo de Glicose (CGM)**](../Getting-Started/CompatiblesCgms.md) compatível
 
-As instruções abaixo explicam como ativar uma nova sessão de pod usando o **AAPS**. Espere até o seu Pod atual estar perto de expirar, porque você vai precisar ativar um novo Pod com o **AAPS**. Depois que um pod é desativado, ele não pode ser reutilizado/reativado; a desativação é definitiva.
+As instruções abaixo explicam como ativar uma nova sessão de pod usando o **AAPS**. You should wait for your current Pod to be close to expiry, as you will need to activate a new Pod with **AAPS**. Depois que um pod é desativado, ele não pode ser reutilizado/reativado; a desativação é definitiva.
 
 ## Antes de começar
 
@@ -611,7 +611,7 @@ Um pod com falha não pode ser usado de novo. Verifique a sua glicose e depois [
 ---
 ### Evitar falhas do pod com erro 49
 
-Esta falha está ligada a um estado errado do pod para um comando ou a um erro durante um comando de administração de insulina. É quando o driver e o Pod não concordam sobre o estado real. O Pod (por uma medida de segurança interna) então reage com um código de erro irrecuperável 49 (0x31), e termina no que é conhecido como "screamer": o bipe longo e irritante que só pode ser parado fazendo um furo no local certo na parte de trás do Pod. Muitas vezes é difícil descobrir a origem exata de uma "falha 49 do pod". Em situações em que se suspeita que essa falha pode acontecer (por exemplo, quando o aplicativo trava, ao usar uma versão de desenvolvimento ou ao reinstalar).
+Esta falha está ligada a um estado errado do pod para um comando ou a um erro durante um comando de administração de insulina. É quando o driver e o Pod não concordam sobre o estado real. O Pod (por uma medida de segurança interna) então reage com um código de erro irrecuperável 49 (0x31), e termina no que é conhecido como "screamer": o bipe longo e irritante que só pode ser parado fazendo um furo no local certo na parte de trás do Pod. Muitas vezes é difícil descobrir a origem exata de uma "falha 49 do pod". It can happen, for example, after application crashes, when running a development version or after a re-installation.
 
 ---
 
@@ -690,7 +690,7 @@ Um resumo dos principais alertas que você pode encontrar está listado abaixo:
 - *Falha do Pod: XXX NOME*, seguido de *Ref: ...*: o pod falhou e parou de administrar insulina. Troque o pod. Veja [Falhas do Pod](#omnipod-dash-pod-failures).
 - *Nenhum Pod Ativo*: nenhuma sessão de pod foi encontrada. Esta notificação continua voltando até você ativar um novo pod. Depois que um pod é ativado, ela desaparece automaticamente.
 - *Entrega de insulina suspensa*: o pod suspendeu a administração de insulina. Veja [Retomar a administração de insulina](#omnipod-dash-resuming-insulin-delivery).
-- *A configuração do perfil basal pode ter falhado. A administração pode estar suspensa! Por favor, atualize manualmente o status do Pod na guia Omnipod e retome a entrega, se necessário.* A definição do **Perfil** basal no pod pode ter falhado. Pressione **Atualizar** na tela da bomba DASH (a mensagem ainda diz "guia Omnipod") e pressione **Reiniciar a administração** se ele for mostrado.
+- *A configuração do perfil basal pode ter falhado. A administração pode estar suspensa! Please manually refresh the Pod status on the pump screen and resume delivery if needed.* Setting the basal **Profile** on the pod may have failed. Press **Refresh** on the DASH pump screen, and press **Resume Delivery** if it is shown.
 - *Não foi possível verificar se o SMB (X U) foi bem-sucedido. Atualize o status do pod para confirmar ou negar este comando.* O **AAPS** não conseguiu confirmar que o **SMB** foi administrado. Pressione **Atualizar** na tela da bomba DASH e verifique o campo **Último bólus**.
 - *O status de administração do bólus está incerto. Atualize o status do Pod para confirmar ou negar.* O mesmo vale para um bólus normal: pressione **Atualizar** na tela da bomba DASH.
 - *Fuso horário no pod é diferente do fuso horário no telefone. A taxa de basal está incorreta. Alterne o perfil para corrigir* Veja a observação sobre horário de verão e fuso horário em [Restrições/problemas conhecidos do Omnipod DASH no AAPS](#omnipod-dash-constraints).
@@ -703,7 +703,7 @@ Todo o trabalho de desenvolvimento do DASH é feito pela comunidade de forma **v
 
 -  **Nível 0:** Leia a seção relevante desta documentação para ter certeza de que você entende como deveria funcionar a função com a qual você está tendo dificuldade.
 -  **Nível 1:** Se você ainda tem problemas que não consegue resolver com este documento, vá para o canal *#AAPS* no **Discord** usando [este link de convite](https://discord.gg/4fQUWHZ4Mw). Também existem vários grupos no Facebook e outros grupos onde você pode perguntar (veja [**Onde posso obter ajuda?**](../GettingHelp/WhereCanIGetHelp.md))
--  **Nível 2:** Pesquise as issues existentes para ver se o seu problema já foi relatado em [Issues](https://github.com/nightscout/AndroidAPS/issues) se ele existir, confirme, comente ou adicione informações sobre o seu problema. Se não, crie uma [nova issue](https://github.com/nightscout/AndroidAPS/issues) e anexe [os seus arquivos de log](../GettingHelp/AccessingLogFiles.md).
+-  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues). If it exists, please confirm/comment/add information on your problem. Se não, crie uma [nova issue](https://github.com/nightscout/AndroidAPS/issues) e anexe [os seus arquivos de log](../GettingHelp/AccessingLogFiles.md).
 -  **Tenha paciência - a maioria dos membros da nossa comunidade são voluntários de boa vontade, e resolver problemas muitas vezes exige tempo e paciência tanto dos usuários quanto dos desenvolvedores.**
 
 Ao pedir ajuda, tenha em mãos as seguintes informações para ajudar as pessoas da comunidade com as suas perguntas e problemas específicos:

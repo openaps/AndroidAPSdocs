@@ -6,7 +6,7 @@
 Dette er **steg 2** av [Nettleserbygg](BrowserBuild.md). Fullfør først [Steg 1 – Lag din GitHub-fork](BrowserBuildFork.md).
 ```
 
-AndroidAPS må signeres med private nøkler som lagres i en **Java KeyStore (JKS)**. Dette er det viktigste valget i hele prosessen, fordi det avgjør om du senere kan **oppgradere** AAPS uten å installere på nytt.
+AAPS må signeres med private nøkler som lagres i en **Java KeyStore (JKS)**. Dette er det viktigste valget i hele prosessen, fordi det avgjør om du senere kan **oppgradere** AAPS uten å installere på nytt.
 
 ```{note}
 I de neste stegene lagrer du privat informasjon (keystore-filen din, og senere Google Drive-tilgangen din) i GitHub som **secrets** (hemmeligheter). En secret er rett og slett en kryptert verdi som bare ditt eget bygg kan lese – ingen andre, ikke engang folk som ser på forken din, kan se den. Det er dette som gjør at bygget ditt forblir ditt.

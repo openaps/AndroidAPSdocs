@@ -2,7 +2,7 @@
 
 **Tento popis je pouze pro editaci anglické dokumentace. Všechny nové informace musí být přidány nejdřív v angličtině. Pokud chcete přeložit wiki do jiných jazyků (děkujeme), použijte prosím [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-Rady, jak formátovat text (nadpis, tučné písmo...) a vkládat odkazy, najdete v části [„Syntaxe kódu“](#code-syntax) na této stránce.
+For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
 
 ## Obecné
 
@@ -34,11 +34,11 @@ Nebo klikněte na ikonu tužky, která se zobrazí v horní liště obsahu strá
 
 3. Libovolnou možností v kroku 2 vytvoříte nový branch ve svém repozitáři, kde budou uloženy vaše změny. Udělejte své úpravy do souboru.
 
-Pro stránky dokumentace používáme Markdown. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Dbejte na správnou syntaxi, jak je [popsáno níže](#code-syntax).
+Pro stránky dokumentace používáme Markdown. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
 
 ![Úprava větve](../images/PR3.png)
 
-4. Pracujete v záložce "<>Edit file". Vyberte záložku „Preview changes“ (náhled změn) a podívejte se na text znovu, abyste měli jistotu, že všechno, co jste změnili, vypadá tak, jak jste chtěli (včetně překlepů). Pokud vidíte, že je potřeba další zlepšení, vraťte se zpět na záložku editace a pokračujte. 
+4. Pracujete v záložce "<>Edit file". Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Pokud vidíte, že je potřeba další zlepšení, vraťte se zpět na záložku editace a pokračujte. 
 
 ![režim náhledu](../images/PR5.png)
 
@@ -54,7 +54,7 @@ Pro stránky dokumentace používáme Markdown. The files have the suffix ".md".
 
 ![Sledování PR](../images/PR7.png)
 
-PS: Váš fork a větev zůstanou na vašem osobním účtu GitHub. Až dostanete oznámení, že váš PR byl sloučen, můžete svou větev smazat, pokud už ji nepotřebujete (v oblasti oznámení z kroku 8 bude odkaz na smazání větve, jakmile bude PR uzavřen nebo sloučen). Pro budoucí úpravy, pokud budete následovat tento postup, budou změny vždy začínat aktualizovanou verzí repozitáře AndroidAPSdocs. Pokud se rozhodnete začít PR jiným způsobem (např. úpravou, která začíná z hlavní větve master ve vašem forku), musíte zajistit, aby byl váš repozitář aktuální. Nejprve proveďte „compare“ (porovnání) a slučte všechny aktualizace, které proběhly od poslední aktualizace vašeho forku. Protože lidé často zapomínají aktualizovat svůj repozitář, doporučujeme použít pro PR proces popsaný výše, dokud se neseznámíte s detaily fungování "Compare".
+PS: Váš fork a větev zůstanou na vašem osobním účtu GitHub. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Pro budoucí úpravy, pokud budete následovat tento postup, budou změny vždy začínat aktualizovanou verzí repozitáře AndroidAPSdocs. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Protože lidé často zapomínají aktualizovat svůj repozitář, doporučujeme použít pro PR proces popsaný výše, dokud se neseznámíte s detaily fungování "Compare".
 
 (edit-the-docs-code-syntax)=
 
@@ -69,7 +69,7 @@ Autor jen například označí nadpis jako nadpis 1. úrovně a procesor Markdow
 Cílem je, aby
 
 - autor nejdřív přemýšlel o textu, a ne o formátování,
-- text v Markdownu šlo přenášet mezi různými nástroji Markdown, a ne jen v uzavřených (proprietárních) nástrojích, jako je Microsoft Windows, a
+- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
 - z jednoho souboru Markdown šlo vytvořit několik výstupních formátů.
 
 Markdown není 100% pevný standard a snažíme se držet co nejblíže standardu, abychom
@@ -219,9 +219,9 @@ Furthermore you can add collapsing notes for detailed information, so that users
     Toto je varování.
     
 
-    ```{admonition} Nadpis varování
+    ```{admonition} Warning headline
     :class: warning
-    Toto je varování.
+    This is a warning.
     ```
     
     #### Sbalitelné poznámky
@@ -244,7 +244,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 ## Tabulky
 
-Nepoužívejte tabulky s dlouhými texty. Obsah se v Markdownu špatně nastavuje, tabulky se obvykle nevejdou na šířku obrazovky mobilu a po překladu se pravděpodobně nezobrazí stejně.
+Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
 
 ## Průvodce stylem
 
@@ -262,9 +262,9 @@ Nepoužívejte tabulky s dlouhými texty. Obsah se v Markdownu špatně nastavuj
 
 Kde je to možné, používejte jednoduchou angličtinu. Pomáhá to čtenářům, pro které angličtina není rodný jazyk, a také usnadňuje překlad dokumentů AAPS do jiných jazyků. Pište s uživatelem jako v rozhovoru. Představte si, že sedíte u stolu naproti člověku, pro kterého píšete. Pamatujte, že většina uživatelů AAPS nemá programátorské znalosti. I samotný diabetes má hodně odborných výrazů a zkratek. Myslete na to, že někdo může mít diabetes krátce, nemusí mít s diabetem tolik zkušeností jako vy nebo mohl projít jiným školením o diabetu. Pokud použijete zkratku, při prvním použití ji napište celou a zkratku dejte hned za ni do závorky, například „super micro bolus (SMB)“. Také odkažte na slovníček. Do závorky můžete přidat i odborné výrazy, které čtenář nemusí znát.
 
-Místo: *“What causes high postprandial BG peaks in closed loop?"*
+Instead of: *“What causes high postprandial BG peaks in closed loop?”*
 
-Použijte: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
+Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
 
 ##### Používejte jednoduchá slova, kterým rozumí každý
 
@@ -296,7 +296,7 @@ Hlavně když nahráváte video nebo děláte snímky obrazovky, dejte pozor, ab
 
 Příkazy jsou nejrychlejší způsob, jak dát pokyn, ale autoři se jich někdy bojí a píšou “you should do this” místo prostého “do this”. Možná se lidé bojí, že příkazy zní příliš tvrdě. Často to vyřešíte tak, že před ně dáte slovo „please“ (prosím). Pokud ale něco udělat musíte, je lepší „please“ nepoužít, protože to čtenáři dává možnost odmítnout.
 
-Místo: *“You should just think of it as a complete statement."*
+Instead of: *“You should just think of it as a complete statement.”*
 
 Použijte: *“Think of it as a complete statement.”*
 
@@ -310,7 +310,7 @@ Příklad slovesa v **činném rodě**:
 
 Příklad slovesa v **trpném rodě**:
 
-- *“The insulin (subject) is delivered (verb) by the pump (object)”*
+- *“The insulin (subject) is delivered (verb) by the pump (object).”*
 
 *“delivered”* is a passive verb here. Podmět a předmět jsou proti větě v činném rodě prohozené. Větu jsme museli prodloužit o “is” a “by the”. Zvažte také, zda začít větu slovesem v činném rodě.
 
@@ -453,7 +453,7 @@ Výukový průvodce (tutorial) pomáhá žákovi získat základní dovednosti. 
 
 - JAK na to
 
-- vypravěč mluví přímo ke čtenáři: V tomto průvodci **vy** budete
+- narrator directly talks to the reader: In this guide **you** will
 
 - Budoucí čas -> ukazuje konečný cíl
 

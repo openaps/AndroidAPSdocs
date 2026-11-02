@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- 31 October 2026 : Version 4.0.0 ist veröffentlicht. Schau in die [Release Notes](#latestrelease), um zu sehen, was es Neues gibt, und führe die Schritte aus, die in der [Aktualisierungsanleitung](./Maintenance/UpdateToNewVersion.md) beschrieben sind, um entsprechend auf die neueste Version zu aktualisieren.
+ 31. Oktober 2026: Version 4.0.0 ist veröffentlicht. Schau in die [Release Notes](#latestrelease), um zu sehen, was es Neues gibt, und führe die Schritte aus, die in der [Aktualisierungsanleitung](./Maintenance/UpdateToNewVersion.md) beschrieben sind, um entsprechend auf die neueste Version zu aktualisieren.
 
 ```
 
@@ -17,7 +17,7 @@ Diese Dokumentation erklärt, wie Du **AAPS** einrichtest und nutzt. Du kannst e
 
 Abschnitt **1) „Erste Schritte“** - Die [Einführung](Getting-Started/Introduction.md) erläutert das allgemeine Konzept und die grundlegende Funktionsweise eines künstlichen Bauspeicheldrüsen-Systems (APS). Sie umreißt den Hintergrund des Loopens im Allgemeinen, warum **AAPS** entwickelt wurde, vergleicht **AAPS** mit anderen Systemen und behandelt Sicherheitsfragen. Sie gibt Vorschläge, wie Du mit Deinem Diabetes-Team über **AAPS** sprechen kannst, erklärt, warum Du die **AAPS**-App selbst erstellen musst (anstatt sie nur herunterzuladen), und gibt einen Überblick über den typischen Aufbau eines **AAPS**-Systems. Sie behandelt auch die Zugänglichkeit und wer wahrscheinlich von **AAPS** profitieren wird.
 
-[Vorbereitungen, um mit AAPS zu starten](./Getting-Started/PreparingForAaps.md) beschreibt weitere Überlegungen zur Sicherheit, den Smartphones, Sensoren (CGMs - Continuous Glucose Monitors) und Insulinpumpen, die mit **AAPS** kompatibel sind. Es gibt einen Überblick über den Prozess, den Du durchlaufen wirst, und gibt eine zeitliche Einschätzung wie lange es dauern wird bis Du alle **AAPS**-Funktionalitäten nutzen kannst. Dieser Abschnitt bereitet Dich technisch darauf vor, Deine **AAPS**-Einrichtung so schnell und effizient wie möglich abzuschließen. Der Unterabschnitt [CGM-Konfiguration](./Getting-Started/CompatiblesCgms.md) erläutert, wie die CGM-Konfiguration optimiert wird und welche Glättungsoptionen am besten sind.
+[Vorbereitungen, um mit AAPS zu starten](./Getting-Started/PreparingForAaps.md) beschreibt weitere Überlegungen zur Sicherheit, den Smartphones, Sensoren (CGMs - Continuous Glucose Monitors) und Insulinpumpen, die mit **AAPS** kompatibel sind. Es gibt einen Überblick über den Prozess, den Du durchlaufen wirst, und gibt eine zeitliche Einschätzung wie lange es dauern wird bis Du alle **AAPS**-Funktionalitäten nutzen kannst. Dieser Abschnitt bereitet Dich technisch darauf vor, Deine **AAPS**-Einrichtung so schnell und effizient wie möglich abzuschließen. Der Unterabschnitt [Kompatible Sensoren (CGMs)](./Getting-Started/CompatiblesCgms.md) erläutert, wie die CGM-Konfiguration optimal wird und welche Glättungsoptionen am besten sind.
 
 Jetzt, da Du ein solides Grundverständnis des Prozesses hast, kannst Du damit beginnen, Deinen **AAPS**-Loop zu erstellen.
 
@@ -40,7 +40,7 @@ Abschnitt **9) [Hilfe & Fehlerbehebung](GettingHelp/WhereCanIGetHelp.md)** soll 
 
 Abschnitt **10)** behandelt **[Erweiterte AAPS-Optionen](./AdvancedOptions/FullClosedLoop.md)** wie Du beispielsweise mit **AAPS** den Übergang vom Hybrid-Closed-Looping (Bolusgabe für Mahlzeiten _usw._) zum vollständigen Closed-Looping (keine Bolusgabe) hinbekommst, wie Du Dein [Profil feinjustierst](./GettingHelp/ProfileTuning.md), Du Autotune nutzt und detailliert Entwickler- und Engineering-Modi. Die meisten kommen sehr gut mit der Haupt- oder "Master"-Version von **AAPS** zurecht, ohne sich mit diesen (Entwickler-)Optionen zu befassen. Dieser Abschnitt richtet sich an Benutzende, die bereits eine gute Kontrolle haben und ihre Einstellungen weiter verbessern möchten.
 
-Im Abschnitt **11) [Das AAPS-Projekt unterstützen](SupportingAaps/HowToEditTheDocs.md)** erklären wir, wie Du das Projekt unterstützen und weiter voranbringen kannst. Du kannst Geld oder Geräte spenden oder Dein Fachwissen einbringen. Du kannst Änderungen an der Dokumentation vorschlagen oder selber machen, Du kannst bei der [Übersetzung der Dokumentation](SupportingAaps/Translations) unterstützen und Du kannst Deine Daten über das Open-Humans-Projekt zur Verfügung stellen.
+Im Abschnitt **11) [Das AAPS-Projekt unterstützen](SupportingAaps/HowCanIHelp.md)** erklären wir, wie Du das Projekt unterstützen und weiter voranbringen kannst. Du kannst Geld oder Geräte spenden oder Dein Fachwissen einbringen. Du kannst Änderungen an der Dokumentation vorschlagen oder selber machen, Du kannst bei der [Übersetzung der Dokumentation](SupportingAaps/Translations.md) unterstützen und Du kannst Deine Daten über das Open-Humans-Projekt zur Verfügung stellen.
 
 Im Abschnitt **12) Ressourcen** finden sich archivierte und auch zusätzliche Dokumentation, sowie ein Unterabschnitt für [Mediziner und Fachpersonal](UsefulLinks/ClinicianGuideToAaps.md), das sich für die Open-Source-Technologie der künstlichen Bauchspeicheldrüse wie **AAPS** interessiert und für Patienten und Patientinnen, die diese Informationen mit ihren Ärzt*innen und Diabetesberater*innen teilen möchten. Der Abschnitt enthält auch zusätzliche Referenzen und Ressourcen rund um das Thema Diabetes und Looping. Dazu gehört auch das [Glossar](./UsefulLinks/Glossary.md), eine Liste der Akronyme (oder Kurzbezeichnungen), die in **AAPS** verwendet werden. Hier erfährst Du beispielsweise, wofür die Begriffe ISF oder TT stehen.
 
@@ -124,18 +124,18 @@ AAPS-Funktionen <./DailyLifeWithAaps/KeyAapsFeatures.md>
 COB-Berechnung <./DailyLifeWithAaps/CobCalculation.md>
 Empfindlichkeitserkennung <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
 Dynamischer ISF (DynISF) <./DailyLifeWithAaps/DynamicISF.md>
-Profilwechsel & & prozentuale Profilanpassung <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
+Profilwechsel & Prozentuale Profilanpassung <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
 Temporäre Ziele <./DailyLifeWithAaps/TempTargets.md>
 Verzögerte Kohlenhydrate <./DailyLifeWithAaps/ExtendedCarbs.md>
 QuickWizards <./DailyLifeWithAaps/QuickWizards.md>
-Szenene <./DailyLifeWithAaps/Scenes.md>
+Szenen <./DailyLifeWithAaps/Scenes.md>
 Automatisierungen <./DailyLifeWithAaps/Automations.md>
-Schnellstartleiste <./DailyLifeWithAaps/QuickLaunch.md>
-Startbildbildschirm-Widgets <./DailyLifeWithAaps/Widgets.md>
-Lebensmittel-Datenbank <./DailyLifeWithAaps/Food.md>
+Schnellstart-Leiste <./DailyLifeWithAaps/QuickLaunch.md>
+Startbildschirm-Widgets <./DailyLifeWithAaps/Widgets.md>
+Lebensmitteldatenbank <./DailyLifeWithAaps/Food.md>
 Übergreifende Suche <./DailyLifeWithAaps/GlobalSearch.md>
 Überprüfen Deiner Daten <./Maintenance/Reviewing.md>
-AAPS für Kinden <./DailyLifeWithAaps/AapsForChildren.md>
+AAPS für Kinder <./DailyLifeWithAaps/AapsForChildren.md>
 Pumpen und Kanülen <./DailyLifeWithAaps/PumpsAndCannulas.md>
 Über Zeitzonen hinweg reisen & Sommerzeit-Umstellung <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
 

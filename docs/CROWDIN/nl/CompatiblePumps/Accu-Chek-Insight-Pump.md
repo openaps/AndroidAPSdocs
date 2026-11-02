@@ -84,11 +84,11 @@ Roche stopt met insulinepompen om zich bij diabetes te richten op de Accu-Chek S
     
     Open de instellingen met **Instellingen** op de kaart **Accu-Chek Insight** in **Configuratie** > **Pomp**, of met het tandwielicoon rechtsboven op het pompscherm.
     
-    ![Instellingen van de Accu-Chek Insight driver](../images/v4/Pumps/accu_chek_insight_settings.png)
+    ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
     
-    In de Insight instellingen in **AAPS** kun je de volgende opties aanzetten:
+    In the Insight settings in **AAPS** you can enable the following options:
     
-    * **Reservoir wissels noteren**: legt automatisch een wissel van de insulinecartridge vast als je op de pomp het programma "canule vullen" uitvoert.
+    * **Log reservoir changes**: automatically records an insulin cartridge change when you change the cartridge in the pump.
     
     * **Slangwissel noteren**: voegt een notitie toe aan de **AAPS** database als je op de pomp het programma "slang vullen" uitvoert.
     
@@ -162,7 +162,7 @@ Firmwareversie is te vinden in het menu.
 
 ## Batterij vervangen
 
-De batterij van de Insight gaat bij het loopen 10 tot 14 dagen mee, max. 20 dagen. De gebruiker die dit meldt, gebruikt lithiumbatterijen van Energizer.
+Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days. De gebruiker die dit meldt, gebruikt lithiumbatterijen van Energizer.
 
 De Insight pomp heeft een kleine interne batterij om essentiële functies zoals de interne klok, te kunnen laten doorgaan terwijl jij de batterij verwisselt. Als het wisselen van de batterij te lang duurt, kan deze interne batterij leegraken. Dan wordt de klok gereset en word je gevraagd een nieuwe tijd en datum in te voeren nadat je een nieuwe batterij hebt geplaatst. Als dit gebeurt, worden alle gegevens in AAPS van voor de batterijwissel niet meer meegenomen in de berekeningen, omdat de juiste tijd niet goed bepaald kan worden.
 

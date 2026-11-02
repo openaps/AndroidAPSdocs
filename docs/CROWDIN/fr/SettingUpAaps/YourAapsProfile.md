@@ -135,9 +135,9 @@ Ces exemples montrent que plus la valeur du **SI** est _petite_, moins vous ête
 
 ### Impact
 
-Un **SI plus bas / plus fort** (par ex. 40 au lieu de 50) signifie que l'insuline fait moins baisser votre **glycémie** par unité. Ceci conduit à une correction plus agressive / plus forte de la boucle avec **plus d'insuline**. Si votre **SI** est trop fort (petite valeur), cela peut provoquer une **glycémie** basse.
+A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. Ceci conduit à une correction plus agressive / plus forte de la boucle avec **plus d'insuline**. Si votre **SI** est trop fort (petite valeur), cela peut provoquer une **glycémie** basse.
 
-Un **SI plus haut / plus faible** (par ex. 45 au lieu de 35) signifie que l'insuline fait plus baisser votre **glycémie** par unité. Ceci conduit à une correction moins agressive / plus faible de la boucle avec **moins d'insuline**. Si votre **SI** est trop faible (grande valeur), cela peut provoquer une **glycémie** haute.
+A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. Ceci conduit à une correction moins agressive / plus faible de la boucle avec **moins d'insuline**. Si votre **SI** est trop faible (grande valeur), cela peut provoquer une **glycémie** haute.
 
 **Par exemple :**
 * La **glycémie** est à 190 mg/dl (10,5 mmol/l) et la cible à 100 mg/dl (5,6 mmol/l).
@@ -201,7 +201,7 @@ Il est courant d'avoir des **G/I** différents selon le moment de la journée, �
 > 
 > Facteur UP 2,4 U / 12 g   ===>   G/I = 12 g / 2,4 U = 5,0 g/U
 > 
-> Les tables de conversion sont disponibles en ligne : [ici](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Impact
 
@@ -300,7 +300,7 @@ L'assistant de profil propose un ensemble de données d'enfants provenant de deu
 4. Passez à l'onglet **Profil 2**.
 5. Appuyez sur **Type de profil** et sélectionnez « Profil par défaut DPV ».
 6. Ajustez le Profil par défaut DPV (basé sur les données d'un autre hôpital) en entrant l'âge de l'enfant, la DTQ Total et le pourcentage de basal. Remarque : les données DPV donnent seulement des **débits de basal**, donc G/I et SI sont affichés à zéro pour ce profil.
-7. Ouvrez l'onglet **Comparaison**. La comparaison des deux profils ajustés s'affiche (voir la capture d'écran ci-dessous).
+7. Open the **Comparison** tab. La comparaison des deux profils ajustés s'affiche (voir la capture d'écran ci-dessous).
 8. Si vous voulez commencer à ajuster votre profil à partir d'une de ces propositions, utilisez le bouton **Dupliquer** en bas de la comparaison.
 
 ![Assistant Profil Enfant 2](../images/ProfileHelperKids2.png)
@@ -350,6 +350,6 @@ Vous pouvez aussi utiliser l'[Assistant Profil](#aaps-screens-profile-helper) (m
 4. Passez à l'onglet **Profil 2**.
 5. Dans **Type de profil**, sélectionnez « Changement de profil » pour choisir dans l'historique de tous vos **Changements de profil**.
 6. Choisissez le **Changement de profil** avec lequel vous voulez le comparer.
-7. Ouvrez l'onglet **Comparaison**. La comparaison des deux profils s'affiche (voir la capture d'écran ci-dessous).
+7. Open the **Comparison** tab. La comparaison des deux profils s'affiche (voir la capture d'écran ci-dessous).
 
 ![Assistant Profil 2](../images/ProfileHelper2.png)

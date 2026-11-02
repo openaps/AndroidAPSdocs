@@ -78,7 +78,7 @@ Reštartujte **AAPS**. Potom otvorte **ponuku** (☰), zvoľte **Konfigurácia**
 
 - Ak výsledkom dôverujete (malé percento zmeny medzi vstupným a výstupným profilom), môžete kliknúť na tlačidlo „Aktivovať profil“ a potom to potvrdiť tlačidlom OK.
 
-  - Aktivácia profilu Vyladené automaticky vytvorí nový profil „Vyladené“ vo vašom zozname profilov (**Spravovať → Profil**).
+  - "Activate profile" will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
   - Ak už máte v **Spravovať → Profil** profil s názvom „Vyladené“, tento profil sa pred aktiváciou aktualizuje vypočítaným profilom Autotune
 
   ![Autotune – aktivácia profilu](../images/Autotune/Autotune_6.png)
@@ -123,7 +123,7 @@ Funkcia **Automatické prepnutie profilu** je dostupná iba v režime Dev/Engine
 - **Automatické prepnutie profilu** (predvolene vypnuté): pozrite [Spustenie Autotune pomocou pravidla automatizácie](#autotune-run-autotune-with-an-automation-rule) nižšie. Ak toto nastavenie zapnete, vstupný profil sa automaticky aktualizuje profilom Vyladené a aktivuje sa.
   - **Buďte opatrní: po aktualizácii a aktivácii profilu Vyladené bez úprav musíte niekoľko nasledujúcich dní overovať, či sa tým váš okruh zlepšuje, a až potom mu dôverovať**
 
-- **Započítavať UAM ako bazál** (predvolene vypnuté): Toto nastavenie je pre používateľov, ktorí používajú AndroidAPS bez zadávania sacharidov (Full UAM). Keď je vypnuté, zabráni zaradeniu UAM ako bazálu.
+- **Categorize UAM as basal** (default Off): This setting is for the users using AAPS without any carbs entered (Full UAM). Keď je vypnuté, zabráni zaradeniu UAM ako bazálu.
   - Poznámka: ak je počas dňa zistená aspoň jedna hodina vstrebávania sacharidov, všetky dáta zaradené ako „UAM“ sa zaradia ako bazál bez ohľadu na toto nastavenie (zapnuté alebo vypnuté)
 - **Predvolený počet dní pre ladenie** (predvolene 5): Týmto nastavením môžete určiť predvolenú hodnotu. Pri každom výbere nového profilu v plugine Autotune sa **Počet dní s dátami** nahradí touto predvolenou hodnotou
 - **Použiť cirkadiánne IC/ISF** (predvolene vypnuté): pozrite [Cirkadiánny profil IC alebo ISF](#autotune-circadian-ic-or-isf-profile) nižšie.
@@ -188,7 +188,7 @@ Poznámka: viac informácií o nastavení pravidla automatizácie nájdete [tu](
 
   ![Predvolená obrazovka Autotune](../images/Autotune/Autotune_17.png)
 
-- Potom môžete zvoliť akciu **Profil Autotune** (v skupine **Uzavretý okruh & inzulín**)
+- Then you can select the **Run Autotune** action (in the **Loop & insulin** group)
 
   ![Predvolená obrazovka Autotune](../images/Autotune/Autotune_18.png)
 
@@ -212,7 +212,7 @@ Autotune pracuje s informáciami, ktoré sú vo vašej databáze. Ak ste práve 
 
 Autotune je iba pomôcka; je dôležité pravidelne kontrolovať, či s vypočítaným profilom súhlasíte. Ak máte akékoľvek pochybnosti, zmeňte nastavenia Autotune (napríklad počet dní) alebo skopírujte výsledky do miestneho profilu a profil pred použitím upravte.
 
-Autotune vždy niekoľko dní spúšťajte ručne a výsledky skontrolujte, skôr než ich použijete. Automatizáciu začnite používať až vtedy, keď výsledkom Autotune úplne dôverujete a keď sú rozdiely medzi predchádzajúcim a vypočítaným profilom veľmi malé (nikdy skôr)
+Autotune vždy niekoľko dní spúšťajte ručne a výsledky skontrolujte, skôr než ich použijete. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile then you start to use Automation (Never before)
 
 - Autotune môže niektorým používateľom fungovať veľmi dobre a iným nie, preto: **Ak výsledku Autotune nedôverujete, nepoužívajte ho**
 

@@ -17,21 +17,21 @@ Použite počítač (Windows/Mac/Linux)
 
 Otvorte webovú stránku [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
 
-Nainštalujte Simple Web Server</br> Ak používate Windows alebo Mac, môžete ho nainštalovať z Microsoft Store alebo z Mac App Store.</br> Ak sa prehliadač opýta, či má otvoriť aplikáciu obchodu, povoľte to.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)</br>
+Install Simple Web Server<br/> If you are a Windows or Mac user, you can install it from the Microsoft Store or the Mac App Store.<br/> If your browser asks whether to open the store app, allow it.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/>
 
 Príklad na Macu:
 
-- get → install → open</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)</br></br>
+- get → install → open<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)<br/><br/>
 
-- Kliknite na Get Started</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)</br></br>
+- Kliknite na Get Started<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)<br/><br/>
 
-- Kliknite na New Server</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)</br></br>
+- Kliknite na New Server<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)<br/><br/>
 
-- V poli Folder Path vyberte priečinok, v ktorom je súbor aaps-ci-preparation.html, a potom kliknite na Create Server.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)</br></br>
+- V poli Folder Path vyberte priečinok, v ktorom je súbor aaps-ci-preparation.html, a potom kliknite na Create Server.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)<br/><br/>
 
-- Ak vidíte túto obrazovku, server je spustený.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)</br></br>
+- Ak vidíte túto obrazovku, server je spustený.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)<br/><br/>
 
-- Simple Web Server nezatvárajte. Prepnite sa do prehliadača a otvorte</br> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)</br></br>
+- Simple Web Server nezatvárajte. Please switch to your browser and open<br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
 
 - Ďalšie kroky nájdete vo videu nižšie od času 1 minúta 37 sekúnd.
 

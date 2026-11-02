@@ -6,7 +6,7 @@
 Dette er **steg 1** av [Nettleserbygg](BrowserBuild.md).
 ```
 
-Du må lagre din personlige Android Java-nøkkel og Google Drive-informasjon hemmelig i GitHub (senere i prosessen forklarer vi hvordan).
+Du må lagre din personlige Android Java-nøkkel og Google Drive-informasjon som hemmeligheter (secrets) i GitHub (senere i prosessen forklarer vi hvordan).
 
 Siden dette ikke kan gjøres i det offentlige AndroidAPS-repositoryet, må du lage din egen personlige kopi av kildekoden (kalt en fork).
 
@@ -34,10 +34,10 @@ Bla ned på neste skjerm og trykk **Create Fork**.
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
 ```{note}
-Får du ikke laget en fork, og ser du dette?</br></br>
-**`No available destinations to fork this repository.`**</br></br>
-![Already forked](../images/Building-the-App/CI/ForkAAPS3b.png)</br></br>
-Det betyr at du allerede har en fork av AndroidAPS.</br>
+Får du ikke laget en fork, og ser du dette?<br/><br/>
+**`No available destinations to fork this repository.`**<br/><br/>
+![Already forked](../images/Building-the-App/CI/ForkAAPS3b.png)<br/><br/>
+Det betyr at du allerede har en fork av AndroidAPS.<br/>
 Sørg for at den er oppdatert, og fortsett til forberedelsesstegene.
 ```
 

@@ -19,7 +19,7 @@
 
 Ένας **προσωρινός στόχος** μπορεί να χρειαστεί περίπου 30 λεπτά ή περισσότερο για να φτάσει η **BG** στον επιθυμητό στόχο. Το **AAPS** δεν μπορεί να φτάσει σε έναν στόχο **BG** αμέσως. Οι χρήστες πρέπει να το έχουν αυτό υπόψη όταν επιλέγουν έναν **προσωρινό στόχο**.
 
-Οι παρακάτω ενότητες συνοψίζουν τις λειτουργίες των προεπιλογών **προσωρινός στόχος - Άσκηση**, **προσωρινός στόχος - Γεύμα Σύντομα** και **προσωρινός στόχος - Υπογλυκαιμία**. Οι τιμές που φαίνονται είναι οι εργοστασιακές προεπιλογές — μπορείτε να [προσαρμόσετε κάθε προεπιλογή](#TempTargets-change-preset-defaults) στις δικές σας ανάγκες.
+The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. Οι τιμές που φαίνονται είναι οι εργοστασιακές προεπιλογές — μπορείτε να [προσαρμόσετε κάθε προεπιλογή](#TempTargets-change-preset-defaults) στις δικές σας ανάγκες.
 
 ### TT - Άσκηση
 
@@ -193,9 +193,9 @@
 
 Μερικοί χρήστες θέλουν να μη δίνονται **SMB** όσο ισχύει ο **προσωρινός στόχος Υπογλυκαιμία**. Αυτό γίνεται αν απενεργοποιήσετε τη ρύθμιση *«Ενεργοποίηση SMB με υψηλό προσωρινό στόχο»* στις **Ρυθμίσεις** → **OpenAPS SMB** (δείτε παρακάτω):
 
-- Στο Βήμα 9 (για προχωρημένους): ο χρήστης μπορεί να ενεργοποιήσει τη ρύθμιση *«Υψηλός προσωρινός στόχος αυξάνει την ευαισθησία»* για **προσωρινούς στόχους** 100 mg/dl (5,6 mmol/l) ή υψηλότερους στο OpenAPS SMB. Τότε το **AAPS** θα είναι πιο ευαίσθητο.
+- Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
 
-- Στο Βήμα 9 (για προχωρημένους): ο χρήστης μπορεί να απενεργοποιήσει τη ρύθμιση *«Ενεργοποίηση SMB με υψηλό προσωρινό στόχο»*. Έτσι, ακόμα κι αν το **AAPS** έχει COB > 0, είναι ενεργές οι ρυθμίσεις «Ενεργοποίηση SMB με χαμηλό προσωρινό στόχο» ή «Ενεργοποίηση SMB πάντα» και το OpenAPS SMB είναι ενεργό, το **AAPS** δεν θα δίνει SMB όσο ισχύουν υψηλοί προσωρινοί στόχοι.
+- Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
 
 Σημείωση: αν ανοίξετε το **παράθυρο Υδατάνθρακες** όταν η γλυκόζη αίματος είναι κάτω από 72 mg/dl ή 4 mmol/l, το **AAPS** επιλέγει αυτόματα από πριν τον διακόπτη **Εκκίνηση TT Υπογλυκαιμίας**.
 
@@ -219,9 +219,9 @@
 
 ## Προσωρινός στόχος Γεύμα Σύντομα
 
-Ο **προσωρινός στόχος - Γεύμα Σύντομα** μπορεί να βοηθήσει να πέσει απαλά η **BG** και να υπάρχει αρκετό **IOB** πριν το φαγητό.
+**Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
 
-Αυτό μπορεί να είναι σημαντικό εργαλείο για χρήστες που δεν κάνουν bolus πριν το γεύμα (pre-bolus). Όμως η αποτελεσματικότητα του **προσωρινού στόχου - Γεύμα Σύντομα** εξαρτάται από πολλούς παράγοντες, όπως: οι ρυθμίσεις του χρήστη, αν τρώει λίγους υδατάνθρακες και αν χρησιμοποιεί ινσουλίνη ταχείας δράσης (όπως Fiasp ή Lyumjev), ώστε να μη χρειάζεται bolus πριν το γεύμα. Κανονικά, μέχρι να αποκτήσουν εμπειρία με το **AAPS**, οι χρήστες πρέπει να περιμένουν ότι θα κάνουν bolus πριν το γεύμα (pre-bolus) όταν χρησιμοποιούν τον **προσωρινό στόχο - Γεύμα Σύντομα**, ιδίως αν τρώνε πολλούς υδατάνθρακες.
+This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
 
 Μπορείτε να διαβάσετε περισσότερα για τη λειτουργία “Eating soon” (Γεύμα σύντομα) στο άρθρο ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) ή [εδώ](https://diyps.org/tag/eating-soon-mode/) (στα αγγλικά).
 

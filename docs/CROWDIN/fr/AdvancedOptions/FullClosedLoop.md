@@ -88,12 +88,12 @@ Ces points varient selon les composants de votre système **AAPS** et votre mode
 
 ### Index glycémique et effet sur la glycémie
 
-La difficulté pour le mode **RNS** augmente avec l'« effet sur la glycémie » ('EBG')
+The challenge for the **UAM** mode rises with rising 'Effect on Blood Glucose' ('EBG')
 
 - Commencez avec un effet modéré ou faible, et ajustez les paramètres de votre **Profil**. Seulement ensuite, « testez » des repas avec un **EBG** élevé.
 - Pensez à un bolus initial < 50 % si vous mangez des aliments à **EBG** très élevé.
 
-1) **Pas d'EBG** : par ex. viande fraîche, poisson, œufs, bacon, huiles, fromage. 2) **EBG faible** : par ex. légumes frais et baies, champignons, noix, lait, yaourt, fromage blanc. 3) **EBG modéré** : par ex. pain/pâtes complets, pommes de terre, riz sauvage, avoine, fruits secs. 4) **EBG élevé** : par ex. pain de blé, baguette, pain de mie grillé, gaufres, biscuits, purée de pommes de terre, pâtes, riz. 5) **EBG très élevé** : par ex. sucre, boissons sucrées, jus de fruits, cornflakes, bonbons, sucreries, chips, bretzels salés.
+1) **Pas d'EBG** : par ex. viande fraîche, poisson, œufs, bacon, huiles, fromage. 2) **EBG faible** : par ex. légumes frais et baies, champignons, noix, lait, yaourt, fromage blanc. 3) **EBG modéré** : par ex. pain/pâtes complets, pommes de terre, riz sauvage, avoine, fruits secs. 4) **High EBG**: e.g. wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **EBG très élevé** : par ex. sucre, boissons sucrées, jus de fruits, cornflakes, bonbons, sucreries, chips, bretzels salés.
 
 ![Index glycémique et effet sur la glycémie](../images/fullClosedLoop01.png)
 
@@ -108,7 +108,7 @@ Pour faire du sport ou être actif, avec une pompe ou une boucle fermée hybride
 
 Avec la **FCL**, l'algorithme est réglé pour détecter les **RNS** et donner automatiquement de l'insuline contre les hausses de **glycémie**.  Une **Cible Temp** haute et un **pourcentage de profil** plus bas (actifs déjà vers le début du repas) doivent être réglés bien avant toute activité.
 
-Une activité physique inhabituelle ou irrégulière pose des difficultés pour la **FCL**. Le sport demande de prévoir à l'avance (surtout si vous voulez réduire le besoin de glucides ou de collations de secours en cas d'hypo pendant le sport). Après une journée active, il est conseillé de régler un **pourcentage de profil** plus bas pour la nuit, une fois le repas du soir bien digéré : réglez dans les **Automatisations** une cible de **glycémie** élevée (>100 mg/dl), avec « pas de **SMB** avec une cible élevée » choisi dans les **Paramètres** d'**AAPS**.
+Une activité physique inhabituelle ou irrégulière pose des difficultés pour la **FCL**. Le sport demande de prévoir à l'avance (surtout si vous voulez réduire le besoin de glucides ou de collations de secours en cas d'hypo pendant le sport). After an active day it is recommended that a lower  **Percentage Profile** is set for overnight after the evening meal is fully digested: set in **Automations** an elevated (>100 mg/dL) **BG**  target, with **Enable SMB with high temp target** switched off in **AAPS** **Settings**.
 
 ## Difficultés pour les enfants
 
@@ -151,7 +151,7 @@ Pour réussir la **FCL**, la **SI** est le paramètre d'ajustement principal. Av
 
 **AAPS** Master permet un **Profil** temporaire jusqu'à 130 % en mode **HCL**. Le renforcement de la **SI** se fait en 3 étapes :
 
-- Étape 1 - vérifiez la **SI** du **Profil** pour l'heure de ce repas, et regardez si, par exemple, Autosens propose une modification qui tient compte de l'état actuel de sensibilité à l'insuline du corps (dernières heures).
+- Step 1 -  review the **ISF** applicable for this meal time hour within the **Profile**, and see whether e.g. Autosens suggest a modification that takes care of the current (last few hours’) insulin sensitivity status of the body.
 - Étape 2 - appliquez un facteur (1/Profil%, réglé dans l'**Automatisation**) pour renforcer la **SI**.
 - Étape 3 - vérifiez que la **SI** proposée reste dans les limites de sécurité réglées.
 
@@ -169,9 +169,9 @@ La section ci-dessous explique comment regrouper les Conditions des **Automatisa
 
 ### Gros SMB automatisés lors de hausse de glycémie
 
-La clé d'une **FCL** réussie : **au début des hausses de glycémie dues aux repas, la boucle doit donner de très grands SMB automatiques le plus vite possible** pour « rattraper » l'**IA** nécessaire (comparez avec le bolus que vous donnez d'habitude pour un repas semblable en **HCL** !)
+The key to successful **FCL**: **at the beginning of BG increases from meals, very large automatic SMBs must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in **HCL**!)
 
-Pour cela, analysez les données de votre **HCL** pour voir quels **deltas** ne sont sans doute pas liés à un repas, et quels deltas peuvent l'être.
+To achieve this, data from your **HCL** should be analyzed to determine which **deltas** might not be meal-related and which might be.
 
 - Comme vous pouvez définir l'**Automatisation** dans une plage horaire choisie, il suffit d'analyser cette plage.
 - Si vous faites des repas très différents (par ex. un petit-déjeuner riche en glucides, mais un déjeuner pauvre en glucides), vous pouvez faire deux (groupes d') **Automatisations** différents, un pour chaque plage horaire.
@@ -218,7 +218,7 @@ Les **seuils d'IA** raisonnables, à partir desquels vous devez réduire l'agres
 
 Pour des repas exceptionnels, ou pour le baisser si du sport suit, le seuil d'**IA** peut être changé rapidement dans votre **Automatisation**.
 
-L'Automatisation (#3), « iobTH reached => **SMB** off » (seuil d'IA atteint, SMB arrêtés), est faite pour arrêter (ou mettre en pause, jusqu'à une nouvelle vague de hausse due aux glucides) le renfort agressif des **SMB**.
+Automation (#3), "iobTH reached => **SMBs** off”, is defined to end (or pause, until another wave of carb-related rise hits) the aggressive **SMB** boosting.
 
 ![Automatisation #3 : une IA de 5,5 ou plus sans cible temporaire en cours active une cible temporaire de 111 mg/dl](../images/fullClosedLoop04.png)
 
@@ -233,7 +233,7 @@ Elle indique à la boucle qu'au-dessus de votre **seuil d'IA**, il vaut mieux ne
 **Attention : l'Automatisation #3 ne marche que s'il n'y a pas de CT active.** Donc, si vous avez utilisé une EatingSoonTT, elle doit être terminée à ce moment-là, en général 30 à 40 minutes après le début du repas.
 
 Une façon de le faire est de créer une Condition d'**Automatisation** qui arrête une EatingSoonTT en cours avec la Condition **IA**>65% * iobTH.
-> Comment utiliser une EatingSoonTT Certains utilisateurs activent une EatingSoonTT (cible temporaire « repas bientôt ») environ une heure ou plus avant le début du repas (en appuyant sur le bouton CT, ou automatiquement par une cible de **glycémie** plus basse dans le **Profil** si les heures des repas sont assez fixes), juste pour être sûr d'avoir une **glycémie** de départ basse et une **IA** un peu plus élevée. Mais, si la **FCL** est toujours en route vers la cible, cela n'apporte peut-être pas grand-chose, et vous pouvez préférer définir une **Automatisation** qui active une EatingSoonTT quand le début du repas est reconnu (delta de glycémie, ou accélération = delta > avg delta). Une **CT** basse est importante à ce stade, car chaque **SMB** est calculé par votre boucle avec (glycémie prévue moins CT)/sens ; une CT basse rend donc l'insulinReq plus grand.
+> Comment utiliser une EatingSoonTT Certains utilisateurs activent une EatingSoonTT (cible temporaire « repas bientôt ») environ une heure ou plus avant le début du repas (en appuyant sur le bouton CT, ou automatiquement par une cible de **glycémie** plus basse dans le **Profil** si les heures des repas sont assez fixes), juste pour être sûr d'avoir une **glycémie** de départ basse et une **IA** un peu plus élevée. But, assuming the **FCL** is always en route towards target, this might not yield much and you may prefer to define an **Automation** that sets an EatingSoonTT at recognition of meal start (glucose delta, or acceleration = delta > avg delta). Une **CT** basse est importante à ce stade, car chaque **SMB** est calculé par votre boucle avec (glycémie prévue moins CT)/sens ; une CT basse rend donc l'insulinReq plus grand.
 
 Après les premiers **SMB** renforcés, votre iobTH et l'**Automatisation** #3 doivent trouver un bon équilibre : limiter le pic de glycémie, sans causer d'hypo après le repas.
 
@@ -332,7 +332,7 @@ Par exemple, il est tout à fait possible, sans étape en plus une fois les **Au
 - Problèmes avec la « queue » d'insuline après les repas
     - Vous devrez peut-être prendre une collation (si vous voyez une prévision d'hypo) ou des comprimés de glucose (si vous êtes déjà en hypo). Mais notez que les glucides nécessaires que la boucle peut vous indiquer à un moment sont très probablement exagérés, car la boucle n'a aucune information sur les glucides que vous avez mangés et qui attendent encore d'être absorbés (alors que vous pouvez estimer combien il en reste, y compris à partir des graisses et des protéines).
     - Une information utile serait de savoir si le problème vient surtout déjà de la phase de hausse de la glycémie. Alors, un iobTH plus bas peut être une solution simple.
-    - Si vous avez souvent besoin de glucides en plus, notez combien de grammes il a fallu (sans compter ce que vous avez peut-être pris en trop et qui a de nouveau demandé de l'insuline).  Ensuite, utilisez la valeur G/I de votre profil pour estimer combien d'insuline en moins le **SMB** aurait dû donner, et utilisez cette information pour votre ajustement (pour le **pourcentage de profil** dans les **Automatisations**, ou peut-être aussi pour votre iobTH). Cela peut concerner les **SMB** donnés quand la glycémie était haute, ou aussi les **SMB** pendant la hausse de la **glycémie**.
+    - Si vous avez souvent besoin de glucides en plus, notez combien de grammes il a fallu (sans compter ce que vous avez peut-être pris en trop et qui a de nouveau demandé de l'insuline).  Ensuite, utilisez la valeur G/I de votre profil pour estimer combien d'insuline en moins le **SMB** aurait dû donner, et utilisez cette information pour votre ajustement (pour le **pourcentage de profil** dans les **Automatisations**, ou peut-être aussi pour votre iobTH). This may relate to the **SMBs** given when glucose was high, or also to the **SMBs** during the **BG** rise.
     - Il se peut que vous deviez simplement accepter des pics de **glycémie** plus hauts pour ne pas descendre trop bas. Ou changez d'alimentation pour quelque chose avec moins de glucides et plus de protéines et de graisses.
 
 

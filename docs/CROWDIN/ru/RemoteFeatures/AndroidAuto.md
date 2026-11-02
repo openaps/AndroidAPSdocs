@@ -4,7 +4,7 @@
 
 ## Что потребуется:
 
-**AAPS** используют функцию Android Auto, которая позволяет перенаправлять сообщения из приложений на мобильном устройстве на дисплей аудиосистемы автомобиля.
+**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
 
 Это означает, что:
 
@@ -37,7 +37,7 @@ Please check now that you see the **AAPS** status notification on the phone befo
 
 Так как AAPS не является официальным приложением Android Auto, в Android Auto. нужно активировать уведомления из "неизвестных источников". Это делается с помощью режима разработчика, который мы покажем здесь.
 
-Перейдите к своему автомобилю и подключите мобильный телефон к аудиосистеме автомобиля.
+Go to your car and connect your mobile with the car's audio system.
 
 Должен появиться экран, похожий на этот.
 

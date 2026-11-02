@@ -1,6 +1,6 @@
-# Kde získať pomoc
+# Where can I get help?
 
-## Neviem si rady. Čo mám robiť? Koho sa môžem opýtať?
+## I'm stuck; what should I do? Koho sa môžem opýtať?
 
 Tento projekt stojí na práci dobrovoľníkov. Pre všetky žiadosti o pomoc platí niekoľko pravidiel, aby ľudia, ktorí ochotne pomáhajú ďalej, zbytočne nestrácali čas:
 

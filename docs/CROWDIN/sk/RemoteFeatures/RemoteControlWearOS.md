@@ -287,7 +287,7 @@ Ak **AAPS** musel dávku obmedziť, napríklad preto, že vypočítaný bolus je
     | --- | --- | --- | --- | --- | --- |
     | ![Dialóg ošetrenia, stránka inzulínu](../images/wearos/dialogs/dialog_treatment.png) | ![Dialóg inzulínu](../images/wearos/dialogs/dialog_insulin.png) | ![Dialóg sacharidov](../images/wearos/dialogs/dialog_carbs.png) | ![Dialóg eSacharidov](../images/wearos/dialogs/dialog_ecarbs.png) | ![Dialóg dočasného cieľa, stránka trvania](../images/wearos/dialogs/dialog_temp_target.png) | ![Dialóg prepnutia profilu](../images/wearos/dialogs/dialog_profile_switch.png) |
     
-    [1] V hodinkách v **Nastavenia** > **Rozhranie** zapnite **Percento kalkulačky**, aby sa v bolusovej kalkulačke zobrazilo zadanie percenta. Predvolené percento sa preberá z nastavenia telefónu [„Podať túto časť výsledku bolusovej kalkulačky %“](#Preferences-deliver-this-part-of-bolus-wizard-result). Ostatné nastavenia kalkulačky sú tie z telefónu v **Nastavenia** > **Nastavenia bolusovej kalkulačky**.
+    [1] V hodinkách v **Nastavenia** > **Rozhranie** zapnite **Percento kalkulačky**, aby sa v bolusovej kalkulačke zobrazilo zadanie percenta. The default percentage comes from the phone's ["Bolus percentage"](#Preferences-deliver-this-part-of-bolus-wizard-result). Ostatné nastavenia kalkulačky sú tie z telefónu v **Nastavenia** > **Nastavenia bolusovej kalkulačky**.
     
     [2] V hodinkách v **Nastavenia** > **Rozhranie** zapnite **Typ jedla v kalkulačke**, aby sa zobrazila stránka **Typ jedla**, kde vyberiete **Chlieb**, **Koláč** alebo **Pizza** a rozdelíte tak sacharidy pomalého jedla na sacharidy teraz a eSacharidy neskôr. Pozrite [Výber typu jedla](#WearOsSmartwatch-wizard-meal-type).
     
@@ -357,7 +357,7 @@ Ak **AAPS** musel dávku obmedziť, napríklad preto, že vypočítaný bolus je
     
     Režim zjednodušeného rozhrania je dostupný pre ciferníky Digital Style a Custom (vlastný ciferník). Zjednodušené rozhranie je voliteľné a nastavuje sa v nastaveniach ciferníka (dlho podržte ciferník a kliknite na „upraviť“ alebo na ikonu ozubeného kolieska). Vyberte nastavenie „Zjednodušené používateľské rozhranie“ a nastavte ho na „Počas nabíjania“ alebo „Vždy zapnuté a nabíjanie“.
     
-    Možnosti vývojára v Androide umožňujú, aby hodinky počas nabíjania nezhasli. Ako sprístupniť možnosti vývojára, nájdete v [oficiálnej dokumentácii](https://developer.android.com/training/wearables/get-started/debugging). V možnostiach vývojára zapnite „Stay awake when charging“ (Nevypínať obrazovku počas nabíjania).
+    Možnosti vývojára v Androide umožňujú, aby hodinky počas nabíjania nezhasli. Ako sprístupniť možnosti vývojára, nájdete v [oficiálnej dokumentácii](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options.
     
     Poznámka: nie všetky displeje dobre znášajú režim vždy zapnutého displeja. Môže spôsobiť vypálenie obrazovky, najmä na starších displejoch OLED. Hodinky zvyčajne displej stmavia, aby k vypáleniu nedošlo; rady nájdete v návode na použitie, u výrobcu alebo na internete.
     
@@ -385,7 +385,7 @@ Ak **AAPS** musel dávku obmedziť, napríklad preto, že vypočítaný bolus je
     
     ## Skratka na potvrdenie výstrahy
     
-    Hodinky [zobrazia alarm](#WearOsSmartwatch-phone-alarms) samy; skratka je druhý spôsob, ako ho jedným stlačením stíšiť. Môžete si vytvoriť skratku na potvrdenie (odloženie) výstrah/alarmov AAPS. Stíšiť zvuk cez hodinky je pohodlné a rýchlejšie, nemusíte siahať po telefóne. Poznámka: správu alarmu musíte aj tak skontrolovať v telefóne a primerane na ňu reagovať, môžete to však urobiť neskôr. Ak majú vaše hodinky dve tlačidlá, môžete jedno z nich priradiť programu `AAPS Snooze Alert` (v hodinkách „AAPS Potvrdenie výstrahy“).
+    Hodinky [zobrazia alarm](#WearOsSmartwatch-phone-alarms) samy; skratka je druhý spôsob, ako ho jedným stlačením stíšiť. Môžete si vytvoriť skratku na potvrdenie (odloženie) výstrah/alarmov AAPS. Stíšiť zvuk cez hodinky je pohodlné a rýchlejšie, nemusíte siahať po telefóne. Note: you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. Ak majú vaše hodinky dve tlačidlá, môžete jedno z nich priradiť programu `AAPS Snooze Alert` (v hodinkách „AAPS Potvrdenie výstrahy“).
     
     Ak chcete tlačidlo priradiť na hodinkách Samsung Watch 4, prejdite na `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
     
@@ -435,7 +435,7 @@ Ak **AAPS** musel dávku obmedziť, napríklad preto, že vypočítaný bolus je
     
     Ak si chcete vytvoriť vlastný ciferník, postupujte podľa [tohto návodu](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
     
-    Keď si vytvoríte vlastný ciferník, môžete svoj vlastný ciferník **AAPS** zdieľať s ostatnými: súbor zip môžete nahrať do priečinka „ExchangeSiteCustomWatchfaces“ cez Pull Request na Githube. Pri zlúčení pull requestu tím dokumentácie rozbalí súbor CustomWatchface.png a pridá pred jeho názov názov súboru Zip.
+    Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into GitHub. Pri zlúčení pull requestu tím dokumentácie rozbalí súbor CustomWatchface.png a pridá pred jeho názov názov súboru Zip.
     
     (WearOsSmartwatch-complications-watchface-download)=
     

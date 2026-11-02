@@ -88,12 +88,12 @@ Todo lo anterior variará según los componentes de tu sistema **AAPS** y tu est
 
 ### Índice glucémico y efecto sobre la glucosa en sangre
 
-La dificultad para el modo **UAM** aumenta cuanto mayor es el 'efecto sobre la glucosa en sangre' ('EBG')
+The challenge for the **UAM** mode rises with rising 'Effect on Blood Glucose' ('EBG')
 
 - Empieza con un efecto moderado o bajo y ajusta la configuración de tu **Perfil**. Solo entonces, «prueba» comidas con **EBG** alto.
 - Considera un bolo inicial de < 50 % si comes algo con **EBG** muy alto.
 
-1) **Sin EBG**: p. ej., carne fresca, pescado, huevos, bacón, aceites, queso. 2) **EBG bajo**: p. ej., verduras frescas y bayas, setas, frutos secos, leche, yogur, requesón. 3) **EBG moderado**: p. ej., pan/fideos integrales, patatas, arroz salvaje, avena, frutas secas. 4) **EBG alto**: p. ej., pan de trigo, baguette, pan tostado, gofres, galletas, puré de patatas, fideos, arroz. 5) **EBG muy alto**: p. ej., azúcar, bebidas azucaradas, zumos de fruta, copos de maíz, caramelos, dulces, patatas fritas de bolsa, palitos salados.
+1) **Sin EBG**: p. ej., carne fresca, pescado, huevos, bacón, aceites, queso. 2) **EBG bajo**: p. ej., verduras frescas y bayas, setas, frutos secos, leche, yogur, requesón. 3) **EBG moderado**: p. ej., pan/fideos integrales, patatas, arroz salvaje, avena, frutas secas. 4) **High EBG**: e.g. wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **EBG muy alto**: p. ej., azúcar, bebidas azucaradas, zumos de fruta, copos de maíz, caramelos, dulces, patatas fritas de bolsa, palitos salados.
 
 ![Índice glucémico y efecto sobre la glucosa en sangre](../images/fullClosedLoop01.png)
 
@@ -108,7 +108,7 @@ Al hacer ejercicio o estar activo, con una bomba o con lazo cerrado híbrido se 
 
 Con el **FCL**, el algoritmo está ajustado para detectar **UAM** y dar insulina automáticamente para frenar las subidas de **glucosa**.  Se debe poner un **Objetivo temporal** alto y un **Porcentaje de perfil** más bajo (activos ya alrededor del inicio de la comida) con bastante antelación a cualquier actividad.
 
-Los niveles de ejercicio inusuales o irregulares son difíciles para el **FCL**. Para el ejercicio hay que planificar con antelación (sobre todo si quieres necesitar menos carbohidratos o tentempiés de rescate por hipoglucemias durante el deporte). Después de un día activo, se recomienda poner un **Porcentaje de perfil** más bajo para la noche, una vez digerida la cena: pon en las **Automatizaciones** un objetivo de **glucosa** elevado (>100 mg/dl), con «sin **SMB** con objetivo elevado» seleccionado en los **Ajustes** de **AAPS**.
+Los niveles de ejercicio inusuales o irregulares son difíciles para el **FCL**. Para el ejercicio hay que planificar con antelación (sobre todo si quieres necesitar menos carbohidratos o tentempiés de rescate por hipoglucemias durante el deporte). After an active day it is recommended that a lower  **Percentage Profile** is set for overnight after the evening meal is fully digested: set in **Automations** an elevated (>100 mg/dL) **BG**  target, with **Enable SMB with high temp target** switched off in **AAPS** **Settings**.
 
 ## Obstáculos en niños
 
@@ -151,7 +151,7 @@ Para un **FCL** con éxito, el **ISF** es el parámetro de ajuste clave. Al usar
 
 **AAPS** Master permite un **Perfil** temporal de hasta el 130 % en modo **HCL**. Reforzar el **ISF** se hace en 3 pasos:
 
-- Paso 1: revisa el **ISF** del **Perfil** para la hora de esta comida y mira si, por ejemplo, Autosens sugiere un cambio que tenga en cuenta la sensibilidad a la insulina actual del cuerpo (de las últimas horas).
+- Step 1 -  review the **ISF** applicable for this meal time hour within the **Profile**, and see whether e.g. Autosens suggest a modification that takes care of the current (last few hours’) insulin sensitivity status of the body.
 - Paso 2: aplica un factor (1/% del perfil, según lo fijado en la **Automatización**) para reforzar el **ISF**.
 - Paso 3: comprueba que el **ISF** sugerido está dentro de los límites de seguridad fijados.
 
@@ -169,9 +169,9 @@ La sección siguiente explica cómo combinar las Condiciones de las **Automatiza
 
 ### SMB grandes automáticos en la subida de glucosa
 
-La clave para un **FCL** con éxito: **al comienzo de las subidas de glucosa por las comidas, el lazo debe dar SMB automáticos muy grandes lo antes posible** para «alcanzar» la **IOB** necesaria (¡compárala con el bolo que sueles poner para una comida parecida en el **HCL**!)
+The key to successful **FCL**: **at the beginning of BG increases from meals, very large automatic SMBs must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in **HCL**!)
 
-Para ello, hay que analizar los datos de tu **HCL** para saber qué **deltas** probablemente no están relacionados con comidas y qué deltas sí podrían estarlo.
+To achieve this, data from your **HCL** should be analyzed to determine which **deltas** might not be meal-related and which might be.
 
 - Como puedes definir la **Automatización** dentro de una franja horaria fija, solo necesitas analizar esa franja.
 - Si haces comidas muy distintas (p. ej., un desayuno con bastantes carbohidratos pero un almuerzo bajo en carbohidratos), puedes crear dos (grupos de) **Automatizaciones** distintos para cada franja horaria.
@@ -218,7 +218,7 @@ Los **umbrales de iob** adecuados para reducir la agresividad de tu lazo pueden 
 
 Para comidas excepcionales, o para bajarlo si después hay deporte, el umbral de **iob** se puede cambiar rápidamente en tu **Automatización**.
 
-La Automatización (#3), «iobTH reached => **SMBs** off» (iobTH alcanzado: SMB desactivados), sirve para terminar (o pausar, hasta que llegue otra ola de subida por carbohidratos) el refuerzo agresivo de **SMB**.
+Automation (#3), "iobTH reached => **SMBs** off”, is defined to end (or pause, until another wave of carb-related rise hits) the aggressive **SMB** boosting.
 
 ![Automatización #3: una IOB de 5,5 o más sin objetivo temporal activo pone un objetivo temporal de 111 mg/dl](../images/fullClosedLoop04.png)
 
@@ -233,7 +233,7 @@ Le dice al lazo que por encima de tu **umbral de iob** es mejor no usar más **S
 **Atención: la Automatización #3 solo funciona cuando no hay ningún objetivo temporal (TT) activo.** Así que, si usaste un EatingSoonTT, debe haber terminado para entonces, normalmente 30–40 minutos después del inicio de la comida.
 
 Una forma de hacerlo es crear una Condición de **Automatización** que termine un EatingSoonTT activo con la Condición **iob**>65% * iobTH.
-> Formas de usar EatingSoonTT Algunos usuarios ponen un EatingSoonTT (pulsando el botón TT, o de forma automática con un objetivo de **glucosa** más bajo en el **Perfil** si las horas de comida son bastante fijas) aproximadamente una hora o más antes de comer, solo para asegurar una **glucosa** inicial baja y un **iob** algo mayor. Pero, suponiendo que el **FCL** siempre va camino del objetivo, esto puede no aportar mucho, y quizá prefieras definir una **Automatización** que ponga un EatingSoonTT al detectar el inicio de la comida (delta de glucosa, o aceleración = delta > avg delta). Un **TT** bajo es importante en esta fase porque el lazo calcula cada **SMB** con (glucosa prevista menos TT)/sens, así que un TT bajo hace mayor el insulinReq resultante.
+> Formas de usar EatingSoonTT Algunos usuarios ponen un EatingSoonTT (pulsando el botón TT, o de forma automática con un objetivo de **glucosa** más bajo en el **Perfil** si las horas de comida son bastante fijas) aproximadamente una hora o más antes de comer, solo para asegurar una **glucosa** inicial baja y un **iob** algo mayor. But, assuming the **FCL** is always en route towards target, this might not yield much and you may prefer to define an **Automation** that sets an EatingSoonTT at recognition of meal start (glucose delta, or acceleration = delta > avg delta). Un **TT** bajo es importante en esta fase porque el lazo calcula cada **SMB** con (glucosa prevista menos TT)/sens, así que un TT bajo hace mayor el insulinReq resultante.
 
 Después de los primeros **SMB** reforzados, tu iobTH y la **Automatización** #3 deberían lograr un buen equilibrio: limitar el pico de glucosa, pero sin causar una hipoglucemia después de la comida.
 
@@ -332,7 +332,7 @@ Por ejemplo, es perfectamente posible, sin pasos extra una vez definidas las **A
 - Problemas con la «cola» de insulina después de las comidas
     - Quizá necesites tomar un tentempié (si ves una predicción de hipoglucemia) o pastillas de glucosa (si ya estás en zona de hipoglucemia). Pero ten en cuenta que los carbohidratos necesarios que el lazo te pida en algún momento son muy probablemente exagerados, porque el lazo no tiene ninguna información sobre cuántos carbohidratos comiste y cuántos esperan todavía a ser absorbidos (tú sí puedes estimar cuántos más, incluidos los de grasas y proteínas).
     - Sería útil saber si el problema empieza sobre todo ya en la fase de subida de la glucosa. Entonces, poner un iobTH más bajo puede ser una solución fácil.
-    - Si a menudo necesitas carbohidratos adicionales, apunta cuántos gramos necesitaste (sin contar lo que al final tomaste de más y requirió insulina extra otra vez).  Después usa el valor IC de tu perfil para estimar cuánta insulina menos debería haber dado el **SMB**, y usa esa información en tu ajuste (del **Porcentaje de perfil** en las **Automatizaciones**, o quizá también de tu iobTH). Esto puede referirse a los **SMB** dados cuando la glucosa estaba alta, o también a los **SMB** durante la subida de la **glucosa**.
+    - Si a menudo necesitas carbohidratos adicionales, apunta cuántos gramos necesitaste (sin contar lo que al final tomaste de más y requirió insulina extra otra vez).  Después usa el valor IC de tu perfil para estimar cuánta insulina menos debería haber dado el **SMB**, y usa esa información en tu ajuste (del **Porcentaje de perfil** en las **Automatizaciones**, o quizá también de tu iobTH). This may relate to the **SMBs** given when glucose was high, or also to the **SMBs** during the **BG** rise.
     - Puede que simplemente tengas que aceptar picos de **glucosa** más altos para no bajar demasiado. O cambia tu dieta a algo con menos carbohidratos y más proteínas y grasas.
 
 

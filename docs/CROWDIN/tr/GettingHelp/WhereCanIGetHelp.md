@@ -1,6 +1,6 @@
-# Where can I get help ?
+# Where can I get help?
 
-## I'm stuck; What should I do? Who can I ask?
+## I'm stuck; what should I do? Who can I ask?
 
 This project is based on volunteer work and a few rules apply to any requests for help to avoid unnecessary time being wasted by those who kindly pay it forward:
 

@@ -129,6 +129,6 @@ Hvis du gir bolus med kalkulatoren i **AAPS**, ikke bruk **COB**- og **IOB**-dat
 
 3. Oppdater pumpen i **AAPS** og bytt til ønsket **Profil**.
 
-4. Sjekk **IOB** og **COB** i **AAPS**, og hvis de er unøyaktige, deaktiver **Loop** i minst én DIA og maksimal karbotid – den som er lengst.
+4. Sjekk **IOB** og **COB** i **AAPS**, og hvis de er unøyaktige, deaktiver **Loop** i minst én DIA eller den maksimale absorpsjonstiden for karbohydrater (**Maks absorpsjonstid**) – den som er lengst.
 
 5. Dette gjør du etter at klokken er stilt. Et godt tidspunkt for å gå tilbake til lokal tidssone er når **IOB** er lav. F.eks. en time før et måltid, som frokost. Ideelt sett bør både **COB** og **IOB** være nær null.

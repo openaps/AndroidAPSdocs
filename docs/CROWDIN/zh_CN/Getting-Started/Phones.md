@@ -30,7 +30,7 @@ We maintain a list of the [tested hardware setups](https://docs.google.com/sprea
 
 要记录您对硬件设置的测试，请填写此[表格](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform)。 After you fill in the form data, the sheet is updated automatically every 5 minutes.
 
-如果遇到与该电子表格相关的问题，请在Discord上联系其维护者*@theodoor5137*，或查看[我可以在哪里获得帮助？页面](../GettingHelp/WhereCanIGetHelp.md).
+Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
 
 ## 我没找到我的手机。
 

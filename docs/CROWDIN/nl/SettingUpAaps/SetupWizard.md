@@ -122,9 +122,9 @@ Volg deze stappen op Android 16; bij andere versies wijkt het iets af van de sch
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. Tik op Android 12 op `Battery` (Batterij), op Android 13+ op `App battery usage` (Batterijgebruik van app),
+   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
 
-   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
+   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
 5. Kies op Android 12+ de optie `Unrestricted` (Onbeperkt). Op Android 15+ moet je de instelling `Allow background usage` (Gebruik op de achtergrond toestaan) uitklappen. Tik daarvoor op het rood gemarkeerde deel en volg dan stap 6 om het af te ronden.
 
@@ -454,7 +454,7 @@ Als je een echte pomp kiest, vraagt **AAPS** om een bevestiging. Het kopieert na
 
 ![Bevestiging bij het kiezen van een echte pomp](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-Als de pomp die je kiest via Bluetooth communiceert, vraagt **AAPS** na het afronden van de wizard om toestemming om verbinding te maken met apparaten in de buurt (zie [Bluetooth-machtiging](#bluetooth-permission)).
+If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#setup-wizard-bluetooth-permission)).
 
 Als je je profiel al hebt ingesteld en weet hoe je je pomp verbindt, kun je hem nu gerust verbinden. Laat hem anders voorlopig op **Virtuele Pomp** staan — je kunt dit altijd aanpassen. Je kunt de Setup Wizard ook verlaten met de pijl linksboven en **AAPS** eerst wat bloedglucosewaarden laten tonen.
 
@@ -505,7 +505,7 @@ Druk op "**Open Doelen**":
 
 Hier starten we Doel 1, ook al is onze installatie op dit moment nog niet helemaal klaar om dit doel met succes te voltooien. Maar dit is het begin.
 
-Druk op de knop "**Start**" naast "**1. Doel**":
+Press the "**Start**" button of **Objective 1**:
 
 ![Lijst met doelen](../images/setup-wizard/Wizard-Objectives-List.png)
 
@@ -521,6 +521,7 @@ Na het drukken op "**VOLTOOIEN**" kom je op het hoofdscherm van **AAPS**. Er kan
 
 Als je de Setup Wizard per ongeluk op een bepaald moment verlaat, kun je de wizard gewoon opnieuw starten, of de [configuratie van de AAPS-loop](../SettingUpAaps/ChangeAapsConfiguration.md) handmatig aanpassen.
 
+(setup-wizard-bluetooth-permission)=
 ## Bluetooth-machtiging
 
 Als je een pomp kiest die via Bluetooth verbindt (bijvoorbeeld **Omnipod Dash**), herinnert een banner je eraan dat **AAPS** een Bluetooth-machtiging nodig heeft. Je kunt voorlopig op "**Negeren**" drukken — de machtiging wordt gegeven nadat je de wizard hebt afgerond:

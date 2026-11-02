@@ -23,7 +23,7 @@ Bir şeyi ilk kez çeviriyorsanız, lütfen uygulamayı çevirerek başlayın, �
 
 Paralelinde veya daha sonra dokümantasyon çevirisine başlayabilirsiniz.
 
-You can check the state of translations for the languages app and documentation [here](#StateOfTranslations).
+You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
 
 * **Uygulamayı** başka dillere çevirmek istiyorsanız (teşekkür ederim), lütfen [crowdin](https://crowdin.com/project/androidaps) kullanın.
 * **Dokümantasyonu** başka dillere çevirmek istiyorsanız (teşekkürler), lütfen [crowdin](https://crowdin.com/project/androidapsdocs) kullanın. 

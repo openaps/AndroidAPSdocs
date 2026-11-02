@@ -7,7 +7,7 @@
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- 專用的Google雲端空間意味著你不會冒著填滿個人Google雲端限額的風險，與**匯出偏好設定**有關。
+- 使用專用的 Google 雲端硬碟空間，就不必擔心透過**匯出設定**佔滿個人 Google 雲端硬碟的容量上限。
 - **AAPS** 的每個版本（以及 xDrip、BYODA 等支援應用程式）都會儲存在同一個位置，且不受電腦硬體影響。如果你的PC或手機被盜/遺失/損壞，你仍然可以使用。
 - 通過統一設置，將簡化具有相似資料夾結構的使用者之間的線上支援。
 - 根據設置（見下文），你將有一個獨立身份作為別名在社群中進行溝通，這可以保護你的隱私。 
@@ -45,13 +45,13 @@
  影片中列出的步驟如下：
 
 在此示例中： 
-- 你現有的“_日常_”Google帳號是<donald.muck42@gmail.com>； ![](../images/Building-the-App/building_0002.png)
+- 你現有的「_日常使用_」Google 帳號是 <donald.muck42@gmail.com>； ![](../images/Building-the-App/building_0002.png)
 - 你的新“_AAPS_” Gmail帳號將是：<donald.muck42.aaps@gmail.com>； ![](../images/Building-the-App/building_0003.png)
 
 
-### 進入<https://account.google.com> 
+### 進入<https://myaccount.google.com> 
 
- 如果你已經登入Google，這會將你引導到你的“日常”**我的帳戶**頁面。 (1) 點擊頁面右上角的個人檔案圖片（此例為簡單的 ![](../images/Building-the-App/building_0002.png) (2) 選擇“_添加另一個帳號_”。
+ 如果你已經登入Google，這會將你引導到你的“日常”**我的帳戶**頁面。 (1) 點選頁面右上角的個人資料圖片（本例中是簡單的 ![](../images/Building-the-App/building_0002.png)） (2) 選取「_新增其他帳號_」。
 
 ![](../images/Building-the-App/building_0005.png)
 
@@ -87,7 +87,7 @@ Gmail將顯示帳號名稱。系統會要求你接受Gmail的條款和條件並�
 
 ### 自定義新個人資料顯示
 
-此時，你應在Gmail的MyAccount頁面上，顯示你的新**AAPS**專用電子郵件帳號。預設情況下，個人資料圖片會設置為你名字的第一個字母。將其更改為某個獨特的名稱，以免混淆……在這個例子中，Donald.Muck.AAPS取代了 ![](../images/Building-the-App/building_0002.png) ![](../images/Building-the-App/building_0003.png)
+此時，你應在Gmail的MyAccount頁面上，顯示你的新**AAPS**專用電子郵件帳號。預設情況下，個人資料圖片會設置為你名字的第一個字母。請將名稱改成獨特的名稱，以免混淆……在此範例中，Donald.Muck.AAPS 取代了 ![](../images/Building-the-App/building_0002.png)，並改用 ![](../images/Building-the-App/building_0003.png)。
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
@@ -101,7 +101,7 @@ Gmail將顯示帳號名稱。系統會要求你接受Gmail的條款和條件並�
 2. 右鍵點擊你的瀏覽器圖示在任務欄上
 3. 從菜單選擇“新視窗”……並調整，使其僅佔據螢幕的下半部。
 
-在每個瀏覽器窗口中打開<https://gmail.com>。確保你的個人帳號在最上面，而新的專用**AAPS**帳號在底部，並且通過右上角的頭像容易辨識。（如果需要，你可以隨時透過點擊個人資料圖片切換帳號並選擇正確的帳號）。
+在每個瀏覽器窗口中打開<https://gmail.com>。確保你的個人帳號在最上面，而新的專用**AAPS**帳號在底部，並且通過右上角的頭像容易辨識。如有需要，你隨時可以點選個人資料圖片並選取正確的帳號，以切換帳號。
 
 ![](../images/Building-the-App/building_0009.png)
 

@@ -30,7 +30,7 @@ Het document is alleen-lezen. Met CTRL-F kun je zoeken in de tekst van het Googl
 
 Wil je jouw test van een hardware-opstelling vastleggen? Vul dan dit [formulier](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) in. Nadat je het formulier hebt ingevuld, wordt het sheet elke 5 minuten automatisch bijgewerkt.
 
-Heb je problemen met de spreadsheet? Neem dan contact op met de beheerder, *@theodoor5137*, via Discord, of kijk op de pagina [Waar kan ik hulp krijgen? ](../GettingHelp/WhereCanIGetHelp.md).
+Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
 
 ## Ik heb mijn telefoon niet gevonden
 

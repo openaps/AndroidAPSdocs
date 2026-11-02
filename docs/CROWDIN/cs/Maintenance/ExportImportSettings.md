@@ -59,11 +59,11 @@ Export nastavení AAPS do souboru vám umožní obnovit konfiguraci k určitému
 
 * Kdykoli plánujete větší změny v konfiguraci (změna nastavení SMB, změna typu inzulínu, změna pumpy, změny v automatizacích), zálohujte své **Nastavení** před změnami i po nich. Tak budete mít nejnovější nastavení i kopii nastavení před změnami, kdybyste se k nim potřebovali vrátit.
 
-* Pouze pro uživatele pump bez hadičky (např. Omnipod a Medtrum): soubor **Nastavení** obsahuje údaje o spojení s vaším aktuálním podem a lze ho použít k obnovení spojení s tímto podem na novém telefonu. Pokud nemáte kopii předvoleb exportovanou po spuštění aktuálního podu, budete muset při výměně telefonu spustit nový pod.
+* Tubeless pumps (Such as Omnipod and Medtrum) users only: the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. Pokud nemáte kopii předvoleb exportovanou po spuštění aktuálního podu, budete muset při výměně telefonu spustit nový pod.
 
 **Jak zálohovat ručně:**
 
-1. Pokud importujete nebo exportujete **Nastavení** poprvé, musíte nastavit hlavní heslo v [Nastavení > Ochrana](#Preferences-master-password). Nastavte heslo a uložte si ho na bezpečné místo. _Bez tohoto hesla se ke zálohám **Nastavení** nedostanete._
+1. If this is your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). Nastavte heslo a uložte si ho na bezpečné místo. _Bez tohoto hesla se ke zálohám **Nastavení** nedostanete._
 
 2. Na hlavní obrazovce **AAPS** otevřete **nabídku** (☰) > **Údržba**. Pomocí štítků **Lokálně** a **Cloud** vedle položky **Exportovat nastavení** zvolte, kam se soubor uloží (viz **Export nebo import nastavení** níže), a potom klepněte na **Exportovat nastavení**. **AAPS** ukáže, kam se soubor uloží: u volby **Lokálně** název souboru, u volby **Cloud** text **Google Drive**. Klepněte na **OK**.
 
@@ -105,7 +105,7 @@ Chcete-li exportovat nebo importovat nastavení, otevřete **nabídku** (☰) a 
 (ExportImportSettings-Automating-Settings-Export)=
 ### Automatizace exportu nastavení
 
-Pro automatický export nastavení [(**viz Automatizace**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) otevřete [**Nastavení** > **Údržba**](#preferences-maintenance-settings), rozbalte **Bezobslužný export nastavení** a zapněte **Povolit automatický export nastavení**.
+To automate settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
 
 Nyní můžete nastavit [automatizaci](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export), která bude exportovat nastavení buď pravidelně (_např._ každý týden), nebo po výměně podu.
 
@@ -176,7 +176,7 @@ Import ve výchozím stavu nastavení pumpy nemění: pumpa vybraná v **Konfigu
 
 12. **AAPS** se zeptá **Použít importovaná nastavení?** a sdělí vám, kolik nastavení se změní, a pokud jste políčko nechali nezaškrtnuté, také kolik nastavení pumpy zůstane zachováno. Zatím se nic nezapsalo, takže **Zrušit** ponechá telefon přesně v původním stavu. Klepnutím na **OK** nastavení použijete.
 
-    ![Použít importovaná nastavení? dialog](../images/Maintenance/import_settings_apply.png)
+    ![Apply imported settings dialog](../images/Maintenance/import_settings_apply.png)
 
 13. **AAPS** použije importovaná nastavení okamžitě, bez restartu. Restartují se jen pluginy, jejichž nastavení se změnilo. Během této doby **AAPS** zobrazuje **Používání nastavení…**; pokud je pumpa zaneprázdněná, zobrazí **Čekání na pumpu…** a nastavení použije, jakmile bude pumpa volná. Pokud je pumpa zaneprázdněná i po jedné minutě, **AAPS** nabídne další pokus. Zpráva **Nastavení byla použita** potvrdí, že se importovaná nastavení používají. Každé ošetření, které jste zadali do fronty během importu, se zahodí a **AAPS** vám oznámí, že bylo zrušeno, takže se nic nepošle do pumpy dvakrát.
 

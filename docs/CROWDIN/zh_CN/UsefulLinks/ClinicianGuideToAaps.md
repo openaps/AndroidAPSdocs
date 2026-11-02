@@ -22,7 +22,7 @@ This page is a high-level introduction for clinicians. It was last reviewed in J
 
 通过自动胰岛素输送，系统执行相同的操作：它从泵、CGM以及记录信息的任何地方（如Nightscout）收集数据，使用这些信息进行计算，并决定需要多少胰岛素（高于或低于基础速率），并使用临时基础速率进行必要的调整，以保持或将血糖水平带入目标范围内。
 
-若运行AAPS的设备发生故障或超出胰岛素泵通信范围，当最后一个临时基础率结束后，胰岛素泵将恢复为预设基础率运行的标准泵模式。
+If the device running AAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basal rates running.
 
 ## 数据采集方式：
 
@@ -39,7 +39,7 @@ Android设备需要：
 
 ## 该系统如何确定执行何种操作？
 
-开源软件旨在使设备能够轻松完成人们过去在手动模式下所做的工作，即计算如何调整胰岛素输送。它首先从所有支持设备和云端收集数据，准备数据并运行计算，预测未来不同场景下预期的血糖水平，并计算保持或将血糖带回目标范围所需的调整。然后，它将任何必要的调整发送到泵。之后，它读取数据，并重复此过程。
+开源软件旨在使设备能够轻松完成人们过去在手动模式下所做的工作，即计算如何调整胰岛素输送。 It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of what BG levels are expected to do during the next hours in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. 然后，它将任何必要的调整发送到泵。之后，它读取数据，并重复此过程。
 
 由于最重要的输入参数是来自CGM的血糖水平，因此拥有高质量的CGM数据非常重要。
 
@@ -71,7 +71,7 @@ AAPS使用与OpenAPS相同的核心算法和功能集。算法会做出多个预
 
 ### 场景3 - 需要更多胰岛素
 
-在此示例中，短期预测显示血糖将跌破目标范围。但系统预测其不会跌破安全阈值。最终血糖将回升至目标范围以上。因此，AAPS将避免追加任何可能导致短期低血糖的胰岛素（即防止因胰岛素追加而使预测值跌破阈值）。系统将在安全允许时评估是否追加胰岛素，使最终预测血糖的最低值回落至目标范围。*（根据设置及所需胰岛素的剂量与时间，该胰岛素可能通过临时基础率或SMB（超级微剂量推注）输送）。*
+在此示例中，短期预测显示血糖将跌破目标范围。但系统预测其不会跌破安全阈值。最终血糖将回升至目标范围以上。 Therefore, AAPS will refrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). 系统将在安全允许时评估是否追加胰岛素，使最终预测血糖的最低值回落至目标范围。 *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMBs (super micro boluses)).*
 
 ![Dosing scenario 3](../images/Dosing_scenario_3.jpg)
 
@@ -87,13 +87,13 @@ AAPS使用与OpenAPS相同的核心算法和功能集。算法会做出多个预
 
 患者最重要的调整原则是：​每次仅修改一个参数，并观察2-3天效果后，再决定是否调整其他设置（除非明显恶化，此时应立即恢复至先前参数）。人类倾向于一次性调整所有参数，但这样做可能导致后续设置更加不理想，且难以恢复到已知的良好状态。
 
-调整设置最强大的工具之一是基础率、胰岛素敏感系数和碳水比率的自动计算工具。 This is called “[Autotune](#autotune-how-autotune-calculates-adjustments)”. 它的设计初衷是独立/手动运行，通过数据引导您或患者逐步调整设置。在社群中，最佳实践是在尝试手动调整设置之前，先运行（或查看）Autotune报告。 Autotune is built into AAPS as a plugin (**Configuration** → **General** → **Autotune**); see [Autotune](../AdvancedOptions/Autotune.md). It can be run on demand or automatically. 由于这些参数既是标准泵胰岛素输注的前提条件，也是闭环胰岛素输注的基础，因此讨论Autotune结果并调整这些参数，自然成为与临床医生沟通的重要环节。
+调整设置最强大的工具之一是基础率、胰岛素敏感系数和碳水比率的自动计算工具。 This is called “[Autotune](#autotune-how-autotune-calculates-adjustments)”. It is designed to allow the data to guide you or your patient in making incremental changes to settings. 在社群中，最佳实践是在尝试手动调整设置之前，先运行（或查看）Autotune报告。 Autotune is built into AAPS as a plugin (**Configuration** → **General** → **Autotune**); see [Autotune](../AdvancedOptions/Autotune.md). It can be run on demand or automatically. 由于这些参数既是标准泵胰岛素输注的前提条件，也是闭环胰岛素输注的基础，因此讨论Autotune结果并调整这些参数，自然成为与临床医生沟通的重要环节。
 
 此外，人类行为（从手动糖尿病管理模式中学到的）往往会影响治疗效果，即便是使用DIY闭环系统时也是如此。 For example, if BG is predicted to go low and AAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dL (3.9 mmol/L). 然而，在许多情况下，患者可能会选择摄入更多碳水化合物进行治疗（例如坚持"15法则"），这将导致血糖更快上升——既因额外的葡萄糖摄入，也因在低血糖发生前胰岛素输注量已被调低。
 
 ## OpenAPS
 
-**本指南改编自[《OpenAPS临床医生指南》](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html)。** OpenAPS是一套设计运行于小型便携计算机（通常称为"rig"）上的系统。 AAPS采用了OpenAPS中实现的诸多技术，并共享了大量逻辑与算法，因此本指南与原始指南高度相似。关于OpenAPS的大部分信息均可直接适用于AAPS，主要区别在于两者运行的硬件平台不同。
+**This guide was adapted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AAPS采用了OpenAPS中实现的诸多技术，并共享了大量逻辑与算法，因此本指南与原始指南高度相似。关于OpenAPS的大部分信息均可直接适用于AAPS，主要区别在于两者运行的硬件平台不同。
 
 ## 总结
 

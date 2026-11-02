@@ -1,9 +1,9 @@
-# starea traducerii pentru aplicație și documentație
+# State of translation for the app and the documentation
 
 Starea este actualizată o dată pe oră și reflectă doar starea din Crowdin.
 
 ```{tip}
-Be careful the percentage of proofreading must be lower than the percentage of translations but they decided to show it on top of the translations.
+Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
 Este mai bine să privim doar la nivelul procentual al traducerilor pentru a vedea dacă mai este de lucru.
 ```
 

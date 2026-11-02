@@ -10,7 +10,7 @@ Disable battery optimization and allow background activity for the xDrip app.
 
 You shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
 
-→ Hamburger Menü (1) → Einstellungen (2) → Cloud Upload (3) → API Upload (REST)(4) → Switch **AUS** `ausgewählt` (5)
+→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Switch **OFF** `Enabled` (5)
 
 ![xDrip Basic Settings 1](../images/xDrip_Basic1.png)
 
@@ -34,7 +34,7 @@ Option `Alert on failures` should also be deactivated (10). Otherwise you will g
 
 ### **Inter-App Einstellungen** (Broadcast)
 
-If you are going to use AAPS and the data should be forwarded to i.e. AAPS you have to activate broadcasting in xDrip in Inter-App settings.
+If you use AAPS, you must activate broadcasting in xDrip's Inter-App settings so the data is forwarded to AAPS.
 
 → Hamburger Menu (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
 
@@ -103,7 +103,7 @@ Follow the instructions:
 - Keep the old transmitter out of Bluetooth range to prevent reconnection.
 - Then follow [Start a G6 or ONE transmitter](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
-### Dexcom G7, ONE+ and Stelo
+### Dexcom G7, ONE+ und Stelo
 
 - Follow the [G7, ONE+ and Stelo instructions](https://navid200.github.io/xDrip/docs/Dexcom/G7.html) (a recent xDrip release is required — see the linked page).
 - See also the [Dexcom G7, ONE+ and Stelo page](../CompatibleCgms/DexcomG7.md) for the available setups with **AAPS**.

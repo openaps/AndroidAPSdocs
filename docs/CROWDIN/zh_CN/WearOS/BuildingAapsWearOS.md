@@ -78,7 +78,7 @@ Next: install the Wear apk on the watch, see [Set up AAPS on your Wear OS watch]
 
 In the process of building the full **AAPS** app (and in fact any signed app), Android Studio generates a .json file in the same folder. 然后，当您尝试构建下一个签名应用（如**AAPS** Wear应用）时，这会导致[未提交的更改](#troubleshooting_androidstudio-uncommitted-changes)错误。解决这个问题的最快方法是导航到已构建完整AAPS应用程序的文件夹，您的文件夹可能类似于：
 
-`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\aapsclient\release.`
+`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\full\release.`
 
 将不需要的.json文件从文件夹中删除或移出。然后再次尝试构建**AAPS** Wear应用。如果这不起作用，更详细的[故障排除指南](../GettingHelp/TroubleshootingAndroidStudio.md)将帮助您确定导致问题的具体文件，这也可能是您的keystore文件。
 

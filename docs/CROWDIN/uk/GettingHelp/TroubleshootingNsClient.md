@@ -38,6 +38,6 @@ Android може перевести ваш телефон у режим сну. 
 
 * Якщо помилка все ще є...
 
-Перевірте розмір вашої бази даних у MongoDB (або за допомогою плагіна розміру бази даних у Nightscout). Якщо ви використовуєте безкоштовний тариф MongoDB, 496 МБ означає, що база даних заповнена і її треба очистити. [Дотримуйтеся цих інструкцій Nightscout, щоб перевірити розмір бази даних і видалити з неї дані](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
+Перевірте розмір вашої бази даних у MongoDB (або за допомогою плагіна розміру бази даних у Nightscout). Якщо ви використовуєте безкоштовний тариф MongoDB, 496 МБ означає, що база даних заповнена і її треба очистити. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
 Перш ніж видаляти дані з бази даних, подумайте про те, щоб передати ваші дані AAPS у проєкт Open Humans (для досліджень), якщо ви ще цього не налаштували. Інструкції є на [сторінці налаштування OpenHumans](../SupportingAaps/OpenHumans.md).

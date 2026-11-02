@@ -8,7 +8,7 @@ __AAPS__ nabízí několik funkcí pro vzdálený dohled nad dětmi s diabetem 1
 
 - Pumpu dítěte ovládá telefon dítěte s __AAPS__.
 - Pečovatelé mohou na dálku sledovat všechna důležitá data, jako je glykémie, aktivní sacharidy, aktivní inzulín atd., pomocí **AAPSClient apk** na svém telefonu s Androidem (verze **AAPSClient** pro iPhone se připravuje, viz [AAPSClient](AapsClient.md)). Nastavení změněná v __AAPS__ se synchronizují s __AAPSClient__ a naopak.
-- Pečovatelé mohou dostávat alarmy pomocí **aplikace xDrip v režimu sledování** na svém telefonu s Androidem, pokud je nastavený režim doprovodné aplikace xDrip.
+- Caregivers can be alarmed by using **xDrip app in follower mode** on their Android phone if xDrip companion mode is set up.
 - Vzdálené ovládání __AAPS__ pomocí [SMS příkazů](../RemoteFeatures/SMSCommands.md) je zabezpečené dvoufázovým ověřením.
 - Vzdálené ovládání přes __AAPSClient__ používá podepsaný kanál pro příkazy zavedený v **AAPS** 4: klient musí být nejdřív **spárovaný** s hlavním zařízením (pomocí QR kódu nebo PINu) a každý příkaz potvrdí a provede hlavní zařízení. Telefon každého pečovatele může mít vlastní [roli](#client-master-control-roles), od režimu jen pro čtení až po plné ovládání — viz [Ovládání master ↔ klient](#client-master-control).
 

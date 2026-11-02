@@ -48,7 +48,7 @@
 
 - DiaKEM: nowe instalacje nie działają po aktualizacji serwerów @psonnera
 - Usunięto zmodyfikowaną aplikację Libre 2 (patched, przestarzała): nie działa z nowymi sensorami @psonnera
-- Nowa wersja strony Omnipod Dash @XiTatiON
+- Reworked Omnipod DASH page @XiTatiON
 
 ## Sierpień 2025
 
@@ -112,7 +112,7 @@ Dokumentacja AAPS 3.1 jest dostępna [tutaj](https://androidaps.readthedocs.io/e
 
 ## Listopad 2021
 
-- Dobre praktyki kalibracji sensora Libre 2
+- Best practices for calibrating a Libre 2 sensor
 - [ISF](../UsefulLinks/FAQ.md) – nowy opis wpływu
 - Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - Usunięto zmodyfikowaną aplikację [Dexcom](../CompatibleCgms/DexcomG6.md) (patched), ponieważ jest przestarzała
@@ -212,7 +212,7 @@ Dokumentacja AAPS 3.1 jest dostępna [tutaj](https://androidaps.readthedocs.io/e
 
 ## Grudzień 2019
 
-- [Android Auto](../RemoteFeatures/AndroidAuto.md) – konfiguracja ze zrzutami ekranu
+- [Android Auto](../RemoteFeatures/AndroidAuto.md) - setup with screenshots
 - [Accu-Chek Insight i Autotune](#Accu-Chek-Insight-Pump-settings-in-aaps) – obejście problemu
 - [Glimp](#Config-Builder-bg-source) – obsługiwana wersja 4.15.57 i nowsze
 - [Tarcze zegarka](../WearOS/WearOsSmartwatch.md) – duża aktualizacja, dużo więcej szczegółów
@@ -238,7 +238,7 @@ Dokumentacja AAPS 3.1 jest dostępna [tutaj](https://androidaps.readthedocs.io/e
 ## Październik 2019
 
 - [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
-- [AccuChek Insight – opcje logów](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- [Accu-Chek Insight - log options](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [Obliczanie COB na osobnej stronie](../DailyLifeWithAaps/CobCalculation.md)
 - [COB – wykrywanie błędnej wartości COB](#CobCalculation-detection-of-wrong-cob-values)
 - [Dexcom G6 – rozwiązywanie problemów](#DexcomG6-troubleshooting-g6)

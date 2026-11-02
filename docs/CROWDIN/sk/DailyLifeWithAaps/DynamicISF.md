@@ -16,14 +16,14 @@ Pri používaní **Dynamickej ISF** vypnite všetky pravidlá **Automatizácie**
 
 Na používanie **Dynamickej ISF** potrebuje databáza **AAPS** aspoň 7 dní údajov používateľa z **AAPS**.
 
-## Čo robí dynamická ISF?
+## What does Dynamic ISF do?
 
 **Dynamická ISF** dynamicky prispôsobuje citlivosť na inzulín (**ISF**) na základe používateľovej:
 
 - celkovej dennej dávky inzulínu (**TDD**); a
 - aktuálnych a predpovedaných hodnôt glykémie.
 
-Pri používaní **Dynamickej ISF** sa hodnoty **ISF** zadané v **Profile** už vôbec nepoužívajú, okrem náhradného riešenia, keď v databáze **AAPS** nie je dosť údajov TDD (*t. j.* po novej inštalácii aplikácie).
+When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are not used at all anymore, except as a fallback if there is not enough TDD data in **AAPS** database (*i.e.* fresh reinstallation of the app).
 
 **SMB/AMA** – príklad **profilu** používateľa so statickým **ISF** nastaveným používateľom a využívaným **SMB** a **AMA**.
 
@@ -37,7 +37,7 @@ Pri používaní **Dynamickej ISF** sa hodnoty **ISF** zadané v **Profile** už
 
 Hodnotu **DynISF** možno zobraziť aj v grafe: ťuknite na **Pridať graf** pod grafmi na hlavnej obrazovke a vyberte **VSENS** (premenlivá citlivosť). Zobrazuje sa ako biela čiara (dolná časť obrázka vyššie).
 
-## Ako sa počíta dynamická ISF?
+## How is Dynamic ISF calculated?
 
 **Dynamická ISF** používa na určenie **ISF** model Chrisa Wilsona namiesto statickej hodnoty **ISF**, ktorú používateľ nastavil v **Profile**. Podrobné vysvetlenie nájdete tu: [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
 
@@ -70,9 +70,8 @@ Robí sa to preto, aby sa nepodalo príliš veľa inzulínu, keď je **glykémia
 
 **Budúca ISF** používa rovnaký vzorec, ako je opísané vyššie, ale namiesto **aktuálnej glykémie** môže použiť **minimálnu predpovedanú glykémiu**. **Minimálna predpovedaná glykémia**, [ako ju počíta oref1](#aaps-screens-how-predictions-become-a-dosing-decision), je najnižšia hodnota, na ktorú by mala vaša glykémia podľa predpovedí klesnúť počas celého obdobia predpovedí.
 
-* Ak je aktuálna **glykémia** nad cieľom <br/> **a** ak je **glykémia** stabilná, v rozmedzí +/- 3 mg/dl:<br/>glykémia sa vo vzorci použije takto: `average(minimum predicted BG, current BG)` (priemer minimálnej predpovedanej glykémie a aktuálnej glykémie).
-* Ak je výsledná **glykémia** nad cieľom a glykémia stúpa,<br/>  
-  **alebo** je výsledná **glykémia** vyššia ako aktuálna **glykémia**:<br/>glykémia sa vo vzorci použije takto: `current BG` (aktuálna glykémia).
+* If the current **BG** is above target<br/> **and** if **BG** levels are flat, within +/- 3 mg/dL:<br/>BG is used in the formula as follows: `average(minimum predicted BG, current BG)`.
+* If eventual **BG** is above target and glucose levels are increasing,<br/> **or** eventual **BG** is above current **BG**:<br/>BG is used in the formula as follows: `current BG`.
 * Inak:<br/>glykémia sa vo vzorci použije takto: `minimum predicted BG` (minimálna predpovedaná glykémia).
 
 Zjednodušené vysvetlenie nájdete na snímke obrazovky nižšie, ktorá túto situáciu znázorňuje. Oranžové bodky používajú **predpovedanú glykémiu**, fialové bodky **priemer (predpovedaná glykémia, aktuálna glykémia)** a modré bodky **aktuálnu glykémiu**.
@@ -112,7 +111,7 @@ Na aktiváciu zapnite **Použiť dynamickú citlivosť** v [Nastavenia > OpenAPS
 
 **Korekčný faktor** sa mení aj pri aktivácii [**Prepnutia profilu** s percentom](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). Nižšie **Percento profilu** zníži **korekčný faktor** a vyššie **Percento profilu** ho naopak zvýši.
 
-Ak je napríklad váš **korekčný faktor** 80 % a vykonáte **Prepnutie profilu** na 80 %, výsledný **korekčný faktor** bude `0.8*0.8=0.64`.
+For example, if your **Adjustment Factor** is 80%, and **Profile Switch** to 80% is actioned, the resulting **Adjustment Factor** will be `0.8*0.8=0.64`.
 
 To znamená, že pri používaní **DynISF** môžete pomocou **Percenta profilu** dočasne ručne doladiť svoju citlivosť. Toto môže byť užitočné pri fyzickej aktivite (nižšie percento), chorobe (vyššie percento) atď.
 

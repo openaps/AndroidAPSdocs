@@ -40,7 +40,7 @@ Après un changement de capteur, xDrip détecte automatiquement le nouveau capte
 
 ![Configuration > Source GLY avec xDrip+ Glycémie sélectionné](../images/v4/Configuration/configuration_bg_source.png)
 
--   Si AAPS ne reçoit pas de glycémies quand le téléphone est en mode avion, utilisez 'Identify receiver' comme décrit sur la [page des paramètres xDrip](#xdrip-identify-receiver).
+-   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as described on [xDrip settings page](#xdrip-identify-receiver).
 
 ## 2. Utiliser la connexion directe de xDrip
 
@@ -67,7 +67,7 @@ Techniquement, la glycémie actuelle est envoyée à xDrip chaque minute. Un fil
 
 Ceci est obligatoire pour la boucle. Les courbes sont lisses et les résultats avec la boucle sont excellents. Les valeurs brutes sur lesquelles les alarmes sont basées sont un peu plus instables, mais correspondent aux valeurs que le lecteur affiche aussi. De plus, les valeurs brutes peuvent être affichées dans le graphique xDrip afin de pouvoir réagir à temps aux changements rapides. Veuillez activer Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" et "show Sensors Infos". Ainsi, les valeurs brutes sont aussi affichées sous forme de petits points blancs, et des informations supplémentaires sur le capteur sont disponibles dans le menu Système.
 
-Les valeurs brutes sont très utiles lorsque les glycémies changent rapidement. Même si les points sautent davantage, vous verrez beaucoup mieux la tendance qu'avec la ligne lissée, pour prendre les bonnes décisions de traitement.
+Les valeurs brutes sont très utiles lorsque les glycémies changent rapidement. Even if the dots are jumpier you would detect the tendency much better than using the smoothed line to make proper therapy decisions.
 
 → Menu hamburger → Settings → Less common settings → Advanced settings for Libre 2
 
@@ -77,7 +77,7 @@ Les valeurs brutes sont très utiles lorsque les glycémies changent rapidement.
 
 #### Étalonnage
 
-Vous pouvez étalonner le Libre2 **avec un décalage de -40 mg/dl à +20 mg/dl \[-2,2 mmol/l à +1,1 mmol/l\]** (intercept). La pente ne peut pas être modifiée. Veuillez vérifier par une mesure au doigt après la pose d'un nouveau capteur, en gardant à l'esprit qu'il peut être imprécis pendant les 12 premières heures après l'insertion. Comme il peut y avoir de grandes différences avec les mesures au doigt, vérifiez toutes les 24 heures et étalonnez si nécessaire. Si le capteur est complètement faux après quelques jours, il doit alors être remplacé.
+You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2.2 mmol/L to +1.1 mmol/L\]** (intercept). La pente ne peut pas être modifiée. Veuillez vérifier par une mesure au doigt après la pose d'un nouveau capteur, en gardant à l'esprit qu'il peut être imprécis pendant les 12 premières heures après l'insertion. Comme il peut y avoir de grandes différences avec les mesures au doigt, vérifiez toutes les 24 heures et étalonnez si nécessaire. Si le capteur est complètement faux après quelques jours, il doit alors être remplacé.
 
 ## 3. Utiliser Diabox
 

@@ -8,7 +8,7 @@ O __AAPS__ oferece várias funções para a monitorização remota de crianças 
 
 - A bomba da criança é controlada pelo telefone da criança com o __AAPS__.
 - Os cuidadores podem seguir à distância todos os dados importantes, como os níveis de glicose, os hidratos de carbono ativos, a insulina ativa, etc., com a **apk AAPSClient** no seu telefone Android (uma versão do **AAPSClient** para iPhone está em desenvolvimento, ver [AAPSClient](AapsClient.md)). As definições alteradas no __AAPS__ são sincronizadas com o __AAPSClient__ e vice-versa.
-- Os cuidadores podem receber alarmes com a **app xDrip em modo de seguidor** no seu telefone Android, se o modo companion do xDrip estiver configurado.
+- Caregivers can be alarmed by using **xDrip app in follower mode** on their Android phone if xDrip companion mode is set up.
 - O controlo remoto do __AAPS__ com [Comandos SMS](../RemoteFeatures/SMSCommands.md) está protegido por autenticação de dois fatores.
 - O controlo remoto através do __AAPSClient__ usa o canal de comandos assinados introduzido no **AAPS** 4: primeiro, o cliente tem de ser **emparelhado** com o telefone principal (com um código QR ou um PIN), e cada comando é confirmado e executado pelo telefone principal. O telefone de cada cuidador pode ter a sua própria [função](#client-master-control-roles), desde só leitura até controlo total — ver [Controlo principal ↔ cliente](#client-master-control).
 

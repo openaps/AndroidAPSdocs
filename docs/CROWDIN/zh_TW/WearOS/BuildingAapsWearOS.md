@@ -41,7 +41,7 @@ Wear APK 會依照您選擇的建置[變體](#browserbuild-variant)產生：`ful
 
 Wear APK 的下載位置：
 
-- **AAPS Builder**: on the build page, scroll down to **Artifacts** and download `aaps-wear-….apk` next to the phone app, as shown in [Step 5 – Install the app on your phone](#aaps-builder-step5). 如果您要透過手機安裝手錶應用程式（使用 Wear Installer 2 或 Easy Fire Tools），請將檔案下載至執行 **AAPS** 的手機；如果您使用 ADB，則請下載至電腦。
+- **AAPS Builder**：在建置頁面向下捲動至 **Artifacts**，並下載手機應用程式旁的 `aaps-wear-….apk`，如下方[步驟 5 – 在手機上安裝應用程式](#aaps-builder-step5)所示。如果您要透過手機安裝手錶應用程式（使用 Wear Installer 2 或 Easy Fire Tools），請將檔案下載至執行 **AAPS** 的手機；如果您使用 ADB，則請下載至電腦。
 
   ![Artifacts，包含手機與手錶的應用程式](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 
@@ -78,7 +78,7 @@ Wear APK 和手機 APK 一樣建置，但需另外進行一次簽章建置。請
 
 建置完整的 **AAPS** 應用程式時（事實上，建置任何已簽章的應用程式時也一樣），Android Studio 都會在同一個資料夾中產生一個 .json 檔案。這會在你嘗試建置下一個已簽章的應用程式（如 **AAPS** wear 應用程式）時，導致[未提交的變更](#troubleshooting_androidstudio-uncommitted-changes)錯誤。解決此問題的最快方法是導航到建置完整 AAPS 應用程式的資料夾，你的資料夾可能類似於：
 
-`C:\Users\你的名稱\AndroidStudioProjects\AndroidAPS\app\aapsclient\release。`
+`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\full\release。`
 
 將不需要的 .json 檔案刪除或移出該資料夾。然後再次嘗試建置 **AAPS** wear 應用程式。如果這不起作用，請參閱[更詳細的問題排除指南](../GettingHelp/TroubleshootingAndroidStudio.md)，以幫助你識別導致問題的具體檔案，也可能是你的密鑰庫檔案。
 

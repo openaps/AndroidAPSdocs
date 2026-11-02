@@ -122,9 +122,9 @@ Android requires special permission for apps if they want to send you notificati
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. На Android 12 натисніть `Battery` (Батарея), на Android 13+ натисніть `App battery usage` (Використання батареї застосунком),
+   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
 
-   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
+   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
 5. На Android 12+ виберіть варіант `Unrestricted` (Без обмежень). На Android 15+ спочатку розгорніть налаштування `Allow background usage` (Дозволити використання у фоні): натисніть розділ, виділений червоним, а потім виконайте крок 6.
 
@@ -454,7 +454,7 @@ Later, for closed looping, you will generally have only one value for top and bo
 
 ![Підтвердження під час вибору апаратної помпи](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-Якщо вибрана помпа працює через Bluetooth, після завершення майстра **AAPS** попросить дозвіл на підключення до пристроїв поблизу (див. [Дозвіл Bluetooth](#bluetooth-permission)).
+If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#setup-wizard-bluetooth-permission)).
 
 Якщо ви вже налаштували профіль і знаєте, як підключити помпу, можете підключити її зараз. Інакше поки що залиште **Віртуальна помпа** — ви можете змінити її будь-коли або вийти з Майстра налаштування стрілкою у верхньому лівому куті, щоб **AAPS** спочатку показав вам кілька значень глюкози крові.
 
@@ -505,7 +505,7 @@ OpenAPS AMA — найпростіший алгоритм, який не під�
 
 Here we start Objective 1, even if at the moment our setup is not completely ready to successfully complete this Objective. But this is the start.
 
-Натисніть кнопку «**Почати**» поруч із «**1. Завдання**»:
+Press the "**Start**" button of **Objective 1**:
 
 ![Список завдань](../images/setup-wizard/Wizard-Objectives-List.png)
 
@@ -521,6 +521,7 @@ Here we start Objective 1, even if at the moment our setup is not completely rea
 
 Якщо ви випадково вийдете з Майстра налаштування, ви можете просто знову запустити майстер або змінити [конфігурацію петлі AAPS](../SettingUpAaps/ChangeAapsConfiguration.md) вручну.
 
+(setup-wizard-bluetooth-permission)=
 ## Дозвіл Bluetooth
 
 Якщо ви вибираєте помпу, яка підключається через Bluetooth (наприклад, **Omnipod Dash**), банер нагадує, що **AAPS** потрібен дозвіл Bluetooth. Поки що можна натиснути «**Закрити**» — дозвіл надається після завершення майстра:

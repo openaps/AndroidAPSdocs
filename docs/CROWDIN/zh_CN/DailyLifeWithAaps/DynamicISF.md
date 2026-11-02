@@ -16,14 +16,14 @@
 
 要使用 **动态 ISF**，**AAPS** 的数据库需包含至少 7 天的用户数据。
 
-## 动态 ISF 的作用
+## What does Dynamic ISF do?
 
 **动态 ISF** 根据以下因素动态调整胰岛素敏感系数（**ISF**）：
 
 - 每日胰岛素总剂量（TDD）；
 - 当前和预测的血糖值。
 
-启用 **动态 ISF** 后，**配置文件** 中设置的静态 **ISF** 值将不再被使用（除非 **AAPS** 数据库缺乏足够的 TDD 数据，*例如*全新安装应用时作为备用）。
+When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are not used at all anymore, except as a fallback if there is not enough TDD data in **AAPS** database (*i.e.* fresh reinstallation of the app).
 
 **SMB/AMA 示例** - 用户**配置文件**中由用户设定并被 **SMB** 和 **AMA** 使用的静态 **ISF**。
 
@@ -37,7 +37,7 @@
 
 The **DynISF** value can also be shown in a graph: tap **Add graph** below the graphs on the main screen and select **VSENS** (variable sensitivity). It shows as a white line (bottom of the image above).
 
-## 动态 ISF 的计算原理
+## How is Dynamic ISF calculated?
 
 **动态 ISF** 采用 Chris Wilson 模型替代用户**配置文件**中设置的静态 **ISF** 值。详细解释可参考： [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c)。
 
@@ -70,9 +70,8 @@ This is set within the user’s **Settings** and is used to make **Dynamic ISF**
 
 **未来 ISF** 使用相同公式，但可能以 **预测最低 BG** 替代**当前 BG**。 **Minimum predicted BG**, [as calculated in oref1](#aaps-screens-how-predictions-become-a-dosing-decision), is the minimum value your BG is predicted to go during all the course of the predictions.
 
-* 若当前 **BG** 高于目标<br/>**且**波动在 +/-3 mg/dL 内：<br/> `取平均值(预测最低 BG,当前 BG)`。
-* 若最终 ​**BG**​ 高于目标且血糖上升，<br/>  
-  **或**最终 ​**BG**​ 高于当前 **BG**：`使用当前 BG`；
+* If the current **BG** is above target<br/> **and** if **BG** levels are flat, within +/- 3 mg/dL:<br/>BG is used in the formula as follows: `average(minimum predicted BG, current BG)`.
+* If eventual **BG** is above target and glucose levels are increasing,<br/> **or** eventual **BG** is above current **BG**:<br/>BG is used in the formula as follows: `current BG`.
 * 其他情况：<br/>`使用预测最低 BG`。
 
 简化示例如下图所示，橙色点使用**预测 BG**，紫色点使用**平均值**，蓝色点使用**当前 BG**。
@@ -112,7 +111,7 @@ Check **Use dynamic sensitivity** in [Settings > OpenAPS SMB](#Preferences-opena
 
 启用 [包含比例的**配置文件百分比切换**](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) 时，**调整因子** 会相应调整。较低的**配置文件比例**会降低**调整因子**，而较高的**配置文件比例**则会产生相反效果。
 
-例如，若当前**调整因子**为 80%，切换至 80% **配置文件**时，实际**调整因子**为`0.8*0.8=0.64`。
+For example, if your **Adjustment Factor** is 80%, and **Profile Switch** to 80% is actioned, the resulting **Adjustment Factor** will be `0.8*0.8=0.64`.
 
 这意味着使用 **DynISF** 时，可通过 **配置文件百分比** 手动临时调节敏感度，适用于运动（降低百分比）、疾病（提高百分比）等场景。
 

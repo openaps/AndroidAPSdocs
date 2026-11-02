@@ -30,7 +30,7 @@ Dokumentet er skrivebeskyttet. Med CTRL-F kan du søke i teksten i Google-regnea
 
 For å registrere testen din av et maskinvareoppsett, fyll ut dette [skjemaet](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Når du har fylt ut skjemaet, oppdateres regnearket automatisk hvert 5. minutt.
 
-Hvis du har problemer med regnearket, kontakt den som vedlikeholder det, *@theodoor5137*, på Discord, eller se siden [Hvor kan jeg få hjelp? ](../GettingHelp/WhereCanIGetHelp.md).
+Har du problemer med regnearket, kontakt den som vedlikeholder det, *@theodoor5137*, på Discord, eller se siden om [hvor du kan få hjelp](../GettingHelp/WhereCanIGetHelp.md).
 
 ## Jeg fant ikke telefonen min
 

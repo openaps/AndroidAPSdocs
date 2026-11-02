@@ -30,7 +30,7 @@ Le document est en lecture seule. Avec CTRL-F, vous pouvez chercher dans le text
 
 Pour enregistrer votre test d'une configuration de matériel, veuillez remplir ce [formulaire](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Après l'envoi du formulaire, la feuille est mise à jour automatiquement toutes les 5 minutes.
 
-Pour tout problème avec la feuille de calcul, veuillez contacter son responsable, *@theodoor5137*, sur Discord, ou consultez la page [Où puis-je obtenir de l'aide ? ](../GettingHelp/WhereCanIGetHelp.md).
+Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
 
 ## Je n'ai pas trouvé mon téléphone
 

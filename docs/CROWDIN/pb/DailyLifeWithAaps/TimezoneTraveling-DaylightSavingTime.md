@@ -76,7 +76,7 @@ O driver ajusta automaticamente a hora da bomba para a hora do telefone.
 
 Mudanças de fuso horário mantêm o histórico intacto, só a TDD pode ser afetada. Mudar a hora do telefone manualmente pode causar problemas com o histórico e a **IOB**. Se você mudar a hora manualmente, verifique bem a **IOB**.
 
-Quando o fuso horário ou a hora mudam, as **TBRs** em andamento são paradas.
+When the time zone or time changes running **TBRs** are stopped.
 
 (time-adjustment-daylight-savings-time-dst)=
 
@@ -108,8 +108,8 @@ Se você der bólus com a calculadora do **AAPS**, não use os dados de **COB** 
 
 ### Horário de verão para Omnipod Dash
 
-* Ou deixe o **AAPS** usar temporariamente a basal de fundo depois da mudança do horário de verão, como explicado acima.
-* Ou, se você não quiser que o **AAPS** use temporariamente a basal de fundo durante a noite, pode mudar o fuso horário no dia anterior à mudança do horário de verão, para evitar a interrupção durante a noite. ATENÇÃO: ESTA OPÇÃO PODE FAZER SEU POD EXPIRAR ANTES DO TEMPO. TENHA MATERIAIS DE REPOSIÇÃO COM VOCÊ SE ESCOLHER A FUNÇÃO ABAIXO.
+* Either allow **AAPS** to temporarily default to background basal after DST has taken place as explained above.
+* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day before DST is due to take place to avoid overnight disruption. ATENÇÃO: ESTA OPÇÃO PODE FAZER SEU POD EXPIRAR ANTES DO TEMPO. TENHA MATERIAIS DE REPOSIÇÃO COM VOCÊ SE ESCOLHER A FUNÇÃO ABAIXO.
 
 #### Ações antes da mudança do relógio
 
@@ -129,6 +129,6 @@ Se você der bólus com a calculadora do **AAPS**, não use os dados de **COB** 
 
 3. No **AAPS**, atualize sua bomba e troque para o **Perfil** desejado.
 
-4. Verifique a **IOB** e a **COB** no **AAPS**. Se estiverem incorretas, desative o **Loop** por pelo menos uma DIA ou pelo tempo máximo de carboidratos (Max-Carb-Time) - o que for maior.
+4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA or the maximum carb absorption time (**Absorption max time**), whichever is longer.
 
 5. Ações depois da mudança do relógio. Um bom momento para voltar ao fuso horário local é quando a **IOB** estiver baixa. Por exemplo, uma hora antes de uma refeição, como o café da manhã. O ideal é que a **COB** e a **IOB** estejam ambas perto de zero.

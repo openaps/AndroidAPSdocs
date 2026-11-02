@@ -54,7 +54,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Étiquette au milieu de [nulle part](#sandbox1-in-the-middle-of-nowhere) Ceci est par contre l'étiquette vers [](#sandbox1-this-is-another-test) et elle devrait afficher son nom
 
-Liens avec ancre :
+Links with anchor:
 - [combien de temps cela prendra-t-il ?](#preparing-how-long-will-it-take)
 - [Paramètres NSClient dans Préférences](#Preferences-nsclient).
 - [lignes de prédiction dans la VUE D'ENSEMBLE d'AAPS](#aaps-screens-prediction-lines) vers un titre de niveau 4

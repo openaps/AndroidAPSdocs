@@ -54,7 +54,7 @@ Más abajo hay estadísticas de tiempo en rango estrecho (TITR) de 70–140 mg/d
 
 **Habla de los objetivos con tu endocrinólogo**
 
-Tu diabetes puede ser diferente. Debes hablar de cualquier objetivo propuesto con tu endocrinólogo o tu equipo médico. Si se usan bien, las estadísticas de AAPS pueden ser una herramienta útil para seguir las tendencias de __glucosa__ y ver tu progreso.
+Tu diabetes puede ser diferente. Debes hablar de cualquier objetivo propuesto con tu endocrinólogo o tu equipo médico. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress.
 
 ![Estadísticas](../images/Maintenance/statistics3.png)
 
@@ -117,7 +117,7 @@ Al final de cada línea, unos iconos pequeños muestran de dónde vienen los dat
 ![Carbohidratos y bolos](../images/TreatmentsView1.png)
 
 En esta pestaña puedes ver el registro de bolos y carbohidratos. Cada bolo (línea **1**) muestra la IOB restante asociada junto a la cantidad de insulina. El origen del bolo puede ser:
-* Comida (introducido a mano con los botones Insulina, Asistente rápido o Asistente de bolo)
+* Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
 * SMB, cuando se usa la función SMB
 
 Las entradas de carbohidratos (línea **2**) se muestran con su cantidad en gramos.
@@ -147,9 +147,9 @@ Aquí se muestran las **basales temporales** aplicadas por el lazo. Cuando una e
 * IOB positiva si la basal temporal fue más alta que la del perfil
 * IOB negativa con una basal temporal a cero (como en la línea **1**) o si la basal temporal fue más baja que la del perfil
 
-Borrar las entradas solo afecta a tus informes en Nightscout y probablemente alterará tu IOB real; no se recomienda.
+Deleting the entries only affects your reports in Nightscout and will probably distort your real IOB - it is not recommended.
 
-A la izquierda de una línea, una S roja significa «Suspender»: ocurre cuando la basal no se está administrando en ese momento. Es una situación normal, por ejemplo, mientras cambias un pod.
+On the left of a line, a red S means “Suspend”: it happens when basal is not currently delivered. Es una situación normal, por ejemplo, mientras cambias un pod.
 
 ### Objetivo temporal
 
@@ -178,7 +178,7 @@ Esta pestaña muestra todas las notas y entradas del portal de cuidados guardada
 
 ![Modo de funcionamiento](../images/TreatmentsView6.png)
 
-Esta pestaña muestra el historial de cambios del [estado del lazo](#AapsScreens-loop-status): abierto, cerrado, LGS, suspendido, desconectado.
+This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
 
 ### Entrada de usuario
 

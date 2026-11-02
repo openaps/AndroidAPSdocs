@@ -136,7 +136,7 @@ O **Tempo limite da proteção** define durante quanto tempo (em segundos) as de
 
 - Os limites de segurança são definidos com base na idade que escolher nesta definição.
 - Se começar a atingir estes limites rígidos (como o bólus máximo), está na altura de subir um nível.
-- É má ideia escolher uma idade acima da real, porque pode levar a uma sobredosagem ao introduzir um valor errado no diálogo de insulina (por exemplo, esquecendo a vírgula decimal).
+- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
 - Se quiser saber os números reais destes limites de segurança fixos, procure a função do algoritmo que usa [nesta página](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 (Preferences-maximum-bolus)=
@@ -275,7 +275,7 @@ Conforme as suas definições em [Configuração > APS](../SettingUpAaps/ConfigB
 - [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - o estado do algoritmo em 2017
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - o algoritmo mais recente, recomendado para principiantes
 
-A partir da [versão 3.3 do **AAPS**](#version3300), a função [FSI Dinâmico](../DailyLifeWithAaps/DynamicISF.md) passou a fazer parte do OpenAPS SMB.
+As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -489,7 +489,7 @@ When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays
 
 Pode ajudar a desenvolver o **AAPS** enviando relatórios de falhas aos programadores.
 
-**Exportação de definições sem intervenção**<br/> Ao ativar esta função, permite que o **AAPS** exporte as definições sem intervenção do utilizador. Para isso, a senha mestre é guardada de forma segura no seu telefone (só lá) na próxima exportação manual. A senha guardada é usada durante até 4 semanas. Após 4 semanas, recebe uma notificação de que a senha está quase a expirar. Durante um período de tolerância de 1 semana, pode então renovar a senha exportando manualmente as definições a partir do menu de manutenção.
+**Exportação de definições sem intervenção**<br/> Ao ativar esta função, permite que o **AAPS** exporte as definições sem intervenção do utilizador. For this the master password is securely stored on your phone (only) at the next manual export. A senha guardada é usada durante até 4 semanas. Após 4 semanas, recebe uma notificação de que a senha está quase a expirar. Durante um período de tolerância de 1 semana, pode então renovar a senha exportando manualmente as definições a partir do menu de manutenção.
 
 Depois de passar o período de tolerância de 1 semana, a senha guardada expira e qualquer exportação automática das definições é cancelada com uma notificação ao utilizador, que pede para introduzir novamente a senha. [(**Exportações automáticas das definições**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) ficam registadas nas listas 'Careportal' e 'Entrada de Utilizador' do **AAPS**, em Tratamentos.
 

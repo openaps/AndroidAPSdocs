@@ -53,7 +53,7 @@ SGLT-2抑制剂，也称为格列净类药物，可抑制肾脏对葡萄糖的�
 
 In a nutshell:
 - **Example 1: risk of Hypo**
->During lunch, you use **AAPS** to bolus based on consuming 45 g of glucose. The problem is that, unbeknownst to AAPS, the inhibitors cause the body to eliminate some of the carbs. This leaves your body with too much insulin compared to the absorbed carbs, resulting in hypoglycemia.
+>During lunch, you use **AAPS** to bolus based on consuming 45 g of carbs. The problem is that, unbeknownst to AAPS, the inhibitors cause the body to eliminate some of the carbs. This leaves your body with too much insulin compared to the absorbed carbs, resulting in hypoglycemia.
 
 - **Example 2: risk of Ketoacidosis**
 >The inhibitors eliminate some of the carbs in the background, causing a reduction in your BG. **AAPS** will automatically instruct the pump to decrease insulin intake, including basal. Over time this can result in your BG remaining below target value, to the point where the body does not have enough background insulin to absorb any carbs, resulting in ketoacidosis. Ordinarily, ketoacidosis develops in T1D patients because their pump fails, which would trigger alerts on their phone and be noticeable due to a high BG value. However, the danger with gliflozins is that there would be no AAPS alerts, as the pump remains operational and the BG potentially remains within target.
@@ -80,7 +80,7 @@ SGLT-2抑制剂的常见商品名包括：Invokana、Farxiga、Jardiance、Glyxa
 
 #### 应用程序构建时间以及进展到完全闭环
 
-构建**AAPS**（AndroidAPS）应用程序的时间取决于你的专业水平和技术能力。对于没有经验的用户来说，构建**AAPS**通常需要半天到一天的时间（如果得到社区的帮助的话）。随着你经验的积累，构建新版本**AAPS**的过程将会显著加快。
+The time to build the **AAPS** app depends on your level of expertise and technical ability. 对于没有经验的用户来说，构建**AAPS**通常需要半天到一天的时间（如果得到社区的帮助的话）。随着你经验的积累，构建新版本**AAPS**的过程将会显著加快。
 
 Several parts of this documentation are dedicated to helping you through the build process:
 

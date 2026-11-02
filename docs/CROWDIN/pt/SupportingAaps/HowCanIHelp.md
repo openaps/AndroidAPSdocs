@@ -23,7 +23,7 @@ Se está a traduzir pela primeira vez, comece por traduzir os textos da aplicaç
 
 Pode também começar a traduzir a documentação ao mesmo tempo ou mais tarde.
 
-Pode ver o estado das traduções da aplicação e da documentação para cada língua [aqui](#StateOfTranslations).
+You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
 
 * Se quer traduzir **a aplicação** para outras línguas (obrigado), use o [crowdin](https://crowdin.com/project/androidaps).
 * Se quer traduzir **a documentação** para outras línguas (obrigado), use o [crowdin](https://crowdin.com/project/androidapsdocs). 

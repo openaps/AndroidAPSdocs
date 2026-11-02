@@ -108,7 +108,7 @@ Ved trening eller aktivitet anbefales det, med pumpe eller hybrid lukket loop, a
 
 Med **FCL** er algoritmen justert til å oppdage **UAM** og automatisk gi insulin for å motvirke stigning i **BS**.  Et høyt **midlertidig mål** og en lavere **profilprosent** (som virker allerede rundt måltidsstart) bør settes i god tid før aktivitet.
 
-Uvanlige eller uregelmessige treningsnivåer gir vansker for **FCL**. Trening krever planlegging på forhånd (særlig hvis du vil redusere behovet for redningskarbohydrater/snacks ved lavt BS under trening). Etter en aktiv dag anbefales det å sette en lavere **profilprosent** for natten, etter at kveldsmåltidet er helt fordøyd: sett i **automasjoner** et forhøyet (>100 mg/dL) **BS**-mål, med «ingen **SMB-er** ved forhøyet mål» valgt i **Innstillinger** i **AAPS**.
+Uvanlige eller uregelmessige treningsnivåer gir vansker for **FCL**. Trening krever planlegging på forhånd (særlig hvis du vil redusere behovet for redningskarbohydrater/snacks ved lavt BS under trening). Etter en aktiv dag anbefales det å sette en lavere **profilprosent** for natten, etter at kveldsmåltidet er helt fordøyd: sett i **automasjoner** et forhøyet (>100 mg/dL) **BS**-mål, med **Aktiver SMB ved høyt midlertidig mål** slått av i **Innstillinger** i **AAPS**.
 
 ## Hindringer for barn
 
@@ -171,7 +171,7 @@ Avsnittet nedenfor gir veiledning om hvordan du setter sammen betingelsene i en 
 
 Nøkkelen til vellykket **FCL**: **i starten av BS-stigninger fra måltider må loopen gi svært store automatiske SMB-er så raskt som mulig** for å «ta igjen» den nødvendige **IOB** som trengs (sammenlign med bolusen du vanligvis gir for et lignende måltid i **HCL**!)
 
-For å få til dette bør data fra din **HCL** analyseres for å finne ut hvilke **deltaer** som kanskje ikke er knyttet til måltider, og hvilke deltaer som kanskje er det.
+For å få til dette bør data fra din **HCL** analyseres for å finne ut hvilke **deltaer** som kanskje ikke er knyttet til måltider, og hvilke som kanskje er det.
 
 - Siden du kan definere **automasjonen** innenfor et forhåndsdefinert tidsvindu, trenger du bare å analysere der.
 - Hvis du spiser svært ulike måltider (for eksempel en frokost med ganske mye karbohydrater, men en lunsj med lite), kan du velge å lage to ulike (sett med) **automasjoner** for hvert av tidsrommene.

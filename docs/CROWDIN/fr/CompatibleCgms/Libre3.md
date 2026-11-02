@@ -22,7 +22,7 @@ Cette méthode utilise Juggluco pour recevoir les données brutes du capteur, à
 ### Étape 1 : Configurez Juggluco
 Téléchargez et installez l'application Juggluco depuis [ce lien](https://www.juggluco.nl/Juggluco/download.html). Suivez les instructions [ici](https://www.juggluco.nl/Juggluco/libre3/)
 
-Vérifiez que vous envoyez les glycémies à xDrip : dans les paramètres de Juggluco, vous pouvez configurer Juggluco pour envoyer ses glycémies à d'autres applications. Juggluco peut envoyer trois types de diffusions (broadcasts) de ce genre : le **Patched Libre broadcast** était utilisé à l'origine par l'application Librelink patchée et peut servir à envoyer les glycémies à xDrip
+Vérifiez que vous envoyez les glycémies à xDrip : dans les paramètres de Juggluco, vous pouvez configurer Juggluco pour envoyer ses glycémies à d'autres applications. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip.
 
 ### Étape 2 : Configurez xDrip
 
@@ -69,7 +69,7 @@ Après un changement de capteur, xDrip détecte automatiquement le nouveau capte
 
 ![Terminer le capteur](../images/libre3/step_14.jpg)
 
-Remarque : quand deux capteurs sont actifs, Juggluco envoie à xDrip la valeur la plus récente de l'un ou l'autre capteur. Si les capteurs ne sont pas calibrés et ne mesurent pas la glycémie de façon similaire, xDrip peut recevoir des glycémies qui sautent. Si vous terminez le mauvais capteur, vous pouvez le réactiver simplement en scannant ce capteur.
+Remarque : quand deux capteurs sont actifs, Juggluco envoie à xDrip la valeur la plus récente de l'un ou l'autre capteur. If the sensors are not calibrated to read BG similarly, this may result in jumpy BG values being reported to xDrip. Si vous terminez le mauvais capteur, vous pouvez le réactiver simplement en scannant ce capteur.
 
 ## Passer le capteur de l'application Libre 3 à Juggluco et inversement
 
@@ -99,4 +99,4 @@ Pour passer de l'application Libre 3 à Juggluco, vous devez forcer l'arrêt de 
 
 Instructions d'origine : [site web jkaltes](https://www.juggluco.nl/Juggluco/libre3/)
 
-Dépôt Github Supplémentaire : [Lien Github](https://github.com/maheini/FreeStyle-Libre-3-patch)
+Additional GitHub repo: [GitHub link](https://github.com/maheini/FreeStyle-Libre-3-patch)

@@ -10,7 +10,7 @@ Na začátku cesty s **AAPS** si musíte vytvořit **profil**, pochopit, jak pro
 
 - lidi pracující v noci nebo na směny – v **profilu** lze nastavit posun času. Počet hodin posunu v **profilu** odpovídá tomu, o kolik později nebo dříve půjde uživatel spát nebo vstane.
 
-Proč použít **procento profilu** místo dočasné úpravy bazálu? **Procento profilu** je účinnější, protože ve stejném poměru sníží nebo zvýší: bazál, ISF i I:C. Díky tomu **AAPS** počítá dávky inzulínu pro uživatele vyváženě. Snížení bazálu v **profilu** uživatele v **AAPS** přinese jen malý užitek, pokud algoritmus dál používá stejné hodnoty ISF a I:C.
+Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. Díky tomu **AAPS** počítá dávky inzulínu pro uživatele vyváženě. Snížení bazálu v **profilu** uživatele v **AAPS** přinese jen malý užitek, pokud algoritmus dál používá stejné hodnoty ISF a I:C.
 
 (ProfileSwitch-change-percentage)=
 
@@ -78,7 +78,7 @@ Vyberte profil a klepněte na **▶ Aktivovat**. Na obrazovce **Aktivovat** mů�
 
 ![Obrazovka Aktivovat – procento, trvání, posun času, čas](../images/v4/Profiles/profile_activate.png)
 
-- **Procento** (30–250 %, pokaždé začíná na 100 %) – změní celý profil v daném poměru. 100 % použije profil beze změny; například 70 % sníží bazál a vypočtenou dávku inzulínu (bolusy na jídlo i korekce) o 30 %. Nemění vaše cílové glykémie ani vstřebávání sacharidů. Celý účinek popisuje část [Procento profilu](#profile-percentage).
+- **Procento** (30–250 %, pokaždé začíná na 100 %) – změní celý profil v daném poměru. 100 % použije profil beze změny; například 70 % sníží bazál a vypočtenou dávku inzulínu (bolusy na jídlo i korekce) o 30 %. Nemění vaše cílové glykémie ani vstřebávání sacharidů. See [Profile Percentage](#ProfileSwitch-profile-percentage) for the full effect.
 - **Trvání** (0–10080 minut, tj. až 7 dní) – jak dlouho přepnutí trvá. **0 = bez omezení** (dokud znovu nepřepnete); jiná hodnota než 0 po skončení vrátí předchozí profil.
 - **Dočasný cíl / Aktivita** – objeví se jen tehdy, když nastavíte **Trvání** a **Procento** pod 100 %. Zapněte ho, pokud chcete na stejnou dobu spustit také [dočasný cíl Aktivita](#TempTargets-activity-temp-target), jako byste to udělali před cvičením.
 - **Posun času** – ukazuje *0h*; klepnutím na **Změnit** posunete rozpis dopředu nebo dozadu až o 23 hodin (užitečné při práci na směny nebo na cestách). Viz [Posun času](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
@@ -107,6 +107,8 @@ Pokud pumpa hlásí bazál, který se od vašeho **profilu** hodně liší, **AA
 
 Přepnutí profilu není omezeno jen na tuto obrazovku. Stejné přepnutí lze spustit také z **hodinek Wear OS**, ze spárovaného **klienta** (viz [Ovládání master ↔ klient](../RemoteFeatures/ClientMasterControl.md)), ze **[scény](Scenes.md)** nebo pravidlem **Automatizace**.
 
+(ProfileSwitch-profile-percentage)=
+
 ## Procento profilu
 
 Je důležité, aby uživatel rozuměl základním vlastnostem **procenta profilu**. Když u **přepnutí profilu** nastavíte procentní zvýšení nebo snížení, nastavení uložená v **profilu** uživatele se zvýší nebo sníží o stejné procento.
@@ -125,7 +127,7 @@ Vliv **procenta profilu** shrnuje tato tabulka:
 
 | Přepnutí profilu  
 procento |     Účinek     |     I:C  
-g/U     | příklad  
+g/U     | Example  
 15 g |          ISF  
 mmol/L/U  
 mg/dL/U          | U to lower  
@@ -153,7 +155,7 @@ mg/dL/U          | U to lower
 
 „Posun času“ v **profilu** uživatele posune nastavení **profilu** v rámci denního (cirkadiánního) cyklu o zadaný počet hodin. To může pomoci:
 
-- **lidem pracujícím v noci nebo na směny**: při noční směně nastavíte v **profilu** počet hodin podle toho, o kolik později nebo dříve půjde uživatel spát nebo vstane; 
+- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
 - **uživatelům, kteří při cestování mění časová pásma**; nebo
 - **dětem s diabetem 1. typu**, které mají pevný večerní režim a inzulínovou rezistenci zohledněnou ve svém **profilu**. Pokud dítě z jakéhokoli důvodu půjde spát později, může pečovatel použít na **profil** dítěte „posun času“, aby **AAPS** reagoval na inzulínovou rezistenci v době, kterou uživatel zvolí.
 
@@ -169,7 +171,7 @@ Jde vždy o to, nastavení **profilu** z které hodiny má nahradit nastavení p
 
 ![Směry posunu profilu v čase](../images/ProfileSwitch_PlusMinus2.png)
 
-Tento způsob ukládání snímků **profilu** umožňuje mnohem přesnější výpočty v minulosti a možnost sledovat změny **profilu**.
+This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
 
 (ProfileSwitch-keep-for-later)=
 

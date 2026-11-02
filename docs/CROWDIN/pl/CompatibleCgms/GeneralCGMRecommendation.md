@@ -9,7 +9,7 @@ Niezależnie od tego, jakiego systemu CGM używasz, jeśli zamierzasz korzystać
 -   Unikaj kalibracji, gdy poziom glukozy zmienia się w górę lub w dół.
 -   Wykonuj „wystarczająco dużo” kalibracji – oficjalne aplikacje poproszą Cię o sprawdzenie raz lub dwa razy dziennie. Systemy DIY mogą o to nie prosić, więc uważaj, jeśli używasz ich dalej bez kalibracji.
 -   Przy sensorach, które nie wymagają kalibracji albo jej nie pozwalają, co najmniej raz dziennie sprawdzaj prawdziwą glikemię z krwi. AAPS jest tak bezpieczny, jak wiarygodne są odczyty Twojego sensora.
--   Jeśli to możliwe, kalibruj częściowo przy niższych wartościach (4–5 mmol/l lub 72–90 mg/dl), a częściowo przy nieco wyższych (7–9 mmol/l lub 126–160 mg/dl), bo daje to lepszy zakres do kalibracji punktu i nachylenia.
+-   If at all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
 
 ## Zakładanie sensora (G6)
 
@@ -38,4 +38,4 @@ Możesz spróbować zmienić ustawienia blokowania szumów w xDrip (Settings - I
 
 ![Wiek sensora w wierszu Sensor rozwiniętego panelu stanu](../images/main/main_status_row_expanded.png)
 
-Wiek sensora jest widoczny w wierszu **Sensor** panelu stanu na ekranie głównym (stuknij strzałkę, aby go rozwinąć). Ujemny wiek pojawia się, gdy w [portalu opieki](#aaps-screens-careportal) jest podwójny wpis „CGM Sensor Insert” (założenie sensora) albo wpis założenia sensora ma złą datę. Otwórz **Historia leczenia** (menu ☰), wybierz kartę **Portal opieki** i usuń błędny wpis.
+Wiek sensora jest widoczny w wierszu **Sensor** panelu stanu na ekranie głównym (stuknij strzałkę, aby go rozwinąć). A negative age occurs if there is either a double "Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Otwórz **Historia leczenia** (menu ☰), wybierz kartę **Portal opieki** i usuń błędny wpis.

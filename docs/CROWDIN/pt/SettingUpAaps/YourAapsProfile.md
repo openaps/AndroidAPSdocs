@@ -135,9 +135,9 @@ Por estes exemplos, pode ver que quanto _menor_ for o valor do **FSI**, menos se
 
 ### Impacto
 
-Um **FSI mais baixo / mais forte** (ou seja, 40 em vez de 50) significa que a insulina baixa menos a sua **glicose** por unidade. Isto leva a uma correção mais agressiva / mais forte do loop, com **mais insulina**. Se o seu **FSI** for demasiado forte (valor pequeno), pode causar **glicose** baixa.
+A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. Isto leva a uma correção mais agressiva / mais forte do loop, com **mais insulina**. Se o seu **FSI** for demasiado forte (valor pequeno), pode causar **glicose** baixa.
 
-Um **FSI mais alto / mais fraco** (ou seja, 45 em vez de 35) significa que a insulina baixa mais a sua **glicose** por unidade. Isto leva a uma correção menos agressiva / mais fraca do loop, com **menos insulina**. Se o seu **FSI** for demasiado fraco (valor grande), pode causar **glicose** alta.
+A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. Isto leva a uma correção menos agressiva / mais fraca do loop, com **menos insulina**. Se o seu **FSI** for demasiado fraco (valor grande), pode causar **glicose** alta.
 
 **Exemplo:**
 * A **glicose** está em 190 mg/dl (10,5 mmol/l) e o alvo é 100 mg/dl (5,6 mmol/l).
@@ -201,7 +201,7 @@ Se o seu **IHC** for mais fraco (valor mais alto), por exemplo 1:20, só precisa
 > 
 > Fator UP 2,4 U / 12 g   ===>   IHC = 12 g / 2,4 U = 5,0 g/U
 > 
-> Há tabelas de conversão disponíveis online, por exemplo [aqui](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Impacto
 
@@ -300,7 +300,7 @@ O Assistente de Perfil oferece dados de dois hospitais diferentes para crianças
 4. Mude para o separador **Perfil 2**.
 5. Toque em **Tipo de Perfil** e selecione "Perfil Padrão DPV".
 6. Ajuste o Perfil Padrão DPV (baseado nos dados de outro hospital) ao introduzir a idade da criança, o TID Total e a percentagem de basal. Note que os dados DPV só fornecem **taxas basais**, por isso o IHC e o FSI aparecem como zero neste perfil.
-7. Abra o separador **Comparação**. Vai aparecer a comparação dos dois perfis ajustados (veja a captura de ecrã abaixo).
+7. Open the **Comparison** tab. Vai aparecer a comparação dos dois perfis ajustados (veja a captura de ecrã abaixo).
 8. Se quiser começar a ajustar o seu perfil com base numa destas sugestões, use o botão **Clonar** na parte de baixo da comparação.
 
 ![Assistente de Perfil para crianças 2](../images/ProfileHelperKids2.png)
@@ -350,6 +350,6 @@ Também pode usar o [Assistente de Perfil](#aaps-screens-profile-helper) (menu �
 4. Mude para o separador **Perfil 2**.
 5. Em **Tipo de Perfil**, selecione "Troca de Perfil" para escolher no histórico de todas as suas **Trocas de Perfil**.
 6. Escolha a **Troca de Perfil** com a qual quer comparar.
-7. Abra o separador **Comparação**. Vai aparecer a comparação dos dois perfis (veja a captura de ecrã abaixo).
+7. Open the **Comparison** tab. Vai aparecer a comparação dos dois perfis (veja a captura de ecrã abaixo).
 
 ![Assistente de Perfil 2](../images/ProfileHelper2.png)

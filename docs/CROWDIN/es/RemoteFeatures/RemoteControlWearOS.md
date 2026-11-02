@@ -287,7 +287,7 @@ Si **AAPS** tuvo que limitar la dosis, por ejemplo porque el bolo calculado supe
     | --- | --- | --- | --- | --- | --- |
     | ![Diálogo de tratamiento, página de insulina](../images/wearos/dialogs/dialog_treatment.png) | ![Diálogo de insulina](../images/wearos/dialogs/dialog_insulin.png) | ![Diálogo de carbohidratos](../images/wearos/dialogs/dialog_carbs.png) | ![Diálogo de eCarbs](../images/wearos/dialogs/dialog_ecarbs.png) | ![Diálogo de objetivo temporal, página de duración](../images/wearos/dialogs/dialog_temp_target.png) | ![Diálogo de cambio de perfil](../images/wearos/dialogs/dialog_profile_switch.png) |
     
-    [1] En **Configuración** > **Interfaz** del reloj, activa **Porcentaje en calculadora** para mostrar la entrada de porcentaje en la calculadora de bolo. El porcentaje por defecto viene del ajuste del teléfono [«Administrar esta parte del resultado del asistente de bolo %»](#Preferences-deliver-this-part-of-bolus-wizard-result). Los demás ajustes de la calculadora son los del teléfono en **Ajustes** > **Ajustes del asistente de bolo**.
+    [1] En **Configuración** > **Interfaz** del reloj, activa **Porcentaje en calculadora** para mostrar la entrada de porcentaje en la calculadora de bolo. The default percentage comes from the phone's ["Bolus percentage"](#Preferences-deliver-this-part-of-bolus-wizard-result). Los demás ajustes de la calculadora son los del teléfono en **Ajustes** > **Ajustes del asistente de bolo**.
     
     [2] En **Configuración** > **Interfaz** del reloj, activa **Tipo de comida de la calculadora** para mostrar la página **Tipo de comida**, donde eliges **Pan**, **Pastel** o **Pizza** para dividir los carbohidratos de una comida lenta en carbohidratos ahora y eCarbs después. Consulta [Elegir el tipo de comida](#WearOsSmartwatch-wizard-meal-type).
     
@@ -357,7 +357,7 @@ Si **AAPS** tuvo que limitar la dosis, por ejemplo porque el bolo calculado supe
     
     El modo de interfaz simplificada está disponible para las esferas «AAPS (Digital)» y «AAPS (personalizado)». La interfaz simplificada es opcional y se configura en los ajustes de la esfera (mantén pulsada la esfera y toca «editar» o el icono del engranaje). Elige la opción «Simplificar interfaz» y ponla en «Durante la carga» o «Siempre encendido y cargando».
     
-    Las opciones de desarrollador de Android permiten que el reloj se mantenga activo durante la carga. Para activar las opciones de desarrollador, consulta la [documentación oficial](https://developer.android.com/training/wearables/get-started/debugging). En las opciones de desarrollador, activa «Stay awake when charging» (mantener activo durante la carga).
+    Las opciones de desarrollador de Android permiten que el reloj se mantenga activo durante la carga. Para activar las opciones de desarrollador, consulta la [documentación oficial](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options.
     
     Nota: no todas las pantallas soportan bien el modo siempre encendido. Puede quemar la pantalla, sobre todo en las pantallas OLED más antiguas. Los relojes suelen atenuar la pantalla para evitar que se queme; consulta el manual del usuario, al fabricante o internet para obtener consejos.
     
@@ -385,7 +385,7 @@ Si **AAPS** tuvo que limitar la dosis, por ejemplo porque el bolo calculado supe
     
     ## Acceso directo para silenciar alertas
     
-    El reloj [muestra la alarma](#WearOsSmartwatch-phone-alarms) por sí mismo; el acceso directo es una segunda forma de silenciarla, con una sola pulsación. Puedes crear un acceso directo para silenciar las alertas/alarmas de AAPS. Silenciar el sonido desde el reloj es cómodo y más rápido que coger el teléfono. Nota: aun así tienes que revisar el mensaje de alarma en el teléfono y actuar en consecuencia, pero puedes hacerlo más tarde. Si tu reloj tiene dos botones, puedes asignar uno al programa `Silenciar alertas de AAPS`.
+    El reloj [muestra la alarma](#WearOsSmartwatch-phone-alarms) por sí mismo; el acceso directo es una segunda forma de silenciarla, con una sola pulsación. Puedes crear un acceso directo para silenciar las alertas/alarmas de AAPS. Silenciar el sonido desde el reloj es cómodo y más rápido que coger el teléfono. Note: you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. Si tu reloj tiene dos botones, puedes asignar uno al programa `Silenciar alertas de AAPS`.
     
     Para asignar el botón en el Samsung Watch 4, ve a `Settings > Advanced Features > Customize Buttons > Double press > Silenciar alertas de AAPS`
     
@@ -435,7 +435,7 @@ Si **AAPS** tuvo que limitar la dosis, por ejemplo porque el bolo calculado supe
     
     Si quieres crear tu propia esfera, sigue la [guía de aquí](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
     
-    Cuando hayas creado una esfera personalizada, puedes compartir tu esfera personalizada de **AAPS** con otros: el archivo zip se puede subir a la carpeta "ExchangeSiteCustomWatchfaces" mediante una pull request en GitHub. Al fusionar la pull request, el equipo de documentación extraerá el archivo CustomWatchface.png y le pondrá delante el nombre del archivo zip.
+    Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into GitHub. Al fusionar la pull request, el equipo de documentación extraerá el archivo CustomWatchface.png y le pondrá delante el nombre del archivo zip.
     
     (WearOsSmartwatch-complications-watchface-download)=
     

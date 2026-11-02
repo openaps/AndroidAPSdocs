@@ -12,7 +12,7 @@ Hay tres métodos para compilar la app AAPS:
 
 ### Compilar con un navegador (recomendado)
 
-Puedes compilar la app con tu teléfono usando GitHub Actions. Desde un teléfono Android, la página de configuración de [AAPS Builder](#aaps-builder) te guía paso a paso, y tú inicias cada compilación. Desde un ordenador o un iPhone, también puedes compilar con un fork y guardar la app en tu Google Drive.
+You can build the app in a web browser using GitHub Actions. Desde un teléfono Android, la página de configuración de [AAPS Builder](#aaps-builder) te guía paso a paso, y tú inicias cada compilación. Desde un ordenador o un iPhone, también puedes compilar con un fork y guardar la app en tu Google Drive.
 
 **[Sigue estas instrucciones.](./BrowserBuild.md)**
 
