@@ -70,11 +70,12 @@ O **AAPS** não tem nenhuma associação com as empresas a seguir e não é endo
 ## Índice da documentação do AAPS
 
 ```{toctree}
-:caption: Como usar esta documentação
+:caption: Using this documentation
+:titlesonly:
 
-Alterar idioma e versão <./NavigateDoc/ChangeLanguageVersion.md>
-Pesquisar na documentação <./NavigateDoc/SearchDoc.md>
-Atualizações e mudanças na documentação <./Maintenance/DocumentationUpdate.md>
+Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
+Search the documentation <./NavigateDoc/SearchDoc.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
 :caption: 1) Primeiros passos
