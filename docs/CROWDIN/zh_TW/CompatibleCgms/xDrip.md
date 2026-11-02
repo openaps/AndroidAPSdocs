@@ -10,7 +10,7 @@
 
 請勿讓其他應用程式將資料（血糖和治療紀錄）上傳至 Nightscout。
 
-→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Switch **OFF** `Enabled` (5)
+→ 漢堡選單 (1) → 設定 (2) → 雲端上傳 (3) → Nightscout 同步（REST-API）(4) → 將 `Enabled` 切換為**關閉** (5)
 
 ![xDrip 基本設定 1](../images/xDrip_Basic1.png)
 
@@ -34,7 +34,7 @@
 
 ### **應用間設定**（廣播）
 
-If you use AAPS, you must activate broadcasting in xDrip's Inter-App settings so the data is forwarded to AAPS.
+如果你使用 AAPS，必須在 xDrip 的應用程式間設定中啟用廣播，才能將資料轉送至 AAPS。
 
 → 漢堡選單 (1) → 設定 (2) → 應用間設定 (3) → 本地廣播**開啟** (4)
 
