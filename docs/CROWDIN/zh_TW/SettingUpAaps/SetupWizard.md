@@ -122,7 +122,7 @@
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
+   1. 在 Android 12 上，點選 `電池`；在 Android 13 以上版本，點選 `App 電池用量`。
 
    ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
@@ -454,7 +454,7 @@
 
 ![選取硬體幫浦時的確認畫面](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#setup-wizard-bluetooth-permission)).
+如果您選取的幫浦是透過藍牙通訊，完成設定嚮導後，**AAPS** 會要求取得連線至附近裝置的權限（請參閱[藍牙權限](#setup-wizard-bluetooth-permission)）。
 
 如果您已設定好設定檔，也知道如何連接幫浦，現在就可以連接。否則，請暫時保留「**Virtual Pump**」設定——您隨時可以變更設定，也可以按左上角的箭頭離開設定嚮導，先讓 **AAPS** 顯示一些血糖讀取值。
 
@@ -505,7 +505,7 @@ OpenAPS AMA 是最基本的演算法，不支援透過微量注射來修正偏�
 
 我們從目標1開始，即使此刻我們的設置尚未完全準備好成功完成此目標。但這是開始。
 
-Press the "**Start**" button of **Objective 1**:
+按下**目標 1**的**開始**按鈕：
 
 ![目標清單](../images/setup-wizard/Wizard-Objectives-List.png)
 
