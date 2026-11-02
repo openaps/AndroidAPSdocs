@@ -27,7 +27,7 @@ Für die restlichen drei Parameter Basalrate (BR), Insulinempfindlichkeitsfaktor
 
 Die vier letzten Parameter (Glukoseziele, Basalraten, Insulinempfindlichkeitsfaktoren und Mahlzeitfaktoren) können auf unterschiedliche Werte eingestellt werden, die bei Bedarf stündlich wechseln.
 
-![Stündliche Änderung des Basals](../images/MaxDailyBasal2.png)
+![Hourly change of basal](../images/MaxDailyBasal2.png)
 
 **AAPS**-Screenshots eines _Beispiel_-Profils sind unten zu sehen. Dieses Beispielprofil enthält sehr viele Zeitfenster. Wenn Du mit **AAPS** startest, hast Du wahrscheinlich ein deutlich einfacheres Profil.
 
@@ -147,7 +147,7 @@ A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG*
 
 Ein zu niedriger **ISF** (und daher zu aggressiver; nicht unüblich) kann zu „Überkorrekturen“ führen. **AAPS** errechnet, dass mehr Insulin benötigt wird, um einen hohen **Glukosewert** zu korrigieren. Dies kann (besonders während des Fastens) zu einem „Achterbahn“-Verlauf der Glukosewerte führen, so wie es auf dem Bild unten dargestellt ist. In diesen Situationen sollte der **ISF**-Wert erhöht werden, um **AAPS** so weniger aggressiv zu machen. Dadurch wird sichergestellt, dass **AAPS** kleinere Korrekturdosen abgibt, und vermeidet damit die Überkorrektur eines hohen **Glukosewertes**, die einen niedrigen **Glukosewert** zur Folge haben würde.
 
-![ISF (Korrekturfaktor) zu niedrig](../images/isf.jpg)
+![ISF too low](../images/isf.jpg)
 
 Umgekehrt kann ein zu hoher **ISF** zu zu schwachen Korrekturen führen. Dies bedeutet, dass Deine Glukosewerte - besonders in der Nacht - oberhalb Deines Zielwertes bleiben.
 
@@ -312,7 +312,7 @@ Mehr Informationen findest Du im Abschnitt [Profilwechsel & Prozentuale Profilan
 (your-aaps-profile-clone-profile-switch)=
 ### Einen Profilwechsel in ein neues Profil klonen
 
-![Profilwechsel](../images/TreatmentsView4.png)
+![Profile Switch](../images/TreatmentsView4.png)
 
 The [Treatments history](#aaps-screens-treatments) shows all past **Profile Switches**. When going to the **Profile switch** tab, you can use a past **Profile Switch** as a base to create a new **Profile**. Zeitverschiebung und Prozentsatz des Profilwechsels werden in das lokale neue Profil übernommen. Use the **Clone** button shown on line **2**.
 
@@ -335,7 +335,7 @@ Wenn Du gravierende Änderungen an einem umfangreichen **Profil** vorgenommen ha
 
 Es ist dabei wichtig, den gesamten **-Datenbank-Datensatz**, der aus mehreren Profilen im Nightscout-Editor besteht (blauer Pfeil auf dem Screenshot unten), zu klonen. Der neue Datensatz enthält dann das aktuelle Datum. Nach dem Speichern kann das geänderte/neue **Profil** in **AAPS** mit einem regulären [Profilwechsel](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) aktiviert werden.
 
-![Datensätze klonen](../images/Nightscout_Profile_Editor.PNG)
+![Clone database records](../images/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
 ### Vergleiche zwei Profile
