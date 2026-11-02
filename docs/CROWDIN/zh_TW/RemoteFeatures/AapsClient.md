@@ -9,9 +9,9 @@
 - **主控端** = 擁有幫浦並執行循環的主要 **AAPS** 手機。
 ```
 
-```{admonition} iPhone version in development
+```{admonition} Which devices can run AAPSClient?
 :class: note
-目前 **AAPSClient** 只能在 Android 手機上執行。目前正在開發 iPhone 版 **AAPSClient**，並處於早期測試階段。目前尚未發布：App Store 中沒有上架，也沒有可供下載的版本。推出後，我們會更新此頁面。
+From **AAPS** version 4, **AAPSClient** runs on Android phones and tablets, on Wear OS watches and on computers (Windows, Mac and Linux). On an iPhone there is no ready-made download: you build the app yourself. See the [table of downloads by device](#aapsclient-platforms).
 ```
 
 ```{contents} Table of contents
@@ -33,9 +33,41 @@
 
 同一支追蹤者手機上最多可以並排安裝 3 個用戶端 App，各自追蹤**不同**的對象：**AAPSClient**（黃色貓頭鷹圖示）、**AAPSClient2**（藍色貓頭鷹），以及 **AAPS** 4 版新增的 **AAPSClient3**（綠色貓頭鷹）。它們的功能完全相同。只有名稱和顏色不同（App 圖示、小工具背景和首頁的狀態區塊），方便您區分。每個 App 都會與各自的主控端配對。詳情請參閱[關於 AAPSClient、AAPSClient2 和 AAPSClient3](#remotecontrol-aapsclient-versions)。
 
+(aapsclient-platforms)=
 ## 取得 App
 
-**AAPSClient** 的取得方式與 **AAPS** 相同，請參閱[下載及安裝 AAPSClient](#RemoteControl_aapsclient)，並按照安裝主要 App 的方式安裝（[轉移及安裝](../SettingUpAaps/TransferringAndInstallingAaps.md)）。
+All the ready-made files are in the *Assets* list of the latest release on [GitHub](https://github.com/nightscout/AndroidAPS/releases/) (click *Assets* at the bottom of the release to expand it). In the table, *x.y.z* stands for the version number. Choose the file that matches your device:
+
+| Device                  | File to download                    | 註釋                                                                                                                                                                                           |
+| ----------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Android phone or tablet | `app-aapsclient-release_x.y.z.apk`  | Install it like the main app: see [Download and installation of AAPSClient](#RemoteControl_aapsclient) and [Transferring and installing](../SettingUpAaps/TransferringAndInstallingAaps.md). |
+| Wear OS watch           | `wear-aapsclient-release_x.y.z.apk` | Goes with the AAPSClient app on the phone. See [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md).                                                                                          |
+| Windows computer        | `AAPSClient-x.y.z.msi`              | Open the file to install.                                                                                                                                                                    |
+| Mac                     | `AAPSClient-x.y.z.dmg`              | See the note on macOS below the table.                                                                                                                                                       |
+| Linux (Debian, Ubuntu)  | `aapsclient_x.y.z_amd64.deb`        | Install it with your package manager.                                                                                                                                                        |
+| iPhone                  | 無                                   | There is no App Store version and no download. You build the app yourself, see [AAPSClient on an iPhone](#aapsclient-iphone).                                                                |
+
+**Following two people?** Each file above also exists as *aapsclient2* / *AAPSClient2*. It is a second client app that installs next to the first one, so one device can follow two people (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)). **AAPSClient3** is not in the release assets: build it yourself ([build variants](#browserbuild-variant)).
+
+**Files to ignore:** the *pumpcontrol* files (`app-pumpcontrol-release_…`, `wear-pumpcontrol-release_…`) are not a client. Leave them out.
+
+**Mac: the first start.** The app is not notarized by Apple, so macOS blocks it the first time you open it. Click *Done*, then open *System Settings → Privacy & Security*, scroll down and click *Open Anyway*.
+
+**Computer: how to connect.** A computer has no camera, so the QR code cannot be scanned. Set up **Nightscout** in the client, then on the master add the client with a **PIN** and type the 8-digit PIN in the client (**Pair with master**). See [Pairing with the master](#aapsclient-pairing-with-the-master).
+
+**Same version everywhere.** The master and all its clients must run the same **AAPS** version. When you update the master, update the clients too.
+
+(aapsclient-iphone)=
+### AAPSClient on an iPhone
+
+There is no **AAPSClient** in the App Store and no ready-made file to download, so you build the app yourself:
+
+- You need a Mac with **Xcode** and an Apple developer account.
+- The project is the `ios` folder of the [AndroidAPS repository on GitHub](https://github.com/nightscout/AndroidAPS/tree/master/ios).
+- A build for a real iPhone is signed with your own Apple developer team. A build for the iPhone simulator does not need one.
+- There is no step-by-step guide yet. This page will be updated when there is one.
+
+The iPhone version pairs with the master like the others. Unlike the computer versions, the iPhone can scan the master's QR code with its camera.
 
 ## 首次啟動：較精簡的設定嚮導
 
@@ -43,7 +75,7 @@
 
 1. **歡迎**、**授權合約**、**權限**和**主控端密碼**——與主要 App 相同，請參閱 [AAPS 設定嚮導](../SettingUpAaps/SetupWizard.md)。
 2. 用戶端**不會**詢問**單位**或**低／高標記**：連線至 Nightscout 後，便會從主要手機取得這些設定。之後可在**設定**中查看，旁邊的小型**手機圖示**表示這些設定已[與主要手機同步](#client-master-config-prefs)。只有在主控端可連線時，才能編輯這些設定。
-3. **從主控端設定**——在主控端開啟**管理 → 已授權的用戶端**，使用**QR Code**新增這支手機，然後在此處點選**掃描 QR Code**。掃描一次即可使用這支手機專屬的權杖設定 Nightscout，並透過配對碼配對手機。手機也會將它在主控端新增時使用的名稱設為執行個體名稱（帶重音符號的字母會轉成一般字母，例如「Miloš」會變成「Milos」）。**掃描後即完成設定**：嚮導會關閉，因為接下來的步驟只會顯示掃描配對碼所完成的設定。如果沒有 QR Code，請略過此步驟。（僅限 Android：iOS 目前尚未提供掃描器。）
+3. **從主控端設定**——在主控端開啟**管理 → 已授權的用戶端**，使用**QR Code**新增這支手機，然後在此處點選**掃描 QR Code**。掃描一次即可使用這支手機專屬的權杖設定 Nightscout，並透過配對碼配對手機。手機也會將它在主控端新增時使用的名稱設為執行個體名稱（帶重音符號的字母會轉成一般字母，例如「Miloš」會變成「Milos」）。**掃描後即完成設定**：嚮導會關閉，因為接下來的步驟只會顯示掃描配對碼所完成的設定。如果沒有 QR Code，請略過此步驟。 (Not on a computer: it has no camera, see [Getting the app](#aapsclient-platforms).)
 
    ![「從主控端設定」步驟中的「掃描 QR Code」按鈕](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
