@@ -7,8 +7,8 @@
 
 Det finnes fire svært effektive verktøy for å styre **AAPS** på avstand:
 
-1) [SMS-kommandoer](#RemoteControl_SMS-Commands) (følgertelefonen kan være enten Android eller iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (følgertelefonen er Android; en iPhone-versjon er under utvikling) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS eller en annen datamaskin/enhet), mest for å følge: se merknaden om [klientstyring](#client-master-control) i den delen.  
-4) [Smartklokker](#RemoteControl_smartwatches) (Android)
+1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower device is an Android phone or tablet, or a Windows, Mac or Linux computer; on an iPhone you [build the app yourself](#aapsclient-iphone)) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device), mainly for following: see the note on [client control](#client-master-control) in that section.  
+4) [Smartwatches](#RemoteControl_smartwatches) (Android)
 
 De tre første passer mest for omsorgspersoner/foreldre, men smartklokker er svært nyttige både for omsorgspersoner/foreldre **og** for voksne som selv har diabetes.
 
