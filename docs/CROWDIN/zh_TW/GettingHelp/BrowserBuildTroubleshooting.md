@@ -107,8 +107,8 @@
   - 使用新的權杖，在 GitHub 儲存庫中[更新 `GDRIVE_OAUTH2` 密鑰](#aaps-ci-update-secret)，然後[重新執行建置](#aaps-ci-rerun)。
 
 (aaps-ci-disable-software)=
-### Disable Software That May Interfere With OAuth Verification
-  - Disable any VPN or security app (firewall, antimalware,...) on the phone before trying to get the OAuth key.
+### 停用可能干擾 OAuth 驗證的軟體
+  - 取得 OAuth 金鑰前，請先停用手機上的 VPN 或安全性應用程式（防火牆、反惡意程式等）。
 
 (aaps-ci-actions-permission)=
 ### 檢查 GitHub Actions 權限設定
