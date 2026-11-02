@@ -32,23 +32,23 @@ Die erforderliche minimale Version ist im Abschnitt [Computer- und Software-Spez
 
 * Öffne Dein bestehendes AAPS-Projekt mit Android Studio. Möglicherweise musst Du Dein Projekt wählen. Klicke (doppelt) auf das AAPS-Projekt.
 
-  ![Android Studio - Projekt auswählen](../images/update/01_ProjectSelection.png)
+  ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
 
 * Wähle in der Menüleiste des Android Studios Git -> Fetch
 
-   ![Android Studio Menü - Git - Fetch](../images/update/02_GitFetch.png)
+   ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
 
 * Unten rechts wird Dir eine Meldung angezeigt, sobald der Fetch erfolgreich durchgeführt wurde.
 
-   ![Android Studio Menü - Git - Fetch erfolgreich](../images/update/03_GitFetchSuccessful.png)
+   ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
 
 * Wähle nun in der Menüleiste Git -> Pull
 
-   ![Android Studio Menü - Git - Pull](../images/update/04_GitPull.png)
+   ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
 
 * Lasse alle Optionen wie sie sind (Original/Master) und wähle Pull.
 
-   ![Android Studio - Git - Pull-Dialog](../images/update/05_GitPullOptions.png)
+   ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
 
 * Warte ab, während der Download läuft. Du siehst dazu einen Hinweis in der Fußzeile. Eine Erfolgsmeldung wird angezeigt, so bald erfolgreich heruntergeladen wurde.
 
@@ -56,7 +56,7 @@ Die erforderliche minimale Version ist im Abschnitt [Computer- und Software-Spez
   Die Anzahl der aktualisierten Dateien kann unterschiedlich sein! This is not an indication of a problem.
   ```
 
-   ![Android Studio - Pull erfolgreich](../images/update/06_GitPullSuccess.png)
+   ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
 
 * Gradle Sync wird ausgeführt, um einige Abhängigkeiten herunterzuladen. Warte, bis es fertig ist.
 
