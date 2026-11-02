@@ -107,7 +107,7 @@
 
 #### 使用 PIN 碼
 
-點選**確定**：主控端會顯示 8 位數的**配對 PIN 碼**，並分成兩組、每組 4 位數（例如 `1234 5678`）。此 PIN 碼**只能使用一次**，並且**約兩分鐘後就會失效**。 As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
+點選**確定**：主控端會顯示 8 位數的**配對 PIN 碼**，並分成兩組、每組 4 位數（例如 `1234 5678`）。此 PIN 碼**只能使用一次**，並且**約兩分鐘後就會失效**。與 QR Code 相同，主控端不允許使用清單中已有的用戶端名稱：每個用戶端都會以自己的名稱取得專屬的 Nightscout 權杖。
 
 ![主控端的配對畫面，顯示一次性 PIN 碼（此處顯示的 PIN 碼已失效）](../images/v4/ClientMaster/pairing_pin_master.png)
 
