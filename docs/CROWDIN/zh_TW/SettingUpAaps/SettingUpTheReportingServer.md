@@ -44,7 +44,7 @@ Tidepool 自 **AAPS** 3.2 版（於 2023 年底發佈）起即可使用。
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger
-As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool is not suitable for sharing real-time information with caregivers.  
+使用 **AAPS** 時，資料接收與資料回報之間會延遲 3 小時，因此 Tidepool 不適合用來與照護者分享即時資訊。  
 另一方面，如果 Nightscout 不是被接受的解決方案，Tidepool 可以成為與患者內分泌科醫生共享報告的理想解決方案。  
 ```
 
