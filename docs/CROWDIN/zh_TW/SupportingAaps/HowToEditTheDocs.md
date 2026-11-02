@@ -2,7 +2,7 @@
 
 **此描述僅適用於編輯英文文件。所有新訊息必須首先以英文添加。如果你想將文件翻譯成其他語系（感謝你的貢獻），請使用[Crowdin](https://crowdin.com/project/androidapsdocs)。**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
+有關如何格式化文本（標題、加粗...）以及設置連結的提示，請參閱此頁面的["代碼語法"](#edit-the-docs-code-syntax)部分。
 
 ## 一般問題
 
@@ -34,11 +34,11 @@ For hints how to format text (headline, bold...) and set links please see the ["
 
 3. 這兩種選擇中的任何一個都將在你的庫中建立一個新分支，你的編輯將儲存在該分支中。對文件進行編輯。
 
-我們使用Markdown語法來編寫文件頁面。檔案的副檔名是「.md」。 Markdown 規格並非固定不變；目前我們使用 myst_parser 處理 Markdown 檔案。 Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
+我們使用Markdown語法來編寫文件頁面。檔案的副檔名是「.md」。 Markdown 規格並非固定不變；目前我們使用 myst_parser 處理 Markdown 檔案。請確保使用正確的語法，如[以下所述](#edit-the-docs-code-syntax)。
 
 ![編輯分支](../images/PR3.png)
 
-4. 你正在“<>編輯文件”標籤中工作。 Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). 如果你看到需要改進的地方，請返回編輯標籤進行更多改進。 
+4. 你正在“<>編輯文件”標籤中工作。選取「預覽變更」分頁，重新檢視內容，確認修改結果符合預期（並檢查是否有錯字）。如果你看到需要改進的地方，請返回編輯標籤進行更多改進。 
 
 ![預覽模式](../images/PR5.png)
 
@@ -54,7 +54,7 @@ For hints how to format text (headline, bold...) and set links please see the ["
 
 ![PR追蹤](../images/PR7.png)
 
-附註：你的Fork和分支將仍保留在你個人的GitHub帳號上。 After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). 對於未來的編輯，如果你按照此流程，編輯將始終從AndroidAPSdocs庫的最新版本開始。 If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. 由於人們往往忘記更新他們的庫，我們建議你按照上述PR流程進行，直到你熟悉執行“比較”。
+附註：你的Fork和分支將仍保留在你個人的GitHub帳號上。當你收到通知你的PR已合併後，如果你已經完成了他，你可以刪除你的分支（步驟7的通知區域將提供一個連結，用於在分支被關閉或合併後刪除他）。對於未來的編輯，如果你按照此流程，編輯將始終從AndroidAPSdocs庫的最新版本開始。如果您選擇使用其他方式建立 PR（例如，從 fork 儲存庫的 master 分支開始編輯），請先執行「compare」並合併自上次更新 fork 以來的所有更新，確保儲存庫保持在最新狀態。由於人們往往忘記更新他們的庫，我們建議你按照上述PR流程進行，直到你熟悉執行“比較”。
 
 (編輯文件程式碼語法)=
 
@@ -69,7 +69,7 @@ Markdown 是一種非常簡單的文字格式語言，它將文字內容與格�
 其背後的理念是：
 
 - 編寫者應該首先考慮文本，而不是格式，
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
+- Markdown 文字可在不同的 Markdown 工具之間交換，不像 Microsoft Word 等專有工具……
 - 你可以從一個Markdown文件生成多種輸出格式。
 
 Markdown並非100％固定標準，我們盡量保持與標準相近，以
@@ -219,9 +219,9 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
     這是一個警告。
     
 
-    ```{admonition} Warning headline
+    ```{admonition} 警告標題
     :class: warning
-    This is a warning.
+    這是一則警告。
     ```
     
     #### 可折疊的註解
@@ -244,7 +244,7 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 
 ## 表格
 
-Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+避免使用內容很長的表格，因為 Markdown 不容易排版這類內容，表格通常無法完整顯示在手機螢幕上，而且翻譯後的呈現方式也可能不同。
 
 ## 風格指南
 
@@ -262,9 +262,9 @@ Avoid using tables with long texts as the content is difficult to set in Markdow
 
 盡可能使用簡單的英文。這有助於非母語讀者，也有助於將AAPS文件翻譯成其他語系。以與用戶交談的方式進行寫作，想像你正坐在讀者的對面。請記得 - 大多數 AAPS 用戶沒有程式背景。糖尿病本身也有很多行話和縮寫。請記住，有些人可能是剛剛被診斷出來的，可能沒有你對糖尿病的經驗，或者他們接受了不同的糖尿病培訓。如果你使用簡寫或縮寫，請在第一次使用時將其完整寫出，並在括號中給出縮寫，如“超微注射(SMB)”。此外，請連結到詞彙表。讀者可能不熟悉的技術術語也可以放在括號中。
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?”*
+不要寫：*「在循環模式中，餐後血糖高峰是什麼原因造成的？」*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
+請寫：*「在循環模式中，**午餐後**（餐後）血糖高峰是什麼原因造成的？」*
 
 ##### 使用每個人都能暸解的簡單詞語
 
@@ -296,7 +296,7 @@ Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loo
 
 指令是最快的指示方式，但寫作者有時會害怕發出指令，寫成“你應該這樣做”而不是直接寫“做這件事”。也許人們擔心指令聽起來太過嚴厲。你可以透過在前面加上“請”字來解決這個問題。然而，如果某件事情必須做，不要說“請”，因為這給了讀者拒絕的選擇。
 
-Instead of: *“You should just think of it as a complete statement.”*
+不要寫：*「你只要把它想成一個完整的句子就好。」*
 
 改為：*“把他當作一個完整的聲明。”*
 
@@ -310,7 +310,7 @@ Instead of: *“You should just think of it as a complete statement.”*
 
 被動動詞的例子：
 
-- *“The insulin (subject) is delivered (verb) by the pump (object).”*
+- *「胰島素（主詞）由幫浦（受詞）注射（動詞）。」*
 
 *「delivered」（已輸送）*在此處是被動語態。與主動動詞句子相比，主語和賓語位置調換了。我們不得不引入“由”和“被”使句子變得更長。還要考慮以主動動詞開頭。
 
@@ -453,7 +453,7 @@ Instead of: *“You should just think of it as a complete statement.”*
 
 - 如何操作
 
-- narrator directly talks to the reader: In this guide **you** will
+- 旁白直接對讀者說話：在本指南中，**你**將
 
 - 未來時態 -> 顯示最終目標
 
