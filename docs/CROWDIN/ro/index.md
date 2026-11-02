@@ -71,6 +71,7 @@ Nu utilizați **AAPS** dacă iei inhibitori SGLT-2 (glifozine), deoarece acești
 
 ```{toctree}
 :caption: Using this documentation
+:titlesonly:
 
 Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
 Search the documentation <./NavigateDoc/SearchDoc.md>
