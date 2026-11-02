@@ -19,7 +19,7 @@
 
 一個**臨時目標**可能需要大約30分鐘甚至更長時間才能達到預期的**血糖**目標。 **AAPS** 無法立即達到**血糖**目標，因此使用者在選擇**臨時目標**時應注意這一點。
 
-The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. 以下顯示的數值是隨附的預設值，你可以[調整各預設值](#TempTargets-change-preset-defaults)以符合自己的需求。
+以下各節將摘要說明**臨時目標：活動**、**臨時目標：即將用餐**和**臨時目標：低血糖**的功能。以下顯示的數值是隨附的預設值，你可以[調整各預設值](#TempTargets-change-preset-defaults)以符合自己的需求。
 
 ### 臨時目標 - 活動
 
@@ -193,9 +193,9 @@ AAPS 會以 160 mg/dL 或 8.9 mmol/L 為目標，持續 1 小時。
 
 一些使用者希望在**臨時目標-低血糖**期間避免**SMB**的給藥。若要達成此效果，請在**設定** → **OpenAPS SMB** 中停用「*啟用高臨時目標時使用 SMB*」（詳情請見下文）：
 
-- Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- 進階目標 9：使用者可以在 OpenAPS SMB 中，為 100 mg/dL（5.6 mmol/L）或更高的**臨時目標**啟用*「較高的臨時目標會提高胰島素敏感度」*，讓**AAPS**對胰島素更敏感。
 
-- Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- 進階目標 9：使用者可以停用*「啟用高臨時目標時使用 SMB」*。如此一來，即使**AAPS**的活性碳水化合物大於 0，且已啟用「啟用低臨時目標時使用 SMB」或「一律啟用 SMB」，並且 OpenAPS SMB 正在執行，當高臨時目標啟用時，**AAPS**仍不會給予微量注射。
 
 注意：如果您在血糖低於 72 mg/dL 或 4 mmol/L 時開啟**碳水化合物**對話方塊，**AAPS** 會自動預先選取「**開始低血糖 TT**」切換開關。
 
@@ -219,9 +219,9 @@ AAPS 會以 160 mg/dL 或 8.9 mmol/L 為目標，持續 1 小時。
 
 ## 即將用餐臨時目標
 
-**Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
+**臨時目標：即將用餐**有助於緩慢降低**血糖**，並確保用餐前有足夠的**活性胰島素**。
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
+對於不會預先注射的使用者來說，這可能是個重要工具。不過，**臨時目標：即將用餐**的效果取決於多項因素，包括使用者的設定、飲食是否為低碳水化合物，以及是否使用速效胰島素（例如 Fiasp 或 Lyumjev），以免除預先注射的需求。一般來說，在熟悉**AAPS**之前，使用者使用**臨時目標：即將用餐**時，仍應預先注射；如果是高碳水化合物飲食，尤其應該如此。
 
 你可以在文章[「如何啟用‘即將用餐模式’」](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/)或[這裡](https://diyps.org/tag/eating-soon-mode/)了解更多關於「即將用餐模式」的訊息。
 
