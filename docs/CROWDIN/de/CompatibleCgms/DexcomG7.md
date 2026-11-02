@@ -1,40 +1,40 @@
-# Dexcom G7, ONE+ and Stelo
+# Dexcom G7, ONE+ und Stelo
 
 
 ## Grundlegendes im Voraus
 
-Noteworthy is the fact that the G7, ONE+ and Stelo systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. Mehr Details dazu findest Du [hier](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
+Es ist wichtig zu wissen, dass die Systeme G7, ONE+ und Stelo im Gegensatz zum G6 die Werte nicht glätten, weder in der App noch im Empfänger. Mehr Details dazu findest Du [hier](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ```{admonition} Smoothing method 
 Im Abschnitt [Glättung der Blut-Glukose-Daten](../CompatibleCgms/SmoothingBloodGlucoseData.md) findest Du Vorschläge für den Dexcom G7/ONE+/Stelo
 ```
 
-## 1. xDrip (direct connection to G7, ONE+ or Stelo)
+## 1. xDrip (direkte Verbindung zum G7, ONE+ oder Stelo)
 
-- xDrip connects to the sensor itself: uninstall the Dexcom app, as only one app can connect to the sensor. To keep the Dexcom app, use [xDrip Companion App](#DexcomG7-xdrip-companion-app) instead.
-- Follow the instructions here: [xDrip G7, ONE+ and Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). A recent xDrip release is required — see the linked page for the minimum version.
+- xDrip verbindet sich selbst mit dem Sensor: Deinstalliere die Dexcom-App, denn nur eine App kann sich mit dem Sensor verbinden. Wenn Du die Dexcom-App behalten willst, nutze stattdessen die [xDrip Companion App](#DexcomG7-xdrip-companion-app).
+- Folge der Anleitung hier: [xDrip G7, ONE+ und Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). Du brauchst eine aktuelle xDrip-Version – die Mindestversion steht auf der verlinkten Seite.
 - Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
 - Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
 
-## 2. Build Your Own Dexcom App (G7 only)
+## 2. Build Your Own Dexcom App (nur G7)
 
 ```{admonition} Old app version
 :class: warning
 Dexcom BYODA ist mittlerweile eine sehr alte App-Version und kann nicht mehr aktualisiert werden. Not available for ONE+ or Stelo.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) unterstützt die lokale Übertragung (Broadcast) an AAPS
 
 -   Mit dieser App kannst Du den Dexcom G7 mit jedem Android Smartphone verwenden.
 -   Deinstalliere die originale Dexcom-App
 -   Installiere die heruntergeladene APK
 -   Gib den Sensorcode (Kopplungscode) in der gepatchten App ein
--   After a short time BYODA should pick up the sensor signal.
+-   BYODA sollte nach kurzer Zeit das Sensorsignal empfangen.
 
 (DexcomG7-xdrip-companion-app)=
 
-## 3. xDrip Companion App (G7, ONE+ and Stelo)
+## 3. xDrip Companion App (G7, ONE+ und Stelo)
 
 The official Dexcom app stays connected to the sensor. xDrip reads the glucose values from the notifications of the Dexcom app and sends them to **AAPS**.
 
