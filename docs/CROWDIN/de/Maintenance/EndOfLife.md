@@ -16,7 +16,7 @@ Die Tabelle zeigt nicht für jede AAPS-Version ein Enddatum. Fehlt Deine Version
 
 <div id="aaps-eol-status" role="status" aria-live="polite">AAPS-Versionsdaten werden geladen …</div>
 <noscript>
-  Turn on JavaScript to see the tables.
+  Schalte JavaScript ein, um die Tabellen zu sehen.
 </noscript>
 
 <div id="aaps-eol-versions" class="wy-table-responsive" hidden>
@@ -30,7 +30,7 @@ Die Tabelle zeigt nicht für jede AAPS-Version ein Enddatum. Fehlt Deine Version
 
 Android gibt jeder Systemversion ein **API-Level**. Das ist eine Nummer, die von Apps genutzt wird. API-Level 30 entspricht zum Beispiel Android 11. Die Tabelle unten nutzt die API-Level aus den AAPS-Versionsdaten. Die AAPS-Version in jeder Zeile ist der Wert, der für das jeweilige API-Level hinterlegt ist. Das ist keine vollständige Liste der Versionen, die Du installieren kannst.
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version).
+Um eine AAPS-Version für Dein Smartphone auszuwählen, nutze die [Hinweise zur Android-Version in den Release Notes](#maintenance-android-version-aaps-version).
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
