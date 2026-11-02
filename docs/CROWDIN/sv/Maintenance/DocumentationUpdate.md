@@ -1,3 +1,7 @@
+- - -
+tocdepth: 1
+- - -
+
 # Docs updates & changes
 
 ## October 2026
@@ -92,7 +96,8 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 
 ***
 
-## February 2022
+```{dropdown} Older updates (2019 to 2022)
+**February 2022**
 
 - [BG quality warning sign](#aaps-screens-bg-warning-sign) @tanja
 - [Medtronic pump update](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
@@ -101,48 +106,48 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 - Update docs for AAPS 3.0 (partly) @xJoe
 - [Wear OS for AAPS 3.0](../WearOS/WearOsSmartwatch.md) @peterleimbach
 
-## January 2022
+**January 2022**
 
 - [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) - update @tanja
 
-## December 2021
+**December 2021**
 
 - [Building the APK](../SettingUpAaps/BuildingAaps.md) - update Android Studio Arctic Fox | 2020.3.1 @tanja
 - [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) information added @MilosKozak
 
-## November 2021
+**November 2021**
 
 - Best practices for calibrating a Libre 2 sensor
 - [ISF](../UsefulLinks/FAQ.md) reformulation of impact
 - Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - Removed patched [Dexcom](../CompatibleCgms/DexcomG6.md) app as it is obsolete
 
-## October 2021
+**October 2021**
 
 - [Release notes](ReleaseNotes.md) AAPS 3.0 beta
 
-## September 2021
+**September 2021**
 
 - Recommended computer specification to [build AAPS app](#Building-APK-recommended-specification-of-computer-for-building-apk-file)
 
-## June 2021
+**June 2021**
 
 - [Watchface sideload](../WearOS/WearOsSmartwatch.md)
 
-## April 2021
+**April 2021**
 
 - List of [communication devices](#CompatiblePumps-additional-communication-device) for Omnipod and Medtronic pumps
 - AAPS predictions in [Nightscout](#Nightscout-manual-nightscout-setup)
 
-## March 2021
+**March 2021**
 
 - Dev communication moved from gitter to [discord](https://discord.gg/4fQUWHZ4Mw)
 
-## February 2021
+**February 2021**
 
 - New navigation bar and [language switch](../NavigateDoc/ChangeLanguageVersion.md)
 
-## January 2021
+**January 2021**
 
 - [Action tab](#screens-action-tab) - more details on page 'AAPS screens'
 - Dexcom G6 with [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
@@ -150,13 +155,13 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 - [Objectives](#objectives-objective3) - new questions
 - Other [new AAPS 2.8.0 functions](#Releasenotes-version-2-8-0)
 
-## December 2020
+**December 2020**
 
 - [Libre 2](../CompatibleCgms/Libre2.md) - patched app does not work with US sensors
 - [OpenAPS hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits)
 - Sony Smartwatch 3 Manual Installation of Google Play Service
 
-## October 2020
+**October 2020**
 
 - Accu-Chek Combo - update [time adjustment daylight savings time](#time-adjustment-daylight-savings-time-dst)
 - Accu-Chek Insight - Option to [upload absolute values](#Accu-Chek-Insight-Pump-settings-in-aaps)
@@ -164,17 +169,17 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 - Omnipod Eros - status update
 - [SMS commands - time sync](../RemoteFeatures/SMSCommands.md)
 
-## September 2020
+**September 2020**
 
 - Major update for new AAPS version 2.7
 - For details see the [release notes](#Releasenotes-version-2-7-0)
 
-## June 2020
+**June 2020**
 
 - Libre 2 - more details patched Libre Link app & use of Bluetooth transmitters
 - [Time zone traveling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) with Libre 2
 
-## May 2020
+**May 2020**
 
 - [Extended bolus only for Dana + Insight pumps](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 - [Insight deactivate vibration](#Accu-Chek-Insight-Pump-vibration) (firmware 3.x only)
@@ -182,19 +187,19 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 - Patched Libre Link app - check if correctly patched
 - [Prediction lines](#aaps-screens-prediction-lines) - more details
 
-## April 2020
+**April 2020**
 
 - Backdate insulin (i.e. given by syringe)
 - Android 6 support will be discontinued in next master version
 
-## March 2020
+**March 2020**
 
 - [Build apk with Android Studio 3.6.1](../SettingUpAaps/BuildingAaps.md)
 - [DanaRS with firmware v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **cannot currently be used with AAPS!**
 - [Extended bolus and switch to open loop](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 - [Update apk with Android Studio 3.6.1](../Maintenance/UpdateToNewVersion.md)
 
-## February 2020
+**February 2020**
 
 - Automation caveats
 - [Autosens](#Open-APS-features-autosens) - short explanation
@@ -205,12 +210,12 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 - [Version 2.6.0](#Releasenotes-version-2-6-0) - major new features
 - [Wear complications](../WearOS/WearOsSmartwatch.md)
 
-## January 2020
+**January 2020**
 
 - [Manual carb correction](#screens-bolus-carbs) for faulty carb entries
 - [Image size](../SupportingAaps/HowToEditTheDocs.md) when editing docs
 
-## December 2019
+**December 2019**
 
 - [Android Auto](../RemoteFeatures/AndroidAuto.md) - setup with screenshots
 - [Accu-Chek Insight & Autotune](#Accu-Chek-Insight-Pump-settings-in-aaps) - workaround for usage
@@ -218,7 +223,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 - [Watchfaces](../WearOS/WearOsSmartwatch.md) - major update, way more details
 - [Watchface complications](#Watchfaces-complications) - use your favorite watchface with AAPS data
 
-## November 2019
+**November 2019**
 
 - [Automation - deactivate when disabling loop](../DailyLifeWithAaps/Automations.md)
 - [Dexcom G6 replace transmitter update](#xdrip-replace-transmitter)
@@ -235,7 +240,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 - Update - quick walk-through for experienced users
 - Docs - update [edit](#edit-the-docs-code-syntax) and [translation](#translations-translation-of-the-documentation).
 
-## October 2019
+**October 2019**
 
 - [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
 - [Accu-Chek Insight - log options](#Accu-Chek-Insight-Pump-settings-in-aaps)
@@ -248,7 +253,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 - [SMS Commands Troubleshooting](#SMSCommands-troubleshooting)
 - [xDrip - update G6 transmitter replacement](#xdrip-replace-transmitter)
 
-## September 2019
+**September 2019**
 
 - [Automate](../DailyLifeWithAaps/Automations.md)
 - [Bolus calculator](#AapsScreens-wrong-cob-detection) - slow carb absorption
@@ -257,9 +262,10 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 - [Remote monitoring](../RemoteFeatures/RemoteMonitoring.md)
 - [What is a closed loop system?](#Introduction-what-does-hybrid-closed-loop-mean)
 
-## August 2019
+**August 2019**
 
 - Dexcom G6 patched app region
 - [Dexcom G6 new transmitter](#xdrip-connect-g6-transmitter-for-the-first-time) ("firefly" / 8G...)
 - What do I need? - new structure & additional information
 - New structure
+```
