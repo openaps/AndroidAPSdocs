@@ -28,7 +28,7 @@
   </div>
 </div>
 
-Install Simple Web Server<br/><br/> If you are a Windows or Mac user, you can install it from the Microsoft Store or the Mac App Store. 如果瀏覽器詢問您是否要開啟商店應用程式，請允許。<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/><br/>
+安裝 Simple Web Server<br/><br/> 如果您使用 Windows 或 Mac，可以從 Microsoft Store 或 Mac App Store 安裝。如果瀏覽器詢問您是否要開啟商店應用程式，請允許。<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/><br/>
 
 在 Mac 上的範例：
 
@@ -42,9 +42,9 @@ Install Simple Web Server<br/><br/> If you are a Windows or Mac user, you can in
 
 - 看到這個畫面表示伺服器已啟動。<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)<br/><br/>
 
-- 請勿關閉 Simple Web Server。 Please switch to your browser and open<br/><br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
+- 請勿關閉 Simple Web Server。請切換到您的瀏覽器並打開<br/><br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
 
-- For the subsequent steps, please refer to the video below, starting from 2 minutes 18 seconds.<br/><br/>
+- 後續步驟請參閱下方影片，從 2 分 18 秒開始觀看。<br/><br/>
   <!--crowdin: exclude-->
   <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
     <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
