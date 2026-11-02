@@ -9,7 +9,7 @@
 -   避免在血糖數值上升或下降時進行校準。
 -   進行「足夠的」校準—在官方應用中，通常會提示你每天檢查一次或兩次。在 DIY 系統中，你可能不會這樣做，因此在沒有校準的情況下應該小心持續使用。
 -   對於不需要或不允許校準的傳感器，至少每天檢查一次實際的血糖值。 AAPS 的安全性取決於你的傳感器讀取值的可靠性。
--   If at all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
+-   如果情況允許，請使用一些較低範圍（4–5 mmol/L 或 72–90 mg/dL）和稍高範圍（7–9 mmol/L 或 126–160 mg/dL）的讀取值進行校正，這樣能為點／斜率校正提供更好的範圍。
 
 ## 設置傳感器（G6）
 
@@ -38,4 +38,4 @@
 
 ![展開的狀態面板中「感測器」列所顯示的感測器使用時間](../images/main/main_status_row_expanded.png)
 
-感測器使用時間會顯示在主畫面狀態面板的**感測器**列中（點選箭頭以展開面板）。 A negative age occurs if there is either a double "Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. 開啟**治療紀錄**（選單 ☰），選取**照護入口**分頁，然後刪除錯誤的紀錄。
+感測器使用時間會顯示在主畫面狀態面板的**感測器**列中（點選箭頭以展開面板）。如果有兩筆「插入感測器」[照護入口紀錄](#aaps-screens-careportal)，或是感測器插入日期錯誤，就會出現負數的使用天數。開啟**治療紀錄**（選單 ☰），選取**照護入口**分頁，然後刪除錯誤的紀錄。
