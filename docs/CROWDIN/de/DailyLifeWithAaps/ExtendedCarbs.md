@@ -34,7 +34,7 @@ In the [Bolus wizard](#aaps-screens-bolus-wizard), three buttons below the **Car
 
 **Example**: you type 100 g and choose **Pizza**. The bolus is calculated for 80 g, recorded now. 35 g of eCarbs start 1 hour later and are spread over 3 hours.
 
-Good to know:
+Gut zu wissen:
 * This is not a simple split: with **Cake** and **Pizza**, the carbs recorded add up to **more than you typed** (110 % and 115 %). The extra is only in the eCarbs.
 * The bolus only covers the carbs taken now. **AAPS** does not bolus up front for the eCarbs: the loop takes them into account once they start, like any other [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
 * If you set a **Carb time**, the eCarbs start 60 minutes after that time.

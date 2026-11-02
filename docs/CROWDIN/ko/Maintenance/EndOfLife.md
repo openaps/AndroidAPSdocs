@@ -30,7 +30,7 @@ The table does not show an end date for every AAPS version. If your version is m
 
 Android gives each system version an **API level**, which is a number used by apps. For example, API level 30 is Android 11. The table below uses API levels from AAPS version data. The AAPS version in each row is the value listed for the API level shown. This is not a full list of versions you can install.
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version). If no AAPS version is listed for an API level, the table says “None listed”.
+To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version).
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
@@ -67,15 +67,31 @@ document.addEventListener('DOMContentLoaded', async () => {
       typeof entry.endDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(entry.endDate)
     ).sort((a, b) => b.version.localeCompare(a.version, undefined, { numeric: true }));
     const android = data.filter(entry =>
-      entry && Number.isInteger(entry.minAndroid) && Number.isInteger(entry.maxAndroid)
+      entry && Number.isInteger(entry.minAndroid) && Number.isInteger(entry.maxAndroid) &&
+      typeof entry.supported === 'string' && entry.supported
     ).sort((a, b) => b.minAndroid - a.minAndroid);
     if (!versions.length && !android.length) throw new Error('No version data');
 
-    showRows('aaps-eol-versions', versions.map(entry => [entry.version, entry.endDate]));
+    // Merge neighbouring versions that share an end date and the same x.y.z prefix
+    // (for example 3.2.0.0 to 3.2.0.3) into a single row.
+    const groups = [];
+    for (const entry of versions.slice().reverse()) {
+      const prefix = entry.version.split('.').slice(0, 3).join('.');
+      const last = groups[groups.length - 1];
+      if (last && last.endDate === entry.endDate && last.prefix === prefix) {
+        last.versions.push(entry.version);
+      } else {
+        groups.push({ prefix, endDate: entry.endDate, versions: [entry.version] });
+      }
+    }
+    const label = list => list.length === 1 ? list[0]
+      : list.length === 2 ? `${list[0]} and ${list[1]}`
+      : `${list[0]} to ${list[list.length - 1]}`;
+    showRows('aaps-eol-versions', groups.reverse().map(g => [label(g.versions), g.endDate]));
     showRows('aaps-eol-android', android.map(entry => [
       entry.minAndroid === entry.maxAndroid
         ? String(entry.minAndroid) : `${entry.minAndroid}–${entry.maxAndroid}`,
-      typeof entry.supported === 'string' && entry.supported ? entry.supported : 'None listed'
+      entry.supported
     ]));
     status.remove();
   } catch {

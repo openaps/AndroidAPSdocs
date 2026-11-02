@@ -30,7 +30,7 @@
 
 Το Android δίνει σε κάθε έκδοση του συστήματος ένα **επίπεδο API**, δηλαδή έναν αριθμό που χρησιμοποιούν οι εφαρμογές. Για παράδειγμα, το επίπεδο API 30 είναι το Android 11. Ο παρακάτω πίνακας χρησιμοποιεί επίπεδα API από τα δεδομένα εκδόσεων του AAPS. Η έκδοση του AAPS σε κάθε γραμμή είναι η τιμή που αναφέρεται για το επίπεδο API που φαίνεται. Αυτή δεν είναι πλήρης λίστα των εκδόσεων που μπορείτε να εγκαταστήσετε.
 
-Για να επιλέξετε μια έκδοση του AAPS για το τηλέφωνό σας, χρησιμοποιήστε τις [οδηγίες για την έκδοση Android στις Σημειώσεις έκδοσης](#maintenance-android-version-aaps-version). Αν δεν αναφέρεται καμία έκδοση του AAPS για ένα επίπεδο API, ο πίνακας γράφει «Καμία έκδοση».
+To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version).
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
@@ -67,19 +67,35 @@ document.addEventListener('DOMContentLoaded', async () => {
       typeof entry.endDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(entry.endDate)
     ).sort((a, b) => b.version.localeCompare(a.version, undefined, { numeric: true }));
     const android = data.filter(entry =>
-      entry && Number.isInteger(entry.minAndroid) && Number.isInteger(entry.maxAndroid)
+      entry && Number.isInteger(entry.minAndroid) && Number.isInteger(entry.maxAndroid) &&
+      typeof entry.supported === 'string' && entry.supported
     ).sort((a, b) => b.minAndroid - a.minAndroid);
     if (!versions.length && !android.length) throw new Error('No version data');
 
-    showRows('aaps-eol-versions', versions.map(entry => [entry.version, entry.endDate]));
+    // Merge neighbouring versions that share an end date and the same x.y.z prefix
+    // (for example 3.2.0.0 to 3.2.0.3) into a single row.
+    const groups = [];
+    for (const entry of versions.slice().reverse()) {
+      const prefix = entry.version.split('.').slice(0, 3).join('.');
+      const last = groups[groups.length - 1];
+      if (last && last.endDate === entry.endDate && last.prefix === prefix) {
+        last.versions.push(entry.version);
+      } else {
+        groups.push({ prefix, endDate: entry.endDate, versions: [entry.version] });
+      }
+    }
+    const label = list => list.length === 1 ? list[0]
+      : list.length === 2 ? `${list[0]} and ${list[1]}`
+      : `${list[0]} to ${list[list.length - 1]}`;
+    showRows('aaps-eol-versions', groups.reverse().map(g => [label(g.versions), g.endDate]));
     showRows('aaps-eol-android', android.map(entry => [
       entry.minAndroid === entry.maxAndroid
         ? String(entry.minAndroid) : `${entry.minAndroid}–${entry.maxAndroid}`,
-      typeof entry.supported === 'string' && entry.supported ? entry.supported : 'Καμία έκδοση'
+      entry.supported
     ]));
     status.remove();
   } catch {
-    status.textContent = 'Δεν ήταν δυνατή η φόρτωση των δεδομένων εκδόσεων του AAPS. Δοκιμάστε ξανά αργότερα.';
+    status.textContent = 'Could not load AAPS version data. Δοκιμάστε ξανά αργότερα.';
   }
 });
 </script>

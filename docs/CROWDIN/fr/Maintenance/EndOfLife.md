@@ -30,7 +30,7 @@ Le tableau n'indique pas de date de fin pour chaque version d'AAPS. Si votre ver
 
 Android donne à chaque version du système un **niveau d'API**, c'est-à-dire un nombre utilisé par les applications. Par exemple, le niveau d'API 30 correspond à Android 11. Le tableau ci-dessous utilise les niveaux d'API des données des versions AAPS. La version d'AAPS de chaque ligne est la valeur indiquée pour le niveau d'API affiché. Ce n'est pas une liste complète des versions que vous pouvez installer.
 
-Pour choisir une version d'AAPS pour votre téléphone, utilisez les [conseils sur les versions Android dans les notes de version](#maintenance-android-version-aaps-version). Si aucune version d'AAPS n'est indiquée pour un niveau d'API, le tableau affiche « Aucune indiquée ».
+To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version).
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
@@ -67,19 +67,35 @@ document.addEventListener('DOMContentLoaded', async () => {
       typeof entry.endDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(entry.endDate)
     ).sort((a, b) => b.version.localeCompare(a.version, undefined, { numeric: true }));
     const android = data.filter(entry =>
-      entry && Number.isInteger(entry.minAndroid) && Number.isInteger(entry.maxAndroid)
+      entry && Number.isInteger(entry.minAndroid) && Number.isInteger(entry.maxAndroid) &&
+      typeof entry.supported === 'string' && entry.supported
     ).sort((a, b) => b.minAndroid - a.minAndroid);
     if (!versions.length && !android.length) throw new Error('No version data');
 
-    showRows('aaps-eol-versions', versions.map(entry => [entry.version, entry.endDate]));
+    // Merge neighbouring versions that share an end date and the same x.y.z prefix
+    // (for example 3.2.0.0 to 3.2.0.3) into a single row.
+    const groups = [];
+    for (const entry of versions.slice().reverse()) {
+      const prefix = entry.version.split('.').slice(0, 3).join('.');
+      const last = groups[groups.length - 1];
+      if (last && last.endDate === entry.endDate && last.prefix === prefix) {
+        last.versions.push(entry.version);
+      } else {
+        groups.push({ prefix, endDate: entry.endDate, versions: [entry.version] });
+      }
+    }
+    const label = list => list.length === 1 ? list[0]
+      : list.length === 2 ? `${list[0]} and ${list[1]}`
+      : `${list[0]} to ${list[list.length - 1]}`;
+    showRows('aaps-eol-versions', groups.reverse().map(g => [label(g.versions), g.endDate]));
     showRows('aaps-eol-android', android.map(entry => [
       entry.minAndroid === entry.maxAndroid
         ? String(entry.minAndroid) : `${entry.minAndroid}–${entry.maxAndroid}`,
-      typeof entry.supported === 'string' && entry.supported ? entry.supported : 'Aucune indiquée'
+      entry.supported
     ]));
     status.remove();
   } catch {
-    status.textContent = 'Impossible de charger les données des versions AAPS. Veuillez réessayer plus tard.';
+    status.textContent = 'Could not load AAPS version data. Veuillez réessayer plus tard.';
   }
 });
 </script>
