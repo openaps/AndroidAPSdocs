@@ -134,7 +134,7 @@ Aponte a câmara para o código. O cliente mostra o que o código faz — o ende
 
 ```{admonition} Scanning is available on Android
 :class: note
-O leitor ainda não está disponível no iOS, e um computador de secretária não tem câmara: aí, use o PIN.
+A computer without camera: use the PIN there.
 ```
 
 #### Introduzir o PIN
