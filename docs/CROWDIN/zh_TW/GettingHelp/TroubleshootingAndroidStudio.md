@@ -48,7 +48,7 @@ Gradle 同步可能因多種原因失敗。當你收到“gradle 同步失敗”
 
   * 你必須收到一條訊息，告訴你安裝了什麼 Git 版本，如上圖所示。在這種情況下，請轉到 [第 2 步](#troubleshooting-android-studio-check-for-uncommitted-changes)。
 
-  * In case you get a message saying
+  * 如果你看到以下訊息：
     ```
     Git: command not found
     ```
@@ -58,13 +58,13 @@ Gradle 同步可能因多種原因失敗。當你收到“gradle 同步失敗”
 
   * 如果您使用 Windows，且剛安裝 Git，請重新啟動電腦，讓 Git 在安裝後能夠全域使用。
 
-  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
+  * 如果已安裝 Git、已重新啟動（Windows 使用者），但仍找不到 Git：
 
   * 在計算機上搜索文件“git.exe”。
 
     請記下它存儲在哪個目錄。
 
-  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. 請添加你找到 Git 安裝的目錄。
+  * 前往 Windows 的環境變數，選取「PATH」變數，然後按一下「編輯」。請添加你找到 Git 安裝的目錄。
 
   * 儲存並關閉。
 
@@ -137,7 +137,7 @@ git config --global user.email 你的email@xxx.com
 原因: 錯誤: 無效的來源釋出: 21
 ```
 
-If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
+如果你遇到上述錯誤訊息，必須先下載正確版本的 JVM，才能嘗試重新建置：
 
 1.  檢查[需求表](#Building-APK-recommended-specification-of-computer-for-building-apk-file)以確定你需要的**AAPS**版本的 JVM 版本，並做好記錄。
 
@@ -250,7 +250,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ## Apk 已安裝但版本舊
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
+如果你已成功建置應用程式、將其傳送至手機並成功安裝，但版本號碼仍未變更，可能是忘了[更新本機副本](#Update-to-new-version-update-your-local-copy)
 
 ## 上述方法均無效
 
