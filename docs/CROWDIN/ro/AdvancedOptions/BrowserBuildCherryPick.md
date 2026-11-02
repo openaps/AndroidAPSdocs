@@ -1,28 +1,28 @@
 (github-cherry-pick)=
 
-# Browser build: cherry-pick a commit
+# Construirea în browser: alegerea unei modificări (cherry-pick)
 
 ```{note}
-This is an optional, advanced operation. It only works if you build with a **fork** ([Browser build steps 1–4](../SettingUpAaps/BrowserBuild.md)). **AAPS Builder** repositories do not include this workflow.
+Aceasta este o operațiune opțională, avansată. Funcționează doar dacă construiți cu o **furcă** ([pașii 1–4 din Construirea în navigator](../SettingUpAaps/BrowserBuild.md)). Depozitele **AAPS Builder** nu includ acest flux de lucru (workflow).
 ```
 
-Use this only when a developer asks you to test a specific change (they give you one or more commit hashes) before it is in a released version.
+Folosiți această opțiune doar atunci când un dezvoltator vă cere să testați o anumită modificare (vă dă unul sau mai multe chei de verificare de modificare) înainte ca ea să apară într-o versiune lansată.
 
 ## Before you start
 
-- [Sync your fork](#Update-to-new-version-update-your-repo): this workflow builds the current state of your branch, not a version you pick from a list.
-- Google Drive must be authorized ([Step 3](../SettingUpAaps/BrowserBuildGoogleDrive.md)): the built app is saved there, like a normal build.
+- [Sincronizați furca](#Update-to-new-version-update-your-repo): acest flux de lucru construiește starea curentă a ramurii dumneavoastră, nu o versiune pe care o alegeți dintr-o listă.
+- Google Drive trebuie să fie autorizat ([Pasul 3](../SettingUpAaps/BrowserBuildGoogleDrive.md)): aplicația construită este salvată acolo, ca la o construire normală.
 
-## Run the workflow
+## Rulați fluxul de lucru
 
-1. In your GitHub fork of AndroidAPS, open **Actions**.
-2. Expand **All workflows** and select **Cherry Pick CI (Pre-release Feature Backport)**.
-3. Tap **Run workflow** and fill in:
+1. În furca dumneavoastră AndroidAPS de pe GitHub, deschideți **Acțiuni**.
+2. Extindeți **Toate fluxurile de lucru** și selectați **Cherry Pick CI (Pre-release Feature Backport)**.
+3. Apăsați **Executare flux de lucru** și completați:
 
    ![aaps_cherry-pick_ci](../images/Building-the-App/CI/aaps_cherry_pick_ci.png)
 
-   - **Use workflow from**: the branch to add the commits to, normally `master`.
-   - **Upstream repository**: where the commits come from. Keep `nightscout/AndroidAPS` unless the developer told you otherwise.
-   - **Commit hash(es) to cherry-pick**: the hash(es) you were given, separated by spaces.
-   - **Select Build Variant**: see [variants](#browserbuild-variant) (normally `fullRelease`).
-4. Tap **Run workflow**. When it completes, the app is in your Google Drive, as after a [normal build](../SettingUpAaps/BrowserBuildAPK.md).
+   - **Utilizați fluxul de lucru de la**: ramura în care se adaugă modificările, de obicei `principală`.
+   - **Depozit amonte**: depozitul din care provin modificările. Păstrați `nightscout/AndroidAPS`, cu excepția cazului în care dezvoltatorul v-a spus altceva.
+   - **Atribuiți chei de verificare la cherry-pick**: cheia sau cheile de verificare pe care le-ați primit, separate prin spații.
+   - **Selectați varianta de construire**: vedeți [variantele](#browserbuild-variant) (de obicei `fullRelease`).
+4. Tap **Run workflow**. Când se termină, aplicația se află în Google Drive, ca după o [construire normală](../SettingUpAaps/BrowserBuildAPK.md).
