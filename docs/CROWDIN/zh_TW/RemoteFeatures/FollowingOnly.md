@@ -114,7 +114,7 @@
 
 ![圖像](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift was created from porting the original xDrip app to iOS and evolved into "xDrip for iOS", written as **xDrip4iOS**.
+xDripSwift 是將原始 xDrip App 移植到 iOS 後建立的，並發展成以 **xDrip4iOS** 為名的「iOS 版 xDrip」。
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
@@ -149,7 +149,7 @@ xDripSwift was created from porting the original xDrip app to iOS and evolved in
 * Apple iPad（需要軟體版本 13.0 或更高）
 * Google Android（將網頁應用儲存到主畫面）
 
-據 Sugarmate 用戶報告，他可以在美國與 Apple CarPlay 一起使用，當駕駛時顯示血糖讀取值。目前尚未確定這在美國以外的國家是否可行。 If you know more about this, please add details in here to the documentation by completing a [pull request](../SupportingAaps/HowToEditTheDocs.md), which is quick and easy to do.
+據 Sugarmate 用戶報告，他可以在美國與 Apple CarPlay 一起使用，當駕駛時顯示血糖讀取值。目前尚未確定這在美國以外的國家是否可行。如果您知道更多相關資訊，請透過提交[提取要求](../SupportingAaps/HowToEditTheDocs.md)，將內容補充到這份文件中。提交方式簡單又快速。
 
 
 ### [Spike](https://spike-app.com/)（iOS）
