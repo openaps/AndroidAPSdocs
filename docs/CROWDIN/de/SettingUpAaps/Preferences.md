@@ -93,7 +93,7 @@ Da ab Version 2.7 die Einstellungen verschlüsselt sind, wird ein Passwort benö
 
 **Biometrischer Schutz funktioniert unter Umständen nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus auf einigen Telefonen.**
 
-![Master-Passwort festlegen](../images/preferences/master_password_dialog.png)
+![Set master password](../images/preferences/master_password_dialog.png)
 
 (Preferences-settings-protection)=
 ### Schutz der Einstellungen
@@ -321,7 +321,7 @@ Standard value for AMA is 3, for SMB it's 8.
 
 The COB graph on the main screen indicates when min_5m_carbimpact is being used by putting orange dots along the top of the COB curve.
 
-![COB-Diagramm](../images/main/cob_graph_min_5m_carbimpact.png)
+![COB graph](../images/main/cob_graph_min_5m_carbimpact.png)
 
 ### Absorption cutoff
 
@@ -402,7 +402,7 @@ The switch "**Allow client control**" is no longer in these settings: it is at t
 
 ### Verbindungseinstellungen
 
-![NSClient Verbindungseinstellungen](../images/preferences/settings_nsclient_connection.png)
+![NSClient connection settings](../images/preferences/settings_nsclient_connection.png)
 
 - Verbindungseinstellungen legen fest auf welchem Weg (z.B. WLAN oder Mobilfunknetz) eine Nightscout-Verbindung aufgebaut werden darf.
 - Beschränken den Nightscout-Upload auf WLAN-Verbindungen oder sogar auf bestimmte WLAN-SSIDs.
@@ -485,7 +485,7 @@ When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays
 
 **Datenübermittlung**
 
-![Datenübermittlung](../images/preferences/settings_data_choices.png)
+![Data choices](../images/preferences/settings_data_choices.png)
 
 Du kannst bei der Weiterentwicklung von **AAPS** unterstützen, indem Du Absturzberichte an die Entwickler sendest.
 
