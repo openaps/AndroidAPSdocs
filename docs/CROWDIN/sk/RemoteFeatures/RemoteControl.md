@@ -7,8 +7,8 @@
 
 Na ovládanie **AAPS** na diaľku existujú štyri veľmi účinné nástroje:
 
-1) [SMS príkazy](#RemoteControl_SMS-Commands) (telefón sledujúceho môže mať Android alebo iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (telefón sledujúceho má Android; verzia pre iPhone sa vyvíja) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS alebo iný počítač/zariadenie), hlavne na sledovanie: pozrite poznámku o [ovládaní z klienta](#client-master-control) v tejto časti.  
-4) [Inteligentné hodinky](#RemoteControl_smartwatches) (Android)
+1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower device is an Android phone or tablet, or a Windows, Mac or Linux computer; on an iPhone you [build the app yourself](#aapsclient-iphone)) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device), mainly for following: see the note on [client control](#client-master-control) in that section.  
+4) [Smartwatches](#RemoteControl_smartwatches) (Android)
 
 Prvé tri sú vhodné najmä pre opatrovateľov/rodičov, ale inteligentné hodinky sú veľmi užitočné pre opatrovateľov/rodičov **aj** pre samotných dospelých s diabetom.
 
