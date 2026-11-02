@@ -131,7 +131,7 @@
 
 你需要找出為什麼會收到重複的血糖資料：
 
-* 你的 Nightscout 網站上是否啟用了 Dexcom 橋接？通過進入 Nightscout 實例的管理面板，編輯 "enable" 變數並刪除其中的 "bridge" 來停用橋接。 (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* 你的 Nightscout 網站上是否啟用了 Dexcom 橋接？通過進入 Nightscout 實例的管理面板，編輯 "enable" 變數並刪除其中的 "bridge" 來停用橋接。 （Heroku 的[詳細資訊請參閱此處](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku)。）
 * 是否有多個來源將你的血糖上傳到 Nightscout？如果您使用 BYODA App，請在 **AAPS** 中啟用上傳功能；如果您也有使用 xDrip，請勿在 xDrip 中啟用此功能。
 * 你是否有任何會接收你的血糖，並再次上傳到你的 Nightscout 網站的追蹤者？
 * 最後手段：前往 [NSClient 設定](#Preferences-nsclient)，選取同步設定，並停用「從 NS 接收 CGM 資料」選項。
@@ -247,7 +247,7 @@
 
 如果超過危急門檻值警告，數值將顯示為紅色。
 
-The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
+時間一律以簡短格式顯示，不受螢幕大小影響：第一天顯示為 *4 小時*，之後顯示為 *3 天 4 小時*。
 
 狀態列**展開**時，點按右側顯示的小型**設定**圖示即可調整門檻值（請參閱[狀態燈號](#Preferences-status-lights)）。
 
@@ -308,11 +308,11 @@ The age is always shown in its short form, whatever the screen size: *4h* on the
 
 (aaps-screens-graph-clock-change)=
 
-#### Clock changes
+#### 時鐘變更
 
-When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
+手機時鐘因夏令時間調整或切換至新的時區而跳動時，血糖圖表上會以垂直虛線標示該時刻，虛線底部還有一個小時鐘圖示。同一條虛線也會延伸至下方的[其他圖表](#aaps-screens-additional-graphs)。
 
-![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
+![時鐘變更標記：現在時間線旁有一條帶時鐘圖示的虛線](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
@@ -342,7 +342,7 @@ When the clock of the phone jumped, at a daylight saving change or in a new time
 
 當兩條預測線的數值相同時，點會重疊，因此只能看到其中一種顏色（例如，血糖平穩時，UAM 會疊在 IOB 上）。
 
-* **COB** line (orange): [carbs on board](CobCalculation.md) (orange is used throughout AAPS for COB and carbs)
+* **COB** 線（橘色）：[體內碳水](CobCalculation.md)（AAPS 全程以橘色表示 COB 和碳水）
     
     此預測線顯示了在目前**設定檔**下，假設碳水吸收的偏差保持不變，你的血糖（而非碳水本身）將會走向的趨勢。此線僅在有輸入 COB 時才會顯示。
 
@@ -364,7 +364,7 @@ When the clock of the phone jumped, at a daylight saving change or in a new time
 
 * **aCOB** 線（淡色半透明橘色）：加速碳水吸收
     
-    Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. 因實用性有限，所以已棄用。
+    與活性碳水化合物（COB）類似，但假設碳水化合物的吸收速率固定為每 5 分鐘 10 mg/dL（0.555 mmol/L）。因實用性有限，所以已棄用。
     
     *這條線僅在使用較舊的[AMA](#Config-Builder-aps)算法時顯示。*
 
@@ -469,7 +469,7 @@ SMB 會以藍色三角形顯示在此圖表上，並依照與當天最大 SMB �
 
 當使用 [Wear 智慧型手錶](../WearOS/WearOsSmartwatch.md) 時，這些資料可能會可以顯示。可在**AAPS** Wear 應用程式中啟用它們並授權健康資料。
 
-Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
+步數會以直條顯示，心率則會以曲線顯示；手錶未傳送資料時，曲線會中斷。
 
 #### 偏差（DEV）
 
@@ -485,7 +485,7 @@ Steps are drawn as columns, and the heart rate as a curved line that breaks wher
 
 ![偏差與 BGI](../images/main/graph_dev_bgi.png)
 
-將此線與偏差條一起顯示是個不錯的組合。 They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. 比較血糖影響(BGI)線和偏差條是另一種暸解**血糖(BG)**波動的方式。在標記為 **1** 的時間點，偏差長條遠高於 BGI 線：血糖上升幅度超出單靠胰島素作用所能解釋的範圍（例如用餐後）。在標記為 **2** 的時間點，偏差長條低於零（紅色）：血糖比演算法預期的還低。
+將此線與偏差條一起顯示是個不錯的組合。這些資料共用同一個刻度，但與其他選用資料的刻度不同，因此建議像上方所示，將它們顯示在另一張圖表上。比較血糖影響(BGI)線和偏差條是另一種暸解**血糖(BG)**波動的方式。在標記為 **1** 的時間點，偏差長條遠高於 BGI 線：血糖上升幅度超出單靠胰島素作用所能解釋的範圍（例如用餐後）。在標記為 **2** 的時間點，偏差長條低於零（紅色）：血糖比演算法預期的還低。
 
 ### F 節 — 快速啟動工具列
 
@@ -507,13 +507,13 @@ Steps are drawn as columns, and the heart rate as a curved line that breaks wher
 
 啟用**開始用餐前臨時目標**後，系統會自動啟動您的[用餐前臨時目標](#TempTargets-eating-soon-temp-target)。
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only (not delivered by pump)**". 新增的**時間**列預設為**現在**，可讓您記錄先前注射的胰島素：使用**-**／**+**調整時間，或點選箭頭來輸入分鐘數或選擇日期與時間。
+如果您不想透過幫浦注射胰島素，而只想記錄胰島素劑量（例如使用胰島素筆注射），請啟用「**只記錄注射，不透過幫浦輸注**」。新增的**時間**列預設為**現在**，可讓您記錄先前注射的胰島素：使用**-**／**+**調整時間，或點選箭頭來輸入分鐘數或選擇日期與時間。
 
 ![收合的時間列](../images/v4/Screens/insulin_dialog_record_only_time.png) ![點選箭頭後展開的時間列](../images/v4/Screens/insulin_dialog_time_open.png)
 
 您可以使用**+0.5／+1.0／+2.0**按鈕，快速增加胰島素劑量。您可以在[注射嚮導設定](#Preferences-deliver-this-part-of-bolus-wizard-result)中變更增加的劑量。
 
-幫浦暫停或中斷連線時，也可以使用胰島素對話方塊，例如記錄使用胰島素筆注射的胰島素。 In this case, "**Bolus will be recorded only (not delivered by pump)**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
+幫浦暫停或中斷連線時，也可以使用胰島素對話方塊，例如記錄使用胰島素筆注射的胰島素。在此情況下，「**只記錄注射，不透過幫浦輸注**」會強制啟用（以紅色顯示），並顯示其他欄位，讓您選擇胰島素類型，以及設定過去注射的 **時間** 偏移量：
 
 ![幫浦中斷連線時的胰島素對話方塊](../images/main/insulin_dialog_pump_disconnected.png)
 
@@ -527,7 +527,7 @@ If you do not want to bolus through the pump but record an insulin amount (i.e. 
 
 **碳水化合物時間**：您將在何時／已於何時攝取碳水化合物。
 
-**Duration**: To be used for ["extended carbs"](ExtendedCarbs.md). 此列預設為收合狀態，避免您誤將克數輸入其中：使用**-**／**+**調整時間，或點選箭頭展開後輸入數值。
+**持續時間**: 用於 [“延長碳水化合物”](ExtendedCarbs.md). 此列預設為收合狀態，避免您誤將克數輸入其中：使用**-**／**+**調整時間，或點選箭頭展開後輸入數值。
 
 您可以使用**+5／+10／+20**按鈕，快速增加碳水化合物的量。
 
@@ -619,20 +619,20 @@ If you do not want to bolus through the pump but record an insulin amount (i.e. 
 
 ![為未來的碳水化合物設定鬧鐘](../images/Home2021_BolusWizard_EatingReminder.png)
 
-The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
+注射完成後，提醒便會開始倒數。倒數期間，主畫面會顯示 **用餐時間** 欄位，並開始倒數，欄位中有 **停止** 和 **+5 分鐘** 按鈕。 **+5 分鐘** 會將等待結束時間延後 5 分鐘，而欄位會顯示總等待時間。時間到時，提醒會以專屬的柔和廚房計時器鈴聲響起。除了 **將警示設為靜音**（畫面會保持開啟）和 **設為靜音並關閉**，警示畫面也提供 **+5 分鐘**，可重新開始 5 分鐘的倒數。鈴聲響起後，欄位會顯示 *時間到了*，並提供 **+5 分鐘** 和 **關閉** 按鈕；按下 **設為靜音並關閉** 也會移除欄位。這個欄位和警示也會顯示在 **AAPSClient** 和[手錶](#WearOsSmartwatch-wizard-carb-time)上。這項提醒不會在手機的時鐘應用程式中建立計時器。如果 Android 不允許 **AAPS** 設定鬧鐘，嚮導會請您前往 Android 設定，允許 **AAPS** 使用*鬧鐘和提醒*功能。過去的用餐時間不會提供鈴聲提醒。
 
-![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
+![主畫面上的「用餐時間」欄位，包含 +5 分鐘和停止按鈕](../images/main/main_eat_reminder_bar.png)
 
-![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
+![用餐時間警示畫面：+5 分鐘、將警示設為靜音、設為靜音並關閉](../images/main/eat_reminder_alarm.png)
 
-**血糖**欄位通常已填入 CGM 的最新讀取值。如果你沒有使用中的 CGM，則該欄位顯示空白。如果讀取值是近期取得的，**血糖**列會保持收合。 The field follows new readings while the wizard is open, until you change it yourself.
+**血糖**欄位通常已填入 CGM 的最新讀取值。如果你沒有使用中的 CGM，則該欄位顯示空白。如果讀取值是近期取得的，**血糖**列會保持收合。嚮導開啟時，欄位會隨著新的讀取值更新，直到您自行變更欄位內容為止。
 
-底部的結果按鈕會顯示建議的注射量；點選後會先要求您確認，才會注射胰島素。 While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
+底部的結果按鈕會顯示建議的注射量；點選後會先要求您確認，才會注射胰島素。等待您確認期間，循環不會進行微量注射，因此您確認的注射劑量仍然正確。如果此時正在注射 SMB，**確定**會等到注射完成。
 
 請注意：
 
 * 如果計算出的注射量超過您的**[最大注射量](#Preferences-maximum-bolus)**，系統會將注射量調降至上限，並在確認畫面中顯示警告「已套用注射量限制」。系統則會拒絕[快速嚮導](../DailyLifeWithAaps/QuickWizards.md)。
-* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only (not delivered by pump)**" warning stays at the top of the dialog, also when you scroll.
+* 如果注射僅有記錄（例如幫浦中斷連線時），「**僅記錄注射（不由幫浦注射）**」警告會持續顯示在對話方塊頂端，捲動時也一樣。
 * 您手動注射的胰島素優先於等待注射的[微量注射](#Open-APS-features-super-micro-bolus-smb)：系統會取消該次微量注射，並重新計算循環。如果目前正在進行 SMB 注射，系統會拒絕您的注射，並顯示訊息：「目前正在進行 SMB 注射。請等注射完成後再試一次。」系統不會注射任何胰島素，也不會儲存這次注射輸入的碳水化合物：請稍候片刻，再重新輸入。
 
 (AapsScreens-wrong-cob-detection)=
