@@ -54,7 +54,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Rótulo no meio do [nada](#sandbox1-in-the-middle-of-nowhere) Este, ao contrário, é o rótulo para [](#sandbox1-this-is-another-test) e ele deve mostrar o seu nome
 
-Links com âncora:
+Links with anchor:
 - [quanto tempo vai levar?](#preparing-how-long-will-it-take)
 - [Configurações do NSClient em Preferências](#Preferences-nsclient).
 - [linhas de previsão na VISÃO GERAL do AAPS](#aaps-screens-prediction-lines) para o nível de título 4

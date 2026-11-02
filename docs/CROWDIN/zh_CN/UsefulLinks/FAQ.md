@@ -175,7 +175,7 @@ Many of the situations below can be prepared once as a [scene](#scenes): a prese
 
 当使用循环时，您可以尝试以下步骤：
 
-* Make a [profile switch](#ProfileSwitch-change-percentage) < 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
+* Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
 * 将[活动临时目标](#TempTargets-activity-temp-target)设置为高于你的标准目标。 With a percentage below 100 % and a duration, the same **Activate** screen offers a **Temporary target / Activity** switch that starts both at once.
 * 如果使用SMB，请确保禁用["在高临时目标时启用SMB"](#Open-APS-features-enable-smb-with-high-temp-targets)和["始终启用SMB"](#Open-APS-features-enable-smb-always)选项。
 
@@ -194,7 +194,7 @@ The *Exercise* and *Post-exercise Night* [scene](#scenes) templates bundle these
 在闭环模式下饮酒存在风险，因为算法无法准确预测酒精对血糖的影响。您需要通过AAPS的以下功能来探索适合自己的处理方法：
 
 * 停用闭环模式并手动控制糖尿病
-* 设置较高的临时目标并停用未标记餐食(UAM)功能，以防止闭环系统因未记录的餐食而增加活性胰岛素(IOB)
+* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
 * do a [profile switch](#ProfileSwitch-change-percentage) to noticeably less than 100% 
 
 The *Alcohol* [scene](#scenes) template is a starting point you can adapt to your own method.
@@ -363,9 +363,9 @@ You can also change when the alert is raised: press the **Settings** (gear) icon
 
 #### 我的连接/胰岛素泵/Pod无响应（RL/OL/EmaLink等设备）
 
-对于某些手机，蓝牙可能会断开与链接（RL/OL/EmaL 等）的连接。
+With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
 
-部分用户还会遇到链接无响应的情况（AAPS显示设备已连接，但链接无法访问或控制胰岛素泵）。
+Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
 
 First try the **Reset RileyLink** button on the pump screen (see your pump's page: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). If this does not help, the easiest way to get all these parts working together is:
 
@@ -419,5 +419,5 @@ The Pod state is included in the exported settings, so an active Pod can be move
 
 Read these sections first:
 
-* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported during the Pod you are wearing now,
+* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
 * [Discarding a pod](#omnipod-dash-discard-pod), to remove the Pod from the old phone afterwards. Keep the old phone in airplane mode until the Pod is discarded, so that the two phones never talk to the Pod at the same time.

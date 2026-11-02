@@ -19,7 +19,7 @@ Las reglas de automatización se crean y se modifican en la pantalla **Automatiz
 
 - Una o más acciones que ejecutar.
 
-    Por ejemplo, una alarma, fijar un porcentaje de perfil o exportar los ajustes de AAPS al cambiar el Pod.
+    Such as an alarm or setting a profile percentage or exporting the AAPS settings on Pod change.
 
 
 Hay muchas opciones de automatización. Te recomendamos estudiarlas en la app AAPS, en la sección Automatización. También puedes buscar ejemplos de automatizaciones de otros usuarios en los grupos de usuarios de AAPS en [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) y [**Discord**](https://discord.gg/4fQUWHZ4Mw).
@@ -38,11 +38,11 @@ El ejemplo de abajo muestra cómo una **Automatización** puede ahorrar pasos.
 
 Un usuario hace ejercicio todas las mañanas a las 6:00: tiene que acordarse de fijar a mano un «Objetivo temporal - Actividad» en AAPS a las 5:00, antes del ejercicio.
 
-![Texto alternativo](../images/Automations/automation_concept_manual.png)
+![Manual actions without automation](../images/Automations/automation_concept_manual.png)
 
 El usuario ha configurado una **Automatización** que activa a las 5:00 un «Objetivo temporal - Actividad» para que su **glucosa** y su **IOB** sean las mejores posibles antes del ejercicio de las 6:00:
 
-![Texto alternativo](../images/Automations/automation_concept_automated.png)
+![Actions done by an automation](../images/Automations/automation_concept_automated.png)
 
 ## Puntos clave antes de empezar con las automatizaciones
 
@@ -91,12 +91,12 @@ Para configurar una **Automatización**, pulsa el botón **+** en la pantalla Au
 
 Para desactivar una regla de **Automatización**, desmarca la casilla a la izquierda del nombre de la **Automatización**. El ejemplo de abajo muestra una **Automatización** activada («marcada») o desactivada («desmarcada»):
 
-![Texto alternativo](../images/Automations/automation_rule_activated_deactivated.png)
+![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
 
 
 Al configurar una **Automatización**, puedes probarla primero activando la opción «notificación» en «Acciones». Así **AAPS** primero muestra una notificación en lugar de ejecutar de verdad una acción. Cuando estés seguro de que la notificación aparece en el momento y las condiciones correctas, puedes cambiar la regla de **Automatización** para sustituir la «Notificación» por una «Acción».
 
-![Texto alternativo](../images/Automations/automation_alert_actions.png)
+![Alert actions](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
@@ -115,7 +115,7 @@ Las **automatizaciones** tienen límites de seguridad:
 
 * Un **Objetivo temporal** fijado por una **Automatización** tiene que estar entre 72 y 180 mg/dl (o entre 4 y 10 mmol/l).
 * El **porcentaje del perfil** tiene que estar entre el 50 % y el 130 %.
-* Hay un límite de 5 minutos entre ejecuciones de una **Automatización** (y también para la primera ejecución).
+* There is a 5 minute time limit between executions of **Automation** (and first execution).
 
 ## Uso correcto de los valores negativos
 
@@ -127,7 +127,7 @@ Ten cuidado al elegir un valor negativo en una **Automatización**
 
 Ten cuidado al elegir un «valor negativo» en la «Condición», por ejemplo con «es menor que», en las **automatizaciones**. Por ejemplo:
 
-![Texto alternativo](../images/Automations/automation_comparison_operators.png)
+![Comparison operators](../images/Automations/automation_comparison_operators.png)
 
 **Ejemplo 1:** crear una condición **«es menor que»** «-0,1 mmol/l» (o «-2 mg/dl») hará lo siguiente:
 
@@ -242,7 +242,7 @@ ninguno
 
 ![Los eventos de la acción Nota](../images/Automations/automation_action_careportal_events.png) ![La acción Nota con Cambio de zona de la bomba](../images/Automations/automation_action_careportal_site_change.png)
 
-**Acciones:** **Enviar SMS** (en el grupo **Alertas**)
+**Actions:** **Send SMS to all numbers** (in the **Alerts** group)
 
 **Opciones:**
 
@@ -260,7 +260,7 @@ ninguno
 
 * elige **ACTIVADO** o **DESACTIVADO**. Esto cambia el ajuste **Habilitar SMB** de OpenAPS SMB, igual que si lo hubieras cambiado en **Ajustes**, y se mantiene hasta que tú u otra regla lo vuelva a cambiar.
 
-**Acciones:** **Perfil de Autotune** (en el grupo **Lazo e insulina**)
+**Actions:** **Run Autotune** (in the **Loop & insulin** group)
 
 **Opciones:**
 
@@ -280,39 +280,39 @@ ninguno
 
 Después de añadir la «Acción», hay que cambiar los valores por defecto al número deseado: tócalos y ajústalos.
 
-![Texto alternativo](../images/Automations/automation_action_temp_target_values.png)
+![Temp target action values](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## El orden de las **automatizaciones** en la lista es importante
- **AAPS** ejecuta las reglas creadas por orden de preferencia, empezando por arriba de la lista de **Automatización**. Por ejemplo, si la **Automatización** «Bajo» es la **Automatización** más importante, por encima de todas las demás reglas, esta **Automatización** debe estar arriba del todo en la lista de **Automatización** del usuario, como se ve abajo:
+ **AAPS** ejecuta las reglas creadas por orden de preferencia, empezando por arriba de la lista de **Automatización**. For example, if the ‘Low’ **Automation** is the most important **Automation**, above all other rules, then this **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
 
 
-![Texto alternativo](../images/Automations/automation_rule_list.png)
+![List of automation rules](../images/Automations/automation_rule_list.png)
 
-Para cambiar la prioridad de las reglas de **Automatización**, mantén pulsado el asa **=** a la derecha de la regla. Reordena las **automatizaciones** moviendo las reglas hacia arriba o hacia abajo.
+Para cambiar la prioridad de las reglas de **Automatización**, mantén pulsado el asa **=** a la derecha de la regla. Reorder the **Automations** by moving the rules up or down.
 
-![Texto alternativo](../images/Automations/automation_rule_reorder.png)
+![Reorder automation rules](../images/Automations/automation_rule_reorder.png)
 
 ## Cómo borrar reglas de automatización
 
 Para borrar una regla de **Automatización**, toca el icono de la papelera.
 
-![Texto alternativo](../images/Automations/automation_rule_delete.png)
+![Delete automation rules](../images/Automations/automation_rule_delete.png)
 
 ## Ejemplos de automatizaciones
 
-Abajo hay ejemplos de **automatizaciones**. En los grupos de Facebook y en Discord encontrarás más debates sobre las **automatizaciones** y sobre cómo los usuarios han adaptado su **Automatización**. No copies los ejemplos de abajo si no entiendes bien cómo funcionará la **Automatización**.
+Abajo hay ejemplos de **automatizaciones**. Further discussion on **Automations** and how users have individualised their **Automation** can be found in Facebook discussions groups or on Discord. No copies los ejemplos de abajo si no entiendes bien cómo funcionará la **Automatización**.
 
 (automations-low-glucose-temp-target)=
 ### Objetivo temporal de glucosa baja
 
 Esta **Automatización** inicia un **Objetivo temporal** automático cuando la **glucosa** baja de un cierto umbral. Aquí, cuando la glucosa es menor que 70 mg/dl, se inicia un objetivo de 110 mg/dl durante 30 minutos:
 
-![Texto alternativo](../images/Automations/automation_example_low_glucose_rule.png)
+![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
 
 ### Objetivo temporal para la hora del almuerzo (con «Ubicación»)
 
-![Texto alternativo](../images/Automations/automation_example_lunch_rule.png)
+![Example: lunch rule](../images/Automations/automation_example_lunch_rule.png)
 
 Esta **Automatización** se creó para un usuario que almuerza en el trabajo a la misma hora todos los días laborables, pero solo se activa si el usuario está dentro de una «ubicación» definida.  Así, si un día el usuario no está en el trabajo, esta **Automatización** no se activará.
 
@@ -320,7 +320,7 @@ Esta **Automatización** fija un **Objetivo temporal** bajo (Comiendo Pronto) a 
 
 El «activador» de ubicación tiene un nombre, una posición (toca **Elegir en el mapa** o usa tu ubicación actual) y un radio en metros, y se activa cuando estás dentro (o fuera) de la zona:
 
-![Texto alternativo](../images/Automations/automation_example_lunch_location_condition.png)
+![Example: lunch rule with location condition](../images/Automations/automation_example_lunch_location_condition.png)
 
 Por la unión con «Y», la **Automatización** solo se ejecuta durante la «hora elegida» y si el usuario está en la ubicación seleccionada.
 
@@ -330,11 +330,11 @@ La **Automatización** no se activará en esta ubicación a ninguna otra hora, n
 
 Usar un SSID Wi-Fi es una buena opción para activar una **Automatización** cuando estás dentro del alcance de una red Wi-Fi concreta (comparado con el GPS): es bastante precisa, gasta menos batería y funciona en espacios cerrados donde el GPS y otros servicios de ubicación pueden no estar disponibles.
 
-Aquí tienes otro ejemplo de un **Objetivo temporal** solo para días laborables, antes del desayuno (1).
+Here is another example of setting up a **Temp Target** for work days only before breakfast (1).
 
 
-La **Automatización** se activará a las 05:30 solo de lunes a viernes (2)  
-y mientras estés conectado a la red Wi-Fi de casa (3).
+The **Automation** will trigger at 05:30am only on Monday-Friday (2)  
+and while being connected to a home Wi-Fi network (3).
 
 
 Después fijará un **Objetivo temporal** de 75 mg/dl durante 30 minutos (4). Una ventaja de incluir la ubicación es que, por ejemplo, no se activará si el usuario está de vacaciones.
@@ -350,7 +350,7 @@ Esta es la captura de pantalla con los activadores de la **Automatización**:
 1) Bajo el «Y» principal (deben cumplirse las dos condiciones para activarse) 1) Hora de Repetición = L,M,X,J,V A las 5:30  
 1) SSID WiFi = My_Home_WiFi_Name
 
-![Texto alternativo](../images/Automations/automation_example_wifi_condition.png)
+![Example: WiFi condition](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
@@ -395,7 +395,7 @@ En el ejemplo de abajo, la regla **Objetivo temporal de glucosa baja** (1) (cons
 
 Comprueba que la casilla a la izquierda del nombre de la **Automatización** está «marcada» para que la regla esté activada:
 
-![Texto alternativo](../images/Automations/automation_rule_activated_deactivated.png)
+![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
 
 * Problema: __Mis automatizaciones se ejecutan en el orden incorrecto.__
 

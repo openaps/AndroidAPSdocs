@@ -1,6 +1,6 @@
 # Controlere de pompe (posibile) viitoare
 
-Aceasta este o listă a unor pompe care circulă, stadiul suportului pentru ele în oricare dintre sistemele de buclă închisă și apoi stadiul suportului în AAPS. La final există niște informații, ce este necesar pentru ca o pompă să fie capabilă de buclă.
+This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
 
     {contents} Table of contents
     :depth: 1
@@ -42,7 +42,7 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Pompă de insulină Willcare ([Pagina de start](http://shinmyungmedi.com/en/))
 
-**Starea buclei:** Momentan nu este un candidat la buclă, dar am fost contactați de personalul lor și sunt interesați să își extindă pompa pentru a se putea face buclă (în acest moment, cred că lipsesc doar comenzile pentru a obține / seta profilul).
+**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
 
 **Cerință hardware pentru AAPS:** Nici una. Se pare că este activată prin Bluetooth.
 

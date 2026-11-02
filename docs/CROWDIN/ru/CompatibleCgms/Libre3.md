@@ -22,7 +22,7 @@ This method uses Juggluco to receive raw, 1-minute interval data from the sensor
 ### Шаг 1: Настройка Juggluco
 Скачайте и установите приложение Juggluco [отсюда](https://www.juggluco.nl/Juggluco/download.html). Следуйте [этой](https://www.juggluco.nl/Juggluco/libre3/) инструкции
 
-Make sure you send the glucose values to xDrip: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip
+Make sure you send the glucose values to xDrip: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip.
 
 ### Шаг 2: Настройка xDrip
 
@@ -69,7 +69,7 @@ After a sensor change xDrip will automatically detect the new sensor and will de
 
 ![Завершить работу сенсора](../images/libre3/step_14.jpg)
 
-Note: When two sensors are active Juggluco will send the most recent value from either sensor to xDrip. If the sensors are not calibrated and reading BG similarly, this may result in jumpy BG values being reported to xDrip. Если вы остановите неправильный сенсор, то сможете снова активировать его, просто просканировав сенсор.
+Note: When two sensors are active Juggluco will send the most recent value from either sensor to xDrip. If the sensors are not calibrated to read BG similarly, this may result in jumpy BG values being reported to xDrip. Если вы остановите неправильный сенсор, то сможете снова активировать его, просто просканировав сенсор.
 
 ## Переключение сенсора между Libre 3 и Juggluco
 
@@ -99,4 +99,4 @@ Note: When two sensors are active Juggluco will send the most recent value from 
 
 Оригинальная инструкция: [jkaltes website](https://www.juggluco.nl/Juggluco/libre3/)
 
-Дополнительный репозиторий на Github: [ссылка на Github](https://github.com/maheini/FreeStyle-Libre-3-patch)
+Additional GitHub repo: [GitHub link](https://github.com/maheini/FreeStyle-Libre-3-patch)

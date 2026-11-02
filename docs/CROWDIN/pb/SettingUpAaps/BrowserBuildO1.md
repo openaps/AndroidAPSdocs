@@ -3,7 +3,7 @@
 # Opção 1 – Gere uma nova keystore
 
 ```{note}
-Esta página faz parte da [Etapa 2 – Crie a sua keystore de assinatura](BrowserBuildKeystore.md) da [Compilação no navegador](BrowserBuild.md). Verifique se você leu a [decisão entre a Opção 1 e a Opção 2](#aaps-ci-preparation) e baixou o arquivo de preparação.
+Esta página faz parte da [Etapa 2 – Crie a sua keystore de assinatura](BrowserBuildKeystore.md) da [Compilação no navegador](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
 ```
 
 A Opção 1 gera uma keystore de assinatura totalmente nova para você. Ela é indicada para quem compila pela primeira vez, para quem não tem uma JKS ou para quem esqueceu a senha ou o alias.

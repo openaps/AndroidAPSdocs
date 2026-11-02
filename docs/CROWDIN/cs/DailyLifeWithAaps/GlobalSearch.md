@@ -73,7 +73,7 @@ Klepnutím na výsledek přejdete přímo na něj:
 - **Předvolba** → otevře nastavení **přímo na místě** (přeskočí na něj v jeho obrazovce).
 - **Dokumentace** → otevře stránku ve vašem prohlížeči.
 
-Otevírání nastavení a chráněných akcí stále respektuje vaši **[ochranu](../SettingUpAaps/ConfigBuilder.md)** (PIN/heslo), přesně jako kdybyste tam přešli ručně. Když s výsledkem něco uděláte, můžete stisknout **Zpět** a vrátit se k výsledkům hledání.
+Opening settings and protected actions still respects your **[protection](#Preferences-protection)** (PIN/password), exactly as it would if you had navigated there by hand. Když s výsledkem něco uděláte, můžete stisknout **Zpět** a vrátit se k výsledkům hledání.
 
 ---
 

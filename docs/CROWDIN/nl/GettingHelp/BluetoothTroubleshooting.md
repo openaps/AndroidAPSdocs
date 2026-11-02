@@ -11,7 +11,7 @@ Sommige van deze problemen gelden waarschijnlijk ook voor andere Bluetooth-insul
 (bluetoothtroubleshooting-cannot-start-omnipod-with-android-16)=
 
 ## Omnipod start niet met Android 16
-- Voor Android 16 heb je minimaal **AAPS** versie 3.3.2.1 nodig om de Omnipod DASH goed te laten werken. Deze versie bevat oplossingen speciaal voor bekende problemen die Android 16 voor Omnipod heeft veroorzaakt.
+- Android 16 needs at a minimum **AAPS** version 3.3.2.1 for the Omnipod DASH to work correctly, as this version has fixes added to specifically address known problems introduced in Android 16 for Omnipod.
 
 ---
 
@@ -48,11 +48,11 @@ Stuur een bericht naar @XiTatiON in het Discord-kanaal #omnipod-dash om apps te 
 
 - **myBMW** MyBMW verstoorde de Medtrum Nano en de Omnipod DASH. De MyBMW-app vraagt maar één keer om de toestemming "apparaten in de buurt vinden". Als je die niet geeft, werkt de app nog steeds prima
 
-- **Amazon Alexa**  Het weghalen van "Apparaten in de buurt" voor de Alexa-app loste het probleem bij sommige mensen op, maar dan kun je geen Matter IoT-apparaten meer koppelen
+- **Amazon Alexa**  Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IoT devices
 
 - **MINI-app**  Deze app lijkt gebaseerd op de myBMW-app en gedraagt zich daardoor misschien hetzelfde
 
-- **BM2** App voor het bewaken van een zonnebatterij, gebruikt in sommige campers en kampeeropstellingen met zonnepanelen. Als de app draaide, kon er geen nieuwe pod worden geactiveerd. Een oplossing is de app geforceerd te stoppen terwijl je een nieuwe pod activeert. Daarna leek de app de werking van de Dash niet te verstoren (op een Pixel 8 Pro met Android 16).
+- **BM2** Solar Battery Monitoring app, used in some camper van and camping solar setups: when the app was running, it prevented activation of a new Pod. Force Stopping the app while activating a new pod is a workaround to the issue. Daarna leek de app de werking van de Dash niet te verstoren (op een Pixel 8 Pro met Android 16).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
@@ -63,7 +63,7 @@ Volg deze stappen om de toestemming "Apparaten in de buurt" in te trekken voor a
 
 ```{admonition} Menus and settings
 :class: note
-De screenshots en instructies in deze handleiding komen van een standaard Android 16 op een Google Pixel 8 Pro. Op andere merken en apparaten zien de menu's en instellingen er waarschijnlijk niet precies zo uit. Pas de stappen aan je eigen apparaat aan. Kom je er niet uit, lees dan het hoofdstuk [Waar krijg je hulp voor de DASH](#omnipod-dash-where-to-get-help-for-dash) over hoe je de community om hulp vraagt.
+De screenshots en instructies in deze handleiding komen van een standaard Android 16 op een Google Pixel 8 Pro. Other manufacturers and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.
 ```
 
 1. Open de Android-instellingen op je telefoon, scroll omlaag en tik op **Beveiliging en privacy (1)**.
@@ -103,7 +103,7 @@ Weet je niet welke app het probleem geeft? Schakel ze dan allemaal uit (kijk ook
 
 ### Toestemming "Apparaten in de buurt" weer aanzetten voor systeem-apps en andere apps:
 
-1. Kijk zo nodig in het hoofdstuk **"Toestemming "Apparaten in de buurt" intrekken voor andere apps"** hoe je bij de privacy-instellingen van apps komt. Ga daarna, als je in het menu **Apparaten in de buurt** bent, verder met stap 2.
+1. If required Reference the **"How to revoke 'Nearby device' permissions for other apps"** section on how to get to the app privacy settings, then once in the **Nearby device** configuration proceed to 2.
 
 2. Zoek in de lijst met apps de app waarvoor je de toestemming **Apparaten in de buurt** wilt toestaan en tik erop.
 
@@ -122,7 +122,7 @@ Als de toestemming voor een app is ingetrokken, moet je omlaag scrollen tot je v
 
    ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png)
 
-5. Volg de stappen in **"Toestemming "Apparaten in de buurt" intrekken voor andere apps"** in omgekeerde volgorde om de toestemming voor elke app weer aan te zetten.
+5. Follow the guidance in **"How to revoke 'Nearby device' permissions for other apps"** in reverse to re-enable permissions for each app.
 
 ---
 

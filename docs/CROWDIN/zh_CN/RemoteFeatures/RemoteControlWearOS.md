@@ -287,7 +287,7 @@ If **AAPS** had to limit the dose, for example because the calculated bolus is a
     | --- | --- | --- | --- | --- | --- |
     | ![Treatment dialog, insulin page](../images/wearos/dialogs/dialog_treatment.png) | ![Insulin dialog](../images/wearos/dialogs/dialog_insulin.png) | ![Carbs dialog](../images/wearos/dialogs/dialog_carbs.png) | ![eCarbs dialog](../images/wearos/dialogs/dialog_ecarbs.png) | ![Temp Target dialog, duration page](../images/wearos/dialogs/dialog_temp_target.png) | ![Profile switch dialog](../images/wearos/dialogs/dialog_profile_switch.png) |
     
-    [1] In the watch's **Settings** > **Interface**, turn on **Calculator Percentage** to show the percentage input in the bolus calculator. The default percentage comes from the phone's ["Deliver this part of the bolus wizard result %"](#Preferences-deliver-this-part-of-bolus-wizard-result). The other calculator settings are those of the phone under **Settings** > **Bolus wizard settings**.
+    [1] In the watch's **Settings** > **Interface**, turn on **Calculator Percentage** to show the percentage input in the bolus calculator. The default percentage comes from the phone's ["Bolus percentage"](#Preferences-deliver-this-part-of-bolus-wizard-result). The other calculator settings are those of the phone under **Settings** > **Bolus wizard settings**.
     
     [2] In the watch's **Settings** > **Interface**, turn on **Calculator Meal Type** to show the **Meal type** page, where you pick **Bread**, **Cake** or **Pizza** to split the carbs of a slow meal into carbs now and eCarbs later. See [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
     
@@ -357,7 +357,7 @@ If **AAPS** had to limit the dose, for example because the calculated bolus is a
     
     The simplified UI mode is available for the Digital Style and Custom watchfaces. The simplified UI is optional and is configured through the watch face settings (long press the watch face and click “edit” or the gear icon). Select the configuration “Simplify UI" and set it to “During Charging” or “Always On and Charging”.
     
-    Android开发者选项使您的手表能够在充电时保持唤醒状态。 To make the developer options available, see the [official documentation](https://developer.android.com/training/wearables/get-started/debugging). 在开发者选项中将“充电时保持唤醒”设置为“开”。
+    Android开发者选项使您的手表能够在充电时保持唤醒状态。 To make the developer options available, see the [official documentation](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options.
     
     注意：并非所有显示屏都能很好地处理常亮状态。它可能会导致屏幕烧屏，尤其是在较旧的OLED显示屏上。手表通常会调暗显示屏以防止烧屏；请查阅您的用户手册、制造商网站或互联网以获取建议。
     
@@ -385,7 +385,7 @@ If **AAPS** had to limit the dose, for example because the calculated bolus is a
     
     ## Snooze Alert shortcut
     
-    The watch [shows the alarm](#WearOsSmartwatch-phone-alarms) itself; the shortcut is a second way to silence it, with one press. 可以创建快捷方式以暂停AAPS的警报/提醒。通过手表静音声音既方便又快捷，无需伸手拿手机。请注意，您仍然需要在手机上查看警报消息并相应处理，但您可以稍后再查看。 When your watch has two buttons, you can assign a key to the `AAPS Snooze Alert` program.
+    The watch [shows the alarm](#WearOsSmartwatch-phone-alarms) itself; the shortcut is a second way to silence it, with one press. 可以创建快捷方式以暂停AAPS的警报/提醒。通过手表静音声音既方便又快捷，无需伸手拿手机。 Note: you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. When your watch has two buttons, you can assign a key to the `AAPS Snooze Alert` program.
     
     To link the button on the Samsung Watch 4 go to `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
     
@@ -435,7 +435,7 @@ If **AAPS** had to limit the dose, for example because the calculated bolus is a
     
     If you want to build your own watchface, follow the [guide here](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
     
-    Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder  "ExchangeSiteCustomWatchfaces" via a Pull Request into Github. 在合并拉取请求期间，文档团队将提取CustomWatchface.png文件，并使用ZIP文件的文件名。
+    Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into GitHub. 在合并拉取请求期间，文档团队将提取CustomWatchface.png文件，并使用ZIP文件的文件名。
     
     (WearOsSmartwatch-complications-watchface-download)=
     

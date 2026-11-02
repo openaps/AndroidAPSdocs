@@ -14,7 +14,7 @@
 
 **缺点**
 
-* 仅推荐有经验的闭环使用者使用（部分设置不可识别，需通过大屏Android AAPS手机的操作经验来了解各项功能的位置及使用方法。某些AAPS按钮需要细腻的触控操作，粗短手指可能难以准确点击）。
+* Recommended only for experienced loopers. Some settings are not easy to recognize: you have to know from experience with a big Android AAPS phone how and where things are located. Some AAPS buttons are small and hard to tap: you need a precise touch, not stubby fingers.
 * 只能用作 LooperPhone。最好口袋里还有一部普通的智能手机。 
 
 ### 电池寿命优化
@@ -43,6 +43,6 @@ Remember to disable Google Play Protect.
 
 ### Remote Connection for Wear apk
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
+For certain smart watches, like the Samsung Galaxy, 'Remote connection' under Advanced features in the Galaxy Wearable app must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
 
 ![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)

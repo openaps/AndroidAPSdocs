@@ -70,7 +70,7 @@ Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stell
     
         1. für die Übersetzung ein Proofread (Korrekturlesen) durchgeführt wurde
     
-        1. die Synchronisierung zwischen Crowdin und Github durchgeführt wurde (einmal pro Stunde), wodurch ein PR für Github erstellt wird.
+        1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
     
         1. der PR in Github genehmigt wurde.
     
@@ -81,11 +81,11 @@ Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stell
     ```{admonition} Links werden nicht mehr übersetzt
     :class: note
     
-    Links werden nicht mehr übersetzt. In der Vergangenheit hatten wir hier ein Thema, aber mit der Migraton nach Markdown und den myst_parser erzeugen wir im englischen Text  explizite Labels , die nicht übersetzt werden.
+    Links werden nicht mehr übersetzt. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
     
     
 
-Wenn Du einen Text mit einem Link übersetzt, Achte darauf den Link **nicht** zu entfernen, der durch ein Paar `<0></0>` Tags dargestellt wird oder mit einer anderen Zahl, falls mehrere Links in einem Absatz enthalten sind.
+Wenn Du einen Text mit einem Link übersetzt, Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
 
 Es ist die Aufgabe des Proofreaders, einen besonderen Blick darauf zu haben!
 

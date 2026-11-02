@@ -14,7 +14,7 @@
 
 **Ulemper**
 
-* Anbefales bare for erfarne loopere (noen innstillinger er vanskelige å kjenne igjen; du må vite fra erfaring med en stor Android AAPS-telefon hvordan og hvor ting ligger. Noen AAPS-knapper er vanskelige å treffe; det krever god fingerfølelse og går ikke med tykke fingre.)
+* Anbefales bare for erfarne loopere. Noen innstillinger er vanskelige å kjenne igjen: du må vite fra erfaring med en stor Android AAPS-telefon hvordan og hvor ting ligger. Noen AAPS-knapper er små og vanskelige å treffe: det krever et presist trykk, ikke tykke fingre.
 * Kan bare brukes som looper-telefon. Det er bedre å ha en vanlig smarttelefon i lommen. 
 
 ### Optimalisering av batterilevetid
@@ -43,6 +43,6 @@ Husk å slå av Google Play Protect.
 
 ### Ekstern tilkobling for Wear-apk-en
 
-For noen smartklokker, som Samsung Galaxy, må «Ekstern tilkobling» under Avanserte funksjoner i Samsung Galaxy være slått **på** for å bruke Jelly, **Wear.apk** & **AAPS** eksternt via Wi-Fi.
+For noen smartklokker, som Samsung Galaxy, må «Ekstern tilkobling» under Avanserte funksjoner i Galaxy Wearable-appen være slått **på** for å bruke Jelly, **Wear.apk** & **AAPS** eksternt via Wi-Fi.
 
 ![Galaxy Wearable, Avanserte funksjoner, Ekstern tilkobling slått på](../images/wearos/galaxy_wearable_remote_connection.png)

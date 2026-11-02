@@ -131,7 +131,7 @@ Po každém výběru je potřeba potvrzení.
 
 Musíte zjistit, proč dostáváte duplicitní hodnoty glykémie:
 
-* Máte na svém webu Nightscout zapnutý Dexcom bridge? Vypněte bridge v administraci své instance Nightscout: upravte proměnnou "enable" a odstraňte z ní část "bridge". (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* Máte na svém webu Nightscout zapnutý Dexcom bridge? Vypněte bridge v administraci své instance Nightscout: upravte proměnnou "enable" a odstraňte z ní část "bridge". (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * Nahrává vaši glykémii do Nightscoutu více zdrojů? Pokud používáte aplikaci BYODA, povolte nahrávání v **AAPS**, ale nepovolujte ho v xDripu, pokud ho používáte.
 * Máte sledující, kteří vaši glykémii přijímají, ale zároveň ji znovu nahrávají do vašeho Nightscoutu?
 * Poslední možnost: v [nastavení NSClient](#Preferences-nsclient) vyberte nastavení Synchronizace a vypněte volbu „Přijímat data CGM z NS“.
@@ -342,7 +342,7 @@ Když je **PRED** zapnuté, kreslí AAPS své predikce jako **tečkované čáry
 
 Když dvě predikce dávají stejné hodnoty, jejich tečky se překrývají a vidíte jen jednu z barev (například UAM přes IOB, když je glykémie stabilní).
 
-* Křivka **COB** (oranžová): [zbývající sacharidy](CobCalculation) (oranžová se v celém AAPS používá pro COB a sacharidy)
+* **COB** line (orange): [carbs on board](CobCalculation.md) (orange is used throughout AAPS for COB and carbs)
     
     Tato predikční křivka ukazuje, kam se bude ubírat vaše glykémie (ne samotný COB!) podle aktuálního nastavení **profilu**, za předpokladu, že odchylky způsobené vstřebáváním sacharidů zůstanou stejné. Tato linka se zobrazí pouze v případě, že je známý COB.
 
@@ -364,7 +364,7 @@ Když dvě predikce dávají stejné hodnoty, jejich tečky se překrývají a v
 
 * Křivka **aCOB** (bledá, průhledná oranžová): zrychlené vstřebávání sacharidů
     
-    Podobná COB, ale předpokládá stálou rychlost vstřebávání sacharidů 10 mg/dl/5 min (-0,555 mmol/l/5 min). Zastaralé a jen málo užitečné.
+    Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. Zastaralé a jen málo užitečné.
     
     *Tato křivka se zobrazí jen tehdy, když používáte starší algoritmus [AMA](#Config-Builder-aps).*
 
@@ -485,7 +485,7 @@ Tato čára ukazuje, jak moc by glykémie „měla“ stoupat nebo klesat jen po
 
 ![Odchylky a BGI](../images/main/graph_dev_bgi.png)
 
-Je dobré zobrazit tuto čáru spolu se sloupci odchylek. Mají stejné měřítko, ale jiné než ostatní volitelná data, proto je dobré zobrazit je v samostatném grafu, jak je ukázáno výše. Porovnání čáry BGI a sloupců odchylek je další způsob, jak pochopit, jak **glykémie** kolísá. Zde v čase označeném **1** jsou sloupce odchylek vysoko nad čarou BGI: glykémie stoupá víc, než vysvětluje samotná aktivita inzulínu (například po sacharidech). V čase označeném **2** jsou sloupce odchylek pod nulou (červené): glykémie je nižší, než algoritmus očekával.
+Je dobré zobrazit tuto čáru spolu se sloupci odchylek. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Porovnání čáry BGI a sloupců odchylek je další způsob, jak pochopit, jak **glykémie** kolísá. Zde v čase označeném **1** jsou sloupce odchylek vysoko nad čarou BGI: glykémie stoupá víc, než vysvětluje samotná aktivita inzulínu (například po sacharidech). V čase označeném **2** jsou sloupce odchylek pod nulou (červené): glykémie je nižší, než algoritmus očekával.
 
 ### Část F – Panel nástrojů QuickLaunch
 
@@ -507,13 +507,13 @@ Pro podání určitého množství inzulínu bez použití [bolusové kalkulačk
 
 Zapnutím volby **Spustit dočasný cíl Před jídlem** můžete automaticky spustit [dočasný cíl „Před jídlem“](#TempTargets-eating-soon-temp-target).
 
-Pokud nechcete podat bolus pumpou, ale jen zaznamenat množství inzulínu (např. inzulín podaný perem), zapněte „**Bolus nebude pumpou vydán, pouze zaznamenán**“. Další řádek **Čas**, nastavený na **Nyní**, umožňuje zaznamenat injekci inzulínu podanou v minulosti: změňte ho tlačítky **-** / **+**, nebo klepněte na šipku a zadejte minuty nebo vyberte datum a čas.
+If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only (not delivered by pump)**". Další řádek **Čas**, nastavený na **Nyní**, umožňuje zaznamenat injekci inzulínu podanou v minulosti: změňte ho tlačítky **-** / **+**, nebo klepněte na šipku a zadejte minuty nebo vyberte datum a čas.
 
 ![Řádek Čas, sbalený](../images/v4/Screens/insulin_dialog_record_only_time.png) ![Řádek Čas, otevřený šipkou](../images/v4/Screens/insulin_dialog_time_open.png)
 
 Tlačítky **+0.5 / +1.0 / +2.0** můžete rychle zvýšit množství inzulínu. Hodnoty přírůstků můžete změnit v [nastavení bolusové kalkulačky](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-Dialog Inzulín můžete použít i tehdy, když je pumpa pozastavená nebo odpojená, např. pro záznam inzulínu podaného perem. V takovém případě je volba „**Bolus nebude pumpou vydán, pouze zaznamenán**“ vynuceně zapnutá (zobrazená červeně) a objeví se další pole pro výběr typu inzulínu a posunu **Čas** pro injekci podanou v minulosti:
+Dialog Inzulín můžete použít i tehdy, když je pumpa pozastavená nebo odpojená, např. pro záznam inzulínu podaného perem. In this case, "**Bolus will be recorded only (not delivered by pump)**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
 
 ![Dialog Inzulín s odpojenou pumpou](../images/main/insulin_dialog_pump_disconnected.png)
 
@@ -527,7 +527,7 @@ Některé [přednastavené dočasné cíle](#TempTargets-hypo-temp-target) (Hypo
 
 **Čas sacharidů**: Kdy budete jíst / kdy jste jedli sacharidy.
 
-**Trvání**: Používá se pro [„rozložené sacharidy“](ExtendedCarbs). Tento řádek je sbalený, abyste do něj omylem nezadali gramy: změňte ho tlačítky **-** / **+**, nebo klepněte na šipku, řádek otevřete a zadejte hodnotu.
+**Duration**: To be used for ["extended carbs"](ExtendedCarbs.md). Tento řádek je sbalený, abyste do něj omylem nezadali gramy: změňte ho tlačítky **-** / **+**, nebo klepněte na šipku, řádek otevřete a zadejte hodnotu.
 
 Tlačítky **+5 / +10 / +20** můžete rychle zvýšit množství sacharidů.
 
@@ -632,7 +632,7 @@ Tlačítko s výsledkem dole ukazuje navržený bolus; po jeho stisknutí se př
 Dobré vědět:
 
 * Pokud je vypočtený bolus vyšší než váš **[Maximální bolus](#Preferences-maximum-bolus)**, sníží se na maximální bolus a v potvrzení se zobrazí varování „Použito omezení bolusu“. [Rychlý bolus](../DailyLifeWithAaps/QuickWizards.md) se v takovém případě odmítne.
-* Když se bolus jen zaznamenává (například když je pumpa odpojená), zůstává varování „**Bolus nebude pumpou vydán, pouze zaznamenán**“ v horní části dialogu, i když posouváte.
+* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only (not delivered by pump)**" warning stays at the top of the dialog, also when you scroll.
 * Bolus, který podáte ručně, má přednost před [SMB](#Open-APS-features-super-micro-bolus-smb), který čeká na podání: SMB se zruší a smyčka počítá znovu. Pokud se SMB právě podává, váš bolus se odmítne se zprávou „Právě nyní se vydává SMB. Zkuste to znovu po dokončení výdeje.“ Nepodá se žádný inzulín a sacharidy zadané s tímto bolusem se neuloží: chvíli počkejte a zadejte je znovu.
 
 (AapsScreens-wrong-cob-detection)=

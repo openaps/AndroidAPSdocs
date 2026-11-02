@@ -6,7 +6,7 @@
 Dit is **Stap 2** van [Bouwen in de browser](BrowserBuild.md). Rond eerst [Stap 1 – Je GitHub-fork maken](BrowserBuildFork.md) af.
 ```
 
-AndroidAPS moet ondertekend worden met privésleutels die in een **Java KeyStore (JKS)** staan. Dit is de belangrijkste keuze van het hele proces. Ze bepaalt of je AAPS later kunt **bijwerken** zonder opnieuw te installeren.
+AAPS must be signed with private keys stored in a **Java KeyStore (JKS)**. Dit is de belangrijkste keuze van het hele proces. Ze bepaalt of je AAPS later kunt **bijwerken** zonder opnieuw te installeren.
 
 ```{note}
 In de volgende stappen sla je privégegevens (je keystore, en later je toegang tot Google Drive) in GitHub op als **secrets** (geheimen). Een secret is gewoon een versleutelde waarde die alleen je eigen build kan lezen – niemand anders kan hem zien, ook niet wie je fork bekijkt. Zo blijft je build van jou.
@@ -74,7 +74,7 @@ Zorg dat je keystore en je instellingen voor Google Drive klaar zijn voordat je 
 
 2. **De exportworkflow starten:**
    - Ga in je repository naar het tabblad **Actions**
-   - Kies **CI KeyStore Export**
+   - Select **CI Keystore Export**
    - Klik op **Run workflow**
    - Het geëxporteerde ZIP-bestand met de keystore wordt in je Google Drive opgeslagen
 

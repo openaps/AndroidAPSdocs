@@ -3,7 +3,7 @@
 # Optie 1 – Een nieuwe keystore maken
 
 ```{note}
-Dit hoort bij [Stap 2 – Je keystore voor ondertekening maken](BrowserBuildKeystore.md) van [Bouwen in de browser](BrowserBuild.md). Zorg dat je de [keuze tussen Optie 1 en Optie 2](#aaps-ci-preparation) hebt gelezen en het voorbereidingsbestand hebt gedownload.
+Dit hoort bij [Stap 2 – Je keystore voor ondertekening maken](BrowserBuildKeystore.md) van [Bouwen in de browser](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
 ```
 
 Optie 1 maakt een gloednieuwe keystore voor ondertekening voor je. Deze optie is geschikt voor wie voor het eerst bouwt, wie geen JKS heeft, of wie het wachtwoord of de alias vergeten is.

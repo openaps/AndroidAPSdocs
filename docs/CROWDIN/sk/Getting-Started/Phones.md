@@ -30,7 +30,7 @@ Dokument je iba na čítanie. Pomocou CTRL-F môžete hľadať v texte tabuľky 
 
 Ak chcete zaznamenať test vašej konfigurácie, vyplňte tento [formulár](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Po vyplnení údajov vo formulári sa hárok automaticky aktualizuje každých 5 minút.
 
-V prípade akýchkoľvek problémov s tabuľkou kontaktujte jej správcu, *@theodoor5137*, na Discorde, alebo si pozrite stránku [Kde môžem získať pomoc? ](../GettingHelp/WhereCanIGetHelp.md).
+Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
 
 ## Nenašiel som svoj telefón
 

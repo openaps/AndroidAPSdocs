@@ -287,7 +287,7 @@ Se o **AAPS** precisou limitar a dose, por exemplo porque o bólus calculado est
     | --- | --- | --- | --- | --- | --- |
     | ![Diálogo de tratamento, página de insulina](../images/wearos/dialogs/dialog_treatment.png) | ![Diálogo de insulina](../images/wearos/dialogs/dialog_insulin.png) | ![Diálogo de carboidratos](../images/wearos/dialogs/dialog_carbs.png) | ![Diálogo de eCarbs](../images/wearos/dialogs/dialog_ecarbs.png) | ![Diálogo de alvo temporário, página de duração](../images/wearos/dialogs/dialog_temp_target.png) | ![Diálogo de troca de perfil](../images/wearos/dialogs/dialog_profile_switch.png) |
     
-    [1] Em **Configurações** > **Interface** no relógio, ative **Porcentagem da calculadora** para mostrar a entrada de porcentagem na calculadora de bólus. A porcentagem padrão vem da configuração do telefone ["Aplicar esta parte do resultado do assistente de bólus %"](#Preferences-deliver-this-part-of-bolus-wizard-result). As outras configurações da calculadora são as do telefone em **Configurações** > **Configurações do Assistente de Bólus**.
+    [1] Em **Configurações** > **Interface** no relógio, ative **Porcentagem da calculadora** para mostrar a entrada de porcentagem na calculadora de bólus. The default percentage comes from the phone's ["Bolus percentage"](#Preferences-deliver-this-part-of-bolus-wizard-result). As outras configurações da calculadora são as do telefone em **Configurações** > **Configurações do Assistente de Bólus**.
     
     [2] Em **Configurações** > **Interface** no relógio, ative **Tipo de refeição na calculadora** para mostrar a página **Tipo de refeição**, onde você escolhe **Pão**, **Bolo** ou **Pizza** para dividir os carboidratos de uma refeição lenta em carboidratos agora e eCarbs depois. Veja [Escolher o tipo de refeição](#WearOsSmartwatch-wizard-meal-type).
     
@@ -357,7 +357,7 @@ Se o **AAPS** precisou limitar a dose, por exemplo porque o bólus calculado est
     
     O modo de UI simplificada está disponível para os mostradores Digital Style e Personalizado. A UI simplificada é opcional e é configurada nas configurações do mostrador (toque longo no mostrador e toque em “edit” (editar) ou no ícone de engrenagem). Selecione a configuração “Simplificar UI" e defina como “Durante o carregamento” ou “Sempre Ligado e Carregando”.
     
-    As opções do desenvolvedor do Android permitem que o seu relógio fique ativo durante o carregamento. Para liberar as opções do desenvolvedor, veja a [documentação oficial](https://developer.android.com/training/wearables/get-started/debugging). Coloque “Stay awake when charging” (Permanecer ativo durante o carregamento) em “on” (ligado) nas opções do desenvolvedor.
+    As opções do desenvolvedor do Android permitem que o seu relógio fique ativo durante o carregamento. Para liberar as opções do desenvolvedor, veja a [documentação oficial](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options.
     
     Observação: nem todas as telas lidam bem com o modo sempre ligado. Isso pode causar marcas permanentes na tela (burn-in), principalmente nas telas OLED mais antigas. Os relógios normalmente escurecem a tela para evitar o burn-in; consulte o manual do usuário, o fabricante ou a internet para obter conselhos.
     
@@ -385,7 +385,7 @@ Se o **AAPS** precisou limitar a dose, por exemplo porque o bólus calculado est
     
     ## Atalho Alerta de Soneca
     
-    O relógio [mostra o alarme](#WearOsSmartwatch-phone-alarms) por conta própria; o atalho é uma segunda forma de silenciá-lo, com um só toque. É possível criar um atalho para silenciar os alertas/alarmes do AAPS. Silenciar o som pelo relógio é prático e mais rápido, sem precisar pegar o telefone. Observação: você ainda precisa verificar a mensagem de alarme no seu telefone e tratá-la da forma certa,  mas pode fazer isso depois. Quando o seu relógio tem dois botões, você pode atribuir uma tecla ao programa `AAPS Snooze Alert` (Alerta de Soneca AAPS).
+    O relógio [mostra o alarme](#WearOsSmartwatch-phone-alarms) por conta própria; o atalho é uma segunda forma de silenciá-lo, com um só toque. É possível criar um atalho para silenciar os alertas/alarmes do AAPS. Silenciar o som pelo relógio é prático e mais rápido, sem precisar pegar o telefone. Note: you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. Quando o seu relógio tem dois botões, você pode atribuir uma tecla ao programa `AAPS Snooze Alert` (Alerta de Soneca AAPS).
     
     Para vincular o botão no Samsung Watch 4, vá em `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert` (Configurações → Recursos avançados → Personalizar botões → Pressionar duas vezes → Alerta de Soneca AAPS)
     
@@ -435,7 +435,7 @@ Se o **AAPS** precisou limitar a dose, por exemplo porque o bólus calculado est
     
     Se você quer criar o seu próprio mostrador, siga o [guia aqui](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
     
-    Depois de criar um mostrador personalizado, você pode compartilhar o seu mostrador personalizado do **AAPS** com outras pessoas: o arquivo zip pode ser enviado para a pasta  "ExchangeSiteCustomWatchfaces" por um Pull Request no Github. Durante o merge do pull request, a equipe da documentação vai extrair o arquivo CustomWatchface.png e colocar na frente dele o nome do arquivo Zip.
+    Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into GitHub. Durante o merge do pull request, a equipe da documentação vai extrair o arquivo CustomWatchface.png e colocar na frente dele o nome do arquivo Zip.
     
     (WearOsSmartwatch-complications-watchface-download)=
     

@@ -36,8 +36,8 @@ These steps are the same for every build method. 请查阅 [版本说明](../Mai
 
 After you installed the new apk:
 
-- you can check the **AAPS'** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). The **AAPS'** current version can be viewed;
-- ensure import settings have been actioned; and
-- please check your **AAPS'** settings under **Settings** and ensure these remain accurate.
+- you can check the **AAPS** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). The current **AAPS** version can be viewed;
+- make sure you have imported your settings; and
+- please check your **AAPS** settings under **Settings** and ensure these remain accurate.
 
 ![About dialog with the AAPS version installed](../images/about_dialog_version.png)

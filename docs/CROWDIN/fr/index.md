@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- 31 octobre 2026 : la version 4.0.0 est disponible. Consultez les [notes de version](#latestrelease) pour voir les nouveautés, et suivez les instructions du [manuel de mise à jour](./Maintenance/UpdateToNewVersion.md) pour faire la mise à jour.
+31 October 2026: Version 4.0.0 is out. Consultez les [notes de version](#latestrelease) pour voir les nouveautés, et suivez les instructions du [manuel de mise à jour](./Maintenance/UpdateToNewVersion.md) pour faire la mise à jour.
 
 ```
 
@@ -17,7 +17,7 @@ Cette documentation explique comment installer et utiliser **AAPS**. Vous pouvez
 
 Dans le chapitre **1) Démarrage**, l'[Introduction](Getting-Started/Introduction.md) explique de manière générale à quoi sert un système de pancréas artificiel (APS). Elle décrit le contexte général de la boucle, explique pourquoi **AAPS** a été développé, compare **AAPS** à d'autres systèmes et parle de la sécurité. Elle donne des suggestions sur la façon d'aborder le sujet d'**AAPS** avec votre équipe médicale, explique pourquoi vous devez compiler l'application **AAPS** vous-même plutôt que de simplement la télécharger, et donne un aperçu basique de la façon dont communiquent les différents éléments d'un système **AAPS**. Elle aborde également l'accessibilité et qui peut bénéficier de l'utilisation d'**AAPS**.
 
-[Se préparer à démarrer avec AAPS](./Getting-Started/PreparingForAaps.md) donne plus de détails sur la sécurité, et sur les téléphones, les MGC (systèmes de mesure du glucose en continu) et les pompes à insuline compatibles avec **AAPS**. Cette page donne un aperçu du processus que vous allez suivre, et vous donne une idée du temps nécessaire jusqu'à pouvoir profiter pleinement de toutes les fonctionnalités de **AAPS**. Cette section vous prépare techniquement à assembler aussi rapidement et efficacement que possible les différents éléments de votre **AAPS**. La sous-section [MGC compatibles](./Getting-Started/CompatiblesCgms.md) explique comment optimiser la configuration de votre MGC et quelles options de lissage sont les meilleures.
+[Se préparer à démarrer avec AAPS](./Getting-Started/PreparingForAaps.md) donne plus de détails sur la sécurité, et sur les téléphones, les MGC (systèmes de mesure du glucose en continu) et les pompes à insuline compatibles avec **AAPS**. Cette page donne un aperçu du processus que vous allez suivre, et vous donne une idée du temps nécessaire jusqu'à pouvoir profiter pleinement de toutes les fonctionnalités de **AAPS**. Cette section vous prépare techniquement à assembler aussi rapidement et efficacement que possible les différents éléments de votre **AAPS**. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
 
 Maintenant que vous avez une bonne compréhension du processus, vous pouvez démarrer l'assemblage de votre boucle **AAPS**.
 
@@ -40,7 +40,7 @@ Le chapitre **9) [Aide et dépannage](GettingHelp/WhereCanIGetHelp.md)** vous in
 
 Le chapitre **10)** présente les **[Options avancées d'AAPS](./AdvancedOptions/FullClosedLoop.md)** : par exemple comment passer d'une boucle fermée hybride avec **AAPS** (bolus pour les repas _etc._) à une boucle fermée complète (sans bolus), comment [ajuster votre profil](./GettingHelp/ProfileTuning.md) et utiliser Autotune. Il décrit aussi les modes développement et ingénierie. Pour la plupart des utilisateurs, la version principale ou "Master" d'**AAPS** est tout à fait suffisante, sans avoir besoin de chercher dans ces options. Ce chapitre est destiné aux utilisateurs qui ont déjà un bon contrôle et cherchent à améliorer encore leur configuration.
 
-Dans le chapitre **11) [Comment soutenir AAPS](SupportingAaps/HowToEditTheDocs.md)**, nous donnons des informations pour que vous puissiez soutenir ce projet. Vous pouvez faire un don d'argent, d'équipement ou de connaissances. Vous pouvez suggérer/apporter des modifications à la documentation vous-même, aider avec [la traduction de la documentation](SupportingAaps/Translations) ou partager vos données via le projet Open Humans.
+In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provide information so that you can support this project. Vous pouvez faire un don d'argent, d'équipement ou de connaissances. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations.md) and provide your data through the Open Humans project.
 
 Le chapitre **12) Ressources** contient de la documentation archivée ou complémentaire, dont une sous-section pour les [médecins](UsefulLinks/ClinicianGuideToAaps.md) qui s'intéressent à la technologie du pancréas artificiel open source comme **AAPS**, ou pour les patients qui veulent partager ces informations avec leurs médecins. Ce sujet est aussi abordé dans l'introduction. D'autres références et ressources sur le diabète et la boucle sont aussi listées dans ce chapitre. Il comprend le [Glossaire](./UsefulLinks/Glossary.md), une liste des acronymes (ou noms courts) utilisés dans **AAPS**. C'est ici que vous trouverez ce que signifient les termes SI ou CT, par exemple.
 

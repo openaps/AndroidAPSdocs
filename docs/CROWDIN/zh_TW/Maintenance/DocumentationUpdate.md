@@ -34,7 +34,7 @@
 
 ## 2025年1月
 
-- [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
+- [3.4](#version3400) 版發佈與文件更新彙總（嚮導、電腦建置版本、組態建置工具）
 - CGM 清單更新。已移除 Dexcom G5、Tomato、Glimp。
 - [部位輪替介面](#Aapsscreens-site-rotation)
 - [運行模式](#AapsScreens-running-mode)
@@ -48,7 +48,7 @@
 
 - DiaKEM：伺服器升級後，新安裝無法運作 @psonnera
 - 移除了 Libre 2 修補版應用程式（已淘汰）： 該版本無法與新傳感器搭配使用 @psonnera
-- Reworked Omnipod Dash page @XiTatiON
+- 重新設計 Omnipod DASH 頁面 @XiTatiON
 
 ## 2025年8月
 
@@ -97,7 +97,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 - [血糖質量警告標誌](#aaps-screens-bg-warning-sign) @tanja
 - [美敦力藥量更新](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
 - [更新到 AAPS 3.0 後的必要檢查](Update3_0.md) @tanja
-- [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
+- [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
 - 更新 AAPS 3.0 的文件（部分）@xJoe
 - [AAPS 3.0 的 Wear OS](../WearOS/WearOsSmartwatch.md) @peterleimbach
 
@@ -112,7 +112,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 
 ## 2021年11月
 
-- 校正 Libre 2 傳感器 的最佳方法
+- Libre 2 傳感器校正最佳實踐
 - [ISF](../UsefulLinks/FAQ.md) 影響的重新表述
 - 更新[Android Studio問題排除](../GettingHelp/TroubleshootingAndroidStudio.md)
 - 移除已修補的[Dexcom](../CompatibleCgms/DexcomG6.md)應用程式，因為它已過時
@@ -148,7 +148,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 - Dexcom G6 與[自建Dexcom應用](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
 - Libre智慧讀取器[電池電量](#screens-sensor-level-battery)
 - [目標](#objectives-objective3) - 新問題
-- Other [new AAPS 2.8.0 functions](#Releasenotes-version-2-8-0)
+- 其他[AAPS 2.8.0的新功能](#Releasenotes-version-2-8-0)
 
 ## 2020年12月
 
@@ -167,7 +167,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 ## 2020年9月
 
 - AAPS 2.7 版的大更新
-- For details see the [release notes](#Releasenotes-version-2-7-0)
+- 詳細資訊請參閱[版本資訊](#Releasenotes-version-2-7-0)
 
 ## 2020年6月
 
@@ -202,7 +202,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 - [延長注射](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) 功能 - 將停用關閉循環
 - 新增[本機設定外掛](../SettingUpAaps/ConfigBuilder.md)
 - 範本設定 - 更新 Dexcom G6
-- [Version 2.6.0](#Releasenotes-version-2-6-0) - major new features
+- [版本 2.6.0](#Releasenotes-version-2-6-0) - 主要新功能
 - [Wear OS 複雜功能](../WearOS/WearOsSmartwatch.md)
 
 ## 2020年1月
@@ -212,7 +212,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 
 ## 2019年12月
 
-- [Android Auto](../RemoteFeatures/AndroidAuto.md) - 附上截圖的設定
+- [Android Auto](../RemoteFeatures/AndroidAuto.md) - 附螢幕截圖的設定說明
 - [Accu-Chek Insight 與自動調整](#Accu-Chek-Insight-Pump-settings-in-aaps) - 使用的替代方案
 - [Glimp](#Config-Builder-bg-source) - 支援版本 4.15.57 及更新版本
 - [錶盤](../WearOS/WearOsSmartwatch.md) - 重大的更新，更多詳細資訊
@@ -237,8 +237,8 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 
 ## 2019年10月
 
-- [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
-- [Accu-Chek Insight - 日誌選項](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- [AAPS 版本 2.5](#Releasenotes-version-2-5-0) 更新（特別是[更新頁面](../Maintenance/UpdateToNewVersion.md)）
+- [Accu-Chek Insight - 記錄選項](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [COB 計算在單獨頁面上](../DailyLifeWithAaps/CobCalculation.md)
 - [COB - 錯誤 COB 值偵測](#CobCalculation-detection-of-wrong-cob-values)
 - [Dexcom G6 特定問題排除](#DexcomG6-troubleshooting-g6)

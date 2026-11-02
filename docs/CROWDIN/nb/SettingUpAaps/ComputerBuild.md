@@ -108,7 +108,7 @@ Git er et program som lar deg følge med på endringer i kode og samarbeide med 
 (BuildingAaps-steps-for-installing-git)=
 #### Steg for å installere Git
 
-1.  Sjekk at du ikke allerede har **Git** installert. Det gjør du ved å skrive «git» i søkefeltet i Windows – hvis du ser **«Git bash»** eller en annen form for Git, er det allerede installert, og du kan gå rett til [installere Android Studio](#install-android-studio):
+1.  Sjekk at du ikke allerede har **Git** installert. Det gjør du ved å skrive «git» i søkefeltet i Windows – hvis du ser **«Git bash»** eller en annen form for Git, er det allerede installert, og du kan gå rett til [installere Android Studio](#Building-APK-install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
@@ -170,7 +170,7 @@ Når det er ferdig, trykker du på «Next»
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-I det siste steget klikker du på «Finished» for å starte Android Studio for første gang.
+I det siste steget klikker du på «Finish» for å starte Android Studio for første gang.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
@@ -369,7 +369,7 @@ Hvis du har bygd AAPS før, må du IKKE opprette en ny keystore-fil, men velge d
 
 ```{admonition} WARNING!
 :class: warning
-Sørg for å notere deg hvor keystore-filen din er lagret. Du trenger den når du bygger neste AndroidAPS-oppdatering!
+Sørg for å notere deg hvor keystore-filen din er lagret. Du trenger den når du bygger neste AAPS-oppdatering!
 ```
 
 * Velg nå et enkelt passord (og noter det), skriv det inn i passordfeltet (2), og bekreft det (2).

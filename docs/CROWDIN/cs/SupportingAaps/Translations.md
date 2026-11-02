@@ -72,7 +72,7 @@ Schválení je nutné provést ručně. Jako nezisková organizace neposkytujeme
     
         1. překlad je zkontrolován korektorem
     
-        1. proběhla synchronizace mezi Crowdinem a GitHubem (jednou za hodinu), která na GitHubu vytvoří PR.
+        1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
     
         1. PR na GitHubu byl schválen.
     
@@ -83,11 +83,11 @@ Schválení je nutné provést ručně. Jako nezisková organizace neposkytujeme
     ```{admonition} Odkazy se už nepřekládají
     :class: note
     
-    Odkazy se už nepřekládají. Dříve zde byla samostatná kapitola, ale ta už neplatí. Po přechodu na Markdown a myst_parser vytváříme v anglickém textu výslovně štítky (labels) a ty se automaticky přenášejí do ostatních jazyků.
+    Odkazy se už nepřekládají. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
     
     
 
-Překládáte text, který odkaz představuje. Dejte prosím pozor, abyste **neodstranili** odkaz, který představuje dvojice značek `<0></0>`, nebo jiná čísla, pokud je jich v odstavci více.
+Překládáte text, který odkaz představuje. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
 
 Korektoři na to musí dávat zvláštní pozor!
 

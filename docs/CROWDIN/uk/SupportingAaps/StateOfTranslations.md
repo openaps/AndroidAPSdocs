@@ -1,9 +1,9 @@
-# Стан перекладу застосунку та документації
+# State of translation for the app and the documentation
 
 Стан оновлюється раз на годину і показує лише стан у Crowdin.
 
 ```{tip}
-Увага: відсоток вичитки не може бути вищим за відсоток перекладу, але його вирішили показувати поверх відсотка перекладу.
+Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
 Щоб зрозуміти, чи є ще робота, краще дивитися лише на відсоток перекладу.
 ```
 

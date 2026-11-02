@@ -14,7 +14,7 @@
 
 **Wady**
 
-* Polecany tylko dla doświadczonych użytkowników pętli (niektóre ustawienia trudno rozpoznać; musisz wiedzieć z doświadczenia z dużym telefonem z Androidem i AAPS, co i gdzie się znajduje. Niektóre przyciski AAPS trudno nacisnąć: da się to zrobić z wyczuciem, ale nie grubymi palcami.)
+* Recommended only for experienced loopers. Some settings are not easy to recognize: you have to know from experience with a big Android AAPS phone how and where things are located. Some AAPS buttons are small and hard to tap: you need a precise touch, not stubby fingers.
 * Może służyć tylko jako telefon do pętli. Lepiej mieć w kieszeni także zwykły smartfon. 
 
 ### Optymalizacja baterii
@@ -43,6 +43,6 @@ Pamiętaj, aby wyłączyć Google Play Protect.
 
 ### Połączenie zdalne dla Wear apk
 
-W przypadku niektórych smartwatchy, np. Samsung Galaxy, opcja „Połączenie zdalne” (Remote Connection) w Funkcjach zaawansowanych Samsunga Galaxy musi być **włączona**, aby używać Jelly, **Wear.apk** i **AAPS** zdalnie przez Wi-Fi.
+For certain smart watches, like the Samsung Galaxy, 'Remote connection' under Advanced features in the Galaxy Wearable app must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
 
 ![Galaxy Wearable, Funkcje zaawansowane, Połączenie zdalne włączone](../images/wearos/galaxy_wearable_remote_connection.png)

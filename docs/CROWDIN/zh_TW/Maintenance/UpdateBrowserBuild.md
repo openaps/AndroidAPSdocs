@@ -9,7 +9,7 @@
 **AAPS** 無法下載，因為這涉及醫療設備的法規。自行建置應用程式以供個人使用是合法的，但你不得將副本提供給他人！詳細資訊請參閱 [FAQ 頁面](../UsefulLinks/FAQ.md)。
 
 ```{note}
-如果你想第一次使用瀏覽器升級 **AAPS** : 請將你的備份金鑰檔案複製到你的 Google 雲端硬碟。然後請遵循 [瀏覽器版本 **AAPS** 程序](../SettingUpAaps/BrowserBuild.md) 而不是本指南。與其建立新的金鑰庫，更好的方法，是選擇你電腦中現有的。這個操作僅在第一次時才需要，之後的升級可以遵循這個指南。
+如果您想第一次使用瀏覽器升級 **AAPS**，請將備份的金鑰庫檔案複製到 Google 雲端硬碟。然後請遵循 [瀏覽器版本 **AAPS** 程序](../SettingUpAaps/BrowserBuild.md) 而不是本指南。與其建立新的金鑰庫，更好的方法，是選擇你電腦中現有的。這個操作僅在第一次時才需要，之後的升級可以遵循這個指南。
 ```
 
 ```{tip}
@@ -56,7 +56,7 @@
 
 ![放棄修改](../images/update/CI/GitHubUpdate4.png)
 
-你現在已經將自己的複製版本與 AndroidAPS 的最新發布同步（更新）了。做得很好。
+您現在已將自己的複本同步（更新）至最新發行版本的 **AAPS**。做得很好。
 
 ![儲存庫已同步](../images/update/CI/GitHubUpdate5.png)
 
@@ -72,17 +72,17 @@
 
 ![運行工作流程](../images/update/CI/GitHubActions2.png)
 
-5. Keep the branch set to master. In **Select AAPS Version**, check that **4.0.0**, the newest version at the top of the list, is selected. If your fork is not up to date, the preselected version is an older one: if you run the workflow with the form as it opens, you rebuild that older version and your app is not updated. Choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
+5. 請將分支維持在 master。在 **選取 AAPS 版本**中，確認已選取清單最上方的最新版本 **4.0.0**。如果您的複刻版本不是最新版本，預先選取的版本就會是較舊的版本。如果您直接使用表單開啟時的預設設定執行工作流程，就會重新建置舊版本，應用程式也不會更新。選擇[版本類型](#browserbuild-variant)（fullRelease），然後點選「Run workflow」。
 
    ```{note}
-   The list of versions is part of the workflow in your fork. If **4.0.0** is missing, your fork is not synchronized yet: go back to [Update your GitHub repository](#Update-to-new-version-update-your-repo).
+   版本清單是您複刻版本中工作流程的一部分。如果找不到 **4.0.0**，表示您的複刻版本尚未同步：請返回[更新您的 GitHub 存放庫](#Update-to-new-version-update-your-repo)。
    ```
 
 
 
 ![運行工作流程](../images/update/CI/GitHubActions3.png)
 
-6. 你將會看到工作流程運行成功請求的訊息。重新整理你的瀏覽器頁面，你將能夠監控建置進度。當操作完成時，AAPS CI 的行動將顯示綠色勾選標記。你已成功建置 AndroidAPS 的更新版本。這表示 Master 與 Wear 的 APK 現在會直接儲存到你的 Google Drive（如下所示）。 AAPSClient apk 可以從 Github > nightscout > AndroidAPS [這裡](https://github.com/nightscout/AndroidAPS/releases)
+6. 你將會看到工作流程運行成功請求的訊息。重新整理你的瀏覽器頁面，你將能夠監控建置進度。當操作完成時，AAPS CI 的行動將顯示綠色勾選標記。您已成功建置更新版的 **AAPS**。這表示 Master 與 Wear 的 APK 現在會直接儲存到你的 Google Drive（如下所示）。 AAPSClient apk 可以從 Github > nightscout > AndroidAPS [這裡](https://github.com/nightscout/AndroidAPS/releases)
 
 
 ![監控工作流程](../images/update/CI/GitHubActions4.png)

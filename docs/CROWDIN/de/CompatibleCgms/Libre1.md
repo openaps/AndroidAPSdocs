@@ -13,9 +13,9 @@ Einige dieser Bridges sind noch auf dem Markt verfügbar:
 -   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) von europäischen Anbietern ([BubbleShop](https://bubbleshop.eu/)) oder für russische Benutzer [hier](https://vk.com/saharmonitor/). Auch auf AliExpress verfügbar.
 -   Atom für russische Nutzer.
 
-## 1. Using xDrip
+## 1. xDrip+ verwenden
 
--   xDrip supports Miaomiao, Bubble, Blucon, Atom and LibreAlarm.
+-   xDrip unterstützt Miaomiao, Bubble, Blucon, Atom und LibreAlarm.
 -   Du kannst die [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) einfach herunterladen, es sei denn, Du benötigst aktuelle Funktionen, in diesem Fall solltest Du den neuesten [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases) verwenden.
 -   Follow setup instructions on [xDrip settings page](../CompatibleCgms/xDrip.md).
 -    Du brauchst für den Libre 1 US (und Libre 2 EU) auch OOP2.

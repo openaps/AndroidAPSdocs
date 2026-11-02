@@ -1,6 +1,6 @@
 # 未来（可能）的泵驱动程序
 
-这是市面上部分胰岛素泵的清单，包含各循环系统对其支持状态及在AAPS中的兼容情况。文末附有胰岛素泵实现"闭环兼容"所需条件的说明。
+This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
 
     {contents} Table of contents
     :depth: 1
@@ -42,7 +42,7 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Willcare Insulin pump ([首页](http://shinmyungmedi.com/en/))
 
-**闭环状态:** 目前尚不具备闭环条件，但其工作人员已与我们联系，并表示有意扩展泵的闭环功能（目前仅缺少获取/设置配置文件的指令）。
+**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
 
 **硬件要求 AAPS：** 无。似乎启用了蓝牙。
 

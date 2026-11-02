@@ -38,6 +38,6 @@ Als **AAPS** goed verbinding maakt met Nightscout, maar BG als N/A wordt getoond
 
 * Als je nog steeds een foutmelding krijgt...
 
-Controleer de grootte van je database in MongoDB (of via de database size plugin in Nightscout). Als je de gratis versie (free tier) van MongoDB gebruikt, betekent 496MB dat de database vol is en opgeschoond moet worden. [Volg deze Nightscout-instructies om de grootte van je database te controleren en gegevens te verwijderen](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
+Controleer de grootte van je database in MongoDB (of via de database size plugin in Nightscout). Als je de gratis versie (free tier) van MongoDB gebruikt, betekent 496MB dat de database vol is en opgeschoond moet worden. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
 Heb je dit nog niet ingesteld? Overweeg dan om je AAPS-gegevens aan het Open Humans-project te doneren (voor onderzoek), voordat je gegevens uit je database verwijdert. De instructies staan op de pagina [Open Humans Uploader](../SupportingAaps/OpenHumans.md).

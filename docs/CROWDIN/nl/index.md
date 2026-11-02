@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- 31 oktober 2026: versie 4.0.0 is uit. Bekijk de [Release notes](#latestrelease) om te zien wat er nieuw is, en volg de instructies in de [handleiding voor bijwerken](./Maintenance/UpdateToNewVersion.md) om bij te werken.
+31 October 2026: Version 4.0.0 is out. Bekijk de [Release notes](#latestrelease) om te zien wat er nieuw is, en volg de instructies in de [handleiding voor bijwerken](./Maintenance/UpdateToNewVersion.md) om bij te werken.
 
 ```
 
@@ -17,7 +17,7 @@ Deze documentatie legt uit hoe je **AAPS** instelt en gebruikt. Je kunt door de 
 
 Deel **1) Aan de slag**: de [Introductie tot APS en AAPS](Getting-Started/Introduction.md) legt uit waar een kunstmatig pancreassysteem (APS) in het algemeen voor bedoeld is. Het schetst de achtergrond van het loopen in het algemeen, waarom **AAPS** is ontwikkeld, vergelijkt **AAPS** met andere systemen en gaat in op veiligheid. Het geeft suggesties over hoe je met je medisch team over **AAPS** kunt praten, legt uit waarom je de **AAPS** app zelf moet bouwen in plaats van deze gewoon te downloaden, en geeft een overzicht van de typische connectiviteit van een **AAPS**-systeem. Het gaat ook in op toegankelijkheid en wie mogelijk baat zal hebben bij **AAPS**.
 
-[Voorbereiden om te starten met AAPS](./Getting-Started/PreparingForAaps.md) geeft meer uitleg over veiligheid, en over de telefoons, CGM's (Continue Glucose Monitoren) en insulinepompen die compatibel zijn met **AAPS**. Het geeft een overzicht van het proces dat je doorloopt, en een globale tijdlijn tot je alle functies van **AAPS** kunt gebruiken. Dit deel bereidt je technisch voor, zodat je je **AAPS**-systeem zo snel en efficiënt mogelijk kunt opbouwen. Het onderdeel [Compatibele CGM's](./Getting-Started/CompatiblesCgms.md) legt uit hoe je je CGM het beste instelt en welke opties voor vloeiend maken het beste zijn.
+[Voorbereiden om te starten met AAPS](./Getting-Started/PreparingForAaps.md) geeft meer uitleg over veiligheid, en over de telefoons, CGM's (Continue Glucose Monitoren) en insulinepompen die compatibel zijn met **AAPS**. Het geeft een overzicht van het proces dat je doorloopt, en een globale tijdlijn tot je alle functies van **AAPS** kunt gebruiken. Dit deel bereidt je technisch voor, zodat je je **AAPS**-systeem zo snel en efficiënt mogelijk kunt opbouwen. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
 
 Nu je het proces goed begrijpt, kun je beginnen met het opbouwen van je **AAPS**-loop.
 
@@ -40,7 +40,7 @@ Deel **9) [Hulp & probleemoplossing](GettingHelp/WhereCanIGetHelp.md)** helpt je
 
 Deel **10)** behandelt **[Geavanceerde opties van AAPS](./AdvancedOptions/FullClosedLoop.md)**, zoals hoe je overstapt van **AAPS** als hybride gesloten loop (bolussen voor maaltijden _enz._) naar een volledig gesloten loop (geen bolussen), hoe je [je profiel afstelt](./GettingHelp/ProfileTuning.md) en Autotune gebruikt. Het geeft ook details over de ontwikkel- en engineering-modi. De meeste gebruikers kunnen prima met de gewone "Master"-versie van **AAPS** werken zonder deze opties te bekijken. Dit deel is voor gebruikers die hun waarden al goed onder controle hebben en hun systeem verder willen verbeteren.
 
-In deel **11) [AAPS ondersteunen](SupportingAaps/HowToEditTheDocs.md)** geven we informatie over hoe je dit project kunt ondersteunen. Je kunt geld, materiaal of kennis doneren. Je kunt zelf wijzigingen in de documentatie voorstellen of maken, helpen met de [vertaling van de documentatie](SupportingAaps/Translations) en je gegevens delen via het project Open Humans.
+In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provide information so that you can support this project. Je kunt geld, materiaal of kennis doneren. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations.md) and provide your data through the Open Humans project.
 
 Deel **12) Bronnen** bevat gearchiveerde of extra documentatie. Er is een onderdeel voor [zorgverleners](UsefulLinks/ClinicianGuideToAaps.md) die interesse hebben in open-source kunstmatige-pancreastechnologie zoals **AAPS**, of voor patiënten die zulke informatie met hun zorgverleners willen delen. Dit onderwerp komt ook in de introductie aan bod. In dit deel vind je ook meer bronnen en informatie over diabetes en loopen. Het bevat de [Veelgebruikte woordenlijst](./UsefulLinks/Glossary.md), een lijst met de afkortingen (of korte namen) die overal in **AAPS** worden gebruikt. Hier vind je bijvoorbeeld waar de termen ISF of TT voor staan.
 

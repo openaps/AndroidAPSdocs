@@ -2,7 +2,7 @@
 
 ## Przekaż swoje dane na rzecz nauki
 
-Możesz pomóc społeczności, przekazując swoje dane do projektów badawczych! To pomaga naukowcom oddać coś społeczności, rozwijać nowe pomysły naukowe i poszerzać wiedzę o systemach zamkniętej pętli open source. AAPS jest gotowy do synchronizacji Twoich danych z [Open Humans](https://www.openhumans.org), platformą, na którą możesz przesyłać, łączyć i przechowywać swoje dane osobowe – takie jak dane genetyczne, dane o aktywności i dane o zdrowiu.
+Możesz pomóc społeczności, przekazując swoje dane do projektów badawczych! This helps scientists to pay it forward, develop new scientific ideas and make open source closed loop systems better known. AAPS jest gotowy do synchronizacji Twoich danych z [Open Humans](https://www.openhumans.org), platformą, na którą możesz przesyłać, łączyć i przechowywać swoje dane osobowe – takie jak dane genetyczne, dane o aktywności i dane o zdrowiu.
 
 Masz pełną kontrolę nad tym, co dzieje się z Twoimi danymi i które projekty chcesz wspierać, dając im dostęp do swoich danych. Zależnie od projektu, do którego dołączysz, dane są oceniane i używane na różne sposoby i w różnym zakresie.
 
@@ -76,7 +76,7 @@ Zrzut ekranu powyżej pochodzi z wcześniejszej wersji **AAPS**. W **AAPS** 4 ek
 
 Projekt „OPEN” łączy międzynarodowe i międzysektorowe konsorcjum pacjentów-innowatorów, lekarzy, socjologów, informatyków i organizacji wspierających pacjentów. Celem jest badanie różnych aspektów systemów sztucznej trzustki „zrób to sam” (DIY APS), których używa coraz więcej osób z cukrzycą. Więcej informacji znajdziesz na ich [stronie](https://www.open-diabetes.eu/).
 
-We wrześniu 2020 projekt „OPEN” uruchomił [ankietę](https://survey.open-diabetes.eu/), w której można też przekazać dane przesłane do Open Humans. [Poradnik](https://open-diabetes.eu/en/open-survey/survey-tutorials/), jak przekazać swoje dane do projektu „OPEN”, jest dostępny na ich stronie i w samej ankiecie.
+In September 2020 the 'OPEN' project launched a [survey](https://survey.open-diabetes.eu/) including the option to donate data you uploaded to Open Humans. [Poradnik](https://open-diabetes.eu/en/open-survey/survey-tutorials/), jak przekazać swoje dane do projektu „OPEN”, jest dostępny na ich stronie i w samej ankiecie.
 
 ### [OpenAPS Data Commons](https://www.openhumans.org/activity/openaps-data-commons/)
 

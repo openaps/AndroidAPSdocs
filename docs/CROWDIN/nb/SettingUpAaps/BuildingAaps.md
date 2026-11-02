@@ -12,7 +12,7 @@ Det finnes tre metoder for å bygge AAPS-appen:
 
 ### Bygge med en nettleser (anbefalt)
 
-Du kan bygge appen med smarttelefonen din ved hjelp av GitHub Actions. Fra en Android-telefon leder oppsettsiden for [AAPS Builder](#aaps-builder) deg gjennom det, og du starter hvert bygg selv. Fra en datamaskin eller en iPhone kan du også bygge med en fork og lagre appen i Google Drive.
+Du kan bygge appen i en nettleser ved hjelp av GitHub Actions. Fra en Android-telefon leder oppsettsiden for [AAPS Builder](#aaps-builder) deg gjennom det, og du starter hvert bygg selv. Fra en datamaskin eller en iPhone kan du også bygge med en fork og lagre appen i Google Drive.
 
 **[Følg disse instruksjonene.](./BrowserBuild.md)**
 

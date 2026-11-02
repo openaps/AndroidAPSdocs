@@ -134,7 +134,7 @@ La administración de insulina se ha detenido. Actúa ahora:
 * **Insulina baja**: quedan menos de 10 U. Desactiva el parche y cámbialo.
 * **Parche caducado**: el parche ha llegado al final de su vida útil. Desactiva el parche y cámbialo.
 * **Batería baja**: descarta el parche y cámbialo.
-* **Temperatura alta/baja**: ve a un lugar con una temperatura adecuada, entre 40 ℉ y 99 ℉ (5 ℃ y 37 ℃).
+* **High/Low Temperature**: move to a suitable temperature, between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
 * **Apagado automático**: el parche se detuvo porque no se atendió el aviso de apagado automático. Pulsa **Iniciar insulina** para volver a iniciar la administración basal.
 * **Tiempo de aplicación del parche agotado**, **Error en el autodiagnóstico**, **Error del parche**, **Oclusión** y **Error de inserción de la aguja**: desactiva el parche y cámbialo.
 
@@ -145,7 +145,7 @@ La administración de insulina continúa, pero hay algo que necesita tu atenció
 * **Insulina baja**: el reservorio ha llegado a la cantidad ajustada en **Ajuste de notificación de insulina baja**. Prepárate para cambiar el parche.
 * **El parche caducará pronto** y **La vida útil del parche ha expirado**: cambia el parche.
 * **Batería baja**: prepárate para cambiar el parche.
-* **Temperatura alta/baja**: la administración se pausa hasta que el parche vuelve a estar entre 40 ℉ y 99 ℉.
+* **High/Low Temperature**: delivery is paused until the patch is back between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
 * **Apagado automático**: toca **OK**. Si no lo atiendes, el aviso pasa a ser una alarma crítica y la administración se detiene.
 * **Activación del parche incompleta**: toca **OK** para completar la activación.
 * **Iniciar insulina**: la pausa que ajustaste ha terminado. Toca **Iniciar insulina** para reanudar la administración.

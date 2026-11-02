@@ -34,7 +34,7 @@ Valget `Alert on failures` bør også deaktiveres (10). Ellers får du en alarm 
 
 ### **Inter-app Settings** (kringkasting mellom apper)
 
-Hvis du skal bruke AAPS, og dataene skal sendes videre til AAPS, må du aktivere kringkasting i xDrip under Inter-app settings.
+Hvis du bruker AAPS, må du aktivere kringkasting under Inter-App settings i xDrip, slik at dataene sendes videre til AAPS.
 
 → Hamburger Menu (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **PÅ** (4)
 

@@ -38,16 +38,16 @@ Hlavné vlastnosti **Omnipod DASH** („DASH“):
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
-- **Kompatibilný telefón s Androidom** s Bluetooth Low Energy (BLE) (viac informácií nájdete v časti [Telefóny](../Getting-Started/Phones.md)); nasledujúce informácie vám navyše pomôžu s ďalšími dôležitými hľadiskami pre úspešnú aktiváciu a používanie DASH na kompatibilnom telefóne:
+- **A Compatible Android phone** with Bluetooth Low Energy (BLE) (see [Phones](../Getting-Started/Phones.md) for more info). In addition, the following information will help guide you on other key considerations around successfully activating and using the DASH on a compatible phone:
     -  Ovládač Omnipod Dash v **AAPS** sa spája s Podom DASH cez Bluetooth.  
       **AAPS** automaticky nadviaže nové Bluetooth spojenie s Podom vždy, keď potrebuje odoslať príkaz (napr. bolus), a po odoslaní príkazu sa Bluetooth spojenie okamžite preruší.
        - **POZNÁMKA:**
          - Bluetooth spojenie môžu prerušiť alebo rušiť iné Bluetooth zariadenia pripojené k telefónu, na ktorom beží **AAPS**, napríklad slúchadlá atď. Takéto zariadenia môžu na niektorých modeloch telefónov spôsobovať chyby pripojenia alebo problémy s aktiváciou Podu. Pri výbere telefónu pre Omnipod DASH sa oplatí pozrieť zoznam [otestovaných hardvérových zostáv](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true), kde nájdete overené funkčné konfigurácie.
-         - Existuje niekoľko známych problémov s Bluetooth, ktoré môžu spôsobiť problémy s aktiváciou Podu (rady k ďalším problémom s Bluetooth nájdete v časti [Riešenie problémov](#troubleshooting)), najmä v časti [Problémy súvisiace s Bluetooth](#omnipod-dash-bluetooth-related-issues).
+         - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#omnipod-dash-troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
     - Telefón musí mať **Android 12 alebo novší** a **AAPS** musí byť zostavený a nainštalovaný podľa pokynov [**Zostavenie AAPS**](../SettingUpAaps/BuildingAaps.md). Vždy používajte najnovšiu vydanú verziu.
 - Podporovaný [**systém kontinuálneho monitorovania glukózy (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
-Nasledujúce pokyny vysvetľujú, ako pomocou **AAPS** aktivovať novú reláciu Podu. Počkajte, kým sa váš aktuálny Pod priblíži ku koncu platnosti, pretože budete musieť aktivovať nový Pod pomocou **AAPS**. Deaktivovaný Pod sa už nedá znova použiť ani znova aktivovať, deaktivácia je konečná.
+Nasledujúce pokyny vysvetľujú, ako pomocou **AAPS** aktivovať novú reláciu Podu. You should wait for your current Pod to be close to expiry, as you will need to activate a new Pod with **AAPS**. Deaktivovaný Pod sa už nedá znova použiť ani znova aktivovať, deaktivácia je konečná.
 
 ## Skôr než začnete
 
@@ -611,7 +611,7 @@ Zlyhaný Pod sa už nedá znova použiť. Skontrolujte si glykémiu, potom [deak
 ---
 ### Predchádzanie chybám Podu 49
 
-Toto zlyhanie súvisí s nesprávnym stavom Podu pre daný príkaz alebo s chybou počas príkazu na podanie inzulínu. Stane sa to vtedy, keď sa ovládač a Pod nezhodujú v tom, aký je skutočný stav. Pod (ako vstavané bezpečnostné opatrenie) potom zareaguje neopraviteľným chybovým kódom 49 (0x31) a skončí ako takzvaný „screamer“: dlhé otravné pípanie, ktoré sa dá zastaviť iba prepichnutím otvoru na správnom mieste na zadnej strane Podu. Presný pôvod „chyby Podu 49“ je často ťažké zistiť. V situáciách, keď je podozrenie, že k tejto chybe môže dôjsť (napríklad pri páde aplikácie, používaní vývojovej verzie alebo preinštalovaní).
+Toto zlyhanie súvisí s nesprávnym stavom Podu pre daný príkaz alebo s chybou počas príkazu na podanie inzulínu. Stane sa to vtedy, keď sa ovládač a Pod nezhodujú v tom, aký je skutočný stav. Pod (ako vstavané bezpečnostné opatrenie) potom zareaguje neopraviteľným chybovým kódom 49 (0x31) a skončí ako takzvaný „screamer“: dlhé otravné pípanie, ktoré sa dá zastaviť iba prepichnutím otvoru na správnom mieste na zadnej strane Podu. Presný pôvod „chyby Podu 49“ je často ťažké zistiť. It can happen, for example, after application crashes, when running a development version or after a re-installation.
 
 ---
 
@@ -690,7 +690,7 @@ Prehľad hlavných výstrah, s ktorými sa môžete stretnúť, je uvedený niž
 - *Chyba Podu: XXX NÁZOV*, za ktorou nasleduje *Ref: ...*: Pod zlyhal a prestal podávať inzulín. Vymeňte Pod. Pozrite [Zlyhania Podu](#omnipod-dash-pod-failures).
 - *Žiadny aktívny Pod*: nenašla sa žiadna relácia Podu. Táto notifikácia sa bude znova zobrazovať, kým neaktivujete nový Pod. Po aktivácii Podu automaticky zmizne.
 - *Podávanie inzulínu je pozastavené*: Pod pozastavil podávanie inzulínu. Pozrite [Obnovenie podávania inzulínu](#omnipod-dash-resuming-insulin-delivery).
-- *Nastavenie bazálneho profilu pravdepodobne zlyhalo. Podávanie môže byť pozastavené! Manuálne obnovte stav Podu zo záložky Omnipod a pokračujte v podávaní inzulínu, ak je to potrebné.* Nastavenie bazálneho **profilu** v Pode možno zlyhalo. Na obrazovke pumpy DASH stlačte **Obnoviť** (hlásenie stále hovorí „záložka Omnipod“) a ak sa zobrazuje, stlačte **Obnoviť podávanie**.
+- *Nastavenie bazálneho profilu pravdepodobne zlyhalo. Podávanie môže byť pozastavené! Please manually refresh the Pod status on the pump screen and resume delivery if needed.* Setting the basal **Profile** on the pod may have failed. Press **Refresh** on the DASH pump screen, and press **Resume Delivery** if it is shown.
 - *Unable to verify whether SMB (X U) succeeded. Na potvrdenie alebo zamietnutie tohto príkazu aktualizujte stav Podu.* **AAPS** nedokázal potvrdiť, že bol podaný **SMB**. Na obrazovke pumpy DASH stlačte **Obnoviť** a skontrolujte pole **Posledný bolus**.
 - *Stav podávania inzulínu je neurčitý. Na potvrdenie alebo zamietnutie aktualizujte stav Podu.* Rovnako pri normálnom boluse: stlačte **Obnoviť** na obrazovke pumpy DASH.
 - *Časové pásmo Podu je iné ako časové pásmo telefónu. Bazálna dávka je nesprávna. Pre nápravu prepnite profil* Pozrite poznámku o letnom čase a časovom pásme v časti [Známe obmedzenia/problémy Omnipod DASH v AAPS](#omnipod-dash-constraints).
@@ -703,7 +703,7 @@ Všetku vývojársku prácu na DASH robí komunita **dobrovoľne**; majte to na 
 
 -  **Úroveň 0:** Prečítajte si príslušnú časť tejto dokumentácie, aby ste pochopili, ako má funkcia, s ktorou máte problém, fungovať.
 -  **Úroveň 1:** Ak máte stále problémy, ktoré nedokážete vyriešiť pomocou tohto dokumentu, prejdite na kanál *#AAPS* na **Discorde** pomocou [tohto pozývacieho odkazu](https://discord.gg/4fQUWHZ4Mw). Pýtať sa môžete aj v mnohých skupinách na Facebooku a inde (pozrite [**Kde získať pomoc**](../GettingHelp/WhereCanIGetHelp.md))
--  **Úroveň 2:** Prehľadajte existujúce hlásenia a zistite, či už váš problém niekto nahlásil v [Issues](https://github.com/nightscout/AndroidAPS/issues) ak áno, potvrďte ho, pridajte komentár alebo doplňte informácie o svojom probléme. Ak nie, vytvorte prosím [nové hlásenie (issue)](https://github.com/nightscout/AndroidAPS/issues) a priložte [vaše log súbory](../GettingHelp/AccessingLogFiles.md).
+-  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues). If it exists, please confirm/comment/add information on your problem. Ak nie, vytvorte prosím [nové hlásenie (issue)](https://github.com/nightscout/AndroidAPS/issues) a priložte [vaše log súbory](../GettingHelp/AccessingLogFiles.md).
 -  **Buďte trpezliví – väčšinu členov našej komunity tvoria dobrosrdeční dobrovoľníci a riešenie problémov si často vyžaduje čas a trpezlivosť od používateľov aj vývojárov.**
 
 Keď žiadate o pomoc, pripravte si nasledujúce informácie, aby vám komunita mohla pomôcť s vašimi konkrétnymi otázkami a problémami:

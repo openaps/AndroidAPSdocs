@@ -108,12 +108,12 @@ Git es un programa que permite seguir los cambios en el código y colaborar con 
 (BuildingAaps-steps-for-installing-git)=
 #### Pasos para instalar Git
 
-1.  Comprueba que no tienes ya **Git** instalado. Para hacerlo, escribe «git» en la barra de búsqueda de Windows. Si ves **«Git bash»** u otra forma de Git, ya está instalado y puedes pasar directamente a [instalar Android Studio](#install-android-studio):
+1.  Comprueba que no tienes ya **Git** instalado. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. Si no tienes Git instalado, descarga e instala la última versión para tu sistema desde la sección «Download» de [**esta página**](https://git-scm.com/downloads). Cualquier versión reciente de Git debería funcionar. Elige la versión correcta para tu sistema: Mac, Windows o Linux.
+2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Cualquier versión reciente de Git debería funcionar. Elige la versión correcta para tu sistema: Mac, Windows o Linux.
 
 **Nota para usuarios de Mac:** la página web de Git también te guiará para instalar un programa adicional llamado «homebrew» que ayuda en la instalación. Si instalas Git con Homebrew, no hace falta cambiar ninguna preferencia.
 
@@ -170,7 +170,7 @@ Cuando termine, pulsa «Next»
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-En el último paso, haz clic en «Finished» para iniciar Android Studio por primera vez.
+In the last step, click on "Finish" to start Android Studio for the first time.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
@@ -302,7 +302,7 @@ En la esquina superior izquierda de **Android Studio**, abre el menú de hamburg
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-Comprueba si **Android Studio** puede encontrar automáticamente la ruta correcta en **Path to Git executable** haciendo clic en el botón «Test» (1):
+Check if **Android Studio** can automatically locate the correct **Path to Git executable** by clicking the button "Test" (1):
 
 ![Git Executable](../images/Building-the-App/039_GitTest.png)
 
@@ -369,7 +369,7 @@ Si ya has compilado AAPS antes, NO crees un almacén de claves nuevo: selecciona
 
 ```{admonition} WARNING!
 :class: warning
-Anota dónde se guarda tu almacén de claves. ¡Lo necesitarás cuando compiles la próxima actualización de AndroidAPS!
+Anota dónde se guarda tu almacén de claves. You will need it when you build the next AAPS update!
 ```
 
 * Ahora elige una contraseña sencilla (y anótala), escríbela en el campo de contraseña (2) y confírmala (2).

@@ -78,7 +78,7 @@ Appuyez sur **Ouvrir le plugin** sur la carte **Autotune** pour ouvrir l'écran 
 
 - Si vous faites confiance aux résultats (faible pourcentage de variation entre le profil d'entrée et le profil de sortie), vous pouvez cliquer sur le bouton "Activer le profil" puis cliquer sur OK pour valider.
 
-  - Activer le profil Tuned crée automatiquement un nouveau profil "Tuned" dans votre liste de profils (**Gestion → Profil**).
+  - "Activate profile" will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
   - Si vous avez déjà un profil nommé "Tuned" dans **Gestion → Profil**, ce profil est mis à jour avec le profil calculé par Autotune avant l'activation
 
   ![Activer Profil Autotune](../images/Autotune/Autotune_6.png)
@@ -123,7 +123,7 @@ La fonction **Changement de profil automatique** est disponible seulement en mod
 - **Changement de profil automatique** (désactivé par défaut) : voir [Exécuter Autotune avec une règle d'automatisation](#autotune-run-autotune-with-an-automation-rule) ci-dessous. Si vous activez ce paramètre, le profil d'entrée sera automatiquement mis à jour par le profil Tuned, et il sera activé.
   - **Soyez prudent, vous devez prendre confiance en vérifiant pendant plusieurs jours qu'après une mise à jour et l'activation du profil Tuned sans aucune modification, cela améliore effectivement votre boucle**
 
-- **Catégoriser UAM en tant que Basal** (désactivé par défaut) : ce paramètre est pour les utilisateurs qui utilisent AndroidAPS sans entrer de glucides (Full UAM). Il empêchera (quand désactivé) de catégoriser les RNS en tant que basal.
+- **Categorize UAM as basal** (default Off): This setting is for the users using AAPS without any carbs entered (Full UAM). Il empêchera (quand désactivé) de catégoriser les RNS en tant que basal.
   - Remarque : si vous avez au moins une heure d'absorption de glucides détectée pendant une journée, alors toutes les données catégorisées comme "RNS" seront catégorisées en tant que basal, quel que soit ce paramètre (Activé ou Désactivé)
 - **Nombre de jours par défaut** (5 par défaut) : vous pouvez définir la valeur par défaut avec ce paramètre. Chaque fois que vous choisissez un nouveau profil dans le plugin Autotune, le **Nombre de jours de données** est remplacé par cette valeur par défaut
 - **Utiliser les G/I et SI circadiens** (désactivé par défaut) : voir [Profil avec G/I ou SI Circadiens](#autotune-circadian-ic-or-isf-profile) ci-dessous.
@@ -188,7 +188,7 @@ Remarque : pour plus d'informations sur la façon de définir une règle d'auto
 
   ![Autotune écran par défaut](../images/Autotune/Autotune_17.png)
 
-- Vous pouvez ensuite choisir l'action **Profil Autotune** (dans le groupe **Boucle & insuline**)
+- Then you can select the **Run Autotune** action (in the **Loop & insulin** group)
 
   ![Autotune écran par défaut](../images/Autotune/Autotune_18.png)
 
@@ -212,7 +212,7 @@ Autotune fonctionne avec les informations existantes dans votre base de données
 
 Autotune n'est qu'une aide, il est important de vérifier régulièrement si vous êtes d'accord avec le profil calculé. Si vous avez le moindre doute, modifiez les paramètres Autotune (par exemple le nombre de jours) ou copiez les résultats dans le profil local et ajustez le profil avant de l'utiliser.
 
-Utilisez toujours Autotune plusieurs jours manuellement pour vérifier les résultats avant de les appliquer. Et ce n'est que lorsque vous faites entièrement confiance aux résultats Autotune et quand la variation devient très faible entre le profil précédent et le profil calculé que vous pouvez commencer à utiliser l'automatisation (jamais avant)
+Utilisez toujours Autotune plusieurs jours manuellement pour vérifier les résultats avant de les appliquer. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile then you start to use Automation (Never before)
 
 - Autotune peut très bien fonctionner pour certains utilisateurs et pas du tout pour d'autres, donc **Si vous ne faites pas confiance au résultat Autotune, ne l'utilisez pas**
 

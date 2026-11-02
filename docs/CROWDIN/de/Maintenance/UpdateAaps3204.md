@@ -84,43 +84,43 @@ Wenn Du nicht mehr genau weißt, wie man das macht, schaue auf der Seite [Export
 
 * Öffne Dein bestehendes AAPS-Projekt mit Android Studio. Möglicherweise musst Du Dein Projekt wählen. Klicke (doppelt) auf das AAPS-Projekt.
 
-![Android Studio - Projekt auswählen](../images/update/01_ProjectSelection.png)
+![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
 
 <br>
 
-![Android Studio - Projekt auswählen](https://androidaps.readthedocs.io/en/3.1/_images/01_ProjectSelection.png)
+![Android Studio - Select Project](https://androidaps.readthedocs.io/en/3.1/_images/01_ProjectSelection.png)
 
 * Wähle in der Menüleiste des Android Studios Git -> Fetch
 
-![Android Studio Menü - Git - Fetch](../images/update/02_GitFetch.png)
+![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
 
 <br>
 
-![Android Studio Menü - Git - Fetch](https://androidaps.readthedocs.io/en/3.1/_images/02_GitFetch.png)
+![Android Studio Menu - Git - Fetch](https://androidaps.readthedocs.io/en/3.1/_images/02_GitFetch.png)
 
 * Unten rechts wird Dir eine Meldung angezeigt, sobald der Fetch erfolgreich durchgeführt wurde.
 
-![Android Studio Menü - Git - Fetch erfolgreich](../images/update/03_GitFetchSuccessful.png)
+![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
 
 <br>
 
-![Android Studio Menü - Git - Fetch erfolgreich](https://androidaps.readthedocs.io/en/3.1/_images/03_GitFetchSuccessful.png)
+![Android Studio Menu - Git - Fetch successful](https://androidaps.readthedocs.io/en/3.1/_images/03_GitFetchSuccessful.png)
 
 * Wähle nun in der Menüleiste Git -> Pull
 
-![Android Studio Menü - Git - Pull](../images/update/04_GitPull.png)
+![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
 
 <br>
 
-![Android Studio Menü - Git - Pull](https://androidaps.readthedocs.io/en/3.1/_images/04_GitPull.png)
+![Android Studio Menu - Git - Pull](https://androidaps.readthedocs.io/en/3.1/_images/04_GitPull.png)
 
 * Lasse alle Optionen wie sie sind (Original/Master) und wähle Pull.
 
-![Android Studio - Git - Pull-Dialog](../images/update/05_GitPullOptions.png)
+![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
 
 <br>
 
-![Android Studio - Git - Pull-Dialog](https://androidaps.readthedocs.io/en/3.1/_images/05_GitPullOptions.png)
+![Android Studio - Git - Pull dialog](https://androidaps.readthedocs.io/en/3.1/_images/05_GitPullOptions.png)
 
 * Warte ab, während der Download läuft. Du siehst dazu einen Hinweis in der Fußzeile. Eine Erfolgsmeldung wird angezeigt, so bald erfolgreich heruntergeladen wurde.
 
@@ -129,11 +129,11 @@ Wenn Du nicht mehr genau weißt, wie man das macht, schaue auf der Seite [Export
   ```
 
 
-![Android Studio - Pull erfolgreich](../images/update/06_GitPullSuccess.png)
+![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
 
 <br>
 
-![Android Studio - Pull erfolgreich](https://androidaps.readthedocs.io/en/3.1/_images/06_GitPullSuccess.png)
+![Android Studio - Pull successful](https://androidaps.readthedocs.io/en/3.1/_images/06_GitPullSuccess.png)
 
 * Gradle Sync wird ausgeführt, um einige Abhängigkeiten herunterzuladen. Warte, bis es fertig ist.
 

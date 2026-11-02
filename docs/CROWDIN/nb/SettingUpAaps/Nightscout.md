@@ -29,7 +29,7 @@ Nightscout `API_SECRET` er hovedpassordet til nettstedet ditt: ikke del det offe
 
 #### Ikke synkroniser fra Nightscout
 
-Hvis du lar alle «Motta ... fra NS»-valgene stå av, er du sikker på at ingen endring i Nightscout blir brukt av AAPS:
+Lar du alle «Motta … fra NS»-valgene stå av, er du sikker på at ingen endring i Nightscout blir brukt av AAPS:
 
 ![Bare opplasting til Nightscout](../images/preferences/settings_nsclient_sync.png)
 

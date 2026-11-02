@@ -17,7 +17,7 @@
 
 ## 对于使用**AAPS**的父母/照料者来说的具体优势
 
-对于孩子来说——如果他们的**AAPS**手机在附近——照料者可以使用智能手表进行监测或修改，而无需使用**AAPS**手机。例如，如果**AAPS**手机被藏在泵带中，这一点就非常有用。
+For a child - if their **AAPS** phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS** phone. 例如，如果**AAPS**手机被藏在泵带中，这一点就非常有用。
 
 智能手表可以作为基于手机的远程控制选项或[仅用于数据跟踪模式](../RemoteFeatures/FollowingOnly.md)的_补充_，或者作为这些选项的_替代_。
 
@@ -49,19 +49,19 @@ Popular watch brands include Samsung Galaxy, Garmin, Fossil and Mi band. 上表�
 
 ## 全选Android
 
-这听起来是一个很有吸引力的选择，对吧？然而，目前只有少数爱好者正在尝试在独立手表上使用**AAPS**。 There are a limited number of smartwatches with a reasonable interface which also work well with standalone use of **AAPS** and your CGM app. Popular models include the LEMFO LEM 15 Pro and 16. 您需要将**AAPS**“完整”版本的apk（通常安装在智能手机上的apk）而不是**AAPS**“穿戴”版本的apk加载到手表上。
+这听起来是一个很有吸引力的选择，对吧？ However, at present, only a few enthusiasts are experimenting with **AAPS** on a stand-alone watch. There are a limited number of smartwatches with a reasonable interface which also work well with standalone use of **AAPS** and your CGM app. Popular models include the LEMFO LEM 15 Pro and 16. 您需要将**AAPS**“完整”版本的apk（通常安装在智能手机上的apk）而不是**AAPS**“穿戴”版本的apk加载到手表上。
 
 虽然没有明确的规格可以帮助您了解一款手表是否适合独立使用**AAPS**，但以下参数将有所帮助：
 
 1）Android 12或更高版本。 2）能够将手表表盘从“方形”模式切换出来，以使文字更大、更易阅读。 3）电池续航非常出色。 4）良好的蓝牙连接范围。
 
-大多数关于独立**AAPS**手表的困扰都来自于与一个小屏幕的交互，以及当前的AAPS完整应用程序界面尚未为手表设计的事实。由于屏幕尺寸受限，您可能更喜欢使用手写笔在手表上编辑**AAPS**设置，并且某些AAPS按钮可能无法在手表屏幕上显示。
+大多数关于独立**AAPS**手表的困扰都来自于与一个小屏幕的交互，以及当前的AAPS完整应用程序界面尚未为手表设计的事实。 You may prefer to use a stylus to edit **AAPS** settings on the watch, due to the restricted screen size, and some AAPS buttons may not be visible on the watch screen.
 
 额外的挑战是很难获得足够的电池续航时间，并且拥有足够电池续航的手表通常体积庞大且厚重。用户报告说，他们在操作系统和省电设置上遇到了困难，很难在手表上启动传感器，蓝牙连接范围较差（无法同时与传感器和泵保持连接），并且防水性能也令人质疑。以下照片展示了相关示例。
 
 ![image](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
 
-如果您对设置独立手表感兴趣，请阅读**AAPS** Facebook群组（良好的搜索选项包括“独立”和“Lemfo”）以及Discord上的帖子和评论，以获取更多信息。
+If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
 ## Wear OS
 
@@ -175,7 +175,7 @@ You can read more about them, including how to set them up, on the [WatchDrip+ w
 ![image](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
-Pebble手表（[现已停产](https://en.wikipedia.org/wiki/Pebble_(watch))）在2013年至2016年期间公开销售，现在可能仍有二手产品可供购买。 Fitbit收购了Pebble。 Pebble用户可以使用Urchin表盘来查看Nightscout数据。显示的数据选项包括活性胰岛素（IOB）、当前活动的临时基础率和预测值。如果您在使用开环系统，您可以使用IFTTT创建一个小程序，该程序可以实现在收到来自**AAPS**的通知时，发送短信或Pushover通知。
+Pebble手表（[现已停产](https://en.wikipedia.org/wiki/Pebble_(watch))）在2013年至2016年期间公开销售，现在可能仍有二手产品可供购买。 Fitbit收购了Pebble。 Pebble用户可以使用Urchin表盘来查看Nightscout数据。显示的数据选项包括活性胰岛素（IOB）、当前活动的临时基础率和预测值。 If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.
 
 ### [Bluejay 手表](https://bluejay.website/)
 

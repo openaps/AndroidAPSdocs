@@ -17,7 +17,7 @@ Smartklokker kan – avhengig av modell – brukes på mange ulike måter sammen
 
 ## Spesielle fordeler for foreldre/omsorgspersoner som bruker **AAPS**
 
-For et barn – hvis **AAPS**-telefonen er i nærheten – kan en omsorgsperson bruke en smartklokke til å følge med eller gjøre endringer uten å måtte bruke **AAPS**-telefonen. Dette kan være nyttig, for eksempel hvis **AAPS**-telefonen ligger gjemt i et pumpebelte.
+For et barn – hvis **AAPS**-telefonen er i nærheten – kan en omsorgsperson bruke en smartklokke til å overvåke eller gjøre endringer uten å måtte bruke **AAPS**-telefonen. Dette kan være nyttig, for eksempel hvis **AAPS**-telefonen ligger gjemt i et pumpebelte.
 
 En smartklokke kan brukes enten _i tillegg_ til, eller som et _alternativ_ til de TELEFON-baserte løsningene for fjernstyring eller [bare følging](../RemoteFeatures/FollowingOnly.md).
 
@@ -49,19 +49,19 @@ Den beste måten å velge en smartklokke på er å søke etter innlegg om «watc
 
 ## Full Android
 
-Det høres ut som et fristende alternativ, ikke sant? Men foreløpig er det bare noen få entusiaster som prøver ut **AAPS** på en frittstående klokke. Det finnes et begrenset antall smartklokker med et brukbart grensesnitt som også fungerer godt for frittstående bruk av **AAPS** og CGM-appen din. Populære modeller er LEMFO LEM 15 Pro og 16. Du må installere **AAPS** «full»-apk-en (den apk-en som vanligvis installeres på en smarttelefon) på klokken, ikke **AAPS** «wear»-apk-en.
+Det høres ut som et fristende alternativ, ikke sant? Foreløpig er det likevel bare noen få entusiaster som eksperimenterer med **AAPS** på en frittstående klokke. Det finnes et begrenset antall smartklokker med et brukbart grensesnitt som også fungerer godt for frittstående bruk av **AAPS** og CGM-appen din. Populære modeller er LEMFO LEM 15 Pro og 16. Du må installere **AAPS** «full»-apk-en (den apk-en som vanligvis installeres på en smarttelefon) på klokken, ikke **AAPS** «wear»-apk-en.
 
 Det finnes ingen klar spesifikasjon som sier om en klokke vil fungere godt for frittstående bruk av **AAPS**, men disse punktene hjelper:
 
 1)  Android 12 eller nyere. 2)  Mulighet til å ta urskiven ut av «firkantet» modus, slik at teksten blir større og lettere å lese. 3)  Svært god batteritid. 4)  God Bluetooth-rekkevidde.
 
-Det meste av frustrasjonen med frittstående **AAPS**-klokker kommer av å jobbe på en bitte liten skjerm, og av at dagens fulle AAPS-app ikke er laget for en klokke. Du vil kanskje bruke en pekepenn til å endre **AAPS**-innstillinger på klokken, fordi skjermen er så liten, og noen AAPS-knapper er kanskje ikke synlige på klokkeskjermen.
+Det meste av frustrasjonen med frittstående **AAPS**-klokker kommer av å jobbe på en bitte liten skjerm, og av at dagens fulle AAPS-app ikke er laget for en klokke. Du vil kanskje foretrekke å bruke en pekepenn til å redigere **AAPS**-innstillinger på klokken, siden skjermen er liten, og noen AAPS-knapper er kanskje ikke synlige på klokkeskjermen.
 
 Andre utfordringer er at det er vanskelig å få god nok batteritid, og at klokker med nok batteri ofte er store og tykke. Brukere forteller om kamp mot operativsystemet og strømsparingsinnstillingene, problemer med å starte sensorer på klokken, dårlig Bluetooth-rekkevidde (for å holde kontakten med både sensor og pumpe) og tvilsom vanntetthet. Eksempler vises på bildene nedenfor.
 
 ![bilde](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
 
-Hvis du vil sette opp en frittstående klokke, les innlegg og kommentarer i **AAPS**-gruppen på Facebook (gode søkeord er «standalone» og «Lemfo») og på Discord for mer informasjon.
+Hvis du vil sette opp en frittstående klokke, kan du lese innleggene og kommentarene i **AAPS**-gruppen på Facebook (gode søkeord er «standalone» og «Lemfo») og på Discord for mer informasjon.
 
 ## Wear OS
 
@@ -175,7 +175,7 @@ Du kan lese mer om dem, blant annet hvordan du setter dem opp, på [nettsiden ti
 ![bilde](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
-Pebble-klokker ([produseres ikke lenger](https://en.wikipedia.org/wiki/Pebble_(watch))) ble solgt fra 2013 til 2016, og kan fortsatt finnes brukt. Fitbit overtok Pebbles eiendeler. Pebble-brukere kan bruke urskiven Urchin til å se Nightscout-data. Data som kan vises, er blant annet IOB, aktiv midlertidig basal og prognoser. Hvis du kjører åpen loop, kan du bruke IFTTT til å lage en applet som sender en SMS eller et Pushover-varsel når det kommer et varsel fra **AAPS**.
+Pebble-klokker ([produseres ikke lenger](https://en.wikipedia.org/wiki/Pebble_(watch))) ble solgt fra 2013 til 2016, og kan fortsatt finnes brukt. Fitbit overtok Pebbles eiendeler. Pebble-brukere kan bruke urskiven Urchin til å se Nightscout-data. Data som kan vises, er blant annet IOB, aktiv midlertidig basal og prognoser. Hvis du bruker åpen loop, kan du bruke IFTTT til å lage en applet som sier: hvis det er mottatt en varsling fra **AAPS**, send enten en SMS eller en Pushover-varsling.
 
 ### [Bluejay-klokker](https://bluejay.website/)
 

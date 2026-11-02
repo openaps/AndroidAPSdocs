@@ -70,7 +70,7 @@ I **AAPS** 4 er insulin ikke lenger en plugin som velges i **Konfigurasjon**. Å
 
 I insulineditoren kan du:
 
-* gi profilen et **Kallenavn for insulin**, så den er lett å kjenne igjen,
+* gi insulinet et **Kallenavn for insulin**, så det er lett å kjenne igjen,
 * sette **Topp** (tid til maksimal insulinaktivitet, i minutter) og **DIA** (insulinets virkningstid, i timer), enten ved å skrive inn verdien eller med knappene **–** / **+**,
 * trykke på en forhåndsinnstillingsknapp under **Last topp fra** – **Novorapid** (75 min), **Fiasp** (55 min) eller **Lyumjev** (45 min) – for å fylle inn standard topptid for det insulinet i ett steg.
 
@@ -225,17 +225,48 @@ Til slutt en sammenligning der DIA og topp justeres parallelt. Logikken her er a
     - **Ingen kalibrering**: sensorverdiene brukes som de er. Bruk dette når sensoren allerede er fabrikkalibrert og nøyaktig. Dette er standard.
     - **Lineær kalibrering**: **AAPS** korrigerer sensorverdiene med en stigning og en forskyvning som den beregner ut fra fingerstikkmålingene dine.
     
-    Slik fungerer **Lineær kalibrering**:
+    Slik bruker du **Lineær kalibrering**:
     
-    - Den trenger et registrert **sensorbytte**, så den vet når sensorøkten startet. De første 2 timene av en økt hoppes over som oppvarming.
-    - Den trenger minst **2 fingerstikkmålinger**. Nye målinger teller mer enn gamle.
-    - Korreksjonen brukes bare når resultatet er innenfor et trygt område. Hvis målingene dine ligger for tett i tid, korrigeres bare forskyvningen.
-    - **Åpne plugin** viser status for kalibreringen, stigningen og korreksjonen som er i bruk, og listen over fingerstikkmålinger. Du kan legge til en måling med **Legg til kalibrering** og fjerne en som er feil.
+    1. Velg **Lineær kalibrering** i kategorien **Kalibrering**.
+    2. Når du setter inn en ny sensor, logger du sensorbyttet: bruk **Logg sensorbytte** på kalibreringsskjermen, eller legg inn et sensorbytte for CGM i Helseportalen. Da vet **AAPS** når sensorøkten startet. Hvis **AAPS** oppdager et hull på mer enn 30 minutter i målingene, kan den be deg om å registrere et sensorbytte. Dette spørsmålet vises bare på hovedenheten, ikke på en klient.
+    3. Åpne pluginen og trykk på **Legg til kalibrering**. Skriv inn fingerstikkverdien din. **AAPS** kobler den sammen med sensorverdien fra de siste 10 minuttene.
     
-    ```{admonition} Kalibrer med omhu
+    En kalibrering godtas bare når:
+    
+    - et sensorbytte er logget og det har gått minst **2 timer** siden da (oppvarming),
+    - glukosen din er stabil. Hvis den endrer seg for fort, sier dialogen fra og viser grensen,
+    - det finnes en CGM-måling fra de siste 10 minuttene,
+    - den gjelder for nåtidspunktet. Du kan ikke legge inn eldre fingerstikkverdier.
+    
+    Slik virker korreksjonen:
+    
+    - **AAPS** trekker en rett linje gjennom parene fra den gjeldende sensoren: `corrected value = slope × sensor value + offset` (korrigert verdi = stigning × sensorverdi + forskyvning).
+    - Nyere par teller mer enn eldre: et par som er 2 dager gammelt teller omtrent 37 %, et par som er 4 dager gammelt omtrent 14 %. Linjen følger derfor sensoren din når den driver.
+    - Det trengs minst **2 par**.
+    - Hvis parene ligger tett (mindre enn 54 mg/dL / 3 mmol/L fra hverandre), blir verdiene bare forskjøvet (forskyvning, ingen stigning).
+    - Stigningen holdes mellom 0,55 og 1,6. En stigning utenfor dette området begrenses til nærmeste verdi.
+    - Sikkerhetsgrense: hvis korreksjonen ved 100 mg/dL (5,5 mmol/L) ville bli mer enn ±30 mg/dL (1,7 mmol/L), brukes ingen korreksjon. Dette beskytter deg mot en feil oppføring.
+    
+    Hva den endrer:
+    
+    - Den korrigerte verdien brukes overalt: BS på hovedskjermen, grafen og loopen. Selve sensormålingene endres ikke. Korreksjonen legges oppå, også på de tidligere målingene fra den gjeldende sensoren.
+    - Et nytt sensorbytte starter fra null. Par fra tidligere sensorer teller ikke lenger.
+    - På grafen vises en kalibrering som et merke ved fingerstikkverdien.
+    - Kalibreringer synkroniseres via Nightscout, så klientene dine viser de samme korrigerte verdiene.
+    
+    Kontroller og fjern oppføringer:
+    
+    - **Åpne plugin** viser status (for eksempel *Stigningstall 0,85, korreksjon i mellomområdet -0,4*), et diagram over parene dine med linjen, og listen over oppføringer.
+    - Hvis en oppføring er feil (for eksempel fordi du hadde sukker på fingeren), trykker du på søppelbøtte-ikonet ved siden av den. Linjen beregnes på nytt med en gang.
+    
+    ```{admonition} Bruker du xDrip+ som BS-kilde?
+    :class: note
+    xDrip+ har sin egen kalibrering. Kalibrer bare ett sted, så sensorverdiene ikke blir korrigert to ganger.
+    
+
+    {admonition} Kalibrer med omhu
     :class: warning
     En feil fingerstikkverdi gir feil glukoseverdier og dermed feil insulindosering. Vask hendene før du måler, og ikke kalibrer mens blodsukkeret ditt endrer seg raskt.
-    
 
 ![Konfigurasjon > Kalibrering](../images/v4/Configuration/configuration_calibration.png)
 
@@ -295,7 +326,7 @@ For å bruke den nye pumpen bytter du pumpedriver: velg **Virtuell pumpe**, bekr
 
 Velg type sensitivitetsdeteksjon. Mer informasjon om de ulike variantene finner du [her](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Dette analyserer historiske data fortløpende og justerer hvis det ser at du reagerer mer følsomt (eller motsatt, mer resistent) på insulin enn vanlig. Mer om hvordan selve sensitivitetsforholdet beregnes finner du i [Viktige funksjoner i AAPS > Autosens](#Open-APS-features-autosens).
 
-Du kan se sensitiviteten din på hovedskjermen i en [ekstra graf](#AapsScreens-section-g-additional-graphs), ved å velge SEN og følge med på den hvite linjen. Merk: du må ha kommet til [opplæringsmål 8](#objectives-objective8) for at Sensitivitetsdeteksjon/[Autosens](#Open-APS-features-autosens) skal kunne justere insulinmengden automatisk. Før du når dette opplæringsmålet, vises Autosens-prosenten / linjen i grafen bare til informasjon.
+Du kan se sensitiviteten din på hovedskjermen i en [ekstra graf](#AapsScreens-section-g-additional-graphs), ved å velge SENS% og følge med på den hvite linjen. Merk: du må ha kommet til [opplæringsmål 8](#objectives-objective8) for at Sensitivitetsdeteksjon/[Autosens](#Open-APS-features-autosens) skal kunne justere insulinmengden automatisk. Før du når dette opplæringsmålet, vises Autosens-prosenten / linjen i grafen bare til informasjon.
 
 ### Absorpsjonsinnstillinger
 

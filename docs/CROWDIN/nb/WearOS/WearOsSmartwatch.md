@@ -91,7 +91,7 @@ Installer **AAPS Wear**-apk-en med [Wear Installer 2](https://youtu.be/abgN4jQqH
 
 ```{admonition} Wear OS 5
 :class: warning
-På Wear OS 5 må AAPS-urskiven velges med Wear Installer 2 rett etter at Wear-appen er installert: installasjonsprogrammet tilbyr urskiven **AAPS(Egendefinert)** på slutten av installasjonen. Hvis du ved et uhell bytter til en annen urskive, gjenta installasjonen. Det er ikke sikkert det går an å endre innstillingene for urskiven (Mørkt, Watchdivider osv.).
+På Wear OS 5 må AAPS-urskiven velges med Wear Installer 2 rett etter at Wear-appen er installert: installasjonsprogrammet tilbyr urskiven **AAPS(Egendefinert)** på slutten av installasjonen. Hvis du ved et uhell bytter til en annen urskive, gjenta installasjonen. Det er ikke sikkert det går an å endre innstillingene for urskiven (Mørkt, Matchende skillelinje osv.).
 
 Hvis den klassiske urskiven virker for deg nå, **slå av automatiske oppdateringer på klokken**: neste fastvareoppdatering vil sannsynligvis ødelegge den. Hvis du likevel oppdaterer til Wear OS 6, les delen ovenfor: **AAPS** installerer da sin egen urskive i det nye formatet.
 ```
@@ -260,7 +260,7 @@ Det siste steget er å konfigurere **AAPS** på telefonen slik at den kommuniser
 
 For å gi bolus eller gjøre andre handlinger fra klokken, slå også på **Styr fra klokke** i [Innstillinger > Klokke](#preferences-wear).
 
-For å bytte til en annen **AAPS**-urskive trykker du på startskjermen på klokken, og du kommer til «Tilpass». Sveip så mot høyre til du kommer til alle **AAPS**-urskivene.
+For å bytte til en annen **AAPS**-urskive trykker og holder du på urskiven på startskjermen på klokken, og trykker på **Tilpass**. Sveip så mot høyre til du kommer til alle **AAPS**-urskivene.
 
 Hvis **AAPS** Wear.apk er installert riktig på smartklokken, ser det slik ut:
 
@@ -334,7 +334,7 @@ F – telefonbatteri
 
 G – basaldose (vist i E/t ved vanlig dose og i % ved midlertidig basal)
 
-H – BGI (blood glucose interaction) -> hvor mye BS «burde» stige eller falle ut fra insulinaktiviteten alene.
+H – BGI (blood glucose impact) -> hvor mye BS «burde» stige eller falle ut fra insulinaktiviteten alene.
 
 I – karbohydrater (aktive karbohydrater | eKarbo framover i tid)
 

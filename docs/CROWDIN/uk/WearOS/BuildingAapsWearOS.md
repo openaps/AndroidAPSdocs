@@ -78,7 +78,7 @@ Wear apk збирають так само, як apk для телефона, д�
 
 Коли Android Studio збирає повний застосунок **AAPS** (і взагалі будь-який підписаний застосунок), він створює файл .json у тій самій папці. Через це виникають помилки з [незафіксованими змінами](#troubleshooting_androidstudio-uncommitted-changes), коли ви збираєте наступний підписаний застосунок, наприклад застосунок **AAPS** wear. Найшвидше це виправити так: перейдіть до папки, де зібрано повний застосунок AAPS. Ваша папка, ймовірно, схожа на:
 
-`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\aapsclient\release.`
+`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\full\release.`
 
 Видаліть непотрібний файл .json або перемістіть його з цієї папки. Потім спробуйте зібрати застосунок **AAPS** wear ще раз. Якщо це не допомогло, докладніший [посібник з усунення проблем](../GettingHelp/TroubleshootingAndroidStudio.md) допоможе знайти файл, який спричиняє проблему. Це може бути і ваш файл keystore.
 

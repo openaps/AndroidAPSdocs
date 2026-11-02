@@ -10,7 +10,7 @@ Gdy zaczynasz pracę z **AAPS**, musisz utworzyć **profil**, nauczyć się wyko
 
 - praca na noce lub w systemie zmianowym – w **profilu** możesz ustawić przesunięcie czasu: zmień liczbę godzin w **profilu** o tyle, o ile później lub wcześniej idziesz spać albo wstajesz.
 
-Dlaczego używać **procentu profilu** zamiast tymczasowej zmiany dawki bazowej? **Procent profilu** działa skuteczniej, bo zmniejsza lub zwiększa w tej samej proporcji: dawkę bazową, ISF i I:C. Dzięki temu **AAPS** liczy dawki insuliny w zrównoważony sposób. Samo zmniejszenie dawki bazowej w **profilu** w **AAPS** daje niewiele, jeśli algorytm dalej używa tych samych współczynników ISF i I:C.
+Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. Dzięki temu **AAPS** liczy dawki insuliny w zrównoważony sposób. Samo zmniejszenie dawki bazowej w **profilu** w **AAPS** daje niewiele, jeśli algorytm dalej używa tych samych współczynników ISF i I:C.
 
 (ProfileSwitch-change-percentage)=
 
@@ -78,7 +78,7 @@ Wybierz profil i dotknij **▶ Aktywuj**. Na ekranie **Aktywuj** możesz ustawi�
 
 ![Ekran Aktywuj — procent, czas trwania, przesunięcie czasu, czas](../images/v4/Profiles/profile_activate.png)
 
-- **Procent** (30–250%, za każdym razem zaczyna od 100%) — zmienia cały profil w tej samej proporcji. 100% używa profilu bez zmian; na przykład 70% zmniejsza o 30% dawkę bazową i liczoną dawkę insuliny (zarówno bolusy do posiłków, jak i korekty). Nie zmienia celów glikemii ani wchłaniania węglowodanów. Pełne działanie opisuje część [Procent profilu](#profile-percentage).
+- **Procent** (30–250%, za każdym razem zaczyna od 100%) — zmienia cały profil w tej samej proporcji. 100% używa profilu bez zmian; na przykład 70% zmniejsza o 30% dawkę bazową i liczoną dawkę insuliny (zarówno bolusy do posiłków, jak i korekty). Nie zmienia celów glikemii ani wchłaniania węglowodanów. See [Profile Percentage](#ProfileSwitch-profile-percentage) for the full effect.
 - **Czas trwania** (0–10080 minut, czyli do 7 dni) — jak długo działa zmiana. **0 = bez końca** (aż zmienisz profil ponownie); inna wartość niż zero przywraca poprzedni profil, gdy czas się skończy.
 - **Cel tymczasowy / Aktywność** — pojawia się tylko wtedy, gdy ustawisz **Czas trwania** i **Procent** poniżej 100%. Włącz go, aby na ten sam czas uruchomić także [cel tymczasowy Aktywność](#TempTargets-activity-temp-target), tak jak przed ćwiczeniami.
 - **Zmiana czasu** — pokazuje *0h*; dotknij **Zmień**, aby przesunąć harmonogram do przodu lub do tyłu o maksymalnie 23 godziny (przydatne przy pracy zmianowej lub w podróży). Zobacz [Przesunięcie czasu](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
@@ -107,6 +107,8 @@ Jeśli pompa zgłasza dawkę bazową, która bardzo różni się od Twojego **pr
 
 Zmianę profilu możesz wykonać nie tylko z tego ekranu. Tę samą zmianę można też uruchomić z **zegarka z Wear OS**, ze sparowanego **urządzenia opiekuna** (zobacz [Sterowanie Master ↔ Client](../RemoteFeatures/ClientMasterControl.md)), ze **[sceny](Scenes.md)** albo z reguły **Automatyzacji**.
 
+(ProfileSwitch-profile-percentage)=
+
 ## Procent profilu
 
 Ważne jest, aby rozumieć najważniejsze cechy **procentu profilu**. Gdy ustawisz w **zmianie profilu** wyższy lub niższy procent, wszystkie ustawienia z **profilu** zostaną podniesione lub obniżone o ten sam procent.
@@ -125,23 +127,23 @@ Działanie **procentu profilu** pokazuje poniższa tabela:
 
 | Zmiana profilu  
 Procent |    Działanie    |     I:C  
-g/U     | przykład  
+g/U     | Example  
 15 g |          ISF  
 mmol/L/U  
 mg/dL/U          | U to lower  
 2mmol/L  
 40mg/dL |
-|:------------------------:|:---------------:|:-----------------:|:---------------:|:------------------------------------------:|:------------------------------:|
+|:------------------------:|:---------------:|:-----------------:|:--------------:|:------------------------------------------:|:------------------------------:|
 |           90%            |     Słabszy     | 5/0,9  
-=**5,55** |      2.7 U      | 2,2/0,9  
+=**5,55** |     2.7 U      | 2,2/0,9  
 =**2,4**  
   
 40/0,9  
 =**44,4** |             0.8 U              |
-|         **100%**         | **Standardowy** |       **5**       |     **3 U**     |                **2,2  
+|         **100%**         | **Standardowy** |       **5**       |    **3 U**     |                **2,2  
 40**                |           **0.9** U            |
 |           130%           |   Silniejszy    | 5/1,3  
-=**3,85** |      3.9 U      | 2,2/1,3  
+=**3,85** |     3.9 U      | 2,2/1,3  
 =**1,7**  
   
 40/1,3  
@@ -153,7 +155,7 @@ mg/dL/U          | U to lower
 
 „Przesunięcie czasu” w **profilu** przesuwa ustawienia **profilu** na zegarze dobowym („okołodobowym”) o podaną liczbę godzin. Może to pomóc:
 
-- **osobom pracującym na noce lub w systemie zmianowym**: przy pracy na noce ustaw w **profilu** liczbę godzin, o którą później lub wcześniej idziesz spać albo wstajesz; 
+- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
 - **osobom zmieniającym strefę czasową w podróży**; lub
 - **dzieciom z cukrzycą typu 1**: które mają stałą porę snu i insulinooporność uwzględnioną w **profilu**. Jeśli z jakiegoś powodu dziecko pójdzie spać później, opiekun może ustawić „przesunięcie czasu” w **profilu** dziecka. Wtedy **AAPS** zareaguje na insulinooporność w wybranym czasie.
 
@@ -169,7 +171,7 @@ Zawsze chodzi o to, ustawienia **profilu** z której godziny mają zastąpić us
 
 ![Kierunki przesunięcia czasu w zmianie profilu](../images/ProfileSwitch_PlusMinus2.png)
 
-Ten mechanizm zapisywania kopii **profilu** pozwala dużo dokładniej liczyć przeszłe wartości i śledzić zmiany **profilu**.
+This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
 
 (ProfileSwitch-keep-for-later)=
 

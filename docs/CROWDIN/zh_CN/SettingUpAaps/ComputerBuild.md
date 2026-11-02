@@ -106,12 +106,12 @@ Git是一个程序，允许您跟踪代码中的更改并与他人协作。您�
 (BuildingAaps-steps-for-installing-git)=
 #### 安装Git的步骤
 
-1.  检查**Git**是否已安装</0。您可以通过在Windows搜索栏中输入“git”来进行检查。如果看到**“Git bash”**或其他形式的Git，则表示已安装，您可以直接跳到[安装Android Studio](#install-android-studio)部分。
+1.  检查**Git**是否已安装</0。 You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
 
 
 ![已安装的Git](../images/Building-the-App/001_check_git_installed.png)
 
-2. 如果您的系统未安装 Git，请从[**这里**](https://git-scm.com/downloads)的“下载”部分下载并安装适用于您系统的最新版本。任何最新版本的Git都应该可以工作，请根据您的系统（Mac、Windows或Linux）选择正确的版本。
+2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). 任何最新版本的Git都应该可以工作，请根据您的系统（Mac、Windows或Linux）选择正确的版本。
 
 **Mac用户注意：**Git网页还会指导您安装一个名为“homebrew”的附加程序以辅助安装。如果您通过Homebrew安装Git，则无需更改任何首选项。
 
@@ -168,7 +168,7 @@ If you want to save hard disk space, you can uncheck Android Virtual Device: it 
 
 ![安装完成](../images/Building-the-App/015_InstallLadybug.png)
 
-在最后一步，点击“完成”以首次启动Android Studio。
+In the last step, click on "Finish" to start Android Studio for the first time.
 
 ![完成Android_Studio安装](../images/Building-the-App/016_InstallLadybug.png)
 
@@ -298,7 +298,7 @@ Android Studio可能会建议更新Gradle系统。不要更新Gradle！ 这会�
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-检查**Android Studio**是否可以自动定位正确的**Git可执行文件路径**，方法是点击“Test”按钮（1）：
+Check if **Android Studio** can automatically locate the correct **Path to Git executable** by clicking the button "Test" (1):
 
 ![Git Executable](../images/Building-the-App/039_GitTest.png)
 
@@ -365,7 +365,7 @@ If you have built AAPS before, do NOT create a new keystore but select your exis
 
 ```{admonition} WARNING!
 :class:警告
-请务必记下您的keystore存储位置。在构建下一个AndroidAPS更新时，您将需要它！
+请务必记下您的keystore存储位置。 You will need it when you build the next AAPS update!
 ```
 
 * 现在选择一个简单的密码（并记下它），在密码框（2）中输入它，并确认密码（2）。

@@ -84,11 +84,11 @@ Roche se retire du marché des pompes à insuline pour recentrer son offre diab�
     
     Ouvrez les paramètres avec **Paramètres** sur la carte **Accu-Chek Insight** dans **Configuration** > **Pompe**, ou avec l'icône en forme de roue dentée en haut à droite de l'écran de la pompe.
     
-    ![Paramètres du pilote Accu-Chek Insight](../images/v4/Pumps/accu_chek_insight_settings.png)
+    ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
     
-    Dans les paramètres Insight d'**AAPS**, vous pouvez activer les options suivantes :
+    In the Insight settings in **AAPS** you can enable the following options:
     
-    * **Enreg. changement de réservoir** : enregistre automatiquement un changement de cartouche d'insuline quand vous lancez le programme "fill cannula" (remplir la canule) sur la pompe.
+    * **Log reservoir changes**: automatically records an insulin cartridge change when you change the cartridge in the pump.
     
     * **Enreg. changement de tubulure** : ajoute une note dans la base de données d'**AAPS** quand vous lancez le programme "tube filling" (remplissage de la tubulure) sur la pompe.
     
@@ -162,7 +162,7 @@ La version du firmware se trouve dans le menu.
 
 ## Remplacement de pile
 
-La durée de vie de la pile de l'Insight, lorsque vous bouclez, est comprise entre 10 et 14 jours, et au maximum 20 jours. L'utilisateur qui a signalé cela utilise des piles au lithium Energizer.
+Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days. L'utilisateur qui a signalé cela utilise des piles au lithium Energizer.
 
 La pompe Insight dispose d'une petite batterie interne pour garder les fonctions essentielles comme l'horloge en cours d'exécution pendant que vous changez la pile. Si le changement de la pile prend trop de temps, cette batterie interne peut manquer d'énergie, l'heure sera remise à zéro, et il vous sera demandé d'entrer à nouveau la date et l'heure après avoir mis la nouvelle pile. Si cela arrive, toutes les entrées d'AAPS avant le changement de pile ne sont plus prises en compte dans les calculs, car l'heure correcte ne peut pas être déterminée.
 

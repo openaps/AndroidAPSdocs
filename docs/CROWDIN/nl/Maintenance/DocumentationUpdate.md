@@ -48,7 +48,7 @@
 
 - DiaKEM: nieuwe installaties werken niet meer na een upgrade van de servers @psonnera
 - Gepatchte Libre 2-app verwijderd (verouderd): werkt niet met nieuwe sensoren @psonnera
-- Pagina over Omnipod Dash herzien @XiTatiON
+- Reworked Omnipod DASH page @XiTatiON
 
 ## Augustus 2025
 
@@ -97,7 +97,7 @@ De documentatie van AAPS 3.1 staat [hier](https://androidaps.readthedocs.io/en/3
 - [Waarschuwingsteken voor BG-kwaliteit](#aaps-screens-bg-warning-sign) @tanja
 - [Update Medtronic-pomp](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
 - [Nodige controles na het bijwerken naar AAPS 3.0](Update3_0.md) @tanja
-- [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
+- [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
 - Documentatie bijgewerkt voor AAPS 3.0 (deels) @xJoe
 - [Wear OS voor AAPS 3.0](../WearOS/WearOsSmartwatch.md) @peterleimbach
 
@@ -112,7 +112,7 @@ De documentatie van AAPS 3.1 staat [hier](https://androidaps.readthedocs.io/en/3
 
 ## November 2021
 
-- Beste werkwijze voor het kalibreren van een Libre 2-sensor
+- Best practices for calibrating a Libre 2 sensor
 - [ISF](../UsefulLinks/FAQ.md) - nieuwe uitleg van het effect
 - Update van [Problemen met Android Studio oplossen](../GettingHelp/TroubleshootingAndroidStudio.md)
 - Gepatchte [Dexcom](../CompatibleCgms/DexcomG6.md)-app verwijderd, omdat die verouderd is
@@ -212,7 +212,7 @@ De documentatie van AAPS 3.1 staat [hier](https://androidaps.readthedocs.io/en/3
 
 ## December 2019
 
-- [Android Auto](../RemoteFeatures/AndroidAuto.md) - instellen met schermafbeeldingen
+- [Android Auto](../RemoteFeatures/AndroidAuto.md) - setup with screenshots
 - [Accu-Chek Insight & Autotune](#Accu-Chek-Insight-Pump-settings-in-aaps) - tijdelijke oplossing voor gebruik
 - [Glimp](#Config-Builder-bg-source) - versie 4.15.57 en nieuwer ondersteund
 - [Watchfaces](../WearOS/WearOsSmartwatch.md) - grote update, veel meer details
@@ -238,7 +238,7 @@ De documentatie van AAPS 3.1 staat [hier](https://androidaps.readthedocs.io/en/3
 ## Oktober 2019
 
 - [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
-- [Accu-Chek Insight - logopties](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- [Accu-Chek Insight - log options](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [COB-berekening op een aparte pagina](../DailyLifeWithAaps/CobCalculation.md)
 - [COB - onjuiste COB-waarde herkennen](#CobCalculation-detection-of-wrong-cob-values)
 - [Dexcom G6 specifieke probleemoplossing](#DexcomG6-troubleshooting-g6)

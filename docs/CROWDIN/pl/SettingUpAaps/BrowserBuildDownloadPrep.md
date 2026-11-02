@@ -5,18 +5,17 @@ Obie opcje magazynu kluczy (Opcja 1 i Opcja 2) używają tego samego pliku przyg
 ````{admonition} Note
 :class: note
 
-1. Jeśli otworzysz tę stronę w aplikacji (w widoku WWW), plik HTML może się nie pobrać. Skopiuj wtedy adres URL i otwórz go w swojej przeglądarce:
+1. Jeśli otworzysz tę stronę w aplikacji (w widoku WWW), plik HTML może się nie pobrać. Please copy the URL and open it in your browser instead:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
-Albo otwórz stronę najnowszego wydania:
+Or visit the latest release page:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
-2.Kopia zapasowa na tej stronie:
-
- - Jeśli link zewnętrzny też nie działa, możesz pobrać ten plik zapasowy.
+2. Backup copy hosted on this site:
+ - If the external link is also unavailable, you can use this backup file to download.
 <!--crowdin:disable-->
 
 ```{eval-rst}

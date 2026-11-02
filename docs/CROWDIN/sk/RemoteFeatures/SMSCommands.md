@@ -201,18 +201,18 @@ The *Auth* column in the tables below, indicates whether such a strong authentic
 
 ### Dáta CGM
 
-| Príkaz     | Overenie | Funkcia a *odpoveď*                                                                                                                                                                     |
-| ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BG         | Nie      | Vráti: poslednú glykémiu, rozdiel, IOB (bolus a bazál), COB<br/>*Posledná glykémia: 5.6 pred 4 min, Rozdiel: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Bazál: 0.10U)*                   |
-| CAL 5.6/90 | Áno      | Kalibruje CGM hodnotou 5.6/90<br/>(použite hodnotu podľa vašich jednotiek glykémie)<br/>Funguje, iba ak je to v **AAPS** správne nastavené.<br/>*Kalibrácia odoslaná* |
+| Príkaz     | Overenie | Funkcia a *odpoveď*                                                                                                                                                                                                               |
+| ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BG         | Nie      | Vráti: poslednú glykémiu, rozdiel, IOB (bolus a bazál), COB<br/>*Posledná glykémia: 5.6 pred 4 min, Rozdiel: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Bazál: 0.10U)*                                                             |
+| CAL 5.6/90 | Áno      | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent. Receiving must be enabled in xDrip+.* |
 
 ### Pumpa
 
-| Príkaz               | Overenie | Funkcia a *odpoveď*                                                                                   |
-| -------------------- | -------- | ----------------------------------------------------------------------------------------------------- |
-| PUMPA                | Nie      | Last conn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
-| PUMP DISCONNECT *30* | Áno      | Odpojí pumpu na *30* minút                                                                            |
-| PUMP CONNECT         | Áno      | Pumpa bola znovu pripojená                                                                            |
+| Príkaz               | Overenie | Funkcia a *odpoveď*                                                                                  |
+| -------------------- | -------- | ---------------------------------------------------------------------------------------------------- |
+| PUMPA                | Nie      | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP DISCONNECT *30* | Áno      | Odpojí pumpu na *30* minút                                                                           |
+| PUMP CONNECT         | Áno      | Pumpa bola znovu pripojená                                                                           |
 
 ### Bazál
 
@@ -229,14 +229,14 @@ Some pumps take a temp basal only in percent, others only in U/h. If you use the
 
 ### Okruh
 
-| Príkaz            | Overenie | Funkcia a *odpoveď*                                                                                                                                                                                                                                                                         |
-| ----------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LOOP STATUS       | Nie      | Odpoveď závisí od aktuálneho stavu:<br/> - *Uzavretý okruh je deaktivovaný*, ak je okruh deaktivovaný alebo v režime LGS<br/> - *Uzavretý okruh je aktivovaný*, ak je okruh uzavretý alebo otvorený<br/> - *Pozastavený (10 min)*, ak je okruh odpojený alebo pozastavený |
-| LOOP STOP/DISABLE | Áno      | Pumpa sa vráti k naprogramovanej bazálnej dávke.<br/>*Uzavretý okruh bol deaktivovaný*                                                                                                                                                                                                |
-| LOOP SUSPEND 20   | Áno      | *Uzavretý okruh pozastavený na 20 minút*                                                                                                                                                                                                                                                    |
-| LOOP RESUME       | Áno      | *Uzavretý okruh obnovený*                                                                                                                                                                                                                                                                   |
-| LOOP CLOSED       | Áno      | *Aktuálny režim okruhu: Uzavretý okruh*                                                                                                                                                                                                                                                     |
-| LOOP LGS          | Áno      | *Aktuálny režim okruhu: Ochrana pred nízkou glykémiou*                                                                                                                                                                                                                                      |
+| Príkaz            | Overenie | Funkcia a *odpoveď*                                                                                                                                                                                                                                                                |
+| ----------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LOOP STATUS       | Nie      | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled<br/> - *Loop is enabled* if the loop is closed, open or LGS<br/> - *Pump disconnected* if the pump is disconnected<br/> - *Suspended (10 m)* if the loop is suspended |
+| LOOP STOP/DISABLE | Áno      | Pumpa sa vráti k naprogramovanej bazálnej dávke.<br/>*Uzavretý okruh bol deaktivovaný*                                                                                                                                                                                       |
+| LOOP SUSPEND 20   | Áno      | *Loop suspended*                                                                                                                                                                                                                                                                   |
+| LOOP RESUME       | Áno      | *Uzavretý okruh obnovený*                                                                                                                                                                                                                                                          |
+| LOOP CLOSED       | Áno      | *Current running mode: Closed Loop*                                                                                                                                                                                                                                                |
+| LOOP LGS          | Áno      | *Current running mode: Low Glucose Suspend*                                                                                                                                                                                                                                        |
 
 ### Bolus
 
@@ -348,6 +348,6 @@ If the other app is installed on multiple phones make sure to deactivate upload 
 (sms-commands-too-many-messages)=
 ### Dostávam od SMS príkazov až príliš veľa SMS správ. Môžem ich obmedziť alebo vypnúť?
 
-Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include Whatsapp, Lime, Telegram, and Facebook Messenger.
+Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include WhatsApp, LINE, Telegram, and Facebook Messenger.
 
-It is possible to disable the "Profile changed" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly**  `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+It is possible to disable the "Basal profile in pump updated" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly** `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.

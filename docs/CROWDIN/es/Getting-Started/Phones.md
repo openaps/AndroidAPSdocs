@@ -30,7 +30,7 @@ El documento es de solo lectura. Con CTRL-F puedes buscar en el texto de la hoja
 
 Para registrar tu prueba de una configuración de hardware, rellena este [formulario](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Después de rellenar el formulario, la hoja se actualiza automáticamente cada 5 minutos.
 
-Si hay algún problema con la hoja de cálculo, contacta con la persona que la mantiene, *@theodoor5137*, en Discord, o consulta la [página ¿Dónde puedo obtener ayuda? ](../GettingHelp/WhereCanIGetHelp.md).
+Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
 
 ## No encontré mi teléfono
 

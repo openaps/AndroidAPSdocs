@@ -48,7 +48,7 @@
 
 - DiaKEM: new installs don't work after servers upgrade @psonnera
 - Removed Libre 2 patched app (obsolete): doesn't work with new sensors @psonnera
-- Reworked Omnipod Dash page @XiTatiON
+- Reworked Omnipod DASH page @XiTatiON
 
 ## August 2025
 
@@ -97,7 +97,7 @@ AAPS 3.1版文档[在此处](https://androidaps.readthedocs.io/en/3.1/index.html
 - [血糖质量警告标志](#aaps-screens-bg-warning-sign) @tanja
 - [美敦力泵更新](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
 - [更新至AAPS 3.0后的必要检查](Update3_0.md) @tanja
-- [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
+- [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
 - AAPS 3.0文档部分更新 @xJoe
 - [AAPS 3.0的Wear OS智能手表](../WearOS/WearOsSmartwatch.md) @peterleimbach
 
@@ -112,7 +112,7 @@ AAPS 3.1版文档[在此处](https://androidaps.readthedocs.io/en/3.1/index.html
 
 ## 2021年11月
 
-- Best practices for calibrating a libre 2 sensor
+- Best practices for calibrating a Libre 2 sensor
 - [ISF](../UsefulLinks/FAQ.md)影响表述的修改
 - Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - 移除已废弃的[Dexcom](../CompatibleCgms/DexcomG6.md)补丁应用
@@ -212,7 +212,7 @@ AAPS 3.1版文档[在此处](https://androidaps.readthedocs.io/en/3.1/index.html
 
 ## 2019年12月
 
-- [Android Auto](../RemoteFeatures/AndroidAuto.md) - 设置步骤及截图
+- [Android Auto](../RemoteFeatures/AndroidAuto.md) - setup with screenshots
 - [Accu-Chek Insight与Autotune](#Accu-Chek-Insight-Pump-settings-in-aaps) - 使用方法
 - [Glimp](#Config-Builder-bg-source) - 支持版本4.15.57及更高版本
 - [智能手表表盘](../WearOS/WearOsSmartwatch.md) - 重大更新，提供更多详细信息
@@ -238,7 +238,7 @@ AAPS 3.1版文档[在此处](https://androidaps.readthedocs.io/en/3.1/index.html
 ## 2019年10月
 
 - [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
-- [AccuChek Insight - 日志选项](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- [Accu-Chek Insight - log options](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [COB计算单独页面](../DailyLifeWithAaps/CobCalculation.md)
 - [COB - 错误COB值检测](#CobCalculation-detection-of-wrong-cob-values)
 - [Dexcom G6特定故障排除](#DexcomG6-troubleshooting-g6)

@@ -78,7 +78,7 @@ Next: install the Wear apk on the watch, see [Set up AAPS on your Wear OS watch]
 
 In the process of building the full **AAPS** app (and in fact any signed app), Android Studio generates a .json file in the same folder. Das kann zum Fehler [uncommitted changes](#troubleshooting_androidstudio-uncommitted-changes) führen, wenn die nächste signierte App (wie zum Beispiel die **AAPS** wear App) erstellt werden soll. Am schnellsten kann das behoben werden, in dem Du den Ordner, in dem die Vollversion der AAPS App erzeugt wurde, aufrufst. Der Ordner sollte ungefähr so aussehen:
 
-`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\aapsclient\release.`
+`C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\full\release.`
 
 Lösche die .json Datei oder verschiebe sie in einen anderen Ordner. Versuche nun die **AAPS** wear App erneut zu erzeugen (build). Wenn das nicht helfen sollte, findest Du im Abschnitt[Fehlerbehebung für Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) Hilfestellung, um die Datei zu identifizieren, die das Problem ausgelöst hat. Auch die Keystore-Datei kann das Problem sein.
 

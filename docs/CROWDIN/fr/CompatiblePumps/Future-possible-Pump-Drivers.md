@@ -1,6 +1,6 @@
 # Pilotes de pompe futurs (possibles)
 
-Voici une liste de certaines pompes et leur statut de prise en charge dans l'un des systèmes en boucle, puis leur statut dans AAPS. À la fin, vous trouverez quelques informations sur ce qu'il faut pour qu'une pompe soit « bouclable ».
+This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
 
     {contents} Table des matières
     :depth: 1
@@ -42,7 +42,7 @@ Tandem : t:Mobi ([Page d'accueil](https://www.tandemdiabetes.com/))
 
 ### Pompe à insuline Willcare ([Page d'accueil](http://shinmyungmedi.com/en/))
 
-**État de la boucle :** Pour le moment, elle n'est pas candidate à la boucle, mais leur équipe nous a contactés et ils veulent faire évoluer leur pompe pour la rendre bouclable (pour le moment, je pense qu'il ne manque que les commandes de lecture et de définition du profil).
+**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
 
 **Configuration matérielle requise pour AAPS :** Aucune. Il semble qu'elle dispose du Bluetooth.
 

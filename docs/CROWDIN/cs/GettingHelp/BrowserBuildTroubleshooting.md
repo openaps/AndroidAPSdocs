@@ -107,8 +107,8 @@ Klepněte na **Re-run jobs**. Nové sestavení můžete také spustit jako obvyk
   - [Aktualizujte secret `GDRIVE_OAUTH2`](#aaps-ci-update-secret) ve svém repozitáři na GitHubu novým tokenem a pak [spusťte sestavení znovu](#aaps-ci-rerun).
 
 (aaps-ci-disable-software)=
-### Vypněte software, který může rušit ověření OAUTH
-  - Než se pokusíte získat klíč OAUTH, vypněte v telefonu každou VPN nebo bezpečnostní aplikaci (firewall, antimalware,...).
+### Disable Software That May Interfere With OAuth Verification
+  - Disable any VPN or security app (firewall, antimalware,...) on the phone before trying to get the OAuth key.
 
 (aaps-ci-actions-permission)=
 ### Zkontrolujte nastavení oprávnění GitHub Actions

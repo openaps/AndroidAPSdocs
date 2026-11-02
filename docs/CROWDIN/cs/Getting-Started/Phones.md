@@ -30,7 +30,7 @@ Dokument je jen pro čtení. Pomocí CTRL-F můžete hledat v textu tabulky Goog
 
 Pokud chcete zaznamenat svůj test nastavení hardwaru, vyplňte prosím tento [formulář](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Po vyplnění formuláře se tabulka automaticky aktualizuje každých 5 minut.
 
-S jakýmikoli problémy s tabulkou se obraťte na jejího správce, *@theodoor5137*, na Discordu, nebo se podívejte na stránku [Kde mohu získat pomoc? ](../GettingHelp/WhereCanIGetHelp.md).
+Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
 
 ## Nenašel/a jsem svůj telefon
 

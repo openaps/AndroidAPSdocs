@@ -108,12 +108,12 @@ Git ist ein Programm, das es Dir erlaubt Änderungen im Code zu verfolgen und mi
 (BuildingAaps-steps-for-installing-git)=
 #### Schritte zur Installation von Git
 
-1.  Überprüfe, ob Du **Git** nicht bereits installiert hast. Du überprüfst es, indem Du „git“ in die Windows-Suchleiste eingibst. Wenn **„Git bash“** oder eine andere Form von Git gefunden wird, ist es bereits installiert und Du kannst direkt zur [Installation von Android Studio](#install-android-studio) weitergehen:
+1.  Überprüfe, ob Du **Git** nicht bereits installiert hast. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. Sollte Git noch nicht installiert sein, lade die neueste Version für Dein System aus dem „Download“-Bereich [**hier**](https://git-scm.com/downloads) herunter und installiere sie. Jede aktuelle Git-Version sollte funktionieren, wähle die richtige Version nach deinem System, entweder Mac, Windows oder Linux.
+2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Jede aktuelle Git-Version sollte funktionieren, wähle die richtige Version nach deinem System, entweder Mac, Windows oder Linux.
 
 **Hinweis für Mac-Benutzer:** Die Git-Webseite schlägt vor, ein zusätzliches Programm namens "Homebrew" zu installieren, um die Installation zu unterstützen. Wenn Du git über homebrew installierst, musst Du keine Einstellungen ändern.
 
@@ -170,7 +170,7 @@ Sobald die Installation abgeschlossen ist, klicke auf "Next"
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-Im letzten Schritt klicke auf "Finished" (dt. Fertig), um Android Studio erstmalig zu starten.
+In the last step, click on "Finish" to start Android Studio for the first time.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
@@ -180,7 +180,7 @@ Du wirst danach gefragt, ob Du bei der Verbesserung des Android Studios helfen m
 
 Der Willkommensbildschirm begrüßt Dich zur Installation des Android Studios. Klicke "Next" (dt. Weiter).
 
-![Willkommen](../images/Building-the-App/022_WelcomeAndroidStudioInstallation.png)
+![Welcome](../images/Building-the-App/022_WelcomeAndroidStudioInstallation.png)
 
 Wähle "Standard" als Installationstyp aus.
 
@@ -250,12 +250,12 @@ Du wirst jetzt einen Screen sehen, der Dir sagt, dass das Repository geklont wur
 
 Irgendwann wird sich Android Studio schließen und neu starten. Du wirst gefragt, ob Du dem Projekt vertrauen willst. Klicke auf "Trust project":
 
-  ![Projekt vertrauen](../images/Building-the-App/035_TrustProject.png)
+  ![Trust project](../images/Building-the-App/035_TrustProject.png)
 
 
 Nur für Windows-Benutzer: Wenn Deine Firewall um Erlaubnis bittet, lasse den Zugriff zu:
 
- ![Java-Firewall-Berechtigung](../images/AndroidStudio361_18.png)
+ ![Firewall permission java](../images/AndroidStudio361_18.png)
 
 Nachdem das Projektarchiv erfolgreich geklont wurde, wird Android Studio das geklonte Projekt öffnen.
 
@@ -302,7 +302,7 @@ Sage Android Studio nun, wo Git, das Du [vorher](#install-git-if-you-dont-have-i
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-Klicke auf den Button „Test“ (1), um zu prüfen, ob **Android Studio** den **Pfad zur ausführbaren Datei git.exe** automatisch ermitteln kann:
+Check if **Android Studio** can automatically locate the correct **Path to Git executable** by clicking the button "Test" (1):
 
 ![Git Executable](../images/Building-the-App/039_GitTest.png)
 
@@ -317,7 +317,7 @@ If you find that **git.exe** is not found automatically, or that clicking "Test"
 * click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
 * Überprüfe die Einstellungen mit dem **Test**-Button!
 
-  ![Git wurde nicht gefunden](../images/Building-the-App/039_GitTestError.png)
+  ![Git not found](../images/Building-the-App/039_GitTestError.png)
 
 (Building-APK-generate-signed-apk)=
 ### Signierte AAPS APK erstellen
@@ -336,11 +336,11 @@ Für unsere Zwecke bedeutet das nur, dass wir eine Signatur- oder "Keystore"-Dat
 
 Klicke oben links auf das Hamburger-Menü, um die Menüleiste zu öffnen. Wähle **Build** (1) und dann **Generate Signed App Bundle / APK** (2) aus
 
-![Apk erstellen](../images/Building-the-App/040_GenerateSignedAPK.png)
+![Build apk](../images/Building-the-App/040_GenerateSignedAPK.png)
 
 Select "APK" (1) instead of "Android App Bundle" and click "Next" (2):
 
-![APK statt Bundle](../images/Building-the-App/041_APK.png)
+![APK instead of bundle](../images/Building-the-App/041_APK.png)
 
 In the next screen, make sure that "Module" is set to "AndroidAPS.app" (1). The part before ".app" is the name of the folder you cloned the code into.
 
@@ -369,7 +369,7 @@ If you have built AAPS before, do NOT create a new keystore but select your exis
 
 ```{admonition} WARNING!
 :class: warning
-Schreib Dir auf, wo Dein Keystore gespeichert wird. Du wirst es für Dein nächstes AndroidAPS-Update brauchen!
+Schreib Dir auf, wo Dein Keystore gespeichert wird. You will need it when you build the next AAPS update!
 ```
 
 * Wähle jetzt ein einfaches Passwort (und notiere es Dir), gib es in das Passwortfeld (2) ein und bestätige es (2).
@@ -398,16 +398,16 @@ Notiere Dir diese Passwörter! Du wirst sie für Dein nächstes AAPS-Update brau
 
 Auf der Seite **Generate signed App Bundle or APK** wird jetzt der Pfad zu Deinem Keystore angezeigt. Gib jetzt erneut das Keystore-Password (1) und das Key-Password (2) ein, und hake die Box "remember password" an (3), sodass Du es beim nächsten Erstellen der APK (z.B. bei der nächsten AAPS-Aktualisierung) nicht noch einmal eingeben brauchst. Klicke auf "Next" (4):
 
-![Passwörter speichern](../images/Building-the-App/044_RememberPwd.png)
+![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
 
 
 On the next screen, select build variant "fullRelease" (1) and click "Create" (3). You should remember the destination folder displayed at (2), as later you will find your built apk file there!
 
-   ![Build-Variante auswählen](../images/Building-the-App/045_BuildPath.png)
+   ![Select build variant](../images/Building-the-App/045_BuildPath.png)
 
 Android Studio wird jetzt die **AAPS**-APK erstellen. Es wird unten rechts "Gradle Build running" (2) angezeigt. Der Vorgang dauert je nach Computer und Internetverbindung einige Zeit, **Gedulde Dich!** Wenn Du den Fortschritt des „Builds“ mitverfolgen möchtest, klicke auf den kleinen Hammer „Build“ (1) unten im Android Studio:
 
-![Gradle läuft](../images/Building-the-App/046_BuildRunning.png)
+![Gradle Running](../images/Building-the-App/046_BuildRunning.png)
 
 Jetzt kannst Du den Build-Fortschritt verfolgen:
 
@@ -415,15 +415,15 @@ Jetzt kannst Du den Build-Fortschritt verfolgen:
 
 Sobald der Build abgeschlossen ist, wird Android Studio "BUILD SUCCESSFUL" anzeigen. Möglicherweise erscheint eine Popup-Benachrichtigung auf der Du "locate" anklicken kannst. If you miss this, click on the notification icon (1) to bring up the Notifications, and then on **locate** (2):
 
-![Build abgeschlossen](../images/Building-the-App/049_ReopenNotification.png)
+![Build finished](../images/Building-the-App/049_ReopenNotification.png)
 
 **_Wenn der „Build“ fehlgeschlagen ist, lies bitte den Abschnitt [Fehlerbehebung für Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)._**
 
 Klicke im Benachrichtigungsfeld auf den blauen Link "locate":
 
-![Build finden](../images/Building-the-App/048_BuildFinished.png) Der Dateimanager öffnet sich und zeigt Dir die gerade von Dir erzeugte APK-Datei an.
+![Locate build](../images/Building-the-App/048_BuildFinished.png) Der Dateimanager öffnet sich und zeigt Dir die gerade von Dir erzeugte APK-Datei an.
 
-   ![Datei-Speicherort apk](../images/Building-the-App/050_LocateAPK.png)
+   ![File location apk](../images/Building-the-App/050_LocateAPK.png)
 
 Glückwunsch! Du hast die **AAPS**-APK-Datei erstellt. Du wirst diese Datei im nächsten Abschnitt der Dokumentation auf Dein Smartphone übertragen.
 

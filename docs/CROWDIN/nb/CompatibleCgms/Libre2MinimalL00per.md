@@ -313,7 +313,7 @@ På skjermen **BT Device** (sveip til venstre) kan du se flere detaljer om tilko
 
 - **Bruke NFC-skanning i LL ETTER at binding/sammenkobling i xDrip er fullført**: Du kan gjøre NFC-skanninger, men bindingen/sammenkoblingen med xDrip må være fullført først. Se alltid i xDrip om det nærmer seg 5-minuttersmålingen (altså 4 minutter siden). Hvis det er nær 5 min, venter du til den nye BT-målingen har kommet inn, og gjør så NFC-skanningen. Hvis du treffer feil tidspunkt, forstyrrer det BT-prosessen i xDrip, og du får ikke BT-målinger. Det kan ta en stund før den binder seg på nytt og sender igjen, og noen ganger kan sensorens BT-tilkobling bli «stjålet» av LL. Men mellom disse BT-målingene har jeg ikke hatt problemer med å gjøre en NFC-skanning og så deaktivere appen med en gang. Jeg er ikke sikker på om LL må deaktiveres hver gang, men jeg deaktiverer den for å være på den sikre siden.
 
-- - **Hva er det som skjer?** Når en Bluetooth-tilkobling opprettes, lages en privat delt nøkkel som trengs for kommunikasjonen mellom sensoren og appen/enheten som kobler til. Det er stor sannsynlighet for at LL-appen eller Reader lager en ny privat delt nøkkel for kommunikasjonen under tilkoblingen. Det betyr at xDrip etter bindingen ikke kjenner den nye nøkkelen og ikke kan kommunisere med sensoren.
+- **Hva er det som skjer?** Når en Bluetooth-tilkobling opprettes, lages en privat delt nøkkel som trengs for kommunikasjonen mellom sensoren og appen/enheten som kobler til. Det er stor sannsynlighet for at LL-appen eller Reader lager en ny privat delt nøkkel for kommunikasjonen under tilkoblingen. Det betyr at xDrip etter bindingen ikke kjenner den nye nøkkelen og ikke kan kommunisere med sensoren.
 
   - Flere brukere har rapportert at LL-appen kan startes igjen etter at sensoren er startet og xDrip mottar målinger. I Android-tillatelsene for LL-appen trenger du bare å slå av tillatelsen **Posisjon** (Allow Location). Når dette er gjort, skal du kunne bruke LL-appen og xDrip samtidig. Jeg anbefaler at du ikke velger en standardapp for NFC-skanning, men velger hvilken app som skal lese sensoren ved hver NFC-skanning. Og IKKE GLEM, ved neste sensorbytte, å tvangsavslutte LL-appen etter den første NFC-skanningen som starter oppvarmingen av den nye sensoren. Når sensoren er konfigurert og xDrip mottar målinger, kan du starte LL-appen igjen.
 
@@ -399,7 +399,7 @@ På skjermen **BT Device** (sveip til venstre) kan du se flere detaljer om tilko
 - **FSL** - FreeStyle Libre
   - **Libre 1 (FSL1)** - bare NFC. Første versjon av sensoren
 
-  - **FSL2 (FSL2)** - Bluetooth og NFC. Andre versjon av sensoren.
+  - **Libre 2 (FSL2)** - Bluetooth og NFC. Andre versjon av sensoren.
 
   - **Libre 3 (FSL3)** - Bluetooth og NFC. Tredje, mindre versjon av sensoren. Støttes ikke av OOP2 (se Juggluco).
 

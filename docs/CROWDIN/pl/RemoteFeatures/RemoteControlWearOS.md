@@ -287,7 +287,7 @@ Jeśli **AAPS** musiał ograniczyć dawkę, np. dlatego, że obliczony bolus jes
     | --- | --- | --- | --- | --- | --- |
     | ![Okno leczenia, strona insuliny](../images/wearos/dialogs/dialog_treatment.png) | ![Okno insuliny](../images/wearos/dialogs/dialog_insulin.png) | ![Okno węglowodanów](../images/wearos/dialogs/dialog_carbs.png) | ![Okno eCarbs](../images/wearos/dialogs/dialog_ecarbs.png) | ![Okno celu tymczasowego, strona czasu trwania](../images/wearos/dialogs/dialog_temp_target.png) | ![Okno zmiany profilu](../images/wearos/dialogs/dialog_profile_switch.png) |
     
-    [1] W ustawieniach zegarka **Ustawienia** > **Interfejs** włącz **Procent kalkulatora**, aby w kalkulatorze bolusa pokazać pole procentu. Domyślny procent pochodzi z ustawienia telefonu [„Zastosuj tę wartość do korekty glikemii i węglowodanów w obliczeniach kalkulatora bolusa”](#Preferences-deliver-this-part-of-bolus-wizard-result). Pozostałe ustawienia kalkulatora to ustawienia telefonu w **Ustawienia** > **Ustawienia kalkulatora bolusa**.
+    [1] W ustawieniach zegarka **Ustawienia** > **Interfejs** włącz **Procent kalkulatora**, aby w kalkulatorze bolusa pokazać pole procentu. The default percentage comes from the phone's ["Bolus percentage"](#Preferences-deliver-this-part-of-bolus-wizard-result). Pozostałe ustawienia kalkulatora to ustawienia telefonu w **Ustawienia** > **Ustawienia kalkulatora bolusa**.
     
     [2] W ustawieniach zegarka **Ustawienia** > **Interfejs** włącz **Typ posiłku w kalkulatorze**, aby pokazać stronę **Typ posiłku**, na której wybierasz **Pieczywo**, **Ciasto** lub **Pizza**, aby podzielić węglowodany wolnego posiłku na węglowodany teraz i eCarbs później. Zobacz [Wybór typu posiłku](#WearOsSmartwatch-wizard-meal-type).
     
@@ -357,7 +357,7 @@ Jeśli **AAPS** musiał ograniczyć dawkę, np. dlatego, że obliczony bolus jes
     
     Uproszczony interfejs jest dostępny dla tarcz Digital Style i Custom. Uproszczony interfejs jest opcjonalny i ustawiasz go w ustawieniach tarczy (przytrzymaj tarczę i kliknij „edytuj” lub ikonę koła zębatego). Wybierz ustawienie „Uprość UI” i ustaw je na „Podczas ładowania” lub „Always On i ładowanie”.
     
-    Opcje programisty Androida pozwalają, aby zegarek nie usypiał ekranu podczas ładowania. Jak włączyć opcje programisty, zobacz w [oficjalnej dokumentacji](https://developer.android.com/training/wearables/get-started/debugging). W opcjach programisty ustaw „Nie usypiaj podczas ładowania” (Stay awake when charging) na „włączone”.
+    Opcje programisty Androida pozwalają, aby zegarek nie usypiał ekranu podczas ładowania. Jak włączyć opcje programisty, zobacz w [oficjalnej dokumentacji](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options.
     
     Uwaga: nie wszystkie ekrany dobrze znoszą tryb Always On. Może to powodować wypalenie ekranu, szczególnie w starszych ekranach OLED. Zegarki zwykle przyciemniają ekran, aby zapobiec wypaleniu; sprawdź instrukcję obsługi, informacje producenta lub poszukaj porad w internecie.
     
@@ -385,7 +385,7 @@ Jeśli **AAPS** musiał ograniczyć dawkę, np. dlatego, że obliczony bolus jes
     
     ## Skrót do wyciszania alarmu
     
-    Zegarek sam [pokazuje alarm](#WearOsSmartwatch-phone-alarms); skrót to drugi sposób, aby go wyciszyć jednym naciśnięciem. Możesz utworzyć skrót do wyciszania ostrzeżeń i alarmów AAPS. Wyciszenie dźwięku z zegarka jest wygodne i szybsze, bo nie musisz sięgać po telefon. Uwaga: nadal musisz sprawdzić komunikat alarmu na telefonie i odpowiednio na niego zareagować, ale możesz to zrobić później. Jeśli Twój zegarek ma dwa przyciski, możesz przypisać jeden z nich do programu `AAPS Snooze Alert` (w polskiej wersji „Wycisz Alarm AAPS”).
+    Zegarek sam [pokazuje alarm](#WearOsSmartwatch-phone-alarms); skrót to drugi sposób, aby go wyciszyć jednym naciśnięciem. Możesz utworzyć skrót do wyciszania ostrzeżeń i alarmów AAPS. Wyciszenie dźwięku z zegarka jest wygodne i szybsze, bo nie musisz sięgać po telefon. Note: you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. Jeśli Twój zegarek ma dwa przyciski, możesz przypisać jeden z nich do programu `AAPS Snooze Alert` (w polskiej wersji „Wycisz Alarm AAPS”).
     
     Aby przypisać przycisk w Samsung Watch 4, przejdź do `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert` (Ustawienia > Funkcje zaawansowane > Dostosuj przyciski > Naciśnij dwukrotnie > Wycisz Alarm AAPS)
     
@@ -435,7 +435,7 @@ Jeśli **AAPS** musiał ograniczyć dawkę, np. dlatego, że obliczony bolus jes
     
     Jeśli chcesz zbudować własną tarczę, postępuj zgodnie z [tym przewodnikiem](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
     
-    Gdy zbudujesz własną tarczę, możesz udostępnić swoją tarczę **AAPS** innym: plik zip możesz przesłać do folderu „ExchangeSiteCustomWatchfaces” przez Pull Request w GitHub. Podczas scalania pull requesta zespół dokumentacji wyodrębni plik CustomWatchface.png i doda przed jego nazwą nazwę pliku Zip.
+    Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into GitHub. Podczas scalania pull requesta zespół dokumentacji wyodrębni plik CustomWatchface.png i doda przed jego nazwą nazwę pliku Zip.
     
     (WearOsSmartwatch-complications-watchface-download)=
     

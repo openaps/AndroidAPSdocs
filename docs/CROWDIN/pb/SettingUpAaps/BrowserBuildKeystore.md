@@ -6,7 +6,7 @@
 Esta é a **Etapa 2** da [Compilação no navegador](BrowserBuild.md). Primeiro conclua a [Etapa 1 – Crie o seu fork no GitHub](BrowserBuildFork.md).
 ```
 
-O AndroidAPS precisa ser assinado com chaves privadas guardadas em uma **Java KeyStore (JKS)**. Esta é a decisão mais importante de todo o processo, porque ela define se você vai poder **atualizar** o AAPS mais tarde sem reinstalar.
+AAPS must be signed with private keys stored in a **Java KeyStore (JKS)**. Esta é a decisão mais importante de todo o processo, porque ela define se você vai poder **atualizar** o AAPS mais tarde sem reinstalar.
 
 ```{note}
 Nas próximas etapas, você vai guardar informações privadas (a sua keystore e, mais tarde, o seu acesso ao Google Drive) dentro do GitHub como **secrets**. Um secret é apenas um valor criptografado que só a sua própria compilação pode ler – ninguém mais, nem mesmo quem olha o seu fork, pode vê-lo. É isso que mantém a sua compilação só sua.
@@ -74,7 +74,7 @@ Antes de usar este método de exportação, verifique se as configurações da k
 
 2. **Execute o workflow de exportação:**
    - Vá até a aba **Actions** do seu repositório
-   - Selecione **CI KeyStore Export**
+   - Select **CI Keystore Export**
    - Clique em **Run workflow**
    - O arquivo ZIP exportado da keystore será salvo no seu Google Drive
 

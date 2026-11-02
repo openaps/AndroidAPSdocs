@@ -91,7 +91,7 @@ Installeer de **AAPS Wear** apk met [Wear Installer 2](https://youtu.be/abgN4jQq
 
 ```{admonition} Wear OS 5
 :class: warning
-Op Wear OS 5 moet je de AAPS-watchface met Wear Installer 2 kiezen, direct na het installeren van de Wear-app: aan het eind van de installatie biedt de installer de watchface **AAPS (Custom)** aan. Als je per ongeluk naar een andere watchface overstapt, herhaal dan de installatie. Het veranderen van de instellingen van de watchface (Donker, Watchdivider, enz.) is misschien niet mogelijk.
+Op Wear OS 5 moet je de AAPS-watchface met Wear Installer 2 kiezen, direct na het installeren van de Wear-app: aan het eind van de installatie biedt de installer de watchface **AAPS (Custom)** aan. Als je per ongeluk naar een andere watchface overstapt, herhaal dan de installatie. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
 
 Als de klassieke watchface nu voor je werkt, **zet dan automatische updates van het horloge uit**: de volgende firmware-update maakt hem waarschijnlijk kapot. Als je toch bijwerkt naar Wear OS 6, lees dan het deel hierboven: **AAPS** installeert dan een eigen watchface in het nieuwe formaat.
 ```
@@ -114,13 +114,13 @@ Hier zijn basishandleidingen voor de [Galaxy Watch 5](https://www.youtube.com/wa
 
 ## Basiskennis van smartwatches
 
-Als je het horloge volgens de video hierboven hebt ingesteld, ga je op de telefoon naar de Play Store en download je de volgende apps: "Galaxy Wearable", “Samsung” en “Easy Fire tools” of "Wear Installer 2".
+After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
 
 Er zijn veel YouTube-video's van anderen die je helpen om je nieuwe smartwatch te leren kennen, bijvoorbeeld:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-De app “Galaxy Wearable” heeft ook een deel met een handleiding. Open Galaxy Wearable op de telefoon, zoek het horloge en probeer het horloge te koppelen met de telefoon. Afhankelijk van je versie kan de app vragen om nog een app te installeren: “galaxy watch 4 plugin” uit de Play Store (het downloaden duurt even). Installeer deze op de telefoon en probeer daarna opnieuw het horloge en de telefoon te koppelen in de Wearable-app. Ga door een reeks menu's en vink verschillende voorkeuren aan.
+De app “Galaxy Wearable” heeft ook een deel met een handleiding. Open Galaxy Wearable op de telefoon, zoek het horloge en probeer het horloge te koppelen met de telefoon. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Installeer deze op de telefoon en probeer daarna opnieuw het horloge en de telefoon te koppelen in de Wearable-app. Ga door een reeks menu's en vink verschillende voorkeuren aan.
 
 ## Een Samsung-account instellen
 
@@ -260,7 +260,7 @@ De laatste stap is **AAPS** op de telefoon zo instellen dat het samenwerkt met *
 
 Om vanaf het horloge een bolus te geven of andere acties te doen, zet je ook **Bediening via smartwatch** aan in [Instellingen > Wear](#preferences-wear).
 
-Om een andere **AAPS**-watchface te kiezen, druk je op het startscherm van het horloge. Je komt dan in “aanpassen”. Swipe dan naar rechts tot je alle **AAPS**-watchfaces ziet.
+To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Swipe dan naar rechts tot je alle **AAPS**-watchfaces ziet.
 
 Als de **AAPS** Wear.apk goed naar de smartwatch is gezet, ziet het er zo uit:
 
@@ -334,7 +334,7 @@ F - batterij van de telefoon
 
 G - basaalstand (in E/u bij de standaard basaalstand en in % tijdens een TBR)
 
-H - BGI (blood glucose interaction, invloed op de bloedglucose) -> hoe sterk de BG “zou” moeten stijgen of dalen, alleen door de werking van insuline.
+H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
 I - koolhydraten (koolhydraten aan boord | e-carbs in de toekomst)
 

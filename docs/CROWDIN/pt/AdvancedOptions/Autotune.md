@@ -78,7 +78,7 @@ Toque em **Abrir plugin** no cartão **Autoajuste** para abrir o ecrã do Autoaj
 
 - Se confiar nos resultados (baixa percentagem de variação entre o perfil de entrada e o perfil de saída), pode clicar no botão «Ativar perfil» e depois em OK para validar.
 
-  - Ativar o perfil ajustado cria automaticamente um novo perfil «Ajustado» na sua lista de perfis (**Gerir → Perfil**).
+  - "Activate profile" will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
   - Se já tiver um perfil chamado «Ajustado» em **Gerir → Perfil**, este perfil será atualizado com o perfil calculado pelo Autoajuste antes da ativação
 
   ![Autoajuste: Ativar perfil](../images/Autotune/Autotune_6.png)
@@ -123,7 +123,7 @@ A função **Trocar perfil automaticamente** só está disponível no modo Dev/E
 - **Trocar perfil automaticamente** (predefinição: desativado): veja [Executar o Autoajuste com uma regra de automatização](#autotune-run-autotune-with-an-automation-rule) abaixo. Se ativar esta definição, o perfil de entrada será atualizado automaticamente com o perfil ajustado, e este será ativado.
   - **Tenha cuidado: depois de atualizar e ativar o perfil ajustado sem alterações, tem de confiar e verificar, durante vários dias seguidos, que este melhora o seu loop**
 
-- **Classificar RNA como basal** (predefinição: desativado): esta definição é para os utilizadores que usam o AndroidAPS sem introduzir hidratos de carbono (RNA total). Quando desativada, impede que os períodos RNA sejam classificados como basal.
+- **Categorize UAM as basal** (default Off): This setting is for the users using AAPS without any carbs entered (Full UAM). Quando desativada, impede que os períodos RNA sejam classificados como basal.
   - Nota: se tiver pelo menos uma hora de absorção de hidratos de carbono detetada num dia, todos os dados classificados como «RNA» serão classificados como basal, seja qual for esta definição (ativada ou desativada)
 - **Dias de ajuste predefinidos** (predefinição: 5): com esta definição pode definir o valor predefinido. Sempre que selecionar um novo perfil no plugin Autoajuste, o **Número de dias de dados** será substituído por este valor predefinido
 - **Usar IHC/FSI circadianos** (predefinição: desativado): veja [Perfil de IHC ou FSI circadiano](#autotune-circadian-ic-or-isf-profile) abaixo.
@@ -188,7 +188,7 @@ Nota: para mais informações sobre como definir uma regra de automatização, v
 
   ![Ecrã predefinido do Autoajuste](../images/Autotune/Autotune_17.png)
 
-- Depois, pode selecionar a ação **Executar Autoajuste** (no grupo **Loop e insulina**)
+- Then you can select the **Run Autotune** action (in the **Loop & insulin** group)
 
   ![Ecrã predefinido do Autoajuste](../images/Autotune/Autotune_18.png)
 
@@ -212,7 +212,7 @@ O Autoajuste funciona com as informações que existem na sua base de dados. Por
 
 O Autoajuste é apenas uma ajuda: é importante verificar regularmente se concorda com o perfil calculado. Se tiver alguma dúvida, mude as definições do Autoajuste (por exemplo, o número de dias) ou copie os resultados para um perfil local e ajuste o perfil antes de o usar.
 
-Use sempre o Autoajuste manualmente durante vários dias para verificar os resultados antes de os aplicar. Só quando confiar totalmente nos resultados do Autoajuste, e quando a variação entre o perfil anterior e o perfil calculado for muito pequena, deve começar a usar a automatização (nunca antes)
+Use sempre o Autoajuste manualmente durante vários dias para verificar os resultados antes de os aplicar. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile then you start to use Automation (Never before)
 
 - O Autoajuste pode funcionar muito bem para alguns utilizadores e não para outros, por isso **se não confiar no resultado do Autoajuste, não o use**
 

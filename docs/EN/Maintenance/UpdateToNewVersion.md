@@ -34,9 +34,9 @@ These steps are the same for every build method. Check in the [Release Notes](..
 
 After you installed the new apk:
 
-- you can check the __AAPS'__ version on your phone by opening the __menu__ (☰) on the top left and then __About__ (as per the screenshot below). The __AAPS'__ current version can be viewed;
-- ensure import settings have been actioned; and
-- please check your __AAPS'__ settings under __Settings__ and ensure these remain accurate.
+- you can check the __AAPS__ version on your phone by opening the __menu__ (☰) on the top left and then __About__ (as per the screenshot below). The current __AAPS__ version can be viewed;
+- make sure you have imported your settings; and
+- please check your __AAPS__ settings under __Settings__ and ensure these remain accurate.
 
 ![About dialog with the AAPS version installed](../images/about_dialog_version.png)
 

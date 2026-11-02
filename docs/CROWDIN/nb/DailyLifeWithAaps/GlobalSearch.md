@@ -73,7 +73,7 @@ Trykk på et resultat for å gå rett til det:
 - **Innstilling** → åpner innstillingen **der den ligger** (hopper til den inne på skjermen dens).
 - **Dokumentasjon** → åpner siden i nettleseren din.
 
-Når du åpner innstillinger og beskyttede handlinger, gjelder fortsatt **[beskyttelsen](../SettingUpAaps/ConfigBuilder.md)** din (PIN/passord), akkurat som om du hadde navigert dit selv. Etter at du har gjort noe med et resultat, kan du trykke på **Tilbake** for å gå tilbake til søkeresultatene.
+Når du åpner innstillinger og beskyttede handlinger, gjelder fortsatt **[beskyttelsen](#Preferences-protection)** din (PIN/passord), akkurat som om du hadde navigert dit selv. Etter at du har gjort noe med et resultat, kan du trykke på **Tilbake** for å gå tilbake til søkeresultatene.
 
 ---
 

@@ -72,7 +72,7 @@
     
         1. переклад вичитано
     
-        1. завершилася синхронізація між Crowdin і Github (раз на годину), яка створює PR у Github.
+        1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
     
         1. PR у Github схвалено.
     
@@ -83,11 +83,11 @@
     ```{admonition} Посилання більше не перекладаються
     :class: note
     
-    Посилання більше не перекладаються. Раніше тут був окремий розділ, але його прибрали: після переходу на Markdown і myst_parser ми явно створюємо мітки в англійському тексті, і вони автоматично передаються в інші мови.
+    Посилання більше не перекладаються. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
     
     
 
-Ви перекладаєте текст, який показує посилання. Будьте уважні: **не** видаляйте посилання, яке позначене парою тегів `<0></0>` або, якщо в абзаці їх кілька, тегами з іншими номерами.
+Ви перекладаєте текст, який показує посилання. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
 
 Вичитувачі мають звертати на це особливу увагу!
 

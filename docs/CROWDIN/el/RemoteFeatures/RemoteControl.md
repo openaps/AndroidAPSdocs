@@ -42,7 +42,7 @@
 
 Το **AAPSClient** μπορεί να εγκατασταθεί σε ένα τηλέφωνο ή σε πολλά τηλέφωνα ακολούθων (π.χ. το τηλέφωνο του γονέα 1 και το τηλέφωνο του γονέα 2), ώστε και οι δύο φροντιστές να έχουν πρόσβαση και να ελέγχουν από απόσταση το τηλέφωνο **AAPS** του ασθενούς.
 
-Για να κατεβάσετε το **AAPSClient**, πηγαίνετε στο [αποθετήριο στο Github](https://github.com/nightscout/AndroidAPS/releases/) και πατήστε το αρχείο **“app-AAPSClient-release_x.x.x.x”** (μπορεί να είναι νεότερη έκδοση από αυτήν στην εικόνα παρακάτω):
+To download **AAPSClient**, navigate to the [GitHub repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
 
 ![image](../images/remote_control_and_following/AAPSClient_download_02.png)
 
@@ -56,7 +56,7 @@
 
 Να μεταφερθεί με καλώδιο USB στο τηλέφωνο του ακόλουθου· ή Να μπει σε φάκελο του Google Drive και μετά να εγκατασταθεί στο τηλέφωνο του ακόλουθου πατώντας το αρχείο "app-AAPSClient-release".
 
-Αν χρειάζεστε το **AAPS** για τον εαυτό σας και το **AAPSClient** για να παρακολουθείτε κάποιον άλλο, πρέπει να κάνετε build το **AAPSClient** μόνοι σας, αντί να το κατεβάσετε από το αποθετήριο στο Github όπως περιγράφεται παραπάνω. Ο λόγος είναι ότι δεν μπορείτε να εγκαταστήσετε το **AAPS** και το **AAPSClient** στο ίδιο τηλέφωνο αν είναι υπογεγραμμένα με διαφορετικό κλειδί. <br/> Για να κάνετε build το **AAPSClient** μόνοι σας, ακολουθήστε την ίδια διαδικασία με την [κανονική δημιουργία του AAPS](../SettingUpAaps/BuildingAaps.md). Στη σελίδα **Generate signed App Bundle or APK** επιλέξτε **aapsclientRelease** αντί για **fullRelease**.
+Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the GitHub repository as described above. Ο λόγος είναι ότι δεν μπορείτε να εγκαταστήσετε το **AAPS** και το **AAPSClient** στο ίδιο τηλέφωνο αν είναι υπογεγραμμένα με διαφορετικό κλειδί. <br/> Για να κάνετε build το **AAPSClient** μόνοι σας, ακολουθήστε την ίδια διαδικασία με την [κανονική δημιουργία του AAPS](../SettingUpAaps/BuildingAaps.md). Στη σελίδα **Generate signed App Bundle or APK** επιλέξτε **aapsclientRelease** αντί για **fullRelease**.
 
 Ο ίδιος κανόνας ισχύει όταν εγκαθιστάτε πολλές εφαρμογές πελάτη (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) σε ένα τηλέφωνο ακόλουθου: πρέπει όλες να είναι υπογεγραμμένες με το **ίδιο κλειδί**. Αλλιώς το Android δεν εγκαθιστά τη δεύτερη (σφάλμα `INSTALL_FAILED_DUPLICATE_PERMISSION`).
 
@@ -128,7 +128,7 @@
 (RemoteControl_nightscout)=
 ## 3) Nightscout
 
-Εκτός από το ότι το Nightscout είναι διακομιστής στο «σύννεφο» (cloud), υπάρχει και ειδική εφαρμογή **Nightscout**, που μπορείτε να κατεβάσετε απευθείας από το App Store στο iPhone σας. Αν έχετε τηλέφωνο ακόλουθου με Android, δεν υπάρχει ειδική εφαρμογή Nightscout και είναι καλύτερα να χρησιμοποιήσετε το [**AAPSClient**](#2-aapsclient). Αν θέλετε μόνο να παρακολουθείτε και όχι να στέλνετε θεραπείες, μπορείτε να εγκαταστήσετε την εφαρμογή [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) από το Play Store.
+Εκτός από το ότι το Nightscout είναι διακομιστής στο «σύννεφο» (cloud), υπάρχει και ειδική εφαρμογή **Nightscout**, που μπορείτε να κατεβάσετε απευθείας από το App Store στο iPhone σας. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](#RemoteControl_aapsclient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) app from the Playstore.
 
 Αφού εγκαταστήσετε την εφαρμογή **Nightscout** στο iPhone σας, ανοίξτε την και ακολουθήστε τις οδηγίες ρύθμισης. Γράψτε τη διεύθυνση του Nightscout σας (δείτε παρακάτω, αριστερά). Η μορφή της μπορεί να διαφέρει ανάλογα με το πού φιλοξενείται το Nightscout σας. (_π.χ._ http://youraddresshere.herokuapp.com). Μετά γράψτε το API secret του Nightscout σας (δείτε παρακάτω, δεξιά). Αν δεν σας ζητηθεί ο κωδικός API, πρέπει να τον γράψετε πατώντας το λουκέτο στο πάνω μέρος της εφαρμογής:
 
@@ -177,7 +177,7 @@
 3. Hamburger - για τις ρυθμίσεις
 4. Careportal - καταγραφή θεραπείας (δείτε [παρακάτω](#RemoteControl_nightscout-treatments) πότε τις εφαρμόζει το **AAPS**)
 
-![πάνω γραμμή του nightscout](../images/remote-control-29.png)
+![Nightscout top bar](../images/remote-control-29.png)
 
 Στις γκρι καρτέλες αυτής της οθόνης υπάρχουν πάρα πολλές πληροφορίες για την κατάσταση του συστήματος **AAPS** (και ακόμη περισσότερες αν πατήσετε την καρτέλα):
 
@@ -202,7 +202,7 @@
 (RemoteControl_nightscout-treatments)=
 ### Αποστολή θεραπειών στο AAPS μέσω της εφαρμογής Nightscout
 
-Στο **AAPS** 4 ο υποστηριζόμενος τρόπος για απομακρυσμένο έλεγχο του **AAPS** είναι ένα **AAPSClient με σύζευξη**, δείτε [Έλεγχος κύριας συσκευής ↔ πελάτη](#client-master-control): κάθε πελάτης έχει έναν [ρόλο](#client-master-control-roles) που περιορίζει τι μπορεί να κάνει, και κάθε εντολή υπογράφεται, ελέγχεται και επιβεβαιώνεται από το τηλέφωνο **AAPS**. Όσο ο έλεγχος από πελάτες είναι ενεργός, το τηλέφωνο **AAPS** είναι σε [ενισχυμένη λειτουργία ασφαλείας (hardened mode)](#client-master-control-hardened-mode): θεραπείες, προσωρινοί στόχοι και αλλαγές προφίλ που καταχωρίζονται στον ιστότοπο ή στην εφαρμογή Nightscout **δεν** εφαρμόζονται. Η εφαρμογή Nightscout είναι τότε εργαλείο μόνο για παρακολούθηση.
+In **AAPS** 4 the supported way to control **AAPS** remotely is a **paired AAPSClient**, see [Master ↔ Client control](#client-master-control): each client has a [role](#client-master-control-roles) that limits what it may do, and every command is signed by the client, then checked and confirmed by the **AAPS** phone. Όσο ο έλεγχος από πελάτες είναι ενεργός, το τηλέφωνο **AAPS** είναι σε [ενισχυμένη λειτουργία ασφαλείας (hardened mode)](#client-master-control-hardened-mode): θεραπείες, προσωρινοί στόχοι και αλλαγές προφίλ που καταχωρίζονται στον ιστότοπο ή στην εφαρμογή Nightscout **δεν** εφαρμόζονται. Η εφαρμογή Nightscout είναι τότε εργαλείο μόνο για παρακολούθηση.
 
 ```{admonition} Only when client control is off
 :class: warning
@@ -277,7 +277,7 @@
 
 β)  ο χρήστης θέλει να μη γράφει κωδικό πιστοποίησης (όπως χρειάζεται για τις εντολές SMS).
 
-Ένα έξυπνο ρολόι χρειάζεται **Wear OS 3 ή νεότερο** για να μπορεί να ελέγχει το **AAPS**. Ελέγξτε τα τεχνικά χαρακτηριστικά του ρολογιού και δείτε τη σελίδα [Έξυπνα ρολόγια και AAPS](../Getting-Started/Watches.md). Αν δεν είστε σίγουροι, ψάξτε ή ρωτήστε στις ομάδες του **AAPS**  στο Facebook/Discord.
+Ένα έξυπνο ρολόι χρειάζεται **Wear OS 3 ή νεότερο** για να μπορεί να ελέγχει το **AAPS**. Ελέγξτε τα τεχνικά χαρακτηριστικά του ρολογιού και δείτε τη σελίδα [Έξυπνα ρολόγια και AAPS](../Getting-Started/Watches.md). Search, or ask in the **AAPS** Facebook/Discord groups if unsure.
 
 Παρακάτω υπάρχουν ειδικοί οδηγοί για τη ρύθμιση του **AAPS** στο δημοφιλές Samsung Galaxy Watch 4 (40mm). Το ρολόι [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) είναι επίσης δημοφιλής επιλογή. Αν έχετε εμπειρία με τη ρύθμιση ενός άλλου έξυπνου ρολογιού που πιστεύετε ότι θα βοηθούσε άλλους, προσθέστε το σε αυτές τις σελίδες ([επεξεργασία της τεκμηρίωσης](../SupportingAaps/HowToEditTheDocs.md)) για να μοιραστείτε όσα βρήκατε με την ευρύτερη κοινότητα του **AAPS**.
 
@@ -285,7 +285,7 @@
 
 ![Wear Remote 2](../images/Wear_Remote2.png)
 
-Το λογισμικό για το ρολόι, το **AAPSClient** Wear apk, μπορείτε να το κατεβάσετε απευθείας από το [Github](https://github.com/nightscout/AndroidAPS/releases/).
+The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
 
 Για να κατεβάσετε το λογισμικό, πατήστε την εφαρμογή ρολογιού που ταιριάζει με την εφαρμογή πελάτη στο τηλέφωνο: το **wear-aapsclient-release_**_έκδοση_ πάει με το **AAPSClient**, το **wear-aapsclient2-release_**_έκδοση_ πάει με το **AAPSClient2** (δείτε [Για τα AAPSClient, AAPSClient2 και AAPSClient3](#remotecontrol-aapsclient-versions)):
 

@@ -30,7 +30,7 @@
 
 Για να καταγράψετε τη δοκιμή σας για έναν συνδυασμό συσκευών, συμπληρώστε αυτή τη [φόρμα](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Αφού συμπληρώσετε τη φόρμα, το φύλλο ενημερώνεται αυτόματα κάθε 5 λεπτά.
 
-Για οποιοδήποτε πρόβλημα με το υπολογιστικό φύλλο, επικοινωνήστε με τον υπεύθυνό του, *@theodoor5137*, στο Discord, ή δείτε τη [σελίδα «Πού μπορώ να βρω βοήθεια; »](../GettingHelp/WhereCanIGetHelp.md).
+Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
 
 ## Δεν βρήκα το τηλέφωνό μου
 

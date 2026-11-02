@@ -40,7 +40,7 @@ Dexcom BYODA is now a very old version of the app and cannot be updated.
 -   安装下载的 apk
 -   在修改版应用中输入传感器代码和发射器序列号。
 -   在手机设置中依次进入：应用 > Dexcom G6 > 权限 > 其他权限，然后点击"访问Dexcom应用"。
--   短时间内BYODA应能接收到发射器信号。
+-   After a short time BYODA should pick up the transmitter signal.
 
 ### AAPS 设置
 

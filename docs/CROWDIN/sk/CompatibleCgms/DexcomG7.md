@@ -15,7 +15,7 @@ Prečítajte si odporúčania v časti [Vyhladzovanie údajov glykémie](../Comp
 - Postupujte podľa pokynov tu: [xDrip G7, ONE+ a Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). Vyžaduje sa novšie vydanie xDrip – minimálnu verziu nájdete na odkazovanej stránke.
 - Vyberte xDrip v [**Konfigurácia → Zdroj glykémie**](#Config-Builder-bg-source).
 
-- Upravte nastavenia xDrip podľa vysvetlení na stránke [Nastavenia xDrip](../CompatibleCgms/xDrip.md)
+- Upravte nastavenia xDrip podľa vysvetlení na stránke [Nastavenia xDrip](../CompatibleCgms/xDrip.md).
 
 ## 2. Build Your Own Dexcom App (iba G7)
 
@@ -30,7 +30,7 @@ Dexcom BYODA je teraz veľmi stará verzia aplikácie a nedá sa aktualizovať. 
 -   Odinštalujte pôvodnú aplikáciu Dexcom
 -   Nainštalujte stiahnutý súbor apk
 -   Zadajte kód senzora v upravenej aplikácii
--   Po krátkom čase by BYODA mala zachytiť signál vysielača
+-   After a short time BYODA should pick up the sensor signal.
 
 (DexcomG7-xdrip-companion-app)=
 

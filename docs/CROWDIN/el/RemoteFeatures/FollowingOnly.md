@@ -114,7 +114,7 @@
 
 ![image](../images/remote_control_and_following/xdrip4ios.jpg)
 
-Το xDripSwift δημιουργήθηκε με μεταφορά της αρχικής εφαρμογής xDrip στο iOS και εξελίχθηκε στο «xDrip for iOS», που γράφεται **xDrip4iOS** .
+xDripSwift was created from porting the original xDrip app to iOS and evolved into "xDrip for iOS", written as **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
@@ -150,7 +150,7 @@
 * Apple iPad (χρειάζεται έκδοση λογισμικού 13.0 ή νεότερη)
 * Google Android (αποθηκεύστε την εφαρμογή web στην αρχική σας οθόνη)
 
-Χρήστες του Sugarmate αναφέρουν ότι μπορεί να χρησιμοποιηθεί με το Apple CarPlay στις ΗΠΑ για να δείχνει τις τιμές γλυκόζης όταν οδηγείτε. Δεν είναι ακόμη γνωστό αν αυτό είναι δυνατό σε χώρες εκτός των ΗΠΑ. Αν γνωρίζετε περισσότερα για αυτό, προσθέστε λεπτομέρειες εδώ στην τεκμηρίωση με ένα pull request (σύνδεσμος). Είναι γρήγορο και εύκολο.
+Χρήστες του Sugarmate αναφέρουν ότι μπορεί να χρησιμοποιηθεί με το Apple CarPlay στις ΗΠΑ για να δείχνει τις τιμές γλυκόζης όταν οδηγείτε. Δεν είναι ακόμη γνωστό αν αυτό είναι δυνατό σε χώρες εκτός των ΗΠΑ. If you know more about this, please add details in here to the documentation by completing a [pull request](../SupportingAaps/HowToEditTheDocs.md), which is quick and easy to do.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
@@ -173,13 +173,13 @@
 :local: true
 ```
 
-### M5 stack
+### M5Stack
 
 ![image](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
 
 Το M5Stack είναι ένα μικρό κουτί που μπορεί να προγραμματιστεί για πολλές εφαρμογές. Το έργο του Martin [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) δείχνει τις τιμές γλυκόζης του αισθητήρα και τις τάσεις, το IOB και το COB. Είναι σε ένα πλαστικό κουτί, με έγχρωμη οθόνη, υποδοχή κάρτας micro SD, 3 κουμπιά, ηχείο και εσωτερική μπαταρία. Είναι μια πολύ καλή οθόνη γλυκόζης αίματος και ρυθμίζεται σχετικά εύκολα αν έχετε λογαριασμό Nightscout. Οι χρήστες συνήθως το χρησιμοποιούν με το Wi-Fi του σπιτιού τους, αλλά κάποιοι το χρησιμοποιούν ως οθόνη όταν οδηγούν μοτοσικλέτα, με σύνδεση στο hotspot Wi-Fi του τηλεφώνου.
 
-### Sugarpixel
+### SugarPixel
 
 Το SugarPixel είναι μια συσκευή που λειτουργεί ως δεύτερη οθόνη γλυκόζης με συναγερμούς για συνεχή παρακολούθηση γλυκόζης. Συνδέεται με την εφαρμογή Dexcom ή με το Nightscout στο smartphone του χρήστη. Η συσκευή δείχνει τις τιμές γλυκόζης αίματος σε πραγματικό χρόνο. Αυτή η συσκευή παρακολούθησης CGM έχει ηχητικούς συναγερμούς με τυχαίους τόνους (που είναι πάρα πολύ δυνατοί), συναγερμούς με δόνηση για άτομα με προβλήματα ακοής, προσαρμόσιμες επιλογές οθόνης και ενσωματωμένη παρακολούθηση από πολλούς χρήστες.
 

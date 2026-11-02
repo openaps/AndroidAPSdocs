@@ -72,7 +72,7 @@ Zatwierdzenie jest robione ręcznie. Jako organizacja non-profit nie gwarantujem
     
         1. tłumaczenie zostanie sprawdzone przez korektora
     
-        1. zakończy się synchronizacja między Crowdin i GitHubem (raz na godzinę), która tworzy PR na GitHubie.
+        1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
     
         1. PR na GitHubie zostanie zatwierdzony.
     
@@ -83,11 +83,11 @@ Zatwierdzenie jest robione ręcznie. Jako organizacja non-profit nie gwarantujem
     ```{admonition} Linki nie są już tłumaczone
     :class: note
     
-    Linki nie są już tłumaczone. Kiedyś była tu osobna sekcja, ale już jej nie ma. Po przejściu na Markdown i myst_parser tworzymy etykiety w tekście angielskim i automatycznie przenosimy je do innych języków.
+    Linki nie są już tłumaczone. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
     
     
 
-Tłumaczysz tekst, który jest wyświetlany jako link. Uważaj, aby **nie** usunąć linku, który jest oznaczony parą tagów `<0></0>` (albo innymi numerami, jeśli w akapicie jest więcej linków).
+Tłumaczysz tekst, który jest wyświetlany jako link. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
 
 Korektor musi zwrócić na to szczególną uwagę!
 

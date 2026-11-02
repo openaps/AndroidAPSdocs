@@ -287,7 +287,7 @@ Si **AAPS** a dû limiter la dose, par exemple parce que le bolus calculé dépa
     | --- | --- | --- | --- | --- | --- |
     | ![Boîte de dialogue Traitement, page insuline](../images/wearos/dialogs/dialog_treatment.png) | ![Boîte de dialogue Insuline](../images/wearos/dialogs/dialog_insulin.png) | ![Boîte de dialogue Glucides](../images/wearos/dialogs/dialog_carbs.png) | ![Boîte de dialogue eGlucides](../images/wearos/dialogs/dialog_ecarbs.png) | ![Boîte de dialogue Cible Temp, page durée](../images/wearos/dialogs/dialog_temp_target.png) | ![Boîte de dialogue Changement de profil](../images/wearos/dialogs/dialog_profile_switch.png) |
     
-    [1] Dans **Paramètres** > **Interface** de la montre, activez **Pourcentage de l'Assistant** pour afficher la saisie du pourcentage dans l'assistant bolus. Le pourcentage par défaut vient du paramètre du téléphone [« Appliquer cette partie du résultat de l'assistant bolus en % »](#Preferences-deliver-this-part-of-bolus-wizard-result). Les autres paramètres de l'assistant sont ceux du téléphone sous **Paramètres** > **Paramètres de l'assistant bolus**.
+    [1] Dans **Paramètres** > **Interface** de la montre, activez **Pourcentage de l'Assistant** pour afficher la saisie du pourcentage dans l'assistant bolus. The default percentage comes from the phone's ["Bolus percentage"](#Preferences-deliver-this-part-of-bolus-wizard-result). Les autres paramètres de l'assistant sont ceux du téléphone sous **Paramètres** > **Paramètres de l'assistant bolus**.
     
     [2] Dans **Paramètres** > **Interface** de la montre, activez **Calculatrice Type de repas** pour afficher la page **Type de repas**, où vous choisissez **Pain**, **Gâteau** ou **Pizza** pour répartir les glucides d'un repas lent entre glucides maintenant et eGlucides plus tard. Voir [Choisir le type de repas](#WearOsSmartwatch-wizard-meal-type).
     
@@ -357,7 +357,7 @@ Si **AAPS** a dû limiter la dose, par exemple parce que le bolus calculé dépa
     
     Le mode interface simplifiée est disponible pour les cadrans Digital Style et Custom (personnalisé). L'interface simplifiée est optionnelle et se configure dans les paramètres du cadran (appui long sur le cadran, puis « modifier » ou l'icône d'engrenage). Choisissez le paramètre « Interface simplifiée » et réglez-le sur « Pendant la charge » ou « Toujours allumé et pendant la charge ».
     
-    Les options pour les développeurs d'Android permettent à votre montre de rester allumée pendant la charge. Pour rendre les options pour les développeurs disponibles, voir la [documentation officielle](https://developer.android.com/training/wearables/get-started/debugging). Dans les options pour les développeurs, activez « Stay awake when charging » (rester allumé pendant la charge).
+    Les options pour les développeurs d'Android permettent à votre montre de rester allumée pendant la charge. Pour rendre les options pour les développeurs disponibles, voir la [documentation officielle](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options.
     
     Remarque : tous les écrans ne supportent pas bien le mode toujours allumé. Cela peut marquer l'écran de façon permanente (burn-in), en particulier sur les anciens écrans OLED. Les montres baissent généralement la luminosité de l'écran pour éviter ce marquage ; consultez le manuel de votre montre, le fabricant ou Internet pour obtenir des conseils.
     
@@ -385,7 +385,7 @@ Si **AAPS** a dû limiter la dose, par exemple parce que le bolus calculé dépa
     
     ## Raccourci de mise en veille des alertes
     
-    La montre [affiche l'alarme](#WearOsSmartwatch-phone-alarms) elle-même ; le raccourci est une deuxième façon de la couper, avec un seul appui. Il est possible de créer un raccourci pour mettre en veille les alertes et alarmes d'AAPS. Couper le son depuis votre montre est pratique et plus rapide que de prendre votre téléphone. Remarque : vous devez quand même lire le message d'alarme sur votre téléphone et agir en conséquence, mais vous pouvez le faire plus tard. Quand votre montre a deux boutons, vous pouvez attribuer un bouton au programme `AAPS Mettre en veille l'alerte`.
+    La montre [affiche l'alarme](#WearOsSmartwatch-phone-alarms) elle-même ; le raccourci est une deuxième façon de la couper, avec un seul appui. Il est possible de créer un raccourci pour mettre en veille les alertes et alarmes d'AAPS. Couper le son depuis votre montre est pratique et plus rapide que de prendre votre téléphone. Note: you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. Quand votre montre a deux boutons, vous pouvez attribuer un bouton au programme `AAPS Mettre en veille l'alerte`.
     
     Pour lier le bouton sur la Samsung Watch 4, allez dans `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
     
@@ -435,7 +435,7 @@ Si **AAPS** a dû limiter la dose, par exemple parce que le bolus calculé dépa
     
     Si vous voulez créer votre propre cadran, suivez le [guide ici](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
     
-    Quand vous avez créé un cadran personnalisé, vous pouvez partager votre cadran personnalisé **AAPS** avec d'autres : le fichier zip peut être envoyé dans le dossier "ExchangeSiteCustomWatchfaces" par une Pull Request sur GitHub. Lors de la fusion de la Pull Request, l'équipe de documentation extraira le fichier CustomWatchface.png et ajoutera au début de son nom le nom du fichier Zip.
+    Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into GitHub. Lors de la fusion de la Pull Request, l'équipe de documentation extraira le fichier CustomWatchface.png et ajoutera au début de son nom le nom du fichier Zip.
     
     (WearOsSmartwatch-complications-watchface-download)=
     

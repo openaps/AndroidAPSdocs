@@ -70,7 +70,7 @@ Deine bestehenden Automatisierungsregeln und Essenseinträge bleiben alle erhalt
 
 * **Profilwechsel** und **Prozentsatz des Profils**: Tippe auf dem Hauptbildschirm auf den [Profilnamen](#aaps-screens-profile--target) oder wähle **Bearbeiten → Profil**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
 * **Temporäres Ziel**: Tippe auf dem Hauptbildschirm auf das [Ziel](#aaps-screens-profile--target) oder wähle **Bearbeiten → Temporäres Ziel**.
-* **Nadelwechsel/Füllen**, **CGM-Sensor gesetzt**, **BZ-Test** und die anderen Careportal-Einträge: im aufgeklappten [Statusbereich](#aaps-screens-careportal), unter **Bearbeiten** oder als [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)-Knöpfe.
+* **Nadelwechsel/Füllen**, **CGM-Sensor gesetzt**, **BZ-Test** und die anderen Careportal-Einträge: im aufgeklappten [Statusbereich](#aaps-screens-careportal), unter **Bearbeiten** oder als [Schnellstart](../DailyLifeWithAaps/QuickLaunch.md)-Knöpfe.
 * **Historie**, **Statistiken** (TDD): im **Menü** (☰).
 
 ```{admonition} Profile switch and profile percentage

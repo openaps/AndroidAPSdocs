@@ -73,7 +73,7 @@ Tap a result to go straight to it:
 - **Preference** → opens the setting **in place** (jumps to it within its screen).
 - **Documentation** → opens the page in your browser.
 
-Opening settings and protected actions still respects your **[protection](../SettingUpAaps/ConfigBuilder.md)** (PIN/password), exactly as it would if you had navigated there by hand. After you act on a result you can press **Back** to return to your search results.
+Opening settings and protected actions still respects your **[protection](#Preferences-protection)** (PIN/password), exactly as it would if you had navigated there by hand. After you act on a result you can press **Back** to return to your search results.
 
 ---
 

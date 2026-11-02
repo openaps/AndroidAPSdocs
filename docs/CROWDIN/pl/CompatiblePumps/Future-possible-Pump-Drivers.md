@@ -1,6 +1,6 @@
 # Sterowniki do pomp (prawdopodobne) w przyszłości
 
-Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, status ich wsparcia w dowolnym systemie pętlowym, oraz status dla systemu AAPS. Na końcu jest trochę informacji, jakie są wymagania, aby pompa nadawała się do pracy w pętli.
+This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
 
     {contents} Spis treści
     :depth: 1
@@ -42,7 +42,7 @@ Tandem: t:Mobi ([Strona domowa](https://www.tandemdiabetes.com/))
 
 ### Pompa insulinowa Willcare ([Strona domowa](http://shinmyungmedi.com/en/))
 
-**Status pętli:** Na razie nie nadaje się do pętli, ale skontaktowali się z nami pracownicy firmy, którzy chcą rozwinąć pompę tak, aby nadawała się do pętli (myślę, że na razie brakuje tylko poleceń odczytu/ustawienia profilu).
+**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
 
 **Wymagany sprzęt dla AAPS:** brak. Wygląda na to, że ma obsługę BT.
 

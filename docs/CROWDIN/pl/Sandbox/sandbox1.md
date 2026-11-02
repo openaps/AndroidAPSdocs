@@ -54,7 +54,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Etykieta w środku [niczego](#sandbox1-in-the-middle-of-nowhere) A to jest etykieta do [](#sandbox1-this-is-another-test) i powinna wyświetlić swoją nazwę
 
-Linki z kotwicą:
+Links with anchor:
 - [ile to potrwa?](#preparing-how-long-will-it-take)
 - [Ustawienia NSClient w Ustawieniach](#Preferences-nsclient).
 - [linie prognozy na ekranie głównym AAPS](#aaps-screens-prediction-lines) do nagłówka poziomu 4

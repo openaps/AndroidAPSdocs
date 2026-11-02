@@ -105,7 +105,7 @@ For å eksportere eller importere innstillinger åpner du **menyen** (☰) og ve
 (ExportImportSettings-Automating-Settings-Export)=
 ### Automatisk eksport av innstillinger
 
-For automatisk eksport av innstillinger [(**se Automasjon**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) åpner du [**Innstillinger** > **Vedlikehold**](#preferences-maintenance-settings), utvider **Uovervåket eksport av innstillinger** og slår på **Aktiver automatisk eksport av innstillinger**.
+For å automatisere eksport av innstillinger [(**se Automasjon**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) åpner du [**Innstillinger** > **Vedlikehold**](#preferences-maintenance-settings), utvider **Uovervåket eksport av innstillinger** og slår på **Aktiver automatisk eksport av innstillinger**.
 
 Du kan nå sette opp [Automasjoner](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) til å eksportere innstillingene, enten regelmessig (_for eksempel_ hver uke) eller etter et pod-bytte.
 
@@ -176,7 +176,7 @@ Som standard rører ikke en import pumpeinnstillingene dine: pumpen som er valgt
 
 12. **AAPS** spør **Bruk importerte innstillinger?** og forteller hvor mange innstillinger som endres, og, hvis du lot boksen stå tom, hvor mange pumpeinnstillinger som beholdes. Ingenting er skrevet ennå, så **Avbryt** lar telefonen være akkurat som den var. Trykk på **OK** for å ta dem i bruk.
 
-    ![Bruk importerte innstillinger? dialogboks](../images/Maintenance/import_settings_apply.png)
+    ![Dialogen «Bruk importerte innstillinger?»](../images/Maintenance/import_settings_apply.png)
 
 13. **AAPS** tar de importerte innstillingene i bruk med en gang, uten omstart. Bare plugins med endrede innstillinger startes på nytt. Mens dette pågår, viser **AAPS** **Aktiverer innstillinger…**; hvis pumpen er opptatt, viser den **Venter på pumpen…** og tar innstillingene i bruk når pumpen er ledig. Hvis pumpen fortsatt er opptatt etter ett minutt, tilbyr **AAPS** å prøve på nytt. Meldingen **Innstillinger tatt i bruk** bekrefter at de importerte innstillingene er i bruk. En behandling som lå i kø mens importen pågikk, blir forkastet, og **AAPS** forteller deg at den ble avbrutt, slik at ingenting sendes til pumpen to ganger.
 

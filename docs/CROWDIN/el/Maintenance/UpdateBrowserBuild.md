@@ -9,7 +9,7 @@
 Το **AAPS** δεν είναι διαθέσιμο για λήψη, λόγω των κανονισμών για τις ιατρικές συσκευές. Είναι νόμιμο να κάνετε build της εφαρμογής για δική σας χρήση, αλλά δεν πρέπει να δίνετε αντίγραφο σε άλλους! Δείτε τη σελίδα [Συχνές Ερωτήσεις](../UsefulLinks/FAQ.md) για λεπτομέρειες.
 
 ```{note}
-Αν θέλετε να αναβαθμίσετε το **AAPS** μέσω browser για πρώτη φορά: αντιγράψτε το αντίγραφο ασφαλείας του αρχείου keystore στο Google Drive σας. Μετά ακολουθήστε τη [διαδικασία Δημιουργίας του **AAPS** μέσω browser](../SettingUpAaps/BrowserBuild.md) αντί για αυτόν τον οδηγό. Αντί να δημιουργήσετε νέο keystore, πρέπει να επιλέξετε αυτό που αντιγράψατε από τον υπολογιστή σας.
+In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Μετά ακολουθήστε τη [διαδικασία Δημιουργίας του **AAPS** μέσω browser](../SettingUpAaps/BrowserBuild.md) αντί για αυτόν τον οδηγό. Αντί να δημιουργήσετε νέο keystore, πρέπει να επιλέξετε αυτό που αντιγράψατε από τον υπολογιστή σας.
 Αυτό είναι υποχρεωτικό μόνο την πρώτη φορά. Στις επόμενες αναβαθμίσεις θα μπορείτε να ακολουθείτε αυτόν τον οδηγό.
 ```
 
@@ -57,7 +57,7 @@
 
 ![Απόρριψη ανεπιθύμητων αλλαγών](../images/update/CI/GitHubUpdate4.png)
 
-Τώρα έχετε συγχρονίσει (ενημερώσει) το δικό σας αντίγραφο με την τελευταία έκδοση του Android APS. Μπράβο.
+You have now synchronized (updated) your own copy with the latest release of **AAPS**. Μπράβο.
 
 ![Το αποθετήριο συγχρονίστηκε](../images/update/CI/GitHubUpdate5.png)
 
@@ -83,7 +83,7 @@
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. Θα δείτε το μήνυμα Workflow run was successfully requested. Ανανεώστε τη σελίδα του browser και θα μπορείτε να παρακολουθείτε την πρόοδο του build. Όταν τελειώσει η ενέργεια, το AAPS CI θα δείχνει ένα πράσινο σημάδι ελέγχου (tick). Έχετε κάνει με επιτυχία build της ενημερωμένης έκδοσης του Android APS. Αυτό σημαίνει ότι τα apk για το Master και το Wear αποθηκεύονται τώρα απευθείας στο Google Drive σας (όπως παρακάτω). Το apk του AAPSClient μπορείτε να το κατεβάσετε από το Github > nightscout > AndroidAPS [εδώ](https://github.com/nightscout/AndroidAPS/releases)
+6. Θα δείτε το μήνυμα Workflow run was successfully requested. Ανανεώστε τη σελίδα του browser και θα μπορείτε να παρακολουθείτε την πρόοδο του build. Όταν τελειώσει η ενέργεια, το AAPS CI θα δείχνει ένα πράσινο σημάδι ελέγχου (tick). You have successfully built the updated version of **AAPS**. Αυτό σημαίνει ότι τα apk για το Master και το Wear αποθηκεύονται τώρα απευθείας στο Google Drive σας (όπως παρακάτω). Το apk του AAPSClient μπορείτε να το κατεβάσετε από το Github > nightscout > AndroidAPS [εδώ](https://github.com/nightscout/AndroidAPS/releases)
 
 
 ![Παρακολούθηση του workflow](../images/update/CI/GitHubActions4.png)

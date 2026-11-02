@@ -16,14 +16,14 @@ Při použití **Dynamické ISF** vypněte každou dočasnou změnu **profilu** 
 
 Aby bylo možné **Dynamickou ISF** používat, musí databáze **AAPS** obsahovat alespoň 7 dní dat uživatele z **AAPS**.
 
-## Co dělá Dynamická ISF?
+## What does Dynamic ISF do?
 
 **Dynamická ISF** dynamicky upravuje citlivost na inzulín (**ISF**) na základě uživatelovy:
 
 - celkové denní dávky inzulínu (**TDD**) a
 - aktuálních a predikovaných hodnot glykémie.
 
-Při použití **Dynamické ISF** se hodnoty **ISF** zadané v **profilu** už vůbec nepoužívají, jen jako záloha, když v databázi **AAPS** není dost dat o TDD (*např.* po nové instalaci aplikace).
+When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are not used at all anymore, except as a fallback if there is not enough TDD data in **AAPS** database (*i.e.* fresh reinstallation of the app).
 
 **SMB/AMA** – příklad uživatelova **profilu** se statickou **ISF**, kterou nastavil uživatel a kterou používají **SMB** a **AMA**.
 
@@ -37,7 +37,7 @@ Při použití **Dynamické ISF** se hodnoty **ISF** zadané v **profilu** už v
 
 Hodnotu **DynISF** lze zobrazit také v grafu: klepněte na **Přidat graf** pod grafy na hlavní obrazovce a vyberte **VSEN** (proměnlivá citlivost). Zobrazuje se jako bílá čára (dole na obrázku výše).
 
-## Jak se Dynamická ISF počítá?
+## How is Dynamic ISF calculated?
 
 **Dynamická ISF** k určení **ISF** používá model Chrise Wilsona místo statické hodnoty **ISF**, kterou si uživatel nastavil v **profilu**. Podrobné vysvětlení najdete zde: [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c) (anglicky).
 
@@ -70,9 +70,8 @@ Je to proto, aby se nepodalo příliš mnoho inzulínu, když je **glykémie** n
 
 **Budoucí ISF** používá stejný vzorec, jak je popsán výše, jen místo **aktuální glykémie** může použít **minimální predikovanou glykémii**. **Minimální predikovaná glykémie**, [jak ji počítá oref1](#aaps-screens-how-predictions-become-a-dosing-decision), je nejnižší hodnota, na kterou by podle predikcí měla glykémie během celého průběhu predikcí klesnout.
 
-* Pokud je aktuální **glykémie** nad cílem <br/> **a** pokud je **glykémie** stabilní, v rozmezí +/- 3 mg/dl:<br/>ve vzorci se jako glykémie použije: `average(minimum predicted BG, current BG)`.
-* Pokud je konečná **glykémie** nad cílem a glykémie roste,<br/>  
-  **nebo** je konečná **glykémie** vyšší než aktuální **glykémie**:<br/>ve vzorci se jako glykémie použije: `current BG`.
+* If the current **BG** is above target<br/> **and** if **BG** levels are flat, within +/- 3 mg/dL:<br/>BG is used in the formula as follows: `average(minimum predicted BG, current BG)`.
+* If eventual **BG** is above target and glucose levels are increasing,<br/> **or** eventual **BG** is above current **BG**:<br/>BG is used in the formula as follows: `current BG`.
 * Jinak:<br/>ve vzorci se jako glykémie použije: `minimum predicted BG`.
 
 Pro zjednodušené vysvětlení se podívejte na snímek obrazovky níže, který tuto situaci ukazuje. Oranžové tečky používají **predikovanou glykémii**, fialové tečky **průměr (predikovaná glykémie, aktuální glykémie)** a modré tečky **aktuální glykémii**.
@@ -112,7 +111,7 @@ Pro aktivaci zaškrtněte **Použít dynamickou citlivost** v [Nastavení > Open
 
 **Faktor úpravy** se mění také při aktivaci [**přepnutí profilu** s procentem](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). Nižší **procento profilu** sníží **faktor úpravy** a vyšší **procento profilu** ho naopak zvýší.
 
-Například pokud je váš **faktor úpravy** 80 % a provedete **přepnutí profilu** na 80 %, výsledný **faktor úpravy** bude `0.8*0.8=0.64`.
+For example, if your **Adjustment Factor** is 80%, and **Profile Switch** to 80% is actioned, the resulting **Adjustment Factor** will be `0.8*0.8=0.64`.
 
 To znamená, že při použití **DynISF** můžete pomocí **procenta profilu** dočasně ručně doladit svou citlivost. To se hodí například při fyzické aktivitě (nižší procento), nemoci (vyšší procento) apod.
 

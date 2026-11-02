@@ -72,7 +72,7 @@
     
         1. преводът да бъде проверен от коректор
     
-        1. синхронизацията между Crowdin и GitHub (веднъж на час) да приключи и да създаде PR за GitHub.
+        1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
     
         1. PR в GitHub да бъде одобрен.
     
@@ -83,11 +83,11 @@
     ```{admonition} Връзките вече не се превеждат
     :class: note
     
-    Връзките вече не се превеждат. В миналото тук имаше раздел за това, но той вече не е нужен: след преминаването към Markdown и myst_parser създаваме изрично етикети в английския текст и те се пренасят автоматично към другите езици.
+    Връзките вече не се превеждат. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
     
     
 
-Вие превеждате текста, който представлява връзката. Моля, внимавайте **да не** премахнете връзката, която е обозначена с двойка тагове `<0></0>` (или с други числа, ако в един абзац има повече връзки).
+Вие превеждате текста, който представлява връзката. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
 
 Задача на коректорите е да обърнат специално внимание на това!
 

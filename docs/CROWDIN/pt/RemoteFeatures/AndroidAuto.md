@@ -4,7 +4,7 @@ O **AAPS** pode enviar-lhe informações sobre o seu estado atual como mensagem,
 
 ## Requisitos
 
-O **AAPS** usa uma função do Android Auto que permite enviar mensagens de apps do telemóvel para o ecrã do sistema de áudio do carro.
+**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
 
 Isto significa que:
 
@@ -37,7 +37,7 @@ Verifique agora se vê a notificação de estado do **AAPS** no telefone antes d
 
 Como o **AAPS** não é uma app oficial do Android Auto, as notificações têm de ser ativadas para «unknown sources» (fontes desconhecidas) no Android Auto. Isto faz-se com o modo de programador, que mostramos aqui.
 
-Vá ao seu carro e ligue o telemóvel ao sistema de áudio do carro.
+Go to your car and connect your mobile with the car's audio system.
 
 Deve agora ver um ecrã parecido com este.
 

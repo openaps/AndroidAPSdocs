@@ -35,7 +35,7 @@ Het [Omnipod System](https://www.omnipod.com/current-podders/resources/omnipod-s
 
 - ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **Apparaat voor insulinetoediening**
 
-> Onderdeel dat de opdrachten uitvoert die het van het pod-communicatieapparaat krijgt, en die komen van je telefoon met AAPS.
+> Component that will interpret commands received from the Pod communication device originating from your AAPS enabled phone.
 > 
 > > - Een nieuwe Omnipod-pod (Eros-generatie - **GEEN DASH**)
 
@@ -47,7 +47,7 @@ Op deze pagina betekent **RileyLink** elk van de pod-communicatieapparaten die h
 
 **VEILIGHEID VOOROP** - begin niet aan dit proces in een situatie waarin je een fout niet kunt herstellen (extra pods, insuline, een opgeladen RileyLink en telefoon zijn een must).
 
-**Je Omnipod PDM werkt niet meer zodra de Omnipod-driver van AAPS je pod heeft geactiveerd**. Eerder gebruikte je je Omnipod PDM om opdrachten te verzenden naar je Eros-pod. Een Eros-pod kan slechts met één apparaat communiceren. Het apparaat dat de pod activeert is het enige apparaat dat vanaf dat moment met de pod kan communiceren. Dit betekent dat je je PDM **niet meer kunt gebruiken met je pod** zodra je een Omnipod Eros-pod hebt geactiveerd met je RileyLink via de Omnipod-driver van AAPS. De Omnipod-driver van AAPS met de RileyLink is nu je PDM. *Dit betekent NIET dat je je PDM moet weggooien. We raden aan om hem te bewaren als back-up en voor noodgevallen, als AAPS niet goed werkt.*
+**Je Omnipod PDM werkt niet meer zodra de Omnipod-driver van AAPS je pod heeft geactiveerd**. Eerder gebruikte je je Omnipod PDM om opdrachten te verzenden naar je Eros-pod. Een Eros-pod kan slechts met één apparaat communiceren. Het apparaat dat de pod activeert is het enige apparaat dat vanaf dat moment met de pod kan communiceren. Dit betekent dat je je PDM **niet meer kunt gebruiken met je pod** zodra je een Omnipod Eros-pod hebt geactiveerd met je RileyLink via de Omnipod-driver van AAPS. De Omnipod-driver van AAPS met de RileyLink is nu je PDM. *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies when AAPS is not working correctly.*
 
 **Er kan maar één RileyLink tegelijk met een pod communiceren.** **AAPS** onthoudt één gekoppelde RileyLink. Als je een andere koppelt, vervangt die de vorige.
 
@@ -281,7 +281,7 @@ Om een pod uit te schakelen (nadat hij zijn maximale looptijd heeft bereikt, of 
 
 Hieronder lees je hoe je de insulinetoediening onderbreekt en hervat.
 
-*LET OP - zie je geen knop **Onderbreken***, dan is die standaard verborgen. Zet **Knop voor het onderbreken van insuline toediening weergeven op het Omnipod-tabblad** aan in de [Omnipod-instellingen](#OmnipodEros-omnipod-settings) onder **Andere**.
+*LET OP - zie je geen knop **Onderbreken***, dan is die standaard verborgen. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Insulinetoediening onderbreken
 
@@ -591,7 +591,7 @@ De knoppen onderaan het pompscherm veranderen afhankelijk van de situatie. Knopp
   De schermafbeelding hierboven komt uit een eerdere versie van **AAPS**. In **AAPS** 4 is dit een tekstknop met de naam **Tijd instellen** op het Omnipod-pompscherm.
   ```
 
-- **Onderbreken:** onderbreekt de insulinetoediening van de actieve pod. Alleen zichtbaar als dit aan staat in de instellingen (**Knop voor het onderbreken van insuline toediening weergeven op het Omnipod-tabblad**).
+- **Onderbreken:** onderbreekt de insulinetoediening van de actieve pod. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Geeft AAPS-meldingen en hoorbare telefoonwaarschuwingen als het niet zeker is of
 
 Geavanceerde instellingen die helpen bij het zoeken naar fouten.
 
-- **Knop voor het onderbreken van insuline toediening weergeven op het Omnipod-tabblad:** verbergt of toont de knop **Onderbreken** op het Omnipod-pompscherm.
+- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
 - **Knop voor het uitlezen van het Pulslog weergeven in het Podbeheer menu:** deze instelling staat nog in de lijst, maar het huidige pompscherm heeft geen knop **Pulse Log**.
 
 - **Knop voor RileyLink statistieken weergeven in het Omnipod-tabblad:** verbergt of toont de knop **RileyLink statistieken** op het Omnipod-pompscherm.
@@ -896,7 +896,7 @@ Geen actieve podsessie gevonden. Je kunt deze waarschuwing tijdelijk wegdrukken 
 
 Informatieve waarschuwing dat de pod is onderbroken.
 
-#### Instellen van basaal profiel mislukt. De insulinetoediening kan onderbroken zijn! Vernieuw de Pod-status handmatig in het Omnipod tabblad en hervat de toediening indien nodig.
+#### Instellen van basaal profiel mislukt. De insulinetoediening kan onderbroken zijn! Please manually refresh the Pod status on the pump screen and resume delivery if needed.
 
 Informatieve waarschuwing dat het instellen van het basaalprofiel van de pod is mislukt. Open het Omnipod-pompscherm en druk op **Vernieuwen**, en daarna zo nodig op **Toediening hervatten**.
 

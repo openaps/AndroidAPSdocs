@@ -42,7 +42,7 @@ Para distinguir las apps, algunos elementos tienen otro color: amarillo para **A
 
 **AAPSClient** se puede instalar en un solo teléfono o en varios teléfonos de seguidores (p. ej., el teléfono seguidor del padre 1 y el del padre 2), para que ambos cuidadores tengan acceso y puedan controlar a distancia el teléfono con **AAPS** del paciente.
 
-Para descargar **AAPSClient**, ve al [repositorio de Github](https://github.com/nightscout/AndroidAPS/releases/) y haz clic en el archivo **“app-AAPSClient-release_x.x.x.x”** (puede ser una versión más nueva que la de la captura de pantalla de abajo):
+To download **AAPSClient**, navigate to the [GitHub repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
 
 ![imagen](../images/remote_control_and_following/AAPSClient_download_02.png)
 
@@ -56,7 +56,7 @@ Ahora el apk de **AAPSClient** puede:
 
 Pasarse al teléfono del seguidor con un cable USB; o Arrastrarse a una carpeta de Google Drive y después añadirse al teléfono del seguidor tocando el archivo «app-AAPSClient-release».
 
-Si necesitas **AAPS** para ti y **AAPSClient** para seguir a otra persona, debes compilar **AAPSClient** tú mismo en lugar de descargarlo del repositorio de Github como se explica arriba. El motivo es que no puedes instalar **AAPS** y **AAPSClient** en el mismo teléfono si están firmados con claves distintas. <br/> Para compilar **AAPSClient** tú mismo, sigue el mismo proceso que para [compilar AAPS](../SettingUpAaps/BuildingAaps.md) normalmente. En la página **Generate signed App Bundle or APK**, selecciona **aapsclientRelease** en lugar de **fullRelease**.
+Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the GitHub repository as described above. El motivo es que no puedes instalar **AAPS** y **AAPSClient** en el mismo teléfono si están firmados con claves distintas. <br/> Para compilar **AAPSClient** tú mismo, sigue el mismo proceso que para [compilar AAPS](../SettingUpAaps/BuildingAaps.md) normalmente. En la página **Generate signed App Bundle or APK**, selecciona **aapsclientRelease** en lugar de **fullRelease**.
 
 La misma regla vale si instalas varias apps cliente (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) en un teléfono del seguidor: todas deben estar firmadas con la **misma clave**. Si no, Android no deja instalar la segunda (error `INSTALL_FAILED_DUPLICATE_PERMISSION`).
 
@@ -128,7 +128,7 @@ Un reloj inteligente puede ser una herramienta muy útil para ayudar a manejar *
 (RemoteControl_nightscout)=
 ## 3) Nightscout
 
-Además de que Nightscout es un servidor en «la nube», también hay una app **Nightscout** propia, que puedes descargar directamente de la App Store en tu iPhone. Si tienes un teléfono seguidor Android, no hay una app Nightscout propia y es mejor usar [**AAPSClient**](#2-aapsclient). Si solo quieres seguir y no enviar tratamientos, puedes descargar e instalar la app [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) desde Google Play.
+Además de que Nightscout es un servidor en «la nube», también hay una app **Nightscout** propia, que puedes descargar directamente de la App Store en tu iPhone. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](#RemoteControl_aapsclient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) app from the Playstore.
 
 Cuando hayas instalado la app **Nightscout** en tu iPhone, ábrela y sigue los pasos de configuración. Introduce la dirección de tu Nightscout (ver abajo, a la izquierda). El formato puede variar según dónde esté alojado tu Nightscout. (_p. ej._ http://youraddresshere.herokuapp.com). Después introduce tu API secret de Nightscout (ver abajo, a la derecha). Si no te pide tu contraseña de la API, debes introducirla tocando el candado en la parte superior de la app:
 
@@ -177,7 +177,7 @@ Veamos con más detalle el menú de arriba a la izquierda de la app Nightscout:
 3. Hamburguesa: para ajustar las preferencias
 4. Careportal: registrar tratamiento (mira [abajo](#RemoteControl_nightscout-treatments) cuándo los aplica **AAPS**)
 
-![barra superior de nightscout](../images/remote-control-29.png)
+![Nightscout top bar](../images/remote-control-29.png)
 
 En esta pantalla, las pestañas grises muestran muchísima información sobre el estado del sistema **AAPS** (y si tocas una pestaña, verás todavía más información):
 
@@ -202,7 +202,7 @@ Toca «refresh» abajo en la página para cerrar la ventana emergente.
 (RemoteControl_nightscout-treatments)=
 ### Enviar tratamientos a AAPS con la app Nightscout
 
-En **AAPS** 4, la forma compatible de controlar **AAPS** a distancia es un **AAPSClient emparejado**, mira [Control máster ↔ cliente](#client-master-control): cada cliente tiene un [rol](#client-master-control-roles) que limita lo que puede hacer, y el teléfono con **AAPS** firma, comprueba y confirma cada orden. Mientras el control de clientes está activado, el teléfono con **AAPS** está en [Modo reforzado](#client-master-control-hardened-mode): los tratamientos, objetivos temporales y cambios de perfil introducidos en la web de Nightscout o en la app Nightscout **no** se aplican. La app Nightscout es entonces una herramienta solo para seguir.
+In **AAPS** 4 the supported way to control **AAPS** remotely is a **paired AAPSClient**, see [Master ↔ Client control](#client-master-control): each client has a [role](#client-master-control-roles) that limits what it may do, and every command is signed by the client, then checked and confirmed by the **AAPS** phone. Mientras el control de clientes está activado, el teléfono con **AAPS** está en [Modo reforzado](#client-master-control-hardened-mode): los tratamientos, objetivos temporales y cambios de perfil introducidos en la web de Nightscout o en la app Nightscout **no** se aplican. La app Nightscout es entonces una herramienta solo para seguir.
 
 ```{admonition} Only when client control is off
 :class: warning
@@ -277,7 +277,7 @@ a)  Los comandos de **AAPSClient** o de **SMS** no pueden funcionar; o
 
 b)  El usuario quiere evitar escribir un código de autenticación (necesario para los comandos SMS).
 
-Un reloj inteligente necesita **Wear OS 3 o más reciente** para poder controlar **AAPS**. Revisa las especificaciones técnicas del reloj y mira la página [Relojes inteligentes y AAPS](../Getting-Started/Watches.md). Si tienes dudas, busca o pregunta en los grupos de Facebook/Discord de **AAPS**.
+Un reloj inteligente necesita **Wear OS 3 o más reciente** para poder controlar **AAPS**. Revisa las especificaciones técnicas del reloj y mira la página [Relojes inteligentes y AAPS](../Getting-Started/Watches.md). Search, or ask in the **AAPS** Facebook/Discord groups if unsure.
 
 Abajo tienes guías específicas para configurar **AAPS** en el popular Samsung Galaxy Watch 4 (40 mm). El reloj [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) también es una opción popular. Si tienes experiencia configurando otro reloj inteligente que crees que puede ser útil para otros, añádelo a estas páginas ([editar la documentación](../SupportingAaps/HowToEditTheDocs.md)) para compartir lo que sabes con toda la comunidad de **AAPS**.
 
@@ -285,7 +285,7 @@ Abajo tienes guías específicas para configurar **AAPS** en el popular Samsung 
 
 ![Wear Remote 2](../images/Wear_Remote2.png)
 
-El software para el reloj, el apk de **AAPSClient** Wear, se puede descargar directamente de [Github](https://github.com/nightscout/AndroidAPS/releases/).
+The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
 
 Para descargar el software, haz clic en la app de reloj que corresponde a la app cliente del teléfono: **wear-aapsclient-release_**_versión_ va con **AAPSClient**, **wear-aapsclient2-release_**_versión_ va con **AAPSClient2** (mira [Sobre AAPSClient, AAPSClient2 y AAPSClient3](#remotecontrol-aapsclient-versions)):
 

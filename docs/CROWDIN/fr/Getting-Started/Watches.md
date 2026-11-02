@@ -17,7 +17,7 @@ Associer une montre connectée à **AAPS** peut être utile dans de nombreuses s
 
 ## Avantages particuliers pour les parents/aidants qui utilisent **AAPS**
 
-Pour un enfant, si son téléphone **AAPS** est à proximité, un aidant peut utiliser une montre connectée pour surveiller ou faire des modifications sans devoir utiliser le téléphone **AAPS**. Cela peut être utile, par exemple, si le téléphone **AAPS** est rangé dans une ceinture de pompe.
+For a child - if their **AAPS** phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS** phone. Cela peut être utile, par exemple, si le téléphone **AAPS** est rangé dans une ceinture de pompe.
 
 Une montre connectée peut être utilisée _en plus_ ou _à la place_ des options basées sur le TÉLÉPHONE pour le contrôle à distance ou le [suivi uniquement](../RemoteFeatures/FollowingOnly.md).
 
@@ -49,19 +49,19 @@ La meilleure façon de choisir une montre connectée est de chercher les message
 
 ## Android complet
 
-Cela semble une option intéressante, n'est-ce pas ? Cependant, pour le moment, seuls quelques passionnés testent **AAPS** sur une montre autonome. Peu de montres connectées ont une interface correcte et fonctionnent aussi bien en autonome avec **AAPS** et votre application MGC. Les modèles populaires sont les LEMFO LEM 15 Pro et 16. Vous devez installer sur la montre l'apk « full » d'**AAPS** (l'apk qui est normalement installé sur un smartphone) et non l'apk « wear » d'**AAPS**.
+Cela semble une option intéressante, n'est-ce pas ? However, at present, only a few enthusiasts are experimenting with **AAPS** on a stand-alone watch. Peu de montres connectées ont une interface correcte et fonctionnent aussi bien en autonome avec **AAPS** et votre application MGC. Les modèles populaires sont les LEMFO LEM 15 Pro et 16. Vous devez installer sur la montre l'apk « full » d'**AAPS** (l'apk qui est normalement installé sur un smartphone) et non l'apk « wear » d'**AAPS**.
 
 Il n'existe pas de critère clair pour savoir si une montre fonctionnera bien avec **AAPS** en autonome, mais les paramètres suivants vous aideront :
 
 1)  Android 12 ou plus récent. 2)  Pouvoir sortir le cadran du mode « carré » pour avoir un texte plus grand et plus facile à lire. 3)  Une très bonne autonomie de batterie. 4)  Une bonne portée Bluetooth.
 
-La plupart des difficultés avec les montres **AAPS** autonomes viennent de l'utilisation d'un très petit écran, et du fait que l'interface actuelle de l'application AAPS complète n'a pas été conçue pour une montre. À cause de la petite taille de l'écran, vous préférerez peut-être utiliser un stylet pour modifier les paramètres d'**AAPS** sur la montre, et certains boutons d'AAPS peuvent ne pas être visibles sur l'écran de la montre.
+La plupart des difficultés avec les montres **AAPS** autonomes viennent de l'utilisation d'un très petit écran, et du fait que l'interface actuelle de l'application AAPS complète n'a pas été conçue pour une montre. You may prefer to use a stylus to edit **AAPS** settings on the watch, due to the restricted screen size, and some AAPS buttons may not be visible on the watch screen.
 
 Autres difficultés : il est difficile d'avoir une autonomie de batterie suffisante, et les montres avec une batterie suffisante sont souvent grosses et épaisses. Les utilisateurs signalent des problèmes avec le système et les paramètres d'économie d'énergie, des difficultés pour démarrer les capteurs sur la montre, une faible portée Bluetooth (pour garder la connexion avec le capteur et la pompe) et une étanchéité douteuse. Des exemples sont visibles sur les photos ci-dessous.
 
 ![image](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
 
-Si vous voulez configurer une montre autonome, lisez les messages et commentaires du groupe Facebook **AAPS** (bons mots de recherche : « standalone » et « Lemfo ») et sur Discord pour plus d'informations.
+If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
 ## Wear OS
 
@@ -175,7 +175,7 @@ Vous pouvez en savoir plus sur ces montres, y compris comment les configurer, su
 ![image](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
-Les montres Pebble ([plus fabriquées](https://en.wikipedia.org/wiki/Pebble_(watch))) ont été vendues de 2013 à 2016, et on peut encore en trouver d'occasion. Fitbit a repris les actifs de Pebble. Les utilisateurs de Pebble peuvent utiliser le cadran Urchin pour voir les données de Nightscout. Les données affichées peuvent inclure l'IA, le débit basal temporaire actif et les prédictions. En boucle ouverte, vous pouvez utiliser IFTTT pour créer un applet qui, quand une notification d'**AAPS** est reçue, envoie un SMS ou une notification Pushover.
+Les montres Pebble ([plus fabriquées](https://en.wikipedia.org/wiki/Pebble_(watch))) ont été vendues de 2013 à 2016, et on peut encore en trouver d'occasion. Fitbit a repris les actifs de Pebble. Les utilisateurs de Pebble peuvent utiliser le cadran Urchin pour voir les données de Nightscout. Les données affichées peuvent inclure l'IA, le débit basal temporaire actif et les prédictions. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.
 
 ### [Montres Bluejay](https://bluejay.website/)
 

@@ -27,7 +27,7 @@ Für die restlichen drei Parameter Basalrate (BR), Insulinempfindlichkeitsfaktor
 
 Die vier letzten Parameter (Glukoseziele, Basalraten, Insulinempfindlichkeitsfaktoren und Mahlzeitfaktoren) können auf unterschiedliche Werte eingestellt werden, die bei Bedarf stündlich wechseln.
 
-![Stündliche Änderung des Basals](../images/MaxDailyBasal2.png)
+![Hourly change of basal](../images/MaxDailyBasal2.png)
 
 **AAPS**-Screenshots eines _Beispiel_-Profils sind unten zu sehen. Dieses Beispielprofil enthält sehr viele Zeitfenster. Wenn Du mit **AAPS** startest, hast Du wahrscheinlich ein deutlich einfacheres Profil.
 
@@ -135,9 +135,9 @@ An diesen Beispielen kannst Du erkennen, dass _kleinerer_ **ISF**-Werte geringer
 
 ### Auswirkung
 
-Eine **niedrigerer / stärkerer ISF** (z. B. 40 statt 50) bedeutet, dass das Insulin Deinen **Glukosewert** mit einer Einheit weniger stark senkt. Dies führt dazu, dass der Loop mit **mehr Insulin** aggressiver / stärker korrigiert. Ist Dein **ISF** zu stark (kleiner Wert), kann das zu niedrigen **Glukosewerten** führen.
+A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. Dies führt dazu, dass der Loop mit **mehr Insulin** aggressiver / stärker korrigiert. Ist Dein **ISF** zu stark (kleiner Wert), kann das zu niedrigen **Glukosewerten** führen.
 
-Ein **höherer / schwächerer ISF** (z. B. 45 statt 35) bedeutet, dass das Insulin Deinen **Glukosewert** mit einer Einheit stärker senkt. Dies führt zu einer weniger aggressiven / schwächeren Korrektur des Loops mit **weniger Insulin**. Ist Dein **ISF** zu schwach (großer Wert), kann dies zu hohen **Glukosewerten** führen.
+A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. Dies führt zu einer weniger aggressiven / schwächeren Korrektur des Loops mit **weniger Insulin**. Ist Dein **ISF** zu schwach (großer Wert), kann dies zu hohen **Glukosewerten** führen.
 
 **Beispiel:**
 * **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
@@ -147,7 +147,7 @@ Ein **höherer / schwächerer ISF** (z. B. 45 statt 35) bedeutet, dass das Insul
 
 Ein zu niedriger **ISF** (und daher zu aggressiver; nicht unüblich) kann zu „Überkorrekturen“ führen. **AAPS** errechnet, dass mehr Insulin benötigt wird, um einen hohen **Glukosewert** zu korrigieren. Dies kann (besonders während des Fastens) zu einem „Achterbahn“-Verlauf der Glukosewerte führen, so wie es auf dem Bild unten dargestellt ist. In diesen Situationen sollte der **ISF**-Wert erhöht werden, um **AAPS** so weniger aggressiv zu machen. Dadurch wird sichergestellt, dass **AAPS** kleinere Korrekturdosen abgibt, und vermeidet damit die Überkorrektur eines hohen **Glukosewertes**, die einen niedrigen **Glukosewert** zur Folge haben würde.
 
-![ISF (Korrekturfaktor) zu niedrig](../images/isf.jpg)
+![ISF too low](../images/isf.jpg)
 
 Umgekehrt kann ein zu hoher **ISF** zu zu schwachen Korrekturen führen. Dies bedeutet, dass Deine Glukosewerte - besonders in der Nacht - oberhalb Deines Zielwertes bleiben.
 
@@ -201,7 +201,7 @@ Aufgrund von Hormonen und sportlichen Aktivitäten ist es normal, über den Tag 
 > 
 > BE-Faktor 2,4 IE / 12 g   ===>   IC = 12 g / 2,4 IE = 5,0 g/IE
 > 
-> Umrechnungstabellen finden sich online z.B. [hier](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Auswirkung
 
@@ -300,7 +300,7 @@ Profil-Helfer bietet Datensätze von zwei verschiedenen Kinderkrankenhäusern an
 4. Change to the **Profile 2** tab.
 5. Tippe auf **Profil-Typ** und wähle das „DPV-Standard-Profil“ aus.
 6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, TDD Total and percentage of basal. Note that the DPV data set provides **basal rates** only, so IC and ISF are shown as zero for this profile.
-7. Open the **Comparation** tab. Ein Vergleich der beiden angepassten Profile wird angezeigt (siehe Screenshot unten).
+7. Open the **Comparison** tab. Ein Vergleich der beiden angepassten Profile wird angezeigt (siehe Screenshot unten).
 8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button at the bottom of the comparison.
 
 ![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
@@ -312,7 +312,7 @@ Mehr Informationen findest Du im Abschnitt [Profilwechsel & Prozentuale Profilan
 (your-aaps-profile-clone-profile-switch)=
 ### Einen Profilwechsel in ein neues Profil klonen
 
-![Profilwechsel](../images/TreatmentsView4.png)
+![Profile Switch](../images/TreatmentsView4.png)
 
 The [Treatments history](#aaps-screens-treatments) shows all past **Profile Switches**. When going to the **Profile switch** tab, you can use a past **Profile Switch** as a base to create a new **Profile**. Zeitverschiebung und Prozentsatz des Profilwechsels werden in das lokale neue Profil übernommen. Use the **Clone** button shown on line **2**.
 
@@ -335,7 +335,7 @@ Wenn Du gravierende Änderungen an einem umfangreichen **Profil** vorgenommen ha
 
 Es ist dabei wichtig, den gesamten **-Datenbank-Datensatz**, der aus mehreren Profilen im Nightscout-Editor besteht (blauer Pfeil auf dem Screenshot unten), zu klonen. Der neue Datensatz enthält dann das aktuelle Datum. Nach dem Speichern kann das geänderte/neue **Profil** in **AAPS** mit einem regulären [Profilwechsel](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) aktiviert werden.
 
-![Datensätze klonen](../images/Nightscout_Profile_Editor.PNG)
+![Clone database records](../images/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
 ### Vergleiche zwei Profile
@@ -350,6 +350,6 @@ You can also use the [Profile Helper](#aaps-screens-profile-helper) (menu ☰ �
 4. Change to the **Profile 2** tab.
 5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profile Switches**.
 6. Wähle das **Profilwechsel** aus, gegen den Du vergleichen möchtest.
-7. Open the **Comparation** tab. Comparison of the two profiles will be displayed (see screenshot below).
+7. Open the **Comparison** tab. Comparison of the two profiles will be displayed (see screenshot below).
 
 ![Profile Helper 2](../images/ProfileHelper2.png)

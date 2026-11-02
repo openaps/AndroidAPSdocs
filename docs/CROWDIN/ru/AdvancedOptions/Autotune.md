@@ -78,7 +78,7 @@ Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
 
 - Если вы доверяете результатам (низкий процент изменений между входным профилем и выходным профилем), нажмите на кнопку "Активировать профиль" и затем на OK для подтверждения.
 
-  - Activate Tuned profile will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
+  - "Activate profile" will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
   - If you already have a profile named "Tuned" in **Manage → Profile**, then this profile will be updated with calculated Autotune profile before the activation
 
   ![Автоматически активировать профиль](../images/Autotune/Autotune_6.png)
@@ -123,7 +123,7 @@ The **Auto switch profile** feature is only available in Dev/Engineering mode.
 - **Auto switch profile** (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. Если изменить эту настройку на Включить, профиль ввода будет автоматически обновлен профилем Tuned и активирован.
   - **Будьте внимательны, в течение нескольких следующих дней следите, чтобы после обновления и активации настроенного профиля система заработала лучше по сравнен с профилем без изменений**
 
-- **Categorize UAM as basal** (default Off): This setting is for the users using AndroidAPS without any carbs entered (Full UAM). Это помешает (когда Выключено) классифицировать UAM как базал.
+- **Categorize UAM as basal** (default Off): This setting is for the users using AAPS without any carbs entered (Full UAM). Это помешает (когда Выключено) классифицировать UAM как базал.
   - Примечание: если в течение одного дня обнаружен по крайней мере один час абсорбции углеводов, тогда все данные, классифицированные как UAM, будут классифицированы как basal, вне зависимости от того, включен параметр или выключен
 - **Default tune days** (default 5): You can define the default value with this setting. Each time you select a new profile in the Autotune plugin, the **Number of days of data** will be replaced by this default value
 - **Use circadian IC/ISF** (default Off): see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
@@ -188,7 +188,7 @@ The **Auto switch profile** feature is only available in Dev/Engineering mode.
 
   ![Экран Autotune по умолчанию](../images/Autotune/Autotune_17.png)
 
-- Then you can select the **Autotune profile** action (in the **Loop & insulin** group)
+- Then you can select the **Run Autotune** action (in the **Loop & insulin** group)
 
   ![Экран Autotune по умолчанию](../images/Autotune/Autotune_18.png)
 
@@ -212,7 +212,7 @@ The **Auto switch profile** feature is only available in Dev/Engineering mode.
 
 Autotune - всего лишь помощник, важно регулярно проверять, согласны ли вы с расчетным профилем. В случае сомнений, измените параметров Autotune (например, количество дней) или скопируйте результаты в локальный профиль и подкорректируйте перед использованием.
 
-Всегда используйте Autotune несколько дней вручную для проверки результатов перед их применением. И только тогда, когда вы полностью доверяете результатам Autotune и когда между предыдущим и новым профилем и вариации становятся незначительными, можно запускать Автоматизацию (никогда не раньше)
+Всегда используйте Autotune несколько дней вручную для проверки результатов перед их применением. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile then you start to use Automation (Never before)
 
 - Autotune может хорошо работать для одних пользователей, и плохо для других, поэтому **Если вы не доверяете результату Autotune, не применяйте его**
 

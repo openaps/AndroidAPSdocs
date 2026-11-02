@@ -104,7 +104,7 @@ JSON 文件可以在 Notepad（或 Notepad++）文本編輯器中編輯（建議
 
 ### TextView 設定
 
-TexView 比 ImageView 有更多可用參數：你可以調整旋轉（度數的整數值）、字體大小（以像素為單位的整數值）、重力（用來定義文字值是置中（預設值）、靠左對齊還是靠右對齊）、設置字體、字體樣式和字體顏色，還有 TextView 的背景顏色。
+TextView 可用的參數比 ImageView 多：您可以調整旋轉角度（整數，以度為單位）、文字大小（整數，以像素為單位）、對齊方式（設定文字值要置中〔預設值〕、靠左或靠右），也可以設定字型、fontStyle、fontColor，以及 TextView 的背景顏色。
 
 ```text
 "basalRate": {
@@ -198,7 +198,7 @@ TexView 比 ImageView 有更多可用參數：你可以調整旋轉（度數的�
 
 ### 在電腦上組織你的檔案
 
-最簡單的工作方式是將手機連線到電腦，並使用兩個特定資料夾工作：
+最簡單的作法是將手機連接到電腦，並使用兩個指定資料夾：
 
 - 一個檔案總管打開到特定資料夾，該資料夾將包含所有檔案（json、點陣圖圖像、向量圖像、字體），以及 CustomWatchface.zip 檔案。
 - 另一個檔案總管（或已調整的導覽樹）打開到 Phone/AAPS/exports 資料夾。
@@ -221,7 +221,7 @@ TexView 比 ImageView 有更多可用參數：你可以調整旋轉（度數的�
 
 現在，你可以開始修改 json 檔案，將每個視圖的 `"visibility"` 鍵設置為 `"visible"` 或 `"gone"`（如果你想保留或不保留該視圖）。
 
-您也可以開始調整頂部、左側邊距以及寬度高度值，以便開始組織錶盤（這些值稍後將使用圖像編輯器進行調整）。
+您也可以先大致調整上方邊界、左側邊界，以及寬度和高度，開始安排錶盤版面（之後再使用影像編輯器調整這些數值）。
 
 注意：所有設計都在 **400px x 400px 的矩形** 內進行。因此，所有內容都會在此大小範圍內以絕對座標定位。
 
@@ -538,7 +538,7 @@ DynData 是最強大的功能，如果您希望在錶盤中包含一些動畫，
 
 **freetext2 到 freetext4**
 
-對於這些視圖，我們將結合之前解釋過的動態圖片和旋轉功能：
+在這些檢視畫面中，我們會結合動態圖片和先前說明的旋轉功能：
 
 ```text
 "freetext2": {
@@ -693,7 +693,7 @@ DynData 是最強大的功能，如果您希望在錶盤中包含一些動畫，
 
 #### Steampunk 錶盤中的 dynPref 簡單使用
 
-在 Steampunk 中，我們必須根據單位設置圖像：`背景` 圖像將具有血糖尺度，並根據血糖值旋轉。以及 `freeText1`，其中包含根據 avgDelta 值的動態尺度。為了能夠擁有一個自動顯示正確單位的錶盤，我們應根據所選單位選擇圖像。
+在 Steampunk 中，我們依照單位提供兩組圖片：`background` 圖片會顯示血糖刻度，並依據血糖值旋轉。以及 `freeText1`，其中包含根據 avgDelta 值的動態尺度。為了能夠擁有一個自動顯示正確單位的錶盤，我們應根據所選單位選擇圖像。
 
 為了做到這一點，我們將在視圖區塊內將 `dynData` 鍵替換為 `dynPref` 鍵：
 
@@ -895,7 +895,7 @@ DynData 是最強大的功能，如果您希望在錶盤中包含一些動畫，
 ```
 你可以看到根據詳細 iob 參數（`"key_show_detailed_iob"` 鍵），當他為 "true" 時，文字大小會被定義為比預設值更大的固定值（24 代替預設的 19）：這是使用文字大小 "step" 功能完成的，並且只使用一個值，因此為單步驟...（請注意，對於除圖像外的所有參數，如果未設置 invalidTextSize，則將使用 textsize1 作為無效資料的文字大小）
 
-然後 "dark" dynPref 區塊將用來設置顏色和字體顏色
+接著會使用「dark」dynPref 區塊設定顏色和 fontColor。
 
 在此範例中，如果啟用了詳細 IOB 且啟用了暗色，將為 iob1 視圖使用的 dynData 區塊為：
 
@@ -907,7 +907,7 @@ DynData 是最強大的功能，如果您希望在錶盤中包含一些動畫，
 },
 ```
 
-因此，文字將顯示為黑色背景上的白色，並且大小 24 將取代視圖中設置的預設大小 19
+因此，文字會以白色顯示在黑色背景上，並以 24 的大小取代檢視畫面中設定的預設大小 19。
 
 如果停用了詳細 IOB 且停用了暗色，則將為相同的 iob1 視圖使用的 dynData 區塊為：
 
@@ -924,7 +924,7 @@ DynData 是最強大的功能，如果您希望在錶盤中包含一些動畫，
 
 - 你可以結合任意多的偏好設定，但要小心，描述的區塊數量可能會快速增加（是指指數增長）：如果你連接了3個參數並想要定義所有情況，則將需要8個區塊來描述，因為每個參數只有2個值...
 - 請注意不要建立「無限迴圈」（例如，如果 dynpref1 區塊必須由 dynpref2 區塊來完成，而 dynpref2 區塊又必須由 dynpref1 區塊來完成...）。在這種情況下，dynpref 區塊將被視為無效...
-- 不要忘記在鍵後面包括數字索引（例如當你在視圖中使用 `"textsize"` 鍵時，你將不得不在 dynPref 值區塊中使用 `"textsize1"`，因為這是 "dynData" 格式，因此在這種情況下鏈接到單步驟的值）
+- 請記得在鍵名稱後加上數字索引（例如，在檢視畫面中使用 `"textsize"` 鍵時，必須在 dynPref 值區塊中使用 `"textsize1"`，因為這裡採用的是「dynData」格式，本例會以單一步驟連結至數值）。
 - 每個視圖僅應設置一個鍵 `"valueKey"`，因此如果最終 `dynData` 區塊是由幾個 `dynPref` 區塊構建，請不要包含多個 `"valueKey"`（以及相關的 `"minData"`、`"maxData"` 等）。
 
 (cwf-reference-new-v2-features)=
@@ -933,7 +933,7 @@ DynData 是最強大的功能，如果您希望在錶盤中包含一些動畫，
 
 請注意，使用這些新功能或視圖的錶盤將需要根據 AAPS 3.3.0 版本構建的最新 wear apk。
 
-如果你使用包含 CustomWatchface V1 的 zip "v2"，則你將在錶盤上缺少資訊或內容錯誤。
+如果您在含有 CustomWatchface V1 的手錶上使用 zip「v2」，錶盤中會缺少資訊或顯示錯誤內容。
 
 CustomWatchface V2 包含這些新功能：
 
@@ -951,7 +951,7 @@ CustomWatchface V2 包含這些新功能：
 
 此視圖已納入之前的 AAPS（無圖表）、AAPS（大圖表）和 AAPS（大圖表）之前存在的錶盤中，並包含一個字符串值（在 wear apk 中構建）。
 
-這些之前的錶盤已被刪除，並在 AAPS 3.3.0 中由 3 個新的自訂錶盤取代。
+先前的這些錶盤已移除，並由 AAPS 3.3.0 中的 3 款全新自訂錶盤取代。
 
 - 最少的訊息是 IOB 值（無論錶上的 IOB 參數為何，始終可見）
 - 然後你可以看到詳細的 IOB 值（BolusIOB|BasalIOB），如果在偏好設定中啟用
@@ -1097,7 +1097,7 @@ DynData 值等於:
 排版字串包含於 `"textvalue1"` 鍵中（`"textvalue1"`、`"textvalue2"` 等鍵與 `"textvalue"` 鍵鏈結，該鍵可以納入 `view` 區塊中）
 
 - `"textvalue"` 鍵可以在視圖區塊中使用排版資訊（在這種情況下，格式將是靜態的，無論值或設定如何）
-- 如果你想根據設定或值來修改排版資訊，那麼所有的 dynData 功能都可以應用，專用鍵包括 `"invalidTextValue"` 鍵（因為值無效，所以沒有「排版資訊」）以及 `"textvalue1"`、`"textvalue2"`......（以及你想要管理的最小值和最大值之間的任意數量值）
+- 如果您想依照設定或數值修改格式資訊，就可以套用所有 dynData 功能；專用的鍵包括 `"invalidTextValue"`（不含「格式資訊」，因為數值無效），以及 `"textvalue1"`、`"textvalue2"`……（您可以依需求設定任意數量的值，用來管理 minData 和 maxData 之間的步驟）。
 - 額外的 `"dynPref"` 鍵用於根據可見視圖、暗黑和分隔線設定定義其他區塊以改變位置和顏色
 
 現在關於排版字串，語法如下： `%[flags][width][.precision]f`
@@ -1165,7 +1165,7 @@ DynData 值等於:
 
 請注意，如果手機上的主要應用是 AAPSCLIENT，而廣播數據的次要應用是 AAPSCLIENT2，則在使用帶有標準視圖和 Ext1 額外視圖的自訂錶盤時，你必須在自訂錶盤專用設定中啟用 `切換錶盤中的外部資料` 參數（Ext1 連結到 AAPSCLIENT，Ext2 連結到 AAPSCLIENT2）。
 
-此外，增加了三個新視圖（`"patient_name"`、`"patient_name_Ext1"` 和 `"patient_name_Ext2"` *），以便能夠自動在錶盤中包含患者姓名（設定於 AAPS 偏好設定中）（見下方範例）
+此外，還新增了 3 個檢視畫面（`"patient_name"`、`"patient_name_Ext1"` 和 `"patient_name_Ext2"`*），可在錶盤中自動加入病患姓名（在 AAPS 偏好設定中設定；請參閱下方範例）。
 
 ![CustomWatchface_7](../images/CustomWatchface_7.png)
 
@@ -1231,14 +1231,14 @@ DynData 值等於:
 | `"highColor"`            | `"#FFFF00"`（預設黃色）：當血糖高於上限（高血糖）時，血糖 值、趨勢箭頭和圖表中的血糖值顏色                              |
 | `"midColor"`             | `"#00FF00"`（預設綠色）：當血糖處於範圍內時，血糖 值、趨勢箭頭和圖表中的血糖值顏色                                  |
 | `"lowColor"`             | `"#FF0000"`（預設紅色）：當血糖低於下限（低血糖）時，血糖 值、趨勢箭頭和圖表中的血糖值顏色                              |
-| `"lowBatColor"`          | `"#E53935"`（預設深紅色）：當 `uploader_battery` 值較低（低於 20%）時的顏色                          |
+| `"lowBatColor"`          | `"#E53935"`（預設深紅色）：`uploader_battery` 數值偏低（低於 30%）時顯示的顏色。                        |
 | `"carbColor"`            | `"#FB8C00"`（預設橙色）：圖表中的碳水化合物點的顏色                                                  |
 | `"basalBackgroundColor"` | `"#0000FF"`（預設深藍色）：圖表中的 TBR 曲線顏色                                                 |
 | `"basalCenterColor"`     | `"#64B5F6"`（預設淺藍色）：圖表中的注射或 SMB 點的顏色                                              |
 | `"gridColor"`            | `"#FFFFFF"`（預設白色）：圖表中的線條和文字刻度的顏色                                                 |
 | `"pointSize"`            | 2（預設值）：圖表中點的大小（1 為小點，2 為大點）                                                      |
 | `"enableSecond"`         | false（預設值）：指定錶盤是否在 `時間`、`秒` 或 `秒針` 視圖中顯示秒數。在視圖的可見性和這個總體設定之間保持一致非常重要，這將允許每秒更新時間資訊 |
-| `"dayNameFormat"`        | "E"（預設值）：從 "E" 到 "EEEE" 指定日期格式（數字、簡稱、全名）                                         |
+| `"dayNameFormat"`        | 「E」（預設值）：從「E」到「EEEE」可指定星期名稱格式（數字、簡稱、全名）。                                         |
 | `"monthFormat"`          | "MMM"（預設值）：從 "M" 到 "MMMM" 指定月份格式（數字、簡稱、全名）                                       |
 
 (cwf-reference-list-of-hardcoded-resource-files)=
@@ -1289,8 +1289,7 @@ DynData 值等於:
 | `"iob2"`<br/>`"iob2_Ext1"` *<br/>`"iob2_Ext2"` *                           | 文字視圖   | IOB 總量或 IOB 詳細資訊                                   |                                                                                                        |
 | `"cob1"`<br/>`"cob1_Ext1"` *<br/>`"cob1_Ext2"` *                           | 文字視圖   | 碳水化合物標籤                                            |                                                                                                        |
 | `"cob2"`<br/>`"cob2_Ext1"` *<br/>`"cob2_Ext2"` *                           | 文字視圖   | COB 值                                              |                                                                                                        |
-| `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *                        | 文字視圖   | 短期 delta（5 分鐘）                                     | delta  
-delta_Ext1<br/>delta_Ext2                                                                |
+| `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *                        | 文字視圖   | 短期 delta（5 分鐘）                                     | delta<br/>delta_Ext1<br/>delta_Ext2                                                        |
 | `"avg_delta"`<br/>`"avg_delta_Ext1"` *<br/>`"avg_delta_Ext2"` *            | 文字視圖   | 平均 Delta（15 分鐘）                                    | avg_delta<br/>avg_delta_Ext1<br/>avg_delta_Ext2                                        |
 | `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` *        | 文字視圖   | 血糖目標（單一數值或最小 - 最大目標值）                              | 臨時目標<br/>臨時目標_Ext1<br/>臨時目標_Ext2                                                           |
 | `"藥量"`*<br/>`"藥量_Ext1"` *<br/>`"藥量_Ext2"` *                                | 文字視圖   | 儲液槽液面                                              | 藥量<br/>藥量水平<br/>藥量_Ext1<br/>藥量水平_Ext1<br/>藥量_Ext2<br/>藥量水平_Ext2          |
@@ -1412,35 +1411,35 @@ delta_Ext1<br/>delta_Ext2                                                       
 
 ### DynData 鍵
 
-| Key                       | 類型 | 註解                                                                                                                                                                                                                                                                             |
-| ------------------------- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `"dynData"`               | 區塊 | 定義所有動態資料區塊的區塊，將用於視圖。通常位於最後一個視圖之後。<br />在此區塊中定義的所有鍵將用作視圖區塊中的鍵值：<br />`"dynData": { dynData 區塊 }`<br />每個區塊由自訂名稱和若干內部鍵定義：<br />`"customName": { 一個 dynData 區塊 }`                                                                                         |
-| `"valueKey"`              | 文字 | 要使用的動態資料名稱（通常與相關的視圖鍵相同）。<br />如果不存在，則預設值將是使用此區塊的視圖所使用的值。<br />例如，你可以定義一個區塊來自訂電池電量百分比而不指定 valueKey，然後使用相同的區塊來自訂上傳器電池和 rig 電池。                                                                                                                                       |
-| `"minData"`               | 整數 | 指定要考慮的 AAPS 資料的最小值：例如，如果值是 sgv（單位是 mg/dl，內部使用），如果 minData 設定為 50，則所有血糖值低於 50 mg/dl 的將被設置為 50。<br />- 請注意 minData 和 maxData 將用於計算動態值（以像素或度數表示）。                                                                                                                           |
-| `"maxData"`               | 整數 | 指定要考慮的 AAPS 資料的最大值：例如，如果值是 sgv（單位是 mg/dl，內部使用），如果 maxData 設定為 330，則所有血糖值高於 330 mg/dl 的將被設置為 330。                                                                                                                                                                               |
-| `"leftOffset"`            | 區塊 | 指定視圖的數值偏移，根據最小值和最大值的像素數量。<br />- 這包括 minValue 鍵、maxValue 鍵和 invalidValue 鍵（可選）<br />- 如果資料低於或等於 minData，則視圖將偏移到 minValue 像素；如果資料高於或等於 maxData，則視圖將偏移到 maxValue 像素<br />注意，要應用此偏移，`leftOffset` 必須設定為 true                                                     |
-| `"topOffset"`             | 區塊 | 根據最小值和最大值（以像素表示）指定視圖的垂直位移。<br />- 他包括 minValue 鍵、maxValueKey 和 invalidValue 鍵（可選）。<br />- 如果資料小於或等於 minData，則視圖將移動到 minValue 像素，如果資料大於或等於 maxData，則視圖將移動到 maxValue 像素。<br />請注意，要應用此位移，應在視圖中將 topOffset 設置為 true。                                            |
-| `"rotationOffset"`        | 區塊 | 指定視圖的旋轉角度，根據最小值和最大值的像素數量。<br />- 這包括 `minValue` 鍵、`maxValue` 鍵和 `invalidValue` 鍵（可選）<br />- 如果資料低於或等於 `minData`，則視圖將旋轉 `minValue` 度；如果資料高於或等於 `maxData`，則視圖將旋轉 `maxValue` 度<br />注意，要應用此旋轉，`rotationOffset` 必須設定為 true                                       |
-| `"dynValue"`*             | 區塊 | 指定從最小和最大範圍到像素的最小和最大值之間的 dynValue 轉換。<br />- 這包括 `minValue` 鍵、`maxValue` 鍵和 `invalidValue` 鍵（可選）<br />- 如果資料低於或等於 `minData`，則發送的 dynValue 將是 minValue（轉換為雙精度），如果資料高於或等於 `maxData`，則計算的 dynValue 將是 maxValue（轉換為雙精度）<br />請注意，要應用此轉換，`dynValue` 鍵應在視圖內設置為 true |
-| `"minValue"`              | 整數 | 要應用於視圖的結果值（此鍵僅適用於 leftOffset、topOffset 或 rotationOffset 區塊內）                                                                                                                                                                                                                   |
-| `"maxValue"`              | 整數 | 要應用於視圖的結果值（此鍵僅適用於 leftOffset、topOffset 或 rotationOffset 區塊內）                                                                                                                                                                                                                   |
-| `"invalidValue"`          | 整數 | 如果資料無效，則要應用於視圖的結果值（此鍵僅適用於 leftOffset、topOffset 或 rotationOffset 區塊內）                                                                                                                                                                                                           |
-| `"invalidImage"`          | 文字 | 如果資料無效，則用於 ImageView 或背景 TextView 的 `resource_filename`                                                                                                                                                                                                                        |
-| image*1_to_n*           | 文字 | `resource_filename` 圖片用於每個步驟在 minData（或接近 minData）與 `"image1"` 和 maxData（或接近 maxData）之間的影像*n*<br />例如，如果你放了 5 張圖片（從 image1 到 image5），則 minData 和 maxData 之間的範圍將被分為 5 個步驟，根據資料值，將顯示相應的圖片                                                                                  |
-| `"invalidFontColor"`      | 文字 | 資料無效時，設定文字顏色的變化<br />`"#RRGGBB"` 或 `"#AARRGGBB"`：收到無效資料時要使用的顏色（若 AA=00，則可設為透明）                                                                                                                                                                                           |
-| fontColor*1_to_n*       | 文字 | 設定文字顏色的變化<br />`"#RRGGBB"` 或 `"#AARRGGBB"`：設定 minData（或接近 minData）到 maxData（或接近 maxData）之間各級距要使用的顏色；minData 使用 `"fontColor1"`，maxData 使用 fontColor*n*                                                                                                                    |
-| `"invalidColor"`          | 文字 | 資料無效時，設定背景顏色或圖片顏色的變化<br />`"#RRGGBB"` 或 `"#AARRGGBB"`：收到無效資料時要使用的顏色（若 AA=00，則可設為透明）                                                                                                                                                                                      |
-| color*1_to_n*           | 文字 | 設定背景顏色或圖片顏色的變化<br />`"#RRGGBB"` 或 `"#AARRGGBB"`：設定 minData（或接近 minData）到 maxData（或接近 maxData）之間各級距要使用的顏色；minData 使用 `"color1"`，maxData 使用 color*n*                                                                                                                       |
-| `"invalidTextSize"`       | 整數 | 如果資料無效，管理文字大小的步驟                                                                                                                                                                                                                                                               |
-| textsize*1_to_n*        | 整數 | 管理文字大小，用於 minData（或接近 minData）與 `"textsize1"` 以及 maxData（或接近 maxData）與 textsize*n* 之間的步驟                                                                                                                                                                                       |
-| `"invalidLeftOffset"`     | 整數 | 如果資料無效，管理 leftOffset 的步驟                                                                                                                                                                                                                                                       |
-| 左偏移*1_to_n*             | 整數 | 管理左偏移以用於每個步驟，介於最小資料（或接近最小資料）與`"leftOffset1"`及最大資料（或接近最大資料）與leftOffset*n*<br />注意，可以與dynPref一起使用，當另一個隱藏時來移動視圖...                                                                                                                                                          |
-| `"invalidTopOffset"`      | 整數 | 如果資料無效，管理 topOffset 的步驟                                                                                                                                                                                                                                                        |
-| topOffset*1_to_n*       | 整數 | 管理每個步驟要使用的 topOffset，從 minData（或接近 minData）開始為 topOffset1，maxData（或接近 maxData）為 topOffset*n*<br />請注意，可以與 dynPref 一起使用，當另一個視圖被隱藏時移動視圖...                                                                                                                                 |
-| `"invalidRotationOffset"` | 整數 | 如果資料無效，管理 rotationOffset 的步驟                                                                                                                                                                                                                                                   |
-| rotationOffset*1_to_n*  | 整數 | 管理每個步驟要使用的 rotationOffset，從 minData（或接近 minData）開始為 rotationOffset1，maxData（或接近 maxData）為 rotationOffset*n*                                                                                                                                                                    |
-| `"invalidTextvalue"`*     | 文字 | 如果資料無效，管理textvalue                                                                                                                                                                                                                                                             |
-| textvalue*1_to_n* *     | 文字 | 設定 minData（或接近 minData）到 maxData（或接近 maxData）之間各級距要使用的 textvalue；minData 使用 textvalue1，maxData 使用 textvalue*n*<br />請注意，若在檢視中將 `"dynValue"` 設為 true，也可以包含格式字串                                                                                                            |
+| Key                       | 類型 | 註解                                                                                                                                                                                                                                                                                                |
+| ------------------------- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"dynData"`               | 區塊 | 定義所有動態資料區塊的區塊，將用於視圖。通常位於最後一個視圖之後。<br />在此區塊中定義的所有鍵將用作視圖區塊中的鍵值：<br />`"dynData": { dynData 區塊 }`<br />每個區塊由自訂名稱和若干內部鍵定義：<br />`"customName": { 一個 dynData 區塊 }`                                                                                                            |
+| `"valueKey"`              | 文字 | 要使用的動態資料名稱（通常與相關的視圖鍵相同）。<br />如果不存在，則預設值將是使用此區塊的視圖所使用的值。<br />例如，你可以定義一個區塊來自訂電池電量百分比而不指定 valueKey，然後使用相同的區塊來自訂上傳器電池和 rig 電池。                                                                                                                                                          |
+| `"minData"`               | 整數 | 指定要考慮的 AAPS 資料的最小值：例如，如果值是 sgv（單位是 mg/dl，內部使用），如果 minData 設定為 50，則所有血糖值低於 50 mg/dl 的將被設置為 50。<br />- 請注意 minData 和 maxData 將用於計算動態值（以像素或度數表示）。                                                                                                                                              |
+| `"maxData"`               | 整數 | 指定要考慮的 AAPS 資料的最大值：例如，如果值是 sgv（單位是 mg/dl，內部使用），如果 maxData 設定為 330，則所有血糖值高於 330 mg/dl 的將被設置為 330。                                                                                                                                                                                                  |
+| `"leftOffset"`            | 區塊 | 依據最小值和最大值，以像素為單位指定檢視畫面的水平位移。<br />- 包含 `minValue`、`maxValue` 和 `invalidValue` 鍵（選用）。<br />- 如果資料小於或等於 minData，檢視畫面會位移 minValue 像素；如果資料大於或等於 maxData，則會位移 maxValue 像素。<br />請注意，若要套用此位移，必須在檢視畫面中將 `leftOffset` 設為 true。                                                          |
+| `"topOffset"`             | 區塊 | 依據最小值和最大值，以像素為單位指定檢視畫面的垂直位移。<br />- 包含 `minValue`、`maxValue` 和 `invalidValue` 鍵（選用）。<br />- 如果資料小於或等於 minData，檢視畫面會位移 minValue 像素；如果資料大於或等於 maxData，則會位移 maxValue 像素。<br />請注意，若要套用此位移，必須在檢視畫面中將 topOffset 設為 true。                                                             |
+| `"rotationOffset"`        | 區塊 | 依據最小值和最大值，以度為單位指定檢視畫面的旋轉角度。<br />- 包含 `minValue`、`maxValue` 和 `invalidValue` 鍵（選用）。<br />- 如果資料小於或等於 `minData`，檢視畫面會旋轉 `minValue` 度；如果資料大於或等於 `maxData`，則會旋轉 `maxValue` 度。<br />請注意，若要套用此旋轉，必須在檢視畫面中將 `rotationOffset` 設為 true。                                                 |
+| `"dynValue"`*             | 區塊 | 指定 dynValue 將最小值與最大值範圍轉換為最小值和最大值的方式。<br />- 包含 `minValue` 索引鍵、`maxValue` 索引鍵，以及 `invalidValue` 索引鍵（選填）<br />- 如果資料小於或等於 `minData`，傳送的 dynValue 會是 minValue（轉換為 double）；如果資料大於或等於 `maxData`，計算出的 dynValue 會是 maxValue（轉換為 double）<br />請注意，若要套用此轉換，必須在檢視畫面中將 `dynValue` 設為 true。 |
+| `"minValue"`              | 整數 | 要應用於視圖的結果值（此鍵僅適用於 leftOffset、topOffset 或 rotationOffset 區塊內）                                                                                                                                                                                                                                      |
+| `"maxValue"`              | 整數 | 要應用於視圖的結果值（此鍵僅適用於 leftOffset、topOffset 或 rotationOffset 區塊內）                                                                                                                                                                                                                                      |
+| `"invalidValue"`          | 整數 | 如果資料無效，則要應用於視圖的結果值（此鍵僅適用於 leftOffset、topOffset 或 rotationOffset 區塊內）                                                                                                                                                                                                                              |
+| `"invalidImage"`          | 文字 | 如果資料無效，則用於 ImageView 或背景 TextView 的 `resource_filename`                                                                                                                                                                                                                                           |
+| image*1_to_n*           | 文字 | `resource_filename` 圖片用於每個步驟在 minData（或接近 minData）與 `"image1"` 和 maxData（或接近 maxData）之間的影像*n*<br />例如，如果你放了 5 張圖片（從 image1 到 image5），則 minData 和 maxData 之間的範圍將被分為 5 個步驟，根據資料值，將顯示相應的圖片                                                                                                     |
+| `"invalidFontColor"`      | 文字 | 資料無效時，設定文字顏色的變化<br />`"#RRGGBB"` 或 `"#AARRGGBB"`：收到無效資料時要使用的顏色（若 AA=00，則可設為透明）                                                                                                                                                                                                              |
+| fontColor*1_to_n*       | 文字 | 設定文字顏色的變化<br />`"#RRGGBB"` 或 `"#AARRGGBB"`：設定 minData（或接近 minData）到 maxData（或接近 maxData）之間各級距要使用的顏色；minData 使用 `"fontColor1"`，maxData 使用 fontColor*n*                                                                                                                                       |
+| `"invalidColor"`          | 文字 | 資料無效時，設定背景顏色或圖片顏色的變化<br />`"#RRGGBB"` 或 `"#AARRGGBB"`：收到無效資料時要使用的顏色（若 AA=00，則可設為透明）                                                                                                                                                                                                         |
+| color*1_to_n*           | 文字 | 設定背景顏色或圖片顏色的變化<br />`"#RRGGBB"` 或 `"#AARRGGBB"`：設定 minData（或接近 minData）到 maxData（或接近 maxData）之間各級距要使用的顏色；minData 使用 `"color1"`，maxData 使用 color*n*                                                                                                                                          |
+| `"invalidTextSize"`       | 整數 | 如果資料無效，管理文字大小的步驟                                                                                                                                                                                                                                                                                  |
+| textsize*1_to_n*        | 整數 | 管理文字大小，用於 minData（或接近 minData）與 `"textsize1"` 以及 maxData（或接近 maxData）與 textsize*n* 之間的步驟                                                                                                                                                                                                          |
+| `"invalidLeftOffset"`     | 整數 | 如果資料無效，管理 leftOffset 的步驟                                                                                                                                                                                                                                                                          |
+| 左偏移*1_to_n*             | 整數 | 管理左偏移以用於每個步驟，介於最小資料（或接近最小資料）與`"leftOffset1"`及最大資料（或接近最大資料）與leftOffset*n*<br />注意，可以與dynPref一起使用，當另一個隱藏時來移動視圖...                                                                                                                                                                             |
+| `"invalidTopOffset"`      | 整數 | 如果資料無效，管理 topOffset 的步驟                                                                                                                                                                                                                                                                           |
+| topOffset*1_to_n*       | 整數 | 管理每個步驟要使用的 topOffset，從 minData（或接近 minData）開始為 topOffset1，maxData（或接近 maxData）為 topOffset*n*<br />請注意，可以與 dynPref 一起使用，當另一個視圖被隱藏時移動視圖...                                                                                                                                                    |
+| `"invalidRotationOffset"` | 整數 | 如果資料無效，管理 rotationOffset 的步驟                                                                                                                                                                                                                                                                      |
+| rotationOffset*1_to_n*  | 整數 | 管理每個步驟要使用的 rotationOffset，從 minData（或接近 minData）開始為 rotationOffset1，maxData（或接近 maxData）為 rotationOffset*n*                                                                                                                                                                                       |
+| `"invalidTextvalue"`*     | 文字 | 如果資料無效，管理textvalue                                                                                                                                                                                                                                                                                |
+| textvalue*1_to_n* *     | 文字 | 設定 minData（或接近 minData）到 maxData（或接近 maxData）之間各級距要使用的 textvalue；minData 使用 textvalue1，maxData 使用 textvalue*n*<br />請注意，若在檢視中將 `"dynValue"` 設為 true，也可以包含格式字串                                                                                                                               |
 
 **自Custom Watchface V2.0或以上版本中新增的鍵（可用於AAPS 3.3.0穿戴apk或以上版本）*
 
@@ -1452,10 +1451,10 @@ delta_Ext1<br/>delta_Ext2                                                       
 | ------------------------------------------------------------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `"sgv"`<br/>`"sgv_Ext1"` *<br>`"sgv_Ext2"` *                        | valueKey | 預設 minData = 39 mg/dL<br />預設 maxData = 400 mg/dL<br />- 請注意，實際的 maxData 與你的傳感器相關，內部值的單位始終為 mg/dL                                        |
 | `"sgv水平"`<br/>`"sgv水平_Ext1"` *<br/>`"sgv水平_Ext2"` *                 | valueKey | 預設 minData = -1（低血糖）<br />預設 maxData = 1（高血糖）<br />如果血糖在範圍內 = 0                                                                          |
-| `"方向"`<br/>`"方向_Ext1"` *<br/>`"方向_Ext2"` *                          | valueKey | 預設 minData = 1（雙箭頭向下）<br />預設 maxValue = 7（雙箭頭向上）<br />數值箭頭資料 = 4<br />錯誤或遺失資料 = 0（??）                                             |
+| `"方向"`<br/>`"方向_Ext1"` *<br/>`"方向_Ext2"` *                          | valueKey | 預設 minData = 1（double 向下）<br />預設 maxData = 7（double 向上）<br />平坦箭頭資料 = 4<br />錯誤或缺少資料 = 0                                          |
 | `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *                 | valueKey | 預設 minData = -25 mg/dL<br />預設 maxData = 25 mg/dL<br />- 請注意，實際的 minData 和 maxData 可能會超出上述範圍，內部值的單位始終為 mg/dL                             |
 | `"avg_delta"`<br/>`"avg_delta_Ext1"` *<br/>`"avg_delta_Ext2"` *     | valueKey | 預設 minData = -25 mg/dL<br />預設 maxData = 25 mg/dL<br />- 請注意，實際的 minData 和 maxData 可能會超出上述範圍，內部值的單位始終為 mg/dL                             |
-| `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` * | valueKey | 預設最小資料 = 0（個人設定目標）<br />預設最大資料 = 2（臨時目標）<br />目標通過循環調整 = 1<br/>預設或缺失資訊 = 0                                                         |
+| `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` * | valueKey | 預設 minData = 0（設定檔目標）<br />預設 maxData = 2（臨時目標）<br />由循環調整的目標 = 1<br/>預設值或缺少資訊 = 0                                                 |
 | `"藥量"`*<br/>`"藥量_Ext1"` *<br/>`"藥量_Ext2"` *                         | valueKey | 預設最小資料 = 0 U<br />預設最大資料 = 500 U                                                                                                               |
 | `"藥量水平"`*<br/>`"藥量水平_Ext1"` *<br/>`"藥量水平_Ext2"` *                   | valueKey | 預設最小資料 = 0（標準顏色）<br/>預設最大資料 = 2（緊急顏色）<br/>警告顏色 = 1                                                                                       |
 | `"uploader_battery"`                                                            | valueKey | 預設 minData = 0%<br />預設 maxData = 100%                                                                                                         |

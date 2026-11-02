@@ -10,7 +10,7 @@ Désactivez l'optimisation de la batterie et autorisez l'activité en arrière-p
 
 Ne laissez aucune autre application envoyer des données (glycémie et traitements) vers Nightscout.
 
-→ Menu hamburger (1) → Settings (2) → Cloud Upload (3) -> Nightscout Sync (REST-API)(4) → Mettez `Enabled` sur **OFF** (5)
+→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Switch **OFF** `Enabled` (5)
 
 ![Paramètres de base xDrip 1](../images/xDrip_Basic1.png)
 
@@ -34,7 +34,7 @@ L'option `Alert on failures` doit aussi être désactivée (10). Sinon, vous aur
 
 ### **Inter-app Settings** (diffusion)
 
-Si vous utilisez AAPS et que les données doivent être transmises, par exemple à AAPS, vous devez activer la diffusion dans xDrip, dans Inter-App settings.
+If you use AAPS, you must activate broadcasting in xDrip's Inter-App settings so the data is forwarded to AAPS.
 
 → Menu hamburger (1) → Settings (2) → Inter-app settings (3) → Broadcast locally sur **ON** (4)
 

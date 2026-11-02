@@ -10,7 +10,7 @@
 
 - 夜班或轮班工作者：通过更改**配置文件**中的小时数，为轮班工作者设置时间偏移，以反映他们睡觉或起床时间的早晚变化。
 
-为什么使用**配置文件百分比**而不是临时基础量调整？为了更有效地应用，**配置文件百分比**会在基础量、ISF（胰岛素敏感因子）和I:C（碳水化合物比例）上按比例减少或增加。这确保了**AAPS**在计算用户的胰岛素摄入量时采用平衡的方法。如果算法继续为ISF和I:C提供相同的比例，仅通过基础量减少在用户的**AAPS****配置文件**中获益甚微。
+Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. 这确保了**AAPS**在计算用户的胰岛素摄入量时采用平衡的方法。如果算法继续为ISF和I:C提供相同的比例，仅通过基础量减少在用户的**AAPS****配置文件**中获益甚微。
 
 (ProfileSwitch-change-percentage)=
 
@@ -78,7 +78,7 @@ Select a profile and tap **▶ Activate**. The **Activate** screen lets you tail
 
 ![The Activate screen — percentage, duration, time shift, time](../images/v4/Profiles/profile_activate.png)
 
-- **Percentage** (30–250 %, starts at 100 % every time) — scale the whole profile. 100 % uses it as-is; for example 70 % reduces basal and the calculated insulin dose (both meal boluses and corrections) by 30 %. It does not change your glucose targets or carb absorption. See [Profile Percentage](#profile-percentage) for the full effect.
+- **Percentage** (30–250 %, starts at 100 % every time) — scale the whole profile. 100 % uses it as-is; for example 70 % reduces basal and the calculated insulin dose (both meal boluses and corrections) by 30 %. It does not change your glucose targets or carb absorption. See [Profile Percentage](#ProfileSwitch-profile-percentage) for the full effect.
 - **Duration** (0–10080 minutes, that is up to 7 days) — how long the switch lasts. **0 = indefinite** (until you switch again); a non-zero value reverts to the previous profile when it ends.
 - **Temporary target / Activity** — appears only when you set a **Duration** and a **Percentage** below 100 %. Switch it on to also start an [Activity temp target](#TempTargets-activity-temp-target) for the same duration, as you would before exercise.
 - **Time shift** — shows *0h*; tap **Change** to move the schedule forward or back by up to 23 hours (useful for shift work or travel). See [Time shift](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
@@ -107,6 +107,8 @@ If the pump reports a basal that is far from your **Profile**, **AAPS** keeps th
 
 A profile switch is not limited to this screen. The same switch can also be triggered from a **Wear OS watch**, a paired **client** (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)), a **[scene](Scenes.md)**, or an **Automation** rule.
 
+(ProfileSwitch-profile-percentage)=
+
 ## Profile Percentage
 
 用户了解**配置文件百分比**的基本功能至关重要。通过对**配置文件切换**应用百分比增加或减少，这将以相同的百分比提高或降低用户在**配置文件**中设置的参数。
@@ -125,23 +127,23 @@ A profile switch is not limited to this screen. The same switch can also be trig
 
 | 配置文件切换  
 百分比 |   影响   |     I:C  
-g/U      | 示例  
-（15g） |          ISF  
+g/U      | Example  
+15 g |          ISF  
 mmol/L/U  
 mg/dL/U          | U to lower  
 2mmol/L  
 40mg/dL |
-|:------------:|:------:|:------------------:|:----------:|:------------------------------------------:|:------------------------------:|
+|:------------:|:------:|:------------------:|:--------------:|:------------------------------------------:|:------------------------------:|
 |     90%      |   较弱   | 5/0.9  
-= **5.55** |   2.7 U    | 2.2/0.9  
+= **5.55** |     2.7 U      | 2.2/0.9  
 =**2.4**  
   
 40/0.9  
 =**44.4** |             0.8 U              |
-|   **100%**   | **标准** |       **5**        |  **3 U**   |                **2.2  
+|   **100%**   | **标准** |       **5**        |    **3 U**     |                **2.2  
 40**                |           **0.9** U            |
 |     130%     |   较强   | 5/1.3  
-=**3.85**  |   3.9 U    | 2.2/1.3  
+=**3.85**  |     3.9 U      | 2.2/1.3  
 =**1.7**  
   
 40/1.3  
@@ -153,7 +155,7 @@ mg/dL/U          | U to lower
 
 用户**配置文件**功能中的“时间偏移”可以将用户的**配置文件**设置围绕日常时钟（“昼夜节律”）移动到所需的小时数。这可以有助于以下情况：
 
-- **夜班或轮班工作者**：通过调整工作小时数来改变用户在**个人设置**中的上床睡觉或起床时间，使其延后或提前多少小时上夜班。 
+- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
 - **旅行中更改时区的用户**；或
 - **1型糖宝**：在其**配置文件**中考虑到其固定的睡觉时间和胰岛素抵抗。如果出于某种原因，孩子预计睡觉时间较晚，看护者可以对孩子的**配置文件**应用“时间偏移”，以便**AAPS**在用户设定的时间段内对胰岛素抵抗做出反应。
 
@@ -169,7 +171,7 @@ mg/dL/U          | U to lower
 
 ![配置文件切换时间偏移方向](../images/ProfileSwitch_PlusMinus2.png)
 
-此**配置文件**快照机制允许对过去进行更精确的计算，并有可能跟踪**配置文件**的变化。
+This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
 
 (ProfileSwitch-keep-for-later)=
 

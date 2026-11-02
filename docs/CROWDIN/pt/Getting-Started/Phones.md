@@ -30,7 +30,7 @@ The document is read-only. Com CTRL-F, pode pesquisar no texto da folha do Googl
 
 Para registar o seu teste de uma configuração de hardware, preencha este [formulário](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Depois de preencher o formulário, a folha é atualizada automaticamente a cada 5 minutos.
 
-Se tiver problemas com a folha de cálculo, contacte o seu responsável, *@theodoor5137*, no Discord, ou consulte a página [Onde posso obter ajuda? ](../GettingHelp/WhereCanIGetHelp.md).
+Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
 
 ## Não encontrei o meu telefone
 

@@ -19,7 +19,7 @@ Pravidlá automatizácie sa vytvárajú a upravujú na obrazovke **Automatizáci
 
 - Jednu alebo viac akcií, ktoré sa vykonajú.
 
-    Napríklad alarm, nastavenie percenta profilu alebo export nastavení AAPS pri výmene Podu.
+    Such as an alarm or setting a profile percentage or exporting the AAPS settings on Pod change.
 
 
 Možností automatizácie je veľa a používateľom odporúčame, aby si ich preštudovali priamo v aplikácii AAPS v časti Automatizácia. Príklady automatizácií od iných používateľov môžete hľadať aj v skupinách používateľov AAPS na [**Facebooku**](https://www.facebook.com/groups/AndroidAPSUsers) a [**Discorde**](https://discord.gg/4fQUWHZ4Mw).
@@ -38,11 +38,11 @@ Príklad nižšie ukazuje, ako môže **Automatizácia** ušetriť niektoré kro
 
 Používateľ cvičí každé ráno o 6:00: musí pamätať na to, aby v AAPS o 5:00, pred cvičením, ručne nastavil „Dočasný cieľ – Aktivita“.
 
-![Alternatívny text](../images/Automations/automation_concept_manual.png)
+![Manual actions without automation](../images/Automations/automation_concept_manual.png)
 
 Používateľ nastavil **Automatizáciu**, ktorá o 5:00 spustí „Dočasný cieľ – Aktivita“, aby boli jeho **glykémia** a **IOB** optimálne pred cvičením o 6:00:
 
-![Alternatívny text](../images/Automations/automation_concept_automated.png)
+![Actions done by an automation](../images/Automations/automation_concept_automated.png)
 
 ## Na čo myslieť pred začatím používania automatizácií
 
@@ -91,12 +91,12 @@ Ak chcete nastaviť **Automatizáciu**, stlačte na obrazovke Automatizácia tla
 
 Ak chcete pravidlo **Automatizácie** vypnúť, zrušte zaškrtnutie políčka vľavo od názvu **Automatizácie**. Príklad nižšie ukazuje **Automatizáciu**, ktorá je buď aktivovaná („zaškrtnutá“), alebo deaktivovaná („nezaškrtnutá“):
 
-![Alternatívny text](../images/Automations/automation_rule_activated_deactivated.png)
+![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
 
 
 Keď nastavujete **Automatizáciu**, môžete ju najprv vyskúšať tak, že v časti „Akcie“ zvolíte možnosť „Notifikácia“. **AAPS** potom najprv iba zobrazí notifikáciu a akciu skutočne nevykoná. Keď si budete istí, že sa notifikácia zobrazuje v správnom čase a za správnych podmienok, môžete v pravidle **Automatizácie** nahradiť „Notifikáciu“ skutočnou „Akciou“.
 
-![Alternatívny text](../images/Automations/automation_alert_actions.png)
+![Alert actions](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
@@ -115,7 +115,7 @@ Pre **Automatizácie** platia tieto bezpečnostné limity:
 
 * **Dočasný cieľ** nastavený **Automatizáciou** musí byť medzi 72 a 180 mg/dl (alebo 4 a 10 mmol/l).
 * **Percentuálny profil** musí byť medzi 50 % a 130 %.
-* Medzi dvoma spusteniami **Automatizácie** (aj pred prvým spustením) je časový limit 5 minút.
+* There is a 5 minute time limit between executions of **Automation** (and first execution).
 
 ## Správne použitie záporných hodnôt
 
@@ -127,7 +127,7 @@ Pri výbere zápornej hodnoty v **Automatizácii** buďte opatrní
 
 Pri výbere „zápornej hodnoty“ v „Podmienke“, napríklad „menšia ako“, buďte v **Automatizáciách** opatrní. Napríklad:
 
-![Alternatívny text](../images/Automations/automation_comparison_operators.png)
+![Comparison operators](../images/Automations/automation_comparison_operators.png)
 
 **Príklad 1:** Vytvorenie podmienky **„je menšia ako“** „-0,1 mmol/l“ (alebo „-2 mg/dl“):
 
@@ -242,7 +242,7 @@ Zvyšok zoznamu uvidíte, keď posuniete obrazovku nadol:
 
 ![Udalosti akcie Poznámka](../images/Automations/automation_action_careportal_events.png) ![Akcia Poznámka nastavená na Výmenu setu](../images/Automations/automation_action_careportal_site_change.png)
 
-**Akcie:** **Poslať SMS** (v skupine **Výstrahy**)
+**Actions:** **Send SMS to all numbers** (in the **Alerts** group)
 
 **Možnosti:**
 
@@ -260,7 +260,7 @@ Zvyšok zoznamu uvidíte, keď posuniete obrazovku nadol:
 
 * zvoľte **ZAP** alebo **VYP**. Tým sa zmení nastavenie **Povoliť SMB** v OpenAPS SMB, presne ako keby ste ho zmenili v **Nastaveniach**. Zmena platí, kým ju vy alebo iné pravidlo nezmeníte späť.
 
-**Akcie:** **Profil Autotune** (v skupine **Uzavretý okruh & inzulín**)
+**Actions:** **Run Autotune** (in the **Loop & insulin** group)
 
 **Možnosti:**
 
@@ -280,39 +280,39 @@ Zvyšok zoznamu uvidíte, keď posuniete obrazovku nadol:
 
 Po pridaní „Akcie“ musíte predvolené hodnoty zmeniť na požadované čísla: kliknite na ne a upravte ich.
 
-![Alternatívny text](../images/Automations/automation_action_temp_target_values.png)
+![Temp target action values](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## Na poradí **Automatizácií** v zozname záleží
- **AAPS** vykonáva vytvorené pravidlá v poradí podľa priority, od začiatku zoznamu **Automatizácie**. Ak je napríklad **Automatizácia** „Nízka“ najdôležitejšou **Automatizáciou** nad všetkými ostatnými pravidlami, mala by táto **Automatizácia** byť na začiatku zoznamu **Automatizácie** používateľa, ako je ukázané nižšie:
+ **AAPS** vykonáva vytvorené pravidlá v poradí podľa priority, od začiatku zoznamu **Automatizácie**. For example, if the ‘Low’ **Automation** is the most important **Automation**, above all other rules, then this **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
 
 
-![Alternatívny text](../images/Automations/automation_rule_list.png)
+![List of automation rules](../images/Automations/automation_rule_list.png)
 
-Ak chcete zmeniť poradie pravidiel **Automatizácie**, podržte prst na úchytke **=** na pravej strane pravidla. Poradie **Automatizácií** zmeníte posunutím pravidiel nahor alebo nadol.
+Ak chcete zmeniť poradie pravidiel **Automatizácie**, podržte prst na úchytke **=** na pravej strane pravidla. Reorder the **Automations** by moving the rules up or down.
 
-![Alternatívny text](../images/Automations/automation_rule_reorder.png)
+![Reorder automation rules](../images/Automations/automation_rule_reorder.png)
 
 ## Ako vymazať pravidlá automatizácie
 
 Ak chcete pravidlo **Automatizácie** vymazať, kliknite na ikonu koša.
 
-![Alternatívny text](../images/Automations/automation_rule_delete.png)
+![Delete automation rules](../images/Automations/automation_rule_delete.png)
 
 ## Príklady automatizácií
 
-Nižšie sú príklady **Automatizácií**. Ďalšie diskusie o **Automatizáciách** a o tom, ako si používatelia svoju **Automatizáciu** prispôsobili, nájdete v diskusných skupinách na Facebooku alebo na Discorde. Príklady nižšie by ste nemali kopírovať, ak dobre nerozumiete tomu, ako bude **Automatizácia** fungovať.
+Nižšie sú príklady **Automatizácií**. Further discussion on **Automations** and how users have individualised their **Automation** can be found in Facebook discussions groups or on Discord. Príklady nižšie by ste nemali kopírovať, ak dobre nerozumiete tomu, ako bude **Automatizácia** fungovať.
 
 (automations-low-glucose-temp-target)=
 ### Dočasný cieľ pri nízkej glykémii
 
 Táto **Automatizácia** automaticky spustí **Dočasný cieľ**, keď **glykémia** klesne pod určitú hranicu – tu sa pri glykémii nižšej ako 70 mg/dl spustí cieľ 110 mg/dl na 30 minút:
 
-![Alternatívny text](../images/Automations/automation_example_low_glucose_rule.png)
+![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
 
 ### Dočasný cieľ na obed (s podmienkou „Poloha“)
 
-![Alternatívny text](../images/Automations/automation_example_lunch_rule.png)
+![Example: lunch rule](../images/Automations/automation_example_lunch_rule.png)
 
 Táto **Automatizácia** bola vytvorená pre používateľa, ktorý každý pracovný deň obeduje v práci približne v rovnakom čase. Spustí sa však iba vtedy, keď sa používateľ nachádza na nastavenom mieste („Poloha“).  Ak teda používateľ niektorý deň nie je v práci, táto **Automatizácia** sa neaktivuje.
 
@@ -320,7 +320,7 @@ Táto **Automatizácia** nastaví o 13:00 nízky **Dočasný cieľ** (Pred jedlo
 
 Spúšťač „Poloha“ má názov, polohu (ťuknite na **Vybrať z mapy** alebo použite svoju súčasnú polohu) a polomer v metroch. Spustí sa, keď ste vo vnútri oblasti (alebo mimo nej):
 
-![Alternatívny text](../images/Automations/automation_example_lunch_location_condition.png)
+![Example: lunch rule with location condition](../images/Automations/automation_example_lunch_location_condition.png)
 
 Kvôli spojeniu „A“ sa **Automatizácia** vykoná iba v „zvolenom čase“ a zároveň iba vtedy, keď je používateľ na zvolenom mieste.
 
@@ -330,11 +330,11 @@ Kvôli spojeniu „A“ sa **Automatizácia** vykoná iba v „zvolenom čase“
 
 Použitie Wi-Fi SSID je dobrá možnosť, ako spustiť **Automatizáciu**, keď ste v dosahu určitej siete Wi-Fi (v porovnaní s GPS): je pomerne presné, menej vybíja batériu a funguje aj v uzavretých priestoroch, kde GPS a iné služby určovania polohy nemusia byť dostupné.
 
-Tu je ďalší príklad nastavenia **Dočasného cieľa** iba v pracovné dni pred raňajkami (1).
+Here is another example of setting up a **Temp Target** for work days only before breakfast (1).
 
 
-**Automatizácia** sa spustí o 5:30 iba v pondelok až piatok (2)  
-a iba keď je telefón pripojený k domácej sieti Wi-Fi (3).
+The **Automation** will trigger at 05:30am only on Monday-Friday (2)  
+and while being connected to a home Wi-Fi network (3).
 
 
 Potom nastaví **Dočasný cieľ** 75 mg/dl na 30 minút (4). Jednou z výhod podmienky polohy je, že sa pravidlo nespustí, napríklad keď je používateľ na dovolenke.
@@ -350,7 +350,7 @@ Tu je snímka obrazovky so spúšťačmi **Automatizácie**:
 1) Pod hlavným spojením „A“ (na spustenie musia platiť obe podmienky) 1) Opakovaný čas = Po, Ut, St, Št, Pi o 5:30  
 1) Wi-Fi SSID = My_Home_WiFi_Name
 
-![Alternatívny text](../images/Automations/automation_example_wifi_condition.png)
+![Example: WiFi condition](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
@@ -395,7 +395,7 @@ V príklade nižšie je zapnuté pravidlo **Low glucose temp target** (1) (pozri
 
 Skontrolujte, že políčko vľavo od názvu **Automatizácie** je „zaškrtnuté“, aby bolo pravidlo aktivované:
 
-![Alternatívny text](../images/Automations/automation_rule_activated_deactivated.png)
+![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
 
 * Problém: __Moje automatizácie sa spúšťajú v nesprávnom poradí.__
 

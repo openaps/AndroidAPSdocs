@@ -7,7 +7,7 @@
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Окреме місце на Google Drive означає, що ви не ризикуєте заповнити ліміт свого особистого Google Drive файлами з **Експорт налаштувань**.
+- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
 - Кожна версія **AAPS** (і допоміжних застосунків, як-от xDrip, BYODA тощо) зберігатиметься в одному місці, яке не залежить від вашого комп'ютера. Якщо ваш ПК або телефон вкрадуть, ви його загубите чи він зламається, ви все одно матимете доступ.
 - Однакове налаштування зі схожою структурою папок спрощує онлайн-підтримку для різних користувачів.
 - Залежно від налаштування (див. нижче), у вас буде окрема особа-псевдонім для спілкування в спільноті, що може захистити вашу приватність. 
@@ -45,13 +45,13 @@ Requirements:
  These are the steps outlined in the video:
 
 У цьому прикладі: 
-- Ваш наявний «_повсякденний_» акаунт Google - <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
+- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
 - Ваш новий акаунт Gmail для «_AAPS_» буде: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-### Перейдіть на <https://account.google.com> 
+### Go to <https://myaccount.google.com> 
 
- Якщо ви вже ввійшли в Google, вас буде перенаправлено на вашу «повсякденну» сторінку **My Account** (мій акаунт). (1) Клацніть у правому верхньому куті сторінки на фото профілю (у цьому випадку проста ![](../images/Building-the-App/building_0002.png) (2) виберіть «_add another account_» (додати інший акаунт).
+ Якщо ви вже ввійшли в Google, вас буде перенаправлено на вашу «повсякденну» сторінку **My Account** (мій акаунт). (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
 
 ![](../images/Building-the-App/building_0005.png)
 
@@ -87,7 +87,7 @@ Gmail will display the account name. Вас попросять прийняти 
 
 ### Customize the new profile display
 
-Тепер ви маєте бути на сторінці MyAccount у Gmail, де показано ваш новий окремий акаунт пошти для **AAPS**. The profile picture will be set by default to the first letter of your name. Змініть його на щось унікальне, щоб не плутати… у цьому прикладі Donald.Muck.AAPS замінив ![](../images/Building-the-App/building_0002.png) на ![](../images/Building-the-App/building_0003.png)
+Тепер ви маєте бути на сторінці MyAccount у Gmail, де показано ваш новий окремий акаунт пошти для **AAPS**. The profile picture will be set by default to the first letter of your name. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
@@ -101,7 +101,7 @@ Gmail will display the account name. Вас попросять прийняти 
 2. Клацніть правою кнопкою миші на значку браузера на панелі завдань
 3. У меню виберіть «New Window» (нове вікно)... і розташуйте його так, щоб воно займало лише нижню половину екрана.
 
-Відкрийте <https://gmail.com> у кожному вікні браузера. Переконайтеся, що ваш особистий акаунт угорі, а новий окремий акаунт **AAPS** унизу, і його легко впізнати за фото профілю в правому верхньому куті. (if needed you can always switch accounts by clicking on the profile picture and selecting the correct one.
+Відкрийте <https://gmail.com> у кожному вікні браузера. Переконайтеся, що ваш особистий акаунт угорі, а новий окремий акаунт **AAPS** унизу, і його легко впізнати за фото профілю в правому верхньому куті. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
 
 ![](../images/Building-the-App/building_0009.png)
 

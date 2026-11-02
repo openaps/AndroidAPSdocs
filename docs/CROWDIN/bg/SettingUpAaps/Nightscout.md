@@ -29,7 +29,7 @@ Nightscout е сървърът за отчети и наблюдение на **
 
 #### Без синхронизиране от Nightscout
 
-Ако всички опции „Получавай ... от NS“ са изключени, AAPS няма да използва никакви промени от Nightscout:
+Keeping all the "Receive … from NS" options disabled makes sure no Nightscout change will be used by AAPS:
 
 ![Nightscout само за качване](../images/preferences/settings_nsclient_sync.png)
 

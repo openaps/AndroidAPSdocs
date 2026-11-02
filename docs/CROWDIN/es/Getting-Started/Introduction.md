@@ -42,7 +42,7 @@ También se han lanzado varios sistemas comerciales de lazo cerrado híbrido. So
 
 **Figura 1**. Esquema básico de Android APS (Sistema de Páncreas Artificial), AAPS.
 
-Android APS (**AAPS**) es un sistema de lazo cerrado híbrido, o sistema de páncreas artificial (APS). Hace sus cálculos de dosis de insulina con algoritmos consolidados de [OpenAPS](https://openaps.org/) (un conjunto de reglas) desarrollados por la comunidad DT1 #WeAreNotWaiting.
+Android APS (**AAPS**) is a hybrid closed loop system, or Artificial Pancreas System (APS). Hace sus cálculos de dosis de insulina con algoritmos consolidados de [OpenAPS](https://openaps.org/) (un conjunto de reglas) desarrollados por la comunidad DT1 #WeAreNotWaiting.
 
 Como OpenAPS solo es compatible con ciertas bombas de insulina antiguas, **AAPS** (que se puede usar con más tipos de bombas de insulina) se desarrolló por primera vez en 2016 para un familiar con diabetes tipo 1. Desde aquellos primeros días, **AAPS** ha sido continuamente desarrollado y perfeccionado por un equipo de desarrolladores, voluntarios y entusiastas que tienen una conexión con el mundo de la diabetes tipo 1. Hoy en día, **AAPS** lo usan muchos miles de personas en todo el mundo. Es un sistema muy personalizable y versátil y, como es de código abierto, también es fácilmente compatible con muchos otros programas y plataformas de código abierto para la diabetes. Los componentes fundamentales del sistema **AAPS** actual se muestran en la **Figura 1** de arriba.
 
@@ -54,7 +54,7 @@ El «cerebro» de AAPS es una **aplicación** que compilas tú mismo. Existen in
 
 El **smartphone Android** también necesita tener instalada otra aplicación, además de **AAPS**. Esta [aplicación adicional](../Getting-Started/CompatiblesCgms.md) recibe los datos de glucosa de un sensor (**2**) por Bluetooth y luego los envía, dentro del teléfono, a la **aplicación AAPS**.
 
-La aplicación **AAPS** utiliza un proceso de toma de decisiones (**algoritmo**) de OpenAPS. Los principiantes comienzan usando el algoritmo básico **oref0**, pero es posible cambiar y utilizar el algoritmo más reciente **oref1** a medida que avanzas con AAPS. El algoritmo que uses (oref0 u oref1), dependerá de cuál se adapte mejor a tu situación.  En ambos casos, el algoritmo tiene en cuenta múltiples factores y realiza cálculos rápidos cada vez que llega una nueva lectura del sensor. Después, el algoritmo envía por Bluetooth instrucciones a la bomba de insulina (**3**) sobre cuánta insulina administrar. Toda la información se puede enviar a internet (**4**) por datos móviles o wifi. Estos datos también se pueden compartir con seguidores si se desea y/o recopilarse para su análisis. Opcionalmente, también puedes emparejar un [reloj inteligente](../Getting-Started/Watches.md) (**5**) con el teléfono para ver tus datos de un vistazo y, con algunos relojes, enviar órdenes básicas a **AAPS**.
+La aplicación **AAPS** utiliza un proceso de toma de decisiones (**algoritmo**) de OpenAPS. Beginners start out using the basic **oref0** algorithm, but it is possible to switch to using the newer **oref1** algorithm as you progress with AAPS. El algoritmo que uses (oref0 u oref1), dependerá de cuál se adapte mejor a tu situación.  En ambos casos, el algoritmo tiene en cuenta múltiples factores y realiza cálculos rápidos cada vez que llega una nueva lectura del sensor. Después, el algoritmo envía por Bluetooth instrucciones a la bomba de insulina (**3**) sobre cuánta insulina administrar. Toda la información se puede enviar a internet (**4**) por datos móviles o wifi. Estos datos también se pueden compartir con seguidores si se desea y/o recopilarse para su análisis. Opcionalmente, también puedes emparejar un [reloj inteligente](../Getting-Started/Watches.md) (**5**) con el teléfono para ver tus datos de un vistazo y, con algunos relojes, enviar órdenes básicas a **AAPS**.
 
 ## ¿Cuáles son las ventajas del sistema AAPS?
 
@@ -98,13 +98,13 @@ Los usuarios pueden añadir o quitar fácilmente módulos o funciones, y **AAPS*
 
  a) Puedes poner un objetivo de **glucosa** más bajo 30 minutos antes de comer; el objetivo puede bajar hasta 72 mg/dl (4,0 mmol/l).
 
- b) Si tienes resistencia a la insulina y por eso glucosas altas, **AAPS** te permite crear una regla de **automatización** que se active cuando la glucosa suba por encima de 8 mmol/l (144 mg/dl) y cambie (por ejemplo) a un perfil del 120 % (esto da un aumento del 20 % en la basal y también refuerza otros factores, comparado con la configuración normal de tu **perfil**). La automatización durará según el tiempo programado que establezcas. Dicha automatización se puede configurar para estar activa solo en ciertos días de la semana, en momentos específicos del día e incluso en ubicaciones determinadas.
+ b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in a 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). La automatización durará según el tiempo programado que establezcas. Dicha automatización se puede configurar para estar activa solo en ciertos días de la semana, en momentos específicos del día e incluso en ubicaciones determinadas.
 
- c) Si tu hijo salta en una cama elástica de repente, sin avisar antes, **AAPS** permite suspender la insulina durante un tiempo fijado, directamente desde el teléfono.
+ c) If your child is on a trampoline with no advance notice, **AAPS** allows insulin suspension for a set time period, directly via the phone.
 
- d) Después de volver a conectar una bomba con catéter que estuvo desconectada para nadar, **AAPS** calcula la insulina basal que no recibiste mientras estaba desconectada y la administra con cuidado, según tu glucosa actual. Cualquier insulina que no sea necesaria se puede anular simplemente "cancelando" la basal perdida.
+ d) After reconnecting a tubed pump which has been disconnected for swimming, **AAPS** will calculate the basal insulin you have missed while disconnected and deliver it carefully, according to your current BG. Cualquier insulina que no sea necesaria se puede anular simplemente "cancelando" la basal perdida.
 
- e) **AAPS** te permite crear perfiles diferentes para situaciones diferentes y cambiar fácilmente entre ellos. Por ejemplo, las funciones que hacen que el algoritmo baje más rápido una glucosa alta (como los supermicrobolos («**SMB**») o las comidas no anunciadas («**UAM**»)) se pueden configurar para que solo funcionen durante el día, si te preocupan las hipoglucemias nocturnas.
+ e) **AAPS** te permite crear perfiles diferentes para situaciones diferentes y cambiar fácilmente entre ellos. For example, features which make the algorithm quicker to bring down elevated BG (like supermicro boluses (“**SMB**”) and unannounced meals (“**UAM**”)) can be set to only work during the daytime, if you are worried about night-time hypos.
 
 Todo esto son ejemplos; el conjunto completo de funciones da una gran flexibilidad para la vida diaria, incluyendo deporte, enfermedad, ciclos hormonales, _etc._ En última instancia, es el usuario quien decide cómo usar esta flexibilidad, y no existe una automatización única que funcione para todos.
 
@@ -295,9 +295,9 @@ Los médicos (al menos en el Reino Unido) no tienen prohibido recetar medicament
 3. A DIY ‘bionic pancreas’ is changing diabetes care — what's next? [_Nature_ (2023), _620_, 940-941](https://doi.org/10.1038/d41586-023-02648-9)
 4. Prescribing unapproved medical devices? The case of DIY artificial pancreas systems [_Medical law international_, (2021), _21_, 42-68](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
 5. [Declaración de posición del Berlin Institute of Health, 2022](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
-6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (declaración de posición y guía de Diabetes Canada) [_Canadian Journal of Diabetes_, (2023)_47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
+6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (Diabetes Canada position and guide) [_Canadian Journal of Diabetes_ (2023), _47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
 7.  Países Bajos (EN/NL) - para médicos - [cómo ayudar a las personas que usan sistemas de administración automática de insulina de código abierto](https://www.diabetotech.com/blog/how-to-help-people-on-open-source-automated-insulin-delivery-systems)
-8. First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALLRandomized Pilot Study [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
+8. First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALL Randomized Pilot Study [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
 9. Pre-school and school-aged children benefit from the switch from a sensor-augmented pump to an AndroidAPS hybrid closed loop: A retrospective analysis [_Pediatr. Diabetes_ 2021, _22_, 594-604. 2021](https://onlinelibrary.wiley.com/doi/epdf/10.1111/pedi.13190)
 10. Resultados del proyecto OPEN, un proyecto financiado por la UE sobre los resultados de la evidencia de los pacientes con la nueva tecnología de páncreas artificial «hazlo tú mismo» (Outcomes of Patient’s Evidence with Novel, Do-it-Yourself Artificial Pancreas Technology) (https://www.open-diabetes.eu/publications)
 
@@ -379,9 +379,9 @@ o:
 
 2) Pulsa la tecla Windows y escribe «Panel de control» (Control Panel) en el campo de búsqueda; ábrelo con Intro. Se abre: «Todos los elementos de Panel de control» (All Control Panel Items).
 
-Pulsa la letra C para ir al «Centro de accesibilidad» (Center for Ease of Use) y ábrelo con Intro.
+Press the letter E to get to “Ease of Access Centre”, open with Enter.
 
-Después abre «Usar el equipo sin una pantalla» (Use computer without a screen) con Intro.
+Después abre «Usar el equipo sin una pantalla» (Use computer without a display) con Intro.
 
 Allí, abajo del todo, encontrarás la casilla «Habilitar Java Access Bridge» (Enable Java Access Bridge); márcala.
 

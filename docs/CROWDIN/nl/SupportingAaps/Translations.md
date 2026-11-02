@@ -72,7 +72,7 @@ De goedkeuring gebeurt met de hand. Als non-profitorganisatie geven we geen SLA'
     
         1. de vertaling proefgelezen is
     
-        1. de synchronisatie tussen Crowdin en GitHub klaar is (eens per uur). Die maakt een PR voor GitHub.
+        1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
     
         1. de PR op GitHub goedgekeurd is.
     
@@ -83,11 +83,11 @@ De goedkeuring gebeurt met de hand. Als non-profitorganisatie geven we geen SLA'
     ```{admonition} Links worden niet meer vertaald
     :class: note
     
-    Links worden niet meer vertaald. Vroeger stond hier een onderwerp over, maar dat is weg. Door de overstap naar Markdown en de myst_parser maken we labels in de Engelse tekst, en die labels worden op de achtergrond doorgegeven aan de andere talen.
+    Links worden niet meer vertaald. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
     
     
 
-Je vertaalt de tekst die de link weergeeft. Let goed op dat je de link **niet** verwijdert. Die wordt weergegeven door een paar `<0></0>`-tags, of door andere nummers als er meer links in één alinea staan.
+Je vertaalt de tekst die de link weergeeft. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
 
 De proeflezer moet hier extra goed op letten!
 

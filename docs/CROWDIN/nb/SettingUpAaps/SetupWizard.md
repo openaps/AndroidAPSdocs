@@ -122,9 +122,9 @@ Følg disse stegene på Android 16. Andre versjoner avviker litt fra skjermbilde
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. På Android 12 trykker du på `Batteri`, på Android 13+ trykker du på `Appens batteribruk`,
+   1. På Android 12 trykker du på `Batteri`, på Android 13+ trykker du på `Appens batteribruk`.
 
-   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
+   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
 5. På Android 12+ velger du alternativet `Ubegrenset`. På Android 15+ må du utvide innstillingen `Tillat bakgrunnsbruk`. Trykk på delen som er merket med rødt for å gjøre dette, og følg deretter steg 6 for å fullføre.
 
@@ -454,7 +454,7 @@ Når du velger en ekte pumpe, ber **AAPS** om en bekreftelse, fordi den vil kopi
 
 ![Bekreftelse når du velger en fysisk pumpe](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-Hvis pumpen du velger kommuniserer via Bluetooth, ber **AAPS** om tillatelse til å koble til enheter i nærheten når du er ferdig med veiviseren (se [Bluetooth-tillatelse](#bluetooth-permission)).
+Hvis pumpen du velger kommuniserer via Bluetooth, ber **AAPS** om tillatelse til å koble til enheter i nærheten når du er ferdig med veiviseren (se [Bluetooth-tillatelse](#setup-wizard-bluetooth-permission)).
 
 Hvis du allerede har satt opp profilen din og vet hvordan du kobler til pumpen, kan du gjerne koble den til nå. Ellers lar du den stå på **Virtuell pumpe** inntil videre – du kan endre det når som helst, eller gå ut av Oppsettveiviseren med pilen øverst til venstre og la **AAPS** først vise deg noen blodsukkerverdier.
 
@@ -505,7 +505,7 @@ Trykk på «**Åpne opplæringsmål**»:
 
 Her starter vi Opplæringsmål 1, selv om oppsettet vårt ikke er helt klart til å fullføre dette opplæringsmålet ennå. Men dette er starten.
 
-Trykk på «**Start**»-knappen ved siden av «**1. Opplæringsmål**»:
+Trykk på «**Start**»-knappen til **Opplæringsmål 1**:
 
 ![Liste over opplæringsmål](../images/setup-wizard/Wizard-Objectives-List.png)
 
@@ -521,6 +521,7 @@ Når du har trykket på «**AVSLUTT**», kommer du til hovedskjermen i **AAPS**.
 
 Hvis du ved et uhell går ut av Oppsettveiviseren, kan du enten bare starte veiviseren på nytt, eller endre [konfigurasjonen av AAPS-loopen](../SettingUpAaps/ChangeAapsConfiguration.md) manuelt.
 
+(setup-wizard-bluetooth-permission)=
 ## Bluetooth-tillatelse
 
 Hvis du velger en pumpe som kobler til via Bluetooth (for eksempel **Omnipod Dash**), minner et banner deg om at **AAPS** trenger Bluetooth-tillatelse. Du kan trykke på «**Forkast**» for nå – tillatelsen gis etter at du er ferdig med veiviseren:

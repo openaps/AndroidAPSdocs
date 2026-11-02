@@ -104,7 +104,7 @@ To have second_hand colored with default BG color (lowRange, midRange or highRan
 
 ### TextView 设置
 
-文本视图(TexView)参数比图像视图更丰富：可调整旋转角度（整数值/度）、字号（整数值/像素）、对齐方式（默认居中，可选左/右对齐），并支持设置字体、字型、文字颜色及文本视图背景色。
+TextView have more available parameters compare to ImageView: you can tune rotation (integer value in degrees), textsize (integer value in pixel), gravity (to define if text value will be centered (default value), or aligned left or right), set the font, fontStyle and fontColor, and also background color of the TextView
 
 ```text
 "basalRate": {
@@ -198,7 +198,7 @@ To have second_hand colored with default BG color (lowRange, midRange or highRan
 
 ### 在电脑中整理您的文件
 
-最便捷的操作方式是将手机连接电脑，并专注于两个特定文件夹：
+The easiest way to work is to have phone connected to the computer, and work with two specific folders:
 
 - 在专用文件夹（内含json文件、位图/矢量图、字体等所有素材）中打开资源管理器，并将CustomWatchface.zip文件置于其中。
 - 同时打开另一个资源管理器（或调整导航树）以访问Phone/AAPS/exports文件夹。
@@ -221,7 +221,7 @@ To have second_hand colored with default BG color (lowRange, midRange or highRan
 
 现在您可通过修改json文件中的`"visibility"`键值来设定每个视图为`"visible"`（显示）或`"gone"`（隐藏）。
 
-您还可先初步调整顶部、左侧边距及宽高数值来布局表盘（这些数值后续将通过图像编辑器精确校准）。
+You can also start to tune approximately top, left margin and width height values to start organizing the watchface (these values will be tuned later using image editor)
 
 注：所有设计均在**400px×400px矩形框**内完成。因此所有元素均需在此尺寸范围内采用绝对坐标定位。
 
@@ -538,7 +538,7 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
 
 **freetext2 到 freetext4**
 
-对于这些视图，我们将结合之前说明的动态图像与旋转功能：
+For these views we will combine dynamic images and rotation feature explained before:
 
 ```text
 "freetext2": {
@@ -693,7 +693,7 @@ The other dynData blocks are defined the same way to tune `"avgDelta10"`and `"av
 
 #### 蒸汽朋克表盘中dynPref的简易应用
 
-在蒸汽朋克表盘中，我们根据单位设置了两组图像：包含血糖刻度的`background`图像将随血糖值旋转。以及根据avgDelta值动态调整刻度的`freeText1`。为实现表盘自动显示正确单位，需根据所选单位切换对应图像。
+Within Steampunk, we have two sets of images according to units: `background` image that will have BG scale and will turn according to BG value. 以及根据avgDelta值动态调整刻度的`freeText1`。为实现表盘自动显示正确单位，需根据所选单位切换对应图像。
 
 为此，我们将在视图区块中用`dynPref`键替换`dynData`键：
 
@@ -895,7 +895,7 @@ Lets now take a look on items included into the "divider banner" (in example bel
 ```
 此处可见：根据详细iob参数（`"key_show_detailed_iob"`键），当其为"true"时，文本尺寸被固定设置为比默认值更大的数值（24替代19）——这是通过仅含单值的文本尺寸"阶梯"功能实现的...（注意：除图像外所有参数，若未设置invalidTextSize，则无效数据将使用textsize1）
 
-随后"dark"动态偏好区块将用于设置颜色与字体颜色
+Then "dark" dynPref block will be used to set color and fontColor
 
 本示例中，当详细IOB启用且暗色模式开启时，将调用以下dynData区块作用于iob1视图：
 
@@ -907,7 +907,7 @@ Lets now take a look on items included into the "divider banner" (in example bel
 },
 ```
 
-因此文本将显示为黑底白字，且24号字体尺寸将替换视图中预设的19号默认尺寸。
+So the text will be in white on black background and the size 24 will replace default size of 19 set into the view
 
 当详细IOB禁用且暗色模式关闭时，作用于同一iob1视图的dynData区块为：
 
@@ -924,7 +924,7 @@ Lets now take a look on items included into the "divider banner" (in example bel
 
 - 您可以组合任意数量的偏好设置，但需注意描述区块数量会呈指数级增长：若串联3个参数且需定义所有情形（假设每个参数仅有2种取值），则需描述8个区块...
 - 注意避免构建"无限循环"（例如当dynpref1区块需由dynpref2区块补充，而dynpref2区块又需由dynpref1区块补充时...）。此时这些dynpref区块将被视为无效...
-- 使用视图中的`"textsize"`键时，必须在dynPref值区块中使用`"textsize1"`（因其采用"dynData"格式，本例中仅关联单一步骤的值），切勿忘记在键名后添加数字索引。
+- Do not forget to include the numeric index after the key (when you use for example `"textsize"`key within a view, you will have to use `"textsize1"`within the dynPref  value block, because it's a "dynData" format, so linked to value with a single step in this case)
 - 每个视图仅应设置一个`"valueKey"`键，因此若最终`dynData`区块由多个`dynPref`区块构建时，切勿包含多个`"valueKey"`（及其关联的`"minData"`、`"maxData"`等参数）。
 
 (cwf-reference-new-v2-features)=
@@ -933,7 +933,7 @@ Lets now take a look on items included into the "divider banner" (in example bel
 
 请注意，使用这些新功能或视图的表盘需要基于AAPS 3.3.0版本构建的最新wear apk。
 
-若在搭载CustomWatchface V1的手表上使用"v2"压缩包，表盘将出现信息缺失或内容错误。
+If you use a zip "v2" with a watch that includes CustomWatchface V1, you will have missing information or wrong content into the watchface.
 
 自定义表盘V2包含以下新功能：
 
@@ -951,7 +951,7 @@ Lets now take a look on items included into the "divider banner" (in example bel
 
 该视图已内置在早期AAPS（无图表）、AAPS（大图表）和AAPS（大号）等现有表盘中，并包含由wear apk构建的字符串值。
 
-AAPS 3.3.0版本中已移除这些旧表盘，替换为3款全新自定义表盘。
+These previous watchfaces have been removed and replaced by 3 new custom watchfaces in AAPS 3.3.0.
 
 - 最低显示信息为IOB值（无论手表IOB参数如何设置始终可见）
 - 若在偏好设置中启用，则显示详细IOB值（大剂量IOB|基础率IOB）
@@ -1097,7 +1097,7 @@ Note that this view is also available for external data (see [below](#cwf-refere
 格式化字符串包含在`"textvalue1"`键中（`"textvalue1"`、`"textvalue2"`等键与可置于`view`区块的`"textvalue"`键关联）
 
 - `"textvalue"`键可在视图区块中使用格式化信息（此时格式为静态，不受数值或设置影响）
-- 若需根据设置或数值调整格式，可应用全部dynData功能，专用键为`"invalidTextValue"`（不含"格式化信息"因数值无效）及`"textvalue1"`、`"textvalue2"`...（可添加任意数量键值以管理minData与maxData间的分段）
+- If you want to modify formatting information according to settings or values, then all dynData feature can be applied, and the dedicated keys are `"invalidTextValue"` key (without "formatting information" because value is not valid) and `"textvalue1"`, `"textvalue2"`... (and as many values that you want to manage steps between minData and maxData)
 - 额外`"dynPref"`键用于定义其他区块，以根据视图显隐、暗色模式及分界器设置调整定位与色彩
 
 关于格式化字符串的语法规则如下：`%[flags][width][.precision]f`
@@ -1165,7 +1165,7 @@ Note that this view is also available for external data (see [below](#cwf-refere
 
 请注意：若手机主应用为AAPSCLIENT且广播数据的次级应用为AAPSCLIENT2，当使用含标准视图及Ext1附加视图（Ext1关联AAPSCLIENT，Ext2关联AAPSCLIENT2）的表盘时，需在CustomWatchface专属参数中启用`切换表盘外部数据`选项。
 
-新增三个视图（`"patient_name"`、`"patient_name_Ext1"`及`"patient_name_Ext2"`*），用于在表盘中自动显示患者姓名（通过AAPS偏好设置配置，参见下方示例）。
+Additionally three new views (`"patient_name"` , `"patient_name_Ext1"`  and `"patient_name_Ext2"` *) have been added to be able to automatically include patient name (set within AAPS preferences) within watchface (see example below)
 
 ![CustomWatchface_7 ](../images/CustomWatchface_7.png)
 
@@ -1231,14 +1231,14 @@ Note that this view is also available for external data (see [below](#cwf-refere
 | `"highColor"`            | `"#FFFF00"`（默认黄色）：当血糖值超过上限（高血糖）时，血糖值、趋势箭头及图表中血糖值的显示颜色                                     |
 | `"midColor"`             | `"#00FF00"`（默认绿色）：当血糖值在范围内时，血糖值、趋势箭头及图表中血糖值的显示颜色                                          |
 | `"lowColor"`             | `"#FF0000"`（默认红色）：当血糖值低于下限（低血糖）时，血糖值、趋势箭头及图表中血糖值的显示颜色                                     |
-| `"lowBatColor"`          | `"#E53935"`（默认深红色）：当`uploader_battery`值过低（低于20%，待确认）时的显示颜色                                |
+| `"lowBatColor"`          | `"#E53935"`(default Dark Red): Color of `uploader_battery` when value is low (below 30%)  |
 | `"carbColor"`            | `"#FB8C00"`（默认橙色）：图表中碳水化合物数据点的显示颜色                                                        |
 | `"basalBackgroundColor"` | `"#0000FF"`（默认深蓝色）：图表中TBR曲线的显示颜色                                                          |
 | `"basalCenterColor"`     | `"#64B5F6"`（默认浅蓝色）：图表中大剂量或超微大剂量数据点的显示颜色                                                   |
 | `"gridColor"`            | `"#FFFFFF"`（默认白色）：图表中线条和文本刻度的显示颜色                                                         |
 | `"pointSize"`            | 2（默认值）：图表中数据点的大小（1为小点，2为大点）                                                               |
 | `"enableSecond"`         | false（默认值）：指定表盘是否在`time`、`second`或`second_hand`视图中处理秒数。必须确保视图可见性与该全局设置保持一致，该设置将允许每秒更新时间信息 |
-| `"dayNameFormat"`        | "E"（默认值）：从"E"到"EEEE"指定星期名称格式（数字、简称、全称），待确认                                                |
+| `"dayNameFormat"`        | "E" (default): from "E" to "EEEE" specify dayname format (number, short name, full name)  |
 | `"monthFormat"`          | "MMM"（默认值）：从"M"到"MMMM"指定月份格式（数字、简称、全称）                                                    |
 
 (cwf-reference-list-of-hardcoded-resource-files)=
@@ -1289,8 +1289,7 @@ Note that this view is also available for external data (see [below](#cwf-refere
 | `"iob2"`<br/>`"iob2_Ext1"` *<br/>`"iob2_Ext2"` *                           | Text View           | IOB Total or IOB Detailed                                                                                                             |                                                                                                                                                  |
 | `"cob1"`<br/>`"cob1_Ext1"` *<br/>`"cob1_Ext2"` *                           | Text View           | Carb label                                                                                                                            |                                                                                                                                                  |
 | `"cob2"`<br/>`"cob2_Ext1"` *<br/>`"cob2_Ext2"` *                           | Text View           | COB Value                                                                                                                             |                                                                                                                                                  |
-| `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *                        | Text View           | Short delta (5 min)                                                                                                                   | delta  
-delta_Ext1<br/>delta_Ext2                                                                                                          |
+| `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *                        | Text View           | Short delta (5 min)                                                                                                                   | delta<br/>delta_Ext1<br/>delta_Ext2                                                                                                  |
 | `"avg_delta"`<br/>`"avg_delta_Ext1"` *<br/>`"avg_delta_Ext2"` *            | Text View           | Avg Delta (15 min)                                                                                                                    | avg_delta<br/>avg_delta_Ext1<br/>avg_delta_Ext2                                                                                  |
 | `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` *        | Text View           | BG Target (single value or min - max targets values)                                                                                  | tempTarget<br/>tempTarget_Ext1<br/>tempTarget_Ext2                                                                                   |
 | `"reservoir"`*<br/>`"reservoir_Ext1"` *<br/>`"reservoir_Ext2"` *           | Text View           | Reservoir level                                                                                                                       | reservoir<br/>reservoirLevel<br/>reservoir_Ext1<br/>reservoirLevel_Ext1<br/>reservoir_Ext2<br/>reservoirLevel_Ext2 |
@@ -1412,35 +1411,35 @@ delta_Ext1<br/>delta_Ext2                                                       
 
 ### 动态数据键
 
-| 键                         | 类型     | 备注                                                                                                                                                                                                                                        |
-| ------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"dynData"`               | 区块     | 定义视图将使用的所有动态数据区块通常在末视图后<br />定义。本区块内所有键将作为视图区块的键值使用：<br />`"dynData": { 动态数据区块 }`<br />每个区块通过自定义名称及内部多个键定义：<br />`"customName": { 单个动态数据区块 }`                                                                     |
-| `"valueKey"`              | string | 使用的动态数据名称（通常与关联视图键同名）<br />若不存在，则默认采用调用本区块的视图数值。<br />例如可定义区块自定义电池百分比而不指定valueKey，随后复用该区块自定义上传器电池与设备电池                                                                                                                        |
-| `"minData"`               | int    | 设定AAPS数据的最小有效值：例如若数值为sgv（内部单位mgdl），当minData设为50时，所有低于50mgdl的血糖值将强制设为50<br />- 注意minData与maxData将用于计算动态值（像素或角度）                                                                                                                      |
-| `"maxData"`               | int    | 设定AAPS数据的最大有效值：例如若数值为sgv（内部单位mgdl），当maxData设为330时，所有高于330mgdl的血糖值将强制设为330。                                                                                                                                                                |
-| `"leftOffset"`            | 区块     | 根据最小/最大值设定视图水平位移像素值<br />- 包含minValue键、maxValue键及invalidValue键（可选）<br />- 若数据≤minData则视图位移至minValue像素，若数据≥maxData则位移至maxValue像素<br />注意：需在视图中将`leftOffset`设为true方可生效                                                    |
-| `"topOffset"`             | 区块     | 根据最小/最大值设定视图垂直位移像素值<br />- 包含minValue键、maxValue键及invalidValue键（可选）<br />- 若数据≤minData则视图位移至minValue像素，若数据≥maxData则位移至maxValue像素<br />注意：需在视图中将topOffset设为true方可生效                                                       |
-| `"rotationOffset"`        | 区块     | 根据最小/最大值设定视图旋转角度值（单位：度）<br />- 包含`minValue`键、`maxValue`键及`invalidValue`键（可选）<br />- 若数据≤`minData`则视图旋转`minValue`度，若数据≥`maxData`则旋转`maxValue`度<br />注意：需在视图中将`rotationOffset`设为true方可生效                                  |
-| `"dynValue"`*             | 区块     | 设定动态值转换规则：将数据范围映射为像素值范围<br />- 包含`minValue`键、`maxValue`键及`invalidValue`键（可选）<br />- 若数据≤`minData`则输出minValue（转为双精度），若数据≥`maxData`则输出maxValue（转为双精度）<br />注意：需在视图中启用`dynValue`键方可生效                                      |
-| `"minValue"`              | int    | 应用于视图的最终数值（该键仅适用于leftOffset、topOffset或rotationOffset区块内）                                                                                                                                                                                  |
-| `"maxValue"`              | int    | 应用于视图的最终数值（该键仅适用于leftOffset、topOffset或rotationOffset区块内）                                                                                                                                                                                  |
-| `"invalidValue"`          | int    | 数据无效时应用于视图的最终数值（该键仅适用于leftOffset、topOffset或rotationOffset区块内）                                                                                                                                                                             |
-| `"invalidImage"`          | string | 数据无效时ImageView或背景TextView使用的`资源文件名`                                                                                                                                                                                                       |
-| image*1_to_n*           | string | `资源文件名`图像用于从接近minData的`"image1"`到接近maxData的image*n*之间的每个阶梯<br />例如若设置5张图像（从image1到image5），minData与maxData之间的范围将被分为5个阶梯，根据数据值显示对应图像                                                                                                  |
-| `"invalidFontColor"`      | string | Manage fontColor steps if the data is invalid<br />`"#RRGGBB"` or `"#AARRGGBB"`: Color to use if an invalid data is received (can be transparent if AA=00)                                                                          |
-| fontColor*1_to_n*       | string | Manage fontColor steps<br />`"#RRGGBB"` or `"#AARRGGBB"`: color to use for each step between minData (or close to minData) with `"fontColor1"` and maxData (or close to maxData) with fontColor*n*                                  |
-| `"invalidColor"`          | string | Manage background color or image color steps if the data is invalid<br />`"#RRGGBB"` or `"#AARRGGBB"`: Color to use if an invalid data is received (can be transparent if AA=00)                                                    |
-| color*1_to_n*           | string | Manage background color or image Color steps<br />`"#RRGGBB"` or `"#AARRGGBB"`: color to use for each step between minData (or close to minData) with `"color1"` and maxData (or close to maxData) with color*n*                    |
-| `"invalidTextSize"`       | int    | 管理数据无效时的文本字号阶梯                                                                                                                                                                                                                            |
-| textsize*1_to_n*        | int    | 管理文本字号阶梯：从接近minData的`"textsize1"`到接近maxData的textsize*n*之间每个阶梯使用的字号                                                                                                                                                                        |
-| `"invalidLeftOffset"`     | int    | 管理数据无效时的水平位移阶梯                                                                                                                                                                                                                            |
-| leftOffset*1_to_n*      | int    | 管理水平位移阶梯：从接近minData的`"leftOffset1"`到接近maxData的leftOffset*n*之间每个阶梯使用的位移值<br />注：可与dynPref配合实现视图隐藏时的位移联动                                                                                                                              |
-| `"invalidTopOffset"`      | int    | 管理数据无效时的垂直位移阶梯                                                                                                                                                                                                                            |
-| topOffset*1_to_n*       | int    | 管理垂直位移阶梯：从接近minData的topOffset1到接近maxData的topOffset*n*之间每个阶梯使用的位移值<br />注：可与dynPref配合实现视图隐藏时的位移联动                                                                                                                                    |
-| `"invalidRotationOffset"` | int    | 管理数据无效时的旋转角度阶梯                                                                                                                                                                                                                            |
-| rotationOffset*1_to_n*  | int    | 管理旋转角度阶梯：从接近minData的rotationOffset1到接近maxData的rotationOffset*n*之间每个阶梯使用的旋转角度                                                                                                                                                              |
-| `"invalidTextvalue"`*     | string | 管理数据无效时的文本值                                                                                                                                                                                                                               |
-| textvalue*1_to_n* *     | string | Manage textvalue to use for each step between minData (or close to minData) with textvalue1 and maxData (or close to maxData) with textvalue*n*<br />Note, can include formatting string if `"dynValue"` is set to true within view |
+| 键                         | 类型     | 备注                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"dynData"`               | 区块     | 定义视图将使用的所有动态数据区块通常在末视图后<br />定义。本区块内所有键将作为视图区块的键值使用：<br />`"dynData": { 动态数据区块 }`<br />每个区块通过自定义名称及内部多个键定义：<br />`"customName": { 单个动态数据区块 }`                                                                                                                                                                                                                                                                                                                                         |
+| `"valueKey"`              | string | 使用的动态数据名称（通常与关联视图键同名）<br />若不存在，则默认采用调用本区块的视图数值。<br />例如可定义区块自定义电池百分比而不指定valueKey，随后复用该区块自定义上传器电池与设备电池                                                                                                                                                                                                                                                                                                                                                                                            |
+| `"minData"`               | int    | 设定AAPS数据的最小有效值：例如若数值为sgv（内部单位mgdl），当minData设为50时，所有低于50mgdl的血糖值将强制设为50<br />- 注意minData与maxData将用于计算动态值（像素或角度）                                                                                                                                                                                                                                                                                                                                                                                          |
+| `"maxData"`               | int    | 设定AAPS数据的最大有效值：例如若数值为sgv（内部单位mgdl），当maxData设为330时，所有高于330mgdl的血糖值将强制设为330。                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `"leftOffset"`            | 区块     | Specify the horizontal shift of the view according to min and max values in pixels.<br />- It includes `minValue` key, `maxValue` key and `invalidValue` key (optional)<br />- If data is below or equal minData, then the view will be shifted to minValue pixels, and if data is above or equal to maxData, then the view will be shifted to maxValue pixels<br />Note that to apply this shift, `leftOffset` should be set to true within the view                                       |
+| `"topOffset"`             | 区块     | Specify the vertical shift of the view according to min and max values in pixels.<br />- It includes `minValue` key, `maxValue` key and `invalidValue` key (optional)<br />- If data is below or equal minData, then the view will be shifted to minValue pixels, and if data is above or equal to maxData, then the view will be shifted to maxValue pixels<br />Note that to apply this shift topOffset should be set to true within the view                                             |
+| `"rotationOffset"`        | 区块     | Specify the rotation angle in degrees of the view according to min and max values.<br />- It includes `minValue` key, `maxValue` Key and `invalidValue` key (optional)<br />- If data is below or equal `minData`, then the view will rotate by `minValue` degrees, and if data is above or equal to `maxData`, then the view will rotate by `maxValue` degrees<br />Note that to apply this rotation, `rotationOffset` should be set to true within the view                               |
+| `"dynValue"`*             | 区块     | Specify the dynValue conversion from min and max range to min and max values.<br />- It includes `minValue` key, `maxValue` Key and `invalidValue` key (optional)<br />- If data is below or equal `minData`, then the dynValue sent will be minValue (converted to double) , and if data is above or equal to `maxData`, then the dynValue calculated will be maxValue (converted to double)<br />Note that to apply this conversion, `dynValue` key should be set to true within the view |
+| `"minValue"`              | int    | 应用于视图的最终数值（该键仅适用于leftOffset、topOffset或rotationOffset区块内）                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `"maxValue"`              | int    | 应用于视图的最终数值（该键仅适用于leftOffset、topOffset或rotationOffset区块内）                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `"invalidValue"`          | int    | 数据无效时应用于视图的最终数值（该键仅适用于leftOffset、topOffset或rotationOffset区块内）                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `"invalidImage"`          | string | 数据无效时ImageView或背景TextView使用的`资源文件名`                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| image*1_to_n*           | string | `资源文件名`图像用于从接近minData的`"image1"`到接近maxData的image*n*之间的每个阶梯<br />例如若设置5张图像（从image1到image5），minData与maxData之间的范围将被分为5个阶梯，根据数据值显示对应图像                                                                                                                                                                                                                                                                                                                                                                      |
+| `"invalidFontColor"`      | string | Manage fontColor steps if the data is invalid<br />`"#RRGGBB"` or `"#AARRGGBB"`: Color to use if an invalid data is received (can be transparent if AA=00)                                                                                                                                                                                                                                                                                                                                              |
+| fontColor*1_to_n*       | string | Manage fontColor steps<br />`"#RRGGBB"` or `"#AARRGGBB"`: color to use for each step between minData (or close to minData) with `"fontColor1"` and maxData (or close to maxData) with fontColor*n*                                                                                                                                                                                                                                                                                                      |
+| `"invalidColor"`          | string | Manage background color or image color steps if the data is invalid<br />`"#RRGGBB"` or `"#AARRGGBB"`: Color to use if an invalid data is received (can be transparent if AA=00)                                                                                                                                                                                                                                                                                                                        |
+| color*1_to_n*           | string | Manage background color or image Color steps<br />`"#RRGGBB"` or `"#AARRGGBB"`: color to use for each step between minData (or close to minData) with `"color1"` and maxData (or close to maxData) with color*n*                                                                                                                                                                                                                                                                                        |
+| `"invalidTextSize"`       | int    | 管理数据无效时的文本字号阶梯                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| textsize*1_to_n*        | int    | 管理文本字号阶梯：从接近minData的`"textsize1"`到接近maxData的textsize*n*之间每个阶梯使用的字号                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `"invalidLeftOffset"`     | int    | 管理数据无效时的水平位移阶梯                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| leftOffset*1_to_n*      | int    | 管理水平位移阶梯：从接近minData的`"leftOffset1"`到接近maxData的leftOffset*n*之间每个阶梯使用的位移值<br />注：可与dynPref配合实现视图隐藏时的位移联动                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `"invalidTopOffset"`      | int    | 管理数据无效时的垂直位移阶梯                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| topOffset*1_to_n*       | int    | 管理垂直位移阶梯：从接近minData的topOffset1到接近maxData的topOffset*n*之间每个阶梯使用的位移值<br />注：可与dynPref配合实现视图隐藏时的位移联动                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `"invalidRotationOffset"` | int    | 管理数据无效时的旋转角度阶梯                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| rotationOffset*1_to_n*  | int    | 管理旋转角度阶梯：从接近minData的rotationOffset1到接近maxData的rotationOffset*n*之间每个阶梯使用的旋转角度                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `"invalidTextvalue"`*     | string | 管理数据无效时的文本值                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| textvalue*1_to_n* *     | string | Manage textvalue to use for each step between minData (or close to minData) with textvalue1 and maxData (or close to maxData) with textvalue*n*<br />Note, can include formatting string if `"dynValue"` is set to true within view                                                                                                                                                                                                                                                                     |
 
 **在自定义表盘V2.0或更高版本中添加了按键（适用于AAPS 3.3.0 wear apk或更高版本）*
 
@@ -1448,24 +1447,24 @@ delta_Ext1<br/>delta_Ext2                                                       
 
 ### 动态数据键值
 
-| 键值                                                                                          | 键  | 备注                                                                                                                             |
-| ------------------------------------------------------------------------------------------- | -- | ------------------------------------------------------------------------------------------------------------------------------ |
-| `"sgv"`<br/>`"sgv_Ext1"` *<br>`"sgv_Ext2"` *                                    | 键值 | 默认minData = 39 mgdl<br />默认maxData = 400 mgdl<br />- 注意实际maxData取决于传感器，且内部计算值单位始终为mgdl                             |
-| `"sgvLevel"`<br/>`"sgvLevel_Ext1"` *<br/>`"sgvLevel_Ext2"` *                    | 键值 | 默认minData = -1（低血糖）<br />默认maxData = 1（高血糖）<br />血糖在范围内 = 0                                                        |
-| `"direction"`<br/>`"direction_Ext1"` *<br/>`"direction_Ext2"` *                 | 键值 | 默认minData = 1（双下箭头）<br />默认maxValue = 7（双上箭头）<br />水平箭头数据 = 4<br />错误或缺失数据 = 0（??）                           |
-| `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *                             | 键值 | 默认minData = -25 mgdl<br />默认maxData = 25 mgdl<br />- 注意实际最小/最大值可能超出此范围，且内部计算值单位始终为mgdl                             |
-| `"avg_delta"`<br/>`"avg_delta_Ext1"` *<br/>`"avg_delta_Ext2"` *                 | 键值 | 默认minData = -25 mgdl<br />默认maxData = 25 mgdl<br />- 注意实际最小/最大值可能超出此范围，且内部计算值单位始终为mgdl                             |
-| `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` *             | 键值 | 默认minData = 0（配置文件目标）<br />默认maxData = 2（临时目标）<br />由闭环调整的目标 = 1<br/>默认或缺失信息 = 0                             |
-| `"reservoir"`*<br/>`"reservoir_Ext1"` *<br/>`"reservoir_Ext2"` *                | 键值 | 默认minData = 0单位<br />默认maxData = 500单位                                                                                   |
-| `"reservoirLevel"`*<br/>`"reservoirLevel_Ext1"` *<br/>`"reservoirLevel_Ext2"` * | 键值 | 默认minData = 0（标准颜色）<br/>默认maxData = 2（紧急颜色）<br/>警告颜色 = 1                                                           |
-| `"uploader_battery"`                                                                        | 键值 | 默认minData = 0%<br />默认maxData = 100%                                                                                     |
-| `"rig_battery"`<br/>`"rig_battery_Ext1"` *<br/>`"rig_battery_Ext2"` *           | 键值 | 默认minData = 0%<br />默认maxData = 100%                                                                                     |
-| `"timestamp"`<br/>`"timestamp_Ext1"` *<br/>`"timestamp_Ext2"` *                 | 键值 | 默认minData = 0分钟<br />默认maxData = 60分钟                                                                                    |
-| `"loop"`<br/>`"loop_Ext1"` *<br/>`"loop_Ext2"` *                                | 键值 | 默认minData = 0分钟<br />默认maxData = 28分钟<br />- 注意：14分钟以下状态箭头显示绿色，14分钟以上显示红色。若设置2张图像，可使用自定义图像替换状态背景（保持默认min和maxData值） |
-| `"day"`                                                                                     | 键值 | 默认minData = 1<br />默认maxData = 31                                                                                        |
-| `"day_name"`                                                                                | 键值 | 默认minData = 1<br />默认maxData = 7                                                                                         |
-| `"month"`                                                                                   | 键值 | 默认minData = 1<br />默认maxData = 12                                                                                        |
-| `"week_number"`                                                                             | 键值 | 默认minData = 1<br />默认maxData = 53                                                                                        |
+| 键值                                                                                          | 键  | 备注                                                                                                                                                                           |
+| ------------------------------------------------------------------------------------------- | -- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"sgv"`<br/>`"sgv_Ext1"` *<br>`"sgv_Ext2"` *                                    | 键值 | 默认minData = 39 mgdl<br />默认maxData = 400 mgdl<br />- 注意实际maxData取决于传感器，且内部计算值单位始终为mgdl                                                                           |
+| `"sgvLevel"`<br/>`"sgvLevel_Ext1"` *<br/>`"sgvLevel_Ext2"` *                    | 键值 | 默认minData = -1（低血糖）<br />默认maxData = 1（高血糖）<br />血糖在范围内 = 0                                                                                                      |
+| `"direction"`<br/>`"direction_Ext1"` *<br/>`"direction_Ext2"` *                 | 键值 | default minData = 1 (double Down)<br />default maxData = 7 (double Up)<br />flat arrow data = 4<br />Error or missing data = 0                             |
+| `"delta"`<br/>`"delta_Ext1"` *<br/>`"delta_Ext2"` *                             | 键值 | 默认minData = -25 mgdl<br />默认maxData = 25 mgdl<br />- 注意实际最小/最大值可能超出此范围，且内部计算值单位始终为mgdl                                                                           |
+| `"avg_delta"`<br/>`"avg_delta_Ext1"` *<br/>`"avg_delta_Ext2"` *                 | 键值 | 默认minData = -25 mgdl<br />默认maxData = 25 mgdl<br />- 注意实际最小/最大值可能超出此范围，且内部计算值单位始终为mgdl                                                                           |
+| `"tempTarget"`*<br/>`"tempTarget_Ext1"` *<br/>`"tempTarget_Ext2"` *             | 键值 | default minData = 0 (Profile Target)<br />default maxData = 2 (Temp Target)<br />Target is adjusted by the loop = 1<br/>Default or missing information = 0 |
+| `"reservoir"`*<br/>`"reservoir_Ext1"` *<br/>`"reservoir_Ext2"` *                | 键值 | 默认minData = 0单位<br />默认maxData = 500单位                                                                                                                                 |
+| `"reservoirLevel"`*<br/>`"reservoirLevel_Ext1"` *<br/>`"reservoirLevel_Ext2"` * | 键值 | 默认minData = 0（标准颜色）<br/>默认maxData = 2（紧急颜色）<br/>警告颜色 = 1                                                                                                         |
+| `"uploader_battery"`                                                                        | 键值 | 默认minData = 0%<br />默认maxData = 100%                                                                                                                                   |
+| `"rig_battery"`<br/>`"rig_battery_Ext1"` *<br/>`"rig_battery_Ext2"` *           | 键值 | 默认minData = 0%<br />默认maxData = 100%                                                                                                                                   |
+| `"timestamp"`<br/>`"timestamp_Ext1"` *<br/>`"timestamp_Ext2"` *                 | 键值 | 默认minData = 0分钟<br />默认maxData = 60分钟                                                                                                                                  |
+| `"loop"`<br/>`"loop_Ext1"` *<br/>`"loop_Ext2"` *                                | 键值 | 默认minData = 0分钟<br />默认maxData = 28分钟<br />- 注意：14分钟以下状态箭头显示绿色，14分钟以上显示红色。若设置2张图像，可使用自定义图像替换状态背景（保持默认min和maxData值）                                               |
+| `"day"`                                                                                     | 键值 | 默认minData = 1<br />默认maxData = 31                                                                                                                                      |
+| `"day_name"`                                                                                | 键值 | 默认minData = 1<br />默认maxData = 7                                                                                                                                       |
+| `"month"`                                                                                   | 键值 | 默认minData = 1<br />默认maxData = 12                                                                                                                                      |
+| `"week_number"`                                                                             | 键值 | 默认minData = 1<br />默认maxData = 53                                                                                                                                      |
 
 **在自定义表盘V2.0或更高版本中添加了按键（适用于AAPS 3.3.0 wear apk或更高版本）*
 

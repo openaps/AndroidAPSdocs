@@ -287,7 +287,7 @@ Hvis **AAPS** måtte begrense dosen, for eksempel fordi den beregnede bolusen er
     | --- | --- | --- | --- | --- | --- |
     | ![Behandlingsdialogen, insulinsiden](../images/wearos/dialogs/dialog_treatment.png) | ![Insulindialogen](../images/wearos/dialogs/dialog_insulin.png) | ![Karbo-dialogen](../images/wearos/dialogs/dialog_carbs.png) | ![eKarbo-dialogen](../images/wearos/dialogs/dialog_ecarbs.png) | ![Midlertidig mål-dialogen, varighetssiden](../images/wearos/dialogs/dialog_temp_target.png) | ![Profilbytte-dialogen](../images/wearos/dialogs/dialog_profile_switch.png) |
     
-    [1] I klokkens **Innstillinger** > **Grensesnitt** slår du på **Kalkulatorprosent** for å vise prosentfeltet i boluskalkulatoren. Standardprosenten kommer fra telefonens [«Lever denne delen av boluskalkulatorens resultat %»](#Preferences-deliver-this-part-of-bolus-wizard-result). De andre kalkulatorinnstillingene er telefonens under **Innstillinger** > **Innstillinger for boluskalkulator**.
+    [1] I klokkens **Innstillinger** > **Grensesnitt** slår du på **Kalkulatorprosent** for å vise prosentfeltet i boluskalkulatoren. Standardprosenten kommer fra telefonens [«Bolusprosent»](#Preferences-deliver-this-part-of-bolus-wizard-result). De andre kalkulatorinnstillingene er telefonens under **Innstillinger** > **Innstillinger for boluskalkulator**.
     
     [2] I klokkens **Innstillinger** > **Grensesnitt** slår du på **Kalkulator måltidstype** for å vise siden **Måltidstype**, der du velger **Brød**, **Kake** eller **Pizza** for å dele karbohydratene i et langsomt måltid i karbohydrater nå og eKarbo senere. Se [Velge måltidstype](#WearOsSmartwatch-wizard-meal-type).
     

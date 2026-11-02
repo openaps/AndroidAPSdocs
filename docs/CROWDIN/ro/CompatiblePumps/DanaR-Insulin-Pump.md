@@ -15,7 +15,7 @@
 ![Pompă DanaR](../images/danar1.png)
 
 * Mergeți la Main Menu > Setting > Discovery
-* În setările telefonului mergeți la Bluetooth, scanați pentru găsirea de dispozitive bluetooth în apropiere, selectați numărul seriei pompei DanaR și introduceți parola (parola de împerechere este 0000). Dacă DanaR nu apare în lista de dispozitive bluetooth găsite la scanare, restartați telefonul și scoateți bateria din pompa DanaR, înlocuiți-o și apoi porniți pașii de instalare de la început.
+* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). Dacă DanaR nu apare în lista de dispozitive bluetooth găsite la scanare, restartați telefonul și scoateți bateria din pompa DanaR, înlocuiți-o și apoi porniți pașii de instalare de la început.
 
 * In **AAPS**, open the **menu** (☰) in the top-left corner, go to **Configuration** > **Pump** and select the type of DanaR you have (**DanaR**, **DanaR Korean** or **DanaRv2**).
   

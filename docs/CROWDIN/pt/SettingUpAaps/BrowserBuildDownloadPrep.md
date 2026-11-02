@@ -5,18 +5,17 @@ As duas opções de keystore (Opção 1 e Opção 2) usam o mesmo ficheiro de pr
 ````{admonition} Note
 :class: note
 
-1. Se abrir esta página dentro de uma app (numa web view), o ficheiro HTML pode não ser descarregado. Nesse caso, copie o URL e abra-o no seu navegador:
+1. Se abrir esta página dentro de uma app (numa web view), o ficheiro HTML pode não ser descarregado. Please copy the URL and open it in your browser instead:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
-Ou abra a página da versão mais recente:
+Or visit the latest release page:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
-2.Cópia de segurança alojada neste site:
-
- - Se o link externo também não estiver disponível, pode descarregar este ficheiro de segurança.
+2. Backup copy hosted on this site:
+ - If the external link is also unavailable, you can use this backup file to download.
 <!--crowdin:disable-->
 
 ```{eval-rst}

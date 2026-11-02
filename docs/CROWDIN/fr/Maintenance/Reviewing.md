@@ -54,7 +54,7 @@ Les statistiques de temps dans la plage étroite (TITR) 70–140 mg/dl ou 3,9–
 
 **Discutez des cibles avec votre endocrinologue**
 
-Votre diabète peut être différent. Toute cible proposée doit être discutée avec votre endocrinologue ou votre équipe médicale. Bien utilisées, les statistiques d'AAPS peuvent être un outil efficace pour suivre les tendances de la __glycémie (BG)__ et vos progrès.
+Votre diabète peut être différent. Toute cible proposée doit être discutée avec votre endocrinologue ou votre équipe médicale. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress.
 
 ![Statistiques](../images/Maintenance/statistics3.png)
 
@@ -117,7 +117,7 @@ Ouvrez le **menu** (☰) en haut à gauche de l'écran principal et choisissez *
 ![Glucides et bolus](../images/TreatmentsView1.png)
 
 Dans cet onglet, vous pouvez voir le journal des bolus et des glucides. Chaque bolus (ligne **1**) affiche l'IA restante associée à côté de la quantité d'insuline. L'origine du bolus peut être :
-* Repas (saisi à la main avec les boutons Insuline, Assistant rapide ou Assistant Bolus)
+* Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
 * SMB, quand vous utilisez la fonction SMB
 
 Les saisies de glucides (ligne **2**) sont affichées avec leur quantité en grammes.
@@ -147,9 +147,9 @@ Les **débits basaux temporaires** appliqués par la boucle sont affichés ici. 
 * IA positive si le débit basal temporaire était plus élevé que celui défini dans le profil
 * IA négative pour un basal temporaire à zéro (comme sur la ligne **1**) ou si le débit basal temporaire était plus bas que celui défini dans le profil
 
-Supprimer les entrées ne change que vos rapports dans Nightscout et faussera probablement votre IA réelle - ce n'est pas recommandé.
+Deleting the entries only affects your reports in Nightscout and will probably distort your real IOB - it is not recommended.
 
-À gauche d'une ligne, un S rouge signifie « Suspendre » : cela arrive quand le basal n'est pas délivré en ce moment. C'est une situation normale pendant un changement de pod, par exemple.
+On the left of a line, a red S means “Suspend”: it happens when basal is not currently delivered. C'est une situation normale pendant un changement de pod, par exemple.
 
 ### Cible Temp
 
@@ -178,7 +178,7 @@ Cet onglet montre toutes les notes et saisies du careportal enregistrées dans N
 
 ![Mode de fonctionnement](../images/TreatmentsView6.png)
 
-Cet onglet montre l'historique des changements d'[état de la boucle](#AapsScreens-loop-status) : ouverte, fermée, AGB, suspendue, déconnectée.
+This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
 
 ### Entrées utilisateur
 

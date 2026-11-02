@@ -14,7 +14,7 @@
 
 **Недоліки**
 
-* Рекомендовано лише для досвідчених користувачів петлі (деякі налаштування важко впізнати, вам треба знати з досвіду роботи з AAPS на великому Android-телефоні, що і де розташовано. Деякі кнопки AAPS важко натиснути, тут потрібна точність, товсті пальці не допоможуть.)
+* Recommended only for experienced loopers. Some settings are not easy to recognize: you have to know from experience with a big Android AAPS phone how and where things are located. Some AAPS buttons are small and hard to tap: you need a precise touch, not stubby fingers.
 * Можна використовувати лише як телефон для петлі. Краще мати звичайний смартфон у кишені. 
 
 ### Оптимізація роботи батареї
@@ -43,6 +43,6 @@ Jelly має сильні функції оптимізації, які **тре
 
 ### Remote Connection для Wear apk
 
-Для деяких смарт-годинників, як-от Samsung Galaxy, параметр «Remote Connection» у розділі Advanced Features годинника Samsung Galaxy має бути **увімкнений**, щоб використовувати Jelly, **Wear.apk** та **AAPS** віддалено через Wi-Fi.
+For certain smart watches, like the Samsung Galaxy, 'Remote connection' under Advanced features in the Galaxy Wearable app must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
 
 ![Galaxy Wearable, Advanced features, Remote connection увімкнено](../images/wearos/galaxy_wearable_remote_connection.png)

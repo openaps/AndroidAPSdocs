@@ -7,7 +7,7 @@ Se não quiser criar uma conta Gmail dedicada ao **AAPS**, pode passar diretamen
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Um espaço dedicado no Google Drive significa que não corre o risco de encher o limite do seu Google Drive pessoal com **Exportar definições**.
+- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
 - Cada versão do **AAPS** (e das aplicações de apoio, como xDrip, BYODA, etc.) fica guardada num único sítio, que não depende do hardware do seu computador. Se o seu PC ou telefone for roubado, perdido ou avariar, continua a ter acesso.
 - Uma configuração igual para todos, com uma estrutura de pastas semelhante, torna o apoio online mais simples.
 - Dependendo da configuração (ver abaixo), terá uma identidade separada, um pseudónimo, para comunicar na comunidade, o que pode proteger a sua privacidade. 
@@ -45,13 +45,13 @@ Clique [aqui](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF
  These are the steps outlined in the video:
 
 Neste exemplo: 
-- A sua conta Google do «_dia a dia_» já existente é <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
+- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
 - A sua nova conta Gmail «_AAPS_» será: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-### Vá a <https://account.google.com> 
+### Go to <https://myaccount.google.com> 
 
- Se já tiver sessão iniciada na Google, isto leva-o à página **My Account** (A minha conta) do «dia a dia». (1) Clique na sua fotografia de perfil, no canto superior direito da página (neste caso, um simples ![](../images/Building-the-App/building_0002.png) (2) selecione «_add another account_» (adicionar outra conta).
+ Se já tiver sessão iniciada na Google, isto leva-o à página **My Account** (A minha conta) do «dia a dia». (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
 
 ![](../images/Building-the-App/building_0005.png)
 
@@ -87,7 +87,7 @@ Gmail will display the account name. Vai pedir-lhe que aceite os termos e condi�
 
 ### Customize the new profile display
 
-Neste ponto, deve estar na página MyAccount do Gmail, com a sua nova conta de e-mail dedicada ao **AAPS**. The profile picture will be set by default to the first letter of your name. Mude-a para algo único, para evitar confusões… neste exemplo, Donald.Muck.AAPS substituiu ![](../images/Building-the-App/building_0002.png) por ![](../images/Building-the-App/building_0003.png)
+Neste ponto, deve estar na página MyAccount do Gmail, com a sua nova conta de e-mail dedicada ao **AAPS**. The profile picture will be set by default to the first letter of your name. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
@@ -101,7 +101,7 @@ Esta parte pode ser um pouco confusa, porque vai ter de alternar várias vezes e
 2. Clique com o botão direito no ícone do navegador na barra de tarefas
 3. No menu, selecione «New Window» (Nova janela)... e ajuste-a para que ocupe só a metade de baixo do ecrã.
 
-Abra <https://gmail.com> em cada janela do navegador. Confirme que a sua conta pessoal está em cima e a nova conta dedicada ao **AAPS** está em baixo, e que é fácil de identificar pela fotografia de perfil no canto superior direito. (if needed you can always switch accounts by clicking on the profile picture and selecting the correct one.
+Abra <https://gmail.com> em cada janela do navegador. Confirme que a sua conta pessoal está em cima e a nova conta dedicada ao **AAPS** está em baixo, e que é fácil de identificar pela fotografia de perfil no canto superior direito. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
 
 ![](../images/Building-the-App/building_0009.png)
 

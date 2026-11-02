@@ -23,7 +23,7 @@ Pokud něco překládáte poprvé, začněte prosím překladem textů pro aplik
 
 Souběžně nebo později můžete začít překládat i dokumentaci.
 
-Stav překladu aplikace a dokumentace pro jednotlivé jazyky můžete zkontrolovat [zde](#StateOfTranslations).
+You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
 
 * Pokud chcete přeložit **aplikaci** do jiných jazyků (děkuji), použijte prosím [crowdin](https://crowdin.com/project/androidaps).
 * Pokud chcete přeložit **wiki** do jiných jazyků (děkuji), použijte prosím [crowdin](https://crowdin.com/project/androidapsdocs). 

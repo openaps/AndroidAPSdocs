@@ -73,7 +73,7 @@ Kým beží lokálne vyhľadávanie, **AAPS** súčasne prehľadáva aj oficiál
 - **Nastavenie** → otvorí nastavenie **priamo na jeho mieste** (preskočí naň na jeho obrazovke).
 - **Dokumentácia** → otvorí stránku vo vašom prehliadači.
 
-Otváranie nastavení a chránených akcií stále rešpektuje vašu **[ochranu](../SettingUpAaps/ConfigBuilder.md)** (PIN/heslo), presne ako keby ste sa tam dostali ručne. Keď s výsledkom niečo urobíte, tlačidlom **Späť** sa vrátite k výsledkom vyhľadávania.
+Opening settings and protected actions still respects your **[protection](#Preferences-protection)** (PIN/password), exactly as it would if you had navigated there by hand. Keď s výsledkom niečo urobíte, tlačidlom **Späť** sa vrátite k výsledkom vyhľadávania.
 
 ---
 

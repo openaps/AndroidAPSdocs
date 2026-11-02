@@ -40,7 +40,7 @@ After a sensor change xDrip will automatically detect the new sensor and will de
 
 ![Configuration > BG Source with xDrip+ BG selected](../images/v4/Configuration/configuration_bg_source.png)
 
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip settings page](#xdrip-identify-receiver).
+-   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as described on [xDrip settings page](#xdrip-identify-receiver).
 
 ## 2. Use xDrip direct connection
 
@@ -67,7 +67,7 @@ Technically, the current blood sugar value is transmitted to xDrip every minute.
 
 Это обязательно для цикла. Кривые выглядят гладкими, и результаты работы цикла великолепны. Необработаные значения, на которых основаны оповещения, имеют несколько больший разборос, но в конечном счете соответствуют показателям ридера. In addition, the raw values can be displayed in the xDrip graph in order to be able to react in time to rapid changes. Переключитесь на Менее распространенные Настройки\ > Расширенные настройки для Libre2 \>"показывать необработанные значения" и "показывать Информацию с сенсора". После этого "необработанные" значения будут дополнительно отображается в виде небольших белых точек, а в меню системы будет доступна дополнительная информация о сенсоре.
 
-Необработанные данные очень полезны при быстрых изменениях ГК. Даже если точки идут вразброс, для принятия решений по терапии тенденция видна гораздо лучше, чем при сглаживании.
+Необработанные данные очень полезны при быстрых изменениях ГК. Even if the dots are jumpier you would detect the tendency much better than using the smoothed line to make proper therapy decisions.
 
 → Сэндвич-меню → Настройки →Менее распространенные настройки → Advanced settings for Libre 2 (дополнительные настройки для Libre 2)
 
@@ -77,7 +77,7 @@ Technically, the current blood sugar value is transmitted to xDrip every minute.
 
 #### Калибровка
 
-You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2,2 mmol/L to +1,1 mmol/L\]** (intercept). Угловой коэффициент не изменяется. Проверьте глюкометром после установки нового сенсора, имея в виду, что в первые 12 часов после установки данные могут быть неточны. Поскольку показатели ГК могут сильно отличаться, проверяйте каждые 24 часа и при необходимости калибруйте. Если через несколько дней показания сенсора совершенно не совпадают с глюкометром, сенсор следует заменить.
+You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2.2 mmol/L to +1.1 mmol/L\]** (intercept). Угловой коэффициент не изменяется. Проверьте глюкометром после установки нового сенсора, имея в виду, что в первые 12 часов после установки данные могут быть неточны. Поскольку показатели ГК могут сильно отличаться, проверяйте каждые 24 часа и при необходимости калибруйте. Если через несколько дней показания сенсора совершенно не совпадают с глюкометром, сенсор следует заменить.
 
 ## 3. Использовать Diabox
 

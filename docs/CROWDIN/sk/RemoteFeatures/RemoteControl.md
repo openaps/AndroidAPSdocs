@@ -42,7 +42,7 @@ Aby ste aplikácie rozlíšili, niektoré prvky majú inú farbu: žltú pre **A
 
 **AAPSClient** môžete nainštalovať do jedného alebo viacerých telefónov sledujúcich (t. j. telefón sledujúceho rodiča 1 a telefón sledujúceho rodiča 2), aby obaja opatrovatelia mali prístup k telefónu pacienta s **AAPS** a mohli ho ovládať na diaľku.
 
-Ak chcete stiahnuť **AAPSClient**, prejdite do [GitHub repozitára](https://github.com/nightscout/AndroidAPS/releases/) a kliknite na súbor **„app-AAPSClient-release_x.x.x.x“** (môže to byť novšia verzia, než je na snímke obrazovky nižšie):
+To download **AAPSClient**, navigate to the [GitHub repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
 
 ![obrázok](../images/remote_control_and_following/AAPSClient_download_02.png)
 
@@ -56,7 +56,7 @@ Apk **AAPSClient** teraz môžete buď:
 
 preniesť do telefónu sledujúceho cez kábel USB; alebo presunúť do priečinka na Disku Google a potom pridať do telefónu sledujúceho kliknutím na súbor „app-AAPSClient-release“.
 
-Ak potrebujete **AAPS** pre seba a **AAPSClient** na sledovanie niekoho iného, musíte si **AAPSClient** zostaviť sami namiesto stiahnutia z GitHub repozitára, ako je popísané vyššie. Dôvodom je, že do jedného telefónu nemôžete nainštalovať **AAPS** aj **AAPSClient** podpísané iným kľúčom. <br/> Ak si chcete **AAPSClient** zostaviť sami, postupujte rovnako ako pri [bežnom zostavení AAPS](../SettingUpAaps/BuildingAaps.md). Na stránke **Generate signed App Bundle or APK** vyberte **aapsclientRelease** namiesto **fullRelease**.
+Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the GitHub repository as described above. Dôvodom je, že do jedného telefónu nemôžete nainštalovať **AAPS** aj **AAPSClient** podpísané iným kľúčom. <br/> Ak si chcete **AAPSClient** zostaviť sami, postupujte rovnako ako pri [bežnom zostavení AAPS](../SettingUpAaps/BuildingAaps.md). Na stránke **Generate signed App Bundle or APK** vyberte **aapsclientRelease** namiesto **fullRelease**.
 
 To isté pravidlo platí, keď do jedného telefónu sledujúceho inštalujete viac klientskych aplikácií (**AAPSClient**, **AAPSClient2**, **AAPSClient3**): všetky musia byť podpísané **rovnakým kľúčom**. Inak Android odmietne nainštalovať druhú z nich (chyba `INSTALL_FAILED_DUPLICATE_PERMISSION`).
 
@@ -128,7 +128,7 @@ Inteligentné hodinky môžu byť veľmi užitočným nástrojom, ktorý pomáha
 (RemoteControl_nightscout)=
 ## 3) Nightscout
 
-Okrem toho, že Nightscout je server „v cloude“, existuje aj samostatná aplikácia **Nightscout**, ktorú si môžete stiahnuť priamo z App Store do svojho iPhonu. Ak máte ako telefón sledujúceho Android, neexistuje samostatná aplikácia Nightscout a je lepšie použiť [**AAPSClient**](#2-aapsclient). Ak chcete iba sledovať a neposielať ošetrenia, môžete si z Obchodu Play stiahnuť a nainštalovať aplikáciu [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch).
+Okrem toho, že Nightscout je server „v cloude“, existuje aj samostatná aplikácia **Nightscout**, ktorú si môžete stiahnuť priamo z App Store do svojho iPhonu. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](#RemoteControl_aapsclient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) app from the Playstore.
 
 Keď do iPhonu nainštalujete aplikáciu **Nightscout**, otvorte ju, postupujte podľa pokynov na nastavenie a zadajte adresu svojho Nightscoutu (pozrite nižšie vľavo). Jej tvar sa môže líšiť podľa toho, kde je váš Nightscout hosťovaný. (_napr._ http://youraddresshere.herokuapp.com). Potom zadajte svoj Nightscout API secret (pozrite nižšie vpravo). Ak vás aplikácia nevyzve na zadanie hesla API, musíte ho zadať kliknutím na zámok v hornej časti aplikácie:
 
@@ -177,7 +177,7 @@ Podrobnejší pohľad na ponuku vľavo hore v aplikácii Nightscout:
 3. Hamburger – nastavenie predvolieb
 4. Careportal – zaznamenanie ošetrenia (kedy ich **AAPS** použije, pozrite [nižšie](#RemoteControl_nightscout-treatments))
 
-![Horná lišta Nightscoutu](../images/remote-control-29.png)
+![Nightscout top bar](../images/remote-control-29.png)
 
 V sivých kartách na tejto obrazovke je obrovské množstvo informácií o stave systému **AAPS** (a ešte viac informácií sa zobrazí, keď na kartu ťuknete):
 
@@ -202,7 +202,7 @@ Vyskakovacie okno zatvoríte stlačením „refresh“ v dolnej časti stránky.
 (RemoteControl_nightscout-treatments)=
 ### Posielanie ošetrení do AAPS cez aplikáciu Nightscout
 
-V **AAPS** 4 je podporovaným spôsobom vzdialeného ovládania **AAPS** **spárovaný AAPSClient**, pozrite [Ovládanie Master ↔ Client](#client-master-control): každý klient má [rolu](#client-master-control-roles), ktorá obmedzuje, čo smie robiť, a každý príkaz je podpísaný, overený a potvrdený telefónom s **AAPS**. Kým je zapnuté ovládanie z klienta, telefón s **AAPS** je v [režime zvýšeného zabezpečenia](#client-master-control-hardened-mode): ošetrenia, dočasné ciele a prepnutia profilu zadané na webovej stránke Nightscout alebo v aplikácii Nightscout sa **nepoužijú**. Aplikácia Nightscout je potom nástrojom iba na sledovanie.
+In **AAPS** 4 the supported way to control **AAPS** remotely is a **paired AAPSClient**, see [Master ↔ Client control](#client-master-control): each client has a [role](#client-master-control-roles) that limits what it may do, and every command is signed by the client, then checked and confirmed by the **AAPS** phone. Kým je zapnuté ovládanie z klienta, telefón s **AAPS** je v [režime zvýšeného zabezpečenia](#client-master-control-hardened-mode): ošetrenia, dočasné ciele a prepnutia profilu zadané na webovej stránke Nightscout alebo v aplikácii Nightscout sa **nepoužijú**. Aplikácia Nightscout je potom nástrojom iba na sledovanie.
 
 ```{admonition} Only when client control is off
 :class: warning
@@ -277,7 +277,7 @@ a)  **AAPSClient** alebo **SMS** príkazy nemôžu fungovať; alebo
 
 b)  Používateľ nechce písať overovací kód (ako to vyžadujú SMS príkazy).
 
-Aby mohli inteligentné hodinky ovládať **AAPS**, potrebujú **Wear OS 3 alebo novší**. Skontrolujte technické parametre hodiniek a pozrite stránku [Inteligentné hodinky a AAPS](../Getting-Started/Watches.md). Ak si nie ste istí, vyhľadajte to alebo sa opýtajte v skupinách **AAPS**  na Facebooku/Discorde.
+Aby mohli inteligentné hodinky ovládať **AAPS**, potrebujú **Wear OS 3 alebo novší**. Skontrolujte technické parametre hodiniek a pozrite stránku [Inteligentné hodinky a AAPS](../Getting-Started/Watches.md). Search, or ask in the **AAPS** Facebook/Discord groups if unsure.
 
 Specific How-to guides for setting up **AAPS** on the popular Samsung Galaxy Watch 4 (40mm) are given below. Obľúbenou voľbou sú aj hodinky [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0). Ak máte skúsenosti s nastavením iných hodiniek, ktoré by mohli byť užitočné pre ostatných, pridajte ich prosím na tieto stránky ([upravte dokumentáciu](../SupportingAaps/HowToEditTheDocs.md)) a podeľte sa o svoje poznatky so širšou komunitou **AAPS**.
 
@@ -285,7 +285,7 @@ Specific How-to guides for setting up **AAPS** on the popular Samsung Galaxy Wat
 
 ![Wear Remote 2](../images/Wear_Remote2.png)
 
-Softvér pre hodinky, **AAPSClient** Wear apk, si môžete stiahnuť priamo z [GitHubu](https://github.com/nightscout/AndroidAPS/releases/).
+The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
 
 Na stiahnutie softvéru kliknite na aplikáciu pre hodinky, ktorá zodpovedá klientskej aplikácii v telefóne: **wear-aapsclient-release_**_verzia_ patrí k **AAPSClient**, **wear-aapsclient2-release_**_verzia_ patrí k **AAPSClient2** (pozrite [O AAPSClient, AAPSClient2 a AAPSClient3](#remotecontrol-aapsclient-versions)):
 

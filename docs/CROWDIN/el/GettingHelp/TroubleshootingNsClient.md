@@ -38,6 +38,6 @@
 
 * Εάν εξακολουθείτε να έχετε κάποιο σφάλμα...
 
-Ελέγξτε το μέγεθος της βάσης δεδομένων σας στο MongoDB (ή μέσω του πρόσθετου database size στο nightscout). Αν χρησιμοποιείτε το δωρεάν πακέτο του MongoDB, τα 496MB σημαίνουν ότι η βάση είναι γεμάτη και πρέπει να καθαριστεί. [Ακολουθήστε αυτές τις οδηγίες του Nightscout για να ελέγξετε το μέγεθος της βάσης δεδομένων σας και να διαγράψετε δεδομένα](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
+Ελέγξτε το μέγεθος της βάσης δεδομένων σας στο MongoDB (ή μέσω του πρόσθετου database size στο nightscout). Αν χρησιμοποιείτε το δωρεάν πακέτο του MongoDB, τα 496MB σημαίνουν ότι η βάση είναι γεμάτη και πρέπει να καθαριστεί. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
 Πριν διαγράψετε δεδομένα από τη βάση δεδομένων σας, και αν δεν το έχετε ήδη ρυθμίσει, σκεφτείτε να δωρίσετε τα δεδομένα σας από το AAPS στο έργο Open Humans (για έρευνα). Οι οδηγίες βρίσκονται στη [σελίδα ρύθμισης του OpenHumans](../SupportingAaps/OpenHumans.md).

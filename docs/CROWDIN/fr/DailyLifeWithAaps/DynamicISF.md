@@ -16,14 +16,14 @@ Quand vous utilisez la **SI dynamique**, désactivez toute règle d'**Automatisa
 
 Pour utiliser la **SI dynamique**, la base de données d'**AAPS** doit contenir au moins 7 jours de données **AAPS** de l'utilisateur.
 
-## Que fait la SI dynamique ?
+## What does Dynamic ISF do?
 
 La **SI dynamique** adapte le facteur de sensibilité à l'insuline (**SI**) de façon dynamique, en fonction de :
 
 - la Dose Totale Quotidienne d'insuline (**DTQ**) ; et
 - les valeurs de glycémie actuelles et prévues.
 
-Avec la **SI dynamique**, les valeurs de **SI** saisies dans le **Profil** ne sont plus du tout utilisées, sauf comme valeur de secours s'il n'y a pas assez de données de DTQ dans la base de données d'**AAPS** (*par ex.* après une nouvelle installation de l'application).
+When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are not used at all anymore, except as a fallback if there is not enough TDD data in **AAPS** database (*i.e.* fresh reinstallation of the app).
 
 **SMB/AMA** : un exemple de **Profil** avec une **SI** statique, définie par l'utilisateur et utilisée par **SMB** et **AMA**.
 
@@ -37,7 +37,7 @@ La partie entourée en rouge montre : `profile ISF` -> `ISF as calculated by Dy
 
 La valeur de la **DynISF** peut aussi être affichée dans un graphique : appuyez sur **Ajouter graphique** sous les graphiques de l'écran principal et choisissez **V_SI** (sensibilité variable). Elle apparaît comme une ligne blanche (en bas de l'image ci-dessus).
 
-## Comment la SI dynamique est-elle calculée ?
+## How is Dynamic ISF calculated?
 
 La **SI dynamique** utilise le modèle de Chris Wilson pour déterminer la **SI**, au lieu de la valeur de **SI** statique définie par l'utilisateur dans le **Profil**. Une explication détaillée est disponible ici (en anglais) : [Chris Wilson on Insulin Sensitivity (Correction Factor) with Loop and Learn, 2/6/2022](https://www.youtube.com/watch?v=oL49FhOts3c).
 
@@ -70,9 +70,8 @@ Le but est d'éviter de donner trop d'insuline quand la **glycémie** est basse 
 
 La **SI future** utilise la même formule que ci-dessus, mais elle peut utiliser la **glycémie minimale prévue** au lieu de la **glycémie actuelle**. La **glycémie minimale prévue**, [telle que calculée par oref1](#aaps-screens-how-predictions-become-a-dosing-decision), est la valeur la plus basse que votre glycémie devrait atteindre sur toute la durée des prédictions.
 
-* Si la **glycémie** actuelle est au-dessus de la cible  <br/> **et** si la **glycémie** est stable, à +/- 3 mg/dl près :<br/>la glycémie utilisée dans la formule est : `average(minimum predicted BG, current BG)` (moyenne de la glycémie minimale prévue et de la glycémie actuelle).
-* Si la **glycémie** finale prévue est au-dessus de la cible et que la glycémie monte,<br/>  
-  **ou** si la **glycémie** finale prévue est au-dessus de la **glycémie** actuelle :<br/>la glycémie utilisée dans la formule est : `current BG` (glycémie actuelle).
+* If the current **BG** is above target<br/> **and** if **BG** levels are flat, within +/- 3 mg/dL:<br/>BG is used in the formula as follows: `average(minimum predicted BG, current BG)`.
+* If eventual **BG** is above target and glucose levels are increasing,<br/> **or** eventual **BG** is above current **BG**:<br/>BG is used in the formula as follows: `current BG`.
 * Sinon :<br/>la glycémie utilisée dans la formule est : `minimum predicted BG` (glycémie minimale prévue).
 
 Pour une explication simplifiée, regardez la capture d'écran ci-dessous, qui illustre la situation décrite ci-dessus. Les points orange utilisent la **glycémie prévue**, les points violets la **moyenne(glycémie prévue, glycémie actuelle)** et les points bleus la **glycémie actuelle**.
@@ -112,7 +111,7 @@ Le **Facteur d'ajustement** est une valeur entre 1 % et 300 %. Il agit comme un 
 
 Le **Facteur d'ajustement** change aussi quand vous activez un [**Changement de profil** avec un pourcentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). Un **Pourcentage du profil** plus bas diminue le **Facteur d'ajustement**, et un **Pourcentage du profil** plus haut l'augmente.
 
-Par exemple, si votre **Facteur d'ajustement** est de 80 % et que vous faites un **Changement de profil** à 80 %, le **Facteur d'ajustement** résultant sera `0,8 × 0,8 = 0,64`.
+For example, if your **Adjustment Factor** is 80%, and **Profile Switch** to 80% is actioned, the resulting **Adjustment Factor** will be `0.8*0.8=0.64`.
 
 Cela signifie qu'avec la **DynISF**, vous pouvez utiliser le **Pourcentage du profil** pour ajuster temporairement et manuellement votre sensibilité. C'est utile par exemple pour une activité physique (pourcentage plus bas), une maladie (pourcentage plus haut), etc.
 

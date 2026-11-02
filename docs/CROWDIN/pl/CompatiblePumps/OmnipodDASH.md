@@ -38,16 +38,16 @@ Główne cechy **Omnipod DASH** („DASH”):
 
 ![Pod Omnipod](../images/DASH_images/Omnipod_Pod.png)
 
-- **Kompatybilny telefon z Androidem** z Bluetooth Low Energy (BLE) (więcej informacji na stronie [Telefony](../Getting-Started/Phones.md)). Dodatkowo poniższe informacje pomogą Ci uwzględnić inne ważne sprawy, od których zależy udana aktywacja i używanie DASH na kompatybilnym telefonie:
+- **A Compatible Android phone** with Bluetooth Low Energy (BLE) (see [Phones](../Getting-Started/Phones.md) for more info). In addition, the following information will help guide you on other key considerations around successfully activating and using the DASH on a compatible phone:
     -  Sterownik Omnipod Dash w **AAPS** łączy się z Podem DASH przez Bluetooth.  
       **AAPS** automatycznie nawiązuje nowe połączenie Bluetooth z Podem za każdym razem, gdy musi wysłać polecenie (np. bolus). Po wysłaniu polecenia połączenie Bluetooth jest od razu rozłączane.
        - **UWAGA:**
          - Połączenie Bluetooth mogą przerywać lub zakłócać inne urządzenia Bluetooth połączone z telefonem, na którym działa **AAPS**, np. słuchawki douszne itp. Takie urządzenia mogą powodować błędy połączenia lub problemy z aktywacją Poda w niektórych modelach telefonów. Przy wyborze telefonu do Omnipod DASH warto przejrzeć listę [przetestowanych zestawów sprzętu](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true), aby znaleźć konfiguracje, o których wiadomo, że działają.
-         - Istnieje kilka znanych problemów z Bluetooth, które mogą powodować kłopoty z aktywacją Poda (porady dotyczące innych problemów z Bluetooth znajdziesz w części [Rozwiązywanie problemów](#troubleshooting)), szczególnie w części [Problemy związane z Bluetooth](#omnipod-dash-bluetooth-related-issues).
+         - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#omnipod-dash-troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
     - Telefon musi mieć **Androida 12 lub nowszego**, a **AAPS** musi być zbudowany i zainstalowany według instrukcji [**Budowanie AAPS**](../SettingUpAaps/BuildingAaps.md). Zawsze używaj najnowszej wydanej wersji.
 - Obsługiwany [**system ciągłego monitorowania glukozy (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
-Poniższe instrukcje wyjaśniają, jak aktywować nową sesję Poda za pomocą **AAPS**. Poczekaj, aż obecny Pod będzie bliski końca ważności, ponieważ nowy Pod będziesz musiał aktywować za pomocą **AAPS**. Dezaktywowanego Poda nie można użyć ani aktywować ponownie. Dezaktywacja jest ostateczna.
+Poniższe instrukcje wyjaśniają, jak aktywować nową sesję Poda za pomocą **AAPS**. You should wait for your current Pod to be close to expiry, as you will need to activate a new Pod with **AAPS**. Dezaktywowanego Poda nie można użyć ani aktywować ponownie. Dezaktywacja jest ostateczna.
 
 ## Zanim zaczniesz
 
@@ -611,7 +611,7 @@ Pod, który uległ awarii, nie może być użyty ponownie. Sprawdź poziom gluko
 ---
 ### Zapobieganie awariom Poda z błędem 49
 
-Ten błąd jest związany z nieprawidłowym stanem Poda dla danego polecenia albo z błędem podczas polecenia podania insuliny. Dzieje się tak, gdy sterownik i Pod nie zgadzają się co do rzeczywistego stanu. Pod (ze względu na wbudowane zabezpieczenie) reaguje wtedy nieodwracalnym kodem błędu 49 (0x31) i kończy jako tzw. „screamer” (wyjący Pod): długi, irytujący sygnał dźwiękowy, który można zatrzymać tylko przebijając otwór w odpowiednim miejscu z tyłu Poda. Dokładną przyczynę „błędu Poda 49” często trudno ustalić. W sytuacjach, w których podejrzewasz, że ten błąd może wystąpić (na przykład przy awariach aplikacji, używaniu wersji rozwojowej lub ponownej instalacji).
+Ten błąd jest związany z nieprawidłowym stanem Poda dla danego polecenia albo z błędem podczas polecenia podania insuliny. Dzieje się tak, gdy sterownik i Pod nie zgadzają się co do rzeczywistego stanu. Pod (ze względu na wbudowane zabezpieczenie) reaguje wtedy nieodwracalnym kodem błędu 49 (0x31) i kończy jako tzw. „screamer” (wyjący Pod): długi, irytujący sygnał dźwiękowy, który można zatrzymać tylko przebijając otwór w odpowiednim miejscu z tyłu Poda. Dokładną przyczynę „błędu Poda 49” często trudno ustalić. It can happen, for example, after application crashes, when running a development version or after a re-installation.
 
 ---
 
@@ -690,7 +690,7 @@ Poniżej znajdziesz podsumowanie głównych alarmów, które możesz zobaczyć:
 - *Błąd Poda: XXX NAZWA*, a po nim *Nr ref.: ...*: Pod uległ awarii i przestał podawać insulinę. Wymień Poda. Zobacz [Awarie Poda](#omnipod-dash-pod-failures).
 - *Brak akt. Poda*: nie znaleziono sesji Poda. To powiadomienie będzie wracać, dopóki nie aktywujesz nowego Poda. Gdy Pod zostanie aktywowany, powiadomienie zniknie automatycznie.
 - *Podawanie insuliny zawieszone*: Pod wstrzymał podawanie insuliny. Zobacz [Wznowienie podawania insuliny](#omnipod-dash-resuming-insulin-delivery).
-- *Ustawianie profilu bazowego mogło się nie powieść. Podawanie mogło zostać zawieszone! W razie potrzeby proszę ręcznie odświeżyć status Poda na karcie Omnipod i wznowić podawanie.* Ustawienie **Profilu** bazowego w Podzie mogło się nie udać. Naciśnij **Odśwież** na ekranie pompy DASH (komunikat nadal mówi o „karcie Omnipod”) i naciśnij **Wznów podawanie**, jeśli jest widoczny.
+- *Ustawianie profilu bazowego mogło się nie powieść. Podawanie mogło zostać zawieszone! Please manually refresh the Pod status on the pump screen and resume delivery if needed.* Setting the basal **Profile** on the pod may have failed. Press **Refresh** on the DASH pump screen, and press **Resume Delivery** if it is shown.
 - *Unable to verify whether SMB (X U) succeeded. Odśwież status Poda, aby potwierdzić lub odrzucić to polecenie.* **AAPS** nie mógł potwierdzić, że **SMB** został podany. Naciśnij **Odśwież** na ekranie pompy DASH i sprawdź pole **Ostatni bolus**.
 - *Status podawania bolusa jest niepewny. Odśwież status Poda aby potwierdzić lub odrzucić.* To samo dotyczy zwykłego bolusa: naciśnij **Odśwież** na ekranie pompy DASH.
 - *Strefa czasowa na Podzie różni się od strefy czasowej na telefonie. Dawka bazowa jest nieprawidłowa. Zmień profil, aby to naprawić* Zobacz uwagę o czasie letnim i strefach czasowych w części [Znane ograniczenia i problemy Omnipod DASH w AAPS](#omnipod-dash-constraints).
@@ -703,7 +703,7 @@ Cała praca nad sterownikiem DASH jest wykonywana przez społeczność **wolonta
 
 -  **Poziom 0:** Przeczytaj odpowiednią część tej dokumentacji, aby zrozumieć, jak powinna działać funkcja, z którą masz problem.
 -  **Poziom 1:** Jeśli nadal masz problemy, których nie możesz rozwiązać za pomocą tego dokumentu, przejdź na kanał *#AAPS* na **Discordzie**, korzystając z [tego linku z zaproszeniem](https://discord.gg/4fQUWHZ4Mw). Możesz też pytać w wielu grupach na Facebooku i w innych miejscach (zobacz [**Gdzie mogę uzyskać pomoc?**](../GettingHelp/WhereCanIGetHelp.md))
--  **Poziom 2:** Przeszukaj istniejące zgłoszenia, aby sprawdzić, czy Twój problem nie został już zgłoszony na stronie [Issues](https://github.com/nightscout/AndroidAPS/issues) jeśli tak, potwierdź go, skomentuj lub dodaj informacje o swoim problemie. Jeśli nie, utwórz [nowe zgłoszenie](https://github.com/nightscout/AndroidAPS/issues) i dołącz [swoje pliki logów](../GettingHelp/AccessingLogFiles.md).
+-  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues). If it exists, please confirm/comment/add information on your problem. Jeśli nie, utwórz [nowe zgłoszenie](https://github.com/nightscout/AndroidAPS/issues) i dołącz [swoje pliki logów](../GettingHelp/AccessingLogFiles.md).
 -  **Bądź cierpliwy – większość członków naszej społeczności to życzliwi wolontariusze, a rozwiązanie problemu często wymaga czasu i cierpliwości zarówno od użytkowników, jak i od programistów.**
 
 Gdy prosisz o pomoc, przygotuj poniższe informacje, aby członkowie społeczności mogli pomóc w Twoich konkretnych pytaniach i problemach:

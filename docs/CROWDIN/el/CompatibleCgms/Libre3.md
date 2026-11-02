@@ -22,7 +22,7 @@
 ### Βήμα 1: Ρύθμιση του Juggluco
 Κατεβάστε και εγκαταστήστε την εφαρμογή Juggluco από [εδώ](https://www.juggluco.nl/Juggluco/download.html). Ακολουθήστε τις οδηγίες [εδώ](https://www.juggluco.nl/Juggluco/libre3/)
 
-Βεβαιωθείτε ότι στέλνετε τις τιμές γλυκόζης στο xDrip: Στις ρυθμίσεις του Juggluco μπορείτε να ρυθμίσετε το Juggluco να στέλνει τις τιμές γλυκόζης σε άλλες εφαρμογές. Το Juggluco μπορεί να στέλνει τρία είδη τέτοιων εκπομπών (broadcasts): Το **Patched Libre broadcast** χρησιμοποιούνταν αρχικά από την τροποποιημένη εφαρμογή Librelink και μπορεί να στέλνει τιμές γλυκόζης στο xDrip
+Βεβαιωθείτε ότι στέλνετε τις τιμές γλυκόζης στο xDrip: Στις ρυθμίσεις του Juggluco μπορείτε να ρυθμίσετε το Juggluco να στέλνει τις τιμές γλυκόζης σε άλλες εφαρμογές. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip.
 
 ### Βήμα 2: Ρύθμιση του xDrip
 
@@ -69,7 +69,7 @@
 
 ![Τερματισμός αισθητήρα](../images/libre3/step_14.jpg)
 
-Σημείωση: Όταν είναι ενεργοί δύο αισθητήρες, το Juggluco θα στέλνει στο xDrip την πιο πρόσφατη τιμή από οποιονδήποτε από τους δύο. Αν οι αισθητήρες δεν είναι βαθμονομημένοι και δεν δείχνουν παρόμοιες τιμές BG, μπορεί να εμφανίζονται στο xDrip τιμές BG που πηδούν πάνω-κάτω. Αν τερματίσετε λάθος αισθητήρα, μπορείτε να τον ενεργοποιήσετε ξανά απλώς σαρώνοντάς τον.
+Σημείωση: Όταν είναι ενεργοί δύο αισθητήρες, το Juggluco θα στέλνει στο xDrip την πιο πρόσφατη τιμή από οποιονδήποτε από τους δύο. If the sensors are not calibrated to read BG similarly, this may result in jumpy BG values being reported to xDrip. Αν τερματίσετε λάθος αισθητήρα, μπορείτε να τον ενεργοποιήσετε ξανά απλώς σαρώνοντάς τον.
 
 ## Αλλαγή του αισθητήρα ανάμεσα στην εφαρμογή Libre 3 και το Juggluco
 
@@ -99,4 +99,4 @@
 
 Αρχικές οδηγίες: [ιστότοπος του jkaltes](https://www.juggluco.nl/Juggluco/libre3/)
 
-Επιπλέον αποθετήριο στο Github: [Σύνδεσμος Github](https://github.com/maheini/FreeStyle-Libre-3-patch)
+Additional GitHub repo: [GitHub link](https://github.com/maheini/FreeStyle-Libre-3-patch)

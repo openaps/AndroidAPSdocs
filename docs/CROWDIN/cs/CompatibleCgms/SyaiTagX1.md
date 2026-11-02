@@ -7,7 +7,7 @@
 
 -   Spuštění senzoru X1
 
-- Vyberte **Syai/Ottai** v [Konfigurace, Zdroj glykémie](#Config-Builder-bg-source).
+- Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
 Zapněte vysílání v aplikaci Syai:
 

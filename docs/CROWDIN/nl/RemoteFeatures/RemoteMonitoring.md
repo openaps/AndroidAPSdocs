@@ -8,7 +8,7 @@ __AAPS__ heeft verschillende functies om kinderen met diabetes type 1 op afstand
 
 - De pomp van het kind wordt bestuurd door de telefoon van het kind met __AAPS__.
 - Verzorgers kunnen op afstand alle belangrijke gegevens volgen, zoals glucosewaarden, actieve koolhydraten, actieve insuline enz., met de **AAPSClient apk** op hun Android-telefoon (een iPhone-versie van **AAPSClient** is in ontwikkeling, zie [AAPSClient](AapsClient.md)). Instellingen die in __AAPS__ worden gewijzigd, worden gesynchroniseerd met __AAPSClient__ en omgekeerd.
-- Verzorgers kunnen alarmen krijgen met de **xDrip-app in volgmodus (follower mode)** op hun Android-telefoon, als de xDrip companion-modus is ingesteld.
+- Caregivers can be alarmed by using **xDrip app in follower mode** on their Android phone if xDrip companion mode is set up.
 - Bediening van __AAPS__ op afstand met [SMS-commando's](../RemoteFeatures/SMSCommands.md) is beveiligd met tweestapsverificatie.
 - Bediening op afstand via __AAPSClient__ gebruikt het ondertekende commandokanaal dat in **AAPS** 4 is ingevoerd: de client moet eerst met de master **gekoppeld** zijn (met een QR-code of een pincode), en elk commando wordt door de master bevestigd en uitgevoerd. Elke telefoon van een verzorger kan een eigen [rol](#client-master-control-roles) krijgen, van alleen lezen tot volledige besturing — zie [Master ↔ Client besturing](#client-master-control).
 

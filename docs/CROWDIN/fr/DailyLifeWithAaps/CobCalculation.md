@@ -12,13 +12,13 @@ La formule utilisée par **AAPS** est :
 
 L'effet sur le **Profil** de l'utilisateur :
 
-- _augmenter_ le **G/I** augmente les glucides absorbés toutes les 5 minutes et raccourcit donc la durée totale d'absorption ;
+- _increase_ **IC** - by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
 
 - _augmenter_ la **SI** diminue les glucides absorbés toutes les 5 minutes et allonge donc la durée totale d'absorption ; et
 
-- _changer_ le **Pourcentage du profil** augmente ou diminue les deux valeurs et n'a donc pas d'effet sur la durée d'absorption des glucides.
+- _change_ **Profile Percentage** - increase/decrease both values thus has no impact on carbs absorption time.
 
-Par exemple, si dans le **Profil** de l'utilisateur la **SI** est de 100 et le **G/I** de 5, le facteur de sensibilité aux glucides est de 20. Pour chaque hausse de 20 mg/dl de la **glycémie** de l'utilisateur, **AAPS** compte 1 g de glucides comme absorbé. Une **IA** positive influence aussi le calcul des **GA**. Donc, si **AAPS** prévoit que la **glycémie** de l'utilisateur baisse de 20 mg/dl à cause de l'**IA** et qu'elle reste stable à la place, **AAPS** compte aussi 1 g de glucides comme absorbé.
+For example, if the user’s **Profile** **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. Pour chaque hausse de 20 mg/dl de la **glycémie** de l'utilisateur, **AAPS** compte 1 g de glucides comme absorbé. Une **IA** positive influence aussi le calcul des **GA**. Donc, si **AAPS** prévoit que la **glycémie** de l'utilisateur baisse de 20 mg/dl à cause de l'**IA** et qu'elle reste stable à la place, **AAPS** compte aussi 1 g de glucides comme absorbé.
 
 Les glucides sont aussi absorbés selon les méthodes décrites ci-dessous, en fonction de l'algorithme de sensibilité choisi dans **AAPS**.
 
@@ -47,7 +47,7 @@ Si l'absorption minimale des glucides (min_5m_carbimpact) est utilisée à la pl
 (CobCalculation-detection-of-wrong-cob-values)=
 ## Détection de GA erronés
 
-**AAPS** avertit l'utilisateur s'il est sur le point de faire un bolus avec des **GA** d'un repas précédent et que l'algorithme juge le calcul actuel des **GA** incorrect. Dans ce cas, il affiche une indication supplémentaire sur l'écran de confirmation après l'utilisation de l'assistant bolus.
+**AAPS** will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. Dans ce cas, il affiche une indication supplémentaire sur l'écran de confirmation après l'utilisation de l'assistant bolus.
 
 ### Comment AAPS détecte-t-il des valeurs de GA erronées ?
 
@@ -62,7 +62,7 @@ Dans la capture d'écran ci-dessus, l'absorption des glucides a été calculée 
 - Pensez à annuler le traitement : appuyez sur « Annuler » au lieu de OK.
 - Calculez à nouveau votre prochain repas avec l'assistant bolus, en laissant **GA** décoché.
 - Si vous avez besoin d'un bolus de correction, saisissez-le manuellement.
-- Attention à ne pas faire de surdosage ni d'accumulation d'insuline !
+- Be careful not to overdose or stack insulin!
 
 
 ### Pourquoi l'algorithme ne détecte-t-il pas correctement les GA ?

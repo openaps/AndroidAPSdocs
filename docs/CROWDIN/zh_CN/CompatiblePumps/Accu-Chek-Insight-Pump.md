@@ -88,7 +88,7 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
     
     In the Insight settings in **AAPS** you can enable the following options:
     
-    * **Log reservoir changes**: automatically records an insulin cartridge change when you run the "fill cannula" program on the pump.
+    * **Log reservoir changes**: automatically records an insulin cartridge change when you change the cartridge in the pump.
     
     * **Log tube changes**: adds a note to the **AAPS** database when you run the "tube filling" program on the pump.
     
@@ -162,7 +162,7 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
 
 ## 更换电池
 
-闭环模式下Insight电池续航为10至14天，最长为 20 天。该数据由使用劲量锂电池的用户提供。
+Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days. 该数据由使用劲量锂电池的用户提供。
 
 Insight泵体内置微型电池，可在更换可拆卸电池时维持时钟等核心功能运行。若更换电池耗时过长导致内置电池耗尽，时钟将重置，插入新电池后需重新输入时间日期。若发生此情况，因时间戳无法正确识别，电池更换前所有AAPS记录将不再参与计算。
 

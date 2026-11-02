@@ -36,8 +36,8 @@ These steps are the same for every build method. Проверете в [беле
 
 След като инсталирате новия apk файл:
 
-- можете да проверите версията на **AAPS** на телефона си, като отворите **меню** (☰) горе вляво и след това **За приложението** (както е на екранната снимка по-долу). Можете да видите текущата версия на **AAPS**;
-- уверете се, че настройките са импортирани; и
-- моля, проверете настройките на **AAPS** в **Настройки** и се уверете, че те са все още правилни.
+- you can check the **AAPS** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). The current **AAPS** version can be viewed;
+- make sure you have imported your settings; and
+- please check your **AAPS** settings under **Settings** and ensure these remain accurate.
 
 ![Прозорец „За приложението“ с инсталираната версия на AAPS](../images/about_dialog_version.png)

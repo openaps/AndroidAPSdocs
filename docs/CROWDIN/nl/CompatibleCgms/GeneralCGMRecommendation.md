@@ -9,7 +9,7 @@ Los van het CGM systeem dat je gebruikt, gelden een aantal hele heldere regels v
 -   Doe geen kalibraties wanneer je glucosewaardes stijgen of dalen.
 -   Kalibreer "voldoende" vaak: officiële apps vragen je één of twee keer per dag om een controle. Bij doe-het-zelf-systemen gebeurt dat misschien niet. Wees dan voorzichtig als je lang doorgaat zonder kalibraties.
 -   Bij sensoren die geen kalibratie nodig hebben of geen kalibratie toestaan: controleer minstens één keer per dag je echte bloedsuiker. AAPS is zo veilig als de metingen van je sensor betrouwbaar zijn.
--   Kalibreer als het kan met een deel van je metingen in een lager bereik (4-5 mmol/l of 72-90 mg/dl) en een deel op een iets hoger niveau (7-9 mmol/l of 126-160 mg/dl). Dit geeft een beter bereik voor de kalibratie van punt en helling.
+-   If at all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
 
 ## Sensor inbrengen (G6)
 
@@ -38,4 +38,4 @@ Je kunt proberen de instellingen voor ruisblokkering in xDrip aan te passen (Set
 
 ![Leeftijd van de sensor op de rij Sensor van het uitgevouwen statuspaneel](../images/main/main_status_row_expanded.png)
 
-De leeftijd van de sensor staat op de rij **Sensor** van het statuspaneel op het hoofdscherm (tik op het pijltje om het uit te vouwen). Een negatieve leeftijd ontstaat als er twee keer een "CGM Sensor Insert" [careportal-invoer](#aaps-screens-careportal) is, of een sensorwissel met een verkeerde datum. Open **Behandelingen geschiedenis** (menu ☰), selecteer het tabblad **Careportal** en verwijder de foute invoer.
+De leeftijd van de sensor staat op de rij **Sensor** van het statuspaneel op het hoofdscherm (tik op het pijltje om het uit te vouwen). A negative age occurs if there is either a double "Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Open **Behandelingen geschiedenis** (menu ☰), selecteer het tabblad **Careportal** en verwijder de foute invoer.

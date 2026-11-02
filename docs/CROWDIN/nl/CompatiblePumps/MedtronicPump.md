@@ -75,13 +75,13 @@ Om AAPS met je Medtronic-pomp te laten werken, stel je de volgende punten in bij
 
 - **Serienummer van de pomp**: Staat op de achterkant van je pomp en begint met SN. Voer alleen de 6 cijfers in, zonder letters (bijv. 123456).
 - **Pomp Type**: Het model pomp dat je gebruikt (bijv. 522). 
-- **Pomp Frequentie**: Er zijn twee opties, afhankelijk van waar je pomp oorspronkelijk is verkocht. Kijk bij de [Veelgestelde vragen](#MedtronicPump-faq) als je niet zeker weet welke optie je moet kiezen): 
+- **Pomp Frequentie**: Er zijn twee opties, afhankelijk van waar je pomp oorspronkelijk is verkocht. Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select: 
     - voor VS & Canada is de gebruikte frequentie 916 MHz
     - voor Wereldwijd is de gebruikte frequentie 868 MHz
 - **Max Basaal op Pomp (E/u)**: Dit moet gelijk zijn aan de instelling op je pomp (zie Configuratie van de pomp hierboven). Ook deze instelling moet je zorgvuldig kiezen, omdat ze bepaalt hoeveel AAPS via je basaalstand kan toedienen. Hiermee stel je in feite de maximale tijdelijke basaalstand in. Als je deze waarde bijvoorbeeld op vier keer je hoogste standaard basaalstand zet, is een tijdelijke basaalstand van 400% mogelijk. De hoogste waarde die de pomp toestaat is 34,9 eenheden per uur.
 - **Max Bolus op Pomp (E)** (per uur): Dit moet gelijk zijn aan de instelling op je pomp (zie Configuratie van de pomp hierboven). Denk goed na over deze instelling, want ze bepaalt hoe groot een bolus van AAPS ooit kan zijn.
 - **Vertraging voordat Bolus wordt gestart (s)**: Het aantal seconden tussen het geven van een bolus en het moment waarop het commando echt naar de pomp gaat. In deze tijd kun je de bolus annuleren als een bolus per ongeluk is verzonden. Het is niet mogelijk om een gestarte bolus via AAPS te annuleren. Een bolus die al gestart is, kun je alleen stoppen door de pomp handmatig te pauzeren (suspend) en daarna weer te hervatten.
-- **Medtronic Codering**: Bepaalt of de Medtronic-codering wordt uitgevoerd. Kies bij voorkeur Hardware-codering (dus uitgevoerd door het Rileylink-compatibele apparaat), omdat er dan minder data wordt verzonden. Software-codering (dus uitgevoerd door AAPS) kan helpen als de verbinding vaak wegvalt. Deze instelling wordt genegeerd als je Rileylink-apparaat firmwareversie 0.x heeft.
+- **Medtronic Encoding**: Determines where the Medtronic encoding is carried out (hardware or software). Kies bij voorkeur Hardware-codering (dus uitgevoerd door het Rileylink-compatibele apparaat), omdat er dan minder data wordt verzonden. Software-codering (dus uitgevoerd door AAPS) kan helpen als de verbinding vaak wegvalt. Deze instelling wordt genegeerd als je Rileylink-apparaat firmwareversie 0.x heeft.
 - **Batterij type (batterij weergave)**: Om de resterende batterijlading goed te bepalen, moet je het type AAA-batterij kiezen dat je gebruikt. Als je iets anders kiest dan de eenvoudige weergave, toont AAPS het berekende resterende batterijpercentage en de spanning (volt). Je kunt kiezen uit:
     
     - Niet geselecteerd (Eenvoudige weergave)

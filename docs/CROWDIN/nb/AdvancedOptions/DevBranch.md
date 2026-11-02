@@ -6,7 +6,7 @@ Dev-grenen er bare for videre utvikling av AAPS. Den bør brukes på en egen tel
 
 Den mest stabile versjonen av AAPS er den i [master-grenen](https://github.com/nightscout/AndroidAPS/tree/master). Det anbefales å holde seg til master-grenen for faktisk looping.
 
-Dev-versjonen av AAPS er bare for utviklere og testere som er komfortable med stacktraces, med å lete gjennom loggfiler og kanskje starte debuggeren for å lage feilrapporter som er nyttige for utviklerne (kort sagt: folk som vet hva de gjør uten hjelp!). Derfor er mange uferdige funksjoner deaktivert. For å aktivere disse funksjonene går du inn i **Engineering Mode** ved å lage en fil med navnet `engineering_mode` i mappen /AAPS/extra . Å aktivere engineering mode kan ødelegge loopen helt.
+Dev-versjonen av AAPS er bare for utviklere og testere som er komfortable med stacktraces, med å lete gjennom loggfiler og kanskje starte debuggeren for å lage feilrapporter som er nyttige for utviklerne (kort sagt: folk som vet hva de gjør uten hjelp!). Derfor er mange uferdige funksjoner deaktivert. For å aktivere disse funksjonene går du inn i **Engineering Mode** ved å lage en fil med navnet `engineering_mode` i mappen /AAPS/extra. Å aktivere engineering mode kan ødelegge loopen helt.
 
 Dev-grenen er likevel et godt sted for å se hvilke funksjoner som testes, hjelpe til med å luke ut feil og gi tilbakemelding om hvordan de nye funksjonene virker i praksis. Ofte tester folk dev-grenen på en gammel telefon og pumpe til de er trygge på at den er stabil – all bruk av den skjer på egen risiko. Når du tester nye funksjoner, husk at du velger å teste en funksjon som fortsatt er under utvikling. Gjør det på egen risiko og med nødvendig aktsomhet for å holde deg trygg.
 

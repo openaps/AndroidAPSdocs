@@ -7,7 +7,7 @@ Wenn Du für **AAPS** kein eigenes Google Mail-Konto einrichten möchtest, kanns
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Mit einem dedizierten Google Drive-Speicherplatz läufst Du nicht in die Gefahr Dein persönliches Google Drive-Limit durch den **Export der Einstellungen** zu überschreiten.
+- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
 - Each version of **AAPS** (and supporting apps like xDrip, BYODA, etc) will be stored in one single place which is independent of your computer hardware. Wenn Dein Smartphone oder PC defekt ist, gestohlen wird oder verloren geht, hast Du weiterhin Zugriff.
 - Durch die Vereinheitlichung des Setups wird die Online-Unterstützung für Nutzende, die eine Verzeichnisstruktur verwenden, vereinfacht.
 - Je nach Setup (siehe unten) hast Du einen Alias für die Kommunikation innerhalb der Community und kannst damit Deine Privatsphäre schützen. 
@@ -45,13 +45,13 @@ Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/
  Im Video werden drei Schritte beschrieben:
 
 In diesem Beispiel: 
-- Dein bestehendes „_Standard_“-Google-Konto ist <donald.muck42@gmail.com>  ![](../images/Building-the-App/building_0002.png)
+- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
 - Dein neues „_AAPS_“-Gmail-Konto wird <donald.muck42.aaps@gmail.com> sein ![](../images/Building-the-App/building_0003.png)
 
 
-### Gehe zu <https://account.google.com> 
+### Go to <https://myaccount.google.com> 
 
- Wenn Du bereits bei Google angemeldet bist, wirst Du direkt auf Deine „Standard“-**Mein Konto**-Seite weitergeleitet. (1) Klicke oben rechts auf der Seite auf Dein Profilbild (in diesem Fall ein sehr einfaches ![](../images/Building-the-App/building_0002.png)) (2) Wähle „_Konto hinzufügen_”.
+ Wenn Du bereits bei Google angemeldet bist, wirst Du direkt auf Deine „Standard“-**Mein Konto**-Seite weitergeleitet. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
 
 ![](../images/Building-the-App/building_0005.png)
 
@@ -87,7 +87,7 @@ Gmail wird den Kontonamen anzeigen. Du wirst gebeten, die Gmail-AGBs zu akzeptie
 
 ### Passe die Anzeige des neuen Profils an
 
-An diesem Punkt solltest Du auf Gmails Mein-Konto-Seite, auf der Dein neues (für **AAPS** gedachte) E-Mail-Konto angezeigt wird, sein. Das Profilbild wird standardmäßig auf den ersten Buchstaben Deines Namens gesetzt. Ändere es auf etwas Nicht-Verwechselbares, um spätere Verwirrung zu vermeiden… in diesem Beispiel ersetzen wir Donald.Muck.AAPS![](../images/Building-the-App/building_0002.png) durch ![](../images/Building-the-App/building_0003.png)
+An diesem Punkt solltest Du auf Gmails Mein-Konto-Seite, auf der Dein neues (für **AAPS** gedachte) E-Mail-Konto angezeigt wird, sein. Das Profilbild wird standardmäßig auf den ersten Buchstaben Deines Namens gesetzt. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
@@ -101,7 +101,7 @@ Dieser Teil kann etwas verwirrend sein, da Du hier zwischen den beiden Konten hi
 2. Klicke mit der rechten Maustaste auf das Browser-Logo in Deiner Taskleiste
 3. Wähle „Neues Fenster“ aus dem Menü und passe es so an, dass es nur die untere Hälfte des Bildschirms belegt.
 
-Öffne in beiden Browser-Fenstern <https://gmail.com>. Stelle sicher, dass Dein persönliches Konto oben und das neue spezielle **AAPS**-Konto unten ist und durch das Profilbild in der rechten oberen Ecke leicht identifiziert werden kann. (falls erforderlich, kannst Du durch das Klicken auf das Profilbild und die Auswahl des richtigen Kontos zwischen Konten wechseln).
+Öffne in beiden Browser-Fenstern <https://gmail.com>. Stelle sicher, dass Dein persönliches Konto oben und das neue spezielle **AAPS**-Konto unten ist und durch das Profilbild in der rechten oberen Ecke leicht identifiziert werden kann. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
 
 ![](../images/Building-the-App/building_0009.png)
 

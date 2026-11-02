@@ -66,14 +66,14 @@
 
 Надеждните източници на данни позволяват подаване на **SMB** по всяко време.
 
-| Сензор           |                                              Приложение за CGM                                               |
-| ---------------- |:------------------------------------------------------------------------------------------------------------:|
-| Dexcom G6        |                                      BYODA, xDrip (**Direct, Native**)                                       |
-| Dexcom G7        |               BYODA, xDrip (**Direct, Native**), </br>Juggluco (**xDrip broadcast** без xDrip)               |
-| Dexcom ONE+      |                  xDrip (**Direct, Native**), </br>Juggluco (**xDrip broadcast** без xDrip)                   |
-| Dexcom ONE/Stelo |                                          xDrip (**Direct, Native**)                                          |
-| Libre 2/2+ (EU)  | xDrip (OOP2 **no calibration**), </br>Juggluco (**xDrip broadcast** без xDrip или **Patched Libre** с xDrip) |
-| Libre 2/2+/3/3+  |                    Juggluco (**xDrip broadcast** без xDrip или **Patched Libre** с xDrip)                    |
-| Syai             |                                               Приложение Syai                                                |
+| Сензор           |                                                     Приложение за CGM                                                     |
+| ---------------- |:-------------------------------------------------------------------------------------------------------------------------:|
+| Dexcom G6        |                                             BYODA, xDrip (**Direct, Native**)                                             |
+| Dexcom G7        |                BYODA, xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip)                 |
+| Dexcom ONE+      |                    xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip)                    |
+| Dexcom ONE/Stelo |                                                xDrip (**Direct, Native**)                                                 |
+| Libre 2/2+ (EU)  | xDrip (OOP2 **no calibration**), <br/>Juggluco (**xDrip broadcast** without xDrip, or **Patched Libre** with xDrip) |
+| Libre 2/2+/3/3+  |                          Juggluco (**xDrip broadcast** без xDrip или **Patched Libre** с xDrip)                           |
+| Syai             |                                                      Приложение Syai                                                      |
 
 **Забележка: Придружаващите приложения на xDrip (xDrip Companion) и режимите на последовател (включително 640G/Eversense) не са надеждни източници на данни.**

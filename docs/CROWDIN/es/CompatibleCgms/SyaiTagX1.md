@@ -7,7 +7,7 @@
 
 -   Iniciar el sensor X1
 
-- Selecciona **Syai/Ottai** en [Configuración, Fuente de glucosa](#Config-Builder-bg-source).
+- Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
 Activa la transmisión (broadcast) en la app Syai:
 

@@ -2,7 +2,7 @@
 
 ## Doe os seus dados para a ciência
 
-Pode ajudar a comunidade ao doar os seus dados para projetos de investigação! Isto ajuda os cientistas a retribuir, a desenvolver novas ideias científicas e a alargar o conhecimento sobre sistemas de loop fechado de código aberto. O AAPS está pronto para sincronizar os seus dados com o [Open Humans](https://www.openhumans.org), uma plataforma que permite enviar, ligar e guardar os seus dados pessoais – como dados genéticos, de atividade e de saúde.
+Pode ajudar a comunidade ao doar os seus dados para projetos de investigação! This helps scientists to pay it forward, develop new scientific ideas and make open source closed loop systems better known. O AAPS está pronto para sincronizar os seus dados com o [Open Humans](https://www.openhumans.org), uma plataforma que permite enviar, ligar e guardar os seus dados pessoais – como dados genéticos, de atividade e de saúde.
 
 Mantém o controlo total sobre o que acontece aos seus dados e sobre os projetos que quer apoiar, ao dar-lhes acesso aos seus dados. Conforme o projeto em que participa, os dados são avaliados e usados de formas e em medidas diferentes.
 
@@ -76,7 +76,7 @@ A captura de ecrã acima é de uma versão anterior do **AAPS**. No **AAPS** 4, 
 
 O projeto 'OPEN' junta um consórcio internacional e intersetorial de pacientes inovadores, médicos, cientistas sociais, informáticos e organizações de defesa de pacientes, para estudar vários aspetos dos sistemas de pâncreas artificial «faça você mesmo» (DIY APS), que são usados por cada vez mais pessoas com diabetes. Para mais detalhes, veja o [site](https://www.open-diabetes.eu/) do projeto.
 
-Em setembro de 2020, o projeto 'OPEN' lançou um [inquérito](https://survey.open-diabetes.eu/) com a opção de doar os dados que enviou para o Open Humans. Um [tutorial](https://open-diabetes.eu/en/open-survey/survey-tutorials/) sobre como doar os seus dados ao projeto 'OPEN' está disponível no site do projeto e no próprio inquérito.
+In September 2020 the 'OPEN' project launched a [survey](https://survey.open-diabetes.eu/) including the option to donate data you uploaded to Open Humans. Um [tutorial](https://open-diabetes.eu/en/open-survey/survey-tutorials/) sobre como doar os seus dados ao projeto 'OPEN' está disponível no site do projeto e no próprio inquérito.
 
 ### [OpenAPS Data Commons](https://www.openhumans.org/activity/openaps-data-commons/)
 

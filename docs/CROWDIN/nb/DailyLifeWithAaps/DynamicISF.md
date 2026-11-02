@@ -71,8 +71,7 @@ Dette gjøres for å hindre at det doseres for mye insulin når **BS** er lavt e
 **Fremtidig ISF** bruker samme formel som beskrevet over, bortsett fra at den kan bruke **laveste predikerte BS** i stedet for **gjeldende BS**. **Laveste predikerte BS**, [slik det beregnes i oref1](#aaps-screens-how-predictions-become-a-dosing-decision), er den laveste verdien BS er predikert å nå i løpet av hele prediksjonsperioden.
 
 * Hvis gjeldende **BS** er over målet  <br/> **og** **BS**-nivået er flatt, innenfor +/- 3 mg/dL:<br/>BS brukes i formelen slik: `average(minimum predicted BG, current BG)`.
-* Hvis forventet **BS** (eventual BG) er over målet og glukosen stiger,<br/>  
-  **eller** forventet **BS** er over gjeldende **BS**:<br/>BS brukes i formelen slik: `current BG`.
+* Hvis forventet **BS** (eventual BG) er over målet og glukosen stiger,<br/> **eller** forventet **BS** er over gjeldende **BS**:<br/>BS brukes i formelen slik: `current BG`.
 * Ellers:<br/>BS brukes i formelen slik: `minimum predicted BG`.
 
 For en forenklet forklaring, se skjermbildet nedenfor, som illustrerer situasjonen over. Oransje prikker bruker **predikert BS**, lilla prikker bruker **gjennomsnitt(predikert BS, gjeldende BS)**, og blå prikker bruker **gjeldende BS**.

@@ -4,7 +4,7 @@
 
 ## Απαιτήσεις
 
-Το **AAPS** χρησιμοποιεί μια λειτουργία του Android Auto που στέλνει μηνύματα από εφαρμογές του κινητού στην οθόνη του Android Auto στο αυτοκίνητο.
+**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
 
 Αυτό σημαίνει ότι:
 
@@ -37,7 +37,7 @@
 
 Επειδή το **AAPS** δεν είναι επίσημη εφαρμογή του Android Auto, οι ειδοποιήσεις πρέπει να ενεργοποιηθούν για «άγνωστες πηγές» στο Android Auto. Αυτό γίνεται με τη λειτουργία προγραμματιστή, που θα σας δείξουμε εδώ.
 
-Πηγαίνετε στο αυτοκίνητό σας και συνδέστε το κινητό σας με το ηχοσύστημα του αυτοκινήτου.
+Go to your car and connect your mobile with the car's audio system.
 
 Τώρα θα δείτε μια οθόνη παρόμοια με αυτήν.
 

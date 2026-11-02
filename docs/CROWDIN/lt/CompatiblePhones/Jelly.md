@@ -14,7 +14,7 @@
 
 **Disadvantages**
 
-* Rekomenduojama tik patyrusiems uždaro ciklo naudotojams (kai kurie parametrai yra neatpažįstami, jūs turite žinoti iš patirties su įprastiniu Android AAPS telefonu, kaip ir kur kas yra. Kai kurie AAPS mygtukai yra sunkiai pasiekiami.)
+* Recommended only for experienced loopers. Some settings are not easy to recognize: you have to know from experience with a big Android AAPS phone how and where things are located. Some AAPS buttons are small and hard to tap: you need a precise touch, not stubby fingers.
 * Gali būti naudojamas tik kaip uždaro ciklo telefonas. Geriau turėti normalų telefoną kišenėje. 
 
 ### Battery life optimization
@@ -43,6 +43,6 @@ Remember to disable Google Play Protect.
 
 ### Remote Connection for Wear apk
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
+For certain smart watches, like the Samsung Galaxy, 'Remote connection' under Advanced features in the Galaxy Wearable app must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
 
 ![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)

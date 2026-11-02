@@ -107,8 +107,8 @@
   - [Обновете секрета `GDRIVE_OAUTH2`](#aaps-ci-update-secret) във вашето хранилище в GitHub с новия токен, след това [стартирайте компилацията отново](#aaps-ci-rerun).
 
 (aaps-ci-disable-software)=
-### Изключете софтуера, който може да пречи на проверката OAUTH
-  - Преди да опитате да получите ключа OAUTH, изключете на телефона всяко VPN приложение или приложение за сигурност (защитна стена, програма срещу зловреден софтуер...).
+### Disable Software That May Interfere With OAuth Verification
+  - Disable any VPN or security app (firewall, antimalware,...) on the phone before trying to get the OAuth key.
 
 (aaps-ci-actions-permission)=
 ### Проверка на настройките за разрешения на GitHub Actions

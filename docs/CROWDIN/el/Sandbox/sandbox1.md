@@ -54,7 +54,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Ετικέτα στη μέση του [πουθενά](#sandbox1-in-the-middle-of-nowhere) Αυτή αντίθετα είναι η ετικέτα προς [](#sandbox1-this-is-another-test) και θα πρέπει να δείχνει το όνομά της
 
-Σύνδεσμοι με άγκυρα:
+Links with anchor:
 - [πόσο θα διαρκέσει;](#preparing-how-long-will-it-take)
 - [Ρυθμίσεις NSClient στις Προτιμήσεις](#Preferences-nsclient).
 - [γραμμές πρόβλεψης στην ΕΠΙΣΚΟΠΗΣΗ του AAPS](#aaps-screens-prediction-lines) σε επικεφαλίδα επιπέδου 4

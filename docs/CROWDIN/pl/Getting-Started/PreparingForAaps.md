@@ -51,9 +51,9 @@ Ogólnie uważa się, że osoby z _nowo_ zdiagnozowaną cukrzycą typu 1 (które
 :class: danger
 Inhibitory SGLT-2, zwane też flozynami, hamują wchłanianie zwrotne glukozy w nerkach. Flozyny obniżają poziom glukozy we krwi w sposób, którego nie da się obliczyć, dlatego NIE WOLNO Ci ich przyjmować, gdy używasz systemu zamkniętej pętli, takiego jak AAPS! Istnieje znaczne ryzyko kwasicy ketonowej i/lub hipoglikemii! Połączenie tego leku z systemem, który obniża dawki bazowe, aby podnieść glikemię, jest szczególnie niebezpieczne. 
 
-W skrócie:
-- **Przykład 1: ryzyko hipoglikemii**
->Podczas obiadu używasz **AAPS**, aby podać bolus na 45 g glukozy. Problem polega na tym, że inhibitory powodują, że organizm usuwa część węglowodanów, a AAPS o tym nie wie. W efekcie w organizmie jest za dużo insuliny w stosunku do wchłoniętych węglowodanów, co powoduje hipoglikemię.
+In a nutshell:
+- **Example 1: risk of Hypo**
+>During lunch, you use **AAPS** to bolus based on consuming 45 g of carbs. Problem polega na tym, że inhibitory powodują, że organizm usuwa część węglowodanów, a AAPS o tym nie wie. W efekcie w organizmie jest za dużo insuliny w stosunku do wchłoniętych węglowodanów, co powoduje hipoglikemię.
 
 - **Przykład 2: ryzyko kwasicy ketonowej**
 >Inhibitory w tle usuwają część węglowodanów, przez co Twoja glikemia spada. **AAPS** automatycznie każe pompie zmniejszyć podawanie insuliny, także bazy. Z czasem Twoja glikemia może utrzymywać się poniżej celu, aż organizm nie będzie miał wystarczającej ilości insuliny bazowej, aby przyswoić węglowodany, co prowadzi do kwasicy ketonowej. Zwykle kwasica ketonowa rozwija się u osób z cukrzycą typu 1, gdy zawiedzie pompa. Wtedy telefon pokazuje alarmy, a problem widać po wysokiej glikemii. Niebezpieczeństwo przy flozynach polega jednak na tym, że AAPS nie pokaże żadnych alarmów, bo pompa działa normalnie, a glikemia może pozostawać w zakresie docelowym.
@@ -80,7 +80,7 @@ Na początku pracy z **AAPS** możesz mieć trudności z tym, aby wszystkie elem
 
 #### Czas budowania aplikacji i przejście do pełnej pętli
 
-Czas potrzebny na zbudowanie aplikacji **AAPS** zależy od Twojej wiedzy i umiejętności technicznych. Niedoświadczonym użytkownikom zbudowanie **AAPS** zajmuje zwykle do pół dnia lub cały dzień (z pomocą społeczności). Przy kolejnych wersjach **AAPS** proces będzie dużo szybszy, bo zdobędziesz doświadczenie.
+The time to build the **AAPS** app depends on your level of expertise and technical ability. Niedoświadczonym użytkownikom zbudowanie **AAPS** zajmuje zwykle do pół dnia lub cały dzień (z pomocą społeczności). Przy kolejnych wersjach **AAPS** proces będzie dużo szybszy, bo zdobędziesz doświadczenie.
 
 Kilka części tej dokumentacji pomaga Ci w procesie budowania:
 

@@ -10,7 +10,7 @@ Når du begynner med **AAPS**, må du opprette en **profil**, forstå hvordan du
 
 - natt- eller skiftarbeidere – en tidsforskyving i **profilen** kan settes opp for skiftarbeidere ved å endre antall timer i **profilen** etter hvor mye senere/tidligere du legger deg eller står opp.
 
-Hvorfor bruke en **profilprosent** i stedet for en midlertidig basaljustering? For å virke bedre bruker en **profilprosent** en forholdsmessig reduksjon eller økning på alt: basal, ISF og IK (insulin/karbohydrat-forholdet, I:C). Dette sikrer at **AAPS** beregner en balansert tilnærming når insulinet ditt doseres. En basalreduksjon alene i **profilen** din i **AAPS** gir liten gevinst hvis algoritmen fortsetter å bruke de samme forholdene for ISF og IK.
+Hvorfor bruke **profilprosent** i stedet for en midlertidig basaljustering? For å virke bedre bruker en **profilprosent** en forholdsmessig reduksjon eller økning på alle tre: basal, ISF og IK. Dette sikrer at **AAPS** beregner en balansert tilnærming når insulinet ditt doseres. En basalreduksjon alene i **profilen** din i **AAPS** gir liten gevinst hvis algoritmen fortsetter å bruke de samme forholdene for ISF og IK.
 
 (ProfileSwitch-change-percentage)=
 
@@ -78,7 +78,7 @@ Velg en profil og trykk på **▶ Aktiver**. Skjermen **Aktiver** lar deg tilpas
 
 ![Skjermen Aktiver — prosent, varighet, tidsforskyving, tid](../images/v4/Profiles/profile_activate.png)
 
-- **Prosent** (30–250 %, starter på 100 % hver gang) — skalerer hele profilen. 100 % bruker den som den er; for eksempel reduserer 70 % basalen og den beregnede insulindosen (både måltidsboluser og korrigeringer) med 30 %. Den endrer ikke glukosemålene dine eller karbohydratabsorpsjonen. Se [Profilprosent](#profile-percentage) for hele effekten.
+- **Prosent** (30–250 %, starter på 100 % hver gang) — skalerer hele profilen. 100 % bruker den som den er; for eksempel reduserer 70 % basalen og den beregnede insulindosen (både måltidsboluser og korrigeringer) med 30 %. Den endrer ikke glukosemålene dine eller karbohydratabsorpsjonen. Se [Profilprosent](#ProfileSwitch-profile-percentage) for hele effekten.
 - **Varighet** (0–10080 minutter, det vil si opptil 7 dager) — hvor lenge byttet varer. **0 = ubegrenset** (til du bytter igjen); en verdi over null går tilbake til forrige profil når tiden er ute.
 - **Midlertidig mål / Aktivitet** — vises bare når du setter en **Varighet** og en **Prosent** under 100 %. Slå den på for også å starte et [midlertidig mål Aktivitet](#TempTargets-activity-temp-target) med samme varighet, slik du ville gjort før trening.
 - **Tidsforskyving** — viser *0t*; trykk på **Endre** for å flytte tidsplanen fram eller tilbake med opptil 23 timer (nyttig ved skiftarbeid eller reise). Se [Tidsforskyving](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
@@ -107,6 +107,8 @@ Hvis pumpen rapporterer en basal som er langt fra **profilen** din, beholder **A
 
 Et profilbytte er ikke begrenset til denne skjermen. Det samme byttet kan også utløses fra en **Wear OS-klokke**, en paret **klient** (se [Hovedenhet ↔ klientstyring](../RemoteFeatures/ClientMasterControl.md)), en **[scene](Scenes.md)** eller en **Automasjon**-regel.
 
+(ProfileSwitch-profile-percentage)=
+
 ## Profilprosent
 
 Det er viktig at du forstår de grunnleggende egenskapene til en **profilprosent**. Når du legger en prosentøkning eller -reduksjon på et **profilbytte**, brukes den samme prosenten til å heve eller senke innstillingene dine slik de er satt i **profilen**.
@@ -125,7 +127,7 @@ Effekten av en **profil**-prosent er oppsummert i tabellen nedenfor:
 
 | Profilbytte  
 Prosent |    Effekt    |     IK  
-g/E      | eksempel  
+g/E      | Eksempel  
 15 g |          ISF  
 mmol/L/E  
 mg/dL/E          | E for å senke  
@@ -153,7 +155,7 @@ mg/dL/E          | E for å senke
 
 En «tidsforskyving» i **profil**-funksjonen flytter innstillingene i **profilen** din rundt døgnklokken («circadian», døgnrytme) med det antallet timer du skriver inn. Dette kan være nyttig for:
 
-- **nattskift- eller skiftarbeidere**: jobb nattskift ved å endre antall timer i **profilen** etter hvor mye senere/tidligere du legger deg eller står opp, 
+- **natt- eller skiftarbeidere**: jobber nattskift ved å endre antall timer i **profilen** etter hvor mye senere/tidligere du legger deg eller står opp; 
 - **brukere som bytter tidssone på reise**, eller
 - **barn med type 1**: som har en fast leggerutine og insulinresistens som det er tatt hensyn til i **profilen**. Hvis barnet av en eller annen grunn ventes å legge seg senere, kan omsorgspersonen bruke en «tidsforskyving» på barnets **profil**, slik at **AAPS** reagerer på insulinresistensen i det tidsrommet brukeren ønsker.
 
@@ -169,7 +171,7 @@ Spørsmålet er alltid hvilken times innstillinger i **profilen** som skal ersta
 
 ![Retninger for tidsforskyving ved profilbytte](../images/ProfileSwitch_PlusMinus2.png)
 
-Denne måten å ta øyeblikksbilder av **profilen** på gir en mye mer nøyaktig beregning av fortiden og mulighet til å følge **profil**-endringer.
+Denne mekanismen med å ta øyeblikksbilder av **profilen** gir en mye mer nøyaktig beregning av fortiden, og gjør det mulig å følge endringer i **profilen**.
 
 (ProfileSwitch-keep-for-later)=
 

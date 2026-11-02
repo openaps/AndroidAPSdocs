@@ -82,7 +82,7 @@ Důrazně doporučujeme provést tento postup s **novým senzorem**. Uživatelé
 
 (minimallooper-started-sensor)=
 
-### Co když už je můj senzor spuštěný? Mohu stále dostávat hodnoty v xDrip? ANO!
+### Co když už je můj senzor spuštěný? Can I still get readings in xDrip? ANO!
 
 Mnoho lidí se ptalo, zda lze tento postup použít i s již aktivním senzorem. Odpověď je jasné **ANO**, můžete spustit i senzor, který už běží.
 
@@ -94,7 +94,7 @@ Mnoho lidí se ptalo, zda lze tento postup použít i s již aktivním senzorem.
 
 ## Jak spustit senzor FSL2 ve vestavěném režimu Bluetooth pomocí LL a xDrip
 
-*POZNÁMKA: Pokud jsou na snímcích obrazovky nastavení, která nejsou výslovně označena RÁMEČKEM a jsou NEZAŠKRTNUTÁ (tj. vypnutá), PROSÍM NECHTE JE VYPNUTÁ. Snímky obrazovky ukazují funkční konfiguraci pro VŠECHNA zobrazená nastavení. Pokud chcete po zprovoznění senzoru zkoušet zapínat nebo vypínat další funkce, můžete, ale na vlastní riziko.*
+*POZNÁMKA: Pokud jsou na snímcích obrazovky nastavení, která nejsou výslovně označena RÁMEČKEM a jsou NEZAŠKRTNUTÁ (tj. vypnutá), PROSÍM NECHTE JE VYPNUTÁ. Snímky obrazovky ukazují funkční konfiguraci pro VŠECHNA zobrazená nastavení. If you want to experiment turning other features on/off after you have a working sensor, you are free to do so at your own risk.*
 
 (minimallooper-step1)=
 
@@ -253,7 +253,7 @@ Na obrazovce **Start New Sensor** stiskněte **Start Sensor**. Zobrazí se dotaz
 
 ### Krok 7: Počkejte 60 sekund a znovu naskenujte senzor přes NFC
 
-Druhý NFC sken je potřeba k tomu, aby se senzor **PŘIDAL** jako zařízení Bluetooth, ze kterého bude xDrip načítat hodnoty. Po dokončení uvidíte oznámení **NEW SENSOR STARTED**.
+A second NFC scan is needed in order to **ADD** the sensor as the Bluetooth device that xDrip will use to retrieve the readings. Po dokončení uvidíte oznámení **NEW SENSOR STARTED**.
 
 ![Sken v xDrip](../images/minimal00per/xdripscan2.png)
 
@@ -288,7 +288,7 @@ Změní nastavení Bluetooth v xDrip na:
 
 ### Krok 9: Zkontrolujte, že je senzor připojen a posílá data
 
-Na obrazovce Overview v xDrip stiskněte nabídku (☰) vlevo nahoře a zvolte **System Status**. Na obrazovce System Status ukazuje pole aktivního zařízení **Bluetooth Device:** název senzoru FSL2 ve formátu **ABB___XXXXXXXXXXX**, kde XXX je sériové číslo senzoru. Pole **Connection Status** ukazuje **Connected** a pole **Sensor Start:** ukazuje čas, kdy byl senzor spuštěn.
+Na obrazovce Overview v xDrip stiskněte nabídku (☰) vlevo nahoře a zvolte **System Status**. Na obrazovce System Status ukazuje pole aktivního zařízení **Bluetooth Device:** název senzoru FSL2 ve formátu **ABB___XXXXXXXXXXX**, kde XXX je sériové číslo senzoru. The **Connection Status** field displays **Connected** and the **Sensor Start:** field displays the time the sensor was started.
 
 ![Sken v xDrip](../images/minimal00per/xdripSSlog.png)
 
@@ -301,8 +301,8 @@ Na obrazovce **BT Device** (přejeďte prstem doleva) můžete zkontrolovat dal�
 - **Phone Service State:** Kdy se telefon naposledy připojil k senzoru přes BT (mělo by to být před méně než 5 minutami)
 - **Bluetooth Device:** Ukazuje aktuální stav připojení (buď **Connected**, nebo **Disconnected**)
 - **Device Mac Address**: Hardwarové ID senzoru
-- **Bluetooth Pairing**: Mělo by zde být **<u>Disabled, tap to enable</u>**. Dejte pozor, abyste na to NEKLEPLI. Pokud na to omylem klepnete, klepejte znovu, dokud se to nevrátí na Disabled.
-- **Slowest wake up**: Tuto položku můžete ignorovat. xDrip na hodnoty nečeká neustále: začne je očekávat po určité době (obvykle 5 minut). Pokud v tu chvíli žádná data nepřijdou, uvidíte „Woke up early“. To znamená, že xDrip čekal, že data budou připravena, ale žádná nejsou. Slowest wake up je nejdelší zpoždění, ke kterému došlo před běžným přijetím dat.
+- **Bluetooth Pairing**: This should be **<u>Disabled, tap to enable</u>**. Dejte pozor, abyste na to NEKLEPLI. Pokud na to omylem klepnete, klepejte znovu, dokud se to nevrátí na Disabled.
+- **Slowest wake up**: Tuto položku můžete ignorovat. xDrip doesn't spend its time waiting for readings: it will start expecting them after a certain time (traditionally 5 minutes). Pokud v tu chvíli žádná data nepřijdou, uvidíte „Woke up early“. To znamená, že xDrip čekal, že data budou připravena, ale žádná nejsou. Slowest wake up je nejdelší zpoždění, ke kterému došlo před běžným přijetím dat.
 - **Next Wake up**: Mělo by zde být 5 minut
 
 ![Sken v xDrip](../images/minimal00per/xdripSStat.png)
@@ -313,7 +313,7 @@ Na obrazovce **BT Device** (přejeďte prstem doleva) můžete zkontrolovat dal�
 
 - **Použití NFC skenů v LL PO dokončení bondingu/párování v xDrip**: NFC skeny můžete provádět, ale bonding/párování s xDrip musí být nejdříve dokončeno. Vždy se podívejte do xDrip, zda se neblíží čas 5minutové hodnoty (např. před 4 minutami). Pokud se blíží 5 min, počkejte, až přijde nová hodnota přes BT, a teprve pak proveďte NFC sken. Pokud trefíte špatnou chvíli, narušíte BT proces v xDrip a hodnoty přes BT nepřijdou. Nový bonding a obnovení přenosu může chvíli trvat a někdy může LL Bluetooth spojení se senzorem „ukrást“. Mezi těmito hodnotami přes BT jsem však neměl žádné problémy s NFC skenem a okamžitým zakázáním aplikace. Nejsem si jistý, zda je nutné LL zakázat pokaždé, ale pro jistotu ji zakazuji.
 
-- - **Co se děje?** Při navázání spojení přes Bluetooth se vytvoří soukromý sdílený klíč, který je nutný pro komunikaci mezi senzorem a aplikací/zařízením, které se připojuje. Je velmi pravděpodobné, že aplikace LL nebo čtečka při připojení vytvoří nový soukromý sdílený klíč pro komunikaci. To znamená, že po bondingu xDrip o novém klíči neví a nebude moci se senzorem komunikovat.
+- **What is going on?** When a Bluetooth connection is made a private shared key is created that is needed to allow communication between the sensor and the calling application/device. Je velmi pravděpodobné, že aplikace LL nebo čtečka při připojení vytvoří nový soukromý sdílený klíč pro komunikaci. To znamená, že po bondingu xDrip o novém klíči neví a nebude moci se senzorem komunikovat.
 
   - Several users have reported that the LL app can be restarted after successfully starting the sensor and receiving readings in xDrip. V oprávněních Androidu pro aplikaci LL stačí vypnout nastavení **Povolit přístup k poloze**. Potom byste měli být schopni používat aplikaci LL a xDrip současně. Doporučuji nenastavovat výchozí aplikaci pro NFC skenování a při každém NFC skenu si vybrat, kterou aplikací chcete senzor načíst. A NEZAPOMEŇTE: při příští výměně senzoru po prvním zahřívacím NFC skenu nového senzoru aplikaci LL vynuceně ukončit. Až bude senzor nakonfigurovaný a v xDrip budou přicházet hodnoty, můžete aplikaci LL znovu spustit.
 
@@ -399,7 +399,7 @@ Na obrazovce **BT Device** (přejeďte prstem doleva) můžete zkontrolovat dal�
 - **FSL** – FreeStyle Libre
   - **Libre 1 (FSL1)** – jen NFC. První verze senzoru
 
-  - **FSL2 (FSL2)** – Bluetooth a NFC. Druhá verze senzoru.
+  - **Libre 2 (FSL2)** - Bluetooth and NFC. Druhá verze senzoru.
 
   - **Libre 3 (FSL3)** – Bluetooth a NFC. Třetí, menší verze senzoru. OOP2 ji nepodporuje (viz Juggluco).
 
@@ -413,7 +413,7 @@ Na obrazovce **BT Device** (přejeďte prstem doleva) můžete zkontrolovat dal�
 
 - **OOP1** – Out of Process Algorithm verze 1, aplikace třetí strany, která přijímá surové hodnoty (doručené do xDrip ze senzoru přes Bluetooth nebo NFC sken). Pak je zpracuje algoritmem (velmi podobným hardwarovému algoritmu v čipu senzoru) a vrátí do xDrip kalibrovanou glykémii (kalibrovanou algoritmem OOP1, ne vlastní kalibrací xDrip). xDrip ji pak buď zobrazí, nebo ji v případě potřeby dále upraví vlastní kalibrací (kalibrací z krve z prstu).
 
-- **OOP2** – Out of Process Algorithm verze 2, aplikace třetí strany, která přijímá šifrovaná data ze senzoru FSL 2 (přes Bluetooth nebo NFC sken) a pak je dešifruje. Po dešifrování se data posílají do xDrip.
+- **OOP2** - Out of Process Algorithm version 2, the 3rd party app that receives encrypted data delivered from the FSL 2 sensor (by Bluetooth or NFC scan) and then decrypts the encrypted data. Po dešifrování se data posílají do xDrip.
 
  
 
@@ -474,4 +474,4 @@ Pokud se stáří senzoru nezvyšuje, může to také znamenat problém se senzo
 2. Nabídka xDrip -> System status -> Forget device
 3. Naskenujte senzor přes NFC v xDrip. Počkejte alespoň jednu minutu
 4. Nabídka xDrip -> Start sensor. Počkejte alespoň jednu minutu
-5. Naskenujte senzor přes NFC v xDrip několikrát, vždy s odstupem alespoň jedné minuty mezi dvěma skeny
+5. Scan the sensor with xDrip NFC, a few times, always waiting at least one minute between two scans.

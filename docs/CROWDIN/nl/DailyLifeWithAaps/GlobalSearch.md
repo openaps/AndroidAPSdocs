@@ -73,7 +73,7 @@ Tik op een resultaat om er direct naartoe te gaan:
 - **Instelling** → opent de instelling **op zijn plek** (springt ernaartoe binnen het scherm).
 - **Documentatie** → opent de pagina in je browser.
 
-Bij het openen van instellingen en beveiligde acties geldt je **[beveiliging](../SettingUpAaps/ConfigBuilder.md)** (pincode/wachtwoord) nog steeds, precies zoals wanneer je er zelf naartoe was gegaan. Nadat je iets met een resultaat hebt gedaan, kun je op **Terug** drukken om terug te gaan naar je zoekresultaten.
+Opening settings and protected actions still respects your **[protection](#Preferences-protection)** (PIN/password), exactly as it would if you had navigated there by hand. Nadat je iets met een resultaat hebt gedaan, kun je op **Terug** drukken om terug te gaan naar je zoekresultaten.
 
 ---
 

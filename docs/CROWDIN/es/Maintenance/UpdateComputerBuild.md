@@ -5,7 +5,7 @@
 **AAPS** no está disponible para descargar, debido a la normativa sobre productos sanitarios. Es legal compilar la app para tu propio uso, ¡pero no debes dar una copia a otras personas! Consulta la página de [preguntas frecuentes](../UsefulLinks/FAQ.md) para más detalles.
 
 ```{note}
-Si quieres compilar **AAPS** en un ordenador nuevo: copia el archivo de copia de seguridad de tu almacén de claves al ordenador nuevo. Luego sigue el [procedimiento de la primera compilación de **AAPS**](../SettingUpAaps/BuildingAaps.md) en lugar de esta guía. La única diferencia es que, en lugar de crear un almacén de claves nuevo, puedes seleccionar el que has copiado en el ordenador nuevo.
+In case you want to build **AAPS** on a new computer: copy your back-up keystore file to the new computer. Luego sigue el [procedimiento de la primera compilación de **AAPS**](../SettingUpAaps/BuildingAaps.md) en lugar de esta guía. La única diferencia es que, en lugar de crear un almacén de claves nuevo, puedes seleccionar el que has copiado en el ordenador nuevo.
 ```
 
 ## Resumen de la actualización a una nueva versión de AAPS con Android Studio
@@ -95,6 +95,6 @@ Si algo sale mal, no te asustes.
 
 ¡Respira hondo!
 
-¡Luego consulta la página aparte [Solución de problemas para Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) por si tu problema ya está documentado!
+Then check if your problem is already documented on the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 Si necesitas más ayuda, contacta con otros usuarios de **AAPS** en [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) o [Discord](https://discord.gg/4fQUWHZ4Mw).

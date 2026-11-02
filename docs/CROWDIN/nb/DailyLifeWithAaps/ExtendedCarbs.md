@@ -26,7 +26,7 @@ eKarbo på hovedskjermen: tallet i parentes i **COB**-feltet viser karbohydraten
 
 I [Boluskalkulatoren](#aaps-screens-bolus-wizard) lar tre knapper under **Karbo**-feltet deg velge hvor raskt måltidet tas opp. Velg én før du bekrefter. Avhengig av typen tar **AAPS** en del av karbohydratene du skrev inn som vanlige karbohydrater, og legger til [forlengede karbohydrater («eKarbo»)](#Extended-Carbs-extended-carbs-ecarbs) senere for langsomme, tunge måltider. Trykk på **(i)**-ikonet ved siden av knappene for å se typiske matvarer for den valgte typen og hva den gjør med karbohydratene dine.
 
-| Type                | Typiske matvarer (slik de står i appen)                                                                                                   | Karbohydrater nå, brukt til bolusen | eKarbo som legges til                                  |
+| Type                | Typiske matvarer (eksempler fra appen)                                                                                                    | Karbohydrater nå, brukt til bolusen | eKarbo som legges til                                  |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | ------------------------------------------------------ |
 | **Brød** (standard) | Brød, bakverk, yoghurt, frukt, poteter, ris, havregryn, grønnsaker                                                                        | 100 %                               | Ingen                                                  |
 | **Kake**            | Dumplings, pasta, asiatisk mat med høyt innhold av karbohydrater og fett, søte bakverk og gjærbakst, frokostblandinger, honning, syltetøy | 90 %                                | 20 %, starter 60 minutter senere, fordelt over 2 timer |
@@ -60,7 +60,7 @@ For en raskere start kan *Boluskalkulator* legge til eKarbo for deg: velg [karbo
 **Viktige merknader:** Du må selvsagt prøve deg frem for å se hvilke konkrete verdier som passer for deg. Du kan også forsiktig justere innstillingen *Maks antall minutter med basal som kan bli SMB* for å gjøre algoritmen mer eller mindre aggressiv. Ved måltider med lite karbohydrater og mye fett/protein kan det være nok å bare bruke eKarbo uten manuelle boluser (se blogginnlegget ovenfor). Når eKarbo opprettes, lages det også en merknad i Helseportal som dokumenterer alt du la inn, slik at det blir lettere å justere og forbedre verdiene senere.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## Forlenget bolus, og hvorfor det ikke virker i en lukket loop
+## Forlengede boluser, og hvorfor de ikke fungerer med lukket loop
 
 Som nevnt ovenfor virker forlengede eller kombinerte boluser («multiwave») egentlig ikke i en lukket loop. [Se nedenfor](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for detaljer
 

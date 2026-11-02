@@ -91,7 +91,7 @@ Zainstaluj apk **AAPS Wear** przez [Wear Installer 2](https://youtu.be/abgN4jQqH
 
 ```{admonition} Wear OS 5
 :class: warning
-Na Wear OS 5 tarczę AAPS trzeba wybrać przez Wear Installer 2 zaraz po instalacji aplikacji Wear: na końcu instalacji instalator proponuje tarczę **AAPS (Custom)**. Jeśli przypadkiem przełączysz na inną tarczę, powtórz instalację. Zmiana ustawień tarczy (Tryb ciemny, Watchdivider itp.) może nie być możliwa.
+Na Wear OS 5 tarczę AAPS trzeba wybrać przez Wear Installer 2 zaraz po instalacji aplikacji Wear: na końcu instalacji instalator proponuje tarczę **AAPS (Custom)**. Jeśli przypadkiem przełączysz na inną tarczę, powtórz instalację. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
 
 Jeśli klasyczna tarcza teraz u Ciebie działa, **wyłącz automatyczne aktualizacje zegarka**: następna aktualizacja oprogramowania prawdopodobnie ją zepsuje. Jeśli mimo to zaktualizujesz do Wear OS 6, przeczytaj sekcję powyżej: **AAPS** zainstaluje wtedy własną tarczę w nowym formacie.
 ```
@@ -114,13 +114,13 @@ Tu znajdziesz podstawowe instrukcje konfiguracji dla [Galaxy Watch 5](https://ww
 
 ## Podstawowa znajomość smartwatcha
 
-Po podstawowej konfiguracji zegarka według powyższego filmu otwórz Sklep Play na telefonie i pobierz te aplikacje: "Galaxy Wearable", „Samsung” oraz „Easy Fire tools” albo "Wear Installer 2".
+After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
 
 Na YouTube jest wiele filmów innych autorów, które pomogą Ci poznać nowy smartwatch, na przykład:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-Aplikacja „Galaxy Wearable” ma też sekcję z instrukcją obsługi. Otwórz Galaxy Wearable na telefonie, wyszukaj zegarek i spróbuj sparować zegarek z telefonem. Zależnie od wersji możesz zostać poproszony o instalację kolejnej aplikacji „galaxy watch 4 plugin” ze Sklepu Play (pobieranie trwa chwilę). Zainstaluj ją na telefonie, a potem jeszcze raz spróbuj sparować zegarek z telefonem w aplikacji Wearable. Przejdź przez kilka menu i zaznacz różne ustawienia.
+Aplikacja „Galaxy Wearable” ma też sekcję z instrukcją obsługi. Otwórz Galaxy Wearable na telefonie, wyszukaj zegarek i spróbuj sparować zegarek z telefonem. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Zainstaluj ją na telefonie, a potem jeszcze raz spróbuj sparować zegarek z telefonem w aplikacji Wearable. Przejdź przez kilka menu i zaznacz różne ustawienia.
 
 ## Zakładanie konta Samsung
 
@@ -260,7 +260,7 @@ Ostatni krok to konfiguracja **AAPS** na telefonie, aby współpracował z **Wea
 
 Aby podawać bolus lub wykonywać inne akcje z zegarka, włącz też **Sterowanie z zegarka** w [Ustawienia > Wear](#preferences-wear).
 
-Aby zmienić tarczę zegarka na inną tarczę **AAPS**, przytrzymaj ekran główny zegarka, a pojawi się „Dostosuj”. Następnie przesuwaj w prawo, aż dojdziesz do wszystkich tarcz **AAPS**.
+To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Następnie przesuwaj w prawo, aż dojdziesz do wszystkich tarcz **AAPS**.
 
 Jeśli plik **AAPS** Wear.apk został poprawnie zainstalowany na smartwatchu, będzie to wyglądać tak:
 
@@ -334,7 +334,7 @@ F - bateria telefonu
 
 G - dawka bazowa (w U/h przy standardowej dawce i w % przy TBR)
 
-H - BGI (blood glucose interaction, wpływ na glikemię) -> jak bardzo BG „powinna” rosnąć lub spadać tylko z powodu działania insuliny.
+H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
 I - węglowodany (aktywne węglowodany | e-carbs w przyszłości)
 

@@ -42,7 +42,7 @@ Plusieurs systèmes commerciaux en boucle fermée hybride sont aussi sortis. Ils
 
 **Figure 1**. Schéma de base d'Android APS (système de pancréas artificiel), AAPS.
 
-Android APS (**AAPS**) est un système en boucle fermée hybride, ou système de pancréas artificiel (APS). Il calcule les doses d'insuline avec des algorithmes [OpenAPS](https://openaps.org/) éprouvés (un ensemble de règles), développés par la communauté DT1 #WeAreNotWaiting.
+Android APS (**AAPS**) is a hybrid closed loop system, or Artificial Pancreas System (APS). Il calcule les doses d'insuline avec des algorithmes [OpenAPS](https://openaps.org/) éprouvés (un ensemble de règles), développés par la communauté DT1 #WeAreNotWaiting.
 
 Comme OpenAPS n'est compatible qu'avec certaines pompes à insuline anciennes, **AAPS** (qui peut être utilisé avec plus de pompes à insuline) a d'abord été développé en 2016 pour un membre d'une famille atteint de diabète de type 1. Depuis ses débuts, **AAPS** a été sans cesse développé et amélioré par une équipe de développeurs informatiques bénévoles et d'autres passionnés qui ont une connexion avec le monde du diabète de type 1. Aujourd'hui, **AAPS** est utilisé par plusieurs milliers de personnes dans le monde. C'est un système très personnalisable et polyvalent. Comme il est open source, il est aussi facilement compatible avec de nombreux autres logiciels et plateformes open source pour le diabète. Les composants fondamentaux du système **AAPS** actuel sont décrits dans **la figure 1** ci-dessus.
 
@@ -54,7 +54,7 @@ Le « cerveau » d'AAPS est une **application** que vous compilez vous-même. 
 
 Vous aurez besoin d'une application supplémentaire sur votre **smartphone Android**, en plus d'**AAPS**. Cette [application supplémentaire](../Getting-Started/CompatiblesCgms.md) reçoit les données de glucose d'un capteur (**2**) par Bluetooth, puis envoie les données en interne, sur le téléphone, à l'**application AAPS**.
 
-L'application **AAPS** utilise le processus de prise de décision (**algorithme**) d'OpenAPS. Les débutants commencent à utiliser l'algorithme de base **oref0** , mais il est possible de passer à l'utilisation de l'algorithme **oref1** plus récent au fur et à mesure que vous progressez avec AAPS. Le choix de l'algorithme (oref0 ou oref1) sera à effectuer en fonction de celui qui correspondra le mieux à votre situation.  Dans les deux cas, l'algorithme prend en compte plusieurs facteurs, et effectue des calculs rapides chaque fois qu'une nouvelle lecture provient du capteur de glycémie. L'algorithme envoie ensuite par Bluetooth à la pompe à insuline (**3**) les instructions sur la quantité d'insuline à injecter. Toutes les informations peuvent être envoyées sur Internet (**4**) par les données mobiles ou par Wi-Fi. Ces données peuvent également être partagées avec des abonnés, si souhaité, et/ou collectées pour analyse. Vous pouvez aussi, si vous le souhaitez, associer une [montre connectée](../Getting-Started/Watches.md) (**5**) au téléphone pour voir vos données d'un coup d'œil et, avec certaines montres, envoyer des commandes simples à **AAPS**.
+L'application **AAPS** utilise le processus de prise de décision (**algorithme**) d'OpenAPS. Beginners start out using the basic **oref0** algorithm, but it is possible to switch to using the newer **oref1** algorithm as you progress with AAPS. Le choix de l'algorithme (oref0 ou oref1) sera à effectuer en fonction de celui qui correspondra le mieux à votre situation.  Dans les deux cas, l'algorithme prend en compte plusieurs facteurs, et effectue des calculs rapides chaque fois qu'une nouvelle lecture provient du capteur de glycémie. L'algorithme envoie ensuite par Bluetooth à la pompe à insuline (**3**) les instructions sur la quantité d'insuline à injecter. Toutes les informations peuvent être envoyées sur Internet (**4**) par les données mobiles ou par Wi-Fi. Ces données peuvent également être partagées avec des abonnés, si souhaité, et/ou collectées pour analyse. Vous pouvez aussi, si vous le souhaitez, associer une [montre connectée](../Getting-Started/Watches.md) (**5**) au téléphone pour voir vos données d'un coup d'œil et, avec certaines montres, envoyer des commandes simples à **AAPS**.
 
 ## Quels sont les avantages du système AAPS ?
 
@@ -98,13 +98,13 @@ Les utilisateurs peuvent facilement ajouter ou supprimer des modules ou des fonc
 
  a) La possibilité de définir une cible de **glycémie** plus basse 30 min avant de manger ; vous pouvez régler la cible jusqu'à 72 mg/dl (4,0 mmol/l).
 
- b) Si votre résistance à l'insuline a pour conséquence des glycémies élevées, **AAPS** vous permettra de mettre en place une règle d'**automatisation** qui se déclenchera quand la glycémie dépasse 144 mg/dL (8 mmol/L), changeant (par exemple) le profil à 120% (entrainant une augmentation de 20% des débits de basale et également un renforcement des autres variables, par rapport à votre **profil** habituel). L'automatisation durera selon la durée que vous aurez programmée. Une automatisation pourrait par exemple être configurée pour être active seulement certains jours de la semaine, ou certaines heures de la journée, ou même en certains lieux.
+ b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in a 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). L'automatisation durera selon la durée que vous aurez programmée. Une automatisation pourrait par exemple être configurée pour être active seulement certains jours de la semaine, ou certaines heures de la journée, ou même en certains lieux.
 
- c) Si votre enfant se retrouve sans prévenir sur un trampoline, **AAPS** permettra de suspendre l'injection d'insuline pour une période déterminée, directement via le téléphone.
+ c) If your child is on a trampoline with no advance notice, **AAPS** allows insulin suspension for a set time period, directly via the phone.
 
- d) Après avoir rebranché une pompe à tubulure qui a été déconnectée pour nager, **AAPS** calculera l'insuline basale que vous avez manquée pendant la déconnexion et vous l'injectera prudemment, en fonction de votre glycémie actuelle. Toute insuline non requise peut être remplacée par une simple « annulation » de l'insuline basale correspondante.
+ d) After reconnecting a tubed pump which has been disconnected for swimming, **AAPS** will calculate the basal insulin you have missed while disconnected and deliver it carefully, according to your current BG. Toute insuline non requise peut être remplacée par une simple « annulation » de l'insuline basale correspondante.
 
- e) **AAPS** vous permet de définir des profils différents pour différentes situations et de passer facilement de l'un à l'autre. Par exemple, les fonctions qui permettent à l'algorithme de faire baisser plus vite une glycémie élevée (comme les super-micro-bolus (« **SMB** ») ou les repas non signalés (« **RNS** »)) peuvent être réglées pour agir uniquement pendant la journée, si vous avez peur des hypos la nuit.
+ e) **AAPS** vous permet de définir des profils différents pour différentes situations et de passer facilement de l'un à l'autre. For example, features which make the algorithm quicker to bring down elevated BG (like supermicro boluses (“**SMB**”) and unannounced meals (“**UAM**”)) can be set to only work during the daytime, if you are worried about night-time hypos.
 
 Il s'agit là de quelques exemples, l'éventail complet des fonctionnalités offrant une grande flexibilité dans la vie quotidienne, y compris l'activité sportive, les maladies, les cycles hormonaux, _etc_. En résumé, c'est à l'utilisateur de décider comment utiliser cette flexibilité, et il n'y a pas une automatisation unique pour tout le monde.
 
@@ -295,9 +295,9 @@ Les médecins (du moins au Royaume-Uni) n'ont pas l'interdiction de prescrire de
 3. Un ‘pancréas bionique’ révolutionne les soins du diabète — quelle est la prochaine étape ? [_Nature_ (2023), _620_, 940-941](https://doi.org/10.1038/d41586-023-02648-9)
 4. Prescrire des dispositifs médicaux non approuvés ? Le cas des systèmes de pancréas artificiels DIY [_Medical law international_, (2021), _21_, 42-68](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
 5. [Déclaration de position de l'Institut de santé de Berlin, 2022](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
-6. Administration d'insuline automatisée open-source : Guide d'utilisation pour le professionnel de santé (position et guide de Diabetes Canada) [_Canadian Journal of Diabetes_, (2023)_47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
+6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (Diabetes Canada position and guide) [_Canadian Journal of Diabetes_ (2023), _47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
 7.  Pays-Bas (EN/NL) - pour les professionnels de santé- [comment aider les personnes avec les systèmes automatisés d'administration d'insuline en open source](https://www.diabetotech.com/blog/how-to-help-people-on-open-source-automated-insulin-delivery-systems)
-8. Première utilisation du système d'admnistration automatisé de l'insuline open-source AndroidAPS dans un scénario de boucle fermée totale : étude pilote randomisée Pancreas4ALL [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
+8. First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALL Randomized Pilot Study [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
 9. Les enfants d'âge préscolaire et scolaire bénéficient du passage d'une pompe associée à un capteur de glycémie à une boucle fermée hybride AndroidAPS : Une analyse rétrospective [_Pediatr. Diabetes_ 2021, _22_, 594-604. 2021](https://onlinelibrary.wiley.com/doi/epdf/10.1111/pedi.13190)
 10. Publications du projet OPEN, un projet financé par l'UE étudiant la "preuve par le patient" avec une technologie de pancréas artificiel novatrice et open-source (https://www.open-diabetes.eu/publications)
 
@@ -379,9 +379,9 @@ ou :
 
 2) Appuyez sur la touche Windows et tapez « Panneau de configuration » dans le champ de recherche, validez avec Entrée. Cela ouvre : "Tous les éléments du panneau de configuration”.
 
-Appuyez sur la lettre C pour aller au « Centre d'ergonomie », validez avec Entrée.
+Press the letter E to get to “Ease of Access Centre”, open with Enter.
 
-Puis ouvrez « Utiliser l'ordinateur sans écran » avec Entrée.
+Puis ouvrez "Utiliser l'ordinateur sans écran" en appuyant sur "Entrée".
 
 En bas de cette page, vous trouverez la case à cocher "Activer Java Access Bridge", cochez-la.
 

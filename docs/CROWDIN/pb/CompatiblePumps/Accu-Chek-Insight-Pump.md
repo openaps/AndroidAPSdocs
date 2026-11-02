@@ -84,11 +84,11 @@ A Roche está saindo do mercado de bombas de insulina para concentrar o seu port
     
     Abra as configurações com **Configurações** no cartão **Accu-Chek Insight** em **Configuração** > **Bomba**, ou com o ícone de engrenagem no canto superior direito da tela da bomba.
     
-    ![Configurações do driver Accu-Chek Insight](../images/v4/Pumps/accu_chek_insight_settings.png)
+    ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
     
-    Nas configurações do Insight no **AAPS**, você pode ativar as seguintes opções:
+    In the Insight settings in **AAPS** you can enable the following options:
     
-    * **Registrar trocas de reservatório**: registra automaticamente uma troca de cartucho de insulina quando você executa o programa "fill cannula" (preencher cânula) na bomba.
+    * **Log reservoir changes**: automatically records an insulin cartridge change when you change the cartridge in the pump.
     
     * **Registrar trocas de tubo**: adiciona uma nota no banco de dados do **AAPS** quando você executa o programa "tube filling" (preencher tubo) na bomba.
     
@@ -162,7 +162,7 @@ A versão do firmware pode ser vista no menu.
 
 ## Troca da bateria
 
-A bateria do Insight dura de 10 a 14 dias em loop, no máx. 20 dias. O usuário que relatou isso usa pilhas de lítio Energizer.
+Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days. O usuário que relatou isso usa pilhas de lítio Energizer.
 
 A bomba Insight tem uma pequena bateria interna que mantém funções essenciais, como o relógio, funcionando enquanto você troca a bateria removível. Se a troca da bateria demorar demais, essa bateria interna pode ficar sem carga, o relógio será zerado e você terá que digitar uma nova data e hora depois de colocar a bateria nova. Se isso acontecer, todas as entradas do AAPS anteriores à troca da bateria não serão mais incluídas nos cálculos, pois a hora correta não pode ser identificada.
 

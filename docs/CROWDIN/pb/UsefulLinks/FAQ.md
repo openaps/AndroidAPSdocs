@@ -175,7 +175,7 @@ Assim, você teria mais carboidratos ativos, mas ao mesmo tempo o loop reagiria 
 
 Com o loop, tente estes passos:
 
-* Faça uma [troca de perfil](#ProfileSwitch-change-percentage) < 100%: toque no nome do perfil na tela principal, toque no botão redondo **▶** e defina **Porcentagem** e **Duração**.
+* Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
 * Defina um [alvo temporário de atividade](#TempTargets-activity-temp-target) acima do seu alvo padrão. Com uma porcentagem abaixo de 100% e uma duração, a mesma tela **Ativar** oferece a chave **Alvo Temporário / Atividade**, que inicia os dois ao mesmo tempo.
 * Se você usa SMB, verifique se ["Ativar SMB com alvo temporário alto"](#Open-APS-features-enable-smb-with-high-temp-targets) e ["Ativar SMB sempre"](#Open-APS-features-enable-smb-always) estão desativados.
 
@@ -194,7 +194,7 @@ Você pode remover a bomba para ficar "livre", mas deve informar ao AAPS para qu
 Beber álcool é arriscado no modo de loop fechado, pois o algoritmo não consegue prever corretamente a glicose influenciada pelo álcool. Você precisa encontrar o seu próprio método para tratar isso usando as seguintes funções do AAPS:
 
 * Desativar o modo de loop fechado e tratar o diabetes manualmente ou
-* definir alvos temporários altos e desativar o UAM para evitar que o loop aumente a IOB por causa de uma refeição não anunciada ou
+* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
 * fazer uma [troca de perfil](#ProfileSwitch-change-percentage) para bem menos de 100% 
 
 O modelo de [cenário](#scenes) *Álcool* é um ponto de partida que você pode adaptar ao seu próprio método.
@@ -363,9 +363,9 @@ Você também pode mudar quando o alerta é disparado: toque no ícone **Configu
 
 #### Meu link/bomba/pod não responde (RL/OL/EmaLink…)
 
-Com alguns telefones, ocorrem desconexões Bluetooth dos Links (RL/OL/EmaL...).
+With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
 
-Alguns também têm Links que não respondem (o AAPS diz que estão conectados, mas os Links não conseguem alcançar ou comandar a bomba.)
+Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
 
 Primeiro tente o botão **Redefinir RileyLink** na tela da bomba (veja a página da sua bomba: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). Se isso não ajudar, a forma mais fácil de fazer todas essas partes funcionarem juntas é:
 
@@ -419,5 +419,5 @@ O estado do Pod está incluído nas configurações exportadas, então um Pod at
 
 Leia estas seções primeiro:
 
-* [Exportar e importar configurações](#omnipod-dash-export-import) na página do Omnipod DASH, e [Bombas sem tubo](#ExportImportSettings-tubeless-pumps): no novo telefone, marque **Substituir também as configurações da bomba** e use um arquivo exportado durante o Pod que você está usando agora,
+* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
 * [Descartar um pod](#omnipod-dash-discard-pod), para remover depois o Pod do telefone antigo. Mantenha o telefone antigo em modo avião até o Pod ser descartado, para que os dois telefones nunca se comuniquem com o Pod ao mesmo tempo.

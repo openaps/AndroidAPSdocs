@@ -26,7 +26,7 @@ The eCarbs on the main screen: the number in brackets in the **COB** field shows
 
 In the [Bolus wizard](#aaps-screens-bolus-wizard), three buttons below the **Carbs** field let you choose how fast your meal is absorbed. Pick one before you confirm. Depending on the type, **AAPS** takes a part of the carbs you typed as normal carbs, and adds [extended carbs ("eCarbs")](#Extended-Carbs-extended-carbs-ecarbs) later for slow, rich meals. Press the **(i)** icon next to the buttons to see the typical foods for the selected type and what it does to your carbs.
 
-| Type | Typical foods (as listed in the app) | Carbs now, used for the bolus | eCarbs added |
+| Type | Typical foods (examples from the app) | Carbs now, used for the bolus | eCarbs added |
 |---|---|---|---|
 | **Bread** (default) | Bread, savory pastries, yogurt, fruit, potatoes, rice, oatmeal, vegetables | 100 % | None |
 | **Cake** | Dumplings, pasta, Asian dishes rich in carbs and fats, sweet and yeast pastries, cereals, honey, jam | 90 % | 20 %, starting 60 minutes later, spread over 2 hours |
@@ -61,7 +61,7 @@ For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carb
 With low carb, high fat/protein meals it may be enough to only use eCarbs without manual boluses (see the blog post above). When eCarbs are generated, a Careportal note is also created to document all inputs, to make it easier to iterate and improve inputs.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## Extended bolus and why they won't work in closed-loop environment?
+## Extended boluses and why they don't work in a closed-loop environment
 
 As mentioned above extended or multiwave boluses do not really work in a closed loop environment. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 

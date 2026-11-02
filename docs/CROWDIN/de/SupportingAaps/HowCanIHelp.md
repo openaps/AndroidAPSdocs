@@ -2,7 +2,7 @@
 
 ## AAPS lebt ausschließlich von ehrenamtlichem Einsatz und hat keine bezahlten Mitarbeiter.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to develop and improve a solution to a very common want. </br>Die Entwickler arbeiten kostenlos in ihrer Freizeit. Aber es wäre etwas unfair von ihnen zu erwarten, zusätzliche Ausgaben auf sich zu nehmen, um ein solch fantastisches Projekt kostenfrei für alle als Open Source zur Verfügung zu stellen.
+Eltern, Betreuer, geliebte Personen und Menschen mit Diabetes arbeiten zusammen, um die Entwicklung einer Lösung für ein sehr verbreitetes Problem voranzutreiben. </br>Die Entwickler arbeiten kostenlos in ihrer Freizeit. Aber es wäre etwas unfair von ihnen zu erwarten, zusätzliche Ausgaben auf sich zu nehmen, um ein solch fantastisches Projekt kostenfrei für alle als Open Source zur Verfügung zu stellen.
 
 *Um ein neues Gerät vollständig zu testen, benötigen die Entwickler ein Ersatzgerät und eine Ersatzpumpe, denn diese Tests können nicht an Menschen durchgeführt werden, bevor AndroidAPS stabil läuft. Neuere Pumpenmodelle und CGM-Geräte müssen getestet werden, sobald sie verfügbar sind. Ein Teil des gespendeten Geldes wird auch für den weltweiten Versand dieser Testgeräte an die Entwickler benötigt. Manchmal ist es auch schön, zu den Kosten der Entwickler beizutragen, ihre abgedunkelten Räume zu verlassen und einander auf Konferenzen und Veranstaltungen zu treffen, damit sich ihre kreativen und analytischen Köpfe gegenseitig abschwingen können.*
 
@@ -23,7 +23,7 @@ Wenn Du zum ersten Mal übersetzen solltest, beginne mit der Übersetzung der Te
 
 Als Übersetzer für die Dokumentation kannst Du parallel zur App-Übersetzung oder auch später anfangen.
 
-Den aktuellen Fortschritt bei der Übersetzung der App und der Dokumentation kannst Du[hier](#StateOfTranslations) einsehen.
+You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
 
 * Falls du die **die App** in andere Sprachen übersetzen willst (danke), nutze bitte [crowdin](https://crowdin.com/project/androidaps).
 * Falls du die **die Docs** in andere Sprachen übersetzen willst (danke), nutze bitte [crowdin](https://crowdin.com/project/androidapsdocs). 

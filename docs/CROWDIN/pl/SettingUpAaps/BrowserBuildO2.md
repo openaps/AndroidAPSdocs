@@ -3,7 +3,7 @@
 # Opcja 2 – Prześlij swój istniejący magazyn kluczy
 
 ```{note}
-To jest część [Kroku 2 – Utwórz magazyn kluczy do podpisu](BrowserBuildKeystore.md) [budowania w przeglądarce](BrowserBuild.md). Upewnij się, że przeczytałeś [wybór między Opcją 1 a Opcją 2](#aaps-ci-preparation) i pobrałeś plik przygotowania.
+To jest część [Kroku 2 – Utwórz magazyn kluczy do podpisu](BrowserBuildKeystore.md) [budowania w przeglądarce](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
 ```
 
 Opcja 2 używa ponownie pliku JKS, który już utworzyłeś przy wcześniejszym budowaniu AAPS na komputerze w Android Studio. Jest odpowiednia dla użytkowników, którzy mają już plik JKS i znają jego hasło oraz alias.

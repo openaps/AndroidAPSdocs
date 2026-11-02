@@ -40,7 +40,7 @@ O Dexcom BYODA é agora uma versão muito antiga do app e não pode ser atualiza
 -   Instale o apk baixado
 -   Digite o código do sensor e o número de série do transmissor no app modificado.
 -   Nas configurações do telefone, vá em apps > Dexcom G6 > permissões > permissões adicionais e toque em 'Access Dexcom app'.
--   Depois de pouco tempo, o BYODA deve captar o sinal do transmissor.
+-   After a short time BYODA should pick up the transmitter signal.
 
 ### Configurações do AAPS
 

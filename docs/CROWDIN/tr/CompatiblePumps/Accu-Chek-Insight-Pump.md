@@ -88,7 +88,7 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
     
     In the Insight settings in **AAPS** you can enable the following options:
     
-    * **Log reservoir changes**: automatically records an insulin cartridge change when you run the "fill cannula" program on the pump.
+    * **Log reservoir changes**: automatically records an insulin cartridge change when you change the cartridge in the pump.
     
     * **Log tube changes**: adds a note to the **AAPS** database when you run the "tube filling" program on the pump.
     
@@ -162,7 +162,7 @@ Donanım yazılımı sürümünü menüde bulabilirsiniz.
 
 ## Pil değiştirme
 
-Döngü sırasında Insight için pil ömrü 10 ila 14 gün maks. 20 gündür. Energizer lityum pil kullanan kullanıcılar bunu bildirmişlerdir.
+Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days. Energizer lityum pil kullanan kullanıcılar bunu bildirmişlerdir.
 
 Insight pompası, çıkarılabilir pili değiştirirken saat gibi temel işlevleri çalışır durumda tutmak için küçük bir dahili pile sahiptir. Pilin değiştirilmesi çok uzun sürerse, bu dahili pilin gücü tükenebilir. Saat sıfırlanırsa yeni bir pil taktıktan sonra yeni bir saat ve tarih girmeniz istenecektir. If this happens, all entries in AAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
 

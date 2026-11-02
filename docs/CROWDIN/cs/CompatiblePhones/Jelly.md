@@ -14,7 +14,7 @@
 
 **Nevýhody**
 
-* Doporučuje se pouze pro zkušené uživatele smyčky (některá nastavení se nezobrazí, a tak musíte mít zkušenosti s AAPS na velkém mobilu, abyste věděli, kde se nacházejí. Na některá tlačítka je skoro nemožné se trefit, a s tlustými prsty už vůbec ne.)
+* Recommended only for experienced loopers. Some settings are not easy to recognize: you have to know from experience with a big Android AAPS phone how and where things are located. Some AAPS buttons are small and hard to tap: you need a precise touch, not stubby fingers.
 * Je možné ho využít pouze jako telefon pro smyčku. Pro běžné telefonování je lepší mít v kapse normální telefon. 
 
 ### Optimalizace výdrže baterie
@@ -43,6 +43,6 @@ Nezapomeňte vypnout Google Play Protect.
 
 ### Vzdálené připojení pro Wear apk
 
-U některých chytrých hodinek, například Samsung Galaxy, musí být v Pokročilých funkcích Samsung Galaxy **zapnuté** „Vzdálené připojení“ („Remote Connection“), abyste mohli Jelly, **Wear.apk** a **AAPS** používat vzdáleně přes Wi-Fi.
+For certain smart watches, like the Samsung Galaxy, 'Remote connection' under Advanced features in the Galaxy Wearable app must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
 
 ![Galaxy Wearable, Pokročilé funkce, Vzdálené připojení zapnuté](../images/wearos/galaxy_wearable_remote_connection.png)

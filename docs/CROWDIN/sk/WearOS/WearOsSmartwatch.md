@@ -91,7 +91,7 @@ Nainštalujte apk **AAPS Wear** pomocou [Wear Installer 2](https://youtu.be/abgN
 
 ```{admonition} Wear OS 5
 :class: warning
-Na Wear OS 5 sa ciferník AAPS musí vybrať pomocou Wear Installer 2 hneď po inštalácii aplikácie Wear: inštalátor na konci inštalácie ponúkne ciferník **AAPS (vlastný)**. Ak omylom prepnete na iný ciferník, zopakujte inštaláciu. Zmena nastavení ciferníka (Tmavý, oddeľovač atď.) nemusí byť možná.
+Na Wear OS 5 sa ciferník AAPS musí vybrať pomocou Wear Installer 2 hneď po inštalácii aplikácie Wear: inštalátor na konci inštalácie ponúkne ciferník **AAPS (vlastný)**. Ak omylom prepnete na iný ciferník, zopakujte inštaláciu. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
 
 Ak vám klasický ciferník momentálne funguje, **vypnite automatické aktualizácie hodiniek**: najbližšia aktualizácia firmvéru ho pravdepodobne pokazí. Ak napriek tomu aktualizujete na Wear OS 6, prečítajte si časť vyššie: **AAPS** potom nainštaluje vlastný ciferník v novom formáte.
 ```
@@ -114,13 +114,13 @@ Tu sú návody na základné nastavenie hodiniek [Galaxy Watch 5](https://www.yo
 
 ## Základné zoznámenie s inteligentnými hodinkami
 
-Po základnom nastavení hodiniek podľa videa vyššie otvorte v telefóne Obchod Play a stiahnite si tieto aplikácie: „Galaxy Wearable“, „Samsung“ a buď „Easy Fire tools“, alebo „Wear Installer 2“.
+After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
 
 Na YouTube je veľa videí od tretích strán, ktoré vám pomôžu zoznámiť sa s novými inteligentnými hodinkami, napríklad:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-Aplikácia „Galaxy Wearable“ obsahuje aj časť s návodom na použitie. V telefóne otvorte Galaxy Wearable, vyhľadajte hodinky a skúste ich spárovať s telefónom. Podľa vašej verzie vás to môže vyzvať, aby ste si z Obchodu Play nainštalovali ďalšiu aplikáciu „galaxy watch 4 plugin“ (sťahovanie chvíľu trvá). Nainštalujte ju do telefónu a potom v aplikácii Wearable skúste hodinky a telefón spárovať znova. Prejdite sériou ponúk a zaškrtnite rôzne nastavenia.
+Aplikácia „Galaxy Wearable“ obsahuje aj časť s návodom na použitie. V telefóne otvorte Galaxy Wearable, vyhľadajte hodinky a skúste ich spárovať s telefónom. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Nainštalujte ju do telefónu a potom v aplikácii Wearable skúste hodinky a telefón spárovať znova. Prejdite sériou ponúk a zaškrtnite rôzne nastavenia.
 
 ## Nastavenie účtu Samsung
 
@@ -260,7 +260,7 @@ Posledný krok je nastaviť **AAPS** v telefóne tak, aby komunikoval so súboro
 
 Ak chcete z hodiniek podávať bolus alebo vykonávať iné akcie, zapnite aj **Ovládanie cez Wear** v [Nastavenia > Wear](#preferences-wear).
 
-Ak chcete prejsť na iný ciferník **AAPS**, stlačte a podržte domovskú obrazovku hodiniek a zobrazí sa „prispôsobiť“. Potom potiahnite doprava, kým sa nedostanete ku všetkým ciferníkom **AAPS**.
+To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Potom potiahnite doprava, kým sa nedostanete ku všetkým ciferníkom **AAPS**.
 
 Ak sa súbor **AAPS** Wear.apk podarilo do inteligentných hodiniek úspešne nainštalovať, bude to vyzerať takto:
 
@@ -334,7 +334,7 @@ F – batéria telefónu
 
 G – bazálna dávka (v U/h pri štandardnej dávke a v % počas dočasného bazálu)
 
-H – BGI (blood glucose interaction, vplyv inzulínu na glykémiu) -> o koľko by glykémia „mala“ stúpať alebo klesať iba na základe aktivity inzulínu.
+H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
 I – sacharidy (aktívne sacharidy | eSacharidy v budúcnosti)
 

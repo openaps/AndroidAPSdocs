@@ -3,7 +3,7 @@
 # Možnosť 2 – Nahrajte existujúce úložisko kľúčov
 
 ```{note}
-Táto stránka je súčasťou časti [Krok 2 – Vytvorte si podpisové úložisko kľúčov](BrowserBuildKeystore.md) návodu [Zostavenie v prehliadači](BrowserBuild.md). Uistite sa, že ste si prečítali [rozhodnutie medzi možnosťou 1 a možnosťou 2](#aaps-ci-preparation) a stiahli prípravný súbor.
+Táto stránka je súčasťou časti [Krok 2 – Vytvorte si podpisové úložisko kľúčov](BrowserBuildKeystore.md) návodu [Zostavenie v prehliadači](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
 ```
 
 Možnosť 2 znova použije súbor JKS, ktorý ste už vytvorili pri predchádzajúcom zostavení AAPS v počítači v Android Studiu. Je vhodná pre používateľov, ktorí už majú súbor JKS a poznajú jeho heslo a alias.

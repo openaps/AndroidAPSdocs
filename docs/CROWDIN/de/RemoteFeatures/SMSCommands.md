@@ -201,18 +201,18 @@ Die Spalte *Auth* in den folgenden Tabellen zeigt, ob eine solch starke Authenti
 
 ### CGM-Daten
 
-| Befehl     | Auth | Funktion & *Antwort*                                                                                                                                                                                              |
-| ---------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BG         | Nein | Antwortet mit: Letzter Glukosewert, Delta, IOB (Bolus und Basal), COB<br/>*BZ: 5.6, Delta: -0.2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U), COB: 0g*                                                      |
-| CAL 5.6/90 | Ja   | Kalibriert das CGM mit dem Wert von 5.6/90<br/>(nutze den für die Maßeinheiten richtigen Wert)<br/>Funktioniert nur, wenn sie korrekt in **AAPS**eingerichtet sind.<br/>*Kalibrierung gesendet* |
+| Befehl     | Auth | Funktion & *Antwort*                                                                                                                                                                                                              |
+| ---------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BG         | Nein | Antwortet mit: Letzter Glukosewert, Delta, IOB (Bolus und Basal), COB<br/>*BZ: 5.6, Delta: -0.2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U), COB: 0g*                                                                      |
+| CAL 5.6/90 | Ja   | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent. Receiving must be enabled in xDrip+.* |
 
 ### Pumpe
 
-| Befehl               | Auth | Funktion & *Antwort*                                                                                |
-| -------------------- | ---- | --------------------------------------------------------------------------------------------------- |
-| PUMPE                | Nein | LastConn: 1 minAgo<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
-| PUMP DISCONNECT *30* | Ja   | Um die Pumpe für *30* Minuten zu trennen                                                            |
-| PUMP CONNECT         | Ja   | Verbindung zur Pumpe wiederhergestellt                                                              |
+| Befehl               | Auth | Funktion & *Antwort*                                                                                 |
+| -------------------- | ---- | ---------------------------------------------------------------------------------------------------- |
+| PUMPE                | Nein | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP DISCONNECT *30* | Ja   | Um die Pumpe für *30* Minuten zu trennen                                                             |
+| PUMP CONNECT         | Ja   | Verbindung zur Pumpe wiederhergestellt                                                               |
 
 ### Basal
 
@@ -229,14 +229,14 @@ Some pumps take a temp basal only in percent, others only in U/h. If you use the
 
 ### Loop
 
-| Befehl            | Auth | Funktion & *Antwort*                                                                                                                                                                                                                                                              |
-| ----------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LOOP STATUS       | Nein | Die Antwort hängt vom aktuellen Status ab:<br/> - *Loop ist deaktiviert*, wenn der Loop deaktiviert ist oder LGS<br/> - *Loop ist aktiviert*, wenn der Loop geschlossen oder geöffnet ist<br/> - *Suspended (10 Min)*, wenn der Loop getrennt oder pausiert ist |
-| LOOP STOP/DISABLE | Ja   | Die Pumpe schaltet auf die vorprogrammierten Basalrate zurück.<br/>*Loop wurde deaktiviert*                                                                                                                                                                                 |
-| LOOP SUSPEND 20   | Ja   | *Das Loopen wird für 20 Minuten unterbrochen*                                                                                                                                                                                                                                     |
-| LOOP RESUME       | Ja   | *Loop wurde fortgesetzt*                                                                                                                                                                                                                                                          |
-| LOOP CLOSED       | Ja   | *Current loop mode: Closed Loop*                                                                                                                                                                                                                                                  |
-| LOOP LGS          | Ja   | *Current loop mode: Low Glucose Suspend*                                                                                                                                                                                                                                          |
+| Befehl            | Auth | Funktion & *Antwort*                                                                                                                                                                                                                                                               |
+| ----------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LOOP STATUS       | Nein | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled<br/> - *Loop is enabled* if the loop is closed, open or LGS<br/> - *Pump disconnected* if the pump is disconnected<br/> - *Suspended (10 m)* if the loop is suspended |
+| LOOP STOP/DISABLE | Ja   | Die Pumpe schaltet auf die vorprogrammierten Basalrate zurück.<br/>*Loop wurde deaktiviert*                                                                                                                                                                                  |
+| LOOP SUSPEND 20   | Ja   | *Loop suspended*                                                                                                                                                                                                                                                                   |
+| LOOP RESUME       | Ja   | *Loop wurde fortgesetzt*                                                                                                                                                                                                                                                           |
+| LOOP CLOSED       | Ja   | *Current running mode: Closed Loop*                                                                                                                                                                                                                                                |
+| LOOP LGS          | Ja   | *Current running mode: Low Glucose Suspend*                                                                                                                                                                                                                                        |
 
 ### Bolus
 
@@ -348,6 +348,6 @@ Wenn die andere App auf mehreren Smartphones installiert ist, musst Du den Uploa
 (sms-commands-too-many-messages)=
 ### Ich bekomme von SMS-Befehlen zu viele SMS-Nachrichten. Kann ich die Häufigkeit reduzieren oder stoppen?
 
-Die Nutzung der SMS-Befehle kann viele automatisierte Nachrichten vom **AAPS**-Smartphone auf das Smartphone der Eltern/Betreuenden auslösen. Du wirst auch Nachrichten für aktive **AAPS**-Automatisierungen (z. B. “Basal-Profil in der Pumpe aktualisiert”) erhalten. Eine SMS-Flat für den Mobilfunktvertrag des **AAPS**-Smartphones und des Eltern-/Betreuenden-Smartphones wird sehr empfohlen, wenn viele SMS verschickt werden. Es kann auch hilfreich sein, SMS-Benachrichtigungen, Alarme und Vibrationen auf allen Smartphones zu deaktivieren. SMS-Befehle können nur mit den entsprechenden bestätigenden SMS genutzt werden. Falls Du direkt mit Deinem Kind (wenn es alt genug ist) kommunizieren möchtest, solltest Du etwas anderes als SMS dazu nutzen. **AAPS**-Elterrn/Betreuende nutzen daher häufig andere Kommunikations-Apps wie WhatsApp, Lime, Telegram und den Facebook-Messenger.
+Die Nutzung der SMS-Befehle kann viele automatisierte Nachrichten vom **AAPS**-Smartphone auf das Smartphone der Eltern/Betreuenden auslösen. Du wirst auch Nachrichten für aktive **AAPS**-Automatisierungen (z. B. “Basal-Profil in der Pumpe aktualisiert”) erhalten. Eine SMS-Flat für den Mobilfunktvertrag des **AAPS**-Smartphones und des Eltern-/Betreuenden-Smartphones wird sehr empfohlen, wenn viele SMS verschickt werden. Es kann auch hilfreich sein, SMS-Benachrichtigungen, Alarme und Vibrationen auf allen Smartphones zu deaktivieren. SMS-Befehle können nur mit den entsprechenden bestätigenden SMS genutzt werden. Falls Du direkt mit Deinem Kind (wenn es alt genug ist) kommunizieren möchtest, solltest Du etwas anderes als SMS dazu nutzen. Common alternative communication apps used by **AAPS** caregivers include WhatsApp, LINE, Telegram, and Facebook Messenger.
 
-It is possible to disable the "Profile changed" SMS, when the Profile change originated from Nightscout. Um das zu erreichen, erstelle eine Datei mit **genau** dem Namen `do_not_send_sms_on_profile_change` im Verzeichnis `extra` Deines AAPS-Ordners.
+It is possible to disable the "Basal profile in pump updated" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly** `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.

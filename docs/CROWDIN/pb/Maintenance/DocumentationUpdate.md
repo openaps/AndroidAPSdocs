@@ -48,7 +48,7 @@
 
 - DiaKEM: novas instalações não funcionam depois da atualização dos servidores @psonnera
 - Removido o app modificado do Libre 2 (obsoleto): não funciona com os sensores novos @psonnera
-- Página do Omnipod Dash reformulada @XiTatiON
+- Reworked Omnipod DASH page @XiTatiON
 
 ## Agosto de 2025
 
@@ -97,7 +97,7 @@ A documentação do AAPS 3.1 está disponível [aqui](https://androidaps.readthe
 - [Sinal de aviso de qualidade da glicose](#aaps-screens-bg-warning-sign) @tanja
 - [Atualização da bomba Medtronic](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
 - [Verificações necessárias depois de atualizar para o AAPS 3.0](Update3_0.md) @tanja
-- [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
+- [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
 - Atualização da documentação para o AAPS 3.0 (parcial) @xJoe
 - [Wear OS para o AAPS 3.0](../WearOS/WearOsSmartwatch.md) @peterleimbach
 
@@ -112,7 +112,7 @@ A documentação do AAPS 3.1 está disponível [aqui](https://androidaps.readthe
 
 ## Novembro de 2021
 
-- Boas práticas para calibrar um sensor Libre 2
+- Best practices for calibrating a Libre 2 sensor
 - [ISF](../UsefulLinks/FAQ.md) - nova explicação do impacto
 - Atualização da [resolução de problemas do Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - Removido o app modificado do [Dexcom](../CompatibleCgms/DexcomG6.md), porque está obsoleto
@@ -212,7 +212,7 @@ A documentação do AAPS 3.1 está disponível [aqui](https://androidaps.readthe
 
 ## Dezembro de 2019
 
-- [Android Auto](../RemoteFeatures/AndroidAuto.md) - configuração com capturas de tela
+- [Android Auto](../RemoteFeatures/AndroidAuto.md) - setup with screenshots
 - [Accu-Chek Insight e Autotune](#Accu-Chek-Insight-Pump-settings-in-aaps) - solução alternativa para o uso
 - [Glimp](#Config-Builder-bg-source) - versão 4.15.57 e mais novas são suportadas
 - [Mostradores](../WearOS/WearOsSmartwatch.md) - grande atualização, com muito mais detalhes
@@ -238,7 +238,7 @@ A documentação do AAPS 3.1 está disponível [aqui](https://androidaps.readthe
 ## Outubro de 2019
 
 - [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
-- [AccuChek Insight - opções de log](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- [Accu-Chek Insight - log options](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [Cálculo de COB em uma página separada](../DailyLifeWithAaps/CobCalculation.md)
 - [COB - detecção de valor de COB errado](#CobCalculation-detection-of-wrong-cob-values)
 - [Resolução de problemas específica do Dexcom G6](#DexcomG6-troubleshooting-g6)

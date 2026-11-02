@@ -88,12 +88,12 @@ Powyższe zależy od elementów Twojego systemu **AAPS** i od Twojego stylu życ
 
 ### Indeks glikemiczny i wpływ na glukozę we krwi
 
-Wyzwanie dla trybu **UAM** rośnie wraz z rosnącym „wpływem na glukozę we krwi” („EBG”, Effect on Blood Glucose)
+The challenge for the **UAM** mode rises with rising 'Effect on Blood Glucose' ('EBG')
 
 - Zacznij od posiłków o umiarkowanym/niskim EBG i dostrój ustawienia swojego **profilu**. Dopiero potem „testuj” posiłki o wysokim **EBG**.
 - Przy posiłkach o bardzo wysokim **EBG** rozważ bolus początkowy < 50%.
 
-1) **Brak EBG**: np. świeże mięso, ryby, jajka, boczek, oleje, ser. 2) **Niskie EBG**: np. świeże warzywa i jagody, grzyby, orzechy, mleko, jogurt, twarożek. 3) **Umiarkowane EBG**: np. pełnoziarnisty chleb/makaron, ziemniaki, dziki ryż, owies, suszone owoce. 4) **Wysokie EBG**: np. pieczywo pszenne, bagietka, tosty, gofry, ciastka, puree ziemniaczane, makaron, ryż. 5) **Bardzo wysokie EBG**: np. cukier, słodkie napoje, soki owocowe, płatki kukurydziane, cukierki, słodycze, chipsy, słone paluszki.
+1) **Brak EBG**: np. świeże mięso, ryby, jajka, boczek, oleje, ser. 2) **Niskie EBG**: np. świeże warzywa i jagody, grzyby, orzechy, mleko, jogurt, twarożek. 3) **Umiarkowane EBG**: np. pełnoziarnisty chleb/makaron, ziemniaki, dziki ryż, owies, suszone owoce. 4) **High EBG**: e.g. wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **Bardzo wysokie EBG**: np. cukier, słodkie napoje, soki owocowe, płatki kukurydziane, cukierki, słodycze, chipsy, słone paluszki.
 
 ![Indeks glikemiczny i wpływ na glukozę we krwi](../images/fullClosedLoop01.png)
 
@@ -108,7 +108,7 @@ Przy pompie lub hybrydowej zamkniętej pętli zaleca się, aby przed wysiłkiem 
 
 W **FCL** algorytm jest dostrojony tak, aby wykrywać **UAM** i automatycznie podawać insulinę przeciw wzrostom **BG**.  Wysoki **cel tymczasowy** i niższy **procent profilu** (działający już około początku posiłku) trzeba ustawić z dużym wyprzedzeniem przed każdą aktywnością.
 
-Nietypowy lub nieregularny poziom aktywności fizycznej jest trudny dla **FCL**. Wysiłek fizyczny wymaga planowania (zwłaszcza jeśli chcesz zmniejszyć potrzebę jedzenia ratunkowych węglowodanów/przekąsek przy niskiej glikemii w czasie sportu). Po aktywnym dniu zaleca się ustawienie na noc niższego **procentu profilu**, gdy kolacja jest już w pełni strawiona: ustaw w **automatyzacjach** podwyższony (>100 mg/dl) cel **BG** i wybierz w **Ustawieniach** **AAPS** „bez **SMB** przy podwyższonym celu”.
+Nietypowy lub nieregularny poziom aktywności fizycznej jest trudny dla **FCL**. Wysiłek fizyczny wymaga planowania (zwłaszcza jeśli chcesz zmniejszyć potrzebę jedzenia ratunkowych węglowodanów/przekąsek przy niskiej glikemii w czasie sportu). After an active day it is recommended that a lower  **Percentage Profile** is set for overnight after the evening meal is fully digested: set in **Automations** an elevated (>100 mg/dL) **BG**  target, with **Enable SMB with high temp target** switched off in **AAPS** **Settings**.
 
 ## Przeszkody u dzieci
 
@@ -151,7 +151,7 @@ Dla udanej **FCL** kluczowym parametrem dostrajania jest **ISF**. Gdy używasz *
 
 **AAPS** Master allows up to 130% temporary **Profile** in **HCL** mode. Wzmocnienie **ISF** odbywa się w 3 krokach:
 
-- Krok 1 – sprawdź **ISF** w **profilu** dla godziny tego posiłku i zobacz, czy np. Autosens proponuje zmianę, która uwzględnia obecną (z ostatnich kilku godzin) wrażliwość organizmu na insulinę.
+- Step 1 -  review the **ISF** applicable for this meal time hour within the **Profile**, and see whether e.g. Autosens suggest a modification that takes care of the current (last few hours’) insulin sensitivity status of the body.
 - Krok 2 – zastosuj współczynnik (1/procent profilu, ustawiony w **automatyzacji**), aby wzmocnić **ISF**.
 - Krok 3 – sprawdź, czy proponowany **ISF** mieści się w ustawionych limitach bezpieczeństwa.
 
@@ -169,9 +169,9 @@ Poniższa część opisuje, jak łączyć warunki **automatyzacji** i jak radzi�
 
 ### Automatyczne duże SMB przy wzroście BG
 
-The key to successful **FCL** **at the beginning of BG increases from meals, very large automatic SMBs must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in **HCL**!)
+The key to successful **FCL**: **at the beginning of BG increases from meals, very large automatic SMBs must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in **HCL**!)
 
-Aby to osiągnąć, przeanalizuj dane z **HCL** i ustal, które **delty** mogą nie być związane z posiłkiem, a które delty mogą być.
+To achieve this, data from your **HCL** should be analyzed to determine which **deltas** might not be meal-related and which might be.
 
 - Ponieważ **automatyzację** możesz ustawić w określonym przedziale czasu, wystarczy analizować tylko ten przedział.
 - Jeśli jesz bardzo różne posiłki (np. śniadanie z dużą ilością węglowodanów, ale obiad niskowęglowodanowy), możesz zrobić dwie różne **automatyzacje** (lub ich zestawy) dla każdego przedziału czasu.
@@ -218,7 +218,7 @@ Rozsądne **progi iob**, przy których należy zmniejszyć agresywność pętli,
 
 Przy nietypowych posiłkach, albo aby go obniżyć, gdy po posiłku planujesz sport, próg **iob** możesz szybko zmienić w swojej **automatyzacji**.
 
-Automatyzacja (#3), „osiągnięto iobTH => **SMB** wyłączone”, ma kończyć (lub wstrzymywać, aż przyjdzie kolejna fala wzrostu z węglowodanów) agresywne wzmacnianie **SMB**.
+Automation (#3), "iobTH reached => **SMBs** off”, is defined to end (or pause, until another wave of carb-related rise hits) the aggressive **SMB** boosting.
 
 ![Automatyzacja #3: IOB 5,5 lub więcej bez aktywnego celu tymczasowego uruchamia cel tymczasowy 111 mg/dl](../images/fullClosedLoop04.png)
 
@@ -233,7 +233,7 @@ Mówi pętli, że powyżej ustawionego **progu iob** lepiej nie podawać już **
 **Uwaga: automatyzacja #3 działa tylko wtedy, gdy nie ma aktywnego TT.** Jeśli więc używasz EatingSoonTT, musi on być zakończony do tego czasu, czyli zwykle 30–40 minut po rozpoczęciu posiłku.
 
 Jednym ze sposobów jest ustawienie w **automatyzacji** warunku, który kończy ewentualnie działający EatingSoonTT, gdy **iob**>65% * iobTH.
-> Sposoby pracy z EatingSoonTT Niektórzy użytkownicy pętli ustawiają EatingSoonTT mniej więcej godzinę lub więcej przed posiłkiem (przyciskiem TT albo automatycznie przez obniżony cel **BG** w **profilu**, jeśli pory posiłków są dość stałe), tylko po to, aby mieć niską **BG** na starcie i trochę wyższe **iob**. Ale skoro **FCL** zawsze dąży do celu, może to niewiele dać. Możesz wtedy woleć ustawić **automatyzację**, która ustawia EatingSoonTT po rozpoznaniu początku posiłku (delta glukozy lub przyspieszenie = delta > avg delta). Niski **TT** jest na tym etapie ważny, bo każdy **SMB** pętla oblicza jako (prognozowana glukoza minus TT)/sens, więc niski TT zwiększa wynikowe insulinReq.
+> Sposoby pracy z EatingSoonTT Niektórzy użytkownicy pętli ustawiają EatingSoonTT mniej więcej godzinę lub więcej przed posiłkiem (przyciskiem TT albo automatycznie przez obniżony cel **BG** w **profilu**, jeśli pory posiłków są dość stałe), tylko po to, aby mieć niską **BG** na starcie i trochę wyższe **iob**. But, assuming the **FCL** is always en route towards target, this might not yield much and you may prefer to define an **Automation** that sets an EatingSoonTT at recognition of meal start (glucose delta, or acceleration = delta > avg delta). Niski **TT** jest na tym etapie ważny, bo każdy **SMB** pętla oblicza jako (prognozowana glukoza minus TT)/sens, więc niski TT zwiększa wynikowe insulinReq.
 
 Po podaniu pierwszych wzmocnionych **SMB** ustawiony iobTH i **automatyzacja** #3 powinny dobrze wyważyć ograniczenie szczytu glukozy i uniknięcie hipoglikemii po posiłku.
 
@@ -332,7 +332,7 @@ Na przykład po ustawieniu **automatyzacji** dla pory kolacji można bez dodatko
 - Problemy z „ogonem” insuliny po posiłkach
     - Może być potrzebna przekąska (gdy widzisz prognozę hipoglikemii) lub tabletki glukozy (jeśli już jesteś w strefie hipoglikemii). Pamiętaj jednak, że wymagane węglowodany, o których pętla może Cię w pewnym momencie informować, są najpewniej zawyżone. Pętla nie ma bowiem żadnych informacji o tym, ile węglowodanów zjadłeś i ile jeszcze czeka na wchłonięcie (Ty możesz to oszacować, także z tłuszczów i białek).
     - Cenną informacją byłoby to, czy problem powstaje głównie już w fazie wzrostu BG. Wtedy łatwym rozwiązaniem może być niższy iobTH.
-    - Jeśli często potrzebujesz dodatkowych węglowodanów, zapisz, ile gramów było potrzebne (nie licz tego, co zjadłeś za dużo i co znów wymagało dodatkowej insuliny).  Następnie użyj wartości IC z profilu, aby oszacować, o ile mniej insuliny powinien był podać **SMB**, i wykorzystaj tę informację przy dostrajaniu (**procentu profilu** w **automatyzacjach**, a może też ustawionego iobTH). This may relate to the **SMBs** given when glucose was high, or also extending regarding also the **SMBs** during the **BG** rise.
+    - Jeśli często potrzebujesz dodatkowych węglowodanów, zapisz, ile gramów było potrzebne (nie licz tego, co zjadłeś za dużo i co znów wymagało dodatkowej insuliny).  Następnie użyj wartości IC z profilu, aby oszacować, o ile mniej insuliny powinien był podać **SMB**, i wykorzystaj tę informację przy dostrajaniu (**procentu profilu** w **automatyzacjach**, a może też ustawionego iobTH). This may relate to the **SMBs** given when glucose was high, or also to the **SMBs** during the **BG** rise.
     - Może się okazać, że po prostu musisz zaakceptować wyższe szczyty **BG**, aby nie spaść za nisko. Or change diet to something with lower amounts of carbs, and higher amount of protein and fats.
 
 

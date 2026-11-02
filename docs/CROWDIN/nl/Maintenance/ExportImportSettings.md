@@ -59,11 +59,11 @@ Als je de AAPS-instellingen naar een bestand exporteert, kun je de configuratie 
 
 * Ben je van plan grote wijzigingen in je configuratie te maken (SMB-instellingen wijzigen, ander insulinetype, andere pomp, automatiseringen aanpassen)? Maak dan een back-up van je **Instellingen** vóór en na de wijzigingen. Zo heb je je meest recente instellingen én een kopie van hoe ze vóór de wijzigingen waren, voor het geval je ze terug moet zetten.
 
-* Alleen voor gebruikers van pompen zonder slang (zoals Omnipod en Medtrum): het **Instellingen**-bestand bevat de verbindingsgegevens van je huidige pod en kan worden gebruikt om met een nieuwe telefoon de verbinding met die pod te herstellen. Heb je geen kopie van je instellingen die is geëxporteerd nadat je je huidige pod hebt gestart? Dan moet je een nieuwe pod starten als je je huidige telefoon moet vervangen.
+* Tubeless pumps (Such as Omnipod and Medtrum) users only: the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. Heb je geen kopie van je instellingen die is geëxporteerd nadat je je huidige pod hebt gestart? Dan moet je een nieuwe pod starten als je je huidige telefoon moet vervangen.
 
 **Handmatig een back-up maken:**
 
-1. Importeer of exporteer je de **Instellingen** voor de eerste keer? Dan moet je een hoofdwachtwoord instellen in [Instellingen > Beveiliging](#Preferences-master-password). Stel een wachtwoord in en bewaar het op een veilige plek. _Zonder dit wachtwoord heb je geen toegang tot je back-ups van de **Instellingen**._
+1. If this is your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). Stel een wachtwoord in en bewaar het op een veilige plek. _Zonder dit wachtwoord heb je geen toegang tot je back-ups van de **Instellingen**._
 
 2. Open in het hoofdscherm van **AAPS** het **menu** (☰) > **Onderhoud**. Kies waar het bestand wordt opgeslagen met de chips **Lokaal** en **Cloud** naast **Exporteer instellingen** (zie **Instellingen exporteren of importeren** hieronder) en tik daarna op **Exporteer instellingen**. **AAPS** laat zien waar het bestand naartoe gaat: de bestandsnaam bij **Lokaal**, **Google Drive** bij **Cloud**. Tik op **OK**.
 
@@ -105,7 +105,7 @@ Om instellingen te exporteren of te importeren, open je het **menu** (☰) en ki
 (ExportImportSettings-Automating-Settings-Export)=
 ### Instellingen automatisch exporteren
 
-Om de instellingen automatisch te exporteren [(**zie Automatisering**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open je [**Instellingen** > **Onderhoud**](#preferences-maintenance-settings), klap je **Automatisch instellingen exporteren** open en zet je **Schakel automatische instellingen export in** aan.
+To automate settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
 
 Je kunt nu een [Automatisering](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) instellen die de instellingen exporteert, regelmatig (_bijv._ elke week) of na een podwissel.
 
@@ -176,7 +176,7 @@ Standaard laat een import je pompinstellingen met rust: de pomp die gekozen is i
 
 12. **AAPS** vraagt **Geïmporteerde instellingen toepassen?** en laat zien hoeveel instellingen er veranderen en, als je het vakje uitgevinkt liet, hoeveel pompinstellingen behouden blijven. Er is nog niets opgeslagen, dus met **Annuleren** blijft je telefoon precies zoals hij was. Tik op **OK** om toe te passen.
 
-    ![Geïmporteerde instellingen toepassen? dialoogvenster](../images/Maintenance/import_settings_apply.png)
+    ![Apply imported settings dialog](../images/Maintenance/import_settings_apply.png)
 
 13. **AAPS** past de geïmporteerde instellingen direct toe, zonder opnieuw op te starten. Alleen de plugins waarvan de instellingen zijn veranderd, worden opnieuw gestart. Terwijl dit loopt, toont **AAPS** **Instellingen toepassen…**; als de pomp bezig is, toont het **Wacht op pomp…** en past het de instellingen toe zodra de pomp vrij is. Is de pomp na één minuut nog steeds bezig, dan biedt **AAPS** aan om het opnieuw te proberen. De melding **Instellingen zijn toegepast** bevestigt dat de geïmporteerde instellingen worden gebruikt. Een behandeling die in de wachtrij stond terwijl de import liep, wordt geschrapt en **AAPS** meldt dat die is geannuleerd, zodat er niets twee keer naar de pomp wordt gestuurd.
 

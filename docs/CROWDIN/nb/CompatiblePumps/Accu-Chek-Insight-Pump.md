@@ -88,7 +88,7 @@ Roche trekker seg ut av insulinpumpemarkedet for å konsentrere diabetesportefø
     
     I Insight-innstillingene i **AAPS** kan du slå på disse valgene:
     
-    * **Logg reservoarbytte**: registrerer automatisk et ampullebytte når du kjører programmet «fyll ampulle» på pumpen.
+    * **Logg reservoarbytte**: registrerer automatisk et ampullebytte når du bytter ampulle i pumpen.
     
     * **Logg slangesettbytte**: legger til en merknad i **AAPS**-databasen når du kjører programmet «fyll slange» på pumpen.
     
@@ -162,7 +162,7 @@ Du finner fastvareversjonen i menyen.
 
 ## Batteribytte
 
-Batteritiden for Insight ved looping er fra 10 til 14 dager, maks. 20 dager. Brukeren som rapporterte dette, bruker Energizer litiumbatterier.
+Batteritiden for Insight ved looping er fra 10 til 14 dager, maksimalt 20 dager. Brukeren som rapporterte dette, bruker Energizer litiumbatterier.
 
 Insight-pumpen har et lite internt batteri som holder viktige funksjoner som klokken i gang mens du bytter det uttakbare batteriet. Hvis batteribyttet tar for lang tid, kan dette interne batteriet gå tomt, klokken nullstilles, og du blir bedt om å legge inn ny tid og dato etter at du har satt inn et nytt batteri. Hvis dette skjer, blir alle registreringer i AAPS fra før batteribyttet ikke lenger tatt med i beregningene, fordi riktig tid ikke kan fastslås.
 

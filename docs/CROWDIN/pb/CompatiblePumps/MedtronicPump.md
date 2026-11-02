@@ -75,13 +75,13 @@ Ao configurar o AAPS para funcionar com a sua bomba Medtronic, você precisa def
 
 - **Número de série da Bomba**: Aparece na parte de trás da sua bomba e começa com SN. Digite somente os 6 números mostrados, sem nenhuma letra (por exemplo, 123456).
 - **Tipo de Bomba**: O modelo de bomba que você usa (por exemplo, 522). 
-- **Frequência da Bomba**: Há duas opções, conforme o local onde a sua bomba foi distribuída originalmente. Veja o [FAQ](#MedtronicPump-faq) se não tiver certeza de qual opção selecionar): 
+- **Frequência da Bomba**: Há duas opções, conforme o local onde a sua bomba foi distribuída originalmente. Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select: 
     - para EUA e Canadá, a frequência usada é 916 MHz
     - para o resto do mundo, a frequência usada é 868 MHz
 - **Máxima Basal na Bomba (U/h)**: Deve ser igual ao valor definido na sua bomba (veja Configuração da bomba acima). Mais uma vez, escolha este valor com cuidado, pois ele define quanto o AAPS pode administrar pela sua taxa basal. Na prática, isso define a taxa basal temporária máxima. Por exemplo, definir este valor como quatro vezes a sua maior taxa basal padrão permite uma taxa basal temporária de 400%. O valor máximo permitido pela bomba é 34,9 unidades por hora.
 - **Bólus máximo na bomba (U)** (em uma hora): Deve ser igual ao valor definido na sua bomba (veja Configuração da bomba acima). Pense bem neste valor, pois ele define o maior bólus que o AAPS pode definir.
 - **Atraso antes que o Bólus seja iniciado (s)**: O número de segundos entre o pedido de um bólus e o envio real do comando para a bomba. Esse tempo permite que o usuário cancele o bólus caso um comando de bólus tenha sido enviado por engano. Não é possível cancelar pelo AAPS um bólus que já começou. A única forma de cancelar um bólus que já começou é suspender a bomba manualmente e depois retomá-la.
-- **Codificação Medtronic**: Define se a codificação Medtronic é feita. É preferível selecionar a codificação de hardware (ou seja, feita pelo dispositivo compatível com Rileylink), pois assim menos dados são enviados. Selecionar a codificação de software (ou seja, feita pelo AAPS) pode ajudar caso ocorram desconexões frequentes. Esta configuração será ignorada se os seus dispositivos Rileylink tiverem a versão de firmware 0.x.
+- **Medtronic Encoding**: Determines where the Medtronic encoding is carried out (hardware or software). É preferível selecionar a codificação de hardware (ou seja, feita pelo dispositivo compatível com Rileylink), pois assim menos dados são enviados. Selecionar a codificação de software (ou seja, feita pelo AAPS) pode ajudar caso ocorram desconexões frequentes. Esta configuração será ignorada se os seus dispositivos Rileylink tiverem a versão de firmware 0.x.
 - **Tipo de Bateria (Visão Detalhada)**: Para calcular corretamente o nível restante da bateria, selecione o tipo de pilha AAA que você usa. Quando um valor diferente da visão simples é selecionado, o AAPS mostra o percentual calculado de bateria restante e a tensão (volts). As seguintes opções estão disponíveis:
     
     - Não selecionado (Visão simples)

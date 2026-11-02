@@ -15,7 +15,7 @@
 ![DanaR 泵](../images/danar1.png)
 
 * 转到主菜单 > 设置 > 发现
-* 手机端进入蓝牙设置，扫描周边设备后选择DanaR序列号，输入配对密码（默认密码0000）。若扫描未发现DanaR设备，请重启手机并取出DanaR电池后重新执行上述步骤。
+* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). 若扫描未发现DanaR设备，请重启手机并取出DanaR电池后重新执行上述步骤。
 
 * In **AAPS**, open the **menu** (☰) in the top-left corner, go to **Configuration** > **Pump** and select the type of DanaR you have (**DanaR**, **DanaR Korean** or **DanaRv2**).
   

@@ -21,7 +21,7 @@ __Android Auto__ = a system used to host certain functions of an Android smartph
 __APK__ = Android application Package. 
 A software installation file.  Further info → [Wiki - 'Building APK'](../SettingUpAaps/BuildingAaps.md).
 
-__Autosens__ = calculation of sensitivity to insulin between a period of a 24 and 8 hour window etc. Further info → [DIABETTECH - __Autosens__](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
+__Autosens__ = calculation of sensitivity to insulin over a 24-hour and an 8-hour window etc. Further info → [DIABETTECH - __Autosens__](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
 __Azure__ = cloud computing platform to host __Nightscout__ web app → see also __Nightscout__.
 
@@ -49,7 +49,7 @@ __CAN__ = status light for overdue cannula change, shown in the status row of __
 
 __CGM__ = Continuous Glucose Monitor → see also __FGM__.
 
-__Closed Loop__ = a closed loop system which makes automatic adjustments to the user’s basal delivery based on an __AAPS’s__ algorithm and the user’s __Profile__ settings without requiring the user’s-approval. Further info → Wiki - 'closed loop' and see also __HCL__ / __FCL__.
+__Closed Loop__ = a closed loop system which makes automatic adjustments to the user’s basal delivery based on an __AAPS’s__ algorithm and the user’s __Profile__ settings without requiring the user’s approval. Further info → [Wiki - 'closed loop'](#KeyAapsFeatures-ClosedLoop) and see also __HCL__ / __FCL__.
 
 __COB__ = Carbs On Board. 
 This is the amount of carbohydrates currently available for the user's digestion → see also IOB.
@@ -59,7 +59,7 @@ i.e. how much does the user’s __BG__ increase for 1g of carbs absorbed.
 
 __DIA__ = Duration of Insulin Action.  Further info →  [Wiki - 'DIA'](#Config-Builder-insulin-dia) and see also →  [DIABETTECH - 'DIA'](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/).
 
-__DST__ = Daylight Savings Time. See [Wiki - Timezone Change and Daylight Saving](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
+__DST__ = Daylight Saving Time. See [Wiki - Timezone Change and Daylight Saving](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
 
 __Dynamic ISF (or DynISF)__ =  a feature within **AAPS** that adapts the insulin sensitivity factor (**ISF**) dynamically based on the user’s **TDD** and **BG**.
 
@@ -67,15 +67,15 @@ __eCarbs__ = extended Carbs.
 Carbs split up over several hours (e.g. to cover fat/protein), which lets __AAPS__ spread the insulin like an extended bolus.  Further info → [Wiki - 'Extended Carbs'](../DailyLifeWithAaps/ExtendedCarbs.md)
 
 __FCL__ = Full Closed Loop.
-A loop which needs no mealtime input from the user: no carb counting and no meal bolus. Further info → Wiki - 'full closed loop' and see also __HCL__.
+A loop which needs no mealtime input from the user: no carb counting and no meal bolus. Further info → [Wiki - 'full closed loop'](../AdvancedOptions/FullClosedLoop.md) and see also __HCL__.
 
 __FGM__ = Flash Glucose Monitor such as the Abbott Freestyle Libre.
- Further info →  Wiki - 'BG source' and see also 'CGM'.
+ Further info →  [Wiki - 'BG source'](#Config-Builder-bg-source) and see also 'CGM'.
 
-__git__ = a tool used store and download the __AAPS’__ source code.  
+__git__ = a tool used to store and download the __AAPS’__ source code.  
 
 __GitHub__ = a web-based service that hosts the __AAPS__ source code and its version control (tracking changes in files and coordinating work on them, especially for teams), and can also build the app. 
-It is also necessary for __APK__ updates.  Further info →  Wiki - 'update APK'.
+It is also necessary for __APK__ updates.  Further info →  [Wiki - 'update APK'](../Maintenance/UpdateToNewVersion.md).
 
 __Glimp__ = an app to collect values from Freestyle Libre.
 
@@ -100,7 +100,7 @@ __Log files__ = __AAPS’__ records of the user's actions (useful for troublesho
 __maxIOB__ = maximum total IOB.
 This is a safety feature and prevents __AAPS__ delivering insulin over the user’s settings.  Further info →  [Wiki - 'Maximum total IOB OpenAPS can’t go over'](#Open-APS-features-maximum-total-iob-openaps-cant-go-over).
 
-__min_5m_carbimpact__ = safety feature that is a calculation of default carb decay when carb absorption cannot be determined based on the user’s blood’s reactions. Further info →  [Wiki - 'Preferences'](#Preferences-min_5m_carbimpact).
+__min_5m_carbimpact__ = safety feature that is a calculation of default carb decay when carb absorption cannot be determined based on the user’s blood’s reactions. Further info →  [Wiki - 'min_5m_carbimpact'](#Preferences-min_5m_carbimpact).
 
 __Nightscout__ = open source project to access and report __CGM__ data. 
 The central data hub for the user’s __AAPS__ data and can generate reports to view the user’s historical __Nightscout__ data, such as expected HbA1c, time in range or search for patterns in the data via percentile chart etc. 
@@ -115,7 +115,7 @@ __OpenAPS__ = Open Artificial Pancreas System, the predecessor project and basis
 
 __Open Loop system__ = an __AAPS__ feature that will recommend adjustments and which must be performed manually by the user on __AAPS__.  Further info →  [Wiki - 'Open Loop'](#KeyAapsFeatures-OpenLoop).
 
-__Oref0 / Oref1__ = sensitivity detection and "reference design implementation version 0/1". It is the key algorithm behind OpenAPS Wiki - sensitivity detection.
+__Oref0 / Oref1__ = sensitivity detection and "reference design implementation version 0/1". It is the key algorithm behind OpenAPS. Further info → [Wiki - 'sensitivity detection'](../DailyLifeWithAaps/SensitivityDetectionAndCob.md).
 
 __OS-AID__ = Open-Source Automated Insulin Delivery.
 An __AID__ system built from open-source software, such as __AAPS__, __OpenAPS__, Loop or Trio. These systems are not formally approved by health bodies (FDA, NHS etc.) → see also __AID__.
@@ -154,16 +154,16 @@ __Super bolus__ = shift of basal to bolus insulin for faster __BG__ adjustment.
 
 __TBB__ = total base basal (sum of basal rate within 24 hours) → see also __TBR__ / __TDD__.
 
-__TBR__ = temporary basal rate→ see also __TBB__ / __TDD__.
+__TBR__ = temporary basal rate → see also __TBB__ / __TDD__.
 
 __TDD__ = total daily dose (bolus + basal per day) → see also __TBB__ / __TBR__.
 
-__TT__ = temporary target temporary increase/decrease of the user’s __BG__ target (range) e.g. for eating or sport activities.  Further info → [Wiki - 'temp targets'](../DailyLifeWithAaps/TempTargets.md).
+__TT__ = temporary target: temporary increase/decrease of the user’s __BG__ target (range) e.g. for eating or sport activities.  Further info → [Wiki - 'temp targets'](../DailyLifeWithAaps/TempTargets.md).
 
 __UAM__ = unannounced meals. 
 Detection of significant increase in __BG__ levels due to meals, adrenaline or other influences and attempt to adjust this.  Further info → [Wiki - 'UAM'](#enable-uam) and see also __SMB__.
 
-__Virtual pump__ = an __AAPS__ feature which allows the user to try __AAPS’__ functions or for PWD using a pump model with no __AAPS__ driver for looping → see also __Open Loop__.
+__Virtual pump__ = an __AAPS__ feature which allows the user to try __AAPS’__ functions, or lets PWD whose pump model has no __AAPS__ driver use __AAPS__ as an open loop → see also __Open Loop__.
 
 __Wallpaper__ = __AAPS__ background image see phones page.
 

@@ -11,7 +11,7 @@ Część z tych problemów dotyczy prawdopodobnie także innych pomp insulinowyc
 (bluetoothtroubleshooting-cannot-start-omnipod-with-android-16)=
 
 ## Nie można uruchomić Omnipod na Androidzie 16
-- Omnipod DASH na Androidzie 16 działa poprawnie dopiero od wersji **AAPS** 3.3.2.1, bo ta wersja zawiera poprawki znanych problemów, które Android 16 wprowadził dla Omnipod.
+- Android 16 needs at a minimum **AAPS** version 3.3.2.1 for the Omnipod DASH to work correctly, as this version has fixes added to specifically address known problems introduced in Android 16 for Omnipod.
 
 ---
 
@@ -48,11 +48,11 @@ Napisz do @XiTatiON na kanale Discord #omnipod-dash, aby omówić aplikacje, kt�
 
 - **myBMW** Aplikacja MyBMW zakłócała pracę Medtrum Nano i Omnipod DASH. Aplikacja MyBMW pyta o uprawnienie „znajdowanie urządzeń w pobliżu” tylko raz. Jeśli go nie przyznasz, nadal działa zupełnie dobrze.
 
-- **Amazon Alexa**  Usunięcie uprawnienia „Urządzenia w pobliżu” dla aplikacji Alexa rozwiązało problem u części osób, ale wyłącza możliwość parowania urządzeń IoT Matter.
+- **Amazon Alexa**  Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IoT devices
 
 - **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
 
-- **BM2** Aplikacja do monitorowania akumulatora solarnego, używana w niektórych kamperach i zestawach solarnych na kemping. Gdy aplikacja działała, nie dało się aktywować nowego poda. Obejściem problemu jest wymuszenie zatrzymania aplikacji na czas aktywacji nowego poda. Późniejsze uruchomienie aplikacji nie zakłócało pracy Dash (na Pixel 8 Pro z Androidem 16).
+- **BM2** Solar Battery Monitoring app, used in some camper van and camping solar setups: when the app was running, it prevented activation of a new Pod. Force Stopping the app while activating a new pod is a workaround to the issue. Późniejsze uruchomienie aplikacji nie zakłócało pracy Dash (na Pixel 8 Pro z Androidem 16).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
@@ -63,7 +63,7 @@ Follow this procedure to revoke the "Nearby device" permission for all apps exce
 
 ```{admonition} Menus and settings
 :class: note
-Zrzuty ekranu i instrukcje w tym przewodniku pochodzą z czystego Androida 16 (Vanilla) na Google Pixel 8 Pro. U innych producentów i na innych urządzeniach menu i opisy ustawień prawdopodobnie nie będą dokładnie takie same. Dostosuj kroki do swojego urządzenia. Jeśli utkniesz, zajrzyj do sekcji [Gdzie uzyskać pomoc dla Dash](#omnipod-dash-where-to-get-help-for-dash), aby dowiedzieć się, jak poprosić społeczność o pomoc.
+Zrzuty ekranu i instrukcje w tym przewodniku pochodzą z czystego Androida 16 (Vanilla) na Google Pixel 8 Pro. Other manufacturers and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.
 ```
 
 1. Otwórz ustawienia Androida w telefonie, przewiń w dół i naciśnij **Bezpieczeństwo i prywatność (1)** (Security and privacy).
@@ -103,7 +103,7 @@ Jeśli nie wiesz, która aplikacja powoduje problem, wyłącz uprawnienie wszyst
 
 ### Jak ponownie włączyć uprawnienie „Urządzenia w pobliżu” dla aplikacji systemowych i innych aplikacji:
 
-1. W razie potrzeby zajrzyj do sekcji **„Jak odebrać uprawnienie „Urządzenia w pobliżu” innym aplikacjom”**, aby dowiedzieć się, jak dojść do ustawień prywatności aplikacji. Gdy będziesz w ustawieniach **Urządzenia w pobliżu**, przejdź do kroku 2.
+1. If required Reference the **"How to revoke 'Nearby device' permissions for other apps"** section on how to get to the app privacy settings, then once in the **Nearby device** configuration proceed to 2.
 
 2. Przejrzyj listę aplikacji i naciśnij aplikację, której chcesz przyznać uprawnienie **Urządzenia w pobliżu**.
 
@@ -122,7 +122,7 @@ Jeśli aplikacja ma odebrane uprawnienie, przewiń w dół, aż zobaczysz listę
 
    ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png)
 
-5. Aby ponownie przyznać uprawnienia każdej aplikacji, wykonaj kroki z sekcji **„Jak odebrać uprawnienie „Urządzenia w pobliżu” innym aplikacjom”** w odwrotnej kolejności.
+5. Follow the guidance in **"How to revoke 'Nearby device' permissions for other apps"** in reverse to re-enable permissions for each app.
 
 ---
 

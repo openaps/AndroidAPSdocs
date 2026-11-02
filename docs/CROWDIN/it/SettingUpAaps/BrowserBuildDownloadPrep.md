@@ -14,8 +14,7 @@ Or visit the latest release page:
 https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
-2.Backup copy hosted on this site:
-
+2. Backup copy hosted on this site:
  - If the external link is also unavailable, you can use this backup file to download.
 <!--crowdin:disable-->
 

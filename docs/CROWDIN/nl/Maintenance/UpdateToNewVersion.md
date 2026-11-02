@@ -36,8 +36,8 @@ These steps are the same for every build method. Kijk in de [Release notes](../M
 
 Nadat je de nieuwe apk hebt geïnstalleerd:
 
-- je kunt de versie van **AAPS** op je telefoon controleren: open linksboven het **menu** (☰) en kies dan **Over** (zie de schermafbeelding hieronder). kun je de huidige versie van **AAPS** bekijken;
-- controleer of het importeren van de instellingen is uitgevoerd; en
-- controleer je instellingen van **AAPS** onder **Instellingen** en zorg dat ze nog kloppen.
+- you can check the **AAPS** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). The current **AAPS** version can be viewed;
+- make sure you have imported your settings; and
+- please check your **AAPS** settings under **Settings** and ensure these remain accurate.
 
 ![Venster Over met de geïnstalleerde AAPS-versie](../images/about_dialog_version.png)

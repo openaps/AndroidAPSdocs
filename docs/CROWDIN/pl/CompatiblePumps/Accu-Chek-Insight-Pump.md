@@ -84,11 +84,11 @@ Roche wycofuje się z rynku pomp insulinowych, aby skupić się w diabetologii n
     
     Otwórz ustawienia przyciskiem **Ustawienia** na karcie **Accu-Chek Insight** w **Konfiguracja** > **Pompa** albo ikoną koła zębatego w prawym górnym rogu ekranu pompy.
     
-    ![Ustawienia sterownika Accu-Chek Insight](../images/v4/Pumps/accu_chek_insight_settings.png)
+    ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
     
-    W ustawieniach Insight w **AAPS** możesz włączyć następujące opcje:
+    In the Insight settings in **AAPS** you can enable the following options:
     
-    * **Zapisz zmianę zbiornika**: automatycznie zapisuje wymianę wkładu z insuliną, gdy uruchomisz w pompie program „fill cannula” (wypełnianie kaniuli).
+    * **Log reservoir changes**: automatically records an insulin cartridge change when you change the cartridge in the pump.
     
     * **Melduj zmianę drenu**: dodaje notatkę do bazy danych **AAPS**, gdy uruchomisz w pompie program „tube filling” (wypełnianie drenu).
     
@@ -162,7 +162,7 @@ Wersję firmware znajdziesz w menu pompy.
 
 ## Wymiana baterii
 
-Bateria w Insight podczas używania pętli wystarcza na 10 do 14 dni, maks. 20 dni. Osoba, która to zgłosiła, używa baterii litowych Energizer.
+Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days. Osoba, która to zgłosiła, używa baterii litowych Energizer.
 
 Pompa Insight ma małą wewnętrzną baterię, która podtrzymuje najważniejsze funkcje, np. zegar, podczas wymiany wyjmowanej baterii. Jeśli wymiana baterii trwa zbyt długo, wewnętrzna bateria może się rozładować, zegar zostanie zresetowany i po włożeniu nowej baterii pompa poprosi Cię o wpisanie nowej godziny i daty. Jeśli tak się stanie, żadne wpisy w AAPS sprzed wymiany baterii nie będą już brane pod uwagę w obliczeniach, ponieważ nie da się ustalić ich poprawnego czasu.
 

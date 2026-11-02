@@ -402,5 +402,5 @@ Všetku vývojársku prácu na ovládači Medtrum robí komunita na **dobrovoľn
 
 -  **Úroveň 0:** Prečítajte si príslušnú časť tejto dokumentácie, aby ste pochopili, ako má funkcia, s ktorou máte problém, fungovať.
 -  **Úroveň 1:** Ak máte stále problémy, ktoré pomocou tohto dokumentu neviete vyriešiť, prejdite na kanál *#Medtrum* na **Discorde** pomocou [tohto pozývacieho odkazu](https://discord.gg/4fQUWHZ4Mw).
--  **Úroveň 2:** Pozrite si existujúce hlásenia v [Issues](https://github.com/nightscout/AAPS/issues), či už váš problém niekto nenahlásil. Ak áno, potvrďte ho, okomentujte ho alebo doplňte informácie o vašom probléme. Ak nie, vytvorte prosím [nové hlásenie (issue)](https://github.com/nightscout/AndroidAPS/issues) a priložte [vaše log súbory](../GettingHelp/AccessingLogFiles.md).
+-  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues). If it exists, please confirm/comment/add information on your problem. Ak nie, vytvorte prosím [nové hlásenie (issue)](https://github.com/nightscout/AndroidAPS/issues) a priložte [vaše log súbory](../GettingHelp/AccessingLogFiles.md).
 -  **Buďte trpezliví – väčšinu členov našej komunity tvoria dobrosrdeční dobrovoľníci a riešenie problémov si často vyžaduje čas a trpezlivosť od používateľov aj vývojárov.**
