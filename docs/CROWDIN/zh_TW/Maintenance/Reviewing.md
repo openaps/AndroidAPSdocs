@@ -54,7 +54,7 @@
 
 **與你的內分泌醫生討論目標**
 
-你的糖尿病情況可能會有所不同。任何建議的目標應與內分泌醫生或支援醫療團隊討論。 If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress.
+你的糖尿病情況可能會有所不同。任何建議的目標應與內分泌醫生或支援醫療團隊討論。正確使用時，AAPS 的統計資料可有效協助你追蹤__血糖__趨勢並監控進度。
 
 ![統計資料](../images/Maintenance/statistics3.png)
 
@@ -117,7 +117,7 @@ AGP 下方的**血糖五角圖（CGP）**卡片會將過去 14 天的五項血�
 ![碳水化合物與注射](../images/TreatmentsView1.png)
 
 在此標籤中，你可以查看注射和碳水化合物的紀錄。每筆注射（第 **1** 行）旁邊都會顯示剩餘的相關活性胰島素（IOB）和胰島素劑量。注射的來源可以是：
-* Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
+* 餐點（透過「胰島素」、「快速嚮導」或「注射嚮導」按鈕手動輸入）
 * 當使用 SMB 功能時的 SMB
 
 碳水化合物項目（第 **2** 行）會以克為單位顯示份量。
@@ -147,9 +147,9 @@ AGP 下方的**血糖五角圖（CGP）**卡片會將過去 14 天的五項血�
 * 如果臨時基礎率高於設定檔中的基礎率，IOB 會是正值。
 * 如果設定了零臨時基礎率（如第 **1** 行），或臨時基礎率低於設定檔中的基礎率，IOB 會是負值。
 
-Deleting the entries only affects your reports in Nightscout and will probably distort your real IOB - it is not recommended.
+刪除這些項目只會影響 Nightscout 中的報表，也可能會讓實際的 IOB 失真，因此不建議這麼做。
 
-On the left of a line, a red S means “Suspend”: it happens when basal is not currently delivered. 例如，這在更換藥囊過程中是一個正常情況。
+在線條左側，紅色的 S 代表「暫停」：表示目前沒有輸注基礎胰島素。例如，這在更換藥囊過程中是一個正常情況。
 
 ### 臨時目標
 
@@ -178,7 +178,7 @@ On the left of a line, a red S means “Suspend”: it happens when basal is not
 
 ![運行模式](../images/TreatmentsView6.png)
 
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
+此分頁會顯示[循環狀態](#AapsScreens-loop-status)的變更記錄：開啟、關閉、LGS、暫停、中斷連線。
 
 ### 使用者輸入
 
