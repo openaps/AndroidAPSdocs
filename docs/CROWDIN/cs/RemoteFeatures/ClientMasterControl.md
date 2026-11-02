@@ -134,7 +134,7 @@ Namiřte fotoaparát na kód. Klient ukáže, co kód udělá — adresu Nightsc
 
 ```{admonition} Scanning is available on Android
 :class: note
-Skener zatím není dostupný v iOS a počítač nemá fotoaparát: tam použijte PIN.
+A computer without camera: use the PIN there.
 ```
 
 #### Zadání PINu
