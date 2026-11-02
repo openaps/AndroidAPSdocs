@@ -26,7 +26,7 @@ Das funktioniert auch im Browser eines Computers.
 
 **→ [Mit dem AAPS Builder erstellen](BrowserBuildAapsBuilder.md)**
 
-### On a computer or an iPhone / iPad: fork and preparation file
+### Auf einem Computer oder einem iPhone / iPad: Fork und Vorbereitungsdatei
 
 Du legst in GitHub eine Kopie (Fork) des AAPS-Quellcodes an, erstellst Deinen Keystore mit einer Vorbereitungsdatei, und die fertige App wird in Deinem Google Drive gespeichert. Folge den vier Schritten unten.
 
@@ -44,7 +44,7 @@ Du wirst zwischen den Tabs springen: Starte mit geschlossenen Tabs. Das verhinde
 
 #### Was Du brauchst
 
-- A **Google account**, so the built app can be saved to your Google Drive.
+- Ein **Google-Konto**, damit die erstellte App in Deinem Google Drive gespeichert werden kann.
 - Ein **GitHub-Konto** (kostenlos). Das legst Du in Schritt 1 an.
 - Einen **Webbrowser**, der mehrere Tabs gleichzeitig offen halten kann (unten wird Chrome angenommen).
 - Ein kleines **Hilfsprogramm, um die Vorbereitungsdatei auszuführen**. Welches Du brauchst, hängt vom Gerät ab, mit dem Du erstellst. Du musst jetzt noch nichts installieren; Schritt 2 führt Dich für Dein Gerät durch:
@@ -60,7 +60,7 @@ Der Browser-Build besteht aus einer Reihe von Entscheidungen. Folge diesen Schri
 3. **[Google Drive autorisieren:](BrowserBuildGoogleDrive.md)** Erlaube GitHub, die fertige App in Deinem Google Drive zu speichern.
 4. **[APK erstellen:](BrowserBuildAPK.md)** Starte den GitHub-Actions-Workflow und wähle Version und Variante.
 
-Bei Problemen hilft Dir die **[Browser-Build-Fehlerbehebung](../GettingHelp/BrowserBuildTroubleshooting.md)**. For optional operations with a fork, see [exporting your keystore](#ci-keystore-export) or [cherry-picking a commit](#github-cherry-pick).
+Bei Problemen hilft Dir die **[Browser-Build-Fehlerbehebung](../GettingHelp/BrowserBuildTroubleshooting.md)**. Für optionale Schritte mit einem Fork siehe [Keystore exportieren](#ci-keystore-export) oder [Commit per Cherry-Pick übernehmen](#github-cherry-pick).
 
 ----
 
