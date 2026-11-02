@@ -125,7 +125,7 @@ OpenAPS SMB 的設定如下。
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
-### Max IOB for SMB
+### 微量注射的最大 IOB
 
 這個數值決定了**體內胰島素**（基礎與注射的體內胰島素）在運行閉環模式下**AAPS**所維持的最大值。這也被稱為**maxIOB**。
 
@@ -229,7 +229,7 @@ Autosens 會觀察血糖的偏差（正向/負向/中性）。它會根據這些
 
 #### 微量注射間隔
 
-此功能限制 SMB 的頻率。此數值決定 SMB 之間的最小時間。注意，每次接收到葡萄糖值時循環將運行（通常是 5 分鐘）。 Subtract 2 minutes to give loop additional time to complete. 例如，如果您希望每次循環運行時給予 SMB，將其設定為 3 分鐘。
+此功能限制 SMB 的頻率。此數值決定 SMB 之間的最小時間。注意，每次接收到葡萄糖值時循環將運行（通常是 5 分鐘）。減去 2 分鐘，讓循環有更多時間完成。例如，如果您希望每次循環運行時給予 SMB，將其設定為 3 分鐘。
 
 預設值：3 分鐘。
 
@@ -251,7 +251,7 @@ Autosens 會觀察血糖的偏差（正向/負向/中性）。它會根據這些
 
 預設值：與**限制微量注射的基礎率上限（分鐘數）**相同。
 
-This setting is only visible if "Enable SMB" and "Enable UAM" are switched on.
+只有在「啟用 SMB」和「啟用 UAM」都開啟時，才會顯示此設定。
 
 (enable-uam)=
 
@@ -277,7 +277,7 @@ This setting is only visible if "Enable SMB" and "Enable UAM" are switched on.
 
 如需完整的參數參考資料（包括此處未說明的設定），請參閱 [OpenAPS 的偏好設定與安全性設定文件](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html)。
 
-**Always use short average delta instead of simple delta** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. 這有助於**AAPS**使用 xDrip 和 Libre 等資料來源不穩定的裝置時，維持較穩定的運作。
+**一律使用短期平均變化量，而非單次變化量**：啟用此功能後，**AAPS** 會使用過去 15 分鐘的短期平均變化量／血糖，通常是最近三筆讀取值的平均。這有助於**AAPS**使用 xDrip 和 Libre 等資料來源不穩定的裝置時，維持較穩定的運作。
 
 **每日安全乘數上限** 這是一個重要的安全限制。預設設定（不太需要調整）為 3。這代表著 **AAPS** 永遠無法設定臨時基礎率超過使用者在其幫浦和/或個人設定中編程的每小時最高基礎率的 3 倍。例子：如果您的最高基礎率為 1.0 U/h，且每日安全乘數上限為 3，則 **AAPS** 可以設置的最大臨時基礎率為 3.0 U/h（= 3 x 1.0 U/h）。
 
@@ -308,7 +308,7 @@ This setting is only visible if "Enable SMB" and "Enable UAM" are switched on.
   - 血糖**高於目標值**時，會提高 ISF；
   - **餐後**權重和**持續時間**權重會在用餐後，以及血糖長時間偏高時發揮作用。
 - **微量注射給藥比例**（包含最小值、最大值和血糖範圍）：可用微量注射給予所需胰島素量的比例。
-- **SMB max range extension**: by what factor the usual SMB size limit ([max minutes of basal](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), 30 minutes by default) may be exceeded. 預設值 1 不會改變任何設定；最高可設為 5。請謹慎且逐步調高此實驗性數值。
+- **SMB 最大範圍延伸**：通常的 SMB 大小上限（[基礎胰島素上限分鐘數](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to)，預設為 30 分鐘）可超出的倍數。預設值 1 不會改變任何設定；最高可設為 5。請謹慎且逐步調高此實驗性數值。
 - **IOB 門檻百分比**：IOB 超過 max IOB 的此百分比時，會停用微量注射。
 
     {admonition} 僅供有經驗的使用者使用
@@ -339,11 +339,11 @@ AMA，"進階餐點輔助" 的簡稱，是 2017 年的 OpenAPS 功能（oref0）
 
 *請參閱 [規定上限總覽](#Open-APS-features-overview-of-hard-coded-limits)。*
 
-### Max IOB for AMA
+### AMA 的最大 IOB
 
-This parameter limits the maximum of basal IOB where **AAPS** still works. 如果 IOB 更高，則停止給予額外的基礎胰島素，直到基礎 IOB 降低到限制以下。
+此參數會限制 **AAPS** 仍可運作時的最大基礎胰島素活性胰島素量（IOB）。如果 IOB 更高，則停止給予額外的基礎胰島素，直到基礎 IOB 降低到限制以下。
 
-The default value is 2, but you should raise this parameter slowly to see how much it affects you and which value fits best. It is different for everyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age. 在 AMA 中的 maxIOB 固定限制低於 SMB。
+預設值為 2，但您應逐步調高此參數，觀察它對您的影響，並找出最適合的數值。每個人的情況不同，也取決於平均每日總劑量（TDD）。出於安全原因，存在一個限制，這取決於病人的年齡。在 AMA 中的 maxIOB 固定限制低於 SMB。
 
 - 兒童：3
 - 青少年：5
@@ -366,7 +366,7 @@ The default value is 2, but you should raise this parameter slowly to see how mu
 - 通常不需要變更此對話方塊中的設定！
 - 如果仍想變更，請務必先了解自己要做什麼——請參閱 [OpenAPS 的偏好設定與安全設定說明文件](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html)，了解完整的參數說明。
 
-**Always use short average delta instead of simple delta** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. 這能讓 **AAPS** 在使用 xDrip 和 Libre 等資料來源時，即使資料有雜訊，也能更穩定地運作。
+**一律使用短期平均變化量，而非單次變化量**：啟用此功能後，**AAPS** 會使用過去 15 分鐘的短期平均變化量／血糖，通常是最近三筆讀取值的平均。這能讓 **AAPS** 在使用 xDrip 和 Libre 等資料來源時，即使資料有雜訊，也能更穩定地運作。
 
 **每日安全乘數上限** 這是一個重要的安全限制。預設設定（不太需要調整）為 3。這表示 **AAPS** 永遠不會被允許設定一個臨時基礎速率，其數值超過使用者幫浦中所設定的最高每小時基礎速率的 3 倍。例子：如果您的最高基礎率為 1.0 U/h，且每日安全乘數上限為 3，則 **AAPS** 可以設置的最大臨時基礎率為 3.0 U/h（= 3 x 1.0 U/h）。
 
