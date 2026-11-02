@@ -70,11 +70,12 @@ Nie używaj **AAPS**, jeśli przyjmujesz inhibitory SGLT-2 (flozyny), ponieważ 
 ## Spis treści dokumentacji AAPS
 
 ```{toctree}
-:caption: Korzystanie z tej dokumentacji
+:caption: Using this documentation
+:titlesonly:
 
-Zmiana języka i wersji <./NavigateDoc/ChangeLanguageVersion.md>
-Wyszukiwanie w dokumentacji <./NavigateDoc/SearchDoc.md>
-Aktualizacje i zmiany w dokumentacji <./Maintenance/DocumentationUpdate.md>
+Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
+Search the documentation <./NavigateDoc/SearchDoc.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
 :caption: 1) Pierwsze kroki
