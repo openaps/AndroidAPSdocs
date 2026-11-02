@@ -70,11 +70,12 @@ Nepoužívejte **AAPS**, pokud užíváte SGLT-2 inhibitory (glifloziny), proto�
 ## Obsah dokumentace AAPS
 
 ```{toctree}
-:caption: Používání této dokumentace
+:caption: Using this documentation
+:titlesonly:
 
-Změna jazyka a verze <./NavigateDoc/ChangeLanguageVersion.md>
-Vyhledávání v dokumentaci <./NavigateDoc/SearchDoc.md>
-Aktualizace a změny dokumentace <./Maintenance/DocumentationUpdate.md>
+Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
+Search the documentation <./NavigateDoc/SearchDoc.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
 :caption: 1) Začínáme
