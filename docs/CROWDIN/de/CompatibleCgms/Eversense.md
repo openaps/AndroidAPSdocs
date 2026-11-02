@@ -59,8 +59,8 @@ xDrip can read notifications from the vendor app, like ESEL does. Backfilling is
 
 - Download and install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
 - As data source in xDrip “Companion App” must be selected.
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
-- Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
+- Wähle xDrip unter [**Konfiguration → BZ-Quelle**](#Config-Builder-bg-source).
+- Passe die Einstellungen von xDrip so an, wie es auf der Seite [xDrip-Einstellungen](../CompatibleCgms/xDrip.md) erklärt ist.
 - Aktiviere [Exponentielle Glättung](../CompatibleCgms/SmoothingBloodGlucoseData.md) in AAPS.
 
 ## Notification Reader
