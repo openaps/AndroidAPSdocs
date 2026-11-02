@@ -134,7 +134,7 @@ Skieruj aparat na kod. Urządzenie opiekuna pokazuje, co robi kod — adres Nigh
 
 ```{admonition} Scanning is available on Android
 :class: note
-Skaner nie jest jeszcze dostępny na iOS, a komputer nie ma aparatu: tam użyj PIN-u.
+A computer without camera: use the PIN there.
 ```
 
 #### Wpisywanie PIN-u
