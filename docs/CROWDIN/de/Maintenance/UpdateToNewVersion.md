@@ -36,8 +36,8 @@ Diese Schritte sind bei jeder Methode zum Erstellen gleich. Schaue in den [Relea
 
 Nach der Installation der neuen APK:
 
-- you can check the **AAPS** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). The current **AAPS** version can be viewed;
-- make sure you have imported your settings; and
-- please check your **AAPS** settings under **Settings** and ensure these remain accurate.
+- Du kannst die **AAPS**-Version auf Deinem Smartphone prüfen, indem Du oben links das **Menü** (☰) öffnest und dann **Über** wählst (siehe Screenshot unten). Dort steht die aktuelle **AAPS**-Version;
+- stelle sicher, dass Du Deine Einstellungen importiert hast; und
+- kontrolliere Deine **AAPS**-Einstellungen unter **Einstellungen** und stelle sicher, dass sie noch stimmen.
 
 ![About dialog with the AAPS version installed](../images/about_dialog_version.png)
