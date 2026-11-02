@@ -9,9 +9,9 @@
 - **Master** = hlavný telefón s **AAPS**, ktorý ovláda pumpu a riadi okruh.
 ```
 
-```{admonition} iPhone version in development
+```{admonition} Which devices can run AAPSClient?
 :class: note
-**AAPSClient** zatiaľ funguje na telefónoch s Androidom. Verzia **AAPSClient** pre iPhone sa vyvíja a je v ranej fáze testovania. Zatiaľ nie je vydaná: v App Store nie je a nedá sa nič stiahnuť. Táto stránka sa aktualizuje, keď bude dostupná.
+From **AAPS** version 4, **AAPSClient** runs on Android phones and tablets, on Wear OS watches and on computers (Windows, Mac and Linux). On an iPhone there is no ready-made download: you build the app yourself. See the [table of downloads by device](#aapsclient-platforms).
 ```
 
 ```{contents} Table of contents
@@ -33,9 +33,41 @@ Všetko, čo spustíte z **AAPSClient**, skontroluje, obmedzí, potvrdí a **vyk
 
 Na rovnakom telefóne sledujúceho môžu byť vedľa seba nainštalované až tri klientske aplikácie, každá sleduje **iného** človeka: **AAPSClient** (ikona žltej sovy), **AAPSClient2** (modrá sova) a — novinka vo verzii 4 **AAPS** — **AAPSClient3** (zelená sova). Funkčne sú rovnaké. Líšia sa iba názvom a farbou (ikona aplikácie, pozadie widgetu a časť stavu na hlavnej obrazovke), aby ste ich rozlíšili. Každá aplikácia je spárovaná s vlastným hlavným zariadením. Podrobnosti nájdete v časti [O AAPSClient, AAPSClient2 a AAPSClient3](#remotecontrol-aapsclient-versions).
 
+(aapsclient-platforms)=
 ## Získanie aplikácie
 
-**AAPSClient** získate rovnako ako **AAPS** — pozrite [Stiahnutie a inštalácia AAPSClient](#RemoteControl_aapsclient) — a nainštalujete ho ako hlavnú aplikáciu ([Prenos a inštalácia AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)).
+All the ready-made files are in the *Assets* list of the latest release on [GitHub](https://github.com/nightscout/AndroidAPS/releases/) (click *Assets* at the bottom of the release to expand it). In the table, *x.y.z* stands for the version number. Choose the file that matches your device:
+
+| Device                  | File to download                    | Poznámky                                                                                                                                                                                     |
+| ----------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Android phone or tablet | `app-aapsclient-release_x.y.z.apk`  | Install it like the main app: see [Download and installation of AAPSClient](#RemoteControl_aapsclient) and [Transferring and installing](../SettingUpAaps/TransferringAndInstallingAaps.md). |
+| Wear OS watch           | `wear-aapsclient-release_x.y.z.apk` | Goes with the AAPSClient app on the phone. See [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md).                                                                                          |
+| Windows computer        | `AAPSClient-x.y.z.msi`              | Open the file to install.                                                                                                                                                                    |
+| Mac                     | `AAPSClient-x.y.z.dmg`              | See the note on macOS below the table.                                                                                                                                                       |
+| Linux (Debian, Ubuntu)  | `aapsclient_x.y.z_amd64.deb`        | Install it with your package manager.                                                                                                                                                        |
+| iPhone                  | žiadne                              | There is no App Store version and no download. You build the app yourself, see [AAPSClient on an iPhone](#aapsclient-iphone).                                                                |
+
+**Following two people?** Each file above also exists as *aapsclient2* / *AAPSClient2*. It is a second client app that installs next to the first one, so one device can follow two people (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)). **AAPSClient3** is not in the release assets: build it yourself ([build variants](#browserbuild-variant)).
+
+**Files to ignore:** the *pumpcontrol* files (`app-pumpcontrol-release_…`, `wear-pumpcontrol-release_…`) are not a client. Leave them out.
+
+**Mac: the first start.** The app is not notarized by Apple, so macOS blocks it the first time you open it. Click *Done*, then open *System Settings → Privacy & Security*, scroll down and click *Open Anyway*.
+
+**Computer: how to connect.** A computer has no camera, so the QR code cannot be scanned. Set up **Nightscout** in the client, then on the master add the client with a **PIN** and type the 8-digit PIN in the client (**Pair with master**). See [Pairing with the master](#aapsclient-pairing-with-the-master).
+
+**Same version everywhere.** The master and all its clients must run the same **AAPS** version. When you update the master, update the clients too.
+
+(aapsclient-iphone)=
+### AAPSClient on an iPhone
+
+There is no **AAPSClient** in the App Store and no ready-made file to download, so you build the app yourself:
+
+- You need a Mac with **Xcode** and an Apple developer account.
+- The project is the `ios` folder of the [AndroidAPS repository on GitHub](https://github.com/nightscout/AndroidAPS/tree/master/ios).
+- A build for a real iPhone is signed with your own Apple developer team. A build for the iPhone simulator does not need one.
+- There is no step-by-step guide yet. This page will be updated when there is one.
+
+The iPhone version pairs with the master like the others. Unlike the computer versions, the iPhone can scan the master's QR code with its camera.
 
 ## Prvé spustenie: kratší Sprievodca nastavením
 
@@ -43,7 +75,7 @@ Pri prvom spustení **AAPSClient** spustí rovnakého **Sprievodcu nastavením**
 
 1. **Vitajte**, **licenčná zmluva**, **povolenia** a **hlavné heslo** — rovnaké ako v hlavnej aplikácii, pozrite [Sprievodca nastavením AAPS](../SettingUpAaps/SetupWizard.md).
 2. Klient sa **nepýta** na **jednotky** ani na **dolnú/hornú značku**: prevezme ich z hlavného telefónu, hneď ako sa pripojí k Nightscoutu. Neskôr ich uvidíte v **Nastaveniach**, kde malá **ikona telefónu** ukazuje, že sú [synchronizované s hlavným telefónom](#client-master-config-prefs). Upravovať sa dajú iba vtedy, keď je hlavné zariadenie dostupné.
-3. **Nastavenie z hlavného zariadenia** — na hlavnom zariadení otvorte **Spravovať → Autorizovaní klienti**, pridajte tento telefón pomocou **QR kódu** a tu ťuknite na **Oskenovať QR kód**. Jedno naskenovanie nastaví Nightscout s vlastným tokenom tohto telefónu a pri kóde, ktorý páruje, telefón aj spáruje. Telefón tiež prevezme názov, s ktorým ho pridali na hlavnom zariadení, ako názov svojej inštancie (písmená s diakritikou sa zmenia na písmená bez diakritiky, „Miloš“ sa zmení na „Milos“). **Po naskenovaní je nastavenie hotové**: sprievodca sa zavrie, pretože ďalšie kroky by iba ukazovali, čo urobil kód. Bez QR kódu tento krok preskočte. (Iba Android: skener zatiaľ nie je dostupný v iOS.)
+3. **Nastavenie z hlavného zariadenia** — na hlavnom zariadení otvorte **Spravovať → Autorizovaní klienti**, pridajte tento telefón pomocou **QR kódu** a tu ťuknite na **Oskenovať QR kód**. Jedno naskenovanie nastaví Nightscout s vlastným tokenom tohto telefónu a pri kóde, ktorý páruje, telefón aj spáruje. Telefón tiež prevezme názov, s ktorým ho pridali na hlavnom zariadení, ako názov svojej inštancie (písmená s diakritikou sa zmenia na písmená bez diakritiky, „Miloš“ sa zmení na „Milos“). **Po naskenovaní je nastavenie hotové**: sprievodca sa zavrie, pretože ďalšie kroky by iba ukazovali, čo urobil kód. Bez QR kódu tento krok preskočte. (Not on a computer: it has no camera, see [Getting the app](#aapsclient-platforms).)
 
    ![Krok Nastavenie z hlavného zariadenia s tlačidlom Oskenovať QR kód](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
