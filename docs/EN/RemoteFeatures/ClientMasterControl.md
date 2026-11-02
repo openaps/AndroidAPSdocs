@@ -134,7 +134,7 @@ Point the camera at the code. The client shows what the code does — the Nights
 
 ```{admonition} Scanning is available on Android
 :class: note
-The scanner is not available on iOS yet, and a desktop has no camera: use the PIN there.
+A computer without camera: use the PIN there.
 ```
 
 #### Entering the PIN
