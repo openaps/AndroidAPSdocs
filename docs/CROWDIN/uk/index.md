@@ -70,11 +70,12 @@ In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provi
 ## Зміст документації AAPS
 
 ```{toctree}
-:caption: Як користуватися цією документацією
+:caption: Using this documentation
+:titlesonly:
 
-Зміна мови та версії <./NavigateDoc/ChangeLanguageVersion.md>
-Пошук у документації <./NavigateDoc/SearchDoc.md>
-Оновлення та зміни документації <./Maintenance/DocumentationUpdate.md>
+Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
+Search the documentation <./NavigateDoc/SearchDoc.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
 :caption: 1) Початок роботи
