@@ -14,7 +14,7 @@
 
 **缺點**
 
-* Recommended only for experienced loopers. Some settings are not easy to recognize: you have to know from experience with a big Android AAPS phone how and where things are located. Some AAPS buttons are small and hard to tap: you need a precise touch, not stubby fingers.
+* 僅建議有循環使用經驗的使用者使用。有些設定不容易找到：你需要熟悉大型 Android AAPS 手機的操作，才知道各項功能的位置和使用方式。有些 AAPS 按鈕很小，不容易點選：你需要精準觸控，手指不能太粗短。
 * 只能作為 LooperPhone 使用。口袋中最好還是放一台普通的智慧型手機。 
 
 ### 電池壽命最佳化
@@ -43,6 +43,6 @@ Jelly 配備了強大的最佳化功能，使用 AAPS（以及 BYODA、xDrip、O
 
 ### Wear APK 的遠端連線
 
-For certain smart watches, like the Samsung Galaxy, 'Remote connection' under Advanced features in the Galaxy Wearable app must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
+使用某些智慧型手錶，例如 Samsung Galaxy 手錶時，必須在 Galaxy Wearable 應用程式的進階功能中開啟「遠端連線」，才能透過 Wi-Fi 遠端使用 Jelly、**Wear.apk** 和 **AAPS**。
 
 ![已開啟遠端連線的 Galaxy Wearable「進階功能」畫面](../images/wearos/galaxy_wearable_remote_connection.png)
