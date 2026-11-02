@@ -56,7 +56,7 @@ Time In Tight Range (TITR) 70-140 mg/dL or 3.9-7.8 mmol/L statistics are availab
 
 Dein Diabetes kann anders aussehen. Du solltest alle vorgeschlagenen Zielbereiche mit Deinem Endokrinologen oder Deinem Diabetes-Team besprechen. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress.
 
-![Statistiken](../images/Maintenance/statistics3.png)
+![Statistics](../images/Maintenance/statistics3.png)
 
 Below, the **Dexcom TIR** card shows detailed 14 days **TIR** statistics.
 
@@ -64,7 +64,7 @@ Below, the **Dexcom TIR** card shows detailed 14 days **TIR** statistics.
 
 HbA1c: die Schätzung des sich ergebenden glykierten Hämoglobins („Langzeit-Blutzucker“), basierend auf dem Durchschnitt der CGM-Messungen. Dies ist ein indikativer Wert, der möglicherweise nicht mit dem im Blut gemessenen HbA1c übereinstimmt.
 
-![Statistiken](../images/Maintenance/statistics4.png)
+![Statistics](../images/Maintenance/statistics4.png)
 
 (reviewing-statistics-agp)=
 ### Glucose tab: Ambulatory Glucose Profile (AGP)
@@ -114,7 +114,7 @@ At the end of each line, small icons show where the data comes from or has been 
 (screens-bolus-carbs)=
 ### Kohlenhydrate & Bolus
 
-![Kohlenhydrate & Bolus](../images/TreatmentsView1.png)
+![Carbs & bolus](../images/TreatmentsView1.png)
 
 Auf diesem Reiter kannst Du die Bolus- und Kohlenhydrateingaben einsehen. Each bolus (line **1**) shows the remaining associated IOB next to the insulin amount. Der Ursprung des Bolus kann entweder sein:
 * Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
@@ -141,7 +141,7 @@ The Treatments history can be used to correct faulty carb entries (_i.e._ you ov
 
 ### Temporäre Basalrate
 
-![Temporäre Basalrate](../images/TreatmentsView2.png)
+![Temp Basal](../images/TreatmentsView2.png)
 
 Die durch den Loop gesetzten **temporäre Basalraten** werden hier angezeigt. When there is still an impact on the IOB for an entry, the information is shown next to the rate (line **1**). Das können sein:
 * Positive IOB if the temp basal was higher than the one set in the Profile
@@ -159,7 +159,7 @@ Hier kann die Historie der temporären Ziele eingesehen werden.
 
 ### Profilwechsel
 
-![Profilwechsel](../images/TreatmentsView4.png)
+![Profile Switch](../images/TreatmentsView4.png)
 
 Die Historie der Profilwechsel ist hier zu sehen. You may see multiple entries each time you switch profile : line **1**, stored both in NS and Pump History, corresponds to the actual switch. Line **2**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user.
 
@@ -169,7 +169,7 @@ You can use the **Clone** button shown on line **2** to make a copy of a **Profi
 
 ### Careportal
 
-![Careportal (Behandlungen)](../images/TreatmentsView5.png)
+![Care portal](../images/TreatmentsView5.png)
 
 This tab shows all notes and careportal entries recorded in Nightscout.
 
