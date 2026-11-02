@@ -134,7 +134,7 @@ Pointez l'appareil photo vers le code. Le client affiche ce que fait le code —
 
 ```{admonition} Scanning is available on Android
 :class: note
-Le scanner n'est pas encore disponible sur iOS, et un ordinateur n'a pas d'appareil photo : utilisez le PIN dans ces cas.
+A computer without camera: use the PIN there.
 ```
 
 #### Saisir le PIN
