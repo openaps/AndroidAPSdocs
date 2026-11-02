@@ -46,7 +46,7 @@ Note: *You may need to wait for the next sensor glucose reading to arrive before
 
 **Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below. Each task shows its status (**1**): the orange "**Not completed yet**" turns into "**Completed, well done!**" as soon as **AAPS** has registered the action. Tap **Hint** (**2**) underneath a task to open the related documentation, in case you are not familiar with a specific action yet.
 
-![Screenshot Ziel 2](../images/Objective2_V2_5.png)
+![Screenshot objective 2](../images/Objective2_V2_5.png)
 
 Aufgaben, die zum Abschließen des **Ziel 2** notwendig sind, sind:
 - Setze Dein **Profil** für 10 Min. auf 90%.
@@ -96,7 +96,7 @@ Das Ziel kann frühestens nach **7 Tagen** abgeschlossen werden. Das ist eine Pf
 
 To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Additionally, you can change the minimum percentage for recommended basal rate changes with the "**Open mode minimum change**" setting in **Settings → Loop**. The higher the value, the fewer change notifications you will receive.
 
-![Open Loop Mindeständerung](../images/OpenLoop_MinimalRequestChange2.png)
+![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
@@ -241,10 +241,10 @@ Press "**More**" under an objective to see its tasks again:
 ![Details of an accomplished objective](../images/objectives/objective_1_details.png)
 
 (CompletingTheObjectives-go-back-in-objectives)=
-## Objective (Ziel) neu starten
+## Go back in objectives
 
 If you wish to go back in the **Objectives** for whatever reason, open the finished **Objective** with "**More**" and tap "**Reset finished state**":
 
-![Objective (Ziel) neu starten](../images/Objective_ClearFinished.png)
+![Go back in objectives](../images/Objective_ClearFinished.png)
 
 In the same way, the **Objective** you are currently working on can be restarted with "**Reset started state**".
