@@ -629,7 +629,7 @@ Das Feld **BZ** ist normalerweise schon mit dem letzten Wert Deines CGM ausgefü
 
 Der Ergebnis-Knopf unten zeigt den vorgeschlagenen Bolus. Tippst Du darauf, wirst Du um Bestätigung gebeten, bevor Insulin abgegeben wird. Solange die Bestätigung offen ist, gibt der Loop keinen SMB ab. Der Bolus, den Du bestätigst, stimmt also noch. Wird in diesem Moment ein SMB abgegeben, wartet **OK**, bis er abgeschlossen ist.
 
-Good to know:
+Gut zu wissen:
 
 * Liegt der berechnete Bolus über Deinem **[maximalen Bolus](#Preferences-maximum-bolus)**, wird er auf den maximalen Bolus verringert, und die Bestätigung zeigt die Warnung „Bolus Einschränkung angewendet“. Ein [QuickWizard](../DailyLifeWithAaps/QuickWizards.md) wird stattdessen abgelehnt.
 * When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only (not delivered by pump)**" warning stays at the top of the dialog, also when you scroll.
