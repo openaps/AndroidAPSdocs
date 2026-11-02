@@ -64,7 +64,7 @@ This module cannot be disabled as it is a core part of **AAPS**.
 
 ## 胰岛素
 
-![Insulin settings](../images/manage/insulin_settings.png)
+![胰岛素设置](../images/manage/insulin_settings.png)
 
 In **AAPS** 4 the insulin is no longer a plugin selected in **Configuration**. Open **Manage → Insulin settings** to set up the insulin you are using.
 
