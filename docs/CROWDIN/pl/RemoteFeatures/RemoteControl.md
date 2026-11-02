@@ -7,8 +7,8 @@
 
 Są cztery bardzo skuteczne narzędzia do zdalnego zarządzania **AAPS**:
 
-1) [Polecenia SMS](#RemoteControl_SMS-Commands) (telefon opiekuna może mieć Androida lub iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (telefon opiekuna z Androidem; wersja na iPhone'a jest w przygotowaniu) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS lub inny komputer/urządzenie), głównie do obserwowania: zobacz uwagę o [sterowaniu z urządzenia opiekuna](#client-master-control) w tej sekcji.  
-4) [Smartwatche](#RemoteControl_smartwatches) (Android)
+1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower device is an Android phone or tablet, or a Windows, Mac or Linux computer; on an iPhone you [build the app yourself](#aapsclient-iphone)) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device), mainly for following: see the note on [client control](#client-master-control) in that section.  
+4) [Smartwatches](#RemoteControl_smartwatches) (Android)
 
 Pierwsze trzy są przydatne głównie dla opiekunów/rodziców, ale smartwatche są bardzo przydatne dla opiekunów/rodziców **i** dla dorosłych z cukrzycą.
 
