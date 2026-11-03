@@ -8,7 +8,7 @@
 
 ### Disable Nightscout upload
 
-You shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+אין לאפשר לאף אפליקציה אחרת להעלות נתונים (ערכי סוכר וטיפולים) ל־Nightscout.
 
 ← תפריט ההמבורגר (1) ← Settings (2) ← Cloud Upload (3) ← Nightscout Sync (REST-API) (4) ← העבירו את `Enabled` למצב **OFF** (5)
 
