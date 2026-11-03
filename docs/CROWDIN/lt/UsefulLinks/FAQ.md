@@ -1,16 +1,16 @@
 # AAPS dažnai užduodami klausimai
 
-How to add questions to the FAQ: Follow these [instructions](../SupportingAaps/HowToEditTheDocs.md)
+Kaip pridėti klausimų į DUK: vadovaukitės šiomis [instrukcijomis](../SupportingAaps/HowToEditTheDocs.md)
 
-## General
+## Bendra informacija
 
 ### Can I just download the AAPS installation file?
 
-Ne. There is no downloadable apk file for AAPS. You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. Štai priežastis, kodėl:
+Ne. AAPS neturi atsisiunčiamo apk failo. Ją turite [susikurti](../SettingUpAaps/BuildingAaps.md) patys. Štai priežastis, kodėl:
 
-AAPS is used to control your pump and give insulin. Under current regulations in Europe, all systems classed as IIa or IIb are medical devices that require regulatory approval (a CE mark) which needs various studies and sign offs. Nesertifikuotų prietaisų platinimas yra neteisėtas. Panašios taisyklės yra kitose pasaulio šalyse.
+AAPS valdo jūsų pompą ir leidžia insuliną. Pagal dabartinius Europos teisės aktus visos IIa arba IIb klasės sistemos yra medicinos prietaisai, kuriems reikia oficialaus leidimo (CE ženklo), o jam gauti reikia įvairių tyrimų ir patvirtinimų. Nesertifikuotų prietaisų platinimas yra neteisėtas. Panašios taisyklės yra kitose pasaulio šalyse.
 
-This regulation is not restricted just to sales (in the meaning of getting money for something) but applies to any distribution (even giving away for free). Building a medical device for yourself is the only way to use the app within these regulations.
+Šis reglamentas taikomas ne tik pardavimui (kai už ką nors gaunami pinigai), bet ir bet kokiam platinimui (net jei dalijama nemokamai). Vienintelis būdas naudoti programėlę laikantis šių taisyklių – pasidaryti medicinos prietaisą sau patiems.
 
 Štai kodėl negalima platinti paruoštų programų apk pavidalu.
 
@@ -18,150 +18,150 @@ This regulation is not restricted just to sales (in the meaning of getting money
 
 ### How to begin?
 
-Start with [Preparing to start with AAPS](../Getting-Started/PreparingForAaps.md): it walks you through everything below in more detail.
+Pradėkite nuo puslapio [Pasirengimas pradėti naudoti AAPS](../Getting-Started/PreparingForAaps.md): jame išsamiau aprašyta viskas, kas nurodyta toliau.
 
-First of all, you have to **get loopable hardware components**:
+Pirmiausia turite **įsigyti ciklui tinkamus įrenginius**:
 
-* A [supported insulin pump](../Getting-Started/CompatiblePumps.md), 
-* an [Android smartphone](../Getting-Started/Phones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
-* a [continuous glucose monitoring system](../Getting-Started/CompatiblesCgms.md). 
+* [palaikoma insulino pompa](../Getting-Started/CompatiblePumps.md), 
+* [Android išmanusis telefonas](../Getting-Started/Phones.md) (Apple iOS AAPS nepalaiko – galite pažiūrėti [iOS Loop](https://loopkit.github.io/loopdocs/)) ir
+* [nuolatinės gliukozės stebėjimo sistema](../Getting-Started/CompatiblesCgms.md). 
 
-Secondly, you have to **setup your software components**: [AAPS](../SettingUpAaps/BuildingAaps.md), [CGM/FGM source](../Getting-Started/CompatiblesCgms.md) and a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
+Antra, turite **nustatyti programinės įrangos komponentus**: [AAPS](../SettingUpAaps/BuildingAaps.md), [NGJ/FGM šaltinį](../Getting-Started/CompatiblesCgms.md) ir [ataskaitų serverį](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-Thirdly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your [basal rate and carb ratio](../SettingUpAaps/YourAapsProfile.md) are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [Autotune](#autotune-how-autotune-calculates-adjustments) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old-fashioned way](https://integrateddiabetes.com/basal-testing/).
+Trečia, turite išmokti ir **suprasti OpenAPS etaloninį modelį (reference design), kad galėtumėte patikrinti savo gydymo parametrus**. Pagrindinis uždaro ciklo principas – jūsų [valandinė bazė ir IA](../SettingUpAaps/YourAapsProfile.md) turi būti tikslūs. Visose rekomendacijose daroma prielaida, kad jūsų valandinė bazė yra tinkama, o matomi pakilimai ar kritimai atsiranda dėl kitų veiksnių, kuriems reikia vienkartinių pakeitimų (sportas, stresas ir t. t.). Saugumo sumetimais pakeitimai, kuriuos gali atlikti uždaras ciklas, yra riboti (žr. didžiausią leistiną laikiną valandinę bazę [OpenAPS Reference Design](https://openaps.org/reference-design/)), todėl nereikėtų leistinos dozės eikvoti klaidingai pagrindinei valandinei bazei taisyti. Pavyzdžiui, jei prieš valgį ciklas dažnai nustato mažą laikiną bazę, tikriausiai reikia pakoreguoti valandinę bazę. Galite naudoti [Autotune](#autotune-how-autotune-calculates-adjustments): jis įvertina daug duomenų ir pasiūlo, ar ir kaip reikia pakoreguoti valandinę bazę ir (arba) JIF, taip pat ar reikia pakeisti IA. Arba valandinę bazę galite patikrinti ir nustatyti [senuoju būdu](https://integrateddiabetes.com/basal-testing/).
 
-### What practicalities of looping do I have?
+### Kokie yra praktiniai ciklo naudojimo aspektai?
 
 #### Password protection
 
-If you don't want your settings to be easily changed, you can protect them with a password, a PIN or your phone's biometric authentication (fingerprint, face). Open **Settings** > **Protection** > **Settings protection** and choose the type of protection. You can also protect the whole app or only boluses in the same place. See [Settings protection](#Preferences-settings-protection) for details.
+Jei nenorite, kad jūsų nustatymus būtų lengva pakeisti, galite juos apsaugoti slaptažodžiu, PIN kodu arba telefono biometriniu autentifikavimu (pirštų atspaudu, veidu). Atidarykite **Nustatymai** > **Apsauga** > **Nustatymų apsauga** ir pasirinkite apsaugos tipą. Toje pačioje vietoje taip pat galite apsaugoti visą programėlę arba tik bolusus. Daugiau informacijos rasite skyriuje [Nustatymų apsauga](#Preferences-settings-protection).
 
 #### Android Wear Smartwatches
 
-If you use the AAPS watch app to bolus or change settings, every request has to be confirmed on the watch: after you send it, the watch shows a summary with a **CONFIRM** button. See [Remote control from a Wear OS watch](../RemoteFeatures/RemoteControlWearOS.md).
+Jei AAPS laikrodžio programėle leidžiate bolusą arba keičiate nustatymus, kiekvieną užklausą reikia patvirtinti laikrodyje: ją išsiuntus, laikrodis parodo santrauką su mygtuku **PATVIRTINTI**. Žr. [AAPS valdymas Wear OS išmaniuoju laikrodžiu](../RemoteFeatures/RemoteControlWearOS.md).
 
 (FAQ-disconnect-pump)=
 
 #### Disconnect pump
 
-If you take your pump off for showering, bathing, swimming, sports or other activities you must let AAPS know that no insulin is delivered to keep IOB correct.
+Jei nusiimate pompą prausdamiesi po dušu, maudydamiesi vonioje, plaukdami, sportuodami ar per kitą veiklą, turite pranešti AAPS, kad insulinas netiekiamas, kad AIO būtų teisingas.
 
-The pump can be disconnected using the [loop icon](#AapsScreens-loop-status) on the AAPS main screen: press it and select **Disconnect pump** with the duration you need. If the activity takes longer than planned, press the icon again and pick a new duration: you don't need to reconnect first. See [Disconnecting the pump for showering or activity](#pumps-cannulas-disconnecting) for how to avoid a lack of insulin during long disconnections.
+Pompą galima atjungti naudojant [ciklo piktogramą](#AapsScreens-loop-status) AAPS pagrindiniame ekrane: paspauskite ją ir pasirinkite **Atjungti pompą** su reikiama trukme. Jei veikla užtrunka ilgiau nei planuota, vėl paspauskite piktogramą ir pasirinkite naują trukmę: iš pradžių pompos vėl prijungti nereikia. Kaip išvengti insulino trūkumo ilgai atjungus pompą, rasite skyriuje [Pompos atjungimas prausiantis ar sportuojant](#pumps-cannulas-disconnecting).
 
-#### Recommendations not only based on one single CGM reading
+#### Rekomendacijos pagrįstos ne vienu NGJ rodmeniu
 
-For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AAPS kicks in looping again.
+Saugumo sumetimais rekomendacijos pagrįstos ne vienu NGJ rodmeniu, o vidutiniu pokyčiu. Todėl, jei praleidžiate keletą rodmenų, vėl gavus duomenis gali praeiti šiek tiek laiko, kol AAPS vėl pradės veikti ciklu.
 
 #### Further readings
 
-There are several blogs with good tips to help you understand the practicalities of looping. Some of them are no longer online: the links below marked "archived copy" open a saved copy on the Internet Archive.
+Yra keli tinklaraščiai su naudingais patarimais, kurie padės suprasti praktinius ciklo naudojimo aspektus. Kai kurių jų jau nebėra internete: toliau pažymėtos nuorodos „archyvinė kopija“ atidaro išsaugotą kopiją Internet Archive svetainėje.
 
-    * [Fine-tuning Settings](https://web.archive.org/web/20171029031305/http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM (archived copy)
-    * [Why DIA matters](https://web.archive.org/web/20231130035027/http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM (archived copy)
+    * [Fine-tuning Settings](https://web.archive.org/web/20171029031305/http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM (archyvinė kopija)
+    * [Why DIA matters](https://web.archive.org/web/20231130035027/http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM (archyvinė kopija)
     * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-    * [Hormones and autosens](https://web.archive.org/web/20170902081839/http://seemycgm.com/2017/06/06/hormones-2/) See my CGM (archived copy)
+    * [Hormones and autosens](https://web.archive.org/web/20170902081839/http://seemycgm.com/2017/06/06/hormones-2/) See my CGM (archyvinė kopija)
     
 
 (what-emergency-equipment-is-recommended-to-take-with-me)= (FAQ-emergency-equipment)=
 
-### What emergency equipment is recommended to take with me?
+### Kokias pagalbos priemones rekomenduojama turėti su savimi?
 
-You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AAPS it is strongly recommended to have the following additional equipment with or near to you:
+Su savimi turite turėti tas pačias pagalbos priemones kaip ir kiekvienas 1 tipo diabetu sergantis žmogus, kuris naudoja insulino pompą. Naudojant AAPS ciklą primygtinai rekomenduojama turėti su savimi arba šalia šias papildomas priemones:
 
-* Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
-* Pump batteries
-* Access to your backups, both on the phone and in the cloud (e.g. Google Drive, Dropbox), so that you can set up AAPS again on another phone (see [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md)): 
-  * the current [apk](../SettingUpAaps/BuildingAaps.md) of AAPS and of any other apps you use (e.g. xDrip, Juggluco, BYODA).
-  * your keystore file (from building the apk) and its password,
-  * your latest settings export files from AAPS and your other apps,
-  * your **AAPS** master password: you cannot import the settings file without it.
+* Išorinė baterija (power bank) ir laidai telefonui, laikrodžiui ir (jei reikia) BT skaitytuvui arba Link įrenginiui įkrauti
+* Pompos baterijos
+* Prieiga prie atsarginių kopijų telefone ir debesyje (pvz., Google Drive, Dropbox), kad galėtumėte iš naujo nustatyti AAPS kitame telefone (žr. [Atsarginių kopijų kūrimas ir atkūrimas](../Maintenance/ExportImportSettings.md)): 
+  * dabartinis AAPS ir kitų jūsų naudojamų programėlių (pvz., xDrip, Juggluco, BYODA) [apk](../SettingUpAaps/BuildingAaps.md),
+  * jūsų raktų saugyklos failas (sukurtas kuriant apk) ir jo slaptažodis,
+  * naujausi AAPS ir kitų programėlių nustatymų eksporto failai,
+  * jūsų **AAPS** pagrindinis slaptažodis: be jo negalėsite importuoti nustatymų failo.
 
 (FAQ-organize-backups)=
 
 #### How to organize my backups?
 
-Export settings very regularly: after each pod or reservoir change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. Keep several old export files.
+Eksportuokite nustatymus labai reguliariai: po kiekvieno Pod ar rezervuaro keitimo, pakeitę profilį, atlikę mokymo etapą, pakeitę pompą… Net jei niekas nesikeičia, eksportuokite kartą per mėnesį. Keep several old export files.
 
-**AAPS** can do this for you: it can export your settings automatically (for example with an [Automation](#ExportImportSettings-Automating-Settings-Export) after each pod change) and save the export directly to a cloud folder (Google Drive). See [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md).
+**AAPS** gali tai padaryti už jus: ji gali automatiškai eksportuoti nustatymus (pvz., [automatizacija](#ExportImportSettings-Automating-Settings-Export) po kiekvieno Pod keitimo) ir išsaugoti eksporto failą tiesiai debesies aplanke (Google Drive). Žr. [Atsarginių kopijų kūrimas ir atkūrimas](../Maintenance/ExportImportSettings.md).
 
-### How can I safely and securely attach the CGM/FGM?
+### Kaip saugiai ir patikimai pritvirtinti NGJ/FGM?
 
-You can tape it. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Some loopers use the cheaper standard kinesiology tape or rocktape.
+Galite jį priklijuoti. Populiarioms NGJ sistemoms parduodami iš anksto perforuoti pleistrai („overpatch“) (ieškokite Google, eBay arba Amazon). Kai kurie ciklo naudotojai naudoja pigesnę standartinę kineziologinę juostą arba rocktape.
 
-You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
+Galite jį pritvirtinti. Taip pat galite įsigyti žasto apyrankių, kurios juostele pritvirtina NGJ/FGM (ieškokite Google, eBay arba Amazon).
 
-## APS algorithm
+## DKS algoritmas
 
-### Why does OpenAPS AMA show "dia: 3" even though I have a different DIA in my profile?
+### Kodėl OpenAPS AMA rodo "dia: 3", nors mano profilyje nustatyta kita IVT?
 
-With **OpenAPS AMA** selected in **Configuration** > **APS**, **Open plugin** shows the data sent to the algorithm. In its **Profile** section, `dia` is always 3.0 or less:
+Kai skiltyje **Konfigūracija** > **DKS** pasirinkta **OpenAPS AMA**, mygtukas **Atidaryti įskiepį** parodo algoritmui siunčiamus duomenis. Jo skiltyje **Profilis** `dia` visada yra 3.0 arba mažiau:
 
-![OpenAPS AMA plugin screen with dia 3.0 in the profile data](../images/screens/openaps_ama_plugin.png)
+![OpenAPS AMA įskiepio ekranas, kai profilio duomenyse dia 3.0](../images/screens/openaps_ama_plugin.png)
 
-In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter any longer.
+AMA algoritme DIA iš tikrųjų nereiškia „insulino veikimo trukmės“ (IVT). Tai parametras, kuris anksčiau buvo susijęs su IVT. Dabar jis reiškia, „per kiek laiko korekcija turi būti baigta“. Jis neturi nieko bendro su AIO skaičiavimu. OpenAPS SMB šio parametro nebereikia.
 
 ## Other settings
 
-### Nightscout settings
+### Nightscout nustatymai
 
 (FAQ-nsclient-blocked)=
 
-#### AAPSClient (or AAPS) does not upload data: "Blocked by…". What can I do?
+#### AAPSClient (arba AAPS) neįkelia duomenų: "Užblokuota dėl…". What can I do?
 
-The NSClient status shows why no data is sent:
+NSClient būsena rodo, kodėl duomenys nesiunčiami:
 
-* **Blocked by connectivity options**: the connection settings do not allow the current connection. For example, you are on cellular data but only Wi-Fi is allowed, or you are not on one of the allowed Wi-Fi networks (SSIDs).
-* **Blocked by charging options**: the connection settings only allow syncing while the phone is charging (or only on battery), and this is not the case right now.
-* **No connectivity**: the phone has no internet connection.
+* **Užblokuota dėl ryšio parinkčių**: ryšio nustatymai neleidžia naudoti dabartinio ryšio. Pavyzdžiui, naudojate mobiliuosius duomenis, bet leidžiamas tik Wi-Fi, arba nesate prisijungę prie vieno iš leidžiamų Wi-Fi tinklų (SSID).
+* **Užblokuota dėl įkrovimo parinkčių**: ryšio nustatymai leidžia sinchronizuoti tik tada, kai telefonas kraunamas (arba tik kai nekraunamas), o dabar taip nėra.
+* **Nėra ryšio**: telefonas neprisijungęs prie interneto.
 
-Check the [NSClient connection settings](#Preferences-nsclient): **Use cellular data**, **Use roaming**, **Use WiFi**, **WiFi SSID**, **Sync on battery** and **Sync while charging**.
+Patikrinkite [NSClient ryšio nustatymus](#Preferences-nsclient): **Naudoti mobiliuosius duomenis**, **Naudoti tarptinklinį ryšį**, **Naudoti Wi‑Fi**, **WiFi SSID**, **Sinchronizuoti neįkraunant** ir **Sinchronizuoti įkraunant**.
 
-### CGM settings
+### NGJ nustatymai
 
 (FAQ-advanced-filtering)=
 
-#### Why does AAPS say 'SMB always and after carbs disabled because active BG source doesn't support advanced filtering'?
+#### Kodėl AAPS rašo 'Funkcijos „SMB visada“ ir „SMB po angliavandenių“ išjungtos, nes glikemijos duomenų šaltinis neturi reikalingo filtravimo'?
 
-**Enable SMB always** and **Enable SMB after carbs** can only be used with a [trusted BG data source](#GettingStarted-TrustedBGSource): a sensor and CGM app that can tell **AAPS** which sensor the readings come from. With any other BG source, **AAPS** switches these two options off and shows this message. Check the list of trusted sources and, if your sensor is listed, make sure you use one of the CGM apps shown for it. See also [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+**Naudoti SMB visada** ir **Naudoti SMB po angliavandenių** galima naudoti tik su [patikimu glikemijos duomenų šaltiniu](#GettingStarted-TrustedBGSource): jutikliu ir NGJ programėle, kurie gali pranešti **AAPS**, iš kurio jutiklio gaunami rodmenys. Su bet kuriuo kitu glikemijos šaltiniu **AAPS** šias dvi parinktis išjungia ir rodo šį pranešimą. Peržiūrėkite patikimų šaltinių sąrašą ir, jei jūsų jutiklis jame yra, įsitikinkite, kad naudojate vieną iš jam nurodytų NGJ programėlių. Taip pat žr. [Gliukozės duomenų glodinimas](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Pump
 
 #### Batteries
 
-Looping can reduce the pump battery faster than normal use because the system interacts through Bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site. Tricks to increase battery life include:
+Naudojant ciklą pompos baterija gali išsikrauti greičiau nei įprastai, nes sistema per Bluetooth bendrauja su pompa daug dažniau nei pompą rankiniu būdu valdantis žmogus. Bateriją geriausia pakeisti, kai liko 25 %, nes tada ryšys tampa nestabilus. Pompos baterijos įspėjimus galite nustatyti savo Nightscout svetainėje kintamuoju PUMP_WARN_BATT_P. Tricks to increase battery life include:
 
-* reduce the length of time the LCD stays on (within pump settings menu)
+* sutrumpinkite laiką, kiek pompos ekranas lieka įjungtas (pompos nustatymų meniu)
 * reduce the length of time the backlight stays on (within pump settings menu)
 * select notification settings to a beep rather than vibrate (within pump settings menu)
-* only press the buttons on the pump to reload, use AAPS to view all history, battery level and reservoir volume.
-* AAPS app may often be closed to save energy or free RAM on some phones. When AAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, enable **Log app start event** in the NSClient **Advanced settings**: Nightscout will receive an event at every restart of AAPS, which makes it easy to track the issue. To reduce this happening, turn off battery optimization for AAPS so that the phone stops closing it down: see [battery savings](#FAQ-battery-savings) below.
-* clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
-* for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy while in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
-* see also more tips for [particular types of battery](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
+* pompos mygtukus spauskite tik keisdami rezervuarą (reload), o visą istoriją, baterijos lygį ir rezervuaro tūrį žiūrėkite AAPS.
+* Kai kuriuose telefonuose AAPS programėlė gali būti dažnai uždaroma, kad būtų taupoma energija arba atlaisvinta RAM. Kai AAPS iš naujo paleidžiama, ji kiekvieną kartą užmezga Bluetooth ryšį su pompa ir iš naujo nuskaito dabartinę valandinę bazę ir bolusų istoriją. Tai eikvoja bateriją. Norėdami tai patikrinti, NSClient skiltyje **Papildomi nustatymai** įjunkite **Įrašyti programos paleidimą**: Nightscout gaus įvykį kaskart, kai AAPS paleidžiama iš naujo, todėl problemą bus lengva sekti. Kad tai nutiktų rečiau, išjunkite AAPS baterijos optimizavimą, kad telefonas jos neuždarinėtų: žr. [baterijos taupymas](#FAQ-battery-savings) toliau.
+* nuvalykite baterijos kontaktus spiritu suvilgyta servetėle, kad neliktų gamyklinio vaško ar tepalo.
+* [Dana R/RS pompose](../CompatiblePumps/DanaRS-Insulin-Pump.md) paleidimo metu per bateriją sąmoningai leidžiama didelė srovė, kad būtų pramušta pasyvacijos plėvelė (ji apsaugo nuo energijos praradimo sandėliuojant), tačiau ją ne visada pavyksta pramušti 100 %. Išimkite ir vėl įdėkite bateriją 2–3 kartus, kol ekrane bus rodoma 100 %, arba prieš įdėdami bateriją baterijos raktu sekundės daliai sujunkite abu jos kontaktus (trumpasis jungimas).
+* taip pat žr. daugiau patarimų apie [tam tikrų tipų baterijas](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
 
-#### Changing reservoirs and cannulas
+#### Rezervuarų ir kaniulių keitimas
 
-The reservoir must be changed directly on the pump, then the change is recorded in **AAPS**. Follow the step-by-step [guide for changing the pump reservoir and cannula](#pumps-cannulas-changing-reservoir-and-cannula).
+Rezervuarą reikia keisti tiesiai pompoje, tada keitimas įrašomas **AAPS**. Vadovaukitės [pompos rezervuaro ir kaniulės keitimo instrukcija](#pumps-cannulas-changing-reservoir-and-cannula) žingsnis po žingsnio.
 
-### Wallpaper
+### Ekrano užsklanda
 
-You can find the AAPS wallpaper for your phone on the [phones page](#Phones-phone-wallpaper).
+AAPS ekrano užsklandą telefonui rasite [telefonų puslapyje](#Phones-phone-wallpaper).
 
 ### Daily usage
 
-Many of the situations below can be prepared once as a [scene](#scenes): a preset that switches profile, temp target and other settings with one tap. **AAPS** offers ready-made templates, for example *Exercise*, *Sleep*, *Alcohol* or *Bathing*.
+Daugelį toliau aprašytų situacijų galima vieną kartą paruošti kaip [scenarijų](#scenes): ruošinį, kuris vienu paspaudimu pakeičia profilį, laikiną tikslą ir kitus nustatymus. **AAPS** siūlo paruoštus ruošinius, pavyzdžiui, *Sportas*, *Miegas*, *Alkoholis* arba *Maudymasis*.
 
 #### Hygiene
 
 (what-to-do-when-taking-a-shower-or-bath)=
 
-##### What to do when taking a shower or bath?
+##### Ką daryti prausiantis po dušu ar maudantis vonioje?
 
-You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump). The *Bathing* [scene](#scenes) template does this for you.
+Prausdamiesi po dušu ar maudydamiesi vonioje galite nusiimti pompą. Tokiam trumpam laikui jos gali ir nereikėti, bet turite pranešti AAPS, kad pompą atjungėte, kad AIO skaičiavimai būtų teisingi. Žr. [aprašymą aukščiau](#FAQ-disconnect-pump). [Scenarijaus](#scenes) ruošinys *Maudymasis* tai padaro už jus.
 
 #### Work
 
-Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, or if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need, or save your workday settings as a [scene](#scenes).
+Priklausomai nuo darbo, darbo dienomis galite naudoti kitus gydymo parametrus. Jei naudojate ciklą, verta apsvarstyti [profilio keitimą](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) įprastai darbo dienai. Pavyzdžiui, galite perjungti profilį į didesnį nei 100 %, jei jūsų darbas mažiau aktyvus (pvz., sėdite prie stalo), arba į mažesnį nei 100 %, jei visą dieną esate aktyvūs ir ant kojų. Taip pat galite apsvarstyti aukštą arba žemą laikiną tikslą arba [profilio laiko perstūmimą](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile), kai dirbate daug anksčiau ar vėliau nei įprastai arba dirbate pamainomis. Taip pat galite susikurti antrą profilį (pvz., 'namai' ir 'darbo diena') ir kasdien perjungti profilį į tą, kurio iš tikrųjų reikia, arba išsaugoti darbo dienos nustatymus kaip [scenarijų](#scenes).
 
 ### Leisure activities
 
@@ -169,67 +169,67 @@ Depending on your job, you may choose to use different treatment factors on work
 
 #### Sports
 
-You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
+Turite pakeisti senus sporto įpročius, kuriuos turėjote prieš naudodami ciklą. Jei, kaip anksčiau, tiesiog suvalgysite vieną ar daugiau angliavandenių porcijų sportui, uždaro ciklo sistema juos atpažins ir atitinkamai koreguos.
 
-So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
+Taigi organizme turėtumėte daugiau angliavandenių, bet tuo pačiu metu ciklas tam priešintųsi ir leistų insuliną.
 
-When looping you should try these steps:
+Kai naudojate ciklą, išbandykite šiuos žingsnius:
 
-* Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
-* Set an [activity temp target](#TempTargets-activity-temp-target) above your standard target. With a percentage below 100 % and a duration, the same **Activate** screen offers a **Temporary target / Activity** switch that starts both at once.
-* If you are using SMB make sure ["Enable SMB with high temp targets"](#Open-APS-features-enable-smb-with-high-temp-targets) and ["Enable SMB always"](#Open-APS-features-enable-smb-always) are disabled.
+* Atlikite [profilio keitimą](#ProfileSwitch-change-percentage) mažiau nei 100%: pagrindiniame ekrane bakstelėkite profilio pavadinimą, bakstelėkite apvalų mygtuką **▶**, tada nustatykite **Procentais** ir **Trukmė**.
+* Nustatykite [laikiną tikslą „Sportas“](#TempTargets-activity-temp-target), aukštesnį už įprastą tikslą. Kai procentas mažesnis nei 100 % ir nustatyta trukmė, tame pačiame ekrane **Aktyvuoti** rodomas jungiklis **Laikinas tikslas / Sportas**, kuris įjungia abu iš karto.
+* Jei naudojate SMB, įsitikinkite, kad [„Naudoti SMB esant aukštesniam laikinam gliukozės tikslui“](#Open-APS-features-enable-smb-with-high-temp-targets) ir [„Naudoti SMB visada“](#Open-APS-features-enable-smb-always) yra išjungti.
 
-Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
+Svarbu šiuos nustatymus pakeisti iš anksto ir atkurti po sporto. Pakeitimus atlikite laiku prieš sportą ir atsižvelkite į raumenų glikogeno atsargų papildymo poveikį.
 
-The *Exercise* and *Post-exercise Night* [scene](#scenes) templates bundle these settings, so you can start them with one tap. If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../DailyLifeWithAaps/Automations.md) to start the profile switch and TT, or the scene. Location based automation might also be an idea but makes preprocessing more difficult.
+[Scenarijų](#scenes) ruošiniai *Sportas* ir *Naktis po sporto* sujungia šiuos nustatymus, todėl juos galite paleisti vienu paspaudimu. Jei sportuojate reguliariai tuo pačiu metu (pvz., treniruotė sporto salėje), galite naudoti [automatizaciją](../DailyLifeWithAaps/Automations.md), kuri paleistų profilio keitimą ir LT arba scenarijų. Taip pat galima naudoti automatizaciją pagal vietą, tačiau tada sunkiau viską paruošti iš anksto.
 
-The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
+Profilio keitimo procentas, sporto laikino tikslo reikšmė ir geriausias laikas pakeitimams yra individualūs. Ieškodami sau tinkamos reikšmės, pradėkite nuo saugesnių nustatymų (mažesnis procentas ir aukštesnis LT).
 
 #### Sex
 
-You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump).
+Galite nusiimti pompą, kad būtumėte „laisvi“, bet turite apie tai pranešti AAPS, kad AIO skaičiavimai būtų teisingi. Žr. [aprašymą aukščiau](#FAQ-disconnect-pump).
 
 #### Drinking alcohol
 
-Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AAPS:
+Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. Turite rasti savo būdą, kaip tai valdyti, naudodami šias AAPS funkcijas:
 
-* Deactivating closed loop mode and treating the diabetes manually or
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
-* do a [profile switch](#ProfileSwitch-change-percentage) to noticeably less than 100% 
+* Išjungti uždaro ciklo režimą ir valdyti diabetą rankiniu būdu arba
+* nustatyti aukštus laikinus tikslus ir išjungti NDM, kad ciklas nedidintų AIO dėl nedeklaruoto maisto, arba
+* atlikti [profilio keitimą](#ProfileSwitch-change-percentage) į gerokai mažesnį nei 100 % 
 
-The *Alcohol* [scene](#scenes) template is a starting point you can adapt to your own method.
+[Scenarijaus](#scenes) ruošinys *Alkoholis* – atspirties taškas, kurį galite pritaikyti savo būdui.
 
-When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
+Vartodami alkoholį, visada turite stebėti NGJ, kad laiku suvalgytumėte angliavandenių ir išvengtumėte hipoglikemijos.
 
-#### Sleeping
+#### Miegas
 
-##### How can I loop during the night without mobile and Wi-Fi radiation?
+##### Kaip naudoti ciklą naktį be mobiliojo ryšio ir Wi-Fi spinduliuotės?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work if your CGM app runs on the same phone as AAPS, such as xDrip, Juggluco or BYODA; it will NOT work if you get the BG-readings via Nightscout):
+Daugelis naudotojų naktį įjungia telefone lėktuvo režimą. Jei norite, kad ciklas jums padėtų miegant, darykite taip (tai veiks tik tada, jei jūsų NGJ programėlė veikia tame pačiame telefone kaip AAPS, pvz., xDrip, Juggluco ar BYODA; tai NEVEIKS, jei KG rodmenis gaunate per Nightscout):
 
 1. Įjunkite lėktuvo režimą mobiliajame telefone.
 2. Palaukite, kol lėktuvo režimas bus įjungtas.
 3. Įjunkite Bluetooth.
 
-You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+Tada negausite skambučių ir nebūsite prisijungę prie interneto. Tačiau ciklas vis tiek veikia.
 
-Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip) when phone is in airplane mode. In xDrip, go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+Kai kurie žmonės pastebėjo problemų su vietiniu transliavimu (AAPS negauna KG reikšmių iš xDrip), kai telefonas veikia lėktuvo režimu. xDrip programėlėje eikite į Settings > Inter-app settings > Identify receiver ir įveskite `info.nightscout.androidaps`.
 
 ![xDrip Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
-If you want different settings at night (for example a higher target), the *Sleep* [scene](#scenes) template is a good starting point.
+Jei naktį norite kitokių nustatymų (pvz., aukštesnio tikslo), gera pradžia – [scenarijaus](#scenes) ruošinys *Miegas*.
 
 #### Traveling
 
 ##### How to deal with time zone changes?
 
-With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone traveling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) page for more details.
+With Dana R and Dana R Korean you don't have to do anything. Kitoms pompoms daugiau informacijos rasite puslapyje [Laiko juostos keitimas ir vasaros laikas](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
 
 ### Medical topics
 
 #### Hospitalization
 
-If you want to share some information about AAPS and DIY looping with your clinicians, you can print out the [guide to AAPS for clinicians](../UsefulLinks/ClinicianGuideToAaps.md).
+Jei norite pasidalyti informacija apie AAPS ir DIY ciklą su gydytojais, galite atsispausdinti [AAPS vadovą gydytojams](../UsefulLinks/ClinicianGuideToAaps.md).
 
 #### Medical appointment with your endocrinologist
 
@@ -241,7 +241,7 @@ You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or
 
 ### My problem is not listed here.
 
-See [where to get help](../GettingHelp/WhereCanIGetHelp.md). If you found the solution yourself, **remind us to add it to this list!**
+Žr. puslapį [Kur gauti pagalbos?](../GettingHelp/WhereCanIGetHelp.md) If you found the solution yourself, **remind us to add it to this list!**
 
 ### Building and installing
 
@@ -249,84 +249,84 @@ See [where to get help](../GettingHelp/WhereCanIGetHelp.md). If you found the so
 
 #### I have problems, errors building the app.
 
-Please check the troubleshooting page for the way you build **AAPS** (see [Building AAPS](../SettingUpAaps/BuildingAaps.md)):
+Peržiūrėkite trikčių šalinimo puslapį pagal tai, kaip kuriate **AAPS** (žr. [AAPS kūrimas](../SettingUpAaps/BuildingAaps.md)):
 
-* building with a browser: [Browser build: troubleshooting](#aaps-ci-troubleshooting),
-* building with Android Studio: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+* kuriant naršyklėje: [Kūrimas naršyklėje: trikčių šalinimas](#aaps-ci-troubleshooting),
+* kuriant su Android Studio: [Android Studio trikčių šalinimas](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 (FAQ-build-error-file-name-too-long)=
 
 #### Build error: file name too long
 
-This error can happen when building with Android Studio: the build stops with an error stating the file name is too long. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "C:\src\AndroidAPS").
+Ši klaida gali atsirasti kuriant su Android Studio: kūrimas sustoja su klaida, kad failo pavadinimas per ilgas. Galimi sprendimai: Perkelkite šaltinio failus į aplanką, kuris yra arčiau disko šakninio aplanko (pvz., "C:\src\AndroidAPS").
 
-From Android Studio: Make sure "Gradle" is done syncing and indexing after opening the project and pulling from GitHub. Execute a Build->Clean Project before doing a Rebuild Project. Execute File->Invalidate Caches and Restart Android Studio.
+Android Studio: Atidarę projektą ir atsisiuntę pakeitimus iš GitHub įsitikinkite, kad "Gradle" baigė sinchronizavimą ir indeksavimą. Prieš vykdydami Rebuild Project, įvykdykite Build->Clean Project. Įvykdykite File->Invalidate Caches ir paleiskite Android Studio iš naujo.
 
 (FAQ-running-dev-version)=
 
-#### Alert: Running dev version. Closed loop is disabled
+#### Perspėjimas: Naudojama neužbaigta versija. Uždaras ciklas neaktyvus
 
-**AAPS** shows this message when you run a development (dev) version without engineering mode: in a dev version, closed loop only works in engineering mode.
+**AAPS** rodo šį pranešimą, kai naudojate kūrimo (dev) versiją be inžinerinio režimo: dev versijoje uždaras ciklas veikia tik inžineriniu režimu.
 
-The dev version is meant for testing, not for actual looping: read [Development branch](../AdvancedOptions/DevBranch.md) before going further.
+Dev versija skirta testuoti, o ne tikram ciklo naudojimui: prieš tęsdami perskaitykite [Kūrimo atšaka (dev)](../AdvancedOptions/DevBranch.md).
 
-To turn on engineering mode:
+Kaip įjungti inžinerinį režimą:
 
-1. Place a file named `engineering_mode` in the `extra` subfolder of your AAPS directory (the folder you chose in the setup wizard, usually `AAPS/extra`). Any file will do as long as it is properly named.
-2. Restart **AAPS** so that it finds the file.
+1. Įdėkite failą, pavadintą `engineering_mode`, į AAPS aplanko poaplankį `extra` (tai aplankas, kurį pasirinkote sąrankos vedlyje, dažniausiai `AAPS/extra`). Any file will do as long as it is properly named.
+2. Paleiskite **AAPS** iš naujo, kad ji rastų failą.
 
-Hint: Make a copy of an existing logfile and rename it to "engineering_mode" (note: no file extension!).
+Patarimas: padarykite esamo žurnalo failo kopiją ir pervadinkite ją į "engineering_mode" (pastaba: be failo plėtinio!).
 
-### Objectives
+### Mokymo etapai
 
-#### I'm stuck on an objective and need help.
+#### Įstrigau ties mokymo etapu ir man reikia pagalbos.
 
-First read [Completing the Objectives](../SettingUpAaps/CompletingTheObjectives.md). If you are still stuck, screen capture the question and answers and post them on the Discord AAPS channel. Don't forget to tell which options you choose (or not) and why. You'll get hints and help but you'll need to find the answers.
+Pirmiausia perskaitykite [Mokymo etapų atlikimas](../SettingUpAaps/CompletingTheObjectives.md). Jei vis tiek nepavyksta, padarykite klausimo ir atsakymų ekrano kopiją ir paskelbkite ją AAPS kanale Discord. Don't forget to tell which options you choose (or not) and why. You'll get hints and help but you'll need to find the answers.
 
-### Settings, passwords and backups
+### Nustatymai, slaptažodžiai ir atsarginės kopijos
 
 (FAQ-reset-master-password)=
 
-#### How to reset the master password?
+#### Kaip iš naujo nustatyti pagrindinį slaptažodį?
 
-If you forgot your master password, you can reset it to your pump's serial number:
+Jei pamiršote pagrindinį slaptažodį, galite jį pakeisti į pompos serijos numerį:
 
-1. Create an empty file named `PasswordReset` (no file extension) in the `extra` subfolder of your AAPS directory (usually `AAPS/extra`).
-2. Restart **AAPS**. Your pump must be connected: **AAPS** shows "Waiting for pump…" and needs to read the pump serial number within 30 seconds.
-3. **AAPS** shows "Password set!": your master password is now your **pump serial number**. The `PasswordReset` file is deleted automatically.
-4. Open **Settings** > **Protection** > **Master password** and set a new password.
+1. Sukurkite tuščią failą, pavadintą `PasswordReset` (be plėtinio), AAPS aplanko poaplankyje `extra` (dažniausiai `AAPS/extra`).
+2. Paleiskite **AAPS** iš naujo. Pompa turi būti prijungta: **AAPS** rodo "Laukiama pompos…" ir per 30 sekundžių turi nuskaityti pompos serijos numerį.
+3. **AAPS** rodo "Slaptažodis nustatytas!": jūsų pagrindinis slaptažodis dabar yra **pompos serijos numeris**. Failas `PasswordReset` ištrinamas automatiškai.
+4. Atidarykite **Nustatymai** > **Apsauga** > **Pagrindinis slaptažodis** ir nustatykite naują slaptažodį.
 
-If the pump is not reached in time, nothing changes: check the pump connection and try again.
+Jei pompa laiku nepasiekiama, niekas nepasikeičia: patikrinkite ryšį su pompa ir bandykite dar kartą.
 
-This only resets the master password. A settings, application or bolus password or PIN is not reset, but you can always use the master password instead of them.
+Taip iš naujo nustatomas tik pagrindinis slaptažodis. Nustatymų, programėlės ar boluso slaptažodis arba PIN kodas iš naujo nenustatomas, bet vietoj jų visada galite naudoti pagrindinį slaptažodį.
 
-    {admonition} Old settings files
+    {admonition} Seni nustatymų failai
     :class: warning
-    Settings files exported with the old master password can only be imported with that old password.
+    Nustatymų failus, eksportuotus su senu pagrindiniu slaptažodžiu, galima importuoti tik su tuo senu slaptažodžiu.
 
 (FAQ-where-are-settings-files)=
 
 #### Where can I find settings files?
 
-Settings files are stored in the `preferences` subfolder of the AAPS directory you chose in the [setup wizard](#SetupWizard-StoragePermission) (for example `/internal storage/AAPS/preferences`). If you set up a cloud folder (Google Drive), your exports can also be saved there. See [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md).
+Nustatymų failai saugomi AAPS aplanko, kurį pasirinkote [sąrankos vedlyje](#SetupWizard-StoragePermission), poaplankyje `preferences` (pvz., `/internal storage/AAPS/preferences`). Jei nustatėte debesies aplanką (Google Drive), eksportuoti failai gali būti išsaugoti ir ten. Žr. [Atsarginių kopijų kūrimas ir atkūrimas](../Maintenance/ExportImportSettings.md).
 
-WARNING: Make sure not to lose your password as without it you will not be able to import an encrypted settings file!
+ĮSPĖJIMAS: nepameskite slaptažodžio, nes be jo negalėsite importuoti užšifruoto nustatymų failo!
 
 (FAQ-import-settings-earlier-versions)=
 
-#### How do I import settings from earlier versions of AAPS into AAPS v3 or v4 ?
+#### Kaip importuoti nustatymus iš ankstesnių AAPS versijų į AAPS v3 arba v4?
 
-You can only import settings (in AAPS v3 or v4) that were exported using AAPS v2.8x or later. If you were using a version of AAPS older than v2.8x or you need to use setting exports older than v2.8x, then you need to install AAPS v2.8 first. Import the older settings of v2.x in v2.8. After checking that all is OK, you can export settings from v2.8. Install the current AAPS version and import v2.8 settings in it.
+(AAPS v3 arba v4) galite importuoti tik tuos nustatymus, kurie buvo eksportuoti su AAPS v2.8x ar naujesne versija. Jei naudojote senesnę nei v2.8x AAPS versiją arba turite naudoti senesnius nei v2.8x nustatymų eksporto failus, pirmiausia turite įdiegti AAPS v2.8. Importuokite senesnius v2.x nustatymus į v2.8. Patikrinę, kad viskas gerai, eksportuokite nustatymus iš v2.8. Įdiekite dabartinę AAPS versiją ir importuokite į ją v2.8 nustatymus.
 
-If you use the same key to build the old and the new version, you won't even have to import settings. You can install the new version over the old one.
+Jei senai ir naujai versijai kurti naudojate tą patį raktą, nustatymų importuoti net nereikės. Naują versiją galite įdiegti ant senosios.
 
-There were some new objectives added. You'll need to validate them.
+Buvo pridėta naujų mokymo etapų. Turėsite juos atlikti.
 
 (FAQ-delete-treatments)=
 
-#### Where can I delete treatments?
+#### Kur galiu ištrinti terapijos įrašus?
 
-Open the **menu** (☰) and select **Treatments history**. Long press an entry to select it, tap more entries if needed, then tap the **trash can** icon and confirm. See [Treatments history](#aaps-screens-treatments).
+Atidarykite **meniu** (☰) ir pasirinkite **Terapijos istorija**. Ilgai palaikykite įrašą, kad jį pažymėtumėte, jei reikia, bakstelėkite daugiau įrašų, tada bakstelėkite **šiukšliadėžės** piktogramą ir patvirtinkite. Žr. [Terapijos istorija](#aaps-screens-treatments).
 
 ### Phone and connection problems
 
@@ -334,48 +334,48 @@ Open the **menu** (☰) and select **Treatments history**. Long press an entry t
 
 #### AAPS stops everyday around the same time.
 
-* Google Play Protect may shut down **AAPS** every morning on some phones. If this happens, go to the Google Play options and disable **Google Play Protect**.
-* Check for "cleaning" apps (ie CCleaner etc) and uninstall them.
-* Turn off all battery optimizations for **AAPS** (see [battery savings](#FAQ-battery-savings) below).
+* Kai kuriuose telefonuose Google Play Protect gali kiekvieną rytą išjungti **AAPS**. Jei taip nutinka, eikite į Google Play parinktis ir išjunkite **Google Play Protect**.
+* Patikrinkite, ar nėra „valymo“ programėlių (pvz., CCleaner ir pan.), ir jas pašalinkite.
+* Išjunkite visus **AAPS** baterijos optimizavimus (žr. [baterijos taupymas](#FAQ-battery-savings) toliau).
 
 (FAQ-battery-savings)=
 
 #### How to configure battery savings?
 
-Your phone may suspend **AAPS** and related apps (CGM app, Bluetooth) when you are not using it. **AAPS** then cannot do its work, and Bluetooth connections to the sensor and pump (or RileyLink) may be shut down, causing "pump unreachable" alerts and communication errors.
+Kai telefono nenaudojate, jis gali sustabdyti **AAPS** ir susijusias programėles (NGJ programėlę, Bluetooth). Tada **AAPS** negali atlikti savo darbo, o Bluetooth ryšys su jutikliu ir pompa (arba RileyLink) gali būti nutrauktas – dėl to atsiranda perspėjimai "Pompa nepasiekiama" ir ryšio klaidos.
 
-Turn off battery optimization for **AAPS**, your CGM app (e.g. xDrip) and the Bluetooth system app. The way to do this depends on the phone's brand, model and Android version:
+Išjunkite **AAPS**, NGJ programėlės (pvz., xDrip) ir Bluetooth sistemos programėlės baterijos optimizavimą. Kaip tai padaryti, priklauso nuo telefono gamintojo, modelio ir Android versijos:
 
-* see [Battery optimization](#generaltroubleshooting-android-related-issues) for Pixel, Samsung and Huawei phones,
-* in **AAPS**, open the **menu** (☰) > **About** and tap **Don't kill my app?**, or visit [Don't kill my app](https://dontkillmyapp.com/) for other brands.
+* Pixel, Samsung ir Huawei telefonams žr. [Baterijos optimizavimas](#generaltroubleshooting-android-related-issues),
+* **AAPS** atidarykite **meniu** (☰) > **Apie** ir bakstelėkite **Don't kill my app?** arba kitų gamintojų telefonams apsilankykite [Don't kill my app](https://dontkillmyapp.com/).
 
-If you are not sure that battery savings cause your problem, you can temporarily turn off all battery savings on the phone: your battery will drain faster, but you will quickly see if the problem goes away.
+Jei nesate tikri, kad problemą sukelia baterijos taupymas, galite laikinai išjungti visą baterijos taupymą telefone: baterija išsikraus greičiau, bet greitai pamatysite, ar problema dingo.
 
 (FAQ-pump-unreachable-alerts)=
 
-#### Pump unreachable alerts several times a day or at night.
+#### Perspėjimai „Pompa nepasiekiama“ kelis kartus per dieną arba naktį.
 
-Your phone may be suspending **AAPS** or even Bluetooth, causing it to lose the connection to the pump or RileyLink (see [battery savings](#FAQ-battery-savings) above).
+Telefonas gali stabdyti **AAPS** ar net Bluetooth, todėl prarandamas ryšys su pompa arba RileyLink (žr. [baterijos taupymas](#FAQ-battery-savings) aukščiau).
 
-You can also change when the alert is raised: press the **Settings** (gear) icon on the top right of the main screen, then select **Local alerts** > **Pump unreachable threshold** (30 to 300 minutes). Check your pump's page: some recommend a value, e.g. 120 minutes for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md).
+Taip pat galite pakeisti, kada rodomas perspėjimas: pagrindinio ekrano viršuje dešinėje paspauskite piktogramą **Nustatymai** (krumpliaratis), tada pasirinkite **Lokalūs įspėjimai** > **Perspėjimo apie nepasiekiamą pompą riba** (nuo 30 iki 300 minučių). Peržiūrėkite savo pompos puslapį: kai kuriuose rekomenduojama reikšmė, pvz., 120 minučių [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md).
 
 (FAQ-link-unresponsive)=
 
-#### My link/pump/pod is unresponsive (RL/OL/EmaLink…)
+#### Mano Link / pompa / Pod nereaguoja (RL/OL/EmaLink…)
 
-With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
+Kai kuriuose telefonuose nutrūksta Bluetooth ryšys su Link įrenginiais (RL/OL/EmaLink).
 
-Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
+Kartais Link įrenginiai nereaguoja (AAPS rodo, kad jie prisijungę, bet Link įrenginiai negali pasiekti pompos ar perduoti jai komandų).
 
-First try the **Reset RileyLink** button on the pump screen (see your pump's page: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). If this does not help, the easiest way to get all these parts working together is:
+Pirmiausia pompos ekrane pabandykite mygtuką **Nustatyti RileyLink iš naujo** (žr. savo pompos puslapį: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). Jei tai nepadeda, paprasčiausias būdas priversti visas šias dalis vėl veikti kartu:
 
-1. Power off the Link.
-2. Quit **AAPS** (**menu** (☰) > **Exit**).
-3. Long press the **AAPS** icon, open the Android **App info**, tap **Force stop**, then **Storage** > **Clear cache** (do NOT clear storage/data!).
-4. Rarely some phones may need a reboot here. You can try without reboot.
-5. Power on the Link.
-6. Start **AAPS**.
-7. On the pump screen, tap **Pair RileyLink** and select your Link again.
+1. Išjunkite Link įrenginį.
+2. Uždarykite **AAPS** (**meniu** (☰) > **Išeiti**).
+3. Ilgai palaikykite **AAPS** piktogramą, atidarykite Android **App info** (programos informacija), bakstelėkite **Force stop** (priverstinai sustabdyti), tada **Storage** > **Clear cache** (išvalyti talpyklą) (NEVALYKITE saugyklos / duomenų!).
+4. Retkarčiais kai kuriuos telefonus šiame žingsnyje reikia perkrauti. Galite pabandyti be perkrovimo.
+5. Įjunkite Link įrenginį.
+6. Paleiskite **AAPS**.
+7. Pompos ekrane bakstelėkite **Susieti RileyLink** ir vėl pasirinkite savo Link įrenginį.
 
 ### Remote control
 
@@ -383,41 +383,41 @@ First try the **Reset RileyLink** button on the pump screen (see your pump's pag
 
 #### Configuring and Using the AAPSClient remote app
 
-**AAPSClient** is a separate app that lets a caregiver follow and control **AAPS** remotely. Since **AAPS** v4, controlling **AAPS** from AAPSClient needs a one-time pairing between the two apps. See:
+**AAPSClient** – atskira programėlė, kuria prižiūrintis asmuo gali nuotoliniu būdu sekti ir valdyti **AAPS**. Nuo **AAPS** v4, norint valdyti **AAPS** iš AAPSClient, abi programėles reikia vieną kartą susieti. Žr.:
 
-* [The AAPSClient app](#aapsclient-app): installing, first start and pairing,
-* [Master ↔ Client control](#client-master-control): what can be controlled and how pairing works,
-* [AAPSClient on a smartwatch](#remotecontrol-smartwatches).
+* [Programėlė AAPSClient](#aapsclient-app): įdiegimas, pirmasis paleidimas ir susiejimas,
+* [Pagrindinio įrenginio ↔ kliento valdymas](#client-master-control): ką galima valdyti ir kaip veikia susiejimas,
+* [AAPSClient išmaniajame laikrodyje](#remotecontrol-smartwatches).
 
 (FAQ-hardened-mode)=
 
-#### Treatments I enter on the Nightscout website are not applied
+#### Terapijos įrašai, kuriuos įvedu Nightscout svetainėje, nepritaikomi
 
-That is [hardened mode](#client-master-control-hardened-mode). While client control is on — always in Simple Mode — **AAPS** takes changes only from paired clients, not from the Nightscout website or other apps. Enter them on a paired **AAPSClient** instead.
+Tai [sustiprintos apsaugos režimas](#client-master-control-hardened-mode). Kol įjungtas kliento valdymas — Paprastajame režime visada — **AAPS** priima pakeitimus tik iš susietų klientų, o ne iš Nightscout svetainės ar kitų programėlių. Vietoj to įveskite juos susietoje **AAPSClient** programėlėje.
 
-### Alerts and warnings
+### Perspėjimai ir įspėjimai
 
-#### I have a red warning badge (red triangle) / AAPS won't enable closed loop / Loop stays in LGS / I had a yellow triangle
+#### Turiu raudoną įspėjamąjį ženklelį (raudoną trikampį) / AAPS neįjungia uždaro ciklo / Ciklas lieka LGS režime / Turėjau geltoną trikampį
 
-The red warning badge on the BG source shortcut is a security feature in AAPS. See [BG warning sign](#aaps-screens-bg-warning-sign) for the full explanation.
+Raudonas įspėjamasis ženklelis ant glikemijos šaltinio sparčiojo mygtuko yra AAPS saugos funkcija. Išsamų paaiškinimą rasite skyriuje [KG įspėjamasis ženklas](#aaps-screens-bg-warning-sign).
 
-A red warning badge on the BG source shortcut in the bottom bar (the red triangle of older versions) means that you have duplicate BGs and AAPS can't calculate precisely the deltas. A closed loop is switched to **Low Glucose Suspend** mode: it still reduces or suspends your basal to protect you against lows, but it gives no correction insulin. You need to delete one BG of each duplicated value in order to clear the warning. Tap the shortcut to open your [BG source screen](#aaps-screens-bg-source): the duplicate is highlighted in red. Long press one line you want to delete, check one of each lines that are doubled and tap the trash icon. You may need to reset the AAPS databases if there are too many double BGs. In this case, you'll also lose stats, IOB, COB, selected profile.
+Raudonas įspėjamasis ženklelis ant glikemijos šaltinio sparčiojo mygtuko apatinėje juostoje (senesnių versijų raudonas trikampis) reiškia, kad turite pasikartojančių KG reikšmių ir AAPS negali tiksliai apskaičiuoti pokyčių. Uždaras ciklas perjungiamas į režimą **Stabdymas esant žemai glikemijai**: jis vis dar mažina arba sustabdo valandinę bazę, kad apsaugotų jus nuo hipoglikemijos, bet korekcinio insulino neleidžia. Kad įspėjimas dingtų, turite ištrinti po vieną kiekvienos pasikartojančios KG reikšmę. Bakstelėkite spartųjį mygtuką ir atidarykite [glikemijos šaltinio ekraną](#aaps-screens-bg-source): pasikartojanti reikšmė pažymėta raudonai. Ilgai palaikykite vieną eilutę, kurią norite ištrinti, pažymėkite po vieną kiekvienos pasikartojančios eilutės ir bakstelėkite šiukšliadėžės piktogramą. Jei pasikartojančių KG yra per daug, gali tekti iš naujo nustatyti AAPS duomenų bazes. Tokiu atveju taip pat prarasite statistiką, AIO, AAO ir pasirinktą profilį.
 
-Once the warning is gone, AAPS does not go back to **Closed Loop** by itself. Press the loop icon on the main screen and select **Closed Loop** again.
+Kai įspėjimas dingsta, AAPS pati negrįžta į režimą **Uždaras ciklas**. Paspauskite ciklo piktogramą pagrindiniame ekrane ir vėl pasirinkite **Uždaras ciklas**.
 
-Possible origin of the problem: xDrip and/or NS backfilling BGs.
+Galima problemos priežastis: xDrip ir (arba) NS užpildo trūkstamus KG duomenis (backfill).
 
-The yellow triangle of older versions meant unstable delay between each BG reading (BGs not received every 5 min regularly, or missing BGs), which often happens with Libre or after a G6 transmitter change. **AAPS** 4 no longer shows it: it recalculates the values in the background and the loop works correctly.
+Senesnių versijų geltonas trikampis reiškė nestabilų laiko tarpą tarp KG rodmenų (KG gaunamos ne reguliariai kas 5 min. arba trūksta KG), kas dažnai nutinka su Libre arba pakeitus G6 siųstuvą. **AAPS** 4 jo neberodo: reikšmės perskaičiuojamos fone, ir ciklas veikia teisingai.
 
 ### Omnipod DASH
 
 (FAQ-move-dash-pod)=
 
-#### Can I move an active DASH Pod to another phone?
+#### Ar galiu perkelti aktyvų DASH Pod į kitą telefoną?
 
-The Pod state is included in the exported settings, so an active Pod can be moved to another phone by exporting the settings right before the move and importing them on the other phone. This is not officially supported and there is a risk of losing the Pod: if possible, try it when your Pod is about to expire.
+Pod būsena įtraukta į eksportuojamus nustatymus, todėl aktyvų Pod galima perkelti į kitą telefoną: prieš pat perkėlimą eksportuokite nustatymus ir importuokite juos kitame telefone. Tai oficialiai nepalaikoma, ir yra rizika prarasti Pod: jei įmanoma, bandykite tada, kai Pod naudojimo laikas tuoj baigsis.
 
 Read these sections first:
 
-* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
-* [Discarding a pod](#omnipod-dash-discard-pod), to remove the Pod from the old phone afterwards. Keep the old phone in airplane mode until the Pod is discarded, so that the two phones never talk to the Pod at the same time.
+* [Nustatymų eksportavimas ir importavimas](#omnipod-dash-export-import) Omnipod DASH puslapyje ir [Pompos be vamzdelio](#ExportImportSettings-tubeless-pumps): naujame telefone pažymėkite **Taip pat pakeisti pompos nustatymus** ir naudokite failą, eksportuotą tuo metu, kai dėvėjote dabartinį Pod,
+* [Pod pašalinimas](#omnipod-dash-discard-pod) – kad vėliau pašalintumėte Pod iš senojo telefono. Laikykite senąjį telefoną lėktuvo režimu, kol Pod bus pašalintas, kad abu telefonai niekada vienu metu nebendrautų su Pod.
