@@ -1,274 +1,274 @@
-# Transferring and Installing AAPS on your smartphone
+# AAPS를 스마트폰으로 옮기고 설치하기
 
-In the previous section, [building **AAPS**](../SettingUpAaps/BuildingAaps.md), you built the **AAPS** app (which is an .apk file) on a computer.
+이전 섹션 [**AAPS** 빌드](../SettingUpAaps/BuildingAaps.md)에서 컴퓨터로 **AAPS** 앱(.apk 파일)을 빌드했습니다.
 
-The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip or another CGM receiver app) to your Android smartphone, and then **install** the app(s). Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](../SettingUpAaps/SetupWizard.md).
+다음 단계에서는 **AAPS** APK 파일(그리고 BYODA, xDrip 또는 다른 CGM 수신 앱처럼 필요한 다른 앱)을 Android 스마트폰으로 **옮기고**, 앱을 **설치**합니다. 스마트폰에 **AAPS**를 설치한 다음에는 [**AAPS 루프 구성**](../SettingUpAaps/SetupWizard.md)으로 넘어갈 수 있습니다.
 
-This page also explains [Android developer verification](#android-developer-verification), a change Google is rolling out from September 2026 that affects installing self-built apps, and the [free installation methods](#android-developer-verification-free-methods) that keep working after the change.
+이 페이지는 [Android 개발자 인증](#android-developer-verification)도 설명합니다. 이것은 Google이 2026년 9월부터 도입하는 변경으로, 직접 빌드한 앱의 설치에 영향을 줍니다. 또한 변경 후에도 계속 사용할 수 있는 [무료 설치 방법](#android-developer-verification-free-methods)도 설명합니다.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Installing AAPS by tapping the APK file
+## APK 파일을 눌러 AAPS 설치하기
 
-Today, you install **AAPS** by transferring the APK file to your phone and opening ("tapping") it. There are several ways to transfer the **AAPS** APK file from your computer to the smartphone. Here we explain two different ways:
+현재는 APK 파일을 휴대폰으로 옮긴 다음 파일을 열어("눌러") **AAPS**를 설치합니다. **AAPS** APK 파일을 컴퓨터에서 스마트폰으로 옮기는 방법은 여러 가지가 있습니다. 여기서는 두 가지 방법을 설명합니다:
 
-* Option 1 -  Use your Google drive (Gdrive)
-* Option 2 -  Use a USB cable
+* 옵션 1 -  Google Drive(Gdrive) 사용하기
+* 옵션 2 -  USB 케이블 사용하기
 
-Please note that transfer by email might cause difficulties, and is discouraged.
+이메일로 옮기면 문제가 생길 수 있으므로 권장하지 않습니다.
 
 ```{admonition} Android developer verification
 :class: warning
-Google is rolling out [Android developer verification](#android-developer-verification) from September 2026 (starting in Brazil, Indonesia, Singapore and Thailand; worldwide in 2027). Where it is enforced, installing an APK by tapping the file — as described in both options below — is blocked. In that case, use one of the [free installation methods](#android-developer-verification-free-methods) further down this page.
+Google은 2026년 9월부터 [Android 개발자 인증](#android-developer-verification)을 도입합니다(브라질, 인도네시아, 싱가포르, 태국에서 먼저 시작하고, 2027년에 전 세계로 확대). 이것이 적용되는 곳에서는 아래 두 옵션에서 설명하는 것처럼 파일을 눌러 APK를 설치하는 방법이 차단됩니다. 이 경우에는 이 페이지 아래쪽의 [무료 설치 방법](#android-developer-verification-free-methods) 중 하나를 사용하십시오.
 ```
 
-### Option 1. Use Google drive to transfer files
+### 옵션 1. Google Drive로 파일 옮기기
 
-Open [Google.com](https://www.google.com/) in your web browser and login to your Google Account.
+웹 브라우저에서 [Google.com](https://www.google.com/)을 열고 Google 계정에 로그인하십시오.
 
-On the right upper side select the Drive app in the Google menu.
+오른쪽 위의 Google 메뉴에서 Drive 앱을 선택하십시오.
 
-![Start Drive App](../images/GoogleDriveInWebbrowser.png)
+![Drive 앱 시작](../images/GoogleDriveInWebbrowser.png)
 
-Click **New** at the top left (or right-click an empty area below your files and folders) and select **File upload**.
+왼쪽 위의 **New**(새로 만들기)를 클릭하고(또는 파일과 폴더 아래의 빈 곳을 마우스 오른쪽 버튼으로 클릭하고) **File upload**(파일 업로드)를 선택하십시오.
 
-![Upload apk file with Google Drive App](../images/GoogleDriveUploadFile.png)
+![Google Drive 앱으로 apk 파일 업로드](../images/GoogleDriveUploadFile.png)
 
-The apk file should now be uploaded on Google Drive.
+이제 apk 파일이 Google Drive에 업로드되었을 것입니다.
 
-#### Use the Google Drive app to execute the apk file for installation
+#### Google Drive 앱으로 apk 파일을 실행하여 설치하기
 
-Switch to your mobile and start the Google Drive app. It is a preinstalled app and can be found where the other Google apps are located or with search for the name of the app.
+휴대폰으로 가서 Google Drive 앱을 실행하십시오. 미리 설치된 앱이며, 다른 Google 앱이 있는 곳에서 찾거나 앱 이름으로 검색하여 찾을 수 있습니다.
 
-![start the Google Drive app](../images/GoogleDriveMobileAPPLaunch.png)
+![Google Drive 앱 시작](../images/GoogleDriveMobileAPPLaunch.png)
 
-Launch the apk installation by tapping the filename in the Google Drive App on the mobile.
+휴대폰의 Google Drive 앱에서 파일 이름을 눌러 apk 설치를 시작하십시오.
 
-![launch the apk installation](../images/GoogleDriveMobileUploadedAPK.png)
+![apk 설치 시작](../images/GoogleDriveMobileUploadedAPK.png)
 
-In case you get a security notice that you are not allowed to install apps from Google Drive at the moment, tap "Settings" and allow it for that short moment, then disallow it afterwards, as it is a security risk to leave it enabled all the time.
+지금은 Google Drive에서 앱을 설치할 수 없다는 보안 알림이 나오면 "Settings"(설정)를 누르고 그 짧은 시간 동안만 허용하십시오. 설치 후에는 다시 허용하지 않도록 설정하십시오. 항상 켜 두면 보안 위험이 있습니다.
 
-![Security Notice Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Google Drive 보안 알림](../images/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Security Notice Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Google Drive 보안 알림](../images/GoogleDriveMobileSettingSecuritySetting.png)
 
-After the installation finishes, you are done with this step.
+설치가 끝나면 이 단계는 완료입니다.
 
-You should see the **AAPS** icon and be able to open the app.
+**AAPS** 아이콘이 보이고 앱을 열 수 있어야 합니다.
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
-Did you remember to disallow the installation from Google Drive?
+**중요한 안전 알림**
+Google Drive에서 설치를 허용한 설정을 다시 끄셨습니까?
 ```
 
-Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+이제 [AAPS 루프 구성](../SettingUpAaps/SetupWizard.md)을 계속하십시오.
 
-### Option 2. Use a USB cable to transfer files
+### 옵션 2. USB 케이블로 파일 옮기기
 
-The second way to transfer the AAPS apk file is with a [USB cable](https://support.google.com/android/answer/9064445?hl=en).
+AAPS apk 파일을 옮기는 두 번째 방법은 [USB 케이블](https://support.google.com/android/answer/9064445?hl=en)을 사용하는 것입니다.
 
-Transfer the file from its location on your computer to the "downloads" folder on the phone.
+컴퓨터에 있는 파일을 휴대폰의 "downloads"(다운로드) 폴더로 옮기십시오.
 
-On your phone, you will have to allow installation from unknown sources. Explanations of how to do this can be found on the internet (_e.g._ [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+휴대폰에서 알 수 없는 출처의 설치를 허용해야 합니다. 방법은 인터넷에서 찾을 수 있습니다(_예:_ [여기](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) 또는 [여기](https://www.androidcentral.com/unknown-sources)).
 
-Once you have transferred the file by dragging it across, open the "Downloads" folder on the phone and press the AAPS apk file:
+파일을 끌어다 놓아 옮긴 후, 휴대폰에서 "Downloads"(다운로드) 폴더를 열고 AAPS apk 파일을 누르십시오:
 
-![The apk file in the Downloads folder](../images/install/install_01_downloads_apk.png)
+![Downloads 폴더의 apk 파일](../images/install/install_01_downloads_apk.png)
 
-The first time, Android tells you that the phone is not allowed to install unknown apps from this source. Press "**Settings**":
+처음에는 Android가 이 휴대폰에서 이 출처의 알 수 없는 앱을 설치할 수 없다고 알립니다. "**Settings**"(설정)를 누르십시오:
 
-![Security notice for unknown apps](../images/install/install_02_unknown_apps_notice.png)
+![알 수 없는 앱에 대한 보안 알림](../images/install/install_02_unknown_apps_notice.png)
 
-Enable "**Allow from this source**", then go back:
+"**Allow from this source**"(이 출처 허용)를 켜고 뒤로 가십시오:
 
-![Allow from this source enabled](../images/install/install_04_unknown_apps_allowed.png)
+![Allow from this source(이 출처 허용) 켜짐](../images/install/install_04_unknown_apps_allowed.png)
 
-Press the apk file again and select "**Install**":
+apk 파일을 다시 누르고 "**Install**"(설치)을 선택하십시오:
 
-![Install prompt](../images/install/install_05_install_prompt.png)
+![설치 확인 창](../images/install/install_05_install_prompt.png)
 
-When the installation is finished, press "**Open**" to start **AAPS**, or "**Done**" to open it later:
+설치가 끝나면 "**Open**"(열기)을 눌러 **AAPS**를 시작하거나, 나중에 열려면 "**Done**"(완료)을 누르십시오:
 
-![App installed](../images/install/install_07_app_installed.png)
+![앱 설치됨](../images/install/install_07_app_installed.png)
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
-Remember to disable "Allow from this source" again after the installation, as it is a security risk to leave it enabled all the time.
+**중요한 안전 알림**
+설치 후에는 "Allow from this source"(이 출처 허용)를 다시 끄십시오. 항상 켜 두면 보안 위험이 있습니다.
 ```
 
-Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+이제 [AAPS 루프 구성](../SettingUpAaps/SetupWizard.md)을 계속하십시오.
 
 (transferring-installing-play-protect-warning)=
-## Google Play Protect warning
+## Google Play Protect 경고
 
-When you install **AAPS**, Google Play Protect may warn you that the app is unsafe, was built for an older version of Android and doesn't include the latest privacy protections.
+**AAPS**를 설치할 때 Google Play Protect가 이 앱이 안전하지 않고, 이전 Android 버전용으로 빌드되었으며, 최신 개인정보 보호 기능이 없다고 경고할 수 있습니다.
 
-![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+![Google Play Protect 경고](../images/troubleshooting/InstallGPP.png)
 
-This is expected for an app you built yourself. Tap **More details**, then **Install anyway**.
+직접 빌드한 앱에서는 예상되는 일입니다. **More details**(세부정보 더보기)를 누른 다음 **Install anyway**(무시하고 설치)를 누르십시오.
 
-If the installation is **blocked** with a message about an unverified developer (not just a warning), see [Android developer verification](#android-developer-verification) below.
+설치가 (경고만 나오는 것이 아니라) 인증되지 않은 개발자에 대한 메시지와 함께 **차단**되면 아래의 [Android 개발자 인증](#android-developer-verification)을 참조하십시오.
 
 (android-developer-verification)=
 
-## Android developer verification
+## Android 개발자 인증
 
-Google is introducing **Android developer verification**: on most Android phones, apps will only install if they were registered with Google by a verified developer. This also applies to apps installed from an APK file ("sideloading") — which is how you install the **AAPS** app you built yourself.
+Google은 **Android 개발자 인증**을 도입하고 있습니다. 대부분의 Android 휴대폰에서는 인증된 개발자가 Google에 등록한 앱만 설치됩니다. 이것은 APK 파일로 설치하는 앱("사이드로딩")에도 적용됩니다. 직접 빌드한 **AAPS** 앱도 이 방법으로 설치합니다.
 
-### What is changing
+### 무엇이 바뀝니까
 
-When you install **AAPS** on a phone with Google services (a "certified" Android device — virtually every phone sold with the Play Store), Android will check whether the app comes from a developer registered with Google. If not, the normal installation by tapping the APK file is blocked.
+Google 서비스가 있는 휴대폰("인증된" Android 기기 — Play 스토어와 함께 판매되는 거의 모든 휴대폰)에 **AAPS**를 설치하면, Android는 앱이 Google에 등록된 개발자의 앱인지 확인합니다. 등록되지 않은 경우, APK 파일을 눌러 하는 일반 설치가 차단됩니다.
 
-**The check happens when an app is installed or updated.** It does not remove apps that are already installed and running.
+**확인은 앱을 설치하거나 업데이트할 때 이루어집니다.** 이미 설치되어 실행 중인 앱은 삭제되지 않습니다.
 
-Google is rolling this out gradually:
+Google은 이것을 단계적으로 도입하고 있습니다:
 
-| When               | What happens                                                                                                                              |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| August 2026        | Free "limited distribution" developer accounts are open worldwide, and the "advanced flow" starts rolling out to phones                   |
-| September 30, 2026 | Verification is enforced in **Brazil, Indonesia, Singapore and Thailand**, for apps installed from Google Play and a few other app stores |
-| 2027               | Enforcement expands to the **rest of the world** and to **all installations**, including APK files                                        |
+| 시기           | 내용                                                                      |
+| ------------ | ----------------------------------------------------------------------- |
+| 2026년 8월     | 무료 "제한 배포" 개발자 계정이 전 세계에 열리고, "고급 절차(advanced flow)"가 휴대폰에 배포되기 시작합니다   |
+| 2026년 9월 30일 | **브라질, 인도네시아, 싱가포르, 태국**에서 Google Play와 일부 다른 앱 스토어에서 설치하는 앱에 인증이 적용됩니다 |
+| 2027년        | 적용 범위가 **나머지 전 세계**와 APK 파일을 포함한 **모든 설치**로 확대됩니다                       |
 
-Details are published by Google on the [Android developer verification](https://developer.android.com/developer-verification) pages, including a [FAQ](https://developer.android.com/developer-verification/guides/faq). Google may still adjust dates and details; this page will be updated as the rollout progresses.
+자세한 내용은 Google의 [Android 개발자 인증](https://developer.android.com/developer-verification) 페이지에 있으며, [FAQ](https://developer.android.com/developer-verification/guides/faq)도 있습니다. Google은 날짜와 세부 내용을 아직 바꿀 수 있습니다. 이 페이지는 도입이 진행되는 대로 업데이트됩니다.
 
-### Does this affect me?
+### 나에게 영향이 있습니까?
 
-- **Building AAPS is not affected at all.** The [browser build](#browser-build), the [Android Studio build](ComputerBuild.md) and the [CLI build](CLIBuild.md) work exactly as before, and your keystore does not change.
-- **Your current AAPS keeps running.** Verification is only checked when installing or updating an app.
-- **If you live in Brazil, Indonesia, Singapore or Thailand:** from September 30, 2026, verification is enforced for apps installed from Google Play and a few other app stores. Google states that installing an APK file directly is not covered by this first step, so **AAPS** should still install as usual. Nevertheless, prepare one of the [free installation methods](#android-developer-verification-free-methods) below now, so that you are not caught out if this changes.
-- **If you live anywhere else:** nothing changes for you before 2027, and doing nothing for now is a legitimate choice. But set up one of the [free installation methods](#android-developer-verification-free-methods) below while nothing is broken: discovering the block on the day an update is refused, with the [advanced flow's](#android-developer-verification-advanced-flow) 24-hour wait ahead of you, is the wrong moment.
-- **Old phones:** verification applies to phones running Android 7 or higher, which means every phone able to run **AAPS**.
+- **AAPS 빌드에는 전혀 영향이 없습니다.** [브라우저 빌드](#browser-build), [Android Studio 빌드](ComputerBuild.md), [명령줄(CLI) 빌드](CLIBuild.md)는 이전과 똑같이 작동하며, 키 저장소도 바뀌지 않습니다.
+- **현재 AAPS는 계속 실행됩니다.** 인증은 앱을 설치하거나 업데이트할 때만 확인합니다.
+- **브라질, 인도네시아, 싱가포르 또는 태국에 사는 경우:** 2026년 9월 30일부터 Google Play와 일부 다른 앱 스토어에서 설치하는 앱에 인증이 적용됩니다. Google에 따르면 APK 파일을 직접 설치하는 것은 이 첫 단계에 포함되지 않으므로 **AAPS**는 평소처럼 설치될 것입니다. 그래도 상황이 바뀌었을 때 당황하지 않도록 지금 아래의 [무료 설치 방법](#android-developer-verification-free-methods) 중 하나를 준비해 두십시오.
+- **그 밖의 나라에 사는 경우:** 2027년 전에는 아무것도 바뀌지 않으며, 지금은 아무것도 하지 않는 것도 올바른 선택입니다. 하지만 아무 문제가 없을 때 아래의 [무료 설치 방법](#android-developer-verification-free-methods) 중 하나를 설정해 두십시오. 업데이트가 거부되는 날에야 차단을 알게 되고, 그때 [고급 절차](#android-developer-verification-advanced-flow)의 24시간 대기를 해야 한다면 너무 늦습니다.
+- **오래된 휴대폰:** 인증은 Android 7 이상을 실행하는 휴대폰에 적용됩니다. 즉 **AAPS**를 실행할 수 있는 모든 휴대폰에 적용됩니다.
 
 (android-developer-verification-free-methods)=
 
-## Free ways to install AAPS
+## AAPS를 설치하는 무료 방법
 
-You do **not** need to pay Google anything to keep using **AAPS**. There are several free methods; pick the one that matches your situation.
+**AAPS**를 계속 사용하기 위해 Google에 돈을 낼 필요는 **없습니다**. 무료 방법이 여러 가지 있습니다. 자신의 상황에 맞는 방법을 고르십시오.
 
 ```{admonition} Which method should I use?
 :class: tip
-- You have a **computer** (whichever way you built **AAPS**): use [ADB](#android-developer-verification-adb) or, if you prefer to avoid the command line, the [web installer](#android-developer-verification-web). Both are exempt from verification, have no limits, and need no Google account.
-- You have **no computer at all**: use the [advanced flow](#android-developer-verification-advanced-flow) on your phone.
-- You prefer to register with Google so the normal "tap the APK" installation keeps working: a [free limited distribution account](#android-developer-verification-limited-account) exists, but it is untested with **AAPS**.
+- **컴퓨터**가 있는 경우(**AAPS**를 어떤 방법으로 빌드했든): [ADB](#android-developer-verification-adb)를 사용하거나, 명령줄을 피하고 싶다면 [웹 설치 프로그램](#android-developer-verification-web)을 사용하십시오. 두 방법 모두 인증이 면제되고, 제한이 없으며, Google 계정이 필요 없습니다.
+- **컴퓨터가 전혀 없는** 경우: 휴대폰에서 [고급 절차](#android-developer-verification-advanced-flow)를 사용하십시오.
+- 일반 "APK 누르기" 설치가 계속 작동하도록 Google에 등록하고 싶은 경우: [무료 제한 배포 계정](#android-developer-verification-limited-account)이 있지만, **AAPS**로는 아직 테스트되지 않았습니다.
 ```
 
 (android-developer-verification-adb)=
 
-### Option 1: Install with ADB (computer needed)
+### 옵션 1: ADB로 설치하기(컴퓨터 필요)
 
-ADB (Android Debug Bridge) is Google's official tool for installing apps from a computer onto a phone with a USB cable. Google has confirmed that **apps installed with ADB do not require verification** — there is no waiting period, no device limit and no registration.
+ADB(Android Debug Bridge)는 USB 케이블로 컴퓨터에서 휴대폰에 앱을 설치하는 Google의 공식 도구입니다. Google은 **ADB로 설치한 앱은 인증이 필요 없다**고 확인했습니다. 대기 시간도, 기기 수 제한도, 등록도 없습니다.
 
-One-time preparation:
+처음 한 번만 하는 준비:
 
-1. On your phone, enable the hidden developer options: go to **Settings** > **About phone** (on some phones **Software information**) and tap **Build number** seven times, until the phone confirms you are a developer.
-1. Go back to the main **Settings**, open the new **Developer options** entry and enable **USB debugging**.
-1. On your computer, make sure ADB is available:
-   - If you use **Android Studio**, ADB is already installed with it.
-   - Otherwise, download Google's free [SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools) and unzip the folder. No installation is needed; ADB is the `adb` program inside that folder.
+1. 휴대폰에서 숨겨진 개발자 옵션을 켜십시오: **Settings**(설정) > **About phone**(휴대전화 정보)(일부 휴대폰에서는 **Software information**(소프트웨어 정보))으로 가서, 휴대폰이 개발자가 되었다고 알려 줄 때까지 **Build number**(빌드 번호)를 일곱 번 누르십시오.
+1. 기본 **Settings**(설정)로 돌아가서 새로 생긴 **Developer options**(개발자 옵션) 항목을 열고 **USB debugging**(USB 디버깅)을 켜십시오.
+1. 컴퓨터에서 ADB를 사용할 수 있는지 확인하십시오:
+   - **Android Studio**를 사용한다면 ADB는 이미 함께 설치되어 있습니다.
+   - 그렇지 않으면 Google의 무료 [SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools)를 다운로드하고 폴더의 압축을 푸십시오. 설치는 필요 없습니다. ADB는 그 폴더 안의 `adb` 프로그램입니다.
 
-Installing (and later updating) **AAPS**:
+**AAPS** 설치(및 이후 업데이트):
 
-1. Connect the phone to the computer with a USB cable. There is no need to transfer the APK file to the phone first: ADB sends it straight from the computer.
-1. On the phone, accept the **Allow USB debugging?** prompt (the first time only).
-1. On the computer, open a terminal (command prompt) in the folder containing ADB and the **AAPS** APK file, and run:
+1. USB 케이블로 휴대폰을 컴퓨터에 연결하십시오. APK 파일을 먼저 휴대폰으로 옮길 필요는 없습니다. ADB가 컴퓨터에서 바로 보냅니다.
+1. 휴대폰에서 **Allow USB debugging?**(USB 디버깅을 허용하시겠습니까?) 확인 창을 허용하십시오(처음 한 번만).
+1. 컴퓨터에서 ADB와 **AAPS** APK 파일이 있는 폴더에서 터미널(명령 프롬프트)을 열고 다음을 실행하십시오:
 
    ```
    adb install -r app-full-release.apk
    ```
 
-   Replace `app-full-release.apk` with the actual name of your APK file. The `-r` option updates an already installed **AAPS** while keeping all its data and settings.
+   `app-full-release.apk`를 실제 APK 파일 이름으로 바꾸십시오. `-r` 옵션은 이미 설치된 **AAPS**의 모든 데이터와 설정을 유지하면서 업데이트합니다.
 
-1. Wait for `Success` to be displayed. **AAPS** is now installed on your phone.
+1. `Success`가 표시될 때까지 기다리십시오. 이제 휴대폰에 **AAPS**가 설치되었습니다.
 
-The same command is used for every future update. The [Wear OS pages](../WearOS/WearOsSmartwatch.md) already use ADB in the same way to install the watch app.
+앞으로 모든 업데이트에 같은 명령을 사용합니다. [Wear OS 페이지](../WearOS/WearOsSmartwatch.md)에서도 이미 같은 방법으로 ADB를 사용하여 워치 앱을 설치합니다.
 
-If you would rather not use a cable: on Android 11 and later, **wireless debugging** (also under **Developer options**) can do the same over Wi-Fi, after a one-time pairing with a code shown on the phone.
+케이블을 사용하고 싶지 않다면: Android 11 이상에서는 **wireless debugging**(무선 디버깅)(역시 **Developer options** 안에 있음)으로 같은 일을 Wi-Fi로 할 수 있습니다. 먼저 휴대폰에 표시되는 코드로 한 번 페어링해야 합니다.
 
 (android-developer-verification-web)=
 
-### Option 2: Install from a web page (computer, no command line)
+### 옵션 2: 웹 페이지에서 설치하기(컴퓨터 필요, 명령줄 없음)
 
-If the command line is not for you, a web page can do exactly what ADB does, directly from your browser. Because it talks to the phone through the same mechanism as ADB, it carries the **same exemption from verification** — but there is nothing to download, no folder to unzip and no command to type.
+명령줄이 어렵다면, 웹 페이지가 브라우저에서 바로 ADB와 똑같은 일을 할 수 있습니다. 이 페이지는 ADB와 같은 방식으로 휴대폰과 통신하므로 **똑같이 인증이 면제**됩니다. 하지만 다운로드할 것도, 압축을 풀 폴더도, 입력할 명령도 없습니다.
 
-This is the easiest route if you used the [browser build](#browser-build) and have never opened a command line.
+[브라우저 빌드](#browser-build)를 사용했고 명령줄을 한 번도 열어 본 적이 없다면 이것이 가장 쉬운 방법입니다.
 
-1. Enable **USB debugging** on the phone (steps 1 and 2 of the [ADB method](#android-developer-verification-adb) above — one-time setup).
-1. Open the **[AAPS web installer](#web-installer)** in your browser.
-1. Connect the phone with a USB cable and follow the instructions on the page: connect, choose your APK file, and install.
+1. 휴대폰에서 **USB debugging**을 켜십시오(위 [ADB 방법](#android-developer-verification-adb)의 1단계와 2단계 — 처음 한 번만 설정).
+1. 브라우저에서 **[AAPS 웹 설치 프로그램](#web-installer)**을 여십시오.
+1. USB 케이블로 휴대폰을 연결하고 페이지의 안내를 따르십시오: 연결하고, APK 파일을 고르고, 설치합니다.
 
-Three things to know:
+알아 둘 세 가지:
 
-- It only works in **Chrome, Edge or Opera**. Firefox and Safari cannot talk to USB devices.
-- Only one program can use the phone's ADB connection at a time, so **close Android Studio** (or anything else that uses ADB) before connecting.
-- A web page connected this way gets full control of your phone. **Use only the address above**, from the **AAPS** documentation — never an installer page found through a search engine. The **AAPS** web installer runs entirely in your browser: your APK file is not uploaded anywhere.
+- **Chrome, Edge 또는 Opera**에서만 작동합니다. Firefox와 Safari는 USB 기기와 통신할 수 없습니다.
+- 한 번에 하나의 프로그램만 휴대폰의 ADB 연결을 사용할 수 있으므로, 연결하기 전에 **Android Studio를 닫으십시오**(ADB를 사용하는 다른 프로그램도 닫으십시오).
+- 이렇게 연결된 웹 페이지는 휴대폰을 완전히 제어할 수 있습니다. **위의 주소만 사용하십시오**. 이 주소는 **AAPS** 문서에 있습니다. 검색 엔진으로 찾은 설치 페이지는 절대 사용하지 마십시오. **AAPS** 웹 설치 프로그램은 전부 브라우저 안에서 실행됩니다. APK 파일은 어디에도 업로드되지 않습니다.
 
 ```{admonition} No computer? A second phone works too
 :class: tip
-The web installer also works from **Chrome on another Android phone** with a USB-C to USB-C cable — so a parent can install **AAPS** onto a child's phone with no computer in the house.
+웹 설치 프로그램은 USB-C to USB-C 케이블로 연결한 **다른 Android 휴대폰의 Chrome**에서도 작동합니다. 그래서 집에 컴퓨터가 없어도 부모가 아이의 휴대폰에 **AAPS**를 설치할 수 있습니다.
 ```
 
 (android-developer-verification-advanced-flow)=
 
-### Option 3: The "advanced flow" on your phone (no computer needed)
+### 옵션 3: 휴대폰에서 "고급 절차(advanced flow)" 사용하기(컴퓨터 필요 없음)
 
-Google provides an escape hatch for experienced users who understand the risks of installing unverified apps, called the **advanced flow**. Google started rolling it out to phones in August 2026, ahead of enforcement, so you can set it up now. It is a one-time setup on the phone itself, which **takes 24 hours** to complete:
+Google은 인증되지 않은 앱 설치의 위험을 이해하는 숙련된 사용자를 위해 예외 경로를 제공합니다. 이것을 **고급 절차**(advanced flow)라고 합니다. Google은 인증 적용 전인 2026년 8월에 이 기능을 휴대폰에 배포하기 시작했으므로 지금 설정할 수 있습니다. 휴대폰 자체에서 한 번만 하는 설정이며, 완료하는 데 **24시간이 걸립니다**:
 
-1. Enable the hidden developer options (see step 1 of the ADB method above), then open **Settings** > **Developer options** > **Apps from unverified developers**.
-1. Turn on **Allow apps from unverified developers**. The phone asks for your screen lock to confirm it is you.
-1. The phone asks whether someone is asking you to turn on this setting, and explains that banks, government agencies or police would never ask you to do so. Read the warning and confirm that nobody is pressuring or guiding you (this is a protection against scammers).
-1. **Restart your phone.** This starts a one-time **24-hour waiting period**.
-1. After 24 hours, go back to **Settings** > **Developer options** > **Apps from unverified developers** to finish the setup.
-1. Choose whether to allow unverified apps for **7 days** or **indefinitely**. For **AAPS**, choose **indefinitely**, otherwise your next update will be blocked once the 7 days have passed.
+1. 숨겨진 개발자 옵션을 켠 다음(위 ADB 방법의 1단계 참조) **Settings** > **Developer options** > **Apps from unverified developers**(인증되지 않은 개발자의 앱)를 여십시오.
+1. **Allow apps from unverified developers**(인증되지 않은 개발자의 앱 허용)를 켜십시오. 휴대폰이 본인인지 확인하기 위해 화면 잠금을 요청합니다.
+1. 휴대폰은 누군가가 이 설정을 켜라고 요구하고 있는지 묻고, 은행, 정부 기관 또는 경찰은 절대 이것을 요구하지 않는다고 설명합니다. 경고를 읽고 아무도 압박하거나 지시하고 있지 않다고 확인하십시오(사기를 막기 위한 보호 장치입니다).
+1. **휴대폰을 다시 시작하십시오.** 이렇게 하면 한 번만 있는 **24시간 대기 시간**이 시작됩니다.
+1. 24시간 후 **Settings** > **Developer options** > **Apps from unverified developers**로 다시 가서 설정을 마치십시오.
+1. 인증되지 않은 앱을 **7 days**(7일) 동안 허용할지, **indefinitely**(무기한) 허용할지 선택하십시오. **AAPS**에는 **indefinitely**(무기한)를 선택하십시오. 그렇지 않으면 7일이 지난 후 다음 업데이트가 차단됩니다.
 
-After this setup, installing or updating the **AAPS** APK works as it does today, with one extra warning that the app is from an unverified developer — tap **Install anyway**.
+이 설정 후에는 **AAPS** APK 설치나 업데이트가 지금처럼 작동합니다. 다만 앱이 인증되지 않은 개발자의 앱이라는 경고가 하나 더 나옵니다. **Install anyway**를 누르십시오.
 
-Good to know:
+알아 두면 좋은 점:
 
-- You can turn **Developer options** off again afterwards: the advanced flow stays enabled. Google also does not give apps (such as banking apps) any way to detect that the advanced flow is enabled.
-- If you turn the advanced flow off, installing **or updating** **AAPS** is blocked again (your installed **AAPS** keeps running). You have a 10-minute window to turn it back on; after that, the 24-hour waiting period starts again.
-- Changing the phone's clock does not shorten the waiting period, and ADB cannot skip it.
-- Google states that your choice follows your Google account to your other devices, so a new phone should not mean another 24-hour wait.
-- If you cannot find **Apps from unverified developers** in the developer options, your phone has not received the feature yet. It is delivered by a system component called **Android Developer Verifier**, which Google is rolling out gradually through the Play Store. You can help it along by opening **Android Developer Verifier** in the Play Store.
+- 나중에 **Developer options**를 다시 꺼도 됩니다. 고급 절차는 계속 켜져 있습니다. 또한 Google은 앱(예: 은행 앱)이 고급 절차가 켜져 있는지 알아낼 수 있는 방법을 제공하지 않습니다.
+- 고급 절차를 끄면 **AAPS** 설치 **또는 업데이트**가 다시 차단됩니다(설치된 **AAPS**는 계속 실행됩니다). 다시 켤 수 있는 시간은 10분입니다. 그 후에는 24시간 대기 시간이 다시 시작됩니다.
+- 휴대폰 시계를 바꿔도 대기 시간은 짧아지지 않으며, ADB로도 건너뛸 수 없습니다.
+- Google에 따르면 이 선택은 Google 계정을 따라 다른 기기에도 적용되므로, 새 휴대폰에서 다시 24시간을 기다릴 필요는 없을 것입니다.
+- 개발자 옵션에서 **Apps from unverified developers**를 찾을 수 없다면 휴대폰이 아직 이 기능을 받지 못한 것입니다. 이 기능은 **Android Developer Verifier**(Android 개발자 인증 도구)라는 시스템 구성 요소로 제공되며, Google이 Play 스토어를 통해 단계적으로 배포하고 있습니다. Play 스토어에서 **Android Developer Verifier**를 열면 더 빨리 받을 수 있습니다.
 
 ```{note}
-Google describes this as a first version and may still change the screens and steps; this section will be updated with screenshots once the final version is available.
+Google은 이것을 첫 번째 버전이라고 설명하며 화면과 단계를 아직 바꿀 수 있습니다. 최종 버전이 나오면 이 섹션에 스크린샷을 추가하여 업데이트하겠습니다.
 ```
 
 (android-developer-verification-limited-account)=
 
-### Option 4: Register with Google (free limited distribution account)
+### 옵션 4: Google에 등록하기(무료 제한 배포 계정)
 
-Google offers a **free** developer account type for hobbyists and personal use, called a **limited distribution account**, open to everyone since August 2026:
+Google은 취미와 개인 용도를 위한 **무료** 개발자 계정 유형을 제공합니다. 이것을 **제한 배포 계정**(limited distribution account)이라고 하며, 2026년 8월부터 누구나 만들 수 있습니다:
 
-- **No government ID** and **no fee** (unlike the paid developer account, which is not needed for personal **AAPS** use). You do need a Google account with 2-step verification, a Google payments profile holding your legal name and address, and a contact email address.
-- You register your app's package name in Google's Android Developer Console, and authorize the phones it may be installed on, up to **20 devices**, through a handshake with a QR code or link between the phone and the console.
-- Once registered, the normal installation (tapping the APK file) works again on the authorized phones, without ADB and without the advanced flow.
-- A limited distribution account can later be upgraded to a full account, but not the other way round.
+- **정부 발급 신분증 불필요**, **수수료 없음**(유료 개발자 계정과 다릅니다. 유료 계정은 개인적인 **AAPS** 사용에는 필요 없습니다). 하지만 2단계 인증을 사용하는 Google 계정, 법적 이름과 주소가 들어 있는 Google 결제 프로필, 연락용 이메일 주소는 필요합니다.
+- Google의 Android Developer Console에서 앱의 패키지 이름을 등록하고, 앱을 설치할 수 있는 휴대폰을 최대 **20대**까지 허가합니다. 허가는 휴대폰과 콘솔 사이에서 QR 코드나 링크로 서로 확인(핸드셰이크)하여 합니다.
+- 등록하면 허가된 휴대폰에서 ADB나 고급 절차 없이 일반 설치(APK 파일 누르기)가 다시 작동합니다.
+- 제한 배포 계정은 나중에 정식 계정으로 업그레이드할 수 있지만, 그 반대는 안 됩니다.
 
 ```{warning}
-Google has not explained how registration works when many people build the same open-source app: every self-built **AAPS** uses the same package name (`info.nightscout.androidaps`) with a different signing key, and Google's FAQ states that a package name already in use by others cannot be claimed outright and requires an additional review. The outcome of such a review is unknown, and the paid developer account ($25 and a government ID) does not help here: paying only removes the 20-device cap, not the package name review.
+많은 사람이 같은 오픈 소스 앱을 빌드할 때 등록이 어떻게 되는지 Google은 설명하지 않았습니다. 직접 빌드한 모든 **AAPS**는 서명 키는 다르지만 같은 패키지 이름(`info.nightscout.androidaps`)을 사용합니다. Google FAQ에 따르면 다른 사람이 이미 사용 중인 패키지 이름은 바로 가질 수 없고 추가 검토가 필요합니다. 이 검토의 결과는 알 수 없으며, 유료 개발자 계정($25와 정부 발급 신분증)도 여기서는 도움이 되지 않습니다. 돈을 내면 기기 20대 제한만 없어지고 패키지 이름 검토는 없어지지 않습니다.
 
-For this reason, step-by-step instructions cannot be written yet. This section will be completed once registration has been tested with **AAPS**. In the meantime, ADB, the web installer and the advanced flow above are reliable alternatives.
+그래서 아직 단계별 안내를 쓸 수 없습니다. 이 섹션은 **AAPS**로 등록을 테스트한 후에 완성하겠습니다. 그동안은 위의 ADB, 웹 설치 프로그램, 고급 절차가 믿을 수 있는 대안입니다.
 ```
 
-## What does not change
+## 바뀌지 않는 것
 
-- Building **AAPS** yourself, with any of the three [build methods](BuildingAaps.md).
-- Your GitHub account, your build repository (AAPS Builder) or fork, and your keystore.
-- Your installed **AAPS** app, your settings and your [objectives](CompletingTheObjectives.md).
-- Phones without Google services, and [ADB installations](#android-developer-verification-adb) in general.
+- 세 가지 [빌드 방법](BuildingAaps.md) 중 어느 것으로든 **AAPS**를 직접 빌드하는 것.
+- GitHub 계정, 빌드 저장소(AAPS Builder) 또는 fork, 그리고 키 저장소.
+- 설치된 **AAPS** 앱, 설정, [목표](CompletingTheObjectives.md).
+- Google 서비스가 없는 휴대폰, 그리고 일반적으로 모든 [ADB 설치](#android-developer-verification-adb).
 
-## Where to get help
+## 도움을 받을 수 있는 곳
 
-1. **Read** Google's [developer verification FAQ](https://developer.android.com/developer-verification/guides/faq) for questions about the verification itself.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md), if an installation is blocked.
-3. When asking for help, include your phone make and model, Android version, your country, and the exact message displayed when the installation fails.
+1. 인증 자체에 대한 질문은 Google의 [개발자 인증 FAQ](https://developer.android.com/developer-verification/guides/faq)를 **읽어 보십시오**.
+2. 설치가 차단되면 [Discord](https://discord.gg/4fQUWHZ4Mw)의 *#AAPS* 채널이나 다른 [커뮤니티 채널](../GettingHelp/WhereCanIGetHelp.md) 중 하나에서 **질문하십시오**.
+3. 도움을 요청할 때는 휴대폰 제조사와 모델, Android 버전, 국가, 설치에 실패할 때 표시된 정확한 메시지를 함께 알려 주십시오.
 
 ```{toctree}
 :hidden:
 
-AAPS web installer <WebInstaller.md>
+AAPS 웹 설치 프로그램 <WebInstaller.md>
 ```
