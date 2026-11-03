@@ -1,194 +1,194 @@
-# Creating and restoring back-ups
+# Yedek oluşturma ve geri yükleme
 
-When installing AAPS on your phone it becomes a "medical device" you rely on daily. It is highly recommended to have an emergency backup plan for when your phone gets defective, stolen or lost. Therefore, it is essential to prepare by asking yourself: "What if?"
+AAPS'i telefonunuza yüklediğinizde telefon, her gün güvendiğiniz bir "tıbbi cihaz" olur. Telefonunuz bozulduğunda, çalındığında veya kaybolduğunda kullanmak için bir acil durum yedek planınızın olması kesinlikle önerilir. Bu yüzden kendinize "Ya şöyle olursa?" diye sorarak hazırlık yapmanız çok önemlidir.
 
-To restore your AAPS setup to an existing or new phone, it's important to keep following items in a secure location (read: not on your phone). Best practice is to keep at least two separate backups: on a local hard drive, USB stick and (preferred) on Cloud storage like Google Drive or Microsoft 365 OneDrive. By storing your backups in the cloud you'll always have everything needed accessible from your phone to restore your setup anywhere and anytime.
+AAPS kurulumunuzu mevcut veya yeni bir telefona geri yüklemek için aşağıdaki öğeleri güvenli bir yerde (yani telefonunuzda değil) saklamanız önemlidir. En iyi yöntem, en az iki ayrı yedek tutmaktır: yerel bir sabit diskte, USB bellekte ve (tercihen) Google Drive veya Microsoft 365 OneDrive gibi bir bulut depolama alanında. Yedeklerinizi bulutta saklarsanız, kurulumunuzu her yerde ve her zaman geri yüklemek için gereken her şeye telefonunuzdan erişebilirsiniz.
 
-Consider acquiring a secondary backup phone and practicing restoring AAPS to ensure the backup phone works as expected. This step will give you confidence that your emergency plan is effective and that you can seamlessly continue using AAPS if your primary phone becomes unavailable.
+İkinci bir yedek telefon edinmeyi ve yedek telefonun beklendiği gibi çalıştığından emin olmak için AAPS'i geri yüklemeyi denemeyi düşünün. Bu adım, acil durum planınızın işe yaradığından ve ana telefonunuz kullanılamaz hâle gelirse AAPS'i sorunsuz şekilde kullanmaya devam edebileceğinizden emin olmanızı sağlar.
 
 ```{admonition} Android backups and phone-transfer tools do not carry your AAPS settings
 :class: warning
-Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and they are left out of the Google backup and of the phone-to-phone transfer of a new phone. A settings export, as described on this page, is the only way to carry them over.
+**AAPS** 4.0'dan beri ayarlar telefonda şifreli bir depoda tutulur ve Google yedeklemesine ve yeni bir telefona telefondan telefona aktarıma dahil edilmez. Ayarları taşımanın tek yolu, bu sayfada anlatılan ayar dışa aktarımıdır.
 ```
 
-To be able to restore, having the following items at hand is important:
+Geri yükleyebilmek için aşağıdaki öğelerin elinizde olması önemlidir:
 
-- Your **Android Studio keystore file** and associated **password**: Needed for (re)building the AAPS .APK installer file.
-- A recent copy of the **AAPS installer .APK**
-- A recent **settings export** file: For restoring important settings (which includes your objectives!).
-- Your **AAPS master password**
-- Backups of additional utilities: Such as BYODA and/or xDrip.
-- Personal notes on your setup.
+- **Android Studio anahtar deposu dosyanız** ve ilgili **parolası**: AAPS .APK yükleme dosyasını (yeniden) oluşturmak için gereklidir.
+- **AAPS yükleme .APK dosyasının** güncel bir kopyası
+- Güncel bir **ayar dışa aktarma** dosyası: Önemli ayarları (görevleriniz dâhil!) geri yüklemek için.
+- **AAPS ana parolanız**
+- Ek yardımcı uygulamaların yedekleri: BYODA ve/veya xDrip gibi.
+- Kurulumunuzla ilgili kişisel notlar.
 
-Below are the items that are recommended for keeping back-ups.
+Aşağıda yedeklenmesi önerilen öğeler yer alıyor.
 
-## Creating back-ups
+## Yedek oluşturma
 
-### Keystore file from the computer you used to build the APK
-When building your .APK installer file from Android Studio, it uses the **keystore file and password to sign the .APK installer file**. To update your current AAPS installation, it is required to sign the update .APK installer file with the same keystore used for the initial installation. When updating, all settings and the AAPS database will be kept. Note that without this, you are required to first uninstall the current application and then [reinstall](#reinstall-aaps) and reconfigure AAPS.
+### APK'yı oluşturmak için kullandığınız bilgisayardaki anahtar deposu dosyası
+Android Studio .APK yükleme dosyanızı oluştururken **.APK yükleme dosyasını imzalamak için anahtar deposu dosyasını ve parolasını** kullanır. Mevcut AAPS kurulumunuzu güncellemek için güncelleme .APK yükleme dosyasının ilk kurulumda kullanılan anahtar deposuyla imzalanması gerekir. Güncelleme sırasında tüm ayarlar ve AAPS veritabanı korunur. Bu olmadan önce mevcut uygulamayı kaldırmanız, ardından AAPS'i [yeniden yüklemeniz](#reinstall-aaps) ve yeniden yapılandırmanız gerektiğini unutmayın.
 
-Maintaining the keystore and associated password will greatly reduce the complexity of updating the APK in the future, especially if you need to build the app from a new computer. See the [Updating AAPS](../Maintenance/UpdateToNewVersion.md) section for details on using the keystore when building a new APK.
+Anahtar deposunu ve ilgili parolayı saklamak, ileride APK'yı güncellemeyi çok kolaylaştırır; özellikle uygulamayı yeni bir bilgisayarda oluşturmanız gerekirse. Yeni bir APK oluştururken anahtar deposunun nasıl kullanılacağı hakkında ayrıntılar için [AAPS'i güncelleme](../Maintenance/UpdateToNewVersion.md) bölümüne bakın.
 
-**When to back-up:** The keystore should be backed up after you first build the **AAPS** .APK installer file.
+**Ne zaman yedeklenmeli:** Anahtar deposu, **AAPS** .APK yükleme dosyasını ilk kez oluşturduktan sonra yedeklenmelidir.
 
-**How to back-up:** Locate your keystore path. If you don’t remember it you can find it in Android Studio by selecting **Build > APK > Next**. The path will be listed in “Key store path”. Using your file explorer, navigate to this path and make a copy of your keystore file (ending in file extension `.jks`). Save it to a safe cloud location should your computer become unavailable. Make sure to also record your key store password, key alias and key password.
+**Nasıl yedeklenir:** Anahtar deposu yolunuzu bulun. Hatırlamıyorsanız Android Studio'da **Build > APK > Next** seçerek bulabilirsiniz. Yol, “Key store path” alanında gösterilir. Dosya gezgininizle bu yola gidin ve anahtar deposu dosyanızın (dosya uzantısı `.jks`) bir kopyasını alın. Bilgisayarınız kullanılamaz hâle gelirse diye bunu güvenli bir bulut konumuna kaydedin. Anahtar deposu parolanızı (key store password), anahtar takma adınızı (key alias) ve anahtar parolanızı (key password) da not ettiğinizden emin olun.
 
-### Copies of the most recent APK
-In case your main **AAPS** phone is lost or damaged, having a copy of the APK available will allow you to quickly resume using **AAPS** with a new phone. Note: you will also need your preferences backed up as noted below.
+### En son APK'nın kopyaları
+Ana **AAPS** telefonunuz kaybolur veya hasar görürse, elinizde APK'nın bir kopyasının olması yeni bir telefonla **AAPS**'i hızla kullanmaya devam etmenizi sağlar. Not: Aşağıda anlatıldığı gibi tercihlerinizin de yedeklenmiş olması gerekir.
 
-**When to back-up:** You should maintain a back-up of the most recent APK that you installed on your main **AAPS** phone. You may want to also maintain one earlier version in case you need to roll back to that for any reason.
+**Ne zaman yedeklenmeli:** Ana **AAPS** telefonunuza yüklediğiniz en son APK'nın bir yedeğini saklamalısınız. Herhangi bir nedenle eski sürüme geri dönmeniz gerekirse diye bir önceki sürümü de saklamak isteyebilirsiniz.
 
-**How to back-up:** Maintain a copy on the computer used to build the APK with Android Studio. Additionally, it is recommended to use a cloud platform to store a copy of the installer APK. Make sure you know how to locate both backups when needed. Consider setting up dedicated folders to store these backups.
+**Nasıl yedeklenir:** APK'yı Android Studio ile oluşturmak için kullandığınız bilgisayarda bir kopya saklayın. Ayrıca yükleme APK'sının bir kopyasını saklamak için bir bulut platformu kullanmanız önerilir. Gerektiğinde iki yedeği de nasıl bulacağınızı bildiğinizden emin olun. Bu yedekleri saklamak için ayrı klasörler oluşturmayı düşünün.
 
-### AAPS settings file (also referred to as 'Preferences')
+### AAPS ayar dosyası ('Tercihler' olarak da adlandırılır)
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).
+Ayarlarınızı, [AAPS kurulumu](#SetupWizard-StoragePermission) sırasında seçtiğiniz **AAPS Dizini** içinde bulabilirsiniz.</br>
+**AAPS dizini** ayarını **Bakım** ekranından da değiştirebilirsiniz (**menü** (☰) > **Bakım**), bkz. [Yerel AAPS dizinini ayarlama](#preferences-maintenance-logdirectory).
 ```
 
-With a copy of the APK installer file (see above) and your **Settings** file, you can quickly get up and running on an existing or new phone.
+APK yükleme dosyasının bir kopyası (yukarıya bakın) ve **Ayarlar** dosyanızla mevcut veya yeni bir telefonda hızla yeniden çalışmaya başlayabilirsiniz.
 
-The **Settings** file is used to customize the AAPS application to fit your specific setup. They encompass details such as your **Configuration** settings, objective status, third-party communication settings (e.g., Nightscout, Tidepool), automations, and profiles.
+**Ayarlar** dosyası, AAPS uygulamasını kendi kurulumunuza uyarlamak için kullanılır. Bunlar **Konfigürasyon** ayarlarınız, görev durumunuz, üçüncü taraf iletişim ayarları (ör. Nightscout, Tidepool), otomasyonlar ve profiller gibi bilgileri içerir.
 
-Exporting the AAPS settings to file enables you to restore its configuration to a specific point in time. As mentioned, in addition to all configuration settings, the export file also contains the status of your objectives, which you need to restore when **(re)installing** AAPS. Without this you will be required to redo all objectives from start to enable closed loop. Settings files also enable you to restore "last known good" settings for undoing any configuration changes.
+AAPS ayarlarını bir dosyaya dışa aktarmak, yapılandırmayı belirli bir zamandaki hâline geri yüklemenizi sağlar. Belirtildiği gibi, dışa aktarma dosyası tüm yapılandırma ayarlarının yanında görevlerinizin durumunu da içerir; AAPS'i **(yeniden) yüklerken** bunu geri yüklemeniz gerekir. Bu olmadan kapalı döngüyü etkinleştirmek için tüm görevleri baştan yeniden yapmanız gerekir. Ayar dosyaları, yapılandırma değişikliklerini geri almak için "bilinen son iyi" ayarları geri yüklemenizi de sağlar.
 
-**When to back-up AAPS settings:**
-* Each time you complete an objective to prevent losing your progress. _Without a copy of your **Settings** you will have to complete all objectives again in the event you need to re-install AAPS or replace your phone._
+**AAPS ayarları ne zaman yedeklenmeli:**
+* İlerlemenizi kaybetmemek için her görevi tamamladığınızda. _**Ayarlarınızın** bir kopyası olmadan, AAPS'i yeniden yüklemeniz veya telefonunuzu değiştirmeniz gerekirse tüm görevleri yeniden tamamlamanız gerekir._
 
-* Any time you plan to make significant changes to your configuration (change SMB settings, change insulin types, change pump, make changes to automations) you should back up your **Settings** before and after making the changes. This way you have your most recent settings as well as a copy of what they were before the changes in case you need to revert back to them.
+* Yapılandırmanızda önemli değişiklikler yapmayı planladığınızda (SMB ayarlarını değiştirmek, insülin türünü değiştirmek, pompa değiştirmek, otomasyonlarda değişiklik yapmak gibi) **Ayarlarınızı** değişikliklerden önce ve sonra yedeklemelisiniz. Böylece hem en son ayarlarınız hem de değişikliklerden önceki hâlinin bir kopyası elinizde olur; gerekirse eski ayarlara geri dönebilirsiniz.
 
-* Tubeless pumps (Such as Omnipod and Medtrum) users only: the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. If you do not have a copy of your preferences exported after you started your current pod you will need to start a new pod in the event you need to replace your current phone.
+* Yalnızca hortumsuz pompa (Omnipod ve Medtrum gibi) kullanıcıları için: **Ayarlar** dosyası mevcut Pod'unuzun bağlantı bilgilerini içerir ve yeni bir telefonla bu Pod'a yeniden bağlanmak için kullanılabilir. Mevcut Pod'unuzu başlattıktan sonra dışa aktarılmış bir tercih dosyanız yoksa, telefonunuzu değiştirmeniz gerektiğinde yeni bir Pod başlatmanız gerekir.
 
-**How to back-up manually:**
+**Elle yedekleme nasıl yapılır:**
 
-1. If this is your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). Set a password and record this in a safe place. _You will be unable to access your **Settings** back-ups without this password._
+1. **Ayarları** ilk kez içe veya dışa aktarıyorsanız [Ayarlar > Koruma](#Preferences-master-password) bölümünde bir ana parola belirlemeniz gerekir. Bir parola belirleyin ve bunu güvenli bir yere not edin. _Bu parola olmadan **Ayarlar** yedeklerinize erişemezsiniz._
 
-2. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance**. Choose where to save the file with the **Local** and **Cloud** chips next to **Export settings** (see **Exporting or Importing Settings** below), then tap **Export settings**. **AAPS** shows where the file will go: the file name for **Local**, **Google Drive** for **Cloud**. Tap **OK**.
+2. **AAPS** ana ekranında **menüyü** (☰) açın > **Bakım**. Dosyanın nereye kaydedileceğini **Ayarları dışa aktar** yanındaki **Yerel** ve **Bulut** çipleriyle seçin (aşağıdaki **Ayarları dışa veya içe aktarma** bölümüne bakın), ardından **Ayarları dışa aktar** seçeneğine dokunun. **AAPS** dosyanın nereye gideceğini gösterir: **Yerel** için dosya adını, **Bulut** için **Google Drive**'ı. **Tamam**'a dokunun.
 
-   ![Export settings to a local file](../images/Maintenance/export_settings_confirm_local.png)
+   ![Ayarları yerel bir dosyaya dışa aktarma](../images/Maintenance/export_settings_confirm_local.png)
 
-   ![Export settings to Google Drive](../images/Maintenance/export_settings_confirm_cloud.png)
+   ![Ayarları Google Drive'a dışa aktarma](../images/Maintenance/export_settings_confirm_cloud.png)
 
-   Type the master password set above and tap **OK**.
+   Yukarıda belirlediğiniz ana parolayı yazın ve **Tamam**'a dokunun.
 
-   ![Master password for the export](../images/Maintenance/export_settings_password.png)
+   ![Dışa aktarma için ana parola](../images/Maintenance/export_settings_password.png)
 
-   **Settings exported** (local) or **Cloud export successful** (cloud) confirms the export.
+   **Ayarlar dışa aktarıldı** (yerel) veya **Bulut aktarımı başarılı** (bulut) mesajı dışa aktarmayı onaylar.
 
-   ![Settings exported message](../images/Maintenance/export_settings_done_local.png)
+   ![Ayarlar dışa aktarıldı mesajı](../images/Maintenance/export_settings_done_local.png)
 
-   ![Cloud export successful message](../images/Maintenance/export_settings_done_cloud.png)
+   ![Bulut aktarımı başarılı mesajı](../images/Maintenance/export_settings_done_cloud.png)
 
-3. Using the file explorer on your phone (commonly called “Files” or “My Files”) navigate to Internal Storage > AAPS > preferences. Here you will see a copy of all exported preferences files. The file name should be `YYYY-MM-DD_Time_appname.json`. Upload this file to the cloud platform of your choice. Then from the cloud platform, also download a copy to your local computer.
+3. Telefonunuzdaki dosya gezginiyle (genellikle “Dosyalar” veya “Dosyalarım” olarak adlandırılır) Dahili depolama > AAPS > preferences klasörüne gidin. Burada dışa aktarılan tüm tercih dosyalarının bir kopyasını görürsünüz. Dosya adı `YYYY-MM-DD_Time_appname.json` biçiminde olmalıdır. Bu dosyayı seçtiğiniz bulut platformuna yükleyin. Ardından bulut platformundan yerel bilgisayarınıza da bir kopya indirin.
 
 (ExportImportSettings-Settings-Export)=
 
-## Settings Export
+## Ayarları dışa aktarma
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).
+Ayarlarınızı, [AAPS kurulumu](#SetupWizard-StoragePermission) sırasında seçtiğiniz **AAPS Dizini** içinde bulabilirsiniz.</br>
+**AAPS dizini** ayarını **Bakım** ekranından da değiştirebilirsiniz (**menü** (☰) > **Bakım**), bkz. [Yerel AAPS dizinini ayarlama](#preferences-maintenance-logdirectory).
 ```
 
-It is recommended to do regular settings exports, especially before and after making configuration changes. You can choose to do exports **manually or (preferred) through automation**. Make sure to take a note of your AAPS master password and to backup your settings files by copying them off your phone to for instance a cloud storage location.
+Özellikle yapılandırma değişikliklerinden önce ve sonra ayarları düzenli olarak dışa aktarmanız önerilir. Dışa aktarmayı **elle veya (tercihen) otomasyonla** yapabilirsiniz. AAPS ana parolanızı not ettiğinizden ve ayar dosyalarınızı telefonunuzdan örneğin bir bulut depolama konumuna kopyalayarak yedeklediğinizden emin olun.
 
-**Note**: _The exported settings will be encrypted with your AAPS master password: without the master password used for exporting you will be unable to import the settings file!_
+**Not**: _Dışa aktarılan ayarlar AAPS ana parolanızla şifrelenir: dışa aktarmada kullanılan ana parola olmadan ayar dosyasını içe aktaramazsınız!_
 
-### Exporting or Importing Settings
-To export or import settings, open the **menu** (☰) and select **Maintenance**. Under **File management**, the **Local** and **Cloud** chips next to **Export settings** and **Import settings** choose where the settings file is saved to or read from: **Local** is the AAPS directory on your phone, **Cloud** is available once a [Cloud Directory](#preferences-maintenance-cloud) is set up. Tapping a chip turns it on or off; at least one always stays selected, and both rows share the same choice. Then tap **Export settings** or **Import settings** itself to start.
+### Ayarları dışa veya içe aktarma
+Ayarları dışa veya içe aktarmak için **menüyü** (☰) açın ve **Bakım**'ı seçin. **Dosya yönetimi** altında, **Ayarları dışa aktar** ve **Ayarları içe aktar** yanındaki **Yerel** ve **Bulut** çipleri, ayar dosyasının nereye kaydedileceğini veya nereden okunacağını seçer: **Yerel**, telefonunuzdaki AAPS dizinidir; **Bulut** ise bir [Bulut Dizini](#preferences-maintenance-cloud) ayarlandıktan sonra kullanılabilir. Bir çipe dokunmak onu açar veya kapatır; her zaman en az biri seçili kalır ve iki satır aynı seçimi paylaşır. Ardından başlatmak için **Ayarları dışa aktar** veya **Ayarları içe aktar** seçeneğinin kendisine dokunun.
 
-![Maintenance menu with the Export settings and Import settings rows](../images/Maintenance/maintenance_export_import.png)
+![Ayarları dışa aktar ve Ayarları içe aktar satırlarını gösteren Bakım menüsü](../images/Maintenance/maintenance_export_import.png)
 
 (ExportImportSettings-Automating-Settings-Export)=
-### Automating Settings Export
+### Ayarları dışa aktarmayı otomatikleştirme
 
-To automate settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
+Ayarları otomatik olarak dışa aktarmak için [(**bkz. Otomasyon**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) [**Ayarlar** > **Bakım**](#preferences-maintenance-settings) bölümünü açın, **Gözetimsiz Ayarlar Dışa Aktarımı** bölümünü genişletin ve **Otomatik ayar dışa aktarımını etkinleştir** seçeneğini açın.
 
-You can now configure [Automation](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) to export settings, either on a regular basis (_i.e._ each week), or after a pod change.
+Artık [Otomasyon](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) ile ayarları düzenli olarak (_örneğin_ her hafta) veya bir Pod değişiminden sonra dışa aktarabilirsiniz.
 
-_**Note:** On importing settings, the user always needs to enter the AAPS master password!_
+_**Not:** Ayarları içe aktarırken kullanıcının her zaman AAPS ana parolasını girmesi gerekir!_
 
-![Settings > Maintenance > Unattended Settings Export with the Enable automated settings export switch](../images/Maintenance/settings_unattended_export.png)
+![Otomatik ayar dışa aktarımını etkinleştir anahtarıyla Ayarlar > Bakım > Gözetimsiz Ayarlar Dışa Aktarımı](../images/Maintenance/settings_unattended_export.png)
 
 (ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps)=
-## Restoring from your backups on a new phone or fresh installation of AAPS
+## Yeni bir telefonda veya yeni bir AAPS kurulumunda yedeklerinizden geri yükleme
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).</br>
-If **AAPS** loses access to that directory (this can happen after a reinstall or after clearing the app's storage), it shows an **Access to the AAPS directory was lost** notification and stops saving settings to the phone until you [select the directory again](#preferences-maintenance-logdirectory).
+Ayarlarınızı, [AAPS kurulumu](#SetupWizard-StoragePermission) sırasında seçtiğiniz **AAPS Dizini** içinde bulabilirsiniz.</br>
+**AAPS dizini** ayarını **Bakım** ekranından da değiştirebilirsiniz (**menü** (☰) > **Bakım**), bkz. [Yerel AAPS dizinini ayarlama](#preferences-maintenance-logdirectory).</br>
+**AAPS** bu dizine erişimi kaybederse (bu, yeniden yüklemeden veya uygulamanın depolama alanını temizledikten sonra olabilir), **AAPS dizinine erişim kaybedildi** bildirimini gösterir ve siz [dizini yeniden seçene](#preferences-maintenance-logdirectory) kadar ayarları telefona kaydetmeyi durdurur.
 ```
 
-Use these instructions if you have a back-up of your APK and **Settings** that you want to load on to a new phone or if you needed to delete and reinstall the APK on your existing phone for any reason.
+APK'nızın ve **Ayarlarınızın** yeni bir telefona yüklemek istediğiniz bir yedeği varsa veya herhangi bir nedenle mevcut telefonunuzda APK'yı silip yeniden yüklemeniz gerektiyse bu talimatları kullanın.
 
-_If you are updating **AAPS** using an APK built with the same keystore you should not need to follow this process. However, it is still advised to create a back-up before you apply the update._
+_**AAPS**'i aynı anahtar deposuyla oluşturulmuş bir APK ile güncelliyorsanız bu işlemi izlemeniz gerekmez. Yine de güncellemeyi uygulamadan önce bir yedek oluşturmanız önerilir._
 
-If you are updating **AAPS** after you lost or replaced your original keystore (i.e. using a new build computer without transferring the keystore), ensure that you back up all settings per the above and then uninstall the existing version of **AAPS** on your phone. See [Reinstalling AAPS with a new keystore](#reinstall-aaps) for the full procedure.
+**AAPS**'i özgün anahtar deponuzu kaybettikten veya değiştirdikten sonra güncelliyorsanız (örneğin anahtar deposunu aktarmadan yeni bir derleme bilgisayarı kullanıyorsanız), tüm ayarları yukarıda anlatıldığı gibi yedeklediğinizden emin olun ve ardından telefonunuzdaki mevcut **AAPS** sürümünü kaldırın. Tüm işlem için [Yeni bir anahtar deposuyla AAPS'i yeniden yükleme](#reinstall-aaps) bölümüne bakın.
 
-If needed, [set up your CGM/BG source receiver](../Getting-Started/CompatiblesCgms.md) prior to the steps listed below
+Gerekirse aşağıdaki adımlardan önce [CGM/KŞ kaynağı alıcınızı kurun](../Getting-Started/CompatiblesCgms.md)
 
 (ExportImportSettings-tubeless-pumps)=
 ```{admonition} Tubeless pumps (Omnipod and Medtrum) users
 :class: warning
-The **Preferences** file contains the session of the pod or patch that was active when you exported it.
-- **Export right after every pod or patch activation** and copy the file off your phone.
-- **Same phone, pod still running:** leave **Also replace pump settings** unticked. Your current pod is kept and only the other settings are imported.
-- **New phone taking over the pod:** tick **Also replace pump settings**, and only use a file exported during the pod you are wearing now. A file from an earlier pod replaces your current pod session, and you will need to start a new pod.
-- **An old pod session was imported by mistake:** **AAPS** keeps trying to reach that pod and you cannot activate a new one. Deactivate it; if that fails, discard it (see for example [Discarding a pod](#omnipod-dash-discard-pod) for Omnipod DASH).
+**Tercihler** dosyası, dışa aktardığınız anda etkin olan Pod veya Patch oturumunu içerir.
+- **Her Pod veya Patch etkinleştirmesinden hemen sonra dışa aktarın** ve dosyayı telefonunuzun dışına kopyalayın.
+- **Aynı telefon, Pod hâlâ çalışıyor:** **Pompa ayarlarını da değiştir** kutusunu işaretlemeyin. Mevcut Pod'unuz korunur ve yalnızca diğer ayarlar içe aktarılır.
+- **Pod'u yeni telefon devralıyor:** **Pompa ayarlarını da değiştir** kutusunu işaretleyin ve yalnızca şu anda taktığınız Pod sırasında dışa aktarılmış bir dosya kullanın. Daha önceki bir Pod'a ait dosya mevcut Pod oturumunuzun yerine geçer ve yeni bir Pod başlatmanız gerekir.
+- **Eski bir Pod oturumu yanlışlıkla içe aktarıldı:** **AAPS** o Pod'a ulaşmaya çalışmaya devam eder ve yeni bir Pod etkinleştiremezsiniz. Pod'u devre dışı bırakın; bu başarısız olursa Pod'u çıkarın (Omnipod DASH için örneğin [Pod'u çıkarma](#omnipod-dash-discard-pod) bölümüne bakın).
 ```
 
 ```{admonition} Pump settings are kept unless you say otherwise
 :class: note
-By default, an import leaves your pump settings alone: the pump selected in **Configuration**, its pairing and all its other settings stay as they are on this phone. Tick **Also replace pump settings** on the import screen only when you restore onto a new phone that should take over the same pump. Settings that are not in the file are never deleted by an import.
+Varsayılan olarak içe aktarma pompa ayarlarınıza dokunmaz: **Konfigürasyon** içinde seçili pompa, eşleştirmesi ve diğer tüm ayarları bu telefonda olduğu gibi kalır. İçe aktarma ekranındaki **Pompa ayarlarını da değiştir** kutusunu yalnızca aynı pompayı devralacak yeni bir telefona geri yükleme yaptığınızda işaretleyin. Dosyada olmayan ayarlar içe aktarma ile asla silinmez.
 ```
 
-1. Using the back-up copy of your APK from above, follow the instructions for a [new installation](../SettingUpAaps/TransferringAndInstallingAaps.md)
+1. Yukarıdaki APK yedek kopyanızı kullanarak [yeni kurulum](../SettingUpAaps/TransferringAndInstallingAaps.md) talimatlarını izleyin
 
-2. Launch **AAPS** and allow any requested permissions
+2. **AAPS**'i başlatın ve istenen tüm izinleri verin
 
-3. Exit the Setup Wizard. We will be importing all the necessary settings from the back-up copy of **Settings**
+3. Kurulum Sihirbazı'ndan çıkın. Gerekli tüm ayarları **Ayarlar** yedek kopyasından içe aktaracağız
 
-4. From the **AAPS** main screen press **Grant** and allow all permissions listed in the **Permissions Required** panel on the top
+4. **AAPS** ana ekranında **İzin ver**'e basın ve üstteki **Gerekli İzinler** panelinde listelenen tüm izinleri verin
 
-5. From the **AAPS** main screen, set the master password in [Settings > Protection](#Preferences-master-password) to the same password as you used with your back-ups.
+5. **AAPS** ana ekranında, [Ayarlar > Koruma](#Preferences-master-password) bölümündeki ana parolayı yedeklerinizde kullandığınız parolayla aynı olacak şekilde ayarlayın.
 
-6. If you haven't done it yet, [set the **AAPS directory**](#preferences-maintenance-logdirectory): from the **AAPS** main screen, open the **menu** (☰) > **Maintenance** > **AAPS directory**.
+6. Henüz yapmadıysanız [**AAPS dizinini** ayarlayın](#preferences-maintenance-logdirectory): **AAPS** ana ekranında **menüyü** (☰) açın > **Bakım** > **AAPS dizini**.
 
-7. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance** > **Export settings** > type in the master password set above > **OK**. This will create the preferences folder if it does not already exist on your phone.
+7. **AAPS** ana ekranında **menüyü** (☰) açın > **Bakım** > **Ayarları dışa aktar** > yukarıda belirlediğiniz ana parolayı yazın > **Tamam**. Bu, tercihler klasörü telefonunuzda henüz yoksa onu oluşturur.
 
-8. Download the back-up of your **Preferences** file from your cloud platform.
+8. **Tercihler** dosyanızın yedeğini bulut platformunuzdan indirin.
 
-9. Use your file explorer (commonly called “Files” or “My Files”) to move the file from your downloads to `/internal storage/AAPS/preferences` if your **AAPS Directory** has been set `/internal storage/AAPS`
+9. **AAPS Dizini** `/internal storage/AAPS` olarak ayarlandıysa, dosyayı indirilenler klasöründen `/internal storage/AAPS/preferences` klasörüne taşımak için dosya gezgininizi (genellikle “Dosyalar” veya “Dosyalarım” olarak adlandırılır) kullanın
 
-10. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance** and tap **Import settings**. Select the preferences file you want to restore from (the newest is at the top). Make sure you select the correct preferences file, all .json files from the preferences folder (or from the cloud directory, with **Cloud**) will be shown.
+10. **AAPS** ana ekranında **menüyü** (☰) açın > **Bakım** ve **Ayarları içe aktar** seçeneğine dokunun. Geri yüklemek istediğiniz tercih dosyasını seçin (en yenisi en üsttedir). Doğru tercih dosyasını seçtiğinizden emin olun; preferences klasöründeki (veya **Bulut** ile bulut dizinindeki) tüm .json dosyaları gösterilir.
 
-    ![List of settings files to import](../images/Maintenance/import_settings_files.png)
+    ![İçe aktarılacak ayar dosyalarının listesi](../images/Maintenance/import_settings_files.png)
 
-    **AAPS** shows the details of the file. Type the master password set above and tap **Decrypt & Review**.
+    **AAPS** dosyanın ayrıntılarını gösterir. Yukarıda belirlediğiniz ana parolayı yazın ve **Şifreyi Çöz & Gözden geçir**'e dokunun.
 
-11. Once the file is decrypted, decide what to do with the pump settings. On a new phone that takes over the same pump, tick **Also replace pump settings** so the pairing and the pump settings come from the file. Leave the box unticked to keep the pump this phone is already paired with. Then tap **Import**.
+11. Dosyanın şifresi çözüldükten sonra pompa ayarlarıyla ne yapacağınıza karar verin. Aynı pompayı devralan yeni bir telefonda, eşleştirme ve pompa ayarlarının dosyadan gelmesi için **Pompa ayarlarını da değiştir** kutusunu işaretleyin. Bu telefonun zaten eşleştirilmiş olduğu pompayı korumak için kutuyu işaretlemeden bırakın. Ardından **İçe aktar**'a dokunun.
 
-    ![Decrypted settings file with the Also replace pump settings box and the Import button](../images/Maintenance/import_settings_review.png)
+    ![Pompa ayarlarını da değiştir kutusu ve İçe aktar düğmesiyle şifresi çözülmüş ayar dosyası](../images/Maintenance/import_settings_review.png)
 
-12. **AAPS** asks **Apply imported settings?** and tells you how many settings will change and, if you left the box unticked, how many pump settings are kept. Nothing has been written yet, so **Cancel** leaves your phone exactly as it was. Tap **OK** to apply.
+12. **AAPS** **İçe aktarılan ayarlar uygulansın mı?** diye sorar ve kaç ayarın değişeceğini, kutuyu işaretlemediyseniz kaç pompa ayarının korunacağını söyler. Henüz hiçbir şey yazılmadı; bu nedenle **Vazgeç** telefonunuzu tam olarak önceki hâlinde bırakır. Uygulamak için **Tamam**'a dokunun.
 
-    ![Apply imported settings dialog](../images/Maintenance/import_settings_apply.png)
+    ![İçe aktarılan ayarları uygulama iletişim kutusu](../images/Maintenance/import_settings_apply.png)
 
-13. **AAPS** applies the imported settings straight away, without restarting. Only the plugins whose settings changed are restarted. While this runs, **AAPS** shows **Applying settings…**; if the pump is busy, it shows **Waiting for pump…** and applies the settings once the pump is idle. If the pump is still busy after one minute, **AAPS** offers to try again. A **Settings applied** message confirms that the imported settings are in use. Any treatment you had queued while the import ran is dropped and **AAPS** tells you that it was cancelled, so nothing is sent to the pump twice.
+13. **AAPS** içe aktarılan ayarları yeniden başlatmadan hemen uygular. Yalnızca ayarları değişen eklentiler yeniden başlatılır. Bu sırada **AAPS** **Ayarlar uygulanıyor…** gösterir; pompa meşgulse **Pompa bekleniyor...** gösterir ve pompa boşa çıkınca ayarları uygular. Pompa bir dakika sonra hâlâ meşgulse **AAPS** tekrar denemeyi önerir. **Ayarlar uygulandı** mesajı, içe aktarılan ayarların kullanımda olduğunu onaylar. İçe aktarma sırasında kuyruğa aldığınız tedaviler iptal edilir ve **AAPS** bunu size bildirir; böylece pompaya hiçbir şey iki kez gönderilmez.
 
-    ![Settings applied message](../images/Maintenance/import_settings_applied.png)
+    ![Ayarlar uygulandı mesajı](../images/Maintenance/import_settings_applied.png)
 
-If the file selected a pump that this version of **AAPS** does not have, **AAPS** falls back to the **Virtual Pump** and tells you so. Select your pump again in **Configuration** and check its settings.
+Dosyada **AAPS**'in bu sürümünde olmayan bir pompa seçiliyse **AAPS** **Sanal pompa**'ya geçer ve bunu size bildirir. **Konfigürasyon** içinde pompanızı yeniden seçin ve ayarlarını kontrol edin.
 
-14. Tubeless pumps (Omnipod and Medtrum) users only - if you ticked **Also replace pump settings** and your **Preferences** were not backed up from the same pod you are currently using, you will need to start a new pod to begin insulin delivery.
+14. Yalnızca hortumsuz pompa (Omnipod ve Medtrum) kullanıcıları için: **Pompa ayarlarını da değiştir** kutusunu işaretlediyseniz ve **Tercihleriniz** şu anda kullandığınız Pod sırasında yedeklenmemişse, insülin iletimine başlamak için yeni bir Pod başlatmanız gerekir.
 
-**Troubleshooting:** if you are unable to get an active profile set from the **AAPS** main screen, open the **menu** (☰) in the top left > **Configuration** > **Pump** > switch to **Virtual Pump** > then switch back to your pump type
+**Sorun giderme:** **AAPS** ana ekranından etkin bir profil ayarlayamıyorsanız sol üstteki **menüyü** (☰) açın > **Konfigürasyon** > **Pompa** > **Sanal pompa**'ya geçin > ardından kendi pompa türünüze geri dönün
 
 ### Dana RS kullanıcıları için not
 
-- If you ticked **Also replace pump settings**, the pump connection settings are imported too: **AAPS** on your new phone will already "know" the pump and therefore not start a Bluetooth scan.
+- **Pompa ayarlarını da değiştir** kutusunu işaretlediyseniz pompa bağlantı ayarları da içe aktarılır: yeni telefonunuzdaki **AAPS** pompayı zaten "tanır" ve bu nedenle Bluetooth taraması başlatmaz.
 - Lütfen yeni telefonu ve pompayı manuel olarak eşleştirin.
