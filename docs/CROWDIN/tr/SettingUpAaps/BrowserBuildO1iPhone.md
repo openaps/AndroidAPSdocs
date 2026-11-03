@@ -1,19 +1,19 @@
 (aaps-ci-ios-ipad)=
 
-# Option 1 · iPhone / iPad – Generate a new keystore
+# Seçenek 1 · iPhone / iPad – Yeni bir anahtar deposu oluşturun
 
 ```{note}
-[Option 1](BrowserBuildO1.md) (generate a new keystore) on **iPhone / iPad** (iPad shown as an example).
+**iPhone / iPad** üzerinde [Seçenek 1](BrowserBuildO1.md) (yeni bir anahtar deposu oluşturma) (örnek olarak iPad gösterilmiştir).
 ```
 
-## 1. Download the preparation file
+## 1. Hazırlık dosyasını indirin
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Open the preparation file and generate the keystore
+## 2. Hazırlık dosyasını açın ve anahtar deposunu oluşturun
 
-Compatible with iOS (using iPad as an example)
+iOS ile uyumludur (örnek olarak iPad kullanılmıştır)
 <!--crowdin: exclude-->
 
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
@@ -30,4 +30,4 @@ Compatible with iOS (using iPad as an example)
 
 ----
 
-**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**
+**Sonraki adım: [Adım 3 – Google Drive'ı yetkilendirin](BrowserBuildGoogleDrive.md) →**
