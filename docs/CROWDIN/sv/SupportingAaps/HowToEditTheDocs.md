@@ -1,565 +1,565 @@
-# How to edit the docs
+# Så redigerar du dokumentationen
 
-**This description is just for editing the English documentation. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
+**Den här beskrivningen gäller bara redigering av den engelska dokumentationen. All ny information måste först läggas till på engelska. Om du vill översätta till andra språk (tack!), använd [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
+Tips om hur du formaterar text (rubrik, fetstil ...) och lägger in länkar finns i avsnittet ["Kodsyntax"](#edit-the-docs-code-syntax) på den här sidan.
 
-## General
+## Allmänt
 
-For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw).
+Om du har frågor, återkoppling eller nya idéer kan du kontakta dokumentationsteamet via [discord](https://discord.gg/4fQUWHZ4Mw).
 
-At some point it will be suggested that you make a pull request (PR), which is how your changes in the documentation are actually put onto the AAPS webpages, which are stored in GitHub. It's actually not too hard to do a PR and it is a great way to contribute. You are reading this documentation right now because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. Your changes are reviewed before they are merged into the "formal" AAPS documentation repository. You can't mess up the originals through any accidents in the process. The general process is:
+Förr eller senare kommer någon att föreslå att du gör en pull request (PR). Det är så dina ändringar i dokumentationen faktiskt hamnar på AAPS webbsidor, som lagras på GitHub. Det är faktiskt inte så svårt att göra en PR, och det är ett bra sätt att bidra. Du läser den här dokumentationen just nu tack vare att personer som du har gjort PR:er. Var inte orolig för att göra fel eller råka redigera fel dokument. Dina ändringar granskas innan de slås ihop med det "officiella" repot för AAPS-dokumentationen. Du kan inte förstöra originalen av misstag under processen. Processen i stora drag:
 
-- Make edits and improvements to code or documentation by editing the existing content.
-- Double-check that your edits look good to you.
-- Make a few notes of what's changed so people may understand the edits.
-- Create a pull request, which asks the administrators to use your changes.
-- They will do a review and either (1)merge your changes, (2)comment back to you about your changes, or (3)start a new document with your changes.
+- Gör ändringar och förbättringar i koden eller dokumentationen genom att redigera det befintliga innehållet.
+- Kontrollera en gång till att dina ändringar ser bra ut.
+- Skriv några korta anteckningar om vad som har ändrats, så att andra kan förstå ändringarna.
+- Skapa en pull request. Den ber administratörerna att ta in dina ändringar.
+- De granskar ändringarna och gör sedan något av följande: (1)slår ihop (merge) dina ändringar, (2)skriver en kommentar till dig om ändringarna eller (3)startar ett nytt dokument med dina ändringar.
 
-(Side note: If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
+(Tips: Om du lär dig bäst genom att se, finns det en YouTube-video [här](https://youtu.be/4b6tsL0_kzg) som visar hur en PR går till.)
 
-For our example we are going to make an edit to AndroidAPSdocs. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
+I vårt exempel gör vi en ändring i AndroidAPSdocs. Det här kan göras på vilken Windows-dator, Mac osv. som helst. (vilken dator som helst med internetanslutning).
 
-1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
+1. Gå till <https://github.com/openaps/AndroidAPSdocs> och tryck på Fork (forka) uppe till höger för att göra en egen kopia av repot.
 
-![Fork repo](../images/PR0.png)
+![Forka repot](../images/PR0.png)
 
-2. Go to any page and navigate to the page you want to edit. You can click on the "Edit in GitHub" link in the upper right corner. This is only possible for English pages. 
+2. Gå till valfri sida och navigera till den sida du vill redigera. Du kan klicka på länken "Edit in GitHub" (redigera i GitHub) uppe till höger. Det går bara på engelska sidor. 
 
-![edit doc](../images/PR1.png)
+![redigera dokumentet](../images/PR1.png)
 
-Or click the pencil icon that appears in the top bar of the page contents to be edited. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
+Eller klicka på pennikonen som visas i den övre listen på sidan som du vill redigera. Du måste redan vara inloggad på ditt GitHub-konto för att göra detta (om du inte har ett konto är det enkelt att skapa ett).
 
 ![RTD io](../images/PR2.png)
 
-3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
+3. Båda alternativen i steg 2 skapar en ny gren (branch) i DITT repo där dina ändringar sparas. Gör dina ändringar i filen.
 
-We are using markdown for the docs pages. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
+Vi använder markdown för sidorna i dokumentationen. Filerna har filändelsen ".md". Markdown-specifikationen är inte fast, och just nu använder vi myst_parser för våra markdown-filer. Var noga med att använda rätt syntax, som [beskrivs nedan](#edit-the-docs-code-syntax).
 
-![Edit branch](../images/PR3.png)
+![Redigera grenen](../images/PR3.png)
 
-4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). If you see a needed improvement, go back to the edit tab to make more improvements. 
+4. Du har arbetat i fliken "<>Edit file" (redigera filen). Välj fliken "Preview changes" (förhandsgranska ändringarna) för att se med nya ögon att allt du har ändrat ser ut som du tänkt dig (kontrollera även stavfel). Om du ser något mer som behöver förbättras går du tillbaka till redigeringsfliken och gör fler ändringar. 
 
-![preview mode](../images/PR5.png)
+![förhandsgranskningsläge](../images/PR5.png)
 
-5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
+5. När du är klar med dina ändringar scrollar du längst ner på sidan. I rutan längst ner skriver du dina kommentarer i textfältet med texten "Add an optional extended description..." (lägg till en valfri utförlig beskrivning). Standardrubriken innehåller filnamnet. Försök att skriva en mening som förklarar **varför** du gör ändringen. När du anger orsaken förstår granskarna lättare vad du vill uppnå med din PR.
 
-![commit comments](../images/PR4.png)
+![kommentarer till commit](../images/PR4.png)
 
-6. Click the green "Propose file changes" or "Commit changes" button. In the page that appears click "Create Pull Request" and again in the next page click "Create Pull Request".
+6. Klicka på den gröna knappen "Propose file changes" (föreslå filändringar) eller "Commit changes" (spara ändringarna). På sidan som visas klickar du på "Create Pull Request" (skapa pull request), och på nästa sida klickar du igen på "Create Pull Request".
 
-![create pull request](../images/PR6.png)
+![skapa pull request](../images/PR6.png)
 
-7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
+7. Nu har du öppnat en pull request (PR). GitHub ger din PR ett nummer. Det står efter rubriken och ett #-tecken. Gå tillbaka till den här sidan för att se om du har fått återkoppling (eller, om du får GitHub-aviseringar via e-post, får du e-post om allt som händer med din PR). Ändringen finns nu i en lista med PR:er som teamet granskar. De kan ge återkoppling innan ändringen tas in i den officiella dokumentationen för AAPS! Om du vill följa hur det går med din PR kan du klicka på klockikonen uppe till höger i ditt GitHub-konto och se alla dina PR:er.
 
-![PR tracking](../images/PR7.png)
+![Följa din PR](../images/PR7.png)
 
-PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+PS: Din fork och din gren finns kvar på ditt eget GitHub-konto. När du har fått en avisering om att din PR har slagits ihop (merged) kan du ta bort din gren om du inte behöver den längre (aviseringsområdet i steg 7 visar en länk för att ta bort grenen när den har stängts eller slagits ihop). Om du följer den här metoden nästa gång du redigerar, börjar dina ändringar alltid från en uppdaterad version av AndroidAPSdocs-repona. Om du väljer ett annat sätt att starta en PR (till exempel att börja redigera från master-grenen i ditt forkade repo) måste du först se till att ditt repo är uppdaterat. Gör då en "compare" (jämförelse) och slå ihop alla ändringar som har kommit sedan du senast uppdaterade din fork. Eftersom många glömmer att uppdatera sina repon rekommenderar vi att du använder PR-metoden ovan tills du är van vid att göra en "compare".
 
 (edit-the-docs-code-syntax)=
 
-## Code syntax
+## Kodsyntax
 
-We are using markdown for the documentation pages. The files have got the suffix ".md".
+Vi använder markdown för sidorna i dokumentationen. Filerna har filändelsen ".md".
 
-Markdown is a very simple text formatting language which separates text content from text formatting.
+Markdown är ett mycket enkelt språk för textformatering som skiljer textinnehållet från formateringen.
 
-The writer only e.g. marks a headline as level 1 headline and the markdown processor generates the necessary HTML code during processing to render the heading in HTML.
+Den som skriver markerar bara till exempel en rubrik som rubrik på nivå 1, och markdown-processorn skapar den HTML-kod som behövs för att visa rubriken i HTML.
 
-The idea behind this is that
+Tanken bakom detta är att
 
-- the writer should think about the text and not the formatting first,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
-- you can generate several output formats from one markdown file.
+- den som skriver ska tänka på texten först och inte på formateringen,
+- markdown-texten kan användas i olika markdown-verktyg, i stället för i till exempel slutna verktyg som Microsoft Word, och
+- du kan skapa flera utdataformat från en och samma markdown-fil.
 
-Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard, to
+Markdown är inte en helt fast standard, och vi försöker hålla oss så nära standarden som möjligt för att
 
-- stay flexible to change markdown tools as needed or forced in the further innovation of markdown tools and markdown SaaS services and
-- enable us to use translation services to translate the English language in a target language like French or German. They can work on markdown but not complex formatting codes, because they can't separate content from layout, which might be fatal.
+- vi ska kunna byta markdown-verktyg när det behövs eller när utvecklingen av markdown-verktyg och markdown-tjänster (SaaS) tvingar oss till det, och
+- vi ska kunna använda översättningstjänster för att översätta den engelska texten till ett annat språk, till exempel franska eller tyska. De kan hantera markdown men inte komplicerade formateringskoder, eftersom de inte kan skilja innehåll från layout. Det kan vara förödande.
 
-### Headlines
+### Rubriker
 
-- Headline 1: `# headline`
-- Headline 2: `## headline`
-- Headline 3: `### headline`
-- Headline 4: `#### headline`
+- Rubrik 1: `# headline`
+- Rubrik 2: `## headline`
+- Rubrik 3: `### headline`
+- Rubrik 4: `#### headline`
 
-We try to avoid further levels of headlines.
+Vi försöker undvika fler rubriknivåer än så.
 
-### Text format
+### Textformat
 
-- **bold**: `**text**`
-- *italic*: `*text*`
-- ***bold italic***: `***text***`
+- **fet**: `**text**`
+- *kursiv*: `*text*`
+- ***fet kursiv***: `***text***`
 
-### Ordered list
+### Numrerad lista
 
-    1. first
-    1. second
-    1. third
+    1. första
+    1. andra
+    1. tredje
     
 
-1. first
-2. second
-3. third
+1. första
+2. andra
+3. tredje
 
-### Unordered list
+### Punktlista
 
-    - one element
-    - another element
-    - and another element
+    - ett element
+    - ett annat element
+    - och ännu ett element
     
 
-- one element
-- another element
-- and another element
+- ett element
+- ett annat element
+- och ännu ett element
 
-### Multi level list
+### Lista med flera nivåer
 
-You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
+Du kan lägga listor i listor genom att dra in nästa nivå 4 mellanslag längre åt höger än nivån före.
 
-    1. first
-    1. second
-    1. third
-      1. one element
-      1. another element
-      1. and another element
-    1. four
-    1. five
-    1. six
+    1. första
+    1. andra
+    1. tredje
+      1. ett element
+      1. ett annat element
+      1. och ännu ett element
+    1. fyra
+    1. fem
+    1. sex
     
 
-1. first
-2. second
-3. third 
-    1. one element
-    2. another element
-    3. and another element
-4. four
-5. five
-6. six
+1. första
+2. andra
+3. tredje 
+    1. ett element
+    2. ett annat element
+    3. och ännu ett element
+4. fyra
+5. fem
+6. sex
 
-### Images
+### Bilder
 
-To include images you use this markdown syntax.
+För att lägga in bilder använder du den här markdown-syntaxen.
 
-- images: `![alt text](../images/file.png)`
+- bilder: `![alt text](../images/file.png)`
 
-The type of image should be PNG or JPEG.
+Bilden ska vara av typen PNG eller JPEG.
 
-Image names should conform to one of the following naming rules. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
+Bildnamn ska följa en av följande namnregler. I exemplet använder jag png som filändelse. Om du använder JPEG ska du i stället använda jpeg som filändelse.
 
-- `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
-- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
+- `filename-image-xx.png` där xx är ett unikt tvåsiffrigt nummer för bilderna i den här filen.
+- `filename-image-xx.png` där xx är ett beskrivande namn som författaren av md-filen väljer.
 
-Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
+Bilderna ligger i mappen images för det engelska språket och förs automatiskt över till de andra språken av Crowdin. Du behöver inte göra något för detta!
 
-We are not translating images at the moment: images should contain the **minimum possible text** to allow accessibility to non-English readers.
+Vi översätter inte bilder just nu: bilder ska innehålla **så lite text som möjligt** så att de fungerar även för läsare som inte kan engelska.
 
-(make-a-PR-image-size)= Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
+(make-a-PR-image-size)= Använd en rimlig storlek på bilderna. De måste gå att läsa på dator, surfplatta och mobil.
 
-- Screenshots from web pages images should be up to **1050 pixels wide**.
-- Diagrams of process flows should be up to **1050 pixels wide**.
-- Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
-- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
+- Skärmbilder från webbsidor ska vara högst **1050 pixlar breda**.
+- Diagram över processflöden ska vara högst **1050 pixlar breda**.
+- Skärmbilder från appen ska vara högst **500 pixlar breda**. Placera dem inte bredvid varandra om det inte behövs.
+- Skärmbilder från klockan (**Wear OS**) ska vara högst **360 pixlar breda**. Förstora aldrig en skärmbild som är mindre.
 
-### Links
+### Länkar
 
-#### External links
+#### Externa länkar
 
-External links are links to external web sites.
+Externa länkar är länkar till externa webbplatser.
 
-- external link: `[alt text](www.url.tld)`
+- extern länk: `[alt text](www.url.tld)`
 
-#### Internal links to the start of a md file
+#### Interna länkar till början av en md-fil
 
-Internal links to pages are links to the start of a md file which is hosted on our own server.
+Interna länkar till sidor är länkar till början av en md-fil som ligger på vår egen server.
 
-- internal link to .md page: `[alt text](../folder/file.md)`
+- intern länk till .md-sida: `[alt text](../folder/file.md)`
 
-#### Internal links to named inline references
+#### Interna länkar till namngivna referenser i texten
 
-Internal links to named inline references are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
+Interna länkar till namngivna referenser i texten är länkar till valfri plats i en md-fil som ligger på vår egen server, där en referens har satts att länka till.
 
-Add a named reference at the location in the target md file you want to jump to.
+Lägg till en namngiven referens på det ställe i md-målfilen som du vill hoppa till.
 
 `(name-of-my-md-file-this-is-my-fancy-named-reference)=`
 
-The named reference must be unique in the whole AndroidAPSDocs md files and not only the own md file it resides in!
+Den namngivna referensen måste vara unik i alla md-filer i AndroidAPSDocs, inte bara i den md-fil där den finns!
 
-Therefore it is a good practice to start with the filename and then the reference name you select.
+Därför är det bra att börja med filnamnet och sedan det referensnamn du väljer.
 
-Use only lowercase letters and hyphenate words.
+Använd bara små bokstäver och bindestreck mellan orden.
 
-Then link this reference in the text you are writing with the following kind of link.
+Länka sedan till den här referensen i texten du skriver med en länk av följande typ.
 
-- Internal links to named inline references: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+- Interna länkar till namngivna referenser i texten: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
-### Notes, Warnings, Collapsing Notes
+### Anteckningar, varningar, hopfällbara anteckningar
 
-You can add notes and warning boxes to documentation.
+Du kan lägga till rutor med anteckningar och varningar i dokumentationen.
 
-Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Please use these carefully as the documentation should be as easy to read as possible.
+Du kan också lägga till hopfällbara anteckningar för detaljerad information, så att användare som inte är intresserade av detaljerna inte avskräcks från att läsa texten. Använd dem med försiktighet, eftersom dokumentationen ska vara så lätt att läsa som möjligt.
 
-#### Notes
+#### Anteckningar
 
-    ```{admonition} Note headline
+    ```{admonition} Rubrik för anteckningen
     :class: note
-    This is a note.
+    Det här är en anteckning.
     ```
     
 
-```{admonition} Note headline :class: note This is a note.
+```{admonition} Rubrik för anteckningen :class: note Det här är en anteckning.
 
-    <br />#### Warnings
+    <br />#### Varningar
     
     ````
-    ```{admonition} Warning
+    ```{admonition} Varning
     :class: warning
-    This is a warning.
+    Det här är en varning.
     
 
-    ```{admonition} Warning headline
+    ```{admonition} Rubrik för varningen
     :class: warning
-    This is a warning.
+    Det här är en varning.
     ```
     
-    #### Collapsing Notes
+    #### Hopfällbara anteckningar
     
     
 
-    {admonition} further detailed readings for interested readers
+    {admonition} fördjupning för intresserade läsare
     :class: dropdown
     
-    This admonition has been collapsed,
-    meaning you can add longer form content here,
-    without it taking up too much space on the page.
+    Den här rutan är hopfälld,
+    vilket betyder att du kan lägga till längre innehåll här
+    utan att det tar för mycket plats på sidan.
     
 
 ````
 
-```{admonition} further detailed readings for interested readers :class: dropdown This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page.
+```{admonition} fördjupning för intresserade läsare :class: dropdown Den här rutan är hopfälld, vilket betyder att du kan lägga till längre innehåll här utan att det tar för mycket plats på sidan.
 
 ```
 
-## Tables
+## Tabeller
 
-Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Undvik tabeller med långa texter. Innehållet är svårt att ställa upp i Markdown, tabellerna får oftast inte plats på bredden av en mobilskärm och de ser troligen inte likadana ut efter översättningen.
 
-## Style Guide
+## Stilguide
 
-### Contents
+### Innehåll
 
-1. English language writing tips
+1. Tips för att skriva på engelska
 
-2. AAPS-specific writing notes
+2. Skrivtips som gäller AAPS
 
-3. Useful references
+3. Användbara referenser
 
-### ![Image](../images/styleguide01.png) 1\. English language writing tips
+### ![Bild](../images/styleguide01.png) 1\. Tips för att skriva på engelska
 
-#### Use language that is appropriate for the reader
+#### Använd ett språk som passar läsaren
 
-Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
+Använd enkel engelska (plain English) när det går. Det hjälper läsare som inte har engelska som modersmål och gör det också lättare att översätta AAPS-dokumentationen till andra språk. Skriv som om du pratar med användaren. Föreställ dig att du sitter vid ett bord mitt emot personen du skriver för. Kom ihåg att de flesta som använder AAPS inte är programmerare. Diabetes har också mycket fackspråk och många förkortningar. Tänk på att en del kanske nyligen har fått sin diagnos, inte har lika mycket erfarenhet av diabetes som du eller har fått en annan diabetesutbildning. Om du använder en kortform eller förkortning ska du skriva ut den i sin helhet första gången och sätta förkortningen direkt efter inom parentes, till exempel “super micro bolus (SMB)”. Länka också till ordlistan. Fackord som läsaren kanske inte känner till kan också läggas till inom parentes.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?”*
+I stället för: *“What causes high postprandial BG peaks in closed loop?”*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
+Skriv: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
 
-##### Use plain words that everyone can understand
+##### Använd enkla ord som alla förstår
 
-Find an A-Z of alternative words to make your writing easier to understand here:
+Här finns en lista från A till Ö med enklare ord som gör din text lättare att förstå:
 
 <https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html>
 
-#### Privacy/licensing concerns:
+#### Integritet och licenser:
 
-Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure YouTube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
+Särskilt om du spelar in video eller tar skärmbilder: se till att du inte visar privata uppgifter (API-nyckel, lösenord). Se till att YouTube-innehåll inte är offentligt listat, utan att man behöver en länk från dokumentationen för att se det. Dra inte uppmärksamhet till material som bryter mot upphovsrätten (BYODA osv.).
 
-#### Keep sentences short, get to the point
+#### Skriv korta meningar och kom till saken
 
-- Clear writing should have an average sentence length of 15 to 20 words.
+- En tydlig text har i genomsnitt 15 till 20 ord per mening.
 
-- This does not mean making every sentence the same length. Be punchy. Vary your writing by mixing short sentences (like the last one) with longer ones (like this one).
+- Det betyder inte att alla meningar ska vara lika långa. Var kärnfull. Variera texten genom att blanda korta meningar (som den förra) med längre meningar (som den här).
 
-- Stick to one main idea in a sentence, plus perhaps one other related point.
+- Håll dig till en huvudtanke per mening, och kanske en sak till som hör ihop med den.
 
-- You may still find yourself writing the odd long sentence, especially when trying to explain a complicated point. But most long sentences can be broken up in some way.
+- Ibland skriver du ändå en lång mening, särskilt när du försöker förklara något komplicerat. Men de flesta långa meningar kan delas upp på något sätt.
 
-- Remove weak words: “you can”, “there is/are/were”, “in order to”.
+- Ta bort svaga ord: “you can”, “there is/are/were”, “in order to”.
 
-- Place keywords near the beginning of titles, sentences and paragraphs.
+- Sätt nyckelord nära början av rubriker, meningar och stycken.
 
-- Be visual! Wherever possible provide a brief diagram, screenshot or video.
+- Var visuell! Visa ett kort diagram, en skärmbild eller en video när det går.
 
-#### Don't be afraid to give instructions
+#### Var inte rädd för att ge instruktioner
 
-Commands are the fastest way to give instructions, but writers sometimes fear giving commands, writing “you should do this” instead of just “do this”. Perhaps people worry that commands sound too harsh. You can often solve this by putting the word 'please' in front. However, if something must be done, it is best not to say ‘please’ as it gives the reader the option to refuse.
+Uppmaningar är det snabbaste sättet att ge instruktioner, men ibland är skribenter rädda för att ge uppmaningar och skriver “you should do this” (du borde göra detta) i stället för bara “do this” (gör detta). Kanske är man orolig att uppmaningar låter för hårda. Ofta kan du lösa det genom att sätta ordet 'please' (snälla, var vänlig) först. Men om något måste göras är det bäst att inte skriva ‘please’, eftersom det ger läsaren möjlighet att säga nej.
 
-Instead of: *“You should just think of it as a complete statement.”*
+I stället för: *“You should just think of it as a complete statement.”*
 
-Use: *“Think of it as a complete statement.”*
+Skriv: *“Think of it as a complete statement.”*
 
-#### Mostly use active verbs, rather than passive verbs
+#### Använd oftast aktiva verb i stället för passiva verb
 
-Example of an **active verb**:
+Exempel på ett **aktivt verb**:
 
 - *“The pump (subject) delivers (verb) the insulin (object).”*
 
-“delivers” is an active verb here. The sentence says what is doing the delivering before it says what is being delivered.
+“delivers” är här ett aktivt verb. Meningen säger först vad som ger något, och sedan vad som ges.
 
-Example of a **passive verb**:
+Exempel på ett **passivt verb**:
 
 - *“The insulin (subject) is delivered (verb) by the pump (object).”*
 
-*“delivered”* is a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
+*“delivered”* är här ett passivt verb. Subjekt och objekt har bytt plats jämfört med meningen med aktivt verb. Vi har fått göra meningen längre genom att lägga till “is” och “by the”. Fundera också på att börja med det aktiva verbet.
 
-Instead of: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
+I stället för: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
 
-Use: *“Connect your desired pump to the phone through the AAPS pump menu.”*
+Skriv: *“Connect your desired pump to the phone through the AAPS pump menu.”*
 
-Passive verbs can cause problems:
+Passiva verb kan ställa till problem:
 
-- They can be confusing.
+- De kan vara förvirrande.
 
-- They often make writing more long-winded.
+- De gör ofta texten mer långrandig.
 
-- They make writing less lively.
+- De gör texten mindre levande.
 
-##### Good uses of passives
+##### När passiv form passar bra
 
-There are times when it might be appropriate to use a passive.
+Ibland kan det vara lämpligt att använda passiv form.
 
-- To make something less hostile - 'this bill has not been paid' (passive) is softer than 'you have not paid this bill' (active).
+- För att göra något mindre fientligt – 'this bill has not been paid' (passiv: den här räkningen har inte betalats) är mjukare än 'you have not paid this bill' (aktiv: du har inte betalat den här räkningen).
 
-- To avoid taking the blame - 'a mistake was made' (passive) rather than 'You made a mistake' (active).
+- För att slippa ta på sig skulden – 'a mistake was made' (passiv: ett misstag begicks) i stället för 'You made a mistake' (aktiv: du gjorde ett misstag).
 
-- When you don't know who or what the doer is - 'the England team has been picked'.
+- När du inte vet vem eller vad som utför handlingen – 'the England team has been picked' (Englands lag har tagits ut).
 
-- If it simply sounds better.
+- Om det helt enkelt låter bättre.
 
-#### Avoid nominalisations
+#### Undvik nominaliseringar
 
-A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalizations are formed from verbs.
+En nominalisering är namnet på något som inte är ett fysiskt föremål, till exempel en process, en teknik eller en känsla. Nominaliseringar bildas av verb.
 
-For example:
+Till exempel:
 
-| Verb      | Nominalization |
+| Verb      | Nominalisering |
 | --------- | -------------- |
 | complete  | completion     |
 | introduce | introduction   |
 | provide   | provision      |
 | fail      | failure        |
 
-They are often used **instead** of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
+De används ofta **i stället** för de verb som de kommer från, men de kan få det att låta som om ingenting faktiskt händer. För många av dem kan göra texten mycket tråkig och tung att läsa.
 
-Instead of: *“The implementation of the method has been done by a team.”*
+I stället för: *“The implementation of the method has been done by a team.”*
 
-Use: *“A team has implemented the method.”*
+Skriv: *“A team has implemented the method.”*
 
-#### Use lists where appropriate
+#### Använd listor när det passar
 
-Lists are excellent for splitting information up. There are two main types of list:
+Listor är utmärkta för att dela upp information. Det finns två huvudtyper av listor:
 
-- A continuous sentence with several listed points picked out at the beginning, middle or end.
+- En sammanhängande mening där flera punkter lyfts fram i början, mitten eller slutet.
 
-- Separate bullet points with an introductory statement.
+- Separata punkter med en inledande mening.
 
-In the bulleted list above, each point is a complete sentence so they each start with a capital letter and end with a full stop. Use bullet points rather than numbers or letters, as they draw your attention to each point without giving you extra information to take in.
+I punktlistan ovan är varje punkt en hel mening, så varje punkt börjar med stor bokstav och slutar med punkt. Använd punkter i stället för siffror eller bokstäver. De drar uppmärksamheten till varje punkt utan att ge dig extra information att ta in.
 
-#### Mythbusting
+#### Myter som inte stämmer
 
-- You can start a sentence with **and, but, because, so or however**.
+- Du kan börja en mening med **and, but, because, so eller however**.
 
-- You can split infinitives. So you can say **“to boldly go”**.
+- Du kan dela infinitiver (split infinitives). Du kan alltså skriva **“to boldly go”**.
 
-- You can end a sentence with a preposition. In fact, it is something **we should stand up for**.
+- Du kan avsluta en mening med en preposition. Det är faktiskt något **we should stand up for** (som vi bör stå upp för).
 
-- And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.
+- Och **du** kan använda samma **ord** två gånger i en mening om **du** inte hittar ett bättre **ord**.
 
-#### Optimizing writing style by purpose
+#### Anpassa skrivstilen efter syftet
 
-To keep the documentation clear and short, we write different sections of the documentation in different styles.
+För att hålla dokumentationen tydlig och kort skriver vi olika delar av dokumentationen i olika stilar.
 
-An “explanation” style is used for the introduction, background and knowledge development sections.
+Stilen “förklaring” (explanation) används för delarna med introduktion, bakgrund och fördjupad kunskap.
 
-A “How-to-guide” style (with minimal explanation) is used for building, configuring AAPS, and some of the troubleshooting sections.
+Stilen “instruktion” (how-to guide), med så lite förklaring som möjligt, används för att bygga och konfigurera AAPS och för en del av felsökningsavsnitten.
 
-A tutorial helps the pupil acquire basic competence. The user will **learn by doing**.
+En handledning (tutorial) hjälper eleven att få grundläggande kunskaper. Användaren kommer att **lära sig genom att göra**.
 
-![Image](../images/styleguide02.png)
+![Bild](../images/styleguide02.png)
 
-##### ![Image](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
+##### ![Bild](../images/styleguide03.png) Handledningar (tutorials, t.ex. att lära ett barn att vispa äggvitor)
 
-- narrator directly talks to the reader: In this tutorial **you** will (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
+- berättaren talar direkt till läsaren: In this tutorial **you** will (we) kan i sällsynta fall användas för att förmedla känslan “vi gör det här tillsammans”
 
-- Future Tense -> to show the final target
+- Futurum -> för att visa det slutliga målet
 
-- Imperative Tense -> to do the tasks -> Concrete steps - avoid abstract concepts
+- Imperativ -> för att utföra uppgifterna -> Konkreta steg – undvik abstrakta begrepp
 
-- Past Tense -> to show accomplished tasks -> Quick and immediate visible results
+- Preteritum/perfekt -> för att visa utförda uppgifter -> Snabba och direkt synliga resultat
 
-- Minimum Explanations -> strict necessary to complete the task - **what and why**
+- Så lite förklaring som möjligt -> bara det som krävs för att slutföra uppgiften - **vad och varför**
 
-- Ignore options/alternatives/…. No ambiguity
+- Strunta i alternativ/valmöjligheter/…. Inga oklarheter
 
-- Step Transitions: finish a step with a sentence leading to the next step as a logical progression flow. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- Övergångar mellan steg: avsluta ett steg med en mening som leder vidare till nästa steg i ett logiskt flöde. Exempel: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
 
-- **Tutorial** Title (Level 1 heading)
+- **Handledning**: rubrik (rubrik på nivå 1)
 
-- Introduction (no heading)
+- Introduktion (ingen rubrik)
 
-- Prerequisites (Level 2 heading)
+- Förutsättningar (rubrik på nivå 2)
 
-- Steps:
+- Steg:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- Steg 1 – Gör det första (rubrik på nivå 2)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- Steg 2 – Gör nästa sak (rubrik på nivå 2)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- Steg n – Gör det sista (rubrik på nivå 2)
 
-- Conclusion (Level 2 heading)
+- Sammanfattning (rubrik på nivå 2)
     
-    - **The Language of Tutorials**
+    - **Språket i handledningar**
         
-        *In this tutorial, you will…*
+        *In this tutorial, you will… (I den här handledningen kommer du att…)*
         
-        Describe what the learner will accomplish (note - not: “you will learn…”).
+        Beskriv vad eleven kommer att åstadkomma (obs – inte: “you will learn…”, du kommer att lära dig…).
         
-        *First, do x. Now, do y. Now that you have done y, do z.*
+        *First, do x. (Gör först x.) Now, do y. (Gör nu y.) Now that you have done y, do z. (Nu när du har gjort y, gör z.)*
         
-        No room for ambiguity or doubt.
+        Inget utrymme för oklarheter eller tvivel.
         
-        *We must always do x before we do y because… (see Explanation for more details).*
+        *We must always do x before we do y because… (see Explanation for more details). (Vi måste alltid göra x före y eftersom… (se förklaringen för mer information).)*
         
-        Provide minimal explanation of actions in the most basic language possible. Link to more detailed explanation.
+        Förklara handlingarna så lite som möjligt och med så enkelt språk som möjligt. Länka till en mer utförlig förklaring.
         
-        *The output should look something like this…*
+        *The output should look something like this… (Resultatet bör se ut ungefär så här…)*
         
-        Give your learner clear expectations.
+        Ge eleven tydliga förväntningar.
         
-        *Notice that… Remember that…*
+        *Notice that… Remember that… (Lägg märke till att… Kom ihåg att…)*
         
-        Give your learner plenty of clues to help confirm they are on the right track and orient themselves.
+        Ge eleven många ledtrådar som hjälper eleven att se att hen är på rätt väg och att hitta rätt.
         
-        *You have built a secure, three-layer hylomorphic stasis engine…*
+        *You have built a secure, three-layer hylomorphic stasis engine… (Du har byggt en säker hylomorfisk stasmotor i tre lager…)*
         
-        Describe (and admire, in a mild way) what your learner has accomplished (note - not: “you have learned…”)
+        Beskriv (och beundra, på ett försiktigt sätt) vad eleven har åstadkommit (obs – inte: “you have learned…”, du har lärt dig…)
 
-##### ![Image](../images/styleguide05.png) How-To Guides (e.g. a recipe)
+##### ![Bild](../images/styleguide05.png) Instruktioner (how-to guides, t.ex. ett recept)
 
-A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
+Syftet med en instruktion är att hjälpa en användare som redan kan grunderna att utföra en viss uppgift rätt.
 
-- HOW-to
+- HUR man gör
 
-- narrator directly talks to the reader: In this guide **you** will
+- berättaren talar direkt till läsaren: In this guide **you** will
 
-- Future Tense -> to show the final target
+- Futurum -> för att visa det slutliga målet
 
-- Conditional Imperative Tense -> to get X do y -> Concrete steps - avoid abstract concepts
+- Villkorlig imperativ -> för att få X, gör Y -> Konkreta steg – undvik abstrakta begrepp
 
-- Minimum Explanations -> strict necessary to complete the task -> **what and why**
+- Så lite förklaring som möjligt -> bara det som krävs för att slutföra uppgiften -> **vad och varför**
 
-- Ignore options/alternatives/…. No ambiguity, but you can link to the reference entry or explanation entry
+- Strunta i alternativ/valmöjligheter/…. Inga oklarheter, men du kan länka till referensavsnittet eller förklaringen
 
-- **How-to**: Title (Level 1 heading)
+- **Instruktion**: rubrik (rubrik på nivå 1)
 
-- Introduction paragraph
+- Inledande stycke
 
-- Optional Prerequisites (paragraph or Level 2 heading if more than 1)
+- Förutsättningar, valfritt (stycke, eller rubrik på nivå 2 om det finns fler än 1)
 
-- Steps:
+- Steg:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- Steg 1 – Gör det första (rubrik på nivå 2)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- Steg 2 – Gör nästa sak (rubrik på nivå 2)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- Steg n – Gör det sista (rubrik på nivå 2)
 
-- Conclusion paragraph
+- Avslutande stycke
     
-    - **The Language of How-To Guides**
+    - **Språket i instruktioner**
         
-        *This guide shows you how to…*
+        *This guide shows you how to… (Den här guiden visar hur du…)*
         
-        Describe clearly the problem or task that the guide shows the user how to solve.
+        Beskriv tydligt det problem eller den uppgift som guiden visar hur användaren löser.
         
-        *If you want x, do y. To achieve w, do z.*
+        *If you want x, do y. (Om du vill ha x, gör y.) To achieve w, do z. (För att uppnå w, gör z.)*
         
-        Use conditional imperatives.
+        Använd villkorlig imperativ.
         
-        *Refer to the x reference guide for a full list of options.*
+        *Refer to the x reference guide for a full list of options. (Se referensguiden för x för en fullständig lista med alternativ.)*
         
-        Don’t pollute your practical how-to guide with every possible thing the user might do related to x.
+        Fyll inte din praktiska instruktion med allt som användaren möjligen kan göra med x.
 
-##### ![Image](../images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
+##### ![Bild](../images/styleguide07.png) Förklaring (explanation, t.ex. vetenskapen bakom varför äggvitor blir fasta när man vispar dem)
 
-An explanation clarifies, deepens and broadens the reader’s understanding of a subject.
+En förklaring gör läsarens förståelse av ett ämne tydligare, djupare och bredare.
 
-- WHY
+- VARFÖR
 
-- Start with **About**
+- Börja med **Om** (About)
 
-- Provide context, link ALL relevant references
+- Ge sammanhang och länka till ALLA relevanta referenser
 
-- Discuss options/alternatives
+- Diskutera val och alternativ
 
-- Don’t instruct or provide reference (link to them)
+- Ge inga instruktioner och ingen referensinformation (länka till dem)
 
-- State the unknown/moving targets etc…
+- Berätta om det som är okänt eller ändras osv…
 
-- **About** Title (Level 1 heading)
+- **Om**: rubrik (rubrik på nivå 1)
 
-- Introduction (no heading)
+- Introduktion (ingen rubrik)
 
-- Optional Prerequisites (Level 2 heading)
+- Förutsättningar, valfritt (rubrik på nivå 2)
 
-- Subtopic 1 (level 2 heading)
+- Delämne 1 (rubrik på nivå 2)
 
-- Conclusion (Level 2 heading)
+- Sammanfattning (rubrik på nivå 2)
     
-    - **The Language of Explanation**
+    - **Språket i förklaringar**
     
-    *The reason for x is because historically, y…*
+    *The reason for x is because historically, y… (Orsaken till x är att historiskt sett y…)*
     
-    Explain.
+    Förklara.
     
-    *W is better than z, because…*
+    *W is better than z, because… (W är bättre än z, eftersom…)*
     
-    Offer judgements and even opinions where appropriate.
+    Ge bedömningar och till och med åsikter där det passar.
     
-    *An x in system y is analogous to a w in system z. However…*
+    *An x in system y is analogous to a w in system z. (Ett x i system y motsvarar ett w i system z.) However… (Men…)*
     
-    Provide context that helps the reader.
+    Ge sammanhang som hjälper läsaren.
     
-    *Some users prefer w (because z). This can be a good approach, but…*
+    *Some users prefer w (because z). (En del användare föredrar w (eftersom z).) This can be a good approach, but… (Det här kan vara ett bra sätt, men…)*
     
-    Weigh up alternatives.
+    Väg alternativen mot varandra.
     
-    *An x interacts with a y as follows:…*
+    *An x interacts with a y as follows:… (Ett x samverkar med ett y på följande sätt:…)*
     
-    Unfold the machinery’s internal secrets, to help understand why something does what it does.
+    Visa hur maskineriet fungerar på insidan, så att läsaren förstår varför något gör det det gör.
 
-### 2\. AAPS-specific writing/updating notes
+### 2\. Skrivtips för att skriva och uppdatera AAPS-dokumentationen
 
-#### Author & Editor
+#### Författare & redaktör
 
-For writing/updating the AAPS documentation, consider the process as consisting of two stages. These can be carried out by the same person at different points, or more than one person.
+Tänk på att det finns två steg när du skriver eller uppdaterar AAPS-dokumentationen. De kan göras av samma person vid olika tillfällen, eller av flera personer.
 
-An **author (e.g. you!)** writes/edits a section of the documentation in a concise conversational tone, then passes it to the editor.
+En **författare (t.ex. du!)** skriver eller redigerar ett avsnitt av dokumentationen i en kort och samtalsaktig ton och lämnar det sedan till redaktören.
 
-The **editor (e.g. a fellow AAPS user, or the person who receives the pull request)** reviews adherence to the style guide, edits the section for clarity and accessibility, removing as many words as possible (especially for tutorial/how-to sections). Reading the text out loud may help.
+**Redaktören (t.ex. en annan AAPS-användare eller den person som tar emot din pull request)** kontrollerar att stilguiden följs och redigerar avsnittet så att det blir tydligt och lättillgängligt. Redaktören tar bort så många ord som möjligt (särskilt i handledningar och instruktioner). Det kan hjälpa att läsa texten högt.
 
-#### General AAPS points
+#### Allmänt om AAPS
 
-- For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible).
+- Ange alltid både mg/dl och mmol/l för glukosvärden varje gång de förekommer (tänk också på detta för skärmbilder, om det går).
 
-- For consistency, use “AAPS” rather than “Android APS”.
+- Skriv “AAPS” i stället för “Android APS”, så att det blir enhetligt.
 
-- Clearly state the version of Android Studio/AAPS you are writing for, or that the screenshots are taken from.
+- Ange tydligt vilken version av Android Studio eller AAPS du skriver för, eller som skärmbilderna kommer från.
 
-### 3\. Useful References
+### 3\. Användbara referenser
 
 <https://dev.readthedocs.io/en/latest/style-guide.html>
 
