@@ -10,7 +10,7 @@
 
 - **Skiltys** atidaromos ir uždaromos jas bakstelėjus. Matomos skiltys priklauso nuo įjungtų įskiepių ir nuo [paprastojo režimo](#preferences-simple-mode).
 
-![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
+![Ekranas Nustatymai su išskleidžiamomis skiltimis](../images/v4/Configuration/settings_overview.png)
 
 ```{contents}
 :backlinks: entry
@@ -396,7 +396,7 @@ Kol kliento valdymas įjungtas (paprastajame režime – visada), šie nustatyma
 - NS pranešimai pakartos Nightscout [pranešimus](https://nightscout.github.io/nightscout/discover/#announcement) **AAPS** pranešimuose.
 - Galite pakeisti pasenusių duomenų ir skubaus įspėjimo apie pasenusius duomenis ribas, kai iš Nightscout tam tikrą laiką negaunama duomenų.
 
-### Remote control
+### Nuotolinis valdymas
 
 Jungiklio „**Leisti valdyti iš kliento**“ šiuose nustatymuose nebėra: jis yra ekrano **Valdymas → Autorizuoti klientai** viršuje, kur tvarkomi susieti klientai. Žr. atskirą puslapį [Pagrindinio įrenginio ↔ kliento valdymas](../RemoteFeatures/ClientMasterControl.md), įskaitant [sustiprintos apsaugos režimą](#client-master-control-hardened-mode), kurį šis jungiklis įjungia.
 
