@@ -34,7 +34,7 @@ Die Glukosewerte werden von der xDrip-App auf dem Deinem Smartphone empfangen.
 
 ![xDrip LibreLink logging](../images/Libre2_Tags.png)
 
-- Technically, the current blood sugar value is transmitted to xDrip every minute. Daraus wird standardmäßig mit einem gewichteten Mittel über die letzten 25 Minuten ein geglätteter Wert errechnet. Du kannst die Zeitspanne im NFC-Scan-Funktionen-Menü ändern.
+- Technisch wird der aktuelle Glukosewert jede Minute an xDrip übertragen. Daraus wird standardmäßig mit einem gewichteten Mittel über die letzten 25 Minuten ein geglätteter Wert errechnet. Du kannst die Zeitspanne im NFC-Scan-Funktionen-Menü ändern.
 
   → Hamburger-Menü → Einstellungen → NFC-Scan-Funktionen → Libre3-Daten glätten, wenn Methode xxx verwendet wird
 
