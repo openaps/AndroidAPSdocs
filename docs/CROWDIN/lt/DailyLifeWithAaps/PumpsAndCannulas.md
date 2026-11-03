@@ -4,7 +4,7 @@
 
 The procedure described below is for tubed pumps only and does not apply to patch pumps like Omnipod, Medtrum Nano, Accu-Chek Solo etc. This procedure is sometimes referred to as a "set change", with a "full" set change including the insulin reservoir and cannula, and a "partial" set change referring to a change of cannula only.
 
-Patch pumps fill and prime themselves in their own activation wizard, and their cannula is already in the body. **AAPS** does not offer a prime for them: **Prime/Fill** is not shown in the **Manage** sheet or in QuickLaunch. See the page of your pump in [Compatible pumps](../Getting-Started/CompatiblePumps.md).
+Pompos be vamzdelio (patch) užsipildo ir paruošiamos savo aktyvavimo vedlyje, o jų kaniulė jau yra kūne. **AAPS** joms užpildymo nesiūlo: **Užpildymas** nerodomas nei meniu **Valdymas**, nei QuickLaunch. See the page of your pump in [Compatible pumps](../Getting-Started/CompatiblePumps.md).
 
 Physical cartridge/reservoir changes cannot be done via **AAPS** and have to be carried out via the pump directly. These need to be logged in **AAPS** manually, once completed.
 
@@ -17,22 +17,22 @@ Physical cartridge/reservoir changes cannot be done via **AAPS** and have to be 
 
 3. Prime/fill the tubing and cannula: this can be done directly on the pump. Be sure to eliminate any bubbles in the tubing.
 
-4. Attach the new cannula to the body. Once the cannula is inserted and the needle is removed, the attached cannula now has a small air gap which also needs to be primed. To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Record pump site change** and/or **Record insulin cartridge change** as appropriate to record the change. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select **OK**. Read the summary message, and confirm to execute the priming by tapping **OK**.
+4. Attach the new cannula to the body. Once the cannula is inserted and the needle is removed, the attached cannula now has a small air gap which also needs to be primed. Norėdami tai užregistruoti **AAPS** ir užpildyti infuzijos vietą, atidarykite **Užpildymas** (išskleistame būsenos skydelyje pagrindiniame ekrane, meniu **Valdymas** arba [QuickLaunch](QuickLaunch.md) mygtuku) ir, atsižvelgdami į atliktą keitimą, pažymėkite **Įrašas apie infuzijos rinkinio keitimą** ir (arba) **Įrašas apie rezervuaro keitimą**. Dabar paspauskite mygtuką su numatytuoju insulino kiekiu kaniulei užpildyti (paprastai apie 0,3 V, tačiau patikrinkite, ar ši reikšmė tinka jūsų kaniulei) ir pasirinkite **OK**. Read the summary message, and confirm to execute the priming by tapping **OK**.
 
-   ![Prime/Fill in the Manage sheet with a tube pump](../images/v4/Screens/manage_sheet_tube_pump.png)
+   ![Užpildymas meniu Valdymas, kai naudojama pompa su vamzdeliu](../images/v4/Screens/manage_sheet_tube_pump.png)
 
 
-5. Reconnect the pump in **AAPS**: press the grey plug icon and select **Reconnect pump** to continue looping.
+5. Vėl prijunkite pompą **AAPS**: paspauskite pilko kištuko piktogramą ir pasirinkite **Prijungti pompą**, kad ciklas tęstųsi.
 
 ### Useful information concerning insulin/cannula changes
 
-* Logging a pump site change resets Autosens to 100%. It also resets the corresponding cannula/insulin status lights and ages on the **AAPS** main screen.
+* Užregistravus infuzijos vietos keitimą, Autosens reikšmė grąžinama į 100 %. It also resets the corresponding cannula/insulin status lights and ages on the **AAPS** main screen.
 
 * You can set/adjust the default prime amounts in the **Prime/Fill** settings — type "prime" in the main screen search bar to open them (see [Preferences](../SettingUpAaps/Preferences.md)). See your instruction booklet in your cannula box for how many units (depending on needle length and tubing length) should be primed for your cannula.
 
 * Insulin delivered using the prime function is not taken into account by **AAPS** when calculating insulin on board (IOB), and is marked in the [Treatments history](#aaps-screens-treatments) as "Prime".
 
-* Any insulin bolused from the pump during a pump disconnection will also not be taken into account by **AAPS**. If you happen to bolus directly from the pump while **AAPS** is disconnected, once you reconnect the pump you can announce this insulin (without bolusing it) in the **Insulin** dialog (see [To announce delivered insulin without actually bolusing](#pumps-cannulas-announce-insulin) below).
+* **AAPS** taip pat neįtraukia jokio boluso, suleisto tiesiogiai pompa, kol ji atjungta. If you happen to bolus directly from the pump while **AAPS** is disconnected, once you reconnect the pump you can announce this insulin (without bolusing it) in the **Insulin** dialog (see [To announce delivered insulin without actually bolusing](#pumps-cannulas-announce-insulin) below).
 
 ### Cannula, infusion site, tubing and/or pump issues
 
@@ -43,9 +43,9 @@ If you are confident that you haven't received any insulin for a period of time,
 Only delete insulin delivery from **AAPS** with EXTREME caution, in case insulin _has_ actually been delivered, and monitor BG closely for the next 24 h.
 ```
 
-To remove boluses and SMBs which you know have not been delivered, open the **menu** (☰), select [Treatments history](#aaps-screens-treatments) and, on the **Carbs and bolus** tab, conservatively delete the logged boluses starting from the point the incident happened. This will correct the "insulin on board" (IOB) value which is key for **AAPS**' calculations; if you now return to the main screen you will see that the IOB has reduced. Be aware that you cannot delete basal insulin which **AAPS** calculates to have been delivered, so that will still be taken into account by **AAPS**.
+Norėdami pašalinti bolusus ir SMB, kurie, kaip žinote, nebuvo suleisti, atidarykite **meniu** (☰), pasirinkite [Terapijos istorija](#aaps-screens-treatments) ir skirtuke **AV ir bolusai** atsargiai ištrinkite užregistruotus bolusus nuo to momento, kai įvyko problema. This will correct the "insulin on board" (IOB) value which is key for **AAPS**' calculations; if you now return to the main screen you will see that the IOB has reduced. Be aware that you cannot delete basal insulin which **AAPS** calculates to have been delivered, so that will still be taken into account by **AAPS**.
 
-In less obvious cases of insulin delivery problems _e.g._ leakages, occlusions or tunneling where either you are not sure when the issue started, or think some of the insulin was delivered, you need to be careful. You may detect these issues either by "smelling" the insulin, seeing a wet adhesive, encountering high glucose values or by getting an alarm. As you will never know how much insulin you got into your skin (which might be starting to work after a while) it will be hard to determine the correct amount of insulin which needs to be deducted from the current "insulin on board" (IOB) value. One strategy is to pause looping for 5 hours (or your specific duration of insulin action) after you resolved the insulin delivery problem, and resume looping afterwards. This will ensure that IOB is correct once you restart looping.
+In less obvious cases of insulin delivery problems _e.g._ leakages, occlusions or tunneling where either you are not sure when the issue started, or think some of the insulin was delivered, you need to be careful. Šias problemas galite pastebėti užuodę insuliną, pamatę sudrėkusį pleistrą, matydami aukštas gliukozės reikšmes arba gavę aliarmą. As you will never know how much insulin you got into your skin (which might be starting to work after a while) it will be hard to determine the correct amount of insulin which needs to be deducted from the current "insulin on board" (IOB) value. One strategy is to pause looping for 5 hours (or your specific duration of insulin action) after you resolved the insulin delivery problem, and resume looping afterwards. This will ensure that IOB is correct once you restart looping.
 
 (pumps-cannulas-disconnecting)=
 ## Disconnecting the pump for showering or activity
@@ -57,7 +57,7 @@ As you are not getting any insulin while the pump is disconnected, you should re
 (pumps-cannulas-announce-insulin)=
 ## To announce delivered insulin without actually bolusing
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. A **Time** row (set to **Now**) then lets you record the actual time of the injection: you can ignore it if the injection was given recently. If the bolus was given some time ago, use **-** to move the time back (_e.g._ -30 min), or open the row with the chevron to pick the exact date and time. **AAPS** will then take into account the duration of insulin action and calculate the remaining insulin still in the system accordingly.
+Norėdami užregistruoti insuliną, suleistą pompa, kai **AAPS** buvo atjungta, arba švirkštikliu, atidarykite [Insulino dialogą](#aaps-screens-buttons-insulin) (**Terapija** apatinėje naršymo juostoje arba QuickLaunch mygtuku), įveskite kiekį vienetais ir įjunkite **Bolusas bus tik įrašytas (nebus suleistas)**. A **Time** row (set to **Now**) then lets you record the actual time of the injection: you can ignore it if the injection was given recently. If the bolus was given some time ago, use **-** to move the time back (_e.g._ -30 min), or open the row with the chevron to pick the exact date and time. **AAPS** will then take into account the duration of insulin action and calculate the remaining insulin still in the system accordingly.
 
 If you are using **AAPS** as a caregiver, you can remotely disconnect (and reconnect) the pump very easily by [SMS command](../RemoteFeatures/SMSCommands.md) using commands such as "pump disconnect 120" and "pump connect 120". The range of duration for remote disconnect is from 1 - 120 min, (in this example it is 120 minutes). This is very useful if the **AAPS** handset is inconvenient for you to access, buried in a pump belt on a kid who is running off towards the swimming complex, or being closely guarded (or in use) by a teenager.
 
@@ -75,7 +75,7 @@ Which strategy you prefer is highly personal, and is best determined by trial an
 
 
 (Aapsscreens-site-rotation)=
-## Site Rotation
+## Vietų rotacija
 
 **Manage → Site Rotation** opens the Site Rotation Dialog in View mode:
 
@@ -92,25 +92,25 @@ Which strategy you prefer is highly personal, and is best determined by trial an
 
 ![User profile for site rotation dialog](../images/SiteRotation/Type.png)
 
-*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
+*Pastaba: šis nustatymas lemia, ar vietų rotacijos dialogas (redagavimo režimu) bus atidaromas automatiškai, kai naujas įrašas sukuriamas mygtuku „Užpildymas“ arba „Jutiklio įvedimas“.*
 
 - For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
 
-Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
+Redagavimo režimu galite pasirinkti su pasirinktu įrašu susietą vietą, rodyklę ir pastabą:
 
-- The entry being edited is shown below the body images, with its type icon (cannula or sensor)
-- Front and back views are shown side by side: tap the area where you placed it
-- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
+- Redaguojamas įrašas rodomas po kūno paveikslėliais su savo tipo piktograma (kaniulė arba jutiklis)
+- Priekinis ir nugaros vaizdai rodomi greta: bakstelėkite sritį, kurioje įvedėte kaniulę ar jutiklį
+- Pasirinkus vietą (ji paryškinama žaliai), apačioje esančiame sąraše rodomi visi per pastarąsias 45 dienas šioje vietoje atlikti įrašai.
 
-![Edit Mode](../images/SiteRotation/EditMode.png)
+![Redagavimo režimas](../images/SiteRotation/EditMode.png)
 
-- You can add an optional arrow by tapping the arrow icon at the right of the entry: the **Select Arrow** dialog lets you specify a sub-location or the pod orientation
+- Galite pridėti nebūtiną rodyklę, bakstelėję rodyklės piktogramą įrašo dešinėje: dialoge **Pasirinkti rodyklę** galite nurodyti tikslesnę vietą arba Pod padėtį
 
-![Position](../images/SiteRotation/EditModeSub.png)
+![Padėtis](../images/SiteRotation/EditModeSub.png)
 
-- You can also add a **Note** about the selected site
-- Tap the **save** icon (upper right) to record the site
+- Lauke **Pastaba** taip pat galite įrašyti pastabą apie pasirinktą vietą
+- Bakstelėkite **išsaugojimo** piktogramą (viršuje dešinėje), kad įrašytumėte vietą
 
-Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
+Filtruoti galima paveikslėlyje arba sąraše bakstelėjus terapijos įvykį Norėdami pašalinti filtrą, tiesiog bakstelėkite paveikslėlį už visų vietų ribų
 
-![Filtering](../images/SiteRotation/Filtering.png)
+![Filtravimas](../images/SiteRotation/Filtering.png)
