@@ -1,95 +1,95 @@
-# How to translate strings for the AAPS app or the documentation
+# AAPS uygulaması veya dokümantasyon için dizeler nasıl çevrilir
 
-* For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
+* Uygulamada kullanılan dizeler için <https://crowdin.com/project/androidaps> adresine gidin ve GitHub hesabınızla giriş yapın
 * Dokümantasyon için lütfen <https://crowdin.com/project/androidapsdocs> adresini ziyaret edin ve GitHub hesabınızı kullanarak giriş yapın
 
-* Dokümanlar ekibine katılma isteği gönderin. Bunu yapmak için istediğiniz dilin bayrağına ve ardından sonraki sayfanın sağ üst köşesindeki "join" katıl düğmesine tıklayın. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
+* Dokümanlar ekibine katılma isteği gönderin. Bunu yapmak için istediğiniz dilin bayrağına, ardından açılan sayfanın sağ üst köşesindeki "Join" (Katıl) düğmesine tıklayın. Lütfen dili belirtin, kendiniz ve AAPS deneyiminiz hakkında biraz bilgi verin ve çevirmen mi yoksa redaktör mü olmak istediğinizi yazın (redaktörlük yalnızca çeviride deneyimli kişiler + ileri düzey AAPS kullanıcıları içindir).
 
-```{admonition} Onay Zamanı :class: not
+```{admonition} Onay Zamanı :class: note
 
-Onay manuel bir adımdır. Kâr amacı gütmeyen kuruluş olarak SLA'lar sağlamıyoruz ancak genel olarak onay < 1 gün içinde yapılacaktır. Aksi taktirde lütfen Facebook veya Discord aracılığıyla doküman ekibiyle iletişime geçin.
+Onay manuel bir adımdır. Kâr amacı gütmeyen kuruluş olarak SLA'lar sağlamıyoruz ancak genel olarak onay < 1 gün içinde yapılacaktır. Aksi takdirde lütfen Facebook veya Discord aracılığıyla doküman ekibiyle iletişime geçin.
 
-    <br />* When we approve you, click the flag
-       ![When we approve you, click the flag](../images/translation_flags.png)
+    <br />* Sizi onayladığımızda bayrağa tıklayın
+       ![Sizi onayladığımızda bayrağa tıklayın](../images/translation_flags.png)
     
-    ## Translation of the app
+    ## Uygulamanın çevirisi
     
     (translations-translate-strings-for-AAPS-app)=
-    ### Translate strings for AAPS app
+    ### AAPS uygulaması için dizeleri çevirme
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. Size çevrilmesi gereken dizeleri gösterecektir.
+    * Hangi dizeleri çevireceğiniz konusunda bir tercihiniz yoksa, başlamak için "Translate All" (Tümünü çevir) düğmesini seçin. Size çevrilmesi gereken dizeleri gösterecektir.
     
-       ![Click translate all](../images/translations-click-translate-all.png)
+       ![Translate All düğmesine tıklayın](../images/translations-click-translate-all.png)
     
-    * If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
+    * Tek bir dosyayı çevirmek istiyorsanız, lütfen dosyayı arama iletişim kutusundan veya ağaç yapısından bulun ve o dosyadaki dizeleri çevirmeye başlamak için dosya adına tıklayın.
     
-       ![Click strings.xml](../images/translations-click-strings.png)
+       ![strings.xml dosyasına tıklayın](../images/translations-click-strings.png)
     
-    * Translate sentences on left side by adding new translated text or use & edit suggestion 
+    * Soldaki cümleleri, yeni bir çeviri metni ekleyerek veya bir öneriyi kullanıp düzenleyerek çevirin 
     
-       ![Translation app](../images/translations-translate.png)
-    
-    
-    ### Proofread strings for AAPS app
-    
-    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
-    
-       ![Proofreading mode app](../images/translations-proofreading-mode.png) 
+       ![Uygulama çevirisi](../images/translations-translate.png)
     
     
-      and approve translated texts 
+    ### AAPS uygulaması için dizelerin redaksiyonu
     
-       ![approve text](../images/translations-proofreading.png)
+    * Redaktörler, dilin ana ekranından başlarken "Proofread" (Redakte et) seçeneğini seçerek başlar.
     
-    When a proofreader approves a translation it will be added to the next version of AAPS.
+       ![Uygulamada redaksiyon modu](../images/translations-proofreading-mode.png) 
+    
+    
+      ve çevrilmiş metinleri onaylar 
+    
+       ![metni onayla](../images/translations-proofreading.png)
+    
+    Bir redaktör bir çeviriyi onayladığında, bu çeviri AAPS'in bir sonraki sürümüne eklenir.
     
     (translations-translation-of-the-documentation)=
-    ## Translation of the documentation
+    ## Dokümantasyonun çevirisi
     
-    * Click the name of the docs page you want to translate
+    * Çevirmek istediğiniz doküman sayfasının adına tıklayın
     
-    ![Click docs page](../images/translation_WikiPage.png)
+    ![Doküman sayfasına tıklayın](../images/translation_WikiPage.png)
     
     
-    * Translate sentences by sentence
+    * Metni cümle cümle çevirin
     
         1. Sarı metin, şu anda üzerinde çalıştığınız metindir.
     
-        1. Yeşil metin zaten çevrilmiştir. Tekrar yapmana gerek yok.
+        1. Yeşil metin zaten çevrilmiştir. Bunu tekrar yapmanız gerekmez.
     
-        1. Kırmızı metin, çevrilmesi gereken metindir.
+        1. Kırmızı metin, henüz çevrilmesi gereken kalan metindir.
     
         1. Bu, şu anda üzerinde çalıştığınız kaynak metindir.
     
          1. Bu, hazırladığınız çeviridir. Yukarıdaki metni kopyalayabilir veya aşağıdaki önerilerden birini seçebilirsiniz.
     
-        1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
-        1. Bir çeviri önerisini kaydetmek için "kaydet" düğmesine basın. It will then be passed to a proofreader for final check.
+        1. Bunlar çeviri önerileridir. Özellikle Crowdin'in bir öneriyi ne kadar uygun bulduğunu ya da metnin daha önce çevrilip çevrilmediğini görebilirsiniz. Metin değiştirilmeden yalnızca taşındıysa da tekrar burada görünür.
+        1. Bir çeviri önerisini kaydetmek için "kaydet" düğmesine basın. Ardından son kontrol için bir redaktöre gönderilir.
     
-    ![Translation docs](../images/translation_WikiTranslate.png)
+    ![Doküman çevirisi](../images/translation_WikiTranslate.png)
     
-    * A translated page will not be published in docs before 
+    * Çevrilmiş bir sayfa, şu koşullar sağlanmadan dokümanlarda yayınlanmaz:
     
-        1. çeviri redaksiyonu
+        1. çevirinin redaksiyonu yapılmış olmalı
     
-         1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
+        1. Crowdin ile GitHub arasındaki senkronizasyon (saatte bir) tamamlanmış olmalı. Bu senkronizasyon GitHub için bir PR (çekme isteği) oluşturur.
     
-        1. Github'daki PR onaylanır.
+        1. Github'daki PR onaylanmış olmalı.
     
     Genel olarak bu 1 - 3 güne ihtiyaç duyar ancak tatil günlerinde biraz daha uzun sürebilir.
     
-    ### Bağlantılı çeviriler
+    ### Bağlantıları çevirme
     
     ```{admonition} Bağlantılar artık çevrilmiyor
-    :class: not
+    :class: note
     
-    Bağlantılar artık çevrilmiyor. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    Bağlantılar artık çevrilmiyor. Eskiden burada bu konuyla ilgili bir bölüm vardı. Markdown'a ve myst_parser'a geçişle bu bölüm kaldırıldı: artık İngilizce metinde etiketleri açıkça oluşturuyoruz ve bu etiketler arka planda diğer dillere aktarılıyor.
     
     
 
-Bağlantıyı temsil eden metni çeviriyorsunuz. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
+Bağlantıyı temsil eden metni çeviriyorsunuz. Bağlantıyı **silmemeye** dikkat edin. Bağlantı bir çift `<0></0>` etiketiyle gösterilir (bir paragrafta birden fazla bağlantı varsa başka numaralar kullanılır).
 
-Bu bağlantılar ve karakter çiftleri için dokümanı kontrol edip göz atmak redaktörlerin işidir!
+Buna özellikle dikkat etmek redaktörlerin görevidir!
 
 ### Redaksiyon
 
@@ -101,4 +101,4 @@ Bu bağlantılar ve karakter çiftleri için dokümanı kontrol edip göz atmak 
     
     ![metni onayla](../images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. Süreci hızlandırmak için dokümantasyon ekibini yeni çeviriler hakkında bilgilendirebilirsiniz.
+* Bir redaktör bir çeviriyi onayladığında, çeviri dokümanların bir sonraki derlemesine eklenir. Bu derleme sabit bir plana göre değil, gerektiğinde yapılır; tatil dönemleri dışında yaklaşık haftada bir. Süreci hızlandırmak için dokümantasyon ekibini yeni çeviriler hakkında bilgilendirebilirsiniz.
