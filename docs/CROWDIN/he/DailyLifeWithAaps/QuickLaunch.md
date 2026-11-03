@@ -1,154 +1,154 @@
 (quicklaunch)=
-# QuickLaunch (overview quick-action toolbar)
+# הפעלה מהירה (סרגל הפעולות המהירות במסך הראשי)
 
-**QuickLaunch** is the small **quick-action toolbar** that floats at the bottom of the **AAPS** overview, just above the bottom navigation. It is a customizable row of one-tap buttons: you decide which actions live there, in which order, so the things you do most often are always one tap away on the main screen.
+**הפעלה מהירה** (QuickLaunch) היא **סרגל הפעולות המהירות** הקטן שצף בתחתית המסך הראשי של **AAPS**, ממש מעל סרגל הניווט התחתון. זו שורה של לחצנים שעובדים בלחיצה אחת, ואפשר להתאים אותה אישית: אתם מחליטים אילו פעולות יופיעו בה ובאיזה סדר, כך שהדברים שאתם עושים הכי הרבה תמיד נמצאים במרחק לחיצה אחת במסך הראשי.
 
 ```{contents} Table of contents
 :depth: 2
 :local: true
 ```
 
-![The QuickLaunch toolbar on the overview](../images/v4/QuickLaunch/quicklaunch_toolbar.png)
+![סרגל ההפעלה המהירה במסך הראשי](../images/v4/QuickLaunch/quicklaunch_toolbar.png)
 
 ---
 
-## Using the toolbar
+## שימוש בסרגל
 
-The toolbar sits on the **overview**, between the graphs and the bottom navigation:
+הסרגל נמצא ב**מסך הראשי**, בין הגרפים לבין סרגל הניווט התחתון:
 
-![The QuickLaunch toolbar in place on the overview](../images/v4/QuickLaunch/quicklaunch_overview.png)
+![סרגל ההפעלה המהירה במקומו במסך הראשי](../images/v4/QuickLaunch/quicklaunch_overview.png)
 
-- **Tap** an icon to run its action — exactly as if you had opened it from its normal screen (a bolus or treatment still shows its usual confirmation first).
-- **Long-press** an icon to see a **tooltip** with the action's name and a short description.
-- If you add **more buttons than fit** on screen, the extra ones move into an **overflow menu** (the **⋮** button at the end of the toolbar).
-- Each icon keeps its action's **color** (e.g. insulin, carbs, temp target), so it is recognizable at a glance.
+- **לחיצה** על סמל מפעילה את הפעולה שלו — בדיוק כאילו פתחתם אותה מהמסך הרגיל שלה (בולוס או טיפול עדיין מציגים קודם את האישור הרגיל).
+- **לחיצה ארוכה** על סמל מציגה **תיאור קצר** (tooltip) עם שם הפעולה והסבר קצר.
+- אם מוסיפים **יותר לחצנים ממה שנכנס** במסך, הלחצנים הנוספים עוברים ל**תפריט נוסף** (הלחצן **⋮** בסוף הסרגל).
+- כל סמל שומר על ה**צבע** של הפעולה שלו (למשל אינסולין, פחמימות, יעד זמני), כך שקל לזהות אותו במבט אחד.
 
 ```{admonition} The toolbar is always there
 :class: note
-The last button is always **Configure QuickLaunch** (the **⚙️** gear). It cannot be removed, so you can always reach the configuration screen straight from the toolbar. By default the toolbar contains just two buttons — the **Bolus wizard** and this gear.
+הלחצן האחרון הוא תמיד **הגדרת הפעלה מהירה** (גלגל השיניים **⚙️**). אי אפשר להסיר אותו, כך שתמיד אפשר להגיע למסך ההגדרה ישירות מהסרגל. כברירת מחדל יש בסרגל רק שני לחצנים — **אשף בולוס** וגלגל השיניים הזה.
 ```
 
 ---
 
-## Configuring QuickLaunch
+## הגדרת ההפעלה המהירה
 
-Tap the **⚙️** gear on the toolbar (or open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → … → Configure QuickLaunch**) to open the **Configure QuickLaunch** screen (*“Customize quick-action buttons on overview”*).
+יש ללחוץ על גלגל השיניים **⚙️** בסרגל (או לפתוח את **[הגדרות תצורה](../SettingUpAaps/ConfigBuilder.md) ← … ← הגדרת הפעלה מהירה**) כדי לפתוח את המסך **הגדרת הפעלה מהירה** (*"התאמת כפתורי הפעולה המהירה במסך הראשי"*).
 
-![Configure QuickLaunch — Selected actions, then the catalog of actions to add](../images/v4/QuickLaunch/quicklaunch_config.png)
+![הגדרת הפעלה מהירה — פעולות שנבחרו, ומתחתן רשימת הפעולות שאפשר להוסיף](../images/v4/QuickLaunch/quicklaunch_config.png)
 
-The screen has two parts:
+במסך יש שני חלקים:
 
-- **Selected actions** (at the top) — the buttons currently on your toolbar, in toolbar order.
-- A **catalog** below it — every action you can add, grouped by category. Each catalog entry has a **➕** button to add it.
+- **פעולות שנבחרו** (בחלק העליון) — הלחצנים שנמצאים כרגע בסרגל, לפי הסדר שלהם בסרגל.
+- **רשימת פעולות** מתחת — כל הפעולות שאפשר להוסיף, מקובצות לפי קטגוריות. לכל פריט ברשימה יש לחצן **➕** להוספה.
 
-### Selected actions — reorder, edit, remove
+### פעולות שנבחרו — שינוי סדר, עריכה, הסרה
 
-Each selected action has:
+לכל פעולה שנבחרה יש:
 
-- a **⠿ drag handle** — press and drag to **reorder** the buttons (the order here is the order on the toolbar),
-- a **−** button — **remove** it from the toolbar,
-- and, for a **Profile** shortcut only, a **✏️** button to edit its percentage/duration (see [Profile shortcuts](#profile-shortcuts)).
+- **ידית גרירה ⠿** — יש ללחוץ ולגרור כדי **לשנות את הסדר** של הלחצנים (הסדר כאן הוא הסדר בסרגל),
+- לחצן **−** — **הסרה** מהסרגל,
+- ורק לקיצור דרך של **פרופיל**, לחצן **✏️** לעריכת האחוז/משך הזמן שלו (ראו [קיצורי דרך לפרופיל](#profile-shortcuts)).
 
-Changes take effect **immediately** — there is no separate *Save*. Adding an action drops it at the end of the toolbar; reorder it from there.
+השינויים נכנסים לתוקף **מיד** — אין לחצן *שמירה* נפרד. פעולה שמוסיפים נכנסת לסוף הסרגל; משם אפשר לשנות את המיקום שלה.
 
 ---
 
-## The action categories
+## קטגוריות הפעולות
 
-The catalog groups everything you can add into the following categories, in this order. Categories that have nothing to offer (e.g. you have no scenes) are simply not shown.
+ברשימה כל מה שאפשר להוסיף מקובץ לקטגוריות הבאות, בסדר הזה. קטגוריות שאין בהן מה להציע (למשל, אין לכם תרחישים) פשוט לא מוצגות.
 
-### Treatment
+### טיפול
 
-The everyday treatment and CGM dialogs:
+חלונות הטיפול וה-CGM היומיומיים:
 
-- **Insulin** — deliver a bolus manually.
-- **Carbs** — record carbs without insulin.
-- **Bolus wizard** — open the bolus calculator.
-- **Treatment** — record insulin and carbs together.
-- **CGM** — open your CGM app (e.g. xDrip).
-- **Calibration** — calibrate the CGM sensor.
+- **אינסולין** — מתן בולוס ידני.
+- **פחמימות** — רישום פחמימות בלי אינסולין.
+- **אשף בולוס** — פתיחת מחשבון הבולוס.
+- **טיפול** — רישום אינסולין ופחמימות יחד.
+- **CGM** — פתיחת אפליקציית ה-CGM שלכם (למשל xDrip).
+- **כיול** — כיול חיישן ה-CGM.
 
-### Care Portal
+### פורטל הטיפולים
 
-The care-portal events and device-maintenance records:
+אירועי פורטל הטיפולים ורישומי תחזוקת ההתקנים:
 
-- **BG Check**, **Note**, **Exercise**, **Question**, **Announcement**,
-- **Sensor Insert**, **Pump Battery Change**, **Pump Site Change**, **Prime/Fill**, **Site Rotation**.
+- **בדיקת רמת סוכר בדם**, **הערה**, **פעילות גופנית**, **שאלה**, **הכרזה**,
+- **הכנסת חיישן**, **החלפת סוללת משאבה**, **החלפת צינורית משאבה**, **תיחול/מילוי**, **סבב אתרי עירוי**.
 
-**Prime/Fill** and **Pump Battery Change** are only offered when your pump uses them. Patch pumps, for example, fill and change the battery in their own activation steps, so these entries are not shown for them (as in the **Manage** sheet).
+**תיחול/מילוי** ו-**החלפת סוללת משאבה** מוצעים רק אם המשאבה שלכם משתמשת בהם. משאבות פאץ', למשל, מתמלאות ומחליפות סוללה בשלבי ההפעלה שלהן, ולכן הפריטים האלה לא מוצגים עבורן (כמו בחלון **ניהול**).
 
-![The Care Portal category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
+![הקטגוריה פורטל הטיפולים ברשימה](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
 
-These are the same entries you would otherwise reach through the **[Treatments](#v4changes-treatments)** and **[Manage](#v4changes-manage)** sheets — QuickLaunch just puts the ones you use on the overview.
+אלה אותם פריטים שאפשר להגיע אליהם גם דרך החלונות **[טיפולים](#v4changes-treatments)** ו-**[ניהול](#v4changes-manage)** — ההפעלה המהירה רק שמה במסך הראשי את אלה שאתם משתמשים בהם.
 
-### Manage
+### ניהול
 
-The screens of the **[Manage](#v4changes-manage)** sheet, in the same order, so you can open the one you use most from the toolbar:
+המסכים של החלון **[ניהול](#v4changes-manage)**, באותו סדר, כך שאפשר לפתוח מהסרגל את המסך שאתם משתמשים בו הכי הרבה:
 
-- **Profile**, **Insulin settings** (manage and activate insulin configurations — named differently from **Insulin** on purpose, because that button delivers a bolus), **Temp Target**, **QuickWizard**, **Scenes**, **Automation**, **Food**,
-- **Running mode** — close or open the loop, suspend it, or disconnect the pump,
-- **Authorized clients** — only on a master or a paired client.
+- **פרופיל**, **הגדרות אינסולין** (ניהול והפעלה של תצורות אינסולין — השם שונה בכוונה מ-**אינסולין**, כי הלחצן ההוא נותן בולוס), **יעד זמני**, **אשף מהיר**, **תרחישים**, **אוטומציה**, **מזון**,
+- **מצב הפעלה** — סגירה או פתיחה של הלולאה, השהיה שלה או ניתוק המשאבה,
+- **לקוחות מורשים** — רק במכשיר ראשי או במכשיר לקוח מצומד.
 
-These buttons open the screen; they do not start anything by themselves. To start a scene or a QuickWizard in one tap, add it from the **Scenes** or **Quick Wizard** category below.
+הלחצנים האלה פותחים את המסך; הם לא מפעילים שום דבר בעצמם. כדי להפעיל תרחיש או אשף מהיר בלחיצה אחת, יש להוסיף אותו מהקטגוריה **תרחישים** או **אשף מהיר** שבהמשך.
 
-![The Manage category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![The Manage category, continued](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
+![הקטגוריה ניהול ברשימה](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![הקטגוריה ניהול, המשך](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
 
 ### אשף מהיר
 
-Each of your **[QuickWizard](QuickWizards.md)** presets can be added as a button, so a recurring meal is one tap from the overview. The button carries the preset's name and shows the carbs/insulin amount; tapping it runs the QuickWizard with its usual confirmation.
+אפשר להוסיף כל אחד מהאשפים המהירים שלכם (**[אשף מהיר](QuickWizards.md)**) כלחצן, כך שארוחה חוזרת נמצאת במרחק לחיצה אחת מהמסך הראשי. על הלחצן מופיע שם האשף המהיר, והוא מציג את כמות הפחמימות/האינסולין; לחיצה עליו מפעילה את האשף המהיר עם האישור הרגיל.
 
-QuickWizards set to show on the watch only are not offered. A QuickWizard button on the toolbar follows the same rules as in the **Treatments** sheet: it is hidden outside its [valid time range](#quickwizard_validity) and for a short time after use. It stays in your toolbar configuration and comes back when the QuickWizard can be used again.
+אשפים מהירים שמוגדרים להופיע רק בשעון לא מוצעים. לחצן של אשף מהיר בסרגל פועל לפי אותם כללים כמו בחלון **טיפולים**: הוא מוסתר מחוץ ל[טווח הזמן שבו הוא תקף](#quickwizard_validity) ולזמן קצר אחרי השימוש. הוא נשאר בהגדרת הסרגל שלכם וחוזר כשאפשר להשתמש שוב באשף המהיר.
 
-### Scenes
+### תרחישים
 
-Each enabled **[scene](Scenes.md)** can be added as a button. Tapping it asks for confirmation, then activates the scene (the same bundle of actions you would get from the Scenes screen). This category appears only if you have at least one scene.
+אפשר להוסיף כלחצן כל **[תרחיש](Scenes.md)** שמופעל. לחיצה עליו מבקשת אישור, ואז מפעילה את התרחיש (אותה קבוצת פעולות שהייתם מקבלים ממסך התרחישים). הקטגוריה הזו מופיעה רק אם יש לכם לפחות תרחיש אחד.
 
-The tooltip and the catalog show the same summary as **Manage → Scenes**, for example *"3 actions, 2 h → Cooldown"*, where the name after the arrow is the follow-up scene.
+התיאור הקצר והרשימה מציגים את אותו סיכום כמו ב-**ניהול ← תרחישים**, למשל *"3 פעולות, 2 ש׳ → Cooldown"*, כאשר השם שאחרי החץ הוא התרחיש העוקב.
 
 ### אוטומציה
 
-Your **user-action** automation rules (the ones you trigger by hand) can be added as buttons. Tapping one asks for confirmation, then runs that rule's actions.
+אפשר להוסיף כלחצנים את כללי האוטומציה מסוג **פעולות משתמש** (הכללים שמפעילים ידנית). לחיצה על לחצן כזה מבקשת אישור, ואז מריצה את הפעולות של הכלל.
 
 ```{admonition} Automation buttons run on the master
 :class: note
-Automation executes on the **master**, so automation shortcuts are offered and run only on the master. They are not available on a paired **[client](../RemoteFeatures/ClientMasterControl.md)**.
+האוטומציה פועלת ב**מכשיר הראשי**, ולכן קיצורי דרך לאוטומציה מוצעים ופועלים רק במכשיר הראשי. הם לא זמינים ב**[מכשיר לקוח](../RemoteFeatures/ClientMasterControl.md)** מצומד.
 ```
 
-### Temp Target Presets
+### יעדים זמניים מוגדרים מראש
 
-Each of your **[Temp Target](TempTargets.md)** presets can be added as a button (its name, its target and its duration are shown, for example *"Eating soon — 5.0 mmol/L, 45 min"*). Tapping it asks for confirmation, then starts that temp target.
+אפשר להוסיף כלחצן כל אחד מהיעדים הזמניים המוגדרים מראש שלכם (**[יעד זמני](TempTargets.md)**) (מוצגים השם, היעד ומשך הזמן, למשל *"אכילה בקרוב — 5.0 mmol/L, 45 דק׳"*). לחיצה עליו מבקשת אישור, ואז מפעילה את היעד הזמני הזה.
 
-![The dynamic categories — Quick Wizard and Temp Target Presets (Scenes and Automation appear when you have some)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
+![הקטגוריות הדינמיות — אשף מהיר ויעדים זמניים מוגדרים מראש (תרחישים ואוטומציה מופיעים כשיש לכם כאלה)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
 
 (profile-shortcuts)=
 ### Profile
 
-Every **[profile](ProfileSwitch-ProfilePercentage.md)** can be added as a **shortcut** that performs a **profile switch** in one tap. Unlike most shortcuts, a Profile shortcut carries its own **percentage** and **duration**, which you set after adding it with the **✏️** button:
+אפשר להוסיף כל **[פרופיל](ProfileSwitch-ProfilePercentage.md)** כ**קיצור דרך** שמבצע **החלפת פרופיל** בלחיצה אחת. בניגוד לרוב קיצורי הדרך, לקיצור דרך של פרופיל יש **אחוז** ו**משך** משלו, שמגדירים אחרי ההוספה בעזרת הלחצן **✏️**:
 
-- **Percentage** (30–250 %, in steps of 5 %) — scale the profile when it is applied. 100 % uses it as-is.
-- **Duration** (0–10080 min, that is up to 7 days, in steps of 10 min) — how long the switch lasts. **0 = Permanent** (until you switch again).
+- **אחוזים** (30–250 %, בצעדים של 5 %) — שינוי קנה המידה של הפרופיל כשהוא מופעל. 100 % משתמש בו כמו שהוא.
+- **משך** (0–10080 דקות, כלומר עד 7 ימים, בצעדים של 10 דקות) — כמה זמן ההחלפה נמשכת. **0 = קבוע** (עד ההחלפה הבאה).
 
-![Profile shortcuts and plugin categories in the catalog](../images/v4/QuickLaunch/quicklaunch_categories.png)
+![קיצורי דרך לפרופיל וקטגוריות של תוספים ברשימה](../images/v4/QuickLaunch/quicklaunch_categories.png)
 
-This lets you keep several buttons for the **same** profile at different strengths — for example *“Profile 100 %”* and *“Profile 70 % for 2 h”* — and apply either with a single tap. (You can add the same profile more than once with different settings.)
+כך אפשר להחזיק כמה לחצנים לאותו פרופיל **עצמו** בעוצמות שונות — למשל *"פרופיל 100 %"* ו-*"פרופיל 70 % למשך 2 ש׳"* — ולהפעיל כל אחד מהם בלחיצה אחת. (אפשר להוסיף את אותו פרופיל יותר מפעם אחת עם הגדרות שונות.)
 
-### Plugins
+### תוספים
 
-![Plugin shortcuts in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
+![קיצורי דרך לתוספים ברשימה](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
 
-Finally, any **enabled plugin** that has its own screen can be added as a shortcut to open it directly. These are grouped by plugin type — **Pump**, **BG Source**, **APS**, **Loop**, **Sensitivity detection**, **Smoothing**, **Calibration**, **Constraints**, **Communication** and **General** — so you can, for instance, jump straight to your pump or loop screen from the overview.
+לבסוף, כל **תוסף מופעל** שיש לו מסך משלו אפשר להוסיף כקיצור דרך שפותח אותו ישירות. הם מקובצים לפי סוג התוסף — **משאבה**, **מקור ערכי הסוכר**, **APS**, **לולאה**, **זיהוי רגישות**, **החלקה**, **כיול**, **מגבלות**, **תקשורת** ו-**כללי** — כך שאפשר, למשל, לעבור ישירות מהמסך הראשי למסך המשאבה או למסך הלולאה.
 
 ---
 
-## QuickLaunch and Master/Client
+## הפעלה מהירה ומכשיר ראשי/לקוח
 
-Unlike most of your settings, the **QuickLaunch toolbar is configured per device** — it is stored **locally and is not synced** between your master and paired clients, so each device keeps its own set of buttons. (It *is* included in a settings **backup/export**, so a restore brings it back on the same device.)
+בניגוד לרוב ההגדרות שלכם, **סרגל ההפעלה המהירה מוגדר בכל מכשיר בנפרד** — הוא נשמר **מקומית ולא מסונכרן** בין המכשיר הראשי למכשירי הלקוח המצומדים, כך שלכל מכשיר יש סט לחצנים משלו. (הוא *כן* נכלל ב**גיבוי/ייצוא** של ההגדרות, כך ששחזור מחזיר אותו באותו מכשיר.)
 
-What each device can put on its toolbar still depends on what it has: QuickWizards, scenes, temp-target presets and profiles all sync, so a client's catalog offers the same items — you simply choose them per device. A few details to know:
+מה שכל מכשיר יכול לשים בסרגל שלו עדיין תלוי במה שיש בו: אשפים מהירים, תרחישים, יעדים זמניים מוגדרים מראש ופרופילים מסונכרנים כולם, כך שברשימה של מכשיר לקוח מוצעים אותם פריטים — פשוט בוחרים אותם בכל מכשיר בנפרד. כמה פרטים שכדאי לדעת:
 
-- Buttons whose target no longer exists (a deleted QuickWizard, scene or preset, a disabled rule) are **skipped automatically**.
-- **Automation** shortcuts are offered and run only on the **master** (automation executes on the master). Scene, QuickWizard, temp-target and profile buttons are available on a client.
-- When you tap a button on a client that must run on the master (a bolus, temp target, profile switch or scene), the **master** carries it out and authors the confirmation. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md).
+- לחצנים שהפריט שלהם כבר לא קיים (אשף מהיר, תרחיש או יעד מוגדר מראש שנמחקו, כלל שהושבת) **מדולגים אוטומטית**.
+- קיצורי דרך של **אוטומציה** מוצעים ופועלים רק ב**מכשיר הראשי** (האוטומציה פועלת במכשיר הראשי). לחצני תרחיש, אשף מהיר, יעד זמני ופרופיל זמינים במכשיר לקוח.
+- כשלוחצים במכשיר לקוח על לחצן שחייב לפעול במכשיר הראשי (בולוס, יעד זמני, החלפת פרופיל או תרחיש), **המכשיר הראשי** מבצע אותו ושולח את האישור. ראו [שליטה בין מכשיר ראשי ↔ מכשיר לקוח](../RemoteFeatures/ClientMasterControl.md).
 
 ---
 
