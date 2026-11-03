@@ -2,27 +2,27 @@
 
 # Sensitivity detection
 
-## Sensitivity algorithm
+## Algoritmo di sensibilità
 
 **AAPS** currently offers 3 sensitivity detection models:
 
-* Sensitivity AAPS
-* Sensitivity WeightedAverage
-* Sensitivity Oref1
+* Sensibilità AAPS
+* Sensibilità WeightedAverage
+* Sensibilità Oref1
 
-### Sensitivity AAPS
+### Sensibilità AAPS
 
-Sensitivity is calculated the same way as in Oref1, but you can specify the time range to look back on. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences.
+Sensitivity is calculated the same way as in Oref1, but you can specify the time range to look back on. L'assorbimento minimo dei carboidrati è calcolato dal tempo massimo di assorbimento dei carboidrati impostato nelle preferenze.
 
-### Sensitivity WeightedAverage
+### Sensibilità WeightedAverage
 
-Sensitivity is calculated as a weighted average of the deviations. You can specify the time range to look back on. Newer deviations have a higher weight. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences. This algorithm is the fastest in following sensitivity changes.
+La sensibilità è calcolata come media pesata delle deviazioni. Puoi indicare per quanto tempo guardare indietro. Le deviazioni più recenti hanno un peso maggiore. L'assorbimento minimo dei carboidrati è calcolato dal tempo massimo di assorbimento dei carboidrati impostato nelle preferenze. Questo algoritmo è il più veloce a seguire i cambi di sensibilità.
 
 (SensitivityDetectionAndCob-sensitivity-oref1)=
 
-### Sensitivity Oref1
+### Sensibilità Oref1
 
-Sensitivity is calculated from the last 8 hours of data, or from the last site change if it is less than 8 hours ago. Carbs (if not absorbed) are cut after the time specified in the preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from the sensitivity calculation. So if you are using SMB with UAM, you have to choose the Oref1 algorithm for it to work properly. For more information about UAM, see the [Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb) section.
+Sensitivity is calculated from the last 8 hours of data, or from the last site change if it is less than 8 hours ago. I carboidrati (se non assorbiti) vengono tagliati dopo il tempo indicato nelle preferenze. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from the sensitivity calculation. Quindi, se usi SMB con UAM, devi scegliere l'algoritmo Oref1 perché funzioni bene. For more information about UAM, see the [Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb) section.
 
 Oref1 is the recommended option: it is the only one that can detect UAM and work with [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), the more recent algorithm.
 
