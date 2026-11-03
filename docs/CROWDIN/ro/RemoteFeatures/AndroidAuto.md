@@ -4,11 +4,11 @@
 
 ## Cerințe
 
-**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
+**AAPS** utilizează o funcție a Android Auto care permite ca mesajele de la aplicațiile de pe telefon să fie afișate pe ecranul sistemului audio al mașinii.
 
 Aceasta înseamnă că:
 
-* Android must allow **AAPS** to show notifications and
+* Android trebuie să permită **AAPS** să afișeze notificări și
 * Cum **AAPS** este o aplicație neoficială, permiteți utilizarea de "surse necunoscute" cu Android Auto.
 
 ![Date CGM AAPS pe Android Auto](../images/android_auto_01.png)
@@ -17,11 +17,11 @@ Aceasta înseamnă că:
 
 ## Check that AAPS can show notifications
 
-**AAPS** always shows a status notification with your current glucose, IOB and COB. This is the notification that Android Auto displays in the car. There is nothing to switch on in **AAPS**, but Android must allow **AAPS** to show notifications.
+**AAPS** always shows a status notification with your current glucose, IOB and COB. Aceasta este notificarea pe care Android Auto o afișează în mașină. There is nothing to switch on in **AAPS**, but Android must allow **AAPS** to show notifications.
 
 On your phone, open **Settings** > **Apps** > **AAPS** > **Notifications** and make sure **All AAPS notifications** is on.
 
-![All AAPS notifications switched on](../images/android_auto_notifications_all.png)
+![Toate notificările AAPS activate](../images/android_auto_notifications_all.png)
 
 Scroll down and make sure **Ongoing status** is on: this is the channel of the status notification.
 
@@ -29,7 +29,7 @@ Scroll down and make sure **Ongoing status** is on: this is the channel of the s
 
 Please check now that you see the **AAPS** status notification on the phone before you walk to your car!
 
-![AAPS notification on the phone](../images/android_auto_04.png)
+![Notificarea AAPS pe telefon](../images/android_auto_04.png)
 
 (androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
@@ -37,7 +37,7 @@ Please check now that you see the **AAPS** status notification on the phone befo
 
 Deoarece **AAPS** nu este o aplicație Android oficială, notificările trebuie să fie activate pentru "surse necunoscute" în Android Auto. Acest lucru se face prin utilizarea modului de dezvoltator pe care vi-l vom arăta aici.
 
-Go to your car and connect your mobile with the car's audio system.
+Mergeți la mașină și conectați telefonul la sistemul audio al mașinii.
 
 Ar trebui să vedeți acum un ecran similar cu acest ecran.
 
@@ -51,7 +51,7 @@ Derulați în jos până la sfârșitul paginii și selectați **vedeți mai mul
 
 Acum, pe mobil vom activa modul de dezvoltator.
 
-Primul ecran arată așa. Derulează în jos până la sfârșitul paginii.
+Primul ecran arată așa. Derulați în jos până la sfârșitul paginii.
 
 ![Activați modul dezvoltator](../images/android_auto_07.png)
 
@@ -83,4 +83,4 @@ Datele dumneavoastră CGM vor fi afișate după cum urmează:
 
 ## Depanare:
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#androidauto-check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
+* Dacă nu vedeți notificarea, verificați dacă [ați permis AAPS să afișeze notificările](#androidauto-check-that-aaps-can-show-notifications) în Android și dacă [Android Auto are drepturi de acces la notificări](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
