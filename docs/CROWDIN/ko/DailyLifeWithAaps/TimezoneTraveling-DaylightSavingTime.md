@@ -1,134 +1,134 @@
-# Timezone Change and Daylight Saving
+# 시간대 변경과 서머타임
 
-When the time zone of your phone changes, **AAPS** calculates **IOB**, basal and sensitivity for the past again from scratch, about 10 seconds after the change. While this runs, the graphs and values on the main screen may take a moment to update.
+휴대폰의 시간대가 바뀌면 **AAPS**는 약 10초 후에 과거의 **IOB**, 기저, 민감도를 처음부터 다시 계산합니다. 이 계산이 실행되는 동안 메인 화면의 그래프와 값이 업데이트되는 데 잠시 시간이 걸릴 수 있습니다.
 
 (timezone-traveling-with-pumps)=
 
-## Timezone change for Omnipod Dash
+## Omnipod Dash의 시간대 변경
 
-* Refresh the pump status in **Manage → Pump**
-* Temporarily select a different **Profile** and then switch back to your original or desired **Profile**
+* **관리 → 펌프**에서 펌프 상태를 새로 고치십시오
+* 잠시 다른 **프로파일**을 선택한 다음, 원래의 또는 원하는 **프로파일**로 다시 전환하십시오
 
-## Timezone change for DanaR, Korean DanaR
+## DanaR, Korean DanaR의 시간대 변경
 
-There is no issue with changing timezone in phone because pump doesn't use history
+펌프가 이력을 사용하지 않으므로 휴대폰의 시간대를 바꾸어도 문제가 없습니다
 
 (timezone-traveling-danarv2-danars)=
 
-## Timezone change for DanaRv2, DanaRS, Dana-i
+## DanaRv2, DanaRS, Dana-i의 시간대 변경
 
-These pumps require special care because **AAPS** uses history from the pump but the records in pump do not have timezone stamp. **This means that if you change time zone in your phone, records will be read with different time zone and will be doubled.**
+**AAPS**는 펌프의 이력을 사용하지만 펌프의 기록에는 시간대 정보가 없으므로, 이 펌프들은 특별히 주의해야 합니다. **즉, 휴대폰의 시간대를 바꾸면 기록이 다른 시간대로 읽혀서 두 번 기록됩니다.**
 
-To avoid this there are two possibilities:
+이를 피하는 방법은 두 가지입니다:
 
-### Option 1: Keep home time and timeshift profile
+### 방법 1: 집의 시간을 유지하고 프로파일을 시간 이동하기
 
-* Turn off 'Automatic date and time' in your phone's settings (manual time zone change).
+* 휴대폰 설정에서 'Automatic date and time'(자동 날짜 및 시간)을 끄십시오(시간대를 직접 변경).
 
-* Your phone must keep your standard time as at home for the whole travel period.
+* 여행하는 동안 휴대폰은 계속 집의 표준 시간을 유지해야 합니다.
 
-* Time-shift your **Profile** according to time difference between home time and destination time.
+* 집의 시간과 목적지의 시간 차이만큼 **프로파일**을 시간 이동하십시오.
    
-   * Tap the **Profile** name on the main screen to open the [Profile screen](#ProfileSwitch-manage-v4)
-   * Select your **Profile** and tap **▶ Activate**
-   * Set '**Time shift**' according to your destination and tap **Activate**.
+   * 메인 화면에서 **프로파일** 이름을 눌러 [프로파일 화면](#ProfileSwitch-manage-v4)을 여십시오
+   * **프로파일**을 선택하고 **▶ 활성화**를 누르십시오
+   * 목적지에 맞게 '**시간 이동**'을 설정하고 **활성화**를 누르십시오.
    
-   ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
+   ![시간 이동을 넣은 프로파일 전환](../images/ProfileSwitchTimeShift2.png)
    
-   * e.g. Vienna -> New York: **Profile Switch** +6 hours
-   * e.g. Vienna -> Sydney: **Profile Switch** -8 hours
+   * 예: 빈 -> 뉴욕: **프로파일 전환** +6시간
+   * 예: 빈 -> 시드니: **프로파일 전환** -8시간
 
-### Option 2: Delete pump history
+### 방법 2: 펌프 이력 삭제하기
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change)
+* 휴대폰 설정에서 'Automatic date and time'(자동 날짜 및 시간)을 끄십시오(시간대를 직접 변경).
 
-When you get off the plane:
+비행기에서 내리면:
 
-* turn off pump
-* change timezone on phone
-* turn off phone, turn on pump
-* clear history in pump
-* change time in pump
-* turn on phone
-* let phone connect to the pump and fine-tune time
+* 펌프를 끄십시오
+* 휴대폰의 시간대를 변경하십시오
+* 휴대폰을 끄고 펌프를 켜십시오
+* 펌프의 이력을 삭제하십시오
+* 펌프의 시간을 변경하십시오
+* 휴대폰을 켜십시오
+* 휴대폰이 펌프에 연결되어 시간을 세밀하게 맞추도록 하십시오
 
 (timezone-traveling-insight)=
 
-## Timezone Change for Insight
+## Insight의 시간대 변경
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+드라이버가 펌프의 시간을 휴대폰의 시간에 자동으로 맞춥니다.
 
-The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in **AAPS** despite the time change.
+Insight는 시간이 바뀐 순간과, 어떤 (이전) 시간에서 어떤 (새) 시간으로 바뀌었는지도 이력 항목으로 기록합니다. 그래서 시간이 바뀌어도 **AAPS**에서 정확한 시간을 알 수 있습니다.
 
-It may cause inaccuracies in the **TDDs**. But it shouldn't be a problem.
+**TDD**가 부정확해질 수 있습니다. 하지만 문제가 되지는 않습니다.
 
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes too long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+따라서 Insight 사용자는 시간대 변경과 시간 변경을 걱정하지 않아도 됩니다. 이 규칙에는 예외가 하나 있습니다: Insight 펌프에는 시간 등을 유지하기 위한 작은 내부 배터리가 있습니다 이 배터리는 "실제" 배터리를 교체하는 동안 사용됩니다. 배터리 교체가 너무 오래 걸리면 이 내부 배터리의 에너지가 떨어져 시계가 초기화되고, 새 배터리를 넣은 후 시간과 날짜를 입력하라는 요청이 나옵니다. 이 경우 정확한 시간을 알 수 없으므로, 배터리 교체 전의 모든 항목은 AAPS의 계산에서 제외됩니다.
 
-## Timezone Change for Accu-Chek Combo
+## Accu-Chek Combo의 시간대 변경
 
-The [Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the driver programs into the pump. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
+[Combo 드라이버](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)는 펌프의 시간을 휴대폰의 시간에 자동으로 맞춥니다. Combo는 시간대를 저장할 수 없고 현지 시간만 저장할 수 있으며, 드라이버가 펌프에 입력하는 것이 바로 이 현지 시간입니다. 또한 드라이버는 펌프의 현지 시간을 시간대 오프셋이 있는 완전한 타임스탬프로 바꿀 수 있도록 시간대를 AAPS의 로컬 설정에 저장합니다. 사용자는 아무것도 할 필요가 없습니다. Combo의 시간이 휴대폰의 현재 시간과 너무 많이 다르면 펌프의 시간이 자동으로 조정됩니다.
 
-Note that this takes some time, however, since it can only be done in the remote-terminal mode, which is generally slow. This is a Combo limitation that cannot be overcome.
+다만 이 작업은 시간이 좀 걸립니다. 원격 터미널 모드에서만 할 수 있는데, 이 모드는 대체로 느리기 때문입니다. 이것은 Combo의 한계이며 해결할 수 없습니다.
 
-## Timezone Change for Medtrum
+## Medtrum의 시간대 변경
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+드라이버가 펌프의 시간을 휴대폰의 시간에 자동으로 맞춥니다.
 
-Time zone changes keep the history intact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and **IOB**. If you change time manually double check the **IOB**.
+시간대를 바꾸어도 이력은 그대로 유지되며, TDD만 영향을 받을 수 있습니다. 휴대폰의 시간을 직접 바꾸면 이력과 **IOB**에 문제가 생길 수 있습니다. 시간을 직접 바꾸었다면 **IOB**를 다시 한 번 확인하십시오.
 
-When the time zone or time changes running **TBRs** are stopped.
+시간대나 시간이 바뀌면 실행 중인 **TBR**이 중지됩니다.
 
 (time-adjustment-daylight-savings-time-dst)=
 
-## DAYLIGHT SAVING (DST)
+## 서머타임(DST)
 
-Time adjustment for daylight savings time.
+서머타임에 맞춘 시간 조정.
 
-Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctly. For some pumps it is better to make time zone adjustments while awake before DST takes place and not during the night.
+펌프와 CGM 구성에 따라, 시간이 갑자기 바뀌면 **AAPS**가 제대로 작동하지 못할 수 있습니다. 일부 펌프는 서머타임(DST)이 시작되기 전에, 밤이 아니라 깨어 있을 때 시간대를 조정하는 것이 좋습니다.
 
-### DST automatic adjustment for most pumps
+### 대부분의 펌프에서 서머타임(DST) 자동 조정
 
-* However, the **Loop** will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**. This is done for safety reasons - **IOB** may be too high due to duplicated bolus prior to DST change.
-* After DST has taken place, make a **Profile Switch** to the desired **Profile** to enable the **Loop**: tap the profile name on the main screen, then the round **▶** button (see [Activating a profile](#ProfileSwitch-manage-v4)).
-* You will also receive a notification on **AAPS** main screen prior to DST change that the **Loop** has been disabled temporarily. This message will appear without beep, vibration or similar sound.
+* 하지만 서머타임(DST) 전환(보통 새벽 1시 이후)이 일어난 후 3시간 동안 **루프**가 비활성화되고, **AAPS**는 **프로파일**에서 선택한 기본 기저로 돌아갑니다. 이것은 안전을 위한 것입니다. 서머타임(DST) 전환 전의 볼러스가 중복되어 **IOB**가 너무 높을 수 있습니다.
+* 서머타임(DST) 전환이 일어난 후 원하는 **프로파일**로 **프로파일 전환**을 하여 **루프**를 활성화하십시오: 메인 화면에서 프로파일 이름을 누른 다음 둥근 **▶** 버튼을 누르십시오([프로파일 활성화](#ProfileSwitch-manage-v4) 참조).
+* 서머타임(DST) 전환 전에 **AAPS** 메인 화면에 **루프**가 일시적으로 비활성화되었다는 알림도 표시됩니다. 이 메시지는 신호음, 진동 또는 비슷한 소리 없이 표시됩니다.
 
-If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** data unless you are sure this data is absolutely correct. Take caution and do not use this feature for a couple of hours after DST switch has taken place.
+**AAPS**의 계산기로 볼러스할 때는 **COB**와 **IOB** 데이터가 완전히 정확하다고 확신할 때만 사용하십시오. 주의하십시오. 서머타임(DST) 전환이 일어난 후 몇 시간 동안은 이 기능을 사용하지 마십시오.
 
-### DST for Accu-Chek Insight
+### Accu-Chek Insight의 서머타임(DST)
 
-* Change to DST is done automatically. No action required.
+* 서머타임(DST) 전환은 자동으로 이루어집니다. 따로 할 일은 없습니다.
 
-### DST for Accu-Chek Combo
+### Accu-Chek Combo의 서머타임(DST)
 
-* Change to DST is done automatically. No action required.
+* 서머타임(DST) 전환은 자동으로 이루어집니다. 따로 할 일은 없습니다.
 
-### DST for Medtrum
+### Medtrum의 서머타임(DST)
 
-* Change to DST is done automatically. No action required.
+* 서머타임(DST) 전환은 자동으로 이루어집니다. 따로 할 일은 없습니다.
 
-### DST for Omnipod Dash
+### Omnipod Dash의 서머타임(DST)
 
-* Either allow **AAPS** to temporarily default to background basal after DST has taken place as explained above.
-* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day before DST is due to take place to avoid overnight disruption. NOTE THIS OPTION MAY CAUSE YOUR POD TO PREMATURELY EXPIRE. PLEASE HAVE SUPPLIES WITH YOU IF OPTING FOR THE FEATURE BELOW.
+* 위에서 설명한 것처럼 서머타임(DST) 전환 후 **AAPS**가 잠시 기본 기저로 돌아가도록 둘 수 있습니다.
+* 또는 밤사이 **AAPS**가 잠시 기본 기저로 돌아가는 것을 원하지 않으면, 서머타임(DST) 전환 전날 시간대를 바꾸어 밤사이의 중단을 피할 수 있습니다. 이 방법을 쓰면 Pod가 일찍 만료될 수 있으니 주의하십시오. 아래 기능을 선택한다면 교체용 물품을 꼭 가지고 다니십시오.
 
-#### Actions to take before the clock change
+#### 시계가 바뀌기 전에 할 일
 
-1. Switch OFF any Phone's settings that automatically sets the Phone's time zone, so the user can change to a desired time zone that does not use DST. How to enable this will depend on your smartphone and Android version.
+1. 휴대폰의 시간대를 자동으로 설정하는 휴대폰 설정을 모두 끄십시오. 그래야 서머타임(DST)을 사용하지 않는 원하는 시간대로 바꿀 수 있습니다. 이 기능을 켜는 방법은 스마트폰과 Android 버전에 따라 다릅니다.
    
-   * Some phones have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the time zone (which you must turn OFF: **Set automatically** under **Time zone** in the screenshot below).
-   * Unfortunately, some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
+   * 일부 휴대폰에는 설정이 두 개 있습니다. 하나는 시간 자동 설정(되도록 켜 두어야 함)이고, 다른 하나는 시간대 자동 설정입니다(꺼야 함: 아래 스크린샷에서 **Time zone**(시간대) 아래의 **Set automatically**(자동 설정)).
+   * 안타깝게도 일부 Android 버전에는 시간과 시간대의 자동 설정을 함께 켜는 스위치가 하나만 있습니다. 지금은 이 기능을 꺼야 합니다.
 
 ![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
 
-2. Find a timezone that has the same time as your current location but doesn't use DST.
+2. 현재 위치와 시간이 같지만 서머타임(DST)을 사용하지 않는 시간대를 찾으십시오.
    
-   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Congo). Change your phone's timezone to Congo.
+   * 이 국가 목록은 [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)에서 볼 수 있습니다
+   * 중앙유럽 표준시(CET)라면 "Brazzaville"(콩고)가 될 수 있습니다. 휴대폰의 시간대를 콩고로 바꾸십시오.
 
 ![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
 
-3. In **AAPS** refresh your pump and switch to your desired **Profile**.
+3. **AAPS**에서 펌프를 새로 고치고 원하는 **프로파일**로 전환하십시오.
 
-4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA or the maximum carb absorption time (**Absorption max time**), whichever is longer.
+4. **AAPS**의 **IOB**와 **COB**를 확인하고, 정확하지 않으면 최소한 DIA와 최대 탄수화물 흡수 시간(**최대 흡수 시간**) 중 더 긴 시간 동안 **루프**를 비활성화하십시오.
 
-5. Actions to take after the clock change. A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Ideally your **COB** and **IOB** should both be close to zero.
+5. 시계가 바뀐 후에 할 일. **IOB**가 낮을 때가 현지 시간대로 되돌리기 좋은 때입니다. 예: 아침 식사 같은 식사 1시간 전. 가장 좋은 것은 **COB**와 **IOB**가 둘 다 0에 가까운 것입니다.
