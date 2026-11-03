@@ -1,24 +1,24 @@
-# Development branch
+# Geliştirme dalı
 
 ```{warning}
-Dev branch is for the further development of AAPS only. It should be used on a separate phone for testing <font color="#FF0000">**not for actual looping!**</font>
+Dev dalı yalnızca AAPS'in daha fazla geliştirilmesi içindir. Test için ayrı bir telefonda kullanılmalıdır, <font color="#FF0000">**gerçek döngü için değil!**</font>
 ```
 
-The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). It is advised to stay on the Master branch for actual looping.
+Kullanılacak en kararlı AAPS sürümü [Master dalındaki](https://github.com/nightscout/AndroidAPS/tree/master) sürümdür. Gerçek döngü kullanımı için Master dalında kalmanız önerilir.
 
-The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Therefore many unfinished features are disabled. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in the directory /AAPS/extra. Enabling the engineering mode might break the loop entirely.
+AAPS'in dev sürümü yalnızca geliştiriciler ve test yapanlar içindir: stacktrace'lerle uğraşmayı, günlük dosyalarını incelemeyi ve gerekirse hata ayıklayıcıyı (debugger) çalıştırarak geliştiricilere yararlı hata raporları hazırlamayı bilen kişiler (kısacası: yardım almadan ne yaptığını bilen kişiler!). Therefore many unfinished features are disabled. Bu özellikleri etkinleştirmek için /AAPS/extra dizininde `engineering_mode` adlı bir dosya oluşturarak **Mühendislik modu**'na (Engineering Mode) girin. Geliştirici modunu etkinleştirmek döngüyü tamamen bozabilir.
 
-However, the Dev branch is a good place to see what features are being tested and to help iron out the bugs and give feedback on how the new features work in practice. Often people will test the Dev branch on an old phone and pump until they are confident it is stable - any use of it is at your own risk. When testing any new features, remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.
+Bununla birlikte Dev dalı, hangi özelliklerin test edildiğini görmek, hataları gidermeye yardım etmek ve yeni özelliklerin pratikte nasıl çalıştığı hakkında geri bildirim vermek için iyi bir yerdir. İnsanlar Dev dalını, kararlı olduğundan emin olana kadar çoğu zaman eski bir telefonda ve pompada test eder. Her türlü kullanımın riski size aittir. Herhangi bir yeni özelliği test ederken, hâlâ geliştirilmekte olan bir özelliği test etmeyi seçtiğinizi unutmayın. Bunu kendi riskinizle & kendinizi güvende tutmak için gereken özeni göstererek yapın.
 
-If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/nightscout/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md)). The new features can also be discussed on [discord](https://discord.gg/4fQUWHZ4Mw).
+Dev dalını kullanırken bir hata bulursanız veya bir şeyin yanlış gittiğini düşünürseniz, başka birinin bunu bulup bulmadığını görmek için [issues sekmesine](https://github.com/nightscout/AndroidAPS/issues) bakın; bulunmadıysa kendiniz ekleyin. Burada ne kadar çok bilgi paylaşırsanız o kadar iyidir ([günlük dosyalarınızı](../GettingHelp/AccessingLogFiles.md) paylaşmanız gerekebileceğini unutmayın). Yeni özellikler [discord](https://discord.gg/4fQUWHZ4Mw) üzerinde de tartışılabilir.
 
-A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. When a single dev version is doing the rounds, it is easier to keep track of bugs that people are reporting. The developers do not want to be in a position where there are three versions of dev in the wild where bugs are fixed in some and not others, and people continue to report the fixed ones.
+Bir dev sürümünün son kullanma tarihi vardır. Sürümü sorunsuz kullanırken bu rahatsız edici görünebilir, ancak bir amaca hizmet eder. Ortada tek bir dev sürümü dolaşırken, insanların bildirdiği hataları takip etmek daha kolaydır. Geliştiriciler, ortada dev'in üç farklı sürümünün olduğu, hataların bazılarında düzeltilip bazılarında düzeltilmediği ve insanların zaten düzeltilmiş hataları bildirmeye devam ettiği bir durumda olmak istemez.
 
 (branch-ci-test)=
 
-## Test a specific branch (branch-ci)
+## Belirli bir dalı test etme (branch-ci)
 
-To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
+Bir test dalını oluşturmak için branch-ci seçin. Bu seçenek, APK oluşturmak için belirli bir dalı seçmenizi sağlar. Dev dalını test etmeniz gerektiğinde bu yöntemi kullanabilirsiniz.
 
 ![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
 
@@ -26,11 +26,11 @@ To build a test branch, select branch-ci, which allows you to choose a specific 
 
 (github-pr-test)=
 
-## Test items in a pull request (GitHub CI actions deploy)
+## Bir pull request'teki değişiklikleri test etme (GitHub CI actions ile dağıtım)
 
-Available from 3.3.2.1.dev
+3.3.2.1.dev sürümünden itibaren kullanılabilir
 
-- Suitable for testers or those helping with testing.
+- Test yapanlar veya teste yardım edenler için uygundur.
 
 ```{eval-rst}
 .. raw:: html
@@ -51,22 +51,22 @@ Available from 3.3.2.1.dev
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
 
-- Target repository: the repository that contains the PR, in the format owner/repo. Leave the default **nightscout/AndroidAPS** unless you were told to use another repository (only developers should do this).
+- Target repository: PR'ı içeren depo, owner/repo biçiminde. Başka bir depo kullanmanız söylenmediyse varsayılan **nightscout/AndroidAPS** değerini bırakın (bunu yalnızca geliştiriciler yapmalıdır).
 
-- PR number: Please enter the PR number that you want to test.
+- PR number: Lütfen test etmek istediğiniz PR numarasını girin.
 
-- PR reference types: PR reference types include two options:
+- PR reference types: PR referans türlerinde iki seçenek vardır:
     
     - head:
-    - Fetches the actual content from the PR author’s branch (i.e., the original commit history without any merge operations).
-    - This is equivalent to the original state of the PR branch, as if it were fetched directly from a fork or feature branch.
+    - PR yazarının dalındaki asıl içeriği alır (yani hiçbir birleştirme (merge) işlemi olmadan orijinal commit geçmişini).
+    - Bu, PR dalının orijinal durumuna eşittir; sanki doğrudan bir fork'tan veya özellik dalından alınmış gibi.
     
     - merge:
     
-    - Fetches the result of GitHub’s pre-simulated merge of the PR into the target branch (e.g., dev).
-    - This is a virtual merge commit automatically created by GitHub.
-    - This commit only exists when the PR has no conflicts and is mergeable.
+    - GitHub'ın PR'ı hedef dala (ör. dev) önceden denediği birleştirmenin sonucunu alır.
+    - Bu, GitHub'ın otomatik olarak oluşturduğu sanal bir birleştirme (merge) commit'idir.
+    - Bu commit yalnızca PR'da çakışma yoksa ve PR birleştirilebilir durumdaysa vardır.
     
     - variant:
     
-    - Please refer to [variant](#browserbuild-variant)
+    - Lütfen [varyant](#browserbuild-variant) bölümüne bakın
