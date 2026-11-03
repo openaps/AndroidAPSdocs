@@ -1,23 +1,23 @@
-# Change language and version
+# 언어와 버전 변경
 
-The documentation you are currently reading is available in several languages and is specific to a given version of **AAPS**. Both the language and the version can be changed from the menu at the bottom right of the screen.
+지금 읽고 있는 문서는 여러 언어로 제공되며, **AAPS**의 특정 버전에 맞춰져 있습니다. 언어와 버전은 모두 화면 오른쪽 아래의 메뉴에서 변경할 수 있습니다.
 
 ```{note}
-Click on the bar at the bottom right of the screen to open the language and version selection menu.
+화면 오른쪽 아래의 막대를 클릭하면 언어 및 버전 선택 메뉴가 열립니다.
 ```
 
-![Open language menu](../images/documentation_language_menu.png)
+![언어 메뉴 열기](../images/documentation_language_menu.png)
 
 ## Change language
 
-In the menu, select the language you want to read the documentation in.
+메뉴에서 문서를 읽을 언어를 선택하십시오.
 
-Feel welcome to join [Crowdin](https://crowdin.com/project/androidapsdocs) translators and proofreaders to help translate the documentation into your language.
+[Crowdin](https://crowdin.com/project/androidapsdocs)의 번역자 및 교정자로 참여하여 문서를 여러분의 언어로 번역하는 일을 도와주시면 환영합니다.
 
-## Change version
+## 버전 변경
 
-The current version is shown in the bottom right of the screen. To switch to a different version, click on the current version and select the version you need.
+현재 버전은 화면 오른쪽 아래에 표시됩니다. 다른 버전으로 바꾸려면 현재 버전을 클릭하고 필요한 버전을 선택하십시오.
 
 ```{warning}
-When changing language and/or version, you might get a 404 - Page not found, if the language or version page doesn't exist. This will frequently happen when switching version but should not happen when changing language: the page will show in English if not translated yet.
+언어나 버전을 변경할 때 해당 언어나 버전의 페이지가 없으면 404 - 페이지를 찾을 수 없습니다 오류가 나타날 수 있습니다. 이는 버전을 바꿀 때 자주 발생하지만, 언어를 바꿀 때는 발생하지 않아야 합니다. 아직 번역되지 않은 페이지는 영어로 표시됩니다.
 ```
