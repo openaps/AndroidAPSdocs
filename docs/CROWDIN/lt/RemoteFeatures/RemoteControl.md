@@ -1,298 +1,298 @@
-# Remote control of AAPS
+# AAPS nuotolinis valdymas
 
 ```{contents} In this page
 :backlinks: entry
 :depth: 2
 ```
 
-There are four highly effective tools for remotely managing **AAPS**:
+Yra keturi labai veiksmingi įrankiai **AAPS** valdyti nuotoliniu būdu:
 
 1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower device is an Android phone or tablet, or a Windows, Mac or Linux computer; on an iPhone you [build the app yourself](#aapsclient-iphone)) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device), mainly for following: see the note on [client control](#client-master-control) in that section.  
 4) [Smartwatches](#RemoteControl_smartwatches) (Android)
 
-The first three are mostly appropriate for caregivers/parents, but smartwatches are very useful for caregivers/parents **and** for adults with diabetes themselves.
+Pirmieji trys labiau tinka prižiūrintiems asmenims / tėvams, o išmanieji laikrodžiai labai naudingi prižiūrintiems asmenims / tėvams **ir** patiems suaugusiems, sergantiems diabetu.
 
 ![image](../images/remote_control_and_following/AAPS_overview_remote_control_01.png)
 
 (RemoteControl_SMS-Commands)=
 
-## 1) SMS Commands
+## 1) SMS komandos
 
-See the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
+Žr. atskirą puslapį [SMS komandos](../RemoteFeatures/SMSCommands.md).
 
 (RemoteControl_aapsclient)=
 ## 2) AAPSClient
 
-**AAPSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver the same screens and buttons to send commands remotely to **AAPS**:
+**AAPSClient** atrodo labai panašiai kaip pati **AAPS**: prižiūrintis asmuo turi tuos pačius ekranus ir mygtukus, kad galėtų nuotoliniu būdu siųsti komandas į **AAPS**:
 
-![AAPSClient home screen](../images/v4/AapsClient/aapsclient_home.png)
+![AAPSClient pagrindinis ekranas](../images/v4/AapsClient/aapsclient_home.png)
 
 (remotecontrol-aapsclient-versions)=
-### About AAPSClient, AAPSClient2 and AAPSClient3
+### Apie AAPSClient, AAPSClient2 ir AAPSClient3
 
-There are 3 versions of the client app: **AAPSClient**, **AAPSClient2** and **AAPSClient3**. They work the same way. The only difference is that they can be installed side by side on the same follower phone.
+Yra 3 kliento programėlės versijos: **AAPSClient**, **AAPSClient2** ir **AAPSClient3**. Jos veikia vienodai. Vienintelis skirtumas – jas galima įdiegti greta tame pačiame sekėjo telefone.
 
-A caregiver who follows one person needs only **AAPSClient**. To follow and remote control a second person (with their own **Nightscout** site and their own **AAPS** phone), install **AAPSClient2** as well, and **AAPSClient3** for a third person. Each app is set up and [paired](#aapsclient-pairing-with-the-master) on its own, with the **Nightscout** site and the **AAPS** phone of the person it follows.
+Prižiūrinčiam asmeniui, kuris seka vieną žmogų, reikia tik **AAPSClient**. Norėdami sekti ir nuotoliniu būdu valdyti antrą žmogų (su jo paties **Nightscout** svetaine ir jo paties **AAPS** telefonu), įdiekite ir **AAPSClient2**, o trečiam žmogui – **AAPSClient3**. Kiekviena programėlė nustatoma ir [susiejama](#aapsclient-pairing-with-the-master) atskirai – su to žmogaus, kurį ji seka, **Nightscout** svetaine ir **AAPS** telefonu.
 
-To tell the apps apart, some elements have a different color: yellow for **AAPSClient**, blue for **AAPSClient2** and green for **AAPSClient3**. Those elements are the app icon, the widget background, and the **AAPS** status section on the home screen of the app. <br/> Note: the opacity of the widget background can be set in the widget configuration. At a low opacity the color is hard to see.
+Kad programėles būtų lengva atskirti, kai kurie elementai yra skirtingos spalvos: geltoni **AAPSClient**, mėlyni **AAPSClient2** ir žali **AAPSClient3**. Tai programėlės piktograma, valdiklio fonas ir **AAPS** būsenos sritis programėlės pagrindiniame ekrane. <br/> Pastaba: valdiklio fono nepermatomumą galima nustatyti valdiklio konfigūracijoje. Esant mažam nepermatomumui, spalvą sunku įžiūrėti.
 
-![Widget and status section colors of AAPSClient, AAPSClient2 and AAPSClient3](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
+![AAPSClient, AAPSClient2 ir AAPSClient3 valdiklio ir būsenos srities spalvos](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
 
-### Download and installation
+### Atsisiuntimas ir įdiegimas
 
-**AAPSClient** can be installed on a single phone or multiple follower phones (i.e. parent 1’s follower phone and parent 2’s follower phone) in order for both caregivers to be granted access and remote control a patient's **AAPS** phone.
+**AAPSClient** galima įdiegti viename arba keliuose sekėjų telefonuose (pvz., 1-ojo ir 2-ojo tėvų sekėjo telefonuose), kad abu prižiūrintys asmenys gautų prieigą ir galėtų nuotoliniu būdu valdyti paciento **AAPS** telefoną.
 
-To download **AAPSClient**, navigate to the [GitHub repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
+Norėdami atsisiųsti **AAPSClient**, eikite į [GitHub saugyklą](https://github.com/nightscout/AndroidAPS/releases/) ir paspauskite failą **“app-AAPSClient-release_x.x.x.x”** (versija gali būti naujesnė nei parodyta ekrano kopijoje žemiau):
 
 ![image](../images/remote_control_and_following/AAPSClient_download_02.png)
 
-Then go to  _downloads_ on your computer. On Windows, _downloads_ will show in the right hand ribbon:
+Tada kompiuteryje eikite į  _downloads_ (atsisiuntimai). Windows sistemoje _downloads_ (atsisiuntimai) bus rodomi dešinėje juostoje:
 
 ![image](../images/remote_control_and_following/AAPSClient_download_folder_03.png)
 
-Once downloaded, click _show in folder_ to locate the file.
+Atsisiuntę paspauskite _show in folder_ (rodyti aplanke), kad rastumėte failą.
 
-The **AAPSClient** apk can now be either:
+**AAPSClient** apk dabar galima:
 
-Transferred by a USB cable onto the follower phone; or Dragged into Google drive folder, and then added onto the follower phone by clicking on the "app-AAPSClient-release" file.
+Perkelti į sekėjo telefoną USB kabeliu; arba Nutempti į Google Drive aplanką ir tada įdiegti sekėjo telefone paspaudus failą „app-AAPSClient-release“.
 
-Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the GitHub repository as described above. The reason is that you can't install both **AAPS** and **AAPSClient** on the same phone, signed by a different key. <br/> To build **AAPSClient** yourself, follow the same process as [regular AAPS build](../SettingUpAaps/BuildingAaps.md). On the **Generate signed App Bundle or APK** page, select **aapsclientRelease** instead of **fullRelease**.
+Jei **AAPS** naudojate patys, o **AAPSClient** – kito žmogaus stebėjimui, **AAPSClient** turėsite sukurti patys, o ne atsisiųsti iš GitHub saugyklos, kaip aprašyta aukščiau. Taip yra todėl, kad tame pačiame telefone negalima įdiegti **AAPS** ir **AAPSClient**, pasirašytų skirtingais raktais. <br/> Norėdami patys sukurti **AAPSClient**, darykite tą patį kaip [įprastai kurdami AAPS](../SettingUpAaps/BuildingAaps.md). Puslapyje **Generate signed App Bundle or APK** vietoj **fullRelease** pasirinkite **aapsclientRelease**.
 
-The same rule applies when you install several client apps (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) on one follower phone: they must all be signed with the **same key**. Otherwise Android refuses to install the second one (error `INSTALL_FAILED_DUPLICATE_PERMISSION`).
+Ta pati taisyklė galioja, kai viename sekėjo telefone diegiate kelias kliento programėles (**AAPSClient**, **AAPSClient2**, **AAPSClient3**): visos jos turi būti pasirašytos **tuo pačiu raktu**. Kitaip Android atsisakys įdiegti antrąją (klaida `INSTALL_FAILED_DUPLICATE_PERMISSION`).
 
-### Synchronization: AAPSClient and AAPS set up
+### Sinchronizacija: AAPSClient ir AAPS sąranka
 
-Once the __AAPSClient__ apk is installed on the follower phone, make sure **NSClientV3** is set up the same way on both phones for Nightscout 15 (see the [update notes](../Maintenance/UpdateToNewVersion.md)). The example below shows the synchronization set-up with NSClientV3 and Nightscout 15; other data sources are available in __AAPS__ (e.g. xDrip).
+Įdiegę __AAPSClient__ apk sekėjo telefone, įsitikinkite, kad **NSClientV3** abiejuose telefonuose nustatytas vienodai Nightscout 15 versijai (žr. [atnaujinimo pastabas](../Maintenance/UpdateToNewVersion.md)). Toliau pateiktas pavyzdys rodo sinchronizacijos sąranką su NSClientV3 ir Nightscout 15; __AAPS__ galimi ir kiti duomenų šaltiniai (pvz., xDrip).
 
-In **Configuration** > **Communication**, the user synchronizes their data with Nightscout through __NSClientV3__ (using the v3 API), set up the same way for both __AAPS__ and the follower phone.
+Skiltyje **Konfigūracija** > **Ryšys** naudotojas sinchronizuoja savo duomenis su Nightscout per __NSClientV3__ (naudojant v3 API). Tiek __AAPS__, tiek sekėjo telefone tai nustatoma vienodai.
 
-![Configuration > Communication with NSClientV3 selected](../images/v4/Configuration/configuration_communication.png)
+![Konfigūracija > Ryšys, pasirinktas NSClientV3](../images/v4/Configuration/configuration_communication.png)
 
-The user must ensure that __both__ the AAPS and AAPS Client phones are synched together by setting up NSClientV3 on each. On the follower phone this can be done by scanning a QR code shown by **AAPS** instead, see [Pairing AAPSClient with AAPS](#remotecontrol-pairing) below:
+Naudotojas turi užtikrinti, kad __abu__ telefonai – AAPS ir AAPS Client – būtų sinchronizuoti, kiekviename nustatydamas NSClientV3. Sekėjo telefone tai galima padaryti ir nuskaitant **AAPS** rodomą QR kodą, žr. [AAPSClient susiejimas su AAPS](#remotecontrol-pairing) toliau:
 
-- Enter your **Nightscout URL** in the NSClientV3 **Settings**
+- NSClientV3 **Parametrai** laukelyje **Nightscout URL** įveskite savo Nightscout adresą
 
-- Enter your **Nightscout access token** in the same settings. Please follow the notes [here](https://nightscout.github.io/nightscout/security/#create-a-token). On the **AAPS** phone use an **admin token**: with it **AAPS** makes a token of its own for each follower phone.
+- Tuose pačiuose nustatymuose laukelyje **Nightscout prieigos raktas** įveskite savo prieigos raktą. Vadovaukitės [šiais](https://nightscout.github.io/nightscout/security/#create-a-token) nurodymais. **AAPS** telefone naudokite **admin prieigos raktą**: su juo **AAPS** kiekvienam sekėjo telefonui sukuria atskirą prieigos raktą.
 
-- Enable **Use websockets** on **both** phones. On the **AAPS** phone websockets are **required** for remote control: without them, **AAPS** cannot receive commands from **AAPSClient**. On both phones they also make synchronization faster, at the cost of slightly higher battery use.
+- **Abiejuose** telefonuose įjunkite **Naudoti WebSocket**. **AAPS** telefone websockets nuotoliniam valdymui yra **būtini**: be jų **AAPS** negali gauti komandų iš **AAPSClient**. Abiejuose telefonuose jie taip pat pagreitina sinchronizaciją, bet šiek tiek daugiau naudoja bateriją.
 
-![Settings > NSClientV3 with Nightscout URL, Nightscout access token and Use websockets](../images/preferences/settings_nsclient.png)
+![Parametrai > NSClientV3 su Nightscout URL, Nightscout prieigos raktu ir Naudoti WebSocket](../images/preferences/settings_nsclient.png)
 
 
-The user should ensure that both __AAPSClient__ and __AAPS__ are showing  ‘connected’ in the **NSClientV3** screen of each phone. At this point **AAPSClient** follows **AAPS** (BG, treatments, profile), but it cannot control it yet: pair the two phones as described below.
+Naudotojas turi įsitikinti, kad ir __AAPSClient__, ir __AAPS__ kiekvieno telefono **NSClientV3** ekrane rodo  „Prisijungta“. Dabar **AAPSClient** seka **AAPS** (KG, terapiją, profilį), bet dar negali jos valdyti: susiekite abu telefonus, kaip aprašyta toliau.
 
 (remotecontrol-pairing)=
-### Pairing AAPSClient with AAPS (remote control)
+### AAPSClient susiejimas su AAPS (nuotolinis valdymas)
 
-From **AAPS** version 4, **AAPSClient** controls **AAPS** through a secure, **paired** connection. Synchronization alone is not enough: until the phones are paired, **AAPSClient** only shows **Manage** with a view-only **Profile** and **Pair with master**.
+Nuo **AAPS** 4 versijos **AAPSClient** valdo **AAPS** per saugų, **susietą** ryšį. Vien sinchronizacijos neužtenka: kol telefonai nesusieti, **AAPSClient** rodo tik meniu **Valdymas** su **Profilis** (tik peržiūrai) ir **Susieti su pagrindiniu įrenginiu**.
 
-1. On the **AAPS** phone, open **Manage → Authorized clients** and turn on **Allow client control** (it is off by default, and always on in Simple Mode).
-2. Tap **+**, enter a name for the follower phone, choose how it is set up and choose its **role**:
-   - **QR code: Nightscout and pairing** — **AAPS** shows a QR code that sets up Nightscout on the follower phone and pairs it, in one scan. This needs an admin token in the **AAPS** phone's NSClientV3 settings.
-   - **PIN** — for a follower phone without a camera, already connected to Nightscout: note the one-time **PIN** (valid for about two minutes).
-3. On the **AAPSClient** phone, scan the code (in the Setup Wizard, or **Manage → Pair with master → Scan QR code**), or open **Manage → Pair with master** and enter the PIN. Confirm.
+1. **AAPS** telefone atidarykite **Valdymas → Autorizuoti klientai** ir įjunkite **Leisti valdyti iš kliento** (pagal numatymą išjungta, o Paprastajame režime visada įjungta).
+2. Paspauskite **+**, įveskite sekėjo telefono pavadinimą, pasirinkite, kaip jis nustatomas, ir pasirinkite jo **vaidmenį**:
+   - **QR kodas: Nightscout ir susiejimas** – **AAPS** parodo QR kodą, kuris vienu nuskaitymu nustato Nightscout sekėjo telefone ir jį susieja. Tam reikia admin prieigos rakto **AAPS** telefono NSClientV3 nustatymuose.
+   - **PIN** – sekėjo telefonui be kameros, kuris jau prijungtas prie Nightscout: užsirašykite vienkartinį **PIN** (galioja apie dvi minutes).
+3. **AAPSClient** telefone nuskaitykite kodą (Sąrankos vedlyje arba **Valdymas → Susieti su pagrindiniu įrenginiu → Nuskaityti QR kodą**) arba atidarykite **Valdymas → Susieti su pagrindiniu įrenginiu** ir įveskite PIN. Patvirtinkite.
 
-The follower phone then appears as **Active** in the **Authorized clients** list, and **AAPSClient** shows **Treatments**, **Scenes** and **Manage**. The follower phone gets a Nightscout token of its own, with only the rights it needs. The full procedure, with screenshots and troubleshooting, is on [Master ↔ Client control](#client_master_master_setup).
+Tada sekėjo telefonas sąraše **Autorizuoti klientai** rodomas kaip **Aktyvus**, o **AAPSClient** rodo skiltis **Terapija**, **Scenarijai** ir **Valdymas**. Sekėjo telefonas gauna atskirą Nightscout prieigos raktą tik su tomis teisėmis, kurių jam reikia. Visa procedūra su ekrano kopijomis ir trikčių šalinimu aprašyta puslapyje [Pagrindinio įrenginio ↔ kliento valdymas](#client_master_master_setup).
 
-Check that the set-up works: enter carbs on **AAPSClient**, confirm the amount shown, and check that the entry appears in **Treatments** on both phones.
+Patikrinkite, ar sąranka veikia: **AAPSClient** įveskite angliavandenius, patvirtinkite rodomą kiekį ir patikrinkite, ar įrašas atsirado skiltyje **Terapija** abiejuose telefonuose.
 
 (remotecontrol-nightscout-access-token)=
 
-### Troubleshooting 'Nightscout access token' configuration issues
+### „Nightscout prieigos rakto“ konfigūravimo problemų sprendimas
 
-The precise 'Nightscout access token' configuration may differ depending upon whether your Nightscout provider is a paid for hosted site or not.
+Tiksli „Nightscout prieigos rakto“ konfigūracija gali skirtis priklausomai nuo to, ar jūsų Nightscout teikėjas yra mokama talpinimo paslauga, ar ne.
 
-If you are struggling with **AAPS** to accept the 'Nightscout access token' and using a paid for hosted Nightscout site, you may wish to first liaise with your Nightscout provider on how to resolve the 'Nightscout access token' difficulties. Otherwise, please reach out to the **AAPS** group but please double check that you have correctly followed the notes before doing so [here](https://nightscout.github.io/nightscout/security/#create-a-token).
+Jei **AAPS** nepriima „Nightscout prieigos rakto“ ir naudojate mokamą Nightscout talpinimo paslaugą, pirmiausia galite kreiptis į savo Nightscout teikėją, kaip išspręsti „Nightscout prieigos rakto“ problemas. Kitu atveju kreipkitės į **AAPS** grupę, bet prieš tai dar kartą patikrinkite, ar teisingai atlikote [šiuos](https://nightscout.github.io/nightscout/security/#create-a-token) nurodymus.
 
-### What AAPSClient offers
+### Ką siūlo AAPSClient
 
-Once paired, **AAPSClient** offers the caregiver almost the same screens as **AAPS** itself:
+Susieta **AAPSClient** prižiūrinčiam asmeniui siūlo beveik tuos pačius ekranus kaip ir pati **AAPS**:
 
-- **Treatments**: insulin bolus, carbs and the bolus wizard.
-- **Scenes**: start and stop [scenes](../DailyLifeWithAaps/Scenes.md).
-- **Manage**: profiles, insulin settings, temporary targets, QuickWizard, automation, food, site rotation, pairing and the running temp basal.
-- **Main menu**: treatments history, history browser, statistics, maintenance, configuration.
+- **Terapija**: insulino bolusas, angliavandeniai ir boluso patarėjas.
+- **Scenarijai**: [scenarijų](../DailyLifeWithAaps/Scenes.md) paleidimas ir sustabdymas.
+- **Valdymas**: profiliai, insulino nustatymai, laikini tikslai, Greitasis vedlys, automatizacija, maistas, infuzijos vietų rotacija, susiejimas ir vykdoma laikina bazė.
+- **Pagrindinis meniu**: terapijos istorija, istorija, statistika, servisas, konfigūracija.
 
-There is no pump and no objectives on **AAPSClient**. See [The AAPSClient app](AapsClient.md) for a detailed description.
+**AAPSClient** nėra pompos ir mokymo etapų. Išsamų aprašymą rasite puslapyje [Programėlė AAPSClient](AapsClient.md).
 
-**AAPSClient** lets the caregiver make most of the adjustments allowed directly in **AAPS**, **including insulin boluses**, remotely over the mobile or internet network. Every command is signed and sent through Nightscout to the **AAPS** phone, which checks it against its own data, caps it, shows you its own confirmation, and only then executes it. **AAPSClient** _can_ be much faster than [SMS Commands](../RemoteFeatures/SMSCommands.md), especially for commands that would need authentication.
+**AAPSClient** leidžia prižiūrinčiam asmeniui nuotoliniu būdu per mobilųjį ryšį ar internetą atlikti daugumą pakeitimų, kuriuos galima atlikti tiesiai **AAPS**, **įskaitant insulino bolusus**. Kiekviena komanda pasirašoma ir per Nightscout siunčiama į **AAPS** telefoną. Šis ją patikrina pagal savo duomenis, apriboja, parodo savo patvirtinimą ir tik tada įvykdo. **AAPSClient** _gali_ būti daug greitesnė nei [SMS komandos](../RemoteFeatures/SMSCommands.md), ypač komandoms, kurioms reikėtų autentifikacijos.
 
-Treatments entered in Nightscout by other means (for example the Nightscout website) are not applied while client control is on: **AAPS** is then in [hardened mode](#client-master-control-hardened-mode) and takes changes only from paired clients. With client control off, they are applied only if the matching **Receive** options are enabled in the [Synchronization section of NSClient preferences](#Preferences-nsclient-synchronization).
+Kitais būdais (pvz., per Nightscout svetainę) Nightscout įvesta terapija netaikoma, kol įjungtas kliento valdymas: tada **AAPS** veikia [Sustiprintos apsaugos režimu](#client-master-control-hardened-mode) ir priima pakeitimus tik iš susietų klientų. Kai kliento valdymas išjungtas, ji taikoma tik tada, jei įjungtos atitinkamos **Gauti** parinktys [NSClient nustatymų skiltyje Sinchronizacija](#Preferences-nsclient-synchronization).
 
-Remote control through **AAPSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc).
+Nuotolinį valdymą per **AAPSClient** rekomenduojama naudoti tik tada, kai jūsų sinchronizacija veikia gerai (_t. y._ nematote nepageidaujamų duomenų pakeitimų, pvz., savaime besikeičiančių LT, laikinų bazių ir kt.).
 
-### AAPSClient with smartwatch options
+### AAPSClient su išmaniojo laikrodžio galimybėmis
 
-A smartwatch can be a very useful tool for helping to manage **AAPS** with kids. A couple of different configurations are possible. If **AAPSClient** is installed on the caregiver's phone, the [**AAPSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. This will show current BG and loop status. Once **AAPSClient** is paired with **AAPS**, the watch actions (including boluses, carbs, temp targets and profile changes) are relayed through **AAPSClient** to **AAPS**, which confirms and executes them: see [Wear OS on a client](#clientmastercontrol-wear-os-on-a-client). You can read more about Smartwatches [here](#remotecontrol-smartwatches).
+Išmanusis laikrodis gali labai padėti valdyti **AAPS**, kai juo naudojasi vaikai. Galimos kelios skirtingos konfigūracijos. Jei **AAPSClient** įdiegta prižiūrinčio asmens telefone, [**AAPSClient WearOS** programėlę](https://github.com/nightscout/AndroidAPS/releases/) galima atsisiųsti ir įdiegti į suderinamą išmanųjį laikrodį, prijungtą prie tėvų telefono. Taip bus rodoma dabartinė KG ir ciklo būsena. Kai **AAPSClient** susieta su **AAPS**, laikrodžio veiksmai (įskaitant bolusus, angliavandenius, laikinus tikslus ir profilio keitimus) per **AAPSClient** perduodami į **AAPS**, kuri juos patvirtina ir įvykdo: žr. [Wear OS kliente](#clientmastercontrol-wear-os-on-a-client). Daugiau apie išmaniuosius laikrodžius skaitykite [čia](#remotecontrol-smartwatches).
 
 (RemoteControl_nightscout)=
 ## 3) Nightscout
 
-As well as Nightscout being a server in “the Cloud”, there is also a dedicated **Nightscout** app which can be downloaded directly from the App Store on your iPhone. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](#RemoteControl_aapsclient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) app from the Playstore.
+Nightscout yra serveris „debesyje“, bet yra ir atskira **Nightscout** programėlė, kurią galima atsisiųsti tiesiai iš App Store į jūsų iPhone. Jei sekėjo telefonas yra Android, atskiros Nightscout programėlės nėra, todėl geriau naudoti [**AAPSClient**](#RemoteControl_aapsclient). Jei norite tik sekti ir nesiųsti terapijos, galite atsisiųsti ir įdiegti programėlę [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) iš Play Store.
 
-Once you have installed the **Nightscout** app on your iPhone, open the app and follow the set-up prompts, entering your Nightscout address (see below, left). The form of this may vary depending on how your Nightscout is hosted. (_e.g._ http://youraddresshere.herokuapp.com). Then enter your Nightscout API secret (see below, right). If not prompted for your API password, then you need to enter this by clicking on the padlock at the top of the app:
+Įdiegę **Nightscout** programėlę į iPhone, atidarykite ją ir vykdykite sąrankos nurodymus: įveskite savo Nightscout adresą (žr. žemiau, kairėje). Jo forma gali skirtis, priklausomai nuo to, kur talpinamas jūsų Nightscout. (_pvz._, http://youraddresshere.herokuapp.com). Tada įveskite savo Nightscout API secret (žr. žemiau, dešinėje). Jei API slaptažodžio neprašoma, jį reikia įvesti paspaudus spynos piktogramą programėlės viršuje:
 
 ![image](../images/remote-control-24.png)
 
-More info on setup is available directly from [Nightscout](https://nightscout.github.io/nightscout/discover/)
+Daugiau informacijos apie sąranką rasite tiesiai [Nightscout](https://nightscout.github.io/nightscout/discover/) svetainėje
 
-When you first log in, you will have a very simple display. Customize the display options, by selecting the “hamburger” in the top right and scrolling down:
+Pirmą kartą prisijungus, vaizdas bus labai paprastas. Rodymo parinktis pritaikykite pasirinkę „hamburger“ meniu (☰) viršuje dešinėje ir slinkdami žemyn:
 
 ![image](../images/remote-control-25.png)
 
-Scroll down through to “Settings”. You may wish to change the “scale” to “linear” as the default for the BG display is logarithmic, and under “render basal” select “default” so that the pump basal shows up.
+Slinkite žemyn iki „Settings“ (nustatymai). Galite pakeisti „scale“ (skalė) į „linear“ (tiesinė), nes KG rodymui numatyta logaritminė skalė, o skiltyje „render basal“ (valandinės bazės rodymas) pasirinkite „default“ (numatyta), kad būtų rodoma pompos valandinė bazė.
 
 ![image](../images/remote-control-25b.png)
 
-Select your desired options. Uncheck alarms if you use an alternative app for alarms.
+Pasirinkite norimas parinktis. Jei aliarmams naudojate kitą programėlę, nuimkite aliarmų žymėjimą.
 
 ![image](../images/remote-control-26.png)
 
-Continue to scroll down until you get to “show plugins”.
+Slinkite toliau žemyn iki „show plugins“ (rodyti įskiepius).
 
-You need to make sure “careportal” is checked, and can also select various other metrics (most useful are: IOB, care portal, pump, cannula age, insulin age, basal profile and OpenAPS).
+Būtinai pažymėkite „careportal“. Taip pat galite pasirinkti įvairius kitus rodiklius (naudingiausi: IOB, care portal, pump, cannula age, insulin age, basal profile ir OpenAPS).
 
-Importantly, you now need to click “save” at the bottom for these changes to take effect.
+Svarbu: dabar apačioje reikia paspausti „save“ (išsaugoti), kad pakeitimai įsigaliotų.
 
 ![image](../images/remote-control-27.png)
 
-After pressing “save” the app will return to your main Nightscout screen which will look a little like this:
+Paspaudus „save“, programėlė grįš į pagrindinį Nightscout ekraną, kuris atrodys maždaug taip:
 
-1. Current glucose value
-2. Information on AAPS system status - touch the individual tabs on the screen to display more detail. Add or remove these display options using hamburger menu.
-3. Recent glucose trace with treatments (carbs, boluses) displayed
-4. Longer-term glucose trace
-5. "Hamburger" menu for setting display options, generating reports, editing profiles and Nightscout admin tools
-6. "**+**" menu for entering treatments (see [below](#RemoteControl_nightscout-treatments) for when **AAPS** applies them).
-7. Select different time period to display
-8. Basal insulin profile
-9. Green line = historical glucose Blue lines = predicted glucose
+1. Dabartinė glikemijos reikšmė
+2. Informacija apie AAPS sistemos būseną – paspauskite atskirus skirtukus ekrane, kad matytumėte daugiau. Šias rodymo parinktis pridėkite arba pašalinkite per meniu (☰).
+3. Naujausia glikemijos kreivė su terapija (angliavandeniais, bolusais)
+4. Ilgesnio laikotarpio glikemijos kreivė
+5. Meniu (☰) rodymo parinktims nustatyti, ataskaitoms kurti, profiliams redaguoti ir Nightscout administravimo įrankiams
+6. „**+**“ meniu terapijai įvesti (kada **AAPS** ją taiko, žr. [toliau](#RemoteControl_nightscout-treatments)).
+7. Pasirinkite kitą rodomą laikotarpį
+8. Valandinės bazės profilis
+9. Žalia linija = ankstesnė glikemija Mėlynos linijos = prognozuojama glikemija
 
 ![image](../images/remote-control-28.png)
 
-Looking in more detail at the top left menu of the Nightscout app:
+Išsamiau apie Nightscout programėlės meniu viršuje kairėje:
 
-1. Careportal retrospective edit
-2. Turn on/off alarms
-3. Hamburger - for setting preferences
-4. Careportal - Log treatment (see [below](#RemoteControl_nightscout-treatments) for when **AAPS** applies these)
+1. Careportal įrašų redagavimas atgaline data
+2. Įjungti / išjungti aliarmus
+3. Meniu (☰) – nustatymams keisti
+4. Careportal – terapijos įrašas (kada **AAPS** juos taiko, žr. [toliau](#RemoteControl_nightscout-treatments))
 
-![Nightscout top bar](../images/remote-control-29.png)
+![Nightscout viršutinė juosta](../images/remote-control-29.png)
 
-There is a huge amount of information on the status of the **AAPS** system in the grey tabs (and even more information is revealed if you tap the tab) on this screen:
+Šiame ekrane pilkuose skirtukuose yra labai daug informacijos apie **AAPS** sistemos būseną (o paspaudus skirtuką parodoma dar daugiau):
 
-1. 5min glucose trend
-2. Bolus wizard preview
-3. Press on Basal to see your current profile and basal information
-4. Time since latest CGM reading in AAPS
-5. **Pump**: insulin, battery % and when AAPS last connected to it
-6. Last time AAPS refreshed - if this is longer than 5 mins it can indicate a connection issue between AAPS phone and pump/CGM
-7. Press on IOB to see split of basal and bolus insulin
-8. Insulin age in reservoir
-9. Cannula age
-10. Battery status of AAPS phone
-11. Size of your database. If it gets too full (DIY Nightscout only - hosted services just ignore) you may start having connectivity issues. You can delete data to reduce the size of the number in the Admin tools menu (via hamburger).
+1. 5 min. glikemijos tendencija
+2. Boluso patarėjo peržiūra (Bolus wizard preview)
+3. Paspauskite Basal, kad matytumėte dabartinį profilį ir valandinės bazės informaciją
+4. Laikas nuo paskutinio NGJ rodmens AAPS
+5. **Pompa**: insulinas, baterijos % ir kada AAPS paskutinį kartą prie jos jungėsi
+6. Kada AAPS paskutinį kartą atnaujino duomenis – jei daugiau nei prieš 5 min., gali būti ryšio problema tarp AAPS telefono ir pompos / NGJ
+7. Paspauskite IOB, kad matytumėte, kiek insulino yra iš valandinės bazės ir kiek iš bolusų
+8. Insulino amžius rezervuare
+9. Kaniulės amžius
+10. AAPS telefono baterijos būsena
+11. Jūsų duomenų bazės dydis. Jei ji per daug prisipildo (tik savarankiškai įdiegtam Nightscout – mokamų paslaugų naudotojai gali to nepaisyti), gali prasidėti ryšio problemos. Norėdami sumažinti šį skaičių, galite ištrinti duomenis meniu Admin tools (per ☰ meniu).
 
 ![image](../images/remote-control-30.png)
 
 ![image](../images/remote-control-31.png)
 
-Press "refresh" at the bottom of the page to close the popup.
+Paspauskite „refresh“ (atnaujinti) puslapio apačioje, kad uždarytumėte iškylantį langą.
 
 (RemoteControl_nightscout-treatments)=
-### Sending treatments through the Nightscout app to AAPS
+### Terapijos siuntimas į AAPS per Nightscout programėlę
 
-In **AAPS** 4 the supported way to control **AAPS** remotely is a **paired AAPSClient**, see [Master ↔ Client control](#client-master-control): each client has a [role](#client-master-control-roles) that limits what it may do, and every command is signed by the client, then checked and confirmed by the **AAPS** phone. While client control is on, the **AAPS** phone is in [hardened mode](#client-master-control-hardened-mode): treatments, temporary targets and profile switches entered on the Nightscout website or in the Nightscout app are **not** applied. The Nightscout app is then a tool for following only.
+**AAPS** 4 versijoje palaikomas **AAPS** nuotolinio valdymo būdas yra **susieta AAPSClient**, žr. [Pagrindinio įrenginio ↔ kliento valdymas](#client-master-control): kiekvienas klientas turi [vaidmenį](#client-master-control-roles), kuris riboja, ką jis gali daryti, o kiekvieną komandą pasirašo klientas, tada **AAPS** telefonas ją patikrina ir patvirtina. Kol įjungtas kliento valdymas, **AAPS** telefonas veikia [Sustiprintos apsaugos režimu](#client-master-control-hardened-mode): Nightscout svetainėje ar Nightscout programėlėje įvesta terapija, laikini tikslai ir profilio keitimai **netaikomi**. Tada Nightscout programėlė tinka tik sekimui.
 
 ```{admonition} Only when client control is off
 :class: warning
-If **Allow client control** is off in **Manage → Authorized clients** (and Simple Mode is off), **AAPS** applies careportal entries from Nightscout only for the data types you turned on under **Receive** in the [Synchronization section of the NSClientV3 settings](#Preferences-nsclient-synchronization): carbs, temporary targets, profile switches and the other careportal entries. Insulin is never delivered this way: a "Correction bolus" entered in Nightscout is only *announced*, and **AAPS** counts it as insulin on board without delivering it. This set-up is not recommended for remote control; use a paired **AAPSClient** instead.
+Jei **Leisti valdyti iš kliento** išjungta skiltyje **Valdymas → Autorizuoti klientai** (ir Paprastasis režimas išjungtas), **AAPS** taiko Nightscout terapijos įrašus tik tiems duomenų tipams, kuriuos įjungėte ties **Gauti** [NSClientV3 nustatymų skiltyje Sinchronizacija](#Preferences-nsclient-synchronization): angliavandeniams, laikiniems tikslams, profilio keitimams ir kitiems terapijos įrašams. Insulinas šiuo būdu niekada nesuleidžiamas: Nightscout įvestas „Korekcinis bolusas“ tik *įrašomas*, ir **AAPS** jį skaičiuoja kaip aktyvų insuliną organizme (AIO), bet jo nesuleidžia. Tokia sąranka nuotoliniam valdymui nerekomenduojama; vietoj jos naudokite susietą **AAPSClient**.
 ```
 
-Read more about **Nightscout** options [here](https://nightscout.github.io/)
+Daugiau apie **Nightscout** galimybes skaitykite [čia](https://nightscout.github.io/)
 
-### Tips for getting the most out of the Nightscout app
+### Patarimai, kaip geriausiai naudotis Nightscout programėle
 
-1). If you get “stuck” on a page and want to be able to see the main screen again, just click “refresh” (bottom middle) and this will take you back to the **Nightscout** homepage with the BG graph.
+KEEP Jei „įstrigote“ kokiame nors puslapyje ir norite vėl matyti pagrindinį ekraną, tiesiog paspauskite „refresh“ (atnaujinti, apačioje per vidurį). Tai grąžins jus į **Nightscout** pagrindinį puslapį su KG grafiku.
 
-To see the current profile which is running on the phone, press the various icons on the screen above the graph. More info (current carb ratio, sensitivity and timezone etc.) can be seen by pressing “basal” and “OpenAPS” gives info about the profile and current target etc. Both the phone battery% and the pump battery % can also be monitored. BWP gives information on what the algorithm thinks will happen in the future, given the IOB and COB.
+Norėdami pamatyti dabartinį telefone veikiantį profilį, spauskite įvairias piktogramas ekrane virš grafiko. Daugiau informacijos (dabartinį IA, jautrumą, laiko juostą ir kt.) pamatysite paspaudę „basal“, o „OpenAPS“ rodo informaciją apie profilį, dabartinį tikslą ir kt. Taip pat galima stebėti telefono baterijos % ir pompos baterijos %. BWP rodo, kas, algoritmo manymu, įvyks ateityje, atsižvelgiant į AIO ir AAO.
 
-#### Other icons in the menu: what does the pencil (edit) mean?
+#### Kitos meniu piktogramos: ką reiškia pieštukas (redagavimas)?
 
-You can (technically) use the edit pencil to move or delete bolus or correction treatments from the last 48h.
+Redagavimo pieštuku (techniškai) galima perkelti arba ištrinti paskutinių 48 val. boluso ar korekcijos įrašus.
 
-More about this [here](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
+Daugiau apie tai [čia](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
 
-Although this could potentially be useful for deleting announced (but not bolused for) carbs, in practice it doesn’t currently work well with **AAPS** and we recommend making changes like this via the **AAPS** app directly.
+Tai galėtų būti naudinga ištrinant įvestus angliavandenius, kuriems bolusas nebuvo suleistas, bet praktikoje tai šiuo metu prastai veikia su **AAPS**. Tokius pakeitimus rekomenduojame daryti tiesiai **AAPS** programėlėje.
 
 (RemoteControl_smartwatches)= (remotecontrol-smartwatches)=
 
-## 4) Smartwatches
+## 4) Išmanieji laikrodžiai
 
-### Option 1) Controlling AAPS from a Wear OS Watch
+### 1 variantas) AAPS valdymas iš Wear OS laikrodžio
 
-![Wear Remote 1](../images/Wear_Remote1.png)
+![Wear nuotolinis valdymas 1](../images/Wear_Remote1.png)
 
-Once you have [setup **AAPS** on your watch](../WearOS/BuildingAapsWearOS.md), extensive details about the smartwatch faces and their functions can be found in [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
+Kai [nustatysite **AAPS** laikrodyje](../WearOS/BuildingAapsWearOS.md), išsamią informaciją apie išmaniojo laikrodžio ciferblatus ir jų funkcijas rasite puslapyje [Wear AAPS naudojimas išmaniajame laikrodyje](../WearOS/WearOsSmartwatch.md).
 
-As a brief overview, the following functions can be triggered from the smartwatch:
+Trumpai: iš išmaniojo laikrodžio galima paleisti šias funkcijas:
 
-* set a temporary target
+* KEEP
 
-* use the bolus calculator (calculation variables can be defined in settings on the phone)
+* naudoti boluso skaičiuotuvą (skaičiavimo kintamuosius galima nustatyti telefono nustatymuose)
 
-* administer eCarbs
+* įvesti i-AV
 
-* administer a bolus (insulin + carbs)
+* suleisti bolusą (insulinas + angliavandeniai)
 
-* watch settings
+* laikrodžio nustatymai
 
-* status
+* KEEP
 
-* check pump status
+* KEEP
 
-* check loop status
+* KEEP
 
-* check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
+* patikrinti ir pakeisti profilį, CPP (Circadian Percentage Profile = laiko perstūmimas + procentas)
 
-* show TDD (Total daily dose = bolus + basal per day)
+* parodyti BPD (bendra paros dozė = bolusai + valandinė bazė per parą)
 
-* Remote bolus where the caregiver and T1D child are in different locations (this is possible for the **AAPS** watch and **AAPS** phone providing both devices are connected to the network)
+* Nuotolinis bolusas, kai prižiūrintis asmuo ir 1 tipo diabetu sergantis vaikas yra skirtingose vietose (tai įmanoma su **AAPS** laikrodžiu ir **AAPS** telefonu, jei abu įrenginiai prijungti prie tinklo)
 
-#### Communication from caregivers to the watch using other apps (like WhatsApp)
+#### Prižiūrinčių asmenų žinutės į laikrodį per kitas programėles (pvz., WhatsApp)
 
-It is possible to add additional apps to the watch, like WhatsApp, for messaging (for example) between caregivers and kids. It is important only to have ONE Google account associated with the phone, or the watch will not bring this data across. You need to be 13 or older to have a Samsung account, and this needs to be set up in the same email address which is used on the Android phone.
+Į laikrodį galima įdiegti papildomų programėlių, pvz., WhatsApp, kad (pavyzdžiui) prižiūrintys asmenys ir vaikai galėtų susirašinėti. Svarbu, kad su telefonu būtų susieta tik VIENA Google paskyra, kitaip laikrodis šių duomenų neperkels. Samsung paskyrą galima turėti tik nuo 13 metų, ir ji turi būti sukurta tuo pačiu el. pašto adresu, kuris naudojamas Android telefone.
 
-A video explaining getting WhatsApp setup for messaging on the Galaxy 4 watch (you can’t get full functionality of WhatsApp) is shown [here](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
+Vaizdo įrašą, kaip nustatyti WhatsApp žinutėms Galaxy 4 laikrodyje (visų WhatsApp funkcijų naudoti negalima), rasite [čia](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
 
-Making adjustments in both the **Galaxy wearable** app on the **AAPS** phone and the watch makes it possible for WhatsApp messages to announce with a slight vibration, and also for the WhatsApp message to display over the existing watchface.
+Pakeitus nustatymus **Galaxy wearable** programėlėje **AAPS** telefone ir laikrodyje, WhatsApp žinutės gali būti pranešamos lengva vibracija ir rodomos ant ciferblato.
 
-### Option 2) **AAPS** on watch, for remote control of **AAPS** on a phone
+### 2 variantas) **AAPS** laikrodyje, telefone esančiai **AAPS** valdyti nuotoliniu būdu
 
-Similarly to using a follower phone with **AAPSClient** or SMS commands (see the sections above), a smartwatch can be used to remotely control **AAPS** and provide full profile data. A key difference to using a follower phone is that the smartwatch to **AAPS** phone link is via Bluetooth and needs neither Nightscout nor an authentication code. As a side-note, if both smartwatch and **AAPS** phone linked by Bluetooth are also on a Wi-Fi/Cellular data network, the watch will also interact with the **AAPS** phone, giving a longer range of communication. This includes remote delivery of a bolus where the caregiver with the **AAPS** watch and T1D child (with **AAPS** phone) are in different locations, which can be useful in circumstances where the T1D child is in school.
+Kaip ir sekėjo telefonas su **AAPSClient** ar SMS komandomis (žr. skyrius aukščiau), išmanusis laikrodis gali būti naudojamas **AAPS** valdyti nuotoliniu būdu ir rodyti visus profilio duomenis. Pagrindinis skirtumas nuo sekėjo telefono – išmanusis laikrodis su **AAPS** telefonu jungiasi per Bluetooth, todėl nereikia nei Nightscout, nei autentifikacijos kodo. Beje, jei per Bluetooth susieti išmanusis laikrodis ir **AAPS** telefonas taip pat prijungti prie Wi-Fi / mobiliojo duomenų tinklo, laikrodis su **AAPS** telefonu ryšį palaikys ir per jį, todėl ryšio atstumas bus didesnis. Tai apima ir nuotolinį boluso suleidimą, kai prižiūrintis asmuo su **AAPS** laikrodžiu ir 1 tipo diabetu sergantis vaikas (su **AAPS** telefonu) yra skirtingose vietose. Tai gali būti naudinga, pavyzdžiui, kai vaikas yra mokykloje.
 
-A remote control smartwatch is therefore often useful in any situation where:
+Todėl nuotolinio valdymo išmanusis laikrodis dažnai naudingas bet kurioje situacijoje, kai:
 
-a)  **AAPSClient** or **SMS** commands cannot work; or
+a)  **AAPSClient** ar **SMS** komandos negali veikti; arba
 
-b)  The user wishes to avoid typing an authentication code (as required for SMS commands).
+b)  Naudotojas nenori vesti autentifikacijos kodo (kurio reikia SMS komandoms).
 
-A smartwatch needs **Wear OS 3 or newer** to be able to control **AAPS**. Please check the technical specifications of the watch, and see the [Smartwatches page](../Getting-Started/Watches.md). Search, or ask in the **AAPS** Facebook/Discord groups if unsure.
+Kad galėtų valdyti **AAPS**, išmaniajame laikrodyje turi būti **Wear OS 3 arba naujesnė**. Patikrinkite laikrodžio technines specifikacijas ir žr. puslapį [Išmanieji laikrodžiai ir AAPS](../Getting-Started/Watches.md). Jei abejojate, paieškokite arba paklauskite **AAPS**  Facebook/Discord grupėse.
 
-Specific How-to guides for setting up **AAPS** on the popular Samsung Galaxy Watch 4 (40mm) are given below. The [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) watch is also a popular choice. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](../SupportingAaps/HowToEditTheDocs.md) to share your findings with the wider **AAPS** community.
+Toliau pateiktos išsamios instrukcijos, kaip nustatyti **AAPS** populiariame Samsung Galaxy Watch 4 (40 mm) laikrodyje. Populiarus pasirinkimas yra ir [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) laikrodis. Jei esate nustatę kitokį išmanųjį laikrodį ir manote, kad tai būtų naudinga kitiems, įrašykite tai į šiuos puslapius ([redaguokite dokumentaciją](../SupportingAaps/HowToEditTheDocs.md)) ir pasidalykite savo patirtimi su platesne **AAPS** bendruomene.
 
-### Option 3) AAPSClient on a watch for remote control of **AAPS** on a phone
+### 3 variantas) AAPSClient laikrodyje, telefone esančiai **AAPS** valdyti nuotoliniu būdu
 
-![Wear Remote 2](../images/Wear_Remote2.png)
+![Wear nuotolinis valdymas 2](../images/Wear_Remote2.png)
 
-The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
+Laikrodžio programinę įrangą, **AAPSClient** Wear apk, galima atsisiųsti tiesiai iš [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
 
-To download the software, click on the watch app that matches the client app on the phone: **wear-aapsclient-release_**_version_ goes with **AAPSClient**, **wear-aapsclient2-release_**_version_ goes with **AAPSClient2** (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)):
+Norėdami atsisiųsti programinę įrangą, paspauskite laikrodžio programėlę, atitinkančią kliento programėlę telefone: **wear-aapsclient-release_**_versija_ skirta **AAPSClient**, **wear-aapsclient2-release_**_versija_ skirta **AAPSClient2** (žr. [Apie AAPSClient, AAPSClient2 ir AAPSClient3](#remotecontrol-aapsclient-versions)):
 
 ![image](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
 
 
-Then "save as" and save the file to a convenient location on your computer:
+Tada pasirinkite „save as“ (įrašyti kaip) ir įrašykite failą į patogią vietą kompiuteryje:
 
 
 ![image](../images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
@@ -302,7 +302,7 @@ Then "save as" and save the file to a convenient location on your computer:
 
 
 
-The **AAPSClient** wear apk can be transferred to your phone and side-loaded onto the watch in the same way as the **AAPS** Wear app, as detailed in [Transferring the Wear app onto your AAPS phone](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)  
+**AAPSClient** wear apk galima perkelti į telefoną ir įdiegti į laikrodį taip pat, kaip **AAPS** Wear programėlę, kaip aprašyta skyriuje [Wear programėlės perkėlimas į AAPS telefoną](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)  
 
 
 
