@@ -42,11 +42,11 @@ Aby se aplikace daly rozlišit, mají některé prvky jinou barvu: žlutou u **A
 
 **AAPSClient** můžete nainstalovat do jednoho telefonu nebo do více telefonů sledujících osob (např. telefonu sledujícího rodiče 1 a telefonu sledujícího rodiče 2), aby měli oba pečovatelé přístup a vzdálené ovládání telefonu pacienta **AAPS**.
 
-To download **AAPSClient**, navigate to the [GitHub repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
+Chcete-li stáhnout **AAPSClient**, přejděte do [repozitáře na GitHubu](https://github.com/nightscout/AndroidAPS/releases/) a klikněte na soubor (asset) **„app-AAPSClient-release_x.x.x.x“** (může jít o novější verzi, než je na snímku obrazovky níže):
 
 ![obrázek](../images/remote_control_and_following/AAPSClient_download_02.png)
 
-Pak na počítači otevřete _stažené soubory_. On Windows, _downloads_ will show in the right hand ribbon:
+Pak na počítači otevřete _stažené soubory_. Ve Windows se _stažené soubory_ zobrazí v pruhu vpravo:
 
 ![obrázek](../images/remote_control_and_following/AAPSClient_download_folder_03.png)
 
@@ -56,13 +56,13 @@ Po stažení klikněte na _zobrazit ve složce_, abyste nalezli soubor.
 
 Přenesen USB kabelem do telefonu sledujícího; nebo Přetažen do složky na Disku Google a potom přidán do telefonu sledujícího klepnutím na soubor „app-AAPSClient-release“.
 
-Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the GitHub repository as described above. Důvodem je, že na jeden telefon nelze nainstalovat **AAPS** i **AAPSClient**, pokud jsou podepsány jiným klíčem. <br/> Pro vlastní sestavení **AAPSClient** postupujte stejně jako při [běžném sestavení AAPS](../SettingUpAaps/BuildingAaps.md). Na stránce **Generate signed App Bundle or APK** vyberte **aapsclientRelease** místo **fullRelease**.
+Pokud potřebujete **AAPS** pro sebe a **AAPSClient** pro sledování někoho jiného, musíte si **AAPSClient** sestavit sami, místo abyste ho stáhli z repozitáře na GitHubu, jak je popsáno výše. Důvodem je, že na jeden telefon nelze nainstalovat **AAPS** i **AAPSClient**, pokud jsou podepsány jiným klíčem. <br/> Pro vlastní sestavení **AAPSClient** postupujte stejně jako při [běžném sestavení AAPS](../SettingUpAaps/BuildingAaps.md). Na stránce **Generate signed App Bundle or APK** vyberte **aapsclientRelease** místo **fullRelease**.
 
 Stejné pravidlo platí, když na jeden telefon sledujícího instalujete více klientských aplikací (**AAPSClient**, **AAPSClient2**, **AAPSClient3**): všechny musí být podepsány **stejným klíčem**. Jinak Android odmítne nainstalovat druhou z nich (chyba `INSTALL_FAILED_DUPLICATE_PERMISSION`).
 
 ### Synchronizace: nastavení AAPSClient a AAPS
 
-Once the __AAPSClient__ apk is installed on the follower phone, make sure **NSClientV3** is set up the same way on both phones for Nightscout 15 (see the [update notes](../Maintenance/UpdateToNewVersion.md)). Příklad níže ukazuje nastavení synchronizace s NSClientV3 a Nightscoutem 15; v __AAPS__ jsou k dispozici i jiné zdroje dat (např. xDrip).
+Jakmile je apk __AAPSClient__ nainstalováno v telefonu sledujícího, ujistěte se, že **NSClientV3** je pro Nightscout 15 nastaven na obou telefonech stejně (viz [poznámky k aktualizaci](../Maintenance/UpdateToNewVersion.md)). Příklad níže ukazuje nastavení synchronizace s NSClientV3 a Nightscoutem 15; v __AAPS__ jsou k dispozici i jiné zdroje dat (např. xDrip).
 
 V **Konfigurace** > **Komunikace** uživatel synchronizuje svá data s Nightscoutem přes __NSClientV3__ (s API v3), nastavený stejně v __AAPS__ i v telefonu sledujícího.
 
@@ -128,7 +128,7 @@ Chytré hodinky mohou být velmi užitečným nástrojem pro správu **AAPS** va
 (RemoteControl_nightscout)=
 ## 3) Nightscout
 
-Kromě toho, že Nightscout je server v „cloudu“, existuje také samostatná aplikace **Nightscout**, kterou lze stáhnout přímo z App Store do vašeho iPhonu. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](#RemoteControl_aapsclient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) app from the Playstore.
+Kromě toho, že Nightscout je server v „cloudu“, existuje také samostatná aplikace **Nightscout**, kterou lze stáhnout přímo z App Store do vašeho iPhonu. Pokud máte jako telefon sledujícího Android, samostatná aplikace Nightscout pro něj neexistuje a je lepší použít [**AAPSClient**](#RemoteControl_aapsclient). Pokud chcete jen sledovat a neposílat ošetření, můžete si z Obchodu Play stáhnout a nainstalovat aplikaci [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch).
 
 Jakmile máte aplikaci **Nightscout** na iPhonu nainstalovanou, otevřete ji, postupujte podle pokynů a zadejte adresu svého Nightscoutu (viz níže vlevo). Přesná podoba se může lišit podle toho, jak je hostován váš Nightscout. (_např._ http://youraddresshere.herokuapp.com). Poté zadejte váš Nightscout API secret (viz níže vpravo). Pokud nejste požádáni o vložení API hesla, pak ho musíte zadat po kliknutí na zámek v horní části aplikace:
 
@@ -177,7 +177,7 @@ Podívejte se podrobněji do levého horního menu aplikace Nightscout:
 3. Nabídka („hamburger“) – pro nastavení předvoleb
 4. Careportal – zaznamenání ošetření (kdy je **AAPS** použije, viz [níže](#RemoteControl_nightscout-treatments))
 
-![Nightscout top bar](../images/remote-control-29.png)
+![Horní lišta Nightscoutu](../images/remote-control-29.png)
 
 Na této obrazovce je na šedých kartách k dispozici velké množství informací o stavu **AAPS** systému (a ještě více informací se zobrazí při klepnutí na záložku):
 
@@ -202,7 +202,7 @@ Vyskakovací okno zavřete klepnutím na „refresh“ v dolní části stránky
 (RemoteControl_nightscout-treatments)=
 ### Odesílání ošetření prostřednictvím Nightscout aplikace do AAPS
 
-In **AAPS** 4 the supported way to control **AAPS** remotely is a **paired AAPSClient**, see [Master ↔ Client control](#client-master-control): each client has a [role](#client-master-control-roles) that limits what it may do, and every command is signed by the client, then checked and confirmed by the **AAPS** phone. Dokud je ovládání z klienta zapnuté, je telefon s **AAPS** v [zabezpečeném režimu](#client-master-control-hardened-mode): ošetření, dočasné cíle a přepnutí profilu zadaná na webové stránce Nightscoutu nebo v aplikaci Nightscout se **nepoužijí**. Aplikace Nightscout pak slouží jen ke sledování.
+V **AAPS** 4 je podporovaným způsobem vzdáleného ovládání **AAPS** **spárovaný AAPSClient**, viz [Ovládání master ↔ klient](#client-master-control): každý klient má [roli](#client-master-control-roles), která omezuje, co smí dělat, a každý příkaz klient podepíše a telefon s **AAPS** ho potom zkontroluje a potvrdí. Dokud je ovládání z klienta zapnuté, je telefon s **AAPS** v [zabezpečeném režimu](#client-master-control-hardened-mode): ošetření, dočasné cíle a přepnutí profilu zadaná na webové stránce Nightscoutu nebo v aplikaci Nightscout se **nepoužijí**. Aplikace Nightscout pak slouží jen ke sledování.
 
 ```{admonition} Only when client control is off
 :class: warning
@@ -277,15 +277,15 @@ a)  **AAPSClient** nebo **SMS** příkazy nemohou fungovat; nebo
 
 b)  Uživatel nechce zadávat ověřovací kód (který SMS příkazy vyžadují).
 
-Aby mohly chytré hodinky ovládat **AAPS**, potřebují **Wear OS 3 nebo novější**. Zkontrolujte prosím technické parametry hodinek a podívejte se na stránku [Chytré hodinky a AAPS](../Getting-Started/Watches.md). Search, or ask in the **AAPS** Facebook/Discord groups if unsure.
+Aby mohly chytré hodinky ovládat **AAPS**, potřebují **Wear OS 3 nebo novější**. Zkontrolujte prosím technické parametry hodinek a podívejte se na stránku [Chytré hodinky a AAPS](../Getting-Started/Watches.md). Pokud si nejste jistí, hledejte nebo se zeptejte ve skupinách **AAPS** na Facebooku nebo Discordu.
 
-Specific How-to guides for setting up **AAPS** on the popular Samsung Galaxy Watch 4 (40mm) are given below. Hodinky [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) jsou také oblíbenou volbou. Pokud máte zkušenost s nastavením jiných chytrých hodinek, která by podle vás mohla pomoci ostatním, přidejte ji na tyto stránky ([úprava dokumentace](../SupportingAaps/HowToEditTheDocs.md)) a sdílejte svá zjištění s celou komunitou **AAPS**.
+Níže najdete konkrétní návody, jak nastavit **AAPS** na oblíbených hodinkách Samsung Galaxy Watch 4 (40mm). Hodinky [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) jsou také oblíbenou volbou. Pokud máte zkušenost s nastavením jiných chytrých hodinek, která by podle vás mohla pomoci ostatním, přidejte ji na tyto stránky ([úprava dokumentace](../SupportingAaps/HowToEditTheDocs.md)) a sdílejte svá zjištění s celou komunitou **AAPS**.
 
 ### Možnost 3) AAPSClient na hodinkách ke vzdálenému řízení **AAPS** na telefonu
 
 ![Wear Remote 2](../images/Wear_Remote2.png)
 
-The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
+Software pro hodinky, **AAPSClient** Wear apk, můžete stáhnout přímo z [GitHubu](https://github.com/nightscout/AndroidAPS/releases/).
 
 Pro stažení softwaru klikněte na aplikaci pro hodinky, která odpovídá klientské aplikaci v telefonu: **wear-aapsclient-release_**_verze_ patří k **AAPSClient**, **wear-aapsclient2-release_**_verze_ patří k **AAPSClient2** (viz [O AAPSClient, AAPSClient2 a AAPSClient3](#remotecontrol-aapsclient-versions)):
 
