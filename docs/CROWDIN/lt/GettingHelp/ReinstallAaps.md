@@ -1,153 +1,153 @@
 (reinstall-aaps)=
-# Reinstalling AAPS with a new keystore
+# AAPS įdiegimas iš naujo su nauja raktų saugykla
 
-Every **AAPS** apk is signed with a **keystore**. An update only installs over your current **AAPS** if it is signed with the **same keystore**: all your settings and data are then kept. That's why it is recommended to store the keystore and its password in a safe place.
+Kiekvienas **AAPS** apk failas pasirašomas **raktų saugykla** (keystore). Atnaujinimas įsidiegia ant dabartinės **AAPS** tik tada, jei jis pasirašytas **ta pačia raktų saugykla**: tada visi jūsų nustatymai ir duomenys išlieka. Todėl rekomenduojama raktų saugyklą ir jos slaptažodį laikyti saugioje vietoje.
 
-If you try to install an apk signed with a different keystore than before, you will get an error message explaining that the installation failed!
+Jei bandysite įdiegti apk, pasirašytą kita raktų saugykla nei anksčiau, gausite klaidos pranešimą, kad įdiegti nepavyko!
 
 (reinstall-aaps-when)=
-## When do you need to reinstall?
+## Kada reikia įdiegti iš naujo?
 
-You need to uninstall and reinstall **AAPS** when your new apk is signed with a different keystore, for example:
+**AAPS** reikia pašalinti ir įdiegti iš naujo, kai naujas apk pasirašytas kita raktų saugykla, pavyzdžiui:
 
-- You cannot find your old keystore or its password.
-- You created a new keystore, for example with [Option 1 of the browser build](../SettingUpAaps/BrowserBuildKeystore.md) or **Create a new key** in [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md).
-- You build on a new computer and did not copy your keystore to it.
+- Nerandate senos raktų saugyklos arba jos slaptažodžio.
+- Sukūrėte naują raktų saugyklą, pavyzdžiui, [kūrimo naršyklėje 1 variantu](../SettingUpAaps/BrowserBuildKeystore.md) arba su **Create a new key** (sukurti naują raktą) [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) puslapyje.
+- Kuriate naujame kompiuteryje ir į jį nenukopijavote savo raktų saugyklos.
 
-If you still have your keystore, you don't need this page: reuse it and [update **AAPS**](../Maintenance/UpdateToNewVersion.md) in place.
+Jei raktų saugyklą vis dar turite, šis puslapis jums nereikalingas: naudokite ją ir tiesiog [atnaujinkite **AAPS**](../Maintenance/UpdateToNewVersion.md).
 
 (reinstall-aaps-before)=
-## Before you start
+## Prieš pradedant
 
-- Uninstalling **AAPS** deletes all its settings, your [objectives](../SettingUpAaps/CompletingTheObjectives.md) and the current pump connection. You get them back by importing your **settings file**, so make sure you have a recent one.
-- The settings file does not contain your treatment and glucose history. If you upload to [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), you can load it back after the reinstall (step 8).
-- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it.
-- **Omnipod and Medtrum users:** read [Tubeless pumps](#ExportImportSettings-tubeless-pumps) first. Your settings file must have been exported during the pod or patch you are wearing now.
-- If needed, [set up your CGM/BG source receiver](../Getting-Started/CompatiblesCgms.md) before you start.
+- Pašalinus **AAPS**, ištrinami visi jos nustatymai, jūsų [mokymo etapai](../SettingUpAaps/CompletingTheObjectives.md) ir dabartinis ryšys su pompa. Juos atgausite importavę savo **nustatymų failą**, todėl įsitikinkite, kad turite naują jo kopiją.
+- Nustatymų faile nėra jūsų terapijos ir gliukozės istorijos. Jei duomenis siunčiate į [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), po įdiegimo iš naujo galėsite juos įkelti atgal (8 žingsnis).
+- Jums reikės [**pagrindinio slaptažodžio**](#Preferences-master-password): nustatymų failas juo užšifruotas.
+- **Omnipod ir Medtrum naudotojai:** pirmiausia perskaitykite [Pompos be vamzdelio](#ExportImportSettings-tubeless-pumps). Jūsų nustatymų failas turi būti eksportuotas naudojant tą Pod ar pompą (patch), kurią nešiojate dabar.
+- Jei reikia, prieš pradėdami [nustatykite savo NGJ / glikemijos šaltinio imtuvą](../Getting-Started/CompatiblesCgms.md).
 
 (reinstall-aaps-steps)=
-## Steps
+## Žingsniai
 
-The pictures show a move from **AAPS** 3.4 (steps 1 to 3) to **AAPS** 4 (steps 6 to 8). Other versions look slightly different.
+Paveikslėliuose parodytas perėjimas nuo **AAPS** 3.4 (1–3 žingsniai) prie **AAPS** 4 (6–8 žingsniai). Kitos versijos atrodo šiek tiek kitaip.
 
 (reinstall-aaps-export)=
-### 1. Export your settings
+### 1. Eksportuokite nustatymus
 
-Export your settings with the **AAPS** currently installed on your phone. See [Settings Export](#ExportImportSettings-Settings-Export) for details.
+Eksportuokite nustatymus su ta **AAPS**, kuri dabar įdiegta jūsų telefone. Daugiau informacijos rasite skyriuje [Nustatymų eksportavimas](#ExportImportSettings-Settings-Export).
 
-In **AAPS** 3.4: open **Maintenance** and tap **Export options**. Under **User Settings**, tick **Local Storage** and tap **OK**.
+**AAPS** 3.4 versijoje: atidarykite **Servisas** ir paspauskite **Export options** (eksportavimo parinktys). Skiltyje **User Settings** (naudotojo nustatymai) pažymėkite **Local Storage** (vietinė saugykla) ir paspauskite **OK**.
 
-*Note: you can also use [Cloud Storage](#preferences-maintenance-cloud) to have a safety backup copy: that's a good idea, but keep Local Storage for recovering settings quickly.*
+*Pastaba: atsarginei kopijai taip pat galite naudoti [debesies saugyklą](#preferences-maintenance-cloud): tai gera mintis, bet palikite vietinę saugyklą, kad nustatymus atkurtumėte greitai.*
 
-![Export options with User Settings set to Local Storage](../images/ReinstallAaps/reinstall_export_options_local.png)
+![Export options, kai User Settings nustatyta į Local Storage](../images/ReinstallAaps/reinstall_export_options_local.png)
 
-The button now reads **Export settings (local)**. Tap it.
+Dabar mygtuke parašyta **Export settings (local)** (eksportuoti nustatymus į vietinę saugyklą). Paspauskite jį.
 
-![Maintenance with the Export settings (local) button](../images/ReinstallAaps/reinstall_export_settings_local.png)
+![Servisas su mygtuku Export settings (local)](../images/ReinstallAaps/reinstall_export_settings_local.png)
 
-**AAPS** shows the name of the file it will create. Tap **OK**, type your master password and tap **OK**.
+**AAPS** parodo failo, kurį sukurs, pavadinimą. Paspauskite **OK**, įveskite pagrindinį slaptažodį ir paspauskite **OK**.
 
-![Export settings confirmation with the file name](../images/ReinstallAaps/reinstall_export_confirm.png)
+![Nustatymų eksportavimo patvirtinimas su failo pavadinimu](../images/ReinstallAaps/reinstall_export_confirm.png)
 
-In **AAPS** 4: open **Maintenance**, select the **Local** chip next to **Export settings** and tap **Export settings**.
+**AAPS** 4 versijoje: atidarykite **Servisas**, šalia **Eksportuoti nustatymus** pasirinkite ženklelį **Vietinė saugykla** ir paspauskite **Eksportuoti nustatymus**.
 
 (reinstall-aaps-copy)=
-### 2. Copy the settings file off your phone
+### 2. Nukopijuokite nustatymų failą iš telefono
 
-The file is in the **preferences** folder of your [**AAPS** directory](#SetupWizard-StoragePermission), named like `2026-10-13_222735_full.json`. Copy or upload it to an external location (i.e. your computer, cloud storage service...). The file normally stays on your phone after the uninstall, but keep a copy elsewhere in case.
+Failas yra jūsų [**AAPS** aplanko](#SetupWizard-StoragePermission) poaplankyje **preferences**, jo pavadinimas panašus į `2026-10-13_222735_full.json`. Nukopijuokite arba įkelkite jį į kitą vietą (pvz., į savo kompiuterį, debesies saugyklos paslaugą...). Pašalinus programėlę, failas paprastai lieka telefone, bet dėl visa ko laikykite kopiją kitur.
 
 (reinstall-aaps-nightscout-before)=
-### 3. Synchronize with Nightscout
+### 3. Sinchronizuokite su Nightscout
 
-This step is not mandatory but recommended if you use [DynISF](#Open-APS-features-DynamicISF): it will allow you to resume directly with the current settings instead of waiting 5 days to build necessary data for the plugin. NSClient V3 needs to be [enabled and configured](../SettingUpAaps/SettingUpTheReportingServer.md).
+Šis žingsnis nebūtinas, bet rekomenduojamas, jei naudojate [DynISF](#Open-APS-features-DynamicISF): galėsite iš karto tęsti su dabartiniais nustatymais, užuot laukę 5 dienas, kol įskiepis surinks reikalingus duomenis. NSClient V3 turi būti [įjungtas ir sukonfigūruotas](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-Make sure Nightscout has all your data before you uninstall.
+Prieš pašalindami programėlę įsitikinkite, kad Nightscout turi visus jūsų duomenis.
 
-Open **NSClient**, tap the **Full synchronization** button at the bottom of the screen, then **OK**.
+Atidarykite **NSClient**, ekrano apačioje paspauskite mygtuką **Pilna sinchronizacija**, tada **OK**.
 
-![NSClient screen with the Full synchronization button](../images/ReinstallAaps/reinstall_ns_fullsync_menu_before.png)
+![NSClient ekranas su mygtuku Pilna sinchronizacija](../images/ReinstallAaps/reinstall_ns_fullsync_menu_before.png)
 
-*Note: the time necessary depends on your Nightscout hosting service.*
+*Pastaba: reikalingas laikas priklauso nuo jūsų Nightscout talpinimo paslaugos.*
 
-![Full synchronization confirmation](../images/ReinstallAaps/reinstall_ns_fullsync_confirm.png)
+![Pilnos sinchronizacijos patvirtinimas](../images/ReinstallAaps/reinstall_ns_fullsync_confirm.png)
 
-**AAPS** then offers to clean up its database. **OK** removes data older than 3 months from the phone, which makes the synchronization much faster. **Cancel** synchronizes without cleaning up. The phone database is deleted when you uninstall anyway, so both are fine.
+Tada **AAPS** pasiūlo išvalyti savo duomenų bazę. **OK** ištrina iš telefono senesnius nei 3 mėnesių duomenis, todėl sinchronizacija vyksta daug greičiau. **Atšaukti** sinchronizuoja be valymo. Pašalinus programėlę, telefono duomenų bazė vis tiek ištrinama, todėl tinka abu variantai.
 
-![Database cleanup question](../images/ReinstallAaps/reinstall_ns_fullsync_cleanup.png)
+![Klausimas dėl duomenų bazės valymo](../images/ReinstallAaps/reinstall_ns_fullsync_cleanup.png)
 
-Leave **AAPS** running until the synchronization is finished.
+Palikite **AAPS** veikti, kol sinchronizacija baigsis.
 
 (reinstall-aaps-build)=
-### 4. Build the new apk
+### 4. Sukurkite naują apk
 
-[Build](../SettingUpAaps/BuildingAaps.md) a new signed apk with your new keystore and transfer it to your phone.
+[Sukurkite](../SettingUpAaps/BuildingAaps.md) naują pasirašytą apk su nauja raktų saugykla ir perkelkite jį į telefoną.
 
 (reinstall-aaps-uninstall)=
-### 5. Uninstall AAPS
+### 5. Pašalinkite AAPS
 
-In your phone's **Settings** > **Apps** > **AAPS**, tap **Uninstall** and confirm with **OK**.
+Telefono **Settings** > **Apps** > **AAPS** paspauskite **Uninstall** (pašalinti) ir patvirtinkite su **OK**.
 
-![App info of AAPS with the Uninstall button](../images/ReinstallAaps/reinstall_uninstall_appinfo.png)
+![AAPS programėlės informacija su mygtuku Uninstall](../images/ReinstallAaps/reinstall_uninstall_appinfo.png)
 
 (reinstall-aaps-install)=
-### 6. Install and start the new AAPS
+### 6. Įdiekite ir paleiskite naująją AAPS
 
-[Install](../SettingUpAaps/TransferringAndInstallingAaps.md) the new apk and start **AAPS**. The [setup wizard](../SettingUpAaps/SetupWizard.md) asks for the permissions **AAPS** needs: tap **Grant** for each of them. This also turns [battery optimization](#setup-wizard-bluetooth-battery-optimisation) off again.
+[Įdiekite](../SettingUpAaps/TransferringAndInstallingAaps.md) naują apk ir paleiskite **AAPS**. [Sąrankos vedlys](../SettingUpAaps/SetupWizard.md) paprašys leidimų, kurių reikia **AAPS**: kiekvienam jų paspauskite **Suteikti**. Taip vėl išjungiamas ir [baterijos optimizavimas](#setup-wizard-bluetooth-battery-optimisation).
 
-![Permissions Required list of the setup wizard](../images/ReinstallAaps/reinstall_permissions.png)
+![Sąrankos vedlio sąrašas Reikalingi leidimai](../images/ReinstallAaps/reinstall_permissions.png)
 
-For **AAPS Directory**, select the same **AAPS** folder as before (the one with the **preferences** folder in it), tap **Use this folder** and **Allow**.
+Ties **AAPS aplankas** pasirinkite tą patį **AAPS** aplanką kaip anksčiau (tą, kuriame yra aplankas **preferences**), paspauskite **Use this folder** (naudoti šį aplanką) ir **Allow** (leisti).
 
-![Selecting the existing AAPS folder](../images/ReinstallAaps/reinstall_aaps_directory.png)
+![Esamo AAPS aplanko pasirinkimas](../images/ReinstallAaps/reinstall_aaps_directory.png)
 
-When **AAPS** finds your exported settings, the setup wizard shows a [Stored settings found](#setup-wizard-import-settings) screen where you can import them. You can also close the wizard and import from **Maintenance** as described below.
+Kai **AAPS** randa jūsų eksportuotus nustatymus, sąrankos vedlys parodo ekraną [Rasti išsaugoti nustatymai](#setup-wizard-import-settings), kuriame galite juos importuoti. Taip pat galite uždaryti vedlį ir importuoti per **Servisas**, kaip aprašyta toliau.
 
 (reinstall-aaps-import)=
-### 7. Import your settings
+### 7. Importuokite nustatymus
 
-If the settings file is no longer on your phone, copy it back to the **preferences** folder of your **AAPS** directory.
+Jei nustatymų failo telefone nebėra, nukopijuokite jį atgal į savo **AAPS** aplanko poaplankį **preferences**.
 
-Open the menu (☰) > **Maintenance**, select the **Local** chip next to **Import settings** and tap **Import settings**.
+Atidarykite meniu (☰) > **Servisas**, šalia **Importuoti nustatymus** pasirinkite ženklelį **Vietinė saugykla** ir paspauskite **Importuoti nustatymus**.
 
-![Maintenance with Import settings](../images/ReinstallAaps/reinstall_maintenance_import.png)
+![Servisas su Importuoti nustatymus](../images/ReinstallAaps/reinstall_maintenance_import.png)
 
-The list shows each file with its **AAPS** version and how old it is. Choose the file you exported in step 1.
+Sąraše rodomas kiekvienas failas su jo **AAPS** versija ir amžiumi. Pasirinkite failą, kurį eksportavote 1 žingsnyje.
 
-![List of settings files to import](../images/ReinstallAaps/reinstall_import_file_list.png)
+![Importuojamų nustatymų failų sąrašas](../images/ReinstallAaps/reinstall_import_file_list.png)
 
-You don't need to set a master password in the new **AAPS** first. Type the master password you used for the export in **Decryption password** and tap **Decrypt**. **File was encrypted with a different password** is expected: the new **AAPS** doesn't know your password yet. The import restores it with your other settings.
+Naujoje **AAPS** iš pradžių nustatyti pagrindinio slaptažodžio nereikia. Lauke **Iššifravimo slaptažodis** įveskite pagrindinį slaptažodį, kurį naudojote eksportuodami, ir paspauskite **Iššifruoti**. Pranešimas **Failas užšifruotas kitu slaptažodžiu** yra normalus: naujoji **AAPS** dar nežino jūsų slaptažodžio. Importas jį atkuria kartu su kitais jūsų nustatymais.
 
-![Decryption password for the settings file](../images/ReinstallAaps/reinstall_import_password.png)
+![Nustatymų failo iššifravimo slaptažodis](../images/ReinstallAaps/reinstall_import_password.png)
 
-Tick **Also replace pump settings**: without it, your pump and its settings are not restored. Omnipod and Medtrum users: only tick it if the file was exported during your current pod or patch (see [Tubeless pumps](#ExportImportSettings-tubeless-pumps)).
+Pažymėkite **Taip pat pakeisti pompos nustatymus**: be šios žymos jūsų pompa ir jos nustatymai nebus atkurti. Omnipod ir Medtrum naudotojai: žymėkite tik tada, jei failas eksportuotas naudojant dabartinį Pod ar pompą (patch) (žr. [Pompos be vamzdelio](#ExportImportSettings-tubeless-pumps)).
 
-![Also replace pump settings ticked](../images/ReinstallAaps/reinstall_import_replace_pump.png)
+![Pažymėta Taip pat pakeisti pompos nustatymus](../images/ReinstallAaps/reinstall_import_replace_pump.png)
 
-Tap **Import**, then **OK** to apply the settings and **OK** again on **Settings applied**.
+Paspauskite **Importuoti**, tada **OK**, kad pritaikytumėte nustatymus, ir dar kartą **OK** lange **Nustatymai pritaikyti**.
 
-![Apply imported settings confirmation](../images/ReinstallAaps/reinstall_import_apply.png)
+![Importuotų nustatymų pritaikymo patvirtinimas](../images/ReinstallAaps/reinstall_import_apply.png)
 
 (reinstall-aaps-nightscout-after)=
-### 8. Get your history back from Nightscout
+### 8. Atgaukite istoriją iš Nightscout
 
-Open the menu (☰) > [**Configuration**](../SettingUpAaps/ChangeAapsConfiguration.md) > **Communication** and tap **Open plugin** under **NSClientV3**. Check that the status shows **Connected**. If it doesn't, see [Troubleshooting NSClient](TroubleshootingNsClient.md).
+Atidarykite meniu (☰) > [**Konfigūracija**](../SettingUpAaps/ChangeAapsConfiguration.md) > **Ryšys** ir po **NSClientV3** paspauskite **Atidaryti įskiepį**. Patikrinkite, ar būsena rodo **Prisijungta**. Jei ne, žr. [NSClient trikčių šalinimas](TroubleshootingNsClient.md).
 
-![Communication with the NSClientV3 Open plugin button](../images/ReinstallAaps/reinstall_ns_open_plugin.png)
+![Ryšys su NSClientV3 mygtuku Atidaryti įskiepį](../images/ReinstallAaps/reinstall_ns_open_plugin.png)
 
-Tap the **Full synchronization** button at the bottom of the screen and **OK**. The database is new, so you can answer the cleanup question either way.
+Ekrano apačioje paspauskite mygtuką **Pilna sinchronizacija** ir **OK**. Duomenų bazė nauja, todėl į klausimą dėl valymo galite atsakyti bet kaip.
 
-![NSClientV3 screen with the Full synchronization button](../images/ReinstallAaps/reinstall_ns_fullsync_menu_after.png)
+![NSClientV3 ekranas su mygtuku Pilna sinchronizacija](../images/ReinstallAaps/reinstall_ns_fullsync_menu_after.png)
 
-**AAPS** loads your data from Nightscout. The log shows **Full sync finished** when it is done.
+**AAPS** įkelia jūsų duomenis iš Nightscout. Kai baigiama, žurnale rodoma **Full sync finished** (pilna sinchronizacija baigta).
 
-![NSClientV3 log with Full sync finished](../images/ReinstallAaps/reinstall_ns_fullsync_finished.png)
+![NSClientV3 žurnalas su Full sync finished](../images/ReinstallAaps/reinstall_ns_fullsync_finished.png)
 
 (reinstall-aaps-check)=
-### 9. Check and keep looping
+### 9. Patikrinkite ir tęskite ciklą
 
-Check that your pump is connected and your CGM values arrive, then keep on looping.
+Patikrinkite, ar pompa prijungta ir ateina NGJ reikšmės, tada toliau naudokite ciklą.
 
 (reinstall-aaps-afterwards)=
-## Afterwards
+## Vėliau
 
-Always keep using your new keystore from now on, and store it with its password somewhere safe, off your phone. See [Creating back-ups](../Maintenance/ExportImportSettings.md).
+Nuo šiol visada naudokite naują raktų saugyklą ir laikykite ją kartu su slaptažodžiu saugioje vietoje, ne telefone. Žr. [Atsarginių kopijų kūrimas](../Maintenance/ExportImportSettings.md).
