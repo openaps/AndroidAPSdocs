@@ -28,12 +28,12 @@
 
 **Език**
 
-- By default **AAPS** follows the language of the phone (recommended).
+- По подразбиране **AAPS** използва езика на телефона (препоръчително).
 
-- If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
+- Ако искате **AAPS** да е на език, различен от този на телефона, изберете го тук. На Android 13 и по-нови версии **AAPS** записва избрания език като собствен език на приложението в Android, така че всички негови екрани, главният екран, уиджетите и начинът на изписване на числата го следват.
 
 - Когато смените езика, текстовете на **AAPS** веднага преминават на новия език. Ако някои текстове все още са на стария език, рестартирайте **AAPS**.
-- On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
+- На Android 12 тази настройка не се показва: **AAPS** винаги използва езика на телефона.
 - Настройката е скрита в [опростен режим](#preferences-simple-mode).
 
 (preferences-simple-mode)= **Опростен режим**
@@ -136,7 +136,7 @@
 
 - Границите за безопасност се задават според възрастта, която изберете в тази настройка.
 - Ако започнете да достигате тези твърди граници (например максималния болус), е време да преминете една стъпка нагоре.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
+- Лоша идея е да изберете по-голяма от реалната възраст, защото това може да доведе до предозиране при въвеждане на грешна стойност в диалога за инсулин (например ако пропуснете десетичния разделител).
 - Ако искате да знаете точните стойности на тези вградени граници за безопасност, превъртете до функцията на алгоритъма, която използвате, на [тази страница](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 (Preferences-maximum-bolus)=
@@ -275,7 +275,7 @@
 - [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) – състоянието на алгоритъма през 2017 г.
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) – най-новият алгоритъм, препоръчван за начинаещи
 
-As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
+От [**AAPS** версия 3.3](#version3300) функцията [Динамично ISF](../DailyLifeWithAaps/DynamicISF.md) е преместена в OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -364,10 +364,10 @@ min_5m_carbimpact определя стандартното въздействи
 ```{admonition} Data uploaders
 :class: warning
 
-Когато използвате NSClientV3, всички програми за качване (uploaders) трябва да използват Nightscout API v3. If another uploader (for example your CGM app) is not API v3 compliant, **let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
+Когато използвате NSClientV3, всички програми за качване (uploaders) трябва да използват Nightscout API v3. Ако друга програма за качване (например приложението ви за CGM) не поддържа API v3, **оставете AAPS да качва всички данни** (КЗ, лечения, ...) в Nightscout и изключете другата програма за качване.
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplatform.dom>).
+- Задайте своя *Nightscout адрес* (напр. <https://yoursitename.yourplatform.dom>).
 - **Уверете се, че адресът е БЕЗ /api/v1/ в края.**
 - В Nightscout създайте *[Admin токен](https://nightscout.github.io/nightscout/security/#create-a-token)* (за V3 API е нужен [Nightscout 15](https://nightscout.github.io/update/update/)) и го въведете в **Токен за достъп до Nightscout** (не вашия API Secret!). В **AAPSClient** вместо това можете да сканирате QR кода на главния телефон – така се настройва собствен токен на клиента. Клиент, свързан с PIN, получава собствен токен от главния телефон след свързването. Вижте [Собственият токен за Nightscout на клиента](#client-master-control-own-token).
 - Така данните могат да се четат и записват и в двете посоки между сайта на Nightscout и **AAPS**.
@@ -411,7 +411,7 @@ min_5m_carbimpact определя стандартното въздействи
 - За да изтриете всички SSID, въведете интервал в полето.
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClientV3)
+### Разширени настройки (NSClientV3)
 
 ![Разширени настройки на NSClient](../images/preferences/settings_nsclient_advanced.png)
 
@@ -470,9 +470,9 @@ min_5m_carbimpact определя стандартното въздействи
 
 Настройките би трябвало да са ясни сами по себе си.
 
-**Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
+**Прескочи DND режима** (включено по подразбиране): алармите на **AAPS** звънят дори когато телефонът е без звук или в режим „Не безпокойте“. Изключете го, ако **AAPS** трябва да спазва тези режими: тогава алармите не звънят, а в режим „Не безпокойте“ само вибрират – на телефона и на часовника. Предложенията на кръга, които пристигат по време на режим „Не безпокойте“, се показват без звук.
 
-When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Swiping the alarm notification away in the notification tray mutes the alarm. When you open **AAPS** later, an alarm you did not answer is shown again.
+Когато звъни аларма, екранът на алармата предлага **Заглуши алармата** (екранът остава отворен, за да можете да прочетете съобщението) и **Заглуши и затвори**. Ако плъзнете известието за алармата встрани в панела с известия, алармата се заглушава. Когато по-късно отворите **AAPS**, аларма, на която не сте отговорили, се показва отново.
 
 (preferences-maintenance-settings)=
 ## Настройки за поддръжка
@@ -489,7 +489,7 @@ When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays
 
 Можете да помогнете за развитието на **AAPS**, като изпращате отчети за сривове на разработчиците.
 
-**Автоматичен експорт на настройки**<br/> Когато включите тази функция, позволявате на **AAPS** да експортира настройките без намеса на потребителя. For this the master password is securely stored on your phone (only) at the next manual export. Съхранената парола ще се използва до 4 седмици. След 4 седмици ще получите известие, че паролата скоро ще изтече. По време на гратисен период от 1 седмица паролата може да се поднови, като експортирате ръчно настройките от менюто за поддръжка.
+**Автоматичен експорт на настройки**<br/> Когато включите тази функция, позволявате на **AAPS** да експортира настройките без намеса на потребителя. За тази цел главната парола се съхранява сигурно (само) на телефона ви при следващия ръчен експорт. Съхранената парола ще се използва до 4 седмици. След 4 седмици ще получите известие, че паролата скоро ще изтече. По време на гратисен период от 1 седмица паролата може да се поднови, като експортирате ръчно настройките от менюто за поддръжка.
 
 След като гратисният период от 1 седмица изтече, съхранената парола става невалидна и всеки автоматичен експорт на настройки ще бъде прекратен, а потребителят ще получи известие с молба да въведе паролата отново. [(**Автоматичните експорти на настройки**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) ще се записват в списъците „Портал за лечения“ и „От потребител“ на **AAPS** в Лечения.
 
