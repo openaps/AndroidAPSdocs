@@ -9,12 +9,12 @@ There are four different methods to access the readings from Eversense:
 
 ## ESEL
 
-Obțineți și instalați [aplicația ESEL](https://github.com/BernhardRo/Esel/tree/master/apk), urmând aceste instrucțiuni [](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
+Obțineți și instalați [aplicația ESEL](https://github.com/BernhardRo/Esel/tree/master/apk), urmând aceste [instrucțiuni](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
 
-- In ESEL, open the three dots menu (⋮) at the top right and select **Settings** (also available from the ☰ menu). In the settings:
-  - Activați "Trimiteți în AAPS și xDrip"
-  - **Dezactivați** "Trimiteți la Nightscout"
-  - Deoarece datele glicemice din Eversense pot fi zgomotoase, se recomandă activarea "Filtrați Datele" în ESEL.
+- În ESEL, deschideți meniul cu trei puncte (⋮) din dreapta sus și selectați **Settings** (disponibil și din meniul ☰). În setări:
+  - Activați „Send to AAPS and xDrip” (trimitere către AAPS și xDrip)
+  - **Dezactivați** „Send to Nightscout” (trimitere către Nightscout)
+  - Deoarece datele glicemice din Eversense pot fi zgomotoase, se recomandă activarea „Smooth Data” (netezirea datelor) în ESEL.
 
 ![Transmitere ESEL](../images/ESEL.png)
 
@@ -23,23 +23,23 @@ Obțineți și instalați [aplicația ESEL](https://github.com/BernhardRo/Esel/t
 Citește datele din notificările aplicației Eversense (funcționează cu aplicația Eversense standard, disponibilă de la versiunea ESEL 3.0.1).
 
 1. Folosiți aplicația oficială Eversense din Google Play Store
-   - Opțional, dar necesar pentru scriere în urmă: Autentificați-vă în contul dumneavoastră Eversense
+   - Opțional, dar necesar pentru completarea datelor lipsă (backfill): Autentificați-vă în contul dumneavoastră Eversense
    - În sincronizare, activați sincronizarea automată
 2. Configurarea ESEL:
    - Dezactivați setarea "Obțineți date de la aplicația Eversense modificată"
-   - Pentru scriere în urmă: Activați "Umpleți datele lipsă de la eversensedms.com"
+   - Pentru completarea datelor lipsă (backfill): Activați "Umpleți datele lipsă de la eversensedms.com"
    - Furnizați ca adresă de e-mail și parolă datele de conectare Eversense
 3. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
 ### Aplicația Eversense modificată
 
- Necesită o versiune modificată a aplicației Eversense (funcționează complet offline, inclusiv scriere în urmă).
+ Necesită o versiune modificată a aplicației Eversense (funcționează complet offline, inclusiv completarea datelor lipsă).
 
 1. Dezinstalați aplicația Eversense (Atenție: datele dumneavoastră istorice locale (mai vechi de 1 săptămână) vor fi pierdute!)
 
 2. Instalați aplicația [modificată Eversense](https://cr4ck3d3v3r53n53.club) și folosiți-o cum este descris de către producător
 
-   - Porniți aplicația Eversense, conectați-vă la transmițătorul dumneavoastră și folosiți-o la fel ca pe aplicația normală.
+   - Porniți aplicația Eversense, autentificați-vă, conectați-vă la transmițătorul dumneavoastră și folosiți-o la fel ca pe aplicația normală.
 
 3. Configurarea ESEL:
 
@@ -55,19 +55,19 @@ If you run ESEL with a fresh installation of Eversense for the first time, it ca
 
 ## xDrip
 
-xDrip can read notifications from the vendor app, like ESEL does. Nu este disponibilă scrierea înapoi a datelor lipsă.
+xDrip can read notifications from the vendor app, like ESEL does. Completarea datelor lipsă (backfill) nu este disponibilă.
 
-- Download and install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- Descărcați și instalați xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
 - As data source in xDrip “Companion App” must be selected.
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Selectați xDrip în [**Configurație → Sursă glicemie**](#Config-Builder-bg-source).
 - Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
 - Activați [Netezire exponențială](../CompatibleCgms/SmoothingBloodGlucoseData.md) în AAPS.
 
-## Notification Reader
+## Cititor notificări
 
-**AAPS** can read the glucose values directly from the notifications posted by the official Eversense app, without any other app in between. Nu este disponibilă scrierea înapoi a datelor lipsă.
+**AAPS** can read the glucose values directly from the notifications posted by the official Eversense app, without any other app in between. Completarea datelor lipsă (backfill) nu este disponibilă.
 
-- Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and grant **AAPS** access to notifications when asked.
+- Selectați **Cititor notificări** în [**Configurație → Sursă glicemie**](#Config-Builder-bg-source) și acordați **AAPS** acces la notificări când vi se cere.
 - Make sure the Eversense app shows the current glucose value in its notification.
 
 ```{warning}
