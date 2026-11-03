@@ -19,7 +19,7 @@
 
 Може да са нужни около 30 минути или повече, докато **временната цел** доведе до желаната целева **КЗ**. **AAPS** не може да достигне целевата **КЗ** веднага и потребителите трябва да имат това предвид, когато избират **временна цел**.
 
-The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. Показаните стойности са стандартните при инсталиране — можете да [промените всяка предварителна настройка](#TempTargets-change-preset-defaults) според нуждите си.
+Разделите по-долу описват функциите на **временна цел „Физ. активност“**, **временна цел „Преди хранене“** и **временна цел „Хипогликемия“**. Показаните стойности са стандартните при инсталиране — можете да [промените всяка предварителна настройка](#TempTargets-change-preset-defaults) според нуждите си.
 
 ### TT – Физ. активност
 
@@ -42,7 +42,7 @@ AAPS ще се стреми да достигне 140 mg/dl или 7,8 mmol/l з
 
 - *избиране* на тази **TT** 1–2 часа преди планираната физическа активност, за да се осигури по-малък IOB (правилното време за тази TT е различно при всеки човек); и
 - *избиране* на временен профил (намаление) за времето на планираната активност, за да се осигури по-малък **IOB**;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
+- *осигуряване*, че **TT** ще бъде *деактивирана* малко преди физическата активност, тъй като **IOB** вече е намален, а някои потребители имат бързо покачване на **КЗ** след физическа активност.
 
 ### TT – Преди хранене
 
@@ -193,9 +193,9 @@ AAPS ще се стреми да достигне 160 mg/dl или 8,9 mmol/l з
 
 Някои потребители не искат да се подават **SMB** по време на **временна цел „Хипогликемия“**. Това се постига, като изключите *„Използвай SMB с високи цели“* в **Настройки** → **OpenAPS SMB** (вижте по-долу):
 
-- Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- За напреднали, цел 9: потребителят може да включи *„Високите цели вдигат чувствителността“* за **временни цели** от 100 mg/dl (5,6 mmol/l) или повече в OpenAPS SMB и **AAPS** ще бъде по-чувствителен.
 
-- Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- За напреднали, цел 9: потребителят може да изключи *„Използвай SMB с високи цели“*. Тогава, дори ако **AAPS** има COB > 0, включени „Разреши SMB с ниски цели“ или „Винаги използвай SMB“ и активен OpenAPS SMB, **AAPS** няма да подава SMB, докато са активни високи временни цели.
 
 Забележка: ако отворите **диалога „Въглехидрати“**, когато КЗ е под 72 mg/dl или 4 mmol/l, **AAPS** автоматично включва превключвателя **Старт на вр. цел при хипо**.
 
@@ -209,7 +209,7 @@ AAPS ще се стреми да достигне 160 mg/dl или 8,9 mmol/l з
 
 Новите потребители на **AAPS** може да трябва да експериментират и да нагласят стандартните настройки на своята **временна цел „Физ. активност“**, за да работи тази функция най-добре за тях. Всеки човек е различен, когато става дума за постигане на стабилна КЗ по време на физическа активност. Вижте също [раздела за спорт в Често задавани въпроси](#FAQ-sports).
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. Можете да стартирате и двете с една стъпка: докоснете името на профила на главния екран, докоснете кръглия бутон **▶**, задайте **Процент** под 100 % и **Срок** и след това включете **Временна цел / Физ. активност**. Вижте [Промяна на процента на профила](#ProfileSwitch-change-percentage).
+Някои потребители също предпочитат да активират **Смяна на профил** (намаляване на профила под 100 %, за да намали **AAPS** подаването на инсулин) преди и по време на **временната цел „Физ. активност“**. Можете да стартирате и двете с една стъпка: докоснете името на профила на главния екран, докоснете кръглия бутон **▶**, задайте **Процент** под 100 % и **Срок** и след това включете **Временна цел / Физ. активност**. Вижте [Промяна на процента на профила](#ProfileSwitch-change-percentage).
 
 За напреднали, цел 9: потребителите могат да включат *„Високите цели вдигат чувствителността“* за **временни цели** от 100 mg/dl (5,6 mmol/l) или повече в OpenAPS **SMB**. Цел 99 mg/dl (5,5 mmol/l) е нормална цел — нито висока, нито ниска. Тогава **AAPS** е по-чувствителен.
 
@@ -219,9 +219,9 @@ Some users also prefer to activate a **Profile switch** (being a Profile decreas
 
 ## Временна цел „Преди хранене“
 
-**Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
+**Временна цел „Преди хранене“** може да помогне за плавно понижаване на **КЗ** и да осигури достатъчно **IOB** преди хранене.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
+Това може да е важен инструмент за потребители, които не правят болус предварително (pre-bolus). Ефектът на **временна цел „Преди хранене“** обаче зависи от няколко фактора: настройките на потребителя, дали се храни с малко въглехидрати и дали използва бързодействащ инсулин (като Fiasp или Lyumjev), за да няма нужда от предварителен болус. Обикновено, докато потребителите не натрупат опит с **AAPS**, те трябва да очакват, че ще правят предварителен болус, когато използват **временна цел „Преди хранене“**. Това важи особено при хранене с много въглехидрати.
 
 Можете да прочетете повече за режима „Eating soon“ („Преди хранене“) в статията [„How to do ‚eating soon‘ mode“](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) (на английски) или [тук](https://diyps.org/tag/eating-soon-mode/).
 
