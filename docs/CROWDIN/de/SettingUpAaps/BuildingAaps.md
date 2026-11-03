@@ -12,7 +12,7 @@ Die AAPS-App kann auf drei Wegen erstellt werden:
 
 ### Mit einem Browser erstellen (empfohlen)
 
-You can build the app in a web browser using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
+Du kannst die App in einem Webbrowser mit GitHub Actions erstellen. Auf einem Android-Smartphone führt Dich die Einrichtungsseite von [AAPS Builder](#aaps-builder) durch die Schritte, und Du startest jeden Build selbst. Auf einem Computer oder einem iPhone kannst Du auch mit einem Fork erstellen und die App in Deinem Google Drive speichern.
 
 **[Nutze diese Anleitung.](./BrowserBuild.md)**
 
@@ -35,16 +35,16 @@ Diese Option ist für diejenigen gedacht, die AAPS ohne Android Studio zu instal
 ----
 
 (building-aaps-troubleshooting)=
-## If the build fails
+## Wenn der Build fehlschlägt
 
-Each build method has its own troubleshooting section:
+Jede Build-Methode hat einen eigenen Abschnitt zur Fehlerbehebung:
 
-* **AAPS Builder**: [AAPS Builder troubleshooting](#aaps-builder-troubleshooting)
-* **Browser build** from a computer or an iPhone: [Browser build troubleshooting](#aaps-ci-troubleshooting)
-* **Android Studio**: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+* **AAPS Builder**: [Fehlerbehebung bei AAPS Builder](#aaps-builder-troubleshooting)
+* **Browser-Build** von einem Computer oder einem iPhone: [Fehlerbehebung beim Browser Build](#aaps-ci-troubleshooting)
+* **Android Studio**: [Fehlerbehebung bei Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Lost your keystore or its password? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Keystore oder sein Passwort verloren? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 
-If the app is built but does not install on your phone, see [Transferring and installing AAPS](TransferringAndInstallingAaps.md).
+Wird die App erstellt, aber nicht auf Deinem Smartphone installiert, siehe [AAPS auf Dein Smartphone übertragen und installieren](TransferringAndInstallingAaps.md).
 
-If your problem is not listed, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Ist Dein Problem nicht aufgeführt, siehe [Wo bekomme ich Hilfe?](../GettingHelp/WhereCanIGetHelp.md).
