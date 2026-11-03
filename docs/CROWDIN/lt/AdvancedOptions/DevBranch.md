@@ -1,24 +1,24 @@
-# Development branch
+# Kūrimo atšaka (dev)
 
 ```{warning}
-Dev branch is for the further development of AAPS only. It should be used on a separate phone for testing <font color="#FF0000">**not for actual looping!**</font>
+Dev atšaka skirta tik tolesniam AAPS kūrimui. Ją reikia naudoti atskirame telefone testavimui, <font color="#FF0000">**ne tikram ciklui!**</font>
 ```
 
-The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). It is advised to stay on the Master branch for actual looping.
+Stabiliausia AAPS versija yra [master atšakoje](https://github.com/nightscout/AndroidAPS/tree/master). Tikram ciklui rekomenduojama likti master atšakoje.
 
-The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Therefore many unfinished features are disabled. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in the directory /AAPS/extra. Enabling the engineering mode might break the loop entirely.
+AAPS dev versija skirta tik kūrėjams ir testuotojams, kuriems nesunku dirbti su klaidų išrašais (stacktrace), peržiūrėti žurnalų failus ir galbūt paleisti derintuvę (debugger), kad parengtų kūrėjams naudingus klaidų pranešimus (trumpai: žmonėms, kurie žino, ką daro, be kitų pagalbos!). Todėl daug nebaigtų funkcijų yra išjungtos. Norėdami įjungti šias funkcijas, įjunkite **inžinerinį režimą**: sukurkite failą `engineering_mode` aplanke /AAPS/extra. Įjungus inžinerinį režimą, ciklas gali visiškai nustoti veikti.
 
-However, the Dev branch is a good place to see what features are being tested and to help iron out the bugs and give feedback on how the new features work in practice. Often people will test the Dev branch on an old phone and pump until they are confident it is stable - any use of it is at your own risk. When testing any new features, remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.
+Tačiau dev atšaka yra gera vieta pamatyti, kokios funkcijos yra testuojamos, padėti ištaisyti klaidas ir pasakyti, kaip naujos funkcijos veikia praktiškai. Dažnai žmonės testuoja dev atšaką su senu telefonu ir pompa, kol įsitikina, kad ji stabili. Bet kokį jos naudojimą atliekate savo rizika. Testuodami bet kokias naujas funkcijas atminkite, kad patys pasirinkote testuoti dar kuriamą funkciją. Darykite tai savo rizika ir atsargiai, kad būtumėte saugūs.
 
-If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/nightscout/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md)). The new features can also be discussed on [discord](https://discord.gg/4fQUWHZ4Mw).
+Jei randate klaidą arba manote, kad naudojant dev atšaką kažkas įvyko ne taip, peržiūrėkite [skiltį „Issues“](https://github.com/nightscout/AndroidAPS/issues) ir patikrinkite, ar kas nors jau ją rado. Jei ne, pridėkite ją patys. Kuo daugiau informacijos čia pateiksite, tuo geriau (nepamirškite, kad gali reikėti pridėti ir jūsų [žurnalų failus](../GettingHelp/AccessingLogFiles.md)). Naujas funkcijas taip pat galima aptarti [Discord](https://discord.gg/4fQUWHZ4Mw).
 
-A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. When a single dev version is doing the rounds, it is easier to keep track of bugs that people are reporting. The developers do not want to be in a position where there are three versions of dev in the wild where bugs are fixed in some and not others, and people continue to report the fixed ones.
+Dev versija turi galiojimo pabaigos datą. Tai atrodo nepatogu, kai versija veikia gerai, bet tai turi tikslą. Kai naudojama tik viena dev versija, lengviau sekti klaidas, apie kurias praneša žmonės. Kūrėjai nenori, kad vienu metu būtų naudojamos trys dev versijos, kai klaidos ištaisytos vienose, bet ne kitose, o žmonės vis dar praneša apie jau ištaisytas klaidas.
 
 (branch-ci-test)=
 
-## Test a specific branch (branch-ci)
+## Konkrečios atšakos išbandymas (branch-ci)
 
-To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
+Norėdami sukurti testinę atšaką, pasirinkite branch-ci. Tai leidžia pasirinkti konkrečią atšaką APK kūrimui. Šį būdą galite naudoti, kai reikia išbandyti dev atšaką.
 
 ![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
 
@@ -26,11 +26,11 @@ To build a test branch, select branch-ci, which allows you to choose a specific 
 
 (github-pr-test)=
 
-## Test items in a pull request (GitHub CI actions deploy)
+## Pakeitimų iš pull request (PR) išbandymas (GitHub CI actions deploy)
 
-Available from 3.3.2.1.dev
+Galima nuo 3.3.2.1.dev
 
-- Suitable for testers or those helping with testing.
+- Tinka testuotojams arba tiems, kurie padeda testuoti.
 
 ```{eval-rst}
 .. raw:: html
@@ -51,22 +51,22 @@ Available from 3.3.2.1.dev
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
 
-- Target repository: the repository that contains the PR, in the format owner/repo. Leave the default **nightscout/AndroidAPS** unless you were told to use another repository (only developers should do this).
+- Target repository: saugykla, kurioje yra PR, formatu owner/repo. Palikite numatytąją **nightscout/AndroidAPS**, nebent jums nurodė naudoti kitą saugyklą (tai turėtų daryti tik kūrėjai).
 
-- PR number: Please enter the PR number that you want to test.
+- PR number: įveskite PR numerį, kurį norite išbandyti.
 
-- PR reference types: PR reference types include two options:
+- PR reference types: yra dvi PR nuorodos tipo parinktys:
     
     - head:
-    - Fetches the actual content from the PR author’s branch (i.e., the original commit history without any merge operations).
-    - This is equivalent to the original state of the PR branch, as if it were fetched directly from a fork or feature branch.
+    - Paima tikrą turinį iš PR autoriaus atšakos (t. y. originalią commit istoriją be jokio sujungimo).
+    - Tai atitinka pradinę PR atšakos būseną, lyg ji būtų paimta tiesiai iš fork ar funkcijos atšakos.
     
     - merge:
     
-    - Fetches the result of GitHub’s pre-simulated merge of the PR into the target branch (e.g., dev).
-    - This is a virtual merge commit automatically created by GitHub.
-    - This commit only exists when the PR has no conflicts and is mergeable.
+    - Paima rezultatą, kurį GitHub gauna iš anksto imituodamas PR sujungimą su tiksline atšaka (pvz., dev).
+    - Tai virtualus sujungimo commit, kurį automatiškai sukuria GitHub.
+    - Šis commit yra tik tada, kai PR neturi konfliktų ir gali būti sujungtas.
     
     - variant:
     
-    - Please refer to [variant](#browserbuild-variant)
+    - Žr. [variantą](#browserbuild-variant)
