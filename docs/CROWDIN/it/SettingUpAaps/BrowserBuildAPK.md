@@ -3,11 +3,11 @@
 # Browser build – Step 4: Build the APK
 
 ```{note}
-This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md).
+This is **Step 4** of the [Browser build](BrowserBuild.md). Prima completa il [Passo 3 – Autorizza Google Drive](BrowserBuildGoogleDrive.md).
 ```
 
 ## AAPS-CI GitHub Actions to Build the AAPS APK
- - Suitable for general users.
+ - Adatto a tutti gli utenti.
 
 ```{tab-set}
 
@@ -15,8 +15,8 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 ### Run the Workflow to Build the Signed APK
 
 1. In your GitHub copy of AndroidAPS, select Actions.
-2. Expand All Workflows.
-3. Select AAPS-CI
+2. Espandi All Workflows.
+3. Seleziona AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
@@ -24,19 +24,19 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Leave **Use workflow from** on the master branch. In **Select AAPS Version**, select the **AAPS** version you want to build (normally the newest one). Select the [variant](#browserbuild-variant) (fullRelease) and tap Run workflow.
+5. Leave **Use workflow from** on the master branch. In **Select AAPS Version**, select the **AAPS** version you want to build (normally the newest one). Seleziona la [variante](#browserbuild-variant) (fullRelease) e tocca Run workflow.
 
 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of Android APS.
+6. Vedrai il messaggio Workflow run was successfully requested. Aggiorna la pagina del browser e potrai seguire l'avanzamento della build. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of Android APS.
 
 ![Monitor Workflow](../images/update/CI/GitHubActions4.png)
 
 ### Install the AAPS APK
 
-1. Open your Google Drive
+1. Apri il tuo Google Drive
 2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
 
 ![Google Drive Location](../images/update/CI/GitHubActions5.png)
@@ -74,8 +74,8 @@ Tap **Select AAPS Version** and pick the version to build. The newest version is
 
   - Select the variant you need:
     - fullRelease: For regular pump usage with full functionality.
-    - [aapsclientRelease, aapsclient2Release, aapsclient3Release](#RemoteControl_aapsclient): For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md)). `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
-    - pumpcontrolRelease: To replace your pump app/controller
+    - [aapsclientRelease, aapsclient2Release, aapsclient3Release](#RemoteControl_aapsclient): For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md)). `aapsclient3Release` crea **AAPSClient3**, disponibile dalla versione 4.0 di **AAPS** (vedi [Informazioni su AAPSClient, AAPSClient2 e AAPSClient3](#remotecontrol-aapsclient-versions)).
+    - pumpcontrolRelease: per sostituire l'app o il controller del tuo micro
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant3.png)
 
@@ -85,10 +85,10 @@ Variants ending with “Debug” indicate that the APK will be built in debug mo
 
 ----
 
-Once the build succeeds, the apk is saved to your Google Drive. Continue with [Transferring and Installing AAPS](TransferringAndInstallingAaps.md).
+Quando la build riesce, l'apk viene salvato nel tuo Google Drive. Continue with [Transferring and Installing AAPS](TransferringAndInstallingAaps.md).
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Le soluzioni gratuite sono spiegate in quella pagina.
 ```
 
 If the build fails, first [find out what went wrong in the build log](#aaps-ci-read-the-logs), then see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md). To include a specific commit in your build, see [cherry-pick a commit](#github-cherry-pick).
