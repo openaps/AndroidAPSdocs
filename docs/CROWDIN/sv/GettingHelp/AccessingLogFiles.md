@@ -1,15 +1,15 @@
 (Accessing-logfiles-accessing-logfiles)=
 
-# Accessing logfiles
+# Komma åt loggfiler
 
-* Connect phone to a computer in file transfer mode
-* Locate the log files in the AAPS data directory, in `Android\data\info.nightscout.androidaps\files`.  
-    The naming of the root storage folder may vary a little depending on the phone.
-* The location is `Android\data\info.nightscout.aapsclient\files` for [AAPSClient](#RemoteControl_aapsclient).
-* Note: log location has changed in **AAPS 3.3**. See the previous versions' documentation if needed.
+* Anslut telefonen till en dator i läget för filöverföring
+* Du hittar loggfilerna i AAPS datakatalog, i `Android\data\info.nightscout.androidaps\files`.  
+    Namnet på lagringens rotmapp kan skilja sig lite beroende på telefon.
+* För [AAPSClient](#RemoteControl_aapsclient) är platsen `Android\data\info.nightscout.aapsclient\files`.
+* Obs: platsen för loggarna ändrades i **AAPS 3.3**. Se dokumentationen för tidigare versioner om det behövs.
 
-![logs](../images/aapslog.png)
+![loggar](../images/aapslog.png)
 
-* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) within Android Studio, any log viewer Android app, or simply as plain text. 
-* Previous log files are zipped and stored in folders in date/time order. 
-* If you are sharing your log file in [discord](https://discord.gg/4fQUWHZ4Mw) to talk about a potential bug, please unzip and upload the file dated before the error occurred.
+* Den aktuella loggen är en .log-fil. Du kan visa den på flera sätt, till exempel med [LogCat](https://developer.android.com/studio/debug/am-logcat.html) i Android Studio, med en app för att visa loggar på Android, eller helt enkelt som vanlig text. 
+* Äldre loggfiler är zippade och sparas i mappar i datum- och tidsordning. 
+* Om du delar din loggfil på [Discord](https://discord.gg/4fQUWHZ4Mw) för att prata om en möjlig bugg: packa upp och ladda upp filen med datum före felet.
