@@ -1,66 +1,66 @@
 # Tidepool
 
-Tidepool is a third party tool that collects data regarding BG, insulin and carbs (and the notes you add to your treatments) and can be used to analyze and share this data with your clinical team. Since AAPS version 3.2 it can be used as an alternative to Nightscout for satisfying part of Objective 1. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with.
+Tidepool yra trečiosios šalies įrankis. Jis renka KG, insulino ir angliavandenių duomenis (ir pastabas, kurias pridedate prie terapijos įrašų). Juo galima analizuoti šiuos duomenis ir dalintis jais su gydymo komanda. Nuo AAPS 3.2 versijos Tidepool galima naudoti vietoj Nightscout, kad būtų įvykdyta dalis 1 mokymo etapo. Ją taip pat galima naudoti kartu su Nightscout kaip alternatyvią ataskaitų platformą, kuri gerai dera su klinikine aplinka. Tai gali būti tinkamas variantas vaikams, naudojantiems AAPS, kai norima turėti Nightscout nuotolinio stebėjimo ir valdymo galimybes, bet ir ataskaitų platformą, kuri patogesnė jų gydytojų komandai.
 
-It is important to understand that Tidepool is for reporting only. It is NOT a real-time follow app. If you need to have followers apart from the main AAPS phone, you must set up Nightscout as well.
+Svarbu suprasti, kad Tidepool skirtas tik ataskaitoms. Tai NĖRA realiojo laiko stebėjimo programėlė. Jei jums reikia sekėjų, be pagrindinio AAPS telefono, turite nustatyti ir Nightscout.
 
-Note: the Tidepool organization has brought the iOS Loop product to market with FDA approval. This effort has nothing to do with their data reporting platform or AAPS.
-
-
-## Step 1 - Set up a Tidepool account
-
-- Navigate to [tidepool.org](https://www.tidepool.org/)
-
-- Select “Personal Sign Up” or “Sign Up”
-
-- Create and document an email and password
-
-- Select “Personal Account” and click “Continue”
-
-- Complete the patient information section and accept the terms of use
-
-- Verify your email address via the instructions received to your email
+Pastaba: Tidepool organizacija išleido iOS Loop produktą į rinką su FDA patvirtinimu. Šis projektas nesusijęs nei su jų duomenų ataskaitų platforma, nei su AAPS.
 
 
-## Step 2 - Connect AAPS to Tidepool
+## 1 žingsnis – Sukurkite Tidepool paskyrą
 
-- Open the **menu** (☰) in the top-left corner of the main screen and select "**Configuration**"
+- Eikite į [tidepool.org](https://www.tidepool.org/)
 
-- Open the "**Communication**" category and enable "**Tidepool**":
+- Pasirinkite „Personal Sign Up“ (asmeninė registracija) arba „Sign Up“ (registruotis)
 
-![Enable Tidepool](../images/v4/Tidepool/tidepool_enable.png)
+- Sukurkite el. pašto adresą ir slaptažodį ir juos užsirašykite
 
-- Tap "**Open plugin**" underneath Tidepool, then tap the **Login** icon (an arrow going into a door) in the top-right corner
+- Pasirinkite „Personal Account“ (asmeninė paskyra) ir spauskite „Continue“ (tęsti)
 
-- A browser window opens on the Tidepool login page. Log in with the email address and password you created in Step 1 above:
+- Užpildykite paciento informacijos skiltį ir sutikite su naudojimo sąlygomis
 
-![Tidepool login page](../images/v4/Tidepool/tidepool_login.png)
+- Patvirtinkite savo el. pašto adresą pagal instrukcijas, kurias gausite el. paštu
 
-- After a successful login the browser closes and the Tidepool screen shows the status "**Connected**"; the log below documents the data uploads. If the login fails, confirm your credentials are correct and that you have verified your email address with Tidepool.
 
-![Tidepool connected](../images/v4/Tidepool/tidepool_status.png)
+## 2 žingsnis – Prijunkite AAPS prie Tidepool
 
-- In the "**Settings**" of the Tidepool plugin, open "**Connection settings**". By default "**Use Nightscout connection settings**" is on, so Tidepool uploads under the same conditions you set for Nightscout. Turn it off if you want separate conditions for Tidepool, for example to upload to Tidepool only on Wi-Fi and while charging, while Nightscout also uses mobile data.
+- Atidarykite **meniu** (☰) pagrindinio ekrano viršutiniame kairiajame kampe ir pasirinkite „**Konfigūracija**“
 
-![Connection settings with Use Nightscout connection settings on](../images/v4/Tidepool/tidepool_connection_settings.png) ![Separate connection settings for Tidepool](../images/v4/Tidepool/tidepool_connection_settings_separate.png)
+- Atidarykite kategoriją „**Ryšys**“ ir įjunkite „**Tidepool**“:
 
-For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
+![Įjunkite Tidepool](../images/v4/Tidepool/tidepool_enable.png)
+
+- Po Tidepool spauskite „**Atidaryti įskiepį**“, tada viršutiniame dešiniajame kampe spauskite piktogramą **Prisijungti** (rodyklė, einanti į duris)
+
+- Atsidaro naršyklės langas su Tidepool prisijungimo puslapiu. Prisijunkite su el. pašto adresu ir slaptažodžiu, kuriuos sukūrėte 1 žingsnyje:
+
+![Tidepool prisijungimo puslapis](../images/v4/Tidepool/tidepool_login.png)
+
+- Sėkmingai prisijungus, naršyklė užsidaro, o Tidepool ekrane rodoma būsena „**Prisijungta**“. Žemiau esantis žurnalas rodo duomenų įkėlimus. Jei prisijungti nepavyksta, patikrinkite, ar prisijungimo duomenys teisingi ir ar patvirtinote savo el. pašto adresą Tidepool.
+
+![Tidepool prijungtas](../images/v4/Tidepool/tidepool_status.png)
+
+- Tidepool įskiepio „**Parametrai**“ atidarykite „**Ryšio nustatymai**“. Pagal numatymą „**Naudoti Nightscout ryšio nustatymus**“ yra įjungta, todėl Tidepool duomenis įkelia tomis pačiomis sąlygomis, kurias nustatėte Nightscout. Išjunkite tai, jei Tidepool norite atskirų sąlygų, pavyzdžiui, kad į Tidepool duomenys būtų įkeliami tik per Wi-Fi ir kraunant telefoną, o Nightscout naudotų ir mobiliuosius duomenis.
+
+![Ryšio nustatymai, kai įjungta „Naudoti Nightscout ryšio nustatymus“](../images/v4/Tidepool/tidepool_connection_settings.png) ![Atskiri Tidepool ryšio nustatymai](../images/v4/Tidepool/tidepool_connection_settings_separate.png)
+
+Daugiau informacijos, kaip naudoti duomenis, kai jie įkelti į Tidepool, rasite čia: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
 
 (tidepool-menu)=
-## The Tidepool buttons
+## Tidepool mygtukai
 
-In the top-right corner of the Tidepool screen:
+Tidepool ekrano viršutiniame dešiniajame kampe:
 
-- The **Login** or **Logout** icon — connect to or disconnect from your Tidepool account. Only one of them is shown: **Login** while you are logged out, **Logout** while you are logged in. **AAPS** asks you to confirm before it logs you out.
-- The gear icon — the Tidepool settings.
+- Piktograma **Prisijungti** arba **Atsijungti** – prisijungti prie Tidepool paskyros arba atsijungti nuo jos. Rodoma tik viena iš jų: **Prisijungti**, kai esate atsijungę, **Atsijungti**, kai esate prisijungę. Prieš jus atjungdama, **AAPS** paprašo patvirtinti.
+- Krumpliaračio piktograma – Tidepool nustatymai.
 
-The buttons at the bottom of the Tidepool screen:
+Mygtukai Tidepool ekrano apačioje:
 
-- "**Upload now**" — upload new data straight away instead of waiting for the next automatic upload.
-- "**Full synchronization**" — upload all data stored in **AAPS** again.
-- "**Purge all data**" — delete **all** data that **AAPS** has uploaded to your Tidepool account. This cannot be undone. Use it only to remove wrong or duplicate data, then run "**Full synchronization**" to upload your data again.
-- "**Clear log**" — empty the log shown on the Tidepool screen.
+- „**Įkelti dabar**“ – įkelti naujus duomenis iš karto, nelaukiant kito automatinio įkėlimo.
+- „**Pilna sinchronizacija**“ – vėl įkelti visus **AAPS** saugomus duomenis.
+- „**Išvalyti visus duomenis**“ – ištrinti **visus** duomenis, kuriuos **AAPS** įkėlė į jūsų Tidepool paskyrą. To atšaukti negalima. Naudokite tai tik klaidingiems arba pasikartojantiems duomenims pašalinti, tada paleiskite „**Pilna sinchronizacija**“, kad duomenys būtų įkelti iš naujo.
+- „**Išvalyti žurnalą**“ – išvalyti Tidepool ekrane rodomą žurnalą.
 
-![The Tidepool screen and its buttons](../images/v4/Tidepool/tidepool_menu.png)
+![Tidepool ekranas ir jo mygtukai](../images/v4/Tidepool/tidepool_menu.png)
 
-In Tidepool, the data uploaded by **AAPS** 4 is shown under the device name **AAPS**. See [What changed in AAPS v4](#v4changes-tidepool) if you used Tidepool with an older version. 
+Tidepool sistemoje **AAPS** 4 įkelti duomenys rodomi su įrenginio pavadinimu **AAPS**. Jei Tidepool naudojote su senesne versija, žr. [Kas pasikeitė AAPS v4](#v4changes-tidepool). 
