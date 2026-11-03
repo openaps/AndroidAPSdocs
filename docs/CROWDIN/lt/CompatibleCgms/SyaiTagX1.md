@@ -7,9 +7,9 @@
 
 -   Start X1 sensor
 
-- Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Skiltyje [**Konfigūracija → Glikemijos šaltinis**](#Config-Builder-bg-source) pasirinkite **Syai/Ottai**.
 
-Enable broadcast in the Syai app:
+Įjunkite transliaciją Syai programėlėje:
 
 1. Select Profile
 2. Syai Health Ecosystem
