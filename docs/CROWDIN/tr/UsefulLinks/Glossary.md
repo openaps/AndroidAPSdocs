@@ -1,151 +1,151 @@
 # Sözlük
 
-**AAPS** = AndroidAPS is the name of the Android app.
+**AAPS** = AndroidAPS, Android uygulamasının adıdır.
 
-**AAPSClient** = the follower app for caregivers. On a follower phone it follows a user’s **AAPS** through the user’s **Nightscout** site and, once paired with the **AAPS** phone, controls it remotely. Not to be confused with **NSClient**. Further info → [Wiki - 'The AAPSClient app'](../RemoteFeatures/AapsClient.md) and [Master ↔ Client control](#client-master-control).
+**AAPSClient** = bakım verenler için takipçi uygulaması. Takipçi telefonda kullanıcının **AAPS**'ini, kullanıcının **Nightscout** sitesi üzerinden takip eder. **AAPS** telefonuyla eşleştirildikten sonra onu uzaktan da kontrol eder. **NSClient** ile karıştırılmamalıdır. Daha fazla bilgi → [Wiki - 'AAPSClient uygulaması'](../RemoteFeatures/AapsClient.md) ve [Ana birim ↔ İstemci kontrolü](#client-master-control).
 
-**Activity** = Insulin activity, representing the speed of decay of IOB. See [Wiki - 'DIA'](#Config-Builder-insulin-dia) and the related **BGI**.
+**Aktivite** (activity) = insülin aktivitesi; AİNS'in azalma hızını gösterir. Bkz. [Wiki - 'İES'](#Config-Builder-insulin-dia) ve ilgili **BGI**.
 
-**AID** = Automated Insulin Delivery. The term generally used in clinical practice and research for a system which automatically adjusts insulin delivery using **CGM** data. **APS** and **closed loop** mean the same thing → see also **OS-AID**.
+**AID** = Automated Insulin Delivery (otomatik insülin iletimi). Klinik uygulamada ve araştırmalarda, **CGM** verilerini kullanarak insülin iletimini otomatik olarak ayarlayan sistemler için genel olarak kullanılan terim. **APS** ve **kapalı döngü** aynı anlama gelir → ayrıca bkz. **OS-AID**.
 
-**APS** = Artificial Pancreas System → see also **AID**.
+**APS** = Artificial Pancreas System (yapay pankreas sistemi) → ayrıca bkz. **AID**.
 
-**AMA** = Advanced Meal Assist. An algorithm which allows **AAPS** to increase the user’s basal more aggressively after a meal bolus. Further info → [Wiki - 'Advanced Meal Assist (AMA)'](#Open-APS-features-advanced-meal-assist-ama).
+**AMA** = Advanced Meal Assist (Gelişmiş Öğün Yardımı). Yemek bolusundan sonra **AAPS**'in kullanıcının bazalını daha agresif artırmasını sağlayan bir algoritma. Daha fazla bilgi → [Wiki - 'Gelişmiş Öğün Yardımı (AMA)'](#Open-APS-features-advanced-meal-assist-ama).
 
-**Adjustment Factor** = used within **DynamicISF** and is a value set within a user's **Settings** between 1% and 300%. This acts as a multiplier on the **TDD** value. See [Wiki - DynamicISF adjustment factor](#dyn-isf-adjustment-factor)
+**Ayarlama faktörü** (adjustment factor) = **Dinamik İDF** içinde kullanılır. Kullanıcının **Ayarlar** bölümünde %1 ile %300 arasında belirlenen bir değerdir. Bu, **GTD** değeri üzerinde bir çarpan olarak etki eder. Bkz. [Wiki - Dinamik İDF ayarlama faktörü](#dyn-isf-adjustment-factor)
 
-**Android Auto** = a system used to host certain functions of an Android smartphone’s features, including **AAPS**, within a car's display. Further info → [Wiki - 'android auto'](../RemoteFeatures/AndroidAuto.md).
+**Android Auto** = Android akıllı telefonun bazı özelliklerini, **AAPS** de dahil, arabanın ekranında gösteren bir sistem. Daha fazla bilgi → [Wiki - 'Android Auto'](../RemoteFeatures/AndroidAuto.md).
 
-**APK** = Android application Package. A software installation file. Further info → [Wiki - 'Building APK'](../SettingUpAaps/BuildingAaps.md).
+**APK** = Android application Package (Android uygulama paketi). Bir yazılım yükleme dosyası. Daha fazla bilgi → [Wiki - 'APK oluşturma'](../SettingUpAaps/BuildingAaps.md).
 
-**Autosens** = calculation of sensitivity to insulin over a 24-hour and an 8-hour window etc. Further info → [DIABETTECH - **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
+**Autosens** (uygulamada Otoduyarlılık) = insüline duyarlılığın 24 saatlik ve 8 saatlik zaman aralığında vb. hesaplanması. Daha fazla bilgi → [DIABETTECH - **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
-**Azure** = cloud computing platform to host **Nightscout** web app → see also **Nightscout**.
+**Azure** = **Nightscout** web uygulamasını barındırmak için bir bulut bilişim platformu → ayrıca bkz. **Nightscout**.
 
-**BAT** = status light for low pump battery, shown in the status row of **AAPS'** main screen → see also **CAN** / **RES** / **SEN**.
+**BAT** = düşük pompa pili için durum ışığı. **AAPS** ana ekranının durum satırında gösterilir → ayrıca bkz. **CAN** / **RES** / **SEN**.
 
-**BG** = blood glucose.
+**BG** (uygulamada KŞ) = blood glucose (kan şekeri).
 
-**BGI** = blood glucose impact. The degree to which **BG** 'should' rise or fall based on insulin activity alone.
+**BGI** = blood glucose impact (uygulamada Kan Şekeri Etkisi). **KŞ**'nin yalnızca insülin aktivitesine göre ne kadar yükselmesi veya düşmesi 'gerektiği'.
 
-**BG source** = An AAPS setting for configuring the source for blood glucose data. See [Wiki - BG Source](#Config-Builder-bg-source)
+**KŞ kaynağı** (BG source) = kan şekeri verilerinin kaynağını yapılandırmak için bir AAPS ayarı. Bkz. [Wiki - KŞ kaynağı](#Config-Builder-bg-source)
 
-**Bridge** = an additional device transforming **FGM** to **CGM**.
+**Köprü** (bridge) = **FGM**'yi **CGM**'ye dönüştüren ek bir cihaz.
 
-**BR** = Basal Rate. The amount of insulin in a given time block to maintain **BG** at a stable level. → see also **IC** / **ISF**.
+**BR** = Basal Rate (bazal oran). **KŞ**'yi sabit bir düzeyde tutmak için belirli bir zaman diliminde verilen insülin miktarı. → ayrıca bkz. **IC** / **ISF**.
 
-**BYODA** = Build Your Own Dexcom App. A way to generate the user’s own Dexcom App for reading out the sensor data Dexcom G6.
+**BYODA** = Build Your Own Dexcom App (kendi Dexcom uygulamanızı oluşturun). Kullanıcının Dexcom G6 sensör verilerini okumak için kendi Dexcom uygulamasını oluşturma yöntemi.
 
-**CAGE** = Cannula AGE. Displayed on **AAPS'** main screen and in Nightscout, based on the user's **Prime/Fill** careportal entries → see also **Nightscout**.
+**CAGE** = Cannula AGE (kanül yaşı). Kullanıcının **Hazırla/doldur** careportal kayıtlarına göre **AAPS** ana ekranında ve Nightscout'ta gösterilir → ayrıca bkz. **Nightscout**.
 
-**CAN** = status light for overdue cannula change, shown in the status row of **AAPS'** main screen → see also **BAT** / **RES** / **SEN**.
+**CAN** = zamanı geçmiş kanül değişimi için durum ışığı. **AAPS** ana ekranının durum satırında gösterilir → ayrıca bkz. **BAT** / **RES** / **SEN**.
 
-**CGM** = Continuous Glucose Monitor → see also **FGM**.
+**CGM** = Continuous Glucose Monitor (sürekli glikoz monitörü) → ayrıca bkz. **FGM**.
 
-**Closed Loop** = a closed loop system which makes automatic adjustments to the user’s basal delivery based on an **AAPS’s** algorithm and the user’s **Profile** settings without requiring the user’s approval. Further info → [Wiki - 'closed loop'](#KeyAapsFeatures-ClosedLoop) and see also **HCL** / **FCL**.
+**Kapalı döngü** (closed loop) = kullanıcının onayını gerektirmeden, **AAPS** algoritmasına ve kullanıcının **Profil** ayarlarına göre bazal iletimini otomatik olarak ayarlayan bir kapalı döngü sistemi. Daha fazla bilgi → [Wiki - 'kapalı döngü'](#KeyAapsFeatures-ClosedLoop) ve ayrıca bkz. **HCL** / **FCL**.
 
-**COB** = Carbs On Board. This is the amount of carbohydrates currently available for the user's digestion → see also IOB.
+**COB** (uygulamada AKRB) = Carbs On Board (aktif karbonhidrat). Bu, kullanıcının sindirimi için şu anda mevcut olan karbonhidrat miktarıdır → ayrıca bkz. IOB.
 
-**CSF** =Carbs Sensitivity Factor. i.e. how much does the user’s **BG** increase for 1g of carbs absorbed.
+**CSF** = Carbs Sensitivity Factor (karbonhidrat duyarlılık faktörü). Yani emilen 1 g karbonhidratın kullanıcının **KŞ**'sini ne kadar yükselttiği.
 
-**DIA** = Duration of Insulin Action. Further info → [Wiki - 'DIA'](#Config-Builder-insulin-dia) and see also → [DIABETTECH - 'DIA'](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/).
+**DIA** (uygulamada İES) = Duration of Insulin Action (insülin etki süresi). Daha fazla bilgi → [Wiki - 'İES'](#Config-Builder-insulin-dia) ve ayrıca bkz. → [DIABETTECH - 'DIA'](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/).
 
-**DST** = Daylight Saving Time. See [Wiki - Timezone Change and Daylight Saving](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
+**DST** = Daylight Saving Time (yaz saati uygulaması). Bkz. [Wiki - Saat dilimi değişikliği ve yaz saati uygulaması](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md).
 
-**Dynamic ISF (or DynISF)** = a feature within **AAPS** that adapts the insulin sensitivity factor (**ISF**) dynamically based on the user’s **TDD** and **BG**.
+**Dinamik İDF (Dynamic ISF veya DynISF)** = kullanıcının **GTD** ve **KŞ** değerlerine göre insülin duyarlılık faktörünü (**İDF**) dinamik olarak uyarlayan bir **AAPS** özelliği.
 
-**eCarbs** = extended Carbs. Carbs split up over several hours (e.g. to cover fat/protein), which lets **AAPS** spread the insulin like an extended bolus. Further info → [Wiki - 'Extended Carbs'](../DailyLifeWithAaps/ExtendedCarbs.md)
+**eCarbs** (uygulamada yKarb) = extended Carbs (yayma karbonhidrat). Birkaç saate yayılmış karbonhidratlar (örneğin yağ/protein için). Bu, **AAPS**'in insülini yayma bolus gibi dağıtmasını sağlar. Daha fazla bilgi → [Wiki - 'Yayma karbonhidratlar'](../DailyLifeWithAaps/ExtendedCarbs.md)
 
-**FCL** = Full Closed Loop. A loop which needs no mealtime input from the user: no carb counting and no meal bolus. Further info → [Wiki - 'full closed loop'](../AdvancedOptions/FullClosedLoop.md) and see also **HCL**.
+**FCL** = Full Closed Loop (tam kapalı döngü). Kullanıcıdan yemek zamanı girişi gerektirmeyen bir döngü: karbonhidrat sayımı yok, yemek bolusu yok. Daha fazla bilgi → [Wiki - 'tam kapalı döngü'](../AdvancedOptions/FullClosedLoop.md) ve ayrıca bkz. **HCL**.
 
-**FGM** = Flash Glucose Monitor such as the Abbott Freestyle Libre. Further info → [Wiki - 'BG source'](#Config-Builder-bg-source) and see also 'CGM'.
+**FGM** = Flash Glucose Monitor (flaş glikoz monitörü), örneğin Abbott Freestyle Libre. Daha fazla bilgi → [Wiki - 'KŞ kaynağı'](#Config-Builder-bg-source) ve ayrıca bkz. 'CGM'.
 
-**git** = a tool used to store and download the **AAPS’** source code.
+**git** = **AAPS** kaynak kodunu saklamak ve indirmek için kullanılan bir araç.
 
-**GitHub** = a web-based service that hosts the **AAPS** source code and its version control (tracking changes in files and coordinating work on them, especially for teams), and can also build the app. It is also necessary for **APK** updates. Further info → [Wiki - 'update APK'](../Maintenance/UpdateToNewVersion.md).
+**GitHub** = **AAPS** kaynak kodunu ve sürüm kontrolünü (dosyalardaki değişiklikleri izleme ve özellikle ekipler için bu dosyalar üzerindeki çalışmayı düzenleme) barındıran web tabanlı bir hizmet. Uygulamayı da oluşturabilir. **APK** güncellemeleri için de gereklidir. Daha fazla bilgi → [Wiki - 'APK güncelleme'](../Maintenance/UpdateToNewVersion.md).
 
-**Glimp** = an app to collect values from Freestyle Libre.
+**Glimp** = Freestyle Libre'den değerleri toplayan bir uygulama.
 
-**HCL (or Hybrid Closed Loop)** = a loop which automates insulin delivery between meals, but still requires the user to bolus for meals. Nearly every system in everyday use, including **AAPS**, is a hybrid closed loop → see also **FCL** / **Closed Loop**.
+**HCL (Hybrid Closed Loop, hibrit kapalı döngü)** = öğün aralarında insülin iletimini otomatik yapan, ancak öğünler için kullanıcının yine de bolus yapmasını gerektiren bir döngü. Günlük kullanımdaki sistemlerin neredeyse tamamı, **AAPS** de dahil, hibrit kapalı döngüdür → ayrıca bkz. **FCL** / **Kapalı döngü**.
 
-**IC (I:C, ICR, CR, carb ratio)** = Insulin to Carb ratio. Note that this is conventionally g/U despite the acronym suggesting inverse.
+**IC (I:C, ICR, CR, carb ratio)** = Insulin to Carb ratio (uygulamada Karbonhidrat İnsülin Oranı). Kısaltma tersini düşündürse de bu değer geleneksel olarak g/Ü birimindedir.
 
-**IOB** = Insulin On Board. Insulin active in the user’s body. See [Wiki - Insulin on Board](#aaps-screens-iob)
+**IOB** (uygulamada AİNS) = Insulin On Board (aktif insülin). Kullanıcının vücudunda etkin olan insülin. Bkz. [Wiki - Aktif İnsülin (AİNS)](#aaps-screens-iob)
 
-**ISF** = Insulin Sensitivity Factor. The expected decrease in BG as a result of one unit of insulin. Unit is either mg/dL/U or mmol/L/U. These are not equivalent without a conversion!
+**ISF** (uygulamada İDF) = Insulin Sensitivity Factor (insülin duyarlılık faktörü). Bir ünite insülinin sonucunda KŞ'de beklenen düşüş. Birim mg/dL/Ü veya mmol/L/Ü'dir. Bunlar dönüştürme yapılmadan birbirine eşit değildir!
 
-**Keystore (or JKS)** = a Java Key Store which is an encrypted file where your personal developer certificates and keys will be stored required for your **AAPS'** build (and rebuild).
+**Anahtar deposu (keystore veya JKS)** = Java Key Store; **AAPS** oluşturmanız (ve yeniden oluşturmanız) için gereken kişisel geliştirici sertifikalarınızın ve anahtarlarınızın saklandığı şifrelenmiş bir dosya.
 
-**LGS** = Low Glucose Suspend. See [Wiki - Low Glucose Suspend](#KeyAapsFeatures-LGS)
+**LGS** = Low Glucose Suspend (Düşük Glikoz Duraklatma). Bkz. [Wiki - Düşük Glikoz Duraklatma](#KeyAapsFeatures-LGS)
 
-**LineageOS** = free and open-source operating system for smartphones etc. When using Accu-Chek Combo see [Wiki - Combo pump](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md).
+**LineageOS** = akıllı telefonlar vb. için ücretsiz ve açık kaynaklı işletim sistemi. Accu-Chek Combo kullanıyorsanız bkz. [Wiki - Combo pompası](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md).
 
-**Log files** = **AAPS’** records of the user's actions (useful for troubleshooting and debugging). Further info → [Wiki - 'log files'](../GettingHelp/AccessingLogFiles.md).
+**Günlük dosyaları** (log files) = **AAPS**'in kullanıcının işlemlerine ait kayıtları (sorun giderme ve hata ayıklama için faydalıdır). Daha fazla bilgi → [Wiki - 'günlük dosyaları'](../GettingHelp/AccessingLogFiles.md).
 
-**maxIOB** = maximum total IOB. This is a safety feature and prevents **AAPS** delivering insulin over the user’s settings. Further info → [Wiki - 'Maximum total IOB OpenAPS can’t go over'](#Open-APS-features-maximum-total-iob-openaps-cant-go-over).
+**maxIOB** = maksimum toplam AİNS (IOB). Bu bir güvenlik özelliğidir ve **AAPS**'in kullanıcının ayarlarının üzerinde insülin vermesini önler. Daha fazla bilgi → [Wiki - 'OpenAPS'in aşamayacağı maksimum toplam AİNS'](#Open-APS-features-maximum-total-iob-openaps-cant-go-over).
 
-**min_5m_carbimpact** = safety feature that is a calculation of default carb decay when carb absorption cannot be determined based on the user’s blood’s reactions. Further info → [Wiki - 'min_5m_carbimpact'](#Preferences-min_5m_carbimpact).
+**min_5m_carbimpact** = karbonhidrat emilimi kullanıcının kanının tepkilerine göre belirlenemediğinde, varsayılan karbonhidrat azalmasını hesaplayan bir güvenlik özelliği. Daha fazla bilgi → [Wiki - 'min_5m_carbimpact'](#Preferences-min_5m_carbimpact).
 
-**Nightscout** = open source project to access and report **CGM** data. The central data hub for the user’s **AAPS** data and can generate reports to view the user’s historical **Nightscout** data, such as expected HbA1c, time in range or search for patterns in the data via percentile chart etc.
+**Nightscout** = **CGM** verilerine erişmek ve bunları raporlamak için açık kaynaklı bir proje. Kullanıcının **AAPS** verileri için merkezi veri noktasıdır. Kullanıcının geçmiş **Nightscout** verilerini görmek için raporlar oluşturabilir; örneğin tahmini HbA1c, hedef aralıktaki süre veya yüzdelik grafiğiyle verilerde örüntü arama vb.
 
-**Nightscout** → see also **Nightscout Reporter**. This is particularly useful for parents following their child's diabetes management.
+**Nightscout** → ayrıca bkz. **Nightscout Reporter**. Bu, özellikle çocuklarının diyabet yönetimini takip eden ebeveynler için faydalıdır.
 
-**Nightscout Reporter Tool** = a tool which generates PDFs reports from Nightscout web app data. See 'Nightscout Reporter', 'NS Reporter' @ Facebook.
+**Nightscout Reporter Tool** = Nightscout web uygulamasının verilerinden PDF raporları oluşturan bir araç. Bkz. Facebook'ta 'Nightscout Reporter', 'NS Reporter'.
 
-**NSClient** (**NSClientV3**) = the **AAPS** plugin that synchronizes data with **Nightscout** (**Configuration** → **Communication**). It is not the same as **AAPSClient**, the follower app. Further info → [Wiki - 'NSClient'](#Preferences-nsclient).
+**NSClient** (**NSClientV3**) = **Nightscout** ile veri senkronize eden **AAPS** eklentisi (**Konfigürasyon** → **İletişim**). Takipçi uygulaması olan **AAPSClient** ile aynı şey değildir. Daha fazla bilgi → [Wiki - 'NSClient'](#Preferences-nsclient).
 
-**OpenAPS** = Open Artificial Pancreas System, the predecessor project and basis of AAPS.
+**OpenAPS** = Open Artificial Pancreas System (açık yapay pankreas sistemi); AAPS'in öncülü olan proje ve AAPS'in temeli.
 
-**Open Loop system** = an **AAPS** feature that will recommend adjustments and which must be performed manually by the user on **AAPS**. Further info → [Wiki - 'Open Loop'](#KeyAapsFeatures-OpenLoop).
+**Açık döngü sistemi** (open loop) = ayarlamalar öneren bir **AAPS** özelliği. Bu ayarlamaları kullanıcının **AAPS** üzerinde elle yapması gerekir. Daha fazla bilgi → [Wiki - 'Açık döngü'](#KeyAapsFeatures-OpenLoop).
 
-**Oref0 / Oref1** = sensitivity detection and "reference design implementation version 0/1". It is the key algorithm behind OpenAPS. Further info → [Wiki - 'sensitivity detection'](../DailyLifeWithAaps/SensitivityDetectionAndCob.md).
+**Oref0 / Oref1** = duyarlılık algılama ve "referans tasarım uygulaması sürüm 0/1" (reference design implementation version 0/1). OpenAPS'in arkasındaki temel algoritmadır. Daha fazla bilgi → [Wiki - 'duyarlılık algılama'](../DailyLifeWithAaps/SensitivityDetectionAndCob.md).
 
-**OS-AID** = Open-Source Automated Insulin Delivery. An **AID** system built from open-source software, such as **AAPS**, **OpenAPS**, Loop or Trio. These systems are not formally approved by health bodies (FDA, NHS etc.) → see also **AID**.
+**OS-AID** = Open-Source Automated Insulin Delivery (açık kaynak otomatik insülin iletimi). **AAPS**, **OpenAPS**, Loop veya Trio gibi açık kaynaklı yazılımlarla oluşturulmuş bir **AID** sistemi. Bu sistemler sağlık kuruluşları (FDA, NHS vb.) tarafından resmi olarak onaylanmamıştır → ayrıca bkz. **AID**.
 
-**Peak time** = time of maximum effect of insulin given. Further info → [Wiki - 'Duration of insulin action (DIA) and peak'](#Config-Builder-insulin-dia).
+**Tepe zamanı** (peak time) = verilen insülinin en yüksek etkiyi gösterdiği zaman. Daha fazla bilgi → [Wiki - 'İnsülin etki süresi (İES) ve tepe'](#Config-Builder-insulin-dia).
 
-**PH** = Pump History. This can be accessed in **AAPS’** treatments history: open the **menu** (☰) at the top left of the main screen and select **Treatments**.
+**PH** = Pump History (pompa geçmişi). Buna **AAPS** tedavi geçmişinden ulaşabilirsiniz: ana ekranın sol üstündeki **menüyü** (☰) açın ve **Tedaviler** seçeneğini seçin.
 
-**Predictions** = predictions for **BG** in the future based on different calculations. Further info → [Wiki - 'prediction lines'](#aaps-screens-prediction-lines).
+**Tahminler** (predictions) = farklı hesaplamalara dayanarak gelecekteki **KŞ** tahminleri. Daha fazla bilgi → [Wiki - 'tahmin çizgileri'](#aaps-screens-prediction-lines).
 
-**Profile** = the user’s basic treatment settings (basal rate, **DIA**, **IC**, **ISF**, **BG** target). **AAPS** only uses profiles created within **AAPS** (**Manage** → **Profile**), but **Nightscout** **Profiles** can be copied (synchronised) to **AAPS**. Further info → [Wiki - 'Your AAPS profile'](../SettingUpAaps/YourAapsProfile.md).
+**Profil** (profile) = kullanıcının temel tedavi ayarları (bazal oran, **İES**, **IC**, **İDF**, **KŞ** hedefi). **AAPS** yalnızca **AAPS** içinde oluşturulan profilleri kullanır (**Yönet** → **Profil**), ancak **Nightscout** **profilleri** **AAPS**'e kopyalanabilir (senkronize edilebilir). Daha fazla bilgi → [Wiki - 'AAPS profiliniz'](../SettingUpAaps/YourAapsProfile.md).
 
-**Profile switch** = (temporary) switch of the user’s **Profile** to a different **Profile** saved within **AAPS**.
+**Profil değişimi** (profile switch) = kullanıcının **Profilinin**, **AAPS** içinde kayıtlı başka bir **Profile** (geçici olarak) değiştirilmesi.
 
-**Profile Percentage** = a (temporary) percentage increase or decrease applied to a user’s **Profile** for a selected time period.
+**Profil yüzdesi** (profile percentage) = seçilen bir süre için kullanıcının **Profiline** uygulanan (geçici) yüzde artış veya azalış.
 
-**RES** = status light for overdue reservoir change, shown in the status row of **AAPS'** main screen → see also **BAT** / **CAN** / **SEN**.
+**RES** = zamanı geçmiş rezervuar değişimi için durum ışığı. **AAPS** ana ekranının durum satırında gösterilir → ayrıca bkz. **BAT** / **CAN** / **SEN**.
 
-**RileyLink** = open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication.
+**RileyLink** = Bluetooth Low Energy (BLE) ile 916 MHz (eski Medtronic pompaları için) veya 433 MHz (Omnipod Eros pompaları için) kablosuz iletişim arasında köprü kuran açık kaynaklı bir donanım cihazı.
 
-**SAGE** = sensor age. This is displayed on the main screen of **AAPS** and in **Nightscout**, based on the user's **Sensor Insert** careportal entries → see also **Nightscout**.
+**SAGE** = sensor age (sensör yaşı). Kullanıcının **Sensör yerleştirme** careportal kayıtlarına göre **AAPS** ana ekranında ve **Nightscout**'ta gösterilir → ayrıca bkz. **Nightscout**.
 
-**SEN** = status light for overdue sensor change, shown in the status row of **AAPS'** main screen → see also **BAT** / **CAN** / **RES**.
+**SEN** = zamanı geçmiş sensör değişimi için durum ışığı. **AAPS** ana ekranının durum satırında gösterilir → ayrıca bkz. **BAT** / **CAN** / **RES**.
 
-**Sensitivity detection** = calculation of sensitivity to insulin as a result of exercise, hormones etc. see also → [DIABETTECH - 'Autosens'](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
+**Duyarlılık algılaması** (sensitivity detection) = egzersiz, hormonlar vb. sonucunda insüline duyarlılığın hesaplanması. ayrıca bkz. → [DIABETTECH - 'Autosens'](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
-**Sensor noise** = a term used to describe the unstable **CGM’s** readings leading to "jumping" **BG** values. Further info → [Wiki - 'Smoothing blood glucose data'](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+**Sensör gürültüsü** (sensor noise) = **CGM** okumalarının kararsız olmasını ve "zıplayan" **KŞ** değerlerini tanımlamak için kullanılan bir terim. Daha fazla bilgi → [Wiki - 'Kan şekeri verilerini yumuşatma'](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
-**SMB** = Super Micro Bolus. An **AAPS** feature for faster insulin delivery in order to adjust **BG**. Further info → [Wiki - '**SMB**'](#Open-APS-features-super-micro-bolus-smb) and see also **UAM**.
+**SMB** = Super Micro Bolus (Süper Mikro Bolus). **KŞ**'yi düzeltmek için insülini daha hızlı veren bir **AAPS** özelliği. Daha fazla bilgi → [Wiki - '**SMB**'](#Open-APS-features-super-micro-bolus-smb) ve ayrıca bkz. **UAM**.
 
-**Super bolus** = shift of basal to bolus insulin for faster **BG** adjustment.
+**Süperbolus** (super bolus) = **KŞ**'yi daha hızlı düzeltmek için bazal insülinin bolusa kaydırılması.
 
-**TBB** = total base basal (sum of basal rate within 24 hours) → see also **TBR** / **TDD**.
+**TBB** = total base basal (toplam temel bazal: 24 saat içindeki bazal oranlarının toplamı) → ayrıca bkz. **TBR** / **TDD**.
 
-**TBR** = temporary basal rate → see also **TBB** / **TDD**.
+**TBR** (uygulamada GBO) = temporary basal rate (geçici bazal oranı) → ayrıca bkz. **TBB** / **TDD**.
 
-**TDD** = total daily dose (bolus + basal per day) → see also **TBB** / **TBR**.
+**TDD** (uygulamada GTD) = total daily dose (günlük toplam doz: günlük bolus + bazal) → ayrıca bkz. **TBB** / **TBR**.
 
-**TT** = temporary target: temporary increase/decrease of the user’s **BG** target (range) e.g. for eating or sport activities. Further info → [Wiki - 'temp targets'](../DailyLifeWithAaps/TempTargets.md).
+**TT** (uygulamada GH) = temporary target (geçici hedef): kullanıcının **KŞ** hedefinin (aralığının) örneğin yemek veya spor için geçici olarak yükseltilmesi veya düşürülmesi. Daha fazla bilgi → [Wiki - 'geçici hedefler'](../DailyLifeWithAaps/TempTargets.md).
 
-**UAM** = unannounced meals. Detection of significant increase in **BG** levels due to meals, adrenaline or other influences and attempt to adjust this. Further info → [Wiki - 'UAM'](#enable-uam) and see also **SMB**.
+**UAM** = unannounced meals (bildirilmemiş öğünler). Yemek, adrenalin veya diğer etkiler nedeniyle **KŞ** düzeyindeki belirgin artışın algılanması ve buna göre ayarlama yapılması girişimi. Daha fazla bilgi → [Wiki - 'UAM'](#enable-uam) ve ayrıca bkz. **SMB**.
 
-**Virtual pump** = an **AAPS** feature which allows the user to try **AAPS’** functions, or lets PWD whose pump model has no **AAPS** driver use **AAPS** as an open loop → see also **Open Loop**.
+**Sanal pompa** (virtual pump) = bir **AAPS** özelliği. Kullanıcının **AAPS** işlevlerini denemesini sağlar ya da pompa modeli için **AAPS** sürücüsü olmayan diyabetli kişilerin (PWD) **AAPS**'i açık döngü olarak kullanmasına imkân verir → ayrıca bkz. **Açık döngü**.
 
-**Wallpaper** = **AAPS** background image see phones page.
+**Duvar kağıdı** (wallpaper) = **AAPS** arka plan resmi, bkz. telefonlar sayfası.
 
-**xDrip** = open source software to read **CGM** systems.
+**xDrip** = **CGM** sistemlerini okumak için açık kaynaklı yazılım.
 
-**Zero-temp** = temporary basal rate with 0% (no basal insulin delivery).
+**Sıfır geçici bazal** (zero-temp) = %0 geçici bazal oranı (bazal insülin verilmez).
 
-→ see also [the OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html)
+→ ayrıca bkz. [OpenAPS dokümantasyonu](https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html)
