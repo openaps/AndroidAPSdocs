@@ -1,14 +1,14 @@
 <!-- Android Studio Build, FKA Computer Build. Preserve filenames to avoid breaking URLs. -->
 
-# Android Studio Build
+# בנייה ב-Android Studio
 
-This is the traditional method to build your AAPS app.
+זוהי השיטה המסורתית לבניית אפליקציית AAPS.
 
-You can build the app without a computer using the [Browser Build](./BrowserBuild.md) method.
+ניתן לבנות את האפליקציה גם בלי מחשב, בשיטת [בנייה בדפדפן](./BrowserBuild.md).
 
 ## בנייה עצמית במקום הורדה
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. בנייה עצמית של היישום לשימוש אישי הינה חוקית אך אסור לתת את היישום לאחרים!**
+**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. בנייה עצמית של האפליקציה לשימוש אישי הינה חוקית אך אסור לתת את האפליקציה לאחרים!**
 
 See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
@@ -23,15 +23,15 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 | ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
 | 2.6.2                   | 3.6.1                                                |                                                        | 5.6.4  | 11  |
 | 2.8.2.1                 | 4.1.1                                                |                                                        | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                             | tested up to Quail 4                                   | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                  | tested up to Quail 4                                   | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                      | tested up to Quail 4                                   | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                   | tested up to Quail 4                                   | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                   | tested up to Quail 4                                   | 8.13   | 21  |
-| [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                   | tested up to Quail 4                                   | 9      | 21  |
-| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                  | Latest                                                 | 9.8    | 21  |
+| [3.1.0.3](#version3100) | 2020.3.1                                             | נבדק עד Quail 4                                        | 7.3.3  | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                  | נבדק עד Quail 4                                        | 8.2    | 17  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                      | נבדק עד Quail 4                                        | 8.10   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                   | נבדק עד Quail 4                                        | 8.11.1 | 21  |
+| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                   | נבדק עד Quail 4                                        | 8.13   | 21  |
+| [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                   | נבדק עד Quail 4                                        | 9      | 21  |
+| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                  | העדכנית ביותר                                          | 9.8    | 21  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+The "preferred version" is packaged with the appropriate JVM version. הגרסה המועדפת היא גם הגרסה המינימלית שניתן להשתמש בה לבניית **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. ראו את הדף [פתרון תקלות ב-Android Studio](#troubleshooting_androidstudio-uncommitted-changes) לעזרה בפתרון הבעיות האלה. If your current Android Studio version is not listed in the table, you must update it first.
 
 The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
 
@@ -41,27 +41,27 @@ The Gradle version is linked to the source code, you will always get the correct
 <tbody>
   <tr>
     <th class="tg-baqh">OS (Only 64 bit)</th>
-    <td class="tg-baqh">Windows 10 or higher</td>
-    <td class="tg-baqh">macOS 12 or higher</td>
-    <td class="tg-baqh">Any Linux distribution that supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 or later</td>
+    <td class="tg-baqh">Windows 10 ומעלה</td>
+    <td class="tg-baqh">macOS 12 ומעלה</td>
+    <td class="tg-baqh">כל הפצת Linux שתומכת ב-Gnome, KDE או Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 ומעלה</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">virtualization support</a> (Intel VT-x or AMD-V) enabled in the BIOS</td>
-    <td class="tg-baqh">Apple Silicon (M1 or newer), or 6th generation Intel Core or newer (support for Intel Macs is being phased out)</td>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with virtualization support (Intel VT-x or AMD-V) enabled in the BIOS</td>
+    <td class="tg-baqh">מעבד x86_64 משנת 2017 ואילך (Intel Core i5 דור 8, AMD Ryzen, או חדש יותר) עם <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">תמיכה בווירטואליזציה</a> (Intel VT-x או AMD-V) מופעלת ב-BIOS</td>
+    <td class="tg-baqh">Apple Silicon (M1 ומעלה), או Intel Core דור 6 ומעלה (התמיכה במחשבי Mac עם Intel מופסקת בהדרגה)</td>
+    <td class="tg-baqh">מעבד x86_64 משנת 2017 ואילך (Intel Core i5 דור 8, AMD Ryzen, או חדש יותר) עם תמיכה בווירטואליזציה (Intel VT-x או AMD-V) מופעלת ב-BIOS</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">16GB or more (8GB is the strict minimum for Android Studio alone, 32GB is recommended)</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16GB או יותר (8GB הוא המינימום המוחלט עבור Android Studio לבדו, מומלץ 32GB)</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 32GB free space. SSD is recommended.</td>
+    <td class="tg-baqh" colspan="3"><p align="center">לפחות 32GB של מקום פנוי. SSD is recommended.</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Resolution</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 minimum (1920 x 1080 recommended)<br></td>
+    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 לפחות (מומלץ 1920 x 1080)<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
@@ -74,7 +74,7 @@ The Gradle version is linked to the source code, you will always get the correct
 
 ## Help and support during the building process
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md) section, please consult that first.
+אם נתקלים בקשיים בתהליך בניית אפליקציית **AAPS**, יש סעיף ייעודי של [**פתרון תקלות ב-Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md). עיינו בו תחילה.
 
 If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
@@ -93,7 +93,7 @@ Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)
 
 In this guide you will find _example_ screenshots of building of **AAPS** apk file. Because  **Android Studio** - the software which we use to build the **AAPS** apk - is regularly updated, these screenshots may not be identical to your installation, but they should still be possible to follow.
 
-Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
+מכיוון ש-**Android Studio** פועל ב-Windows, ב-Mac OS X וב-Linux, ייתכנו גם הבדלים קטנים בשלבים בין המערכות השונות.
 
 (install-git-if-you-dont-have-it)=
 ### Install Git
@@ -102,18 +102,18 @@ Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there mi
 :class: dropdown
 
 Git is known as a “_Versioning Control System_” (VCS).\
-Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
+Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. לאחר מכן תשתמשו ב-Android Studio במחשב כדי לבנות את אפליקציית **AAPS** (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
 #### Steps for Installing Git
 
-1.  Check that you don’t already have **Git** installed. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
+1.  Check that you don’t already have **Git** installed. ניתן לעשות זאת בהקלדת “git” בסרגל החיפוש של Windows. אם אתם רואים **“Git bash”** או צורה אחרת של Git, הוא כבר מותקן ותוכלו לעבור ישירות ל[התקנת Android Studio](#Building-APK-install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Any recent Git version should work, select the correct version according to your system, either Mac, Windows and Linux.
+2. אם Git אינו מותקן אצלכם, הורידו והתקינו את הגרסה העדכנית ביותר למערכת שלכם מסעיף "Download" [**כאן**](https://git-scm.com/downloads). Any recent Git version should work, select the correct version according to your system, either Mac, Windows and Linux.
 
 **Note for Mac users:** the Git webpage will also guide you to install an additional program called "homebrew" to aid the installation. If you install Git via homebrew, there is no need to change any preferences.
 
@@ -134,14 +134,14 @@ Git is a program that allows you to track changes in code and to collaborate wit
 
 ```{admonition} What is Android Studio?
 :class: dropdown
-Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes. 
+Android Studio is a program which runs on your computer. הוא מאפשר להוריד קוד מקור מהאינטרנט (באמצעות Git) ולבנות אפליקציות לטלפון חכם (ולשעון חכם). לא ניתן "לקלקל" גרסה נוכחית של **AAPS** שמפעילה לולאה בטלפון חכם באמצעות בניית אפליקציה חדשה או מעודכנת במחשב עם Android Studio. אלה תהליכים נפרדים לחלוטין. 
 ```
 
 One of the most important things when installing Android Studio is **be patient!** During installation and setup, Android Studio is downloading a lot of stuff which will take time.
 
 ```{admonition} Different UI
 :class: warning
-Important note: Android Studio changed its UI during the last releases. This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
+הערה חשובה: Android Studio שינה את הממשק שלו בגרסאות האחרונות. המדריך הזה מציג את השלבים עם *הממשק החדש*. צילומי המסך צולמו עם "Ladybug", ולכן גרסאות חדשות יותר עשויות להיראות מעט שונה. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
 ```
 
 The Android studio version is very important. See the [instructions above](#Building-APK-recommended-specification-of-computer-for-building-apk-file) to pick the proper version of Android Studio.
@@ -156,7 +156,7 @@ Install Android Studio by clicking "Next", as shown in the following screenshots
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
+אם רוצים לחסוך מקום בכונן הקשיח, אפשר לבטל את הסימון של Android Virtual Device: הוא לא משמש לבניית **AAPS**.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
@@ -170,7 +170,7 @@ Once it's completed, press "Next"
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-In the last step, click on "Finish" to start Android Studio for the first time.
+בשלב האחרון, לחצו על "Finish" כדי להפעיל את Android Studio בפעם הראשונה.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
@@ -215,7 +215,7 @@ You will now see the Welcome screen of Android Studio.
 
 The first time **AAPS** is downloaded, Android Studio will connect over the internet to the Github website to download the source code for **AAPS**. This should take about 1 minute. 
 
-Android Studio will then use **Gradle** (a development tool for Android apps) to identify other components needed to build these items on your computer. 
+לאחר מכן, Android Studio ישתמש ב־**Gradle** (כלי פיתוח לאפליקציות Android) כדי לזהות רכיבים נוספים שנדרשים לבניית הפריטים האלה במחשב שלכם. 
 ```
 
 On the Android Studio Welcome screen, check that "**Projects**" (1) is highlighted on the left.
@@ -241,7 +241,7 @@ We will now tell Android Studio where to get the code from:
 
 ```{admonition} INFORMATION
 :class: note
-Make a note of the directory. It is where your sourcecode is stored!
+רשמו לעצמכם את התיקייה. It is where your sourcecode is stored!
 ```
 
 You will now see a screen telling you that the repository is being cloned:
@@ -262,11 +262,11 @@ After the repository is cloned successfully, Android Studio will open the cloned
 (computerbuild-NewUI)=
 ```{admonition} New UI
 :class: note
-Android Studio changed its UI recently. New installations of Android Studio use the new UI by default!
+Android Studio שינה לאחרונה את הממשק שלו. New installations of Android Studio use the new UI by default!
 
 Only if your Android Studio looks different, you might need to switch to the new UI:
 Click on the hamburger menu on the top left, then select **Settings** (or **Preferences** on Apple computers).
-In **Appearance & Behavior**, go to **New UI** and tick **Enable new UI**. Then restart Android Studio to start using it.
+ב-**Appearance & Behavior**, עברו ל-**New UI** וסמנו את **Enable new UI**. Then restart Android Studio to start using it.
 
 If you don't find the option **New UI** don't worry: you are already using it!
 ```
@@ -298,11 +298,11 @@ Now we will tell Android studio where to find Git, which you installed [earlier]
 
 * Windows users only: Make sure you have restarted your computer after [installing Git](#install-git-if-you-dont-have-it). If not, restart now and re-open Android Studio
 
-In the top left corner of **Android Studio**, open the hamburger menu and navigate to **File** > **Settings** (on Windows) or **Android Studio** > **Preferences** (on Mac). This opens the following window, click to expand the dropdown called **Version Control** (1) and select **Git** (2)
+In the top left corner of **Android Studio**, open the hamburger menu and navigate to **File** > **Settings** (on Windows) or **Android Studio** > **Preferences** (on Mac). כך ייפתח החלון הבא. לחצו כדי להרחיב את הרשימה הנפתחת **Version Control** (1) ובחרו **Git** (2)
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-Check if **Android Studio** can automatically locate the correct **Path to Git executable** by clicking the button "Test" (1):
+בדקו אם **Android Studio** יכול לאתר אוטומטית את **Path to Git executable** הנכון בלחיצה על הלחצן "Test" (1):
 
 ![Git Executable](../images/Building-the-App/039_GitTest.png)
 
@@ -312,9 +312,9 @@ If the automatic setting is successful, your current version of **Git** will be 
    ![Git_version_displayed](../images/Building-the-App/039_GitTestSuccess.png)
 
 
-If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error, you can either
+אם **git.exe** לא נמצא אוטומטית, או שלחיצה על "Test" מסתיימת בשגיאה, אפשר לבחור באחת מהדרכים:
 * manually enter the path which you saved [earlier](#BuildingAaps-steps-for-installing-git), or
-* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
+* ללחוץ על סמל התיקייה (1) ולנווט ידנית לתיקייה שבה **git.exe** הותקן [קודם](#BuildingAaps-steps-for-installing-git)
 * Verify your settings with the **Test** button!
 
   ![Git not found](../images/Building-the-App/039_GitTestError.png)
@@ -325,9 +325,9 @@ If you find that **git.exe** is not found automatically, or that clicking "Test"
 ```{admonition} Why does the AAPS app need to be "signed"?
 :class: dropdown
 
-Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
+Android דורש שכל אפליקציה תהיה _חתומה_, כדי להבטיח שניתן יהיה לעדכן אותה בהמשך רק מאותו מקור מהימן שהפיץ את האפליקציה המקורית. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
 
-For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
+למטרות שלנו, המשמעות היא פשוט שיוצרים קובץ חתימה, או קובץ "keystore", ומשתמשים בו בעת בניית אפליקציית **AAPS**.
 ```
 
 
@@ -338,16 +338,16 @@ Click the hamburger menu on the top left to open the menu bar. Select **Build** 
 
 ![Build apk](../images/Building-the-App/040_GenerateSignedAPK.png)
 
-Select "APK" (1) instead of "Android App Bundle" and click "Next" (2):
+לחצו על "APK" (1) במקום "Android App Bundle" ולאחר מכן לחצו "Next" (2):
 
 ![APK instead of bundle](../images/Building-the-App/041_APK.png)
 
-In the next screen, make sure that "Module" is set to "AndroidAPS.app" (1). The part before ".app" is the name of the folder you cloned the code into.
+במסך הבא, ודאו ש-"Module" מוגדר ל-"AndroidAPS.app" (1). החלק שלפני ".app" הוא שם התיקייה שאליה שכפלתם את הקוד.
 
 (Building-APK-wearapk)=
 ```{admonition} INFORMATION!
 :class: note
-If you want to create the apk for your watch, you now need to select AndroidAPS.wear!
+אם רוצים ליצור את ה-apk לשעון, יש לבחור עכשיו AndroidAPS.wear!
 ```
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
@@ -355,13 +355,13 @@ Click "Create new..." (2) to start creating your key store.
 
 ```{admonition} INFORMATION!
 :class: note
-You will only need to create the keystore once.
-If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
+צריך ליצור את ה-keystore רק פעם אחת.
+אם כבר בניתם את AAPS בעבר, אל תיצרו keystore חדש. בחרו את ה-keystore הקיים והזינו את הסיסמאות שלו!
 ```
 
-**_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.
+**_הערה:_** ה-keystore הוא קובץ שבו נשמר המידע לחתימת האפליקציה. It is encrypted, and the information is secured with passwords.
 
-![Create key store](../images/Building-the-App/043_Keystore.png)
+![יצירת keystore](../images/Building-the-App/043_Keystore.png)
 
 * Click the "folder" symbol (1) to select a path on your computer for your key store.
 
@@ -369,15 +369,15 @@ If you have built AAPS before, do NOT create a new keystore but select your exis
 
 ```{admonition} WARNING!
 :class: warning
-Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AAPS update!
+Make sure to note down for yourself where your keystore is stored. תזדקקו לו כשתבנו את עדכון AAPS הבא!
 ```
 
 * Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).
 
-  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+  The passwords for key store and key do not have to be sophisticated. אם תאבדו את הסיסמה בעתיד, ראו [התקנה מחדש של AAPS עם keystore חדש](#reinstall-aaps).
 
 ```{warning}
-**Avoid special characters in your passwords.** Use only letters and digits for the keystore and key passwords. In particular, do not use `$`, a backtick, `"` or `\`. If you later switch to the [Browser build](#aaps-ci-option2) and reuse this keystore, these characters can make the signing step fail, see [Browser build troubleshooting](#aaps-ci-password-special-characters).
+**הימנעו מתווים מיוחדים בסיסמאות.** השתמשו רק באותיות ובספרות בסיסמת ה-keystore ובסיסמת המפתח. בפרט, אל תשתמשו ב-`$`, בגרש הפוך (backtick), ב-`"` או ב-`\`. אם בהמשך תעברו ל[בנייה בדפדפן](#aaps-ci-option2) ותשתמשו שוב ב-keystore הזה, התווים האלה עלולים לגרום לכישלון שלב החתימה. ראו [בנייה בדפדפן: פתרון תקלות](#aaps-ci-password-special-characters).
 ```
 
 * The default alias (3) for your key is "key0", leave this unchanged.
@@ -401,7 +401,7 @@ On the **Generate signed App Bundle or APK** page, the path to your keystore wil
 ![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
 
 
-On the next screen, select build variant "fullRelease" (1) and click "Create" (3). You should remember the destination folder displayed at (2), as later you will find your built apk file there!
+במסך הבא, בחרו את גרסת הבנייה "fullRelease" (1) ולחצו על "Create" (3). כדאי לזכור את תיקיית היעד שמוצגת ב-(2), כי בהמשך תמצאו שם את קובץ ה-apk שבניתם!
 
    ![Select build variant](../images/Building-the-App/045_BuildPath.png)
 
@@ -413,11 +413,11 @@ Now you can watch the building progress:
 
 ![Android_Studio_building](../images/Building-the-App/047_BuildDetails.png)
 
-Android Studio will display the information "BUILD SUCCESSFUL" after build is finished. You may see a popup notification which you can click to select "locate". If you miss this, click on the notification icon (1) to bring up the Notifications, and then on **locate** (2):
+Android Studio will display the information "BUILD SUCCESSFUL" after build is finished. You may see a popup notification which you can click to select "locate". אם פספסתם את זה, לחצו על סמל ההודעות (1) כדי לפתוח את Notifications, ואז על **locate** (2):
 
 ![Build finished](../images/Building-the-App/049_ReopenNotification.png)
 
-**_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio.md)._**
+**_אם הבנייה לא הצליחה, עיינו בסעיף [פתרון תקלות ב-Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)._**
 
 In the Notifications box, click on the blue link "locate":
 
