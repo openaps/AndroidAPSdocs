@@ -1,7 +1,7 @@
 (scenes)=
-# Scenes (situation presets)
+# 장면 (상황별 프리셋)
 
-A **scene** is a named preset that applies a **bundle of actions at once** — for example a *Sleep*, *Exercise* or *Sick Day* preset that switches your profile, sets a temporary target, toggles SMB and adds a care-portal note with a single tap, optionally for a set duration.
+**장면**은 이름을 붙인 프리셋으로, **여러 동작을 한 번에** 적용합니다. 예를 들어 *수면*, *운동*, *아픈 날* 프리셋은 한 번 탭으로 프로파일을 전환하고, 임시 목표를 설정하고, SMB를 켜거나 끄고, 케어포털 메모를 추가합니다. 원하면 정해진 기간 동안만 적용할 수도 있습니다.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,172 +10,172 @@ A **scene** is a named preset that applies a **bundle of actions at once** — f
 
 ---
 
-## What is a scene
+## 장면이란
 
-Instead of changing several things by hand every time a recurring situation comes up, you set them up once as a scene and activate it with one tap. A scene can bundle any of these actions:
+자주 있는 상황이 올 때마다 여러 가지를 직접 바꾸는 대신, 한 번 장면으로 설정해 두고 한 번 탭으로 활성화합니다. 장면에는 다음 동작을 원하는 대로 넣을 수 있습니다:
 
-- **Profile switch** — switch profile and/or scale it by percentage (e.g. 70 %).
-- **Temporary target** — set a temp target (e.g. *Activity*, *Eating soon*, or a custom value).
-- **SMB on/off** — enable or disable super-micro-boluses while the scene is active.
-- **Loop mode** — change the running mode (e.g. to a more conservative mode).
-- **Care-portal note** — log an event (e.g. *Exercise*, *Sickness*) so it shows on the graph and in Nightscout.
+- **프로파일 전환** — 프로파일을 전환하거나 퍼센트로 조정합니다(예: 70 %). 둘 다 할 수도 있습니다.
+- **임시 목표** — 임시 목표를 설정합니다(예: *활동*, *식사 직전* 또는 직접 정한 값).
+- **SMB 켜기/끄기** — 장면이 활성인 동안 SMB(super-micro-bolus)를 활성화하거나 비활성화합니다.
+- **실행 모드** — 실행 모드를 바꿉니다(예: 더 보수적인 모드로).
+- **케어포털 메모** — 이벤트(예: *운동*, *질병*)를 기록하여 그래프와 Nightscout에 표시되게 합니다.
 
-A scene also has a **duration** — a fixed time (minutes/hours/days) or *Indefinite (manual end)* — and an **end action** that runs when it finishes: either a **notification**, or it can **chain** into another scene (for example *Sick Day → Exercise*).
-
----
-
-## Managing scenes
-
-Open **Manage → Scenes** to see, create, edit, enable/disable and reorder your scenes.
-
-![The Scenes management screen](../images/v4/Scenes/scenes_list.png)
-
-Each scene card shows:
-
-- a **checkbox** to enable/disable the scene,
-- an **icon** and **name**,
-- a summary — *“N actions, duration”*, and the **→ chained scene** if it chains into another one,
-- and three buttons: **▶ activate**, **✏️ edit**, **🗑️ delete**.
-
-Tap the **+** button to create a new scene.
+장면에는 **기간**도 있습니다. 기간은 정해진 시간(분/시간/일) 또는 *무기한 (직접 종료)*입니다. 또한 장면이 끝날 때 실행되는 **종료 동작**이 있습니다. 종료 동작은 **알림**이거나, 다른 장면으로 **이어지는** 것입니다(예: *아픈 날 → 운동*).
 
 ---
 
-## Creating or editing a scene
+## 장면 관리
 
-### Start from a template
+**관리 → 장면**을 열면 장면을 보고, 만들고, 편집하고, 활성화/비활성화하고, 순서를 바꿀 수 있습니다.
 
-To **create** a scene, tap the **+** button on the Scenes screen. The first step is **Start from template**: pick a ready-made scene for a common situation — *Exercise*, *Sick Day*, *Sick Day — Vomiting*, *Sleep*, *Post-exercise Night*, *Pre-meal*, *Alcohol*, *Driving*, *Bathing*, *Luteal Phase*, *Hot Weather*, *Medical Procedure* — or start from a *Blank* scene. Each template **pre-fills the recommended actions** and you can adjust everything in the following steps.
+![장면 관리 화면](../images/v4/Scenes/scenes_list.png)
 
-![“Start from template” — pick a starting point](../images/v4/Scenes/templates_picker.png)
+각 장면 카드에는 다음이 표시됩니다:
 
-After you pick a template, its purpose is explained — *when* and *why* to use it — before you continue:
+- 장면을 활성화/비활성화하는 **체크박스**,
+- **아이콘**과 **이름**,
+- 요약 — *“동작 N개, 기간”*, 그리고 다른 장면으로 이어지는 경우 **→ 이어지는 장면**,
+- 그리고 세 개의 버튼: **▶ 활성화**, **✏️ 편집**, **🗑️ 삭제**.
 
-![A template's explanation](../images/v4/Scenes/template_explanation.png)
-
-### Step through the actions
-
-The rest of the editor is a short **step-by-step** wizard. Each step is one action type with an *“Include … in scene”* switch — turn it on only for the actions you want this scene to perform, and leave the rest off.
-
-![The scene editor — the Profile switch step](../images/v4/Scenes/scene_editor.png)
-
-Work through the steps with **Next**/**Back**: *Profile switch*, *Temporary target*, *SMB*, *Loop mode*, *Care-portal note*, then the **duration**, the **end action** (notify or chain into another scene), and finally the scene's **name and icon**. Save when you are done. (To **edit** an existing scene, tap its **✏️** button — you go straight into these steps.)
-
-Each step starts with a short explanation of what the action does. The steps look like this, here with the *Exercise* template:
-
-**Temporary target** — pick one of your temp target presets:
-
-![The Temporary target step](../images/v4/Scenes/scene_editor_step3.png)
-
-**SMB** — enable or disable SMB while the scene is active:
-
-![The SMB step](../images/v4/Scenes/scene_editor_step4.png)
-
-**Running mode** — optionally change the loop mode:
-
-![The Running mode step](../images/v4/Scenes/scene_editor_step5.png)
-
-**Careportal** — the event type and note to log:
-
-![The Careportal step](../images/v4/Scenes/scene_editor_step6.png)
-
-**Duration** — how long the scene stays active; 0 means until you end it yourself:
-
-![The Duration step](../images/v4/Scenes/scene_editor_step7.png)
-
-**Follow-up scene** — optionally the scene that starts when this one ends:
-
-![The Follow-up scene step](../images/v4/Scenes/scene_editor_followup.png)
-
-**Scene** — the name and the icon. Press **Finish** to save:
-
-![The name and icon step](../images/v4/Scenes/scene_editor_step9.png)
+새 장면을 만들려면 **+** 버튼을 탭하십시오.
 
 ---
 
-## Activating a scene
+## 장면 만들기 또는 편집
 
-Activate a scene from the **Scenes** list (the **▶** button) or from the **Scenes** entry in the bottom navigation. In the **Scenes** sheet of the bottom navigation, each scene shows the same summary as in the Scenes list, and the **pencil** at the top of the sheet opens **Manage → Scenes** to create or edit your scenes.
+### 템플릿에서 시작
 
-![The Scenes sheet of the bottom navigation](../images/v4/Scenes/scenes_sheet.png)
+장면을 **만들려면** 장면 화면에서 **+** 버튼을 탭하십시오. 첫 단계는 **템플릿에서 시작**입니다. 자주 있는 상황에 맞게 미리 만들어진 장면을 고르십시오 — *운동*, *아픈 날*, *아픈 날 — 구토*, *수면*, *운동 후 밤*, *식사 전*, *음주*, *운전*, *목욕*, *황체기*, *더운 날씨*, *의료 시술* — 또는 *빈 장면*에서 시작하십시오. 각 템플릿은 **권장 동작을 미리 채웁니다**. 다음 단계에서 모든 것을 조정할 수 있습니다.
 
-If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+![“템플릿에서 시작” — 시작점 선택](../images/v4/Scenes/templates_picker.png)
 
-Before anything is applied you get a **confirmation** that lists exactly what the scene will do, so you can review it:
+템플릿을 고르면 계속하기 전에 그 목적, 즉 *언제*, *왜* 사용하는지 설명이 표시됩니다:
 
-![Scene activation confirmation, listing the bundled actions](../images/v4/Scenes/scene_confirmation.png)
+![템플릿 설명](../images/v4/Scenes/template_explanation.png)
 
-If the scene chains into another one, the confirmation ends with **→** and the name of that follow-up scene, the same way it is shown in the Scenes list.
+### 동작 단계 진행
 
-When you start the scene from the **Scenes** entry of the bottom navigation, the confirmation is a simpler dialog with the same list of actions. Press **OK** to activate:
+편집기의 나머지 부분은 짧은 **단계별** 마법사입니다. 각 단계는 한 가지 동작 종류이며 *“장면에 … 포함”* 스위치가 있습니다. 이 장면에서 실행할 동작만 켜고 나머지는 꺼 두십시오.
 
-![Scene confirmation when started from the bottom navigation](../images/v4/Scenes/scene_confirmation_from_sheet.png)
+![장면 편집기 — 프로파일 전환 단계](../images/v4/Scenes/scene_editor.png)
 
-After you confirm, the actions are applied and the **active scene** is shown at the top of the overview with an **End Scene** button. If the scene chains into another one, the banner also names that follow-up scene:
+**다음**/**뒤로**로 단계를 진행하십시오: *프로파일 전환*, *임시 목표*, *SMB*, *실행 모드*, *케어포털 메모*, 그다음 **기간**, **종료 동작**(알림 또는 다른 장면으로 이어짐), 마지막으로 장면의 **이름과 아이콘**입니다. 다 끝나면 저장하십시오. (기존 장면을 **편집**하려면 그 장면의 **✏️** 버튼을 탭하십시오. 바로 이 단계들로 이동합니다.)
 
-![The active-scene banner on the overview, with the End Scene button](../images/v4/Scenes/scene_active_banner.png)
+각 단계는 그 동작이 하는 일을 짧게 설명하며 시작합니다. 단계는 다음과 같습니다. 여기서는 *운동* 템플릿을 사용한 예입니다:
 
-The scene's actions stay in effect until:
+**임시 목표** — 임시 목표 프리셋 중 하나를 고릅니다:
 
-- its **duration** ends (the **end action** runs — a notification, or it chains into the next scene), or
-- you tap **End Scene** to end it manually. If the scene chains into another one, you get two choices: **Skip to** the follow-up scene (the active scene ends and the follow-up starts now), or **End Scene** (the active scene ends and the follow-up does not start).
+![임시 목표 단계](../images/v4/Scenes/scene_editor_step3.png)
 
-A scene without follow-up only asks you to confirm:
+**SMB** — 장면이 활성인 동안 SMB를 활성화하거나 비활성화합니다:
 
-![End Scene dialog](../images/v4/Scenes/scene_end_dialog.png)
+![SMB 단계](../images/v4/Scenes/scene_editor_step4.png)
 
-Ending a scene **reverts** the changes it made (for example the profile switch and temp target it started).
+**실행 모드** — 원하면 실행 모드를 바꿉니다:
 
-While a scene is active, the profile and the target on the main screen carry a small scene icon when the scene set them. The **Scenes** sheet of the bottom navigation stays available to start another scene:
+![실행 모드 단계](../images/v4/Scenes/scene_editor_step5.png)
 
-![The Scenes sheet while a scene is active](../images/v4/Scenes/scenes_sheet_active.png)
+**케어포털** — 기록할 이벤트 종류와 노트입니다:
 
-When the duration runs out on its own, the changes are reverted straight away and the banner changes to **Scene ended** with a **Dismiss** button. Dismissing only clears the banner from the screen — the scene itself is already over, so automation rules and a chained scene carry on without waiting for it.
+![케어포털 단계](../images/v4/Scenes/scene_editor_step6.png)
 
----
+**기간** — 장면이 활성 상태로 유지되는 시간입니다. 0은 직접 종료할 때까지라는 뜻입니다:
 
-## Triggering scenes from Automation
+![기간 단계](../images/v4/Scenes/scene_editor_step7.png)
 
-A scene does not have to be started by hand — **Automation** can run it for you. When you add an action to an automation rule (**Manage → Automation**), the action picker has a **Scenes** category:
+**후속 장면** — 원하면 이 장면이 끝날 때 시작될 장면을 고릅니다:
 
-- **Run scene** — activate a scene when the rule's triggers fire (for example at a set time, when you arrive somewhere, or when glucose crosses a threshold).
-- **Enable scene** / **Disable scene** — make a scene available (or unavailable) without activating it.
+![후속 장면 단계](../images/v4/Scenes/scene_editor_followup.png)
 
-![The “Scenes” actions in the Automation action picker](../images/v4/Scenes/automation_scene_action.png)
+**장면** — 이름과 아이콘입니다. **완료**를 눌러 저장하십시오:
 
-Automation can also **react to** a scene: the trigger list includes a **Scene** trigger, so a rule can run only while a particular scene is active. Combined with a scene's **end action** (revert, notify, or chain into another scene), this lets scenes start, follow on and finish automatically.
+![이름과 아이콘 단계](../images/v4/Scenes/scene_editor_step9.png)
 
 ---
 
-## Scenes with Master/Client and a watch
+## 장면 활성화
 
-The **currently active scene is synchronized** across all of your paired devices — activate it on one phone and the others show it too.
+**장면** 목록(**▶** 버튼) 또는 하단 내비게이션의 **장면** 항목에서 장면을 활성화하십시오. 하단 내비게이션의 **장면** 시트에서 각 장면은 장면 목록과 같은 요약을 보여 줍니다. 시트 맨 위의 **연필** 아이콘을 누르면 **관리 → 장면**이 열려 장면을 만들거나 편집할 수 있습니다.
 
-A paired **client** (**AAPSClient**) can also activate or end a scene: the request is sent to the **master**, which authors the confirmation and applies the scene on its own state. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for how that works.
+![하단 내비게이션의 장면 시트](../images/v4/Scenes/scenes_sheet.png)
+
+[볼러스 보안](#Preferences-protection)이 켜져 있으면, **AAPS**는 장면이 시작되거나 끝나기 전에 이를 요구합니다. 장면을 변경할 때는 대신 [설정 보안](#Preferences-settings-protection)이 필요합니다.
+
+무엇이든 적용되기 전에 장면이 할 일을 정확히 나열한 **확인** 화면이 표시되므로 검토할 수 있습니다:
+
+![묶인 동작을 나열한 장면 활성화 확인 화면](../images/v4/Scenes/scene_confirmation.png)
+
+장면이 다른 장면으로 이어지면, 확인 화면은 **→** 와 그 후속 장면의 이름으로 끝납니다. 장면 목록에 표시되는 방식과 같습니다.
+
+하단 내비게이션의 **장면** 항목에서 장면을 시작하면, 확인 화면은 같은 동작 목록을 보여 주는 더 간단한 대화 상자입니다. **확인**을 눌러 활성화하십시오:
+
+![하단 내비게이션에서 시작할 때의 장면 확인 화면](../images/v4/Scenes/scene_confirmation_from_sheet.png)
+
+확인하면 동작이 적용되고, 개요 화면 맨 위에 **활성 장면**이 **장면 종료** 버튼과 함께 표시됩니다. 장면이 다른 장면으로 이어지면 배너에 그 후속 장면의 이름도 표시됩니다:
+
+![개요 화면의 활성 장면 배너와 장면 종료 버튼](../images/v4/Scenes/scene_active_banner.png)
+
+장면의 동작은 다음 때까지 유지됩니다:
+
+- **기간**이 끝날 때(**종료 동작**이 실행됩니다 — 알림, 또는 다음 장면으로 이어짐), 또는
+- **장면 종료**를 탭하여 직접 끝낼 때. 장면이 다른 장면으로 이어지면 두 가지 중에서 고를 수 있습니다: **(후속 장면)(으)로 건너뛰기**(활성 장면이 끝나고 후속 장면이 지금 시작됨) 또는 **장면 종료**(활성 장면이 끝나고 후속 장면은 시작되지 않음).
+
+후속 장면이 없는 장면은 확인만 요청합니다:
+
+![장면 종료 대화 상자](../images/v4/Scenes/scene_end_dialog.png)
+
+장면을 끝내면 장면이 만든 변경 사항이 **되돌려집니다**(예: 장면이 시작한 프로파일 전환과 임시 목표).
+
+장면이 활성인 동안, 장면이 설정한 프로파일과 목표에는 메인 화면에서 작은 장면 아이콘이 붙습니다. 하단 내비게이션의 **장면** 시트는 다른 장면을 시작할 수 있도록 계속 사용할 수 있습니다:
+
+![장면이 활성인 동안의 장면 시트](../images/v4/Scenes/scenes_sheet_active.png)
+
+기간이 스스로 끝나면 변경 사항이 바로 되돌려지고, 배너는 **닫기** 버튼이 있는 **장면 종료됨**으로 바뀝니다. 닫기는 화면에서 배너만 지웁니다. 장면 자체는 이미 끝났으므로 자동화 규칙과 이어지는 장면은 이를 기다리지 않고 계속 진행됩니다.
+
+---
+
+## 자동화에서 장면 실행
+
+장면을 꼭 직접 시작할 필요는 없습니다. **자동화**가 대신 실행할 수 있습니다. 자동화 규칙에 동작을 추가할 때(**관리 → 자동화**) 동작 선택기에는 **장면** 범주가 있습니다:
+
+- **장면 실행** — 규칙의 트리거가 작동하면 장면을 활성화합니다(예: 정해진 시간에, 어떤 장소에 도착했을 때, 또는 혈당이 임계값을 넘을 때).
+- **장면 활성화** / **장면 비활성화** — 장면을 실행하지 않고 사용 가능(또는 사용 불가)하게 만듭니다.
+
+![자동화 동작 선택기의 “장면” 동작](../images/v4/Scenes/automation_scene_action.png)
+
+자동화는 장면에 **반응**할 수도 있습니다. 트리거 목록에 **장면** 트리거가 있으므로, 특정 장면이 활성인 동안에만 규칙이 실행되게 할 수 있습니다. 장면의 **종료 동작**(되돌리기, 알림 또는 다른 장면으로 이어짐)과 함께 사용하면 장면이 자동으로 시작되고, 이어지고, 끝나게 할 수 있습니다.
+
+---
+
+## 마스터/클라이언트 및 워치에서의 장면
+
+**현재 활성 장면은 페어링된 모든 장치에서 동기화됩니다**. 한 휴대폰에서 활성화하면 다른 장치에도 표시됩니다.
+
+페어링된 **클라이언트**(**AAPSClient**)도 장면을 활성화하거나 끝낼 수 있습니다. 요청은 **마스터**로 보내지고, 마스터가 확인 화면을 만들고 자신의 상태에 장면을 적용합니다. 작동 방식은 [마스터 ↔ 클라이언트 제어](../RemoteFeatures/ClientMasterControl.md)를 참조하십시오.
 
 (scenes-from-watch)=
-### From a Wear OS watch
+### Wear OS 워치에서
 
-Scenes are available on a **Wear OS watch** as a **Scene tile**. Swipe to the **Scene** tile in the watch's tile carousel (add it from the carousel's tile list first if it isn't there yet) and tap the scene you want to start:
+장면은 **Wear OS 워치**에서 **장면 타일**로 사용할 수 있습니다. 워치의 타일 캐러셀에서 **장면** 타일로 밀어 이동하고(아직 없으면 먼저 캐러셀의 타일 목록에서 추가하십시오) 시작할 장면을 탭하십시오:
 
-![The Scene tile on a Wear OS watch](../images/v4/Scenes/scene_watch_tile.png)
+![Wear OS 워치의 장면 타일](../images/v4/Scenes/scene_watch_tile.png)
 
-The tile has four slots. By default each slot fills itself **automatically** with the next of your enabled scenes, in the order they have on the phone. To choose yourself, **long-press the tile** and open its settings: for each of the four slots you can keep **Automatic**, pin a **specific scene**, or select **None** to leave the slot empty. A slot pinned to a scene that has since been deleted or disabled shows **Unavailable** — pick another scene for it.
+타일에는 칸이 네 개 있습니다. 기본적으로 각 칸은 휴대폰에서의 순서대로, 활성화된 다음 장면으로 **자동**으로 채워집니다. 직접 고르려면 **타일을 길게 누르고** 설정을 여십시오. 네 칸마다 **자동**을 유지하거나, **특정 장면**을 고정하거나, **없음**을 선택하여 칸을 비워 둘 수 있습니다. 고정한 장면이 그 후에 삭제되거나 비활성화되면 그 칸에는 **사용할 수 없음**이 표시됩니다. 그 칸에 다른 장면을 고르십시오.
 
-The watch then shows a confirmation — tap **✓** to activate, or swipe back to cancel:
+그러면 워치에 확인 화면이 표시됩니다. **✓**를 탭하여 활성화하거나, 뒤로 밀어서 취소하십시오:
 
-![Confirming a scene on the watch](../images/v4/Scenes/scene_watch_confirm.png)
+![워치에서 장면 확인](../images/v4/Scenes/scene_watch_confirm.png)
 
-Just like on a client, the **master authors the confirmation and runs the scene**; the watch only relays the request (via the client phone, if the watch is paired to a client).
+클라이언트와 마찬가지로 **마스터가 확인 화면을 만들고 장면을 실행합니다**. 워치는 요청을 전달하기만 합니다(워치가 클라이언트와 페어링되어 있으면 클라이언트 휴대폰을 거칩니다).
 
-While a scene is running — or its **Scene ended** banner is still showing on the phone — the tile shows an **End** button with the name of the scene under it. Tap it to end the active scene, or to clear the leftover banner, from your wrist.
+장면이 실행 중이거나 휴대폰에 **장면 종료됨** 배너가 아직 표시되어 있는 동안, 타일에는 **종료** 버튼과 그 아래에 장면 이름이 표시됩니다. 이 버튼을 탭하면 손목에서 활성 장면을 끝내거나 남아 있는 배너를 지울 수 있습니다.
 
-If the running scene chains into another one, the tile also shows a **Skip** button with the name of the follow-up scene under it. These are the same two choices as on the phone:
+실행 중인 장면이 다른 장면으로 이어지면, 타일에는 **건너뛰기** 버튼과 그 아래에 후속 장면 이름도 표시됩니다. 휴대폰과 같은 두 가지 선택입니다:
 
-- **End** — the active scene ends. The confirmation tells you that the follow-up will not start.
-- **Skip** — the active scene ends and the follow-up scene starts now. The confirmation names both scenes.
+- **종료** — 활성 장면이 끝납니다. 확인 화면에 후속 장면이 시작되지 않는다고 표시됩니다.
+- **건너뛰기** — 활성 장면이 끝나고 후속 장면이 지금 시작됩니다. 확인 화면에 두 장면이 모두 표시됩니다.
 
-The watch's [Loop Status screen](#WearOsSmartwatch-loop-status) also shows the active scene, the time it has left and its follow-up.
+워치의 [루프 상태 화면](#WearOsSmartwatch-loop-status)에도 활성 장면, 남은 시간, 후속 장면이 표시됩니다.
 
 ---
 
