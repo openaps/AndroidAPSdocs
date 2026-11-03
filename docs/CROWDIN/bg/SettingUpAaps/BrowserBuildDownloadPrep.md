@@ -5,17 +5,17 @@
 ````{admonition} Note
 :class: note
 
-1. Ако отворите тази страница от приложение (чрез вграден уеб изглед), HTML файлът може да не се изтегли. Please copy the URL and open it in your browser instead:
+1. Ако отворите тази страница от приложение (чрез вграден уеб изглед), HTML файлът може да не се изтегли. Моля, вместо това копирайте URL адреса и го отворете в браузъра си:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
-Or visit the latest release page:
+Или отворете страницата с най-новата версия:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
-2. Backup copy hosted on this site:
- - If the external link is also unavailable, you can use this backup file to download.
+2. Резервно копие, качено на този сайт:
+ - Ако и външната връзка не работи, можете да изтеглите този резервен файл.
 <!--crowdin:disable-->
 
 ```{eval-rst}
