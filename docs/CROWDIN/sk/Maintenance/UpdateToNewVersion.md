@@ -10,19 +10,19 @@
 - Keď je k dispozícii nové vydanie, priamo v aplikácii **AAPS** dostanete informačný banner o novej verzii.
 - Nová verzia bude v čase vydania oznámená aj na Facebooku.
 - Po vydaní si pozorne prečítajte [poznámky k vydaniu](ReleaseNotes.md) a ešte pred aktualizáciou si nejasnosti vyjasnite s komunitou na Facebooku alebo Discorde.
-- Updating from **AAPS** 3.x? Read [What changed in AAPS v4](V4Changes.md) first: it lists the features that moved, were renamed or were removed.
-- Do not forget to [export your settings](ExportImportSettings.md). When you import them again after the update, you choose whether the pump settings are replaced too.
+- Aktualizujete z **AAPS** 3.x? Najprv si prečítajte [Čo sa zmenilo v AAPS v4](V4Changes.md): nájdete tam funkcie, ktoré sa presunuli, premenovali alebo odstránili.
+- Nezabudnite [exportovať svoje nastavenia](ExportImportSettings.md). Keď ich po aktualizácii znova importujete, vyberiete si, či sa majú nahradiť aj nastavenia pumpy.
 
 ## Aktualizácia AAPS zostavením v prehliadači
 
 Už ste svoju aplikáciu AAPS zostavili v prehliadači? Postupujte podľa návodu pre spôsob, ktorý ste použili:
 
-- **AAPS Builder**: you build from the **Build AAPS** page of your private repository (usually named `my-aaps`) and download the app from GitHub. Follow [Updating AAPS with AAPS Builder](#aaps-builder-updates). Nie je tu žiadny fork, ktorý by bolo treba synchronizovať.
-- **Fork and preparation file**: you run the **AAPS-CI** workflow in your own copy (fork) of AndroidAPS, a repository named `AndroidAPS` in your GitHub account, and the app lands in your Google Drive. Follow [Update with a browser (fork)](./UpdateBrowserBuild.md).
+- **AAPS Builder**: zostavujete zo stránky **Build AAPS** svojho súkromného repozitára (zvyčajne s názvom `my-aaps`) a aplikáciu si stiahnete z GitHubu. Postupujte podľa časti [Aktualizácia AAPS pomocou AAPS Builder](#aaps-builder-updates). Nie je tu žiadny fork, ktorý by bolo treba synchronizovať.
+- **Fork a prípravný súbor**: spúšťate workflow **AAPS-CI** vo svojej vlastnej kópii (forku) AndroidAPS, teda v repozitári s názvom `AndroidAPS` vo vašom účte GitHub, a aplikácia sa uloží na váš Disk Google. Postupujte podľa návodu [Aktualizácia v prehliadači (fork)](./UpdateBrowserBuild.md).
 
 ## Aktualizácia AAPS v Android Studiu
 
-Follow [these instructions](./UpdateComputerBuild.md).
+Postupujte podľa [tohto návodu](./UpdateComputerBuild.md).
 
 ## Aktualizácia AAPS z príkazového riadku
 
@@ -30,14 +30,14 @@ Použite [rovnaký návod](../SettingUpAaps/CLIBuild.md) ako pri predchádzajúc
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-## After the update
+## Po aktualizácii
 
-These steps are the same for every build method. V [poznámkach k vydaniu](../Maintenance/ReleaseNotes.md) si overte, či po aktualizácii netreba urobiť niečo špeciálne.
+Tieto kroky sú rovnaké pri každom spôsobe zostavenia. V [poznámkach k vydaniu](../Maintenance/ReleaseNotes.md) si overte, či po aktualizácii netreba urobiť niečo špeciálne.
 
 Po nainštalovaní nového APK:
 
-- you can check the **AAPS** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). The current **AAPS** version can be viewed;
-- make sure you have imported your settings; and
-- please check your **AAPS** settings under **Settings** and ensure these remain accurate.
+- verziu **AAPS** v telefóne si môžete overiť tak, že otvoríte **ponuku** (☰) vľavo hore a potom **O aplikácii** (ako na snímke obrazovky nižšie). môžete si pozrieť aktuálnu verziu **AAPS**;
+- uistite sa, že ste importovali svoje nastavenia; a
+- skontrolujte svoje nastavenia **AAPS** v časti **Nastavenia** a uistite sa, že sú stále správne.
 
 ![Dialóg O aplikácii s nainštalovanou verziou AAPS](../images/about_dialog_version.png)
