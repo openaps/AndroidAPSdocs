@@ -39,7 +39,7 @@ Jeśli żaden z linków nie rozwiąże problemu, zobacz [Gdzie mogę uzyskać po
 * [Profil: „Dawka bazowa nie jest zgodna z bieżącą pompą”](#your-aaps-profile-basal-not-compatible)
 * [Pompa: „Dane pochodzą z innej pompy”](#config-builder-wrong-pump-data)
 * [Nightscout Client](TroubleshootingNsClient.md)
-* **"AAPS settings cannot be read"** at start: the settings are encrypted with a key that Android keeps for **AAPS**, and that key does not open them any more, for example after the key store of the phone was reset. While this screen is shown, **AAPS** is not running and does not control the pump. Tap **Retry**: it closes and restarts **AAPS**. If that does not help, restart the phone. Use **Start fresh** only when nothing else helps: it sets the unreadable settings file aside (it is renamed and kept) and starts **AAPS** with empty settings. Then import your last [settings export](../Maintenance/ExportImportSettings.md).
+* **„Nie można odczytać ustawień AAPS”** przy starcie: ustawienia są zaszyfrowane kluczem, który Android przechowuje dla **AAPS**, a ten klucz już ich nie otwiera, na przykład po zresetowaniu magazynu kluczy telefonu. Gdy ten ekran jest widoczny, **AAPS** nie działa i nie steruje pompą. Naciśnij **Ponów**: zamyka to **AAPS** i uruchamia go ponownie. Jeśli to nie pomoże, uruchom ponownie telefon. Używaj **Zacznij od nowa** tylko wtedy, gdy nic innego nie pomaga: nieczytelny plik ustawień zostaje odłożony na bok (dostaje nową nazwę i jest zachowany), a **AAPS** uruchamia się z pustymi ustawieniami. Następnie zaimportuj ostatni [eksport ustawień](../Maintenance/ExportImportSettings.md).
 
 ### Użytkowanie
 
