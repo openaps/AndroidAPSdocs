@@ -1,126 +1,126 @@
 (aaps-ci-troubleshooting)=
 
-# Browser build: troubleshooting
+# 브라우저 빌드: 문제 해결
 
 ```{note}
-This page collects troubleshooting tips for the [Browser build](../SettingUpAaps/BrowserBuild.md).
+이 페이지는 [브라우저 빌드](../SettingUpAaps/BrowserBuild.md)의 문제 해결 팁을 모은 것입니다.
 
-Using **AAPS Builder**? Start with its own [troubleshooting section](#aaps-builder-troubleshooting). The Google Drive sections below also apply to it.
+**AAPS Builder**를 사용합니까? AAPS Builder 자체의 [문제 해결 섹션](#aaps-builder-troubleshooting)부터 시작하십시오. 아래의 Google Drive 섹션도 AAPS Builder에 적용됩니다.
 ```
 
-## AAPS-CI Troubleshooting
+## AAPS-CI 문제 해결
 
 (aaps-ci-read-the-logs)=
-### First: find out what went wrong
+### 먼저: 무엇이 잘못되었는지 찾기
 
-When a build fails, GitHub keeps a log of every step. The log tells you which step failed and why. Read it before you try anything else: the error message is what you look for on this page, and what helpers will ask for.
+빌드가 실패하면 GitHub는 모든 단계의 로그를 남깁니다. 로그를 보면 어느 단계가 왜 실패했는지 알 수 있습니다. 다른 것을 시도하기 전에 로그를 읽으십시오: 이 페이지에서 찾아야 할 것도, 도와주는 사람이 물어볼 것도 오류 메시지입니다.
 
-1. In your GitHub copy of AndroidAPS, open **Actions**. A failed build has a red cross. Tap its name.
+1. GitHub에 있는 AndroidAPS 사본에서 **Actions**를 여십시오. 실패한 빌드에는 빨간색 X 표시가 있습니다. 그 이름을 누르십시오.
 
-   ![Failed run in the Actions list](../images/Building-the-App/CI/aaps_ci_logs_1_runs.png)
+   ![Actions 목록의 실패한 실행](../images/Building-the-App/CI/aaps_ci_logs_1_runs.png)
 
-2. The run summary shows **Failure** and, below, the job that failed (**Build AAPS**, with a red cross).
+2. 실행 요약에 **Failure**(실패)가 표시되고, 그 아래에 실패한 작업(빨간색 X 표시가 있는 **Build AAPS**)이 표시됩니다.
 
-   ![Run summary](../images/Building-the-App/CI/aaps_ci_logs_2_summary.png)
+   ![실행 요약](../images/Building-the-App/CI/aaps_ci_logs_2_summary.png)
 
-3. Scroll down to **Annotations** and tap the red **Build AAPS** line.
+3. **Annotations**까지 아래로 스크롤하고 빨간색 **Build AAPS** 줄을 누르십시오.
 
    ![Annotations](../images/Building-the-App/CI/aaps_ci_logs_3_annotations.png)
 
-4. The job opens. Steps with a grey tick worked. The step with the red cross is the one that failed: GitHub opens it for you. The steps after it were skipped (grey circle).
+4. 작업이 열립니다. 회색 체크 표시가 있는 단계는 성공한 것입니다. 빨간색 X 표시가 있는 단계가 실패한 단계입니다: GitHub가 이 단계를 열어 줍니다. 그 뒤의 단계는 건너뛰었습니다(회색 원).
 
-   ![Job steps](../images/Building-the-App/CI/aaps_ci_logs_4_job.png)
+   ![작업 단계](../images/Building-the-App/CI/aaps_ci_logs_4_job.png)
 
-5. Read the lines just above `Error: Process completed with exit code 1.`: they explain the problem. In this example, the step **Retrieving Google Drive access token** failed with `invalid_grant` and `Token has been expired or revoked.`, see [Google Refresh Token Expired](#aaps-ci-google-token-expired).
+5. `Error: Process completed with exit code 1.` 바로 위의 줄을 읽으십시오: 문제를 설명합니다. 이 예에서는 **Retrieving Google Drive access token** 단계가 `invalid_grant` 및 `Token has been expired or revoked.`로 실패했습니다. [Google 갱신 토큰(Refresh Token) 만료](#aaps-ci-google-token-expired)를 참조하십시오.
 
-   ![Error in the log](../images/Building-the-App/CI/aaps_ci_logs_5_error.png)
+   ![로그의 오류](../images/Building-the-App/CI/aaps_ci_logs_5_error.png)
 
 ```{tip}
-Asking for help? Share the name of the failed step and the error lines (a screenshot like the one above is fine). Never share the content of your secrets.
+도움을 요청합니까? 실패한 단계의 이름과 오류 줄을 공유하십시오(위와 같은 스크린샷이면 충분합니다). secret의 내용은 절대 공유하지 마십시오.
 ```
 
 (aaps-ci-update-secret)=
-#### Update a secret
+#### secret 업데이트
 
-Many fixes mean replacing the value of a secret. In your GitHub copy of AndroidAPS, go to **Settings** → **Secrets and variables** → **Actions** and tap the pencil next to the secret.
+많은 수정은 secret의 값을 바꾸는 것입니다. GitHub에 있는 AndroidAPS 사본에서 **Settings** → **Secrets and variables** → **Actions**로 가서 secret 옆의 연필 아이콘을 누르십시오.
 
-![Secrets list](../images/Building-the-App/CI/aaps_ci_secret_update_1.png)
+![Secret 목록](../images/Building-the-App/CI/aaps_ci_secret_update_1.png)
 
-Enter or paste the new value and tap **Update secret**. GitHub never shows the old value: the field is always empty.
+새 값을 입력하거나 붙여 넣고 **Update secret**을 누르십시오. GitHub는 이전 값을 절대 보여 주지 않습니다: 입력란은 항상 비어 있습니다.
 
 ![Update secret](../images/Building-the-App/CI/aaps_ci_secret_update_2.png)
 
 (aaps-ci-rerun)=
-#### Run the build again after a fix
+#### 수정한 뒤 빌드 다시 실행하기
 
-Once you have fixed the cause, you do not need to start from scratch: open the failed run, tap **...** (top right), then **Re-run failed jobs**.
+원인을 고친 뒤에는 처음부터 다시 시작할 필요가 없습니다: 실패한 실행을 열고 **...**(오른쪽 위)을 누른 다음 **Re-run failed jobs**를 누르십시오.
 
-![Re-run menu](../images/Building-the-App/CI/aaps_ci_rerun_1.png)
+![Re-run 메뉴](../images/Building-the-App/CI/aaps_ci_rerun_1.png)
 
-Tap **Re-run jobs**. You can also start a new build from **Run workflow** as usual.
+**Re-run jobs**를 누르십시오. 평소처럼 **Run workflow**에서 새 빌드를 시작할 수도 있습니다.
 
-![Re-run dialog](../images/Building-the-App/CI/aaps_ci_rerun_2.png)
+![Re-run 대화 상자](../images/Building-the-App/CI/aaps_ci_rerun_2.png)
 
 (aaps-ci-preparation-web)=
-### aaps-ci-preparation web page
-  - The preparation page is displayed by a temporary local server (for example Simple Web Server on a computer), which also receives the Google refresh token.
-  - If you see the screen below, the local server has stopped or is not reachable.
-  - Close the preparation page, check that the local server is running, then reopen aaps-ci-preparation.html the same way as in Step 2 and complete the remaining steps. This is needed in particular when creating the initial Google connection during setup.
+### aaps-ci-preparation 웹 페이지
+  - 준비 페이지는 임시 로컬 서버(예: 컴퓨터의 Simple Web Server)가 보여 줍니다. 이 서버는 Google 갱신 토큰도 받습니다.
+  - 아래 화면이 보이면 로컬 서버가 멈췄거나 연결할 수 없는 것입니다.
+  - 준비 페이지를 닫고 로컬 서버가 실행 중인지 확인한 다음, 2단계와 같은 방법으로 aaps-ci-preparation.html을 다시 열고 남은 단계를 마치십시오. 특히 설정 중에 처음으로 Google 연결을 만들 때 필요합니다.
 
   ![aaps_ci_html_not_found](../images/Building-the-App/CI/aaps_ci_html_not_found.png)
 
 (aaps-ci-google-token-expired)=
-### Google Refresh Token Expired
-  - Google OAuth2 refresh tokens will expire if not used for 6 months, and may also become invalid under other conditions (e.g., you have changed your Google account password, or manually revoked access). For more details, see the [Google OAuth2 documentation](https://developers.google.com/identity/protocols/oauth2).
-  - In the [build log](#aaps-ci-read-the-logs), the step **Retrieving Google Drive access token** fails with `invalid_grant` and `Token has been expired or revoked.`:
+### Google 갱신 토큰(Refresh Token) 만료
+  - Google OAuth2 갱신 토큰은 6개월 동안 사용하지 않으면 만료됩니다. 다른 경우에도 무효가 될 수 있습니다(예: Google 계정 비밀번호를 바꾸었거나 직접 액세스 권한을 취소한 경우). 자세한 내용은 [Google OAuth2 문서](https://developers.google.com/identity/protocols/oauth2)를 참조하십시오.
+  - [빌드 로그](#aaps-ci-read-the-logs)에서 **Retrieving Google Drive access token** 단계가 `invalid_grant` 및 `Token has been expired or revoked.`로 실패합니다:
 
   ![aaps_ci_token_expired](../images/Building-the-App/CI/aaps_ci_token_expired.png)
 
-  - If your build fails due to an expired or revoked Google refresh token, you will need to redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps to obtain a new `GDRIVE_OAUTH2` token, [update the secret](#aaps-ci-update-secret) in your GitHub repository, then [re-run the build](#aaps-ci-rerun).
-  - If the authorization fails again, or Google does not ask for your consent anymore, remove the existing AAPS access from your Google Account first, see [below](#aaps-ci-google-remove-access).
+  - Google 갱신 토큰이 만료되었거나 취소되어 빌드가 실패하면, [Google Drive 인증](#aaps-ci-google-drive-auth) 단계를 다시 하여 새 `GDRIVE_OAUTH2` 토큰을 받고, GitHub 저장소에서 [secret을 업데이트](#aaps-ci-update-secret)한 다음 [빌드를 다시 실행](#aaps-ci-rerun)해야 합니다.
+  - 인증이 다시 실패하거나 Google이 더 이상 동의를 묻지 않으면, 먼저 Google 계정에서 기존 AAPS 액세스 권한을 삭제하십시오. [아래](#aaps-ci-google-remove-access)를 참조하십시오.
 
 (aaps-ci-google-remove-access)=
-### Remove AAPS Access From Your Google Account And Restart The Authorization
-  - If the Google Drive authorization keeps failing, or you want to start again from a clean state, first remove the access you previously gave to AAPS, then redo the authorization.
-  - On your phone, open [https://myaccount.google.com](https://myaccount.google.com), tap **Security**, scroll down to **Your connections to third-party apps & services** and open the list of linked apps. You can also go directly to [https://myaccount.google.com/connections](https://myaccount.google.com/connections).
-  - Tap **AAPS** in the list.
+### Google 계정에서 AAPS 액세스 권한을 삭제하고 인증을 다시 시작하기
+  - Google Drive 인증이 계속 실패하거나 깨끗한 상태에서 다시 시작하려면, 먼저 이전에 AAPS에 준 액세스 권한을 삭제한 다음 인증을 다시 하십시오.
+  - 휴대폰에서 [https://myaccount.google.com](https://myaccount.google.com)을 열고 **Security**(보안)를 누른 다음, **Your connections to third-party apps & services**(서드 파티 앱 및 서비스와의 연결)까지 아래로 스크롤하여 연결된 앱 목록을 여십시오. [https://myaccount.google.com/connections](https://myaccount.google.com/connections)로 바로 갈 수도 있습니다.
+  - 목록에서 **AAPS**를 누르십시오.
 
   ![aaps_ci_google_access_1](../images/Building-the-App/CI/aaps_ci_google_access_1.png)
 
-  - The page shows the access you gave to AAPS (the Google Drive files used with the app). Tap **Delete all** to remove the connection, or tap **See details** to review it first.
+  - 이 페이지에는 AAPS에 준 액세스 권한(앱에서 사용하는 Google Drive 파일)이 표시됩니다. 연결을 삭제하려면 **Delete all**(모두 삭제)을 누르고, 먼저 확인하려면 **See details**(세부정보 보기)를 누르십시오.
 
   ![aaps_ci_google_access_2](../images/Building-the-App/CI/aaps_ci_google_access_2.png)
 
-  - On the details page, tap **Remove all access**.
+  - 세부정보 페이지에서 **Remove all access**(모든 액세스 권한 삭제)를 누르십시오.
 
   ![aaps_ci_google_access_3](../images/Building-the-App/CI/aaps_ci_google_access_3.png)
 
-  - Tap **Confirm**.
+  - **Confirm**(확인)을 누르십시오.
 
   ![aaps_ci_google_access_4](../images/Building-the-App/CI/aaps_ci_google_access_4_confirm.png)
 
-  - Google confirms that AAPS no longer has access. AAPS no longer appears in the list of linked apps.
+  - Google에서 AAPS에 더 이상 액세스 권한이 없다고 확인해 줍니다. 이제 AAPS가 연결된 앱 목록에 더 이상 표시되지 않습니다.
 
   ![aaps_ci_google_access_5](../images/Building-the-App/CI/aaps_ci_google_access_5_removed.png)
 
-  - Now restart the authorization cleanly: close **both** the preparation page and the file manager app, reopen aaps-ci-preparation.html from the file manager and redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps. Google will ask you to grant access again and the page will provide a new `GDRIVE_OAUTH2` token.
-  - [Update the `GDRIVE_OAUTH2` secret](#aaps-ci-update-secret) in your GitHub repository with the new token, then [re-run the build](#aaps-ci-rerun).
+  - 이제 인증을 깨끗하게 다시 시작하십시오: 준비 페이지와 파일 관리자 앱을 **모두** 닫고, 파일 관리자에서 aaps-ci-preparation.html을 다시 연 다음 [Google Drive 인증](#aaps-ci-google-drive-auth) 단계를 다시 하십시오. Google이 다시 액세스 권한을 허용할지 묻고, 페이지에 새 `GDRIVE_OAUTH2` 토큰이 표시됩니다.
+  - GitHub 저장소에서 새 토큰으로 [`GDRIVE_OAUTH2` secret을 업데이트](#aaps-ci-update-secret)한 다음 [빌드를 다시 실행](#aaps-ci-rerun)하십시오.
 
 (aaps-ci-disable-software)=
-### Disable Software That May Interfere With OAuth Verification
-  - Disable any VPN or security app (firewall, antimalware,...) on the phone before trying to get the OAuth key.
+### OAuth 확인을 방해할 수 있는 소프트웨어 끄기
+  - OAuth 키를 받기 전에 휴대폰의 VPN이나 보안 앱(방화벽, 안티멀웨어 등)을 모두 끄십시오.
 
 (aaps-ci-actions-permission)=
-### Check GitHub Actions Permission Settings
-  - Make sure GitHub Actions policies are set to “Allow all actions and reusable workflows” (Settings → Actions → General). If you change it, press **Save** below the options.
+### GitHub Actions 권한 설정 확인
+  - GitHub Actions 정책이 “Allow all actions and reusable workflows”로 설정되어 있는지 확인하십시오(Settings → Actions → General). 바꾸었다면 옵션 아래의 **Save**를 누르십시오.
 
   ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.png)
 
 `actions/checkout@v4` and `actions/setup-java@v4` are not allowed to be used in `xxxxx/AndroidAPS`. Actions in this workflow must be: within a repository owned by `xxxxx`
 
 (aaps-ci-workflow-permissions)=
-### Check GitHub Workflow Permissions Settings
-  - If the build fails immediately with an "Invalid workflow file" error similar to the one below, the default workflow permissions of your repository are too restrictive:
+### GitHub 워크플로 권한 설정 확인
+  - 빌드가 아래와 비슷한 "Invalid workflow file" 오류로 바로 실패하면, 저장소의 기본 워크플로 권한이 너무 제한되어 있는 것입니다:
 
 ```
 Invalid workflow file
@@ -129,19 +129,19 @@ Error calling workflow 'xxxxx/AndroidAPS/.github/workflows/cleanup-workflow-runs
 The nested job 'cleanup' is requesting 'actions: write', but is only allowed 'actions: none'.
 ```
 
-  - Make sure Workflow permissions are set to “Read and write permissions” (Settings → Actions → General → Workflow permissions), then save and re-run the build workflow.
+  - Workflow permissions가 “Read and write permissions”로 설정되어 있는지 확인하십시오(Settings → Actions → General → Workflow permissions). 그런 다음 저장하고 빌드 워크플로를 다시 실행하십시오.
 
   ![aaps_ci_workflow_permissions](../images/Building-the-App/CI/aaps-ci-workflow-permissions.jpg)
 
 (aaps-ci-password-special-characters)=
-### Build Fails Checking The Keystore Password
-  - In the [build log](#aaps-ci-read-the-logs), the step **Validating keystore, alias and password** fails with `Either KEYSTORE_BASE64, KEYSTORE_PASSWORD, KEY_PASSWORD, or KEY_ALIAS is incorrect`, followed by `Keystore was tampered with, or password was incorrect`. The build stops there: the keystore and passwords are checked before AAPS is built.
+### 키 저장소 비밀번호 확인에서 빌드 실패
+  - [빌드 로그](#aaps-ci-read-the-logs)에서 **Validating keystore, alias and password** 단계가 `Either KEYSTORE_BASE64, KEYSTORE_PASSWORD, KEY_PASSWORD, or KEY_ALIAS is incorrect`로 실패하고, 그 뒤에 `Keystore was tampered with, or password was incorrect`가 표시됩니다. 빌드는 여기서 멈춥니다: AAPS를 빌드하기 전에 키 저장소와 비밀번호를 확인합니다.
 
-  ![Wrong keystore password in the build log](../images/Building-the-App/CI/aaps_ci_password_wrong.png)
+  ![빌드 로그의 잘못된 키 저장소 비밀번호](../images/Building-the-App/CI/aaps_ci_password_wrong.png)
 
-  - The build workflow keeps every character of your passwords intact. Enter `KEYSTORE_PASSWORD` and `KEY_PASSWORD` exactly as they are, without adding a backslash or any other escape character. If you added backslashes, [update the secrets](#aaps-ci-update-secret) with the password exactly as it is. The example below is wrong: the password is `Example2026`, the backslash was added.
+  - 빌드 워크플로는 비밀번호의 모든 문자를 그대로 유지합니다. `KEYSTORE_PASSWORD`와 `KEY_PASSWORD`는 백슬래시나 다른 이스케이프 문자를 추가하지 말고 정확히 그대로 입력하십시오. 백슬래시를 추가했다면 비밀번호를 정확히 그대로 하여 [secret을 업데이트](#aaps-ci-update-secret)하십시오. 아래 예는 잘못된 것입니다: 비밀번호는 `Example2026`인데 백슬래시가 추가되었습니다.
 
-  ![Password entered with an added backslash](../images/Building-the-App/CI/aaps_ci_password_escaped.png)
+  ![백슬래시가 추가된 채 입력된 비밀번호](../images/Building-the-App/CI/aaps_ci_password_escaped.png)
 
-  - If the build still fails when signing the APK although your password is correct, and the password contains `$`, a backtick, `"` or `\`, the workflow file in your fork is older than September 2026 and still parses these characters. [Sync your fork](#Update-to-new-version-update-your-repo) with the latest dev, then re-run the build workflow.
-  - The vertical bar `|` is a special case. The preparation page of [Option 1](#aaps-ci-option1) combines the keystore, passwords and alias into one `KEYSTORE_SET` secret separated by `|`, and the workflow splits it on that character. The password generated by the preparation page contains only letters and digits, so this cannot happen with Option 1. It can only happen if you assembled a `KEYSTORE_SET` secret yourself from a password containing `|`. In that case, delete `KEYSTORE_SET` and enter the separate secrets of [Option 2](#aaps-ci-option2) instead.
+  - 비밀번호가 맞는데도 APK 서명 중에 빌드가 계속 실패하고, 비밀번호에 `$`, 백틱, `"` 또는 `\`가 들어 있다면, fork의 워크플로 파일이 2026년 9월보다 오래되어 아직 이 문자들을 해석하는 것입니다. 최신 dev로 [fork를 동기화](#Update-to-new-version-update-your-repo)한 다음 빌드 워크플로를 다시 실행하십시오.
+  - 세로 막대 `|`는 특별한 경우입니다. [옵션 1](#aaps-ci-option1)의 준비 페이지는 키 저장소, 비밀번호와 별칭(alias)을 `|`로 구분하여 하나의 `KEYSTORE_SET` secret으로 합치고, 워크플로는 이 문자로 다시 나눕니다. 준비 페이지가 만드는 비밀번호에는 문자와 숫자만 들어 있으므로, 옵션 1에서는 이 문제가 생길 수 없습니다. `|`가 들어 있는 비밀번호로 `KEYSTORE_SET` secret을 직접 만든 경우에만 생길 수 있습니다. 그런 경우에는 `KEYSTORE_SET`을 삭제하고 대신 [옵션 2](#aaps-ci-option2)의 개별 secret을 입력하십시오.
