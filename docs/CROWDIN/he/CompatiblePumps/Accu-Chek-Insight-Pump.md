@@ -1,141 +1,141 @@
 # Accu-Chek Insight
 
-**This software is part of a DIY artificial pancreas solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you but allows you to improve your diabetes and your quality of life, if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
+**תוכנה זו היא חלק מפתרון לבלב מלאכותי בשיטת עשו זאת בעצמכם ואינה מוצר, אך היא דורשת מכם לקרוא, ללמוד ולהבין את המערכת, כולל אופן השימוש בה. It is not something that does all your diabetes management for you but allows you to improve your diabetes and your quality of life, if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
 
-```{admonition} Accu-Chek Insight is being phased out :class: note
+```{admonition} משאבת Accu-Chek Insight יוצאת משימוש :class: note
 
-Roche is withdrawing from the insulin pump market to refocus its diabetes portfolio on the Accu-Chek SmartGuide CGM. It has communicated the end of sales of both the Accu-Chek Combo and Accu-Chek Insight pumps; its remaining Accu-Chek Solo micropump is also being wound down (last deliveries in Germany at the end of 2025). The change is being rolled out by region, starting in Germany, with other European markets expected to follow. Support for the Insight is already listed as ended (see [Pumps no longer sold](./Future-possible-Pump-Drivers.md)). If you rely on this pump, plan ahead for a transition to a supported pump.
+Roche יוצאת משוק משאבות האינסולין, כדי למקד את תחום הסוכרת שלה בחיישן Accu-Chek SmartGuide CGM. החברה הודיעה על סיום המכירות של המשאבות Accu-Chek Combo ו-Accu-Chek Insight. גם מיקרו-משאבת Accu-Chek Solo, שעוד נותרה לה, יוצאת בהדרגה מהשוק (המשלוחים האחרונים בגרמניה בסוף 2025). השינוי מתבצע לפי אזורים, החל מגרמניה, וצפוי שיגיע גם לשווקים אחרים באירופה. התמיכה ב-Insight כבר מופיעה כמסתיימת (ראו [משאבות שכבר לא נמכרות](./Future-possible-Pump-Drivers.md)). אם אתם תלויים במשאבה זו, כדאי לתכנן מראש מעבר למשאבה נתמכת.
 
     <br />```{note}
-    Before **AAPS** had a native Insight driver, the Insight was controlled through the separate [SightRemote](https://github.com/TebbeUbben/SightRemote) app. SightRemote is no longer needed or maintained: if you still have it installed from those days, uninstall it and use a current version of **AAPS** instead.
+    לפני שהיה ל-**AAPS** מנהל התקן מובנה ל-Insight, השליטה ב-Insight נעשתה דרך האפליקציה הנפרדת [SightRemote](https://github.com/TebbeUbben/SightRemote). אין עוד צורך ב-SightRemote והיא כבר לא מתוחזקת: אם היא עדיין מותקנת אצלכם מאותה תקופה, יש להסיר אותה ולהשתמש בגרסה עדכנית של **AAPS**.
     
 
-```{contents} Table of contents :depth: 1 :local: true
+```{contents} תוכן העניינים :depth: 1 :local: true
 
-    <br />## Pump capabilities with AAPS
+    <br />## יכולות המשאבה עם AAPS
     
-    * Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-    * Automatic DST and timezone handling.
+    * מתקשרת עם **AAPS** דרך ה-Bluetooth המובנה של הטלפון, בלי התקן תקשורת נוסף.
+    * טיפול אוטומטי בשעון קיץ ובאזורי זמן.
     
-    ## Hardware and software requirements
+    ## דרישות חומרה ותוכנה
     
-    * A Roche Accu-Chek Insight pump (any firmware, they all work)
+    * משאבת Roche Accu-Chek Insight (כל קושחה, כולן עובדות)
     
-    Note: AAPS will write data always in **first basal rate profile in the pump**.
+    הערה: AAPS כותב נתונים תמיד ב**פרופיל הקצב הבזאלי הראשון במשאבה**.
     
-    * An Android phone running Android 12 or newer (see [Phones](../Getting-Started/Phones.md))
-    * The AAPS app installed on your phone
+    * טלפון Android עם Android 12 ומעלה (ראו [טלפונים](../Getting-Started/Phones.md))
+    * אפליקציית AAPS מותקנת בטלפון
     
-    ## Setup
+    ## הגדרה
     
-    * The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: **Menu** > **Settings** > **Communication** > **Remove device**.
+    * יש לחבר את משאבת Insight רק למכשיר אחד בכל פעם. אם השתמשתם בעבר בשלט הרחוק של Insight (המד), יש להסיר את המד מרשימת המכשירים המצומדים של המשאבה: **Menu** > **Settings** > **Communication** > **Remove device**.
     
-       ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
+       ![צילום מסך של הסרת המד ב-Insight](../images/Insight_RemoveMeter.png)
     
-    * In [Configuration > Pump](#Config-Builder-pump), select the **Accu-Chek Insight** card. Only one pump can be active at a time.
+    * ב-[הגדרות תצורה > משאבה](#Config-Builder-pump), יש לבחור את הכרטיס **Accu-Chek Insight**. רק משאבה אחת יכולה להיות פעילה בכל פעם.
     
-       ![Configuration > Pump with the Accu-Chek Insight plugin](../images/v4/Configuration/configuration_pump_list_1.png)
+       ![הגדרות תצורה > משאבה עם התוסף Accu-Chek Insight](../images/v4/Configuration/configuration_pump_list_1.png)
     
-       Once it is selected, the **Accu-Chek Insight** card shows two buttons, **Settings** and **Open plugin**:
+       לאחר הבחירה, בכרטיס **Accu-Chek Insight** מופיעים שני לחצנים, **הגדרות** ו-**פתיחת תוסף**:
     
-       ![The Accu-Chek Insight plugin selected in Configuration > Pump](../images/v4/Pumps/accu_chek_insight_enabled.png)
+       ![התוסף Accu-Chek Insight נבחר בהגדרות תצורה > משאבה](../images/v4/Pumps/accu_chek_insight_enabled.png)
     
-       **Settings** opens the settings of the Accu-Chek Insight driver (see [Settings in AAPS](#Accu-Chek-Insight-Pump-settings-in-aaps)).
+       **הגדרות** פותח את ההגדרות של מנהל ההתקן Accu-Chek Insight (ראו [הגדרות ב-AAPS](#Accu-Chek-Insight-Pump-settings-in-aaps)).
     
-       **Open plugin** (or **Manage → Pump**) opens the Accu-Chek Insight pump screen. Before a pump is paired it looks like this:
+       **פתיחת תוסף** (או **ניהול ← משאבה**) פותח את מסך המשאבה של Accu-Chek Insight. לפני צימוד משאבה, המסך נראה כך:
     
-       ![Accu-Chek Insight pump screen before pairing](../images/v4/Pumps/accu_chek_insight_pump_screen.png)
+       ![מסך המשאבה Accu-Chek Insight לפני הצימוד](../images/v4/Pumps/accu_chek_insight_pump_screen.png)
     
     (accu-chek-insight-pairing)=
-    ### Pairing
+    ### צימוד
     
-    * On the pump screen, tap **Insight pairing**. The pairing wizard opens and searches for nearby Bluetooth devices (top of the picture below).
-    * On the Insight pump, go to **Menu** > **Settings** > **Communication** > **Add Device**. The pump shows the following screen (bottom of the picture below) with the serial number of the pump.
+    * במסך המשאבה, יש ללחוץ על **צימוד Insight**. אשף הצימוד נפתח ומחפש מכשירי Bluetooth קרובים (החלק העליון של התמונה למטה).
+    * במשאבת Insight, יש לעבור אל **Menu** > **Settings** > **Communication** > **Add Device**. המשאבה מציגה את המסך הבא (החלק התחתון של התמונה למטה) עם המספר הסידורי של המשאבה.
     
-       ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
+       ![צילום מסך של צימוד Insight 1](../images/Insight_Pairing1.png)
     
-    * Back on your phone, tap the pump serial number in the list of Bluetooth devices. If Android asks you to confirm the pairing, tap **Pair**.
+    * בחזרה בטלפון, יש ללחוץ על המספר הסידורי של המשאבה ברשימת מכשירי ה-Bluetooth. אם Android מבקש לאשר את הצימוד, יש ללחוץ על **Pair** (צימוד).
     
-       ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
+       ![צילום מסך של צימוד Insight 2](../images/Insight_Pairing2.png)
     
-    * The pump and the phone both show a code. Check that the codes are the same on both devices. Confirm on the pump, and tap **Yes** on the phone. (Tap **No** if the codes do not match.)
+    * המשאבה והטלפון מציגים שניהם קוד. יש לבדוק שהקודים זהים בשני המכשירים. יש לאשר במשאבה, וללחוץ על **כן** בטלפון. (יש ללחוץ על **לא** אם הקודים לא זהים.)
     
-       ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
+       ![צילום מסך של צימוד Insight 3](../images/Insight_Pairing3.png)
     
-    * The phone shows **Pairing completed**. Tap **Exit** to return to the pump screen.
+    * הטלפון מציג **הצימוד הושלם**. יש ללחוץ על **יציאה** כדי לחזור למסך המשאבה.
     
-       ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
+       ![צילום מסך של צימוד Insight 4](../images/Insight_Pairing4.png)
     
-    * To check that all is well, look at the pump screen (**Manage → Pump**). Once the pump is paired, it shows information about the pump, such as **Serial number**, **Manufacturing date**, **Release software version** and **Bluetooth address**.
+    * כדי לבדוק שהכול תקין, יש להסתכל במסך המשאבה (**ניהול ← משאבה**). לאחר שהמשאבה מצומדת, המסך מציג מידע על המשאבה, כמו **מספר סידורי**, **תאריך ייצור**, **גרסת תוכנה** ו**כתובת בלוטות'**.
     
-       ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
+       ![צילום מסך של פרטי הצימוד של Insight](../images/Insight_PairingInformation.png)
     
-       ```{admonition} Older screenshot
+       ```{admonition} צילום מסך ישן
        :class: note
-       Apart from the top of the first picture, the pairing screenshots above are from an earlier **AAPS** version and may look different in **AAPS** 4.
+       מלבד החלק העליון של התמונה הראשונה, צילומי המסך של הצימוד למעלה הם מגרסה קודמת של **AAPS**, וייתכן שהם ייראו אחרת ב-**AAPS** 4.
        ```
     
-    * To remove the pairing, tap **Unpair** on the pump screen and confirm **Reset pairing information?**. The **Insight pairing** button then appears again.
+    * כדי להסיר את הצימוד, יש ללחוץ על **ביטול צימוד** במסך המשאבה ולאשר את **לאפס את נתוני הצימוד?**. הלחצן **צימוד Insight** מופיע אז שוב.
     
-    Note: There is no permanent connection between the pump and the phone. **AAPS** only connects when needed (for example to set a temporary basal rate, give a bolus or read the pump history). Otherwise the batteries of the phone and the pump would drain far too fast.
+    הערה: אין חיבור קבוע בין המשאבה לטלפון. **AAPS** מתחבר רק כשצריך (למשל כדי להגדיר בזאלי זמני, לתת בולוס או לקרוא את היסטוריית המשאבה). אחרת הסוללות של הטלפון ושל המשאבה היו מתרוקנות מהר מדי.
     
     (Accu-Chek-Insight-Pump-settings-in-aaps)=
-    ## Settings in AAPS
+    ## הגדרות ב-AAPS
     
-    Open the settings with **Settings** on the **Accu-Chek Insight** card in **Configuration** > **Pump**, or with the gear icon in the top-right corner of the pump screen.
+    יש לפתוח את ההגדרות בלחיצה על **הגדרות** בכרטיס **Accu-Chek Insight** ב-**הגדרות תצורה** > **משאבה**, או בלחיצה על סמל גלגל השיניים בחלק העליון של מסך המשאבה.
     
-    ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
+    ![הגדרות מנהל ההתקן Accu-Chek Insight](../images/v4/Pumps/accu_chek_insight_settings.png)
     
-    In the Insight settings in **AAPS** you can enable the following options:
+    בהגדרות Insight ב-**AAPS** ניתן להפעיל את האפשרויות הבאות:
     
-    * **Log reservoir changes**: automatically records an insulin cartridge change when you change the cartridge in the pump.
+    * **רישום החלפת מכל**: רושם אוטומטית החלפה של מחסנית האינסולין כאשר מחליפים את המחסנית במשאבה.
     
-    * **Log tube changes**: adds a note to the **AAPS** database when you run the "tube filling" program on the pump.
+    * **רישום החלפת צינורית**: מוסיף הערה למסד הנתונים של **AAPS** כאשר מפעילים במשאבה את התוכנית "tube filling".
     
-    * **Log site changes**: adds a note to the **AAPS** database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
+    * **רישום החלפת אתר עירוי**: מוסיף הערה למסד הנתונים של **AAPS** כאשר מפעילים במשאבה את התוכנית "cannula filling". **הערה: החלפת אתר עירוי מאפסת גם את Autosens.**
     
-    * **Log battery changes**: records a battery change when you put a new battery in the pump.
+    * **רישום החלפת סוללה**: רושם החלפת סוללה כאשר מכניסים סוללה חדשה למשאבה.
     
-    * **Log operating mode changes**: adds a note to the **AAPS** database whenever you start, stop or pause the pump.
+    * **רישום שינויים במצב הפעלה**: מוסיף הערה למסד הנתונים של **AAPS** בכל פעם שמפעילים, עוצרים או משהים את המשאבה.
     
-    * **Log alerts**: adds a note to the **AAPS** database whenever the pump issues an alert (except reminders, bolus and TBR cancellation, which are not recorded).
+    * **רישום התראות**: מוסיף הערה למסד הנתונים של **AAPS** בכל פעם שהמשאבה מפעילה התראה (חוץ מתזכורות, ומביטול של בולוס ושל TBR, שאינם נרשמים).
     
-    * **Enable TBR emulation**: the Insight pump can only set temporary basal rates (TBRs) up to 250%. To get around this limit, TBR emulation tells the pump to deliver an extended bolus for the extra insulin if a TBR of more than 250% is requested.
+    * **הפעלת הדמיית בזאלי זמני**: משאבת Insight יכולה להגדיר קצבים בזאליים זמניים (TBR) רק עד 250%. כדי לעקוף מגבלה זו, הדמיית TBR מורה למשאבה לתת בולוס ממושך עבור האינסולין הנוסף, אם מתבקש TBR של יותר מ-250%.
     
-      **Note: Only use one extended bolus at a time. Several extended boluses at the same time might cause errors.**
+      **הערה: יש להשתמש רק בבולוס ממושך אחד בכל פעם. כמה בולוסים ממושכים בו-זמנית עלולים לגרום לשגיאות.**
     
-    * **Disable vibrations on manual bolus delivery**: stops the Insight pump from vibrating when it delivers a manual bolus (or extended bolus). Only available with Insight firmware 3.x.
+    * **ביטול רטט בעת הזרקת בולוס ידנית**: מונע ממשאבת Insight לרטוט כאשר היא נותנת בולוס ידני (או בולוס ממושך). זמין רק בקושחת Insight 3.x.
     
-    * **Disable vibrations on automated bolus delivery**: stops the Insight pump from vibrating when it delivers an automatic bolus (SMB or temp basal with TBR emulation). Only available with Insight firmware 3.x.
+    * **ביטול רטט בעת הזרקת בולוס אוטומטית**: מונע ממשאבת Insight לרטוט כאשר היא נותנת בולוס אוטומטי (SMB או בזאלי זמני עם הדמיית TBR). זמין רק בקושחת Insight 3.x.
     
-    * **Min. recovery duration [s]** and **Max. recovery duration [s]**: how long **AAPS** waits before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you have connection problems, choose a longer wait time.
-        <br><br>Example for min. recovery duration = 5 and max. recovery duration = 20
-        <br><br>no connection -> wait <b>5</b> sec.
-          <br>  retry -> no connection -> wait <b>6</b> sec.
-          <br>  retry -> no connection -> wait <b>7</b> sec.
-          <br>  retry -> no connection -> wait <b>8</b> sec.
+    * **משך זמן התאוששות מינימלי [s]** ו-**משך זמן התאוששות מקסימלי [s]**: כמה זמן **AAPS** מחכה לפני ניסיון נוסף, אחרי ניסיון חיבור שנכשל. You can choose from 0 to 20 seconds. אם יש בעיות חיבור, כדאי לבחור זמן המתנה ארוך יותר.
+        <br><br>דוגמה: מינימום משך התאוששות = 5 ומקסימום משך התאוששות = 20
+        <br><br>אין חיבור -> המתנה <b>5</b> שניות.
+          <br>  ניסיון חוזר -> אין חיבור -> המתנה <b>6</b> שניות.
+          <br>  ניסיון חוזר -> אין חיבור -> המתנה <b>7</b> שניות.
+          <br>  ניסיון חוזר -> אין חיבור -> המתנה <b>8</b> שניות.
           <br>...
-          <br>retry -> no connection -> wait <b>20</b> sec.
-          <br>retry -> no connection -> wait <b>20</b> sec.
+          <br>ניסיון חוזר -> אין חיבור -> המתנה <b>20</b> שניות.
+          <br>ניסיון חוזר -> אין חיבור -> המתנה <b>20</b> שניות.
           <br>...
     
-    * **Disconnect delay [s]**: how long (in seconds) **AAPS** waits before disconnecting from the pump after an operation is finished. You can choose from 0 to 15 seconds. The default value is 5 seconds.
+    * **עיכוב הניתוק [s]**: כמה זמן (בשניות) **AAPS** מחכה לפני הניתוק מהמשאבה, אחרי שפעולה הסתיימה. ניתן לבחור בין 0 ל-15 שניות. ערך ברירת המחדל הוא 5 שניות.
     
-    For periods when the pump was stopped, **AAPS** logs a temporary basal rate of 0%.
+    בתקופות שבהן המשאבה הייתה עצורה, **AAPS** רושם בזאלי זמני של 0%.
     
-    ### The pump screen
+    ### מסך המשאבה
     
-    The Accu-Chek Insight pump screen (**Manage → Pump**) shows the current status of the pump, for example **Status**, **Last connected**, **Operating mode**, **Battery**, **Reservoir level**, today's total daily doses (**TDD Bolus**, **TDD Basal**), basal rates and the last bolus. Once the pump is paired, it has these buttons:
+    מסך המשאבה של Accu-Chek Insight (**ניהול ← משאבה**) מציג את המצב הנוכחי של המשאבה, למשל **סטטוס**, **התחברות אחרונה**, **מצב פעולה**, **סוללה**, **כמות במכל**, המינונים היומיים הכוללים של היום (**מינון בולוס יומי מצטבר**, **מינון בזאלי יומי מצטבר**), הקצבים הבזאליים והבולוס האחרון. לאחר שהמשאבה מצומדת, יש בה את הלחצנים הבאים:
     
-    * **Refresh**: refreshes the pump status.
-    * **Enable notification of TBR end (pump setting)** / **Disable notification of TBR end (pump setting)**: a standard Insight pump sounds an alarm when a TBR finishes. This button turns that alarm on or off without the need for configuration software.
-    * **Unpair**: removes the pairing with the pump (see [Pairing](#accu-chek-insight-pairing)).
+    * **רענן**: מרענן את מצב המשאבה.
+    * **אפשר התראה על סיום בזאלי זמני (הגדרת משאבה)** / **השבת התראה על סיום בזאלי זמני (הגדרת משאבה)**: משאבת Insight רגילה משמיעה התראה כשבזאלי זמני (TBR) מסתיים. לחצן זה מפעיל או מכבה את ההתראה הזו, בלי צורך בתוכנת הגדרה.
+    * **ביטול צימוד**: מסיר את הצימוד עם המשאבה (ראו [צימוד](#accu-chek-insight-pairing)).
     
-    ![Screenshot of Insight Status](../images/Insight_Status2.png)
+    ![צילום מסך של מצב Insight](../images/Insight_Status2.png)
     
-    ```{admonition} Older screenshot
+    ```{admonition} צילום מסך ישן
     :class: note
-    The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen looks different and also has an **Unpair** button.
+    צילום המסך למעלה הוא מגרסה קודמת של **AAPS**. ב-**AAPS** 4 מסך המשאבה נראה אחרת, ויש בו גם לחצן **ביטול צימוד**.
     
 
 ## Settings in the pump
@@ -146,23 +146,23 @@ Configure alarms in the pump as follows:
 * Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
 * Menu > Modes > Signal mode > Quiet
 
-This will silence all alarms from the pump, allowing AAPS to decide if an alarm is relevant to you. If AAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
+כך יושתקו כל ההתראות מהמשאבה, ו-AAPS יוכל להחליט אם התראה רלוונטית עבורכם. אם AAPS אינו מאשר התראה, עוצמתה תגבר (תחילה צפצוף, ולאחר מכן רטט).
 
 (Accu-Chek-Insight-Pump-vibration)=
 
 ### Vibration
 
-Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AAPS issues an SMB or TBR emulation delivers an extended bolus).
+בהתאם לגרסת הקושחה של המשאבה, ה-Insight תרטוט בקצרה בכל פעם שניתן בולוס (למשל, כאשר AAPS נותן SMB או כאשר הדמיית TBR נותנת בולוס ממושך).
 
 * Firmware 1.x: No vibration by design.
 * Firmware 2.x: Vibration cannot be disabled.
-* Firmware 3.x: AAPS delivers bolus silently.
+* קושחה 3.x: AAPS נותן בולוס בשקט.
 
 Firmware version can be found in the menu.
 
 ## Battery replacement
 
-Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days. The user reporting this is using Energizer lithium batteries.
+חיי הסוללה של Insight בעת שימוש בלולאה נעים בין 10 ל-14 ימים, ולכל היותר 20 ימים. The user reporting this is using Energizer lithium batteries.
 
 The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
 
@@ -172,15 +172,15 @@ The Insight pump has a small internal battery to keep essential functions like t
 
 ### בולוס ממושך
 
-Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
+יש להשתמש רק בבולוס ממושך אחד בכל פעם, כי כמה בולוסים ממושכים בו-זמנית עלולים לגרום לשגיאות.
 
 ### Time out
 
-Sometimes the Insight pump does not answer while **AAPS** sets up the connection. **AAPS** then shows the notification "Timeout during handshake - reset bluetooth".
+לפעמים משאבת Insight לא עונה בזמן ש-**AAPS** מקים את החיבור. **AAPS** מציג אז את ההודעה "מגבלת זמן במהלך לחיצת יד - אתחול בלוטות'".
 
 ![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
 
-If this happens, turn off Bluetooth on the pump AND on the phone for about 10 seconds, then turn it back on.
+אם זה קורה, יש לכבות את ה-Bluetooth במשאבה וגם בטלפון לכ-10 שניות, ואז להפעיל אותו שוב.
 
 ## Crossing time zones with Insight pump
 
@@ -188,10 +188,10 @@ For information on traveling across time zones see section [Timezone traveling w
 
 ## Where to get help
 
-Development of the Insight driver is done by the community on a **volunteer** basis. Before requesting help, please:
+הפיתוח של מנהל ההתקן של Insight נעשה על ידי הקהילה על בסיס **התנדבותי**. לפני שמבקשים עזרה, יש:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **לקרוא** את החלק הרלוונטי בתיעוד הזה, כדי לוודא איך התכונה אמורה לעבוד.
+2. **לשאול** בערוץ *#AAPS* ב-[Discord](https://discord.gg/4fQUWHZ4Mw), או באחד מ[ערוצי הקהילה](../GettingHelp/WhereCanIGetHelp.md) האחרים.
+3. **לדווח על באג**: לחפש ב[issues הקיימים](https://github.com/nightscout/AndroidAPS/issues); אם הבעיה לא מופיעה שם, לפתוח [issue חדש](https://github.com/nightscout/AndroidAPS/issues) ולצרף את [קובצי היומן](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+כשמבקשים עזרה, יש לציין את היצרן והדגם של הטלפון, את גרסת Android, את גרסת **AAPS** ותיאור פשוט של הבעיה באנגלית (מה השתנה, ומתי זה עבד בפעם האחרונה).
