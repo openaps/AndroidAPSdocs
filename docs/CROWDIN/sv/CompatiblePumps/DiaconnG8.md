@@ -5,137 +5,137 @@
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Pumpens funktioner med AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* DST and timezone changes must be handled manually.
+* Kommunicerar med **AAPS** via telefonens inbyggda Bluetooth, utan någon extra kommunikationsenhet.
+* Byte till/från sommartid och byte av tidszon måste du göra manuellt.
 
-## Insulin Pump Bluetooth Pairing
+## Parkoppla insulinpumpen via Bluetooth
 
-- Tap the **menu** (☰) in the top-left corner.
+- Tryck på **menyn** (☰) uppe till vänster.
 
-![The menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
+![Menyn med posten Konfiguration](../images/v4/Configuration/configuration_menu.png)
 
-- Tap **Configuration** > **Pump** and select **Diaconn G8**.
+- Tryck på **Konfiguration** > **Pump** och välj **Diaconn G8**.
 
-![Configuration > Pump with the Diaconn G8 plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+![Konfiguration > Pump med pluginet Diaconn G8](../images/v4/Configuration/configuration_pump_list_3.png)
 
-Once it is selected, the **Diaconn G8** card shows two buttons, **Settings** and **Open plugin**:
+När den är vald visar kortet **Diaconn G8** två knappar, **Inställningar** och **Öppna plugin**:
 
-![The Diaconn G8 plugin selected in Configuration > Pump](../images/v4/Pumps/diaconn_g8_enabled.png)
+![Pluginet Diaconn G8 valt i Konfiguration > Pump](../images/v4/Pumps/diaconn_g8_enabled.png)
 
-**Settings** opens the settings of the Diaconn G8 driver (see [Diaconn G8 insulin pump option setting](#diaconn-g8-insulin-pump-option-setting) below).
+**Inställningar** öppnar inställningarna för drivrutinen Diaconn G8 (se [Inställningar för insulinpumpen Diaconn G8](#diaconn-g8-insulin-pump-option-setting) nedan).
 
-**Open plugin** (or **Manage** > **Pump**) opens the Diaconn G8 pump screen. Before a pump is paired it looks like this:
+**Öppna plugin** (eller **Hantera** > **Pump**) öppnar pumpskärmen för Diaconn G8. Innan en pump har parkopplats ser den ut så här:
 
-![Diaconn G8 pump screen before pairing](../images/v4/Pumps/diaconn_g8_pump_screen.png)
+![Pumpskärmen för Diaconn G8 före parkoppling](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
 ![image](../images/DiaconnG8/DiaconnG8_04.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 pairing starts from the **Pair** button on the pump screen; there is no **Selected pump** setting.
+Skärmbilden ovan är från en tidigare **AAPS**-version. I **AAPS** 4 startar du parkopplingen med knappen **Parkoppla** på pumpskärmen. Det finns ingen inställning **Vald pump**.
 ```
 
-- On the pump screen, tap **Pair**. The **Diaconn Pump Pairing** screen opens and **AAPS** scans for nearby pumps.
-- Tap your insulin pump's model number once it appears in the list (for example **DIACONN-65010**).
+- Tryck på **Parkoppla** på pumpskärmen. Skärmen **Diaconn parkoppling** öppnas och **AAPS** söker efter pumpar i närheten.
+- Tryck på insulinpumpens modellnummer när det visas i listan (till exempel **DIACONN-65010**).
 
-![Diaconn Pump Pairing screen scanning for pumps](../images/DiaconnG8/DiaconnG8_05.png)
+![Skärmen Diaconn parkoppling söker efter pumpar](../images/DiaconnG8/DiaconnG8_05.png)
 
-- There are two options to check your model number:
+- Det finns två sätt att kontrollera ditt modellnummer:
 
-1. The last 5 digits of the SN number on the back of the pump.
-2. Click on O button > Information > BLE > Last 5 digits.
+1. De sista 5 siffrorna i serienumret (SN) på pumpens baksida.
+2. Tryck på O-knappen > Information > BLE > De sista 5 siffrorna.
 
 ![image](../images/DiaconnG8/DiaconnG8_06.jpg)
 
-- Once you select your pump, a window appears asking for a PIN code. Enter the PIN number displayed on your pump to complete the connection.
+- När du har valt din pump visas ett fönster som ber om en PIN-kod. Ange PIN-koden som visas på pumpen för att slutföra anslutningen.
 
  ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
 
-- When **Pairing successful!** is shown, tap **OK** to go back to the pump screen.
+- När **Parkopplingen lyckades!** visas trycker du på **OK** för att gå tillbaka till pumpskärmen.
 
-## Pump status check and log synchronization
+## Kontrollera pumpstatus och synkronisera loggar
 
-- Once your pump is connected, open the pump screen (**Manage** > **Pump**). It shows the pump status (battery, reservoir, last connection, last bolus, basal rate and more).
-- Tap **Refresh** to connect to the pump, update the status and synchronize the logs.
-- Tap **Pump history** to see the history read from the pump.
+- När pumpen är ansluten öppnar du pumpskärmen (**Hantera** > **Pump**). Den visar pumpens status (batteri, reservoar, senaste anslutning, senaste bolus, basaldos med mera).
+- Tryck på **Uppdatera** för att ansluta till pumpen, uppdatera statusen och synkronisera loggarna.
+- Tryck på **Pumphistorik** för att se historiken som har lästs från pumpen.
 
 ![image](../images/DiaconnG8/DiaconnG8_08.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump status is shown on the pump screen (**Manage** > **Pump**) and synchronized with the **Refresh** button.
+Skärmbilden ovan är från en tidigare **AAPS**-version. I **AAPS** 4 visas pumpens status på pumpskärmen (**Hantera** > **Pump**) och synkroniseras med knappen **Uppdatera**.
 ```
 
 (diaconn-g8-bluetooth-troubleshooting)=
 
-## Bluetooth Troubleshooting
+## Felsökning av Bluetooth
 
-**What to do in the case of an unstable Bluetooth connection with the pump.**
+**Vad du gör om Bluetooth-anslutningen till pumpen är instabil.**
 
-### Method 1) Restart AAPS, then check the pump again
+### Metod 1) Starta om AAPS och kontrollera sedan pumpen igen
 
-- Tap the **menu** (☰) in the top-left corner.
-- Tap **Exit** at the bottom of the menu.
+- Tryck på **menyn** (☰) uppe till vänster.
+- Tryck på **Avsluta** längst ned i menyn.
 
-![The menu with the Exit entry at the bottom](../images/v4/Configuration/configuration_menu.png)
+![Menyn med posten Avsluta längst ned](../images/v4/Configuration/configuration_menu.png)
 
-- Start **AAPS** again and check the connection to the pump.
+- Starta **AAPS** igen och kontrollera anslutningen till pumpen.
 
-### Method 2) If the first method doesn't work, disconnect Bluetooth and then reconnect.
+### Metod 2) Om den första metoden inte fungerar: koppla bort Bluetooth och anslut sedan igen.
 
-- Press and hold the Bluetooth button at the top for about 3 seconds.
+- Håll Bluetooth-knappen längst upp intryckt i cirka 3 sekunder.
 
 ![image](../images/DiaconnG8/DiaconnG8_11.jpg)
 
-- Click on the Setting button on the paired Diaconn G8 Insulin pump.
+- Tryck på inställningsknappen för den parkopplade Diaconn G8-insulinpumpen.
 
 ![image](../images/DiaconnG8/DiaconnG8_12.jpg)
 
-- Unpair.
+- Ta bort parkopplingen.
 
 ![image](../images/DiaconnG8/DiaconnG8_13.jpg)
 
-- In **AAPS**, open the pump screen (**Manage** > **Pump**), tap **Unpair** and confirm **Reset pairing information?**.
-- Repeat the Bluetooth pairing process for the pump (see above).
+- Öppna pumpskärmen i **AAPS** (**Hantera** > **Pump**), tryck på **Ta bort parkoppling** och bekräfta **Återställ parkopplingen?**.
+- Gör om parkopplingen av pumpen via Bluetooth (se ovan).
 
-## Further Information
+## Mer information
 
 (diaconn-g8-insulin-pump-option-setting)=
 
-### Diaconn G8 Insulin pump option setting
+### Inställningar för insulinpumpen Diaconn G8
 
-- **Configuration** > **Pump** > **Diaconn G8** > **Settings**
-- Or, on the pump screen (**Manage** > **Pump**), tap the settings icon (cog wheel) in the top-right corner.
+- **Konfiguration** > **Pump** > **Diaconn G8** > **Inställningar**
+- Eller tryck på inställningsikonen (kugghjulet) uppe till höger på pumpskärmen (**Hantera** > **Pump**).
 
-![Diaconn G8 driver settings](../images/v4/Pumps/diaconn_g8_settings.png)
+![Inställningar för drivrutinen Diaconn G8](../images/v4/Pumps/diaconn_g8_settings.png)
 
-- **Bolus speed** sets how fast the pump delivers a bolus.
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an "Insulin Change" event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a "Site Change" event occurs.
-- If the **Log tube change** option is activated, the relevant details are automatically added as a note when a "Tube Change" event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a "Battery Change" event occurs. You can also record a battery change yourself with **Manage** > **Pump Battery Change**. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
-- **Diaconn Cloud Sync** sends the pump logs to the Diaconn Cloud.
+- **Bolushastighet** anger hur snabbt pumpen ger en bolus.
+- Om alternativet **Logga reservoarbyten** är aktiverat laddas uppgifterna automatiskt upp till careportal när händelsen "Insulin Change" inträffar.
+- Om alternativet **Logga nålbyte** är aktiverat laddas uppgifterna automatiskt upp till careportal när händelsen "Site Change" inträffar.
+- Om alternativet **Logga slangbyte** är aktiverat läggs uppgifterna automatiskt till som en anteckning när händelsen "Tube Change" inträffar.
+- Om alternativet **Logga batteribyten** är aktiverat laddas uppgifterna automatiskt upp till careportal när händelsen "Battery Change" inträffar. Du kan också själv registrera ett batteribyte med **Hantera** > **Byte av pumpbatteri**. (Obs! Stoppa alla pågående insulinfunktioner innan du byter batteri.)
+- **Diaconn Molnsynkronisering** skickar pumploggarna till Diaconns moln.
 
-![Diaconn G8 actions menu](../images/DiaconnG8/DiaconnG8_15.jpg)
+![Åtgärdsmenyn för Diaconn G8](../images/DiaconnG8/DiaconnG8_15.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 a battery change is recorded with **Manage** > **Pump Battery Change**; there is no **Actions** tab.
+Skärmbilden ovan är från en tidigare **AAPS**-version. I **AAPS** 4 registrerar du ett batteribyte med **Hantera** > **Byte av pumpbatteri**. Det finns ingen flik **Åtgärder**.
 ```
 
-### Extended Bolus function
+### Funktionen förlängd bolus
 
-- If you use extended bolus it will disable closed loop.
-- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- Om du använder förlängd bolus stängs den slutna loopen av.
+- Läs [den här sidan](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) för att förstå varför förlängd bolus inte fungerar med sluten loop.
 
-## Where to get help
+## Var du kan få hjälp
 
-Development of the Diaconn G8 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Drivrutinen för Diaconn G8 utvecklas av communityn på **frivillig** basis. Innan du ber om hjälp:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Läs** det avsnitt i dokumentationen som gäller, så att du vet hur funktionen ska fungera.
+2. **Fråga** i kanalen *#AAPS* på [Discord](https://discord.gg/4fQUWHZ4Mw) eller i någon av de andra [communitykanalerna](../GettingHelp/WhereCanIGetHelp.md).
+3. **Rapportera en bugg**: sök först bland [befintliga ärenden](https://github.com/nightscout/AndroidAPS/issues). Om ditt problem inte finns där, skapa ett [nytt ärende](https://github.com/nightscout/AndroidAPS/issues) och bifoga dina [loggfiler](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+När du ber om hjälp, ange telefonens märke och modell, Android-version, **AAPS**-version och en enkel beskrivning av problemet (vad som ändrades, när det fungerade senast).
