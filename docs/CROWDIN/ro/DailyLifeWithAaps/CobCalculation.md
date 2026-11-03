@@ -1,28 +1,28 @@
 # Calcul COB
 
-## How does AAPS calculate the COB value?
+## Cum calculează AAPS valoarea COB?
 
-When carbs are entered by the user as part of a meal entry or carb correction, **AAPS** will add this calculation to the current carbs on board (**COB**). **AAPS** then calculates the user’s carbs’ absorption based on observed deviations to the user’s **BG** values. The rate of absorption depends on the carb’s sensitivity factor (**CSF**). This is not a feature within the user’s **Profile** but is calculated by **AAPS** according to **ISF/I:C** setup, and is determined by how many mg/dL 1 g of carbs will raise the user’s **BG**.
+When carbs are entered by the user as part of a meal entry or carb correction, **AAPS** will add this calculation to the current carbs on board (**COB**). **AAPS** then calculates the user’s carbs’ absorption based on observed deviations to the user’s **BG** values. Viteza de absorbție depinde de factorul de sensibilitate la carbohidrați (**CSF**). This is not a feature within the user’s **Profile** but is calculated by **AAPS** according to **ISF/I:C** setup, and is determined by how many mg/dL 1 g of carbs will raise the user’s **BG**.
 
-## Carb Sensitivity Factor
+## Factorul de sensibilitate la carbohidrați
 
-The formula adopted by **AAPS** is:
+Formula folosită de **AAPS** este:
 
 - absorbed_carbs = deviation * ic / isf.
 
 The effect on the user’s **Profile** will:
 
-- _increase_ **IC** - by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
+- _creșterea_ **IC** - crește cantitatea de carbohidrați absorbiți la fiecare 5 minute și astfel scurtează timpul total de absorbție;
 
-- _increase_ **ISF** - by decreasing the carbs absorbed every 5 minutes thus prolong total time of absorption; and
+- _creșterea_ **ISF** - scade cantitatea de carbohidrați absorbiți la fiecare 5 minute și astfel prelungește timpul total de absorbție; și
 
-- _change_ **Profile Percentage** - increase/decrease both values thus has no impact on carbs absorption time.
+- _schimbarea_ **Procentajului profilului** - crește/scade ambele valori și astfel nu are niciun efect asupra timpului de absorbție a carbohidraților.
 
-For example, if the user’s **Profile** **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. For every 20 mg/dL the user’s **BG** goes up, 1 g of carbs will be calculated as absorbed by **AAPS**. Positive **IOB** also affects the **COB** calculation. So, if **AAPS** predicts the user’s **BG** to go down by 20 mg/dL because of **IOB** and it instead stayed flat, **AAPS** would also calculate 1 g of carbs as absorbed.
+De exemplu, dacă în **Profilul** utilizatorului **ISF** este 100 și **I:C** este 5, factorul de sensibilitate la carbohidrați al utilizatorului este 20. For every 20 mg/dL the user’s **BG** goes up, 1 g of carbs will be calculated as absorbed by **AAPS**. Positive **IOB** also affects the **COB** calculation. So, if **AAPS** predicts the user’s **BG** to go down by 20 mg/dL because of **IOB** and it instead stayed flat, **AAPS** would also calculate 1 g of carbs as absorbed.
 
 Carbs will also be absorbed via the methods described below based on which sensitivity algorithm has been selected within the user's **AAPS**.
 
-## Carbs Sensitivity - Oref1
+## Sensibilitate la carbohidrați - Oref1
 
 Carbohidrații neabsorbiți sunt ignorați după timpul specificat:
 
@@ -36,9 +36,9 @@ The screenshot above is from an earlier **AAPS** version — in **AAPS** 4 the g
 ```
 
 
-## Carbs Sensitivity - WeightedAverage
+## Sensibilitate la carbohidrați - WeightedAverage
 
-Absorption is calculated to have COB = 0 after specified time:
+Absorbția este calculată astfel încât COB = 0 după timpul specificat:
 
 ![AAPS, WeightedAverage](../images/cob_aaps2_orange_II.png)
 
@@ -47,7 +47,7 @@ If minimal carbs absorption (min_5m_carbimpact) is used instead of value calcula
 (CobCalculation-detection-of-wrong-cob-values)=
 ## Detectarea unor valori COB greșite
 
-**AAPS** will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
+**AAPS** va avertiza utilizatorul dacă acesta este pe cale să facă un bolus cu **COB** de la o masă anterioară, dacă algoritmul consideră că valoarea **COB** calculată acum este incorectă. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
 
 ### How does AAPS detect wrong COB values?
 
@@ -61,15 +61,15 @@ In the screenshot above, 66% of time the carb absorption was calculated by the m
 
 - Consider cancelling the treatment - press ‘Cancel’ instead of OK.
 - Calculate your upcoming meal again with bolus wizard leaving **COB** unticked.
-- If you need a correction bolus, enter it manually.
-- Be careful not to overdose or stack insulin!
+- Dacă aveți nevoie de un bolus de corecție, introduceți-l manual.
+- Aveți grijă să nu supradozați și să nu acumulați insulină (insulin stacking)!
 
 
 ### De ce algoritmul nu detectează corect COB?
 
 This could be because:
 - Potentially the user overestimated carbs when entering them.
-- Activitate / exerciții fizice după mesele anterioare.
+- Activitate / exerciții fizice după masa anterioară.
 - Raportul carbohidrați insulină necesită ajustare.
 - Valoarea pentru min_5m_carbimpact este greșită (recomandată este de 8 cu SMB, 3 cu AMA).
 
@@ -87,7 +87,7 @@ The **Treatments history** screen can be used to correct a faulty carb entry by 
 ![Deleting a carb entry from Treatments history](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
 1. Check and remember actual **COB** and **IOB** on the **AAPS** main screen.
-2. Open **Treatments history** (drawer menu → *Treatments history*), tab **Carbs and bolus**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (e.g. with Dana RS).
+2. Deschideți **Istoricul tratamentelor** (meniul lateral → *Istoricul tratamentelor*), fila **Carbohidrați și bolusuri**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (e.g. with Dana RS).
 3. **Long-press** the faulty carb entry — the list switches to **selection mode** with a checkbox on every line, and the entry is ticked (marked **1** above). Tick any further entries you want to remove as well.
 4. Tap the **🗑 Delete** icon in the top bar (marked **2**) and confirm — the confirmation dialog lists exactly what will be removed.
 5. Make sure carbs are removed successfully by checking **COB** on the **AAPS** main screen again.
