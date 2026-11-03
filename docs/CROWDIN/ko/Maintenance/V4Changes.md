@@ -1,7 +1,7 @@
 (v4-changes)=
-# What changed in AAPS v4
+# AAPS v4의 변경 사항
 
-This page collects the notable **changes in behavior** between **AAPS** v3 and v4 — things that work differently, have moved, or have been removed — so existing users know what to expect when they update. See also the [Release Notes](ReleaseNotes.md) and the [update manual](UpdateToNewVersion.md).
+이 페이지는 **AAPS** v3과 v4 사이의 주요 **동작 변경 사항**을 모은 것입니다. 다르게 작동하는 것, 위치가 바뀐 것, 제거된 것을 정리하여 기존 사용자가 업데이트할 때 무엇이 달라지는지 알 수 있게 합니다. [릴리스 노트](ReleaseNotes.md)와 [업데이트 설명서](UpdateToNewVersion.md)도 참조하십시오.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,160 +10,160 @@ This page collects the notable **changes in behavior** between **AAPS** v3 and v
 
 ---
 
-## NSClient v1 has been removed
+## NSClient v1이 제거되었습니다
 
-**AAPS** v3 shipped **two** Nightscout synchronization plugins:
+**AAPS** v3에는 Nightscout 동기화 플러그인이 **두 개** 있었습니다:
 
-- **NSClient** — the legacy client (the old Nightscout REST / socket.io API, also called *“v1”*), and
-- **NSClientV3** — the client for the newer Nightscout **API v3**.
+- **NSClient** — 이전 클라이언트(이전 Nightscout REST / socket.io API, *“v1”*이라고도 함), 그리고
+- **NSClientV3** — 새로운 Nightscout **API v3**용 클라이언트.
 
-In **AAPS** v4 the legacy **NSClient (v1)** plugin has been **removed**. Only **NSClientV3** remains for synchronizing with Nightscout.
+**AAPS** v4에서는 이전 **NSClient (v1)** 플러그인이 **제거되었습니다**. Nightscout와 동기화하는 플러그인으로는 **NSClientV3**만 남아 있습니다.
 
 ```{admonition} What you need to do
 :class: important
-If you (or your **AAPSClient** follower) were still synchronizing with the old **NSClient (v1)** plugin, switch to **NSClientV3** before/after updating:
+여러분(또는 **AAPSClient** 팔로워)이 아직 이전 **NSClient (v1)** 플러그인으로 동기화하고 있었다면, 업데이트 전이나 후에 **NSClientV3**로 바꾸십시오:
 
-- Open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → Communication → NSClientV3**.
-- Enter your **Nightscout URL** and an **access token** (NSClientV3 uses an access token, *not* the old API secret — see [creating a token](https://nightscout.github.io/nightscout/security/#create-a-token)).
-- Your Nightscout site must support the **API v3** (Nightscout 15 or newer).
-- If you use **websockets**, enable or disable them on **both** the master and the follower — never on only one.
+- **[구성](../SettingUpAaps/ConfigBuilder.md) → 통신 → NSClientV3**을 여십시오.
+- **Nightscout URL**과 **액세스 토큰**을 입력하십시오(NSClientV3는 이전 API secret이 *아니라* 액세스 토큰을 사용합니다. [토큰 만들기](https://nightscout.github.io/nightscout/security/#create-a-token) 참조).
+- Nightscout 사이트가 **API v3**를 지원해야 합니다(Nightscout 15 이상).
+- **websockets**를 사용한다면 마스터와 팔로워 **양쪽 모두**에서 켜거나 끄십시오. 한쪽에서만 켜면 안 됩니다.
 ```
 
-This affects only how the app talks to Nightscout; your data on Nightscout is unchanged.
+이것은 앱이 Nightscout와 통신하는 방식에만 영향을 줍니다. Nightscout에 있는 데이터는 바뀌지 않습니다.
 
 ---
 
-## The bottom navigation: Treatments, Scenes and Manage
+## 하단 내비게이션: 처치, 장면, 관리
 
-In **AAPS** v3 you moved around the app with a row of **tabs** (Overview, Actions, Treatments, …), and several features were **plugins** you enabled in the Config Builder (**Actions**, **Automation**, **Food**, …).
+**AAPS** v3에서는 한 줄로 된 **탭**(개요, 동작, 처치, …)으로 앱 안을 이동했고, 여러 기능이 구성 관리자(Config Builder)에서 켜는 **플러그인**이었습니다(**동작**, **자동화**, **음식**, …).
 
-In **AAPS** v4 the tabs are gone, and so is the eye checkbox in the Config Builder that showed a plugin as a tab. The main screen is the **Overview**, and a **bottom navigation** gives you three sheets. **Actions, Automation and Food are no longer plugins** — there is nothing to enable in [Configuration](../SettingUpAaps/ConfigBuilder.md) (the renamed Config Builder); their functions now live in these sheets.
+**AAPS** v4에서는 탭이 없어졌고, 구성 관리자에서 플러그인을 탭으로 표시하던 눈 모양 체크박스도 없어졌습니다. 기본 화면은 **개요**이며, **하단 내비게이션**에서 세 개의 시트를 열 수 있습니다. **동작, 자동화, 음식은 더 이상 플러그인이 아닙니다**. [구성](../SettingUpAaps/ConfigBuilder.md)(이름이 바뀐 구성 관리자)에서 켤 것이 없으며, 이 기능들은 이제 이 시트들 안에 있습니다.
 
 (v4changes-treatments)=
-### Treatments — enter and deliver
+### 처치 — 입력과 주입
 
-The **Treatments** sheet is where you record or deliver a treatment: **Bolus wizard**, **Insulin** (manual bolus), **Carbs**, **Treatment** (insulin + carbs together), **Calibration**, **CGM** (open your CGM app, when one is configured), and your **[QuickWizards](../DailyLifeWithAaps/QuickWizards.md)**.
+**처치** 시트에서 처치를 기록하거나 주입합니다: **볼러스 마법사**, **인슐린**(수동 볼러스), **탄수화물**, **처치**(인슐린 + 탄수화물 함께), **보정**, **CGM**(CGM 앱이 설정된 경우 그 앱을 엽니다), 그리고 **[빠른 마법사](../DailyLifeWithAaps/QuickWizards.md)**.
 
-![The Treatments bottom sheet](../images/v4/BehavioralChanges/treatments_sheet.png)
+![처치 하단 시트](../images/v4/BehavioralChanges/treatments_sheet.png)
 
-On a **Wear OS watch** the same treatments are entered from the watch's **AAPS menu** (Bolus wizard / Calculator, eCarbs, Treatment, …):
+**Wear OS 워치**에서는 같은 처치를 워치의 **AAPS 메뉴**에서 입력합니다(볼러스 마법사 / 계산기, eCarbs, 처치, …):
 
-![The treatment actions in the watch's AAPS menu](../images/v4/BehavioralChanges/treatments_watch.png)
+![워치의 AAPS 메뉴에 있는 처치 동작](../images/v4/BehavioralChanges/treatments_watch.png)
 
-### Scenes
+### 장면
 
-Your situation presets — see [Scenes](../DailyLifeWithAaps/Scenes.md).
+상황별 프리셋입니다. [장면](../DailyLifeWithAaps/Scenes.md)을 참조하십시오.
 
 (v4changes-manage)=
-### Manage — manage and activate
+### 관리 — 관리와 활성화
 
-The **Manage** sheet is where you manage and activate everything else: **[Profile](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **Insulin settings** (your insulin configurations), **[Temp Target](../DailyLifeWithAaps/TempTargets.md)**, **[QuickWizard](../DailyLifeWithAaps/QuickWizards.md)** presets, **[Scenes](../DailyLifeWithAaps/Scenes.md)**, **Automation**, **Food**, **Site Rotation**, **Pump**, **[Authorized clients](../RemoteFeatures/ClientMasterControl.md)** — plus the pump actions that used to be on the *Actions* tab (**Extended Bolus**, **cancel temp basal**, **Prime/Fill**, **Sensor Insert**, **Pump Battery Change**).
+**관리** 시트에서는 그 밖의 모든 것을 관리하고 활성화합니다: **[프로파일](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **인슐린 설정**(인슐린 구성), **[임시 목표](../DailyLifeWithAaps/TempTargets.md)**, **[빠른 마법사](../DailyLifeWithAaps/QuickWizards.md)** 프리셋, **[장면](../DailyLifeWithAaps/Scenes.md)**, **자동화**, **음식**, **위치 순환**, **펌프**, **[허가된 클라이언트](../RemoteFeatures/ClientMasterControl.md)**. 그리고 예전에 *동작* 탭에 있던 펌프 동작(**확장 볼러스**, **임시 기저 취소**, **프라임/채우기**, **센서 삽입**, **펌프 배터리 교체**)도 여기에 있습니다.
 
-![The Manage bottom sheet](../images/v4/BehavioralChanges/manage_sheet.png)
+![관리 하단 시트](../images/v4/BehavioralChanges/manage_sheet.png)
 
-All of your existing automation rules and food entries are kept; only the way you reach these features has changed.
+기존의 자동화 규칙과 음식 항목은 모두 유지됩니다. 이 기능들에 접근하는 방법만 바뀌었습니다.
 
 (screens-action-tab)=
-#### Where did the Actions tab go?
+#### 동작 탭은 어디로 갔습니까?
 
-**AAPS** 3.x had an "Actions" tab. In **AAPS** 4 its functions live in other places:
+**AAPS** 3.x에는 "동작" 탭이 있었습니다. **AAPS** 4에서는 그 기능들이 다른 곳에 있습니다:
 
-* **Profile switch** and **Profile Percentage**: tap the [profile name](#aaps-screens-profile--target) on the main screen, or **Manage → Profile**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
-* **Temporary target**: press the [target](#aaps-screens-profile--target) on the main screen, or **Manage → Temp Target**.
-* **Prime/Fill**, **Sensor Insert**, **BG check** and the other careportal entries: in the expanded [status panel](#aaps-screens-careportal), in **Manage**, or as [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
-* **History browser**, **Statistics** (TDD): in the **menu** (☰).
+* **프로파일 전환**과 **프로파일 퍼센트**: 메인 화면에서 [프로파일 이름](#aaps-screens-profile--target)을 누르거나 **관리 → 프로파일**을 사용하십시오. [프로파일 퍼센트 변경](#ProfileSwitch-change-percentage)을 참조하십시오.
+* **임시 목표**: 메인 화면에서 [목표](#aaps-screens-profile--target)를 누르거나 **관리 → 임시 목표**를 사용하십시오.
+* **프라임/채우기**, **센서 삽입**, **혈당 체크** 및 기타 케어포털 항목: 펼친 [상태 패널](#aaps-screens-careportal), **관리**, 또는 [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) 버튼에서 사용할 수 있습니다.
+* **이력 브라우저**, **통계**(TDD): **메뉴**(☰)에 있습니다.
 
 ```{admonition} Profile switch and profile percentage
 :class: note
-In **AAPS** v3, a long press on the profile name opened the profile switch dialog (percentage, duration, Activity temp target). In **AAPS** v4, **tap** the profile name (or **Manage → Profile**), then tap the round **▶** button at the bottom right to open the same settings. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+**AAPS** v3에서는 프로파일 이름을 길게 누르면 프로파일 전환 대화 상자(퍼센트, 기간, 활동 임시 목표)가 열렸습니다. **AAPS** v4에서는 프로파일 이름을 **누르고**(또는 **관리 → 프로파일**), 오른쪽 아래의 둥근 **▶** 버튼을 누르면 같은 설정이 열립니다. [프로파일 퍼센트 변경](#ProfileSwitch-change-percentage)을 참조하십시오.
 ```
 
 ---
 
 (v4changes-read-only-management)=
-## Settings protection now also locks the management screens
+## 설정 보안이 이제 관리 화면도 잠급니다
 
-In **AAPS** v3, [Settings protection](#Preferences-settings-protection) asked for your password only when you opened the settings. You could still add or edit profiles in the **Local Profile** tab without it.
+**AAPS** v3에서는 [설정 보안](#Preferences-settings-protection)이 설정을 열 때만 비밀번호를 요청했습니다. 그래서 비밀번호 없이도 **로컬 프로파일** 탭에서 프로파일을 추가하거나 편집할 수 있었습니다.
 
-In **AAPS** v4, Settings protection also covers editing on the management screens: **Profile**, **Insulin settings**, **Temp Target** and **QuickWizard**. If your settings are locked, these screens open **read-only**:
+**AAPS** v4에서는 설정 보안이 관리 화면의 편집에도 적용됩니다: **프로파일**, **인슐린 설정**, **임시 목표**, **빠른 마법사**. 설정이 잠겨 있으면 이 화면들은 **읽기 전용**으로 열립니다:
 
-- You can browse the entries and **▶ Activate** or use them.
-- The **Add / Edit / Clone / Delete** buttons are **hidden**. Only the **✏️ pencil** in the top bar shows that you can unlock editing.
+- 항목을 둘러보고 **▶ 활성화**하거나 사용할 수 있습니다.
+- **추가 / 편집 / 복사 / 삭제** 버튼은 **숨겨집니다**. 상단 바의 **✏️ 연필**만이 편집 잠금을 해제할 수 있음을 보여 줍니다.
 
-![The read-only Profile screen — only Activate at the bottom, pencil in the top bar](../images/v4/Profiles/profile_manage_readonly.png)
+![읽기 전용 프로파일 화면 — 아래쪽에는 활성화만 있고, 상단 바에 연필이 있습니다](../images/v4/Profiles/profile_manage_readonly.png)
 
 ```{admonition} What you need to do
 :class: important
-To add, edit, clone or delete an entry, tap the **✏️ pencil** in the top bar and enter your settings password (or use biometrics). The buttons appear.
+항목을 추가, 편집, 복사 또는 삭제하려면 상단 바의 **✏️ 연필**을 누르고 설정 비밀번호를 입력하십시오(또는 생체 인식을 사용하십시오). 그러면 버튼이 나타납니다.
 
-If you don't need to protect your settings, you can turn Settings protection off in **Settings → Protection**.
+설정을 보호할 필요가 없다면 **설정 → 보안**에서 설정 보안을 끌 수 있습니다.
 ```
 
 ---
 
 (v4changes-active-insulin)=
-## The insulin in use can't be edited
+## 사용 중인 인슐린은 편집할 수 없습니다
 
-In **AAPS** v3, you could change the DIA of the insulin you were using at any time.
+**AAPS** v3에서는 사용 중인 인슐린의 DIA를 언제든지 바꿀 수 있었습니다.
 
-In **AAPS** v4, the insulin marked **ACTIVE** in **Manage → Insulin settings** is greyed out: you cannot edit or delete it.
+**AAPS** v4에서는 **관리 → 인슐린 설정**에서 **활성**으로 표시된 인슐린이 회색으로 표시되며, 편집하거나 삭제할 수 없습니다.
 
-When you upgrade, **AAPS** keeps the insulin and DIA that your v3 profile switches already stored. If it finds older records whose insulin is known but whose DIA is not, it uses a default DIA for them and shows a message once, for example *Older records had no insulin duration, so 9.0 hours was used for Lyumjev. Check your insulin settings — already migrated records are not updated afterwards.* Check your insulin settings when you see it.
+업그레이드할 때 **AAPS**는 v3 프로파일 전환에 이미 저장된 인슐린과 DIA를 그대로 유지합니다. 인슐린은 알지만 DIA를 모르는 이전 기록을 발견하면, 그 기록에는 기본 DIA를 사용하고 메시지를 한 번 표시합니다. 예: *이전 기록에는 인슐린 작용 시간이 없어서 Lyumjev에 9.0시간을 사용했습니다. 인슐린 설정을 확인하십시오. 이미 이전된 기록은 나중에 수정되지 않습니다.* 이 메시지가 보이면 인슐린 설정을 확인하십시오.
 
 ```{admonition} What you need to do
 :class: important
-To change the DIA or peak, add a new insulin with **+**, adjust it, save it and **▶ Activate** it. See [Changing the insulin in use](#Config-Builder-insulin-change-active).
+DIA나 피크를 바꾸려면 **+**로 새 인슐린을 추가하고, 값을 조정하여 저장한 다음 **▶ 활성화**하십시오. [사용 중인 인슐린 변경](#Config-Builder-insulin-change-active)을 참조하십시오.
 ```
 
 ---
 
 (v4changes-remote-control)=
-## AAPSClient remote control needs pairing
+## AAPSClient 원격 제어에는 페어링이 필요합니다
 
-In **AAPS** v3, **AAPSClient** controlled **AAPS** by writing care-portal treatments to Nightscout, and could not deliver a bolus.
+**AAPS** v3에서는 **AAPSClient**가 Nightscout에 케어포털 처치를 기록하는 방식으로 **AAPS**를 제어했으며, 볼러스를 주입할 수 없었습니다.
 
-In **AAPS** v4, the client and the main phone are **paired** once, and every command is signed. The main phone checks and confirms each command, and a client can now also deliver a bolus.
+**AAPS** v4에서는 클라이언트와 메인 휴대폰을 한 번 **페어링**하며, 모든 명령에 서명이 붙습니다. 메인 휴대폰이 각 명령을 확인하고 승인하며, 이제 클라이언트에서도 볼러스를 주입할 수 있습니다.
 
-- Each client has a **[role](#client-master-control-roles)** that limits what it may do.
-- While client control is on, the main phone is in **[hardened mode](#client-master-control-hardened-mode)**: treatments and changes typed directly into Nightscout (the website, other apps) are no longer applied.
-- Each client gets a **[Nightscout token of its own](#client-master-control-own-token)** with only the rights it needs.
+- 각 클라이언트에는 할 수 있는 일을 제한하는 **[역할](#client-master-control-roles)**이 있습니다.
+- 클라이언트 제어가 켜져 있는 동안 메인 휴대폰은 **[강화 모드](#client-master-control-hardened-mode)**에 있습니다. Nightscout에 직접 입력한 처치와 변경(웹사이트, 다른 앱)은 더 이상 적용되지 않습니다.
+- 각 클라이언트는 필요한 권한만 가진 **[자체 Nightscout 토큰](#client-master-control-own-token)**을 받습니다.
 
 ```{admonition} What you need to do
 :class: important
-Pair each **AAPSClient** with the main phone: see [Master ↔ Client control](#client-master-control). With an admin token on the main phone, the main phone shows a QR code that sets up and pairs the client in one scan. If you used to enter treatments on the Nightscout website, enter them on a paired client instead.
+각 **AAPSClient**를 메인 휴대폰과 페어링하십시오: [마스터 ↔ 클라이언트 제어](#client-master-control)를 참조하십시오. 메인 휴대폰에 관리자 토큰이 있으면, 메인 휴대폰에 QR 코드가 표시되며 한 번 스캔으로 클라이언트를 설정하고 페어링할 수 있습니다. 예전에 Nightscout 웹사이트에서 처치를 입력했다면, 이제는 페어링된 클라이언트에서 입력하십시오.
 ```
 
 ---
 
-## Duplicate BG data now switches the loop to Low Glucose Suspend
+## 혈당 데이터가 중복되면 이제 루프가 저혈당 주입 정지로 전환됩니다
 
-When **AAPS** receives the same BG reading twice (a red warning badge on the BG source shortcut in the bottom bar), it cannot calculate your trend reliably, so it stops giving correction insulin.
+**AAPS**가 같은 혈당 값을 두 번 받으면(하단 바의 혈당 출처 바로가기에 빨간 경고 배지가 표시됨) 추세를 신뢰성 있게 계산할 수 없으므로 교정 인슐린을 주지 않습니다.
 
-In **AAPS** v3 this happened quietly in the background: your loop still showed as **Closed Loop**, even though it could no longer correct.
+**AAPS** v3에서는 이 일이 백그라운드에서 조용히 일어났습니다. 더 이상 교정할 수 없는데도 루프는 계속 **폐쇄 루프**로 표시되었습니다.
 
-In **AAPS** v4 the change is visible. A closed loop is switched to **Low Glucose Suspend** mode, and the loop dialog tells you why: *"LGS mode due to doubled values in BG source"*. **AAPS** can still reduce or suspend your basal to protect you against lows.
+**AAPS** v4에서는 이 변경이 화면에 보입니다. 폐쇄 루프는 **저혈당 주입 정지** 모드로 전환되며, 루프 대화 상자에 그 이유가 표시됩니다: *"혈당 출처의 중복 값 때문에 LGS 모드"*. **AAPS**는 저혈당을 막기 위해 여전히 기저를 줄이거나 중지할 수 있습니다.
 
 ```{admonition} What you need to do
 :class: important
-Find and remove the duplicate readings — see [BG warning sign](#aaps-screens-bg-warning-sign).
+중복된 혈당 값을 찾아 삭제하십시오. [혈당 경고 표시](#aaps-screens-bg-warning-sign)를 참조하십시오.
 
-Once they are gone, **AAPS** stays in **Low Glucose Suspend**. It does not go back to **Closed Loop** on its own: press and hold the loop icon and select **Closed Loop** again.
+중복 값이 없어진 후에도 **AAPS**는 **저혈당 주입 정지** 상태로 남아 있습니다. 자동으로 **폐쇄 루프**로 돌아가지 않습니다. 루프 아이콘을 길게 누르고 다시 **폐쇄 루프**를 선택하십시오.
 ```
 
 ---
 
 (v4changes-tidepool)=
-## Tidepool: data now shows under the device name AAPS
+## Tidepool: 이제 데이터가 기기 이름 AAPS로 표시됩니다
 
-In **AAPS** v3, the data uploaded to [Tidepool](../SettingUpAaps/Tidepool.md) was shown in Tidepool under another device name.
+**AAPS** v3에서는 [Tidepool](../SettingUpAaps/Tidepool.md)에 업로드한 데이터가 Tidepool에서 다른 기기 이름으로 표시되었습니다.
 
-In **AAPS** v4, the data is shown under the device name **AAPS**. After the update, **AAPS** starts a new data set in Tidepool. Your older data stays in Tidepool under the old device name.
+**AAPS** v4에서는 데이터가 기기 이름 **AAPS**로 표시됩니다. 업데이트 후 **AAPS**는 Tidepool에서 새 데이터 세트를 시작합니다. 이전 데이터는 이전 기기 이름으로 Tidepool에 남아 있습니다.
 
 ```{admonition} What you need to do
 :class: important
-Usually nothing: new data simply appears under **AAPS**.
+보통은 아무것도 할 필요가 없습니다. 새 데이터는 그냥 **AAPS** 아래에 나타납니다.
 
-Do **not** run "**Full synchronization**" while the old data is still in Tidepool: the same data would then be there twice. If you want all your data under the new name, use the "**Purge all data**" button on the [Tidepool screen](#tidepool-menu) first (it also deletes the old data uploaded by **AAPS**), then run "**Full synchronization**". Only the data still stored in **AAPS** on your phone can be uploaded again.
+이전 데이터가 아직 Tidepool에 있는 동안에는 "**전체 동기화**"를 실행하지 **마십시오**. 같은 데이터가 두 번 들어가게 됩니다. 모든 데이터를 새 이름 아래에 두려면 먼저 [Tidepool 화면](#tidepool-menu)에서 "**모든 데이터 삭제**" 버튼을 사용한 다음(**AAPS**가 업로드한 이전 데이터도 삭제됩니다) "**전체 동기화**"를 실행하십시오. 휴대폰의 **AAPS**에 아직 저장되어 있는 데이터만 다시 업로드할 수 있습니다.
 ```
 
 ---
