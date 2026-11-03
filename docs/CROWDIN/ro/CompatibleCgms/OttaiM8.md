@@ -7,7 +7,7 @@
 
 -   Porniți senzorul
 
-- Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Selectați **Syai/Ottai** în [**Configurație → Sursă glicemie**](#Config-Builder-bg-source).
 
 Activați transmisiunea în aplicația Ottai:
 
