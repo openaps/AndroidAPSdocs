@@ -16,40 +16,40 @@ Open the **Manage** screen (bottom navigation) and choose **QuickWizard** (*“M
 
 ---
 
-## Managing QuickWizards
+## Gestire gli Assistenti Rapidi
 
-Your QuickWizards are shown as a **swipeable card carousel** (each card shows the button text, carbs and valid time range). The editor below configures the **selected** one; the bottom action bar has **➕ add**, **⧉ clone**, **🗑️ delete** and a **▶** button to run the selected QuickWizard.
+I tuoi Assistenti Rapidi sono mostrati come un **carosello di schede da scorrere** (ogni scheda mostra il testo del pulsante, i carboidrati e l'intervallo di tempo valido). The editor below configures the **selected** one; the bottom action bar has **➕ add**, **⧉ clone**, **🗑️ delete** and a **▶** button to run the selected QuickWizard.
 
 ![The QuickWizard editor — mode, carbs, carb time and valid time range](../images/v4/QuickWizard/quickwizard_editor.png)
 
-The editor's main fields are:
+I campi principali dell'editor sono:
 
 - **Button text** — the label shown on the button.
 - **Carbs** and **Carb Time** — the carb amount and its time offset.
-- **Valid Time Range** — see [Validity](#quickwizard_validity).
-- **Calculator Options** and **Device Selection** — see below.
+- **Intervallo Di Tempo Valido**: vedi [Validità](#quickwizard_validity).
+- **Opzioni Calcolatore** e **Selezione dispositivo**: vedi sotto.
 
 ---
 
-## The three modes
+## Le tre modalità
 
 The selector at the top of the editor — **Wizard / Insulin / Carbs** — decides **what the button does** when tapped:
 
-- **Wizard** — runs the full **bolus calculator** for the configured carbs, using your current **BG, IOB, COB and trend** (per the *Calculator Options* below). It delivers the *calculated* bolus and records the carbs. This is the classic quick wizard.
+- **Wizard** — runs the full **bolus calculator** for the configured carbs, using your current **BG, IOB, COB and trend** (per the *Calculator Options* below). Eroga il bolo *calcolato* e registra i carboidrati. This is the classic quick wizard.
 - **Insulin** — delivers a **fixed, preset insulin amount** that you set — no calculation.
 - **Carbs** — records the configured **carbs only**, with **no bolus**.
 
 ---
 
-## Calculator Options (Wizard mode)
+## Opzioni Calcolatore (modalità Calcolatore)
 
-For a **Wizard**-mode button you choose which inputs the calculation uses:
+Per un pulsante in modalità **Calcolatore** scegli quali dati usa il calcolo:
 
 - **Use BG**, **Use COB**, **Use IOB** (with *Positive IOB only*), **Use Trend** (*All / Positive only / Negative only*), **Use Temp Target**, **Use Alarm**.
 - **Bolus percentage** — scale the calculated bolus.
 - **Add eCarbs** — also schedule extended carbs.
 
-![Calculator Options, Bolus percentage and Device Selection](../images/v4/QuickWizard/quickwizard_options.png)
+![Opzioni Calcolatore, Percentuale bolo e Selezione dispositivo](../images/v4/QuickWizard/quickwizard_options.png)
 
 ---
 
@@ -65,7 +65,7 @@ When the valid time range is shorter than 4 hours, the button is also hidden for
 
 The **Device Selection** toggles decide where each QuickWizard appears:
 
-- **Show on Phone** — it appears in the **[Treatments](../Maintenance/V4Changes.md) sheet** (with the calculated dose shown right on the button). A QuickWizard shown on the phone can also be **pinned as a quick-action button on the overview**: open *Configure QuickLaunch* (the ⚙ on the [QuickLaunch](QuickLaunch.md) toolbar) and add it from the **Quick Wizard** category.
+- **Show on Phone** — it appears in the **[Treatments](../Maintenance/V4Changes.md) sheet** (with the calculated dose shown right on the button). Un Assistente Rapido mostrato sul telefono può anche essere **fissato come pulsante di azione rapida nella panoramica**: apri *Configura Avvio Rapido* (l'icona ⚙ sulla barra [Avvio Rapido](QuickLaunch.md)) e aggiungilo dalla categoria **Assistente Rapido**.
 - **Show on Watch** — it appears on the **Wear OS QuickWizard tile** (swipe to it in the watch's tile carousel, then tap a button to run it — just like the [Scene tile](#scenes-from-watch)).
 
 ```{admonition} Don't see Device Selection?
@@ -77,11 +77,11 @@ On the phone the QuickWizards appear at the top of the **Treatments** bottom she
 
 ![QuickWizards (top) in the open Treatments bottom sheet](../images/v4/QuickWizard/quickwizard_in_treatments.png)
 
-…and as a quick-action button on the overview:
+…e come pulsante di azione rapida nella panoramica:
 
 ![A QuickWizard quick-action button on the overview](../images/v4/QuickWizard/quickwizard_overview.png)
 
-![The QuickWizard tile on a Wear OS watch](../images/v4/QuickWizard/quickwizard_watch_tile.png)
+![Il tile Assistente Rapido su un orologio Wear OS](../images/v4/QuickWizard/quickwizard_watch_tile.png)
 
 A paired **client** (**AAPSClient**) can also trigger a QuickWizard — the **master** computes and delivers it (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)).
 
@@ -91,11 +91,11 @@ A QuickWizard is refused when its dose is above your max bolus, or when its carb
 
 ---
 
-## Adding and removing
+## Aggiungere e rimuovere
 
-- **➕ Add** — create a new QuickWizard.
+- **➕ Aggiungi**: crea un nuovo Assistente Rapido.
 - **⧉ Clone** — duplicate one as a starting point.
-- **🗑️ Delete** — remove one.
+- **🗑️ Cancella**: rimuove un Assistente Rapido.
 
 With two or more QuickWizards you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
 
