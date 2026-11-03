@@ -4,7 +4,7 @@
 
 ## Sensitivity algorithm
 
-**AAPS** currently offers 3 sensitivity detection models:
+**AAPS** šiuo metu siūlo 3 jautrumo nustatymo modelius:
 
 * Jautrumo nustatymo algoritmas AAPS
 * Jautrumas pagal svertinį vidurkį
@@ -12,23 +12,23 @@
 
 ### Jautrumo nustatymo algoritmas AAPS
 
-Sensitivity is calculated the same way as in Oref1, but you can specify the time range to look back on. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences.
+Jautrumas apskaičiuojamas taip pat kaip Oref1, tačiau galite nurodyti, kokį laikotarpį atgal vertinti. Mažiausias angliavandenių įsisavinimas apskaičiuojamas pagal nustatymuose nurodytą ilgiausią angliavandenių įsisavinimo trukmę.
 
 ### Jautrumas pagal svertinį vidurkį
 
-Sensitivity is calculated as a weighted average of the deviations. You can specify the time range to look back on. Newer deviations have a higher weight. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences. This algorithm is the fastest in following sensitivity changes.
+Jautrumas apskaičiuojamas kaip svertinis nuokrypių vidurkis. Galite nurodyti, kokį laikotarpį atgal vertinti. Naujesni nuokrypiai turi didesnį svorį. Mažiausias angliavandenių įsisavinimas apskaičiuojamas pagal nustatymuose nurodytą ilgiausią angliavandenių įsisavinimo trukmę. Šis algoritmas greičiausiai seka jautrumo pokyčius.
 
 (SensitivityDetectionAndCob-sensitivity-oref1)=
 
 ### Jautrumo nustatymo algoritmas Oref1
 
-Sensitivity is calculated from the last 8 hours of data, or from the last site change if it is less than 8 hours ago. Carbs (if not absorbed) are cut after the time specified in the preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from the sensitivity calculation. So if you are using SMB with UAM, you have to choose the Oref1 algorithm for it to work properly. For more information about UAM, see the [Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb) section.
+Jautrumas apskaičiuojamas pagal paskutinių 8 valandų duomenis arba nuo paskutinio infuzijos vietos keitimo, jei jis buvo prieš mažiau nei 8 valandas. Angliavandeniai (jei neįsisavinti) atmetami praėjus nustatymuose nurodytam laikui. Tik Oref1 algoritmas palaiko nedeklaruoto maisto (NDM) aptikimą. Tai reiškia, kad laikotarpiai, kai aptiktas NDM, neįtraukiami į jautrumo skaičiavimą. Todėl, jei naudojate SMB su NDM, turite pasirinkti Oref1 algoritmą, kad viskas veiktų tinkamai. Daugiau informacijos apie NDM rasite skyriuje [Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-Oref1 is the recommended option: it is the only one that can detect UAM and work with [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), the more recent algorithm.
+Rekomenduojama rinktis Oref1: tik jis gali aptikti NDM ir veikti su [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), naujesniu algoritmu.
 
 ## Vienu metu gaunami angliavandeniai
 
-There is a significant difference between the Sensitivity AAPS and WeightedAverage algorithms on one side, and Oref1 on the other, when several meals overlap.
+Kai keli valgiai persidengia, yra didelis skirtumas tarp algoritmų Sensitivity AAPS ir WeightedAverage, iš vienos pusės, ir Oref1, iš kitos pusės.
 
-* Oref1 expects only one meal decaying at a time: the second meal starts decaying after the first meal is completely decayed.
-* Sensitivity AAPS and WeightedAverage start decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to the meal size and the max absorption time. The minimum absorption will accordingly be higher in comparison to Oref1.
+* Oref1 tikisi, kad vienu metu įsisavinamas tik vienas valgis: antrasis valgis pradedamas įsisavinti tik tada, kai pirmasis visiškai įsisavintas.
+* Sensitivity AAPS ir WeightedAverage pradeda įsisavinimą iš karto, kai įvedate angliavandenius. Jei organizme yra daugiau nei vienas valgis, mažiausias angliavandenių įsisavinimas prisitaiko pagal valgio dydį ir ilgiausią įsisavinimo trukmę. Todėl mažiausias įsisavinimas bus didesnis nei naudojant Oref1.
