@@ -1,6 +1,6 @@
 # Compatible Pumps
 
-AAPS works with a number of insulin pumps. The following list shows the currently supported devices. It indicates, in brackets, whether AAPS communicates with the pump using your phone's native Bluetooth function or whether it requires a RileyLink compatible device.
+AAPS works with a number of insulin pumps. L'elenco seguente mostra i dispositivi supportati al momento. It indicates, in brackets, whether AAPS communicates with the pump using your phone's native Bluetooth function or whether it requires a RileyLink compatible device.
 
 <!-- List of hidden pages to avoid overcrowding the menu -->
 
@@ -22,7 +22,7 @@ AAPS works with a number of insulin pumps. The following list shows the currentl
 ../CompatiblePumps/Future-possible-Pump-Drivers.md
 ```
 
-- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; see also [Tips for basic usage](#combov2-tips-for-basic-usage))
+- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; vedi anche [Consigli per l'uso di base](#combov2-tips-for-basic-usage))
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (Bluetooth)
 - [CareLevo](../CompatiblePumps/CareLevo.md) (Bluetooth)
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (Bluetooth)
@@ -36,14 +36,14 @@ AAPS works with a number of insulin pumps. The following list shows the currentl
 - [Medtrum Nano 200U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) (Bluetooth)
-- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) ([additional communication device](#CompatiblePumps-additional-communication-device) needed)
+- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) (serve un [dispositivo di comunicazione aggiuntivo](#CompatiblePumps-additional-communication-device))
 
 ## My pump is not listed
 
 Details of the status of other pumps that may have the potential to work with AAPS are listed on the [Future (possible) Pumps](../CompatiblePumps/Future-possible-Pump-Drivers.md) page.
 
 (CompatiblePumps-additional-communication-device)=
-## Additional communication device
+## Dispositivo di comunicazione aggiuntivo
 
 If no additional communication device is mentioned, the communication between the insulin pump and **AAPS** is based on the integrated Bluetooth stack of Android, without the need for an additional communication device to translate the communication protocol.
 
@@ -52,10 +52,10 @@ For old Medtronic pumps and Omnipod Eros, an additional communication device (be
 - **Omnipod Eros**: 433 MHz.
 - **Medtronic**: 916 MHz for pumps sold in the US and Canada, 868 MHz for pumps sold elsewhere. See [How to determine what frequency my pump uses](#MedtronicPump-faq).
 
-Available communication devices:
+Dispositivi di comunicazione disponibili:
 
-- ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
-- ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
-- ![EmaLink](../images/omnipod/EmaLink.png)  [Emalink Website](https://github.com/sks01/EmaLink) - [Contact Info](mailto:getemalink@gmail.com)
-- ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
-- ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested
+- ![OrangeLink](../images/omnipod/OrangeLink.png)  [Sito web di OrangeLink](https://getrileylink.org/product/orangelink)
+- ![RileyLink](../images/omnipod/RileyLink.png) [RileyLink 433MHz](https://getrileylink.org/product/rileylink433)
+- ![EmaLink](../images/omnipod/EmaLink.png)  [Sito web di Emalink](https://github.com/sks01/EmaLink) - [Contatti](mailto:getemalink@gmail.com)
+- ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Contatti](mailto:Boshetyn@ukr.net)
+- ![LoopLink](../images/omnipod/LoopLink.png)  [Sito web di LoopLink](https://www.getlooplink.org/) - [Contatti](https://jameswedding.substack.com/) - Non testato
