@@ -42,7 +42,7 @@ Na rynku pojawiło się też kilka komercyjnych systemów hybrydowej zamkniętej
 
 **Rysunek 1**. Podstawowy zarys Android APS (Artificial Pancreas System, system sztucznej trzustki), AAPS.
 
-Android APS (**AAPS**) is a hybrid closed loop system, or Artificial Pancreas System (APS). Do obliczania dawek insuliny używa sprawdzonych algorytmów [OpenAPS](https://openaps.org/) (zestawu reguł), opracowanych przez społeczność T1D #WeAreNotWaiting.
+Android APS (**AAPS**) to hybrydowa zamknięta pętla, czyli system sztucznej trzustki (APS). Do obliczania dawek insuliny używa sprawdzonych algorytmów [OpenAPS](https://openaps.org/) (zestawu reguł), opracowanych przez społeczność T1D #WeAreNotWaiting.
 
 Ponieważ OpenAPS działa tylko z niektórymi starszymi pompami insulinowymi, w 2016 roku powstał **AAPS** (który działa z większą liczbą pomp insulinowych) – początkowo dla członka rodziny z cukrzycą typu 1. Od tych wczesnych dni **AAPS** jest stale rozwijany i udoskonalany przez zespół programistów-wolontariuszy i innych entuzjastów, którzy mają związek ze światem cukrzycy typu 1. Dziś **AAPS** używa wiele tysięcy osób na całym świecie. To bardzo konfigurowalny i wszechstronny system, a ponieważ jest open-source'owy, jest bez problemu kompatybilny z wieloma innymi open-source'owymi programami i platformami związanymi z cukrzycą. Podstawowe elementy obecnego systemu **AAPS** są przedstawione na **Rysunku 1** powyżej.
 
@@ -54,7 +54,7 @@ Ponieważ OpenAPS działa tylko z niektórymi starszymi pompami insulinowymi, w 
 
 Na **smartfonie z Androidem** oprócz **AAPS** musi być zainstalowana jeszcze jedna aplikacja. Ta [dodatkowa aplikacja](../Getting-Started/CompatiblesCgms.md) odbiera dane o glukozie z sensora (**2**) przez Bluetooth, a potem przesyła je wewnątrz telefonu do **aplikacji AAPS**.
 
-**Aplikacja AAPS** używa procesu podejmowania decyzji (**algorytmu**) z OpenAPS. Beginners start out using the basic **oref0** algorithm, but it is possible to switch to using the newer **oref1** algorithm as you progress with AAPS. To, którego algorytmu używasz (oref0 lub oref1), zależy od tego, który lepiej pasuje do twojej sytuacji.  W obu przypadkach algorytm uwzględnia wiele czynników i wykonuje błyskawiczne obliczenia za każdym razem, gdy nowy odczyt dochodzi z sensora. Następnie algorytm wysyła przez Bluetooth do pompy insulinowej (**3**) polecenia, ile insuliny ma podać. Wszystkie informacje mogą być wysyłane do internetu (**4**) przez dane komórkowe lub Wi-Fi. Dane te można również udostępnić obserwującym w razie potrzeby i/lub zebrać je do analizy. Możesz też połączyć z telefonem [smartwatch](../Getting-Started/Watches.md) (**5**), aby szybko zobaczyć swoje dane, a na niektórych zegarkach także wysyłać proste polecenia do **AAPS**.
+**Aplikacja AAPS** używa procesu podejmowania decyzji (**algorytmu**) z OpenAPS. Początkujący zaczynają korzystając z podstawowego algorytmu **oref0**, ale w miarę postępów z AAPS można przełączyć się na nowszy algorytm **oref1**. To, którego algorytmu używasz (oref0 lub oref1), zależy od tego, który lepiej pasuje do twojej sytuacji.  W obu przypadkach algorytm uwzględnia wiele czynników i wykonuje błyskawiczne obliczenia za każdym razem, gdy nowy odczyt dochodzi z sensora. Następnie algorytm wysyła przez Bluetooth do pompy insulinowej (**3**) polecenia, ile insuliny ma podać. Wszystkie informacje mogą być wysyłane do internetu (**4**) przez dane komórkowe lub Wi-Fi. Dane te można również udostępnić obserwującym w razie potrzeby i/lub zebrać je do analizy. Możesz też połączyć z telefonem [smartwatch](../Getting-Started/Watches.md) (**5**), aby szybko zobaczyć swoje dane, a na niektórych zegarkach także wysyłać proste polecenia do **AAPS**.
 
 ## Jakie są zalety systemu AAPS?
 
@@ -98,13 +98,13 @@ Użytkownicy mogą łatwo dodawać lub usuwać moduły i funkcje, a **AAPS** mo�
 
  a) Możliwość ustawienia niższego celu **BG** 30 min przed jedzeniem; cel możesz ustawić nawet na 72 mg/dl (4,0 mmol/l).
 
- b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in a 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). Automatyzacja będzie trwać zgodnie z ustalonym przez ciebie czasem. Taka automatyzacja może być ustawiona jako aktywna tylko w określonych dniach tygodnia, w określonych porach dnia, a nawet w określonych miejscach.
+ b) Jeśli masz insulinooporność, która powoduje wysoki poziom cukru we krwi, **AAPS** pozwala ustawić regułę **automatyzacji**, która włącza się, gdy BG wzrośnie powyżej 8 mmol/l (144 mg/dl), i zmienia profil na (na przykład) 120% (to zwiększa bazę o 20% i wzmacnia też inne współczynniki w porównaniu z twoim zwykłym **profilem**). Automatyzacja będzie trwać zgodnie z ustalonym przez ciebie czasem. Taka automatyzacja może być ustawiona jako aktywna tylko w określonych dniach tygodnia, w określonych porach dnia, a nawet w określonych miejscach.
 
- c) If your child is on a trampoline with no advance notice, **AAPS** allows insulin suspension for a set time period, directly via the phone.
+ c) Jeśli twoje dziecko nagle, bez uprzedzenia, skacze na trampolinie, **AAPS** pozwala wstrzymać podawanie insuliny na ustalony czas, bezpośrednio z telefonu.
 
- d) After reconnecting a tubed pump which has been disconnected for swimming, **AAPS** will calculate the basal insulin you have missed while disconnected and deliver it carefully, according to your current BG. Jeśli ta insulina nie jest potrzebna, możesz z niej zrezygnować, po prostu „anulując” pominiętą bazę.
+ d) Po ponownym podłączeniu pompy z drenem, odłączonej na czas pływania, **AAPS** obliczy ilość insuliny bazowej, której nie dostarczono podczas rozłączenia, i dostarczy ją ostrożnie, uwzględniając obecny poziom cukru we krwi. Jeśli ta insulina nie jest potrzebna, możesz z niej zrezygnować, po prostu „anulując” pominiętą bazę.
 
- e) **AAPS** ma możliwość ustawiania różnych profili dla różnych sytuacji i łatwego przełączania się między nimi. For example, features which make the algorithm quicker to bring down elevated BG (like supermicro boluses (“**SMB**”) and unannounced meals (“**UAM**”)) can be set to only work during the daytime, if you are worried about night-time hypos.
+ e) **AAPS** ma możliwość ustawiania różnych profili dla różnych sytuacji i łatwego przełączania się między nimi. Na przykład funkcje, które pomagają algorytmowi szybciej obniżyć wysoki poziom cukru (takie jak super mikro bolusy („**SMB**”) i niezapowiedziane posiłki („**UAM**”, z ang. unannounced meals)), można ustawić tak, aby działały tylko w ciągu dnia, jeśli obawiasz się nocnych hipoglikemii.
 
 Są to tylko przykłady, pełen wachlarz funkcji daje ogromną elastyczność w codziennym życiu, w tym w sporcie, chorobach czy cyklach hormonalnych _itp._ Ostatecznie to użytkownik musi zdecydować, jak korzystać z tej elastyczności, nie ma do tego jednej uniwersalnej automatyzacji.
 
@@ -252,7 +252,7 @@ Jeśli czujesz, że twój zespół nie wspiera cię w korzystaniu z pętli **AAP
 
 a) System **AAPS** został zaprojektowany PRZEZ pacjentów i ich opiekunów. Został on zaprojektowany z myślą o bezpieczeństwie, ale także na podstawie dogłębnych doświadczeń pacjentów. Na całym świecie jest wiele tysięcy użytkowników **AAPS**. Dlatego prawdopodobnie wśród pacjentów twojej poradni są inne osoby używające pętli OS-AID (niezależnie od tego, czy poradnia o tym wie, czy nie).
 
-b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)(_1_) has confirmed that OS-AID loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)(_3_) which highlight the progress of the OS-AID looping community.
+b) Niedawne recenzowane wytyczne opublikowane w czołowym międzynarodowym czasopiśmie medycznym [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)(_1_) potwierdziły, że pętle OS-AID są **bezpieczne** i **skutecznie poprawiają kontrolę cukrzycy**, w tym czas w zakresie. W czołowych czasopismach, takich jak [Nature](https://doi.org/10.1038/d41586-023-02648-9)(_3_), regularnie ukazują się artykuły, które pokazują postępy społeczności pętli OS-AID.
 
 c) Rozpoczęcie pracy z **AAPS** oznacza _stopniowe_ przejście od używania pompy w „otwartej” pętli, przez zawieszenie przy niskiej glikemii, aż do hybrydowej „zamkniętej” pętli, przez zaliczenie kolejnych zadań. Istnieje zatem ustrukturyzowany program, wymagający od użytkownika wykazania kompetencji na każdym etapie i odpowiedniego dostosowania ich podstawowych ustawień (bazy, współczynnika wrażliwości na insulinę (ISF) i współczynnika insuliny do węglowodanów (ICR)) przed zamknięciem pętli.
 
@@ -264,7 +264,7 @@ f) Jeśli zespół nadal ma poważne zastrzeżenia, przekaż lekarzom wydruki ar
 
 #### Wsparcie dla pętli OS-AID ze strony innych lekarzy
 
-The paper published in the [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) (co-led by King’s and Guy’s and St Thomas’ NHS Foundation Trust, and co-led by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s in London) provides:
+Artykuł opublikowany w [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) (współprowadzony przez King’s and Guy’s and St Thomas’ NHS Foundation Trust oraz przez dr. Sufyana Hussaina, konsultanta diabetologa i honorowego starszego wykładowcę z King’s w Londynie) zawiera:
 
 a) **Zapewnienie** dla profesjonalistów, że systemy sztucznej trzustki OS-AID / open-source są „bezpieczną i skuteczną” opcją leczenia cukrzycy typu 1, oraz wskazówki dotyczące zaleceń, rozmów, wsparcia i dokumentacji;
 
@@ -379,7 +379,7 @@ lub:
 
 2) Naciśnij klawisz Windows i wpisz „Panel sterowania” w polu wyszukiwania, a potem otwórz klawiszem Enter. Otworzy się okno „Wszystkie elementy Panelu sterowania”.
 
-Press the letter E to get to “Ease of Access Centre”, open with Enter.
+Naciśnij literę E, aby przejść do „Centrum ułatwień dostępu”, i otwórz klawiszem Enter.
 
 Następnie otwórz „Używaj komputera bez ekranu” naciskając Enter.
 
