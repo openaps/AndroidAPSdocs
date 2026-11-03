@@ -1,7 +1,7 @@
 (food)=
-# Food (your food database)
+# Yiyecek (yiyecek veritabanınız)
 
-The **Food** database is your personal list of saved foods. Each entry stores a food's **carbs** (and, optionally, its fat, protein, energy and a category), so you can keep the things you eat often in one place and start a bolus from a saved food with its carbs already filled in.
+**Yiyecek** veritabanı, kaydettiğiniz yiyeceklerin kişisel listesidir. Her girdi bir yiyeceğin **karbonhidratını** (ve isterseniz yağını, proteinini, enerjisini ve bir kategorisini) saklar. Böylece sık yediğiniz şeyleri tek bir yerde tutabilir ve karbonhidratı önceden doldurulmuş kayıtlı bir yiyecekten bolus başlatabilirsiniz.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,80 +10,80 @@ The **Food** database is your personal list of saved foods. Each entry stores a 
 
 ---
 
-## Opening the food database
+## Yiyecek veritabanını açma
 
-Open the **Manage** screen (bottom navigation) and choose **Food** (*“Manage food database entries”*). In **AAPS** v4 Food is **no longer a plugin** — there is nothing to enable; it is a standalone screen reached from the [Manage sheet](#v4changes-manage).
-
----
-
-## The food list
-
-Your foods are shown as a scrollable list. Each row shows the food's **name**, its **portion / unit / category**, and its **carbs**:
-
-![The food database list, with search and the add button](../images/v4/Food/food_list.png)
-
-- **🔍 Search** (top) — filter the list by **name** (case-insensitive).
-- **Category filter** — chips let you narrow the list to a **category**; once a category is picked, **subcategory** chips appear for it. (Tap a selected chip again to clear it.)
-- **➕** (bottom-right) — add a new food (see below).
-- Tap a row to **edit** that food.
-
-If the list (or the current filter) has no entries, the screen shows **No data**.
+**Yönet** ekranını (alt gezinme çubuğu) açın ve **Yiyecek** (*“Yiyecek veritabanı kayıtlarını yönetin”*) seçeneğini seçin. **AAPS** v4'te Yiyecek **artık bir eklenti değildir**. Etkinleştirilecek bir şey yoktur; [Yönet paneli](#v4changes-manage) üzerinden açılan ayrı bir ekrandır.
 
 ---
 
-## Adding and editing a food
+## Yiyecek listesi
 
-Tap **➕** to add, or tap an existing row to edit. An editor opens as a bottom sheet (**Add Food** / **Edit Food**):
+Yiyecekleriniz kaydırılabilir bir liste olarak gösterilir. Her satır yiyeceğin **adını**, **porsiyonunu / birimini / kategorisini** ve **karbonhidratını** gösterir:
 
-![The food editor — name, category, portion, carbs and macros](../images/v4/Food/food_editor.png)
+![Arama ve ekleme düğmesi ile yiyecek veritabanı listesi](../images/v4/Food/food_list.png)
 
-The fields are:
+- **🔍 Ara** (üstte) — listeyi **ada** göre filtreler (büyük/küçük harf fark etmez).
+- **Kategori filtresi** — çipler ile listeyi bir **kategoriye** daraltabilirsiniz. Bir kategori seçildiğinde, o kategori için **alt kategori** çipleri görünür. (Seçimi kaldırmak için seçili bir çipe tekrar dokunun.)
+- **➕** (sağ altta) — yeni bir yiyecek ekler (aşağıya bakın).
+- Bir yiyeceği **düzenlemek** için satırına dokunun.
 
-- **Name** — required (you can't save without it).
-- **Category** and **Subcategory** — optional, used to group/filter foods.
-- **Portion** and **Unit** — the typical serving size; **Unit** defaults to **g**.
-- **Carbs (g)** — the carbohydrate amount for the food.
-- **Fat (g)**, **Protein (g)**, **Energy (kJ)** — optional nutrition values.
+Liste (veya geçerli filtre) boşsa ekranda **Veri yok** yazar.
 
-Tap **Save** to store it, or **Cancel** to discard. When editing an existing food the editor also has a **Delete** button.
+---
+
+## Yiyecek ekleme ve düzenleme
+
+Eklemek için **➕** düğmesine, düzenlemek için mevcut bir satıra dokunun. Bir düzenleyici panel olarak açılır (**Yiyecek ekle** / **Yiyecek Düzenle**):
+
+![Yiyecek düzenleyicisi — ad, kategori, porsiyon, karbonhidrat ve besin değerleri](../images/v4/Food/food_editor.png)
+
+Alanlar şunlardır:
+
+- **İsim** — zorunludur (bu alan olmadan kaydedemezsiniz).
+- **Kategori** ve **Alt kategori** — isteğe bağlıdır, yiyecekleri gruplamak/filtrelemek için kullanılır.
+- **Porsiyon** ve **Birim** — tipik porsiyon büyüklüğü. **Birim** için varsayılan değer **g**'dır.
+- **Karb (g)** — yiyeceğin karbonhidrat miktarı.
+- **Yağ (g)**, **Protein (g)**, **Enerji (kJ)** — isteğe bağlı besin değerleri.
+
+Kaydetmek için **Kaydet**'e, değişiklikleri atmak için **Vazgeç**'e dokunun. Mevcut bir yiyeceği düzenlerken düzenleyicide bir **Sil** düğmesi de vardır.
 
 ```{admonition} Deleting is undoable
 :class: note
-Deleting a food shows a **“Food deleted”** message with an **Undo** action, so an accidental delete is easy to reverse.
+Bir yiyeceği sildiğinizde **“Yiyecek silindi”** mesajı ve **Geri al** eylemi gösterilir. Böylece yanlışlıkla yapılan bir silme işlemi kolayca geri alınabilir.
 ```
 
 ---
 
-## Using a food for a bolus
+## Bir yiyeceği bolus için kullanma
 
-Each food row has a **calculator** button. Tapping it opens the **bolus wizard** with that food's **carbs** already filled in and the food's **name** added as the treatment note — so you confirm and deliver without re-typing the carbs.
+Her yiyecek satırında bir **hesaplayıcı** düğmesi vardır. Bu düğmeye dokunduğunuzda, yiyeceğin **karbonhidratı** önceden doldurulmuş ve yiyeceğin **adı** tedavi notu olarak eklenmiş şekilde **bolus sihirbazı** açılır. Böylece karbonhidratı yeniden yazmadan onaylayıp bolus verebilirsiniz.
 
 ```{admonition} The carbs value is used as-is
 :class: note
-The food's stored **carbs** number is passed straight to the wizard — **AAPS** does not multiply it by the portion or by how much you ate. If you have a different amount, adjust the carbs in the wizard before confirming. (There is no food picker *inside* the bolus wizard or the carbs dialog; you start from the food row here.)
+Yiyeceğin kayıtlı **karbonhidrat** değeri doğrudan sihirbaza aktarılır. **AAPS** bu değeri porsiyonla veya ne kadar yediğinizle çarpmaz. Farklı bir miktar yediyseniz, onaylamadan önce sihirbazdaki karbonhidratı düzeltin. (Bolus sihirbazının veya karbonhidrat iletişim kutusunun *içinde* yiyecek seçici yoktur; buradaki yiyecek satırından başlarsınız.)
 ```
 
 ---
 
-## Where foods come from (Nightscout sync)
+## Yiyecekler nereden gelir (Nightscout senkronizasyonu)
 
-The food database is shared through **Nightscout**, but **in one direction only**:
+Yiyecek veritabanı **Nightscout** üzerinden paylaşılır, ancak **yalnızca tek yönde**:
 
-- **Download:** **AAPS** **reads** foods from your Nightscout site's **food database** and keeps the local list in sync with it. This runs as part of NSClient syncing, so a paired **client/follower** ends up with the same foods too.
-- **Upload:** **AAPS** does **not** push foods **to** Nightscout — NSClient does not support uploading food entries. Foods you create or edit **inside AAPS** therefore stay **on that device** and are not propagated to Nightscout or to your other devices.
+- **İndirme:** **AAPS**, Nightscout sitenizin **yiyecek veritabanından** yiyecekleri **okur** ve yerel listeyi onunla senkronize tutar. Bu işlem NSClient senkronizasyonunun bir parçası olarak çalışır. Böylece eşleştirilmiş bir **istemci/takipçi** de aynı yiyeceklere sahip olur.
+- **Yükleme:** **AAPS**, yiyecekleri **Nightscout'a** **göndermez** — NSClient yiyecek girdilerini yüklemeyi desteklemez. Bu nedenle **AAPS içinde** oluşturduğunuz veya düzenlediğiniz yiyecekler **o cihazda** kalır ve Nightscout'a ya da diğer cihazlarınıza aktarılmaz.
 
 ```{admonition} Maintain your shared list in Nightscout
 :class: important
-Because food is **download-only**, the way to share one food list across your phone, your follower/[client](../RemoteFeatures/ClientMasterControl.md) and the rest of your setup is to maintain it in **Nightscout** (its built-in food editor). **AAPS** will pull those entries down. A food added only in **AAPS** is local to that device — and stays put: a download matches Nightscout entries by their Nightscout ID, so it adds and updates those but never overwrites or removes a food you created locally (a food is only removed when its Nightscout copy is deleted in Nightscout).
+Yiyecekler **yalnızca indirildiği** için, tek bir yiyecek listesini telefonunuz, takipçiniz/[istemciniz](../RemoteFeatures/ClientMasterControl.md) ve kurulumunuzun geri kalanı arasında paylaşmanın yolu, listeyi **Nightscout**'ta (yerleşik yiyecek düzenleyicisi ile) tutmaktır. **AAPS** bu girdileri indirir. Yalnızca **AAPS**'te eklenen bir yiyecek o cihaza özeldir ve orada kalır: indirme, Nightscout girdilerini Nightscout kimliklerine göre eşleştirir. Bu yüzden bu girdileri ekler ve günceller, ancak yerel olarak oluşturduğunuz bir yiyeceğin üzerine asla yazmaz veya onu silmez (bir yiyecek yalnızca Nightscout'taki kopyası Nightscout'ta silindiğinde kaldırılır).
 
-Note that the food database is **not** part of the master ↔ client signed control channel either — it travels purely as Nightscout data.
+Yiyecek veritabanının ana birim ↔ istemci imzalı kontrol kanalının da bir parçası **olmadığını** unutmayın — yalnızca Nightscout verisi olarak aktarılır.
 ```
 
 ---
 
-## Not on the watch
+## Saatte yok
 
-The food database is a **phone** feature — there is no food browser, tile or menu on a **Wear OS watch**.
+Yiyecek veritabanı bir **telefon** özelliğidir — bir **Wear OS saatte** yiyecek tarayıcısı, panel veya menü yoktur.
 
 ---
 
