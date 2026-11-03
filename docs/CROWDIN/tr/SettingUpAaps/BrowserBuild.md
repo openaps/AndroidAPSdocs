@@ -1,77 +1,77 @@
 (browser-build)=
 
-# Browser build
+# Tarayıcı ile oluşturma
 
-Building AAPS with GitHub Actions.
+AAPS'i GitHub Actions ile oluşturma.
 
-**Minimum AAPS version supported is 3.3.2.1.**
+**Desteklenen en düşük AAPS sürümü 3.3.2.1'dir.**
 
-## Programı İndirmek yerine kendiniz oluşturun...
+## İndirmek yerine kendiniz oluşturun
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. Uygulamayı kendi kullanımınız için oluşturmak yasaldır, ancak bir kopyasını başkasına vermemelisiniz!**
+**Tıbbi cihazlarla ilgili düzenlemeler nedeniyle AAPS uygulaması (bir apk dosyası) indirilemez. Uygulamayı kendi kullanımınız için oluşturmak yasaldır, ancak bir kopyasını başkasına vermemelisiniz!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Ayrıntılar için [SSS sayfasına](../UsefulLinks/FAQ.md) bakın.
 
 (Building-APK-without-a-computer)=
 
-## Choose how to build
+## Oluşturma yöntemini seçin
 
-Pick the method that matches the device you build from:
+Oluşturmayı yaptığınız cihaza uyan yöntemi seçin:
 
-### On an Android phone: AAPS Builder (recommended)
+### Android telefonda: AAPS Builder (önerilen)
 
-A setup page walks you through creating your own private build repository in GitHub. Nothing to install, no preparation file, and you start each build yourself. You download the app directly from GitHub. Google Drive is optional.
+Bir kurulum sayfası, GitHub'da size özel bir oluşturma deposu (repository) açmanız için size adım adım yol gösterir. Yüklenecek bir şey yok, hazırlık dosyası yok ve her oluşturmayı kendiniz başlatırsınız. Uygulamayı doğrudan GitHub'dan indirirsiniz. Google Drive isteğe bağlıdır.
 
-This also works from a computer browser.
+Bu yöntem bilgisayardaki bir tarayıcıdan da çalışır.
 
-**→ [Build with AAPS Builder](BrowserBuildAapsBuilder.md)**
+**→ [AAPS Builder ile tarayıcıda oluşturma](BrowserBuildAapsBuilder.md)**
 
-### On a computer or an iPhone / iPad: fork and preparation file
+### Bilgisayarda veya iPhone / iPad'de: fork ve hazırlık dosyası
 
-You make a copy (fork) of the AAPS source code in GitHub, create your keystore with a preparation file, and the built app is saved to your Google Drive. Follow the four steps below.
+GitHub'da AAPS kaynak kodunun bir kopyasını (fork) oluşturursunuz, anahtar deponuzu (keystore) bir hazırlık dosyası ile oluşturursunuz ve oluşturulan uygulama Google Drive'ınıza kaydedilir. Aşağıdaki dört adımı izleyin.
 
 ```{note}
-**Already building with a fork?** Keep updating it as described in [Update with a browser](../Maintenance/UpdateBrowserBuild.md), or switch to AAPS Builder. To switch, first get a copy of your keystore from your fork: see [Coming from the previous browser build](#aaps-builder-from-fork).
+**Zaten bir fork ile mi oluşturuyorsunuz?** [Tarayıcı ile güncelleme](../Maintenance/UpdateBrowserBuild.md) bölümünde anlatıldığı gibi güncellemeye devam edin veya AAPS Builder'a geçin. Geçiş yapmak için önce fork'unuzdan anahtar deponuzun bir kopyasını alın: bkz. [Önceki tarayıcı ile oluşturmadan gelenler](#aaps-builder-from-fork).
 ```
 
-You will need to use multiple tabs in your browser, and switch from one to the other. Example Chrome:
+Tarayıcınızda birden fazla sekme kullanmanız ve birinden diğerine geçmeniz gerekecek. Chrome örneği:
 
 ![fork_aaps](../images/Building-the-App/CI/BrowserBuildTabs.png)
 
 ```{note}
-You will need to jump from tab to tab: start with all tabs closed to avoid losing yourself when switching from one to another.
+Sekmeden sekmeye geçmeniz gerekecek: birinden diğerine geçerken kaybolmamak için tüm sekmeler kapalıyken başlayın.
 ```
 
-#### What you'll need
+#### Neye ihtiyacınız var
 
-- A **Google account**, so the built app can be saved to your Google Drive.
-- A **GitHub account** (free) – you create this in Step 1.
-- A **web browser** that can keep several tabs open at once (Chrome is assumed below).
-- A small **helper to run the preparation file**. Which one you need depends on the device you build from – there is nothing to install now, Step 2 walks you through it for your device:
-  - **Computer (Windows / Mac / Linux):** Simple Web Server.
-  - **iPhone / iPad:** no extra app – you use the built-in Files app and browser.
+- Oluşturulan uygulamanın Google Drive'ınıza kaydedilebilmesi için bir **Google hesabı**.
+- Bir **GitHub hesabı** (ücretsiz) – bunu Adım 1'de oluşturursunuz.
+- Aynı anda birkaç sekmeyi açık tutabilen bir **web tarayıcısı** (aşağıda Chrome kullanıldığı varsayılmıştır).
+- **Hazırlık dosyasını çalıştırmak için küçük bir yardımcı program**. Hangisine ihtiyacınız olduğu, oluşturmayı yaptığınız cihaza bağlıdır – şimdi yüklenecek bir şey yok, Adım 2 cihazınıza göre size yol gösterir:
+  - **Bilgisayar (Windows / Mac / Linux):** Simple Web Server.
+  - **iPhone / iPad:** ek uygulama gerekmez – yerleşik Dosyalar uygulamasını ve tarayıcıyı kullanırsınız.
 
-#### The steps
+#### Adımlar
 
-The browser build is a series of choices. Follow these steps in order:
+Tarayıcı ile oluşturma bir dizi seçimden oluşur. Bu adımları sırayla izleyin:
 
-1. **[Create your GitHub fork](BrowserBuildFork.md)** – make your personal copy of the AAPS source code.
-2. **[Create your signing keystore](BrowserBuildKeystore.md)** – the key decision: generate a new keystore (Option 1) or upload your existing one (Option 2), then follow the page for your device.
-3. **[Authorize Google Drive](BrowserBuildGoogleDrive.md)** – let GitHub save the built app to your Google Drive.
-4. **[Build the APK](BrowserBuildAPK.md)** – run the GitHub Actions workflow and pick your version and variant.
+1. **[GitHub fork'unuzu oluşturun](BrowserBuildFork.md)** – AAPS kaynak kodunun kişisel kopyanızı oluşturun.
+2. **[İmzalama anahtar deponuzu oluşturun](BrowserBuildKeystore.md)** – en önemli karar: yeni bir anahtar deposu oluşturun (Seçenek 1) veya mevcut anahtar deponuzu yükleyin (Seçenek 2), sonra cihazınıza uygun sayfayı izleyin.
+3. **[Google Drive'ı yetkilendirin](BrowserBuildGoogleDrive.md)** – GitHub'ın oluşturulan uygulamayı Google Drive'ınıza kaydetmesine izin verin.
+4. **[APK'yı oluşturun](BrowserBuildAPK.md)** – GitHub Actions iş akışını (workflow) çalıştırın, sürümünüzü ve varyantınızı seçin.
 
-If you run into trouble, see **[Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md)**. For optional operations with a fork, see [exporting your keystore](#ci-keystore-export) or [cherry-picking a commit](#github-cherry-pick).
+Sorun yaşarsanız **[Tarayıcı ile oluşturma: sorun giderme](../GettingHelp/BrowserBuildTroubleshooting.md)** sayfasına bakın. Fork ile yapılan isteğe bağlı işlemler için bkz. [anahtar deponuzu dışa aktarma](#ci-keystore-export) veya [bir commit'i cherry-pick ile ekleme](#github-cherry-pick).
 
 ----
 
-**Start with [Step 1 – Create your GitHub fork](BrowserBuildFork.md) →**
+**[Adım 1 – GitHub fork'unuzu oluşturun](BrowserBuildFork.md) ile başlayın →**
 
 ```{toctree}
 :hidden:
 
 AAPS Builder <BrowserBuildAapsBuilder.md>
-Step 1: Create your fork <BrowserBuildFork.md>
-Step 2: Create your keystore <BrowserBuildKeystore.md>
-Step 3: Authorize Google Drive <BrowserBuildGoogleDrive.md>
-Step 4: Build the APK <BrowserBuildAPK.md>
+Adım 1: Fork'unuzu oluşturun <BrowserBuildFork.md>
+Adım 2: Anahtar deponuzu oluşturun <BrowserBuildKeystore.md>
+Adım 3: Google Drive'ı yetkilendirin <BrowserBuildGoogleDrive.md>
+Adım 4: APK'yı oluşturun <BrowserBuildAPK.md>
 ```
