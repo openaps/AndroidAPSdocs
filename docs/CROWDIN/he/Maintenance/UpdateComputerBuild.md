@@ -2,10 +2,10 @@
 
 ## בנייה עצמית במקום הורדה
 
-**AAPS** is not available to download, due to regulations concerning medical devices. בנייה עצמית של היישום לשימוש אישי הינה חוקית אך אסור לתת את היישום לאחרים! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** is not available to download, due to regulations concerning medical devices. בנייה עצמית של האפליקציה לשימוש אישי הינה חוקית אך אסור לתת את האפליקציה לאחרים! See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 ```{note}
-In case you want to build **AAPS** on a new computer: copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+אם ברצונכם לבנות את **AAPS** במחשב חדש: העתיקו את קובץ הגיבוי של ה-keystore שלכם למחשב החדש. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. ההבדל היחיד הוא שבמקום ליצור keystore חדש, ניתן לבחור את ה-keystore שהעתקתם למחשב החדש.
 ```
 
 ## Overview for updating to a new version of AAPS with Android Studio
@@ -15,7 +15,7 @@ In case you want to build **AAPS** on a new computer: copy your back-up keystore
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+אם נתקלים בבעיות, ראו את הדף הנפרד [פתרון תקלות ב-Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 ### Export your settings
 
@@ -25,7 +25,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ### Check your Android Studio version
 
-The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
+הגרסה המינימלית הדרושה מתוארת ב[הוראות הבנייה](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
 
 (Update-to-new-version-update-your-local-copy)=
 ### Update your local copy
@@ -53,7 +53,7 @@ The minimal version required is described in the [Building Instructions](#Buildi
 * Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
 
   ```{note}
-  The files that were updated may vary! This is not an indication of a problem.
+  The files that were updated may vary! זה לא מעיד על בעיה.
   ```
 
    ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
@@ -79,22 +79,22 @@ Your sourcecode is now the current released version, and all prerequisites have 
 You need to transfer the apk to your phone so you can install it.
 
 ```{note}
-If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
-For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
+אם השלמתם את הבנייה עם אותו keystore קיים ב-Android Studio, אין צורך להסיר את האפליקציה הקיימת בטלפון שלכם. When you install the apk, follow the prompts to install updates.
+במקרים אחרים, כגון יצירת keystore חדש ב-Android Studio עבור ה-apk החתום שלכם, תצטרכו למחוק את האפליקציה הישנה לפני התקנת ה-apk. **Make sure to export your settings!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Where Google's [Android developer verification](#android-developer-verification) is enforced (from September 2026, depending on your country), install with [ADB](#android-developer-verification-adb) instead of tapping the APK file.
+ראו את ההוראות ל[העברה והתקנה של AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). במקומות שבהם [אימות מפתחים ב-Android](#android-developer-verification) של Google נאכף (החל מספטמבר 2026, בהתאם למדינה שלכם), יש להתקין באמצעות [ADB](#android-developer-verification-adb) במקום להקיש על קובץ ה-APK.
 
 Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
 
 (update-computer-build-troubleshooting)=
 
-## Troubleshooting
+## פתרון תקלות
 
 If anything goes wrong, don't panic.
 
 Take a breath!
 
-Then check if your problem is already documented on the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+לאחר מכן בדקו בדף הנפרד [פתרון תקלות ב-Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) אם הבעיה שלכם כבר מתועדת.
 
 If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
