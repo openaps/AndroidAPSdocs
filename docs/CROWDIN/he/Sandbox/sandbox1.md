@@ -2,33 +2,33 @@
 orphan: true
 - - -
 
-# internal sandbox file 1 for testing our sprint
+# קובץ ארגז חול פנימי 1 לבדיקת הספרינט שלנו
 
 ```{admonition} no need to translate this
 :class: note
 
-No need to translate this.
+אין צורך לתרגם את זה.
 ```
 
 ```{danger}
-Here is danger on the road.
+יש סכנה בדרך.
 ```
 
-Test for Setup
+בדיקה להגדרה
 
-"The number 42 is, in The Hitchhiker's Guide to the Galaxy by Douglas Adams, the "Answer to the Ultimate Question of Life, the Universe, and Everything," calculated by an enormous supercomputer named Deep Thought over a period of 7.5 million years." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
+"המספר 42 הוא, בספר "מדריך הטרמפיסט לגלקסיה" של דאגלס אדמס, "התשובה לשאלה האולטימטיבית על החיים, היקום וכל השאר", שחושבה על ידי מחשב-על ענק בשם Deep Thought במשך 7.5 מיליון שנים." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
 
-This is an internal sandbox file for the documentation team to test
+זהו קובץ ארגז חול (sandbox) פנימי, שצוות התיעוד משתמש בו כדי לבדוק
 
-1. markdown syntax and
+1. את תחביר ה-markdown ואת
 
-1. background process for
-    1. CROWDIN translation and
-    2. Read The Docs deployment.
+1. תהליך הרקע של
+    1. תרגום CROWDIN ושל
+    2. הפריסה ב-Read The Docs.
 
-You can directly jump from here to the second label in this file - ["Jump"](#this-is-another-test) or [tag jump](#sandbox1-this-is-another-test).
+מכאן אפשר לקפוץ ישירות לתווית השנייה בקובץ - ["קפיצה"](#this-is-another-test) או [קפיצה לתג](#sandbox1-this-is-another-test).
 
-And you can jump to the first label too - ["Jump"](#this-is-a-test) or [tag jump](#sandbox1-this-is-a-test).
+ואפשר גם לקפוץ לתווית הראשונה - ["קפיצה"](#this-is-a-test) או [קפיצה לתג](#sandbox1-this-is-a-test).
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
@@ -39,27 +39,27 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 (sandbox1-this-is-a-test)=
-## This is a test
+## זוהי בדיקה
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 (sandbox1-this-is-another-test)=
-## This is another test
+## זוהי בדיקה נוספת
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-Label in the middle of [nowhere](#sandbox1-in-the-middle-of-nowhere) This instead is the label to [](#sandbox1-this-is-another-test) and it should display its name
+תווית [באמצע שום מקום](#sandbox1-in-the-middle-of-nowhere) זו, לעומת זאת, התווית אל [](#sandbox1-this-is-another-test), והיא אמורה להציג את השם שלה
 
-Links with anchor:
-- [how long will it take?](#preparing-how-long-will-it-take)
-- [NSClient settings in Preferences](#Preferences-nsclient).
-- [prediction lines in AAPS OVERVIEW](#aaps-screens-prediction-lines) to header level 4
+קישורים עם עוגן:
+- [כמה זמן זה ייקח?](#preparing-how-long-will-it-take)
+- [הגדרות NSClient בהעדפות](#Preferences-nsclient).
+- [קווי תחזית במסך הסקירה של AAPS](#aaps-screens-prediction-lines) לכותרת ברמה 4
 - [Screenshots](../DailyLifeWithAaps/AapsScreens.md)
-- [Screenshot main graph](#aaps-screens-main-graph) to header level 3
-- [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)
+- [צילום מסך של הגרף הראשי](#aaps-screens-main-graph) לכותרת ברמה 3
+- [תכונות OpenAPS](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)
 - [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)
-- [SMB section in this documentation](#Open-APS-features-super-micro-bolus-smb)
+- [החלק על SMB בתיעוד הזה](#Open-APS-features-super-micro-bolus-smb)
