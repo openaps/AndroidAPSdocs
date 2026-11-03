@@ -9,7 +9,7 @@
 **AAPS** не може да се изтегли готово заради правилата за медицинските изделия. Законно е да компилирате приложението за собствена употреба, но НЕ БИВА да давате копие на други хора! Вижте [страницата с често задавани въпроси](../UsefulLinks/FAQ.md) за подробности.
 
 ```{note}
-In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. След това следвайте [процедурата за компилиране на **AAPS** в браузъра](../SettingUpAaps/BrowserBuild.md) вместо това ръководство. Вместо да създавате ново хранилище за ключове, трябва да изберете това, което сте копирали от компютъра си.
+Ако искате да актуализирате **AAPS** в браузъра за първи път: копирайте резервното копие на файла на хранилището за ключове в своя Google Drive. След това следвайте [процедурата за компилиране на **AAPS** в браузъра](../SettingUpAaps/BrowserBuild.md) вместо това ръководство. Вместо да създавате ново хранилище за ключове, трябва да изберете това, което сте копирали от компютъра си.
 Това е задължително само първия път; при следващите актуализации ще можете да следвате това ръководство.
 ```
 
@@ -24,7 +24,7 @@ In case you want to upgrade **AAPS** with a browser for the first time: copy you
 :local: true
 ```
 
-In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+Ако имате проблеми, вижте отделната страница за [отстраняване на неизправности при компилиране в браузъра](../GettingHelp/BrowserBuildTroubleshooting.md).
 
 ### Експортирайте настройките си
 
@@ -57,7 +57,7 @@ In case you experience problems, see separate page for [browser build troublesho
 
 ![Отхвърляне на нежеланите промени](../images/update/CI/GitHubUpdate4.png)
 
-You have now synchronized (updated) your own copy with the latest release of **AAPS**. Добра работа.
+Вече сте синхронизирали (актуализирали) своето копие с последната версия на **AAPS**. Добра работа.
 
 ![Хранилището е синхронизирано](../images/update/CI/GitHubUpdate5.png)
 
@@ -73,17 +73,17 @@ You have now synchronized (updated) your own copy with the latest release of **A
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Keep the branch set to master. In **Select AAPS Version**, check that **4.0.0**, the newest version at the top of the list, is selected. If your fork is not up to date, the preselected version is an older one: if you run the workflow with the form as it opens, you rebuild that older version and your app is not updated. Choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
+5. Оставете избран клон master. В **Select AAPS Version** (избор на версия на AAPS) проверете дали е избрана **4.0.0** – най-новата версия най-горе в списъка. Ако вашият fork не е актуален, предварително избраната версия е по-стара: ако стартирате workflow с формуляра, както се отваря, ще компилирате отново тази по-стара версия и приложението ви няма да се актуализира. Изберете [варианта](#browserbuild-variant) (fullRelease) и след това докоснете Run workflow.
 
    ```{note}
-   The list of versions is part of the workflow in your fork. If **4.0.0** is missing, your fork is not synchronized yet: go back to [Update your GitHub repository](#Update-to-new-version-update-your-repo).
+   Списъкът с версии е част от workflow във вашия fork. Ако **4.0.0** липсва, вашият fork още не е синхронизиран: върнете се към [Актуализирайте своето хранилище (repository) в GitHub](#Update-to-new-version-update-your-repo).
    ```
 
 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. Ще видите съобщението Workflow run was successfully requested (стартирането на workflow е заявено успешно). Опреснете страницата в браузъра и ще можете да следите напредъка на компилирането. Когато действието завърши, при AAPS CI ще се покаже зелена отметка. You have successfully built the updated version of **AAPS**. Това означава, че apk файловете за главния телефон и за часовника (Wear) вече се записват директно във вашия Google Drive (както е показано по-долу). Apk файлът на AAPSClient може да бъде изтеглен от Github > nightscout > AndroidAPS [тук](https://github.com/nightscout/AndroidAPS/releases)
+6. Ще видите съобщението Workflow run was successfully requested (стартирането на workflow е заявено успешно). Опреснете страницата в браузъра и ще можете да следите напредъка на компилирането. Когато действието завърши, при AAPS CI ще се покаже зелена отметка. Успешно компилирахте актуализираната версия на **AAPS**. Това означава, че apk файловете за главния телефон и за часовника (Wear) вече се записват директно във вашия Google Drive (както е показано по-долу). Apk файлът на AAPSClient може да бъде изтеглен от Github > nightscout > AndroidAPS [тук](https://github.com/nightscout/AndroidAPS/releases)
 
 
 ![Следене на workflow](../images/update/CI/GitHubActions4.png)
