@@ -1,43 +1,43 @@
 (aaps-ci-option2)=
 
-# Option 2 – Upload your existing keystore
+# 2 variantas – Įkelkite esamą raktų saugyklą
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
+Tai puslapio [Kūrimas naršyklėje](BrowserBuild.md) [2 žingsnio – Sukurkite pasirašymo raktų saugyklą](BrowserBuildKeystore.md) dalis. Įsitikinkite, kad perskaitėte [kaip pasirinkti tarp 1 ir 2 varianto](#aaps-ci-preparation).
 ```
 
-Option 2 reuses the JKS you already created on a previous build of AAPS from a computer in Android Studio. It is suitable for users who already have a JKS and know the JKS password and alias.
+2 variantas pakartotinai naudoja JKS, kurį jau sukūrėte ankstesnio AAPS kūrimo metu kompiuteryje su Android Studio. Jis tinka tiems, kas jau turi JKS ir žino JKS slaptažodį bei pseudonimą (alias).
 
-For `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`, enter your actual password and alias in GitHub – those from Android Studio, see below where you used them.
+Laukuose `KEYSTORE_PASSWORD`, `KEY_ALIAS` ir `KEY_PASSWORD` GitHub svetainėje įveskite savo tikrus slaptažodžius ir pseudonimą – tuos pačius, kuriuos naudojote Android Studio (žr. žemiau, kur juos naudojote).
 
 ```{warning}
-**Passwords with special characters.** Enter your passwords exactly as they are. Do not add a backslash or any other escape character: the build workflow keeps every character intact, and an added backslash becomes part of the password.
+**Slaptažodžiai su specialiaisiais simboliais.** Įveskite slaptažodžius tiksliai tokius, kokie jie yra. Nepridėkite atvirkštinio brūkšnio (backslash) ar kito kaitos (escape) simbolio: kūrimo darbo eiga išsaugo kiekvieną simbolį nepakeistą, o pridėtas atvirkštinis brūkšnys tampa slaptažodžio dalimi.
 
-If the build still fails at the signing step and your password contains `$`, a backtick, `"` or `\`, the workflow file in your fork is outdated. [Sync your fork](#Update-to-new-version-update-your-repo) with the latest dev and re-run the build. See [Browser build troubleshooting](#aaps-ci-password-special-characters).
+Jei kūrimas vis tiek nepavyksta pasirašymo žingsnyje, o jūsų slaptažodyje yra `$`, atvirkštinė kabutė (backtick), `"` arba `\`, jūsų fork esantis darbo eigos failas yra pasenęs. [Sinchronizuokite savo fork](#Update-to-new-version-update-your-repo) su naujausia dev versija ir vėl paleiskite kūrimą. Žr. [Kūrimas naršyklėje: trikčių šalinimas](#aaps-ci-password-special-characters).
 ```
 
 ```{admonition} KEY + PASSWORDS
 :class: dropdown
 
-![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+![Slaptažodžių įsiminimas](../images/Building-the-App/044_RememberPwd.png)
 ```
 
-## Choose your device
+## Pasirinkite savo įrenginį
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+Kuriate iš **Android telefono**? Tokiu atveju naudokite [AAPS Builder](BrowserBuildAapsBuilder.md): jam paruošimo failo nereikia.
 ```
 
-Follow the page that matches the device you are building from:
+Atlikite veiksmus puslapyje, kuris skirtas įrenginiui, iš kurio kuriate:
 
-- **[Computer](BrowserBuildO2Computer.md)** – Windows, Mac or Linux.
+- **[Kompiuteris](BrowserBuildO2Computer.md)** – Windows, Mac arba Linux.
 
 ```{tip}
-You can switch device at any time – just open the matching page.
+Įrenginį galite pakeisti bet kada – tiesiog atidarykite atitinkamą puslapį.
 ```
 
 ```{toctree}
 :hidden:
 
-Computer <BrowserBuildO2Computer.md>
+Kompiuteris <BrowserBuildO2Computer.md>
 ```
