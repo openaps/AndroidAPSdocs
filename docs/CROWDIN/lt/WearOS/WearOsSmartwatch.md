@@ -1,130 +1,130 @@
-# Set up AAPS on your Wear OS watch
+# AAPS nustatymas Wear OS laikrodyje
 
-The instructions below apply to the **AAPS Wear** apk that you need to build. If you haven’t built it yet, see the linked guide [here](../WearOS/BuildingAapsWearOS.md). When building, make sure to use the same keystore file that you used for the phone **AAPS** apk.
+Toliau pateiktos instrukcijos taikomos **AAPS Wear** APK, kurį turite susikurti patys. Jei jo dar nesukūrėte, žr. [šį vadovą](../WearOS/BuildingAapsWearOS.md). Kurdami būtinai naudokite tą pačią raktų saugyklą (keystore), kurią naudojote telefono **AAPS** APK.
 
-You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk. Each **Wear** app will communicate with its matching phone app. Pavyzdžiui, programėlė **AAPSClient Wear** gali rodyti **AAPSClient** duomenis, bet ne **AAPS** duomenis. When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles carry a small header in that flavor's accent colour so you can tell them apart while swiping.
+Dalis informacijos tinka ir **AAPSClient** bei **PumpControl** **Wear** APK. Kiekviena **Wear** programėlė bendrauja su ją atitinkančia telefono programėle. Pavyzdžiui, programėlė **AAPSClient Wear** gali rodyti **AAPSClient** duomenis, bet ne **AAPS** duomenis. Kai kartu įdiegtos kelios kliento versijos (**AAPSClient**, **AAPSClient2**, **AAPSClient3**), kiekvienos versijos plytelės turi mažą antraštę tos versijos spalva, kad braukdami jas atskirtumėte.
 
-## Wear OS Versions and compatibility
+## Wear OS versijos ir suderinamumas
 
 (wearos-watchface-changes)=
 
-### Wear OS watch face changes (impact on AAPS watchfaces)
+### Wear OS ciferblatų pakeitimai (poveikis AAPS ciferblatams)
 
 ```{admonition} Why newer Wear OS watches break AAPS watchfaces
 :class: warning
 
-In June 2025 Google [announced changes](https://android-developers.googleblog.com/2025/06/upcoming-changes-to-wear-os-watch-faces.html) that phase out the legacy watch face engine (the AndroidX / Wearable Support Library, or "WSL", engine) in favour of the newer declarative **Watch Face Format**. The **AAPS** custom watchfaces are built on the legacy engine, so the newer the Wear OS version, the more likely an AAPS watchface is to misbehave or stop working.
+2025 m. birželį Google [paskelbė apie pakeitimus](https://android-developers.googleblog.com/2025/06/upcoming-changes-to-wear-os-watch-faces.html): senasis ciferblatų variklis (AndroidX / Wearable Support Library, arba „WSL“) palaipsniui atsisakomas, o vietoj jo naudojamas naujesnis deklaratyvus **Watch Face Format**. **AAPS** pasirinktiniai ciferblatai sukurti su senuoju varikliu, todėl kuo naujesnė Wear OS versija, tuo didesnė tikimybė, kad AAPS ciferblatas veiks netinkamai arba visai neveiks.
 
-This affects the **watchfaces** specifically — AAPS **complications**, tiles and remote-control functions are not impacted. It is also why **a firmware/system update on a Wear OS watch can break AAPS watchfaces**, and a watch cannot be rolled back to an older Wear OS version afterwards. If your AAPS watchface currently works, **disable automatic watch updates**.
+Tai liečia tik **ciferblatus** – AAPS **ekrano elementai**, plytelės ir nuotolinio valdymo funkcijos nepaveiktos. Dėl to **Wear OS laikrodžio programinės įrangos / sistemos atnaujinimas gali sugadinti AAPS ciferblatus**, o grąžinti laikrodį į senesnę Wear OS versiją vėliau neįmanoma. Jei jūsų AAPS ciferblatas dabar veikia, **išjunkite automatinius laikrodžio atnaujinimus**.
 ```
 
-The table below summarises how Google's change affects the AAPS (legacy-engine) watchfaces by Wear OS version:
+Toliau esančioje lentelėje parodyta, kaip Google pakeitimas paveikia AAPS (senojo variklio) ciferblatus pagal Wear OS versiją:
 
-| Wear OS version         | Base Android | API level | Impact on AAPS (legacy) watchfaces                                                                                                                                                          |
-| ----------------------- | ------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Wear OS 6               | Android 16   | 36        | **Legacy watchfaces no longer available** — AAPS installs a [Watch Face Format watchface](#wearos-aaps-v4-watchface) instead: your custom watchface, or the AAPS V4 complications watchface |
-| Wear OS 5               | Android 14   | 34        | **Severe** — active (interactive) mode often fails, complications freeze, animations stop                                                                                                   |
-| Wear OS 4               | Android 13   | 33        | **Moderate** — throttling, missed updates, partial failures                                                                                                                                 |
-| Wear OS 3.0 / 3.2 / 3.5 | Android 11   | 30        | **Low** — legacy engine still supported                                                                                                                                                     |
+| Wear OS versija         | Bazinė Android versija | API lygis | Poveikis AAPS (seniesiems) ciferblatams                                                                                                                                                 |
+| ----------------------- | ---------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Wear OS 6               | Android 16             | 36        | **Senieji ciferblatai nebeprieinami** – vietoj jų AAPS įdiegia [Watch Face Format ciferblatą](#wearos-aaps-v4-watchface): jūsų pasirinktinį ciferblatą arba AAPS V4 elementų ciferblatą |
+| Wear OS 5               | Android 14             | 34        | **Didelis** – aktyvusis (interaktyvusis) režimas dažnai neveikia, ekrano elementai sustingsta, animacijos sustoja                                                                       |
+| Wear OS 4               | Android 13             | 33        | **Vidutinis** – ribojimas, praleisti atnaujinimai, daliniai gedimai                                                                                                                     |
+| Wear OS 3.0 / 3.2 / 3.5 | Android 11             | 30        | **Mažas** – senasis variklis dar palaikomas                                                                                                                                             |
 
-If your watch runs a version where AAPS watchfaces are unreliable, you can instead display AAPS data through **complications** on a compatible watchface, or use [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication, fed by the [External Companion Apps](#external-companion-apps) plugin of **AAPS**. On **Wear OS 6 and newer**, AAPS installs a replacement watchface built in the new format — see below.
+Jei jūsų laikrodžio versijoje AAPS ciferblatai veikia nepatikimai, AAPS duomenis galite rodyti per **ekrano elementus** suderinamame ciferblate arba naudoti [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) su ekrano elementu. Duomenis jam siunčia **AAPS** įskiepis [Išorinės susietos programėlės](#external-companion-apps). Laikrodžiuose su **Wear OS 6 ir naujesne** AAPS įdiegia pakaitinį ciferblatą, sukurtą nauju formatu – žr. toliau.
 
 (wearos-aaps-v4-watchface)=
 
-### Wear OS 6 and newer — the watchface AAPS installs
+### Wear OS 6 ir naujesnė – AAPS įdiegiamas ciferblatas
 
-Watches running **Wear OS 6 or newer** cannot run the classic AAPS watchfaces as watchfaces. For these watches the AAPS watch app brings two watchfaces built in Google's new **Watch Face Format**. Wear OS lets an app install only **one** watchface, so you choose which of the two is on the watch:
+Laikrodžiai su **Wear OS 6 arba naujesne** negali naudoti klasikinių AAPS ciferblatų kaip ciferblatų. Šiems laikrodžiams AAPS laikrodžio programėlė turi du ciferblatus, sukurtus naujuoju Google formatu **Watch Face Format**. Wear OS leidžia programėlei įdiegti tik **vieną** ciferblatą, todėl jūs pasirenkate, kuris iš dviejų bus laikrodyje:
 
-- **Custom watchface** (default): shows the custom watchface you loaded from the phone with **Load Watchface** (see [Changing to an AAPS Watchface](#WearOS_changing-to-AAPS-watchface)). The watch draws your design as a picture, so every existing custom watchface works. The complication slots a custom watchface may define are **not available** in this picture, because Wear OS only delivers complication data to a real watchface. Long-press the face to reach its one setting: whether the always-on display shows a plain clock or your own design, dimmed.
-- **Complications watchface** (the **AAPS V4** watchface): its **seven complication slots** come **preconfigured with AAPS data**: BG value, IOB, COB, the [BG Graph complication](#Watchfaces-complications), basal rate / temp target, and the **Running Mode** icon in the top-left slot (tap it to change the loop mode from the watch). Tap the time at the top to open the watch's alarm app. You can change what each slot shows in the watch face editor.
+- **Pasirinktinis ciferblatas** (numatytasis): rodo pasirinktinį ciferblatą, kurį įkėlėte iš telefono mygtuku **Įkelti ciferblatą** (žr. [AAPS ciferblato pasirinkimas](#WearOS_changing-to-AAPS-watchface)). Laikrodis jūsų dizainą piešia kaip paveikslėlį, todėl veikia visi esami pasirinktiniai ciferblatai. Ekrano elementų vietos, kurias gali turėti pasirinktinis ciferblatas, šiame paveikslėlyje **neprieinamos**, nes Wear OS elementų duomenis perduoda tik tikram ciferblatui. Ilgai spauskite ciferblatą, kad pasiektumėte vienintelį jo nustatymą: ar visada įjungtas ekranas rodo paprastą laikrodį, ar jūsų pritemdytą dizainą.
+- **Elementų ciferblatas** (**AAPS V4** ciferblatas): jo **septynios ekrano elementų vietos** jau **iš anksto nustatytos su AAPS duomenimis**: KG reikšmė, AIO, AAO, [KG grafiko ekrano elementas](#Watchfaces-complications), valandinė bazė / laikinas tikslas ir **Veikimo režimas** piktograma viršutinėje kairėje vietoje (palieskite ją, kad pakeistumėte ciklo režimą iš laikrodžio). Palieskite laiką viršuje, kad atidarytumėte laikrodžio žadintuvo programėlę. Ką rodo kiekviena vieta, galite pakeisti ciferblato redaktoriuje.
 
-You choose on the phone: open the **Wear** plugin and, under **Watchface installed on watch**, select one of the two. This card is only shown while a Wear OS 6 or newer watch is connected. **AAPS** asks you to confirm, because the watch replaces its face immediately. Switching away from the **Complications watchface** also resets the complications you changed in the watch face editor back to the defaults, and the confirmation says so. While the **Complications watchface** is selected, the custom watchface buttons are hidden and a preview of the face is shown instead. If you load a custom watchface while the **Complications watchface** is selected, **AAPS** reminds you to switch to **Custom watchface** to see it on the watch.
+Pasirenkate telefone: atidarykite įskiepį **Išmanieji laikrodžiai** ir skiltyje **Ciferblatas įdiegtas laikrodyje** pasirinkite vieną iš dviejų. Ši kortelė rodoma tik tada, kai prijungtas laikrodis su Wear OS 6 arba naujesne. **AAPS** paprašo patvirtinti, nes laikrodis ciferblatą pakeičia iš karto. Pakeitus **Elementų ciferblatą** kitu, ciferblato redaktoriuje pakeisti ekrano elementai taip pat grąžinami į numatytuosius. Patvirtinimo pranešime tai nurodyta. Kol pasirinktas **Elementų ciferblatas**, pasirinktinio ciferblato mygtukai paslėpti, o vietoj jų rodoma ciferblato peržiūra. Jei įkeliate pasirinktinį ciferblatą, kai pasirinktas **Elementų ciferblatas**, **AAPS** primena, kad reikia pasirinkti **Pasirinktinis ciferblatas**, kad jį matytumėte laikrodyje.
 
-- The selected watchface is **installed and activated automatically** the first time the AAPS watch app runs on such a watch, and it is **updated automatically** together with the watch app.
-- If you removed the watchface, an **Install watchface** entry appears at the bottom of the watch's AAPS **main menu** — tap it to reinstall.
+- Pasirinktas ciferblatas **įdiegiamas ir įjungiamas automatiškai**, kai AAPS laikrodžio programėlė pirmą kartą paleidžiama tokiame laikrodyje, ir **atnaujinamas automatiškai** kartu su laikrodžio programėle.
+- Jei ciferblatą pašalinote, laikrodžio AAPS **Pagrindinis meniu** apačioje atsiranda punktas **Įdiegti ciferblatą** – palieskite jį, kad įdiegtumėte iš naujo.
 
-While a watch running Wear OS 5 or older is connected, the **Watchface installed on watch** card is not shown at all (the mechanism it relies on requires Wear OS 6); the classic watchfaces run there as before.
+Kai prijungtas laikrodis su Wear OS 5 arba senesne, kortelė **Ciferblatas įdiegtas laikrodyje** visai nerodoma (jos veikimui reikia Wear OS 6); ten klasikiniai ciferblatai veikia kaip anksčiau.
 
 (wearos-complications-watchface-setup)=
 
-### Complications watchface — recommended setup
+### Elementų ciferblatas – rekomenduojama sąranka
 
-The **Complications watchface** has seven complication slots. Long-press the watchface, tap **Customize**, and pick a data source for each slot. The slots are numbered as in the watch face editor: **1** left, **2** centre, **3** right, **4** the graph, **5** bottom, **6** top-left and **7** top-right.
+**Elementų ciferblatas** turi septynias ekrano elementų vietas. Ilgai spauskite ciferblatą, palieskite **Tinkinti** (Customize) ir kiekvienai vietai pasirinkite duomenų šaltinį. Vietos sunumeruotos kaip ciferblato redaktoriuje: **1** kairėje, **2** centre, **3** dešinėje, **4** grafikas, **5** apačioje, **6** viršuje kairėje ir **7** viršuje dešinėje.
 
-| Default setup                                                                                   | Alternative setup                                                                                       |
-| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| ![Complications watchface, default setup](../images/wearos/complications_watchface_default.png) | ![Complications watchface, alternative setup](../images/wearos/complications_watchface_alternative.png) |
+| Numatytoji sąranka                                                                                | Alternatyvi sąranka                                                                                    |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| ![Elementų ciferblatas, numatytoji sąranka](../images/wearos/complications_watchface_default.png) | ![Elementų ciferblatas, alternatyvi sąranka](../images/wearos/complications_watchface_alternative.png) |
 
-| Slot | Padėtis   | Default                                                             | Alternative                           |
-| ---- | --------- | ------------------------------------------------------------------- | ------------------------------------- |
-| 1    | Left      | IoB Icon                                                            | CoB & IoB                             |
-| 2    | Centre    | Blood Glucose                                                       | Blood Glucose                         |
-| 3    | Right     | CoB Icon                                                            | BR & Target                           |
-| 4    | Graph     | BG Graph                                                            | BG Graph                              |
-| 5    | Bottom    | BR & Target                                                         | Uploader/Phone Battery                |
-| 6    | Top-left  | Veikimo režimas                                                     | Veikimo režimas                       |
-| 7    | Top-right | Uploader/Phone Battery, or an app shortcut to **AAPS Snooze Alert** | App shortcut to **AAPS Snooze Alert** |
+| Vieta | Padėtis          | Numatyta                                                              | Alternatyva                                    |
+| ----- | ---------------- | --------------------------------------------------------------------- | ---------------------------------------------- |
+| 1     | Kairėje          | AIO ikonėlė                                                           | AAO & AIO                                      |
+| 2     | Centre           | Kraujo gliukozė                                                       | Kraujo gliukozė                                |
+| 3     | Dešinėje         | AAO ikonėlė                                                           | VB & tikslas                                   |
+| 4     | Grafikas         | KG grafikas                                                           | KG grafikas                                    |
+| 5     | Apačioje         | VB & tikslas                                                          | Telefono baterija                              |
+| 6     | Viršuje kairėje  | Veikimo režimas                                                       | Veikimo režimas                                |
+| 7     | Viršuje dešinėje | Telefono baterija arba programėlės nuoroda **Nutildyti AAPS aliarmą** | Programėlės nuoroda **Nutildyti AAPS aliarmą** |
 
-The **AAPS Snooze Alert** shortcut is picked from the watch's own **App shortcut** complications. Tapping it snoozes the alarm that is sounding on the phone.
+Nuoroda **Nutildyti AAPS aliarmą** pasirenkama iš laikrodžio ekrano elementų **Programėlės nuoroda** (App shortcut). Ją palietus, nutildomas telefone skambantis aliarmas.
 
 ```{tip}
-Turn on **Always-on display** on the watch (**Settings** > **Display**). The watchface then keeps showing your glucose when the wrist is down, instead of a blank or a plain clock.
+Laikrodyje įjunkite **Visada įjungtas ekranas** (Always-on display) (**Nustatymai** > **Ekranas**). Tada ciferblatas rodo jūsų gliukozę ir nuleidus ranką, o ne tuščią ekraną ar paprastą laikrodį.
 ```
 
 ```{admonition} No complication data while the watch is locked
 :class: note
-If a **Lock type** is set under **Settings** > **Security and privacy**, the watch hides complication data while it is locked, and the watchface shows empty slots until you unlock it. To keep the data visible, turn off **Hide information** in the same menu.
+Jei skiltyje **Nustatymai** > **Sauga ir privatumas** nustatytas **Užrakto tipas** (Lock type), užrakintas laikrodis slepia ekrano elementų duomenis, o ciferblatas rodo tuščias vietas, kol jo neatrakinsite. Kad duomenys liktų matomi, tame pačiame meniu išjunkite **Slėpti informaciją** (Hide information).
 ```
 
 ### Wear OS 3
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (described below) or ADB.  
-No limitation in **AAPS Wear** operations.
+**AAPS Wear** APK įdiekite su [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (aprašyta toliau) arba ADB.  
+**AAPS Wear** veikia be apribojimų.
 
 (BuildingAapsWearOs-WearOS5)=
 
-### Wear OS 4 and Wear OS 5
+### Wear OS 4 ir Wear OS 5
 
-Example: Galaxy Watch 4, 5, 6, 7 and Ultra or Pixel Watch that have **not** been updated to Wear OS 6 yet. Check the version under **Settings** > **About watch** > **Software**.
+Pavyzdžiui: Galaxy Watch 4, 5, 6, 7 ir Ultra arba Pixel Watch, kurie dar **neatnaujinti** iki Wear OS 6. Versiją patikrinkite skiltyje **Nustatymai** > **Apie laikrodį** > **Programinė įranga**.
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) (for Wear OS 5 follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk)). All **AAPS Wear** functions work, but the classic **AAPS** watchfaces are limited as described in the table above: throttled on Wear OS 4, often failing on Wear OS 5.
+**AAPS Wear** APK įdiekite su [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) (Wear OS 5 atveju vadovaukitės [šiuo vaizdo įrašu](https://www.youtube.com/watch?v=yef_qGvcCnk)). Visos **AAPS Wear** funkcijos veikia, bet klasikiniai **AAPS** ciferblatai riboti, kaip aprašyta lentelėje aukščiau: Wear OS 4 jie ribojami, Wear OS 5 dažnai neveikia.
 
 ```{admonition} Wear OS 5
 :class: warning
-On Wear OS 5 the AAPS watchface has to be selected with Wear Installer 2 right after installing the Wear app: the installer offers the **AAPS (Custom)** watchface at the end of the installation. If you accidentally switch to another watchface, repeat the installation. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
+Wear OS 5 laikrodyje AAPS ciferblatą reikia pasirinkti su Wear Installer 2 iškart įdiegus Wear programėlę: diegimo pabaigoje programa pasiūlo ciferblatą **AAPS (Custom)**. Jei netyčia pakeisite ciferblatą kitu, diegimą pakartokite. Gali būti neįmanoma pakeisti ciferblato nustatymų (Tamsus, Vienodos spalvos skirtukas ir kt.).
 
-If the classic watchface currently works for you, **disable automatic watch updates**: the next firmware update is likely to break it. If you update to Wear OS 6 anyway, read the section above: **AAPS** then installs its own watchface in the new format.
+Jei klasikinis ciferblatas jums dabar veikia, **išjunkite automatinius laikrodžio atnaujinimus**: kitas programinės įrangos atnaujinimas greičiausiai jį sugadins. Jei vis tiek atnaujinsite iki Wear OS 6, perskaitykite skyrių aukščiau: tada **AAPS** įdiegia savo ciferblatą naujuoju formatu.
 ```
 
-If the watchface is too unreliable, consider [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication instead. It needs the [External Companion Apps](#external-companion-apps) plugin enabled in **AAPS**.
+Jei ciferblatas veikia per daug nepatikimai, vietoj jo apsvarstykite [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) su ekrano elementu. Tam **AAPS** turi būti įjungtas įskiepis [Išorinės susietos programėlės](#external-companion-apps).
 
-### Wear OS 6 and newer
+### Wear OS 6 ir naujesnė
 
-Example: Galaxy Watch 4 and newer with One UI 8 Watch, Pixel Watch after the 2025 update. Most Galaxy and Pixel watches have received this update.
+Pavyzdžiui: Galaxy Watch 4 ir naujesni su One UI 8 Watch, Pixel Watch po 2025 m. atnaujinimo. Dauguma Galaxy ir Pixel laikrodžių šį atnaujinimą jau gavo.
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). The classic watchfaces are not available; **AAPS** installs the watchface selected on the phone automatically, see [the watchface AAPS installs](#wearos-aaps-v4-watchface). No limitation in **AAPS Wear** operations.
+**AAPS Wear** APK įdiekite su [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). Klasikiniai ciferblatai neprieinami; **AAPS** automatiškai įdiegia telefone pasirinktą ciferblatą, žr. [AAPS įdiegiamas ciferblatas](#wearos-aaps-v4-watchface). **AAPS Wear** veikia be apribojimų.
 
-## How to set up a Samsung Galaxy Watch 4 smartwatch with **AAPS**
+## Kaip nustatyti Samsung Galaxy Watch 4 išmanųjį laikrodį su **AAPS**
 
 Šiame skyriuje laikoma, kad išmanieji laikrodžiai jums visai nauji. Čia rasite trumpą populiaraus laikrodžio **Galaxy Watch 4** apžvalgą, o po jos – žingsnis po žingsnio vadovą, kaip laikrodyje nustatyti **AAPS**.
 
-_This guide was written for a Galaxy Watch running Wear OS 3._ On Wear OS 4 and later the watch asks for a **pairing code** when a phone or computer connects over ADB. Wear Installer 2 and the terminal procedure [below](#BuildingAapsWearOs-WearOS5-TShoot) both support it.
+_Šis vadovas parašytas Galaxy Watch su Wear OS 3._ Wear OS 4 ir naujesnėse versijose laikrodis paprašo **susiejimo kodo**, kai telefonas ar kompiuteris jungiasi per ADB. Tai palaiko ir Wear Installer 2, ir [toliau](#BuildingAapsWearOs-WearOS5-TShoot) aprašytas būdas su terminalu.
 
 Čia rasite pagrindinius nustatymo vadovus laikrodžiams [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) ir [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
 
 ## Pirmoji pažintis su išmaniuoju laikrodžiu
 
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
+Kai pagal aukščiau esantį vaizdo įrašą atliksite pagrindinį laikrodžio nustatymą, telefone atidarykite Play parduotuvę ir atsisiųskite šias programėles: "Galaxy Wearable", “Samsung” ir “Easy Fire tools” arba "Wear Installer 2".
 
 YouTube yra daug kitų autorių vaizdo įrašų, kurie padės susipažinti su nauju išmaniuoju laikrodžiu, pavyzdžiui:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-Programėlėje „Galaxy Wearable“ taip pat yra naudojimo instrukcija. Telefone atidarykite Galaxy Wearable, suraskite laikrodį ir pabandykite susieti laikrodį su telefonu. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Įdiekite ją telefone ir vėl pabandykite susieti laikrodį su telefonu programėlėje Wearable. Pereikite per kelis meniu ir pažymėkite norimus nustatymus.
+Programėlėje „Galaxy Wearable“ taip pat yra naudojimo instrukcija. Telefone atidarykite Galaxy Wearable, suraskite laikrodį ir pabandykite susieti laikrodį su telefonu. Priklausomai nuo versijos, gali būti paprašyta iš Play parduotuvės įdiegti dar vieną programėlę „galaxy watch 4 plugin“ (jos atsisiuntimas užtrunka). Įdiekite ją telefone ir vėl pabandykite susieti laikrodį su telefonu programėlėje Wearable. Pereikite per kelis meniu ir pažymėkite norimus nustatymus.
 
 ## Samsung paskyros sukūrimas
 
-El. pašto paskyroje, kurią naudojate Samsung paskyrai sukurti, turi būti nurodyta tokia gimimo data, kad naudotojui būtų bent 13 metų. Kitaip Samsung leidimus patvirtinti labai sunku. Jei vaikui iki 13 metų sukūrėte Gmail paskyrą ir naudojate šį el. pašto adresą, jos negalite paprasčiausiai pakeisti į suaugusiojo paskyrą. One way around this is to modify the current date-of-birth to make the current age 12 years and 364 days old. Kitą dieną paskyra bus pakeista į suaugusiojo paskyrą, ir galėsite tęsti Samsung paskyros kūrimą.
+El. pašto paskyroje, kurią naudojate Samsung paskyrai sukurti, turi būti nurodyta tokia gimimo data, kad naudotojui būtų bent 13 metų. Kitaip Samsung leidimus patvirtinti labai sunku. Jei vaikui iki 13 metų sukūrėte Gmail paskyrą ir naudojate šį el. pašto adresą, jos negalite paprasčiausiai pakeisti į suaugusiojo paskyrą. Vienas iš būdų tai apeiti – pakeisti dabartinę gimimo datą taip, kad dabartinis amžius būtų 12 metų ir 364 dienos. Kitą dieną paskyra bus pakeista į suaugusiojo paskyrą, ir galėsite tęsti Samsung paskyros kūrimą.
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
@@ -137,57 +137,57 @@ a) USB laidu nukopijuokite **AAPS** Wear APK failą į telefoną, o tada įdieki
 b) iškirpkite Wear.apk iš Android Studio ir įklijuokite į savo Google Drive.
 
 
-To side-load AAPS onto the watch You can use either: 1) Wear Installer 2 2) Easy Fire tools 3) Android Debug Bridge (ADB) Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained. If Wear Installer 2 does not work for you, try Easy Fire Tools or ADB, both described below.
+AAPS į laikrodį rankiniu būdu galite įdiegti su: 1) Wear Installer 2 2) Easy Fire tools 3) Android Debug Bridge (ADB) Čia rekomenduojame Wear Installer 2, nes vaizdo įraše instrukcijos ir eiga paaiškintos labai aiškiai. Jei Wear Installer 2 jums neveikia, išbandykite Easy Fire Tools arba ADB – abu aprašyti toliau.
 
-### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
+### **AAPS** Wear diegimas iš telefono į laikrodį su Wear Installer 2
 
- ![Wear Installer 2 app icon](../images/wearos/wear_installer2_icon.png)
+ ![Wear Installer 2 programėlės piktograma](../images/wearos/wear_installer2_icon.png)
 
 Wear Installer 2, kurią sukūrė [Malcolm Bryant](https://www.youtube.com/@Freepoc), galima atsisiųsti iš Google Play į telefoną. Su ja AAPS Wear programėlę galima rankiniu būdu įdiegti į laikrodį. Programėlėje yra patogus [vaizdo įrašas](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) apie diegimą rankiniu būdu.
 
 ```{tip}
-For Wear OS 5 watches follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk).
-See troubleshooting tips [below](#BuildingAapsWearOs-WearOS5-TShoot).
+Wear OS 5 laikrodžiams vadovaukitės [šiuo vaizdo įrašu](https://www.youtube.com/watch?v=yef_qGvcCnk).
+Trikčių šalinimo patarimai – [toliau](#BuildingAapsWearOs-WearOS5-TShoot).
 ```
 
-This provides all the necessary detail (best to open the video on a separate device so you can watch it while setting up the phone).
+Čia rasite visą reikiamą informaciją (vaizdo įrašą geriausia atidaryti kitame įrenginyje, kad galėtumėte jį žiūrėti ir tuo pačiu nustatyti telefoną).
 
 Kaip sakoma vaizdo įraše, baigę laikrodyje išjunkite ADB derinimą, kad be reikalo neeikvotumėte išmaniojo laikrodžio baterijos.
 
-Alternatively, but not for Wear OS 5, you can:
+Arba (bet ne su Wear OS 5) galite:
 
-### Use Easy Fire tools to side-load the **AAPS** wear on the watch
+### **AAPS** Wear diegimas į laikrodį su Easy Fire tools
 
-1)   Download _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_ from the Play Store onto phone
+1) Iš Play parduotuvės į telefoną atsisiųskite _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_
 
 ![image](../images/wearos/easyfire01.png)
 
-2)  Make yourself a developer in the watch (once set up and connected to phone):
+2) Laikrodyje įjunkite kūrėjo režimą (kai laikrodis nustatytas ir prijungtas prie telefono):
 
-Go to **Settings** > **System** > **About** > **Versions** (the menu names vary between watch brands — on some watches it is **About watch** > **Software info** > **Software version**).
+Eikite į **Nustatymai** > **Sistema** > **Apie** > **Versijos** (meniu pavadinimai skiriasi pagal laikrodžio gamintoją – kai kuriuose laikrodžiuose tai **Apie laikrodį** > **Programinės įrangos informacija** > **Programinės įrangos versija**).
 
 ![image](../images/wearos/easyfire02.png)
 
-Rapidly tap on **Build number** (or **Software version**) several times until a message tells you that you are now a developer.
+Greitai kelis kartus palieskite **Versijos numeris** (arba **Programinės įrangos versija**), kol pranešimas parodys, kad dabar esate kūrėjas.
 
 ![image](../images/wearos/easyfire03.png)
 
-Go back to **Settings** > **System**: a new **Developer options** menu is now shown.
+Grįžkite į **Nustatymai** > **Sistema**: dabar rodomas naujas meniu **Kūrėjo parinktys**.
 
-In **Developer options**, turn on **ADB debugging** and **Wireless debugging**, and confirm the prompts. Wireless debugging then shows the watch's **IP address & Port**, something like: **192.168.1.214** : 5555. You only need the IP address (here **192.168.1.214**), not the port number after the colon. Note that the IP address can change, for example every time you change to a new phone handset for AAPS.
+Skiltyje **Kūrėjo parinktys** įjunkite **ADB derinimas** ir **Belaidis derinimas** ir patvirtinkite užklausas. Tada belaidžio derinimo ekrane rodomas laikrodžio **IP adresas ir prievadas**, maždaug toks: **192.168.1.214** : 5555. Jums reikia tik IP adreso (čia **192.168.1.214**), o ne prievado numerio po dvitaškio. Atminkite, kad IP adresas gali keistis, pavyzdžiui, kiekvieną kartą, kai AAPS pradedate naudoti naujame telefone.
 
 ![image](../images/wearos/easyfire04.png)
 
-STEP 3)     Enter IP address _e.g._ **192.168.1.214** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address).
+3 ŽINGSNIS) Telefone į Easy Fire tools įveskite IP adresą, _pvz._ **192.168.1.214** (atidarykite meniu kairėje (☰), nustatymus ir įveskite IP adresą).
 
 ![image](../images/wearos/easyfire05.png)
 
-Tada spauskite kištukinio lizdo piktogramą viršuje dešinėje. It will turn green when connected.
+Tada spauskite kištukinio lizdo piktogramą viršuje dešinėje. Prisijungus jis taps žalias.
 
 ![image](../images/wearos/easyfire06.png)
 
 
-STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  aaps-wear.apk onto the smartwatch using Easy Fire tools
+4 ŽINGSNIS) Vadovaukitės [šiomis instrukcijomis](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true), kad su Easy Fire tools rankiniu būdu įdiegtumėte (t. y. perkeltumėte) aaps-wear.apk į išmanųjį laikrodį
 
 
 ![image](../images/wearos/easyfire07.png)
@@ -195,147 +195,147 @@ STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/0
 
 (BuildingAapsWearOs-WearOS5-TShoot)=
 
-### Using the terminal
-Connect your smartwatch and computer to the same Wi-Fi network.
+### Terminalo naudojimas
+Prijunkite išmanųjį laikrodį ir kompiuterį prie to paties Wi-Fi tinklo.
 
-- To install ADB download it from: https://developer.android.com/tools/releases/platform-tools
-- Open a terminal.
-- For Windows, create a new folder named `adb` under your disk `C:`. Open the `platform-tools-latest-windows.zip` file you downloaded above. Copy all files inside `platform-tools` to `C:\adb` and open this folder with a command prompt (right click and Open in Terminal). Type the command below to set the path to the folder where ADB is located: `setx PATH "%PATH%;C:\adb"`
-- For Mac instead of installing manually you can use homebrew: `brew install android-platform-tools`
+- ADB atsisiųskite iš: https://developer.android.com/tools/releases/platform-tools
+- Atidarykite terminalą.
+- Windows sistemoje diske `C:` sukurkite naują aplanką `adb`. Atidarykite anksčiau atsisiųstą failą `platform-tools-latest-windows.zip`. Nukopijuokite visus failus iš `platform-tools` į `C:\adb` ir atidarykite šį aplanką komandų eilutėje (dešiniuoju pelės mygtuku ir „Atidaryti terminale“). Įveskite toliau pateiktą komandą, kad nustatytumėte kelią į aplanką, kuriame yra ADB: `setx PATH "%PATH%;C:\adb"`
+- Mac kompiuteryje, užuot diegę rankiniu būdu, galite naudoti homebrew: `brew install android-platform-tools`
 
-On the watch:
-- Go to Settings → About watch → **Software Information**
-- Tap Software version 7 times until you see Developer mode enabled.
-- Go to Settings → Developer options. Enable **ADB debugging**
-- Go to Settings → Developer options → Wireless debugging → **Pair new device**
+Laikrodyje:
+- Eikite į Nustatymai → Apie laikrodį → **Programinės įrangos informacija** (Software Information)
+- 7 kartus palieskite „Programinės įrangos versija“, kol pamatysite pranešimą, kad kūrėjo režimas įjungtas.
+- Eikite į Nustatymai → Kūrėjo parinktys. Įjunkite **ADB derinimas** (ADB debugging)
+- Eikite į Nustatymai → Kūrėjo parinktys → Belaidis derinimas → **Susieti naują įrenginį** (Pair new device)
 
-You will see a Wi-Fi pairing code and IP address and port appearing:
+Pamatysite Wi-Fi susiejimo kodą, IP adresą ir prievadą:
 
-![Watch screen showing the Wi-Fi pairing code and IP address and port](../images/wearos/ADB03.png)
+![Laikrodžio ekranas su Wi-Fi susiejimo kodu, IP adresu ir prievadu](../images/wearos/ADB03.png)
 
-- In the terminal: `adb pair ipaddress:port` E.g. `adb pair 10.10.1.125:36299`
-- You will be asked for the pairing code. Enter it.
-- You will see a response:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
-- In the terminal type: <br>`adb devices`.<br> You should see something like:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
+- Terminale: `adb pair ipaddress:port` Pvz. `adb pair 10.10.1.125:36299`
+- Būsite paprašyti įvesti susiejimo kodą. Įveskite jį.
+- Pamatysite atsakymą:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
+- Terminale įveskite: <br>`adb devices`.<br> Turėtumėte pamatyti maždaug tokį tekstą:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 
-- Now go to the folder on your computer where the Wear apk is and type<br> `adb install wear-full.apk` <br>with wear-full.apk replaced by the name of your apk file.
-- You will see:<br> `Performing Streamed Install`<br> `Success`
+- Dabar kompiuteryje eikite į aplanką, kuriame yra Wear APK, ir įveskite<br> `adb install wear-full.apk` <br>vietoj wear-full.apk įrašydami savo APK failo pavadinimą.
+- Pamatysite:<br> `Performing Streamed Install`<br> `Success`
 
 
 (wear-os-5-troubleshooting)=
 
-### General troubleshooting recommendations for Wear OS 5
+### Bendrieji trikčių šalinimo patarimai Wear OS 5
 
-- Do not use Wi-Fi Tethering. That won't work.
-- You do not need to enable adb debugging on the phone (only on the watch). Disable adb debugging on the Phone.
-- Make sure you are connecting to your local network where phone and watch can see each other (do not use your Wi-Fi guest network to connect).
-- Make sure both watch and phone are on the same network and Wi-Fi device. Especially Wi-Fi repeaters or access points may create problems.
-- Make sure to be near your main router, then restart both phone and watch.
+- Nenaudokite Wi-Fi modemo (tethering). Tai neveiks.
+- Telefone ADB derinimo įjungti nereikia (tik laikrodyje). Telefone išjunkite ADB derinimą.
+- Junkitės prie savo vietinio tinklo, kuriame telefonas ir laikrodis mato vienas kitą (nenaudokite svečių Wi-Fi tinklo).
+- Telefonas ir laikrodis turi būti tame pačiame tinkle ir prijungti prie to paties Wi-Fi įrenginio. Ypač problemų gali kelti Wi-Fi kartotuvai arba prieigos taškai.
+- Būkite netoli pagrindinio maršrutizatoriaus, tada paleiskite iš naujo ir telefoną, ir laikrodį.
 
-**Pairing :**
+**Susiejimas:**
 
-- Watch: Wireless Debugging: note the IP address.
-- Wear Installer: Enter the IP in the Wear Installer app.
-- Select Pair new, note the pairing code and port number displayed.
-- Wear Installer: enter the pairing code + space + port number.
-- Wear installer should report pairing was successful. If it does not, exit the Wear Installer, then try again.
+- Laikrodis: Belaidis derinimas – užsirašykite IP adresą.
+- Wear Installer: Wear Installer programėlėje įveskite IP adresą.
+- Pasirinkite „Susieti naują“ (Pair new), užsirašykite rodomą susiejimo kodą ir prievado numerį.
+- Wear Installer: įveskite susiejimo kodą + tarpą + prievado numerį.
+- Wear Installer turėtų pranešti, kad susiejimas pavyko. Jei nepranešė, uždarykite Wear Installer ir bandykite dar kartą.
 
-Once paired you should be able to install the AAPS wear apk:
+Susieję turėtumėte galėti įdiegti AAPS Wear APK:
 
-- Exit/close, then restart Wear Installer.
-- On wireless debug, note the IP and Port number and make sure you check/enter the IP and port number in Wear Installer.
-- Note: the port number is different from the one used for pairing!
+- Uždarykite ir vėl paleiskite Wear Installer.
+- Belaidžio derinimo ekrane užsirašykite IP adresą ir prievado numerį ir patikrinkite / įveskite juos Wear Installer programėlėje.
+- Pastaba: šis prievado numeris skiriasi nuo to, kuris buvo naudotas susiejimui!
 
 ## Ryšio tarp laikrodžio ir telefono nustatymas **AAPS** programėlėje
 
-The final step is to configure **AAPS** on the phone to interact with **Wear.apk** on the watch. To do this, enable the Wear plugin:
+Paskutinis žingsnis – nustatyti **AAPS** telefone, kad jis bendrautų su **Wear.apk** laikrodyje. Tam įjunkite Wear įskiepį:
 
 * Telefone atidarykite **AAPS** programėlę
 
-* Open the **menu** (☰) in the top-left corner and go to **Configuration** > **Communication**
+* Atidarykite **meniu** (☰) viršutiniame kairiajame kampe ir eikite į **Konfigūracija** > **Ryšys**
 
-* Tick the **Wear** box
+* Pažymėkite langelį **Išmanieji laikrodžiai**
 
 ![Konfigūracija > Ryšys su įjungtu Wear](../images/v4/Configuration/configuration_communication_wear.png)
 
-To bolus or take other actions from the watch, also turn on **Wear control** in [Settings > Wear](#preferences-wear).
+Kad galėtumėte leisti bolusą ar atlikti kitus veiksmus iš laikrodžio, taip pat įjunkite **Valdymas per Wear** skiltyje [Nustatymai > Išmanieji laikrodžiai](#preferences-wear).
 
-To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Tada braukite į dešinę, kol pamatysite visus **AAPS** ciferblatus.
+Norėdami pakeisti į kitą **AAPS** ciferblatą, laikrodžio pagrindiniame ekrane paspauskite ir palaikykite ciferblatą ir bakstelėkite **Customize**. Tada braukite į dešinę, kol pamatysite visus **AAPS** ciferblatus.
 
 Jei **AAPS** Wear.apk sėkmingai įdiegtas į išmanųjį laikrodį, tai atrodys taip:
 
 
-![Wear plugin showing the connected Galaxy Watch, and the AAPS app on the watch](../images/wearos/wear_apk_installed.png)
+![Wear įskiepis su prijungtu Galaxy Watch ir AAPS programėlė laikrodyje](../images/wearos/wear_apk_installed.png)
 
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use **Wear.apk** & **AAPS** remotely via Wi-Fi.
+Kai kuriuose išmaniuosiuose laikrodžiuose, pvz., Samsung Galaxy, Samsung Galaxy papildomose funkcijose (Advanced Features) turi būti **įjungtas** „Nuotolinis ryšys“ (Remote Connection), kad **Wear.apk** & **AAPS** veiktų nuotoliniu būdu per Wi-Fi.
 
-![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
+![Galaxy Wearable, papildomos funkcijos, įjungtas nuotolinis ryšys](../images/wearos/galaxy_wearable_remote_connection.png)
 
 (wear-os-watch-phone-communication)=
 
-### Troubleshooting the **AAPS** watch- **AAPS** phone communication
+### **AAPS** laikrodžio ir **AAPS** telefono ryšio trikčių šalinimas
 
-1.  If EasyFire tools does not connect or if you are receiving ‘authorisation failed’ > check IP address has been correctly entered.
+1.  Jei EasyFire tools neprisijungia arba gaunate pranešimą ‘authorisation failed’ > patikrinkite, ar teisingai įvestas IP adresas.
 2.  Patikrinkite, ar išmanusis laikrodis prijungtas prie interneto (o ne tik prie telefono per Bluetooth).
 3.  Patikrinkite, ar **AAPS** telefonas ir išmanusis laikrodis susieti Samsung programėlėje.
 4.  Taip pat gali padėti telefono ir išmaniojo laikrodžio paleidimas iš naujo (t. y. išjungti ir vėl įjungti)
-5.  Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have side-loaded the correct **AAPS** Wear apk onto the watch: the watch app of a browser build is the `aaps-wear-….apk` file, see [Building the Wear app](../WearOS/BuildingAapsWearOS.md). If the file you installed is any of the following: a) an **AAPSClient** Wear apk (while the phone runs **AAPS**); b) a `.aab` file; or c) a file with the word ‘debug’ in its name, you have not selected the correct Wear OS apk during the build.
+5.  Jei Wear.apk pavyko atsisiųsti į telefoną, bet negaunate KG duomenų, _patikrinkite_, ar į laikrodį įdiegėte teisingą **AAPS** Wear APK: kūrimo naršyklėje laikrodžio programėlė yra failas `aaps-wear-….apk`, žr. [Wear AAPS programėlės kūrimas](../WearOS/BuildingAapsWearOS.md). Jei įdiegėte bet kurį iš šių failų: a) **AAPSClient** Wear APK (kai telefone veikia **AAPS**); b) `.aab` failą; arba c) failą, kurio pavadinime yra žodis ‘debug’, vadinasi, kurdami nepasirinkote teisingo Wear OS APK.
 6.  Patikrinkite, ar maršrutizatorius neizoliuoja įrenginių vienas nuo kito.
 
-More troubleshooting tips can be found [here](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
+Daugiau trikčių šalinimo patarimų rasite [čia](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
 
 (WearOS_changing-to-AAPS-watchface)=
 
-## Changing to an AAPS Watchface on your WearOS watch
+## AAPS ciferblato pasirinkimas Wear OS laikrodyje
 
-There are a number of watchfaces available in the standard build of the AAPS Wear OS APK build. Once you have installed the AAPS Wear APK on your watch, they will be available. Here are the steps for selecting one:
+Standartiniame AAPS Wear OS APK kūrime yra keli ciferblatai. Kai laikrodyje įdiegsite AAPS Wear APK, jie bus prieinami. Štai kaip pasirinkti vieną iš jų:
 
-1. On your watch (assuming WearOS), long press on your current watchface to bring up the watchface selector screen and scroll all the way to the right until you see the "Add Watch Face" button and select it
+1. Laikrodyje (jei jis su Wear OS) ilgai spauskite dabartinį ciferblatą, kad atsidarytų ciferblatų pasirinkimo ekranas. Slinkite iki galo į dešinę, kol pamatysite mygtuką „Pridėti ciferblatą“ (Add Watch Face), ir jį pasirinkite
 
-![Watchface selector with the Add watch face button](../images/wearos/watchface_add.png)
+![Ciferblatų pasirinkimo ekranas su mygtuku „Pridėti ciferblatą“](../images/wearos/watchface_add.png)
 
-2. Scroll through the list until you find "AAPS (Custom)" (depending on the watch, the watch faces of installed apps are listed under a "Downloaded" section or grouped by app) and click the middle of the image to add it to your shortlist of current watchfaces. Don't worry about the current appearance of the "AAPS (Custom)" watchface, we will select your preferred skin in the next step.
+2. Slinkite sąrašu, kol rasite „AAPS (Custom)“ (priklausomai nuo laikrodžio, įdiegtų programėlių ciferblatai rodomi skiltyje „Atsisiųsta“ (Downloaded) arba sugrupuoti pagal programėlę), ir spauskite paveikslėlio vidurį, kad pridėtumėte jį į dabartinių ciferblatų sąrašą. Nesijaudinkite dėl to, kaip dabar atrodo ciferblatas „AAPS (Custom)“. Kitame žingsnyje pasirinksite norimą išvaizdą.
 
-![List of AAPS watchfaces, with AAPS (Custom)](../images/wearos/watchface_list_aaps.png)
+![AAPS ciferblatų sąrašas su AAPS (Custom)](../images/wearos/watchface_list_aaps.png)
 
-3. Now open AAPS on your phone and open the Wear plugin: **Configuration** > **Communication** > **Wear** > **Open plugin** (tick **Wear** first if it is not enabled).
+3. Dabar telefone atidarykite AAPS ir atidarykite Wear įskiepį: **Konfigūracija** > **Ryšys** > **Išmanieji laikrodžiai** > **Atidaryti įskiepį** (jei įskiepis neįjungtas, pirmiausia pažymėkite **Išmanieji laikrodžiai**).
 
-![Wear plugin with the Custom Watchface card](../images/wearos/wear_plugin_custom_watchface.png)
+![Wear įskiepis su pasirinktinio ciferblato kortele](../images/wearos/wear_plugin_custom_watchface.png)
 
-4. Click on the "Load Watchface" button and select the watchface that you like
+4. Spauskite mygtuką „Įkelti ciferblatą“ ir pasirinkite jums patinkantį ciferblatą
 
-![Select Custom Watchface list](../images/wearos/select_custom_watchface.png)
+![Pasirinktinių ciferblatų sąrašas](../images/wearos/select_custom_watchface.png)
 
-5. Check your watch, the "AAPS (Custom)" watchface should now be displaying the skin that you have selected. Give it a few seconds to refresh. The **Wear** screen on the phone now shows the name of the loaded watchface and a preview of it. **Infos Watchface** lists its details and the fields it contains, and **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) where you can download other custom watchfaces. You may now customize the complications, etc. by long pressing the watchface and then pressing the "Customize" button on the watchface image.
+5. Pažiūrėkite į laikrodį: ciferblatas „AAPS (Custom)“ dabar turėtų rodyti jūsų pasirinktą išvaizdą. Palaukite kelias sekundes, kol jis atsinaujins. Telefono ekrane **Išmanieji laikrodžiai** dabar rodomas įkelto ciferblato pavadinimas ir jo peržiūra. **Ciferblato info** rodo ciferblato informaciją ir jame esančius laukus, o **Daugiau ciferblatų** atidaro [mainų svetainę](../ExchangeSiteCustomWatchfaces/index.md), kurioje galite atsisiųsti kitų pasirinktinių ciferblatų. Dabar galite pritaikyti ekrano elementus ir kt.: ilgai spauskite ciferblatą, tada ciferblato paveikslėlyje spauskite mygtuką „Tinkinti“ (Customize).
 
 ```{admonition} Complications on a custom watchface
 :class: note
-Custom watchfaces made with version 3.0 or newer of the custom watchface format can contain up to five complication slots, with their position and size defined by the watchface (**Complication layout**). On the watch, long-press the watchface, tap **Customize** and tap **Complication 1** to **Complication 5** to choose the data source shown in each slot. The same rows are listed in the watch's AAPS app under **Settings** > **AAPS(Custom)**; tapping one there opens the same picker. **Complication type priority** decides whether a slot prefers a value or gauge, text, or an icon when the data source offers several. A changed priority only applies the next time you pick a data source for that slot.
+Pasirinktiniai ciferblatai, sukurti su pasirinktinio ciferblato formato 3.0 ar naujesne versija, gali turėti iki penkių ekrano elementų vietų. Jų padėtį ir dydį nustato ciferblatas (**Elementų išdėstymas**). Laikrodyje ilgai spauskite ciferblatą, palieskite **Tinkinti** (Customize) ir palieskite nuo **1 elementas** iki **5 elementas**, kad pasirinktumėte kiekvienoje vietoje rodomą duomenų šaltinį. Tos pačios eilutės rodomos laikrodžio AAPS programėlėje skiltyje **Nustatymai** > **AAPS(Custom)**; palietus eilutę, atsidaro tas pats pasirinkimo langas. **Elementų tipų prioritetas** nustato, ar vieta pirmenybę teikia reikšmei arba skalei, tekstui ar piktogramai, kai duomenų šaltinis siūlo kelis variantus. Pakeistas prioritetas taikomas tik kitą kartą, kai tai vietai pasirinksite duomenų šaltinį.
 
-These slots only work on watches running **Wear OS 5 or older**, where the custom watchface runs as a real watchface. On **Wear OS 6 and newer**, the custom watchface is shown as a picture without its complication slots, and steps 1 and 2 above are not needed: make sure **Custom watchface** is selected under **Watchface installed on watch** in the phone's **Wear** plugin (see [the watchface AAPS installs](#wearos-aaps-v4-watchface)).
+Šios vietos veikia tik laikrodžiuose su **Wear OS 5 arba senesne**, kuriuose pasirinktinis ciferblatas veikia kaip tikras ciferblatas. Laikrodžiuose su **Wear OS 6 ir naujesne** pasirinktinis ciferblatas rodomas kaip paveikslėlis be ekrano elementų vietų, ir 1 bei 2 žingsnių aukščiau atlikti nereikia: įsitikinkite, kad telefono įskiepio **Išmanieji laikrodžiai** skiltyje **Ciferblatas įdiegtas laikrodyje** pasirinktas **Pasirinktinis ciferblatas** (žr. [AAPS įdiegiamas ciferblatas](#wearos-aaps-v4-watchface)).
 ```
 
-## AAPSv2 watchface - Legend
+## AAPSv2 ciferblatas – paaiškinimai
 
-![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
+![AAPSv2 ciferblato paaiškinimai](../images/Watchface_Legend.png)
 
-A - time since last loop run
+A – laikas nuo paskutinio ciklo vykdymo
 
-B - CGM reading
+B – NGJ reikšmė
 
-C - minutes since last CGM reading
+C – minutės nuo paskutinės NGJ reikšmės
 
-D - change compared to last CGM reading (in mmol or mg/dL)
+D – pokytis, palyginti su paskutine NGJ reikšme (mmol arba mg/dL)
 
-E - average change CGM reading last 15 minutes
+E – vidutinis NGJ reikšmės pokytis per paskutines 15 minučių
 
-F - phone battery
+F – telefono baterija
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G – valandinė bazė (įprastai rodoma V/val, o laikinos valandinės bazės metu – %)
 
-H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H – BGI (blood glucose impact, poveikis gliukozei kraujyje) -> kiek KG „turėtų“ kilti arba kristi vien dėl insulino veikimo.
 
-I - carbs (carbs on board | e-carbs in the future)
+I – angliavandeniai (aktyvūs angliavandeniai | i-AV ateityje)
 
-J - insulin on board (from bolus | from basal)
+J – aktyvus insulinas (iš bolusų | iš valandinės bazės)
