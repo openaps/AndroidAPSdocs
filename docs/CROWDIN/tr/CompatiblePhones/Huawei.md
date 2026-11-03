@@ -1,57 +1,57 @@
-# How to configure a Huawei phone
+# Huawei telefon nasıl yapılandırılır
 
-**Which phones this page covers:** Huawei phones running **EMUI 12 to EMUI 15**. All of these are based on Android 12, the minimum for the current version of **AAPS**. On a phone with an older EMUI version, you can only use an [older AAPS version](#maintenance-android-version-aaps-version).
+**Bu sayfanın kapsadığı telefonlar:** **EMUI 12 ile EMUI 15** arası sürümleri çalıştıran Huawei telefonlar. Bunların tümü, **AAPS**'in güncel sürümü için en düşük gereksinim olan Android 12'ye dayanır. Daha eski EMUI sürümüne sahip bir telefonda yalnızca [daha eski bir AAPS sürümü](#maintenance-android-version-aaps-version) kullanabilirsiniz.
 
-```{admonition} HarmonyOS NEXT / HarmonyOS 5 phones :class: warning
+```{admonition} HarmonyOS NEXT / HarmonyOS 5 telefonlar :class: warning
 
-Recent Huawei phones sold in China run HarmonyOS NEXT (HarmonyOS 5 and above). This system is not Android anymore and cannot run **AAPS**. ```
+Çin'de satılan yeni Huawei telefonlar HarmonyOS NEXT (HarmonyOS 5 ve üstü) çalıştırır. Bu sistem artık Android değildir ve **AAPS**'i çalıştıramaz. ```
 
-Huawei phones close apps running in the background very aggressively. Apply all the settings below to **AAPS** and to your CGM app (for example xDrip+ or Juggluco), otherwise the loop and glucose readings may stop when the screen is off.
+Huawei telefonlar arka planda çalışan uygulamaları çok agresif şekilde kapatır. Aşağıdaki tüm ayarları **AAPS**'e ve CGM uygulamanıza (örneğin xDrip+ veya Juggluco) uygulayın. Aksi halde ekran kapalıyken döngü ve glikoz ölçümleri durabilir.
 
-Menu names can differ slightly between models. If you can't find a setting, type its name in the search bar at the top of **Settings**.
+Menü adları modeller arasında biraz farklı olabilir. Bir ayarı bulamazsanız adını **Settings** (Ayarlar) ekranının üstündeki arama çubuğuna yazın.
 
-The screenshots below come from an older EMUI version. The settings are the same on EMUI 12 to 15.
+Aşağıdaki ekran görüntüleri daha eski bir EMUI sürümüne aittir. Ayarlar EMUI 12 ile 15 arasında aynıdır.
 
-## Ignore battery optimization
+## Pil optimizasyonunu yoksay
 
-1. Open **Settings > Apps > Apps**.
-2. Tap the menu **⋮** in the top right corner and select **Special access > Battery optimization**.
-3. Tap the arrow at the top of the list and select **All apps**.
-4. Select **AAPS** and choose **Don't allow**. Huawei won't optimize apps in this list anymore.
-5. Repeat for your CGM app.
+1. **Settings > Apps > Apps** (Ayarlar > Uygulamalar > Uygulamalar) yolunu açın.
+2. Sağ üst köşedeki **⋮** menüsüne dokunun ve **Special access > Battery optimization** (Özel erişim > Pil optimizasyonu) seçin.
+3. Listenin üstündeki oka dokunun ve **All apps** (Tüm uygulamalar) seçin.
+4. **AAPS** uygulamasını seçin ve **Don't allow** (İzin verme) seçeneğini seçin. Huawei artık bu listedeki uygulamaları optimize etmez.
+5. CGM uygulamanız için de tekrarlayın.
 
 ![Huawei - pil optimizasyonunu yoksay](../images/Huawei_BatteryOptimization.png)
 
-## App launch: allow running in the background
+## Uygulama başlatma: arka planda çalışmaya izin verin
 
-1. Open **Settings > Battery > App launch** (or **Settings > Apps > Apps >** select the app **> Battery > App launch**).
-2. Find **AAPS** and turn off **Manage automatically**.
-3. In the **Manage manually** window, turn on all three options: 
-    - **Auto-launch**
-    - **Secondary launch** (can be launched by other apps)
-    - **Run in background**
-4. Repeat for your CGM app.
+1. **Settings > Battery > App launch** (Ayarlar > Pil > Uygulama başlatma) yolunu açın (veya **Settings > Apps > Apps >** uygulamayı seçin **> Battery > App launch**).
+2. **AAPS** uygulamasını bulun ve **Manage automatically** (Otomatik yönet) seçeneğini kapatın.
+3. **Manage manually** (Elle yönet) penceresinde üç seçeneğin tümünü açın: 
+    - **Auto-launch (otomatik başlatma)**
+    - **Secondary launch** (ikincil başlatma: başka uygulamalar tarafından başlatılabilir)
+    - **Run in background (arka planda çalıştır)**
+4. CGM uygulamanız için de tekrarlayın.
 
 ![Huawei - pil seçenekleri](../images/Huawei_BatteryOptions.png)
 
-## Lock AAPS in the recent apps
+## AAPS'i son uygulamalar listesinde kilitleyin
 
-Locked apps are not closed when you clear the recent apps list.
+Son uygulamalar listesini temizlediğinizde kilitli uygulamalar kapatılmaz.
 
-1. Open the recent apps list.
-2. Swipe down on the **AAPS** card. A lock symbol appears on the card.
-3. Do the same for your CGM app.
+1. Son uygulamalar listesini açın.
+2. **AAPS** kartını aşağı kaydırın. Kartta bir kilit simgesi görünür.
+3. CGM uygulamanız için de aynısını yapın.
 
-![Huawei - kilit uygulaması](../images/Huawei_LockApp.png)
+![Huawei - uygulamayı kilitle](../images/Huawei_LockApp.png)
 
-## Power saving mode
+## Güç tasarrufu modu
 
-Keep **Power saving mode** and **Ultra power saving** turned off (**Settings > Battery**). They close background apps regardless of the settings above.
+**Power saving mode** (güç tasarrufu modu) ve **Ultra power saving** (ultra güç tasarrufu) seçeneklerini kapalı tutun (**Settings > Battery**). Bu modlar, yukarıdaki ayarlardan bağımsız olarak arka plandaki uygulamaları kapatır.
 
-## If AAPS still stops in the background
+## AAPS hâlâ arka planda duruyorsa
 
-See [Don't kill my app](https://dontkillmyapp.com/huawei) for more Huawei-specific solutions.
+Huawei'ye özgü daha fazla çözüm için [Don't kill my app](https://dontkillmyapp.com/huawei) sitesine bakın.
 
-## Honor phones
+## Honor telefonlar
 
-Honor is a separate brand now and its phones run MagicOS instead of EMUI. The background settings are very similar: look for **App launch** in the app's battery settings, turn off **Manage automatically** and allow all three options, then remove the app from battery optimization.
+Honor artık ayrı bir markadır ve telefonları EMUI yerine MagicOS çalıştırır. Arka plan ayarları çok benzerdir: uygulamanın pil ayarlarında **App launch** seçeneğini bulun, **Manage automatically** seçeneğini kapatın ve üç seçeneğin tümüne izin verin, ardından uygulamayı pil optimizasyonundan çıkarın.
