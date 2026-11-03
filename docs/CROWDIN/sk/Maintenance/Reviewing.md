@@ -54,7 +54,7 @@ Nižšie sú k dispozícii štatistiky času v úzkom rozsahu (TITR) 70–140 mg
 
 **Ciele preberte so svojím diabetológom**
 
-Váš diabetes môže byť iný. Všetky navrhované ciele by ste mali prebrať so svojím diabetológom alebo lekárskym tímom. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress.
+Váš diabetes môže byť iný. Všetky navrhované ciele by ste mali prebrať so svojím diabetológom alebo lekárskym tímom. Ak sa používajú správne, štatistiky AAPS môžu byť účinným nástrojom na sledovanie trendov __glykémie__ a pokroku.
 
 ![Štatistiky](../images/Maintenance/statistics3.png)
 
@@ -117,7 +117,7 @@ Na konci každého riadka malé ikony ukazujú, odkiaľ dáta pochádzajú alebo
 ![Sacharidy a bolusy](../images/TreatmentsView1.png)
 
 Na tejto karte si môžete zobraziť záznam bolusov a sacharidov. Pri každom boluse (riadok **1**) sa vedľa množstva inzulínu zobrazuje zostávajúci súvisiaci IOB. Pôvod bolusu môže byť:
-* Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
+* Jedlo (zadané ručne tlačidlami Inzulín, Rýchly sprievodca alebo Bolusová kalkulačka)
 * SMB pri použití funkcie SMB
 
 Záznamy sacharidov (riadok **2**) sa zobrazujú s množstvom v gramoch.
@@ -147,9 +147,9 @@ Tu sa zobrazujú **dočasné bazály**, ktoré nastavil okruh. Ak má záznam st
 * Kladný IOB, ak bol dočasný bazál vyšší ako bazál nastavený v profile
 * Záporný IOB pri nulovom dočasnom bazáli (ako v riadku **1**) alebo ak bol dočasný bazál nižší ako bazál nastavený v profile
 
-Deleting the entries only affects your reports in Nightscout and will probably distort your real IOB - it is not recommended.
+Odstránenie záznamov ovplyvní iba vaše reporty v Nightscoute a pravdepodobne skreslí váš skutočný IOB – neodporúča sa to.
 
-On the left of a line, a red S means “Suspend”: it happens when basal is not currently delivered. Je to bežná situácia napríklad pri výmene podu.
+Červené S vľavo na riadku znamená „Suspend“ (pozastavené): nastane vtedy, keď sa bazál práve nepodáva. Je to bežná situácia napríklad pri výmene podu.
 
 ### Dočasný cieľ
 
@@ -178,7 +178,7 @@ Táto karta zobrazuje všetky poznámky a záznamy v Starostlivosti zaznamenané
 
 ![Režim prevádzky](../images/TreatmentsView6.png)
 
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
+Táto karta zobrazuje históriu zmien [stavu okruhu](#AapsScreens-loop-status): otvorený, uzavretý, Ochrana pred nízkou glykémiou (LGS), pozastavený, odpojený.
 
 ### Záznam používateľa
 
