@@ -2,7 +2,7 @@
 
 *Naudokitės šiomis instrukcijomis, jei turite DanaR pompą. Jei vietoj jos turite 2017 m. išleistą DanaRS, žr. [DanaRS insulino pompa](./DanaRS-Insulin-Pump.md).*
 
-## Pump capabilities with AAPS
+## Pompos galimybės su AAPS
 
 * Su **AAPS** ryšį palaiko per telefono įtaisytą Bluetooth, be papildomo ryšio įrenginio.
 * Keičiant laiko juostą ir pereinant į vasaros ar žiemos laiką nieko daryti nereikia, nes pompa nenaudoja savo istorijos.
@@ -38,7 +38,7 @@
 
 Apie keliones per laiko juostas žr. skyrių [Keliavimas per laiko juostas su pompomis](#timezone-traveling-danarv2-danars).
 
-## Where to get help
+## Kur gauti pagalbos
 
 DanaR tvarkyklę kuria bendruomenė **savanoriškai**. Prieš prašydami pagalbos:
 
