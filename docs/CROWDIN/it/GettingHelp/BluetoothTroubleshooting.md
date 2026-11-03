@@ -1,8 +1,8 @@
 (bluetoothtroubleshooting-bluetooth-related-issues)=
 
-# Bluetooth related issues
+# Problemi legati al Bluetooth
 
-Some users have been running into issues with Omnipod DASH activation failures, Medtrum Nano connectivity problems, and other pod errors related to Bluetooth. Many of these issues can be traced to one of the following issues.
+Some users have been running into issues with Omnipod DASH activation failures, Medtrum Nano connectivity problems, and other pod errors related to Bluetooth. Molti di questi problemi hanno una delle cause seguenti.
 
 Some of these issues likely apply to other Bluetooth Insulin pumps too, the Medtrum Nano has known issues with nearby device permission as well as the Omnipod DASH.
 
@@ -11,17 +11,17 @@ Some of these issues likely apply to other Bluetooth Insulin pumps too, the Medt
 (bluetoothtroubleshooting-cannot-start-omnipod-with-android-16)=
 
 ## Cannot start Omnipod with Android 16
-- Android 16 needs at a minimum **AAPS** version 3.3.2.1 for the Omnipod DASH to work correctly, as this version has fixes added to specifically address known problems introduced in Android 16 for Omnipod.
+- Con Android 16 l'Omnipod DASH funziona correttamente solo con **AAPS** versione 3.3.2.1 o più recente, perché questa versione contiene correzioni pensate proprio per i problemi noti che Android 16 ha introdotto per Omnipod.
 
 ---
 
 (bluetoothtroubleshooting-bluetooth-battery-optimisation)=
 
-## Bluetooth Battery Optimisation
+## Ottimizzazione della batteria per il Bluetooth
 
 Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. This is known to cause some issues for Bluetooth pumps and CGMs.
 
-If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard.md) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide it's possible you have not changed this setting.
+Se hai seguito la [Configurazione guidata](../SettingUpAaps/SetupWizard.md) e le impostazioni della sezione [Ottimizzazione della batteria per il Bluetooth](#setup-wizard-bluetooth-battery-optimisation), questa impostazione dovrebbe essere corretta. Se invece hai seguito una versione più vecchia di questa guida, è possibile che tu non l'abbia cambiata.
 
 Verify this is correctly configured if you have pump and CGM disconnections.
 
@@ -46,13 +46,13 @@ Apps in this list have been discussed in one or more places in the community as 
 Ping @XiTatiON on #omnipod-dash Discord channel to discuss apps to be added to this list.
 ```
 
-- **myBMW** MyBMW interrupted Medtrum Nano and Omnipod DASH. The MyBMW app prompts regarding permission for "find nearby devices" only once, if you don't grant it, it still works absolutely OK
+- **myBMW** MyBMW ha interrotto Medtrum Nano e Omnipod DASH. The MyBMW app prompts regarding permission for "find nearby devices" only once, if you don't grant it, it still works absolutely OK
 
-- **Amazon Alexa**  Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IoT devices
+- **Amazon Alexa**  Togliere l'autorizzazione "Nearby devices" (Dispositivi nelle vicinanze) all'app Alexa ha risolto il problema per alcune persone, ma impedisce di associare dispositivi IoT Matter
 
 - **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
 
-- **BM2** Solar Battery Monitoring app, used in some camper van and camping solar setups: when the app was running, it prevented activation of a new Pod. Force Stopping the app while activating a new pod is a workaround to the issue. Running the app after that didn't appear to interfere with Dash functionality (On a Pixel 8 Pro running A16).
+- **BM2** App di monitoraggio della batteria solare, usata in alcuni camper e impianti solari da campeggio: quando l'app era in esecuzione, impediva l'attivazione di un nuovo pod. Una soluzione temporanea è forzare l'arresto dell'app durante l'attivazione di un nuovo pod. Running the app after that didn't appear to interfere with Dash functionality (On a Pixel 8 Pro running A16).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
@@ -63,7 +63,7 @@ Follow this procedure to revoke the "Nearby device" permission for all apps exce
 
 ```{admonition} Menus and settings
 :class: note
-The screenshots and instructions in this guide are from a Vanilla Android 16 install on Google Pixel 8 Pro. Other manufacturers and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.
+The screenshots and instructions in this guide are from a Vanilla Android 16 install on Google Pixel 8 Pro. Su altri produttori e dispositivi questi menu e queste impostazioni probabilmente non saranno uguali: adatta i passi al tuo dispositivo e, se ti blocchi, leggi la sezione [Dove trovare aiuto per il Dash](#omnipod-dash-where-to-get-help-for-dash) per sapere come chiedere supporto alla community.
 ```
 
 1. Open Android settings on your phone, scroll down and press on **Security and privacy (1)**.
@@ -103,7 +103,7 @@ If you are unsure which app is causing you an issue, disable them all (remember 
 
 ### How to re-enable "Nearby device" permissions for system apps and other apps:
 
-1. If required Reference the **"How to revoke 'Nearby device' permissions for other apps"** section on how to get to the app privacy settings, then once in the **Nearby device** configuration proceed to 2.
+1. Se serve, leggi la sezione **"Come togliere l'autorizzazione 'Nearby device' ad altre app"** per sapere come arrivare alle impostazioni della privacy delle app; poi, quando sei nella configurazione **Nearby device** (Dispositivi nelle vicinanze), vai al punto 2.
 
 2. Browse the list of apps and press on the app you wish to allow **Nearby devices** permissions for.
 
@@ -122,15 +122,15 @@ If an app is revoked you will need to scroll down until you see the list of revo
 
    ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png)
 
-5. Follow the guidance in **"How to revoke 'Nearby device' permissions for other apps"** in reverse to re-enable permissions for each app.
+5. Segui al contrario le istruzioni di **"Come togliere l'autorizzazione 'Nearby device' ad altre app"** per riattivare le autorizzazioni per ogni app.
 
 ---
 
 (bluetoothtroubleshooting-android-15-bluetooth-connection-problems)=
 
-## Android 15 Frequent Bluetooth connection problems
+## Android 15: frequenti problemi di connessione Bluetooth
 
-After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If you use an **Omnipod DASH** and your phone runs Android 15, turning on the **Bluetooth bonding** setting may help improve the stability of the Bluetooth connection. To turn it on:
+After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. Il problema sparisce per un po' quando riavvii il telefono. If you use an **Omnipod DASH** and your phone runs Android 15, turning on the **Bluetooth bonding** setting may help improve the stability of the Bluetooth connection. Per attivarla:
 
 ```{admonition} Android 16
 :class: warning
@@ -141,10 +141,10 @@ Only turn on **Bluetooth bonding** on Android 15, and only if you experience con
 
    ![The DASH pump screen](../images/v4/Pumps/dash_pump_screen.png)
 
-2. Open the **Advanced Settings** section and turn on **Bluetooth bonding**.
+2. Apri la sezione **Impostazioni avanzate** e attiva **Bonding Bluetooth**.
 
-   ![Bluetooth bonding in the Advanced Settings section](../images/v4/Pumps/dash_settings_advanced.png)
+   ![Bonding Bluetooth nella sezione Impostazioni avanzate](../images/v4/Pumps/dash_settings_advanced.png)
 
 3. If the phone shows a pairing request, accept it.
 
-4. Restart your phone.
+4. Riavvia il telefono.
