@@ -1,107 +1,107 @@
-# For Clinicians – A General Introduction and Guide to AAPS
+# 임상의를 위한 AAPS 일반 소개와 가이드
 
 ```{note}
-This page is a high-level introduction for clinicians. It was last reviewed in June 2026. AAPS develops continuously, so for the most accurate and up-to-date detail always refer to the [main AAPS documentation](../index.md).
+이 페이지는 임상의를 위한 개략적인 소개입니다. 마지막으로 검토한 시점은 2026년 6월입니다. AAPS는 계속 개발되고 있으므로, 가장 정확한 최신 내용은 항상 [AAPS 기본 문서](../index.md)를 참조하십시오.
 ```
 
-This page is intended for clinicians who have expressed interest in open source artificial pancreas technology such as AAPS, or for patients who want to share such information with their clinicians.
+이 페이지는 AAPS 같은 오픈 소스 인공췌장 기술에 관심을 보인 임상의, 또는 이런 정보를 담당 임상의와 나누고 싶은 환자를 위한 것입니다.
 
-This guide has some high-level information about DIY closed looping and specifically how AAPS works. For more details on all of these topics, please view the [comprehensive AAPS documentation online](../index.md). If you have questions, please ask your patient for more details, or always feel free to reach out to the community with question. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@aaps.app). [You can also find some of the latest studies & outcomes related data here](https://openaps.org/outcomes/).
+이 가이드는 DIY 폐쇄 루프 전반과 특히 AAPS의 작동 방식에 대한 개략적인 정보를 담고 있습니다. 이 모든 주제에 대한 자세한 내용은 [온라인 AAPS 종합 문서](../index.md)를 참조하십시오. 질문이 있으면 환자에게 자세한 내용을 물어보시거나, 언제든지 커뮤니티에 질문하셔도 됩니다. (소셜 미디어(예: [Twitter](https://twitter.com/kozakmilos)나 Facebook)를 사용하지 않는다면 developers@aaps.app으로 이메일을 보내셔도 됩니다.) [최신 연구와 치료 결과 관련 자료 일부는 여기에서도 볼 수 있습니다](https://openaps.org/outcomes/).
 
-## The steps for building a DIY Closed Loop:
+## DIY 폐쇄 루프를 만드는 단계:
 
-To start using AAPS, the following steps should be taken:
+AAPS를 사용하기 시작하려면 다음 단계를 거쳐야 합니다:
 
-* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](../Getting-Started/Phones.md), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
-* [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
+* [호환 펌프](../Getting-Started/CompatiblePumps.md), [호환 Android 기기](../Getting-Started/Phones.md), [호환 CGM 소스](../Getting-Started/CompatiblesCgms.md)를 준비합니다.
+* [AAPS 소스 코드를 내려받아 소프트웨어를 빌드합니다](../SettingUpAaps/BuildingAaps.md).
+* [소프트웨어가 당뇨병 기기와 통신하도록 구성하고, 설정과 안전 옵션을 지정합니다](../SettingUpAaps/SetupWizard.md).
 
-## How A DIY Closed Loop Works
+## DIY 폐쇄 루프의 작동 방식
 
-Without a closed loop system, a person with diabetes gathers data from their pump and CGM, decides what to do, and takes action.
+폐쇄 루프 시스템이 없으면 당뇨병 환자는 펌프와 CGM에서 데이터를 모으고, 무엇을 할지 결정하고, 직접 조치를 취합니다.
 
-With automated insulin delivery, the system does the same thing: it gathers data from the pump, CGM, and anywhere else information is logged (such as Nightscout), uses this information to do the maths and decide how much more or less insulin is needed (above or below the underlying basal rate), and uses temporary basal rates to make the necessary adjustments to keep or eventually bring BGs into target range.
+자동 인슐린 주입(AID)에서도 시스템이 같은 일을 합니다. 펌프, CGM, 그리고 정보가 기록되는 다른 곳(예: Nightscout)에서 데이터를 모으고, 이 정보로 계산을 해서 인슐린이 얼마나 더 또는 덜 필요한지(기본 기저 주입량보다 많게 또는 적게) 결정합니다. 그리고 임시 기저 주입량을 사용해 필요한 조정을 해서 혈당을 목표 범위 안에 유지하거나 결국 목표 범위로 되돌립니다.
 
-If the device running AAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basal rates running.
+AAPS를 실행하는 기기가 고장 나거나 펌프의 통신 범위를 벗어나면, 마지막 임시 기저가 끝난 후 펌프는 미리 프로그래밍된 기저 주입량으로 작동하는 일반 펌프로 돌아갑니다.
 
-## How data is gathered:
+## 데이터를 모으는 방법:
 
-With AAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AAPS can communicate with other devices and to the cloud via Wi-Fi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
+AAPS에서는 Android 기기가 계산을 하는 전용 앱을 실행하고, 이 기기가 지원되는 펌프와 블루투스로 통신합니다. AAPS는 Wi-Fi나 모바일 데이터를 통해 다른 기기 및 클라우드와 통신하여 추가 정보를 모으고, 무엇을 왜 하고 있는지 환자, 보호자, 가족에게 알릴 수 있습니다.
 
-The Android device needs to:
+Android 기기는 다음을 할 수 있어야 합니다:
 
-* communicate with the pump and read history - how much insulin has been delivered
-* communicate with the CGM (either directly, or via the cloud) - to see what BGs are/have been doing
+* 펌프와 통신하고 이력을 읽기 - 인슐린이 얼마나 주입되었는지
+* CGM과 통신하기(직접 또는 클라우드를 통해) - 혈당이 어떻게 변하고 있는지, 어떻게 변해 왔는지 보기
 
-When the device has collected this data, the algorithm runs and does the decision-making based on the settings (ISF, carb ratio, DIA, target, etc.). If required, it then issues commands to the pump to modify insulin delivery rate.
+기기가 이 데이터를 모으면 알고리즘이 실행되고, 설정(ISF, 탄수화물 비율, DIA, 목표 등)에 따라 결정을 내립니다. 필요하면 펌프에 명령을 보내 인슐린 주입 속도를 바꿉니다.
 
-It will also gather any information about boluses, carbohydrate consumption, and temporary target adjustments from the pump or from Nightscout to use it for the calculation of insulin delivery rates.
+또한 인슐린 주입 속도를 계산하는 데 쓰기 위해 볼러스, 탄수화물 섭취, 임시 목표 조정에 관한 정보를 펌프나 Nightscout에서 모읍니다.
 
-## How does it know what to do?
+## 무엇을 할지 어떻게 알까요?
 
-The open source software is designed to make it easy for the device to do the work people used to do (in manual mode) to calculate how insulin delivery should be adjusted. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of what BG levels are expected to do during the next hours in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. Next it sends any necessary adjustments to the pump. Then it reads the data back, and does it over and over again.
+이 오픈 소스 소프트웨어는 예전에 사람이 (수동 모드에서) 직접 하던 일, 즉 인슐린 주입을 어떻게 조정할지 계산하는 일을 기기가 쉽게 할 수 있도록 설계되었습니다. 먼저 모든 보조 기기와 클라우드에서 데이터를 모으고, 데이터를 준비해 계산을 실행합니다. 여러 시나리오에서 앞으로 몇 시간 동안 혈당이 어떻게 될지 예측하고, 혈당을 목표 범위 안에 유지하거나 목표 범위로 되돌리는 데 필요한 조정을 계산합니다. 다음으로 필요한 조정을 펌프에 보냅니다. 그런 다음 데이터를 다시 읽고, 이 과정을 계속 반복합니다.
 
-As the most important input parameter is the blood glucose level coming from the CGM, it is important to have high-quality CGM data.
+가장 중요한 입력 값은 CGM에서 오는 혈당 수치이므로, 품질이 좋은 CGM 데이터가 중요합니다.
 
-AAPS is designed to transparently track all input data it gathers, the resulting recommendation, and any action taken. It is therefore easy to answer the question at any time, “why is it doing X?” by reviewing the logs.
+AAPS는 모은 모든 입력 데이터, 그 결과로 나온 권고, 그리고 실행한 모든 조치를 투명하게 기록하도록 설계되었습니다. 따라서 로그를 검토하면 “왜 X를 하고 있는가?”라는 질문에 언제든지 쉽게 답할 수 있습니다.
 
-## Examples of AAPS algorithm decision making:
+## AAPS 알고리즘의 의사 결정 예:
 
-AAPS uses the same core algorithm and feature set as OpenAPS. The algorithm makes multiple predictions (based on settings, and the situation) representing different scenarios of what might happen in the future. In Nightscout, these are displayed as “purple lines”. AAPS uses different colors to separate these [prediction lines](#aaps-screens-prediction-lines). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
+AAPS는 OpenAPS와 같은 핵심 알고리즘과 기능을 사용합니다. 알고리즘은 (설정과 상황에 따라) 앞으로 일어날 수 있는 여러 시나리오를 나타내는 여러 가지 예측을 합니다. Nightscout에서는 이 예측이 “보라색 선”으로 표시됩니다. AAPS는 이 [예측선](#aaps-screens-prediction-lines)을 서로 다른 색으로 구분합니다. 로그에는 이 예측 중 어떤 예측과 어떤 시간 범위가 필요한 조치를 이끌고 있는지 설명되어 있습니다.
 
-### Here are examples of the purple prediction lines, and how they might differ:
+### 다음은 보라색 예측선의 예와 각 예측선이 어떻게 다를 수 있는지 보여 줍니다:
 
 ![Purple prediction line examples](../images/Prediction_lines.jpg)
 
 (clinicianguide-dosing-scenarios)=
 
-### Here are examples of different time frames that influence the needed adjustments to insulin delivery:
+### 다음은 인슐린 주입에 필요한 조정에 영향을 주는 여러 시간 범위의 예입니다:
 
-### Scenario 1 - Zero Temp for safety
+### 시나리오 1 - 안전을 위한 0 임시 기저
 
-In this example, BG is rising in the near-term time frame; however, it is predicted to be low over a longer time frame. In fact, it is predicted to go below target *and* the safety threshold. For safety to prevent the low, AAPS will issue a zero temp (temporary basal rate at 0%), until the eventualBG (in any time frame) is above threshold.
+이 예에서는 가까운 시간 범위에서 혈당이 오르고 있지만, 더 긴 시간 범위에서는 낮아질 것으로 예측됩니다. 실제로 목표 *그리고* 안전 임계값 아래로 내려갈 것으로 예측됩니다. 저혈당을 막기 위해 안전상 AAPS는 (어느 시간 범위에서든) 최종 혈당(eventualBG)이 임계값보다 높아질 때까지 0 임시 기저(0% 임시 기저 주입량)를 설정합니다.
 
-![Dosing scenario 1](../images/Dosing_scenario_1.jpg)
+![투여 시나리오 1](../images/Dosing_scenario_1.jpg)
 
-### Scenario 2 - Zero temp for safety
+### 시나리오 2 - 안전을 위한 0 임시 기저
 
-In this example, BG is predicted to go low in the near-term, but is predicted to eventually be above target. However, because the near-term low is actually below the safety threshold, AAPS will issue a zero temp, until there is no longer any point of the prediction line that is below threshold.
+이 예에서는 가까운 시간 안에 혈당이 낮아질 것으로 예측되지만, 결국에는 목표보다 높아질 것으로 예측됩니다. 하지만 단기 저혈당이 실제로 안전 임계값 아래이므로, AAPS는 예측선의 어느 지점도 임계값 아래에 있지 않을 때까지 0 임시 기저를 설정합니다.
 
-![Dosing scenario 2](../images/Dosing_scenario_2.jpg)
+![투여 시나리오 2](../images/Dosing_scenario_2.jpg)
 
-### Scenario 3 - More insulin needed
+### 시나리오 3 - 인슐린이 더 필요함
 
-In this example, a near-term prediction shows a dip below target. However, it is not predicted to be below the safety threshold. The eventual BG is above target. Therefore, AAPS will refrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). It will then assess adding insulin to bring the lowest level of the eventual predicted BG down to target, once it is safe to do so. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMBs (super micro boluses)).*
+이 예에서는 단기 예측에서 혈당이 목표 아래로 잠시 내려갑니다. 하지만 안전 임계값 아래로 내려가지는 않을 것으로 예측됩니다. 최종 혈당은 목표보다 높습니다. 따라서 AAPS는 단기 저혈당을 일으킬 수 있는 인슐린(예측을 임계값 아래로 내리는 인슐린)을 추가하지 않습니다. 그런 다음 안전해지면, 예측된 최종 혈당의 가장 낮은 값을 목표까지 내리기 위해 인슐린을 추가할지 평가합니다. *(설정과 필요한 인슐린의 양과 시점에 따라, 이 인슐린은 임시 기저나 SMB(super micro bolus, 슈퍼 마이크로 볼러스)로 주입될 수 있습니다).*
 
-![Dosing scenario 3](../images/Dosing_scenario_3.jpg)
+![투여 시나리오 3](../images/Dosing_scenario_3.jpg)
 
-### Scenario 4 - Low temping for safety
+### 시나리오 4 - 안전을 위한 낮은 임시 기저
 
-In this example, AAPS sees that BG is spiking well above target. However, due to the timing of insulin, there is already enough insulin in the body to bring BG into range eventually. In fact, BG is predicted to eventually be below target. Therefore, AAPS will not provide extra insulin so it will not contribute to a longer-timeframe low. Although BG is high/rising, a low temporary basal rate is likely here.
+이 예에서 AAPS는 혈당이 목표보다 훨씬 높게 급상승하는 것을 봅니다. 하지만 인슐린의 작용 시점 때문에, 결국 혈당을 범위 안으로 가져올 만큼의 인슐린이 이미 몸 안에 있습니다. 실제로 혈당은 결국 목표보다 낮아질 것으로 예측됩니다. 따라서 AAPS는 더 긴 시간 범위에서 저혈당을 일으키지 않도록 추가 인슐린을 주입하지 않습니다. 혈당이 높거나 오르고 있더라도, 이 경우에는 낮은 임시 기저 주입량이 설정될 가능성이 높습니다.
 
-![Dosing scenario 4](../images/Dosing_scenario_4.jpg)
+![투여 시나리오 4](../images/Dosing_scenario_4.jpg)
 
-## Optimizing settings and making changes
+## 설정 최적화와 변경
 
-As a clinician who may not have experience with AAPS or DIY closed loops, you may find it challenging to help your patient optimize their settings or make changes to improve their outcomes. We have multiple tools and [guides](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
+AAPS나 DIY 폐쇄 루프 경험이 없는 임상의라면, 환자가 설정을 최적화하거나 결과를 개선하기 위해 변경하는 것을 돕기가 어려울 수 있습니다. 커뮤니티에는 환자가 작고 검증된 조정을 통해 설정을 개선하도록 돕는 여러 도구와 [가이드](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html)가 있습니다.
 
-The most important thing for patients to do is make one change at a time, and observe the impact for 2-3 days before choosing to change or modify another setting (unless it’s obviously a bad change that makes things worse, in which case they should revert immediately to the previous setting). The human tendency is to turn all the knobs and change everything at once; but if someone does so, then they may end up with further sub-optimal settings for the future, and find it hard to get back to a known good state.
+환자에게 가장 중요한 것은 한 번에 하나만 바꾸고, 다른 설정을 바꾸기 전에 2-3일 동안 그 효과를 관찰하는 것입니다(단, 상황을 더 나쁘게 만드는 것이 분명한 잘못된 변경이라면 즉시 이전 설정으로 되돌려야 합니다). 사람은 모든 조절 장치를 한꺼번에 돌려 모든 것을 한 번에 바꾸려는 경향이 있습니다. 하지만 그렇게 하면 앞으로 더 좋지 않은 설정이 될 수 있고, 잘 작동하던 상태로 되돌아가기 어려워질 수 있습니다.
 
-One of the most powerful tools for making settings changes is an automated calculation tool for basal rates, ISF, and carb ratio. This is called “[Autotune](#autotune-how-autotune-calculates-adjustments)”. It is designed to allow the data to guide you or your patient in making incremental changes to settings. It is best practice in the community to run (or review) Autotune reports first, prior to attempting to make manual adjustments to settings. Autotune is built into AAPS as a plugin (**Configuration** → **General** → **Autotune**); see [Autotune](../AdvancedOptions/Autotune.md). It can be run on demand or automatically. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adjustment of these parameters would be the natural link to the clinician.
+설정을 바꾸는 데 가장 강력한 도구 중 하나는 기저 주입량, ISF, 탄수화물 비율을 자동으로 계산하는 도구입니다. 이 도구를 “[Autotune](#autotune-how-autotune-calculates-adjustments)”이라고 합니다. 이 도구는 데이터를 바탕으로 귀하나 환자가 설정을 조금씩 바꿀 수 있도록 안내합니다. 커뮤니티에서는 설정을 수동으로 조정하기 전에 먼저 Autotune 보고서를 실행(또는 검토)하는 것을 모범 사례로 여깁니다. Autotune은 AAPS에 플러그인으로 들어 있습니다(**구성** → **일반** → **Autotune**). [Autotune](../AdvancedOptions/Autotune.md)을 참조하십시오. 필요할 때 실행하거나 자동으로 실행할 수 있습니다. 이 매개변수들은 일반 펌프 인슐린 주입과 폐쇄 루프 인슐린 주입 모두의 전제 조건이므로, Autotune 결과를 논의하고 이 매개변수를 조정하는 것이 임상의와 자연스럽게 연결되는 부분이 될 것입니다.
 
-Additionally, human behavior (learned from manual diabetes mode) often influences outcomes, even with a DIY closed loop. For example, if BG is predicted to go low and AAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dL (3.9 mmol/L). However, in many cases, someone may choose to treat with many more carbs (e.g. sticking to the 15 rule), which will cause a resulting faster spike both from the extra glucose and because insulin had been reduced in the timeframe leading up to the low.
+또한 DIY 폐쇄 루프를 사용하더라도, (수동으로 당뇨병을 관리하던 시절에 익힌) 사람의 행동이 결과에 영향을 주는 경우가 많습니다. 예를 들어 혈당이 낮아질 것으로 예측되어 AAPS가 혈당이 내려가는 동안 인슐린을 줄였다면, 혈당을 70 mg/dL(3.9 mmol/L)에서 올리는 데 적은 양의 탄수화물(예: 탄수화물 3-4 g)만 필요할 수 있습니다. 하지만 많은 경우 사람들은 훨씬 더 많은 탄수화물로 처치합니다(예: 15 규칙을 그대로 따름). 그러면 추가된 포도당 때문에, 그리고 저혈당에 이르기까지의 시간 동안 인슐린이 이미 줄어들었기 때문에 혈당이 더 빠르게 급상승합니다.
 
 ## OpenAPS
 
-**This guide was adapted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AAPS, with the main difference being the hardware platform where each piece of software is run.
+**이 가이드는 [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html)(OpenAPS 임상의 가이드)를 바탕으로 만들었습니다.** OpenAPS는 작은 휴대용 컴퓨터(보통 "rig"라고 함)에서 실행되도록 개발된 시스템입니다. AAPS는 OpenAPS에서 구현된 많은 기법을 사용하고 논리와 알고리즘의 상당 부분을 공유합니다. 그래서 이 가이드는 원래 가이드와 매우 비슷합니다. OpenAPS에 관한 정보의 상당 부분은 AAPS에도 쉽게 적용할 수 있습니다. 주된 차이점은 각 소프트웨어가 실행되는 하드웨어 플랫폼입니다.
 
 ## Summary
 
-This is meant to be a high-level overview of how AAPS works. For more details, ask your patient, reach out to the community, or read the full AAPS documentation available online.
+이 문서는 AAPS 작동 방식의 개략적인 개요입니다. 자세한 내용은 환자에게 물어보시거나, 커뮤니티에 문의하시거나, 온라인에 있는 AAPS 전체 문서를 읽어 보십시오.
 
-Additional recommended reading:
+추가로 읽어 볼 만한 자료:
 
-* The [full AAPS documentation](../index.md)
-* The [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), which explains how OpenAPS is designed for safety: https://openaps.org/reference-design/
-* The [full OpenAPS documentation](https://openaps.readthedocs.io/en/latest/index.html) 
-  * See [how AAPS turns predictions into a dosing decision](#aaps-screens-how-predictions-become-a-dosing-decision) in this documentation, or [OpenAPS's determine-basal documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic) for the underlying algorithm in full technical detail
+* [AAPS 전체 문서](../index.md)
+* OpenAPS가 안전을 위해 어떻게 설계되었는지 설명하는 [OpenAPS Reference Design](https://OpenAPS.org/reference-design/)(OpenAPS 참조 설계): https://openaps.org/reference-design/
+* [OpenAPS 전체 문서](https://openaps.readthedocs.io/en/latest/index.html) 
+  * 알고리즘의 전체 기술적 세부 사항은 이 문서의 [AAPS가 예측을 투여 결정으로 바꾸는 방법](#aaps-screens-how-predictions-become-a-dosing-decision) 또는 [OpenAPS의 determine-basal 문서](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)를 참조하십시오
