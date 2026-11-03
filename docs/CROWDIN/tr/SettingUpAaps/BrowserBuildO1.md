@@ -1,31 +1,31 @@
 (aaps-ci-option1)=
 
-# Option 1 – Generate a new keystore
+# Seçenek 1 – Yeni bir anahtar deposu oluşturun
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
+Bu, [Tarayıcı ile oluşturma](BrowserBuild.md) sürecindeki [Adım 2 – İmzalama anahtar deponuzu oluşturun](BrowserBuildKeystore.md) adımının bir parçasıdır. [Seçenek 1 ile Seçenek 2 arasındaki kararı](#aaps-ci-preparation) okuduğunuzdan emin olun.
 ```
 
-Option 1 generates a brand-new signing keystore for you. It is suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
+Seçenek 1, sizin için yepyeni bir imzalama anahtar deposu oluşturur. İlk kez kullananlar, JKS dosyası olmayanlar veya parolayı ya da takma adı (alias) unutanlar için uygundur.
 
-## Choose your device
+## Cihazınızı seçin
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+**Android telefondan** mı oluşturuyorsunuz? Bunun yerine [AAPS Builder](BrowserBuildAapsBuilder.md) kullanın: hazırlık dosyası gerektirmez.
 ```
 
-Follow the page that matches the device you are building from:
+Oluşturmayı yaptığınız cihaza uyan sayfayı izleyin:
 
-- **[Computer](BrowserBuildO1Computer.md)** – Windows, Mac or Linux.
+- **[Bilgisayar](BrowserBuildO1Computer.md)** – Windows, Mac veya Linux.
 - **[iPhone / iPad](BrowserBuildO1iPhone.md)**.
 
 ```{tip}
-You can switch device at any time – just open the matching page.
+Cihazı istediğiniz zaman değiştirebilirsiniz: yalnızca uygun sayfayı açın.
 ```
 
 ```{toctree}
 :hidden:
 
-Computer <BrowserBuildO1Computer.md>
+Bilgisayar <BrowserBuildO1Computer.md>
 iPhone / iPad <BrowserBuildO1iPhone.md>
 ```
