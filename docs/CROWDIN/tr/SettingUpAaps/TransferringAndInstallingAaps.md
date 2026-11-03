@@ -1,274 +1,274 @@
-# Transferring and Installing AAPS on your smartphone
+# AAPS'i akıllı telefonunuza aktarma ve yükleme
 
-In the previous section, [building **AAPS**](../SettingUpAaps/BuildingAaps.md), you built the **AAPS** app (which is an .apk file) on a computer.
+Önceki bölümde, [**AAPS**'i oluşturma](../SettingUpAaps/BuildingAaps.md) bölümünde, **AAPS** uygulamasını (bir .apk dosyası) bilgisayarda oluşturdunuz.
 
-The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip or another CGM receiver app) to your Android smartphone, and then **install** the app(s). Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](../SettingUpAaps/SetupWizard.md).
+Sonraki adımlar, **AAPS** APK dosyasını (ve ihtiyacınız olabilecek diğer uygulamaları, örneğin BYODA, xDrip veya başka bir CGM alıcı uygulamasını) Android akıllı telefonunuza **aktarmak** ve ardından uygulama(lar)ı **yüklemektir**. **AAPS**'i akıllı telefona yükledikten sonra [**AAPS döngüsünü yapılandırma**](../SettingUpAaps/SetupWizard.md) adımına geçebilirsiniz.
 
-This page also explains [Android developer verification](#android-developer-verification), a change Google is rolling out from September 2026 that affects installing self-built apps, and the [free installation methods](#android-developer-verification-free-methods) that keep working after the change.
+Bu sayfa ayrıca, Google'ın Eylül 2026'dan itibaren kullanıma sunduğu ve kendi oluşturduğunuz uygulamaların yüklenmesini etkileyen bir değişiklik olan [Android geliştirici doğrulamasını](#android-developer-verification) ve bu değişiklikten sonra da çalışmaya devam eden [ücretsiz yükleme yöntemlerini](#android-developer-verification-free-methods) açıklar.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Installing AAPS by tapping the APK file
+## AAPS'i APK dosyasına dokunarak yükleme
 
-Today, you install **AAPS** by transferring the APK file to your phone and opening ("tapping") it. There are several ways to transfer the **AAPS** APK file from your computer to the smartphone. Here we explain two different ways:
+Bugün **AAPS**'i, APK dosyasını telefonunuza aktarıp açarak ("dokunarak") yüklersiniz. **AAPS** APK dosyasını bilgisayarınızdan akıllı telefona aktarmanın birkaç yolu vardır. Burada iki farklı yolu açıklıyoruz:
 
-* Option 1 -  Use your Google drive (Gdrive)
-* Option 2 -  Use a USB cable
+* Seçenek 1 - Google Drive'ınızı (Gdrive) kullanın
+* Seçenek 2 - USB kablosu kullanın
 
-Please note that transfer by email might cause difficulties, and is discouraged.
+E-posta ile aktarımın sorun çıkarabileceğini ve önerilmediğini lütfen unutmayın.
 
 ```{admonition} Android developer verification
 :class: warning
-Google is rolling out [Android developer verification](#android-developer-verification) from September 2026 (starting in Brazil, Indonesia, Singapore and Thailand; worldwide in 2027). Where it is enforced, installing an APK by tapping the file — as described in both options below — is blocked. In that case, use one of the [free installation methods](#android-developer-verification-free-methods) further down this page.
+Google, Eylül 2026'dan itibaren [Android geliştirici doğrulamasını](#android-developer-verification) kullanıma sunuyor (önce Brezilya, Endonezya, Singapur ve Tayland'da; 2027'de tüm dünyada). Bu kuralın uygulandığı yerlerde, APK'yı dosyaya dokunarak yükleme (aşağıdaki iki seçenekte anlatıldığı gibi) engellenir. Bu durumda, bu sayfanın aşağısındaki [ücretsiz yükleme yöntemlerinden](#android-developer-verification-free-methods) birini kullanın.
 ```
 
-### Option 1. Use Google drive to transfer files
+### Seçenek 1. Dosyaları aktarmak için Google Drive kullanın
 
-Open [Google.com](https://www.google.com/) in your web browser and login to your Google Account.
+Web tarayıcınızda [Google.com](https://www.google.com/) adresini açın ve Google hesabınızla oturum açın.
 
-On the right upper side select the Drive app in the Google menu.
+Sağ üstte Google menüsünden Drive uygulamasını seçin.
 
-![Start Drive App](../images/GoogleDriveInWebbrowser.png)
+![Drive uygulamasını başlatın](../images/GoogleDriveInWebbrowser.png)
 
-Click **New** at the top left (or right-click an empty area below your files and folders) and select **File upload**.
+Sol üstteki **New** (Yeni) düğmesine tıklayın (veya dosya ve klasörlerinizin altındaki boş bir alana sağ tıklayın) ve **File upload** (Dosya yükleme) seçeneğini seçin.
 
-![Upload apk file with Google Drive App](../images/GoogleDriveUploadFile.png)
+![APK dosyasını Google Drive uygulamasıyla yükleme](../images/GoogleDriveUploadFile.png)
 
-The apk file should now be uploaded on Google Drive.
+Apk dosyası artık Google Drive'a yüklenmiş olmalıdır.
 
-#### Use the Google Drive app to execute the apk file for installation
+#### Apk dosyasını yüklemek üzere çalıştırmak için Google Drive uygulamasını kullanın
 
-Switch to your mobile and start the Google Drive app. It is a preinstalled app and can be found where the other Google apps are located or with search for the name of the app.
+Telefonunuza geçin ve Google Drive uygulamasını açın. Önceden yüklü bir uygulamadır; diğer Google uygulamalarının bulunduğu yerde veya uygulamanın adını aratarak bulunabilir.
 
-![start the Google Drive app](../images/GoogleDriveMobileAPPLaunch.png)
+![Google Drive uygulamasını başlatın](../images/GoogleDriveMobileAPPLaunch.png)
 
-Launch the apk installation by tapping the filename in the Google Drive App on the mobile.
+Telefondaki Google Drive uygulamasında dosya adına dokunarak APK yüklemesini başlatın.
 
-![launch the apk installation](../images/GoogleDriveMobileUploadedAPK.png)
+![APK yüklemesini başlatın](../images/GoogleDriveMobileUploadedAPK.png)
 
-In case you get a security notice that you are not allowed to install apps from Google Drive at the moment, tap "Settings" and allow it for that short moment, then disallow it afterwards, as it is a security risk to leave it enabled all the time.
+Şu anda Google Drive'dan uygulama yüklemenize izin verilmediğini söyleyen bir güvenlik uyarısı alırsanız, "Settings" (Ayarlar) seçeneğine dokunun ve bu kısa süre için izin verin. Sonra izni tekrar kapatın, çünkü bunu sürekli açık bırakmak bir güvenlik riskidir.
 
-![Security Notice Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Google Drive güvenlik uyarısı](../images/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Security Notice Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Google Drive güvenlik uyarısı](../images/GoogleDriveMobileSettingSecuritySetting.png)
 
-After the installation finishes, you are done with this step.
+Yükleme bittiğinde bu adım tamamlanmış olur.
 
-You should see the **AAPS** icon and be able to open the app.
+**AAPS** simgesini görmeli ve uygulamayı açabilmelisiniz.
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
-Did you remember to disallow the installation from Google Drive?
+**ÖNEMLİ GÜVENLİK UYARISI**
+Google Drive'dan yüklemeye verdiğiniz izni geri almayı unutmadınız, değil mi?
 ```
 
-Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Lütfen [AAPS döngüsünü yapılandırma](../SettingUpAaps/SetupWizard.md) ile devam edin.
 
-### Option 2. Use a USB cable to transfer files
+### Seçenek 2. Dosyaları aktarmak için USB kablosu kullanın
 
-The second way to transfer the AAPS apk file is with a [USB cable](https://support.google.com/android/answer/9064445?hl=en).
+AAPS APK dosyasını aktarmanın ikinci yolu bir [USB kablosu](https://support.google.com/android/answer/9064445?hl=en) kullanmaktır.
 
-Transfer the file from its location on your computer to the "downloads" folder on the phone.
+Dosyayı bilgisayarınızdaki konumundan telefondaki "İndirilenler" (downloads) klasörüne aktarın.
 
-On your phone, you will have to allow installation from unknown sources. Explanations of how to do this can be found on the internet (_e.g._ [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+Telefonunuzda bilinmeyen kaynaklardan yüklemeye izin vermeniz gerekir. Bunun nasıl yapılacağına dair açıklamaları internette bulabilirsiniz (_örneğin_ [burada](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) veya [burada](https://www.androidcentral.com/unknown-sources)).
 
-Once you have transferred the file by dragging it across, open the "Downloads" folder on the phone and press the AAPS apk file:
+Dosyayı sürükleyerek aktardıktan sonra telefonda "Downloads" (İndirilenler) klasörünü açın ve AAPS APK dosyasına dokunun:
 
-![The apk file in the Downloads folder](../images/install/install_01_downloads_apk.png)
+![Downloads (İndirilenler) klasöründeki APK dosyası](../images/install/install_01_downloads_apk.png)
 
-The first time, Android tells you that the phone is not allowed to install unknown apps from this source. Press "**Settings**":
+İlk seferde Android, telefonun bu kaynaktan bilinmeyen uygulamaları yüklemesine izin verilmediğini söyler. "**Settings**" (Ayarlar) seçeneğine dokunun:
 
-![Security notice for unknown apps](../images/install/install_02_unknown_apps_notice.png)
+![Bilinmeyen uygulamalar için güvenlik uyarısı](../images/install/install_02_unknown_apps_notice.png)
 
-Enable "**Allow from this source**", then go back:
+"**Allow from this source**" (Bu kaynaktan izin ver) seçeneğini açın, sonra geri gidin:
 
-![Allow from this source enabled](../images/install/install_04_unknown_apps_allowed.png)
+![Allow from this source (Bu kaynaktan izin ver) açık](../images/install/install_04_unknown_apps_allowed.png)
 
-Press the apk file again and select "**Install**":
+APK dosyasına tekrar dokunun ve "**Install**" (Yükle) seçeneğini seçin:
 
-![Install prompt](../images/install/install_05_install_prompt.png)
+![Yükleme sorusu](../images/install/install_05_install_prompt.png)
 
-When the installation is finished, press "**Open**" to start **AAPS**, or "**Done**" to open it later:
+Yükleme bittiğinde **AAPS**'i başlatmak için "**Open**" (Aç) seçeneğine, daha sonra açmak için "**Done**" (Bitti) seçeneğine dokunun:
 
-![App installed](../images/install/install_07_app_installed.png)
+![Uygulama yüklendi](../images/install/install_07_app_installed.png)
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
-Remember to disable "Allow from this source" again after the installation, as it is a security risk to leave it enabled all the time.
+**ÖNEMLİ GÜVENLİK UYARISI**
+Yüklemeden sonra "Allow from this source" (Bu kaynaktan izin ver) seçeneğini tekrar kapatmayı unutmayın, çünkü bunu sürekli açık bırakmak bir güvenlik riskidir.
 ```
 
-Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Lütfen [AAPS döngüsünü yapılandırma](../SettingUpAaps/SetupWizard.md) ile devam edin.
 
 (transferring-installing-play-protect-warning)=
-## Google Play Protect warning
+## Google Play Protect uyarısı
 
-When you install **AAPS**, Google Play Protect may warn you that the app is unsafe, was built for an older version of Android and doesn't include the latest privacy protections.
+**AAPS**'i yüklerken Google Play Protect, uygulamanın güvenli olmadığı, Android'in eski bir sürümü için oluşturulduğu ve en son gizlilik korumalarını içermediği konusunda sizi uyarabilir.
 
-![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+![Google Play Protect uyarısı](../images/troubleshooting/InstallGPP.png)
 
-This is expected for an app you built yourself. Tap **More details**, then **Install anyway**.
+Kendi oluşturduğunuz bir uygulama için bu beklenen bir durumdur. **More details** (Diğer ayrıntılar) seçeneğine, ardından **Install anyway** (Yine de yükle) seçeneğine dokunun.
 
-If the installation is **blocked** with a message about an unverified developer (not just a warning), see [Android developer verification](#android-developer-verification) below.
+Yükleme, doğrulanmamış bir geliştirici hakkında bir mesajla **engellenirse** (yalnızca bir uyarı değilse), aşağıdaki [Android geliştirici doğrulaması](#android-developer-verification) bölümüne bakın.
 
 (android-developer-verification)=
 
-## Android developer verification
+## Android geliştirici doğrulaması
 
-Google is introducing **Android developer verification**: on most Android phones, apps will only install if they were registered with Google by a verified developer. This also applies to apps installed from an APK file ("sideloading") — which is how you install the **AAPS** app you built yourself.
+Google, **Android geliştirici doğrulamasını** kullanıma sunuyor: çoğu Android telefonda uygulamalar yalnızca doğrulanmış bir geliştirici tarafından Google'a kaydedilmişlerse yüklenecek. Bu, bir APK dosyasından yüklenen uygulamalar ("sideloading", yandan yükleme) için de geçerlidir. Kendi oluşturduğunuz **AAPS** uygulamasını da bu şekilde yüklersiniz.
 
-### What is changing
+### Neler değişiyor
 
-When you install **AAPS** on a phone with Google services (a "certified" Android device — virtually every phone sold with the Play Store), Android will check whether the app comes from a developer registered with Google. If not, the normal installation by tapping the APK file is blocked.
+**AAPS**'i Google hizmetleri olan bir telefona ("sertifikalı" bir Android cihaz; Play Store ile satılan hemen hemen her telefon) yüklediğinizde, Android uygulamanın Google'a kayıtlı bir geliştiriciden gelip gelmediğini kontrol edecek. Gelmiyorsa, APK dosyasına dokunarak yapılan normal yükleme engellenir.
 
-**The check happens when an app is installed or updated.** It does not remove apps that are already installed and running.
+**Kontrol, bir uygulama yüklendiğinde veya güncellendiğinde yapılır.** Zaten yüklü ve çalışan uygulamaları kaldırmaz.
 
-Google is rolling this out gradually:
+Google bunu adım adım kullanıma sunuyor:
 
-| When               | What happens                                                                                                                              |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| August 2026        | Free "limited distribution" developer accounts are open worldwide, and the "advanced flow" starts rolling out to phones                   |
-| September 30, 2026 | Verification is enforced in **Brazil, Indonesia, Singapore and Thailand**, for apps installed from Google Play and a few other app stores |
-| 2027               | Enforcement expands to the **rest of the world** and to **all installations**, including APK files                                        |
+| Ne zaman      | Ne olur                                                                                                                                                  |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ağustos 2026  | Ücretsiz "limited distribution" (sınırlı dağıtım) geliştirici hesapları tüm dünyada açılır ve "advanced flow" (gelişmiş akış) telefonlara gelmeye başlar |
+| 30 Eylül 2026 | Doğrulama, Google Play'den ve birkaç başka uygulama mağazasından yüklenen uygulamalar için **Brezilya, Endonezya, Singapur ve Tayland**'da zorunlu olur  |
+| 2027          | Zorunluluk **dünyanın geri kalanına** ve APK dosyaları dahil **tüm yüklemelere** genişler                                                                |
 
-Details are published by Google on the [Android developer verification](https://developer.android.com/developer-verification) pages, including a [FAQ](https://developer.android.com/developer-verification/guides/faq). Google may still adjust dates and details; this page will be updated as the rollout progresses.
+Ayrıntılar, Google tarafından [Android developer verification](https://developer.android.com/developer-verification) (Android geliştirici doğrulaması) sayfalarında, bir [SSS](https://developer.android.com/developer-verification/guides/faq) ile birlikte yayınlanır. Google tarihleri ve ayrıntıları hâlâ değiştirebilir. Kullanıma sunma ilerledikçe bu sayfa güncellenecektir.
 
-### Does this affect me?
+### Bu beni etkiler mi?
 
-- **Building AAPS is not affected at all.** The [browser build](#browser-build), the [Android Studio build](ComputerBuild.md) and the [CLI build](CLIBuild.md) work exactly as before, and your keystore does not change.
-- **Your current AAPS keeps running.** Verification is only checked when installing or updating an app.
-- **If you live in Brazil, Indonesia, Singapore or Thailand:** from September 30, 2026, verification is enforced for apps installed from Google Play and a few other app stores. Google states that installing an APK file directly is not covered by this first step, so **AAPS** should still install as usual. Nevertheless, prepare one of the [free installation methods](#android-developer-verification-free-methods) below now, so that you are not caught out if this changes.
-- **If you live anywhere else:** nothing changes for you before 2027, and doing nothing for now is a legitimate choice. But set up one of the [free installation methods](#android-developer-verification-free-methods) below while nothing is broken: discovering the block on the day an update is refused, with the [advanced flow's](#android-developer-verification-advanced-flow) 24-hour wait ahead of you, is the wrong moment.
-- **Old phones:** verification applies to phones running Android 7 or higher, which means every phone able to run **AAPS**.
+- **AAPS'i oluşturma hiç etkilenmez.** [Tarayıcı ile oluşturma](#browser-build), [Android Studio ile oluşturma](ComputerBuild.md) ve [komut satırı ile oluşturma](CLIBuild.md) tam olarak eskisi gibi çalışır ve anahtar deponuz (keystore) değişmez.
+- **Mevcut AAPS'iniz çalışmaya devam eder.** Doğrulama yalnızca bir uygulama yüklenirken veya güncellenirken kontrol edilir.
+- **Brezilya, Endonezya, Singapur veya Tayland'da yaşıyorsanız:** 30 Eylül 2026'dan itibaren doğrulama, Google Play'den ve birkaç başka uygulama mağazasından yüklenen uygulamalar için zorunludur. Google, bir APK dosyasını doğrudan yüklemenin bu ilk adımın kapsamında olmadığını belirtiyor, bu yüzden **AAPS** hâlâ her zamanki gibi yüklenmelidir. Yine de, bu durum değişirse hazırlıksız yakalanmamak için aşağıdaki [ücretsiz yükleme yöntemlerinden](#android-developer-verification-free-methods) birini şimdi hazırlayın.
+- **Başka bir yerde yaşıyorsanız:** 2027'den önce sizin için hiçbir şey değişmez ve şimdilik hiçbir şey yapmamak geçerli bir seçimdir. Ama her şey çalışırken aşağıdaki [ücretsiz yükleme yöntemlerinden](#android-developer-verification-free-methods) birini kurun: engeli bir güncellemenin reddedildiği gün fark etmek, önünüzde [gelişmiş akışın](#android-developer-verification-advanced-flow) 24 saatlik beklemesi varken, yanlış bir zamandır.
+- **Eski telefonlar:** doğrulama Android 7 veya üstü çalıştıran telefonlar için geçerlidir. Bu, **AAPS** çalıştırabilen her telefon demektir.
 
 (android-developer-verification-free-methods)=
 
-## Free ways to install AAPS
+## AAPS'i yüklemenin ücretsiz yolları
 
-You do **not** need to pay Google anything to keep using **AAPS**. There are several free methods; pick the one that matches your situation.
+**AAPS**'i kullanmaya devam etmek için Google'a hiçbir şey ödemeniz **gerekmez**. Birkaç ücretsiz yöntem vardır. Durumunuza uyanı seçin.
 
 ```{admonition} Which method should I use?
 :class: tip
-- You have a **computer** (whichever way you built **AAPS**): use [ADB](#android-developer-verification-adb) or, if you prefer to avoid the command line, the [web installer](#android-developer-verification-web). Both are exempt from verification, have no limits, and need no Google account.
-- You have **no computer at all**: use the [advanced flow](#android-developer-verification-advanced-flow) on your phone.
-- You prefer to register with Google so the normal "tap the APK" installation keeps working: a [free limited distribution account](#android-developer-verification-limited-account) exists, but it is untested with **AAPS**.
+- Bir **bilgisayarınız** var (**AAPS**'i hangi yolla oluşturmuş olursanız olun): [ADB](#android-developer-verification-adb) kullanın veya komut satırından kaçınmak istiyorsanız [web yükleyicisini](#android-developer-verification-web) kullanın. İkisi de doğrulamadan muaftır, sınırı yoktur ve Google hesabı gerektirmez.
+- **Hiç bilgisayarınız yoksa**: telefonunuzda [gelişmiş akışı](#android-developer-verification-advanced-flow) kullanın.
+- Normal "APK'ya dokunma" yüklemesinin çalışmaya devam etmesi için Google'a kayıt olmayı tercih ediyorsanız: [ücretsiz bir sınırlı dağıtım hesabı](#android-developer-verification-limited-account) vardır, ancak **AAPS** ile test edilmemiştir.
 ```
 
 (android-developer-verification-adb)=
 
-### Option 1: Install with ADB (computer needed)
+### Seçenek 1: ADB ile yükleme (bilgisayar gerekir)
 
-ADB (Android Debug Bridge) is Google's official tool for installing apps from a computer onto a phone with a USB cable. Google has confirmed that **apps installed with ADB do not require verification** — there is no waiting period, no device limit and no registration.
+ADB (Android Debug Bridge), uygulamaları bir bilgisayardan USB kablosuyla telefona yüklemek için Google'ın resmi aracıdır. Google, **ADB ile yüklenen uygulamaların doğrulama gerektirmediğini** doğruladı: bekleme süresi, cihaz sınırı ve kayıt yoktur.
 
-One-time preparation:
+Bir kerelik hazırlık:
 
-1. On your phone, enable the hidden developer options: go to **Settings** > **About phone** (on some phones **Software information**) and tap **Build number** seven times, until the phone confirms you are a developer.
-1. Go back to the main **Settings**, open the new **Developer options** entry and enable **USB debugging**.
-1. On your computer, make sure ADB is available:
-   - If you use **Android Studio**, ADB is already installed with it.
-   - Otherwise, download Google's free [SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools) and unzip the folder. No installation is needed; ADB is the `adb` program inside that folder.
+1. Telefonunuzda gizli geliştirici seçeneklerini açın: **Settings** (Ayarlar) > **About phone** (Telefon hakkında) (bazı telefonlarda **Software information**, Yazılım bilgileri) bölümüne gidin ve telefon geliştirici olduğunuzu onaylayana kadar **Build number** (Yapım numarası) satırına yedi kez dokunun.
+1. Ana **Settings** (Ayarlar) ekranına geri dönün, yeni **Developer options** (Geliştirici seçenekleri) girişini açın ve **USB debugging** (USB hata ayıklama) seçeneğini açın.
+1. Bilgisayarınızda ADB'nin kullanılabilir olduğundan emin olun:
+   - **Android Studio** kullanıyorsanız ADB onunla birlikte zaten yüklüdür.
+   - Aksi halde Google'ın ücretsiz [SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools) paketini indirin ve klasörü zip'ten çıkarın. Yükleme gerekmez. ADB, o klasördeki `adb` programıdır.
 
-Installing (and later updating) **AAPS**:
+**AAPS**'i yükleme (ve daha sonra güncelleme):
 
-1. Connect the phone to the computer with a USB cable. There is no need to transfer the APK file to the phone first: ADB sends it straight from the computer.
-1. On the phone, accept the **Allow USB debugging?** prompt (the first time only).
-1. On the computer, open a terminal (command prompt) in the folder containing ADB and the **AAPS** APK file, and run:
+1. Telefonu bilgisayara bir USB kablosuyla bağlayın. APK dosyasını önce telefona aktarmanız gerekmez: ADB onu doğrudan bilgisayardan gönderir.
+1. Telefonda **Allow USB debugging?** (USB hata ayıklamaya izin verilsin mi?) sorusunu kabul edin (yalnızca ilk seferde).
+1. Bilgisayarda, ADB'yi ve **AAPS** APK dosyasını içeren klasörde bir terminal (komut istemi) açın ve şunu çalıştırın:
 
    ```
    adb install -r app-full-release.apk
    ```
 
-   Replace `app-full-release.apk` with the actual name of your APK file. The `-r` option updates an already installed **AAPS** while keeping all its data and settings.
+   `app-full-release.apk` yerine APK dosyanızın gerçek adını yazın. `-r` seçeneği, zaten yüklü olan **AAPS**'i tüm verilerini ve ayarlarını koruyarak günceller.
 
-1. Wait for `Success` to be displayed. **AAPS** is now installed on your phone.
+1. `Success` yazısı görünene kadar bekleyin. **AAPS** artık telefonunuza yüklendi.
 
-The same command is used for every future update. The [Wear OS pages](../WearOS/WearOsSmartwatch.md) already use ADB in the same way to install the watch app.
+Gelecekteki her güncelleme için aynı komut kullanılır. [Wear OS sayfaları](../WearOS/WearOsSmartwatch.md), saat uygulamasını yüklemek için ADB'yi zaten aynı şekilde kullanır.
 
-If you would rather not use a cable: on Android 11 and later, **wireless debugging** (also under **Developer options**) can do the same over Wi-Fi, after a one-time pairing with a code shown on the phone.
+Kablo kullanmak istemiyorsanız: Android 11 ve sonrasında **wireless debugging** (Kablosuz hata ayıklama, yine **Developer options** altında) telefonda gösterilen bir kodla bir kerelik eşleştirmeden sonra aynı işi Wi-Fi üzerinden yapabilir.
 
 (android-developer-verification-web)=
 
-### Option 2: Install from a web page (computer, no command line)
+### Seçenek 2: Bir web sayfasından yükleme (bilgisayar, komut satırı yok)
 
-If the command line is not for you, a web page can do exactly what ADB does, directly from your browser. Because it talks to the phone through the same mechanism as ADB, it carries the **same exemption from verification** — but there is nothing to download, no folder to unzip and no command to type.
+Komut satırı size göre değilse, bir web sayfası ADB'nin yaptığının aynısını doğrudan tarayıcınızdan yapabilir. Telefonla ADB ile aynı yöntemle konuştuğu için **doğrulamadan aynı muafiyete** sahiptir. Ancak indirilecek bir şey, zip'ten çıkarılacak bir klasör ve yazılacak bir komut yoktur.
 
-This is the easiest route if you used the [browser build](#browser-build) and have never opened a command line.
+[Tarayıcı ile oluşturma](#browser-build) yöntemini kullandıysanız ve hiç komut satırı açmadıysanız en kolay yol budur.
 
-1. Enable **USB debugging** on the phone (steps 1 and 2 of the [ADB method](#android-developer-verification-adb) above — one-time setup).
-1. Open the **[AAPS web installer](#web-installer)** in your browser.
-1. Connect the phone with a USB cable and follow the instructions on the page: connect, choose your APK file, and install.
+1. Telefonda **USB debugging** (USB hata ayıklama) seçeneğini açın (yukarıdaki [ADB yönteminin](#android-developer-verification-adb) 1. ve 2. adımları; bir kerelik kurulum).
+1. Tarayıcınızda **[AAPS web yükleyicisini](#web-installer)** açın.
+1. Telefonu bir USB kablosuyla bağlayın ve sayfadaki talimatları izleyin: bağlanın, APK dosyanızı seçin ve yükleyin.
 
-Three things to know:
+Bilmeniz gereken üç şey:
 
-- It only works in **Chrome, Edge or Opera**. Firefox and Safari cannot talk to USB devices.
-- Only one program can use the phone's ADB connection at a time, so **close Android Studio** (or anything else that uses ADB) before connecting.
-- A web page connected this way gets full control of your phone. **Use only the address above**, from the **AAPS** documentation — never an installer page found through a search engine. The **AAPS** web installer runs entirely in your browser: your APK file is not uploaded anywhere.
+- Yalnızca **Chrome, Edge veya Opera** ile çalışır. Firefox ve Safari USB cihazlarla iletişim kuramaz.
+- Telefonun ADB bağlantısını aynı anda yalnızca bir program kullanabilir, bu yüzden bağlanmadan önce **Android Studio'yu kapatın** (veya ADB kullanan başka her şeyi).
+- Bu şekilde bağlanan bir web sayfası telefonunuzun tam kontrolünü alır. **Yalnızca yukarıdaki adresi kullanın**, yani **AAPS** dokümantasyonundaki adresi. Asla bir arama motoruyla bulunan bir yükleyici sayfasını kullanmayın. **AAPS** web yükleyicisi tamamen tarayıcınızda çalışır: APK dosyanız hiçbir yere yüklenmez.
 
 ```{admonition} No computer? A second phone works too
 :class: tip
-The web installer also works from **Chrome on another Android phone** with a USB-C to USB-C cable — so a parent can install **AAPS** onto a child's phone with no computer in the house.
+Web yükleyicisi, USB-C - USB-C kablosuyla **başka bir Android telefondaki Chrome** ile de çalışır. Böylece bir ebeveyn, evde hiç bilgisayar olmadan **AAPS**'i çocuğunun telefonuna yükleyebilir.
 ```
 
 (android-developer-verification-advanced-flow)=
 
-### Option 3: The "advanced flow" on your phone (no computer needed)
+### Seçenek 3: Telefonunuzda "gelişmiş akış" (bilgisayar gerekmez)
 
-Google provides an escape hatch for experienced users who understand the risks of installing unverified apps, called the **advanced flow**. Google started rolling it out to phones in August 2026, ahead of enforcement, so you can set it up now. It is a one-time setup on the phone itself, which **takes 24 hours** to complete:
+Google, doğrulanmamış uygulamaları yüklemenin risklerini anlayan deneyimli kullanıcılar için **advanced flow** (gelişmiş akış) adlı bir çıkış yolu sunar. Google bunu, zorunluluk başlamadan önce, Ağustos 2026'da telefonlara sunmaya başladı. Bu yüzden şimdi kurabilirsiniz. Telefonun kendisinde yapılan bir kerelik bir kurulumdur ve tamamlanması **24 saat sürer**:
 
-1. Enable the hidden developer options (see step 1 of the ADB method above), then open **Settings** > **Developer options** > **Apps from unverified developers**.
-1. Turn on **Allow apps from unverified developers**. The phone asks for your screen lock to confirm it is you.
-1. The phone asks whether someone is asking you to turn on this setting, and explains that banks, government agencies or police would never ask you to do so. Read the warning and confirm that nobody is pressuring or guiding you (this is a protection against scammers).
-1. **Restart your phone.** This starts a one-time **24-hour waiting period**.
-1. After 24 hours, go back to **Settings** > **Developer options** > **Apps from unverified developers** to finish the setup.
-1. Choose whether to allow unverified apps for **7 days** or **indefinitely**. For **AAPS**, choose **indefinitely**, otherwise your next update will be blocked once the 7 days have passed.
+1. Gizli geliştirici seçeneklerini açın (yukarıdaki ADB yönteminin 1. adımına bakın), sonra **Settings** (Ayarlar) > **Developer options** (Geliştirici seçenekleri) > **Apps from unverified developers** (Doğrulanmamış geliştiricilerden uygulamalar) bölümünü açın.
+1. **Allow apps from unverified developers** (Doğrulanmamış geliştiricilerden uygulamalara izin ver) seçeneğini açın. Telefon, siz olduğunuzu doğrulamak için ekran kilidinizi ister.
+1. Telefon, birinin sizden bu ayarı açmanızı isteyip istemediğini sorar ve bankaların, devlet kurumlarının veya polisin sizden asla bunu istemeyeceğini açıklar. Uyarıyı okuyun ve kimsenin size baskı yapmadığını veya sizi yönlendirmediğini onaylayın (bu, dolandırıcılara karşı bir korumadır).
+1. **Telefonunuzu yeniden başlatın.** Bu, bir kerelik **24 saatlik bekleme süresini** başlatır.
+1. 24 saat sonra kurulumu bitirmek için tekrar **Settings** > **Developer options** > **Apps from unverified developers** bölümüne gidin.
+1. Doğrulanmamış uygulamalara **7 days** (7 gün) için mi yoksa **indefinitely** (süresiz) mi izin vereceğinizi seçin. **AAPS** için **indefinitely** (süresiz) seçeneğini seçin, aksi halde 7 gün geçtikten sonra bir sonraki güncellemeniz engellenir.
 
-After this setup, installing or updating the **AAPS** APK works as it does today, with one extra warning that the app is from an unverified developer — tap **Install anyway**.
+Bu kurulumdan sonra **AAPS** APK'sını yüklemek veya güncellemek bugünkü gibi çalışır. Yalnızca uygulamanın doğrulanmamış bir geliştiriciden geldiğine dair ek bir uyarı çıkar: **Install anyway** (Yine de yükle) seçeneğine dokunun.
 
-Good to know:
+Bilmekte fayda var:
 
-- You can turn **Developer options** off again afterwards: the advanced flow stays enabled. Google also does not give apps (such as banking apps) any way to detect that the advanced flow is enabled.
-- If you turn the advanced flow off, installing **or updating** **AAPS** is blocked again (your installed **AAPS** keeps running). You have a 10-minute window to turn it back on; after that, the 24-hour waiting period starts again.
-- Changing the phone's clock does not shorten the waiting period, and ADB cannot skip it.
-- Google states that your choice follows your Google account to your other devices, so a new phone should not mean another 24-hour wait.
-- If you cannot find **Apps from unverified developers** in the developer options, your phone has not received the feature yet. It is delivered by a system component called **Android Developer Verifier**, which Google is rolling out gradually through the Play Store. You can help it along by opening **Android Developer Verifier** in the Play Store.
+- Sonrasında **Developer options** (Geliştirici seçenekleri) ayarını tekrar kapatabilirsiniz: gelişmiş akış açık kalır. Google ayrıca uygulamalara (örneğin bankacılık uygulamalarına) gelişmiş akışın açık olduğunu algılamak için hiçbir yol vermez.
+- Gelişmiş akışı kapatırsanız, **AAPS**'i yüklemek **veya güncellemek** yeniden engellenir (yüklü **AAPS**'iniz çalışmaya devam eder). Tekrar açmak için 10 dakikanız vardır. Bundan sonra 24 saatlik bekleme süresi yeniden başlar.
+- Telefonun saatini değiştirmek bekleme süresini kısaltmaz ve ADB de bunu atlayamaz.
+- Google, seçiminizin Google hesabınızla birlikte diğer cihazlarınıza da geçtiğini belirtiyor. Bu yüzden yeni bir telefon, yeniden 24 saat beklemek anlamına gelmemelidir.
+- Geliştirici seçeneklerinde **Apps from unverified developers** (Doğrulanmamış geliştiricilerden uygulamalar) bölümünü bulamıyorsanız, telefonunuz bu özelliği henüz almamıştır. Bu özellik, Google'ın Play Store üzerinden adım adım dağıttığı **Android Developer Verifier** adlı bir sistem bileşeniyle gelir. Play Store'da **Android Developer Verifier** uygulamasını açarak bunu hızlandırabilirsiniz.
 
 ```{note}
-Google describes this as a first version and may still change the screens and steps; this section will be updated with screenshots once the final version is available.
+Google bunu ilk sürüm olarak tanımlıyor ve ekranları ve adımları hâlâ değiştirebilir. Son sürüm çıktığında bu bölüm ekran görüntüleriyle güncellenecektir.
 ```
 
 (android-developer-verification-limited-account)=
 
-### Option 4: Register with Google (free limited distribution account)
+### Seçenek 4: Google'a kayıt olma (ücretsiz sınırlı dağıtım hesabı)
 
-Google offers a **free** developer account type for hobbyists and personal use, called a **limited distribution account**, open to everyone since August 2026:
+Google, hobi ve kişisel kullanım için **limited distribution account** (sınırlı dağıtım hesabı) adlı, Ağustos 2026'dan beri herkese açık, **ücretsiz** bir geliştirici hesabı türü sunuyor:
 
-- **No government ID** and **no fee** (unlike the paid developer account, which is not needed for personal **AAPS** use). You do need a Google account with 2-step verification, a Google payments profile holding your legal name and address, and a contact email address.
-- You register your app's package name in Google's Android Developer Console, and authorize the phones it may be installed on, up to **20 devices**, through a handshake with a QR code or link between the phone and the console.
-- Once registered, the normal installation (tapping the APK file) works again on the authorized phones, without ADB and without the advanced flow.
-- A limited distribution account can later be upgraded to a full account, but not the other way round.
+- **Resmi kimlik belgesi gerekmez** ve **ücret yoktur** (kişisel **AAPS** kullanımı için gerekli olmayan ücretli geliştirici hesabının aksine). Yine de 2 adımlı doğrulamalı bir Google hesabına, yasal adınızı ve adresinizi içeren bir Google ödeme profiline ve bir iletişim e-posta adresine ihtiyacınız vardır.
+- Uygulamanızın paket adını Google'ın Android Developer Console'una kaydedersiniz ve uygulamanın yüklenebileceği telefonları, **20 cihaza** kadar, telefon ile konsol arasında bir QR kod veya bağlantı ile yapılan bir el sıkışma yoluyla yetkilendirirsiniz.
+- Kayıttan sonra normal yükleme (APK dosyasına dokunma), yetkilendirilmiş telefonlarda ADB ve gelişmiş akış olmadan yeniden çalışır.
+- Sınırlı dağıtım hesabı daha sonra tam bir hesaba yükseltilebilir, ama tersi yapılamaz.
 
 ```{warning}
-Google has not explained how registration works when many people build the same open-source app: every self-built **AAPS** uses the same package name (`info.nightscout.androidaps`) with a different signing key, and Google's FAQ states that a package name already in use by others cannot be claimed outright and requires an additional review. The outcome of such a review is unknown, and the paid developer account ($25 and a government ID) does not help here: paying only removes the 20-device cap, not the package name review.
+Google, birçok kişi aynı açık kaynaklı uygulamayı oluşturduğunda kaydın nasıl çalıştığını açıklamadı: kendi oluşturulan her **AAPS** aynı paket adını (`info.nightscout.androidaps`) farklı bir imzalama anahtarıyla kullanır ve Google'ın SSS'si, başkaları tarafından zaten kullanılan bir paket adının doğrudan alınamayacağını ve ek bir inceleme gerektirdiğini belirtir. Böyle bir incelemenin sonucu bilinmiyor ve ücretli geliştirici hesabı (25 $ ve resmi kimlik belgesi) burada yardımcı olmaz: ödeme yapmak yalnızca 20 cihaz sınırını kaldırır, paket adı incelemesini değil.
 
-For this reason, step-by-step instructions cannot be written yet. This section will be completed once registration has been tested with **AAPS**. In the meantime, ADB, the web installer and the advanced flow above are reliable alternatives.
+Bu nedenle adım adım talimatlar henüz yazılamıyor. Kayıt **AAPS** ile test edildikten sonra bu bölüm tamamlanacaktır. Bu arada, yukarıdaki ADB, web yükleyicisi ve gelişmiş akış güvenilir seçeneklerdir.
 ```
 
-## What does not change
+## Neler değişmiyor
 
-- Building **AAPS** yourself, with any of the three [build methods](BuildingAaps.md).
-- Your GitHub account, your build repository (AAPS Builder) or fork, and your keystore.
-- Your installed **AAPS** app, your settings and your [objectives](CompletingTheObjectives.md).
-- Phones without Google services, and [ADB installations](#android-developer-verification-adb) in general.
+- Üç [oluşturma yönteminden](BuildingAaps.md) herhangi biriyle **AAPS**'i kendiniz oluşturmanız.
+- GitHub hesabınız, oluşturma deponuz (AAPS Builder) veya fork'unuz ve anahtar deponuz.
+- Yüklü **AAPS** uygulamanız, ayarlarınız ve [görevleriniz](CompletingTheObjectives.md).
+- Google hizmetleri olmayan telefonlar ve genel olarak [ADB ile yüklemeler](#android-developer-verification-adb).
 
-## Where to get help
+## Nereden yardım alabilirsiniz?
 
-1. **Read** Google's [developer verification FAQ](https://developer.android.com/developer-verification/guides/faq) for questions about the verification itself.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md), if an installation is blocked.
-3. When asking for help, include your phone make and model, Android version, your country, and the exact message displayed when the installation fails.
+1. Doğrulamanın kendisiyle ilgili sorular için Google'ın [geliştirici doğrulaması SSS](https://developer.android.com/developer-verification/guides/faq) sayfasını **okuyun**.
+2. Bir yükleme engellenirse [Discord](https://discord.gg/4fQUWHZ4Mw)'daki *#AAPS* kanalında veya diğer [topluluk kanallarından](../GettingHelp/WhereCanIGetHelp.md) birinde **sorun**.
+3. Yardım isterken telefonunuzun markasını ve modelini, Android sürümünü, ülkenizi ve yükleme başarısız olduğunda gösterilen tam mesajı ekleyin.
 
 ```{toctree}
 :hidden:
 
-AAPS web installer <WebInstaller.md>
+AAPS web yükleyicisi <WebInstaller.md>
 ```
