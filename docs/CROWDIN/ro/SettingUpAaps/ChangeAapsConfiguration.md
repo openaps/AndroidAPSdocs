@@ -1,4 +1,4 @@
-# Making changes to your AAPS configuration
+# Efectuarea de modificări în configurația AAPS
 
 After you have completed the **[Setup Wizard](../SettingUpAaps/SetupWizard.md)**, you don't need to run the entire Wizard again if you want to only change parts of your **AAPS**' configuration.
 
@@ -6,21 +6,21 @@ There are three routes to change **AAPS**' configuration. As to which route you 
 
 Acestea sunt următoarele:
 
-1. The **Configuration** screen,
-2. The **Settings** screen or
+1. Ecranul **Configurație**,
+2. Ecranul **Setări** sau
 3. A plugin's **Settings**, opened from its category in **Configuration**.
 
 Aici se explică care opțiune este cea mai convenabilă pentru fiecare situație:
 
 ## Configurare
 
-Open the **menu** (☰) in the top-left corner of the main screen and choose **Configuration**:
+Deschideți **meniul** (☰) din colțul din stânga sus al ecranului principal și alegeți **Configurație**:
 
 ![Open Configuration from the top-left menu](../images/v4/Configuration/configuration_menu.png)
 
 **Configuration** is used to **choose which plugins are active** — your CGM, pump, APS algorithm, sensitivity detection, synchronization and more, grouped by category. It is the same screen the Setup Wizard configured for you.
 
-The documentation of the Configuration screen is available [here](../SettingUpAaps/ConfigBuilder.md).
+Documentația ecranului Configurație este disponibilă [aici](../SettingUpAaps/ConfigBuilder.md).
 
 ## Setări
 
@@ -30,9 +30,9 @@ Tap the **Settings** (gear) icon in the top-right corner of the main screen. Thi
 
 This is a good route if you are not really sure where to look for a configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
 
-The documentation of the settings is available [here](../SettingUpAaps/Preferences.md).
+Documentația setărilor este disponibilă [aici](../SettingUpAaps/Preferences.md).
 
-## A plugin's Settings
+## Setările unui modul
 
 Inside **Configuration**, open a category and tap "**Settings**" underneath the active plugin. You are taken directly to the settings of **that plugin only**:
 
