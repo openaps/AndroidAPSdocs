@@ -79,7 +79,7 @@
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant3.png)
 
-Variants ending with “Debug” indicate that the APK will be built in debug mode, which is useful for developers for troubleshooting.
+Вариантите, които завършват с „Debug“, означават, че APK ще бъде компилиран в режим за отстраняване на грешки (debug), което е полезно за разработчиците при търсене на проблеми.
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
 
