@@ -1,141 +1,141 @@
-# Updating to AAPS 3.2.0.4
+# Uppdatera till AAPS 3.2.0.4
 
 (update-aaps-3204)=
 
-## Build yourself instead of download
+## Bygg själv i stället för att ladda ned
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**AAPS-appen (en apk-fil) finns inte att ladda ned, på grund av reglerna för medicintekniska produkter. Det är lagligt att bygga appen för eget bruk, men du får inte ge en kopia till andra!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Se sidan [Vanliga frågor](../UsefulLinks/FAQ.md) för mer information.
 
-## Computer and software specifications for building AAPS 3.2.0.4
+## Krav på dator och programvara för att bygga AAPS 3.2.0.4
 
-* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk.
+* Du kan behöva en viss version av **[Android Studio](https://developer.android.com/studio/)** för att bygga APK:n.
 
-| AAPS Version            | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                  | up to Meerkat                                          | 8.2    | 17  |
+| AAPS-version            | Rekommenderad<br/>version av<br/>Android Studio | Alternativ<br/>version av<br/>Android Studio | Gradle | JVM |
+| ----------------------- | ----------------------------------------------------------- | -------------------------------------------------------- | ------ |:--- |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                         | upp till Meerkat                                         | 8.2    | 17  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#incompatible-gradle-jvm) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+Den "rekommenderade versionen" levereras med rätt JVM-version. Den rekommenderade versionen är också den lägsta version som du kan använda för att bygga **AAPS**. Du kan **INTE** bygga med en version som är äldre än den "rekommenderade". Om du använder en annan version kan du få problem med JVM-versionen. Se sidan [Felsökning av Android Studio](#incompatible-gradle-jvm) för hjälp med att lösa dessa problem. Om din nuvarande version av Android Studio inte finns i tabellen måste du först uppdatera den.
 
-The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
+Gradle-versionen hör ihop med källkoden. Du får alltid rätt Gradle-version när du laddar ned eller uppdaterar källkoden. Den nämns här bara som information. Du behöver inte göra något med den.
 
-* [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
+* [32-bitars Windows](#troubleshooting_androidstudio-unable-to-start-daemon-process) stöds inte av Android Studio. Tänk på att **både 64-bitars processor och 64-bitars operativsystem är ett krav.** Om ditt system INTE uppfyller detta krav måste du byta den maskinvara eller programvara det gäller, eller hela systemet.
 
 <table class="tg">
 <tbody>
   <tr>
-    <th class="tg-baqh">OS (Only 64 bit)</th>
-    <td class="tg-baqh">Windows 8 or higher</td>
-    <td class="tg-baqh">Mac OS 10.14 or higher</td>
-    <td class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</td>
+    <th class="tg-baqh">OS (endast 64-bitars)</th>
+    <td class="tg-baqh">Windows 8 eller senare</td>
+    <td class="tg-baqh">Mac OS 10.14 eller senare</td>
+    <td class="tg-baqh">Alla Linux-distributioner som stöder Gnome, KDE eller Unity DE;&nbsp;&nbsp;GNU C Library 2.31 eller senare</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
+    <th class="tg-baqh"><p align="center">CPU (endast 64-bitars)</th>
+    <td class="tg-baqh">x86_64-processorarkitektur; Intel Core av 2:a generationen eller nyare, eller AMD-processor med stöd för <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">ARM-baserade chip, eller Intel Core av 2:a generationen eller nyare med stöd för <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">x86_64-processorarkitektur; Intel Core av 2:a generationen eller nyare, eller AMD-processor med stöd för AMD Virtualization (AMD-V) och SSSE3</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
+    <td class="tg-baqh" colspan="3"><p align="center">8 GB eller mer</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Minst 30 GB ledigt utrymme. SSD rekommenderas.</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Resolution</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+    <th class="tg-baqh"><p align="center">Upplösning</th>
+    <td class="tg-baqh" colspan="3"><p align="center">Minst 1280 x 800 <br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Bredband</td>
   </tr>
 </tbody>
 </table>
 
-**It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
+**Vi rekommenderar starkt (men det är inget krav) att du använder en SSD (Solid State Disk) i stället för en HDD (hårddisk), eftersom det går snabbare att bygga APK-filen för AAPS.**  Du kan ändå använda en HDD när du bygger APK-filen för **AAPS**. Om du gör det kan bygget ta lång tid, men när det väl har startat kan du låta det köra utan tillsyn.
 
-## Help and support during 3.2.0.4 building process
+## Hjälp och support när du bygger 3.2.0.4
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html) section, please consult that first.
+Om du får problem när du bygger appen **AAPS** finns det ett eget avsnitt [**Felsökning av Android Studio**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html). Läs det först.
 
-If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
+Om du tycker att något i bygginstruktionerna är fel, saknas eller är otydligt, eller om du fortfarande har problem, kontakta andra användare av **AAPS** i gruppen på [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) eller på [Discord](https://discord.gg/4fQUWHZ4Mw). Om du själv vill ändra något (uppdatera skärmbilder _osv._), skicka in en [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
 ```{note}
-This page provides both example pictures for the **New** and old (**Classic**) Android Studio user interfaces.
+Denna sida visar exempelbilder både för det nya (**New**) och det gamla (**Classic**) användargränssnittet i Android Studio.
 ```
 
-## Overview for updating 3.2.0.x to 3.2.0.4
+## Översikt: uppdatera från 3.2.0.x till 3.2.0.4
 
 ```{contents} Steps for updating to 3.2.0.4
 :depth: 1
 :local: true
 ```
 
-### Export your current settings
+### Exportera dina nuvarande inställningar
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Exportera dina inställningar från den **AAPS**-version som finns på din telefon nu. Du behöver dem kanske inte, men det är bättre att vara på den säkra sidan.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Se sidan [Skapa och återställa säkerhetskopior](ExportImportSettings.md) om du inte kommer ihåg hur du gör.
 
-### Update your local AAPS copy
+### Uppdatera din lokala kopia av AAPS
 
-* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
+* Öppna ditt befintliga AAPS-projekt i Android Studio. Du kan behöva välja ditt projekt. (Dubbel)klicka på AAPS-projektet.
 
-![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
-
-<br>
-
-![Android Studio - Select Project](https://androidaps.readthedocs.io/en/3.1/_images/01_ProjectSelection.png)
-
-* In the menu bar of Android Studio, select Git -> Fetch
-
-![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+![Android Studio - välj projekt](../images/update/01_ProjectSelection.png)
 
 <br>
 
-![Android Studio Menu - Git - Fetch](https://androidaps.readthedocs.io/en/3.1/_images/02_GitFetch.png)
+![Android Studio - välj projekt](https://androidaps.readthedocs.io/en/3.1/_images/01_ProjectSelection.png)
 
-* You will see a message in the lower right corner that Fetch was successful.
+* I menyraden i Android Studio väljer du Git -> Fetch
 
-![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
-
-<br>
-
-![Android Studio Menu - Git - Fetch successful](https://androidaps.readthedocs.io/en/3.1/_images/03_GitFetchSuccessful.png)
-
-* In the menu bar, now select Git -> Pull
-
-![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+![Android Studio-menyn - Git - Fetch](../images/update/02_GitFetch.png)
 
 <br>
 
-![Android Studio Menu - Git - Pull](https://androidaps.readthedocs.io/en/3.1/_images/04_GitPull.png)
+![Android Studio-menyn - Git - Fetch](https://androidaps.readthedocs.io/en/3.1/_images/02_GitFetch.png)
 
-* Leave all options as they are (origin/master) and select Pull
+* Nere till höger ser du ett meddelande om att Fetch lyckades.
 
-![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
+![Android Studio-menyn - Git - Fetch lyckades](../images/update/03_GitFetchSuccessful.png)
 
 <br>
 
-![Android Studio - Git - Pull dialog](https://androidaps.readthedocs.io/en/3.1/_images/05_GitPullOptions.png)
+![Android Studio-menyn - Git - Fetch lyckades](https://androidaps.readthedocs.io/en/3.1/_images/03_GitFetchSuccessful.png)
 
-* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
+* I menyraden väljer du nu Git -> Pull
+
+![Android Studio-menyn - Git - Pull](../images/update/04_GitPull.png)
+
+<br>
+
+![Android Studio-menyn - Git - Pull](https://androidaps.readthedocs.io/en/3.1/_images/04_GitPull.png)
+
+* Ändra inga alternativ (origin/master) och välj Pull
+
+![Android Studio - Git - dialogrutan Pull](../images/update/05_GitPullOptions.png)
+
+<br>
+
+![Android Studio - Git - dialogrutan Pull](https://androidaps.readthedocs.io/en/3.1/_images/05_GitPullOptions.png)
+
+* Vänta medan nedladdningen pågår. Du ser information om det i fältet längst ned. När den är klar ser du ett meddelande om att det lyckades.
 
   ```{note}
-  The files that were updated may vary! This is not an indication of a problem.
+  Vilka filer som har uppdaterats kan variera! Detta betyder inte att något är fel.
   ```
 
 
-![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+![Android Studio - Pull lyckades](../images/update/06_GitPullSuccess.png)
 
 <br>
 
-![Android Studio - Pull successful](https://androidaps.readthedocs.io/en/3.1/_images/06_GitPullSuccess.png)
+![Android Studio - Pull lyckades](https://androidaps.readthedocs.io/en/3.1/_images/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Wait until it is finished.
+* Gradle Sync körs nu för att ladda ned några beroenden. Vänta tills den är klar.
 
 ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
@@ -143,69 +143,69 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Android Studio - Gradle Sync](https://androidaps.readthedocs.io/en/3.1/_images/40_BackgroundTasks.png)
 
-### Select JVM version 17
+### Välj JVM-version 17
 
-- Open the Gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
+- Öppna vyn Gradle genom att klicka på elefanten (1) på höger sida i Android Studio, öppna inställningarna (2) och välj **Gradle Settings** (3):
 
-![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
-
-<br>
-
-![Open Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
-
-- In **Gradle JDK** field (1), check if the appropriate version: **jbr-17** is selected. If not, click on the field, and see if it is already available in the list. If it is not in the list (the screenshot below shows a computer where only **jbr-21** is available), select **Download JDK...** (2).
-
-![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
-
-
-
-- In Version (1), select **17**. In Vendor (2) select JetBrains Runtime or any Vendor. Location (3): do not change.
-
-![Select JDK 17](https://androidaps.readthedocs.io/en/3.2/_images/163_JDKSelection.png)
-
-- Close the **Settings** dialog with **OK**.
-
-### Select the AAPS 3.2.0.4 branch
-
-- At the bottom left, select the Git symbol, right-click on 3.2.0.4 and Checkout.
-
-![Select Download JDK](../images/studioTroubleshooting/17_Checkout.png)
+![Öppna Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
 
 <br>
 
-![Select Download JDK](../images/studioTroubleshooting/17_CheckoutOld.png)
+![Öppna Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
 
-### Sync project with Gradle
+- I fältet **Gradle JDK** (1) kontrollerar du att rätt version är vald: **jbr-17**. Om den inte är det, klicka på fältet och se om den redan finns i listan. Om den inte finns i listan (skärmbilden nedan visar en dator där bara **jbr-21** finns), välj **Download JDK...** (2).
+
+![Välj Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
+
+
+
+- Under Version (1) väljer du **17**. Under Vendor (2) väljer du JetBrains Runtime eller valfri leverantör. Location (3): ändra inte.
+
+![Välj JDK 17](https://androidaps.readthedocs.io/en/3.2/_images/163_JDKSelection.png)
+
+- Stäng dialogrutan **Settings** med **OK**.
+
+### Välj grenen AAPS 3.2.0.4
+
+- Längst ned till vänster väljer du Git-symbolen, högerklickar på 3.2.0.4 och väljer Checkout.
+
+![Välj Download JDK](../images/studioTroubleshooting/17_Checkout.png)
+
+<br>
+
+![Välj Download JDK](../images/studioTroubleshooting/17_CheckoutOld.png)
+
+### Synkronisera projektet med Gradle
 
 ```{admonition} WARNING!
 :class: warning
-**Never update Gradle.** Always sync it with the project.
+**Uppdatera aldrig Gradle.** Synkronisera den alltid med projektet.
 ```
 
-Use the elephant icon and Sync Project with Gradle Files (or follow [this](#gradle-resync)) for the new UI.
+I det nya gränssnittet använder du elefantikonen och Sync Project with Gradle Files (eller följ [detta](#gradle-resync)).
 
 ![Sync Project with Gradle Files](../images/studioTroubleshooting/06_GradleResyncElephant.png)
 
-Or ([this](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html#gradle-resync)) for the classic UI.
+Eller ([detta](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html#gradle-resync)) för det klassiska gränssnittet.
 
 ![Sync Project with Gradle Files](../images/studioTroubleshooting/06_GradleResyncElephantOld.png)
 
-### Build the Signed 3.2.0.4 APK
+### Bygg den signerade APK:n för 3.2.0.4
 
-Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+Din källkod är nu den aktuella släppta versionen och alla förutsättningar har kontrollerats. Nu är det dags att bygga den signerade APK:n enligt [avsnittet om att bygga en signerad APK](#Building-APK-generate-signed-apk).
 
-### Transfer and install the 3.2.0.4 APK
+### Överför och installera APK:n för 3.2.0.4
 
-You need to transfer the apk to your phone so you can install it.
+Du måste överföra APK:n till din telefon så att du kan installera den.
 
 ```{note}
-If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
-For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
+Om du har byggt med samma keystore som tidigare i Android Studio behöver du inte ta bort den befintliga appen på telefonen. När du installerar APK:n följer du anvisningarna för att installera uppdateringen.
+I andra fall, till exempel om du har skapat en ny keystore i Android Studio för din signerade APK, måste du ta bort den gamla appen innan du installerar APK:n. **Glöm inte att exportera dina inställningar!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
+Se instruktionerna för att [överföra och installera AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
-### Check AAPS version 3.2.0.4 on phone
+### Kontrollera AAPS-version 3.2.0.4 på telefonen
 
-After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
+När du har installerat den nya APK:n kan du kontrollera AAPS-versionen på telefonen: tryck på menyn med tre punkter uppe till höger och sedan på Om. Du bör se den aktuella versionen.
 
