@@ -39,7 +39,7 @@ Ak vám žiadny z odkazov nepomôže, pozrite si stránku [Kde získať pomoc](W
 * [Profil: „Bazál nie je kompatibilný s aktuálnou pumpou“](#your-aaps-profile-basal-not-compatible)
 * [Pumpa: „Dáta prichádzajú z inej pumpy“](#config-builder-wrong-pump-data)
 * [Nightscout Client](TroubleshootingNsClient.md)
-* **"AAPS settings cannot be read"** at start: the settings are encrypted with a key that Android keeps for **AAPS**, and that key does not open them any more, for example after the key store of the phone was reset. While this screen is shown, **AAPS** is not running and does not control the pump. Tap **Retry**: it closes and restarts **AAPS**. If that does not help, restart the phone. Use **Start fresh** only when nothing else helps: it sets the unreadable settings file aside (it is renamed and kept) and starts **AAPS** with empty settings. Then import your last [settings export](../Maintenance/ExportImportSettings.md).
+* **„Nastavenia AAPS sa nepodarilo načítať“** pri spustení: nastavenia sú zašifrované kľúčom, ktorý Android uchováva pre **AAPS**, a tento kľúč ich už neotvorí, napríklad po resetovaní úložiska kľúčov v telefóne. Kým je táto obrazovka zobrazená, **AAPS** nie je spustené a neovláda pumpu. Ťuknite na **Opakovať**: týmto sa **AAPS** zatvorí a znova spustí. Ak to nepomôže, reštartujte telefón. Možnosť **Začať znova** použite iba vtedy, keď nič iné nepomáha: nečitateľný súbor s nastaveniami sa odloží (premenuje sa a ponechá) a **AAPS** sa spustí s prázdnymi nastaveniami. Potom importujte posledný [export nastavení](../Maintenance/ExportImportSettings.md).
 
 ### Používanie
 
