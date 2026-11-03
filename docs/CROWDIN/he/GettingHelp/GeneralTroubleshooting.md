@@ -1,51 +1,51 @@
 (generaltroubleshooting)=
 
-# Troubleshooting
+# פתרון תקלות
 
-**Start here when something is not working.** Troubleshooting information lives on many pages across the documentation. This page brings it together: it is a single collection of links, sorted by topic, to help you solve the most common problems.
+**כאן מתחילים כשמשהו לא עובד.** מידע על פתרון תקלות נמצא בדפים רבים בתיעוד. הדף הזה מרכז אותו: זהו אוסף אחד של קישורים, מסודר לפי נושאים, שיעזור לפתור את הבעיות הנפוצות ביותר.
 
-If you do not find your answer below, also check:
+אם לא מצאתם כאן תשובה, כדאי לבדוק גם:
 
-* the [FAQ](../UsefulLinks/FAQ.md) for answers to frequent questions, and
-* the [Profile tuning guide](ProfileTuning.md) if your loop runs but your glucose control needs improving.
+* את [שאלות נפוצות (FAQ)](../UsefulLinks/FAQ.md) לתשובות על שאלות שחוזרות הרבה, וגם
+* את [המדריך לכוונון הפרופיל](ProfileTuning.md) אם הלולאה פועלת אבל איזון הסוכר צריך שיפור.
 
 ```{admonition} Still stuck?
 :class: tip
-If none of the links solve your problem, see [Where can I get help](WhereCanIGetHelp.md) to ask the community (Facebook, Discord), or send your [log files](AccessingLogFiles.md) to the developers.
+אם אף אחד מהקישורים לא פותר את הבעיה, ראו [איפה אפשר לקבל עזרה](WhereCanIGetHelp.md) כדי לשאול את הקהילה (Facebook, Discord), או שלחו את [קובצי היומן](AccessingLogFiles.md) למפתחים.
 ```
 
 ---
 
 (generaltroubleshooting-aaps-app)=
 
-## AAPS app
+## אפליקציית AAPS
 
-### Building & updating
+### בנייה ועדכון
 
-* If the build fails, see [If the build fails](#building-aaps-troubleshooting): it lists the troubleshooting section for each build method:
+* אם הבנייה נכשלת, ראו [אם הבנייה נכשלת](#building-aaps-troubleshooting): שם מופיע החלק של פתרון התקלות לכל שיטת בנייה:
   * [AAPS Builder](#aaps-builder-troubleshooting)
   * [Browser build](#aaps-ci-troubleshooting)
   * [Android Studio](TroubleshootingAndroidStudio.md)
-* Lost keystore, or new keystore: [Reinstalling AAPS](#reinstall-aaps)
-* Updating **AAPS**: [with AAPS Builder](#aaps-builder-updates), [with a browser build (fork)](#update-browser-build-troubleshooting), [with Android Studio](#update-computer-build-troubleshooting)
+* ה-keystore אבד, או keystore חדש: [התקנה מחדש של AAPS](#reinstall-aaps)
+* עדכון **AAPS**: [עם AAPS Builder](#aaps-builder-updates), [עם בנייה בדפדפן (fork)](#update-browser-build-troubleshooting), [עם Android Studio](#update-computer-build-troubleshooting)
 
 ### Installing
 
-* [Google Play Protect warning](#transferring-installing-play-protect-warning): the app is reported as unsafe.
-* Installation **blocked** with a message about an unverified developer: see [Android developer verification](#android-developer-verification) for the free installation methods.
+* [אזהרה של Google Play Protect](#transferring-installing-play-protect-warning): האפליקציה מסומנת כלא בטוחה.
+* ההתקנה **נחסמת** עם הודעה על מפתח לא מאומת: ראו [אימות מפתחים ב-Android](#android-developer-verification) לשיטות ההתקנה החינמיות.
 
 ### הגדרות
 
-* [Profile: "Basal rate is not compatible with the current pump"](#your-aaps-profile-basal-not-compatible)
-* [Pump: "Data is coming from different pump"](#config-builder-wrong-pump-data)
+* [פרופיל: "הקצב הבזאלי אינו תואם למשאבה הנוכחית"](#your-aaps-profile-basal-not-compatible)
+* [משאבה: "הנתונים מגיעים ממשאבה אחרת"](#config-builder-wrong-pump-data)
 * [Nightscout Client](TroubleshootingNsClient.md)
-* **"AAPS settings cannot be read"** at start: the settings are encrypted with a key that Android keeps for **AAPS**, and that key does not open them any more, for example after the key store of the phone was reset. While this screen is shown, **AAPS** is not running and does not control the pump. Tap **Retry**: it closes and restarts **AAPS**. If that does not help, restart the phone. Use **Start fresh** only when nothing else helps: it sets the unreadable settings file aside (it is renamed and kept) and starts **AAPS** with empty settings. Then import your last [settings export](../Maintenance/ExportImportSettings.md).
+* **"לא ניתן לקרוא את הגדרות AAPS"** בהפעלה: ההגדרות מוצפנות במפתח ש-Android שומר עבור **AAPS**, והמפתח הזה כבר לא פותח אותן, למשל אחרי שמאגר המפתחות של הטלפון אופס. כל עוד המסך הזה מוצג, **AAPS** לא פועל ולא שולט במשאבה. יש ללחוץ על **ניסיון חוזר**: הוא סוגר ומפעיל מחדש את **AAPS**. אם זה לא עוזר, יש להפעיל מחדש את הטלפון. יש להשתמש ב**התחלה מחדש** רק כשדבר אחר לא עוזר: הוא מעביר הצידה את קובץ ההגדרות שלא ניתן לקרוא (שמו משתנה והוא נשמר), ומפעיל את **AAPS** עם הגדרות ריקות. אחר כך יש לייבא את [ייצוא ההגדרות](../Maintenance/ExportImportSettings.md) האחרון שלכם.
 
-### Usage
+### שימוש
 
-* [Wrong carb values (slow carbs absorption)](#CobCalculation-detection-of-wrong-cob-values)
-* [Automations](#automations-troubleshooting)
-* [Full closed loop](#full-closed-loop-troubleshooting)
+* [ערכי פחמימות שגויים (ספיגה איטית של פחמימות)](#CobCalculation-detection-of-wrong-cob-values)
+* [אוטומציות](#automations-troubleshooting)
+* [לולאה סגורה מלאה](#full-closed-loop-troubleshooting)
 
 ---
 
@@ -54,76 +54,76 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 
 ## Bluetooth related issues
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+לבעיות מוכרות בחיבורי Bluetooth, לניתוקים של משאבות/פודים או לבעיות בהפעלה ובחיבור, ראו [פתרון תקלות Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
 (generaltroubleshooting-android-related-issues)=
 
-## Android Related Issues
+## בעיות הקשורות ל-Android
 
-### Battery optimization
+### אופטימיזציית סוללה
 
-**AAPS** can help you find the right settings for your phone: open the **menu** (☰) > **About** and tap **Don't kill my app?**. It opens the instructions for your phone brand on [Don't kill my app](https://dontkillmyapp.com/). The [setup wizard](#setup-wizard-bluetooth-battery-optimisation) also asks you to turn off battery optimization for **AAPS** and Bluetooth.
+**AAPS** יכול לעזור למצוא את ההגדרות הנכונות לטלפון: פתחו את **התפריט** (☰) > **אודות** והקישו על **איך לא להשבית את האפליקציה שלי?**. כך נפתחות ההוראות ליצרן הטלפון שלכם באתר [Don't kill my app](https://dontkillmyapp.com/). גם [אשף ההתקנה](#setup-wizard-bluetooth-battery-optimisation) מבקש לכבות את אופטימיזציית הסוללה עבור **AAPS** ועבור Bluetooth.
 
-Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
+Android has implemented battery saving setting that are enabled by default. הגדרות אלה משהות אוטומטית אפליקציות שאינן נדרשות לפעולת המערכת, כדי לחסוך באנרגיית הסוללה שצורכות אפליקציות שאינן חייבות לפעול כל הזמן.
 
-When this is enabled, it will very likely cause issue for **AAPS** and other supporting apps like **xDrip**.
+כאשר אופטימיזציית הסוללה מופעלת, סביר מאוד שהיא תגרום לבעיות ב-**AAPS** ובאפליקציות תומכות אחרות כמו **xDrip**.
 
-It's important to ensure that you have disabled Battery Optimization to ensure **AAPS** and other supporting apps remain active all the time.
+חשוב לוודא שהשבתתם את אופטימיזציית הסוללה, כדי ש-**AAPS** ואפליקציות תומכות אחרות יישארו פעילים כל הזמן.
 
 Depending on your phone model and make there may be more than one location and setting which needs to have this disabled.
 
-***NOTE:** Follow the steps below to Disable Battery Optimization for the Bluetooth service if your phone has this option, the same steps can be used to disable for **AAPS** and other apps, however the screenshots will only show how to do this for the Bluetooth service.*
+***הערה:** אם אפשרות זו קיימת בטלפון, פעלו לפי השלבים הבאים כדי להשבית את אופטימיזציית הסוללה עבור שירות ה-Bluetooth. אפשר להשתמש באותם שלבים גם עבור **AAPS** ואפליקציות אחרות, אבל צילומי המסך מראים רק את שירות ה-Bluetooth.*
 
 #### Pixel phones (stock Android)
 
 * Go to the Android settings, select "Apps".
 
-  ![Android Settings¦Apps](../images/troubleshooting/pixel/01_androidsettings.png)
+  ![הגדרות Android¦Apps](../images/troubleshooting/pixel/01_androidsettings.png)
 
 * Select "See all apps"
 
-  ![See all apps](../images/troubleshooting/pixel/02_apps.png)
+  ![See all apps (הצגת כל האפליקציות)](../images/troubleshooting/pixel/02_apps.png)
 
-* On the menu on the right, select "Show system" apps.
+* בתפריט שבחלק העליון של המסך, בחרו "Show system" (הצגת אפליקציות מערכת).
 
-  ![Show system apps](../images/troubleshooting/pixel/03_allapps.png)
+  ![Show system apps (הצגת אפליקציות מערכת)](../images/troubleshooting/pixel/03_allapps.png)
 
-* Now search and select the app "Bluetooth".
+* כעת חפשו ובחרו את האפליקציה "Bluetooth".
 
-  ![Bluetooth app](../images/troubleshooting/pixel/03_bluetooth.png)
+  ![אפליקציית Bluetooth](../images/troubleshooting/pixel/03_bluetooth.png)
 
-* Click the "App battery usage" and select "Unrestricted" (called "Not optimized" on some older Android versions).
+* לחצו על "App battery usage" (שימוש בסוללה של האפליקציה) ובחרו "Unrestricted" (ללא הגבלה). בגרסאות Android ישנות יותר האפשרות נקראת "Not optimized".
 
-  ![BT Battery optimization](../images/troubleshooting/pixel/04_btunrestricted.png)
+  ![אופטימיזציית סוללה של BT](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
 #### Samsung phones
 
-* Go to the android settings, select "Apps"
+* עברו להגדרות Android ובחרו "Apps"
 
 * On the icon that supposedly changes the sorting algorithm (1), select "Show system apps" (2).
 
-  ![App Filter](../images/troubleshooting/samsung/Samsung01_Apps.png)
+  ![מסנן אפליקציות](../images/troubleshooting/samsung/Samsung01_Apps.png)
 
-  ![Show system apps](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+  ![Show system apps (הצגת אפליקציות מערכת)](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
 
-* Now search the Bluetooth app and select it to see its settings.
+* כעת חפשו את אפליקציית Bluetooth ובחרו בה כדי לראות את ההגדרות שלה.
 
-  ![Bluetooth App](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+  ![אפליקציית Bluetooth](../images/troubleshooting/samsung/Samsung03_BtApp.png)
 
 * Select "battery".
 
   ![Battery](../images/troubleshooting/samsung/Samsung04_Battery.png)
 
-* Set it to "Unrestricted" (called "Not optimized" on some older Android versions).
+* הגדירו אותה ל-"Unrestricted" (ללא הגבלה). בגרסאות Android ישנות יותר האפשרות נקראת "Not optimized".
 
-  ![Unrestricted](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
+  ![Unrestricted (ללא הגבלה)](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
 #### Huawei phones
 
-See this guide for [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+ראו את המדריך [Bluetooth ואופטימיזציית סוללה בטלפוני Huawei](../CompatiblePhones/Huawei.md)
 
 ---
 
@@ -135,10 +135,10 @@ Useful links to known issues and steps to resolve for CGMs.
 
 * [General](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
-* [Libre 2 with Minimal Looper](#minimallooper-troubleshooting)
+* [Libre 2 עם Minimal Looper](#minimallooper-troubleshooting)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
 * [xDrip - no CGM data](#xdrip-identify-receiver)
-* [xDrip - Dexcom troubleshooting](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
+* [xDrip - פתרון תקלות ב-Dexcom](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
 ---
 
@@ -169,7 +169,7 @@ Useful links to known issues and steps to resolve for Phones
 
 * [List of tested phone and device setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
 * [Jelly](../CompatiblePhones/Jelly.md)
-* [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+* [Bluetooth ואופטימיזציית סוללה בטלפוני Huawei](../CompatiblePhones/Huawei.md)
 
 ---
 
@@ -177,8 +177,8 @@ Useful links to known issues and steps to resolve for Phones
 
 ## Remote control
 
-* [AAPSClient and remote control (pairing, commands not received)](#client-master-control-troubleshooting)
-* ['Nightscout access token' issues](#remotecontrol-nightscout-access-token)
+* [AAPSClient ושליטה מרחוק (צימוד, פקודות שלא מתקבלות)](#client-master-control-troubleshooting)
+* [בעיות עם אסימון הגישה ל-Nightscout ('Nightscout access token')](#remotecontrol-nightscout-access-token)
 * [SMS commands](#SMSCommands-troubleshooting)
 * [Android Auto](#android-auto-troubleshooting)
 
@@ -190,7 +190,7 @@ Useful links to known issues and steps to resolve for Phones
 
 Useful links to known issues and steps to resolve for Smartwatches
 
-* [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
-* [Watch and phone do not communicate](#wear-os-watch-phone-communication)
+* [פתרון תקלות באפליקציית Wear](#Watchfaces-troubleshooting-the-wear-app)
+* [השעון והטלפון לא מתקשרים זה עם זה](#wear-os-watch-phone-communication)
 * [Wear OS 5](#wear-os-5-troubleshooting)
-* [Building the Wear app](#building-aaps-wear-os-troubleshooting)
+* [בניית אפליקציית Wear](#building-aaps-wear-os-troubleshooting)
