@@ -62,7 +62,7 @@ The **Complications watchface** has seven complication slots. Long-press the wat
 | 3    | Right     | CoB Icon                                                            | BR & Target                           |
 | 4    | Graph     | BG Graph                                                            | BG Graph                              |
 | 5    | Bottom    | BR & Target                                                         | Uploader/Phone Battery                |
-| 6    | Top-left  | Betriebsmodus                                                       | Betriebsmodus                         |
+| 6    | Top-left  | AAPS-Modus                                                          | AAPS-Modus                            |
 | 7    | Top-right | Uploader/Phone Battery, or an app shortcut to **AAPS Snooze Alert** | App shortcut to **AAPS Snooze Alert** |
 
 The **AAPS Snooze Alert** shortcut is picked from the watch's own **App shortcut** complications. Tapping it snoozes the alarm that is sounding on the phone.
