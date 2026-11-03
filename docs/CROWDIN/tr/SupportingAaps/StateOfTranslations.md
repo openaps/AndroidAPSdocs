@@ -1,16 +1,16 @@
-# State of translation for the app and the documentation
+# Uygulamanın ve dokümantasyonun çeviri durumu
 
 Durum saatte bir güncellenir ve yalnızca Crowdin'deki durumu yansıtır.
 
 ```{tip}
-Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
-İşin ne kadar yapıldığını görmek için yalnızca çevirilerin yüzde düzeyine bakmak daha iyi olacaktır.
+Dikkat: redaksiyon yüzdesi her zaman çeviri yüzdesinden düşük veya ona eşittir, ancak Crowdin bunu çeviri yüzdesinin üzerinde gösterir.
+Yapılacak iş olup olmadığını görmek için yalnızca çeviri yüzdesine bakmanız daha iyi olur.
 ```
 
 ```{admonition} needed time for final publication
 Crowdin çevirisinden sonra, çevirileri çekme isteği (PR) olarak Github'a aktarmak için her gün Github'a bir senkronizasyon planlanır.
 
-The acceptance of the PR is a manual task which will be done as fast as possible.
+PR'ın kabul edilmesi elle yapılan bir iştir ve olabildiğince hızlı yapılır.
 ```
 
 ## uygulamanın çeviri durumu
