@@ -6,7 +6,7 @@ tocdepth: 1
 
 ## Říjen 2026
 
-- [Browser build with AAPS Builder](#aaps-builder): build workflow version 8, now maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository. Setting up is one step shorter: [step 1](#aaps-builder-step1) of the [setup page](#aaps-builder-setup) creates your private repository as a copy of that repository, with the build workflow already in it, so there is no workflow to add any more. From now on the build steps are updated for you: your repository runs the version released by the AAPS developers at every build, without any change on your side (and still no automatic build). The build itself does not change, and your existing repository keeps working. To get these automatic updates, replace your `.github/workflows/build.yml` once as explained in [Updating AAPS](#aaps-builder-updates). Your `KEYSTORE_SET` secret stays as it is. The optional [Google Drive step](#aaps-builder-google-drive) now works on the setup page itself, on a phone or a computer: no preparation file needed @psonnera
+- [Sestavení v prohlížeči s AAPS Builder](#aaps-builder): sestavovací workflow verze 8, které nyní spravují vývojáři AAPS v repozitáři [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder). Nastavení je o jeden krok kratší: [krok 1](#aaps-builder-step1) na [stránce nastavení](#aaps-builder-setup) vytvoří váš soukromý repozitář jako kopii tohoto repozitáře, se sestavovacím workflow už uvnitř, takže už není třeba přidávat žádné workflow. Kroky sestavení se od teď aktualizují za vás: váš repozitář při každém sestavení použije verzi vydanou vývojáři AAPS, bez jakékoli změny z vaší strany (a stále bez automatického sestavení). Samotné sestavení se nemění a váš stávající repozitář dál funguje. Pro tyto automatické aktualizace jednou nahraďte svůj soubor `.github/workflows/build.yml` podle návodu v části [Aktualizace AAPS](#aaps-builder-updates). Váš secret `KEYSTORE_SET` zůstává beze změny. Volitelný [krok s Diskem Google](#aaps-builder-google-drive) nyní funguje přímo na stránce nastavení, v telefonu i v počítači: přípravný soubor není potřeba @psonnera
 - [Chytré hodinky a AAPS](#watches-external-companion-apps): z části **Samsung Tizen** se stává část **Externí aplikace**. Uvádí aplikace, které čtou vysílání z **AAPS** (WatchDrip+, GlucoDataHandler, G-Watch). [WatchDrip+](#watches-xiaomi-amazfit) 0.5 a novější se připojuje přímo k **AAPS** bez xDrip+: přidány kroky nastavení, shrnuté také v částech [Konfigurace](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) a [Vzdálený dohled](../RemoteFeatures/RemoteMonitoring.md). Hodinky Bluejay: GTS se už nevyrábí, aktualizován současný model @psonnera
 - [Sestavení v prohlížeči s AAPS Builder](#aaps-builder): sestavovací workflow verze 6. Kroky sestavení nyní používají přesné, zkontrolované verze nástrojů GitHubu a sestavovacího počítače. Sestavení také jasně vysvětlí, když byl do secretu `KEYSTORE_SET` vložen nesprávný text. [Stránka nastavení](#aaps-builder-setup) je nyní součástí dokumentace a je přeložená. Kontroluje vaše uživatelské jméno na GitHubu a má jasnější nápovědu k secretu, k chybě „Page not found“ (404) a k aplikaci GitHub. Pokud váš soubor `.github/workflows/build.yml` uvádí verzi 5 nebo starší, nahraďte ho podle návodu v části [Aktualizace AAPS](#aaps-builder-updates) @psonnera
 - [Webový instalátor AAPS](#web-installer): nyní je to stránka dokumentace, překládá se jako ostatní. Stará adresa stále funguje @psonnera
@@ -38,7 +38,7 @@ tocdepth: 1
 
 ## Leden 2025
 
-- [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
+- Vydání [3.4](#version3400) a souhrnná aktualizace dokumentace (Průvodce, verze pro sestavení na počítači, Konfigurace)
 - Aktualizace seznamu CGM. Odstraněny Dexcom G5, Tomato a Glimp.
 - [Rozhraní pro střídání míst vpichu](#Aapsscreens-site-rotation)
 - [Režim smyčky](#AapsScreens-running-mode)
@@ -52,7 +52,7 @@ tocdepth: 1
 
 - DiaKEM: nové instalace po upgradu serverů nefungují @psonnera
 - Odstraněna upravená aplikace pro Libre 2 (zastaralá): nefunguje s novými senzory @psonnera
-- Reworked Omnipod DASH page @XiTatiON
+- Přepracovaná stránka Omnipod DASH @XiTatiON
 
 ## Srpen 2025
 
@@ -76,15 +76,15 @@ tocdepth: 1
 ## Listopad 2024
 
 - Aktualizace stránky [Váš profil AAPS](../SettingUpAaps/YourAapsProfile.md) @emilise
-- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnera
+- Nové uspořádání obsahu o [chytrých hodinkách s Wear OS](../WearOS/BuildingAapsWearOS.md) @psonnera
 
 ## Říjen 2024
 
 - Aktualizace několika stránek:
-  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../Getting-Started/ComponentOverview.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [Jak dlouho to bude trvat](#preparing-how-long-will-it-take), [Přehled komponent](../Getting-Started/ComponentOverview.md), [Plnění cílů](../SettingUpAaps/CompletingTheObjectives.md), [Váš profil AAPS](../SettingUpAaps/YourAapsProfile.md), [Konfigurace](../SettingUpAaps/ConfigBuilder.md) a [Předvolby](../SettingUpAaps/Preferences.md), [Obrazovky AAPS](../DailyLifeWithAaps/AapsScreens.md) @emilise
   - [Kalkulace COB](../DailyLifeWithAaps/CobCalculation.md), [Dynamická ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Návod na sestavení pro Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
-- Technical work (deployment process for the documentation, files organization...) @psonnera & @emilise
+- Technická práce (proces nasazení dokumentace, uspořádání souborů...) @psonnera & @emilise
 
 ***
 
