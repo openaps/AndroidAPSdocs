@@ -1,162 +1,162 @@
 # CareLevo
 
-The CareLevo is a tubeless patch pump made by CareMedi. Each patch holds up to 300 U of insulin and is worn for up to 7 days (168 hours). It communicates with **AAPS** over your phone's Bluetooth, with no additional device.
+CareLevo är en slanglös pod-pump som tillverkas av CareMedi. Varje pod rymmer upp till 300 U insulin och bärs i upp till 7 dagar (168 timmar). Den kommunicerar med **AAPS** via telefonens Bluetooth, utan någon extra enhet.
 
 ```{admonition} New driver
 :class: warning
-The CareLevo driver is new in **AAPS**. Read this whole page before you activate your first patch, and keep the pump's own instructions for use at hand.
+Drivrutinen för CareLevo är ny i **AAPS**. Läs hela den här sidan innan du aktiverar din första pod, och ha pumpens egen bruksanvisning till hands.
 ```
 
-The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the **Profile** to a minimum of 0.05 U/h in steps of 0.05 U/h, otherwise the insulin the **Profile** expects and the insulin the patch delivers differ slightly. **AAPS** uses the basal rates the patch accepted.
+Den minsta dos som podden kan ge är 0,05 U. Ställ in basaldoserna i **Profil** på minst 0,05 U/h i steg om 0,05 U/h. Annars skiljer sig insulinet som **Profil** räknar med lite från insulinet som podden ger. **AAPS** använder de basaldoser som podden har godkänt.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Pumpens funktioner med AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Bolus in steps of 0.05 U.
-* Basal rates from 0.05 U/h to 15 U/h in steps of 0.05 U/h, with 30-minute basal segments.
-* Temporary basal rates set as an absolute rate, up to 12 hours.
-* Extended bolus up to 8 hours.
-* DST and timezone changes must be handled manually. The patch notifies you when the time zone changes.
+* Kommunicerar med **AAPS** via telefonens inbyggda Bluetooth, utan någon extra kommunikationsenhet.
+* Bolus i steg om 0,05 U.
+* Basaldoser från 0,05 U/h till 15 U/h i steg om 0,05 U/h, med basalsegment på 30 minuter.
+* Tillfälliga basaler ställs in som en absolut dos, upp till 12 timmar.
+* Förlängd bolus upp till 8 timmar.
+* Byte till/från sommartid och byte av tidszon måste du göra manuellt. Podden meddelar dig när tidszonen ändras.
 
-## Pump Setup
+## Ställa in pumpen
 
-1. Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-1. Select **Carelevo** in the Pump section.
-1. Press the Back key to return to the main screen.
+1. Öppna **menyn** (☰) uppe till vänster på huvudskärmen i **AAPS** och välj **Konfiguration**.
+1. Välj **Carelevo** i avsnittet Pump.
+1. Tryck på bakåtknappen för att gå tillbaka till huvudskärmen.
 
-![The Carelevo plugin selected in Configuration > Pump](../images/v4/Pumps/carelevo_enabled.png)
+![Pluginen Carelevo vald i Konfiguration > Pump](../images/v4/Pumps/carelevo_enabled.png)
 
 ## Settings
 
-Open the pump screen with **Manage → Pump** (or **Configuration → Pump → Open plugin**).
+Öppna pumpskärmen med **Hantera → Pump** (eller **Konfiguration → Pump → Öppna plugin**).
 
-Open the CareLevo settings by pressing the **Settings** (gear) icon in the upper right corner. Three settings are available:
+Öppna inställningarna för CareLevo genom att trycka på ikonen **Inställningar** (kugghjulet) uppe till höger. Det finns tre inställningar:
 
-![Carelevo driver settings](../images/v4/Pumps/carelevo_settings.png)
+![Inställningar för drivrutinen Carelevo](../images/v4/Pumps/carelevo_settings.png)
 
-### Low Insulin Notification Setting
+### Inställning för avisering om lite insulin
 
-The patch notifies you when the insulin remaining in the reservoir reaches the chosen amount. It can be set from 20 U to 50 U in 5 U steps. The default is 30 U. Independently of this setting, the patch raises a critical alarm and stops delivering insulin when less than 10 U remain.
+Podden meddelar dig när insulinet som är kvar i reservoaren når den mängd som du har valt. Den kan ställas in från 20 U till 50 U i steg om 5 U. Standardvärdet är 30 U. Oberoende av den här inställningen ger podden ett kritiskt larm och slutar ge insulin när mindre än 10 U är kvar.
 
-### Patch Usage Notification Setting
+### Inställning för avisering om poddens användningstid
 
-The patch notifies you when it has been worn for the chosen number of hours, so you can plan the change. It can be set from 24 to 167 hours. The default is 116 hours.
+Podden meddelar dig när den har burits det antal timmar som du har valt, så att du kan planera bytet. Den kan ställas in från 24 till 167 timmar. Standardvärdet är 116 timmar.
 
-### Patch Info Alarm
+### Infolarm från podden
 
-When this is on, the patch beeps when a bolus, extended bolus or temporary basal starts and when it ends. The default is off.
+När inställningen är på piper podden när en bolus, förlängd bolus eller tillfällig basal startar och när den slutar. Standardvärdet är av.
 
-## The pump screen
+## Pumpskärmen
 
-![Carelevo pump screen without an active patch](../images/v4/Pumps/carelevo_pump_screen.png)
+![Pumpskärmen för Carelevo utan aktiv pod](../images/v4/Pumps/carelevo_pump_screen.png)
 
-The pump screen shows the **Bluetooth status** (No Active Patch, Disconnected or Connected), the **Serial No.** of the patch, its **Activation Time** and **Expiration**, the current **Basal Rate** and **Temp basal rate**, the **Insulin Remaining** (remaining / filled), the **Patch Time Remaining** and the **Total insulin delivered**.
+Pumpskärmen visar **Bluetooth-status** (Ingen aktiv pod, Frånkopplad eller Ansluten), poddens **Serienr**, dess **Aktiveringstid** och **Utgångstid**, aktuell **Basaldos** och **Tillfällig basaldos**, **Insulin kvar** (kvar / påfyllt), **Poddens återstående tid** och **Totalt levererat insulin**.
 
-The buttons depend on the state of the patch:
+Vilka knappar som visas beror på poddens tillstånd:
 
-* **Activate Patch**: starts the activation of a new patch, see below.
-* **Insulin Guide**: shows the twelve steps for filling a patch with insulin.
-* **Suspend Infusion** / **Resume Infusion**: pauses and restarts insulin delivery, see below.
-* **Discard Patch**: stops the current patch so a new one can be activated.
+* **Aktivera pod**: startar aktiveringen av en ny pod, se nedan.
+* **Insulinguide**: visar de tolv stegen för att fylla en pod med insulin.
+* **Pausa insulinleverans** / **Återuppta insulinleverans**: pausar och startar insulinleveransen igen, se nedan.
+* **Kassera pod**: stoppar den aktuella podden så att en ny kan aktiveras.
 
-## Activating a patch
+## Aktivera en pod
 
-Before you start, make sure a **Profile** is active in **AAPS** and that Bluetooth is on. The patch must be activated within a limited time once it is switched on; if the time runs out, the patch raises a **Patch Application Timeout** alarm and cannot be used.
+Innan du börjar, se till att en **Profil** är aktiv i **AAPS** och att Bluetooth är på. Podden måste aktiveras inom en begränsad tid efter att den har slagits på. Om tiden går ut ger podden larmet **Tiden för att sätta på podden har gått ut** och kan inte användas.
 
-Press **Activate Patch** on the pump screen and follow the steps. You can cancel at any time before the needle is inserted; what you have entered is discarded.
+Tryck på **Aktivera pod** på pumpskärmen och följ stegen. Du kan avbryta när som helst innan nålen har satts in. Det du har angett försvinner då.
 
-### Select the insulin
+### Välj insulin
 
-Confirm the insulin you use. The patch requires rapid-acting U-100 insulin.
+Bekräfta vilket insulin du använder. Podden kräver snabbverkande U-100-insulin.
 
-### Fill the patch with insulin
+### Fyll podden med insulin
 
-Fill the patch with 50 to 300 U, considering how long you will wear it. Press **Insulin Guide** if you need the filling instructions. Then tap the fill amount and select the amount you filled; **AAPS** uses it to show the insulin remaining.
+Fyll podden med 50 till 300 U, med tanke på hur länge du ska bära den. Tryck på **Insulinguide** om du behöver instruktionerna för påfyllning. Tryck sedan på påfyllningsmängden och välj den mängd som du fyllde på. **AAPS** använder den för att visa hur mycket insulin som är kvar.
 
-### Connect the patch
+### Anslut podden
 
-1. Take the patch out of its blister and remove the needle cap.
-1. Press the power button of the patch for more than one second. After the beep, tap **Search Patch**.
-1. When the patch found is the right one, tap **Confirm**. Tap **Rescan** if it is not.
+1. Ta ut podden ur blisterförpackningen och ta av nålskyddet.
+1. Håll poddens strömknapp intryckt i mer än en sekund. Efter pipet, tryck på **Sök pod**.
+1. Om podden som hittades är rätt, tryck på **Bekräfta**. Tryck på **Sök igen** om den inte är det.
 
-### Safety check
+### Säkerhetskontroll
 
-Once the patch is connected, press **Safety Check**. The patch tests itself and primes. Check that a droplet of insulin has formed at the needle tip. If no droplet is visible, press **Retry**. When the check is complete, press **Next**.
+När podden är ansluten, tryck på **Säkerhetskontroll**. Podden testar sig själv och förfyller. Kontrollera att en insulindroppe har bildats på nålspetsen. Om ingen droppe syns, tryck på **Försök igen**. När kontrollen är klar, tryck på **Nästa**.
 
-### Site and patch attachment
+### Placering och fastsättning av podden
 
-1. Select the site where you will wear the patch.
-1. Clean the site thoroughly with an alcohol swab.
-1. Remove the backing tape and attach the patch to your skin with the marked dot facing upward.
-1. Press **Next** once the patch is attached.
+1. Välj platsen där du ska bära podden.
+1. Rengör platsen noga med en spritsudd.
+1. Ta bort skyddstejpen och fäst podden på huden med den markerade punkten uppåt.
+1. Tryck på **Nästa** när podden sitter fast.
 
-### Insert the needle
+### Sätt in nålen
 
-1. Turn the safety cap in the direction of the arrow and remove it.
-1. Press the applicator push button all the way down and hold it for 10 seconds. A beep sounds when the needle is inserted.
-1. Remove the applicator and press **Confirm Insertion**.
+1. Vrid säkerhetslocket i pilens riktning och ta bort det.
+1. Tryck ner applikatorns tryckknapp hela vägen och håll den intryckt i 10 sekunder. Ett pip hörs när nålen har satts in.
+1. Ta bort applikatorn och tryck på **Bekräfta insättning**.
 
-If the insertion fails, **AAPS** tells you how many attempts are left. When no attempt is left, the patch raises a **Needle Insertion Error** alarm and must be replaced.
+Om insättningen misslyckas visar **AAPS** hur många försök som är kvar. När inga försök är kvar ger podden larmet **Fel vid insättning av nål** och måste bytas.
 
-Insulin delivery starts as soon as the insertion is confirmed.
+Insulinleveransen startar så snart insättningen har bekräftats.
 
-## Bolus messages
+## Meddelanden om bolus
 
-If the patch refuses a bolus, **AAPS** tells you why. For example *Bolus can't be delivered. Bolus available: 2.8 U* means the patch can deliver only that amount now.
+Om podden vägrar en bolus visar **AAPS** varför. Till exempel betyder *Bolusdos kan inte levereras. Bolus tillgänglig: 2,8 U* att podden bara kan ge den mängden just nu.
 
-If you stop a bolus and the patch does not confirm the stop, **AAPS** waits for the bolus to end and records the amount the patch reports. If a bolus was not recorded (for example because it was stopped while it was running), **AAPS** adds it from the patch total and asks you to check IOB before you try again.
+Om du stoppar en bolus och podden inte bekräftar stoppet, väntar **AAPS** tills bolusen är slut och registrerar den mängd som podden rapporterar. Om en bolus inte registrerades (till exempel för att den stoppades medan den pågick), lägger **AAPS** till den utifrån poddens totala mängd och ber dig kontrollera IOB innan du försöker igen.
 
-## Suspending and resuming insulin delivery
+## Pausa och återuppta insulinleveransen
 
-Press **Suspend Infusion** on the pump screen and select how long delivery should pause: from 30 minutes to 4 hours in 30-minute steps. Delivery does not resume by itself: when the pause is over, the patch raises a **Start Insulin** alert. Press **Resume Infusion** on the pump screen, or **Start Insulin** on the alert, and confirm.
+Tryck på **Pausa insulinleverans** på pumpskärmen och välj hur länge leveransen ska pausas: från 30 minuter till 4 timmar i steg om 30 minuter. Leveransen startar inte igen av sig själv: när pausen är slut ger podden varningen **Starta insulin**. Tryck på **Återuppta insulinleverans** på pumpskärmen, eller **Starta insulin** i varningen, och bekräfta.
 
-## Discarding a patch
+## Kassera en pod
 
-Press **Discard Patch** on the pump screen and confirm. Insulin delivery stops and the patch can no longer be used. Remove the patch from your body and activate a new one.
+Tryck på **Kassera pod** på pumpskärmen och bekräfta. Insulinleveransen stoppas och podden kan inte användas längre. Ta bort podden från kroppen och aktivera en ny.
 
-When a critical alarm has stopped the patch, the alarm offers **Deactivate Patch** instead. Pressing it discards the patch the same way.
+När ett kritiskt larm har stoppat podden, erbjuder larmet i stället **Inaktivera pod**. Om du trycker på den kasseras podden på samma sätt.
 
 (carelevo-alarms-and-notifications)=
 
-## Alarms and notifications
+## Larm och aviseringar
 
-The patch reports three levels of events. All of them are shown as **AAPS** notifications.
+Podden rapporterar händelser på tre nivåer. Alla visas som aviseringar i **AAPS**.
 
-### Critical alarms
+### Kritiska larm
 
-Insulin delivery has stopped. Act now:
+Insulinleveransen har stoppats. Gör något direkt:
 
-* **Low Insulin**: less than 10 U remain. Deactivate the patch and change it.
-* **Patch Expired**: the patch reached the end of its life. Deactivate the patch and change it.
-* **Low Battery**: discard the patch and change it.
-* **High/Low Temperature**: move to a suitable temperature, between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
-* **Auto-Off**: the patch stopped because the Auto-Off alert was ignored. Press **Start Insulin** to restart basal delivery.
-* **Patch Application Timeout**, **Self-Diagnosis Failed**, **Patch Error**, **Occlusion** and **Needle Insertion Error**: deactivate the patch and change it.
+* **Lite insulin**: mindre än 10 U är kvar. Inaktivera podden och byt den.
+* **Podden har gått ut**: podden har nått slutet av sin livslängd. Inaktivera podden och byt den.
+* **Låg batterinivå**: kassera podden och byt den.
+* **Hög/låg temperatur**: gå till en lämplig temperatur, mellan 40 ℉ och 99 ℉ (4,4 ℃ och 37,2 ℃).
+* **Automatisk avstängning**: podden stoppade eftersom varningen Automatisk avstängning inte besvarades. Tryck på **Starta insulin** för att starta basalleveransen igen.
+* **Tiden för att sätta på podden har gått ut**, **Självtestet misslyckades**, **Fel i podden**, **Ocklusion** och **Fel vid insättning av nål**: inaktivera podden och byt den.
 
-### Alerts
+### Varningar
 
-Insulin delivery continues, but something needs your attention:
+Insulinleveransen fortsätter, men något behöver din uppmärksamhet:
 
-* **Low Insulin**: the reservoir reached the amount set in **Low Insulin Notification Setting**. Prepare to change the patch.
-* **Patch Will Expire Soon** and **Patch Operating Life Expired**: change the patch.
-* **Low Battery**: prepare to change the patch.
-* **High/Low Temperature**: delivery is paused until the patch is back between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
-* **Auto-Off**: tap **OK**. If ignored, the alert escalates to a critical alarm and delivery stops.
-* **Patch Activation Incomplete**: tap **OK** to complete the activation.
-* **Start Insulin**: the pause you set has ended. Tap **Start Insulin** to resume delivery.
-* **Turn Bluetooth On** and **BLE Not Connected**: the phone cannot reach the patch. Turn Bluetooth on or check the patch connection.
+* **Lite insulin**: reservoaren har nått mängden som är inställd i **Inställning för avisering om lite insulin**. Förbered byte av pod.
+* **Podden går snart ut** och **Poddens livslängd har gått ut**: byt pod.
+* **Låg batterinivå**: förbered byte av pod.
+* **Hög/låg temperatur**: leveransen pausas tills podden åter är mellan 40 ℉ och 99 ℉ (4,4 ℃ och 37,2 ℃).
+* **Automatisk avstängning**: tryck på **OK**. Om du inte gör det blir varningen ett kritiskt larm och leveransen stoppas.
+* **Aktiveringen av podden är inte klar**: tryck på **OK** för att slutföra aktiveringen.
+* **Starta insulin**: pausen som du ställde in är slut. Tryck på **Starta insulin** för att återuppta leveransen.
+* **Slå på Bluetooth** och **BLE inte ansluten**: telefonen når inte podden. Slå på Bluetooth eller kontrollera anslutningen till podden.
 
-### Notices
+### Meddelanden
 
-For information only: **Low Insulin**, **Patch Usage Time Notification** (the time set in **Patch Usage Notification Setting** has passed), **Patch Check Notification**, **Time Zone Change** and **Check Blood Glucose** (a set time after a bolus).
+Bara för information: **Lite insulin**, **Avisering om poddens användningstid** (tiden som är inställd i **Inställning för avisering om poddens användningstid** har passerat), **Avisering om kontroll av podden**, **Byte av tidszon** och **Kontrollera blodsockret** (en viss tid efter en bolus).
 
-The patch also reports when its own low glucose suspend (**LGS**) function starts or ends. **AAPS** does not use this function; the loop handles low glucose itself.
+Podden rapporterar också när dess egen funktion för paus vid lågt blodsocker (**LGS**) startar eller slutar. **AAPS** använder inte den här funktionen. Loopen hanterar lågt blodsocker själv.
 
-## Where to get help
+## Var du kan få hjälp
 
-Report problems with the CareLevo driver on the [AAPS GitHub issues page](https://github.com/nightscout/AndroidAPS/issues) or in the AAPS community channels, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Rapportera problem med drivrutinen för CareLevo på [sidan för GitHub-ärenden för AAPS](https://github.com/nightscout/AndroidAPS/issues) eller i AAPS-communityns kanaler, se [Var kan jag få hjälp?](../GettingHelp/WhereCanIGetHelp.md).
