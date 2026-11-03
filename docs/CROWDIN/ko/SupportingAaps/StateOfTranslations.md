@@ -1,26 +1,26 @@
-# State of translation for the app and the documentation
+# 앱과 문서의 번역 상태
 
-The state is once per hour updated and reflects only the state in Crowdin.
+상태는 1시간에 한 번 업데이트되며, Crowdin의 상태만 보여 줍니다.
 
 ```{tip}
-Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
-It's better to look only at the percentage level of translations to see if work is to be done.
+주의: 검수 비율은 항상 번역 비율보다 낮거나 같지만, Crowdin에서는 번역 비율 위에 겹쳐서 표시됩니다.
+해야 할 일이 있는지 보려면 번역 비율만 보는 것이 좋습니다.
 ```
 
 ```{admonition} needed time for final publication
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+Crowdin에서 번역한 뒤에는 매일 GitHub로 동기화가 예약되어 있어, 번역을 GitHub에 PR(pull request)로 보냅니다.
 
-The acceptance of the PR is a manual task which will be done as fast as possible.
+PR 승인은 사람이 직접 하며, 가능한 한 빨리 처리됩니다.
 ```
 
-## state app translation
+## 앱 번역 상태
 
-State of the **app** translations per language (country code, percentage translation, percentage proofreading).
+언어별 **앱** 번역 상태입니다(국가 코드, 번역 비율, 검수 비율).
 
-![state app translation](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
+![앱 번역 상태](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
-## state documentation translation
+## 문서 번역 상태
 
-State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
+언어별 **문서** 번역 상태입니다(국가 코드, 번역 비율, 검수 비율).
 
-![state documentation translation](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
+![문서 번역 상태](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
