@@ -107,7 +107,7 @@ Każdy, kto zobaczy kod QR, może odczytać Twój Nightscout, a kod, który paru
 
 #### PIN-em
 
-Dotknij **OK**: urządzenie pacjenta pokazuje 8-cyfrowy **PIN parowania** w dwóch grupach po cztery cyfry (na przykład `1234 5678`). Ten PIN jest **jednorazowy** i **wygasa po około dwóch minutach**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
+Dotknij **OK**: urządzenie pacjenta pokazuje 8-cyfrowy **PIN parowania** w dwóch grupach po cztery cyfry (na przykład `1234 5678`). Ten PIN jest **jednorazowy** i **wygasa po około dwóch minutach**. Tak jak przy kodzie QR, urządzenie pacjenta odrzuca nazwę urządzenia opiekuna, która jest już na jego liście: każde urządzenie opiekuna dostaje własny token Nightscout pod swoją nazwą.
 
 ![Ekran parowania na urządzeniu pacjenta z jednorazowym PIN-em (pokazany tu PIN już wygasł)](../images/v4/ClientMaster/pairing_pin_master.png)
 
@@ -303,7 +303,7 @@ W ustawieniach ta sama mała **ikona telefonu** oznacza pojedyncze ustawienia, k
 
 ```{admonition} The master must be online to change synced settings from a client
 :class: note
-Urządzenie pacjenta decyduje o zapisanej wartości, dlatego zmiana elementu konfiguracji sterowanego przez urządzenie pacjenta lub ustawienia dwukierunkowego z urządzenia opiekuna wymaga, aby urządzenie pacjenta było **osiągalne**. When the master is offline those controls are disabled on the client (see [When the master is offline](#clientmastercontrol-when-the-master-is-offline)).
+Urządzenie pacjenta decyduje o zapisanej wartości, dlatego zmiana elementu konfiguracji sterowanego przez urządzenie pacjenta lub ustawienia dwukierunkowego z urządzenia opiekuna wymaga, aby urządzenie pacjenta było **osiągalne**. Gdy urządzenie pacjenta jest offline, te elementy są wyłączone na urządzeniu opiekuna (zobacz [Gdy urządzenie pacjenta jest offline](#clientmastercontrol-when-the-master-is-offline)).
 ```
 
 ---
