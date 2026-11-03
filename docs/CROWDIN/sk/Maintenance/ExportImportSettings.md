@@ -1,6 +1,6 @@
 # Vytváranie a obnova záloh
 
-Keď si AAPS nainštalujete do telefónu, stane sa z neho „zdravotnícka pomôcka“, na ktorú sa každý deň spoliehate. Dôrazne sa odporúča mať núdzový záložný plán pre prípad, že sa váš telefón pokazí, bude ukradnutý alebo sa stratí. Therefore, it is essential to prepare by asking yourself: "What if?"
+Keď si AAPS nainštalujete do telefónu, stane sa z neho „zdravotnícka pomôcka“, na ktorú sa každý deň spoliehate. Dôrazne sa odporúča mať núdzový záložný plán pre prípad, že sa váš telefón pokazí, bude ukradnutý alebo sa stratí. Preto je nevyhnutné pripraviť sa a položiť si otázku: „Čo ak?“
 
 Aby ste mohli obnoviť AAPS do existujúceho alebo nového telefónu, je dôležité uchovávať nasledujúce položky na bezpečnom mieste (to znamená: nie v telefóne). Osvedčeným postupom je mať aspoň dve samostatné zálohy: na lokálnom pevnom disku, USB kľúči a (najlepšie) v cloudovom úložisku, napríklad na Disku Google alebo v Microsoft 365 OneDrive. Ak zálohy uložíte do cloudu, budete mať všetko potrebné vždy dostupné z telefónu a nastavenie obnovíte kdekoľvek a kedykoľvek.
 
@@ -8,7 +8,7 @@ Zvážte zaobstaranie druhého, záložného telefónu a vyskúšajte si na ňom
 
 ```{admonition} Android backups and phone-transfer tools do not carry your AAPS settings
 :class: warning
-Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and they are left out of the Google backup and of the phone-to-phone transfer of a new phone. A settings export, as described on this page, is the only way to carry them over.
+Od **AAPS** 4.0 sa nastavenia ukladajú v telefóne do šifrovaného úložiska a nie sú súčasťou zálohy Google ani prenosu dát zo starého telefónu do nového. Export nastavení, ako je opísaný na tejto stránke, je jediný spôsob, ako ich preniesť.
 ```
 
 Na obnovu je dôležité mať poruke tieto položky:
@@ -59,11 +59,11 @@ Export nastavení AAPS do súboru vám umožní obnoviť konfiguráciu do stavu 
 
 * Vždy, keď plánujete väčšie zmeny v konfigurácii (zmena nastavení SMB, zmena typu inzulínu, zmena pumpy, zmeny v automatizáciách), by ste mali zálohovať svoje **Nastavenia** pred zmenami aj po nich. Takto máte svoje najnovšie nastavenia a aj kópiu nastavení spred zmien, ak by ste sa k nim potrebovali vrátiť.
 
-* Tubeless pumps (Such as Omnipod and Medtrum) users only: the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. Ak nemáte kópiu nastavení exportovanú po spustení aktuálneho podu, pri výmene telefónu budete musieť spustiť nový pod.
+* Iba pre používateľov púmp bez hadičky (napríklad Omnipod a Medtrum): súbor **Nastavenia** obsahuje údaje o pripojení k vášmu aktuálnemu podu a možno ho použiť na obnovenie pripojenia k tomuto podu v novom telefóne. Ak nemáte kópiu nastavení exportovanú po spustení aktuálneho podu, pri výmene telefónu budete musieť spustiť nový pod.
 
 **Ako zálohovať ručne:**
 
-1. If this is your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). Nastavte heslo a zapíšte si ho na bezpečné miesto. _Bez tohto hesla nebudete mať prístup k zálohám svojich **Nastavení**._
+1. Ak importujete alebo exportujete **Nastavenia** prvýkrát, musíte nastaviť hlavné heslo v [Nastavenia > Ochrana](#Preferences-master-password). Nastavte heslo a zapíšte si ho na bezpečné miesto. _Bez tohto hesla nebudete mať prístup k zálohám svojich **Nastavení**._
 
 2. Na hlavnej obrazovke **AAPS** otvorte **ponuku** (☰) > **Údržba**. Pomocou štítkov **Lokálne** a **Cloud** vedľa položky **Exportovať nastavenia** zvoľte, kam sa súbor uloží (pozrite **Export alebo import nastavení** nižšie), a potom ťuknite na **Exportovať nastavenia**. **AAPS** ukáže, kam sa súbor uloží: pri voľbe **Lokálne** názov súboru, pri voľbe **Cloud** **Disk Google**. Ťuknite na **OK**.
 
@@ -105,11 +105,11 @@ Ak chcete exportovať alebo importovať nastavenia, otvorte **ponuku** (☰) a v
 (ExportImportSettings-Automating-Settings-Export)=
 ### Automatický export nastavení
 
-To automate settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
+Ak chcete exporty nastavení automatizovať [(**pozrite Automatizácia**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export), otvorte [**Nastavenia** > **Údržba**](#preferences-maintenance-settings), rozbaľte **Automatický export nastavení** a zapnite **Povoliť automatický export nastavení**.
 
 Teraz môžete nastaviť [Automatizáciu](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export), aby exportovala nastavenia buď pravidelne (_napr._ každý týždeň), alebo po výmene podu.
 
-_**Note:** On importing settings, the user always needs to enter the AAPS master password!_
+_**Poznámka:** Pri importe nastavení musí používateľ vždy zadať hlavné heslo AAPS!_
 
 ![Nastavenia > Údržba > Automatický export nastavení s prepínačom Povoliť automatický export nastavení](../images/Maintenance/settings_unattended_export.png)
 
@@ -152,7 +152,7 @@ Import v predvolenom stave nemení nastavenia pumpy: pumpa vybraná v **Konfigur
 
 3. Ukončite Sprievodcu nastavením. Importujeme všetky potrebné nastavenia zo záložnej kópie **Nastavení**
 
-4. From the **AAPS** main screen press **Grant** and allow all permissions listed in the **Permissions Required** panel on the top
+4. Na hlavnej obrazovke **AAPS** stlačte **Povoliť** a povoľte všetky povolenia uvedené v paneli **Požadované povolenia** hore
 
 5. Na hlavnej obrazovke **AAPS** nastavte v [Nastavenia > Ochrana](#Preferences-master-password) hlavné heslo na to isté heslo, ktoré ste použili pri zálohách.
 
@@ -176,7 +176,7 @@ Import v predvolenom stave nemení nastavenia pumpy: pumpa vybraná v **Konfigur
 
 12. **AAPS** sa spýta **Použiť importované nastavenia?** a oznámi vám, koľko nastavení sa zmení, a ak ste políčko nechali nezaškrtnuté, koľko nastavení pumpy sa zachová. Zatiaľ sa nič nezapísalo, takže **Zrušiť** ponechá váš telefón presne v pôvodnom stave. Ťuknutím na **OK** nastavenia použijete.
 
-    ![Apply imported settings dialog](../images/Maintenance/import_settings_apply.png)
+    ![Dialóg Použiť importované nastavenia?](../images/Maintenance/import_settings_apply.png)
 
 13. **AAPS** použije importované nastavenia okamžite, bez reštartu. Reštartujú sa iba pluginy, ktorých nastavenia sa zmenili. Počas tohto procesu **AAPS** zobrazuje **Používa sa nastavenie…**; ak je pumpa zaneprázdnená, zobrazí **Čakanie na pumpu…** a nastavenia použije, keď bude pumpa voľná. Ak je pumpa zaneprázdnená aj po jednej minúte, **AAPS** ponúkne nový pokus. Správa **Nastavenia boli použité** potvrdí, že sa používajú importované nastavenia. Každé ošetrenie, ktoré ste zaradili do frontu počas importu, sa zahodí a **AAPS** vám oznámi, že bolo zrušené, takže sa nič nepošle do pumpy dvakrát.
 
