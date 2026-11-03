@@ -6,93 +6,93 @@ tocdepth: 1
 
 ## October 2026
 
-- [Browser build with AAPS Builder](#aaps-builder): build workflow version 8, now maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository. Setting up is one step shorter: [step 1](#aaps-builder-step1) of the [setup page](#aaps-builder-setup) creates your private repository as a copy of that repository, with the build workflow already in it, so there is no workflow to add any more. From now on the build steps are updated for you: your repository runs the version released by the AAPS developers at every build, without any change on your side (and still no automatic build). The build itself does not change, and your existing repository keeps working. To get these automatic updates, replace your `.github/workflows/build.yml` once as explained in [Updating AAPS](#aaps-builder-updates). Your `KEYSTORE_SET` secret stays as it is. The optional [Google Drive step](#aaps-builder-google-drive) now works on the setup page itself, on a phone or a computer: no preparation file needed @psonnera
-- [Smartwatches and AAPS](#watches-external-companion-apps): the **Samsung Tizen** section becomes **External Companion Apps** and lists the apps that read the **AAPS** broadcast (WatchDrip+, GlucoDataHandler, G-Watch). [WatchDrip+](#watches-xiaomi-amazfit) 0.5 and later connect directly to **AAPS** without xDrip+: setup steps added, also summarized in [Configuration](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) and [Remote monitoring](../RemoteFeatures/RemoteMonitoring.md). Bluejay watches: GTS discontinued, current model updated @psonnera
-- [Browser build with AAPS Builder](#aaps-builder): build workflow version 6. The build steps now use exact, reviewed versions of GitHub's tools and build machine, and the build explains clearly when the wrong text was pasted into the `KEYSTORE_SET` secret. The [setup page](#aaps-builder-setup) is now part of the documentation and translated, checks your GitHub username, and has clearer help for the secret, "Page not found" (404) and the GitHub app. If your `.github/workflows/build.yml` says version 5 or earlier, replace it as explained in [Updating AAPS](#aaps-builder-updates) @psonnera
-- [AAPS web installer](#web-installer): now a documentation page, translated like the others. The old address still works @psonnera
-- [Browser build with AAPS Builder](#aaps-builder): build workflow version 3 adds the `aapsclient3Release` variant (**AAPSClient3**, AAPS 4.0 and later). To build it, replace your `.github/workflows/build.yml` as explained in [Updating AAPS](#aaps-builder-updates) @psonnera
-- [Dexcom G7](../CompatibleCgms/DexcomG7.md): removed the patched Dexcom G7 app (DiaKEM), which no longer works for new installs @psonnera
-- [Browser build with AAPS Builder](#aaps-builder): build workflow version 2. Automatic weekly builds are removed (no schedule, no `AUTO_BUILD` / `AUTO_VARIANT` variables, no `built/…` tags): every build is started by you, with the version and variant you choose, and the workflow only has read access to your repository. If your `.github/workflows/build.yml` says version 1, replace it as explained in [Updating AAPS](#aaps-builder-updates). Added screenshots for every step @psonnera
-- [Browser build with AAPS Builder](#aaps-builder): the build workflow is now part of this documentation. No template repository: you create an empty private repository and add the workflow from the setup page (new step 2). The workflow no longer checks an outside repository for updates. If you created your repository from the earlier template, replace `.github/workflows/build.yml` with the workflow from the setup page as explained in [Updating AAPS](#aaps-builder-updates) @psonnera
-- New page [Browser build with AAPS Builder](#aaps-builder): build AAPS from an Android phone with a setup page hosted on this site, with automatic weekly builds and no preparation file. It replaces the Android instructions of the browser build (File Manager Plus pages removed). AAPS Builder created by @dio99, docs @psonnera
+- [AAPS Builder ile tarayıcıda oluşturma](#aaps-builder): oluşturma iş akışı sürüm 8, artık AAPS geliştiricileri tarafından [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) deposunda sürdürülüyor. Kurulum bir adım daha kısa: [kurulum sayfasının](#aaps-builder-setup) [1. adımı](#aaps-builder-step1), özel deponuzu o deponun bir kopyası olarak, oluşturma iş akışı içinde hazır şekilde oluşturur. Bu nedenle artık eklenecek bir iş akışı yoktur. Bundan sonra oluşturma adımları sizin için güncellenir: deponuz her oluşturmada AAPS geliştiricilerinin yayınladığı sürümü çalıştırır, sizin tarafınızda hiçbir değişiklik gerekmez (ve hâlâ otomatik oluşturma yoktur). Oluşturmanın kendisi değişmez ve mevcut deponuz çalışmaya devam eder. Bu otomatik güncellemeleri almak için `.github/workflows/build.yml` dosyanızı [AAPS'i güncelleme](#aaps-builder-updates) bölümünde anlatıldığı gibi bir kez değiştirin. `KEYSTORE_SET` secret'ınız olduğu gibi kalır. İsteğe bağlı [Google Drive adımı](#aaps-builder-google-drive) artık kurulum sayfasının kendisinde, telefonda veya bilgisayarda çalışıyor: hazırlık dosyası gerekmez @psonnera
+- [Akıllı saatler ve AAPS](#watches-external-companion-apps): **Samsung Tizen** bölümü **Harici yardımcı uygulamalar** oldu ve **AAPS** yayınını okuyan uygulamaları listeliyor (WatchDrip+, GlucoDataHandler, G-Watch). [WatchDrip+](#watches-xiaomi-amazfit) 0.5 ve sonrası, xDrip+ olmadan doğrudan **AAPS**'e bağlanır: kurulum adımları eklendi, ayrıca [Konfigürasyon](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) ve [Uzaktan İzleme](../RemoteFeatures/RemoteMonitoring.md) sayfalarında özetlendi. Bluejay saatleri: GTS artık üretilmiyor, güncel model güncellendi @psonnera
+- [AAPS Builder ile tarayıcıda oluşturma](#aaps-builder): oluşturma iş akışı sürüm 6. Oluşturma adımları artık GitHub araçlarının ve oluşturma makinesinin tam, incelenmiş sürümlerini kullanır. `KEYSTORE_SET` secret'ına yanlış metin yapıştırıldığında oluşturma bunu açıkça bildirir. [Kurulum sayfası](#aaps-builder-setup) artık dokümantasyonun bir parçası ve çevriliyor. GitHub kullanıcı adınızı kontrol ediyor ve secret, "Page not found" (404) ve GitHub uygulaması için daha açık yardım içeriyor. `.github/workflows/build.yml` dosyanızda sürüm 5 veya daha eskisi yazıyorsa, dosyayı [AAPS'i güncelleme](#aaps-builder-updates) bölümünde anlatıldığı gibi değiştirin @psonnera
+- [AAPS web yükleyicisi](#web-installer): artık diğerleri gibi çevrilen bir doküman sayfası. Eski adres hâlâ çalışıyor @psonnera
+- [AAPS Builder ile tarayıcıda oluşturma](#aaps-builder): oluşturma iş akışı sürüm 3, `aapsclient3Release` varyantını ekler (**AAPSClient3**, AAPS 4.0 ve sonrası). Bunu oluşturmak için `.github/workflows/build.yml` dosyanızı [AAPS'i güncelleme](#aaps-builder-updates) bölümünde anlatıldığı gibi değiştirin @psonnera
+- [Dexcom G7](../CompatibleCgms/DexcomG7.md): yeni kurulumlarda artık çalışmayan yamalı Dexcom G7 uygulaması (DiaKEM) kaldırıldı @psonnera
+- [AAPS Builder ile tarayıcıda oluşturma](#aaps-builder): oluşturma iş akışı sürüm 2. Otomatik haftalık oluşturmalar kaldırıldı (zamanlama yok, `AUTO_BUILD` / `AUTO_VARIANT` değişkenleri yok, `built/…` etiketleri yok): her oluşturmayı seçtiğiniz sürüm ve varyantla siz başlatırsınız ve iş akışının deponuzda yalnızca okuma erişimi vardır. `.github/workflows/build.yml` dosyanızda sürüm 1 yazıyorsa, dosyayı [AAPS'i güncelleme](#aaps-builder-updates) bölümünde anlatıldığı gibi değiştirin. Her adım için ekran görüntüleri eklendi @psonnera
+- [AAPS Builder ile tarayıcıda oluşturma](#aaps-builder): oluşturma iş akışı artık bu dokümantasyonun bir parçası. Şablon depo yok: boş bir özel depo oluşturursunuz ve iş akışını kurulum sayfasından eklersiniz (yeni 2. adım). İş akışı artık güncellemeler için dışarıdaki bir depoyu kontrol etmiyor. Deponuzu önceki şablondan oluşturduysanız, `.github/workflows/build.yml` dosyasını [AAPS'i güncelleme](#aaps-builder-updates) bölümünde anlatıldığı gibi kurulum sayfasındaki iş akışıyla değiştirin @psonnera
+- Yeni sayfa [AAPS Builder ile tarayıcıda oluşturma](#aaps-builder): AAPS'i bir Android telefondan, bu sitede barındırılan bir kurulum sayfasıyla oluşturun. Otomatik haftalık oluşturma vardır ve hazırlık dosyası gerekmez. Tarayıcı ile oluşturmanın Android talimatlarının yerini alır (File Manager Plus sayfaları kaldırıldı). AAPS Builder'ı @dio99 oluşturdu, dokümanlar @psonnera
 
-## August 2026
+## Ağustos 2026
 
-- [Transferring and Installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md): merged the *Android developer verification* page into the installation guide, added the [web installer](#android-developer-verification-web) (install the APK straight from the browser, exempt from verification) and wireless ADB @psonnera
+- [AAPS'i aktarma ve yükleme](../SettingUpAaps/TransferringAndInstallingAaps.md): *Android geliştirici doğrulaması* sayfası kurulum kılavuzuyla birleştirildi, [web yükleyicisi](#android-developer-verification-web) (APK'yı doğrudan tarayıcıdan yükleme, doğrulamadan muaf) ve kablosuz ADB eklendi @psonnera
 
-## July 2026
+## Temmuz 2026
 
-- [Introduction](../Getting-Started/Introduction.md): accuracy review of the APS section. Corrected the Frontiers citation title and link, reframed it as background rather than a current market guide, updated the dual-hormone and full closed loop statements, clarified that the controller is not always a phone app, removed commercial brand names and unsourced user counts, and fixed OS-AID to *Open-Source Automated Insulin Delivery* @psonnera
-- [Glossary](../UsefulLinks/Glossary.md): added **AID**, **FCL**, **HCL** and **OS-AID** entries, cross-linked from **APS** and **Closed Loop** @psonnera
-- New page [Android developer verification](#android-developer-verification): impact of Google's upcoming verification requirement on installing self-built apps, with free installation methods (ADB, advanced flow, limited distribution account) @psonnera
+- [Giriş](../Getting-Started/Introduction.md): APS bölümünün doğruluk incelemesi. Frontiers kaynağının başlığı ve bağlantısı düzeltildi; güncel bir pazar rehberi olarak değil, arka plan bilgisi olarak sunuldu. Çift hormonlu sistem ve tam kapalı döngü ifadeleri güncellendi, kontrol biriminin her zaman bir telefon uygulaması olmadığı açıklandı, ticari marka adları ve kaynaksız kullanıcı sayıları kaldırıldı ve OS-AID, *Open-Source Automated Insulin Delivery* olarak düzeltildi @psonnera
+- [Sözlük](../UsefulLinks/Glossary.md): **AID**, **FCL**, **HCL** ve **OS-AID** girdileri eklendi, **APS** ve **Closed Loop** girdilerinden bağlantı verildi @psonnera
+- Yeni sayfa [Android geliştirici doğrulaması](#android-developer-verification): Google'ın yaklaşan doğrulama zorunluluğunun kendi oluşturduğunuz uygulamaları yüklemeye etkisi ve ücretsiz yükleme yöntemleri (ADB, gelişmiş akış, sınırlı dağıtım hesabı) @psonnera
 
 ## June 2026
 
-- [Browser Build](#browser-build): restructured into a decision-first, multi-page flow (Fork → keystore Option 1/Option 2 with a dedicated page per device → Google Drive → Build → Troubleshooting); removed nested tabs and made installing File Manager Plus a prominent step @psonnera
-- [Introduction](../Getting-Started/Introduction.md): terminology switched from *DIY* to *OS-AID* (Open-Source Automated Insulin Delivery), added Trio and Stelo, updated pump/CGM compatibility table @tmhastings
+- [Tarayıcı ile oluşturma](#browser-build): önce karar verilen, çok sayfalı bir akışa dönüştürüldü (Fork → anahtar deposu Seçenek 1/Seçenek 2, her cihaz için ayrı sayfa → Google Drive → Oluşturma → Sorun giderme); iç içe sekmeler kaldırıldı ve File Manager Plus kurulumu belirgin bir adım yapıldı @psonnera
+- [Giriş](../Getting-Started/Introduction.md): terim *DIY* yerine *OS-AID* (Open-Source Automated Insulin Delivery) olarak değiştirildi, Trio ve Stelo eklendi, pompa/CGM uyumluluk tablosu güncellendi @tmhastings
 
 ## March 2026
 
-- [Add CLI Build option](../SettingUpAaps/CLIBuild.md) @je-l
-- Rename *Computer Build* to *Android Studio Build*. Preserve file names for URLs.
+- [Komut satırı ile oluşturma seçeneği eklendi](../SettingUpAaps/CLIBuild.md) @je-l
+- *Bilgisayarda oluşturma (Computer Build)* adı *Android Studio ile oluşturma (Android Studio Build)* olarak değiştirildi. URL'ler için dosya adları korundu.
 
 ## January 2025
 
-- [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
-- CGM list update. Dexcom G5, Tomato, Glimp removed.
-- [Site rotation UI](#Aapsscreens-site-rotation)
+- [3.4](#version3400) sürümü ve toplu doküman güncellemesi (Sihirbaz, Android Studio ile oluşturma sürümleri, Konfigürasyon)
+- CGM listesi güncellendi. Dexcom G5, Tomato, Glimp kaldırıldı.
+- [Bölge rotasyonu arayüzü](#Aapsscreens-site-rotation)
 - [Running mode](#AapsScreens-running-mode)
-- [Autotune](../AdvancedOptions/Autotune.md)
+- [OtoAyar](../AdvancedOptions/Autotune.md)
 
 ## December 2025
 
-- [Profile tuning](../GettingHelp/ProfileTuning.md) from @robrub
+- @robrub tarafından [profil ayarlama](../GettingHelp/ProfileTuning.md)
 
 ## October 2025
 
-- DiaKEM: new installs don't work after servers upgrade @psonnera
-- Removed Libre 2 patched app (obsolete): doesn't work with new sensors @psonnera
-- Reworked Omnipod DASH page @XiTatiON
+- DiaKEM: sunucu güncellemesinden sonra yeni kurulumlar çalışmıyor @psonnera
+- Yamalı Libre 2 uygulaması kaldırıldı (artık kullanılmıyor): yeni sensörlerle çalışmaz @psonnera
+- Omnipod DASH sayfası yeniden düzenlendi @XiTatiON
 
 ## August 2025
 
-- Updated versions and Android Studio prerequisites
-- Added [3.3.2.1](#version3321) release, removed Android 16 references (fixed)
-- Added [Browser Build](#browser-build) @Angus
+- Sürümler ve Android Studio ön gereksinimleri güncellendi
+- [3.3.2.1](#version3321) sürümü eklendi, Android 16 ile ilgili notlar kaldırıldı (düzeltildi)
+- [Tarayıcı ile oluşturma](#browser-build) eklendi @Angus
 
 ## May 2025
 
-- Added [3.2.0.4 upgrade page](#update-aaps-3204) @psonnera
+- [3.2.0.4 güncelleme sayfası](#update-aaps-3204) eklendi @psonnera
 
 ## January 2025
 
-- Quick wizard [long press feature](#Preferences-quick-wizard) @emilise
-- [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) page rewritten @emilise
+- Hızlı Asistan [uzun basma özelliği](#Preferences-quick-wizard) @emilise
+- [Dinamik İDF](../DailyLifeWithAaps/DynamicISF.md) sayfası yeniden yazıldı @emilise
 
 ## December 2024
 
-- Documentation of [3.3 version](#version3300) @emilise
+- [3.3 sürümünün](#version3300) dokümantasyonu @emilise
 
 ## November 2024
 
-- Update of [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) @emilise
-- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnera
+- [AAPS profiliniz](../SettingUpAaps/YourAapsProfile.md) güncellendi @emilise
+- [Wear OS akıllı saatler](../WearOS/BuildingAapsWearOS.md) içeriği yeniden düzenlendi @psonnera
 
 ## October 2024
 
-- Update of several pages:
-  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../Getting-Started/ComponentOverview.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
-  - [COB Calculation](../DailyLifeWithAaps/CobCalculation.md), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
-- [Building instructions for Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
-- Technical work (deployment process for the documentation, files organization...) @psonnera & @emilise
+- Birkaç sayfa güncellendi:
+  - [Ne kadar sürer](#preparing-how-long-will-it-take), [Bileşenlere Genel Bakış](../Getting-Started/ComponentOverview.md), [Görevleri tamamlama](../SettingUpAaps/CompletingTheObjectives.md), [AAPS profiliniz](../SettingUpAaps/YourAapsProfile.md), [Konfigürasyon](../SettingUpAaps/ConfigBuilder.md) & [Tercihler](../SettingUpAaps/Preferences.md), [AAPS ekranları](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [AKRB hesaplaması](../DailyLifeWithAaps/CobCalculation.md), [Dinamik İDF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
+- [Android Studio Ladybug için oluşturma talimatları](../SettingUpAaps/BuildingAaps.md) @tanja
+- Teknik çalışma (dokümantasyonun yayınlama süreci, dosya düzeni...) @psonnera & @emilise
 
 ***
 
-Missing history from March 2022 to September 2024
+Mart 2022 ile Eylül 2024 arasındaki geçmiş eksik
 
-With 3.2 rework, some obsolete information was removed. You can find it in the previous documentation version:
+3.2 sürümündeki yeniden düzenleme ile bazı eski bilgiler kaldırıldı. Bu bilgileri önceki doküman sürümünde bulabilirsiniz:
 
-AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/3.1/index.html).
+AAPS 3.1 dokümantasyonu [burada](https://androidaps.readthedocs.io/en/3.1/index.html) bulunabilir.
 
 ***
 
