@@ -1,262 +1,262 @@
 (aaps-builder-setup)=
 
-# AAPS Builder setup page
+# AAPS Builder 설정 페이지
 
-Build your own **AAPS** app in GitHub. No programs to install, no terminal. Takes about 10 minutes the first time, then you start each build yourself.
+GitHub에서 자신의 **AAPS** 앱을 빌드하십시오. 설치할 프로그램도, 터미널도 필요 없습니다. 처음에는 약 10분이 걸리고, 그 후에는 각 빌드를 직접 시작합니다.
 
-Each step is explained in more detail, with screenshots, in [Browser build with AAPS Builder](#aaps-builder). Keep that page open in another tab.
+각 단계는 [AAPS Builder로 브라우저 빌드](#aaps-builder)에서 스크린샷과 함께 더 자세히 설명되어 있습니다. 그 페이지를 다른 탭에 열어 두십시오.
 
-The buttons below open GitHub in a new Chrome tab. To come back to this page, tap the tab button next to Chrome's address bar (the square with a number) and choose this page.
+아래 버튼은 새 Chrome 탭에서 GitHub를 엽니다. 이 페이지로 돌아오려면 Chrome 주소창 옆의 탭 버튼(숫자가 있는 사각형)을 누르고 이 페이지를 선택하십시오.
 
 (aaps-builder-setup-step1)=
 
-## Step 1 – Create your private build repository
+## 1단계 – 비공개 빌드 저장소 만들기
 
-This creates your own private copy of AAPS Builder in your GitHub account: a repository with the build workflow already in it. Only you can see it and the apps it builds. You do **not** need to fork AndroidAPS: the AAPS source code is downloaded from the official AndroidAPS repository at every build.
+이 단계는 GitHub 계정에 AAPS Builder의 개인 비공개 복사본을 만듭니다: 빌드 워크플로가 이미 들어 있는 저장소입니다. 이 저장소와 이 저장소가 빌드하는 앱은 본인만 볼 수 있습니다. AndroidAPS를 fork할 필요가 **없습니다**: AAPS 소스 코드는 빌드할 때마다 공식 AndroidAPS 저장소에서 다운로드됩니다.
 
-<label class="aapsb-label" for="aapsb-user">Your GitHub username</label>
+<label class="aapsb-label" for="aapsb-user">Your GitHub username (GitHub 사용자 이름)</label>
 <input class="aapsb-input" type="text" id="aapsb-user" autocomplete="username" spellcheck="false" placeholder="my-github-name" />
 <span class="aapsb-msg" id="aapsb-userMsg"></span>
 
-First log in to github.com in this browser (no account? create one for free). Then come back here. Use your username (shown in your GitHub profile), not your e-mail: the page asks GitHub whether this username exists.
+먼저 이 브라우저에서 github.com에 로그인하십시오(계정이 없습니까? 무료로 만드십시오). 그런 다음 이 페이지로 돌아오십시오. 이메일이 아니라 사용자 이름(GitHub 프로필에 표시됨)을 사용하십시오: 이 페이지는 GitHub에 이 사용자 이름이 있는지 확인합니다.
 
-<label class="aapsb-label" for="aapsb-repo">Name of your repository</label>
+<label class="aapsb-label" for="aapsb-repo">Name of your repository (저장소 이름)</label>
 <input class="aapsb-input" type="text" id="aapsb-repo" spellcheck="false" placeholder="my-aaps" />
 
-Keep the suggestion. Already created your repository with another name? Type that exact name here.
+제안된 이름을 그대로 두십시오. 이미 다른 이름으로 저장소를 만들었습니까? 그 이름을 여기에 정확히 입력하십시오.
 
 ```{note}
-**Already have an AAPS Builder repository** (made with an earlier version of this page)? Do not create a new one: type its exact name here, skip the button below, and update its workflow once: see **Updating your copy** at the end of this step. Your secrets stay as they are.
+**이미 AAPS Builder 저장소가 있습니까**(이 페이지의 이전 버전으로 만든 저장소)? 새로 만들지 마십시오: 그 저장소의 이름을 여기에 정확히 입력하고, 아래 버튼은 건너뛴 다음, 워크플로를 한 번 업데이트하십시오: 이 단계 끝의 **Updating your copy**(복사본 업데이트)를 참조하십시오. secret은 그대로 유지됩니다.
 
-If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 2.
+그래도 새 저장소를 원하면 아직 없는 이름(예: `my-aaps-2`)을 정하고, 2단계에서 같은 키 저장소를 사용하십시오.
 
-Do not type the name of your fork of AndroidAPS: a fork is public, and it already builds with its own **AAPS CI** workflow.
+AndroidAPS의 fork 이름을 입력하지 마십시오: fork는 공개되어 있으며, 이미 자체 **AAPS CI** 워크플로로 빌드합니다.
 ```
 
-Your repository: <code class="aapsb-repoUrl"></code>
+Your repository (내 저장소): <code class="aapsb-repoUrl"></code>
 
-Check this name before you use the buttons below: the page remembers the name from your last visit.
+아래 버튼을 사용하기 전에 이 이름을 확인하십시오: 이 페이지는 마지막 방문 때의 이름을 기억합니다.
 
-<a class="aapsb-btn" id="aapsb-createRepo" target="_blank" rel="noopener">Create my private repository</a>
+<a class="aapsb-btn" id="aapsb-createRepo" target="_blank" rel="noopener">Create my private repository (내 비공개 저장소 만들기)</a>
 
-On the GitHub page that opens, everything is already filled in: the template `nightscout/aaps-builder`, your account as owner, the name of your repository, and **Private**. Do not change anything, and leave **Include all branches** unticked.
+열리는 GitHub 페이지에는 모든 것이 이미 입력되어 있습니다: 템플릿 `nightscout/aaps-builder`, 소유자인 본인 계정, 저장소 이름, 그리고 **Private**(비공개). 아무것도 바꾸지 말고, **Include all branches**(모든 브랜치 포함)는 체크하지 않은 상태로 두십시오.
 
-1. Click the green **Create repository** button.
-2. GitHub shows your new repository with a folder `.github` and a file `README.md`: the build workflow is in it. Come back to this page for step 2.
+1. 초록색 **Create repository**(저장소 만들기) 버튼을 클릭하십시오.
+2. GitHub에 `.github` 폴더와 `README.md` 파일이 있는 새 저장소가 표시됩니다: 빌드 워크플로가 그 안에 있습니다. 2단계를 위해 이 페이지로 돌아오십시오.
 
 ```{admonition} Your new repository is empty (no files)?
 :class: warning
 
-It was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** again.
+저장소가 템플릿으로 만들어지지 않았습니다. 저장소를 삭제하고(**Settings** → 페이지 맨 아래 → **Delete this repository**(이 저장소 삭제)), **Create my private repository**를 다시 누르십시오.
 ```
 
 ```{admonition} Updating your copy (existing AAPS Builder repository)
 :class: dropdown
 
-The build steps are updated for you: at every build, your repository runs the version released by the AAPS developers in nightscout/aaps-builder, and nothing in your repository changes. You only replace your workflow file when [Docs updates & changes](../Maintenance/DocumentationUpdate.md) announces it (for example for a new build variant), or once if your repository was made with an earlier version of this page or from the old template. Your `KEYSTORE_SET` secret stays as it is.
+빌드 단계는 자동으로 업데이트됩니다: 빌드할 때마다 저장소는 AAPS 개발자가 nightscout/aaps-builder에 공개한 버전을 실행하며, 저장소의 내용은 바뀌지 않습니다. 워크플로 파일은 [문서 업데이트 및 변경 사항](../Maintenance/DocumentationUpdate.md)에서 알릴 때(예: 새 빌드 변형이 추가될 때)만 바꾸면 됩니다. 저장소를 이 페이지의 이전 버전이나 이전 템플릿으로 만든 경우에는 한 번 바꾸십시오. `KEYSTORE_SET` secret은 그대로 유지됩니다.
 
-1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow</a>
+1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow (최신 워크플로 열기)</a>
 
-   On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">plain-text version</a> instead, press and hold the text → **Select all** → **Copy**.
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
+   컴퓨터에서는 파일 오른쪽 위의 **copy icon**(복사 아이콘, "Copy raw file")을 클릭하십시오. 휴대폰에서는 대신 <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">일반 텍스트 버전</a>을 열고, 텍스트를 길게 누른 다음 → **Select all**(모두 선택) → **Copy**(복사)를 누르십시오.
+2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file (내 워크플로 파일 열기)</a>
 
-   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code> for editing.
-3. Replace the whole text with the copied workflow (on a phone: press and hold → **Select all** → **Paste**), then click **Commit changes…** twice. The first line of the file shows its version.
+   <code class="aapsb-repoUrl"></code>의 `.github/workflows/build.yml`을 편집할 수 있게 엽니다.
+3. 전체 텍스트를 복사한 워크플로로 바꾸고(휴대폰에서는: 길게 누르기 → **Select all** → **Paste**(붙여넣기)), **Commit changes…**(변경 사항 커밋)를 두 번 클릭하십시오. 파일의 첫 줄에 버전이 표시됩니다.
 ```
 
 (aaps-builder-setup-step2)=
 
-## Step 2 – Your signing key
+## 2단계 – 서명 키
 
-The app must be signed with your own key. Always use the same key, otherwise you have to uninstall AAPS (and lose its settings) to update. Choose one of the two tabs.
+앱은 반드시 자신의 키로 서명해야 합니다. 항상 같은 키를 사용하십시오. 다른 키를 사용하면 업데이트하기 위해 AAPS를 삭제해야 하고, AAPS의 설정도 잃게 됩니다. 두 탭 중 하나를 선택하십시오.
 
 `````{tab-set}
 
-````{tab-item} I already have a keystore
-For example from Android Studio (.jks).
+````{tab-item} I already have a keystore (이미 키 저장소가 있음)
+예: Android Studio에서 만든 키 저장소(.jks).
 
-<label class="aapsb-label" for="aapsb-ksFile">Keystore file</label>
+<label class="aapsb-label" for="aapsb-ksFile">Keystore file (키 저장소 파일)</label>
 <input type="file" id="aapsb-ksFile" accept=".jks,.keystore,.p12,.pfx,application/octet-stream">
 
-<label class="aapsb-label" for="aapsb-ksPass">Keystore password</label>
+<label class="aapsb-label" for="aapsb-ksPass">Keystore password (키 저장소 비밀번호)</label>
 <input class="aapsb-input" type="password" id="aapsb-ksPass" autocomplete="off">
 
-<label class="aapsb-label" for="aapsb-ksAlias">Key alias</label>
+<label class="aapsb-label" for="aapsb-ksAlias">Key alias (키 별칭)</label>
 <select class="aapsb-input" id="aapsb-ksAliasSel" hidden></select>
 <input class="aapsb-input" type="text" id="aapsb-ksAlias" autocomplete="off" spellcheck="false" placeholder="key0">
 
-<label class="aapsb-check"><input type="checkbox" id="aapsb-samePass" checked> Key password is the same as the keystore password</label>
+<label class="aapsb-check"><input type="checkbox" id="aapsb-samePass" checked> Key password is the same as the keystore password (키 비밀번호가 키 저장소 비밀번호와 같음)</label>
 
 <div id="aapsb-keyPassWrap" hidden>
 
-<label class="aapsb-label" for="aapsb-keyPass">Key password</label>
+<label class="aapsb-label" for="aapsb-keyPass">Key password (키 비밀번호)</label>
 <input class="aapsb-input" type="password" id="aapsb-keyPass" autocomplete="off">
 
 </div>
 
-<button class="aapsb-btn" type="button" id="aapsb-haveGo">Check and continue</button> <span class="aapsb-msg" id="aapsb-haveMsg"></span>
+<button class="aapsb-btn" type="button" id="aapsb-haveGo">Check and continue (확인 후 계속)</button> <span class="aapsb-msg" id="aapsb-haveMsg"></span>
 ````
 
-````{tab-item} Create a new key
-First time building AAPS? A new key is created here in your browser. Nothing is sent anywhere.
+````{tab-item} Create a new key (새 키 만들기)
+AAPS를 처음 빌드합니까? 새 키는 여기 브라우저 안에서 만들어집니다. 어디로도 아무것도 보내지지 않습니다.
 
-<label class="aapsb-label" for="aapsb-newPass">Choose a password (at least 8 characters, no accented letters)</label>
+<label class="aapsb-label" for="aapsb-newPass">Choose a password (비밀번호 정하기: 8자 이상, 악센트가 있는 문자 사용 불가)</label>
 <input class="aapsb-input" type="password" id="aapsb-newPass" autocomplete="new-password">
 
-<label class="aapsb-label" for="aapsb-newPass2">Repeat the password</label>
+<label class="aapsb-label" for="aapsb-newPass2">Repeat the password (비밀번호 다시 입력)</label>
 <input class="aapsb-input" type="password" id="aapsb-newPass2" autocomplete="new-password">
 
-<button class="aapsb-btn" type="button" id="aapsb-newGo">Create key</button> <span class="aapsb-msg" id="aapsb-newMsg"></span>
+<button class="aapsb-btn" type="button" id="aapsb-newGo">Create key (키 만들기)</button> <span class="aapsb-msg" id="aapsb-newMsg"></span>
 
 <div class="aapsb-box" id="aapsb-backupBox" hidden>
 
-**Save a backup of your key!**
+**키의 백업을 저장하십시오!**
 
-Download the file. Keep these three together, somewhere safe off your phone (e.g. your own cloud storage):
+파일을 다운로드하십시오. 다음 세 가지를 휴대폰 밖의 안전한 곳(예: 자신의 클라우드 저장소)에 함께 보관하십시오:
 
-- the file `aaps-keystore.jks`
-- your password
-- the alias of the key: **`key0`**
+- 파일 `aaps-keystore.jks`
+- 비밀번호
+- 키의 별칭(alias): **`key0`**
 
-You will need all three if you ever build AAPS another way, e.g. with Android Studio.
+나중에 다른 방법(예: Android Studio)으로 AAPS를 빌드하려면 세 가지가 모두 필요합니다.
 
-<button class="aapsb-btn" type="button" id="aapsb-downloadKs">Download backup (aaps-keystore.jks)</button>
+<button class="aapsb-btn" type="button" id="aapsb-downloadKs">Download backup (백업 다운로드, aaps-keystore.jks)</button>
 
 </div>
 ````
 
 `````
 (aaps-builder-setup-step3)=
-## Step 3 – Give the key to your repository
-<span id="aapsb-s3wait">Finish step 2 first.</span>
+## 3단계 – 저장소에 키 넘겨주기
+<span id="aapsb-s3wait">먼저 2단계를 마치십시오.</span>
 
 <div id="aapsb-s3ready" hidden>
-  1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Open the secrets page</a> Opens: <code class="aapsb-repoUrl"></code> Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1. 2. Tap "Copy name", then paste it into the small "Name" field: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Copy name</button> 3. Tap "Copy secret", then paste the long code into the big "Secret" box: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Copy secret</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> The secret is a very long code (thousands of characters), NOT the word KEYSTORE_SET. Copy and paste the name first, then the long code. 4. Tap "Add secret". Done, you never need to do this again.
+  1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Open the secrets page (secret 페이지 열기)</a> 열리는 주소: <code class="aapsb-repoUrl"></code> "Page not found"(404)가 표시됩니까? 먼저 이 브라우저에서 github.com에 로그인되어 있는지 확인하십시오: 로그인하지 않으면 GitHub는 비공개 저장소에 대해 404를 표시합니다. 그렇지 않다면 1단계의 사용자 이름 또는 저장소 이름이 실제 저장소와 맞지 않습니다: github.com에서 확인하고 1단계에 입력하십시오. 2. "Copy name"(이름 복사)을 누른 다음, 작은 "Name"(이름) 필드에 붙여 넣으십시오: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Copy name (이름 복사)</button> 3. "Copy secret"(secret 복사)을 누른 다음, 긴 코드를 큰 "Secret" 상자에 붙여 넣으십시오: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Copy secret (secret 복사)</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> secret은 매우 긴 코드(수천 자)이며, KEYSTORE_SET이라는 단어가 아닙니다. 먼저 이름을 복사하여 붙여 넣고, 그다음 긴 코드를 복사하여 붙여 넣으십시오. 4. "Add secret"(secret 추가)을 누르십시오. 완료되었습니다. 이 작업은 다시 할 필요가 없습니다.
 </div>
 (aaps-builder-setup-step4)=
-## Step 4 – Build the app
+## 4단계 – 앱 빌드
 
-1. <a class="aapsb-btn" id="aapsb-openActions" target="_blank" rel="noopener">Open the build page</a>
+1. <a class="aapsb-btn" id="aapsb-openActions" target="_blank" rel="noopener">Open the build page (빌드 페이지 열기)</a>
 
-   Opens: <code class="aapsb-repoUrl"></code>
+   열리는 주소: <code class="aapsb-repoUrl"></code>
 
-   Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1. The GitHub app opened instead? Tap "RUN WORKFLOW", check the version and variant, and tap "RUN WORKFLOW" again. If the app still shows "Nothing to see here", pull the list down to see your build.
-2. If asked, click the green button to enable workflows.
-The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder": it holds the build steps and has no "Run workflow" button.
-3. Click "Run workflow", then the green "Run workflow" button. "latest" builds the newest AAPS version. ***tip:*** *you can build another version by typing its [tag](https://github.com/nightscout/AndroidAPS/tags) name instead of "latest"*
-4. Wait about 15–30 minutes. A green check means it is done.
-Want an e-mail when the build is done? GitHub only e-mails you when a build fails. To also get one when it succeeds: on github.com, open your profile picture → Settings → Notifications → System → Actions, and untick "Only notify for failed workflows".
+   "Page not found"(404)가 표시됩니까? 먼저 이 브라우저에서 github.com에 로그인되어 있는지 확인하십시오: 로그인하지 않으면 GitHub는 비공개 저장소에 대해 404를 표시합니다. 그렇지 않다면 1단계의 사용자 이름 또는 저장소 이름이 실제 저장소와 맞지 않습니다: github.com에서 확인하고 1단계에 입력하십시오. 대신 GitHub 앱이 열렸습니까? "RUN WORKFLOW"를 누르고, 버전과 변형을 확인한 다음 "RUN WORKFLOW"를 다시 누르십시오. 앱에 계속 "Nothing to see here"(여기에 표시할 항목 없음)가 표시되면, 목록을 아래로 당겨 빌드를 표시하십시오.
+2. 요청되면 초록색 버튼을 클릭하여 워크플로를 활성화하십시오.
+워크플로 목록에 두 항목이 표시됩니다: "Build AAPS"를 사용하십시오. "AAPS Builder"는 무시하십시오: 이것은 빌드 단계를 담고 있으며 "Run workflow" 버튼이 없습니다.
+3. "Run workflow"(워크플로 실행)를 클릭한 다음, 초록색 "Run workflow" 버튼을 클릭하십시오. "latest"는 최신 AAPS 버전을 빌드합니다. ***팁:*** *"latest" 대신 다른 버전의 [태그](https://github.com/nightscout/AndroidAPS/tags) 이름을 입력하면 그 버전을 빌드할 수 있습니다*
+4. 15–30분 정도 기다리십시오. 초록색 체크 표시가 나타나면 완료된 것입니다.
+빌드가 끝나면 이메일을 받고 싶습니까? GitHub는 빌드가 실패한 경우에만 이메일을 보냅니다. 성공했을 때도 이메일을 받으려면: github.com에서 프로필 사진 → Settings → Notifications → System → Actions를 열고 "Only notify for failed workflows"(실패한 워크플로만 알림)의 체크를 해제하십시오.
 
 ```{admonition} No "Build AAPS" / "Run workflow" button?
 :class: warning
 
-1. Open your repository and check that it has a folder `.github` with the file `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-setup-step1) again with the button.
-2. Open the Actions tab. If it says workflows are disabled, click the green button to enable them. Then click "Build AAPS" in the list.
+1. 저장소를 열고 `.github` 폴더와 `workflows/build.yml` 파일이 있는지 확인하십시오. 저장소가 비어 있으면 템플릿으로 만들어지지 않은 것입니다: 저장소를 삭제하고(**Settings** → 페이지 맨 아래 → **Delete this repository**) 버튼으로 [1단계](#aaps-builder-setup-step1)를 다시 하십시오.
+2. Actions 탭을 여십시오. 워크플로가 비활성화되어 있다고 표시되면, 초록색 버튼을 클릭하여 활성화하십시오. 그런 다음 목록에서 "Build AAPS"를 클릭하십시오.
 ```
 
 (aaps-builder-setup-step5)=
 
-## Step 5 – Install on your phone
+## 5단계 – 휴대폰에 설치
 
 ```{admonition} Before every update: back up your settings!
 :class: warning
 
-1. In AAPS: Maintenance → Export settings. (Do this regularly anyway, e.g. after a profile change or once a month.)
-2. Copy the exported file OFF the phone, e.g. to Google Drive or Dropbox. A backup that only lives on the phone is lost together with the phone.
-3. Keep the APK files and several older exports there too. Then you can always go back.
+1. AAPS에서: 정비 → 설정 내보내기. (어차피 정기적으로 하십시오. 예: 프로파일을 바꾼 후 또는 한 달에 한 번.)
+2. 내보낸 파일을 휴대폰 밖으로 복사하십시오. 예: Google Drive 또는 Dropbox. 휴대폰에만 있는 백업은 휴대폰을 잃으면 함께 사라집니다.
+3. APK 파일과 이전에 내보낸 파일 몇 개도 그곳에 보관하십시오. 그러면 언제든 이전 상태로 돌아갈 수 있습니다.
 
-[How to export settings](#ExportImportSettings-Settings-Export) · [AAPS FAQ: how to organize backups](#FAQ-organize-backups)
+[설정을 내보내는 방법](#ExportImportSettings-Settings-Export) · [AAPS FAQ: 백업 정리 방법](#FAQ-organize-backups)
 ```
 
-1. Open this page on your phone, in the web browser (Chrome). Log in to github.com if asked.
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openRuns" target="_blank" rel="noopener">Open my builds</a>
+1. 이 페이지를 휴대폰의 웹 브라우저(Chrome)에서 여십시오. 요청하면 github.com에 로그인하십시오.
+2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openRuns" target="_blank" rel="noopener">Open my builds (내 빌드 열기)</a>
 
-   The GitHub app opened instead? It cannot download builds. In the app, open the newest build and tap "Artifacts ↗", or tap the share icon and choose Chrome (or "Copy link", then paste the link in Chrome's address bar). Continue in Chrome.
+   대신 GitHub 앱이 열렸습니까? 이 앱은 빌드를 다운로드할 수 없습니다. 앱에서 최신 빌드를 열고 "Artifacts ↗"를 누르거나, 공유 아이콘을 누르고 Chrome을 선택하십시오(또는 "Copy link"(링크 복사)를 누른 다음 Chrome 주소창에 링크를 붙여 넣으십시오). Chrome에서 계속하십시오.
 
-   Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1.
+   "Page not found"(404)가 표시됩니까? 먼저 이 브라우저에서 github.com에 로그인되어 있는지 확인하십시오: 로그인하지 않으면 GitHub는 비공개 저장소에 대해 404를 표시합니다. 그렇지 않다면 1단계의 사용자 이름 또는 저장소 이름이 실제 저장소와 맞지 않습니다: github.com에서 확인하고 1단계에 입력하십시오.
 
-   To stop GitHub links opening in the app: Android Settings → Apps → GitHub → Open by default → turn off "Open supported links".
-3. Tap the newest build with a green check ✅.
-4. Scroll down to the build summary and tap the big link "📱 Download AAPS …" (or scroll further down to "Artifacts" and tap aaps-….apk). Scroll with your finger on the text, not on the diagram of the build steps.
-5. When the download is done, tap the file and choose Install. If asked, allow installing apps from this source.
-6. aaps-wear-….apk is for a smartwatch. Skip it if you do not use one.
+   GitHub 링크가 앱에서 열리지 않게 하려면: Android 설정 → 애플리케이션 → GitHub → 기본으로 열기 → "지원되는 링크 열기"를 끄십시오.
+3. 초록색 체크 ✅가 있는 최신 빌드를 누르십시오.
+4. 빌드 요약까지 아래로 스크롤하고 큰 링크 "📱 Download AAPS …"를 누르십시오 (또는 "Artifacts"까지 더 아래로 스크롤하여 aaps-….apk를 누르십시오). 빌드 단계 그림이 아니라 글자 위에서 손가락으로 스크롤하십시오.
+5. 다운로드가 끝나면 파일을 누르고 설치를 선택하십시오. 요청하면 이 출처의 앱 설치를 허용하십시오.
+6. aaps-wear-….apk는 스마트워치용입니다. 스마트워치를 사용하지 않으면 건너뛰십시오.
 
-The APK is not shown under "Code" in your repository, only on the build page. It is kept for 14 days.
+APK는 저장소의 "Code"(코드) 아래에는 표시되지 않고, 빌드 페이지에만 표시됩니다. APK는 14일 동안 보관됩니다.
 
-New AAPS version? Back up your settings, then build it with [step 4](#aaps-builder-setup-step4). Your repository never builds anything by itself.
+새 AAPS 버전이 나왔습니까? 설정을 백업한 다음 [4단계](#aaps-builder-setup-step4)로 빌드하십시오. 저장소는 스스로 아무것도 빌드하지 않습니다.
 
 (aaps-builder-setup-step6)=
 
-## Step 6 – Optional: get the app in Google Drive
+## 6단계 – 선택 사항: Google Drive에서 앱 받기
 
-Want the APK to show up in your Google Drive (kept forever)? Add one more secret, GDRIVE_OAUTH2. This page gets it from Google for you. AAPS can then only see and change the files it creates in your Google Drive, nothing else.
+APK를 Google Drive에도 저장하고 싶습니까(기간 제한 없이 보관)? secret을 하나 더 추가합니다: GDRIVE_OAUTH2. 이 페이지가 Google에서 대신 받아 옵니다. 그러면 AAPS는 Google Drive에서 자신이 만든 파일만 보고 바꿀 수 있으며, 다른 것은 볼 수 없습니다.
 
-1. <a class="aapsb-btn" id="aapsb-googleAuth" target="_blank" rel="noopener">Connect Google Drive</a>
+1. <a class="aapsb-btn" id="aapsb-googleAuth" target="_blank" rel="noopener">Connect Google Drive (Google Drive 연결)</a>
 
-   Google opens in a new tab. Choose your Google account and allow AAPS to see and change its own files. If Google says the app is not verified, tap "Advanced", then "Go to …".
-2. Then the new tab shows an error like **"This site can't be reached"** or **"127.0.0.1 refused to connect"**. **This is expected.** Google's answer is in the address of that tab.
+   Google이 새 탭에서 열립니다. Google 계정을 선택하고, AAPS가 자신의 파일을 보고 바꿀 수 있도록 허용하십시오. Google에서 앱이 확인되지 않았다고 표시하면 "Advanced"(고급)를 누른 다음 "Go to …"(…(으)로 이동)를 누르십시오.
+2. 그러면 새 탭에 **"This site can't be reached"**(사이트에 연결할 수 없음) 또는 **"127.0.0.1 refused to connect"**(127.0.0.1에서 연결을 거부함) 같은 오류가 표시됩니다. **이것은 정상입니다.** Google의 응답은 그 탭의 주소에 들어 있습니다.
 
-   Tap the address bar of that tab, select all of the address and copy it. It starts with `http://127.0.0.1:47913/`. Come back to this page within a few minutes: the answer is only valid for a short time.
-3. <label class="aapsb-label" for="aapsb-googleUrl">Paste the copied address here</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
+   그 탭의 주소창을 누르고, 주소 전체를 선택하여 복사하십시오. 주소는 `http://127.0.0.1:47913/`로 시작합니다. 몇 분 안에 이 페이지로 돌아오십시오: 응답은 짧은 시간 동안만 유효합니다.
+3. <label class="aapsb-label" for="aapsb-googleUrl">Paste the copied address here (복사한 주소를 여기에 붙여 넣기)</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2 (GDRIVE_OAUTH2 받기)</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
 
 <div id="aapsb-gdriveReady" hidden>
 
-4. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets2" target="_blank" rel="noopener">Open the secrets page</a>
+4. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets2" target="_blank" rel="noopener">Open the secrets page (secret 페이지 열기)</a>
 
-   Opens: <code class="aapsb-repoUrl"></code>
+   열리는 주소: <code class="aapsb-repoUrl"></code>
 
-   Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1.
-5. Tap "Copy name", then paste it into the small "Name" field: `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Copy name</button>
-6. Tap "Copy secret", then paste the code into the big "Secret" box: <code id="aapsb-gdrivePreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="gdriveValue">Copy secret</button> <span class="aapsb-msg" id="aapsb-gdriveCopyMsg"></span>
-7. Tap "Add secret".
+   "Page not found"(404)가 표시됩니까? 먼저 이 브라우저에서 github.com에 로그인되어 있는지 확인하십시오: 로그인하지 않으면 GitHub는 비공개 저장소에 대해 404를 표시합니다. 그렇지 않다면 1단계의 사용자 이름 또는 저장소 이름이 실제 저장소와 맞지 않습니다: github.com에서 확인하고 1단계에 입력하십시오.
+5. "Copy name"(이름 복사)을 누른 다음, 작은 "Name"(이름) 필드에 붙여 넣으십시오: `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Copy name (이름 복사)</button>
+6. "Copy secret"(secret 복사)을 누른 다음, 코드를 큰 "Secret" 상자에 붙여 넣으십시오: <code id="aapsb-gdrivePreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="gdriveValue">Copy secret (secret 복사)</button> <span class="aapsb-msg" id="aapsb-gdriveCopyMsg"></span>
+7. "Add secret"(secret 추가)을 누르십시오.
 
 </div>
 
 ```{admonition} Already have a GDRIVE_OAUTH2 value?
 :class: dropdown
 
-A value from the AAPS preparation page of the other browser build works too: open the secrets page, add the name `GDRIVE_OAUTH2` and paste your value. See [Save the builds in Google Drive](#aaps-builder-google-drive).
+다른 브라우저 빌드의 AAPS 준비 페이지에서 받은 값도 사용할 수 있습니다: secret 페이지를 열고 이름 `GDRIVE_OAUTH2`를 추가한 다음 그 값을 붙여 넣으십시오. [Google Drive에 빌드 저장하기](#aaps-builder-google-drive)를 참조하십시오.
 ```
 
-Next build, the APKs are also saved in Google Drive in the folder AAPS/&lt;version&gt;.
+다음 빌드부터 APK가 Google Drive의 AAPS/&lt;version&gt; 폴더에도 저장됩니다.
 
-If you do not build for 6 months, or change your Google password, Google stops the access. The build then says so: redo this step.
+6개월 동안 빌드하지 않거나 Google 비밀번호를 바꾸면, Google이 액세스를 중지합니다. 그러면 빌드에서 이를 알려 줍니다: 이 단계를 다시 하십시오.
 
 ----
 
-Everything on this page runs in your browser. Your key and passwords are never sent anywhere except where you paste them yourself. Only your GitHub username is sent to GitHub, to check that it exists. In step 6, the Google answer is sent only to Google, to get GDRIVE_OAUTH2. The build workflow is maintained by the AAPS developers in [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder), based on AAPS Builder (AGPL-3.0).
+이 페이지의 모든 것은 브라우저 안에서 실행됩니다. 키와 비밀번호는 직접 붙여 넣는 곳 외에는 어디로도 보내지지 않습니다. GitHub에는 GitHub 사용자 이름만 보내지며, 이는 그 이름이 있는지 확인하기 위한 것입니다. 6단계에서 Google의 응답은 GDRIVE_OAUTH2를 받기 위해 Google에만 보내집니다. 빌드 워크플로는 AAPS 개발자가 AAPS Builder(AGPL-3.0)를 기반으로 [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder)에서 관리합니다.
 
 <div id="aapsb-msgs" hidden>
 
-- <span data-aapsb-msg="copied">Long code copied: paste it in the big "Secret" box, then tap "Add secret".</span>
-- <span data-aapsb-msg="copiedName">Name copied: paste it in the small "Name" field.</span>
-- <span data-aapsb-msg="userOk">✓ GitHub user found.</span>
-- <span data-aapsb-msg="userBad">✗ No GitHub user with this name. Use your username (shown in your GitHub profile), not your e-mail.</span>
-- <span data-aapsb-msg="copiedShort">Copied ✓</span>
-- <span data-aapsb-msg="needUser">Enter your GitHub username in step 1 first.</span>
-- <span data-aapsb-msg="errPipe">Passwords and alias cannot contain the character |</span>
-- <span data-aapsb-msg="errNoFile">Choose your keystore file.</span>
-- <span data-aapsb-msg="errEmpty">Fill in password and alias.</span>
-- <span data-aapsb-msg="errPass">Wrong keystore password.</span>
-- <span data-aapsb-msg="errKeyPass">Wrong key password.</span>
-- <span data-aapsb-msg="errAlias">Alias not found in the keystore. Available: {aliases}</span>
-- <span data-aapsb-msg="errFormat">This does not look like a keystore file.</span>
-- <span data-aapsb-msg="okHave">Keystore OK! Continue with step 3.</span>
-- <span data-aapsb-msg="okHaveUnchecked">Keystore read. The password will be checked when you build. Continue with step 3.</span>
-- <span data-aapsb-msg="errShort">The password must be at least 8 characters.</span>
-- <span data-aapsb-msg="errAscii">Use only a–z, A–Z, 0–9 and symbols such as ! ? # – no spaces, no accented letters and not |</span>
-- <span data-aapsb-msg="errMatch">The passwords do not match.</span>
-- <span data-aapsb-msg="working">Creating key…</span>
-- <span data-aapsb-msg="okNew">Key created. Download the backup below, then continue with step 3.</span>
-- <span data-aapsb-msg="gNoUrl">Paste the whole address of the Google tab first.</span>
-- <span data-aapsb-msg="gNoCode">This address has no answer from Google. Copy the whole address of the tab that shows the error, starting with http://127.0.0.1:47913/</span>
-- <span data-aapsb-msg="gDenied">Google access was not allowed. Tap "Connect Google Drive" again and allow access.</span>
-- <span data-aapsb-msg="gOldUrl">This address belongs to an older attempt. Tap "Connect Google Drive" again and use the new address.</span>
-- <span data-aapsb-msg="gWorking">Asking Google…</span>
-- <span data-aapsb-msg="gFailed">Google did not accept it ({error}). The answer is valid only for a few minutes and only once: tap "Connect Google Drive" again.</span>
-- <span data-aapsb-msg="gNoRefresh">Google sent no long-term access. Tap "Connect Google Drive" again.</span>
-- <span data-aapsb-msg="gOk">GDRIVE_OAUTH2 is ready. Add it as a secret below.</span>
-- <span data-aapsb-msg="gCopied">Code copied: paste it in the big "Secret" box, then tap "Add secret".</span>
+- <span data-aapsb-msg="copied">긴 코드를 복사했습니다: 큰 "Secret" 상자에 붙여 넣은 다음 "Add secret"을 누르십시오.</span>
+- <span data-aapsb-msg="copiedName">이름을 복사했습니다: 작은 "Name" 필드에 붙여 넣으십시오.</span>
+- <span data-aapsb-msg="userOk">✓ GitHub 사용자를 찾았습니다.</span>
+- <span data-aapsb-msg="userBad">✗ 이 이름의 GitHub 사용자가 없습니다. 이메일이 아니라 사용자 이름(GitHub 프로필에 표시됨)을 사용하십시오.</span>
+- <span data-aapsb-msg="copiedShort">복사됨 ✓</span>
+- <span data-aapsb-msg="needUser">먼저 1단계에서 GitHub 사용자 이름을 입력하십시오.</span>
+- <span data-aapsb-msg="errPipe">비밀번호와 별칭에는 | 문자를 사용할 수 없습니다</span>
+- <span data-aapsb-msg="errNoFile">키 저장소 파일을 선택하십시오.</span>
+- <span data-aapsb-msg="errEmpty">비밀번호와 별칭을 입력하십시오.</span>
+- <span data-aapsb-msg="errPass">키 저장소 비밀번호가 틀렸습니다.</span>
+- <span data-aapsb-msg="errKeyPass">키 비밀번호가 틀렸습니다.</span>
+- <span data-aapsb-msg="errAlias">키 저장소에서 별칭을 찾을 수 없습니다. 사용 가능한 별칭: {aliases}</span>
+- <span data-aapsb-msg="errFormat">키 저장소 파일이 아닌 것 같습니다.</span>
+- <span data-aapsb-msg="okHave">키 저장소 확인 완료! 3단계로 계속하십시오.</span>
+- <span data-aapsb-msg="okHaveUnchecked">키 저장소를 읽었습니다. 비밀번호는 빌드할 때 확인됩니다. 3단계로 계속하십시오.</span>
+- <span data-aapsb-msg="errShort">비밀번호는 8자 이상이어야 합니다.</span>
+- <span data-aapsb-msg="errAscii">a–z, A–Z, 0–9와 다음과 같은 기호만 사용하십시오: ! ? # – 공백, 악센트가 있는 문자, |는 사용할 수 없습니다.</span>
+- <span data-aapsb-msg="errMatch">비밀번호가 일치하지 않습니다.</span>
+- <span data-aapsb-msg="working">키를 만드는 중…</span>
+- <span data-aapsb-msg="okNew">키를 만들었습니다. 아래에서 백업을 다운로드한 다음 3단계로 계속하십시오.</span>
+- <span data-aapsb-msg="gNoUrl">먼저 Google 탭의 주소 전체를 붙여 넣으십시오.</span>
+- <span data-aapsb-msg="gNoCode">이 주소에는 Google의 응답이 없습니다. 오류가 표시된 탭의 주소 전체를 http://127.0.0.1:47913/ 부분부터 복사하십시오.</span>
+- <span data-aapsb-msg="gDenied">Google 액세스가 허용되지 않았습니다. "Connect Google Drive"를 다시 누르고 액세스를 허용하십시오.</span>
+- <span data-aapsb-msg="gOldUrl">이 주소는 이전 시도의 주소입니다. "Connect Google Drive"를 다시 누르고 새 주소를 사용하십시오.</span>
+- <span data-aapsb-msg="gWorking">Google에 요청하는 중…</span>
+- <span data-aapsb-msg="gFailed">Google이 받아들이지 않았습니다({error}). 응답은 몇 분 동안, 한 번만 유효합니다: "Connect Google Drive"를 다시 누르십시오.</span>
+- <span data-aapsb-msg="gNoRefresh">Google이 장기 액세스 권한을 보내지 않았습니다. "Connect Google Drive"를 다시 누르십시오.</span>
+- <span data-aapsb-msg="gOk">GDRIVE_OAUTH2가 준비되었습니다. 아래에서 secret으로 추가하십시오.</span>
+- <span data-aapsb-msg="gCopied">코드를 복사했습니다: 큰 "Secret" 상자에 붙여 넣은 다음 "Add secret"을 누르십시오.</span>
 
 </div>
 
