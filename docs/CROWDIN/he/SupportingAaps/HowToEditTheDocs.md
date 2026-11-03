@@ -2,7 +2,7 @@
 
 **This description is just for editing the English documentation. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
+לקבלת עצות והכוונות כיצד לעצב טקסט (כותרת, מודגש...) ולהגדיר קישורים, עיינו ב-["תחביר קוד"](#edit-the-docs-code-syntax) בדף זה.
 
 ## General
 
@@ -34,11 +34,11 @@ Or click the pencil icon that appears in the top bar of the page contents to be 
 
 3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
 
-We are using markdown for the docs pages. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
+We are using markdown for the docs pages. לקבצים יש הסיומת ".md". מפרט Markdown אינו קבוע, וכרגע אנו משתמשים ב-myst_parser עבור קובצי ה-Markdown שלנו. הקפידו להשתמש בתחביר הנכון, כפי ש[מתואר להלן](#edit-the-docs-code-syntax).
 
 ![Edit branch](../images/PR3.png)
 
-4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). If you see a needed improvement, go back to the edit tab to make more improvements. 
+4. You have been working in the "<>Edit file" tab. בחרו בלשונית "Preview changes" כדי להביט שוב ולוודא שכל מה ששיניתם נראה כפי שהתכוונתם (בדקו שאין שגיאות הקלדה). If you see a needed improvement, go back to the edit tab to make more improvements. 
 
 ![preview mode](../images/PR5.png)
 
@@ -54,7 +54,7 @@ We are using markdown for the docs pages. The files have the suffix ".md". The M
 
 ![PR tracking](../images/PR7.png)
 
-PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+PS: Your fork and branch will still be sitting on your own personal GitHub account. לאחר שתקבלו הודעה שה-PR מוזג, תוכלו למחוק את הענף אם סיימתם לעבוד בו (אזור ההתראות של שלב 7 יספק קישור למחיקת הענף לאחר הסגירה או המיזוג). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. אם תבחרו בשיטה אחרת לפתיחת PR (למשל, עריכה שמתחילה מענף master במאגר ה-Fork שלכם), תצטרכו לוודא שהמאגר מעודכן באמצעות ביצוע "compare" תחילה ומיזוג כל העדכונים שנעשו מאז העדכון האחרון של ה-Fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
 
 (edit-the-docs-code-syntax)=
 
@@ -69,7 +69,7 @@ The writer only e.g. marks a headline as level 1 headline and the markdown proce
 The idea behind this is that
 
 - the writer should think about the text and not the formatting first,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
+- טקסט Markdown ניתן להעברה בין כלי Markdown שונים, במקום כלים קנייניים כגון Microsoft Word, וכן
 - you can generate several output formats from one markdown file.
 
 Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard, to
@@ -147,10 +147,10 @@ To include images you use this markdown syntax.
 
 The type of image should be PNG or JPEG.
 
-Image names should conform to one of the following naming rules. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
+שמות התמונות צריכים לעמוד באחד מכללי השמות הבאים. בדוגמה משתמשים בסיומת png. In case you use JPEG please use jpeg as a suffix instead.
 
 - `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
-- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
+- `filename-image-xx.png` כאשר xx הוא שם בעל משמעות, שבוחרים כותבי קובץ ה-md.
 
 Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
 
@@ -161,7 +161,7 @@ We are not translating images at the moment: images should contain the **minimum
 - Screenshots from web pages images should be up to **1050 pixels wide**.
 - Diagrams of process flows should be up to **1050 pixels wide**.
 - Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
-- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
+- צילומי מסך מהשעון (**Wear OS**) צריכים להיות ברוחב של עד **360 פיקסלים**. אין להגדיל צילום מסך קטן יותר.
 
 ### Links
 
@@ -199,7 +199,7 @@ Then link this reference in the text you are writing with the following kind of 
 
 You can add notes and warning boxes to documentation.
 
-Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Please use these carefully as the documentation should be as easy to read as possible.
+בנוסף, ניתן להוסיף הערות מתקפלות למידע מפורט, כך שמשתמשים שלא מתעניינים בפרטים לא יירתעו מקריאת הטקסט. Please use these carefully as the documentation should be as easy to read as possible.
 
 #### Notes
 
@@ -219,9 +219,9 @@ Furthermore you can add collapsing notes for detailed information, so that users
     This is a warning.
     
 
-    ```{admonition} Warning headline
+    ```{admonition} כותרת אזהרה 
     :class: warning
-    This is a warning.
+    זוהי אזהרה.
     ```
     
     #### Collapsing Notes
@@ -244,7 +244,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 ## Tables
 
-Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+הימנעו מטבלאות עם טקסטים ארוכים: קשה לסדר את התוכן ב-Markdown, הן בדרך כלל אינן מתאימות לרוחב מסך של טלפון נייד, וכנראה לא יוצגו באותו אופן לאחר התרגום.
 
 ## Style Guide
 
@@ -262,9 +262,9 @@ Avoid using tables with long texts as the content is difficult to set in Markdow
 
 Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?”*
+במקום: *״מה גורם לשיאי BG פוסטפרנדיאליים גבוהים בלולאה סגורה?״*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
+כתבו: *״מה גורם לשיא BG גבוה **לאחר ארוחת הצהריים** (פוסטפרנדיאלי) בלולאה סגורה?״*
 
 ##### Use plain words that everyone can understand
 
@@ -296,7 +296,7 @@ Particularly if you record video or screenshots, make sure not to disclose your 
 
 Commands are the fastest way to give instructions, but writers sometimes fear giving commands, writing “you should do this” instead of just “do this”. Perhaps people worry that commands sound too harsh. You can often solve this by putting the word 'please' in front. However, if something must be done, it is best not to say ‘please’ as it gives the reader the option to refuse.
 
-Instead of: *“You should just think of it as a complete statement.”*
+במקום: *״עליכם פשוט לחשוב על כך כעל אמירה שלמה.״*
 
 Use: *“Think of it as a complete statement.”*
 
@@ -310,9 +310,9 @@ Example of an **active verb**:
 
 Example of a **passive verb**:
 
-- *“The insulin (subject) is delivered (verb) by the pump (object).”*
+- *״האינסולין (נושא) ניתן (פועל) על ידי המשאבה (מושא).״*
 
-*“delivered”* is a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
+*״ניתן״* הוא כאן פועל סביל. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
 
 Instead of: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
 
@@ -340,7 +340,7 @@ There are times when it might be appropriate to use a passive.
 
 #### Avoid nominalisations
 
-A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalizations are formed from verbs.
+שם עצם שנוצר מפועל (nominalisation) הוא שם של דבר שאינו חפץ פיזי, כגון תהליך, טכניקה או רגש. Nominalizations are formed from verbs.
 
 For example:
 
@@ -383,7 +383,7 @@ To keep the documentation clear and short, we write different sections of the do
 
 An “explanation” style is used for the introduction, background and knowledge development sections.
 
-A “How-to-guide” style (with minimal explanation) is used for building, configuring AAPS, and some of the troubleshooting sections.
+סגנון ״מדריך לביצוע״ (עם הסבר מזערי) משמש לבנייה, להגדרת AAPS ולחלק מסעיפי פתרון התקלות.
 
 A tutorial helps the pupil acquire basic competence. The user will **learn by doing**.
 
@@ -453,7 +453,7 @@ A how-to guide’s purpose is to help the already-competent user perform a parti
 
 - HOW-to
 
-- narrator directly talks to the reader: In this guide **you** will
+- המספר פונה ישירות לקוראים: במדריך זה **אתם** תבצעו
 
 - Future Tense -> to show the final target
 
@@ -527,7 +527,7 @@ An explanation clarifies, deepens and broadens the reader’s understanding of a
     
     *W is better than z, because…*
     
-    Offer judgements and even opinions where appropriate.
+    הביעו שיקול דעת ואפילו דעה אישית, כשזה מתאים.
     
     *An x in system y is analogous to a w in system z. However…*
     
@@ -553,7 +553,7 @@ The **editor (e.g. a fellow AAPS user, or the person who receives the pull reque
 
 #### General AAPS points
 
-- For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible).
+- בערכי סוכר יש לציין גם mg/dL וגם mmol/L בכל מקום (כדאי לעשות זאת גם בצילומי מסך, אם אפשר).
 
 - For consistency, use “AAPS” rather than “Android APS”.
 
@@ -569,7 +569,7 @@ The **editor (e.g. a fellow AAPS user, or the person who receives the pull reque
 
 [DigitalOcean's Technical Writing Guidelines | DigitalOcean](https://www.digitalocean.com/community/tutorials/digitalocean-s-technical-writing-guidelines)
 
-[Top 10 tips for Microsoft style and voice - Microsoft Style Guide | Microsoft Learn](https://learn.microsoft.com/en-us/style-guide/top-10-tips-style-voice?source=recommendations)
+[10 הטיפים המובילים לסגנון ולטון של Microsoft - מדריך הסגנון של Microsoft | Microsoft Learn](https://learn.microsoft.com/en-us/style-guide/top-10-tips-style-voice?source=recommendations)
 
 <https://www.plainenglish.co.uk/how-to-write-in-plain-english.html>
 
