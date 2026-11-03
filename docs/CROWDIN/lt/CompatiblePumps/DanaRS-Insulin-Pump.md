@@ -10,7 +10,7 @@
     :depth: 1
     :local: true
 
-## Pump capabilities with AAPS
+## Pompos galimybės su AAPS
 
 * Su **AAPS** ryšį palaiko per telefono įtaisytą Bluetooth, be papildomo ryšio įrenginio.
 * Vasaros ir žiemos laiko bei laiko juostų pakeitimus reikia tvarkyti rankiniu būdu (žr. [Keliavimas per laiko juostas](#timezone-traveling-danarv2-danars)).
@@ -160,7 +160,7 @@ Keičiant telefoną reikia atlikti šiuos veiksmus:
 
 Apie keliones per laiko juostas žr. skyrių [Keliavimas per laiko juostas su pompomis](#timezone-traveling-danarv2-danars).
 
-## Where to get help
+## Kur gauti pagalbos
 
 DanaRS/Dana-i/Dana-i2 tvarkyklę kuria bendruomenė **savanoriškai**. Prieš prašydami pagalbos:
 
