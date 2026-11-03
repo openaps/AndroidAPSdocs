@@ -12,8 +12,8 @@ Libre2 OOP (znajdziesz go [tutaj](#Libre2_OOP2)) tworzy takie same odczyty BG ja
 
 Jest kilka dobrych powodów, aby używać nadajnika Bluetooth:
 
--   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the reader-like values with "calibrate based on glucose".  
-  Make sure to leave OOP1 disabled (2).
+-   Możesz wybrać różne sposoby kalibracji OOP2 (1): wartości jak z czytnika przy „no calibration”, kalibrację sensora jak w Libre 1 przy „calibrate based on raw” albo kalibrację wartości podobnych do czytnika przy „calibrate based on glucose”.  
+  Upewnij się, że OOP1 jest wyłączone (2).
 
     → Menu (☰) → Settings → Less common settings → Other misc. options
 
@@ -30,9 +30,9 @@ Uwaga: nadajnika można używać razem z aplikacją LibreLink, nie przeszkadza j
 
 ![xDrip: uruchomienie nadajnika Libre i sensora 3](../images/xDrip_Libre_Transmitter03.png)
 
-To w żaden sposób fizycznie nie uruchamia sensora Libre2 ani nie komunikuje się z nim. Służy to tylko do poinformowania xDrip, że nowy sensor dostarcza wartości glukozy. If available, enter two blood-measured values for the initial calibration. Teraz wartości glukozy powinny pojawiać się w xDrip co 5 minut. Pominięte wartości, np. gdy byłeś za daleko od telefonu, nie zostaną uzupełnione.
+To w żaden sposób fizycznie nie uruchamia sensora Libre2 ani nie komunikuje się z nim. Służy to tylko do poinformowania xDrip, że nowy sensor dostarcza wartości glukozy. Jeśli możesz, wpisz dwa pomiary z krwi do pierwszej kalibracji. Teraz wartości glukozy powinny pojawiać się w xDrip co 5 minut. Pominięte wartości, np. gdy byłeś za daleko od telefonu, nie zostaną uzupełnione.
 
-Po zmianie sensora xDrip automatycznie wykryje nowy sensor i usunie wszystkie dane kalibracji. You may check your blood glucose after activation and make a new initial calibration.
+Po zmianie sensora xDrip automatycznie wykryje nowy sensor i usunie wszystkie dane kalibracji. Po aktywacji możesz sprawdzić glikemię i wykonać nową pierwszą kalibrację.
 
 ### Konfiguracja AAPS (tylko do używania pętli)
 
@@ -40,7 +40,7 @@ Po zmianie sensora xDrip automatycznie wykryje nowy sensor i usunie wszystkie da
 
 ![Konfiguracja > Źródło BG z wybranym xDrip+ BG](../images/v4/Configuration/configuration_bg_source.png)
 
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as described on [xDrip settings page](#xdrip-identify-receiver).
+-   Jeśli AAPS nie otrzymuje wartości BG, gdy telefon jest w trybie samolotowym, użyj „Identify receiver”, jak opisano na [stronie ustawień xDrip](#xdrip-identify-receiver).
 
 ## 2. Użyj bezpośredniego połączenia xDrip
 
@@ -67,7 +67,7 @@ Technicznie aktualna wartość glukozy jest wysyłana do xDrip co minutę. Domy�
 
 Jest to konieczne do używania pętli. Krzywe są gładkie, a wyniki pętli są bardzo dobre. Wartości surowe, na których opierają się alarmy, skaczą trochę bardziej, ale odpowiadają wartościom, które pokazuje też czytnik. Dodatkowo wartości surowe można pokazać na wykresie xDrip, aby na czas reagować na szybkie zmiany. Włącz Less Common Settings \> Advanced Settings for Libre2 \> „show Raw values” i „show Sensors Infos”. Wtedy wartości surowe są dodatkowo pokazywane jako małe białe kropki, a dodatkowe informacje o sensorze są dostępne w menu systemowym.
 
-Wartości surowe są bardzo pomocne, gdy poziom glukozy szybko się zmienia. Even if the dots are jumpier you would detect the tendency much better than using the smoothed line to make proper therapy decisions.
+Wartości surowe są bardzo pomocne, gdy poziom glukozy szybko się zmienia. Nawet jeśli kropki bardziej skaczą, zobaczysz trend dużo lepiej niż na wygładzonej linii i podejmiesz właściwe decyzje dotyczące leczenia.
 
 → Menu (☰) → Settings → Less common settings → Advanced settings for Libre 2
 
@@ -77,7 +77,7 @@ Wartości surowe są bardzo pomocne, gdy poziom glukozy szybko się zmienia. Eve
 
 #### Kalibracja
 
-You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2.2 mmol/L to +1.1 mmol/L\]** (intercept). Nachylenia (slope) nie można zmienić. Po założeniu nowego sensora sprawdź wartości pomiarem z palca. Pamiętaj, że w pierwszych 12 godzinach po założeniu sensor może być niedokładny. Ponieważ różnice względem pomiarów z krwi mogą być duże, sprawdzaj co 24 godziny i w razie potrzeby kalibruj. Jeśli po kilku dniach sensor pokazuje zupełnie złe wartości, należy go wymienić.
+Możesz kalibrować Libre2 **z przesunięciem od -40 mg/dl do +20 mg/dl \[-2.2 mmol/l do +1.1 mmol/l\]** (intercept). Nachylenia (slope) nie można zmienić. Po założeniu nowego sensora sprawdź wartości pomiarem z palca. Pamiętaj, że w pierwszych 12 godzinach po założeniu sensor może być niedokładny. Ponieważ różnice względem pomiarów z krwi mogą być duże, sprawdzaj co 24 godziny i w razie potrzeby kalibruj. Jeśli po kilku dniach sensor pokazuje zupełnie złe wartości, należy go wymienić.
 
 ## 3. Użyj Diabox
 
