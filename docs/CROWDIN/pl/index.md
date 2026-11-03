@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
-31 October 2026: Version 4.0.0 is out. Sprawdź w [informacjach o wersji](#latestrelease), co nowego, i zaktualizuj AAPS według [instrukcji aktualizacji](./Maintenance/UpdateToNewVersion.md).
+31 października 2026: Wersja 4.0.0 jest już dostępna. Sprawdź w [informacjach o wersji](#latestrelease), co nowego, i zaktualizuj AAPS według [instrukcji aktualizacji](./Maintenance/UpdateToNewVersion.md).
 
 ```
 
@@ -17,7 +17,7 @@ Ta dokumentacja wyjaśnia, jak skonfigurować i używać **AAPS**. Po dokumentac
 
 W rozdziale **1) Pierwsze kroki** strona [Wprowadzenie do APS i AAPS](Getting-Started/Introduction.md) wyjaśnia ogólną ideę: do czego służy system sztucznej trzustki (APS). Przedstawia ogólne podstawy działania systemów pętli, wyjaśnia, dlaczego powstał **AAPS**, porównuje **AAPS** z innymi systemami i omawia kwestie bezpieczeństwa. Podpowiada, jak rozmawiać o **AAPS** z zespołem diabetologicznym, wyjaśnia, dlaczego musisz samodzielnie zbudować aplikację **AAPS**, zamiast po prostu ją pobrać, i pokazuje typowe połączenia w systemie **AAPS**. Omawia też dostępność oraz to, kto najprawdopodobniej skorzysta na używaniu **AAPS**.
 
-Strona [Przygotowanie do rozpoczęcia pracy z AAPS](./Getting-Started/PreparingForAaps.md) podaje więcej szczegółów o bezpieczeństwie oraz o telefonach, systemach CGM (ciągłego monitorowania glikemii) i pompach insulinowych, które są kompatybilne z **AAPS**. Przedstawia przegląd całego procesu, przez który przejdziesz, i podaje przybliżony czas potrzebny, aby korzystać ze wszystkich funkcji **AAPS**. Ten rozdział przygotuje cię technicznie do jak najszybszego i najsprawniejszego złożenia twojego systemu **AAPS**. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
+Strona [Przygotowanie do rozpoczęcia pracy z AAPS](./Getting-Started/PreparingForAaps.md) podaje więcej szczegółów o bezpieczeństwie oraz o telefonach, systemach CGM (ciągłego monitorowania glikemii) i pompach insulinowych, które są kompatybilne z **AAPS**. Przedstawia przegląd całego procesu, przez który przejdziesz, i podaje przybliżony czas potrzebny, aby korzystać ze wszystkich funkcji **AAPS**. Ten rozdział przygotuje cię technicznie do jak najszybszego i najsprawniejszego złożenia twojego systemu **AAPS**. Podrozdział [Kompatybilne systemy CGM](./Getting-Started/CompatiblesCgms.md) wyjaśnia, jak najlepiej skonfigurować CGM i które opcje wygładzania są najlepsze.
 
 Gdy solidnie zrozumiesz proces, możesz rozpocząć tworzenie swojej pętli **AAPS**.
 
@@ -40,7 +40,7 @@ Rozdział **9) [Pomoc i rozwiązywanie problemów](GettingHelp/WhereCanIGetHelp.
 
 Rozdział **10)** opisuje **[Zaawansowane opcje AAPS](./AdvancedOptions/FullClosedLoop.md)**, np. jak przejść od używania **AAPS** w hybrydowej zamkniętej pętli (bolusy do posiłków _itd._) do w pełni zamkniętej pętli (bez bolusów), jak [dostroić profil](./GettingHelp/ProfileTuning.md) i używać Autotune, a także opisuje wersję rozwojową (dev) i Tryb Inżynierski. Większość użytkowników dobrze radzi sobie z główną wersją **AAPS** („master”) i nie potrzebuje tych opcji. Ten rozdział jest dla użytkowników, którzy mają już dobrą kontrolę i chcą jeszcze ulepszyć swoją konfigurację.
 
-In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provide information so that you can support this project. Możesz przekazać pieniądze, sprzęt lub podzielić się swoją specjalistyczną wiedzą. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations.md) and provide your data through the Open Humans project.
+W rozdziale **11) [Jak wspierać AAPS](SupportingAaps/HowCanIHelp.md)** podajemy informacje, jak możesz wspierać ten projekt. Możesz przekazać pieniądze, sprzęt lub podzielić się swoją specjalistyczną wiedzą. Możesz samodzielnie proponować lub wprowadzać zmiany w dokumentacji, pomóc w [tłumaczeniu dokumentacji](SupportingAaps/Translations.md) i udostępniać swoje dane w projekcie Open Humans.
 
 Rozdział **12) Zasoby** zawiera zarchiwizowaną lub dodatkową dokumentację, w tym podrozdział dla [lekarzy](UsefulLinks/ClinicianGuideToAaps.md), którzy interesują się technologią sztucznej trzustki open source, taką jak **AAPS**, oraz dla pacjentów, którzy chcą przekazać takie informacje swoim lekarzom; ten temat jest omawiany także we wprowadzeniu. Ten rozdział zawiera też więcej materiałów o cukrzycy i systemach pętli. Zawiera [Słowniczek pojęć](./UsefulLinks/Glossary.md) – listę skrótów (lub krótkich nazw) używanych w **AAPS**. Tutaj sprawdzisz na przykład, co oznaczają skróty ISF lub TT.
 
@@ -51,7 +51,7 @@ Rozdział **12) Zasoby** zawiera zarchiwizowaną lub dodatkową dokumentację, w
 :class: danger
 Bezpieczeństwo **AAPS** zależy od funkcji bezpieczeństwa twojego sprzętu (telefonu, pompy, systemu CGM). Używaj tylko w pełni działającej pompy insulinowej i systemu CGM zatwierdzonych przez FDA lub CE. Nie używaj uszkodzonych, zmodyfikowanych lub własnoręcznie stworzonych pomp insulinowych i odbiorników CGM. Używaj tylko oryginalnych materiałów eksploatacyjnych (wkłuwacze, kaniule i zbiorniki na insulinę) zatwierdzonych przez producenta do użytku z twoją pompą i systemem CGM. Używanie nieprzetestowanych lub zmodyfikowanych materiałów może spowodować niedokładności i błędy w dozowaniu insuliny, które mogą spowodować znaczne ryzyko dla użytkownika. 
 
-Nie używaj **AAPS**, jeśli przyjmujesz inhibitory SGLT-2 (flozyny), ponieważ obniżają one poziom cukru we krwi. You increase the risk of diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
+Nie używaj **AAPS**, jeśli przyjmujesz inhibitory SGLT-2 (flozyny), ponieważ obniżają one poziom cukru we krwi. Zwiększasz ryzyko kwasicy ketonowej (DKA, ang. diabetic ketoacidosis) z powodu zmniejszonego podawania insuliny i ryzyko hipoglikemii z powodu obniżonego poziomu cukru we krwi. 
 ```
 
 ```{admonition} Disclaimer
@@ -107,14 +107,14 @@ Konfiguracja serwera raportów <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
 ```{toctree}
-:caption: 4) Configure AAPS
+:caption: 4) Konfiguracja AAPS
 
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
-- Settings <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+Kreator konfiguracji AAPS <./SettingUpAaps/SetupWizard.md>
+Twój profil AAPS <./SettingUpAaps/YourAapsProfile.md>
+Zmiana konfiguracji AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Konfiguracja (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
+- Ustawienia <./SettingUpAaps/Preferences.md>
+Ukończenie zadań <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -166,15 +166,15 @@ Wymiana własnych tarcz zegarka <./ExchangeSiteCustomWatchfaces/index.md>
 ```
 
 ```{toctree}
-:caption: 8) Maintenance of AAPS
+:caption: 8) Konserwacja AAPS
 
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-What changed in AAPS v4 <./Maintenance/V4Changes.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
-End of life <./Maintenance/EndOfLife.md>
+Tworzenie i przywracanie kopii zapasowych <./Maintenance/ExportImportSettings.md>
+Informacje o wersji <./Maintenance/ReleaseNotes.md>
+Co zmieniło się w AAPS v4 <./Maintenance/V4Changes.md>
+Aktualizacja do nowej wersji lub innej gałęzi <./Maintenance/UpdateToNewVersion.md>
+- Aktualizacja w przeglądarce (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
+- Aktualizacja w Android Studio <./Maintenance/UpdateComputerBuild.md>
+Koniec wsparcia <./Maintenance/EndOfLife.md>
 
 ```
 
