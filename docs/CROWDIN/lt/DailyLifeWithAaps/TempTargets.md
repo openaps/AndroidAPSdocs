@@ -8,10 +8,10 @@ A glucose target, particularly if it is only short-term (less than 4 hours in du
 
 Temporary targets can be defined within those boundaries :
 
-|                    | Temporary target       |
-| ------------------ | ---------------------- |
-| Mažiausia reikšmė  | 4 mmol/l arba 72 mg/dL |
-| Didžiausia reikšmė | 10 mmol/L or 180 mg/dL |
+|                    | Temporary target         |
+| ------------------ | ------------------------ |
+| Mažiausia reikšmė  | 4 mmol/l arba 72 mg/dL   |
+| Didžiausia reikšmė | 10 mmol/l arba 180 mg/dL |
 
 **AAPS** provides three built-in **Temp-Target** presets suitable for exercise (**Activity**), meals (**Eating Soon**) and predicted hypoglycemia (**Hypo**). Juos rasite ekrane **Laikinas tikslas** (**Valdymas** → **Laikinas tikslas**), kurį taip pat galite atidaryti tiesiog bakstelėję **tikslo ženklelį** pagrindiniame ekrane.
 
