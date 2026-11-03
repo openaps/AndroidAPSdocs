@@ -5,67 +5,67 @@
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## AAPS ile pompa özellikleri
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* DST and timezone changes must be handled manually.
+* **AAPS** ile telefonunuzun yerleşik Bluetooth'u üzerinden, ek bir iletişim cihazı olmadan iletişim kurar.
+* Yaz saati (DST) ve saat dilimi değişiklikleri elle yapılmalıdır.
 
 ## İnsülin Pompası Bluetooth Eşleştirme
 
-- Tap the **menu** (☰) in the top-left corner.
+- Sol üst köşedeki **menüye** (☰) dokunun.
 
-![The menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
+![Konfigürasyon girişi olan menü](../images/v4/Configuration/configuration_menu.png)
 
-- Tap **Configuration** > **Pump** and select **Diaconn G8**.
+- **Konfigürasyon** > **Pompa** seçeneğine dokunun ve **Diaconn G8**'i seçin.
 
-![Configuration > Pump with the Diaconn G8 plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+![Diaconn G8 eklentisi ile Konfigürasyon > Pompa](../images/v4/Configuration/configuration_pump_list_3.png)
 
-Once it is selected, the **Diaconn G8** card shows two buttons, **Settings** and **Open plugin**:
+Seçildikten sonra **Diaconn G8** kartında iki düğme görünür: **Ayarlar** ve **Eklentiyi aç**:
 
-![The Diaconn G8 plugin selected in Configuration > Pump](../images/v4/Pumps/diaconn_g8_enabled.png)
+![Konfigürasyon > Pompa içinde seçilmiş Diaconn G8 eklentisi](../images/v4/Pumps/diaconn_g8_enabled.png)
 
-**Settings** opens the settings of the Diaconn G8 driver (see [Diaconn G8 insulin pump option setting](#diaconn-g8-insulin-pump-option-setting) below).
+**Ayarlar**, Diaconn G8 sürücüsünün ayarlarını açar (aşağıda [Diaconn G8 insülin pompası seçenek ayarları](#diaconn-g8-insulin-pump-option-setting) bölümüne bakın).
 
-**Open plugin** (or **Manage** > **Pump**) opens the Diaconn G8 pump screen. Before a pump is paired it looks like this:
+**Eklentiyi aç** (veya **Yönet** > **Pompa**), Diaconn G8 pompa ekranını açar. Pompa eşleştirilmeden önce ekran şöyle görünür:
 
-![Diaconn G8 pump screen before pairing](../images/v4/Pumps/diaconn_g8_pump_screen.png)
+![Eşleştirmeden önce Diaconn G8 pompa ekranı](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
 ![image](../images/DiaconnG8/DiaconnG8_04.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 pairing starts from the **Pair** button on the pump screen; there is no **Selected pump** setting.
+Yukarıdaki ekran görüntüsü eski bir **AAPS** sürümüne aittir. **AAPS** 4'te eşleştirme, pompa ekranındaki **Eşleştir** düğmesiyle başlar; **Seçilen pompa** ayarı yoktur.
 ```
 
-- On the pump screen, tap **Pair**. The **Diaconn Pump Pairing** screen opens and **AAPS** scans for nearby pumps.
-- Tap your insulin pump's model number once it appears in the list (for example **DIACONN-65010**).
+- Pompa ekranında **Eşleştir** düğmesine dokunun. **Diaconn Pompa Eşleştirme** ekranı açılır ve **AAPS** yakındaki pompaları arar.
+- İnsülin pompanızın model numarası listede görünce ona dokunun (örneğin **DIACONN-65010**).
 
-![Diaconn Pump Pairing screen scanning for pumps](../images/DiaconnG8/DiaconnG8_05.png)
+![Pompaları arayan Diaconn Pompa Eşleştirme ekranı](../images/DiaconnG8/DiaconnG8_05.png)
 
 - Model numaranızı kontrol etmek için iki seçenek vardır:
 
 1. Pompanın arkasındaki SN numarasının son 5 hanesi.
-2. Pompa üzerinden O düğmesi > Bilgi > BLE > Son 5 basamak.
+2. Pompada O düğmesine basın > Information > BLE > son 5 hane.
 
 ![image](../images/DiaconnG8/DiaconnG8_06.jpg)
 
-- Once you select your pump, a window appears asking for a PIN code. Enter the PIN number displayed on your pump to complete the connection.
+- Pompanızı seçtikten sonra PIN kodu isteyen bir pencere açılır. Bağlantıyı tamamlamak için pompanızda gösterilen PIN numarasını girin.
 
  ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
 
-- When **Pairing successful!** is shown, tap **OK** to go back to the pump screen.
+- **Eşleştirme başarılı!** mesajı görünce pompa ekranına dönmek için **Tamam** düğmesine dokunun.
 
 ## Pompa durum kontrolü ve günlük senkronizasyonu
 
-- Once your pump is connected, open the pump screen (**Manage** > **Pump**). It shows the pump status (battery, reservoir, last connection, last bolus, basal rate and more).
-- Tap **Refresh** to connect to the pump, update the status and synchronize the logs.
-- Tap **Pump history** to see the history read from the pump.
+- Pompanız bağlandıktan sonra pompa ekranını açın (**Yönet** > **Pompa**). Bu ekran pompanın durumunu gösterir (pil, rezervuar, son bağlantı, son bolus, bazal oran ve diğerleri).
+- Pompaya bağlanmak, durumu güncellemek ve günlükleri senkronize etmek için **Yenile** düğmesine dokunun.
+- Pompadan okunan geçmişi görmek için **Pompa geçmişi** düğmesine dokunun.
 
 ![image](../images/DiaconnG8/DiaconnG8_08.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump status is shown on the pump screen (**Manage** > **Pump**) and synchronized with the **Refresh** button.
+Yukarıdaki ekran görüntüsü eski bir **AAPS** sürümüne aittir. **AAPS** 4'te pompa durumu pompa ekranında (**Yönet** > **Pompa**) gösterilir ve **Yenile** düğmesiyle senkronize edilir.
 ```
 
 (diaconn-g8-bluetooth-troubleshooting)=
@@ -74,16 +74,16 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump
 
 **What to do in the case of an unstable Bluetooth connection with the pump.**
 
-### Method 1) Restart AAPS, then check the pump again
+### Yöntem 1) AAPS'i yeniden başlatın, sonra pompayı tekrar kontrol edin
 
-- Tap the **menu** (☰) in the top-left corner.
-- Tap **Exit** at the bottom of the menu.
+- Sol üst köşedeki **menüye** (☰) dokunun.
+- Menünün en altındaki **Çıkış** seçeneğine dokunun.
 
-![The menu with the Exit entry at the bottom](../images/v4/Configuration/configuration_menu.png)
+![En altta Çıkış girişi olan menü](../images/v4/Configuration/configuration_menu.png)
 
-- Start **AAPS** again and check the connection to the pump.
+- **AAPS**'i yeniden başlatın ve pompa bağlantısını kontrol edin.
 
-### Method 2) If the first method doesn't work, disconnect Bluetooth and then reconnect.
+### Yöntem 2) İlk yöntem işe yaramazsa Bluetooth bağlantısını kesin ve yeniden bağlanın.
 
 - Üstteki Bluetooth düğmesini yaklaşık 3 saniye basılı tutun.
 
@@ -97,7 +97,7 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump
 
 ![image](../images/DiaconnG8/DiaconnG8_13.jpg)
 
-- In **AAPS**, open the pump screen (**Manage** > **Pump**), tap **Unpair** and confirm **Reset pairing information?**.
+- **AAPS**'te pompa ekranını açın (**Yönet** > **Pompa**), **Eşleşmeyi Kaldır** düğmesine dokunun ve **Eşleştirme bilgileri sıfırlansın mı?** sorusunu onaylayın.
 - Pompa için Bluetooth eşleştirme işlemini tekrarlayın (yukarıya bakın).
 
 ## Daha fazla bilgi
@@ -106,36 +106,36 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump
 
 ### Diaconn G8 İnsülin pompası seçenek ayarları
 
-- **Configuration** > **Pump** > **Diaconn G8** > **Settings**
-- Or, on the pump screen (**Manage** > **Pump**), tap the settings icon (cog wheel) in the top-right corner.
+- **Konfigürasyon** > **Pompa** > **Diaconn G8** > **Ayarlar**
+- Veya pompa ekranında (**Yönet** > **Pompa**) sağ üst köşedeki ayarlar simgesine (dişli çark) dokunun.
 
-![Diaconn G8 driver settings](../images/v4/Pumps/diaconn_g8_settings.png)
+![Diaconn G8 sürücü ayarları](../images/v4/Pumps/diaconn_g8_settings.png)
 
-- **Bolus speed** sets how fast the pump delivers a bolus.
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an "Insulin Change" event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a "Site Change" event occurs.
-- If the **Log tube change** option is activated, the relevant details are automatically added as a note when a "Tube Change" event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a "Battery Change" event occurs. You can also record a battery change yourself with **Manage** > **Pump Battery Change**. (Not: Pili değiştirmek için lütfen önce devam eden tüm enjeksiyon işlevlerini durdurun.)
-- **Diaconn Cloud Sync** sends the pump logs to the Diaconn Cloud.
+- **Bolus hızı**, pompanın bolusu ne kadar hızlı ileteceğini belirler.
+- **Rezervuar değişikliğini günlüğe kaydet** seçeneği etkinse, bir "İnsülin Değişimi" olayı olduğunda ilgili bilgiler careportal'a otomatik olarak yüklenir.
+- **Kanül değişikliğini günlüğe kaydet** seçeneği etkinse, bir "Kanül Değişimi" olayı olduğunda ilgili bilgiler careportal'a otomatik olarak yüklenir.
+- **Hortum değişimini günlüğe kaydet** seçeneği etkinse, bir "Hortum Değişimi" olayı olduğunda ilgili bilgiler otomatik olarak not olarak eklenir.
+- **Pil değişimini günlüğe kaydet** seçeneği etkinse, bir "Pil Değişimi" olayı olduğunda ilgili bilgiler careportal'a otomatik olarak yüklenir. Pil değişimini **Yönet** > **Pompa Pil Değişimi** ile kendiniz de kaydedebilirsiniz. (Not: Pili değiştirmek için lütfen önce devam eden tüm enjeksiyon işlevlerini durdurun.)
+- **Diaconn Bulut Senkronizasyonu**, pompa günlüklerini Diaconn Cloud'a gönderir.
 
 ![Diaconn G8 actions menu](../images/DiaconnG8/DiaconnG8_15.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 a battery change is recorded with **Manage** > **Pump Battery Change**; there is no **Actions** tab.
+Yukarıdaki ekran görüntüsü eski bir **AAPS** sürümüne aittir. **AAPS** 4'te pil değişimi **Yönet** > **Pompa Pil Değişimi** ile kaydedilir; **Eylemler** sekmesi yoktur.
 ```
 
-### Yayma Blosu fonksiyonu
+### Yayma Bolus işlevi
 
 - Yayma bolus kullanırsanız, kapalı döngü devre dışı bırakılır.
-- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- Yayma bolusun kapalı döngüde neden çalışmadığını öğrenmek için [bu sayfaya](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) bakın.
 
-## Where to get help
+## Nereden yardım alabilirsiniz?
 
-Development of the Diaconn G8 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Diaconn G8 sürücüsü topluluk tarafından **gönüllü** olarak geliştirilmektedir. Yardım istemeden önce lütfen:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. Özelliğin nasıl çalışması gerektiğini doğrulamak için bu dokümantasyonun ilgili bölümünü **okuyun**.
+2. [Discord](https://discord.gg/4fQUWHZ4Mw)'daki *#AAPS* kanalında veya diğer [topluluk kanallarından](../GettingHelp/WhereCanIGetHelp.md) birinde **sorun**.
+3. [Mevcut sorunları](https://github.com/nightscout/AndroidAPS/issues) arayarak **hata bildirin**; sizinki listede yoksa [yeni bir sorun (issue)](https://github.com/nightscout/AndroidAPS/issues) açın ve [günlük dosyalarınızı](../GettingHelp/AccessingLogFiles.md) ekleyin.
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Yardım isterken telefonunuzun markasını ve modelini, Android sürümünü, **AAPS** sürümünü ve sorunun sade bir açıklamasını (ne değişti, en son ne zaman çalıştı) ekleyin.
