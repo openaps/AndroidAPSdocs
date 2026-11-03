@@ -181,12 +181,12 @@ Supportende <./Maintenance/EndOfLife.md>
 ```{toctree}
 :caption: 9) Hilfe & Fehlerbehebung
 
-Wo bekomme ich Hilfe zu AAPS <./GettingHelp/WhereCanIGetHelp bekommen. d>
-Fehlerbehebung (beginne hier) <./GettingHelp/GeneralFehlerbehebung. d>
+Wo bekomme ich Hilfe zu AAPS <./GettingHelp/WhereCanIGetHelp bekommen.md>
+Fehlerbehebung (beginne hier) <./GettingHelp/GeneralFehlerbehebung.md>
 - Bluetooth-Fehlerbehebung <./GettingHelp/BluetoothTroubleshooting.md>
-- NSClient-Fehlerbehebung <./GettingHelp/TroubleshootingNsClient. d>
+- NSClient-Fehlerbehebung <./GettingHelp/TroubleshootingNsClient.md>
 - Android Studio-Fehlerbehebung <./GettingHelp/TroubleshootingAndroidStudio.md>
-- Browser Build-Fehlerbehebung <./GettingHelp/BrowserBuildTroubleshooting. d>
+- Browser Build-Fehlerbehebung <./GettingHelp/BrowserBuildTroubleshooting.md>
 - AAPS neu installieren (neuer Keystore) <./GettingHelp/ReinstallAaps.md>
 - Zugriff auf Logdateien <. GettingHelp/AccessingLogFiles.md>
 FAQ <./UsefulLinks/FAQ.md>
