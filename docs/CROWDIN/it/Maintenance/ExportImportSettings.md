@@ -1,4 +1,4 @@
-# Creating and restoring back-ups
+# Creare e ripristinare i backup
 
 When installing AAPS on your phone it becomes a "medical device" you rely on daily. It is highly recommended to have an emergency backup plan for when your phone gets defective, stolen or lost. Therefore, it is essential to prepare by asking yourself: "What if?"
 
@@ -14,15 +14,15 @@ Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and
 To be able to restore, having the following items at hand is important:
 
 - Your **Android Studio keystore file** and associated **password**: Needed for (re)building the AAPS .APK installer file.
-- A recent copy of the **AAPS installer .APK**
+- Una copia recente del **file di installazione .APK di AAPS**
 - A recent **settings export** file: For restoring important settings (which includes your objectives!).
 - Your **AAPS master password**
 - Backups of additional utilities: Such as BYODA and/or xDrip.
-- Personal notes on your setup.
+- Appunti personali sulla tua configurazione.
 
 Below are the items that are recommended for keeping back-ups.
 
-## Creating back-ups
+## Creare i backup
 
 ### Keystore file from the computer you used to build the APK
 When building your .APK installer file from Android Studio, it uses the **keystore file and password to sign the .APK installer file**. To update your current AAPS installation, it is required to sign the update .APK installer file with the same keystore used for the initial installation. When updating, all settings and the AAPS database will be kept. Note that without this, you are required to first uninstall the current application and then [reinstall](#reinstall-aaps) and reconfigure AAPS.
@@ -31,16 +31,16 @@ Maintaining the keystore and associated password will greatly reduce the complex
 
 **When to back-up:** The keystore should be backed up after you first build the **AAPS** .APK installer file.
 
-**How to back-up:** Locate your keystore path. If you don’t remember it you can find it in Android Studio by selecting **Build > APK > Next**. The path will be listed in “Key store path”. Using your file explorer, navigate to this path and make a copy of your keystore file (ending in file extension `.jks`). Save it to a safe cloud location should your computer become unavailable. Make sure to also record your key store password, key alias and key password.
+**Come fare il backup:** trova il percorso del tuo keystore. Se non te lo ricordi, puoi trovarlo in Android Studio selezionando **Build > APK > Next**. The path will be listed in “Key store path”. Using your file explorer, navigate to this path and make a copy of your keystore file (ending in file extension `.jks`). Save it to a safe cloud location should your computer become unavailable. Make sure to also record your key store password, key alias and key password.
 
-### Copies of the most recent APK
+### Copie dell'APK più recente
 In case your main **AAPS** phone is lost or damaged, having a copy of the APK available will allow you to quickly resume using **AAPS** with a new phone. Note: you will also need your preferences backed up as noted below.
 
 **When to back-up:** You should maintain a back-up of the most recent APK that you installed on your main **AAPS** phone. You may want to also maintain one earlier version in case you need to roll back to that for any reason.
 
-**How to back-up:** Maintain a copy on the computer used to build the APK with Android Studio. Additionally, it is recommended to use a cloud platform to store a copy of the installer APK. Make sure you know how to locate both backups when needed. Consider setting up dedicated folders to store these backups.
+**How to back-up:** Maintain a copy on the computer used to build the APK with Android Studio. Additionally, it is recommended to use a cloud platform to store a copy of the installer APK. Assicurati di sapere dove trovare entrambi i backup quando servono. Valuta di creare cartelle dedicate per conservare questi backup.
 
-### AAPS settings file (also referred to as 'Preferences')
+### File delle impostazioni di AAPS (chiamato anche 'Preferenze')
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
@@ -54,34 +54,34 @@ The **Settings** file is used to customize the AAPS application to fit your spec
 
 Exporting the AAPS settings to file enables you to restore its configuration to a specific point in time. As mentioned, in addition to all configuration settings, the export file also contains the status of your objectives, which you need to restore when **(re)installing** AAPS. Without this you will be required to redo all objectives from start to enable closed loop. Settings files also enable you to restore "last known good" settings for undoing any configuration changes.
 
-**When to back-up AAPS settings:**
+**Quando fare il backup delle impostazioni di AAPS:**
 * Each time you complete an objective to prevent losing your progress. _Without a copy of your **Settings** you will have to complete all objectives again in the event you need to re-install AAPS or replace your phone._
 
 * Any time you plan to make significant changes to your configuration (change SMB settings, change insulin types, change pump, make changes to automations) you should back up your **Settings** before and after making the changes. This way you have your most recent settings as well as a copy of what they were before the changes in case you need to revert back to them.
 
-* Tubeless pumps (Such as Omnipod and Medtrum) users only: the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. If you do not have a copy of your preferences exported after you started your current pod you will need to start a new pod in the event you need to replace your current phone.
+* Solo per chi usa micro senza catetere (come Omnipod e Medtrum): il file delle **Impostazioni** contiene i dati di connessione del pod attuale e si può usare per ripristinare la connessione a quel pod con un nuovo telefono. If you do not have a copy of your preferences exported after you started your current pod you will need to start a new pod in the event you need to replace your current phone.
 
-**How to back-up manually:**
+**Come fare il backup manualmente:**
 
-1. If this is your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). Set a password and record this in a safe place. _You will be unable to access your **Settings** back-ups without this password._
+1. Se è la prima volta che importi o esporti le **Impostazioni**, devi impostare una password master in [Impostazioni > Protezione](#Preferences-master-password). Set a password and record this in a safe place. _Senza questa password non potrai accedere ai backup delle **Impostazioni**._
 
-2. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance**. Choose where to save the file with the **Local** and **Cloud** chips next to **Export settings** (see **Exporting or Importing Settings** below), then tap **Export settings**. **AAPS** shows where the file will go: the file name for **Local**, **Google Drive** for **Cloud**. Tap **OK**.
+2. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance**. Scegli dove salvare il file con i chip **Locale** e **Cloud** accanto a **Esporta impostazioni** (vedi **Esportare o importare le impostazioni** più sotto), poi tocca **Esporta impostazioni**. **AAPS** mostra dove andrà il file: il nome del file per **Locale**, **Google Drive** per **Cloud**. Tocca **OK**.
 
-   ![Export settings to a local file](../images/Maintenance/export_settings_confirm_local.png)
+   ![Esportare le impostazioni in un file locale](../images/Maintenance/export_settings_confirm_local.png)
 
-   ![Export settings to Google Drive](../images/Maintenance/export_settings_confirm_cloud.png)
+   ![Esportare le impostazioni su Google Drive](../images/Maintenance/export_settings_confirm_cloud.png)
 
    Type the master password set above and tap **OK**.
 
-   ![Master password for the export](../images/Maintenance/export_settings_password.png)
+   ![Password master per l'esportazione](../images/Maintenance/export_settings_password.png)
 
-   **Settings exported** (local) or **Cloud export successful** (cloud) confirms the export.
+   Il messaggio **Impostazioni esportate** (locale) o **Esportazione cloud riuscita** (cloud) conferma l'esportazione.
 
-   ![Settings exported message](../images/Maintenance/export_settings_done_local.png)
+   ![Messaggio Impostazioni esportate](../images/Maintenance/export_settings_done_local.png)
 
-   ![Cloud export successful message](../images/Maintenance/export_settings_done_cloud.png)
+   ![Messaggio Esportazione cloud riuscita](../images/Maintenance/export_settings_done_cloud.png)
 
-3. Using the file explorer on your phone (commonly called “Files” or “My Files”) navigate to Internal Storage > AAPS > preferences. Here you will see a copy of all exported preferences files. The file name should be `YYYY-MM-DD_Time_appname.json`. Upload this file to the cloud platform of your choice. Then from the cloud platform, also download a copy to your local computer.
+3. Using the file explorer on your phone (commonly called “Files” or “My Files”) navigate to Internal Storage > AAPS > preferences. Here you will see a copy of all exported preferences files. Il nome del file dovrebbe essere `YYYY-MM-DD_Time_appname.json`. Carica questo file sulla piattaforma cloud che preferisci. Then from the cloud platform, also download a copy to your local computer.
 
 (ExportImportSettings-Settings-Export)=
 
@@ -97,21 +97,21 @@ It is recommended to do regular settings exports, especially before and after ma
 
 **Note**: _The exported settings will be encrypted with your AAPS master password: without the master password used for exporting you will be unable to import the settings file!_
 
-### Exporting or Importing Settings
-To export or import settings, open the **menu** (☰) and select **Maintenance**. Under **File management**, the **Local** and **Cloud** chips next to **Export settings** and **Import settings** choose where the settings file is saved to or read from: **Local** is the AAPS directory on your phone, **Cloud** is available once a [Cloud Directory](#preferences-maintenance-cloud) is set up. Tapping a chip turns it on or off; at least one always stays selected, and both rows share the same choice. Then tap **Export settings** or **Import settings** itself to start.
+### Esportare o importare le impostazioni
+Per esportare o importare le impostazioni, apri il **menu** (☰) e seleziona **Manutenzione**. Under **File management**, the **Local** and **Cloud** chips next to **Export settings** and **Import settings** choose where the settings file is saved to or read from: **Local** is the AAPS directory on your phone, **Cloud** is available once a [Cloud Directory](#preferences-maintenance-cloud) is set up. Tapping a chip turns it on or off; at least one always stays selected, and both rows share the same choice. Then tap **Export settings** or **Import settings** itself to start.
 
-![Maintenance menu with the Export settings and Import settings rows](../images/Maintenance/maintenance_export_import.png)
+![Menu Manutenzione con le righe Esporta impostazioni e Importa impostazioni](../images/Maintenance/maintenance_export_import.png)
 
 (ExportImportSettings-Automating-Settings-Export)=
-### Automating Settings Export
+### Automatizzare l'esportazione delle impostazioni
 
-To automate settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
+Per automatizzare le esportazioni delle impostazioni [(**vedi Automazione**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) apri [**Impostazioni** > **Manutenzione**](#preferences-maintenance-settings), espandi **Esportazione automatica delle impostazioni** e attiva **Abilita l'esportazione automatica delle impostazioni**.
 
 You can now configure [Automation](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) to export settings, either on a regular basis (_i.e._ each week), or after a pod change.
 
 _**Note:** On importing settings, the user always needs to enter the AAPS master password!_
 
-![Settings > Maintenance > Unattended Settings Export with the Enable automated settings export switch](../images/Maintenance/settings_unattended_export.png)
+![Impostazioni > Manutenzione > Esportazione automatica delle impostazioni con l'interruttore Abilita l'esportazione automatica delle impostazioni](../images/Maintenance/settings_unattended_export.png)
 
 (ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps)=
 ## Restoring from your backups on a new phone or fresh installation of AAPS
@@ -127,7 +127,7 @@ Use these instructions if you have a back-up of your APK and **Settings** that y
 
 _If you are updating **AAPS** using an APK built with the same keystore you should not need to follow this process. However, it is still advised to create a back-up before you apply the update._
 
-If you are updating **AAPS** after you lost or replaced your original keystore (i.e. using a new build computer without transferring the keystore), ensure that you back up all settings per the above and then uninstall the existing version of **AAPS** on your phone. See [Reinstalling AAPS with a new keystore](#reinstall-aaps) for the full procedure.
+If you are updating **AAPS** after you lost or replaced your original keystore (i.e. using a new build computer without transferring the keystore), ensure that you back up all settings per the above and then uninstall the existing version of **AAPS** on your phone. Vedi [Reinstallare AAPS con un nuovo keystore](#reinstall-aaps) per la procedura completa.
 
 If needed, [set up your CGM/BG source receiver](../Getting-Started/CompatiblesCgms.md) prior to the steps listed below
 
@@ -150,7 +150,7 @@ By default, an import leaves your pump settings alone: the pump selected in **Co
 
 2. Launch **AAPS** and allow any requested permissions
 
-3. Exit the Setup Wizard. We will be importing all the necessary settings from the back-up copy of **Settings**
+3. Exit the Setup Wizard. Importeremo tutte le impostazioni necessarie dalla copia di backup delle **Impostazioni**
 
 4. From the **AAPS** main screen press **Grant** and allow all permissions listed in the **Permissions Required** panel on the top
 
@@ -160,29 +160,29 @@ By default, an import leaves your pump settings alone: the pump selected in **Co
 
 7. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance** > **Export settings** > type in the master password set above > **OK**. This will create the preferences folder if it does not already exist on your phone.
 
-8. Download the back-up of your **Preferences** file from your cloud platform.
+8. Scarica dalla tua piattaforma cloud il backup del file delle **Preferenze**.
 
 9. Use your file explorer (commonly called “Files” or “My Files”) to move the file from your downloads to `/internal storage/AAPS/preferences` if your **AAPS Directory** has been set `/internal storage/AAPS`
 
-10. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance** and tap **Import settings**. Select the preferences file you want to restore from (the newest is at the top). Make sure you select the correct preferences file, all .json files from the preferences folder (or from the cloud directory, with **Cloud**) will be shown.
+10. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance** and tap **Import settings**. Seleziona il file delle preferenze da cui vuoi ripristinare (il più recente è in alto). Make sure you select the correct preferences file, all .json files from the preferences folder (or from the cloud directory, with **Cloud**) will be shown.
 
     ![List of settings files to import](../images/Maintenance/import_settings_files.png)
 
-    **AAPS** shows the details of the file. Type the master password set above and tap **Decrypt & Review**.
+    **AAPS** mostra i dettagli del file. Type the master password set above and tap **Decrypt & Review**.
 
-11. Once the file is decrypted, decide what to do with the pump settings. On a new phone that takes over the same pump, tick **Also replace pump settings** so the pairing and the pump settings come from the file. Leave the box unticked to keep the pump this phone is already paired with. Then tap **Import**.
+11. Once the file is decrypted, decide what to do with the pump settings. On a new phone that takes over the same pump, tick **Also replace pump settings** so the pairing and the pump settings come from the file. Leave the box unticked to keep the pump this phone is already paired with. Poi tocca **Importa**.
 
-    ![Decrypted settings file with the Also replace pump settings box and the Import button](../images/Maintenance/import_settings_review.png)
+    ![File delle impostazioni decifrato con la casella Sostituisci anche le impostazioni del micro e il pulsante Importa](../images/Maintenance/import_settings_review.png)
 
-12. **AAPS** asks **Apply imported settings?** and tells you how many settings will change and, if you left the box unticked, how many pump settings are kept. Nothing has been written yet, so **Cancel** leaves your phone exactly as it was. Tap **OK** to apply.
+12. **AAPS** asks **Apply imported settings?** and tells you how many settings will change and, if you left the box unticked, how many pump settings are kept. Non è ancora stato scritto nulla, quindi **Annulla** lascia il telefono esattamente com'era. Tocca **OK** per applicare.
 
-    ![Apply imported settings dialog](../images/Maintenance/import_settings_apply.png)
+    ![Finestra di dialogo per applicare le impostazioni importate](../images/Maintenance/import_settings_apply.png)
 
-13. **AAPS** applies the imported settings straight away, without restarting. Only the plugins whose settings changed are restarted. While this runs, **AAPS** shows **Applying settings…**; if the pump is busy, it shows **Waiting for pump…** and applies the settings once the pump is idle. If the pump is still busy after one minute, **AAPS** offers to try again. A **Settings applied** message confirms that the imported settings are in use. Any treatment you had queued while the import ran is dropped and **AAPS** tells you that it was cancelled, so nothing is sent to the pump twice.
+13. **AAPS** applica subito le impostazioni importate, senza riavviarsi. Vengono riavviati solo i plugin le cui impostazioni sono cambiate. While this runs, **AAPS** shows **Applying settings…**; if the pump is busy, it shows **Waiting for pump…** and applies the settings once the pump is idle. If the pump is still busy after one minute, **AAPS** offers to try again. Il messaggio **Impostazioni applicate** conferma che le impostazioni importate sono in uso. Any treatment you had queued while the import ran is dropped and **AAPS** tells you that it was cancelled, so nothing is sent to the pump twice.
 
-    ![Settings applied message](../images/Maintenance/import_settings_applied.png)
+    ![Messaggio Impostazioni applicate](../images/Maintenance/import_settings_applied.png)
 
-If the file selected a pump that this version of **AAPS** does not have, **AAPS** falls back to the **Virtual Pump** and tells you so. Select your pump again in **Configuration** and check its settings.
+If the file selected a pump that this version of **AAPS** does not have, **AAPS** falls back to the **Virtual Pump** and tells you so. Seleziona di nuovo il tuo micro in **Configurazione** e controlla le sue impostazioni.
 
 14. Tubeless pumps (Omnipod and Medtrum) users only - if you ticked **Also replace pump settings** and your **Preferences** were not backed up from the same pod you are currently using, you will need to start a new pod to begin insulin delivery.
 
