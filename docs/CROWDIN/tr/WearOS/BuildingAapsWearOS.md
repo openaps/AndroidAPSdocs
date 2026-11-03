@@ -1,95 +1,95 @@
-# Building the Wear AAPS app
+# Wear AAPS uygulamasını oluşturma
 
-The **AAPS** app for a Wear OS smartwatch (the **Wear apk**, `aaps-wear-….apk`) is a separate installation file from the **AAPS** phone app. You need both: the phone app runs the loop, the watch app shows its data and can send commands to it. The watch app is installed from the phone, see [Set up AAPS on your Wear OS watch](WearOsSmartwatch.md).
+Wear OS akıllı saat için **AAPS** uygulaması (**Wear apk**, `aaps-wear-….apk`), **AAPS** telefon uygulamasından ayrı bir yükleme dosyasıdır. İkisine de ihtiyacınız var: telefon uygulaması döngüyü çalıştırır, saat uygulaması onun verilerini gösterir ve ona komut gönderebilir. Saat uygulaması telefondan yüklenir, bkz. [Wear OS saatinizde AAPS kurulumu](WearOsSmartwatch.md).
 
-The two apps only work together when they match:
+İki uygulama yalnızca birbirine uyduğunda birlikte çalışır:
 
-- **Same AAPS version** on the phone and on the watch.
-- **Same keystore** used to sign both apps.
+- Telefonda ve saatte **aynı AAPS sürümü**.
+- İki uygulamayı imzalamak için **aynı anahtar deposu**.
 
-The simplest way to guarantee this is to build both apps **at the same time**, in the same build. The browser build does this for you: every build produces the phone apk and the Wear apk together. With Android Studio or the command line, you build the Wear apk as a second step right after the phone apk.
+Bunu sağlamanın en basit yolu, iki uygulamayı **aynı anda**, aynı oluşturmada oluşturmaktır. Tarayıcı ile oluşturma bunu sizin için yapar: her oluşturma telefon apk'sını ve Wear apk'sını birlikte üretir. Android Studio veya komut satırı ile Wear apk'sını, telefon apk'sından hemen sonra ikinci bir adım olarak oluşturursunuz.
 
 ```{note}
-Already using **AAPS** on your phone but no Wear apk from the same build? Build both apps again, with the same keystore, and reinstall the phone app too. A Wear apk built months later, or with a different Android Studio version, is unlikely to be compatible with the phone app.
+Telefonunuzda **AAPS**'i zaten kullanıyorsunuz ama aynı oluşturmadan bir Wear apk'nız yok mu? İki uygulamayı aynı anahtar deposuyla yeniden oluşturun ve telefon uygulamasını da yeniden yükleyin. Aylar sonra veya farklı bir Android Studio sürümüyle oluşturulan bir Wear apk'sı büyük olasılıkla telefon uygulamasıyla uyumlu olmaz.
 ```
 
-## Supported Wear OS versions
+## Desteklenen Wear OS sürümleri
 
-**AAPS** runs on watches with **Wear OS 3.0, 3.2 or 3.5** (Android 11, API level 30) **or newer** (Wear OS 4, 5 and 6). Watches with Wear OS 2 are not supported.
+**AAPS**, **Wear OS 3.0, 3.2 veya 3.5** (Android 11, API düzeyi 30) **veya daha yeni** (Wear OS 4, 5 ve 6) sürümlü saatlerde çalışır. Wear OS 2 yüklü saatler desteklenmez.
 
 ```{warning}
-AAPS Watchfaces are available for Wear OS smartwatches with API level 30 to 33 (Wear OS 3.0, 3.2, 3.5 and 4).<br>
-Newer Wear OS versions progressively break the AAPS watchfaces — see [Wear OS watch face changes](#wearos-watchface-changes) and the [Wear OS 5 limitations](#BuildingAapsWearOs-WearOS5).
+AAPS saat arayüzleri, API düzeyi 30 ile 33 arasındaki (Wear OS 3.0, 3.2, 3.5 ve 4) Wear OS akıllı saatlerde kullanılabilir.<br>
+Daha yeni Wear OS sürümleri AAPS saat arayüzlerini adım adım bozuyor. Bkz. [Wear OS saat arayüzü değişiklikleri](#wearos-watchface-changes) ve [Wear OS 5 sınırlamaları](#BuildingAapsWearOs-WearOS5).
 ```
 
 (building-aaps-wear-os-method)=
 
-## Get the Wear apk with your build method
+## Wear apk'sını oluşturma yönteminizle alın
 
-Follow the section for the method you use to [build AAPS](../SettingUpAaps/BuildingAaps.md).
+[AAPS'i oluşturmak](../SettingUpAaps/BuildingAaps.md) için kullandığınız yöntemin bölümünü izleyin.
 
 (building-aaps-wear-os-browser)=
 
-### Browser build (recommended)
+### Tarayıcı ile oluşturma (önerilir)
 
-**Nothing extra to do.** Every browser build produces two files from the same source and the same keystore:
+**Ek bir şey yapmanız gerekmez.** Her tarayıcı ile oluşturma, aynı kaynaktan ve aynı anahtar deposuyla iki dosya üretir:
 
-- `aaps-….apk`: the phone app.
-- `aaps-wear-….apk`: the watch app.
+- `aaps-….apk`: telefon uygulaması.
+- `aaps-wear-….apk`: saat uygulaması.
 
-The Wear apk follows the [variant](#browserbuild-variant) you selected for the build: `fullRelease` gives the **AAPS Wear** app, `aapsclientRelease` the **AAPSClient Wear** app, `pumpcontrolRelease` the **PumpControl Wear** app. Each Wear app only talks to its matching phone app.
+Wear apk'sı, oluşturma için seçtiğiniz [varyanta](#browserbuild-variant) göre değişir: `fullRelease` **AAPS Wear** uygulamasını, `aapsclientRelease` **AAPSClient Wear** uygulamasını, `pumpcontrolRelease` **PumpControl Wear** uygulamasını verir. Her Wear uygulaması yalnızca kendine uyan telefon uygulamasıyla iletişim kurar.
 
-Where to find the Wear apk:
+Wear apk'sını nerede bulursunuz:
 
-- **AAPS Builder**: on the build page, scroll down to **Artifacts** and download `aaps-wear-….apk` next to the phone app, as shown in [Step 5 – Install the app on your phone](#aaps-builder-step5). Download it on the phone that runs **AAPS** if you install the watch app from the phone (Wear Installer 2 or Easy Fire Tools), or on your computer if you use ADB.
+- **AAPS Builder**: oluşturma sayfasında **Artifacts** (oluşturulan dosyalar) bölümüne kaydırın ve telefon uygulamasının yanındaki `aaps-wear-….apk` dosyasını indirin. Bkz. [Adım 5 – Uygulamayı telefonunuza yükleyin](#aaps-builder-step5). Saat uygulamasını telefondan yüklüyorsanız (Wear Installer 2 veya Easy Fire Tools) dosyayı **AAPS** çalışan telefona indirin. ADB kullanıyorsanız bilgisayarınıza indirin.
 
-  ![Artifacts with the phone and watch apps](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
+  ![Telefon ve saat uygulamalarını içeren Artifacts](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 
-- **Fork with Google Drive**: open your Google Drive, folder `AAPS`, then the folder of the version you built. It contains the phone apk and the Wear apk, see [Step 4 – Build the APK](#github-build-apk).
+- **Google Drive ile fork**: Google Drive'ınızı açın, `AAPS` klasörüne, ardından oluşturduğunuz sürümün klasörüne gidin. Bu klasörde telefon apk'sı ve Wear apk'sı bulunur, bkz. [Tarayıcı ile oluşturma – Adım 4: APK'yı oluşturun](#github-build-apk).
 
-  ![Google Drive Location](../images/update/CI/GitHubActions5.png)
+  ![Google Drive konumu](../images/update/CI/GitHubActions5.png)
 
-Keep the Wear apk together with the phone apk in your backups. With **AAPS Builder**, the files stay on the build page for 14 days only.
+Yedeklerinizde Wear apk'sını telefon apk'sıyla birlikte saklayın. **AAPS Builder** ile dosyalar oluşturma sayfasında yalnızca 14 gün kalır.
 
-Next: install the Wear apk on the watch, see [Set up AAPS on your Wear OS watch](WearOsSmartwatch.md).
+Sonraki adım: Wear apk'sını saate yükleyin, bkz. [Wear OS saatinizde AAPS kurulumu](WearOsSmartwatch.md).
 
 (building-aaps-wear-os-android-studio)=
 
 ### Android Studio
 
-The Wear apk is built like the phone apk, as a second signed build. Do it right after the phone apk, with the same Android Studio version and the same keystore.
+Wear apk'sı, telefon apk'sı gibi ikinci bir imzalı oluşturma olarak oluşturulur. Bunu telefon apk'sından hemen sonra, aynı Android Studio sürümü ve aynı anahtar deposuyla yapın.
 
-- Follow the instructions for [Android Studio Build](../SettingUpAaps/ComputerBuild.md).
-- When you reach [module selection](#Building-APK-wearapk) in "Build the AAPS signed apk", make sure to select **`AndroidAPS.wear`**.
+- [Android Studio ile oluşturma](../SettingUpAaps/ComputerBuild.md) talimatlarını izleyin.
+- "İmzalı AAPS APK'sını oluşturun" adımında [modül seçimine](#Building-APK-wearapk) geldiğinizde **`AndroidAPS.wear`** seçeneğini seçtiğinizden emin olun.
 
-![Wear module](../images/Building-the-App/wear_build1.png)
+![Wear modülü](../images/Building-the-App/wear_build1.png)
 
-Select "**fullRelease**" to generate the **AAPS** Wear apk file.
+**AAPS** Wear apk dosyasını oluşturmak için "**fullRelease**" seçeneğini seçin.
 
-![Wear module](../images/Building-the-App/wear_build2.png)
+![Wear modülü](../images/Building-the-App/wear_build2.png)
 
-If you prefer, you can build **“pumpcontrolRelease”** instead, from the drop-down menu, which will allow you to just remotely control the pump but without looping.
+İsterseniz açılır menüden bunun yerine **“pumpcontrolRelease”** seçeneğini de oluşturabilirsiniz. Bu sürüm pompayı yalnızca uzaktan kontrol etmenizi sağlar, döngü çalıştırmaz.
 
-Next: install the Wear apk on the watch, see [Set up AAPS on your Wear OS watch](WearOsSmartwatch.md).
+Sonraki adım: Wear apk'sını saate yükleyin, bkz. [Wear OS saatinizde AAPS kurulumu](WearOsSmartwatch.md).
 
 (building-aaps-wear-os-troubleshooting)=
 
-#### Troubleshooting the Android Studio build
+#### Android Studio ile oluşturmada sorun giderme
 
-In the process of building the full **AAPS** app (and in fact any signed app), Android Studio generates a .json file in the same folder. This then causes errors with [uncommitted changes](#troubleshooting_androidstudio-uncommitted-changes) when you try to build the next signed app, like the **AAPS** wear app. The quickest way to resolve this is to navigate to the folder where the full AAPS app has been built, your folder is probably something like:
+Tam **AAPS** uygulamasını (ve aslında her imzalı uygulamayı) oluştururken Android Studio aynı klasörde bir .json dosyası oluşturur. Bu durum, **AAPS** Wear uygulaması gibi bir sonraki imzalı uygulamayı oluşturmaya çalıştığınızda [kaydedilmemiş değişiklikler (uncommitted changes)](#troubleshooting_androidstudio-uncommitted-changes) hatalarına yol açar. Bunu çözmenin en hızlı yolu, tam AAPS uygulamasının oluşturulduğu klasöre gitmektir. Klasörünüz büyük olasılıkla şuna benzer:
 
 `C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\full\release.`
 
-Either delete, or move the unneeded .json file out of the folder. Then try to build the **AAPS** wear app again. If that doesn't work, the more detailed [troubleshooting guide](../GettingHelp/TroubleshootingAndroidStudio.md) will help you to identify the specific file causing the issue, which could also be your keystore file.
+Gereksiz .json dosyasını silin veya klasörün dışına taşıyın. Ardından **AAPS** Wear uygulamasını yeniden oluşturmayı deneyin. Bu işe yaramazsa, daha ayrıntılı [sorun giderme kılavuzu](../GettingHelp/TroubleshootingAndroidStudio.md) soruna neden olan dosyayı bulmanıza yardımcı olur. Bu dosya anahtar deposu dosyanız da olabilir.
 
 (building-aaps-wear-os-cli)=
 
-### Command line
+### Komut satırı
 
-Follow [Build instructions for the command-line](../SettingUpAaps/CLIBuild.md) and repeat the compile and sign steps for the `wear` module, with the same keystore:
+[Komut satırı ile oluşturma talimatlarını](../SettingUpAaps/CLIBuild.md) izleyin ve derleme ile imzalama adımlarını `wear` modülü için aynı anahtar deposuyla tekrarlayın:
 
 ```sh
 ./gradlew :wear:assembleFullRelease
 ```
 
-The unsigned Wear apk is written under `wear/build/outputs/apk/full/release/`. Sign it with `apksigner` exactly like the phone apk, then install it on the watch, see [Set up AAPS on your Wear OS watch](WearOsSmartwatch.md).
+İmzalanmamış Wear apk'sı `wear/build/outputs/apk/full/release/` altına yazılır. Onu telefon apk'sı gibi `apksigner` ile imzalayın, ardından saate yükleyin, bkz. [Wear OS saatinizde AAPS kurulumu](WearOsSmartwatch.md).
