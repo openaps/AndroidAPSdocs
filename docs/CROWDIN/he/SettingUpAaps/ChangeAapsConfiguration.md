@@ -1,43 +1,43 @@
-# Making changes to your AAPS configuration
+# ביצוע שינויים בתצורת AAPS שלכם
 
-After you have completed the **[Setup Wizard](../SettingUpAaps/SetupWizard.md)**, you don't need to run the entire Wizard again if you want to only change parts of your **AAPS**' configuration.
+לאחר השלמת **[אשף ההתקנה](../SettingUpAaps/SetupWizard.md)**, אין צורך להפעיל שוב את כל האשף אם רוצים לשנות רק חלקים מתצורת **AAPS**.
 
-There are three routes to change **AAPS**' configuration. As to which route you take, it is simply a matter of convenience or personal preference, as each route leads to the same settings.
+יש שלוש דרכים לשנות את התצורה של **AAPS**. הבחירה בדרך היא רק עניין של נוחות או העדפה אישית, כי כל הדרכים מובילות לאותן הגדרות.
 
 These are as follows:
 
-1. The **Configuration** screen,
-2. The **Settings** screen or
-3. A plugin's **Settings**, opened from its category in **Configuration**.
+1. המסך **הגדרות תצורה**,
+2. המסך **הגדרות**, או
+3. **הגדרות** של תוסף, שנפתחות מהקטגוריה שלו ב**הגדרות תצורה**.
 
 Here we explain which option is most convenient for each situation:
 
 ## Configuration
 
-Open the **menu** (☰) in the top-left corner of the main screen and choose **Configuration**:
+יש לפתוח את ה**תפריט** (☰) בפינה השמאלית העליונה של המסך הראשי ולבחור **הגדרות תצורה**:
 
-![Open Configuration from the top-left menu](../images/v4/Configuration/configuration_menu.png)
+![פתיחת הגדרות תצורה מהתפריט בפינה השמאלית העליונה](../images/v4/Configuration/configuration_menu.png)
 
-**Configuration** is used to **choose which plugins are active** — your CGM, pump, APS algorithm, sensitivity detection, synchronization and more, grouped by category. It is the same screen the Setup Wizard configured for you.
+**הגדרות תצורה** משמש כדי **לבחור אילו תוספים פעילים** — ה-CGM, המשאבה, אלגוריתם ה-APS, זיהוי הרגישות, הסנכרון ועוד, מקובצים לפי קטגוריה. זה אותו מסך שאשף ההתקנה הגדיר עבורכם.
 
-The documentation of the Configuration screen is available [here](../SettingUpAaps/ConfigBuilder.md).
+התיעוד של המסך הגדרות תצורה נמצא [כאן](../SettingUpAaps/ConfigBuilder.md).
 
 ## הגדרות
 
-Tap the **Settings** (gear) icon in the top-right corner of the main screen. This opens the settings of **all enabled plugins in a single place**, grouped into expandable sections:
+יש להקיש על סמל **הגדרות** (גלגל שיניים) בפינה הימנית העליונה של המסך הראשי. כך נפתחות ההגדרות של **כל התוספים הפעילים במקום אחד**, מקובצות בסעיפים שניתן להרחיב:
 
-![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
+![המסך הגדרות עם הסעיפים שניתן להרחיב](../images/v4/Configuration/settings_overview.png)
 
 This is a good route if you are not really sure where to look for a configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
 
-The documentation of the settings is available [here](../SettingUpAaps/Preferences.md).
+התיעוד של ההגדרות נמצא [כאן](../SettingUpAaps/Preferences.md).
 
-## A plugin's Settings
+## הגדרות של תוסף
 
-Inside **Configuration**, open a category and tap "**Settings**" underneath the active plugin. You are taken directly to the settings of **that plugin only**:
+בתוך **הגדרות תצורה**, יש לפתוח קטגוריה ולהקיש על "**הגדרות**" מתחת לתוסף הפעיל. כך מגיעים ישירות להגדרות של **התוסף הזה בלבד**:
 
-![Settings and Open plugin underneath the active plugin](../images/v4/Configuration/configuration_open_plugin.png)
+![הגדרות ופתיחת תוסף מתחת לתוסף הפעיל](../images/v4/Configuration/configuration_open_plugin.png)
 
-For example, this is a good route if you know that you want to change the configuration for your pump: open **Configuration → Pump**, then tap "**Settings**" under the selected pump.
+לדוגמה, זו דרך טובה אם יודעים שרוצים לשנות את התצורה של המשאבה: יש לפתוח **הגדרות תצורה ← משאבה**, ואז להקיש על "**הגדרות**" מתחת למשאבה שנבחרה.
 
-This is a "shortcut" to the same settings shown on the general **Settings** screen.
+זה "קיצור דרך" לאותן הגדרות שמוצגות במסך **הגדרות** הכללי.
