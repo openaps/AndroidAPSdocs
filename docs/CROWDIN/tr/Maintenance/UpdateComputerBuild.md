@@ -1,91 +1,91 @@
-# Update with Android Studio
+# Android Studio ile güncelleme
 
-## Programı İndirmek yerine kendiniz oluşturun...
+## İndirmek yerine kendiniz oluşturun
 
-**AAPS** is not available to download, due to regulations concerning medical devices. Uygulamayı kendi kullanımınız için oluşturmak yasaldır, ancak bir kopyasını başkasına vermemelisiniz! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Tıbbi cihazlarla ilgili düzenlemeler nedeniyle **AAPS** indirilmeye hazır olarak sunulmaz. Uygulamayı kendi kullanımınız için oluşturmak yasaldır, ancak bir kopyasını başkasına vermemelisiniz! Ayrıntılar için [SSS sayfasına](../UsefulLinks/FAQ.md) bakın.
 
 ```{note}
-In case you want to build **AAPS** on a new computer: copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+**AAPS**'i yeni bir bilgisayarda oluşturmak istiyorsanız: yedek anahtar deposu dosyanızı yeni bilgisayara kopyalayın. Ardından bu kılavuz yerine [İlk **AAPS** oluşturma yöntemini](../SettingUpAaps/BuildingAaps.md) izleyin. Tek fark şudur: yeni bir anahtar deposu oluşturmak yerine yeni bilgisayara kopyaladığınız anahtar deposunu seçebilirsiniz.
 ```
 
-## Overview for updating to a new version of AAPS with Android Studio
+## Android Studio ile AAPS'in yeni bir sürümüne güncellemeye genel bakış
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+Sorun yaşarsanız [Android Studio'da Sorun Giderme](../GettingHelp/TroubleshootingAndroidStudio.md) ayrı sayfasına bakın.
 
 ### Export your settings
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Telefonunuzdaki mevcut **AAPS** sürümünden ayarlarınızı dışa aktarın. Belki gerekmez ama tedbirli olmak daha iyidir.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Bunu nasıl yapacağınızı hatırlamıyorsanız [Ayarları dışa ve içe aktarma](ExportImportSettings.md) sayfasına bakın.
 
-### Check your Android Studio version
+### Android Studio sürümünüzü kontrol edin
 
-The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
+Gereken en düşük sürüm [Oluşturma talimatlarında](#Building-APK-recommended-specification-of-computer-for-building-apk-file) yazılıdır. Sürümünüz daha eskiyse lütfen [önce Android Studio'yu güncelleyin](#Building-APK-install-android-studio)!
 
 (Update-to-new-version-update-your-local-copy)=
 ### Update your local copy
 
-* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
+* Mevcut AAPS projenizi Android Studio ile açın. You might need to select your project. AAPS projesine (çift) tıklayın.
 
-  ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
+  ![Android Studio - Proje seçme](../images/update/01_ProjectSelection.png)
 
-* In the menu bar of Android Studio, select Git -> Fetch
+* Android Studio menü çubuğunda Git -> Fetch seçin
 
    ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
 
-* You will see a message in the lower right corner that Fetch was successful.
+* Sağ alt köşede Fetch işleminin başarılı olduğunu bildiren bir mesaj göreceksiniz.
 
    ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
 
-* In the menu bar, now select Git -> Pull
+* Şimdi menü çubuğunda Git -> Pull seçin
 
    ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
 
-* Leave all options as they are (origin/master) and select Pull
+* Tüm seçenekleri olduğu gibi bırakın (origin/master) ve Pull seçin
 
    ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
 
-* Wait while download is in progress, you will see this as info in the bottom bar. Tamamlandığında, bir başarı mesajı göreceksiniz.
+* İndirme sürerken bekleyin. Bunu alt çubukta bilgi olarak göreceksiniz. Tamamlandığında, bir başarı mesajı göreceksiniz.
 
   ```{note}
-  The files that were updated may vary! This is not an indication of a problem.
+  Güncellenen dosyalar farklı olabilir! Bu bir sorun olduğunu göstermez.
   ```
 
-   ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+   ![Android Studio - Pull başarılı](../images/update/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Tamamlanana kadar bekleyin.
+* Bazı bağımlılıkları indirmek için Gradle Sync çalışacaktır. Tamamlanana kadar bekleyin.
 
   ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-### Check JVM version
+### JVM sürümünü kontrol edin
 
-This check is particularly indicated if you have already built a previous version of **AAPS** on the same computer.
+Bu kontrol özellikle aynı bilgisayarda daha önce **AAPS**'in eski bir sürümünü oluşturduysanız önerilir.
 
-Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required version for JVM, matching the **AAPS** version you are now building. Then follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
+Şimdi oluşturduğunuz **AAPS** sürümü için gereken JVM sürümünü [Oluşturma talimatlarında](#Building-APK-recommended-specification-of-computer-for-building-apk-file) kontrol edin. Ardından doğru sürümü kullandığınızdan emin olmak için [Incompatible Gradle JVM](#incompatible-gradle-jvm) bölümündeki adımları izleyin.
 
 (Update-to-new-version-build-the-signed-apk)=
-### Build the Signed APK
+### İmzalı APK'yı oluşturun
 
-Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+Kaynak kodunuz artık yayınlanmış güncel sürümdür ve tüm ön koşullar kontrol edilmiştir. Şimdi imzalı apk'yı [imzalı apk oluşturma bölümünde](#Building-APK-generate-signed-apk) anlatıldığı gibi oluşturma zamanı.
 
 (Update-to-new-version-transfer-and-install)=
 
-### Transfer and install the apk
-You need to transfer the apk to your phone so you can install it.
+### Apk'yı aktarın ve yükleyin
+Yükleyebilmek için apk'yı telefonunuza aktarmanız gerekir.
 
 ```{note}
-If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. Apk'yi kurduğunuzda, güncellemeleri yüklemek için talimatları izleyin.
-Android Studio'da yeni bir anahtar deposu oluşturarak imzaladığınız apk senaryosu için, apk'yi yüklemeden önce eski uygulamayı silmeniz gerekecektir. **Make sure to export your settings!**
+Oluşturmayı Android Studio'da aynı mevcut anahtar deposuyla yaptıysanız telefonunuzdaki mevcut uygulamayı kaldırmanız gerekmez. Apk'yi kurduğunuzda, güncellemeleri yüklemek için talimatları izleyin.
+Diğer durumlarda, örneğin imzalı apk'nız için Android Studio'da yeni bir anahtar deposu oluşturduysanız, apk'yı yüklemeden önce eski uygulamayı silmeniz gerekir. **Ayarlarınızı mutlaka dışa aktarın!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Where Google's [Android developer verification](#android-developer-verification) is enforced (from September 2026, depending on your country), install with [ADB](#android-developer-verification-adb) instead of tapping the APK file.
+[AAPS'i aktarma ve yükleme](../SettingUpAaps/TransferringAndInstallingAaps.md) talimatlarına bakın. Google'ın [Android geliştirici doğrulaması](#android-developer-verification) uygulanıyorsa (Eylül 2026'dan itibaren, ülkenize bağlı olarak), APK dosyasına dokunmak yerine [ADB](#android-developer-verification-adb) ile yükleyin.
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
+[Buradan](#Update-to-new-version-check-aaps-version-on-phone) devam edin.
 
 (update-computer-build-troubleshooting)=
 
@@ -95,6 +95,6 @@ Bir şeyler ters giderse, panik yapmayın.
 
 Bir Nefes Alın!
 
-Then check if your problem is already documented on the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+Ardından sorununuzun [Android Studio'da Sorun Giderme](../GettingHelp/TroubleshootingAndroidStudio.md) ayrı sayfasında zaten anlatılıp anlatılmadığını kontrol edin.
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Daha fazla yardıma ihtiyacınız olursa lütfen [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) veya [Discord](https://discord.gg/4fQUWHZ4Mw) üzerindeki diğer **AAPS** kullanıcılarına ulaşın.
