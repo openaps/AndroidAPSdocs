@@ -1,7 +1,7 @@
 (scenes)=
-# Scenes (situation presets)
+# Senaryolar (duruma göre ön ayarlar)
 
-A **scene** is a named preset that applies a **bundle of actions at once** — for example a *Sleep*, *Exercise* or *Sick Day* preset that switches your profile, sets a temporary target, toggles SMB and adds a care-portal note with a single tap, optionally for a set duration.
+**Senaryo**, **birkaç eylemi tek seferde** uygulayan, adı olan bir ön ayardır — örneğin profilinizi değiştiren, geçici bir hedef koyan, SMB'yi açıp kapatan ve tek dokunuşla bir careportal notu ekleyen bir *Uyku*, *Egzersiz* veya *Hastalık Günü* ön ayarı; isterseniz belirli bir süre için.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,172 +10,172 @@ A **scene** is a named preset that applies a **bundle of actions at once** — f
 
 ---
 
-## What is a scene
+## Senaryo nedir
 
-Instead of changing several things by hand every time a recurring situation comes up, you set them up once as a scene and activate it with one tap. A scene can bundle any of these actions:
+Tekrarlanan bir durum her ortaya çıktığında birkaç şeyi elle değiştirmek yerine, bunları bir kez senaryo olarak ayarlarsınız ve tek dokunuşla etkinleştirirsiniz. Bir senaryo şu eylemlerin herhangi birini bir araya getirebilir:
 
-- **Profile switch** — switch profile and/or scale it by percentage (e.g. 70 %).
-- **Temporary target** — set a temp target (e.g. *Activity*, *Eating soon*, or a custom value).
-- **SMB on/off** — enable or disable super-micro-boluses while the scene is active.
-- **Loop mode** — change the running mode (e.g. to a more conservative mode).
-- **Care-portal note** — log an event (e.g. *Exercise*, *Sickness*) so it shows on the graph and in Nightscout.
+- **Profil değişimi** — profili değiştirir ve/veya yüzde ile ölçeklendirir (ör. %70).
+- **Geçici hedef** — bir geçici hedef koyar (ör. *Aktivite*, *Yakında Yenecek* veya özel bir değer).
+- **SMB açık/kapalı** — senaryo etkin olduğu sürece süper mikro bolusları etkinleştirir veya devre dışı bırakır.
+- **Döngü modu** — çalışma modunu değiştirir (ör. daha temkinli bir moda).
+- **Careportal notu** — bir olayı kaydeder (ör. *Egzersiz*, *Hastalık*), böylece olay grafikte ve Nightscout'ta görünür.
 
-A scene also has a **duration** — a fixed time (minutes/hours/days) or *Indefinite (manual end)* — and an **end action** that runs when it finishes: either a **notification**, or it can **chain** into another scene (for example *Sick Day → Exercise*).
-
----
-
-## Managing scenes
-
-Open **Manage → Scenes** to see, create, edit, enable/disable and reorder your scenes.
-
-![The Scenes management screen](../images/v4/Scenes/scenes_list.png)
-
-Each scene card shows:
-
-- a **checkbox** to enable/disable the scene,
-- an **icon** and **name**,
-- a summary — *“N actions, duration”*, and the **→ chained scene** if it chains into another one,
-- and three buttons: **▶ activate**, **✏️ edit**, **🗑️ delete**.
-
-Tap the **+** button to create a new scene.
+Bir senaryonun ayrıca bir **süresi** — sabit bir süre (dakika/saat/gün) veya *Belirsiz (manuel sonlandırma)* — ve bittiğinde çalışan bir **bitiş eylemi** vardır: ya bir **bildirim** gösterilir ya da senaryo başka bir senaryoya **bağlanır** (örneğin *Hastalık Günü → Egzersiz*).
 
 ---
 
-## Creating or editing a scene
+## Senaryoları yönetme
 
-### Start from a template
+Senaryolarınızı görmek, oluşturmak, düzenlemek, etkinleştirmek/devre dışı bırakmak ve yeniden sıralamak için **Yönet → Senaryolar** ekranını açın.
 
-To **create** a scene, tap the **+** button on the Scenes screen. The first step is **Start from template**: pick a ready-made scene for a common situation — *Exercise*, *Sick Day*, *Sick Day — Vomiting*, *Sleep*, *Post-exercise Night*, *Pre-meal*, *Alcohol*, *Driving*, *Bathing*, *Luteal Phase*, *Hot Weather*, *Medical Procedure* — or start from a *Blank* scene. Each template **pre-fills the recommended actions** and you can adjust everything in the following steps.
+![Senaryolar yönetim ekranı](../images/v4/Scenes/scenes_list.png)
 
-![“Start from template” — pick a starting point](../images/v4/Scenes/templates_picker.png)
+Her senaryo kartında şunlar vardır:
 
-After you pick a template, its purpose is explained — *when* and *why* to use it — before you continue:
+- senaryoyu etkinleştirmek/devre dışı bırakmak için bir **onay kutusu**,
+- bir **simge** ve **ad**,
+- bir özet — *“N eylem, süre”* — ve senaryo başka bir senaryoya bağlanıyorsa **→ bağlı senaryo**,
+- ve üç düğme: **▶ etkinleştir**, **✏️ düzenle**, **🗑️ sil**.
 
-![A template's explanation](../images/v4/Scenes/template_explanation.png)
-
-### Step through the actions
-
-The rest of the editor is a short **step-by-step** wizard. Each step is one action type with an *“Include … in scene”* switch — turn it on only for the actions you want this scene to perform, and leave the rest off.
-
-![The scene editor — the Profile switch step](../images/v4/Scenes/scene_editor.png)
-
-Work through the steps with **Next**/**Back**: *Profile switch*, *Temporary target*, *SMB*, *Loop mode*, *Care-portal note*, then the **duration**, the **end action** (notify or chain into another scene), and finally the scene's **name and icon**. Save when you are done. (To **edit** an existing scene, tap its **✏️** button — you go straight into these steps.)
-
-Each step starts with a short explanation of what the action does. The steps look like this, here with the *Exercise* template:
-
-**Temporary target** — pick one of your temp target presets:
-
-![The Temporary target step](../images/v4/Scenes/scene_editor_step3.png)
-
-**SMB** — enable or disable SMB while the scene is active:
-
-![The SMB step](../images/v4/Scenes/scene_editor_step4.png)
-
-**Running mode** — optionally change the loop mode:
-
-![The Running mode step](../images/v4/Scenes/scene_editor_step5.png)
-
-**Careportal** — the event type and note to log:
-
-![The Careportal step](../images/v4/Scenes/scene_editor_step6.png)
-
-**Duration** — how long the scene stays active; 0 means until you end it yourself:
-
-![The Duration step](../images/v4/Scenes/scene_editor_step7.png)
-
-**Follow-up scene** — optionally the scene that starts when this one ends:
-
-![The Follow-up scene step](../images/v4/Scenes/scene_editor_followup.png)
-
-**Scene** — the name and the icon. Press **Finish** to save:
-
-![The name and icon step](../images/v4/Scenes/scene_editor_step9.png)
+Yeni bir senaryo oluşturmak için **+** düğmesine dokunun.
 
 ---
 
-## Activating a scene
+## Senaryo oluşturma veya düzenleme
 
-Activate a scene from the **Scenes** list (the **▶** button) or from the **Scenes** entry in the bottom navigation. In the **Scenes** sheet of the bottom navigation, each scene shows the same summary as in the Scenes list, and the **pencil** at the top of the sheet opens **Manage → Scenes** to create or edit your scenes.
+### Bir şablondan başlama
 
-![The Scenes sheet of the bottom navigation](../images/v4/Scenes/scenes_sheet.png)
+Bir senaryo **oluşturmak** için Senaryolar ekranındaki **+** düğmesine dokunun. İlk adım **Bir şablondan başla** adımıdır: sık görülen bir durum için hazır bir senaryo seçin — *Egzersiz*, *Hastalık Günü*, *Hastalık Günü — Kusma*, *Uyku*, *Egzersiz Sonrası Gece*, *Yemek öncesi*, *Alkol*, *Araç kullanmak*, *Banyo yapma*, *Luteal Evre*, *Sıcak Hava*, *Tıbbi Prosedür* — veya *Boş* bir senaryodan başlayın. Her şablon **önerilen eylemleri önceden doldurur** ve sonraki adımlarda her şeyi değiştirebilirsiniz.
 
-If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+![“Bir şablondan başla” — bir başlangıç noktası seçin](../images/v4/Scenes/templates_picker.png)
 
-Before anything is applied you get a **confirmation** that lists exactly what the scene will do, so you can review it:
+Bir şablon seçtikten sonra, devam etmeden önce şablonun amacı — *ne zaman* ve *neden* kullanılacağı — açıklanır:
 
-![Scene activation confirmation, listing the bundled actions](../images/v4/Scenes/scene_confirmation.png)
+![Bir şablonun açıklaması](../images/v4/Scenes/template_explanation.png)
 
-If the scene chains into another one, the confirmation ends with **→** and the name of that follow-up scene, the same way it is shown in the Scenes list.
+### Eylemleri adım adım geçme
 
-When you start the scene from the **Scenes** entry of the bottom navigation, the confirmation is a simpler dialog with the same list of actions. Press **OK** to activate:
+Düzenleyicinin geri kalanı kısa, **adım adım** ilerleyen bir sihirbazdır. Her adım, *“Senaryoya … dahil et”* anahtarı olan bir eylem türüdür — anahtarı yalnızca bu senaryonun yapmasını istediğiniz eylemler için açın, diğerlerini kapalı bırakın.
 
-![Scene confirmation when started from the bottom navigation](../images/v4/Scenes/scene_confirmation_from_sheet.png)
+![Senaryo düzenleyicisi — Profil değişimi adımı](../images/v4/Scenes/scene_editor.png)
 
-After you confirm, the actions are applied and the **active scene** is shown at the top of the overview with an **End Scene** button. If the scene chains into another one, the banner also names that follow-up scene:
+Adımları **İleri**/**Geri** ile geçin: *Profil değişimi*, *Geçici hedef*, *SMB*, *Döngü modu*, *Careportal notu*, ardından **süre**, **bitiş eylemi** (bildirim veya başka bir senaryoya bağlanma) ve son olarak senaryonun **adı ve simgesi**. Bitirdiğinizde kaydedin. (Mevcut bir senaryoyu **düzenlemek** için onun **✏️** düğmesine dokunun — doğrudan bu adımlara gidersiniz.)
 
-![The active-scene banner on the overview, with the End Scene button](../images/v4/Scenes/scene_active_banner.png)
+Her adım, eylemin ne yaptığını anlatan kısa bir açıklama ile başlar. Adımlar şöyle görünür, burada *Egzersiz* şablonu ile:
 
-The scene's actions stay in effect until:
+**Geçici hedef** — geçici hedef ön ayarlarınızdan birini seçin:
 
-- its **duration** ends (the **end action** runs — a notification, or it chains into the next scene), or
-- you tap **End Scene** to end it manually. If the scene chains into another one, you get two choices: **Skip to** the follow-up scene (the active scene ends and the follow-up starts now), or **End Scene** (the active scene ends and the follow-up does not start).
+![Geçici hedef adımı](../images/v4/Scenes/scene_editor_step3.png)
 
-A scene without follow-up only asks you to confirm:
+**SMB** — senaryo etkin olduğu sürece SMB'yi etkinleştirin veya devre dışı bırakın:
 
-![End Scene dialog](../images/v4/Scenes/scene_end_dialog.png)
+![SMB adımı](../images/v4/Scenes/scene_editor_step4.png)
 
-Ending a scene **reverts** the changes it made (for example the profile switch and temp target it started).
+**Çalışma modu** — isterseniz döngü modunu değiştirin:
 
-While a scene is active, the profile and the target on the main screen carry a small scene icon when the scene set them. The **Scenes** sheet of the bottom navigation stays available to start another scene:
+![Çalışma modu adımı](../images/v4/Scenes/scene_editor_step5.png)
 
-![The Scenes sheet while a scene is active](../images/v4/Scenes/scenes_sheet_active.png)
+**Careportal** — kaydedilecek olay türü ve not:
 
-When the duration runs out on its own, the changes are reverted straight away and the banner changes to **Scene ended** with a **Dismiss** button. Dismissing only clears the banner from the screen — the scene itself is already over, so automation rules and a chained scene carry on without waiting for it.
+![Careportal adımı](../images/v4/Scenes/scene_editor_step6.png)
 
----
+**Süre** — senaryonun ne kadar etkin kalacağı; 0, siz kendiniz sonlandırana kadar demektir:
 
-## Triggering scenes from Automation
+![Süre adımı](../images/v4/Scenes/scene_editor_step7.png)
 
-A scene does not have to be started by hand — **Automation** can run it for you. When you add an action to an automation rule (**Manage → Automation**), the action picker has a **Scenes** category:
+**Devam senaryosu** — isterseniz bu senaryo bittiğinde başlayacak senaryo:
 
-- **Run scene** — activate a scene when the rule's triggers fire (for example at a set time, when you arrive somewhere, or when glucose crosses a threshold).
-- **Enable scene** / **Disable scene** — make a scene available (or unavailable) without activating it.
+![Devam senaryosu adımı](../images/v4/Scenes/scene_editor_followup.png)
 
-![The “Scenes” actions in the Automation action picker](../images/v4/Scenes/automation_scene_action.png)
+**Senaryo** — ad ve simge. Kaydetmek için **Bitir** düğmesine basın:
 
-Automation can also **react to** a scene: the trigger list includes a **Scene** trigger, so a rule can run only while a particular scene is active. Combined with a scene's **end action** (revert, notify, or chain into another scene), this lets scenes start, follow on and finish automatically.
+![Ad ve simge adımı](../images/v4/Scenes/scene_editor_step9.png)
 
 ---
 
-## Scenes with Master/Client and a watch
+## Bir senaryoyu etkinleştirme
 
-The **currently active scene is synchronized** across all of your paired devices — activate it on one phone and the others show it too.
+Bir senaryoyu **Senaryolar** listesinden (**▶** düğmesi) veya alt gezinme çubuğundaki **Senaryolar** girdisinden etkinleştirin. Alt gezinme çubuğunun **Senaryolar** panelinde her senaryo, Senaryolar listesindeki aynı özeti gösterir. Panelin üstündeki **kalem**, senaryolarınızı oluşturmak veya düzenlemek için **Yönet → Senaryolar** ekranını açar.
 
-A paired **client** (**AAPSClient**) can also activate or end a scene: the request is sent to the **master**, which authors the confirmation and applies the scene on its own state. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for how that works.
+![Alt gezinme çubuğunun Senaryolar paneli](../images/v4/Scenes/scenes_sheet.png)
+
+[Bolus koruması](#Preferences-protection) açıksa, **AAPS** bir senaryo başlamadan veya bitmeden önce bunu sorar. Bir senaryoyu değiştirmek için ise [ayar koruması](#Preferences-settings-protection) gerekir.
+
+Herhangi bir şey uygulanmadan önce, senaryonun tam olarak ne yapacağını listeleyen bir **onay** görürsünüz, böylece kontrol edebilirsiniz:
+
+![Bir araya getirilen eylemleri listeleyen senaryo etkinleştirme onayı](../images/v4/Scenes/scene_confirmation.png)
+
+Senaryo başka bir senaryoya bağlanıyorsa, onay **→** ve devam senaryosunun adı ile biter; Senaryolar listesinde gösterildiği gibi.
+
+Senaryoyu alt gezinme çubuğunun **Senaryolar** girdisinden başlattığınızda, onay aynı eylem listesini içeren daha basit bir iletişim kutusudur. Etkinleştirmek için **Tamam** düğmesine basın:
+
+![Alt gezinme çubuğundan başlatıldığında senaryo onayı](../images/v4/Scenes/scene_confirmation_from_sheet.png)
+
+Onayladıktan sonra eylemler uygulanır ve **etkin senaryo**, genel bakış ekranının üstünde bir **Senaryoyu sonlandır** düğmesi ile gösterilir. Senaryo başka bir senaryoya bağlanıyorsa, şerit devam senaryosunun adını da gösterir:
+
+![Genel bakış ekranındaki etkin senaryo şeridi ve Senaryoyu sonlandır düğmesi](../images/v4/Scenes/scene_active_banner.png)
+
+Senaryonun eylemleri şu durumlardan biri olana kadar geçerli kalır:
+
+- **süresi** biter (**bitiş eylemi** çalışır — bir bildirim veya bir sonraki senaryoya bağlanma) veya
+- elle sonlandırmak için **Senaryoyu sonlandır** düğmesine dokunursunuz. Senaryo başka bir senaryoya bağlanıyorsa iki seçeneğiniz vardır: devam senaryosuna **Atla** (etkin senaryo biter ve devam senaryosu hemen başlar) veya **Senaryoyu sonlandır** (etkin senaryo biter ve devam senaryosu başlamaz).
+
+Devam senaryosu olmayan bir senaryo yalnızca onay ister:
+
+![Senaryoyu sonlandır iletişim kutusu](../images/v4/Scenes/scene_end_dialog.png)
+
+Bir senaryoyu sonlandırmak, senaryonun yaptığı değişiklikleri **geri alır** (örneğin başlattığı profil değişimini ve geçici hedefi).
+
+Bir senaryo etkinken, ana ekrandaki profil ve hedef, onları senaryo ayarladıysa küçük bir senaryo simgesi taşır. Alt gezinme çubuğunun **Senaryolar** paneli, başka bir senaryo başlatmak için kullanılabilir kalır:
+
+![Bir senaryo etkinken Senaryolar paneli](../images/v4/Scenes/scenes_sheet_active.png)
+
+Süre kendiliğinden dolduğunda değişiklikler hemen geri alınır ve şerit, bir **Kapat** düğmesi ile **Senaryo sonlandı** olarak değişir. Kapatmak yalnızca şeridi ekrandan kaldırır — senaryonun kendisi zaten bitmiştir, bu yüzden otomasyon kuralları ve bağlı bir senaryo onu beklemeden devam eder.
+
+---
+
+## Senaryoları Otomasyon ile tetikleme
+
+Bir senaryonun elle başlatılması gerekmez — **Otomasyon** onu sizin için çalıştırabilir. Bir otomasyon kuralına eylem eklediğinizde (**Yönet → Otomasyon**), eylem seçicide bir **Senaryolar** kategorisi vardır:
+
+- **Senaryoyu çalıştır** — kuralın tetikleyicileri çalıştığında bir senaryoyu etkinleştirir (örneğin belirli bir saatte, bir yere vardığınızda veya glikoz bir eşiği geçtiğinde).
+- **Senaryoyu etkinleştir** / **Senaryoyu devre dışı bırak** — bir senaryoyu etkinleştirmeden kullanılabilir (veya kullanılamaz) yapar.
+
+![Otomasyon eylem seçicisindeki “Senaryolar” eylemleri](../images/v4/Scenes/automation_scene_action.png)
+
+Otomasyon bir senaryoya **tepki de verebilir**: tetikleyici listesinde bir **Senaryo** tetikleyicisi vardır, böylece bir kural yalnızca belirli bir senaryo etkinken çalışabilir. Bir senaryonun **bitiş eylemi** (geri alma, bildirim veya başka bir senaryoya bağlanma) ile birlikte bu, senaryoların otomatik olarak başlamasını, birbirini izlemesini ve bitmesini sağlar.
+
+---
+
+## Ana birim/İstemci ve saat ile senaryolar
+
+**O anda etkin olan senaryo, eşleştirilmiş tüm cihazlarınız arasında eşitlenir** — bir telefonda etkinleştirin, diğerleri de onu gösterir.
+
+Eşleştirilmiş bir **istemci** (**AAPSClient**) de bir senaryoyu etkinleştirebilir veya sonlandırabilir: istek **ana birime** gönderilir; ana birim onayı oluşturur ve senaryoyu kendi durumu üzerinde uygular. Bunun nasıl çalıştığını öğrenmek için bkz. [Ana birim ↔ İstemci kontrolü](../RemoteFeatures/ClientMasterControl.md).
 
 (scenes-from-watch)=
-### From a Wear OS watch
+### Wear OS saatinden
 
-Scenes are available on a **Wear OS watch** as a **Scene tile**. Swipe to the **Scene** tile in the watch's tile carousel (add it from the carousel's tile list first if it isn't there yet) and tap the scene you want to start:
+Senaryolar, bir **Wear OS saatinde** **Senaryo paneli** olarak kullanılabilir. Saatin panel karuselinde **Senaryo** paneline kaydırın (henüz orada değilse önce karuselin panel listesinden ekleyin) ve başlatmak istediğiniz senaryoya dokunun:
 
-![The Scene tile on a Wear OS watch](../images/v4/Scenes/scene_watch_tile.png)
+![Wear OS saatinde Senaryo paneli](../images/v4/Scenes/scene_watch_tile.png)
 
-The tile has four slots. By default each slot fills itself **automatically** with the next of your enabled scenes, in the order they have on the phone. To choose yourself, **long-press the tile** and open its settings: for each of the four slots you can keep **Automatic**, pin a **specific scene**, or select **None** to leave the slot empty. A slot pinned to a scene that has since been deleted or disabled shows **Unavailable** — pick another scene for it.
+Kutucukta dört yer vardır. Varsayılan olarak her yer, telefondaki sıralarına göre etkin senaryolarınızdan bir sonrakiyle **otomatik olarak** dolar. Kendiniz seçmek için **panele uzun basın** ve ayarlarını açın: dört yerin her biri için **Otomatik** ayarını koruyabilir, **belirli bir senaryoyu** sabitleyebilir veya yeri boş bırakmak için **Hiçbiri** seçebilirsiniz. Sabitlendiği senaryo sonradan silinmiş veya devre dışı bırakılmış bir yer **Mevcut değil** gösterir — o yer için başka bir senaryo seçin.
 
-The watch then shows a confirmation — tap **✓** to activate, or swipe back to cancel:
+Saat ardından bir onay gösterir — etkinleştirmek için **✓** simgesine dokunun veya iptal etmek için geri kaydırın:
 
-![Confirming a scene on the watch](../images/v4/Scenes/scene_watch_confirm.png)
+![Saatte bir senaryoyu onaylama](../images/v4/Scenes/scene_watch_confirm.png)
 
-Just like on a client, the **master authors the confirmation and runs the scene**; the watch only relays the request (via the client phone, if the watch is paired to a client).
+Tıpkı istemcide olduğu gibi, **onayı ana birim oluşturur ve senaryoyu ana birim çalıştırır**; saat yalnızca isteği iletir (saat bir istemciyle eşleştirilmişse istemci telefon üzerinden).
 
-While a scene is running — or its **Scene ended** banner is still showing on the phone — the tile shows an **End** button with the name of the scene under it. Tap it to end the active scene, or to clear the leftover banner, from your wrist.
+Bir senaryo çalışırken — veya telefonda hâlâ **Senaryo sonlandı** şeridi görünürken — panel, altında senaryonun adı olan bir **Sonlandır** düğmesi gösterir. Etkin senaryoyu sonlandırmak veya kalan şeridi temizlemek için bileğinizden ona dokunun.
 
-If the running scene chains into another one, the tile also shows a **Skip** button with the name of the follow-up scene under it. These are the same two choices as on the phone:
+Çalışan senaryo başka bir senaryoya bağlanıyorsa, panel ayrıca altında devam senaryosunun adı olan bir **Atla** düğmesi gösterir. Bunlar telefondaki iki seçeneğin aynısıdır:
 
-- **End** — the active scene ends. The confirmation tells you that the follow-up will not start.
-- **Skip** — the active scene ends and the follow-up scene starts now. The confirmation names both scenes.
+- **Sonlandır** — etkin senaryo biter. Onay, devam senaryosunun başlamayacağını söyler.
+- **Atla** — etkin senaryo biter ve devam senaryosu hemen başlar. Onay iki senaryonun da adını gösterir.
 
-The watch's [Loop Status screen](#WearOsSmartwatch-loop-status) also shows the active scene, the time it has left and its follow-up.
+Saatin [Döngü durumu ekranı](#WearOsSmartwatch-loop-status) da etkin senaryoyu, kalan süresini ve devam senaryosunu gösterir.
 
 ---
 
