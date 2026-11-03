@@ -377,7 +377,7 @@ Pirmiausia pompos ekrane pabandykite mygtuką **Nustatyti RileyLink iš naujo** 
 6. Paleiskite **AAPS**.
 7. Pompos ekrane bakstelėkite **Susieti RileyLink** ir vėl pasirinkite savo Link įrenginį.
 
-### Remote control
+### Nuotolinis valdymas
 
 (FAQ-aapsclient)=
 
