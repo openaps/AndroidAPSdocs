@@ -1,20 +1,20 @@
-# Update with a browser (fork)
+# עדכון בדפדפן (fork)
 
 ```{tip}
-You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+בניתם את AAPS עם **AAPS Builder**? אין צורך בדף הזה: ראו [עדכון AAPS עם AAPS Builder](#aaps-builder-updates).
 ```
 
 ## בנייה עצמית במקום הורדה
 
-**AAPS** is not available to download, due to regulations concerning medical devices. בנייה עצמית של היישום לשימוש אישי הינה חוקית אך אסור לתת את היישום לאחרים! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** is not available to download, due to regulations concerning medical devices. בנייה עצמית של האפליקציה לשימוש אישי הינה חוקית אך אסור לתת את האפליקציה לאחרים! See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 ```{note}
-In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Then follow the [Browser Build **AAPS** procedure](../SettingUpAaps/BrowserBuild.md) instead of this guide. Instead of creating a new keystore, you must select the one you have copied from your computer.
+אם ברצונכם לשדרג את **AAPS** באמצעות דפדפן בפעם הראשונה: העתיקו את קובץ הגיבוי של ה-keystore שלכם ל-Google Drive. Then follow the [Browser Build **AAPS** procedure](../SettingUpAaps/BrowserBuild.md) instead of this guide. במקום ליצור keystore חדש, יש לבחור את ה-keystore שהעתקתם מהמחשב שלכם.
 This operation will be mandatory only the first time, then for successive upgrades you will be able to follow this guide.
 ```
 
 ```{tip}
-**Switching to AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) is the simpler browser build: no fork to sync, and you download the app directly from GitHub. You don't have to switch: this guide keeps working. If you switch, first get a copy of your keystore from your fork, as explained in [Coming from the previous browser build](#aaps-builder-from-fork). Otherwise the new build cannot update the AAPS on your phone.
+**עוברים ל-AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) היא דרך הבנייה הפשוטה יותר בדפדפן: אין fork לסנכרן, ואת האפליקציה מורידים ישירות מ-GitHub. אין חובה לעבור: המדריך הזה ממשיך לעבוד. אם עוברים, יש קודם לקבל עותק של ה-keystore מה-fork שלכם, כפי שמוסבר ב[מעבר מהבנייה הקודמת בדפדפן](#aaps-builder-from-fork). אחרת הבנייה החדשה לא תוכל לעדכן את AAPS שבטלפון שלכם.
 ```
 
 ## Overview for updating to a new version of AAPS with a browser
@@ -24,7 +24,7 @@ This operation will be mandatory only the first time, then for successive upgrad
 :local: true
 ```
 
-In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+אם נתקלים בבעיות, ראו את הדף הנפרד [בנייה בדפדפן: פתרון תקלות](../GettingHelp/BrowserBuildTroubleshooting.md).
 
 ### Export your settings
 
@@ -43,7 +43,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 ![Select AndroidAPS repo](../images/update/CI/GitHubUpdate1.png)
 
 3. Verify you are using your own copy of AndroidAPS (Forked from nightscout/AndroidAPS)
-4. Tap Sync Fork to update it (the number of commits behind might differ from the picture)
+4. לחצו על Sync Fork כדי לעדכן אותו (מספר הקומיטים שבהם הוא מפגר עשוי להיות שונה מהתמונה)
 
 
 
@@ -53,15 +53,15 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Update AndroidAPS repo](../images/update/CI/GitHubUpdate3.png)
 
-Note: if you have modified your copy of AndroidAPS by mistake, you will see this screen. Discard all changes (commits) to return to the released version.
+Note: if you have modified your copy of AndroidAPS by mistake, you will see this screen. השליכו את כל השינויים (הקומיטים) כדי לחזור לגרסה שפורסמה.
 
-![Discard rogue modifications](../images/update/CI/GitHubUpdate4.png)
+![השלכת שינויים לא רצויים](../images/update/CI/GitHubUpdate4.png)
 
-You have now synchronized (updated) your own copy with the latest release of **AAPS**. Good job.
+כעת סנכרנתם (עדכנתם) את העותק שלכם עם הגרסה האחרונה שפורסמה של **AAPS**. Good job.
 
 ![Repo sync'ed](../images/update/CI/GitHubUpdate5.png)
 
-### Run the Workflow to Build the Signed APK
+### הרצת ה-workflow לבניית APK חתום
 
 1. In your GitHub copy of AndroidAPS, select Actions.
 2. Expand All Workflows.
@@ -73,20 +73,20 @@ You have now synchronized (updated) your own copy with the latest release of **A
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Keep the branch set to master. In **Select AAPS Version**, check that **4.0.0**, the newest version at the top of the list, is selected. If your fork is not up to date, the preselected version is an older one: if you run the workflow with the form as it opens, you rebuild that older version and your app is not updated. Choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
+5. השאירו את הענף מוגדר ל-master. ב-**Select AAPS Version**, בדקו שנבחרה **4.0.0**, הגרסה החדשה ביותר בראש הרשימה. אם ה-fork שלכם לא מעודכן, הגרסה שנבחרה מראש היא גרסה ישנה יותר: אם מריצים את תהליך העבודה עם הטופס כפי שהוא נפתח, בונים מחדש את הגרסה הישנה, והאפליקציה לא מתעדכנת. בחרו את ה-[וריאנט](#browserbuild-variant) (fullRelease) ולאחר מכן לחצו על Run workflow.
 
    ```{note}
-   The list of versions is part of the workflow in your fork. If **4.0.0** is missing, your fork is not synchronized yet: go back to [Update your GitHub repository](#Update-to-new-version-update-your-repo).
+   רשימת הגרסאות היא חלק מתהליך העבודה ב-fork שלכם. אם **4.0.0** חסרה, ה-fork שלכם עדיין לא מסונכרן: חזרו אל [עדכון מאגר GitHub שלכם](#Update-to-new-version-update-your-repo).
    ```
 
 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of **AAPS**. This means that the Master and Wear apk is now directly saved into your Google Drive (as per below). AAPSClient apk can be downloaded from Github > nightscout > AndroidAPS [here](https://github.com/nightscout/AndroidAPS/releases)
+6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. בניתם בהצלחה את הגרסה המעודכנת של **AAPS**. This means that the Master and Wear apk is now directly saved into your Google Drive (as per below). AAPSClient apk can be downloaded from Github > nightscout > AndroidAPS [here](https://github.com/nightscout/AndroidAPS/releases)
 
 
-![Monitor Workflow](../images/update/CI/GitHubActions4.png)
+![מעקב אחר ה-workflow](../images/update/CI/GitHubActions4.png)
 
 
 ### Install the AAPS APK
@@ -97,19 +97,19 @@ You have now synchronized (updated) your own copy with the latest release of **A
 ![Google Drive Location](../images/update/CI/GitHubActions5.png)
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+מספטמבר 2026, [אימות מפתחים ב-Android](#android-developer-verification) של Google עלול לחסום התקנה של ה-APK בהקשה על הקובץ, תלוי במדינה שלכם. פתרונות עקיפה בחינם מוסברים בדף ההוא.
 ```
 
 Continue [here](#Update-to-new-version-check-aaps-version-on-phone)
 
 (update-browser-build-troubleshooting)=
 
-## Troubleshooting
+## פתרון תקלות
 
 If anything goes wrong, don't panic.
 
 Take a breath!
 
-Then check if your problem is already documented: see [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) if you build with **AAPS Builder**, or [Browser build troubleshooting](#aaps-ci-troubleshooting) otherwise.
+לאחר מכן יש לבדוק אם הבעיה שלכם כבר מתועדת: ראו [פתרון תקלות ב-AAPS Builder](#aaps-builder-troubleshooting) אם אתם בונים עם **AAPS Builder**, או [בנייה בדפדפן: פתרון תקלות](#aaps-ci-troubleshooting) אחרת.
 
 If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
