@@ -1,109 +1,109 @@
-# How to use Autotune plugin
+# Kaip naudoti Autotune įskiepį
 
-Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS. It analyzes your recent AAPS history to suggest adjustments to your basal rates, ISF and carb ratio.
+Autotune įskiepis yra OpenAPS autotune algoritmo įgyvendinimas AAPS programėlėje. Jis analizuoja jūsų naujausią AAPS istoriją ir siūlo, kaip pakoreguoti valandinę bazę, JIF ir IA.
 
 Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
 
 (autotune-how-autotune-calculates-adjustments)=
-## How Autotune calculates adjustments
+## Kaip Autotune apskaičiuoja pakeitimus
 
-Autotune looks back over your recent AAPS history — CGM readings, boluses, carbs and temporary basal rates — and works out where your **Profile** (basal rates, ISF, carb ratio) doesn't quite match what actually happened to your BG.
+Autotune peržiūri jūsų naujausią AAPS istoriją – CGM reikšmes, bolusus, angliavandenius ir laikinas valandines bazes – ir nustato, kur jūsų **profilis** (valandinė bazė, JIF, IA) ne visai atitinka tai, kas iš tikrųjų vyko su jūsų KG.
 
-For each 5-minute data point, it compares your **actual BG change** to the change your Profile predicted, and sorts the resulting deviation into one of three buckets:
+Kiekvienam 5 minučių duomenų taškui jis palygina **tikrą KG pokytį** su pokyčiu, kurį numatė jūsų profilis, ir priskiria gautą nuokrypį vienai iš trijų grupių:
 
-* deviations that happened with no carbs on board and no insulin activity (used to tune **basal rates**, hour by hour),
-* deviations that happened after a bolus/correction with no carbs (used to tune **ISF**), or
-* deviations that happened while carbs were absorbing (used to tune **carb ratio**).
+* nuokrypiai, atsiradę, kai nėra aktyvių angliavandenių ir nėra insulino veikimo (naudojami **valandinei bazei** derinti, kiekvienai valandai atskirai),
+* nuokrypiai, atsiradę po boluso ar korekcijos be angliavandenių (naudojami **JIF** derinti), arba
+* nuokrypiai, atsiradę įsisavinant angliavandenius (naudojami **IA** derinti).
 
-It then looks at the pattern of deviations in each bucket (using percentiles rather than a simple average, so a few noisy data points don't skew the result) and proposes a new value for that hour/parameter.
+Tada jis peržiūri kiekvienos grupės nuokrypių dėsningumą (naudoja procentilius, o ne paprastą vidurkį, kad keli triukšmingi duomenų taškai neiškreiptų rezultato) ir siūlo naują tos valandos ar parametro reikšmę.
 
-To keep any single run from overcorrecting, each Autotune run only ever moves a value a fraction of the way towards what the data suggests: up to 10% for ISF and carb ratio, and up to 20% for each basal segment. Overall drift is further capped by the **Max autosens ratio** / **Min autosens ratio** settings (see [Other settings](#autotune-other-settings) below) — the same bounds that limit Autosens. This is why Autotune is meant to be run repeatedly (day after day, or nightly) rather than trusted after a single run: results should converge gradually, and a big jump on one run is a sign to double check your data (missed carbs, a bad sensor day, _etc._) rather than to trust it blindly.
+Kad vienas skaičiavimas per daug nepakoreguotų, kiekvienas Autotune paleidimas pakeičia reikšmę tik dalimi to, ką rodo duomenys: iki 10 % JIF ir IA, ir iki 20 % kiekvienam valandinės bazės intervalui. Bendrą pokytį dar riboja nustatymai **Didžiausia Autosens reikšmė** / **Mažiausia Autosens reikšmė** (žr. [Kiti nustatymai](#autotune-other-settings) žemiau) – tos pačios ribos, kurios riboja Autosens. Todėl Autotune skirtas paleisti pakartotinai (diena po dienos arba kas naktį), o ne pasitikėti juo po vieno paleidimo: rezultatai turi artėti palaipsniui, o didelis šuolis per vieną paleidimą yra ženklas dar kartą patikrinti duomenis (praleisti angliavandeniai, bloga jutiklio diena _ir t. t._), o ne aklai juo pasitikėti.
 
-Autotune can be run three ways: manually as a one-off from within the plugin (as described below), automatically every night via an [automation rule](#autotune-run-autotune-with-an-automation-rule), or — outside of AAPS entirely — as a standalone command-line tool against exported data, which is how some community guides describe using it without a phone actively running AAPS.
+Autotune galima paleisti trimis būdais: rankiniu būdu vieną kartą įskiepyje (kaip aprašyta žemiau), automatiškai kiekvieną naktį naudojant [automatizacijos taisyklę](#autotune-run-autotune-with-an-automation-rule) arba visiškai be AAPS – kaip atskirą komandinės eilutės įrankį su eksportuotais duomenimis. Taip kai kurie bendruomenės vadovai aprašo jo naudojimą be telefono, kuriame veikia AAPS.
 
-*For the underlying oref0 algorithm in full mathematical detail, see [OpenAPS's Autotune documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).*
+*Išsamų oref0 algoritmo matematinį aprašymą rasite [OpenAPS Autotune dokumentacijoje](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).*
 
-## Show the Autotune plugin
+## Autotune įskiepio parodymas
 
-Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
+Sukurkite tuščią failą `enable_autotune` poaplankyje `extra`, kuris yra jūsų telefono [AAPS aplanke](#preferences-maintenance-settings).
 
-***NOTE: Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one. Several users have put the file into the wrong folder.***
+***PASTABA: AAPS nustatymuose būtinai patikrinkite, kur yra jūsų AAPS aplankas, ir ar įdėjote failą į teisingą aplanką. Keli naudotojai įdėjo failą į netinkamą aplanką.***
 
-![Enable Autotune](../images/Autotune/Autotune_0.png)
+![Autotune įjungimas](../images/Autotune/Autotune_0.png)
 
-Restart **AAPS**. Then open the **menu** (☰), select **Configuration**, then the **General** category, and tick **Autotune**. The card then shows **Settings** and **Open plugin**:
+Paleiskite **AAPS** iš naujo. Tada atidarykite **meniu** (☰), pasirinkite **Konfigūracija**, tada kategoriją **Bendrieji** ir pažymėkite **Autotune**. Tada kortelėje rodoma **Parametrai** ir **Atidaryti įskiepį**:
 
-![Autotune ticked in Configuration > General](../images/v4/Configuration/configuration_general_autotune.png)
+![Autotune pažymėtas skiltyje Konfigūracija > Bendrieji](../images/v4/Configuration/configuration_general_autotune.png)
 
-## Autotune user interface
+## Autotune naudotojo sąsaja
 
-Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
+Kortelėje **Autotune** spauskite **Atidaryti įskiepį**, kad atidarytumėte Autotune ekraną:
 
-![Autotune screen with the profile, the number of days of data and a warning about the selected profile](../images/Autotune/Autotune_1b.png)
+![Autotune ekranas su profiliu, duomenų dienų skaičiumi ir įspėjimu apie pasirinktą profilį](../images/Autotune/Autotune_1b.png)
 
-- You can select in the Profile dropdown menu the input profile you want to tune (by default your current active profile is selected)
-  - Note: each time you select a new profile, previous results will be removed and the **Number of days of data** will be set to its default value
-- Then **Number of days of data** (called **Tune days** in older versions) is to select the number of days used in calculation to tune your profile. The minimum value is 1 day and the maximum value 30 days. This number should not be too small to get correct iterative and smooth results (above 7 days for each calculation)
-  - Note: each time you change the **Number of days of data**, previous results will be removed
-- Last Run is a link that recover your latest valid calculation. If you didn't launch Autotune on current day, or if previous results was removed with a modification of calculation parameter above, then you can recover parameters and results of the latest successful run.
-- Warning show you for example some information about selected profile (if you have several IC values or several ISF values)
-  - Note: Autotune calculation works with only a single IC and a single ISF value. There is currently no existing Autotune algorithm to tune a circadian IC or circadian ISF. If your input profile  has several values, you can see in warning section the average value taken into account to tune your profile.
-- Check Input Profile button open the Profile Viewer to allow you a quick verification of your profile (Units, IC, ISF, basal and target)
-  - Note: Autotune will only tune your IC (single value), ISF (single value) and basal (with circadian variation). Units and target will remain unchanged in output profile.
+- Profilio išskleidžiamajame sąraše galite pasirinkti įkeliamą profilį, kurį norite suderinti (numatyta, kad pasirinktas jūsų dabar aktyvus profilis)
+  - Pastaba: kiekvieną kartą pasirinkus naują profilį, ankstesni rezultatai bus pašalinti, o **Dienų, kurių duomenys naudojami, skaičius** bus nustatytas į numatytąją reikšmę
+- Tada laukelyje **Dienų, kurių duomenys naudojami, skaičius** (senesnėse versijose **Dienų sk**) pasirenkate, kiek dienų naudoti skaičiuojant profilio derinimą. Mažiausia reikšmė yra 1 diena, didžiausia – 30 dienų. Šis skaičius neturi būti per mažas, kad rezultatai būtų teisingi, nuoseklūs ir tolygūs (daugiau nei 7 dienos kiekvienam skaičiavimui)
+  - Pastaba: kiekvieną kartą pakeitus **Dienų, kurių duomenys naudojami, skaičius**, ankstesni rezultatai bus pašalinti
+- Paskutinį kartą vykdyta – tai nuoroda, kuri atkuria jūsų paskutinį sėkmingą skaičiavimą. Jei šiandien nepaleidote Autotune arba jei ankstesni rezultatai buvo pašalinti pakeitus aukščiau esantį skaičiavimo parametrą, galite atkurti paskutinio sėkmingo skaičiavimo parametrus ir rezultatus.
+- Įspėjime rodoma, pavyzdžiui, informacija apie pasirinktą profilį (jei turite kelias IA reikšmes arba kelias JIF reikšmes)
+  - Pastaba: Autotune skaičiuoja tik su viena IA ir viena JIF reikšme. Šiuo metu nėra Autotune algoritmo, kuris derintų cirkadinį IA ar cirkadinį JIF. Jei jūsų įkeliamas profilis turi kelias reikšmes, įspėjimo skiltyje matysite vidutinę reikšmę, kuri naudojama derinant profilį.
+- Mygtukas „Patikrinti įkeliamą profilį“ atidaro profilio peržiūrą, kad galėtumėte greitai patikrinti savo profilį (vienetus, IA, JIF, valandinę bazę ir tikslą)
+  - Pastaba: Autotune derina tik jūsų IA (viena reikšmė), JIF (viena reikšmė) ir valandinę bazę (su cirkadiniais svyravimais). Vienetai ir tikslas gautame profilyje liks nepakeisti.
 
-- "Run Autotune" will launch Autotune calculation with selected profile and the selected number of days of data
-  - Note: Autotune calculation can take a long time. Once launched, you can switch to another view (home, ...) and come back later in Autotune plugin to see results
+- „Paleisti Autotune“ pradeda Autotune skaičiavimą su pasirinktu profiliu ir pasirinktu duomenų dienų skaičiumi
+  - Pastaba: Autotune skaičiavimas gali užtrukti ilgai. Paleidę skaičiavimą galite pereiti į kitą ekraną (pagrindinį, ...) ir vėliau grįžti į Autotune įskiepį pažiūrėti rezultatų
 
-  ![Autotune Run start](../images/Autotune/Autotune_2b.png)
+  ![Autotune paleidimas](../images/Autotune/Autotune_2b.png)
 
-- Then during the run you will see intermediate results below
+- Skaičiavimo metu žemiau matysite tarpinius rezultatus
 
-  - Note: During run, settings are locked, so you cannot change anymore selected input profile or the number of day. You will have to wait the end of current calculation if you want to launch another run with other parameters.
+  - Pastaba: skaičiavimo metu nustatymai užrakinti, todėl nebegalite pakeisti pasirinkto įkeliamo profilio ar dienų skaičiaus. Jei norite paleisti kitą skaičiavimą su kitais parametrais, turėsite palaukti, kol baigsis dabartinis.
 
-  ![Autotune during run](../images/Autotune/Autotune_3b.png)
+  ![Autotune skaičiavimo metu](../images/Autotune/Autotune_3b.png)
 
-- When Autotune calculation is finished, you will see the result (Tuned profile) and four buttons below.
+- Kai Autotune skaičiavimas baigiasi, matysite rezultatą (suderintą profilį) ir keturis mygtukus žemiau.
 
-  ![Autotune Result](../images/Autotune/Autotune_4b.png)
+  ![Autotune rezultatas](../images/Autotune/Autotune_4b.png)
 
-- It's important to always compare input profile (column "Profile"), output profile (column "Tuned") and the percentage of variation for each value (Column "%").
+- Svarbu visada palyginti įkeliamą profilį (stulpelis „Profilis“), gautą profilį (stulpelis „Suderintas“) ir kiekvienos reikšmės pokytį procentais (stulpelis „%“).
 
-- For basal rates, you also have the number of "missing days". You have missing days when Autotune don't have enough data categorized as "Basal" to tune basal rate for this period (for example after each meal when you have carbs absorption). This number should be as low as possible especially when basal is important (for example during the night or at the end of the afternoon)
+- Valandinei bazei taip pat matote „trūkstamų dienų“ skaičių. Trūkstamų dienų atsiranda, kai Autotune neturi pakankamai duomenų, priskirtų „bazei“, kad suderintų valandinę bazę tam laikotarpiui (pavyzdžiui, po kiekvieno valgio, kai įsisavinami angliavandeniai). Šis skaičius turi būti kuo mažesnis, ypač kai valandinė bazė svarbi (pavyzdžiui, naktį arba popietės pabaigoje)
 
-- The "Compare profiles" button open the profile comparator view. Input profile is in blue, and output profile (named "Tuned") is in red.
+- Mygtukas „Palyginti profilius“ atidaro profilių palyginimo vaizdą. Įkeliamas profilis yra mėlynas, o gautas profilis (pavadintas „Suderintas“) – raudonas.
 
-  - Note: in the example below input profile has circadian variation for IC and ISF, but output calculated profile has a single value. If it's important for you to get a circadian output profile see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
+  - Pastaba: žemiau pateiktame pavyzdyje įkeliamas profilis turi cirkadinius IA ir JIF svyravimus, bet apskaičiuotas gautas profilis turi vieną reikšmę. Jei jums svarbu gauti cirkadinį profilį, žr. [Cirkadinis IA arba JIF profilis](#autotune-circadian-ic-or-isf-profile) žemiau.
 
-  ![Autotune Compare profiles](../images/Autotune/Autotune_5.png)
+  ![Autotune profilių palyginimas](../images/Autotune/Autotune_5.png)
 
-- If you trust results (low percentage of variation between input profile and output profile), you can click on "Activate profile" button and then click on OK to validated.
+- Jei pasitikite rezultatais (mažas pokytis procentais tarp įkeliamo ir gauto profilio), galite spausti mygtuką „Aktyvuoti profilį“ ir patvirtinti spausdami OK.
 
-  - "Activate profile" will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
-  - If you already have a profile named "Tuned" in **Manage → Profile**, then this profile will be updated with calculated Autotune profile before the activation
+  - Mygtukas „Aktyvuoti profilį“ jūsų profilių sąraše (**Valdymas → Profilis**) automatiškai sukuria naują profilį „Suderintas“.
+  - Jei skiltyje **Valdymas → Profilis** jau turite profilį pavadinimu „Suderintas“, prieš aktyvavimą šis profilis bus atnaujintas apskaičiuotu Autotune profiliu
 
-  ![Autotune Activate profile](../images/Autotune/Autotune_6.png)
+  ![Autotune profilio aktyvavimas](../images/Autotune/Autotune_6.png)
 
-- If you think Tuned profile must be adjusted (for example if you think some variation are too important), then you can click on "Copy to local profile" button
+- Jei manote, kad suderintą profilį reikia pakoreguoti (pavyzdžiui, jei kai kurie pokyčiai jums atrodo per dideli), galite spausti mygtuką „Kopijuoti į vietinį profilį“
 
-  - A new profile with the prefix "Tuned" and the date and time of the run will be created in **Manage → Profile**
+  - Skiltyje **Valdymas → Profilis** bus sukurtas naujas profilis su priešdėliu „Suderintas“ ir skaičiavimo data bei laiku
 
-  ![Autotune Copy to local profile](../images/Autotune/Autotune_7.png)
+  ![Autotune kopijavimas į vietinį profilį](../images/Autotune/Autotune_7.png)
 
-- You can then edit the Tuned profile: open **Manage** > **Profile**, swipe to the card named "Tuned" with the date and time of the run, and tap the **Edit** (pencil) button
+- Tada galite redaguoti suderintą profilį: atidarykite **Valdymas** > **Profilis**, perbraukite iki kortelės pavadinimu „Suderintas“ su skaičiavimo data ir laiku ir spauskite mygtuką **Redaguoti** (pieštukas)
 
-  - the values in the profile will be rounded in the user interface to your pump capabilities
+  - profilio reikšmės naudotojo sąsajoje bus suapvalintos pagal jūsų pompos galimybes
 
-  ![Autotune local profile update](../images/Autotune/Autotune_8.png)
+  ![Autotune vietinio profilio atnaujinimas](../images/Autotune/Autotune_8.png)
 
-- If you want to replace your input profile with Autotune result, click on "Update input profile" button and validate the Popup with OK
+- Jei norite pakeisti savo įkeliamą profilį Autotune rezultatu, spauskite mygtuką „Atnaujinti įkeliamą profilį“ ir iškylančiame lange patvirtinkite spausdami OK
 
-  - Note: if you click on "Activate profile" after "Update input profile", then you will activate your updated profile and not the default "Tuned" profile.
+  - Pastaba: jei spausite „Aktyvuoti profilį“ po „Atnaujinti įkeliamą profilį“, aktyvuosite savo atnaujintą profilį, o ne numatytąjį profilį „Suderintas“.
 
-  ![Autotune Update input profile](../images/Autotune/Autotune_9.png)
+  ![Autotune įkeliamo profilio atnaujinimas](../images/Autotune/Autotune_9.png)
 
-- If you have updated your input profile, then the "Update input profile" button is replaced by "Revert input profile" button (see screenshot below). You can that way immediately see if your current input profile in **Manage → Profile** already includes the result of last run or not. You also have the possibility to recover your input profile without autotune result with this button
+- Jei atnaujinote savo įkeliamą profilį, mygtuką „Atnaujinti įkeliamą profilį“ pakeičia mygtukas „Atstatyti įkeliamą profilį“ (žr. ekrano kopiją žemiau). Taip iš karto matote, ar jūsų dabartiniame įkeliamame profilyje skiltyje **Valdymas → Profilis** jau yra paskutinio skaičiavimo rezultatas, ar ne. Šiuo mygtuku taip pat galite atkurti savo įkeliamą profilį be Autotune rezultato
 
-  ![Autotune Update input profile](../images/Autotune/Autotune_10.png)
+  ![Autotune įkeliamo profilio atnaujinimas](../images/Autotune/Autotune_10.png)
 
 
 
@@ -111,126 +111,126 @@ Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
 
 (autotune-plugin-settings)=
 
-### Autotune plugin settings
+### Autotune įskiepio nustatymai
 
-  ![Autotune settings in AAPS 4](../images/preferences/settings_autotune.png)
+  ![Autotune nustatymai AAPS 4 versijoje](../images/preferences/settings_autotune.png)
 
 ```{admonition} Only DEV
 :class: note
-The **Auto switch profile** feature is only available in Dev/Engineering mode.
+Funkcija **Automatiškai perjungti profilį** veikia tik dev / inžineriniame režime.
 ```
 
-- **Auto switch profile** (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. If you change this setting to On, the input profile will automatically be updated by the Tuned profile, and it will be activated.
-  - **Be Careful, you must trust and verify during several following days, that after an update and activation of Tuned profile without modification, it improves your loop**
+- **Automatiškai perjungti profilį** (numatyta: išjungta): žr. [Autotune paleidimas automatizacijos taisykle](#autotune-run-autotune-with-an-automation-rule) žemiau. Jei šį nustatymą įjungsite, įkeliamas profilis bus automatiškai atnaujintas suderintu profiliu ir aktyvuotas.
+  - **Būkite atsargūs: turite pasitikėti ir kelias kitas dienas tikrinti, ar atnaujinus ir aktyvavus suderintą profilį be pakeitimų jūsų ciklas pagerėja**
 
-- **Categorize UAM as basal** (default Off): This setting is for the users using AAPS without any carbs entered (Full UAM). It will prevent (when Off) to categorize UAM as basal.
-  - Note: if you have at least one hour of Carbs absorption detected during one day, then all data categorized as "UAM" will be categorized as basal, whatever this setting (On or Off)
-- **Default tune days** (default 5): You can define the default value with this setting. Each time you select a new profile in the Autotune plugin, the **Number of days of data** will be replaced by this default value
-- **Use circadian IC/ISF** (default Off): see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
+- **NDM priskirti bazės profiliui** (numatyta: išjungta): šis nustatymas skirtas naudotojams, kurie naudoja AAPS visiškai neįvesdami angliavandenių (Full UAM). Kai šis nustatymas išjungtas, NDM nebus priskiriamas bazei.
+  - Pastaba: jei per dieną aptinkama bent viena valanda angliavandenių įsisavinimo, visi duomenys, priskirti „NDM“, bus priskirti bazei, nesvarbu, koks šis nustatymas (įjungtas ar išjungtas)
+- **Numatytasis dienų skaičius derinimui** (numatyta: 5): šiuo nustatymu galite nustatyti numatytąją reikšmę. Kiekvieną kartą Autotune įskiepyje pasirinkus naują profilį, **Dienų, kurių duomenys naudojami, skaičius** bus pakeistas šia numatytąja reikšme
+- **Naudoti cirkadinius IA/JIF** (numatyta: išjungta): žr. [Cirkadinis IA arba JIF profilis](#autotune-circadian-ic-or-isf-profile) žemiau.
 
 (autotune-other-settings)=
 ### Other settings
 
-- Autotune also uses Max autosens ratio and Min autosens ratio to limit variation. You can see and adjust these values in [**Settings** > **Absorption settings** > **Advanced Settings**](../SettingUpAaps/Preferences.md) (**Autosens max** and **Autosens min**).
+- Autotune taip pat naudoja nustatymus „Didžiausia Autosens reikšmė“ ir „Mažiausia Autosens reikšmė“, kad apribotų pokyčius. Šias reikšmes galite peržiūrėti ir pakeisti skiltyje [**Nustatymai** > **Angliavandenių įsisavinimo parametrai** > **Papildomi nustatymai**](../SettingUpAaps/Preferences.md) (**Didžiausia Autosens reikšmė** ir **Mažiausia Autosens reikšmė**).
 
-  ![Autosens max and Autosens min in the advanced absorption settings](../images/preferences/settings_absorption_advanced.png)
+  ![Didžiausia ir mažiausia Autosens reikšmė papildomuose angliavandenių įsisavinimo nustatymuose](../images/preferences/settings_absorption_advanced.png)
 
 
 
-## Advanced feature
+## Išplėstinė funkcija
 
 (autotune-circadian-ic-or-isf-profile)=
 
-### Circadian IC or ISF profile
+### Cirkadinis IA arba JIF profilis
 
-- If you have important variation of IC and/or you ISF in your profile, and you fully trust in your circadian time and variation, then you can enable **Use circadian IC/ISF** (called "Apply average result in circadian IC/ISF" in older versions)
+- Jei jūsų profilyje IA ir (arba) JIF labai svyruoja ir jūs visiškai pasitikite savo cirkadiniais laikais ir svyravimais, galite įjungti **Naudoti cirkadinius IA/JIF** (senesnėse versijose vadinosi „Apply average result in circadian IC/ISF“)
 
-  - Note that Autotune calculation will always be done with a single value, and circadian variation will not be tuned by Autotune. This setting only apply average variation calculated for IC and/or ISF on your circadian values
+  - Atminkite, kad Autotune visada skaičiuoja su viena reikšme, ir cirkadinių svyravimų Autotune nederina. Šis nustatymas tik pritaiko jūsų cirkadinėms reikšmėms vidutinį pokytį, apskaičiuotą IA ir (arba) JIF
 
-- See on screenshot below Tuned profile with Apply average variation Off (on the left) and On (on the right)
+- Žemiau esančioje ekrano kopijoje matote suderintą profilį, kai vidutinio pokyčio taikymas išjungtas (kairėje) ir įjungtas (dešinėje)
 
-  ![Autotune default screen](../images/Autotune/Autotune_13.png)
+  ![Autotune pradinis ekranas](../images/Autotune/Autotune_13.png)
 
 
 
-### Tune specific days of the week
+### Konkrečių savaitės dienų derinimas
 
-- If you tap the **eye** icon on the right of the **Number of days of data** field, you will see the day selection. You can specify which day of the week should be included in Autotune calculation (in screenshot below you can see an example for "working days" with Saturday and Sunday removed from autotune calculation)
-  - If the number of days included in Autotune calculation is lower than the **Number of days of data**, then you will see how many days will be included on the right of the days selector (10 days in the example below)
-  - This setting gives good results only if the number of remaining days is not too small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should set **Number of days of data** to at least 21 or 28 to have 6 or 8 days included in Autotune calculation)
+- Jei spausite **akies** piktogramą laukelio **Dienų, kurių duomenys naudojami, skaičius** dešinėje, pamatysite dienų pasirinkimą. Galite nurodyti, kurios savaitės dienos turi būti įtrauktos į Autotune skaičiavimą (žemiau esančioje ekrano kopijoje matote „darbo dienų“ pavyzdį, kai šeštadienis ir sekmadienis pašalinti iš Autotune skaičiavimo)
+  - Jei į Autotune skaičiavimą įtrauktų dienų skaičius mažesnis už **Dienų, kurių duomenys naudojami, skaičius**, dienų pasirinkimo dešinėje matysite, kiek dienų bus įtraukta (žemiau esančiame pavyzdyje – 10 dienų)
+  - Šis nustatymas duoda gerų rezultatų tik tada, kai likusių dienų skaičius nėra per mažas (pavyzdžiui, jei derinate atskirą profilį savaitgaliui ir pasirinkote tik šeštadienį ir sekmadienį, **Dienų, kurių duomenys naudojami, skaičius** turėtumėte nustatyti bent 21 ar 28, kad į Autotune skaičiavimą būtų įtrauktos 6 ar 8 dienos)
 
-  ![Autotune default screen](../images/Autotune/Autotune_14b.png)
+  ![Autotune pradinis ekranas](../images/Autotune/Autotune_14b.png)
 
-- During Autotune calculation, you can see the progress of the calculations ("Partial result day 1 / 4 tuned" in the example below, with Saturday and Sunday excluded)
+- Autotune skaičiavimo metu matote skaičiavimo eigą (žemiau esančiame pavyzdyje „Patikslinta 1 / 4 dienų“, kai šeštadienis ir sekmadienis neįtraukti)
 
-  ![Autotune default screen](../images/Autotune/Autotune_15b.png)
+  ![Autotune pradinis ekranas](../images/Autotune/Autotune_15b.png)
 
 
 
 (autotune-run-autotune-with-an-automation-rule)=
 
-## Run Autotune with an automation rule
+## Autotune paleidimas automatizacijos taisykle
 
 ```{admonition} Only DEV
 :class: note
-The **Auto switch profile** feature is only available in Dev/Engineering mode.
+Funkcija **Automatiškai perjungti profilį** veikia tik dev / inžineriniame režime.
 ```
 
-First step is to define correct trigger for an automation rule with Autotune:
+Pirmiausia reikia nustatyti tinkamą automatizacijos taisyklės su Autotune sąlygą:
 
-Note: for more information on how to set an automation rule, see [here](../DailyLifeWithAaps/Automations.md).
+Pastaba: daugiau informacijos, kaip nustatyti automatizacijos taisyklę, rasite [čia](../DailyLifeWithAaps/Automations.md).
 
-- You should select Recurring time trigger: only run Autotune once per day, and autotune is designed to be run daily (each new run you shift one day later and quickly profile modification should be tiny)
+- Turėtumėte pasirinkti sąlygą „Pasikartojantis laikas“: Autotune paleiskite tik kartą per dieną. Autotune sukurtas paleisti kasdien (kiekvieną kartą paslenkate viena diena vėliau, todėl profilio pokyčiai greitai turėtų tapti labai maži)
 
-  ![Autotune default screen](../images/Autotune/Autotune_16.png)
+  ![Autotune pradinis ekranas](../images/Autotune/Autotune_16.png)
 
-- It's better at the beginning to run Autotune during the day to be able to check results. If you want to run Autotune during the night, you have to select in the trigger 4AM or later to include current day in next Autotune Calculation.
+- Pradžioje geriau paleisti Autotune dieną, kad galėtumėte patikrinti rezultatus. Jei norite paleisti Autotune naktį, sąlygoje turite pasirinkti 4 val. ryto ar vėlesnį laiką, kad dabartinė diena būtų įtraukta į kitą Autotune skaičiavimą.
 
-  ![Autotune default screen](../images/Autotune/Autotune_17.png)
+  ![Autotune pradinis ekranas](../images/Autotune/Autotune_17.png)
 
-- Then you can select the **Run Autotune** action (in the **Loop & insulin** group)
+- Tada galite pasirinkti veiksmą **Paleisti Autotune** (grupėje **Ciklas & insulinas**)
 
-  ![Autotune default screen](../images/Autotune/Autotune_18.png)
+  ![Autotune pradinis ekranas](../images/Autotune/Autotune_18.png)
 
-- You can then adjust the parameters of the action for your run. In a new action, **Select profile to tune** shows the first profile of your local profile list, the **Tune days** field is empty and all days are selected. Choose the profile to tune and enter the number of **Tune days** (1 to 30).
+- Tada galite pakoreguoti veiksmo parametrus savo skaičiavimui. Naujame veiksme laukelyje **Pasirinkite profilį tikslinimui** rodomas pirmasis jūsų vietinių profilių sąrašo profilis, laukelis **Dienų sk** yra tuščias, o visos dienos pasirinktos. Pasirinkite derinamą profilį ir įveskite **Dienų sk** (nuo 1 iki 30).
 
-  ![Autotune default screen](../images/Autotune/Autotune_19b.png)
+  ![Autotune pradinis ekranas](../images/Autotune/Autotune_19b.png)
 
-- After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](#autotune-plugin-settings) "**Auto switch profile**" to enabled to automatically update and activate profile tuned after calculation.
+- Po kelių dienų, jei visiškai pasitikite Autotune rezultatais ir pokytis procentais mažas, galite [Autotune nustatymuose](#autotune-plugin-settings) įjungti „**Automatiškai perjungti profilį**“, kad po skaičiavimo suderintas profilis būtų automatiškai atnaujintas ir aktyvuotas.
 
-Note: if you want to automatically tune profiles for specific days of the week (for example a profile for "Weekend days" and another one for "Working days"), then create one rule for each profile, select the same days in Trigger and in Autotune Action, Tune days must be high enough to be sure tuning will be done with at least 6 or 8 days, and don't forget to select time after 4AM in trigger...
+Pastaba: jei norite automatiškai derinti profilius konkrečioms savaitės dienoms (pavyzdžiui, vieną profilį „savaitgaliui“, kitą – „darbo dienoms“), sukurkite po vieną taisyklę kiekvienam profiliui, sąlygoje ir Autotune veiksme pasirinkite tas pačias dienas, dienų skaičius turi būti pakankamai didelis, kad derinimas tikrai būtų atliktas su bent 6 ar 8 dienomis, ir nepamirškite sąlygoje pasirinkti laiko po 4 val. ryto...
 
-- See below an example of rule that runs every working day (Monday to Friday) at 04:00 and tunes the profile "Normal" with 14 **Tune days**, working days only (so only 10 days are included in the Autotune calculation).
+- Žemiau pateiktas taisyklės pavyzdys, kuri vykdoma kiekvieną darbo dieną (nuo pirmadienio iki penktadienio) 04:00 ir derina profilį „Normal“ su 14 **Dienų sk**, tik darbo dienomis (todėl į Autotune skaičiavimą įtraukiama tik 10 dienų).
 
-  ![Autotune default screen](../images/Autotune/Autotune_20b.png)
+  ![Autotune pradinis ekranas](../images/Autotune/Autotune_20b.png)
 
 
 
-## Tips and trick's
+## Patarimai ir gudrybės
 
-Autotune works with information existing in your database, so if you just installed AAPS on a new phone, you will have to wait several days before being able to launch Autotune with enough days to get relevant results.
+Autotune naudoja jūsų duomenų bazėje esančią informaciją, todėl jei ką tik įdiegėte AAPS naujame telefone, turėsite palaukti kelias dienas, kol galėsite paleisti Autotune su pakankamu dienų skaičiumi, kad rezultatai būtų prasmingi.
 
-Autotune is just an help, it's important to regularly check if you agree with calculated profile. If you have any doubt, change Autotune settings (for example the number of days) or copy results in local profile and adjust profile before using it.
+Autotune yra tik pagalba, svarbu reguliariai tikrinti, ar sutinkate su apskaičiuotu profiliu. Jei kyla abejonių, pakeiskite Autotune nustatymus (pavyzdžiui, dienų skaičių) arba nukopijuokite rezultatus į vietinį profilį ir pakoreguokite profilį prieš jį naudodami.
 
-Always use Autotune several days manually to check results before applying them. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile then you start to use Automation (Never before)
+Visada kelias dienas naudokite Autotune rankiniu būdu ir patikrinkite rezultatus prieš juos taikydami. Automatizaciją pradėkite naudoti tik tada, kai visiškai pasitikite Autotune rezultatais ir kai skirtumas tarp ankstesnio ir apskaičiuoto profilio tampa labai mažas (niekada ne anksčiau)
 
-- Autotune can work very well for some users and not for others, so **If you don't trust Autotune result, don't use it**
+- Autotune kai kuriems naudotojams gali veikti labai gerai, o kitiems – ne, todėl **jei nepasitikite Autotune rezultatu, jo nenaudokite**
 
-It's also important to analyze Autotune results to understand (or try to understand) why Autotune proposes these modifications
+Taip pat svarbu analizuoti Autotune rezultatus, kad suprastumėte (arba bandytumėte suprasti), kodėl Autotune siūlo šiuos pakeitimus
 
-- you can have a whole increase or decrease of the strength of your profile (for example increase of total basal associated to decrease of ISF and IC values). it could be associated to several following days with autosens correction above 100% (more aggressivity required) or below 100% (you are more sensitive)
-- Sometimes Autotune proposes a different balance between basal rates and IC/ISF (for ex lower basal and more aggressive IC/ISF)
+- viso profilio stiprumas gali padidėti arba sumažėti (pavyzdžiui, padidėja bendra valandinė bazė ir kartu sumažėja JIF ir IA reikšmės). tai gali būti susiję su keliomis paskesnėmis dienomis, kai Autosens korekcija yra virš 100 % (reikia daugiau agresyvumo) arba žemiau 100 % (esate jautresni)
+- Kartais Autotune siūlo kitokį valandinės bazės ir IA/JIF santykį (pvz., mažesnę valandinę bazę ir agresyvesnius IA/JIF)
 
-We advise to not use Autotune in the following cases:
+Nerekomenduojame naudoti Autotune šiais atvejais:
 
-- You don't enter all your carbs
-  - If you don't enter carbs correction for hypoglycemia, Autotune will see an unexpected increase of your BG value and will increase your basal rates 4 hours earlier, it could be the opposite of what you need to avoid hypo, especially if it's in the middle of the night. That's why it's important to enter all carbs, especially correction for hypo.
-- You have a lot of periods with UAM detected during the day.
-  - Do you have entered all your carbs and correctly estimated your Carbs?
-  - All UAM periods (except if you enter no carbs during a day and categorized UAM as basal is disabled), all your UAM periods will be categorized as basal, this can increase a lot your basal (much more than necessary)
+- Neįvedate visų suvalgytų angliavandenių
+  - Jei neįvedate angliavandenių, suvalgytų hipoglikemijai koreguoti, Autotune mato netikėtą jūsų KG padidėjimą ir padidina valandinę bazę 4 valandomis anksčiau. Tai gali būti priešinga tam, ko reikia hipoglikemijai išvengti, ypač jei tai vyksta vidury nakties. Todėl svarbu įvesti visus angliavandenius, ypač suvalgytus hipoglikemijai koreguoti.
+- Per dieną aptinkama daug NDM laikotarpių.
+  - Ar įvedėte visus angliavandenius ir teisingai įvertinote jų kiekį?
+  - Visi NDM laikotarpiai (išskyrus atvejį, kai per dieną neįvedate jokių angliavandenių ir NDM priskyrimas bazei išjungtas) bus priskirti bazei, todėl valandinė bazė gali labai padidėti (daug daugiau nei reikia)
 
-- Your carbs absorption is very slow: if most of your carbs absorption are calculated with min_5m_carbimpact parameter (you can see these periods with a little orange dot in the top of COB curve), the calculation of COB could be wrong and leads to wrong results.
-  - When you practice sport, you are generally more sensitive and your BG doesn't rise a lot, so during or after an exercise, it's usual to see some periods with slow carbs. But if you have too often unexpected slow carb absorption, then you may need a profile adjustment (higher value of IC) or a min_5m_carbimpact a bit too high.
-- You have "very bad days", for example stuck several hours in hyperglycemia with a huge amount of insulin to be able to go down within the range, or after a sensor change you have long periods of wrong BG values. If during the past weeks you only have one or 2 "bad days", you can disable manually these days in autotune calculation to exclude them from calculation, and again **check carefully if you can trust the results**
-- If the percentage of modification is too important
-  - You can try to increase the number of days to get smoother results
+- Jūsų angliavandenių įsisavinimas labai lėtas: jei didžioji įsisavinimo dalis apskaičiuojama pagal parametrą min_5m_carbimpact (šiuos laikotarpius matote kaip mažą oranžinį tašką AAO kreivės viršuje), AAO gali būti apskaičiuota neteisingai, o rezultatai bus klaidingi.
+  - Sportuojant paprastai būnate jautresni ir jūsų KG daug nekyla, todėl sportuojant arba po jo įprasta matyti laikotarpių su lėtu angliavandenių įsisavinimu. Bet jei per dažnai pasitaiko netikėtai lėtas angliavandenių įsisavinimas, gali reikėti pakoreguoti profilį (didesnė IA reikšmė) arba min_5m_carbimpact gali būti šiek tiek per didelis.
+- Turite „labai blogų dienų“, pavyzdžiui, kelias valandas užstrigote hiperglikemijoje ir prireikė labai daug insulino, kad grįžtumėte į tikslinį intervalą, arba po jutiklio keitimo ilgai buvo neteisingos KG reikšmės. Jei per pastarąsias savaites turėjote tik vieną ar 2 „blogas dienas“, galite rankiniu būdu išjungti šias dienas Autotune skaičiavime, kad jos nebūtų įtrauktos, ir vėl **atidžiai patikrinkite, ar galite pasitikėti rezultatais**
+- Jei pokytis procentais per didelis
+  - Galite pabandyti padidinti dienų skaičių, kad rezultatai būtų tolygesni
