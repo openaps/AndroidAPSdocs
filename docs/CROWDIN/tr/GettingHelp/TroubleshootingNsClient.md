@@ -8,13 +8,13 @@ Nightscout'ta kimse sizi takip etmiyorsa, pil ömründen tasarruf etmek için NS
 
 * Kararsız bir bağlantı nasıl tespit edilir?
 
-Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. Çok sayıda yeniden bağlantı bildirimi görüyorsanız, bir sorun var demektir.
+NSClient ekranını açın (**Konfigürasyon** > **İletişim** > **NSClientV3** > **Eklentiyi aç**) ve **Durum** alanını ve günlüğü izleyin. Websockets etkinken durum "Bağlandı" olarak kalmalı ve günlükte neredeyse hiç yeniden bağlantı mesajı olmamalıdır. Çok sayıda yeniden bağlantı bildirimi görüyorsanız, bir sorun var demektir.
 
 * Yeniden başlat
 
-As a first step, restart Nightscout and then your phone to see if the issue is permanent.
+İlk adım olarak, sorunun kalıcı olup olmadığını görmek için önce Nightscout'u, sonra telefonunuzu yeniden başlatın.
 
-Nightscout'unuz Heroku'da barındırılıyorsa, Nightscout'u şu şekilde yeniden başlatabilirsiniz: Heroku'da oturum açarak, nightcout uygulamanızın adına tıklayın, 'More' menüsüne ve ardından 'Restart all dynos'a tıklayın.
+Nightscout'unuz Heroku'da barındırılıyorsa, Nightscout'u şu şekilde yeniden başlatabilirsiniz: Heroku'da oturum açın, nightscout uygulamanızın adına tıklayın, 'More' menüsüne ve ardından 'Restart all dynos'a tıklayın.
 
 Diğer host'lar için lütfen host kılavuzlarına bakın.
 
@@ -30,14 +30,14 @@ Başka bir telefon deneyin.
 
 Siteniz Azure'da barındırılıyorsa, birçok kişi Heroku'ya taşındıktan sonra bağlantı sorunlarının düzeldiğini fark etti.
 
-Azure'daki bağlantı sorunlarına geçici bir çözüm, Uygulama ayarları HTTP protokolünü 2.0 olarak ve Websockets'i ON olarak ayarlamaktır.
+Azure'daki bağlantı sorunlarına geçici bir çözüm: Uygulama ayarlarında (Application settings) HTTP protokolünü 2.0, Websockets'i de ON olarak ayarlayın
 
 * Nightscout'tan KŞ okunamıyor
 
-If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSClientV3 settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**. This option is hidden while client control is on ([hardened mode](#client-master-control-hardened-mode)); in that case check that **NSClient BG** is selected in **Configuration** → **BG Source**.
+**AAPS** Nightscout'a doğru bağlanıyor ama KŞ N/A olarak görünüyorsa: [NSClientV3 ayarlarında](#Preferences-nsclient) **Senkronizasyon** bölümünü açın ve **NS'den CGM verilerini al** seçeneğini açın. İstemci kontrolü açıkken ([güçlendirilmiş mod](#client-master-control-hardened-mode)) bu seçenek gizlenir; bu durumda **Konfigürasyon** → **KŞ kaynağı** içinde **NSClient KŞ** seçili olduğunu kontrol edin.
 
-* Hala hata alıyorsanız...
+* Hâlâ hata alıyorsanız...
 
-Veritabanınızın boyutunu MongoDB'de (veya nightcout'taki veritabanı boyutu eklentisi aracılığıyla) kontrol edin. MongoDB'de ücretsiz katmanı kullanıyorsanız, 496MB'ın dolu olduğu ve temizlenmesi gerektiği anlamına gelir. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
+Veritabanınızın boyutunu MongoDB'de (veya nightscout'taki veritabanı boyutu eklentisi ile) kontrol edin. MongoDB'de ücretsiz katmanı kullanıyorsanız, 496MB veritabanının dolu olduğu ve temizlenmesi gerektiği anlamına gelir. [Veritabanınızın boyutunu kontrol etmek ve verileri temizlemek için bu Nightscout talimatlarını izleyin](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
-Veritabanınızdaki verileri temizlemeden önce, henüz kurmadıysanız, AAPS verilerinizi Open Humans projesine (araştırma için) bağışlamayı düşünebilirsiniz. The instructions are on the [OpenHumans configuration page](../SupportingAaps/OpenHumans.md).
+Veritabanınızdaki verileri temizlemeden önce, henüz kurmadıysanız, AAPS verilerinizi Open Humans projesine (araştırma için) bağışlamayı düşünebilirsiniz. Talimatlar [OpenHumans yapılandırma sayfasındadır](../SupportingAaps/OpenHumans.md).
