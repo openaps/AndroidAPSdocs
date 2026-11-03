@@ -12,7 +12,7 @@ Zalecamy używanie Nightscout.
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout to aplikacja internetowa, która zapisuje i pokazuje dane z CGM i dane z **AAPS** oraz tworzy raporty. To rozbudowana platforma, która od wielu lat jest zintegrowana z **AAPS**. Pozwala użytkownikom i opiekunom śledzić dane cukrzycowe pacjenta prawie w czasie rzeczywistym (jeśli wszystkie elementy mają dobre połączenie z internetem, między odbiorem danych a ich udostępnieniem mija tylko kilka sekund). It also carries the remote commands that caregivers send to **AAPS** from **AAPSClient** (see [Master ↔ Client control](#client-master-control)).
+Nightscout to aplikacja internetowa, która zapisuje i pokazuje dane z CGM i dane z **AAPS** oraz tworzy raporty. To rozbudowana platforma, która od wielu lat jest zintegrowana z **AAPS**. Pozwala użytkownikom i opiekunom śledzić dane cukrzycowe pacjenta prawie w czasie rzeczywistym (jeśli wszystkie elementy mają dobre połączenie z internetem, między odbiorem danych a ich udostępnieniem mija tylko kilka sekund). Przenosi też zdalne polecenia, które opiekunowie wysyłają do **AAPS** z **AAPSClient** (zobacz [Sterowanie Master ↔ Client](#client-master-control)).
 
 Nightscout jest oprogramowaniem open source. Każdy może utworzyć i prowadzić serwer Nightscout, korzystając z darmowych lub płatnych usług.
 
@@ -44,7 +44,7 @@ Tidepool jest dostępny w **AAPS** od wersji 3.2, wydanej pod koniec 2023 roku.
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger
-As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool is not suitable for sharing real-time information with caregivers.  
+Przy używaniu **AAPS** między otrzymaniem danych a ich pokazaniem w raporcie mijają trzy godziny, dlatego Tidepool nie nadaje się do udostępniania opiekunom informacji w czasie rzeczywistym.  
 Z kolei Tidepool może być świetnym rozwiązaniem do udostępniania raportów diabetologowi pacjenta, jeśli Nightscout nie jest akceptowany.  
 ```
 
