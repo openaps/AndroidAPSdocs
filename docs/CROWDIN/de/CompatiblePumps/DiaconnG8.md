@@ -26,7 +26,7 @@ Once it is selected, the **Diaconn G8** card shows two buttons, **Settings** and
 
 **Settings** opens the settings of the Diaconn G8 driver (see [Diaconn G8 insulin pump option setting](#diaconn-g8-insulin-pump-option-setting) below).
 
-**Open plugin** (or **Manage** > **Pump**) opens the Diaconn G8 pump screen. Before a pump is paired it looks like this:
+**Open plugin** (or **Manage** > **Pump**) opens the Diaconn G8 pump screen. Bevor eine Pumpe gekoppelt ist, sieht er so aus:
 
 ![Diaconn G8 pump screen before pairing](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
