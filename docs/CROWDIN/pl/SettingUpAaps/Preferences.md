@@ -28,12 +28,12 @@ W **AAPS** v4 preferencje znajdziesz na ekranie **Ustawienia**. Dostać się do 
 
 **Język**
 
-- By default **AAPS** follows the language of the phone (recommended).
+- Domyślnie **AAPS** używa języka telefonu (zalecane).
 
-- If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
+- Jeśli chcesz używać **AAPS** w innym języku niż język telefonu, wybierz go tutaj. W Androidzie 13 i nowszym **AAPS** zapisuje ten wybór w Androidzie jako własny język aplikacji, więc wszystkie jego ekrany, ekran główny, widżety i sposób zapisu liczb używają tego języka.
 
 - Gdy zmienisz język, teksty **AAPS** od razu przełączą się na nowy język. Jeśli niektóre teksty są nadal w starym języku, uruchom ponownie **AAPS**.
-- On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
+- W Androidzie 12 to ustawienie nie jest widoczne: **AAPS** zawsze używa języka telefonu.
 - Ustawienie ukryte w [trybie uproszczonym](#preferences-simple-mode).
 
 (preferences-simple-mode)= **Tryb uproszczony**
@@ -136,7 +136,7 @@ Po wpisaniu złego hasła **AAPS** od razu się zamknie – ale nadal będzie dz
 
 - Limity bezpieczeństwa są ustawiane na podstawie wieku, który wybierzesz w tym ustawieniu.
 - Jeśli zaczynasz dochodzić do tych twardych limitów (np. maksymalny bolus), czas przejść o jeden krok wyżej.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
+- Wybór wieku wyższego niż prawdziwy to zły pomysł, bo może prowadzić do przedawkowania przy wpisaniu złej wartości w oknie insuliny (np. gdy pominiesz separator dziesiętny).
 - Jeśli chcesz poznać dokładne wartości tych stałych limitów bezpieczeństwa, przewiń do funkcji algorytmu, której używasz, na [tej stronie](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 (Preferences-maximum-bolus)=
@@ -275,7 +275,7 @@ Zależnie od ustawień w [Konfiguracja > APS](../SettingUpAaps/ConfigBuilder.md)
 - [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) – stan algorytmu z 2017 roku
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) – najnowszy algorytm, zalecany dla początkujących
 
-As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
+Od [**AAPS** w wersji 3.3](#version3300) funkcja [Dynamiczny ISF](../DailyLifeWithAaps/DynamicISF.md) jest częścią OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -364,10 +364,10 @@ Wtyczka NSClient (w menu konfiguracji widoczna jako **NSClientV3**) synchronizuj
 ```{admonition} Data uploaders
 :class: warning
 
-Gdy używasz NSClientV3, wszystkie programy wysyłające dane (uploadery) muszą używać Nightscout API v3. If another uploader (for example your CGM app) is not API v3 compliant, **let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
+Gdy używasz NSClientV3, wszystkie programy wysyłające dane (uploadery) muszą używać Nightscout API v3. Jeśli inny uploader (np. twoja aplikacja CGM) nie obsługuje API v3, **pozwól AAPS wysyłać wszystkie dane** (glikemię, leczenie, ...) do Nightscout i wyłącz ten uploader.
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplatform.dom>).
+- Ustaw *Adres URL strony Nightscout* (np. <https://yoursitename.yourplatform.dom>).
 - **Upewnij się, że adres URL NIE ma na końcu /api/v1/.**
 - W Nightscout utwórz *[token Admin](https://nightscout.github.io/nightscout/security/#create-a-token)* (do API V3 potrzebny jest [Nightscout 15](https://nightscout.github.io/update/update/)) i wpisz go w polu **Token dostępu do Nightscout** (nie twój API Secret!). W **AAPSClient** możesz zamiast tego zeskanować kod QR z głównego telefonu. W ten sposób klient dostaje własny token. Klient sparowany za pomocą PIN-u po sparowaniu dostaje własny token od głównego telefonu. Zobacz [Własny token Nightscout klienta](#client-master-control-own-token).
 - Dzięki temu dane mogą być odczytywane i zapisywane zarówno na stronie Nightscout, jak i w **AAPS**.
@@ -411,7 +411,7 @@ Przełącznika „**Zezwalaj na sterowanie z urządzenia opiekuna**” nie ma ju
 - Aby usunąć wszystkie SSID, wpisz w polu spację.
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClientV3)
+### Ustawienia zaawansowane (NSClientV3)
 
 ![Zaawansowane ustawienia NSClient](../images/preferences/settings_nsclient_advanced.png)
 
@@ -470,9 +470,9 @@ Wybierz, której usługi lokalizacji ma używać aplikacja:
 
 Ustawienia są zrozumiałe same przez się.
 
-**Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
+**Powiadamiaj pomimo trybu Nie przeszkadzać** (domyślnie włączone): alarmy **AAPS** dzwonią nawet wtedy, gdy telefon jest wyciszony albo w trybie Nie przeszkadzać. Wyłącz tę opcję, jeśli **AAPS** ma respektować te tryby: alarmy wtedy nie dzwonią, a w trybie Nie przeszkadzać tylko wibrują, na telefonie i na zegarku. Sugestie pętli, które przyjdą w trybie Nie przeszkadzać, są pokazywane bez dźwięku.
 
-When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Swiping the alarm notification away in the notification tray mutes the alarm. When you open **AAPS** later, an alarm you did not answer is shown again.
+Gdy alarm dzwoni, ekran alarmu pokazuje przyciski **Wycisz alarm** (ekran zostaje otwarty, więc możesz przeczytać komunikat) i **Wycisz i zamknij**. Gdy odrzucisz powiadomienie o alarmie, przesuwając je w obszarze powiadomień, alarm zostanie wyciszony. Gdy później otworzysz **AAPS**, alarm, na który nie odpowiedziałeś, zostanie pokazany ponownie.
 
 (preferences-maintenance-settings)=
 ## Ustawienia konserwacji
@@ -489,7 +489,7 @@ When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays
 
 Możesz pomóc w dalszym rozwoju **AAPS**, wysyłając raporty o awariach do programistów.
 
-**Automatyczny Eksport Ustawień**<br/> Gdy włączysz tę funkcję, pozwalasz **AAPS** eksportować ustawienia bez twojego udziału. For this the master password is securely stored on your phone (only) at the next manual export. Zapisane hasło będzie używane przez maksymalnie 4 tygodnie. Po 4 tygodniach dostaniesz powiadomienie, że hasło wkrótce wygaśnie. W okresie przejściowym 1 tygodnia możesz wtedy odświeżyć hasło, eksportując ręcznie ustawienia z menu Konserwacja.
+**Automatyczny Eksport Ustawień**<br/> Gdy włączysz tę funkcję, pozwalasz **AAPS** eksportować ustawienia bez twojego udziału. W tym celu hasło główne zostanie bezpiecznie zapisane (tylko) w twoim telefonie przy następnym ręcznym eksporcie. Zapisane hasło będzie używane przez maksymalnie 4 tygodnie. Po 4 tygodniach dostaniesz powiadomienie, że hasło wkrótce wygaśnie. W okresie przejściowym 1 tygodnia możesz wtedy odświeżyć hasło, eksportując ręcznie ustawienia z menu Konserwacja.
 
 Po upływie okresu przejściowego 1 tygodnia zapisane hasło wygasa, a każdy automatyczny eksport ustawień zostanie przerwany i pojawi się powiadomienie z prośbą o ponowne wpisanie hasła. [(**Automatyczne eksporty ustawień**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) będą zapisywane na listach „Portal opieki” i „Wpis użytkownika” w **AAPS**, w sekcji Leczenie.
 
