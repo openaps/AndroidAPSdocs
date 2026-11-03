@@ -24,7 +24,7 @@ Jei nė viena nuoroda problemos neišsprendžia, skaitykite [Kur gauti pagalbos?
 
 * Jei kūrimas nepavyksta, žr. [Jei kūrimas nepavyksta](#building-aaps-troubleshooting): ten nurodytas kiekvieno kūrimo būdo trikčių šalinimo skyrius:
   * [AAPS Builder](#aaps-builder-troubleshooting)
-  * [Browser build](#aaps-ci-troubleshooting)
+  * [Kūrimas naršyklėje](#aaps-ci-troubleshooting)
   * [Android Studio](TroubleshootingAndroidStudio.md)
 * Prarasta raktų saugykla arba nauja raktų saugykla: [AAPS įdiegimas iš naujo](#reinstall-aaps)
 * **AAPS** atnaujinimas: [su AAPS Builder](#aaps-builder-updates), [kuriant naršyklėje (fork)](#update-browser-build-troubleshooting), [su Android Studio](#update-computer-build-troubleshooting)
@@ -175,7 +175,7 @@ Naudingos nuorodos į žinomas telefonų problemas ir jų sprendimo veiksmus
 
 (generaltroubleshooting-remote-control)=
 
-## Remote control
+## Nuotolinis valdymas
 
 * [AAPSClient ir nuotolinis valdymas (susiejimas, komandos negaunamos)](#client-master-control-troubleshooting)
 * [Problemos su 'Nightscout prieigos raktu'](#remotecontrol-nightscout-access-token)
