@@ -1,6 +1,6 @@
 # How to edit the docs
 
-**This description is just for editing the English documentation. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
+**Această descriere este doar pentru editarea documentației în limba engleză. Toate informațiile noi trebuie adăugate mai întâi în limba engleză. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
 
 For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
 
@@ -8,7 +8,7 @@ For hints how to format text (headline, bold...) and set links please see the ["
 
 For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw).
 
-At some point it will be suggested that you make a pull request (PR), which is how your changes in the documentation are actually put onto the AAPS webpages, which are stored in GitHub. It's actually not too hard to do a PR and it is a great way to contribute. You are reading this documentation right now because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. Your changes are reviewed before they are merged into the "formal" AAPS documentation repository. You can't mess up the originals through any accidents in the process. The general process is:
+At some point it will be suggested that you make a pull request (PR), which is how your changes in the documentation are actually put onto the AAPS webpages, which are stored in GitHub. It's actually not too hard to do a PR and it is a great way to contribute. Citiți această documentație chiar acum pentru că oameni ca dumneavoastră au făcut PR-uri. Don't worry about making a mistake or somehow editing the wrong documents. Your changes are reviewed before they are merged into the "formal" AAPS documentation repository. You can't mess up the originals through any accidents in the process. Procesul general este:
 
 - Make edits and improvements to code or documentation by editing the existing content.
 - Double-check that your edits look good to you.
@@ -24,25 +24,25 @@ For our example we are going to make an edit to AndroidAPSdocs. This can be done
 
 ![Fork repo](../images/PR0.png)
 
-2. Go to any page and navigate to the page you want to edit. You can click on the "Edit in GitHub" link in the upper right corner. This is only possible for English pages. 
+2. Mergeți la orice pagină și navigați la pagina pe care doriți să o editați. You can click on the "Edit in GitHub" link in the upper right corner. Acest lucru este posibil doar pentru paginile în limba engleză. 
 
-![edit doc](../images/PR1.png)
+![editarea documentului](../images/PR1.png)
 
 Or click the pencil icon that appears in the top bar of the page contents to be edited. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
 
 ![RTD io](../images/PR2.png)
 
-3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
+3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Faceți modificările în fișier.
 
-We are using markdown for the docs pages. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
+Folosim Markdown pentru paginile documentației. The files have the suffix ".md". Specificația Markdown nu este fixă și momentan folosim myst_parser pentru fișierele noastre Markdown. Aveți grijă să folosiți sintaxa corectă, așa cum este [descrisă mai jos](#edit-the-docs-code-syntax).
 
 ![Editați ramura](../images/PR3.png)
 
-4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). If you see a needed improvement, go back to the edit tab to make more improvements. 
+4. You have been working in the "<>Edit file" tab. Selectați fila „Preview changes” (previzualizați modificările) pentru a verifica încă o dată dacă tot ce ați schimbat arată așa cum ați dorit (verificați greșelile de scriere). If you see a needed improvement, go back to the edit tab to make more improvements. 
 
 ![mod previzualizare](../images/PR5.png)
 
-5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
+5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". Titlul implicit conține numele fișierului. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
 
 ![trimite comentarii](../images/PR4.png)
 
@@ -54,22 +54,22 @@ We are using markdown for the docs pages. The files have the suffix ".md". The M
 
 ![Monitorizare cereri de fuziune (PR)](../images/PR7.png)
 
-PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+PS: Your fork and branch will still be sitting on your own personal GitHub account. După ce primiți o notificare că PR-ul a fost integrat (merged), puteți șterge ramura, dacă nu mai aveți nevoie de ea (zona de notificări de la Pasul 7 va oferi un link pentru ștergerea ramurii, după ce aceasta a fost închisă sau integrată). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. Dacă alegeți altă metodă pentru a începe un PR (de exemplu, editarea pornind de la ramura master a depozitului dumneavoastră obținut prin fork), trebuie să vă asigurați că depozitul este actualizat: faceți mai întâi un „compare” (comparare) și integrați toate actualizările apărute de când ați actualizat ultima dată fork-ul. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
 
 (edit-the-docs-code-syntax)=
 
 ## Code syntax
 
-We are using markdown for the documentation pages. The files have got the suffix ".md".
+Folosim Markdown pentru paginile documentației. The files have got the suffix ".md".
 
 Markdown is a very simple text formatting language which separates text content from text formatting.
 
 The writer only e.g. marks a headline as level 1 headline and the markdown processor generates the necessary HTML code during processing to render the heading in HTML.
 
-The idea behind this is that
+Ideea din spatele acestui lucru este ca
 
-- the writer should think about the text and not the formatting first,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
+- autorul să se gândească mai întâi la text, nu la formatare,
+- textul Markdown să poată fi folosit în diferite unelte Markdown, în loc de unelte proprietare, de exemplu Microsoft Word, și
 - you can generate several output formats from one markdown file.
 
 Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard, to
@@ -77,7 +77,7 @@ Markdown is not a 100% fixed standard and we try to stay as near as possible to 
 - stay flexible to change markdown tools as needed or forced in the further innovation of markdown tools and markdown SaaS services and
 - enable us to use translation services to translate the English language in a target language like French or German. They can work on markdown but not complex formatting codes, because they can't separate content from layout, which might be fatal.
 
-### Headlines
+### Titluri
 
 - Titlul 1: `# titlu`
 - Titlu 2: `## titlu`
@@ -94,14 +94,14 @@ We try to avoid further levels of headlines.
 
 ### Ordered list
 
-    1. first
-    1. second
-    1. third
+    1. primul
+    1. al doilea
+    1. al treilea
     
 
-1. first
-2. secundă
-3. third
+1. primul
+2. al doilea
+3. al treilea
 
 ### Unordered list
 
@@ -110,30 +110,30 @@ We try to avoid further levels of headlines.
     - and another element
     
 
-- one element
-- another element
+- un element
+- alt element
 - and another element
 
-### Multi level list
+### Listă pe mai multe niveluri
 
 You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
 
-    1. first
-    1. second
-    1. third
-      1. one element
-      1. another element
+    1. primul
+    1. al doilea
+    1. al treilea
+      1. un element
+      1. alt element
       1. and another element
     1. four
     1. five
     1. six
     
 
-1. first
-2. secundă
-3. third 
-    1. one element
-    2. another element
+1. primul
+2. al doilea
+3. al treilea 
+    1. un element
+    2. alt element
     3. and another element
 4. four
 5. five
@@ -141,18 +141,18 @@ You can insert lists in lists by indenting the next level with 4 more spaces to 
 
 ### Imagini
 
-To include images you use this markdown syntax.
+Pentru a include imagini, folosiți această sintaxă Markdown.
 
 - imagini: `![alt text](../images/file.png)`
 
 The type of image should be PNG or JPEG.
 
-Image names should conform to one of the following naming rules. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
+Numele imaginilor trebuie să respecte una dintre următoarele reguli de denumire. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
 
 - `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
 - `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
 
-Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
+Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. Nu trebuie să faceți nimic pentru aceasta!
 
 We are not translating images at the moment: images should contain the **minimum possible text** to allow accessibility to non-English readers.
 
@@ -161,17 +161,17 @@ We are not translating images at the moment: images should contain the **minimum
 - Screenshots from web pages images should be up to **1050 pixels wide**.
 - Diagrams of process flows should be up to **1050 pixels wide**.
 - Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
-- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
+- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Nu măriți niciodată o captură de ecran mai mică.
 
-### Link-uri
+### Linkuri
 
-#### External links
+#### Linkuri externe
 
-External links are links to external web sites.
+Linkurile externe sunt linkuri către site-uri web externe.
 
 - link extern: `[alt text](www.url.tld)`
 
-#### Internal links to the start of a md file
+#### Linkuri interne către începutul unui fișier md
 
 Internal links to pages are links to the start of a md file which is hosted on our own server.
 
@@ -195,7 +195,7 @@ Then link this reference in the text you are writing with the following kind of 
 
 - Internal links to named inline references: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
-### Notes, Warnings, Collapsing Notes
+### Note, avertismente, note restrânse
 
 You can add notes and warning boxes to documentation.
 
@@ -203,13 +203,13 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 #### Note
 
-    ```{admonition} Note headline
+    ```{admonition} Titlul notei
     :class: note
-    This is a note.
+    Aceasta este o notă.
     ```
     
 
-```{admonition} Note headline :class: note This is a note.
+```{admonition} Titlul notei :class: note Aceasta este o notă.
 
     <br />#### Warnings
     
@@ -219,12 +219,12 @@ Furthermore you can add collapsing notes for detailed information, so that users
     This is a warning.
     
 
-    ```{admonition} Warning headline
+    ```{admonition} Titlul avertismentului
     :class: warning
-    This is a warning.
+    Acesta este un avertisment.
     ```
     
-    #### Collapsing Notes
+    #### Note restrânse
     
     
 
@@ -242,21 +242,21 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 ```
 
-## Tables
+## Tabele
 
-Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Evitați tabelele cu texte lungi: conținutul este greu de aranjat în Markdown, de obicei nu încape pe lățimea ecranului unui telefon mobil și probabil nu va arăta la fel după traducere.
 
-## Style Guide
+## Ghid de stil
 
 ### Cuprins
 
-1. English language writing tips
+1. Sfaturi pentru scrierea în limba engleză
 
-2. AAPS-specific writing notes
+2. Note de scriere specifice AAPS
 
-3. Useful references
+3. Referințe utile
 
-### ![Image](../images/styleguide01.png) 1\. English language writing tips
+### ![Imagine](../images/styleguide01.png) 1\. Sfaturi pentru scrierea în limba engleză
 
 #### Use language that is appropriate for the reader
 
@@ -280,7 +280,7 @@ Particularly if you record video or screenshots, make sure not to disclose your 
 
 - Clear writing should have an average sentence length of 15 to 20 words.
 
-- This does not mean making every sentence the same length. Be punchy. Vary your writing by mixing short sentences (like the last one) with longer ones (like this one).
+- Aceasta nu înseamnă că toate propozițiile trebuie să aibă aceeași lungime. Be punchy. Vary your writing by mixing short sentences (like the last one) with longer ones (like this one).
 
 - Stick to one main idea in a sentence, plus perhaps one other related point.
 
@@ -292,7 +292,7 @@ Particularly if you record video or screenshots, make sure not to disclose your 
 
 - Be visual! Wherever possible provide a brief diagram, screenshot or video.
 
-#### Don't be afraid to give instructions
+#### Nu vă temeți să dați instrucțiuni
 
 Commands are the fastest way to give instructions, but writers sometimes fear giving commands, writing “you should do this” instead of just “do this”. Perhaps people worry that commands sound too harsh. You can often solve this by putting the word 'please' in front. However, if something must be done, it is best not to say ‘please’ as it gives the reader the option to refuse.
 
@@ -336,9 +336,9 @@ There are times when it might be appropriate to use a passive.
 
 - When you don't know who or what the doer is - 'the England team has been picked'.
 
-- If it simply sounds better.
+- Dacă pur și simplu sună mai bine.
 
-#### Avoid nominalisations
+#### Evitați nominalizările
 
 A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalizations are formed from verbs.
 
@@ -357,9 +357,9 @@ Instead of: *“The implementation of the method has been done by a team.”*
 
 Use: *“A team has implemented the method.”*
 
-#### Use lists where appropriate
+#### Folosiți liste acolo unde este potrivit
 
-Lists are excellent for splitting information up. There are two main types of list:
+Lists are excellent for splitting information up. Există două tipuri principale de liste:
 
 - A continuous sentence with several listed points picked out at the beginning, middle or end.
 
@@ -385,31 +385,31 @@ An “explanation” style is used for the introduction, background and knowledg
 
 A “How-to-guide” style (with minimal explanation) is used for building, configuring AAPS, and some of the troubleshooting sections.
 
-A tutorial helps the pupil acquire basic competence. The user will **learn by doing**.
+A tutorial helps the pupil acquire basic competence. Utilizatorul va **învăța făcând**.
 
-![Image](../images/styleguide02.png)
+![Imagine](../images/styleguide02.png)
 
-##### ![Image](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
+##### ![Imagine](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
 
 - naratorul vorbește direct cititorului: În acest tutorial **vei** (noi) ar putea fi folosit pentru a transmite ideea de "suntem împreună în asta" în unele cazuri rare
 
 - Future Tense -> to show the final target
 
-- Modul Imperativ -> pentru realizarea sarcinilor -> Pași concreți - evită conceptele abstracte
+- Modul imperativ -> pentru realizarea sarcinilor -> Pași concreți - evitați conceptele abstracte
 
 - Timpul trecut -> pentru a arăta sarcinile îndeplinite -> Rezultate vizibile rapide și imediate
 
 - Minimum Explanations -> strict necessary to complete the task - **what and why**
 
-- Ignore options/alternatives/…. No ambiguity
+- Ignore options/alternatives/…. Fără ambiguitate
 
 - Step Transitions: finish a step with a sentence leading to the next step as a logical progression flow. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
 
-- **Tutorial** Title (Level 1 heading)
+- Titlul **tutorialului** (titlu de nivel 1)
 
-- Introduction (no heading)
+- Introducere (fără titlu)
 
-- Prerequisites (Level 2 heading)
+- Cerințe preliminare (titlu de nivel 2)
 
 - Pași:
 
@@ -419,9 +419,9 @@ A tutorial helps the pupil acquire basic competence. The user will **learn by do
 
 - Step n — Doing the Last Thing (Level 2 heading)
 
-- Conclusion (Level 2 heading)
+- Concluzie (titlu de nivel 2)
     
-    - **The Language of Tutorials**
+    - **Limbajul tutorialelor**
         
         *In this tutorial, you will…*
         
@@ -447,13 +447,13 @@ A tutorial helps the pupil acquire basic competence. The user will **learn by do
         
         Describe (and admire, in a mild way) what your learner has accomplished (note - not: “you have learned…”)
 
-##### ![Image](../images/styleguide05.png) How-To Guides (e.g. a recipe)
+##### ![Imagine](../images/styleguide05.png) How-To Guides (e.g. a recipe)
 
 A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
 
 - HOW-to
 
-- narrator directly talks to the reader: In this guide **you** will
+- naratorul vorbește direct cititorului: În acest ghid **veți**
 
 - Future Tense -> to show the final target
 
@@ -465,7 +465,7 @@ A how-to guide’s purpose is to help the already-competent user perform a parti
 
 - **How-to**: Title (Level 1 heading)
 
-- Introduction paragraph
+- Paragraf de introducere
 
 - Optional Prerequisites (paragraph or Level 2 heading if more than 1)
 
@@ -477,9 +477,9 @@ A how-to guide’s purpose is to help the already-competent user perform a parti
 
 - Step n — Doing the Last Thing (Level 2 heading)
 
-- Conclusion paragraph
+- Paragraf de concluzie
     
-    - **The Language of How-To Guides**
+    - **Limbajul ghidurilor practice**
         
         *This guide shows you how to…*
         
@@ -487,19 +487,19 @@ A how-to guide’s purpose is to help the already-competent user perform a parti
         
         *If you want x, do y. To achieve w, do z.*
         
-        Use conditional imperatives.
+        Folosiți imperative condiționale.
         
         *Refer to the x reference guide for a full list of options.*
         
         Don’t pollute your practical how-to guide with every possible thing the user might do related to x.
 
-##### ![Image](../images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
+##### ![Imagine](../images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
 
-An explanation clarifies, deepens and broadens the reader’s understanding of a subject.
+O explicație clarifică, aprofundează și lărgește înțelegerea unui subiect de către cititor.
 
 - WHY
 
-- Start with **About**
+- Începeți cu **Despre**
 
 - Provide context, link ALL relevant references
 
@@ -511,19 +511,19 @@ An explanation clarifies, deepens and broadens the reader’s understanding of a
 
 - **About** Title (Level 1 heading)
 
-- Introduction (no heading)
+- Introducere (fără titlu)
 
-- Optional Prerequisites (Level 2 heading)
+- Cerințe preliminare opționale (titlu de nivel 2)
 
 - Subtopic 1 (level 2 heading)
 
-- Conclusion (Level 2 heading)
+- Concluzie (titlu de nivel 2)
     
-    - **The Language of Explanation**
+    - **Limbajul explicațiilor**
     
     *The reason for x is because historically, y…*
     
-    Explain.
+    Explicați.
     
     *W is better than z, because…*
     
@@ -535,7 +535,7 @@ An explanation clarifies, deepens and broadens the reader’s understanding of a
     
     *Some users prefer w (because z). This can be a good approach, but…*
     
-    Weigh up alternatives.
+    Cântăriți alternativele.
     
     *An x interacts with a y as follows:…*
     
@@ -545,7 +545,7 @@ An explanation clarifies, deepens and broadens the reader’s understanding of a
 
 #### Author & Editor
 
-For writing/updating the AAPS documentation, consider the process as consisting of two stages. These can be carried out by the same person at different points, or more than one person.
+For writing/updating the AAPS documentation, consider the process as consisting of two stages. Acestea pot fi făcute de aceeași persoană în momente diferite sau de mai multe persoane.
 
 An **author (e.g. you!)** writes/edits a section of the documentation in a concise conversational tone, then passes it to the editor.
 
@@ -557,15 +557,15 @@ The **editor (e.g. a fellow AAPS user, or the person who receives the pull reque
 
 - For consistency, use “AAPS” rather than “Android APS”.
 
-- Clearly state the version of Android Studio/AAPS you are writing for, or that the screenshots are taken from.
+- Menționați clar versiunea de Android Studio/AAPS pentru care scrieți sau din care provin capturile de ecran.
 
-### 3\. Useful References
+### 3\. Referințe utile
 
 <https://dev.readthedocs.io/en/latest/style-guide.html>
 
 [Diátaxis (diataxis.fr)](https://diataxis.fr/)
 
-[Exemple de ghid de stil pentru scriitor tehnic | Technical Writer HQ](https://technicalwriterhq.com/writing/technical-writing/technical-writer-style-guide/)
+[Exemple de ghiduri de stil pentru autori tehnici | Technical Writer HQ](https://technicalwriterhq.com/writing/technical-writing/technical-writer-style-guide/)
 
 [DigitalOcean's Technical Writing Guidelines | DigitalOcean](https://www.digitalocean.com/community/tutorials/digitalocean-s-technical-writing-guidelines)
 
