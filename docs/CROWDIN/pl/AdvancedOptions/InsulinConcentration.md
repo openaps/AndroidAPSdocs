@@ -22,7 +22,7 @@ Insulina ma różne stężenia, określone liczbą jednostek na mililitr (ml).
 
 - **U100:** Światowy standard, zawiera **100 IU/ml**.
 - **U200-U500:** Insuliny bardziej stężone (np. U200 ma 200 IU/ml), aby wstrzykiwać mniejszą objętość.
-- **U40/U50:** Less common, historical concentrations (40 IU/ml and 50 IU/ml). **U40 wymaga strzykawek przeznaczonych do U40.**
+- **U40/U50:** Rzadziej spotykane, dawne stężenia (40 IU/ml i 50 IU/ml). **U40 wymaga strzykawek przeznaczonych do U40.**
 - **Ręczne rozcieńczanie:** Praktyka kliniczna, w której przygotowuje się mocno rozcieńczoną insulinę (np. U50, U10) w rzadkich przypadkach, np. u noworodków lub przy skrajnej wrażliwości na insulinę. Wymaga to bardzo starannego przygotowania w aptece.
 
 ```{admonition} Critical Warning
@@ -30,7 +30,7 @@ Insulina ma różne stężenia, określone liczbą jednostek na mililitr (ml).
 Używanie insuliny o stężeniu niepasującym do urządzenia jest skrajnie niebezpieczne i może spowodować ciężkie przedawkowanie lub zbyt małą dawkę. **Zawsze sprawdź trzy razy, czy stężenie insuliny pasuje do strzykawki, pena lub pompy.**
 ```
 
-## When is a non-standard concentration used?
+## Kiedy używa się niestandardowego stężenia?
 
 Pompy insulinowe są przeznaczone do insuliny U100, ale w niektórych szczególnych sytuacjach medycznych potrzebne są niestandardowe stężenia. Takie sytuacje wymagają ogromnej ostrożności i bardzo starannego prowadzenia terapii.
 
@@ -150,7 +150,7 @@ Aby utworzyć insulinę o innym stężeniu, najpierw otwórz **Zarządzaj → Us
 
 - Kliknij ikonę „+” na dole ekranu.
 - Wybierz z listy rozwijanej nowe stężenie (dostępne są U10, U20, U50, U100, U200).
-  - Diluted concentrations like U10, U20 or U50 are for children with very low basal rates.
+  - Rozcieńczone stężenia, takie jak U10, U20 lub U50, są dla dzieci z bardzo małymi dawkami bazowymi.
   - U200 jest raczej dla dorosłych z dużym zapotrzebowaniem na insulinę.
 
   ![Lista rozwijana stężenia w Ustawieniach insuliny](../images/v4/Insulin/insulin_concentration_dropdown.png)
