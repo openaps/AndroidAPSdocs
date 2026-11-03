@@ -3,13 +3,13 @@
 # Günlük dosyalarına erişim
 
 * Telefonu dosya aktarım modunda bir bilgisayara bağlayın
-* Locate the log files in the AAPS data directory, in `Android\data\info.nightscout.androidaps\files`.  
-    The naming of the root storage folder may vary a little depending on the phone.
-* The location is `Android\data\info.nightscout.aapsclient\files` for [AAPSClient](#RemoteControl_aapsclient).
-* Note: log location has changed in **AAPS 3.3**. See the previous versions' documentation if needed.
+* Günlük dosyalarını AAPS veri dizininde, `Android\data\info.nightscout.androidaps\files` içinde bulun.  
+    Kök depolama klasörünün adı telefona göre biraz farklı olabilir.
+* [AAPSClient](#RemoteControl_aapsclient) için konum `Android\data\info.nightscout.aapsclient\files` şeklindedir.
+* Not: Günlük konumu **AAPS 3.3** ile değişti. Gerekirse önceki sürümlerin dokümantasyonuna bakın.
 
 ![logs](../images/aapslog.png)
 
-* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) within Android Studio, any log viewer Android app, or simply as plain text. 
+* Geçerli günlük bir .log dosyasıdır. Bu dosyayı birçok şekilde görüntüleyebilirsiniz: Android Studio içindeki [LogCat](https://developer.android.com/studio/debug/am-logcat.html) ile, herhangi bir günlük görüntüleme Android uygulamasıyla veya düz metin olarak. 
 * Önceki günlük dosyaları sıkıştırılır ve tarih/saat sırasına göre klasörlerde saklanır. 
 * Olası bir hata hakkında konuşmak için günlük dosyanızı [discord](https://discord.gg/4fQUWHZ4Mw)'da paylaşıyorsanız, lütfen sıkıştırılmış dosyayı açın ve hata oluşmadan önceki tarihli dosyayı yükleyin.
