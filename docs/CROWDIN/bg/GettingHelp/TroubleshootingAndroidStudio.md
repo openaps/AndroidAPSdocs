@@ -49,7 +49,7 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * Трябва да получите съобщение, което показва коя версия на Git е инсталирана, както виждате на снимката на екрана по-горе. В този случай отидете на [Стъпка 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * In case you get a message saying
+  * Ако получите съобщение, което казва
     ```
     Git: command not found
     ```
@@ -57,15 +57,15 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * [Проверка на инсталацията на Git](#BuildingAaps-steps-for-installing-git)
 
-  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
+  * Ако сте на Windows и Git току-що е инсталиран, трябва да рестартирате компютъра си, за да стане Git достъпен навсякъде след инсталацията
 
-  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
+  * Ако Git е инсталиран, рестартирали сте компютъра (ако сте на Windows) и Git все още не може да бъде намерен:
 
   * Потърсете на компютъра си файл „git.exe“.
 
     Запишете си в коя папка е запазен.
 
-  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Добавете папката, в която сте намерили инсталацията на Git.
+  * В Windows отидете в Environment variables (променливи на средата), изберете променливата „PATH“ и натиснете Edit. Добавете папката, в която сте намерили инсталацията на Git.
 
   * Запишете и затворете.
 
@@ -139,7 +139,7 @@ The maximum compatible Gradle JVM version is 19.
 Cause: error: invalid source release: 21
 ```
 
-If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
+Ако получите горното съобщение за грешка, трябва да изтеглите правилната версия на JVM, преди да опитате да компилирате отново:
 
 1.  Проверете в [таблицата с изисквания](#Building-APK-recommended-specification-of-computer-for-building-apk-file) коя версия на JVM ви трябва за версията на **AAPS**, която компилирате, и си я запишете.
 
@@ -212,7 +212,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ## Generate Signed APK generated successfully with 0 build variants
 
-When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
+Когато създавате подписания apk, може да получите известие, че създаването е успешно, но че са създадени „0 build variants“:
 
 ![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
@@ -237,7 +237,7 @@ When you generate the signed apk, you might get the notification that generation
 
 ## Apk не е инсталиран
 
-![phone app not installed](../images/Update_AppNotInstalled.png)
+![приложението на телефона не е инсталирано](../images/Update_AppNotInstalled.png)
 
 * Уверете се, че сте прехвърлили файла „app-full-release.apk“ на телефона си.
 * Тази грешка обикновено означава, че новият apk е подписан с различно хранилище за ключове от инсталирания ви **AAPS**. Ако все още имате предишното си хранилище за ключове, изберете го и компилирайте отново. В противен случай вижте [Преинсталиране на AAPS с ново хранилище за ключове](#reinstall-aaps).
@@ -252,7 +252,7 @@ When you generate the signed apk, you might get the notification that generation
 
 ## Apk е инсталиран, но версията е стара
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
+Ако сте компилирали приложението успешно, прехвърлили сте го на телефона си и сте го инсталирали успешно, но номерът на версията остава същият, може да сте забравили да [обновите локалното си копие](#Update-to-new-version-update-your-local-copy)
 
 ## Нищо от горното не помогна
 
