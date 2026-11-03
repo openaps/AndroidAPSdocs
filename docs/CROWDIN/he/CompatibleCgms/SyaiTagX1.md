@@ -3,17 +3,17 @@
 
 ## Using X1 And Syai Tag app
 
--   Install the apk from <https://play.google.com/store/apps/details?id=com.syai.tag>.
+-   יש להתקין את האפליקציה מ־<https://play.google.com/store/apps/details?id=com.syai.tag>.
 
 -   Start X1 sensor
 
-- Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- בחרו **Syai/Ottai** ב[**הגדרות תצורה ← מקור ערכי הסוכר**](#Config-Builder-bg-source).
 
-Enable broadcast in the Syai app:
+הפעילו את השידור באפליקציית Syai:
 
 1. Select Profile
 2. Syai Health Ecosystem
 3. Tap Connect Now with AAPS, accept the third party data transfer agreement
-4. Enable share data with AAPS
+4. הפעילו את share data with AAPS
 
 ![Syai](../images/Syai.png)
