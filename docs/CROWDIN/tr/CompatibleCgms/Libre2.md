@@ -1,92 +1,92 @@
-# Freestyle Libre 2 and 2+
+# Freestyle Libre 2 ve 2+
 
-The Freestyle Libre 2 sensor is now a real CGM even with the official app. Still, LibreLink cannot send data to AAPS. There are several solutions to use it with AAPS.
+Freestyle Libre 2 sensörü artık resmi uygulamayla bile gerçek bir CGM'dir. Yine de LibreLink, AAPS'e veri gönderemez. Sensörü AAPS ile kullanmanın birkaç yolu vardır.
 
-## 1. Use a Bluetooth bridge and OOP
+## 1. Bluetooth köprüsü ve OOP kullanın
 
-Bluetooth transmitters can be used with the Libre 2 (EU) or 2+ (EU) and an out of process algorithm app. You can receive blood sugar readings every 5 minutes like with the [Libre 1](./Libre1.md).
+Bluetooth vericiler, Libre 2 (EU) veya 2+ (EU) ve bir out of process algorithm (OOP) uygulamasıyla kullanılabilir. [Libre 1](./Libre1.md) ile olduğu gibi her 5 dakikada bir kan şekeri değeri alabilirsiniz.
 
-Check the bridge and app you want to use are compatible with your sensor and xDrip.
+Kullanmak istediğiniz köprünün ve uygulamanın sensörünüzle ve xDrip ile uyumlu olduğunu kontrol edin.
 
-The Libre2 OOP (find it [here](#Libre2_OOP2)) is creating the same BG readings as with the original reader. AAPS with Libre 2 do a 10 to 25 minutes smoothing to avoid certain jumps. See below [Value smoothing & raw values](#libre2-value-smoothing-raw-values). OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip.
+Libre2 OOP ([buradan](#Libre2_OOP2) bulabilirsiniz), orijinal okuyucuyla aynı KŞ değerlerini üretir. Libre 2 ile AAPS, bazı sıçramaları önlemek için 10 ila 25 dakikalık bir yumuşatma yapar. Aşağıdaki [Değer yumuşatma & ham değerler](#libre2-value-smoothing-raw-values) bölümüne bakın. OOP generates readings every 5 minutes with the average of the last 5 minutes. Bu nedenle KŞ ölçümleri o kadar düzgün değildir, ancak orijinal okuyucu cihazla aynıdır ve "gerçek" KŞ değerlerini daha hızlı takip eder. OOP ile döngü kullanmak istiyorsanız lütfen xDrip'teki tüm yumuşatma ayarlarını açın.
 
-There are some good reasons to use a Bluetooth transmitter:
+Bluetooth verici kullanmak için bazı iyi nedenler vardır:
 
--   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the reader-like values with "calibrate based on glucose".  
-  Make sure to leave OOP1 disabled (2).
+-   Çeşitli OOP2 kalibrasyon stratejileri seçebilirsiniz (1): "no calibration" ile okuyucu değerlerini kullanabilir, "calibrate based on raw" ile sensörü bir Libre 1 gibi kalibre edebilir ya da "calibrate based on glucose" ile okuyucuya benzer değerleri kalibre edebilirsiniz.  
+  OOP1'in kapalı kaldığından emin olun (2).
 
     → Hamburger Menu → Settings → Less common settings → Other misc. options
 
-![OOP2 Calibration](../images/Libre2_OOP2Calibration.png)
+![OOP2 kalibrasyonu](../images/Libre2_OOP2Calibration.png)
 
--   The Libre 2 sensor can be used 14.5 days as the Libre 1
--   8 hours backfilling is fully supported
+-   Libre 2 sensörü, Libre 1 gibi 14,5 gün kullanılabilir
+-   8 saatlik geriye dönük doldurma (backfilling) tam olarak desteklenir
 
-Remark: The transmitter can be used in parallel to the LibreLink app without interfering with it.
+Not: Verici, LibreLink uygulamasıyla aynı anda, onu etkilemeden kullanılabilir.
 
 ### Sensörü başlatın
 
-- → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Answer "Not Today" (4).
+- → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → "Not Today" yanıtını verin (4).
 
 ![xDrip Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
 
-This will not physically start any Libre2 sensor or interact with them in any case. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. If available, enter two blood-measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip every 5 minutes. Atlanan değerler, ör. telefonunuzdan çok uzakta olduğunuz zamanlar için, doldurulmayabilr.
+Bu işlem hiçbir Libre2 sensörünü fiziksel olarak başlatmaz ve hiçbir şekilde sensörlerle etkileşime girmez. Bu yalnızca xDrip'e, yeni bir sensörün kan şekeri değerleri gönderdiğini bildirir. Varsa, ilk kalibrasyon için kandan ölçülmüş iki değer girin. Artık kan şekeri değerleri xDrip'te her 5 dakikada bir gösterilmelidir. Atlanan değerler, ör. telefonunuzdan çok uzakta olduğunuz için, sonradan doldurulmaz.
 
-After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. You may check your blood glucose after activation and make a new initial calibration.
+Sensör değişiminden sonra xDrip yeni sensörü otomatik olarak algılar ve tüm kalibrasyon verilerini siler. Aktivasyondan sonra kan şekerinizi kontrol edip yeni bir ilk kalibrasyon yapabilirsiniz.
 
-### Configure AAPS (for looping only)
+### AAPS'i yapılandırın (yalnızca döngü için)
 
--   In **AAPS**, open the **menu** (☰) in the top-left corner, go to **Configuration** > **BG Source** and select **xDrip+**
+-   **AAPS**'te sol üst köşedeki **menüyü** (☰) açın, **Konfigürasyon** > **KŞ kaynağı** bölümüne gidin ve **xDrip+** seçin
 
-![Configuration > BG Source with xDrip+ BG selected](../images/v4/Configuration/configuration_bg_source.png)
+![xDrip+ KŞ seçili olan Konfigürasyon > KŞ kaynağı](../images/v4/Configuration/configuration_bg_source.png)
 
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as described on [xDrip settings page](#xdrip-identify-receiver).
+-   Telefon uçak modundayken AAPS KŞ değerlerini almıyorsa, [xDrip ayarları sayfasında](#xdrip-identify-receiver) anlatıldığı gibi 'Identify receiver' ayarını kullanın.
 
-## 2. Use xDrip direct connection
+## 2. xDrip doğrudan bağlantısını kullanın
 
 ```{admonition} Libre 2 EU only
 :class: warning
-xDrip doesn't support direct connection to Libre 2 US and AUS.
-Only Libre 2 and 2+ **EU** models.
+xDrip, Libre 2 US ve AUS ile doğrudan bağlantıyı desteklemez.
+Yalnızca Libre 2 ve 2+ **EU** modelleri.
 ```
 
-- Follow [these instructions](./Libre2MinimalL00per.md) to setup xDrip as the original documentation links to an obsolete OOP2  version.
-- Follow setup instructions on [xDrip settings page](../CompatibleCgms/xDrip.md).
+- Orijinal belgeler artık kullanılmayan bir OOP2  sürümüne bağlantı verdiği için, xDrip'i kurmak için [bu talimatları](./Libre2MinimalL00per.md) izleyin.
+- [xDrip ayarları sayfasındaki](../CompatibleCgms/xDrip.md) kurulum talimatlarını izleyin.
 
--   Select xDrip+ in [Configuration > BG Source](#Config-Builder-bg-source).
+-   [Konfigürasyon > KŞ kaynağı](#Config-Builder-bg-source) içinde xDrip+ seçin.
 
 (libre2-value-smoothing-raw-values)=
 
 ### Değer yumuşatma & ham değerler
 
-Technically, the current blood sugar value is transmitted to xDrip every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
+Teknik olarak güncel kan şekeri değeri her dakika xDrip'e iletilir. Ağırlıklı ortalama filtresi, varsayılan olarak son 25 dakika için yumuşatılmış bir değer hesaplar. Bu süreyi NFC Scan features menüsünde değiştirebilirsiniz.
 
 → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![xDrip advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
+![xDrip Libre 2 gelişmiş ayarları & ham değerler](../images/xDrip_Libre3_Smooth.png)
 
-Bu döngü için zorunludur. The curves look smooth and the loop results are great. Alarmların dayandığı ham değerler biraz daha oynak olabilir, ancak okuyucunun gösterdiği değerlere karşılık gelir. In addition, the raw values can be displayed in the xDrip graph in order to be able to react in time to rapid changes. Lütfen Xdrip+'ta Ayarlar \> Gelişmiş Ayarlar \> Libre2 için Gelişmiş Ayarlar "Ham değerleri göster" ve "Sensör Bilgilerini göster"i açın. Daha sonra ham değerler grafikte küçük beyaz noktalar olarak görüntülenir ve sistem menüsünde ek sensör bilgileri bulunur.
+Bu döngü için zorunludur. Eğriler düzgün görünür ve döngü sonuçları çok iyidir. Alarmların dayandığı ham değerler biraz daha oynaktır, ancak okuyucunun da gösterdiği değerlere karşılık gelir. Ayrıca hızlı değişikliklere zamanında tepki verebilmek için ham değerler xDrip grafiğinde gösterilebilir. Lütfen Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" ve "show Sensors Infos" seçeneklerini açın. Ham değerler ayrıca küçük beyaz noktalar olarak gösterilir ve ek sensör bilgileri sistem menüsünde bulunur.
 
-Kan şekeri hızlı hareket ettiğinde ham değerler çok faydalıdır. Even if the dots are jumpier you would detect the tendency much better than using the smoothed line to make proper therapy decisions.
+Kan şekeri hızlı hareket ettiğinde ham değerler çok faydalıdır. Noktalar daha çok zıplasa da, doğru tedavi kararları vermek için eğilimi düzleştirilmiş çizgiye göre çok daha iyi görürsünüz.
 
 → Hamburger menu → Settings → Less common settings → Advanced settings for Libre 2
 
-![xDrip advanced settings Libre 2 & raw values](../images/Libre2_RawValues.png)
+![xDrip Libre 2 gelişmiş ayarları & ham değerler](../images/Libre2_RawValues.png)
 
 
 
 #### Kalibrasyon
 
-You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2.2 mmol/L to +1.1 mmol/L\]** (intercept). The slope isn't changeable. Please check by fingerpricking after setting a new sensor, keeping in mind it might not be accurate in the first 12 hours after insertion. Since there can be large differences to the blood measurements, verify every 24 hours and calibrate if necessary. If the sensor is completely off after a few days, it should then be replaced.
+Libre2'yi **-40 mg/dL ile +20 mg/dL \[-2,2 mmol/L ile +1,1 mmol/L\] arasında bir sapma (offset)** ile kalibre edebilirsiniz (intercept). Eğim (slope) değiştirilemez. Lütfen yeni bir sensör taktıktan sonra parmaktan kan ölçümü ile kontrol edin; sensörün takıldıktan sonraki ilk 12 saatte doğru olmayabileceğini unutmayın. Kan ölçümleriyle büyük farklar olabileceği için her 24 saatte bir kontrol edin ve gerekirse kalibre edin. Sensör birkaç gün sonra tamamen yanlış değerler gösteriyorsa, değiştirilmelidir.
 
-## 3. Use Diabox
+## 3. Diabox kullanın
 
-- Install [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). In Settings, Integration, enable Share data with other apps.
+- [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf)'ı kurun. Settings, Integration içinde Share data with other apps seçeneğini açın.
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip+ in [Configuration > BG Source](#Config-Builder-bg-source).
+- [Konfigürasyon > KŞ kaynağı](#Config-Builder-bg-source) içinde xDrip+ seçin.
 
-## 4. Use Juggluco
+## 4. Juggluco kullanın
 
-See [here](./Juggluco.md).
+[Buraya](./Juggluco.md) bakın.
