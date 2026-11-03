@@ -1,10 +1,10 @@
 # Update with a browser (fork)
 
 ```{tip}
-You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+Ați construit AAPS cu **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
 ```
 
-## Construiți-vă în loc să descărcați
+## Construiți aplicația, nu o descărcați
 
 **AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
@@ -37,35 +37,35 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 [Log into GitHub](https://github.com/login).
 
-1. Select Repositories.
+1. Selectați Repositories.
 2. Scroll down and select your own AndroidAPS repository.
 
 ![Select AndroidAPS repo](../images/update/CI/GitHubUpdate1.png)
 
-3. Verify you are using your own copy of AndroidAPS (Forked from nightscout/AndroidAPS)
+3. Verificați că folosiți propria copie a AndroidAPS (Forked from nightscout/AndroidAPS)
 4. Tap Sync Fork to update it (the number of commits behind might differ from the picture)
 
 
 
-![Sync AndroidAPS repo](../images/update/CI/GitHubUpdate2.png)
+![Sincronizarea depozitului AndroidAPS](../images/update/CI/GitHubUpdate2.png)
 
 5. Tap Update Branch
 
-![Update AndroidAPS repo](../images/update/CI/GitHubUpdate3.png)
+![Actualizarea depozitului AndroidAPS](../images/update/CI/GitHubUpdate3.png)
 
-Note: if you have modified your copy of AndroidAPS by mistake, you will see this screen. Discard all changes (commits) to return to the released version.
+Notă: dacă ați modificat din greșeală copia dumneavoastră a AndroidAPS, veți vedea acest ecran. Discard all changes (commits) to return to the released version.
 
 ![Discard rogue modifications](../images/update/CI/GitHubUpdate4.png)
 
-You have now synchronized (updated) your own copy with the latest release of **AAPS**. Good job.
+You have now synchronized (updated) your own copy with the latest release of **AAPS**. Foarte bine.
 
-![Repo sync'ed](../images/update/CI/GitHubUpdate5.png)
+![Depozit sincronizat](../images/update/CI/GitHubUpdate5.png)
 
-### Run the Workflow to Build the Signed APK
+### Rulați fluxul de lucru pentru a construi APK-ul semnat
 
 1. In your GitHub copy of AndroidAPS, select Actions.
-2. Expand All Workflows.
-3. Select AAPS-CI
+2. Extindeți All Workflows.
+3. Selectați AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
@@ -73,42 +73,42 @@ You have now synchronized (updated) your own copy with the latest release of **A
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Keep the branch set to master. In **Select AAPS Version**, check that **4.0.0**, the newest version at the top of the list, is selected. If your fork is not up to date, the preselected version is an older one: if you run the workflow with the form as it opens, you rebuild that older version and your app is not updated. Choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
+5. Lăsați ramura setată pe master. În **Select AAPS Version**, verificați că este selectată **4.0.0**, cea mai nouă versiune, din partea de sus a listei. Dacă fork-ul dumneavoastră nu este actualizat, versiunea preselectată este una mai veche: dacă rulați fluxul de lucru cu formularul așa cum se deschide, construiți din nou acea versiune veche și aplicația nu este actualizată. Choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
 
    ```{note}
-   The list of versions is part of the workflow in your fork. If **4.0.0** is missing, your fork is not synchronized yet: go back to [Update your GitHub repository](#Update-to-new-version-update-your-repo).
+   Lista de versiuni face parte din fluxul de lucru din fork-ul dumneavoastră. Dacă **4.0.0** lipsește, fork-ul dumneavoastră nu este încă sincronizat: reveniți la [Actualizați depozitul GitHub](#Update-to-new-version-update-your-repo).
    ```
 
 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of **AAPS**. This means that the Master and Wear apk is now directly saved into your Google Drive (as per below). AAPSClient apk can be downloaded from Github > nightscout > AndroidAPS [here](https://github.com/nightscout/AndroidAPS/releases)
+6. Veți vedea mesajul Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. Când acțiunea se termină, acțiunea AAPS CI va afișa o bifă verde. Ați construit cu succes versiunea actualizată a **AAPS**. This means that the Master and Wear apk is now directly saved into your Google Drive (as per below). AAPSClient apk can be downloaded from Github > nightscout > AndroidAPS [here](https://github.com/nightscout/AndroidAPS/releases)
 
 
-![Monitor Workflow](../images/update/CI/GitHubActions4.png)
+![Urmărirea fluxului de lucru](../images/update/CI/GitHubActions4.png)
 
 
-### Install the AAPS APK
+### Instalați APK-ul AAPS
 
-1. Open your Google Drive
+1. Deschideți Google Drive
 2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
 
-![Google Drive Location](../images/update/CI/GitHubActions5.png)
+![Locația în Google Drive](../images/update/CI/GitHubActions5.png)
 
 ```{note}
 From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
 ```
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone)
+Continuați [aici](#Update-to-new-version-check-aaps-version-on-phone)
 
 (update-browser-build-troubleshooting)=
 
 ## Depanare
 
-If anything goes wrong, don't panic.
+Dacă ceva nu merge bine, nu intrați în panică.
 
-Take a breath!
+Respirați adânc!
 
 Then check if your problem is already documented: see [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) if you build with **AAPS Builder**, or [Browser build troubleshooting](#aaps-ci-troubleshooting) otherwise.
 
