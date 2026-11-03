@@ -2,7 +2,7 @@
 
 This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
 
-    {contents} Table of contents
+    {contents} Inhaltsverzeichnis
     :depth: 1
     :local: true
 
