@@ -1,6 +1,6 @@
 # Budúce (možné) ovládače púmp
 
-This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
+Toto je zoznam niektorých púmp na trhu, stavu ich podpory v iných systémoch s okruhom a ich stavu v AAPS. Na konci sú informácie o tom, čo musí pumpa spĺňať, aby sa dala používať s okruhom („Loop capable“).
 
     {contents} Obsah
     :depth: 1
@@ -42,7 +42,7 @@ Tandem: t:Mobi ([domovská stránka](https://www.tandemdiabetes.com/))
 
 ### Inzulínová pumpa Willcare ([domovská stránka](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
+**Stav okruhu:** Momentálne nie je kandidátom na okruh, ale kontaktovali nás jej pracovníci a majú záujem o to, aby sa pumpa dala používať s okruhom (zdá sa, že chýbajú iba príkazy na načítanie a nastavenie profilu).
 
 **Hardvérové požiadavky pre AAPS:** Žiadne. Zdá sa, že má Bluetooth.
 
