@@ -1,71 +1,71 @@
 (web-installer)=
 
-# AAPS web installer
+# AAPS 웹 설치 프로그램
 
-Install the **AAPS** APK you built onto your Android phone, straight from this browser, over a USB cable. No command line, nothing to download. Installed this way (the ADB way), apps are **exempt from Google's Android developer verification**.
+직접 빌드한 **AAPS** APK를 USB 케이블로 이 브라우저에서 바로 Android 휴대폰에 설치합니다. 명령줄도, 다운로드할 것도 없습니다. 이 방법(ADB 방식)으로 설치한 앱은 **Google의 Android 개발자 인증이 면제**됩니다.
 
 ```{admonition} This page runs entirely in your browser
 :class: tip
 
-Your APK file and your phone's data never leave this computer: the page cannot send data anywhere (its *Content-Security-Policy* blocks all uploads; you can check this in the browser's developer tools, Network tab). Only ever use this page at its official address, linked from [Transferring and installing AAPS](#android-developer-verification-web) in the **AAPS** documentation.
+APK 파일과 휴대폰 데이터는 절대 이 컴퓨터를 떠나지 않습니다. 이 페이지는 데이터를 어디로도 보낼 수 없습니다(페이지의 *Content-Security-Policy*가 모든 업로드를 막습니다. 브라우저 개발자 도구의 Network 탭에서 확인할 수 있습니다). 이 페이지는 반드시 **AAPS** 문서의 [AAPS를 스마트폰으로 옮기고 설치하기](#android-developer-verification-web)에 링크된 공식 주소에서만 사용하십시오.
 ```
 
 <noscript>
 
-**JavaScript is disabled.** This page needs JavaScript to talk to your phone.
+**JavaScript가 꺼져 있습니다.** 이 페이지가 휴대폰과 통신하려면 JavaScript가 필요합니다.
 
 </noscript>
 
 <div id="aapsi-unsupported" class="aapsi-box aapsi-error" hidden>
 
-**This browser cannot talk to USB devices.** Please open this page in **Google Chrome**, **Microsoft Edge** or **Opera**, on a computer or an Android device. Firefox, Safari and all iPhone browsers do not support WebUSB.
+**이 브라우저는 USB 기기와 통신할 수 없습니다.** 컴퓨터나 Android 기기에서 **Google Chrome**, **Microsoft Edge** 또는 **Opera**로 이 페이지를 여십시오. Firefox, Safari, 그리고 모든 iPhone 브라우저는 WebUSB를 지원하지 않습니다.
 
 </div>
 
 (web-installer-prepare)=
 
-## Step 1 – Before you start
+## 1단계 – 시작하기 전에
 
-- **Enable USB debugging** on the phone (one-time setup):
-  - Go to **Settings** > **About phone** and tap **Build number** seven times, until the phone confirms you are a developer.
-  - Back in the main **Settings**, open **Developer options** and switch on **USB debugging**.
-- Connect the phone with a **data-capable USB cable** (some charging cables cannot transfer data: if the phone is never detected, try another cable).
-- **Close Android Studio** and any other program that uses ADB: only one program can talk to the phone at a time.
-- Have your **AAPS APK file** ready on this computer (for the browser build, download it from your Google Drive first).
+- 휴대폰에서 **USB debugging(USB 디버깅)을 켜십시오**(처음 한 번만 설정):
+  - **Settings**(설정) > **About phone**(휴대전화 정보)으로 가서, 휴대폰이 개발자가 되었다고 알려 줄 때까지 **Build number**(빌드 번호)를 일곱 번 누르십시오.
+  - 기본 **Settings**로 돌아가서 **Developer options**(개발자 옵션)를 열고 **USB debugging**을 켜십시오.
+- **데이터 전송이 되는 USB 케이블**로 휴대폰을 연결하십시오(일부 충전용 케이블은 데이터를 전송할 수 없습니다. 휴대폰이 전혀 감지되지 않으면 다른 케이블을 사용해 보십시오).
+- **Android Studio를 닫고**, ADB를 사용하는 다른 프로그램도 모두 닫으십시오. 한 번에 하나의 프로그램만 휴대폰과 통신할 수 있습니다.
+- 이 컴퓨터에 **AAPS APK 파일**을 준비해 두십시오(브라우저 빌드의 경우 먼저 Google Drive에서 다운로드하십시오).
 
-No computer? This page also works from Chrome on *another Android phone*, connected with a USB-C to USB-C cable.
+컴퓨터가 없습니까? 이 페이지는 USB-C to USB-C 케이블로 연결한 *다른 Android 휴대폰*의 Chrome에서도 작동합니다.
 
 (web-installer-connect)=
 
-## Step 2 – Connect your phone
+## 2단계 – 휴대폰 연결하기
 
-Click the button, then pick your phone in the list the browser shows.
+버튼을 클릭한 다음, 브라우저가 보여 주는 목록에서 휴대폰을 고르십시오.
 
-<button class="aapsi-btn" type="button" id="aapsi-connect-btn">Connect phone</button> <button class="aapsi-btn aapsi-secondary" type="button" id="aapsi-disconnect-btn" hidden>Disconnect</button>
+<button class="aapsi-btn" type="button" id="aapsi-connect-btn">휴대폰 연결</button> <button class="aapsi-btn aapsi-secondary" type="button" id="aapsi-disconnect-btn" hidden>연결 해제</button>
 
 <span class="aapsi-status" id="aapsi-connect-status"></span>
 
 <div class="aapsi-box aapsi-warn" id="aapsi-authorize-hint" hidden>
 
-**Look at your phone now:** tap **Allow** on the "Allow USB debugging?" message, and tick *"Always allow from this computer"*. Don't see it? Unlock the phone's screen, or unplug and replug the cable.
+**지금 휴대폰을 보십시오:** "Allow USB debugging?"(USB 디버깅을 허용하시겠습니까?) 메시지에서 **Allow**(허용)를 누르고, *"Always allow from this computer"*(이 컴퓨터에서 항상 허용)에 체크하십시오. 보이지 않습니까? 휴대폰 화면 잠금을 풀거나, 케이블을 뽑았다가 다시 꽂으십시오.
 
 </div>
 
 <div id="aapsi-connect-help" hidden>
 
-```{admonition} The phone doesn't show up, or connecting fails?
+```{admonition} 휴대폰이 나타나지 않거나 연결에 실패합니까?
 :class: note
 
-- Check that **USB debugging** is on ([step 1](#web-installer-prepare)) and the cable is a data cable.
-- Close **Android Studio**, or run `adb kill-server` if you have ADB installed, then unplug and replug the phone.
-- On Windows, an OEM USB driver installed for your phone can also hold the connection: unplug other Android tools and try again.
+- **USB debugging**이 켜져 있는지([1단계](#web-installer-prepare)), 케이블이 데이터 케이블인지 확인하십시오.
+- **Android Studio**를 닫거나, ADB가 설치되어 있다면 `adb kill-server`를 실행한 다음 휴대폰을 뽑았다가 다시 꽂으십시오.
+- Windows에서는 휴대폰용으로 설치된 OEM USB 드라이버도 연결을 잡고 있을 수 있습니다. 다른 Android 도구의 연결을 끊고 다시 시도하십시오.
 ```
 
 </div>
 
 (web-installer-file)=
 
-## Step 3 – Choose your AAPS APK file
+## 3단계 – AAPS APK 파일 선택하기
 
 <input type="file" id="aapsi-apk-input" accept=".apk" disabled />
 
@@ -73,11 +73,11 @@ Click the button, then pick your phone in the list the browser shows.
 
 (web-installer-install)=
 
-## Step 4 – Install
+## 4단계 – 설치하기
 
-Updating an existing **AAPS**? All its settings and history are kept, exactly like `adb install -r`.
+기존 **AAPS**를 업데이트합니까? `adb install -r`과 똑같이 모든 설정과 이력이 유지됩니다.
 
-<button class="aapsi-btn" type="button" id="aapsi-install-btn" disabled>Install on phone</button>
+<button class="aapsi-btn" type="button" id="aapsi-install-btn" disabled>휴대폰에 설치</button>
 
 <div id="aapsi-progress-wrap" hidden>
 
@@ -88,7 +88,7 @@ Updating an existing **AAPS**? All its settings and history are kept, exactly li
 
 <div class="aapsi-box aapsi-success" id="aapsi-result-success" hidden>
 
-**AAPS is installed.** You can unplug the phone. If this was your first installation, continue with the [Setup Wizard](SetupWizard.md).
+**AAPS가 설치되었습니다.** 이제 휴대폰을 뽑아도 됩니다. 처음 설치했다면 [AAPS 설정 마법사](SetupWizard.md)로 계속하십시오.
 
 </div>
 
@@ -96,7 +96,7 @@ Updating an existing **AAPS**? All its settings and history are kept, exactly li
 
 <span id="aapsi-error-message"></span>
 
-Technical details:
+기술 세부 정보:
 
 <pre id="aapsi-error-details"></pre>
 
@@ -104,37 +104,37 @@ Technical details:
 
 ----
 
-Part of the **AAPS** documentation. Built on the open-source [Tango (ya-webadb)](https://github.com/yume-chan/ya-webadb) libraries (MIT license). Page source and build instructions: [openaps/AndroidAPSdocs](https://github.com/openaps/AndroidAPSdocs).
+**AAPS** 문서의 일부입니다. 오픈 소스 [Tango (ya-webadb)](https://github.com/yume-chan/ya-webadb) 라이브러리(MIT 라이선스)로 만들었습니다. 페이지 소스와 빌드 안내: [openaps/AndroidAPSdocs](https://github.com/openaps/AndroidAPSdocs).
 
-**AAPS** is a DIY system, not a commercial product: you build it, you install it, you are responsible for it. This page is provided by the community without any warranty.
+**AAPS**는 상용 제품이 아닌 DIY 시스템입니다. 직접 빌드하고, 직접 설치하며, 그에 대한 책임도 본인에게 있습니다. 이 페이지는 커뮤니티가 아무런 보증 없이 제공합니다.
 
 <div id="aapsi-msgs" hidden>
 
-- <span data-aapsi-msg="noDetails">(no further details)</span>
-- <span data-aapsi-msg="errSignature">This APK was built with a different signing key than the AAPS already installed on the phone. Use the same keystore as before, or export your AAPS settings and uninstall the old AAPS first (uninstalling loses all its settings and history: export first!).</span>
-- <span data-aapsi-msg="errDowngrade">The phone already has a newer version of this app. To go back to an older version, export your settings and uninstall the current app first.</span>
-- <span data-aapsi-msg="errStorage">There is not enough free storage on the phone. Free up some space and try again.</span>
-- <span data-aapsi-msg="errInvalidApk">The phone does not recognize this file as a valid APK. Check that you selected the right file and that the download completed.</span>
-- <span data-aapsi-msg="errOldSdk">The Android version on this phone is too old for this APK.</span>
-- <span data-aapsi-msg="errCanceled">The installation was declined on the phone. Watch the phone's screen and allow the installation when asked.</span>
-- <span data-aapsi-msg="errBusy">Another program is using the phone's ADB connection. Close Android Studio (or run "adb kill-server"), unplug and replug the cable, then try again.</span>
-- <span data-aapsi-msg="errLost">The connection to the phone was lost. Check the cable, then connect again.</span>
-- <span data-aapsi-msg="errGeneric">The installation failed. See the technical details below, and ask for help on the AAPS community channels if needed.</span>
-- <span data-aapsi-msg="errDisconnectedDuringInstall">The phone was disconnected during the installation. Reconnect it and try again: nothing is broken.</span>
-- <span data-aapsi-msg="waitingPick">Waiting for you to pick a device…</span>
-- <span data-aapsi-msg="noDevice">No device selected. Is USB debugging enabled, and is the cable a data cable?</span>
-- <span data-aapsi-msg="connecting">Connecting…</span>
-- <span data-aapsi-msg="phoneDisconnected">The phone was disconnected.</span>
-- <span data-aapsi-msg="androidDevice">Android device</span>
-- <span data-aapsi-msg="connectedTo">Connected to {name}.</span>
-- <span data-aapsi-msg="couldNotConnect">Could not connect.</span>
-- <span data-aapsi-msg="disconnected">Disconnected.</span>
-- <span data-aapsi-msg="notApk">"{file}" is not an .apk file. Please select the AAPS APK you built.</span>
-- <span data-aapsi-msg="emptyFile">This file is empty. Please check the download and select it again.</span>
-- <span data-aapsi-msg="notRealApk">"{file}" does not look like a real APK file. Did you select the right file?</span>
-- <span data-aapsi-msg="selected">Selected: {file} ({size})</span>
-- <span data-aapsi-msg="copying">Copying to phone… {done} of {total}</span>
-- <span data-aapsi-msg="installingOnPhone">Installing on the phone… (this can take a minute)</span>
+- <span data-aapsi-msg="noDetails">(추가 세부 정보 없음)</span>
+- <span data-aapsi-msg="errSignature">이 APK는 휴대폰에 이미 설치된 AAPS와 다른 서명 키로 빌드되었습니다. 이전과 같은 키 저장소를 사용하거나, 먼저 AAPS 설정을 내보낸 후 기존 AAPS를 제거하십시오(제거하면 모든 설정과 이력이 사라집니다. 먼저 내보내십시오!).</span>
+- <span data-aapsi-msg="errDowngrade">휴대폰에 이 앱의 더 새로운 버전이 이미 있습니다. 이전 버전으로 돌아가려면 먼저 설정을 내보내고 현재 앱을 제거하십시오.</span>
+- <span data-aapsi-msg="errStorage">휴대폰에 여유 저장 공간이 부족합니다. 공간을 확보한 후 다시 시도하십시오.</span>
+- <span data-aapsi-msg="errInvalidApk">휴대폰이 이 파일을 올바른 APK로 인식하지 못합니다. 올바른 파일을 선택했는지, 다운로드가 완료되었는지 확인하십시오.</span>
+- <span data-aapsi-msg="errOldSdk">이 휴대폰의 Android 버전이 이 APK에 비해 너무 오래되었습니다.</span>
+- <span data-aapsi-msg="errCanceled">휴대폰에서 설치가 거부되었습니다. 휴대폰 화면을 보고, 요청이 나오면 설치를 허용하십시오.</span>
+- <span data-aapsi-msg="errBusy">다른 프로그램이 휴대폰의 ADB 연결을 사용하고 있습니다. Android Studio를 닫고(또는 "adb kill-server"를 실행하고), 케이블을 뽑았다가 다시 꽂은 다음 다시 시도하십시오.</span>
+- <span data-aapsi-msg="errLost">휴대폰과의 연결이 끊겼습니다. 케이블을 확인한 다음 다시 연결하십시오.</span>
+- <span data-aapsi-msg="errGeneric">설치에 실패했습니다. 아래 기술 세부 정보를 보고, 필요하면 AAPS 커뮤니티 채널에서 도움을 요청하십시오.</span>
+- <span data-aapsi-msg="errDisconnectedDuringInstall">설치 중에 휴대폰 연결이 끊겼습니다. 다시 연결하고 다시 시도하십시오. 망가진 것은 없습니다.</span>
+- <span data-aapsi-msg="waitingPick">기기 선택을 기다리는 중…</span>
+- <span data-aapsi-msg="noDevice">선택된 기기가 없습니다. USB 디버깅이 켜져 있고, 케이블이 데이터 케이블입니까?</span>
+- <span data-aapsi-msg="connecting">연결 중…</span>
+- <span data-aapsi-msg="phoneDisconnected">휴대폰 연결이 끊겼습니다.</span>
+- <span data-aapsi-msg="androidDevice">Android 기기</span>
+- <span data-aapsi-msg="connectedTo">{name}에 연결되었습니다.</span>
+- <span data-aapsi-msg="couldNotConnect">연결할 수 없습니다.</span>
+- <span data-aapsi-msg="disconnected">연결이 해제되었습니다.</span>
+- <span data-aapsi-msg="notApk">"{file}"은(는) .apk 파일이 아닙니다. 직접 빌드한 AAPS APK를 선택하십시오.</span>
+- <span data-aapsi-msg="emptyFile">이 파일은 비어 있습니다. 다운로드를 확인하고 다시 선택하십시오.</span>
+- <span data-aapsi-msg="notRealApk">"{file}"은(는) 실제 APK 파일로 보이지 않습니다. 올바른 파일을 선택했습니까?</span>
+- <span data-aapsi-msg="selected">선택됨: {file} ({size})</span>
+- <span data-aapsi-msg="copying">휴대폰으로 복사 중… {done} / {total}</span>
+- <span data-aapsi-msg="installingOnPhone">휴대폰에 설치 중… (1분 정도 걸릴 수 있습니다)</span>
 - <span data-aapsi-msg="megabytes">{n} MB</span>
 
 </div>
