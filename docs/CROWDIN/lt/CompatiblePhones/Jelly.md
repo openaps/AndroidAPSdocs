@@ -45,4 +45,4 @@ Nepamirškite išjungti Google Play Protect.
 
 Kai kuriems išmaniesiems laikrodžiams, pvz., Samsung Galaxy, programėlės Galaxy Wearable skiltyje Advanced features reikia **įjungti** funkciją 'Remote connection', kad galėtumėte nuotoliniu būdu per Wi-Fi naudoti Jelly, **Wear.apk** & **AAPS**.
 
-![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
+![Galaxy Wearable, papildomos funkcijos, įjungtas nuotolinis ryšys](../images/wearos/galaxy_wearable_remote_connection.png)
