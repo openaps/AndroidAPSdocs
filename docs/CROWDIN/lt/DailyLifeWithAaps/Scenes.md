@@ -1,7 +1,7 @@
 (scenes)=
-# Scenes (situation presets)
+# Scenarijai (situacijų ruošiniai)
 
-A **scene** is a named preset that applies a **bundle of actions at once** — for example a *Sleep*, *Exercise* or *Sick Day* preset that switches your profile, sets a temporary target, toggles SMB and adds a care-portal note with a single tap, optionally for a set duration.
+**Scenarijus** – tai pavadintas ruošinys, kuris **iš karto atlieka kelis veiksmus**. Pavyzdžiui, ruošinys *Miegas*, *Sportas* arba *Liga* vienu paspaudimu pakeičia profilį, nustato laikiną tikslą, įjungia arba išjungia SMB ir prideda terapijos įrašą, jei norite – nustatytam laikui.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,172 +10,172 @@ A **scene** is a named preset that applies a **bundle of actions at once** — f
 
 ---
 
-## What is a scene
+## Kas yra scenarijus
 
-Instead of changing several things by hand every time a recurring situation comes up, you set them up once as a scene and activate it with one tap. A scene can bundle any of these actions:
+Užuot kaskart rankiniu būdu keitę kelis dalykus, kai pasikartoja ta pati situacija, juos vieną kartą nustatote kaip scenarijų ir aktyvuojate vienu paspaudimu. Scenarijus gali apjungti bet kuriuos iš šių veiksmų:
 
-- **Profile switch** — switch profile and/or scale it by percentage (e.g. 70 %).
-- **Temporary target** — set a temp target (e.g. *Activity*, *Eating soon*, or a custom value).
-- **SMB on/off** — enable or disable super-micro-boluses while the scene is active.
-- **Loop mode** — change the running mode (e.g. to a more conservative mode).
-- **Care-portal note** — log an event (e.g. *Exercise*, *Sickness*) so it shows on the graph and in Nightscout.
+- **Profilio keitimas** – pakeisti profilį ir (arba) pakeisti jo procentą (pvz., 70 %).
+- **Laikinas tikslas** – nustatyti laikiną tikslą (pvz., *Sportas*, *Netrukus valgysiu* arba savo reikšmę).
+- **SMB įjungti / išjungti** – įjungti arba išjungti super mikro bolusus, kol scenarijus aktyvus.
+- **Veikimo režimas** – pakeisti veikimo režimą (pvz., į atsargesnį režimą).
+- **Terapijos įrašas** – įrašyti įvykį (pvz., *Sportas*, *Liga*), kad jis būtų rodomas grafike ir Nightscout.
 
-A scene also has a **duration** — a fixed time (minutes/hours/days) or *Indefinite (manual end)* — and an **end action** that runs when it finishes: either a **notification**, or it can **chain** into another scene (for example *Sick Day → Exercise*).
-
----
-
-## Managing scenes
-
-Open **Manage → Scenes** to see, create, edit, enable/disable and reorder your scenes.
-
-![The Scenes management screen](../images/v4/Scenes/scenes_list.png)
-
-Each scene card shows:
-
-- a **checkbox** to enable/disable the scene,
-- an **icon** and **name**,
-- a summary — *“N actions, duration”*, and the **→ chained scene** if it chains into another one,
-- and three buttons: **▶ activate**, **✏️ edit**, **🗑️ delete**.
-
-Tap the **+** button to create a new scene.
+Scenarijus taip pat turi **trukmę** – fiksuotą laiką (minutes / valandas / dienas) arba *Neterminuota (baigiama rankiniu būdu)* – ir **pabaigos veiksmą**, kuris atliekamas scenarijui pasibaigus: tai gali būti **pranešimas** arba **perėjimas** į kitą scenarijų (pavyzdžiui, *Liga → Sportas*).
 
 ---
 
-## Creating or editing a scene
+## Scenarijų tvarkymas
 
-### Start from a template
+Atidarykite **Valdymas → Scenarijai**, kad galėtumėte peržiūrėti, kurti, redaguoti, įjungti / išjungti savo scenarijus ir keisti jų tvarką.
 
-To **create** a scene, tap the **+** button on the Scenes screen. The first step is **Start from template**: pick a ready-made scene for a common situation — *Exercise*, *Sick Day*, *Sick Day — Vomiting*, *Sleep*, *Post-exercise Night*, *Pre-meal*, *Alcohol*, *Driving*, *Bathing*, *Luteal Phase*, *Hot Weather*, *Medical Procedure* — or start from a *Blank* scene. Each template **pre-fills the recommended actions** and you can adjust everything in the following steps.
+![Scenarijų tvarkymo ekranas](../images/v4/Scenes/scenes_list.png)
 
-![“Start from template” — pick a starting point](../images/v4/Scenes/templates_picker.png)
+Kiekvienoje scenarijaus kortelėje rodoma:
 
-After you pick a template, its purpose is explained — *when* and *why* to use it — before you continue:
+- **žymimasis langelis** scenarijui įjungti / išjungti,
+- **piktograma** ir **pavadinimas**,
+- santrauka – *„N veiksmai(-ų), trukmė“* ir **→ kitas scenarijus**, jei po šio scenarijaus pereinama į kitą,
+- ir trys mygtukai: **▶ aktyvuoti**, **✏️ redaguoti**, **🗑️ ištrinti**.
 
-![A template's explanation](../images/v4/Scenes/template_explanation.png)
-
-### Step through the actions
-
-The rest of the editor is a short **step-by-step** wizard. Each step is one action type with an *“Include … in scene”* switch — turn it on only for the actions you want this scene to perform, and leave the rest off.
-
-![The scene editor — the Profile switch step](../images/v4/Scenes/scene_editor.png)
-
-Work through the steps with **Next**/**Back**: *Profile switch*, *Temporary target*, *SMB*, *Loop mode*, *Care-portal note*, then the **duration**, the **end action** (notify or chain into another scene), and finally the scene's **name and icon**. Save when you are done. (To **edit** an existing scene, tap its **✏️** button — you go straight into these steps.)
-
-Each step starts with a short explanation of what the action does. The steps look like this, here with the *Exercise* template:
-
-**Temporary target** — pick one of your temp target presets:
-
-![The Temporary target step](../images/v4/Scenes/scene_editor_step3.png)
-
-**SMB** — enable or disable SMB while the scene is active:
-
-![The SMB step](../images/v4/Scenes/scene_editor_step4.png)
-
-**Running mode** — optionally change the loop mode:
-
-![The Running mode step](../images/v4/Scenes/scene_editor_step5.png)
-
-**Careportal** — the event type and note to log:
-
-![The Careportal step](../images/v4/Scenes/scene_editor_step6.png)
-
-**Duration** — how long the scene stays active; 0 means until you end it yourself:
-
-![The Duration step](../images/v4/Scenes/scene_editor_step7.png)
-
-**Follow-up scene** — optionally the scene that starts when this one ends:
-
-![The Follow-up scene step](../images/v4/Scenes/scene_editor_followup.png)
-
-**Scene** — the name and the icon. Press **Finish** to save:
-
-![The name and icon step](../images/v4/Scenes/scene_editor_step9.png)
+Paspauskite mygtuką **+**, kad sukurtumėte naują scenarijų.
 
 ---
 
-## Activating a scene
+## Scenarijaus kūrimas arba redagavimas
 
-Activate a scene from the **Scenes** list (the **▶** button) or from the **Scenes** entry in the bottom navigation. In the **Scenes** sheet of the bottom navigation, each scene shows the same summary as in the Scenes list, and the **pencil** at the top of the sheet opens **Manage → Scenes** to create or edit your scenes.
+### Pradėkite nuo ruošinio
 
-![The Scenes sheet of the bottom navigation](../images/v4/Scenes/scenes_sheet.png)
+Norėdami **sukurti** scenarijų, ekrane Scenarijai paspauskite mygtuką **+**. Pirmas žingsnis yra **Pradėti nuo ruošinio**: pasirinkite paruoštą scenarijų dažnai situacijai – *Sportas*, *Liga*, *Liga — vėmimas*, *Miegas*, *Naktis po sporto*, *Prieš valgį*, *Alkoholis*, *Vairavimas*, *Maudymasis*, *Liuteininė fazė*, *Karštas oras*, *Medicininė procedūra* – arba pradėkite nuo scenarijaus *Tuščias*. Kiekvienas ruošinys **iš anksto užpildo rekomenduojamus veiksmus**, o kituose žingsniuose galite viską pakeisti.
+
+![„Pradėti nuo ruošinio“ – pasirinkite, nuo ko pradėti](../images/v4/Scenes/templates_picker.png)
+
+Pasirinkus ruošinį, prieš tęsiant paaiškinama jo paskirtis – *kada* ir *kodėl* jį naudoti:
+
+![Ruošinio paaiškinimas](../images/v4/Scenes/template_explanation.png)
+
+### Veiksmų žingsniai
+
+Likusi redaktoriaus dalis yra trumpas vedlys, einantis **žingsnis po žingsnio**. Kiekvienas žingsnis yra vienas veiksmo tipas su jungikliu *„Įtraukti … į scenarijų“* – įjunkite jį tik tiems veiksmams, kuriuos turi atlikti šis scenarijus, o kitus palikite išjungtus.
+
+![Scenarijaus redaktorius – žingsnis Profilio keitimas](../images/v4/Scenes/scene_editor.png)
+
+Eikite per žingsnius mygtukais **Toliau** / **Atgal**: *Profilio keitimas*, *Laikinas tikslas*, *SMB*, *Veikimo režimas*, *Terapijos įrašas*, tada **trukmė**, **pabaigos veiksmas** (pranešti arba pereiti į kitą scenarijų) ir galiausiai scenarijaus **pavadinimas ir piktograma**. Baigę išsaugokite. (Norėdami **redaguoti** esamą scenarijų, paspauskite jo mygtuką **✏️** – iš karto pateksite į šiuos žingsnius.)
+
+Kiekvienas žingsnis prasideda trumpu paaiškinimu, ką veiksmas daro. Žingsniai atrodo taip (čia su ruošiniu *Sportas*):
+
+**Laikinas tikslas** – pasirinkite vieną iš savo laikinų tikslų ruošinių:
+
+![Žingsnis Laikinas tikslas](../images/v4/Scenes/scene_editor_step3.png)
+
+**SMB** – įjungti arba išjungti SMB, kol scenarijus aktyvus:
+
+![Žingsnis SMB](../images/v4/Scenes/scene_editor_step4.png)
+
+**Veikimo režimas** – jei norite, pakeiskite ciklo režimą:
+
+![Žingsnis Veikimo režimas](../images/v4/Scenes/scene_editor_step5.png)
+
+**Terapija** – įvykio tipas ir pastaba, kuriuos reikia įrašyti:
+
+![Žingsnis Terapija](../images/v4/Scenes/scene_editor_step6.png)
+
+**Trukmė** – kiek laiko scenarijus lieka aktyvus; 0 reiškia, kol jį baigsite patys:
+
+![Žingsnis Trukmė](../images/v4/Scenes/scene_editor_step7.png)
+
+**Tolesnis scenarijus** – jei norite, scenarijus, kuris prasideda, kai baigiasi šis:
+
+![Žingsnis Tolesnis scenarijus](../images/v4/Scenes/scene_editor_followup.png)
+
+**Scenarijus** – pavadinimas ir piktograma. Paspauskite **Baigti**, kad išsaugotumėte:
+
+![Žingsnis Pavadinimas ir piktograma](../images/v4/Scenes/scene_editor_step9.png)
+
+---
+
+## Scenarijaus aktyvavimas
+
+Scenarijų aktyvuokite iš sąrašo **Scenarijai** (mygtuku **▶**) arba per punktą **Scenarijai** apatinėje navigacijoje. Apatinės navigacijos lange **Scenarijai** kiekvienam scenarijui rodoma ta pati santrauka kaip ir scenarijų sąraše, o **pieštukas** lango viršuje atidaro **Valdymas → Scenarijai**, kur galite kurti arba redaguoti scenarijus.
+
+![Apatinės navigacijos langas Scenarijai](../images/v4/Scenes/scenes_sheet.png)
 
 If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
 
-Before anything is applied you get a **confirmation** that lists exactly what the scene will do, so you can review it:
+Prieš atliekant bet ką, rodomas **patvirtinimas**, kuriame tiksliai išvardyta, ką scenarijus padarys, kad galėtumėte tai peržiūrėti:
 
-![Scene activation confirmation, listing the bundled actions](../images/v4/Scenes/scene_confirmation.png)
+![Scenarijaus aktyvavimo patvirtinimas su apjungtų veiksmų sąrašu](../images/v4/Scenes/scene_confirmation.png)
 
-If the scene chains into another one, the confirmation ends with **→** and the name of that follow-up scene, the same way it is shown in the Scenes list.
+Jei po scenarijaus pereinama į kitą, patvirtinimo pabaigoje rodoma **→** ir to tolesnio scenarijaus pavadinimas, taip pat kaip scenarijų sąraše.
 
-When you start the scene from the **Scenes** entry of the bottom navigation, the confirmation is a simpler dialog with the same list of actions. Press **OK** to activate:
+Kai scenarijų paleidžiate per punktą **Scenarijai** apatinėje navigacijoje, patvirtinimas yra paprastesnis dialogas su tuo pačiu veiksmų sąrašu. Paspauskite **OK**, kad aktyvuotumėte:
 
-![Scene confirmation when started from the bottom navigation](../images/v4/Scenes/scene_confirmation_from_sheet.png)
+![Scenarijaus patvirtinimas, kai jis paleidžiamas iš apatinės navigacijos](../images/v4/Scenes/scene_confirmation_from_sheet.png)
 
-After you confirm, the actions are applied and the **active scene** is shown at the top of the overview with an **End Scene** button. If the scene chains into another one, the banner also names that follow-up scene:
+Jums patvirtinus, veiksmai atliekami, o **aktyvus scenarijus** rodomas pagrindinio ekrano viršuje su mygtuku **Baigti scenarijų**. Jei po scenarijaus pereinama į kitą, juostoje taip pat nurodomas tolesnis scenarijus:
 
-![The active-scene banner on the overview, with the End Scene button](../images/v4/Scenes/scene_active_banner.png)
+![Aktyvaus scenarijaus juosta pagrindiniame ekrane su mygtuku Baigti scenarijų](../images/v4/Scenes/scene_active_banner.png)
 
-The scene's actions stay in effect until:
+Scenarijaus veiksmai galioja, kol:
 
-- its **duration** ends (the **end action** runs — a notification, or it chains into the next scene), or
-- you tap **End Scene** to end it manually. If the scene chains into another one, you get two choices: **Skip to** the follow-up scene (the active scene ends and the follow-up starts now), or **End Scene** (the active scene ends and the follow-up does not start).
+- baigiasi jo **trukmė** (atliekamas **pabaigos veiksmas** – pranešimas arba perėjimas į kitą scenarijų), arba
+- paspaudžiate **Baigti scenarijų** ir baigiate jį rankiniu būdu. Jei po scenarijaus pereinama į kitą, turite du pasirinkimus: **Pereiti prie** tolesnio scenarijaus (aktyvus scenarijus baigiamas, o tolesnis prasideda dabar) arba **Baigti scenarijų** (aktyvus scenarijus baigiamas, o tolesnis neprasideda).
 
-A scene without follow-up only asks you to confirm:
+Scenarijus be tolesnio scenarijaus tik paprašo patvirtinti:
 
-![End Scene dialog](../images/v4/Scenes/scene_end_dialog.png)
+![Dialogas Baigti scenarijų](../images/v4/Scenes/scene_end_dialog.png)
 
-Ending a scene **reverts** the changes it made (for example the profile switch and temp target it started).
+Baigiant scenarijų, jo atlikti pakeitimai **atšaukiami** (pavyzdžiui, jo pradėtas profilio keitimas ir laikinas tikslas).
 
-While a scene is active, the profile and the target on the main screen carry a small scene icon when the scene set them. The **Scenes** sheet of the bottom navigation stays available to start another scene:
+Kol scenarijus aktyvus, prie profilio ir tikslo pagrindiniame ekrane rodoma maža scenarijaus piktograma, jei juos nustatė scenarijus. Apatinės navigacijos langas **Scenarijai** lieka pasiekiamas, kad galėtumėte paleisti kitą scenarijų:
 
-![The Scenes sheet while a scene is active](../images/v4/Scenes/scenes_sheet_active.png)
+![Langas Scenarijai, kai scenarijus aktyvus](../images/v4/Scenes/scenes_sheet_active.png)
 
-When the duration runs out on its own, the changes are reverted straight away and the banner changes to **Scene ended** with a **Dismiss** button. Dismissing only clears the banner from the screen — the scene itself is already over, so automation rules and a chained scene carry on without waiting for it.
-
----
-
-## Triggering scenes from Automation
-
-A scene does not have to be started by hand — **Automation** can run it for you. When you add an action to an automation rule (**Manage → Automation**), the action picker has a **Scenes** category:
-
-- **Run scene** — activate a scene when the rule's triggers fire (for example at a set time, when you arrive somewhere, or when glucose crosses a threshold).
-- **Enable scene** / **Disable scene** — make a scene available (or unavailable) without activating it.
-
-![The “Scenes” actions in the Automation action picker](../images/v4/Scenes/automation_scene_action.png)
-
-Automation can also **react to** a scene: the trigger list includes a **Scene** trigger, so a rule can run only while a particular scene is active. Combined with a scene's **end action** (revert, notify, or chain into another scene), this lets scenes start, follow on and finish automatically.
+Kai trukmė baigiasi savaime, pakeitimai iš karto atšaukiami, o juosta pasikeičia į **Scenarijus baigtas** su mygtuku **Atmesti**. Atmetimas tik pašalina juostą iš ekrano – pats scenarijus jau baigtas, todėl automatizacijos taisyklės ir tolesnis scenarijus veikia jo nelaukdami.
 
 ---
 
-## Scenes with Master/Client and a watch
+## Scenarijų paleidimas automatizacija
 
-The **currently active scene is synchronized** across all of your paired devices — activate it on one phone and the others show it too.
+Scenarijaus nebūtina paleisti rankiniu būdu – jį už jus gali paleisti **Automatizacija**. Kai automatizacijos taisyklei pridedate veiksmą (**Valdymas → Automatizacija**), veiksmų pasirinkime yra kategorija **Scenarijai**:
 
-A paired **client** (**AAPSClient**) can also activate or end a scene: the request is sent to the **master**, which authors the confirmation and applies the scene on its own state. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for how that works.
+- **Paleisti scenarijų** – aktyvuoti scenarijų, kai įvykdomos taisyklės sąlygos (pavyzdžiui, nustatytu laiku, kai kur nors atvykstate arba kai gliukozė peržengia ribą).
+- **Įjungti scenarijų** / **Išjungti scenarijų** – padaryti scenarijų pasiekiamą (arba nepasiekiamą) jo neaktyvuojant.
+
+![Kategorijos „Scenarijai“ veiksmai automatizacijos veiksmų pasirinkime](../images/v4/Scenes/automation_scene_action.png)
+
+Automatizacija taip pat gali **reaguoti į** scenarijų: sąlygų sąraše yra sąlyga **Scenarijus**, todėl taisyklė gali veikti tik tada, kai aktyvus tam tikras scenarijus. Kartu su scenarijaus **pabaigos veiksmu** (atšaukti, pranešti arba pereiti į kitą scenarijų) tai leidžia scenarijams automatiškai prasidėti, tęstis ir baigtis.
+
+---
+
+## Scenarijai su pagrindiniu įrenginiu / klientu ir laikrodžiu
+
+**Šiuo metu aktyvus scenarijus sinchronizuojamas** visuose jūsų susietuose įrenginiuose – aktyvuokite jį viename telefone, ir kiti jį taip pat parodys.
+
+Susietas **klientas** (**AAPSClient**) taip pat gali aktyvuoti arba baigti scenarijų: užklausa siunčiama **pagrindiniam įrenginiui**, kuris sudaro patvirtinimą ir pritaiko scenarijų savo būsenai. Kaip tai veikia, žr. [Pagrindinio įrenginio ↔ kliento valdymas](../RemoteFeatures/ClientMasterControl.md).
 
 (scenes-from-watch)=
-### From a Wear OS watch
+### Iš Wear OS laikrodžio
 
-Scenes are available on a **Wear OS watch** as a **Scene tile**. Swipe to the **Scene** tile in the watch's tile carousel (add it from the carousel's tile list first if it isn't there yet) and tap the scene you want to start:
+Scenarijai **Wear OS laikrodyje** pasiekiami kaip **plytelė Scenarijus**. Laikrodžio plytelių karuselėje perslinkite iki plytelės **Scenarijus** (jei jos dar nėra, pirmiausia pridėkite ją iš karuselės plytelių sąrašo) ir paspauskite scenarijų, kurį norite paleisti:
 
-![The Scene tile on a Wear OS watch](../images/v4/Scenes/scene_watch_tile.png)
+![Plytelė Scenarijus Wear OS laikrodyje](../images/v4/Scenes/scene_watch_tile.png)
 
-The tile has four slots. By default each slot fills itself **automatically** with the next of your enabled scenes, in the order they have on the phone. To choose yourself, **long-press the tile** and open its settings: for each of the four slots you can keep **Automatic**, pin a **specific scene**, or select **None** to leave the slot empty. A slot pinned to a scene that has since been deleted or disabled shows **Unavailable** — pick another scene for it.
+Plytelėje yra keturios vietos. Pagal numatymą kiekviena vieta **automatiškai** užpildoma kitu iš jūsų įjungtų scenarijų ta tvarka, kokia jie išdėstyti telefone. Norėdami pasirinkti patys, **ilgai palaikykite plytelę** ir atidarykite jos nustatymus: kiekvienai iš keturių vietų galite palikti **Automatiškai**, prisegti **konkretų scenarijų** arba pasirinkti **Nėra**, kad vieta liktų tuščia. Vieta, prisegta prie scenarijaus, kuris vėliau buvo ištrintas arba išjungtas, rodo **Nepasiekiama** – pasirinkite jai kitą scenarijų.
 
-The watch then shows a confirmation — tap **✓** to activate, or swipe back to cancel:
+Tada laikrodis parodo patvirtinimą – paspauskite **✓**, kad aktyvuotumėte, arba perbraukite atgal, kad atšauktumėte:
 
-![Confirming a scene on the watch](../images/v4/Scenes/scene_watch_confirm.png)
+![Scenarijaus patvirtinimas laikrodyje](../images/v4/Scenes/scene_watch_confirm.png)
 
-Just like on a client, the **master authors the confirmation and runs the scene**; the watch only relays the request (via the client phone, if the watch is paired to a client).
+Kaip ir kliente, **patvirtinimą sudaro ir scenarijų paleidžia pagrindinis įrenginys**; laikrodis tik perduoda užklausą (per kliento telefoną, jei laikrodis susietas su klientu).
 
-While a scene is running — or its **Scene ended** banner is still showing on the phone — the tile shows an **End** button with the name of the scene under it. Tap it to end the active scene, or to clear the leftover banner, from your wrist.
+Kol scenarijus veikia – arba telefone vis dar rodoma jo juosta **Scenarijus baigtas** – plytelėje rodomas mygtukas **Baigti**, o po juo scenarijaus pavadinimas. Paspauskite jį, kad baigtumėte aktyvų scenarijų arba pašalintumėte likusią juostą tiesiai nuo riešo.
 
-If the running scene chains into another one, the tile also shows a **Skip** button with the name of the follow-up scene under it. These are the same two choices as on the phone:
+Jei po veikiančio scenarijaus pereinama į kitą, plytelėje taip pat rodomas mygtukas **Praleisti**, o po juo tolesnio scenarijaus pavadinimas. Tai tie patys du pasirinkimai kaip ir telefone:
 
-- **End** — the active scene ends. The confirmation tells you that the follow-up will not start.
-- **Skip** — the active scene ends and the follow-up scene starts now. The confirmation names both scenes.
+- **Baigti** – aktyvus scenarijus baigiamas. Patvirtinime nurodoma, kad tolesnis scenarijus neprasidės.
+- **Praleisti** – aktyvus scenarijus baigiamas, o tolesnis scenarijus prasideda dabar. Patvirtinime nurodomi abu scenarijai.
 
-The watch's [Loop Status screen](#WearOsSmartwatch-loop-status) also shows the active scene, the time it has left and its follow-up.
+Laikrodžio [ekrane „Ciklo būsena“](#WearOsSmartwatch-loop-status) taip pat rodomas aktyvus scenarijus, likęs jo laikas ir tolesnis scenarijus.
 
 ---
 
