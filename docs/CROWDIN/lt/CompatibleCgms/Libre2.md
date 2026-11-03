@@ -24,7 +24,7 @@ Yra kelios svarbios priežastys naudoti Bluetooth siųstuvą:
 
 Pastaba: siųstuvą galima naudoti kartu su LibreLink programėle, jis jai netrukdo.
 
-### Start sensor
+### Paleiskite jutiklį
 
 - → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → atsakykite „Not Today“ (4).
 
