@@ -1,13 +1,13 @@
 # CareLevo
 
-The CareLevo is a tubeless patch pump made by CareMedi. Each patch holds up to 300 U of insulin and is worn for up to 7 days (168 hours). It communicates with **AAPS** over your phone's Bluetooth, with no additional device.
+CareLevo yra pompa be vamzdelio (patch), kurią gamina CareMedi. Kiekviena pompa talpina iki 300 V insulino ir nešiojama iki 7 dienų (168 valandų). Su **AAPS** ji palaiko ryšį per telefono Bluetooth, be jokio papildomo įrenginio.
 
 ```{admonition} New driver
 :class: warning
-The CareLevo driver is new in **AAPS**. Read this whole page before you activate your first patch, and keep the pump's own instructions for use at hand.
+CareLevo tvarkyklė **AAPS** yra nauja. Prieš aktyvuodami pirmąją pompą, perskaitykite visą šį puslapį ir laikykite pompos naudojimo instrukciją po ranka.
 ```
 
-The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the **Profile** to a minimum of 0.05 U/h in steps of 0.05 U/h, otherwise the insulin the **Profile** expects and the insulin the patch delivers differ slightly. **AAPS** uses the basal rates the patch accepted.
+Mažiausia dozė, kurią pompa gali suleisti, yra 0,05 V. **Profilyje** valandines bazes nustatykite ne mažesnes nei 0,05 V/val., 0,05 V/val. žingsniais, kitaip insulino kiekis, kurio tikisi **Profilis**, šiek tiek skirsis nuo kiekio, kurį suleidžia pompa. **AAPS** naudoja tas valandines bazes, kurias pompa priėmė.
 
 ```{contents} Table of contents
 :depth: 1
@@ -17,146 +17,146 @@ The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the *
 ## Pompos galimybės su AAPS
 
 * Ryšį su **AAPS** palaiko per telefono vidinį Bluetooth, be papildomo ryšio įrenginio.
-* Bolus in steps of 0.05 U.
-* Basal rates from 0.05 U/h to 15 U/h in steps of 0.05 U/h, with 30-minute basal segments.
-* Temporary basal rates set as an absolute rate, up to 12 hours.
-* Extended bolus up to 8 hours.
-* Vasaros laiko ir laiko juostos pakeitimus reikia tvarkyti rankiniu būdu. The patch notifies you when the time zone changes.
+* Bolusas 0,05 V žingsniais.
+* Valandinė bazė nuo 0,05 V/val. iki 15 V/val. 0,05 V/val. žingsniais, 30 minučių valandinės bazės intervalai.
+* Laikinos valandinės bazės nustatomos absoliučia reikšme, iki 12 valandų.
+* Ištęstas bolusas iki 8 valandų.
+* Vasaros laiko ir laiko juostos pakeitimus reikia tvarkyti rankiniu būdu. Pompa praneša, kai pasikeičia laiko juosta.
 
-## Pump Setup
+## Pompos sąranka
 
 1. Atidarykite **meniu** (☰) viršutiniame kairiajame **AAPS** pagrindinio ekrano kampe ir pasirinkite **Konfigūracija**.
-1. Select **Carelevo** in the Pump section.
+1. Skiltyje Pompa pasirinkite **Carelevo**.
 1. Paspauskite mygtuką „Atgal“, kad grįžtumėte į pagrindinį ekraną.
 
-![The Carelevo plugin selected in Configuration > Pump](../images/v4/Pumps/carelevo_enabled.png)
+![Carelevo įskiepis, pasirinktas skiltyje Konfigūracija > Pompa](../images/v4/Pumps/carelevo_enabled.png)
 
 ## Parametrai
 
-Open the pump screen with **Manage → Pump** (or **Configuration → Pump → Open plugin**).
+Pompos ekraną atidarykite per **Valdymas → Pompa** (arba **Konfigūracija → Pompa → Atidaryti įskiepį**).
 
-Open the CareLevo settings by pressing the **Settings** (gear) icon in the upper right corner. Three settings are available:
+CareLevo nustatymus atidarykite paspaudę piktogramą **Nustatymai** (krumpliaratis) viršutiniame dešiniajame kampe. Galimi trys nustatymai:
 
-![Carelevo driver settings](../images/v4/Pumps/carelevo_settings.png)
+![Carelevo tvarkyklės nustatymai](../images/v4/Pumps/carelevo_settings.png)
 
-### Low Insulin Notification Setting
+### Pranešimo apie senkantį insuliną nustatymas
 
-The patch notifies you when the insulin remaining in the reservoir reaches the chosen amount. It can be set from 20 U to 50 U in 5 U steps. The default is 30 U. Independently of this setting, the patch raises a critical alarm and stops delivering insulin when less than 10 U remain.
+Pompa praneša, kai rezervuare likęs insulino kiekis pasiekia pasirinktą kiekį. Jį galima nustatyti nuo 20 V iki 50 V, 5 V žingsniais. Numatyta reikšmė yra 30 V. Nepriklausomai nuo šio nustatymo, kai lieka mažiau nei 10 V, pompa įjungia kritinį aliarmą ir nustoja leisti insuliną.
 
-### Patch Usage Notification Setting
+### Pranešimo apie pompos naudojimo laiką nustatymas
 
-The patch notifies you when it has been worn for the chosen number of hours, so you can plan the change. It can be set from 24 to 167 hours. The default is 116 hours.
+Pompa praneša, kai ji nešiojama pasirinktą valandų skaičių, kad galėtumėte suplanuoti keitimą. Jį galima nustatyti nuo 24 iki 167 valandų. Numatyta reikšmė yra 116 valandų.
 
-### Patch Info Alarm
+### Pompos informacinis įspėjimas
 
 Kai ši parinktis įjungta, pompa pypteli, kai bolusas, ištęstas bolusas ar laikina bazė prasideda ir kai baigiasi. Numatyta: išjungta.
 
-## The pump screen
+## Pompos ekranas
 
-![Carelevo pump screen without an active patch](../images/v4/Pumps/carelevo_pump_screen.png)
+![Carelevo pompos ekranas be aktyvios pompos](../images/v4/Pumps/carelevo_pump_screen.png)
 
-The pump screen shows the **Bluetooth status** (No Active Patch, Disconnected or Connected), the **Serial No.** of the patch, its **Activation Time** and **Expiration**, the current **Basal Rate** and **Temp basal rate**, the **Insulin Remaining** (remaining / filled), the **Patch Time Remaining** and the **Total insulin delivered**.
+Pompos ekrane rodoma **Bluetooth būsena** (Nėra aktyvaus pompos modulio, Atjungta arba Prijungta), pompos **Serijos Nr.**, jos **Aktyvavimo laikas** ir **Galiojimo pabaiga**, dabartinė **Bazė** ir **Laikina bazė**, **Likęs insulino kiekis** (likęs / pripildytas), **Likęs pompos veikimo laikas** ir **Iš viso suleista insulino**.
 
-The buttons depend on the state of the patch:
+Mygtukai priklauso nuo pompos būsenos:
 
-* **Activate Patch**: starts the activation of a new patch, see below.
-* **Insulin Guide**: shows the twelve steps for filling a patch with insulin.
-* **Suspend Infusion** / **Resume Infusion**: pauses and restarts insulin delivery, see below.
-* **Discard Patch**: stops the current patch so a new one can be activated.
+* **Aktyvuoti**: pradeda naujos pompos aktyvavimą, žr. toliau.
+* **Insulino pildymo vedlys**: rodo dvylika pompos pildymo insulinu žingsnių.
+* **Sustabdyti insulino tiekimą** / **Atnaujinti insulino tiekimą**: pristabdo ir vėl pradeda insulino tiekimą, žr. toliau.
+* **Pašalinti pompą**: sustabdo dabartinę pompą, kad būtų galima aktyvuoti naują.
 
-## Activating a patch
+## Pompos aktyvavimas
 
-Before you start, make sure a **Profile** is active in **AAPS** and that Bluetooth is on. The patch must be activated within a limited time once it is switched on; if the time runs out, the patch raises a **Patch Application Timeout** alarm and cannot be used.
+Prieš pradėdami įsitikinkite, kad **AAPS** yra aktyvus **Profilis** ir įjungtas Bluetooth. Įjungtą pompą reikia aktyvuoti per ribotą laiką; jei laikas baigiasi, pompa įjungia aliarmą **Baigėsi pompos uždėjimo laikas** ir jos nebegalima naudoti.
 
-Press **Activate Patch** on the pump screen and follow the steps. You can cancel at any time before the needle is inserted; what you have entered is discarded.
+Pompos ekrane paspauskite **Aktyvuoti** ir vykdykite nurodymus. Atšaukti galite bet kada, kol adata dar neįvesta; įvesti duomenys bus panaikinti.
 
-### Select the insulin
+### Insulino pasirinkimas
 
-Confirm the insulin you use. The patch requires rapid-acting U-100 insulin.
+Patvirtinkite insuliną, kurį naudojate. Pompai reikia greito veikimo U-100 insulino.
 
-### Fill the patch with insulin
+### Pompos pripildymas insulinu
 
-Fill the patch with 50 to 300 U, considering how long you will wear it. Press **Insulin Guide** if you need the filling instructions. Then tap the fill amount and select the amount you filled; **AAPS** uses it to show the insulin remaining.
+Pripildykite pompą 50–300 V insulino, atsižvelgdami į tai, kiek laiko ją nešiosite. Jei reikia pildymo instrukcijų, paspauskite **Insulino pildymo vedlys**. Tada spauskite pripildyto kiekio laukelį ir pasirinkite, kiek insulino pripildėte; **AAPS** pagal tai rodo likusį insulino kiekį.
 
-### Connect the patch
+### Pompos prijungimas
 
-1. Take the patch out of its blister and remove the needle cap.
-1. Press the power button of the patch for more than one second. After the beep, tap **Search Patch**.
-1. When the patch found is the right one, tap **Confirm**. Tap **Rescan** if it is not.
+1. Išimkite pompą iš lizdinės pakuotės ir nuimkite adatos dangtelį.
+1. Paspauskite pompos įjungimo mygtuką ir palaikykite ilgiau nei vieną sekundę. Po pyptelėjimo spauskite **Ieškoti pompos**.
+1. Jei rasta pompa yra tinkama, spauskite **Patvirtinti**. Jei ne, spauskite **Ieškoti iš naujo**.
 
 ### Saugos patikra
 
-Once the patch is connected, press **Safety Check**. The patch tests itself and primes. Check that a droplet of insulin has formed at the needle tip. If no droplet is visible, press **Retry**. When the check is complete, press **Next**.
+Kai pompa prijungta, paspauskite **Saugos patikra**. Pompa patikrina save ir užsipildo (prime). Patikrinkite, ar ant adatos galiuko atsirado insulino lašelis. Jei lašelio nematyti, paspauskite **Bandyti dar kartą**. Kai patikra baigta, paspauskite **Toliau**.
 
-### Site and patch attachment
+### Vieta ir pompos priklijavimas
 
-1. Select the site where you will wear the patch.
-1. Clean the site thoroughly with an alcohol swab.
-1. Remove the backing tape and attach the patch to your skin with the marked dot facing upward.
-1. Press **Next** once the patch is attached.
+1. Pasirinkite vietą, kurioje nešiosite pompą.
+1. Kruopščiai nuvalykite vietą spiritiniu tamponu.
+1. Nuimkite apsauginį popierių ir priklijuokite pompą prie odos taip, kad pažymėtas taškas būtų nukreiptas į viršų.
+1. Kai pompa priklijuota, paspauskite **Toliau**.
 
-### Insert the needle
+### Adatos įvedimas
 
-1. Turn the safety cap in the direction of the arrow and remove it.
-1. Press the applicator push button all the way down and hold it for 10 seconds. A beep sounds when the needle is inserted.
-1. Remove the applicator and press **Confirm Insertion**.
+1. Pasukite apsauginį dangtelį rodyklės kryptimi ir nuimkite jį.
+1. Paspauskite aplikatoriaus mygtuką iki galo ir palaikykite 10 sekundžių. Kai adata įvedama, pasigirsta pyptelėjimas.
+1. Nuimkite aplikatorių ir paspauskite **Patvirtinti adatos įvedimą**.
 
-If the insertion fails, **AAPS** tells you how many attempts are left. When no attempt is left, the patch raises a **Needle Insertion Error** alarm and must be replaced.
+Jei adatos įvesti nepavyksta, **AAPS** parodo, kiek bandymų liko. Kai bandymų nebelieka, pompa įjungia aliarmą **Adatos įvedimo klaida** ir ją reikia pakeisti.
 
-Insulin delivery starts as soon as the insertion is confirmed.
+Insulino tiekimas prasideda, kai tik adatos įvedimas patvirtinamas.
 
-## Bolus messages
+## Boluso pranešimai
 
-If the patch refuses a bolus, **AAPS** tells you why. For example *Bolus can't be delivered. Bolus available: 2.8 U* means the patch can deliver only that amount now.
+Jei pompa atsisako suleisti bolusą, **AAPS** parodo priežastį. Pavyzdžiui, *Tokio boluso suleisti negalima. Galima dozė: 2,8 V* reiškia, kad pompa dabar gali suleisti tik tokį kiekį.
 
-If you stop a bolus and the patch does not confirm the stop, **AAPS** waits for the bolus to end and records the amount the patch reports. If a bolus was not recorded (for example because it was stopped while it was running), **AAPS** adds it from the patch total and asks you to check IOB before you try again.
+Jei sustabdote bolusą, o pompa sustabdymo nepatvirtina, **AAPS** laukia boluso pabaigos ir įrašo kiekį, kurį praneša pompa. Jei bolusas nebuvo įrašytas (pavyzdžiui, nes buvo sustabdytas jo leidimo metu), **AAPS** prideda jį pagal pompos bendrą kiekį ir paprašo patikrinti AIO, prieš bandant dar kartą.
 
 ## Insulino tiekimo sustabdymas ir atnaujinimas
 
-Press **Suspend Infusion** on the pump screen and select how long delivery should pause: from 30 minutes to 4 hours in 30-minute steps. Delivery does not resume by itself: when the pause is over, the patch raises a **Start Insulin** alert. Press **Resume Infusion** on the pump screen, or **Start Insulin** on the alert, and confirm.
+Pompos ekrane paspauskite **Sustabdyti insulino tiekimą** ir pasirinkite, kiek laiko tiekimas turi būti pristabdytas: nuo 30 minučių iki 4 valandų, 30 minučių žingsniais. Tiekimas pats neatsinaujina: kai pristabdymas baigiasi, pompa parodo įspėjimą **Pradėti insulino tiekimą**. Pompos ekrane paspauskite **Atnaujinti insulino tiekimą** arba įspėjime **Pradėti insulino tiekimą** ir patvirtinkite.
 
-## Discarding a patch
+## Pompos pašalinimas
 
-Press **Discard Patch** on the pump screen and confirm. Insulin delivery stops and the patch can no longer be used. Remove the patch from your body and activate a new one.
+Pompos ekrane paspauskite **Pašalinti pompą** ir patvirtinkite. Insulino tiekimas sustoja ir pompos nebegalima naudoti. Nuimkite pompą nuo kūno ir aktyvuokite naują.
 
-When a critical alarm has stopped the patch, the alarm offers **Deactivate Patch** instead. Pressing it discards the patch the same way.
+Kai pompą sustabdė kritinis aliarmas, aliarme vietoj to rodomas mygtukas **Išjungti pompą**. Jį paspaudus pompa pašalinama taip pat.
 
 (carelevo-alarms-and-notifications)=
 
-## Alarms and notifications
+## Aliarmai ir pranešimai
 
-The patch reports three levels of events. All of them are shown as **AAPS** notifications.
+Pompa praneša trijų lygių įvykius. Visi jie rodomi kaip **AAPS** pranešimai.
 
-### Critical alarms
+### Kritiniai aliarmai
 
-Insulin delivery has stopped. Act now:
+Insulino tiekimas sustabdytas. Veikite nedelsdami:
 
-* **Low Insulin**: less than 10 U remain. Deactivate the patch and change it.
-* **Patch Expired**: the patch reached the end of its life. Deactivate the patch and change it.
-* **Low Battery**: discard the patch and change it.
-* **High/Low Temperature**: move to a suitable temperature, between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
-* **Auto-Off**: the patch stopped because the Auto-Off alert was ignored. Press **Start Insulin** to restart basal delivery.
-* **Patch Application Timeout**, **Self-Diagnosis Failed**, **Patch Error**, **Occlusion** and **Needle Insertion Error**: deactivate the patch and change it.
+* **Senka rezervuaras**: liko mažiau nei 10 V. Išjunkite pompą ir ją pakeiskite.
+* **Pompos naudojimo laikas baigėsi**: pompos naudojimo laikas pasibaigė. Išjunkite pompą ir ją pakeiskite.
+* **Senka baterija**: pašalinkite pompą ir ją pakeiskite.
+* **Per aukšta/per žema temperatūra**: pereikite į tinkamos temperatūros aplinką, nuo 40 ℉ iki 99 ℉ (nuo 4,4 ℃ iki 37,2 ℃).
+* **Automatinis išjungimas**: pompa sustojo, nes į automatinio išjungimo įspėjimą nebuvo sureaguota. Paspauskite **Pradėti insulino tiekimą**, kad vėl būtų tiekiama valandinė bazė.
+* **Baigėsi pompos uždėjimo laikas**, **Savidiagnostika nepavyko**, **Pompos klaida**, **Užsikimšimas** ir **Adatos įvedimo klaida**: išjunkite pompą ir ją pakeiskite.
 
 ### Alerts
 
-Insulin delivery continues, but something needs your attention:
+Insulino tiekimas tęsiamas, bet reikia jūsų dėmesio:
 
-* **Low Insulin**: the reservoir reached the amount set in **Low Insulin Notification Setting**. Prepare to change the patch.
-* **Patch Will Expire Soon** and **Patch Operating Life Expired**: change the patch.
-* **Low Battery**: prepare to change the patch.
-* **High/Low Temperature**: delivery is paused until the patch is back between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
-* **Auto-Off**: tap **OK**. If ignored, the alert escalates to a critical alarm and delivery stops.
-* **Patch Activation Incomplete**: tap **OK** to complete the activation.
-* **Start Insulin**: the pause you set has ended. Tap **Start Insulin** to resume delivery.
-* **Turn Bluetooth On** and **BLE Not Connected**: the phone cannot reach the patch. Turn Bluetooth on or check the patch connection.
+* **Senka rezervuaras**: rezervuare liko kiekis, nustatytas **Pranešimo apie senkantį insuliną nustatymas**. Pasiruoškite pakeisti pompą.
+* **Netrukus baigsis pompos naudojimo laikas** ir **Baigėsi pompos naudojimo laikas**: pakeiskite pompą.
+* **Senka baterija**: pasiruoškite pakeisti pompą.
+* **Per aukšta / per žema temperatūra**: tiekimas pristabdytas, kol pompos temperatūra vėl bus nuo 40 ℉ iki 99 ℉ (nuo 4,4 ℃ iki 37,2 ℃).
+* **Automatinis išjungimas**: spauskite **OK**. Jei įspėjimas ignoruojamas, jis tampa kritiniu aliarmu ir tiekimas sustoja.
+* **Pompa nepilnai aktyvuota**: spauskite **OK**, kad užbaigtumėte aktyvavimą.
+* **Pradėti insulino tiekimą**: jūsų nustatytas pristabdymas baigėsi. Spauskite **Pradėti insulino tiekimą**, kad tiekimas būtų atnaujintas.
+* **Įjungti Bluetooth** ir **BLE neprijungtas**: telefonas negali susisiekti su pompa. Įjunkite Bluetooth arba patikrinkite pompos ryšį.
 
-### Notices
+### Pranešimai
 
-For information only: **Low Insulin**, **Patch Usage Time Notification** (the time set in **Patch Usage Notification Setting** has passed), **Patch Check Notification**, **Time Zone Change** and **Check Blood Glucose** (a set time after a bolus).
+Tik informacija: **Senka rezervuaras**, **Pranešimas apie pompos naudojimo laiką** (praėjo laikas, nustatytas **Pranešimo apie pompos naudojimo laiką nustatymas**), **Pompos patikros pranešimas**, **Laiko juostos pakeitimas** ir **Patikrinkite gliukozės kiekį kraujyje** (praėjus nustatytam laikui po boluso).
 
-The patch also reports when its own low glucose suspend (**LGS**) function starts or ends. **AAPS** does not use this function; the loop handles low glucose itself.
+Pompa taip pat praneša, kai prasideda arba baigiasi jos pačios sustabdymo esant žemai glikemijai funkcija (**LGS**). **AAPS** šios funkcijos nenaudoja; žemą glikemiją ciklas valdo pats.
 
 ## Kur gauti pagalbos
 
-Report problems with the CareLevo driver on the [AAPS GitHub issues page](https://github.com/nightscout/AndroidAPS/issues) or in the AAPS community channels, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Apie CareLevo tvarkyklės problemas praneškite [AAPS GitHub problemų (issues) puslapyje](https://github.com/nightscout/AndroidAPS/issues) arba AAPS bendruomenės kanaluose, žr. [Kur gauti pagalbos?](../GettingHelp/WhereCanIGetHelp.md).
